@@ -33,7 +33,8 @@
 | `Mappe/Portale-Forgia-L1-REVISED-UltraClear.md` | MAPPA PF-2: Sala della Forgia Eterna (27×27) | Sì | Sì | **completo (T5b, s9)** | ok |
 | `Mappe/Portale-Forgia-L2-REVISED-UltraClear.md` | Mappa #1 (21×53) — titolo grezzo `[COLONNA K = 15m da Nord]` | Sì | Sì (titolo automatico impreciso — vedi nota 1) | **completo (T5b, s9 — PF-3 Corridoio del Fuoco)** | ok |
 | `Mappe/Portale-Forgia-L2-REVISED-UltraClear.md` | MAPPA PF-4: Forgia Adamantina (33×25) | Sì | Sì | **completo (T5b, s9)** | ok |
-| `Mappe/Portale-Forgia-L3-FINALE-REVISED.md` | Foresta di Cristallo Gigante + Camera Sferica Boss + altre (4 fence) | No (usa "1.5m/5ft" solo in legenda) | **No** | n/a | **KO — nota 2** |
+| `Mappe/Portale-Forgia-L3-REVISED-UltraClear.md` **(nuovo 2026-07-16)** | PT-1 Foresta di Cristallo (20×10) · PT-2 Giardino Cristalli (20×12) · PT-3 Arena Sentinella (17×14) · PT-4 Camera Sferica Terros (41×41) | Sì | Sì | **completo** (Ambiente/Tattiche/Evoluzione da master RICALIBRATO+Terros §5) | ok |
+| `Mappe/Portale-Forgia-L3-FINALE-REVISED.md` ⚠️ griglie SUPERATE (banner) | Foresta di Cristallo Gigante + Camera Sferica Boss + altre (4 fence) | No (usa "1.5m/5ft" solo in legenda) | **No** | n/a (testi PG/skill challenge/epilogo restano validi) | **KO — nota 2, sostituito da L3-REVISED-UltraClear** |
 | `Mappe/TACTICAL-GRIDS-COMPLETE.md` | Spec testuali (coordinate in prosa, no griglia visuale) | Sì (in header standard) | **No** | n/a | **KO — nota 3** |
 | `Mappe/Atlante-Visivo-Mappe.md` | — (file STUB dichiarato, rimanda a TACTICAL-GRIDS) | — | No | — | n/a |
 | `ARC07-ATLANTE-ASSET.md` | — (catalogo immagini/musica, non è un master mappa) | — | No | — | n/a |

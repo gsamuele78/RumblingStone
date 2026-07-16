@@ -335,6 +335,11 @@
 **Adventure:** Portale della Forgia Eterna - Part 4  
 **Encounter:** 2 Large + 1 Huge Earth Elementals
 
+> ⚠️ **DESIGN SUPERATO (2026-07-16)**: questa versione del P4 (caverne + 3
+> elementali SRD, gravità ×1,5) è precedente ai master eletti dalla matrice
+> A6. Al tavolo usare `Portale-Forgia-L3-REVISED-UltraClear.md` (PT-1:
+> agguato Xorn nella Foresta di Cristallo, gravità ×2).
+
 **DIMENSIONS:**
 - Length: 120m (winding path)
 - Width: Variable 15-30m
@@ -428,6 +433,14 @@
 ### MAP 6: EARTH NODE CHAMBER (Camera Nodo Terra)
 **Adventure:** Portale della Forgia Eterna - Part 4  
 **Encounter:** Boss Fight - Colossal Mithral Golem
+
+> ⚠️ **DESIGN SUPERATO (2026-07-16)**: sfera da 80 m a gravità normale con
+> boss "Golem di Mithral Colossale" = versione precedente ai master eletti.
+> Canone attuale: sfera **Ø 60 m in ZERO-G**, altare Ø 6 m con gravità
+> propria, boss **Terros** (Elementale Terra Anziano, Enorme 3×3 — statblock
+> `../Terros.md` §5); il Golem di Mithral è la **Sentinella pre-boss**
+> (evento Bracieri, taglia Grande). Al tavolo usare
+> `Portale-Forgia-L3-REVISED-UltraClear.md` (PT-3 e PT-4).
 
 **DIMENSIONS:**
 - Shape: Perfect sphere (geodesic)

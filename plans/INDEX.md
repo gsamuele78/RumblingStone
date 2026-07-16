@@ -42,6 +42,9 @@
 - ⬜ _(collaudo al tavolo: container + brew I-V; piloti lettera/avviso-torneo quando arriva testo canone)_
 
 ### RICERCA-GENERATORI-MAPPE
+- ✅ _(2026-07-16: mappe P4 Piano Terra ARC-07 portate a Ultra-Clear —_
+  _`Portale-Forgia-L3-REVISED-UltraClear.md`, 4 griglie + SVG, per la_
+  _sessione dell'elementale della terra)_
 - ⬜ _(opzionale/estetico: portare a griglia Ultra-Clear le mappe KO del censimento — Torre P2A, Torneo P2B, Battaglia Finale P3 — ora che il renderer c'è)_
 - ⬜ _(mappa regionale Cannath Vale/Dalelands con Azgaar FMG — `.map` master + export in rendered/)_
 - ⬜ _(hero map ComfyUI sulle 2-3 mappe chiave — solo su macchina DM, vedi skill mapmaking)_

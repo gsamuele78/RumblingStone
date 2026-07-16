@@ -1,5 +1,15 @@
 # 🗺️ PIANO DELLA TERRA - PORTALE FORGIA ETERNA - L3 FINALE REVISED
 
+> ⚠️ **GRIGLIE E STATBLOCK SUPERATI (2026-07-16)** — le mappe di questo file
+> (ASCII disallineabile) e i numeri del boss (Terros HP 380/CA 28/RD 15/
+> Colossale, aura pietrificante, presenza di Therysol) NON sono più il
+> riferimento: al tavolo usare **`Portale-Forgia-L3-REVISED-UltraClear.md`**
+> (griglie PT-1…PT-4 renderizzabili, allineate ai master
+> `../PortaleForgia-P4-PianoTerra-RICALIBRATO.md` + `../Terros.md` §5 e alla
+> composizione D15: 3 PG senza Therysol). Restano validi qui: i testi
+> descrittivi da leggere ai giocatori, la skill challenge §MAPPA 2 e
+> l'EPILOGO del rituale.
+
 ### ("Hard Mode" - CR 14-16)
 
 > [!WARNING] **REGOLE AMBIENTALI: GRAVITÀ IRACONDA (x2)**

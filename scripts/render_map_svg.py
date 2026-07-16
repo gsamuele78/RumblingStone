@@ -81,6 +81,7 @@ SYMBOLS: dict[str, dict] = {
     "🏰": {"mode": "fill", "pat": "t_wall", "fill": "#3f3931", "it": "Muro / roccia solida"},
     "🟪": {"mode": "fill", "pat": "t_pillar", "fill": "#8a67b5", "it": "Pilastro / mithral"},
     "⛰": {"mode": "fill", "pat": "t_mountain", "fill": "#8d8271", "it": "Montagne / creste rocciose"},
+    "🌫": {"mode": "fill", "pat": "t_void", "fill": "#c9d2ce", "it": "Vuoto / aria (Zero-G, abisso)"},
     "🪨": {"mode": "icon", "prop": "pr_rocks", "fill": "#ced4da", "it": "Rocce/macerie (copertura +4 CA, terreno difficile)"},
     "🔥": {"mode": "icon", "prop": "pr_fire", "fill": "#ffb4a2", "it": "Fuoco (1d6 fuoco/round)"},
     "💥": {"mode": "icon", "prop": "pr_boom", "fill": "#ffb4a2", "it": "Fiamme / esplosione"},
@@ -141,9 +142,9 @@ DEFAULT_TERRAIN = {"mode": "fill", "fill": PAPER, "it": ""}
 HEAVY_PATS = {"t_wall", "t_struct", "t_pillar", "t_mountain"}
 
 # paint order: backgrounds first, solids last (small overlaps hide seams)
-Z_ORDER = ["t_grass", "t_veg", "t_sand", "t_earth", "t_floor", "t_lava",
-           "t_lethal", "t_deep", "t_water", "t_forest", "t_mountain",
-           "t_struct", "t_pillar", "t_wall"]
+Z_ORDER = ["t_void", "t_grass", "t_veg", "t_sand", "t_earth", "t_floor",
+           "t_lava", "t_lethal", "t_deep", "t_water", "t_forest",
+           "t_mountain", "t_struct", "t_pillar", "t_wall"]
 
 # ---------------------------------------------------------------------------
 # Procedural texture patterns (pure SVG, deterministic — no external assets)
@@ -242,6 +243,14 @@ PATTERNS: dict[str, str] = {
         '<rect width="28" height="28" fill="#8a67b5"/>'
         '<path d="M9 0v28" stroke="#b697dd" stroke-width="3" stroke-opacity="0.7"/>'
         '<path d="M20 0v28" stroke="#6d4c96" stroke-width="3" stroke-opacity="0.5"/>'),
+    "t_void": _pattern("t_void", 42,
+        '<rect width="42" height="42" fill="#c9d2ce"/>'
+        '<path d="M4 12q8-5 16 0t16 0" stroke="#dde5e1" stroke-width="2.2" fill="none" '
+        'stroke-linecap="round" opacity="0.8"/>'
+        '<path d="M-4 30q8-5 16 0t16 0t16 0" stroke="#b6c1bc" stroke-width="1.8" fill="none" '
+        'stroke-linecap="round" opacity="0.7"/>'
+        '<circle cx="33" cy="20" r="1" fill="#e8eeeb"/>'
+        '<circle cx="9" cy="38" r="0.9" fill="#e8eeeb"/>'),
     "t_mountain": _pattern("t_mountain", 42,
         '<rect width="42" height="42" fill="#8d8271"/>'
         '<path d="M2 22L11 6l9 16z" fill="#a49a87"/>'
