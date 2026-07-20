@@ -123,8 +123,10 @@ Two independent clocks drive Arc 09:
 | 40 | Notte dei Drow / advance scout phase (Fase 0 begins) | ⏳ Pending |
 | **42** | **Horde arrives at Rethmar (ex-Brindol) and encamps** | 🎯 **Rethmar assault begins** |
 
+<!-- auto:begin key=march-clock -->
 **Current March Day:** **19** (Terrelton just fell as Hammerfist ended).
 **Days remaining to Rethmar:** **23** (PG-quest window = Arc 09, Days 20-41).
+<!-- auto:end key=march-clock -->
 
 ### 2.2 Red Hand of Doom — Horde Composition (Baseline ~10,000)
 
@@ -372,6 +374,7 @@ changelog with the resolution.
 Every state change goes here with date and one-line reason. Never delete
 entries — they become campaign history.
 
+<!-- auto:begin key=changelog -->
 ```
 2026-05-01  Initial state.md created (extracted from campaign-story-arcs.md
             + post-Hammerfist arc notes). Baseline = end of Hammerfist battle,
@@ -1306,3 +1309,4 @@ entries — they become campaign history.
             ora ACCEPTED DM-canon 2026-07-12. Statblock, dossier e censimento
             aggiornati.
 ```
+<!-- auto:end key=changelog -->
