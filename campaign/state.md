@@ -124,8 +124,8 @@ Two independent clocks drive Arc 09:
 | **42** | **Horde arrives at Rethmar (ex-Brindol) and encamps** | 🎯 **Rethmar assault begins** |
 
 <!-- auto:begin key=march-clock -->
-**Current March Day:** **19** (Terrelton just fell as Hammerfist ended).
-**Days remaining to Rethmar:** **23** (PG-quest window = Arc 09, Days 20-41).
+**Current March Day:** **20** (aggiornato da `state_apply` — sessione 2026-05-03 (2026-05-03_session-3.md)).
+**Days remaining to Rethmar:** **22** (arrivo dell'orda a Rethmar: Day 42).
 <!-- auto:end key=march-clock -->
 
 ### 2.2 Red Hand of Doom — Horde Composition (Baseline ~10,000)
@@ -1308,5 +1308,6 @@ entries — they become campaign history.
             + `Bestiario/png/dauth-commander-mercenari-nani-cr11.md`) sono
             ora ACCEPTED DM-canon 2026-07-12. Statblock, dossier e censimento
             aggiornati.
+2026-07-20  sessione 2026-05-03 (2026-05-03_session-3.md): March Clock Day 19 → Day 20 (state_apply).
 ```
 <!-- auto:end key=changelog -->
