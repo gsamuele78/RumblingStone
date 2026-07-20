@@ -1,0 +1,4 @@
+# Gruppo di campagna attivo in questa working copy.
+# Il canone vive sul branch campaign-group-<group> (ADR-0007;
+# vedi campaign/DM-CAMPAIGN-PLAYBOOK.md §7).
+group: rumblingstone-dm-gianfranco
