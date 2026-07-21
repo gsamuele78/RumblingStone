@@ -37,17 +37,6 @@
 <path d="M74 80v1148M102 80v1148M130 80v1148M158 80v1148M214 80v1148M242 80v1148M270 80v1148M298 80v1148M354 80v1148M382 80v1148M410 80v1148M438 80v1148M494 80v1148M522 80v1148M550 80v1148M578 80v1148M634 80v1148M662 80v1148M690 80v1148M718 80v1148M774 80v1148M802 80v1148M830 80v1148M858 80v1148M914 80v1148M942 80v1148M970 80v1148M998 80v1148M1054 80v1148M1082 80v1148M1110 80v1148M1138 80v1148M1194 80v1148M46 108h1148M46 136h1148M46 164h1148M46 192h1148M46 248h1148M46 276h1148M46 304h1148M46 332h1148M46 388h1148M46 416h1148M46 444h1148M46 472h1148M46 528h1148M46 556h1148M46 584h1148M46 612h1148M46 668h1148M46 696h1148M46 724h1148M46 752h1148M46 808h1148M46 836h1148M46 864h1148M46 892h1148M46 948h1148M46 976h1148M46 1004h1148M46 1032h1148M46 1088h1148M46 1116h1148M46 1144h1148M46 1172h1148M46 1228h1148" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v1148M186 80v1148M326 80v1148M466 80v1148M606 80v1148M746 80v1148M886 80v1148M1026 80v1148M1166 80v1148M46 80h1148M46 220h1148M46 360h1148M46 500h1148M46 640h1148M46 780h1148M46 920h1148M46 1060h1148M46 1200h1148" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v1148M102 80v1148M130 80v1148M158 80v1148M214 80v1148M242 80v1148M270 80v1148M298 80v1148M354 80v1148M382 80v1148M410 80v1148M438 80v1148M494 80v1148M522 80v1148M550 80v1148M578 80v1148M634 80v1148M662 80v1148M690 80v1148M718 80v1148M774 80v1148M802 80v1148M830 80v1148M858 80v1148M914 80v1148M942 80v1148M970 80v1148M998 80v1148M1054 80v1148M1082 80v1148M1110 80v1148M1138 80v1148M1194 80v1148M46 108h1148M46 136h1148M46 164h1148M46 192h1148M46 248h1148M46 276h1148M46 304h1148M46 332h1148M46 388h1148M46 416h1148M46 444h1148M46 472h1148M46 528h1148M46 556h1148M46 584h1148M46 612h1148M46 668h1148M46 696h1148M46 724h1148M46 752h1148M46 808h1148M46 836h1148M46 864h1148M46 892h1148M46 948h1148M46 976h1148M46 1004h1148M46 1032h1148M46 1088h1148M46 1116h1148M46 1144h1148M46 1172h1148M46 1228h1148" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v1148M186 80v1148M326 80v1148M466 80v1148M606 80v1148M746 80v1148M886 80v1148M1026 80v1148M1166 80v1148M46 80h1148M46 220h1148M46 360h1148M46 500h1148M46 640h1148M46 780h1148M46 920h1148M46 1060h1148M46 1200h1148" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
-<ellipse cx="621.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_portal" x="606" y="108" width="28" height="28"/>
-<ellipse cx="593.4" cy="152.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="592.0" cy="150.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="592.0" cy="150.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
-<ellipse cx="621.4" cy="152.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="620.0" cy="150.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="620.0" cy="150.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
-<ellipse cx="649.4" cy="152.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="648.0" cy="150.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="648.0" cy="150.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="593.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_gem" x="578" y="612" width="28" height="28"/>
 <ellipse cx="621.4" cy="656.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
@@ -77,6 +66,17 @@
 <ellipse cx="677.4" cy="712.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="676.0" cy="710.0" r="10.36" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="676.0" cy="710.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="481.4" cy="1104.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="480.0" cy="1102.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="480.0" cy="1102.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="761.4" cy="1104.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="760.0" cy="1102.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="760.0" cy="1102.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="621.4" cy="1160.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="620.0" cy="1158.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="620.0" cy="1158.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="621.0" cy="1189.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_portal" x="606" y="1172" width="28" height="28"/>
 <text x="60.0" y="72" font-size="10" text-anchor="middle" fill="#7a6a50">A</text>
 <text x="88.0" y="72" font-size="10" text-anchor="middle" fill="#7a6a50">B</text>
 <text x="116.0" y="72" font-size="10" text-anchor="middle" fill="#7a6a50">C</text>

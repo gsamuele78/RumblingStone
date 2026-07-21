@@ -131,31 +131,31 @@ COLONNE →  A B C D E F G H I J K L M N O P Q R S T
 **Quando si usa:** OBBLIGATORIO prima della camera del boss — risveglio completo dei Bracieri (fonte: `../../PG/Artefatti/Artefatti-Pg/Tordek/03_Risveglio_Completo_Bracieri_Terra.md`)
 **SVG:** `rendered/Portale-Forgia-L3-REVISED-UltraClear_map03_*.svg`
 
-### 🎯 COMPRENSIONE: duello di Tordek — Thorik è INCOLLATO alla parete magnetica ovest, Artemis schiacciato a terra
+### 🎯 COMPRENSIONE: duello di Tordek — Thorik è INCOLLATO alla parete magnetica NORD (come nello schizzo originale), Artemis schiacciato a terra
 
 ```
 MAPPA PT-3: ARENA ESAGONALE - SENTINELLA DI MITHRAL (25,5m x 21m, Grid 17x14, Scala 1,5m/sq)
 
 COLONNE →  A B C D E F G H I J K L M N O P Q
 
-01 🏰🏰🏰🏰🏰🏰🏰🏰🚪🏰🏰🏰🏰🏰🏰🏰🏰
-   └ porta nord I01 → CAMERA DEL BOSS (si apre solo a Sentinella distrutta)
-02 🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰🏰
+01 🏰🏰🏰🏰🏰🟪🟪🟪🟪🟪🟪🟪🏰🏰🏰🏰🏰
+   └ PARETE MAGNETICA NORD (F01-L01) — a Sentinella distrutta si apre qui il varco verso la Camera Sferica [INFERRED]
+02 🏰🏰🏰⬜⬜⬜⬜⬜🔵⬜⬜⬜⬜⬜🏰🏰🏰
+   └ Thorik (I02) — INCOLLATO alla parete magnetica (armatura completa!)
 03 🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰
 04 🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
-05 🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
-06 🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
-07 🟪🔵⬜⬜⬜⬜⬜⚫⚫⬜⬜⬜⬜⬜⬜⬜🏰
-   └ parete magnetica OVEST (A05-A10) — Thorik incollato in B07 (armatura completa!)
+05 🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
+06 🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
+07 🏰⬜⬜⬜⬜⬜⬜⚫⚫⬜⬜⬜⬜⬜⬜⬜🏰
+08 🏰⬜⬜⬜⬜⬜⬜⚫⚫⬜⬜⬜⬜⬜⬜⬜🏰
    └ GOLEM 2x2 (H07-I08) al centro
-08 🟪⬜⬜⬜⬜⬜⬜⚫⚫⬜⬜⬜⬜⬜⬜⬜🏰
-09 🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
-10 🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
-11 🏰⬜⬜⬜⬜⬜⬜⬜🔵⬜⬜⬜⬜⬜⬜⬜🏰
-   └ Tordek (I11) — l'unico libero di combattere
-12 🏰🏰⬜⬜⬜🔵⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰
-   └ Artemis (F12) — prono, schiacciato dal magnetismo
-13 🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰🏰
+09 🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
+10 🏰⬜⬜⬜⬜⬜⬜⬜🔵⬜⬜⬜⬜⬜⬜⬜🏰
+   └ Tordek (I10) — l'unico libero di combattere
+11 🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰
+12 🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰
+13 🏰🏰🏰⬜⬜⬜⬜⬜🔵⬜⬜⬜⬜⬜🏰🏰🏰
+   └ Artemis (I13) — prono, schiacciato dal magnetismo
 14 🏰🏰🏰🏰🏰🏰🏰🏰🚪🏰🏰🏰🏰🏰🏰🏰🏰
    └ porta sud I14 — ingresso dai corridoi
 ```
@@ -165,7 +165,7 @@ COLONNE →  A B C D E F G H I J K L M N O P Q
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
 | Campo magnetico | tutta la sala | chi porta MOLTO metallo è incollato (Thorik) o schiacciato (Artemis); Tordek (pugni/stoffa) è libero |
-| Parete magnetica | celle 🟪 ovest | letale per chi ha metallo addosso: bloccato finché il Golem non cade |
+| Parete magnetica | celle 🟪 nord | letale per chi ha metallo addosso: bloccato finché il Golem non cade |
 | Gravità ×2 | ovunque | gestibile con la Benedizione di Moradin |
 
 ### ⚔️ TATTICHE (statblock nel file del Risveglio)
@@ -181,7 +181,7 @@ COLONNE →  A B C D E F G H I J K L M N O P Q
 |---|---|---|---|
 | A — Duello | ingresso | Thorik a parete, Artemis prono, Golem attivo | combatte solo Tordek |
 | B — Overdrive | Golem < 80 HP | luce smeraldo dalle crepe | 3 attacchi/round, CA 24 |
-| C — Liberazione | Golem a 0 HP | magnetismo muore: Thorik e Artemis liberi | porta nord I01 si apre; **Bracieri: Risveglio Terra completo** |
+| C — Liberazione | Golem a 0 HP | magnetismo muore: Thorik e Artemis liberi | varco nord verso la Camera Sferica; **Bracieri: Risveglio Terra completo** |
 
 ---
 
@@ -204,10 +204,8 @@ MAPPA PT-4: CAMERA SFERICA - TERROS (sfera Ø 60m, sezione equatoriale, Grid 41x
 COLONNE →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO
 
 01 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-02 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌀🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-   └ PORTALE D'INGRESSO (U02) sulla parete nord — si entra fluttuando
-03 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🔵🔵🔵🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-   └ PG in ingresso: Thorik (T03) · Tordek (U03) · Artemis (V03)
+02 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+03 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
 04 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
 05 🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰
 06 🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰
@@ -244,10 +242,13 @@ COLONNE →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE 
 34 🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰
 35 🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰
 36 🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰
-37 🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰
+37 🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🔵🌫🌫🌫🌫🌫🌫🌫🌫🌫🔵🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰
+   └ Thorik (P37) e Tordek (Z37) — avanzano ai fianchi (schizzo originale)
 38 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-39 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-40 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+39 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌫🌫🌫🔵🌫🌫🌫🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+   └ Artemis (U39) — dietro, in supporto sul portale
+40 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🌫🌫🌫🌫🌀🌫🌫🌫🌫🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+   └ PORTALE D'INGRESSO (U40) sulla parete SUD — si entra fluttuando dal basso
 41 🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
 ```
 
@@ -258,12 +259,12 @@ COLONNE →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE 
          .-'   ZERO-G      '-.          sfera Ø 60 m (cristallo-adamantio,
        .'                      '.        parete indistruttibile)
       /     PG fluttuano         \
-     |    [portale N in alto]     |
+     |                            |
      |                            |
      |        ▄▄▄▄▄▄▄▄            |
      |        █TERROS█  ← altare  |      altare: piattaforma mithral Ø 6 m,
       \       ▀▀▀▀▀▀▀▀  Ø 6 m    /       gravità artificiale SOLO qui
-       '.        💎             .'
+       '.   💎  [portale S qui]  .'
          '-.________________.-'
 ```
 
