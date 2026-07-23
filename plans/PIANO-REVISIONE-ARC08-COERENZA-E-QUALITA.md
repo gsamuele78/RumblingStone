@@ -562,6 +562,18 @@ canone è cambiato; (4) aggiorna la checklist qui sotto.
 - [x] C1 (2026-07-02) · [x] C2 (2026-07-02) · [x] C3 (2026-07-02, ~67% pin preciso + 100% a gruppo; rinomina file differita) · [x] C4 (2026-07-02) — **LOTTO C COMPLETO**
 - [x] D1…D14 — **tutte le decisioni DM acquisite (2026-07-02); nessuna
   domanda aperta bloccante** (D13-D14 sono default [INFERRED] emendabili)
+- [x] **Lotto MAPPE-UC (2026-07-23)** — copertura griglie ultra-clear
+  COMPLETA: i tre master tattici `Mappe/Hammerfist-L{1,2,3}-REVISED-
+  Ultra-Clear.md` coprono ora TUTTE le 17 mappe della matrice A8 (prima
+  solo 1A-2, 2A, 3X). Nuove griglie compilate da JSON (Modalità 3,
+  `compile_map_json.py`): 1A-1, 1A-3, MAPPA 1/2A-1 (+fasi MAPPA 3),
+  2B-Corretta, 3Y (prima senza alcuna griglia), 3Z, MAPPA 5, MAPPA 4
+  finale; MAPPA 2/4/2B/2C/4X consolidate come tabelle/viste ancorate
+  alle griglie esistenti (niente duplicati). Companion Ambiente/
+  Tattiche/Evoluzione per ogni mappa; 8 nuovi SVG; puntamenti aggiornati
+  in GUIDA-DM (25 puntatori + fix riferimento 3Z che indicava il
+  Lotto-3 DEPRECATO), atlante (matrice + indice + 17 voci), INDICE,
+  ARC08-04 e banner dei tre Lotto deprecati. `validate_maps` verde.
 
 ---
 
