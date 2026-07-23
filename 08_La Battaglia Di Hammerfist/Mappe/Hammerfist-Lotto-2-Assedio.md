@@ -4,7 +4,10 @@
 > quel file). Le griglie ultra-clear di TUTTE le mappe della sessione
 > (2A + viste 2B/2C, MAPPA 1/2A-1, 2, 3, 4-danni, 2B-Corretta) sono in
 > `Hammerfist-L2-REVISED-Ultra-Clear.md` (lotto MAPPE-UC 2026-07-23).
-> Contenuto mantenuto per storico (D12), non cancellato.
+> Contenuto mantenuto per storico (D12), non cancellato. **Gli SVG di
+> questo file sono stati rimossi dal lotto MAPPE-UC** (griglia sparsa non
+> renderizzabile fedelmente): la versione corretta è `Hammerfist-L2-REVISED-
+> Ultra-Clear.md`.
 
 # HAMMERFIST TACTICAL MAPS - LOTTO 2
 ## Sessione 2: Tre Giorni di Sangue e Ferro - Assedio Fortezza (7 Mappe)

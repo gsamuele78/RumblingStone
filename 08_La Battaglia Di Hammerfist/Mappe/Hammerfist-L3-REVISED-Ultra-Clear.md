@@ -19,205 +19,145 @@
 
 ---
 
-## MAPPA H3-1: INGRESSO PASSAGGI ANTICHI (Evacuazione Disperata)
-**Dimensioni:** 60m × 60m (40 colonne × 40 righe, 1.5m/quadrato)  
-**Incontro:** 90 Nani Evacuation vs 200+ Orchi Inseguitori
+## MAPPA H3-1 REVISED: CORTILE SFONDATO - ULTIMA DIFESA ED EVACUAZIONE
+**Dimensioni:** 60m × 60m (40 colonne × 40 righe, 1,5 m/quadretto)
+**Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (cancello sud + brecce est/ovest)
+**Quando si usa:** subito dopo il soffio del drago (guida: `../ARC08-01-GUIDA-DM.md` § "La Ritirata Disperata"); il master narrativo dell'atlante la chiama MAPPA 3X
 
-### 🎯 COMPRENSIONE: Cortile distrutto fortezza, statua re spingibile rivela tunnel, orchi inseguono veloce!
+### 🎯 COMPRENSIONE: il cortile è in rovina e sfondato. L'orda entra dal cancello sud distrutto e dalle brecce est/ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek e alla statua-tunnel (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = tunnel (dentro la montagna, LONTANO da Hammerfist); Sud = cancello sfondato (fronte).
 
----
+**SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map01_mappa-h3-1-revised-cortile-sfondato-ultima-difes.svg` (rigenerare dopo ogni modifica)
 
-### VISTA 1: GRID COMPLETA CON COORDINATE (40×40)
+### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (40×40)
 
 ```
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-NORD ↑ (Verso Tunnel Escape)                                 INGRESSO PASSAGGI ANTICHI                                      GRIGLIA 40 COLONNE × 40 RIGHE                                  SUD ↓ (Cancello Distrutto)
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+MAPPA H3-1 REVISED: Cortile sfondato, ultima difesa ed evacuazione
+COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
+01 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪 🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+02 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🗿 🗿 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+03 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗿 🗿 🗿 🗿 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
+04 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🗿 🗿 🔵 🗿 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+05 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+06 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+07 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+08 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+09 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+10 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+11 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+12 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+13 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+14 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+15 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+16 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
+17 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+18 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+19 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+20 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+21 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+22 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+23 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+24 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
+25 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
+26 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+27 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+28 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+29 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+30 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+31 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+32 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+33 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+34 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+35 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+36 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+37 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
+38 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
+39 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+40 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
 
-COLONNE →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
-RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │
-
---- NORD: TUNNEL SEGRETO + STATUA RE (Righe 01-10) ---
-01    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-02    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗿 🗿 🗿 🗿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                  └──────────┘ STATUA RE ANTENATO (Col N-Q, Righe 02-05, 6m × 6m = 4×4 quadrati)
-03    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗿 🗿 🗿 🗿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                  🗿 🗿 🗿 🗿 Granito 4m alto, base spingibile Forza CD 20 OR Conoscenze CD 15
-04    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗿 🗿 🗿 🗿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-05    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗿 🚪 🚪 🗿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                      └──┘ APERTURA TUNNEL SEGRETO (Col O-P, Riga 05, 3m × 3m = 2×2 quadrati)
-06    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗿 🚪 🚪 🗿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                          🚪🚪 Capacity: 5 nani/round enter (single file)
-07    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                     └───────────┘ Borin + 4 nani (Rearguard tunnel entrance)
-08    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-09    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-10    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-
---- CENTRO: CORTILE DISTRUTTO + 90 NANI CLUSTER (Righe 11-25) ---
-11    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🪨 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🪨 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │              └────┘ Macerie (terreno difficile)
-12    │ 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                 └──┘ Pozze Acido (1d6 fire/round) - Residui soffio drago
-13    │ 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-14    │ 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-15    │ 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-16    │ 🟩 🟩 🟩 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-17    │ 🟩 🟩 🪨 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-18    │ 🟩 🟩 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-19    │ 🟩 🟩 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-20    │ 🟩 🟩 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⚫ ⚫ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                              └──┘ RE THOREK (Col O-P, Riga 20-21, su barella!)
-21    │ 🟩 🟩 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⚫ ⚫ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                                                  HP 8 rimanenti! Dying -5! Thorin keeps alive *Cure*!
-22    │ 🟩 🟩 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-23    │ 🟩 🟩 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-24    │ 🟩 🟩 🪨 🪨 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-25    │ 🟩 🟩 🟩 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                   └─────────────────────────────────────────┘ 90 NANI CLUSTER (Righe 11-26, Col J-U)
-
---- ZONA HAZARD MACERIE + FUOCO (Righe 26-35) ---
-26    │ 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-27    │ 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-28    │ 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🟢 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟢 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-29    │ 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🟢 🟢 🪨 🪨 🪨 🪨 🪨 🪨 🪨 🪨 🪨 🪨 🪨 🟢 🟢 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-30    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🪨 🪨 💥 💥 💥 💥 💥 💥 💥 💥 💥 🪨 🪨 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-      │                         └───────────┘ FUOCO/MACERIE Zona (Col L-S, Righe 30-33, terreno difficile + 1d6 fire)
-31    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 💥 💥 🟢 🟢 🟢 🟢 🟢 🟢 🟢 💥 💥 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-32    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 💥 💥 🟢 🟢 🟢 🟢 🟢 💥 💥 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-33    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 💥 💥 🟢 🟢 💥 💥 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-34    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 💥 💥 💥 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-35    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🪨 🪨 🪨 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-
---- SUD: ORCHI INSEGUITORI (Righe 36-40, APPROACHING FAST!) ---
-36    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
-      │                                                                                └──────────────────┘ ORCHI Vanguard (50m away)
-37    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
-38    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
-39    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
-40    │ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴
-      │                                                        └───────────────────────┘ 200+ ORCHI (Advance 30m/round!)
-
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+@north N
+@mark 1 ; T21 ; Re Thorek XIII (barella) (8 PF, morente)
+@mark 2 ; U21 ; Thorin Runaforte (Clr)
+@mark 3 ; S6 ; Nala Cantapietre (Brd)
+@mark 4 ; S9 ; Borin Ferropugno (Ftr)
+@mark 5 ; S4 ; Dara Occhiolesto (Rgr)
+@mark 6 ; U28 ; Anello difensivo — arco SUD (verso il cancello) (guerrieri)
+@mark 7 ; AB22 ; Anello difensivo — arco EST (guerrieri)
+@mark 8 ; N22 ; Anello difensivo — arco OVEST (guerrieri)
+@mark 9 ; T21 ; Nucleo (portatori, feriti, leader) (misti)
+@mark 10 ; U38 ; Orda dal cancello sfondato (SUD) (GS 1/2 (avanzano 30 m/round))
+@mark 11 ; AM21 ; Fiancheggiatori dalla breccia EST (GS 1/2)
+@mark 12 ; B21 ; Fiancheggiatori dalla breccia OVEST (GS 1/2)
+@path Assalto orchi dal CANCELLO sfondato (SUD) ; U40 U33 U29 ; #d62828
+@path Assalto orchi dalla BRECCIA EST ; AN21 AH21 AC21 ; #d62828
+@path Assalto orchi dalla BRECCIA OVEST ; A21 G21 L21 ; #d62828
+@path Evacuazione nani → tunnel segreto (NORD) ; U23 T13 S6 S2 ; #2c8c3c
+@zone Q2-T4 ; Statua del Re Antenato (4 m; base spingibile For CD 20 / Storia CD 15 → rivela il tunnel)
+@zone O37-Z39 ; CANCELLO SUD SFONDATO: breccia di macerie (l'orda entra da qui)
+@zone AL16-AN25 ; BRECCIA EST nel muro (macerie, terreno difficile)
+@zone A16-C25 ; BRECCIA OVEST nel muro (macerie)
+@zone R34-W36 ; Incendi presso la breccia sud
 ```
-
----
 
 ### 📍 POSIZIONI PRECISE:
 
-**STATUA RE ANTENATO 🗿:**
-- **Position:** Col N-Q, Righe 02-05 (6m × 6m = 4×4 quadrati)
-- **Height:** 4m tall granito
-- **Meccanismo:** Base spingibile (Forza CD 20 OR Conoscenze Storia CD 15)
-- **Rivela:** Apertura 2m × 3m (Col O-P, Riga 05-06)
-- **Tunnel Capacity:** 5 nani/round enter (single file)
+**STATUA DEL RE ANTENATO 🗿 + TUNNEL SEGRETO 🚪 (NORD):**
+- Statua: col Q-T, righe 02-04 (4 m; base spingibile **Forza CD 20** oppure **Conoscenze/Storia CD 15**)
+- Apertura tunnel: dietro la statua, righe 01 → **capacità 5 nani/round** in fila indiana
 
-**90 NANI SUPERSTITI 🔵:**
-- **Formation:** Anello protettivo Col J-U, Righe 11-25 (24m circle)
-- **Re Thorek:** Col O-P, Righe 20-21 (⚫ unconscious, 8 HP, su barella!)
-  - 4 Portatori: Trasportano barella (movimento ×0.5 speed)
-- **Borin:** Col O, Riga 07 (guarding tunnel entrance, rearguard commander)
-- **Dara:** Col N, Riga 01 (torre ovest ruins elevated, covering fire retreat)
-- **Thorin:** Col P, Riga 21 (fianco Re, casting *Cure Serious* keeping alive!)
-- **Nala:** Col O, Riga 06 (inside tunnel entry, guiding nani through passage)
+**90 NANI IN ANELLO DIFENSIVO 🔵:**
+- Arco SUD (verso il cancello sfondato): ~24 guerrieri, scudi verso la breccia principale
+- Arco EST e OVEST (verso le brecce laterali): ~15 guerrieri ciascuno
+- Nucleo: portatori, feriti e leader (~36) attorno a Re Thorek, in colonna verso il tunnel
+- **Re Thorek ⚫** (col T, riga 21, 8 PF su barella; 4 portatori → ×0,5 velocità)
 
-**200+ ORCHI INSEGUITORI 🔴:**
-- **Entry:** Squares AA36-AN40 (destroyed cancello sud)
-- **Distance Round 1:** 50m (Righe 36-40) from nani
-- **Advance:** 30m/round (aggressive pursuit, bloodlust!)
-- **Reach Courtyard:** Round 3 (contatto!) - 90 nani MUST evacuate FAST!
+**4 PG (pregen):**
+- **Borin 🔵** (col S, riga 09): retroguardia al chokepoint del tunnel
+- **Dara 🔵** (col S, riga 04): sulla base della statua (elevata), tiro di copertura sulla ritirata
+- **Thorin 🔵** (col U, riga 21): fianco del Re, lo tiene in vita (*Cura Ferite Serie*)
+- **Nala 🔵** (col S, riga 06): instrada i nani nel tunnel, luci e trappole
 
-**POZZE ACIDO RESIDUO 🟢:**
-- Polla 1: K12-L13 | Polla 2: V12-W13
-- Polla 3: M16-N17 | Polla 4: T16-U17
-- Polla 5: P30-Q31 | Polla 6: N32-O33
-- Polla 7: Q33-R34 | Polla 8: T30-U31
-- **Effect:** 1d6 acid/round se attraversa
-- **Duration:** 10 min evaporation (soffio drago residui Giorno 3)
+**200+ ORCHI CHE HANNO SFONDATO 🔴 (tre fronti):**
+- **Cancello sud distrutto** (righe 37-39, centro): vanguard ~120, avanzano 30 m/round, contatto ~round 3
+- **Breccia EST** (col AL-AN, righe 17-24): ~40 in aggiramento
+- **Breccia OVEST** (col A-C, righe 17-24): ~40 in aggiramento
 
-**MACERIE/FUOCO 🪨💥:**
-- Scattered throughout (terreno difficile ×0.5 speed)
-- Col L-S, Righe 30-33: Heavy damage (1d6 fire + difficult terrain)
-- Copertura parziale +4 AC se utilizzata tactically
-
----
+**PERICOLI RESIDUI (soffio del drago):**
+- **Pozze d'acido 💀** (K12, AC14, O27, Z26): 1d6 acido/round ad attraversarle, evaporano in ~10 min
+- **Incendi 🔥** presso la breccia sud (col R-W, righe 34-36): 1d6 fuoco/round, fumo (occultamento 20% entro 3 m)
+- **Macerie 🪨** alle brecce: terreno difficile, copertura +4 CA
 
 ### 🎯 EVACUAZIONE TIMELINE:
+- **90 nani ÷ 5/round = 18 round** minimi alla bocca del tunnel
+- **Orchi a contatto ~round 3** (sud); i fiancheggiatori (est/ovest) premono dai lati dal round 2
+- **Servono ~15 round di ritardo** mentre l'evacuazione prosegue
+- **Ruoli:** Borin tiene il chokepoint del tunnel · Dara cecchina i capi dalle brecce · Thorin *Muro di Pietra* per tappare una breccia + tiene vivo il Re · Nala *Polvere Luccicante* e instrada la colonna
 
-**CAPACITY TUNNEL:** 5 nani/round enter  
-**TOTAL 90 NANI:** ÷ 5 = **18 rounds minimum** evacuate!  
-**ENEMY ARRIVAL:** Round 3-4 contatto  
-**BUFFER NEEDED:** 14-15 rounds MUST delay orchi!
-
-**PG ROLES:**
-- **Borin (O07):** Chokepoint defense tunnel entrance 2m (shield wall!)
-- **Dara (N01):** Crossbow precision shots orc leaders (+18 att, demoralize)
-- **Thorin (P21):** Keep Re alive (8 HP critical!), cast *Wall of Stone* block orcs
-- **Nala (O06):** Guide nani tunnel, light sources, trap checks underground
-
-**DELAY TACTICS:**
-1. **Wall of Stone:** Block orc advance Col AA25 (lasts 10 minutes, HP 90)
-2. **Traps Improvise:** Rubble collapse (Engineering CD 15, triggers 2d6 area)
-3. **Sniping Dara:** Kill warchiefs (slow advance, morale penalty)
-4. **Glitterdust:** Blind frontline orcs (CD 16, -40 ft speed)
-
-**OUTCOME:**
-- ✅ Success: All 90 evacuate (Re survives!)
-- ⚠️ Partial: 80-89 evacuate (10 sacrificed holding line)
-- ❌ Failure: <80 evacuate (overwhelmed, TPK risk campaign over!)
-
----
-
-### 📊 DISTANZE CHIAVE:
-
-**Tunnel → Re Thorek:**
-- From Tunnel (O06) to Re (O20): **21m (14 quadrati)** - Barella slow movement!
-
-**Nani Cluster → Orchi Vanguard:**
-- From Nani Edge (S24) to Orchi (AA36): **18m (12 quadrati)** - Round 3 contact!
-
-**Evacuazione Rate:**
-- 90 nani ÷ 5/round = 18 rounds
-- Orchi arrive: Round 3
-- **CRITICAL:** 15 rounds fight while evacuation continues!
-
----
-
-### 🌍 AMBIENTE (companion T5b, consolidato da POSIZIONI + DISTANZE)
-
-**SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map01_mappa-h3-1-ingresso-passaggi-antichi-evacuazione.svg`
-
+### 🌍 AMBIENTE (companion — regole, non prosa)
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
-| Statua del Re Antenato 🗿 | N-Q/02-05 (4 m alta) | meccanismo: **Forza CD 20 o Conoscenze (Storia) CD 15** per spingerla → rivela il tunnel |
-| Apertura tunnel segreto | O-P/05-06 (2×3 m) | **capacità 5 nani/round** in fila indiana |
-| Pozze d'acido residuo 🟢 | 8 pozze (K12, V12, M16, T16, P30, N32, Q33, T30) | **1d6 acido/round** ad attraversarle; evaporano in ~10 min |
-| Macerie/fuoco 🪨💥 | sparse; L-S/30-33 pesanti | terreno difficile (×0,5); L-S/30-33 = **1d6 fuoco** + difficile; copertura +4 CA se sfruttata |
+| Statua-meccanismo 🗿 | Q-T/02-04 | For CD 20 o Storia CD 15 per spingerla → rivela il tunnel |
+| Tunnel segreto 🚪 | R-S/01 | 5 nani/round in fila indiana |
+| Cancello sud sfondato 🪨 | O-Z/37-39 | breccia principale: terreno difficile, l'orda entra qui |
+| Brecce est/ovest 🪨 | AL-AN e A-C / 16-25 | seconde vie d'ingresso: terreno difficile, copertura +4 CA |
+| Pozze d'acido 💀 | K12, AC14, O27, Z26 | 1d6 acido/round; evaporano in ~10 min |
+| Incendi 🔥 | R-W/34-36 | 1d6 fuoco/round; fumo: occultamento 20% entro 3 m |
 
-**Distanze chiave**: tunnel (O06) → Re Thorek (O20) = 21 m/14 q (barella lenta!); bordo nani (S24) → vanguard orchi (AA36) = 18 m/12 q → **contatto al round 3**.
+### ⚔️ TATTICHE (l'orda che ha sfondato)
+- **Tre fronti simultanei:** la massa dal cancello sud (frontale) mentre i fiancheggiatori dalle brecce est/ovest cercano di rompere l'anello e raggiungere il Re/portatori.
+- **Bloodlust:** nessuna resa, inseguimento aggressivo (30 m/round); puntano il nucleo e i portatori per fermare l'evacuazione.
+- **Contromosse naniche:** tappare UNA breccia con *Muro di Pietra*/*Barriera di Lame* dimezza i fronti; crolli di macerie improvvisati (Ingegneria CD 15 → 2d6 area); cecchinaggio dei capi per rallentare l'avanzata.
+- **Il vero avversario è il tempo,** non i singoli orchi: ogni round guadagnato = 5 nani in salvo.
 
-### ⚔️ TATTICHE (companion T5b, consolidato da EVACUAZIONE TIMELINE)
-
-- **Il problema**: **90 nani ÷ 5/round = 18 round** per evacuare; **200+ orchi** avanzano 30 m/round e arrivano al **round 3**. Servono **~15 round di ritardo** mentre l'evacuazione continua. Re Thorek è a **8 PF su barella** (portatori a ×0,5).
-- **Ruoli PG**: **Borin** tiene il chokepoint del tunnel (2 m, muro di scudi); **Dara** cecchina i capi orchi dalle rovine elevate (+18 att, demoralizza); **Thorin** tiene vivo il Re (*Cura Ferite Serie*) e blocca con *Muro di Pietra*; **Nala** guida i nani nel tunnel (luci, trappole).
-- **Tattiche di ritardo**: *Muro di Pietra* a col AA25 (PF 90, 10 min); crolli di macerie improvvisati (Ingegneria CD 15 → 2d6 area); cecchinaggio dei warchief (rallenta + malus morale); *Polvere Luccicante* (CD 16, accieca la prima linea, −40 ft).
-- **Morale**: gli orchi sono in **bloodlust** (inseguimento aggressivo, nessuna resa); i nani reggono finché Borin tiene il chokepoint e il Re è vivo.
-
-### 🔄 EVOLUZIONE (companion T5b, consolidato da EVACUAZIONE OUTCOME)
-
-| Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
+### 🔄 EVOLUZIONE (stati, non copione)
+| Stato | Trigger | Cosa cambia sulla griglia | Effetto |
 |---|---|---|---|
-| A — Apertura tunnel | statua spinta (For CD 20 / Storia CD 15) | apertura O-P/05-06 attiva | inizia l'evacuazione (5/round) |
-| B — Contatto (round 3) | orchi a 18 m | vanguard orchi al bordo nani | inizia la difesa del chokepoint |
-| C — Ritardo | tattiche PG (Muro/crolli/cecchino) | *Muro di Pietra* a AA25; macerie crollate | l'avanzata orca rallenta, l'evacuazione prosegue |
-| D — Esito | round ~18 | — | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
+| A — Statua chiusa | — | tunnel non ancora aperto | l'anello regge, ma nessuno evacua |
+| B — Tunnel aperto | statua spinta (For 20 / Storia 15) | apertura R-S/01 attiva | evacuazione a 5/round |
+| C — Sfondamento | round 2-3 | orchi dentro dai tre fronti | difesa dell'anello + brecce |
+| D — Fronte ridotto | *Muro/crollo* su una breccia | una via chiusa | pressione dimezzata, evacuazione prosegue |
+| E — Esito | round ~18 | — | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
 
-> Esiti aperti (D13): l'esito dell'evacuazione è dei dadi e delle scelte (quanto
-> si riesce a rallentare gli orchi), non un copione — le 3 uscite (successo /
-> parziale / fallimento) sono tutte in gioco.
-
-
----
+> Esiti aperti (D13): quanti nani si salvano dipende dai dadi e da quanto si rallentano i tre fronti, non da un copione.
 
 ## MAPPA 3Y REVISED: IL PONTE SOSPESO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map02_mappa-3y-revised-il-ponte-sospeso-retroguardia.svg` (rigenerare dopo ogni modifica)

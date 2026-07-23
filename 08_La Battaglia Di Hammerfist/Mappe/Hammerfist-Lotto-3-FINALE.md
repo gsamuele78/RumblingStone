@@ -5,7 +5,10 @@
 > 3-4 — 3X (lì H3-1), **3Y** (qui mai esistita), 3Z, 5, 4X, 4-finale —
 > sono in `Hammerfist-L3-REVISED-Ultra-Clear.md` (lotto MAPPE-UC
 > 2026-07-23): usare QUELLE, non le griglie qui sotto.
-> Contenuto mantenuto per storico (D12), non cancellato.
+> Contenuto mantenuto per storico (D12), non cancellato. **Gli SVG di
+> questo file sono stati rimossi dal lotto MAPPE-UC** (griglie sparse non
+> renderizzabili fedelmente): la versione corretta è `Hammerfist-L3-REVISED-
+> Ultra-Clear.md`.
 
 # HAMMERFIST TACTICAL MAPS - LOTTO 3 FINALE
 ## Sessione 3: Dalle Profondità + Sessione 4: Vittoria Finale (5 Mappe)

@@ -3,7 +3,11 @@
 > 1A-2, 1A-3 — matrice di contenuto in testa a quel file). Le griglie
 > ultra-clear di TUTTE e tre le mappe (1A-1, 1A-2, 1A-3) sono in
 > `Hammerfist-L1-REVISED-Ultra-Clear.md` (lotto MAPPE-UC 2026-07-23).
-> Contenuto mantenuto per storico (D12), non cancellato.
+> Contenuto mantenuto per storico (D12), non cancellato. **Gli SVG di
+> questo file sono stati rimossi dal lotto MAPPE-UC** (le griglie ASCII qui
+> sotto sono schizzi sparsi che il renderer non riproduce fedelmente): la
+> versione renderizzabile e corretta è sempre e solo `Hammerfist-L1-REVISED-
+> Ultra-Clear.md`.
 
 # HAMMERFIST TACTICAL MAPS - LOTTO 1
 ## Sessione 1: Ricognizione (Mappe 1A-1 fino 1A-3)
