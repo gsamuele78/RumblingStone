@@ -4,7 +4,7 @@ check_plans_discipline.py — gate della "regola d'oro" dei piani (ADR-0009).
 
 Blocca (exit 1) un range di commit che modifica file STRUTTURALI del repo
 senza aggiornare plans/CHANGELOG.md nello stesso range. Strutturale =
-scripts/, skills/, Script/, .github/, plans/adr/ (l'infrastruttura).
+scripts/, skills/, converters/, .github/, plans/adr/ (l'infrastruttura).
 Il contenuto di campagna (campaign/, archi 00_-09_, Bestiario/, PG/) NON
 è strutturale: le sessioni giocate al tavolo non richiedono changelog.
 
@@ -29,7 +29,7 @@ import subprocess
 import sys
 
 CHANGELOG = "plans/CHANGELOG.md"
-STRUCTURAL_PREFIXES = ("scripts/", "skills/", "Script/", ".github/", "plans/adr/")
+STRUCTURAL_PREFIXES = ("scripts/", "skills/", "converters/", ".github/", "plans/adr/")
 ADR_PREFIX = "plans/adr/"
 
 

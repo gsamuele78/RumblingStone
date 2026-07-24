@@ -1144,7 +1144,7 @@
     {
       "name": "converters_html_to_markdown",
       "description": "Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM.",
-      "invocation": "(vedi Script/Html_to_markdown/README)",
+      "invocation": "(vedi converters/Html_to_markdown/README)",
       "inputSchema": {
         "type": "object",
         "properties": {},
@@ -1163,7 +1163,7 @@
     {
       "name": "converters_image_to_webp",
       "description": "Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM.",
-      "invocation": "Script/Image-to-webp/conver_webp_new.sh",
+      "invocation": "converters/Image-to-webp/conver_webp_new.sh",
       "inputSchema": {
         "type": "object",
         "properties": {},
@@ -1182,7 +1182,7 @@
     {
       "name": "converters_pdf_to_md_engine",
       "description": "Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM.",
-      "invocation": "(vedi Script/pdf-to-md-engine/README)",
+      "invocation": "(vedi converters/pdf-to-md-engine/README)",
       "inputSchema": {
         "type": "object",
         "properties": {},

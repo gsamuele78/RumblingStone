@@ -2851,10 +2851,10 @@
     },
     {
       "id": "converters/html-to-markdown",
-      "path": "Script/Html_to_markdown",
+      "path": "converters/Html_to_markdown",
       "category": "I-converters",
       "language": "mixed",
-      "invocation": "(vedi Script/Html_to_markdown/README)",
+      "invocation": "(vedi converters/Html_to_markdown/README)",
       "summary": "Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM.",
       "stability": "external-toolchain",
       "stdlib_only": false,
@@ -2897,15 +2897,15 @@
       "ci_smoke": null,
       "tests": [],
       "docs": [
-        "Script/README.md"
+        "converters/README.md"
       ]
     },
     {
       "id": "converters/image-to-webp",
-      "path": "Script/Image-to-webp",
+      "path": "converters/Image-to-webp",
       "category": "I-converters",
       "language": "bash",
-      "invocation": "Script/Image-to-webp/conver_webp_new.sh",
+      "invocation": "converters/Image-to-webp/conver_webp_new.sh",
       "summary": "Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM.",
       "stability": "external-toolchain",
       "stdlib_only": false,
@@ -2950,15 +2950,15 @@
       "ci_smoke": null,
       "tests": [],
       "docs": [
-        "Script/Image-to-webp/README.md"
+        "converters/Image-to-webp/README.md"
       ]
     },
     {
       "id": "converters/pdf-to-md-engine",
-      "path": "Script/pdf-to-md-engine",
+      "path": "converters/pdf-to-md-engine",
       "category": "I-converters",
       "language": "mixed",
-      "invocation": "(vedi Script/pdf-to-md-engine/README)",
+      "invocation": "(vedi converters/pdf-to-md-engine/README)",
       "summary": "Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM.",
       "stability": "external-toolchain",
       "stdlib_only": false,
@@ -3003,7 +3003,7 @@
       "ci_smoke": null,
       "tests": [],
       "docs": [
-        "Script/README.md"
+        "converters/README.md"
       ]
     },
     {
