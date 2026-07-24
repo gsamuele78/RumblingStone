@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booklet degli Hint — Lo Scontro con Terros l'Antico</title>
+<style>
+  :root{
+    --ink:#f2e9d8;
+    --ink-dim:#c9bda6;
+    --ink-faint:#9a8f79;
+    --bg:#100c0a;
+    --bg2:#171210;
+    --panel:#1e1815;
+    --panel2:#241d18;
+    --line:#3a2e24;
+    --gold:#d8a24a;
+    --topaz:#e0a93b;
+    --emerald:#4fb27a;
+    --emerald-dim:#2f7a52;
+    --ember:#d9622b;
+    --mithral:#a9c2cf;
+    --violet:#9a6fd6;
+    --obsidian:#6b6f86;
+    --blood:#a33224;
+    --shadow:0 10px 34px rgba(0,0,0,.55);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --disp:"Trajan Pro","Cinzel","Optima",var(--serif);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--serif);
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 700px at 50% -8%, #241a12 0%, transparent 60%),
+      radial-gradient(900px 600px at 100% 120%, #1a2320 0%, transparent 55%),
+      var(--bg);
+    line-height:1.62;
+    font-size:17px;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:34px 22px 90px}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    text-align:center;
+    padding:46px 26px 40px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:
+      radial-gradient(600px 300px at 50% 0%, rgba(216,162,74,.14), transparent 70%),
+      linear-gradient(180deg,var(--panel2),var(--panel));
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .cover::before,.cover::after{
+    content:"";position:absolute;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5;
+  }
+  .cover::before{top:14px}.cover::after{bottom:14px}
+  .eyebrow{
+    font-family:var(--disp);letter-spacing:.34em;text-transform:uppercase;
+    font-size:12px;color:var(--gold);margin:0 0 14px;font-weight:600;
+  }
+  .cover h1{
+    font-family:var(--disp);font-weight:700;letter-spacing:.04em;
+    font-size:clamp(30px,5.6vw,50px);margin:6px 0 6px;color:var(--ink);
+    text-shadow:0 2px 18px rgba(216,162,74,.18);
+  }
+  .cover .sub{
+    font-style:italic;color:var(--ink-dim);font-size:clamp(16px,2.4vw,20px);margin:6px 0 20px;
+  }
+  .glyph{font-size:26px;letter-spacing:.5em;color:var(--emerald);margin:8px 0 4px;padding-left:.5em}
+  .cover .meta{
+    display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;margin-top:22px;
+  }
+  .tag{
+    font-size:12.5px;letter-spacing:.05em;color:var(--ink-dim);
+    border:1px solid var(--line);border-radius:999px;padding:5px 13px;background:rgba(0,0,0,.25);
+  }
+  .tag b{color:var(--gold);font-weight:600}
+
+  /* ---------- Section furniture ---------- */
+  h2.section{
+    font-family:var(--disp);letter-spacing:.06em;font-size:23px;font-weight:700;
+    margin:52px 0 6px;color:var(--gold);
+    display:flex;align-items:center;gap:12px;
+  }
+  h2.section::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  .lead{color:var(--ink-dim);font-style:italic;margin:0 0 18px}
+
+  .card{
+    border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel2),var(--panel));
+    box-shadow:var(--shadow);padding:22px 24px;margin:18px 0;
+  }
+
+  /* read-aloud / boxed text */
+  .boxed{
+    border-left:3px solid var(--gold);
+    background:
+      linear-gradient(180deg,rgba(216,162,74,.06),rgba(216,162,74,.02));
+    padding:16px 20px;margin:16px 0;border-radius:0 10px 10px 0;
+    font-style:italic;color:#e8dcc4;
+  }
+  .boxed .who{
+    display:block;font-style:normal;font-family:var(--disp);letter-spacing:.14em;
+    text-transform:uppercase;font-size:11.5px;color:var(--gold);margin-bottom:7px;
+  }
+
+  .callout{
+    border:1px dashed var(--line);border-radius:10px;padding:12px 16px;margin:14px 0;
+    background:rgba(0,0,0,.22);font-size:15.5px;color:var(--ink-dim);
+  }
+  .callout b{color:var(--ink)}
+
+  ul.clean{margin:10px 0;padding-left:0;list-style:none}
+  ul.clean li{position:relative;padding:4px 0 4px 24px}
+  ul.clean li::before{content:"◆";position:absolute;left:2px;top:4px;color:var(--gold);font-size:12px}
+
+  .kv{margin:6px 0}
+  .kv b{color:var(--ink)}
+  .num{color:var(--topaz);font-variant-numeric:tabular-nums}
+
+  /* ---------- PG cards ---------- */
+  .pg{
+    --accent:var(--gold);
+    border:1px solid var(--line);border-radius:16px;margin:26px 0;overflow:hidden;
+    box-shadow:var(--shadow);background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border-top:3px solid var(--accent);
+  }
+  .pg-head{
+    padding:20px 24px 14px;
+    background:
+      radial-gradient(400px 160px at 0% 0%, color-mix(in srgb,var(--accent) 16%, transparent), transparent 70%);
+    border-bottom:1px solid var(--line);
+  }
+  .pg-head .role{
+    font-family:var(--disp);letter-spacing:.2em;text-transform:uppercase;font-size:11px;
+    color:var(--accent);margin:0 0 4px;
+  }
+  .pg-head h3{
+    font-family:var(--disp);font-size:26px;font-weight:700;margin:0;color:var(--ink);letter-spacing:.02em;
+  }
+  .pg-head .who-line{color:var(--ink-faint);font-size:14px;margin-top:3px}
+  .pg-body{padding:8px 24px 22px}
+  .pg-body h4{
+    font-family:var(--disp);letter-spacing:.08em;text-transform:uppercase;font-size:12.5px;
+    color:var(--accent);margin:20px 0 6px;display:flex;align-items:center;gap:9px;
+  }
+  .pg-body h4::before{content:"";width:7px;height:7px;background:var(--accent);transform:rotate(45deg);display:inline-block;flex:none}
+
+  .pg.thorik{--accent:var(--topaz)}
+  .pg.tordek{--accent:var(--ember)}
+  .pg.hella{--accent:var(--emerald)}
+  .pg.artemis{--accent:var(--violet)}
+
+  .chip{display:inline-block;font-size:12px;letter-spacing:.04em;border:1px solid var(--accent);
+    color:var(--accent);border-radius:999px;padding:3px 11px;margin:3px 5px 3px 0;background:rgba(0,0,0,.2)}
+
+  .secret{
+    border:1px solid var(--blood);border-radius:10px;padding:12px 16px;margin:16px 0;
+    background:linear-gradient(180deg,rgba(163,50,36,.12),rgba(163,50,36,.03));
+    font-size:14.5px;color:#e7c9c2;
+  }
+  .secret b{color:#f0a99e;font-family:var(--disp);letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--disp);letter-spacing:.05em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+  .scroll{overflow-x:auto}
+
+  hr.rule{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:40px 0}
+  .foot{color:var(--ink-faint);font-size:13px;text-align:center;margin-top:36px;font-style:italic}
+  a{color:var(--emerald)}
+
+  @media print{
+    body{background:#fff;color:#1a140f;font-size:12pt}
+    .wrap{max-width:none}
+    .card,.pg,.cover{box-shadow:none;border-color:#c9b48f;background:#fbf6ea;break-inside:avoid}
+    .pg{break-before:page}
+    .boxed{color:#3a2a12;background:#f3e8cf}
+    .cover h1,h2.section,.pg-head h3{color:#6b4a10}
+    .foot,a{color:#5a4b33}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ COVER ============ -->
+  <header class="cover">
+    <p class="eyebrow">Custodi Eterni · Il Portale della Forgia Eterna</p>
+    <div class="glyph">⚒ ◆ ⚒</div>
+    <h1>L'Incudine del Mondo</h1>
+    <p class="sub">Booklet degli Hint — Lo scontro con Terros l'Antico</p>
+    <div class="meta">
+      <span class="tag"><b>Nodo:</b> Piano Elementale della Terra</span>
+      <span class="tag"><b>Gemma:</b> Smeraldo della Forza</span>
+      <span class="tag"><b>Momento:</b> soglia della Camera Sferica</span>
+      <span class="tag"><b>Sistema:</b> D&amp;D 3.5</span>
+      <span class="tag"><b>Faerûn</b> 1372 DR</span>
+    </div>
+  </header>
+
+  <!-- ============ DOVE SIETE ============ -->
+  <h2 class="section">Dove siete adesso</h2>
+  <p class="lead">Un booklet, quattro riflettori diversi. Ognuno legge <b>solo la propria pagina</b> quando arriva il suo momento. Ciò che uno sa, gli altri possono non saperlo: il Piano della Terra vi ha divisi per natura, e vi ricongiungerete solo davanti al Guardiano.</p>
+
+  <div class="card">
+    <div class="boxed">
+      <span class="who">La soglia — read-aloud per tutti</span>
+      Il petto della Sentinella si è aperto come acciaio dischiuso, e il Geode di Smeraldo ha lasciato la sua gabbia di mithral. L'Anticamera della Magnetite tace, ora: le vene viola non pulsano più, la magnete allenta la sua presa. Davanti a voi, un ultimo corridoio di mithral che canta di luce propria, e in fondo — una <b>porta circolare</b> senza cardini, calda al tatto come una fronte febbricitante. Oltre, Aegis Fang lo <em>sente</em>: una massa, un peso, un voto antico quanto la roccia. La seconda gemma non è custodita da una serratura. È custodita da <b>qualcuno</b>.
+    </div>
+    <ul class="clean">
+      <li><b>Tordek</b> ha appena abbattuto la Sentinella Silenziosa: i <b>Bracieri Gemelli</b> sono ora <em>completi</em> — Fuoco <b>e</b> Terra, coscienza piena, la voce del vecchio fabbro nella mente.</li>
+      <li><b>Thorik</b> porta la Corona (Topazio acceso) e Aegis Fang: è la bussola, l'àncora, il capo che apre la strada verso il Guardiano.</li>
+      <li><b>Hella</b> ha già <em>concluso e superato</em> il suo viaggio spirituale nella Soglia della Forgia — ma nessuno di voi lo sa. Voi tre vedete solo il Piano della Terra; lei percepisce solo echi.</li>
+      <li><b>Artemis</b> ha un'ultima faccenda privata prima della porta: qualcosa, nel mithral, sta chiamando <em>solo lui</em>.</li>
+    </ul>
+    <div class="callout">⏳ <b>L'orologio non si ferma.</b> Ogni respiro qui è rubato a Hammerfist che brucia altrove. Countdown a fine parte: <b class="num">~3 giorni e 18 ore</b>. Riposare dentro il Tempio è possibile — ma costa ore alla montagna che arde.</div>
+  </div>
+
+  <!-- ============ CIO CHE SAPETE TUTTI ============ -->
+  <h2 class="section">Ciò che sapete tutti</h2>
+  <p class="lead">Conoscenza condivisa: quello che chiunque, superata la soglia, può vedere e dedurre. Il resto è nelle pagine personali.</p>
+  <div class="card">
+    <ul class="clean">
+      <li><b>La camera è una sfera</b> a gravità zero, tranne un'unica isola di gravità normale: l'<b>Altare della Forza</b>, piattaforma di mithral con rune verde smeraldo. Lo Smeraldo levita sopra l'Altare.</li>
+      <li><b>Il Guardiano vive di pietra.</b> Finché tocca l'Altare o le pareti, <em>si rinsalda</em>: chi lo stacca dalla roccia, lo indebolisce.</li>
+      <li><b>Dilemma della gravità.</b> Stare sull'Altare dà appoggio saldo — ma è il suo terreno, dove è più forte. Fluttuare nello zero-G lo rende goffo contro di voi — ma vi rende goffi a vostra volta. <em>Nessuna posizione è gratis.</em></li>
+      <li><b>Il ponte di cristallo</b> all'ingresso può crollare sotto un colpo sismico: non stazionateci in gruppo.</li>
+      <li><b>Non è collera, è peso.</b> Terros non vi odia. Esegue un voto: «La Forza non si dona, si dimostra.» Non cederà lo Smeraldo, mai — e non fugge mai. Un guardiano muore in piedi.</li>
+    </ul>
+    <div class="callout"><b>Sinergie d'artefatto</b> (attive se i portatori sono entro <span class="num">9 m</span>): <b>Trinità Divina</b> (Corona + Anello + Bracieri, 1/giorno, 5 round) — immunità a paura/charme, +4 TS sacri, +2 CA sacra, i colpi superano la RD come Bene/Legge, Aura del Timore. Tenetela per il momento giusto.</div>
+  </div>
+
+  <!-- ============ THORIK ============ -->
+  <h2 class="section">Le pagine personali</h2>
+
+  <article class="pg thorik">
+    <div class="pg-head">
+      <p class="role">L'Àncora · Il Ricettacolo</p>
+      <h3>Thorik</h3>
+      <p class="who-line">Guerriero 13 · Corona di Adamantio (Topazio) · Aegis Fang</p>
+    </div>
+    <div class="pg-body">
+      <div class="boxed">
+        <span class="who">Il tuo momento</span>
+        La Corona, sulla tua fronte, non è più tiepida: è <em>fredda</em>, di un verde profondo che non avevi mai visto. Aegis Fang, che ha guidato ogni passo di questo Piano, davanti alla porta circolare fa una cosa che non aveva mai fatto: <b>tace</b>. Non per paura. Per rispetto. Come una voce antica che, davanti a una più antica, abbassa il capo. Tu sei quello che ha aperto la strada fin qui. Tocca a te varcarla per primo.
+      </div>
+
+      <h4>Cosa sai / cosa percepisci</h4>
+      <ul class="clean">
+        <li>La Corona ti dà <b>Consapevolezza della Pietra</b> su terreno naturale — e l'Altare <em>conta</em> come terreno: senti che il Guardiano vi trae vigore. Chi lo tiene lontano dalla roccia lo prosciuga.</li>
+        <li>Con la Corona puoi invocare <b>Vera Visione</b> (1/giorno): usala per non farti ingannare dai suoi movimenti dentro la pietra.</li>
+        <li>C'è un <b>peso verde e freddo</b> che ti sfiora le spalle da quando sei sceso in questo Piano. Non sai cos'è. Ti allevia il carico, un poco. Ti fa sentire <em>meno solo</em>. Non farti domande adesso: reggi.</li>
+      </ul>
+
+      <h4>Il tuo arsenale in questo scontro</h4>
+      <span class="chip">Alta CA · scudo + Corona</span>
+      <span class="chip">Aegis Fang: +1d6 sacro vs pietra viva</span>
+      <span class="chip">Consapevolezza della Pietra</span>
+      <ul class="clean">
+        <li><b>Radice a Terra.</b> Quando il Guardiano prova a sparire nella pietra per rigenerarsi, puoi <em>inchiodarlo</em>: conficca Aegis Fang nelle crepe e vinci una <b>prova di Forza contrapposta</b>. Fatti <b>Aiutare</b> e sfrutta la Benedizione della Montagna. Se vinci, lo tieni in superficie un round — niente rigenerazione, e tutti i suoi colpi cadono su di te. <em>Sei la barriera inamovibile.</em></li>
+        <li><b>Tieni l'aggro.</b> La tua armatura regge i suoi schianti meglio di chiunque. Ma attento allo <b>Spintone</b>: un colpo può scaraventarti fuori dall'appiglio, e un'àncora che fluttua non àncora più. Aegis Fang torna in mano (Returning): usala come rampino per rientrare.</li>
+      </ul>
+
+      <h4>Il tuo bivio — quando cadrà il Guardiano</h4>
+      <p class="kv">Vinto Terros, la Forza va <b>forgiata</b> nella Corona, e ha un prezzo. Moradin ti chiederà: <em>«Sei disposto a portare il peso della montagna per gli altri?»</em></p>
+      <ul class="clean">
+        <li><b>Via materiale:</b> spogliare il gruppo di tesoro e artefatti per un valore enorme (impoverisce tutti all'ingresso di Hammerfist).</li>
+        <li><b>Via personale:</b> accogliere <em>tu</em> il Peso nel corpo. Le ossa fondono con la pietra: <b>−2 DES / +2 COS permanenti</b>. È la scelta del pathos — e non la porterai da solo.</li>
+      </ul>
+
+      <div class="secret"><b>Solo per te, giocatore</b> — Non chiedere al DM cos'è la presenza verde. Vivila come un peso e una premonizione, non come un'informazione. Alcune ferite antiche (una palude, un drago nero senza volto) possono riaffiorare come <em>brivido</em>: lasciale premere, non spiegarle.</div>
+    </div>
+  </article>
+
+  <!-- ============ TORDEK ============ -->
+  <article class="pg tordek">
+    <div class="pg-head">
+      <p class="role">Lo Scassa-Scudi · Incudine e Martello</p>
+      <h3>Tordek</h3>
+      <p class="who-line">Guerriero 4 / Monaco 9 · Bracieri Gemelli di Moradin (COMPLETI)</p>
+    </div>
+    <div class="pg-body">
+      <div class="boxed">
+        <span class="who">Il tuo momento — appena concluso</span>
+        Il Geode di Smeraldo è galleggiato verso di te, il guanto sinistro si è aperto come petali d'acciaio, e per un istante la stanza è svanita: eri sepolto vivo nella roccia, terra nei polmoni — poi la voce tettonica nelle ossa. <em>«Il fuoco brucia in fretta e muore. La roccia attende. La roccia sostiene. La roccia vince perché non ha fretta.»</em> Hai unito i pugni. <b>BOOOM</b>: due placche continentali che si assestano. I Bracieri sono <b>completi</b>.
+      </div>
+      <div class="boxed">
+        <span class="who">I Bracieri (vecchio fabbro, nella mente)</span>
+        «Incudine e Martello. Ora sei completo.»
+      </div>
+
+      <h4>Cosa sai / cosa percepisci</h4>
+      <ul class="clean">
+        <li>I Bracieri ora <b>hanno coscienza piena</b> e parlano in nanico, tono da vecchio forgiatore. Ti danno <em>suggerimenti</em>, non ordini. Ma ricorda: possono <b>rifiutarti i poteri</b> se tradisci gli ideali nanici. Onora Moradin e loro ti onorano.</li>
+        <li>La voce di Moradin, al risveglio, ti ha lasciato una chiave: <em>«Il metallo cede al calore <b>E</b> alla pressione: usa entrambi.»</em> Contro una cosa di pura roccia, non basta picchiare: serve <b>far vibrare</b>.</li>
+        <li>Quando i tuoi pugni battono il mithral, non lo ammaccano: lo fanno <b>risuonare come una campana</b>. Tienilo a mente — la roccia teme il suono giusto.</li>
+      </ul>
+
+      <h4>Il tuo arsenale — completo (Fuoco + Terra)</h4>
+      <span class="chip">RD 5/adamantio</span>
+      <span class="chip">Pugno Frana</span>
+      <span class="chip">Tremore del Forgiatore</span>
+      <span class="chip">Colpi del Fuoco</span>
+      <span class="chip">Salto Infuocato</span>
+      <span class="chip">Ancoraggio della Montagna</span>
+      <ul class="clean">
+        <li><b>Il tuo vero ruolo non è tankare: è aprire.</b> Il Guardiano può alzare uno <b>Scudo di Geodi</b> (lastre di diamante, niente critici). Un tuo colpo che scarica abbastanza <b>danno sonico</b> in un solo pugno <em>frantuma lo scudo</em> e lo lascia frastornato per il round di Thorik. Sei tu che spezzi la sua difesa.</li>
+        <li>La roccia dura <b>attutisce i tuoi colpi normali</b> (la RD morde il monaco). Ma il tuo <b>Pugno Frana</b> atterra anche i giganti, e la tua <b>risonanza</b> aggira la sua corazza. Cerca la vibrazione, non la mazzata.</li>
+        <li><b>Muoviti, non piantarti.</b> Il suo Spintone ti sbatte contro il muro nello zero-G. Usa <b>Ancoraggio della Montagna</b> quando serve immunità allo spostamento; per il resto, sii acqua e martello — colpisci e riposiziónati.</li>
+      </ul>
+
+      <h4>Dopo la vittoria — il Sisma Contrario</h4>
+      <p class="kv">Nel rito dello Smeraldo, sei tu che salvi Thorik: batti i pugni sull'Altare <b>al ritmo esatto del suo cuore</b>. Se riesci, la risonanza nanica <b>dimezza lo sforzo di Thorik</b> quel round. Se sbagli il ritmo, il pavimento esplode addosso a entrambi. <em>È il gesto del fratello di forgia.</em></p>
+
+      <div class="secret"><b>Solo per te, giocatore</b> — Sfiorando la Corona di Thorik potresti ricevere <em>tre parole nel nanico dei sogni</em>, senza voce e senza spiegazione: «stabilità… germogli… tornare.» Nient'altro. Non è un dialogo, non chiedere chi parla. È un frammento, e basta.</div>
+    </div>
+  </article>
+
+  <!-- ============ HELLA ============ -->
+  <article class="pg hella">
+    <div class="pg-head">
+      <p class="role">Solo echi · Il nano dei sogni</p>
+      <h3>Hella</h3>
+      <p class="who-line">Ranger 1 / Druida 12 · viaggio spirituale concluso e superato</p>
+    </div>
+    <div class="pg-body">
+      <div class="callout">Hella <b>non agisce meccanicamente</b> in questo scontro: il suo corpo riposa nella Sala, vegliato da Therysol, e il viaggio dello spirito è già <em>compiuto</em>. Questa pagina è per la sua giocatrice: <b>riflettore percettivo</b>, non tattico. Non sai cosa fanno i tuoi compagni. Percepisci solo sensazioni, senza spiegazione.</div>
+
+      <div class="boxed">
+        <span class="who">Le immagini che ti arrivano — a senso unico</span>
+        <ul class="clean" style="font-style:normal;color:#dfead9">
+          <li>Il <b>peso di una testa</b> che si posa sul tuo petto — massiccia, calda di pietra viva. Non sai di chi. Ti conforta.</li>
+          <li>Una <b>mano fredda</b> — la <em>tua</em>, e non lo sai — che regge una schiena che sta cedendo sotto un peso immenso. Reggi con lei.</li>
+          <li>Pietra che si <b>assesta attorno a ossa care</b>, come una coperta che si stringe. Un moto di quiete dove prima c'era il gelo.</li>
+        </ul>
+      </div>
+
+      <h4>Cosa hai attraversato (e nessuno sa)</h4>
+      <ul class="clean">
+        <li>Il tuo spirito ha camminato la <b>Soglia della Forgia</b> e ne è tornato <em>cambiato</em>: la tua connessione al Sogno della Terra è ora amplificata per sempre. È dentro di te, in attesa del corpo.</li>
+        <li>Se i tuoi compagni hanno guadagnato la fiducia dei Cristalli Viventi, un tuo <b>moto spirituale senza parole</b> è passato per la Madre Cristallo: <em>«il cuore della pietra ha abbracciato le ossa del suo caduto; preparate il guscio, portate la Forza.»</em> Non è un consiglio tattico. È un presagio che nemmeno tu capisci — finché non tornerai.</li>
+      </ul>
+
+      <div class="secret"><b>Solo per te, giocatrice</b> — Non tradurre le immagini in strategia, e non condividerle come informazioni al tavolo se non come <em>colore</em>. Sei l'unica a intuire, senza sapere, che qualcosa di caro sta prendendo forma nella roccia. Custodisci il mistero: sarà tuo al ritorno.</div>
+    </div>
+  </article>
+
+  <!-- ============ ARTEMIS ============ -->
+  <article class="pg artemis">
+    <div class="pg-head">
+      <p class="role">L'Artigliere · Il predone avido</p>
+      <h3>Artemis</h3>
+      <p class="who-line">Warlock 13 · Ring of Chaotic Illumination (Riforgiato)</p>
+    </div>
+    <div class="pg-body">
+
+      <h4 style="margin-top:6px">Prima faccenda — la scena privata (giocala a bassa voce, solo tu)</h4>
+      <p class="lead" style="margin:2px 0 12px">I PG sono già nel Tempio: il Seme-Mercato ti raggiunge <b>qui</b>, non sulla riva. Mentre gli altri studiano la porta circolare, l'Anello ti morde il dito.</p>
+      <div class="boxed">
+        <span class="who">Read-aloud — solo per Artemis</span>
+        Un pizzicore che conosci: segreti vicini. Nel mithral della parete, in una vena spezzata dove nessun occhio senza il tuo Anello potrebbe arrivare, una piccola gemma che non c'entra nulla con questo piano: un <b>cabochon violetto</b>, caldo, tagliato da mani civili. Qualcuno l'ha messa lì. Per qualcuno come te.
+      </div>
+      <div class="boxed">
+        <span class="who">Varis "Seta-Argento" (telepatico, mielato)</span>
+        «Bravo. Solo tu potevi vederla. Consideralo un pegno tra futuri soci: prendila, incastonala nell'Anello, e hai lo sconto a vita e la mia Falla come tuo magazzino personale. Il grande collezionista non lascerà mai un tesoro simile nella pietra di un piano dimenticato… vero?»
+      </div>
+      <div class="callout">
+        La <b>Sapienza Magica</b> dell'Anello (CD 20, gratis) te lo dice: è un <b>innesto planare</b>, un'esca-esploratore del mercato di Varis. Un affare che pare gratis. La scelta è tua — e <em>l'esito si gioca davvero</em>:
+        <div class="scroll"><table>
+          <tr><th>La tua scelta</th><th>Subito</th><th>L'eco, più avanti</th></tr>
+          <tr><td><b>Rifiuti / la estirpi</b> (Sapienza Magica CD 20)</td><td>Varis perde l'esca; l'Anello approva</td><td>Varis ti rispetta come «sfuggito»: nemico serio, non pollo</td></tr>
+          <tr><td><b>La prendi</b></td><td>Frammento di Mercato reale (uno sconto/bonus commerciale): la cupidigia <em>premiata sul serio</em>, per un attimo</td><td><b>Marchio di Varis</b>: ti localizza e, una volta, riscuote. L'Anello odia i guinzagli…</td></tr>
+        </table></div>
+      </div>
+      <div class="secret"><b>Solo per te, giocatore</b> — Non è «una trappola cattiva»: è un affare vero con un amo vero. Puoi vincerci (se sei furbo o retto) o pagarlo caro (se sei avido). In entrambi i casi la scelta <b>torna</b>. Ascolta cosa fa (o non fa) il tuo Anello: è Caos e Luce, non ti comanda mai — ma odia le catene che non tiene lui.</div>
+
+      <hr class="rule">
+
+      <div class="boxed">
+        <span class="who">Poi, la porta — il tuo momento nello scontro</span>
+        Quando l'Onda del Guardiano strappa l'Altare da sotto i piedi dei tuoi compagni e la camera intera <em>cade</em>, tu sei l'unico per cui nulla è cambiato: le Ali d'Ombra non obbediscono alla terra. Da lassù vedi tutto — il boss, l'Altare, i compagni aggrappati al mondo capovolto. E la sua testa di roccia si volta lenta verso di te, l'unico che non è caduto.
+      </div>
+
+      <h4>Cosa sai / cosa percepisci</h4>
+      <ul class="clean">
+        <li><b>In volo sei quasi intoccabile.</b> Il Guardiano è padrone della terra ma <em>maldestro contro chi sta in aria</em>: i suoi schianti ti mancano, ti minacciano solo massi lanciati e stalattiti. Resta alto, resta mobile.</li>
+        <li>I tuoi Blast lo colpiscono <b>quasi sempre a segno</b> (miri al contatto, e la sua mole non schiva). Sei lo <b>star DPS</b> designato di questo scontro: se sfrutti la sua debolezza al <b>suono</b>, i numeri raddoppiano.</li>
+      </ul>
+
+      <h4>Il tuo arsenale</h4>
+      <span class="chip">Ali d'Ombra (volo a volontà)</span>
+      <span class="chip">Passo d'Ombra</span>
+      <span class="chip">Eldritch Blast +1d6 fuoco +1d6 gelo</span>
+      <span class="chip">Luce di Lathander</span>
+      <span class="chip">Dono dell'Unità</span>
+      <ul class="clean">
+        <li><b>Intercetta le stalattiti.</b> Quando il Guardiano scaglia la Pioggia di Stalattiti sui tuoi compagni, tieni pronta un'<b>azione preparata</b>: un Blast disintegra i massi a mezz'aria (sono bersagli facili) e annulla i danni. Un blast per masso — sei lo scudo del cielo.</li>
+        <li>La tua <b>avidità</b> avrà pane per i denti: il Geode Titanico, il <b>Cuore di Terros</b> (componente da 20.000 mo). Ma attento — proprio quel bottino potrebbe essere ciò che il Rituale chiederà di <em>sacrificare</em>. Metti il tesoro davanti agli occhi… e poi scegli.</li>
+      </ul>
+
+      <h4>Dopo la vittoria — la Valvola di Sfogo</h4>
+      <p class="kv">Nel rito, l'energia verde sprizza come plasma: tu ti frapponi da <b>parafulmine</b>, disperdendo le scorie con l'Anello. Se riesci, nessuno prende le ustioni. Se sbagli, cadi — e Thorik viene investito dai residui. <em>Anche il predone, qui, sceglie i compagni.</em></p>
+    </div>
+  </article>
+
+  <!-- ============ PROMEMORIA FINALE ============ -->
+  <h2 class="section">Il ritmo dello scontro (promemoria condiviso)</h2>
+  <div class="card">
+    <ul class="clean">
+      <li><b>Staccalo dalla pietra.</b> A contatto con l'Altare rigenera. Thorik lo inchioda, Tordek lo frantuma, Artemis lo macina dall'alto: privatelo del suo terreno.</li>
+      <li><b>Il suono è la chiave.</b> Se avete la Frequenza dei Cristalli, entrate cantando: il Guardiano si sveglia disorientato. La risonanza dei Bracieri e i Blast in modalità sonica sono la vostra fonte di danno vera.</li>
+      <li><b>Coprite Artemis a terra e lasciatelo in cielo.</b> È lo star DPS finché vola. Ma senza guaritore, nessuno può permettersi di tankare a lungo: muovetevi.</li>
+      <li><b>Il Guardiano non fugge, e non insegue oltre la camera.</b> Se dovete ritirarvi, sappiate che lo ritroverete guarito — e l'orologio di Hammerfist sarà sceso.</li>
+      <li><b>La vittoria ha un prezzo, e si paga insieme.</b> Il Rituale non è un tiro solo: è tre round in cui ognuno regge la propria parte. Thorik il peso, Tordek il ritmo, Artemis le scorie. <em>Si vince insieme, o si paga corpo su corpo.</em></li>
+    </ul>
+  </div>
+
+  <p class="foot">Custodi Eterni · «La roccia vince perché non ha fretta.» — Compagno del master <code>ARC07-DEF-1-PIANO-TERRA-TERROS.md</code> (§8 Terros · §7b Bracieri · §6-bis Seme-Mercato · §9 Rituale). Conoscenza asimmetrica: ogni PG legge solo la propria pagina.</p>
+
+</div>
+</body>
+</html>
