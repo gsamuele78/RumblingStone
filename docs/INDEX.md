@@ -41,6 +41,7 @@ Contratto macchina e vista umana — **generati** dal manifest, sempre allineati
 | [`docs/guides/LEGENDA-FUNZIONALE-SPEC.md`](guides/LEGENDA-FUNZIONALE-SPEC.md) | **Specifica normativa** della legenda: funzione neutra dei 62 simboli + profili 3.5 / PF1e / 5e + confini di licenza |
 | [`docs/audit/AUDIT-REPORT.md`](audit/AUDIT-REPORT.md) | Report d'audit degli script (findings azionabili) |
 | [`docs/audit/SCORECARD.md`](audit/SCORECARD.md) | Scorecard 12-assi per script |
+| [`docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md`](audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md) | Quanto di RumblingStone deriva da *Red Hand of Doom* — misura per arco, e le tre vie di pubblicazione |
 | [`docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md`](audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md) | Misura dello scarto su level design delle mappe (M1-M9) e inquadratura dei prompt — input del [PIANO-LEVEL-DESIGN-E-INQUADRATURA](../plans/PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md) |
 
 ## 4. Governance & decisioni (ADR)
@@ -67,6 +68,7 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0015](../plans/adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md) | Dipendenze a livelli + pacchettizzazione |
 | [ADR-0016](../plans/adr/ADR-0016-profili-regole-multisistema.md) | Profili di regole multi-sistema (3.5 · PF1e · 5e) |
 | [ADR-0017](../plans/adr/ADR-0017-separazione-prodotto-e-rilicenziamento-toolkit.md) | Separazione dei due prodotti e rilicenziamento del toolkit |
+| [ADR-0018](../plans/adr/ADR-0018-edizione-commerciale-ap-originale.md) | Edizione commerciale = AP **originale autonomo**, mai espansione di RHoD (proposta) |
 
 ## 5. Archivio piani
 
