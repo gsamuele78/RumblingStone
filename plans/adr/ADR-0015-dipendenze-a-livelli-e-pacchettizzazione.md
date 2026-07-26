@@ -1,6 +1,7 @@
 # ADR-0015 — Dipendenze a livelli e pacchettizzazione: il core resta stdlib, l'analisi integra librerie mature
 
-**Stato**: proposta — **gate: decisione DM**
+**Stato**: accettata (2026-07-26) — decisione DM: livelli accettabili **a condizione** che le dipendenze siano impacchettabili nel prodotto finale da vendere
+**Rev. 2** (2026-07-26): il gate di licenza diventa un **requisito di prodotto**, non igiene
 **Data**: 2026-07-26
 **Decisione-fonte**: revisione del design software richiesta dal DM (2026-07-26) sul `PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA`: *«non reinventare la ruota — se esiste già ed è usabile in questo progetto, integrare invece di sviluppare da zero»*. Misure in `docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md` §6.
 
@@ -66,11 +67,19 @@ Una dipendenza entra **solo se cancella codice che altrimenti scriveremmo e
 manterremmo noi**, mai per comodità. Ogni voce dichiara nel manifest quale
 implementazione a mano sostituisce. Se una libreria non elimina codice, non entra.
 
-### 3. Gate di licenza
+### 3. Gate di licenza — **requisito di prodotto** (rev. 2)
 
-Solo licenze permissive (BSD / MIT / Apache-2.0 / PSF). Niente copyleft: il
-toolkit è pensato per essere distribuibile (ADR-0005). Verificato sui candidati:
-numpy BSD-3, scipy BSD-3, networkx BSD-3, jsonschema MIT, tcod BSD-2.
+Solo licenze permissive (BSD / MIT / Apache-2.0 / PSF). Niente copyleft.
+Verificato sui candidati: numpy BSD-3, scipy BSD-3, networkx BSD-3,
+jsonschema MIT, tcod BSD-2.
+
+Il DM ha accettato i livelli **a condizione che le dipendenze possano essere
+impacchettate nel prodotto finale venduto** (ADR-0017 §4: wheel **e** eseguibile
+autonomo). Questo trasforma il gate: non basta che la licenza sia permissiva —
+deve permettere la **ridistribuzione in forma binaria dentro un bundle**, con
+gli avvisi di licenza inclusi nel pacchetto. Tutte e cinque le candidate lo
+permettono; una libreria che non lo permettesse è **inammissibile**, anche se
+tecnicamente superiore.
 
 ### 4. Pacchettizzazione
 

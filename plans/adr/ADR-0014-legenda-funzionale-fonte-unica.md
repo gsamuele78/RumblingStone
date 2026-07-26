@@ -1,6 +1,7 @@
 # ADR-0014 — La legenda funzionale è la fonte unica: la funzione di gioco di un simbolo è un dato, non prosa né un `set` cablato
 
-**Stato**: proposta — **gate: decisione DM** (in particolare le 4 classificazioni di §Decisione.3)
+**Stato**: accettata (2026-07-26) — le 4 classificazioni sono risolte in `docs/guides/LEGENDA-FUNZIONALE-SPEC.md` §6
+**Rev. 2** (2026-07-26): l'enum `cover` passa da 3 a **4** valori e i numeri di gioco escono dalla legenda — vedi [ADR-0016](ADR-0016-profili-regole-multisistema.md)
 **Data**: 2026-07-26
 **Decisione-fonte**: lotto A1 di `plans/PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md`; misura in `docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md` §2.1; §L5.5 della guida «Dall'immagine mentale all'artefatto» (2026-07-25). Coincide con il lotto **E1** di `PIANO-EDITOR-VISUALE-MAPPE-TATTICHE`.
 
@@ -59,8 +60,9 @@ Ci sono due forze aggiuntive:
        function:
          blocks_movement: false
          blocks_sight: false
-         cover: half              # none | half | full
-         difficult_terrain: true
+         cover: half              # none | half | three_quarters | total (rev.2)
+         obscurement: none
+         move_cost: 2             # rev.2: era difficult_terrain: true
          elevation_m: 0
          destructible: true
          nameable: true           # → può fare da landmark (M8, Lynch)
@@ -76,11 +78,15 @@ Ci sono due forze aggiuntive:
    - i tool nuovi (linter, editor) leggono la legenda, mai un set proprio.
 
 3. **Le quattro divergenze si risolvono con una decisione dichiarata**, non con
-   una scelta implicita del codice — è una questione di regole 3.5, non di
-   implementazione, e va **al DM**:
-   - `⛰` montagne/creste — muro pieno, o copertura totale scalabile?
-   - `🏛` edificio/tempio, `🗼` torre, `🗿` statua — muro pieno, o prop
-     occludente che dà copertura senza essere impenetrabile?
+   una scelta implicita del codice — era una questione di regole 3.5, non di
+   implementazione, e andava al DM.
+   **RISOLTE il 2026-07-26** (spec §6), con la regola 3.5 come arbitro — una
+   cella occupata da roccia, edificio, torre o statua è impenetrabile e opaca:
+   - `⛰` `🏛` `🗼` `🗿` → tutte `blocks_movement: true`, `blocks_sight: true`,
+     `cover: total`. Effetto: **3.689 celle in 6 mappe** acquistano muri
+     nell'export UVTT (il *Dirupo Mortale* smette di essere trasparente in
+     Foundry); **nessun SVG cambia**, perché modo di rendering e funzione sono
+     campi ortogonali.
 
 4. **Nessuna regressione visiva.** Il refactor è verde solo se i 17 SVG legacy
    restano **byte-identici** (`validate_maps.py`) e il round-trip UVTT della CI
@@ -114,8 +120,12 @@ Ci sono due forze aggiuntive:
 
 - se l'editor visuale (E2-E10) richiede campi non previsti qui, si estende
   `function` — mai si crea una seconda fonte;
-- `cover` è oggi un enum a tre valori (`none|half|full`). Se le regole 3.5 al
-  tavolo mostrassero che serve il caso «copertura totale ma non blocca la
-  vista» (feritoie, grate), va aggiunto un campo, non abusato l'enum;
+- **rev. 2**: `cover` ha quattro valori (`none|half|three_quarters|total`) —
+  tre non bastavano, perché 3.5/PF1e distinguono copertura da copertura
+  migliorata e 5e metà da tre quarti. Il caso «copre ma non acceca» è coperto
+  dai campi distinti `blocks_sight` / `blocks_line_of_effect`;
+- **rev. 2**: i numeri di gioco (+4 CA, 20%, ×2) **non stanno qui**: vivono nei
+  profili di ADR-0016. `legend.yaml` è neutro rispetto al sistema, ed è la
+  ragione per cui il prodotto può supportarne tre;
 - la scelta fra YAML sorgente + JSON derivato committato, o solo YAML letto a
   runtime, si decide in A1 sulla base del vincolo `stdlib_only`.

@@ -38,6 +38,7 @@ Contratto macchina e vista umana — **generati** dal manifest, sempre allineati
 | Documento | Cos'è |
 |---|---|
 | [`docs/guides/TOOL-AUTHORING-STANDARD.md`](guides/TOOL-AUTHORING-STANDARD.md) | **Standard obbligatorio** per ogni nuovo tool (checklist + verifica CI) |
+| [`docs/guides/LEGENDA-FUNZIONALE-SPEC.md`](guides/LEGENDA-FUNZIONALE-SPEC.md) | **Specifica normativa** della legenda: funzione neutra dei 62 simboli + profili 3.5 / PF1e / 5e + confini di licenza |
 | [`docs/audit/AUDIT-REPORT.md`](audit/AUDIT-REPORT.md) | Report d'audit degli script (findings azionabili) |
 | [`docs/audit/SCORECARD.md`](audit/SCORECARD.md) | Scorecard 12-assi per script |
 | [`docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md`](audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md) | Misura dello scarto su level design delle mappe (M1-M9) e inquadratura dei prompt — input del [PIANO-LEVEL-DESIGN-E-INQUADRATURA](../plans/PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md) |
@@ -63,7 +64,9 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0012](../plans/adr/ADR-0012-standard-ingegneria-tool-verificabile.md) | Standard di ingegneria verificabile in CI |
 | [ADR-0013](../plans/adr/ADR-0013-standard-generazione-booklet-sessioni.md) | Standard di generazione dei booklet di sessione |
 | [ADR-0014](../plans/adr/ADR-0014-legenda-funzionale-fonte-unica.md) | Legenda **funzionale** come fonte unica (proposta) |
-| [ADR-0015](../plans/adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md) | Dipendenze a livelli + pacchettizzazione (proposta) |
+| [ADR-0015](../plans/adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md) | Dipendenze a livelli + pacchettizzazione |
+| [ADR-0016](../plans/adr/ADR-0016-profili-regole-multisistema.md) | Profili di regole multi-sistema (3.5 · PF1e · 5e) |
+| [ADR-0017](../plans/adr/ADR-0017-separazione-prodotto-e-rilicenziamento-toolkit.md) | Separazione dei due prodotti e rilicenziamento del toolkit |
 
 ## 5. Archivio piani
 
