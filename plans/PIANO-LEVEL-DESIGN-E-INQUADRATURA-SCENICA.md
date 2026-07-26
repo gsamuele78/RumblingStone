@@ -6,12 +6,16 @@
 > **Misura dello scarto**: [`docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md`](../docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md)
 > — ogni lotto qui sotto rimedia a un buco misurato lì, mai a un'impressione.
 > **Decisioni architetturali portanti**:
-> [ADR-0014](adr/ADR-0014-legenda-funzionale-fonte-unica.md) (legenda funzionale
-> come fonte unica) e [ADR-0015](adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md)
-> (dipendenze a livelli + pacchettizzazione) — **entrambe: proposta, gate DM**.
+> [ADR-0014](adr/ADR-0014-legenda-funzionale-fonte-unica.md) · [ADR-0015](adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md)
+> · [ADR-0016](adr/ADR-0016-profili-regole-multisistema.md) · [ADR-0017](adr/ADR-0017-separazione-prodotto-e-rilicenziamento-toolkit.md)
+> — **tutte accettate** (decisioni DM 2026-07-26).
 > **Stato**: 🔵 pianificato · **Data**: 2026-07-26 · **% completamento**: 0%
 > **Rev. 2** (2026-07-26): aggiunti §0-bis (architettura bersaglio) e §2-bis
 > (integrare invece di riscrivere) + **Ramo 0** su richiesta DM.
+> **Rev. 3 — CONSOLIDAMENTO** (2026-07-26): i rami **0, A, B sono delegati** a
+> [`PIANO-PRODOTTO-TOOLKIT-VENDIBILE`](PIANO-PRODOTTO-TOOLKIT-VENDIBILE.md)
+> (fasi P0/P1/P2) — erano 12 lotti con due proprietari. **Un solo proprietario
+> per lotto**: qui resta il contenuto (rami C e D).
 
 ---
 
@@ -163,249 +167,29 @@ repo aveva già fatto la scelta giusta.
 Legenda impegno: **engine consigliato** e **livello** secondo la regola DM
 2026-07-22 (piani con routing engine).
 
-### Ramo 0 — Substrato di ingegneria (rev. 2 — precede tutto il codice nuovo)
+### Rami 0, A, B — **DELEGATI** al piano prodotto (consolidamento 2026-07-26)
 
-*Rimedia*: audit §6. Senza questo ramo ogni lotto successivo **aggiunge massa a
-un mucchio non pacchettizzabile**. Non è refactoring per il gusto di farlo: è ciò
-che rende B estraibile (§0-bis) e ciò che permette di integrare invece di
-riscrivere (§2-bis).
+> ⚠️ **Questi rami non vivono più qui.** Erano duplicati con le fasi P0/P1/P2 di
+> [`PIANO-PRODOTTO-TOOLKIT-VENDIBILE`](PIANO-PRODOTTO-TOOLKIT-VENDIBILE.md): 12
+> lotti con due proprietari. Due piani che rivendicano lo stesso lavoro rendono
+> impossibile tracciare l'avanzamento — che è esattamente ciò che un piano
+> eseguibile a fasi deve garantire.
+>
+> **Un solo proprietario per lotto.** L'infrastruttura sta nel piano prodotto;
+> qui resta il **contenuto**.
 
-#### ⬜ 0.1 — `pyproject.toml` e fine dei `sys.path.insert`
+| Era qui | Ora è | Cosa fa |
+|---|---|---|
+| 0.1 · 0.2 · 0.3 · 0.4 | **P0.1 · P0.2 · P0.3 · P0.4** (+ i nuovi **P0.0** rete di sicurezza e **P0.5** fetta verticale) | substrato: package, dipendenze, lint/test, confine dominio/presentazione |
+| A1 | **P1.1** | `legend.yaml`, 62 simboli, le 4 correzioni `⛰ 🏛 🗼 🗿` |
+| A2 · A3 | **P1.3** | zone, elevazione, `design_intent`, `map_kind` |
+| B1 · B2 · B3 · B5 | **P2.1 · P2.2 · P2.3 · P2.4** | il linter (+ il nuovo **P2.0**, contratto unico dei finding) |
+| B4 | **P2.0 + P5.1** | integrazione CI, manifest, gate |
 
-Il toolkit diventa un package installabile con entrypoint da console. Gli 11
-`sys.path.insert(0, …)` spariscono; gli import fra script diventano import di
-package. **Il layout attuale resta invocabile identico** (`python3
-scripts/dm.py …`): l'installazione è un'aggiunta, non una sostituzione — nessuna
-rottura per il DM.
-
-**Accettazione**: `pip install -e .` funziona; i 70 test passano invocati sia dal
-package sia dal layout attuale; SVG byte-identici; `tools_manifest --check` verde.
-**Engine**: Sonnet. **Impegno**: medio. **Stima**: 6-8 h. **Dipende da**: ADR-0015.
-
-#### ⬜ 0.2 — Livelli di dipendenza + `jsonschema` sui gate
-
-ADR-0015: core stdlib · extra `analysis` (numpy/scipy/networkx/tcod) · extra `dev`
-(pytest/ruff/jsonschema). In CI, `jsonschema` valida gli schemi draft-07 **già nel
-repo**; i validatori a mano si riducono ai soli **controlli semantici** (simbolo
-in legenda, modo corretto, coordinate dentro `map_size`) che JSON Schema non può
-esprimere.
-
-**Accettazione**: gli esempi esistenti validano contro `tactical_map.schema.json`
-senza modificarlo (eccetto il caso `units_in: meters`, documentato); nessun
-comportamento di validazione perso rispetto a oggi — verificato con un test per
-ogni errore che il validatore a mano sapeva già dare.
-**Engine**: Sonnet. **Impegno**: medio. **Stima**: 5-7 h. **Dipende da**: 0.1.
-
-#### ⬜ 0.3 — `ruff` + `pytest` + copertura
-
-Oggi non esiste configurazione di lint, formato o tipi: i `# noqa: E402` sparsi
-sono il fossile di un flake8 usato e poi perso. `ruff` (lint+format, un solo
-tool), `pytest` come runner (esegue i 70 `unittest` esistenti senza riscriverli),
-copertura misurata e pubblicata. Non bloccante al primo giro, bloccante dopo la
-bonifica.
-
-**Accettazione**: `ruff check` pulito; `pytest` verde sui test esistenti **non
-riscritti**; baseline di copertura registrata.
-**Engine**: Haiku (meccanico) con Sonnet sulle correzioni non banali.
-**Impegno**: basso. **Stima**: 4-6 h. **Dipende da**: 0.1.
-
-#### ⬜ 0.4 — La cucitura dominio / presentazione
-
-Legenda (ADR-0014), parser della griglia e modello della mappa escono da
-`render_map_svg.py` (1.530 righe: legenda + pattern + arte + parser + annotazioni
-+ renderer + CLI) e diventano un modulo di **dominio**. Renderer, exporter,
-importer e linter ne dipendono; il dominio non dipende da nessuno di loro.
-
-Assorbe e generalizza A1: si fa **una volta**, non due.
-
-**Accettazione**: `render_map_svg` non è più importato da nessuno per ottenere
-parser o legenda; grafo delle dipendenze aciclico e con la presentazione sulle
-foglie; SVG byte-identici; UVTT round-trip verde.
-**Engine**: Opus (confini) → Sonnet (spostamento). **Impegno**: alto.
-**Stima**: 10-14 h. **Dipende da**: 0.1, A1. **Sostituisce**: la parte di A1 che
-riguardava solo i consumatori.
-
----
-
-### Ramo A — Fondamenta dati (prerequisito di tutta la Parte II)
-
-#### ⬜ A1 — Legenda funzionale come fonte unica (`scripts/legend.yaml`)
-
-*Rimedia*: audit §2.1 (due fonti di verità, già divergenti).
-**È il lotto E1 di `PIANO-EDITOR-VISUALE-MAPPE-TATTICHE`** — si esegue una
-volta e serve tre piani (editor, linter, export). Non duplicare.
-
-Promuovere la funzione di gioco a dato di prima classe:
-
-```yaml
-symbols:
-  "🪨":
-    label: "Rocce / macerie"
-    render: {mode: icon, prop: pr_rocks, fill: "#ced4da"}
-    function:
-      blocks_movement: false
-      blocks_sight: false
-      cover: half              # none | half | full
-      difficult_terrain: true
-      elevation_m: 0
-      destructible: true
-      nameable: true           # → landmark, M8 / Lynch
-  "🏰":
-    label: "Muro / roccia solida"
-    render: {mode: fill, pat: t_wall, fill: "#3f3931"}
-    function: {blocks_movement: true, blocks_sight: true, cover: full, nameable: false}
-```
-
-- `render_map_svg.SYMBOLS` diventa **derivato** dal YAML (parser stdlib o
-  `export_legend_json.py` → `legend.json` committato + gate di sync in CI,
-  come già si fa per `docs/tools/`);
-- `export_uvtt.py` deriva muri/porte/luci da `function`, **elimina**
-  `WALL_SYMS`/`DOOR_SYMS`/`LIGHT_SYMS`; `import_ultraclear.HAZARD_SYMS` idem;
-- `references/legenda-universale.md` si **genera** dal YAML;
-- **decidere esplicitamente** i 4 simboli divergenti: `⛰` (muro o copertura
-  totale non-muro?), `🏛 🗼 🗿` (muro pieno o prop occludente?). È una
-  decisione di regole 3.5, non di codice → va nel changelog.
-
-**Accettazione**: nessun set di simboli cablato resta in `scripts/`;
-`validate_maps.py` verde con i 17 SVG legacy **byte-identici**; round-trip
-UVTT della CI verde; `⛰` e `🏛🗼🗿` classificati coerentemente fra SVG e UVTT;
-gate di sync YAML↔`legenda-universale.md` rosso se divergono.
-**Engine**: Opus (modello di dominio + le 4 decisioni) → Sonnet (migrazione
-meccanica dei consumatori). **Impegno**: alto. **Stima**: 12-16 h.
-
-#### ⬜ A2 — Zone, elevazione e intento nel contratto JSON (schema v1.1)
-
-*Rimedia*: audit §2.2, §2.3, §2.4 (M3 e M6 senza supporto dati; nessun intento).
-
-- `zones[]`: `name` (nominabile), `rect`/`polygon`, `elevation_m`,
-  `connects_to[]` → **il grafo su cui si calcola M3**, distinto dal `@zone`
-  attuale che resta un bracket di presentazione;
-- `design_intent{}` secondo §L5.6: `combat_role`, `expected_party`,
-  `intended_rounds`, `tactical_axes`, `central_decision`, `landmarks`,
-  `elevation_bands`, `evolution`;
-- `compile_map_json.py` emette le direttive nuove; `render_map_svg.py` rende
-  le bande di elevazione (banda leggera + etichetta quota, non un secondo
-  livello di disegno).
-
-**Accettazione**: lo schema v1.1 valida **invariati** i contratti esistenti
-(`scripts/examples/*.json`); un esempio nuovo con 3 bande di elevazione e
-`design_intent` compila, rende e passa `validate_maps`; il campo elevazione
-raggiunge l'export UVTT o è dichiarato «non trasportabile» nel README.
-**Engine**: Opus (schema) → Sonnet (compilatore/renderer). **Impegno**: alto.
-**Stima**: 10-14 h. **Dipende da**: A1.
-
-#### ⬜ A3 — Discriminante `map_kind`
-
-*Rimedia*: audit §3.4 — 8 griglie su 29 non sono battlemap (viste strategiche,
-sezioni, panoramiche) e nulla nel formato lo dichiara.
-
-`map_kind: battle | strategic | schematic | overland`, nel contratto **e** come
-riga d'intestazione dei master ultra-clear. Il linter valuta solo `battle`.
-
-**Accettazione**: le 8 griglie non-tattiche del corpus marcate; il linter le
-salta con una riga informativa, non con un warning.
-**Engine**: Sonnet. **Impegno**: basso. **Stima**: 3-4 h. **Dipende da**: A1.
-
----
-
-### Ramo B — Il linter di level design
-
-#### ⬜ B1 — `scripts/lint_map_design.py`, metriche senza visibilità
-
-*Realizza*: §L5.1-L5.2 per M1, M2, M7, M8, M9 (+ conteggio strozzature).
-
-- modello di dominio dal Ramo 0.4 — **non** `dmcore/visibility.py`, già occupato
-  dalla policy spoiler dei session log (audit §2.5);
-- legge la funzione dei simboli da A1: **nessun set hardcoded**;
-- **M1 = `scipy.ndimage.binary_dilation` (struttura 5×5), M2 = `ndimage.label` +
-  `bincount`** — 4 righe, non 18 (§2-bis). Nessun BFS scritto a mano;
-- extra opzionale `analysis` (ADR-0015): se numpy/scipy mancano, exit code
-  documentato con messaggio azionabile, **mai** un crash;
-- output umano + `--json`; advisory (exit 0 salvo `--strict`);
-- i messaggi dichiarano che le soglie sono pre-calibrazione.
-
-**Accettazione**: ADR-0012 pieno (manifest, `--help` pulito, exit code,
-determinismo); rieseguito sul corpus riproduce le mediane di audit §3.1 entro
-tolleranza, con le differenze da A1 **documentate**; test su fixture
-sintetiche (corridoio lineare, campo aperto, arena con anello); **verifica di
-equivalenza** contro i valori dell'appendice A dell'audit (M1 0.0309 / M2 0.9691
-su *Dirupo Mortale*), già confermata in laboratorio.
-**Engine**: Sonnet (implementazione) con Opus sul disegno delle interfacce.
-**Impegno**: medio. **Stima**: **6-8 h** (era 10-12: l'integrazione toglie lavoro).
-**Dipende da**: 0.2, A1, A3.
-
-#### ⬜ B2 — Metriche costose: M3 anelli, M4/M5 visibilità, M6 verticalità
-
-- **M3** su grafo delle **zone** (A2), mai sulle celle — `networkx`:
-  μ = E − V + C in una riga; **strozzature** = `nx.articulation_points`, idem;
-- **M4/M5** con **`tcod.map.compute_fov`** (shadowcasting simmetrico, C-accelerato)
-  al posto di un Bresenham scritto a mano. ⚠️ **Il campionamento previsto dalla
-  rev. 1 e da §L5.3 della guida è cancellato**: censimento **completo** di 1.585
-  celle su 40×40 misurato in **34 ms** (§2-bis). M4 diventa esatta, non stimata —
-  e sulla stessa mappa la stima campionata **sottostimava** (0.88 contro 0.913);
-- usare `from tcod import libtcodpy` per le costanti FOV: la forma `tcod.FOV_*`
-  emette già `FutureWarning`;
-- **M6** dal campo `elevation_m` di A2.
-
-**Accettazione**: linter completo su una mappa 40×40 in **< 1 s** (non < 10 s:
-l'integrazione cambia l'ordine di grandezza); M3 = 2 sulla fixture ad anello e 0
-sul corridoio; M4 **esatta**, quindi deterministica per costruzione — nessun seme
-di campionamento da fissare.
-**Engine**: Sonnet. **Impegno**: medio. **Stima**: **6-8 h** (era 10-14).
-**Dipende da**: 0.2, A2, B1.
-
-#### ⬜ B3 — Dichiarato contro realizzato (`design_intent`)
-
-*Realizza*: §L5.6 — **la parte che nessun altro strumento sul mercato fa.**
-
-```
-⚠ tactical_axes include "verticality" ma M6 = 1 livello
-  → asse dichiarato e non realizzato
-⚠ landmark "albero-fulminato" dichiarato in [14,12] ma la cella
-  contiene 🟩 (nameable: false) → non riconoscibile al tavolo
-⚠ combat_role = "ambush" ma M4 = 0.91 → i PG vedono tutto entrando
-```
-
-Nessuna soglia arbitraria: il metro è la dichiarazione dell'autore.
-
-**Accettazione**: i 3 casi sopra riprodotti da fixture; una mappa senza
-`design_intent` non produce alcun warning di questa classe.
-**Engine**: Sonnet. **Impegno**: medio. **Stima**: 8-10 h. **Dipende da**: A2, B2.
-
-#### ⬜ B4 — Integrazione: CI, manifest, docs, skill
-
-```
-□ scripts/tools.manifest.json                 (gate ADR-0012)
-□ docs/tools/                                 rigenerato dal manifest
-□ scripts/README-automation.md                tool map + sottocomando dm.py maps lint
-□ .github/workflows/ci.yml                    step con continue-on-error: true
-□ skills/rumblingstone-mapmaking/references/level-design-metriche.md
-```
-
-**Accettazione**: `tools_manifest --check` pulito; CI verde con lo step
-advisory presente e **non bloccante**; `validate_skills.py` verde.
-**Engine**: Haiku (meccanico). **Impegno**: basso. **Stima**: 3-4 h.
-**Dipende da**: B1.
-
-#### ⬜ B5 — Calibrazione delle soglie su corpus dichiarato
-
-*Realizza*: §L5.4 — è ciò che separa questo strumento da un blog post con dei
-numeri inventati.
-
-10-15 mappe **che si sa funzionare al tavolo**, di proprietà o liberamente
-licenziate (Dyson Logos rilascia molto con licenza permissiva) → trascritte in
-griglia → misurate → soglie ai **percentili della distribuzione reale**, non ai
-numeri della guida. Corpus e licenze documentati in
-`references/level-design-metriche.md`.
-
-> ⚠️ **Vincolo ADR-0005**: nessuna mappa RHoD nel corpus di calibrazione.
-
-**Accettazione**: ogni soglia del tool ha accanto il percentile e la
-dimensione del corpus; le soglie pre-calibrazione sono sostituite, non
-affiancate.
-**Engine**: Sonnet (trascrizione) + Opus (scelta dei percentili).
-**Impegno**: medio. **Stima**: 12-16 h. **Dipende da**: B2. **Gate**: decisione
-DM sul corpus.
+**Questo piano resta proprietario di**: i lotti **C** (mappe) e **D**
+(inquadratura e prosa) — cioè il contenuto, che il piano prodotto non tocca.
+Il lotto **D1** (scheda-inquadratura) alimenta i check `framing/*` di **P2.6**;
+il lotto **D4** (igiene IP) alimenta `framing/ip-reference`.
 
 ---
 
@@ -576,17 +360,15 @@ aver misurato lo scarto significa studiare a caso.* Lo scarto è misurato
 |---|---|---|
 | 1 | **D2** — ordine percettivo | ~4 h, zero dipendenze, zero codice; agisce su ciò che il repo produce di più |
 | 2 | **C1** — scheda-mappa | indipendente; serve a C2 e insegna la disciplina **prima** di avere il tool |
-| 3 | **0.1 → 0.3** — substrato | package + livelli + lint/test: è ciò che rende B estraibile (§0-bis) e permette l'integrazione (§2-bis) |
-| 4 | **A1 + 0.4** — legenda e cucitura | insieme, non separati: la legenda funzionale **è** la prima fetta del confine dominio/presentazione. Chiude oggi la divergenza SVG↔UVTT; è il lotto E1 già pianificato → **un lavoro, tre piani** |
-| 5 | **A3 + A2** | il dato che manca alle metriche |
-| 6 | **B1 + B4** | il linter utile con il minimo di lavoro (integrato: 6-8 h, non 10-12) |
-| 7 | **C2** (Dirupo Mortale) | la prima mappa che il linter ripaga |
-| 8 | **D1 + D4** | inquadratura e igiene IP, in parallelo |
-| 9 | **B2 → B3 → B5** | le metriche ex-costose (ora ~34 ms) e la calibrazione |
-| 10 | **D3** | Modalità 4 — gated dalla macchina del DM |
-| 11 | **C3** | parity pass, a mappa singola, sulla lunga |
+| — | *(infrastruttura: fasi **P0 → P1 → P2** del piano prodotto)* | delegata, vedi §Rami delegati |
+| 3 | **C2** (Dirupo Mortale) | la prima mappa che il linter ripaga — dopo P2.1 |
+| 4 | **D1 + D4** | scheda-inquadratura e igiene IP: alimentano i check `framing/*` di P2.6 |
+| 5 | **D3** | Modalità 4 — gated dalla macchina del DM |
+| 6 | **C3** | parity pass, a mappa singola, sulla lunga |
 
-**Totale stimato**: ~110-145 h — il Ramo 0 aggiunge 25-35 h, l'integrazione ne
+**Totale stimato di questo piano dopo il consolidamento**: ~50-70 h (soli rami C e D). L'infrastruttura è contabilizzata nel piano prodotto.
+
+*(Nota storica, rev. 2)*: ~110-145 h — il Ramo 0 aggiungeva 25-35 h, l'integrazione ne
 toglie ~10 dai rami B. Il saldo è positivo perché il Ramo 0 **si paga una volta e
 serve ogni piano successivo**, incluso l'editor visuale.
 
@@ -630,23 +412,7 @@ Onestà, in coerenza con §L8 della guida:
 ## Checklist di avanzamento
 
 ```
-Ramo 0 — substrato di ingegneria (rev. 2)
-□ 0.1 pyproject.toml + fine dei sys.path.insert (11 file) + ADR-0015 accettato
-□ 0.2 livelli di dipendenza + jsonschema sui gate (semantica resta nostra)
-□ 0.3 ruff + pytest + baseline di copertura
-□ 0.4 cucitura dominio/presentazione (assorbe la parte «consumatori» di A1)
-
-Ramo A — fondamenta dati
-□ A1  legend.yaml fonte unica (= E1 PIANO-EDITOR) + ADR-0014 accettato
-□ A2  zones/elevation/design_intent — schema v1.1
-□ A3  map_kind discriminante
-
-Ramo B — linter (integrato, non riscritto — §2-bis)
-□ B1  lint_map_design.py — M1/M2 via scipy.ndimage · M7 M8 M9
-□ B2  M3+strozzature via networkx · M4/M5 ESATTE via tcod (niente campionamento) · M6
-□ B3  design_intent — dichiarato vs realizzato
-□ B4  manifest + docs/tools + CI non bloccante + skill reference
-□ B5  calibrazione su corpus dichiarato (mai RHoD)
+Rami 0, A, B → DELEGATI al PIANO-PRODOTTO (fasi P0/P1/P2)
 
 Ramo C — contenuto mappe
 □ C1  scheda-mappa-template.md

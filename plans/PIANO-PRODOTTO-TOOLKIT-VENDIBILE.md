@@ -21,7 +21,16 @@
 > — quello è il *contenuto* (metriche, mappe, inquadratura), questo è il
 > *prodotto*. Condividono i lotti fondativi: si eseguono **una volta sola**.
 >
-> **Stato**: 🔵 pianificato · **Data**: 2026-07-26 · **%**: 0%
+> **Stato**: 🟢 **DEFINITIVO — pronto all'esecuzione fase per fase** (2026-07-26)
+> · **%**: 0%
+>
+> **Rev. finale**: aggiunti **P0.0** (rete di sicurezza *prima* di ogni refactor),
+> **P0.5** (fetta verticale end-to-end come gate di progetto) e **§5-bis** (regole
+> di esecuzione incrementale: un lotto = una PR, «fatto» per fase, migrazione a
+> strangolamento, criteri di annullamento, API pubblica e SemVer).
+> **Consolidamento**: questo piano è **l'unico proprietario** dell'infrastruttura;
+> `PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA` gli ha delegato 12 lotti che erano
+> duplicati e conserva il solo contenuto (rami C e D).
 
 ---
 
@@ -262,6 +271,26 @@ Impegno secondo la regola DM 2026-07-22 (engine + livello per fase).
 
 ### Fase P0 — Substrato (sblocca tutto il resto)
 
+#### ⬜ P0.0 — La rete di sicurezza, **prima** di toccare qualunque cosa ⭐
+
+*Regola di mestiere*: non si rifattorizza un modulo da 1.530 righe con una rete
+parziale. Oggi la rete esiste per gli SVG (byte-identità, forte) e **non** per il
+resto: `export_uvtt`, `import_ultraclear` e `compile_map_json` hanno test di
+comportamento ma nessun *golden* che congeli l'output corrente.
+
+- **caratterizzazione**: per ogni mappa del corpus, congelare l'output attuale di
+  `export_uvtt` e `compile_map_json` come golden file. Non si giudica se è
+  giusto — si registra **cos'è oggi**;
+- baseline di copertura misurata (oggi ignota) sulle sole aree che P0.4 sposterà;
+- ogni golden è etichettato con l'esito atteso: `freeze` (non deve cambiare mai)
+  oppure `expected-to-change@P1.1` (cambierà, e si sa perché — le 6 mappe con `⛰`).
+
+**Accettazione**: i golden esistono e sono verdi **prima** del primo commit di
+refactor; ogni golden dichiara se è `freeze` o `expected-to-change`; un golden che
+cambia senza essere marcato **rompe la CI**.
+**Engine**: Sonnet · **Impegno**: medio · **Stima**: 5-7 h · **Dip.**: nessuna —
+**è il primo lotto in assoluto**.
+
 #### ⬜ P0.1 — `pyproject.toml` e fine dei `sys.path.insert`
 
 Package importabile con entrypoint da console; gli 11 `sys.path.insert`
@@ -308,6 +337,35 @@ dominio non dipende da nessuno.
   sulle foglie, verificato da un test; SVG byte-identici; round-trip UVTT verde.
 - **Engine**: Opus (confini) → Sonnet (spostamento) · **Impegno**: alto ·
   **Stima**: 10-14 h · **Dip.**: P0.1, P1.1.
+
+#### ⬜ P0.5 — Scheletro deambulante: **una fetta verticale end-to-end** ⭐
+
+*Regola di mestiere*: un piano incrementale prova l'architettura **presto e
+sottile**, non tardi e in massa. P0.1-P0.4 sono orizzontali — tutta
+infrastruttura, nessuna funzione. Se il confine dominio/presentazione è sbagliato,
+lo si scopre dopo aver migrato 62 simboli e 4 script.
+
+Quindi: **prima della migrazione di massa, una fetta sola che attraversi tutta
+l'architettura bersaglio**, su **un simbolo** (`🪨` — ha copertura, terreno
+difficile, `nameable`, è distruttibile: tocca ogni campo):
+
+```
+legend.yaml(🪨) → dominio → ┬→ render SVG   (byte-identico)
+                            ├→ export UVTT  (golden invariato)
+                            ├→ profilo 3.5 → «+4 CA, movimento ×2»
+                            ├→ profilo 5e  → «+2 CA e TS Des, ×2»
+                            ├→ una metrica (M1) su una fixture
+                            └→ un finding nel contratto unico
+```
+
+Tutto il resto resta com'è. Se questa fetta è scomoda da scrivere, **il confine è
+sbagliato e si corregge adesso**, quando costa un giorno invece di tre settimane.
+
+**Accettazione**: la fetta gira end-to-end; nessuno degli altri 61 simboli è
+stato toccato; il grafo delle dipendenze della fetta è già quello bersaglio;
+**decisione go/no-go documentata** prima di aprire P1.1.
+**Engine**: Opus (è una verifica di progetto, non codice) · **Impegno**: medio ·
+**Stima**: 6-8 h · **Dip.**: P0.1, P0.4 · **È un gate**: P1.1 non parte senza il go.
 
 ---
 
@@ -583,7 +641,8 @@ parte **senza concorrenti**, e utile anche a chi non compra il software.
 
 | # | Lotti | Ore | Cosa hai in mano alla fine |
 |---|---|---|---|
-| 1 | P0.1 → P0.3 | 15-21 | il toolkit è **installabile**, con lint e test veri |
+| 0 | **P0.0** rete di sicurezza | 5-7 | golden congelati **prima** di toccare qualunque cosa |
+| 1 | P0.1 → P0.3 → **P0.5** | 21-29 | il toolkit è **installabile**, con lint e test veri, e **la fetta verticale ha dato il go** |
 | 2 | **P1.1 + P0.4** | 22-30 | legenda funzionale + dominio separato. **La divergenza SVG↔UVTT è chiusa**: 3.689 celle di muro recuperate |
 | 3 | P1.2 | 14-18 | **tre sistemi supportati** — il mercato passa da «i DM di 3.5» a 3.5+PF1e+5e |
 | 4 | P3.1 + P3.3 | 11-15 | wheel pubblicabile, provenienza dimostrata |
@@ -592,13 +651,78 @@ parte **senza concorrenti**, e utile anche a chi non compra il software.
 | 7 | P2.3 + **P2.5** + **P2.6** + P2.4 | 34-44 | dichiarato-vs-realizzato · **matrice chiusa e auto-verificata** · check di inquadratura · soglie calibrate |
 | 8 | P4.1 + P4.2 | 40+ | i due prodotti di contenuto |
 
-**Totale**: ~195-245 h al netto di P4 (che scala con quante mappe si vendono).
+**Totale**: ~206-259 h al netto di P4 (che scala con quante mappe si vendono).
 
 **Il primo punto di rilascio possibile è dopo il passo 4**: un toolkit
 installabile, multi-sistema, con la legenda corretta e la provenienza pulita —
 **senza** il linter. Il linter è ciò di cui si parla, non ciò che porta il primo
 utente: rilasciare prima e aggiungerlo dopo è la sequenza giusta, non un
 compromesso.
+
+---
+
+## 5-bis. Regole di esecuzione incrementale
+
+*(sezione aggiunta con la revisione finale — è ciò che rende il piano
+**eseguibile fase per fase** invece che solo leggibile.)*
+
+### 1. Un lotto = una PR
+
+Ogni lotto è una PR autonoma che **arriva verde da sola**. Mai una PR che
+«funzionerà quando arriva la prossima». Ogni PR chiude applicando la regola d'oro
+dei piani: checklist del piano + riga in `plans/INDEX.md` + riga in
+`plans/CHANGELOG.md`, **nello stesso commit** (ADR-0009, già enforced).
+
+### 2. Definizione di «fatto» a livello di **fase**
+
+Un lotto ha criteri di accettazione propri (§4). Una **fase** è chiusa solo se:
+
+| Fase | La fase è chiusa quando… |
+|---|---|
+| **P0** | `pip install -e .` funziona · zero `sys.path.insert` · `ruff` e `pytest` verdi · golden verdi · **la fetta verticale ha dato go** · `python3 scripts/dm.py` funziona ancora identico |
+| **P1** | un simbolo qualunque risponde a «blocchi la vista? quanto copri, in 3.5 / PF1e / 5e?» · zero set cablati · **3.689 celle di muro recuperate** e diff UVTT verificato · SVG byte-identici |
+| **P2** | `dm.py verify --all --json` è **un solo documento** · ogni riga di §3-ter ha un check o una ⛔️ · meta-check verde · baseline registrata |
+| **P3** | il wheel si installa su macchina pulita · l'eseguibile parte su macchina **senza Python** · provenienza dimostrata · file di licenza presenti |
+| **P4** | ogni mappa del pack passa o ha deroga scritta · la guida sta in piedi senza il software |
+| **P5** | le tre invarianti sono rosse se violate — verificato **introducendo di proposito** una violazione |
+
+### 3. Migrazione a strangolamento (*strangler*), non big-bang
+
+Il vecchio percorso resta vivo mentre il nuovo cresce accanto. Concretamente:
+`scripts/*.py` resta invocabile **identico** per tutta la durata del piano; il
+package cresce accanto; un percorso si rimuove **solo** quando il suo sostituto è
+verde da una fase intera. **Nessun lotto contiene una rimozione e la sua
+sostituzione insieme.**
+
+### 4. Criteri di annullamento (dichiarati prima, non dopo)
+
+| Lotto | Si ferma e si ripensa se… |
+|---|---|
+| P0.4 | la fetta verticale di P0.5 risulta scomoda → il confine è sbagliato: si ridisegna prima di migrare |
+| P1.1 | un SVG cambia senza spiegazione, o un golden `freeze` si muove |
+| P1.2 | un sistema richiede un campo neutro nuovo → si riapre ADR-0016 invece di aggiungere un campo di sistema alla legenda |
+| P2.x | la baseline dei finding **sale** invece di scendere: il linter sta producendo rumore |
+| P3.3 | la provenienza di un file non è dimostrabile → non entra nel package, punto |
+
+### 5. Superficie pubblica e versionamento
+
+Dal momento in cui esiste un wheel (P3.1) c'è un contratto con chi lo installa:
+
+- **API pubblica dichiarata esplicitamente** (`__all__` + documentata). Tutto il
+  resto è privato e può cambiare senza preavviso;
+- **SemVer**: rottura dell'API pubblica, del contratto JSON o del formato dei
+  finding → *major*. Il repo ha già i pezzi giusti (`schema_version` nel contratto,
+  `report_version` nei report): vanno **collegati** al versionamento del package;
+- ogni schema porta la sua versione e una nota di migrazione. Un contratto che
+  cambia in silenzio è il modo più veloce di perdere gli utenti che si sono appena
+  pagati.
+
+### 6. Ordine dei mattoni: sempre dato → strumento → contenuto
+
+Regola trasversale, già rispettata dalla sequenza di §5: nessuna metrica prima
+del dato che la rende calcolabile; nessun contenuto di massa prima dello strumento
+che lo verifica. Le violazioni di quest'ordine sono la ragione per cui M3 e M6 non
+si potevano calcolare oggi.
 
 ---
 
@@ -639,10 +763,12 @@ compromesso.
 
 ```
 P0 substrato
+□ P0.0 ⭐ rete di sicurezza: golden export_uvtt/compile_map_json + baseline
 □ P0.1 pyproject + fine degli 11 sys.path.insert
 □ P0.2 livelli di dipendenza + jsonschema sui gate
 □ P0.3 ruff + pytest + baseline copertura
 □ P0.4 cucitura dominio/presentazione (grafo aciclico verificato)
+□ P0.5 ⭐ fetta verticale end-to-end su UN simbolo → GO/NO-GO prima di P1.1
 
 P1 legenda e sistemi
 □ P1.1 legend.yaml — 62 simboli, funzione neutra, 4 correzioni ⛰🏛🗼🗿
