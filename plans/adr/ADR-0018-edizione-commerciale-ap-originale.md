@@ -1,6 +1,7 @@
 # ADR-0018 — L'edizione commerciale è un Adventure Path **originale autonomo**, mai un'espansione di *Red Hand of Doom*
 
 **Stato**: proposta — **gate: decisione DM + verifica di un avvocato IP**
+**Rev. 2** (2026-07-26, stessa giornata): ⚠️ **perimetro corretto** — la misura iniziale cercava solo RHoD e i toponimi FR ed era incompleta. `campaign-history.md` dichiara **altre quattro fonti WotC** (*Expedition to Undermountain* con numeri di pagina, *Underdark*, *Out of the Abyss*, lore FR/Salvatore). Vedi audit §6-bis
 **Data**: 2026-07-26
 **Decisione-fonte**: domanda DM del 2026-07-26 sulla vendibilità come espansione 3.5 / Paizo. Misura in [`docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md`](../../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md). **Estende** [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) senza sostituirlo, come [ADR-0017](ADR-0017-separazione-prodotto-e-rilicenziamento-toolkit.md) ha fatto per il toolkit.
 
@@ -70,7 +71,10 @@ piedi da solo**, non un sinonimo trasparente. «Mano Rossa» → «Artiglio Crem
 
 | Materiale | Decisione |
 |---|---|
-| Archi 04-08 (252.111 parole) | **dentro** — è la base del prodotto |
+| **Archi 07 + 08** (233.010 parole) | **dentro** — è la base del prodotto. Sono gli unici due corpi grandi puliti da *entrambe* le fonti: arco 07 (RHoD 0,3 · Undermountain 0,2), arco 08 (1,1 · 0,0) |
+| **Archi 01-05** (non scritti) | **dentro, ma da SCRIVERE originali.** Non esiste testo da bonificare: esiste testo da scrivere, e scriverlo originale costa quanto scriverlo derivato. È l'unico punto del repo in cui diventare originali è **gratis** — vedi `SOGGETTO-DISCESA-UNDERDARK-ARCHI-01-05.md` |
+| Arco 06 — Corona di Adamantio (16.271) | ⚠️ **riscrittura**: densità *Undermountain* **8,8**, la più alta del repo |
+| ~~Archi 04-08 come blocco~~ | ~~dentro~~ — **superato dalla rev. 2**: l'arco 04 è un adattamento dichiarato (p.117) ed è **intitolato a una località WotC** (*Belkram's Fall*, 232 occorrenze in 49 file) |
 | Arco 09 (195.739 parole) | **fuori dalla v1.** Rientra solo dopo riscrittura sostanziale, valutata a sé |
 | Arco 00 (impalcatura, tabelle armate) | si **rigenera** originale |
 | `campaign/`, `state.md`, i log di sessione, i booklet | **restano privati per sempre**: sono il diario del tavolo, non un prodotto |
@@ -96,10 +100,12 @@ sessione; una verificata in CI no.
 
 **Cosa diventa più facile**
 
-- esiste un prodotto di contenuto reale — ~250.000 parole, tre-quattro manuali —
+- esiste un prodotto di contenuto reale — **233.000 parole già scritte e pulite**
+  (archi 07+08) più gli archi 01-05 da scrivere: due manuali abbondanti subito,
   invece di un «forse un giorno»;
-- il perimetro è **dichiarato**: si sa cosa è dentro (04-08), cosa è fuori (09,
-  campagna giocata) e perché, invece di rimandare la domanda a ogni file nuovo;
+- il perimetro è **dichiarato**: si sa cosa è dentro (07+08, e 01-05 da scrivere
+  originali), cosa è fuori (09, arco 06 da riscrivere, campagna giocata) e
+  perché, invece di rimandare la domanda a ogni file nuovo;
 - si smette di aggiungere debito: ogni contenuto nuovo può nascere già pulito, a
   costo zero, invece di essere bonificato dopo;
 - il ramo privato resta **intatto**: la campagna al tavolo continua con Moradin,
@@ -120,6 +126,10 @@ sessione; una verificata in CI no.
 
 **Cosa va rivisitato e quando**
 
+- **la lezione della rev. 2 vale come metodo**: prima di dichiarare pulito un
+  arco, si cercano **tutte** le fonti dichiarate in `campaign-history.md`, non
+  solo quella che si ha in mente. La misura parziale è più pericolosa
+  dell'assenza di misura, perché dà fiducia;
 - se un avvocato IP giudicasse insufficiente la trasformazione degli archi 07-08,
   il perimetro si restringe — e la decisione va presa **prima** della produzione
   editoriale, non dopo;

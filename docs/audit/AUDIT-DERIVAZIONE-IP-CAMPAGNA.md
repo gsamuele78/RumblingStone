@@ -8,6 +8,11 @@
 >
 > **Metodo**: misura, non impressione. Conteggio dei nomi propri di terzi su tutto
 > il corpus, normalizzato sul volume di ogni arco.
+>
+> ⚠️ **LEGGERE §6-bis PRIMA DI §1-§5.** La prima stesura cercava solo *Red Hand
+> of Doom* e i toponimi Forgotten Realms. Il repo dichiara **altre quattro fonti
+> WotC**, con numeri di pagina: le conclusioni di §1-§5 sono corrette per la
+> fonte che misurano e **insufficienti** per decidere il perimetro commerciale.
 > **Data**: 2026-07-26 · **Corpus**: `main` @ branch di analisi.
 >
 > ⚠️ **Questa non è consulenza legale.** È un'analisi documentale di conformità,
@@ -20,11 +25,13 @@
 
 1. **Come «espansione per Red Hand of Doom»: no, per nessuna via.** Non esiste
    licenza che lo consenta (§4.1).
-2. **Come Adventure Path originale autonomo: sì — e sei molto più vicino di
-   quanto pensi.** ~252.000 parole hanno già densità RHoD ≈ **0,5 occorrenze
-   ogni 1.000 parole** (§2).
+2. **Come Adventure Path originale autonomo: sì.** Base pulita da *tutte* le
+   fonti: **archi 07+08 ≈ 233.000 parole** (§6-bis).
 3. **Il problema più grosso non è la Mano Rossa: è Moradin** — 1.502 occorrenze,
    e non è SRD (§3.2).
+4. ⚠️ **§1-§5 misurano solo RHoD e i toponimi FR: sono incompleti.** Ci sono
+   **altre quattro fonti WotC dichiarate dal repo stesso** — leggere §6-bis
+   **prima** di prendere decisioni su questi numeri.
 
 ---
 
@@ -176,11 +183,98 @@ ogni mille parole sono **una verniciatura di nomi**, non un impianto.
 
 ---
 
+## 6-bis. ⚠️ CORREZIONE (2026-07-26, stessa giornata) — c'è una **seconda** fonte WotC
+
+**La misura di §1-§5 cercava solo *Red Hand of Doom* e i toponimi dei Forgotten
+Realms. Era incompleta.** Interrogando `campaign/lore/campaign-history.md` — cioè
+la documentazione del repo stesso — emergono **altre quattro fonti di terzi
+dichiarate, con tanto di numero di pagina**:
+
+| Fonte | Dove è dichiarata | Riferimento |
+|---|---|---|
+| ***Expedition to Undermountain*** (WotC 2007) | Tana dei Minotauri · archi 02 · 03 · 04 | p.165 · p.123 · p.122 e p.140 · p.117 |
+| ***Underdark*** sourcebook (WotC 2003) | Tana dei Minotauri · arco 01 | p.95 (Maur) · p.93 (Cristal Warriors) |
+| ***Out of the Abyss*** (D&D 5e) | **Neverlight Grove** = la torre fungina, convertita in 3.5 | — |
+| Lore FR / Salvatore | *Aegis Fang* — «originally Wulfgar's warhammer» | `campaign-artifacts.md` |
+
+**«Belkram» compare 232 volte in 49 file.** *Belkram's Fall* è una località di
+Undermountain: **l'arco 04 è intitolato a un luogo altrui.**
+
+### Densità di *Undermountain* per arco
+
+| Arco | Parole | occorrenze | densità |
+|---|---:|---:|---:|
+| 06 — Stanza della Corona di Adamantio | 16.271 | 144 | **8,8** ⚠️ la più alta del repo |
+| 00 — impalcatura | 7.750 | 10 | 1,2 |
+| Bestiario | 14.398 | 15 | 1,0 |
+| `campaign/` | 84.808 | 60 | 0,7 |
+| 07 — Portale della Forgia | 151.588 | 36 | **0,2** |
+| 04 · 08 · 09 | — | 0-5 | **0,0** |
+
+### Cosa cambia nella conclusione
+
+**Quello che avevo scritto**: «archi 04-08 = 252.111 parole, base vendibile».
+**Corretto**: gli archi 02, 03, 04 sono **adattamenti dichiarati** di un altro
+manuale WotC, e l'arco 06 ha la densità Undermountain più alta del repo. La
+densità RHoD 0,0 di quegli archi era vera **e irrilevante**: misuravo la fonte
+sbagliata.
+
+| Arco | Parole | Esito **corretto** |
+|---|---:|---|
+| **07** — Portale della Forgia, piani elementali | **151.588** | ✅ RHoD 0,3 · UM 0,2 — **il corpo pulito più grande del repo** |
+| **08** — Hammerfist | **81.422** | ✅ RHoD 1,1 · UM 0,0 — pulito |
+| 06 — Corona di Adamantio | 16.271 | ⚠️ UM **8,8** — riscrittura o fuori |
+| 04 — Tomba di Belkram | 2.830 | ⚠️ adattamento dichiarato **e intitolato** a un luogo WotC |
+| 02 · 03 | (non scritti) | ⚠️ adattamenti dichiarati (p.123 · p.122/140) |
+| 01 · 05 | (non scritti) | ⚠️ arco 01 cita *Underdark* p.93 |
+| 09 | 195.739 | ❌ RHoD 5,3 |
+
+**Base vendibile corretta: archi 07 + 08 ≈ 233.000 parole** — sempre due
+manuali abbondanti, ma non 252.000 e non quelli che avevo indicato.
+
+### Il rovescio della medaglia, ed è una buona notizia
+
+**Gli archi 01-05 non sono scritti** (zero markdown: solo `.txt`, `.pdf`,
+`.webp`, appunti). Quindi:
+
+> **Il punto in cui è più economico diventare originali è esattamente quello che
+> non esiste ancora.** Scrivere quegli archi *dalle fonti* aggiungerebbe
+> derivazione dove oggi non ce n'è nel testo; scriverli **originali costa la
+> stessa fatica** e produce materiale nato pulito.
+
+Non è una scelta fra «bonificare» e «lasciar stare»: è una scelta su **come
+scrivere qualcosa che va scritto comunque**.
+
+---
+
+## 6-ter. Cosa resta genuinamente originale
+
+Al netto di tutte e cinque le fonti:
+
+- **Il Collezionista** — rakshasa con un basilisco vincolato, pietrifica le
+  vittime e ne vende le statue. Fugge dalla Tana dei Minotauri e diventa il
+  villain ricorrente;
+- **Sonjak**, matrona drow *architetto* — modifica lo **spazio** oltre che la
+  struttura;
+- **Therysol**, e la catena di artefatti (Corona di Adamantio, Bracieri Gemelli,
+  Collana dei Semi Eterni, Anello dell'Illuminazione Caotica);
+- l'**arco 07** per intero: portale, Forgia Eterna, piani elementali;
+- **Hammerfist**;
+- gli archi personali dei quattro PG — inclusa la rinuncia di Artemis alla
+  classe di prestigio, e la morte di Hella.
+
+È l'ossatura di un Adventure Path. Il problema non è la mancanza di materiale
+originale: è che il materiale originale non è ancora stato **scritto** per le
+parti 01-05, e che le parti scritte poggiano su ambientazione altrui.
+
+---
+
 ## 6. Conclusione operativa
 
 | Materiale | Parole | Esito |
 |---|---:|---|
-| Archi 04-08 | **252.111** | ✅ **base vendibile** dopo sostituzione dello strato di ambientazione e del nome-fazione |
+| ~~Archi 04-08~~ **Archi 07-08** | ~~252.111~~ **233.010** | ✅ **base vendibile** dopo sostituzione dell'ambientazione — vedi la **correzione di §6-bis** |
+| Archi 01-05 (non scritti) + 06 | ~19.000 + da scrivere | 🟡 **da scrivere originali**: è il punto più economico in cui diventare puliti |
 | Arco 09 | 195.739 | ⚠️ **triage**: riscrittura sostanziale, oppure **fuori dalla v1** |
 | Arco 00 | 7.750 | 🔧 impalcatura: si rigenera |
 | Campagna giocata (`campaign/`, `state.md`, log) | — | ❌ **resta privata**: è il diario del tavolo, non un prodotto |
