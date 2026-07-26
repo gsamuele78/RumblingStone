@@ -5,9 +5,13 @@
 > Parte II §L1-§L9 (level design e codifica nel toolkit).
 > **Misura dello scarto**: [`docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md`](../docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md)
 > — ogni lotto qui sotto rimedia a un buco misurato lì, mai a un'impressione.
-> **Decisione architetturale portante**: [ADR-0014](adr/ADR-0014-legenda-funzionale-fonte-unica.md)
-> (legenda funzionale come fonte unica) — **stato: proposta, gate DM**.
+> **Decisioni architetturali portanti**:
+> [ADR-0014](adr/ADR-0014-legenda-funzionale-fonte-unica.md) (legenda funzionale
+> come fonte unica) e [ADR-0015](adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md)
+> (dipendenze a livelli + pacchettizzazione) — **entrambe: proposta, gate DM**.
 > **Stato**: 🔵 pianificato · **Data**: 2026-07-26 · **% completamento**: 0%
+> **Rev. 2** (2026-07-26): aggiunti §0-bis (architettura bersaglio) e §2-bis
+> (integrare invece di riscrivere) + **Ramo 0** su richiesta DM.
 
 ---
 
@@ -30,6 +34,48 @@ Le due conseguenze misurate:
 E un difetto strutturale che vale da solo il primo lotto: **l'SVG e l'export
 UVTT della stessa mappa non concordano su cosa sia un muro** (`⛰` occlude
 nell'SVG e non blocca la vista in Foundry; `🏛 🗼 🗿` il contrario).
+
+## 0-bis. L'architettura bersaglio: due prodotti, non uno
+
+*(sezione aggiunta nella rev. 2, in risposta alla domanda DM «qual è il percorso
+corretto per un prodotto professionale e riusabile?»)*
+
+**La domanda giusta non è «come aggiungo il level design al toolkit», ma «cosa
+sta diventando questo repo».** Oggi contiene due prodotti con vincoli opposti,
+fusi in un solo albero:
+
+| | **Prodotto A — la campagna** | **Prodotto B — il toolkit** |
+|---|---|---|
+| Cos'è | archi 00-09, Bestiario, PG, canone, mappe | `scripts/`, schemi, legenda, pipeline |
+| Distribuibile? | **no** — IP RHoD/WotC (ADR-0005) | **sì** — nessun asset di terzi, arte procedurale in-house |
+| Vive di | sessioni giocate | release e utenti |
+| Criterio di qualità | coerenza di canone | contratti stabili, retrocompatibilità |
+| Chi lo cambia | il DM | chi manutiene il codice |
+
+**Non sono separati oggi**: 11 script fanno `sys.path.insert(0, …)` per
+importarsi a vicenda, e quattro moduli importano `render_map_svg` — un modulo di
+**rendering** da 1.530 righe — per ottenere il **parser** e la **legenda**. La
+dipendenza punta nella direzione sbagliata: il dominio dipende dalla
+presentazione.
+
+**Il percorso a un prodotto professionale e riusabile è rendere B estraibile**,
+non riscriverlo. In ordine, e ogni passo ha valore anche se ci si ferma lì:
+
+1. **Il toolkit diventa un package** (`pyproject.toml`, entrypoint da console).
+   Fine dei `sys.path` hack. È il prerequisito di qualunque riuso — e di
+   `PIANO-EDITOR-VISUALE-MAPPE`, che pianifica già l'editor come progetto separato
+   ma oggi non avrebbe nulla da importare.
+2. **Il dominio si separa dalla presentazione**: legenda, parser della griglia e
+   modello della mappa in un modulo di dominio; renderer, exporter e CLI ne
+   **dipendono**, non viceversa. È esattamente la stessa correzione che ADR-0014
+   fa per la legenda, generalizzata — e la fa una volta sola.
+3. **La campagna diventa un consumatore del toolkit**, non il suo contenitore.
+   `campaign/` e gli archi restano dove sono e non cambiano nulla nel modo in cui
+   il DM lavora.
+
+Quello che **non** serve: spezzare il repo in due adesso. La decisione «repo unico
+con package interno, o due repo» va presa quando B ha una superficie pubblica
+stabile — cioè dopo il Ramo 0, non prima.
 
 ## 1. Obiettivo e non-obiettivi
 
@@ -63,12 +109,123 @@ nella prosa).
 6. **La calibrazione non usa mappe RHoD** (ADR-0005): solo materiale proprio o
    liberamente licenziato, con corpus dichiarato.
 
+## 2-bis. Integrare invece di riscrivere
+
+*(sezione aggiunta nella rev. 2 — regola DM: «se esiste già ed è usabile, si
+integra»)*
+
+La rev. 1 di questo piano proponeva di **scrivere a mano** componenti connesse,
+dilatazione binaria, grafi con punti di articolazione e raycast. Sbagliato.
+Misurato sulla mappa *Dirupo Mortale* 40×40, con i valori confrontati al bit
+contro l'implementazione a mano:
+
+| Serve per | Rev. 1 (a mano) | Rev. 2 (integrato) | Esito misurato |
+|---|---|---|---|
+| **M1** copertura entro Chebyshev 2 | doppio ciclo su 25 offset | `scipy.ndimage.binary_dilation`, struttura 5×5 | identico (0.0309), **1 riga** |
+| **M2** vuoto connesso massimo | BFS + deque, ~15 righe | `ndimage.label` + `bincount` | identico (0.9691), **2 righe** |
+| M1+M2 insieme | 18 righe · 11,5 ms | 4 righe · **0,8 ms** | **14×**, ¼ del codice |
+| **M3** anelli μ = E−V+C | costruzione grafo + conteggio | `networkx`, 1 riga | — |
+| **strozzature** | algoritmo dei punti di articolazione | `nx.articulation_points`, 1 riga | — |
+| **M4/M5** visibilità | Bresenham a mano, e la guida **ripiega sul campionamento** perché «in Python puro sono minuti» | `tcod.map.compute_fov`, shadowcasting **simmetrico** | censimento **completo** 1.585 celle in **34 ms** |
+| **struttura** dei JSON | validatori a mano (già due nel repo) | `jsonschema` sugli schemi draft-07 **già presenti** | valida 3/4 esempi così com'è ¹ |
+
+¹ il quarto (`esempio-misure-in-metri.json`) fallisce **correttamente**: usa
+`units_in: meters`, che lo schema stesso documenta come da validare dopo la
+conversione, non prima.
+
+**Tre conseguenze che cambiano il piano, non solo il codice:**
+
+1. **Il campionamento di M4 non serve più.** La mitigazione di §L5.3 della guida
+   («campiona, oppure usa numpy») nasce da un vincolo che sparisce integrando: M4
+   diventa **esatta**, quindi difendibile. E il campionamento **sottostimava** —
+   esatta 0.913 contro 0.88 stimata sulla stessa mappa.
+2. **Serve una politica di dipendenze prima del codice** → [ADR-0015](adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md):
+   il core resta **stdlib puro** (il DM deve poter lanciare `dm.py` su una macchina
+   nuda, offline, la sera del gioco); l'analisi va in un **extra opzionale**. Il
+   linter è uno strumento di preparazione, non di sessione: è il posto giusto per
+   una dipendenza.
+3. **Dove invece NON esiste nulla da integrare, e va scritto**: il *linter di
+   design per battlemap* non esiste sul mercato (§L8 della guida). Il valore
+   originale del progetto è lì — nella **traduzione dominio-specifica** (legenda
+   funzionale, intento dichiarato, soglie calibrate), non negli algoritmi sotto.
+   Ogni ora spesa a riscrivere `binary_dilation` è un'ora tolta a quella.
+
+**Cosa si integra nel resto del piano**: ComfyUI (già nel repo) invece di una
+pipeline di generazione propria; Blender headless invece di un renderer; il
+formato **Universal VTT** (già esportato) invece di un formato proprio; Watabou
+e l'import ultra-clear (già presenti) invece di nuovi generatori. Su questi il
+repo aveva già fatto la scelta giusta.
+
 ---
 
 ## 3. Lotti
 
 Legenda impegno: **engine consigliato** e **livello** secondo la regola DM
 2026-07-22 (piani con routing engine).
+
+### Ramo 0 — Substrato di ingegneria (rev. 2 — precede tutto il codice nuovo)
+
+*Rimedia*: audit §6. Senza questo ramo ogni lotto successivo **aggiunge massa a
+un mucchio non pacchettizzabile**. Non è refactoring per il gusto di farlo: è ciò
+che rende B estraibile (§0-bis) e ciò che permette di integrare invece di
+riscrivere (§2-bis).
+
+#### ⬜ 0.1 — `pyproject.toml` e fine dei `sys.path.insert`
+
+Il toolkit diventa un package installabile con entrypoint da console. Gli 11
+`sys.path.insert(0, …)` spariscono; gli import fra script diventano import di
+package. **Il layout attuale resta invocabile identico** (`python3
+scripts/dm.py …`): l'installazione è un'aggiunta, non una sostituzione — nessuna
+rottura per il DM.
+
+**Accettazione**: `pip install -e .` funziona; i 70 test passano invocati sia dal
+package sia dal layout attuale; SVG byte-identici; `tools_manifest --check` verde.
+**Engine**: Sonnet. **Impegno**: medio. **Stima**: 6-8 h. **Dipende da**: ADR-0015.
+
+#### ⬜ 0.2 — Livelli di dipendenza + `jsonschema` sui gate
+
+ADR-0015: core stdlib · extra `analysis` (numpy/scipy/networkx/tcod) · extra `dev`
+(pytest/ruff/jsonschema). In CI, `jsonschema` valida gli schemi draft-07 **già nel
+repo**; i validatori a mano si riducono ai soli **controlli semantici** (simbolo
+in legenda, modo corretto, coordinate dentro `map_size`) che JSON Schema non può
+esprimere.
+
+**Accettazione**: gli esempi esistenti validano contro `tactical_map.schema.json`
+senza modificarlo (eccetto il caso `units_in: meters`, documentato); nessun
+comportamento di validazione perso rispetto a oggi — verificato con un test per
+ogni errore che il validatore a mano sapeva già dare.
+**Engine**: Sonnet. **Impegno**: medio. **Stima**: 5-7 h. **Dipende da**: 0.1.
+
+#### ⬜ 0.3 — `ruff` + `pytest` + copertura
+
+Oggi non esiste configurazione di lint, formato o tipi: i `# noqa: E402` sparsi
+sono il fossile di un flake8 usato e poi perso. `ruff` (lint+format, un solo
+tool), `pytest` come runner (esegue i 70 `unittest` esistenti senza riscriverli),
+copertura misurata e pubblicata. Non bloccante al primo giro, bloccante dopo la
+bonifica.
+
+**Accettazione**: `ruff check` pulito; `pytest` verde sui test esistenti **non
+riscritti**; baseline di copertura registrata.
+**Engine**: Haiku (meccanico) con Sonnet sulle correzioni non banali.
+**Impegno**: basso. **Stima**: 4-6 h. **Dipende da**: 0.1.
+
+#### ⬜ 0.4 — La cucitura dominio / presentazione
+
+Legenda (ADR-0014), parser della griglia e modello della mappa escono da
+`render_map_svg.py` (1.530 righe: legenda + pattern + arte + parser + annotazioni
++ renderer + CLI) e diventano un modulo di **dominio**. Renderer, exporter,
+importer e linter ne dipendono; il dominio non dipende da nessuno di loro.
+
+Assorbe e generalizza A1: si fa **una volta**, non due.
+
+**Accettazione**: `render_map_svg` non è più importato da nessuno per ottenere
+parser o legenda; grafo delle dipendenze aciclico e con la presentazione sulle
+foglie; SVG byte-identici; UVTT round-trip verde.
+**Engine**: Opus (confini) → Sonnet (spostamento). **Impegno**: alto.
+**Stima**: 10-14 h. **Dipende da**: 0.1, A1. **Sostituisce**: la parte di A1 che
+riguardava solo i consumatori.
+
+---
 
 ### Ramo A — Fondamenta dati (prerequisito di tutta la Parte II)
 
@@ -157,34 +314,45 @@ salta con una riga informativa, non con un warning.
 
 *Realizza*: §L5.1-L5.2 per M1, M2, M7, M8, M9 (+ conteggio strozzature).
 
-- modello di dominio in `dmcore/mapmodel.py` — **non** `dmcore/visibility.py`,
-  già occupato dalla policy spoiler dei session log (audit §2.5);
+- modello di dominio dal Ramo 0.4 — **non** `dmcore/visibility.py`, già occupato
+  dalla policy spoiler dei session log (audit §2.5);
 - legge la funzione dei simboli da A1: **nessun set hardcoded**;
+- **M1 = `scipy.ndimage.binary_dilation` (struttura 5×5), M2 = `ndimage.label` +
+  `bincount`** — 4 righe, non 18 (§2-bis). Nessun BFS scritto a mano;
+- extra opzionale `analysis` (ADR-0015): se numpy/scipy mancano, exit code
+  documentato con messaggio azionabile, **mai** un crash;
 - output umano + `--json`; advisory (exit 0 salvo `--strict`);
 - i messaggi dichiarano che le soglie sono pre-calibrazione.
 
 **Accettazione**: ADR-0012 pieno (manifest, `--help` pulito, exit code,
 determinismo); rieseguito sul corpus riproduce le mediane di audit §3.1 entro
 tolleranza, con le differenze da A1 **documentate**; test su fixture
-sintetiche (corridoio lineare, campo aperto, arena con anello).
+sintetiche (corridoio lineare, campo aperto, arena con anello); **verifica di
+equivalenza** contro i valori dell'appendice A dell'audit (M1 0.0309 / M2 0.9691
+su *Dirupo Mortale*), già confermata in laboratorio.
 **Engine**: Sonnet (implementazione) con Opus sul disegno delle interfacce.
-**Impegno**: medio-alto. **Stima**: 10-12 h. **Dipende da**: A1, A3.
+**Impegno**: medio. **Stima**: **6-8 h** (era 10-12: l'integrazione toglie lavoro).
+**Dipende da**: 0.2, A1, A3.
 
 #### ⬜ B2 — Metriche costose: M3 anelli, M4/M5 visibilità, M6 verticalità
 
-- **M3** su grafo delle **zone** (A2), mai sulle celle — μ = E − V + 1;
-  strozzature = punti di articolazione dello stesso grafo;
-- **M4/M5** in `dmcore/los.py`: Bresenham fermato dai bloccanti vista, con
-  **campionamento** (1 cella ogni 3 per lato → 1/9 del costo). 40×40
-  tutto-percorribile = ~2,5 M raycast: in Python puro sono minuti, in CI il
-  campionamento basta e avanza;
+- **M3** su grafo delle **zone** (A2), mai sulle celle — `networkx`:
+  μ = E − V + C in una riga; **strozzature** = `nx.articulation_points`, idem;
+- **M4/M5** con **`tcod.map.compute_fov`** (shadowcasting simmetrico, C-accelerato)
+  al posto di un Bresenham scritto a mano. ⚠️ **Il campionamento previsto dalla
+  rev. 1 e da §L5.3 della guida è cancellato**: censimento **completo** di 1.585
+  celle su 40×40 misurato in **34 ms** (§2-bis). M4 diventa esatta, non stimata —
+  e sulla stessa mappa la stima campionata **sottostimava** (0.88 contro 0.913);
+- usare `from tcod import libtcodpy` per le costanti FOV: la forma `tcod.FOV_*`
+  emette già `FutureWarning`;
 - **M6** dal campo `elevation_m` di A2.
 
-**Accettazione**: linter completo su una mappa 40×40 in < 10 s; M3 = 2 sulla
-fixture ad anello e 0 sul corridoio; risultato deterministico (seme fisso del
-campionamento).
-**Engine**: Sonnet. **Impegno**: medio-alto. **Stima**: 10-14 h.
-**Dipende da**: A2, B1.
+**Accettazione**: linter completo su una mappa 40×40 in **< 1 s** (non < 10 s:
+l'integrazione cambia l'ordine di grandezza); M3 = 2 sulla fixture ad anello e 0
+sul corridoio; M4 **esatta**, quindi deterministica per costruzione — nessun seme
+di campionamento da fissare.
+**Engine**: Sonnet. **Impegno**: medio. **Stima**: **6-8 h** (era 10-14).
+**Dipende da**: 0.2, A2, B1.
 
 #### ⬜ B3 — Dichiarato contro realizzato (`design_intent`)
 
@@ -406,19 +574,27 @@ aver misurato lo scarto significa studiare a caso.* Lo scarto è misurato
 
 | # | Lotto | Perché qui |
 |---|---|---|
-| 1 | **D2** — ordine percettivo | ~4 h, zero dipendenze, agisce su ciò che il repo produce di più |
-| 2 | **A1** — legenda funzionale | collo di bottiglia di tutta la Parte II; **chiude oggi** la divergenza SVG↔UVTT; è il lotto E1 già pianificato → un lavoro, tre piani |
-| 3 | **C1** — scheda-mappa | indipendente; serve a C2 e insegna la disciplina prima di avere il tool |
-| 4 | **A3 + A2** | il dato che manca alle metriche |
-| 5 | **B1 + B4** | il linter utile con il minimo di lavoro |
-| 6 | **C2** (Dirupo Mortale) | la prima mappa che il linter ripaga |
-| 7 | **D1 + D4** | inquadratura e igiene IP, in parallelo |
-| 8 | **B2 → B3 → B5** | le metriche costose e la calibrazione |
-| 9 | **D3** | Modalità 4 — gated dalla macchina del DM |
-| 10 | **C3** | parity pass, a mappa singola, sulla lunga |
+| 1 | **D2** — ordine percettivo | ~4 h, zero dipendenze, zero codice; agisce su ciò che il repo produce di più |
+| 2 | **C1** — scheda-mappa | indipendente; serve a C2 e insegna la disciplina **prima** di avere il tool |
+| 3 | **0.1 → 0.3** — substrato | package + livelli + lint/test: è ciò che rende B estraibile (§0-bis) e permette l'integrazione (§2-bis) |
+| 4 | **A1 + 0.4** — legenda e cucitura | insieme, non separati: la legenda funzionale **è** la prima fetta del confine dominio/presentazione. Chiude oggi la divergenza SVG↔UVTT; è il lotto E1 già pianificato → **un lavoro, tre piani** |
+| 5 | **A3 + A2** | il dato che manca alle metriche |
+| 6 | **B1 + B4** | il linter utile con il minimo di lavoro (integrato: 6-8 h, non 10-12) |
+| 7 | **C2** (Dirupo Mortale) | la prima mappa che il linter ripaga |
+| 8 | **D1 + D4** | inquadratura e igiene IP, in parallelo |
+| 9 | **B2 → B3 → B5** | le metriche ex-costose (ora ~34 ms) e la calibrazione |
+| 10 | **D3** | Modalità 4 — gated dalla macchina del DM |
+| 11 | **C3** | parity pass, a mappa singola, sulla lunga |
 
-**Totale stimato**: ~100-130 h, di cui **~20 h** (D2 + A1 parziale + C1) danno
-la maggior parte del valore percepito.
+**Totale stimato**: ~110-145 h — il Ramo 0 aggiunge 25-35 h, l'integrazione ne
+toglie ~10 dai rami B. Il saldo è positivo perché il Ramo 0 **si paga una volta e
+serve ogni piano successivo**, incluso l'editor visuale.
+
+**Ordine di valore, indipendente dal totale**: i primi due lotti (~10 h, zero
+codice nuovo) danno la maggior parte del valore percepito al tavolo; i lotti 3-4
+(~25 h) danno tutto il valore *strutturale* — dopo di essi il toolkit è
+installabile, il dominio è separato e la divergenza SVG↔UVTT è chiusa, anche se
+il linter non venisse mai scritto.
 
 ## 5. Rischi dichiarati
 
@@ -430,6 +606,9 @@ la maggior parte del valore percepito.
 | Le soglie restano opinione | B5 con corpus dichiarato e licenze verificate, o le soglie restano marcate «euristiche» per sempre — mai spacciate per misura |
 | D3 dipende da hardware e da modelli che cambiano nome | collaudo sulla macchina del DM; nomi ControlNet verificati al download; `rendered/blockout/` fuori dal canone |
 | Il piano cresce e non chiude mai | i non-obiettivi di §1 sono vincolanti; C3 è esplicitamente a mappa singola e gated |
+| **Il Ramo 0 rompe qualcosa che oggi funziona** (11 file di import, un modulo da 1.530 righe) | la rete esiste già ed è forte: 70 test + byte-identità degli SVG + round-trip UVTT in CI. Il layout `scripts/*.py` **resta invocabile identico**: se l'installazione fallisce, il DM non se ne accorge |
+| **Le dipendenze del livello 1 non sono disponibili la sera del gioco** | per questo sono **opzionali e fuori dal percorso di sessione** (ADR-0015): il linter è uno strumento di preparazione. Il core resta stdlib puro e offline |
+| Il substrato (Ramo 0) rimanda il valore visibile | per questo la sequenza di §4 mette **D2 e C1 prima**: ~10 h a valore immediato e zero codice, e il substrato parte con il beneficio già incassato |
 
 ## 6. Cosa questo piano NON risolve
 
@@ -451,14 +630,20 @@ Onestà, in coerenza con §L8 della guida:
 ## Checklist di avanzamento
 
 ```
+Ramo 0 — substrato di ingegneria (rev. 2)
+□ 0.1 pyproject.toml + fine dei sys.path.insert (11 file) + ADR-0015 accettato
+□ 0.2 livelli di dipendenza + jsonschema sui gate (semantica resta nostra)
+□ 0.3 ruff + pytest + baseline di copertura
+□ 0.4 cucitura dominio/presentazione (assorbe la parte «consumatori» di A1)
+
 Ramo A — fondamenta dati
 □ A1  legend.yaml fonte unica (= E1 PIANO-EDITOR) + ADR-0014 accettato
 □ A2  zones/elevation/design_intent — schema v1.1
 □ A3  map_kind discriminante
 
-Ramo B — linter
-□ B1  lint_map_design.py — M1 M2 M7 M8 M9 + dmcore/mapmodel.py
-□ B2  M3 anelli (grafo zone) · M4/M5 visibilità (dmcore/los.py) · M6
+Ramo B — linter (integrato, non riscritto — §2-bis)
+□ B1  lint_map_design.py — M1/M2 via scipy.ndimage · M7 M8 M9
+□ B2  M3+strozzature via networkx · M4/M5 ESATTE via tcod (niente campionamento) · M6
 □ B3  design_intent — dichiarato vs realizzato
 □ B4  manifest + docs/tools + CI non bloccante + skill reference
 □ B5  calibrazione su corpus dichiarato (mai RHoD)

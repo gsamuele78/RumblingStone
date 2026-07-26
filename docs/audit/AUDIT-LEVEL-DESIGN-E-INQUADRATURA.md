@@ -29,6 +29,8 @@
 | **Modalità 4 (blockout 3D → depth)** | 🔴 **assente** | nessun `scripts/blockout/`, nessun ControlNet depth, nessuna scheda-inquadratura |
 | Regola di **ordine percettivo** nella prosa | 🔴 **assente** | `editorial-standards.md` normA texture e tipografia, non l'ordine di rivelazione (§4.3) |
 | Igiene IP nei prompt | 🟡 **debito noto** | riferimenti in chiaro a IP protette nei prompt versionati (§4.4) |
+| **Coerenza del design software** | 🟢 **alta** | 13 ADR con gate CI, contratto tool machine-readable bloccante, determinismo verificato, scritture canone a triplo vincolo (§6.1) |
+| **Buone pratiche di ingegneria** | 🟡 **6 lacune** | nessuna pacchettizzazione (11 `sys.path.insert`), modulo-dio da 1.530 righe, 2 validatori JSON Schema a mano, nessun ruff/pytest/mypy, dipendenze non dichiarate, copertura non misurata (§6.2) |
 
 **La diagnosi in una riga**: il repo ha una pipeline di **produzione** eccellente
 e nessuna pipeline di **progettazione**. Sa disegnare qualunque cosa gli si dica,
@@ -376,6 +378,78 @@ sincronizzazione). Farlo una volta serve tre piani.
 
 **Il ramo D non dipende da nulla** e contiene l'item a ritorno più alto (D2).
 Va avviato in parallelo, non in coda.
+
+---
+
+## 6. Il design software è coerente? Segue le buone pratiche?
+
+*(sezione aggiunta il 2026-07-26 su domanda diretta del DM. Verdetto in due
+parti perché le due domande hanno risposte diverse.)*
+
+### 6.1 Coerenza: **sì, e in modo non comune**
+
+Non è un complimento di cortesia — è raro trovarlo in un repo di campagna:
+
+- **13 ADR** che documentano il *perché* delle scelte, con un gate CI che ricorda
+  di scriverne uno quando serve (ADR-0009);
+- **contratto machine-readable dei tool** con gate **bloccante** (ADR-0012): 39
+  tool descritti in `tools.manifest.json`, `--help` verificato contro i flag
+  dichiarati. Sopra la media dell'industria, non solo del dominio;
+- **determinismo come proprietà di prima classe**, verificata in CI dalla
+  byte-identità degli SVG;
+- **separazione master / artefatto generato** (ADR-0003) applicata con disciplina;
+- **scritture sul canone a triplo vincolo** (ADR-0007): gli script scrivono solo
+  dentro regioni marcate e verificano *per costruzione* che i byte fuori restino
+  identici. È un design difensivo maturo;
+- **un solo entrypoint** (`dm.py`) che orchestra e basta (ADR-0002);
+- **70 test** verdi, 12 gate in CI.
+
+L'architettura è pensata, scritta e fatta rispettare da una macchina. Il problema
+non è la coerenza.
+
+### 6.2 Buone pratiche: **parzialmente — sei lacune concrete**
+
+| # | Lacuna | Evidenza | Perché pesa |
+|---|---|---|---|
+| 1 | **Nessuna pacchettizzazione** | nessun `pyproject.toml`; **11 script** con `sys.path.insert(0, …)`; import incrociati fra script top-level | è il singolo ostacolo maggiore a un prodotto riusabile: nulla qui è installabile o importabile da fuori |
+| 2 | **Modulo-dio** | `render_map_svg.py` = **1.530 righe**: legenda + pattern + arte vettoriale + parser + annotazioni + renderer + CLI | 4 moduli lo importano **per il parser e la legenda**: il dominio dipende dalla presentazione. È ADR-0014 generalizzato |
+| 3 | **Validatori JSON Schema scritti a mano** | `tools_manifest.validate()` (si autodefinisce «subset pragmatico»), `compile_map_json.validate()`; nessun uso di `jsonschema` | gli schemi draft-07 sono completi, i validatori no. Verificato: `jsonschema` valida **3/4** esempi contro lo schema *così com'è* (il 4° fallisce correttamente: `units_in: meters`) |
+| 4 | **Nessuna configurazione di qualità** | nessun ruff/black/flake8/mypy/pytest config; `# noqa: E402` sparsi in 8 file | i `noqa` sono il fossile di un flake8 usato e poi perso: senza configurazione la regola esiste solo nella testa di chi scrive |
+| 5 | **Dipendenze non dichiarate** | nessun `requirements`/`pyproject`; la CI fa `pip install pyyaml` inline, due volte | `stdlib_only` è tracciato per-tool nel manifest — ottima disciplina, ma non un contratto installabile né bloccabile |
+| 6 | **Copertura non misurata** | `unittest discover`, nessun coverage | 70 test sono molti; quanto del codice tocchino non lo sa nessuno |
+
+### 6.3 Il costo misurato della politica «stdlib only»
+
+La regola implicita *solo stdlib* (30 tool su 39) protegge una proprietà vera: il
+DM lancia qualunque script con `python3` e basta, offline, la sera del gioco. Ma
+il suo costo è quantificabile — misurato su *Dirupo Mortale* 40×40, con i valori
+confrontati al bit contro l'implementazione a mano:
+
+| Compito | A mano (stdlib) | Con libreria matura | Delta |
+|---|---|---|---|
+| M1 + M2 | ~18 righe · 11,5 ms | **4 righe** · 0,8 ms (`scipy.ndimage`) | **14×**, ¼ del codice, valori **identici** (0.0309 / 0.9691) |
+| M3 anelli, strozzature | grafo + punti di articolazione da scrivere | **1 riga ciascuna** (`networkx`) | codice che non esiste non ha bug |
+| M4 visibilità | «minuti in Python puro» → la guida ripiega sul **campionamento** | censimento **completo** 1.585 celle in **34 ms** (`tcod`, shadowcasting simmetrico) | la mitigazione diventa superflua; e il campionamento **sottostimava**: 0.88 stimata contro **0.913** esatta |
+| Struttura dei JSON | 2 validatori a mano | `jsonschema` sugli schemi già presenti | resta a noi solo la **semantica** |
+
+Licenze dei candidati, tutte permissive e compatibili con la distribuzione:
+numpy BSD-3 · scipy BSD-3 · networkx BSD-3 · jsonschema MIT · tcod BSD-2.
+
+La risposta non è «aggiungere scipy ovunque», ma **dipendenze a livelli**
+([ADR-0015](../../plans/adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md)):
+core stdlib puro, analisi in un extra opzionale. Un linter di progettazione si
+usa mentre si prepara, non mentre si gioca.
+
+### 6.4 La conseguenza sull'obiettivo «prodotto professionale e riusabile»
+
+Nel repo convivono **due prodotti con vincoli opposti**: la campagna (non
+distribuibile — IP RHoD/WotC, ADR-0005) e il toolkit (distribuibile — nessun
+asset di terzi, arte procedurale in-house). Oggi sono fusi da `sys.path` e da un
+modulo di rendering che fa anche da libreria di dominio.
+
+Il percorso non è riscrivere: è **rendere il toolkit estraibile** — package,
+confine dominio/presentazione, campagna come *consumatore*. Dettaglio in
+`plans/PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md` §0-bis e Ramo 0.
 
 ---
 

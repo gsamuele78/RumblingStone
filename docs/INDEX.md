@@ -63,6 +63,7 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0012](../plans/adr/ADR-0012-standard-ingegneria-tool-verificabile.md) | Standard di ingegneria verificabile in CI |
 | [ADR-0013](../plans/adr/ADR-0013-standard-generazione-booklet-sessioni.md) | Standard di generazione dei booklet di sessione |
 | [ADR-0014](../plans/adr/ADR-0014-legenda-funzionale-fonte-unica.md) | Legenda **funzionale** come fonte unica (proposta) |
+| [ADR-0015](../plans/adr/ADR-0015-dipendenze-a-livelli-e-pacchettizzazione.md) | Dipendenze a livelli + pacchettizzazione (proposta) |
 
 ## 5. Archivio piani
 
