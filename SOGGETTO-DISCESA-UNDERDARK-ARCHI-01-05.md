@@ -15,8 +15,13 @@
 > secondo momento, con `rumblingstone-narrative-style`.
 >
 > **Fonte primaria**: racconto del DM del 2026-07-26, incrociato con
-> `campaign/lore/campaign-history.md` e con l'inventario del materiale grezzo.
+> `campaign/lore/campaign-history.md`, con l'inventario del materiale grezzo e —
+> **rev. 2** — con il **registro XP incontro-per-incontro** estratto da
+> `00_Red Hand Of Doom/CalcoloPuntiEperienza-current.ods` (§6).
 > **Data**: 2026-07-26 · **Stato**: 🟡 bozza da validare dal DM
+>
+> **Rev. 2**: il registro XP ha **sciolto 4 delle 6 domande** di §3 e ne ha
+> aperte 2 nuove. Ha anche isolato il problema vero: §7.
 
 ---
 
@@ -248,3 +253,149 @@ materiale grezzo e già una mappa. Da lì si tara il ritmo e si scrivono gli alt
 quattro allo stesso standard (`rumblingstone-module-standard`).
 
 **Prima però servono le sei risposte di §3.**
+
+
+---
+
+## 6. Il registro XP — la spina dorsale che mancava
+
+`00_Red Hand Of Doom/CalcoloPuntiEperienza-current.ods`, foglio **«Calcolo PX»**,
+**98 righe**: un incontro per riga, in ordine cronologico, con i PX assegnati a
+ciascun PG. *(La versione precedente, `CalcoloPuntiEperiennza.ods`, ne ha 78: è
+un sottoinsieme. Usare la `-current`.)*
+
+**È il documento più prezioso del repo per questi archi**, e non è mai stato letto
+da nessuno strumento: è un foglio di calcolo, non markdown.
+
+### 6.1 Dati di inquadramento
+
+| | |
+|---|---|
+| PX iniziali | **28.000** = **8° livello** — conferma la riscalatura |
+| Livelli attuali | 13° (Thorik 81.130 · Tordek 82.946 · Artemis 78.495 · Hella 78.217) |
+| **Jorr** | **5° personaggio, 8° livello, 30.685 PX** — presente in tutta la prima metà |
+| Copertura del registro | dalla superficie RHoD fino a **«Duergar Ambush sul ponte»**. **Non arriva alla Corona.** |
+
+### 6.2 La sequenza reale, dalla riga dell'Underdark in poi
+
+```
+Underdark 20 scarafaggi giganti          ← ingresso nell'Underdark
+2 orrori uncinati cr6 + 4 gnoll
+trappole (caduta massi cr5, veleno cr7)
+protoplasma nero cr6
+Minotauri 5 cr5 4 cr4 AL PORTO
+Minotauri 5 cr5 1 cr6 ALLA MINIERA
+★ Il capo dei minotauri MAUR cr11 + una GORGONE cr8 + un RAKASA (il Collezionista)
+topi che parlano (creature demoniache torturate dai drow) cr10
+★ il ciambellano miconide DEMONIACO cr7 + 2 protoplasmi neri cr7
+trappola gas e acido con i cadaveri con la MALEDIZIONE DI YUGGTMOY
+5 grick + 1 grell filosofo
+15 trappole acido gr2 PER SALIRE AL 2° E AL 3° PIANO   ← la torre fungina
+1 sporebat
+10 trappole spore e ragnatele gr3 PER SALIRE AL 4° PIANO
+cubo gelatinoso cr5 → Artemis TS Tempra CD 14 o torna a metà fra 8° e 9°
+1 chwidencha · 2 guardie drow · pattuglia drow · sacerdotessa drow cr6 …
+thiefling stregone accolito della pelle cr8 · statue barbute con risucchio
+★ vrock MINERAL WARRIOR cr10
+★ «trovano la frase per chiudere le porte della MINIERA DI BELKAM»
+golem di cristallo cr11 · una decina di trappole
+4 knight di ABBATHOR e non-morti evocati
+★ incontro con MICONIDI: 2 guardie élite, 2 guardie, 6 worker
+★ chierico di ABBATHOR duergar cr12 + cavalieri duergar     ← i nani grigi
+direguard · defacer · vansoud · Ettin a tre teste (contro Thorik nel sonno)
+★ RETRIEVER contro gli altri mentre Thorik dormiva
+★ orrore della palude + ragno fase + guardie casato drow    ← shadow marsh
+3 round di ragni e phase spider
+★ warlock cr9 + 3 wraith + BEHOLDER ZOMBIE TYRANT cr13      ← il Tempio
+2 drow cr9 + 2 carnevus demons · stanza torrette goblin
+★ 1 mostro a 3 gambe — un ELDER XORN
+★ STANZA DELLA RINASCITA + 4 grimlock CELEBROMORFI cr5 + drow
+cubo gelatinoso cr8
+★ LA QUEST DELLA GEMMA DELL'ANTICO PORTATORE — piano spirituale (5.800 PX!)
+★ Belkram, worg e le tre yoch
+★ Duergar Ambush sul ponte                                   ← il registro finisce qui
+```
+
+### 6.3 Cosa combacia col tuo racconto
+
+**Quasi tutto, e nell'ordine che hai detto.** Minotauri → miconidi/torre →
+drow → miniera → duergar → tempio → xorn → rinascita → gemma → Belkram.
+
+Un solo scarto strutturale: la miniera è **«la miniera di Belkam»** — miniera e
+tomba di Belkram sono **lo stesso complesso**, non due luoghi. Il tuo racconto le
+teneva separate.
+
+---
+
+## 6-bis. Le quattro domande che il registro ha sciolto
+
+| # | Domanda | Risposta dal registro |
+|---|---|---|
+| **2** | «un mostro score + basilico» | **`Il capo dei minotauri maur cr 11 una GORGONE cr 8 un RAKASA (il Collezionista)`** — sono **tre** creature: Maur è il capo minotauro, la **gorgone** è il mostro pietrificante, il rakshasa è il Collezionista. «score» = **gorgone** |
+| **5** | i nuotatori nella pietra | **`1 mostro 3 gambe — un ELDER XORN`**. (E c'è anche un **vrock mineral warrior**) |
+| **6** | «Abaddor» | **ABBATHOR** — la divinità nanica dell'avidità. Non una persona, non un clan: un **dio**. Già in 17 file `.md` del repo |
+| **1** | ordine miniera / torre fungina | **il tuo racconto è giusto**: minotauri → torre fungina → drow → miniera. La numerazione delle cartelle **non** riflette l'ordine di gioco |
+
+### ⚠️ Due contraddizioni nuove, da sciogliere
+
+1. **Gorgone o basilisco?** Il registro (il *giocato*) dice **gorgone cr 8**.
+   `campaign-history.md` dice che il Collezionista usa un **basilisco vincolato**.
+   In 3.5 sono due mostri diversi — entrambi pietrificano, quindi entrambi
+   reggono il commercio di statue, ma **non sono la stessa creatura**.
+   Quale vale come canone?
+2. **Zuggtmoy.** Il registro cita la *«maledizione di **yuggtmoy**»* sui cadaveri
+   nella torre. **Zuggtmoy compare in ZERO file markdown del repo**: esiste solo
+   in questo foglio di calcolo. È la regina demoniaca dei funghi — e spiega
+   *perché* i miconidi sono «crazed» e il ciambellano è «demoniaco». **È il
+   tassello che tiene insieme tutta la sezione fungina, e non è scritto da
+   nessuna parte.** ⚠️ È anche Product Identity WotC (vedi §4).
+
+---
+
+## 7. Il problema vero: cosa NON ha lasciato traccia
+
+Il registro assegna PX per **combattimenti e trappole**. Tutto il resto non
+compare — e «tutto il resto» è esattamente ciò che ricordi come **la storia**:
+
+| Beat del tuo racconto | Nel registro | Altrove |
+|---|---|---|
+| Viaggio per portali e **nodi terrestri** | ❌ | ❌ |
+| **Giardino dei Miceni** | ❌ | ❌ |
+| **Hella si fonde coi poteri fungini** | ❌ | ❌ |
+| **La Madre dei Funghi li teletrasporta** | ❌ | ❌ |
+| **Accampamento drow che commercia** invece di attaccare | ❌ | ❌ |
+| Drow **modificati dai funghi** | ❌ | parziale in `campaign-history` |
+| Torre modificata **nello spazio** da Sonjak | ❌ | ❌ |
+| **Sonjak** in persona | ❌ | citata a valle, mai in scena qui |
+| **Portale a senso unico** | ❌ | ❌ |
+
+> **Il registro conserva ciò che ha dato PX. La storia non dà PX.**
+
+Ecco perché «mancano le parti descrittive»: non è che siano andate perse — **non
+sono mai state scritte**, perché il sistema di tracciamento che avevi (il foglio
+XP) non aveva un posto dove metterle. La spina dei combattimenti è documentata al
+100%; il tessuto connettivo esiste solo nella tua memoria.
+
+**Le due domande che restano aperte, ed è dove serve la tua testa:**
+
+- **la fusione di Hella** — cosa cede, cosa ottiene, il legame resta? È il
+  precedente diretto della sua morte all'arco 06 e della resurrezione all'arco 07;
+- **cosa vendono i drow di Sonjak, e a che prezzo** — è la scena migliore di
+  tutto il materiale, ed è quella di cui non resta una riga.
+
+---
+
+## 8. Conseguenza operativa
+
+Il registro XP va **promosso da foglio di calcolo a dato**: 98 incontri con GS,
+composizione e PX sono già la metà di ogni master d'arco (la sezione «Incontri»
+si compila da lì, non a memoria). Oggi nessuno strumento del repo lo legge.
+
+Ordine di scrittura rivisto rispetto a §5:
+
+1. **estrarre il registro in markdown** — è meccanico e sblocca tutto il resto;
+2. rispondere alle **due** domande di §7 (Hella, i drow) e alle **due**
+   contraddizioni di §6-bis (gorgone/basilisco, Zuggtmoy);
+3. scrivere l'**arco 03** per intero come riferimento — ha 29 file di materiale,
+   una mappa SVG, e nel registro il beholder zombie tyrant cr13, i duergar di
+   Abbathor, il retriever e l'ettin.
