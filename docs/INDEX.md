@@ -40,6 +40,7 @@ Contratto macchina e vista umana — **generati** dal manifest, sempre allineati
 | [`docs/guides/TOOL-AUTHORING-STANDARD.md`](guides/TOOL-AUTHORING-STANDARD.md) | **Standard obbligatorio** per ogni nuovo tool (checklist + verifica CI) |
 | [`docs/audit/AUDIT-REPORT.md`](audit/AUDIT-REPORT.md) | Report d'audit degli script (findings azionabili) |
 | [`docs/audit/SCORECARD.md`](audit/SCORECARD.md) | Scorecard 12-assi per script |
+| [`docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md`](audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md) | Misura dello scarto su level design delle mappe (M1-M9) e inquadratura dei prompt — input del [PIANO-LEVEL-DESIGN-E-INQUADRATURA](../plans/PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md) |
 
 ## 4. Governance & decisioni (ADR)
 
@@ -60,6 +61,8 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0010](../plans/adr/ADR-0010-vendoring-skill-terzi.md) | Vendoring skill di terzi |
 | [ADR-0011](../plans/adr/ADR-0011-de-collisione-scripts-converters.md) | De-collisione `Script/` → `converters/` |
 | [ADR-0012](../plans/adr/ADR-0012-standard-ingegneria-tool-verificabile.md) | Standard di ingegneria verificabile in CI |
+| [ADR-0013](../plans/adr/ADR-0013-standard-generazione-booklet-sessioni.md) | Standard di generazione dei booklet di sessione |
+| [ADR-0014](../plans/adr/ADR-0014-legenda-funzionale-fonte-unica.md) | Legenda **funzionale** come fonte unica (proposta) |
 
 ## 5. Archivio piani
 
