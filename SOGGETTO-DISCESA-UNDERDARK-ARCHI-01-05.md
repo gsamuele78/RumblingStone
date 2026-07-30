@@ -670,10 +670,104 @@ Non sono la stessa cosa e non vanno fuse.
 
 ---
 
-### 10.5 ⚠️ Cosa resta aperto — **uno solo**
+### 10.5 ✅ CHIUSO — Hella ha *sentito* la perdita e ha fatto supposizioni
 
-| Aperto | Perché serve |
+> *«Hella ha sentito questa perdita e ha fatto supposizioni»*
+
+**È il caso migliore dei tre, e va scritto esattamente così.**
+
+| Chi | Cosa sa |
 |---|---|
-| **I PG hanno mai capito perché Hella ha perso il potere?** | Se hanno collegato l'incendio dei funghi all'ira fungina, è una lezione appresa; se non l'hanno collegato, è un **debito aperto al tavolo** e una scena che devi ancora giocare. Cambia come si scrive l'arco 05 |
+| **Il DM** | la verità: i funghi bruciati, l'ira fungina |
+| **Hella** | che il potere **se n'è andato**. Ha una **supposizione**, non una conferma |
+| **Il gruppo** | ⚠️ **potrebbe non sapere di essere la causa** |
 
-Tutto il resto è canone dichiarato. **Si può scrivere.**
+Regole di scrittura che ne discendono:
+
+- nella Stanza Runica **non si annuncia niente**: la perdita è un **beat
+  sensoriale**. Il micelio smette di rispondere. Non c'è un tiro, non c'è un
+  messaggio: c'è un silenzio dove prima c'era una voce;
+- Hella **ipotizza ad alta voce** — ed è il DM a sapere se ha ragione. Una
+  supposizione detta al tavolo è più forte di una spiegazione corretta;
+- **il filo resta vivo**: Hella muore all'arco 06 e torna all'arco 07. Se è morta
+  senza sapere, la conferma può arrivare **dopo** la resurrezione — ed è una
+  delle scene più forti disponibili in tutta la campagna;
+- **il gruppo porta una colpa che non sa di avere.** Non serve fargliela
+  scoprire: serve che il DM sappia che c'è.
+
+**La catena è chiusa. Si può scrivere.**
+
+### 10.6 La porta non aperta: **Zuggtmoy non viene mai incontrata**
+
+> *«Hella avrebbe voluto incontrare Zuggtmoy senza davvero sapere cosa la
+> aspettava — la follia come minimo. Ma il gruppo ha deciso di inseguire i drow
+> attraverso un portale senza sapere nemmeno dove li avrebbe portati. Per loro
+> fortuna, nella direzione giusta.»*
+
+**È il beat che tiene insieme tutto l'arco fungino, ed è una scelta dei
+giocatori, non una scena del DM.**
+
+| | |
+|---|---|
+| **Hella voleva** | l'udienza con la Regina — senza sapere che il minimo prezzo era la follia |
+| **Il gruppo ha scelto** | inseguire i drow in un portale di cui ignoravano la destinazione |
+| **Esito** | direzione giusta **per fortuna**, non per bravura |
+
+**Conseguenze per la scrittura:**
+
+- **Zuggtmoy resta fuori scena, come Sonjak.** Due potenze, nessun volto: di
+  entrambe si vedono solo le opere. È già un principio di regia della catena
+  (§10.2) — ora è **doppio e voluto**, non un caso;
+- il bivio va **giocato come bivio**: l'udienza è una **porta aperta e non
+  attraversata**, non un'occasione mancata dal DM. I giocatori hanno scelto la
+  fretta e la caccia. Il modulo deve rendere la porta **visibile** — altrimenti
+  non è una scelta, è un corridoio;
+- **il desiderio di Hella resta insoddisfatto** — e lei muore all'arco 06 senza
+  averlo esaudito. Poi torna all'arco 07. È un filo che il DM può riaprire in
+  qualunque momento, ed è già carico;
+- ⚠️ **e c'è una scala di offesa**: il gruppo prima **rifiuta l'udienza** della
+  Regina, poi **brucia i suoi funghi** nella Stanza Runica. L'ira fungina che
+  toglie il dono a Hella non è un capriccio: è il **secondo** sgarbo. Scritta
+  così, la punizione ha una progressione invece di essere arbitraria;
+- il fatto che il portale porti **nella direzione giusta per caso** va scritto
+  come tale: nella tabella delle contingenze, «e se sbagliassero portale?» è una
+  domanda legittima che il modulo deve saper gestire.
+
+---
+
+## 11. ⚠️ Quale arco scrivere per primo — RACCOMANDAZIONE CORRETTA
+
+Nella rev. 1 avevo proposto **l'arco 03** perché è il più ricco di materiale
+(29 file, una mappa SVG già pronta). **Avendo letto le fonti, ritiro quella
+proposta.**
+
+Il file `il Tempio di Moradin - in fondo guardiano da sx.txt` **è testo tradotto
+di *Expedition to Undermountain***, non appunti originali. Lo si riconosce da
+tre segni nel testo stesso:
+
+- rimanda a **«pagina 121»** e alla **«sezione Chiavi della Tomba»** — cioè alla
+  paginazione del manuale d'origine;
+- nomina i **nani del clan Melairkyn** — il clan di Undermountain, IP WotC;
+- descrive gli otto pilastri, le otto chiavi e l'ascensore verso la Tomba con la
+  struttura dell'originale.
+
+E `Scontro_davanti_tempio di moradin.txt` contiene il blocco **Darklight Ore**
+riportato **testualmente in inglese** da un manuale.
+
+> **L'arco 03 è il più ricco di materiale proprio perché il materiale è di
+> qualcun altro.** Scriverlo per primo significherebbe consolidare la parte più
+> derivata della catena — l'opposto dell'obiettivo di ADR-0018.
+
+### La scelta giusta: **il mercato drow di Sonjak** (§1.4)
+
+| Criterio | Perché vince |
+|---|---|
+| **Provenienza** | **nessuna fonte dichiarata.** Viene per intero dal racconto del DM: è materiale suo al 100% |
+| **Qualità** | è la scena migliore del corpus: un incontro drow che non è un combattimento, con un solo PG che sa il pericolo |
+| **Autosufficienza** | un luogo, una discesa, tre tende. Si gioca in una sessione e non dipende da nient'altro |
+| **Copertura dello standard** | ha già tutto ciò che il `module-standard` chiede: scelta grigia (comprare schiavi o no), sconfitta gestita (il passo falso, non il TPK), eco a lungo termine (il denaro finisce a Sonjak), momento per un PG specifico (Artemis che vede gli invisibili) |
+| **Serve due prodotti** | è il primo tassello dell'AP vendibile **e** una scena giocabile per il tavolo |
+
+**Ordine proposto rivisto**: mercato drow → Tana dei Minotauri → Gardens/prove →
+torre fungina. Gli archi 03 e 04 si scrivono **dopo**, e si scrivono
+**riprogettandoli**, non consolidandoli.
