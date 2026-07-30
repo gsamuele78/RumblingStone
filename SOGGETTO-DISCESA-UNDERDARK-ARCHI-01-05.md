@@ -25,6 +25,8 @@
 > **Rev. 3** (risposte DM, 2026-07-26 sera): il Giardino ha un nome e una fonte,
 > la fusione di Hella ha una meccanica, i tre mostri sono confermati. §9 elenca
 > ciò che resta aperto.
+> **Rev. 4**: il mercato drow di Sonjak è documentato (§1.4) — merci, luogo,
+> la scala sorvegliata da invisibili. Apre una contraddizione di ordine.
 
 ---
 
@@ -89,14 +91,55 @@ che attraversano la pietra come se ci nuotassero**.
 > p.93, che la storia colloca nell'**arco 01**)? Sono due creature diverse e
 > cambiano il tono della scena.
 
-### 1.4 — Il bivio e l'accampamento drow 🗣
+### 1.4 — Il bivio, la scala sorvegliata e il mercato drow 🗣 *(rev. 4)*
 
-Un **bivio**. Il gruppo sceglie, e trova un **accampamento drow che non attacca:
-commercia** — «per quello che possono commerciare i drow». È un gruppo sotto la
-matrona **Sonjak**.
+**Il luogo.** Un **bivio** nell'Underdark, **lungo la strada per la Tana dei
+Minotauri**. Da lì si scende.
 
-**Questa è una delle scene migliori del materiale**: un incontro con i drow che
-*non* è un combattimento. Il prezzo di ciò che vendono è la scena.
+**La scala.** Ripida, lunga, scavata nella roccia — il DM la immagina come *la
+scala che i nani salgono per trovare la porta segreta della Montagna Solitaria*.
+⚠️ **Immagine di regia, non testo**: il riferimento serve a te per trovare il
+tono, **non va scritto nel modulo** (vedi §4-bis).
+
+**La scala non è sguarnita.** Ed è qui che la scena funziona:
+
+- **drow invisibili** la sorvegliano lungo tutta la discesa;
+- **ragni invisibili** stanno **sopra**, appesi alla volta;
+- **solo Artemis li vede**, usando i suoi poteri — e li usa per **frenare la
+  spavalderia del gruppo**.
+
+> **Questo è il cuore della scena e va progettato, non raccontato.** Il gruppo
+> scende disarmato di conoscenza; un solo PG sa che sono osservati da decine di
+> occhi, e deve convincere gli altri a comportarsi. Il pericolo non è il
+> combattimento: è il **passo falso**. Chi sguaina, muore — e nessuno lo sa
+> tranne uno.
+
+**Il mercato.** In fondo la scala si apre in una **grotta ampia con tre tende**.
+Si vende:
+
+| Merce | Nota del DM |
+|---|---|
+| **Pozioni** | a prezzo da strozzino |
+| **Armi** | «prezzi proibitivi» |
+| **Schiavi** | ovviamente |
+
+È un gruppo sotto la matrona **Sonjak**. Non attaccano: **commerciano**.
+
+**Perché è la scena migliore del materiale**: un incontro drow che non è un
+combattimento, in cui la tensione viene dal *prezzo* e dall'essere sorvegliati.
+E offre ai PG la scelta che nessun combattimento offre — **comprare schiavi, o
+no**, sapendo che il denaro finisce a Sonjak.
+
+> ⚠️ **CONTRADDIZIONE DI ORDINE — da sciogliere.**
+> Nel primo racconto (2026-07-26) l'accampamento drow veniva **dopo** il
+> teletrasporto della Madre dei Funghi, in una zona esplorata più tardi.
+> In questa risposta l'accampamento è **a un bivio lungo la strada PER la Tana
+> dei Minotauri** — cioè **prima**.
+> Le possibilità sono tre: (a) l'ordine corretto è questo e il primo racconto
+> comprimeva due momenti; (b) i campi drow sono **due**, uno prima e uno dopo;
+> (c) il gruppo ci è passato **due volte**, all'andata e al ritorno — che sarebbe
+> la versione migliore, perché la seconda visita cambia di segno dopo la torre.
+> **Serve la tua parola.**
 
 ### 1.5 — L'accampamento dei funghi e le aberrazioni fungine 🗣✅
 
@@ -245,6 +288,20 @@ e il suo commercio di statue, **Sonjak architetto che piega lo spazio**, la
 **fusione di Hella coi funghi**, il **rifiuto della classe di prestigio da parte
 di Artemis**, la **Corona** e la **morte di Hella**. Nessuna di queste cose viene
 da un manuale.
+
+---
+
+## 4-bis. Riferimenti di regia — utili a te, vietati sulla pagina
+
+Alcune immagini che il DM usa per fissare il tono vengono da opere protette.
+**Servono in fase di scrittura, non vanno nel testo.**
+
+| Immagine di regia | Dove | Regola |
+|---|---|---|
+| «la scala per l'entrata della Montagna Solitaria» (*Lo Hobbit*) | §1.4, la discesa al mercato drow | usare la **sensazione** — scala lunga, esposta, che porta a una porta che non si vede finché non sei arrivato. Mai il nome |
+
+Vale la stessa regola dei prompt immagine (lotto D4 del piano level design): il
+riferimento aiuta a **dirigere**, e sparisce dal prodotto.
 
 ---
 
@@ -460,7 +517,8 @@ Abbathor, lo xorn. **Restano nove cose**, in ordine di quanto pesano:
 
 | # | Aperto | Perché pesa |
 |---|---|---|
-| **1** | **Cosa vendono i drow di Sonjak, e a che prezzo** | È la scena migliore del materiale — un incontro drow che *non* è un combattimento — e non ne resta una riga da nessuna parte |
+| ~~1~~ | ~~Cosa vendono i drow di Sonjak~~ | ✅ **RISPOSTO (rev. 4)**: pozioni, armi a prezzi proibitivi, schiavi; a un bivio sulla strada per la Tana; scala ripida sorvegliata da drow e ragni **invisibili**, visti dal solo Artemis; grotta finale con **tre tende**. Vedi §1.4 |
+| **1-bis** | ⚠️ **L'accampamento drow viene PRIMA o DOPO la Tana dei Minotauri?** | Nuova contraddizione fra i due racconti. Tre ipotesi in §1.4 — la migliore è che ci siano passati **due volte** |
 | **2** | **Cosa è costato a Hella** | Ha *ottenuto* il micelio. Non sappiamo cosa ha **ceduto**. È il precedente diretto della sua morte (arco 06) e della resurrezione (arco 07): senza il costo, quei due beat perdono la radice |
 | **3** | **Il viaggio del micelio è permanente?** | Se Hella lo conserva, cambia la logistica di tutti gli archi successivi. Se lo perde, quando e come |
 | **4** | **Chi somministra «le prove»** | La Madre dei Funghi? Il ciambellano miconide (che il registro dice **demoniaco**)? Sono due scene molto diverse |
