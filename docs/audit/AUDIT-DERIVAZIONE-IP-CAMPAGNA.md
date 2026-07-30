@@ -196,6 +196,7 @@ dichiarate, con tanto di numero di pagina**:
 | ***Underdark*** sourcebook (WotC 2003) | Tana dei Minotauri · arco 01 | p.95 (Maur) · p.93 (Cristal Warriors) |
 | ***Out of the Abyss*** (D&D 5e) | **Neverlight Grove** = la torre fungina, convertita in 3.5 | — |
 | Lore FR / Salvatore | *Aegis Fang* — «originally Wulfgar's warhammer» | `campaign-artifacts.md` |
+| ***Drow of the Underdark*** (WotC 2007) | **Gardens of Resplendent Hues** — il Giardino dove Hella ottiene il viaggio nel micelio | p.189 *(dichiarato dal DM il 2026-07-26; **0 occorrenze** nel repo)* |
 
 **«Belkram» compare 232 volte in 49 file.** *Belkram's Fall* è una località di
 Undermountain: **l'arco 04 è intitolato a un luogo altrui.**

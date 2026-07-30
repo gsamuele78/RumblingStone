@@ -22,6 +22,9 @@
 >
 > **Rev. 2**: il registro XP ha **sciolto 4 delle 6 domande** di §3 e ne ha
 > aperte 2 nuove. Ha anche isolato il problema vero: §7.
+> **Rev. 3** (risposte DM, 2026-07-26 sera): il Giardino ha un nome e una fonte,
+> la fusione di Hella ha una meccanica, i tre mostri sono confermati. §9 elenca
+> ciò che resta aperto.
 
 ---
 
@@ -399,3 +402,75 @@ Ordine di scrittura rivisto rispetto a §5:
 3. scrivere l'**arco 03** per intero come riferimento — ha 29 file di materiale,
    una mappa SVG, e nel registro il beholder zombie tyrant cr13, i duergar di
    Abbathor, il retriever e l'ettin.
+
+
+---
+
+## 9. Risposte del DM (rev. 3) e cosa resta aperto
+
+### 9.1 Il Giardino ha un nome — ed è una **quinta fonte WotC**
+
+> *«dopo il lair dei minotauri i giocatori hanno scoperto grazie ad Hella e ai
+> funghi il **Gardens of Resplendent Hues** (Drow of the Underdark p.189)»*
+
+**Nuovo dato, e nuovo problema.** ⚠️ *Drow of the Underdark* (WotC 2007) è la
+**quinta** fonte di terzi dichiarata per questa catena, dopo *Expedition to
+Undermountain*, *Underdark*, *Out of the Abyss* e la lore FR.
+
+Verificato: **«Gardens of Resplendent Hues» compare in ZERO file markdown** del
+repo. Come Zuggtmoy, esisteva solo nella memoria del DM.
+
+### 9.2 La fusione di Hella — **meccanica confermata**
+
+> *«Hella ha superato le prove e ha acquisito la possibilità di viaggiare il
+> micelio portando con sé gli altri PG, che hanno dovuto superare un TS sulla
+> Tempra CD 17 per non restare nauseati (Artemis l'ha fallito)»*
+
+| | |
+|---|---|
+| Cosa ottiene Hella | **viaggio attraverso il micelio**, con la compagnia al seguito |
+| Costo per gli altri | **TS Tempra CD 17** o **nauseati** |
+| Esito reale al tavolo | **Artemis fallisce** |
+| Attestazione | ⚠️ **«micelio» e «mycelium»: 0 file markdown.** Nulla di tutto questo è scritto |
+
+⚠️ **Da non confondere**: il registro XP ha un *altro* TS di Artemis — `Cubo
+gelatinoso cr5 → Artemis se non supera il TS Tempra **CD 14** torna a metà fra 8°
+e 9° livello`. Sono **due tiri diversi in due scene diverse**: CD 17 nausea al
+Giardino, CD 14 perdita di livello al cubo. Nel master vanno tenuti separati.
+
+### 9.3 I tre mostri della Tana — confermati
+
+> *«poi i mostri sono **maur**, **basilisk** e **rachasa**»*
+
+Confermato l'assetto a tre. **Ma resta una discrepanza da dirimere**: il registro
+XP — cioè il *giocato* — scrive `Il capo dei minotauri maur cr 11 una **GORGONE**
+cr 8 un rakasa (il Collezionista)`. Il DM dice **basilisco**, coerente con
+`campaign-history.md` («bonded basilisk»).
+
+**Due fonti su tre dicono basilisco, il foglio dice gorgone.** Il DM è l'arbitro,
+ma la scelta va scritta una volta e propagata: 2 contro 1 → **basilisco**, salvo
+smentita.
+
+---
+
+### 9.4 ⚠️ COSA RESTA APERTO
+
+Sciolte: il nome del Giardino, la meccanica di Hella, i tre mostri, l'ordine,
+Abbathor, lo xorn. **Restano nove cose**, in ordine di quanto pesano:
+
+| # | Aperto | Perché pesa |
+|---|---|---|
+| **1** | **Cosa vendono i drow di Sonjak, e a che prezzo** | È la scena migliore del materiale — un incontro drow che *non* è un combattimento — e non ne resta una riga da nessuna parte |
+| **2** | **Cosa è costato a Hella** | Ha *ottenuto* il micelio. Non sappiamo cosa ha **ceduto**. È il precedente diretto della sua morte (arco 06) e della resurrezione (arco 07): senza il costo, quei due beat perdono la radice |
+| **3** | **Il viaggio del micelio è permanente?** | Se Hella lo conserva, cambia la logistica di tutti gli archi successivi. Se lo perde, quando e come |
+| **4** | **Chi somministra «le prove»** | La Madre dei Funghi? Il ciambellano miconide (che il registro dice **demoniaco**)? Sono due scene molto diverse |
+| **5** | **Zuggtmoy è canone?** | Il registro cita la «maledizione di yuggtmoy». Spiega perché i miconidi sono impazziti e il ciambellano è demoniaco — cioè tiene insieme tutta la sezione fungina. **0 file markdown** |
+| **6** | **Il viaggio iniziale** per portali e nodi terrestri | Precede tutto e non esiste da nessuna parte: quanti salti, chi apre, cosa costa |
+| **7** | **Come fugge il Collezionista** | Fugge — ma come, e porta via qualcosa? È la prima apparizione del villain ricorrente: la sua uscita di scena è la sua presentazione |
+| **8** | **Sonjak entra mai in scena qui?** | O si vede solo la sua *opera* (la torre piegata)? Un villain che non si mostra mai è una scelta forte, ma va decisa |
+| **9** | **Il portale a senso unico** | Dove sbuca esattamente, ed è ancora lì? |
+
+E una conseguenza pratica del punto 9.2: **Artemis fallisce due tiri in questa
+catena** (nausea CD 17, livello CD 14). Se al tavolo la nausea ha avuto effetti
+giocati — round persi, una scena mancata — vale la pena scriverli: è il tipo di
+dettaglio che rende un master credibile invece che generico.
