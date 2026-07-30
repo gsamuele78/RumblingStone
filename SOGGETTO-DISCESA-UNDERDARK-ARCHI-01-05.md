@@ -27,6 +27,9 @@
 > ciò che resta aperto.
 > **Rev. 4**: il mercato drow di Sonjak è documentato (§1.4) — merci, luogo,
 > la scala sorvegliata da invisibili. Apre una contraddizione di ordine.
+> **Rev. 5** (risposte DM): **la catena è chiusa**. Ordine risolto, costo di
+> Hella risolto, Zuggtmoy canone, viaggio iniziale, fuga del Collezionista,
+> Sonjak, portale. Vedi §10 — resta **un solo** punto aperto.
 
 ---
 
@@ -532,3 +535,145 @@ E una conseguenza pratica del punto 9.2: **Artemis fallisce due tiri in questa
 catena** (nausea CD 17, livello CD 14). Se al tavolo la nausea ha avuto effetti
 giocati — round persi, una scena mancata — vale la pena scriverli: è il tipo di
 dettaglio che rende un master credibile invece che generico.
+
+
+---
+
+## 10. La catena completa (rev. 5) — canone dichiarato dal DM
+
+Con queste risposte **la spina narrativa è chiusa**. Ordine definitivo:
+
+```
+① HAMMERFIST — stanza privata
+     chierici e druidi di Moradin aprono la connessione
+     attraverso un NODO DELLA TERRA
+                    ↓
+② ZONA DEI FUNGHI — sotto attacco dei minotauri
+     l'attacco in corso È l'aggancio: fa scattare la quest
+                    ↓
+③ IL BIVIO E IL MERCATO DROW  (§1.4)
+     scala ripida · drow e ragni INVISIBILI · 3 tende
+     pozioni, armi, schiavi — a prezzo da strozzino
+                    ↓
+④ TANA DEI MINOTAURI
+     Maur (capo, cr11) · basilisco · rakshasa = IL COLLEZIONISTA
+     → il Collezionista FUGGE (vedi §10.3)
+                    ↓
+⑤ GARDENS OF RESPLENDENT HUES — le prove
+     Hella le supera → VIAGGIO NEL MICELIO, compagnia al seguito
+     TS Tempra CD 17 o nauseati — ARTEMIS FALLISCE
+     ⚠️ le prove NON sono un premio: sono il MEZZO. Senza,
+        il gruppo non saprebbe come raggiungere la torre
+                    ↓
+⑥ TORRE FUNGINA — il regno di ZUGGTMOY (canone)
+     Sonjak l'ha modificata nella struttura E NELLO SPAZIO,
+     per ACCORDO CON ZUGGTMOY, a beneficio dei suoi
+     esperimenti di aberrazione
+     Zuggtmoy sa dove si trova l'antica miniera nanica
+                    ↓
+⑦ PORTALE A SENSO UNICO (dentro la torre)
+     ci sbucano i drow in fuga E i PG
+                    ↓
+⑧ ZONA DELLA MINIERA — il MOSTRO CRISTALLINO
+                    ↓
+⑨ … miniera → Scala d'Ossa → Cittadella → Tempio → Belkram
+                    ↓
+⑩ STANZA RUNICA
+     i PG BRUCIANO I FUNGHI → IRA FUNGINA
+     → Hella PERDE il potere del micelio
+                    ↓
+⑪ CORONA DI ADAMANTIO — Thorik la indossa · Hella muore
+```
+
+### 10.1 Il costo di Hella: **non l'ha pagato lei, l'ha pagato il gruppo**
+
+> *«non ha ceduto nulla, ma nella stanza runica ha perso il potere concesso
+> perché i PG hanno bruciato i funghi presenti provocando l'ira fungina»*
+
+**Questa è la risposta migliore che potevi darmi, ed è meglio di qualunque prezzo
+pattuito.** Il dono non aveva un costo: aveva una **condizione**, e il gruppo l'ha
+violata senza sapere che esistesse.
+
+Conseguenze da scrivere:
+
+- si apre all'arco 02 (le prove) e si chiude all'arco 05 (i funghi bruciati):
+  **è un arco lungo tre sessioni**, non una scena;
+- il colpevole è **il gruppo**, non un nemico. Hella paga per una decisione
+  altrui, e questo la lega e la isola insieme;
+- il precedente per la sua morte all'arco 06 è **narrativo, non meccanico**:
+  arriva alla Corona **già spogliata** di ciò che l'aveva resa la guida della
+  discesa;
+- ⚠️ **da decidere**: i PG hanno mai saputo perché il potere è sparito? Se non
+  l'hanno collegato, è ancora un debito aperto al tavolo.
+
+### 10.2 Sonjak non appare mai — ed è la scelta giusta
+
+> *«si vedono solo le sue opere, non l'hanno mai incontrata. Il bello è quello.»*
+
+Confermato come **scelta di regia deliberata**. E il patto con Zuggtmoy le dà una
+motivazione che non è la solita malvagità drow: ha **modificato la torre in
+cambio del permesso di sperimentare**. La torre piegata nello spazio non è
+un dungeon: è il **laboratorio pagato con un accordo**.
+
+Regola per chi scriverà: di Sonjak si mostrano **l'opera, la firma e il
+prezzo** — mai il volto. La prima volta che comparirà di persona varrà il doppio.
+
+### 10.3 La fuga del Collezionista — **raccomandazione motivata**
+
+Il DM ha chiesto di scegliere la soluzione più coerente. I fatti: diventa
+invisibile; l'unico non messo KO era **il monaco**, che non ha potuto vedere dove
+si rifugiasse; porta con sé forse un **monile di ossidiana** o altro oggetto
+magico, verso un'altra località di Faerûn **o un altro piano, temporaneamente**.
+
+**Raccomandazione: il monile di ossidiana, e la destinazione è il PIANO DEL
+FUOCO — la forgia dei salamandri dove la sua gilda commercia.**
+
+Perché questa e non «un'altra località di Faerûn»:
+
+| Motivo | Fondamento nel canone esistente |
+|---|---|
+| La sua gilda **ha già una rotta planare** | Therysol «fu venduta da mercanti drow affiliati alla gilda del Collezionista **ai salamandri nel Piano del Fuoco Elementale**, costretta a servire alla forgia» |
+| L'ossidiana **è già legata al Piano del Fuoco** | canone del repo: *«giganti del fuoco che usano arieti fatti di ossidiana — forse forgiati proprio nel piano che avete appena lasciato»* |
+| **Pianta l'arco 07 con tre archi d'anticipo** | quando i PG arrivano alla Forgia Eterna e al Piano del Fuoco, il Collezionista è già di casa lì **da tutta la campagna**. Payoff gratuito |
+| Dà un **bersaglio** alla vendetta di Therysol | lei «scende in profondità cercando l'origine del suo destino — la gilda drow del Collezionista». Se lui è fuggito **lungo la stessa rotta su cui lei fu venduta**, la caccia di lei e la fuga di lui sono la **stessa strada** |
+| Meccanicamente pulito | un rakshasa è un esterno nativo: il passo planare non richiede spiegazioni |
+
+«Un'altra località di Faerûn» invece è un vicolo cieco: non spiega niente e non
+si collega a niente.
+
+> ⚠️ **Collisione da evitare**: nel repo esiste già il **Sigillo di Ossidiana**,
+> artefatto allineato a **Shar** (`[CANONE — DM 2026-07-23]`), più una *Piramide*
+> e un *Occhio* di Ossidiana. Il **monile** dev'essere un oggetto **distinto e
+> minore** — non un pezzo del Sigillo. Se vuoi un filo fra i due, la formula
+> sicura è «stessa pietra, stessa scuola, altra mano»: suggerisce una tradizione
+> senza creare una dipendenza fra artefatti.
+
+**E il dettaglio del monaco è il gancio, non un contorno**: c'è un testimone che
+sa che è svanito, e **non sa dove**. Tordek porta quella domanda per tutta la
+campagna. Quando i PG metteranno piede sul Piano del Fuoco, è lui che deve
+riconoscere qualcosa.
+
+### 10.4 Il mostro cristallino chiude anche la domanda sui «nuotatori nella pietra»
+
+Il portale a senso unico li fa sbucare vicino alla miniera, dove incontrano il
+**mostro cristallino** — e `campaign-history.md` mette i **Cristal Warriors**
+(*Underdark* p.93) proprio «nelle prime sale dopo l'arrivo dal portale».
+
+**Combacia.** Quindi le creature della pietra sono **due specie in due momenti**:
+
+| Dove | Cosa |
+|---|---|
+| Subito dopo il portale, zona miniera | **Cristal Warriors** — il «mostro cristallino» |
+| Molto più avanti, verso la Tomba | **elder xorn** (registro XP: «1 mostro a 3 gambe — un elder xorn») |
+
+Non sono la stessa cosa e non vanno fuse.
+
+---
+
+### 10.5 ⚠️ Cosa resta aperto — **uno solo**
+
+| Aperto | Perché serve |
+|---|---|
+| **I PG hanno mai capito perché Hella ha perso il potere?** | Se hanno collegato l'incendio dei funghi all'ira fungina, è una lezione appresa; se non l'hanno collegato, è un **debito aperto al tavolo** e una scena che devi ancora giocare. Cambia come si scrive l'arco 05 |
+
+Tutto il resto è canone dichiarato. **Si può scrivere.**
