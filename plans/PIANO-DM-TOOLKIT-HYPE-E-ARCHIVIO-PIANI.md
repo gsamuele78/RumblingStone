@@ -508,11 +508,13 @@ canone dal DM. (Piano approvato col merge del PR #28, 2026-07-10.)
   creatura Enorme mette Tordek sotto metà pf (*«Bestia grossa.» … «Ci vuole un
   martello più grosso.»*); dalle volte dopo 1/giorno, azione di movimento, e
   solo in pericolo vero. Più l'**audit di Aegis Fang e dell'Anello**: esito
-  **nessuno sblocco da Terros** per entrambi, e le due schede nuove lo dicono
-  nero su bianco invece di lasciare il dubbio. Le schede sono scritte **ognuna
-  nello stile grafico del proprio artefatto** — dorato-oliva nanico per Aegis
-  Fang (Thorik), bruno-viola per l'Anello (Artemis): gli stili sono
-  personalizzati per personaggio e non si uniformano.
+  **nessuno sblocco da Terros** per entrambi, e le **quattro** schede nuove lo
+  dicono nero su bianco invece di lasciare il dubbio — **doppia versione PG/DM**
+  come per la Corona, così la copia da consegnare non porta con sé i tempi
+  degli sblocchi. Le schede sono scritte **ognuna nello stile grafico del
+  proprio artefatto** — dorato-oliva nanico per Aegis Fang (Thorik),
+  bruno-viola per l'Anello (Artemis): gli stili sono personalizzati per
+  personaggio e non si uniformano.
 
 ### Domande aperte per il DM (da chiudere in approvazione del PR)
 
