@@ -8,7 +8,8 @@
 > sotterranea degli ogre. E per i drow qualche incantatore subdolo in più
 > comandato dalla matrona Sonjak.»*
 >
-> **Stato**: 🟢 eseguito (L1-L5 + **L7 ala orchesca**, 2026-08-02) — **tutto il materiale è
+> **Stato**: 🟢 eseguito (L1-L5 + **L7 ala orchesca** + **L8 indice fonte
+> privata**, 2026-08-02) — **tutto il materiale generato è
 > `[INFERRED — needs DM confirmation]`**: sono proposte, non canone. Nessuna
 > riga di `campaign/state.md` è stata toccata.
 
@@ -260,6 +261,80 @@ problema col Cerchio Sacro.
 
 ---
 
+## §7 Indice d'uso della fonte privata (lotto L8, 2026-08-02)
+
+> **Origine**: il DM ha caricato il PDF — la web enhancement *Tougher Sons of
+> Gruumsh* (Eric Cagle, 2006, 9 pagine) — chiedendo se contenga «mostri
+> interessanti da citare come forza bruta».
+>
+> Con il file effettivamente in mano, la rotta **(a) citazione con pagina**
+> diventa praticabile: è il precedente `[Private — Red Hand of Doom, p.X]` già
+> in uso. Prodotto: `Bestiario/INDICE-SONS-OF-GRUUMSH-FONTE-PRIVATA.md`.
+
+### La correzione che il documento impone
+
+Nel dialogo che ha aperto L7 avevo stimato che un boss potenziato «atterra
+nella fascia GS 12-14, cioè mini-boss e non carne da macello». **I numeri
+stampati dicono il contrario e danno ragione al DM.** Il pezzo grosso del
+documento, **Thrull** (p. 9, GS dichiarato **14 o 16**), ha **118 pf e CA 13**,
+perché lo si incontra senza corazza addosso. Contro 4 PG di livello 13 è un
+gregario con un titolo.
+
+| | pf | attesi (PF T1-1) | rapporto |
+|---|---|---|---|
+| Thrull come GS 14 | 118 | 200 | **59%** |
+| Thrull come GS 16 | 118 | 240 | **49%** |
+| Daazlag GS 14 | 67 | 200 | **34%** |
+| Jurrg GS 11 | 41 | 145 | **28%** |
+
+Non è un difetto del prodotto: serve un gruppo di **8° livello**, ed è lo
+stesso fenomeno già descritto in §2 — il GS nominale di un PNG 3.5 costruito
+su livelli di classe diverge dalla sua sopravvivenza reale, e diverge sempre
+di più salendo di grado.
+
+### Cosa è utilizzabile
+
+- **Senza interventi**, come gregari: **Dregthaug** (viverna avanzata GS 10, il
+  meglio proporzionato del file: 84% del pf attesi), **Vhazror** (GS 11, 107
+  pf, alabarda con portata e Sventrare Superiore — il miglior gregario del
+  documento), **ambush drake** in branco da 3-4 (GS 9), **Naazlog** (GS 9).
+- **Con un intervento**: **Thrull** — la correzione è narrativa prima che
+  meccanica (dargli l'armatura già addosso: CA 13 → 24) e poi, se serve,
+  template PF1e *Advanced*; oppure lasciarlo GS 14 e circondarlo (Thrull + 2
+  Vhazror = **EL 15,5**, sotto il tetto). **Daazlag** solo come infiltrato
+  contro PNG, mai in campo aperto. **Jurrg** da rifare sul telaio: la sua
+  lista (*muro di fuoco*, *fulmine*, *raggio rovente*, *oscurità profonda*) è
+  il brief giusto, ma 41 pf e CA 13 non arrivano al primo turno — lo slot è
+  già coperto da `chierico-gruumsh-cr11.md`.
+- **Fuori**: Zhentarim (fazione non in campagna), geografia Thar / Mare della
+  Luna.
+
+### Il ritrovamento che vale più delle schede
+
+Tre dei quattro pezzi grossi (**Thrull**, **Daazlag**, **Naazlog**) sono
+**orog**. Il **Generale Grimjaw è già un orog** in questa campagna: il
+documento gli consegna uno **stato maggiore pronto** — un guerriero anziano,
+un furtivo, un picchiatore, stessa razza e stessa cecità alla luce. E si
+incastra con L7: **Ushgar comanda orchi di superficie e vuole terra scritta,
+Grimjaw comanda orog e ha scelto il grado**. La faglia dell'ala orchesca ha
+adesso due schieramenti con facce diverse.
+
+### Errata trovati leggendo
+
+- **p. 9, Thrull**: i valori di CA con armatura risultano invertiti fra
+  vestizione affrettata e completa. Il calcolo da zero dà **24**.
+- **p. 8, Naazlog**: velocità stampata «30 ft. (40 squares)» — sono **6**.
+
+### Vincolo di licenza, verificato sul documento
+
+La web enhancement dichiara **in prima pagina** di non contenere Open Game
+Content e di non essere riproducibile senza permesso scritto. Conferma la
+nota già messa a verbale in L7: **gratuito non è libero**. L'indice contiene
+solo puntatori (nome, pagina, GS), misure usate come metro di paragone e
+ricette di adattamento originali. **Nessuno statblock trascritto.**
+
+---
+
 ## Checklist lotti
 
 - [x] **L1** — Analisi difese/superfici del party e leve di design (§1-§2)
@@ -274,3 +349,6 @@ problema col Cerchio Sacro.
 - [x] **L7** — Ala orchesca in equivalenti SRD (§6): Chierico di Gruumsh GS 11,
       Bruto Deforme del Sottosuolo GS 11, Ushgar «Occhio Reso» GS 13
       (statblock + dossier + ramo politico su `state.md` §5)
+- [x] **L8** — Indice d'uso della fonte privata (§7): roster valutato scheda
+      per scheda contro il benchmark, ricette di adattamento, errata, aggancio
+      orog ↔ Grimjaw — `Bestiario/INDICE-SONS-OF-GRUUMSH-FONTE-PRIVATA.md`
