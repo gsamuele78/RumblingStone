@@ -8,7 +8,7 @@
 > sotterranea degli ogre. E per i drow qualche incantatore subdolo in più
 > comandato dalla matrona Sonjak.»*
 >
-> **Stato**: 🟢 eseguito (lotto unico, 2026-08-02) — **tutto il materiale è
+> **Stato**: 🟢 eseguito (L1-L5 + **L7 ala orchesca**, 2026-08-02) — **tutto il materiale è
 > `[INFERRED — needs DM confirmation]`**: sono proposte, non canone. Nessuna
 > riga di `campaign/state.md` è stata toccata.
 
@@ -156,6 +156,9 @@ secoli e un registro contabile: dà alla Mano Rossa una faccia che non urla.
    del Sottosuolo) sarebbe la scelta di colore più ovvia, ma sta su fonti
    private: se il DM lo vuole, si aggiunge come scheda a parte citando
    `[Private source]`, senza riprodurre testo.
+   → **Risolto in §6 (lotto L7)**: il DM ha scelto la via degli equivalenti
+   SRD. `bruto-deforme-sottosuolo-cr11.md` copre la stessa funzione senza
+   toccare la fonte privata.
 3. **Non ho potenziato PNG esistenti.** Sonjak resta a GS 13 e Zin'thara le
    sta sotto di proposito.
 4. **Non ho inventato poteri.** L'unica capacità non attestata è lo **Sbuffo
@@ -164,6 +167,96 @@ secoli e un registro contabile: dà alla Mano Rossa una faccia che non urla.
 5. **Aperto**: se il DM vuole Ghaurush come **incantatore puro e più letale**
    invece che caster-bruto, la strada è Ogre magi + Stregone 10 (GS 18), fuori
    dal tetto EL — accettabile solo come «fuggi o muori» segnalato.
+
+---
+
+## §6 L'ala orchesca — equivalenti SRD (lotto L7, 2026-08-02)
+
+> **Origine**: seconda richiesta DM, stessa giornata. *«Le creature tratte da
+> [modulo di fonte privata] sono possenti; anche il mostro finale può essere
+> usato come gregario. Non pensi agli incantatori della Mano Rossa?»* — con
+> nota successiva sull'esistenza di una web enhancement che ne alza i valori.
+>
+> **Rotta scelta dal DM**: *equivalenti SRD, senza il libro.* Nessuna
+> citazione, nessuna pagina, nessun testo ripreso: solo ruoli ricostruiti da
+> SRD 3.5 + template semplici PF1e.
+
+### Le tre constatazioni che hanno guidato il lotto
+
+1. **Il DM ha ragione sul dimensionamento.** Un modulo scritto per la fascia
+   4-7 chiude su un GS 8-10. Contro 4 PG di livello 13 quello è il gradino dei
+   **comprimari** — la stessa banda dei gregari del lotto L3/L4 (GS 8-11). La
+   web enhancement sposta il boss verso GS 12-14, che a questo tavolo è
+   **mini-boss**, non carne da macello.
+2. **Un boss con un nome usato come gregario anonimo è uno spreco.**
+   Numericamente regge; drammaturgicamente brucia una scena. Da qui la scelta
+   di dare al pezzo forte di quest'ala un **dossier e un ramo politico**, non
+   solo uno statblock.
+3. **Il canone era già apparecchiato.** Gli orchi nella Mano Rossa non vanno
+   giustificati: `campaign/state.md` §2.2 conta **1.800 ausiliari
+   Goblin/Orchi/Worg Riders**, la prima ondata è «450 hobgoblin/orc infantry»
+   (`campaign/lore/campaign-history.md`) e il **Generale Grimjaw è un Orog**.
+   Esiste già una linea di comando orchesca dentro un'orda hobgoblin — e la
+   frattura **Gruumsh / Tiamat** è teologia vera, non un espediente.
+
+### Cosa colma davvero il buco «incantatori»
+
+Il roster orchesco è marziale. L'unico incantatore che porta è il **chierico
+di Gruumsh**, ed è esattamente quello che mancava: un **divino**, i cui
+strumenti migliori (*muro di lame*, *raggio di luce accecante*, *colonna di
+fuoco*) non hanno descrittore mentale e quindi **attraversano il Mind Blank di
+Thorik per costruzione**, non per eccezione. Complementare a Ghaurush
+(arcano) e Zin'thara (illusioni), non sovrapposto.
+
+### Le tre schede
+
+| Scheda | Cosa fa | GS | File |
+|---|---|---|---|
+| **Chierico di Gruumsh** (Orco, Chierico 11) | Incantatore divino d'appoggio. *Muro di lame* per tagliare il campo, *raggio di luce accecante* senza TS, *libertà di movimento* contro la lotta di Tordek. Dominî Guerra + Forza | **11** | `Bestiario/mostri/chierico-gruumsh-cr11.md` |
+| **Bruto Deforme del Sottosuolo** (Gigante di Pietra deforme, Barbaro 2) | L'equivalente SRD del gigante deforme di fonte privata. Enorme, portata 4,5 m, massi a 55 m, **malocchio** non mentale. Unica scheda del piano **in scala col benchmark** | **11** | `Bestiario/mostri/bruto-deforme-sottosuolo-cr11.md` |
+| **Ushgar «Occhio Reso»** (Orco, Barbaro 13) | Mini-boss e **leva politica**. Carica 24 m, tre attacchi da 1d12+14, Combattere alla Cieca. Vuole terra scritta, non bottino — e il solo che possa firmargliela è Thorik, che per farlo paga la penale del §5 | **13** | `Bestiario/villain/Ushgar_Occhio_Reso/` (dossier + statblock) |
+
+### EL calcolati (script `combine_el`, formula DMG 3.5)
+
+| Incontro | EL |
+|---|---|
+| Ushgar + Chierico + Bruto Deforme | **15,0** |
+| Ushgar + Chierico di Gruumsh | **14,2** |
+| Chierico + Bruto Deforme | **13,0** |
+| Ushgar da solo | **13,0** |
+| Ushgar + Ghaurush (chiusura d'ala in una scena) | **16,9** — tetto APL+4 |
+
+### Il ramo politico (la parte che vale più degli statblock)
+
+Ushgar può **togliere gli ausiliari orcheschi dalla prima ondata** a Rethmar.
+Non cambia bandiera: arriva tardi, sbaglia guado, si perde. Il prezzo è un
+atto scritto che assegni terra ai suoi, firmato da un nome che i nani
+riconoscano — cioè **Thorik**, che in `campaign/state.md` §5 ha già una
+promessa aperta con Re Thorek Hammerfist la cui penale è la **perdita dello
+status di Custode Eterno**. Il ramo si incastra su un debito che esisteva già.
+
+Uscita laterale documentata nel dossier: **Hella** che non si oppone
+all'insediamento invece di Thorik che firma — costa meno al nano e apre un
+problema col Cerchio Sacro.
+
+### Vincoli rispettati
+
+- **Zero materiale di fonte privata.** Nessuna citazione, nessuna pagina,
+  nessun nome ripreso. La nota di licenza è nel dossier del bruto: le web
+  enhancement WotC erano PDF **gratuiti**, e gratuito non è libero — restano
+  sotto `AGENTS.md` regola 2 come il modulo base.
+- **Dominî di Gruumsh**: usati solo quelli **presenti nell'SRD** (Guerra,
+  Forza; disponibili anche Caos e Male). **Caverna** e **Orco** sono di fonte
+  privata e sono stati lasciati fuori di proposito.
+- **Una sola capacità non attestata** in tutto il lotto: il **Malocchio** del
+  Bruto Deforme (*infliggere maledizione* 1/giorno), flaggata nello statblock
+  e rimovibile senza toccare il GS.
+- **`Boost log:`** presente su entrambe le schede costruite per derivazione,
+  con benchmark PF T1-1 dichiarato **anche dove sta sotto** (il chierico) e
+  con la mitigazione scritta (comporre l'incontro, non ritoccare i numeri).
+- **Ripetizione sorvegliata**: la RD 10/adamantio del chierico (via *pelle di
+  pietra*) è lo stesso puzzle di Ghaurush. Nota esplicita in scheda: se i due
+  compaiono nello stesso arco, sostituire il dominio Forza con Male.
 
 ---
 
@@ -178,3 +271,6 @@ secoli e un registro contabile: dà alla Mano Rossa una faccia che non urla.
       `validate_bestiario.py` verde
 - [ ] **L6** — *(gated su DM)* approvazione: flag INFERRED → ACCEPTED, righe
       in `state.md` §3/§4, assegnazione token
+- [x] **L7** — Ala orchesca in equivalenti SRD (§6): Chierico di Gruumsh GS 11,
+      Bruto Deforme del Sottosuolo GS 11, Ushgar «Occhio Reso» GS 13
+      (statblock + dossier + ramo politico su `state.md` §5)
