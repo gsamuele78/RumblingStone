@@ -13,7 +13,7 @@ Large giant (ogre magi), LE. **DV 5d8 + 10d4** (Stregone 10). **hp 137** (Cos 23
 **Qualità speciali** Scurovisione 18 m, **RI 19**, **Rigenerazione 5** (fuoco e acido infliggono danni normali), tratti dei giganti.
 **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantesimi in Combattimento, Incantesimo Esteso, Incantesimi Focalizzati (Invocazione), **Incantesimi Focalizzati Superiori (Invocazione)**.
 
-**Capacità magiche (CL 9)**: *a volontà* — **oscurità**, **invisibilità**; *1/giorno* — *charme su persone* (CD 19, **inutile su Thorik**), **cono di freddo** (9d6, **CD 22**), **forma gassosa**, **metamorfosi**, *sonno* (CD 19).
+**Capacità magiche (CL 9)**: *a volontà* — **oscurità**, **invisibilità**; *1/giorno* — *charme su persone* (CD 18, **inutile su Thorik**), **cono di freddo** (9d6, **CD 22**), **forma gassosa**, **metamorfosi**, *sonno* (CD 18).
 
 **Incantesimi da Stregone 10** (CL 10; **CD 17 + livello**, **+2 per le invocazioni**)
 | Liv | Al giorno | Conosciuti (SRD) |

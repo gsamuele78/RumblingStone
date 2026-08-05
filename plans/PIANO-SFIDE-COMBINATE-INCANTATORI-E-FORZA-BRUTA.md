@@ -162,6 +162,17 @@ occupare Thorik mentre gli altri tre lavorano.
 **Set-piece consigliato**: la **Notte dei Drow**, Rethmar Fase 0
 (`campaign/state.md` §2.5).
 
+**Apertura**
+1. Il Bruto Deforme entra dalla parete o dalla porta — è l'unico rumore della
+   scena, ed è voluto: mentre tutti guardano lui, gli altri tre sono già
+   dentro. Aggancia Thorik e lo tiene con portata 4,5 m.
+2. **Zin'thara** apre con le ombre quasi-reali. Passano il *Mind Blank*, quindi
+   il tank scopre in un round che la sua difesa migliore qui non serve.
+3. Il **Trickster** sfila dallo zaino di Tordek quello che gli interessa a 9
+   metri di distanza — **eco E-07b**, se il DM vuole farlo esplodere. Nello
+   stesso round l'**Assassina** ha già cominciato i suoi tre round di studio,
+   e non su un PG.
+
 **Uscita**: nessuno dei drow muore volentieri. Zin'thara ha un ramo giocabile
 e conviene lasciarglielo aperto.
 
@@ -175,6 +186,17 @@ Ghaurush «Cenerevento», **GS 18** — 📗 `ghaurush-cenerevento-secondo-incon
 **muro di forza**. Nessun tiro salvezza, nessuna resistenza agli incantesimi,
 *dissolvi magie* non lo tocca. Al round 1 il campo è tagliato in due e i due
 picchiatori del gruppo sono dalla parte sbagliata.
+
+**Apertura**
+1. **Muro di forza**, piazzato dove il gruppo *non è ancora arrivato*: Thorik e
+   Tordek da una parte, Hella e Artemis dall'altra. Nessun tiro, nessuna
+   difesa, nessun modo di abbatterlo con le armi.
+2. **Assorbimento vitale** su chi è rimasto scoperto — tocco a distanza, 1d4
+   livelli negativi, nessun tiro salvezza.
+3. **Muro di fuoco** dal bastone sul secondo asse, oppure *cono di freddo* se
+   due PG si sono riavvicinati. Se Artemis ha superato il muro volando —
+   e lo farà — **dissolvi magie sull'Anello** prima di ogni altra cosa.
+4. Da qui in poi Ghaurush non fa niente di nuovo: aspetta, e conta.
 
 **Le condizioni d'uso non sono opzionali** (skill di boosting): EL 18 = APL+5,
 quindi la scena va **segnalata nella finzione prima che cominci** e deve avere
@@ -192,6 +214,12 @@ quindi la scena va **segnalata nella finzione prima che cominci** e deve avere
 Scontro di passaggio: si vince, ma costa risorse e c'è il **rischio di fuoco
 amico** dei Micelio (berserk 1/10 round). Serve a consumare la giornata prima
 di A, B o C — non tutte le scene devono minacciare.
+
+**Apertura**: i Frantumapietra caricano e usano **Colpo Tremendo** per spedire
+un PG Medio a 3 metri e a terra. Tordek ha l'**Ancoraggio della Montagna**, ma
+solo **2 volte al giorno** — e questo scontro esiste anche per fargliene
+spendere una. I Micelio arrivano dietro e lottano; se il DM tira **1 su 1d10**
+al decimo round, uno di loro si volta contro il vicino.
 
 ---
 
