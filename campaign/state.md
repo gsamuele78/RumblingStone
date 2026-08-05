@@ -36,6 +36,31 @@ dell'Arco 09 è canone preparato (design), non ancora giocato al tavolo**
 
 ---
 
+## §-1 I due tempi di questo file — leggere prima di tutto
+
+> **Questo file contiene due tempi sovrapposti**, e confonderli è l'unico modo
+> di sbagliare una sessione leggendo la fonte di verità.
+>
+> | Tempo | Cos'è | Dove vale |
+> |---|---|---|
+> | 🎬 **OGGI AL TAVOLO** | ciò che è stato **giocato davvero**, secondo §0 | è l'unica verità per la sessione di stasera |
+> | 📋 **PREPARATO** | design scritto in avanti (Arco 08, Arco 09, esiti del P3B/P5) | diventa vero **solo quando viene giocato** |
+>
+> **Regola**: dove una sezione ha due colonne etichettate (§1, §6), usare sempre
+> la colonna «Today». Dove una sezione ha un **banner dei due tempi** in testa
+> (§2, §4, §5), leggere il banner prima delle righe. Dove una riga porta
+> `[ESITO GIOCATO <data>]` o `[CANONE — DM <data>]`, quella riga è 🎬.
+>
+> **Confine attuale** (2026-08-05): giocati gli Archi 00-06 e l'ARC-07 fino al
+> **Piano della Terra (P4) incluso**. Da giocare: resurrezione di Hella (P3B),
+> viaggio ai 1.000 anni (P5), raccordo D16, **poi** Arco 08 e Arco 09.
+>
+> Uniformato dal lotto **G1** (2026-08-05) sul pattern che il DM aveva già
+> approvato per §6 il 2026-07-04. Vedi
+> [`docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md`](../docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md) §C1.
+
+---
+
 ## §0 Campaign Status At-a-Glance
 
 Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per dettaglio.
@@ -71,12 +96,29 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
 
 ## 1. Party — Current Position & Condition
 
-| PC | Class | Location | HP / status | Open personal threads |
+> **Two-times table (G1, 2026-08-05 — stesso pattern di §6, DM-confermato
+> 2026-07-04).** Le due colonne di stato sono etichettate. **«Today at the
+> table»** = la posizione reale del tavolo per §0 (ARC-07: Piano della Terra
+> chiuso il 2026-07-31, party rientrato nella Sala e riposato lì, orologio
+> Hammerfist a 3g 16h; **la resurrezione di Hella è la prossima scena, non un
+> fatto**). **«Prepared (ARC-09 entry)»** = lo stato scritto in avanti, che
+> diventa vero solo dopo P3B → P5 → D16 → Arco 08. **Per la sessione di stasera
+> usare SEMPRE la colonna "Today".**
+>
+> *Perché questa nota esiste*: fino al 2026-08-05 questa tabella riportava
+> **solo** la colonna di destra senza dirlo — i quattro PG risultavano a
+> Hammerfist Holds, in viaggio verso mete ARC-09, con Hella già risorta e
+> Thorik che aveva già pagato il prezzo. Causa: `state.md` nacque il 2026-05-01
+> dal materiale post-Hammerfist (§8, prima riga), e la REGOLA ZERO del
+> 2026-07-02 riportò al giocato reale l'intestazione e §0 **ma non questa
+> sezione**. Nessun contenuto è stato cancellato: è stato etichettato.
+
+| PC | Class | **Today at the table (ARC-07, post-P4)** | **Prepared (ARC-09 entry)** | Open personal threads |
 |---|---|---|---|---|
-| Thorik | Dwarf Fighter 13 | Hammerfist Holds, war council chamber | Full; -2 perm CON sacrificed for Hella's resurrection (NEVER restored) | Decide whether to lead defense of Rethmar personally vs. delegate |
-| Tordek | Dwarf Fighter 4 / Monk 9 | Hammerfist → traveling to Dauth Tournament | Full; Bracieri Earth phase complete; **−2 DES / +2 COS permanenti** (ha accettato il Peso del Mondo al rito dello Smeraldo, 2026-07-31 — ricalcolare CA senz'armatura, Riflessi, iniziativa) | Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3) |
-| Hella | Dream Dwarf Ranger 1 / Druid 12 | Hammerfist → traveling to Sacred Forest | Full; Treant Hybrid template active post-resurrection | Sacred Forest ritual (pass = druid circle ally at Rethmar) |
-| Artemis | Human Warlock 13 | Hammerfist → traveling to Invisible Tower (Dauth region) | Full; Ring of Chaotic Illumination active | Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake |
+| Thorik | Dwarf Fighter 13 | **Sala della Forgia Eterna**, dopo il riposo. Corona: Topazio + Smeraldo accesi, Rituale Legacy 3 completato (§6). ⚠️ `[INFERRED — needs DM confirmation]` il «−2 COS permanente» della colonna a destra è il prezzo della **resurrezione di Hella**, che non è ancora avvenuta: va confermato se oggi Thorik porti già un −2 COS da un'altra causa (la sua morte e resurrezione all'Arco 00, §4 riga Norro Wiston) o se il malus non esista ancora | Hammerfist Holds, war council chamber; −2 perm CON sacrificed for Hella's resurrection (NEVER restored) | Decide whether to lead defense of Rethmar personally vs. delegate |
+| Tordek | Dwarf Fighter 4 / Monk 9 | **Sala della Forgia Eterna**. **−2 DES / +2 COS permanenti** (ha accettato il Peso del Mondo al rito dello Smeraldo, 2026-07-31 — ricalcolare CA senz'armatura, Riflessi, iniziativa); Bracieri fase Terra completa; **Seme-Mercato di Varis nello zaino, mai toccato** (§7) | Hammerfist → traveling to Dauth Tournament | Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3) |
+| Hella | Dream Dwarf Ranger 1 / Druid 12 | ⚠️ **MORTA.** Corpo nella Sala della Forgia Eterna; il viaggio spirituale nell'Incudine del Mondo con Durik è già avvenuto (P3B-spirito, registrato). **La resurrezione fisica (P3B) è la prossima scena da giocare.** Il template Ibrido Treant **non è attivo** | Hammerfist → traveling to Sacred Forest; Treant Hybrid template active post-resurrection | Sacred Forest ritual (pass = druid circle ally at Rethmar) |
+| Artemis | Human Warlock 13 | **Sala della Forgia Eterna**. Anello Riforgiato attivo (poteri base pieni, §6); ha estratto il cabochon di Varis **senza toccarlo** — nessun Marchio attivo (§7) | Hammerfist → traveling to Invisible Tower (Dauth region) | Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake |
 
 **Active companions:**
 
@@ -106,6 +148,23 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
 > five PG-scenario force-balance table in
 > `09_Continuazione.../Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`.
 > **Update this section at the end of every session.**
+
+> ### 📋 Banner dei due tempi (G1, 2026-08-05)
+>
+> **Questa sezione è scritta quasi interamente nel tempo PREPARATO.** L'orda,
+> i suoi numeri e il March Clock descrivono la campagna **dopo** la Battaglia di
+> Hammerfist, che §0 marca `⬜ NON giocato`. Non è un errore: è materiale di
+> design pronto. Va letto come futuro.
+>
+> ⚠️ `[INFERRED — needs DM confirmation]` **Discrepanza numerica da sciogliere.**
+> §2.1 dichiara *«Current March Day: **19** (Terrelton just fell as Hammerfist
+> ended)»*, ma l'intestazione del file dice che il party ha appena riposato nella
+> Sala della Forgia con l'**orologio Hammerfist a 3g 16h** — cioè la battaglia
+> è ancora **davanti**, e il Giorno di Marcia reale è **~15**, non 19. Anche
+> l'`In-world date` in testa al file (Giorno di Marcia 19) eredita lo stesso
+> anticipo. La correzione **non è stata applicata d'ufficio** perché il Giorno di
+> Marcia alimenta i numeri di §2.4 e la finestra delle quest di Arco 09: spostarlo
+> è una decisione di canone del DM, non una bonifica editoriale.
 
 ### 2.0 Dual-Clock Separation (canon 2026-05-05)
 
@@ -274,6 +333,26 @@ the listed consequence triggers.
 > they have not learned in-fiction.** Add new rows when an NPC learns
 > something; never silently retcon.
 
+> ### 📋 Banner dei due tempi (G1, 2026-08-05)
+>
+> **Tabella mista.** Una riga è 🎬 **OGGI** se ciò che il PNG ha imparato è
+> accaduto negli Archi 00-06 o nell'ARC-07 fino al P4. È 📋 **PREPARATO** se la
+> fonte della conoscenza è la Battaglia di Hammerfist, la Cerimonia delle 100
+> Asce, il Torneo di Dauth, l'arrivo alla Foresta Sacra o un Giorno di Marcia
+> ≥ 20 — tutti eventi **non ancora giocati**.
+>
+> Casi da leggere come futuro, non come presente (elenco non esaustivo):
+> **Re Thorek** («named them Custodi Eterni — *Awarded post-siege*»),
+> **Capitana Lythiel** («riconoscimento durante *Hammerfist Battle Sessione 4*»),
+> **Sorella Maewen** («arriva alla Foresta Sacra *Day 24*»), **Sethrax** e
+> **Zalkatar** (osservazione *ai giorni 1-2 del Torneo*), **Lathander + Mask**
+> (visita onirica *Notte 22-23 post-Hammerfist*), **Brenna Sorvane** («Hammerfist
+> ha sconfitto l'avanguardia»), i **profughi del Guado** a Rethmar (arrivo
+> ~Day 16-18).
+>
+> ⚠️ Conseguenza operativa: **nessuno di questi PNG può ancora riconoscere i PG
+> come Custodi Eterni**, perché il titolo viene conferito nell'Arco 08.
+
 | NPC | Knows that... | Learned how / when |
 |---|---|---|
 | Sonjak (= Matrona Sajak) | The party freed the Cristal Warriors but does NOT know they have all 3 Crown gems | Drow scouts witnessed the mine assault |
@@ -314,6 +393,27 @@ the listed consequence triggers.
 
 > Things the PCs are **on the hook for**. Agents must surface these when
 > relevant; they create R.A. Salvatore-style internal stakes.
+
+> ### 📋 Banner dei due tempi (G1, 2026-08-05)
+>
+> **Tabella mista.** Sono 📋 **PREPARATE** — cioè non ancora contratte al tavolo —
+> tutte le righe il cui debito nasce da un evento non giocato:
+>
+> - **Thorik → Re Thorek** («guidare la difesa di Rethmar o mandare Aegis Fang»):
+>   il patto nasce **dopo** l'Arco 08.
+> - **Thorik → Hella** («ha sacrificato 2 COS permanenti per la sua resurrezione»)
+>   e **Tordek → Hella** («500 PX sacrificati per la resurrezione»): entrambi
+>   pagano un rito **che è la prossima scena da giocare**. Fino ad allora nessuno
+>   dei due debiti esiste, e non vanno usati nei tiri di etica né nel legame
+>   romantico alla Foresta Sacra.
+> - **Tordek → organizzatori del Torneo** (presentarsi a Dauth entro il Giorno 29)
+>   e **Hella → Cerchio dei Druidi** (superare il rito entro 12 giorni): orologi
+>   che partono in Arco 09.
+> - Il **ramo di Ushgar** è marcato *(ramo aperto, non ancora contratto)* già
+>   nella riga: resta 📋 finché non lo si gioca.
+>
+> È 🎬 **OGGI** il debito **Artemis → Varis**, aggiornato con l'esito reale del
+> 2026-07-31 (Seme-Mercato in mano, non toccato, nessun Marchio).
 
 | Owed by | Owed to | What | Consequence if broken |
 |---|---|---|---|
@@ -1535,4 +1635,43 @@ entries — they become campaign history.
             Caos Ultimo solo se Zalkatar cade alla Torre Invisibile.
             Nuove schede in stile di casa: Aegis Fang Stadio 0 e Anello
             Riforgiato (entrambe con blocco DM "cosa arriva e da dove").
+```
+
+```
+2026-08-05  DUE TEMPI — uniformato il pattern di 6 a tutto il file (lotto G1).
+            NESSUN CONTENUTO CANCELLATO: solo etichettato.
+            NUOVA -1 in testa: legenda dei due tempi (OGGI AL TAVOLO /
+            PREPARATO) + confine dichiarato — giocati Archi 00-06 e ARC-07
+            fino al P4 incluso; da giocare P3B, P5, D16, poi Archi 08-09.
+            1 PARTY: passata a DUE COLONNE come la 6. Prima riportava solo
+            lo stato "preparato" senza dirlo: i 4 PG risultavano a Hammerfist
+            Holds in viaggio verso mete ARC-09, con Hella gia' risorta e
+            Thorik che aveva gia' pagato il prezzo. Ora la colonna "Today"
+            dice il vero: tutti e quattro nella Sala della Forgia Eterna,
+            HELLA MORTA, corpo nella Sala, resurrezione = prossima scena.
+            Causa della deriva, per memoria: state.md nacque il 2026-05-01
+            dal materiale post-Hammerfist (prima riga di questo changelog),
+            e la REGOLA ZERO del 2026-07-02 riporto' al giocato reale
+            l'intestazione e la 0, ma non la 1.
+            2, 4, 5: aggiunto un BANNER DEI DUE TEMPI in testa a ciascuna,
+            con l'elenco delle righe da leggere come futuro. Conseguenza
+            operativa messa a verbale in 4: nessun PNG puo' ancora
+            riconoscere i PG come Custodi Eterni, perche' il titolo viene
+            conferito nell'Arco 08.
+            campaign/lore/campaign-history.md: NON e' piu' autoproclamato
+            "single source of truth" (lo erano entrambi: impossibile).
+            Intestazione nuova con il confine giocato/preparato e l'avviso
+            sulla riga di Hella, che dava "Alive, resurrected as Treant
+            Hybrid".
+            DUE DOMANDE APERTE, non risolte d'ufficio perche' sono canone:
+            (1) il -2 COS permanente di Thorik e' il prezzo della
+                resurrezione di Hella (non ancora giocata) o e' residuo
+                della sua morte all'Arco 00? Marcato [INFERRED] in 1.
+            (2) 2.1 dichiara "Current March Day 19 (Terrelton just fell as
+                Hammerfist ended)", ma l'intestazione dice orologio
+                Hammerfist a 3g 16h: la battaglia e' davanti, e il Giorno
+                di Marcia reale sarebbe ~15. Non corretto d'ufficio perche'
+                il Giorno di Marcia alimenta i numeri di 2.4 e la finestra
+                delle quest di Arco 09. Marcato [INFERRED] in 2.
+            Fonte: docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md C1/C2.
 ```

@@ -2,7 +2,32 @@
 
 Last updated: 1372 DR, Flamerule (in-world) / 2026-03-31 (real world)
 
-This file is the **single source of truth** for the RumblingStone campaign narrative.
+> ## ⚠️ Questo file NON è la fonte di verità sullo stato corrente
+>
+> **La fonte di verità è [`campaign/state.md`](../state.md)**, che si aggiorna a
+> fine sessione e che dichiara: *«se questo file è in disaccordo con
+> `campaign-history.md`, questo file vince»*. Fino al 2026-08-05 anche questo
+> documento si autoproclamava «single source of truth»: **due file non possono
+> esserlo entrambi**, e la riga è stata corretta (lotto G1, finding C2 di
+> [`docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md`](../../docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md)).
+>
+> **Cos'è questo file**: la **narrazione continua** della campagna — premessa,
+> arco per arco, PNG, temi, riferimenti incrociati. Serve a capire *la storia*,
+> non a sapere *dove sono i PG stasera*.
+>
+> **Confine giocato/preparato** (2026-08-05): sono stati giocati gli Archi
+> **00-06** e l'**ARC-07 fino al Piano della Terra (P4) incluso**. Tutto ciò che
+> questo file racconta della **resurrezione di Hella (P3B)**, del **viaggio ai
+> 1.000 anni (P5)**, dell'**Arco 08** e dell'**Arco 09** è **design preparato,
+> non ancora accaduto al tavolo** — anche dove è scritto al passato.
+>
+> ⚠️ **Trappola nota**: la tabella del party qui sotto dà Hella *«✅ Alive
+> (resurrected as Treant Hybrid)»* e livello *«13 (post-resurrection)»*.
+> **Al tavolo Hella è morta**: la resurrezione è la prossima scena da giocare
+> (vedi `state.md` §0 e §1, colonna «Today at the table»). Stessa avvertenza per
+> ogni riga che dia per avvenuti la Cerimonia delle 100 Asce, il titolo di
+> Custode Eterno, il Torneo di Dauth o la Battaglia di Hammerfist.
+
 For rules, see `skills/dnd-35-srd/SKILL.md`. For artifacts, see `campaign-artifacts.md`.
 For party composition, see `campaign-party.md`. For locations, see `fr-cannath-vale.md`.
 
@@ -23,7 +48,7 @@ For party composition, see `campaign-party.md`. For locations, see `fr-cannath-v
 |---|---|---|---|---|---|
 | **Thorik** | Shield Dwarf (M) | Fighter 13 | 13 | Aegis Fang (axe), Corona di Adamantio (crown) | ✅ Alive (died once, resurrected) |
 | **Tordek Durinheart** | Shield Dwarf (M) | Fighter 4 / Monk 9 | 13 | Bracieri Gemelli di Moradin (gauntlets) | ✅ Alive |
-| **Hella Oakenshield** | Shield/Gold Dwarf (F) | Ranger 1 / Druid 12 | 13 (post-resurrection) | Collana dei Semi Eterni (necklace) | ✅ Alive (died in arc 06, resurrected as Treant Hybrid) |
+| **Hella Oakenshield** | Shield/Gold Dwarf (F) | Ranger 1 / Druid 12 | 13 (post-resurrection) | Collana dei Semi Eterni (necklace) | 📋 **PREPARATO** — «Alive, resurrected as Treant Hybrid» descrive lo stato **dopo** il rito P3B. **Al tavolo: morta** dall'Arco 06, corpo nella Sala della Forgia Eterna (`state.md` §1) |
 | **Artemis** | Human (M) | Warlock 13 | 13 | Ring of Chaotic Illumination (reforged) | ✅ Alive (survived cerebromorphosis) |
 
 ### No-Rogue Strategy

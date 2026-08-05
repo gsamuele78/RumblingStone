@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🔵 audit eseguito, esecuzione da autorizzare (2026-08-05)
+## Stato: 🟡 in esecuzione — G0 e G1 chiusi (2026-08-05)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -37,15 +37,29 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
 
 ### Onda 1 — riduce errori al tavolo, nessuna decisione richiesta
 
-- [ ] **G1 — Due tempi uniformi in `state.md` + declassamento di `campaign-history.md`** *(finding C1, C2 — 🔴)*
-      Estendere il pattern **già approvato dal DM** in §6 («Today at the table» /
-      «Prepared») a §1 Party; verificare §2, §4, §5, §7 e marcare ciò che è
-      scritto in avanti. Intestazione esplicita su `campaign-history.md` («storia
-      giocata fino a X»), rinuncia all'autoproclamazione di sorgente unica,
-      puntatore a `state.md`. **Nessun contenuto cancellato**: il materiale
-      preparato è lavoro buono, va etichettato come futuro.
-      *Verifica*: nessuna riga di `state.md` afferma come presente un evento che
-      §0 marca `⬜`.
+- [x] **G1 — Due tempi uniformi in `state.md` + declassamento di `campaign-history.md`** *(finding C1, C2 — 🔴)* — ✅ **eseguito 2026-08-05**
+      Nuova **§-1** in testa a `state.md`: legenda dei due tempi (🎬 OGGI AL
+      TAVOLO / 📋 PREPARATO) e **confine dichiarato** (giocati Archi 00-06 e
+      ARC-07 fino al P4 incluso; da giocare P3B, P5, D16, poi 08-09).
+      **§1 Party** portata a due colonne come §6: la colonna «Today» dice che i
+      quattro sono nella **Sala della Forgia Eterna** e che **Hella è morta**,
+      col template Ibrido Treant **non** attivo. **Banner dei due tempi** in testa
+      a **§2, §4, §5**, con l'elenco delle righe da leggere come futuro e la
+      conseguenza operativa a verbale: *nessun PNG può ancora riconoscere i PG
+      come Custodi Eterni, perché il titolo si conferisce nell'Arco 08*.
+      `campaign-history.md` non è più autoproclamato sorgente unica; intestazione
+      nuova col confine giocato/preparato e avviso sulla riga di Hella («✅ Alive,
+      resurrected as Treant Hybrid»), marcata 📋 in tabella.
+      **Nessun contenuto cancellato: solo etichettato.**
+      **Due domande lasciate aperte al DM** invece di risolverle d'ufficio, perché
+      sono canone e non bonifica editoriale — entrambe marcate `[INFERRED]` nel
+      punto in cui vivono e registrate in `state.md` §8:
+      1. il **−2 COS permanente di Thorik** è il prezzo della resurrezione di
+         Hella (non ancora giocata) o è residuo della sua morte all'Arco 00?
+      2. il **Giorno di Marcia**: §2.1 dichiara 19 «Terrelton just fell as
+         Hammerfist ended», ma l'orologio Hammerfist in testa al file è a
+         **3g 16h** → il giorno reale sarebbe **~15**. Non corretto d'ufficio
+         perché alimenta i numeri di §2.4 e la finestra quest di Arco 09.
 - [ ] **G2 — Bonifica deriva doc↔realtà + `validate_docs.py`** *(T4 — 🔴)*
       Allineare `AGENTS.md` alla struttura reale (le tre cartelle inesistenti, i
       tre formati morti, la riga DO/DON'T che manda a `campaign/npcs/`);
