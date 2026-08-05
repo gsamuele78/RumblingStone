@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0 e G1 chiusi (2026-08-05)
+## Stato: 🟡 in esecuzione — G0, G1, G2 chiusi (2026-08-05)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -60,12 +60,29 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
          Hammerfist ended», ma l'orologio Hammerfist in testa al file è a
          **3g 16h** → il giorno reale sarebbe **~15**. Non corretto d'ufficio
          perché alimenta i numeri di §2.4 e la finestra quest di Arco 09.
-- [ ] **G2 — Bonifica deriva doc↔realtà + `validate_docs.py`** *(T4 — 🔴)*
-      Allineare `AGENTS.md` alla struttura reale (le tre cartelle inesistenti, i
-      tre formati morti, la riga DO/DON'T che manda a `campaign/npcs/`);
-      aggiornare i path `PNG/…` → `Bestiario/png/…` nei riferimenti superstiti.
-      Nuovo validatore: ogni percorso citato nei blocchi-struttura di
-      `AGENTS.md`/`README.md`/`docs/INDEX.md` deve esistere. Gate CI.
+- [x] **G2 — Bonifica deriva doc↔realtà + `validate_docs.py`** *(T4 — 🔴)* — ✅ **eseguito 2026-08-05**
+      `AGENTS.md` allineato al filesystem reale: il blocco-struttura di
+      `campaign/` non elenca più `npcs/`, `locations/`, `encounters/` (mai
+      esistite) ma le cartelle vere (`recaps/`, `templates/`, `ai-media-prompts/`,
+      `GLOSSARIO`); il **formato-scheda PNG morto** è sostituito da un puntatore
+      alle fonti vive (`campaign/templates/png-dossier-template.md` +
+      `GUIDA-BESTIARIO.md`, già applicate in CI da `validate_bestiario.py`); il
+      **formato encounter** rimanda a `rumblingstone-module-standard` +
+      `validate_modules.py`; la riga DO/DON'T ora manda a `Bestiario/png/` e
+      `Bestiario/villain/`; la regola 5 non punta più a
+      `campaign/lore/rhod-adaptations.md`, **che non è mai esistito**. `README.md`
+      corretto negli stessi due punti.
+      **Nuovo gate `scripts/validate_docs.py`** (stdlib-only, deterministico,
+      exit 0/1/2, `--json` opt-in): verifica i percorsi citati in blocchi-albero,
+      link relativi e path inline di `AGENTS.md`/`README.md`/`docs/INDEX.md`.
+      Progettato per **non dare falsi positivi** — accetta l'abbreviazione ADR
+      (`plans/adr/ADR-0003` → un solo file; se il prefisso è ambiguo, errore),
+      scarta i modelli di nome (`YYYY-MM-DD_session-N.md`) e i mirror generati, e
+      offre le direttive `<!-- validate-docs: ignore -->` / `ignore-begin/end`
+      per i passaggi che **citano un percorso proprio per dire che non esiste**
+      (senza quella via d'uscita il gate impedirebbe di documentare i propri
+      errori). Manifest + registry rigenerati (41 tool), **10 test nuovi**
+      (80 totali), step **bloccante** in CI + smoke `--help`.
 - [ ] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)*
       Validatore link relativi + path assoluti, con allowlist per gli
       host-relative Homebrewery (`/assets/…`) e i placeholder didattici.

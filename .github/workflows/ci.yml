@@ -38,6 +38,9 @@ jobs:
       - name: Validate skill trees (frontmatter, links, data YAML)
         run: python scripts/validate_skills.py
 
+      - name: Docs↔filesystem drift gate (percorsi citati che non esistono — finding T4)
+        run: python scripts/validate_docs.py
+
       - name: Plans discipline gate — CHANGELOG obbligatorio + promemoria ADR (ADR-0009)
         if: github.event_name == 'pull_request'
         run: python scripts/check_plans_discipline.py --base "origin/${{ github.base_ref }}"
@@ -72,6 +75,7 @@ jobs:
           python scripts/hype_homebrew.py --help > /dev/null
           python scripts/dm_dossier.py --help > /dev/null
           python scripts/validate_modules.py --help > /dev/null
+          python scripts/validate_docs.py --help > /dev/null
           python scripts/tools_manifest.py --help > /dev/null
 
       - name: Map JSON contract + UVTT export round-trip (M1/M2)

@@ -19,13 +19,13 @@ Bestiario/                   # STANDARD library of monsters, villains & NPCs (T-
 
 campaign/
 ├── DM-CAMPAIGN-PLAYBOOK.md  # DM operational guide (workflow + examples + reset)
-├── state.md                 # Living world state (§0 dashboard first)
+├── state.md                 # Living world state (§-1 two-times legend, then §0 dashboard)
+├── GLOSSARIO-E-LOCALIZZAZIONE.md  # locked glossary / loc kit (ADR-0016)
 ├── sessions/                # Session logs (YYYY-MM-DD_session-N.md)
-├── npcs/                    # NPC cards (name, stat block, motivation, status)
-├── locations/               # Location descriptions and maps metadata
-├── encounters/              # Custom encounter files (CR, monsters, tactics)
-├── templates/               # Blank state + session templates for new groups
-└── lore/                    # House rules, world adaptations, timeline
+├── recaps/                  # Player-facing recaps (+ homebrew/ layouts)
+├── templates/               # Blank state + session + PNG-dossier templates
+├── ai-media-prompts/        # Image-prompt sets per arc (ADR-0015)
+└── lore/                    # House rules, campaign history, DM strategy pointer
 
 skills/
 ├── dnd-35-srd/             # D&D 3.5 SRD mechanics (no setting bias)
@@ -92,21 +92,30 @@ When any agent answers a question:
 ### File naming
 
 - Sessions: `campaign/sessions/YYYY-MM-DD_session-N.md`
-- NPCs: `campaign/npcs/[name-kebab-case].md`
-- Encounters: `campaign/encounters/[location-name]_encounter.md`
+- **NPCs / villains / monsters**: **NOT** under `campaign/` — they live in the
+  Bestiario library: `Bestiario/png/<Nome>/` (allies/neutrals),
+  `Bestiario/villain/<Nome>/` (unique antagonists), `Bestiario/mostri/`
+  (generic units, one statblock per file, `-crN.md`).
+- Encounters: **not** a separate folder — they live inside the arc masters
+  (`ARC*-DEF-*.md`), whose required structure is enforced by
+  `scripts/validate_modules.py`.
 
-### NPC file format
+### NPC / villain file format
 
-```markdown
-# [NPC Name]
-**Role**: [villain / ally / neutral]
-**Status**: [alive / dead / unknown]
-**Location**: [current known location]
-**Motivation**: [one sentence]
-**CR**: [N] | **Race/Class**: [race, class N]
-**Key stats**: HP X, AC Y, Attack +Z
-**Notes**: [adaptation from RHoD original]
-```
+The authoritative format is **not** in this file: it is
+`campaign/templates/png-dossier-template.md` (dossier) plus the statblock rules
+in `docs/guides/GUIDA-BESTIARIO.md`, both **enforced in CI** by
+`scripts/validate_bestiario.py` (naming, headers, CR, catalog sync, canon
+flags). Follow those; do not invent a shape here.
+
+<!-- validate-docs: ignore-begin -->
+> **Corretto il 2026-08-05 (lotto G2, finding T4).** Fino a quella data questa
+> sezione documentava `campaign/npcs/`, `campaign/locations/` e
+> `campaign/encounters/` — **nessuna delle tre è mai esistita** — insieme a un
+> formato-scheda PNG che nessun file usava. Ora la deriva è impedita da
+> `scripts/validate_docs.py`, che in CI verifica che ogni percorso citato qui,
+> in `README.md` e in `docs/INDEX.md` esista davvero.
+<!-- validate-docs: ignore-end -->
 
 ### Session log format
 
@@ -121,17 +130,13 @@ When any agent answers a question:
 ## Next session hooks
 ```
 
-### Encounter file format
+### Encounter format
 
-```markdown
-# Encounter: [Name]
-**Location**: [room/area]
-**EL**: [N] | **CR breakdown**: [list monsters + CR]
-**Terrain**: [description]
-## Tactics
-## Adaptations from RHoD original
-## Read-aloud text (custom)
-```
+Encounters are **sections of an arc master**, not standalone files. The required
+shape (tattiche round-per-round, sidebar «Scalare lo scontro», Contingenze, ramo
+sconfitta, riga Sviluppi, budget PX, tesoro pregenerato, mappa in scala 1,5 m…)
+is defined by `skills/rumblingstone-module-standard/SKILL.md` and **verified in
+CI** by `scripts/validate_modules.py` — 16 requisiti, exit 1 se ne manca uno.
 
 ---
 
@@ -141,7 +146,12 @@ When any agent answers a question:
 2. **Non-SRD**: flag as `[Private source]`; do not reproduce copyrighted text verbatim
 3. **House rules** live in `campaign/lore/house-rules.md` — always check before ruling
 4. **RAW vs RAI**: state which you're providing; give both if ambiguous
-5. **Red Hand of Doom adaptations**: documented in `campaign/lore/rhod-adaptations.md`
+5. **Red Hand of Doom adaptations**: documented in `campaign/DM-CAMPAIGN-PLAYBOOK.md`
+   and `campaign/lore/campaign-history.md` (PART 2, arco per arco).
+<!-- validate-docs: ignore-begin -->
+   *(Fino al 2026-08-05 questa riga puntava a `campaign/lore/rhod-adaptations.md`,
+   che non è mai esistito — lotto G2.)*
+<!-- validate-docs: ignore-end -->
 6. **DM Strategy & Player Profiles**: For adult-oriented, non-linear sessions (Shine Time, State Machine design), consult `skills/rumblingstone-campaign/references/campaign-dm-strategy.md` (canonical). The lore folder file `campaign/lore/dm-player-strategy.md` is now a pointer to that canonical source.
 7. **Living world state**: Before describing what NPCs know, where parties/villains currently are, or what threads are open, load `campaign/state.md`. It is the single source of truth for *current* world state (changes per session).
 8. **Coherence**: Before introducing artifact powers, NPC knowledge, or callbacks to past PG actions, consult `skills/rumblingstone-campaign/references/campaign-coherence.md`.
@@ -156,7 +166,7 @@ When any agent answers a question:
 | DO | DON'T |
 |---|---|
 | Read session logs before generating continuations | Invent events that contradict session logs |
-| Check `campaign/npcs/` before describing NPCs | Invent NPC stats not in files |
+| Check `Bestiario/png/` e `Bestiario/villain/` before describing NPCs | Invent NPC stats not in files |
 | Use 3.5 SRD for all mechanics | Use 5e rules (different system) |
 | Load the focused skill for the question (`dnd-35-srd`, `forgotten-realms-lore`, …) | Quote non-SRD books verbatim |
 | Close/prep sessions via `dm.py session` (ADR-0007) | Hand-edit `state.md` `auto:` regions or write canon on `main` |
