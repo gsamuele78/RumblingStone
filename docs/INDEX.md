@@ -44,7 +44,10 @@ Contratto macchina e vista umana — **generati** dal manifest, sempre allineati
 | [`docs/guides/GUIDA-MAPPE.md`](guides/GUIDA-MAPPE.md) | **Guida completa mappe**: le 3 modalità, griglia emoji e legenda universale, contratto JSON per eserciti/strutture, import Watabou e ultra-clear, render SVG, export **PNG e UVTT (Foundry/Roll20 con muri e luci)**, troubleshooting della CI |
 | [`docs/guides/GUIDA-BESTIARIO.md`](guides/GUIDA-BESTIARIO.md) | **Guida completa bestiario**: dove va un mostro/PNG/villain, naming e CR, formato statblock obbligatorio, dossier, flag di canone, rigenerazione del catalogo, gate CI, **quando potenziare invece di creare** |
 | [`docs/guides/TOOL-AUTHORING-STANDARD.md`](guides/TOOL-AUTHORING-STANDARD.md) | **Standard obbligatorio** per ogni nuovo tool (checklist + verifica CI) |
-| [`docs/audit/AUDIT-REPORT.md`](audit/AUDIT-REPORT.md) | Report d'audit degli script (findings azionabili) |
+| [`docs/audit/AUDIT-2026-08-SINTESI.md`](audit/AUDIT-2026-08-SINTESI.md) | **Audit globale 2026-08-05** — verdetto, 9 misure riproducibili, 17 finding su tre assi (editoriale/PRD · coerenza narrativa · ingegneria/CI-CD), roadmap in 11 lotti |
+| [`docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md`](audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md) | Dettaglio con le prove: PRD assente, standard editoriale senza gate, `state.md` a due tempi, storia giocata non scritta, `[INFERRED]` senza freno, contratto di tavolo mancante |
+| [`docs/audit/AUDIT-2026-08-INGEGNERIA-ADR-CI-CD.md`](audit/AUDIT-2026-08-INGEGNERIA-ADR-CI-CD.md) | Dettaglio asse tecnico: CD assente, build non riproducibile, gate non bloccanti, deriva doc↔realtà, validatori non testati |
+| [`docs/audit/AUDIT-REPORT.md`](audit/AUDIT-REPORT.md) | Report d'audit degli script (findings azionabili) — 2026-07-24, F1-F9 chiuse |
 | [`docs/audit/SCORECARD.md`](audit/SCORECARD.md) | Scorecard 12-assi per script |
 
 ## 4. Governance & decisioni (ADR)
