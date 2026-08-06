@@ -223,6 +223,36 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       Effetto collaterale utile: costruire i booklet in CI avrebbe intercettato
       E3 il giorno stesso.
 
+### Onda 5 — multi-gruppo (PR dedicata)
+
+- [ ] **G12 — `groups/<slug>/`: il multi-gruppo diventa una directory** *([ADR-0018](adr/ADR-0018-directory-per-gruppo.md))*
+      **Decisione presa il 2026-08-05**, esecuzione in una **PR dedicata** dopo
+      G3/G4 — è un diff enorme su file di canone e va rivisto da solo.
+      Il gruppo esistente diventa **`groups/rumblingstone/`**; `campaign/` resta
+      **solo prodotto**.
+      **Risoluzione del gruppo**: `--group` > `RUMBLINGSTONE_GROUP` >
+      `.rumblingstone-group` (gitignored, da `.example`) > gruppo unico nel
+      registro > errore. `groups/registry.yaml` è **committato**, perché gli
+      agenti AI non eseguono il resolver e su un clone fresco il puntatore
+      locale non esiste: col registro, «un solo gruppo → usalo» diventa il
+      meccanismo che li fa orientare da soli.
+      **Slug** `^[a-z0-9][a-z0-9-]{1,30}$`: elimina la classe di problemi che le
+      virgolette curerebbero solo come sintomo.
+      **Un solo resolver** `dmcore/groups.py`: nessuno script conosce più un
+      percorso di stato — oggi `campaign/state.yaml` è cablato in sei punti.
+      **Guardia** portata dal branch alla directory: blocca le **scritture di
+      canone** con gruppo non risolto o verso un gruppo diverso da quello
+      attivo; **non** blocca i commit al prodotto.
+      *Gate*: dopo G3/G4.
+- [ ] **G13 — `dm.py brief --for-agent`: il context pack** *([ADR-0018](adr/ADR-0018-directory-per-gruppo.md) §6)*
+      Pacchetto **generato** dai dati (~200 righe): confine giocato/preparato,
+      party di oggi, clock attivi, fili aperti, `[INFERRED]` pendenti, ultime
+      sessioni. **Nessun memory store esterno** — sarebbe non versionato, non
+      revisionabile e divergente dal repo, cioè il finding C2 in forma invisibile.
+      **Vincolo**: è un **indice, non un riassunto** — ogni riga porta il
+      puntatore al dato pieno, altrimenti l'agente che deve approfondire finisce
+      in un vicolo cieco.
+
 ### Onda 4 — gated sul tavolo e sull'intervista al DM
 
 - [ ] **G10 — Attivazione della pipeline ADR-0007** *(C5 — 🟠)*
