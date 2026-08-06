@@ -46,6 +46,34 @@ STATE_REL = Path("campaign") / "state.md"
 # Lo storico è uscito da state.md §8 il 2026-08-05 (ADR-0017): la regione
 # `changelog` vive ora nel proprio file, e `state_apply` la segue lì.
 CHANGELOG_REL = Path("campaign") / "state-changelog.md"
+STATE_YAML_REL = Path("campaign") / "state.yaml"
+
+# Un `clock:` dentro una voce di `villain:` in state.yaml.
+_VILLAIN_ENTRY_RE = re.compile(r"^- villain: (.+)$", re.M)
+
+
+def set_villain_clock(text: str, villain: str, new_clock: str) -> "str | None":
+    """Aggiorna `clock:` della voce villain indicata. None se non la trova.
+
+    Modifica **testuale e mirata**, non un round-trip YAML: `yaml.dump`
+    riscriverebbe il file perdendo l'intestazione commentata, che in
+    `state.yaml` spiega il contratto a chi lo apre. Qui cambia una riga e il
+    resto resta byte-identico — stessa filosofia delle regioni marcate.
+    """
+    entries = list(_VILLAIN_ENTRY_RE.finditer(text))
+    for i, m in enumerate(entries):
+        nome = m.group(1).strip().strip("'\"")
+        if villain.lower() not in nome.lower():
+            continue
+        end = entries[i + 1].start() if i + 1 < len(entries) else len(text)
+        blocco = text[m.start():end]
+        nuovo, n = re.subn(r"^(\s*clock:\s*).*$",
+                           lambda mm: mm.group(1) + new_clock,
+                           blocco, count=1, flags=re.M)
+        if n == 0:
+            return None
+        return text[:m.start()] + nuovo + text[end:]
+    return None
 SESSIONS_REL = Path("campaign") / "sessions"
 
 #: Day di arrivo dell'orda a Rethmar (waypoint finale §2.1 — canone RHoD adattato).
@@ -190,6 +218,9 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
     clog_path = repo / CHANGELOG_REL
     clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
     clog_original = clog
+    syaml_path = repo / STATE_YAML_REL
+    syaml = syaml_path.read_text(encoding="utf-8") if syaml_path.exists() else None
+    syaml_original = syaml
     applied: list[str] = []
     manual: list[str] = []
     session_label = f"sessione {ev['date']} ({ev['file']})"
@@ -213,6 +244,25 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
             if _confirm("[apply] applico questo blocco?", assume_yes):
                 text = candidate
                 applied.append(f"March Clock Day {a} → Day {b}")
+            else:
+                manual.append(_suggest(name, groups))
+        elif name == "villain_clock" and len(groups) == 3 and syaml is not None:
+            villain, da, a = groups
+            if not a or da == a:
+                continue
+            candidate = set_villain_clock(syaml, villain, a)
+            if candidate is None:
+                print(f"[apply] ⚠ villain «{villain}» non trovato in {STATE_YAML_REL} — resta manuale")
+                manual.append(_suggest(name, groups))
+                continue
+            if candidate == syaml:
+                print(f"[apply] clock di {villain} già a {a} — niente da fare (idempotente)")
+                continue
+            print(f"\n[apply] proposta clock villain: {villain} {da} → {a}")
+            print(_diff(syaml, candidate, str(STATE_YAML_REL)))
+            if _confirm("[apply] applico questo blocco?", assume_yes):
+                syaml = candidate
+                applied.append(f"clock {villain} {da} → {a}")
             else:
                 manual.append(_suggest(name, groups))
         elif name == "ritual_clock" and groups[0] == groups[1]:
@@ -241,7 +291,7 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
         for line in manual:
             print(line)
 
-    if text == original and clog == clog_original:
+    if text == original and clog == clog_original and syaml == syaml_original:
         print("\n[apply] ✓ niente da scrivere (già allineato o tutto rifiutato)")
         return 0
     if check:
@@ -254,6 +304,17 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
     if clog is not None and clog != clog_original:
         clog_path.write_text(clog, encoding="utf-8")
         print(f"[apply] ✓ scritto {clog_path}")
+    if syaml is not None and syaml != syaml_original:
+        syaml_path.write_text(syaml, encoding="utf-8")
+        print(f"[apply] ✓ scritto {syaml_path}")
+        # la vista markdown va rigenerata, altrimenti state.md resta indietro
+        # e il gate render_state --check diventa rosso (ADR-0017).
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import render_state
+            render_state.main([])
+        except Exception as exc:  # pragma: no cover
+            print(f"[apply] ⚠ rigenera a mano la vista: python3 scripts/render_state.py ({exc})")
     if do_commit:
         sha = gitio.commit_paths(
             repo, [str(STATE_REL)],

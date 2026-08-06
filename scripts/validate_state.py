@@ -47,7 +47,15 @@ except ImportError:  # pragma: no cover
     print("✗ validate_state: serve pyyaml (pip install pyyaml)", file=sys.stderr)
     sys.exit(2)
 
-SEZIONI_NOTE = ("confine", "archi", "party", "artefatti")
+def sezioni_note(schema: dict) -> tuple[str, ...]:
+    """Le sezioni valide per il campo `dove` di un [INFERRED].
+
+    Derivate DALLO SCHEMA, non cablate: la prima versione le elencava a mano e
+    si è disallineata al primo lotto che ha aggiunto sezioni (G2-ter). Una
+    lista scritta due volte è una lista che diverge.
+    """
+    return tuple(k for k in schema.get("properties", {})
+                 if k not in ("schema_version", "inferred"))
 
 
 # --- validazione schema minimale (stdlib) ------------------------------------
@@ -115,8 +123,10 @@ def validate_schema(data, schema, path="") -> list[str]:
 
 # --- regole di coerenza -------------------------------------------------------
 
-def coherence_rules(d: dict) -> list[str]:
+def coherence_rules(d: dict, schema: "dict | None" = None) -> list[str]:
     errs: list[str] = []
+    note = sezioni_note(schema) if schema else tuple(
+        k for k in d if k not in ("schema_version", "inferred"))
 
     ids = [i["id"] for i in d.get("inferred", [])]
     dup = {x for x in ids if ids.count(x) > 1}
@@ -125,9 +135,9 @@ def coherence_rules(d: dict) -> list[str]:
 
     for i in d.get("inferred", []):
         head = i.get("dove", "").split("[")[0].split(".")[0]
-        if head not in SEZIONI_NOTE:
+        if head not in note:
             errs.append(f"R2 · {i.get('id')}: «dove» punta a «{head}», che non è una sezione nota "
-                        f"({', '.join(SEZIONI_NOTE)})")
+                        f"({', '.join(note)})")
 
     archi = d.get("archi", [])
     if not any(a["tempo"] == "in_corso" for a in archi):
@@ -172,7 +182,7 @@ def main(argv=None) -> int:
         return 1
 
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
-    errors = validate_schema(data, schema) + coherence_rules(data)
+    errors = validate_schema(data, schema) + coherence_rules(data, schema)
 
     if args.json:
         print(json.dumps({"report_version": 1, "file": str(args.file.relative_to(ROOT)),

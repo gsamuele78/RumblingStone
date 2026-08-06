@@ -2,7 +2,8 @@
 """render_state.py — genera le tabelle di canone di state.md da state.yaml (ADR-0017).
 
 Scopo
-  `campaign/state.yaml` è il master dei fatti di §0 (cruscotto archi), §1 (party)
+  `campaign/state.yaml` è il master dei fatti di §0 (archi), §1 (party),
+  §2.4 (difensori e scenari di Rethmar), §3 (clock dei villain), §4 (chi sa cosa)
   e §6 (artefatti). Questo tool ne genera la **vista markdown** dentro le regioni
   marcate di `campaign/state.md`, così che il DM continui a leggere un documento
   e non uno YAML.
@@ -16,9 +17,8 @@ Scopo
   NON sono toccate: restano scritte a mano, perché sono narrazione e non dati.
 
 Regioni gestite
-  <!-- gen:state:archi -->      … <!-- /gen:state:archi -->
-  <!-- gen:state:party -->      … <!-- /gen:state:party -->
-  <!-- gen:state:artefatti -->  … <!-- /gen:state:artefatti -->
+  archi · party · artefatti · villain · conoscenze · difensori · scenari
+  <!-- gen:state:NOME --> … <!-- /gen:state:NOME -->
 
   Tutto ciò che sta fra i marcatori è **rigenerato**: non modificarlo a mano,
   la modifica va fatta in `state.yaml`.
@@ -97,7 +97,56 @@ def render_artefatti(d: dict) -> str:
     return "\n".join(out)
 
 
-RENDERERS = {"archi": render_archi, "party": render_party, "artefatti": render_artefatti}
+def render_villain(d: dict) -> str:
+    out = [BANNER, "",
+           "| Villain | Tempo | Where | Agenda | Clock | Trigger if filled |",
+           "|---|---|---|---|---|---|"]
+    for v in d["villain"]:
+        out.append("| {} | {} | {} | {} | {} | {} |".format(
+            _cell(v["villain"]), FASE[v["tempo"]], _cell(v.get("dove")),
+            _cell(v["agenda"]), _cell(v["clock"]), _cell(v.get("trigger"))))
+    out += ["", "**Tempo**: ✅ clock già in moto al tavolo · ⬜ parte in un arco non giocato"]
+    return "\n".join(out)
+
+
+def render_conoscenze(d: dict) -> str:
+    out = [BANNER, "",
+           "| NPC | Tempo | Knows that… | Learned how / when |",
+           "|---|---|---|---|"]
+    for c in d["conoscenze"]:
+        out.append("| {} | {} | {} | {} |".format(
+            _cell(c["png"]), FASE[c["tempo"]], _cell(c["sa_che"]), _cell(c.get("come"))))
+    out += ["", "**Tempo**: ✅ conoscenza acquisita in una scena giocata · "
+                "⬜ la fonte è un evento **non ancora avvenuto** — il PNG non può ancora saperlo"]
+    return "\n".join(out)
+
+
+def render_difensori(d: dict) -> str:
+    out = [BANNER, "", "| Contingent | Count | Condition |", "|---|---|---|"]
+    for r in d["difensori_rethmar"]:
+        out.append("| {} | {} | {} |".format(
+            _cell(r["contingente"]), _cell(r["conteggio"]), _cell(r.get("condizione"))))
+    out += ["", "> Tutte le righe sono 📋 **preparate**: la Battaglia di Rethmar non è giocata."]
+    return "\n".join(out)
+
+
+def render_scenari(d: dict) -> str:
+    out = [BANNER, "", "| Scenario PG | Horde | Difensori | Rapporto |", "|---|---|---|---|"]
+    for r in d["scenari_rethmar"]:
+        out.append("| {} | {} | {} | {} |".format(
+            _cell(r["scenario"]), _cell(r["orda"]), _cell(r["difensori"]), _cell(r["rapporto"])))
+    return "\n".join(out)
+
+
+RENDERERS = {
+    "archi": render_archi,
+    "party": render_party,
+    "artefatti": render_artefatti,
+    "villain": render_villain,
+    "conoscenze": render_conoscenze,
+    "difensori": render_difensori,
+    "scenari": render_scenari,
+}
 
 
 def region_re(name: str) -> re.Pattern:

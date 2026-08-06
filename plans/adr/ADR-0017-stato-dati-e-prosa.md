@@ -86,11 +86,39 @@ seconda fonte di verità, cioè esattamente il finding **C2** appena chiuso
 
 ### 4. Cosa NON diventa dati
 
-§5 (promesse e debiti), §7 (fili narrativi ed Echo Ledger), §2 (orda e orologi,
-per ora), §3 (clock dei villain, per ora) e tutti i banner restano markdown a
-mano. La migrazione è **incrementale**: §3 è il candidato successivo perché è
-tabellare e porta clock numerici; §2 e §4 seguono solo se il beneficio supera il
-costo di renderizzarne la prosa.
+**Estensione del 2026-08-05 (lotto G2-ter, decisione DM)**: la migrazione è
+arrivata anche a **§3** (clock dei villain), **§4** (chi sa cosa) e ai **numeri
+di §2.4** (contingenti e scenari di Rethmar). Sono dati per la stessa ragione
+degli altri: portano numeri e stato, e un errore lì cambia una sessione.
+
+Restano markdown a mano, e **ci si ferma qui**: §5 (promesse e debiti), §7 (fili
+narrativi ed Echo Ledger), la prosa di §2 e tutti i banner. Il criterio non è
+«quanto manca da convertire» ma il rendimento: dove il contenuto è giudizio — il
+dilemma di Hella sul Ghostlord — uno schema non lo migliora, lo irrigidisce. Per
+un progetto editoriale con un DM solo, ogni sezione strutturata è uno schema più
+un renderer più dei test da mantenere per sempre: se aggiungere una riga a §7
+costasse un giro di YAML, si smetterebbe di scrivere, e il valore di questo repo
+è il materiale, non l'infrastruttura.
+
+### 4-bis. Una sola via di scrittura (G2-ter)
+
+Il log di sessione **resta markdown** — è un documento, si legge, alimenta recap
+e booklet — ma porta in testa un **front-matter** con i delta:
+
+```
+session log (markdown + front-matter dei delta)
+        └─ state_apply
+             ├─ clock villain → state.yaml → render_state → state.md
+             ├─ March Clock    → state.md          (regione auto:)
+             └─ riga storico   → state-changelog.md (regione auto:)
+```
+
+Il DM non scrive il front-matter: lo emette `session_wizard`, che quelle risposte
+le raccoglieva già in forma strutturata. Il guadagno non è estetico — prima i
+delta si estraevano con **regex sulla prosa**, e i clock dei villain con una
+**lista di nomi cablata nel sorgente**: Ghaurush, canonizzato il 2026-08-05, non
+sarebbe stato visto. Un log **senza** front-matter continua a funzionare via
+regex: nessuna sessione già scritta va riscritta.
 
 ### 5. `[INFERRED]` come record
 

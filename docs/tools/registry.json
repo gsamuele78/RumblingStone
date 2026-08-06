@@ -1163,7 +1163,7 @@
       "category": "C-post-session-canon",
       "language": "python",
       "invocation": "python3 scripts/session_wizard.py",
-      "summary": "Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "summary": "Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
@@ -1255,7 +1255,7 @@
       "category": "C-post-session-canon",
       "language": "python",
       "invocation": "python3 scripts/state_apply.py",
-      "summary": "Applica alle regioni marcate auto: le proposte meccaniche estratte dal log di sessione: March Clock in campaign/state.md, riga di storico in campaign/state-changelog.md (ADR-0007 + ADR-0017).",
+      "summary": "Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
@@ -1343,6 +1343,13 @@
           "overwrites": true,
           "generated_header": false,
           "schema": null
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
         }
       ],
       "exit_codes": {

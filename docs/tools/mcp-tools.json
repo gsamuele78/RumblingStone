@@ -474,7 +474,7 @@
     },
     {
       "name": "session_wizard",
-      "description": "Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "description": "Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano.",
       "invocation": "python3 scripts/session_wizard.py",
       "inputSchema": {
         "type": "object",
@@ -508,7 +508,7 @@
     },
     {
       "name": "state_apply",
-      "description": "Applica alle regioni marcate auto: le proposte meccaniche estratte dal log di sessione: March Clock in campaign/state.md, riga di storico in campaign/state-changelog.md (ADR-0007 + ADR-0017).",
+      "description": "Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017).",
       "invocation": "python3 scripts/state_apply.py",
       "inputSchema": {
         "type": "object",
@@ -540,7 +540,8 @@
       "outputs": [
         "campaign/state.md",
         "git-commit",
-        "campaign/state-changelog.md"
+        "campaign/state-changelog.md",
+        "campaign/state.yaml"
       ],
       "exit_codes": {
         "0": "ok / nessuna modifica",

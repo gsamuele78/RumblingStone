@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis chiusi (2026-08-05)
+## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis, G2-ter chiusi (2026-08-05)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -109,6 +109,35 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       l'inventario si legge dai dati invece di estrarlo dal markdown.
       Migrazione **incrementale**: §3 è il candidato successivo; §2, §4, §5 e §7
       restano prosa. Due gate **bloccanti** nuovi, 13 test nuovi (80 → **93**).
+
+- [x] **G2-ter — una sola via di scrittura: sessione → stato** *(chiude il buco lasciato da G2-bis — [ADR-0017](adr/ADR-0017-stato-dati-e-prosa.md) §4-bis)* — ✅ **eseguito 2026-08-05**
+      *Origine*: domanda del DM — «come interagisce lo stato della sessione col
+      nuovo campaign state? c'è un metodo automatico che aggiorna puntualmente lo
+      stato evitando errori di formattazione?». Verificando invece di rispondere a
+      memoria è emersa **una regressione mia**: G2-bis aveva rotto
+      `state_apply --migrate` spostando §8 (corretta in un commit separato).
+      **Migrate a dati** (decisione DM: «fino a §4 e ai numeri di §2»): **§3**
+      clock dei villain, **§4** chi sa cosa, **§2.4** contingenti e scenari di
+      Rethmar. `state.yaml` passa da 3 a **7 sezioni**, tutte con `tempo`
+      obbligatorio; sette regioni generate in `state.md`.
+      **Front-matter dei delta**: il log di sessione resta markdown (è un
+      documento) ma porta in testa i delta in forma leggibile dalla macchina,
+      **emessi dal wizard** — il DM non scrive YAML. Prima i delta si estraevano
+      con regex sulla prosa e i clock villain con una **lista di nomi cablata nel
+      sorgente**: Ghaurush, canonizzato il 2026-08-05, non sarebbe stato visto.
+      C'è un test che lo dimostra. Retrocompatibile: senza front-matter si ricade
+      sulle regex.
+      **Il giro si chiude**: `state_apply` scrive i clock in `state.yaml`, poi
+      **rigenera la vista** — altrimenti il gate `render_state --check` diventa
+      rosso. Scrittura **testuale mirata**, non round-trip YAML, per non perdere
+      l'intestazione commentata.
+      **Tre domande nuove al DM** (INF-003/004/005), fra cui una incoerenza vera
+      trovata dalla classificazione: tre righe canonizzate il 2026-08-05 dicono
+      che Ghaurush, Zin'thara e Ushgar sanno dei «Custodi Eterni», **titolo che si
+      conferisce nell'Arco 08, non ancora giocato**.
+      Regola R2 ora **derivata dallo schema** invece che cablata (si era già
+      disallineata al primo lotto). 99 test (da 95).
+      **Ci si ferma qui**: §5 e §7 restano prosa — vedi ADR-0017 §4.
 
 - [ ] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)*
       Validatore link relativi + path assoluti, con allowlist per gli

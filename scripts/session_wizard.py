@@ -131,8 +131,64 @@ def _bullets(items: list[str], empty: str = "- —") -> str:
     return "\n".join(f"- {i.lstrip('- ')}" for i in items) if items else empty
 
 
+_CLOCK_RE = re.compile(r"(?:Day\s*)?([\w/]+)\s*(?:→|->)\s*(?:Day\s*)?([\w/]+)")
+
+
+def _delta_pair(raw: str) -> "dict | None":
+    """«Day 19 → Day 20» / «9/18 → 10/18» → {da, a}. None se non è una coppia."""
+    m = _CLOCK_RE.search(raw or "")
+    return {"da": m.group(1), "a": m.group(2)} if m else None
+
+
+def render_front_matter(a: dict) -> str:
+    """Blocco dati in testa al log: i delta in forma leggibile dalla macchina.
+
+    Il DM non lo scrive — le risposte le ha già date al wizard. Serve a
+    `state_apply`, che così legge i delta invece di dedurli con regex dalla
+    prosa (ADR-0017, lotto G2-ter).
+    """
+    delta: dict = {}
+    mc = _delta_pair(a.get("march_clock", ""))
+    if mc:
+        delta["march_clock"] = mc
+    rc = _delta_pair(a.get("ritual_clock", ""))
+    if rc:
+        delta["ritual_clock"] = rc
+    vc = []
+    for riga in (a.get("villain_clocks") or "").splitlines():
+        riga = riga.strip().lstrip("- ")
+        if not riga or ":" not in riga:
+            continue
+        nome, resto = riga.split(":", 1)
+        par = _delta_pair(resto)
+        if par:
+            vc.append({"villain": nome.strip(), **par})
+    if vc:
+        delta["villain_clock"] = vc
+    if a.get("xp_total"):
+        delta["xp_a_testa"] = a["xp_total"]
+
+    o = ["---", f"sessione: {a['number']}", f"data: {a['date']}"]
+    if not delta:
+        o += ["delta: {}", "---", ""]
+        return "\n".join(o)
+    o.append("delta:")
+    for k in ("march_clock", "ritual_clock"):
+        if k in delta:
+            o.append(f"  {k}: {{da: \"{delta[k]['da']}\", a: \"{delta[k]['a']}\"}}")
+    if "villain_clock" in delta:
+        o.append("  villain_clock:")
+        for v in delta["villain_clock"]:
+            o.append(f"    - {{villain: \"{v['villain']}\", da: \"{v['da']}\", a: \"{v['a']}\"}}")
+    if "xp_a_testa" in delta:
+        o.append(f"  xp_a_testa: {delta['xp_a_testa']}")
+    o += ["---", ""]
+    return "\n".join(o)
+
+
 def render(a: dict) -> str:
     o: list[str] = []
+    o.append(render_front_matter(a))
     o.append(f"# Session {a['number']} — {a['title']} ({a['date']})\n")
     o.append(f"**Players present**: {a['players'] or '—'}")
     o.append(f"**Location**: {a['location'] or '—'}")

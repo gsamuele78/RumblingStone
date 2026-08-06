@@ -33,8 +33,8 @@
 |---|---|---|:--:|:--:|:--:|---|
 | `campaign_branch.py` | Guardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007). | **status|guard|ensure** · --group | ✔ | — | — | `0` · `1` · `2` |
 | `next_session.py` | Aggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md). | --last-n · --hype | ✔ | — | — | `0` · `1` |
-| `session_wizard.py` | Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007). | --answers · --out · --no-commit | ✔ | ✔ | ✔ | `0` · `1` · `130` |
-| `state_apply.py` | Applica alle regioni marcate auto: le proposte meccaniche estratte dal log di sessione: March Clock in campaign/state.md, riga di storico in campaign/state-changelog.md (ADR-0007 + ADR-0017). | --migrate · --session · --check · --yes · --commit | ✔ | ✔ | ✔ | `0` · `1` · `2` |
+| `session_wizard.py` | Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano. | --answers · --out · --no-commit | ✔ | ✔ | ✔ | `0` · `1` · `130` |
+| `state_apply.py` | Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017). | --migrate · --session · --check · --yes · --commit | ✔ | ✔ | ✔ | `0` · `1` · `2` |
 | `state_sync.py` | Propone (mai applica) diff a campaign/state.md dai trigger nei session log; report markdown per revisione DM. | --since · --session | ✔ | — | — | `0` · `2` |
 | `update_xp.py` | Registro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md. | --check | ✔ | — | — | `0` |
 

@@ -151,5 +151,63 @@ class TestPipelineADR0007SuiFileVeri(unittest.TestCase):
                       "appendere le righe di fine sessione")
 
 
+class TestFrontMatterEStateApply(unittest.TestCase):
+    """G2-ter: i delta di sessione passano da «prosa da interpretare» a «dati».
+
+    Il valore non è estetico. Prima, i clock dei villain si estraevano con una
+    regex che conteneva una **lista di nomi cablata nel sorgente**: un villain
+    nuovo — Ghaurush, canonizzato il 2026-08-05 — semplicemente non veniva visto.
+    """
+
+    def test_il_wizard_emette_front_matter_parsabile(self):
+        import session_wizard as sw
+        from dmcore import frontmatter
+        fm = sw.render_front_matter({
+            "number": 4, "date": "2026-08-10",
+            "march_clock": "Day 19 → Day 20 (+1)",
+            "ritual_clock": "9/18 → 10/18",
+            "villain_clocks": "- Sonjak: 4/8 → 5/8\n- Ghaurush: 0/6 → 1/6",
+            "xp_total": 3200,
+        })
+        data, body = frontmatter.split(fm + "# Session 4\n")
+        self.assertIsNotNone(data)
+        self.assertEqual(body.strip(), "# Session 4")
+        hits = frontmatter.deltas(data)
+        kinds = [h[0] for h in hits]
+        self.assertIn("march_clock", kinds)
+        self.assertEqual(kinds.count("villain_clock"), 2)
+
+    def test_ghaurush_invisibile_alle_regex_e_visibile_ai_dati(self):
+        """Il caso concreto che motiva il lotto."""
+        from dmcore import frontmatter
+        import state_sync
+        prosa = "- **Ghaurush**: 0 → 1\n"
+        visto_da_regex = any(
+            rx.search(prosa) for name, rx in state_sync.TRIGGERS if name == "villain_clock")
+        self.assertFalse(visto_da_regex, "se ora la regex lo vede, aggiornare questo test")
+        hits = frontmatter.deltas(
+            {"delta": {"villain_clock": [{"villain": "Ghaurush", "da": "0/6", "a": "1/6"}]}})
+        self.assertEqual(hits[0][2][0], "Ghaurush")
+
+    def test_senza_front_matter_si_ricade_sulle_regex(self):
+        """Retrocompatibilità: i log già scritti non vanno riscritti."""
+        import state_sync
+        ev = state_sync.extract_events(
+            ROOT / "campaign" / "sessions" / "2026-05-03_session-3.md")
+        self.assertEqual(ev["source"], "regex")
+        self.assertTrue(ev["hits"])
+
+    def test_clock_villain_scritto_in_state_yaml_senza_perdere_i_commenti(self):
+        import state_apply as sa
+        text = (ROOT / "campaign" / "state.yaml").read_text(encoding="utf-8")
+        new = sa.set_villain_clock(text, "Sonjak", "5/8")
+        self.assertIsNotNone(new)
+        self.assertIn("clock: 5/8", new)
+        # l'intestazione commentata spiega il contratto: non deve sparire
+        self.assertIn("# campaign/state.yaml — FATTI DI CANONE", new)
+        self.assertEqual(len(text.splitlines()), len(new.splitlines()))
+        self.assertIsNone(sa.set_villain_clock(text, "Villain Inesistente", "1/2"))
+
+
 if __name__ == "__main__":
     unittest.main()
