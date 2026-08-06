@@ -27,7 +27,11 @@ campaign/
 ├── recaps/                  # Player-facing recaps (+ homebrew/ layouts)
 ├── templates/               # Blank state + session + PNG-dossier templates
 ├── ai-media-prompts/        # Image-prompt sets per arc (ADR-0015)
-└── lore/                    # House rules, campaign history, DM strategy pointer
+└── lore/
+    ├── campaign-premise.md   # SHARED product: AP, setting, dungeon chain, villain graph
+    ├── campaign-chronicle.md # PER-GROUP: what actually happened at this table
+    ├── house-rules.md        # SHARED
+    └── dm-player-strategy.md # pointer to the canonical DM strategy
 
 skills/
 ├── dnd-35-srd/             # D&D 3.5 SRD mechanics (no setting bias)
@@ -149,7 +153,7 @@ CI** by `scripts/validate_modules.py` — 16 requisiti, exit 1 se ne manca uno.
 3. **House rules** live in `campaign/lore/house-rules.md` — always check before ruling
 4. **RAW vs RAI**: state which you're providing; give both if ambiguous
 5. **Red Hand of Doom adaptations**: documented in `campaign/DM-CAMPAIGN-PLAYBOOK.md`
-   and `campaign/lore/campaign-history.md` (PART 2, arco per arco).
+   and `campaign/lore/campaign-chronicle.md` (PART 2, arco per arco).
 <!-- validate-docs: ignore-begin -->
    *(Fino al 2026-08-05 questa riga puntava a `campaign/lore/rhod-adaptations.md`,
    che non è mai esistito — lotto G2.)*

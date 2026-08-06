@@ -24,7 +24,7 @@ mechanics load `dnd-35-srd`. For Forgotten Realms canon load
 3. The specific reference for the domain
 
 If `state.md` and a reference disagree, **state.md wins** (it is the most
-recent truth). If a reference and `campaign/lore/campaign-history.md`
+recent truth). If a reference and `campaign/lore/campaign-chronicle.md`
 disagree, the reference wins (history is prose narration; references are
 structured truth).
 
@@ -39,7 +39,7 @@ structured truth).
 | Story arcs — timeline, current state, villain/ally tracker | `references/campaign-story-arcs.md` |
 | DM toolkit — branching quests, monster art, faction expansion | `references/dm-expansion-toolkit.md` |
 | Living world state (per-session) | `../../campaign/state.md` |
-| Full prose history | `../../campaign/lore/campaign-history.md` |
+| Full prose history | `../../campaign/lore/campaign-chronicle.md` |
 | House rules | `../../campaign/lore/house-rules.md` |
 
 ## Decision Logic

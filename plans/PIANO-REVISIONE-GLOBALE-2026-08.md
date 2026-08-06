@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis, G2-ter chiusi (2026-08-05)
+## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis, G2-ter, G2-quater chiusi (2026-08-05)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -138,6 +138,31 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       Regola R2 ora **derivata dallo schema** invece che cablata (si era già
       disallineata al primo lotto). 99 test (da 95).
       **Ci si ferma qui**: §5 e §7 restano prosa — vedi ADR-0017 §4.
+
+- [x] **G2-quater — prodotto e partita: il reset per gruppo nuovo** *([ADR-0017](adr/ADR-0017-stato-dati-e-prosa.md) §7)* — ✅ **eseguito 2026-08-05**
+      *Origine*: domanda del DM — «un DM nuovo deve poter partire pulito senza
+      sporcare l'originale». Verificando: **il meccanismo perdeva**.
+      `new-campaign-group.sh` azzerava solo `state.md` e `sessions/`, quindi un
+      gruppo nuovo ereditava `state.yaml` (643 righe), `state-changelog.md`
+      (1165), `campaign-history.md` (517) e i recap del gruppo precedente — **le
+      prime due falle aperte da me** in G2-bis/ter. E `state-blank.md` non aveva
+      i marcatori `gen:state:`: **CI rossa al primo push**.
+      **Regola resa esplicita**: *prodotto* (archi, Bestiario, mappe, skill,
+      premessa, house rules) **resta**; *partita* (stato, storico, cronaca,
+      sessioni, recap) **si azzera da template**.
+      **Split di `campaign-history.md`**, che mescolava i due: `campaign-premise.md`
+      (AP, ambientazione, grafo villain, riferimenti) è prodotto; `campaign-chronicle.md`
+      (party, timeline, catena dei dungeon) è partita. La catena dei dungeon è
+      finita nella cronaca **perché l'ha imposto un test**: le sue annotazioni
+      dicevano dove Hella è morta e cosa Artemis ha rifiutato.
+      Tre template nuovi (`state-blank.yaml`, `state-changelog-blank.md`,
+      `chronicle-blank.md`), marcatori nel template markdown, reset che rigenera
+      e valida prima di dichiararsi finito.
+      **Il presidio è un test, non la disciplina**: `test_new_group.py` verifica
+      che **ogni** file di stato sia coperto dal reset e che i template non
+      contengano tracce del primo gruppo. 109 test (da 99).
+      **Non deciso qui**: branch-per-gruppo vs directory-per-gruppo — dipende da
+      **G5**, ed è la seconda decisione che si incaglia lì.
 
 - [ ] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)*
       Validatore link relativi + path assoluti, con allowlist per gli

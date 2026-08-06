@@ -149,3 +149,33 @@ eredita così. Mai il contrario: niente merge del tuo branch in `main`.
 3. **Mai inventare numeri** — XP/statblock/loot vengono solo da ciò che
    è scritto nei file o marcato `[INFERRED]` (AGENTS.md).
 4. **In dubbio**: `python3 scripts/dm.py doctor` prima, poi il Playbook.
+
+---
+
+## Partire da zero con un gruppo nuovo (procedura 2026-08-05)
+
+```bash
+./scripts/new-campaign-group.sh <nome-gruppo>
+```
+
+Azzera **la partita** e lascia intatto **il prodotto**:
+
+| Si azzera (partita) | Resta (prodotto) |
+|---|---|
+| `campaign/state.yaml`, `state.md`, `state-changelog.md` | archi `00_`…`09_`, `Bestiario/`, mappe |
+| `campaign/lore/campaign-chronicle.md` | `campaign/lore/campaign-premise.md`, `house-rules.md` |
+| `campaign/sessions/`, `campaign/recaps/` | `skills/`, `scripts/`, `plans/` |
+
+Poi, nell'ordine:
+
+1. **Compila `campaign/state.yaml`** — party, primo villain, `confine`.
+   Le tabelle di `state.md` **non si scrivono a mano**: sono generate.
+2. `python3 scripts/render_state.py` — genera le tabelle.
+3. `python3 scripts/validate_state.py` — schema + coerenza.
+4. `python3 scripts/dm.py session branch --group <nome>` — crea `group.yaml`.
+5. `python3 scripts/state_apply.py --migrate` — inserisce i marcatori `auto:`.
+6. `git push -u origin campaign-group-<nome>`.
+
+Da lì in poi, a ogni sessione: **`python3 scripts/dm.py session end`**. Il wizard
+fa le domande, scrive il log col front-matter dei delta, e `state_apply` propone
+i diff chiedendo conferma. Non si scrive YAML a mano e non si toccano le tabelle.

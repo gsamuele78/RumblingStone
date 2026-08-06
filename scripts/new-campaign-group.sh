@@ -38,8 +38,14 @@ fi
 # --- sanity checks ---
 command -v git >/dev/null || err "git not found"
 [[ -d ".git" ]] || err "not a git repo"
-[[ -f "campaign/templates/state-blank.md" ]] || \
-    err "campaign/templates/state-blank.md not found — cannot reset"
+# Ogni file di stato PER-GRUPPO deve avere il suo template: se ne manca uno,
+# il gruppo nuovo eredita i dati del precedente. È esattamente ciò che è
+# successo il 2026-08-05, quando state.yaml e state-changelog.md sono stati
+# introdotti senza aggiornare questo script (lotto G2-quater).
+for tpl in state-blank.md state-blank.yaml state-changelog-blank.md chronicle-blank.md; do
+    [[ -f "campaign/templates/$tpl" ]] || \
+        err "campaign/templates/$tpl not found — cannot reset cleanly"
+done
 
 # --- check clean working tree ---
 if ! git diff-index --quiet HEAD --; then
@@ -69,13 +75,35 @@ echo "==> Creating new branch: $NEW_BRANCH"
 git checkout -b "$NEW_BRANCH"
 
 # --- reset live state ---
+# Regola: tutto ciò che è PARTITA si azzera, tutto ciò che è PRODOTTO resta.
+# Prodotto = archi, Bestiario, mappe, skill, premessa di campagna, house rules.
+# Partita  = stato, storico, cronaca, sessioni, recap.
 echo "==> Resetting campaign/state.md from template..."
 cp campaign/templates/state-blank.md campaign/state.md
 
+echo "==> Resetting campaign/state.yaml from template..."
+cp campaign/templates/state-blank.yaml campaign/state.yaml
+
+echo "==> Resetting campaign/state-changelog.md from template..."
+cp campaign/templates/state-changelog-blank.md campaign/state-changelog.md
+
+echo "==> Resetting campaign/lore/campaign-chronicle.md from template..."
+cp campaign/templates/chronicle-blank.md campaign/lore/campaign-chronicle.md
+echo "    (campaign-premise.md NON si azzera: è prodotto condiviso)"
+
 echo "==> Clearing campaign/sessions/*.md..."
 rm -f campaign/sessions/*.md
-# keep a .gitkeep to preserve directory
 touch campaign/sessions/.gitkeep
+
+echo "==> Clearing campaign/recaps/ (recap del gruppo precedente)..."
+rm -f campaign/recaps/*.md campaign/recaps/homebrew/*.md 2>/dev/null || true
+touch campaign/recaps/.gitkeep
+
+echo "==> Rigenerazione della vista di stato dai dati vuoti..."
+python3 scripts/render_state.py || err "render_state fallito — stato non coerente"
+
+echo "==> Verifica: nessun residuo del gruppo precedente..."
+python3 scripts/validate_state.py || err "validate_state fallito sul template"
 
 # --- commit ---
 git add -A
@@ -86,9 +114,12 @@ echo "=========================================="
 echo "✅ Done. New campaign group '$NEW_GROUP' initialized."
 echo ""
 echo "Next steps:"
-echo "  1. Edit campaign/state.md §1 Party with your new PCs"
-echo "  2. Set starting APL and in-world date"
-echo "  3. git push -u origin $NEW_BRANCH"
-echo "  4. Play session 1, then apply workflow in:"
-echo "     campaign/DM-CAMPAIGN-PLAYBOOK.md §4"
+echo "  1. Compila campaign/state.yaml: party, primo villain, confine"
+echo "     (NON scrivere le tabelle di state.md: sono generate)"
+echo "  2. python3 scripts/render_state.py     # genera le tabelle"
+echo "  3. python3 scripts/validate_state.py   # schema + coerenza"
+echo "  4. python3 scripts/dm.py session branch --group $NEW_GROUP   # group.yaml"
+echo "  5. python3 scripts/state_apply.py --migrate                  # marcatori auto:"
+echo "  6. git push -u origin $NEW_BRANCH"
+echo "  7. Gioca la sessione 1, poi: python3 scripts/dm.py session end"
 echo "=========================================="

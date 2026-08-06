@@ -150,6 +150,39 @@ dai dati, non si estrae dal markdown.
   La semantica ADR-0007 è invariata: stesse regioni, stessa conferma, stesso
   triplo vincolo — cambia solo il file che ospita lo storico.
 
+### 7. Prodotto e partita (G2-quater)
+
+La domanda che ha aperto il lotto: *«un DM nuovo deve poter partire pulito senza
+sporcare l'originale»*. Verificando, il meccanismo **perdeva**:
+`new-campaign-group.sh` azzerava solo `state.md` e `sessions/`, quindi un gruppo
+nuovo ereditava `state.yaml` (643 righe), `state-changelog.md` (1165),
+`campaign-history.md` (517) e i recap del gruppo precedente. Le prime due falle
+le ha aperte questo stesso ADR, introducendo file di stato senza aggiornare il
+reset.
+
+**La regola, ora esplicita e testata**:
+
+| | Cos'è | Al reset |
+|---|---|---|
+| **Prodotto** | archi, Bestiario, mappe, skill, `campaign-premise.md`, house rules | **resta** |
+| **Partita** | `state.yaml`, `state.md`, `state-changelog.md`, `campaign-chronicle.md`, `sessions/`, `recaps/` | **si azzera da template** |
+
+Da qui lo split di `campaign-history.md`, che mescolava i due: la **premessa**
+(AP, ambientazione, grafo dei villain, riferimenti) è prodotto e resta; la
+**cronaca** (party, timeline degli archi, catena dei dungeon con gli eventi di
+*questi* PG) è partita e si azzera.
+
+Il presidio non è la disciplina ma un test: `test_new_group.py` verifica che
+**ogni** file di stato sia coperto dal reset e che i template non contengano
+tracce del primo gruppo. La falla si riapre solo ignorando un test rosso.
+
+**Cosa questo lotto NON decide**: se il multi-gruppo debba restare
+*branch-per-gruppo* o diventare *directory-per-gruppo* (`groups/<nome>/`). La
+seconda è strutturalmente migliore — `main` tornerebbe a essere solo prodotto e
+`git pull` non conflitterebbe mai con la partita — ma costa rendere group-aware
+~10 script, e **la scelta dipende dal PRD** (lotto G5): se il destinatario è un
+solo tavolo, il branch basta; se il repo va ereditato da DM terzi, non regge.
+
 ## Conseguenze
 
 **Positive**
