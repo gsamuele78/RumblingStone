@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**43 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**44 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -78,6 +78,7 @@
 | `render_state.py` | Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift. | --check · --stdout | ✔ | ✔ | — | `0` · `1` · `2` |
 | `tools_manifest.py` | Fonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json. | --check · --emit-all · --render-md · --emit-mcp | ✔ | — | — | `0` · `1` · `2` |
 | `validate_docs.py` | Gate CI: verifica che i percorsi citati in AGENTS.md/README.md/docs/INDEX.md esistano davvero (anti-deriva doc<->filesystem, finding T4). | --doc · --verbose · --json | ✔ | — | — | `0` · `1` · `2` |
+| `validate_links.py` | Gate CI: link relativi rotti e percorsi assoluti della macchina di chi scrive, su tutti i .md del repo (finding E3). | --path · --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
 | `validate_modules.py` | Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard. | --verbose · --json | ✔ | — | — | `0` · `1` |
 | `validate_state.py` | Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato). | --file · --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
 

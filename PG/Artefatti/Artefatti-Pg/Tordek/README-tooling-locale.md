@@ -4,7 +4,7 @@
 > generato/modificato le schede HTML di questa cartella durante la
 > produzione, non tool riutilizzabili come `scripts/render_map_svg.py`
 > (repo root). Percorsi assoluti hardcoded alla macchina originale
-> (`/home/jfs/Scrivania/...`): **non eseguibili così come sono** in un altro
+> (`/home/jfs/Scrivania/...`): **non eseguibili così come sono** in un altro <!-- validate-links: ignore -->
 > ambiente. Conservati per storico/provenienza (D10), non spostati in
 > `scripts/` per non farli passare per tooling generico del repo.
 

@@ -1,3 +1,9 @@
+<!-- ⚠️ ASSET MANCANTI — decisione DM pendente (docs/audit/DECISIONI-APERTE.md §A1).
+     Questo booklet referenzia 8 stemmi, 4 mappe e 1 panorama che NON esistono:
+     si genera, ma esce con 13 immagini rotte. Le righe sono marcate
+     `validate-links: ignore` per non falsare il gate, NON perché vada bene.
+     Alla decisione: o si producono gli asset, o si tolgono i riferimenti. -->
+
 <!-- GENERATO da scripts/build_booklet_html.py --format hb (ADR-0013).
      Manifest: PALIO-BOOKLET.manifest.json — i capitoli CITANO i master (ADR-0003).
      Le immagini restano riferimenti relativi al repo: per la resa con
@@ -23,7 +29,7 @@ ___
 
 # Channathgate, la Porta del Cannath
 
-![Pianta di Channathgate — i quartieri delle otto contrade](../P2D-Palio-Allegati/immagini/channathgate-mappa.png)
+![Pianta di Channathgate — i quartieri delle otto contrade](../P2D-Palio-Allegati/immagini/channathgate-mappa.png) <!-- validate-links: ignore -->
 
 > *C'è un'ora, nella piana rovente tra il fiume e il deserto, in cui la luce
 > smette di essere luce e diventa oro battuto. È l'ora in cui Channathgate si
@@ -91,12 +97,12 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > corrispondenze contrade ↔ nomi FR dei quartieri) integrato col canone
 > esistente di `...P2D-PALIO-CONTRADE-STEMMI-CANTI.md` (divinità, patroni e
 > Meraviglie combaciano ✓). Mappa master della città:
-> `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
+> `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi <!-- validate-links: ignore -->
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
-> `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
+> `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`. <!-- validate-links: ignore -->
 > ⚠️ I due PNG sono forniti dal DM (chat 2026-07-17) e vanno caricati in
-> `P2D-Palio-Allegati/immagini/` — le immagini incollate in chat non
+> `P2D-Palio-Allegati/immagini/` — le immagini incollate in chat non <!-- validate-links: ignore -->
 > arrivano come file all'engine.
 
 ---
@@ -330,7 +336,7 @@ sul Drappellone per attivare la Meraviglia (vedi INTEGRAZIONE §4–§5).
 
 #### 8 — L'Onda *(NUOVA — contrada di casa di Channathgate)* → **Valkur / Selûne** (marinai, luna)
 - **Motto** *(originale)*: *"Il cielo mi colora, il fiume mi arma"*.
-- **Stemma**: luccio fluviale saltante su tre onde sotto la falce di Selûne (`P2D-Palio-Allegati/stemmi/08-onda.svg`). **Colori**: bianco e celeste.
+- **Stemma**: luccio fluviale saltante su tre onde sotto la falce di Selûne (`P2D-Palio-Allegati/stemmi/08-onda.svg`). **Colori**: bianco e celeste. <!-- validate-links: ignore -->
 - **Anima**: barcaioli, pescatori, portuali del Fiume Cannath — la **contrada di casa**,
   patrocinata dal **Gonfaloniere** e dalla **Gilda dei Barcaioli**. Molti sono gli stessi
   che traghettarono i profughi: **alleanza segreta con l'Istrice**. Corre per l'**onore del
@@ -530,7 +536,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Parte 2D — Le 8 Contrade: Stemmi, Motti, Canti, Rivalità
 
 > Allegato di `...P2D-PALIO-DM-MASTER-REFERENCE.md`. Gli **stemmi** sono **originali**
-> (arte vettoriale propria in `P2D-Palio-Allegati/stemmi/`), **non riproduzioni** di
+> (arte vettoriale propria in `P2D-Palio-Allegati/stemmi/`), **non riproduzioni** di <!-- validate-links: ignore -->
 > quelli reali di Siena. I **motti** qui usati sono **originali**, *ispirati* alla
 > tradizione senese (fatti storici di pubblico dominio) ma **riscritti** per la campagna.
 > Le divinità sono **faerûniane** (conversione da Golarion).
@@ -559,7 +565,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ---
 
 ## 1 · L'OCA — *"Al suono dell'oro, all'armi"*
-![Stemma Oca](P2D-Palio-Allegati/stemmi/01-oca.svg)
+![Stemma Oca](P2D-Palio-Allegati/stemmi/01-oca.svg) <!-- validate-links: ignore -->
 - **Divinità**: Waukeen (commercio, ricchezza). **Colori**: verde e bianco bordati di rosso.
 - **Patrono**: **Lady Kaal**, Presidente del Consiglio. **Anima**: aristocrazia terriera e
   banchieri; il rione più ricco, dai palazzi ordinati e freddi.
@@ -574,7 +580,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   torto richiede darle **numeri migliori**, non insulti.
 
 ## 2 · LA TORRE — *"Oltre il ferro, la volontà"*
-![Stemma Torre](P2D-Palio-Allegati/stemmi/02-torre.svg)
+![Stemma Torre](P2D-Palio-Allegati/stemmi/02-torre.svg) <!-- validate-links: ignore -->
 - **Divinità**: Torm (dovere) / Tempus (guerra). **Colori**: amaranto listato di bianco e azzurro.
 - **Patrono**: **Lord Jarmaath** (militare) + **Cap. Brenna Sorvane** (milizia).
   **Anima**: veterani, fabbri d'armi, milizia pesante; taverne che sanno di fumo e olio d'armi.
@@ -586,7 +592,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   Voto **Difesa compatta**; +cavalleria pesante di Channathgate.
 
 ## 3 · IL BRUCO — *"Nell'ombra mi rivolto"*
-![Stemma Bruco](P2D-Palio-Allegati/stemmi/03-bruco.svg)
+![Stemma Bruco](P2D-Palio-Allegati/stemmi/03-bruco.svg) <!-- validate-links: ignore -->
 - **Divinità**: Mask (ombre, furto, segreti — **già in campagna**, arco Zalkatar/Artemis).
   **Colori**: giallo e verde listati d'azzurro.
 - **Patrono**: **Maestro Varis "Seta-Argento"** (mercato nero). **Anima**: ricettatori,
@@ -600,7 +606,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   pietrificate** fuori dalle mura (aggancio Il Collezionista).
 
 ## 4 · L'ISTRICE — *"Pungo solo chi mi assale"*
-![Stemma Istrice](P2D-Palio-Allegati/stemmi/04-istrice.svg)
+![Stemma Istrice](P2D-Palio-Allegati/stemmi/04-istrice.svg) <!-- validate-links: ignore -->
 - **Divinità**: Ilmater (sofferenza) / Chauntea (comunità). **Colori**: bianco con arabeschi
   rosso, nero, azzurro; nello stemma, **catene spezzate** (i profughi liberati).
 - **Patrono**: **Capitana Lorana** e gli ~800 **profughi di Tretino/Drellin**. **Anima**:
@@ -625,7 +631,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   fantino profugo potrebbe **uccidere** un rivale per vendetta, non solo disarcionarlo.
 
 ## 5 · IL DRAGO — *"Il cuore che arde parla in fiamme"*
-![Stemma Drago](P2D-Palio-Allegati/stemmi/05-drago.svg)
+![Stemma Drago](P2D-Palio-Allegati/stemmi/05-drago.svg) <!-- validate-links: ignore -->
 - **Divinità**: Mystra (magia). **Colori**: rosa/rosso e verde listati di giallo; nello
   stemma, un drago avvolto attorno alla **stella di Mystra**.
 - **Patrono**: **Maester Pyriel** (sapere/accademia). **Anima**: speziali, alchimisti,
@@ -639,7 +645,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   draghi** (Abithriax/Tyrgarun) e scherma i bombardamenti. **−1 GS** ondate aeree Fase 1.
 
 ## 6 · LA CIVETTA — *"Guardo dove la notte tace"*
-![Stemma Civetta](P2D-Palio-Allegati/stemmi/06-civetta.svg)
+![Stemma Civetta](P2D-Palio-Allegati/stemmi/06-civetta.svg) <!-- validate-links: ignore -->
 - **Divinità**: Shar (perdita, vendetta, segreti). **Colori**: nero e rosso listati di
   bianco; nello stemma, la civetta davanti al **disco nero di Shar**.
 - **Patrono**: **Conte Valerius** (nobiltà decaduta). **Anima**: burocrati, spie,
@@ -653,7 +659,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   **aprire una breccia**. Esito **ambiguo** (CONSEGUENZE §Civetta).
 
 ## 7 · L'UNICORNO — *"Ferisce e sana il corno che porto"*
-![Stemma Unicorno](P2D-Palio-Allegati/stemmi/07-unicorno.svg)
+![Stemma Unicorno](P2D-Palio-Allegati/stemmi/07-unicorno.svg) <!-- validate-links: ignore -->
 - **Divinità**: Sune (bellezza) / Milil (canto). **Colori**: bianco e arancio listati
   d'azzurro; nello stemma, il corno dell'unicorno a forma di **spirale d'arpa**.
 - **Patrono**: **Aldric Thornwall** (gilde/artigiani). **Anima**: sarti, falegnami,
@@ -667,7 +673,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
   fulmini sonici) + logistica/fortificazioni immense.
 
 ## 8 · L'ONDA *(NUOVA)* — *"Il cielo mi colora, il fiume mi arma"*
-![Stemma Onda](P2D-Palio-Allegati/stemmi/08-onda.svg)
+![Stemma Onda](P2D-Palio-Allegati/stemmi/08-onda.svg) <!-- validate-links: ignore -->
 - **Divinità**: Valkur (marinai, vento favorevole) / Selûne (luna, navigazione).
   **Colori**: bianco e celeste; nello stemma, un **luccio fluviale** saltante su tre onde
   sotto una **falce di Selûne**.
@@ -718,7 +724,7 @@ spesso più efficace che offrirgli di vincere.
 ---
 
 ## Nota grafica — upgrade delle figure degli stemmi (opzionale)
-Gli scudi (`P2D-Palio-Allegati/stemmi/*.svg`) sono **originali** e ridisegnati in stile
+Gli scudi (`P2D-Palio-Allegati/stemmi/*.svg`) sono **originali** e ridisegnati in stile <!-- validate-links: ignore -->
 araldico piatto unificato. Se vuoi figure **ancora più rifinite mantenendo lo stesso stile
 fantasy e senza problemi di copyright**, l'opzione migliore e coerente è **game-icons.net**:
 migliaia di icone SVG monocromatiche, **stesso tratto**, licenza **CC BY 3.0** (gratis, con
@@ -1974,7 +1980,7 @@ Questo file è l'**HUB**. I contenuti di dettaglio sono negli allegati:
 | `...P2D-PALIO-STATBLOCCHI.md` | Fantino Cavaliere/Ladro, sicari drow, PNG chiave, cavalli (bombolone/brenna) |
 | `...P2D-PALIO-MAPPE.md` | Le mappe (piazza, città, rotta di soccorso) + note tattiche |
 | `...P2D-PALIO-CONSEGUENZE-ECHI.md` | Esiti per contrada **×** scelte PG; echi a Rethmar e post-campagna (stile BG3) |
-| `P2D-Palio-Allegati/stemmi/*.svg` · `P2D-Palio-Allegati/mappe/*.svg` | Allegati grafici originali (non-infringement) |
+| `P2D-Palio-Allegati/stemmi/*.svg` · `P2D-Palio-Allegati/mappe/*.svg` | Allegati grafici originali (non-infringement) | <!-- validate-links: ignore -->
 | `...P2D-PALIO-CHANNATHGATE-AVVENTURA.md` · `...-INTEGRAZIONE.md` | Regole-base e wiring di campagna (v1, ancora validi) |
 
 ---
@@ -2890,20 +2896,20 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Parte 2D — Mappe e Note Tattiche
 
 > Allegato di `...P2D-PALIO-DM-MASTER-REFERENCE.md`. Le mappe sono file **SVG** originali in
-> `P2D-Palio-Allegati/mappe/` (apribili nel browser, stampabili, scalabili senza perdita).
+> `P2D-Palio-Allegati/mappe/` (apribili nel browser, stampabili, scalabili senza perdita). <!-- validate-links: ignore -->
 
 ---
 
 ## 1. La Piazza del Palio — pista e Zone di inseguimento
-**File**: `P2D-Palio-Allegati/mappe/piazza-del-palio.svg`
+**File**: `P2D-Palio-Allegati/mappe/piazza-del-palio.svg` <!-- validate-links: ignore -->
 
-![Piazza del Palio](P2D-Palio-Allegati/mappe/piazza-del-palio.svg)
+![Piazza del Palio](P2D-Palio-Allegati/mappe/piazza-del-palio.svg) <!-- validate-links: ignore -->
 
 **Vista cinematografica** (tavola illustrata della Piazza — veduta aerea del
 Campo e vista a livello strada verso "The Seat"; fornita dal DM 2026-07-17,
 da usare come handout d'atmosfera e schermo d'apertura del Giorno 3):
 
-![Vista cinematografica della Piazza del Palio](P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png)
+![Vista cinematografica della Piazza del Palio](P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png) <!-- validate-links: ignore -->
 
 Anello a **conchiglia**, senso **orario**, **3 giri**, fondo di **tufo**. Sei Zone (Chase),
 quattro curve pericolose (dettaglio regole in GIORNO3-4 §4):
@@ -2921,12 +2927,12 @@ che ci finisce è "salvo" ma fuori gara; un PG a piedi può muoversi nella ressa
 ---
 
 ## 2. Channathgate — la città e gli otto rioni
-**File**: `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta
+**File**: `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta <!-- validate-links: ignore -->
 illustrata coi nomi FR dei quartieri — **master visivo della città**, DM
 2026-07-17; corrispondenze in `...P2D-PALIO-DISTRETTI-CHANNATHGATE.md`).
-Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
+Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg` <!-- validate-links: ignore -->
 
-![Channathgate](P2D-Palio-Allegati/mappe/channathgate-citta.svg)
+![Channathgate](P2D-Palio-Allegati/mappe/channathgate-citta.svg) <!-- validate-links: ignore -->
 
 Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar). Mura, **Porta dell'Alba**
 (Dawn Way), **Porta del Porto**, **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
@@ -2937,9 +2943,9 @@ alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra ri
 ---
 
 ## 3. Rotta di soccorso — Channathgate ▸ Rethmar
-**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg`
+**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg` <!-- validate-links: ignore -->
 
-![Rotta di soccorso](P2D-Palio-Allegati/mappe/rotta-soccorso.svg)
+![Rotta di soccorso](P2D-Palio-Allegati/mappe/rotta-soccorso.svg) <!-- validate-links: ignore -->
 
 La **sincronizzazione** col fronte (INTEGRAZIONE §3): due vie per i rinforzi vinti al Palio.
 - **Dawn Way** (~35 mi, ~1,5 gg): cavalleria pesante (Torre).
@@ -2949,9 +2955,9 @@ La **sincronizzazione** col fronte (INTEGRAZIONE §3): due vie per i rinforzi vi
 ---
 
 ## 4. Stalla — mappa tattica dell'assalto drow (Giorno 2 notte)
-**File**: `P2D-Palio-Allegati/mappe/stalla-assalto-drow.svg`
+**File**: `P2D-Palio-Allegati/mappe/stalla-assalto-drow.svg` <!-- validate-links: ignore -->
 
-![Stalla — assalto drow](P2D-Palio-Allegati/mappe/stalla-assalto-drow.svg)
+![Stalla — assalto drow](P2D-Palio-Allegati/mappe/stalla-assalto-drow.svg) <!-- validate-links: ignore -->
 
 Griglia **1 quadretto = 5 ft**, GS 11–12 (statblocchi in `...P2D-PALIO-STATBLOCCHI.md` §3).
 - I drow entrano dalla **botola/fogna** (angolo SO) con *Oscurità*; puntano al **BOX** del
@@ -2966,7 +2972,7 @@ Griglia **1 quadretto = 5 ft**, GS 11–12 (statblocchi in `...P2D-PALIO-STATBLO
 
 ### 🌍 AMBIENTE (companion T5c, consolidato dalle 4 mappe sopra)
 
-*Questo file ha già **SVG originali** in `P2D-Palio-Allegati/mappe/` (fatti a
+*Questo file ha già **SVG originali** in `P2D-Palio-Allegati/mappe/` (fatti a <!-- validate-links: ignore -->
 mano nell'arco del Palio, non dalla pipeline `render_map_svg`) + note tattiche
 per mappa. Companion di raccordo:*
 

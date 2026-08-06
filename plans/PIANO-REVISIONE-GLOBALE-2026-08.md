@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis, G2-ter, G2-quater chiusi (2026-08-05)
+## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis/ter/quater chiusi; **G3 chiuso salvo la decisione sui 13 asset Palio** (2026-08-06)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -164,12 +164,29 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       **Non deciso qui**: branch-per-gruppo vs directory-per-gruppo — dipende da
       **G5**, ed è la seconda decisione che si incaglia lì.
 
-- [ ] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)*
-      Validatore link relativi + path assoluti, con allowlist per gli
-      host-relative Homebrewery (`/assets/…`) e i placeholder didattici.
-      Riparare i 17 rotti reali (13 asset del `PALIO-BOOKLET` — produrre o
-      rimuovere i riferimenti, decisione contenutistica da porre al DM),
-      sostituire i 4 path `/home/jfs/…` con path relativi. Gate CI.
+- [x] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)* — ✅ **eseguito 2026-08-06** (salvo decisione A1)
+      Nuovo gate **bloccante** su **tutti** i `.md` del repo: link relativi rotti
+      **e** percorsi assoluti della macchina di chi scrive. Su 597 file trovava
+      **18 link rotti e 25 percorsi assoluti**.
+      **Due classi erano falsi positivi**, ed è la parte che decide se un gate
+      sopravvive: le guide di deploy dei `converters/` contengono legittimamente
+      percorsi di **server** (`/home/htmlconverter/`, `/home/linuxbrew/`) — non è <!-- validate-links: ignore -->
+      la macchina di una persona, e `converters/` è già `external-toolchain`
+      (ADR-0011), quindi escluso con motivo scritto nel sorgente; e i **documenti
+      d'audit** citano `/home/jfs/` **proprio per segnalarlo** — direttiva, non <!-- validate-links: ignore -->
+      bonifica.
+      **Difetti veri riparati**: i 2 link `file:///home/jfs/…` della scheda Bracieri <!-- validate-links: ignore -->
+      ora puntano al master vivo (`ARC07-DEF-1`, quello citato non esiste più); i
+      **2 `cd /home/jfs/…` del PLAYBOOK**, che insegnavano a un DM terzo un comando <!-- validate-links: ignore -->
+      con dentro la home di un altro; l'immagine dell'Anello, che esisteva come
+      `.png` mentre il riferimento diceva `.webp`. Più **un bug mio di G2-quater**:
+      il link in `chronicle-blank.md` era relativo alla *destinazione* e non alla
+      posizione del template.
+      **I 13 asset del Palio restano aperti** (decisione A1 in
+      [`docs/audit/DECISIONI-APERTE.md`](../docs/audit/DECISIONI-APERTE.md)):
+      marcati per non falsare il gate, con una **nota in testa al booklet che
+      dichiara il debito** e un test che fallisce se quella nota sparisce senza
+      che il problema sia risolto. 44 tool a manifest, 10 test nuovi (109 → **119**). <!-- validate-links: ignore -->
 - [ ] **G4 — Inventario `[INFERRED]` + ratchet** *(C4 — 🟠)*
       `scripts/inventory_inferred.py` → `docs/audit/INFERRED-INVENTARIO.md`
       raggruppato per file/tema/domanda-al-DM, così che il DM possa smaltirli a

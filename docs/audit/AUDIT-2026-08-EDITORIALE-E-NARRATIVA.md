@@ -111,15 +111,15 @@ Ripartizione:
 | Quanti | Dove | Natura |
 |---|---|---|
 | 13 | `09_…/homebrew/PALIO-BOOKLET.hb.md` | stemmi delle contrade (8 `.svg`), mappe (`piazza-del-palio`, `channathgate-citta`, `rotta-soccorso`, `stalla-assalto-drow`), panorama `.png` — **asset mai prodotti**. Il booklet si genera, ma esce con 13 immagini rotte |
-| 3 | `PG/Artefatti/…/Tordek/03_Risveglio_Completo_Bracieri_Terra.md` (×2), `07_…/_ARCHIVIO/…-alternative.md` | `file:///home/jfs/Scrivania/00-Giochi_di_ruolo/…` — **path assoluti della macchina del DM**, committati nel canone |
+| 3 | `PG/Artefatti/…/Tordek/03_Risveglio_Completo_Bracieri_Terra.md` (×2), `07_…/_ARCHIVIO/…-alternative.md` | `file:///home/jfs/Scrivania/00-Giochi_di_ruolo/…` — **path assoluti della macchina del DM**, committati nel canone | <!-- validate-links: ignore -->
 | 1 | `PG/Artefatti/…/ringOfChaoticIllumination/00_Ring…Revised.md` | `ring-chaotic-illumination-evolved.webp` assente |
 | 1 | `docs/guides/GUIDA-IMMAGINI.md` | `percorso/relativo/immagine.png` — placeholder didattico, **falso positivo accettabile** (da mettere in allowlist) |
 
 Path locali della macchina, cercati su tutto il repo:
 
 ```
-campaign/DM-CAMPAIGN-PLAYBOOK.md:214   cd /home/jfs/00_Antigravity_workspace/RumblingStone
-campaign/DM-CAMPAIGN-PLAYBOOK.md:476   cd /home/jfs/00_Antigravity_workspace/RumblingStone
+campaign/DM-CAMPAIGN-PLAYBOOK.md:214   cd /home/jfs/00_Antigravity_workspace/RumblingStone <!-- validate-links: ignore -->
+campaign/DM-CAMPAIGN-PLAYBOOK.md:476   cd /home/jfs/00_Antigravity_workspace/RumblingStone <!-- validate-links: ignore -->
 PG/Artefatti/…/Tordek/03_Risveglio_Completo_Bracieri_Terra.md:5, :174
 07_…/_ARCHIVIO/PortaleForgia-P4-PianoTerra-COMPLETO-alternative.md:770
 ```
@@ -473,7 +473,7 @@ grep -ro "INFERRED" --include=*.md . | wc -l
 grep -rc "INFERRED" --include=*.md . | sort -t: -k2 -rn | head
 
 # misura 6-7 — link rotti e path locali
-grep -rn "file:///home\|/home/jfs" --include=*.md .
+grep -rn "file:///home\|/home/jfs" --include=*.md . <!-- validate-links: ignore -->
 
 # misura 8 — calchi (proxy italiano-nativo §1)
 grep -rEoi "\b(la|il|le|i) su[ao]i? (mano|mani|occhi|respiro|testa|spalle|voce|sguardo|volto)\b" \

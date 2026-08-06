@@ -8,7 +8,8 @@
 > Qui si racconta *come ci si è arrivati*.
 >
 > La **premessa condivisa** (AP, ambientazione, catena dei dungeon, grafo dei
-> villain) sta in [`campaign-premise.md`](campaign-premise.md) e **non** si azzera.
+> villain) sta in `campaign-premise.md` e **non** si azzera.
+> *(Il percorso è relativo a `campaign/lore/`, dove questo file finisce dopo il reset.)*
 
 ---
 

@@ -1300,6 +1300,39 @@
       "deterministic": true
     },
     {
+      "name": "validate_links",
+      "description": "Gate CI: link relativi rotti e percorsi assoluti della macchina di chi scrive, su tutti i .md del repo (finding E3).",
+      "invocation": "python3 scripts/validate_links.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Sottoalbero da controllare (default: tutto il repo)."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Stampa il numero di file esaminati."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessun link rotto e nessun percorso assoluto",
+        "1": "link rotti o percorsi assoluti",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_modules",
       "description": "Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard.",
       "invocation": "python3 scripts/validate_modules.py",

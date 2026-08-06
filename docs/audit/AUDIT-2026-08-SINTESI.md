@@ -65,7 +65,7 @@ Ognuna è un numero, non un'impressione. Comandi in appendice ai documenti di de
 | 4 | Log di sessione reali in `campaign/sessions/` | **1** (+1 ricostruzione con 13 `[INFERRED]`) | 🔴 ~7 archi giocati, memoria non scritta |
 | 5 | Archi giocati senza alcun `.md` (01, 02, 03, 05) | **4 archi su 6** | 🔴 solo `.txt`/`.webp`/`.ods`/`.pdf` grezzi |
 | 6 | Link relativi rotti (esclusi host-relative Homebrewery) | **18 / 241** | 🟠 nessun gate sui link |
-| 7 | File con path assoluti della macchina del DM committati | **4** (`/home/jfs/...`) | 🟠 non portabile, non pubblicabile |
+| 7 | File con path assoluti della macchina del DM committati | **4** (`/home/jfs/...`) | 🟠 non portabile, non pubblicabile | <!-- validate-links: ignore -->
 | 8 | Calchi dall'inglese (§1 `italiano-nativo.md`), misura proxy | **48 in 30 file** | 🟢 debito piccolo → gate conveniente |
 | 9 | Cartelle documentate in `AGENTS.md` che non esistono | **3 su 3** (`campaign/npcs/`, `locations/`, `encounters/`) | 🔴 il file che istruisce gli agenti indica percorsi inesistenti |
 
@@ -81,7 +81,7 @@ Severità: 🔴 alta (blocca qualità o induce errori al tavolo) · 🟠 media �
 |---|---|---|
 | **E1** | **Non esiste un PRD.** Il repo non dichiara per chi produce, quali sono le classi di deliverable, e quando un deliverable è «finito». `rumblingstone-module-standard` è l'unica definizione-di-fatto e copre una sola classe (i master DEF) | 🔴 |
 | **E2** | Lo standard editoriale nasce **dopo** il 93% del corpus e **nessun gate lo verifica**: `validate_modules.py` controlla la struttura (16 sezioni), non la prosa | 🟠 |
-| **E3** | Un deliverable di pubblicazione è **rotto in produzione**: `PALIO-BOOKLET.hb.md` referenzia 13 asset inesistenti; 4 file contengono path assoluti `/home/jfs/...` | 🟠 |
+| **E3** | Un deliverable di pubblicazione è **rotto in produzione**: `PALIO-BOOKLET.hb.md` referenzia 13 asset inesistenti; 4 file contengono path assoluti `/home/jfs/...` | 🟠 | <!-- validate-links: ignore -->
 | **E4** | Il glossario bloccato è un contratto **senza applicazione**: nessun controllo confronta i nomi nuovi con `GLOSSARIO-E-LOCALIZZAZIONE.md` | 🟢 |
 
 ### Asse C — Coerenza, flusso, storia
