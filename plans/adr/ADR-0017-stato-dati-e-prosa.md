@@ -109,8 +109,18 @@ dai dati, non si estrae dal markdown.
   documento.**
 - **ADR-0007** (triplo vincolo sulle scritture di canone) resta pieno. Le regioni
   `gen:state:` sono generate da dati che un umano ha scritto e una PR ha
-  rivisto; non sono scritture automatiche di canone. `state_apply.py` e le sue
-  regioni `auto:` non sono toccati.
+  rivisto; non sono scritture automatiche di canone.
+  **Correzione (2026-08-05, stesso giorno)**: la prima stesura di questo ADR
+  diceva che `state_apply.py` «non è toccato». **Era falso.** Le sue regioni
+  `auto:` sono due — `march-clock` (§2.1 di `state.md`) e `changelog` (§8) — e
+  spostando lo storico ho rotto la seconda: `--migrate` falliva con
+  *«sezione '## 8. Changelog' non trovata»*. La CI non l'ha visto perché
+  `test_state_apply.py` gira su una fixture in memoria: **nessun test toccava i
+  file reali**. Corretto nello stesso lotto — la regione `changelog` ora vive in
+  `campaign/state-changelog.md` e `state_apply` la segue lì, con due test nuovi
+  che eseguono la migrazione **sui file veri** invece che su una fixture.
+  La semantica ADR-0007 è invariata: stesse regioni, stessa conferma, stesso
+  triplo vincolo — cambia solo il file che ospita lo storico.
 
 ## Conseguenze
 

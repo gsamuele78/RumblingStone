@@ -1255,7 +1255,7 @@
       "category": "C-post-session-canon",
       "language": "python",
       "invocation": "python3 scripts/state_apply.py",
-      "summary": "Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "summary": "Applica alle regioni marcate auto: le proposte meccaniche estratte dal log di sessione: March Clock in campaign/state.md, riga di storico in campaign/state-changelog.md (ADR-0007 + ADR-0017).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
@@ -1336,6 +1336,13 @@
           "overwrites": false,
           "generated_header": false,
           "schema": null
+        },
+        {
+          "path": "campaign/state-changelog.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
         }
       ],
       "exit_codes": {
@@ -1363,7 +1370,8 @@
       ],
       "docs": [
         "scripts/README-automation.md",
-        "plans/adr/ADR-0007-*.md"
+        "plans/adr/ADR-0007-*.md",
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
       ]
     },
     {

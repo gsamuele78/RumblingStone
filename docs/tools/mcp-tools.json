@@ -508,7 +508,7 @@
     },
     {
       "name": "state_apply",
-      "description": "Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "description": "Applica alle regioni marcate auto: le proposte meccaniche estratte dal log di sessione: March Clock in campaign/state.md, riga di storico in campaign/state-changelog.md (ADR-0007 + ADR-0017).",
       "invocation": "python3 scripts/state_apply.py",
       "inputSchema": {
         "type": "object",
@@ -539,7 +539,8 @@
       },
       "outputs": [
         "campaign/state.md",
-        "git-commit"
+        "git-commit",
+        "campaign/state-changelog.md"
       ],
       "exit_codes": {
         "0": "ok / nessuna modifica",

@@ -120,5 +120,36 @@ class TestNessunaPerditaDiCanone(unittest.TestCase):
         self.assertIn("Treant", hella["preparato"] or "")
 
 
+class TestPipelineADR0007SuiFileVeri(unittest.TestCase):
+    """Guardia contro la regressione del 2026-08-05.
+
+    Spostando lo storico fuori da `state.md` §8 (G2-bis) si era rotto
+    `state_apply --migrate`, che cercava la regione `changelog` dentro
+    `state.md`. **La CI non se n'è accorta** perché `test_state_apply.py` gira
+    su una fixture in memoria: nessun test toccava i file reali.
+
+    Questi due test chiudono quel buco. Sono in sola lettura — non scrivono
+    canone, si limitano a verificare che le regioni siano ancora *migrabili*
+    dove ora vivono.
+    """
+
+    def test_state_md_resta_migrabile(self):
+        import state_apply as sa
+        text = (ROOT / "campaign" / "state.md").read_text(encoding="utf-8")
+        _, added = sa.migrate(text)
+        self.assertIn("march-clock", added,
+                      "state.md non espone più l'ancora del March Clock: "
+                      "la pipeline ADR-0007 non potrebbe migrarlo")
+
+    def test_lo_storico_resta_migrabile(self):
+        import state_apply as sa
+        clog = ROOT / "campaign" / "state-changelog.md"
+        self.assertTrue(clog.exists(), "campaign/state-changelog.md è sparito")
+        _, added = sa.migrate_changelog(clog.read_text(encoding="utf-8"))
+        self.assertIn("changelog", added,
+                      "lo storico non è più migrabile: state_apply non potrebbe "
+                      "appendere le righe di fine sessione")
+
+
 if __name__ == "__main__":
     unittest.main()

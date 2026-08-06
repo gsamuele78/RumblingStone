@@ -21,7 +21,14 @@ MINI_STATE = (
     "**Current March Day:** **19** (Terrelton just fell).\n"
     "**Days remaining to Rethmar:** **23** (window).\n\n"
     "prosa che non si tocca MAI\n\n"
-    "## 8. Changelog (append-only)\n\n"
+    "## 8. Storico\n\n"
+    "Lo storico vive in [`state-changelog.md`](state-changelog.md) (ADR-0017).\n"
+)
+
+# Dal 2026-08-05 (ADR-0017) lo storico ha il proprio file: la regione
+# `changelog` si migra e si appende lì, non più dentro state.md §8.
+MINI_CHANGELOG = (
+    "# Storico di state.md — append-only\n\n"
     "Testo di cornice.\n\n"
     "```\n"
     "2026-05-01  Initial state.md created.\n"
@@ -44,6 +51,8 @@ class TestStateApply(unittest.TestCase):
         (self.repo / "campaign" / "sessions").mkdir(parents=True)
         self.state = self.repo / "campaign" / "state.md"
         self.state.write_text(MINI_STATE, encoding="utf-8")
+        self.clog = self.repo / "campaign" / "state-changelog.md"
+        self.clog.write_text(MINI_CHANGELOG, encoding="utf-8")
         (self.repo / "campaign" / "sessions" / "2026-05-03_session-3.md").write_text(
             MINI_SESSION, encoding="utf-8")
         subprocess.run(["git", "-C", str(self.repo), "init", "-q", "-b", "main"], check=True)
@@ -64,18 +73,24 @@ class TestStateApply(unittest.TestCase):
         # 1. migrazione marker (idempotente)
         self.assertEqual(self._run("--migrate", "--no-guard"), 0)
         text = self.state.read_text(encoding="utf-8")
-        self.assertEqual(set(find_regions(text)), {"march-clock", "changelog"})
+        clog = self.clog.read_text(encoding="utf-8")
+        # ADR-0017: le due regioni vivono ora in due file distinti.
+        self.assertEqual(set(find_regions(text)), {"march-clock"})
+        self.assertEqual(set(find_regions(clog)), {"changelog"})
         self.assertEqual(self._run("--migrate", "--no-guard"), 0)  # 2° run: no-op
         self.assertEqual(text, self.state.read_text(encoding="utf-8"))
+        self.assertEqual(clog, self.clog.read_text(encoding="utf-8"))
 
         subprocess.run(["git", "-C", str(self.repo), "commit", "-aqm", "markers"],
                        check=True)
 
         # 2. --check non scrive
         before = self.state.read_text(encoding="utf-8")
+        clog_before = self.clog.read_text(encoding="utf-8")
         self.assertEqual(self._run("--session", "2026-05-03_session-3.md",
                                    "--check", "--yes", "--no-guard"), 0)
         self.assertEqual(before, self.state.read_text(encoding="utf-8"))
+        self.assertEqual(clog_before, self.clog.read_text(encoding="utf-8"))
 
         # 3. applicazione reale
         self.assertEqual(self._run("--session", "2026-05-03_session-3.md",
@@ -83,23 +98,31 @@ class TestStateApply(unittest.TestCase):
         after = self.state.read_text(encoding="utf-8")
         self.assertIn("**Current March Day:** **20**", after)
         self.assertIn("**22**", after)                       # 42 - 20
-        self.assertIn("March Clock Day 19 → Day 20", after)  # changelog
         self.assertIn("prosa che non si tocca MAI", after)
-        self.assertIn("2026-05-01  Initial state.md created.", after)
+        # lo storico è finito nel SUO file, non in state.md
+        clog_after = self.clog.read_text(encoding="utf-8")
+        self.assertIn("March Clock Day 19 → Day 20", clog_after)
+        self.assertNotIn("March Clock Day 19 → Day 20", after)
+        self.assertIn("2026-05-01  Initial state.md created.", clog_after)
 
-        # 4. la prosa fuori dalle regioni è byte-identica
+        # 4. la prosa fuori dalle regioni è byte-identica — in ENTRAMBI i file
         regs_b, regs_a = find_regions(before), find_regions(after)
         self.assertEqual(before[:regs_b["march-clock"].start],
                          after[:regs_a["march-clock"].start])
-        self.assertEqual(before[regs_b["changelog"].end:],
-                         after[regs_a["changelog"].end:])
+        self.assertEqual(before[regs_b["march-clock"].end:],
+                         after[regs_a["march-clock"].end:])
+        cb, ca = find_regions(clog_before), find_regions(clog_after)
+        self.assertEqual(clog_before[:cb["changelog"].start],
+                         clog_after[:ca["changelog"].start])
+        self.assertEqual(clog_before[cb["changelog"].end:],
+                         clog_after[ca["changelog"].end:])
 
         # 5. idempotenza: ri-applicare la stessa sessione non duplica nulla
         subprocess.run(["git", "-C", str(self.repo), "commit", "-aqm", "apply"],
                        check=True)
         self.assertEqual(self._run("--session", "2026-05-03_session-3.md",
                                    "--yes", "--no-guard"), 0)
-        again = self.state.read_text(encoding="utf-8")
+        again = self.clog.read_text(encoding="utf-8")
         self.assertEqual(again.count("March Clock Day 19 → Day 20"), 1)
 
     def test_guard_blocks_main(self):

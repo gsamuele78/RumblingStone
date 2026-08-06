@@ -43,6 +43,9 @@ from dmcore.regions import RegionError, find_regions, replace_region, wrap  # no
 from state_sync import extract_events, _suggest  # noqa: E402
 
 STATE_REL = Path("campaign") / "state.md"
+# Lo storico è uscito da state.md §8 il 2026-08-05 (ADR-0017): la regione
+# `changelog` vive ora nel proprio file, e `state_apply` la segue lì.
+CHANGELOG_REL = Path("campaign") / "state-changelog.md"
 SESSIONS_REL = Path("campaign") / "sessions"
 
 #: Day di arrivo dell'orda a Rethmar (waypoint finale §2.1 — canone RHoD adattato).
@@ -76,20 +79,27 @@ def migrate(text: str) -> "tuple[str, list[str]]":
         text = text[:start] + wrap("march-clock", text[start:end]) + "\n" + text[end:]
         added.append("march-clock")
 
-    existing = find_regions(text)
-    if "changelog" not in existing:
-        h = re.search(r"^##\s*8\.\s*Changelog.*$", text, re.M)
-        if not h:
-            raise RegionError("sezione '## 8. Changelog' non trovata: "
-                              "impossibile migrare la regione changelog")
-        fences = [f for f in FENCE_RE.finditer(text, h.end())]
-        if len(fences) < 2:
-            raise RegionError("blocco ``` del changelog non trovato dopo §8")
-        start = fences[0].start()
-        end = text.find("\n", fences[1].end()) + 1
-        text = text[:start] + wrap("changelog", text[start:end]) + "\n" + text[end:]
-        added.append("changelog")
+    return text, added
 
+
+def migrate_changelog(text: str) -> "tuple[str, list[str]]":
+    """Avvolge nel marker `changelog` l'ULTIMO blocco fenced di
+    `campaign/state-changelog.md`. Idempotente.
+
+    Lo storico è uscito da `state.md` §8 con ADR-0017; la semantica di
+    append resta identica, cambia solo il file che la ospita.
+    """
+    added: list[str] = []
+    if "changelog" in find_regions(text):
+        return text, added
+    fences = list(FENCE_RE.finditer(text))
+    if len(fences) < 2:
+        raise RegionError("nessun blocco ``` in state-changelog.md: "
+                          "impossibile migrare la regione changelog")
+    start = fences[-2].start()
+    end = text.find("\n", fences[-1].end()) + 1
+    text = text[:start] + wrap("changelog", text[start:end]) + "\n" + text[end:]
+    added.append("changelog")
     return text, added
 
 
@@ -177,6 +187,9 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
 
     text = state_path.read_text(encoding="utf-8")
     original = text
+    clog_path = repo / CHANGELOG_REL
+    clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
+    clog_original = clog
     applied: list[str] = []
     manual: list[str] = []
     session_label = f"sessione {ev['date']} ({ev['file']})"
@@ -210,29 +223,37 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
     if applied:
         entry = (f"{date.today().isoformat()}  {session_label}: "
                  + "; ".join(applied) + " (state_apply).")
-        try:
-            candidate = append_changelog(text, entry)
-            print("\n[apply] proposta changelog §8:")
-            print(_diff(text, candidate, str(STATE_REL)))
-            if _confirm("[apply] appendo al changelog?", assume_yes):
-                text = candidate
-        except RegionError as exc:
-            print(f"[apply] ⚠ changelog non applicabile ({exc}) — aggiorna §8 a mano")
+        if clog is None:
+            print(f"[apply] ⚠ {CHANGELOG_REL} assente — annota lo storico a mano")
+        else:
+            try:
+                candidate = append_changelog(clog, entry)
+                print(f"\n[apply] proposta storico ({CHANGELOG_REL}):")
+                print(_diff(clog, candidate, str(CHANGELOG_REL)))
+                if _confirm("[apply] appendo allo storico?", assume_yes):
+                    clog = candidate
+            except RegionError as exc:
+                print(f"[apply] ⚠ storico non applicabile ({exc}) — "
+                      f"aggiorna {CHANGELOG_REL} a mano")
 
     if manual:
         print("\n[apply] proposte NON meccaniche — applicale a mano in state.md:")
         for line in manual:
             print(line)
 
-    if text == original:
+    if text == original and clog == clog_original:
         print("\n[apply] ✓ niente da scrivere (già allineato o tutto rifiutato)")
         return 0
     if check:
         print("\n[apply] --check: nessuna scrittura eseguita")
         return 0
 
-    state_path.write_text(text, encoding="utf-8")
-    print(f"\n[apply] ✓ scritto {state_path}")
+    if text != original:
+        state_path.write_text(text, encoding="utf-8")
+        print(f"\n[apply] ✓ scritto {state_path}")
+    if clog is not None and clog != clog_original:
+        clog_path.write_text(clog, encoding="utf-8")
+        print(f"[apply] ✓ scritto {clog_path}")
     if do_commit:
         sha = gitio.commit_paths(
             repo, [str(STATE_REL)],
@@ -261,17 +282,23 @@ def main(argv: "list[str] | None" = None) -> int:
 
     if args.migrate:
         state_path = repo / STATE_REL
+        clog_path = repo / CHANGELOG_REL
         text = state_path.read_text(encoding="utf-8")
+        clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
         try:
             new_text, added = migrate(text)
+            new_clog, added_c = (migrate_changelog(clog) if clog is not None else (None, []))
         except RegionError as exc:
             print(f"[apply] ✗ migrazione fallita: {exc}", file=sys.stderr)
             return 1
+        added = added + added_c
         if not added:
             print("[apply] ✓ marker già presenti — niente da fare")
             return 0
         if args.check:
             print(_diff(text, new_text, str(STATE_REL)))
+            if new_clog is not None:
+                print(_diff(clog, new_clog, str(CHANGELOG_REL)))
             print("[apply] --check: nessuna scrittura eseguita")
             return 0
         if not args.no_guard:
@@ -283,9 +310,11 @@ def main(argv: "list[str] | None" = None) -> int:
                 print(f"[apply] ✗ {exc}", file=sys.stderr)
                 return 1
         state_path.write_text(new_text, encoding="utf-8")
+        if new_clog is not None and added_c:
+            clog_path.write_text(new_clog, encoding="utf-8")
         print(f"[apply] ✓ marker inseriti: {', '.join(added)}")
         if args.commit:
-            sha = gitio.commit_paths(repo, [str(STATE_REL)],
+            sha = gitio.commit_paths(repo, [str(STATE_REL), str(CHANGELOG_REL)],
                                      "state: migrazione marker auto: (ADR-0007)")
             print(f"[apply] ✓ commit {sha}" if sha else "[apply] (nulla da committare)")
         return 0
