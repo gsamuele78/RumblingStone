@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**41 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**43 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -75,9 +75,11 @@
 | `dm.py` | Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. | **prep|post|session|recap|handout|maps|hype|dossier|skills|doctor** | ✔ | ✔ | ✔ | `0` · `1` · `2` |
 | `install-git-hooks.sh` | Installa gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009). | — | ✔ | — | — | `0` · `1` |
 | `new-campaign-group.sh` | Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template. | **new-group-name** · --backup-current | ✔ | ✔ | ✔ | `0` · `1` |
+| `render_state.py` | Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift. | --check · --stdout | ✔ | ✔ | — | `0` · `1` · `2` |
 | `tools_manifest.py` | Fonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json. | --check · --emit-all · --render-md · --emit-mcp | ✔ | — | — | `0` · `1` · `2` |
 | `validate_docs.py` | Gate CI: verifica che i percorsi citati in AGENTS.md/README.md/docs/INDEX.md esistano davvero (anti-deriva doc<->filesystem, finding T4). | --doc · --verbose · --json | ✔ | — | — | `0` · `1` · `2` |
 | `validate_modules.py` | Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard. | --verbose · --json | ✔ | — | — | `0` · `1` |
+| `validate_state.py` | Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato). | --file · --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
 
 ## I · Convertitori di contenuto
 

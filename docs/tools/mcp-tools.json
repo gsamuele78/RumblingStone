@@ -1197,6 +1197,35 @@
       "deterministic": true
     },
     {
+      "name": "render_state",
+      "description": "Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift.",
+      "invocation": "python3 scripts/render_state.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Verifica l'allineamento senza scrivere (gate CI)."
+          },
+          "stdout": {
+            "type": "boolean",
+            "description": "Stampa le regioni generate senza toccare i file."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "campaign/state.md"
+      ],
+      "exit_codes": {
+        "0": "allineato / rigenerato",
+        "1": "drift (--check) o regioni assenti",
+        "2": "errore d'uso o pyyaml mancante"
+      },
+      "deterministic": true
+    },
+    {
       "name": "tools_manifest",
       "description": "Fonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json.",
       "invocation": "python3 scripts/tools_manifest.py",
@@ -1293,6 +1322,39 @@
       "exit_codes": {
         "0": "master conformi",
         "1": "violazioni checklist"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_state",
+      "description": "Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato).",
+      "invocation": "python3 scripts/validate_state.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "File di stato da validare."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Conteggio per sezione + elenco [INFERRED]."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "stato valido",
+        "1": "violazioni di schema o coerenza",
+        "2": "errore d'uso o pyyaml mancante"
       },
       "deterministic": true
     },

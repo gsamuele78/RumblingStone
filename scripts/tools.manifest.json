@@ -3015,6 +3015,167 @@
       ]
     },
     {
+      "id": "validate_state",
+      "path": "scripts/validate_state.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_state.py",
+      "summary": "Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato).",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_deps": [
+        "pyyaml"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File di stato da validare."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Conteggio per sezione + elenco [INFERRED]."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "stato valido",
+        "1": "violazioni di schema o coerenza",
+        "2": "errore d'uso o pyyaml mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/campaign_state.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_state.py",
+      "tests": [
+        "scripts/tests/test_state_data.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
+      ]
+    },
+    {
+      "id": "render_state",
+      "path": "scripts/render_state.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/render_state.py",
+      "summary": "Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_deps": [
+        "pyyaml"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica l'allineamento senza scrivere (gate CI)."
+        },
+        {
+          "name": "--stdout",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa le regioni generate senza toccare i file."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/state.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "allineato / rigenerato",
+        "1": "drift (--check) o regioni assenti",
+        "2": "errore d'uso o pyyaml mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "output byte-identico a parità di state.yaml"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/campaign_state.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/render_state.py --check",
+      "tests": [
+        "scripts/tests/test_state_data.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
+      ]
+    },
+    {
       "id": "new-campaign-group",
       "path": "scripts/new-campaign-group.sh",
       "category": "G-orchestration-governance",

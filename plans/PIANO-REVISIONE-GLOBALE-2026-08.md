@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2 chiusi (2026-08-05)
+## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis chiusi (2026-08-05)
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -83,6 +83,33 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       (senza quella via d'uscita il gate impedirebbe di documentare i propri
       errori). Manifest + registry rigenerati (41 tool), **10 test nuovi**
       (80 totali), step **bloccante** in CI + smoke `--help`.
+- [x] **G2-bis — `state.yaml`: i fatti come dati validati, la prosa in markdown** *(rinforzo strutturale di C1 — [ADR-0017](adr/ADR-0017-stato-dati-e-prosa.md))* — ✅ **eseguito 2026-08-05**
+      *Origine*: domanda del DM — «non sarebbe meglio un formato meno prono alle
+      allucinazioni, e i changelog in un file separato?». Misurato prima di
+      decidere: `state.md` era **1677 righe, di cui 1150 (68%) di changelog**; del
+      contenuto vivo, **215 righe tabellari e 234 di prosa**. Da qui la scelta
+      **ibrida** invece della conversione integrale: convertire la prosa in JSON
+      avrebbe perso leggibilità **senza guadagnare nulla** contro le allucinazioni.
+      **YAML e non JSON**: JSON non ammette commenti, e il file è fatto di
+      annotazioni datate; il repo ha già 5 file dati YAML.
+      **Il vincolo che chiude C1 alla radice**: nello schema `oggi` è obbligatoria
+      e `tempo: giocato|in_corso|preparato` pure — **un fatto senza tempo dichiarato
+      non è esprimibile**. G1 l'aveva risolto per convenzione; qui è il file a non
+      passare il gate. Limite dichiarato nell'ADR: lo schema vincola la *forma*,
+      non la *verità* — impedisce quella classe di errore, non le allucinazioni.
+      **Un master, mai due**: le tabelle §0/§1/§6 di `state.md` sono **generate**
+      da `render_state.py` dentro regioni marcate. Il lotto è stato eseguito tutto
+      insieme proprio per questo: creare `state.yaml` senza il rendering avrebbe
+      prodotto una seconda fonte di verità, cioè il finding **C2** appena chiuso.
+      **Split dello storico**: `campaign/state-changelog.md`, append-only.
+      **`state.md` passa da 1677 a 546 righe.**
+      `[INFERRED]` diventa **record tipizzato** (`id`, `dove`, `domanda`, `a_chi`,
+      `aperto_dal`): le due domande aperte di G1 sono ora INF-001 e INF-002, con la
+      domanda già formulata per il DM. **Questo cambia il progetto di G4**:
+      l'inventario si legge dai dati invece di estrarlo dal markdown.
+      Migrazione **incrementale**: §3 è il candidato successivo; §2, §4, §5 e §7
+      restano prosa. Due gate **bloccanti** nuovi, 13 test nuovi (80 → **93**).
+
 - [ ] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)*
       Validatore link relativi + path assoluti, con allowlist per gli
       host-relative Homebrewery (`/assets/…`) e i placeholder didattici.

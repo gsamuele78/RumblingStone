@@ -19,7 +19,9 @@ Bestiario/                   # STANDARD library of monsters, villains & NPCs (T-
 
 campaign/
 ├── DM-CAMPAIGN-PLAYBOOK.md  # DM operational guide (workflow + examples + reset)
-├── state.md                 # Living world state (§-1 two-times legend, then §0 dashboard)
+├── state.md                 # Living world state — PROSE + generated tables (§-1 two-times legend)
+├── state.yaml               # Living world state — FACTS, schema-validated (ADR-0017)
+├── state-changelog.md       # Append-only history, split out of state.md (ADR-0017)
 ├── GLOSSARIO-E-LOCALIZZAZIONE.md  # locked glossary / loc kit (ADR-0016)
 ├── sessions/                # Session logs (YYYY-MM-DD_session-N.md)
 ├── recaps/                  # Player-facing recaps (+ homebrew/ layouts)
@@ -154,6 +156,7 @@ CI** by `scripts/validate_modules.py` — 16 requisiti, exit 1 se ne manca uno.
 <!-- validate-docs: ignore-end -->
 6. **DM Strategy & Player Profiles**: For adult-oriented, non-linear sessions (Shine Time, State Machine design), consult `skills/rumblingstone-campaign/references/campaign-dm-strategy.md` (canonical). The lore folder file `campaign/lore/dm-player-strategy.md` is now a pointer to that canonical source.
 7. **Living world state**: Before describing what NPCs know, where parties/villains currently are, or what threads are open, load `campaign/state.md`. It is the single source of truth for *current* world state (changes per session).
+   **Two files, one truth** ([ADR-0017](plans/adr/ADR-0017-stato-dati-e-prosa.md)): the *facts* of §0/§1/§6 live in `campaign/state.yaml`, schema-validated — every fact must declare its **time** (`oggi` = played at the table, `preparato` = written ahead, not yet true). The matching tables in `state.md` are **generated** (`scripts/render_state.py`): edit the YAML, never the table. Prose sections (§5, §7, banners) stay hand-written in `state.md`. History is append-only in `campaign/state-changelog.md`.
 8. **Coherence**: Before introducing artifact powers, NPC knowledge, or callbacks to past PG actions, consult `skills/rumblingstone-campaign/references/campaign-coherence.md`.
 9. **Boosting PNGs/villains/monsters**: The campaign runs on D&D 3.5; Pathfinder 1e SRD material (simple templates, Monster-Statistics-by-CR benchmarks, NPC recipes) is an approved boost toolkit. Always go through `skills/npc-villain-boosting/` — it enforces the EL cap (≤ APL+4), the benchmark step, and the `Boost log:` requirement on named-NPC files. Never boost silently.
 10. **Session lifecycle & canon writes**: Closing a session, updating `state.md`, generating recaps/briefs/teasers, or invoking anything in `scripts/` goes through `skills/rumblingstone-automation/` (single entrypoint `python3 scripts/dm.py`). Scripts may write canon ONLY under the ADR-0007 triple constraint: group branch (never `main`), DM-confirmed diff, and `<!-- auto: -->` marked regions of `state.md`. Everything else stays a printed proposal the DM applies by hand.

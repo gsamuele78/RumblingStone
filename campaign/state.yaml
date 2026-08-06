@@ -1,0 +1,272 @@
+# campaign/state.yaml — FATTI DI CANONE, in forma verificabile
+#
+# Perché questo file esiste (ADR-0017, lotto G2-bis dell'audit 2026-08).
+#   In `state.md` la distinzione fra ciò che è stato GIOCATO e ciò che è solo
+#   PREPARATO era una convenzione di prosa: si poteva dimenticare, e infatti è
+#   stata dimenticata — la §1 Party collocava i PG dopo una battaglia mai
+#   giocata (finding C1). Qui non si può dimenticare: `oggi` e `preparato` sono
+#   CHIAVI, e uno schema le pretende. Un fatto senza tempo non è esprimibile.
+#
+# Cosa NON sta qui: la prosa (§5 promesse, §7 fili narrativi, i banner). Quella
+#   resta in `state.md`, scritta a mano, perché è narrazione e non dati.
+#
+# Come si usa:
+#   - questo file è il MASTER dei fatti di §0, §1 e §6;
+#   - le tabelle corrispondenti in `state.md` sono GENERATE:
+#         python3 scripts/render_state.py            # rigenera
+#         python3 scripts/render_state.py --check    # gate CI: in sync?
+#     non modificarle a mano — la modifica va fatta qui;
+#   - `python3 scripts/validate_state.py` verifica schema e regole.
+#
+# Lo storico non sta qui: vive in `campaign/state-changelog.md` (append-only).
+
+schema_version: 1
+confine:
+  giocato_fino_a: ARC-07 P4 (Piano della Terra) — chiuso al tavolo il 2026-07-31
+  prossima_scena: ARC-07 P3B — resurrezione fisica di Hella
+  da_giocare:
+  - ARC-07 P3B
+  - ARC-07 P5
+  - ARC-07 D16
+  - ARC-08
+  - ARC-09
+  aggiornato: '2026-08-05'
+archi:
+- arco: 00 Setup RHoD
+  tempo: giocato
+  stato: completato
+  march_clock: Day 0
+  pg_livello: '5'
+  note: null
+- arco: 01 Miniera
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '6'
+  note: null
+- arco: 02 Scaladossa-abbattor-funghi
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '7'
+  note: null
+- arco: 03 La Cittadella
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '8'
+  note: null
+- arco: 04 Tomba di Belkram
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '9'
+  note: null
+- arco: 05 Stanza Runica
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '10'
+  note: null
+- arco: 06 Corona di Adamantio
+  tempo: giocato
+  stato: completato
+  march_clock: null
+  pg_livello: '11'
+  note: null
+- arco: 07 Portale della Forgia Eterna
+  tempo: in_corso
+  stato: in corso
+  march_clock: null
+  pg_livello: 13 (D8)
+  note: >-
+    Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito);
+    **in corso: Piano della Terra (P4)**
+- arco: 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni
+  tempo: preparato
+  stato: da giocare
+  march_clock: null
+  pg_livello: '13'
+  note: Si gioca DOPO la Terra (ARC-07 D2); raccordo D16 (Rubino) riporta i PG al 1372, Cuore della Montagna
+    → ARC-08
+- arco: 08 Battaglia di Hammerfist
+  tempo: preparato
+  stato: pianificato — canone preparato, NON giocato
+  march_clock: Day 19 (target sync)
+  pg_livello: 13 (consolida, D9)
+  note: 'Esito atteso: vittoria, Cerimonia 100 Asce, Custodi Eterni (piano ARC-08 §0, E1-E8)'
+- arco: 09 P1A Quest Hellas (Cerchio Sacro)
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 20-30 window
+  pg_livello: '13'
+  note: Deadline Day 30
+- arco: 09 P1B Cerchio Treant
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 22-28
+  pg_livello: '13'
+  note: null
+- arco: 09 P1C Rituale Hellas
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 25-30
+  pg_livello: '13'
+  note: null
+- arco: 09 P2 Rhest (Saarvith + Regiarix)
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 25-32
+  pg_livello: '13'
+  note: -1 drago se fatto
+- arco: 09 P2A Torre Invisibile (Zalkatar)
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 28-35
+  pg_livello: '13'
+  note: -1 drago se fatto
+- arco: 09 P2B Torneo di Dauth (Tordek)
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 25-34
+  pg_livello: '13'
+  note: +300 mercenari nani
+- arco: 09 P2C Salvatore Mercante
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 28-36
+  pg_livello: '13'
+  note: Sal clock 0/6
+- arco: 09 P3 Starsong Hill (Tiri-Kitor)
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 30-35
+  pg_livello: 13-14
+  note: +cavalleria civette
+- arco: 09 P3 Ghostlord
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 25-32
+  pg_livello: 13-14
+  note: '3 branch: ostile/neutralizzato/alleato'
+- arco: 09 P3 Sabotaggio Campi Drow
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 30-36
+  pg_livello: 13-14
+  note: -Fase 0 + -75 esperimenti fungini (45 Servitori + 30 Sporeborn; 8 Guardiani Neri sopravvivono)
+- arco: 09 P3 Missioni Brevi CR12
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 30-38
+  pg_livello: 13-14
+  note: null
+- arco: 09 P3 Battaglia Finale Rethmar
+  tempo: preparato
+  stato: preparato in anticipo
+  march_clock: Day 42
+  pg_livello: '14'
+  note: Fase 0-4
+party:
+- pg: Thorik
+  classe: Dwarf Fighter 13
+  oggi: >-
+    **Sala della Forgia Eterna**, dopo il riposo. Corona: Topazio + Smeraldo accesi, Rituale Legacy 3
+    completato (§6). ⚠️ `[INFERRED — needs DM confirmation]` il «−2 COS permanente» della colonna a destra
+    è il prezzo della **resurrezione di Hella**, che non è ancora avvenuta: va confermato se oggi Thorik
+    porti già un −2 COS da un'altra causa (la sua morte e resurrezione all'Arco 00, §4 riga Norro Wiston)
+    o se il malus non esista ancora
+  preparato: Hammerfist Holds, war council chamber; −2 perm CON sacrificed for Hella's resurrection (NEVER
+    restored)
+  filoni: Decide whether to lead defense of Rethmar personally vs. delegate
+- pg: Tordek
+  classe: Dwarf Fighter 4 / Monk 9
+  oggi: >-
+    **Sala della Forgia Eterna**. **−2 DES / +2 COS permanenti** (ha accettato il Peso del Mondo al rito
+    dello Smeraldo, 2026-07-31 — ricalcolare CA senz'armatura, Riflessi, iniziativa); Bracieri fase Terra
+    completa; **Seme-Mercato di Varis nello zaino, mai toccato** (§7)
+  preparato: Hammerfist → traveling to Dauth Tournament
+  filoni: Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3)
+- pg: Hella
+  classe: Dream Dwarf Ranger 1 / Druid 12
+  oggi: >-
+    ⚠️ **MORTA.** Corpo nella Sala della Forgia Eterna; il viaggio spirituale nell'Incudine del Mondo
+    con Durik è già avvenuto (P3B-spirito, registrato). **La resurrezione fisica (P3B) è la prossima scena
+    da giocare.** Il template Ibrido Treant **non è attivo**
+  preparato: Hammerfist → traveling to Sacred Forest; Treant Hybrid template active post-resurrection
+  filoni: Sacred Forest ritual (pass = druid circle ally at Rethmar)
+- pg: Artemis
+  classe: Human Warlock 13
+  oggi: >-
+    **Sala della Forgia Eterna**. Anello Riforgiato attivo (poteri base pieni, §6); ha estratto il cabochon
+    di Varis **senza toccarlo** — nessun Marchio attivo (§7)
+  preparato: Hammerfist → traveling to Invisible Tower (Dauth region)
+  filoni: Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake
+artefatti:
+- artefatto: Aegis Fang
+  portatore: Thorik
+  oggi: 'Pre-full-awakening: +2 Returning Dwarven Waraxe; bonded'
+  preparato: Unchanged until the Siege (P5) is won → then Stage 1 full awakening (see Aegis master)
+- artefatto: Corona di Adamantio
+  portatore: Thorik
+  oggi: >-
+    ✅ **Topazio + SMERALDO accesi** e **Rituale Legacy 3 «Incudine del Mondo» COMPLETATO** (giocato 2026-07-31).
+    Poteri attivi: Stone's Awareness (incl. traps + comprehend languages), +2 deflection AC, Moradin's
+    Insight, Topazio 1/mese (attivazione 1 ora), **Smeraldo/Terra 1/settimana**, e i due sbloccati dal
+    Rituale 3 — **Adamantine Will** (immune charme/compulsione + 4 razziale vs mentale su pietra) e **Mantle
+    of Stone and Spirit** (**Mind Blank permanente**, RD 5/epico, Comunione 1/mese da un Nodo). ⚠️ Il
+    pegno del Rituale 3 l'ha pagato **Tordek**, non il portatore. Mancano Corona +3, Senzienza e il Rubino:
+    si sbloccano col **Rituale 4** = viaggio a −1.000
+  preparato: 'All 3 gems lit: + Emerald earthquake 1/week; Ruby single-use SPENT at the ancient battle
+    (≈372 DR)'
+- artefatto: Ring of Chaotic Illumination
+  portatore: Artemis
+  oggi: 'Reforged at Eternal Forge: full base powers'
+  preparato: Unchanged; awaits further evolution at Invisible Tower
+- artefatto: Bracieri Gemelli di Moradin
+  portatore: Tordek
+  oggi: >-
+    Fire ✅ + Earth ✅: Salto Infuocato 3/day, Fire Resist 10, DR 5/adamantine, Jump +10; Benedizione della
+    Forgia active (4 charges/day — permanent, DM 2026-07-04); **Ancoraggio della Montagna 2/day** (immediata,
+    nega il movimento forzato). ⭐ **NUOVO 2026-07-31 — «Diventare una Collina»** sbloccato dalla caduta
+    di Terros: taglia Grande 1 min, 1/giorno, **prima attivazione automatica e gratuita** quando uno scontro
+    con una creatura Enorme+ porta Tordek sotto metà pf; dopo, azione di movimento **solo in condizioni
+    di pericolo**
+  preparato: Unchanged
+- artefatto: Cintura della Devastazione (custom PG, D17)
+  portatore: Tordek
+  oggi: >-
+    Active — Devastation Gauntlets (MIC) moved to **belt slot** so wrists stay free for the Bracieri;
+    ~3/day devastation charges (+2d6). Sheet: `PG/Artefatti/Artefatti-Pg/Tordek/00_Cintura_della_Devastazione.md`.
+    Exact values → ARC-07 B5
+  preparato: Unchanged
+- artefatto: Collana dei Semi Eterni
+  portatore: Hella (dead — resurrection pending)
+  oggi: Forged, awaiting the P3B ritual; Hella not yet resurrected
+  preparato: 'Active post-resurrection: Treant summoning (limited), Avatar form (1/day), party gift slots
+    (unspent: 3)'
+- artefatto: Cuore di Moradin
+  portatore: Crown set (altar)
+  oggi: Intact — will be expended as catalyst in the P3B ritual
+  preparato: 'SPENT: single-use expended to resurrect Hella'
+- artefatto: Orbe delle Otto Porte (Githyanki artifact, campaign canon)
+  portatore: Tournament prize, not yet held
+  oggi: Not in play
+  preparato: Awaits Tournament outcome — N/A until Tordek wins
+inferred:
+- id: INF-001
+  dove: party[Thorik].oggi
+  domanda: >-
+    Il −2 COS permanente di Thorik è il prezzo della resurrezione di Hella (non ancora giocata) o è un
+    residuo della sua morte e resurrezione all'Arco 00?
+  a_chi: DM
+  aperto_dal: '2026-08-05'
+  fonte: audit 2026-08, finding C1 (lotto G1)
+- id: INF-002
+  dove: archi[08].march_clock
+  domanda: >-
+    Il Giorno di Marcia è 19 come dichiara §2.1 («Terrelton just fell as Hammerfist ended»), o ~15 come
+    implica l'orologio Hammerfist a 3g 16h? Sposta i numeri di §2.4 e la finestra quest di ARC-09.
+  a_chi: DM
+  aperto_dal: '2026-08-05'
+  fonte: audit 2026-08, finding C1 (lotto G1)
