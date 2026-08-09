@@ -1163,3 +1163,44 @@ entries — they become campaign history.
                 delle quest di Arco 09. Marcato [INFERRED] in 2.
             Fonte: docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md C1/C2.
 ```
+
+```
+2026-08-06  CORREZIONE DI CANONE — il pegno del Rituale 3 e' del PORTATORE.
+            Segnalato dal DM: "Anvil of the World, il rituale e' stato pagato
+            dal portatore, cioe' Thorik e non Tordek". Verificato: ha ragione,
+            ed e' quello che il modulo aveva sempre scritto. ARC07-DEF-1 9,
+            Opzione B: "Thorik accetta il Peso nel corpo... perde
+            permanentemente 2 DES e guadagna permanentemente +2 COS", con la
+            presenza verde (Hella) che si stringe alle SUE spalle.
+            La riassegnazione a Tordek era stata introdotta il 2026-07-31 come
+            "deviazione dal modulo, voluta". Era un refuso, e si era propagato
+            ben oltre "l'unica riga da correggere" che il blocco stesso
+            prometteva.
+            SPOSTATO SU THORIK: -2 DES / +2 COS permanenti. Ricalcolare CA,
+            Riflessi, iniziativa e prove di DES (-1); pf massimi +1/DV,
+            Tempra +1.
+            TORDEK: nessun malus permanente dal rito. CA senz'armatura,
+            Riflessi, iniziativa e Raffica tornano quelli di prima.
+            ⚠️ SUPERSEDE la riga del 2026-08-01 su "Diventare una Collina":
+            diceva che "fra il -2 DES permanente del rito e il -2
+            dell'ingrandimento, da Grande Tordek ha 4 DES in meno". NON e' piu'
+            vero: il rito non gli toglie niente, quindi da Grande ha 2 DES in
+            meno, non 4.
+            ECHI. E-07c passa a Thorik (il portatore paga di persona).
+            E-07e ROVESCIATA: diceva "il portatore guarda un altro reggere il
+            peso" ed esisteva solo grazie all'errore; ora e' Tordek che guarda
+            Thorik pagare senza poter prendere il colpo al posto suo.
+            ⚠️ Da confermare al tavolo: se l'eco cosi' non serve, si cancella.
+            SCHEDA CORONA. La nota 2 raccomandava di considerare il rito
+            completo con DUE argomenti; il secondo ("Moradin se l'e' preso da
+            uno che non porta nemmeno la Corona") e' CADUTO. La
+            raccomandazione resta, ma poggia solo sul primo: si onora quello
+            che il modulo diceva quando e' stato giocato.
+            INF-001 si complica ed e' stata riformulata: Thorik ora porta
+            ANCHE un +2 COS dal rito, quindi va detto se il -2 COS della
+            resurrezione si applica sopra, o se uno dei due non esiste.
+            File toccati: state.yaml (Thorik, Tordek, Corona, INF-001),
+            state.md (intestazione, E-07c, E-07e), ARC07-DEF-1 9,
+            scheda Corona (note 2 e 3), 00-INTRO-DOVE-SIAMO, e i 4 booklet
+            RIGENERATI dai manifest (ADR-0003, mai a mano).
+```

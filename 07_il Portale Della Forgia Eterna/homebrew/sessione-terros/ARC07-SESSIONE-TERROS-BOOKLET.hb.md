@@ -2020,37 +2020,38 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > nessuno si è spogliato dell'equipaggiamento. Il party **non** entra povero a
 > Hammerfist.
 >
-> ⚠️ **Deviazione dal modulo, voluta: il Peso l'ha accettato TORDEK, non
-> Thorik.** La Fase 1 era scritta per il portatore della Corona; al tavolo si è
-> inginocchiato il monaco. *(Se al tavolo era invece Thorik, questa è l'unica
-> riga da correggere, insieme a `state.md` §1.)*
+> ✅ **Esito giocato: il Peso l'ha accettato THORIK, il portatore** — come
+> scrive l'Opzione B qui sopra.
+>
+> 🔁 **Correzione del 2026-08-06.** Dal 2026-07-31 al 2026-08-06 questo blocco
+> diceva l'opposto — «deviazione voluta: si è inginocchiato il monaco» — e
+> attribuiva il pegno a **Tordek**. Era un refuso, segnalato dal DM. La riga che
+> il blocco stesso indicava come «l'unica da correggere» non era l'unica: la
+> lettura sbagliata si era propagata a `state.yaml` (Thorik e Tordek),
+> `state.md` (intestazione e **due echi**, E-07c ed E-07e), alla scheda della
+> Corona e ai booklet. Tutto riportato al portatore.
 >
 > | | Effetto permanente |
 > |---|---|
-> | **TORDEK** | **−2 DES** e **+2 COS**, permanenti. Le articolazioni hanno fatto lega con la pietra |
-> | **Thorik** | nessun cambiamento nuovo (resta il **−2 COS** più vecchio, di un'altra scena) |
+> | **THORIK** | **−2 DES** e **+2 COS**, permanenti. Le articolazioni hanno fatto lega con la pietra |
+> | **Tordek** | nessun cambiamento: il malus non è mai stato suo |
 > | **Bottino** | ✅ **integro**, Cuore di Terros compreso |
 >
-> **Perché funziona meglio così, e come giocarlo.** Tordek è il monaco: la DES
-> è la sua statistica di mestiere (CA senz'armatura, Riflessi, Raffica). Perdere
-> 2 DES per guadagnare 2 COS significa che **ha barattato la propria agilità
-> con la capacità di reggere** — cioè ha smesso di essere quello che schiva ed è
-> diventato quello che sta. Per un monaco è una piccola morte, e per il
-> portatore dei **Bracieri Gemelli** è la cosa più coerente che potesse
-> succedere: *«Incudine e Martello»*, e l'incudine non schiva.
+> **Come giocarlo.** Thorik è il portatore: la Corona gli ha chiesto *«un pezzo
+> di te stesso»* e lui l'ha dato, senza delegarlo. Perdere 2 DES per guadagnare
+> 2 COS è, per chi già fa l'ancora, **diventare ancora più immobile**: più duro
+> da spostare, più lento a schivare. *«Incudine e Martello»*, e l'incudine non
+> schiva — ma qui l'incudine è quella che porta la Corona.
 >
-> - **Ricalcola sulla scheda**: CA senz'armatura, Riflessi, iniziativa, prove di
+> - **Ricalcola sulla scheda di Thorik**: CA, Riflessi, iniziativa, prove di
 >   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**.
-> - **I Bracieri non lo lodano.** Un vecchio fabbro non fa complimenti a chi ha
->   fatto la cosa giusta: la dà per scontata. Al massimo, molto dopo, una riga
->   secca — *«Adesso pesi.»*
-> - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Tordek**:
->   è Hella, e lui **non lo sa**. Per la sua giocatrice è un eco. Non spiegarlo
->   fino al #3 — e quando lo spiegherai, ricordati che è **lui** che ha sentito
->   quelle mani, non Thorik.
-> - **Thorik ha guardato senza poter fare niente.** Il portatore della Corona,
->   quello che regge sempre, questa volta **non ha retto lui**. Vale una riga
->   nella catarsi davanti ad A3 (master #2, §4).
+> - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Thorik**:
+>   è Hella, e lui **non lo sa** — l'asimmetria originale del modulo, intatta.
+>   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3.
+> - **Tordek ha guardato senza poter fare niente.** Il monaco che regge i
+>   Bracieri, quello costruito per prendere i colpi, questa volta **non ha
+>   potuto prenderlo al posto suo**. Vale una riga nella catarsi davanti ad A3
+>   (master #2, §4) — è l'eco E-07e riscritta.
 
 ### FASE 2 — Forgiare la Connessione (3 round, TUTTI insieme) ⭐
 > **QUESTO è il cuore meccanico ed emotivo che era andato perso nella

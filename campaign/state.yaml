@@ -171,7 +171,10 @@ party:
 - pg: Thorik
   classe: Dwarf Fighter 13
   oggi: >-
-    **Sala della Forgia Eterna**, dopo il riposo. Corona: Topazio + Smeraldo accesi, Rituale Legacy 3
+    **Sala della Forgia Eterna**, dopo il riposo. **−2 DES / +2 COS permanenti** — ha accettato il **Peso
+    del Mondo** al Rituale 3 «Incudine del Mondo» (2026-07-31): è il **portatore** a pagare il pegno, come
+    scrive l'Opzione B del modulo. Ricalcolare CA, Riflessi, iniziativa e prove di DES (−1); pf massimi
+    +1/DV e Tempra +1. Corona: Topazio + Smeraldo accesi, Rituale Legacy 3
     completato (§6). ⚠️ `[INFERRED — needs DM confirmation]` il «−2 COS permanente» della colonna a destra
     è il prezzo della **resurrezione di Hella**, che non è ancora avvenuta: va confermato se oggi Thorik
     porti già un −2 COS da un'altra causa (la sua morte e resurrezione all'Arco 00, §4 riga Norro Wiston)
@@ -182,8 +185,9 @@ party:
 - pg: Tordek
   classe: Dwarf Fighter 4 / Monk 9
   oggi: >-
-    **Sala della Forgia Eterna**. **−2 DES / +2 COS permanenti** (ha accettato il Peso del Mondo al rito
-    dello Smeraldo, 2026-07-31 — ricalcolare CA senz'armatura, Riflessi, iniziativa); Bracieri fase Terra
+    **Sala della Forgia Eterna**. ✅ **Nessun malus permanente dal rito**: il Peso del Mondo l'ha accettato
+    **Thorik**, il portatore (correzione DM 2026-08-06 — fino a quella data il pegno era attribuito a Tordek
+    per errore). CA senz'armatura, Riflessi, iniziativa e Raffica restano quelli di prima. Bracieri fase Terra
     completa; **Seme-Mercato di Varis nello zaino, mai toccato** (§7)
   preparato: Hammerfist → traveling to Dauth Tournament
   filoni: Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3)
@@ -214,8 +218,8 @@ artefatti:
     Poteri attivi: Stone's Awareness (incl. traps + comprehend languages), +2 deflection AC, Moradin's
     Insight, Topazio 1/mese (attivazione 1 ora), **Smeraldo/Terra 1/settimana**, e i due sbloccati dal
     Rituale 3 — **Adamantine Will** (immune charme/compulsione + 4 razziale vs mentale su pietra) e **Mantle
-    of Stone and Spirit** (**Mind Blank permanente**, RD 5/epico, Comunione 1/mese da un Nodo). ⚠️ Il
-    pegno del Rituale 3 l'ha pagato **Tordek**, non il portatore. Mancano Corona +3, Senzienza e il Rubino:
+    of Stone and Spirit** (**Mind Blank permanente**, RD 5/epico, Comunione 1/mese da un Nodo). Il
+    pegno del Rituale 3 l'ha pagato **il portatore, Thorik** (−2 DES / +2 COS permanenti), come previsto dall'Opzione B del modulo. Mancano Corona +3, Senzienza e il Rubino:
     si sbloccano col **Rituale 4** = viaggio a −1.000
   preparato: 'All 3 gems lit: + Emerald earthquake 1/week; Ruby single-use SPENT at the ancient battle
     (≈372 DR)'

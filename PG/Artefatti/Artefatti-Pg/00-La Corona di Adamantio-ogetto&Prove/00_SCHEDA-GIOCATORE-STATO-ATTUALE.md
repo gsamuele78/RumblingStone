@@ -66,16 +66,26 @@ e Spirito*. La scheda `02_Corona_2_Gemme.html` aveva solo il primo — corretto.
 stata pagata **solo la metà personale**.
 
 > **Decisione consigliata: il rito vale come completo.** Si onora quello che il
-> modulo diceva quando è stato giocato. E in-fiction regge meglio del
-> pareggio contabile: Moradin aveva chiesto *«un pezzo di te stesso»*, e se
-> l'è preso da uno che **non porta nemmeno la Corona**. Non è uno sconto —
-> è un debito. `[se preferisci l'altra lettura, il rito resta a metà e i due
-> poteri non si sbloccano finché non pagano i 40.500 mo]`
+> modulo diceva quando è stato giocato. `[se preferisci l'altra lettura, il
+> rito resta a metà e i due poteri non si sbloccano finché non pagano i
+> 40.500 mo]`
+>
+> ⚠️ *Corretto il 2026-08-06*: questa raccomandazione poggiava anche su un
+> secondo argomento — «Moradin se l'è preso da uno che non porta nemmeno la
+> Corona» — che **è caduto** con la correzione della nota 3. A pagare è stato il
+> portatore, quindi resta in piedi solo il primo argomento.
 
-**3. A pagare non è stato il portatore.** Il pegno l'ha versato **Tordek**
-(−2 DES / +2 COS permanenti), non Thorik. Il testo di Moradin al Rituale 3
-parla al portatore. Tienilo: è l'eco **E-07e** in `state.md` §7.E, e la Corona
-adesso porta addosso un prezzo pagato da un altro.
+**3. A pagare è stato il portatore. 🔁 Corretto il 2026-08-06.** Il pegno l'ha
+versato **Thorik** (−2 DES / +2 COS permanenti), come vuole l'Opzione B del
+modulo e come parla il testo di Moradin, che si rivolge al portatore.
+
+> Dal 2026-07-31 al 2026-08-06 questa nota diceva il contrario — che aveva
+> pagato **Tordek** — e su quell'errore erano state costruite due cose: l'eco
+> **E-07e** («il portatore guarda un altro reggere il peso») e la giustificazione
+> in nota 2 («se l'è preso da uno che non porta nemmeno la Corona»). Segnalato
+> dal DM come refuso. E-07e è stata **rovesciata** (ora è Tordek che guarda), e
+> la nota 2 regge ancora, ma **solo** sull'altro argomento: si onora quello che
+> il modulo diceva quando è stato giocato.
 
 **Non ancora sbloccati** (Rituale 4, «Assedio della Forgia Eterna» = il viaggio
 a −1.000): **Corona di Protezione +3**, **Senzienza**, **Rubino**.

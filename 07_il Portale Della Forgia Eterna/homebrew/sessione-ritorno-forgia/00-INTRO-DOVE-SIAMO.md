@@ -34,10 +34,10 @@ Hammerfist preme sul riposo. Nessun nemico, nessun combattimento.
   (Terra), forgiato contro Terros**. Manca solo il Rubino.
 - **Bottino intatto** `[canone giocato]`: al rito **nessuno si è spogliato**.
   Geode Titanico, **Cuore di Terros** e geodi sono ancora del party.
-- **TORDEK ha accettato il Peso nel corpo**: **−2 DES / +2 COS permanenti**.
-  Per un monaco è una piccola morte — CA senz'armatura, Riflessi e iniziativa
-  scendono di 1 — e per il portatore dei Bracieri è la cosa più coerente che
-  potesse succedere. **I Bracieri non l'hanno lodato**: un vecchio fabbro dà
+- **THORIK ha accettato il Peso nel corpo**: **−2 DES / +2 COS permanenti**
+  *(corretto 2026-08-06: il pegno è del portatore, non di Tordek)*.
+  Per chi fa già l'ancora è diventare ancora più immobile — CA, Riflessi e
+  iniziativa scendono di 1, i pf salgono. **I Bracieri non l'hanno lodato**: un vecchio fabbro dà
   per scontata la cosa giusta. Terros è caduto, quindi la condizione del potere
   «Diventare una Collina» è **sbloccata** `[TODO aperto sulla sua scheda]`.
   Porta inoltre nello zaino il **Seme-Mercato di Varis**, e **non sa cosa sia**.
