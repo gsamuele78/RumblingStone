@@ -81,7 +81,7 @@ Severità: 🔴 alta (blocca qualità o induce errori al tavolo) · 🟠 media �
 |---|---|---|
 | **E1** | **Non esiste un PRD.** Il repo non dichiara per chi produce, quali sono le classi di deliverable, e quando un deliverable è «finito». `rumblingstone-module-standard` è l'unica definizione-di-fatto e copre una sola classe (i master DEF) | 🔴 |
 | **E2** | Lo standard editoriale nasce **dopo** il 93% del corpus e **nessun gate lo verifica**: `validate_modules.py` controlla la struttura (16 sezioni), non la prosa | 🟠 |
-| **E3** | Un deliverable di pubblicazione è **rotto in produzione**: `PALIO-BOOKLET.hb.md` referenzia 13 asset inesistenti; 4 file contengono path assoluti `/home/jfs/...` | 🟠 | <!-- validate-links: ignore -->
+| **E3** | Un deliverable di pubblicazione è **rotto in produzione**: `PALIO-BOOKLET.hb.md` esce con 13 immagini rotte; 4 file contengono path assoluti `/home/jfs/...`. ⚠️ *Errata 2026-08-09: gli asset esistevano — era il generatore che non rebasava i percorsi. Corretto nel generatore.* | 🟠 | <!-- validate-links: ignore -->
 | **E4** | Il glossario bloccato è un contratto **senza applicazione**: nessun controllo confronta i nomi nuovi con `GLOSSARIO-E-LOCALIZZAZIONE.md` | 🟢 |
 
 ### Asse C — Coerenza, flusso, storia

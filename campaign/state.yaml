@@ -172,15 +172,18 @@ party:
   classe: Dwarf Fighter 13
   oggi: >-
     **Sala della Forgia Eterna**, dopo il riposo. **−2 DES / +2 COS permanenti** — ha accettato il **Peso
-    del Mondo** al Rituale 3 «Incudine del Mondo» (2026-07-31): è il **portatore** a pagare il pegno, come
-    scrive l'Opzione B del modulo. Ricalcolare CA, Riflessi, iniziativa e prove di DES (−1); pf massimi
-    +1/DV e Tempra +1. Corona: Topazio + Smeraldo accesi, Rituale Legacy 3
-    completato (§6). ⚠️ `[INFERRED — needs DM confirmation]` il «−2 COS permanente» della colonna a destra
-    è il prezzo della **resurrezione di Hella**, che non è ancora avvenuta: va confermato se oggi Thorik
-    porti già un −2 COS da un'altra causa (la sua morte e resurrezione all'Arco 00, §4 riga Norro Wiston)
-    o se il malus non esista ancora
+    del Mondo** al **rito dello Smeraldo** (2026-07-31): il **secondo rito celebrato al tavolo** dopo la
+    Prova della Sala Profonda, che il modulo numera **Rituale 3 «Incudine del Mondo»** contando anche il
+    Risveglio. È il **portatore** a pagare il pegno, come scrive l'Opzione B. Ricalcolare CA, Riflessi,
+    iniziativa e prove di DES (−1); pf massimi +1/DV e Tempra +1. Corona: Topazio + Smeraldo accesi,
+    Rituale Legacy 3 completato (§6). ✅ **Oggi Thorik NON ha nessun −2 COS**: quel malus è il prezzo del
+    Dono «Il Sangue della Stirpe» al rito di Hella (`ARC07-DEF-3` §5 e §0-bis), **scena non ancora
+    giocata** — la colonna «preparato» lo dà per pagato perché racconta il dopo. ⚠️ Quando si giocherà, il
+    −2 COS **si somma al +2 COS di questo rito**: netto zero sulla COS, cioè due pegni permanenti per
+    tornare al punto di partenza. È una scelta di tavolo, non una somma da fare d'ufficio — vedi il
+    «bilancio di Thorik» sulla scheda DM della Corona e le tre alternative del Dono 1.
   preparato: Hammerfist Holds, war council chamber; −2 perm CON sacrificed for Hella's resurrection (NEVER
-    restored)
+    restored) — da leggere come SOPRA il +2 COS del rito dello Smeraldo, non al posto suo
   filoni: Decide whether to lead defense of Rethmar personally vs. delegate
 - pg: Tordek
   classe: Dwarf Fighter 4 / Monk 9
@@ -214,7 +217,9 @@ artefatti:
 - artefatto: Corona di Adamantio
   portatore: Thorik
   oggi: >-
-    ✅ **Topazio + SMERALDO accesi** e **Rituale Legacy 3 «Incudine del Mondo» COMPLETATO** (giocato 2026-07-31).
+    ✅ **Topazio + SMERALDO accesi** e **Rituale Legacy 3 «Incudine del Mondo» COMPLETATO** (giocato 2026-07-31;
+    al tavolo è il **secondo rito celebrato**, dopo la Prova della Sala Profonda — la numerazione 3 è quella
+    del modulo, che conta anche il Risveglio).
     Poteri attivi: Stone's Awareness (incl. traps + comprehend languages), +2 deflection AC, Moradin's
     Insight, Topazio 1/mese (attivazione 1 ora), **Smeraldo/Terra 1/settimana**, e i due sbloccati dal
     Rituale 3 — **Adamantine Will** (immune charme/compulsione + 4 razziale vs mentale su pietra) e **Mantle
@@ -258,14 +263,6 @@ artefatti:
   oggi: Not in play
   preparato: Awaits Tournament outcome — N/A until Tordek wins
 inferred:
-- id: INF-001
-  dove: party[Thorik].oggi
-  domanda: >-
-    Il −2 COS permanente di Thorik è il prezzo della resurrezione di Hella (non ancora giocata) o è un
-    residuo della sua morte e resurrezione all'Arco 00?
-  a_chi: DM
-  aperto_dal: '2026-08-05'
-  fonte: audit 2026-08, finding C1 (lotto G1)
 - id: INF-002
   dove: archi[08].march_clock
   domanda: >-
@@ -301,6 +298,18 @@ inferred:
   a_chi: DM
   aperto_dal: '2026-08-05'
   fonte: lotto G2-ter
+- id: INF-006
+  dove: party[Thorik].oggi
+  domanda: >-
+    Il DM riferisce che Thorik porta un **−2 DES anteriore alla Corona**, indipendente dal rito dello
+    Smeraldo. Nel repo non c'è traccia dell'evento che lo ha causato — e non c'è nessuna scheda di Thorik
+    (Tordek, Artemis e Hella ne hanno una sotto `PG/Artefatti/Artefatti-Pg/`, lui no). L'unico riscontro
+    indiretto è la lista d'iniziativa del Piano del Fuoco (`PortaleForgia-P3-PianoFuoco-PARTE1.md`, prima
+    del rito) che dà Thorik a **DES +0**, compatibile con una DES già ridotta. Da dove viene quel −2, e
+    conviene metterlo a canone qui portando la scheda di Thorik nel repo?
+  a_chi: DM
+  aperto_dal: '2026-08-09'
+  fonte: verifica 2026-08-09 richiesta dal DM (storici della Corona + push)
 villain:
 - villain: Sonjak (Drow Cleric Matrona) — also "Matrona Sajak" in Sal's operative code
   tempo: giocato

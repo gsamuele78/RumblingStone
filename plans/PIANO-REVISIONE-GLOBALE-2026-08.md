@@ -12,7 +12,7 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis/ter/quater chiusi; **G3 chiuso salvo la decisione sui 13 asset Palio** (2026-08-06)
+## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis/ter/quater chiusi; **G3 chiuso del tutto** (2026-08-09: la decisione A1 è caduta, era un bug del generatore) + due correzioni di canone su segnalazione del DM
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -164,7 +164,7 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       **Non deciso qui**: branch-per-gruppo vs directory-per-gruppo — dipende da
       **G5**, ed è la seconda decisione che si incaglia lì.
 
-- [x] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)* — ✅ **eseguito 2026-08-06** (salvo decisione A1)
+- [x] **G3 — `validate_links.py` + riparazione link e path locali** *(E3 — 🟠)* — ✅ **eseguito 2026-08-06**, **chiuso del tutto il 2026-08-09**
       Nuovo gate **bloccante** su **tutti** i `.md` del repo: link relativi rotti
       **e** percorsi assoluti della macchina di chi scrive. Su 597 file trovava
       **18 link rotti e 25 percorsi assoluti**.
@@ -182,11 +182,20 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       `.png` mentre il riferimento diceva `.webp`. Più **un bug mio di G2-quater**:
       il link in `chronicle-blank.md` era relativo alla *destinazione* e non alla
       posizione del template.
-      **I 13 asset del Palio restano aperti** (decisione A1 in
-      [`docs/audit/DECISIONI-APERTE.md`](../docs/audit/DECISIONI-APERTE.md)):
-      marcati per non falsare il gate, con una **nota in testa al booklet che
-      dichiara il debito** e un test che fallisce se quella nota sparisce senza
-      che il problema sia risolto. 44 tool a manifest, 10 test nuovi (109 → **119**). <!-- validate-links: ignore -->
+      **I 13 asset del Palio: la diagnosi era sbagliata** — errata del
+      2026-08-09. Non erano «mai prodotti»: sono tutti in
+      `09_…/P2D-Palio-Allegati/`, e ci sono sempre stati. I capitoli vivono in
+      `09_…/`, il booklet si genera in `09_…/homebrew/`, e la via `.hb.md`
+      copiava i percorsi relativi **senza rebasarli sulla cartella d'uscita**.
+      ⚠️ **La toppa era peggio del difetto**: G3 aveva incollato
+      `validate-links: ignore` **dentro il `.hb.md` generato** — cioè a mano su
+      un artefatto, contro ADR-0003 — zittendo il gate invece di guardare il
+      generatore; alla prima rigenerazione le direttive sono sparite e i 13 link
+      sono tornati. Corretto in `build_booklet_html.py`
+      (`rebase_relative_links()`), 6 test di regressione, decisione A1 **caduta**.
+      **Regola che resta**: un gate che dà fastidio si crede prima di metterlo a
+      tacere, e un artefatto generato non si tocca mai a mano.
+      44 tool a manifest, 15 test nuovi (109 → **125**). <!-- validate-links: ignore -->
 - [ ] **G4 — Inventario `[INFERRED]` + ratchet** *(C4 — 🟠)*
       `scripts/inventory_inferred.py` → `docs/audit/INFERRED-INVENTARIO.md`
       raggruppato per file/tema/domanda-al-DM, così che il DM possa smaltirli a
@@ -294,7 +303,7 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
 |---|---|---|
 | 1 | Destinatari e ambizione editoriale: solo tavolo? anche DM terzi? edizione pubblica? | G5 → e a cascata G7, G9 |
 | 2 | Confini di contenuto del tavolo e strumento di stop condiviso | G6 |
-| 3 | I 13 asset del `PALIO-BOOKLET`: produrli o rimuovere i riferimenti? | chiusura di G3 |
+| ~~3~~ | ~~I 13 asset del `PALIO-BOOKLET`~~ — ✅ **caduta il 2026-08-09**: gli asset esistevano, non li raggiungeva il generatore | — |
 | 4 | Intervista di ricostruzione, arco per arco | G11 |
 | 5 | Prima sessione reale col flusso `dm.py session end` | G10 |
 

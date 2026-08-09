@@ -1628,7 +1628,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non
 > torna Hella (#3).**
 
-> ### ✅ CANONE GIOCATO (DM 2026-07-31, rettifica) — scelta B: il PESO NEL CORPO, e lo prende TORDEK
+> ### ✅ CANONE GIOCATO (DM 2026-07-31, rettifica) — scelta B: il PESO NEL CORPO, e lo prende THORIK
 >
 > **Nessun sacrificio materiale.** Il bottino dell'arco è **intatto**: Geode
 > Titanico, **Cuore di Terros**, residuo golem e geodi restano al party, e
@@ -1662,11 +1662,19 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 >   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**.
 > - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Thorik**:
 >   è Hella, e lui **non lo sa** — l'asimmetria originale del modulo, intatta.
->   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3.
-> - **Tordek ha guardato senza poter fare niente.** Il monaco che regge i
->   Bracieri, quello costruito per prendere i colpi, questa volta **non ha
->   potuto prenderlo al posto suo**. Vale una riga nella catarsi davanti ad A3
->   (master #2, §4) — è l'eco E-07e riscritta.
+>   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3. È l'eco
+>   **E-07f** in `state.md` §7.E, ed è la più forte che esca da questa scena.
+> - **Che cosa cambia davvero per Thorik.** La DES era già la sua statistica
+>   povera (al Piano del Fuoco tirava iniziativa a **DES +0**): il −2 non gli
+>   toglie niente che il tavolo possa vedere, mentre il +2 COS lo rende
+>   *migliore* nell'unica cosa per cui lo misurano. **Ha pagato dove non si
+>   vede e lo elogeranno per la metà che si vede** — è l'eco **E-07c**,
+>   riscritta il 2026-08-09 perché la versione precedente era un'eco da monaco
+>   («una parata che prima gli riusciva») appiccicata a un guerriero che non
+>   schivava già prima.
+> - **Nessuna eco per Tordek da questa scena.** L'eco E-07e è **annullata**:
+>   registrava una scelta che non c'è stata. Le righe vive di Tordek restano
+>   quelle del Seme di Varis (E-07a/E-07b).
 
 ### FASE 2 — Forgiare la Connessione (3 round, TUTTI insieme) ⭐
 > **QUESTO è il cuore meccanico ed emotivo che era andato perso nella

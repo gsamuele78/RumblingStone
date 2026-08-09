@@ -110,7 +110,7 @@ Ripartizione:
 
 | Quanti | Dove | Natura |
 |---|---|---|
-| 13 | `09_…/homebrew/PALIO-BOOKLET.hb.md` | stemmi delle contrade (8 `.svg`), mappe (`piazza-del-palio`, `channathgate-citta`, `rotta-soccorso`, `stalla-assalto-drow`), panorama `.png` — **asset mai prodotti**. Il booklet si genera, ma esce con 13 immagini rotte |
+| 13 | `09_…/homebrew/PALIO-BOOKLET.hb.md` | stemmi delle contrade (8 `.svg`), mappe (`piazza-del-palio`, `channathgate-citta`, `rotta-soccorso`, `stalla-assalto-drow`), panorama `.png`. Il booklet si genera, ma esce con 13 immagini rotte. ⚠️ **ERRATA 2026-08-09: la diagnosi «asset mai prodotti» era sbagliata.** Gli asset esistono in `09_…/P2D-Palio-Allegati/`: il generatore `.hb.md` non rebasava i percorsi relativi sulla cartella d'uscita. Corretto nel generatore, non nei documenti — vedi `DECISIONI-APERTE.md` §A1 |
 | 3 | `PG/Artefatti/…/Tordek/03_Risveglio_Completo_Bracieri_Terra.md` (×2), `07_…/_ARCHIVIO/…-alternative.md` | `file:///home/jfs/Scrivania/00-Giochi_di_ruolo/…` — **path assoluti della macchina del DM**, committati nel canone | <!-- validate-links: ignore -->
 | 1 | `PG/Artefatti/…/ringOfChaoticIllumination/00_Ring…Revised.md` | `ring-chaotic-illumination-evolved.webp` assente |
 | 1 | `docs/guides/GUIDA-IMMAGINI.md` | `percorso/relativo/immagine.png` — placeholder didattico, **falso positivo accettabile** (da mettere in allowlist) |

@@ -83,9 +83,29 @@ modulo e come parla il testo di Moradin, che si rivolge al portatore.
 > pagato **Tordek** — e su quell'errore erano state costruite due cose: l'eco
 > **E-07e** («il portatore guarda un altro reggere il peso») e la giustificazione
 > in nota 2 («se l'è preso da uno che non porta nemmeno la Corona»). Segnalato
-> dal DM come refuso. E-07e è stata **rovesciata** (ora è Tordek che guarda), e
-> la nota 2 regge ancora, ma **solo** sull'altro argomento: si onora quello che
-> il modulo diceva quando è stato giocato.
+> dal DM come refuso. La nota 2 regge ancora, ma **solo** sull'altro argomento:
+> si onora quello che il modulo diceva quando è stato giocato.
+>
+> 🔁 *Secondo giro, 2026-08-09.* Il 06/08 avevo corretto i **nomi** senza
+> riscrivere il **contenuto**: E-07e era stata semplicemente rovesciata su
+> Tordek, ed E-07c era rimasta un'eco da monaco (*«una parata che prima gli
+> riusciva»*) appiccicata a un guerriero che **non schivava già prima**.
+> Segnalato di nuovo dal DM. Ora: **E-07e è annullata** (registrava una scelta
+> che Tordek non ha fatto), **E-07c è riscritta** come eco di Thorik — *ha
+> pagato dove non si vede e lo elogeranno per la metà che si vede* — e nasce
+> **E-07f**, le mani fredde sotto la trave: la presenza verde al rito era
+> **Hella**, e lui non lo sa.
+
+**3-bis. Riti, come li conta il tavolo.** L'Incudine del Mondo è il **secondo
+rito celebrato** dopo la Prova della Sala Profonda; il modulo lo numera
+**Rituale 3** perché conta anche il Risveglio. Stesso evento.
+
+**3-ter. Il −2 COS non c'è ancora.** ⚠️ Oggi Thorik ha **+2 COS** da questo
+rito e **nessun −2 COS**: quel malus è il prezzo del Dono «Il Sangue della
+Stirpe» al rito di Hella (`ARC07-DEF-3` §5), **scena non ancora giocata**.
+Quando arriverà, i due si **sommano a zero** — due pegni permanenti per tornare
+al punto di partenza. Vale la pena guardarlo prima di proporglielo: vedi «Il
+bilancio di Thorik» sulla versione DM della scheda.
 
 **Non ancora sbloccati** (Rituale 4, «Assedio della Forgia Eterna» = il viaggio
 a −1.000): **Corona di Protezione +3**, **Senzienza**, **Rubino**.

@@ -1204,3 +1204,88 @@ entries — they become campaign history.
             scheda Corona (note 2 e 3), 00-INTRO-DOVE-SIAMO, e i 4 booklet
             RIGENERATI dai manifest (ADR-0003, mai a mano).
 ```
+
+```
+2026-08-09  ECHI RISCRITTI (non rinominati) + IL CONTO DELLE CARATTERISTICHE
+            DI THORIK. Segnalato dal DM: "gli echi di Tordek non sono quelli
+            di Thorik"; e la richiesta di verificare se Thorik abbia davvero
+            un -2 COS, ricordando invece un -2 DES ANTERIORE alla Corona e il
+            -2 DES / +2 COS del "secondo rito".
+
+            DIAGNOSI. La correzione del 2026-08-06 aveva cambiato i NOMI senza
+            riscrivere il CONTENUTO. Cosi' erano rimasti in piedi tre difetti:
+            (a) E-07c era un'eco da MONACO ("una parata che prima gli
+                riusciva, un passo che non arriva") appiccicata a un guerriero
+                che aveva DES +0 gia' prima del rito - un malus che al tavolo
+                NON si vede;
+            (b) E-07e era stata solo ROVESCIATA su Tordek, ma un'eco registra
+                una SCELTA e Tordek qui non ne ha fatta nessuna: non gli e'
+                stato chiesto niente e non ha rinunciato a niente;
+            (c) in ARC07-DEF-2 7-bis i due sogni erano rimasti scambiati: le
+                MANI FREDDE sotto la trave (la presenza verde = Hella) stavano
+                sotto il nome di Tordek, e Thorik aveva il sogno di "quello
+                che stavolta non ha retto lui", scritto per la versione
+                sbagliata. Stessa cosa in 00-INTRO-DOVE-SIAMO, dove il punto
+                elenco intestato a THORIK conteneva i BRACIERI e il SEME DI
+                VARIS, che sono di Tordek.
+
+            ECHI, ORA.
+            E-07c RISCRITTA (Thorik): gli e' stato chiesto "un pezzo di te
+              stesso" e non l'ha delegato. Il punto non e' la DES persa, e'
+              che HA PAGATO DOVE NON SI VEDE e lo elogeranno per la meta' che
+              si vede (+2 COS = piu' bravo nell'unica cosa per cui lo
+              misurano). Paga quando qualcuno lo loda per quanto incassa e lui
+              non corregge nessuno; e quando al party viene chiesto un altro
+              pegno e Thorik si muove per primo, perche' adesso conosce il
+              cambio.
+            E-07e ANNULLATA. Nata dall'errore; l'ID non si riusa
+              (consequence-echoes.md 1). Le righe vive di Tordek restano
+              E-07a/E-07b (il Seme di Varis).
+            E-07f NUOVA (Thorik, e Hella dall'altra parte): le mani fredde
+              sotto la trave. "Non sei solo a portare questo peso. Mai piu'
+              solo." Lui la crede Moradin. NON SPIEGARE PRIMA DEL #3.
+            SOGNI DEL 7-bis RIMESSI A POSTO: le mani fredde tornano a Thorik,
+              Tordek tiene solo il sogno dello zaino/bazar.
+
+            CARATTERISTICHE - VERIFICATO SUGLI STORICI DELLA CORONA.
+            1) -2 COS: OGGI NON ESISTE. E' il prezzo del Dono "Il Sangue della
+               Stirpe" al rito di Hella (ARC07-DEF-3 5 e 0-bis), scena NON
+               ancora giocata. INF-001 si CHIUDE.
+               ATTENZIONE, e' una conseguenza nuova: quando si giochera', il
+               -2 COS si somma al +2 COS del rito -> NETTO ZERO sulla COS.
+               Due pegni permanenti per tornare dov'era. Non tolto d'ufficio:
+               e' l'argomento piu' forte a favore delle tre alternative del 5
+               (in particolare "Il Filo dell'Ascia"). Messo nel bilancio di
+               Thorik sulla scheda DM e in ARC07-DEF-3 1.
+            2) -2 DES / +2 COS dal "SECONDO RITO": CONFERMATO, ed e' la stessa
+               cosa che il repo chiamava "Rituale 3". Al tavolo l'Incudine del
+               Mondo (rito dello Smeraldo) e' il SECONDO rito celebrato, dopo
+               la Prova della Sala Profonda; il modulo lo numera 3 perche'
+               conta anche il Risveglio. Adesso i documenti dicono entrambe le
+               cose, cosi' la lingua del tavolo e quella del modulo smettono
+               di divergere.
+            3) -2 DES ANTERIORE ALLA CORONA: NON VERIFICABILE nel repo, aperto
+               come INF-006. Non c'e' nessuna scheda di Thorik in tutto il
+               repository - e' l'unico PG senza (Tordek, Artemis e Hella ne
+               hanno una sotto PG/Artefatti/Artefatti-Pg/). L'unico riscontro
+               indiretto e' la lista d'iniziativa del Piano del Fuoco
+               (PortaleForgia-P3-PianoFuoco-PARTE1.md, PRIMA del rito) che da'
+               Thorik a DES +0: compatibile con una DES gia' ridotta, ma non
+               e' una prova. Non cambia i totali di oggi (e' base, non un
+               malus in piu'). Domanda al DM: da dove viene, e portiamo la
+               scheda di Thorik nel repo?
+
+            REFUSI RESIDUI DELLA CORREZIONE PRECEDENTE, chiusi qui:
+            - ARC07-DEF-1 9, TITOLO del blocco CANONE GIOCATO: diceva ancora
+              "e lo prende TORDEK" mentre il corpo diceva THORIK.
+            - 02_Corona_2_Gemme_DM.html: la nota 3 diceva ancora "a pagare non
+              e' stato il portatore... l'ha versato Tordek", e il bilancio di
+              Thorik gli attribuiva "ha guardato Tordek pagare al posto suo".
+            - ARC07-DEF-2 7-bis e 00-INTRO-DOVE-SIAMO (vedi sopra).
+
+            File toccati: state.yaml (Thorik, Corona, INF-001 chiusa, INF-006
+            aperta), state.md (7.E), ARC07-DEF-1 9, ARC07-DEF-2 7-bis,
+            ARC07-DEF-3 1, scheda Corona PG (note 3, 3-bis, 3-ter) e DM (nota
+            3, 3-bis, bilancio), 00-INTRO-DOVE-SIAMO, e i 5 booklet
+            RIGENERATI dai manifest (ADR-0003, mai a mano).
+```

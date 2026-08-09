@@ -80,22 +80,72 @@ class TestIlRepoEPulito(unittest.TestCase):
         self.assertNotIn("/home/jfs/", testo)
 
 
-class TestPalioAncoraNonRisolto(unittest.TestCase):
-    """I 13 asset sono marcati per non falsare il gate, NON perché vada bene.
+class TestPalioNonEraUnDebito(unittest.TestCase):
+    """I «13 asset mancanti» del Palio non mancavano: mancava il rebase.
 
-    Se un giorno la decisione arriva e gli asset vengono prodotti (o i
-    riferimenti tolti), questo test va aggiornato — è il promemoria che il
-    debito esiste ancora.
+    L'audit li aveva letti come un debito di produzione (decisione A1) e li
+    aveva marcati `validate-links: ignore` **dentro il `.hb.md` generato** —
+    cioè modificando a mano un artefatto (contro ADR-0003) e zittendo il gate
+    invece di guardare il generatore. Alla prima rigenerazione le direttive
+    sono sparite e i 13 link sono tornati.
+
+    Diagnosi vera: i capitoli vivono in `09_.../`, il booklet si genera in
+    `09_.../homebrew/`, e la via `.hb.md` copiava i percorsi relativi senza
+    rebasarli. Gli asset sono sempre esistiti. Questi test tengono ferme
+    entrambe le cose: che esistono, e che il generatore li raggiunge.
     """
 
+    ALLEGATI = (ROOT / "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist"
+                / "P2D-Palio-Allegati")
     BOOKLET = (ROOT / "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist"
                / "homebrew" / "PALIO-BOOKLET.hb.md")
 
-    def test_la_nota_dice_che_il_debito_e_aperto(self):
+    def test_gli_asset_esistono_davvero(self):
+        attesi = [f"stemmi/0{n}-{nome}.svg" for n, nome in enumerate(
+            ["oca", "torre", "bruco", "istrice", "drago", "civetta", "unicorno", "onda"], start=1)]
+        attesi += ["mappe/piazza-del-palio.svg", "mappe/channathgate-citta.svg",
+                   "mappe/rotta-soccorso.svg", "mappe/stalla-assalto-drow.svg",
+                   "immagini/piazza-del-palio-panorama.png"]
+        mancanti = [a for a in attesi if not (self.ALLEGATI / a).exists()]
+        self.assertEqual(mancanti, [], f"asset davvero mancanti: {mancanti}")
+
+    def test_il_booklet_generato_non_ha_direttive_di_silenziamento(self):
+        """Se ricompaiono, qualcuno ha rimesso a mano una toppa in un generato."""
         testo = self.BOOKLET.read_text(encoding="utf-8")
-        self.assertIn("ASSET MANCANTI", testo,
-                      "la nota che dichiara il debito è sparita: o è stato risolto "
-                      "(aggiornare questo test) o è stato nascosto")
+        self.assertNotIn("validate-links: ignore", testo)
+
+
+class TestRebaseDeiLinkRelativi(unittest.TestCase):
+    """Il generatore deve rebasare i percorsi sulla cartella d'uscita."""
+
+    def setUp(self):
+        import build_booklet_html as bb
+        self.rebase = bb.rebase_relative_links
+
+    def test_capitolo_un_livello_sopra_luscita(self):
+        src, out = ROOT / "arco", ROOT / "arco" / "homebrew"
+        self.assertEqual(self.rebase("![x](Allegati/a.svg)", src, out),
+                         "![x](../Allegati/a.svg)")
+
+    def test_percorsi_con_spazi_nel_nome(self):
+        src, out = ROOT / "arco", ROOT / "arco" / "homebrew"
+        self.assertEqual(self.rebase("[m](Mappe di Prova/a b.png)", src, out),
+                         "[m](../Mappe di Prova/a b.png)")
+
+    def test_non_tocca_url_ancore_e_host_relative(self):
+        src, out = ROOT / "arco", ROOT / "arco" / "homebrew"
+        for t in ("[a](https://x.dev/y)", "[a](#sezione)", "[a](/assets/logo.svg)",
+                  "[a](mailto:x@y.z)"):
+            self.assertEqual(self.rebase(t, src, out), t)
+
+    def test_stessa_cartella_non_cambia_niente(self):
+        src = out = ROOT / "arco" / "homebrew"
+        self.assertEqual(self.rebase("![x](img/a.png)", src, out), "![x](img/a.png)")
+
+    def test_ancora_e_titolo_sopravvivono(self):
+        src, out = ROOT / "arco", ROOT / "arco" / "homebrew"
+        self.assertEqual(self.rebase("[a](doc.md#par)", src, out), "[a](../doc.md#par)")
+        self.assertEqual(self.rebase('[a](doc.md "T")', src, out), '[a](../doc.md "T")')
 
 
 if __name__ == "__main__":

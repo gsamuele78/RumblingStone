@@ -52,6 +52,7 @@ import base64
 import html
 import json
 import mimetypes
+import os
 import re
 import sys
 from pathlib import Path
@@ -495,6 +496,46 @@ HB_TAGS = {"dm": "{{note\n##### ⚠ SOLO DM\nQuesto capitolo è materiale del DM
            "player": "{{note\n##### ✉ HANDOUT GIOCATORE\nPagina da consegnare al giocatore indicato, in privato.\n}}"}
 
 
+MD_TARGET = re.compile(r"(!?\[[^\]]*\]\()([^)]+)(\))")
+
+
+def rebase_relative_links(text: str, src_dir: Path, out_dir: Path) -> str:
+    """Riscrive i link relativi di un capitolo rispetto alla cartella d'uscita.
+
+    Un capitolo che vive in `09_.../` e cita `![](P2D-Palio-Allegati/x.svg)`
+    finisce dentro un booklet generato in `09_.../homebrew/`: da lì quel
+    percorso **non risolve più**, e il file esce con le immagini rotte. La via
+    HTML non se ne accorge perché incorpora le immagini risolvendole dalla
+    cartella del capitolo; la via `.hb.md` lascia i riferimenti relativi, e
+    quindi deve rebasarli.
+
+    Storia, perché non si ripeta: il 2026-08 il difetto era stato «chiuso»
+    incollando `<!-- validate-links: ignore -->` **dentro il .hb.md generato** —
+    cioè modificando a mano un artefatto (contro ADR-0003) e zittendo il gate
+    invece di aggiustare il generatore. Alla prima rigenerazione le direttive
+    sono sparite e i 13 link sono riapparsi: erano sempre stati veri.
+    """
+    if src_dir.resolve() == out_dir.resolve():
+        return text
+
+    def fix(m: re.Match) -> str:
+        inside = m.group(2).strip()
+        titolo = ""
+        # forma `percorso "titolo"` — il titolo non si tocca
+        if inside.endswith('"') and ' "' in inside:
+            inside, _, coda = inside.rpartition(' "')
+            titolo = ' "' + coda
+        if inside.startswith(("http://", "https://", "#", "mailto:", "data:", "/")):
+            return m.group(0)
+        percorso, sep, ancora = inside.partition("#")
+        if not percorso:
+            return m.group(0)
+        nuovo = os.path.relpath((src_dir / percorso).resolve(), out_dir.resolve())
+        return f"{m.group(1)}{nuovo}{sep}{ancora}{titolo}{m.group(3)}"
+
+    return MD_TARGET.sub(fix, text)
+
+
 def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
     """Via Homebrewery (ADR-0013): stesso manifest → sorgente V3 .hb.md
     per l'editor self-hosted (nativo o Docker, ``dm.py hype``)."""
@@ -515,18 +556,24 @@ def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
         f"{{{{banner {mf.get('banner', 'BOOKLET')}}}}}\n",
         f"{{{{footnote\n  {mf.get('meta', '')}\n}}}}\n",
     ]
+    html_out = out_override or (base / mf.get("out", manifest_path.stem.replace(".manifest", "") + ".html"))
+    stem = html_out.name[:-5] if html_out.name.endswith(".html") else html_out.name
+    out = html_out.parent / (stem + ".hb.md")
+    out_dir = out.parent
+
+    def leggi(rel: str) -> str:
+        src = base / rel
+        return rebase_relative_links(src.read_text(encoding="utf-8"), src.parent, out_dir)
+
     if mf.get("intro_md"):
-        parts += ["\\page\n", (base / mf["intro_md"]).read_text(encoding="utf-8")]
+        parts += ["\\page\n", leggi(mf["intro_md"])]
     for ch in mf["chapters"]:
         parts.append("\n\\page\n")
         parts.append(f"# {ch['title']}\n")
         tag = HB_TAGS.get(ch.get("tag", ""))
         if tag:
             parts.append(tag + "\n")
-        parts.append((base / ch["file"]).read_text(encoding="utf-8"))
-    html_out = out_override or (base / mf.get("out", manifest_path.stem.replace(".manifest", "") + ".html"))
-    stem = html_out.name[:-5] if html_out.name.endswith(".html") else html_out.name
-    out = html_out.parent / (stem + ".hb.md")
+        parts.append(leggi(ch["file"]))
     out.write_text("\n".join(parts) + "\n", encoding="utf-8")
     return out
 

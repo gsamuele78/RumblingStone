@@ -16,17 +16,25 @@
 
 ## A. Decisioni che sbloccano lotti
 
-### 1. I 13 asset del `PALIO-BOOKLET` — 2 minuti, sblocca **G3**
+### 1. ~~I 13 asset del `PALIO-BOOKLET`~~ — ✅ **CHIUSA il 2026-08-09: non c'era niente da decidere**
 
-`09_…/homebrew/PALIO-BOOKLET.hb.md` referenzia **8 stemmi `.svg`**, **4 mappe** e
-**1 panorama `.png`** che non esistono. Il booklet si genera, ma esce con 13
-immagini rotte.
+**Non erano asset mancanti: era un bug del generatore.** Gli 8 stemmi, le 4
+mappe e il panorama esistono tutti in
+`09_…/P2D-Palio-Allegati/` e sono sempre esistiti. I capitoli del booklet
+vivono in `09_…/`, il booklet si genera in `09_…/homebrew/`, e la via `.hb.md`
+copiava i percorsi relativi **senza rebasarli sulla cartella d'uscita**: da lì
+`P2D-Palio-Allegati/stemmi/01-oca.svg` non risolveva più.
 
-| Opzione | Conseguenza |
-|---|---|
-| **Togli i riferimenti** (sostituiti da segnaposto testuali) | il booklet torna pulito subito; se un giorno produci l'arte, si rimette |
-| Lasciali marcati «da produrre» | onesto, ma il deliverable resta rotto e il gate nasce con 13 eccezioni |
-| Segnaposto SVG generati | booklet completo subito, ma sono disegni provvisori, non arte tua |
+⚠️ **La lezione conta più della correzione.** In G3 il difetto era stato
+«chiuso» incollando `<!-- validate-links: ignore -->` **dentro il `.hb.md`
+generato**: una toppa scritta a mano su un artefatto (contro ADR-0003) che
+zittiva il gate invece di guardare il generatore. Alla prima rigenerazione le
+direttive sono sparite e i 13 link sono tornati — erano sempre stati veri, e la
+diagnosi era sempre stata sbagliata. **Un gate che dà fastidio va creduto prima
+di essere messo a tacere.**
+
+Corretto in `build_booklet_html.py` (`rebase_relative_links()`), con test di
+regressione in `test_validate_links.py`. Nessuna decisione DM richiesta.
 
 ### 2. Il PRD: chi è il destinatario? — 30-45 min, **è il collo di bottiglia**
 
@@ -88,7 +96,8 @@ dice il vero. Vanno mergiate o chiuse.
 Questi lotti si possono fare adesso, e infatti si stanno facendo:
 
 - **G3** — validatore link + i **4 path `/home/jfs/…`** committati + i link rotti <!-- validate-links: ignore -->
-  non-Palio. *(Solo la sorte dei 13 asset attende la decisione A1.)*
+  non-Palio. *(Anche il Palio: la decisione A1 è caduta il 2026-08-09 — era un
+  bug del generatore, non un debito di produzione.)*
 - **G4** — inventario e ratchet degli `[INFERRED]`, ora leggibili dai dati
   tipizzati invece che col grep.
 - **G8** — igiene Python e CI hardening.
