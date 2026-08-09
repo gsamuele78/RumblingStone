@@ -488,7 +488,7 @@ Elementali sono territoriali ma non malvagi. Attaccano intrusi per proteggere re
 - Artemis: 23 (DES +3, Iniziativa Migliorata +4, roll 16)
 - Elementali: 18 (DES +3, Iniz. Migliorata +4, roll 11)
 - Tordek: 16 (DES +4, Iniz. Migliorata +4, roll 8)
-- Thorik: 12 (DES +0, Iniz. Migliorata +4, roll 8)
+- Thorik: 11 (DES **−1**, Iniz. Migliorata +4, roll 8) *(corretto 2026-08-09: qui la Corona è già indossata, quindi DES 8 e non 10 — vedi «Effetti Meccanici Corona» in `PortaleForgia-P1-REVISED-Corretta.md`)*
 
 **Artemis:**
 - Azione: Eldritch Blast vs E1 (più vicino)

@@ -1289,3 +1289,66 @@ entries — they become campaign history.
             3, 3-bis, bilancio), 00-INTRO-DOVE-SIAMO, e i 5 booklet
             RIGENERATI dai manifest (ADR-0003, mai a mano).
 ```
+
+```
+2026-08-09b IL -2 DES DELLA CORONA - TROVATO, ERA VERO, ED ERA SPARITO.
+            Il DM: "praticamente come ha messo la corona ha preso -2 dex ma
+            forse mi sbaglio, controlla; la scheda di Thorik al momento non
+            ce l'ho con me". Non si sbagliava.
+
+            FONTE. 07_.../PortaleForgia-P1-REVISED-Corretta.md, sezione
+            "Effetti Meccanici Corona (Incompleta - Parte 1)", cioe' il beat in
+            cui Thorik prende la Corona dal trono e se la mette in fronte.
+            Fra le LIMITAZIONI:
+              -2 Destrezza (peso e restrizione movimenti testa)
+              NON rimovibile finche' non completata con 3 gemme
+                (salvo Rimuovere Maledizione CD 25)
+            e fra i BONUS IMMEDIATI: +4 Carisma, immunita' alla paura,
+            scurovisione 36 m, Aura di Comando 1/giorno.
+            Il modulo scrive perfino il ricalcolo, per esteso:
+              CAR 8 -> 12 · DES 10 -> 8 · CA 22 -> 21.
+
+            IL DIFETTO. Quel blocco NON e' mai stato riportato da nessuna delle
+            schede successive. Non c'e' nella scheda giocatore viva
+            (00_SCHEDA-GIOCATORE-STATO-ATTUALE), non c'e' nelle due
+            02_Corona_2_Gemme*.html, non c'e' nella tabella "Progressione" di
+            ARTEFATTI-MATRICE-VERSIONI: tutte elencano solo i poteri. Il costo
+            di indossarla si e' perso nel consolidamento, e da allora nessun
+            documento glielo riconosceva piu'.
+
+            IL CONTO, ADESSO IN CHIARO.
+              DES 10 (base) -> 8 (Corona indossata) -> 6 (rito dello Smeraldo).
+            Sono DUE pegni sulla DES, non uno, e insieme fanno -2 al
+            modificatore rispetto alla scheda di partenza: -2 a CA, Riflessi,
+            iniziativa e prove di DES. In cambio +4 CAR e +2 COS (pf +1/DV,
+            Tempra +1).
+            CONSEGUENZA per il "bilancio di Thorik": il giocatore che dice di
+            aver pagato molto ha ragione ANCHE su questo, ed e' un pezzo che il
+            repo gli aveva tolto senza dirlo. Aggiunto alla scheda DM.
+
+            INF-006 CHIUSA. La domanda "da dove viene il -2 DES anteriore alla
+            Corona" era mal posta: non e' anteriore alla Corona, e' DELLA
+            Corona. Non esiste nessun malus prima. La DES base di Thorik e' 10.
+
+            INF-007 APERTA. Restano nel testo di P1, mai confermate ne'
+            revocate: il +4 CAR, l'immunita' alla paura, la scurovisione 36 m e
+            soprattutto la NON RIMOVIBILITA' finche' mancano gemme - che e' un
+            vincolo di trama, non un bonus. Se vale il -2 DES e' difficile che
+            non valga il +4 CAR: decide il DM, in blocco.
+
+            REFUSO COLLATERALE. La lista d'iniziativa d'esempio del Piano del
+            Fuoco (PortaleForgia-P3-PianoFuoco-PARTE1.md) dava Thorik a DES +0
+            in una scena in cui la Corona e' gia' in testa: doveva essere -1.
+            Corretta, con la nota del perche'. (Era anche il "riscontro
+            indiretto" su cui poggiava INF-006: era sbagliato pure quello.)
+
+            ECO E-07c: il dettaglio d'appoggio era costruito su quel numero
+            sbagliato. Riscritto sui numeri veri - la tesi non cambia, anzi
+            regge meglio: il rito gli toglie UN punto solo di CA/Riflessi/
+            iniziativa, che al tavolo non si vede, mentre il +2 COS si vede.
+
+            File toccati: state.yaml (Thorik, Corona, INF-006 chiusa, INF-007
+            aperta), state.md (7.E E-07c), ARC07-DEF-1 9, PortaleForgia-P3,
+            scheda Corona PG (nuova tabella "Quello che la Corona ti e'
+            costato" + nota 3-quater) e DM (bilancio), booklet RIGENERATI.
+```

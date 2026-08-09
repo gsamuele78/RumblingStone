@@ -171,11 +171,17 @@ party:
 - pg: Thorik
   classe: Dwarf Fighter 13
   oggi: >-
-    **Sala della Forgia Eterna**, dopo il riposo. **−2 DES / +2 COS permanenti** — ha accettato il **Peso
-    del Mondo** al **rito dello Smeraldo** (2026-07-31): il **secondo rito celebrato al tavolo** dopo la
-    Prova della Sala Profonda, che il modulo numera **Rituale 3 «Incudine del Mondo»** contando anche il
-    Risveglio. È il **portatore** a pagare il pegno, come scrive l'Opzione B. Ricalcolare CA, Riflessi,
-    iniziativa e prove di DES (−1); pf massimi +1/DV e Tempra +1. Corona: Topazio + Smeraldo accesi,
+    **Sala della Forgia Eterna**, dopo il riposo. **DUE pegni permanenti sulla DES, non uno.** (1)
+    **Quando ha indossato la Corona** (Sala della Corona → P1): **−2 DES**, **+4 CAR**, e la Corona
+    **non è più rimovibile** finché mancano gemme — è scritto fra le «Limitazioni» di
+    `PortaleForgia-P1-REVISED-Corretta.md`, col ricalcolo esplicito **DES 10 → 8**, CA 22 → 21, CAR 8 → 12.
+    Si era perso in tutte le schede successive: **reintegrato il 2026-08-09** su segnalazione del DM.
+    (2) **Al rito dello Smeraldo** (2026-07-31): **altri −2 DES e +2 COS**, il **Peso del Mondo** accettato
+    nel corpo — il **secondo rito celebrato al tavolo** dopo la Prova della Sala Profonda, che il modulo
+    numera **Rituale 3 «Incudine del Mondo»** contando anche il Risveglio. È il **portatore** a pagare il
+    pegno, come scrive l'Opzione B. **Il conto**: DES **10 → 8 → 6**, cioè **−2 al modificatore** rispetto
+    alla scheda di partenza (CA, Riflessi, iniziativa, prove di DES); in cambio +4 CAR e pf massimi +1/DV
+    con Tempra +1. Corona: Topazio + Smeraldo accesi,
     Rituale Legacy 3 completato (§6). ✅ **Oggi Thorik NON ha nessun −2 COS**: quel malus è il prezzo del
     Dono «Il Sangue della Stirpe» al rito di Hella (`ARC07-DEF-3` §5 e §0-bis), **scena non ancora
     giocata** — la colonna «preparato» lo dà per pagato perché racconta il dopo. ⚠️ Quando si giocherà, il
@@ -224,7 +230,11 @@ artefatti:
     Insight, Topazio 1/mese (attivazione 1 ora), **Smeraldo/Terra 1/settimana**, e i due sbloccati dal
     Rituale 3 — **Adamantine Will** (immune charme/compulsione + 4 razziale vs mentale su pietra) e **Mantle
     of Stone and Spirit** (**Mind Blank permanente**, RD 5/epico, Comunione 1/mese da un Nodo). Il
-    pegno del Rituale 3 l'ha pagato **il portatore, Thorik** (−2 DES / +2 COS permanenti), come previsto dall'Opzione B del modulo. Mancano Corona +3, Senzienza e il Rubino:
+    pegno del Rituale 3 l'ha pagato **il portatore, Thorik** (−2 DES / +2 COS permanenti), come previsto dall'Opzione B del modulo.
+    ⚠️ **Costo dell'indossarla, reintegrato il 2026-08-09**: già al momento in cui Thorik se l'è messa
+    in testa la Corona vale **−2 DES**, **+4 CAR** e **non è rimovibile** finché mancano gemme
+    (`PortaleForgia-P1-REVISED-Corretta.md`, «Limitazioni»). Nessuna scheda successiva lo riportava: il
+    −2 DES è a canone, il resto è INF-007. Mancano Corona +3, Senzienza e il Rubino:
     si sbloccano col **Rituale 4** = viaggio a −1.000
   preparato: 'All 3 gems lit: + Emerald earthquake 1/week; Ruby single-use SPENT at the ancient battle
     (≈372 DR)'
@@ -298,18 +308,18 @@ inferred:
   a_chi: DM
   aperto_dal: '2026-08-05'
   fonte: lotto G2-ter
-- id: INF-006
-  dove: party[Thorik].oggi
+- id: INF-007
+  dove: artefatti[Corona di Adamantio].oggi
   domanda: >-
-    Il DM riferisce che Thorik porta un **−2 DES anteriore alla Corona**, indipendente dal rito dello
-    Smeraldo. Nel repo non c'è traccia dell'evento che lo ha causato — e non c'è nessuna scheda di Thorik
-    (Tordek, Artemis e Hella ne hanno una sotto `PG/Artefatti/Artefatti-Pg/`, lui no). L'unico riscontro
-    indiretto è la lista d'iniziativa del Piano del Fuoco (`PortaleForgia-P3-PianoFuoco-PARTE1.md`, prima
-    del rito) che dà Thorik a **DES +0**, compatibile con una DES già ridotta. Da dove viene quel −2, e
-    conviene metterlo a canone qui portando la scheda di Thorik nel repo?
+    Il blocco «Effetti Meccanici Corona» di `PortaleForgia-P1-REVISED-Corretta.md` dà, all'atto di
+    indossarla, TRE cose oltre al −2 DES ora reintegrato: **+4 CAR** (8 → 12), **immunità alla paura**,
+    **scurovisione 36 m**, e la clausola che la Corona **non è rimovibile** finché mancano gemme (salvo
+    *Rimuovere Maledizione* CD 25). Nessuna scheda successiva le riporta. Valgono ancora tutte — e in
+    particolare vale la non-rimovibilità, che è un vincolo di trama e non un bonus? Se il −2 DES vale,
+    è difficile che il +4 CAR non valga.
   a_chi: DM
   aperto_dal: '2026-08-09'
-  fonte: verifica 2026-08-09 richiesta dal DM (storici della Corona + push)
+  fonte: verifica 2026-08-09 richiesta dal DM (il −2 DES «di quando l'ha indossata»)
 villain:
 - villain: Sonjak (Drow Cleric Matrona) — also "Matrona Sajak" in Sal's operative code
   tempo: giocato

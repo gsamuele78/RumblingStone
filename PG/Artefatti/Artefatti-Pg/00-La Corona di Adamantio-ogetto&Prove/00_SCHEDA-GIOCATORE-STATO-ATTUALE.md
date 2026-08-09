@@ -41,6 +41,19 @@ d'oro, una di verde. La terza è fredda.*
 | **TOPAZIO** — Tempo Immutabile | viaggio nel tempo 1/mese da un Nodo Terrestre, **attivazione 1 ora**, fino a 8 creature consenzienti | Thorik **invecchia 1d10 anni** a viaggio; pegno di Moradin per i non-nani |
 | ⭐ **SMERALDO** — Vera Terra | 1/settimana, azione standard: **Bastione della Terra** (muro di pietra 9 m di spessore) · **Forgia della Vita** (consacra 30 m di raggio, permanente) · **Giudizio della Montagna** (terremoto 15 m, **Riflessi CD 22**, risparmia i nani designati) | **1.000 mo** in gemma o arma perfetta, sepolte |
 
+**Quello che la Corona ti è costato** *(reintegrato il 2026-08-09: c'era nel
+modulo giocato e si era perso in tutte le schede successive)*
+
+| Quando | Effetto permanente | Fonte |
+|---|---|---|
+| **Quando l'hai indossata** (Sala della Corona → P1) | **−2 DES** (il peso e la rigidità sul collo) · **+4 CAR** · **non è più rimovibile** finché non ha tutte e tre le gemme (salvo *Rimuovere Maledizione* CD 25) | `07_…/PortaleForgia-P1-REVISED-Corretta.md`, «Effetti Meccanici Corona» |
+| **Al rito dello Smeraldo** (2026-07-31) | **−2 DES** e **+2 COS** — il Peso del Mondo accettato nel corpo | `ARC07-DEF-1` §9, Opzione B |
+
+**Il conto, in chiaro.** DES **10 → 8** (Corona) **→ 6** (rito): oggi **−2** al
+modificatore rispetto alla scheda di partenza, quindi −2 a CA, Riflessi,
+iniziativa e prove di DES. In cambio: **+4 CAR** (8 → 12) e **+2 COS**
+(pf massimi **+1/DV**, Tempra **+1**).
+
 **La terza incastonatura** resta fredda. Si accenderà da sé, e non adesso.
 
 **Vincoli**: la Corona serve la memoria dei nani, non il portatore. Se Thorik
@@ -99,6 +112,21 @@ modulo e come parla il testo di Moradin, che si rivolge al portatore.
 **3-bis. Riti, come li conta il tavolo.** L'Incudine del Mondo è il **secondo
 rito celebrato** dopo la Prova della Sala Profonda; il modulo lo numera
 **Rituale 3** perché conta anche il Risveglio. Stesso evento.
+
+**3-quater. Il −2 DES «di quando l'ha indossata» esiste, e s'era perso.**
+🔁 *2026-08-09, su segnalazione del DM.* `PortaleForgia-P1-REVISED-Corretta.md`
+— il beat in cui Thorik prende la Corona dal trono — elenca fra le
+**Limitazioni**: *«−2 Destrezza (peso e restrizione movimenti testa)»*, e sotto
+scrive perfino il ricalcolo: **DES 10 → 8**, **CA 22 → 21**, **CAR 8 → 12**.
+Quel blocco **non è mai stato riportato** in nessuna delle schede successive
+(né qui, né nella `02_Corona_2_Gemme*.html`, né nella matrice delle versioni),
+che elencano solo i bonus. Reintegrato nella tabella «Quello che la Corona ti è
+costato».
+⚠️ **Due cose restano da decidere** (`INF-007`), perché sono ancora nel testo di
+P1 e nessuno le ha né confermate né revocate: il **+4 CAR** e il fatto che la
+Corona **non sia rimovibile** finché mancano gemme. Il +4 CAR è a favore del
+giocatore, la non-rimovibilità è un vincolo di trama — se valgono, valgono
+entrambi.
 
 **3-ter. Il −2 COS non c'è ancora.** ⚠️ Oggi Thorik ha **+2 COS** da questo
 rito e **nessun −2 COS**: quel malus è il prezzo del Dono «Il Sangue della

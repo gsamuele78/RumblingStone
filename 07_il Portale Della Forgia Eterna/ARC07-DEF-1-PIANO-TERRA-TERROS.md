@@ -1665,10 +1665,12 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 >   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3. È l'eco
 >   **E-07f** in `state.md` §7.E, ed è la più forte che esca da questa scena.
 > - **Che cosa cambia davvero per Thorik.** La DES era già la sua statistica
->   povera (al Piano del Fuoco tirava iniziativa a **DES +0**): il −2 non gli
->   toglie niente che il tavolo possa vedere, mentre il +2 COS lo rende
->   *migliore* nell'unica cosa per cui lo misurano. **Ha pagato dove non si
->   vede e lo elogeranno per la metà che si vede** — è l'eco **E-07c**,
+>   povera — **10 di base**, e la Corona gliene aveva già tolti 2 quando se
+>   l'è messa in testa (`PortaleForgia-P1-REVISED-Corretta.md`, «Limitazioni»:
+>   *DES 10 → 8*). Questi altri due lo portano a **6**: **un punto solo** di CA,
+>   Riflessi e iniziativa in più. Il tavolo non lo vedrà. Il +2 COS invece lo
+>   rende *migliore* nell'unica cosa per cui lo misurano. **Ha pagato dove non
+>   si vede e lo elogeranno per la metà che si vede** — è l'eco **E-07c**,
 >   riscritta il 2026-08-09 perché la versione precedente era un'eco da monaco
 >   («una parata che prima gli riusciva») appiccicata a un guerriero che non
 >   schivava già prima.
