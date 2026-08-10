@@ -12,7 +12,11 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — G0, G1, G2, G2-bis/ter/quater chiusi; **G3 chiuso del tutto** (2026-08-09: la decisione A1 è caduta, era un bug del generatore) + due correzioni di canone su segnalazione del DM
+## Stato: 🟡 in esecuzione — 8 lotti chiusi su 17
+
+G0, G1, G2, G2-bis/ter/quater e **G3** chiusi (2026-08-09: la decisione A1 è caduta, era un bug del generatore) + tre correzioni di canone su segnalazione del DM.
+**Aperti**: G4-G15. Motore, effort e sequenza consigliata: [§ Come si esegue](#come-si-esegue--motore-effort-sequenza).
+**Il percorso critico passa da te**: `G5` (destinatari) è ferma da luglio e blocca cinque lotti.
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
 
@@ -202,6 +206,46 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       lotti. `--check` in CI: il conteggio non sale rispetto alla baseline.
       Ratchet, non divieto: aggiungerne uno resta legittimo e aggiorna la baseline.
 
+- [ ] **G14 — Le schede dei PG nel repo, e i costi che nessuno riporta** *(nuovo — trovato il 2026-08-09 — 🟠)*
+      Due difetti della stessa famiglia, emersi correggendo il pegno del rito.
+      **(a) Manca la scheda di Thorik.** Tordek, Artemis e Hella hanno una
+      cartella sotto `PG/Artefatti/Artefatti-Pg/`; **il portatore della Corona
+      no**. È esattamente il motivo per cui il suo **−2 DES** ha potuto sparire
+      senza che nessuno se ne accorgesse: non esisteva un posto dove *sarebbe
+      dovuto stare*, quindi la sua assenza non era osservabile.
+      **(b) I consolidamenti tengono i poteri e perdono i costi.** Il blocco
+      «Effetti Meccanici Corona» di `PortaleForgia-P1` elenca **−2 DES**, **+4
+      CAR**, immunità alla paura, scurovisione 36 m e la **non-rimovibilità**.
+      Nessuna delle tre generazioni successive di schede lo riporta: tutte
+      elencano **solo i poteri**. È una **classe** di difetto, non un caso —
+      va cercata su **tutti** gli artefatti vivi (Aegis Fang, Anello, Bracieri,
+      Collana, Cuore di Moradin), non solo sulla Corona.
+      **Deliverable**: 4 schede PG minime **come dati** (`PG/schede/<pg>.yaml`:
+      caratteristiche, modificatori permanenti con la loro fonte, artefatti
+      portati) + `validate_pg.py` che verifica che **ogni modificatore permanente
+      dichiarato in un modulo giocato compaia sulla scheda del PG che l'ha
+      subito**, con la citazione del file d'origine + passata su tutti gli
+      artefatti vivi.
+      **Serve al DM**: la scheda di Thorik (ce l'ha al tavolo, non nel repo) e la
+      decisione **INF-007** (valgono ancora +4 CAR, immunità paura, scurovisione
+      36 m e soprattutto la **non-rimovibilità** della Corona?).
+- [ ] **G15 — Echo Ledger: passata di revisione e regola di riscrittura** *(nuovo — 🟡)*
+      Gli echi **E-07c** ed **E-07e** hanno richiesto **due** giri di correzione,
+      e il secondo solo perché il DM ha insistito: la prima volta erano stati
+      **rinominati invece che riscritti**. Un'eco costruita per un monaco
+      («una parata che prima gli riusciva») non diventa l'eco di un guerriero
+      cambiandole il nome sopra — e un'eco *rovesciata* su chi non ha fatto
+      nessuna scelta non è un'eco, è una riga.
+      **Deliverable**: (1) passata su **tutti** gli echi armati, con la domanda
+      «questo eco regge se cambio l'autore? se sì è scritto male»; (2) regola
+      nuova in `consequence-echoes.md`: *un'eco che cambia autore si **riscrive
+      da zero** o si **annulla** — mai si rinomina, e l'ID non si riusa*;
+      (3) l'Echo Ledger diventa **dati** in `state.yaml` (`echi:` con `id`,
+      `autore`, `data`, `stato` ∈ {armato, sparato, annullato}) e la tabella di
+      §7.E si genera, come già §0/§1/§6 — così un'eco non può più esistere senza
+      autore dichiarato. **Non** tocca il testo dei payoff: quella resta prosa.
+      **Serve al DM**: confermare o cassare gli echi rivisti (E-07f in testa).
+
 ### Onda 2 — richiede una decisione del DM
 
 - [ ] **G5 — PRD + ADR «matrice delle edizioni»** *(E1 — 🔴)*
@@ -297,6 +341,71 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
 
 ---
 
+## Come si esegue — motore, effort, sequenza
+
+> Perché questa sezione esiste: il piano era *corretto* ma non *completabile*.
+> Mancavano tre cose — **quanto costa ogni lotto**, **con che motore conviene
+> farlo**, e **in che ordine**, dato che l'effort che conta davvero non è quello
+> dell'agente ma **quello del DM**: è l'unica risorsa che non si parallelizza.
+
+**Scala dell'effort agente** (una «sessione» = un turno di lavoro che si chiude
+con una PR verde): **XS** ≤ ½ sessione · **S** 1 · **M** 2-3 · **L** 4-6 ·
+**XL** 7+.
+
+| Lotto | Motore consigliato | Perché quel motore | Agente | DM | Dipende da |
+|---|---|---|---|---|---|
+| **G4** — inventario `[INFERRED]` + ratchet | **Sonnet 5** | conteggio, raggruppamento, gate: lavoro meccanico e verificabile, zero giudizio editoriale | **S** | — | — |
+| **G14** — schede PG + costi persi | **Sonnet 5** (script) + **Opus 5** (passata artefatti) | lo schema e il validatore sono meccanici; capire *quale* costo è stato perso e da dove richiede lettura incrociata di più generazioni di documenti | **M** | scheda di Thorik + **INF-007** (~15 min) | — |
+| **G15** — Echo Ledger | **Opus 5** | è narrazione: giudicare se un'eco «regge il cambio d'autore» non è meccanizzabile | **S** | conferma degli echi rivisti (~20 min) | — |
+| **G5** — PRD + matrice edizioni | **Opus 5** | è il documento che decide il *significato* di finito per tutto il resto; sbagliarlo propaga su G7 e G9 | **M** | **30-45 min di intervista** — è il collo di bottiglia | ⛔ decisione DM |
+| **G6** — contratto di tavolo + ADR contenuto + Adult Design Test | **Opus 5** | temi maturi e sicurezza: nessun automatismo, e il contratto lo **scrive il DM** | **M** | **45-60 min** (session zero) | ⛔ decisione DM |
+| **G7** — `validate_prose.py` + bonifica 30 file | **Sonnet 5** (validatore) + **Opus 5** (revisione) | il validatore codifica regole già scritte; la revisione della prosa è giudizio, ed è il lotto dove un motore debole fa danni invisibili | **L** | approvazione a campione | **G5** |
+| **G8** — igiene Python + CI hardening | **Sonnet 5** | `pyproject`, `ruff`, test caso-negativo, template: tutto verificabile dalla CI stessa | **M** | — | — |
+| **G9** — pipeline CD + ADR release | **Sonnet 5**, ADR rivisto in **Opus 5** | la pipeline è meccanica; *cosa* versiona il tag è una decisione di prodotto | **M** | ~10 min (canale di distribuzione) | **G8**, **G5** |
+| **G12** — `groups/<slug>/` | **Opus 5** | diff enorme su file di canone + resolver + guardia: è il lotto con più modi silenziosi di rompere qualcosa | **L** | review della PR | **G4** |
+| **G13** — `brief --for-agent` | **Sonnet 5** | generatore deterministico da dati già tipizzati | **S** | — | **G12** |
+| **G10** — accensione pipeline ADR-0007 | **Haiku 4.5** o **Sonnet 5** | comandi già scritti e testati: qui serve esecuzione, non progettazione | **XS** | **una sessione reale al tavolo** | ⛔ tavolo |
+| **G11** — ricostruzione archi 00-06 | **Opus 5** | è il lotto dove inventare canone è più facile e più grave: serve il motore che sa **fermarsi** e marcare `[INFERRED]` | **XL** | **7 tornate di domande**, una per arco | ⛔ intervista |
+
+**Perché non tutto in Opus.** Su lavoro meccanico e verificabile dalla CI
+(G4, G8, G9, G13) il motore più forte non produce un risultato migliore: produce
+lo stesso risultato più lentamente. La regola che uso qui è **«chi verifica il
+lavoro?»** — se lo verifica un gate, basta Sonnet; se lo verifica solo un lettore
+umano (prosa, canone, echi, PRD), serve Opus.
+
+### Sequenza consigliata — cinque tappe
+
+**Tappa 1 — subito, nessuna decisione tua** (agente: ~S+M+S)
+`G4` → `G14` → `G15`. Chiudono i tre debiti che questo thread ha portato a
+galla e non aspettano niente. Alla fine: gli `[INFERRED]` sono un inventario
+smaltibile a lotti, le quattro schede PG esistono e un gate impedisce che un
+costo permanente sparisca di nuovo, gli echi sono dati con un autore obbligatorio.
+
+**Tappa 2 — il collo di bottiglia** (tuo: ~1h30 in due sedute)
+`G5` (destinatari e ambizione editoriale) e `G6` (confini di contenuto).
+⚠️ **Sono ferme da luglio e bloccano cinque lotti**: G7, G9, ADR-0005 e la sorte
+della bonifica IP del Palio. Finché non le prendi, la Onda 3 non parte — e
+adesso c'è un vincolo in più da valutare: la **serie Golarion degli stemmi**
+usa IP Paizo e non è portabile in un'edizione commerciale.
+
+**Tappa 3 — infrastruttura, in parallelo alla 2** (agente: ~M+M)
+`G8` → `G9`. Non dipendono da te salvo dieci minuti su G9. Effetto collaterale
+che vale da solo: **costruire i booklet in CI** avrebbe intercettato il giorno
+stesso sia il finding E3 sia il bug del rebase.
+
+**Tappa 4 — la PR grossa, da sola** (agente: ~L+S)
+`G12` → `G13`. Decisione già presa (ADR-0018), esecuzione in PR dedicata perché
+è un diff enorme su file di canone e va rivisto senza altro rumore intorno.
+
+**Tappa 5 — gated su di te e sul tavolo** (agente: ~XS+XL)
+`G10` alla prima sessione reale; `G11` quando accetti l'intervista, un arco per
+tornata. `G7` si incastra qui, dopo G5.
+
+**Percorso critico**: `G5` → `G7` → `G9`. Tutto il resto è parallelizzabile.
+Se hai un'ora sola da dare a questo piano, spendila sulla **Tappa 2**.
+
+---
+
 ## Gate / decisioni che servono al DM
 
 | # | Domanda | Blocca |
@@ -306,6 +415,9 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
 | ~~3~~ | ~~I 13 asset del `PALIO-BOOKLET`~~ — ✅ **caduta il 2026-08-09**: gli asset esistevano, non li raggiungeva il generatore | — |
 | 4 | Intervista di ricostruzione, arco per arco | G11 |
 | 5 | Prima sessione reale col flusso `dm.py session end` | G10 |
+| 6 | **INF-007** — valgono ancora +4 CAR, immunità alla paura, scurovisione 36 m e la **non-rimovibilità** della Corona, che stanno nello stesso blocco del −2 DES reintegrato? | G14 |
+| 7 | La **scheda di Thorik**: la porti nel repo? È l'unico PG che non c'è, ed è il motivo per cui un suo malus permanente è potuto sparire | G14 |
+| 8 | Gli **echi rivisti** (E-07c riscritta, E-07e annullata, **E-07f** nuova): confermi o cassi? | G15 |
 
 ---
 
