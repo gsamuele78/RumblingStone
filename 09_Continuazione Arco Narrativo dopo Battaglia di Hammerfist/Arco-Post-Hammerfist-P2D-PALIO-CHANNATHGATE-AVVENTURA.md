@@ -79,12 +79,12 @@ sul Drappellone per attivare la Meraviglia (vedi INTEGRAZIONE §4–§5).
 
 #### 1 — L'Oca *(Nobile Contrada dell'Oca)* → **Waukeen** (commercio, oro)
 - **Motto** *(originale)*: *"Al suono dell'oro, all'armi"* (ironico: qui l'oro suona la resa).
-- **Stemma** *(SVG: `stemmi/01-oca.svg`)*: oca araldica di bianco perla in cammino, moneta di Waukeen in punta. **Colori**: porpora e oro, bordati di bianco perla.
+- **Stemma** *(SVG: `stemmi/01-oca.svg`)*: oca araldica di bianco perla in cammino, **beccata e membrata d'oro**, moneta di Waukeen in punta. **Colori**: porpora e oro, bordati di bianco perla.
 - **Anima**: aristocrazia terriera e banchieri. Corre per il **potere temporale**. **Rivale**: la Torre.
 
 #### 2 — La Torre *(Contrada della Torre)* → **Torm / Tempus** (onore, guerra)
 - **Motto** *(originale)*: *"Oltre il ferro, la volontà"*.
-- **Stemma** *(SVG: `stemmi/02-torre.svg`)*: mastio merlato d'argento dalle feritoie scarlatte, il guanto di Torm sul portone. **Colori**: acciaio brunito e scarlatto, bordati d'argento.
+- **Stemma** *(SVG: `stemmi/02-torre.svg`)*: mastio **muragliato** d'argento dalle feritoie scarlatte, il guanto di Torm sul portone. **Colori**: acciaio brunito e scarlatto, bordati d'argento.
 - **Anima**: veterani, milizia pesante, fabbri d'armi. Corre per l'**onore marziale**. **Rivale**: l'Oca.
 - **→ È la contrada dei GOLEM** (vedi INTEGRAZIONE §5): il suo Sigillo risveglia i Golem d'Assedio di Rethmar.
 
@@ -100,12 +100,12 @@ sul Drappellone per attivare la Meraviglia (vedi INTEGRAZIONE §4–§5).
 
 #### 5 — Il Drago *(Contrada del Drago)* → **Mystra** (magia)
 - **Motto** *(originale)*: *"Il cuore che arde parla in fiamme"*.
-- **Stemma** *(SVG: `stemmi/05-drago.svg`)*: testa di drago d'argento che soffia verso la **stella di Mystra**, in punta. **Colori**: blu notte e argento, listati di viola arcano.
+- **Stemma** *(SVG: `stemmi/05-drago.svg`)*: testa di drago d'argento che soffia verso la **stella d'oro di Mystra**, in punta. **Colori**: blu notte e argento, listati di viola arcano.
 - **Anima**: speziali, alchimisti, accademia arcana. Corre per il **dominio della conoscenza**. **Rivale**: la Civetta.
 
 #### 6 — La Civetta *(Contrada Priora della Civetta)* → **Shar** (perdita, vendetta, segreti)
 - **Motto** *(originale)*: *"Guardo dove la notte tace"* — **perfetto per spie e nobiltà d'ombra**.
-- **Stemma** *(SVG: `stemmi/06-civetta.svg`)*: civetta d'argento di fronte, davanti al **disco nero di Shar**. **Colori**: nero e viola di Shar, listati d'argento freddo.
+- **Stemma** *(SVG: `stemmi/06-civetta.svg`)*: civetta d'argento di fronte, dal **disco facciale d'oro**, davanti al **disco nero di Shar**. **Colori**: nero e viola di Shar, listati d'argento freddo.
 - **Anima**: nobiltà decaduta, burocrati, parassiti di corte. Corre per la **vendetta politica**. **Rivale**: il Bruco / il Drago.
 
 #### 7 — L'Unicorno *(Contrada del Leocorno)* → **Sune / Milil** (bellezza, canto)
@@ -115,7 +115,7 @@ sul Drappellone per attivare la Meraviglia (vedi INTEGRAZIONE §4–§5).
 
 #### 8 — L'Onda *(NUOVA — contrada di casa di Channathgate)* → **Valkur / Selûne** (marinai, luna)
 - **Motto** *(originale)*: *"Il cielo mi colora, il fiume mi arma"*.
-- **Stemma**: cavallone di blu profondo che si leva su tre onde di verde-fiume, sotto la falce di Selûne (`P2D-Palio-Allegati/stemmi/08-onda.svg`). **Colori**: verde-fiume e argento lunare, bordati di blu profondo.
+- **Stemma**: cavallone di blu profondo che si leva su tre onde di verde-fiume, sotto la **falce d'oro di Selûne** (`P2D-Palio-Allegati/stemmi/08-onda.svg`). **Colori**: verde-fiume e argento lunare, bordati di blu profondo.
 - **Anima**: barcaioli, pescatori, portuali del Fiume Cannath — la **contrada di casa**,
   patrocinata dal **Gonfaloniere** e dalla **Gilda dei Barcaioli**. Molti sono gli stessi
   che traghettarono i profughi: **alleanza segreta con l'Istrice**. Corre per l'**onore del
