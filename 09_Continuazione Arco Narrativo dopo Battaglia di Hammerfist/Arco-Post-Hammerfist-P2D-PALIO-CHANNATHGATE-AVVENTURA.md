@@ -105,7 +105,7 @@ sul Drappellone per attivare la Meraviglia (vedi INTEGRAZIONE §4–§5).
 
 #### 6 — La Civetta *(Contrada Priora della Civetta)* → **Shar** (perdita, vendetta, segreti)
 - **Motto** *(originale)*: *"Guardo dove la notte tace"* — **perfetto per spie e nobiltà d'ombra**.
-- **Stemma** *(SVG: `stemmi/06-civetta.svg`)*: civetta d'argento di fronte, dal **disco facciale d'oro**, davanti al **disco nero di Shar**. **Colori**: nero e viola di Shar, listati d'argento freddo.
+- **Stemma** *(SVG: `stemmi/06-civetta.svg`)*: civetta d'argento di fronte, davanti al **disco nero di Shar**. **Colori**: nero e viola di Shar, listati d'argento freddo.
 - **Anima**: nobiltà decaduta, burocrati, parassiti di corte. Corre per la **vendetta politica**. **Rivale**: il Bruco / il Drago.
 
 #### 7 — L'Unicorno *(Contrada del Leocorno)* → **Sune / Milil** (bellezza, canto)

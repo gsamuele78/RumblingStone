@@ -114,7 +114,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ## 6 · LA CIVETTA — *"Guardo dove la notte tace"*
 ![Stemma Civetta](P2D-Palio-Allegati/stemmi/06-civetta.svg)
 - **Divinità**: Shar (perdita, vendetta, segreti). **Colori**: nero e viola di Shar, listati
-  d'argento freddo; nello stemma, la civetta dal **disco facciale d'oro** davanti al **disco nero di Shar**.
+  d'argento freddo; nello stemma, la civetta davanti al **disco nero di Shar**.
 - **Patrono**: **Conte Valerius** (nobiltà decaduta). **Anima**: burocrati, spie,
   parassiti di corte; palazzi che cadono a pezzi dietro facciate d'oro.
 - **Rivale**: il Bruco e il Drago. **Fantino tipico**: un Investigatore/sicario nobiliare,
@@ -210,9 +210,10 @@ punto 3 della checklist di bonifica in `...P2D-PALIO-VERIFICA-LEGALE-IP.md` §7)
 
 **Rosso Ilmater** `#c4565a` è usato solo per le catene spezzate dell'Istrice.
 
-**Oro araldico** `#dfa93b` (lumeggiato `#8a6416`) lega cinque scudi con lo stesso metallo:
-becco e zampe dell'Oca (*beccata e membrata d'oro*), stella di Mystra, disco facciale della
-Civetta, falce di Selûne, corno dell'Unicorno. La Torre è **muragliata**: i giunti dei conci
+**Oro araldico** `#dfa93b` (lumeggiato `#8a6416`) lega quattro scudi con lo stesso metallo:
+becco e zampe dell'Oca (*beccata e membrata d'oro*), stella di Mystra, falce di Selûne,
+corno dell'Unicorno. **La Civetta resta interamente d'argento**: il disco facciale dorato è
+stato provato e scartato dal DM — su Shar il contrasto argento-su-nero regge meglio da solo. La Torre è **muragliata**: i giunti dei conci
 sono in `#8d9aa6`, cioè un argento più scuro di quello della torre — la regola araldica del
 *masoned*, che dà la trama senza introdurre un colore nuovo.
 
