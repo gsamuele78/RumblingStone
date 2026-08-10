@@ -1,0 +1,58 @@
+# Modificatori permanenti che i documenti affermano ma che NON vanno sulla
+# scheda di un PG — ognuno con la ragione scritta.
+#
+# Regola (lotto G14): `validate_pg.py` non vieta nulla, obbliga a dichiarare.
+# Una tripla (PG, delta, caratteristica) trovata nei documenti si chiude in due
+# modi soli: la si registra sulla scheda, oppure la si dismette qui dicendo
+# perché. Non esiste una terza via, ed è apposta — è il silenzio che ha fatto
+# sparire il −2 DES della Corona per tre generazioni di schede.
+ignorati:
+- pg: Thorik
+  caratteristica: COS
+  delta: -2
+  ragione: >-
+    NON ANCORA GIOCATO. È il prezzo del Dono «Il Sangue della Stirpe» al rito di resurrezione di
+    Hella (ARC07-DEF-3 §5 e §0-bis), scena che il tavolo non ha ancora affrontato. I documenti che lo
+    danno per pagato descrivono il canone PREPARATO, non l'oggi — è la stessa distinzione dei due
+    tempi che ha prodotto il finding C1. Va spostato sulla scheda il giorno in cui la scena si gioca
+    E il giocatore sceglie quel Dono (ha tre alternative).
+- pg: Tordek
+  caratteristica: DES
+  delta: -2
+  ragione: >-
+    REFUSO STORICO, già corretto. Dal 2026-07-31 al 2026-08-06 il pegno del rito dello Smeraldo era
+    attribuito a Tordek per errore; l'ha pagato Thorik, il portatore. Le occorrenze rimaste stanno in
+    `plans/` e nei changelog, che sono record storici e vanno lasciati intatti: raccontano l'errore,
+    non lo commettono.
+
+# PARTITA DOPPIA — il libro mastro dei moduli, di fronte a quello delle schede.
+#
+# `fonti_primarie` elenca i file in cui un costo permanente NASCE (non quelli
+# che lo ricitano) e, per ciascuno, che cosa quel file stabilisce. Ogni voce
+# `attesta` dev'essere presente sulla scheda di quel PG **con quel file come
+# `fonte`**: le due colonne devono quadrare.
+#
+# Perché serve, e perché a questa granularità. Il confronto per *tipo* non basta:
+# Thorik ha DUE −2 DES, dalla Corona indossata e dal rito, e cancellandone uno il
+# tipo resterebbe coperto dall'altro. Nemmeno basta controllare che il file sia
+# ancora citato da qualcuno: `PortaleForgia-P1` stabilisce sia il −2 DES sia il
+# +4 CAR, e il secondo terrebbe in piedi il primo. Solo la tripla completa
+# distingue i due — ed è il −2 DES della Corona quello che era sparito davvero.
+#
+# ⚠️ Sì, duplica la scheda. È lo scopo: un libro solo non si può controllare.
+fonti_primarie:
+- file: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+  cosa: >-
+    Il beat in cui Thorik prende la Corona dal trono e se la mette in fronte.
+    Blocco «Effetti Meccanici Corona (Incompleta - Parte 1)», col ricalcolo per
+    esteso: CAR 8 → 12, DES 10 → 8, CA 22 → 21.
+  attesta:
+  - {pg: Thorik, caratteristica: DES, delta: -2}
+  - {pg: Thorik, caratteristica: CAR, delta: 4}
+- file: 07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md
+  cosa: >-
+    §9 Fase 1, Opzione B — il Peso del Mondo accettato nel corpo al rito dello
+    Smeraldo, giocato il 2026-07-31. Lo paga il PORTATORE.
+  attesta:
+  - {pg: Thorik, caratteristica: DES, delta: -2}
+  - {pg: Thorik, caratteristica: COS, delta: 2}

@@ -3112,6 +3112,275 @@
       ]
     },
     {
+      "id": "inventory_inferred",
+      "path": "scripts/inventory_inferred.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/inventory_inferred.py",
+      "summary": "Inventario e ratchet dei [INFERRED] (finding C4). Separa i marcatori dei documenti VIVI (debito vero, sorvegliato) da quelli di plans/ e dei changelog (record storici) e di docs/audit/ (meta): contarli insieme darebbe un numero incapace di scendere.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--path",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sottoalbero da scansionare (default: tutto il repo)."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gate CI: fallisce se il debito APERTO sale sopra la baseline."
+        },
+        {
+          "name": "--update-baseline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive la baseline col conteggio attuale."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File dell'inventario (default: docs/audit/INFERRED-INVENTARIO.md)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        },
+        {
+          "path": "docs/audit/inferred-baseline.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "docs/audit/INFERRED-INVENTARIO.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "docs/audit/inferred-baseline.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/inventory_inferred.py --check",
+      "tests": [
+        "scripts/tests/test_inventory_inferred.py"
+      ],
+      "docs": [
+        "docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md",
+        "docs/audit/INFERRED-INVENTARIO.md"
+      ]
+    },
+    {
+      "id": "validate_pg",
+      "path": "scripts/validate_pg.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_pg.py",
+      "summary": "Gate CI sulle schede PG: fonti apribili, aritmetica delle caratteristiche, deriva (costi permanenti affermati nei documenti e assenti dalle schede) e partita doppia con le fonti primarie. Nasce dal −2 DES della Corona sparito da tre generazioni di schede (2026-08-09).",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca anche ciò che è coerente."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/*.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        },
+        {
+          "path": "scripts/data/pg_modificatori_ignorati.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "schede coerenti",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_pg.py",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/PIANO-REVISIONE-GLOBALE-2026-08.md"
+      ]
+    },
+    {
+      "id": "render_pg",
+      "path": "scripts/render_pg.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/render_pg.py",
+      "summary": "Genera PG/schede/<pg>.md dai dati YAML (ADR-0017): mostra la CATENA delle caratteristiche (10 → 8 → 6), non solo il valore finale. --check è il gate.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gate CI: verifica che le schede siano in sync."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/*.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "PG/schede/*.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rigenerate o in sync",
+        "1": "fuori sync",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/render_pg.py --check",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/PIANO-REVISIONE-GLOBALE-2026-08.md"
+      ]
+    },
+    {
       "id": "validate_state",
       "path": "scripts/validate_state.py",
       "category": "G-orchestration-governance",

@@ -138,8 +138,35 @@ def render_scenari(d: dict) -> str:
     return "\n".join(out)
 
 
+def render_echi(d: dict) -> str:
+    """Echo Ledger (§7.E). Gli annullati restano in tabella, con il perché.
+
+    Non si cancellano e l'ID non si riusa: un'eco annullata **è** un pezzo di
+    storia del canone — E-07e esisteva solo grazie a un'attribuzione sbagliata,
+    e toglierla dalla vista cancellerebbe anche la lezione.
+    """
+    out = ["| ID | Origine (data · PG · scelta) | Tono | Miccia | Come riemerge | Stato |",
+           "|---|---|---|---|---|---|"]
+    for e in d.get("echi") or []:
+        autore = f"**{e['autore']}**"
+        if e.get("coautore"):
+            autore += f" *(e **{e['coautore']}**, dall'altra parte)*"
+        payoff = e.get("payoff") or e.get("nota_stato") or "—"
+        out.append("| **{}** | {} · {} · {} | {} | {} | {} | {} |".format(
+            e["id"], e["data"], autore, _cell(e["fatto"]),
+            _cell(e.get("tono")), _cell(e.get("miccia")), _cell(payoff),
+            _cell(e.get("tag") or e["stato"])))
+    out += ["",
+            "**Autore e stato sono obbligatori** (schema). È la falla che il 2026-08-06 ha "
+            "permesso di *rinominare* E-07c invece di riscriverla: un'eco registra una **scelta**, "
+            "quindi se cambia la mano che ha scelto, o si riscrive da zero o si annulla. "
+            "Gli ID **non si riusano** — un'eco annullata resta in tabella, col perché."]
+    return "\n".join(out)
+
+
 RENDERERS = {
     "archi": render_archi,
+    "echi": render_echi,
     "party": render_party,
     "artefatti": render_artefatti,
     "villain": render_villain,

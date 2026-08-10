@@ -69,4 +69,9 @@ scenari_rethmar:
   difensori: '0'
   rapporto: '—'
 
+# Echo Ledger — vuoto per un gruppo nuovo. `autore` e `stato` sono obbligatori
+# (schema): un'eco senza autore dichiarato si può riassegnare in silenzio, ed è
+# così che nella campagna originale un'eco è stata *rinominata* invece che
+# riscritta. Regole: skills/rumblingstone-narrative-style/references/consequence-echoes.md
+echi: []
 inferred: []

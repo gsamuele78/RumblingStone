@@ -1,0 +1,38 @@
+# Scheda di Tordek — RICOSTRUITA DAL REPO (lotto G14, 2026-08-10).
+# Le caselle `attestato_da: null` sono [INFERRED]: il repo non le attesta e non
+# sono state inventate.
+schema_version: 1
+pg: Tordek
+nome_completo: Tordek Durinheart
+classe: Dwarf Fighter 4 / Monk 9
+razza: Nano dello Scudo (Shield Dwarf)
+allineamento: Legale Neutrale
+stato: Vivo. Sala della Forgia Eterna. Porta nello zaino il Seme-Mercato di Varis, e non sa cosa sia.
+
+caratteristiche:
+  for: {base: null, attuale: null, attestato_da: null}
+  des: {base: null, attuale: null, attestato_da: null}
+  cos: {base: null, attuale: null, attestato_da: null}
+  int: {base: null, attuale: null, attestato_da: null}
+  sag: {base: null, attuale: null, attestato_da: null}
+  car: {base: null, attuale: null, attestato_da: null}
+
+# ✅ VUOTO, ED È IL PUNTO. Dal 2026-07-31 al 2026-08-06 questa scheda avrebbe
+# portato «−2 DES / +2 COS permanenti»: il pegno del rito era stato attribuito a
+# lui per errore. Il Peso del Mondo l'ha accettato THORIK, il portatore.
+# CA senz'armatura, Riflessi, iniziativa e Raffica restano quelli di prima.
+modificatori_permanenti: []
+
+artefatti:
+- Bracieri Gemelli di Moradin (fase Fuoco risvegliata, fase Terra completa; «Diventare una Collina» sbloccato)
+
+vincoli:
+- vincolo: >-
+    ⚠️ Se TORDEK tocca il Seme-Mercato di Varis, il Marchio si chiude su di lui. Oggi non è attivo:
+    Artemis l'ha estratto senza toccarlo e gliel'ha fatto mettere nello zaino.
+  conseguenze: Varis ricalibra l'offerta — non tesori a un monaco nanico, ma certezze.
+  fonte: 07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md
+
+note: >-
+  Il potere dei Bracieri «Diventare una Collina» è sbloccato ma ha un TODO aperto sulla sua scheda
+  di artefatto: finché resta aperto, al tavolo il potere NON esiste.

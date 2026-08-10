@@ -1352,3 +1352,72 @@ entries — they become campaign history.
             scheda Corona PG (nuova tabella "Quello che la Corona ti e'
             costato" + nota 3-quater) e DM (bilancio), booklet RIGENERATI.
 ```
+
+```
+2026-08-10  TAPPA 1 DELL'AUDIT — G4, G14, G15. Tre debiti che questo thread
+            aveva portato a galla, chiusi insieme. Decisioni DM del 2026-08-10:
+            INF-007 confermata in blocco, schede PG ricostruite dal repo con le
+            caselle non attestate marcate, Echo Ledger a dati, e la
+            NON RIMOVIBILITA' della Corona giocata come VINCOLO ATTIVO.
+
+            INF-007 CHIUSA. La Corona indossata vale, a canone e per intero:
+            -2 DES, +4 CAR, immunita' alla paura, scurovisione 36 m, e NON e'
+            rimovibile finche' mancano gemme (salvo Rimuovere Maledizione CD 25).
+            Conseguenze da giocare, decise dal DM: Mente Vuota sempre addosso
+            (nessuna divinazione amica, nessun contatto telepatico dal party),
+            Thorik sempre riconoscibile come il portatore, niente travestimenti
+            ne' infiltrazioni. Pesa su ARC-08 e ARC-09 (Rethmar, Torre
+            Invisibile).
+
+            G14 - LE SCHEDE DEI PG ENTRANO NEL REPO.
+            Quattro file dati in PG/schede/*.yaml + scheda leggibile generata.
+            Thorik era l'unico PG senza un posto suo, ed e' esattamente per
+            questo che il -2 DES della Corona e' potuto sparire da tre
+            generazioni di documenti: non esisteva un posto dove sarebbe dovuto
+            stare, quindi la sua assenza non era osservabile.
+            La sua scheda e' RICOSTRUITA DAL REPO, non copiata: la catena della
+            DES (10 -> 8 -> 6) e del CAR (8 -> 12) e' citata riga per riga;
+            FOR/COS/INT/SAG restano [INFERRED] e non sono state inventate.
+            Nuovo gate validate_pg.py, con quattro controlli:
+              1 ogni modificatore porta una fonte, e la fonte esiste su disco;
+              2 base + somma dei delta = attuale (il conto deve tornare);
+              3 deriva: ogni "-N CAR permanenti" affermato nei documenti dev'essere
+                sulla scheda del PG oppure dismesso con una RAGIONE SCRITTA in
+                scripts/data/pg_modificatori_ignorati.yaml. Non c'e' terza via;
+              4 partita doppia con le FONTI PRIMARIE - i file in cui un costo
+                nasce dichiarano cosa stabiliscono, e le due colonne devono
+                quadrare.
+            Il controllo 4 e' nato da un test che falliva: Thorik ha DUE -2 DES
+            (Corona e rito), quindi cancellandone uno il confronto per tipo
+            resta soddisfatto dall'altro, e il gate sarebbe stato decorativo.
+            Solo la fonte distingue i due.
+            Registrate due dismissioni motivate: il -2 COS di Thorik (Dono di
+            Hella, scena NON ancora giocata) e il -2 DES di Tordek (refuso
+            2026-07-31 -> 08-06, le occorrenze rimaste sono record storici).
+
+            G15 - L'ECHO LEDGER DIVENTA DATO. 7 echi in state.yaml con autore e
+            stato obbligatori; la tabella 7.E di state.md e' GENERATA.
+            Regola nuova in consequence-echoes.md 1-bis: un'eco che cambia
+            autore SI RISCRIVE DA ZERO O SI ANNULLA, non si rinomina, e l'ID non
+            si riusa mai. Il test da fare prima di armarla: "regge se le cambio
+            l'autore?" - se si', e' scritta male, perche' descrive un evento e
+            non la scelta di quel personaggio. Un'eco buona e' intrasferibile.
+            Regola di coerenza R6 in validate_state: gli annullati portano il
+            perche', gli armati portano il payoff, nessun ID si riusa.
+            Gli echi annullati RESTANO in tabella: cancellarne uno porterebbe
+            via anche la lezione.
+
+            G4 - INVENTARIO E RATCHET DEI [INFERRED]. La scoperta che decide il
+            design: 121 marcatori su 323 stanno in plans/ e nei changelog, cioe'
+            RACCONTANO un debito invece di aprirlo. Contarli insieme agli altri
+            dava un numero incapace di scendere - si smaltisce un debito, si
+            scrive nel changelog che l'hai smaltito, e il totale resta uguale.
+            Tre classi: aperti (187, l'unico numero sorvegliato), storici (121),
+            meta (15). L'inventario e' generato in docs/audit/, il ratchet e'
+            in CI.
+
+            File toccati: PG/schede/ (4 yaml + 4 md generati), scripts/
+            (validate_pg, render_pg, inventory_inferred + 2 schemi + dati),
+            state.yaml (echi, INF-007 chiusa, Corona), state.md (7.E generata),
+            consequence-echoes.md, CI (3 gate nuovi), 47 tool a manifest.
+```

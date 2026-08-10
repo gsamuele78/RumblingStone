@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pg_scheda.schema.json",
+  "title": "Scheda PG — i fatti, non la prosa",
+  "description": "Contratto di una scheda personaggio in `PG/schede/<pg>.yaml`. Non è una scheda D&D completa: è l'insieme minimo di fatti che il repo deve tenere onesti, e sopra ogni altra cosa i MODIFICATORI PERMANENTI con la loro fonte. Nasce da un difetto reale (2026-08-09): il −2 DES che la Corona impone a Thorik dal momento in cui la indossa era scritto nel modulo giocato e non compariva in NESSUNA delle tre generazioni di schede successive — perché non esisteva un posto dove sarebbe dovuto stare, quindi la sua assenza non era osservabile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pg",
+    "classe",
+    "caratteristiche",
+    "modificatori_permanenti"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "pg": {
+      "type": "string",
+      "minLength": 2
+    },
+    "nome_completo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "classe": {
+      "type": "string",
+      "minLength": 2
+    },
+    "razza": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "allineamento": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stato": {
+      "description": "Stato al tavolo OGGI, non nel canone preparato.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "caratteristiche": {
+      "description": "Le sei caratteristiche. `base` è il valore PRIMA dei modificatori permanenti registrati sotto; `attuale` è il valore di oggi e DEVE risultare da base + somma dei delta (lo verifica validate_pg.py). Un valore non attestato dal repo si scrive `null` e si dichiara in `attestato_da: null`: è un [INFERRED] tipizzato, non un'invenzione.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "for",
+        "des",
+        "cos",
+        "int",
+        "sag",
+        "car"
+      ],
+      "patternProperties": {
+        "^(for|des|cos|int|sag|car)$": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "base",
+            "attuale"
+          ],
+          "properties": {
+            "base": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 40
+            },
+            "attuale": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1,
+              "maximum": 40
+            },
+            "attestato_da": {
+              "description": "File del repo che attesta il valore. null = non attestato (conta come [INFERRED]).",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "modificatori_permanenti": {
+      "description": "Il cuore del file. Ogni voce DEVE portare la fonte: un modificatore senza fonte è indistinguibile da un'invenzione, ed è esattamente così che il −2 DES della Corona è potuto sparire.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "caratteristica",
+          "delta",
+          "causa",
+          "fonte"
+        ],
+        "properties": {
+          "caratteristica": {
+            "enum": [
+              "FOR",
+              "DES",
+              "COS",
+              "INT",
+              "SAG",
+              "CAR"
+            ]
+          },
+          "delta": {
+            "type": "integer",
+            "minimum": -10,
+            "maximum": 10,
+            "not": {
+              "const": 0
+            }
+          },
+          "causa": {
+            "type": "string",
+            "minLength": 5
+          },
+          "quando": {
+            "description": "Data della sessione, o il beat in cui è successo.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fonte": {
+            "description": "Percorso del file che lo attesta, relativo alla radice. validate_pg.py verifica che il file ESISTA — una fonte che non si può aprire non è una fonte.",
+            "type": "string",
+            "minLength": 5
+          },
+          "reversibile": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "cita": {
+            "description": "Frammento letterale che DEVE comparire nel file `fonte`. Protegge dal caso in cui la fonte resta ma smette di dire quello che la scheda le fa dire.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 8
+          }
+        }
+      }
+    },
+    "artefatti": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      }
+    },
+    "vincoli": {
+      "description": "Vincoli permanenti NON numerici che il tavolo deve ricordare (es. la Corona non rimovibile). Stessa regola: ognuno porta la sua fonte.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "vincolo",
+          "fonte"
+        ],
+        "properties": {
+          "vincolo": {
+            "type": "string",
+            "minLength": 5
+          },
+          "conseguenze": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fonte": {
+            "type": "string",
+            "minLength": 5
+          }
+        }
+      }
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

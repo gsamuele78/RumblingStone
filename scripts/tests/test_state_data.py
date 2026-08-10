@@ -211,3 +211,47 @@ class TestFrontMatterEStateApply(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestEchoLedgerDati(unittest.TestCase):
+    """Lotto G15 — gli echi diventano dati con autore e stato obbligatori.
+
+    Due giri di correzione su E-07c/E-07e hanno mostrato la falla: finché
+    l'Echo Ledger era prosa, un'eco si poteva **rinominare** invece che
+    riscrivere. Con `autore` obbligatorio non è più esprimibile.
+    """
+
+    def setUp(self):
+        import yaml
+        self.d = yaml.safe_load((ROOT / "campaign" / "state.yaml").read_text(encoding="utf-8"))
+        self.echi = self.d.get("echi") or []
+
+    def test_ogni_eco_ha_un_autore(self):
+        for e in self.echi:
+            self.assertTrue(e.get("autore"), f"{e['id']} senza autore: si può riassegnare in silenzio")
+
+    def test_gli_id_non_si_riusano(self):
+        ids = [e["id"] for e in self.echi]
+        self.assertEqual(len(ids), len(set(ids)), "ID di eco riusato")
+
+    def test_e07e_e_annullata_e_dice_perche(self):
+        e = next(x for x in self.echi if x["id"] == "E-07e")
+        self.assertEqual(e["stato"], "annullato")
+        self.assertIn("non ne ha fatta nessuna", e["nota_stato"])
+
+    def test_e07f_esiste_ed_e_di_thorik_con_hella(self):
+        e = next(x for x in self.echi if x["id"] == "E-07f")
+        self.assertEqual(e["autore"], "Thorik")
+        self.assertEqual(e["coautore"], "Hella")
+        self.assertEqual(e["stato"], "armato")
+
+    def test_ogni_eco_armata_dice_come_riemerge(self):
+        for e in self.echi:
+            if e["stato"] == "armato":
+                self.assertTrue((e.get("payoff") or "").strip(), f"{e['id']} armata senza payoff")
+
+    def test_la_regola_del_cambio_autore_e_scritta_nella_skill(self):
+        f = ROOT / "skills" / "rumblingstone-narrative-style" / "references" / "consequence-echoes.md"
+        testo = f.read_text(encoding="utf-8")
+        self.assertIn("si riscrive da zero", testo)
+        self.assertIn("Non si\n> rinomina", testo)

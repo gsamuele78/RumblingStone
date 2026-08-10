@@ -12,10 +12,10 @@
 > maturi **e** contratto di sicurezza · CI da irrobustire **+** CD reale **+**
 > ADR mancanti.
 
-## Stato: 🟡 in esecuzione — 8 lotti chiusi su 17
+## Stato: 🟡 in esecuzione — 11 lotti chiusi su 17 · **Tappa 1 completa**
 
 G0, G1, G2, G2-bis/ter/quater e **G3** chiusi (2026-08-09: la decisione A1 è caduta, era un bug del generatore) + tre correzioni di canone su segnalazione del DM.
-**Aperti**: G4-G15. Motore, effort e sequenza consigliata: [§ Come si esegue](#come-si-esegue--motore-effort-sequenza).
+**Aperti**: G5-G13. Motore, effort e sequenza consigliata: [§ Come si esegue](#come-si-esegue--motore-effort-sequenza).
 **Il percorso critico passa da te**: `G5` (destinatari) è ferma da luglio e blocca cinque lotti.
 
 **Audit (lotto G0) — completato.** Tre documenti in `docs/audit/`:
@@ -200,13 +200,21 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       **Regola che resta**: un gate che dà fastidio si crede prima di metterlo a
       tacere, e un artefatto generato non si tocca mai a mano.
       44 tool a manifest, 15 test nuovi (109 → **125**). <!-- validate-links: ignore -->
-- [ ] **G4 — Inventario `[INFERRED]` + ratchet** *(C4 — 🟠)*
+- [x] **G4 — Inventario `[INFERRED]` + ratchet** *(C4 — 🟠)* — ✅ **eseguito 2026-08-10**
       `scripts/inventory_inferred.py` → `docs/audit/INFERRED-INVENTARIO.md`
       raggruppato per file/tema/domanda-al-DM, così che il DM possa smaltirli a
       lotti. `--check` in CI: il conteggio non sale rispetto alla baseline.
       Ratchet, non divieto: aggiungerne uno resta legittimo e aggiorna la baseline.
+      **Esito.** La scoperta che ha deciso il design: **121 marcatori su 353 stanno
+      in `plans/` e nei changelog**, cioè *raccontano* un debito invece di aprirlo.
+      Contarli insieme agli altri dava un numero **incapace di scendere** — si
+      smaltisce un debito, si scrive nel changelog che l'hai smaltito, e il totale
+      resta uguale: un ratchet così si disattiva da solo entro una settimana (è la
+      dinamica del finding T3). Tre classi: **aperti 215** (l'unico numero
+      sorvegliato), storici 121, meta 17. Inventario generato in
+      `docs/audit/INFERRED-INVENTARIO.md`, gate `--check` in CI, 11 test.
 
-- [ ] **G14 — Le schede dei PG nel repo, e i costi che nessuno riporta** *(nuovo — trovato il 2026-08-09 — 🟠)*
+- [x] **G14 — Le schede dei PG nel repo, e i costi che nessuno riporta** *(nuovo — trovato il 2026-08-09 — 🟠)* — ✅ **eseguito 2026-08-10**
       Due difetti della stessa famiglia, emersi correggendo il pegno del rito.
       **(a) Manca la scheda di Thorik.** Tordek, Artemis e Hella hanno una
       cartella sotto `PG/Artefatti/Artefatti-Pg/`; **il portatore della Corona
@@ -229,7 +237,20 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       **Serve al DM**: la scheda di Thorik (ce l'ha al tavolo, non nel repo) e la
       decisione **INF-007** (valgono ancora +4 CAR, immunità paura, scurovisione
       36 m e soprattutto la **non-rimovibilità** della Corona?).
-- [ ] **G15 — Echo Ledger: passata di revisione e regola di riscrittura** *(nuovo — 🟡)*
+      **Esito.** 4 schede dati in `PG/schede/*.yaml` + scheda leggibile generata,
+      che mostra la **catena** e non solo il numero: *DES 10 → 8 (Corona indossata)
+      → 6 (rito)*. Quella di Thorik è **ricostruita dal repo e citata riga per
+      riga**; FOR/COS/INT/SAG restano `[INFERRED]` e non sono state inventate.
+      `validate_pg.py` con quattro controlli: fonti apribili · aritmetica ·
+      **deriva** (ogni costo permanente affermato nei documenti dev'essere sulla
+      scheda **o** dismesso con una ragione scritta) · **partita doppia** con le
+      fonti primarie.
+      ⚠️ **Il quarto controllo l'ha imposto un test che falliva**: Thorik ha **due**
+      −2 DES (Corona e rito), quindi cancellandone uno il confronto per *tipo* resta
+      soddisfatto dall'altro e il gate sarebbe stato decorativo. Solo la fonte
+      distingue i due. **INF-007 chiusa in blocco** dal DM, non-rimovibilità inclusa
+      come **vincolo attivo con tutte le conseguenze**. 16 test.
+- [x] **G15 — Echo Ledger: passata di revisione e regola di riscrittura** *(nuovo — 🟡)* — ✅ **eseguito 2026-08-10**
       Gli echi **E-07c** ed **E-07e** hanno richiesto **due** giri di correzione,
       e il secondo solo perché il DM ha insistito: la prima volta erano stati
       **rinominati invece che riscritti**. Un'eco costruita per un monaco
@@ -245,6 +266,14 @@ G1-G4 non richiedono alcuna decisione del DM e sono eseguibili subito.
       §7.E si genera, come già §0/§1/§6 — così un'eco non può più esistere senza
       autore dichiarato. **Non** tocca il testo dei payoff: quella resta prosa.
       **Serve al DM**: confermare o cassare gli echi rivisti (E-07f in testa).
+      **Esito.** 7 echi in `state.yaml`, §7.E **generata**, `autore` e `stato`
+      obbligatori da schema. Regola nuova in `consequence-echoes.md` §1-bis col
+      test da fare **prima** di armare un'eco: *regge se le cambio l'autore?* — se
+      sì è scritta male, perché descrive un evento invece della scelta di **quel**
+      personaggio. **Un'eco buona è intrasferibile.** Regola di coerenza **R6** in
+      `validate_state`: gli annullati portano il perché, gli armati portano il
+      payoff, nessun ID si riusa. Gli annullati **restano in tabella** — cancellarne
+      uno porterebbe via anche la lezione. Echi confermati dal DM.
 
 ### Onda 2 — richiede una decisione del DM
 

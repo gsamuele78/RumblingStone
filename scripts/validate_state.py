@@ -22,6 +22,8 @@ Regole di coerenza (oltre allo schema)
   R3  esiste almeno un arco `in_corso` oppure il confine lo nega esplicitamente
   R4  nessun arco `giocato` sta dopo un arco `preparato` (ordine del cruscotto)
   R5  se un PG ha `preparato` valorizzato, `oggi` non può esserne una copia
+  R6  echi: gli annullati portano il perché, gli armati portano il payoff,
+      e nessun ID si riusa
 
 Uso
   python3 scripts/validate_state.py [--file PATH] [--json] [--verbose]
@@ -154,6 +156,23 @@ def coherence_rules(d: dict, schema: "dict | None" = None) -> list[str]:
         prep = p.get("preparato")
         if prep and prep.strip() == (p.get("oggi") or "").strip():
             errs.append(f"R5 · {p['pg']}: «preparato» è identico a «oggi» — usare null se non diverge")
+
+    # R6 — Echo Ledger. Le due regole che la storia di E-07c/E-07e ha reso
+    # necessarie: un'eco annullata deve dire PERCHÉ (altrimenti sparisce la
+    # lezione insieme all'eco), e un ID non si riusa mai.
+    visti: dict[str, int] = {}
+    for e in d.get("echi", []):
+        visti[e["id"]] = visti.get(e["id"], 0) + 1
+        if e["stato"] == "annullato" and not (e.get("nota_stato") or "").strip():
+            errs.append(f"R6 · {e['id']}: eco annullata senza `nota_stato` — "
+                        "un'eco che sparisce senza il perché porta via anche la lezione")
+        if e["stato"] == "armato" and not (e.get("payoff") or "").strip():
+            errs.append(f"R6 · {e['id']}: eco armata senza `payoff` — "
+                        "un'eco che non dice come riemerge non è armata, è un appunto")
+    for id_, n in visti.items():
+        if n > 1:
+            errs.append(f"R6 · {id_}: ID usato {n} volte — gli ID degli echi non si riusano "
+                        "(consequence-echoes.md §1)")
 
     return errs
 

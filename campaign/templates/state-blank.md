@@ -140,3 +140,13 @@ YYYY-MM-DD  Campaign group <name> started — new state.md from blank template.
 <!-- gen:state:scenari -->
 (generato da render_state.py)
 <!-- /gen:state:scenari -->
+
+## §7.E Echo Ledger (le scelte che il mondo ricorda)
+
+Regole di scrittura: `skills/rumblingstone-narrative-style/references/consequence-echoes.md`.
+**Autore e stato sono obbligatori** — un'eco che cambia autore si riscrive da
+zero o si annulla, non si rinomina, e l'ID non si riusa mai.
+
+<!-- gen:state:echi -->
+(generato da render_state.py)
+<!-- /gen:state:echi -->

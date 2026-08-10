@@ -1169,6 +1169,48 @@
       "deterministic": true
     },
     {
+      "name": "inventory_inferred",
+      "description": "Inventario e ratchet dei [INFERRED] (finding C4). Separa i marcatori dei documenti VIVI (debito vero, sorvegliato) da quelli di plans/ e dei changelog (record storici) e di docs/audit/ (meta): contarli insieme darebbe un numero incapace di scendere.",
+      "invocation": "python3 scripts/inventory_inferred.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Sottoalbero da scansionare (default: tutto il repo)."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: fallisce se il debito APERTO sale sopra la baseline."
+          },
+          "update-baseline": {
+            "type": "boolean",
+            "description": "Riscrive la baseline col conteggio attuale."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "out": {
+            "type": "string",
+            "description": "File dell'inventario (default: docs/audit/INFERRED-INVENTARIO.md)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/INFERRED-INVENTARIO.md",
+        "docs/audit/inferred-baseline.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "new_campaign_group",
       "description": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
       "invocation": "./scripts/new-campaign-group.sh",
@@ -1195,6 +1237,31 @@
       "exit_codes": {
         "0": "ok",
         "1": "errore"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "render_pg",
+      "description": "Genera PG/schede/<pg>.md dai dati YAML (ADR-0017): mostra la CATENA delle caratteristiche (10 → 8 → 6), non solo il valore finale. --check è il gate.",
+      "invocation": "python3 scripts/render_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: verifica che le schede siano in sync."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "PG/schede/*.md"
+      ],
+      "exit_codes": {
+        "0": "rigenerate o in sync",
+        "1": "fuori sync",
+        "2": "errore d'uso"
       },
       "deterministic": true
     },
@@ -1357,6 +1424,35 @@
       "exit_codes": {
         "0": "master conformi",
         "1": "violazioni checklist"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_pg",
+      "description": "Gate CI sulle schede PG: fonti apribili, aritmetica delle caratteristiche, deriva (costi permanenti affermati nei documenti e assenti dalle schede) e partita doppia con le fonti primarie. Nasce dal −2 DES della Corona sparito da tre generazioni di schede (2026-08-09).",
+      "invocation": "python3 scripts/validate_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Elenca anche ciò che è coerente."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "schede coerenti",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso"
       },
       "deterministic": true
     },

@@ -1,0 +1,37 @@
+# Scheda di Artemis — RICOSTRUITA DAL REPO (lotto G14, 2026-08-10).
+schema_version: 1
+pg: Artemis
+nome_completo: null
+classe: Human Warlock 13
+razza: Umano
+allineamento: Caotico Neutrale (l'Anello lo spinse verso CB — riportato)
+stato: Vivo. Sala della Forgia Eterna. Anello riforgiato.
+
+caratteristiche:
+  for: {base: null, attuale: null, attestato_da: null}
+  des: {base: null, attuale: null, attestato_da: null}
+  cos: {base: null, attuale: null, attestato_da: null}
+  int: {base: null, attuale: null, attestato_da: null}
+  sag: {base: null, attuale: null, attestato_da: null}
+  car: {base: null, attuale: null, attestato_da: null}
+
+# ⚠️ La cerebromorfosi (Arco 04) prevede modificatori permanenti CUMULATIVI
+# (−1 FOR, −1 SAG, −2 DES, +4 INT per fallimento). Il repo descrive la crisi ma
+# NON attesta l'esito numerico giocato: finché il DM non lo conferma qui non si
+# scrive niente — è precisamente il caso in cui inventare sarebbe più comodo.
+# Domanda aperta al DM, registrata come [INFERRED].
+modificatori_permanenti: []
+
+artefatti:
+- Ring of Chaotic Illumination (Riforgiato)
+
+vincoli:
+- vincolo: >-
+    Ha rifiutato la classe di prestigio «Signore del Sole e dell'Ombra» offerta da Lathander e Mask:
+    resta warlock e si costruisce la sua strada.
+  conseguenze: Lathander e Mask cooperano ATTRAVERSO di lui, mai al posto suo — nessun intervento diretto.
+  fonte: campaign/lore/campaign-chronicle.md
+
+note: >-
+  `[INFERRED — needs DM confirmation]` Esito numerico della cerebromorfosi dell'Arco 04: quanti
+  fallimenti, e quindi quale malus permanente porta oggi? Il repo attesta la crisi, non il risultato.
