@@ -13,6 +13,12 @@
 > gli 8 stemmi SVG sono stati ricolorati con **livree proprie di Channathgate**
 > (palette canonica in `...P2D-PALIO-CONTRADE-STEMMI-CANTI.md` §Livree). Il punto 3
 > della checklist §7 è chiuso; i punti 1-2 e 4-9 restano aperti.
+>
+> 🔄 **Aggiornamento 2026-08-10**: le **figure** degli otto scudi sono ora icone
+> **game-icons.net** in **CC BY 3.0**, ricolorate in livrea. L'obbligo di attribuzione è
+> assolto da `P2D-Palio-Allegati/stemmi/CREDITS.md` (autori, icona per icona, modifiche
+> dichiarate); i testi di licenza sono versionati in `stemmi/game-icons/`. Chiude la
+> riserva sul `CREDITS.md` del punto 7 della checklist §7.
 
 ---
 
@@ -143,8 +149,12 @@ festa»* — la loro politica di tutela copre anche contesti d'uso offensivi.
 - **Note IP presenti** in AVVENTURA §1 e STEMMI-CANTI (coda): dichiarano ispirazione
   storico-culturale e **uso non commerciale** — coerenti con lo stato attuale del repo,
   ma vanno corrette dove affermano che i motti sono "originali" (sono parafrasi, §3.3).
-- **Icone game-icons.net** (solo proposte in STEMMI-CANTI, non ancora integrate):
-  licenza **CC BY 3.0**, compatibile anche con uso commerciale **con attribuzione**. ✅
+- **Icone game-icons.net** — **integrate** negli otto scudi dal 2026-08-10: licenza
+  **CC BY 3.0**, compatibile anche con uso commerciale **con attribuzione**. Obbligo
+  assolto in `P2D-Palio-Allegati/stemmi/CREDITS.md` (menzione *"Icons made by Lorc,
+  Delapouite and Caro Asercion"* richiesta dal `license.txt` fornito, autori per singola
+  icona, e dichiarazione delle modifiche: ricolorazione, scala, rimozione del riquadro di
+  fondo). File di licenza versionati in `stemmi/game-icons/`. ✅
 
 ---
 
@@ -194,8 +204,9 @@ oltre alle bonifiche Palio del §7.
    **nome comune** storico (le corse dette "palio" esistono in decine di città: il
    termine generico non è monopolizzabile, l'identità senese sì).
 7. Correggere le **note IP** interne (§3.3) e documentare la **provenienza delle tavole
-   raster**; se si integrano icone game-icons.net, aggiungere `CREDITS.md` (CC BY 3.0).
-   *(Le livree dichiarate nei testi sono già allineate agli SVG ricolorati.)*
+   raster**. *(Le livree dichiarate nei testi sono allineate agli SVG ricolorati; il
+   `CREDITS.md` per le icone game-icons.net ✅ **è stato aggiunto il 2026-08-10**. Resta da
+   tracciare la sola provenienza dei due PNG forniti dal DM.)*
 8. **Riambientare fuori da Forgotten Realms** (§6) o pubblicare solo sotto uso privato.
 9. In alternativa alle bonifiche 1–6: richiedere al CTPS un **contratto di
    autorizzazione** (oneroso) o, per usi non commerciali pubblici, un **nulla osta**.

@@ -1,8 +1,9 @@
 # Parte 2D — Le 8 Contrade: Stemmi, Motti, Canti, Rivalità
 
 > Allegato di `...P2D-PALIO-DM-MASTER-REFERENCE.md`. Gli **stemmi** sono **originali**
-> (arte vettoriale propria in `P2D-Palio-Allegati/stemmi/`), **non riproduzioni** di
-> quelli reali di Siena. I **motti** qui usati sono **originali**, *ispirati* alla
+> (`P2D-Palio-Allegati/stemmi/`) e **non riproducono** quelli reali di Siena: scudi,
+> livree e simboli faerûniani sono propri della campagna; le **figure** sono icone
+> game-icons.net in CC BY 3.0, ricolorate (attribuzione in `stemmi/CREDITS.md`). I **motti** qui usati sono **originali**, *ispirati* alla
 > tradizione senese (fatti storici di pubblico dominio) ma **riscritti** per la campagna.
 > Le divinità sono **faerûniane** (conversione da Golarion).
 
@@ -74,7 +75,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ![Stemma Istrice](P2D-Palio-Allegati/stemmi/04-istrice.svg)
 - **Divinità**: Ilmater (sofferenza) / Chauntea (comunità). **Colori**: verde legnoferro e bruno
   di terra, bordati d'avorio; nello stemma, **catene spezzate** di rosso Ilmater (i
-  profughi liberati).
+  profughi liberati) su campagna di bruno di terra.
 - **Patrono**: **Capitana Lorana** e gli ~800 **profughi di Tretino/Drellin**. **Anima**:
   disperati accampati nei sobborghi, guardati con sospetto dai ricchi; il rione che non
   dovrebbe nemmeno avere un cavallo.
@@ -99,7 +100,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ## 5 · IL DRAGO — *"Il cuore che arde parla in fiamme"*
 ![Stemma Drago](P2D-Palio-Allegati/stemmi/05-drago.svg)
 - **Divinità**: Mystra (magia). **Colori**: blu notte e argento, listati di
-  viola arcano; nello stemma, un drago avvolto attorno alla **stella di Mystra**.
+  viola arcano; nello stemma, una testa di drago che soffia verso la **stella di Mystra**.
 - **Patrono**: **Maester Pyriel** (sapere/accademia). **Anima**: speziali, alchimisti,
   maghi di corte; il rione profuma di zolfo e pergamena.
 - **Rivale**: la Civetta (che ruba i loro segreti). **Fantino tipico**: un Magus, o un
@@ -127,7 +128,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ## 7 · L'UNICORNO — *"Ferisce e sana il corno che porto"*
 ![Stemma Unicorno](P2D-Palio-Allegati/stemmi/07-unicorno.svg)
 - **Divinità**: Sune (bellezza) / Milil (canto). **Colori**: cremisi di Sune e argento di
-  Milil; nello stemma, il corno dell'unicorno a forma di **spirale d'arpa**, d'oro.
+  Milil; nello stemma, il **corno dorato** che dà il nome al distretto.
 - **Patrono**: **Aldric Thornwall** (gilde/artigiani). **Anima**: sarti, falegnami,
   menestrelli; il rione più bello e il più codardo — vuole solo che la guerra "passi oltre".
 - **Rivale**: nessuna fissa — **ago della bilancia**. **Fantino tipico**: un Bardo o un
@@ -142,7 +143,7 @@ tipico · CANTO (con effetto meccanico) · aggancio a Rethmar (Meraviglia)**.
 ![Stemma Onda](P2D-Palio-Allegati/stemmi/08-onda.svg)
 - **Divinità**: Valkur (marinai, vento favorevole) / Selûne (luna, navigazione).
   **Colori**: verde-fiume e argento lunare, bordati di blu profondo; nello stemma, un
-  **luccio fluviale** saltante su tre onde sotto una **falce di Selûne**.
+  **cavallone** che si leva su tre onde sotto una **falce di Selûne**.
 - **Patrono**: il **Gonfaloniere di Channathgate** e la **Gilda dei Barcaioli** — è la
   **contrada di casa**, l'unica non legata a una fazione di Rethmar. Molti barcaioli
   dell'Onda sono **gli stessi che traghettarono i profughi** giù dal Cannath: legame
@@ -211,31 +212,38 @@ punto 3 della checklist di bonifica in `...P2D-PALIO-VERIFICA-LEGALE-IP.md` §7)
 
 ---
 
-## Nota grafica — upgrade delle figure degli stemmi (opzionale)
-Gli scudi (`P2D-Palio-Allegati/stemmi/*.svg`) sono **originali** e ridisegnati in stile
-araldico piatto unificato. In ogni file la figura è isolata fra i marcatori
-`<!-- FIGURA ... -->` e `<!-- /FIGURA -->`: il gruppo porta `fill` e `stroke` della livrea,
-quindi **un `<path>` incollato lì dentro eredita i colori giusti senza altre modifiche**.
-Se vuoi figure **ancora più rifinite mantenendo lo stesso stile
-fantasy e senza problemi di copyright**, l'opzione migliore e coerente è **game-icons.net**:
-migliaia di icone SVG monocromatiche, **stesso tratto**, licenza **CC BY 3.0** (gratis, con
-**attribuzione**). Sono `<path>` che si incollano dentro gli scudi al posto della figura
-attuale. Mappatura consigliata:
+## Nota grafica — le figure degli stemmi
 
-| Contrada | Icona game-icons.net (nome) | Autore tipico |
+Dal 2026-08-10 le **figure** degli otto scudi sono icone di **game-icons.net**, ricolorate
+nella livrea del distretto e inserite negli scudi originali della campagna. Attribuzione
+completa e testi di licenza: **`P2D-Palio-Allegati/stemmi/CREDITS.md`**.
+
+> *Icons made by Lorc, Delapouite and Caro Asercion — https://game-icons.net — CC BY 3.0*
+
+| Contrada · Distretto | Icona | Autore |
 |---|---|---|
-| Oca | `goose` / `duck` | Delapouite |
-| Torre | `tower` / `defensive-wall` | Delapouite / Lorc |
-| Bruco | `caterpillar` / `worms` | Lorc |
-| Istrice | `hedgehog` / `porcupine` | Delapouite |
-| Drago | `dragon-head` / `spiked-dragon-head` | Lorc |
-| Civetta | `owl` | Delapouite |
-| Unicorno | `unicorn` | Delapouite / Caro Asercion |
-| Onda | `jumping-dog`→ meglio `salmon`/`fish` + `moon` | Delapouite / Lorc |
+| Oca · *The Golden Plume* | `goose` | Delapouite |
+| Torre · *The Iron Bastion* | `white-tower` | Lorc |
+| Bruco · *The Silver Weft* | `caterpillar` | Delapouite |
+| Istrice · *The Quill-Wood Refuge* | `porcupine` | Caro Asercion |
+| Drago · *The Spell-Wyrm Spires* | `spiked-dragon-head` | Delapouite |
+| Civetta · *The Whispering Shadows* | `barn-owl` | Caro Asercion |
+| Unicorno · *The Gilded Horn* | `unicorn` | Delapouite |
+| Onda · *The Tidal Crest* | `big-wave` | Lorc |
 
-**Attribuzione da includere** (es. in un `CREDITS.md`): *"Alcune icone da game-icons.net
-(Lorc, Delapouite, Caro Asercion), CC BY 3.0."* — Passami i file (o i path) e li incastono
-io negli scudi, tenendo cornici e **livree di Channathgate** attuali.
+I file sorgente stanno in `P2D-Palio-Allegati/stemmi/game-icons/` insieme ai due testi di
+licenza. In archivio anche `stone-tower` (Lorc), variante non usata per la Torre.
+
+**Restano originali della campagna** — e fuori da questa attribuzione — la sagoma dello
+scudo, le livree, i cartigli dei motti e i simboli faerûniani sovrapposti: moneta di
+Waukeen, guanto di Torm, stella di Mystra, disco di Shar, falce di Selûne, catene spezzate
+dell'Istrice, corno dorato dell'Unicorno.
+
+**Come si sostituisce una figura**: in ogni file la figura è isolata fra i marcatori
+`<!-- FIGURA ... -->` e `<!-- /FIGURA -->`, e il gruppo esterno porta il `fill` della
+livrea — quindi **un `<path>` incollato lì dentro eredita il colore giusto senza altre
+modifiche**. Le icone game-icons hanno `viewBox="0 0 512 512"`: va scartato il riquadro di
+fondo `M0 0h512v512H0z` e ricalcolato il `transform` di scala.
 
 ## Nota IP (ripetuta qui per chiarezza)
 Nomi delle contrade e riferimenti al Palio = **fatti storico-culturali** citati come

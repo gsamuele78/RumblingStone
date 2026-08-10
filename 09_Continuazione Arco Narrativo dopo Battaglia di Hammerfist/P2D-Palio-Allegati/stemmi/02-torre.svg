@@ -5,14 +5,8 @@
   <g clip-path="url(#t2)">
     <path d="M100 20 L180 20 V150 Q180 210 100 232 Z" fill="#333e48"/>
     <path d="M20 150 Q20 210 100 232 Q180 210 180 150 Z" fill="#a6242c" opacity="0.55"/>
-    <!-- FIGURA (sostituibile: incolla qui il <path> dell'icona, eredita fill/stroke dal gruppo) -->
-    <g fill="#dce3e8" stroke="#1e262e" stroke-width="2.5" stroke-linejoin="round">
-      <rect x="76" y="78" width="48" height="86"/>
-      <path d="M70 78 h60 v-10 h-9 v6 h-9 v-6 h-9 v6 h-6 v-6 h-9 v6 h-9 z"/>
-      <rect x="90" y="112" width="20" height="52" fill="#8e1e26" stroke="none"/>
-      <rect x="86" y="92" width="12" height="12" fill="#8e1e26" stroke="none"/>
-      <rect x="102" y="92" width="12" height="12" fill="#8e1e26" stroke="none"/>
-    </g>
+  <!-- FIGURA · game-icons.net "white-tower-lorc" di Lorc, CC BY 3.0 (sostituibile: il gruppo porta il fill della livrea) -->
+    <g fill="#dce3e8"><g transform="translate(39.15 42.41) scale(0.23906)"><path d="M97.812 23.375v92.875l46.22 51.72V351h-25.845L94.594 491.906H414.53L390.938 351h-25.875V167.97l46.22-51.72V23.375h-53.938v43.97H324.5v-43.97h-53.938v43.97h-32.437v-43.97h-53.938v43.97H151.75v-43.97H97.812zm73.75 152.875h18.688v50.22h-18.688v-50.22zm73.594 0h18.688v50.22h-18.688v-50.22zm74.156 0H338v50.22h-18.688v-50.22z"/></g></g>
     <!-- /FIGURA -->
     <!-- guanto di Torm sul portone -->
     <circle cx="100" cy="150" r="10" fill="#f2efe6" stroke="#1e262e" stroke-width="2"/>
