@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 40,
+  "tool_count": 47,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -1163,7 +1163,7 @@
       "category": "C-post-session-canon",
       "language": "python",
       "invocation": "python3 scripts/session_wizard.py",
-      "summary": "Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "summary": "Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
@@ -1255,7 +1255,7 @@
       "category": "C-post-session-canon",
       "language": "python",
       "invocation": "python3 scripts/state_apply.py",
-      "summary": "Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "summary": "Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
@@ -1336,6 +1336,20 @@
           "overwrites": false,
           "generated_header": false,
           "schema": null
+        },
+        {
+          "path": "campaign/state-changelog.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
         }
       ],
       "exit_codes": {
@@ -1363,7 +1377,8 @@
       ],
       "docs": [
         "scripts/README-automation.md",
-        "plans/adr/ADR-0007-*.md"
+        "plans/adr/ADR-0007-*.md",
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
       ]
     },
     {
@@ -2900,6 +2915,126 @@
       ]
     },
     {
+      "id": "inventory_inferred",
+      "path": "scripts/inventory_inferred.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/inventory_inferred.py",
+      "summary": "Inventario e ratchet dei [INFERRED] (finding C4). Separa i marcatori dei documenti VIVI (debito vero, sorvegliato) da quelli di plans/ e dei changelog (record storici) e di docs/audit/ (meta): contarli insieme darebbe un numero incapace di scendere.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--path",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sottoalbero da scansionare (default: tutto il repo)."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gate CI: fallisce se il debito APERTO sale sopra la baseline."
+        },
+        {
+          "name": "--update-baseline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive la baseline col conteggio attuale."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File dell'inventario (default: docs/audit/INFERRED-INVENTARIO.md)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        },
+        {
+          "path": "docs/audit/inferred-baseline.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "docs/audit/INFERRED-INVENTARIO.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "docs/audit/inferred-baseline.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/inventory_inferred.py --check",
+      "tests": [
+        "scripts/tests/test_inventory_inferred.py"
+      ],
+      "docs": [
+        "docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md",
+        "docs/audit/INFERRED-INVENTARIO.md"
+      ]
+    },
+    {
       "id": "new-campaign-group",
       "path": "scripts/new-campaign-group.sh",
       "category": "G-orchestration-governance",
@@ -2971,6 +3106,146 @@
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "render_pg",
+      "path": "scripts/render_pg.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/render_pg.py",
+      "summary": "Genera PG/schede/<pg>.md dai dati YAML (ADR-0017): mostra la CATENA delle caratteristiche (10 → 8 → 6), non solo il valore finale. --check è il gate.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gate CI: verifica che le schede siano in sync."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/*.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "PG/schede/*.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rigenerate o in sync",
+        "1": "fuori sync",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/render_pg.py --check",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/PIANO-REVISIONE-GLOBALE-2026-08.md"
+      ]
+    },
+    {
+      "id": "render_state",
+      "path": "scripts/render_state.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/render_state.py",
+      "summary": "Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_deps": [
+        "pyyaml"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica l'allineamento senza scrivere (gate CI)."
+        },
+        {
+          "name": "--stdout",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa le regioni generate senza toccare i file."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/state.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "allineato / rigenerato",
+        "1": "drift (--check) o regioni assenti",
+        "2": "errore d'uso o pyyaml mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "output byte-identico a parità di state.yaml"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/campaign_state.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/render_state.py --check",
+      "tests": [
+        "scripts/tests/test_state_data.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
       ]
     },
     {
@@ -3079,6 +3354,182 @@
       ]
     },
     {
+      "id": "validate_docs",
+      "path": "scripts/validate_docs.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_docs.py",
+      "summary": "Gate CI: verifica che i percorsi citati in AGENTS.md/README.md/docs/INDEX.md esistano davvero (anti-deriva doc<->filesystem, finding T4).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--doc",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Documento da controllare (ripetibile). Default: AGENTS.md, README.md, docs/INDEX.md."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca anche i documenti verificati."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "AGENTS.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "README.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "docs/INDEX.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "tutti i percorsi citati esistono",
+        "1": "percorsi citati e inesistenti",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_docs.py",
+      "tests": [
+        "scripts/tests/test_validate_docs.py"
+      ],
+      "docs": [
+        "docs/audit/AUDIT-2026-08-INGEGNERIA-ADR-CI-CD.md"
+      ]
+    },
+    {
+      "id": "validate_links",
+      "path": "scripts/validate_links.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_links.py",
+      "summary": "Gate CI: link relativi rotti e percorsi assoluti della macchina di chi scrive, su tutti i .md del repo (finding E3).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--path",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sottoalbero da controllare (default: tutto il repo)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa il numero di file esaminati."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "nessun link rotto e nessun percorso assoluto",
+        "1": "link rotti o percorsi assoluti",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_links.py",
+      "tests": [
+        "scripts/tests/test_validate_links.py"
+      ],
+      "docs": [
+        "docs/audit/AUDIT-2026-08-EDITORIALE-E-NARRATIVA.md"
+      ]
+    },
+    {
       "id": "validate_modules",
       "path": "scripts/validate_modules.py",
       "category": "G-orchestration-governance",
@@ -3146,6 +3597,176 @@
       "tests": [],
       "docs": [
         "skills/rumblingstone-module-standard/SKILL.md"
+      ]
+    },
+    {
+      "id": "validate_pg",
+      "path": "scripts/validate_pg.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_pg.py",
+      "summary": "Gate CI sulle schede PG: fonti apribili, aritmetica delle caratteristiche, deriva (costi permanenti affermati nei documenti e assenti dalle schede) e partita doppia con le fonti primarie. Nasce dal −2 DES della Corona sparito da tre generazioni di schede (2026-08-09).",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca anche ciò che è coerente."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/*.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        },
+        {
+          "path": "scripts/data/pg_modificatori_ignorati.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "schede coerenti",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_pg.py",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/PIANO-REVISIONE-GLOBALE-2026-08.md"
+      ]
+    },
+    {
+      "id": "validate_state",
+      "path": "scripts/validate_state.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_state.py",
+      "summary": "Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato).",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_deps": [
+        "pyyaml"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File di stato da validare."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Conteggio per sezione + elenco [INFERRED]."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "stato valido",
+        "1": "violazioni di schema o coerenza",
+        "2": "errore d'uso o pyyaml mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/campaign_state.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_state.py",
+      "tests": [
+        "scripts/tests/test_state_data.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0017-stato-dati-e-prosa.md"
       ]
     },
     {

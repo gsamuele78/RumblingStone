@@ -474,7 +474,7 @@
     },
     {
       "name": "session_wizard",
-      "description": "Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "description": "Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano.",
       "invocation": "python3 scripts/session_wizard.py",
       "inputSchema": {
         "type": "object",
@@ -508,7 +508,7 @@
     },
     {
       "name": "state_apply",
-      "description": "Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "description": "Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017).",
       "invocation": "python3 scripts/state_apply.py",
       "inputSchema": {
         "type": "object",
@@ -539,7 +539,9 @@
       },
       "outputs": [
         "campaign/state.md",
-        "git-commit"
+        "git-commit",
+        "campaign/state-changelog.md",
+        "campaign/state.yaml"
       ],
       "exit_codes": {
         "0": "ok / nessuna modifica",
@@ -1167,6 +1169,48 @@
       "deterministic": true
     },
     {
+      "name": "inventory_inferred",
+      "description": "Inventario e ratchet dei [INFERRED] (finding C4). Separa i marcatori dei documenti VIVI (debito vero, sorvegliato) da quelli di plans/ e dei changelog (record storici) e di docs/audit/ (meta): contarli insieme darebbe un numero incapace di scendere.",
+      "invocation": "python3 scripts/inventory_inferred.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Sottoalbero da scansionare (default: tutto il repo)."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: fallisce se il debito APERTO sale sopra la baseline."
+          },
+          "update-baseline": {
+            "type": "boolean",
+            "description": "Riscrive la baseline col conteggio attuale."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "out": {
+            "type": "string",
+            "description": "File dell'inventario (default: docs/audit/INFERRED-INVENTARIO.md)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "docs/audit/INFERRED-INVENTARIO.md",
+        "docs/audit/inferred-baseline.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "il debito aperto è salito sopra la baseline",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "new_campaign_group",
       "description": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
       "invocation": "./scripts/new-campaign-group.sh",
@@ -1193,6 +1237,60 @@
       "exit_codes": {
         "0": "ok",
         "1": "errore"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "render_pg",
+      "description": "Genera PG/schede/<pg>.md dai dati YAML (ADR-0017): mostra la CATENA delle caratteristiche (10 → 8 → 6), non solo il valore finale. --check è il gate.",
+      "invocation": "python3 scripts/render_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: verifica che le schede siano in sync."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "PG/schede/*.md"
+      ],
+      "exit_codes": {
+        "0": "rigenerate o in sync",
+        "1": "fuori sync",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "render_state",
+      "description": "Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift.",
+      "invocation": "python3 scripts/render_state.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Verifica l'allineamento senza scrivere (gate CI)."
+          },
+          "stdout": {
+            "type": "boolean",
+            "description": "Stampa le regioni generate senza toccare i file."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "campaign/state.md"
+      ],
+      "exit_codes": {
+        "0": "allineato / rigenerato",
+        "1": "drift (--check) o regioni assenti",
+        "2": "errore d'uso o pyyaml mancante"
       },
       "deterministic": true
     },
@@ -1236,6 +1334,72 @@
       "deterministic": true
     },
     {
+      "name": "validate_docs",
+      "description": "Gate CI: verifica che i percorsi citati in AGENTS.md/README.md/docs/INDEX.md esistano davvero (anti-deriva doc<->filesystem, finding T4).",
+      "invocation": "python3 scripts/validate_docs.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "doc": {
+            "type": "string",
+            "description": "Documento da controllare (ripetibile). Default: AGENTS.md, README.md, docs/INDEX.md."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Elenca anche i documenti verificati."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "tutti i percorsi citati esistono",
+        "1": "percorsi citati e inesistenti",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_links",
+      "description": "Gate CI: link relativi rotti e percorsi assoluti della macchina di chi scrive, su tutti i .md del repo (finding E3).",
+      "invocation": "python3 scripts/validate_links.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Sottoalbero da controllare (default: tutto il repo)."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Stampa il numero di file esaminati."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessun link rotto e nessun percorso assoluto",
+        "1": "link rotti o percorsi assoluti",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_modules",
       "description": "Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard.",
       "invocation": "python3 scripts/validate_modules.py",
@@ -1260,6 +1424,68 @@
       "exit_codes": {
         "0": "master conformi",
         "1": "violazioni checklist"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_pg",
+      "description": "Gate CI sulle schede PG: fonti apribili, aritmetica delle caratteristiche, deriva (costi permanenti affermati nei documenti e assenti dalle schede) e partita doppia con le fonti primarie. Nasce dal −2 DES della Corona sparito da tre generazioni di schede (2026-08-09).",
+      "invocation": "python3 scripts/validate_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Elenca anche ciò che è coerente."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "schede coerenti",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_state",
+      "description": "Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato).",
+      "invocation": "python3 scripts/validate_state.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "File di stato da validare."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Report in JSON (opt-in)."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Conteggio per sezione + elenco [INFERRED]."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "stato valido",
+        "1": "violazioni di schema o coerenza",
+        "2": "errore d'uso o pyyaml mancante"
       },
       "deterministic": true
     },

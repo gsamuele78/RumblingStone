@@ -1,0 +1,108 @@
+# Scheda di Thorik — RICOSTRUITA DAL REPO, non copiata dalla scheda del giocatore.
+#
+# Perché esiste (lotto G14, 2026-08-10). Thorik era l'unico dei quattro PG senza
+# un posto suo nel repo — Tordek, Artemis e Hella hanno una cartella sotto
+# `PG/Artefatti/Artefatti-Pg/`, lui no. È esattamente il motivo per cui il
+# **−2 DES che la Corona gli impone dal momento in cui la indossa** è potuto
+# sparire da tre generazioni di schede senza che nessuno se ne accorgesse: non
+# esisteva un posto dove sarebbe dovuto stare, quindi la sua assenza non era
+# osservabile. Il DM se n'è accorto a memoria, non leggendo un file.
+#
+# ⚠️ Le caselle con `attestato_da: null` sono [INFERRED]: il repo non le attesta
+# e NON sono state inventate. Quando il DM ritrova la scheda vera si correggono
+# solo quelle — tutto il resto è citato riga per riga.
+schema_version: 1
+pg: Thorik
+nome_completo: Thorik Grrskulldark
+classe: Dwarf Fighter 13
+razza: Nano dello Scudo (Shield Dwarf)
+allineamento: Caotico Neutrale (l'artefatto lo spinge verso Legale Buono)
+stato: >-
+  Vivo. Morto una volta al Guado di Drellin (Arco 00) e riportato indietro, legato ad Aegis Fang.
+  Oggi nella Sala della Forgia Eterna, dopo il riposo.
+
+caratteristiche:
+  for:
+    base: null
+    attuale: null
+    attestato_da: null
+  des:
+    # L'unica catena numerica interamente attestata: il modulo scrive «DES 10 → 8»
+    # al momento in cui indossa la Corona, e il rito dello Smeraldo toglie altri 2.
+    base: 10
+    attuale: 6
+    attestato_da: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+  cos:
+    base: null
+    attuale: null
+    attestato_da: null
+  int:
+    base: null
+    attuale: null
+    attestato_da: null
+  sag:
+    base: null
+    attuale: null
+    attestato_da: null
+  car:
+    base: 8
+    attuale: 12
+    attestato_da: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+
+modificatori_permanenti:
+- caratteristica: DES
+  delta: -2
+  causa: >-
+    Ha indossato la Corona di Adamantio — «peso e restrizione movimenti testa». Il modulo scrive il
+    ricalcolo per esteso: DES 10 → 8, CA 22 → 21.
+  quando: Sala della Corona → ARC-07 P1
+  cita: '**-2 Destrezza** (peso e restrizione movimenti testa)'
+  fonte: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+  reversibile: false
+- caratteristica: CAR
+  delta: 4
+  causa: Bonus immediato della Corona indossata (CAR 8 → 12).
+  quando: Sala della Corona → ARC-07 P1
+  cita: '**+4 Carisma** (potenziamento)'
+  fonte: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+  reversibile: false
+- caratteristica: DES
+  delta: -2
+  causa: >-
+    Ha accettato il **Peso del Mondo** nel corpo al rito dello Smeraldo (Opzione B): le articolazioni
+    fondono con la pietra. È il portatore a pagare il pegno.
+  quando: '2026-07-31 — ARC-07 P4, rito dello Smeraldo / Rituale 3 «Incudine del Mondo»'
+  cita: 'perde **permanentemente 2 DES**'
+  fonte: 07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md
+  reversibile: false
+- caratteristica: COS
+  delta: 2
+  causa: L'altra metà del Peso del Mondo — pf massimi +1/DV, Tempra +1.
+  quando: '2026-07-31 — ARC-07 P4, rito dello Smeraldo'
+  cita: 'guadagna **permanentemente +2 COS**'
+  fonte: 07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md
+  reversibile: false
+
+artefatti:
+- Corona di Adamantio (Topazio + Smeraldo accesi, Rituale Legacy 3 completato)
+- Aegis Fang (+2 Returning Dwarven Waraxe, legata, pre-risveglio pieno)
+
+vincoli:
+- vincolo: >-
+    La Corona NON è rimovibile finché mancano gemme (salvo *Rimuovere Maledizione* CD 25). Vincolo
+    ATTIVO con tutte le conseguenze — decisione DM 2026-08-10.
+  conseguenze: >-
+    Mente Vuota è sempre addosso: nessuna divinazione amica su di lui, nessun contatto telepatico dal
+    party. È sempre riconoscibile come il portatore: niente travestimenti né infiltrazioni, e ogni PNG
+    che sa cos'è la Corona lo identifica a vista. Da giocare in ARC-08 e ARC-09 (Rethmar, Torre Invisibile).
+  fonte: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+- vincolo: >-
+    Immunità alla paura (magica e naturale) e scurovisione 36 m, dalla Corona indossata.
+  conseguenze: Nessun TS contro la paura va tirato per lui.
+  fonte: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
+
+note: >-
+  ⚠️ **Il −2 COS non c'è ancora.** È il prezzo del Dono «Il Sangue della Stirpe» al rito di Hella
+  (`ARC07-DEF-3` §5), scena non ancora giocata — per questo non è fra i modificatori qui sopra.
+  Quando si giocherà si sommerà al +2 COS del rito dello Smeraldo: netto zero sulla COS, cioè due
+  pegni permanenti per tornare dov'era. Vedi «Il bilancio di Thorik» sulla scheda DM della Corona.

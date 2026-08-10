@@ -15,7 +15,7 @@ session, current villain countdowns), see:
 For history that is locked-in (events that already happened and cannot
 change), see:
 
-    campaign/lore/campaign-history.md
+    campaign/lore/campaign-chronicle.md
 
 For coherence rules (what must remain consistent across sessions —
 artifact powers, NPC knowledge, PG promises and debts), see:

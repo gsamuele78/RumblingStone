@@ -1,0 +1,77 @@
+# campaign/state.yaml — TEMPLATE VUOTO per un gruppo nuovo
+#
+# Copiato su `campaign/state.yaml` da `scripts/new-campaign-group.sh`.
+# Contratto e ragioni: plans/adr/ADR-0017-stato-dati-e-prosa.md
+#
+# La regola che conta: `oggi` e `tempo` sono OBBLIGATORI. Un fatto senza tempo
+# dichiarato non passa `scripts/validate_state.py`. Serve a rendere impossibile
+# l'errore che è costato un mese di canone ambiguo al primo gruppo: scrivere
+# come presente qualcosa che è solo preparato.
+#
+# Dopo aver compilato:
+#   python3 scripts/validate_state.py     # schema + coerenza
+#   python3 scripts/render_state.py       # genera le tabelle in state.md
+
+schema_version: 1
+
+confine:
+  giocato_fino_a: nulla — sessione 0, gruppo nuovo
+  prossima_scena: Arco 00 — apertura
+  da_giocare:
+  - ARC-00
+  aggiornato: '1970-01-01'
+
+archi:
+- arco: 00 Setup RHoD
+  tempo: in_corso
+  stato: da iniziare
+  march_clock: Day 0
+  pg_livello: '5'
+  note: null
+
+party:
+- pg: PG-1
+  classe: (classe e livello)
+  oggi: Punto di partenza del gruppo — da compilare in sessione 0.
+  preparato: null
+  filoni: null
+
+artefatti:
+- artefatto: (nessuno all'inizio)
+  portatore: —
+  oggi: Il gruppo non porta ancora artefatti.
+  preparato: null
+
+villain:
+- villain: (primo antagonista)
+  tempo: giocato
+  dove: null
+  agenda: Da compilare — l'agenda avanza anche se i PG non intervengono.
+  clock: 0/8
+  trigger: null
+
+conoscenze:
+- png: (primo PNG)
+  tempo: giocato
+  sa_che: Da compilare — un PNG non può rivelare ciò che non ha imparato in scena.
+  come: null
+
+difensori_rethmar:
+- contingente: (da compilare all'Arco 09)
+  tempo: preparato
+  conteggio: '0'
+  condizione: null
+
+scenari_rethmar:
+- scenario: (da compilare all'Arco 09)
+  tempo: preparato
+  orda: '0'
+  difensori: '0'
+  rapporto: '—'
+
+# Echo Ledger — vuoto per un gruppo nuovo. `autore` e `stato` sono obbligatori
+# (schema): un'eco senza autore dichiarato si può riassegnare in silenzio, ed è
+# così che nella campagna originale un'eco è stata *rinominata* invece che
+# riscritta. Regole: skills/rumblingstone-narrative-style/references/consequence-echoes.md
+echi: []
+inferred: []

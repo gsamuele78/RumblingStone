@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**40 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**47 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -33,8 +33,8 @@
 |---|---|---|:--:|:--:|:--:|---|
 | `campaign_branch.py` | Guardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007). | **status|guard|ensure** · --group | ✔ | — | — | `0` · `1` · `2` |
 | `next_session.py` | Aggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md). | --last-n · --hype | ✔ | — | — | `0` · `1` |
-| `session_wizard.py` | Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007). | --answers · --out · --no-commit | ✔ | ✔ | ✔ | `0` · `1` · `130` |
-| `state_apply.py` | Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007). | --migrate · --session · --check · --yes · --commit | ✔ | ✔ | ✔ | `0` · `1` · `2` |
+| `session_wizard.py` | Wizard di fine sessione: scrive il log canonico in campaign/sessions/ con front-matter dei delta (march/ritual/villain clock, XP) leggibile da state_apply — il DM non scrive YAML a mano. | --answers · --out · --no-commit | ✔ | ✔ | ✔ | `0` · `1` · `130` |
+| `state_apply.py` | Applica le proposte meccaniche del log di sessione: March Clock in state.md, clock dei villain in state.yaml (poi rigenera la vista), riga di storico in state-changelog.md. Legge i delta dal front-matter del log se presente, altrimenti dalle regex (ADR-0007 + ADR-0017). | --migrate · --session · --check · --yes · --commit | ✔ | ✔ | ✔ | `0` · `1` · `2` |
 | `state_sync.py` | Propone (mai applica) diff a campaign/state.md dai trigger nei session log; report markdown per revisione DM. | --since · --session | ✔ | — | — | `0` · `2` |
 | `update_xp.py` | Registro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md. | --check | ✔ | — | — | `0` |
 
@@ -74,9 +74,16 @@
 | `check_plans_discipline.py` | Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. | --base · --head · --json | ✔ | — | — | `0` · `1` |
 | `dm.py` | Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. | **prep|post|session|recap|handout|maps|hype|dossier|skills|doctor** | ✔ | ✔ | ✔ | `0` · `1` · `2` |
 | `install-git-hooks.sh` | Installa gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009). | — | ✔ | — | — | `0` · `1` |
+| `inventory_inferred.py` | Inventario e ratchet dei [INFERRED] (finding C4). Separa i marcatori dei documenti VIVI (debito vero, sorvegliato) da quelli di plans/ e dei changelog (record storici) e di docs/audit/ (meta): contarli insieme darebbe un numero incapace di scendere. | --path · --check · --update-baseline · --json · --out | ✔ | — | — | `0` · `1` · `2` |
 | `new-campaign-group.sh` | Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template. | **new-group-name** · --backup-current | ✔ | ✔ | ✔ | `0` · `1` |
+| `render_pg.py` | Genera PG/schede/<pg>.md dai dati YAML (ADR-0017): mostra la CATENA delle caratteristiche (10 → 8 → 6), non solo il valore finale. --check è il gate. | --check | ✔ | — | — | `0` · `1` · `2` |
+| `render_state.py` | Genera le tabelle di canone (§0/§1/§6) di campaign/state.md dalle regioni marcate, a partire da campaign/state.yaml (ADR-0017). --check è gate CI anti-drift. | --check · --stdout | ✔ | ✔ | — | `0` · `1` · `2` |
 | `tools_manifest.py` | Fonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json. | --check · --emit-all · --render-md · --emit-mcp | ✔ | — | — | `0` · `1` · `2` |
+| `validate_docs.py` | Gate CI: verifica che i percorsi citati in AGENTS.md/README.md/docs/INDEX.md esistano davvero (anti-deriva doc<->filesystem, finding T4). | --doc · --verbose · --json | ✔ | — | — | `0` · `1` · `2` |
+| `validate_links.py` | Gate CI: link relativi rotti e percorsi assoluti della macchina di chi scrive, su tutti i .md del repo (finding E3). | --path · --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
 | `validate_modules.py` | Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard. | --verbose · --json | ✔ | — | — | `0` · `1` |
+| `validate_pg.py` | Gate CI sulle schede PG: fonti apribili, aritmetica delle caratteristiche, deriva (costi permanenti affermati nei documenti e assenti dalle schede) e partita doppia con le fonti primarie. Nasce dal −2 DES della Corona sparito da tre generazioni di schede (2026-08-09). | --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
+| `validate_state.py` | Gate CI: valida campaign/state.yaml contro campaign_state.schema.json + 5 regole di coerenza (ADR-0017). Impone che ogni fatto dichiari il proprio tempo (giocato/preparato). | --file · --json · --verbose | ✔ | — | — | `0` · `1` · `2` |
 
 ## I · Convertitori di contenuto
 

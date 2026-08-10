@@ -25,6 +25,9 @@ from __future__ import annotations
 import sys, re, argparse
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore import frontmatter  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SESS = ROOT / "campaign" / "sessions"
 STATE = ROOT / "campaign" / "state.md"
@@ -45,15 +48,27 @@ def parse_event_block(text: str) -> str:
     return m.group(1) if m else ""
 
 def extract_events(path: Path) -> dict:
+    """Delta della sessione. Preferisce il **front-matter** (dati) alle regex (prosa).
+
+    ADR-0017 / lotto G2-ter: se il log porta un blocco `---` iniziale con
+    `delta:`, quello è la fonte — deterministica, e non limitata alla lista di
+    villain cablata in TRIGGERS. Senza front-matter si ricade sulle regex, così
+    i log già scritti continuano a funzionare senza essere riscritti.
+    """
     text = path.read_text(encoding="utf-8", errors="replace")
     m = DATE_RE.search(path.name) or DATE_RE.search(text[:400])
     date = m.group(1) if m else "0000-00-00"
-    block = parse_event_block(text)
-    hits = []
-    for name, rx in TRIGGERS:
-        for mm in rx.finditer(block):
-            hits.append((name, mm.group(0).strip(), mm.groups()))
-    return {"file": path.name, "date": date, "block": block.strip(), "hits": hits}
+
+    fm, body = frontmatter.split(text)
+    block = parse_event_block(body)
+    hits = frontmatter.deltas(fm)
+    source = "front-matter" if hits else "regex"
+    if not hits:
+        for name, rx in TRIGGERS:
+            for mm in rx.finditer(block):
+                hits.append((name, mm.group(0).strip(), mm.groups()))
+    return {"file": path.name, "date": date, "block": block.strip(),
+            "hits": hits, "source": source}
 
 def render_report(events: list[dict]) -> str:
     out = []

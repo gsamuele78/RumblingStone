@@ -127,9 +127,15 @@ a 1.000 anni fa** (Hella è il 4° PG, APL 13 pieno).
 > solo la sua metà.
 
 ### 🛡️ THORIK — l'unto che paga il prezzo del re (Casa di Davide lead)
-- Porta il peso della Corona **e** il costo più alto (−2 COS): il DM lo dica
-  chiaro — Thorik paga di più *perché* ha di più (D8). È la sua natura di
-  leader-che-si-sacrifica, non un'ingiustizia.
+- Porta il peso della Corona **e** gli viene chiesto il costo più alto (−2 COS):
+  il DM lo dica chiaro — Thorik paga di più *perché* ha di più (D8). È la sua
+  natura di leader-che-si-sacrifica, non un'ingiustizia.
+- ⚠️ **Fai la somma prima di metterlo sul tavolo.** Al rito dello Smeraldo
+  (master #1 §9) Thorik ha guadagnato **+2 COS**: il Sangue della Stirpe glieli
+  toglie. Netto sulla COS: **zero**, cioè due pegni permanenti per tornare dov'era
+  — e questo giocatore il conto lo fa. Non è un motivo per togliergli il Dono 1;
+  è il motivo per **mettere subito in fila anche le altre due strade** del §5,
+  «Il Filo dell'Ascia» compresa. La scelta resta sua.
 - **Non sa** che la "presenza verde" che gli alleviò le spalle al Piano della
   Terra (master #1 §9) era lei. Lo scoprirà al §8, e sarà uno dei momenti più
   forti della campagna: *ha già portato peso per Hella, senza saperlo.*

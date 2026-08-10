@@ -1,0 +1,35 @@
+# Scheda di Hella — RICOSTRUITA DAL REPO (lotto G14, 2026-08-10).
+schema_version: 1
+pg: Hella
+nome_completo: Hella Oakenshield
+classe: Dream Dwarf Ranger 1 / Druid 12
+razza: Dream Dwarf (Races of Stone) — scurovisione 27 m, Sogno della Terra
+allineamento: Neutrale Buono
+stato: >-
+  ⚠️ MORTA AL TAVOLO OGGI. Caduta nella Stanza della Corona (Arco 06); il corpo è nella Sala della
+  Forgia Eterna, vegliato da Therysol. Lo spirito ha già compiuto il Viaggio nell'Incudine del Mondo
+  — i PG non lo sanno. La resurrezione è la PROSSIMA scena (ARC-07 P3B), non un fatto compiuto.
+
+caratteristiche:
+  for: {base: null, attuale: null, attestato_da: null}
+  des: {base: null, attuale: null, attestato_da: null}
+  cos: {base: null, attuale: null, attestato_da: null}
+  int: {base: null, attuale: null, attestato_da: null}
+  sag: {base: null, attuale: null, attestato_da: null}
+  car: {base: null, attuale: null, attestato_da: null}
+
+# Nessun modificatore permanente ATTESTATO come già subito. Il +4 SAG della
+# Collana e il template Ibrido Treant appartengono al canone PREPARATO (dopo la
+# resurrezione): finché la scena non è giocata non stanno qui — è la stessa
+# regola dei due tempi che ha prodotto il finding C1.
+modificatori_permanenti: []
+
+artefatti:
+- Collana dei Semi Eterni (si forma DURANTE il rito di resurrezione — non ancora sua)
+
+vincoli: []
+
+note: >-
+  Compagno animale: Durik, cane maschio, riforgiato in Guardiano di Pietra.
+  ⚠️ Attenzione al tempo: quasi tutti i documenti che la descrivono («viva, Ibrido Treant, Collana al
+  collo») raccontano il DOPO. Al tavolo, oggi, è morta.

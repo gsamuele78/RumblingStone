@@ -3,7 +3,8 @@
 > **Purpose**: single source of truth for what is *currently* true in the
 > RumblingStone world. Updated at the end of every session.
 >
-> **This is a blank template.** Copy to `campaign/state.md` when starting
+> **This is a blank template.** Le tabelle fra `<!-- gen:state:… -->` sono
+> **generate** da `campaign/state.yaml`: non scriverle a mano. Copy to `campaign/state.md` when starting
 > a new group. See `campaign/DM-CAMPAIGN-PLAYBOOK.md` §7 for the reset
 > procedure.
 
@@ -18,20 +19,9 @@
 
 ## §0 Campaign Status At-a-Glance
 
-| Arc | Fase | Stato | March Clock | PG Lv | Note |
-|---|---|---|---|---|---|
-| 00 Setup RHoD | ⬜ | non iniziato | Day 0 | 5 | — |
-| 01 Miniera | ⬜ | non iniziato | — | — | — |
-| 02 Scaladossa | ⬜ | non iniziato | — | — | — |
-| 03 Cittadella | ⬜ | non iniziato | — | — | — |
-| 04 Tomba Belkram | ⬜ | non iniziato | — | — | — |
-| 05 Stanza Runica | ⬜ | non iniziato | — | — | — |
-| 06 Corona Adamantio | ⬜ | non iniziato | — | — | — |
-| 07 Portale Forgia | ⬜ | non iniziato | — | — | — |
-| 08 Hammerfist | ⬜ | non iniziato | — | — | — |
-| 09 Post-Hammerfist | ⬜ | non iniziato | Target Day 40 | — | — |
-
----
+<!-- gen:state:archi -->
+(generato da render_state.py)
+<!-- /gen:state:archi -->
 
 ## §1 Party — Current Position & Condition
 
@@ -126,3 +116,37 @@ Format: `skills/rumblingstone-narrative-style/references/pc-protagonism.md`.
 YYYY-MM-DD  Campaign group <name> started — new state.md from blank template.
             Party: <PC names>. Starting level 5. Arc 00 about to begin.
 ```
+
+<!-- gen:state:party -->
+(generato da render_state.py)
+<!-- /gen:state:party -->
+
+<!-- gen:state:artefatti -->
+(generato da render_state.py)
+<!-- /gen:state:artefatti -->
+
+<!-- gen:state:villain -->
+(generato da render_state.py)
+<!-- /gen:state:villain -->
+
+<!-- gen:state:conoscenze -->
+(generato da render_state.py)
+<!-- /gen:state:conoscenze -->
+
+<!-- gen:state:difensori -->
+(generato da render_state.py)
+<!-- /gen:state:difensori -->
+
+<!-- gen:state:scenari -->
+(generato da render_state.py)
+<!-- /gen:state:scenari -->
+
+## §7.E Echo Ledger (le scelte che il mondo ricorda)
+
+Regole di scrittura: `skills/rumblingstone-narrative-style/references/consequence-echoes.md`.
+**Autore e stato sono obbligatori** — un'eco che cambia autore si riscrive da
+zero o si annulla, non si rinomina, e l'ID non si riusa mai.
+
+<!-- gen:state:echi -->
+(generato da render_state.py)
+<!-- /gen:state:echi -->

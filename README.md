@@ -37,7 +37,7 @@ The core heroes of the campaign (Detailed in `PG/`):
 
 ### PNG (NPCs & Villains)
 
-Important non-player characters and antagonists (Detailed in `Bestiario/villain/`, `Bestiario/png/` and `campaign/npcs/`):
+Important non-player characters and antagonists (detailed in `Bestiario/villain/` and `Bestiario/png/`):
 
 - **Maestro Varis "Seta-Argento"**: Opportunistic planar merchant, urban broker in Rethmar, CR 6.
 - **Conte Valerius**: Nobility entangled in funding the enemy, demanding social/political finesse to defeat.
@@ -57,9 +57,10 @@ Important non-player characters and antagonists (Detailed in `Bestiario/villain/
 
 - **`campaign/`**: Core campaign files.
   - `sessions/`: Chronological session logs.
-  - `npcs/` & `locations/`: Key figures and environment descriptions.
-  - `encounters/`: Custom encounter design and tactics.
-  - `lore/`: House rules, setting details, and DM strategy (e.g., `csmpaign players.md`).
+  - `recaps/`: Player-facing recaps (+ `homebrew/` layouts).
+  - `templates/`: Blank state, session and PNG-dossier templates.
+  - `lore/`: House rules, campaign history, DM-strategy pointer.
+  - *(PNG, villain e mostri stanno in `Bestiario/`, non qui — vedi AGENTS.md.)*
 - **`skills/`**: Nine focused AI-agent skills + a legacy router. Rules are sourced from the d20 SRD (D&D 3.5) and the Pathfinder 1e SRD:
   - `dnd-35-srd/` — pure 3.5 mechanics (d20srd.org)
   - `forgotten-realms-lore/` — Faerûn 1372 DR canon

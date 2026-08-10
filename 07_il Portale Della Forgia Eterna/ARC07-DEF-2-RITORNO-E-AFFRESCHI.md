@@ -605,40 +605,39 @@ scene brevi, una per giocatore, giocate **una alla volta e in privato se
 puoi** — o almeno lette a turno mentre gli altri ascoltano senza commentare.
 Chiudi ogni scena e passa oltre: **non spiegare nulla**.
 
-### 🛡️ THORIK — quello che stavolta non ha retto lui
+### 🛡️ THORIK — le mani fredde sotto la trave
 
-> *Sogni una cosa banale e insopportabile: una trave che scende, e le tue mani
-> che non arrivano in tempo. Non perché sei lento. Perché **qualcun altro ci è
-> arrivato prima**, e adesso è lui che è sotto, e tu sei quello in piedi, con
-> le mani libere e niente da fare.*
->
-> *Nel sogno provi a dire che tocca a te. Ti esce la voce di quando eri
-> giovane, e nessuno ti sente.*
-
-È il rovescio esatto dell'immagine che la Corona gli aveva mostrato alla
-vigilia — *due mani sotto un architrave che scende* — e adesso quelle mani non
-sono le sue. Al rito il Peso l'ha preso **Tordek**. Thorik ha guardato.
-⚠️ **Non trasformarlo in senso di colpa**: è più sottile e più duro. È un uomo
-la cui identità è *reggere*, che ha scoperto di poter essere risparmiato. Se il
-giocatore ne parla, ascolta e non risolvere.
-
-### ⚒️ TORDEK — le mani fredde, e poi lo zaino
-
-Ha avuto la notte più piena del gruppo: si è preso il Peso e porta il Seme.
-Sono **due scene**, giocale di seguito con una pausa in mezzo.
-
-> *Prima. Sogni di essere ancora inginocchiato sull'Altare, e il peso c'è
-> ancora — ma non lo porti da solo. C'è un secondo paio di mani sotto la trave.
-> Non le vedi: le **senti**, e sono più piccole delle tue, e sono fredde come
-> pietra all'ombra, e non tremano.*
+> *Sogni di essere ancora inginocchiato sull'Altare, e il peso c'è ancora — ma
+> non lo porti da solo. C'è un secondo paio di mani sotto la trave. Non le
+> vedi: le **senti**, e sono più piccole delle tue, e sono fredde come pietra
+> all'ombra, e non tremano.*
 >
 > *Provi a girare la testa per vedere chi è. E il sogno, con la gentilezza
 > ottusa dei sogni, ti gira la testa **dall'altra parte**.*
 
-⚠️ La presenza verde è **Hella**, e Tordek **non lo sa**. Non confermarlo fino
-al #3. Se il giocatore indovina: *«non lo sai.»*
+È il compimento dell'immagine che la Corona gli aveva mostrato alla vigilia —
+*due mani sotto un architrave che scende*. Al rito quelle mani erano le sue, e
+non erano sole.
+⚠️ La presenza verde è **Hella**, e Thorik **non lo sa**: la crede Moradin, o
+non se lo chiede. **Non confermarlo fino al #3.** Se il giocatore indovina:
+*«non lo sai.»* È l'eco **E-07f** (`state.md` §7.E).
+⚠️ **Non trasformarlo in orgoglio né in senso di colpa.** Il punto è più
+sottile: è un uomo la cui identità è *reggere*, e che per la prima volta ha
+scoperto di **non aver retto da solo** — e la cosa non lo ha diminuito. Se il
+giocatore ne parla, ascolta e non risolvere.
 
-> *Poi. Sogni una fiera. Non una fiera nanica: banchi bassi, teli chiari, una
+*(Nota di canone, 2026-08-09: fino a questa data la scena di Thorik era il suo
+rovescio — «qualcun altro ci è arrivato prima, tu sei quello in piedi» — scritta
+quando il pegno era attribuito per errore a Tordek, e questa scena stava sotto
+il suo nome. Il pegno è del portatore: la scena torna a lui, insieme alle mani
+fredde.)*
+
+### ⚒️ TORDEK — lo zaino
+
+Al rito **non gli è stato chiesto niente**, e non ha pagato niente: il Peso era
+del portatore. La sua notte è **una scena sola**, e non parla dell'Altare.
+
+> *Sogni una fiera. Non una fiera nanica: banchi bassi, teli chiari, una
 > lingua che non conosci ma che capisci lo stesso, e un odore di spezie che non
 > crescono in nessun posto in cui sei stato. Nessuno ti guarda. Sei un cliente
 > come un altro, e la cosa che ti mette a disagio è **proprio quella**.*

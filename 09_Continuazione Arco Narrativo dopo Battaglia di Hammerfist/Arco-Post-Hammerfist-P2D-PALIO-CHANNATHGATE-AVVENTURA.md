@@ -64,6 +64,15 @@ e confraternite laiche: non erano mai atee, ma di una religiosità **civica e fe
 
 > **Nota di conversione (Golarion → Faerûn)**: la campagna è ambientata nei Reami.
 > Le divinità sono state riconvertite dal pantheon di Golarion a quello faerûniano.
+> 🔁 *Dal 2026-08-10 il pantheon di partenza non è più solo un ricordo*: la serie
+> **`P2D-Palio-Allegati/stemmi/golarion/`** ricostruisce gli **stessi otto scudi** sotto
+> Abadar, Iomedae/Gorum, Norgorber, Sarenrae/Erastil, Nethys, Calistria, Shelyn e
+> Gozreh/Desna. Gli SVG citati distretto per distretto qui sotto sono la serie **Faerûn**;
+> il gemello Golarion ha lo **stesso nome di file** dentro `golarion/`, quindi per girare
+> l'arco a un tavolo Pathfinder basta cambiare cartella. **Le regole restano D&D 3.5** —
+> cambiano divinità, livrea e simbolo in campo, non le meccaniche. Mappatura e motivazioni:
+> `stemmi/golarion/README.md`. ⚠️ Quella serie usa **nomi e simboli divini di Paizo**: uso
+> **non commerciale**, dentro la *Community Use Policy* (VERIFICA-LEGALE-IP §4).
 >
 > **Nota patrimonio/IP** *(aggiornata 2026-08-10)*: il Palio di Siena e le sue contrade
 > sono citati come **ispirazione storico-culturale** (fatti di pubblico dominio). Scudi,
