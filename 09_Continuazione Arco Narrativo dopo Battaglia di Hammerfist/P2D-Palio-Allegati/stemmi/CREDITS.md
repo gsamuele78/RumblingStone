@@ -47,6 +47,9 @@ scudo, le livree e i loro codici colore, i cartigli dei motti, e i simboli faer�
 sovrapposti — moneta di Waukeen, guanto di Torm, stella di Mystra, disco di Shar, falce di
 Selûne, catene spezzate dell'Istrice, corno dorato dell'Unicorno.
 
+> Il manuale di manutenzione completo — anatomia dello scudo, come si incastona un'icona,
+> come si dora una parte, come si verifica — è in **`PROCEDURA.md`**, in questa cartella.
+
 ## Contratto del cartiglio e dei testi
 
 Su tutti e 16 gli scudi — serie faerûniana e Golarion — il cartiglio del motto è
