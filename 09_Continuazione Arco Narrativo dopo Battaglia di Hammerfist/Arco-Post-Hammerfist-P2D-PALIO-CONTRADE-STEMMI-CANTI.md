@@ -257,6 +257,18 @@ livrea — quindi **un `<path>` incollato lì dentro eredita il colore giusto se
 modifiche**. Le icone game-icons hanno `viewBox="0 0 512 512"`: va scartato il riquadro di
 fondo `M0 0h512v512H0z` e ricalcolato il `transform` di scala.
 
+## Serie alternativa — Golarion / Pathfinder
+
+`P2D-Palio-Allegati/stemmi/golarion/` contiene gli **stessi otto scudi** con il pantheon di
+Golarion al posto di quello faerûniano: Abadar, Iomedae/Gorum, Norgorber, Sarenrae/Erastil,
+Nethys, Calistria, Shelyn, Gozreh/Desna. Stesse figure, **stesse meccaniche 3.5** — cambiano
+solo divinità, livrea e simbolo in campo. Mappatura, livree e note di licenza Paizo:
+`golarion/README.md`. Rigenerabile con `golarion/build_golarion_shields.py`.
+
+Serve a due cose: girare l'arco in un tavolo Pathfinder senza riscrivere nulla, e — visto che
+AVVENTURA §1 dichiara le divinità faerûniane «riconvertite da Golarion» — **documentare il
+pantheon di partenza**, che non era scritto da nessuna parte.
+
 ## Nota IP (ripetuta qui per chiarezza)
 Nomi delle contrade e riferimenti al Palio = **fatti storico-culturali** citati come
 ispirazione. **Motti e stemmi di questo documento sono originali** (riscritti/ridisegnati):

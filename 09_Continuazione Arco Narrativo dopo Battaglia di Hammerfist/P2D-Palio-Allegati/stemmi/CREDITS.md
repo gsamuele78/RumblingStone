@@ -36,6 +36,10 @@ l'obbligo di attribuzione e di indicazione delle modifiche.
 Torre, tenuta in archivio. Per usarla, sostituire il `<path>` dentro il blocco `FIGURA` di
 `02-torre.svg`.
 
+**Serie Golarion**: `golarion/` riusa **le stesse otto icone** con livree e simboli divini di
+Pathfinder. Questa attribuzione copre anche quella cartella. Attenzione: nomi e simboli delle
+divinità di Golarion sono **IP di Paizo Inc.** — vedi `golarion/README.md`.
+
 ## Cosa NON viene da game-icons
 
 Sono **originali della campagna** e non coperti da questa attribuzione: la sagoma dello
