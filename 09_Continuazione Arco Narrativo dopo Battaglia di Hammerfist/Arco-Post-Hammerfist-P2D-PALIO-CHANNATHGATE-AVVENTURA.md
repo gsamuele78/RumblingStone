@@ -65,12 +65,14 @@ e confraternite laiche: non erano mai atee, ma di una religiosità **civica e fe
 > **Nota di conversione (Golarion → Faerûn)**: la campagna è ambientata nei Reami.
 > Le divinità sono state riconvertite dal pantheon di Golarion a quello faerûniano.
 >
-> **Nota patrimonio/IP**: il Palio di Siena e le sue contrade sono citati come
-> **ispirazione storico-culturale** (fatti di pubblico dominio). **Tutti i motti e gli
-> stemmi di questo arco sono ORIGINALI** — riscritti/ridisegnati da zero, coerenti in
-> tutti i file (AVVENTURA, CONTRADE-STEMMI-CANTI, SVG) — proprio per evitare qualunque
-> riproduzione dell'iconografia moderna tutelata dal *Consorzio per la Tutela del Palio*.
-> Uso non commerciale, da tavolo; nessun asset di terzi incluso.
+> **Nota patrimonio/IP** *(aggiornata 2026-08-10)*: il Palio di Siena e le sue contrade
+> sono citati come **ispirazione storico-culturale** (fatti di pubblico dominio). Scudi,
+> **livree** e simboli divini sono **originali** di questa campagna, e dal 2026-08-09 le
+> livree **non coincidono più** con quelle reali (vedi VERIFICA-LEGALE-IP §3.2). I **motti**
+> sono riscritti ma restano **parafrasi riconoscibili** di quelli reali: non dichiararli
+> "originali" (VERIFICA-LEGALE-IP §3.3). Le **figure** degli stemmi **non sono nostre**:
+> sono icone **game-icons.net in CC BY 3.0**, ricolorate — attribuzione obbligatoria in
+> `P2D-Palio-Allegati/stemmi/CREDITS.md`. Uso non commerciale, da tavolo.
 
 Ogni contrada ha un **motto** (originale), uno **stemma** originale, dei **colori**, una
 **ballata di guerra**, una **chiave araldica d'argento** (il *Sigillo*), un **Oratorio**
