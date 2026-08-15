@@ -143,6 +143,32 @@
       "deterministic": true
     },
     {
+      "name": "blender_costruisci_mappa",
+      "description": "Lo script che gira DENTRO Blender: dal piano di scena costruisce i solidi, la camera e il lock di luce, e rende. Non si lancia a mano — il driver e' render_map_blender.py, dove sta tutta la logica provabile senza GPU.",
+      "invocation": "blender -b -noaudio -P scripts/blender/costruisci_mappa.py -- --piano <piano.json>",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "piano": {
+            "type": "string",
+            "description": "Il piano di scena scritto dal driver."
+          }
+        },
+        "required": [
+          "piano"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita dichiarata nel piano>.png"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "eseguito fuori da Blender, piano illeggibile o render fallito"
+      },
+      "deterministic": false
+    },
+    {
       "name": "compile_map_json",
       "description": "Modalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati.",
       "invocation": "python3 scripts/compile_map_json.py",
@@ -334,6 +360,79 @@
       "exit_codes": {
         "0": "ok",
         "1": "errore (JSON non valido o dungeon troppo grande)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "render_map_blender",
+      "description": "La mappa in volume: risolve la geometria con lo stesso paint() che alimenta l'SVG, fonde le celle in solidi e la fa rendere a Blender in ortografica. Con --profondita produce il passo di profondità per ControlNet depth, così l'illustrazione eredita la pianta esatta.",
+      "invocation": "python3 scripts/render_map_blender.py mappa.json --piano-solo",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mappa": {
+            "type": "string",
+            "description": "Il JSON della mappa (contratto tactical_map)."
+          },
+          "out": {
+            "type": "string",
+            "description": "PNG di uscita (default: <cartella>/rendered/blender/<slug>.png)."
+          },
+          "vista": {
+            "type": "string",
+            "description": "Ortografica dall'alto (default) o prospettica.",
+            "enum": [
+              "orto",
+              "tre-quarti"
+            ]
+          },
+          "profondita": {
+            "type": "boolean",
+            "description": "Rende il passo di profondità invece della veduta: input di ControlNet depth."
+          },
+          "larghezza": {
+            "type": "integer",
+            "description": "Larghezza del render in pixel."
+          },
+          "campioni": {
+            "type": "integer",
+            "description": "Campioni per pixel."
+          },
+          "luce-azimut": {
+            "type": "number",
+            "description": "Direzione della luce in gradi: e' il lock di luce del set."
+          },
+          "luce-elevazione": {
+            "type": "number",
+            "description": "Altezza della luce in gradi."
+          },
+          "con-insidie": {
+            "type": "boolean",
+            "description": "Tiene le insidie nella pianta (default: fuori, sono note del DM)."
+          },
+          "blender": {
+            "type": "string",
+            "description": "Comando di Blender, se non e' nel PATH."
+          },
+          "piano-solo": {
+            "type": "boolean",
+            "description": "Scrive il piano di scena ed esce: nessun Blender, nessun render."
+          }
+        },
+        "required": [
+          "mappa"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<cartella>/rendered/blender/<slug>.piano.json",
+        "<cartella>/rendered/blender/<slug>[-depth].png"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "binario blender assente, JSON non valido o render fallito",
+        "2": "mappa non trovata",
+        "130": "interruzione utente"
       },
       "deterministic": true
     },

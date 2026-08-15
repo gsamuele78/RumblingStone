@@ -342,3 +342,9 @@ scripts/comfyui-local/ComfyUI/
 **/rendered/hero/
 # Export VTT: artefatti locali di export_uvtt.py (import nativo Foundry/Roll20)
 **/rendered/vtt/
+
+# Texture per il render 3D delle mappe: CC0 riscaricabili, non master (ADR-0003).
+# La convenzione delle cartelle sta in scripts/blender/texture/README.md.
+scripts/blender/texture/*/
+# Render 3D delle mappe e loro piani di scena: presentazione, non canone.
+**/rendered/blender/

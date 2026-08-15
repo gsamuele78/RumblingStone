@@ -165,9 +165,12 @@ contiene anche il prompt autosufficiente da passare a una sessione nuova.
 - [ ] **[1c]** I **diciotto raster** — ⚠️ *gated: serve la GPU del DM*. La catena è
       pronta e collaudata a secco; l'esecuzione è ~1,5-2 ore di macchina più il gate
       di rifiuto **il giorno dopo**
-- [ ] **[1-bis]** Blender come **geometria**, non come illustratore: pianta dal JSON →
-      render del passo di profondità → ControlNet depth, così l'illustrazione della
-      Ruota ha la pianta esatta della mappa. È il pezzo più costoso, e va per ultimo
+- [x] **[1-bis]** Blender come **geometria**, non come illustratore:
+      `scripts/render_map_blender.py` risolve la pianta con lo **stesso** `paint()`
+      dell'SVG, fonde le celle in solidi e la fa rendere in ortografica;
+      `--profondita` produce il passo per ControlNet depth. Manifest + 27 test +
+      controllo di determinismo in CI. ⚠️ Il **render** non è mai stato eseguito:
+      Blender non c'è in questo ambiente — provato tutto ciò che sta prima di `bpy`
 - [x] **[2]** Tipografia OFL embedded — chiusa da **ADR-0020** sul secondo binario
       Typst (EB Garamond + Cinzel), senza toccare `build_booklet_html.py`
 - [x] **[3]** `tarsilia-la-ruota-giocatori.json`: la mappa senza token, hazard e note *(Lotto 7)*
