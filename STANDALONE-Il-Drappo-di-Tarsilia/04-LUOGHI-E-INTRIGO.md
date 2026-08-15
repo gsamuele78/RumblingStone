@@ -28,6 +28,8 @@ Ogni luogo ha:
 
 ## §1 · Il rione dell'Istrice (casa vostra)
 
+![Nonna Grasa](ALLEGATI/immagini/web/png-nonna-grasa.jpg)
+
 ### 1.1 · L'oratorio dell'Istrice
 
 *Una stanza sola, tetto in scandole nuove non pagate, ottanta persone quando ci
@@ -142,6 +144,8 @@ qualcuno lo guardi.
 ---
 
 ## §3 · Botteghe e servizi
+
+![La bilancia dell'Oca](ALLEGATI/immagini/web/spot-bilancia.jpg)
 
 | # | Bottega | Chi | Cosa vende | Prezzo | Gancio |
 |---|---|---|---|---|---|

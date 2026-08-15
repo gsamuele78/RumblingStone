@@ -125,6 +125,9 @@ ordine di corsa.
 
 ## §3 · Tarsilia in dieci righe
 
+![Tarsilia](ALLEGATI/immagini/web/tavola-tarsilia-citta.jpg)
+*Tarsilia dal tetto della Torre.*
+
 **Siamo nel 4712 AR**, ultima settimana d'estate. Le due date che compaiono nel
 modulo — il 4692 e il 4705 — stanno vent'anni e sette anni indietro.
 

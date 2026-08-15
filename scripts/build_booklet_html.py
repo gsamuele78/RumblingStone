@@ -253,6 +253,36 @@ def img_html(alt: str, src: str, base: Path) -> str:
             f"la tavola apparirà qui appena il file sarà nel repo</p></div>")
 
 
+
+# I prop sono sorgenti HOMEBREWERY (.hb.md): la loro sintassi a blocchi va
+# tradotta o buttata, se no finisce STAMPATA LETTERALE — «{{descriptive»,
+# «{{margin-top:60px}}» in mezzo al testo del contratto.
+_HB_AUTO = re.compile(r"^\{\{[^{}\n]*\}\}\s*$")
+_HB_APRE = re.compile(r"^\{\{(descriptive|note)\b[^}]*$")
+_HB_ALTRO = re.compile(r"^\{\{\w[^}]*$")
+
+
+def spoglia_homebrewery(testo: str) -> str:
+    fuori, pila = [], []
+    for ln in testo.split("\n"):
+        s = ln.strip()
+        if _HB_AUTO.match(s):                       # riga auto-chiusa: impaginazione
+            continue
+        m = _HB_APRE.match(s)
+        if m:
+            fuori.append('<div class="hb-' + m.group(1) + '">')
+            pila.append("chiudi")
+            continue
+        if _HB_ALTRO.match(s):
+            pila.append("scarta")
+            continue
+        if s == "}}":
+            if pila and pila.pop() == "chiudi":
+                fuori.append("</div>")
+            continue
+        fuori.append(re.sub(r"\{\{[^{}\n]*\}\}", "", ln))
+    return "\n".join(fuori)
+
 def md_to_html(md: str, base: Path) -> str:
     """Convertitore markdown→HTML minimale ma fedele ai master del repo:
     heading, tabelle, citazioni (→ cornice .desc), liste, code fence
@@ -438,7 +468,7 @@ def build(manifest_path: Path, out_override: Path | None = None) -> Path:
     tabs = ['<button role="tab" aria-selected="true" data-pane="c0">Copertina</button>']
     for k, ch in enumerate(mf["chapters"], 1):
         p = base / ch["file"]
-        body = md_to_html(p.read_text(encoding="utf-8"), p.parent)
+        body = md_to_html(spoglia_homebrewery(p.read_text(encoding="utf-8")), p.parent)
         tag = TAGS.get(ch.get("tag", ""), "")
         foot = player_footer if ch.get("tag") == "player" else footer
         tabs.append(f'<button role="tab" aria-selected="false" data-pane="c{k}">'

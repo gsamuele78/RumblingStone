@@ -144,11 +144,49 @@ def _celle(riga: str) -> list[str]:
     return [c.strip() for c in riga.strip().strip("|").split("|")]
 
 
-_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```)")
+_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|§§HB-)")
+
+
+# I prop sono sorgenti HOMEBREWERY (.hb.md): usano una sintassi a blocchi che il
+# loro editor interpreta e che qui finirebbe STAMPATA LETTERALE — «{{descriptive»,
+# «{{note», «{{margin-top:60px}}» in mezzo al testo del contratto. Si traduce nei
+# blocchi del tema, o si butta quando è solo impaginazione di quell'editor.
+_HB_APRE = re.compile(r"^\{\{(descriptive|note|footnote|pageNumber|margin-top|wide|column)\b([^}]*)\}?\s*$")
+_HB_INLINE = re.compile(r"\{\{[^{}\n]*\}\}")
+
+
+def _spoglia_homebrewery(righe: list[str]) -> list[str]:
+    """Toglie l'impaginazione dell'editor e converte i due blocchi che hanno senso."""
+    fuori, pila = [], []
+    for ln in righe:
+        s = ln.strip()
+        # ⚠️ Le righe AUTO-CHIUSE — «{{margin-top:60px}}», «{{footnote …}}»,
+        # «{{pageNumber,auto}}» — non aprono niente: sono impaginazione
+        # dell'editor e si buttano. Metterle sulla pila lascia un blocco aperto
+        # e Typst muore con «unclosed delimiter».
+        if s.startswith("{{") and s.endswith("}}"):
+            continue
+        m = _HB_APRE.match(s)
+        if m:
+            tipo = m.group(1)
+            if tipo in ("descriptive", "note"):
+                fuori.append("§§HB-APRE§§" + tipo)
+                pila.append(tipo)
+            else:
+                pila.append("scarta")        # margin-top, pageNumber, footnote…
+            continue
+        if s == "}}":
+            if pila:
+                t = pila.pop()
+                if t in ("descriptive", "note"):
+                    fuori.append("§§HB-CHIUDE§§")
+            continue
+        fuori.append(_HB_INLINE.sub("", ln))
+    return fuori
 
 
 def md_to_typ(md: str, base: Path) -> str:
-    righe = md.split("\n")
+    righe = _spoglia_homebrewery(md.split("\n"))
     out: list[str] = []
     i = 0
     while i < len(righe):
@@ -206,6 +244,15 @@ def md_to_typ(md: str, base: Path) -> str:
                            f"{json.dumps(alt, ensure_ascii=False)}, larga: {larga})")
             else:
                 print(f"  ⚠ immagine mancante, saltata: {ref}", file=sys.stderr)
+            i += 1
+            continue
+
+        if ln.startswith("§§HB-APRE§§"):
+            out.append("#leggi[" if ln.endswith("descriptive") else "#nota[")
+            i += 1
+            continue
+        if ln.startswith("§§HB-CHIUDE§§"):
+            out.append("]")
             i += 1
             continue
 

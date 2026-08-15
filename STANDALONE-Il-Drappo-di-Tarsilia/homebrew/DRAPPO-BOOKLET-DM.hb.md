@@ -294,6 +294,9 @@ ordine di corsa.
 
 ## §3 · Tarsilia in dieci righe
 
+![Tarsilia](ALLEGATI/immagini/web/tavola-tarsilia-citta.jpg)
+*Tarsilia dal tetto della Torre.*
+
 **Siamo nel 4712 AR**, ultima settimana d'estate. Le due date che compaiono nel
 modulo — il 4692 e il 4705 — stanno vent'anni e sette anni indietro.
 
@@ -961,6 +964,8 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Si stampa **una volta** e si tiene sotto il foglio del cast.
 
 ---
+
+![La Ruota la vigilia](ALLEGATI/immagini/web/tavola-la-ruota-vigilia.jpg)
 
 ## §1 · I nomi — quando chiedono come si chiama il garzone
 
@@ -1837,6 +1842,8 @@ Ogni luogo ha:
 
 ## §1 · Il rione dell'Istrice (casa vostra)
 
+![Nonna Grasa](ALLEGATI/immagini/web/png-nonna-grasa.jpg)
+
 ### 1.1 · L'oratorio dell'Istrice
 
 *Una stanza sola, tetto in scandole nuove non pagate, ottanta persone quando ci
@@ -1951,6 +1958,8 @@ qualcuno lo guardi.
 ---
 
 ## §3 · Botteghe e servizi
+
+![La bilancia dell'Oca](ALLEGATI/immagini/web/spot-bilancia.jpg)
 
 | # | Bottega | Chi | Cosa vende | Prezzo | Gancio |
 |---|---|---|---|---|---|
@@ -2559,6 +2568,9 @@ brutte figure per arrivarci.
 
 ## §5 · La Sorte dei cavalli
 
+![La Ruota il giorno della corsa](ALLEGATI/immagini/web/tavola-la-ruota.jpg)
+*La Ruota, il giorno della corsa.*
+
 **Meccanica completa**: `REGOLE-DELLA-CORSA-PF1E.md` §2. Qui c'è solo la scena.
 
 Al tramonto la Sovrintendente sale sul palchetto con due sacchetti di tela grezza. Un
@@ -2928,7 +2940,9 @@ nessuno. L'unica variabile è se l'Istrice lo sanno prima.
 
 ![Le stalle, dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg)
 
-## §6 · Notte — l'assalto alle stalle
+## §6
+
+![Le stalle dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg) · Notte — l'assalto alle stalle
 
 **Quando**: dopo mezzanotte, quando la Cena è finita e in giro c'è solo chi è di
 guardia. Mappa: `ALLEGATI/mappe/` → *le stalle dell'Istrice*, 21 × 15 quadretti, 1,5 m
@@ -3507,6 +3521,8 @@ voci originali (pasta corrosiva, Ritmo dei cavalli) sono marcate come tali.
 ---
 
 ## §1 · Vidalia Roncetti — Sovrintendente al Drappo
+
+![Vidalia Roncetti](ALLEGATI/immagini/web/png-roncetti.jpg)
 
 **Umana esperta 6** · LN · femmina, 61 anni · **GS 4**
 *Forestiera residente da trentotto anni. Terzo mandato. Non si compra e — cosa più
