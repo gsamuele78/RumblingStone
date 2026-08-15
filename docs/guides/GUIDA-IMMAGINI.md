@@ -58,7 +58,26 @@ E ogni immagine generata porta la sua riga in `PROVENIENZA.txt`: **file · model
 · licenza · seed · data**. Senza quella riga non si committa — è l'unica cosa che
 rende la scelta reversibile fra un anno.
 
-### 1.2 Prima di generare: la direzione artistica
+### 1.2 Generare una **serie** invece di dieci immagini sciolte
+
+Dalla GUI si producono immagini; **una serie ripetibile no**. Fra un anno, con due
+tavole da rifare, non si sa più né il prompt esatto né il seed:
+
+```bash
+python3 scripts/comfyui_batch.py --lista      # cosa manca, senza toccare niente
+python3 scripts/comfyui_batch.py --dry-run    # i prompt composti, senza rete
+python3 scripts/comfyui_batch.py              # genera i mancanti
+```
+
+`comfyui_batch.py` legge i prompt **dal markdown** (che resta il master), compone
+look comune e ancora storica, fissa i seed, POSTa i workflow all'API locale di
+ComfyUI e scrive le righe di `PROVENIENZA.txt`. Rifiuta i pesi non commerciali da
+solo. Vuole prompt **annotati**: il formato è una riga di commento HTML, e
+l'esemplare compilato è
+`STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/immagini/` (prompt + `README.md` con la
+procedura completa, gate di rifiuto incluso).
+
+### 1.3 Prima di generare: la direzione artistica
 
 Se stai per fare **più di un'immagine** che devono stare insieme (una serie di
 ritratti, le tavole di un modulo), i venti minuti meglio spesi non sono sul

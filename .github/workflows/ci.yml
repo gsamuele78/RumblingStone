@@ -76,6 +76,11 @@ jobs:
           python scripts/dm_dossier.py --help > /dev/null
           python scripts/validate_modules.py --help > /dev/null
           python scripts/tools_manifest.py --help > /dev/null
+          python scripts/comfyui_batch.py --help > /dev/null
+          # la serie si risolve dal markdown senza GPU ne' rete: e' il gate che
+          # tiene i "diciotto" a diciotto, e i pesi non commerciali fuori
+          python scripts/comfyui_batch.py --lista > /dev/null
+          python scripts/comfyui_batch.py --dry-run > /dev/null
 
       - name: Map JSON contract + UVTT export round-trip (M1/M2)
         run: |

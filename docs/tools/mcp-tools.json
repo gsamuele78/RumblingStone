@@ -677,6 +677,102 @@
       "deterministic": true
     },
     {
+      "name": "comfyui_batch",
+      "description": "Genera la serie di immagini di un modulo pilotando l'API locale di ComfyUI: legge i prompt annotati dal markdown master, compone look comune e ancora storica, fissa i seed, salva i PNG coi nomi attesi e scrive PROVENIENZA.txt. Rifiuta i pesi non commerciali (ADR-0019).",
+      "invocation": "python3 scripts/comfyui_batch.py --lista",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompts": {
+            "type": "string",
+            "description": "Markdown coi prompt annotati (default: quello del Drappo)."
+          },
+          "out": {
+            "type": "string",
+            "description": "Cartella dei PNG (default: quella del markdown)."
+          },
+          "modello": {
+            "type": "string",
+            "description": "Quali pesi usare. FLUX.1 [dev] non e' fra le scelte: e' vietato da ADR-0019.",
+            "enum": [
+              "flux-schnell",
+              "sdxl"
+            ]
+          },
+          "checkpoint": {
+            "type": "string",
+            "description": "Nome del file di checkpoint, se diverso da quello del registro."
+          },
+          "serie": {
+            "type": "string",
+            "description": "base = i 18 del capitolato (default) - extra = solo gli oltre - tutto.",
+            "enum": [
+              "base",
+              "extra",
+              "tutto"
+            ]
+          },
+          "solo": {
+            "type": "string",
+            "description": "Genera solo questo id (ripetibile)."
+          },
+          "reroll": {
+            "type": "integer",
+            "description": "Cambia seed in modo deterministico: 1 = secondo tentativo, 2 = terzo."
+          },
+          "steps": {
+            "type": "integer",
+            "description": "Passi di campionamento (default: dal registro del modello)."
+          },
+          "cfg": {
+            "type": "number",
+            "description": "Aderenza al prompt, CFG (default: dal registro del modello)."
+          },
+          "server": {
+            "type": "string",
+            "description": "Indirizzo dell'API ComfyUI locale."
+          },
+          "attesa-max": {
+            "type": "integer",
+            "description": "Secondi massimi di attesa per immagine."
+          },
+          "autore": {
+            "type": "string",
+            "description": "Chi ha generato, per la riga di PROVENIENZA.txt."
+          },
+          "forza": {
+            "type": "boolean",
+            "description": "Rigenera anche i PNG gia' presenti (default: li salta)."
+          },
+          "fissa-seed": {
+            "type": "boolean",
+            "description": "Dopo la generazione scrive il seed usato nel markdown master."
+          },
+          "lista": {
+            "type": "boolean",
+            "description": "Elenca la serie risolta ed esci. Nessun side-effect."
+          },
+          "dry-run": {
+            "type": "boolean",
+            "description": "Compone e stampa i prompt: nessuna rete, nessun file."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<cartella dei prompt>/<id>.png",
+        "<cartella dei prompt>/PROVENIENZA.txt"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "ComfyUI non raggiungibile, generazione fallita o pesi non commerciali rifiutati",
+        "2": "markdown mancante, senza annotazioni, o id inesistente",
+        "130": "interruzione utente"
+      },
+      "deterministic": false
+    },
+    {
       "name": "dm_dossier",
       "description": "SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
       "invocation": "python3 scripts/dm_dossier.py",

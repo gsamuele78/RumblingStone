@@ -132,7 +132,10 @@ L'ordine conta, e il primo passo non è il prompt:
    (ADR-0015); i prompt li scrive una persona, non una regex;
 3. **la generazione** — ComfyUI in locale (`scripts/comfyui-local/`), con il
    modello scelto **per licenza** e non per gusto
-   ([ADR-0019](../../plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md));
+   ([ADR-0019](../../plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md)).
+   Una **serie** si genera con `scripts/comfyui_batch.py`, non a mano dalla GUI:
+   legge i prompt annotati dal markdown, fissa i seed e scrive la provenienza —
+   è la differenza fra una serie riproducibile e una irripetibile;
 4. **il gate di rifiuto**, il giorno dopo;
 5. **la provenienza** — una riga per immagine, o non si committa.
 
