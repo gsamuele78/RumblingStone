@@ -112,7 +112,9 @@ Quattro numeri, scritti una volta e riusati per tutto il set:
 | **Formato** | non si cambia a metà set | ritratti verticali, tavole orizzontali |
 
 ⚠️ **Il seed non è un dettaglio da nerd**: è la differenza fra una serie
-**riproducibile** e una irripetibile. Un modulo che si ristampa fra un anno con
+**riproducibile** e una irripetibile. E se lo strumento **non lo espone** — è il
+caso dei servizi come Gemini — la conseguenza non è «pazienza»: è che **il file
+generato diventa il sorgente**, va versionato e non si butta mai (ADR-0019 §2-bis). Un modulo che si ristampa fra un anno con
 due immagini rifatte a occhio si vede subito.
 
 ---
