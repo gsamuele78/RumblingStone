@@ -1,0 +1,14 @@
+# Provenienza delle immagini — ADR-0019 §2
+#
+# Una riga per file, nel formato:
+#   <file> · <modello e versione> · <licenza dei pesi> · seed <n> · <data> · <chi>
+#
+# Senza la sua riga, un'immagine non si committa: è l'unica cosa che rende
+# reversibile fra un anno la scelta dei pesi. Le righe le scrive
+# scripts/comfyui_batch.py; a mano si aggiungono solo gli asset importati.
+#
+# Pesi ammessi: SDXL (OpenRAIL++-M) · FLUX.1 [schnell] (Apache-2.0).
+# FLUX.1 [dev] è vietato — la sua licenza esclude anche l'uso «indirettamente
+# connesso ad attività commerciali». Lo script lo rifiuta da solo.
+#
+# Nessun raster ancora prodotto: la procedura è in README.md.

@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**43 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**46 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -19,11 +19,13 @@
 
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
+| `costruisci_mappa.py` | Lo script che gira DENTRO Blender: dal piano di scena costruisce i solidi, la camera e il lock di luce, e rende. Non si lancia a mano — il driver e' render_map_blender.py, dove sta tutta la logica provabile senza GPU. | **--piano** | — | — | — | `0` · `1` |
 | `compile_map_json.py` | Modalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati. | spec · -o/--output · --validate-only | ✔ | — | — | `0` · `1` · `2` |
 | `export_map_png.py` | Rasterizza un SVG renderizzato in PNG hi-res via Chromium headless (stampa, VTT, input hero-map ComfyUI). | **svg** · -o/--out · --scale · --browser | — | — | — | `0` · `1` |
 | `export_uvtt.py` | Esporta un master griglia-emoji in file Universal VTT (.uvtt/.dd2vtt) con muri, porte e luci per import nativo in Foundry/Roll20. | file · -o/--output · --map · --ppg · --ext | ✔ | — | — | `0` · `1` · `2` |
 | `import_ultraclear.py` | Modalita' 3 'al contrario': da mappa ultra-clear a bozza del contratto JSON + report conflitti figura vs tabella (regole R1-R12). | **input** · -o/--output · --json-report · --strict · --map | ✔ | — | — | `0` · `1` · `2` |
 | `import_watabou.py` | Converte un export JSON di Watabou One Page Dungeon in un master griglia-emoji conforme al template. | **json_file** · -o/--out · --pad | ✔ | — | — | `0` · `1` |
+| `render_map_blender.py` | La mappa in volume: risolve la geometria con lo stesso paint() che alimenta l'SVG, fonde le celle in solidi e la fa rendere a Blender in ortografica. Con --profondita produce il passo di profondità per ControlNet depth, così l'illustrazione eredita la pianta esatta. | **mappa** · --out · --vista · --profondita · --larghezza · --campioni · --luce-azimut · --luce-elevazione · --con-insidie · --blender · --piano-solo | ✔ | — | — | `0` · `1` · `2` · `130` |
 | `render_map_svg.py` | Renderizza le griglie-emoji dei master mappa in SVG stampa-quality stile 'pergamena', deterministico e senza asset esterni. | **files** · -o/--outdir · --map · --list · --strict | ✔ | — | — | `0` · `1` |
 | `validate_maps.py` | Gate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti). | --repo-root · --json | ✔ | — | — | `0` · `1` |
 
@@ -44,6 +46,7 @@
 |---|---|---|:--:|:--:|:--:|---|
 | `build_booklet_html.py` | Booklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003). | **manifest** · --out · --format | ✔ | — | — | `0` · `2` |
 | `build_chapter_marks.py` | Genera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche. | --serie · -o/--out · --all | ✔ | — | — | `0` · `2` |
+| `comfyui_batch.py` | Genera la serie di immagini di un modulo pilotando l'API locale di ComfyUI: legge i prompt annotati dal markdown master, compone look comune e ancora storica, fissa i seed, salva i PNG coi nomi attesi e scrive PROVENIENZA.txt. Rifiuta i pesi non commerciali (ADR-0019). | --prompts · --out · --modello · --checkpoint · --serie · --solo · --reroll · --steps · --cfg · --server · --attesa-max · --autore · --forza · --fissa-seed · --lista · --dry-run | — | — | — | `0` · `1` · `2` · `130` |
 | `dm_dossier.py` | SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera. | -o/--output | ✔ | — | — | `0` · `1` |
 | `export_booklet_pdf.py` | PDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser). | **manifest** · --pane · --all · --list · --outdir · --browser | — | — | — | `0` · `1` · `2` |
 | `export_booklet_typst.py` | Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Affianca export_booklet_pdf.py senza sostituirlo. | **manifest** · --all · --keep-typ · --list | ✔ | — | — | `0` · `1` · `2` |

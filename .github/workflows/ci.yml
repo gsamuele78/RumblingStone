@@ -76,6 +76,12 @@ jobs:
           python scripts/dm_dossier.py --help > /dev/null
           python scripts/validate_modules.py --help > /dev/null
           python scripts/tools_manifest.py --help > /dev/null
+          python scripts/comfyui_batch.py --help > /dev/null
+          # la serie si risolve dal markdown senza GPU ne' rete: e' il gate che
+          # tiene i "diciotto" a diciotto, e i pesi non commerciali fuori
+          python scripts/comfyui_batch.py --lista > /dev/null
+          python scripts/comfyui_batch.py --dry-run > /dev/null
+          python scripts/render_map_blender.py --help > /dev/null
 
       - name: Map JSON contract + UVTT export round-trip (M1/M2)
         run: |
@@ -91,6 +97,12 @@ jobs:
           python scripts/import_ultraclear.py scripts/tests/fixtures/ultraclear/uniform.md -o /tmp/ci-uc.draft.json --json-report /tmp/ci-uc.conflicts.json -q
           python scripts/compile_map_json.py /tmp/ci-uc.draft.json --validate-only
           python -c "import json; r=json.load(open('/tmp/ci-uc.conflicts.json')); assert r['report_version'] and 'conflicts' in r, 'report malformato'; print('import_ultraclear OK')"
+          # piano di scena 3D: la geometria si risolve senza Blender e senza GPU,
+          # ed e' deterministica — due giri devono dare lo stesso file
+          python scripts/render_map_blender.py scripts/examples/esempio-accampamento-mano-rossa.json -o /tmp/ci-3d/x.png --piano-solo
+          cp /tmp/ci-3d/*.piano.json /tmp/ci-piano-1.json
+          python scripts/render_map_blender.py scripts/examples/esempio-accampamento-mano-rossa.json -o /tmp/ci-3d/x.png --piano-solo
+          cmp /tmp/ci-piano-1.json /tmp/ci-3d/*.piano.json && echo "piano 3D deterministico OK"
 
       - name: Unit tests — dmcore / state_apply / next_session (ADR-0007)
         run: python -m unittest discover -s scripts/tests -v
