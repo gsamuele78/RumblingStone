@@ -1,0 +1,30 @@
+# PROVENIENZA delle immagini (ADR-0019)
+#
+# Una riga per file: nome · sorgente · credenziale · dimensioni · data.
+# ⚠️ I campi MODELLO e SEED sono da confermare dal DM: il manifesto C2PA nel PNG
+#    certifica il servizio che ha firmato l'immagine, NON il modello esatto né il
+#    seme. Senza quei due, la serie non è riproducibile (skill art-direction §4).
+#
+copertina.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+il-drappo.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1536x2752 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+png-attu.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+png-nonna-grasa.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+png-roncetti.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+png-sfregio.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+png-vesca.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-berenice.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-melchio.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-nocca.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-ombra.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-tesio.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+ritratto-vanna.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 1696x2496 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+spot-bilancia.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2048x2048 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+spot-registro.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2048x2048 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+tavola-la-cena.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2816x1536 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+tavola-la-ruota-vigilia.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2752x1536 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+tavola-la-ruota.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2816x1536 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+tavola-le-stalle.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2752x1536 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+tavola-tarsilia-citta.png · generata dal DM 2026-08-15 · C2PA Google (firmato) · 2752x1536 · modello=[DA CONFERMARE] · seed=[DA CONFERMARE]
+
+# Derivate per impaginazione: web/*.webp — rigenerabili con
+#   python3 scripts/build_image_derivatives.py STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/immagini

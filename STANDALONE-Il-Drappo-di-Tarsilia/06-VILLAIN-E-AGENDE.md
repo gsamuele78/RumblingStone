@@ -19,6 +19,10 @@
 
 ---
 
+![Ottavia Vesca](ALLEGATI/immagini/web/png-vesca.jpg)
+![Gerlando Attu](ALLEGATI/immagini/web/png-attu.jpg)
+![Sfregio](ALLEGATI/immagini/web/png-sfregio.jpg)
+
 ## §1 · Ottavia Vesca — Capitana del Bruco
 
 **Vuole**: il bosco di spini, per rimettere al lavoro ottanta tintori fermi da

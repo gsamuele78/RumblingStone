@@ -3574,6 +3574,86 @@
         "docs/guides/GUIDA-BOOKLET-E-PDF.md",
         "docs/guides/GUIDA-FLUSSO-LOCALE.md"
       ]
+    },
+    {
+      "id": "build_image_derivatives",
+      "path": "scripts/build_image_derivatives.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/build_image_derivatives.py <cartella>",
+      "summary": "Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "cartella",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella dei master PNG."
+        },
+        {
+          "name": "--max",
+          "type": "int",
+          "required": false,
+          "default": 1400,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Lato lungo per ritratti e copertina."
+        },
+        {
+          "name": "--quality",
+          "type": "int",
+          "required": false,
+          "default": 88,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Qualità JPEG."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<cartella>/*.png",
+          "kind": "png",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<cartella>/web/*.jpg",
+          "kind": "png",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Pillow assente (dice come installarlo)",
+        "2": "cartella mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stessi master e stessi parametri: stesse derivate."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/build_image_derivatives.py --help",
+      "tests": [],
+      "docs": [
+        "docs/guides/GUIDA-IMMAGINI.md"
+      ]
     }
   ]
 }

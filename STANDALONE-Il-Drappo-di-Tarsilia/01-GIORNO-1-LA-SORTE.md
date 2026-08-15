@@ -241,6 +241,8 @@ brutte figure per arrivarci.
 
 ---
 
+![La Ruota, il giorno prima](ALLEGATI/immagini/web/tavola-la-ruota-vigilia.jpg)
+
 ## §5 · La Sorte dei cavalli
 
 **Meccanica completa**: `REGOLE-DELLA-CORSA-PF1E.md` §2. Qui c'è solo la scena.

@@ -193,6 +193,8 @@ che passa in mezzo alle tavole perché è tradizione che passi.
 
 ---
 
+![La Cena della vigilia](ALLEGATI/immagini/web/tavola-la-cena.jpg)
+
 ## §5 · L'uomo con la fascia grigia
 
 **Beat di Nocca.** Da giocare quando il giocatore di Nocca si allontana dalla Cena,
@@ -218,6 +220,8 @@ nessuno. L'unica variabile è se l'Istrice lo sanno prima.
 | Lo uccide | Un'altra sessione, un altro modulo, e nessuno dei sei tornerà quello di prima |
 
 ---
+
+![Le stalle, dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg)
 
 ## §6 · Notte — l'assalto alle stalle
 

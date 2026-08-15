@@ -24,6 +24,8 @@ Ogni luogo ha:
 
 ---
 
+![Tarsilia dall'alto](ALLEGATI/immagini/web/tavola-tarsilia-citta.jpg)
+
 ## §1 · Il rione dell'Istrice (casa vostra)
 
 ### 1.1 · L'oratorio dell'Istrice

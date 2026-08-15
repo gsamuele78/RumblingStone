@@ -199,16 +199,19 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | `06-VILLAIN-E-AGENDE.md` | le agende dei villain **ora per ora**, il giro del mondo, gli **incontri scalabili** 4/5/6/7 |
 | `07-GUIDA-DM-PASSO-PASSO.md` | **la regia**: le tre serate minuto per minuto, i rilanci, le voci dei PNG |
 | `FASCICOLO-SCHEDE-GIOCATORE.md` | i sei background da dare in mano + la matrice dei legami |
+| `09-KIT-ANTI-IMPROVVISAZIONE.md` | **quando escono dal copione**: 1d20 nomi, prezzi di bottega, tre PNG jolly con statblocco, 1d6 «la città respira» |
 | `08-CASSETTA-DEL-DM.md` | **l'apparato d'uso**: foglio del cast, pronuncia, indice dei read-aloud, inserto per lo schermo, i suoni, il momento da fotografare, accessibilità |
 | `STATO-DEL-MODULO.md` | la memoria fra le tre serate: contatori, patti, scelte, **Echo Ledger**. Da copiare per gruppo |
 | `PLAYTEST-ALFA.md` | audit meccanico, dry-run delle tre serate, le nove correzioni applicate |
 | `PLAYTEST-SCHEDA-FEEDBACK.md` | scheda giocatore, debrief del DM, come si passa da alfa a beta |
 | `STATBLOCCHI-PF1E.md` | PNG, rivali, sicari, cavalli |
-| `ALLEGATI/mappe/` | la Ruota e le stalle: JSON, master emoji-grid, SVG (vedi il `README.md` lì dentro) |
+| `ALLEGATI/mappe/` | la Ruota, **la Ruota in versione giocatore** e le stalle: JSON, master emoji-grid, SVG |
 | `ALLEGATI/tavole/` | **tavole vettoriali**: mappa della città, il Drappo, sei ritratti (rigenerabili) |
 | `ALLEGATI/handout/` | **i quattro prop da stampare**: il contratto di Vesca, la pagina del registro, la ricevuta, il decreto |
+| `homebrew/` | **quattro booklet** impaginati (DM · Giocatori · Fascicolo schede · Prop) + i PDF |
 | `ALLEGATI/mappe/uvtt/` | le due mappe pronte per **Foundry / Roll20** |
 | `ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md` | art direction e prompt per l'edizione raster |
+| `PROMPT-GENERAZIONE-BOOKLET-DEFINITIVO.md` | **cosa manca per l'edizione illustrata** e il prompt pronto da passare a una sessione nuova |
 | `IP-E-LICENZE.md` | Community Use Policy Paizo, OGL, provenienza |
 
 ---
@@ -261,7 +264,7 @@ dopo, anche.
 2. il **volantino delle otto contrade** — la tabella §1 di `CONTRADE-DI-TARSILIA.md`,
    con gli stemmi;
 3. il **retro della scheda** da `FASCICOLO-SCHEDE-GIOCATORE.md`, con il ritratto da
-   `ALLEGATI/tavole/ritratto-<nome>.svg`;
+   `ALLEGATI/immagini/ritratto-<nome>.png`;
 4. la **matrice dei legami** (prima tabella del fascicolo), una copia a testa;
 5. la **mappa della Ruota** (`ALLEGATI/mappe/rendered/`) e la **mappa della città**
    (`ALLEGATI/tavole/tarsilia-citta.svg`): una copia ciascuna, al centro del tavolo.
@@ -720,6 +723,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ---
 
+![Vidalia Roncetti](ALLEGATI/immagini/web/png-roncetti.jpg)
+![Nonna Grasa](ALLEGATI/immagini/web/png-nonna-grasa.jpg)
+
 ## §1 · Il foglio del cast
 
 **Legenda**: ✦ compare in tutte e tre le serate · ◆ una volta sola · ⚔ statblocco in
@@ -934,6 +940,147 @@ Poco lavoro, e riguarda più tavoli di quanto sembri.
 | **Udito** | i cue del §5 sono **descrizioni**, non suoni obbligatori. Il modulo si gioca identico in silenzio |
 | **Carico cognitivo** | la Corsa a nove tratti è il punto più denso: se al tavolo serve, gioca il **terzo giro in un tratto solo** — un tiro, e l'esito. Non perde niente di essenziale |
 | **Sicurezza emotiva** | il contratto del tavolo sta in `00-HUB` §6. Le due dita sul tavolo valgono **anche per il DM** |
+
+
+\page
+
+# III-bis · Kit anti-improvvisazione
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Il kit anti-improvvisazione — quello che serve quando il tavolo esce dal copione
+
+> **A cosa serve.** Il modulo ha quindici luoghi scritti, ventotto PNG col loro tic
+> vocale, gli incontri già scalati e le contingenze per giornata. Restano **quattro
+> buchi**, e sono sempre gli stessi quattro: un nome, un prezzo, una faccia che non
+> esiste, e un dado da tirare quando non hai deciso niente. Questa pagina li chiude.
+>
+> Si stampa **una volta** e si tiene sotto il foglio del cast.
+
+---
+
+## §1 · I nomi — quando chiedono come si chiama il garzone
+
+Tarsilia è un porto fluviale: i nomi mescolano la valle e il fiume. Tira **1d20** e
+prendi il primo della colonna, o accoppiali a caso — **funziona anche a occhio**.
+
+| d20 | Uomo | Donna | Casato / soprannome |
+|---|---|---|---|
+| 1 | Bardo | Vanna | Corsari |
+| 2 | Tesio | Berenice | Marca |
+| 3 | Melchio | Ombra | Sallo |
+| 4 | Gerlando | Vidalia | Roncetti |
+| 5 | Nocca | Ottavia | Vesca |
+| 6 | Rico | Zoe | Barbanera |
+| 7 | Duccio | Nera | dal Ponte |
+| 8 | Ceppo | Lena | Rasca |
+| 9 | Mino | Grasa | Salle |
+| 10 | Tonio | Sesta | Pettirosso |
+| 11 | Vico | Marta | dei Salici |
+| 12 | Baldo | Rosa | Cerbo |
+| 13 | Nello | Tilde | Fontebuia |
+| 14 | Sarto | Bruna | Canale |
+| 15 | Gero | Zita | Guadi |
+| 16 | Pippo | Nanda | Scardino |
+| 17 | Iaco | Amata | Rive |
+| 18 | Marso | Petra | Stagni |
+| 19 | Cencio | Onda | Tinti |
+| 20 | Berto | Fosca | Bassi |
+
+**La regola che li rende veri**: dai a ogni PNG improvvisato **una cosa sola** —
+un mestiere, un difetto fisico, o una fretta. Non tre. Tre lo fanno sembrare
+importante, e il tavolo lo inseguirà per due ore.
+
+---
+
+## §2 · La bottega qualunque — prezzi e inventario
+
+Quando entrano in una bottega che non hai scritto. Prezzi PF1e Core, arrotondati a
+quello che un bottegaio di provincia chiede davvero.
+
+| Cosa | Prezzo | Note per il tavolo |
+|---|---|---|
+| Corda di canapa, 15 m | 1 mo | ce n'è sempre |
+| Lanterna schermata + olio | 8 mo | l'olio finisce in 6 ore |
+| Coperta, sacco, gavetta | 1 mo | |
+| Piede di porco | 2 mo | +2 alle prove di Forza per forzare |
+| Chiodi, martello, cunei | 5 ma | il pacchetto del carpentiere |
+| Grappa di vinaccia, fiasca | 2 ma | ⚠ due sorsi = −2 a Destrezza per 1 ora |
+| Resina grezza, libbra | 3 ma | **è la merce del rione**: qui la comprano, non la vendono |
+| Stoffa tinta, braccio | 2 mo | indaco 4 mo — il Bruco tiene il prezzo alto |
+| Ferratura di cavallo | 6 ma | mezz'ora di lavoro, e il maniscalco parla |
+| Pasto caldo + posto sul pagliericcio | 3 ma | |
+
+**Cosa non si trova a Tarsilia, e vale la pena dirlo in faccia**: armature pesanti,
+armi esotiche, oggetti magici sopra i 400 mo, cavalli da guerra. È una città che
+lavora, non una capitale. *«Quella roba la compri a Cassomir, e ci vogliono sei
+giorni.»*
+
+---
+
+## §3 · I tre PNG jolly — con lo statblocco già pronto
+
+Per la faccia che spunta e non c'era. Ognuno ha **un uso** dichiarato: sceglili per
+la funzione, non per il nome.
+
+### Il testimone che ha visto — *popolano 1, GS 1/3*
+
+**PS** 4 · **CA** 10 · **TS** +0/+0/+0 · **Percezione** +2
+**Uso**: sa una cosa vera e la dice male. Vuole solo tornare a lavorare.
+**Il tic**: comincia sempre da troppo lontano. *«Allora, mio nonno faceva il…»*
+
+### Il tirapiedi che non vuole menare — *guerriero 1, GS 1/2*
+
+**PS** 11 · **CA** 15 (cuoio borchiato, scudo) · **Att** mazza +3 (1d8+2)
+**TS** +3/+1/+0 · **Intimidire** +4
+**Uso**: blocca il passaggio, e **si tira indietro** se lo si spaventa (Intimidire
+CD 12) o se gli si offre di più (Diplomazia CD 13). Serve a dare una vittoria senza
+combattimento.
+**Il tic**: guarda sempre qualcun altro prima di rispondere.
+
+### Il funzionario che applica il regolamento — *esperto 2, GS 1/2*
+
+**PS** 9 · **CA** 11 · **TS** +0/+1/+3 · **Sapienza (nobiltà)** +6 · **Diplomazia** +5
+**Uso**: dice **no** con una ragione scritta. Non si corrompe con l'oro; si convince
+con **una carta** o con un favore alla sua ufficio.
+**Il tic**: cita il numero dell'articolo, e sbaglia il numero.
+
+---
+
+## §4 · Il dado quando non hai deciso niente
+
+Tira **1d6** e lascia che sia il mondo a muoversi. Ogni voce è vera in qualunque
+momento delle tre giornate e **non contraddice nessuna trama**.
+
+| d6 | Succede |
+|---|---|
+| 1 | Passa un carro di resina e blocca il vicolo per dieci minuti. Chi ha fretta perde qualcosa |
+| 2 | Un bambino corre a chiamare uno dei PG per nome. Si è sbagliato di persona — ma sa il nome |
+| 3 | Due contrade diverse cantano lo stesso motivo a due strade di distanza. Nessuno si ferma |
+| 4 | Il fiume puzza più del solito. I vecchi dicono che vuol dire pioggia, e i vecchi sbagliano spesso |
+| 5 | Un banditore legge un avviso che non riguarda i PG. Riguarda il prezzo del grano |
+| 6 | Qualcuno saluta un PG con **il nome di un altro**. È un vecchio del rione, e non si corregge |
+
+⚠️ **Nessuna di queste è un gancio**. Servono a far respirare la città quando il
+tavolo si ferma a pensare. Se una diventa una trama, è perché **i giocatori** hanno
+deciso così — e allora è meglio di qualunque cosa avessi preparato.
+
+---
+
+## §5 · Quando invece è giusto fermarsi
+
+Tre casi in cui **non** si improvvisa, e si dice al tavolo *«questo lo decidiamo la
+prossima volta»*:
+
+1. **una regola della corsa** — sono scritte, e cambiarle a metà rompe il gioco del
+   Giorno 3 (`REGOLE-DELLA-CORSA-PF1E.md`);
+2. **un segreto di un PG** — appartiene a quel giocatore, non al DM
+   (`05-INIZIAZIONE-E-EVENTI-PG.md` §4-bis);
+3. **la matematica di un incontro** — le tabelle 4/5/6/7 sono già calcolate. A
+   occhio, di sera, viene sempre troppo duro o troppo molle.
 
 
 \page
@@ -1622,6 +1769,21 @@ li porta in casa. Melchio è l'unico che li riconosce a colpo d'occhio.
 
 ---
 
+## §4-bis · Come si tratta un segreto di PG (nota di regia)
+
+> ⚠️ **Questa sezione stava per errore in fondo a `FASCICOLO-SCHEDE-GIOCATORE.md`**,
+> che è un file ✉ **da mettere in mano ai giocatori**: elencava i collegamenti fra i
+> segreti a chi non doveva ancora conoscerli. Spostata qui il 2026-08-15.
+
+Ogni «cosa che non dici» è **un segreto che il giocatore possiede**, non un colpo di
+scena che gli spetta subire. Se un giocatore decide di rivelarlo prima del previsto,
+**va premiato**: il segreto è suo e l'ha speso quando ha voluto.
+
+I collegamenti fra i segreti — Ombra e Nonna Grasa, Berenice e Rasca, i nove nomi di
+Melchio e il Drappo — sono nel §4 qui sopra.
+
+---
+
 ## §5 · Griglia di controllo — chi ha avuto la sua scena?
 
 Fotocopiala e segna. Se a fine serata una riga è vuota, quel giocatore ha guardato.
@@ -1670,6 +1832,8 @@ Ogni luogo ha:
 **Legenda delle giornate**: `G1` Giorno 1 · `G2` Giorno 2 · `G3` Giorno 3.
 
 ---
+
+![Tarsilia dall'alto](ALLEGATI/immagini/web/tavola-tarsilia-citta.jpg)
 
 ## §1 · Il rione dell'Istrice (casa vostra)
 
@@ -1899,6 +2063,10 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | 7 | Incontri scalabili — 4, 5, 6, 7 giocatori |
 
 ---
+
+![Ottavia Vesca](ALLEGATI/immagini/web/png-vesca.jpg)
+![Gerlando Attu](ALLEGATI/immagini/web/png-attu.jpg)
+![Sfregio](ALLEGATI/immagini/web/png-sfregio.jpg)
 
 ## §1 · Ottavia Vesca — Capitana del Bruco
 
@@ -2387,6 +2555,8 @@ brutte figure per arrivarci.
 
 ---
 
+![La Ruota, il giorno prima](ALLEGATI/immagini/web/tavola-la-ruota-vigilia.jpg)
+
 ## §5 · La Sorte dei cavalli
 
 **Meccanica completa**: `REGOLE-DELLA-CORSA-PF1E.md` §2. Qui c'è solo la scena.
@@ -2728,6 +2898,8 @@ che passa in mezzo alle tavole perché è tradizione che passi.
 
 ---
 
+![La Cena della vigilia](ALLEGATI/immagini/web/tavola-la-cena.jpg)
+
 ## §5 · L'uomo con la fascia grigia
 
 **Beat di Nocca.** Da giocare quando il giocatore di Nocca si allontana dalla Cena,
@@ -2753,6 +2925,8 @@ nessuno. L'unica variabile è se l'Istrice lo sanno prima.
 | Lo uccide | Un'altra sessione, un altro modulo, e nessuno dei sei tornerà quello di prima |
 
 ---
+
+![Le stalle, dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg)
 
 ## §6 · Notte — l'assalto alle stalle
 
@@ -3078,6 +3252,8 @@ Stacco venga annullato — con i fischi che ne conseguono.
 
 ---
 
+![La Ruota il giorno della corsa](ALLEGATI/immagini/web/tavola-la-ruota.jpg)
+
 ## §5 · La Corsa — la regia dei tre giri
 
 Nove tratti: **Dritto**, **Curva Nord**, **Curva Sud**, per tre volte.
@@ -3212,6 +3388,8 @@ non le fa neanche stavolta. Ma:
 > *«Il Drappo,» dice, «lo ha dipinto Lino Rasca. Guardatelo prima di portarlo via.»*
 
 ---
+
+![Il Drappo](ALLEGATI/immagini/web/il-drappo.jpg)
 
 ## §8 · Il Drappo di Lino Rasca
 
@@ -4064,6 +4242,7 @@ master emoji-grid e l'SVG sono generati e non si modificano a mano.
 | Mappa | Sorgente | Master stampabile | SVG da tavolo |
 |---|---|---|---|
 | **La Ruota** (piazza e pista) | `tarsilia-la-ruota.json` | `tarsilia-la-ruota.md` | `rendered/tarsilia-la-ruota_map01_tarsilia-la-ruota-pista-del-drappo.svg` |
+| **La Ruota — versione giocatore** | `tarsilia-la-ruota-giocatori.json` | `tarsilia-la-ruota-giocatori.md` | `rendered/tarsilia-la-ruota-giocatori_map01_tarsilia-versione-giocatore.svg` |
 | **Le stalle dell'Istrice** | `tarsilia-stalle.json` | `tarsilia-stalle.md` | `rendered/tarsilia-stalle_map01_tarsilia-le-stalle-dell-istrice-assalto-notturno.svg` |
 
 ## Rigenerare
@@ -4080,6 +4259,25 @@ Per stampare o portarle su un VTT:
 python3 scripts/export_map_png.py rendered/<file>.svg --scale 3   # artefatto locale, non committare
 python3 scripts/export_uvtt.py <mappa>.md -o <cartella>           # Foundry / Roll20
 ```
+
+## Su Foundry / Roll20
+
+Le due mappe sono **già esportate** in `uvtt/`, con muri, porte e luci derivati dal
+JSON — si importano native, senza ridisegnare niente:
+
+| File | Muri | Porte | Luci |
+|---|:--:|:--:|:--:|
+| `uvtt/tarsilia-la-ruota_map01_*.uvtt` | 24 | 2 | 0 |
+| `uvtt/tarsilia-stalle_map01_*.uvtt` | 32 | 2 | 2 |
+
+Si rigenerano con `python3 scripts/export_uvtt.py <mappa>.md -o uvtt`.
+
+## Quale delle due Ruote si mette sul tavolo
+
+La versione **del DM** porta le posizioni di partenza, le insidie e le note tattiche:
+è quella che sta dietro lo schermo. Quella **dei giocatori** ha la stessa geometria e
+niente altro — si stampa e si mette in mezzo al tavolo senza consegnare mezza serata
+di informazioni.
 
 ## Coordinate
 

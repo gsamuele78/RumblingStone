@@ -677,6 +677,41 @@
       "deterministic": true
     },
     {
+      "name": "build_image_derivatives",
+      "description": "Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
+      "invocation": "python3 scripts/build_image_derivatives.py <cartella>",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cartella": {
+            "type": "string",
+            "description": "Cartella dei master PNG."
+          },
+          "max": {
+            "type": "integer",
+            "description": "Lato lungo per ritratti e copertina."
+          },
+          "quality": {
+            "type": "integer",
+            "description": "Qualità JPEG."
+          }
+        },
+        "required": [
+          "cartella"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<cartella>/web/*.jpg"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Pillow assente (dice come installarlo)",
+        "2": "cartella mancante"
+      },
+      "deterministic": true
+    },
+    {
       "name": "dm_dossier",
       "description": "SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
       "invocation": "python3 scripts/dm_dossier.py",

@@ -60,6 +60,28 @@ PDF per capitolo con Chromium. Questo esportatore serve al volume da stampa.
 """
 
 
+def _e_orizzontale(img: Path) -> bool:
+    """Larghezza > altezza? Si legge dall'header, senza dipendere da Pillow."""
+    try:
+        d = img.read_bytes()[:40]
+        if d[:8] == b"\x89PNG\r\n\x1a\n":
+            w, h = int.from_bytes(d[16:20], "big"), int.from_bytes(d[20:24], "big")
+        elif d[:4] == b"RIFF" and d[8:12] == b"WEBP" and d[12:16] == b"VP8X":
+            w = int.from_bytes(d[24:27], "little") + 1
+            h = int.from_bytes(d[27:30], "little") + 1
+        elif d[:4] == b"RIFF" and d[12:16] == b"VP8L":
+            b = int.from_bytes(d[21:25], "little")
+            w, h = (b & 0x3FFF) + 1, ((b >> 14) & 0x3FFF) + 1
+        elif d[:4] == b"RIFF":                       # VP8 semplice
+            w = int.from_bytes(d[26:28], "little") & 0x3FFF
+            h = int.from_bytes(d[28:30], "little") & 0x3FFF
+        else:
+            return False
+        return w > h
+    except Exception:
+        return False
+
+
 def typ_path(p: Path) -> str:
     """Con `--root`, in Typst i percorsi assoluti sono RELATIVI ALLA RADICE.
 
@@ -91,8 +113,19 @@ def _unesc(s: str) -> str:
     return re.sub(r"\x00(\d+)\x00", lambda m: "\\" + chr(int(m.group(1))), s)
 
 
+_IMMAGINE = re.compile(r"^!\[([^\]]*)\]\(([^)\s]+)\)\s*$")
+
+
+_ENTITA = {"&nbsp;": "\u00a0", "&amp;": "&", "&lt;": "<", "&gt;": ">",
+           "&quot;": '"', "&#39;": "'", "&mdash;": "—", "&ndash;": "–"}
+
+
 def inline(s: str) -> str:
     """Grassetto, corsivo, codice e link, nell'ordine che evita le collisioni."""
+    # I master usano qualche entità HTML (il &nbsp; per non spezzare «+7 (1d8)»):
+    # in HTML si risolvono da sole, in Typst finirebbero stampate letterali.
+    for ent, ch in _ENTITA.items():
+        s = s.replace(ent, ch)
     s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)  # link → solo il testo
     out = []
     for p in re.split(r"(`[^`]+`|\*\*[^*]+\*\*|\*[^*]+\*)", s):
@@ -114,7 +147,7 @@ def _celle(riga: str) -> list[str]:
 _BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```)")
 
 
-def md_to_typ(md: str) -> str:
+def md_to_typ(md: str, base: Path) -> str:
     righe = md.split("\n")
     out: list[str] = []
     i = 0
@@ -159,6 +192,21 @@ def md_to_typ(md: str) -> str:
                 i += 1
             testo = " ".join(x for x in blocco if x)
             out.append(("#leggi[" if aloud else "#nota[") + inline(testo) + "]")
+            continue
+
+        m_img = _IMMAGINE.match(ln.strip())
+        if m_img:
+            # `![alt](percorso)` è un'IMMAGINE, non un link: va riconosciuta qui,
+            # prima che inline() appiattisca le parentesi e resti solo «!alt».
+            alt, ref = m_img.group(1), m_img.group(2)
+            img = (base / ref) if not ref.startswith("/") else Path(ref)
+            if img.exists():
+                larga = "true" if _e_orizzontale(img) else "false"
+                out.append(f"#figura({json.dumps(typ_path(img), ensure_ascii=False)}, "
+                           f"{json.dumps(alt, ensure_ascii=False)}, larga: {larga})")
+            else:
+                print(f"  ⚠ immagine mancante, saltata: {ref}", file=sys.stderr)
+            i += 1
             continue
 
         if re.match(r"^#{1,4}\s", ln):
@@ -235,7 +283,7 @@ def sorgente(man: dict, base: Path, tutti: bool) -> str:
         fr = fregio_per(titolo, f, base)
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
-        corpo = md_to_typ(f.read_text(encoding="utf-8"))
+        corpo = md_to_typ(f.read_text(encoding="utf-8"), f.parent)
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)
         parti.append("")

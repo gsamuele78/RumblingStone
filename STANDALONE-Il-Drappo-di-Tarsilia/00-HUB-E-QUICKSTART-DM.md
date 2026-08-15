@@ -95,7 +95,7 @@ dopo, anche.
 2. il **volantino delle otto contrade** — la tabella §1 di `CONTRADE-DI-TARSILIA.md`,
    con gli stemmi;
 3. il **retro della scheda** da `FASCICOLO-SCHEDE-GIOCATORE.md`, con il ritratto da
-   `ALLEGATI/tavole/ritratto-<nome>.svg`;
+   `ALLEGATI/immagini/ritratto-<nome>.png`;
 4. la **matrice dei legami** (prima tabella del fascicolo), una copia a testa;
 5. la **mappa della Ruota** (`ALLEGATI/mappe/rendered/`) e la **mappa della città**
    (`ALLEGATI/tavole/tarsilia-citta.svg`): una copia ciascuna, al centro del tavolo.
