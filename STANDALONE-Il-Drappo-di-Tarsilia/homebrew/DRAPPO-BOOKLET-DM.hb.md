@@ -208,7 +208,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | `ALLEGATI/mappe/` | la Ruota, **la Ruota in versione giocatore** e le stalle: JSON, master emoji-grid, SVG |
 | `ALLEGATI/tavole/` | **tavole vettoriali**: mappa della città, il Drappo, sei ritratti (rigenerabili) |
 | `ALLEGATI/handout/` | **i quattro prop da stampare**: il contratto di Vesca, la pagina del registro, la ricevuta, il decreto |
-| `homebrew/` | **quattro booklet** impaginati (DM · Giocatori · Fascicolo schede · Prop) + i PDF |
+| `homebrew/` | **quattro booklet** impaginati (DM · Giocatori · Fascicolo schede · Prop) + i PDF, e il manifest delle **sei schede da stampa** (`DRAPPO-SCHEDE-PG`) |
 | `ALLEGATI/mappe/uvtt/` | le due mappe pronte per **Foundry / Roll20** |
 | `ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md` | art direction e prompt per l'edizione raster |
 | `PROMPT-GENERAZIONE-BOOKLET-DEFINITIVO.md` | **cosa manca per l'edizione illustrata** e il prompt pronto da passare a una sessione nuova |
@@ -260,14 +260,25 @@ dopo, anche.
 
 **Per i giocatori** — sei fascicoli:
 
-1. la propria scheda da `PREGEN-SEI-SCHEDE-PF1E.md` (una pagina a testa);
+1. la propria **scheda**: sei pagine A4, una a testa, numeri e persona sullo stesso
+   foglio, col ritratto dipinto. Si generano in un comando —
+
+   ```bash
+   python3 scripts/export_booklet_typst.py \
+       STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-SCHEDE-PG.manifest.json
+   ```
+
+   e vengono da `PREGEN-SEI-SCHEDE-PF1E.md` + `FASCICOLO-SCHEDE-GIOCATORE.md`, che
+   restano i master: si può anche stampare direttamente quei due file, ma il PDF è
+   quello che si dà in mano;
 2. il **volantino delle otto contrade** — la tabella §1 di `CONTRADE-DI-TARSILIA.md`,
    con gli stemmi;
-3. il **retro della scheda** da `FASCICOLO-SCHEDE-GIOCATORE.md`, con il ritratto da
-   `ALLEGATI/immagini/ritratto-<nome>.png`;
-4. la **matrice dei legami** (prima tabella del fascicolo), una copia a testa;
-5. la **mappa della Ruota** (`ALLEGATI/mappe/rendered/`) e la **mappa della città**
-   (`ALLEGATI/tavole/tarsilia-citta.svg`): una copia ciascuna, al centro del tavolo.
+3. la **matrice dei legami** (prima tabella di `FASCICOLO-SCHEDE-GIOCATORE.md`), una
+   copia a testa — sulla scheda ognuno vede **solo la propria riga**, e la matrice
+   intera al centro del tavolo è ciò che fa scattare il gruppo nei primi dieci minuti;
+4. la **mappa della Ruota** (`ALLEGATI/mappe/rendered/`, la versione giocatore) e la
+   **mappa della città** (`ALLEGATI/tavole/tarsilia-citta.svg`): una copia ciascuna,
+   al centro del tavolo.
 
 **I quattro prop** (`ALLEGATI/handout/`) si stampano e si consegnano **quando la
 fiction li consegna**, mai prima: il decreto al Giorno 1, il contratto quando Vesca lo
@@ -3868,7 +3879,7 @@ parto.*
 ### Attacco
 **Mischia** bastone ferrato +2 (1d6) · falcetto +2 (1d6)
 **Dardo acido** *(dominio Terra)* raggio di contatto **+3**, 1d6+1, **7 volte al giorno**
-**BAB** +2 · **CMB** +2 · **CMD** 13
+**BAB** +2 · **CMB** +2 · **CMD** 14
 
 ### Statistiche
 **For** 10 (+0) · **Des** 13 (+1) · **Cos** 13 (+1) · **Int** 12 (+1) · **Sag** 18 (+4) · **Car** 10 (+0)
@@ -3888,7 +3899,7 @@ Percezione +10, Cavalcare +6, Conoscenze (natura) +6, Sapienza Magica +6
 (6) · bastone ferrato · **bacchetta di *cura ferite leggere*, 25 cariche** (375) ·
 2 pergamene di *ritardare veleno* (300) · 2 antitossine (100) · kit dell'erborista e
 sacca del guaritore (55) · **anello di protezione +1** (2.000) *— era di sua madre,
-e non lo dice a nessuno* · **+ ~150 mo**
+e non lo dice a nessuno; la deviazione entra anche nel CMD* · **+ ~150 mo**
 
 ### Il suo problema
 *Ritardare veleno* lo prepara ogni mattina da sei anni, sempre, e non ha mai dovuto
@@ -3930,7 +3941,7 @@ CD 15 nega), **7 volte al giorno**
 slot a memorizzarle)*
 **Incantesimi preparati** (CD 14 + livello; **+1 per le illusioni**)
 - **0°** (4): *prestidigitazione* · *individuazione del magico* · *lettura del magico* · *luce*
-- **1°** (3 + 1 scuola): *armatura magica* · *charme su persone* (CD 16) · *dardo
+- **1°** (3 + 1 scuola): *armatura magica* · *charme su persone* (CD 15) · *dardo
   incantato* · **scuola**: *immagine silenziosa* (CD 16)
 - **2°** (2 + 1 scuola): *individuazione dei pensieri* (CD 16) · *tocco dell'idiota* ·
   **scuola**: *invisibilità*
@@ -4236,6 +4247,37 @@ prima sessione reale:
 6. **Le sei schede sono equilibrate come spotlight?** Contare, a fine serata, quante
    volte ha tirato ciascuno. Se qualcuno sta sotto la metà della media, la scheda va
    corretta, non il giocatore.
+
+## §6 · Audit meccanico delle sei schede — 2026-08-17
+
+Passata 1 della skill `rumblingstone-playtest`, rifatta **sulle sole schede** quando
+sono diventate schede impaginate. Non è una rilettura: i numeri sono stati **ricalcolati
+a macchina** dai master (`scripts/dmcore/schede.py` + aritmetica PF1e Core), perché
+l'audit del §2 aveva guardato il modulo e non la matematica dei sei pregenerati.
+
+| # | Rilievo | Gravità | Esito |
+|---|---|---|---|
+| **A1** | **Economia** — i sei equipaggiamenti contro i 3.000 mo del 3° livello | 🟢 | verificato: 3.000,0 · 3.000,2 · 2.999 · 2.984 · 2.996 · 2.997. Scarto massimo **16 mo** (Tesio, 0,5%): è l'arrotondamento del «~200 mo in tasca», non un errore |
+| **A2** | **CA, contatto e colto alla sprovvista** contro i componenti dichiarati | 🟢 | tutte e sei coerenti |
+| **A3** | **CMB** = BAB + For + taglia | 🟢 | tutte e sei coerenti |
+| **A4** | **CMD di Ombra: 13** | 🟠 | **corretto → 14**. L'anello di protezione +1 è un bonus di *deviazione*, e la deviazione entra nel CMD [PF1e Core]. Un −1 sul CMD è invisibile finché qualcuno non prova a spingerla via dal transennato della curva nord — cioè esattamente la scena per cui esiste |
+| **A5** | **CD di *charme su persone* di Tesio: 16** | 🟠 | **corretto → 15**. Focalizzazione Incantatore (illusione) dà +1 **alle illusioni**; *charme su persone* è Ammaliamento. La CD sbagliata era **a favore** del PG e nessuno l'avrebbe segnalata |
+| **A6** | **Poteri a «3 + modificatore»** — dardo acido, raggio accecante, sfidare la morte, canalizzare, round di esibizione bardica | 🟢 | 7 · 7 · 7 · 4 · 12: tutti coerenti |
+| **A7** | **CD degli incantesimi** (10 + livello + attributo) sulle altre cinque schede | 🟢 | coerenti, illusioni di Tesio comprese |
+| **A8** | **Componenti della CA non dichiarati su Tesio** | 🟢 | non è un errore (12 = 10 + 2 Des): è l'unica scheda che non li elenca. Lasciato com'è — uniformarlo cambierebbe un master per motivi cosmetici |
+
+### Le due correzioni, nel formato del §4
+
+| | cosa cambia | perché | file |
+|---|---|---|---|
+| **J** | CMD di Ombra dei Salici: 13 → **14** | rilievo A4: la deviazione dell'anello conta nel CMD | `PREGEN-SEI-SCHEDE-PF1E.md` §3 |
+| **K** | *charme su persone* di Tesio: CD 16 → **15** | rilievo A5: la focalizzazione è sulle illusioni, non sugli ammaliamenti | `PREGEN-SEI-SCHEDE-PF1E.md` §4 |
+
+> **Cosa questa passata NON dice.** È audit a tavolino: non misura se le schede danno
+> a tutti la stessa quantità di scena. Quella è la domanda 6 del §5, e si risponde
+> **contando i tiri** alla prima serata vera.
+
+---
 
 > **Come si chiude questo file**: dopo la prima sessione vera, il DM aggiunge un §6
 > con i tempi reali e i punti morti trovati. Allora il modulo passa da alfa a beta.

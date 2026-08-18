@@ -111,6 +111,8 @@
 - ⬜ _(L2 — i sei ritratti e le tre tavole: i prompt ci sono, i PNG li produce il DM con ComfyUI locale)_
 - ⬜ _(L3 — edizione pubblicabile: sostituire almeno 4 figure su 8 negli stemmi (restano oca/torre/bruco/istrice), rigenerare i cartigli coi motti nuovi, audit IP del solo standalone. **Gated** su ADR-0005)_
 
+- ⬜ _(2026-08-18 — **collaudo del libro illustrato**: le venti immagini sono entrate DOPO il dry-run del Lotto 2 e dopo l'audit delle schede, e nessuno ha guardato dove atterrano. Prompt di consegna autosufficiente in `STANDALONE-Il-Drappo-di-Tarsilia/PROMPT-PLAYTEST-BOOKLET-E-PLAYERGUIDE.md`. ⚠️ **Gated su una passata a occhio**: typst non è in CI, l'impaginazione non la controlla nessun gate)_
+
 ### VERIFICA LEGALE-IP (P2D "Palio")
 - ⬜ _(bonifica §7 — rinomina contrade, cambio livree, riscrittura motti da zero, rimozione "Piazza il Campo", riambientazione fuori Forgotten Realms: **gated** su una decisione DM di puntare a un'edizione commerciale, non ancora presa — vedi ADR-0005)_
 - ⬜ _(debito documentale a bassa priorità: correggere la nota IP interna che dichiara i motti "originali" — sono parafrasi §3.3; documentare provenienza/licenza delle 2 tavole PNG del DM)_
