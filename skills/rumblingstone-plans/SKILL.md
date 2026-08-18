@@ -15,6 +15,10 @@ description: >
 
 # RumblingStone — Archivio Piani (disciplina di tracciatura)
 
+> **Caricami quando** stai per chiudere un lotto, aprire una PR pianificata o scrivere un ADR — **prima** di committare, non dopo: la regola d'oro vuole piano, INDEX e CHANGELOG nello *stesso* commit.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Ogni lavoro strutturato del repo (revisioni, infrastruttura, ricerche) è
 tracciato in **`plans/`**. Senza questa disciplina le modifiche restano
 sparse nelle PR mergiate e la storia si frammenta. Fonte delle regole:

@@ -14,6 +14,10 @@ description: >
 
 # RumblingStone — Playtest e collaudo
 
+> **Caricami quando** stai per consegnare qualcosa che finisce su un tavolo — un modulo, una sessione, delle schede — e prima di dire «è pronto». L'audit meccanico costa un'ora e trova i numeri sbagliati che al tavolo nessuno segnala.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Il repo sa **scrivere** contenuto (`rumblingstone-narrative-style`), sa
 **strutturarlo** (`rumblingstone-module-standard`) e sa **validarlo a macchina**
 (`validate_*`). Questa skill copre il pezzo che mancava: **come si scopre se

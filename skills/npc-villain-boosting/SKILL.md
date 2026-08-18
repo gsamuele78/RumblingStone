@@ -11,6 +11,10 @@ description: >
 
 # NPC / Villain / Monster Boosting — When, Whether, How
 
+> **Caricami quando** stai per rinforzare o indebolire un PNG, un villain o un mostro.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 > 📘 **Guida passo-passo per umani** (dove va il file, formato statblock,
 > catalogo, gate CI): [`docs/guides/GUIDA-BESTIARIO.md`](../../docs/guides/GUIDA-BESTIARIO.md).
 

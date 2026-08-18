@@ -67,7 +67,14 @@ regenerate via `dm.py recap --hype` / `dm.py handout`, never edit by hand.
 ## Skills
 
 This repo ships focused skills plus one legacy meta-router.
-AI agents that support SKILL.md will discover them automatically:
+
+> ⚠️ **Being listed is not being loaded.** An agent sees these names in an
+> index; **nothing loads them for you**, and nothing fires them based on which
+> files you touch. If you do not invoke a skill explicitly, you are working
+> from your own guesses about this repo's conventions — which is exactly how
+> the same image-derivative generator got written twice, on two branches, in
+> the same week. **Load first, then work.**
+
 
 - `skills/dnd-35-srd/` — pure d20 SRD mechanics
 - `skills/forgotten-realms-lore/` — Faerûn 1372 DR canon
@@ -82,6 +89,32 @@ AI agents that support SKILL.md will discover them automatically:
 - `skills/pathfinder-1e-srd/` — Pathfinder 1e rules, simple templates, CR benchmarks, 3.5↔PF1e conversion
 - `skills/npc-villain-boosting/` — decision framework + workflow for boosting PNGs/villains/monsters
 - `skills/dnd-35-rules/` — legacy meta-router; points to the skills above
+
+### Quando caricare cosa — instradamento obbligatorio
+
+Prima di *scrivere*, non dopo. Se una riga corrisponde a quello che stai per
+fare, quella skill si carica: non è un suggerimento.
+
+| Se stai per… | Carica |
+|---|---|
+| toccare `scripts/`, `.github/workflows/`, i test, o **debuggare** una CI rossa | `rumblingstone-debugging` |
+| **chiudere un lotto**, aprire una PR pianificata, scrivere un ADR | `rumblingstone-plans` |
+| consegnare un artefatto **da tavolo** (schede, moduli, sessioni): «è pronto?» | `rumblingstone-playtest` |
+| generare, valutare o **rigenerare immagini** (ritratti, tavole, copertine, derivate) | `rumblingstone-art-direction` |
+| consolidare un master d'arco a qualità AP | `rumblingstone-module-standard` |
+| **generare contenuto** (prosa, quest, read-aloud, recap, dialoghi) | `rumblingstone-narrative-style` |
+| toccare mappe, JSON tattici, render SVG, export VTT | `rumblingstone-mapmaking` |
+| chiudere/preparare una sessione, `dm.py`, `state.md` | `rumblingstone-automation` |
+| adjudicare una regola 3.5 / PF1e, o **verificare un numero** | `dnd-35-srd` / `pathfinder-1e-srd` |
+
+**E prima di scrivere un tool nuovo**, leggi
+[`scripts/README-automation.md`](scripts/README-automation.md): è la mappa di
+cosa esiste già. Il costo di saltarla non è teorico — due sessioni hanno
+scritto due volte lo stesso generatore di derivate perché nessuna delle due
+l'ha aperta.
+
+Il perché di questa regola, e cosa succede senza:
+[ADR-0021](plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md).
 
 When any agent answers a question:
 

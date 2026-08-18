@@ -15,6 +15,10 @@ description: >
 
 # RumblingStone — Automazione DM (`dm.py` e pipeline di sessione)
 
+> **Caricami quando** stai per chiudere o preparare una sessione, o per lanciare qualunque script sotto `scripts/`.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Tutta l'automazione DM passa da **un solo entrypoint**:
 `python3 scripts/dm.py <sottocomando>` (solo orchestrazione, ADR-0002).
 Gli script sottostanti restano usabili direttamente e usano solo stdlib.

@@ -111,6 +111,9 @@
 - ⬜ _(L2 — i sei ritratti e le tre tavole: i prompt ci sono, i PNG li produce il DM con ComfyUI locale)_
 - ⬜ _(L3 — edizione pubblicabile: sostituire almeno 4 figure su 8 negli stemmi (restano oca/torre/bruco/istrice), rigenerare i cartigli coi motti nuovi, audit IP del solo standalone. **Gated** su ADR-0005)_
 
+### GOVERNANCE — scoperta di skill e tool
+- ✅ _(2026-08-18, [ADR-0021](adr/ADR-0021-caricamento-esplicito-delle-skill.md)): `AGENTS.md` diceva che le skill si scoprono da sole. **Non è vero**, e la frase è costata: lo stesso generatore di derivate scritto due volte su due rami, dodici link rotti invisibili per giorni, un audit meccanico saltato che nascondeva due numeri sbagliati. Ora c'è una **tabella di instradamento** «se stai per fare X, carica Y», il rimando obbligatorio a `README-automation` prima di scrivere un tool nuovo, e una riga «Caricami quando…» in testa a tutte e 13 le skill. ⚠️ **Nessun gate in CI**: «hai caricato la skill giusta?» non lascia traccia nei file e un gate che indovina sarebbe peggio del problema — dichiarato nell'ADR invece che nascosto)_
+
 ### VERIFICA LEGALE-IP (P2D "Palio")
 - ⬜ _(bonifica §7 — rinomina contrade, cambio livree, riscrittura motti da zero, rimozione "Piazza il Campo", riambientazione fuori Forgotten Realms: **gated** su una decisione DM di puntare a un'edizione commerciale, non ancora presa — vedi ADR-0005)_
 - ⬜ _(debito documentale a bassa priorità: correggere la nota IP interna che dichiara i motti "originali" — sono parafrasi §3.3; documentare provenienza/licenza delle 2 tavole PNG del DM)_

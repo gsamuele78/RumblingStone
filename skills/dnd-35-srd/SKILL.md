@@ -11,6 +11,10 @@ description: >
 
 # D&D 3.5 SRD — Mechanics-Only Reference
 
+> **Caricami quando** stai per adjudicare una regola o **verificare un numero** — anche se te lo ricordi: ricordarselo giusto è fortuna, non metodo.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Pure d20 SRD content. No Forgotten Realms lore, no campaign state.
 For setting questions load `forgotten-realms-lore`. For RumblingStone
 campaign questions load `rumblingstone-campaign`.

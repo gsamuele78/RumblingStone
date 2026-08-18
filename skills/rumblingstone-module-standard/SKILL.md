@@ -16,6 +16,10 @@ description: >
 
 # RumblingStone — Standard dei Master Definitivi (qualità modulo-AP)
 
+> **Caricami quando** stai per consolidare o revisionare un master definitivo d'arco, prima di decidere quanto a fondo andare.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 **Scopo.** Quando un arco viene consolidato in "master definitivi" (un file
 autosufficiente per beat, niente salti tra versioni), il risultato deve
 essere **oggettivamente paragonabile ai migliori moduli D&D 3.5 / Pathfinder

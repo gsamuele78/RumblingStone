@@ -16,6 +16,10 @@ description: >
 
 # RumblingStone — Direzione artistica
 
+> **Caricami quando** stai per generare, valutare, ridimensionare o rigenerare un'immagine — ritratti, tavole, copertine, derivate leggere comprese.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Il repo sa **scrivere** i prompt ([ADR-0015](../../plans/adr/ADR-0015-standard-prompt-immagine.md))
 e sa **eseguirli** ([`GUIDA-IMMAGINI.md`](../../docs/guides/GUIDA-IMMAGINI.md)).
 Questa skill copre il mestiere che sta in mezzo, e che è il motivo per cui dieci

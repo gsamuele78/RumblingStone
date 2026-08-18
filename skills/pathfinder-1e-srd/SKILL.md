@@ -11,6 +11,10 @@ description: >
 
 # Pathfinder 1e SRD — Rules & Conversion Toolkit
 
+> **Caricami quando** stai per adjudicare o verificare un numero PF1e (CMB/CMD, CD, template, GS), o convertire fra 3.5 e PF1e.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Pathfinder 1e is a direct evolution of the d20 3.5 system (OGL). ~90% of its
 math is drop-in compatible with 3.5. In this repo PF1e serves two purposes:
 

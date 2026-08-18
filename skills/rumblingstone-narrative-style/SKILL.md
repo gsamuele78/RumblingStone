@@ -17,6 +17,10 @@ description: >
 
 # RumblingStone — Narrative Style Engine (Eight Pillars)
 
+> **Caricami quando** stai per **scrivere** contenuto di gioco — prosa, quest, read-aloud, recap, dialoghi, agende dei villain.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 **This skill is mandatory for every content-generation request** in this
 repo. It defines *how* content sounds and is structured; the other skills
 define *what* is true (rules, lore, campaign state). Load it automatically

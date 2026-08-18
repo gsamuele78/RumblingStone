@@ -20,6 +20,10 @@ description: >
 
 # RumblingStone — Mapmaking Pipeline
 
+> **Caricami quando** stai per creare o modificare una mappa, toccare un JSON tattico, lanciare un render SVG o esportare per un VTT.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 > 📘 **Guida passo-passo per umani** (quale modalità scegliere, comandi, export
 > VTT, troubleshooting): [`docs/guides/GUIDA-MAPPE.md`](../../docs/guides/GUIDA-MAPPE.md).
 > Questa skill è la reference operativa per gli agenti.

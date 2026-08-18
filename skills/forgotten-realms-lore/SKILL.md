@@ -12,6 +12,10 @@ description: >
 
 # Forgotten Realms Lore — 1372 DR
 
+> **Caricami quando** la domanda tocca il canone di Faerûn nel 1372 DR.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Setting reference only. Pure mechanics live in `dnd-35-srd`. Campaign-specific
 state (party, RumblingStone artifacts, current arc) lives in
 `rumblingstone-campaign`.

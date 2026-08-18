@@ -14,6 +14,10 @@ description: >
 
 # Systematic Debugging (infrastruttura RumblingStone)
 
+> **Caricami quando** la CI è rossa, un test fallisce, uno script esplode o un render viene storto — **prima** di proporre la correzione, non dopo averla scritta.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 > **Origine**: vendorizzata da [`obra/superpowers`](https://github.com/obra/superpowers)
 > `skills/systematic-debugging` (MIT License, © 2025 Jesse Vincent, commit
 > `d884ae0`, 2026-07-23) — adattata a questo repo: trigger ristretti a

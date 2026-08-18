@@ -13,6 +13,10 @@ description: >
 
 # RumblingStone — Campaign Reference
 
+> **Caricami quando** la domanda tocca i quattro PG, gli artefatti, i villain o l'avanzamento degli archi.
+> *(Regola: [ADR-0021](../../plans/adr/ADR-0021-caricamento-esplicito-delle-skill.md) — essere elencata non è essere caricata.)*
+
+
 Custom campaign material for the RumblingStone D&D 3.5 game. For pure
 mechanics load `dnd-35-srd`. For Forgotten Realms canon load
 `forgotten-realms-lore`. This skill ONLY contains custom campaign content.
