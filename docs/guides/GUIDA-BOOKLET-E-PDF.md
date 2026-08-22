@@ -31,6 +31,17 @@ I PDF finiscono in `<cartella del manifest>/pdf/`, con **prefisso `pg-`**
 
 ---
 
+### 0.1 Le due opzioni che si dimenticano sempre
+
+```bash
+# il volume da stampare in casa: niente fondo avorio, cioè niente cartuccia bruciata
+python3 scripts/export_booklet_typst.py MANIFEST.json --all --carta bianca
+
+# un booklet HTML leggero (57 KB invece di 460): senza caratteri incorporati,
+# ma su una macchina senza EB Garamond cambia faccia
+python3 scripts/build_booklet_html.py MANIFEST.json --no-font-embed
+```
+
 ## 1. Cosa produce la pipeline
 
 ```
@@ -153,15 +164,28 @@ qualcuno non allunga un equipaggiamento.
 |---|---|
 | il **markdown** delle schede (sezioni obbligatorie, GS dichiarato) | `validate_standalone.py` §3, in CI |
 | i **link** del modulo, immagini comprese | `validate_standalone.py` §2, in CI |
-| il **manifest** delle schede (master e ritratti risolvibili) | `export_booklet_typst.py --list` in CI + `scripts/tests/test_schede.py` |
+| il **manifest** di ogni booklet (schema, capitoli, copertina, introduzione) | `validate_booklets.py`, in CI |
+| le **immagini** citate dai master (esistono davvero?) | `validate_booklets.py`, in CI |
 | i **parametri** che l'esportatore passa al template `.typ` | `test_schede.py::TestSorgenteTypst` |
-| l'**impaginazione vera** | ⚠️ **nessuno**: `typst` non è installato in CI. Si guarda a occhio, in locale |
+| la **compilazione vera** di tutti i volumi, segnalibri compresi | `validate_booklets.py --stampa`, in CI con `typst` **a versione fissata** |
+| le sei **schede singole** | `--per-scheda` in CI (conta che siano sei) |
+| il **giudizio estetico** | ⚠️ nessuno, e nessuno potrà: si guarda a occhio, in locale |
+
+> 📌 **Dal 2026-08-22 in CI c'è `typst`.** Prima non c'era, e la conseguenza è
+> stata misurata: **due booklet della campagna non avevano mai compilato** (il
+> fascicolo del Palio e quello di Terros), e le immagini dei master non entravano
+> affatto nel volume — `![Stemma Oca](…)` usciva stampato come `!Stemma Oca`.
+> Prima di consegnare qualsiasi cosa:
+>
+> ```bash
+> python3 scripts/validate_booklets.py --stampa
+> ```
 
 Per guardarla a occhio senza aprire il PDF, le pagine si rendono in PNG:
 
 ```bash
 python3 scripts/export_booklet_typst.py MANIFEST.json --keep-typ
-typst compile --font-path scripts/typst/fonts --root . \
+typst compile --font-path scripts/fonts --root . \
     --format png --ppi 110 <nome>.typ 'pagina{n}.png'
 ```
 

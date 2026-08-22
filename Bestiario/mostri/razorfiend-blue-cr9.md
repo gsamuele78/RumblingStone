@@ -1,5 +1,16 @@
 # Razorfiend — Blue Variant [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: skirmisher-shock | **Environment**: aerial/desert | **CR**: 9 | **Source**: RHoD Razorfiend + Draconomicon blue | **Status**: inferred
+
+```statblocco
+gs: 9
+ca: 24
+pf: 115
+pf-dado: 10d12+50
+ts: Temp +12, Rifl +8, Vol +9
+velocita: 40 ft, fly 80 ft (average), burrow 20 ft
+iniziativa: +5
+```
+
 **Size/Type**: Large dragon (electricity) | **HD**: 10d12+50 (115 HP)
 **AC**: 24 | **Init**: +5 | **Speed**: 40 ft, fly 80 ft (average), burrow 20 ft
 **Saves**: Fort +12, Ref +8, Will +9 | **BAB/Grapple**: +10/+20

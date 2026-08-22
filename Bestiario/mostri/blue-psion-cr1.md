@@ -1,5 +1,17 @@
 # Blue (Psionic Goblinoid) [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: psionic-support | **Environment**: any | **CR**: 1 | **Source**: MM II p.38 Blue | **Status**: inferred
+
+```statblocco
+gs: 1
+ca: 15
+ca-dettaglio: (+1 size, +2 Dex, +2 leather)
+pf: 5
+pf-dado: 1d8+1
+ts: Temp +3, Rifl +2, Vol +0
+velocita: 30 ft
+iniziativa: +2
+```
+
 **Size/Type**: Small humanoid (goblinoid, psionic) | **HD**: 1d8+1 (5 HP)
 **AC**: 15 (+1 size, +2 Dex, +2 leather) | **Init**: +2 | **Speed**: 30 ft
 **Saves**: Fort +3, Ref +2, Will +0 | **BAB/Grapple**: +0/-4

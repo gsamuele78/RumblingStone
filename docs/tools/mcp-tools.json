@@ -907,6 +907,43 @@
       "deterministic": true
     },
     {
+      "name": "validate_booklets",
+      "description": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "invocation": "python3 scripts/validate_booklets.py --stampa",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "I manifest da controllare (default: tutti quelli del repo)."
+          },
+          "stampa": {
+            "type": "boolean",
+            "description": "Compila ogni volume con typst e controlla dimensione e segnalibri. Senza il binario, salta dichiarandolo."
+          },
+          "spiega": {
+            "type": "boolean",
+            "description": "Elenca per esteso gli avvisi di parità fra le due catene."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Esito machine-readable su stdout."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout (o JSON con --json)"
+      ],
+      "exit_codes": {
+        "0": "tutto verde",
+        "1": "almeno un errore",
+        "2": "uso errato"
+      },
+      "deterministic": true
+    },
+    {
       "name": "build_monster_catalog",
       "description": "Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
       "invocation": "python3 scripts/build_monster_catalog.py",
@@ -931,6 +968,44 @@
       "exit_codes": {
         "0": "ok",
         "1": "diff presente (con --check)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "extract_statblocks",
+      "description": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "invocation": "python3 scripts/extract_statblocks.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Schede da trattare (default: tutto il Bestiario)."
+          },
+          "apply": {
+            "type": "boolean",
+            "description": "Scrive il blocco nelle schede dove l'estrazione è completa."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Verifica i blocchi già presenti; non scrive niente. È il gate CI."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Rapporto machine-readable."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "Bestiario/**/*.md (solo con --apply)",
+        "stdout (o JSON con --json)"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check ha trovato blocchi rotti o GS incoerenti",
+        "2": "uso errato o scheda inesistente"
       },
       "deterministic": true
     },

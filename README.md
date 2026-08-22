@@ -74,7 +74,7 @@ Important non-player characters and antagonists (Detailed in `Bestiario/villain/
   - `npcs/` & `locations/`: Key figures and environment descriptions.
   - `encounters/`: Custom encounter design and tactics.
   - `lore/`: House rules, setting details, and DM strategy (e.g., `csmpaign players.md`).
-- **`skills/`**: Nine focused AI-agent skills + a legacy router. Rules are sourced from the d20 SRD (D&D 3.5) and the Pathfinder 1e SRD:
+- **`skills/`**: Fourteen focused AI-agent skills + a legacy router. Rules are sourced from the d20 SRD (D&D 3.5) and the Pathfinder 1e SRD:
   - `dnd-35-srd/` — pure 3.5 mechanics (d20srd.org)
   - `forgotten-realms-lore/` — Faerûn 1372 DR canon
   - `rumblingstone-campaign/` — this campaign (PCs, artifacts, arcs, coherence)
@@ -84,7 +84,12 @@ Important non-player characters and antagonists (Detailed in `Bestiario/villain/
   - `rumblingstone-plans/` — work-plan archive discipline (INDEX, CHANGELOG, ADRs)
   - `pathfinder-1e-srd/` — PF1e rules, simple templates, CR benchmarks, 3.5↔PF conversion
   - `npc-villain-boosting/` — when/whether/how to boost PNGs, villains, and monsters
-  - `dnd-35-rules/` — legacy meta-router pointing at the nine above
+  - `rumblingstone-art-direction/` — visual bible, character sheets, the rejection gate
+  - `rumblingstone-editoria/` — layout & typography of the printed volumes (ADR-0020/0021)
+  - `rumblingstone-module-standard/` — the depth an AP-quality module master must reach
+  - `rumblingstone-playtest/` — how a module is tested before and after the table
+  - `rumblingstone-debugging/` — root-cause debugging of the repo's own infrastructure
+  - `dnd-35-rules/` — legacy meta-router pointing at the ones above
 - **`.github/workflows/ci.yml`**: CI validates skill frontmatter/links/data YAML and builds all per-agent skill packages on every PR.
 
 ## Design Philosophy (Mastering for Adults)
