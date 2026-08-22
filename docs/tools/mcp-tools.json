@@ -907,6 +907,43 @@
       "deterministic": true
     },
     {
+      "name": "validate_booklets",
+      "description": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "invocation": "python3 scripts/validate_booklets.py --stampa",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "I manifest da controllare (default: tutti quelli del repo)."
+          },
+          "stampa": {
+            "type": "boolean",
+            "description": "Compila ogni volume con typst e controlla dimensione e segnalibri. Senza il binario, salta dichiarandolo."
+          },
+          "spiega": {
+            "type": "boolean",
+            "description": "Elenca per esteso gli avvisi di parità fra le due catene."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Esito machine-readable su stdout."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout (o JSON con --json)"
+      ],
+      "exit_codes": {
+        "0": "tutto verde",
+        "1": "almeno un errore",
+        "2": "uso errato"
+      },
+      "deterministic": true
+    },
+    {
       "name": "build_monster_catalog",
       "description": "Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
       "invocation": "python3 scripts/build_monster_catalog.py",

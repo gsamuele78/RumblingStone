@@ -145,9 +145,17 @@ def figura(alt: str, src: str, base: Path) -> str:
         print(f"  ⚠ immagine mancante: {src}", file=sys.stderr)
         return ("#block(width: 100%, inset: 8pt, stroke: (dash: \"dashed\", paint: rgb(\"#b9a789\")))"
                 f"[#align(center)[#text(size: 8pt, fill: rgb(\"#7d2b1f\"))[immagine mancante: {inline(src)}]]]")
+    try:
+        dentro = typ_path(f)
+    except ValueError:
+        # Con `--root`, Typst vede SOLO ciò che sta sotto la radice: un master
+        # che punta fuori dal repo non è un caso da gestire, è un master da
+        # correggere.
+        print(f"  ⚠ immagine fuori dalla radice del repo, non stampabile: {src}", file=sys.stderr)
+        return ""
     d = dimensioni(f)
     larga = bool(d) and d[0] >= d[1] * 1.25
-    voci = [json.dumps(typ_path(f), ensure_ascii=False)]
+    voci = [json.dumps(dentro, ensure_ascii=False)]
     if alt.strip():
         voci.append(f"didascalia: [{inline(alt)}]")
         voci.append(f"alt: {json.dumps(alt, ensure_ascii=False)}")
@@ -273,7 +281,7 @@ def _celle(riga: str) -> list[str]:
     return [c.strip() for c in riga.strip().strip("|").split("|")]
 
 
-_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```)")
+_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[)")
 
 
 _IMG = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
@@ -584,7 +592,8 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
         f'  titolo: {json.dumps(man.get("title", ""), ensure_ascii=False)},',
         f'  sottotitolo: {json.dumps(man.get("subtitle", ""), ensure_ascii=False)},',
         f'  brand: {json.dumps(man.get("brand", ""), ensure_ascii=False)},',
-        f'  meta: {json.dumps(man.get("banner", ""), ensure_ascii=False)},',
+        f'  banner: {json.dumps(man.get("banner", ""), ensure_ascii=False)},',
+        f'  meta: {json.dumps(man.get("meta", ""), ensure_ascii=False)},',
         f'  capitolo: {json.dumps(man.get("footer", ""), ensure_ascii=False)},',
         f'  apparato: {"true" if apparato else "false"},',
         *extra,

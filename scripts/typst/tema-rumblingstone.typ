@@ -199,7 +199,7 @@
 // `carta: "bianca"` toglie il fondo avorio. Sessanta pagine di fondo pieno su
 // una stampante di casa sono una cartuccia: il volume «da leggere» e il volume
 // «da stampare stasera» non sono lo stesso file.
-#let libro(titolo: "", sottotitolo: "", brand: "", meta: "", capitolo: "",
+#let libro(titolo: "", sottotitolo: "", brand: "", banner: "", meta: "", capitolo: "",
            apparato: true, carta: "avorio", copertina: none, intro: none,
            corpo) = {
   let fondo = if carta == "bianca" { white } else { avorio }
@@ -289,7 +289,11 @@
         image(copertina, width: 11cm, alt: titolo))
     ]
     #v(0.8cm)
-    #text(font: TITOLI, size: 8.5pt, fill: seppia, tracking: 1.5pt)[#meta]
+    #text(font: TITOLI, size: 8.5pt, fill: seppia, tracking: 1.5pt)[#banner]
+    #if meta != "" [
+      #v(0.35cm)
+      #text(size: 8.5pt, style: "italic", fill: seppia)[#meta]
+    ]
     #v(1.2cm)
     #text(fill: seppia, size: 15pt)[❦]
   ]
