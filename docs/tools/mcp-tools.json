@@ -972,6 +972,44 @@
       "deterministic": true
     },
     {
+      "name": "extract_statblocks",
+      "description": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "invocation": "python3 scripts/extract_statblocks.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Schede da trattare (default: tutto il Bestiario)."
+          },
+          "apply": {
+            "type": "boolean",
+            "description": "Scrive il blocco nelle schede dove l'estrazione è completa."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Verifica i blocchi già presenti; non scrive niente. È il gate CI."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Rapporto machine-readable."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "Bestiario/**/*.md (solo con --apply)",
+        "stdout (o JSON con --json)"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check ha trovato blocchi rotti o GS incoerenti",
+        "2": "uso errato o scheda inesistente"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_bestiario",
       "description": "Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
       "invocation": "python3 scripts/validate_bestiario.py",

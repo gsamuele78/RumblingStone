@@ -1,5 +1,17 @@
 # Hobgoblin Sergente (Fighter 5) [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: melee-leader | **Environment**: any | **CR**: 5 | **Source**: MM p.153 Hobgoblin + PHB Fighter 5 | **Status**: inferred
+
+```statblocco
+gs: 5
+ca: 20
+ca-dettaglio: (+7 full plate, +2 heavy shield, +1 Dex)
+pf: 46
+pf-dado: 1d8
+ts: Temp +8, Rifl +2, Vol +2
+velocita: 20 ft (armored)
+iniziativa: +1
+```
+
 **Size/Type**: Medium humanoid (goblinoid) | **HD**: 1d8+5d10+12 (46 HP)
 **AC**: 20 (+7 full plate, +2 heavy shield, +1 Dex) | **Init**: +1 | **Speed**: 20 ft (armored)
 **Saves**: Fort +8, Ref +2, Will +2 | **BAB/Grapple**: +5/+7

@@ -1,5 +1,17 @@
 # Razorfiend (Draconic Spawn) — Red Variant [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: melee-heavy | **Environment**: any | **CR**: 9 | **Source**: RHoD Razorfiend base + Draconomicon color variants | **Status**: inferred
+
+```statblocco
+gs: 9
+ca: 24
+ca-dettaglio: (-1 size, +1 Dex, +14 natural)
+pf: 115
+pf-dado: 10d12+50
+ts: Temp +12, Rifl +8, Vol +9
+velocita: 40 ft, fly 60 ft (average)
+iniziativa: +5
+```
+
 **Size/Type**: Large dragon (fire) | **HD**: 10d12+50 (115 HP)
 **AC**: 24 (-1 size, +1 Dex, +14 natural) | **Init**: +5 | **Speed**: 40 ft, fly 60 ft (average)
 **Saves**: Fort +12, Ref +8, Will +9 | **BAB/Grapple**: +10/+20

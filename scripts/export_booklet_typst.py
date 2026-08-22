@@ -54,6 +54,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
+from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
@@ -303,18 +304,26 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
         )
     righe = md.split("\n")
     primo_paragrafo = None
+    ultimo_titolo = ""
     out: list[str] = []
     i = 0
     while i < len(righe):
         ln = righe[i]
 
-        if ln.startswith("```"):                       # blocco di codice
+        if ln.strip().startswith("```"):               # blocco di codice
+            recinto = ln.strip()
             i += 1
             blocco = []
-            while i < len(righe) and not righe[i].startswith("```"):
+            while i < len(righe) and not righe[i].strip().startswith("```"):
                 blocco.append(righe[i])
                 i += 1
             i += 1
+            if recinto == "```statblocco":
+                # Il blocco statistiche non è codice: è un riquadro (ADR-0021).
+                # Stamparlo come `raw` vorrebbe dire mettere in un manuale la
+                # forma-dato invece del mostro.
+                out.append(statblocco_typ("\n".join(blocco), ultimo_titolo))
+                continue
             testo = "\n".join(blocco).replace("`", "\u0060")
             out.append("#block(breakable: true)[#raw(\"" + testo.replace('"', '\\"').replace("\n", "\\n") + "\", block: true)]")
             continue
@@ -358,6 +367,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
 
         if re.match(r"^#{1,4}\s", ln):
             lvl = len(ln) - len(ln.lstrip("#"))
+            ultimo_titolo = re.sub(r"\s*\[[^\]]*\]\s*$", "", ln[lvl:].strip())
             out.append("=" * lvl + " " + inline(ln[lvl:].strip()))
         elif re.match(r"^---+\s*$", ln):
             out.append("#fregio()")
@@ -396,6 +406,51 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 + ", [" + testo[1:] + "])"
             )
     return "\n".join(out)
+
+
+def statblocco_typ(corpo: str, titolo_corrente: str = "") -> str:
+    """Un blocco ```statblocco → una chiamata a `#statblocco()` del tema.
+
+    Se il blocco non si legge, il volume NON si costruisce a metà: si dice
+    quale scheda è rotta. Un riquadro con dentro dei buchi al tavolo è peggio
+    di un errore in compilazione.
+    """
+    try:
+        sb = leggi_statblocco("```statblocco\n" + corpo + "\n```")
+    except StatblockError as e:
+        raise SchedaError(f"blocco statistiche non valido: {e}") from e
+    if sb is None:
+        return ""
+    nome = sb.nome or titolo_corrente
+    voci = [f"nome: {json.dumps(nome, ensure_ascii=False)}"]
+    for chiave, valore in (
+        ("tipo", sb.tipo), ("gs", sb.gs), ("iniziativa", sb.iniziativa),
+        ("sensi", sb.sensi), ("pf", (sb.pf + (f" ({sb.pf_dado})" if sb.pf_dado else "")).strip()),
+        ("velocita", sb.velocita), ("tattica", sb.tattica), ("fonte", sb.fonte),
+    ):
+        if valore:
+            voci.append(f"{chiave}: [{inline(valore)}]")
+    ca = sb.ca + (f", {sb.ca_dettaglio}" if sb.ca_dettaglio else "")
+    if ca.strip():
+        voci.append(f"ca: [{inline(ca)}]")
+    if sb.ts:
+        voci.append(f"ts: [{inline(sb.ts)}]")
+    if sb.attributi:
+        coppie = [c.strip().split(None, 1) for c in sb.attributi.split(",") if c.strip()]
+        voci.append("attributi: (" + "".join(
+            f"({json.dumps(k, ensure_ascii=False)}, {json.dumps(v, ensure_ascii=False)}), "
+            for k, v in (c for c in coppie if len(c) == 2)) + ")")
+    if sb.attacchi:
+        voci.append("attacchi: (" + "".join(
+            "(" + json.dumps(a.split(None, 1)[0], ensure_ascii=False) + ", ["
+            + inline(a.split(None, 1)[1] if len(a.split(None, 1)) > 1 else "") + "]), "
+            for a in sb.attacchi) + ")")
+    if sb.voci:
+        voci.append("voci: (" + "".join(
+            "(" + json.dumps(v.split(":", 1)[0].strip(), ensure_ascii=False) + ", ["
+            + inline(v.split(":", 1)[1].strip() if ":" in v else "") + "]), "
+            for v in sb.voci) + ")")
+    return "#statblocco(\n  " + ",\n  ".join(voci) + ",\n)"
 
 
 # ── le schede pregenerate ────────────────────────────────────────────────────

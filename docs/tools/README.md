@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**44 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**45 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -57,6 +57,7 @@
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
 | `build_monster_catalog.py` | Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml. | --check · -o/--output | ✔ | — | — | `0` · `1` |
+| `extract_statblocks.py` | Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file. | file · --apply · --check · --json | ✔ | — | — | `0` · `1` · `2` |
 | `validate_bestiario.py` | Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti. | --rules · --json | ✔ | — | — | `0` · `1` |
 
 ## F · Pipeline skill multi-agente

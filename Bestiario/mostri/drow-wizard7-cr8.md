@@ -1,5 +1,17 @@
 # Drow Wizard 7 (Arcanist) [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: drow-sonjak | **Role**: arcane-blaster | **Environment**: underdark | **CR**: 8 | **Source**: FRCS drow + PHB Wizard 7 | **Status**: inferred
+
+```statblocco
+gs: 8
+ca: 18
+ca-dettaglio: (+3 Dex, +5 mage armor, +0 armor)
+pf: 24
+pf-dado: 7d4+7
+ts: Temp +3, Rifl +5, Vol +7
+velocita: 30 ft
+iniziativa: +3
+```
+
 **Size/Type**: Medium humanoid (elf) | **HD**: 7d4+7 (24 HP)
 **AC**: 18 (+3 Dex, +5 mage armor, +0 armor) | **Init**: +3 | **Speed**: 30 ft
 **Saves**: Fort +3, Ref +5, Will +7 (+2 vs enchant) | **BAB/Grapple**: +3/+3

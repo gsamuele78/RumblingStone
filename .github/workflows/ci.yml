@@ -52,6 +52,9 @@ jobs:
         continue-on-error: true
         run: python scripts/validate_bestiario.py --rules
 
+      - name: Statblocchi machine-readable — blocchi validi e GS coerente (ADR-0021)
+        run: python scripts/extract_statblocks.py --check
+
       - name: Validate DEF module masters (module-standard checklist, token-free review)
         run: python scripts/validate_modules.py
 
@@ -87,6 +90,7 @@ jobs:
           python scripts/import_watabou.py --help > /dev/null
           python scripts/campaign_branch.py --help > /dev/null
           python scripts/validate_booklets.py --help > /dev/null
+          python scripts/extract_statblocks.py --help > /dev/null
 
       - name: Manifest dei booklet (schema, file, immagini, parità fra le catene)
         run: python scripts/validate_booklets.py --spiega

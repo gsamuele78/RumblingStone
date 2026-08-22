@@ -629,7 +629,7 @@ monsters:
     name: "Drow Warrior"
     cr: 1.0
     faction: drow-sonjak
-    role: ranged
+    role: fodder
     environment: underdark
     source_file: "Bestiario/mostri/drow-warrior-cr1.md"
     notes: "200+ nella casata Sonjak. Fanteria drow base."
@@ -1012,7 +1012,7 @@ monsters:
     name: "Bone Naga (Ghostlord servant)"
     cr: 10.0
     faction: ghostlord-undead
-    role: caster-arcane
+    role: generalist
     environment: any
     source_file: "Bestiario/mostri/bone-naga-cr10.md"
   - id: missioni-brevi-0-8-cr-12-a4fcaf
@@ -1068,7 +1068,7 @@ monsters:
     name: "Gnoll Warrior 2"
     cr: 2.0
     faction: gnoll
-    role: ranged
+    role: fodder
     environment: plain
     source_file: "Bestiario/mostri/gnoll-warrior2-cr2.md"
   - id: flind-gnoll-elite-mm-ii-549a03
@@ -1653,7 +1653,7 @@ monsters:
     cr: 18.0
     faction: red-hand
     role: caster-arcane
-    environment: any
+    environment: mountain
     source_file: "Bestiario/villain/Ghaurush_Cenerevento/ghaurush-cenerevento-secondo-incontro-cr18.md"
   - id: rethmar-militia-warrior-1-a05ff1
     name: "Rethmar Militia (Warrior 1)"
@@ -1810,7 +1810,7 @@ monsters:
     name: "Thayan Knight (PrC Complete Warrior)"
     cr: 8.0
     faction: teschio-nero-thay
-    role: mount
+    role: melee-heavy
     environment: any
     source_file: "Bestiario/mostri/thayan-knight-cr8.md"
   - id: thayan-red-wizard-7-evoker-50abb1
@@ -2181,7 +2181,7 @@ monsters:
     name: "Balvar Fuocospento, il Consigliere dell'Orda (CR 13)"
     cr: 13.0
     faction: unknown
-    role: caster-divine
+    role: generalist
     environment: mountain
     source_file: "Bestiario/villain/balvar-fuocospento-cr13.md"
   - id: il-portale-della-forgia-eterna-d447d5
