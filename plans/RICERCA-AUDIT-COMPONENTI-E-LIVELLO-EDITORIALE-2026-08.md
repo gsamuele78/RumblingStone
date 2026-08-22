@@ -14,9 +14,9 @@
 > propone la sequenza. Il §7 corregge tre errori contenuti nella ricerca in
 > ingresso, perché copiarli costerebbe una giornata.
 >
-> **Cosa questo documento non è.** Non è un piano approvato: nessun lotto è
-> aperto, nessuna riga di codice è stata toccata. Le decisioni con un ⚠️ sono del
-> DM.
+> **Cosa questo documento non è.** Non era un piano approvato: al momento della
+> scrittura nessun lotto era aperto. **Il 2026-08-22 il DM ha approvato E5 ed E8 e
+> ha chiesto di eseguire tutto**: lo stato di attuazione è nel §9, in fondo.
 
 ---
 
@@ -301,3 +301,61 @@ caratteri per riga (§2.3), e la palette proposta è di terzi (§5.2).
 **E1.** Un'edizione da stampa che non stampa gli stemmi, e che al loro posto
 scrive `!Stemma Oca`, è l'unico difetto di questo elenco che un giocatore vede
 prima del DM.
+
+
+---
+
+## §9 · Stato di attuazione (2026-08-22)
+
+Mandato del DM, testuale: *«metti typst nella CI così si testa la compilazione,
+E5 ok, E8 ok, e risolvi tutti i bug riscontrati… rendi disponibili i font
+necessari direttamente nel repo… inserisci tutti gli enhancement necessari»*.
+
+### I cinque difetti
+
+| | Stato | Come |
+|---|---|---|
+| **D1** immagini | ✅ | `#figura()`; l'orizzontale scavalca le due colonne, la mancante dà avviso e segnaposto |
+| **D2** monospazio | ✅ | Inconsolata in `scripts/fonts/`, insieme a Garamond e Cinzel e ai `.woff2` per l'HTML |
+| **D3** chiavi ignorate | ✅ | `schemas/booklet_manifest.schema.json` + `validate_booklets.py`; `cover_image`, `intro_md` e `meta` ora valgono anche in stampa |
+| **D4** nessun gate | ✅ | `typst` in CI a versione fissata + compilazione vera di tutti i volumi coi segnalibri |
+| **D5** scorecard | ✅ | aggiornata coi sei script della catena editoriale |
+
+### Due difetti che l'audit non aveva visto, trovati compilando
+
+Il §1 diceva «riprodotti, non supposti». Compilare per la prima volta ha
+mostrato che il quadro era peggio: **due booklet della campagna non avevano mai
+compilato**.
+
+- `**Seggio**/Deputazione` — grassetto attaccato a una barra — chiudeva male in
+  Typst («unclosed delimiter»);
+- `*Il peso **(nota.)***` — corsivo che contiene un grassetto — veniva spezzato
+  lasciando un asterisco orfano *dentro* il grassetto.
+
+L'enfasi ora esce come `#strong[...]`/`#emph[...]` e la regex è diventata una
+pila. È la conferma pratica della tesi del §1: senza gate non si è «non
+testati», si è «rotti e non lo sappiamo».
+
+### I lotti
+
+| Lotto | Stato | Nota |
+|---|---|---|
+| **E1** bug + margini speculari | ✅ | |
+| **E2** gate CI + tag PDF | ✅ | il ripiego `--no-pdf-tags` resta, ma ora passa sotto la CI a ogni PR |
+| **E3** schema + parità | ✅ | |
+| **E4** rifiniture | 🟡 | fatti: riquadro laterale, versale, segni di fine, ornamenti, copertina, carta bianca, titoli `sticky`. **Non** il capolettera *annegato*: serve `droplet`, che Typst scarica dalla rete — è una decisione sul vendoring, non una riga di tema (ADR-0020 §rev. 5) |
+| **E5** tipografia HTML | ✅ | nove booklet rigenerati; `--no-font-embed` per il file leggero |
+| **E6** skill + scorecard | ✅ | `skills/rumblingstone-editoria/` |
+| **E7** rimandi, indice analitico, imposizione | 🟡 | fatti i **rimandi cliccabili** fra capitoli dello stesso volume. Indice analitico e imposizione restano: il primo vuole una convenzione nei master, la seconda una dipendenza nuova |
+| **E8** statblocchi | 🟡 | ADR-0021: formato, lettore, estrattore, `#statblocco()` in stampa, gate. **82 schede su 157 migrate**; le altre 75 sono a rapporto, campo per campo. Non si è inventato niente |
+
+### Cosa resta, e perché non è «da fare quando c'è tempo»
+
+Le quattro cose fuori sono **decisioni**, ognuna già scritta dove va presa:
+capolettera annegato → vendoring dei pacchetti Typst; imposizione → una
+dipendenza PDF nuova; indice analitico → una convenzione di marcatura nei
+master; le 75 schede → o si completano a mano al tavolo, o si accetta che la
+libreria abbia due velocità.
+
+Gated altrove, come già dichiarato: le illustrazioni raster (GPU del DM), la
+mappa in versione giocatore, il collaudo al tavolo.
