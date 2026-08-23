@@ -74,11 +74,21 @@ applicabile in place:
 
 > «**Baruk Khazâd! Khazâd ai-mênu!**» *(Asce dei Nani! I Nani sono su di voi!)*
 
-### Righe recuperabili dal testo del DM
+### Righe recuperate dal testo del DM — **applicate in place**
 
-Tre cose del testo **non hanno un equivalente nel repo** e valgono la
-pena. Sono qui come **aggiunte facoltative**, corrette al canone — i
-read-aloud esistenti non vengono riscritti:
+Tre cose del testo **non avevano un equivalente nel repo**. Sono state
+**inserite nel canone** (DM, 2026-08-23: *«utilizzando anche l'errata
+aggiungilo nelle parti del canone»*), corrette ai nomi e alla
+cronologia. I 65 read-aloud preesistenti **non sono stati riscritti**:
+questi tre si aggiungono, portando il totale a **68**.
+
+| # | Riga | Dove è stata inserita |
+|---|---|---|
+| 1 | L'eco che risponde | `ARC08-01` — Incontro **4C**, dopo il grido della carica |
+| 2 | Il veterano con l'ascia consumata | `ARC08-01` — Incontro **3D**, prima delle meccaniche |
+| 3 | L'orda che si sente prima di vedersi | `ARC08-01` — testa della **Sessione 1**, prima dell'introduzione esistente; rimando di regia in `ARC08-04` §3-bis |
+
+Il testo applicato, per registro:
 
 1. **L'eco che risponde** (dopo il grido, Incontro 4C):
    > *E la montagna risponde. Non è un'eco: sono le gallerie, tutte
@@ -150,14 +160,22 @@ testo del DM è **più denso e più concreto** in tre punti dove il repo
 resta generico:
 
 1. **L'approccio dell'orda** (odore, fame, sete, la disciplina imposta
-   dalla frusta): nel repo l'orda **appare già schierata**, e la Sessione 1
-   non ha nessun read-aloud sull'avvicinamento.
+   dalla frusta): il repo faceva **apparire l'orda già schierata**, e la
+   Sessione 1 non aveva **nessun** read-aloud sull'avvicinamento —
+   `ARC08-04` è logistica pura. ✅ **Colmato** (§3, riga 3).
 2. **Il dettaglio fisico del combattimento** («*le barbe intrise di
    sangue e polvere*», «*il terrore negli occhi dei più giovani*»):
    il repo tende a **dichiarare** l'epica invece di mostrarla — vedi
    `skills/rumblingstone-narrative-style/references/read-aloud-adulti.md`,
    che chiede esattamente il contrario.
 3. **La trasformazione del druido**, resa osso per osso.
+
+**Dei tre, due sono stati recuperati** e vivono ora nel canone (§3): il
+box dell'avvicinamento apre la Sessione 1, che prima cominciava con
+l'orda **già schierata**. Il terzo — la trasformazione — resta com'è nel
+repo, perché la scena di Orion Pelleorsa è già scritta round per round
+nell'Incontro Boss 4A e riscriverla vorrebbe dire toccare le meccaniche
+di lotta, non la prosa.
 
 > **Debito dichiarato, non chiuso qui**: i riquadri della Sfera
 > (Incontro 3C) e della carica (4C) sono di **generazione vecchia** —
