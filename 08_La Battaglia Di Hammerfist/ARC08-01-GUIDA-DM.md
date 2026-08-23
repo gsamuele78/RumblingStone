@@ -944,6 +944,19 @@ Abilità chiave: Artigianato (ingegneria) +12, Disattivare Congegni +10.
 
 ### **SESSIONE 1: L'OMBRA SULLA MONTAGNA**
 
+#### **PRIMA DELL'INTRODUZIONE — L'ORDA SI SENTE PRIMA DI VEDERSI**
+*Da leggere la sera prima dell'avvistamento, con i pregen ancora dentro la fortezza. 6-8 righe: apre la sessione sul senso sbagliato — l'udito e l'olfatto — e lascia la vista all'introduzione qui sotto.*
+
+> *"Prima arriva l'odore. Non di fumo: di sudore vecchio, di cuoio non conciato, di bestie tenute insieme dalla fame. Poi il suono — un basso che non si interrompe mai, come se la valle respirasse.*
+>
+> *Le vedette non vedono ancora niente. Ma il cane della guarnigione ha smesso di abbaiare, e non si muove dalla porta."*
+
+> **📎 Regia (A5)**: qui il cue sonoro è **il basso continuo** che parte
+> adesso e non si spegne fino alla fine dell'arco —
+> `ARC08-16-CUE-SONORI.md` §2. Testo di partenza: descrizione epica del
+> DM, movimento 1; nomi e cronologia corretti in
+> `ERRATA-ARC08-DESCRIZIONE-EPICA.md` §3.
+
 #### **INTRODUZIONE DA LEGGERE AI GIOCATORI:**
 > *"L'alba del primo giorno d'autunno si tinge di rosso sangue all'orizzonte. Dalle torri di vedetta di Hammerfist, le sentinelle naniche scrutano con crescente inquietudine la vallata settentrionale. Quello che inizialmente sembrava una macchia scura si rivela essere un oceano di ferro, carne e malvagità che avanza inesorabile verso i rifugi ancestrali del vostro popolo. Gli stendardi della Mano Rossa sventolano al vento come promesse di morte, e il suono di tamburi di guerra riecheggia tra le montagne come un battito cardiaco impazzito."*
 
@@ -2207,7 +2220,19 @@ Nel momento più buio, i veri PG emergono. La loro apparizione terrorizza i nemi
 
 #### **INCONTRO 3D: La Vendetta dei Nani**
 **Leggere:**
-> *"L'effetto è immediato e devastante. I nani che un momento prima erano pronti a morire disperati ora si alzano come leoni risvegliati. Le loro asce brillano di luce magica, i loro scudi si serrano in formazioni perfette, e dalle loro gole esce il grido di guerra che non si sentiva da secoli: 'BARUK KHAZAD! KHAZAD AI-MENU!' (I nani sono su di voi!) L'eco del grido fa tremare le stalattiti, e gli orchi indietreggiano di fronte a questa trasformazione miracolosa."*
+> *"L'effetto è immediato e devastante. I nani che un momento prima erano pronti a morire disperati ora si alzano come leoni risvegliati. Le loro asce brillano di luce magica, i loro scudi si serrano in formazioni perfette, e dalle loro gole esce il grido di guerra che non si sentiva da secoli: 'BARUK KHAZAD! KHAZAD AI-MENU!' (Asce dei Nani! I Nani sono su di voi!) L'eco del grido fa tremare le stalattiti, e gli orchi indietreggiano di fronte a questa trasformazione miracolosa."*
+
+
+**Subito dopo, prima di passare alle meccaniche — leggere piano:**
+> *"Il vecchio si guarda l'ascia. Il filo se n'è andato due giorni fa e
+> non tornerà.*
+>
+> *La solleva lo stesso."* — «Adesso sì che si può morire come si deve.»
+
+> **📎 Nota (A5)**: sostituisce la riga in khuzdul inattestato del testo
+> del DM (*«Aghâd-un dur-khâzâd»*), che **non si usa** — vedi
+> `ERRATA-ARC08-DESCRIZIONE-EPICA.md` §3. Il veterano è lo stesso che ha
+> riconosciuto la Corona poche battute prima: non dargli un nome.
 
 **La Battaglia Trasformata:**
 Con i PG alla guida, la battaglia cambia completamente natura:
@@ -2707,6 +2732,16 @@ STRAFING RUNS - ATTACCHI DALL'ALTO (Round 6-8)
 > *"Dai bastioni di Hammerfist, Re Thorek - miracolosamente guarito dalle preghiere dei chierici - si alza in piedi brandendo il suo martello ancestrale. Accanto a lui, il Guerriero della Corona di Adamantio brilla letteralmente di potere regale, le tre gemme della corona che pulsano come stelle. 'FRATELLI!' tuona Re Thorek con voce che porta fino alla vallata. 'Guardate! I cieli combattono al nostro fianco! La montagna stessa ci benedice! Oggi non moriamo - oggi VINCIAMO!' "*
 
 > *"Il grido che si alza dai novanta nani superstiti è tale da far tremare le fondamenta della montagna. 'BARUK KHAZAD! KHAZAD AI-MENU!' Le loro voci si uniscono in un coro di guerra che non si sentiva da mille anni. Asce che brillano di luce divina, scudi che riflettono il potere degli antenati, barbe intrecciate con fili di mithril - questo non è più un esercito in rotta, è la vendetta stessa dei nani che prende forma fisica."*
+
+**E la montagna risponde — leggere dopo una pausa piena, non subito:**
+> *"Non è un'eco. Sono le gallerie, tutte insieme."*
+>
+> **«KHAZÂD! KHAZÂD!»**
+
+> **📎 Regia (A5)**: è l'**unico fortissimo dell'arco**
+> (`ARC08-16-CUE-SONORI.md` §5). Conta due secondi pieni prima di
+> leggere la risposta: la pausa è metà dell'effetto. Se il tavolo grida
+> con te, lascialo gridare e non riprendere finché non ha finito.
 
 **FORMAZIONE DELLA CARICA EPICA:**
 ```
