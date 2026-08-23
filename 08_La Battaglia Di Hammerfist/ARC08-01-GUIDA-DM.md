@@ -2207,7 +2207,7 @@ Nel momento più buio, i veri PG emergono. La loro apparizione terrorizza i nemi
 
 #### **INCONTRO 3D: La Vendetta dei Nani**
 **Leggere:**
-> *"L'effetto è immediato e devastante. I nani che un momento prima erano pronti a morire disperati ora si alzano come leoni risvegliati. Le loro asce brillano di luce magica, i loro scudi si serrano in formazioni perfette, e dalle loro gole esce il grido di guerra che non si sentiva da secoli: 'BARUK KHAZAD! KHAZAD AI-MENU!' (I nani sono su di voi!) L'eco del grido fa tremare le stalattiti, e gli orchi indietreggiano di fronte a questa trasformazione miracolosa."*
+> *"L'effetto è immediato e devastante. I nani che un momento prima erano pronti a morire disperati ora si alzano come leoni risvegliati. Le loro asce brillano di luce magica, i loro scudi si serrano in formazioni perfette, e dalle loro gole esce il grido di guerra che non si sentiva da secoli: 'BARUK KHAZAD! KHAZAD AI-MENU!' (Asce dei Nani! I Nani sono su di voi!) L'eco del grido fa tremare le stalattiti, e gli orchi indietreggiano di fronte a questa trasformazione miracolosa."*
 
 **La Battaglia Trasformata:**
 Con i PG alla guida, la battaglia cambia completamente natura:
