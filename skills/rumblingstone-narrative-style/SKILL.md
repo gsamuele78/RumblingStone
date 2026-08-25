@@ -3,19 +3,20 @@ name: rumblingstone-narrative-style
 description: >
   Narrative style engine for ALL generated RumblingStone content — quests,
   session prose, read-aloud/boxed text, NPC dialogue, hooks, recaps,
-  handouts, villain scenes. Fuses eight pillars into one voice: R.A.
+  handouts, villain scenes. Fuses nine pillars into one voice: R.A.
   Salvatore prose, Tolkien/LotR epic depth, House of David dynastic destiny,
   Andor slow-burn intrigue, Game of Thrones political gray, Matt Mercer
   table technique, Baldur's Gate 3 long-range consequences, Baldur's Gate
-  1–2 complex quest design — with the PCs always protagonists, in good and
-  in evil. Trigger on any content-generation request: "genera", "scrivi",
+  1–2 complex quest design, il caso ricomposto (deduction as climax) —
+  with the PCs always protagonists, in good and in evil. Trigger on any content-generation request: "genera", "scrivi",
   "crea la quest", "prepara la sessione", "read-aloud", "boxed text",
   "recap", "hook", "descrivi la scena", "session prep", "new quest",
   "dialogo", "conseguenze", "stile narrativo", "mondo vivo", "living
-  world", "world turn", "cosa fanno i PNG", "agenda dei villain".
+  world", "world turn", "cosa fanno i PNG", "agenda dei villain",
+  "indagine", "mistero", "indizio", "ricomposizione".
 ---
 
-# RumblingStone — Narrative Style Engine (Eight Pillars)
+# RumblingStone — Narrative Style Engine (Nine Pillars)
 
 **This skill is mandatory for every content-generation request** in this
 repo. It defines *how* content sounds and is structured; the other skills
@@ -56,7 +57,7 @@ the user should never have to ask for "the style" explicitly.
 > L'inglese è un'edizione derivata, mai la stesura. I nomi propri si scrivono
 > come da [`campaign/GLOSSARIO-E-LOCALIZZAZIONE.md`](../../campaign/GLOSSARIO-E-LOCALIZZAZIONE.md).
 
-## The Eight Pillars (one-line summary)
+## The Nine Pillars (one-line summary)
 
 | # | Pillar | What it contributes |
 |---|---|---|
@@ -68,8 +69,9 @@ the user should never have to ask for "the style" explicitly.
 | 6 | **Matt Mercer** | Table technique: distinct NPC voices, "how do you want to do this?", yes-and, backstory woven into plot |
 | 7 | **Baldur's Gate 3** | Long-range consequences: every meaningful choice writes an echo that returns changed, sessions later |
 | 8 | **Baldur's Gate 1–2** | Quest architecture: multi-stage quests, interleaved factions, personal companion quests, villains with a personal claim on the PCs |
+| 9 | **Il caso ricomposto** | Deduction as climax: clues posed innocent and re-read by one key, six doors so combat-built PCs can investigate, the retrospective montage |
 
-**Fusion rule — never all eight at once.** Every scene has ONE lead pillar
+**Fusion rule — never all nine at once.** Every scene has ONE lead pillar
 and at most two support pillars, chosen by scene type. The mixer:
 
 | Scene type | Lead | Support |
@@ -77,7 +79,9 @@ and at most two support pillars, chosen by scene type. The mixer:
 | Combat / action prose | Salvatore | Mercer (finisher), LotR (stakes) |
 | Read-aloud / location intro | LotR | Salvatore (senses) |
 | Political / faction scene | Game of Thrones | Andor |
-| Investigation / infiltration | Andor | BG1–2 (structure) |
+| Investigation / mystery (a case) | Il caso ricomposto | Andor (procedure), GoT (who profits) |
+| Infiltration / heist | Andor | BG1–2 (structure) |
+| Reveal / recomposition scene | Il caso ricomposto | Salvatore (senses), BG3 (echoes surfaced) |
 | PC personal arc / destiny beat | Casa di Davide | Mercer, BG3 (echoes) |
 | NPC dialogue | Mercer | GoT (agendas) |
 | Quest design (structure) | BG1–2 | BG3 (echoes), Andor (intrigue) |
@@ -94,6 +98,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | BG3-style echo ledger: writing, timing, and paying off consequences | `references/consequence-echoes.md` |
 | BG1/2-style complex quest patterns: stages, factions, personal quests | `references/quest-design-baldur.md` |
 | Living world: NPC/villain agency, world turn, SRD attitude system, settlements | `references/living-world.md` |
+| **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione | **skill dedicata `rumblingstone-indagine`** |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |
 | **Italiano nativo + anti-riconoscibilità** — calchi, dislocazioni, diminutivi, tempi, ritmo, registro nanico (§1-8) · **i tic dell'IA: antitesi «non X: è Y», tricolon, chiuse a effetto, tutto-è-significativo** (§9) · checklist | **`references/italiano-nativo.md`** |

@@ -1,4 +1,4 @@
-# The Eight Pillars — Full Profiles
+# The Nine Pillars — Full Profiles
 
 Each pillar is distilled into: **Take** (the craft techniques to absorb),
 **Avoid** (the failure mode of imitating it badly), and **In play**
@@ -252,7 +252,47 @@ quest-tree format of `rumblingstone-campaign/references/dm-expansion-toolkit.md`
 
 ---
 
-## Fusion discipline — how eight become one
+## 9. Il caso ricomposto — deduction as the climax
+
+The investigation pillar. Its distinguishing claim: **the climax can be
+cognitive**. The scene the whole arc is built toward is not a killing blow
+but the moment six things seen across three sessions stop being six things.
+
+**Take**
+- **The retrospective montage**: a chain of short accelerating sentences,
+  every link a callback to something the players actually saw, the last two
+  reversing the hypothesis the table was holding. Take away, then put back.
+- **Innocence before meaning**: each clue must have a plausible mundane
+  explanation *at the moment it is found*. The DM never lies about facts —
+  the shards were always honest, just insufficient.
+- **The fact is free, the reading is earned**: information is layered
+  (Fact / Reading / Name), and the objective layer is never gated behind a
+  roll. Failure removes interpretation, never the fact.
+- **Six doors on one clue**: strength, agility, endurance, reasoning,
+  perception, and persuasion each cut a *different* piece of the same scene.
+  This is what keeps a table of combat-built PCs inside an investigation.
+- **The designed red herring**: a *true* piece of information that leads to
+  the cheapest wrong conclusion, and costs something to unwind — leaving a
+  real piece of the truth behind when it does.
+- **The residue**: one thing per case that is never explained, and never
+  will be.
+
+**Avoid** — the puzzle-as-lock (a riddle that stops the session if
+unsolved); the expert NPC who summarizes; the montage that introduces new
+information (that is the DM explaining himself, not a deduction);
+everything-is-significant, which teaches the table to inventory instead of
+reason; and gore standing in for dread — an aberration frightens by what it
+implies (§5 *Avoid* applies in full).
+
+**In play** — full mechanics in the dedicated skill
+`rumblingstone-indagine` (clue nodes, the six doors and their DCs, the
+Acume / Perizia / Metodo ledger of [ADR-0022](../../../plans/adr/ADR-0022-competenza-guadagnata-sul-campo.md),
+dead-end handling, the arcane/aberrant/mystic device). Load that skill
+whenever a case is written or run; this profile only fixes the voice.
+
+---
+
+## Fusion discipline — how nine become one
 
 1. **One lead, max two supports** per scene (mixer table in SKILL.md).
 2. The **prose voice is always Salvatore** — other pillars change
@@ -264,5 +304,8 @@ quest-tree format of `rumblingstone-campaign/references/dm-expansion-toolkit.md`
 5. Tone pillars (LotR / Davide / Andor / GoT) are *selected*, not
    stacked: epic-mythic, destiny-tragic, procedural-intrigue, or
    political-gray. Pick the one the scene needs.
+5-bis. **Il caso ricomposto is a structure pillar, not a tone pillar** —
+   it can lead a scene (the montage) or run silently underneath an arc of
+   any tone, posing shards while GoT or Andor holds the surface.
 6. When two pillars conflict, the order of precedence is:
    coherence > PC protagonism > lead pillar > support pillars.
