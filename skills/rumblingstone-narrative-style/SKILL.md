@@ -71,6 +71,13 @@ the user should never have to ask for "the style" explicitly.
 | 8 | **Baldur's Gate 1–2** | Quest architecture: multi-stage quests, interleaved factions, personal companion quests, villains with a personal claim on the PCs |
 | 9 | **Il caso ricomposto** | Deduction as climax: clues posed innocent and re-read by one key, six doors so combat-built PCs can investigate, the retrospective montage |
 
+> **Due piani, non uno.** Il mixer qui sotto è **per scena**. Il piano
+> **per arco** — di che colore è l'arco intero, e se quel colore è già stato
+> usato in quello prima — sta in `references/varieta-fra-archi.md`, e va
+> deciso **prima** di scrivere il contenuto dell'arco. La monotonia di una
+> campagna non è un difetto di scena: è un difetto di sequenza, e non si vede
+> leggendo un modulo.
+
 **Fusion rule — never all nine at once.** Every scene has ONE lead pillar
 and at most two support pillars, chosen by scene type. The mixer:
 
@@ -98,6 +105,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | BG3-style echo ledger: writing, timing, and paying off consequences | `references/consequence-echoes.md` |
 | BG1/2-style complex quest patterns: stages, factions, personal quests | `references/quest-design-baldur.md` |
 | Living world: NPC/villain agency, world turn, SRD attitude system, settlements | `references/living-world.md` |
+| **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap** | `references/varieta-fra-archi.md` |
 | **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione | **skill dedicata `rumblingstone-indagine`** |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |

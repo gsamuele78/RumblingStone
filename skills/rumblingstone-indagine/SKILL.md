@@ -42,6 +42,7 @@ diventano una sola cosa.
 | Chi è il colpevole nella campagna, cosa sa già il gruppo | `rumblingstone-campaign` + `campaign/state.md` |
 | Come si struttura la quest in tappe e fazioni | `rumblingstone-narrative-style/references/quest-design-baldur.md` |
 | Quanto dura davvero un caso al tavolo | `rumblingstone-playtest` |
+| **Se questo arco debba avere un caso, e di che famiglia** — la varietà fra un arco e l'altro | `rumblingstone-narrative-style/references/varieta-fra-archi.md` |
 
 **Ordine di caricamento** per scrivere un caso: `campaign-coherence.md` +
 `state.md` (cosa è vero) → questa skill (come si struttura) →

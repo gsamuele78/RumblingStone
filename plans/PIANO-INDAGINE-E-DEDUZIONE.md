@@ -104,6 +104,25 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
       `IL SEGRETO` / `CHI CI GUADAGNA`, `L'INNESCO` reso opzionale fuori
       dalla famiglia 6. *Accettazione*: lo scheletro regge un caso senza
       alcuna macchina, e il congegno dichiara di essere una famiglia su sei.
+- [x] **I9 — Varietà fra gli archi** (richiesta DM 2026-08-26: *«garantire
+      equilibrio, novità, misteri e congegni in modo che ogni arco abbia
+      variabilità e unicità… non lineare e abbatti abbatti mostro»*).
+      **Decisione di design: NON una skill nuova e nessun merge** — la
+      varietà non è un dominio (ADR-0008 §1), è una **politica** su
+      contenuto che ha già le sue skill, e il suo corpo è un **registro**,
+      che in questo repo vive in `campaign/state.md`, non dentro una skill.
+      Nuovo `rumblingstone-narrative-style/references/varieta-fra-archi.md`:
+      la **tavolozza d'arco** (cinque dichiarazioni), le **sei tinte** con
+      il difetto specifico di ciascuna e il contrappunto che lo cura, le
+      **sei regole di rotazione**, e **la prova del recap** come diagnosi.
+      Casa in `narrative-style` e non in `indagine` per una ragione
+      operativa: la decisione «questo arco ha un caso?» va presa *prima* che
+      la richiesta parli di misteri, e `narrative-style` è l'unica skill che
+      si carica sempre.
+      *Accettazione*: un agente che prepara un arco trova il piano per-arco
+      senza doverlo chiedere; la proposta di colorazione ARC-08/09 è
+      marcata `[PROPOSTA — needs DM confirmation]` e **non** scritta in
+      `state.md`.
 - [x] **I4 — Deploy e tracciatura.** `build-skills.sh`, mirror per-agente,
       riga in INDEX e CHANGELOG.
 
