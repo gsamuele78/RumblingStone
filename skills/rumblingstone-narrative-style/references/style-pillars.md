@@ -274,11 +274,26 @@ but the moment six things seen across three sessions stop being six things.
 - **The designed red herring**: a *true* piece of information that leads to
   the cheapest wrong conclusion, and costs something to unwind — leaving a
   real piece of the truth behind when it does.
+- **Show a part, never the whole**: the effect before the cause, one
+  component out of context described with technical precision and no gloss,
+  honest misdirection (the light points at something real, just not the
+  most important thing), and the machine seen entire exactly once.
+- **The trigger in plain sight**: a detail given *free* inside a scene about
+  something else, which fires if nobody touches it. Noticed, the scene
+  inverts and the danger becomes an asset; ignored, it costs — and then
+  explains itself with no word from the DM.
+- **The device is the room, not the boss**: it acts on a schedule, both
+  sides can operate it, and it changes which tactics work. Understanding it
+  buys *actions that did not exist before*, never a bonus to hit.
 - **The residue**: one thing per case that is never explained, and never
   will be.
 
 **Avoid** — the puzzle-as-lock (a riddle that stops the session if
-unsolved); the expert NPC who summarizes; the montage that introduces new
+unsolved); the device rewritten as a power-up (a damage bonus, a hit-point
+sponge, an "I win" lever, or a machine the DM operates to rescue a fight
+going badly); wonder spent until it is furniture — one whole device per
+arc, at most two triggers, and most sessions with none of it; the expert
+NPC who summarizes; the montage that introduces new
 information (that is the DM explaining himself, not a deduction);
 everything-is-significant, which teaches the table to inventory instead of
 reason; and gore standing in for dread — an aberration frightens by what it

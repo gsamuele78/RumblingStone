@@ -13,7 +13,8 @@ description: >
   "omicidio", "sparizione", "investigazione", "deduzione", "ricomposizione",
   "vicolo cieco", "i giocatori non trovano niente", "il gruppo non ha un
   ladro", "prova grezza", "punti Acume", "Perizia", "congegno", "macchina
-  arcana", "rituale da fermare", "cospirazione".
+  arcana", "rituale da fermare", "cospirazione", "innesco in piena vista",
+  "trappola scenografica", "cosa stanno costruendo i villain".
 ---
 
 # RumblingStone — Il caso: indagine, enigmi, ricomposizione
@@ -60,7 +61,17 @@ diventano una sola cosa.
 3. **L'enigma non è un lucchetto.** Risolto dà un vantaggio; non risolto non
    ferma il caso, lo rende più caro. Un enigma che blocca è una trappola per
    il DM, non per i giocatori (`references/congegno-e-enigmi.md` §4).
-4. **La ricomposizione la fa un giocatore, se ci arriva.** Il DM la prepara
+4. **Il congegno è la stanza, non un premio.** Capire la macchina non dà
+   bonus ai tiri: dà **azioni che prima non esistevano** e cambia le
+   tattiche che funzionano. Trasformare la fatica dell'indagine in «+2 per
+   colpire e conoscete i punti deboli» brucia in un round tutto il piacere
+   della scoperta (`references/congegno-e-enigmi.md` §8).
+5. **Si mostra una parte, mai il tutto.** L'effetto prima della causa, il
+   pezzo fuori contesto, la misdirection *onesta* (si punta la luce su
+   qualcosa di vero, solo non il più importante), e il congegno intero
+   visto **una volta sola**. Un congegno rivelato tutto insieme è
+   un'illustrazione (§4 dello stesso file).
+6. **La ricomposizione la fa un giocatore, se ci arriva.** Il DM la prepara
    scritta come rete di sicurezza e la legge solo se il tavolo non ci
    arriva. È l'`[HDYWTDT]` di Mercer applicato alla deduzione: il colpo
    finale lo tira chi ha fatto il lavoro.
@@ -96,7 +107,7 @@ le prove d'abilità normali sono in `references/nodi-e-sei-porte.md` §3.
 | Scrivere gli indizi: il nodo a tre strati, le sei porte per esteso con esempi giocati, le CD, la mappa dei nodi, **il vicolo cieco** | `references/nodi-e-sei-porte.md` |
 | Premiare chi ha spremuto le meningi: **Acume, Perizia, Metodo**, i tetti, il registro da tenere (ADR-0022) | `references/registro-e-ricompense.md` |
 | Scrivere **la scena in cui tutto si ricompone**, i falsi indizi progettati, il combattimento pre-letto | `references/ricomposizione.md` |
-| Il disegno finale: le schegge, la chiave di lettura, **il congegno arcano/aberrante**, gli enigmi che non sono lucchetti | `references/congegno-e-enigmi.md` |
+| Il disegno finale: le schegge, la chiave di lettura, **il congegno arcano/aberrante/mistico**, la **regia del prestigiatore**, **l'innesco in piena vista**, il congegno nell'**agenda dei villain**, il congegno come **terzo attore** in combattimento, il **dosaggio** | `references/congegno-e-enigmi.md` |
 
 ## 4. Lo scheletro di un caso (una pagina)
 
@@ -107,6 +118,10 @@ LA CHIAVE        l'informazione che ricodifica tutto in una volta.
                  Arriva a ~2/3 del caso: quello è il picco.
 LE SCHEGGE       6-9 nodi. Ognuno ha una spiegazione INNOCENTE
                  plausibile nel momento in cui lo si trova.
+CHI LO VUOLE     i villain lo cercano / ce l'hanno e non sanno usarlo /
+                 lo stanno MODIFICANDO per uno scopo che non si sa.
+L'INNESCO        il dettaglio dato gratis, in piena vista, in una scena
+                 che parla d'altro — e che se nessuno lo tocca SCATTA.
 IL COSTO         cosa succede mentre i PG capiscono. Il tempo è un
                  avversario, non uno sfondo.
 LA PORTA CHIUSA  la cosa che non capiranno mai del tutto.
@@ -134,5 +149,13 @@ Oltre a quello di `narrative-style` (§Self-check) e alla coerenza:
    DM che si spiega da solo.
 5. **Prova del registro**: so chi ha depositato quale perizia, e dove l'ho
    scritto? (`references/registro-e-ricompense.md` §4.)
-6. **Prova del residuo**: cosa resta di non spiegato? Se niente, aggiungi
+6. **Prova del power-up**: la ricompensa per aver capito la macchina è un
+   bonus numerico? Se sì, riscrivila come **azione nuova** o come **stanza
+   che cambia**.
+7. **Prova del prestigiatore**: il tavolo, ripensandoci, può dire «quel
+   pezzo l'avevamo visto»? (Se invece può dire «ce l'aveva detto il DM»,
+   hai mostrato troppo e troppo presto.)
+8. **Prova del dosaggio**: quanti congegni e quanti inneschi ci sono in
+   questo arco? (Più di uno intero, o più di due inneschi → togli.)
+9. **Prova del residuo**: cosa resta di non spiegato? Se niente, aggiungi
    qualcosa — e non spiegarlo nemmeno alla sessione dopo.

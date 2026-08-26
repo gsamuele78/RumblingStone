@@ -71,6 +71,26 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
       mixer, puntatore in Domain→File. *Accettazione*: il pilastro dichiara
       *take* / *avoid* / *in play* come gli altri otto, e **non nomina il
       film** (non-negoziabile 4: le fonti sono mestiere, non marchi).
+- [x] **I7 — Il congegno non è un power-up** (correzione DM, 2026-08-25,
+      stessa giornata). Rilievo: *«non deve migliorare il combattimento ma
+      rivelare cose che all'inizio non hanno senso… come un gran
+      prestigiatore si devono vedere solo alcune parti e non il tutto
+      subito… ma bisogna dosare per non creare assuefazione»*.
+      Il §5 consegnato in I2 («chi ha indagato bene combatte meglio, i punti
+      deboli si sbloccano») **era** il power-up: un boss con dei passaggi.
+      Riscritto `congegno-e-enigmi.md` da 6 a 10 sezioni: **§4 la regia del
+      prestigiatore** (effetto prima della causa, pezzo fuori contesto,
+      misdirection onesta, il congegno intero visto una volta sola),
+      **§5 l'innesco in piena vista** (dato gratis e senza tiro, dentro una
+      scena che parla d'altro, con due uscite entrambe scenografiche — e
+      **se nessuno lo tocca scatta davvero**), **§6 il congegno nell'agenda
+      dei villain** (lo cercano / ce l'hanno e non sanno usarlo / lo stanno
+      modificando per uno scopo ignoto) più il villain che **lo sa usare** e
+      da cui si impara guardando, **§8 il terzo attore** (la macchina è la
+      stanza: agisce a scadenza su tutti, si aziona da entrambe le parti,
+      cambia quali tattiche funzionano), **§9 il dosaggio**.
+      *Accettazione*: nessuna ricompensa dell'indagine espressa come bonus
+      numerico; il §9 dichiara una frequenza per ogni elemento.
 - [x] **I4 — Deploy e tracciatura.** `build-skills.sh`, mirror per-agente,
       riga in INDEX e CHANGELOG.
 
