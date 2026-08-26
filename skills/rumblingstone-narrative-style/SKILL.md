@@ -105,7 +105,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | BG3-style echo ledger: writing, timing, and paying off consequences | `references/consequence-echoes.md` |
 | BG1/2-style complex quest patterns: stages, factions, personal quests | `references/quest-design-baldur.md` |
 | Living world: NPC/villain agency, world turn, SRD attitude system, settlements | `references/living-world.md` |
-| **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap** | `references/varieta-fra-archi.md` |
+| **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap**; e per gli archi **modulari** la **quota di modulo** (quanti puliti / con mistero / con congegno) e **l'orchestrazione dinamica** (vocazioni, gettone in mano, la regola dello scarto) | `references/varieta-fra-archi.md` |
 | **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione | **skill dedicata `rumblingstone-indagine`** |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |

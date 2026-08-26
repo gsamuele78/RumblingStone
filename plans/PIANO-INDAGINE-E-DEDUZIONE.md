@@ -123,6 +123,24 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
       senza doverlo chiedere; la proposta di colorazione ARC-08/09 è
       marcata `[PROPOSTA — needs DM confirmation]` e **non** scritta in
       `state.md`.
+- [x] **I10 — Quota di modulo e orchestrazione dinamica** (richiesta DM
+      2026-08-26: *«per l'arco 9, siccome ci sono più moduli, dare una
+      percentuale opportuna per misteri, intrighi e congegni… 1 per arco è
+      poco ma 1 per modulo è troppo… usa i migliori metodi per orchestrare
+      in maniera dinamica»*). `varieta-fra-archi.md` §6-§7: le **sei assi**
+      (battaglia · esplorazione · intrigo · mistero · congegno · villain in
+      scena) col difetto per eccesso E per difetto di ciascuna; **la quota
+      su ~10 moduli** con la riga più importante che è quella dei **moduli
+      puliti** (4-5, ~45%); il **tetto di 2 congegni** per arco modulare,
+      riconciliato esplicitamente con la regola 3 (§1 e §3 corretti: non è
+      un allentamento, è la stessa densità su durata diversa);
+      **l'orchestrazione a tre livelli** — vocazione del modulo (scritta
+      col modulo) × conto aperto × assegnazione **al momento in cui il
+      tavolo sceglie** —, le **cinque regole anti-ritmo**, **il modulo che
+      cambia natura** e la leva finale (cambiare quale asse sorprende).
+      *Accettazione*: nessuna assegnazione fissa in anticipo (sarebbe un
+      calendario, e un calendario si impara), e la quota ARC-09 è scritta
+      come vocazioni, non come compiti.
 - [x] **I4 — Deploy e tracciatura.** `build-skills.sh`, mirror per-agente,
       riga in INDEX e CHANGELOG.
 
