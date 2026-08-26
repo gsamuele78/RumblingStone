@@ -91,6 +91,19 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
       cambia quali tattiche funzionano), **§9 il dosaggio**.
       *Accettazione*: nessuna ricompensa dell'indagine espressa come bonus
       numerico; il §9 dichiara una frequenza per ogni elemento.
+- [x] **I8 — Il congegno è una famiglia su sei** (correzione DM 2026-08-26:
+      *«ma questa skill aggiunge anche misteri non banali da risolvere, non
+      solo congegni?»*). Difetto verificato sul testo: l'impianto era già
+      indipendente dal congegno, ma **lo scheletro del caso lo rendeva
+      obbligatorio** (`IL CONGEGNO` come prima riga del template). Chi
+      apriva la skill per scrivere un «chi è stato» non trovava la sua
+      casella. Nuovo `references/famiglie-di-caso.md` con sei famiglie
+      (chi è stato · impostore · cospirazione · sparizione · accusa falsa ·
+      congegno), ciascuna con domanda, firma negli indizi, chiave tipica,
+      errore da evitare e come finisce; scheletro generalizzato a
+      `IL SEGRETO` / `CHI CI GUADAGNA`, `L'INNESCO` reso opzionale fuori
+      dalla famiglia 6. *Accettazione*: lo scheletro regge un caso senza
+      alcuna macchina, e il congegno dichiara di essere una famiglia su sei.
 - [x] **I4 — Deploy e tracciatura.** `build-skills.sh`, mirror per-agente,
       riga in INDEX e CHANGELOG.
 

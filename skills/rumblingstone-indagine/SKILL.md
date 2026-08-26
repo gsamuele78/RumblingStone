@@ -14,7 +14,10 @@ description: >
   "vicolo cieco", "i giocatori non trovano niente", "il gruppo non ha un
   ladro", "prova grezza", "punti Acume", "Perizia", "congegno", "macchina
   arcana", "rituale da fermare", "cospirazione", "innesco in piena vista",
-  "trappola scenografica", "cosa stanno costruendo i villain".
+  "trappola scenografica", "cosa stanno costruendo i villain",
+  "chi è l'assassino", "impostore", "non è chi dice di essere",
+  "cospirazione", "sparizione", "è scomparso", "accusa falsa",
+  "hanno incastrato il PG", "che tipo di mistero".
 ---
 
 # RumblingStone — Il caso: indagine, enigmi, ricomposizione
@@ -104,6 +107,7 @@ le prove d'abilità normali sono in `references/nodi-e-sei-porte.md` §3.
 
 | Se stai facendo… | Leggi |
 |---|---|
+| **Scegliere che tipo di mistero è** — le sei famiglie (chi è stato · impostore · cospirazione · sparizione · accusa falsa · congegno), la firma degli indizi di ciascuna, la chiave tipica, l'errore da evitare, come finisce | `references/famiglie-di-caso.md` |
 | Scrivere gli indizi: il nodo a tre strati, le sei porte per esteso con esempi giocati, le CD, la mappa dei nodi, **il vicolo cieco** | `references/nodi-e-sei-porte.md` |
 | Premiare chi ha spremuto le meningi: **Acume, Perizia, Metodo**, i tetti, il registro da tenere (ADR-0022) | `references/registro-e-ricompense.md` |
 | Scrivere **la scena in cui tutto si ricompone**, i falsi indizi progettati, il combattimento pre-letto | `references/ricomposizione.md` |
@@ -111,17 +115,24 @@ le prove d'abilità normali sono in `references/nodi-e-sei-porte.md` §3.
 
 ## 4. Lo scheletro di un caso (una pagina)
 
+**Prima si sceglie la famiglia** (`references/famiglie-di-caso.md`): chi è
+stato · l'impostore · la cospirazione · la sparizione · l'accusa falsa · il
+congegno. È la decisione che determina la firma degli indizi. Il congegno è
+**una** famiglia su sei, ed è la più costosa in stupore: una per arco.
+
 ```
-IL CONGEGNO      cosa si sta costruendo / cosa fa la macchina
-                 (il DM lo sa dal primo minuto — i PG no)
+IL SEGRETO       la verità intera, che il DM sa dal primo minuto — e i PG no.
+                 (colpevole · vera identità · chi è alleato di chi ·
+                  dov'è finito · chi ha costruito le prove · la macchina)
 LA CHIAVE        l'informazione che ricodifica tutto in una volta.
                  Arriva a ~2/3 del caso: quello è il picco.
 LE SCHEGGE       6-9 nodi. Ognuno ha una spiegazione INNOCENTE
                  plausibile nel momento in cui lo si trova.
-CHI LO VUOLE     i villain lo cercano / ce l'hanno e non sanno usarlo /
-                 lo stanno MODIFICANDO per uno scopo che non si sa.
+CHI CI GUADAGNA  chi vuole che la verità non si sappia, e cosa fa nel
+                 frattempo — agisce, non aspetta i PG.
 L'INNESCO        il dettaglio dato gratis, in piena vista, in una scena
                  che parla d'altro — e che se nessuno lo tocca SCATTA.
+                 (obbligatorio solo nella famiglia «congegno»)
 IL COSTO         cosa succede mentre i PG capiscono. Il tempo è un
                  avversario, non uno sfondo.
 LA PORTA CHIUSA  la cosa che non capiranno mai del tutto.
@@ -136,6 +147,9 @@ sessioni**; **1 sola chiave di lettura** — due chiavi sono due casi.
 
 Oltre a quello di `narrative-style` (§Self-check) e alla coerenza:
 
+0. **Prova della famiglia**: so quale delle sei famiglie è questo caso, e
+   il congegno c'è solo se serve? (Se ogni caso che scrivi ha una macchina,
+   stai bruciando l'unica famiglia che non si può ripetere.)
 1. **Prova del guerriero**: prendi il PG con meno gradi in abilità del
    gruppo. Ripercorri il caso solo con lui. Trova almeno tre nodi? Se no, il
    caso non è pronto — non è «difficile», è chiuso.

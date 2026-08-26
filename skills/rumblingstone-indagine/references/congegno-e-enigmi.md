@@ -10,6 +10,12 @@ Il congegno — arcano, aberrante o mistico — è il disegno finale in cui le
 schegge si compongono. Questo file dice come si progetta e come si tengono
 gli enigmi al loro posto.
 
+> ⚠️ **Il congegno è una famiglia di caso su sei**, non la struttura del
+> mistero. Le altre cinque (chi è stato · l'impostore · la cospirazione · la
+> sparizione · l'accusa falsa) stanno in `famiglie-di-caso.md` e usano lo
+> stesso identico impianto di nodi, porte e ricomposizione. Questa è la più
+> costosa in stupore: **una per arco** (§9).
+
 ---
 
 ## 1. La struttura in quattro pezzi
