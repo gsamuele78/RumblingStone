@@ -18,6 +18,11 @@ Rigenera con:
     python3 scripts/build_image_derivatives.py <cartella>
     python3 scripts/build_image_derivatives.py <cartella> --max 1600 --quality 82
 
+Formati dei master accettati: **PNG e WebP**. Il WebP c'è perché le immagini della
+campagna (ARC-07) sono nate così, ed è il formato che la catena di stampa gestisce
+peggio: Typst lo decodifica e ricomprime, mentre il JPEG lo incorpora così com'è.
+Una derivata JPEG serve quindi ai WebP **più** che ai PNG.
+
 Dipendenze: stdlib + **Pillow**. Se manca, lo script dice come installarlo ed esce
 pulito: i booklet continuano a usare i segnaposto vettoriali.
 Exit code: 0 = ok · 1 = Pillow assente · 2 = cartella mancante.
@@ -53,7 +58,7 @@ def lato_per(nome: str, default: int) -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("cartella", help="cartella dei master PNG")
+    ap.add_argument("cartella", help="cartella dei master (PNG o WebP)")
     ap.add_argument("--max", type=int, default=DEFAULT,
                     help=f"lato lungo per ritratti e copertina (default {DEFAULT})")
     ap.add_argument("--quality", type=int, default=88, help="qualità JPEG (default 88)")
@@ -80,7 +85,9 @@ def main() -> int:
     out.mkdir(exist_ok=True)
     tot_prima = tot_dopo = 0
     n = 0
-    for master in sorted(src.glob("*.png")):
+    masters = sorted(f for f in src.iterdir()
+                     if f.is_file() and f.suffix.lower() in (".png", ".webp"))
+    for master in masters:
         lato = lato_per(master.stem, args.max)
         with Image.open(master) as im:
             im = im.convert("RGB")
@@ -98,7 +105,7 @@ def main() -> int:
         n += 1
 
     if not n:
-        print(f"  ⚠ nessun PNG in {src}")
+        print(f"  ⚠ nessun master PNG o WebP in {src}")
         return 0
     print(f"✓ build_image_derivatives: {n} immagini → {out.relative_to(Path.cwd()) if out.is_relative_to(Path.cwd()) else out}"
           f"  ({tot_prima // 1024 // 1024} MB → {tot_dopo // 1024 // 1024} MB)")

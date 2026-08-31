@@ -633,8 +633,14 @@ def capitoli(man: dict, base: Path, tutti: bool) -> list[tuple[dict, str, Path]]
     return fuori
 
 
-def fregio_per(titolo: str, file: Path, base: Path) -> str | None:
-    """Il fregio del capitolo, se la sua cartella ne ha uno con un nome affine."""
+def fregio_per(titolo: str, file: Path, base: Path, ripiego: str | None = None) -> str | None:
+    """Il fregio del capitolo, se la sua cartella ne ha uno con un nome affine.
+
+    `ripiego` è il fregio dichiarato dal manifest (chiave `fregio`) e vale per
+    TUTTI i capitoli del volume: serve ai booklet della campagna, dove il
+    medaglione è dell'arco e non del capitolo. Il fregio trovato per nome vince,
+    perché è più specifico.
+    """
     for d in (base.parent / "ALLEGATI" / "tavole" / "fregi", ROOT / "docs" / "assets" / "fregi"):
         if not d.is_dir():
             continue
@@ -643,6 +649,11 @@ def fregio_per(titolo: str, file: Path, base: Path) -> str | None:
             nome = svg.stem[len("fregio-"):]
             if nome and (nome in chiave or chiave.startswith(nome)):
                 return typ_path(svg)
+    if ripiego:
+        f = (base / ripiego).resolve()
+        if f.is_file():
+            return typ_path(f)
+        print(f"  ⚠ fregio di ripiego mancante: {ripiego}", file=sys.stderr)
     return None
 
 
@@ -653,7 +664,7 @@ def fregio_per(titolo: str, file: Path, base: Path) -> str | None:
 CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
-    "out", "chapters", "carta", "capolettera",
+    "out", "chapters", "carta", "capolettera", "fregio",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -732,7 +743,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
             parti.append(schede(cap, base, f))
             parti.append("")
             continue
-        fr = fregio_per(titolo, f, base)
+        fr = fregio_per(titolo, f, base, man.get("fregio"))
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
         parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")

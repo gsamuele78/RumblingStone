@@ -84,7 +84,7 @@ trenta secondi; ogni read-aloud dell'arco compare nell'indice con il suo rimando
 lettura emergono incoerenze, **si annotano**, non si correggono qui.
 **Stima**: mezza giornata. **Priorità: 1** — è l'arco che il tavolo sta giocando.
 
-### A2 · I dieci fregi montati nei booklet della campagna `⬜`
+### A2 · I dieci fregi montati nei booklet della campagna `✅ 2026-08-31`
 
 **Produce**: i quattro manifest della campagna (`PALIO-BOOKLET`, i tre di ARC-07)
 referenziano il proprio medaglione d'arco come `cover_image`; se il fregio manca per
@@ -94,7 +94,7 @@ un arco, lo genera `scripts/build_chapter_marks.py`.
 **Engine**: script + Haiku, impegno **basso**.
 **Stima**: ~30 minuti. **Priorità: 2** — rapporto resa/costo più alto del piano.
 
-### A3 · Derivate e provenienza per le immagini di ARC-07 `⬜`
+### A3 · Derivate e provenienza per le immagini di ARC-07 `✅ 2026-08-31`
 
 **Produce**: `07_.../Immagini/web/` con le derivate da impaginazione, e
 `07_.../Immagini/PROVENIENZA.txt` con una riga per file.
@@ -250,8 +250,8 @@ riga in `plans/CHANGELOG.md`.
 ## §8 · Checklist di stato
 
 - ⬜ **A1** — cassetta del DM per ARC-07 (cast, pronuncia, indice read-aloud, suoni, momento, accessibilità)
-- ⬜ **A2** — i dieci fregi montati nei manifest della campagna
-- ⬜ **A3** — derivate e provenienza per le immagini di ARC-07
+- ✅ **A2** — i dieci fregi montati nei manifest della campagna *(chiave `fregio` nel manifest: nel modulo il medaglione si trova dal nome del capitolo, nella campagna è dell'arco)*
+- ✅ **A3** — derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
 - ⬜ **A4** — kit anti-improvvisazione della Valle
 - ⬜ **A5** — prop fisici per gli handout di ARC-07
 - ⬜ **A6** — dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
