@@ -4,6 +4,11 @@
 It is heavily based on *Red Hand of Doom* (Jacobs & Wyatt, 2006) and adapted from the Elsir Vale to the Dalelands region.
 This repository contains session logs, NPC data, encounters, lore, and custom mechanics tailored for an adult gaming group (emphasizing "Premium Design" and "Shine Time" mechanics).
 
+> 📚 **Documentation index**: start at [`docs/INDEX.md`](docs/INDEX.md) — the
+> categorized entry point to every doc (tools & scripts, guides, ADRs, plans,
+> skills). The tool registry ([`docs/tools/`](docs/tools/)) is machine-readable
+> and generated from [`scripts/tools.manifest.json`](scripts/tools.manifest.json).
+
 ## Campaign Arcs (Directory Structure)
 
 The campaign is organized into chronological and locational arcs:
@@ -18,6 +23,20 @@ The campaign is organized into chronological and locational arcs:
 - **07_il Portale Della Forgia Eterna**: High-stakes planar and elemental battles to secure the eternal forge.
 - **08_La Battaglia Di Hammerfist**: Strategic, large-scale warfare defending the dwarven settlement.
 - **09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist**: Narrative continuation and aftermath of the major conflict.
+
+## Standalone Module — *Il Drappo di Tarsilia* (Pathfinder 1e · Golarion)
+
+Besides the main campaign, the repo ships one **self-contained module** that shares
+none of its setting: [`STANDALONE-Il-Drappo-di-Tarsilia/`](STANDALONE-Il-Drappo-di-Tarsilia/).
+
+Three sessions of 3–4 hours for **six players**, **six pregenerated 3rd-level
+characters**, **Pathfinder 1st Edition** (Core Rulebook only), set in an original
+river city of Golarion's River Kingdoms. It reuses the *system* of the Channathgate
+race arc — the author's own material — and nothing else: no Faerûn, no *Red Hand of
+Doom*, no campaign PCs. Start at
+[`00-HUB-E-QUICKSTART-DM.md`](STANDALONE-Il-Drappo-di-Tarsilia/00-HUB-E-QUICKSTART-DM.md);
+the IP rundown is in
+[`IP-E-LICENZE.md`](STANDALONE-Il-Drappo-di-Tarsilia/IP-E-LICENZE.md).
 
 ## Characters
 
@@ -55,7 +74,7 @@ Important non-player characters and antagonists (Detailed in `Bestiario/villain/
   - `npcs/` & `locations/`: Key figures and environment descriptions.
   - `encounters/`: Custom encounter design and tactics.
   - `lore/`: House rules, setting details, and DM strategy (e.g., `csmpaign players.md`).
-- **`skills/`**: Nine focused AI-agent skills + a legacy router. Rules are sourced from the d20 SRD (D&D 3.5) and the Pathfinder 1e SRD:
+- **`skills/`**: Fourteen focused AI-agent skills + a legacy router. Rules are sourced from the d20 SRD (D&D 3.5) and the Pathfinder 1e SRD:
   - `dnd-35-srd/` — pure 3.5 mechanics (d20srd.org)
   - `forgotten-realms-lore/` — Faerûn 1372 DR canon
   - `rumblingstone-campaign/` — this campaign (PCs, artifacts, arcs, coherence)
@@ -65,7 +84,12 @@ Important non-player characters and antagonists (Detailed in `Bestiario/villain/
   - `rumblingstone-plans/` — work-plan archive discipline (INDEX, CHANGELOG, ADRs)
   - `pathfinder-1e-srd/` — PF1e rules, simple templates, CR benchmarks, 3.5↔PF conversion
   - `npc-villain-boosting/` — when/whether/how to boost PNGs, villains, and monsters
-  - `dnd-35-rules/` — legacy meta-router pointing at the nine above
+  - `rumblingstone-art-direction/` — visual bible, character sheets, the rejection gate
+  - `rumblingstone-editoria/` — layout & typography of the printed volumes (ADR-0020/0021)
+  - `rumblingstone-module-standard/` — the depth an AP-quality module master must reach
+  - `rumblingstone-playtest/` — how a module is tested before and after the table
+  - `rumblingstone-debugging/` — root-cause debugging of the repo's own infrastructure
+  - `dnd-35-rules/` — legacy meta-router pointing at the ones above
 - **`.github/workflows/ci.yml`**: CI validates skill frontmatter/links/data YAML and builds all per-agent skill packages on every PR.
 
 ## Design Philosophy (Mastering for Adults)
@@ -97,17 +121,32 @@ Indice unico dei documenti "di sviluppo" del repo (roadmap, script, container):
 |---|---|
 | **Roadmap / cosa manca / cosa migliorare** (stato piani, %, gate, prossimi passaggi) | [`plans/INDEX.md`](plans/INDEX.md) — con [`plans/CHANGELOG.md`](plans/CHANGELOG.md) per la storia lotto-per-lotto |
 | **Script DM: cosa fanno, quali parametri, cosa producono** (tool map completa + `dm.py`) | [`scripts/README-automation.md`](scripts/README-automation.md) |
-| **Container in locale** (Homebrewery self-hosted, nativo o Docker chiavi-in-mano) | [`scripts/homebrew-local/README.md`](scripts/homebrew-local/README.md) |
+| **Condividere il materiale** (mandarlo ai giocatori, stamparlo, pubblicarlo, e perché la vendita oggi non è conforme) | [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) |
+| **Preparare una macchina nuova** (o un secondo DM): prerequisiti, skill per agenti, branch di gruppo, verifica finale | [`docs/guides/GUIDA-SETUP-MACCHINA.md`](docs/guides/GUIDA-SETUP-MACCHINA.md) |
+| **Generare booklet e PDF per la sessione** (guida completa: manifest, HTML, Homebrewery, PDF A4 per giocatori/DM, prerequisiti, troubleshooting) | [`docs/guides/GUIDA-BOOKLET-E-PDF.md`](docs/guides/GUIDA-BOOKLET-E-PDF.md) |
+| **Generare le immagini della campagna** (prompt, generatori, coerenza d'arco, dove salvarle e come agganciarle) | [`docs/guides/GUIDA-IMMAGINI.md`](docs/guides/GUIDA-IMMAGINI.md) |
+| **Fare una mappa** (3 modalità, griglia emoji, JSON per eserciti, SVG/PNG/UVTT per Foundry e Roll20) | [`docs/guides/GUIDA-MAPPE.md`](docs/guides/GUIDA-MAPPE.md) |
+| **Aggiungere un mostro, un PNG o un villain** (dove, come si scrive, catalogo, gate CI, quando potenziare) | [`docs/guides/GUIDA-BESTIARIO.md`](docs/guides/GUIDA-BESTIARIO.md) |
+| **Container in locale** (Homebrewery self-hosted, nativo o Docker chiavi-in-mano; container PDF opzionale) | [`scripts/homebrew-local/README.md`](scripts/homebrew-local/README.md) · [`scripts/booklet-container/README.md`](scripts/booklet-container/README.md) |
 | **Perché delle scelte strutturali** (decisioni architetturali) | [`plans/adr/`](plans/adr/) — incl. ADR-0004 (container) e ADR-0005 (confini IP) |
 | **Disciplina di tracciatura** (regola d'oro: chiudo un lotto → aggiorno checklist + INDEX + CHANGELOG) | skill [`skills/rumblingstone-plans/`](skills/rumblingstone-plans/SKILL.md) |
 
 ## Setup Instructions
+
+> 📘 **Guida completa passo-passo** (prerequisiti, skill per agenti, hook git,
+> branch di gruppo, extra e verifica finale):
+> [`docs/guides/GUIDA-SETUP-MACCHINA.md`](docs/guides/GUIDA-SETUP-MACCHINA.md).
+> Qui sotto il minimo indispensabile.
 
 1. Clone the repository to your local machine.
 2. If using AI Agents (Claude Code, Cursor, Windsurf), run `./scripts/build-skills.sh` to build per-agent skill packages and deploy them to your user-level paths. Per-agent mirrors are not committed to git — regenerate them locally.
 3. Review `AGENTS.md` to understand campaign conventions and agent instructions.
 
 ## Licensing Information
+
+> 📘 **Cosa posso farci in pratica?** (mandarlo ai giocatori, stamparlo, pubblicarlo, venderlo):
+> [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) — la posture di
+> ADR-0005 tradotta in procedura, caso per caso.
 
 This project contains private lore adaptations based on *Red Hand of Doom*. Mechanical content belongs to the respective owners of the D&D 3.5 OGL/SRD.
 

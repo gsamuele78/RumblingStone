@@ -351,10 +351,170 @@ canone dal DM. (Piano approvato col merge del PR #28, 2026-07-10.)
   **2 tavole del DM** (pianta città + panorama Piazza) come master visivi con
   2 handout giocatori. Tavole PNG reali caricate dal DM su main (`ed56aa6`,
   2026-07-17) → gate "PNG da caricare dal DM" **chiuso**.
-- [ ] **K-B3.9** *(in lavorazione — PR #46 aperta)*: tavole ricollocate in
+- [x] **K-B3.9** *(2026-07-17/24, PR #46)*: tavole ricollocate in
   `P2D-Palio-Allegati/immagini/` (posto canonico) e ridimensionate con Pillow
-  (12,2 MB→1,8 MB · 8,8 MB→2,3 MB); da mergiare — poi spuntare qui e in
-  CHANGELOG.
+  (12,2 MB→1,8 MB · 8,8 MB→2,3 MB); conflitto CHANGELOG con main risolto in
+  unione.
+- [x] **K-B9** *(manutenzione, 2026-07-24)*: **stile pergamena A CANONE** —
+  il builder HTML dei booklet (prima solo nello scratchpad della chat, a
+  rischio perdita) è ora `scripts/build_booklet_html.py`: CSS canonico
+  incorporato, manifest JSON per capitoli, SVG inline, raster→data-URI
+  (Pillow opzionale), `dm.py booklet`, descrittore ADR-0012 nel tool
+  manifest. Manifest committati: Palio (`09_.../homebrew/PALIO-BOOKLET.manifest.json`)
+  e sessione Terros — gli artefatti si rigenerano in locale senza Docker.
+- [x] **K-B10** *(2026-07-24)*: **booklet di sessione «Lo Scontro con
+  Terros»** (`07_.../homebrew/sessione-terros/`): regia della serata in
+  ordine di gioco (Seme-Mercato di Varis giocato NEL Tempio per colore —
+  decisione DM; Artemis mai tentato al giardino; Hella solo echi), master
+  ARC07-DEF-1 integrale, **4 handout hint/echi separati per PG**
+  (Thorik/Tordek/Artemis/Hella) + HTML generato col builder K-B9.
+- [x] **K-B11** *(review DM, 2026-07-24)*: **ADR-0013 — standard di
+  generazione dei booklet**: teaser giocatori SEPARATO e spoiler-free
+  («L'Ultima Porta», mai il nome dello scontro — regola per TUTTE le
+  sessioni; «Novanta Secondi» per il Palio), canone giocato annotato nei
+  master (Frequenza+Diapason ottenuti; salita cantata «Super Mario»;
+  **Diapason SPESO sulla Sentinella** → niente stun su Terros, ma il malus
+  round-1 si attiva con la SOLA Frequenza), **switch `--format html|hb|both`**
+  nel builder: stessa fonte manifest → HTML autonomo E/O `.hb.md` V3 per il
+  self-hosted/Docker (entrambe le vie mantenute).
+- [x] **K-B11.3/.4** *(2026-07-24)*: **via PDF A4** (ADR-0013 §5-bis) —
+  CSS di stampa canonico (solo scheda attiva, A4 full-bleed, bottone
+  «🖨 Salva PDF», deep-link `#cN`, mappe ASCII auto-ridotte) +
+  `export_booklet_pdf.py` (Chromium headless) + `dm.py booklet
+  --pdf|--pdf-all`: **TUTTE le schede esportabili** con prefissi
+  `pg-`/`dm-` nei nomi (mai ambiguità su cosa inviare); PDF = artefatti
+  locali gitignored.
+- [x] **K-B11.5** *(2026-07-30)*: **file unico del gruppo** (copertina +
+  «il cammino fin qui» nella stessa scheda → un solo PDF `pg-`, via
+  `cover_tag` in `export_booklet_pdf`; ADR-0013 §2) + rigenerazione della
+  sessione Terros per la data di gioco spostata a «domani» (riferimenti
+  temporali aggiornati in teaser/regia). Deliverable completi: gruppo,
+  hint PG, master DM col solitario di Artemis (§6-bis) in HTML + PDF A4.
+
+- [x] **K-B12** *(review DM, 2026-07-30)*: **regia sensoriale** del master
+  Terros — §6-bis ricollocato (tentazione di Artemis **nel Tempio, dopo la
+  Sentinella**), **§8a-8b** ingresso dalla soglia di mithral con **Altare
+  attraccato che si centra al risveglio** (canone DM) + read-aloud «i sei
+  secondi» e «il distacco», **§9 Fase 2 regia dei tre round** (box per PG,
+  esiti riuscita/fallimento, ordine dei tiri in 4 battute). Regola a canone
+  in **ADR-0014** + copertura skill (module-standard §6/§8/§10,
+  editorial-standards §2).
+
+- [x] **K-B13** *(2026-07-30)*: **guida completa** `docs/guides/GUIDA-BOOKLET-E-PDF.md`
+  (pipeline, prerequisiti per ogni sistema, anatomia del manifest, tutti i
+  comandi, stampa da browser, container, troubleshooting, checklist di
+  consegna) + **container PDF opzionale** `scripts/booklet-container/`
+  (Dockerfile + wrapper docker/podman, per distro immutabili). Cablata da
+  README di root, `docs/INDEX`, README-automation, homebrew-local,
+  Quick-Guide nuovi DM, ADR-0013 e skill automation.
+
+- [x] **K-B14** *(2026-07-30)*: guide complete **`GUIDA-MAPPE.md`** (3 modalità,
+  griglia+legenda, JSON rigido, import, SVG/PNG/UVTT, CI, troubleshooting) e
+  **`GUIDA-BESTIARIO.md`** (dove/naming/formato, catalogo, gate, potenziamento),
+  cablate da README/INDEX e dalle skill mapmaking e npc-villain-boosting.
+- [x] **K-B15** *(2026-07-30)*: guida **`GUIDA-SETUP-MACCHINA.md`** (prerequisiti
+  obbligatori vs opzionali, doctor con legenda, skill+hook per agenti, branch di
+  gruppo, extra, verifica = controlli CI, troubleshooting), cablata da README
+  (tabella + Setup Instructions), `docs/INDEX` e Quick-Guide nuovi DM.
+- [x] **K-B16** *(2026-07-30)*: guida **`GUIDA-CONDIVISIONE-IP.md`** (5 scenari,
+  i 3 corpi di IP, procedura per i giocatori, pubblicazione gratuita con nota
+  pronta, perché la vendita non è conforme, illustrazioni, 8 casi pratici),
+  cablata da README/INDEX/ADR-0005; indice ADR completato con 0013-0014.
+  **Serie di guide passo-passo completa** (booklet+PDF, mappe, bestiario,
+  setup, condivisione).
+
+- [x] **K-B17** *(2026-07-30)*: **ADR-0015** (standard dei prompt immagine:
+  dove vivono, anatomia della scheda, bibbia visiva d'arco, IP, spoiler) +
+  `extract_scene_prompts.py` / `dm.py prompts <arco>` (estrazione scene,
+  rigenerazione idempotente che non perde il lavoro) + esemplare ARC-07
+  (46 scene, 3 prompt scritti: soglia di Terros, Smeraldo, ritorno di Durik).
+
+- [x] **K-B18** *(2026-07-31)*: guida **`GUIDA-IMMAGINI.md`** (generatori,
+  anatomia del prompt con esempio smontato, i 3 trucchi, flusso d'arco,
+  salvataggio e aggancio, troubleshooting, checklist) — **chiude la serie
+  delle guide passo-passo: 6** (setup · booklet/PDF · mappe · immagini ·
+  bestiario · condivisione).
+
+- [x] **K-B19** *(2026-07-31)*: **canone di combattimento ARC-07 §8** —
+  decisioni DM su piattaforma, Spinta e contromosse + nuovo **§8c «Manuale
+  d'uso del guardiano»** (risposte pronte a Blast/Chilling Tentacles/lotta/
+  sinergie, scritto dal lato DM), **MAPPA T-6 ridisegnata** a 13,5 × 9 m,
+  **due bug meccanici chiusi** (Radice a Terra e Spinta), **TODO condizionato**
+  sulla scheda dei Bracieri, rigenerazione booklet HTML/`.hb.md`/PDF.
+
+- [x] **K-B20** *(2026-07-31)*: **registro dei riposi ARC-07 a canone** — due
+  tariffe (ordinaria **−12 h**, **Sala della Forgia −4 h** perché il tempo vi
+  scorre più lento), `ARC07-DEF-2` §0-bis dichiarato **file proprietario
+  dell'orologio** con registro R1-R4 e **progressione dell'affresco A7 valore
+  per valore**, **stato di consegna all'ARC-08 per ramo** (`ARC07-DEF-5`),
+  **guarigione del passaggio** al viaggio −1.000 (`ARC07-DEF-4`), trade-off
+  Sala/Stanza della Corona per il riposo pre-rito.
+
+- [x] **K-B21** *(2026-07-31)*: **booklet DM del ritorno nella Sala della
+  Forgia** — nuova cartella `homebrew/sessione-ritorno-forgia/` (manifest +
+  intro «La Sala che Ricorda» + **regia nuova** del beat HUB: i tre beat non
+  tagliabili, la regola «non descrivere gli affreschi, falli reagire», la
+  scelta del riposo come scambio, 5 guard-rail) → HTML + `.hb.md` + **3 PDF
+  A4**, interamente DM. Con i due PDF di Terros, la parte DM dell'ARC-07
+  fino alla resurrezione è **completa e stampabile**.
+
+- [x] **K-B22** *(2026-07-31)*: **ARC-07 P4 giocato e chiuso** — Terros caduto,
+  orologio risolto a 3g 16h, terza strada sul Seme di Varis (preso e mai
+  toccato, nello zaino di Tordek), nuovo `ARC07-DEF-2` §7-bis «Le Quattro Ore
+  Rubate», `state.md` aggiornato con 4 echi armati.
+
+- [x] **K-B23** *(2026-07-31)*: **rettifica del rito** (Opzione B, e a prenderla
+  è **Tordek**: −2 DES/+2 COS, bottino intatto) · dettagli giocati della gemma
+  di Varis (densità, aure Trasmutazione+Ammaliamento, visione del bazar come
+  *vetrina non contratto*) · 🇮🇹 **`italiano-nativo.md`** nella skill di stile,
+  **obbligatorio** per player-facing e read-aloud, nato dal rilievo dei
+  giocatori sul «traduttese» · **`DM-CAMPAIGN-PLAYBOOK` §1-bis** sul buco
+  tattico del party (detection senza bersagli, zero incantatori) con
+  l'avvertenza che **i demoni peggiorerebbero le cose** (RI vs Eldritch Blast).
+
+- [x] **K-B24** *(2026-07-31)*: **`italiano-nativo.md` §9 «I tic dell'IA»** —
+  il traduttese è sintassi sbagliata, i tic sono sintassi giusta ripetuta
+  sempre uguale; documentato con una misura reale (9 occorrenze dell'antitesi
+  «non X: è Y» in `ARC07-DEF-1`), più il paradosso della ricetta e il test
+  finale su attacchi e chiuse dei paragrafi · **Balvar Fuocospento** (GS 13),
+  runaio esiliato passato ad Abbathor, consigliere di Zog'tar all'assedio di
+  ≈372 DR: **è il motivo per cui l'orda ha un drago**, sa che i PG vengono dal
+  futuro e non li smaschera — tratta. Nuovo `ARC07-DEF-4` §4-ter con quattro
+  esiti agganciati al duello con Skullcrusher.
+
+- [x] **K-B25** *(2026-08-01)*: **ADR-0016** (italiano lingua sorgente, inglese
+  edizione derivata per transcreation, col tetto IP registrato) ·
+  **`campaign/GLOSSARIO-E-LOCALIZZAZIONE.md`** (glossario bloccato + DNT +
+  regola dei nomi misti) · **`references/read-aloud-adulti.md`** (il pubblico:
+  adulti che leggono fantasy — «si ascolta, non si legge», lunghezze per tipo
+  di box, competenza concreta, cosa fa staccare).
+
+- [x] **K-B26** *(2026-08-01)*: **Corona di Adamantio** portata allo stato reale
+  (2 gemme + Rituale 3 «Incudine del Mondo») nello stesso stile grafico, con
+  audit che ha trovato **il secondo potere mancante** (*Manto di Pietra e
+  Spirito*, cioè Mente Vuota permanente), la **discrepanza sul costo del rito**
+  fra master della Corona e modulo ARC-07, e il fatto che **il pegno l'ha
+  pagato Tordek** e non il portatore.
+
+- [x] **K-B27** *(2026-08-01)*: Corona in **doppia versione PG/DM** (rito
+  dichiarato completo dal DM; reintegrati Leggenda Divina e valore teorico) +
+  **«Il bilancio di Thorik»**: il giocatore ha ragione coi numeri — due costi
+  permanenti in due sessioni consecutive — ma la diagnosi è che **le sue
+  difese sono tutte invisibili**. Quattro mosse, fra cui offrire subito «Il
+  Filo dell'Ascia» al rito di Hella (paga l'artefatto, non il corpo).
+
+- [x] **K-B28** *(2026-08-01)*: **«Diventare una Collina» a canone** sui
+  Bracieri Gemelli — si accende **da sé**, gratis, la prima volta che una
+  creatura Enorme mette Tordek sotto metà pf (*«Bestia grossa.» … «Ci vuole un
+  martello più grosso.»*); dalle volte dopo 1/giorno, azione di movimento, e
+  solo in pericolo vero. Più l'**audit di Aegis Fang e dell'Anello**: esito
+  **nessuno sblocco da Terros** per entrambi, e le **quattro** schede nuove lo
+  dicono nero su bianco invece di lasciare il dubbio — **doppia versione PG/DM**
+  come per la Corona, così la copia da consegnare non porta con sé i tempi
+  degli sblocchi. Le schede sono scritte **ognuna nello stile grafico del
+  proprio artefatto** — dorato-oliva nanico per Aegis Fang (Thorik),
+  bruno-viola per l'Anello (Artemis): gli stili sono personalizzati per
+  personaggio e non si uniformano.
 
 ### Domande aperte per il DM (da chiudere in approvazione del PR)
 

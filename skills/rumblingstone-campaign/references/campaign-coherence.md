@@ -161,9 +161,10 @@ the DM strategy doc.
 
 The campaign asks for adult, slow-build intrigue. The Salvatore profile
 below is the **prose floor**; the full narrative voice is the
-eight-pillar mix in `../../rumblingstone-narrative-style/` (Salvatore,
+nine-pillar mix in `../../rumblingstone-narrative-style/` (Salvatore,
 LotR, Casa di Davide, Andor, GoT, Mercer, BG3 echoes, BG1/2 quest
-design) — load that skill for any content generation. Agents generating
+design, il caso ricomposto) — load that skill for any content
+generation. For a case/mystery, also load `../../rumblingstone-indagine/`. Agents generating
 prose or read-aloud text must:
 
 - **Do**: physical sensory detail, internal monologue beats, named NPCs

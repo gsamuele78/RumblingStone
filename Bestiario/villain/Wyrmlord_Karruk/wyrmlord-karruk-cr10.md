@@ -1,5 +1,17 @@
 # Wyrmlord Karruk [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: melee-commander | **Environment**: battlefield | **CR**: 10 | **Source**: AP RHoD Karruk (Hill Giant barbarian) base + campaign upscale | **Status**: inferred
+
+```statblocco
+gs: 10
+ca: 23
+ca-dettaglio: (-1 size, +8 natural, +6 +1 breastplate)
+pf: 168
+pf-dado: 12d8
+ts: Temp +18, Rifl +5, Vol +8
+velocita: 40 ft (raging)
+iniziativa: +0
+```
+
 **Size/Type**: Large giant | **HD**: 12d8+5d12+85 (168 HP)
 **AC**: 23 (-1 size, +8 natural, +6 +1 breastplate) | **Init**: +0 | **Speed**: 40 ft (raging)
 **Saves**: Fort +18, Ref +5, Will +8 | **BAB/Grapple**: +16/+28

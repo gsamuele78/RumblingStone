@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rumblingstone/schemas/booklet_manifest.schema.json",
+  "title": "RumblingStone booklet manifest",
+  "description": "Il manifest di un booklet. Lo leggono DUE catene: build_booklet_html.py (schermo/Homebrewery, ADR-0013) e export_booklet_typst.py (stampa, ADR-0020). Una chiave che una catena consuma e l'altra ignora in silenzio produce due edizioni diverse dello stesso capitolo: per questo ogni chiave dichiara qui chi la consuma, e scripts/validate_booklets.py lo verifica.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "chapters"],
+  "properties": {
+    "title":       { "type": "string", "description": "Titolo del volume. Catene: html, stampa." },
+    "subtitle":    { "type": "string", "description": "Sottotitolo del frontespizio. Catene: html, stampa." },
+    "brand":       { "type": "string", "description": "Riga di testata sopra il titolo. Catene: html, stampa." },
+    "banner":      { "type": "string", "description": "Riga di metadati del frontespizio. Catene: html, stampa." },
+    "meta":        { "type": "string", "description": "Riga piccola in fondo al frontespizio (data, versione). Catene: html, stampa." },
+    "header":      { "type": "string", "description": "Testatina fissa. Catene: html. In stampa la testatina segue il CAPITOLO corrente, che e' cio' che rende sfogliabile un volume." },
+    "footer":      { "type": "string", "description": "Piede. Catene: html, stampa (come capitolo di ripiego in testatina)." },
+    "player_footer": { "type": "string", "description": "Piede delle sole pagine giocatore. Catene: html." },
+    "front_matter": { "type": "boolean", "description": "false toglie frontespizio e indice (fascicoli di schede). Catene: stampa.", "default": true },
+    "cover_image": { "type": "string", "description": "Immagine di copertina, percorso relativo AL MANIFEST. Catene: html, stampa." },
+    "cover_tag":   { "type": "string", "description": "Tag dei capitoli da cui prendere la copertina. Catene: html." },
+    "intro_md":    { "type": "string", "description": "Master markdown della pagina d'introduzione, relativo AL MANIFEST. Catene: html, stampa." },
+    "carta":       { "type": "string", "enum": ["avorio", "bianca"], "description": "Fondo pagina. Catene: stampa. La riga di comando (--carta) vince su questa." },
+    "capolettera": { "type": "boolean", "description": "Versale d'apertura sul primo paragrafo di ogni capitolo. Catene: stampa.", "default": true },
+    "out":         { "type": "string", "description": "Nome del file di uscita. Catene: html." },
+    "chapters": {
+      "type": "array",
+      "minItems": 1,
+      "description": "I capitoli, nell'ordine di lettura. Catene: html, stampa.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["file"],
+        "properties": {
+          "file":  { "type": "string", "description": "Master markdown, percorso relativo AL MANIFEST." },
+          "title": { "type": "string", "description": "Titolo del capitolo; se manca si usa il nome del file." },
+          "tag":   { "type": "string", "enum": ["player", "dm"], "description": "Senza --all esce solo cio' che e' 'player'." },
+          "layout": { "type": "string", "enum": ["schede"], "description": "'schede': una pagina A4 per personaggio invece di un capitolo a colonne. Catene: stampa." },
+          "retro": { "type": "string", "description": "Master del retro scheda (legami, ad alta voce). Solo layout 'schede'." },
+          "ritratti": {
+            "description": "Cartella/e dei ritratti delle schede. Solo layout 'schede'.",
+            "anyOf": [{ "type": "string" }, { "type": "array", "items": { "type": "string" } }]
+          },
+          "footer": { "type": "string", "description": "Piede della scheda. Solo layout 'schede'." },
+          "capolettera": { "type": "boolean", "description": "Sovrascrive il valore del volume per questo capitolo." }
+        }
+      }
+    }
+  }
+}
