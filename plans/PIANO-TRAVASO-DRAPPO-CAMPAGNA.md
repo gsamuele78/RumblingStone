@@ -61,7 +61,7 @@ non dentro di essi.
 
 ## §2 · Direzione A — dal Drappo alla campagna
 
-### A1 · La cassetta del DM per ARC-07 `⬜`
+### A1 · La cassetta del DM per ARC-07 `✅ 2026-08-31`
 
 **Produce**: `07_il Portale Della Forgia Eterna/ARC07-CASSETTA-DEL-DM.md` — un file
 solo, consultabile al tavolo, che copre le voci ADR-0018 che mancano:
@@ -249,7 +249,7 @@ riga in `plans/CHANGELOG.md`.
 
 ## §8 · Checklist di stato
 
-- ⬜ **A1** — cassetta del DM per ARC-07 (cast, pronuncia, indice read-aloud, suoni, momento, accessibilità)
+- ✅ **A1** — cassetta del DM per ARC-07 *(`ARC07-CASSETTA-DEL-DM.md`: 12 PNG col tic, 9 pronunce con le due collisioni Thorek/Thorik e Durik/Durin, indice dei 260 read-aloud per § con il comando che lo rigenera, 12 cue sonori, 5 momenti da fotografare, accessibilità; §7 dichiara che i prop restano scoperti = lotto A5)*
 - ✅ **A2** — i dieci fregi montati nei manifest della campagna *(chiave `fregio` nel manifest: nel modulo il medaglione si trova dal nome del capitolo, nella campagna è dell'arco)*
 - ✅ **A3** — derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
 - ⬜ **A4** — kit anti-improvvisazione della Valle

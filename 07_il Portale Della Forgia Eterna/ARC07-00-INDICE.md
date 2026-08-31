@@ -106,6 +106,9 @@ point è il Day 19** (`state.md §2.1`):
 
 ## 🔗 PUNTATORI RAPIDI
 
+- **Da aprire al tavolo, insieme al master della serata**: `ARC07-CASSETTA-DEL-DM.md`
+  — foglio del cast col tic vocale, pronuncia, **indice dei 260 read-aloud**, i suoni,
+  il momento da fotografare, accessibilità (apparato d'uso, ADR-0018)
 - Corona (fonte canonica DM): `PG/Artefatti/LaCorona_di_Adamantio-DM.md`
 - Scheda Collana: `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md`
 - Cintura della Devastazione: `PG/Artefatti/Artefatti-Pg/Tordek/00_Cintura_della_Devastazione.md`
