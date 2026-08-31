@@ -220,6 +220,12 @@ def scan_directory(root):
             'regolamento',
             'atlante visivo',
             'guida-agli-scontri',
+            # L'APPARATO D'USO (ADR-0018) cita i GS nel foglio del cast — «Terros,
+            # guardiano del Nodo di Terra, GS 15» — ma è una pagina di regia, non
+            # la fonte di uno statblock. Senza questa riga la cassetta di ARC-07
+            # entrava nel catalogo come un mostro di GS 15, col titolo del file.
+            'cassetta-del-dm',
+            'cue-sonori',
             'to-be_integrated',
             'sidemissions',
             'cheat-sheet',

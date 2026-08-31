@@ -54,7 +54,7 @@ ESPORTATORE = ROOT / "scripts" / "export_booklet_typst.py"
 # c'è la lettura operativa: se una chiave non compare in nessuna delle due, è
 # una chiave morta e va tolta dal manifest.
 SOLO_HTML = {"header", "player_footer", "cover_tag", "out"}
-SOLO_STAMPA = {"front_matter", "carta", "capolettera"}
+SOLO_STAMPA = {"front_matter", "carta", "capolettera", "fregio"}
 
 IMMAGINE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 
@@ -117,7 +117,7 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
 
     _controlla_oggetto(man, schema, str(rel), errori)
 
-    for chiave in ("cover_image", "intro_md"):
+    for chiave in ("cover_image", "intro_md", "fregio"):
         if man.get(chiave) and not (base / man[chiave]).resolve().is_file():
             errori.append(f"{rel}.{chiave}: file mancante «{man[chiave]}»")
 

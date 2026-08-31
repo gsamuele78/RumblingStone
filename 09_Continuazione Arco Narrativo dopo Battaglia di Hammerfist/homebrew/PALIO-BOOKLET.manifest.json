@@ -9,20 +9,81 @@
   "intro_md": "PALIO-BOOKLET-INTRO.md",
   "out": "PALIO-BOOKLET.html",
   "chapters": [
-    {"title": "✉ Teaser giocatori — «Novanta Secondi»", "file": "PALIO-TEASER-GIOCATORI.md", "tag": "player"},
-    {"title": "I · La Città e i Distretti", "file": "../Arco-Post-Hammerfist-P2D-PALIO-DISTRETTI-CHANNATHGATE.md", "tag": "dm"},
-    {"title": "II · L'Avventura (regole base)", "file": "../Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-AVVENTURA.md", "tag": "dm"},
-    {"title": "III · Le Contrade — Stemmi e Canti", "file": "../Arco-Post-Hammerfist-P2D-PALIO-CONTRADE-STEMMI-CANTI.md", "tag": "dm"},
-    {"title": "IV · Le Ballate (i Ritornelli)", "file": "../Arco-Post-Hammerfist-P2D-PALIO-BALLATE.md", "tag": "dm"},
-    {"title": "V · Le Prove di Ammissione", "file": "../Arco-Post-Hammerfist-P2D-PALIO-PROVE-AMMISSIONE.md", "tag": "dm"},
-    {"title": "VI · Giorno 1 — La Tratta", "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO1-TRATTA.md", "tag": "dm"},
-    {"title": "VII · Le Prove di Batteria", "file": "../Arco-Post-Hammerfist-P2D-PALIO-PROVE-BATTERIA.md", "tag": "dm"},
-    {"title": "VIII · Giorno 2 — Partiti, Cena, Sabotaggi", "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO2-PARTITI-CENA-SABOTAGGI.md", "tag": "dm"},
-    {"title": "IX · Giorni 3-4 — La Corsa e gli Esiti", "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO3-4-CORSA-ESITI.md", "tag": "dm"},
-    {"title": "X · DM Master Reference", "file": "../Arco-Post-Hammerfist-P2D-PALIO-DM-MASTER-REFERENCE.md", "tag": "dm"},
-    {"title": "XI · Integrazione di Campagna", "file": "../Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-INTEGRAZIONE.md", "tag": "dm"},
-    {"title": "XII · Conseguenze ed Echi", "file": "../Arco-Post-Hammerfist-P2D-PALIO-CONSEGUENZE-ECHI.md", "tag": "dm"},
-    {"title": "XIII · Statblocchi", "file": "../Arco-Post-Hammerfist-P2D-PALIO-STATBLOCCHI.md", "tag": "dm"},
-    {"title": "XIV · Le Mappe", "file": "../Arco-Post-Hammerfist-P2D-PALIO-MAPPE.md", "tag": "dm"}
-  ]
+    {
+      "title": "✉ Teaser giocatori — «Novanta Secondi»",
+      "file": "PALIO-TEASER-GIOCATORI.md",
+      "tag": "player"
+    },
+    {
+      "title": "I · La Città e i Distretti",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-DISTRETTI-CHANNATHGATE.md",
+      "tag": "dm"
+    },
+    {
+      "title": "II · L'Avventura (regole base)",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-AVVENTURA.md",
+      "tag": "dm"
+    },
+    {
+      "title": "III · Le Contrade — Stemmi e Canti",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-CONTRADE-STEMMI-CANTI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "IV · Le Ballate (i Ritornelli)",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-BALLATE.md",
+      "tag": "dm"
+    },
+    {
+      "title": "V · Le Prove di Ammissione",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-PROVE-AMMISSIONE.md",
+      "tag": "dm"
+    },
+    {
+      "title": "VI · Giorno 1 — La Tratta",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO1-TRATTA.md",
+      "tag": "dm"
+    },
+    {
+      "title": "VII · Le Prove di Batteria",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-PROVE-BATTERIA.md",
+      "tag": "dm"
+    },
+    {
+      "title": "VIII · Giorno 2 — Partiti, Cena, Sabotaggi",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO2-PARTITI-CENA-SABOTAGGI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "IX · Giorni 3-4 — La Corsa e gli Esiti",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-GIORNO3-4-CORSA-ESITI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "X · DM Master Reference",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-DM-MASTER-REFERENCE.md",
+      "tag": "dm"
+    },
+    {
+      "title": "XI · Integrazione di Campagna",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-INTEGRAZIONE.md",
+      "tag": "dm"
+    },
+    {
+      "title": "XII · Conseguenze ed Echi",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-CONSEGUENZE-ECHI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "XIII · Statblocchi",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-STATBLOCCHI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "XIV · Le Mappe",
+      "file": "../Arco-Post-Hammerfist-P2D-PALIO-MAPPE.md",
+      "tag": "dm"
+    }
+  ],
+  "fregio": "../../docs/assets/fregi/fregio-arco-09-continuazione.svg"
 }
