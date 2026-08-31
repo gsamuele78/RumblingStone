@@ -1,4 +1,4 @@
-# The Eight Pillars — Full Profiles
+# The Nine Pillars — Full Profiles
 
 Each pillar is distilled into: **Take** (the craft techniques to absorb),
 **Avoid** (the failure mode of imitating it badly), and **In play**
@@ -252,7 +252,53 @@ quest-tree format of `rumblingstone-campaign/references/dm-expansion-toolkit.md`
 
 ---
 
-## Fusion discipline — how eight become one
+## 9. Umberto Eco — *Il nome della rosa*: the mystery method
+
+The one pillar that is not anglophone, and the one that covers what the other
+eight leave open: **how a clue is built**. *The Name of the Rose* is a Holmes
+structure in a habit — a deducing investigator (William **of Baskerville**, and
+the name is declared), a Watson who narrates without understanding (Adso), one
+death at a time inside a **closed community that lives by a rule book**.
+
+**Take**
+- **The document is the clue, and what counts is what is missing from it.** A
+  text has an author, an addressee and an omission; the omission is the proof —
+  the unsigned correction, the receipt with no name, the page torn off flush.
+- **The closed community and its rule book**: power is exercised by *interpreting*
+  the rule, not by holding the sword. A different political engine from GoT — the
+  weapon is the precedent, and whoever grants an exception has created one.
+- **The fruitful error**: the investigator reaches the truth by following a
+  pattern that does not exist. This legitimizes at the table the thing that
+  always happens — the party's wrong deduction — and turns it into a real lead
+  instead of a correction.
+- **The erudite detail that is also the mechanism**: no period specific is
+  ornament. How ink is mixed, how a book is bound, how a poison keeps is always
+  **the thing that later kills someone** — planted early, in a context where it
+  looks harmless.
+- The **narrator who understands less than the reader**: Adso reports faithfully
+  and concludes wrongly. Handouts written by an in-fiction hand should do the
+  same — a witness statement is more useful when the witness misunderstands.
+
+**Avoid** — the failure mode is specific and tempting: **length and erudition on
+display**. Long descriptive openings, Latin quotations, cited treatises,
+catalogues of authorities. Also: a mystery with no prepared solution (open is not
+the same as sloppy), and a clue that explains itself (*"and this proves that…"*
+is the player's line, never the author's).
+
+**In play** — full operations in `references/mistero-e-documento.md`: the table
+of useful absences, the three moves of the rule book, the three ways to make a
+wrong deduction productive, the three-clue rule with its clue clock, and the
+guard clause below.
+
+> ⚠️ **Guard clause.** **Eco enters at the level of structure and object, never
+> at the level of paragraph length. When the two conflict, the read-aloud limits
+> win** (`read-aloud-adulti.md`: ~12 lines per box, one new proper noun, two
+> subordinates). A novel's opening read aloud loses the table by the third
+> sentence.
+
+---
+
+## Fusion discipline — how nine become one
 
 1. **One lead, max two supports** per scene (mixer table in SKILL.md).
 2. The **prose voice is always Salvatore** — other pillars change
@@ -264,5 +310,9 @@ quest-tree format of `rumblingstone-campaign/references/dm-expansion-toolkit.md`
 5. Tone pillars (LotR / Davide / Andor / GoT) are *selected*, not
    stacked: epic-mythic, destiny-tragic, procedural-intrigue, or
    political-gray. Pick the one the scene needs.
-6. When two pillars conflict, the order of precedence is:
-   coherence > PC protagonism > lead pillar > support pillars.
+6. The **mystery layer is Eco** — whenever the scene turns on a document,
+   an investigation, or a rule invoked against someone, Eco leads and the
+   others support; everywhere else it is silent.
+7. When two pillars conflict, the order of precedence is:
+   coherence > PC protagonism > read-aloud limits > lead pillar >
+   support pillars.

@@ -161,9 +161,9 @@ the DM strategy doc.
 
 The campaign asks for adult, slow-build intrigue. The Salvatore profile
 below is the **prose floor**; the full narrative voice is the
-eight-pillar mix in `../../rumblingstone-narrative-style/` (Salvatore,
+nine-pillar mix in `../../rumblingstone-narrative-style/` (Salvatore,
 LotR, Casa di Davide, Andor, GoT, Mercer, BG3 echoes, BG1/2 quest
-design) — load that skill for any content generation. Agents generating
+design, Eco mystery method) — load that skill for any content generation. Agents generating
 prose or read-aloud text must:
 
 - **Do**: physical sensory detail, internal monologue beats, named NPCs
@@ -293,4 +293,9 @@ explicit `[COHERENCE WARNING: <which rule>]` so the DM can adjudicate.
             adds LotR depth, Casa di Davide destiny, Andor intrigue,
             GoT politics, Mercer table technique, BG3 echo ledger
             state.md §7.E, BG1/2 quest patterns, PC protagonism test).
+2026-08-31  Ninth pillar added upstream: Umberto Eco (Il nome della rosa)
+            — the mystery method (document as clue and its omissions,
+            closed community ruled by its rule book, fruitful error,
+            erudite detail that is also the mechanism). Structure and
+            object only: read-aloud ceilings win any conflict.
 ```

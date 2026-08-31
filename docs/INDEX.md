@@ -114,7 +114,7 @@ Sorgenti canoniche in [`skills/`](../skills/) (pipeline build in §2). Set focal
 | `rumblingstone-automation` | CLI `dm.py` e pipeline stato-sessioni |
 | `rumblingstone-mapmaking` | Pipeline mappe tattiche |
 | `rumblingstone-module-standard` | Standard qualità dei moduli DEF |
-| `rumblingstone-narrative-style` | Motore di stile narrativo |
+| `rumblingstone-narrative-style` | Motore di stile narrativo — **nove pilastri**, incluso il metodo del mistero (Eco) |
 | `rumblingstone-debugging` | Root-cause su infrastruttura |
 | `rumblingstone-plans` | Disciplina archivio piani |
 | `dnd-35-rules` | Meta-router legacy (compat) |
