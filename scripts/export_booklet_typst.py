@@ -272,8 +272,16 @@ def _link(testo: str, bersaglio: str) -> str:
     return _inline(testo)
 
 
+_ENTITA = {"&nbsp;": "\u00a0", "&amp;": "&", "&lt;": "<", "&gt;": ">",
+           "&quot;": '"', "&#39;": "'", "&mdash;": "\u2014", "&ndash;": "\u2013"}
+
+
 def inline(s: str) -> str:
     """Grassetto, corsivo, codice e link, nell'ordine che evita le collisioni."""
+    # I master usano qualche entità HTML (il &nbsp; per non spezzare «+7 (1d8)»):
+    # in HTML si risolvono da sole, in Typst finirebbero STAMPATE LETTERALI.
+    for ent, ch in _ENTITA.items():
+        s = s.replace(ent, ch)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: _link(m.group(1), m.group(2)), s)
     return _unesc(_inline(s))
 
@@ -282,10 +290,48 @@ def _celle(riga: str) -> list[str]:
     return [c.strip() for c in riga.strip().strip("|").split("|")]
 
 
-_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[)")
+_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[|§§HB-)")
 
 
 _IMG = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+
+
+# I prop sono sorgenti HOMEBREWERY (.hb.md): usano una sintassi a blocchi che il
+# loro editor interpreta e che qui finirebbe STAMPATA LETTERALE — «{{descriptive»,
+# «{{note», «{{margin-top:60px}}» in mezzo al testo del contratto. Si traduce nei
+# due blocchi del tema che hanno un senso, e si butta quando è solo impaginazione
+# di quell'editor.
+_HB_APRE = re.compile(r"^\{\{(descriptive|note|footnote|pageNumber|margin-top|wide|column)\b([^}]*)\}?\s*$")
+_HB_INLINE = re.compile(r"\{\{[^{}\n]*\}\}")
+
+
+def _spoglia_homebrewery(righe: list[str]) -> list[str]:
+    """Toglie l'impaginazione dell'editor e converte i due blocchi che hanno senso."""
+    fuori, pila = [], []
+    for ln in righe:
+        s = ln.strip()
+        # ⚠️ Le righe AUTO-CHIUSE — «{{margin-top:60px}}», «{{pageNumber,auto}}» —
+        # non aprono niente: sono impaginazione dell'editor e si buttano. Metterle
+        # sulla pila lascia un blocco aperto e Typst muore con «unclosed delimiter».
+        if s.startswith("{{") and s.endswith("}}"):
+            continue
+        m = _HB_APRE.match(s)
+        if m:
+            tipo = m.group(1)
+            if tipo in ("descriptive", "note"):
+                fuori.append("§§HB-APRE§§" + tipo)
+                pila.append(tipo)
+            else:
+                pila.append("scarta")        # margin-top, pageNumber, footnote…
+            continue
+        if s == "}}":
+            if pila:
+                t = pila.pop()
+                if t in ("descriptive", "note"):
+                    fuori.append("§§HB-CHIUDE§§")
+            continue
+        fuori.append(_HB_INLINE.sub("", ln))
+    return fuori
 
 
 def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> str:
@@ -302,7 +348,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
             _IMG.sub(lambda m: "\n" + m.group(0) + "\n", ln) if _IMG.search(ln) else ln
             for ln in md.split("\n")
         )
-    righe = md.split("\n")
+    righe = _spoglia_homebrewery(md.split("\n"))
     primo_paragrafo = None
     ultimo_titolo = ""
     out: list[str] = []
@@ -355,6 +401,17 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 i += 1
             testo = " ".join(x for x in blocco if x)
             out.append(("#leggi[" if aloud else "#nota[") + inline(testo) + "]")
+            continue
+
+        # I due blocchi Homebrewery sopravvissuti allo spogliatore diventano i
+        # box del tema: `{{descriptive}}` è un read-aloud, `{{note}}` una nota.
+        if ln.startswith("§§HB-APRE§§"):
+            out.append("#leggi[" if ln.endswith("descriptive") else "#nota[")
+            i += 1
+            continue
+        if ln.startswith("§§HB-CHIUDE§§"):
+            out.append("]")
+            i += 1
             continue
 
         m_img = _IMG.fullmatch(ln.strip())

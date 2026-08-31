@@ -66,7 +66,7 @@ Before generating any new campaign content, the agent must:
    to the DM** — do not silently retcon.
 4. Default tone: R.A. Salvatore — slow build, sensory detail, internal stakes,
    moral cost. Avoid camp, anachronism, modern jargon. The Salvatore voice is
-   the prose layer of the full eight-pillar mix defined in
+   the prose layer of the full nine-pillar mix defined in
    `../rumblingstone-narrative-style/` — load that skill for any generation.
 
 ## Adult Group Conventions

@@ -294,4 +294,10 @@ explicit `[COHERENCE WARNING: <which rule>]` so the DM can adjudicate.
             adds LotR depth, Casa di Davide destiny, Andor intrigue,
             GoT politics, Mercer table technique, BG3 echo ledger
             state.md §7.E, BG1/2 quest patterns, PC protagonism test).
+2026-08-31  Pillar 9 (il caso ricomposto) gains its literary anchor:
+            Umberto Eco, Il nome della rosa — document as clue and its
+            omissions, closed community ruled by its rule book, the
+            fruitful error, erudite detail that is also the mechanism.
+            Operations live in rumblingstone-indagine; structure and
+            object only, read-aloud ceilings win any conflict.
 ```

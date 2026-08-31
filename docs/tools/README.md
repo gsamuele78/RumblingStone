@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**45 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**46 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -44,6 +44,7 @@
 |---|---|---|:--:|:--:|:--:|---|
 | `build_booklet_html.py` | Booklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003). | **manifest** · --out · --format | ✔ | — | — | `0` · `2` |
 | `build_chapter_marks.py` | Genera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche. | --serie · -o/--out · --all | ✔ | — | — | `0` · `2` |
+| `build_image_derivatives.py` | Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini. | **cartella** · --max · --quality | ✔ | — | — | `0` · `1` · `2` |
 | `dm_dossier.py` | SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera. | -o/--output | ✔ | — | — | `0` · `1` |
 | `export_booklet_pdf.py` | PDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser). | **manifest** · --pane · --all · --list · --outdir · --browser | — | — | — | `0` · `1` · `2` |
 | `export_booklet_typst.py` | Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato "layout": "schede" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo. | **manifest** · --all · --keep-typ · --list · --per-scheda | ✔ | — | — | `0` · `1` · `2` |

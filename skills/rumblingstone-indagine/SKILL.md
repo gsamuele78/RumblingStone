@@ -37,7 +37,7 @@ diventano una sola cosa.
 
 | Se la domanda è… | La skill è… |
 |---|---|
-| Come suona la prosa, quale pilastro guida la scena | `rumblingstone-narrative-style` (questa skill **è** il suo pilastro 9) |
+| Come suona la prosa, quale pilastro guida la scena | `rumblingstone-narrative-style` (questa skill **è** il suo pilastro 9, la cui ancora letteraria è Umberto Eco, *Il nome della rosa* — vedi `references/documento-ed-errore-fecondo.md`) |
 | Quanto fa una prova, cosa è «solo per addestrati», i massimali dei gradi | `dnd-35-srd` |
 | Chi è il colpevole nella campagna, cosa sa già il gruppo | `rumblingstone-campaign` + `campaign/state.md` |
 | Come si struttura la quest in tappe e fazioni | `rumblingstone-narrative-style/references/quest-design-baldur.md` |
@@ -112,6 +112,7 @@ le prove d'abilità normali sono in `references/nodi-e-sei-porte.md` §3.
 | Scrivere gli indizi: il nodo a tre strati, le sei porte per esteso con esempi giocati, le CD, la mappa dei nodi, **il vicolo cieco** | `references/nodi-e-sei-porte.md` |
 | Premiare chi ha spremuto le meningi: **Acume, Perizia, Metodo**, i tetti, il registro da tenere (ADR-0022) | `references/registro-e-ricompense.md` |
 | Scrivere **la scena in cui tutto si ricompone**, i falsi indizi progettati, il combattimento pre-letto | `references/ricomposizione.md` |
+| **Scrivere il documento** che porta l'indizio (e le assenze che sono la prova), il **regolamento** della comunità chiusa come motore politico, **l'errore fecondo** quando il tavolo deduce male, il dettaglio d'epoca che *è* il meccanismo | `references/documento-ed-errore-fecondo.md` |
 | Il disegno finale: le schegge, la chiave di lettura, **il congegno arcano/aberrante/mistico**, la **regia del prestigiatore**, **l'innesco in piena vista**, il congegno nell'**agenda dei villain**, il congegno come **terzo attore** in combattimento, il **dosaggio** | `references/congegno-e-enigmi.md` |
 
 ## 4. Lo scheletro di un caso (una pagina)

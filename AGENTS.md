@@ -31,7 +31,7 @@ skills/
 ├── dnd-35-srd/             # D&D 3.5 SRD mechanics (no setting bias)
 ├── forgotten-realms-lore/  # Faerûn 1372 DR canon
 ├── rumblingstone-campaign/ # custom campaign + coherence rules
-├── rumblingstone-narrative-style/ # eight-pillar style engine (mandatory for generation)
+├── rumblingstone-narrative-style/ # nine-pillar style engine (mandatory for generation)
 ├── rumblingstone-mapmaking/ # battle-map pipeline (3 modes, JSON contract, UVTT)
 ├── rumblingstone-automation/ # dm.py CLI + session-state pipeline (ADR-0007)
 ├── rumblingstone-debugging/ # root-cause debugging, SOLO infrastruttura scripts/CI (vendored da obra/superpowers, MIT — ADR-0010)
@@ -72,7 +72,7 @@ AI agents that support SKILL.md will discover them automatically:
 - `skills/dnd-35-srd/` — pure d20 SRD mechanics
 - `skills/forgotten-realms-lore/` — Faerûn 1372 DR canon
 - `skills/rumblingstone-campaign/` — this campaign (PCs, artifacts, arcs, coherence)
-- `skills/rumblingstone-narrative-style/` — **mandatory for all content generation**: eight-pillar style engine (Salvatore prose, LotR depth, Casa di Davide destiny, Andor intrigue, GoT politics, Mercer table technique, BG3 echoes, BG1/2 quest design), PC protagonism in good and evil
+- `skills/rumblingstone-narrative-style/` — **mandatory for all content generation**: nine-pillar style engine (Salvatore prose, LotR depth, Casa di Davide destiny, Andor intrigue, GoT politics, Mercer table technique, BG3 echoes, BG1/2 quest design, il caso ricomposto — anchored on Eco), PC protagonism in good and evil
 - `skills/rumblingstone-mapmaking/` — map generation workflow (Watabou, templates, VTT export)
 - `skills/rumblingstone-automation/` — `dm.py` CLI + session-state pipeline: session end wizard, per-PG recaps, next-session brief, canon writes only under the ADR-0007 triple constraint (group branch + confirmed diff + `auto:` regions)
 - `skills/rumblingstone-plans/` — work-plan archive conventions (INDEX, gates, ADRs)
@@ -155,7 +155,7 @@ When any agent answers a question:
 8. **Coherence**: Before introducing artifact powers, NPC knowledge, or callbacks to past PG actions, consult `skills/rumblingstone-campaign/references/campaign-coherence.md`.
 9. **Boosting PNGs/villains/monsters**: The campaign runs on D&D 3.5; Pathfinder 1e SRD material (simple templates, Monster-Statistics-by-CR benchmarks, NPC recipes) is an approved boost toolkit. Always go through `skills/npc-villain-boosting/` — it enforces the EL cap (≤ APL+4), the benchmark step, and the `Boost log:` requirement on named-NPC files. Never boost silently.
 10. **Session lifecycle & canon writes**: Closing a session, updating `state.md`, generating recaps/briefs/teasers, or invoking anything in `scripts/` goes through `skills/rumblingstone-automation/` (single entrypoint `python3 scripts/dm.py`). Scripts may write canon ONLY under the ADR-0007 triple constraint: group branch (never `main`), DM-confirmed diff, and `<!-- auto: -->` marked regions of `state.md`. Everything else stays a printed proposal the DM applies by hand.
-11. **Narrative content generation**: ANY request to generate quests, session prose, read-aloud/boxed text, NPC dialogue, hooks, recaps, or handouts MUST load `skills/rumblingstone-narrative-style/` (eight-pillar style engine) automatically — the user should never have to ask for "the style". It enforces the scene mixer (one lead pillar per scene), the PC Protagonism Test, the living-world rules (NPC/villain agency + SRD attitude mechanics — protagonism is the camera, not gravity), the Echo Ledger (`state.md` §7.E), and the BG1/2 quest-stage patterns. Coherence (rule 8) always beats style.
+11. **Narrative content generation**: ANY request to generate quests, session prose, read-aloud/boxed text, NPC dialogue, hooks, recaps, or handouts MUST load `skills/rumblingstone-narrative-style/` (nine-pillar style engine) automatically — the user should never have to ask for "the style". It enforces the scene mixer (one lead pillar per scene), the PC Protagonism Test, the living-world rules (NPC/villain agency + SRD attitude mechanics — protagonism is the camera, not gravity), the Echo Ledger (`state.md` §7.E), and the BG1/2 quest-stage patterns. For **mysteries, clues and in-fiction documents** the case skill `skills/rumblingstone-indagine/` carries the operational layer, including the Eco register (`references/documento-ed-errore-fecondo.md`): the document and its omissions, the rule book as a political engine, the table's wrong deduction made productive instead of corrected, and the guard clause — structure and object, never paragraph length, with the read-aloud ceilings winning any conflict. Coherence (rule 8) always beats style.
 
 ---
 

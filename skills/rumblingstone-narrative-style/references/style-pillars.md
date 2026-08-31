@@ -305,6 +305,45 @@ Acume / Perizia / Metodo ledger of [ADR-0022](../../../plans/adr/ADR-0022-compet
 dead-end handling, the arcane/aberrant/mystic device). Load that skill
 whenever a case is written or run; this profile only fixes the voice.
 
+### The literary anchor: Umberto Eco, *Il nome della rosa*
+
+Everything above is structure. The **craft of the objects that carry it** is
+where this pillar takes a named source — and it is the only non-anglophone one
+in the nine, which matters in a repo whose source language is Italian
+([ADR-0016](../../../plans/adr/ADR-0016-lingua-sorgente-e-edizioni.md)). Eco's
+novel is a Holmes structure in a habit: a deducing investigator (William **of
+Baskerville**, and the name is declared), a Watson who narrates without
+understanding, one death at a time inside a **closed community that lives by a
+rule book**.
+
+Four things it adds that the profile above does not cover:
+
+1. **The document is the clue, and what counts is what is missing from it** —
+   a text has an author, an addressee and an omission, and the omission is the
+   proof: the unsigned correction, the perfectly regular entry inside a sloppy
+   register (written *afterwards*, to be found).
+2. **The rule book as a political engine** — power is exercised by
+   *interpreting* the rule; the weapon is the precedent, not the sword. A
+   different machine from GoT, and it runs on contrade, orders and guilds the
+   repo already has.
+3. **The fruitful error** — the investigator reaches the truth through a
+   pattern that does not exist. Distinct from the designed red herring: that
+   one the DM writes, this one **the table produces**, and it is accepted
+   rather than corrected.
+4. **The erudite detail that is also the mechanism** — the period specific is
+   never ornament; planted early and harmless, it is the thing that later
+   kills someone.
+
+> ⚠️ **Guard clause.** **Eco enters at the level of structure and object, never
+> at the level of paragraph length. When the two conflict, the read-aloud
+> limits win** (~12 lines per box, one new proper noun, two subordinates). The
+> pillar's natural temptation is long descriptive openings and erudition on
+> display: read aloud, they lose the table by the third sentence. No Latin, no
+> cited treatises.
+
+Operations in `rumblingstone-indagine/references/documento-ed-errore-fecondo.md`.
+
+
 ---
 
 ## Fusion discipline — how nine become one
@@ -323,4 +362,7 @@ whenever a case is written or run; this profile only fixes the voice.
    it can lead a scene (the montage) or run silently underneath an arc of
    any tone, posing shards while GoT or Andor holds the surface.
 6. When two pillars conflict, the order of precedence is:
-   coherence > PC protagonism > lead pillar > support pillars.
+   coherence > PC protagonism > **read-aloud limits** > lead pillar >
+   support pillars. The read-aloud ceilings sit above the lead pillar
+   because a box nobody listens to has already lost, however well the
+   pillar is served (`read-aloud-adulti.md`).

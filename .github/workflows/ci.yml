@@ -89,6 +89,7 @@ jobs:
           python scripts/extract_scene_prompts.py --help > /dev/null
           python scripts/import_watabou.py --help > /dev/null
           python scripts/campaign_branch.py --help > /dev/null
+          python scripts/build_image_derivatives.py --help > /dev/null
           python scripts/validate_booklets.py --help > /dev/null
           python scripts/extract_statblocks.py --help > /dev/null
 

@@ -1,4 +1,4 @@
-# ADR-0019 — Per le immagini generate, la licenza sta nei pesi e non nel software
+# ADR-0019 — Per le immagini generate, la licenza sta nei pesi (o nel contratto), non nel software
 
 **Stato**: accettata
 **Data**: 2026-08-15
@@ -57,6 +57,34 @@ In `<cartella>/PROVENIENZA.txt`, una riga per file:
 
 Senza quella riga l'immagine **non si committa**. Non è burocrazia: è l'unica
 cosa che rende la scelta reversibile fra un anno.
+
+### 2-bis. Se l'immagine viene da un SERVIZIO, non da pesi locali
+
+Il §1 ragiona sui **pesi**, perché il caso previsto era ComfyUI in locale. Le venti
+immagini del Drappo sono arrivate invece da **Gemini**, e lì di pesi non ce ne sono:
+vale il **contratto di servizio**, che è una cosa diversa e cambia due volte.
+
+| | Pesi locali | Servizio |
+|---|---|---|
+| **Cosa governa** | la licenza dei pesi | i termini del servizio, che **cambiano nel tempo** |
+| **Riproducibilità** | seed → identica | **nessun seed esposto**: l'immagine è irripetibile |
+| **Provenienza** | la scrivi tu | **firmata C2PA** dal servizio, e verificabile |
+
+Le due regole che ne discendono, e che valgono da qui in avanti:
+
+1. **Con un servizio, il master È l'artefatto.** Senza seed non si rigenera: i PNG
+   originali vanno versionati e trattati come **sorgente**, non come output. È
+   l'unica eccezione consapevole ad ADR-0003 in tutto il repo.
+2. **I termini si rileggono prima di pubblicare, non una volta per sempre.** Al
+   2026-08-15 Google non rivendica la proprietà del generato e ne consente l'uso
+   commerciale nel rispetto delle policy — ma è una clausola contrattuale, non una
+   licenza perpetua come Apache o OFL, e nessuno garantisce che sia identica fra un
+   anno.
+
+⚠️ **E un fatto che non è una restrizione ma va saputo**: un'immagine puramente
+generata con ogni probabilità **non è tutelabile da copyright**. Si può usare e
+anche vendere; non si può impedire ad altri di riusarla. Per un modulo amatoriale
+non cambia niente; per un'edizione a pagamento è una cosa da sapere prima.
 
 ### 3. Le immagini di terzi restano sotto ADR-0005
 

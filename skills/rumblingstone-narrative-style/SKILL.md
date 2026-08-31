@@ -13,7 +13,8 @@ description: >
   "recap", "hook", "descrivi la scena", "session prep", "new quest",
   "dialogo", "conseguenze", "stile narrativo", "mondo vivo", "living
   world", "world turn", "cosa fanno i PNG", "agenda dei villain",
-  "indagine", "mistero", "indizio", "ricomposizione".
+  "indagine", "mistero", "indizio", "ricomposizione",
+  "handout", "documento", "chi è stato", "pista falsa", "railroad".
 ---
 
 # RumblingStone — Narrative Style Engine (Nine Pillars)
@@ -29,7 +30,7 @@ the user should never have to ask for "the style" explicitly.
 1. `rumblingstone-campaign/references/campaign-coherence.md` + `campaign/state.md`
    — establish what is true (coherence always beats style).
 2. This file — pick the pillar mix for the scene type (table below).
-3. `references/style-pillars.md` — the eight pillars: what to take,
+3. `references/style-pillars.md` — the nine pillars: what to take,
    what to avoid, fusion rules.
 4. The specific reference for the task (table below).
 5. **`references/italiano-nativo.md` — OBBLIGATORIO prima di consegnare**
@@ -69,7 +70,7 @@ the user should never have to ask for "the style" explicitly.
 | 6 | **Matt Mercer** | Table technique: distinct NPC voices, "how do you want to do this?", yes-and, backstory woven into plot |
 | 7 | **Baldur's Gate 3** | Long-range consequences: every meaningful choice writes an echo that returns changed, sessions later |
 | 8 | **Baldur's Gate 1–2** | Quest architecture: multi-stage quests, interleaved factions, personal companion quests, villains with a personal claim on the PCs |
-| 9 | **Il caso ricomposto** | Deduction as climax: clues posed innocent and re-read by one key, six doors so combat-built PCs can investigate, the retrospective montage |
+| 9 | **Il caso ricomposto** | Deduction as climax: clues posed innocent and re-read by one key, six doors so combat-built PCs can investigate, the retrospective montage. Literary anchor: **Umberto Eco**, *Il nome della rosa* — the document and its omissions, the rule book as a political engine, the fruitful error |
 
 > **Due piani, non uno.** Il mixer qui sotto è **per scena**. Il piano
 > **per arco** — di che colore è l'arco intero, e se quel colore è già stato
@@ -89,6 +90,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | Investigation / mystery (a case) | Il caso ricomposto | Andor (procedure), GoT (who profits) |
 | Infiltration / heist | Andor | BG1–2 (structure) |
 | Reveal / recomposition scene | Il caso ricomposto | Salvatore (senses), BG3 (echoes surfaced) |
+| **In-fiction document / handout with an author** | **Il caso ricomposto** (registro Eco) | Mercer (the voice that wrote it) |
 | PC personal arc / destiny beat | Casa di Davide | Mercer, BG3 (echoes) |
 | NPC dialogue | Mercer | GoT (agendas) |
 | Quest design (structure) | BG1–2 | BG3 (echoes), Andor (intrigue) |
@@ -106,7 +108,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | BG1/2-style complex quest patterns: stages, factions, personal quests | `references/quest-design-baldur.md` |
 | Living world: NPC/villain agency, world turn, SRD attitude system, settlements | `references/living-world.md` |
 | **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap**; e per gli archi **modulari** la **quota di modulo** (quanti puliti / con mistero / con congegno) e **l'orchestrazione dinamica** (vocazioni, gettone in mano, la regola dello scarto) | `references/varieta-fra-archi.md` |
-| **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione | **skill dedicata `rumblingstone-indagine`** |
+| **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione; e il **registro Eco** — il documento e le sue assenze, il regolamento della comunità chiusa, **l'errore fecondo** (anti-binario), il dettaglio-meccanismo | **skill dedicata `rumblingstone-indagine`** (per il registro Eco: `references/documento-ed-errore-fecondo.md`) |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |
 | **Italiano nativo + anti-riconoscibilità** — calchi, dislocazioni, diminutivi, tempi, ritmo, registro nanico (§1-8) · **i tic dell'IA: antitesi «non X: è Y», tricolon, chiuse a effetto, tutto-è-significativo** (§9) · checklist | **`references/italiano-nativo.md`** |
@@ -142,6 +144,14 @@ multi-session set piece, study its *shape* first
 5. **Tone floor** — adult, slow-build, no modern slang, no fourth-wall
    winks, no victory without cost (inherited from
    `rumblingstone-campaign/references/campaign-coherence.md` §4).
+6. **Un mistero ha una soluzione scritta** — ogni domanda che il modulo pone
+   ai giocatori ha una risposta preparata e una **rete ridondante** di nodi su
+   canali diversi (`rumblingstone-indagine`). Aperto non è sinonimo di
+   indefinito: senza soluzione preparata l'errore fecondo diventa
+   improvvisazione, e i giocatori se ne accorgono al secondo tentativo.
+7. **La lunghezza non è mai un pilastro** — il registro Eco entra al livello
+   della struttura e dell'oggetto, mai a quello del paragrafo. In conflitto
+   vincono sempre i tetti di `references/read-aloud-adulti.md`.
 
 ## Self-check before delivering generated content
 
@@ -155,3 +165,8 @@ Run the coherence self-check (`campaign-coherence.md` §6) first, then:
 5. Living-world check: does every named NPC have a Want that isn't about
    the PCs, and did the world act for its own reasons somewhere? (If no →
    rewire; see `references/living-world.md` §7.)
+6. If the scene poses a question: is the clue network redundant, and does the
+   table's wrong answer still lead somewhere real? (If no → see
+   `rumblingstone-indagine/references/documento-ed-errore-fecondo.md` §4-5.)
+7. Did any box grow past the read-aloud ceiling because the prose got
+   interesting? (If yes → cut; the ceiling wins.)

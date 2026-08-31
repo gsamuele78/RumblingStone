@@ -193,6 +193,8 @@ che passa in mezzo alle tavole perché è tradizione che passi.
 
 ---
 
+![La Cena della vigilia](ALLEGATI/immagini/web/tavola-la-cena.jpg)
+
 ## §5 · L'uomo con la fascia grigia
 
 **Beat di Nocca.** Da giocare quando il giocatore di Nocca si allontana dalla Cena,
@@ -219,7 +221,11 @@ nessuno. L'unica variabile è se l'Istrice lo sanno prima.
 
 ---
 
-## §6 · Notte — l'assalto alle stalle
+![Le stalle, dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg)
+
+## §6
+
+![Le stalle dopo mezzanotte](ALLEGATI/immagini/web/tavola-le-stalle.jpg) · Notte — l'assalto alle stalle
 
 **Quando**: dopo mezzanotte, quando la Cena è finita e in giro c'è solo chi è di
 guardia. Mappa: `ALLEGATI/mappe/` → *le stalle dell'Istrice*, 21 × 15 quadretti, 1,5 m

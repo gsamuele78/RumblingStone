@@ -50,6 +50,19 @@
   else { "" }
 }
 
+// Una figura: se è più larga che alta scavalca le due colonne (le tavole
+// d'ambiente), se è verticale sta in colonna (i ritratti). La didascalia è
+// l'alt del markdown.
+#let figura(percorso, alt, larga: false) = {
+  let corpo = block(breakable: false, width: 100%)[
+    #image(percorso, width: 100%)
+    #v(2pt)
+    #text(size: 8pt, style: "italic", fill: seppia)[#alt]
+  ]
+  if larga { place(top, float: true, scope: "parent", clearance: 12pt, corpo) }
+  else { corpo }
+}
+
 #let fregio() = align(center)[
   #v(0.3em)
   #text(fill: seppia, size: 11pt)[❦]
