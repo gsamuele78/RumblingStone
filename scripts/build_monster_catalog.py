@@ -202,6 +202,11 @@ def scan_directory(root):
         # Hard blocklist: non-monster paths/filenames that leak via CR-in-text
         BLOCK_SUBSTR = [
             'build/',
+            # I piani e le decisioni architetturali PARLANO di statblocchi e ne
+            # mostrano esempi: ADR-0021 ne contiene uno intero. Un documento che
+            # spiega il formato non è un mostro.
+            'plans/',
+            'docs/',
             'campaign-party',
             'treasure&xp',
             'treasure_xp',

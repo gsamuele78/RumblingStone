@@ -92,7 +92,7 @@ Dal **2026-08-15** ci sono due strade, e non sono in concorrenza
 | **Comando** | `build_booklet_html.py MANIFEST.json --format both` | `export_booklet_typst.py MANIFEST.json --all` |
 | **Motore** | Chromium (per i PDF sciolti) | `typst` |
 | **Produce** | `.html` + `.hb.md`, e con `export_booklet_pdf.py` un PDF **per capitolo** | **un volume** `-STAMPA.pdf` |
-| **Tipografia** | Georgia, font di sistema | **EB Garamond + Cinzel embeddati** (OFL, in `scripts/typst/fonts/`) |
+| **Tipografia** | Georgia, font di sistema | **EB Garamond + Cinzel embeddati** (OFL, in `scripts/fonts/`) |
 | **Indice** | l'HTML ha i tab | **segnalibri PDF veri** + indice cliccabile |
 | **Quando** | mandare una pagina a un giocatore, impaginare altrove | il libro |
 

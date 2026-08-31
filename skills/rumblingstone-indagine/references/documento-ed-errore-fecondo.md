@@ -1,17 +1,22 @@
-# Mistero e documento — il pilastro Eco, ridotto a operazioni
+# Il documento e l'errore fecondo — il registro Eco del caso
 
-**Perché esiste questo file.** *Il nome della rosa* è, sotto il saio, una storia
-di Sherlock Holmes: un investigatore che deduce (Guglielmo **da Baskerville**,
-e il nome è dichiarato), il suo Watson che racconta senza capire (Adso), e un
-delitto per volta dentro una **comunità chiusa che vive di regolamenti**. È la
-forma esatta che serve a un modulo d'indagine — e non era coperta da nessuno
-degli otto pilastri: Andor dà la *procedura* della cospirazione, GoT dà la
-*politica*, BG1-2 dà la *struttura* della quest. Nessuno dei tre dice **come si
-costruisce un indizio**.
+**Perché esiste questo file.** Il resto della skill dice **come si struttura un
+caso**: i nodi a tre strati, le sei porte, la rete ridondante, la
+ricomposizione. Restano fuori due mestieri che *Il nome della rosa* ha già
+risolto, e che il pilastro 9 nomina come sua **ancora letteraria**:
+
+1. **come si scrive l'oggetto** che porta il nodo — il documento, e quello che
+   vi manca;
+2. **cosa si fa quando il tavolo deduce male** — e la risposta non è
+   correggerlo.
+
+Più due cose che tengono onesto il resto: il **regolamento** come motore
+politico, e il dettaglio d'epoca che **è** il congegno invece di decorarlo.
 
 > ⚠️ **Eco entra come metodo, non come atmosfera.** Non serve un'abbazia, non
 > servono i monaci, non serve il latino. Servono quattro operazioni. Chi usa
-> questo pilastro per scrivere paragrafi lunghi e dotti l'ha usato al contrario.
+> questo registro per scrivere paragrafi lunghi e dotti l'ha usato al
+> contrario — vedi §7.
 
 ---
 
@@ -50,6 +55,10 @@ Il repertorio delle assenze utili — ognuna è un indizio già pronto:
 | lo **stesso nome con due grafie** | due mani diverse, o una che imita |
 | una **pagina strappata a filo** | non fretta: uno strumento e tempo |
 | un **atto perfettamente in regola** in un registro sciatto | è stato scritto **dopo**, per essere trovato |
+
+Il documento **non è il nodo**: lo porta. Il nodo resta a tre strati
+(Fatto / Lettura / Nome, `nodi-e-sei-porte.md` §1) e il Fatto non si tira mai —
+qui si decide soltanto **che oggetto lo mette in mano ai giocatori**.
 
 Vincoli pratici, che valgono più di qualunque teoria:
 
@@ -103,6 +112,11 @@ la cosa che al tavolo succede sempre.
 > conferma. **Si lascia che il mondo risponda** — e il mondo, spesso, dà loro
 > ragione per un altro motivo.
 
+⚠️ **Non è il falso indizio progettato** (`ricomposizione.md` §6), ed è la
+distinzione che rende il paragrafo utile: quello lo **scrive il DM** prima della
+serata, questo lo **produce il tavolo** e non era previsto. Il primo si prepara,
+il secondo si accoglie.
+
 Tre modi di renderlo concreto:
 
 1. **La pista falsa vera.** L'indizio è autentico; è il **nesso** a essere
@@ -118,38 +132,30 @@ Tre modi di renderlo concreto:
    momento, altrimenti è solo una cortesia che il DM dimentica.
 
 ⚠️ **Il limite onesto, e non è negoziabile**: l'errore fecondo funziona solo se
-**la soluzione vera esiste, è scritta e è raggiungibile**. Un mistero senza
-risposta preparata non è aperto: è sciatto, e i giocatori lo sentono al secondo
-tentativo. Vedi §5.
+**la soluzione vera esiste, è scritta e è raggiungibile**. È il SEGRETO dello
+scheletro (`SKILL.md` §4), che il DM sa dal primo minuto: un mistero senza
+risposta preparata non è aperto, è sciatto, e i giocatori lo sentono al secondo
+tentativo.
 
 ---
 
-## 5. La regola dei tre indizi e l'orologio degli indizi
+## 5. Dove appoggia: la rete ridondante, già scritta
 
-L'attrezzo di design che tiene in piedi le operazioni 1 e 3 (la *three-clue
-rule*, formulata da Justin Alexander e ormai patrimonio comune del mestiere):
+La regola che tiene in piedi le operazioni 1 e 3 è **la rete ridondante** di
+`nodi-e-sei-porte.md` §4 — un caso non è una catena, e nessuna conclusione
+necessaria dipende da un nodo solo. Non si ripete qui.
 
-> **Per ogni conclusione a cui i giocatori devono poter arrivare, si scrivono
-> TRE indizi indipendenti.** Non perché servano tutti: perché due si perdono.
+Quello che il registro Eco ci aggiunge sono due righe:
 
-Come si applica qui:
-
-- i tre indizi devono stare su **canali diversi** — un documento, una
-  testimonianza, una cosa fisica in un luogo. Tre documenti sono **un** canale;
-- **indipendenti** vuol dire che nessuno dei tre richiede di aver trovato gli
-  altri due;
-- il terzo indizio è quello che si può **muovere**: se il tavolo non ha in mano
-  niente dopo tre scene, **l'indizio va da loro** — per bocca di un PNG che ha
-  una sua ragione per parlare, mai per intuizione gratuita di un PG;
-- l'orologio si scrive accanto al mistero, non si tiene a mente: *«scena 3 senza
-  nulla in mano → il carrettiere racconta della ricevuta»*.
-
-Il rapporto con il resto: gli indizi mossi sono **echi in entrata** — si
-registrano come qualsiasi altra conseguenza
-(`consequence-echoes.md`), perché un indizio consegnato a forza è un debito che
-il mondo ha contratto e il tavolo se ne ricorderà.
-
----
+- **i nodi ridondanti stanno su canali diversi.** Tre documenti sono **un**
+  canale: se il gruppo non legge, non legge tre volte. Un documento, una
+  testimonianza, una cosa fisica in un luogo — quello è ridondante davvero;
+- **l'indizio che il DM consegna** perché il tavolo è fermo (il vicolo cieco,
+  `nodi-e-sei-porte.md` §5) **è un eco in entrata**: si registra come qualsiasi
+  altra conseguenza
+  (`../../rumblingstone-narrative-style/references/consequence-echoes.md`),
+  perché arriva per bocca di un PNG che ha una sua ragione per parlare — e
+  quella ragione è un debito che il mondo ha contratto.
 
 ## 6. Operazione 4 — il dettaglio erudito che è anche il meccanismo
 
@@ -166,7 +172,8 @@ Le due metà della regola, e la seconda si dimentica sempre:
    sembra innocuo (un mestiere descritto, un prezzo, una precauzione). Se compare
    per la prima volta nella scena in cui serve, è un *deus ex machina*.
 2. **Il colore resta colore, e non si traveste.** Un particolare inutile ma vero
-   fa bene alla scena (`read-aloud-adulti.md` §sul dettaglio inutile) — a patto
+   fa bene alla scena (il dettaglio inutile di
+   `../../rumblingstone-narrative-style/references/read-aloud-adulti.md`) — a patto
    che il DM sappia quali dei due è, perché il tavolo inseguirà comunque
    entrambi.
 
@@ -187,18 +194,22 @@ tentazione naturale:
 
 In concreto:
 
-- **niente descrizioni lunghe**: i tetti del read-aloud di `read-aloud-adulti.md`
+- **niente descrizioni lunghe**: i tetti del read-aloud
+  (`../../rumblingstone-narrative-style/references/read-aloud-adulti.md`)
   restano quelli (max ~12 righe per box, **un solo nome proprio nuovo**, massimo
   due subordinate). Un incipit da romanzo letto ad alta voce **stacca il tavolo**
   al terzo periodo;
 - **niente erudizione esibita**: nessuna citazione latina, nessun trattato
   riportato, nessun elenco di autorità. La competenza si mostra con **una** cosa
   concreta;
-- **niente name-dropping** (non-negoziabile 4 della skill): il pilastro è una
+- **niente name-dropping** (non-negoziabile 4 di `rumblingstone-narrative-style`):
+  il pilastro è una
   fonte di mestiere, mai un riferimento da nominare nella finzione o da imitare
   così da vicino da leggersi come la fonte;
-- **non è il pilastro di ogni scena.** Eco guida le scene di **mistero e
-  documento**. Un combattimento resta Salvatore, una scena politica resta GoT.
+- **non è il registro di ogni scena.** Vale dove c'è un documento, un
+  regolamento o una deduzione in corso. Un combattimento resta Salvatore, una
+  scena politica resta GoT — e nel dosaggio d'arco vale la quota di
+  `../../rumblingstone-narrative-style/references/varieta-fra-archi.md`.
 
 ---
 
@@ -206,13 +217,16 @@ In concreto:
 
 | Cosa | Dove |
 |---|---|
-| I profili completi dei nove pilastri | `style-pillars.md` §9 |
-| I **tetti** del read-aloud, che vincono sempre | `read-aloud-adulti.md` |
-| La **lingua** dei documenti in-fiction | `italiano-nativo.md` |
-| L'indizio consegnato = **eco in entrata** | `consequence-echoes.md` |
-| Le **fasi** della quest in cui il mistero si incastra | `quest-design-baldur.md` |
-| La resa **materiale** dell'handout (carta, mano, macchia) | ADR-0014 + `campaign/templates/homebrew/` |
+| Il **profilo del pilastro 9** e la sua ancora letteraria | `../../rumblingstone-narrative-style/references/style-pillars.md` §9 |
+| I **nodi**, le sei porte, la rete ridondante, il vicolo cieco | `nodi-e-sei-porte.md` |
+| Il **falso indizio progettato** (che il DM scrive) e la scena di ricomposizione | `ricomposizione.md` §6-7 |
+| Che **famiglia** di caso è, e la firma dei suoi indizi | `famiglie-di-caso.md` |
+| Il **congegno** e l'innesco in piena vista | `congegno-e-enigmi.md` |
+| I **tetti** del read-aloud, che vincono sempre | `../../rumblingstone-narrative-style/references/read-aloud-adulti.md` |
+| La **lingua** dei documenti in-fiction | `../../rumblingstone-narrative-style/references/italiano-nativo.md` |
+| La resa **materiale** dell'handout (carta, mano, macchia) | [ADR-0014](../../../plans/adr/ADR-0014-regia-sensoriale-obbligatoria.md) + `campaign/templates/homebrew/` |
 
-> **Ordine d'applicazione**: prima la struttura (questo file), poi la voce
-> (`style-pillars.md`), poi la lingua (`italiano-nativo.md`), **infine i tetti
-> del read-aloud** — che sono l'ultima parola e non si negoziano.
+> **Ordine d'applicazione**: prima la struttura del caso (la skill), poi questo
+> registro per l'oggetto e per l'errore, poi la voce
+> (il pilastro 9), poi la lingua — **infine i tetti del read-aloud**, che
+> sono l'ultima parola e non si negoziano.

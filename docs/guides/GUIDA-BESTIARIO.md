@@ -220,3 +220,48 @@ la truppa d'ondata e l'élite convivono.
 | Censimento di ciò che manca (cosa dell'AP non è ancora in repo) | [`CENSIMENTO-MOSTRI-PNG-VILLAIN.md`](../../CENSIMENTO-MOSTRI-PNG-VILLAIN.md) (radice del repo) |
 | Parametri esatti degli script | [`scripts/README-automation.md`](../../scripts/README-automation.md) · [`docs/tools/README.md`](../tools/README.md) |
 | Proporre incontri col catalogo | `python3 scripts/dm.py prep --el 13 --env underground` |
+
+## Il blocco statistiche (dal 2026-08-22)
+
+Una scheda può portare in testa, subito **dopo** l'intestazione, un blocco coi
+soli campi meccanici ([ADR-0021](../../plans/adr/ADR-0021-statblocchi-machine-readable.md)).
+La prosa resta dov'è: il blocco serve agli script, la prosa serve all'occhio.
+
+````markdown
+```statblocco
+gs: 2
+tipo: Small plant, 4d8+16
+ca: 15
+ca-dettaglio: contatto 11, colto alla sprovvista 15 (+1 taglia, +4 naturale)
+pf: 34
+pf-dado: 4d8+16
+ts: Temp +6, Rifl +1, Vol +2
+velocita: 6 m
+attacchi:
+  - Mischia schianto +5 (1d4+1)
+voci:
+  - Talenti: Allerta, Resistenza Fisica
+```
+````
+
+- obbligatori: `gs`, `ca`, `pf`, `ts`. Gli altri campi sono in
+  `scripts/schemas/statblock.schema.json`;
+- `pf-dado` sono i **dadi vita**, non i dadi di danno;
+- il `gs` deve coincidere col `-crN.md` del nome del file: è il modo tipico in cui
+  una scheda potenziata resta indietro, e il gate lo controlla;
+- «CR 1/2», «0.5» e `-cr05.md` sono lo stesso grado.
+
+Per scriverlo non serve farlo a mano:
+
+```bash
+python3 scripts/extract_statblocks.py                 # cosa si riesce a ricavare
+python3 scripts/extract_statblocks.py --apply         # scrive SOLO i blocchi completi
+python3 scripts/extract_statblocks.py --check         # il gate (gira in CI)
+```
+
+L'estrattore **non inventa**: se un numero non c'è nella prosa, la scheda finisce
+nel rapporto invece di ricevere un blocco a metà. Alla prima passata: 82 schede su
+157 migrate, 75 da fare a mano.
+
+In stampa il blocco diventa un riquadro (`#statblocco()`), coi numeri dove il DM
+li cerca invece che dentro un paragrafo.

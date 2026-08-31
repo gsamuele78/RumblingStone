@@ -80,6 +80,33 @@ sono materia della **tabella di conversione flashback→bonus** (D9,
 piano ARC-08 B1 — non ancora scritta): qui si registra solo
 l'opportunità narrativa e tattica, non il bonus meccanico finale.
 
+## 3-bis. Come suona una colonna in marcia (rimando al read-aloud)
+
+Questa scheda è **logistica**: numeri, rotta, punti d'interferenza. La
+marcia però va anche *raccontata*, e nove volte su dieci l'orda arriva
+al tavolo già schierata sotto le mura — cioè saltando la parte migliore.
+
+Il read-aloud dell'avvicinamento sta in `ARC08-01-GUIDA-DM.md`, in testa
+alla **Sessione 1** (*«L'orda si sente prima di vedersi»*): odore prima
+del suono, suono prima della vista. Si legge **la sera che precede
+l'avvistamento**, con i pregen ancora dentro la fortezza.
+
+Tre dettagli di questa scheda che rendono quel box credibile, se il DM
+li tiene a mente mentre lo legge:
+
+- la colonna marcia **compatta**, con i Worg Riders in avanscoperta
+  sui fianchi — il rumore che si sente per primo viene da *loro*, non
+  dal grosso;
+- **900 unità** che mangiano e bevono lungo una rotta di montagna: la
+  fame non è un aggettivo, è logistica, ed è il motivo per cui Hammerfist
+  è un bersaglio d'opportunità;
+- Fauci di Palude fa **ricognizione aerea periodica** sopra la colonna:
+  se il DM vuole un secondo presagio prima dell'Incontro 1F, è
+  un'ombra che passa e nessuno che riesce a dire cos'era.
+
+Cue sonoro: `ARC08-16-CUE-SONORI.md` §2 — il basso continuo parte qui e
+non si spegne fino alla fine dell'arco.
+
 ## 4. Arrivo e ancoraggio al March Clock
 
 - **Assedio**: 3 giorni di battaglia (Giorno 1-3, vedi

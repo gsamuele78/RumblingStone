@@ -3,18 +3,17 @@ name: rumblingstone-narrative-style
 description: >
   Narrative style engine for ALL generated RumblingStone content — quests,
   session prose, read-aloud/boxed text, NPC dialogue, hooks, recaps,
-  handouts, villain scenes, mysteries and document clues. Fuses nine
-  pillars into one voice: R.A. Salvatore prose, Tolkien/LotR epic depth,
-  House of David dynastic destiny, Andor slow-burn intrigue, Game of
-  Thrones political gray, Matt Mercer table technique, Baldur's Gate 3
-  long-range consequences, Baldur's Gate 1–2 complex quest design, Umberto
-  Eco (*Il nome della rosa*) mystery method — with the PCs always
-  protagonists, in good and in evil. Trigger on any content-generation
-  request: "genera", "scrivi", "crea la quest", "prepara la sessione",
-  "read-aloud", "boxed text", "recap", "hook", "descrivi la scena",
-  "session prep", "new quest", "dialogo", "conseguenze", "stile
-  narrativo", "mondo vivo", "living world", "world turn", "cosa fanno i
-  PNG", "agenda dei villain", "mistero", "indagine", "indizio",
+  handouts, villain scenes. Fuses nine pillars into one voice: R.A.
+  Salvatore prose, Tolkien/LotR epic depth, House of David dynastic destiny,
+  Andor slow-burn intrigue, Game of Thrones political gray, Matt Mercer
+  table technique, Baldur's Gate 3 long-range consequences, Baldur's Gate
+  1–2 complex quest design, il caso ricomposto (deduction as climax) —
+  with the PCs always protagonists, in good and in evil. Trigger on any content-generation request: "genera", "scrivi",
+  "crea la quest", "prepara la sessione", "read-aloud", "boxed text",
+  "recap", "hook", "descrivi la scena", "session prep", "new quest",
+  "dialogo", "conseguenze", "stile narrativo", "mondo vivo", "living
+  world", "world turn", "cosa fanno i PNG", "agenda dei villain",
+  "indagine", "mistero", "indizio", "ricomposizione",
   "handout", "documento", "chi è stato", "pista falsa", "railroad".
 ---
 
@@ -71,7 +70,14 @@ the user should never have to ask for "the style" explicitly.
 | 6 | **Matt Mercer** | Table technique: distinct NPC voices, "how do you want to do this?", yes-and, backstory woven into plot |
 | 7 | **Baldur's Gate 3** | Long-range consequences: every meaningful choice writes an echo that returns changed, sessions later |
 | 8 | **Baldur's Gate 1–2** | Quest architecture: multi-stage quests, interleaved factions, personal companion quests, villains with a personal claim on the PCs |
-| 9 | **Umberto Eco** (*Il nome della rosa*) | Mystery method: the document as clue and what is missing from it, the closed community that lives by a rule book, the fruitful error, the erudite detail that is also the mechanism |
+| 9 | **Il caso ricomposto** | Deduction as climax: clues posed innocent and re-read by one key, six doors so combat-built PCs can investigate, the retrospective montage. Literary anchor: **Umberto Eco**, *Il nome della rosa* — the document and its omissions, the rule book as a political engine, the fruitful error |
+
+> **Due piani, non uno.** Il mixer qui sotto è **per scena**. Il piano
+> **per arco** — di che colore è l'arco intero, e se quel colore è già stato
+> usato in quello prima — sta in `references/varieta-fra-archi.md`, e va
+> deciso **prima** di scrivere il contenuto dell'arco. La monotonia di una
+> campagna non è un difetto di scena: è un difetto di sequenza, e non si vede
+> leggendo un modulo.
 
 **Fusion rule — never all nine at once.** Every scene has ONE lead pillar
 and at most two support pillars, chosen by scene type. The mixer:
@@ -81,9 +87,10 @@ and at most two support pillars, chosen by scene type. The mixer:
 | Combat / action prose | Salvatore | Mercer (finisher), LotR (stakes) |
 | Read-aloud / location intro | LotR | Salvatore (senses) |
 | Political / faction scene | Game of Thrones | Andor |
-| Investigation / infiltration (procedural) | Andor | BG1–2 (structure) |
-| **Mystery / clue scene / interrogating a document** | **Eco** | Andor (procedure), BG1–2 (stages) |
-| **In-fiction document / handout with an author** | **Eco** | Mercer (the voice that wrote it) |
+| Investigation / mystery (a case) | Il caso ricomposto | Andor (procedure), GoT (who profits) |
+| Infiltration / heist | Andor | BG1–2 (structure) |
+| Reveal / recomposition scene | Il caso ricomposto | Salvatore (senses), BG3 (echoes surfaced) |
+| **In-fiction document / handout with an author** | **Il caso ricomposto** (registro Eco) | Mercer (the voice that wrote it) |
 | PC personal arc / destiny beat | Casa di Davide | Mercer, BG3 (echoes) |
 | NPC dialogue | Mercer | GoT (agendas) |
 | Quest design (structure) | BG1–2 | BG3 (echoes), Andor (intrigue) |
@@ -100,9 +107,10 @@ and at most two support pillars, chosen by scene type. The mixer:
 | BG3-style echo ledger: writing, timing, and paying off consequences | `references/consequence-echoes.md` |
 | BG1/2-style complex quest patterns: stages, factions, personal quests | `references/quest-design-baldur.md` |
 | Living world: NPC/villain agency, world turn, SRD attitude system, settlements | `references/living-world.md` |
+| **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap**; e per gli archi **modulari** la **quota di modulo** (quanti puliti / con mistero / con congegno) e **l'orchestrazione dinamica** (vocazioni, gettone in mano, la regola dello scarto) | `references/varieta-fra-archi.md` |
+| **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione; e il **registro Eco** — il documento e le sue assenze, il regolamento della comunità chiusa, **l'errore fecondo** (anti-binario), il dettaglio-meccanismo | **skill dedicata `rumblingstone-indagine`** (per il registro Eco: `references/documento-ed-errore-fecondo.md`) |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |
-| **Mistero e documento** — le quattro operazioni del pilastro Eco: il repertorio delle **assenze** che sono indizi, il regolamento della comunità chiusa, **l'errore fecondo** (anti-binario), il dettaglio-meccanismo, la **regola dei tre indizi** con l'orologio, e la clausola di salvaguardia | **`references/mistero-e-documento.md`** |
 | **Italiano nativo + anti-riconoscibilità** — calchi, dislocazioni, diminutivi, tempi, ritmo, registro nanico (§1-8) · **i tic dell'IA: antitesi «non X: è Y», tricolon, chiuse a effetto, tutto-è-significativo** (§9) · checklist | **`references/italiano-nativo.md`** |
 
 **Worked exemplar in repo**: the Palio di Channathgate
@@ -137,13 +145,13 @@ multi-session set piece, study its *shape* first
    winks, no victory without cost (inherited from
    `rumblingstone-campaign/references/campaign-coherence.md` §4).
 6. **Un mistero ha una soluzione scritta** — ogni domanda che il modulo pone
-   ai giocatori ha una risposta preparata e **tre indizi indipendenti** su tre
-   canali diversi (`references/mistero-e-documento.md` §5). Aperto non è
-   sinonimo di indefinito: senza soluzione preparata l'errore fecondo diventa
+   ai giocatori ha una risposta preparata e una **rete ridondante** di nodi su
+   canali diversi (`rumblingstone-indagine`). Aperto non è sinonimo di
+   indefinito: senza soluzione preparata l'errore fecondo diventa
    improvvisazione, e i giocatori se ne accorgono al secondo tentativo.
-7. **La lunghezza non è mai un pilastro** — Eco entra al livello della
-   struttura e dell'oggetto, mai a quello del paragrafo. In conflitto vincono
-   sempre i tetti di `references/read-aloud-adulti.md`.
+7. **La lunghezza non è mai un pilastro** — il registro Eco entra al livello
+   della struttura e dell'oggetto, mai a quello del paragrafo. In conflitto
+   vincono sempre i tetti di `references/read-aloud-adulti.md`.
 
 ## Self-check before delivering generated content
 
@@ -157,8 +165,8 @@ Run the coherence self-check (`campaign-coherence.md` §6) first, then:
 5. Living-world check: does every named NPC have a Want that isn't about
    the PCs, and did the world act for its own reasons somewhere? (If no →
    rewire; see `references/living-world.md` §7.)
-6. If the scene poses a question: are there **three independent clues**, and
-   does the wrong answer still lead somewhere real? (If no → see
-   `references/mistero-e-documento.md` §4-5.)
+6. If the scene poses a question: is the clue network redundant, and does the
+   table's wrong answer still lead somewhere real? (If no → see
+   `rumblingstone-indagine/references/documento-ed-errore-fecondo.md` §4-5.)
 7. Did any box grow past the read-aloud ceiling because the prose got
    interesting? (If yes → cut; the ceiling wins.)

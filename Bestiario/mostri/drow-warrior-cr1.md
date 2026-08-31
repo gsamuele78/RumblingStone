@@ -1,5 +1,17 @@
 # Drow Warrior [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: drow-sonjak | **Role**: fodder-melee | **Environment**: underdark | **CR**: 1 | **Source**: FRCS p.17 drow traits + MM p.103 Elf Warrior 1 | **Status**: inferred
+
+```statblocco
+gs: 1
+ca: 17
+ca-dettaglio: (+4 chain shirt, +2 Dex, +1 light shield)
+pf: 5
+pf-dado: 1d8+1
+ts: Temp +3, Rifl +2, Vol +2
+velocita: 30 ft
+iniziativa: +2
+```
+
 **Size/Type**: Medium humanoid (elf) | **HD**: 1d8+1 (5 HP)
 **AC**: 17 (+4 chain shirt, +2 Dex, +1 light shield) | **Init**: +2 | **Speed**: 30 ft
 **Saves**: Fort +3, Ref +2, Will +2 (+2 vs enchant) | **BAB/Grapple**: +1/+2

@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""extract_statblocks.py — dal Bestiario in prosa al blocco statistiche (ADR-0021).
+
+Cosa fa. Legge le schede di `Bestiario/`, prova a ricavare dai loro numeri il
+blocco `statblocco` (vedi `dmcore/statblock.py`) e — con `--apply` — lo scrive
+in testa alla scheda **solo dove l'estrazione è completa**. Le altre finiscono
+in un rapporto con scritto cosa manca.
+
+È lo stesso mestiere di `import_ultraclear.py` per le mappe: una migrazione
+semi-automatica che non inventa. Una scheda migrata a metà, con un numero
+dedotto, sarebbe peggio di una scheda non migrata — al tavolo ci si fida di
+quello che c'è scritto.
+
+Uso:
+    python3 scripts/extract_statblocks.py                 # rapporto, non tocca niente
+    python3 scripts/extract_statblocks.py --apply         # scrive i blocchi completi
+    python3 scripts/extract_statblocks.py --check         # i blocchi esistenti sono validi?
+    python3 scripts/extract_statblocks.py --json          # rapporto machine-readable
+
+`--check` è il gate: verifica che ogni blocco già presente si legga, che i suoi
+campi obbligatori ci siano e che il **GS dichiarato nel blocco coincida** con
+quello del nome del file (`-crN.md`) — che è il modo tipico in cui una scheda
+potenziata resta indietro.
+
+Dipendenze: stdlib.
+Exit code: 0 = ok · 1 = `--check` ha trovato blocchi rotti · 2 = uso errato.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.statblock import (  # noqa: E402
+    APERTURA, Statblocco, StatblockError, estrai, leggi, rendi,
+)
+
+ROOT = Path(__file__).resolve().parent.parent
+BESTIARIO = ROOT / "Bestiario"
+CR_NEL_NOME = re.compile(r"-cr(\d{1,2})\.md$", re.I)
+# `-cr05.md` nel nome vuole dire GS 1/2: la convenzione del repo evita il punto
+# nei nomi di file, e confrontarlo alla lettera darebbe due falsi allarmi.
+FRAZIONI = {"05": "1/2", "025": "1/4"}
+
+
+def gs_numerico(v: str) -> float | None:
+    """«1/2», «0.5» e «05» sono lo stesso grado di sfida, scritto in tre modi."""
+    v = v.strip().replace(" ", "")
+    v = FRAZIONI.get(v, v)
+    try:
+        if "/" in v:
+            a, _, b = v.partition("/")
+            return float(a) / float(b)
+        return float(v)
+    except (ValueError, ZeroDivisionError):
+        return None
+
+
+def schede() -> list[Path]:
+    return sorted(
+        p for p in BESTIARIO.rglob("*.md")
+        if not p.name.startswith("README") and "pregen-pcgen" not in p.as_posix()
+        and "INDICE" not in p.name
+    )
+
+
+def inserisci(testo: str, sb: Statblocco) -> str:
+    """Il blocco va **dopo** il titolo e la riga di intestazione, prima della prosa.
+
+    Sopra il titolo sarebbe un file che non si apre più come una scheda; in
+    fondo sarebbe un dato che nessuno vede. Dopo l'intestazione è il posto dove
+    un lettore umano si aspetta i numeri.
+    """
+    if APERTURA in testo:
+        return testo
+    righe = testo.split("\n")
+    taglio = 0
+    for i, r in enumerate(righe[:6]):
+        if r.startswith("#") or r.startswith("**Faction**"):
+            taglio = i + 1
+    while taglio < len(righe) and not righe[taglio].strip():
+        taglio += 1
+    return "\n".join(righe[:taglio] + ["", rendi(sb), ""] + righe[taglio:])
+
+
+def controlla(f: Path) -> list[str]:
+    """I problemi del blocco di UNA scheda (lista vuota = tutto bene)."""
+    rel = f.relative_to(ROOT) if ROOT in f.parents else f
+    testo = f.read_text(encoding="utf-8")
+    try:
+        sb = leggi(testo)
+    except StatblockError as e:
+        return [f"{rel}: {e}"]
+    if sb is None:
+        return []
+    problemi = []
+    m = CR_NEL_NOME.search(f.name)
+    atteso = FRAZIONI.get(m.group(1), m.group(1)) if m else None
+    if atteso and sb.gs and gs_numerico(sb.gs) != gs_numerico(atteso):
+        problemi.append(f"{rel}: il blocco dice GS {sb.gs} e il nome del file dice "
+                        f"GS {atteso} — uno dei due è rimasto indietro")
+    return problemi
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("file", nargs="*", help="schede da trattare (default: tutto il Bestiario)")
+    ap.add_argument("--apply", action="store_true",
+                    help="scrive il blocco nelle schede dove l'estrazione è COMPLETA")
+    ap.add_argument("--check", action="store_true",
+                    help="verifica i blocchi già presenti (gate CI); non scrive niente")
+    ap.add_argument("--json", action="store_true", help="rapporto machine-readable")
+    args = ap.parse_args()
+
+    elenco = [Path(x).resolve() for x in args.file] or schede()
+    for f in elenco:
+        if not f.is_file():
+            print(f"✗ scheda non trovata: {f}", file=sys.stderr)
+            return 2
+
+    if args.check:
+        problemi = [p for f in elenco for p in controlla(f)]
+        conblocco = sum(1 for f in elenco if APERTURA in f.read_text(encoding="utf-8"))
+        if args.json:
+            print(json.dumps({"schede": len(elenco), "con_blocco": conblocco,
+                              "problemi": problemi}, ensure_ascii=False, indent=2))
+        else:
+            for p in problemi:
+                print(f"  ✗ {p}", file=sys.stderr)
+            stato = "✓" if not problemi else "✗"
+            print(f"{stato} extract_statblocks --check: {conblocco}/{len(elenco)} schede "
+                  f"hanno il blocco, {len(problemi)} problemi")
+        return 1 if problemi else 0
+
+    completi, parziali, gia = [], [], []
+    for f in elenco:
+        testo = f.read_text(encoding="utf-8")
+        if APERTURA in testo:
+            gia.append(f)
+            continue
+        sb, mancanti = estrai(testo)
+        if mancanti:
+            parziali.append((f, mancanti))
+        else:
+            completi.append((f, sb))
+
+    if args.apply:
+        for f, sb in completi:
+            f.write_text(inserisci(f.read_text(encoding="utf-8"), sb), encoding="utf-8")
+
+    rel = lambda f: str(f.relative_to(ROOT))  # noqa: E731
+    if args.json:
+        print(json.dumps({
+            "schede": len(elenco),
+            "gia_migrate": [rel(f) for f in gia],
+            "completi": [rel(f) for f, _ in completi],
+            "parziali": {rel(f): m for f, m in parziali},
+            "applicato": bool(args.apply),
+        }, ensure_ascii=False, indent=2))
+        return 0
+
+    verbo = "scritti" if args.apply else "pronti (nessuna scrittura: manca --apply)"
+    print(f"  {len(gia)} schede hanno già il blocco")
+    print(f"  {len(completi)} blocchi {verbo}")
+    print(f"  {len(parziali)} schede da fare a mano — la prosa non dice tutto:")
+    conteggio: dict[str, int] = {}
+    for _, m in parziali:
+        for c in m:
+            conteggio[c] = conteggio.get(c, 0) + 1
+    for campo, n in sorted(conteggio.items(), key=lambda x: -x[1]):
+        print(f"      manca «{campo}» in {n}")
+    for f, m in parziali[:12]:
+        print(f"      · {rel(f)} → manca {', '.join(m)}")
+    if len(parziali) > 12:
+        print(f"      … e altre {len(parziali) - 12} (usa --json per l'elenco intero)")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

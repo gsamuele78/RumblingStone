@@ -63,6 +63,8 @@ Hammerfist si gioca su **due livelli di personaggi**:
    bonus del flashback.
 10. `Cerimonia-delle-100-Asce.md` — chiusura dell'arco (Day 21) e hook
     verso ARC-09.
+11. `ARC08-16-CUE-SONORI.md` — i suoni della serata (si legge una
+    volta, prima della Sessione 1; sono quattro cue per sessione).
 
 **Cosa stampare per il tavolo**: i **4 pregen** (schede giocatore, quando
 pronte in B5/C4), il **registro perdite** (`ARC08-03`), le **mappe
@@ -87,6 +89,8 @@ master** rilevanti alla sessione.
 | `ARC08-13-TESORO-WBL-AUDIT.md` | Audit tesoro/WBL 13°, handoff ARC-09 (B4) | Canonico |
 | `ARC08-14-ATLANTE-IMMAGINI.md` | Classificazione immagini→scene→prompt (C3) | Canonico |
 | `ARC08-15-HANDOUTS-GIOCATORE.md` | Handout stampabili: pregen, runa, canto, mappa giocatore (C4) | Canonico |
+| `ARC08-16-CUE-SONORI.md` | Cue sonori dell'arco (apparato d'uso [ADR-0018](../plans/adr/ADR-0018-apparato-uso-obbligatorio.md) §5) | Canonico |
+| `ERRATA-ARC08-DESCRIZIONE-EPICA.md` | Riconciliazione col testo narrativo del DM (nomi, sorte di Thorek, khuzdul, cronologia) | Canonico |
 | `ERRATA-ARC08-35-Verification.md` | Verifica meccanica 3.5 (B5) | Canonico |
 | `Cerimonia-delle-100-Asce.md` | Chiusura arco + hook ARC-09 (D3) | Canonico (benchmark, NON riscrivere) |
 | `hammerfist_encounters-...-final.md` | Guida agli scontri | Canonico |

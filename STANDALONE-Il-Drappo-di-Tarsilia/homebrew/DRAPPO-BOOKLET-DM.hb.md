@@ -212,6 +212,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | `ALLEGATI/mappe/uvtt/` | le due mappe pronte per **Foundry / Roll20** |
 | `ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md` | art direction e prompt per l'edizione raster |
 | `PROMPT-GENERAZIONE-BOOKLET-DEFINITIVO.md` | **cosa manca per l'edizione illustrata** e il prompt pronto da passare a una sessione nuova |
+| `PROMPT-PLAYTEST-BOOKLET-E-PLAYERGUIDE.md` | **cosa resta da collaudare** sul libro illustrato (dove atterrano le figure, read-aloud spezzati, spoiler nella guida giocatori) e il prompt pronto per una sessione nuova |
 | `IP-E-LICENZE.md` | Community Use Policy Paizo, OGL, provenienza |
 
 ---

@@ -60,6 +60,48 @@ from pathlib import Path
 # Lo stile «pergamena» canonico (identico all'anteprima visiva e all'artefatto
 # del Palio). Se lo tocchi, tocchi TUTTI i booklet futuri: fallo di proposito.
 # ---------------------------------------------------------------------------
+ROOT = Path(__file__).resolve().parent.parent
+
+# ── la tipografia ────────────────────────────────────────────────────────────
+# Fino al 2026-08-22 questi booklet usavano **Georgia**, che è un font di
+# sistema: su una macchina che non ce l'ha il PDF cambia faccia, ed è il difetto
+# [2] del capitolato del Drappo. La catena di stampa lo aveva già chiuso
+# (ADR-0020) e questa no — cioè lo stesso capitolo, dato a due giocatori,
+# usciva con due tipografie diverse.
+#
+# I `.woff2` stanno in `scripts/fonts/web/` (OFL, con la loro licenza accanto) e
+# vengono incorporati in base64: un booklet è **un file solo** che si manda per
+# posta, e un file solo non può andare a prendersi i font da qualche parte.
+FONTS_WEB = ROOT / "scripts" / "fonts" / "web"
+FACCE = (
+    ("EB Garamond", "ebgaramond.woff2", "normal", "400 700"),
+    ("EB Garamond", "ebgaramond-italic.woff2", "italic", "400 700"),
+    ("Cinzel", "cinzel.woff2", "normal", "400 700"),
+)
+
+
+INCORPORA_FONT = True
+
+
+def css_font_face() -> str:
+    """Le `@font-face` col woff2 in base64, o stringa vuota se i file non ci sono."""
+    if not INCORPORA_FONT:
+        return ""
+    fuori = []
+    for famiglia, file, stile, peso in FACCE:
+        f = FONTS_WEB / file
+        if not f.is_file():
+            print(f"  ⚠ font mancante: {f.relative_to(ROOT)} — il booklet userà i font di "
+                  f"sistema (vedi scripts/fonts/README.md)", file=sys.stderr)
+            return ""
+        b64 = base64.b64encode(f.read_bytes()).decode()
+        fuori.append(
+            "@font-face{font-family:'%s';font-style:%s;font-weight:%s;font-display:swap;"
+            "src:url(data:font/woff2;base64,%s) format('woff2');}" % (famiglia, stile, peso, b64)
+        )
+    return "\n".join(fuori)
+
+
 CSS = """
   :root{
     --chrome-bg:#efe9dd; --chrome-ink:#3a3126; --chrome-line:#d8cdb8;
@@ -78,7 +120,7 @@ CSS = """
            --tab-bg:#e2d8c2; --shadow:0 10px 26px rgba(43,36,28,.35); }
 
   body{ background:var(--chrome-bg); color:var(--chrome-ink);
-        font-family:Georgia,'Times New Roman',serif; margin:0; }
+        font-family:'EB Garamond',Georgia,'Times New Roman',serif; margin:0; }
   header.top{ padding:1.4rem 1rem .6rem; text-align:center; }
   header.top h1{ font-size:1.15rem; margin:0; letter-spacing:.06em; text-transform:uppercase; }
   header.top p{ margin:.35rem auto 0; max-width:46rem; font-size:.9rem; opacity:.8; font-style:italic; }
@@ -130,7 +172,7 @@ CSS = """
   .sheet h4.sub4{ font-variant:small-caps; color:var(--rubric); font-size:1rem; margin:.7rem 0 .2rem;}
   .sheet p{ margin:.45rem 0; text-align:justify; hyphens:auto;}
   .sheet .lede::first-letter{ font-size:3.1em; float:left; line-height:.82;
-      padding:.04em .08em 0 0; color:var(--rubric); font-family:Georgia,serif;}
+      padding:.04em .08em 0 0; color:var(--rubric); font-family:'Cinzel',Georgia,serif;}
   .sheet ul{ margin:.4rem 0 .7rem 1.2rem; padding:0;}
   .sheet ol{ margin:.4rem 0 .7rem 1.4rem; padding:0;}
   .sheet li{ margin:.22rem 0;}
@@ -163,7 +205,7 @@ CSS = """
   .pagefoot{ display:flex; justify-content:space-between; align-items:baseline;
       margin-top:2.2rem; border-top:1px solid var(--brass); padding-top:.5rem;
       font-size:.72rem; letter-spacing:.14em; color:var(--rubric); font-variant:small-caps;}
-  .pagefoot .n{ font-family:Georgia,serif; font-size:1rem; font-variant-numeric:tabular-nums;}
+  .pagefoot .n{ font-family:'Cinzel',Georgia,serif; font-size:1rem; font-variant-numeric:tabular-nums;}
   .dmtag{ position:absolute; top:.9rem; right:1rem; font-size:.62rem; letter-spacing:.2em;
       color:var(--banner); border:1px solid var(--banner); padding:.15rem .5rem; }
   .pgtag{ position:absolute; top:.9rem; right:1rem; font-size:.62rem; letter-spacing:.2em;
@@ -429,6 +471,7 @@ def md_to_html(md: str, base: Path) -> str:
 
 
 def build(manifest_path: Path, out_override: Path | None = None) -> Path:
+    font_face = css_font_face()
     base = manifest_path.parent
     mf = json.loads(manifest_path.read_text(encoding="utf-8"))
     title = mf.get("title", "Booklet")
@@ -488,7 +531,7 @@ def build(manifest_path: Path, out_override: Path | None = None) -> Path:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
-<style>{CSS}</style>
+<style>{font_face}{CSS}</style>
 </head>
 <body>
 <header class="top">
@@ -565,11 +608,16 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("manifest", help="manifest JSON del booklet (vedi docstring)")
     ap.add_argument("--out", help="file HTML di output (default: dal manifest)")
+    ap.add_argument("--no-font-embed", action="store_true",
+                    help="non incorporare i caratteri: file molto più leggero, ma il "
+                         "booklet cambia faccia dove EB Garamond non è installato")
     ap.add_argument("--format", choices=["html", "hb", "both"], default="html",
                     help="html = pagina autonoma con immagini incorporate; "
                          "hb = sorgente Homebrewery V3 (.hb.md) per il self-hosted/Docker; "
                          "both = entrambi (ADR-0013)")
     args = ap.parse_args(argv)
+    global INCORPORA_FONT
+    INCORPORA_FONT = not args.no_font_embed
     mp = Path(args.manifest)
     if not mp.exists():
         print(f"ERRORE: manifest non trovato: {mp}", file=sys.stderr)

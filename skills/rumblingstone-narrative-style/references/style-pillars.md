@@ -252,49 +252,97 @@ quest-tree format of `rumblingstone-campaign/references/dm-expansion-toolkit.md`
 
 ---
 
-## 9. Umberto Eco — *Il nome della rosa*: the mystery method
+## 9. Il caso ricomposto — deduction as the climax
 
-The one pillar that is not anglophone, and the one that covers what the other
-eight leave open: **how a clue is built**. *The Name of the Rose* is a Holmes
-structure in a habit — a deducing investigator (William **of Baskerville**, and
-the name is declared), a Watson who narrates without understanding (Adso), one
-death at a time inside a **closed community that lives by a rule book**.
+The investigation pillar. Its distinguishing claim: **the climax can be
+cognitive**. The scene the whole arc is built toward is not a killing blow
+but the moment six things seen across three sessions stop being six things.
 
 **Take**
-- **The document is the clue, and what counts is what is missing from it.** A
-  text has an author, an addressee and an omission; the omission is the proof —
-  the unsigned correction, the receipt with no name, the page torn off flush.
-- **The closed community and its rule book**: power is exercised by *interpreting*
-  the rule, not by holding the sword. A different political engine from GoT — the
-  weapon is the precedent, and whoever grants an exception has created one.
-- **The fruitful error**: the investigator reaches the truth by following a
-  pattern that does not exist. This legitimizes at the table the thing that
-  always happens — the party's wrong deduction — and turns it into a real lead
-  instead of a correction.
-- **The erudite detail that is also the mechanism**: no period specific is
-  ornament. How ink is mixed, how a book is bound, how a poison keeps is always
-  **the thing that later kills someone** — planted early, in a context where it
-  looks harmless.
-- The **narrator who understands less than the reader**: Adso reports faithfully
-  and concludes wrongly. Handouts written by an in-fiction hand should do the
-  same — a witness statement is more useful when the witness misunderstands.
+- **The retrospective montage**: a chain of short accelerating sentences,
+  every link a callback to something the players actually saw, the last two
+  reversing the hypothesis the table was holding. Take away, then put back.
+- **Innocence before meaning**: each clue must have a plausible mundane
+  explanation *at the moment it is found*. The DM never lies about facts —
+  the shards were always honest, just insufficient.
+- **The fact is free, the reading is earned**: information is layered
+  (Fact / Reading / Name), and the objective layer is never gated behind a
+  roll. Failure removes interpretation, never the fact.
+- **Six doors on one clue**: strength, agility, endurance, reasoning,
+  perception, and persuasion each cut a *different* piece of the same scene.
+  This is what keeps a table of combat-built PCs inside an investigation.
+- **The designed red herring**: a *true* piece of information that leads to
+  the cheapest wrong conclusion, and costs something to unwind — leaving a
+  real piece of the truth behind when it does.
+- **Show a part, never the whole**: the effect before the cause, one
+  component out of context described with technical precision and no gloss,
+  honest misdirection (the light points at something real, just not the
+  most important thing), and the machine seen entire exactly once.
+- **The trigger in plain sight**: a detail given *free* inside a scene about
+  something else, which fires if nobody touches it. Noticed, the scene
+  inverts and the danger becomes an asset; ignored, it costs — and then
+  explains itself with no word from the DM.
+- **The device is the room, not the boss**: it acts on a schedule, both
+  sides can operate it, and it changes which tactics work. Understanding it
+  buys *actions that did not exist before*, never a bonus to hit.
+- **The residue**: one thing per case that is never explained, and never
+  will be.
 
-**Avoid** — the failure mode is specific and tempting: **length and erudition on
-display**. Long descriptive openings, Latin quotations, cited treatises,
-catalogues of authorities. Also: a mystery with no prepared solution (open is not
-the same as sloppy), and a clue that explains itself (*"and this proves that…"*
-is the player's line, never the author's).
+**Avoid** — the puzzle-as-lock (a riddle that stops the session if
+unsolved); the device rewritten as a power-up (a damage bonus, a hit-point
+sponge, an "I win" lever, or a machine the DM operates to rescue a fight
+going badly); wonder spent until it is furniture — one whole device per
+arc, at most two triggers, and most sessions with none of it; the expert
+NPC who summarizes; the montage that introduces new
+information (that is the DM explaining himself, not a deduction);
+everything-is-significant, which teaches the table to inventory instead of
+reason; and gore standing in for dread — an aberration frightens by what it
+implies (§5 *Avoid* applies in full).
 
-**In play** — full operations in `references/mistero-e-documento.md`: the table
-of useful absences, the three moves of the rule book, the three ways to make a
-wrong deduction productive, the three-clue rule with its clue clock, and the
-guard clause below.
+**In play** — full mechanics in the dedicated skill
+`rumblingstone-indagine` (clue nodes, the six doors and their DCs, the
+Acume / Perizia / Metodo ledger of [ADR-0022](../../../plans/adr/ADR-0022-competenza-guadagnata-sul-campo.md),
+dead-end handling, the arcane/aberrant/mystic device). Load that skill
+whenever a case is written or run; this profile only fixes the voice.
+
+### The literary anchor: Umberto Eco, *Il nome della rosa*
+
+Everything above is structure. The **craft of the objects that carry it** is
+where this pillar takes a named source — and it is the only non-anglophone one
+in the nine, which matters in a repo whose source language is Italian
+([ADR-0016](../../../plans/adr/ADR-0016-lingua-sorgente-e-edizioni.md)). Eco's
+novel is a Holmes structure in a habit: a deducing investigator (William **of
+Baskerville**, and the name is declared), a Watson who narrates without
+understanding, one death at a time inside a **closed community that lives by a
+rule book**.
+
+Four things it adds that the profile above does not cover:
+
+1. **The document is the clue, and what counts is what is missing from it** —
+   a text has an author, an addressee and an omission, and the omission is the
+   proof: the unsigned correction, the perfectly regular entry inside a sloppy
+   register (written *afterwards*, to be found).
+2. **The rule book as a political engine** — power is exercised by
+   *interpreting* the rule; the weapon is the precedent, not the sword. A
+   different machine from GoT, and it runs on contrade, orders and guilds the
+   repo already has.
+3. **The fruitful error** — the investigator reaches the truth through a
+   pattern that does not exist. Distinct from the designed red herring: that
+   one the DM writes, this one **the table produces**, and it is accepted
+   rather than corrected.
+4. **The erudite detail that is also the mechanism** — the period specific is
+   never ornament; planted early and harmless, it is the thing that later
+   kills someone.
 
 > ⚠️ **Guard clause.** **Eco enters at the level of structure and object, never
-> at the level of paragraph length. When the two conflict, the read-aloud limits
-> win** (`read-aloud-adulti.md`: ~12 lines per box, one new proper noun, two
-> subordinates). A novel's opening read aloud loses the table by the third
-> sentence.
+> at the level of paragraph length. When the two conflict, the read-aloud
+> limits win** (~12 lines per box, one new proper noun, two subordinates). The
+> pillar's natural temptation is long descriptive openings and erudition on
+> display: read aloud, they lose the table by the third sentence. No Latin, no
+> cited treatises.
+
+Operations in `rumblingstone-indagine/references/documento-ed-errore-fecondo.md`.
+
 
 ---
 
@@ -310,9 +358,11 @@ guard clause below.
 5. Tone pillars (LotR / Davide / Andor / GoT) are *selected*, not
    stacked: epic-mythic, destiny-tragic, procedural-intrigue, or
    political-gray. Pick the one the scene needs.
-6. The **mystery layer is Eco** — whenever the scene turns on a document,
-   an investigation, or a rule invoked against someone, Eco leads and the
-   others support; everywhere else it is silent.
-7. When two pillars conflict, the order of precedence is:
-   coherence > PC protagonism > read-aloud limits > lead pillar >
-   support pillars.
+5-bis. **Il caso ricomposto is a structure pillar, not a tone pillar** —
+   it can lead a scene (the montage) or run silently underneath an arc of
+   any tone, posing shards while GoT or Andor holds the surface.
+6. When two pillars conflict, the order of precedence is:
+   coherence > PC protagonism > **read-aloud limits** > lead pillar >
+   support pillars. The read-aloud ceilings sit above the lead pillar
+   because a box nobody listens to has already lost, however well the
+   pillar is served (`read-aloud-adulti.md`).

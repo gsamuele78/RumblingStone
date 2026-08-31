@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**44 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**46 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -51,12 +51,14 @@
 | `extract_scene_prompts.py` | Estrae le scene illustrabili di un arco (read-aloud + copertura immagini) e genera lo scheletro del file dei prompt immagine (ADR-0015); rigenerazione idempotente che non perde le schede gia compilate. | **arc** · -o/--output · --list | ✔ | — | — | `0` · `1` · `2` |
 | `hype_homebrew.py` | Impagina recap o handout in layout Homebrewery V3, senza mai duplicare il filtro spoiler di session_recap. | --recap · --pg · --handout · --da · --sezione | ✔ | — | — | `0` · `1` |
 | `session_recap.py` | Recap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM. | --last-n · --out · --pdf · --seed · --pg | ✔ | — | — | `0` · `1` |
+| `validate_booklets.py` | Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo. | manifest · --stampa · --spiega · --json | ✔ | — | — | `0` · `1` · `2` |
 
 ## E · Bestiario / Catalogo mostri
 
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
 | `build_monster_catalog.py` | Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml. | --check · -o/--output | ✔ | — | — | `0` · `1` |
+| `extract_statblocks.py` | Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file. | file · --apply · --check · --json | ✔ | — | — | `0` · `1` · `2` |
 | `validate_bestiario.py` | Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti. | --rules · --json | ✔ | — | — | `0` · `1` |
 
 ## F · Pipeline skill multi-agente

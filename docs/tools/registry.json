@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 44,
+  "tool_count": 46,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -2358,6 +2358,107 @@
       ]
     },
     {
+      "id": "validate_booklets",
+      "path": "scripts/validate_booklets.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/validate_booklets.py --stampa",
+      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I manifest da controllare (default: tutti quelli del repo)."
+        },
+        {
+          "name": "--stampa",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Compila ogni volume con typst e controlla dimensione e segnalibri. Senza il binario, salta dichiarandolo."
+        },
+        {
+          "name": "--spiega",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca per esteso gli avvisi di parità fra le due catene."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esito machine-readable su stdout."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": "scripts/schemas/booklet_manifest.schema.json"
+        },
+        {
+          "path": "i master markdown citati dai manifest",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout (o JSON con --json)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "tutto verde",
+        "1": "almeno un errore",
+        "2": "uso errato"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "L'ordine dei manifest è alfabetico; nessun wallclock nell'output."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/booklet_manifest.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_booklets.py --help",
+      "tests": [
+        "scripts/tests/test_booklets.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
+        "scripts/README-automation.md"
+      ]
+    },
+    {
       "id": "build_monster_catalog",
       "path": "scripts/build_monster_catalog.py",
       "category": "E-bestiary-catalog",
@@ -2425,6 +2526,105 @@
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "extract_statblocks",
+      "path": "scripts/extract_statblocks.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/extract_statblocks.py --check",
+      "summary": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Schede da trattare (default: tutto il Bestiario)."
+        },
+        {
+          "name": "--apply",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive il blocco nelle schede dove l'estrazione è completa."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica i blocchi già presenti; non scrive niente. È il gate CI."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rapporto machine-readable."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": "scripts/schemas/statblock.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "Bestiario/**/*.md (solo con --apply)",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/statblock.schema.json"
+        },
+        {
+          "path": "stdout (o JSON con --json)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check ha trovato blocchi rotti o GS incoerenti",
+        "2": "uso errato o scheda inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Ordine alfabetico; l'inserimento del blocco è idempotente."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/statblock.schema.json",
+      "produces_schema": "scripts/schemas/statblock.schema.json",
+      "ci_smoke": "python scripts/extract_statblocks.py --help",
+      "tests": [
+        "scripts/tests/test_statblock.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-BESTIARIO.md",
+        "plans/adr/ADR-0021-statblocchi-machine-readable.md"
       ]
     },
     {
