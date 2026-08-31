@@ -154,7 +154,7 @@ ancora giocato mentre il precedente è aperto è lavoro che invecchia.
 Più stretta di quanto sembrasse a occhio, perché il Drappo ha già la regia round per
 round e le contingenze. Restano due cose vere.
 
-### B1 · L'analisi di bilanciamento dei tre scontri `⬜`
+### B1 · L'analisi di bilanciamento dei tre scontri `✅ 2026-08-31`
 
 **Produce**: in `06-VILLAIN-E-AGENDE.md` un **§7-bis** che applica il formato DPR di
 ARC-07 ai tre momenti duri del modulo — la rissa alla fontana, l'assalto alle stalle,
@@ -167,7 +167,7 @@ la cosa che il DM vuole sapere prima di sedersi.
 **Dieta**: `STATBLOCCHI-PF1E.md` + `PREGEN-SEI-SCHEDE-PF1E.md` + `06-VILLAIN` §7.
 **Stima**: ~2 ore. **Priorità: 7**.
 
-### B2 · L'audit della ricchezza del Drappo `⬜`
+### B2 · L'audit della ricchezza del Drappo `✅ 2026-08-31`
 
 **Produce**: un `§7-ter` (o un file breve) con l'audit in stile
 `ARC07-TESORO-WBL-AUDIT.md`: quanto entra in mano al gruppo nei tre giorni (il Peso da
@@ -255,8 +255,8 @@ riga in `plans/CHANGELOG.md`.
 - ⬜ **A4** — kit anti-improvvisazione della Valle
 - ⬜ **A5** — prop fisici per gli handout di ARC-07
 - ⬜ **A6** — dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
-- ⬜ **B1** — analisi di bilanciamento dei tre scontri del Drappo
-- ⬜ **B2** — audit della ricchezza del Drappo
+- ✅ **B1** — analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
+- ✅ **B2** — audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
 
 ---
 
