@@ -245,7 +245,7 @@ onestà di `ARC08-16-CUE-SONORI.md`).
 | 4 · inserto per lo schermo | ✅ **già esistente**: il §0-bis quick-reference dentro ogni master |
 | 5 · cue sonori | ✅ §4 |
 | 6 · momento da fotografare | ✅ §5 |
-| 7 · **prop fisici** | ⬜ **manca**: gli handout dell'arco (`ARC07-HANDOUTS.md`) sono ancora testo, non fogli da consegnare. È il lotto A5 di `plans/PIANO-TRAVASO-DRAPPO-CAMPAGNA.md` |
+| 7 · **prop fisici** | ✅ `homebrew/HANDOUT-*.hb.md` — **cinque fogli** da consegnare. ⚠️ *Correzione: quando ho scritto questa riga la prima volta dicevo che mancavano tutti. Non era vero: le Cronache dei Quattro Eroi avevano già il loro prop dal 2026-07-10. Ne mancavano tre, e ora ci sono.* La **nota per il DM che non si stampa** resta in `ARC07-HANDOUTS.md` («Quando darlo», le fonti, l'avviso anti-spoiler B4): il generatore la toglie dal prop apposta |
 | 8 · accessibilità | ✅ §6 |
 | 9 · memoria fra le sessioni | ✅ coperta da `campaign/state.md` + ADR-0007 — **non si duplica** |
 

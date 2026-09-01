@@ -111,7 +111,7 @@ gate restano verdi.
 **Engine**: script + Sonnet, impegno **basso-medio**.
 **Stima**: ~1 ora. **Priorità: 3**.
 
-### A4 · Il kit anti-improvvisazione della Valle `⬜`
+### A4 · Il kit anti-improvvisazione della Valle `✅ 2026-08-31`
 
 **Produce**: `campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`, sul modello di
 `09-KIT-ANTI-IMPROVVISAZIONE.md` ma **tarato sulla campagna**: 1d20 nomi della Valle
@@ -127,7 +127,7 @@ un jolly: è canone, e va da un'altra parte).
 tavolo trasforma in trama diventa canone *dopo*, via `state.md`.
 **Stima**: ~2 ore. **Priorità: 4** — vale per tutti gli archi, non per uno.
 
-### A5 · I prop fisici degli handout di ARC-07 `⬜`
+### A5 · I prop fisici degli handout di ARC-07 `✅ 2026-08-31`
 
 **Produce**: i documenti che la fiction consegna in ARC-07 (`ARC07-HANDOUTS.md`)
 diventano **prop stampabili** con i template di `campaign/templates/homebrew/`, che
@@ -252,8 +252,8 @@ riga in `plans/CHANGELOG.md`.
 - ✅ **A1** — cassetta del DM per ARC-07 *(`ARC07-CASSETTA-DEL-DM.md`: 12 PNG col tic, 9 pronunce con le due collisioni Thorek/Thorik e Durik/Durin, indice dei 260 read-aloud per § con il comando che lo rigenera, 12 cue sonori, 5 momenti da fotografare, accessibilità; §7 dichiara che i prop restano scoperti = lotto A5)*
 - ✅ **A2** — i dieci fregi montati nei manifest della campagna *(chiave `fregio` nel manifest: nel modulo il medaglione si trova dal nome del capitolo, nella campagna è dell'arco)*
 - ✅ **A3** — derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
-- ⬜ **A4** — kit anti-improvvisazione della Valle
-- ⬜ **A5** — prop fisici per gli handout di ARC-07
+- ✅ **A4** — kit anti-improvvisazione della Valle *(`campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`: 3×1d20 nomi separati per popolo, i prezzi che dicono **cosa non si trova** a 13°, tre jolly senza agenda, 1d6 «la Valle respira»)*
+- ✅ **A5** — prop fisici per gli handout di ARC-07 *(tre prop nuovi + il difetto trovato: la nota anti-spoiler finiva stampata nella carta dei giocatori)*
 - ⬜ **A6** — dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
 - ✅ **B1** — analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
 - ✅ **B2** — audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
