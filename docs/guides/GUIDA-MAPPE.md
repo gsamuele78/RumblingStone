@@ -222,7 +222,7 @@ Due vie per generarle:
 | Formato | Comando | Quando |
 |---|---|---|
 | **SVG** | `dm.py maps render` | il canone nel repo; stampa vettoriale senza perdita |
-| **PNG** | `export_map_png.py <svg> --scale 3` | stampa raster, import manuale nel VTT, input hero-map |
+| **PNG** | `export_map_png.py <svg> --scale 3` | stampa raster, import manuale nel VTT, input hero-map. Usa **Inkscape** se installato, altrimenti Chromium (`--renderer` per forzare) |
 | **UVTT / dd2vtt** | `export_uvtt.py <master.md> --ppg 140` | import **nativo** in Foundry/Roll20 |
 
 ### Cosa finisce dentro un `.uvtt` (e perché ti fa risparmiare un'ora)
@@ -268,7 +268,8 @@ mano, la CI diventa rossa. Rimedio: `dm.py maps render <master>` + commit.
 | La griglia «slitta» di un quadretto | righe con numero di celle diverso → conta le celle; se la mappa è complessa passa alla **modalità 3** (JSON) |
 | Un simbolo non viene disegnato | è fuori legenda → usa quelli del §2.3 |
 | Nel VTT mancano i muri | quelle celle non sono simboli-muro riconosciuti (🏰 ⬛ 🟪 🗼 🏛) → correggi la griglia e riesporta |
-| `export_map_png` non parte | serve Chromium headless → vedi [GUIDA-BOOKLET-E-PDF §2](GUIDA-BOOKLET-E-PDF.md#2-prerequisiti) o passa `--browser` |
+| `export_map_png` non parte | serve **uno** fra Inkscape (`dnf`/`apt install inkscape`) e Chromium headless → vedi [GUIDA-BOOKLET-E-PDF §2](GUIDA-BOOKLET-E-PDF.md#2-prerequisiti), o passa `--inkscape`/`--browser` |
+| Il PNG ha etichette storte o tratteggi sbagliati | è il browser che impagina l'SVG come pagina web → `--renderer inkscape` (rasterizzatore SVG vero) |
 | Mappa enorme illeggibile in stampa | `--scale 2/3/4` sul PNG, oppure spezza la mappa in due scene |
 
 ---

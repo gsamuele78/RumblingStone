@@ -177,7 +177,7 @@
     },
     {
       "name": "export_map_png",
-      "description": "Rasterizza un SVG renderizzato in PNG hi-res via Chromium headless (stampa, VTT, input hero-map ComfyUI).",
+      "description": "Rasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
       "invocation": "python3 scripts/export_map_png.py",
       "inputSchema": {
         "type": "object",
@@ -194,9 +194,22 @@
             "type": "number",
             "description": "Fattore di scala."
           },
+          "renderer": {
+            "type": "string",
+            "description": "Motore di rasterizzazione: auto (Inkscape se presente), inkscape, browser.",
+            "enum": [
+              "auto",
+              "inkscape",
+              "browser"
+            ]
+          },
           "browser": {
             "type": "string",
             "description": "Binario Chromium/Chrome da usare."
+          },
+          "inkscape": {
+            "type": "string",
+            "description": "Binario Inkscape da usare."
           }
         },
         "required": [
@@ -209,7 +222,7 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "1": "errore (browser assente o conversione fallita)"
+        "1": "errore (nessun rasterizzatore trovato o conversione fallita)"
       },
       "deterministic": false
     },

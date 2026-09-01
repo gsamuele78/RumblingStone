@@ -443,10 +443,11 @@
       "category": "B-maps-pipeline",
       "language": "python",
       "invocation": "python3 scripts/export_map_png.py",
-      "summary": "Rasterizza un SVG renderizzato in PNG hi-res via Chromium headless (stampa, VTT, input hero-map ComfyUI).",
+      "summary": "Rasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [
+        "inkscape",
         "chromium"
       ],
       "args": [
@@ -478,6 +479,19 @@
           "desc": "Fattore di scala."
         },
         {
+          "name": "--renderer",
+          "type": "str",
+          "required": false,
+          "default": "auto",
+          "choices": [
+            "auto",
+            "inkscape",
+            "browser"
+          ],
+          "repeatable": false,
+          "desc": "Motore di rasterizzazione: auto (Inkscape se presente), inkscape, browser."
+        },
+        {
           "name": "--browser",
           "type": "str",
           "required": false,
@@ -485,6 +499,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Binario Chromium/Chrome da usare."
+        },
+        {
+          "name": "--inkscape",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Binario Inkscape da usare."
         }
       ],
       "inputs": [
@@ -506,12 +529,12 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "1": "errore (browser assente o conversione fallita)"
+        "1": "errore (nessun rasterizzatore trovato o conversione fallita)"
       },
       "determinism": {
         "deterministic": false,
         "seed_flag": null,
-        "notes": "Il rasterizzatore browser puo' variare fra versioni: il PNG NON e' committato."
+        "notes": "Il rasterizzatore (Inkscape o browser) puo' variare fra versioni: il PNG NON e' committato."
       },
       "side_effects": {
         "writes_canon": false,
@@ -522,7 +545,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": null,
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_export_map_png.py"
+      ],
       "docs": [
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/references/hero-map-comfyui.md"

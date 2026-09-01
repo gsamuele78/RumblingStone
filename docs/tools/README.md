@@ -20,7 +20,7 @@
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
 | `compile_map_json.py` | Modalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati. | spec · -o/--output · --validate-only | ✔ | — | — | `0` · `1` · `2` |
-| `export_map_png.py` | Rasterizza un SVG renderizzato in PNG hi-res via Chromium headless (stampa, VTT, input hero-map ComfyUI). | **svg** · -o/--out · --scale · --browser | — | — | — | `0` · `1` |
+| `export_map_png.py` | Rasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI). | **svg** · -o/--out · --scale · --renderer · --browser · --inkscape | — | — | — | `0` · `1` |
 | `export_uvtt.py` | Esporta un master griglia-emoji in file Universal VTT (.uvtt/.dd2vtt) con muri, porte e luci per import nativo in Foundry/Roll20. | file · -o/--output · --map · --ppg · --ext | ✔ | — | — | `0` · `1` · `2` |
 | `import_ultraclear.py` | Modalita' 3 'al contrario': da mappa ultra-clear a bozza del contratto JSON + report conflitti figura vs tabella (regole R1-R12). | **input** · -o/--output · --json-report · --strict · --map | ✔ | — | — | `0` · `1` · `2` |
 | `import_watabou.py` | Converte un export JSON di Watabou One Page Dungeon in un master griglia-emoji conforme al template. | **json_file** · -o/--out · --pad | ✔ | — | — | `0` · `1` |
