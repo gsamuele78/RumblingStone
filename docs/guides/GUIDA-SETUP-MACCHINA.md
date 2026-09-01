@@ -31,6 +31,7 @@ generare booklet HTML, renderizzare mappe e usare il bestiario.
 | **Python 3.11+** | tutto: gli script sono **stdlib-only** (nessun `pip install`, nessun `requirements.txt`) | ✅ sì |
 | **git** | clonare, versionare, branch di gruppo | ✅ sì |
 | **Chromium / Chrome** | PDF dei booklet, PNG delle mappe | solo per quegli export |
+| **Inkscape** | PNG delle mappe con resa SVG fedele (`--renderer inkscape`, default se installato) | opzionale: in sua assenza il PNG esce da Chromium |
 | **Pillow** (`pip install pillow`) | ricomprimere immagini grandi nell'HTML dei booklet | opzionale |
 | **pandoc + xelatex** | `dm.py recap --pdf` (il recap in PDF «sobrio») | opzionale |
 | **Docker / Podman** | editor Homebrewery, container PDF, ComfyUI | opzionale |
