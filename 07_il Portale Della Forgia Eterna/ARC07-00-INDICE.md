@@ -117,3 +117,6 @@ point è il Day 19** (`state.md §2.1`):
 - Fili aperti in uscita (Echo Ledger): `ARC07-DEF-5-RITORNO-HAMMERFIST.md §7`
 - Fascicoli da stampa: `homebrew/ARC07-BOOKLET-FASCICOLO-*.hb.md`
 - Asset (immagini/musica/PDF): `ARC07-ATLANTE-ASSET.md`; handout: `ARC07-HANDOUTS.md`
+- **Prop da stampare e consegnare** (generati dal file sopra, senza la regia DM):
+  `homebrew/HANDOUT-1-cronache-quattro-eroi.hb.md` · `HANDOUT-3-volta-otto-affreschi` ·
+  `HANDOUT-4-carta-visione-due-traiettorie` · `HANDOUT-5-benedizioni-di-moradin`
