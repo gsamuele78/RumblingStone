@@ -432,13 +432,44 @@ compilata prima di aver eseguito è metà ADR.
       ⚠️ **Non è cosmetico**: cambia cosa altri possono fare col materiale, e
       **tocca il perimetro di ADR-0005**, che va emendato o richiamato
       esplicitamente. Da eseguire con il suo ADR, non di passaggio.
-- [x] **F4** ✅ **Convertire** l'Abbazia a master markdown + manifest (ADR-0003).
-      Entra nelle due catene, guadagna il **colophon** e diventa impaginabile come
-      gli altri volumi.
-      ⚠️ **È lavoro vero, non una riformattazione**: ~2.750 righe, e soprattutto le
-      **tavole SVG in linea** vanno estratte in file separati e ricollegate con la
-      sintassi `![]()` che il convertitore capisce. Il gate del lotto A resta utile
-      **durante** la conversione: dice se qualcosa si rompe mentre si sposta.
+- [x] ✅ **F4 — ESEGUITO** (2026-09-02) · [ADR-0028](adr/ADR-0028-abbazia-master-markdown.md)
+      Quattro master markdown, un manifest col **colophon**, **sette tavole**
+      estratte in `tavole/*.svg`, e le due catene che compilano: HTML 615 KB,
+      **PDF di 34 pagine** con frontespizio, colophon e segnalibri.
+      Il travaso l'ha fatto uno strumento — `scripts/import_html_module.py` — che
+      conosce il vocabolario di questa famiglia (`p.ra` → blockquote,
+      `div.warn/.mech/.sb/.meta` → `{{note}}`, `div.entry` → chiave d'area,
+      `figure > svg` → file separato) e **davanti a un tag che non conosce lo
+      dichiara** invece di inventare una traduzione. È **una volta sola** e lo
+      impone: se i master esistono già si ferma, perché da lì in poi il markdown
+      è il master e rilanciare butterebbe via le correzioni in silenzio.
+      **Accettazione — perdita di contenuto: zero parole su ~20.000.** È il
+      confronto che ha trovato tutto il resto, e che nessuna compilazione verde
+      avrebbe trovato:
+      - `megereGrinza` — una mia ripulitura di «`** **`» cancellava lo **spazio**
+        fra due neretti adiacenti, dentro un nome proprio;
+      - i nomi dei PNG **sparati fuori da una tabella** da un `<br>` dentro una
+        cella (`<td><b>Dama Orsola Rive</b><br>guerriero 5</td>`);
+      - la barra `.meta` che stavo **buttando via**, e che invece dice
+        *«Sostituisce: Tavola I e il blocco Il conto che non torna»* — il
+        rapporto fra un'appendice e il documento principale, non impaginazione;
+      - **11 read-aloud su 11**: stavano su `<p class="ra">`, non su un `div`, e
+        la prima versione li appiattiva tutti in prosa normale. Tre stanno dentro
+        un riquadro d'avviso, dove l'etichetta `⚠` finiva davanti al `>` e
+        scioglieva la citazione.
+      ⚠️ **E due difetti che si vedevano solo guardando la pagina**, non
+      compilandola: i `<defs>` condivisi lasciati indietro (ogni tavola citava
+      `url(#rock)` da un file che non c'era più) e — peggio — `html.parser`
+      **minuscola tutto mentre XML è case-sensitive**: `viewBox` → `viewbox`
+      spariva, `patternUnits` → `patternunits` faceva tornare il riempimento del
+      mare al default e lo riduceva a **un quadratino azzurro nell'angolo**. Il
+      file restava XML valido. Per questo le pagine sono state **renderizzate e
+      guardate**, non solo compilate.
+      🔑 Le chiavi d'area prendono il codice: `#### 22 Le Celle` → `#### C22`.
+      Nella conversione la collisione era finalmente a occhio nudo — nello
+      **stesso file** c'erano `#### 3 Corpo di Guardia` (borgo) e `#### 3 Navata`.
+      `scripts/tests/test_import_html_module.py`: **15 test**, uno per difetto
+      vero.
       ✅ **Prerequisito chiuso** (2026-09-02): i rimandi `area N` senza prefisso
       sono **da 55 (10 ambigui fra file) a 0**. Lo schema non l'ho inventato: era
       già scritto nell'**indice maestro del modulo**, che aveva diagnosticato il

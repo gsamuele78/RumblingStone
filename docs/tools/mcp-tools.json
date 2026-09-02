@@ -1603,6 +1603,45 @@
         "1": "errore"
       },
       "deterministic": false
+    },
+    {
+      "name": "import_html_module",
+      "description": "Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
+      "invocation": "python3 scripts/import_html_module.py <cartella-modulo>",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "type": "string",
+            "description": "Cartella del modulo HTML da convertire."
+          },
+          "dry-run": {
+            "type": "boolean",
+            "description": "Non scrive niente."
+          },
+          "force": {
+            "type": "boolean",
+            "description": "Sovrascrive master markdown gia' esistenti (li perde)."
+          },
+          "manifest": {
+            "type": "boolean",
+            "description": "Scrive anche un manifest di partenza."
+          }
+        },
+        "required": [
+          "modulo"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "10-stand-alone/*/*.md",
+        "10-stand-alone/*/tavole/*.svg"
+      ],
+      "exit_codes": {
+        "0": "convertito",
+        "1": "cartella assente, nessun HTML, o master gia' esistenti senza --force"
+      },
+      "deterministic": true
     }
   ]
 }

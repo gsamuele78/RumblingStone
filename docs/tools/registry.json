@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 49,
+  "tool_count": 50,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4013,6 +4013,94 @@
       "docs": [
         "converters/README.md"
       ]
+    },
+    {
+      "id": "import_html_module",
+      "path": "scripts/import_html_module.py",
+      "category": "I-converters",
+      "language": "python",
+      "invocation": "python3 scripts/import_html_module.py <cartella-modulo>",
+      "summary": "Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "modulo",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del modulo HTML da convertire."
+        },
+        {
+          "name": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive niente."
+        },
+        {
+          "name": "--force",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sovrascrive master markdown gia' esistenti (li perde)."
+        },
+        {
+          "name": "--manifest",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive anche un manifest di partenza."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "10-stand-alone/*/*.html",
+          "kind": "html",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "10-stand-alone/*/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "10-stand-alone/*/tavole/*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "convertito",
+        "1": "cartella assente, nessun HTML, o master gia' esistenti senza --force"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "stesso HTML, stesso markdown e stesse tavole"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": false
     },
     {
       "id": "binari",

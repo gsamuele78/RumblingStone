@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**49 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**50 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -93,6 +93,7 @@
 | `Html_to_markdown` | Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM. | — | — | — | — | `0` · `1` |
 | `Image-to-webp` | Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM. | — | — | — | — | `0` · `1` |
 | `pdf-to-md-engine` | Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM. | — | — | — | — | `0` · `1` |
+| `import_html_module.py` | Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara. | **modulo** · --dry-run · --force · --manifest | ✔ | ✔ | — | `0` · `1` |
 
 ## Librerie (non-CLI)
 
