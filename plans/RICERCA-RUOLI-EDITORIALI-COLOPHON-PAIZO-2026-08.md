@@ -392,6 +392,36 @@ supposto.
 | **P20** | ⭐ **Corpo + appendici**: il modulo si divide in ciò che si *gioca* (atti, scene, incontri in ordine) e ciò che si *consulta* (bestiario, gazetteer del luogo e della sua storia, cast dei PNG, riepilogo degli scontri) | Appendice A (corsari, borgo, livello 0) · Appendice B (oppressione, storia, cronologia, bestiario) · Appendici I/II/III (bestiario · incontri e prove · i sei misteri) | `module-standard`: le 16 sezioni obbligatorie sono un **elenco lineare**, non un'architettura. Verificato: `grep -ril "appendice" skills/` non trova niente, e nessun master `ARC*-DEF-*` né il Drappo la usano |
 | **P19** | **Tabelle vive del borgo** — dicerie `1d8` di cui **due deliberatamente false**, e reazione del capo-fazione a `1d20` + modificatori | *«Dicerie all'osteria (1d8 — due sono false, deliberatamente)»* | `narrative-style` / `indagine`: la diceria falsa è un nodo d'indizio a costo zero |
 
+### §8.1-bis · Due punti dal tavolo (2026-09-02) — e un ADR che si riapre da solo
+
+Rilievo del DM, riportato dai giocatori: *«incoerenza e prosa inglese tradotta
+male, anche negli echi»*. Non è un'impressione nuova — è **la stessa** che aveva
+generato ADR-0016 — e il repo ci aveva messo una condizione esplicita:
+
+> **Banco di prova**: i prossimi handout. Se i giocatori diranno ancora che sembra
+> tradotto, il problema non è la lingua e non è la pipeline — e **questa ADR va
+> riaperta**. — ADR-0016, «Il vero rimedio al rilievo dei giocatori»
+
+⚠️ **La condizione è scattata.** Va detto senza girarci intorno.
+
+**Cosa esiste già**: la norma, e non è poca — `italiano-nativo.md` (274 righe: §1
+i dieci calchi, §9 i tic dell'IA con l'antitesi «non X: è Y» in testa),
+`read-aloud-adulti.md`, `campaign-coherence.md`, il glossario e la lista DNT.
+**Cosa non esiste**: **nessun gate**. `grep -ril "traduttese\|calco" scripts/` non
+trova niente. La norma c'è, e nessuno la applica: è esattamente la forma del
+divario **C2** (la redazione come processo), vista da un'altra angolazione.
+
+| | Punto | Perché è fattibile a macchina | Dove |
+|---|---|---|---|
+| **P21** | **Validatore di prosa**: i calchi con firma inequivocabile (*realizzare* per *to realize*, *eventualmente* per *eventually*, *assumere* per *to assume*, il possessivo su parti del corpo, il progressivo «stai camminando», la nominalizzazione «la sensazione di») **e i tic dell'IA a densità** — l'antitesi «non X: è Y» **max 1 per documento**, le maiuscole di portento max 1, i trattini lunghi | metà di `italiano-nativo.md` §1 e §9.2 sono **regole di conteggio**: «massimo uno per documento» è la cosa che una macchina fa meglio di un revisore stanco, e che un revisore non fa mai perché dovrebbe contare | nuovo `scripts/validate_prosa.py`, accanto a `validate_lingua.py` |
+| **P22** | **Coerenza d'ambientazione**, la parte meccanizzabile: nomi canonici, glossario e **lista non-tradurre** applicati a **tutto** il contenuto — non solo ai cinque master `ARC*-DEF-*` che `validate_modules` già copre. **Compresi gli echi**, che il rilievo nomina esplicitamente | il lessico è verificabile; il *senso* no. Va dichiarato: questo gate trova un nome sbagliato, non una contraddizione di trama | estensione di `validate_modules.py` + `GLOSSARIO-E-LOCALIZZAZIONE.md` come fonte |
+
+⚠️ **Quello che questi due punti NON possono fare**, e va scritto perché non si
+prendano per più di quello che sono: un validatore trova *«realizzi che»*, non
+trova una scena che suona tradotta pur essendo tutta in italiano corretto. Quella
+resta una **passata redazionale umana** — cioè il lotto E. I due gate tolgono il
+rumore meccanico *perché la passata umana veda il resto*.
+
 ### §8.2 · Cosa NON è nuovo (per non contarlo due volte)
 
 - **Indice e Quick-Reference**: `module-standard` li chiede già ai punti 2 e 4.

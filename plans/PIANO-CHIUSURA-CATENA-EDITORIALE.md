@@ -22,6 +22,10 @@ caso limite.
 > decisione richiesta), **H1** (le 75 schede: fatica, non decisione) e **F**, che
 > sono le quattro domande al DM. Il DM ha aggiunto **P20** (corpo + appendici) e
 > confermato **P16** (tavole di supporto): entrambi chiusi dentro C.
+>
+> **Aggiornamento 2026-09-02 (sera)**: chiuso anche **E**. Aperto **Lotto P** dal
+> rilievo del tavolo — prosa tradotta e incoerenze, echi compresi — che fa
+> **scattare la condizione di riapertura scritta in ADR-0016**.
 
 ---
 
@@ -33,8 +37,8 @@ decide l'ordine, non il costo.
 | | Punto | Origine | Gate |
 |---|---|---|---|
 | P1 | Colophon nei volumi (crediti, licenza, edizione, versione, data) | colophon C1 | ✅ **fatto** (lotto B, ADR-0023) |
-| P2 | Skill `rumblingstone-edizione` + gate IP d'uscita | colophon C1+C3 | ⚠️ ADR-0008 |
-| P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | 🟡 `validate_lingua` ✅ (D); le passate restano in E |
+| P2 | Skill `rumblingstone-edizione` + gate IP d'uscita | colophon C1+C3 | ✅ (E, ADR-0024) |
+| P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | ✅ (D + E) |
 | P4 | **Vendoring dei pacchetti Typst** | colophon §5 | ⚠️ **DM** |
 | P5 | `pdfcpu` per l'imposizione | colophon T1 | ⚠️ ADR |
 | P6 | Server MCP sui 44 tool già descritti | colophon MCP-1 | — |
@@ -42,7 +46,7 @@ decide l'ordine, non il costo.
 | P8 | `dm.py volume` — l'ordine dei mestieri | colophon §3.4 | dopo P1-P3 |
 | P9 | Riscalatura a tre assi | Abbazia | ✅ (C) |
 | P10 | Avvertenza di contenuto e consenso del tavolo | Abbazia | ✅ (C) |
-| P11 | Igiene di licenza per documento | Abbazia | confluisce in P2 |
+| P11 | Igiene di licenza per documento | Abbazia | ✅ (E, §2) |
 | P12 | ADR di modulo | Abbazia | ✅ (C) |
 | P13 | Indirizzamento delle aree fra documenti + gate | Abbazia | ✅ (D) — trova 10 ambiguità vere |
 | P14 | Il limite dichiarato del dry-run | Abbazia | ✅ (C) |
@@ -56,6 +60,8 @@ decide l'ordine, non il costo.
 | — | Capolettera annegato · indice analitico | audit ago. | = P4 |
 | — | Imposizione | audit ago. | = P5 |
 | — | CMYK / PDF-X | ADR-0020 | rinuncia dichiarata |
+| **P21** | ⚠️ **Validatore di prosa** (traduttese + tic dell'IA a densità) | tavolo 2026-09-02 | — |
+| **P22** | ⚠️ **Coerenza d'ambientazione** su tutto il contenuto, **echi compresi** | tavolo 2026-09-02 | — |
 
 ---
 
@@ -206,22 +212,61 @@ l'Abbazia da eccezione fortunata in regola.
   Esentate anche le **guide alla pronuncia** (`*nè-this*`), dove l'accento grave
   dice il suono ed è messo apposta.
 
-### ⬜ Lotto E — La skill dell'edizione (P2, P11, P3-prosa) ⚠️ ADR-0008
+### ✅ Lotto E — La skill dell'edizione (P2, P11, P3-prosa) — *chiuso 2026-09-02* · [ADR-0024](adr/ADR-0024-skill-edizione.md)
 
-- [ ] **E1** — ADR: perché la diciassettesima skill è giustificata (la
+- [x] **E1** — ADR: perché la diciassettesima skill è giustificata (la
       motivazione è già scritta nella ricerca §3.1; qui diventa decisione).
-- [ ] **E2** — `skills/rumblingstone-edizione/`: colophon, dichiarazioni Product
+- [x] **E2** — `skills/rumblingstone-edizione/`: colophon, dichiarazioni Product
       Identity/Open Content, **gate d'uscita** (la checklist §7 di
       `GUIDA-CONDIVISIONE-IP.md`, che oggi nessuna skill carica), versione ed errata.
-- [ ] **E3** — **igiene di licenza per documento** (P11) come tabella obbligatoria
+- [x] **E3** — **igiene di licenza per documento** (P11) come tabella obbligatoria
       in stesura. L'Abbazia è l'implementazione di riferimento: ha separato le
       divinità inventate dai nomi FR non-SRD *prima* del commit, non dopo.
-- [ ] **E4** — `references/passate-redazionali.md` in `narrative-style`: le tre
+- [x] **E4** — `references/passate-redazionali.md` in `narrative-style`: le tre
       passate, quando un master è chiuso, come si riapre.
 
-**Deliverable**: il mestiere dell'editore, caricabile da un agente.
-**Criterio d'accettazione**: un agente che genera un handout incontra il gate IP **prima** di consegnare.
-**Engine**: Opus · **impegno** alto · **dieta**: guida IP, ADR-0005/0008/0016, `editorial-standards.md`.
+**Esito.** `skills/rumblingstone-edizione/` è la **diciassettesima** skill, e
+ADR-0024 la motiva invece di darla per scontata: il fatto misurato è che
+`grep -rl "GUIDA-CONDIVISIONE-IP" skills/` restituiva **un solo file**, e per
+un'altra ragione — un agente che generava un handout **non incontrava mai** il
+gate d'uscita. Una regola scritta che nessuno carica non è una regola.
+
+Sei sezioni: il gate d'uscita (le cinque domande del §7 della guida, con la
+guida dichiarata **fonte** in caso di divergenza) · l'igiene di licenza compilata
+**in stesura**, con l'Abbazia come esemplare che ha separato le divinità
+inventate dai nomi FR *prima* del commit · quando si compila il colophon e con
+che valori (⛔ mai un `autori` inventato) · l'edizione come oggetto —
+versione, ristampa, errata, oggi **convenzione e non meccanismo**, dichiarato ·
+i confini con le altre cinque skill · e quando **non** serve.
+
+`references/passate-redazionali.md` in `narrative-style`: le tre passate
+(struttura → voce → bozze), la 2ª **letta ad alta voce** perché il traduttese si
+sente e non si vede, gli **echi trattati come testo** e non come note, quando un
+testo è chiuso e i tre soli casi che lo riaprono.
+
+### ⬜ Lotto P — La prosa e la coerenza (P21, P22) ⚠️ e ADR-0016 da riaprire
+
+Aperto dal rilievo del tavolo del 2026-09-02: *«incoerenza e prosa inglese
+tradotta male, anche negli echi»*. **ADR-0016 aveva scritto la condizione di
+riapertura, e la condizione è scattata.**
+
+- [ ] **P-0** — **riaprire ADR-0016** con una revisione: non per cambiare la
+      decisione (l'italiano resta la lingua sorgente — il rilievo dice che la
+      qualità non basta, non che serva l'inglese), ma per registrare che il banco
+      di prova ha dato esito negativo e cosa si fa di conseguenza.
+- [ ] **P-1** — `scripts/validate_prosa.py`: i calchi a firma inequivocabile e i
+      **tic a densità** (antitesi «non X: è Y» max 1 per documento, maiuscole di
+      portento max 1, trattini lunghi). Non bloccante alla prima passata, come
+      `validate_lingua`.
+- [ ] **P-2** — `validate_modules.py` esteso: nomi canonici, glossario e lista DNT
+      su **tutto** il contenuto, **echi compresi**, non solo sui cinque `ARC*-DEF-*`.
+- [ ] **P-3** — la **passata redazionale sugli echi**: sono la cosa che il tavolo
+      ha nominato, e `consequence-echoes.md` è la loro reference.
+
+**Deliverable**: il rumore meccanico esce dal testo, così la passata umana (lotto E) vede il resto.
+**Criterio d'accettazione**: `validate_prosa` trova i casi noti di `italiano-nativo.md` §7 (l'esempio smontato) e tace sulla versione corretta.
+⚠️ **Quello che NON fa**: un validatore trova «realizzi che», non trova una scena che suona tradotta pur essendo in italiano corretto. Quella è la passata umana.
+**Engine**: Sonnet (P-1, P-2) · Opus (P-0, P-3: sono giudizio) · **impegno** medio-alto.
 
 ### ⬜ Lotto F — Le decisioni del DM (P4, P5, P18, P17 parte 2)
 
