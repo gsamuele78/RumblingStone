@@ -156,6 +156,60 @@ dei flag — utile per capire se il CR che hai messo è realistico.
 
 ---
 
+## 6-bis. Il blocco `statblocco` a macchina, e i due strumenti che lo riempiono
+
+Oltre alla prosa, ogni scheda porta (o dovrebbe portare) un **blocco recintato**
+coi soli numeri — `gs`, `ca`, `pf`, `ts` e il resto — che è quello che leggono la
+stampa, l'export e i controlli ([ADR-0021](../../plans/adr/ADR-0021-statblocchi-machine-readable.md)).
+**Oggi ce l'hanno 100 schede su 157.** Per le altre ci sono due strumenti, e fanno
+cose diverse:
+
+```bash
+python3 scripts/extract_statblocks.py            # cosa si può TRASCRIVERE, e cosa manca
+python3 scripts/extract_statblocks.py --apply    # scrive dove la prosa dice tutto
+python3 scripts/derive_statblocks.py             # cosa si può DERIVARE, col conto scritto
+python3 scripts/derive_statblocks.py --apply-ts  # scrive i soli TS (vedi sotto)
+```
+
+**`extract_statblocks` trascrive**: legge i numeri che hai già scritto in prosa.
+Conosce parecchi dialetti — `**hp 34**`, `(5 HP)`, `hp ~30`, `**Punti Ferita:**
+60`, `**Classe Armatura:** 19`, `**Tiri Salvezza:** Tempra +7, Riflessi +10,
+Volontà +6`, `**Grado di Sfida (GS):** 9`, `TS +2/+9/+1` — quindi **scrivi come ti
+viene** e lui probabilmente ci arriva. Se il numero era una stima (`hp ~30`), il
+blocco lo dichiara invece di spacciarla per un dato.
+
+**`derive_statblocks` deriva** dalle tabelle: SRD 3.5 per tipo di creatura,
+progressioni dei TS, matrici elite/standard, taglie e armature; la tabella per GS
+di Pathfinder 1e **solo come guardia**, che marca la proposta *«⚠ FUORI
+BERSAGLIO»* quando il conto non torna. ⚠️ **Scrive un campo solo — i tiri
+salvezza — e solo dove GS, CA e pf li hai scritti tu**: la base dei TS è esatta
+dalle tabelle, mentre CA e pf dipendono da equipaggiamento e Costituzione, che da
+una scheda in prosa non si leggono. Per quelli **propone e basta**, col conto per
+esteso, e decidi tu ([ADR-0033](../../plans/adr/ADR-0033-derivare-e-dichiararlo.md)).
+
+### Quando una scheda NON è una creatura
+
+Il Bestiario contiene anche cose che una creatura non sono: un organo collegiale,
+una popolazione, un'ondata di combattimento di massa che è un **aggregato** di
+altre schede, un dossier che punta agli statblocchi che vivono altrove. Quelle
+**non devono avere un blocco**, e forzarcelo vorrebbe dire inventare un mostro
+che non esiste.
+
+Si marcano nel titolo, **con la ragione scritta sotto**:
+
+```markdown
+# Il Consiglio di Rethmar [NON-CREATURA]
+
+> **Non è una creatura** (ADR-0033): è un organo collegiale di sette seggi.
+> Gli statblocchi dei singoli consiglieri stanno nelle loro schede.
+```
+
+Da lì in poi la scheda **esce dal debito di migrazione** e **dal catalogo dei
+mostri** — così `suggest_encounter` non può proporti un consiglio comunale come
+incontro. Non è un'esenzione silenziosa: la ragione si legge nel file.
+
+---
+
 ## 7. Aggiungere un mostro: la procedura completa
 
 1. **Cerca prima**: `grep -ril "<nome>" Bestiario/` — c'è già qualcosa di simile?
