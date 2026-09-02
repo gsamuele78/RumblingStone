@@ -42,6 +42,7 @@ from __future__ import annotations
 
 import argparse
 import re
+from html import unescape  # le entita' («, ») sono testo, non markup
 import sys
 from pathlib import Path
 
@@ -279,12 +280,29 @@ _H1 = re.compile(r"<h1\b", re.I)
 # «area 17» senza prefisso di livello. Il dry-run dell'Abbazia aveva trovato
 # «16, 17, 18 usati tre volte su tre documenti» e l'aveva corretto nelle chiavi
 # con i prefissi (A3, C19, G27) — ma i rimandi in prosa erano rimasti nudi.
-_AREA_NUDA = re.compile(r"\b(?:area|stanza|luogo)\s+(\d{1,3})\b", re.I)
+# Fra la parola e il numero si ammettono **solo spazi**, mai un a capo. Un
+# rimando vero (`area 17`) sta dentro una frase; un a capo, dopo `_testo`, vuol
+# dire che in mezzo c'era un tag — cioe' che «stanza» e «3» stanno in due celle
+# diverse della stessa tabella e non sono una frase. Con `\s+` il controllo
+# leggeva `…verso quella stanza</td><td>3</td>` come «stanza 3» e segnalava un
+# rimando che nel documento non esiste.
+_AREA_NUDA = re.compile(r"\b(?:area|stanza|luogo)[ \t\u00a0]+(\d{1,3})\b", re.I)
+
+# Menzione, non uso: «area 17» fra virgolette e' il documento che *parla* del
+# rimando invece di farlo — ed e' esattamente cosi' che l'indice maestro
+# dell'Abbazia descrive il difetto che ha corretto. Segnalarlo vorrebbe dire
+# chiedere di riscrivere la spiegazione del difetto per farla assomigliare a un
+# difetto in meno.
+_MENZIONE = re.compile(r"[«\"\u201c\u2018']\s*$")
 
 
 def _testo(html: str) -> str:
-    """Il testo leggibile: via script, style e tag. Serve ai controlli di lingua."""
-    return _TAG.sub(" ", _STILE.sub(" ", html))
+    """Il testo leggibile: via script, style e tag.
+
+    I tag diventano **a capo**, non spazi: cosi' due celle di tabella restano due
+    righe e non si saldano in una frase che nessuno ha scritto.
+    """
+    return unescape(_TAG.sub("\n", _STILE.sub("\n", html)))
 
 
 def _ancore(html: str) -> set[str]:
@@ -309,6 +327,8 @@ def check_aree_ambigue(pagine: list[Path], nome: str, warnings: list[str]) -> No
     for f in pagine:
         testo = _testo(f.read_text(encoding="utf-8", errors="ignore"))
         for m in _AREA_NUDA.finditer(testo):
+            if _MENZIONE.search(testo[max(0, m.start() - 2):m.start()]):
+                continue  # menzione fra virgolette, non un rimando
             per_numero.setdefault(m.group(1), set()).add(f.name)
             nude += 1
     ambigue = sorted((n, sorted(fs)) for n, fs in per_numero.items() if len(fs) > 1)

@@ -439,9 +439,29 @@ compilata prima di aver eseguito è metà ADR.
       **tavole SVG in linea** vanno estratte in file separati e ricollegate con la
       sintassi `![]()` che il convertitore capisce. Il gate del lotto A resta utile
       **durante** la conversione: dice se qualcosa si rompe mentre si sposta.
-      🔎 Da fare **prima**: il modulo ha ancora 55 rimandi `area N` senza prefisso
-      e dieci ambigui fra file (lotto D). Convertire un testo con l'ambiguità
-      dentro la porta nella catena nuova.
+      ✅ **Prerequisito chiuso** (2026-09-02): i rimandi `area N` senza prefisso
+      sono **da 55 (10 ambigui fra file) a 0**. Lo schema non l'ho inventato: era
+      già scritto nell'**indice maestro del modulo**, che aveva diagnosticato il
+      difetto (*«16, 17, 18 usati tre volte su tre documenti»*) e prescritto la
+      correzione minima — *i numeri restano, si aggiunge un prefisso di livello* —
+      senza però propagarla negli altri tre file. Le 48 aree hanno un codice
+      autoritativo: **B** borgo · **A** abbazia livello 0 · **T** campanile ·
+      **C** cripta −1 · **G** grotta −2 · **X** contado. Applicato a tutti e 54 i
+      rimandi, uno per uno.
+      ⚠️ Due numeri significavano **due posti diversi nello stesso file**, e sono
+      la prova che l'ambiguità non era teorica: `area 6` era la **sacrestia (A6)**
+      in una riga e il **registro dei defunti della cappella del borgo (B6)** in
+      un'altra; `area 8` era la **loggia (A8)** e il **punto del ritrovamento
+      (B8)**. Quelli sono stati risolti per contesto, mai in blocco.
+      🔧 E la sostituzione meccanica ha rotto cinque articoli elisi — *«Con l'area
+      4 profanata»* → *«Con l'A4»*, che non è italiano. Corretti a mano: un
+      codice d'area l'articolo non lo vuole. È il motivo per cui un rename di
+      massa si rilegge invece di fidarsene.
+      🔎 **Resta aperto, e va detto**: 63 rimandi in forma **parentetica nuda** —
+      *«la chiave è in sacrestia (6)»*, *«la botola in cappella (9)»*. Stessa
+      classe di ambiguità, ma il gate non li vede e **non si sistemano alla
+      cieca**: un `(8)` può essere un'area, un risultato di dado o una CD.
+      Diventa **P-23**, non un colpo di `sed` dentro questo lotto.
 
 **Deliverable**: ✅ quattro risposte, prese. Gli ADR si scrivono con l'esecuzione.
 **Ordine consigliato d'esecuzione**: F1 (sblocca due code a costo basso) → F2 →

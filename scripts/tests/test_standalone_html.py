@@ -21,7 +21,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
 
-from validate_standalone import check_html_module  # noqa: E402
+from validate_standalone import check_aree_ambigue, check_html_module  # noqa: E402
 
 BUONA = """<!DOCTYPE html><html lang="it"><head><title>Modulo</title></head>
 <body><h1 id="titolo">Modulo</h1>
@@ -117,6 +117,53 @@ class TestGateHtml(unittest.TestCase):
         # modulo sta fuori da ADR-0003 e da entrambe le catene di impaginazione.
         _, avvisi = self._esegui(indice=BUONA)
         self.assertTrue(any("nessun master markdown" in a for a in avvisi), avvisi)
+
+
+class TestNumerazioneAree(unittest.TestCase):
+    """La numerazione delle aree: l'ambiguità vera, e i due modi di vederne una falsa."""
+
+    def _w(self, **pagine: str) -> list[str]:
+        with tempfile.TemporaryDirectory() as d:
+            mod = _modulo(Path(d), **pagine)
+            w: list[str] = []
+            check_aree_ambigue(sorted(mod.glob("*.html")), "Modulo", w)
+            return w
+
+    def test_lo_stesso_numero_nudo_in_due_file_e_ambiguo(self):
+        w = self._w(uno="<p>si torna in area 6 dopo</p>", due="<p>la chiave è in area 6</p>")
+        self.assertTrue(any("«area 6»" in x and "2 file" in x for x in w), w)
+
+    def test_col_prefisso_di_livello_non_e_piu_ambiguo(self):
+        # È la correzione che l'indice maestro dell'Abbazia prescrive: i numeri
+        # restano, cambia il prefisso — A6 (sacrestia) e B6 (cappella del borgo).
+        w = self._w(uno="<p>si torna in A6 dopo</p>", due="<p>la chiave è in B6</p>")
+        self.assertEqual(w, [])
+
+    def test_due_celle_di_tabella_non_sono_una_frase(self):
+        # Il falso positivo vero, trovato sull'Abbazia: dopo aver tolto i tag,
+        # `…quella stanza</td><td>3</td>` diventava «stanza 3». Non è un rimando:
+        # è una colonna accanto a un'altra.
+        w = self._w(uno="<table><tr><td>due percorsi verso quella stanza</td><td>3</td></tr></table>",
+                    due="<p>si torna in A3</p>")
+        self.assertEqual(w, [])
+
+    def test_un_rimando_vero_sulla_stessa_riga_si_vede_ancora(self):
+        w = self._w(uno="<p>due percorsi verso la stanza 3 del piano</p>",
+                    due="<p>si scende alla stanza 3 dal chiostro</p>")
+        self.assertTrue(any("«area 3»" in x for x in w), w)
+
+    def test_menzione_fra_virgolette_non_e_un_rimando(self):
+        # Un documento che *spiega* il difetto scrive «area 17» apposta. Contarlo
+        # vorrebbe dire chiedergli di riscrivere la spiegazione.
+        w = self._w(uno="<p>Al tavolo &laquo;area 17&raquo; era ambiguo fra tre stanze.</p>",
+                    due="<p>si sale in A17</p>")
+        self.assertEqual(w, [])
+
+    def test_le_entita_html_sono_testo(self):
+        # Se `_testo` non le sciogliesse, la menzione qui sopra passerebbe per uso.
+        w = self._w(uno="<p>&laquo;area 9&raquo; non voleva dire niente</p>",
+                    due="<p>&laquo;area 9&raquo; nemmeno qui</p>")
+        self.assertEqual(w, [])
 
 
 if __name__ == "__main__":
