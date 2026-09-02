@@ -516,7 +516,7 @@ compilata prima di aver eseguito è metà ADR.
 **Ordine consigliato d'esecuzione**: F1 (sblocca due code a costo basso) → F2 →
 F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-0005).
 
-### 🟢 Lotto G — Infrastruttura (P6, P7, P8, P16)
+### ✅ Lotto G — Infrastruttura (P6, P7, P8, P16)
 
 - [x] ✅ **G1 — ESEGUITO** (2026-09-02) · [ADR-0030](adr/ADR-0030-server-mcp-sui-tool.md)
       · progetto per esteso in [SPEC-SERVER-MCP.md](SPEC-SERVER-MCP.md)
@@ -558,9 +558,46 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
       chiamandone le funzioni) + un gate CI che lo fa **parlare davvero** —
       `initialize`, `tools/list` con le annotazioni, e `state_apply` che deve
       essere **rifiutato** in sola lettura.
-- [ ] **G2** — veraPDF in CI (fa togliere da solo il ripiego `--no-pdf-tags`),
-      misura dei **caratteri per riga** sul PDF compilato, simulatore di
-      daltonismo sulle mappe.
+- [x] ✅ **G2 — ESEGUITO** (2026-09-02) · [ADR-0032](adr/ADR-0032-misurare-la-leggibilita.md)
+      `scripts/validate_tipografia.py`: tre misure sulla **leggibilità**, che
+      nessun exit code vede. Non bloccante alla prima passata.
+      1. **Gerarchia dei titoli** — un `h4` sotto un `h2` salta l'`h3`, e nei
+         segnalibri del PDF (la ragione per cui ADR-0020 esiste) diventa un ramo
+         che non c'è. ⚠️ **Il perimetro è la decisione**: la prima passata dava
+         **142** salti su tutto il markdown, inclusi i `#####` dei `.hb.md` — che
+         in Homebrewery sono **etichette, non titoli**. Punirli sarebbe stato
+         punire una convenzione, il difetto in cui questo repo è già inciampato
+         due volte. Ristretto ai **capitoli dichiarati da un manifest**: da 142 a
+         **4**. Tre sono handout-oggetto (`PROP-*`) dove il `######` imita il
+         documento vero: **segnalati e non esentati**, perché è una chiamata del
+         DM e un'esenzione silenziosa è come un gate smette di trovare i difetti.
+      2. **Caratteri per riga** — non stimati, **calcolati**: larghezza di colonna
+         dal tema e **avanzate reali dei glifi** lette con `struct` da `head`,
+         `cmap` e `hmtx` del font che incorporiamo, su un campione di prosa
+         italiana del repo (non un pangramma: le frequenze contano).
+         **Esito: 62,1** — dentro la finestra 45-75. Il tema era giusto; adesso è
+         *misurato*, e un font cambiato lo sposta sotto gli occhi di qualcuno
+         invece che in copisteria.
+      3. **Daltonismo** — le tre dicromazie simulate (Viénot/Brettel via LMS), e
+         le coppie **distinte in visione normale** che sotto una dicromia
+         collassano. Raggruppate per coppia e non per file: le tavole condividono
+         la palette. **Esito: 21 coppie**, e una che si ripete — l'alizarina
+         `#c0392b`, il rosso dei marcatori di pericolo, collassa sui **bruni del
+         terreno** in protanopia (Δ62 → Δ18) su cinque tavole da battaglia, dove i
+         marcatori rossi sono la cosa più densa d'informazione che ci sia.
+      🔎 **veraPDF: procurato, fatto funzionare davvero, e lasciato fuori dalla CI**
+      — con il referto scritto nell'ADR invece che una rinuncia a scatola chiusa.
+      Maven Central, `greenfield-apps` 1.28.2 più una classe Java di avvio (il fat
+      jar **non registra il proprio provider** e la CLI muore da sola). Sul volume
+      dell'Abbazia PDF/UA-1 **FAIL**, tre rilievi: *«heading level 3 is skipped»*
+      ×3 — **gli stessi tre** che il controllo §1 trova nel markdown, due misure
+      indipendenti allo stesso numero — più due che sono **di Typst** (manca lo
+      schema XMP di identificazione PDF/UA, mancano le `ViewerPreferences`).
+      Fuori dalla CI perché l'unico rilievo azionabile lo troviamo **prima e
+      meglio**, nel master dove si corregge; gli altri due resterebbero rossi per
+      sempre; e il costo non è quello di un binario statico — JVM, 9,5 MB di jar e
+      una classe scritta da noi — che è la ragione per cui ADR-0020 e ADR-0027
+      avevano detto sì a `typst` e `pdfcpu`. La ricetta per rifarlo sta nell'ADR.
 - [x] ✅ **G3 — ESEGUITO** (2026-09-02) · [ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md)
       `dm.py volume MANIFEST.json` esegue la catena in ordine, **dichiarato**:
       `prosa → lingua → manifest → colophon → schermo → stampa → imposizione`.

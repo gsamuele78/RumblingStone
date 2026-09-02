@@ -3938,6 +3938,85 @@
       "idempotent": true
     },
     {
+      "id": "validate_tipografia",
+      "path": "scripts/validate_tipografia.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_tipografia.py",
+      "summary": "Tre misure sulla LEGGIBILITA' dell'artefatto, che nessun exit code vede (ADR-0032). 1) gerarchia dei titoli nei capitoli dichiarati da un manifest: un h4 sotto un h2 diventa un ramo che non esiste nei segnalibri del PDF. 2) caratteri per riga, calcolati dalla larghezza di colonna del tema e dalle avanzate REALI dei glifi lette dalla tabella hmtx del font incorporato, confrontati con la finestra 45-75. 3) daltonismo: simula protanopia, deuteranopia e tritanopia sulle tavole SVG e trova le coppie di colori distinte in visione normale che sotto una dicromia diventano lo stesso colore. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--solo",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "titoli",
+            "righe",
+            "colori"
+          ],
+          "repeatable": true,
+          "desc": "Esegui solo questa misura (ripetibile)."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I rilievi diventano errori (exit 1)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/fonts/EBGaramond[wght].ttf",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.svg",
+          "kind": "svg",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "nessun rilievo (o rilievi non bloccanti)",
+        "1": "rilievi con --strict"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
       "id": "converters/html-to-markdown",
       "path": "converters/Html_to_markdown",
       "category": "I-converters",

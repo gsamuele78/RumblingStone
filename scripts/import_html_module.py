@@ -485,9 +485,32 @@ class Convertitore(HTMLParser):
             self._emetti("| " + " | ".join(r) + " |")
         self._emetti("")
 
+    @staticmethod
+    def _compatta_titoli(testo: str) -> str:
+        """Nessun livello di titolo salta il precedente.
+
+        Nell'HTML l'`<h4>` di una voce d'area sotto un `<h2>` era una scelta
+        **visiva** — un titolo piu' piccolo. In un documento strutturato e' un
+        difetto: `h2 → h4` salta l'h3, e chi legge col lettore di schermo, o
+        guarda i segnalibri del PDF, trova un ramo dell'albero che non esiste.
+        veraPDF lo dice con le stesse parole (PDF/UA 7.4.2-1) su tre punti di
+        questo modulo, e sono gli stessi tre.
+        """
+        fuori, prec = [], 0
+        for riga in testo.split("\n"):
+            m = re.match(r"^(#{1,6}) (.*)$", riga)
+            if m:
+                liv = len(m.group(1))
+                if prec and liv > prec + 1:
+                    liv = prec + 1
+                prec = liv
+                riga = "#" * liv + " " + m.group(2)
+            fuori.append(riga)
+        return "\n".join(fuori)
+
     def markdown(self) -> str:
         self._chiudi_para()
-        testo = "\n".join(self.out)
+        testo = self._compatta_titoli("\n".join(self.out))
         testo = re.sub(r"\n{3,}", "\n\n", testo)
         # NIENTE ripulitura di «** **» qui. C'era, ed era sbagliata: fra due
         # neretti adiacenti (`<span class="nm">…megere</span> <b>Grinza</b>`)

@@ -1585,6 +1585,39 @@
       "deterministic": true
     },
     {
+      "name": "validate_tipografia",
+      "description": "Tre misure sulla LEGGIBILITA' dell'artefatto, che nessun exit code vede (ADR-0032). 1) gerarchia dei titoli nei capitoli dichiarati da un manifest: un h4 sotto un h2 diventa un ramo che non esiste nei segnalibri del PDF. 2) caratteri per riga, calcolati dalla larghezza di colonna del tema e dalle avanzate REALI dei glifi lette dalla tabella hmtx del font incorporato, confrontati con la finestra 45-75. 3) daltonismo: simula protanopia, deuteranopia e tritanopia sulle tavole SVG e trova le coppie di colori distinte in visione normale che sotto una dicromia diventano lo stesso colore. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "invocation": "python3 scripts/validate_tipografia.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "solo": {
+            "type": "string",
+            "description": "Esegui solo questa misura (ripetibile).",
+            "enum": [
+              "titoli",
+              "righe",
+              "colori"
+            ]
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "I rilievi diventano errori (exit 1)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessun rilievo (o rilievi non bloccanti)",
+        "1": "rilievi con --strict"
+      },
+      "deterministic": true
+    },
+    {
       "name": "import_html_module",
       "description": "Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
       "invocation": "python3 scripts/import_html_module.py <cartella-modulo>",

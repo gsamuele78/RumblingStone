@@ -147,7 +147,7 @@ Fra' Timoteo accoglie i visitatori. La canonica (10–17) è aperta e pulita. La
 
 Si scende dalla botola in cappella (9 → 18) o dalla scala di servizio (17 → 23, ma sbuca *dentro* il corpo di guardia).
 
-#### C18 Vestibolo
+### C18 Vestibolo
 
 Grata di ferro. **Scassinare CD 25**, o la chiave in sacrestia (6). **Ascoltare CD 13:** da ovest, qualcuno tossisce.
 

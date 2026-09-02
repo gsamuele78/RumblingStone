@@ -28,7 +28,7 @@
 
 ## Chiave dei luoghi del borgo
 
-#### B1 Osteria La Gomena Rotta
+### B1 Osteria La Gomena Rotta
 
 > *Sala bassa, travi incatramate, e sopra il bancone una gomena spezzata inchiodata al muro come un trofeo. Nenno Braca non chiede mai chi siete. Chiede quanto restate.*
 
@@ -226,7 +226,7 @@ Il commercio con l'abbazia è l'unica linea che rende abbastanza da tenere la *Z
 
 **La chiesa (1–9) è chiusa a chiave dall'alba al tramonto. La canonica (10–17) è aperta.** Questa è la separazione che struttura l'Atto II: i PG possono girare mezza abbazia legalmente e si sbatteranno contro una porta chiusa a metà indagine.
 
-#### A1 Sagrato
+### A1 Sagrato
 
 > *La scalinata finisce su una piattaforma di pietra battuta. Da tre lati non c'è niente: solo il vuoto e novanta piedi d'aria salata. La chiesa vi si posa sopra a fasce bianche e nere, e le porte sono chiuse.*
 
