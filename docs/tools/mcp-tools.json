@@ -1314,14 +1314,14 @@
     },
     {
       "name": "dm",
-      "description": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002.",
+      "description": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto.",
       "invocation": "python3 scripts/dm.py",
       "inputSchema": {
         "type": "object",
         "properties": {
-          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor": {
+          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume": {
             "type": "string",
-            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante.",
+            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto.",
             "enum": [
               "prep",
               "post",
@@ -1332,12 +1332,13 @@
               "hype",
               "dossier",
               "skills",
-              "doctor"
+              "doctor",
+              "volume"
             ]
           }
         },
         "required": [
-          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor"
+          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume"
         ],
         "additionalProperties": false
       },

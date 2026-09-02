@@ -561,10 +561,35 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
 - [ ] **G2** — veraPDF in CI (fa togliere da solo il ripiego `--no-pdf-tags`),
       misura dei **caratteri per riga** sul PDF compilato, simulatore di
       daltonismo sulle mappe.
-- [ ] **G3** — `dm.py volume`: la catena dei mestieri in ordine, che assorbe anche
-      il `dm.py stampa` mai fatto.
-- [ ] **G4** — `mapmaking`: **tavole non zenitali** — veduta prospettica e profilo
-      laterale con quote, distanze e **tempi di percorrenza**.
+- [x] ✅ **G3 — ESEGUITO** (2026-09-02) · [ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md)
+      `dm.py volume MANIFEST.json` esegue la catena in ordine, **dichiarato**:
+      `prosa → lingua → manifest → colophon → schermo → stampa → imposizione`.
+      `--stampa` è il `dm.py stampa` mai fatto, **assorbito** invece che aggiunto;
+      `--imposto` il libretto da piegare; `--solo`/`--salta` per rifare un passo.
+      Nasce da §C della ricerca sul colophon: non mancava un mestiere, **mancava
+      l'ordine in cui si chiamano**, e chi ne saltava uno se ne accorgeva in
+      copisteria.
+      I passi non hanno lo stesso peso, e la differenza è la decisione: `prosa` e
+      `lingua` **misurano e non bloccano**; `manifest` e `schermo` sono **guasti
+      duri che fermano la catena** — compilare da un manifest non valido produce
+      un artefatto sbagliato *con l'aria di essere andato bene*; `stampa` e
+      `imposizione` **degradano pulito** (ADR-0027).
+      ⭐ E in coda, **comunque sia andata**, il cancello d'uscita §7 detto a voce.
+      Non è automatizzabile e non si finge che lo sia — ma è il momento in cui un
+      volume sta per uscire, ed è il buco che il lotto E aveva misurato: `grep -rl
+      "GUIDA-CONDIVISIONE-IP" skills/` dava **un solo file**, e per un'altra
+      ragione.
+      **Accettazione**: provato sull'Abbazia dall'inizio alla fine — sette passi,
+      HTML 615 KB, PDF 34 pagine, **libretto imposto** — e 10 test, fra cui
+      «un manifest inesistente esce 2 e non compila niente» e «il cancello IP
+      viene sempre detto».
+- [x] ✅ **G4 — già chiuso in C8** (2026-09-02). Era la stessa cosa di P16, che il
+      DM aveva confermato nella stessa domanda: `mapmaking` §«tavole di supporto»
+      ha veduta, profilo laterale con quote e **tempi di percorrenza**, con la
+      regola che si aggiungono **quando rispondono a una domanda che la griglia
+      non può** — non per completezza — e la convenzione di numerazione
+      (`Tavola I` zenitale · `I-a` veduta · `I-b` profilo). Resta segnato qui
+      perché il piano lo elencava due volte.
 
 **Engine**: Sonnet (G1-G3), Opus (G4: è una convenzione) · **impegno** medio-alto.
 
