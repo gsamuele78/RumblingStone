@@ -69,6 +69,12 @@ jobs:
         continue-on-error: true
         run: python scripts/validate_lingua.py
 
+      # Idem: misura la norma di italiano-nativo.md (calchi, tic a densita',
+      # nomi inglesi dove il glossario vuole l'italiano). ADR-0025.
+      - name: Prosa — traduttese e tic dell'IA (non bloccante)
+        continue-on-error: true
+        run: python scripts/validate_prosa.py
+
       - name: DM tool smoke tests
         run: |
           python scripts/suggest_encounter.py --help > /dev/null

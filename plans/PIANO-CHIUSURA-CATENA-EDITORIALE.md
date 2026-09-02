@@ -244,29 +244,62 @@ i confini con le altre cinque skill · e quando **non** serve.
 sente e non si vede, gli **echi trattati come testo** e non come note, quando un
 testo è chiuso e i tre soli casi che lo riaprono.
 
-### ⬜ Lotto P — La prosa e la coerenza (P21, P22) ⚠️ e ADR-0016 da riaprire
+### 🟢 Lotto P — La prosa e la coerenza — *P-0/P-1/P-2/P-4 chiusi 2026-09-02* · [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md)
 
 Aperto dal rilievo del tavolo del 2026-09-02: *«incoerenza e prosa inglese
 tradotta male, anche negli echi»*. **ADR-0016 aveva scritto la condizione di
 riapertura, e la condizione è scattata.**
 
-- [ ] **P-0** — **riaprire ADR-0016** con una revisione: non per cambiare la
+- [x] **P-0** — **ADR-0016 riaperta** con [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md): la decisione resta (l'italiano è la lingua sorgente), cambia la *misura*. Tre date lette insieme — 2026-07-31, 2026-08-01, 2026-09-02 — e in mezzo un motore di stile da 2047 righe: l'ipotesi «manca la norma» è falsificata. — *era*: riaprire ADR-0016 con una revisione: non per cambiare la
       decisione (l'italiano resta la lingua sorgente — il rilievo dice che la
       qualità non basta, non che serva l'inglese), ma per registrare che il banco
       di prova ha dato esito negativo e cosa si fa di conseguenza.
-- [ ] **P-1** — `scripts/validate_prosa.py`: i calchi a firma inequivocabile e i
+- [x] **P-1** — `scripts/validate_prosa.py`: i calchi a firma inequivocabile e i
       **tic a densità** (antitesi «non X: è Y» max 1 per documento, maiuscole di
       portento max 1, trattini lunghi). Non bloccante alla prima passata, come
       `validate_lingua`.
-- [ ] **P-2** — `validate_modules.py` esteso: nomi canonici, glossario e lista DNT
-      su **tutto** il contenuto, **echi compresi**, non solo sui cinque `ARC*-DEF-*`.
-- [ ] **P-3** — la **passata redazionale sugli echi**: sono la cosa che il tavolo
-      ha nominato, e `consequence-echoes.md` è la loro reference.
+- [x] **P-2** — il controllo del **glossario** è dentro `validate_prosa.py` invece
+      che in `validate_modules.py`: è la stessa preoccupazione («la prosa suona
+      inglese») e tenerla in un tool solo evita di doverla cercare in due.
+      Legge `GLOSSARIO-E-LOCALIZZAZIONE.md`, salta le voci **DNT** (*Aegis Fang*
+      e *Skullcrusher* sono inglesi per scelta) e segnala la forma inglese dove
+      il canone vuole l'italiano.
+      🔎 **Trova 12 casi veri**, fra cui *Anvil of the World* in **15 file** dove
+      il canone dice *Incudine del Mondo*, *Necklace of Eternal Seeds* in 4,
+      *Crown of Adamantine* in 3. È il rilievo del tavolo nella sua forma più
+      letterale e più facile da correggere.
+- [x] **P-4** — ⭐ **la correzione che risponde alla domanda del DM** («c'è una
+      skill di prosa ma forse va limata?»). La skill non va riscritta: sono 2047
+      righe e la norma è esatta. Va spostato **un punto del load order**:
+      `italiano-nativo.md` era al **5**, «obbligatorio prima di consegnare»;
+      passa al **4**, «prima di scrivere». Il traduttese non è una lista di
+      errori da correggere in revisione — è **come la frase è stata costruita**:
+      correggere dopo cambia le parole e lascia il respiro. La checklist di 30
+      secondi resta come ultima passata, e ora rimanda a `validate_prosa`.
+- [ ] 🟡 **P-3** — la **passata redazionale sugli echi**. **Diagnosi fatta, e il
+      risultato è il contrario di quello che ci si aspettava**: i quattro file di
+      echi del repo passano `validate_prosa` con **zero rilievi**. Il livello
+      meccanico lì è pulito.
+      ⚠️ Quindi il rilievo del tavolo sugli echi **non è traduttese**: è **voce**,
+      oppure è l'altra metà della frase del DM — *«incoerenza»*. Per ADR-0025
+      questo è esattamente il caso in cui si guarda `style-pillars.md` e non
+      `italiano-nativo.md`.
+      **Serve dal DM**: uno o due echi che i giocatori hanno segnalato. Riscrivere
+      il canone alla cieca è il modo di peggiorarlo.
 
-**Deliverable**: il rumore meccanico esce dal testo, così la passata umana (lotto E) vede il resto.
-**Criterio d'accettazione**: `validate_prosa` trova i casi noti di `italiano-nativo.md` §7 (l'esempio smontato) e tace sulla versione corretta.
-⚠️ **Quello che NON fa**: un validatore trova «realizzi che», non trova una scena che suona tradotta pur essendo in italiano corretto. Quella è la passata umana.
-**Engine**: Sonnet (P-1, P-2) · Opus (P-0, P-3: sono giudizio) · **impegno** medio-alto.
+**Esito.** `validate_prosa.py` misura **154 rilievi** in 333 file, e ha richiesto
+una taratura vera: la prima passata ne produceva **256** perché segnalava il
+progressivo e il possessivo *ovunque* — ma *«sta piovendo»* è italiano corretto.
+Separati in due famiglie (**sempre** vs **solo read-aloud**): 110, più 12 del
+glossario e i tic a densità. **24 test**, di cui una classe intera (`TestRegistri`)
+esiste per quel falso positivo.
+⭐ Il pezzo che vale di più sono **i tic a densità**: «massimo uno per documento»
+è la regola che un revisore umano non applica mai, perché dovrebbe **contare**.
+L'antitesi si riconosce dalla forma, e prende tutti e quattro gli esempi di
+`italiano-nativo.md` §9.1 (copula, verbo, sostantivo, trattone).
+⚠️ **Quello che NON fa**: trova «realizzi che», non trova una scena che suona
+tradotta pur essendo in italiano corretto. Quella è la 2ª passata umana — e la
+diagnosi sugli echi (P-3) lo dimostra sul campo.
 
 ### 🟢 Lotto F — Le decisioni del DM — **tutte e quattro prese il 2026-09-02**
 

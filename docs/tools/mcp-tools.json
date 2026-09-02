@@ -1496,6 +1496,34 @@
       "deterministic": true
     },
     {
+      "name": "validate_prosa",
+      "description": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "invocation": "python3 scripts/validate_prosa.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "string",
+            "description": "File da controllare (default: tutto il contenuto narrativo)."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "I rilievi diventano errori (exit 1)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessun rilievo (o rilievi non bloccanti)",
+        "1": "rilievi con --strict"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_standalone",
       "description": "Gate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
       "invocation": "python3 scripts/validate_standalone.py",
