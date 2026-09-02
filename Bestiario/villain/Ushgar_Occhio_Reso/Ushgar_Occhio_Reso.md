@@ -1,5 +1,14 @@
 # Ushgar «Occhio Reso» — il capo-guerra che vuole un pezzo di carta
 
+
+```statblocco
+gs: 13
+ca: 21
+pf: 140
+ts: Temp +10, Rifl +5, Vol +5
+fonte: derivati dalle tabelle: ts (il resto è letto dalla prosa) — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +5, Vol +5
+```
+
 > **[ACCEPTED — DM-canon]** Approvato dal DM il **2026-08-05**.
 > Statblock: `ushgar-occhio-reso-cr13.md` (questa cartella).
 > Righe di canone applicate in `campaign/state.md` §3 (clock 0/4), §4, §5 e §7.E.

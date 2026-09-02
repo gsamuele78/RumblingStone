@@ -159,6 +159,12 @@ PER_GS = {1: (12, 15), 2: (14, 20), 3: (15, 30), 4: (17, 40), 5: (18, 50),
           11: (25, 145), 12: (27, 160), 13: (28, 180), 14: (29, 200),
           15: (30, 220), 16: (31, 240), 17: (32, 265), 18: (33, 290),
           19: (34, 320), 20: (35, 350)}
+#: ⚠️ Solo QUESTE righe sono verificate contro la fonte (le righe d'ancora di
+#: `pathfinder-1e-srd/references/monster-advancement.md`, controllate a loro
+#: volta sugli epub PRD). Le altre le ho interpolate io, ed e' una differenza
+#: che va detta invece di sparire dentro una tabella dall'aria autorevole: un
+#: giudizio duro non si dà su una riga che nessuno ha verificato.
+PER_GS_VERIFICATE = frozenset({8, 10, 11, 12, 13, 14, 15, 16})
 
 
 def mod(punteggio: int) -> int:
@@ -227,6 +233,17 @@ def leggi_scheda(f: Path) -> Lettura:
         if chiave not in visti:
             visti.add(chiave)
             L.classi.append(chiave)
+    # ⚠️ La STESSA classe con due livelli diversi vuol dire che la scheda
+    # descrive la build in due modi — «Chierico 10 / Prestige …» piu' avanti
+    # «Chierico 13, con domini Lolth» — e da fuori non si sa quale sia il
+    # totale. Sommarli dava 23 DV e Tempra +17 per un GS 13. Non e' un caso da
+    # indovinare: e' un caso da rifiutare.
+    doppie = {c for c, _ in L.classi if sum(1 for x, _ in L.classi if x == c) > 1}
+    if doppie:
+        L.manca.append("la scheda descrive la build in due modi (classe «"
+                       + "», «".join(sorted(doppie)) + "» con livelli diversi): "
+                       "quale sia il totale non si deduce")
+        L.classi = []
 
     m = _DV_RE.search(testa)
     if m:
@@ -261,7 +278,9 @@ def leggi_scheda(f: Path) -> Lettura:
 # ===========================================================================
 def deriva(L: Lettura) -> tuple[Statblocco | None, list[str], list[str]]:
     """(blocco, conti, cosa manca). Se manca qualcosa, il blocco e' None."""
-    manca, conti = [], []
+    manca, conti = list(L.manca), []
+    if manca:
+        return None, conti, manca
     arr = ELITE if L.elite else BASIC
     matrice = "elite" if L.elite else "standard"
 
@@ -351,36 +370,40 @@ def deriva(L: Lettura) -> tuple[Statblocco | None, list[str], list[str]]:
     # rifiuta i nostri quando sono assurdi. E' cio' che serve davvero, perche' il
     # modo in cui questa derivazione sbaglia non e' rumoroso — e' «CA 80 per un
     # PNG di GS 8», che ha l'aria di un conto e non di un errore.
+    # La guardia **annota**, non sopprime. Sopprimere produceva zero proposte, e
+    # uno strumento che non dice niente non aiuta nessuno a correggere niente:
+    # una proposta con scritto sopra «fuori bersaglio» si guarda e si giudica.
+    collaudo = ""
     if L.gs in PER_GS:
         ca_att, pf_att = PER_GS[L.gs]
         dca, dpf = ca - ca_att, pf - pf_att
+        verif = L.gs in PER_GS_VERIFICATE
         if abs(dca) > 6 or abs(dpf) > max(15, pf_att * 0.5):
-            manca.append(
-                f"collaudo fallito: per GS {L.gs} la tabella attende CA {ca_att} e "
-                f"pf {pf_att}, il conto dà CA {ca} e pf {pf} ({dca:+d} / {dpf:+d}). "
-                f"La lettura della scheda è troppo incerta: serve la mano del DM")
-            return None, conti, manca
-        conti.append(f"collaudo GS {L.gs} [PF1e Tab. 1–1]: atteso CA {ca_att}, "
-                     f"pf {pf_att} → {dca:+d} CA, {dpf:+d} pf, dentro tolleranza")
-    else:
-        manca.append("GS assente: senza non c'è collaudo, e senza collaudo non si scrive")
-        return None, conti, manca
-    collaudo = ""
+            collaudo = (f" ⚠ FUORI BERSAGLIO per GS {L.gs}: la tabella attende "
+                        f"CA {ca_att} e pf {pf_att} ({dca:+d} / {dpf:+d})"
+                        + ("" if verif else ", su una riga che ho interpolato io"))
+        conti.append(f"collaudo GS {L.gs} [PF1e Tab. 1–1"
+                     + ("" if verif else ", riga interpolata") + f"]: atteso CA "
+                     f"{ca_att}, pf {pf_att} → {dca:+d} CA, {dpf:+d} pf{collaudo}")
 
     sb = Statblocco(
         gs=str(L.gs) if L.gs is not None else "",
         ca=str(ca),
         pf=str(pf),
         ts=f"Temp {temp:+d}, Rifl {rifl:+d}, Vol {vol:+d}",
-        fonte=("derivato-SRD — " + " · ".join(conti)
-               + ("" if not collaudo else collaudo)),
+        # `collaudo` sta gia' dentro `conti`: aggiungerlo qui lo stampava due
+        # volte di fila nello stesso campo.
+        fonte="derivato-SRD — " + " · ".join(conti),
     )
     return sb, conti, manca
 
 
 # ===========================================================================
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    # ⚠️ `allow_abbrev=False`: senza, argparse accetta `--apply` come
+    # abbreviazione di `--apply-ts`, e chi lo scrive aspettandosi la scrittura
+    # larga (quella che NON esiste) si ritrova una scrittura comunque.
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0], allow_abbrev=False)
     ap.add_argument("file", nargs="*", type=Path)
     # ⚠️ NON esiste un `--apply`, ed e' il risultato del lotto H, non una
     # mancanza. Provato: con le tabelle SRD, le matrici e il collaudo sul GS,
@@ -389,10 +412,12 @@ def main(argv: list[str] | None = None) -> int:
     # rumoroso — e' «CA 11 per un mostro di GS 9», che ha l'aria di un conto.
     # Quindi propone, e la mano che scrive resta quella del DM.
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--apply-ts", action="store_true",
+                    help="scrive SOLO i TS, e solo dove tutto il resto è letto dalla prosa")
     a = ap.parse_args(argv)
 
     elenco = [f if f.is_absolute() else ROOT / f for f in a.file] or schede()
-    fatti, fermi, saltate = [], {}, 0
+    fatti, fermi, saltate, scrivibili = [], {}, 0, []
     for f in elenco:
         t = f.read_text(encoding="utf-8")
         if APERTURA in t or e_non_creatura(t):
@@ -419,9 +444,32 @@ def main(argv: list[str] | None = None) -> int:
         for campo in ("tipo", "ca_dettaglio", "velocita", "iniziativa"):
             if getattr(letto, campo):
                 setattr(sb, campo, getattr(letto, campo))
+        # ⚠️ Nella `fonte` va SOLO il conto di ciò che è stato scritto. Metterci
+        # anche la derivazione di CA e pf che abbiamo scartato in favore dei
+        # numeri del DM produce un blocco che si contraddice — «ca: 24» accanto
+        # a «CA: … = 11» — e chi lo legge fra sei mesi non sa a quale credere.
+        etichette = {"ts": "TS:", "pf": "pf:", "ca": "CA:"}
+        pertinenti = [c for c in conti
+                      if c.startswith("caratteristiche:")
+                      or any(c.startswith(etichette[d]) for d in derivati)]
         sb.fonte = (f"derivati dalle tabelle: {', '.join(derivati)} "
-                    f"(il resto è letto dalla prosa) — " + " · ".join(conti))
+                    f"(il resto è letto dalla prosa) — " + " · ".join(pertinenti))
         fatti.append((f, sb, conti))
+        # La scrittura ristretta: **solo i TS, e solo se tutto il resto era
+        # scritto dal DM.** È il caso difendibile, e l'unico.
+        #
+        # I TS sono la cosa più meccanica del sistema: la base è esatta dalle
+        # tabelle SRD (progressione di classe, o tipo di creatura + DV), e
+        # l'unica incertezza è il modificatore di caratteristica, che viene
+        # dalla matrice dichiarata. Non è un numero indovinato: è un numero
+        # calcolato con una convenzione scritta, su una scheda di cui GS, CA e
+        # pf li ha scritti il DM — quindi c'è di che accorgersi se stona.
+        #
+        # CA e pf NON si scrivono mai: la CA dipende dall'equipaggiamento e i pf
+        # dalla Costituzione, e nessuno dei due si legge da una scheda in prosa
+        # con affidabilità sufficiente. Lì lo strumento resta un proponitore.
+        if derivati == ["ts"] and letto.gs and letto.ca and letto.pf:
+            scrivibili.append((f, sb))
 
     if a.json:
         print(json.dumps({
@@ -431,8 +479,16 @@ def main(argv: list[str] | None = None) -> int:
         }, ensure_ascii=False, indent=2))
         return 0
 
-    print(f"  {len(fatti)} proposte che superano il collaudo sul GS "
-          f"(questo strumento NON scrive: propone)")
+    if a.apply_ts:
+        for f, sb in scrivibili:
+            f.write_text(inserisci(f.read_text(encoding="utf-8"), sb), encoding="utf-8")
+        print(f"  {len(scrivibili)} schede scritte (solo i TS; GS, CA e pf erano "
+              f"già scritti dal DM)")
+    print(f"  {len(fatti)} proposte col conto per esteso "
+          f"(senza --apply-ts questo strumento non scrive)")
+    if not a.apply_ts and scrivibili:
+        print(f"      di cui {len(scrivibili)} scrivibili con --apply-ts: manca "
+              f"solo «ts», il resto è letto dalla prosa")
     for f, sb, _ in fatti[:8]:
         print(f"      · {f.name:48} CA {sb.ca}  pf {sb.pf}  {sb.ts}")
     if len(fatti) > 8:

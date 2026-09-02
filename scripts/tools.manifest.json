@@ -2557,7 +2557,7 @@
       "category": "E-bestiary-catalog",
       "language": "python",
       "invocation": "python3 scripts/derive_statblocks.py",
-      "summary": "PROPONE (non scrive mai) i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA — non fornisce numeri, rifiuta i nostri quando sono assurdi. ADR-0033. Non ha un --apply per progetto: provato che nessuna delle schede rimaste supera il collaudo, e il modo in cui questa derivazione sbaglia non e' rumoroso ma silenzioso («CA 11 per un GS 9»). Mostra il conto per esteso; la mano che scrive resta quella del DM.",
+      "summary": "PROPONE i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA, che ANNOTA la proposta quando e' fuori bersaglio invece di sopprimerla. ADR-0033. Scrive un campo solo, con --apply-ts: i TIRI SALVEZZA, e solo dove GS, CA e pf li ha gia' scritti il DM — la base dei TS e' esatta dalle tabelle e l'unica incertezza e' il modificatore di caratteristica, che viene dalla matrice dichiarata. CA e pf non si scrivono mai: dipendono da equipaggiamento e Costituzione, che da una scheda in prosa non si leggono.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -2579,6 +2579,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Rapporto machine-readable."
+        },
+        {
+          "name": "--apply-ts",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive SOLO i TS, e solo dove GS, CA e pf sono già letti dalla prosa."
         }
       ],
       "inputs": [
@@ -2596,10 +2605,17 @@
           "overwrites": false,
           "generated_header": false,
           "schema": null
+        },
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
         }
       ],
       "exit_codes": {
-        "0": "rapporto stampato"
+        "0": "rapporto stampato (o TS scritti con --apply-ts)"
       },
       "determinism": {
         "deterministic": true,
@@ -2607,7 +2623,7 @@
         "notes": ""
       },
       "side_effects": {
-        "writes_canon": false,
+        "writes_canon": true,
         "git_commit": false,
         "network": false
       },

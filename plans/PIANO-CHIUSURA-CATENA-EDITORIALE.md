@@ -665,11 +665,26 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
          una regex ci trova sempre qualcosa di plausibile («Esperto 2» dove la
          riga diceva «Esperto 2 / Acolita 6»). Un numero sbagliato con l'aria di
          un conto entra nel canone e ci resta fino al tavolo. Perciò lo strumento
-         **propone e non scrive**: niente `--apply`, ed è il risultato, non una
-         mancanza.
-      **Esito misurato: da 82 a 92 schede col blocco, e il debito da 75 a 60** —
-      di cui nessuno più falso. Le 60 restano aperte e si chiudono a mano, una
-      per una: è la sessione a sé che il piano prevedeva.
+         **propone**. ⚠️ La prima versione **sopprimeva** invece di annotare, e
+         produceva **zero** proposte — cioè non correggeva niente. Rilievo del
+         DM, e giusto. Corretto: la guardia **annota** (una proposta con scritto
+         sopra *«FUORI BERSAGLIO»* si giudica; una soppressa non esiste), e si
+         scrive **un campo solo — i TS —** e solo dove GS, CA e pf li ha scritti
+         il DM. I tiri salvezza sono la cosa più meccanica del sistema: la base
+         è **esatta** dalle tabelle SRD, e l'unica incertezza è il modificatore
+         di caratteristica, che viene dalla matrice dichiarata. **CA e pf non si
+         scrivono mai**: dipendono da equipaggiamento e Costituzione, che da una
+         scheda in prosa non si leggono.
+      **Esito misurato: 100 schede su 157 col blocco** (erano 82) — 10 per sola
+      lettura dei dialetti, 8 derivando i TS — **e il debito da 75 a 52**, di cui
+      nessuno più falso. Le 52 restano aperte e si chiudono a mano: è la sessione
+      a sé che il piano prevedeva, ma ora su un numero vero.
+      🔎 Due difetti trovati nel farlo: la **stessa classe letta due volte con
+      livelli diversi** (*«Chierico 10 / Prestige …»* e più avanti *«Chierico
+      13»*) dava Tempra +17 per un GS 13 — ora si rifiuta invece di sommare; e
+      `argparse` accettava `--apply` come abbreviazione di `--apply-ts`, quindi
+      chi scrivesse il primo aspettandosi la scrittura larga otteneva comunque
+      una scrittura.
 - [x] ✅ **H2 — ESEGUITO** (2026-09-02). Il tema aveva un commento che diceva
       *«se un giorno si vuole l'annegato, si apre un ADR sul vendoring dei
       pacchetti Typst»*: quell'ADR è [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)

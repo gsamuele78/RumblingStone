@@ -1,5 +1,16 @@
 # Razorfiend — White Variant [ACCEPTED — DM-canon 2026-05-05]
 **Faction**: red-hand | **Role**: guard-melee | **Environment**: cold | **CR**: 8 | **Source**: RHoD Razorfiend + Draconomicon white | **Status**: inferred
+
+```statblocco
+gs: 8
+ca: 23
+pf: 94
+ts: Temp +7, Rifl +6, Vol +6
+velocita: 40 ft, fly 50 ft (average), swim 30 ft
+iniziativa: +4
+fonte: derivati dalle tabelle: ts (il resto è letto dalla prosa) — caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 2 da DV/4 → For 14, Cos 13, Des 11 · TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +7, Rifl +6, Vol +6
+```
+
 **Size/Type**: Large dragon (cold) | **HD**: 9d12+36 (94 HP)
 **AC**: 23 | **Init**: +4 | **Speed**: 40 ft, fly 50 ft (average), swim 30 ft
 **Full**: Bite +13 (2d6+5 + 1d6 cold), 2 claws +8, tail +8

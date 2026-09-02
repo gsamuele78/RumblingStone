@@ -1,6 +1,17 @@
 # SETHRAX IL VELATO — EMISSARIO ILLITHID DELLA TORRE INVISIBILE
 ## *Il Concorrente Mascherato del Torneo di Dauth, agente di Zalkatar*
 
+
+```statblocco
+gs: 12
+ca: 22
+ca-dettaglio: (10 base, +5 Des “simulato”, +3 Sag, +1 Dodge, +4 bonus monaco, +1 Mental Barrier passivo)
+pf: 70
+ts: Temp +9, Rifl +7, Vol +7
+velocita: 9 m
+fonte: derivati dalle tabelle: ts (il resto è letto dalla prosa) — caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 4 da DV/4 → For 15, Cos 14, Des 11 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +9, Rifl +7, Vol +7
+```
+
 **Razza/Tipo:** Illithid (Mind Flayer — Aberrazione Medio)
 **Classe:** Psion 5 (Telepath) — DV totali 8d8 + 5d4 + 26 → CR 12
 **Allineamento:** Legale Malvagio (servizio metodico, non zelo)

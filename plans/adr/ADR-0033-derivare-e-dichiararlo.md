@@ -60,7 +60,8 @@ la scheda ne diceva **104**, scritti dal DM.
 — perché trascrivere `pf: 30` promuoverebbe un'approssimazione a fatto, e al
 tavolo non si distinguerebbe più da un numero preso da un manuale.
 
-**Esito: da 82 a 92 schede con il blocco, e il debito da 75 a 60.**
+**Esito: da 82 a 92 schede con il blocco per sola lettura**, e altre **8** chiuse
+derivando i soli TS: **100 su 157**, e il debito da 75 a **52**.
 
 ### 3. La derivazione vera: fatta, provata, e non abilitata a scrivere
 
@@ -90,31 +91,54 @@ Acolita 6», «16d12» quando quello era il conteggio giusto ma le caratteristic
 no — e un numero sbagliato con l'aria di un conto entra nel canone e ci resta
 fino al tavolo.
 
-**Decisione: lo strumento propone e non scrive.** Non ha un `--apply`, e non è una
-mancanza: è il risultato. Mostra il conto per esteso, dichiara cosa manca, e la
-mano che scrive resta quella del DM. È la stessa disciplina di
-`import_ultraclear.py` per le mappe — bozza più rapporto dei conflitti — che
-ADR-0021 §3 cita come precedente.
+**Decisione: lo strumento propone, e scrive una cosa sola.**
+
+La prima versione non scriveva niente, e la guardia *sopprimeva* invece di
+annotare: risultato, zero proposte. **Uno strumento che non dice niente non fa
+correggere niente** — il rilievo è del DM, ed era giusto. Corretto così:
+
+1. **la guardia annota.** Una proposta con scritto sopra *«⚠ FUORI BERSAGLIO per
+   GS 9»* si guarda e si giudica; una proposta soppressa non esiste. Sono **15**.
+2. **si scrive un campo solo, e solo i TS** (`--apply-ts`), e solo dove **GS, CA
+   e pf li ha scritti il DM**. I tiri salvezza sono la cosa più meccanica del
+   sistema: la base è **esatta** dalle tabelle SRD (progressione di classe, o
+   tipo di creatura più DV), e l'unica incertezza è il modificatore di
+   caratteristica, che viene dalla matrice dichiarata. Non è un numero
+   indovinato: è un numero calcolato con una convenzione scritta, su una scheda
+   di cui il resto è verificabile a occhio. **Otto schede chiuse così.**
+3. **CA e pf non si scrivono mai.** Dipendono da equipaggiamento e Costituzione,
+   che da una scheda in prosa non si leggono con affidabilità sufficiente. Lì lo
+   strumento resta un proponitore, ed è la stessa disciplina di
+   `import_ultraclear.py` per le mappe — bozza più rapporto — che ADR-0021 §3
+   cita come precedente.
+
+⚠️ E `allow_abbrev=False` sul parser, perché `argparse` accettava `--apply` come
+abbreviazione di `--apply-ts`: chi lo scrivesse aspettandosi la scrittura larga —
+quella che **non esiste** — otterrebbe comunque una scrittura.
 
 ## Conseguenze
 
 **Buone.**
-- Il debito è **misurato bene** per la prima volta: 60, non 75, e di quei 60
-  nessuno è un falso debito.
-- Dieci schede hanno i numeri del DM invece di non averne.
+- Il debito è **misurato bene** per la prima volta: **52**, non 75, e nessuno di
+  quei 52 è un falso debito.
+- Dieci schede hanno i numeri del DM invece di non averne, e otto hanno i TS
+  calcolati dalle tabelle con il conto scritto accanto.
 - Il lettore conosce cinque dialetti in più: ogni scheda futura scritta in uno di
   quelli entra da sola.
 - La stima resta distinguibile dal dato.
 
 **Il prezzo, dichiarato.**
-- **Le 60 restano aperte**, e questo ADR non finge il contrario. Si chiudono a
+- **Le 52 restano aperte**, e questo ADR non finge il contrario. Si chiudono a
   mano, una per una, con lo strumento che propone il conto — ed è una sessione a
   sé, come il piano diceva.
-- **Il derivatore è codice che non scrive niente.** Vale come strumento di
-  proposta e come prova negativa documentata; chi lo legge deve sapere che è
-  deliberato, ed è scritto in testa al file.
-- **La guardia PF1e è tarata su PF1e.** Per un 3.5 è severa: qualche derivazione
-  legittima verrà respinta. Preferibile all'inverso.
+- **Il derivatore scrive un campo su tre**, e gli altri due li propone soltanto.
+  È poco, ed è deliberato: la parte che scrive è quella dove l'errore si vede.
+- **La guardia PF1e è tarata su PF1e.** Per un 3.5 è severa, e ora che annota
+  invece di respingere il rumore si vede nelle proposte.
+- ⚠️ **Non tutte le righe della tabella per GS sono verificate.** Le righe
+  GS 8 e 10-16 vengono dalla fonte; **GS 1-7 e 17-20 le ho interpolate io**, e il
+  campo `PER_GS_VERIFICATE` lo dichiara: su una riga interpolata l'avviso lo dice,
+  perché un giudizio duro non si dà su un numero che nessuno ha controllato.
 
 **Cosa NON decide.** Non emenda ADR-0021 sulla forma del blocco né sul divieto di
 un `Bestiario/dati/*.yaml` parallelo. Emenda **solo** §3, e solo per dire che la

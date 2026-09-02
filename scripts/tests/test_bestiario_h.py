@@ -85,18 +85,13 @@ class TestNonCreature(unittest.TestCase):
 
 
 class TestDerivazione(unittest.TestCase):
-    def test_non_esiste_un_apply(self):
-        # Il risultato del lotto H: con le tabelle SRD nessuna delle schede
-        # rimaste produce numeri che superino il collaudo sul GS. Lo strumento
-        # propone; la mano che scrive resta quella del DM.
-        # Comportamentale, non testuale: la docstring **dice** «non esiste un
-        # --apply», ed è giusto che lo dica. Quello che conta è che la CLI lo
-        # rifiuti e che nessuna funzione scriva.
+    def test_non_esiste_un_apply_generico(self):
+        # Si scrive SOLO con `--apply-ts`, e solo i TS. Un `--apply` che scriva
+        # CA e pf non deve esistere: quelli dipendono da equipaggiamento e
+        # Costituzione, che da una scheda in prosa non si leggono.
         import contextlib, io
         with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
             D.main(["--apply"])
-        self.assertNotIn("write_text", (REPO / "scripts" / "derive_statblocks.py")
-                         .read_text(encoding="utf-8"))
 
     def test_senza_tipo_ne_classe_non_si_deriva(self):
         L = D.Lettura(nome="x", gs=5, dv=4, dado=8, tipo=None)
@@ -104,19 +99,41 @@ class TestDerivazione(unittest.TestCase):
         self.assertIsNone(sb)
         self.assertTrue(any("tipo" in m for m in manca), manca)
 
-    def test_senza_gs_non_c_e_collaudo_e_non_si_scrive(self):
+    def test_senza_gs_la_proposta_esce_ma_senza_collaudo(self):
+        # La guardia **annota**, non sopprime: sopprimere produceva zero
+        # proposte, e uno strumento che non dice niente non fa correggere niente.
         L = D.Lettura(nome="x", gs=None, dv=8, dado=8, tipo="humanoid", armatura=(5, 2))
-        sb, _, manca = D.deriva(L)
-        self.assertIsNone(sb)
-        self.assertTrue(any("GS" in m for m in manca), manca)
+        sb, conti, manca = D.deriva(L)
+        self.assertIsNotNone(sb)
+        self.assertFalse(any("collaudo" in c for c in conti), conti)
 
-    def test_un_risultato_assurdo_viene_rifiutato_dal_collaudo(self):
+    def test_un_risultato_assurdo_esce_MARCATO_fuori_bersaglio(self):
         # CA 11 per un mostro di GS 9 e' il modo in cui questa derivazione
-        # sbaglia: non rumoroso, ma con l'aria di un conto.
+        # sbaglia: non rumoroso, ma con l'aria di un conto. Perciò la proposta
+        # esce **con scritto sopra** che è fuori bersaglio, invece di sparire.
         L = D.Lettura(nome="x", gs=9, dv=2, dado=8, tipo="humanoid", taglia="large")
-        sb, _, manca = D.deriva(L)
+        sb, conti, _ = D.deriva(L)
+        self.assertIsNotNone(sb)
+        self.assertIn("FUORI BERSAGLIO", sb.fonte)
+        self.assertEqual(sb.fonte.count("FUORI BERSAGLIO"), 1, "avviso duplicato")
+
+    def test_la_stessa_classe_con_due_livelli_si_rifiuta(self):
+        # «Chierico 10 / Prestige …» e più avanti «Chierico 13»: la scheda
+        # descrive la build in due modi, e sommarli dava Tempra +17 per un GS 13.
+        import tempfile
+        d = Path(tempfile.mkdtemp()); f = d / "x-cr13.md"
+        f.write_text("# X\n\nChierico 10 / Prestige (Matrona). "
+                     "Poi: Chierico 13, domini.", encoding="utf-8")
+        sb, _, manca = D.deriva(D.leggi_scheda(f))
         self.assertIsNone(sb)
-        self.assertTrue(any("collaudo" in m for m in manca), manca)
+        self.assertTrue(any("due modi" in m for m in manca), manca)
+
+    def test_le_righe_non_verificate_della_tabella_sono_dichiarate(self):
+        # Non tutte le righe per GS sono verificate contro la fonte: alcune le
+        # ho interpolate io, e un giudizio duro non si dà su una riga così.
+        self.assertTrue(D.PER_GS_VERIFICATE < set(D.PER_GS))
+        L = D.Lettura(nome="x", gs=9, dv=2, dado=8, tipo="humanoid", taglia="large")
+        self.assertIn("interpolata", D.deriva(L)[0].fonte)
 
     def test_le_matrici_sono_quelle_del_SRD(self):
         self.assertEqual(D.ELITE, (15, 14, 13, 12, 10, 8))

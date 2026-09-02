@@ -141,7 +141,20 @@
       ]
     ])
   #set text(size: 8.6pt)
-  #make-index(title: none, use-page-counter: true)
+  // ⚠️ `section-title` va passato. Il default di in-dexter e' un `heading`, e i
+  // nostri `show heading` lo impaginano come un titolo di sezione del volume:
+  // la lettera finiva sulla STESSA riga della prima voce, e sembrava ripetuta
+  // («C Colpo dell'Alba Oscura»). Qui e' un blocco suo, con l'aria che deve
+  // avere: una lettera capitale, sola, sopra il suo gruppo.
+  #make-index(
+    title: none,
+    use-page-counter: true,
+    section-title: (lettera, _) => block(above: 9pt, below: 3pt, breakable: false)[
+      #text(font: TITOLI, size: 10.5pt, weight: 600, fill: rosso, tracking: 1pt)[#lettera]
+      #v(-3pt)
+      #line(length: 100%, stroke: 0.4pt + seppia.lighten(35%))
+    ],
+  )
 ]
 
 #let capolettera-versale(lettera, corpo) = {
