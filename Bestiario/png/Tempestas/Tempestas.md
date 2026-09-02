@@ -1,6 +1,15 @@
 # MAESTRO TEMPESTAS — IL TONANTE DI RETHMAR
 ## *Il Messaggero d'Ombra, il Bardo del Tuono, l'Uomo che cammina tra le città*
 
+
+```statblocco
+gs: 14
+ca: 19
+pf: 78
+ts: Temp +6, Rifl +12, Vol +12
+velocita: 9 m
+```
+
 **Razza/Tipo:** Mezzelfo (Umanoide Medio)
 **Classe:** Bardo 12 / Arcimago 2 — GS 14
 **Allineamento:** Neutrale Buono

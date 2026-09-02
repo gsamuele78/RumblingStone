@@ -1,4 +1,8 @@
-# Witchwood & Tiri Kitor — i volti degli elfi di Starsong Hill
+# Witchwood & Tiri Kitor — i volti degli elfi di Starsong Hill [NON-CREATURA]
+
+> **Non è una creatura** (ADR-0033): è un **dossier di più PNG**, e lo dice da sé: *«gli statblock e le meccaniche dell'alleanza vivono già nell'arco»*. È un puntatore, non una scheda.
+> Per questo non ha un blocco `statblocco` e non conta
+> nel debito di migrazione di ADR-0021.
 
 > **Lotto R3** del `plans/PIANO-REINTEGRAZIONE-PNG-AP-RHOD.md` (2026-07-20).
 > Mini-dossier dei PNG elfici Tiri Kitor e del gigante del Witchwood

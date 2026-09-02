@@ -16,9 +16,25 @@
   "footer": "L'Abbazia della Rotta Sicura · edizione da tavolo",
   "out": "abbazia-rotta-sicura.html",
   "chapters": [
-    { "title": "L'Abbazia della Rotta Sicura", "file": "../abbazia_rotta_sicura.md", "tag": "dm" },
-    { "title": "Appendice A — I corsari e il borgo", "file": "../appendice_corsari_borgo.md", "tag": "dm" },
-    { "title": "Appendice B — L'oppressione, la storia, il bestiario", "file": "../appendice_b_oppressione.md", "tag": "dm" },
-    { "title": "Indice maestro — 48 aree, riscalatura, dry-run", "file": "../indice_maestro.md", "tag": "dm" }
+    {
+      "title": "L'Abbazia della Rotta Sicura",
+      "file": "../abbazia_rotta_sicura.md",
+      "tag": "dm"
+    },
+    {
+      "title": "Appendice A — I corsari e il borgo",
+      "file": "../appendice_corsari_borgo.md",
+      "tag": "dm"
+    },
+    {
+      "title": "Appendice B — L'oppressione, la storia, il bestiario",
+      "file": "../appendice_b_oppressione.md",
+      "tag": "dm"
+    },
+    {
+      "title": "Indice maestro — 48 aree, riscalatura, dry-run",
+      "file": "../indice_maestro.md",
+      "tag": "dm"
+    }
   ]
 }

@@ -1,0 +1,142 @@
+"""Il lotto H sul Bestiario: leggere prima di derivare, e non derivare mai alla cieca.
+
+La lezione di H1, che questi test tengono ferma: **il debito non era dove
+sembrava**. Delle 75 schede «da migrare», cinque non erano creature (un organo
+collegiale, una popolazione di profughi, un aggregato di combattimento di massa,
+due dossier che puntano altrove) e dieci avevano i numeri **già scritti**, in
+dialetti che il lettore non conosceva — «hp ~30», «Punti Ferita: 60», «Grado di
+Sfida (GS): 9», «TS +2/+9/+1».
+
+Derivare sopra quei numeri avrebbe sostituito valori del DM con valori calcolati.
+È il danno esatto che ADR-0021 teme, e questi test lo rendono impossibile.
+
+Solo `unittest`: la CI non installa pytest.
+"""
+from __future__ import annotations
+
+import sys
+import unittest
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "scripts"))
+
+from dmcore.statblock import estrai  # noqa: E402
+import derive_statblocks as D  # noqa: E402
+import extract_statblocks as E  # noqa: E402
+
+
+class TestDialetti(unittest.TestCase):
+    """Ogni dialetto qui sotto e' stato trovato in una scheda vera."""
+
+    def _l(self, testo: str):
+        return estrai(testo)[0]
+
+    def test_tilde_approssimativa(self):
+        # «hp ~30»: dieci schede risultavano senza numeri per una tilde.
+        sb = self._l("Medium humanoid, Warrior 4. hp ~30 (4d8+8); AC ~16 (cotta).")
+        self.assertEqual((sb.pf, sb.ca), ("30", "16"))
+
+    def test_la_tilde_resta_dichiarata(self):
+        # Trascrivere «hp ~30» come «pf: 30» promuove una stima a fatto.
+        sb = self._l("hp ~30; AC ~16.")
+        self.assertIn("approssimati", sb.fonte)
+
+    def test_dialetto_italiano_esteso(self):
+        sb = self._l("**Punti Ferita:** 60 (8d8 + 8 Cos)\n"
+                     "**Classe Armatura:** 19\n"
+                     "**Tiri Salvezza:** Tempra +7, Riflessi +10, Volontà +6 (+2 vs incantamento)")
+        self.assertEqual((sb.pf, sb.ca), ("60", "19"))
+        self.assertEqual(sb.ts, "Temp +7, Rifl +10, Vol +6")
+
+    def test_gs_fra_parentesi(self):
+        # «**Grado di Sfida (GS):** 9» — la parentesi rendeva invisibili 9 schede.
+        self.assertEqual(self._l("**Grado di Sfida (GS):** 9").gs, "9")
+
+    def test_ts_con_le_barre(self):
+        self.assertEqual(self._l("PF 33; CA 16; TS +2/+9/+1;").ts,
+                         "Temp +2, Rifl +9, Vol +1")
+
+    def test_hp_in_parentesi_con_testo_dopo(self):
+        sb = self._l("Large undead HD 16d12 (104 HP with skeleton template). AC 15.")
+        self.assertEqual((sb.pf, sb.ca), ("104", "15"))
+
+
+class TestNonCreature(unittest.TestCase):
+    def test_il_marcatore_toglie_la_scheda_dal_debito(self):
+        self.assertTrue(E.e_non_creatura("# Consiglio [NON-CREATURA]\n\ntesto"))
+        self.assertFalse(E.e_non_creatura("# Un orco\n\ntesto"))
+
+    def test_il_marcatore_vale_solo_in_testa(self):
+        # In fondo a un file lungo non e' una dichiarazione: e' una menzione.
+        self.assertFalse(E.e_non_creatura("# Titolo\n" + "\n" * 20 + "[NON-CREATURA]"))
+
+    def test_su_una_non_creatura_non_si_scrive_mai_un_blocco(self):
+        testo = "# Consiglio [NON-CREATURA]\n\nSette seggi."
+        self.assertEqual(E.inserisci(testo, None), testo)
+
+    def test_le_cinque_del_bestiario_sono_marcate(self):
+        attese = {"Consiglio_Rethmar.md", "Profughi_Guado_di_Drellin.md",
+                  "ondata-giganti-fanteria-cr15.md", "Witchwood_e_Tiri_Kitor.md",
+                  "Secondo_Anello_Rethmar.md"}
+        trovate = {f.name for f in (REPO / "Bestiario").rglob("*.md")
+                   if E.e_non_creatura(f.read_text(encoding="utf-8"))}
+        self.assertEqual(attese, trovate)
+
+
+class TestDerivazione(unittest.TestCase):
+    def test_non_esiste_un_apply(self):
+        # Il risultato del lotto H: con le tabelle SRD nessuna delle schede
+        # rimaste produce numeri che superino il collaudo sul GS. Lo strumento
+        # propone; la mano che scrive resta quella del DM.
+        # Comportamentale, non testuale: la docstring **dice** «non esiste un
+        # --apply», ed è giusto che lo dica. Quello che conta è che la CLI lo
+        # rifiuti e che nessuna funzione scriva.
+        import contextlib, io
+        with self.assertRaises(SystemExit), contextlib.redirect_stderr(io.StringIO()):
+            D.main(["--apply"])
+        self.assertNotIn("write_text", (REPO / "scripts" / "derive_statblocks.py")
+                         .read_text(encoding="utf-8"))
+
+    def test_senza_tipo_ne_classe_non_si_deriva(self):
+        L = D.Lettura(nome="x", gs=5, dv=4, dado=8, tipo=None)
+        sb, _, manca = D.deriva(L)
+        self.assertIsNone(sb)
+        self.assertTrue(any("tipo" in m for m in manca), manca)
+
+    def test_senza_gs_non_c_e_collaudo_e_non_si_scrive(self):
+        L = D.Lettura(nome="x", gs=None, dv=8, dado=8, tipo="humanoid", armatura=(5, 2))
+        sb, _, manca = D.deriva(L)
+        self.assertIsNone(sb)
+        self.assertTrue(any("GS" in m for m in manca), manca)
+
+    def test_un_risultato_assurdo_viene_rifiutato_dal_collaudo(self):
+        # CA 11 per un mostro di GS 9 e' il modo in cui questa derivazione
+        # sbaglia: non rumoroso, ma con l'aria di un conto.
+        L = D.Lettura(nome="x", gs=9, dv=2, dado=8, tipo="humanoid", taglia="large")
+        sb, _, manca = D.deriva(L)
+        self.assertIsNone(sb)
+        self.assertTrue(any("collaudo" in m for m in manca), manca)
+
+    def test_le_matrici_sono_quelle_del_SRD(self):
+        self.assertEqual(D.ELITE, (15, 14, 13, 12, 10, 8))
+        self.assertEqual(D.BASIC, (13, 12, 11, 10, 9, 8))
+
+    def test_i_ts_base_seguono_le_progressioni_srd(self):
+        self.assertEqual([D.ts_buono(n) for n in (1, 5, 10, 20)], [2, 4, 7, 12])
+        self.assertEqual([D.ts_cattivo(n) for n in (1, 3, 9, 20)], [0, 1, 3, 6])
+
+    def test_i_dv_non_si_contano_due_volte(self):
+        # «Orco Regular (Warrior 4)» nel titolo e «Warrior 4» nella prosa sono
+        # la stessa cosa: la prima versione contava 12 DV e 48 pf per un GS 3.
+        import tempfile
+        d = Path(tempfile.mkdtemp()); f = d / "orco-cr3.md"
+        f.write_text("# Orco Regular (Warrior 4)\n\nMedium humanoid, Warrior 4. 4d8+8.",
+                     encoding="utf-8")
+        L = D.leggi_scheda(f)
+        self.assertEqual(L.classi, [("warrior", 4)])
+        self.assertIsNone(L.dv, "i DV razziali si sommavano ai livelli di classe")
+
+
+if __name__ == "__main__":
+    unittest.main()

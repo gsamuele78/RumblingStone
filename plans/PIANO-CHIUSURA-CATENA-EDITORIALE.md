@@ -630,15 +630,70 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
 
 **Engine**: Sonnet (G1-G3), Opus (G4: è una convenzione) · **impegno** medio-alto.
 
-### ⬜ Lotto H — Le code preesistenti
+### 🟢 Lotto H — Le code preesistenti — *H2, H3, H4 chiusi · H1 misurato bene e ridotto · 2026-09-02*
 
-- [ ] **H1** — **E8**: le 75 schede di bestiario su 157 non ancora migrate al
-      formato machine-readable (ADR-0021). Non è una decisione, è fatica: o si
-      completano, o si accetta che la libreria abbia due velocità — e si scrive.
-- [ ] **H2** — capolettera annegato + indice analitico → 🟢 **SBLOCCATO** da F1 (vendoring approvato): `droplet` + `in-dexter` vendorizzati.
-- [ ] **H3** — imposizione → 🟢 **SBLOCCATO** da F2 (`pdfcpu` approvato con ADR).
-- [ ] **H4** — CMYK/PDF-X: **rinuncia confermata** (ADR-0020), si riapre solo il
-      giorno di una tiratura vera.
+- [x] 🟢 **H1 — il debito non era dove sembrava** (2026-09-02) · [ADR-0033](adr/ADR-0033-derivare-e-dichiararlo.md)
+      Il piano diceva «non è una decisione, è fatica». Eseguendo la decisione del
+      DM — *«usa le tabelle SRD, e il contenuto libero Pathfinder dove il SRD non
+      ha un equivalente»* — il debito si è rivelato **tre cose diverse**.
+      1. ⭐ **Cinque schede non sono creature**, e non lo saranno mai: un organo
+         collegiale di sette seggi, una popolazione di ~1.500 profughi (che
+         dichiara già di non portare statistiche, **per ragioni di IP**), un
+         aggregato di combattimento di massa il cui «GS 15» è un **EL**, e due
+         dossier che puntano agli statblocchi che vivono altrove. Forzarci sopra
+         un blocco vorrebbe dire **inventare un mostro che non esiste**. Marcate
+         `[NON-CREATURA]` **con la ragione scritta nel file**: non un'esenzione
+         silenziosa. Prima risultavano «da migrare» per sempre — debito che
+         nessuno poteva estinguere.
+      2. ⭐ **Dieci schede i numeri li avevano già**, in dialetti che il lettore
+         non sapeva leggere: la tilde d'approssimazione (`hp ~30`), l'italiano
+         esteso (`**Punti Ferita:** 60`, `**Classe Armatura:** 19`, `**Tiri
+         Salvezza:** Tempra +7…`), il GS fra parentesi (`**Grado di Sfida
+         (GS):** 9`), la forma a barre (`TS +2/+9/+1`), la parentesi con testo
+         dentro (`(104 HP with skeleton template)`). Sono **numeri del DM**, e
+         derivarli da capo li avrebbe sostituiti con numeri calcolati: per
+         `skeletal-dire-lion` la derivazione dava **136 pf**, la scheda ne
+         diceva **104**. E quando il numero era una stima, il blocco lo dice —
+         trascrivere `hp ~30` come `pf: 30` promuove un'approssimazione a fatto.
+      3. **La derivazione vera: fatta, provata, e non abilitata a scrivere.**
+         `derive_statblocks.py` implementa le tabelle SRD (tipi, TS per classe,
+         matrici elite/standard, taglie, armature) e usa la Tabella 1–1 di PF1e
+         **come guardia, non come fonte** — il SRD 3.5 non ha una tabella
+         «statistiche per GS», e i valori PF1e sono più duri a parità di GS.
+         ⚠️ **Il collaudo respinge tutte e 60**: CA 11 per un GS 9, pf 22 per un
+         GS 14. Il motivo è strutturale — le schede sono **prosa, non dati**, e
+         una regex ci trova sempre qualcosa di plausibile («Esperto 2» dove la
+         riga diceva «Esperto 2 / Acolita 6»). Un numero sbagliato con l'aria di
+         un conto entra nel canone e ci resta fino al tavolo. Perciò lo strumento
+         **propone e non scrive**: niente `--apply`, ed è il risultato, non una
+         mancanza.
+      **Esito misurato: da 82 a 92 schede col blocco, e il debito da 75 a 60** —
+      di cui nessuno più falso. Le 60 restano aperte e si chiudono a mano, una
+      per una: è la sessione a sé che il piano prevedeva.
+- [x] ✅ **H2 — ESEGUITO** (2026-09-02). Il tema aveva un commento che diceva
+      *«se un giorno si vuole l'annegato, si apre un ADR sul vendoring dei
+      pacchetti Typst»*: quell'ADR è [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)
+      e il ripiego è scaduto.
+      **Capolettera annegato** con `droplet`: la maiuscola scende tre righe dentro
+      il paragrafo e il testo le scorre attorno. Il versale resta come
+      `capolettera-versale`, **e non per nostalgia**: l'annegato ha bisogno di
+      almeno tre righe sotto di sé, e il ripiego va scritto invece che implicito.
+      **Indice analitico** con `in-dexter`, chiave `indice_analitico` del manifest.
+      ⭐ Le voci **non si annotano a mano**: le marca l'esportatore prendendo i
+      nomi canonici dal glossario, alla prima occorrenza per volume — chiedere a
+      chi scrive di marcare ogni ricorrenza è il modo in cui un indice analitico
+      resta vuoto per sempre. Verificato sul booklet della sessione Terros: **13
+      voci**, raggruppate per lettera, con le pagine (*Portale della Forgia
+      Eterna 3, 14*). E se in un volume non compare **nessun** nome del glossario
+      — il caso dei moduli autoconclusivi, che hanno un'ambientazione loro — la
+      pagina **non si aggiunge**: un «INDICE ANALITICO» vuoto è peggio di niente.
+      Le pagine sono state **guardate**, non solo compilate.
+- [x] ✅ **H3 — già chiuso in G3** (verificato 2026-09-02): `dm.py volume --imposto`
+      impone il libretto con `pdfcpu` ([ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md),
+      funzione `_imponi`), e degrada pulito se il binario manca. Riprovato
+      sull'Abbazia: il libretto esce. Non è stato rifatto — è stato verificato.
+- [x] ✅ **H4 — rinuncia confermata**, e resta tale: ADR-0020 la dichiara, e si
+      riapre solo il giorno di una tiratura vera. Non toccata di proposito.
 
 ---
 

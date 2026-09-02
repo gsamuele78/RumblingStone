@@ -59,6 +59,25 @@ def gs_numerico(v: str) -> float | None:
         return None
 
 
+#: Il marcatore che dice «questa scheda NON e' una creatura». Va in testa al
+#: file, nella riga di intestazione, e toglie la scheda dal conto del debito.
+#:
+#: Serve perche' il Bestiario contiene anche cose che una creatura non sono, e
+#: forzarci sopra `gs/ca/pf/ts` vorrebbe dire **inventare un mostro che non
+#: esiste**: un organo collegiale con sette seggi, una popolazione di profughi,
+#: un'ondata di combattimento di massa che e' un aggregato di altre schede, un
+#: dossier che punta agli statblocchi che vivono altrove. Finche' non c'era
+#: questo marcatore, quelle cinque schede risultavano «da migrare» per sempre —
+#: debito che nessuno poteva estinguere, che e' il modo in cui un numero smette
+#: di significare qualcosa.
+NON_CREATURA = "[NON-CREATURA]"
+
+
+def e_non_creatura(testo: str) -> bool:
+    """Vero se la scheda si dichiara non-creatura (nelle prime righe)."""
+    return NON_CREATURA in "\n".join(testo.split("\n")[:8])
+
+
 def schede() -> list[Path]:
     return sorted(
         p for p in BESTIARIO.rglob("*.md")
@@ -74,7 +93,7 @@ def inserisci(testo: str, sb: Statblocco) -> str:
     fondo sarebbe un dato che nessuno vede. Dopo l'intestazione è il posto dove
     un lettore umano si aspetta i numeri.
     """
-    if APERTURA in testo:
+    if APERTURA in testo or e_non_creatura(testo):
         return testo
     righe = testo.split("\n")
     taglio = 0
@@ -135,9 +154,12 @@ def main() -> int:
                   f"hanno il blocco, {len(problemi)} problemi")
         return 1 if problemi else 0
 
-    completi, parziali, gia = [], [], []
+    completi, parziali, gia, non_creature = [], [], [], []
     for f in elenco:
         testo = f.read_text(encoding="utf-8")
+        if e_non_creatura(testo):
+            non_creature.append(f)
+            continue
         if APERTURA in testo:
             gia.append(f)
             continue
@@ -156,6 +178,7 @@ def main() -> int:
         print(json.dumps({
             "schede": len(elenco),
             "gia_migrate": [rel(f) for f in gia],
+            "non_creature": [rel(f) for f in non_creature],
             "completi": [rel(f) for f, _ in completi],
             "parziali": {rel(f): m for f, m in parziali},
             "applicato": bool(args.apply),
@@ -164,6 +187,9 @@ def main() -> int:
 
     verbo = "scritti" if args.apply else "pronti (nessuna scrittura: manca --apply)"
     print(f"  {len(gia)} schede hanno già il blocco")
+    if non_creature:
+        print(f"  {len(non_creature)} non sono creature e non ne devono avere uno "
+              f"(marcate {NON_CREATURA})")
     print(f"  {len(completi)} blocchi {verbo}")
     print(f"  {len(parziali)} schede da fare a mano — la prosa non dice tutto:")
     conteggio: dict[str, int] = {}

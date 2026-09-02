@@ -1,3 +1,9 @@
+// Pacchetti vendorizzati (ADR-0026): stanno in `scripts/typst/packages/` e la
+// compilazione non scarica niente. `droplet` fa il capolettera annegato,
+// `in-dexter` l'indice analitico.
+#import "@preview/droplet:0.3.1": dropcap
+#import "@preview/in-dexter:0.7.2": index, make-index
+
 // tema-rumblingstone.typ — il tema di stampa del repo (ADR-0020).
 //
 // Lo usa scripts/export_booklet_typst.py: NON si modifica il .typ generato,
@@ -104,20 +110,58 @@
   #text(size: 9pt)[#body]
 ]
 
-// Capolettera «versale»: la maiuscola d'apertura, grande, sulla riga del testo.
+// Capolettera ANNEGATO: la maiuscola d'apertura scende dentro il paragrafo e il
+// testo le scorre attorno, come nei manuali.
 //
-// ⚠️ È un versale, non un capolettera annegato: il testo NON scorre attorno
-// alla lettera. Farlo annegato richiede di misurare il paragrafo e spezzarlo
-// riga per riga — è quello che fa il pacchetto `droplet`, che però va preso
-// dalla rete a ogni compilazione (o vendorizzato con la sua licenza). Il
-// versale dà lo stesso segno d'apertura, costa zero dipendenze, e non può
-// rompersi su un paragrafo corto. Se un giorno si vuole l'annegato, si apre
-// un ADR sul vendoring dei pacchetti Typst: la decisione è quella, non il CSS.
-#let capolettera(lettera, corpo) = {
+// Il commento che stava qui diceva: «se un giorno si vuole l'annegato, si apre
+// un ADR sul vendoring dei pacchetti Typst». Quell'ADR ora esiste — ADR-0026 —
+// e `droplet` è vendorizzato in `scripts/typst/packages/`, con la sua licenza
+// MIT, quindi il ripiego è scaduto e questa è la cosa vera.
+//
+// ⚠️ Il versale resta, come `capolettera-versale`, e non per nostalgia: un
+// capolettera annegato ha bisogno di **almeno tre righe** di paragrafo sotto di
+// sé, altrimenti la lettera esce dal blocco e si porta dietro il testo. Chi
+// chiama decide; il ripiego è scritto, non implicito.
+// L'indice analitico: le voci marcate nel testo, raccolte in coda al volume con
+// il numero di pagina. Lo fa `in-dexter` (ADR-0026), che è vendorizzato.
+//
+// ⚠️ Le voci NON si annotano a mano: le marca l'esportatore prendendo i nomi
+// canonici dal glossario (`campaign/GLOSSARIO-E-LOCALIZZAZIONE.md`). Chiedere a
+// chi scrive di marcare a mano ogni ricorrenza è il modo in cui un indice
+// analitico resta vuoto per sempre.
+#let voce-indice(termine) = index(termine)
+
+#let indice-analitico() = page(columns: 2, header: none)[
+  #place(top + center, scope: "parent", float: true,
+    block(width: 100%, inset: (bottom: 8pt))[
+      #align(center)[
+        #text(font: TITOLI, size: 13pt, fill: rosso, tracking: 1.2pt)[INDICE ANALITICO]
+        #v(2pt)
+        #line(length: 38%, stroke: 0.6pt + seppia)
+      ]
+    ])
+  #set text(size: 8.6pt)
+  #make-index(title: none, use-page-counter: true)
+]
+
+#let capolettera-versale(lettera, corpo) = {
   set par(first-line-indent: 0pt)
   par[#box(baseline: 25%)[
       #text(font: TITOLI, size: 2.6em, weight: 600, fill: rosso)[#lettera]
     ]#h(0.05em)#corpo]
+}
+
+#let capolettera(lettera, corpo) = {
+  set par(first-line-indent: 0pt)
+  dropcap(
+    height: 3,
+    gap: 6pt,
+    hanging-indent: 0pt,
+    font: TITOLI,
+    weight: 600,
+    fill: rosso,
+    [#lettera#corpo],
+  )
 }
 
 // Una figura. In due colonne un'immagine più larga della colonna va in float a

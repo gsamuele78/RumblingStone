@@ -161,27 +161,58 @@ def rendi(sb: Statblocco) -> str:
 # è una libreria che nessuno script potrà mai usare davvero.
 
 _RE = {
-    # Tre dialetti, tutti presenti nella libreria: «**hp 34**», «(5 HP)»,
-    # «**HP**: 84». Si leggono tutti e tre; non se ne inventa un quarto.
-    "pf": re.compile(r"\*{0,2}(?:hp|pf|PF|HP)\*{0,2}[:\s]\s*\*{0,2}(\d{1,4})\*{0,2}"
-                     r"|\((\d{1,4})\s*(?:HP|hp|PF|pf)\)"),
+    # Quattro dialetti, tutti presenti nella libreria: «**hp 34**», «(5 HP)»,
+    # «**HP**: 84» e — il quarto, trovato chiudendo il lotto H — «hp ~30».
+    #
+    # La tilde e' il motivo per cui venti schede risultavano «senza numeri»
+    # mentre i numeri ce li avevano: il DM li aveva scritti approssimati, e il
+    # lettore non riconosceva la forma. Sono numeri SUOI, e derivarli da capo
+    # avrebbe voluto dire sostituirli con numeri inventati.
+    "pf": re.compile(r"(?i:\*{0,2}Punti Ferita\*{0,2})\s*:?\s*\*{0,2}[~≈]?\s*(\d{1,4})"
+                     r"|\*{0,2}(?:hp|pf|PF|HP)\*{0,2}[:\s]\s*[~≈]?\s*\*{0,2}(\d{1,4})\*{0,2}"
+                     # «(104 HP with skeleton template)»: dopo «HP» puo' seguire
+                     # del testo dentro la stessa parentesi.
+                     r"|\((\d{1,4})\s*(?:HP|hp|PF|pf)\b"),
     # I dadi vita, non i dadi di danno: si cercano nella frase di apertura
     # («Small plant, 4d8+16.») o accanto ai pf, mai in fondo a un attacco.
     "pf_dado": re.compile(r"(?:^|\n)[^\n]{0,80}?\b(\d{1,3}d\d{1,2}(?:\s*[+-]\s*\d+)?)\b"
                           r"(?=[^\n]{0,40}(?:\.|\bhp\b|\bpf\b))", re.I),
-    "ca": re.compile(r"\*{0,2}(?:AC|CA)\*{0,2}[:\s]\s*\*{0,2}(\d{1,2})\*{0,2}"),
+    "ca": re.compile(r"(?i:\*{0,2}Classe Armatura\*{0,2})\s*:?\s*\*{0,2}[~≈]?\s*(\d{1,2})"
+                     r"|\*{0,2}\b(?:AC|CA)\b\*{0,2}[:\s]\s*[~≈]?\s*\*{0,2}(\d{1,2})\*{0,2}"),
+    # Il dettaglio della CA e' la parentesi che la segue, e **finisce li'**.
+    # Correndo fino a fine riga si portava dietro velocita' e attacchi, che
+    # nella forma italiana stanno sulla stessa riga: usciva
+    # «ca-dettaglio: Volo 24m, attacchi: artigli +8/+8 …».
+    # ⚠️ Le SIGLE si cercano come sigle: `re.I` su «CA» faceva combaciare il
+    # «ca» minuscolo dentro un'altra parola, e il dettaglio finiva per essere
+    # velocita' e attacchi presi da tutt'altro punto del file.
     "ca_dettaglio": re.compile(
-        r"\*{0,2}(?:AC|CA)\*{0,2}[:\s]\s*\*{0,2}\d{1,2}\*{0,2}\s*((?:\([^)]*\)|,)[^.;\n]*)"),
-    "ts": re.compile(r"Temp[a-z]*\**\s*\**([+-]\d+)[^.\n]{0,14}?Rifl[a-z]*\**\s*\**([+-]\d+)"
-                     r"[^.\n]{0,14}?Vol[a-z]*\**\s*\**([+-]\d+)"),
+        r"(?:\*{0,2}\b(?:AC|CA)\b\*{0,2}|(?i:\*{0,2}Classe Armatura\*{0,2}))"
+        r"[:\s]\s*[~≈]?\s*\*{0,2}\d{1,2}\*{0,2}\s*(\([^)\n]*\))"),
+    # Il segnale che il numero e' una STIMA e non una lettura. Si conserva:
+    # trascrivere «hp ~30» come «pf: 30» promuove un'approssimazione a fatto, e
+    # al tavolo non si distinguerebbe piu' da un numero preso da un manuale.
+    "approssimato": re.compile(r"(?:hp|pf|PF|HP|AC|CA)\*{0,2}[:\s]\s*[~≈]"),
+    # Il divario fra un tiro e l'altro va tenuto largo: la forma italiana estesa
+    # «Tempra +7, Riflessi +10, Volontà +6 (+2 vs incantamento)» ci sta appena.
+    "ts": re.compile(r"Temp[a-zà]*\**\s*\**([+-]\d+)[^.\n]{0,24}?Rifl[a-zei]*\**\s*\**([+-]\d+)"
+                     r"[^.\n]{0,24}?Vol[a-zontà]*\**\s*\**([+-]\d+)", re.I),
+    # Forma compatta: «TS +2/+9/+1», nell'ordine Tempra/Riflessi/Volonta'.
+    # Una scheda sola la usa, ma e' inequivocabile e costa due righe.
+    "ts_barre": re.compile(r"\bTS\s*\**\s*([+-]\d+)\s*/\s*([+-]\d+)\s*/\s*([+-]\d+)"),
     # Le schede trascritte dai manuali sono in inglese: stessa cosa, altro nome.
     "ts_en": re.compile(r"Fort[a-z]*\**\s*\**([+-]?\d+)[^.\n]{0,14}?Ref[a-z]*\**\s*\**([+-]?\d+)"
                         r"[^.\n]{0,14}?Will\**\s*\**([+-]?\d+)"),
-    "velocita": re.compile(r"\b(?:Vel|Velocità|Speed)\.?\**\s*:?\s*([^.;|\n]+)"),
+    # ⚠️ L'alternativa piu' LUNGA per prima, o «Vel» mangia meta' di «Velocità»
+    # e il resto finisce nel valore: usciva «velocita: ocità: 9 m a piedi».
+    "velocita": re.compile(r"\b(?:Velocità|Velocita|Speed|Vel)\b\.?\**\s*:?\s*([^.;|\n]+)"),
     "iniziativa": re.compile(r"\bInit(?:iativa|\.)?\**\s*:?\s*\**([+-]\d+)"),
     # «CR 1/2» è mezzo grado, non uno: catturare solo la prima cifra farebbe
     # sembrare un goblin il doppio di quello che è.
-    "gs": re.compile(r"\*{0,2}(?:CR|GS)\*{0,2}[:\s]\s*\*{0,2}(\d{1,2}\s*/\s*\d|\d+\.\d+|\d{1,2})"),
+    # «**Grado di Sfida (GS):** 9» — fra la sigla e i due punti c'e' una
+    # parentesi, ed e' bastata a rendere invisibili nove schede.
+    "gs": re.compile(r"Grado di Sfida[^:\n]{0,12}:\**\s*(\d{1,2}\s*/\s*\d|\d+\.\d+|\d{1,2})"
+                     r"|\*{0,2}(?:CR|GS)\*{0,2}[:\s]\s*\*{0,2}(\d{1,2}\s*/\s*\d|\d+\.\d+|\d{1,2})"),
     "tipo": re.compile(r"^\s*((?:Tiny|Small|Medium|Large|Huge|Gargantuan|Colossal)\s+[^.]{2,80})\.",
                        re.M | re.I),
     "attacco": re.compile(r"^\*{0,2}(Mischia|Distanza|Melee|Ranged)\*{0,2}\s+([^\n]+)", re.M),
@@ -224,7 +255,8 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
         # La barra verticale separa i CAMPI nelle schede a coppie chiave/valore:
         # oltre quella non c'è più il dettaglio della CA, c'è un altro campo.
         sb.ca_dettaglio = m.group(1).split("|")[0].strip().lstrip(",").strip()
-    m = _RE["ts"].search(testo) or _RE["ts_en"].search(testo)
+    m = (_RE["ts"].search(testo) or _RE["ts_en"].search(testo)
+         or _RE["ts_barre"].search(testo))
     if m:
         def segno(v: str) -> str:
             return v if v[0] in "+-" else "+" + v
@@ -239,6 +271,27 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
         setattr(sb, chiave, getattr(sb, chiave).replace("**", "").strip())
     sb.attacchi = [a.replace("**", "").strip() for a in sb.attacchi]
     sb.voci = [v.replace("**", "").strip() for v in sb.voci]
+    # I dadi vita devono essere COERENTI con i pf. La frase di un attacco
+    # («morso +24 (3d6+10 + 1d6 acido)») ha la stessa forma dei dadi vita, e
+    # senza questo controllo usciva «pf: 215, pf-dado: 3d6+10» — due numeri che
+    # si smentiscono a vicenda dentro lo stesso blocco. Meglio nessun dado vita
+    # che un dado vita preso da un attacco.
+    if sb.pf_dado and sb.pf:
+        m2 = re.fullmatch(r"(\d+)d(\d+)\s*([+-]\s*\d+)?", sb.pf_dado.replace(" ", ""))
+        try:
+            n, faccia, extra = int(m2.group(1)), int(m2.group(2)), m2.group(3) or "0"
+            media = n * (faccia / 2 + 0.5) + int(extra.replace(" ", ""))
+            if abs(media - int(sb.pf)) > max(8, int(sb.pf) * 0.5):
+                sb.pf_dado = ""
+        except (AttributeError, ValueError):
+            sb.pf_dado = ""
+
+    # Se la prosa scriveva «hp ~30», il numero e' una STIMA del DM. Il blocco lo
+    # dice, perche' altrimenti al tavolo non si distingue piu' da un numero
+    # preso da un manuale — ed e' esattamente la confusione che ADR-0021 vieta.
+    if _RE["approssimato"].search(testo):
+        nota = "valori approssimati nella prosa d'origine (scritti con «~»)"
+        sb.fonte = f"{sb.fonte} · {nota}" if sb.fonte else nota
     return sb, sb.mancanti()
 
 

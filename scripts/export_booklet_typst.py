@@ -756,6 +756,60 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
     ]
 
 
+#: Voci del glossario gia' caricate (il file si legge una volta sola).
+_VOCI_INDICE: list[str] | None = None
+
+
+def voci_indice() -> list[str]:
+    """I nomi canonici del glossario, dal piu' lungo al piu' corto.
+
+    Dal piu' lungo perche' «Corona di Adamantio» va marcata prima di «Corona»:
+    al contrario resterebbe «#voce-indice[Corona] di Adamantio», che nell'indice
+    diventa una voce sbagliata.
+    """
+    global _VOCI_INDICE
+    if _VOCI_INDICE is None:
+        try:
+            sys.path.insert(0, str(ROOT / "scripts"))
+            from validate_prosa import coppie_glossario
+            _VOCI_INDICE = sorted(
+                (it for it, _ in coppie_glossario()
+                 if len(it) > 6 and it not in ("Categoria",)),
+                key=len, reverse=True)
+        except Exception:
+            _VOCI_INDICE = []
+    return _VOCI_INDICE
+
+
+def marca_indice(typ: str) -> str:
+    """Marca la PRIMA occorrenza di ogni voce del glossario, per capitolo.
+
+    ⚠️ Solo su righe di prosa: una riga che comincia per `#` e' un comando Typst
+    e infilarci dentro una funzione romperebbe l'impaginazione. Solo la prima
+    occorrenza: un indice che rimanda a dodici pagine per lo stesso termine non
+    aiuta nessuno a trovarlo.
+    """
+    voci = voci_indice()
+    if not voci:
+        return typ
+    gia: set[str] = set()
+    fuori = []
+    for riga in typ.split("\n"):
+        s = riga.lstrip()
+        if s.startswith("#") or s.startswith("//") or "voce-indice" in riga:
+            fuori.append(riga)
+            continue
+        for v in voci:
+            if v in gia:
+                continue
+            m = re.search(r"(?<![\w#\[])" + re.escape(v) + r"(?![\w\]])", riga)
+            if m:
+                riga = (riga[:m.start()] + "#voce-indice[" + v + "]" + riga[m.end():])
+                gia.add(v)
+        fuori.append(riga)
+    return "\n".join(fuori)
+
+
 def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
     elenco = capitoli(man, base, tutti)
 
@@ -783,7 +837,22 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)
         parti.append("")
-    return "\n".join(parti)
+    testo = "\n".join(parti)
+    # L'indice analitico e' opt-in dal manifest: non tutti i volumi lo vogliono
+    # (un teaser di due pagine con un indice analitico e' una presa in giro).
+    if man.get("indice_analitico"):
+        marcato = marca_indice(testo)
+        n = marcato.count("#voce-indice[")
+        if n:
+            testo = marcato + "\n#indice-analitico()\n"
+        else:
+            # Nessuna voce del glossario in questo volume: e' il caso dei moduli
+            # autoconclusivi, che hanno un'ambientazione loro. Una pagina
+            # «INDICE ANALITICO» vuota in coda e' peggio di nessun indice.
+            print("  · indice analitico chiesto ma nessun nome del glossario "
+                  "compare in questo volume: la pagina non si aggiunge",
+                  file=sys.stderr)
+    return testo
 
 
 def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:

@@ -5,9 +5,9 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**52 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**53 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
-**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 47: le cartelle di `converters/` non sono programmi e non compaiono.
+**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 48: le cartelle di `converters/` non sono programmi e non compaiono.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -60,6 +60,7 @@
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
 | `build_monster_catalog.py` | Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml. | --check · -o/--output | ✔ | — | — | `0` · `1` |
+| `derive_statblocks.py` | PROPONE (non scrive mai) i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA — non fornisce numeri, rifiuta i nostri quando sono assurdi. ADR-0033. Non ha un --apply per progetto: provato che nessuna delle schede rimaste supera il collaudo, e il modo in cui questa derivazione sbaglia non e' rumoroso ma silenzioso («CA 11 per un GS 9»). Mostra il conto per esteso; la mano che scrive resta quella del DM. | file · --json | ✔ | — | — | `0` |
 | `extract_statblocks.py` | Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file. | file · --apply · --check · --json | ✔ | — | — | `0` · `1` · `2` |
 | `validate_bestiario.py` | Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti. | --rules · --json | ✔ | — | — | `0` · `1` |
 
