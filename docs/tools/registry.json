@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 50,
+  "tool_count": 51,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -3415,6 +3415,87 @@
       "docs": [
         "scripts/README-automation.md"
       ]
+    },
+    {
+      "id": "mcp_server",
+      "path": "scripts/mcp_server.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/mcp_server.py",
+      "summary": "Espone i tool del repo a un client MCP: JSON-RPC su stdio, stdlib, catalogo preso da questo stesso manifest (ADR-0012, ADR-0030). E' una superficie d'esecuzione e si difende come tale: solo allowlist, mai una shell, argomenti validati sullo schema prima di partire, percorsi confinati sotto la radice del repo, timeout e tetto all'output. I tool che scrivono contenuto o fanno commit sono ELENCATI ma non partono senza --allow-write, perche' il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Un'uscita diversa da zero e' un risultato tradotto con gli exit_codes del manifest, non un errore di protocollo.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--allow-write",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Abilita i tool che scrivono contenuto o fanno commit."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Diagnostica su stderr (mai su stdout)."
+        },
+        {
+          "name": "--timeout",
+          "type": "int",
+          "required": false,
+          "default": 120,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Secondi per chiamata."
+        },
+        {
+          "name": "--self-check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica catalogo, schemi e righe di comando; non parla il protocollo."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/tools.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "stdin chiuso, uscita pulita (o --self-check senza guasti)",
+        "1": "--self-check: almeno un tool non costruisce una riga valida"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "il catalogo dipende solo dal manifest"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
     },
     {
       "id": "new-campaign-group",

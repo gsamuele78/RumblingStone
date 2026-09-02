@@ -1371,6 +1371,42 @@
       "deterministic": true
     },
     {
+      "name": "mcp_server",
+      "description": "Espone i tool del repo a un client MCP: JSON-RPC su stdio, stdlib, catalogo preso da questo stesso manifest (ADR-0012, ADR-0030). E' una superficie d'esecuzione e si difende come tale: solo allowlist, mai una shell, argomenti validati sullo schema prima di partire, percorsi confinati sotto la radice del repo, timeout e tetto all'output. I tool che scrivono contenuto o fanno commit sono ELENCATI ma non partono senza --allow-write, perche' il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Un'uscita diversa da zero e' un risultato tradotto con gli exit_codes del manifest, non un errore di protocollo.",
+      "invocation": "python3 scripts/mcp_server.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "allow-write": {
+            "type": "boolean",
+            "description": "Abilita i tool che scrivono contenuto o fanno commit."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Diagnostica su stderr (mai su stdout)."
+          },
+          "timeout": {
+            "type": "integer",
+            "description": "Secondi per chiamata."
+          },
+          "self-check": {
+            "type": "boolean",
+            "description": "Verifica catalogo, schemi e righe di comando; non parla il protocollo."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "stdin chiuso, uscita pulita (o --self-check senza guasti)",
+        "1": "--self-check: almeno un tool non costruisce una riga valida"
+      },
+      "deterministic": true
+    },
+    {
       "name": "new_campaign_group",
       "description": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
       "invocation": "./scripts/new-campaign-group.sh",
@@ -1546,63 +1582,6 @@
         "1": "violazioni checklist"
       },
       "deterministic": true
-    },
-    {
-      "name": "converters_html_to_markdown",
-      "description": "Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM.",
-      "invocation": "(vedi converters/Html_to_markdown/README)",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "required": [],
-        "additionalProperties": false
-      },
-      "outputs": [
-        "*.md"
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "deterministic": false
-    },
-    {
-      "name": "converters_image_to_webp",
-      "description": "Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM.",
-      "invocation": "converters/Image-to-webp/conver_webp_new.sh",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "required": [],
-        "additionalProperties": false
-      },
-      "outputs": [
-        "*.webp"
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "deterministic": false
-    },
-    {
-      "name": "converters_pdf_to_md_engine",
-      "description": "Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM.",
-      "invocation": "(vedi converters/pdf-to-md-engine/README)",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "required": [],
-        "additionalProperties": false
-      },
-      "outputs": [
-        "*.md"
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "deterministic": false
     },
     {
       "name": "import_html_module",

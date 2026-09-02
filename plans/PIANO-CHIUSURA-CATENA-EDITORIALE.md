@@ -516,10 +516,48 @@ compilata prima di aver eseguito è metà ADR.
 **Ordine consigliato d'esecuzione**: F1 (sblocca due code a costo basso) → F2 →
 F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-0005).
 
-### ⬜ Lotto G — Infrastruttura (P6, P7, P8, P16)
+### 🟢 Lotto G — Infrastruttura (P6, P7, P8, P16)
 
-- [ ] **G1** — **server MCP** sui 44 tool di `docs/tools/mcp-tools.json`: JSON-RPC
-      su stdio, stdlib, zero dipendenze. Chiude la promessa di ADR-0012.
+- [x] ✅ **G1 — ESEGUITO** (2026-09-02) · [ADR-0030](adr/ADR-0030-server-mcp-sui-tool.md)
+      · progetto per esteso in [SPEC-SERVER-MCP.md](SPEC-SERVER-MCP.md)
+      `scripts/mcp_server.py`: JSON-RPC 2.0 su stdio, stdlib, catalogo derivato
+      dal manifest. `initialize` · `tools/list` · `tools/call` · `ping`.
+      ⭐ **La fonte di verità ha finalmente un lettore, e ha subito trovato tre
+      difetti che nessuno vedeva perché nessuno la leggeva:**
+      1. **tre delle 48 voci erano cartelle**, non programmi — `converters/`
+         html-to-markdown, pdf-to-md-engine e image-to-webp hanno per invocazione
+         *«(vedi …/README)»*. Il descrittore prometteva tre tool che non partono;
+      2. **`invocation` non è un comando**: è una riga d'esempio per umani, e
+         mescola l'eseguibile con segnaposto e flag di comodo (`MANIFEST.json`,
+         `<cartella>`, `--all`, `--check`). **Nove tool su quarantasei** ne hanno
+         uno — un server che la usasse verbatim lancerebbe `--all` che nessuno ha
+         chiesto. Il comando si deriva da `path` + `language`;
+      3. **nessuna voce portava gli effetti collaterali**: un client non
+         distingueva `validate_prosa` da `state_apply`. Ora ci sono le
+         annotazioni MCP (`readOnlyHint`, `destructiveHint`, `idempotentHint`).
+      `mcp-tools.json` scende da 48 a **46** voci: è una correzione, non una
+      perdita.
+      🔒 **Sei difese, un test a testa**, perché un processo che lancia 46
+      programmi per conto di un agente è una superficie d'esecuzione: **S-1** solo
+      allowlist · **S-2** niente shell (argv come lista) · **S-3** schema validato
+      prima di partire · **S-4** percorsi confinati sotto la radice · **S-5**
+      read-only per difetto · **S-6** timeout e tetto all'output.
+      ⚠️ **S-5 non nasce da un manuale di sicurezza, nasce da qui**: i cinque tool
+      che scrivono contenuto (quattro dei quali fanno commit) sono **elencati ma
+      non partono** senza `--allow-write`. ADR-0007 vuole il canone su un branch
+      di gruppo con l'occhio del DM sopra; un agente che li lanciasse perché
+      «sembrava il passo successivo» non violerebbe una regola di sicurezza,
+      violerebbe **il flusso di lavoro del DM** — che è peggio, perché lì per lì
+      non se ne accorge nessuno. Elencati e non nascosti di proposito: un tool
+      invisibile diventa una richiesta fatta a mano.
+      📋 **Un'uscita ≠ 0 è un risultato, non un guasto** — `validate_lingua` esce
+      1 per progetto — e porta con sé **il significato del codice preso dal
+      manifest**. È la differenza fra un agente che ritenta a caso e uno che
+      cambia parametri.
+      **Accettazione**: 24 test (guidano il server *attraverso stdio*, non
+      chiamandone le funzioni) + un gate CI che lo fa **parlare davvero** —
+      `initialize`, `tools/list` con le annotazioni, e `state_apply` che deve
+      essere **rifiutato** in sola lettura.
 - [ ] **G2** — veraPDF in CI (fa togliere da solo il ripiego `--no-pdf-tags`),
       misura dei **caratteri per riga** sul PDF compilato, simulatore di
       daltonismo sulle mappe.
