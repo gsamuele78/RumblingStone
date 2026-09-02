@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
 
 from validate_prosa import (  # noqa: E402
-    ANTITESI, controlla, coppie_glossario, e_per_i_giocatori,
+    ANTITESI, controlla, coppie_glossario, e_per_i_giocatori, nomi_canonici,
 )
 
 
@@ -167,6 +167,57 @@ class TestConvenzioniDelRepo(unittest.TestCase):
                  "> Sono cose che il TUO personaggio sente, e che gli ALTRI no.*\n\n"
                  "Testo di gioco normale.\n")
         self.assertEqual(_f(testo, "02-HINT-X.md"), [])
+
+
+class TestAncoreNominate(unittest.TestCase):
+    """Un testo per i giocatori senza un solo nome che loro riconoscano.
+
+    Il caso Hella. Questa classe esiste perché il controllo, alla prima
+    stesura, dava il risultato **rovesciato**: segnalava l'hint di Artemis
+    (che le ancore ha, in forma breve — «l'Anello», «la Sentinella») e
+    lasciava passare Hella (che non ne ha nessuna). Due cause, entrambe qui
+    sotto: mancavano le forme brevi, e il confronto era case-insensitive.
+    """
+
+    LUNGO = ("Una testa grande, ossuta, che si appoggia dove batteva il cuore. "
+             "Odore di pietra bagnata. Spalle larghe che scricchiolano come travi. "
+             "Le mani fredde si posano e tengono. Qualcosa prepara un guscio, con "
+             "la cura con cui si prepara una culla. Una nota bassa di voci di "
+             "cristallo: non capisci le parole. Qualcosa sta aspettando, e "
+             "l'attesa non e' disperata. Pietra che si assesta attorno a ossa care. ") * 2
+
+    def test_le_forme_brevi_sono_ancore(self):
+        # «la Corona» e «l'Anello» sono cio' che il canone usa DAVVERO in prosa.
+        nomi = nomi_canonici()
+        for breve in ("Corona", "Anello", "Sentinella", "Bracieri", "Durik"):
+            self.assertIn(breve, nomi, breve)
+
+    def test_un_testo_con_unancora_passa(self):
+        self.assertEqual(
+            [x for x in _f(self.LUNGO + " La Corona pulsa.", "05-ECHI-X.md")
+             if "ancora" in x], [])
+
+    def test_un_testo_senza_ancore_e_un_rilievo(self):
+        r = [x for x in _f(self.LUNGO, "05-ECHI-X.md") if "ancora" in x]
+        self.assertTrue(r, "il caso Hella non viene rilevato")
+
+    def test_un_nome_comune_non_e_unancora(self):
+        # ⚠ La regressione da cui nasce il confronto case-sensitive:
+        # «batteva il cuore» non e' il Cuore di Moradin.
+        r = [x for x in _f(self.LUNGO + " Il cuore e la corona di fiori.",
+                           "05-ECHI-X.md") if "ancora" in x]
+        self.assertTrue(r, "«cuore» minuscolo e' stato preso per un'ancora")
+
+    def test_un_testo_corto_non_si_giudica(self):
+        self.assertEqual([x for x in _f("Tre righe soltanto, senza nomi.",
+                                        "05-ECHI-X.md") if "ancora" in x], [])
+
+    def test_un_file_del_dm_non_si_giudica(self):
+        self.assertEqual([x for x in _f(self.LUNGO, "01-REGIA-SESSIONE.md")
+                          if "ancora" in x], [])
+
+    def test_un_readme_non_e_prosa_di_gioco(self):
+        self.assertEqual([x for x in _f(self.LUNGO, "README.md") if "ancora" in x], [])
 
 
 class TestGlossario(unittest.TestCase):

@@ -131,6 +131,12 @@ Hella riceve *«una testa grande, ossuta»* (è **Durik**, e non lo dice), *«sp
 larghe, oneste»* (è **Thorik**, e non lo dice), *«qualcosa prepara un guscio»*.
 Quattro immagini non attribuite di fila **non sono mistero: sono rumore.**
 
+🤖 **E ora si controlla da solo**: `python3 scripts/validate_prosa.py FILE`
+segnala un testo per i giocatori che non contiene **una sola** ancora nominata.
+Su 333 file di contenuto ne trova uno — questo. Il controllo confronta i nomi
+**con la maiuscola**, perché metà delle forme brevi del canone sono anche nomi
+comuni: *«batteva il cuore»* non è il **Cuore di Moradin**.
+
 ### Le due regole
 
 **1. Almeno un'ancora nominata.** Un frammento evocativo si regge se chi legge

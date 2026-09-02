@@ -129,6 +129,89 @@ def coppie_glossario() -> list[tuple[str, str]]:
     return fuori
 
 
+PG = ("Thorik", "Tordek", "Hella", "Artemis", "Durik")
+
+# Le forme brevi che il canone usa in prosa e che il glossario NON puo' dare,
+# perche' li' i nomi stanno per esteso (o in inglese). Si estende a mano quando
+# un artefatto prende un soprannome al tavolo: e' l'unico pezzo di questo file
+# che sa qualcosa della campagna, ed e' voluto che si veda.
+ALIAS = ("Anello", "Ascia", "Corona", "Bracieri", "Guanti", "Collana", "Cuore",
+         "Sentinella", "Topazio", "Smeraldo", "Rubino", "Forgia", "Incudine")
+
+# Parole che in un nome proprio non identificano niente da sole.
+VUOTE = {"della", "delle", "degli", "dello", "dei", "del", "di", "da", "il", "la",
+         "lo", "le", "gli", "of", "the", "and", "una", "uno", "in", "e"}
+
+
+def nomi_canonici() -> list[str]:
+    """Nomi del canone, **forme brevi comprese**.
+
+    Un giocatore non scrive «Corona di Adamantio» in un eco: scrive «la Corona».
+    Un controllo che pretende il nome per esteso da' il risultato rovesciato — e
+    l'ha dato: segnalava l'hint di Artemis, che le ancore ha («l'Anello», «la
+    Sentinella»), e lasciava passare quello di Hella, che non ne ha nessuna.
+    Da qui: ogni voce del glossario contribuisce anche le sue **parole piene**.
+    """
+    fuori = set(PG) | set(ALIAS)
+    if GLOSSARIO.is_file():
+        for riga in GLOSSARIO.read_text(encoding="utf-8").splitlines():
+            if not riga.strip().startswith("|"):
+                continue
+            celle = [c.strip() for c in riga.strip().strip("|").split("|")]
+            if len(celle) < 2 or celle[0].startswith(("Italiano", "---", ":--", "**")):
+                continue
+            for pezzo in re.split(r"\s*[/·(«»]\s*", celle[0]):
+                for parola in re.findall(r"[A-Za-zÀ-ÿ'’]{4,}", pezzo):
+                    if parola.lower() not in VUOTE:
+                        fuori.add(parola)
+    return sorted(fuori)
+
+
+_NOMI: list[str] | None = None
+
+
+def check_ancore(f: Path, righe: list[tuple[int, str]], rel) -> list[str]:
+    """Un testo per i giocatori senza un solo nome che loro riconoscano.
+
+    Il caso: gli echi di Hella prima dello scontro con Terros. La giocatrice ha
+    detto di **non capirci niente**, e `validate_prosa` sul resto era pulito —
+    non era prosa, era progetto. Contate le ancore nella prosa dei quattro testi
+    per-PG della stessa sessione: Tordek 8, Thorik 5, Artemis 4, **Hella 0**.
+    Riceve «una testa grande, ossuta» (e' Durik) e «spalle larghe, oneste» (e'
+    Thorik) senza nominarli mai.
+
+    Quattro immagini non attribuite di fila non sono mistero: sono rumore. Un
+    frammento evocativo si regge se chi legge puo' attaccarne **uno** a qualcosa
+    che conosce. `module-standard` §5 vuole che un PG assente percepisca «solo
+    echi»: li vuole **oscuri**, non **senza appigli**.
+    """
+    # Il controllo vale dove il glossario E' il canone. I moduli autoconclusivi
+    # hanno il loro (il Drappo e' a Tarsilia, su Golarion: Vesca e Salle non
+    # stanno in GLOSSARIO-E-LOCALIZZAZIONE.md, e non devono starci). Segnalarli
+    # vorrebbe dire chiedere loro di citare un canone che non e' il loro.
+    if any(x.startswith(("STANDALONE-", "10-stand-alone")) for x in f.parts):
+        return []
+    if f.name.upper().startswith("README"):
+        return []
+    global _NOMI
+    if _NOMI is None:
+        _NOMI = nomi_canonici()
+    prosa = "\n".join(r for _, r in righe if not r.lstrip().startswith("#"))
+    prosa = CONGEDO_DM.sub(" ", CAPPELLO_DM.sub(" ", prosa))
+    if len(prosa.split()) < 90:
+        return []
+    # ⚠ Confronto CASE-SENSITIVE, e non e' un dettaglio: meta' delle forme brevi
+    # del canone sono anche nomi comuni italiani. «batteva il cuore» non e' il
+    # Cuore di Moradin, «voci di cristallo» non e' un artefatto. La maiuscola e'
+    # cio' che distingue un nome proprio da una parola — ed e' l'unico segnale
+    # affidabile che il testo offre. Senza, il controllo dava Hella per ancorata.
+    if any(re.search(rf"\b{re.escape(n)}\b", prosa) for n in _NOMI):
+        return []
+    return [f"{rel}: testo per i giocatori **senza una sola ancora nominata** — "
+            f"niente che chi legge riconosca. Un frammento evocativo si regge su "
+            f"almeno un nome noto: senza, non e' mistero, e' rumore"]
+
+
 _COPPIE: list[tuple[str, str]] | None = None
 
 
@@ -185,8 +268,13 @@ ETICHETTA_BATTUTA = re.compile(
     r"^>?\s*\*\*[A-ZÀ-Ù][A-ZÀ-Ù'’ \-]{1,30}[:：]?\*\*\s*[,(:]?", re.M)
 # Il cappello sta su PIÙ righe di blockquote: si toglie il blocco intero, non la
 # riga che contiene la frase-spia — altrimenti restano dentro le altre.
+# Il congedo in coda — `> *(Niente meccanica, stanotte. …)*` — sta su piu' righe
+# di blockquote: si toglie il BLOCCO, non la riga che apre la parentesi. Togliendo
+# solo la prima restavano dentro le altre, e con loro i nomi che ci sono citati:
+# un testo senza appigli risultava ancorato.
+CONGEDO_DM = re.compile(r"(?:^>\s*\*?\(.*\n)(?:^>.*\n)*", re.M)
 CAPPELLO_DM = re.compile(
-    r"(?:^>.*\n)*?^>.*(?:per il giocatore|leggi in privato|non ci sono istruzioni"
+    r"(?:^>.*\n)*?^>.*(?:per il giocatore|per la giocatrice|leggi in privato|non ci sono istruzioni"
     r"|affar tuo|ripasso lampo).*\n(?:^>.*\n)*",
     re.I | re.M)
 
@@ -229,6 +317,8 @@ def controlla(f: Path) -> list[str]:
         # Restano fuori i titoli, che non sono prosa letta.
         readaloud = "\n".join(r for _, r in righe if not r.lstrip().startswith("#"))
     fuori: list[str] = check_glossario(f, testo, rel)
+    if e_per_i_giocatori(f):
+        fuori += check_ancore(f, righe, rel)
 
     for n, riga in righe:
         for pattern, perche in CALCHI_SEMPRE:

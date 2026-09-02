@@ -314,11 +314,23 @@ riapertura, e la condizione è scattata.**
       chiude con «qualcosa di caro sta cercando la strada di casa» — il giocatore
       non sa cosa, ma sa verso dove; Hella ha «non capisci le parole, ma il senso
       è inequivocabile», che **afferma** un senso senza consegnarlo.
-      ⚠️ **Provato ad automatizzarlo e rinunciato, dichiarandolo**: un controllo
-      sulle ancore dava il risultato **rovesciato** — segnalava Artemis (che le
-      ancore ha, in forma breve: «l'Anello», «la Sentinella») e non Hella, perché
-      il glossario contiene solo i nomi lunghi. Un gate che sbaglia sul canone è
-      peggio di nessun gate: resta una regola scritta, applicata da chi scrive.
+- [x] **P-7** — ⭐ **Il controllo automatico, dopo l'obiezione del DM** («migliora
+      il controllo, altrimenti non si corregge niente»). Aveva ragione: la prima
+      stesura dava il risultato **rovesciato** e l'avevo tolta invece di
+      ripararla. Due cause, entrambe riparate:
+      1. **mancavano le forme brevi** — il canone in prosa scrive «la Corona» e
+         «l'Anello», non «Corona di Adamantio»: ora ogni voce del glossario
+         contribuisce le sue parole piene, più una lista di alias dichiarata;
+      2. **il confronto era case-insensitive** — e metà delle forme brevi sono
+         anche nomi comuni: *«batteva il cuore»* non è il **Cuore di Moradin**,
+         *«voci di cristallo»* non è un artefatto. La **maiuscola** è l'unico
+         segnale affidabile che il testo offre.
+      **Esito**: corretto su tutti e quattro i file della sessione, e su tutto il
+      repo segnala **un solo file** — quello che la giocatrice aveva segnalato.
+      Perimetro dichiarato: vale dove il glossario **è** il canone, quindi i
+      moduli autoconclusivi restano fuori (il Drappo è a Tarsilia, su Golarion:
+      i suoi nomi non stanno nel glossario di RumblingStone e non devono starci).
+      7 test dedicati, fra cui la regressione del «cuore» minuscolo.
 
 **Esito.** `validate_prosa.py` misura **154 rilievi** in 333 file, e ha richiesto
 una taratura vera: la prima passata ne produceva **256** perché segnalava il
