@@ -308,6 +308,19 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
         else:
             print(f"  ○ {tool} assente — opzionale, serve solo per {why}")
 
+    # Le dipendenze binarie accettate con un ADR (ADR-0020, ADR-0027). Sono
+    # opzionali: qui si dice cosa manca e cosa resta possibile senza, mai un
+    # avviso — `doctor` non deve trasformare un ripiego dichiarato in un difetto.
+    try:
+        import binari as _binari
+        for _b, _p in _binari.stato():
+            if _p:
+                ok(f"{_b.nome} presente ({_b.a_cosa_serve})")
+            else:
+                print(f"  ○ {_b.nome} assente — {_b.ripiego}")
+    except Exception as exc:  # doctor non deve mai crashare
+        warn(f"check dipendenze binarie fallito: {exc}")
+
     if problems:
         print(f"[dm] doctor: {problems} avvisi")
         return 0 if args.ci else 1

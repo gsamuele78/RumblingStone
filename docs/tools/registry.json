@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 48,
+  "tool_count": 49,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4013,6 +4013,43 @@
       "docs": [
         "converters/README.md"
       ]
+    },
+    {
+      "id": "binari",
+      "path": "scripts/binari.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/binari.py",
+      "summary": "Le dipendenze binarie accettate con un ADR (typst — ADR-0020; pdfcpu — ADR-0027) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "elenco stampato",
+        "2": "MANCA — usato da esigi(): dipendenza binaria assente, niente e' stato scritto"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "dipende solo dal PATH"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
     },
     {
       "id": "dmcore",

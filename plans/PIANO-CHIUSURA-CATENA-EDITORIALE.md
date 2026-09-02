@@ -397,12 +397,32 @@ compilata prima di aver eseguito è metà ADR.
       **l'ambiente ripulito** (niente proxy, niente `HOME`).
       **Sblocca H2**: capolettera annegato e indice analitico erano la stessa
       decisione, ed è presa.
-- [x] **F2** ✅ **SÌ, con ADR.** — *Si accetta `pdfcpu`* (Apache-2.0, binario Go singolo, offline,
-      (Apache-2.0, binario Go singolo, offline, `booklet` nativo) come seconda
-      dipendenza binaria dopo Typst. **Sblocca H3**: l'imposizione, cioè un
-      libretto invece di una risma.
-      ⚠️ L'ADR deve contenere la **regola di degradazione pulita**: se il binario
-      manca, lo script dice come installarlo ed **esce**, non fallisce a metà.
+- [x] ✅ **F2 — ESEGUITO** (2026-09-02) · [ADR-0027](adr/ADR-0027-imposizione-con-pdfcpu.md)
+      `pdfcpu` accettato come seconda dipendenza binaria (Apache-2.0, eseguibile
+      Go statico, `booklet` nativo), e la **regola di degradazione pulita scritta
+      in codice** invece che in un piano: `scripts/binari.py`. `esigi()`
+      restituisce il percorso **oppure esce con 2** (`MANCA`, distinto da 1 =
+      «ho provato e fallito») **prima** di aprire qualunque file di destinazione
+      — il difetto da evitare non è un crash, è un PDF di 40 pagine su 96
+      indistinguibile da uno buono. Ogni binario dichiara il suo **ripiego**.
+      La regola ha **due utenti**: `typst` è stato portato sopra lo stesso helper
+      nello stesso commit, perché una regola con un utente solo è un caso
+      particolare. `dm.py doctor` ora li elenca.
+      **Verificato sul campo, non supposto** — `pdfcpu v0.11.0` su
+      `ARC07-TEASER-GIOCATORI-STAMPA.pdf`: 3 pagine A4 → **2 fogli**, exit 0.
+      ⚠️ E una scoperta che l'ADR registra invece di nascondere: **l'output non è
+      byte-identico fra due esecuzioni**. Misurata la causa — è la seconda metà
+      dell'array `/ID`, che `pdfcpu` rigenera a ogni scrittura; `CreationDate` e
+      `ModDate` sono identici e **i flussi di contenuto delle pagine hanno lo
+      stesso md5**. Quindi *il documento è deterministico, il file no*, e ne
+      segue la regola: un PDF imposto **non si versiona e non si confronta a
+      byte**. Invocazione sempre con `-c disable` (altrimenti `pdfcpu` scrive
+      `~/.config/pdfcpu/` e installa un font sulla macchina di chi lo esegue) e
+      `-o` (niente rete, come ADR-0026).
+      **Sblocca H3**: l'imposizione, cioè un libretto invece di una risma.
+      `scripts/tests/test_binari.py`: **8 test**, fra cui *«ogni binario cita un
+      ADR che esiste davvero»* — una dipendenza binaria senza ADR è una
+      dipendenza entrata di nascosto.
 - [x] **F3** ✅ **Licenza doppia: CC BY-NC-SA sul testo, MIT sugli `scripts/`.**
       La GPL è scritta per il software e il repo è per tre quarti prosa. Il testo
       prende una licenza pensata per le opere dell'ingegno e coerente con

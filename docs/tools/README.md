@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**48 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**49 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -98,6 +98,7 @@
 
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
+| `binari.py` | Le dipendenze binarie accettate con un ADR (typst — ADR-0020; pdfcpu — ADR-0027) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca. | — | ✔ | — | — | `0` · `2` |
 | `dmcore` | Libreria condivisa ADR-0007: regions (marker auto:), gitio (guardia branch/commit), config (group.yaml), visibility (policy per-PG). Non e' un CLI. | — | ✔ | — | — | — |
 
 ---

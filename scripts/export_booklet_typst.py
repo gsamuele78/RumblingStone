@@ -46,7 +46,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import shutil
 import subprocess
 import sys
 import unicodedata
@@ -55,6 +54,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
+
+import binari  # noqa: E402  (accanto a questo file)
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
@@ -65,19 +66,6 @@ SCHEDA_PG = ROOT / "scripts" / "typst" / "scheda-pg.typ"
 PACCHETTI = ROOT / "scripts" / "typst" / "packages"
 FONTS = ROOT / "scripts" / "fonts"
 
-INSTALLA = """\
-Il binario «typst» non è nel PATH. È un singolo eseguibile, Apache 2.0:
-
-  Linux/macOS   curl -sSL https://github.com/typst/typst/releases/latest/download/\\
-                  typst-x86_64-unknown-linux-musl.tar.xz | tar xJ
-                  sudo install typst-*/typst /usr/local/bin/
-  Fedora/Bazzite  brew install typst        (oppure il tarball qui sopra)
-  Arch            pacman -S typst
-  Windows         winget install --id Typst.Typst
-
-Niente panico se non lo installi: `export_booklet_pdf.py` continua a produrre i
-PDF per capitolo con Chromium. Questo esportatore serve al volume da stampa.
-"""
 
 
 def typ_path(p: Path) -> str:
@@ -881,10 +869,9 @@ def main() -> int:
             print(f"  {t}{marchio}  ←  {f.relative_to(ROOT) if ROOT in f.parents else f}")
         return 0
 
-    binario = shutil.which("typst")
-    if not binario:
-        print(INSTALLA, file=sys.stderr)
-        return 1
+    # La regola di degradazione pulita sta in `binari.py` (ADR-0027): se manca,
+    # dice come installarlo ed esce con 2 — prima di aprire qualunque file.
+    binario = binari.esigi(binari.TYPST)
 
     typ = base / f"{mp.stem.replace('.manifest', '')}.typ"
     pdf = base / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"
