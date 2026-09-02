@@ -244,7 +244,7 @@ i confini con le altre cinque skill · e quando **non** serve.
 sente e non si vede, gli **echi trattati come testo** e non come note, quando un
 testo è chiuso e i tre soli casi che lo riaprono.
 
-### 🟢 Lotto P — La prosa e la coerenza — *P-0/P-1/P-2/P-4/P-5 chiusi · P-3 in diagnosi · 2026-09-02* · [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md)
+### ✅ Lotto P — La prosa e la coerenza — *chiuso · 2026-09-02* · [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md)
 
 Aperto dal rilievo del tavolo del 2026-09-02: *«incoerenza e prosa inglese
 tradotta male, anche negli echi»*. **ADR-0016 aveva scritto la condizione di
@@ -331,6 +331,32 @@ riapertura, e la condizione è scattata.**
       moduli autoconclusivi restano fuori (il Drappo è a Tarsilia, su Golarion:
       i suoi nomi non stanno nel glossario di RumblingStone e non devono starci).
       7 test dedicati, fra cui la regressione del «cuore» minuscolo.
+- [x] ⭐ **P-8** — **l'eco di Hella riscritto, e il tavolo può giudicarlo.** La
+      diagnosi di P-3 diceva *dove*; questo è il *cosa*. Applicate le due regole
+      appena scritte in `consequence-echoes.md` §3-ter, sul file che il
+      validatore segnalava da solo su 333:
+      - **un'ancora nominata per eco**, presa dal canone del DM e non inventata:
+        **Durik** (regia §1, «l'Impronta di Durik è caduta nel Sogno della
+        Terra») · **Thorik** (regia punto 5: la giocatrice «ha lo stesso momento
+        dal suo lato») · **l'Incudine del Mondo** e la risposta a Moradin (il suo
+        stesso viaggio, canone giocato). Nessuna è un'anticipazione: sono cose
+        che **Hella** sa e gli altri PG no — ed è la direzione in cui gli echi
+        viaggiano.
+      - **la riga di lettura anche dove resta oscuro**: *«Le parole non le
+        capirai — non sono per te. Il tono sì.»* al posto di *«non capisci le
+        parole, ma il senso è inequivocabile»*, che affermava un senso senza
+        consegnarlo.
+      - **il cappello non chiude più la porta**: *«Sono oscuri di proposito, non
+        vuoti»*, e la domanda al DM a fine serata è esplicitamente concessa.
+      - via anche i tre rilievi meccanici che restavano: *«le tue mani»* →
+        *«le mani»*, *«sta aspettando»* → tolto, e l'antitesi *«Non sai se… Non
+        sai se…»* sostituita dal pagamento che mancava (*«Lui non sa che sei tu.
+        Ma il peso si alleggerisce, e lui lo sente»*).
+      **Accettazione**: `validate_prosa.py` sul file → `✓ nessun calco, nessun
+      tic oltre soglia`, ancora inclusa. Prima: 3 rilievi, fra cui l'unico
+      «senza una sola ancora nominata» del repo. ⚠️ È **canone di tavolo**: il
+      DM lo approva o lo revoca in un commit — la versione precedente sta nella
+      storia di questo file.
 
 **Esito.** `validate_prosa.py` misura **154 rilievi** in 333 file, e ha richiesto
 una taratura vera: la prima passata ne produceva **256** perché segnalava il
