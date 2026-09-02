@@ -30,6 +30,41 @@
       "type": "string",
       "description": "Riga piccola in fondo al frontespizio (data, versione). Catene: html, stampa."
     },
+    "colophon": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "La pagina dei crediti, subito dopo il frontespizio: chi ha fatto il volume, su cosa si basa, che versione e' e cosa se ne puo' fare. Senza questa chiave il volume esce come prima, anonimo. Catene: html, stampa.",
+      "properties": {
+        "edizione": {
+          "type": "string",
+          "description": "Come si chiama questa uscita (es. «Edizione da tavolo»)."
+        },
+        "versione": {
+          "type": "string",
+          "description": "Versione del volume (es. «v3»). E' cio' che distingue la copia stampata il mese scorso da quella di ieri."
+        },
+        "data": {
+          "type": "string",
+          "description": "Data dell'edizione, in chiaro. Si scrive QUI e mai si genera: un PDF che prende la data dall'orologio cambia a ogni compilazione e smette di essere byte-identico."
+        },
+        "autori": {
+          "type": "string",
+          "description": "Chi ha scritto e curato il volume."
+        },
+        "basato_su": {
+          "type": "string",
+          "description": "Su cosa poggia: SRD 3.5, OGL 1.0a, l'avventura originale. E' la riga che ADR-0005 chiede e che finora viveva solo nelle guide."
+        },
+        "licenza": {
+          "type": "string",
+          "description": "Regime d'uso di QUESTO volume (es. «materiale del DM, uso privato, non diffondere»)."
+        },
+        "nota": {
+          "type": "string",
+          "description": "Una riga libera in fondo: ringraziamenti, dedica, avvertenza."
+        }
+      }
+    },
     "header": {
       "type": "string",
       "description": "Testatina fissa. Catene: html. In stampa la testatina segue il CAPITOLO corrente, che e' cio' che rende sfogliabile un volume."

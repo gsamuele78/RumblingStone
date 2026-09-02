@@ -205,6 +205,49 @@
   if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
 }
 
+// La pagina dei crediti, sul verso del frontespizio — dov'e' in un manuale
+// stampato. Prima del 2026-09-02 i volumi di questo repo uscivano anonimi: senza
+// autore, senza data, senza versione e senza la riga che dice su cosa si basano.
+// Due PDF dello stesso capitolo, stampati a un mese di distanza, erano
+// indistinguibili sul tavolo.
+//
+// La `data` arriva SEMPRE dal manifest, mai da `datetime.today()`: un volume che
+// prende la data dall'orologio cambia a ogni compilazione e smette di essere
+// byte-identico, che e' la proprieta' su cui poggia il gate di stampa in CI.
+#let colophon(voci: (), licenza: "", nota: "") = page(columns: 1, header: none)[
+  #v(1fr)
+  #align(center)[
+    #text(font: TITOLI, size: 10pt, fill: seppia, tracking: 2.5pt)[COLOPHON]
+    #v(0.35cm)
+    #line(length: 30%, stroke: 0.5pt + seppia)
+  ]
+  #v(0.7cm)
+  #block(width: 100%, inset: (x: 2.2cm))[
+    #set text(size: 9pt, fill: inchiostro)
+    #set par(justify: false, first-line-indent: 0pt, leading: 0.7em)
+    #for (etichetta, valore) in voci {
+      if valore != "" {
+        grid(columns: (3.4cm, 1fr), column-gutter: 0.5em, row-gutter: 0.5em,
+          text(font: TITOLI, size: 8pt, fill: seppia)[#upper(etichetta)],
+          [#valore])
+        v(0.18cm)
+      }
+    }
+    #if licenza != "" [
+      #v(0.5cm)
+      #line(length: 100%, stroke: 0.4pt + seppia.lighten(45%))
+      #v(0.35cm)
+      #text(size: 8.5pt, style: "italic", fill: seppia)[#licenza]
+    ]
+    #if nota != "" [
+      #v(0.35cm)
+      #text(size: 8pt, fill: seppia)[#nota]
+    ]
+  ]
+  #v(1fr)
+  #align(center)[#text(fill: seppia, size: 12pt)[⬦]]
+]
+
 // `apparato: false` toglie frontespizio e indice. Serve a un fascicolo di
 // schede: sei fogli da stampare e dare in mano, dove una copertina e un indice
 // sarebbero due pagine da saltare ogni volta che si va alla fotocopiatrice.
@@ -214,6 +257,7 @@
 // «da stampare stasera» non sono lo stesso file.
 #let libro(titolo: "", sottotitolo: "", brand: "", banner: "", meta: "", capitolo: "",
            apparato: true, carta: "avorio", copertina: none, intro: none,
+           crediti: none,
            corpo) = {
   let fondo = if carta == "bianca" { white } else { avorio }
   set document(title: titolo)
@@ -311,6 +355,10 @@
     #text(fill: seppia, size: 15pt)[❦]
   ]
   pagebreak()
+
+  // Il colophon sta sul verso del frontespizio: e' la prima cosa che si trova
+  // aprendo il volume, come in un manuale stampato.
+  if crediti != none { crediti }
 
   // La pagina d'introduzione del manifest (`intro_md`): la catena HTML la
   // stampa da sempre, questa la ignorava in silenzio.

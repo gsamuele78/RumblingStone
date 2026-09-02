@@ -17,6 +17,10 @@ caso limite.
 > **La riga da ricordare**: dei diciannove punti, **dodici non chiedono nessuna
 > decisione** — sono lavoro che si può fare oggi. Tre sono decisioni del DM e
 > bloccano gli altri quattro. Questo piano mette i dodici davanti.
+>
+> **Stato al 2026-09-02**: chiusi **A** (il gate sull'Abbazia) e **B** (il
+> colophon, ADR-0023). Restano aperti C, D, E, G, H — nessuno dei quali chiede
+> una decisione — e **F**, che sono le quattro domande al DM.
 
 ---
 
@@ -27,7 +31,7 @@ decide l'ordine, non il costo.
 
 | | Punto | Origine | Gate |
 |---|---|---|---|
-| P1 | Colophon nei volumi (crediti, licenza, edizione, versione, data) | colophon C1 | — |
+| P1 | Colophon nei volumi (crediti, licenza, edizione, versione, data) | colophon C1 | ✅ **fatto** (lotto B, ADR-0023) |
 | P2 | Skill `rumblingstone-edizione` + gate IP d'uscita | colophon C1+C3 | ⚠️ ADR-0008 |
 | P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | — |
 | P4 | **Vendoring dei pacchetti Typst** | colophon §5 | ⚠️ **DM** |
@@ -43,7 +47,7 @@ decide l'ordine, non il costo.
 | P14 | Il limite dichiarato del dry-run | Abbazia | — |
 | P15 | Cancelli d'uscita a tempo per atto | Abbazia | — |
 | P16 | Tavole non zenitali (veduta, profilo, tempi) | Abbazia | — |
-| P17 | ⚠️ **L'Abbazia è fuori da ogni catena** | Abbazia | parziale |
+| P17 | ⚠️ **L'Abbazia è fuori da ogni catena** | Abbazia | 🟡 **gate fatto** (lotto A); la conversione resta F4 |
 | P18 | ⚠️ `LICENSE` GPL-3.0 su un'opera testuale | Abbazia | ⚠️ **DM** |
 | P19 | Tabelle vive del borgo (dicerie false, reazione) | Abbazia | — |
 | — | E8: 75 schede di bestiario su 157 non migrate | audit ago. | fatica, non decisione |
@@ -57,7 +61,7 @@ decide l'ordine, non il costo.
 
 Ordinati per **quanto si chiude senza chiedere niente a nessuno**.
 
-### ⬜ Lotto A — Il gate che manca sull'Abbazia (P17, parte 1)
+### ✅ Lotto A — Il gate che manca sull'Abbazia (P17, parte 1) — *chiuso 2026-09-02*
 
 Il difetto più urgente dei nuovi, e la sua metà indolore.
 
@@ -66,11 +70,30 @@ la CI conosce `STANDALONE-*` (il Drappo) e basta. Quattro file, ~2.750 righe, e
 **nessun controllo di nessun tipo**: un link rotto, un'area rinumerata o un file
 rinominato non li vede nessuno finché non si apre al tavolo.
 
-- [ ] **A1** — `validate_standalone.py` riconosce anche `10-stand-alone/*/`, con
-      i controlli che valgono su HTML: link interni risolvibili, ancore
-      `href="#..."` esistenti, titoli non duplicati.
-- [ ] **A2** — step in CI, bloccante.
-- [ ] **A3** — riga in `scripts/README-automation.md`.
+- [x] **A1** — `validate_standalone.py` riconosce `10-stand-alone/*/` come
+      **seconda famiglia**: `<title>` non vuoto, almeno un `<h1>`, link relativi
+      risolvibili, ancore esistenti **anche verso un altro file del modulo**,
+      `id` non duplicati, termini 5e vietati sul testo spogliato dei tag.
+- [x] **A2** — step CI rinominato e bloccante; 14 test in `test_standalone_html.py`,
+      su cartelle temporanee e **non** sull'Abbazia (un test che dipende dal
+      contenuto di un modulo vero diventa rosso il giorno in cui il DM lo riscrive).
+- [x] **A3** — riga in `scripts/README-automation.md` + `tools.manifest.json`
+      aggiornato e artefatti derivati rigenerati (`docs/tools/*`).
+
+**Esito.** Verde sull'Abbazia com'è. Criterio d'accettazione soddisfatto su sei
+casi: ancora rotta, `id` duplicato, `<h1>` tolto, link relativo inesistente,
+ancora inesistente nel file di destinazione → **exit 1**; ripristinati → **exit 0**.
+
+🔎 **Due cose trovate guardando, che il gate non può trovare da solo:**
+
+1. **L'«indice navigabile delle 48 aree» non è navigabile**: `indice_maestro.html`
+   non contiene **un solo** `href`. I 47 `href` del modulo sono tutti `#bg`/`#bgb`,
+   cioè riferimenti interni alle tavole SVG. Non è un errore — non c'è niente di
+   rotto — ma la promessa del titolo non è mantenuta. È contenuto del DM: **non
+   toccato**. Va con P13 (lotto D), dove l'indirizzamento fra documenti diventa
+   una convenzione.
+2. Il modulo **non ha master markdown**: il validatore ora lo dice a ogni
+   passata come *warning*, così la cosa non sembra normale. Resta la domanda F4.
 
 **Deliverable**: un gate rosso se qualcuno rompe l'Abbazia.
 **Criterio d'accettazione**: rompere di proposito un'ancora → CI rossa; ripararla → verde.
@@ -80,21 +103,40 @@ rinominato non li vede nessuno finché non si apre al tavolo.
 > (master markdown + manifest, ADR-0003). Quella è una conversione vera, sta nel
 > **Lotto F**, e va decisa — non fatta di soppiatto.
 
-### ⬜ Lotto B — Il colophon (P1)
+### ✅ Lotto B — Il colophon (P1) — *chiuso 2026-09-02* · [ADR-0023](adr/ADR-0023-colophon-di-edizione.md)
 
 *«Se si fa una cosa sola»*, dice la ricerca. Vale ancora, e ora vale di più:
 l'Abbazia dimostra che anche il modulo meglio scritto del repo esce **anonimo,
 senza licenza e senza versione**.
 
-- [ ] **B1** — chiavi `credits`, `license`, `edition`, `version`, `date` in
-      `scripts/schemas/booklet_manifest.schema.json`.
-- [ ] **B2** — `#colophon()` nel tema Typst: opera, base OGL/SRD, versione, data,
-      autore, regime d'uso. Faccia del repo (avorio/seppia/rosso), non trade dress altrui.
-- [ ] **B3** — `export_booklet_typst.py` e `build_booklet_html.py` la emettono
-      entrambe; la data viene dal manifest, **mai** da `today()` (rovinerebbe il
-      determinismo byte-identico).
-- [ ] **B4** — un manifest esistente aggiornato come esemplare (il Palio).
-- [ ] **B5** — caso in `scripts/tests/test_booklets.py`.
+- [x] **B1** — un **oggetto** `colophon` nello schema, non cinque chiavi piatte
+      (`edizione`, `versione`, `data`, `autori`, `basato_su`, `licenza`, `nota`),
+      con `additionalProperties: false`. ⚠️ **Scostamento dal piano scritto**, e il
+      motivo: cinque chiavi sciolte in cima al manifest sono cinque cose da
+      ricordare; un oggetto è una cosa sola e si valida come tale. Ha richiesto di
+      far **ricorrere `validate_booklets.py` negli oggetti annidati** — prima lo
+      faceva solo per gli array, quindi un refuso lì dentro sarebbe passato in
+      silenzio: esattamente il difetto che lo schema esiste per impedire.
+- [x] **B2** — `#colophon()` nel tema: pagina **autonoma e senza testatina**, sul
+      verso del frontespizio. La testatina c'era alla prima resa e ripeteva due
+      volte lo stesso titolo — visto rendendo la pagina in PNG, non deducendolo.
+- [x] **B3** — entrambe le catene la emettono, con **le stesse voci nello stesso
+      ordine** (`VOCI_COLOPHON` in tutte e due, e un test che verifica siano
+      identiche). Nessun `today()` in nessun punto.
+- [x] **B4** — esemplare sul manifest del Palio: edizione, versione, data,
+      `basato_su` (SRD 3.5 · OGL 1.0a · adattamento di *Red Hand of Doom*) e la
+      riga di licenza che rimanda ad ADR-0005 e alla guida IP.
+- [x] **B5** — 11 casi in `test_booklets.py`, fra cui la retrocompatibilità (senza
+      la chiave il volume esce identico) e la parità d'ordine fra le catene.
+
+**Esito.** Tutti e **11 i volumi del repo compilano davvero** (`validate_booklets
+--stampa`, con typst 0.15.1, la stessa versione fissata in CI), e la pagina è
+stata **guardata**, non solo compilata: resa in PNG e ispezionata, prima e dopo
+la correzione della testatina.
+
+⚠️ **Una riga che solo il DM può scrivere**: `autori` è deliberatamente **assente**
+dal colophon del Palio. Inventare un nome in una pagina di crediti è peggio che
+non averla.
 
 **Deliverable**: PDF e HTML che portano il proprio nome, la propria data e la riga di licenza.
 **Criterio d'accettazione**: `validate_booklets.py --stampa` verde e il colophon presente nel PDF compilato.

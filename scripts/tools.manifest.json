@@ -3589,7 +3589,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_standalone.py",
-      "summary": "Gate CI per i moduli autoconclusivi STANDALONE-*: file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi e contatori dichiarati.",
+      "summary": "Gate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -3601,14 +3601,20 @@
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "Valida solo questa cartella (relativa alla radice del repo)."
+          "desc": "Valida solo questa cartella (relativa alla radice del repo), di entrambe le famiglie."
         }
       ],
       "inputs": [
         {
           "path": "STANDALONE-*/**/*.md",
           "kind": "markdown",
-          "required": true,
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "10-stand-alone/*/*.html",
+          "kind": "html",
+          "required": false,
           "schema": null
         }
       ],

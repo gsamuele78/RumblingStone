@@ -1469,14 +1469,14 @@
     },
     {
       "name": "validate_standalone",
-      "description": "Gate CI per i moduli autoconclusivi STANDALONE-*: file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi e contatori dichiarati.",
+      "description": "Gate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
       "invocation": "python3 scripts/validate_standalone.py",
       "inputSchema": {
         "type": "object",
         "properties": {
           "dir": {
             "type": "string",
-            "description": "Valida solo questa cartella (relativa alla radice del repo)."
+            "description": "Valida solo questa cartella (relativa alla radice del repo), di entrambe le famiglie."
           }
         },
         "required": [],

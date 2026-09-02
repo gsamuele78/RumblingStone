@@ -664,9 +664,44 @@ def fregio_per(titolo: str, file: Path, base: Path, ripiego: str | None = None) 
 CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
-    "out", "chapters", "carta", "capolettera", "fregio",
+    "out", "chapters", "carta", "capolettera", "fregio", "colophon",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
+
+
+# L'ordine in cui le voci compaiono sulla pagina. E' fisso di proposito: un
+# colophon che cambia ordine da un volume all'altro non si legge a colpo d'occhio.
+VOCI_COLOPHON = (
+    ("edizione", "Edizione"),
+    ("versione", "Versione"),
+    ("data", "Data"),
+    ("autori", "A cura di"),
+    ("basato_su", "Basato su"),
+)
+
+
+def crediti_typ(man: dict) -> str | None:
+    """Il `#colophon(...)` da passare a `libro`, o None se il manifest non ne ha uno.
+
+    Nessun valore inventato: se il manifest non dichiara la data, la pagina non
+    la stampa. Dedurla dall'orologio renderebbe il PDF diverso a ogni
+    compilazione — e il gate di stampa in CI verifica proprio il contrario.
+    """
+    col = man.get("colophon")
+    if not isinstance(col, dict) or not col:
+        return None
+    voci = [(etichetta, str(col[chiave]))
+            for chiave, etichetta in VOCI_COLOPHON
+            if col.get(chiave)]
+    if not voci and not col.get("licenza") and not col.get("nota"):
+        return None
+    righe = ", ".join(
+        f'({json.dumps(e, ensure_ascii=False)}, {json.dumps(v, ensure_ascii=False)})'
+        for e, v in voci
+    )
+    return (f'colophon(voci: ({righe}{"," if len(voci) == 1 else ""}), '
+            f'licenza: {json.dumps(col.get("licenza", ""), ensure_ascii=False)}, '
+            f'nota: {json.dumps(col.get("nota", ""), ensure_ascii=False)})')
 
 
 def avvisa_chiavi(man: dict) -> None:
@@ -706,6 +741,10 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
                              + "\n  ],")
             else:
                 print(f"  ⚠ intro_md mancante: {intro}", file=sys.stderr)
+    if apparato:
+        crediti = crediti_typ(man)
+        if crediti:
+            extra.append(f"  crediti: {crediti},")
     if carta != "avorio":
         extra.append(f'  carta: {json.dumps(carta, ensure_ascii=False)},')
     return [

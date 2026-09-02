@@ -19,10 +19,23 @@ regex può fare bene e un revisore umano fa male:
   7. **Generatori locali** (ADR-0017 §4) — i `.py` sotto la cartella del modulo devono
      essere stdlib-only, avere una docstring, essere citati in un `.md` e compilare.
 
+**Due famiglie di moduli, due serie di controlli.** I moduli `STANDALONE-*/` hanno
+master markdown e prendono i sette controlli qui sopra. I moduli sotto
+`10-stand-alone/*/` sono scritti direttamente in **HTML** — un supporto fuori da
+ADR-0003 e da entrambe le catene di impaginazione — e fino al 2026-09-02 non
+avevano **nessun** gate: la CI conosceva solo `STANDALONE-*`, e ~2.750 righe di
+modulo non erano viste da niente. Su HTML valgono i controlli che hanno senso:
+titolo e `<h1>`, link relativi risolvibili, ancore che esistono davvero, `id`
+non duplicati, e gli stessi termini 5e vietati.
+
+⚠ Questo script dà all'HTML **un gate**, non una promozione: non lo porta dentro
+la catena di stampa. La conversione a master markdown + manifest è una decisione
+a parte (`PIANO-CHIUSURA-CATENA-EDITORIALE`, lotto F4).
+
 Esce con codice 1 se trova errori: è pensato per la CI.
 
 Uso:
-    python3 scripts/validate_standalone.py            # tutti i moduli STANDALONE-*
+    python3 scripts/validate_standalone.py            # tutti i moduli, di entrambe le famiglie
     python3 scripts/validate_standalone.py --dir X    # solo quello
 """
 from __future__ import annotations
@@ -59,12 +72,31 @@ BANNED = {
 
 PREGEN_SECTIONS = ("Difesa", "Attacco", "Statistiche", "Equipaggiamento")
 
+# I moduli a supporto HTML: una cartella per modulo sotto questa radice.
+HTML_ROOT = "10-stand-alone"
+
 
 def module_dirs(only: str | None) -> list[Path]:
     if only:
         p = (ROOT / only).resolve()
-        return [p] if p.is_dir() else []
+        return [p] if p.is_dir() and not _e_html(p) else []
     return sorted(d for d in ROOT.iterdir() if d.is_dir() and d.name.startswith("STANDALONE-"))
+
+
+def _e_html(d: Path) -> bool:
+    """Vero se la cartella è un modulo a supporto HTML (`10-stand-alone/<nome>/`)."""
+    radice = (ROOT / HTML_ROOT).resolve()
+    return radice in d.resolve().parents
+
+
+def html_module_dirs(only: str | None) -> list[Path]:
+    if only:
+        p = (ROOT / only).resolve()
+        return [p] if p.is_dir() and _e_html(p) else []
+    radice = ROOT / HTML_ROOT
+    if not radice.is_dir():
+        return []
+    return sorted(d for d in radice.iterdir() if d.is_dir() and any(d.glob("*.html")))
 
 
 def check_required(mod: Path, errors: list[str]) -> None:
@@ -224,18 +256,120 @@ def check_generators(mod: Path, errors: list[str], warnings: list[str]) -> None:
             warnings.append(f"{rel}: la docstring non dice come si rigenera")
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Moduli a supporto HTML (`10-stand-alone/*/`)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _rel(f: Path) -> str:
+    """Percorso leggibile: relativo alla radice quando ci sta dentro, altrimenti
+    il percorso pieno. Serve a poter provare i controlli su una cartella
+    temporanea senza che il messaggio d'errore sollevi ValueError."""
+    try:
+        return str(f.relative_to(ROOT))
+    except ValueError:
+        return str(f)
+
+
+_TAG = re.compile(r"<[^>]+>")
+_STILE = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)
+_HREF = re.compile(r'href\s*=\s*"([^"]+)"', re.I)
+_ID = re.compile(r'\bid\s*=\s*"([^"]+)"', re.I)
+_TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
+_H1 = re.compile(r"<h1\b", re.I)
+
+
+def _testo(html: str) -> str:
+    """Il testo leggibile: via script, style e tag. Serve ai controlli di lingua."""
+    return _TAG.sub(" ", _STILE.sub(" ", html))
+
+
+def _ancore(html: str) -> set[str]:
+    return set(_ID.findall(html))
+
+
+def check_html_module(mod: Path, errors: list[str], warnings: list[str]) -> None:
+    """Un modulo scritto in HTML: che almeno stia in piedi da solo.
+
+    Non si pretende validità XHTML — sarebbe una dipendenza e un mare di rumore.
+    Si pretende ciò che rompe la lettura al tavolo: un titolo, un `<h1>`, i link
+    che portano da qualche parte, le ancore che esistono e nessun `id` doppio (un
+    `id` ripetuto rende ambigua ogni ancora che lo punta, ed è esattamente il
+    difetto che il dry-run dell'Abbazia aveva trovato a mano sulla numerazione
+    delle aree).
+    """
+    pagine = sorted(mod.glob("*.html"))
+    if not pagine:
+        errors.append(f"{mod.name}: nessun file .html nel modulo")
+        return
+
+    ancore: dict[Path, set[str]] = {}
+    for f in pagine:
+        html = f.read_text(encoding="utf-8", errors="ignore")
+        rel = _rel(f)
+
+        m = _TITLE.search(html)
+        if not m or not m.group(1).strip():
+            errors.append(f"{rel}: manca il <title> (è il nome che il DM vede nella scheda)")
+        if not _H1.search(html):
+            errors.append(f"{rel}: nessun <h1> (una pagina senza titolo in testa non si sfoglia)")
+
+        visti: set[str] = set()
+        for ident in _ID.findall(html):
+            if ident in visti:
+                errors.append(f"{rel}: id duplicato «{ident}» — ogni ancora che lo punta è ambigua")
+            visti.add(ident)
+        ancore[f] = visti
+
+    for f in pagine:
+        html = f.read_text(encoding="utf-8", errors="ignore")
+        rel = _rel(f)
+        for href in _HREF.findall(html):
+            href = href.strip()
+            if not href or href.startswith(("http://", "https://", "mailto:", "data:", "javascript:")):
+                continue
+            percorso, _, frammento = href.partition("#")
+            bersaglio = f
+            if percorso:
+                cand = (f.parent / percorso).resolve()
+                if not cand.is_file():
+                    errors.append(f"{rel}: link rotto → {href}")
+                    continue
+                bersaglio = cand
+            if frammento and frammento not in ancore.get(bersaglio, _ancore(
+                    bersaglio.read_text(encoding="utf-8", errors="ignore"))):
+                errors.append(f"{rel}: ancora inesistente → {href}")
+
+    testo = "\n".join(_testo(f.read_text(encoding="utf-8", errors="ignore")) for f in pagine)
+    for pattern, why in BANNED.items():
+        if re.search(pattern, testo, re.I):
+            errors.append(f"{mod.name}: termine vietato nel testo — {why}")
+
+    # Non è un errore, ma va detto a ogni passata: questo modulo non ha un
+    # master markdown, quindi non entra in nessuna delle due catene e non può
+    # avere un colophon. Il silenzio lo farebbe sembrare normale.
+    if not any(mod.rglob("*.md")):
+        warnings.append(
+            f"{mod.name}: modulo a solo HTML — nessun master markdown (ADR-0003), "
+            f"quindi fuori da entrambe le catene di impaginazione e senza colophon "
+            f"(decisione aperta: PIANO-CHIUSURA-CATENA-EDITORIALE, lotto F4)"
+        )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--dir", help="valida solo questa cartella (relativa alla radice)")
     args = ap.parse_args()
 
     mods = module_dirs(args.dir)
-    if not mods:
-        print("✓ validate_standalone: nessun modulo STANDALONE-* da validare")
+    html_mods = html_module_dirs(args.dir)
+    if not mods and not html_mods:
+        print("✓ validate_standalone: nessun modulo da validare")
         return 0
 
     errors: list[str] = []
     warnings: list[str] = []
+    for mod in html_mods:
+        check_html_module(mod, errors, warnings)
     for mod in mods:
         check_required(mod, errors)
         check_crossrefs(mod, errors)
@@ -254,9 +388,15 @@ def main() -> int:
         return 1
 
     n_files = sum(len(list(m.rglob("*.md"))) for m in mods)
+    n_html = sum(len(list(m.glob("*.html"))) for m in html_mods)
+    pezzi = []
+    if mods:
+        pezzi.append(f"{len(mods)} markdown ({n_files} file): struttura, riferimenti, "
+                     f"schede e read-aloud ok")
+    if html_mods:
+        pezzi.append(f"{len(html_mods)} HTML ({n_html} pagine): titoli, link, ancore e id ok")
     print(
-        f"✓ validate_standalone: {len(mods)} modulo/i, {n_files} file — "
-        f"struttura, riferimenti, schede e read-aloud ok"
+        f"✓ validate_standalone: " + " · ".join(pezzi)
         + (f" ({len(warnings)} warning)" if warnings else "")
     )
     return 0
