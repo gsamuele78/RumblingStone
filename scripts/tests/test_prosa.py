@@ -19,12 +19,14 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
 
-from validate_prosa import ANTITESI, controlla, coppie_glossario  # noqa: E402
+from validate_prosa import (  # noqa: E402
+    ANTITESI, controlla, coppie_glossario, e_per_i_giocatori,
+)
 
 
-def _f(s: str) -> list[str]:
+def _f(s: str, nome: str = "prova.md") -> list[str]:
     with tempfile.TemporaryDirectory() as d:
-        p = Path(d) / "prova.md"
+        p = Path(d) / nome
         p.write_text(s, encoding="utf-8")
         return controlla(p)
 
@@ -112,6 +114,59 @@ class TestCosaSiSalta(unittest.TestCase):
 
     def test_un_file_senza_read_aloud_prende_solo_i_calchi_sempre(self):
         self.assertEqual(_f("Il rituale sta procedendo e la sua mano si alza."), [])
+
+
+class TestFilePerIGiocatori(unittest.TestCase):
+    """Un hint o un teaser è prosa da leggere per intero, non solo nei box.
+
+    Il buco che questa classe chiude: su `02-HINT-THORIK.md` i controlli sui tic
+    coprivano **29 parole su 353** — l'8% — perché guardavano solo dentro
+    `> *…*`. I file che il tavolo aveva segnalato tornavano puliti.
+    """
+
+    def test_riconosce_i_file_dei_giocatori(self):
+        for n in ("02-HINT-THORIK.md", "06-TEASER-GIOCATORI.md", "05-ECHI-HELLA.md",
+                  "handout-lettera.md"):
+            self.assertTrue(e_per_i_giocatori(Path(n)), n)
+
+    def test_non_scambia_un_file_del_dm_per_uno_dei_giocatori(self):
+        for n in ("01-REGIA-SESSIONE.md", "07-GUIDA-DM.md", "ARC07-CASSETTA-DEL-DM.md",
+                  "PALIO-STATBLOCCHI.md"):
+            self.assertFalse(e_per_i_giocatori(Path(n)), n)
+
+    def test_in_un_file_dei_giocatori_conta_tutta_la_prosa(self):
+        testo = "# Hint\n\nSenti il PESO. Poi senti il TUMP.\n"
+        self.assertTrue(any("maiuscolo" in x for x in _f(testo, "02-HINT-X.md")))
+
+    def test_nello_stesso_testo_fuori_da_un_file_giocatori_non_conta(self):
+        testo = "# Nota\n\nSenti il PESO. Poi senti il TUMP.\n"
+        self.assertEqual(_f(testo, "note-dm.md"), [])
+
+    def test_i_titoli_non_sono_prosa_letta(self):
+        self.assertEqual(_f("# IL TEMPIO DELLA FORGIA ETERNA\n\nTesto normale.\n",
+                            "06-TEASER-X.md"), [])
+
+
+class TestConvenzioniDelRepo(unittest.TestCase):
+    """Ciò che SEMBRA enfasi e non lo è: un validatore che punisce la convenzione
+    del repo viene spento, e allora non trova più nemmeno i rilievi veri."""
+
+    def test_letichetta_di_battuta_non_e_una_maiuscola_di_portento(self):
+        # `**NOME:**` è il formato che editorial-standards.md §2 IMPONE.
+        testo = ("# Hint\n\n> **AEGIS FANG**, con quel tono: *«Vecchia storia.»*\n"
+                 "> **LA CORONA**, calore sulla fronte: *«Adesso.»*\n")
+        self.assertEqual(_f(testo, "02-HINT-X.md"), [])
+
+    def test_anche_coi_due_punti_dentro_il_grassetto(self):
+        testo = "# Hint\n\n> **I BRACIERI:** *«Incudine e Martello.»*\n"
+        self.assertEqual(_f(testo, "02-HINT-X.md"), [])
+
+    def test_il_cappello_del_dm_non_e_prosa_di_gioco(self):
+        # Sta su piu' righe di blockquote: va tolto il blocco intero.
+        testo = ("# Hint\n\n> *Per il giocatore di X. Leggi in privato.\n"
+                 "> Sono cose che il TUO personaggio sente, e che gli ALTRI no.*\n\n"
+                 "Testo di gioco normale.\n")
+        self.assertEqual(_f(testo, "02-HINT-X.md"), [])
 
 
 class TestGlossario(unittest.TestCase):

@@ -93,7 +93,8 @@ riscrivere, e un testo riscritto ricomincia dalla prima passata.
 |---|---|
 | Sezioni obbligatorie, rimandi, termini banditi | `validate_modules.py` — gratis, in CI |
 | Refusi meccanici, accenti, spazi | `validate_lingua.py` — gratis, in CI |
-| Calchi e tic a densità | 🟡 `validate_prosa.py`, **non ancora scritto** (P21, lotto P del piano) |
+| Calchi «sempre» e nomi inglesi dove il canone vuole l'italiano | `validate_prosa.py` — su **tutto** il contenuto |
+| Calchi di registro (possessivo, progressivo) e **tic a densità** | `validate_prosa.py` — su read-aloud **e su tutti i file per i giocatori** (hint, teaser, echi, handout, prop) |
 | Voce, ritmo, se una scena suona tradotta | **umano o agente**, con questo file + `italiano-nativo.md` |
 | Se può uscire, con che crediti | [`rumblingstone-edizione`](../../rumblingstone-edizione/SKILL.md) |
 

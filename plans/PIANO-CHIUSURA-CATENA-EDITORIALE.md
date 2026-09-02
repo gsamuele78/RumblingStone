@@ -244,7 +244,7 @@ i confini con le altre cinque skill · e quando **non** serve.
 sente e non si vede, gli **echi trattati come testo** e non come note, quando un
 testo è chiuso e i tre soli casi che lo riaprono.
 
-### 🟢 Lotto P — La prosa e la coerenza — *P-0/P-1/P-2/P-4 chiusi 2026-09-02* · [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md)
+### 🟢 Lotto P — La prosa e la coerenza — *P-0/P-1/P-2/P-4/P-5 chiusi · P-3 in diagnosi · 2026-09-02* · [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md)
 
 Aperto dal rilievo del tavolo del 2026-09-02: *«incoerenza e prosa inglese
 tradotta male, anche negli echi»*. **ADR-0016 aveva scritto la condizione di
@@ -276,16 +276,49 @@ riapertura, e la condizione è scattata.**
       errori da correggere in revisione — è **come la frase è stata costruita**:
       correggere dopo cambia le parole e lascia il respiro. La checklist di 30
       secondi resta come ultima passata, e ora rimanda a `validate_prosa`.
-- [ ] 🟡 **P-3** — la **passata redazionale sugli echi**. **Diagnosi fatta, e il
-      risultato è il contrario di quello che ci si aspettava**: i quattro file di
-      echi del repo passano `validate_prosa` con **zero rilievi**. Il livello
-      meccanico lì è pulito.
-      ⚠️ Quindi il rilievo del tavolo sugli echi **non è traduttese**: è **voce**,
-      oppure è l'altra metà della frase del DM — *«incoerenza»*. Per ADR-0025
-      questo è esattamente il caso in cui si guarda `style-pillars.md` e non
-      `italiano-nativo.md`.
-      **Serve dal DM**: uno o due echi che i giocatori hanno segnalato. Riscrivere
-      il canone alla cieca è il modo di peggiorarlo.
+- [x] **P-5** — ⭐ **Il buco che il DM ha trovato con una domanda**: *«il validatore
+      va anche negli altri contenuti, o solo gli echi sono corretti?»*. Misurato, ed
+      era vero: su `02-HINT-THORIK.md` i controlli sui tic coprivano **29 parole su
+      353 — l'8%** — perché guardavano solo dentro `> *…*`. Ora un **file per i
+      giocatori** (hint, teaser, echi, handout, lettera, prop, `pg-*`) è prosa da
+      leggere **per intero**, meno i titoli; un file del DM (regia, guida, cassetta,
+      statblocchi) resta fuori. Effetto immediato: i cinque file della sessione
+      Terros passano da **0 rilievi a 8**.
+      🔎 Due falsi positivi trovati e chiusi nella stessa passata, perché stavano
+      **punendo le convenzioni del repo**: l'**etichetta di battuta**
+      (`**AEGIS FANG**,` e `**I BRACIERI:**`, il formato che `editorial-standards.md`
+      §2 impone) contata come maiuscola di portento, e il **cappello del DM** in
+      testa agli hint — che sta su più righe di blockquote e va tolto per blocchi.
+- [x] 🟢 **P-3** — **diagnosi fatta, sui file giusti.** Il DM ha indicato quali:
+      gli hint di **Artemis e Thorik** prima dello scontro con Terros, non i
+      registri `*ECHI*` che avevo scansionato all'inizio (quelli sono ledger di
+      conseguenze). Con la copertura di P-5 il validatore ora ci trova:
+      **THORIK** due antitesi «non X: è Y» in un documento · **TORDEK** un
+      progressivo e due maiuscole d'enfasi · **ARTEMIS** «la tua testa» ·
+      **HELLA** «le tue mani», un progressivo, due maiuscole · **TEASER** due
+      maiuscole. Sono i tic del §9, non i calchi: la sintassi è giusta e le
+      **abitudini** sono sempre le stesse — che è precisamente ciò che il tavolo
+      sente quando dice «suona strano».
+      ⬜ **Resta la riscrittura**, che è lavoro di voce sul canone e va fatta con
+      il DM davanti, non alla cieca.
+- [x] **P-6** — ⭐ **Il caso Hella**: la giocatrice ha detto di **non capirci
+      niente**. `validate_prosa` su quel file è pulito, quindi non era prosa: era
+      **progetto**. Misurate le ancore nominate nella prosa dei quattro testi
+      per-PG della stessa sessione — Tordek **8**, Thorik **5**, Artemis **4**,
+      **Hella 0** (le due che risultavano stanno nel titolo e nella nota del DM).
+      Riceve «una testa grande, ossuta» (è Durik), «spalle larghe, oneste» (è
+      Thorik): quattro immagini non attribuite di fila.
+      Due regole in `consequence-echoes.md` §3-ter: **almeno un'ancora nominata**,
+      e **anche il frammento oscuro porta una riga di lettura**. Il confronto è
+      dentro la stessa sessione: Tordek dichiara il frammento incomprensibile *e*
+      chiude con «qualcosa di caro sta cercando la strada di casa» — il giocatore
+      non sa cosa, ma sa verso dove; Hella ha «non capisci le parole, ma il senso
+      è inequivocabile», che **afferma** un senso senza consegnarlo.
+      ⚠️ **Provato ad automatizzarlo e rinunciato, dichiarandolo**: un controllo
+      sulle ancore dava il risultato **rovesciato** — segnalava Artemis (che le
+      ancore ha, in forma breve: «l'Anello», «la Sentinella») e non Hella, perché
+      il glossario contiene solo i nomi lunghi. Un gate che sbaglia sul canone è
+      peggio di nessun gate: resta una regola scritta, applicata da chi scrive.
 
 **Esito.** `validate_prosa.py` misura **154 rilievi** in 333 file, e ha richiesto
 una taratura vera: la prima passata ne produceva **256** perché segnalava il

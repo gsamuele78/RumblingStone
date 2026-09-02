@@ -153,8 +153,51 @@ def check_glossario(f: Path, testo: str, rel) -> list[str]:
     return fuori
 
 
-# La prosa rivolta ai giocatori: blockquote in corsivo (il read-aloud del repo).
+# La prosa rivolta ai giocatori, in DUE forme.
+#
+# 1. Il **read-aloud** dentro un file qualunque: blockquote in corsivo.
+# 2. Il **file intero**, quando il file *è* per i giocatori — un hint, un teaser,
+#    un handout, una lettera, un eco. Lì non c'è un blockquote che marca la
+#    prosa: la prosa è tutta la pagina.
+#
+# ⚠ Senza il secondo caso il controllo copriva **l'8-13%** di un file come
+# `02-HINT-THORIK.md` (misurato: 29 parole su 353 dentro `> *…*`), ed è il
+# motivo per cui i file che il tavolo aveva segnalato tornavano puliti.
 READ_ALOUD = re.compile(r"^>\s*\*[^*].*$", re.M)
+
+PER_I_GIOCATORI = re.compile(
+    r"HINT-|TEASER|ECHI-|GIOCATORI|HANDOUT|LETTERA|PROFEZIA|AVVISO|PROP|^pg-",
+    re.I)
+# Anche dentro un file per i giocatori, questi sono per il DM: non si contano.
+PER_IL_DM = re.compile(r"REGIA|GUIDA-DM|CASSETTA|DM-MASTER|STATBLOCCHI", re.I)
+
+# Due cose che SEMBRANO enfasi e non lo sono, e che vanno tolte prima di contare.
+#
+# 1. L'etichetta di battuta: `**AEGIS FANG**, con quel tono…` — è il formato che
+#    `editorial-standards.md` §2 IMPONE per i dialoghi (`**NOME (registro):**`).
+#    Contarla come «maiuscola di portento» significa punire la convenzione del
+#    repo, e un validatore che punisce la convenzione viene spento.
+# 2. Il cappello per il giocatore: *«Per il giocatore di X. Leggi in privato…»* —
+#    è un'istruzione del DM, non prosa di gioco.
+# I due punti possono stare DENTRO il grassetto (`**I BRACIERI:**`) o fuori
+# (`**AEGIS FANG**,`): il repo usa entrambe le forme, e sono la stessa cosa.
+ETICHETTA_BATTUTA = re.compile(
+    r"^>?\s*\*\*[A-ZÀ-Ù][A-ZÀ-Ù'’ \-]{1,30}[:：]?\*\*\s*[,(:]?", re.M)
+# Il cappello sta su PIÙ righe di blockquote: si toglie il blocco intero, non la
+# riga che contiene la frase-spia — altrimenti restano dentro le altre.
+CAPPELLO_DM = re.compile(
+    r"(?:^>.*\n)*?^>.*(?:per il giocatore|leggi in privato|non ci sono istruzioni"
+    r"|affar tuo|ripasso lampo).*\n(?:^>.*\n)*",
+    re.I | re.M)
+
+
+def e_per_i_giocatori(f: Path) -> bool:
+    """Vero se il file, per intero, è testo che i giocatori leggono."""
+    if PER_IL_DM.search(f.name):
+        return False
+    return bool(PER_I_GIOCATORI.search(f.name)
+                or "handout" in str(f).lower()
+                or "templates/homebrew" in str(f).replace("\\", "/").lower())
 CODE_FENCE = re.compile(r"^\s*```")
 INLINE = re.compile(r"`[^`]*`|https?://\S+|\[[^\]]*\]\([^)]*\)|[\w./-]+\.(?:md|py|json|svg|html|typ)")
 
@@ -181,6 +224,10 @@ def controlla(f: Path) -> list[str]:
     testo = f.read_text(encoding="utf-8", errors="ignore")
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
     righe, readaloud = prosa_e_readaloud(testo)
+    if e_per_i_giocatori(f):
+        # Il file è per i giocatori: la prosa è tutta la pagina, non solo i box.
+        # Restano fuori i titoli, che non sono prosa letta.
+        readaloud = "\n".join(r for _, r in righe if not r.lstrip().startswith("#"))
     fuori: list[str] = check_glossario(f, testo, rel)
 
     for n, riga in righe:
@@ -202,7 +249,8 @@ def controlla(f: Path) -> list[str]:
             f"{rel}: l'antitesi «non X: è Y» compare {n_ant} volte nei read-aloud "
             f"(massimo {SOGLIE['antitesi']} per documento): alla terza il tavolo sente il telaio"
         )
-    portento = Counter(w for w in MAIUSCOLE.findall(readaloud) if w.upper() not in SIGLE)
+    ripulito = ETICHETTA_BATTUTA.sub(" ", CAPPELLO_DM.sub(" ", readaloud))
+    portento = Counter(w for w in MAIUSCOLE.findall(ripulito) if w.upper() not in SIGLE)
     if len(portento) > SOGLIE["maiuscole"]:
         elenco = ", ".join(sorted(portento)[:6])
         fuori.append(

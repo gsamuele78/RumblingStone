@@ -110,6 +110,49 @@ exemplar):
 
 Matrix rows that fire become ledger entries (§1) as usual.
 
+## 3-ter. L'eco per un PG assente: due ancore obbligatorie
+
+Nasce da un rilievo del tavolo (2026-09-02): la giocatrice di **Hella** ha detto
+di **non capirci niente** degli echi ricevuti prima dello scontro con Terros.
+Non era prosa tradotta — `validate_prosa` su quel file è pulito. Era un difetto
+di **progetto**, e si misura.
+
+Contati i nomi del canone dentro la prosa dei quattro testi per-PG della stessa
+sessione:
+
+| | Ancore nominate |
+|---|---|
+| Tordek | **8** — Sentinella, Thorik, Artemis, Bracieri, Corona… |
+| Thorik | **5** — Aegis Fang, Topazio, Corona… |
+| Artemis | **4** — l'Anello, la Sentinella… |
+| **Hella** | **0** dentro gli echi (le due fuori stanno nel titolo e nella nota del DM) |
+
+Hella riceve *«una testa grande, ossuta»* (è **Durik**, e non lo dice), *«spalle
+larghe, oneste»* (è **Thorik**, e non lo dice), *«qualcosa prepara un guscio»*.
+Quattro immagini non attribuite di fila **non sono mistero: sono rumore.**
+
+### Le due regole
+
+**1. Almeno un'ancora nominata.** Un frammento evocativo si regge se chi legge
+può attaccarne **uno** a qualcosa che conosce — un nome, un oggetto, un
+compagno — e da lì tira il resto. `module-standard` §5 vuole che un PG assente
+percepisca «solo echi»: vuole che siano **oscuri**, non **senza appigli**.
+
+**2. Anche il frammento oscuro porta una riga di lettura.** Non una spiegazione:
+una **direzione**. Il confronto è netto, e sta nella stessa sessione:
+
+> ✅ **Tordek** — il frammento è dichiarato oscuro (*«non lo capirai — non
+> devi»*) **e** chiude con: *«qualcosa di caro sta cercando la strada di
+> casa»*. Il giocatore non sa cosa, ma sa **verso dove**.
+>
+> ❌ **Hella** — *«non capisci le parole, ma il senso è inequivocabile»*.
+> La riga **afferma** che un senso c'è e non lo consegna. Al tavolo diventa:
+> «non ci ho capito niente».
+
+⚠️ E la nota in testa — *«Nessuno va spiegato. Nessuno va interpretato»* —
+toglie al giocatore anche l'ultima via, che era chiedere. Va bene per proteggere
+il mistero **quando le ancore ci sono**; senza, chiude la porta e basta.
+
 ## 4. Anti-patterns (do not)
 
 - **No combinatorial trees.** The ledger is flat lines, not nested
