@@ -39,8 +39,8 @@ decide l'ordine, non il costo.
 | P1 | Colophon nei volumi (crediti, licenza, edizione, versione, data) | colophon C1 | ✅ **fatto** (lotto B, ADR-0023) |
 | P2 | Skill `rumblingstone-edizione` + gate IP d'uscita | colophon C1+C3 | ✅ (E, ADR-0024) |
 | P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | ✅ (D + E) |
-| P4 | **Vendoring dei pacchetti Typst** | colophon §5 | ⚠️ **DM** |
-| P5 | `pdfcpu` per l'imposizione | colophon T1 | ⚠️ ADR |
+| P4 | **Vendoring dei pacchetti Typst** | colophon §5 | ✅ **deciso: sì** (F1) |
+| P5 | `pdfcpu` per l'imposizione | colophon T1 | ✅ **deciso: sì** (F2) |
 | P6 | Server MCP sui 44 tool già descritti | colophon MCP-1 | — |
 | P7 | veraPDF + caratteri per riga + daltonismo | colophon T3/T6/T7 | dopo P1 |
 | P8 | `dm.py volume` — l'ordine dei mestieri | colophon §3.4 | dopo P1-P3 |
@@ -52,8 +52,8 @@ decide l'ordine, non il costo.
 | P14 | Il limite dichiarato del dry-run | Abbazia | ✅ (C) |
 | P15 | Cancelli d'uscita a tempo per atto | Abbazia | ✅ (C) |
 | P16 | Tavole non zenitali (veduta, profilo, tempi) | Abbazia | ✅ (C) — confermato dal DM |
-| P17 | ⚠️ **L'Abbazia è fuori da ogni catena** | Abbazia | 🟡 **gate fatto** (lotto A); la conversione resta F4 |
-| P18 | ⚠️ `LICENSE` GPL-3.0 su un'opera testuale | Abbazia | ⚠️ **DM** |
+| P17 | ⚠️ **L'Abbazia è fuori da ogni catena** | Abbazia | 🟡 gate fatto (A); ✅ **deciso: convertire** (F4) |
+| P18 | ⚠️ `LICENSE` GPL-3.0 su un'opera testuale | Abbazia | ✅ **deciso: CC BY-NC-SA + MIT** (F3) |
 | P19 | Tabelle vive del borgo (dicerie false, reazione) | Abbazia | ✅ (C) |
 | **P20** | ⭐ **Corpo + appendici** (punto nuovo del DM, 2026-09-02) | Abbazia | ✅ (C) — verificato che non era persa: **mai esistita** |
 | — | E8: 75 schede di bestiario su 157 non migrate | audit ago. | fatica, non decisione |
@@ -268,29 +268,48 @@ riapertura, e la condizione è scattata.**
 ⚠️ **Quello che NON fa**: un validatore trova «realizzi che», non trova una scena che suona tradotta pur essendo in italiano corretto. Quella è la passata umana.
 **Engine**: Sonnet (P-1, P-2) · Opus (P-0, P-3: sono giudizio) · **impegno** medio-alto.
 
-### ⬜ Lotto F — Le decisioni del DM (P4, P5, P18, P17 parte 2)
+### 🟢 Lotto F — Le decisioni del DM — **tutte e quattro prese il 2026-09-02**
 
-Qui non si esegue: si chiede. Ogni voce è una domanda sola con una risposta sola.
+Qui non si eseguiva: si chiedeva. **Le risposte ci sono**, e sbloccano H2, H3 e la
+conversione dell'Abbazia. L'esecuzione di ognuna porta con sé il suo ADR — che si
+scrive **con** l'implementazione, perché la sezione «conseguenze» di un ADR
+compilata prima di aver eseguito è metà ADR.
 
-- [ ] **F1** — **Si vendorizzano i pacchetti Typst** nella cache locale, con la
-      loro licenza, come ADR-0010 fa per le skill di terzi? → **sì** sblocca
-      capolettera annegato **e** indice analitico (`droplet` + `in-dexter`); **no**
-      li chiude entrambi come «non si fa».
-- [ ] **F2** — **Si accetta `pdfcpu`** (Apache-2.0, binario Go singolo, offline,
-      `booklet` nativo) come seconda dipendenza binaria dopo Typst? → sblocca
-      l'imposizione. Richiede un ADR con la regola di degradazione pulita.
-- [ ] **F3** — **`LICENSE` GPL-3.0 su un'opera testuale**: si corregge? La GPL è
-      scritta per il software; il repo è per tre quarti prosa. Candidati per il
-      testo: CC BY-NC-SA (coerente con ADR-0005, uso non commerciale) tenendo la
-      GPL — o la MIT — sui soli `scripts/`. ⚠️ **Non è una modifica cosmetica**:
-      cambia cosa altri possono fare col materiale, e va decisa dal DM.
-- [ ] **F4** — **L'Abbazia si converte** a master markdown + manifest (ADR-0003),
-      o si dichiara un'eccezione motivata? Convertirla la fa entrare nelle due
-      catene, le dà un colophon e la rende impaginabile; lasciarla com'è è
-      legittimo, ma va **scritto**, non sottinteso.
+- [x] **F1** ✅ **SÌ, vendorizzare.** — *Si vendorizzano i pacchetti Typst* nella cache locale, con la
+      nella cache locale con la loro licenza, sul precedente di ADR-0010.
+      **Sblocca H2**: capolettera annegato (`droplet`) **e** indice analitico
+      (`in-dexter`). La build resta offline e riproducibile; i pacchetti entrano
+      nel repo con la licenza e si aggiornano a mano.
+      → serve **ADR sul vendoring dei pacchetti Typst** + la cache in `scripts/typst/`.
+- [x] **F2** ✅ **SÌ, con ADR.** — *Si accetta `pdfcpu`* (Apache-2.0, binario Go singolo, offline,
+      (Apache-2.0, binario Go singolo, offline, `booklet` nativo) come seconda
+      dipendenza binaria dopo Typst. **Sblocca H3**: l'imposizione, cioè un
+      libretto invece di una risma.
+      ⚠️ L'ADR deve contenere la **regola di degradazione pulita**: se il binario
+      manca, lo script dice come installarlo ed **esce**, non fallisce a metà.
+- [x] **F3** ✅ **Licenza doppia: CC BY-NC-SA sul testo, MIT sugli `scripts/`.**
+      La GPL è scritta per il software e il repo è per tre quarti prosa. Il testo
+      prende una licenza pensata per le opere dell'ingegno e coerente con
+      ADR-0005 (uso non commerciale); gli script una permissiva che non contamina.
+      È la stessa separazione che l'igiene di licenza dell'Abbazia già chiede fra
+      i due rami.
+      ⚠️ **Non è cosmetico**: cambia cosa altri possono fare col materiale, e
+      **tocca il perimetro di ADR-0005**, che va emendato o richiamato
+      esplicitamente. Da eseguire con il suo ADR, non di passaggio.
+- [x] **F4** ✅ **Convertire** l'Abbazia a master markdown + manifest (ADR-0003).
+      Entra nelle due catene, guadagna il **colophon** e diventa impaginabile come
+      gli altri volumi.
+      ⚠️ **È lavoro vero, non una riformattazione**: ~2.750 righe, e soprattutto le
+      **tavole SVG in linea** vanno estratte in file separati e ricollegate con la
+      sintassi `![]()` che il convertitore capisce. Il gate del lotto A resta utile
+      **durante** la conversione: dice se qualcosa si rompe mentre si sposta.
+      🔎 Da fare **prima**: il modulo ha ancora 55 rimandi `area N` senza prefisso
+      e dieci ambigui fra file (lotto D). Convertire un testo con l'ambiguità
+      dentro la porta nella catena nuova.
 
-**Deliverable**: quattro risposte, ognuna con il suo ADR.
-**Engine**: nessuno — è una conversazione col DM.
+**Deliverable**: ✅ quattro risposte, prese. Gli ADR si scrivono con l'esecuzione.
+**Ordine consigliato d'esecuzione**: F1 (sblocca due code a costo basso) → F2 →
+F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-0005).
 
 ### ⬜ Lotto G — Infrastruttura (P6, P7, P8, P16)
 
@@ -311,8 +330,8 @@ Qui non si esegue: si chiede. Ogni voce è una domanda sola con una risposta sol
 - [ ] **H1** — **E8**: le 75 schede di bestiario su 157 non ancora migrate al
       formato machine-readable (ADR-0021). Non è una decisione, è fatica: o si
       completano, o si accetta che la libreria abbia due velocità — e si scrive.
-- [ ] **H2** — capolettera annegato + indice analitico → **gated su F1**.
-- [ ] **H3** — imposizione → **gated su F2**.
+- [ ] **H2** — capolettera annegato + indice analitico → 🟢 **SBLOCCATO** da F1 (vendoring approvato): `droplet` + `in-dexter` vendorizzati.
+- [ ] **H3** — imposizione → 🟢 **SBLOCCATO** da F2 (`pdfcpu` approvato con ADR).
 - [ ] **H4** — CMYK/PDF-X: **rinuncia confermata** (ADR-0020), si riapre solo il
       giorno di una tiratura vera.
 
