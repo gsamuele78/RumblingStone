@@ -379,12 +379,24 @@ conversione dell'Abbazia. L'esecuzione di ognuna porta con sé il suo ADR — ch
 scrive **con** l'implementazione, perché la sezione «conseguenze» di un ADR
 compilata prima di aver eseguito è metà ADR.
 
-- [x] **F1** ✅ **SÌ, vendorizzare.** — *Si vendorizzano i pacchetti Typst* nella cache locale, con la
-      nella cache locale con la loro licenza, sul precedente di ADR-0010.
-      **Sblocca H2**: capolettera annegato (`droplet`) **e** indice analitico
-      (`in-dexter`). La build resta offline e riproducibile; i pacchetti entrano
-      nel repo con la licenza e si aggiornano a mano.
-      → serve **ADR sul vendoring dei pacchetti Typst** + la cache in `scripts/typst/`.
+- [x] ✅ **F1 — ESEGUITO** (2026-09-02) · [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)
+      **`droplet` 0.3.1** (MIT, © Eric Biedert) e **`in-dexter` 0.7.2** (Apache-2.0,
+      JKRB) vendorizzati in `scripts/typst/packages/preview/<nome>/<versione>/`,
+      copiati da `typst/packages` al commit `359500f2`, 112 KB in tutto — tolti i
+      file che il loro stesso `typst.toml` dichiara in `exclude`, **`LICENSE`
+      integri**. `export_booklet_typst.py` passa ora `--package-path`.
+      **Accettazione, misurata e non asserita**: lo stesso documento che importa
+      entrambi **compila** col percorso vendorizzato e **fallisce** senza
+      (*«failed to download package»* — qui `packages.typst.org` è davvero
+      irraggiungibile, quindi la prova è vera e non simulata); la cache utente
+      di typst resta **inesistente** dopo la compilazione.
+      `scripts/tests/test_pacchetti_typst.py`: **7 test**, fra cui la versione
+      del `typst.toml` confrontata con quella della cartella — copiare il nuovo
+      dentro la cartella vecchia è l'errore facile, e l'import continuerebbe a
+      dire `0.3.1` mentre il codice è un altro — e una compilazione con
+      **l'ambiente ripulito** (niente proxy, niente `HOME`).
+      **Sblocca H2**: capolettera annegato e indice analitico erano la stessa
+      decisione, ed è presa.
 - [x] **F2** ✅ **SÌ, con ADR.** — *Si accetta `pdfcpu`* (Apache-2.0, binario Go singolo, offline,
       (Apache-2.0, binario Go singolo, offline, `booklet` nativo) come seconda
       dipendenza binaria dopo Typst. **Sblocca H3**: l'imposizione, cioè un

@@ -59,6 +59,10 @@ from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: 
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
 SCHEDA_PG = ROOT / "scripts" / "typst" / "scheda-pg.typ"
+# Pacchetti Typst vendorizzati (ADR-0026): la build non scarica niente. Senza
+# questo percorso `@preview/...` andrebbe a packages.typst.org, e una build che
+# dipende dalla rete non e' riproducibile — ne' compilabile offline.
+PACCHETTI = ROOT / "scripts" / "typst" / "packages"
 FONTS = ROOT / "scripts" / "fonts"
 
 INSTALLA = """\
@@ -803,7 +807,8 @@ def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedPro
     riprova senza — e lo si DICE, invece di consegnare un PDF diverso da quello
     che il comando promette.
     """
-    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT)]
+    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT),
+           "--package-path", str(PACCHETTI)]
     esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
     if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
         return subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)],
