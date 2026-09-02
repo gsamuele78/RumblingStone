@@ -5,7 +5,7 @@
 **Decisione-fonte**: DM, lotto F4 di
 [PIANO-CHIUSURA-CATENA-EDITORIALE](../PIANO-CHIUSURA-CATENA-EDITORIALE.md) —
 *«Convertire»*
-**Applica**: [ADR-0003](ADR-0003-markdown-master-layout-generato.md) ·
+**Applica**: [ADR-0003](ADR-0003-markdown-master-layout-generati.md) ·
 **Riguarda**: [ADR-0017](ADR-0017-moduli-autoconclusivi-classe-di-artefatto.md)
 
 ## Contesto

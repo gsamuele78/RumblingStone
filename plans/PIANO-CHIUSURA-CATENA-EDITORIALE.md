@@ -372,7 +372,7 @@ L'antitesi si riconosce dalla forma, e prende tutti e quattro gli esempi di
 tradotta pur essendo in italiano corretto. Quella è la 2ª passata umana — e la
 diagnosi sugli echi (P-3) lo dimostra sul campo.
 
-### 🟢 Lotto F — Le decisioni del DM — **tutte e quattro prese il 2026-09-02**
+### ✅ Lotto F — Le decisioni del DM — **prese E ESEGUITE tutte e quattro il 2026-09-02**
 
 Qui non si eseguiva: si chiedeva. **Le risposte ci sono**, e sbloccano H2, H3 e la
 conversione dell'Abbazia. L'esecuzione di ognuna porta con sé il suo ADR — che si
@@ -423,15 +423,33 @@ compilata prima di aver eseguito è metà ADR.
       `scripts/tests/test_binari.py`: **8 test**, fra cui *«ogni binario cita un
       ADR che esiste davvero»* — una dipendenza binaria senza ADR è una
       dipendenza entrata di nascosto.
-- [x] **F3** ✅ **Licenza doppia: CC BY-NC-SA sul testo, MIT sugli `scripts/`.**
-      La GPL è scritta per il software e il repo è per tre quarti prosa. Il testo
-      prende una licenza pensata per le opere dell'ingegno e coerente con
-      ADR-0005 (uso non commerciale); gli script una permissiva che non contamina.
-      È la stessa separazione che l'igiene di licenza dell'Abbazia già chiede fra
-      i due rami.
-      ⚠️ **Non è cosmetico**: cambia cosa altri possono fare col materiale, e
-      **tocca il perimetro di ADR-0005**, che va emendato o richiamato
-      esplicitamente. Da eseguire con il suo ADR, non di passaggio.
+- [x] ✅ **F3 — ESEGUITO** (2026-09-02) · [ADR-0029](adr/ADR-0029-licenza-doppia-testo-e-script.md)
+      `LICENSE` **CC BY-NC-SA 4.0** sul testo, `scripts/LICENSE` **MIT** sugli
+      strumenti, e `LICENSES.md` in radice che spiega il taglio. La regola per i
+      casi di confine sta scritta: *se lo legge un essere umano al tavolo è testo,
+      se lo esegue una macchina è strumento*.
+      Il difetto che chiude (P19): **il file di licenza e la postura del progetto
+      si contraddicevano.** ADR-0005 dice «uso non commerciale»; la GPL
+      *garantisce espressamente* il diritto di vendere copie. In un contenzioso
+      conta il file.
+      I due testi sono presi **verbatim** da `spdx/license-list-data` al commit
+      `a522a89` — non riscritti a memoria, che su un testo legale è il modo di
+      introdurre una differenza che nessuno rileggerà mai.
+      ⚠️ **Le tre cose che una licenza doppia rischia di far dimenticare**, e che
+      ora stanno scritte dove si guarda:
+      1. **il contenuto SRD resta Open Game Content sotto OGL 1.0a** — non va
+         sotto CC, e chi lo ridistribuisce si porta dietro la **Sezione 15**. È
+         entrato nel cancello d'uscita §7;
+      2. **i marchi altrui non si licenziano perché si nominano** — *Forgotten
+         Realms* non diventa nostro da dare;
+      3. **MIT su `scripts/` non copre `scripts/typst/packages/`**: quello è
+         codice di terzi con la sua licenza (ADR-0026).
+      ⚠️ E **ADR-0005 non viene allargato, prevale**: una licenza dice cosa
+      possono fare gli altri con ciò che pubblichiamo; ADR-0005 dice **se e cosa**
+      pubblichiamo. Sono due domande diverse e la seconda viene prima. Per il caso
+      limite («non commerciale» non è definito con precisione in CC 4.0: un
+      Patreon, un tavolo a pagamento) la risposta non sta nella licenza — è
+      **fermarsi e chiedere**.
 - [x] ✅ **F4 — ESEGUITO** (2026-09-02) · [ADR-0028](adr/ADR-0028-abbazia-master-markdown.md)
       Quattro master markdown, un manifest col **colophon**, **sette tavole**
       estratte in `tavole/*.svg`, e le due catene che compilano: HTML 615 KB,
