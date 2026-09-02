@@ -355,3 +355,59 @@ prodotto la domanda. Un PDF che porta il proprio nome, la propria data, la propr
 versione e la riga che dice su cosa si basa smette di essere un file generato e
 diventa **un'edizione** — ed è da lì che C3, e mezzo di questo documento,
 diventano possibili.
+
+---
+
+## §8 · Addendum (2026-08-27) — la seconda standalone, e gli undici punti che aggiunge
+
+**Perché questo addendum.** Dopo il merge della PR #114 il DM ha segnalato una
+**seconda standalone** — `10-stand-alone/L'abbazia Della Rotta Sicura/` — scritta
+*«emulando lo stile dei migliori AP Paizo per Pathfinder 1e»*, con un indice
+maestro e tre appendici, e ha chiesto di verificare cosa contenga che questo
+documento non aveva previsto. La risposta è: **parecchio**, e in due direzioni
+opposte — un apparato editoriale più ricco di quello che le skill sanno chiedere,
+su un supporto che sta **fuori da ogni catena del repo**.
+
+Quattro file, tutti HTML scritti a mano (CSS e tavole SVG in linea), ~2.750 righe:
+`indice_maestro.html`, `abbazia_rotta_sicura.html`, `appendice_corsari_borgo.html`,
+`appendice_b_oppressione.html`.
+
+### §8.1 · Gli undici punti nuovi
+
+Ognuno verificato assente dalle sedici skill (`grep -ril` su `skills/`), non
+supposto.
+
+| | Punto | Modello nell'Abbazia | Dove va |
+|---|---|---|---|
+| **P9** | **Riscalatura a tre assi** — per livello del party, per numero di giocatori, per durata disponibile, ognuna con la colonna **«cosa si perde davvero»** | tabella dell'indice maestro: 5 fasce di livello × 12 righe, 4 formati di durata | sezione obbligatoria in `module-standard`; estende `playtest` §2.6, che oggi copre **solo** il numero di giocatori |
+| **P10** | **Avvertenza di contenuto e consenso del tavolo** — la riga da dire *prima* di cominciare, e la sostituzione alternativa già pronta | Fase 1: *«c'è un culto che uccide ragazzi; niente sarà mostrato in scena»* + le vittime sostituibili con marinai catturati | `module-standard` (apparato d'uso, ADR-0018) |
+| **P11** | **Igiene di licenza per documento** — tabella *elemento · stato · nota* compilata **in stesura**, non a posteriori | separa divinità inventate («Il Nocchiero») dai nomi FR non-SRD, e toponimi inventati da luoghi reali | confluisce in **P2**: è il gate IP di §2.C2 già dimostrato funzionante |
+| **P12** | **ADR di modulo** — decisioni di progettazione locali (ADR-01…05), distinte da quelle di repo | «il nemico non è uno, sono tre»; «le vittime bambine restano fuori scena» | convenzione nuova: quando una decisione è di modulo e quando è di `plans/adr/` |
+| **P13** | **Indirizzamento delle aree fra documenti** — prefisso di livello + indice maestro trasversale | il dry-run ha trovato **«16, 17, 18 usati tre volte su tre documenti»** | ⭐ estende `validate_modules.py`: è un difetto che una macchina trova gratis |
+| **P14** | **Il limite dichiarato del dry-run** — *«cosa il dry-run non ha potuto verificare»* | *«non dice se l'avventura è divertente, se il ritmo regge… quello lo dice solo un tavolo»* | una riga in `playtest`: le sette passate ci sono, la dichiarazione del limite no |
+| **P15** | **Cancelli d'uscita a tempo per atto** — con il rimedio scritto | *«Atto I, 60-75 min. Se a 60 minuti manca uno dei due segnali, Berto Cassola arriva e lo dice in faccia»* | `module-standard`: regia del ritmo |
+| **P16** | **Tavole non zenitali** — veduta prospettica e profilo laterale con quote, distanze e **tempi** | Tavola I-a (dal mare), Tavola I-b (profilo laterale) | `mapmaking`: oggi è tutto dall'alto |
+| **P17** | ⚠️ **Il supporto: l'Abbazia è fuori da ogni catena** | nessun master markdown (contro ADR-0003), nessun manifest, né HTML né Typst, e **nessun gate**: la CI copre `STANDALONE-*`, e `10-stand-alone/` non corrisponde a niente | **il più urgente dei nuovi** |
+| **P18** | ⚠️ **`LICENSE` è GPL-3.0 su un'opera testuale** | il rilievo lo solleva il documento stesso: *«GPL-3.0 su un'opera testuale resta l'errore da correggere, qui come nel repo principale»* — verificato: `head -3 LICENSE` | **decisione**, non lavoro |
+| **P19** | **Tabelle vive del borgo** — dicerie `1d8` di cui **due deliberatamente false**, e reazione del capo-fazione a `1d20` + modificatori | *«Dicerie all'osteria (1d8 — due sono false, deliberatamente)»* | `narrative-style` / `indagine`: la diceria falsa è un nodo d'indizio a costo zero |
+
+### §8.2 · Cosa NON è nuovo (per non contarlo due volte)
+
+- **Indice e Quick-Reference**: `module-standard` li chiede già ai punti 2 e 4.
+  Il pezzo nuovo è solo l'indirizzamento **fra documenti** (P13).
+- **Audit meccanico a tavolino**: `playtest` §2 ha già sette passate. Il pezzo
+  nuovo è la **dichiarazione del limite** (P14).
+- **Apparato d'uso e prop**: ADR-0018 li impone già.
+- **Bestiario SRD-only**: già la regola del repo (ADR-0005).
+
+### §8.3 · La lettura d'insieme
+
+L'Abbazia è **la prova che l'apparato serve**: è stata scritta con riscalatura,
+consenso, igiene di licenza e ADR locali *senza che nessuna skill glieli
+chiedesse*, e il risultato è il modulo più completo del repo. Ma è anche la prova
+del contrario: essendo HTML a mano, **non è impaginabile, non è validabile e non
+è un'edizione** — non ha colophon, non ha versione, non ha data. Cioè inciampa
+esattamente in **C1**, il buco che questo documento aveva già isolato.
+
+Il seguito operativo di tutti e diciannove i punti è
+[`PIANO-CHIUSURA-CATENA-EDITORIALE`](PIANO-CHIUSURA-CATENA-EDITORIALE.md).
