@@ -61,6 +61,14 @@ jobs:
       - name: Moduli standalone (STANDALONE-* e 10-stand-alone/*)
         run: python scripts/validate_standalone.py
 
+      # Non bloccante alla prima passata: la convenzione nasce oggi e il
+      # contenuto esistente la rispetta a meta'. Diventa bloccante (--strict)
+      # il giorno in cui il rumore e' a zero — non prima, o il gate viene
+      # disattivato e allora non trova piu' nemmeno i refusi veri.
+      - name: Lingua italiana — refusi meccanici (non bloccante)
+        continue-on-error: true
+        run: python scripts/validate_lingua.py
+
       - name: DM tool smoke tests
         run: |
           python scripts/suggest_encounter.py --help > /dev/null

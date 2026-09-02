@@ -18,9 +18,10 @@ caso limite.
 > decisione** — sono lavoro che si può fare oggi. Tre sono decisioni del DM e
 > bloccano gli altri quattro. Questo piano mette i dodici davanti.
 >
-> **Stato al 2026-09-02**: chiusi **A** (il gate sull'Abbazia) e **B** (il
-> colophon, ADR-0023). Restano aperti C, D, E, G, H — nessuno dei quali chiede
-> una decisione — e **F**, che sono le quattro domande al DM.
+> **Stato al 2026-09-02**: chiusi **A, B, C, D**. Restano **E** e **G** (nessuna
+> decisione richiesta), **H1** (le 75 schede: fatica, non decisione) e **F**, che
+> sono le quattro domande al DM. Il DM ha aggiunto **P20** (corpo + appendici) e
+> confermato **P16** (tavole di supporto): entrambi chiusi dentro C.
 
 ---
 
@@ -33,23 +34,24 @@ decide l'ordine, non il costo.
 |---|---|---|---|
 | P1 | Colophon nei volumi (crediti, licenza, edizione, versione, data) | colophon C1 | ✅ **fatto** (lotto B, ADR-0023) |
 | P2 | Skill `rumblingstone-edizione` + gate IP d'uscita | colophon C1+C3 | ⚠️ ADR-0008 |
-| P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | — |
+| P3 | Passate redazionali + `validate_lingua.py` | colophon C2 | 🟡 `validate_lingua` ✅ (D); le passate restano in E |
 | P4 | **Vendoring dei pacchetti Typst** | colophon §5 | ⚠️ **DM** |
 | P5 | `pdfcpu` per l'imposizione | colophon T1 | ⚠️ ADR |
 | P6 | Server MCP sui 44 tool già descritti | colophon MCP-1 | — |
 | P7 | veraPDF + caratteri per riga + daltonismo | colophon T3/T6/T7 | dopo P1 |
 | P8 | `dm.py volume` — l'ordine dei mestieri | colophon §3.4 | dopo P1-P3 |
-| P9 | Riscalatura a tre assi | Abbazia | — |
-| P10 | Avvertenza di contenuto e consenso del tavolo | Abbazia | — |
+| P9 | Riscalatura a tre assi | Abbazia | ✅ (C) |
+| P10 | Avvertenza di contenuto e consenso del tavolo | Abbazia | ✅ (C) |
 | P11 | Igiene di licenza per documento | Abbazia | confluisce in P2 |
-| P12 | ADR di modulo | Abbazia | — |
-| P13 | Indirizzamento delle aree fra documenti + gate | Abbazia | — |
-| P14 | Il limite dichiarato del dry-run | Abbazia | — |
-| P15 | Cancelli d'uscita a tempo per atto | Abbazia | — |
-| P16 | Tavole non zenitali (veduta, profilo, tempi) | Abbazia | — |
+| P12 | ADR di modulo | Abbazia | ✅ (C) |
+| P13 | Indirizzamento delle aree fra documenti + gate | Abbazia | ✅ (D) — trova 10 ambiguità vere |
+| P14 | Il limite dichiarato del dry-run | Abbazia | ✅ (C) |
+| P15 | Cancelli d'uscita a tempo per atto | Abbazia | ✅ (C) |
+| P16 | Tavole non zenitali (veduta, profilo, tempi) | Abbazia | ✅ (C) — confermato dal DM |
 | P17 | ⚠️ **L'Abbazia è fuori da ogni catena** | Abbazia | 🟡 **gate fatto** (lotto A); la conversione resta F4 |
 | P18 | ⚠️ `LICENSE` GPL-3.0 su un'opera testuale | Abbazia | ⚠️ **DM** |
-| P19 | Tabelle vive del borgo (dicerie false, reazione) | Abbazia | — |
+| P19 | Tabelle vive del borgo (dicerie false, reazione) | Abbazia | ✅ (C) |
+| **P20** | ⭐ **Corpo + appendici** (punto nuovo del DM, 2026-09-02) | Abbazia | ✅ (C) — verificato che non era persa: **mai esistita** |
 | — | E8: 75 schede di bestiario su 157 non migrate | audit ago. | fatica, non decisione |
 | — | Capolettera annegato · indice analitico | audit ago. | = P4 |
 | — | Imposizione | audit ago. | = P5 |
@@ -142,44 +144,67 @@ non averla.
 **Criterio d'accettazione**: `validate_booklets.py --stampa` verde e il colophon presente nel PDF compilato.
 **Engine**: Sonnet · **impegno** medio · **dieta**: tema Typst, i due builder, lo schema, un manifest.
 
-### ⬜ Lotto C — Lo standard del modulo (P9, P10, P12, P14, P15, P19)
+### ✅ Lotto C — Lo standard del modulo (P9, P10, P12, P14, P15, P19, **P20**) — *chiuso 2026-09-02*
 
 Sei punti, tutti scrittura di skill, **zero decisioni**. È il lotto che trasforma
 l'Abbazia da eccezione fortunata in regola.
 
-- [ ] **C1** — `module-standard`: **riscalatura a tre assi** come sezione
+- [x] **C0** — ⭐ **P20, punto nuovo del DM**: l'architettura **corpo + appendici** in testa a `module-standard`. Verificato che non era «persa» ma **mai esistita**: `grep -ril "appendice" skills/` non trova niente, nessun master `ARC*-DEF-*` la usa, il Drappo nemmeno. Il corpo è ciò che si gioca in ordine; le appendici sono ciò che si consulta a salto (bestiario, gazetteer, cast, incontri), numerate a lettere.
+- [x] **C1** — `module-standard`: **riscalatura a tre assi** come sezione
       obbligatoria (livello · numero di PG · durata), con la colonna «cosa si
       perde davvero». Modello: l'indice maestro dell'Abbazia.
-- [ ] **C2** — `module-standard`: **avvertenza di contenuto e consenso**, con la
+- [x] **C2** — `module-standard`: **avvertenza di contenuto e consenso**, con la
       sostituzione alternativa già scritta. Aggancio ad ADR-0018.
-- [ ] **C3** — `module-standard`: **cancelli d'uscita a tempo** per atto, con il
+- [x] **C3** — `module-standard`: **cancelli d'uscita a tempo** per atto, con il
       rimedio (chi entra in scena e cosa dice se il segnale non è arrivato).
-- [ ] **C4** — convenzione **ADR di modulo**: quando una decisione è locale e
+- [x] **C4** — convenzione **ADR di modulo**: quando una decisione è locale e
       quando sale in `plans/adr/`.
-- [ ] **C5** — `playtest`: la **dichiarazione del limite** del dry-run — cosa non
+- [x] **C5** — `playtest`: la **dichiarazione del limite** del dry-run — cosa non
       ha potuto verificare, e perché solo il tavolo può.
-- [ ] **C6** — `narrative-style`/`indagine`: **dicerie con falsi deliberati** e
+- [x] **C6** — `narrative-style`/`indagine`: **dicerie con falsi deliberati** e
       **tabella di reazione**. Una diceria falsa è un nodo d'indizio a costo zero.
-- [ ] **C7** — `playtest` §2.6 rimanda a C1 invece di coprire il solo numero di giocatori.
+- [x] **C7** — `playtest` §2.6 rimanda a C1 invece di coprire il solo numero di giocatori.
+- [x] **C8** — **P16 confermato dal DM** («per le mappe vanno bene le verticali,
+      aggiungendo anche le visualizzazioni presenti nella standalone»):
+      `mapmaking` guadagna **le tavole di supporto** — veduta, profilo laterale con
+      quote e **tempi di percorrenza** — con la regola che si aggiungono *quando
+      rispondono a una domanda che la griglia non può*, non per completezza, e la
+      numerazione `Tavola I` / `I-a` / `I-b` che le tiene riconoscibili come lo
+      stesso luogo visto in un altro modo.
 
 **Deliverable**: sei convenzioni scritte dove un agente le incontra.
 **Criterio d'accettazione**: `validate_skills.py` verde; ogni voce cita l'Abbazia come implementazione di riferimento.
 **Engine**: Opus (sono decisioni di design) · **impegno** alto · **dieta**: le tre skill toccate + le sezioni citate dell'Abbazia, **non** i quattro file interi.
 
-### ⬜ Lotto D — I gate a macchina (P13, P3)
+### ✅ Lotto D — I gate a macchina (P13, P3) — *chiuso 2026-09-02*
 
-- [ ] **D1** — **numerazione delle aree**: prefisso di livello obbligatorio, e
+- [x] **D1** — **numerazione delle aree**: prefisso di livello obbligatorio, e
       `validate_modules.py` che rifiuta una collisione fra documenti dello stesso
       modulo. È il difetto **D1 del dry-run dell'Abbazia** (16/17/18 usati tre
       volte su tre file): una macchina lo trova gratis, un umano lo trova al tavolo.
-- [ ] **D2** — `scripts/validate_lingua.py`, stdlib: perché/perchè, virgolette
+- [x] **D2** — `scripts/validate_lingua.py`, stdlib: perché/perchè, virgolette
       dritte, doppi spazi, apostrofi, d eufonica. Non bloccante alla prima
       passata, poi bloccante quando il rumore è a zero.
-- [ ] **D3** — entrambi in CI + `tools.manifest.json` + test.
+- [x] **D3** — entrambi in CI + `tools.manifest.json` + `README-automation` + test.
 
-**Deliverable**: due controlli che costano una volta e pagano sempre.
-**Criterio d'accettazione**: golden case che fallisce prima e passa dopo, per ciascuno.
-**Engine**: Sonnet · **impegno** medio · **dieta**: i due validatori + un modulo campione.
+**Esito.**
+
+- **D1** trova **dieci ambiguità vere e tuttora aperte** nell'Abbazia: il dry-run
+  del modulo aveva corretto la numerazione nelle *chiavi* con i prefissi di
+  livello, ma i rimandi **in prosa** sono rimasti nudi — 55 `area N` senza
+  prefisso, e dieci numeri (`area 6`, `area 27`…) usati in **file diversi**. Da
+  fuori non si distingue se sono la stessa stanza o due. È **warning**, non
+  errore: la convenzione nasce oggi.
+- **D2** trova **23 refusi** in 494 file di contenuto: spazi prima della
+  punteggiatura, doppi spazi, un «ad Damarath». Anche questo **non bloccante in
+  CI** (`continue-on-error`), come `validate_bestiario --rules`: diventa `--strict`
+  il giorno in cui il rumore è a zero. Un validatore rumoroso viene disattivato
+  entro una settimana, e allora non trova più nemmeno i refusi veri.
+  ⚠️ **La prima passata produsse 423 rilievi, quasi tutti creati dal validatore
+  stesso**: mascherava il codice inline con *uno spazio* e poi segnalava i doppi
+  spazi che aveva introdotto. Metà dei 14 test esistono per quel difetto.
+  Esentate anche le **guide alla pronuncia** (`*nè-this*`), dove l'accento grave
+  dice il suono ed è messo apposta.
 
 ### ⬜ Lotto E — La skill dell'edizione (P2, P11, P3-prosa) ⚠️ ADR-0008
 

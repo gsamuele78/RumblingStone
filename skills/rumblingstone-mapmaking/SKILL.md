@@ -72,6 +72,35 @@ Tutte usano lo stesso formato MASTER (griglia emoji); cambia la *sorgente*:
 
 Dettaglio e "system prompt" per l'LLM: `references/tre-modalita-mappe.md`.
 
+### Le tavole di supporto: quando dall'alto non basta
+
+Le tre modalità sono tutte **zenitali**: si guarda il luogo da sopra. È la vista
+giusta per muovere miniature, ed è quella sbagliata per tre domande che al tavolo
+arrivano sempre:
+
+| Domanda | Vista che risponde |
+|---|---|
+| «Cosa vediamo arrivando?» | **veduta** — prospettica, dal punto da cui i PG arrivano davvero (dal mare, dalla strada, dal crinale) |
+| «Quanto è alto? Si può scendere di lì?» | **profilo laterale** — sezione con **quote**, e le vie verticali segnate |
+| «Quanto ci mettiamo?» | il profilo con i **tempi di percorrenza** annotati sui tratti, non solo le distanze |
+
+**La regola**: una tavola di supporto si aggiunge **quando risponde a una domanda
+che la griglia non può**, non per completezza. Tre viste dello stesso cortile sono
+tre file da tenere allineati; una veduta di un promontorio che i PG raggiungono in
+barca fa risparmiare cinque minuti di descrizione a ogni gruppo.
+
+Si numerano insieme alle altre nella stessa serie, con una lettera: `Tavola I`
+(zenitale), `Tavola I-a` (veduta), `Tavola I-b` (profilo). Così restano
+riconoscibili come **lo stesso luogo visto in un altro modo**, e non come mappe
+diverse.
+
+⚠️ **Non sostituiscono la griglia** e non hanno coordinate tattiche: nessuno ci
+muove sopra una miniatura, quindi niente quadretti e niente legenda tattica.
+Restano SVG originali come il resto (ADR-0005).
+Esemplare: `10-stand-alone/L'abbazia Della Rotta Sicura/` — Tavola I-a «il
+promontorio, veduta dal mare» e Tavola I-b «profilo laterale: quote, distanze e
+tempi».
+
 ## Domain → File
 
 | Task | Reference |

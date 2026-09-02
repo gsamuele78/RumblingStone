@@ -276,6 +276,10 @@ _HREF = re.compile(r'href\s*=\s*"([^"]+)"', re.I)
 _ID = re.compile(r'\bid\s*=\s*"([^"]+)"', re.I)
 _TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
 _H1 = re.compile(r"<h1\b", re.I)
+# «area 17» senza prefisso di livello. Il dry-run dell'Abbazia aveva trovato
+# «16, 17, 18 usati tre volte su tre documenti» e l'aveva corretto nelle chiavi
+# con i prefissi (A3, C19, G27) — ma i rimandi in prosa erano rimasti nudi.
+_AREA_NUDA = re.compile(r"\b(?:area|stanza|luogo)\s+(\d{1,3})\b", re.I)
 
 
 def _testo(html: str) -> str:
@@ -285,6 +289,37 @@ def _testo(html: str) -> str:
 
 def _ancore(html: str) -> set[str]:
     return set(_ID.findall(html))
+
+
+def check_aree_ambigue(pagine: list[Path], nome: str, warnings: list[str]) -> None:
+    """Lo stesso numero d'area citato senza prefisso in più file dello stesso modulo.
+
+    Non è un errore di sintassi: è un'ambiguità. «area 6» in due documenti o è la
+    stessa stanza — e allora il rimando funziona — o sono due stanze diverse, e
+    allora il DM apre il file sbagliato mentre il tavolo aspetta. Dal di fuori i
+    due casi sono indistinguibili, ed è esattamente per questo che serve il
+    prefisso di livello.
+
+    ⚠ **Warning, non errore**, come `validate_bestiario --rules`: la convenzione
+    nasce oggi e il contenuto esistente la rispetta a metà. Diventa bloccante il
+    giorno in cui il rumore è a zero — non prima, o il gate viene disattivato.
+    """
+    per_numero: dict[str, set[str]] = {}
+    nude = 0
+    for f in pagine:
+        testo = _testo(f.read_text(encoding="utf-8", errors="ignore"))
+        for m in _AREA_NUDA.finditer(testo):
+            per_numero.setdefault(m.group(1), set()).add(f.name)
+            nude += 1
+    ambigue = sorted((n, sorted(fs)) for n, fs in per_numero.items() if len(fs) > 1)
+    for numero, files in ambigue:
+        warnings.append(
+            f"{nome}: «area {numero}» senza prefisso in {len(files)} file "
+            f"({', '.join(files)}) — o è la stessa stanza o sono due, e da fuori "
+            f"non si distingue: serve il prefisso di livello (A{numero}, C{numero}…)"
+        )
+    if nude and not ambigue:
+        warnings.append(f"{nome}: {nude} rimandi «area N» senza prefisso di livello")
 
 
 def check_html_module(mod: Path, errors: list[str], warnings: list[str]) -> None:
@@ -338,6 +373,8 @@ def check_html_module(mod: Path, errors: list[str], warnings: list[str]) -> None
             if frammento and frammento not in ancore.get(bersaglio, _ancore(
                     bersaglio.read_text(encoding="utf-8", errors="ignore"))):
                 errors.append(f"{rel}: ancora inesistente → {href}")
+
+    check_aree_ambigue(pagine, mod.name, warnings)
 
     testo = "\n".join(_testo(f.read_text(encoding="utf-8", errors="ignore")) for f in pagine)
     for pattern, why in BANNED.items():

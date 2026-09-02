@@ -1440,6 +1440,34 @@
       "deterministic": true
     },
     {
+      "name": "validate_lingua",
+      "description": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Non bloccante in CI finche' il rumore non e' a zero; --strict alza gli avvisi a errori.",
+      "invocation": "python3 scripts/validate_lingua.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "string",
+            "description": "File da controllare (default: tutto il contenuto)."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Gli avvisi (virgolette dritte, E') diventano errori."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "nessun refuso",
+        "1": "refusi trovati"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_modules",
       "description": "Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard.",
       "invocation": "python3 scripts/validate_modules.py",
