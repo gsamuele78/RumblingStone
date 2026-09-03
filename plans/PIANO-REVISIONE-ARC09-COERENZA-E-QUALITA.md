@@ -18,7 +18,7 @@
 1. **`campaign/state.md` vince** su qualunque altro file in caso di conflitto
    (regola del repo, vedi intestazione di state.md). Non riscrivere la storia:
    ogni modifica di canone va **appesa al changelog** di state.md.
-2. **Sistema D&D 3.5 SRD only** — niente 5e (no azioni bonus, no vantaggio/
+2. **Sistema D&D 3.5 SRD only**: niente 5e (no azioni bonus, no vantaggio/
    svantaggio, no legendary actions), niente lore FR post-1385 DR. Ambientazione
    Faerûn 1372 DR.
 3. **Mai inventare** stat, poteri di artefatti o conoscenze PNG: se serve un
@@ -222,7 +222,7 @@ di §4 senza ulteriori input dal DM.
 ### B1. Rhest è scheletrico (il gap più grande dell'arco)
 - **Evidenza**: i 5 file FASE sono da 1,0-2,4 KB l'uno contro i 18-25 KB del
   Palio o della Torre. Rhest in RHoD originale è mezzo capitolo (pp. 54-80).
-- **Azione** — portare ogni fase allo standard, in 5 mini-lotti (uno per file):
+- **Azione**: portare ogni fase allo standard, in 5 mini-lotti (uno per file):
   1. FASE1 Blackfens: tabella incontri palude d12 (già solo citata), viaggio
      esagoni, read-aloud arrivo, aggancio Tiri Kitor (se Starsong già fatta:
      guide elfiche = vantaggio meccanico esplicito).

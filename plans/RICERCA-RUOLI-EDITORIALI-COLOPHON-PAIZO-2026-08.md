@@ -92,9 +92,9 @@ utili al tavolo prima che a un avvocato:
 
 1. **su cosa si basa** (Red Hand of Doom, SRD 3.5, OGL) — la riga che ADR-0005
    chiede e che oggi vive nelle guide, non nei file che escono;
-2. **chi l'ha fatto e quando** — un PDF stampato tre mesi fa e uno di ieri oggi
+2. **chi l'ha fatto e quando**: un PDF stampato tre mesi fa e uno di ieri oggi
    sono indistinguibili, e al tavolo qualcuno stampa la versione vecchia;
-3. **cosa si può farne** — «materiale del DM, non da diffondere» è una frase che
+3. **cosa si può farne**: «materiale del DM, non da diffondere» è una frase che
    sta bene su una pagina, non in una conversazione ogni volta.
 
 **Costo**: basso. È una chiave di manifest, una funzione nel tema, una pagina

@@ -56,7 +56,7 @@ davvero no.
 
 1. **Immagini in Typst** (D1). Una regola nel convertitore, prima di quella dei
    link: `![alt](src)` → `#figure(image("/percorso", width: …), caption: [alt])`.
-   Tre cose da decidere una volta sola e scriverle nel tema, non nei master:
+   Da decidere una volta sola e scrivere nel tema, non nei master:
    larghezza di default in colonna (100% della colonna), soglia oltre la quale
    l'immagine **scavalca le due colonne** come già fanno le tabelle da 4+ colonne,
    e cosa fare se il file non esiste (avviso a `stderr` + segnaposto, **mai** un
@@ -279,7 +279,7 @@ giocatore (una passata del renderer, si può fare in E4), trascrizione sessione
 
 ## §7 · Errata della ricerca in ingresso
 
-Tre punti da non copiare, verificati.
+Da non copiare, e verificato punto per punto.
 
 1. **Il pacchetto per il capolettera non si chiama `dropcap`.** La ricerca propone
    `#import "@preview/dropcap:0.1.0": dropcap`: quel pacchetto non è quello. Il
@@ -327,9 +327,9 @@ Il §1 diceva «riprodotti, non supposti». Compilare per la prima volta ha
 mostrato che il quadro era peggio: **due booklet della campagna non avevano mai
 compilato**.
 
-- `**Seggio**/Deputazione` — grassetto attaccato a una barra — chiudeva male in
+- `**Seggio**/Deputazione`: grassetto attaccato a una barra — chiudeva male in
   Typst («unclosed delimiter»);
-- `*Il peso **(nota.)***` — corsivo che contiene un grassetto — veniva spezzato
+- `*Il peso **(nota.)***`: corsivo che contiene un grassetto — veniva spezzato
   lasciando un asterisco orfano *dentro* il grassetto.
 
 L'enfasi ora esce come `#strong[...]`/`#emph[...]` e la regex è diventata una

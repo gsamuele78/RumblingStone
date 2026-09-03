@@ -125,16 +125,16 @@ python3 scripts/build_chapter_marks.py --all
 
 L'ordine conta, e il primo passo non è il prompt:
 
-1. **direzione artistica** — le sei leve della skill
+1. **direzione artistica**: le sei leve della skill
    [`rumblingstone-art-direction`](../../skills/rumblingstone-art-direction/SKILL.md):
    ancora storica, schede-personaggio, lock di seed e luce, gate di rifiuto;
-2. **i prompt** — `dm.py prompts <arco>` estrae lo scheletro dalle scene
+2. **i prompt**: `dm.py prompts <arco>` estrae lo scheletro dalle scene
    (ADR-0015); i prompt li scrive una persona, non una regex;
-3. **la generazione** — ComfyUI in locale (`scripts/comfyui-local/`), con il
+3. **la generazione**: ComfyUI in locale (`scripts/comfyui-local/`), con il
    modello scelto **per licenza** e non per gusto
    ([ADR-0019](../../plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md));
 4. **il gate di rifiuto**, il giorno dopo;
-5. **la provenienza** — una riga per immagine, o non si committa.
+5. **la provenienza**: una riga per immagine, o non si committa.
 
 Il dettaglio operativo sta in [`GUIDA-IMMAGINI.md`](GUIDA-IMMAGINI.md).
 

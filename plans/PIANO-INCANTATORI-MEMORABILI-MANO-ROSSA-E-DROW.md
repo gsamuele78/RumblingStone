@@ -337,20 +337,20 @@ ricette di adattamento originali. **Nessuno statblock trascritto.**
 
 ## Checklist lotti
 
-- [x] **L1** — Analisi difese/superfici del party e leve di design (§1-§2)
-- [x] **L2** — Ghaurush: statblock GS 16 + variante *Advanced* GS 17 + dossier
-- [x] **L3** — Comprimari ogre sotterranei: Frantumapietra GS 9, Micelio GS 8
-- [x] **L4** — Drow subdoli: Zin'thara GS 12 (statblock + dossier), Trickster
+- [x] **L1**: Analisi difese/superfici del party e leve di design (§1-§2)
+- [x] **L2**, Ghaurush: statblock GS 16 + variante *Advanced* GS 17 + dossier
+- [x] **L3**, Comprimari ogre sotterranei: Frantumapietra GS 9, Micelio GS 8
+- [x] **L4**, Drow subdoli: Zin'thara GS 12 (statblock + dossier), Trickster
       Arcano GS 11, Assassina di Lolth GS 10
-- [x] **L5** — Catalogo rigenerato (`build_monster_catalog.py`) e
+- [x] **L5**: Catalogo rigenerato (`build_monster_catalog.py`) e
       `validate_bestiario.py` verde
-- [x] **L6** — **Approvato dal DM il 2026-08-05.** 13 file passati a
+- [x] **L6**: **Approvato dal DM il 2026-08-05.** 13 file passati a
       `[ACCEPTED — DM-canon]`; righe applicate in `state.md` §3 (tre clock
       villain), §4, §5 e §7.E; changelog §8 aggiornato. Token: ancora da
       assegnare (`Bestiario/tokens/da-catalogare/`)
-- [x] **L7** — Ala orchesca in equivalenti SRD (§6): Chierico di Gruumsh GS 11,
+- [x] **L7**, Ala orchesca in equivalenti SRD (§6): Chierico di Gruumsh GS 11,
       Bruto Deforme del Sottosuolo GS 11, Ushgar «Occhio Reso» GS 13
       (statblock + dossier + ramo politico su `state.md` §5)
-- [x] **L8** — Indice d'uso della fonte privata (§7): roster valutato scheda
+- [x] **L8**, Indice d'uso della fonte privata (§7): roster valutato scheda
       per scheda contro il benchmark, ricette di adattamento, errata, aggancio
       orog ↔ Grimjaw — `Bestiario/INDICE-SONS-OF-GRUUMSH-FONTE-PRIVATA.md`

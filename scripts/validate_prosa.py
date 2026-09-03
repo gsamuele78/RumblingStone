@@ -46,10 +46,18 @@ fuori tabelle, blocchi di codice, titoli e citazioni:
     conteggio annunciato      138 («tre cose», «per due ragioni»)
     antitesi «non X: è Y»      58
 
-⚠️ **Le soglie sono tarate sulla distribuzione reale, non a occhio**: la mediana
-dei documenti sta a 82 trattini ogni 1.000 righe, il quartile alto a 118. La
-soglia a 150 segnala gli otto file peggiori invece di tingere tutto di rosso —
-un rilievo che compare ovunque è un rilievo che nessuno legge.
+⚠️ **Le soglie sono tarate sulla distribuzione reale, non a occhio**: quando
+sono state fissate, la mediana dei documenti stava a 82 trattini ogni 1.000
+righe di prosa e il quartile alto a 118, e la soglia a 150 segnalava gli otto
+file peggiori invece di tingere tutto di rosso: un rilievo che compare ovunque
+è un rilievo che nessuno legge.
+
+Dopo la ripulitura del lotto D (2026-09-03) i numeri sono altri: 1.145 trattini
+in 157 documenti, densità globale 72/1000, **mediana 73**, quartile alto 108, e
+la soglia non segnala più niente. La soglia **resta a 150** ed è voluto. Serve
+da guardia contro la ricaduta, non da classifica: a quella densità un documento
+nuovo è stato scritto con l'abitudine vecchia, e zero rilievi è il modo in cui
+questo controllo dice che va bene.
 
 ## Cosa NON si misura, e perché
 
@@ -130,7 +138,13 @@ CALCHI_READ_ALOUD: list[tuple[str, str]] = [
 ANTITESI = re.compile(
     r"(?:^|[.!?»]\s+|\*\s*)Non\s+[^.;:!?\n]{2,50}?\s*[:—–]\s*\S", re.M)
 MAIUSCOLE = re.compile(r"\b[A-ZÀÈÉÌÒÙ]{3,}\b")
-TRATTINO = re.compile(r"[—–]")
+# ⚠️ La lineetta enne fra due cifre senza spazi (`3–4 ore`, `GS 17–19`) è
+# l'intervallo, e in italiano è la notazione GIUSTA: contarla come tic
+# chiede di sbagliare la punteggiatura. Misurate: 79 delle 96 lineette enne
+# dei documenti sono di questa forma. Il respiro è sempre la lineetta emme
+# fra spazi, e resta contato — anche fra numeri («Chiuso 2026-09-03 — 157
+# su 157»), motivo per cui l'esclusione chiede la enne E l'assenza di spazi.
+TRATTINO = re.compile(r"—|(?<![0-9])–|–(?![0-9])")
 # Sigle e acronimi del repo: maiuscoli per necessità, non per enfasi.
 SIGLE = {
     "CD", "GS", "PG", "PGS", "DM", "PNG", "SRD", "OGL", "XP", "PX", "TS", "CA", "BAB",
@@ -152,8 +166,39 @@ CONTEGGIO = re.compile(
     r"\b(due|tre|quattro|cinque|sei|sette)\s+"
     r"(cose|ragioni|motivi|punti|modi|problemi|difetti|domande|vincoli|scelte)\b", re.I)
 
-#: Soglie per documento. Tarate sulla distribuzione misurata (mediana 82
-#: trattini/1000 righe, quartile alto 118): 150 segnala gli otto file peggiori.
+#: ⚠️ «due punti» non è un conteggio annunciato: è il nome italiano del segno
+#: `:`, e in un repo che ha una norma sulla punteggiatura ricorre di continuo —
+#: *«il segno giusto è due punti»*. Cercato in tutti i documenti: **ogni**
+#: occorrenza è il segno o un valore di regole («Resist Freddo nei due punti»),
+#: nessuna annuncia un elenco. Il tic vero non ha questa forma, perché nessuno
+#: scrive «tre punti» per la punteggiatura. Si esclude la sola coppia.
+CONTEGGIO_ESCLUSI = {("due", "punti")}
+
+#: Un documento che **parla** del tic lo cita, e citarlo non è commetterlo. Il
+#: caso non è teorico: questo piano, la sua skill e il changelog portano gli
+#: esempi fra virgolette basse come prova, e senza questa esclusione il gate
+#: segnalava proprio i file che scrivono la norma. Misurate: 6 occorrenze su 77
+#: stanno dentro una citazione, e sono citazioni tutte e sei.
+CITAZIONE = re.compile(r"«[^«»]{0,120}»|`[^`\n]{0,120}`")
+
+
+def conteggi_annunciati(prosa: str) -> list[tuple[str, str]]:
+    """Le occorrenze del conteggio annunciato, tolte quelle omografe e citate."""
+    citazioni = [m.span() for m in CITAZIONE.finditer(prosa)]
+    fuori = []
+    for m in CONTEGGIO.finditer(prosa):
+        coppia = (m.group(1).lower(), m.group(2).lower())
+        if coppia in CONTEGGIO_ESCLUSI:
+            continue
+        if any(a <= m.start() and m.end() <= b for a, b in citazioni):
+            continue
+        fuori.append((m.group(1), m.group(2)))
+    return fuori
+
+#: Soglie per documento. Tarate sulla distribuzione misurata prima del lotto D
+#: (mediana 82 trattini/1000 righe, quartile alto 118), quando 150 segnalava gli
+#: otto file peggiori. Dopo la ripulitura la mediana è 73 e la soglia non trova
+#: più niente: resta dov'è come guardia contro la ricaduta.
 SOGLIE_DOC = {"trattino_per_mille": 150, "trattino_minimo": 10,
               "conteggio": 2, "antitesi": 2}
 
@@ -567,12 +612,13 @@ def controlla_documento(f: Path) -> list[str]:
     if trattini >= SOGLIE_DOC["trattino_minimo"] and per_mille > SOGLIE_DOC["trattino_per_mille"]:
         fuori.append(
             f"{rel}: {trattini} trattini lunghi in {len(righe)} righe di prosa "
-            f"({per_mille}/1000, mediana del repo 82): in italiano il trattone "
+            f"({per_mille}/1000, mediana del repo 73): in italiano il trattone "
             "non è un respiro — punto e virgola, due punti, o niente")
 
-    n_cont = len(CONTEGGIO.findall(prosa))
+    conteggi = conteggi_annunciati(prosa)
+    n_cont = len(conteggi)
     if n_cont > SOGLIE_DOC["conteggio"]:
-        esempi = ", ".join(f"«{a} {b}»" for a, b in CONTEGGIO.findall(prosa)[:3])
+        esempi = ", ".join(f"«{a} {b}»" for a, b in conteggi[:3])
         fuori.append(
             f"{rel}: il numero annunciato prima dell'elenco compare {n_cont} volte "
             f"({esempi}): l'elenco che segue rende il conteggio superfluo")

@@ -1,6 +1,6 @@
 # PIANO — Prosa che non sembri generata
 
-> **Stato**: 🟡 **in corso** — lotti A·B·C·E·F·G chiusi (2026-09-03); resta D
+> **Stato**: ✅ **completo** — tutti i lotti chiusi (2026-09-03)
 > **Aperto**: 2026-09-03
 > **Nasce da**: il DM porta due file esterni — la skill *the writing whip* e
 > l'elenco *tropes.fyi* di Ossama Chaib — e chiede se convenga usarli per
@@ -116,14 +116,81 @@ rilievo che compare ovunque non lo legge nessuno. 18 test, e le quattro soglie
   il minimo non lo faceva cadere. Ora usa otto trattini su cinquanta righe:
   sopra la densità, sotto il minimo.
 
-### ⬜ Lotto D — Ripulire i documenti peggiori
-I 54 rilievi aperti. `plans/INDEX.md` a 831 trattini ogni mille righe,
+### ✅ Lotto D — Ripulire i documenti peggiori
+I rilievi aperti. `plans/INDEX.md` a 831 trattini ogni mille righe,
 `AGENTS.md` a 315, `PIANO-CHIUSURA-CATENA-EDITORIALE.md` con 144 trattini e
 undici conteggi annunciati.
 **Accettazione**: i dieci file peggiori sotto la soglia; la mediana del repo
 scende sotto 82/1000. ⚠️ **Da fare a mano**: una sostituzione automatica del
 trattone produce punteggiatura sbagliata, perché il segno giusto (due punti,
 punto e virgola, virgola, niente) dipende dalla frase.
+
+**✅ Chiuso 2026-09-03.** Da 55 rilievi a **2**, e i due che restano sono
+argomentati sotto.
+
+| | prima | dopo |
+|---|---:|---:|
+| Trattini lunghi (157 documenti, 15.870 righe di prosa) | 2.005 | 1.145 |
+| Densità globale | 126/1000 | 72/1000 |
+| Mediana per documento | 109 | 73 |
+| File sopra la soglia di 150 | 12 | 0 |
+| `plans/INDEX.md` · `AGENTS.md` · `README.md` | 831 · 315 · 288 | 25 · 26 · 0 |
+
+⚠️ **La mediana di partenza non era 82: era 109.** L'82 del §2 viene da una
+passata precedente con una base di righe diversa (32.566 righe contro le 15.870
+che `prosa_documento` conta davvero), e il messaggio del validatore lo ripeteva
+al lettore come se fosse la misura corrente. Sotto la misura del validatore
+stesso il criterio d'accettazione era quindi più duro di come suonava, ed è
+soddisfatto in entrambe le letture. Il numero nel messaggio è stato corretto.
+
+**Tre falsi positivi del gate, trovati facendo il lavoro** (il primo segnalato
+dal DM), con un test ciascuno e una mutazione che li fa cadere:
+
+- **«due punti»** era contato come conteggio annunciato, e in italiano è il nome
+  del segno `:`. Cercate tutte le occorrenze nei documenti: **nessuna** annuncia
+  un elenco, sono il segno o un valore di regole («Resist Freddo nei due punti»).
+  Il tic vero non ha questa forma, perché nessuno chiama «tre punti» la
+  punteggiatura: si esclude la sola coppia.
+- **L'intervallo numerico** (`3–4 ore`, `GS 17–19`) contava come trattone, e lì
+  la lineetta enne è la notazione giusta: **79 delle 96** lineette enne dei
+  documenti sono di questa forma. Il respiro resta la lineetta emme fra spazi, e
+  resta contato anche fra numeri («Chiuso 2026-09-03 — 157 su 157»): l'esclusione
+  chiede la enne **e** l'assenza di spazi.
+- **Il conteggio citato** contava come conteggio commesso, e un documento che
+  parla del tic lo cita per forza. Non è teorico: chiudendo questo lotto, il
+  gate ha cominciato a segnalare **il piano, la skill e il changelog** che
+  portano gli esempi fra virgolette basse come prova. Misurate: 6 occorrenze su
+  77 stanno dentro una citazione, e sono citazioni tutte e sei.
+
+**Come, visto che il `sed` era vietato.** Il divieto vale per il trattone come
+respiro, e regge: quelle sostituzioni sono state scritte a mano, frase per
+frase: **565**, verificate una a una da uno script che rifiuta la coppia che non
+si applica esattamente una volta. Ma una parte dei trattoni non era un respiro:
+era il **separatore fra un'etichetta e la sua definizione** in un elenco, la
+forma «trattino grassetto descrizione» o «trattino percorso descrizione», dove il
+segno giusto è sempre i due punti e non dipende dalla frase. Quei **295 casi**
+sono stati fatti con una regola sola, leggendone il diff. In tutto: **76
+documenti** toccati.
+
+**Quello che resta contato e non va tolto**, misurato:
+
+- **32 marcatori di stato** `[INFERRED — needs DM confirmation]`,
+  `[ACCEPTED — DM-canon]`, `[Private — …]`: sono notazione del repo, uno di essi
+  è perfino una costante di `compile_map_json.py`. Contati, non toccati.
+- **Formati-record** come `Anointing: <PC> — <mark> — <status>` in
+  `pc-protagonism.md` e `DR 2/—` del SRD: cambiarli cambierebbe un dato.
+- **I 2 rilievi rimasti**, entrambi «numero annunciato»:
+  `PIANO-CHIUSURA-CATENA-EDITORIALE.md` (7) e `PIANO-GENERATORE-CREATURE-E-PNG.md`
+  (4). Letti uno per uno, sono **numeri misurati** («cinque difetti chiusi», «erano
+  quattro problemi diversi», «restava cinque punti sotto la riga del GS») o
+  **riferimenti a insiemi definiti** («le cinque domande del §7»), cioè
+  esattamente il caso che la skill dice di tenere. Un documento di 616 righe che
+  racconta otto lotti misurati supera una soglia di 2 senza avere il tic, e
+  mangiare quei numeri per far tacere il gate sarebbe il difetto peggiore.
+
+**La soglia resta a 150** anche se ora non segnala più niente. Non è una
+classifica da riazzerare a ogni passata: è una guardia contro la ricaduta, e a
+quella densità un documento nuovo è stato scritto con l'abitudine vecchia.
 
 ### ✅ Lotto E — Le due lacune vere dell'analisi esterna
 `italiano-nativo.md` §9.2-ter (elusione della copula, inflazione di significato)
@@ -206,7 +273,7 @@ python3 scripts/validate_prosa.py --prima-dopo --rispetto-a HEAD~1 FILE.md
 # lo stesso comando su un file nominato stampa sotto il profilo delle lunghezze
 # (informazione, non punteggio: il verdetto resta dei cinque tic contati)
 
-python3 scripts/validate_prosa.py --documenti           # i 54 rilievi aperti
+python3 scripts/validate_prosa.py --documenti           # oggi: 2 rilievi, argomentati in §4 D
 python3 scripts/validate_prosa.py --documenti plans/INDEX.md
 python3 -m pytest scripts/tests/test_prosa_documenti.py -q
 ```

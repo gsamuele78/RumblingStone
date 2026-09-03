@@ -107,11 +107,11 @@ di quello che c'è scritto.
 
 ## Copertura
 
-- `scripts/dmcore/statblock.py` — lettura, estrazione dalla prosa, forma canonica
-- `scripts/extract_statblocks.py` — migrazione semi-automatica e gate `--check`
-- `scripts/schemas/statblock.schema.json` — il contratto dei campi
-- `scripts/typst/tema-rumblingstone.typ` — `#statblocco()`, il riquadro in stampa
-- `scripts/export_booklet_typst.py` — il blocco diventa riquadro, non codice
-- `scripts/tests/test_statblock.py` — 12 test, fra cui i dadi vita che non sono i
+- `scripts/dmcore/statblock.py`: lettura, estrazione dalla prosa, forma canonica
+- `scripts/extract_statblocks.py`: migrazione semi-automatica e gate `--check`
+- `scripts/schemas/statblock.schema.json`: il contratto dei campi
+- `scripts/typst/tema-rumblingstone.typ`: `#statblocco()`, il riquadro in stampa
+- `scripts/export_booklet_typst.py`: il blocco diventa riquadro, non codice
+- `scripts/tests/test_statblock.py`: 12 test, fra cui i dadi vita che non sono i
   dadi di danno e il mezzo grado di sfida
-- `.github/workflows/ci.yml` — il gate
+- `.github/workflows/ci.yml`: il gate

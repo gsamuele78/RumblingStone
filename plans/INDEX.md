@@ -42,52 +42,52 @@
 | [RICERCA-RUOLI-EDITORIALI-COLOPHON](RICERCA-RUOLI-EDITORIALI-COLOPHON-PAIZO-2026-08.md) | Metodo: **il colophon di un AP Paizo letto come capitolato** — i 21 ruoli dell'edizione italiana di *Ascesa dei Signori delle Rune* mappati uno a uno sulle skill del repo (8 coperti · 2 chiusi per decisione · 5 fuori perimetro · 6 aperti), i tre buchi veri (**i volumi non hanno colophon**, la redazione come processo, l'edizione come oggetto con una versione), la combinazione mancante (**l'ordine dei mestieri**), e il verdetto su MCP e tool con licenza verificata | 🔵 **ricerca completa, nessun lotto aperto** (2026-08-26) | 100% (come ricerca) | ⬜ P1 colophon · ⬜ P2 skill `rumblingstone-edizione` · ⬜ P3 passate redazionali + `validate_lingua.py` · ⬜ P4 vendoring pacchetti Typst · ⬜ P5 `pdfcpu` imposizione · ⬜ P6 server MCP sui 44 tool · ⬜ P7 veraPDF/caratteri per riga/daltonismo · ⬜ P8 `dm.py volume` | P2: ADR-0008 · **P4: decisione DM** (sblocca capolettera annegato **e** indice analitico — sono la stessa decisione) · P5: ADR sulla dipendenza binaria · **addendum §8 del 2026-08-27**: la seconda standalone (`10-stand-alone/L'abbazia Della Rotta Sicura/`) aggiunge **P9-P19** — riscalatura a tre assi, consenso del tavolo, igiene di licenza per documento, ADR di modulo, numerazione delle aree, limite del dry-run, cancelli d'atto, tavole non zenitali, **il modulo fuori da ogni catena** e **`LICENSE` GPL-3.0 su un'opera testuale**. Seguito operativo: [PIANO-CHIUSURA-CATENA-EDITORIALE](PIANO-CHIUSURA-CATENA-EDITORIALE.md) |
 | [PIANO-INDAGINE-E-DEDUZIONE](PIANO-INDAGINE-E-DEDUZIONE.md) | Infrastruttura di scrittura: **il nono pilastro** — casi investigativi, misteri, enigmi e il congegno finale. Skill `rumblingstone-indagine` (nodo d'indizio a tre strati, **le sei porte** che fanno entrare nell'indagine i PG senza gradi d'abilità, la ricomposizione, il vicolo cieco) + pilastro 9 in `rumblingstone-narrative-style` + [ADR-0022](adr/ADR-0022-competenza-guadagnata-sul-campo.md) (Acume/Perizia/Metodo, col tetto di 1 grado per PG per livello) | 🟢 **eseguito** (2026-08-25): I1-I4 + **I7** (il congegno è la stanza, non un power-up) + **I8** (il congegno è **una famiglia di caso su sei**) + **I9** (**varietà fra gli archi**: tavolozza, sei tinte, rotazione, prova del recap) + **I10** (**quota di modulo** e **orchestrazione dinamica**: vocazioni, gettone in mano, regola dello scarto) | ~100% | ⬜ I5 primo caso scritto e giocato · ⬜ I6 gate `validate_modules.py` sui nodi | I5: una sessione vera — **il tetto di Perizia e il numero di nodi per caso sono scelti a tavolino, non collaudati** · I6: gated su I5 (un validatore senza corpus non serve) |
 | [PIANO-QUALITA-DEL-CODICE](PIANO-QUALITA-DEL-CODICE.md) | **La qualità del codice, misurata prima e dopo** — risposta alle domande del DM su librerie, riuso, TDD, OOP e schemi d'uso. ⚠️ La misura ha trovato un difetto vero: **sette implementazioni di `slug`** e una senza normalizzazione Unicode, con **nove record del catalogo** che hanno id divergenti da tutto il resto della catena (`Lómyn` → `l-myn`). E il buco più serio: **quattro cancelli della CI non hanno un test che li veda bocciare** | 🟡 **B chiuso** (2026-09-03) | 20% | ⬜ 0 ADR stdlib-only · ⬜ A una `slug` sola · ⭐ ✅ B **i gate che nessuno ha visto bocciare** (22 test, collaudati mutando i validatori) · ⬜ C casi d'uso · ⬜ D ambiente riproducibile | Ne vale la pena per B, A e 0. **No** a una riscrittura OOP e **no** a pytest come dipendenza: il vantaggio vero è il TDD, che non richiede nessuna delle due |
-| [PIANO-PROSA-CHE-NON-SEMBRI-GENERATA](PIANO-PROSA-CHE-NON-SEMBRI-GENERATA.md) | **Due prose, due norme** — nasce dai file esterni portati dal DM (*the writing whip*, *tropes.fyi*) e dal rilievo dei giocatori tornato due volte. ⚠️ La misura ha capovolto la risposta: sul contenuto di gioco i tropi nuovi sono **rumore** (64 su 64 falsi positivi sui «nomi ornati»), mentre nei **documenti** del repo il segnale è denso — 2.080 trattini lunghi, 92 ogni mille righe di prosa | 🟡 **A·B·C·E·F chiusi** (2026-09-03) | 84% | ✅ A skill dei documenti · ✅ B i quattro tic immisurabili in §9.2-bis · ✅ C `validate_prosa --documenti` · ⬜ D ripulire i 54 rilievi aperti · ✅ E copula e inflazione di significato · ⭐ ✅ F **`--prima-dopo`: misurare il miglioramento** (la *burstiness* proposta dall'analisi peggiora sulla riscrittura che il DM ha approvato) | [ADR-0035](adr/ADR-0035-due-prose-due-norme.md) · [ADR-0036](adr/ADR-0036-misurare-il-miglioramento-non-lo-stato.md). Un tropo non si trapianta né fra lingue né fra generi: «immagina di…» è nell'elenco dei difetti ed è cosa fa un read-aloud |
+| [PIANO-PROSA-CHE-NON-SEMBRI-GENERATA](PIANO-PROSA-CHE-NON-SEMBRI-GENERATA.md) | **Due prose, due norme** — nasce dai file esterni portati dal DM (*the writing whip*, *tropes.fyi*) e dal rilievo dei giocatori tornato due volte. ⚠️ La misura ha capovolto la risposta: sul contenuto di gioco i tropi nuovi sono **rumore** (64 su 64 falsi positivi sui «nomi ornati»), mentre nei **documenti** del repo il segnale è denso — 2.080 trattini lunghi, 92 ogni mille righe di prosa | ✅ **completo** — tutti i lotti chiusi (2026-09-03) | 100% | ✅ A skill dei documenti · ✅ B i quattro tic immisurabili in §9.2-bis · ✅ C `validate_prosa --documenti` · ⭐ ✅ D **i documenti ripuliti a mano**: da 55 rilievi a **2**, mediana da **109 a 73** trattini ogni mille righe, densità globale da 126 a 72, zero file sopra la soglia; `INDEX.md` da 831 a 25, `AGENTS.md` da 315 a 26, `README.md` da 288 a 0. Tre falsi positivi del gate corretti con test e mutazione («due punti» è il segno `:`, `3–4 ore` è un intervallo, e un conteggio **citato** non è un conteggio commesso). I 2 rilievi rimasti sono numeri **misurati**, che la norma dice di tenere · ✅ E copula e inflazione di significato · ⭐ ✅ F **`--prima-dopo`: misurare il miglioramento** (la *burstiness* proposta dall'analisi peggiora sulla riscrittura che il DM ha approvato) · ✅ G il profilo delle lunghezze | [ADR-0035](adr/ADR-0035-due-prose-due-norme.md) · [ADR-0036](adr/ADR-0036-misurare-il-miglioramento-non-lo-stato.md). Un tropo non si trapianta né fra lingue né fra generi: «immagina di…» è nell'elenco dei difetti ed è cosa fa un read-aloud |
 | VERIFICA LEGALE-IP (P2D "Palio") — [ADR-0005](adr/ADR-0005-confini-ip-uso-non-commerciale.md) · [rapporto](../09_Continuazione%20Arco%20Narrativo%20dopo%20Battaglia%20di%20Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-VERIFICA-LEGALE-IP.md) | Conformità IP: Regolamento/Consorzio Palio di Siena + blocco WotC/Forgotten Realms | ✅ verifica completata (PR #47) | 100% | bonifica §7 (rinomina contrade/livree/motti, "Piazza il Campo", riambientazione fuori FR) — **solo se** si punta a edizione commerciale. 🔎 **Dal 2026-08-14 la bonifica è dimostrata su un modulo a parte**: `STANDALONE-Il-Drappo-di-Tarsilia/` chiude 8 punti su 8 del §7 (resta aperta la sola sostituzione delle figure degli stemmi) — l'arco P2D di Channathgate **resta invariato** | decisione DM su uso commerciale (non presa) |
 
 ## Prossimi passaggi (volutamente in bianco — si riempiono al tavolo / su decisione DM)
 
 ### PIANO-INDAGINE-E-DEDUZIONE
 - ✅ _(I1-I4 chiusi 2026-08-25: piano + ADR-0022 + skill `rumblingstone-indagine` con quattro reference + nono pilastro «Il caso ricomposto» in `style-pillars.md`)_
-- ✅ _(I10 chiuso 2026-08-26: quota su ~10 moduli (**45% puliti** è la riga che regge tutto), tetto di **2 congegni** per arco modulare riconciliato con la regola 3, e orchestrazione a tre livelli — l'assegnazione si decide **quando il tavolo sceglie il modulo**, non prima: un'assegnazione fissa è un calendario, e un calendario si impara)_
-- ✅ _(I9 chiuso 2026-08-26: `varieta-fra-archi.md` in `narrative-style` — il mixer era per-scena, mancava il piano per-arco. **Niente skill nuova**: la varietà è una politica, non un dominio (ADR-0008 §1))_
-- ⬜ _(I9 — coda: la **tavolozza di ARC-08 e ARC-09** è scritta come `[PROPOSTA — needs DM confirmation]` dentro la reference, **non** in `state.md`. Colorare archi preparati è decisione del DM. Se approvata → §7.T di `state.md` col triplo vincolo ADR-0007)_
+- ✅ _(I10 chiuso 2026-08-26: quota su ~10 moduli (**45% puliti** è la riga che regge tutto), tetto di **2 congegni** per arco modulare riconciliato con la regola 3, e orchestrazione a tre livelli; l'assegnazione si decide **quando il tavolo sceglie il modulo**, non prima: un'assegnazione fissa è un calendario, e un calendario si impara)_
+- ✅ _(I9 chiuso 2026-08-26: `varieta-fra-archi.md` in `narrative-style`; il mixer era per-scena, mancava il piano per-arco. **Niente skill nuova**: la varietà è una politica, non un dominio (ADR-0008 §1))_
+- ⬜ _(I9, coda: la **tavolozza di ARC-08 e ARC-09** è scritta come `[PROPOSTA — needs DM confirmation]` dentro la reference, **non** in `state.md`. Colorare archi preparati è decisione del DM. Se approvata → §7.T di `state.md` col triplo vincolo ADR-0007)_
 - ⚠️ _(decisione residua per il DM, **una sola**: se ARC-09 conti come **un** arco o **due** ai fini della regola 3. Se due, i congegni passano da 2 a 2+2 e la quota va rifatta su due metà. Il resto è risolto dal §6.3)_
-- ✅ _(I8 chiuso 2026-08-26: lo scheletro rendeva il congegno obbligatorio. `famiglie-di-caso.md` — sei famiglie con firma degli indizi, chiave tipica ed errore da evitare per ciascuna; scheletro generalizzato a `IL SEGRETO`)_
-- ✅ _(I7 chiuso 2026-08-25, correzione DM in giornata: il §5 consegnato in I2 **era un power-up** travestito. `congegno-e-enigmi.md` riscritto da 6 a 10 sezioni — regia del prestigiatore, innesco in piena vista, agenda dei villain, il congegno come terzo attore, dosaggio)_
-- ⬜ _(I5 — **un caso vero**, scritto con la skill e giocato: senza tempi reali non si sa se un caso da 6-9 nodi sta in due serate. **Gated**: serve una sessione)_
-- ⬜ _(I6 — gate meccanico sui nodi in `validate_modules.py`: tre porte dichiarate, una fisica, il Fatto senza tiro. **Gated su I5**: prima non esisterebbe un corpus da validare)_
-- ⚠️ _(i due numeri da tarare al collaudo: il **tetto di 1 grado/PG/livello** e il **costo di 3 perizie per grado**. Se il tetto salta, ADR-0022 va riaperto — è quella la decisione, non un dettaglio)_
+- ✅ _(I8 chiuso 2026-08-26: lo scheletro rendeva il congegno obbligatorio. `famiglie-di-caso.md` porta sei famiglie con firma degli indizi, chiave tipica ed errore da evitare per ciascuna; scheletro generalizzato a `IL SEGRETO`)_
+- ✅ _(I7 chiuso 2026-08-25, correzione DM in giornata: il §5 consegnato in I2 **era un power-up** travestito. `congegno-e-enigmi.md` riscritto da 6 a 10 sezioni, fra cui regia del prestigiatore, innesco in piena vista, agenda dei villain, il congegno come terzo attore, dosaggio)_
+- ⬜ _(I5, **un caso vero**, scritto con la skill e giocato: senza tempi reali non si sa se un caso da 6-9 nodi sta in due serate. **Gated**: serve una sessione)_
+- ⬜ _(I6, gate meccanico sui nodi in `validate_modules.py`: tre porte dichiarate, una fisica, il Fatto senza tiro. **Gated su I5**: prima non esisterebbe un corpus da validare)_
+- ⚠️ _(i due numeri da tarare al collaudo: il **tetto di 1 grado/PG/livello** e il **costo di 3 perizie per grado**. Se il tetto salta, ADR-0022 va riaperto: è quella la decisione, non un dettaglio)_
 
 ### RICERCA-AUDIT-COMPONENTI
 - ✅ _(E1-E3, E5, E6 chiusi il 2026-08-22 con la PR #110: immagini in stampa, Inconsolata embedded, margini speculari, schema del manifest + `validate_booklets.py`, `typst` in CI che compila davvero i volumi, tipografia OFL anche nella catena HTML, skill `rumblingstone-editoria`)_
 - ✅ _(**le quattro code sono state chiuse altrove**, fra il 27 agosto e il 3 settembre, e questa riga lo diceva ancora al contrario: capolettera annegato e indice analitico con i pacchetti vendorizzati ([ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)), imposizione con `pdfcpu` ([ADR-0027](adr/ADR-0027-imposizione-con-pdfcpu.md)), Bestiario **157/157** col blocco statistiche. Il piano che le ha chiuse è PIANO-CHIUSURA-CATENA-EDITORIALE)_
-- ✅ _(2026-09-03: `--formato a5` — l'ultima cosa che mancava davvero, e sta **accanto** all'imposizione: imporre un volume A4 scala il corpo al 71%, comporre in A5 e piegare no)_
-- ⬜ _(non portabile senza il DM: le schede A4 dei quattro PG della campagna. In `PG/` non esistono master di scheda personaggio, solo gli artefatti — il layout `"layout": "schede"` è pronto e aspetta i numeri veri)_
+- ✅ _(2026-09-03: `--formato a5`, l'ultima cosa che mancava davvero, e sta **accanto** all'imposizione: imporre un volume A4 scala il corpo al 71%, comporre in A5 e piegare no)_
+- ⬜ _(non portabile senza il DM: le schede A4 dei quattro PG della campagna. In `PG/` non esistono master di scheda personaggio, solo gli artefatti: il layout `"layout": "schede"` è pronto e aspetta i numeri veri)_
 
 ### PIANO-REVISIONE-ARC07
 - ⬜ _(da definire al tavolo: date/XP/loot reali per chiudere B1)_
 
 ### PIANO-REVISIONE-ARC08
-- ⬜ _(nessuno pianificato — eventuali emergenze dal gioco dell'arco)_
+- ⬜ _(nessuno pianificato: eventuali emergenze dal gioco dell'arco)_
 
 ### PIANO-REVISIONE-ARC09
-- ⬜ _(nessuno pianificato — eventuali emergenze dal gioco dell'arco)_
+- ⬜ _(nessuno pianificato: eventuali emergenze dal gioco dell'arco)_
 
 ### PIANO-REVISIONE-TRASVERSALE
 - ⬜ _(T8: quando la quest ARC-09 di Hella è giocata)_
-- ⬜ _(chiusura T9: quando il P3B è giocato — esito reale in state.md §8)_
+- ⬜ _(chiusura T9: quando il P3B è giocato, con l'esito reale in state.md §8)_
 
 ### PIANO-DM-TOOLKIT
-- 🟡 _(K-B3.9 — tavole di Channathgate ricollocate in `immagini/` + ridimensionate con Pillow: **PR #46 aperta**, non mergiata; le tavole PNG del DM sono già su main via `ed56aa6`)_
+- 🟡 _(K-B3.9: tavole di Channathgate ricollocate in `immagini/` + ridimensionate con Pillow: **PR #46 aperta**, non mergiata; le tavole PNG del DM sono già su main via `ed56aa6`)_
 - ⬜ _(riapertura estetica K-B0 solo se il DM indicherà template specifici del pack)_
 - ⬜ _(collaudo al tavolo: container + brew I-V; piloti lettera/avviso-torneo quando arriva testo canone)_
 
 ### RICERCA-GENERATORI-MAPPE
-- 🟡 _(P4 Piano Terra → griglie Ultra-Clear, dall'agguato Xorn al boss Terros: **PR #42 aperta**, non mergiata — quando merge, tracciare qui e in CHANGELOG)_
-- ⬜ _(opzionale/estetico: portare a griglia Ultra-Clear le altre mappe KO del censimento — Torre P2A, Torneo P2B, Battaglia Finale P3 — ora che il renderer c'è)_
-- ⬜ _(mappa regionale Cannath Vale/Dalelands con Azgaar FMG — `.map` master + export in rendered/)_
-- ⬜ _(hero map ComfyUI sulle 2-3 mappe chiave — solo su macchina DM, vedi skill mapmaking)_
+- 🟡 _(P4 Piano Terra → griglie Ultra-Clear, dall'agguato Xorn al boss Terros: **PR #42 aperta**, non mergiata; quando merge, tracciare qui e in CHANGELOG)_
+- ⬜ _(opzionale/estetico: portare a griglia Ultra-Clear le altre mappe KO del censimento (Torre P2A, Torneo P2B, Battaglia Finale P3) ora che il renderer c'è)_
+- ⬜ _(mappa regionale Cannath Vale/Dalelands con Azgaar FMG: `.map` master + export in rendered/)_
+- ⬜ _(hero map ComfyUI sulle 2-3 mappe chiave, solo su macchina DM: vedi skill mapmaking)_
 
 ### INTEGRAZIONE-PIPELINE-MAPPE-3-MODALITÀ
 - ⬜ _(collaudo DM: generare una mappa Mod. 3 reale da JSON per un incontro ARC-08/09 e renderla)_
@@ -95,66 +95,73 @@
 - ⬜ _(collaudo DM: setup container ComfyUI su Bazzite con GPU + hero map su una mappa chiave)_
 
 ### PIANO-AUTOMAZIONE-STATO-SESSIONI
-- ⬜ _(collaudo al tavolo: primo `dm.py session end` — wizard incluso — su una sessione reale del gruppo, sul branch `campaign-group-rumblingstone-dm-gianfranco`)_
-- ⬜ _(opzionale, decisione DM futura: lotto E-bis LLM per evoluzioni narrative — oggi escluso)_
+- ⬜ _(collaudo al tavolo: primo `dm.py session end` (wizard incluso) su una sessione reale del gruppo, sul branch `campaign-group-rumblingstone-dm-gianfranco`)_
+- ⬜ _(opzionale, decisione DM futura: lotto E-bis LLM per evoluzioni narrative, oggi escluso)_
 
 ### PIANO-IMPORT-ULTRACLEAR
-- ✅ _(F1-F7 eseguiti 2026-07-24: `scripts/import_ultraclear.py` + `scripts/schemas/map_conflicts.schema.json` + 17 test + smoke CI + doc skill — branch `claude/piani-completare-5b85qg`)_
-- ⬜ _(opzionale: migrare al contratto JSON le altre ~30 mappe ultra-clear del censimento — un file alla volta, risolvendo i conflitti segnalati; da fare al tavolo/su decisione DM)_
+- ✅ _(F1-F7 eseguiti 2026-07-24: `scripts/import_ultraclear.py` + `scripts/schemas/map_conflicts.schema.json` + 17 test + smoke CI + doc skill, sul branch `claude/piani-completare-5b85qg`)_
+- ⬜ _(opzionale: migrare al contratto JSON le altre ~30 mappe ultra-clear del censimento, un file alla volta, risolvendo i conflitti segnalati; da fare al tavolo/su decisione DM)_
 - ⬜ _(gancio Piano 2: l'editor visuale consuma `--json-report` per evidenziare le celle in conflitto e applicare le `actions`)_
 
 ### PIANO-EDITOR-VISUALE-MAPPE
-- ⬜ _(E0: ADR «editor come sotto-progetto separato» — decisione stack/offline/confini, prerequisito a tutto il front-end)_
-- ⬜ _(E1: `export_legend_json.py` → `legend.json` + gate CI di sync — prerequisito tecnico con valore autonomo, candidabile per primo)_
+- ⬜ _(E0: ADR «editor come sotto-progetto separato», che decide stack, offline e confini ed è prerequisito a tutto il front-end)_
+- ⬜ _(E1: `export_legend_json.py` → `legend.json` + gate CI di sync; prerequisito tecnico con valore autonomo, candidabile per primo)_
 - ⬜ _(E2-E10: canvas griglia, strumenti, import Watabou/bozza-ultraclear, export contratto, round-trip e2e, packaging offline, test Playwright, doc)_
 
 ### PIANO-INCANTATORI-MEMORABILI
 - ✅ _(L6 chiuso 2026-08-05: **approvato tutto**. 13 file a `[ACCEPTED — DM-canon]`; tre clock villain in `state.md` §3, conoscenze in §4, ramo terra in §5, eco E-08a in §7.E, changelog §8)_
-- ✅ _(ramo di Ushgar: **aperto**, con l'ordine deciso dal DM — prima l'uscita laterale di **Hella** (il Cerchio non si oppone all'insediamento), la firma di Thorik solo come secondo passo. La penale «perdita status Custode Eterno» scatta **solo** se si arriva alla firma del nano)_
+- ✅ _(ramo di Ushgar: **aperto**, con l'ordine deciso dal DM; prima l'uscita laterale di **Hella** (il Cerchio non si oppone all'insediamento), la firma di Thorik solo come secondo passo. La penale «perdita status Custode Eterno» scatta **solo** se si arriva alla firma del nano)_
 - ⬜ _(unica coda cosmetica: assegnare i token in `Bestiario/tokens/`)_
-- ✅ _(ex-opzionale: l'ogre deforme del Sottosuolo da fonte privata è stato risolto in L7 come **equivalente SRD** — `bruto-deforme-sottosuolo-cr11.md`. Nessuna citazione di fonte privata necessaria)_
+- ✅ _(ex-opzionale: l'ogre deforme del Sottosuolo da fonte privata è stato risolto in L7 come **equivalente SRD** in `bruto-deforme-sottosuolo-cr11.md`. Nessuna citazione di fonte privata necessaria)_
 
 ### PIANO-SFIDE-COMBINATE
 - ✅ _(S4 chiuso 2026-08-05: **sfide approvate**. La scelta operativa passa dagli innesti I1-I6)_
-- ✅ _(S5 chiuso 2026-08-05: scheda tanarukk fornita dal DM → sfida **G** «Il Sangue Sbagliato». Con correzione dichiarata: avevo dedotto GS 6, il tanarukk base è **GS 6 solo con Barbaro 4** — da solo è **GS 2**)_
-- ✅ _(S6 chiuso 2026-08-05: scheda orchi montani fornita dal DM. Esito onesto: **nessun nemico nuovo** — i tratti sono identici all'orco SRD, quindi le schede orchesche del repo *sono già* orchi montani. Il valore sta altrove, in §2-ter dell'indice)_
-- ✅ _(deciso 2026-08-05: **la faglia si apre**. Ushgar **non** ha «Adattamento alla Luce» e il Controllo delle Fiamme **fa scattare** la cecità alla luce — i tanarukk possono accecare i propri comandanti)_
+- ✅ _(S5 chiuso 2026-08-05: scheda tanarukk fornita dal DM → sfida **G** «Il Sangue Sbagliato». Con correzione dichiarata: avevo dedotto GS 6, il tanarukk base è **GS 6 solo con Barbaro 4**, e da solo è **GS 2**)_
+- ✅ _(S6 chiuso 2026-08-05: scheda orchi montani fornita dal DM. Esito onesto: **nessun nemico nuovo**, perché i tratti sono identici all'orco SRD, quindi le schede orchesche del repo *sono già* orchi montani. Il valore sta altrove, in §2-ter dell'indice)_
+- ✅ _(deciso 2026-08-05: **la faglia si apre**. Ushgar **non** ha «Adattamento alla Luce» e il Controllo delle Fiamme **fa scattare** la cecità alla luce, quindi i tanarukk possono accecare i propri comandanti)_
 - 🚫 _(S7 **non presa** 2026-08-05: Ushgar resta Barbaro 13. La CdP resta disponibile se un giorno servisse)_
 - ✅ _(deciso 2026-08-05 sulla sfida **E**: **non come primo incontro**. Si usa la variante *Advanced* **GS 17** (EL 17, dentro il tetto); la GS 18 col *muro di forza* resta per il ritorno, e solo se il primo Ghaurush è scappato)_
 
 ### PIANO-INNESTI-SFIDE
 - ✅ _(N4 chiuso 2026-08-05: approvati **tutti e sei** gli innesti I1-I6)_
-- ⚠️ _(vincolo da rispettare: l'innesto **I5** va al **Giorno 1 o 2** del Torneo di Dauth, mai al Giorno 3 — quel giorno è già occupato dall'assalto di Xal'thor e dallo smascheramento di Sethrax, e tre trame nella stessa scena si annullano)_
+- ⚠️ _(vincolo da rispettare: l'innesto **I5** va al **Giorno 1 o 2** del Torneo di Dauth, mai al Giorno 3, che è già occupato dall'assalto di Xal'thor e dallo smascheramento di Sethrax, e tre trame nella stessa scena si annullano)_
 
 ### PIANO-DRAPPO-DI-TARSILIA
-- ✅ _(Lotto 1 chiuso 2026-08-14: `STANDALONE-Il-Drappo-di-Tarsilia/` — hub, 8 contrade, regolamento della corsa PF1e, 6 pregen, 3 sessioni, statblocchi, 2 mappe dal contratto JSON, prompt d'illustrazione, nota IP)_
-- ✅ _(Lotto 2 chiuso 2026-08-15: profondità da modulo AP — luoghi e intrigo, rito d'Investitura + 18 eventi personali, agende villain ora per ora, guida DM minuto per minuto, fascicolo schede con matrice dei legami, tavole vettoriali, playtest alfa con 9 correzioni applicate, 3 booklet + 22 PDF)_
+- ✅ _(Lotto 1 chiuso 2026-08-14: `STANDALONE-Il-Drappo-di-Tarsilia/` con hub, 8 contrade, regolamento della corsa PF1e, 6 pregen, 3 sessioni, statblocchi, 2 mappe dal contratto JSON, prompt d'illustrazione, nota IP)_
+- ✅ _(Lotto 2 chiuso 2026-08-15: profondità da modulo AP su luoghi e intrigo, rito d'Investitura + 18 eventi personali, agende villain ora per ora, guida DM minuto per minuto, fascicolo schede con matrice dei legami, tavole vettoriali, playtest alfa con 9 correzioni applicate, 3 booklet + 22 PDF)_
 - ⚠️ _(nomi senesi ripristinati su decisione DM 2026-08-15: la bonifica §7.1 è **sospesa**, non chiusa. Nota IP riscritta di conseguenza)_
-- ✅ _(Lotto 5 chiuso 2026-08-15: apparato d'uso — cassetta del DM, 4 prop stampabili, stato del modulo con Echo Ledger, schede di feedback; **skill `rumblingstone-playtest`**; **`validate_standalone.py`** in CI; **ADR-0017** moduli autoconclusivi e **ADR-0018** apparato d'uso obbligatorio; module-standard §15-16; export UVTT)_
-- 🟡 _(Lotto 6 aperto 2026-08-15: **capitolato dell'edizione illustrata** — `PROMPT-GENERAZIONE-BOOKLET-DEFINITIVO.md` misura i sei divari verso il livello Paizo/WotC (raster, tipografia embedded, mappa versione giocatore, PDF unico con segnalibri, carte da tavolo, frontespizio) e contiene il prompt autosufficiente per eseguirli in una sessione a parte)_
-- ✅ _(Lotto 8 chiuso 2026-08-16: **le sei pregenerate diventano schede vere** — una pagina A4 a testa, fascia alta col ritratto dipinto, pannello sinistro «chi sei» e destro con lo statblocco, piede «come si gioca in un minuto». `scripts/typst/scheda-pg.typ` + `scripts/dmcore/schede.py`, accesi da `"layout": "schede"` nel manifest: i dati restano nei due master del tavolo, non ne esiste una seconda copia)_
-- ✅ _(Lotto 8 — coda d'audit, 2026-08-17: `--per-scheda` (un PDF per giocatore: il fascicolo unico brucerebbe i sei segreti insieme); **7 smoke CI mancanti** aggiunti — dichiaravano `ci_smoke` nel manifest e non li eseguiva nessuno; test anti-drift fra esportatore e template `.typ` (typst non c'è in CI); tool map in `README-automation`; audit meccanico delle sei schede → `PLAYTEST-ALFA` §6 con due correzioni (CMD di Ombra, CD di Tesio). ⚠️ **Divergenza dichiarata** con `claude/golarion-pathfinder-campaign-xbyvzt`: i due rami restano separati per decisione DM, la mappa dei conflitti è nel piano)_
-- ⬜ _(L3 — collaudo al tavolo: durate reali per giornata, punti morti, prove mai usate. **Gated**: serve una sessione giocata)_
-- ⬜ _(L2 — i sei ritratti e le tre tavole: i prompt ci sono, i PNG li produce il DM con ComfyUI locale)_
-- ⬜ _(L3 — edizione pubblicabile: sostituire almeno 4 figure su 8 negli stemmi (restano oca/torre/bruco/istrice), rigenerare i cartigli coi motti nuovi, audit IP del solo standalone. **Gated** su ADR-0005)_
+- ✅ _(Lotto 5 chiuso 2026-08-15: apparato d'uso, cioè cassetta del DM, 4 prop stampabili, stato del modulo con Echo Ledger, schede di feedback; **skill `rumblingstone-playtest`**; **`validate_standalone.py`** in CI; **ADR-0017** moduli autoconclusivi e **ADR-0018** apparato d'uso obbligatorio; module-standard §15-16; export UVTT)_
+- 🟡 _(Lotto 6 aperto 2026-08-15: **capitolato dell'edizione illustrata**. `PROMPT-GENERAZIONE-BOOKLET-DEFINITIVO.md` misura i sei divari verso il livello Paizo/WotC (raster, tipografia embedded, mappa versione giocatore, PDF unico con segnalibri, carte da tavolo, frontespizio) e contiene il prompt autosufficiente per eseguirli in una sessione a parte)_
+- ✅ _(Lotto 8 chiuso 2026-08-16: **le sei pregenerate diventano schede vere**, una pagina A4 a testa, fascia alta col ritratto dipinto, pannello sinistro «chi sei» e destro con lo statblocco, piede «come si gioca in un minuto». `scripts/typst/scheda-pg.typ` + `scripts/dmcore/schede.py`, accesi da `"layout": "schede"` nel manifest: i dati restano nei due master del tavolo, non ne esiste una seconda copia)_
+- ✅ _(Lotto 8, coda d'audit, 2026-08-17: `--per-scheda` (un PDF per giocatore: il fascicolo unico brucerebbe i sei segreti insieme); **7 smoke CI mancanti** aggiunti, che dichiaravano `ci_smoke` nel manifest e non li eseguiva nessuno; test anti-drift fra esportatore e template `.typ` (typst non c'è in CI); tool map in `README-automation`; audit meccanico delle sei schede → `PLAYTEST-ALFA` §6 con due correzioni (CMD di Ombra, CD di Tesio). ⚠️ **Divergenza dichiarata** con `claude/golarion-pathfinder-campaign-xbyvzt`: i due rami restano separati per decisione DM, la mappa dei conflitti è nel piano)_
+- ⬜ _(L3, collaudo al tavolo: durate reali per giornata, punti morti, prove mai usate. **Gated**: serve una sessione giocata)_
+- ⬜ _(L2, i sei ritratti e le tre tavole: i prompt ci sono, i PNG li produce il DM con ComfyUI locale)_
+- ⬜ _(L3, edizione pubblicabile: sostituire almeno 4 figure su 8 negli stemmi (restano oca/torre/bruco/istrice), rigenerare i cartigli coi motti nuovi, audit IP del solo standalone. **Gated** su ADR-0005)_
 
-- ⬜ _(2026-08-18 — **collaudo del libro illustrato**: le venti immagini sono entrate DOPO il dry-run del Lotto 2 e dopo l'audit delle schede, e nessuno ha guardato dove atterrano. Prompt di consegna autosufficiente in `STANDALONE-Il-Drappo-di-Tarsilia/PROMPT-PLAYTEST-BOOKLET-E-PLAYERGUIDE.md`. ⚠️ **Gated su una passata a occhio**: typst non è in CI, l'impaginazione non la controlla nessun gate)_
+- ⬜ _(2026-08-18, **collaudo del libro illustrato**: le venti immagini sono entrate DOPO il dry-run del Lotto 2 e dopo l'audit delle schede, e nessuno ha guardato dove atterrano. Prompt di consegna autosufficiente in `STANDALONE-Il-Drappo-di-Tarsilia/PROMPT-PLAYTEST-BOOKLET-E-PLAYERGUIDE.md`. ⚠️ **Gated su una passata a occhio**: typst non è in CI, l'impaginazione non la controlla nessun gate)_
 
 ### RICERCA-TOOL-LGM-2026
-- ✅ _(§2 applicato 2026-09-01: **Inkscape accanto a Chromium** in `export_map_png.py` — `--renderer auto|inkscape|browser`, degradazione pulita se non c'è nessuno dei due, manifest + `docs/tools/` rigenerati, 5 test nuovi. `auto` preferisce Inkscape perché è il renderer giusto per il formato: **non** perché sia stato visto rendere meglio)_
-- ⬜ _(**P3 — il confronto a occhio**: stessa mappa, due motori, differenze su etichette ruotate, tratteggi e pattern. **Gated sulla macchina del DM**: in questo ambiente Inkscape non è installato, e il ramo Inkscape è verificato per contratto (binario finto, argomenti registrati), non per pixel)_
-- ⬜ _(**P1 — la carta del cielo** (Stellarium, sky culture propria): l'unico handout che questa lista apre e che il repo non ha. ⚠️ Costellazioni con **nomi del repo**, mai il catalogo di Faerûn — ADR-0005 vale identico. **Gated**: serve un modulo che la voglia, altrimenti è una figura senza posto nel testo)_
-- ⬜ _(**P2 — Blockbench** come anello di modellazione della catena geometria→depth→ControlNet già scritta in RICERCA-TOOL-ESTERNI §3-ter. **Non toglie Blender**: il passo di profondità resta suo. Ultimo in ordine di priorità, dopo lo script di batch su ComfyUI)_
-- 📌 _(deciso e chiuso in ricerca, nessun lotto: Scribus resta scartato (ADR-0020 §2); Penpot duplicherebbe la fonte di verità del layout; video (Glaxnimate/Kdenlive/Friction/Hyper8) e real-time (Coollab/TiXL/ossia/OPENRNDR/L5/Upstage) sono fuori perimetro; Krita e GIMP restano **banco del DM**, mai passo di catena — nel repo entra il PNG esportato con la sua riga di PROVENIENZA, mai il `.kra`)_
-- 👀 _(**Graphite** (Apache-2.0, alpha, editor vettoriale a nodi): non è un candidato oggi — nessuna CLI — ma un grafo di nodi che produce SVG è la forma giusta per una legenda parametrica di mappa. Da riguardare fra un anno)_
+- ✅ _(§2 applicato 2026-09-01: **Inkscape accanto a Chromium** in `export_map_png.py`: `--renderer auto|inkscape|browser`, degradazione pulita se non c'è nessuno dei due, manifest + `docs/tools/` rigenerati, 5 test nuovi. `auto` preferisce Inkscape perché è il renderer giusto per il formato: **non** perché sia stato visto rendere meglio)_
+- ⬜ _(**P3, il confronto a occhio**: stessa mappa, due motori, differenze su etichette ruotate, tratteggi e pattern. **Gated sulla macchina del DM**: in questo ambiente Inkscape non è installato, e il ramo Inkscape è verificato per contratto (binario finto, argomenti registrati), non per pixel)_
+- ⬜ _(**P1, la carta del cielo** (Stellarium, sky culture propria): l'unico handout che questa lista apre e che il repo non ha. ⚠️ Costellazioni con **nomi del repo**, mai il catalogo di Faerûn: ADR-0005 vale identico. **Gated**: serve un modulo che la voglia, altrimenti è una figura senza posto nel testo)_
+- ⬜ _(**P2, Blockbench** come anello di modellazione della catena geometria→depth→ControlNet già scritta in RICERCA-TOOL-ESTERNI §3-ter. **Non toglie Blender**: il passo di profondità resta suo. Ultimo in ordine di priorità, dopo lo script di batch su ComfyUI)_
+- 📌 _(deciso e chiuso in ricerca, nessun lotto: Scribus resta scartato (ADR-0020 §2); Penpot duplicherebbe la fonte di verità del layout; video (Glaxnimate/Kdenlive/Friction/Hyper8) e real-time (Coollab/TiXL/ossia/OPENRNDR/L5/Upstage) sono fuori perimetro; Krita e GIMP restano **banco del DM**, mai passo di catena; nel repo entra il PNG esportato con la sua riga di PROVENIENZA, mai il `.kra`)_
+- 👀 _(**Graphite** (Apache-2.0, alpha, editor vettoriale a nodi): non è un candidato oggi, perché non ha una CLI, ma un grafo di nodi che produce SVG è la forma giusta per una legenda parametrica di mappa. Da riguardare fra un anno)_
 
 ### VERIFICA LEGALE-IP (P2D "Palio")
-- ⬜ _(bonifica §7 — rinomina contrade, cambio livree, riscrittura motti da zero, rimozione "Piazza il Campo", riambientazione fuori Forgotten Realms: **gated** su una decisione DM di puntare a un'edizione commerciale, non ancora presa — vedi ADR-0005)_
-- ⬜ _(debito documentale a bassa priorità: correggere la nota IP interna che dichiara i motti "originali" — sono parafrasi §3.3; documentare provenienza/licenza delle 2 tavole PNG del DM)_
+- ⬜ _(bonifica §7: rinomina contrade, cambio livree, riscrittura motti da zero, rimozione "Piazza il Campo", riambientazione fuori Forgotten Realms: **gated** su una decisione DM di puntare a un'edizione commerciale, non ancora presa; vedi ADR-0005)_
+- ⬜ _(debito documentale a bassa priorità: correggere la nota IP interna che dichiara i motti "originali", che sono parafrasi §3.3; documentare provenienza/licenza delle 2 tavole PNG del DM)_
 
 ### PIANO-REINTEGRAZIONE-PNG-AP-RHOD
-- ✅ _(R2 — secondo anello di Rethmar preparato 2026-07-20: `Bestiario/png/Secondo_Anello_Rethmar/`)_
-- ✅ _(R3 — Witchwood/Tiri Kitor preparato 2026-07-20: `Bestiario/png/Witchwood_Tiri_Kitor/`; Killiar cross-linkato allo statblock d'arco)_
-- ✅ _(R4 — deciso dal DM 2026-07-20: Hravek Kharn fuso in Karruk; Ulwai non reintegrata 1:1; blackspawn rilivellati → tier élite CR 13 «Razorfiend Blackspawn Alfa»)_
-- ✅ _(R6 — canonizzazione DM di R1+R5 avvenuta il 2026-07-20: flag sciolti, righe applicate a state.md §1/§3/§7/§8)_
-- ✅ _(R7 — Mira Serani «l'Aranea»: reintegrata + twist figlia-di-Lorana; statblock **canon CR 8** calibrato PG 8-9 (ramo APL-13 CR 11/13-14 nel dossier); collisione risolta: «Mira del Traghetto» → «Nania Seriv del Traghetto»)_
+- ✅ _(R2, secondo anello di Rethmar preparato 2026-07-20: `Bestiario/png/Secondo_Anello_Rethmar/`)_
+- ✅ _(R3, Witchwood/Tiri Kitor preparato 2026-07-20: `Bestiario/png/Witchwood_Tiri_Kitor/`; Killiar cross-linkato allo statblock d'arco)_
+- ✅ _(R4, deciso dal DM 2026-07-20: Hravek Kharn fuso in Karruk; Ulwai non reintegrata 1:1; blackspawn rilivellati → tier élite CR 13 «Razorfiend Blackspawn Alfa»)_
+- ✅ _(R6, canonizzazione DM di R1+R5 avvenuta il 2026-07-20: flag sciolti, righe applicate a state.md §1/§3/§7/§8)_
+- ✅ _(R7, Mira Serani «l'Aranea»: reintegrata + twist figlia-di-Lorana; statblock **canon CR 8** calibrato PG 8-9 (ramo APL-13 CR 11/13-14 nel dossier); collisione risolta: «Mira del Traghetto» → «Nania Seriv del Traghetto»)_
+
+### PIANO-PROSA-CHE-NON-SEMBRI-GENERATA
+- ✅ _(A·B·C·E·F·G chiusi 2026-09-03: skill `rumblingstone-prosa-documenti`, `italiano-nativo.md` §9.2-bis/-ter/-quater, `validate_prosa --documenti` e `--prima-dopo` col profilo delle lunghezze)_
+- ✅ _(D chiuso 2026-09-03: 76 documenti ripuliti a mano, 565 sostituzioni scritte frase per frase più 295 separatori d'etichetta risolti con una regola sola. Mediana da 109 a 73 trattini ogni mille righe di prosa, densità globale da 126 a 72, zero file sopra la soglia di 150)_
+- 📌 _(due rilievi restano aperti **per scelta**: `PIANO-CHIUSURA-CATENA-EDITORIALE` (7) e `PIANO-GENERATORE-CREATURE-E-PNG` (4) sul «numero annunciato». Letti uno per uno sono numeri **misurati** o riferimenti a insiemi definiti, cioè il caso che la skill dice di tenere; mangiarli per far tacere il gate sarebbe il difetto peggiore)_
+- 📌 _(la soglia dei 150 trattini/1000 **non si riabbassa** dopo la ripulitura: è una guardia contro la ricaduta, non una classifica da riazzerare a ogni passata)_
+- ⬜ _(nessun lotto aperto. Il banco di prova resta il tavolo: se i giocatori dicono ancora «sembra tradotto», la condizione di riapertura di [ADR-0016](adr/ADR-0016-lingua-sorgente-e-edizioni.md) scatta di nuovo)_

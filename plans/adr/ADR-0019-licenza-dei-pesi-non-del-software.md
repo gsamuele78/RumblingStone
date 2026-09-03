@@ -2,9 +2,9 @@
 
 **Stato**: accettata
 **Data**: 2026-08-15
-**Decisione-fonte**: domanda del DM del 2026-08-15 — *«c'è un tool per la
+**Decisione-fonte**: domanda del DM del 2026-08-15, *«c'è un tool per la
 generazione di immagini open source di qualità professionale che possa essere
-automatizzato?»* — e la verifica delle licenze che ne è seguita
+automatizzato?»*, e la verifica delle licenze che ne è seguita
 (`plans/RICERCA-TOOL-ESTERNI-DM-2026-08.md` §3-ter).
 
 ## Contesto
@@ -29,7 +29,7 @@ ComfyUI è GPL-3.0 e non pone limiti su ciò che produce. Ma i pesi:
   (use-based) che non toccano il materiale da gioco.
 
 Il rischio concreto: si generano dieci ritratti col modello più bello, si
-impaginano, e **un anno dopo** — quando il DM decide di pubblicare — bisogna
+impaginano, e **un anno dopo**, quando il DM decide di pubblicare, bisogna
 rifare tutto perché nessuno ha annotato con cosa erano stati fatti.
 
 ## Decisione
@@ -44,7 +44,7 @@ rifare tutto perché nessuno ha annotato con cosa erano stati fatti.
 
 La riga da tenere: **se un asset entra in un artefatto versionato, i suoi pesi
 devono permettere l'uso commerciale**, indipendentemente dal fatto che oggi il
-repo non venda niente. La decisione sul commerciale non è presa (ADR-0005) — e
+repo non venda niente. La decisione sul commerciale non è presa (ADR-0005), e
 proprio per questo non va **preclusa** da una scelta tecnica fatta oggi.
 
 ### 2. Ogni immagine generata porta la sua riga di provenienza
@@ -77,7 +77,7 @@ Le due regole che ne discendono, e che valgono da qui in avanti:
    l'unica eccezione consapevole ad ADR-0003 in tutto il repo.
 2. **I termini si rileggono prima di pubblicare, non una volta per sempre.** Al
    2026-08-15 Google non rivendica la proprietà del generato e ne consente l'uso
-   commerciale nel rispetto delle policy — ma è una clausola contrattuale, non una
+   commerciale nel rispetto delle policy, ma è una clausola contrattuale, non una
    licenza perpetua come Apache o OFL, e nessuno garantisce che sia identica fra un
    anno.
 
@@ -107,13 +107,13 @@ segnaposto vettoriali esistenti restano validi come artefatto consegnabile.
   (FLUX.1 [dev]) per una ragione che oggi è ipotetica. **Accettato**: rifare dieci
   immagini costa più che accettare una resa leggermente inferiore adesso.
 - Da rivisitare: **quando esce una licenza nuova**, o se il DM decide
-  definitivamente per l'uso non commerciale — nel qual caso il §1 si allarga.
+  definitivamente per l'uso non commerciale, nel qual caso il §1 si allarga.
 
 ## Copertura
 
-- `skills/rumblingstone-art-direction/SKILL.md` §7 — il ciclo, con la provenienza
+- `skills/rumblingstone-art-direction/SKILL.md` §7: il ciclo, con la provenienza
   come ultimo passo
-- [`docs/guides/GUIDA-IMMAGINI.md`](../../docs/guides/GUIDA-IMMAGINI.md) §1 — la
+- [`docs/guides/GUIDA-IMMAGINI.md`](../../docs/guides/GUIDA-IMMAGINI.md) §1: la
   tabella dei generatori, con la colonna licenza
-- [ADR-0015](ADR-0015-standard-prompt-immagine.md) — cosa si può chiedere
-- [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) — il perimetro IP generale
+- [ADR-0015](ADR-0015-standard-prompt-immagine.md): cosa si può chiedere
+- [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md): il perimetro IP generale

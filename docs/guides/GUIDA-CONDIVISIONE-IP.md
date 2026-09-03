@@ -36,8 +36,8 @@ Serve saperlo, perché cambia cosa puoi fare con *quale* file.
 | 3 | **Tuo** (l'autore) | testi originali, stemmi SVG, renderer, script, tutta l'automazione | l'**unica** parte che una licenza tua può coprire davvero |
 
 Tradotto: anche se domani riscrivessi tutto il Palio da zero, resterebbe il
-blocco WotC. **Non è una questione di quanto lavoro ci metti: è di cosa
-adatta il materiale.**
+blocco WotC. **Conta di cosa adatti il materiale, non quanto lavoro
+ci metti.**
 
 ### 1-bis. Le due licenze del repo, e le tre cose che NON coprono
 
@@ -107,8 +107,8 @@ Dettagli: [GUIDA-BOOKLET-E-PDF](GUIDA-BOOKLET-E-PDF.md) §9 (checklist di conseg
 GPL-3. La posture è **rischio basso ma non nullo**, accettabile finché
 restano vere queste tre condizioni:
 
-- [ ] **uso non commerciale dichiarato** — nessuna monetizzazione, diretta o indiretta;
-- [ ] **note IP interne mantenute** — la sezione *Licensing Information* del
+- [ ] **uso non commerciale dichiarato**: nessuna monetizzazione, diretta o indiretta;
+- [ ] **note IP interne mantenute**: la sezione *Licensing Information* del
       README, ADR-0005 e il rapporto restano nel repo e aggiornati;
 - [ ] **niente rivendicazione di paternità** su ciò che è di terzi (il
       materiale RHoD/FR resta attribuito a chi appartiene).
@@ -136,8 +136,8 @@ forum), aggiungi in calce una nota tipo:
 Non è un «forse»: la verifica ha stabilito che **non può essere confermata**
 la conformità. Due blocchi indipendenti, e basterebbe il primo:
 
-1. **WotC/Forgotten Realms non-SRD** — assorbente su tutto il repo;
-2. **Palio di Siena** — segni tutelati evocati in modo cumulativo.
+1. **WotC/Forgotten Realms non-SRD**: assorbente su tutto il repo;
+2. **Palio di Siena**: segni tutelati evocati in modo cumulativo.
 
 Perché sia anche solo discutibile servirebbero **entrambe** queste cose:
 

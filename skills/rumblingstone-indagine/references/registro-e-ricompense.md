@@ -64,7 +64,7 @@ imparata sul campo.
 2. **Vale il massimale SRD** (grado max = livello + 3 per abilità di classe).
    Un grado che sfonderebbe il massimale non si assegna: le perizie restano
    in banca fino al livello dopo.
-3. **Le abilità solo per addestrati si aprono così** — Sapienza, Decifrare
+3. **Le abilità solo per addestrati si aprono così**: Sapienza, Decifrare
    Scritture, Disattivare Congegni, Artigianato Magico. È il caso d'uso
    migliore del sistema: il primo grado è quello che *permette di provarci*,
    e apre una porta che prima era murata.

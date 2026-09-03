@@ -61,12 +61,12 @@ are **generated artifacts — never hand-edit them**. CI
 
 Tutte usano lo stesso formato MASTER (griglia emoji); cambia la *sorgente*:
 
-1. **Tattica standard** — griglia scritta a mano o dungeon importato
+1. **Tattica standard**: griglia scritta a mano o dungeon importato
    (`import_watabou.py`) → `render_map_svg.py`.
-2. **Cinematografica / scenica** — l'LLM fa il *prompt engineer*; immagine
+2. **Cinematografica / scenica**: l'LLM fa il *prompt engineer*; immagine
    d'atmosfera con ComfyUI locale (`scripts/comfyui-local/`,
    `references/hero-map-comfyui.md`), banca prompt in `campaign/ai-media-prompts/`.
-3. **Tattica con strutture ed eserciti** — l'LLM emette **solo JSON rigido**
+3. **Tattica con strutture ed eserciti**: l'LLM emette **solo JSON rigido**
    (`scripts/schemas/tactical_map.schema.json`), `compile_map_json.py` valida e
    dipinge la griglia. Un LLM non disegna MAI arte ASCII di mappe.
 

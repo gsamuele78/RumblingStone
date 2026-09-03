@@ -13,7 +13,7 @@ GPL-3.0 su un'opera testuale»*
 
 Il repo aveva **un solo `LICENSE`, GPL-3.0**. È una licenza scritta per il
 software, applicata a un repo che per tre quarti è prosa: avventure, canone,
-guide, ADR, skill. Ne seguivano due difetti opposti.
+guide, ADR, skill. Ne seguivano difetti opposti.
 
 **Sul testo, la GPL non dice la cosa che il repo dichiara da sempre.** ADR-0005
 stabilisce che il materiale è a **uso non commerciale**; la GPL, al contrario,

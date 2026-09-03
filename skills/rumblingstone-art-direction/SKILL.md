@@ -133,7 +133,7 @@ Le immagini che funzionano in un modulo fanno **una** di queste cose:
 
 - **dicono un tono** che la prosa impiegherebbe un paragrafo a costruire;
 - **rendono riconoscibile** una persona o un luogo che tornerà;
-- **mostrano una relazione** — chi sta davanti a chi, chi guarda chi;
+- **mostrano una relazione**: chi sta davanti a chi, chi guarda chi;
 - **danno al DM un appiglio da descrivere** invece di leggere.
 
 Quello che **non** devono fare: illustrare un momento che i giocatori devono
@@ -152,7 +152,7 @@ rigenera** quando anche solo una di queste è vera:
 3. il personaggio **non è riconoscibile** rispetto alla sua scheda-personaggio;
 4. c'è **testo** dentro l'immagine (scritte, insegne, rune inventate): in un
    libro stampato è la cosa che tradisce prima la generazione automatica;
-5. **la simmetria è troppo perfetta** — è la firma tipica del modello, non una
+5. **la simmetria è troppo perfetta**: è la firma tipica del modello, non una
    scelta di composizione;
 6. l'immagine è **corretta e non dice niente** (§5).
 

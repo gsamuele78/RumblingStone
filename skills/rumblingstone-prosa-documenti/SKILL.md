@@ -20,18 +20,29 @@ description: >
 I documenti di questo repo si riconoscono come generati a macchina, e si
 riconoscono da poche abitudini che si ripetono. Non dai contenuti.
 
-Misurato sui 177 documenti in `docs/`, `plans/`, `skills/` e nella radice
-(32.566 righe, contando la sola prosa: fuori tabelle, codice, titoli e
-citazioni):
+Misurato sui documenti in `docs/`, `plans/`, `skills/` e nella radice,
+contando la sola prosa (fuori tabelle, codice, titoli e citazioni), prima e dopo
+la ripulitura del 2026-09-03:
 
-| Tic | Quante volte | Densità |
-|---|---:|---|
-| Trattino lungo | 2.080 | 92 ogni 1.000 righe di prosa |
-| Numero annunciato prima dell'elenco | 138 | — |
-| Antitesi «non X: è Y» | 58 | — |
+| Tic | Prima | Dopo |
+|---|---:|---:|
+| Trattino lungo | 2.005 | 1.145 |
+| Numero annunciato prima dell'elenco | 83 | 68 |
+| Antitesi «non X: è Y» | 74 | 67 |
 
-Il trattino è il primo tell. La mediana dei documenti sta a 82 ogni mille righe;
-`AGENTS.md` è a 315 e `plans/INDEX.md` a 831.
+Il trattino è il primo tell, ed è quello su cui la ripulitura ha lavorato: la
+mediana dei 157 documenti passa da **109 a 73** trattini ogni mille righe di
+prosa, la densità globale da 126 a 72. `AGENTS.md` era a 315 e `plans/INDEX.md`
+a 831; oggi sono a 0 e 25, e i due trattoni rimasti in `INDEX.md` sono dentro i
+marcatori `[PROPOSTA — needs DM confirmation]` e `[ACCEPTED — DM-canon]`, che
+sono notazione e non prosa.
+
+Gli altri due tic scendono poco, e il motivo va detto: la maggior parte delle
+occorrenze rimaste sono **numeri misurati** («cinque difetti chiusi», «erano
+quattro problemi diversi») o **nomi di insiemi definiti** («le sei porte», «le
+tre domande della scheda»), che questa norma dice di tenere. I documenti si sono ripuliti a mano, frase per frase: una
+sostituzione in blocco del trattone produce punteggiatura sbagliata, perché il
+segno giusto dipende dalla frase.
 
 Si misura con:
 

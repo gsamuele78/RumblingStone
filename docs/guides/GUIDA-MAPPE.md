@@ -249,9 +249,9 @@ python3 scripts/export_uvtt.py "<arco>/<MASTER>.md" --ext dd2vtt --ppg 140
 
 `validate_maps.py` (in CI a ogni PR) verifica tre cose:
 
-1. **ben formati** — ogni SVG in `rendered/` è XML valido;
-2. **provenienza** — ogni SVG ha il suo master `.md` accanto (niente orfani);
-3. **in sync** — ri-renderizzando il master si riottengono **gli stessi byte**.
+1. **ben formati**: ogni SVG in `rendered/` è XML valido;
+2. **provenienza**: ogni SVG ha il suo master `.md` accanto (niente orfani);
+3. **in sync**: ri-renderizzando il master si riottengono **gli stessi byte**.
 
 Se hai modificato la griglia e non hai rigenerato, o hai toccato l'SVG a
 mano, la CI diventa rossa. Rimedio: `dm.py maps render <master>` + commit.

@@ -18,7 +18,7 @@ tema Typst non stampava nemmeno una data. Conseguenze concrete, non teoriche:
 1. **Due PDF dello stesso capitolo, stampati a un mese di distanza, erano
    indistinguibili sul tavolo.** Qualcuno stampa la versione vecchia e nessuno se
    ne accorge finché non gioca.
-2. **La riga che dice su cosa il materiale si basa** — SRD 3.5, OGL 1.0a,
+2. **La riga che dice su cosa il materiale si basa**: SRD 3.5, OGL 1.0a,
    l'avventura originale — viveva solo nelle guide (ADR-0005,
    `GUIDA-CONDIVISIONE-IP.md`), cioè in file che chi riceve il PDF non ha.
 3. Il regime d'uso («materiale del DM, non diffondere») era una frase da

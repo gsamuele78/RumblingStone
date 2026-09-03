@@ -60,7 +60,7 @@ un capriccio, è la cura del difetto specifico del dominante.**
    diversa.
 4. **Una famiglia di caso non si ripete a meno di due archi di distanza.**
    Due impostori vicini e il terzo lo indovinano dal titolo.
-5. **Un arco senza indagine è legittimo** — ma allora il contrappunto deve
+5. **Un arco senza indagine è legittimo**: ma allora il contrappunto deve
    essere forte, e dichiarato.
 6. **Ogni arco ha almeno una sessione che non gioca come le altre.** È il
    quarto d'arco del contrappunto: se non riesci a indicarla col dito, non
@@ -184,7 +184,7 @@ reggere entrambe le versioni: quella pulita e quella con il caso.
    tavolo si aspetta; lo speciale arriva quando si sono rilassati.
 4. **Un gettone resta in mano fino ai 2/3 dell'arco.** Non si assegna
    all'inizio: si tiene, e si spende dove il tavolo sta meno in guardia.
-5. **La regola dello scarto** — la più importante. Se il tavolo **ha già
+5. **La regola dello scarto**: la più importante. Se il tavolo **ha già
    capito** che quel modulo è un caso (*«eh, qui c'è sotto qualcosa»*
    prima di cominciare), **lì non si spende niente**: si gioca pulito e il
    gettone si sposta. La loro aspettativa è il segnale, e disattenderla vale

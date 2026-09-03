@@ -7,10 +7,10 @@ risolto, e che il pilastro 9 nomina come sua **ancora letteraria**:
 
 1. **come si scrive l'oggetto** che porta il nodo — il documento, e quello che
    vi manca;
-2. **cosa si fa quando il tavolo deduce male** — e la risposta non è
+2. **cosa si fa quando il tavolo deduce male**: e la risposta non è
    correggerlo.
 
-Più due cose che tengono onesto il resto: il **regolamento** come motore
+Più quello che tiene onesto il resto: il **regolamento** come motore
 politico, e il dettaglio d'epoca che **è** il congegno invece di decorarlo.
 
 > ⚠️ **Eco entra come metodo, non come atmosfera.** Non serve un'abbazia, non
@@ -34,12 +34,12 @@ politico, e il dettaglio d'epoca che **è** il congegno invece di decorarlo.
 ## 2. Operazione 1 — il documento è l'indizio, e conta ciò che manca
 
 Un documento non è un pezzo di colore: è un **testo scritto da qualcuno, per
-qualcuno, con un motivo**. Tre domande prima di scriverne uno:
+qualcuno, con un motivo**. Da chiedersi prima di scriverne uno:
 
-1. **Chi lo ha scritto** — e con quanta fretta, con quanta istruzione;
-2. **Per chi** — un registro parla al padrone, una lettera all'amante, una
+1. **Chi lo ha scritto**: e con quanta fretta, con quanta istruzione;
+2. **Per chi**: un registro parla al padrone, una lettera all'amante, una
    ricevuta a nessuno (ed è per questo che le ricevute non mentono);
-3. **Cosa ha taciuto** — ed è qui che sta l'indizio.
+3. **Cosa ha taciuto**: ed è qui che sta l'indizio.
 
 > **La riga da ricordare**: in un documento la prova non è quasi mai quello che
 > c'è scritto. È **il buco**: la firma che manca, la riga che è stata cancellata
@@ -67,7 +67,7 @@ Vincoli pratici, che valgono più di qualunque teoria:
 - **una sola bugia per documento.** Due e nessuno le trova entrambe;
 - **il documento non spiega sé stesso.** Nessuna riga del tipo *«e questo prova
   che…»*: quella riga è del giocatore, non dell'autore;
-- **la resa materiale è metà dell'indizio** — carta, mano, macchia, timbro. La
+- **la resa materiale è metà dell'indizio**: carta, mano, macchia, timbro. La
   regia dell'oggetto sta in [ADR-0014](../../../plans/adr/ADR-0014-regia-sensoriale-obbligatoria.md)
   e i template in `campaign/templates/homebrew/`.
 

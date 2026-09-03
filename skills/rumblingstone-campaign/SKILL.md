@@ -19,8 +19,8 @@ mechanics load `dnd-35-srd`. For Forgotten Realms canon load
 
 **Critical loading order for any campaign question:**
 
-1. `references/campaign-coherence.md` — what must stay consistent
-2. `../../campaign/state.md` — current world state (changes per session)
+1. `references/campaign-coherence.md`: what must stay consistent
+2. `../../campaign/state.md`: current world state (changes per session)
 3. The specific reference for the domain
 
 If `state.md` and a reference disagree, **state.md wins** (it is the most

@@ -33,7 +33,7 @@
    arco): il task **A0 del piano ARC-08** lo corregge; eseguirlo per primo
    se non è già fatto. Ogni modifica di canone va **appesa al changelog**
    di state.md, mai riscritta nella storia.
-2. **Sistema D&D 3.5 SRD only** — niente 5e (no azioni bonus, no
+2. **Sistema D&D 3.5 SRD only**: niente 5e (no azioni bonus, no
    vantaggio/svantaggio meccanici), niente lore FR post-1385 DR.
    Ambientazione Faerûn 1372 DR, più il viaggio temporale a **1.000 anni
    prima (≈372 DR)** (D7).

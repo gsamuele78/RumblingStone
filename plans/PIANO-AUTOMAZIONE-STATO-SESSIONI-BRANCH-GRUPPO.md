@@ -428,14 +428,14 @@ l'undo è sempre `git revert`; la prosa è strutturalmente intoccabile;
 
 ## §8 — Domande aperte per il DM — ✅ RISPOSTE (DM, 2026-07-20)
 
-1. **Nome branch** — ✅ **confermato**: `campaign-group-rumblingstone-dm-gianfranco`.
+1. **Nome branch**, ✅ **confermato**: `campaign-group-rumblingstone-dm-gianfranco`.
 2. **Migrazione marker** `<!-- auto:... -->` in `state.md` — ✅ **approvata**.
-3. **Lotto E-bis LLM** — ✅ **fuori dalla v1** (come da raccomandazione;
+3. **Lotto E-bis LLM**: ✅ **fuori dalla v1** (come da raccomandazione;
    resta nel piano come lotto opzionale futuro, spento di default).
-4. **Recap per-PG in veste Homebrewery** — ✅ **sì** (richiesta esplicita
+4. **Recap per-PG in veste Homebrewery**: ✅ **sì** (richiesta esplicita
    DM 2026-07-20: adattare la pipeline usata per la sessione di esempio e
    per il Palio di Channathgate → vedi §3-bis; recepito nei lotti D4/E1).
-5. **Lingua wizard** — italiano (assunto confermato tacitamente).
+5. **Lingua wizard**: italiano (assunto confermato tacitamente).
 
 ---
 

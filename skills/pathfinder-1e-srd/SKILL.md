@@ -14,10 +14,10 @@ description: >
 Pathfinder 1e is a direct evolution of the d20 3.5 system (OGL). ~90% of its
 math is drop-in compatible with 3.5. In this repo PF1e serves two purposes:
 
-1. **Boost toolkit** — simple templates and benchmark tables to strengthen
+1. **Boost toolkit**: simple templates and benchmark tables to strengthen
    NPCs/villains/monsters at the table in minutes (see also the
    `npc-villain-boosting` skill, which is the decision layer on top of this).
-2. **Rules reference** — when PF1e material (adventure paths, bestiaries,
+2. **Rules reference**: when PF1e material (adventure paths, bestiaries,
    NPC Codex) is imported into the 3.5 campaign.
 
 **Sources:** https://aonprd.com (official PRD archive) • https://www.d20pfsrd.com
