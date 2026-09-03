@@ -22,8 +22,18 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from dmcore import tabelle  # noqa: E402
 
-SKILL_35 = ROOT / ".claude/skills/dnd-35-srd/references/classes.md"
-SKILL_PF = ROOT / ".claude/skills/pathfinder-1e-srd/references/monster-advancement.md"
+# ⚠️ `skills/`, non `.claude/skills/`. La seconda è un **mirror generato e
+# ignorato da git** (`dm.py skills build`): esiste sulla macchina di chi lavora e
+# NON nel checkout della CI, dove questo test è morto con FileNotFoundError.
+# Peggio: tre modifiche a quei file — le righe d'ancora del chierico e due
+# sezioni di skill — erano state scritte nel mirror, e non sarebbero mai entrate
+# nel repo. Il file di verità sta in `skills/`.
+#: Il percorso proibito, composto invece che scritto: altrimenti l'unica cosa
+#: che il controllo troverebbe sarebbe la propria parola d'ordine.
+MIRROR = ".claude/" + "skills"
+
+SKILL_35 = ROOT / "skills/dnd-35-srd/references/classes.md"
+SKILL_PF = ROOT / "skills/pathfinder-1e-srd/references/monster-advancement.md"
 
 
 def _righe_markdown(testo: str, dopo: str) -> list[list[str]]:
@@ -151,6 +161,64 @@ class AncorePerGS(unittest.TestCase):
                 with self.subTest(gs=gs, campo=campo):
                     self.assertGreaterEqual(tabelle.riga_gs(gs)[0][campo],
                                             tabelle.riga_gs(gs - 1)[0][campo])
+
+
+class IlMirrorNonEUnaFonte(unittest.TestCase):
+    """Nessun codice committato deve leggere da `.claude/skills/`.
+
+    Il difetto che questo previene e' costato una CI rossa e — molto peggio —
+    **tre modifiche perdute**. `.claude/skills/` e' un mirror rigenerato da
+    `dm.py skills build` e ignorato da git: esiste sulla macchina di chi lavora
+    e non nel checkout della CI. Scriverci dentro sembra funzionare (i test
+    passano in locale, l'agente rilegge quello che ha scritto) e non lascia
+    traccia nel repo. E' un fallimento silenzioso in tutte e due le direzioni:
+    chi legge trova un file che in CI non c'e', chi scrive perde il lavoro.
+
+    La fonte e' `skills/`. Sempre.
+    """
+
+    def test_nessuno_script_legge_dal_mirror(self):
+        # Con `ast`, non con una ricerca di testo: la prima versione di questo
+        # controllo segnalava il proprio commento e la propria riga di ricerca.
+        # Un guardiano che accusa sé stesso è un guardiano che verrà spento.
+        # Quello che conta è una **stringa usata come percorso**, non la parola
+        # in una spiegazione.
+        import ast
+        radice = Path(__file__).resolve().parents[2]
+        colpevoli = []
+        for f in (radice / "scripts").rglob("*.py"):
+            albero = ast.parse(f.read_text(encoding="utf-8"), filename=str(f))
+            docstring = set()
+            for n in ast.walk(albero):
+                if not isinstance(n, (ast.Module, ast.ClassDef, ast.FunctionDef,
+                                      ast.AsyncFunctionDef)) or not n.body:
+                    continue
+                primo = n.body[0]
+                if (isinstance(primo, ast.Expr)
+                        and isinstance(primo.value, ast.Constant)
+                        and isinstance(primo.value.value, str)):
+                    docstring.add(id(primo.value))
+            for nodo in ast.walk(albero):
+                if (isinstance(nodo, ast.Constant) and isinstance(nodo.value, str)
+                        and MIRROR in nodo.value
+                        and id(nodo) not in docstring):
+                    colpevoli.append(f"{f.relative_to(radice)}:{nodo.lineno}")
+        self.assertEqual(colpevoli, [],
+                         "questi leggono dal mirror invece che da skills/: "
+                         + ", ".join(colpevoli))
+
+    def test_le_ancore_che_uso_stanno_nel_repo(self):
+        """Se un'ancora sparisce dal repo, il test deve dirlo qui e non in CI."""
+        import subprocess
+        radice = Path(__file__).resolve().parents[2]
+        for f in (SKILL_35, SKILL_PF):
+            with self.subTest(file=f.name):
+                self.assertTrue(f.exists(), f)
+                tracciato = subprocess.run(
+                    ["git", "ls-files", "--error-unmatch", str(f.relative_to(radice))],
+                    cwd=radice, capture_output=True)
+                self.assertEqual(tracciato.returncode, 0,
+                                 f"{f} non e' tracciato da git: in CI non ci sara'")
 
 
 class Provenienza(unittest.TestCase):
