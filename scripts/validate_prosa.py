@@ -32,9 +32,49 @@ I tic si contano **solo nella prosa rivolta ai giocatori** (read-aloud, handout,
 echi): in una tabella di CD o in una nota di regia le maiuscole e i trattini
 sono legittimi, e contarli lì sarebbe rumore.
 
+## I documenti del repo sono un caso diverso, e peggiore
+
+`--documenti` misura guide, ADR, piani e skill invece del contenuto di gioco. È
+un bersaglio diverso perché i tic sono diversi: in una guida non ci sono
+read-aloud, e l'antitesi non è il problema principale. Il problema è il
+**trattino lungo** e il **conteggio annunciato**.
+
+Misurato sui 177 documenti del repo (32.566 righe), contando la sola prosa —
+fuori tabelle, blocchi di codice, titoli e citazioni:
+
+    trattino lungo          2.080 occorrenze · 92 ogni 1.000 righe di prosa
+    conteggio annunciato      138 («tre cose», «per due ragioni»)
+    antitesi «non X: è Y»      58
+
+⚠️ **Le soglie sono tarate sulla distribuzione reale, non a occhio**: la mediana
+dei documenti sta a 82 trattini ogni 1.000 righe, il quartile alto a 118. La
+soglia a 150 segnala gli otto file peggiori invece di tingere tutto di rosso —
+un rilievo che compare ovunque è un rilievo che nessuno legge.
+
+## Cosa NON si misura, e perché
+
+Provate e scartate, perché il rumore le rendeva inutili:
+
+- **nomi ornati** (arazzo, panorama, ecosistema): 64 occorrenze, **64 falsi
+  positivi**. `sinergia` è un termine di regole 3.5, `panorama` sta dentro il
+  nome di un PNG, `ecosistema` è ecologia letterale in una prova di Natura.
+- **rotazione dei sinonimi**: colpisce le descrizioni delle mappe (`stanza` e
+  `camera` nella stessa griglia) e un'iscrizione runica.
+- **gerundio d'analisi**: 135 occorrenze, e sono gerundi italiani normali —
+  «irradiando un'aura», «innescando la Sfida». Il tic vero («sottolineando la
+  sua importanza») nel repo compare **una volta**.
+- **anafora**: 291 finestre, e i campioni sono un file di tattiche in inglese e
+  un'etichetta `**Costo**` ripetuta in un elenco.
+- **intestazioni con parola interrogativa**: è un tell dell'inglese. In italiano
+  «Come si usa» è il titolo giusto per una sezione che spiega come si usa.
+
+Restano prescrizioni nella skill `rumblingstone-prosa-documenti`, dove un occhio
+umano decide. Un gate che grida al lupo viene spento, e con lui i controlli buoni.
+
 Uso:
     python3 scripts/validate_prosa.py                 # tutto il contenuto
     python3 scripts/validate_prosa.py FILE…           # solo questi
+    python3 scripts/validate_prosa.py --documenti     # guide, ADR, piani, skill
     python3 scripts/validate_prosa.py --strict        # i rilievi diventano errori
 """
 from __future__ import annotations
@@ -98,6 +138,22 @@ SIGLE = {
     "IV", "VI", "VII", "VIII", "IX", "XI", "XII", "XIII", "XIV", "XV", "XX",
 }
 SOGLIE = {"antitesi": 1, "maiuscole": 1}
+
+# ── i documenti del repo ────────────────────────────────────────────────────
+DOCUMENTI = ("docs/", "plans/", "skills/")
+DOC_RADICE = ("README.md", "AGENTS.md", "CLAUDE.md", "LICENSES.md")
+
+#: Il conteggio annunciato: «tre cose», «per due ragioni». Dire il numero prima
+#: di elencare è il tic più frequente dei documenti di questo repo dopo il
+#: trattino, e l'elenco che segue rende il numero superfluo.
+CONTEGGIO = re.compile(
+    r"\b(due|tre|quattro|cinque|sei|sette)\s+"
+    r"(cose|ragioni|motivi|punti|modi|problemi|difetti|domande|vincoli|scelte)\b", re.I)
+
+#: Soglie per documento. Tarate sulla distribuzione misurata (mediana 82
+#: trattini/1000 righe, quartile alto 118): 150 segnala gli otto file peggiori.
+SOGLIE_DOC = {"trattino_per_mille": 150, "trattino_minimo": 10,
+              "conteggio": 2, "antitesi": 2}
 
 GLOSSARIO = ROOT / "campaign" / "GLOSSARIO-E-LOCALIZZAZIONE.md"
 
@@ -308,6 +364,73 @@ def prosa_e_readaloud(testo: str) -> tuple[list[tuple[int, str]], str]:
     return righe, "\n".join(READ_ALOUD.findall(testo))
 
 
+def prosa_documento(testo: str) -> list[str]:
+    """Le righe di un documento che sono davvero prosa.
+
+    Fuori: blocchi di codice, tabelle, titoli, citazioni e separatori. In una
+    tabella il trattino lungo vuol dire «niente» ed è la notazione giusta;
+    contarlo lì faceva risultare il CHANGELOG il file peggiore del repo con
+    2.819 trattini ogni mille righe, che era un artefatto della misura.
+    """
+    fuori, dentro_codice = [], False
+    for riga in testo.splitlines():
+        if riga.lstrip().startswith("```"):
+            dentro_codice = not dentro_codice
+            continue
+        if dentro_codice:
+            continue
+        nudo = riga.strip()
+        if not nudo or nudo[0] in "|#>" or re.fullmatch(r"[-:| ]+", nudo):
+            continue
+        fuori.append(riga)
+    return fuori
+
+
+def controlla_documento(f: Path) -> list[str]:
+    """I tic di una guida, di un ADR, di un piano o di una skill.
+
+    Bersaglio diverso dal contenuto di gioco, quindi tic diversi: qui non ci
+    sono read-aloud, e quello che tradisce la macchina è il trattino lungo usato
+    come respiro e il numero annunciato prima dell'elenco.
+    """
+    testo = f.read_text(encoding="utf-8", errors="ignore")
+    rel = f.relative_to(ROOT) if ROOT in f.parents else f
+    righe = prosa_documento(testo)
+    if len(righe) < 40:          # sotto quaranta righe la densità non dice niente
+        return []
+    prosa = "\n".join(righe)
+    fuori: list[str] = []
+
+    trattini = len(TRATTINO.findall(prosa))
+    per_mille = trattini * 1000 // len(righe)
+    if trattini >= SOGLIE_DOC["trattino_minimo"] and per_mille > SOGLIE_DOC["trattino_per_mille"]:
+        fuori.append(
+            f"{rel}: {trattini} trattini lunghi in {len(righe)} righe di prosa "
+            f"({per_mille}/1000, mediana del repo 82): in italiano il trattone "
+            "non è un respiro — punto e virgola, due punti, o niente")
+
+    n_cont = len(CONTEGGIO.findall(prosa))
+    if n_cont > SOGLIE_DOC["conteggio"]:
+        esempi = ", ".join(f"«{a} {b}»" for a, b in CONTEGGIO.findall(prosa)[:3])
+        fuori.append(
+            f"{rel}: il numero annunciato prima dell'elenco compare {n_cont} volte "
+            f"({esempi}): l'elenco che segue rende il conteggio superfluo")
+
+    n_ant = len(ANTITESI.findall(prosa))
+    if n_ant > SOGLIE_DOC["antitesi"]:
+        fuori.append(
+            f"{rel}: l'antitesi «non X: è Y» compare {n_ant} volte "
+            f"(massimo {SOGLIE_DOC['antitesi']} per documento)")
+    return fuori
+
+
+def documenti() -> list[Path]:
+    fuori = [p for p in ROOT.rglob("*.md")
+             if any(str(p.relative_to(ROOT)).startswith(d) for d in DOCUMENTI)]
+    fuori += [ROOT / n for n in DOC_RADICE if (ROOT / n).is_file()]
+    return sorted(set(fuori))
+
+
 def controlla(f: Path) -> list[str]:
     testo = f.read_text(encoding="utf-8", errors="ignore")
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
@@ -371,25 +494,35 @@ def main(argv=None) -> int:
     ap.add_argument("files", nargs="*")
     ap.add_argument("--strict", action="store_true",
                     help="i rilievi diventano errori (exit 1)")
+    ap.add_argument("--documenti", action="store_true",
+                    help="misura guide, ADR, piani e skill invece del contenuto")
     args = ap.parse_args(argv)
 
-    bersagli = [Path(f).resolve() for f in args.files] if args.files else file_di_contenuto()
+    if args.documenti:
+        bersagli = [Path(f).resolve() for f in args.files] if args.files else documenti()
+        esamina = controlla_documento
+    else:
+        bersagli = [Path(f).resolve() for f in args.files] if args.files else file_di_contenuto()
+        esamina = controlla
     rilievi: list[str] = []
     for f in bersagli:
         if f.is_file():
-            rilievi += controlla(f)
+            rilievi += esamina(f)
 
+    che = "documenti" if args.documenti else "file"
     if not rilievi:
-        print(f"✓ validate_prosa: {len(bersagli)} file — nessun calco, nessun tic oltre soglia")
+        print(f"✓ validate_prosa: {len(bersagli)} {che} — nessun tic oltre soglia")
         return 0
     testa = "✗" if args.strict else "  ⚠"
-    print(f"{testa} validate_prosa: {len(rilievi)} rilievi in {len(bersagli)} file")
+    print(f"{testa} validate_prosa: {len(rilievi)} rilievi in {len(bersagli)} {che}")
     for r in rilievi[:60]:
         print(f"  - {r}")
     if len(rilievi) > 60:
         print(f"  … e altri {len(rilievi) - 60}")
     if not args.strict:
-        print("  (non bloccante: la norma è `italiano-nativo.md`, questo la misura)")
+        norma = ("`rumblingstone-prosa-documenti`" if args.documenti
+                 else "`italiano-nativo.md`")
+        print(f"  (non bloccante: la norma è {norma}, questo la misura)")
     return 1 if args.strict else 0
 
 

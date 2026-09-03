@@ -185,3 +185,16 @@ Run the coherence self-check (`campaign-coherence.md` §6) first, then:
    `rumblingstone-indagine/references/documento-ed-errore-fecondo.md` §4-5.)
 7. Did any box grow past the read-aloud ceiling because the prose got
    interesting? (If yes → cut; the ceiling wins.)
+
+---
+
+## Il confine con i documenti del repo
+
+Questa skill governa la prosa **di gioco**: read-aloud, handout, dialoghi, echi,
+teaser, iscrizioni. Guide, ADR, piani, skill, README e corpi delle PR seguono
+`rumblingstone-prosa-documenti`, e alcune sue regole qui sarebbero **sbagliate**:
+là il numero annunciato prima dell'elenco è un tic, qui «tre porte, tre serrature»
+è ritmo; là la frase breve isolata è un tell, qui è il colpo che chiude un box.
+
+Quello che vale su tutti e due i lati è §9 di `italiano-nativo.md`: l'antitesi
+«non X: è Y» e il trattino lungo come respiro suonano generati ovunque.

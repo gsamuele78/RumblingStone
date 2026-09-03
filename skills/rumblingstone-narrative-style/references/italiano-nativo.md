@@ -229,6 +229,23 @@ Come uscirne, quando il concetto serve ancora:
 | **Emozione etichettata** | «senti una vertigine di paura» | comportamento: *«ti accorgi che stai contando i passi»* |
 | **Sensi in ordine di lista** | vista, poi suono, poi odore, sempre in quell'ordine | parti dall'**odore** o dalla **temperatura**. O usane **uno solo** |
 
+### 9.2-bis Quattro tic che una macchina non trova (e tu sì)
+
+I sette della tabella qui sopra si contano: `validate_prosa.py` lo fa. Questi
+quattro **sono stati cercati e la ricerca automatica non li distingue dal
+linguaggio normale** — il che non li rende meno veri, li rende **tuoi**. Sono
+l'unica parte di §9 che dipende da un occhio.
+
+| Tic | Come suona | Perché la macchina non lo vede | Antidoto |
+|---|---|---|---|
+| **Rotazione dei sinonimi** | *la spada… la lama… l'arma… l'acciaio*, tutto nello stesso paragrafo | cercandolo si trovano le descrizioni delle mappe, dove `stanza` e `camera` sono due posti diversi | scegli **un** sostantivo e ripetilo. La ripetizione non è un difetto in italiano: l'alternanza forzata sì |
+| **Autocitazione** | riprendi una tua immagine di due pagine prima come se fosse un richiamo | 2.149 candidati nel repo, e sono termini di dominio ripetuti (`illithid`, `oscurità`) | se l'immagine torna, deve tornare **cambiata**. Altrimenti è vocabolario stretto sotto pressione, non un motivo |
+| **Anafora ravvicinata** | tre frasi di fila che aprono con la stessa parola | 291 finestre trovate, e i campioni erano un file di tattiche in inglese e un'etichetta `**Costo**` in un elenco | rileggi **le prime due parole** di ogni frase del paragrafo, in colonna |
+| **Gerundio d'analisi** | *«sottolineando il suo legame con la forgia»* appiccicato in coda per dare significato | 135 gerundi nel repo e sono italiano normale (*«irradiando un'aura»*, *«innescando la Sfida»*); il tic vero compare **una volta** | taglia la coda. Se il legame conta, è una frase sua |
+
+⚠️ Il gerundio d'analisi è **due problemi in uno**: è un tic dell'IA e insieme un
+calco (§1), perché l'inglese ci mette l'`-ing` con naturalezza e l'italiano no.
+
 ### 9.3 Il paradosso della ricetta
 
 ⚠️ **Anche il §4 di questo file (periodo lungo + frase corta che stampa) è una

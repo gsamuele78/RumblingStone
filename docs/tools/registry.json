@@ -4074,7 +4074,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_prosa.py",
-      "summary": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "summary": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -4096,6 +4096,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "I rilievi diventano errori (exit 1)."
+        },
+        {
+          "name": "--documenti",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura i tic dei DOCUMENTI del repo (guide, ADR, piani, skill, README) invece del contenuto di gioco: densita' del trattino lungo, numero annunciato prima dell'elenco, antitesi. Soglie tarate sulla distribuzione reale (mediana 82 trattini/1000 righe di prosa). Non bloccante. La norma e' la skill rumblingstone-prosa-documenti; questo la misura."
         }
       ],
       "inputs": [
