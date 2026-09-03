@@ -1,6 +1,7 @@
 # PIANO — La qualità del codice, misurata prima e dopo
 
-> **Stato**: ⬜ **proposto**, non iniziato · **Aperto**: 2026-09-03
+> **Stato**: 🟡 **in corso** — **lotto B chiuso** (2026-09-03), il resto proposto
+> **Aperto**: 2026-09-03
 > **Nasce da**: domanda del DM — *«per ogni script si dovrebbe guardare: c'è una
 > libreria o un tool open source che risolve il problema? posso usare oggetti già
 > sviluppati negli altri script? sto ricreando la ruota? ci sono test che
@@ -151,7 +152,7 @@ i nove record divergenti tornano coerenti; un test con `Città`, `Lómyn`,
 ⚠️ Rigenera il catalogo → alcuni id cambiano: **va fatto in un commit suo**,
 perché i riferimenti esistenti vanno visti.
 
-### ⬜ Lotto B — I quattro cancelli che nessuno ha mai visto bocciare
+### ✅ Lotto B — I quattro cancelli che nessuno ha mai visto bocciare
 Un test per `validate_bestiario`, `validate_maps`, `validate_modules`,
 `build_monster_catalog` che gli dia in pasto un file **deliberatamente rotto** e
 verifichi che escano **non-zero**. **Accettazione**: 4 gate su 4 con un test
