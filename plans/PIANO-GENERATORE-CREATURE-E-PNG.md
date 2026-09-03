@@ -246,3 +246,106 @@ comparivano in **zero** guide e **zero** skill.
 - skill `npc-villain-boosting`: una sezione **prima** dell'albero decisionale —
   potenziare presuppone qualcosa da potenziare;
 - skill `rumblingstone-automation`: le due opzioni di `suggest_encounter`.
+
+---
+
+## §7 · PROPOSTA — gli incantatori per lista di classe e funzione
+
+> ⚠️ **Proposta, non ancora approvata.** Nasce da una domanda del DM
+> (*«anche per gli incantatori ci sono arcano e divino e ibridi, e i ruoli
+> controllore blaster supporto utilità»*) e da un **difetto vero** trovato mentre
+> le rispondevo: due druidi generati avevano incantesimi che un druido non lancia.
+
+### §7.1 · Perché la tradizione non basta
+
+Il primo istinto — separare **arcano** e **divino** — è quello sbagliato, e vale
+la pena dire perché prima di scrivere una riga di codice.
+
+Il generatore sceglieva per **ruolo**: «controllore» → lista arcana, «comandante»
+→ lista divina. Risultato sulle schede vere:
+
+| Scheda | Classe | Cosa ha ricevuto | Perché è sbagliato |
+|---|---|---|---|
+| arci-druido GS 14 | druido | *armatura magica*, *sonno*, *dito della morte* | sono da **mago** |
+| druido-orso GS 12 | druido | *benedizione*, *santuario*, *scudo della fede* | sono da **chierico** |
+
+Il secondo caso è quello istruttivo: la lista era **divina**, e ancora sbagliata.
+Chierico e druido sono tutti e due divini e hanno **liste diverse**. Il bardo è
+«ibrido» e ha una lista sua che non coincide con nessuna delle due.
+
+**Quindi la chiave è la lista di CLASSE**, e la tradizione serve solo a
+raggrupparle per chi legge.
+
+### §7.2 · Le quattro funzioni
+
+Le parole sono quelle del DM; la colonna «cosa fa al tavolo» è quello che
+decide se una funzione serve davvero.
+
+| Funzione | Cosa fa al tavolo | Come si riconosce |
+|---|---|---|
+| **controllore** | toglie ai PG le opzioni: terreno, movimento, azioni | vince i round che non combatte |
+| **blaster** | danno, spesso d'area (oggi il ruolo si chiama «artigliere») | il round in cui apre si vede |
+| **supporto** | tiene in piedi i suoi: cure, potenziamenti, rimozione | il suo valore è nei pf che *non* perdono gli altri |
+| **utilità** | informazione, mobilità, contromagia, difese | è quello che rende difficile arrivargli |
+
+⚠️ **«artigliere» o «blaster»?** Oggi il codice dice `artigliere`. Rinominarlo in
+`blaster` è una riga, ma cambia l'interfaccia (`--ruolo blaster`) e va deciso una
+volta sola. **Domanda al DM.**
+
+### §7.3 · La matrice: quali celle valgono la scrittura
+
+Sei liste di classe × quattro funzioni = 24 caselle, ma non tutte esistono nel
+gioco. Un paladino blaster non c'è.
+
+| Classe (tradizione) | controllore | blaster | supporto | utilità |
+|---|:---:|:---:|:---:|:---:|
+| **mago** (arcano, preparato, INT) | ✅ | ✅ | — | ✅ |
+| **stregone** (arcano, spontaneo, CAR) | ✅ | ✅ | — | ○ |
+| **chierico** (divino, domini, SAG) | ✅ | ✅ | ✅ | ✅ |
+| **druido** (divino, natura, SAG) | ✅ | ✅ | ✅ | ✅ |
+| **bardo** (ibrido, spontaneo, CAR) | ✅ | — | ✅ | ✅ |
+| **ranger · paladino** (divino parziale, LI = liv − 3, max 4°) | — | — | ○ | ○ |
+
+✅ = da scrivere · ○ = utile ma non urgente · — = non esiste nel gioco
+
+**Diciassette liste**, non quattro. È il costo vero della cosa fatta bene, e va
+detto prima invece di scoprirlo a metà.
+
+### §7.4 · Come sarebbe una lista (esempio, druido controllore)
+
+Oggi il druido non ha lista e il generatore **si rifiuta di sceglierne una**.
+Ecco cosa ci andrebbe — tutto SRD 3.5, lista del druido:
+
+```
+1°: intralciare, fuoco fatuo, nebbia oscurante
+2°: legame, raffica di vento, frantumare
+3°: crescita vegetale, chiamare il fulmine, radicamento
+4°: muro di spine, evocare nube, controllare piante
+5°: muro di pietra, scacciare i mostri, cambiare forma minore
+6°: muro di ferro, viaggio arboreo di massa, respingere legno
+7°: cambiare forma, tempesta di fuoco, controllare il clima
+8°: tempesta vendicativa, terremoto, forma animale di massa
+9°: tempesta di vendetta, mutare forma superiore, prigione di roccia
+```
+
+Si vede subito la differenza: **niente** di questo compare nella lista arcana, e
+nessuno di questi è un incantesimo da chierico.
+
+### §7.5 · Cosa costa, e cosa si guadagna
+
+**Costa**: 17 liste × 9 livelli ≈ 150 righe di dati scritti a mano, più un test
+per lista che verifichi che ogni incantesimo appartenga davvero a quella classe.
+Il test è la parte che rende la cosa affidabile: senza, ci si accorge del difetto
+al tavolo, com'è appena successo.
+
+**Si guadagna**: un incantatore generato che si può **giocare così com'è**,
+invece di una cornice da riempire a mano. È la differenza fra uno strumento e un
+promemoria.
+
+### §7.6 · Le tre domande al DM
+
+1. **`artigliere` o `blaster`?** Cambia il nome dell'opzione.
+2. **Le 17 caselle, o meno?** Ranger e paladino servono al tuo tavolo, o le
+   ✅ bastano (undici)?
+3. **Le liste le scrivo io e le confermi tu**, come per il carattere — o le
+   preferisci scritte da te?
