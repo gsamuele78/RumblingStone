@@ -1,4 +1,8 @@
-# IL CONSIGLIO DI RETHMAR
+# IL CONSIGLIO DI RETHMAR [NON-CREATURA]
+
+> **Non è una creatura** (ADR-0033): è un **organo collegiale di sette seggi**, non una creatura. Gli statblocchi dei singoli consiglieri stanno nelle loro schede.
+> Per questo non ha un blocco `statblocco` e non conta
+> nel debito di migrazione di ADR-0021.
 ## *Il Campo di Battaglia Politico — Sette Voci, Sette Agende, Una Città*
 
 **Tipo:** Organo Collegiale — 7 membri votanti (6 ufficiali + 1 voce di campo non ufficiale)

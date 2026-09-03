@@ -22,7 +22,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "scripts"))
 
-from export_booklet_typst import dimensioni, inline, md_to_typ  # noqa: E402
+from build_booklet_html import colophon_html  # noqa: E402
+from export_booklet_typst import (  # noqa: E402
+    VOCI_COLOPHON, crediti_typ, dimensioni, inline, md_to_typ,
+)
+from build_booklet_html import VOCI_COLOPHON as VOCI_HTML  # noqa: E402
 from validate_booklets import carica_schema, controlla_manifest, manifest_del_repo  # noqa: E402
 
 
@@ -144,6 +148,94 @@ class TestManifestDelRepo(unittest.TestCase):
                           encoding="utf-8")
             errori, _ = controlla_manifest(mp, self.schema)
             self.assertTrue(any("master mancante" in e for e in errori))
+
+
+COLOPHON_PIENO = {
+    "edizione": "Edizione da tavolo",
+    "versione": "v3",
+    "data": "2026-09-02",
+    "autori": "Il DM",
+    "basato_su": "SRD 3.5 · OGL 1.0a",
+    "licenza": "Materiale del DM, uso privato.",
+    "nota": "Grazie al tavolo.",
+}
+
+
+class TestColophon(unittest.TestCase):
+    """La pagina dei crediti: prima del 2026-09-02 i volumi uscivano anonimi."""
+
+    def test_senza_la_chiave_il_volume_esce_come_prima(self):
+        # Retrocompatibilità: i dieci manifest che non dichiarano un colophon
+        # non devono cambiare di una virgola.
+        self.assertIsNone(crediti_typ({"title": "x"}))
+        self.assertEqual(colophon_html({"title": "x"}, "piede"), "")
+
+    def test_un_colophon_vuoto_non_produce_una_pagina_bianca(self):
+        self.assertIsNone(crediti_typ({"colophon": {}}))
+        self.assertEqual(colophon_html({"colophon": {}}, "piede"), "")
+
+    def test_le_voci_dichiarate_finiscono_nel_typst(self):
+        typ = crediti_typ({"colophon": COLOPHON_PIENO})
+        self.assertTrue(typ.startswith("colophon(voci: ("))
+        for valore in ("Edizione da tavolo", "v3", "2026-09-02", "Il DM", "SRD 3.5"):
+            self.assertIn(valore, typ)
+        self.assertIn('licenza: "Materiale del DM, uso privato."', typ)
+
+    def test_una_voce_sola_resta_una_tupla_valida(self):
+        # `(("a", "b"))` in Typst non è un array di uno: è una parentesi.
+        # Senza la virgola finale il volume non compila.
+        typ = crediti_typ({"colophon": {"versione": "v1"}})
+        self.assertIn('(("Versione", "v1"),)', typ)
+
+    def test_le_voci_assenti_non_lasciano_righe_vuote(self):
+        typ = crediti_typ({"colophon": {"versione": "v1", "data": "2026-01-01"}})
+        self.assertNotIn('""', typ.split("licenza:")[0])
+
+    def test_la_data_non_viene_mai_dedotta(self):
+        # Un PDF che prende la data dall'orologio cambia a ogni compilazione e
+        # smette di essere byte-identico: il gate di stampa verifica il contrario.
+        typ = crediti_typ({"colophon": {"versione": "v1"}})
+        self.assertNotIn("Data", typ)
+
+    def test_le_due_catene_ordinano_le_voci_allo_stesso_modo(self):
+        # È il test che conta: due catene che ordinano diversamente i crediti
+        # producono due edizioni diverse dello stesso volume.
+        self.assertEqual(VOCI_COLOPHON, VOCI_HTML)
+
+    def test_la_catena_html_emette_le_stesse_voci(self):
+        out = colophon_html({"colophon": COLOPHON_PIENO}, "piede")
+        for valore in ("Edizione da tavolo", "v3", "2026-09-02", "Il DM", "SRD 3.5"):
+            self.assertIn(valore, out)
+        self.assertIn("Materiale del DM, uso privato.", out)
+        self.assertIn("Grazie al tavolo.", out)
+
+    def test_il_testo_del_colophon_viene_escapato(self):
+        out = colophon_html({"colophon": {"nota": "<script>x</script>"}}, "p")
+        self.assertNotIn("<script>", out)
+
+    def test_una_chiave_inventata_dentro_il_colophon_viene_rifiutata(self):
+        # Senza la ricorsione sugli oggetti annidati questo refuso passerebbe
+        # in silenzio — cioè il difetto che lo schema esiste per impedire.
+        schema = carica_schema()
+        with tempfile.TemporaryDirectory() as d:
+            cap = Path(d) / "c.md"
+            cap.write_text("# c\n\ntesto\n", encoding="utf-8")
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"file": "c.md"}],
+                                      "colophon": {"versionee": "v1"}}), encoding="utf-8")
+            errori, _ = controlla_manifest(mp, schema)
+            self.assertTrue(any("versionee" in e for e in errori), errori)
+
+    def test_un_colophon_valido_passa_il_gate(self):
+        schema = carica_schema()
+        with tempfile.TemporaryDirectory() as d:
+            cap = Path(d) / "c.md"
+            cap.write_text("# c\n\ntesto\n", encoding="utf-8")
+            mp = Path(d) / "X.manifest.json"
+            mp.write_text(json.dumps({"title": "x", "chapters": [{"file": "c.md"}],
+                                      "colophon": COLOPHON_PIENO}), encoding="utf-8")
+            errori, _ = controlla_manifest(mp, schema)
+            self.assertEqual(errori, [])
 
 
 if __name__ == "__main__":

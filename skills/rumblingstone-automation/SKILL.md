@@ -66,6 +66,15 @@ poi `state_apply.py --migrate --commit` (inserisce i marker `auto:`).
 ## Altri sottocomandi
 
 - `prep --el N --env <amb>` — proposte incontro+mappa+loot (non scrive nulla).
+- **Incontri che non si ripetono** (ADR-0034):
+  `suggest_encounter.py --el N --con-generatore` pesca **in parte** dal
+  catalogo e in parte da creature costruite sul momento dalle tabelle SRD;
+  `--piu-cattivi` rende più dura la **sola** parte generata (template *Advanced*
+  di PF1e senza alzare il GS), mai i mostri veri del catalogo. Per costruirne
+  una sola: `genera_creatura.py --gs N --ruolo <bruto|schermagliatore|tiratore|
+  comandante|controllore|artigliere>`. ⚠️ Non scrive mai dentro `Bestiario/`:
+  propone, e nel canone copia il DM. Se nel catalogo c'è già qualcosa di simile,
+  **potenziare** è meglio → skill `npc-villain-boosting`.
 - `post --session <file>` — flusso manuale legacy (ledger + report-only).
 - `recap --hype` · `handout --tipo T --da <file>` · `dossier` (⚠️ solo DM) —
   vesti Homebrewery V3: i `.hb.md` sono **generati**, mai editati a mano.

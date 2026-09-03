@@ -161,6 +161,17 @@ CSS = """
   .covermeta{ font-size:.8rem; font-style:italic; opacity:.85; max-width:34rem; margin:1.6rem auto 0;
       border-top:1px solid var(--brass); padding-top:.8rem;}
 
+  .colophon{ max-width:34rem; margin:0 auto; }
+  .colophon h4{ font-variant:small-caps; letter-spacing:.25em; color:var(--brass);
+      text-align:center; font-size:.8rem; margin:0 0 .2rem; font-weight:normal; }
+  .colophon .rule{ width:30%; margin-bottom:1.4rem; }
+  .colophon dl{ display:grid; grid-template-columns:8.5rem 1fr; gap:.45rem .9rem; margin:0; }
+  .colophon dt{ font-variant:small-caps; letter-spacing:.08em; color:var(--brass); font-size:.8rem; }
+  .colophon dd{ margin:0; font-size:.92rem; }
+  .colophon .licenza{ margin-top:1.3rem; padding-top:.8rem; border-top:1px solid var(--brass);
+      font-style:italic; font-size:.85rem; opacity:.9; }
+  .colophon .nota{ font-size:.8rem; opacity:.8; margin-top:.6rem; }
+
   .twocol{ column-count:2; column-gap:2.2rem; }
   @media (max-width:44rem){ .twocol{ column-count:1; } .sheet{ padding:1.6rem 1.2rem 2.4rem; } }
   .twocol > *{ break-inside:avoid; }
@@ -470,6 +481,43 @@ def md_to_html(md: str, base: Path) -> str:
     return "\n".join(out)
 
 
+# Stesse voci e stesso ordine della catena di stampa (`VOCI_COLOPHON` in
+# export_booklet_typst.py). Due catene che ordinano diversamente i crediti
+# producono due edizioni diverse dello stesso volume: e' esattamente la
+# divergenza che ADR-0020 aveva promesso di chiudere.
+VOCI_COLOPHON = (
+    ("edizione", "Edizione"),
+    ("versione", "Versione"),
+    ("data", "Data"),
+    ("autori", "A cura di"),
+    ("basato_su", "Basato su"),
+)
+
+
+def colophon_html(mf: dict, footer: str) -> str:
+    """La pagina dei crediti, o stringa vuota se il manifest non ne dichiara una.
+
+    Come in stampa: nessun valore dedotto: la data si scrive nel manifest, non
+    si prende dall'orologio.
+    """
+    col = mf.get("colophon")
+    if not isinstance(col, dict) or not col:
+        return ""
+    righe = "".join(
+        f"<dt>{html.escape(etichetta)}</dt><dd>{html.escape(str(col[chiave]))}</dd>"
+        for chiave, etichetta in VOCI_COLOPHON if col.get(chiave)
+    )
+    if not righe and not col.get("licenza") and not col.get("nota"):
+        return ""
+    licenza = (f'<p class="licenza">{html.escape(col["licenza"])}</p>'
+               if col.get("licenza") else "")
+    nota = f'<p class="nota">{html.escape(col["nota"])}</p>' if col.get("nota") else ""
+    return (f'<div class="sheet"><div class="colophon"><h4>Colophon</h4>'
+            f'<hr class="rule">'
+            f'{f"<dl>{righe}</dl>" if righe else ""}{licenza}{nota}</div>'
+            f'<div class="pagefoot"><span>{html.escape(footer)}</span></div></div>')
+
+
 def build(manifest_path: Path, out_override: Path | None = None) -> Path:
     font_face = css_font_face()
     base = manifest_path.parent
@@ -498,6 +546,7 @@ def build(manifest_path: Path, out_override: Path | None = None) -> Path:
     {cover_img}
     <p class="covermeta">{html.escape(mf.get("meta", ""))}</p>
   </div>
+  {colophon_html(mf, footer)}
   {intro_html}
 </section>"""
 

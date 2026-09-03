@@ -2,6 +2,25 @@
 
 **Faction**: red-hand | **Role**: caster-infiltrator | **Environment**: urban | **CR**: 8 | **Source**: ricostruita da base **aranea** SRD (OGL) + livelli da Stregone; versione AP originale non presente nel repo → puntatore `[Private — Red Hand of Doom, p.44-45]` | **Status**: ACCEPTED — DM-canon 2026-07-20 (calibrata per PG 8-9)
 
+
+
+
+```statblocco
+gs: 8
+tipo: Medium magical beast (shapechanger), 9 DV (3 aranea + 6 Stregone), LE
+ca: 13
+ca-dettaglio: (10 +1 naturale +2 Des)
+pf: 47
+ts: Temp +6, Rifl +7, Vol +8
+velocita: 15 m, scalare 7,5 m (forma vera)
+iniziativa: +6
+attacchi:
+  - Mischia morso +7 (Arma Accurata) (1d6 + veleno)
+voci:
+  - Abilità: For 11, Des 15, Cos 14, Int 14, Sag 13, Car 16
+  - Talenti: Arma Accurata, Ferrea Volontà, Iniziativa Migliorata, Incantare
+```
+
 > ✅ **Canon (DM 2026-07-20)**: statblock calibrato per **PG di livello 8-9**,
 > coerente col ruolo AP di **spia mutaforma senza scrupoli** della Mano Rossa
 > — la forma in cui i PG l'hanno incrociata sulla strada per Hammerfist ed è

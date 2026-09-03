@@ -1,4 +1,4 @@
-# Orion Pelleorsa
+# Orion Pelleorsa [RIMANDO]
 **Role**: ally (druido umano, forza della natura, Arco 08)
 **Status**: alive; **parte a nord dopo Hammerfist** (D14)
 **Location**: campo di Hammerfist (Sessione 4) → boschi del nord (dopo)

@@ -1,4 +1,4 @@
-# Capitano Lunapiena
+# Capitano Lunapiena [RIMANDO]
 **Role**: ally (comandante dei ranger elfici sui gufi, Arco 08)
 **Status**: alive; **resta di presidio a Hammerfist** dopo la battaglia (D13)
 **Location**: cieli sopra Hammerfist (Sessione 4) → presidio di Hammerfist

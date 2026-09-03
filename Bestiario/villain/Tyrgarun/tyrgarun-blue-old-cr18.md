@@ -1,6 +1,19 @@
 # Tyrgarun — Blue Old Dragon (Sky-Terror of Rethmar) [ACCEPTED — DM-canon 2026-07-02, D11 v2]
 **Faction**: red-hand | **Role**: aerial-hazard / grounded-boss | **Environment**: aerial | **CR**: 18 (aerial hazard) → **16–17** (grounded, Fase 4) | **Source**: MM p.71 Blue Dragon Old (SRD 3.5) | **Status**: accepted
 
+
+```statblocco
+gs: 18
+ca: 35
+ca-dettaglio: (-2 size, +27 natural)
+pf: 405
+pf-dado: 30d12+210
+ts: Temp +24, Rifl +19, Vol +22
+velocita: 12 m, scavare 6 m, volare 45 m (scarsa)
+iniziativa: +4
+fonte: valori approssimati nella prosa d'origine (scritti con «~»)
+```
+
 > **Nota rinomina (2026-07-02, D11 v2 / A7)**: file precedentemente
 > `tyrgarun-black-adult-cr13.md` (black adult, riserva). Corretto a **blue Old
 > CR 18** per allineamento a **state.md §2.2**, INDICE, ARMATE-SYNC §2.1 e

@@ -196,6 +196,12 @@ def scan_directory(root):
             continue
         # Only include files that look like statblocks
         content = read_file_safe(path)
+        # Una scheda che si dichiara NON-CREATURA (ADR-0033) non entra nel
+        # catalogo dei mostri: un organo collegiale di sette seggi o una
+        # popolazione di profughi non si incontrano, e `suggest_encounter`
+        # non deve poterli proporre. Il marcatore sta in testa al file.
+        if "[NON-CREATURA]" in "\n".join(content.split("\n")[:8]):
+            continue
         rel = str(path.relative_to(ROOT))
         rel_lower = rel.lower()
 

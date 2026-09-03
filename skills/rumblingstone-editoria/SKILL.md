@@ -58,6 +58,7 @@ Non si ridiscutono a ogni volume. Se una serve diversa, si cambia **il tema**.
 | **Apertura di capitolo** | fregio + titolo a piena larghezza, e un **versale** sul primo paragrafo | dice dove sei prima che tu legga il titolo |
 | **Statistiche** | `#statblocco()`, mai prosa ([ADR-0021](../../plans/adr/ADR-0021-statblocchi-machine-readable.md)) | a metà combattimento la CA non si cerca dentro un paragrafo |
 | **Margini** | speculari (`inside` 2.0 cm / `outside` 1.5 cm) | rilegato, il margine interno finisce nella piega |
+| **Colophon** | `colophon` nel manifest → pagina sul **verso del frontespizio**, senza testatina ([ADR-0023](../../plans/adr/ADR-0023-colophon-di-edizione.md)) | due PDF dello stesso capitolo stampati a un mese di distanza erano indistinguibili sul tavolo |
 | **Fondo** | avorio; `--carta bianca` per stampare in casa | sessanta pagine di fondo pieno sono una cartuccia |
 
 ---
@@ -78,6 +79,12 @@ manifest.json ──┬─► build_booklet_html.py ──► .html + .hb.md
   `md_to_typ()` in `scripts/export_booklet_typst.py`;
 - **quali capitoli, con che copertina** → il manifest, che ha un contratto:
   `scripts/schemas/booklet_manifest.schema.json`;
+- **i crediti, la licenza, la versione e la data** → la chiave `colophon` del
+  manifest. ⚠️ **La data si scrive lì e non si deduce mai**: un volume che la
+  prende dall'orologio cambia a ogni compilazione e smette di essere
+  byte-identico, che è la proprietà su cui poggia il gate di stampa in CI.
+  L'ordine delle voci è fisso e **identico nelle due catene** (`VOCI_COLOPHON`),
+  e un test lo verifica: crediti ordinati diversamente sono due edizioni diverse;
 - **i caratteri** → `scripts/fonts/` (mai un font di sistema: il PDF cambierebbe
   faccia altrove). Il nome del font si dichiara una volta sola, in cima al tema.
 
@@ -111,6 +118,10 @@ Il riferimento è un manuale stampato (Paizo / Wizards), non una pagina web.
 L'audit del 2026-08 ha misurato il divario voce per voce; quello che **resta**
 fuori è dichiarato, non dimenticato:
 
+Chiuso il 2026-09-02 (lotto B del `PIANO-CHIUSURA-CATENA-EDITORIALE`): **il
+colophon**, che era il divario più grosso — i volumi uscivano anonimi, senza
+licenza, senza data e senza versione. Restano fuori:
+
 - **capolettera annegato** (il testo che scorre attorno alla lettera): il tema usa
   un versale. Farlo annegato richiede il pacchetto `droplet`, che Typst scarica
   dalla rete: prima va deciso se si vendorizzano i pacchetti nel repo;
@@ -129,6 +140,9 @@ ognuna ha già scritto dove va presa.
 
 - Un master che cambia ancora ogni sera: si impagina **prima della sessione**, non
   durante la scrittura. Ogni PDF generato a metà è un file che qualcuno stamperà.
+  🔎 Da ADR-0023 questa regola morde meno: con `versione` e `data` sul colophon,
+  chi ha in mano una stampa vecchia **lo vede scritto**. Impaginare un master vivo
+  resta sconsigliato, ma non è più cieco.
 - Un booklet con dentro le note del DM da mandare ai giocatori: senza `--all` esce
   solo ciò che è marcato `player`, ed è così che deve restare.
 - Le sei schede pregenerate in un fascicolo unico da girare nel gruppo: brucia i

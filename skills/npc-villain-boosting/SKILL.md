@@ -30,6 +30,25 @@ to use** — then hands off to the method references.
    before boosting any *named* PNG — a boost must not contradict established
    fiction (a villain the party already fought doesn't silently gain 6 HD).
 
+## Before anything: is there something to boost at all?
+
+Boosting is for a creature that **already exists**. If the catalog has nothing
+close, the tool is a different one:
+
+```bash
+python3 scripts/genera_creatura.py --gs 7 --tipo umanoide --ruolo bruto
+python3 scripts/genera_creatura.py --gs 7 --ruolo bruto --piu-cattivi
+```
+
+It **builds** a creature from the SRD 3.5 tables (ADR-0034); `--piu-cattivi`
+applies the PF1e **Advanced** template *without raising the CR*, so the creature
+hits like CR+1 while being sold as CR — and says so in its own block. It never
+writes into `Bestiario/`.
+
+⚠️ Prefer boosting whenever something similar exists: a catalog creature already
+has a name, a faction and a history, and the generator gives you none of those.
+The generator's real case is a **throwaway encounter**.
+
 ## The 60-second decision
 
 ```

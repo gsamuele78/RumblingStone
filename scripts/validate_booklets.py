@@ -102,6 +102,11 @@ def _controlla_oggetto(dato: dict, schema: dict, dove: str, errori: list[str]) -
             for i, voce in enumerate(valore):
                 if isinstance(voce, dict) and isinstance(sotto.get("items"), dict):
                     _controlla_oggetto(voce, sotto["items"], f"{dove}.{chiave}[{i}]", errori)
+        # Un oggetto annidato (`colophon`) va sotto contratto come tutto il resto:
+        # senza questa riga un refuso fra le sue chiavi passerebbe in silenzio —
+        # cioe' proprio il difetto che lo schema esiste per impedire.
+        if sotto.get("type") == "object" and isinstance(valore, dict):
+            _controlla_oggetto(valore, sotto, f"{dove}.{chiave}", errori)
 
 
 def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:

@@ -35,6 +35,7 @@ sottostante (es. `--seed`, `--narrative`): vedi `<script>.py --help`.
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import subprocess
 import sys
@@ -189,6 +190,156 @@ def cmd_booklet(args: argparse.Namespace, extra: list[str]) -> int:
     return rc
 
 
+# ---------------------------------------------------------- volume (G3)
+
+#: I mestieri, **nell'ordine in cui si chiamano**. E' la cosa che la ricerca sul
+#: colophon Paizo ha trovato mancante (§C, «la combinazione»): le skill c'erano
+#: tutte, nessun documento diceva in che ordine si usano per fare un volume. Chi
+#: ne salta uno se ne accorge in copisteria.
+#:
+#: `stampa` assorbe il `dm.py stampa` promesso dall'audit di agosto e mai fatto.
+PASSI_VOLUME = ("prosa", "lingua", "manifest", "colophon", "schermo", "stampa", "imposizione")
+
+
+def _colophon_del_manifest(mp: Path) -> tuple[bool, str]:
+    """Il volume ha un colophon, e la sua data e' scritta invece che dedotta?
+
+    ADR-0023. Non e' un controllo di schema — quello lo fa `validate_booklets` —
+    e' la domanda dell'editore: **questo volume dice di chi e', che versione e'
+    e cosa se ne puo' fare?** Un volume anonimo si stampa lo stesso.
+    """
+    try:
+        man = json.loads(mp.read_text(encoding="utf-8"))
+    except Exception as e:
+        return False, f"manifest illeggibile: {e}"
+    col = man.get("colophon")
+    if not col:
+        return False, ("nessun colophon: il volume esce anonimo, senza versione "
+                       "ne' regime d'uso (ADR-0023)")
+    mancanti = [k for k in ("versione", "data", "autori", "licenza") if not col.get(k)]
+    if mancanti:
+        return False, "colophon incompleto, mancano: " + ", ".join(mancanti)
+    return True, (f"{col.get('edizione', 'edizione')} {col['versione']} · "
+                  f"{col['data']} · {col['autori']}")
+
+
+def cmd_volume(args: argparse.Namespace, extra: list[str]) -> int:
+    """La catena dei mestieri in ordine, da un manifest a un volume."""
+    mp = Path(args.manifest)
+    if not mp.is_absolute():
+        mp = REPO / mp
+    if not mp.is_file():
+        print(f"[dm] \u2717 manifest inesistente: {args.manifest}", file=sys.stderr)
+        return 2
+
+    salta = set(args.salta or [])
+    solo = set(args.solo or [])
+    passi = [x for x in PASSI_VOLUME
+             if (not solo or x in solo) and x not in salta]
+    if not args.stampa and not solo:
+        passi = [x for x in passi if x not in ("stampa", "imposizione")]
+    if args.imposto and "imposizione" not in passi and not salta:
+        passi.append("imposizione")
+
+    capitoli = []
+    try:
+        man = json.loads(mp.read_text(encoding="utf-8"))
+        capitoli = [str((mp.parent / c["file"]).resolve().relative_to(REPO))
+                    for c in man.get("chapters", [])
+                    if (mp.parent / c["file"]).is_file()]
+    except Exception:
+        pass
+
+    print(f"[dm] volume \u2014 {mp.name}")
+    print("[dm] passi: " + " \u2192 ".join(passi) + "\n")
+    esiti: list[tuple[str, str, str]] = []
+    duro = 0
+
+    for passo in passi:
+        print(f"\u2500\u2500 {passo} " + "\u2500" * max(0, 60 - len(passo)))
+        if passo == "prosa":
+            # Misura, non blocca: la norma e' `italiano-nativo.md`, questo la
+            # conta (ADR-0025). Un gate rumoroso che blocca viene disattivato.
+            rc = run("validate_prosa.py", *capitoli, check=False) if capitoli else 0
+            esiti.append((passo, "\u26a0" if rc else "\u2713",
+                          "rilievi di prosa: guardali" if rc else "nessun calco, nessun tic"))
+        elif passo == "lingua":
+            rc = run("validate_lingua.py", *capitoli, check=False) if capitoli else 0
+            esiti.append((passo, "\u26a0" if rc else "\u2713",
+                          "refusi meccanici" if rc else "nessun refuso"))
+        elif passo == "manifest":
+            rc = run("validate_booklets.py", check=False)
+            if rc:
+                duro = rc
+            esiti.append((passo, "\u2717" if rc else "\u2713",
+                          "schema o parita' fra le catene" if rc else "schema e parita' ok"))
+            if rc:
+                break
+        elif passo == "colophon":
+            ok, dettaglio = _colophon_del_manifest(mp)
+            print(("  \u2713 " if ok else "  \u26a0 ") + dettaglio)
+            esiti.append((passo, "\u2713" if ok else "\u26a0", dettaglio))
+        elif passo == "schermo":
+            rc = run("build_booklet_html.py", str(mp), check=False)
+            if rc:
+                duro = rc
+            esiti.append((passo, "\u2717" if rc else "\u2713",
+                          "compilazione HTML fallita" if rc else "HTML costruito"))
+            if rc:
+                break
+        elif passo == "stampa":
+            rc = run("export_booklet_typst.py", str(mp), "--all", check=False)
+            if rc == 2:
+                esiti.append((passo, "\u25cb", "typst assente: il volume da stampa "
+                                                "si fa quando c'e' (ADR-0027)"))
+                continue
+            if rc:
+                duro = rc
+            esiti.append((passo, "\u2717" if rc else "\u2713",
+                          "compilazione Typst fallita" if rc else "PDF con segnalibri"))
+            if rc:
+                break
+        elif passo == "imposizione":
+            esiti.append(_imponi(mp))
+
+    print("\n[dm] volume \u2014 riepilogo")
+    for nome, segno, dettaglio in esiti:
+        print(f"  {segno} {nome:12} {dettaglio}")
+
+    # Il cancello d'uscita. Non e' automatizzabile e non si finge che lo sia: si
+    # DICE, qui, perche' questo e' il momento in cui un volume sta per uscire ed
+    # e' esattamente il punto in cui il lotto E aveva trovato il buco — una
+    # regola scritta che nessuno carica non e' una regola.
+    print("\n  \u26a0 Prima che questo volume esca dal repo: il cancello \u00a77 di "
+          "docs/guides/GUIDA-CONDIVISIONE-IP.md.\n"
+          "    Uso privato al tavolo: nessun cancello. Fuori di li', quelle cinque "
+          "domande vengono prima — e se c'\u00e8 di mezzo del denaro, ci si ferma "
+          "(ADR-0005).")
+    return duro
+
+
+def _imponi(mp: Path) -> tuple[str, str, str]:
+    """Il libretto da piegare (ADR-0027). Degrada pulito: dichiara e non fallisce."""
+    sys.path.insert(0, str(SCRIPTS))
+    import binari
+    percorso = binari.trova(binari.PDFCPU)
+    pdf = mp.parent / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"
+    if percorso is None:
+        return ("imposizione", "\u25cb", "pdfcpu assente: " + binari.PDFCPU.ripiego)
+    if not pdf.is_file():
+        return ("imposizione", "\u25cb", "nessun PDF da imporre (serve il passo «stampa»)")
+    fuori = pdf.with_name(pdf.stem + "-LIBRETTO.pdf")
+    esito = subprocess.run(
+        [percorso, "booklet", "-c", "disable", "-o", "-q", "--",
+         "formsize:A4, border:off, margin:0", str(fuori), "2", str(pdf)],
+        capture_output=True, text=True)
+    if esito.returncode != 0:
+        return ("imposizione", "\u2717", (esito.stderr or "pdfcpu fallito").strip()[:120])
+    return ("imposizione", "\u2713",
+            f"{fuori.name} \u2014 da piegare. Non si versiona: l'output di pdfcpu "
+            f"non e' byte-identico (ADR-0027)")
+
+
 def cmd_session(args: argparse.Namespace, extra: list[str]) -> int:
     # Ciclo di vita sessione su branch-per-gruppo (ADR-0007) — solo orchestrazione
     if args.action == "status":
@@ -308,6 +459,19 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
         else:
             print(f"  ○ {tool} assente — opzionale, serve solo per {why}")
 
+    # Le dipendenze binarie accettate con un ADR (ADR-0020, ADR-0027). Sono
+    # opzionali: qui si dice cosa manca e cosa resta possibile senza, mai un
+    # avviso — `doctor` non deve trasformare un ripiego dichiarato in un difetto.
+    try:
+        import binari as _binari
+        for _b, _p in _binari.stato():
+            if _p:
+                ok(f"{_b.nome} presente ({_b.a_cosa_serve})")
+            else:
+                print(f"  ○ {_b.nome} assente — {_b.ripiego}")
+    except Exception as exc:  # doctor non deve mai crashare
+        warn(f"check dipendenze binarie fallito: {exc}")
+
     if problems:
         print(f"[dm] doctor: {problems} avvisi")
         return 0 if args.ci else 1
@@ -377,6 +541,19 @@ def main(argv: list[str] | None = None) -> int:
                    help="dopo la build: PDF A4 di TUTTE le schede "
                         "(copertina e capitoli ⚠ DM inclusi, prefissi pg-/dm-)")
 
+    p = sub.add_parser("volume",
+                       help="la catena dei mestieri in ordine: da un manifest a un "
+                            "volume (assorbe il «dm.py stampa» mai fatto)")
+    p.add_argument("manifest", help="il manifest del volume (.manifest.json)")
+    p.add_argument("--stampa", action="store_true",
+                   help="fai anche l'edizione da stampa (Typst, un volume con segnalibri)")
+    p.add_argument("--imposto", action="store_true",
+                   help="e imponilo in libretto da piegare (pdfcpu, ADR-0027)")
+    p.add_argument("--solo", action="append", choices=PASSI_VOLUME,
+                   help="esegui solo questi passi (ripetibile)")
+    p.add_argument("--salta", action="append", choices=PASSI_VOLUME,
+                   help="salta questi passi (ripetibile)")
+
     p = sub.add_parser("session",
                        help="ciclo sessione su branch-per-gruppo (ADR-0007): "
                             "end / next / status / branch")
@@ -401,7 +578,7 @@ def main(argv: list[str] | None = None) -> int:
         "prep": cmd_prep, "maps": cmd_maps, "post": cmd_post, "recap": cmd_recap,
         "handout": cmd_handout, "hype": cmd_hype, "dossier": cmd_dossier,
         "booklet": cmd_booklet, "prompts": cmd_prompts,
-        "session": cmd_session, "skills": cmd_skills, "doctor": cmd_doctor,
+        "session": cmd_session, "volume": cmd_volume, "skills": cmd_skills, "doctor": cmd_doctor,
     }[args.cmd](args, extra)
 
 

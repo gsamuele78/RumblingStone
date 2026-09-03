@@ -2,6 +2,36 @@
 
 ## PROFILO DEL VILLAIN
 
+
+
+
+```statblocco
+gs: 18
+tipo: Medium outsider, 18d4
+ca: 22
+ca-dettaglio: (+1 Des, +11 armatura)
+pf: 63
+pf-dado: 18d4
+ts: Temp +7, Rifl +7, Vol +11
+velocita: 9 m
+iniziativa: +1
+attributi: Car 19 Int 14 Des 13 Cos 12 Sag 10 For 8
+attacchi:
+  - Mischia bastone ferrato +8 (1d6-1)
+voci:
+  - Incantatore di livello 18 (stregone, CAR +4)
+  - Incantesimi al giorno: 6/6/6/6/6/6/6/6/5/3
+  - Incantesimi conosciuti: 9/5/5/4/4/4/3/3/2/1
+  - CD degli incantesimi: 10 + livello + +4 (massimo: 9° livello, CD 23)
+  - ⚠ incantatore spontaneo: prende ogni livello d'incantesimo due livelli dopo un preparato — per stare sulla stessa CD servono ~2 livelli in più
+  - Preparati — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: catena di dissolvimenti, disintegrazione, occhio arcano superiore · 7°: dito della morte, inversione della gravità, prigione · 8°: campo antimagia, labirinto, urlo doloroso · 9°: arresto del tempo, desiderio limitato, sfera di annichilimento
+  - ⚠ **Non è inteso per lo scontro fisico.** La scheda dichiara GS 17-19 e dice che il villain non combatte mai in campo aperto: questi numeri servono se i PG lo mettono all'angolo, non a progettare un incontro
+  - Rakshasa Ak'chazar avanzato: RD 15/bene e perforante, cambiare forma, individuazione del pensiero a volontà
+  - ⚠ Il blocco conta i soli livelli di classe. I 7 DV razziali da esterno del rakshasa e la RD non ci sono dentro: vanno aggiunti prima di usarlo come boss (e non e' previsto che lo sia)
+  - Amuleto dell'Eclissi Planare: vuoto mentale e anti-individuazione continui a LI 20 — nemmeno la visione del vero lo smaschera
+fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=outsider, taglia=medium, ruolo=controllore, classe=('stregone', 18), elite=True, gs=18); derivati: ca, pf, ts. ADR-0034 — proposta da rileggere al tavolo
+```
+
 **Vero Nome:** Ignoto (Sussurrato come "Avaritia" nei Piani Inferiori)
 **Identità di Copertura (Anno -1000):** Maestro Varis "Seta-Argento", Mercante Planare
 **Razza/Tipo:** Rakshasa Ak'chazar (Avanzato, Esterno Malvagio) Extra-Planare / Signore del Commercio

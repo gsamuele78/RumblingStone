@@ -1,4 +1,6 @@
-# Therysol / Therisol (ex Ysolde) [POINTER — canonical file]
+# Therysol / Therisol (ex Ysolde) [POINTER — canonical file] [RIMANDO]
+
+**Key stats**: → `Bestiario/png/Therysol/Therysol/Therysol.md` (i numeri ora stanno lì, nel blocco).
 
 **Faction**: rakshasa-hunter | **Role**: ally-skirmisher-caster | **Environment**: urban | **CR**: 9
 **Source**: `Bestiario/png/Therysol/Therysol.md` (canonical scheda, GS 9, Tiefling Mezzo-Drago Bianco, Esperto 2 / Acolita 6)

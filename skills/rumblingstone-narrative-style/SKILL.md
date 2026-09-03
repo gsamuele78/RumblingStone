@@ -32,19 +32,33 @@ the user should never have to ask for "the style" explicitly.
 2. This file — pick the pillar mix for the scene type (table below).
 3. `references/style-pillars.md` — the nine pillars: what to take,
    what to avoid, fusion rules.
-4. The specific reference for the task (table below).
-5. **`references/italiano-nativo.md` — OBBLIGATORIO prima di consegnare**
-   qualsiasi testo player-facing (hint, echi, teaser, iscrizioni, lettere) e
-   qualsiasi **read-aloud**. Rilievo dei giocatori 2026-07-31: la prosa
-   generata *«sembra tradotta dall'inglese»*. Quel file è l'antidoto — calchi
-   da evitare, strumenti che solo l'italiano ha, tempi verbali, ritmo, registro
-   nanico, checklist di 30 secondi — **e il §9 sui tic dell'IA**, che è un
-   problema diverso dal traduttese: lì la sintassi è giusta ma sempre la
-   stessa, e a tradire non sono gli errori ma le **abitudini** (l'antitesi
-   «non X: è Y», il tricolon, la chiusa a effetto obbligatoria, il fatto che
-   ogni dettaglio sia significativo). **Non è opzionale e non è stilistico: è
-   la differenza fra un handout che i giocatori leggono e uno che li stacca.**
-6. **`references/read-aloud-adulti.md` — prima di scrivere qualsiasi
+4. ⚠️ **`references/italiano-nativo.md` — PRIMA DI SCRIVERE**, non prima di
+   consegnare. **Spostato qui il 2026-09-02, e il motivo è misurato**: i
+   giocatori hanno fatto lo stesso rilievo due volte, il **2026-07-31** e il
+   **2026-09-02**, con in mezzo questo motore di stile da duemila righe. Il
+   traduttese **non è una lista di errori da correggere in revisione**: è il
+   modo in cui la frase è stata costruita. Se scrivi con la testa in inglese e
+   poi correggi i dieci calchi che la lista nomina, restano la sintassi, il
+   ritmo e l'ordine delle informazioni — che sono esattamente ciò che un
+   lettore sente. La checklist di 30 secondi del file resta come **ultima**
+   passata; il file si legge **all'inizio**.
+5. The specific reference for the task (table below).
+6. **La checklist di 30 secondi di `italiano-nativo.md` — prima di consegnare**,
+   su qualsiasi testo player-facing (hint, **echi**, teaser, iscrizioni,
+   lettere) e qualsiasi **read-aloud**. È la seconda metà del punto 4, non un
+   doppione: lì si legge il file per scrivere in italiano, qui si ripassa il
+   testo scritto.
+   Guarda soprattutto il **§9 sui tic dell'IA**, che è un problema **diverso**
+   dal traduttese: lì la sintassi è giusta ma sempre la stessa, e a tradire non
+   sono gli errori ma le **abitudini** — l'antitesi «non X: è Y», il tricolon,
+   la chiusa a effetto obbligatoria, il fatto che ogni dettaglio sia
+   significativo.
+   🤖 **Da qui in poi non conti a mano**: `python3 scripts/validate_prosa.py FILE`
+   misura i calchi e i tic a densità («massimo uno per documento» è la regola
+   che un revisore non applica mai, perché dovrebbe contare).
+   **Non è opzionale e non è stilistico: è la differenza fra un handout che i
+   giocatori leggono e uno che li stacca.**
+7. **`references/read-aloud-adulti.md` — prima di scrivere qualsiasi
    read-aloud.** Il pubblico di questo tavolo è fatto di **adulti che leggono
    fantasy da vent'anni**: conoscono i cliché meglio di chi scrive. Il file
    copre il vincolo che cambia tutto — **un read-aloud si ascolta, non si
@@ -110,6 +124,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | **Varietà fra gli archi** — la tavolozza d'arco (dominante · contrappunto · famiglia di caso · congegno · picco), le sei tinte e il difetto di ciascuna, le regole di rotazione, **la prova del recap**; e per gli archi **modulari** la **quota di modulo** (quanti puliti / con mistero / con congegno) e **l'orchestrazione dinamica** (vocazioni, gettone in mano, la regola dello scarto) | `references/varieta-fra-archi.md` |
 | **Casi, indizi, enigmi, il congegno finale** — nodi a tre strati, le sei porte per i PG senza gradi, Acume/Perizia/Metodo, la ricomposizione; e il **registro Eco** — il documento e le sue assenze, il regolamento della comunità chiusa, **l'errore fecondo** (anti-binario), il dettaglio-meccanismo | **skill dedicata `rumblingstone-indagine`** (per il registro Eco: `references/documento-ed-errore-fecondo.md`) |
 | Editorial standards: terminologia canonica, resa read-aloud, tipografia, igiene (enforced in CI da `validate_modules.py`) | `references/editorial-standards.md` |
+| **Le passate redazionali** — il *giro*, non la norma: le tre passate (struttura → voce → bozze), quando un testo è **chiuso**, e i tre soli casi che lo riaprono. La 2ª si legge **ad alta voce**: il traduttese si sente e non si vede | **`references/passate-redazionali.md`** |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |
 | **Italiano nativo + anti-riconoscibilità** — calchi, dislocazioni, diminutivi, tempi, ritmo, registro nanico (§1-8) · **i tic dell'IA: antitesi «non X: è Y», tricolon, chiuse a effetto, tutto-è-significativo** (§9) · checklist | **`references/italiano-nativo.md`** |
 

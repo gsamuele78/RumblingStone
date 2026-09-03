@@ -1,6 +1,17 @@
 # SONJAK — MATRONA CLERICALE DEL SOTTOSUOLO
 ## *Matrona dell'Oscurità, anche nota come "Matrona Sajak" nei codici di Salvatore*
 
+
+
+
+```statblocco
+gs: 13
+ca: 22
+pf: 91
+ts: Temp +10, Rifl +8, Vol +14
+velocita: 9 m
+```
+
 **Razza/Tipo:** Drow (Elfo del Sottosuolo — Umanoide Medio)
 **Classe:** Chierico 10 / Prestige (Matrona Drow, equivalente a Guerra Sacra) 3 (Livello Totale 13)
 **Grado di Sfida (GS):** 13

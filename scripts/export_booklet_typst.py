@@ -46,7 +46,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import shutil
 import subprocess
 import sys
 import unicodedata
@@ -56,24 +55,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
 
+import binari  # noqa: E402  (accanto a questo file)
+
 ROOT = Path(__file__).resolve().parent.parent
 TEMA = ROOT / "scripts" / "typst" / "tema-rumblingstone.typ"
 SCHEDA_PG = ROOT / "scripts" / "typst" / "scheda-pg.typ"
+# Pacchetti Typst vendorizzati (ADR-0026): la build non scarica niente. Senza
+# questo percorso `@preview/...` andrebbe a packages.typst.org, e una build che
+# dipende dalla rete non e' riproducibile — ne' compilabile offline.
+PACCHETTI = ROOT / "scripts" / "typst" / "packages"
 FONTS = ROOT / "scripts" / "fonts"
 
-INSTALLA = """\
-Il binario «typst» non è nel PATH. È un singolo eseguibile, Apache 2.0:
-
-  Linux/macOS   curl -sSL https://github.com/typst/typst/releases/latest/download/\\
-                  typst-x86_64-unknown-linux-musl.tar.xz | tar xJ
-                  sudo install typst-*/typst /usr/local/bin/
-  Fedora/Bazzite  brew install typst        (oppure il tarball qui sopra)
-  Arch            pacman -S typst
-  Windows         winget install --id Typst.Typst
-
-Niente panico se non lo installi: `export_booklet_pdf.py` continua a produrre i
-PDF per capitolo con Chromium. Questo esportatore serve al volume da stampa.
-"""
 
 
 def typ_path(p: Path) -> str:
@@ -664,9 +656,44 @@ def fregio_per(titolo: str, file: Path, base: Path, ripiego: str | None = None) 
 CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
-    "out", "chapters", "carta", "capolettera", "fregio",
+    "out", "chapters", "carta", "capolettera", "fregio", "colophon",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
+
+
+# L'ordine in cui le voci compaiono sulla pagina. E' fisso di proposito: un
+# colophon che cambia ordine da un volume all'altro non si legge a colpo d'occhio.
+VOCI_COLOPHON = (
+    ("edizione", "Edizione"),
+    ("versione", "Versione"),
+    ("data", "Data"),
+    ("autori", "A cura di"),
+    ("basato_su", "Basato su"),
+)
+
+
+def crediti_typ(man: dict) -> str | None:
+    """Il `#colophon(...)` da passare a `libro`, o None se il manifest non ne ha uno.
+
+    Nessun valore inventato: se il manifest non dichiara la data, la pagina non
+    la stampa. Dedurla dall'orologio renderebbe il PDF diverso a ogni
+    compilazione — e il gate di stampa in CI verifica proprio il contrario.
+    """
+    col = man.get("colophon")
+    if not isinstance(col, dict) or not col:
+        return None
+    voci = [(etichetta, str(col[chiave]))
+            for chiave, etichetta in VOCI_COLOPHON
+            if col.get(chiave)]
+    if not voci and not col.get("licenza") and not col.get("nota"):
+        return None
+    righe = ", ".join(
+        f'({json.dumps(e, ensure_ascii=False)}, {json.dumps(v, ensure_ascii=False)})'
+        for e, v in voci
+    )
+    return (f'colophon(voci: ({righe}{"," if len(voci) == 1 else ""}), '
+            f'licenza: {json.dumps(col.get("licenza", ""), ensure_ascii=False)}, '
+            f'nota: {json.dumps(col.get("nota", ""), ensure_ascii=False)})')
 
 
 def avvisa_chiavi(man: dict) -> None:
@@ -706,6 +733,10 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
                              + "\n  ],")
             else:
                 print(f"  ⚠ intro_md mancante: {intro}", file=sys.stderr)
+    if apparato:
+        crediti = crediti_typ(man)
+        if crediti:
+            extra.append(f"  crediti: {crediti},")
     if carta != "avorio":
         extra.append(f'  carta: {json.dumps(carta, ensure_ascii=False)},')
     return [
@@ -723,6 +754,60 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
         ")",
         "",
     ]
+
+
+#: Voci del glossario gia' caricate (il file si legge una volta sola).
+_VOCI_INDICE: list[str] | None = None
+
+
+def voci_indice() -> list[str]:
+    """I nomi canonici del glossario, dal piu' lungo al piu' corto.
+
+    Dal piu' lungo perche' «Corona di Adamantio» va marcata prima di «Corona»:
+    al contrario resterebbe «#voce-indice[Corona] di Adamantio», che nell'indice
+    diventa una voce sbagliata.
+    """
+    global _VOCI_INDICE
+    if _VOCI_INDICE is None:
+        try:
+            sys.path.insert(0, str(ROOT / "scripts"))
+            from validate_prosa import coppie_glossario
+            _VOCI_INDICE = sorted(
+                (it for it, _ in coppie_glossario()
+                 if len(it) > 6 and it not in ("Categoria",)),
+                key=len, reverse=True)
+        except Exception:
+            _VOCI_INDICE = []
+    return _VOCI_INDICE
+
+
+def marca_indice(typ: str) -> str:
+    """Marca la PRIMA occorrenza di ogni voce del glossario, per capitolo.
+
+    ⚠️ Solo su righe di prosa: una riga che comincia per `#` e' un comando Typst
+    e infilarci dentro una funzione romperebbe l'impaginazione. Solo la prima
+    occorrenza: un indice che rimanda a dodici pagine per lo stesso termine non
+    aiuta nessuno a trovarlo.
+    """
+    voci = voci_indice()
+    if not voci:
+        return typ
+    gia: set[str] = set()
+    fuori = []
+    for riga in typ.split("\n"):
+        s = riga.lstrip()
+        if s.startswith("#") or s.startswith("//") or "voce-indice" in riga:
+            fuori.append(riga)
+            continue
+        for v in voci:
+            if v in gia:
+                continue
+            m = re.search(r"(?<![\w#\[])" + re.escape(v) + r"(?![\w\]])", riga)
+            if m:
+                riga = (riga[:m.start()] + "#voce-indice[" + v + "]" + riga[m.end():])
+                gia.add(v)
+        fuori.append(riga)
+    return "\n".join(fuori)
 
 
 def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
@@ -752,7 +837,22 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)
         parti.append("")
-    return "\n".join(parti)
+    testo = "\n".join(parti)
+    # L'indice analitico e' opt-in dal manifest: non tutti i volumi lo vogliono
+    # (un teaser di due pagine con un indice analitico e' una presa in giro).
+    if man.get("indice_analitico"):
+        marcato = marca_indice(testo)
+        n = marcato.count("#voce-indice[")
+        if n:
+            testo = marcato + "\n#indice-analitico()\n"
+        else:
+            # Nessuna voce del glossario in questo volume: e' il caso dei moduli
+            # autoconclusivi, che hanno un'ambientazione loro. Una pagina
+            # «INDICE ANALITICO» vuota in coda e' peggio di nessun indice.
+            print("  · indice analitico chiesto ma nessun nome del glossario "
+                  "compare in questo volume: la pagina non si aggiunge",
+                  file=sys.stderr)
+    return testo
 
 
 def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedProcess, bool]:
@@ -764,7 +864,8 @@ def compila(binario: str, typ: Path, pdf: Path) -> tuple[subprocess.CompletedPro
     riprova senza — e lo si DICE, invece di consegnare un PDF diverso da quello
     che il comando promette.
     """
-    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT)]
+    cmd = [binario, "compile", "--font-path", str(FONTS), "--root", str(ROOT),
+           "--package-path", str(PACCHETTI)]
     esito = subprocess.run(cmd + [str(typ), str(pdf)], capture_output=True, text=True)
     if esito.returncode != 0 and "internal error" in esito.stderr and "tags" in esito.stderr:
         return subprocess.run(cmd + ["--no-pdf-tags", str(typ), str(pdf)],
@@ -837,10 +938,9 @@ def main() -> int:
             print(f"  {t}{marchio}  ←  {f.relative_to(ROOT) if ROOT in f.parents else f}")
         return 0
 
-    binario = shutil.which("typst")
-    if not binario:
-        print(INSTALLA, file=sys.stderr)
-        return 1
+    # La regola di degradazione pulita sta in `binari.py` (ADR-0027): se manca,
+    # dice come installarlo ed esce con 2 — prima di aprire qualunque file.
+    binario = binari.esigi(binari.TYPST)
 
     typ = base / f"{mp.stem.replace('.manifest', '')}.typ"
     pdf = base / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"

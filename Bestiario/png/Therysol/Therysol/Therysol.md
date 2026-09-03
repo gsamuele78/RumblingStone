@@ -1,3 +1,14 @@
+
+```statblocco
+gs: 9
+ca: 20
+pf: 44
+ts: Temp +4, Rifl +6, Vol +11
+velocita: 9 m (Terra) / *Ali vestigiali (non atte al volo, usate per intimidire)*
+voci:
+  - Incantesimi:  14 + Livello Incantesimo
+```
+
 Ecco la scheda completa e aggiornata per **Dungeons & Dragons 3.5**, pronta per essere stampata e utilizzata dal DM.
 
 La scheda è stata costruita convertendo la classe **Acolita (Adept)** in un incantatore spontaneo basato sul **Carisma** (simile allo Stregone) per riflettere la natura innata dei suoi poteri dopo la trasformazione. Le statistiche sono state calcolate partendo da un *Elite Array* ottimizzato per una build **Agile e Carismatica**, tenendo conto del background da commerciante del Sottosuolo e dell'assenza di armatura fisica.

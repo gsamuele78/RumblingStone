@@ -58,8 +58,30 @@ jobs:
       - name: Validate DEF module masters (module-standard checklist, token-free review)
         run: python scripts/validate_modules.py
 
-      - name: Moduli standalone (STANDALONE-*)
+      - name: Moduli standalone (STANDALONE-* e 10-stand-alone/*)
         run: python scripts/validate_standalone.py
+
+      # Non bloccante alla prima passata: la convenzione nasce oggi e il
+      # contenuto esistente la rispetta a meta'. Diventa bloccante (--strict)
+      # il giorno in cui il rumore e' a zero — non prima, o il gate viene
+      # disattivato e allora non trova piu' nemmeno i refusi veri.
+      - name: Lingua italiana — refusi meccanici (non bloccante)
+        continue-on-error: true
+        run: python scripts/validate_lingua.py
+
+      # Idem: misura la norma di italiano-nativo.md (calchi, tic a densita',
+      # nomi inglesi dove il glossario vuole l'italiano). ADR-0025.
+      - name: Prosa — traduttese e tic dell'IA (non bloccante)
+        continue-on-error: true
+        run: python scripts/validate_prosa.py
+
+      # Terzo della stessa famiglia: misura la LEGGIBILITA' dell'artefatto, che
+      # nessun exit code vede. Gerarchia dei titoli (i segnalibri del PDF),
+      # caratteri per riga dalle metriche vere del font, e le coppie di colori
+      # che sotto una dicromia diventano lo stesso colore. ADR-0032.
+      - name: Tipografia — titoli, caratteri per riga, daltonismo (non bloccante)
+        continue-on-error: true
+        run: python scripts/validate_tipografia.py
 
       - name: DM tool smoke tests
         run: |
@@ -143,6 +165,31 @@ jobs:
         run: |
           python scripts/dm.py --help > /dev/null
           python scripts/dm.py doctor --ci
+
+      # Il server MCP (ADR-0030) e' una superficie d'esecuzione: il gate verifica
+      # che ogni tool del catalogo costruisca una riga di comando valida e senza
+      # metacaratteri di shell, e poi lo fa parlare davvero sul suo trasporto.
+      # Un server che passa i test interni ma non risponde a `tools/list` non
+      # serve a niente.
+      - name: Server MCP — catalogo, difese e protocollo
+        run: |
+          python scripts/mcp_server.py --self-check
+          printf '%s\n' \
+            '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' \
+            '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
+            '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"state_apply","arguments":{}}}' \
+            | python scripts/mcp_server.py > /tmp/mcp-out.jsonl
+          python - <<'EOF'
+          import json
+          r = [json.loads(x) for x in open("/tmp/mcp-out.jsonl")]
+          assert r[0]["result"]["protocolVersion"], "initialize senza versione"
+          n = len(r[1]["result"]["tools"])
+          assert n >= 40, f"tools/list ne espone solo {n}"
+          assert all("annotations" in t for t in r[1]["result"]["tools"]), "annotazioni mancanti"
+          # in sola lettura, chi scrive canone deve essere RIFIUTATO (S-5)
+          assert "error" in r[2], "state_apply è partito in sola lettura"
+          print(f"server MCP OK — {n} tool, annotazioni presenti, S-5 attiva")
+          EOF
 
   build:
     name: Build skill packages

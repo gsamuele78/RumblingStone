@@ -1,4 +1,4 @@
-# Nala Cantapietre
+# Nala Cantapietre [RIMANDO]
 **Role**: ally (pregen giocabile "Eroi di Hammerfist" → PNG dopo, Arco 08)
 **Status**: alive (se sopravvive al giocato); **passa a Dauth** dopo la battaglia (D14, aggancio Torneo ARC-09)
 **Location**: Hammerfist (infiltrazione, flashback) → Dauth (dopo)

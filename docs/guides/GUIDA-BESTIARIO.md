@@ -14,6 +14,10 @@
 ## 0. TL;DR — il ciclo completo
 
 ```bash
+# 0. serve davvero una scheda nuova? (§8, §6-ter)
+#    c'è già qualcosa di simile   → potenzialo, non duplicarlo
+#    non c'è niente e serve ora   → python3 scripts/genera_creatura.py --gs N
+
 # 1. crea il file nella cartella giusta col nome giusto (§1, §2)
 #    Bestiario/mostri/nome-crN.md   ·   Bestiario/villain/<Nome>/nome-crN.md
 
@@ -156,6 +160,146 @@ dei flag — utile per capire se il CR che hai messo è realistico.
 
 ---
 
+## 6-bis. Il blocco `statblocco` a macchina, e i tre strumenti che lo riempiono
+
+Oltre alla prosa, ogni scheda porta (o dovrebbe portare) un **blocco recintato**
+coi soli numeri — `gs`, `ca`, `pf`, `ts` e il resto — che è quello che leggono la
+stampa, l'export e i controlli ([ADR-0021](../../plans/adr/ADR-0021-statblocchi-machine-readable.md)).
+**Oggi il Bestiario è a posto: 157 schede su 157** — 124 col blocco, 27 che i
+numeri li hanno altrove, 6 che creature non sono. Per riempirlo ci sono **tre**
+strumenti, e fanno cose diverse:
+
+```bash
+python3 scripts/extract_statblocks.py            # cosa si può TRASCRIVERE, e cosa manca
+python3 scripts/extract_statblocks.py --apply    # scrive dove la prosa dice tutto
+python3 scripts/derive_statblocks.py             # cosa si può DERIVARE, col conto scritto
+python3 scripts/derive_statblocks.py --apply-ts  # scrive i soli TS (vedi sotto)
+python3 scripts/genera_creatura.py --gs 7        # COSTRUISCE una creatura che non c'è
+```
+
+**`extract_statblocks` trascrive**: legge i numeri che hai già scritto in prosa.
+Conosce parecchi dialetti — `**hp 34**`, `(5 HP)`, `hp ~30`, `**Punti Ferita:**
+60`, `**Classe Armatura:** 19`, `**Tiri Salvezza:** Tempra +7, Riflessi +10,
+Volontà +6`, `**Grado di Sfida (GS):** 9`, `TS +2/+9/+1` — quindi **scrivi come ti
+viene** e lui probabilmente ci arriva. Se il numero era una stima (`hp ~30`), il
+blocco lo dichiara invece di spacciarla per un dato.
+
+**`derive_statblocks` deriva** dalle tabelle: SRD 3.5 per tipo di creatura,
+progressioni dei TS, matrici elite/standard, taglie e armature; la tabella per GS
+di Pathfinder 1e **solo come guardia**, che marca la proposta *«⚠ FUORI
+BERSAGLIO»* quando il conto non torna. ⚠️ **Scrive un campo solo — i tiri
+salvezza — e solo dove GS, CA e pf li hai scritti tu**: la base dei TS è esatta
+dalle tabelle, mentre CA e pf dipendono da equipaggiamento e Costituzione, che da
+una scheda in prosa non si leggono. Per quelli **propone e basta**, col conto per
+esteso, e decidi tu ([ADR-0033](../../plans/adr/ADR-0033-derivare-e-dichiararlo.md)).
+
+**`genera_creatura` costruisce** una creatura che nel Bestiario **non c'è**. Non
+legge nessuna scheda: parte da quello che dichiari tu — GS, tipo, taglia, ruolo,
+eventuali livelli di classe — e le tabelle producono i numeri. Vedi §6-ter.
+
+### Quando i numeri stanno da un'altra parte
+
+Ventisette schede non hanno il blocco perché **non devono averlo**: i numeri sono
+già scritti altrove, e una seconda copia diverge alla prima errata. Le schede
+stampabili dei quattro pregen stanno in `08_…/ARC08-02`, i PNG alleati in
+`ARC08-01`; certi dossier puntano al proprio statblocco e certi statblocchi al
+proprio dossier; due schede registrano lo **stato finale di canone** di un PNG
+morto e rimandano ai numeri storici del modulo.
+
+Si marcano come le non-creature, **ma con una differenza**: il rimando deve dire
+*dove*, e il controllo va a vedere che quel posto esista.
+
+```markdown
+# Re Thorek Hammerfist [RIMANDO]
+**Key stats**: → `08_.../ARC08-01-GUIDA-DM.md` §PNG Alleati. NON duplicare.
+```
+
+⚠️ È il marcatore più facile da abusare — basta dire «i numeri stanno altrove» e
+nessuno controlla. Perciò `extract_statblocks --check` **controlla**: un rimando
+senza bersaglio, o con un bersaglio che non esiste, fa uscire il gate rosso.
+
+---
+
+## 6-ter. Costruire una creatura che non c'è
+
+`suggest_encounter` **pesca** dal catalogo. Quando serve qualcosa che nel
+catalogo non c'è, `genera_creatura` la **costruisce** dalle tabelle
+([ADR-0034](../../plans/adr/ADR-0034-generare-dalle-tabelle.md)).
+
+```bash
+# un bruto di GS 7, umanoide, taglia media
+python3 scripts/genera_creatura.py --gs 7 --tipo umanoide --ruolo bruto
+
+# lo stesso, ma più cattivo di quanto il GS prometta
+python3 scripts/genera_creatura.py --gs 7 --ruolo bruto --piu-cattivi
+
+# un PNG con livelli di classe: gli incantesimi vengono dalle tabelle SRD
+python3 scripts/genera_creatura.py --gs 9 --ruolo artigliere --classe mago:9
+
+# tre proposte riproducibili, in una cartella di lavoro
+python3 scripts/genera_creatura.py --gs 5 --quanti 3 --seed 42 --in /tmp/bozze
+```
+
+**I sei ruoli** — bruto, schermagliatore, tiratore, comandante, controllore,
+artigliere — non decidono solo i numeri: ognuno porta un **talento firma**, una
+**tattica in una riga** e una **debolezza sfruttabile**. Quest'ultima è la parte
+che conta: senza, esce un mostro intercambiabile, e un mostro intercambiabile te
+lo scrivi prima da solo che a leggerlo.
+
+**`--piu-cattivi`** applica il template *Advanced* di Pathfinder 1e — +4 a tutte
+le caratteristiche, +2 di armatura naturale, +2 su tutti i tiri — **senza alzare
+il GS**. Il template vale GS +1: la creatura è venduta come GS *n* e picchia come
+GS *n+1*, e **lo dichiara di sé** in una voce del blocco. È una riga sola da
+disfare se al tavolo è troppo.
+
+**Dove finisce.** A schermo, o in una cartella con `--in`. **Mai dentro
+`Bestiario/`**: il tool si rifiuta, e ti dice perché. Nel canone copi tu, dopo
+aver letto — è lo stesso confine di `derive_statblocks`.
+
+⚠️ **Quando NON usarlo.** Se nel catalogo c'è già qualcosa di simile,
+**potenzia** quella (skill `npc-villain-boosting`) invece di generare un
+doppione. Se la creatura ha un ruolo nella trama, **scrivila a mano**: il
+generatore al massimo ti dà l'ossatura. Il suo caso vero è l'**incontro di
+passaggio**.
+
+### Incontri che non si ripetono
+
+`suggest_encounter` può pescare **in parte** dal generatore, così due sessioni
+non danno mai lo stesso incontro:
+
+```bash
+python3 scripts/suggest_encounter.py --el 9 --con-generatore
+python3 scripts/suggest_encounter.py --el 9 --con-generatore --piu-cattivi
+```
+
+Una creatura generata entra in ogni proposta e il resto resta pescato dal
+Bestiario. I blocchi delle generate sono stampati per intero in fondo, col conto
+aperto. `--piu-cattivi` tocca **solo** la parte generata: i mostri veri del
+catalogo restano quelli che sono.
+
+### Quando una scheda NON è una creatura
+
+Il Bestiario contiene anche cose che una creatura non sono: un organo collegiale,
+una popolazione, un'ondata di combattimento di massa che è un **aggregato** di
+altre schede, un dossier che punta agli statblocchi che vivono altrove. Quelle
+**non devono avere un blocco**, e forzarcelo vorrebbe dire inventare un mostro
+che non esiste.
+
+Si marcano nel titolo, **con la ragione scritta sotto**:
+
+```markdown
+# Il Consiglio di Rethmar [NON-CREATURA]
+
+> **Non è una creatura** (ADR-0033): è un organo collegiale di sette seggi.
+> Gli statblocchi dei singoli consiglieri stanno nelle loro schede.
+```
+
+Da lì in poi la scheda **esce dal debito di migrazione** e **dal catalogo dei
+mostri** — così `suggest_encounter` non può proporti un consiglio comunale come
+incontro. Non è un'esenzione silenziosa: la ragione si legge nel file.
+
+---
+
 ## 7. Aggiungere un mostro: la procedura completa
 
 1. **Cerca prima**: `grep -ril "<nome>" Bestiario/` — c'è già qualcosa di simile?
@@ -191,6 +335,11 @@ ottenuto avanzando il razorfiend CR 9).
 
 Il file nuovo, se lo crei, segue comunque §2-§3 — e il vecchio **resta**:
 la truppa d'ondata e l'élite convivono.
+
+**E il generatore?** Serve per il caso opposto: quando nel catalogo **non c'è
+niente di simile**. Se qualcosa c'è, potenziare è quasi sempre meglio — la
+creatura ha già un nome, una fazione e una storia, e il generatore quelle non
+te le dà (§6-ter).
 
 ---
 

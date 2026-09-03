@@ -1,4 +1,4 @@
-# Signore Ventolesto
+# Signore Ventolesto [RIMANDO]
 **Role**: ally (cacciatore aereo alpha, Arco 08)
 **Status**: alive; **parte dopo Hammerfist** (può tornare, D14)
 **Location**: cieli sopra Hammerfist (Sessione 4) → nord (dopo la battaglia)

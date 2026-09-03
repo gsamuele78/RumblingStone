@@ -3,250 +3,218 @@
   "description": "Fonte di verita' machine-readable dei tool del repo RumblingStone. Ogni voce rispetta scripts/schemas/tool_manifest.schema.json. Rigenera gli artefatti derivati con: python3 scripts/tools_manifest.py --emit-all",
   "tools": [
     {
-      "id": "suggest_encounter",
-      "path": "scripts/suggest_encounter.py",
-      "category": "A-session-prep",
+      "id": "binari",
+      "path": "scripts/binari.py",
+      "category": "lib",
       "language": "python",
-      "invocation": "python3 scripts/suggest_encounter.py",
-      "summary": "Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'.",
+      "invocation": "python3 scripts/binari.py",
+      "summary": "Le dipendenze binarie accettate con un ADR (typst — ADR-0020; pdfcpu — ADR-0027) e la regola di degradazione pulita che le governa: se il binario manca, si stampa come installarlo e si esce con 2 PRIMA di aprire qualunque file di destinazione, invece di fallire a meta' lasciando un PDF troncato. Ogni voce dichiara anche il ripiego, cioe' cosa resta possibile senza. Eseguito da solo, elenca cosa c'e' e cosa manca.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
-      "args": [
-        {
-          "name": "--el",
-          "type": "int",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Encounter level bersaglio (obbligatorio salvo i comandi --list-*)."
-        },
-        {
-          "name": "--env",
-          "type": "str",
-          "required": false,
-          "default": "any",
-          "choices": null,
-          "repeatable": false,
-          "desc": "Ambiente (forest, cave, underdark, swamp, ...)."
-        },
-        {
-          "name": "--factions",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Lista fazioni separate da virgola."
-        },
-        {
-          "name": "--alliance",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Id alleanza canonica."
-        },
-        {
-          "name": "--inject-npc",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Nomi PNG (match per sottostringa), separati da virgola."
-        },
-        {
-          "name": "--wild",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Incontro wild senza loot strutturato."
-        },
-        {
-          "name": "--seed",
-          "type": "int",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Seed per output riproducibile."
-        },
-        {
-          "name": "--list-all",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Elenca fazioni/ambienti/PNG disponibili."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "scripts/monster_catalog.yaml",
-          "kind": "yaml",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "scripts/monster_catalog.custom.yaml",
-          "kind": "yaml",
-          "required": false,
-          "schema": null
-        },
-        {
-          "path": "scripts/faction_alliances.yaml",
-          "kind": "yaml",
-          "required": true,
-          "schema": null
-        }
-      ],
+      "args": [],
+      "inputs": [],
       "outputs": [
         {
           "path": "stdout",
-          "kind": "markdown",
+          "kind": "text",
           "overwrites": false,
           "generated_header": false,
           "schema": null
         }
       ],
       "exit_codes": {
-        "0": "ok",
-        "2": "errore uso (--el mancante o input non valido)",
-        "3": "nessuna proposta assemblabile",
-        "4": "incontro wild non assemblabile"
+        "0": "elenco stampato",
+        "2": "MANCA — usato da esigi(): dipendenza binaria assente, niente e' stato scritto"
       },
       "determinism": {
         "deterministic": true,
-        "seed_flag": "--seed",
-        "notes": "Con --seed identico l'output e' riproducibile."
+        "seed_flag": null,
+        "notes": "dipende solo dal PATH"
       },
       "side_effects": {
         "writes_canon": false,
         "git_commit": false,
         "network": false
       },
+      "idempotent": true
+    },
+    {
+      "id": "build-skills",
+      "path": "scripts/build-skills.sh",
+      "category": "F-skill-pipeline",
+      "language": "bash",
+      "invocation": "./scripts/build-skills.sh",
+      "summary": "Costruisce i pacchetti skill per-agente (compact.md/structured.yaml/machine.json) e li deploya in ~/.<agent>/skills/.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [
+        "bash",
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--no-deploy",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Solo build (per CI)."
+        },
+        {
+          "name": "--skill",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Costruisce una sola skill."
+        },
+        {
+          "name": "--measure",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report compressione."
+        },
+        {
+          "name": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Mostra cosa farebbe."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/*/SKILL.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/<skill>/*",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore build"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Deploya nelle dir utente ~/.<agent>/skills/ salvo --no-deploy."
+      },
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": "python scripts/suggest_encounter.py --help",
+      "ci_smoke": "./scripts/build-skills.sh --no-deploy",
       "tests": [],
       "docs": [
-        "scripts/README-automation.md"
+        "scripts/README.md"
       ]
     },
     {
-      "id": "suggest_loot",
-      "path": "scripts/suggest_loot.py",
-      "category": "A-session-prep",
+      "id": "build_booklet_html",
+      "path": "scripts/build_booklet_html.py",
+      "category": "D-materials",
       "language": "python",
-      "invocation": "python3 scripts/suggest_loot.py",
-      "summary": "Generatore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
+      "invocation": "python3 scripts/build_booklet_html.py MANIFEST.json",
+      "summary": "Booklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
       "args": [
         {
-          "name": "--el",
-          "type": "float",
-          "required": false,
+          "name": "manifest",
+          "type": "path",
+          "required": true,
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "EL bersaglio (se non si usa --from-encounter)."
+          "desc": "Manifest *.manifest.json del booklet (brand/title/chapters, percorsi relativi alla sua cartella)."
         },
         {
-          "name": "--from-encounter",
+          "name": "--out",
           "type": "path",
           "required": false,
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "File markdown prodotto da suggest_encounter."
+          "desc": "File HTML di output (default: campo 'out' del manifest o <stem>.html)."
         },
         {
-          "name": "--factions",
-          "type": "str",
+          "name": "--format",
+          "type": "choice",
           "required": false,
-          "default": null,
-          "choices": null,
+          "default": "html",
+          "choices": [
+            "html",
+            "hb",
+            "both"
+          ],
           "repeatable": false,
-          "desc": "Fazioni separate da virgola."
-        },
-        {
-          "name": "--pcs",
-          "type": "int",
-          "required": false,
-          "default": 4,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Numero di PG."
-        },
-        {
-          "name": "--wild",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Forza output wild/no-loot."
-        },
-        {
-          "name": "--seed",
-          "type": "int",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Seed riproducibile."
-        },
-        {
-          "name": "--all-proposals",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Loot per tutte le proposte del file."
+          "desc": "html = pagina autonoma; hb = .hb.md Homebrewery V3 (self-hosted/Docker via dm.py hype); both = entrambi (ADR-0013)."
         }
       ],
       "inputs": [
         {
-          "path": "scripts/loot_tables.yaml",
-          "kind": "yaml",
+          "path": "**/*.manifest.json",
+          "kind": "json",
           "required": true,
           "schema": null
         },
         {
-          "path": "scripts/magic_items_srd.yaml",
-          "kind": "yaml",
+          "path": "**/*.md (capitoli citati dal manifest)",
+          "kind": "markdown",
           "required": true,
           "schema": null
         }
       ],
       "outputs": [
         {
-          "path": "stdout",
-          "kind": "markdown",
-          "overwrites": false,
+          "path": "<manifest dir>/<out>.html",
+          "kind": "html",
+          "overwrites": true,
           "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<manifest dir>/<out>.hb.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
           "schema": null
         }
       ],
       "exit_codes": {
         "0": "ok",
-        "2": "errore uso (--el o --from-encounter mancante / file assente)",
-        "3": "nessuna proposta nel file"
+        "2": "manifest non trovato / errore d'uso"
       },
       "determinism": {
         "deterministic": true,
-        "seed_flag": "--seed",
-        "notes": "Con --seed output riproducibile."
+        "seed_flag": null,
+        "notes": "Output funzione pura di manifest+master; con Pillow installato le immagini >600 KB vengono ricompresse in JPEG (byte diversi ma contenuto identico)."
       },
       "side_effects": {
         "writes_canon": false,
@@ -256,87 +224,79 @@
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": "python scripts/suggest_loot.py --help",
+      "ci_smoke": "python scripts/build_booklet_html.py --help",
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
       ]
     },
     {
-      "id": "suggest_map",
-      "path": "scripts/suggest_map.py",
-      "category": "A-session-prep",
+      "id": "build_chapter_marks",
+      "path": "scripts/build_chapter_marks.py",
+      "category": "D-materials",
       "language": "python",
-      "invocation": "python3 scripts/suggest_map.py",
-      "summary": "Sceglie una griglia tattica ASCII (quadretti da 5 ft) da scripts/map_templates/*.yaml per ambiente/tipo.",
+      "invocation": "python3 scripts/build_chapter_marks.py --all",
+      "summary": "Genera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
       "args": [
         {
-          "name": "--env",
+          "name": "--serie",
           "type": "str",
+          "required": false,
+          "default": null,
+          "choices": [
+            "campagna",
+            "drappo"
+          ],
+          "repeatable": false,
+          "desc": "Quale serie generare."
+        },
+        {
+          "name": "-o/--out",
+          "type": "path",
           "required": false,
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "Filtro ambiente."
+          "desc": "Cartella di destinazione (default: quella canonica della serie)."
         },
         {
-          "name": "--type",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Filtro tipo (ambush, corridor, arena, boss-lair, ...)."
-        },
-        {
-          "name": "--name",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Id esatto del template (nome file senza .yaml)."
-        },
-        {
-          "name": "--list",
+          "name": "--all",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Elenca i template disponibili."
+          "desc": "Entrambe le serie, nei posti canonici."
         }
       ],
-      "inputs": [
-        {
-          "path": "scripts/map_templates/*.yaml",
-          "kind": "yaml",
-          "required": true,
-          "schema": null
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
-          "path": "stdout",
-          "kind": "markdown",
-          "overwrites": false,
+          "path": "STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/tavole/fregi/fregio-*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "docs/assets/fregi/fregio-*.svg",
+          "kind": "svg",
+          "overwrites": true,
           "generated_header": false,
           "schema": null
         }
       ],
       "exit_codes": {
         "0": "ok",
-        "2": "errore uso",
-        "3": "template non trovato per --name",
-        "4": "nessun match per i filtri"
+        "2": "errore uso (né --serie né --all)"
       },
       "determinism": {
         "deterministic": true,
         "seed_flag": null,
-        "notes": "Selezione deterministica dai template."
+        "notes": "Disegni statici: la rigenerazione è byte-identica."
       },
       "side_effects": {
         "writes_canon": false,
@@ -346,10 +306,321 @@
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": "python scripts/suggest_map.py --help",
+      "ci_smoke": "python scripts/build_chapter_marks.py --help",
+      "tests": [],
+      "docs": [
+        "docs/guides/GUIDA-BOOKLET-E-PDF.md"
+      ]
+    },
+    {
+      "id": "build_image_derivatives",
+      "path": "scripts/build_image_derivatives.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/build_image_derivatives.py <cartella>",
+      "summary": "Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "cartella",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella dei master PNG."
+        },
+        {
+          "name": "--max",
+          "type": "int",
+          "required": false,
+          "default": 1400,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Lato lungo per ritratti e copertina."
+        },
+        {
+          "name": "--quality",
+          "type": "int",
+          "required": false,
+          "default": 88,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Qualità JPEG."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<cartella>/*.png",
+          "kind": "png",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<cartella>/web/*.jpg",
+          "kind": "png",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Pillow assente (dice come installarlo)",
+        "2": "cartella mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stessi master e stessi parametri: stesse derivate."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/build_image_derivatives.py --help",
+      "tests": [],
+      "docs": [
+        "docs/guides/GUIDA-IMMAGINI.md"
+      ]
+    },
+    {
+      "id": "build_monster_catalog",
+      "path": "scripts/build_monster_catalog.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/build_monster_catalog.py",
+      "summary": "Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dry-run: mostra il diff, non scrive."
+        },
+        {
+          "name": "-o/--output",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Percorso del catalogo (default: scripts/monster_catalog.yaml)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/monster_catalog.yaml",
+          "kind": "yaml",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "diff presente (con --check)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Scansione ordinata."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/build_monster_catalog.py --help",
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "campaign_branch",
+      "path": "scripts/campaign_branch.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/campaign_branch.py",
+      "summary": "Guardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "status|guard|ensure",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "status",
+            "guard",
+            "ensure"
+          ],
+          "repeatable": false,
+          "desc": "status = diagnosi; guard = exit 1 se il canone non e' scrivibile; ensure = crea/passa al branch."
+        },
+        {
+          "name": "--group",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(ensure) nome gruppo la prima volta."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/group.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "exit-code",
+          "kind": "exit-code",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok / canone scrivibile",
+        "1": "canone non scrivibile qui (guard)",
+        "2": "errore uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "ensure puo' creare/cambiare branch git."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/campaign_branch.py --help",
+      "tests": [
+        "scripts/tests/test_campaign_branch.py"
+      ],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "check_plans_discipline",
+      "path": "scripts/check_plans_discipline.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/check_plans_discipline.py",
+      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "--base",
+          "type": "str",
+          "required": false,
+          "default": "origin/main",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ref di confronto."
+        },
+        {
+          "name": "--head",
+          "type": "str",
+          "required": false,
+          "default": "HEAD",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ref da verificare."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "(git diff base..head)",
+          "kind": "git",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "CHANGELOG mancante per modifica strutturale"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/check_plans_discipline.py --help",
+      "tests": [],
+      "docs": [
+        "plans/adr/ADR-0009-gate-tracciatura-changelog-adr.md"
       ]
     },
     {
@@ -433,6 +704,748 @@
       "docs": [
         "scripts/README-automation.md",
         "scripts/examples/README.md"
+      ]
+    },
+    {
+      "id": "compress_skills",
+      "path": "scripts/compress_skills.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/compress_skills.py",
+      "summary": "Comprime le skill per gli agenti (riduzione token), producendo compact.md/structured.yaml/machine.json.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "optional_deps": [
+        "tiktoken"
+      ],
+      "args": [
+        {
+          "name": "--input/-i",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File .md o directory."
+        },
+        {
+          "name": "--output/-o",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Directory di output."
+        },
+        {
+          "name": "--measure/-m",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura il risparmio di token."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/<skill>/formats/*",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "scripts/README.md"
+      ]
+    },
+    {
+      "id": "converters/html-to-markdown",
+      "path": "converters/Html_to_markdown",
+      "category": "I-converters",
+      "language": "mixed",
+      "invocation": "(vedi converters/Html_to_markdown/README)",
+      "summary": "Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM.",
+      "stability": "external-toolchain",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [],
+      "inputs": [
+        {
+          "path": "*.html",
+          "kind": "html",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "*.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "converters/README.md"
+      ]
+    },
+    {
+      "id": "converters/image-to-webp",
+      "path": "converters/Image-to-webp",
+      "category": "I-converters",
+      "language": "bash",
+      "invocation": "converters/Image-to-webp/conver_webp_new.sh",
+      "summary": "Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM.",
+      "stability": "external-toolchain",
+      "stdlib_only": false,
+      "external_bins": [
+        "cwebp"
+      ],
+      "args": [],
+      "inputs": [
+        {
+          "path": "*.png|*.jpg",
+          "kind": "image",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "*.webp",
+          "kind": "webp",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "cwebp puo' variare fra versioni."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "converters/Image-to-webp/README.md"
+      ]
+    },
+    {
+      "id": "converters/pdf-to-md-engine",
+      "path": "converters/pdf-to-md-engine",
+      "category": "I-converters",
+      "language": "mixed",
+      "invocation": "(vedi converters/pdf-to-md-engine/README)",
+      "summary": "Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM.",
+      "stability": "external-toolchain",
+      "stdlib_only": false,
+      "external_bins": [
+        "pandoc"
+      ],
+      "args": [],
+      "inputs": [
+        {
+          "path": "*.pdf",
+          "kind": "pdf",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "*.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "Dipende dalla toolchain esterna."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "converters/README.md"
+      ]
+    },
+    {
+      "id": "derive_statblocks",
+      "path": "scripts/derive_statblocks.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/derive_statblocks.py",
+      "summary": "PROPONE i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA, che ANNOTA la proposta quando e' fuori bersaglio invece di sopprimerla. ADR-0033. Scrive un campo solo, con --apply-ts: i TIRI SALVEZZA, e solo dove GS, CA e pf li ha gia' scritti il DM — la base dei TS e' esatta dalle tabelle e l'unica incertezza e' il modificatore di caratteristica, che viene dalla matrice dichiarata. CA e pf non si scrivono mai: dipendono da equipaggiamento e Costituzione, che da una scheda in prosa non si leggono.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Schede da esaminare (default: tutto il Bestiario)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rapporto machine-readable."
+        },
+        {
+          "name": "--apply-ts",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive SOLO i TS, e solo dove GS, CA e pf sono già letti dalla prosa."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto stampato (o TS scritti con --apply-ts)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "dm",
+      "path": "scripts/dm.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/dm.py",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "prep",
+            "post",
+            "session",
+            "recap",
+            "handout",
+            "maps",
+            "hype",
+            "dossier",
+            "skills",
+            "doctor",
+            "volume"
+          ],
+          "repeatable": false,
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "(dipende dal sottocomando)",
+          "kind": "text",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "(dipende dal sottocomando)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore del sottocomando",
+        "2": "errore uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Eredita il determinismo dello script sottostante."
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": true,
+        "network": false,
+        "notes": "Dipende dal sottocomando (post/session possono scrivere canone e committare)."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/dm.py doctor --ci",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "dm_dossier",
+      "path": "scripts/dm_dossier.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/dm_dossier.py",
+      "summary": "SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "-o/--output",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File di output (default: campaign/DM-DOSSIER.hb.md)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/DM-DOSSIER.hb.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "state.md assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Contenuto estratto alla lettera da state.md; l'header stampa la data di generazione (timbro wall-clock)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/dm_dossier.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "dmcore",
+      "path": "scripts/dmcore",
+      "category": "lib",
+      "language": "library",
+      "invocation": "import dmcore",
+      "summary": "Libreria condivisa ADR-0007: regions (marker auto:), gitio (guardia branch/commit), config (group.yaml), visibility (policy per-PG). Non e' un CLI.",
+      "stability": "library",
+      "stdlib_only": true,
+      "external_bins": [
+        "git"
+      ],
+      "args": [],
+      "inputs": [],
+      "outputs": [],
+      "exit_codes": {},
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [
+        "scripts/tests/test_regions.py",
+        "scripts/tests/test_visibility.py"
+      ],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "export_booklet_pdf",
+      "path": "scripts/export_booklet_pdf.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/export_booklet_pdf.py MANIFEST.json",
+      "summary": "PDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "chromium|google-chrome (headless, cercato in PATH/$BOOKLET_CHROME//opt/pw-browsers)"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Manifest *.manifest.json del booklet (lo stesso di build_booklet_html)."
+        },
+        {
+          "name": "--pane",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "ID scheda da esportare (es. c2 c3); default: tutte le pagine tag:player."
+        },
+        {
+          "name": "--all",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esporta tutte le schede, copertina inclusa."
+        },
+        {
+          "name": "--list",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca le schede del booklet con i loro ID."
+        },
+        {
+          "name": "--outdir",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella di output (default: <manifest dir>/pdf/, gitignored via *.pdf)."
+        },
+        {
+          "name": "--browser",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Binario Chromium/Chrome da usare."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "HTML generato dal manifest (build_booklet_html)",
+          "kind": "html",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<manifest dir>/pdf/NN-<titolo>.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "browser non trovato / export fallito",
+        "2": "uso errato / file mancanti"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "La resa dipende dalla versione di Chromium (font/antialiasing); il contenuto è deterministico dall'HTML."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/export_booklet_pdf.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md",
+        "plans/adr/ADR-0013-standard-generazione-booklet-sessioni.md"
+      ]
+    },
+    {
+      "id": "export_booklet_typst",
+      "path": "scripts/export_booklet_typst.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/export_booklet_typst.py MANIFEST.json --all",
+      "summary": "Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il manifest del booklet (lo stesso della catena HTML)."
+        },
+        {
+          "name": "--all",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutti i capitoli, ⚠ DM inclusi (default: solo ✉ player)."
+        },
+        {
+          "name": "--keep-typ",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Conserva il sorgente .typ generato (di norma è temporaneo)."
+        },
+        {
+          "name": "--list",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca i capitoli risolti ed esci."
+        },
+        {
+          "name": "--per-scheda",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "In piu', un PDF per ogni scheda in schede/ (senza frontespizio): da mandare a un giocatore solo."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<manifest>.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/typst/tema-rumblingstone.typ",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/typst/scheda-pg.typ",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/PREGEN-*.md, **/FASCICOLO-*.md (capitoli \"layout\": \"schede\")",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<cartella del manifest>/<nome>-STAMPA.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cartella del manifest>/schede/<nome>-<N>-<pg>.pdf",
+          "kind": "pdf",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "binario typst assente, compilazione fallita o master delle schede illeggibile",
+        "2": "manifest mancante, uso errato, o --per-scheda senza capitoli \"layout\": \"schede\""
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "A parità di master e tema, il PDF è riproducibile."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/export_booklet_typst.py --help",
+      "tests": [
+        "scripts/tests/test_schede.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "docs/guides/GUIDA-FLUSSO-LOCALE.md",
+        "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
+        "scripts/README-automation.md"
       ]
     },
     {
@@ -654,6 +1667,545 @@
       ]
     },
     {
+      "id": "extract_scene_prompts",
+      "path": "scripts/extract_scene_prompts.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/extract_scene_prompts.py <arco>",
+      "summary": "Estrae le scene illustrabili di un arco (read-aloud + copertura immagini) e genera lo scheletro del file dei prompt immagine (ADR-0015); rigenerazione idempotente che non perde le schede gia compilate.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "arc",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella dell'arco (es. \"07_il Portale Della Forgia Eterna\")."
+        },
+        {
+          "name": "-o/--output",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File di output (default: <arco>/Immagini/PROMPT-IMMAGINI-<TAG>.md)."
+        },
+        {
+          "name": "--list",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca soltanto le scene trovate, senza scrivere."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<arco>/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "<arco>/Immagini/",
+          "kind": "directory",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<arco>/Immagini/PROMPT-IMMAGINI-<TAG>.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "nessuna scena trovata",
+        "2": "uso errato / arco assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Ordine file+riga deterministico; a parita di contenuto la rigenerazione e byte-identica (le schede compilate sono conservate)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/extract_scene_prompts.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md",
+        "plans/adr/ADR-0015-standard-prompt-immagine.md"
+      ]
+    },
+    {
+      "id": "extract_statblocks",
+      "path": "scripts/extract_statblocks.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/extract_statblocks.py --check",
+      "summary": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Schede da trattare (default: tutto il Bestiario)."
+        },
+        {
+          "name": "--apply",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive il blocco nelle schede dove l'estrazione è completa."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica i blocchi già presenti; non scrive niente. È il gate CI."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rapporto machine-readable."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": "scripts/schemas/statblock.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "Bestiario/**/*.md (solo con --apply)",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/statblock.schema.json"
+        },
+        {
+          "path": "stdout (o JSON con --json)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "--check ha trovato blocchi rotti o GS incoerenti",
+        "2": "uso errato o scheda inesistente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Ordine alfabetico; l'inserimento del blocco è idempotente."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/statblock.schema.json",
+      "produces_schema": "scripts/schemas/statblock.schema.json",
+      "ci_smoke": "python scripts/extract_statblocks.py --help",
+      "tests": [
+        "scripts/tests/test_statblock.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-BESTIARIO.md",
+        "plans/adr/ADR-0021-statblocchi-machine-readable.md"
+      ]
+    },
+    {
+      "id": "genera_creatura",
+      "path": "scripts/genera_creatura.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/genera_creatura.py --gs 7",
+      "summary": "COSTRUISCE una creatura o un PNG che nel Bestiario non c'e', da (GS + tipo + taglia + ruolo). Le tabelle SRD 3.5 danno la forma (tipo -> dado dei DV, BAB, TS buoni; taglia -> modificatori; tabelle di classe -> incantesimi al giorno e CD) e il bersaglio per GS da' il livello; il risultato e' collaudato contro mostri veri del SRD. --piu-cattivi applica il template Advanced di Pathfinder 1e SENZA alzare il GS, cioe' la creatura picchia come un GS+1 e lo dichiara. Non scrive MAI dentro Bestiario/: stampa, o scrive in una cartella di lavoro, e nel canone copia il DM (ADR-0033). Va usato per cio' che manca: se nel catalogo c'e' gia' qualcosa di simile, si potenzia invece di generare un doppione.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--gs",
+          "type": "int",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Grado di sfida bersaglio, da 1 a 20."
+        },
+        {
+          "name": "--tipo",
+          "type": "str",
+          "required": false,
+          "default": "humanoid",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tipo di creatura SRD (umanoide, gigante, non-morto, esterno...)."
+        },
+        {
+          "name": "--taglia",
+          "type": "str",
+          "required": false,
+          "default": "medium",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Taglia SRD."
+        },
+        {
+          "name": "--ruolo",
+          "type": "choice",
+          "required": false,
+          "default": "bruto",
+          "choices": [
+            "artigliere",
+            "bruto",
+            "comandante",
+            "controllore",
+            "schermagliatore",
+            "tiratore"
+          ],
+          "repeatable": false,
+          "desc": "Come combatte."
+        },
+        {
+          "name": "--dv",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dadi vita; se omesso li sceglie la regola pratica DV~GS."
+        },
+        {
+          "name": "--classe",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Livelli di classe, es. «mago:9». Con questo il GS viene dai livelli."
+        },
+        {
+          "name": "--elite",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Forza la matrice elite (15,14,13,12,10,8)."
+        },
+        {
+          "name": "--standard",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Forza la matrice standard (13,12,11,10,9,8)."
+        },
+        {
+          "name": "--piu-cattivi",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Template Advanced PF1e senza alzare il GS: piu' duro di quanto il GS prometta, e lo dice."
+        },
+        {
+          "name": "--quanti",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Quante creature generare."
+        },
+        {
+          "name": "--seed",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Per riprodurre la stessa creatura."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Blocco e conto in JSON."
+        },
+        {
+          "name": "--in",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella di lavoro in cui scrivere. Mai dentro Bestiario/: si rifiuta."
+        }
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "creatura generata",
+        "2": "parametri fuori dominio (GS, tipo, classe) o scrittura dentro Bestiario/ rifiutata"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seed",
+        "notes": "A parita' di seed e parametri il blocco e' identico; senza seed cambia solo il carattere (talento, tattica, debolezza), mai i numeri."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "hype_homebrew",
+      "path": "scripts/hype_homebrew.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/hype_homebrew.py",
+      "summary": "Impagina recap o handout in layout Homebrewery V3, senza mai duplicare il filtro spoiler di session_recap.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--recap",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File recap (default: l'ultimo)."
+        },
+        {
+          "name": "--pg",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Veste dell'ultimo recap per-PG."
+        },
+        {
+          "name": "--handout",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tipo di handout da impaginare."
+        },
+        {
+          "name": "--da",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(handout) file sorgente."
+        },
+        {
+          "name": "--sezione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(handout) sezione da estrarre."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/recaps/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "campaign/templates/homebrew/*.hb.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/recaps/homebrew/*.hb.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "sorgente mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/hype_homebrew.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "import_html_module",
+      "path": "scripts/import_html_module.py",
+      "category": "I-converters",
+      "language": "python",
+      "invocation": "python3 scripts/import_html_module.py <cartella-modulo>",
+      "summary": "Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "modulo",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella del modulo HTML da convertire."
+        },
+        {
+          "name": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive niente."
+        },
+        {
+          "name": "--force",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sovrascrive master markdown gia' esistenti (li perde)."
+        },
+        {
+          "name": "--manifest",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive anche un manifest di partenza."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "10-stand-alone/*/*.html",
+          "kind": "html",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "10-stand-alone/*/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "10-stand-alone/*/tavole/*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "convertito",
+        "1": "cartella assente, nessun HTML, o master gia' esistenti senza --force"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "stesso HTML, stesso markdown e stesse tavole"
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": false
+    },
+    {
       "id": "import_ultraclear",
       "path": "scripts/import_ultraclear.py",
       "category": "B-maps-pipeline",
@@ -841,6 +2393,448 @@
       ]
     },
     {
+      "id": "index_skills",
+      "path": "scripts/index_skills.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/index_skills.py",
+      "summary": "Genera index.json per una skill compressa (per retrieval selettivo).",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--input/-i",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Directory skill originale."
+        },
+        {
+          "name": "--build/-b",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Directory di build (output compressi)."
+        },
+        {
+          "name": "--output/-o",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Percorso index.json."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/<skill>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "build/<skill>/index.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "scripts/README.md"
+      ]
+    },
+    {
+      "id": "install-git-hooks",
+      "path": "scripts/install-git-hooks.sh",
+      "category": "G-orchestration-governance",
+      "language": "bash",
+      "invocation": "./scripts/install-git-hooks.sh",
+      "summary": "Installa gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009).",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [
+        "bash",
+        "git"
+      ],
+      "args": [],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": ".git/hooks/*",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "mcp_server",
+      "path": "scripts/mcp_server.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/mcp_server.py",
+      "summary": "Espone i tool del repo a un client MCP: JSON-RPC su stdio, stdlib, catalogo preso da questo stesso manifest (ADR-0012, ADR-0030). E' una superficie d'esecuzione e si difende come tale: solo allowlist, mai una shell, argomenti validati sullo schema prima di partire, percorsi confinati sotto la radice del repo, timeout e tetto all'output. I tool che scrivono contenuto o fanno commit sono ELENCATI ma non partono senza --allow-write, perche' il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Un'uscita diversa da zero e' un risultato tradotto con gli exit_codes del manifest, non un errore di protocollo.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--allow-write",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Abilita i tool che scrivono contenuto o fanno commit."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Diagnostica su stderr (mai su stdout)."
+        },
+        {
+          "name": "--timeout",
+          "type": "int",
+          "required": false,
+          "default": 120,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Secondi per chiamata."
+        },
+        {
+          "name": "--self-check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Verifica catalogo, schemi e righe di comando; non parla il protocollo."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/tools.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "stdin chiuso, uscita pulita (o --self-check senza guasti)",
+        "1": "--self-check: almeno un tool non costruisce una riga valida"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "il catalogo dipende solo dal manifest"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "measure_tokens",
+      "path": "scripts/measure_tokens.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/measure_tokens.py",
+      "summary": "Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "optional_deps": [
+        "tiktoken"
+      ],
+      "args": [
+        {
+          "name": "--tokenizer",
+          "type": "choice",
+          "required": false,
+          "default": "chars/4",
+          "choices": [
+            "chars/4",
+            "tiktoken"
+          ],
+          "repeatable": false,
+          "desc": "Metodo di conteggio."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Emette JSON invece della tabella."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "scripts/README.md"
+      ]
+    },
+    {
+      "id": "new-campaign-group",
+      "path": "scripts/new-campaign-group.sh",
+      "category": "G-orchestration-governance",
+      "language": "bash",
+      "invocation": "./scripts/new-campaign-group.sh",
+      "summary": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [
+        "bash",
+        "git"
+      ],
+      "args": [
+        {
+          "name": "new-group-name",
+          "type": "str",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del nuovo gruppo."
+        },
+        {
+          "name": "--backup-current",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del gruppo corrente da salvare."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/templates/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "git-commit",
+          "kind": "git-commit",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errore"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": true,
+        "git_commit": true,
+        "network": false,
+        "notes": "Crea un nuovo branch campaign-group-<nome>."
+      },
+      "idempotent": false,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "next_session",
+      "path": "scripts/next_session.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/next_session.py",
+      "summary": "Aggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--last-n",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Quante sessioni recenti considerare."
+        },
+        {
+          "name": "--hype",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Veste Homebrewery V3."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/state.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "campaign/sessions/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/next/brief-*-DM.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "campaign/next/teaser-*-PLAYERS.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "input insufficiente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Aggregatore puro; nomi file e intestazioni includono la data corrente (timbro wall-clock)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive artefatti generati sotto next/, non canone."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/next_session.py --help",
+      "tests": [
+        "scripts/tests/test_next_session.py"
+      ],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
       "id": "render_map_svg",
       "path": "scripts/render_map_svg.py",
       "category": "B-maps-pipeline",
@@ -939,168 +2933,12 @@
       ]
     },
     {
-      "id": "validate_maps",
-      "path": "scripts/validate_maps.py",
-      "category": "B-maps-pipeline",
+      "id": "session_recap",
+      "path": "scripts/session_recap.py",
+      "category": "D-materials",
       "language": "python",
-      "invocation": "python3 scripts/validate_maps.py",
-      "summary": "Gate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti).",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--repo-root",
-          "type": "path",
-          "required": false,
-          "default": ".",
-          "choices": null,
-          "repeatable": false,
-          "desc": "Root del repo."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Emette il report in JSON (opt-in)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "**/*MAPPE*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "**/rendered/*.svg",
-          "kind": "svg",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "stdout",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "coerente",
-        "1": "violazioni (SVG out-of-sync o malformato)"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_maps.py",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "campaign_branch",
-      "path": "scripts/campaign_branch.py",
-      "category": "C-post-session-canon",
-      "language": "python",
-      "invocation": "python3 scripts/campaign_branch.py",
-      "summary": "Guardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007).",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [
-        "git"
-      ],
-      "args": [
-        {
-          "name": "status|guard|ensure",
-          "type": "subcommand",
-          "required": true,
-          "default": null,
-          "choices": [
-            "status",
-            "guard",
-            "ensure"
-          ],
-          "repeatable": false,
-          "desc": "status = diagnosi; guard = exit 1 se il canone non e' scrivibile; ensure = crea/passa al branch."
-        },
-        {
-          "name": "--group",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(ensure) nome gruppo la prima volta."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "campaign/group.yaml",
-          "kind": "yaml",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "exit-code",
-          "kind": "exit-code",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok / canone scrivibile",
-        "1": "canone non scrivibile qui (guard)",
-        "2": "errore uso"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false,
-        "notes": "ensure puo' creare/cambiare branch git."
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/campaign_branch.py --help",
-      "tests": [
-        "scripts/tests/test_campaign_branch.py"
-      ],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "next_session",
-      "path": "scripts/next_session.py",
-      "category": "C-post-session-canon",
-      "language": "python",
-      "invocation": "python3 scripts/next_session.py",
-      "summary": "Aggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md).",
+      "invocation": "python3 scripts/session_recap.py",
+      "summary": "Recap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -1112,42 +2950,62 @@
           "default": 1,
           "choices": null,
           "repeatable": false,
-          "desc": "Quante sessioni recenti considerare."
+          "desc": "Quante sessioni includere."
         },
         {
-          "name": "--hype",
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File di output."
+        },
+        {
+          "name": "--pdf",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Veste Homebrewery V3."
+          "desc": "Produce anche il PDF."
+        },
+        {
+          "name": "--seed",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seed riproducibile."
+        },
+        {
+          "name": "--pg",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Recap personale per un PG (blocchi ## Split suoi)."
         }
       ],
       "inputs": [
-        {
-          "path": "campaign/state.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        },
         {
           "path": "campaign/sessions/*.md",
           "kind": "markdown",
           "required": true,
           "schema": null
+        },
+        {
+          "path": "campaign/state.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
         }
       ],
       "outputs": [
         {
-          "path": "campaign/next/brief-*-DM.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        },
-        {
-          "path": "campaign/next/teaser-*-PLAYERS.md",
+          "path": "campaign/recaps/recap-YYYY-MM-DD.md",
           "kind": "markdown",
           "overwrites": true,
           "generated_header": true,
@@ -1156,25 +3014,24 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "1": "input insufficiente"
+        "1": "nessun session log"
       },
       "determinism": {
         "deterministic": true,
-        "seed_flag": null,
-        "notes": "Aggregatore puro; nomi file e intestazioni includono la data corrente (timbro wall-clock)."
+        "seed_flag": "--seed",
+        "notes": "Con --seed il corpo e' riproducibile; il nome file e l'header includono la data corrente."
       },
       "side_effects": {
         "writes_canon": false,
         "git_commit": false,
-        "network": false,
-        "notes": "Scrive artefatti generati sotto next/, non canone."
+        "network": false
       },
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": "python scripts/next_session.py --help",
+      "ci_smoke": "python scripts/session_recap.py --help",
       "tests": [
-        "scripts/tests/test_next_session.py"
+        "scripts/tests/test_session_recap_pg.py"
       ],
       "docs": [
         "scripts/README-automation.md"
@@ -1460,778 +3317,216 @@
       ]
     },
     {
-      "id": "update_xp",
-      "path": "scripts/update_xp.py",
-      "category": "C-post-session-canon",
+      "id": "suggest_encounter",
+      "path": "scripts/suggest_encounter.py",
+      "category": "A-session-prep",
       "language": "python",
-      "invocation": "python3 scripts/update_xp.py",
-      "summary": "Registro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md.",
+      "invocation": "python3 scripts/suggest_encounter.py",
+      "summary": "Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
       "args": [
         {
-          "name": "--check",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Dry-run: stampa il diff, non scrive."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "campaign/sessions/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "campaign/pg/xp-ledger.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false,
-        "notes": "xp-ledger e' un file derivato, non canone editato a mano."
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/update_xp.py --check",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "build_booklet_html",
-      "path": "scripts/build_booklet_html.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/build_booklet_html.py MANIFEST.json",
-      "summary": "Booklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003).",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "manifest",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Manifest *.manifest.json del booklet (brand/title/chapters, percorsi relativi alla sua cartella)."
-        },
-        {
-          "name": "--out",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "File HTML di output (default: campo 'out' del manifest o <stem>.html)."
-        },
-        {
-          "name": "--format",
-          "type": "choice",
-          "required": false,
-          "default": "html",
-          "choices": [
-            "html",
-            "hb",
-            "both"
-          ],
-          "repeatable": false,
-          "desc": "html = pagina autonoma; hb = .hb.md Homebrewery V3 (self-hosted/Docker via dm.py hype); both = entrambi (ADR-0013)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "**/*.manifest.json",
-          "kind": "json",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "**/*.md (capitoli citati dal manifest)",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<manifest dir>/<out>.html",
-          "kind": "html",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "<manifest dir>/<out>.hb.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "2": "manifest non trovato / errore d'uso"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Output funzione pura di manifest+master; con Pillow installato le immagini >600 KB vengono ricompresse in JPEG (byte diversi ma contenuto identico)."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/build_booklet_html.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "build_chapter_marks",
-      "path": "scripts/build_chapter_marks.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/build_chapter_marks.py --all",
-      "summary": "Genera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--serie",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": [
-            "campagna",
-            "drappo"
-          ],
-          "repeatable": false,
-          "desc": "Quale serie generare."
-        },
-        {
-          "name": "-o/--out",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Cartella di destinazione (default: quella canonica della serie)."
-        },
-        {
-          "name": "--all",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Entrambe le serie, nei posti canonici."
-        }
-      ],
-      "inputs": [],
-      "outputs": [
-        {
-          "path": "STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/tavole/fregi/fregio-*.svg",
-          "kind": "svg",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "docs/assets/fregi/fregio-*.svg",
-          "kind": "svg",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "2": "errore uso (né --serie né --all)"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Disegni statici: la rigenerazione è byte-identica."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/build_chapter_marks.py --help",
-      "tests": [],
-      "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md"
-      ]
-    },
-    {
-      "id": "dm_dossier",
-      "path": "scripts/dm_dossier.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/dm_dossier.py",
-      "summary": "SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "-o/--output",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "File di output (default: campaign/DM-DOSSIER.hb.md)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "campaign/state.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "campaign/DM-DOSSIER.hb.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "state.md assente"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Contenuto estratto alla lettera da state.md; l'header stampa la data di generazione (timbro wall-clock)."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/dm_dossier.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "export_booklet_pdf",
-      "path": "scripts/export_booklet_pdf.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/export_booklet_pdf.py MANIFEST.json",
-      "summary": "PDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser).",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [
-        "chromium|google-chrome (headless, cercato in PATH/$BOOKLET_CHROME//opt/pw-browsers)"
-      ],
-      "args": [
-        {
-          "name": "manifest",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Manifest *.manifest.json del booklet (lo stesso di build_booklet_html)."
-        },
-        {
-          "name": "--pane",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": true,
-          "desc": "ID scheda da esportare (es. c2 c3); default: tutte le pagine tag:player."
-        },
-        {
-          "name": "--all",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Esporta tutte le schede, copertina inclusa."
-        },
-        {
-          "name": "--list",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Elenca le schede del booklet con i loro ID."
-        },
-        {
-          "name": "--outdir",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Cartella di output (default: <manifest dir>/pdf/, gitignored via *.pdf)."
-        },
-        {
-          "name": "--browser",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Binario Chromium/Chrome da usare."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "**/*.manifest.json",
-          "kind": "json",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "HTML generato dal manifest (build_booklet_html)",
-          "kind": "html",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<manifest dir>/pdf/NN-<titolo>.pdf",
-          "kind": "pdf",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "browser non trovato / export fallito",
-        "2": "uso errato / file mancanti"
-      },
-      "determinism": {
-        "deterministic": false,
-        "seed_flag": null,
-        "notes": "La resa dipende dalla versione di Chromium (font/antialiasing); il contenuto è deterministico dall'HTML."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/export_booklet_pdf.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md",
-        "plans/adr/ADR-0013-standard-generazione-booklet-sessioni.md"
-      ]
-    },
-    {
-      "id": "export_booklet_typst",
-      "path": "scripts/export_booklet_typst.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/export_booklet_typst.py MANIFEST.json --all",
-      "summary": "Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
-      "stability": "beta",
-      "stdlib_only": true,
-      "external_bins": [
-        "typst"
-      ],
-      "args": [
-        {
-          "name": "manifest",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Il manifest del booklet (lo stesso della catena HTML)."
-        },
-        {
-          "name": "--all",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Tutti i capitoli, ⚠ DM inclusi (default: solo ✉ player)."
-        },
-        {
-          "name": "--keep-typ",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Conserva il sorgente .typ generato (di norma è temporaneo)."
-        },
-        {
-          "name": "--list",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Elenca i capitoli risolti ed esci."
-        },
-        {
-          "name": "--per-scheda",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "In piu', un PDF per ogni scheda in schede/ (senza frontespizio): da mandare a un giocatore solo."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "<manifest>.manifest.json",
-          "kind": "json",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "scripts/typst/tema-rumblingstone.typ",
-          "kind": "text",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "scripts/typst/scheda-pg.typ",
-          "kind": "text",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "**/PREGEN-*.md, **/FASCICOLO-*.md (capitoli \"layout\": \"schede\")",
-          "kind": "markdown",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<cartella del manifest>/<nome>-STAMPA.pdf",
-          "kind": "pdf",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "<cartella del manifest>/schede/<nome>-<N>-<pg>.pdf",
-          "kind": "pdf",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "binario typst assente, compilazione fallita o master delle schede illeggibile",
-        "2": "manifest mancante, uso errato, o --per-scheda senza capitoli \"layout\": \"schede\""
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "A parità di master e tema, il PDF è riproducibile."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/export_booklet_typst.py --help",
-      "tests": [
-        "scripts/tests/test_schede.py"
-      ],
-      "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
-        "docs/guides/GUIDA-FLUSSO-LOCALE.md",
-        "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "extract_scene_prompts",
-      "path": "scripts/extract_scene_prompts.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/extract_scene_prompts.py <arco>",
-      "summary": "Estrae le scene illustrabili di un arco (read-aloud + copertura immagini) e genera lo scheletro del file dei prompt immagine (ADR-0015); rigenerazione idempotente che non perde le schede gia compilate.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "arc",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Cartella dell'arco (es. \"07_il Portale Della Forgia Eterna\")."
-        },
-        {
-          "name": "-o/--output",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "File di output (default: <arco>/Immagini/PROMPT-IMMAGINI-<TAG>.md)."
-        },
-        {
-          "name": "--list",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Elenca soltanto le scene trovate, senza scrivere."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "<arco>/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "<arco>/Immagini/",
-          "kind": "directory",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<arco>/Immagini/PROMPT-IMMAGINI-<TAG>.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "nessuna scena trovata",
-        "2": "uso errato / arco assente"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Ordine file+riga deterministico; a parita di contenuto la rigenerazione e byte-identica (le schede compilate sono conservate)."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/extract_scene_prompts.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md",
-        "plans/adr/ADR-0015-standard-prompt-immagine.md"
-      ]
-    },
-    {
-      "id": "hype_homebrew",
-      "path": "scripts/hype_homebrew.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/hype_homebrew.py",
-      "summary": "Impagina recap o handout in layout Homebrewery V3, senza mai duplicare il filtro spoiler di session_recap.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--recap",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "File recap (default: l'ultimo)."
-        },
-        {
-          "name": "--pg",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Veste dell'ultimo recap per-PG."
-        },
-        {
-          "name": "--handout",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Tipo di handout da impaginare."
-        },
-        {
-          "name": "--da",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(handout) file sorgente."
-        },
-        {
-          "name": "--sezione",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(handout) sezione da estrarre."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "campaign/recaps/*.md",
-          "kind": "markdown",
-          "required": false,
-          "schema": null
-        },
-        {
-          "path": "campaign/templates/homebrew/*.hb.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "campaign/recaps/homebrew/*.hb.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "sorgente mancante"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/hype_homebrew.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "session_recap",
-      "path": "scripts/session_recap.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/session_recap.py",
-      "summary": "Recap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--last-n",
+          "name": "--el",
           "type": "int",
           "required": false,
-          "default": 1,
+          "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "Quante sessioni includere."
+          "desc": "Encounter level bersaglio (obbligatorio salvo i comandi --list-*)."
         },
         {
-          "name": "--out",
-          "type": "path",
+          "name": "--env",
+          "type": "str",
+          "required": false,
+          "default": "any",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ambiente (forest, cave, underdark, swamp, ...)."
+        },
+        {
+          "name": "--factions",
+          "type": "str",
           "required": false,
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "File di output."
+          "desc": "Lista fazioni separate da virgola."
         },
         {
-          "name": "--pdf",
+          "name": "--alliance",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Id alleanza canonica."
+        },
+        {
+          "name": "--inject-npc",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nomi PNG (match per sottostringa), separati da virgola."
+        },
+        {
+          "name": "--wild",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Produce anche il PDF."
+          "desc": "Incontro wild senza loot strutturato."
+        },
+        {
+          "name": "--seed",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seed per output riproducibile."
+        },
+        {
+          "name": "--list-all",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca fazioni/ambienti/PNG disponibili."
+        },
+        {
+          "name": "--con-generatore",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Aggiunge al pool creature GENERATE dalle tabelle (genera_creatura.py) e ne forza una in ogni proposta, cosi' gli incontri non escono mai due volte uguali. Le creature generate non stanno nel Bestiario e non ci entrano da sole: sono stampate per intero col loro conto, e nel canone le copia il DM."
+        },
+        {
+          "name": "--piu-cattivi",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le sole creature generate prendono il template Advanced di Pathfinder 1e senza alzare il GS: piu' dure di quanto il GS prometta, e lo dichiarano. Non tocca i mostri veri del catalogo."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/monster_catalog.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/monster_catalog.custom.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/faction_alliances.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore uso (--el mancante o input non valido)",
+        "3": "nessuna proposta assemblabile",
+        "4": "incontro wild non assemblabile"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seed",
+        "notes": "Con --seed identico l'output e' riproducibile."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/suggest_encounter.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "suggest_loot",
+      "path": "scripts/suggest_loot.py",
+      "category": "A-session-prep",
+      "language": "python",
+      "invocation": "python3 scripts/suggest_loot.py",
+      "summary": "Generatore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--el",
+          "type": "float",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "EL bersaglio (se non si usa --from-encounter)."
+        },
+        {
+          "name": "--from-encounter",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "File markdown prodotto da suggest_encounter."
+        },
+        {
+          "name": "--factions",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Fazioni separate da virgola."
+        },
+        {
+          "name": "--pcs",
+          "type": "int",
+          "required": false,
+          "default": 4,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero di PG."
+        },
+        {
+          "name": "--wild",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Forza output wild/no-loot."
         },
         {
           "name": "--seed",
@@ -2243,46 +3538,47 @@
           "desc": "Seed riproducibile."
         },
         {
-          "name": "--pg",
-          "type": "str",
+          "name": "--all-proposals",
+          "type": "bool",
           "required": false,
-          "default": null,
+          "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Recap personale per un PG (blocchi ## Split suoi)."
+          "desc": "Loot per tutte le proposte del file."
         }
       ],
       "inputs": [
         {
-          "path": "campaign/sessions/*.md",
-          "kind": "markdown",
+          "path": "scripts/loot_tables.yaml",
+          "kind": "yaml",
           "required": true,
           "schema": null
         },
         {
-          "path": "campaign/state.md",
-          "kind": "markdown",
-          "required": false,
+          "path": "scripts/magic_items_srd.yaml",
+          "kind": "yaml",
+          "required": true,
           "schema": null
         }
       ],
       "outputs": [
         {
-          "path": "campaign/recaps/recap-YYYY-MM-DD.md",
+          "path": "stdout",
           "kind": "markdown",
-          "overwrites": true,
-          "generated_header": true,
+          "overwrites": false,
+          "generated_header": false,
           "schema": null
         }
       ],
       "exit_codes": {
         "0": "ok",
-        "1": "nessun session log"
+        "2": "errore uso (--el o --from-encounter mancante / file assente)",
+        "3": "nessuna proposta nel file"
       },
       "determinism": {
         "deterministic": true,
         "seed_flag": "--seed",
-        "notes": "Con --seed il corpo e' riproducibile; il nome file e l'header includono la data corrente."
+        "notes": "Con --seed output riproducibile."
       },
       "side_effects": {
         "writes_canon": false,
@@ -2292,659 +3588,64 @@
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": "python scripts/session_recap.py --help",
-      "tests": [
-        "scripts/tests/test_session_recap_pg.py"
-      ],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "validate_booklets",
-      "path": "scripts/validate_booklets.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/validate_booklets.py --stampa",
-      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [
-        "typst"
-      ],
-      "args": [
-        {
-          "name": "manifest",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "I manifest da controllare (default: tutti quelli del repo)."
-        },
-        {
-          "name": "--stampa",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Compila ogni volume con typst e controlla dimensione e segnalibri. Senza il binario, salta dichiarandolo."
-        },
-        {
-          "name": "--spiega",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Elenca per esteso gli avvisi di parità fra le due catene."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Esito machine-readable su stdout."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "**/*.manifest.json",
-          "kind": "json",
-          "required": true,
-          "schema": "scripts/schemas/booklet_manifest.schema.json"
-        },
-        {
-          "path": "i master markdown citati dai manifest",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "stdout (o JSON con --json)",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "tutto verde",
-        "1": "almeno un errore",
-        "2": "uso errato"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "L'ordine dei manifest è alfabetico; nessun wallclock nell'output."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": "scripts/schemas/booklet_manifest.schema.json",
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_booklets.py --help",
-      "tests": [
-        "scripts/tests/test_booklets.py"
-      ],
-      "docs": [
-        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
-        "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "build_monster_catalog",
-      "path": "scripts/build_monster_catalog.py",
-      "category": "E-bestiary-catalog",
-      "language": "python",
-      "invocation": "python3 scripts/build_monster_catalog.py",
-      "summary": "Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--check",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Dry-run: mostra il diff, non scrive."
-        },
-        {
-          "name": "-o/--output",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Percorso del catalogo (default: scripts/monster_catalog.yaml)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "Bestiario/**/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "scripts/monster_catalog.yaml",
-          "kind": "yaml",
-          "overwrites": true,
-          "generated_header": true,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "diff presente (con --check)"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Scansione ordinata."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/build_monster_catalog.py --help",
+      "ci_smoke": "python scripts/suggest_loot.py --help",
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
       ]
     },
     {
-      "id": "extract_statblocks",
-      "path": "scripts/extract_statblocks.py",
-      "category": "E-bestiary-catalog",
+      "id": "suggest_map",
+      "path": "scripts/suggest_map.py",
+      "category": "A-session-prep",
       "language": "python",
-      "invocation": "python3 scripts/extract_statblocks.py --check",
-      "summary": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
-      "stability": "beta",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "file",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Schede da trattare (default: tutto il Bestiario)."
-        },
-        {
-          "name": "--apply",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Scrive il blocco nelle schede dove l'estrazione è completa."
-        },
-        {
-          "name": "--check",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Verifica i blocchi già presenti; non scrive niente. È il gate CI."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Rapporto machine-readable."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "Bestiario/**/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": "scripts/schemas/statblock.schema.json"
-        }
-      ],
-      "outputs": [
-        {
-          "path": "Bestiario/**/*.md (solo con --apply)",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": "scripts/schemas/statblock.schema.json"
-        },
-        {
-          "path": "stdout (o JSON con --json)",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "--check ha trovato blocchi rotti o GS incoerenti",
-        "2": "uso errato o scheda inesistente"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Ordine alfabetico; l'inserimento del blocco è idempotente."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": "scripts/schemas/statblock.schema.json",
-      "produces_schema": "scripts/schemas/statblock.schema.json",
-      "ci_smoke": "python scripts/extract_statblocks.py --help",
-      "tests": [
-        "scripts/tests/test_statblock.py"
-      ],
-      "docs": [
-        "docs/guides/GUIDA-BESTIARIO.md",
-        "plans/adr/ADR-0021-statblocchi-machine-readable.md"
-      ]
-    },
-    {
-      "id": "validate_bestiario",
-      "path": "scripts/validate_bestiario.py",
-      "category": "E-bestiary-catalog",
-      "language": "python",
-      "invocation": "python3 scripts/validate_bestiario.py",
-      "summary": "Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
+      "invocation": "python3 scripts/suggest_map.py",
+      "summary": "Sceglie una griglia tattica ASCII (quadretti da 5 ft) da scripts/map_templates/*.yaml per ambiente/tipo.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
       "args": [
         {
-          "name": "--rules",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Controlli di regole (warning non bloccanti)."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Report in JSON (opt-in)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "Bestiario/{mostri,villain,png}/**/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        },
-        {
-          "path": "scripts/monster_catalog.yaml",
-          "kind": "yaml",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "stdout",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "struttura ok (i warning --rules non fanno fallire)",
-        "1": "violazioni"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_bestiario.py --help",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "build-skills",
-      "path": "scripts/build-skills.sh",
-      "category": "F-skill-pipeline",
-      "language": "bash",
-      "invocation": "./scripts/build-skills.sh",
-      "summary": "Costruisce i pacchetti skill per-agente (compact.md/structured.yaml/machine.json) e li deploya in ~/.<agent>/skills/.",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [
-        "bash",
-        "python3"
-      ],
-      "external_deps": [
-        "pyyaml"
-      ],
-      "args": [
-        {
-          "name": "--no-deploy",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Solo build (per CI)."
-        },
-        {
-          "name": "--skill",
+          "name": "--env",
           "type": "str",
           "required": false,
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "Costruisce una sola skill."
+          "desc": "Filtro ambiente."
         },
         {
-          "name": "--measure",
+          "name": "--type",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Filtro tipo (ambush, corridor, arena, boss-lair, ...)."
+        },
+        {
+          "name": "--name",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Id esatto del template (nome file senza .yaml)."
+        },
+        {
+          "name": "--list",
           "type": "bool",
           "required": false,
           "default": false,
           "choices": null,
           "repeatable": false,
-          "desc": "Report compressione."
-        },
-        {
-          "name": "--dry-run",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Mostra cosa farebbe."
+          "desc": "Elenca i template disponibili."
         }
       ],
       "inputs": [
         {
-          "path": "skills/*/SKILL.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "build/<skill>/*",
-          "kind": "directory",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore build"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false,
-        "notes": "Deploya nelle dir utente ~/.<agent>/skills/ salvo --no-deploy."
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "./scripts/build-skills.sh --no-deploy",
-      "tests": [],
-      "docs": [
-        "scripts/README.md"
-      ]
-    },
-    {
-      "id": "compress_skills",
-      "path": "scripts/compress_skills.py",
-      "category": "F-skill-pipeline",
-      "language": "python",
-      "invocation": "python3 scripts/compress_skills.py",
-      "summary": "Comprime le skill per gli agenti (riduzione token), producendo compact.md/structured.yaml/machine.json.",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [],
-      "external_deps": [
-        "pyyaml"
-      ],
-      "optional_deps": [
-        "tiktoken"
-      ],
-      "args": [
-        {
-          "name": "--input/-i",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "File .md o directory."
-        },
-        {
-          "name": "--output/-o",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Directory di output."
-        },
-        {
-          "name": "--measure/-m",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Misura il risparmio di token."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/**/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "build/<skill>/formats/*",
-          "kind": "directory",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "scripts/README.md"
-      ]
-    },
-    {
-      "id": "index_skills",
-      "path": "scripts/index_skills.py",
-      "category": "F-skill-pipeline",
-      "language": "python",
-      "invocation": "python3 scripts/index_skills.py",
-      "summary": "Genera index.json per una skill compressa (per retrieval selettivo).",
-      "stability": "beta",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--input/-i",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Directory skill originale."
-        },
-        {
-          "name": "--build/-b",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Directory di build (output compressi)."
-        },
-        {
-          "name": "--output/-o",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Percorso index.json."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/<skill>/",
-          "kind": "directory",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "build/<skill>/index.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "2": "errore uso"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "scripts/README.md"
-      ]
-    },
-    {
-      "id": "measure_tokens",
-      "path": "scripts/measure_tokens.py",
-      "category": "F-skill-pipeline",
-      "language": "python",
-      "invocation": "python3 scripts/measure_tokens.py",
-      "summary": "Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4).",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "optional_deps": [
-        "tiktoken"
-      ],
-      "args": [
-        {
-          "name": "--tokenizer",
-          "type": "choice",
-          "required": false,
-          "default": "chars/4",
-          "choices": [
-            "chars/4",
-            "tiktoken"
-          ],
-          "repeatable": false,
-          "desc": "Metodo di conteggio."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Emette JSON invece della tabella."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/**/*.md",
-          "kind": "markdown",
+          "path": "scripts/map_templates/*.yaml",
+          "kind": "yaml",
           "required": true,
           "schema": null
         }
@@ -2952,19 +3653,22 @@
       "outputs": [
         {
           "path": "stdout",
-          "kind": "text",
+          "kind": "markdown",
           "overwrites": false,
           "generated_header": false,
           "schema": null
         }
       ],
       "exit_codes": {
-        "0": "ok"
+        "0": "ok",
+        "2": "errore uso",
+        "3": "template non trovato per --name",
+        "4": "nessun match per i filtri"
       },
       "determinism": {
         "deterministic": true,
         "seed_flag": null,
-        "notes": ""
+        "notes": "Selezione deterministica dai template."
       },
       "side_effects": {
         "writes_canon": false,
@@ -2974,10 +3678,10 @@
       "idempotent": true,
       "consumes_schema": null,
       "produces_schema": null,
-      "ci_smoke": null,
+      "ci_smoke": "python scripts/suggest_map.py --help",
       "tests": [],
       "docs": [
-        "scripts/README.md"
+        "scripts/README-automation.md"
       ]
     },
     {
@@ -3054,358 +3758,6 @@
       "tests": [],
       "docs": [
         "scripts/README.md"
-      ]
-    },
-    {
-      "id": "validate_skills",
-      "path": "scripts/validate_skills.py",
-      "category": "F-skill-pipeline",
-      "language": "python",
-      "invocation": "python3 scripts/validate_skills.py",
-      "summary": "Gate CI skill: SKILL.md valido (frontmatter), link e dati YAML coerenti.",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [],
-      "external_deps": [
-        "pyyaml"
-      ],
-      "args": [
-        {
-          "name": "--repo-root",
-          "type": "path",
-          "required": false,
-          "default": ".",
-          "choices": null,
-          "repeatable": false,
-          "desc": "Root del repo."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Report in JSON (opt-in)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/**/*.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "stdout",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errori di validazione",
-        "2": "pyyaml non installato"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_skills.py",
-      "tests": [],
-      "docs": [
-        "scripts/README.md"
-      ]
-    },
-    {
-      "id": "check_plans_discipline",
-      "path": "scripts/check_plans_discipline.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/check_plans_discipline.py",
-      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [
-        "git"
-      ],
-      "args": [
-        {
-          "name": "--base",
-          "type": "str",
-          "required": false,
-          "default": "origin/main",
-          "choices": null,
-          "repeatable": false,
-          "desc": "Ref di confronto."
-        },
-        {
-          "name": "--head",
-          "type": "str",
-          "required": false,
-          "default": "HEAD",
-          "choices": null,
-          "repeatable": false,
-          "desc": "Ref da verificare."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Report in JSON (opt-in)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "(git diff base..head)",
-          "kind": "git",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "stdout",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "CHANGELOG mancante per modifica strutturale"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/check_plans_discipline.py --help",
-      "tests": [],
-      "docs": [
-        "plans/adr/ADR-0009-gate-tracciatura-changelog-adr.md"
-      ]
-    },
-    {
-      "id": "dm",
-      "path": "scripts/dm.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [
-        "git"
-      ],
-      "args": [
-        {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor",
-          "type": "subcommand",
-          "required": true,
-          "default": null,
-          "choices": [
-            "prep",
-            "post",
-            "session",
-            "recap",
-            "handout",
-            "maps",
-            "hype",
-            "dossier",
-            "skills",
-            "doctor"
-          ],
-          "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "(dipende dal sottocomando)",
-          "kind": "text",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "(dipende dal sottocomando)",
-          "kind": "text",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore del sottocomando",
-        "2": "errore uso"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Eredita il determinismo dello script sottostante."
-      },
-      "side_effects": {
-        "writes_canon": true,
-        "git_commit": true,
-        "network": false,
-        "notes": "Dipende dal sottocomando (post/session possono scrivere canone e committare)."
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/dm.py doctor --ci",
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "install-git-hooks",
-      "path": "scripts/install-git-hooks.sh",
-      "category": "G-orchestration-governance",
-      "language": "bash",
-      "invocation": "./scripts/install-git-hooks.sh",
-      "summary": "Installa gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009).",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [
-        "bash",
-        "git"
-      ],
-      "args": [],
-      "inputs": [],
-      "outputs": [
-        {
-          "path": ".git/hooks/*",
-          "kind": "directory",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "new-campaign-group",
-      "path": "scripts/new-campaign-group.sh",
-      "category": "G-orchestration-governance",
-      "language": "bash",
-      "invocation": "./scripts/new-campaign-group.sh",
-      "summary": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [
-        "bash",
-        "git"
-      ],
-      "args": [
-        {
-          "name": "new-group-name",
-          "type": "str",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Nome del nuovo gruppo."
-        },
-        {
-          "name": "--backup-current",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Nome del gruppo corrente da salvare."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "campaign/templates/",
-          "kind": "directory",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "git-commit",
-          "kind": "git-commit",
-          "overwrites": false,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": true,
-        "git_commit": true,
-        "network": false,
-        "notes": "Crea un nuovo branch campaign-group-<nome>."
-      },
-      "idempotent": false,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "scripts/README-automation.md"
       ]
     },
     {
@@ -3514,6 +3866,383 @@
       ]
     },
     {
+      "id": "update_xp",
+      "path": "scripts/update_xp.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/update_xp.py",
+      "summary": "Registro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dry-run: stampa il diff, non scrive."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "campaign/sessions/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "campaign/pg/xp-ledger.md",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "xp-ledger e' un file derivato, non canone editato a mano."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/update_xp.py --check",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "validate_bestiario",
+      "path": "scripts/validate_bestiario.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/validate_bestiario.py",
+      "summary": "Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--rules",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Controlli di regole (warning non bloccanti)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "Bestiario/{mostri,villain,png}/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/monster_catalog.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "struttura ok (i warning --rules non fanno fallire)",
+        "1": "violazioni"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_bestiario.py --help",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "validate_booklets",
+      "path": "scripts/validate_booklets.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/validate_booklets.py --stampa",
+      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "manifest",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I manifest da controllare (default: tutti quelli del repo)."
+        },
+        {
+          "name": "--stampa",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Compila ogni volume con typst e controlla dimensione e segnalibri. Senza il binario, salta dichiarandolo."
+        },
+        {
+          "name": "--spiega",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca per esteso gli avvisi di parità fra le due catene."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esito machine-readable su stdout."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": true,
+          "schema": "scripts/schemas/booklet_manifest.schema.json"
+        },
+        {
+          "path": "i master markdown citati dai manifest",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout (o JSON con --json)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "tutto verde",
+        "1": "almeno un errore",
+        "2": "uso errato"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "L'ordine dei manifest è alfabetico; nessun wallclock nell'output."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/booklet_manifest.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_booklets.py --help",
+      "tests": [
+        "scripts/tests/test_booklets.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-BOOKLET-E-PDF.md",
+        "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "validate_lingua",
+      "path": "scripts/validate_lingua.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_lingua.py",
+      "summary": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Non bloccante in CI finche' il rumore non e' a zero; --strict alza gli avvisi a errori.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "files",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "File da controllare (default: tutto il contenuto)."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gli avvisi (virgolette dritte, E') diventano errori."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "{00_..09_,10-stand-alone,STANDALONE-*,campaign,Bestiario,PG}/**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "nessun refuso",
+        "1": "refusi trovati"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "validate_maps",
+      "path": "scripts/validate_maps.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/validate_maps.py",
+      "summary": "Gate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti).",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--repo-root",
+          "type": "path",
+          "required": false,
+          "default": ".",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Root del repo."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Emette il report in JSON (opt-in)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*MAPPE*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/rendered/*.svg",
+          "kind": "svg",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "coerente",
+        "1": "violazioni (SVG out-of-sync o malformato)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_maps.py",
+      "tests": [],
+      "docs": [
+        "scripts/README-automation.md"
+      ]
+    },
+    {
       "id": "validate_modules",
       "path": "scripts/validate_modules.py",
       "category": "G-orchestration-governance",
@@ -3584,12 +4313,155 @@
       ]
     },
     {
+      "id": "validate_prosa",
+      "path": "scripts/validate_prosa.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_prosa.py",
+      "summary": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "files",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "File da controllare (default: tutto il contenuto narrativo)."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I rilievi diventano errori (exit 1)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "{00_..09_,10-stand-alone,STANDALONE-*,campaign,PG}/**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "campaign/GLOSSARIO-E-LOCALIZZAZIONE.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "nessun rilievo (o rilievi non bloccanti)",
+        "1": "rilievi con --strict"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
+      "id": "validate_skills",
+      "path": "scripts/validate_skills.py",
+      "category": "F-skill-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/validate_skills.py",
+      "summary": "Gate CI skill: SKILL.md valido (frontmatter), link e dati YAML coerenti.",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--repo-root",
+          "type": "path",
+          "required": false,
+          "default": ".",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Root del repo."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Report in JSON (opt-in)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "skills/**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "errori di validazione",
+        "2": "pyyaml non installato"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_skills.py",
+      "tests": [],
+      "docs": [
+        "scripts/README.md"
+      ]
+    },
+    {
       "id": "validate_standalone",
       "path": "scripts/validate_standalone.py",
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_standalone.py",
-      "summary": "Gate CI per i moduli autoconclusivi STANDALONE-*: file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi e contatori dichiarati.",
+      "summary": "Gate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -3601,14 +4473,20 @@
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "Valida solo questa cartella (relativa alla radice del repo)."
+          "desc": "Valida solo questa cartella (relativa alla radice del repo), di entrambe le famiglie."
         }
       ],
       "inputs": [
         {
           "path": "STANDALONE-*/**/*.md",
           "kind": "markdown",
-          "required": true,
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "10-stand-alone/*/*.html",
+          "kind": "html",
+          "required": false,
           "schema": null
         }
       ],
@@ -3638,178 +4516,72 @@
       "idempotent": true
     },
     {
-      "id": "converters/html-to-markdown",
-      "path": "converters/Html_to_markdown",
-      "category": "I-converters",
-      "language": "mixed",
-      "invocation": "(vedi converters/Html_to_markdown/README)",
-      "summary": "Convertitore di contenuto HTML -> Markdown. Isolato dal toolkit DM.",
-      "stability": "external-toolchain",
-      "stdlib_only": false,
+      "id": "validate_tipografia",
+      "path": "scripts/validate_tipografia.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_tipografia.py",
+      "summary": "Tre misure sulla LEGGIBILITA' dell'artefatto, che nessun exit code vede (ADR-0032). 1) gerarchia dei titoli nei capitoli dichiarati da un manifest: un h4 sotto un h2 diventa un ramo che non esiste nei segnalibri del PDF. 2) caratteri per riga, calcolati dalla larghezza di colonna del tema e dalle avanzate REALI dei glifi lette dalla tabella hmtx del font incorporato, confrontati con la finestra 45-75. 3) daltonismo: simula protanopia, deuteranopia e tritanopia sulle tavole SVG e trova le coppie di colori distinte in visione normale che sotto una dicromia diventano lo stesso colore. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "stability": "stable",
+      "stdlib_only": true,
       "external_bins": [],
-      "args": [],
+      "args": [
+        {
+          "name": "--solo",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "titoli",
+            "righe",
+            "colori"
+          ],
+          "repeatable": true,
+          "desc": "Esegui solo questa misura (ripetibile)."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I rilievi diventano errori (exit 1)."
+        }
+      ],
       "inputs": [
         {
-          "path": "*.html",
-          "kind": "html",
+          "path": "**/*.manifest.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/fonts/EBGaramond[wght].ttf",
+          "kind": "text",
           "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/*.svg",
+          "kind": "svg",
+          "required": false,
           "schema": null
         }
       ],
       "outputs": [
         {
-          "path": "*.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "determinism": {
-        "deterministic": false,
-        "seed_flag": null,
-        "notes": ""
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "converters/README.md"
-      ]
-    },
-    {
-      "id": "converters/image-to-webp",
-      "path": "converters/Image-to-webp",
-      "category": "I-converters",
-      "language": "bash",
-      "invocation": "converters/Image-to-webp/conver_webp_new.sh",
-      "summary": "Convertitore batch immagini -> WebP con archiviazione degli originali (cwebp). Isolato dal toolkit DM.",
-      "stability": "external-toolchain",
-      "stdlib_only": false,
-      "external_bins": [
-        "cwebp"
-      ],
-      "args": [],
-      "inputs": [
-        {
-          "path": "*.png|*.jpg",
-          "kind": "image",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "*.webp",
-          "kind": "webp",
+          "path": "stdout",
+          "kind": "text",
           "overwrites": false,
           "generated_header": false,
           "schema": null
         }
       ],
       "exit_codes": {
-        "0": "ok",
-        "1": "errore"
+        "0": "nessun rilievo (o rilievi non bloccanti)",
+        "1": "rilievi con --strict"
       },
-      "determinism": {
-        "deterministic": false,
-        "seed_flag": null,
-        "notes": "cwebp puo' variare fra versioni."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "converters/Image-to-webp/README.md"
-      ]
-    },
-    {
-      "id": "converters/pdf-to-md-engine",
-      "path": "converters/pdf-to-md-engine",
-      "category": "I-converters",
-      "language": "mixed",
-      "invocation": "(vedi converters/pdf-to-md-engine/README)",
-      "summary": "Convertitore di contenuto PDF -> Markdown (toolchain esterna). Isolato dal toolkit DM.",
-      "stability": "external-toolchain",
-      "stdlib_only": false,
-      "external_bins": [
-        "pandoc"
-      ],
-      "args": [],
-      "inputs": [
-        {
-          "path": "*.pdf",
-          "kind": "pdf",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "*.md",
-          "kind": "markdown",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "errore"
-      },
-      "determinism": {
-        "deterministic": false,
-        "seed_flag": null,
-        "notes": "Dipende dalla toolchain esterna."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [],
-      "docs": [
-        "converters/README.md"
-      ]
-    },
-    {
-      "id": "dmcore",
-      "path": "scripts/dmcore",
-      "category": "lib",
-      "language": "library",
-      "invocation": "import dmcore",
-      "summary": "Libreria condivisa ADR-0007: regions (marker auto:), gitio (guardia branch/commit), config (group.yaml), visibility (policy per-PG). Non e' un CLI.",
-      "stability": "library",
-      "stdlib_only": true,
-      "external_bins": [
-        "git"
-      ],
-      "args": [],
-      "inputs": [],
-      "outputs": [],
-      "exit_codes": {},
       "determinism": {
         "deterministic": true,
         "seed_flag": null,
@@ -3820,97 +4592,7 @@
         "git_commit": false,
         "network": false
       },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": null,
-      "tests": [
-        "scripts/tests/test_regions.py",
-        "scripts/tests/test_visibility.py"
-      ],
-      "docs": [
-        "scripts/README-automation.md"
-      ]
-    },
-    {
-      "id": "build_image_derivatives",
-      "path": "scripts/build_image_derivatives.py",
-      "category": "D-materials",
-      "language": "python",
-      "invocation": "python3 scripts/build_image_derivatives.py <cartella>",
-      "summary": "Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
-      "stability": "stable",
-      "stdlib_only": false,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "cartella",
-          "type": "path",
-          "required": true,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Cartella dei master PNG."
-        },
-        {
-          "name": "--max",
-          "type": "int",
-          "required": false,
-          "default": 1400,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Lato lungo per ritratti e copertina."
-        },
-        {
-          "name": "--quality",
-          "type": "int",
-          "required": false,
-          "default": 88,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Qualità JPEG."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "<cartella>/*.png",
-          "kind": "png",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<cartella>/web/*.jpg",
-          "kind": "png",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok",
-        "1": "Pillow assente (dice come installarlo)",
-        "2": "cartella mancante"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Stessi master e stessi parametri: stesse derivate."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/build_image_derivatives.py --help",
-      "tests": [],
-      "docs": [
-        "docs/guides/GUIDA-IMMAGINI.md"
-      ]
+      "idempotent": true
     }
   ]
 }

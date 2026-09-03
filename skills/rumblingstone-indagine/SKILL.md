@@ -145,6 +145,33 @@ Numeri di partenza (da tarare al primo collaudo, Lotto I5): **6-9 nodi per
 caso**, di cui almeno 3 raggiungibili senza alcun grado d'abilità; **2-3
 sessioni**; **1 sola chiave di lettura** — due chiavi sono due casi.
 
+### La tabella delle dicerie: due sono false, e si sa quali
+
+Il modo più economico che esista di seminare schegge. Una tabella `1d8` all'osteria
+in cui **due voci sono deliberatamente false** — e il DM sa quali — costa quattro
+righe e fa tre cose insieme:
+
+1. dà al tavolo materiale da verificare invece che da credere: una diceria falsa
+   **si smonta**, ed è una scena;
+2. rende il fallimento informativo — chi insegue la voce sbagliata non ha perso il
+   turno, ha eliminato una possibilità;
+3. protegge dal difetto opposto, il tavolo che prende ogni parola di un PNG come
+   canone perché finora lo era sempre stata.
+
+**La regola**: le false sono false **per un motivo** — qualcuno ci guadagna, o
+qualcuno ha capito male in buona fede. Una diceria falsa a caso è rumore; una
+diceria falsa con un padre è un nodo.
+
+⚠️ **Va scritto quali sono**, nel testo del DM, accanto alla tabella. Una tabella
+di dicerie senza la riga «la 3 e la 7 sono false» costringe il DM a decidere al
+volo, e al volo si decide diversamente ogni sera.
+
+Stessa logica per la **tabella di reazione** di un capo-fazione (`1d20` +
+modificatori, dove i modificatori sono *le cose che i PG hanno fatto*): rende la
+trattativa un esito, non una sentenza del DM.
+Esemplare: `10-stand-alone/L'abbazia Della Rotta Sicura/` — *«Dicerie all'osteria
+(1d8 — due sono false, deliberatamente)»* e la reazione di Malaluna.
+
 ## 5. Autocontrollo prima di consegnare un caso
 
 Oltre a quello di `narrative-style` (§Self-check) e alla coerenza:

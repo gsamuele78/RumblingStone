@@ -1,3 +1,9 @@
+// Pacchetti vendorizzati (ADR-0026): stanno in `scripts/typst/packages/` e la
+// compilazione non scarica niente. `droplet` fa il capolettera annegato,
+// `in-dexter` l'indice analitico.
+#import "@preview/droplet:0.3.1": dropcap
+#import "@preview/in-dexter:0.7.2": index, make-index
+
 // tema-rumblingstone.typ — il tema di stampa del repo (ADR-0020).
 //
 // Lo usa scripts/export_booklet_typst.py: NON si modifica il .typ generato,
@@ -104,20 +110,71 @@
   #text(size: 9pt)[#body]
 ]
 
-// Capolettera «versale»: la maiuscola d'apertura, grande, sulla riga del testo.
+// Capolettera ANNEGATO: la maiuscola d'apertura scende dentro il paragrafo e il
+// testo le scorre attorno, come nei manuali.
 //
-// ⚠️ È un versale, non un capolettera annegato: il testo NON scorre attorno
-// alla lettera. Farlo annegato richiede di misurare il paragrafo e spezzarlo
-// riga per riga — è quello che fa il pacchetto `droplet`, che però va preso
-// dalla rete a ogni compilazione (o vendorizzato con la sua licenza). Il
-// versale dà lo stesso segno d'apertura, costa zero dipendenze, e non può
-// rompersi su un paragrafo corto. Se un giorno si vuole l'annegato, si apre
-// un ADR sul vendoring dei pacchetti Typst: la decisione è quella, non il CSS.
-#let capolettera(lettera, corpo) = {
+// Il commento che stava qui diceva: «se un giorno si vuole l'annegato, si apre
+// un ADR sul vendoring dei pacchetti Typst». Quell'ADR ora esiste — ADR-0026 —
+// e `droplet` è vendorizzato in `scripts/typst/packages/`, con la sua licenza
+// MIT, quindi il ripiego è scaduto e questa è la cosa vera.
+//
+// ⚠️ Il versale resta, come `capolettera-versale`, e non per nostalgia: un
+// capolettera annegato ha bisogno di **almeno tre righe** di paragrafo sotto di
+// sé, altrimenti la lettera esce dal blocco e si porta dietro il testo. Chi
+// chiama decide; il ripiego è scritto, non implicito.
+// L'indice analitico: le voci marcate nel testo, raccolte in coda al volume con
+// il numero di pagina. Lo fa `in-dexter` (ADR-0026), che è vendorizzato.
+//
+// ⚠️ Le voci NON si annotano a mano: le marca l'esportatore prendendo i nomi
+// canonici dal glossario (`campaign/GLOSSARIO-E-LOCALIZZAZIONE.md`). Chiedere a
+// chi scrive di marcare a mano ogni ricorrenza è il modo in cui un indice
+// analitico resta vuoto per sempre.
+#let voce-indice(termine) = index(termine)
+
+#let indice-analitico() = page(columns: 2, header: none)[
+  #place(top + center, scope: "parent", float: true,
+    block(width: 100%, inset: (bottom: 8pt))[
+      #align(center)[
+        #text(font: TITOLI, size: 13pt, fill: rosso, tracking: 1.2pt)[INDICE ANALITICO]
+        #v(2pt)
+        #line(length: 38%, stroke: 0.6pt + seppia)
+      ]
+    ])
+  #set text(size: 8.6pt)
+  // ⚠️ `section-title` va passato. Il default di in-dexter e' un `heading`, e i
+  // nostri `show heading` lo impaginano come un titolo di sezione del volume:
+  // la lettera finiva sulla STESSA riga della prima voce, e sembrava ripetuta
+  // («C Colpo dell'Alba Oscura»). Qui e' un blocco suo, con l'aria che deve
+  // avere: una lettera capitale, sola, sopra il suo gruppo.
+  #make-index(
+    title: none,
+    use-page-counter: true,
+    section-title: (lettera, _) => block(above: 9pt, below: 3pt, breakable: false)[
+      #text(font: TITOLI, size: 10.5pt, weight: 600, fill: rosso, tracking: 1pt)[#lettera]
+      #v(-3pt)
+      #line(length: 100%, stroke: 0.4pt + seppia.lighten(35%))
+    ],
+  )
+]
+
+#let capolettera-versale(lettera, corpo) = {
   set par(first-line-indent: 0pt)
   par[#box(baseline: 25%)[
       #text(font: TITOLI, size: 2.6em, weight: 600, fill: rosso)[#lettera]
     ]#h(0.05em)#corpo]
+}
+
+#let capolettera(lettera, corpo) = {
+  set par(first-line-indent: 0pt)
+  dropcap(
+    height: 3,
+    gap: 6pt,
+    hanging-indent: 0pt,
+    font: TITOLI,
+    weight: 600,
+    fill: rosso,
+    [#lettera#corpo],
+  )
 }
 
 // Una figura. In due colonne un'immagine più larga della colonna va in float a
@@ -205,6 +262,49 @@
   if larga { place(top, float: true, scope: "parent", clearance: 10pt, corpo) } else { corpo }
 }
 
+// La pagina dei crediti, sul verso del frontespizio — dov'e' in un manuale
+// stampato. Prima del 2026-09-02 i volumi di questo repo uscivano anonimi: senza
+// autore, senza data, senza versione e senza la riga che dice su cosa si basano.
+// Due PDF dello stesso capitolo, stampati a un mese di distanza, erano
+// indistinguibili sul tavolo.
+//
+// La `data` arriva SEMPRE dal manifest, mai da `datetime.today()`: un volume che
+// prende la data dall'orologio cambia a ogni compilazione e smette di essere
+// byte-identico, che e' la proprieta' su cui poggia il gate di stampa in CI.
+#let colophon(voci: (), licenza: "", nota: "") = page(columns: 1, header: none)[
+  #v(1fr)
+  #align(center)[
+    #text(font: TITOLI, size: 10pt, fill: seppia, tracking: 2.5pt)[COLOPHON]
+    #v(0.35cm)
+    #line(length: 30%, stroke: 0.5pt + seppia)
+  ]
+  #v(0.7cm)
+  #block(width: 100%, inset: (x: 2.2cm))[
+    #set text(size: 9pt, fill: inchiostro)
+    #set par(justify: false, first-line-indent: 0pt, leading: 0.7em)
+    #for (etichetta, valore) in voci {
+      if valore != "" {
+        grid(columns: (3.4cm, 1fr), column-gutter: 0.5em, row-gutter: 0.5em,
+          text(font: TITOLI, size: 8pt, fill: seppia)[#upper(etichetta)],
+          [#valore])
+        v(0.18cm)
+      }
+    }
+    #if licenza != "" [
+      #v(0.5cm)
+      #line(length: 100%, stroke: 0.4pt + seppia.lighten(45%))
+      #v(0.35cm)
+      #text(size: 8.5pt, style: "italic", fill: seppia)[#licenza]
+    ]
+    #if nota != "" [
+      #v(0.35cm)
+      #text(size: 8pt, fill: seppia)[#nota]
+    ]
+  ]
+  #v(1fr)
+  #align(center)[#text(fill: seppia, size: 12pt)[⬦]]
+]
+
 // `apparato: false` toglie frontespizio e indice. Serve a un fascicolo di
 // schede: sei fogli da stampare e dare in mano, dove una copertina e un indice
 // sarebbero due pagine da saltare ogni volta che si va alla fotocopiatrice.
@@ -214,6 +314,7 @@
 // «da stampare stasera» non sono lo stesso file.
 #let libro(titolo: "", sottotitolo: "", brand: "", banner: "", meta: "", capitolo: "",
            apparato: true, carta: "avorio", copertina: none, intro: none,
+           crediti: none,
            corpo) = {
   let fondo = if carta == "bianca" { white } else { avorio }
   set document(title: titolo)
@@ -311,6 +412,10 @@
     #text(fill: seppia, size: 15pt)[❦]
   ]
   pagebreak()
+
+  // Il colophon sta sul verso del frontespizio: e' la prima cosa che si trova
+  // aprendo il volume, come in un manuale stampato.
+  if crediti != none { crediti }
 
   // La pagina d'introduzione del manifest (`intro_md`): la catena HTML la
   // stampa da sempre, questa la ignorava in silenzio.
