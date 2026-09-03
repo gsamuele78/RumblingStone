@@ -142,7 +142,9 @@ class TestEsitiDeiTool(unittest.TestCase):
     def test_uscita_diversa_da_zero_e_un_risultato_col_significato_del_codice(self):
         # `validate_lingua` esce 1 per progetto. Se il server lo trasformasse in
         # un errore JSON-RPC, il client vedrebbe un guasto dove c'e' un referto.
-        r = chiama("suggest_encounter")          # senza --el: uscita 2
+        # Era `suggest_encounter` senza --el, che dal 2026-09-03 riesce leggendo
+        # il Party APL da state.md. Serve un tool che decida ancora di no.
+        r = chiama("build_chapter_marks")        # ne' --serie ne' --all: uscita 2
         self.assertNotIn("error", r)
         self.assertTrue(r["result"]["isError"])
         self.assertIn("uscita 2", r["result"]["content"][0]["text"])

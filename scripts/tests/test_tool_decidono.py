@@ -189,8 +189,30 @@ class TestSuggestMap(BaseDecisione):
 
 
 class TestSuggestLoot(BaseDecisione):
-    def test_senza_argomenti_obbligatori_da_2(self):
-        self.assertEsce("suggest_loot", 2, esegui("suggest_loot.py"))
+    def test_senza_argomenti_parte_dal_Party_APL(self):
+        """Cambiato il 2026-09-03 su rilievo del DM: prima era un errore d'uso.
+
+        Il numero c'era in `campaign/state.md` e nessuno lo leggeva. Ora senza
+        argomenti lo strumento parte da lì e **dice da dove viene**.
+        """
+        r = esegui("suggest_loot.py")
+        self.assertEsce("suggest_loot", 0, r)
+        self.assertIn("Party APL", r.stderr)
+
+    def test_senza_argomenti_e_senza_APL_da_2(self):
+        """L'errore d'uso resta, ma solo quando non c'è davvero da dove partire."""
+        from unittest import mock
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("suggest_loot", SCRIPTS / "suggest_loot.py")
+        mod = importlib.util.module_from_spec(spec)
+        sys.argv = ["suggest_loot.py"]
+        spec.loader.exec_module(mod)
+        with cartella() as d:
+            vuoto = d / "state.md"
+            vuoto.write_text("# Senza APL\n", encoding="utf-8")
+            import dmcore.tavolo as tav
+            with mock.patch.object(tav, "STATE", vuoto):
+                self.assertEqual(mod.main(), 2)
 
     def test_file_di_incontri_assente_da_2(self):
         self.assertEsce("suggest_loot", 2,
@@ -199,32 +221,28 @@ class TestSuggestLoot(BaseDecisione):
     def test_un_el_valido_da_0(self):
         self.assertEsce("suggest_loot", 0, esegui("suggest_loot.py", "--el", "10"))
 
-    def test_un_file_senza_proposte_NON_da_3_e_il_manifest_lo_prometteva(self):
-        """⚠️ Difetto trovato dal lotto C: il codice 3 e' irraggiungibile.
+    def test_un_file_senza_EL_ora_parte_dal_Party_APL(self):
+        """⚠️→✅ Il difetto trovato dal lotto C, chiuso su rilievo del DM.
 
-        `parse_encounter_md()` ha un ripiego (righe 71-76) che, quando non trova
-        nessuna proposta, ne **sintetizza una** dal documento intero. La lista
-        non e' quindi mai vuota, e il `return 3` di riga 319 e' codice morto.
+        Il lotto C aveva trovato che `suggest_loot`, davanti a un file che non è
+        un output di `suggest_encounter`, non protestava: ripiegava su un **10
+        scritto nel codice**, muto. Il DM ha osservato due cose giuste — che
+        nella catena vera l'EL viene da `suggest_encounter` (e infatti il 10 non
+        si vedeva mai), e che quando non c'è lo si può guardare nell'avventura.
 
-        L'effetto al tavolo: dato un file che non e' un output di
-        `suggest_encounter`, lo strumento non protesta — inventa un EL e genera
-        tesoro. Il manifest prometteva un rifiuto che non arriva.
-
-        Qui si fissa il comportamento **vero**, e la riga del manifest e' stata
-        corretta. La scelta se togliere il ramo morto o rendere il ripiego
-        condizionato e' del DM: cambia come lo strumento si comporta la sera
-        della sessione, e non e' una decisione da prendere dentro un lotto sui
-        test.
+        `campaign/state.md` dichiara `**Party APL:** 13` nell'intestazione. Ora
+        la gerarchia è `--el` → il file → il Party APL → il rifiuto, e il numero
+        non arriva mai senza dire da dove viene. Il codice 3 del manifest, che
+        era irraggiungibile, ora si raggiunge: solo quando manca anche l'APL.
         """
         with cartella() as d:
             vuoto = d / "niente.md"
             vuoto.write_text("# Nessuna proposta qui dentro\n", encoding="utf-8")
             r = esegui("suggest_loot.py", "--from-encounter", str(vuoto))
-            self.assertEqual(r.returncode, 0,
-                             "se un giorno desse 3, il ripiego e' stato tolto: "
-                             "rimetti il codice 3 nel manifest")
-            self.assertNotIn("3", dichiarati("suggest_loot"),
-                             "il manifest promette di nuovo un codice 3 irraggiungibile")
+            self.assertEsce("suggest_loot", 0, r)
+            self.assertIn("Party APL", r.stderr)
+            self.assertIn("3", dichiarati("suggest_loot"),
+                          "il codice 3 e' tornato raggiungibile: deve stare nel manifest")
 
 
 class TestImportWatabou(BaseDecisione):

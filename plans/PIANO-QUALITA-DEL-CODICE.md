@@ -228,13 +228,33 @@ prende.
    `relative_to`, che alza `ValueError` dove `is_relative_to` risponde e basta.
 5. **`suggest_loot` prometteva un codice 3 irraggiungibile.** Il ramo esiste
    (riga 319) ma `parse_encounter_md` ha un ripiego che sintetizza sempre una
-   proposta, quindi la lista non è mai vuota. Corretto **il manifest**, non il
-   tool: dato un file che non è un output di `suggest_encounter`, lo strumento
-   inventa un EL e genera tesoro invece di protestare, e se sia il comportamento
-   voluto è una decisione del DM, non di un lotto sui test.
+   proposta, quindi la lista non è mai vuota. Dato un file che non è un output di
+   `suggest_encounter`, lo strumento ripiegava su un EL **10 scritto nel codice**
+   e generava tesoro invece di protestare.
 
-I primi quattro sono corretti qui. Il quinto è documentato e fissato da un test
-che cade se qualcuno cambia idea.
+I primi quattro sono corretti qui. Il quinto è andato al DM, perché cambiarlo
+cambia cosa succede al tavolo.
+
+**✅ Chiuso il 2026-09-03 dal DM, che aveva ragione su due punti**
+([ADR-0038](adr/ADR-0038-l-el-viene-da-una-gerarchia-dichiarata.md)).
+
+Il primo corregge me: *«se è chiamato da suggest_encounter l'EL viene da lì»*.
+È così — `suggest_encounter` emette `**Combined EL**` per ogni proposta, e nella
+catena documentata il 10 non si vedeva mai. Il rischio era più stretto di come
+l'avevo scritto.
+
+Il secondo apre una porta che il lotto non aveva visto: *«si potrebbe generare il
+loot guardando l'avventura»*. La fonte **esiste già** — `campaign/state.md`
+dichiara `**Party APL:** 13` nell'intestazione, fuori dalle regioni `auto:` — e
+**nessuno dei due strumenti la leggeva**. `suggest_encounter` pretendeva `--el` a
+ogni chiamata, uscendo con 2 senza: il numero era nel repo e ogni preparazione di
+scontro lo riscriveva a mano.
+
+Ora la gerarchia è `--el` → il file → il Party APL → il rifiuto, in
+`dmcore/tavolo.py`, e l'origine del numero si stampa. Il 10 muto non c'è più, il
+codice 3 è tornato raggiungibile, e `suggest_encounter` senza argomenti è
+diventato una domanda sensata invece di un errore d'uso. 19 test, **8 mutazioni
+su 8 colte**.
 
 Metodo del lotto B, di nuovo: **10 mutazioni, 10 colte** dopo aver buttato le due
 che non erano mutazioni vere (un rinomino coerente, e un controllo che avevo
@@ -323,6 +343,10 @@ com'è appena successo. Costo: un'ora.
 > quando un agente sceglierà lo strumento giusto perché la descrizione MCP dice
 > a quale domanda risponde. Il lotto D ha trovato tre fonti che divergevano e un
 > errore in un ADR scritta il giorno prima.
+>
+> E il difetto che il lotto C aveva lasciato aperto al DM ne ha generato un
+> altro, più grosso di quello che chiudeva: il repo dichiarava il livello del
+> gruppo e nessuno strumento lo leggeva ([ADR-0038](adr/ADR-0038-l-el-viene-da-una-gerarchia-dichiarata.md)).
 
 **No a una riscrittura OOP**, e no all'adozione di `pytest` come dipendenza: la
 prima aggiungerebbe cerimonia a codice che è già nella forma giusta, la seconda

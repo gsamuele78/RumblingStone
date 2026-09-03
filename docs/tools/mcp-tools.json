@@ -3,8 +3,8 @@
   "tools": [
     {
       "name": "suggest_encounter",
-      "description": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?»\n\nGenera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
-      "use_case": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?»",
+      "description": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?» Senza --el parte dal Party APL dichiarato in state.md.\n\nGenera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
+      "use_case": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?» Senza --el parte dal Party APL dichiarato in state.md.",
       "invocation": "python3 scripts/suggest_encounter.py",
       "inputSchema": {
         "type": "object",
@@ -58,7 +58,7 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "2": "errore uso (--el mancante o input non valido)",
+        "2": "errore uso (nessun EL ricavabile: niente --el e nessun `**Party APL:**` in campaign/state.md; oppure --wild senza un --env valido)",
         "3": "nessuna proposta assemblabile",
         "4": "incontro wild non assemblabile"
       },
@@ -66,8 +66,8 @@
     },
     {
       "name": "suggest_loot",
-      "description": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?»\n\nGeneratore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
-      "use_case": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?»",
+      "description": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?» Senza --el parte dal Party APL dichiarato in state.md, e dice da dove ha preso il numero.\n\nGeneratore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
+      "use_case": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?» Senza --el parte dal Party APL dichiarato in state.md, e dice da dove ha preso il numero.",
       "invocation": "python3 scripts/suggest_loot.py",
       "inputSchema": {
         "type": "object",
@@ -108,8 +108,9 @@
         "stdout"
       ],
       "exit_codes": {
-        "0": "ok. ⚠ Anche con un file che non e' un output di suggest_encounter: parse_encounter_md sintetizza una proposta dal documento intero, quindi il ramo 'nessuna proposta' (return 3) e' irraggiungibile (trovato dal lotto C di PIANO-QUALITA-DEL-CODICE)",
-        "2": "errore uso (--el o --from-encounter mancante / file assente)"
+        "0": "ok",
+        "2": "errore uso (nessun EL ricavabile in modo diretto: niente --el, niente --from-encounter e nessun `**Party APL:**` in state.md; oppure file di incontro assente)",
+        "3": "nessun EL ricavabile dal file di incontro: non porta un `**Combined EL**`, non e' stato passato --el e campaign/state.md non dichiara un `**Party APL:**`"
       },
       "deterministic": true
     },
