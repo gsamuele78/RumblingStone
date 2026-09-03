@@ -1656,7 +1656,7 @@
     },
     {
       "name": "validate_prosa",
-      "description": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035).",
+      "description": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036).",
       "invocation": "python3 scripts/validate_prosa.py",
       "inputSchema": {
         "type": "object",
@@ -1672,6 +1672,14 @@
           "documenti": {
             "type": "boolean",
             "description": "Misura i tic dei DOCUMENTI del repo (guide, ADR, piani, skill, README) invece del contenuto di gioco: densita' del trattino lungo, numero annunciato prima dell'elenco, antitesi. Soglie tarate sulla distribuzione reale (mediana 82 trattini/1000 righe di prosa). Non bloccante. La norma e' la skill rumblingstone-prosa-documenti; questo la misura."
+          },
+          "prima-dopo": {
+            "type": "boolean",
+            "description": "Confronta i file con una revisione git e dice se la riscrittura ha tolto tic o ne ha aggiunti (frammenti, aperture ripetute, antitesi, trattini, maiuscole). E' la misura del MIGLIORAMENTO, non dello stato: le soglie assolute su questo corpus falliscono, la differenza fra due versioni dello stesso testo no. ADR-0036."
+          },
+          "rispetto-a": {
+            "type": "string",
+            "description": "La revisione git con cui confrontare (default: HEAD)."
           }
         },
         "required": [],

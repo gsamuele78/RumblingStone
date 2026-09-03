@@ -81,6 +81,8 @@ from __future__ import annotations
 
 import argparse
 import re
+import statistics
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -364,6 +366,107 @@ def prosa_e_readaloud(testo: str) -> tuple[list[tuple[int, str]], str]:
     return righe, "\n".join(READ_ALOUD.findall(testo))
 
 
+# ===========================================================================
+# Confrontare due versioni dello stesso testo (ADR-0036)
+# ===========================================================================
+# La cosa che mancava: una misura del **miglioramento**, non dello stato.
+#
+# Tutte le misure assolute provate su questo corpus hanno fallito, e il
+# fallimento è istruttivo:
+#
+#   * la **burstiness** — varianza della lunghezza delle frasi, la misura più
+#     citata nella letteratura sui rilevatori — sulla riscrittura che il DM ha
+#     approvato **peggiora**: CV 0,55 → 0,47. La riscrittura aveva tolto i
+#     frammenti brevi, e togliere frammenti riduce la varianza. La metrica
+#     premia il tic che §9 vieta;
+#   * la **densità di frasi corte** come soglia di repo: il file peggiore (75%)
+#     è fatto di grida («PORTATORE MALEDETTO!») e note telegrafiche di regia
+#     («Treant lo lancia»), non di frammenti narrativi;
+#   * le **aperture ripetute**: tre occorrenze in tutto il corpus.
+#
+# Le stesse misure **dentro un solo testo, fra due versioni**, funzionano: grida
+# e note di regia ci sono prima e dopo, quindi si annullano nella differenza.
+# Resta quello che la riscrittura ha cambiato.
+
+FRASE = re.compile(r"(?<=[.!?…])\s+")
+
+
+def _frasi(testo: str) -> list[str]:
+    return [f.strip() for f in FRASE.split((testo or "").strip())
+            if len(f.split()) >= 2]
+
+
+def burstiness(testo: str) -> float | None:
+    """Il coefficiente di variazione della lunghezza delle frasi.
+
+    ⚠️ **Misurabile, ma non un obiettivo.** Sta qui perché è la misura che
+    l'analisi esterna proponeva e perché il confronto con la riscrittura
+    approvata dal DM la contraddice: serve a poterlo rifare, non a puntarci.
+    Fuori da `conta_tic()` di proposito.
+    """
+    lunghezze = [len(f.split()) for f in _frasi(testo)]
+    if len(lunghezze) < 5:
+        return None
+    media = statistics.mean(lunghezze)
+    return statistics.pstdev(lunghezze) / media if media else None
+
+
+def conta_tic(testo: str) -> dict[str, int]:
+    """I tic contabili di un testo. Meno è meglio, per tutti.
+
+    Nessuno di questi vale come soglia assoluta — vedi il commento sopra. Valgono
+    come **differenza** fra due versioni della stessa cosa.
+    """
+    frasi = _frasi(testo)
+    aperture = [" ".join(f.split()[:2]).lower().strip("*«»>_-# ") for f in frasi]
+    return {
+        "frammenti": sum(1 for f in frasi if len(f.split()) <= 6),
+        "aperture_ripetute": sum(1 for i in range(len(aperture) - 1)
+                                 if aperture[i] and aperture[i] == aperture[i + 1]),
+        "antitesi": len(ANTITESI.findall(testo or "")),
+        "trattini": len(TRATTINO.findall(testo or "")),
+        "maiuscole": sum(1 for m in MAIUSCOLE.findall(testo or "") if m not in SIGLE),
+    }
+
+
+def confronta(prima: str, dopo: str) -> dict:
+    """Quanti tic sono calati e quanti saliti, fra due versioni."""
+    a, b = conta_tic(prima), conta_tic(dopo)
+    delta = {k: b[k] - a[k] for k in a}
+    return {
+        "delta": delta,
+        "migliorati": sum(1 for v in delta.values() if v < 0),
+        "peggiorati": sum(1 for v in delta.values() if v > 0),
+        "prima": a, "dopo": b,
+    }
+
+
+def versione_git(percorso: Path, revisione: str) -> str | None:
+    """Il file com'era a quella revisione, o `None` se lì non c'era."""
+    try:
+        rel = percorso.resolve().relative_to(ROOT)
+    except ValueError:
+        return None
+    fuori = subprocess.run(["git", "show", f"{revisione}:{rel.as_posix()}"],
+                           cwd=ROOT, capture_output=True, text=True)
+    return fuori.stdout if fuori.returncode == 0 else None
+
+
+def rapporto_confronto(f: Path, revisione: str) -> list[str]:
+    prima = versione_git(f, revisione)
+    if prima is None:
+        return [f"{f.name}: non esiste a {revisione} — niente da confrontare"]
+    if not f.is_file():
+        return [f"{f.name}: non esiste adesso"]
+    v = confronta(prima, f.read_text(encoding="utf-8", errors="ignore"))
+    if not v["migliorati"] and not v["peggiorati"]:
+        return [f"{f.name}: nessun tic cambiato rispetto a {revisione}"]
+    segni = ", ".join(f"{k} {d:+d}" for k, d in v["delta"].items() if d)
+    verso = ("migliorata" if v["migliorati"] > v["peggiorati"]
+             else "peggiorata" if v["peggiorati"] > v["migliorati"] else "pari")
+    return [f"{f.name}: {verso} rispetto a {revisione} — {segni}"]
+
+
 def prosa_documento(testo: str) -> list[str]:
     """Le righe di un documento che sono davvero prosa.
 
@@ -496,7 +599,20 @@ def main(argv=None) -> int:
                     help="i rilievi diventano errori (exit 1)")
     ap.add_argument("--documenti", action="store_true",
                     help="misura guide, ADR, piani e skill invece del contenuto")
+    ap.add_argument("--prima-dopo", action="store_true",
+                    help="confronta i file con una revisione git: dice se una "
+                         "riscrittura ha tolto tic o ne ha aggiunti")
+    ap.add_argument("--rispetto-a", default="HEAD", metavar="REV",
+                    help="la revisione con cui confrontare (default: HEAD)")
     args = ap.parse_args(argv)
+
+    if args.prima_dopo:
+        bersagli = [Path(f).resolve() for f in args.files] or file_di_contenuto()
+        righe = [r for f in bersagli for r in rapporto_confronto(f, args.rispetto_a)]
+        for r in righe:
+            print(f"  · {r}")
+        print(f"  ({len(bersagli)} file confrontati con {args.rispetto_a})")
+        return 0
 
     if args.documenti:
         bersagli = [Path(f).resolve() for f in args.files] if args.files else documenti()

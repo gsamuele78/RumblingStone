@@ -1,12 +1,12 @@
 # PIANO — Prosa che non sembri generata
 
-> **Stato**: 🟡 **in corso** — lotti A, B e C chiusi (2026-09-03); resta D
+> **Stato**: 🟡 **in corso** — lotti A·B·C·E·F chiusi (2026-09-03); resta D
 > **Aperto**: 2026-09-03
 > **Nasce da**: il DM porta due file esterni — la skill *the writing whip* e
 > l'elenco *tropes.fyi* di Ossama Chaib — e chiede se convenga usarli per
 > migliorare la prosa del repo e chiudere rilievi emersi al tavolo.
 > **Risposta**: sì, ma su un bersaglio diverso da quello che sembrava.
-> **ADR**: [ADR-0035](adr/ADR-0035-due-prose-due-norme.md)
+> **ADR**: [ADR-0035](adr/ADR-0035-due-prose-due-norme.md) · [ADR-0036](adr/ADR-0036-misurare-il-miglioramento-non-lo-stato.md)
 
 ---
 
@@ -125,11 +125,58 @@ scende sotto 82/1000. ⚠️ **Da fare a mano**: una sostituzione automatica del
 trattone produce punteggiatura sbagliata, perché il segno giusto (due punti,
 punto e virgola, virgola, niente) dipende dalla frase.
 
+### ✅ Lotto E — Le due lacune vere dell'analisi esterna
+`italiano-nativo.md` §9.2-ter (elusione della copula, inflazione di significato)
+e §9.2-quater (watchlist del registro narrativo italiano). Sono le tre proposte
+dell'analisi che reggono.
+**Accettazione**: ogni tic con esempio prima/dopo e **la densità misurata
+accanto**, perché si veda che sono prescrizione e non gate.
+
+**✅ Chiuso 2026-09-03.** Densità: 20 elusioni della copula, 3 inflazioni, 22
+voci della watchlist su 292 file — e buona parte legittime (*«un tesoro che
+rappresenta il tuo passato»*, *«nel cuore della battaglia»*).
+
+### ✅ Lotto F — Misurare il miglioramento invece dello stato
+`validate_prosa --prima-dopo --rispetto-a REV`.
+
+⚠️ **Nasce da una proposta dell'analisi che la misura ha smentito.** La
+*burstiness* — varianza della lunghezza delle frasi, la misura più citata in
+letteratura — sulla riscrittura che il DM ha approvato **peggiora**:
+
+| `05-ECHI-HELLA.md` | burstiness | frammenti ≤6 parole | aperture ripetute |
+|---|---:|---:|---:|
+| originale | 0,55 | 2/18 | 1 |
+| intermedia | 0,52 | 2/18 | 1 |
+| **riscritta, approvata** | **0,47** | **0/18** | **0** |
+
+La riscrittura aveva tolto i frammenti brevi, e togliere frammenti riduce la
+varianza: **la metrica premia il tic che §9 vieta**. Non è taratura sbagliata, è
+direzione sbagliata.
+
+Le altre due misure assolute provate: la densità di frasi corte trova grida
+(*«PORTATORE MALEDETTO!»*) e note telegrafiche di regia (*«Treant lo lancia»*);
+le aperture ripetute sono tre in tutto il corpus.
+
+**Le stesse misure fra due versioni dello stesso testo funzionano**, perché
+grida e note di regia ci sono prima e dopo e si annullano.
+
+**✅ Chiuso 2026-09-03.** 14 test scritti **prima** dell'implementazione, sul
+caso vero. Uno di essi tiene ferma la decisione: se la burstiness smettesse di
+contraddire il giudizio del tavolo, cade e la scelta va riesaminata.
+
+⚠️ E un test l'ho dovuto correggere contro me stesso: pretendevo che una frase di
+**una** parola contasse come frammento. Misurando, le frasi di una parola nei
+read-aloud sono **279 e quasi tutte artefatti** dei puntini di sospensione
+(*«È…»*, *«Solo…»*, *«Ma…»*). Contarle avrebbe inventato 279 tic.
+
 ---
 
 ## §5 · Da dove si comincia, in una chat nuova
 
 ```bash
+# la riscrittura di un testo e' migliorata? (l'unica misura di qualita' che regge)
+python3 scripts/validate_prosa.py --prima-dopo --rispetto-a HEAD~1 FILE.md
+
 python3 scripts/validate_prosa.py --documenti           # i 54 rilievi aperti
 python3 scripts/validate_prosa.py --documenti plans/INDEX.md
 python3 -m pytest scripts/tests/test_prosa_documenti.py -q

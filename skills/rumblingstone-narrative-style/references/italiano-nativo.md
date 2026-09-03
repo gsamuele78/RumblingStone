@@ -246,6 +246,54 @@ l'unica parte di §9 che dipende da un occhio.
 ⚠️ Il gerundio d'analisi è **due problemi in uno**: è un tic dell'IA e insieme un
 calco (§1), perché l'inglese ci mette l'`-ing` con naturalezza e l'italiano no.
 
+### 9.2-ter L'elusione della copula, e l'inflazione di significato
+
+Due tic che il §9 non aveva e che colpiscono proprio dove questo repo scrive di
+più: **descrizioni di artefatti, luoghi, lignaggi**.
+
+**Il testo generato evita «è».** Lo sostituisce con verbi da relazione:
+*si configura come*, *funge da*, *si pone come*, *rappresenta*, *costituisce*.
+
+> ❌ *L'Incudine del Mondo si configura come il simbolo del patto fra i nani e
+> Moradin.*
+> ✅ *L'Incudine del Mondo è il patto, battuto in ferro perché nessuno potesse
+> dire di non averlo visto.*
+
+Antidoto in una riga: **se la frase può tornare a «è» senza perdere niente,
+torna a «è».**
+
+**E dichiara l'importanza invece di mostrarla**: *testimonianza di*, *segna un
+punto di svolta*, *simbolo eterno*, *a imperitura memoria*.
+
+> ❌ *La caduta della Torre di Channath resta una testimonianza del prezzo della
+> hybris nanica.*
+> ✅ *Della Torre resta la base. Nessuno l'ha più toccata: né per ricostruire,
+> né per finire di demolire.*
+
+Nel fantasy questo è il rischio più alto di tutta la lista, perché **il genere
+spinge in quella direzione da solo**: ogni rovina e ogni artefatto vorrebbero
+sembrare che contino. La cosa che li fa contare non è dirlo — è dire cosa è
+costato, cosa resta, chi la guarda ancora.
+
+⚠️ **Densità misurata nel repo: 20 elusioni della copula e 3 inflazioni**, e
+buona parte sono legittime (*«un tesoro che rappresenta il tuo passato»* è
+italiano corretto). Perciò stanno qui e non in un controllo automatico: servono a
+chi rilegge per sospettare una zona, non come parole vietate.
+
+### 9.2-quater La watchlist del registro narrativo italiano
+
+Le liste inglesi (*delve*, *tapestry*, *testament*) non servono a un corpus
+italiano. Questa è tarata sul registro che serve qui, con lo stesso avvertimento
+del resto di §9: **una occorrenza non prova niente, conta la densità.**
+
+> *un vero e proprio* · *nel cuore di* · *non è un caso che* · *gioca un ruolo
+> fondamentale* · *un tassello* (nel mosaico) · *connubio* · *risuona di* ·
+> *si staglia contro* · *testimonianza vivente*
+
+⚠️ Nel repo ne compaiono **22 in 292 file**, e le più frequenti sono spaziali e
+corrette (*«nel cuore della battaglia»*, *«nel cuore della terra»*). Non è una
+lista di divieti: è dove guardare quando un paragrafo suona di brochure.
+
 ### 9.3 Il paradosso della ricetta
 
 ⚠️ **Anche il §4 di questo file (periodo lungo + frase corta che stampa) è una
