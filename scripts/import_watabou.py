@@ -204,7 +204,17 @@ def main() -> int:
     if not src.exists():
         print(f"ERRORE: {src} non esiste", file=sys.stderr)
         return 1
-    data = json.loads(src.read_text(encoding="utf-8"))
+    # Un export sbagliato e' il caso normale, non l'eccezione: si scarica il
+    # file da un sito e non si guarda dentro. Dirlo in una riga vale piu' di
+    # venti righe di traceback che finiscono su `json.decoder`.
+    try:
+        data = json.loads(src.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"ERRORE: {src} non e' JSON valido (riga {exc.lineno}, colonna "
+              f"{exc.colno}): {exc.msg}.\n"
+              f"Atteso l'export 'JSON' del One Page Dungeon di Watabou.",
+              file=sys.stderr)
+        return 1
     title, rows, notes_md = convert(data, pad=max(0, args.pad))
 
     out = Path(args.out) if args.out else src.with_name(f"{slug(title, max_len=48, ripiego='mappa')}.md")

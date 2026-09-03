@@ -40,10 +40,15 @@ di pacchetti del sistema e non ha un albero di versioni transitive; se manca, il
 tool deve dirlo e uscire pulito, non lanciare una traccia di stack. ADR-0026 e
 ADR-0027 sono due casi già decisi per questa via.
 
-**`pyyaml`**, che è l'unica libreria Python nel repo e va trattata come debito,
-non come precedente. Vedi sotto.
+**Due librerie Python**, `pyyaml` e `Pillow`, che stanno su due piani diversi e
+vanno tenute distinte. Vedi sotto.
 
-## L'eccezione che c'è già, e non rispetta la regola
+> ⚠️ **Correzione del 2026-09-03** (lotto D). La prima stesura di questa ADR
+> diceva che `pyyaml` era *«l'unica libreria Python nel repo»*. Era falso:
+> `build_booklet_html.py` e `build_image_derivatives.py` usano **Pillow**. Le
+> due non sono lo stesso caso, ed è la differenza che conta, non il numero.
+
+## Le due librerie, e perché una sola è un debito
 
 Quattro tool dichiarano `pyyaml` in `external_deps`: `build-skills`,
 `compress_skills`, `sync-skills`, `validate_skills`. La CI la installa
@@ -61,7 +66,7 @@ I due modi in cui i quattro tool la gestiscono non sono lo stesso modo.
 | Tool | Se `pyyaml` manca |
 |---|---|
 | `validate_skills.py` | messaggio su stderr e `sys.exit(2)` |
-| `compress_skills.py` | `import yaml` nudo, traccia di stack |
+| `compress_skills.py` | `import yaml` nudo, traccia di stack → **corretto**, ora esce con 2 |
 | `build_monster_catalog.py` (per confronto) | non la importa: scrive YAML a mano, 60 righe |
 
 `build_monster_catalog` è la prova che il sottoinsieme di YAML usato qui si
@@ -69,10 +74,23 @@ scrive senza libreria. Il frontmatter delle skill è più vario del formato del
 catalogo, e finché non c'è un parser scritto in casa che regga quel
 frontmatter, `pyyaml` resta.
 
-**Cosa resta aperto**: `compress_skills.py` deve fallire come `validate_skills.py`,
-con un messaggio e un codice d'uscita, invece che con una traccia. È il punto già
-elencato come coda opzionale in `PIANO-AUDIT-SCRIPTS-QUALITA-E-CONTRATTI.md`, e
-questa ADR lo rende una conseguenza invece che un'opzione.
+**Chiuso**: `compress_skills.py` ora fallisce come `validate_skills.py`, con un
+messaggio e il codice 2, invece che con una traccia. Era il punto elencato come
+coda opzionale in `PIANO-AUDIT-SCRIPTS-QUALITA-E-CONTRATTI.md`.
+
+### `Pillow`: come dovrebbe stare una dipendenza Python
+
+`Pillow` serve a ricomprimere le immagini grandi (`build_booklet_html.py`) e a
+generare i derivati da impaginazione (`build_image_derivatives.py`). Nessuna
+delle due cose è nel percorso critico, la CI non la installa, e **entrambi i
+chiamanti degradano in modo dichiarato**: il primo incorpora l'immagine com'è e
+ottiene un file più pesante con la stessa resa, il secondo esce dicendo come
+installarla.
+
+Questa è la forma che una dipendenza Python può avere sotto questa regola: fuori
+dai gate, con un ripiego scritto, importata dentro la funzione che la usa e non
+in testa al file. `pyyaml` non ce l'ha, e per questo è un debito mentre `Pillow`
+non lo è.
 
 ## Le librerie che vincerebbero, e cosa costano
 
@@ -108,8 +126,9 @@ volta da chi risponde.
   voci `stdlib_only` e quattro che non lo sono, e questa ADR non le chiude:
   dice che sono un debito e a quali condizioni si paga.
 - **Nessun file di dipendenze.** Non esistono `requirements.txt` né
-  `pyproject.toml`, quindi la sola fonte di verità su cosa serve è il manifest.
-  Il lotto D dello stesso piano è la risposta a questo costo.
+  `pyproject.toml`. Il lotto D ha risposto mettendo la dichiarazione in
+  `scripts/binari.py`: Python minimo, binari con la loro degradazione, le due
+  librerie e quale catena ha bisogno di cosa. `dm.py doctor` legge da lì.
 
 **Quando si rivede.** Uno di questi tre fatti riapre la decisione:
 
