@@ -32,6 +32,9 @@ import json
 import argparse
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.testo import slug  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(__file__).resolve().parent / "monster_catalog.yaml"
 CUSTOM = Path(__file__).resolve().parent / "monster_catalog.custom.yaml"
@@ -89,10 +92,6 @@ ROLE_KEYWORDS = {
     "ranged": ["ranger", "archer", "longbow", "crossbow"],
     "fodder": ["warrior", "regular", "militia", "fanteria"],
 }
-
-def slugify(s):
-    s = re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
-    return s[:80]
 
 def short_hash(s):
     return hashlib.sha1(s.encode('utf-8')).hexdigest()[:6]
@@ -269,7 +268,7 @@ def scan_directory(root):
         faction = guess_faction(name + " " + rel + " " + content[:500])
         env = guess_env(content[:500] + " " + rel)
         role = guess_role(content[:500] + " " + name)
-        rec_id = f"{slugify(name)}-{short_hash(rel)}"
+        rec_id = f"{slug(name, max_len=80)}-{short_hash(rel)}"
         notes_m = re.search(r'\*\*Notes\*\*[:\s]*(.+?)$', content, re.MULTILINE)
         notes = notes_m.group(1).strip() if notes_m else ""
         records.append({

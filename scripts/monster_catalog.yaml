@@ -559,7 +559,7 @@ monsters:
     role: flier
     environment: aerial
     source_file: "Bestiario/villain/arbitrax-drago-rosso-cr13.md"
-  - id: razorfiend-blackspawn-alfa-spawn-draconico-d-lite-1a1697
+  - id: razorfiend-blackspawn-alfa-spawn-draconico-d-elite-1a1697
     name: "Razorfiend «Blackspawn Alfa» — spawn draconico d'élite"
     cr: 13.0
     faction: dragon
@@ -1257,7 +1257,7 @@ monsters:
     role: fodder
     environment: any
     source_file: "Bestiario/mostri/hobgoblin-regular-warrior4-cr3.md"
-  - id: l-myn-redtongue-bardo-mezzelfo-4233cd
+  - id: lomyn-redtongue-bardo-mezzelfo-4233cd
     name: "Lómyn RedTongue, bardo mezzelfo"
     cr: 3.0
     faction: red-hand
@@ -1620,7 +1620,7 @@ monsters:
     role: flier
     environment: aerial
     source_file: "Bestiario/villain/Avatar_Tiamat/avatar-tiamat-cr17.md"
-  - id: ghaurush-cenerevento-secondo-incontro-il-preventivo-scaduto-2be8b3
+  - id: ghaurush-cenerevento-secondo-incontro-il-preventivo-e-scaduto-2be8b3
     name: "Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto»"
     cr: 18.0
     faction: red-hand

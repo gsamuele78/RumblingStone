@@ -50,7 +50,7 @@ def render_master(md: Path) -> dict[str, str]:
     maps = R.extract_maps(md.read_text(encoding="utf-8"))
     out: dict[str, str] = {}
     for i, g in enumerate(maps, 1):
-        name = f"{md.stem}_map{i:02d}_{R.slugify(g['title'])}.svg"
+        name = f"{md.stem}_map{i:02d}_{R.nome_mappa(g['title'])}.svg"
         out[name] = R.render_svg(g, md.name)
     return out
 

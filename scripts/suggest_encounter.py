@@ -26,6 +26,9 @@ from __future__ import annotations
 import sys, argparse, random, math, re
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.tavolo import origine_el  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 HERE = Path(__file__).resolve().parent
 CATALOG = HERE / "monster_catalog.yaml"
@@ -641,8 +644,17 @@ def main():
                   + (" …" if len(ms) > 5 else ""))
         return 0
 
-    if args.el is None:
-        print("[suggest_encounter] --el required (e.g. --el 13).", file=sys.stderr); return 2
+    # L'EL, e da dove viene. Prima `--el` era obbligatorio e il repo sapeva gia'
+    # la risposta: `**Party APL:**` sta nell'intestazione di state.md, scritto
+    # dal DM e fuori dalle regioni auto:. Rilievo del DM del 2026-09-03.
+    fonte = origine_el(esplicito=args.el)
+    if fonte is None:
+        print("[suggest_encounter] --el richiesto: non c'e' un `**Party APL:**` "
+              "in campaign/state.md da cui partire (es. --el 13).", file=sys.stderr)
+        return 2
+    args.el = int(round(fonte.el))
+    if fonte.etichetta != "da --el":
+        print(f"[suggest_encounter] EL {args.el} — {fonte.etichetta}", file=sys.stderr)
 
     rng = random.Random(args.seed)
 

@@ -3,7 +3,8 @@
   "tools": [
     {
       "name": "suggest_encounter",
-      "description": "Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
+      "description": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?» Senza --el parte dal Party APL dichiarato in state.md.\n\nGenera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
+      "use_case": "«Il gruppo è a livello 13 e stasera arrivano nella palude: che scontro gli metto davanti, e regge come EL?» Senza --el parte dal Party APL dichiarato in state.md.",
       "invocation": "python3 scripts/suggest_encounter.py",
       "inputSchema": {
         "type": "object",
@@ -57,7 +58,7 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "2": "errore uso (--el mancante o input non valido)",
+        "2": "errore uso (nessun EL ricavabile: niente --el e nessun `**Party APL:**` in campaign/state.md; oppure --wild senza un --env valido)",
         "3": "nessuna proposta assemblabile",
         "4": "incontro wild non assemblabile"
       },
@@ -65,7 +66,8 @@
     },
     {
       "name": "suggest_loot",
-      "description": "Generatore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
+      "description": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?» Senza --el parte dal Party APL dichiarato in state.md, e dice da dove ha preso il numero.\n\nGeneratore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti.",
+      "use_case": "«Hanno appena ripulito il campo hobgoblin: quanto tesoro è giusto, senza sballare il WBL?» Senza --el parte dal Party APL dichiarato in state.md, e dice da dove ha preso il numero.",
       "invocation": "python3 scripts/suggest_loot.py",
       "inputSchema": {
         "type": "object",
@@ -107,14 +109,15 @@
       ],
       "exit_codes": {
         "0": "ok",
-        "2": "errore uso (--el o --from-encounter mancante / file assente)",
-        "3": "nessuna proposta nel file"
+        "2": "errore uso (nessun EL ricavabile in modo diretto: niente --el, niente --from-encounter e nessun `**Party APL:**` in state.md; oppure file di incontro assente)",
+        "3": "nessun EL ricavabile dal file di incontro: non porta un `**Combined EL**`, non e' stato passato --el e campaign/state.md non dichiara un `**Party APL:**`"
       },
       "deterministic": true
     },
     {
       "name": "suggest_map",
-      "description": "Sceglie una griglia tattica ASCII (quadretti da 5 ft) da scripts/map_templates/*.yaml per ambiente/tipo.",
+      "description": "«Serve una griglia per una scaramuccia in foresta e non ho tempo di disegnarla: ce n'è già una che va bene?»\n\nSceglie una griglia tattica ASCII (quadretti da 5 ft) da scripts/map_templates/*.yaml per ambiente/tipo.",
+      "use_case": "«Serve una griglia per una scaramuccia in foresta e non ho tempo di disegnarla: ce n'è già una che va bene?»",
       "invocation": "python3 scripts/suggest_map.py",
       "inputSchema": {
         "type": "object",
@@ -152,7 +155,8 @@
     },
     {
       "name": "compile_map_json",
-      "description": "Modalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati.",
+      "description": "«Ho la mappa descritta in JSON: come diventa un master valido senza che io conti i quadretti a mano?»\n\nModalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati.",
+      "use_case": "«Ho la mappa descritta in JSON: come diventa un master valido senza che io conti i quadretti a mano?»",
       "invocation": "python3 scripts/compile_map_json.py",
       "inputSchema": {
         "type": "object",
@@ -185,7 +189,8 @@
     },
     {
       "name": "export_map_png",
-      "description": "Rasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
+      "description": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»\n\nRasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
+      "use_case": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»",
       "invocation": "python3 scripts/export_map_png.py",
       "inputSchema": {
         "type": "object",
@@ -236,7 +241,8 @@
     },
     {
       "name": "export_uvtt",
-      "description": "Esporta un master griglia-emoji in file Universal VTT (.uvtt/.dd2vtt) con muri, porte e luci per import nativo in Foundry/Roll20.",
+      "description": "«Giochiamo su Foundry stasera: come porto questa mappa dentro con muri, porte e luci già a posto?»\n\nEsporta un master griglia-emoji in file Universal VTT (.uvtt/.dd2vtt) con muri, porte e luci per import nativo in Foundry/Roll20.",
+      "use_case": "«Giochiamo su Foundry stasera: come porto questa mappa dentro con muri, porte e luci già a posto?»",
       "invocation": "python3 scripts/export_uvtt.py",
       "inputSchema": {
         "type": "object",
@@ -282,7 +288,8 @@
     },
     {
       "name": "import_ultraclear",
-      "description": "Modalita' 3 'al contrario': da mappa ultra-clear a bozza del contratto JSON + report conflitti figura vs tabella (regole R1-R12).",
+      "description": "«Questa vecchia mappa ultra-clear vale la pena portarla al contratto nuovo, o la figura e la tabella si contraddicono?»\n\nModalita' 3 'al contrario': da mappa ultra-clear a bozza del contratto JSON + report conflitti figura vs tabella (regole R1-R12).",
+      "use_case": "«Questa vecchia mappa ultra-clear vale la pena portarla al contratto nuovo, o la figura e la tabella si contraddicono?»",
       "invocation": "python3 scripts/import_ultraclear.py",
       "inputSchema": {
         "type": "object",
@@ -326,7 +333,8 @@
     },
     {
       "name": "import_watabou",
-      "description": "Converte un export JSON di Watabou One Page Dungeon in un master griglia-emoji conforme al template.",
+      "description": "«Watabou mi ha generato un dungeon che mi piace: come lo faccio diventare una mappa di questo repo?»\n\nConverte un export JSON di Watabou One Page Dungeon in un master griglia-emoji conforme al template.",
+      "use_case": "«Watabou mi ha generato un dungeon che mi piace: come lo faccio diventare una mappa di questo repo?»",
       "invocation": "python3 scripts/import_watabou.py",
       "inputSchema": {
         "type": "object",
@@ -360,7 +368,8 @@
     },
     {
       "name": "render_map_svg",
-      "description": "Renderizza le griglie-emoji dei master mappa in SVG stampa-quality stile 'pergamena', deterministico e senza asset esterni.",
+      "description": "«Ho scritto la griglia a emoji nel master: come la vedono i giocatori sul tavolo?»\n\nRenderizza le griglie-emoji dei master mappa in SVG stampa-quality stile 'pergamena', deterministico e senza asset esterni.",
+      "use_case": "«Ho scritto la griglia a emoji nel master: come la vedono i giocatori sul tavolo?»",
       "invocation": "python3 scripts/render_map_svg.py",
       "inputSchema": {
         "type": "object",
@@ -402,7 +411,8 @@
     },
     {
       "name": "validate_maps",
-      "description": "Gate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti).",
+      "description": "«Ho toccato un master di mappe: gli SVG committati corrispondono ancora, o ne ho lasciato indietro uno?»\n\nGate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti).",
+      "use_case": "«Ho toccato un master di mappe: gli SVG committati corrispondono ancora, o ne ho lasciato indietro uno?»",
       "invocation": "python3 scripts/validate_maps.py",
       "inputSchema": {
         "type": "object",
@@ -430,7 +440,8 @@
     },
     {
       "name": "campaign_branch",
-      "description": "Guardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007).",
+      "description": "«Sono sul branch giusto per scrivere canone, o sto per sporcare main?»\n\nGuardia e gestione del branch-per-gruppo campaign-group-<nome>: il canone vivo si scrive solo li' (ADR-0007).",
+      "use_case": "«Sono sul branch giusto per scrivere canone, o sto per sporcare main?»",
       "invocation": "python3 scripts/campaign_branch.py",
       "inputSchema": {
         "type": "object",
@@ -466,7 +477,8 @@
     },
     {
       "name": "next_session",
-      "description": "Aggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md).",
+      "description": "«Fra sette giorni si gioca: cosa devo avere in testa io, e cosa posso mandare ai giocatori senza spoiler?»\n\nAggregatore deterministico: brief DM (SOLO DM) + teaser player spoiler-safe per la prossima sessione. Non inventa nulla (AGENTS.md).",
+      "use_case": "«Fra sette giorni si gioca: cosa devo avere in testa io, e cosa posso mandare ai giocatori senza spoiler?»",
       "invocation": "python3 scripts/next_session.py",
       "inputSchema": {
         "type": "object",
@@ -495,7 +507,8 @@
     },
     {
       "name": "session_wizard",
-      "description": "Wizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "description": "«La sessione è appena finita e ho la testa piena: come fisso quello che è successo prima di dimenticarlo?»\n\nWizard di fine sessione: Q&A con default -> session log canonico conforme al template, committato subito (ADR-0007).",
+      "use_case": "«La sessione è appena finita e ho la testa piena: come fisso quello che è successo prima di dimenticarlo?»",
       "invocation": "python3 scripts/session_wizard.py",
       "inputSchema": {
         "type": "object",
@@ -529,7 +542,8 @@
     },
     {
       "name": "state_apply",
-      "description": "Applica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "description": "«Le proposte di state_sync le ho lette e vanno bene: come le scrivo senza toccare la prosa che è mia?»\n\nApplica il sottoinsieme meccanico delle proposte di state_sync SOLO nelle regioni marcate 'auto:' di state.md, con diff e conferma (ADR-0007).",
+      "use_case": "«Le proposte di state_sync le ho lette e vanno bene: come le scrivo senza toccare la prosa che è mia?»",
       "invocation": "python3 scripts/state_apply.py",
       "inputSchema": {
         "type": "object",
@@ -571,7 +585,8 @@
     },
     {
       "name": "state_sync",
-      "description": "Propone (mai applica) diff a campaign/state.md dai trigger nei session log; report markdown per revisione DM.",
+      "description": "«Cosa è cambiato nel mondo dopo le ultime sessioni, e quali righe di state.md andrebbero toccate?»\n\nPropone (mai applica) diff a campaign/state.md dai trigger nei session log; report markdown per revisione DM.",
+      "use_case": "«Cosa è cambiato nel mondo dopo le ultime sessioni, e quali righe di state.md andrebbero toccate?»",
       "invocation": "python3 scripts/state_sync.py",
       "inputSchema": {
         "type": "object",
@@ -599,7 +614,8 @@
     },
     {
       "name": "update_xp",
-      "description": "Registro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md.",
+      "description": "«A che punto sono con gli XP i quattro PG, contando tutte le sessioni e non a memoria?»\n\nRegistro XP cumulativo per PG dai blocchi '## XP awarded' dei session log; scrive campaign/pg/xp-ledger.md.",
+      "use_case": "«A che punto sono con gli XP i quattro PG, contando tutte le sessioni e non a memoria?»",
       "invocation": "python3 scripts/update_xp.py",
       "inputSchema": {
         "type": "object",
@@ -622,7 +638,8 @@
     },
     {
       "name": "build_booklet_html",
-      "description": "Booklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003).",
+      "description": "«Voglio il materiale di stasera in un libretto che sembri un manuale vero: come lo impagino?»\n\nBooklet in stile 'pergamena Homebrewery' (stile canonico, ADR-0013) da manifest JSON di capitoli markdown: HTML autonomo (SVG inline, raster data-URI) e/o sorgente Homebrewery V3 .hb.md per il self-hosted/Docker; i .md restano i master (ADR-0003).",
+      "use_case": "«Voglio il materiale di stasera in un libretto che sembri un manuale vero: come lo impagino?»",
       "invocation": "python3 scripts/build_booklet_html.py MANIFEST.json",
       "inputSchema": {
         "type": "object",
@@ -662,7 +679,8 @@
     },
     {
       "name": "build_chapter_marks",
-      "description": "Genera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche.",
+      "description": "«Le pagine sono nude in cima: che fregio ci metto, e come lo genero uguale per tutti i capitoli?»\n\nGenera i fregi di capitolo in SVG: due serie distinte (campagna per arco, drappo per capitolo), medaglioni monocromatici originali disegnati con primitive geometriche.",
+      "use_case": "«Le pagine sono nude in cima: che fregio ci metto, e come lo genero uguale per tutti i capitoli?»",
       "invocation": "python3 scripts/build_chapter_marks.py --all",
       "inputSchema": {
         "type": "object",
@@ -699,7 +717,8 @@
     },
     {
       "name": "build_image_derivatives",
-      "description": "Versioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
+      "description": "«Ho i master delle immagini a piena risoluzione: come ne ricavo le versioni che stanno in un PDF senza gonfiarlo?»\n\nVersioni da impaginazione dei master raster: ridimensiona al lato lungo utile e ricomprime in JPEG dentro web/. I master non si toccano. 120 MB → 5 MB su venti immagini.",
+      "use_case": "«Ho i master delle immagini a piena risoluzione: come ne ricavo le versioni che stanno in un PDF senza gonfiarlo?»",
       "invocation": "python3 scripts/build_image_derivatives.py <cartella>",
       "inputSchema": {
         "type": "object",
@@ -734,7 +753,8 @@
     },
     {
       "name": "dm_dossier",
-      "description": "SOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
+      "description": "«Tutte le trame aperte, in un foglio solo che guardo io dietro lo schermo: dove sono?»\n\nSOLO DM: fotografia di tutte le trame da state.md (sezioni 0-7) in veste Homebrewery V3, contenuto estratto alla lettera.",
+      "use_case": "«Tutte le trame aperte, in un foglio solo che guardo io dietro lo schermo: dove sono?»",
       "invocation": "python3 scripts/dm_dossier.py",
       "inputSchema": {
         "type": "object",
@@ -758,7 +778,8 @@
     },
     {
       "name": "export_booklet_pdf",
-      "description": "PDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser).",
+      "description": "«Il libretto in HTML c'è: come ne esce un PDF per capitolo da portare al tavolo?»\n\nPDF A4 delle schede di un booklet pergamena (ADR-0013): un PDF per pagina via Chromium/Chrome headless, resa identica al browser (CSS di stampa canonico). Default: solo pagine player (hint/echi/teaser).",
+      "use_case": "«Il libretto in HTML c'è: come ne esce un PDF per capitolo da portare al tavolo?»",
       "invocation": "python3 scripts/export_booklet_pdf.py MANIFEST.json",
       "inputSchema": {
         "type": "object",
@@ -805,7 +826,8 @@
     },
     {
       "name": "export_booklet_typst",
-      "description": "Edizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
+      "description": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»\n\nEdizione da stampa (ADR-0020): dallo stesso manifest dei booklet produce UN volume PDF con tipografia OFL embedded, due colonne, fregi di capitolo e segnalibri. Un capitolo marcato \"layout\": \"schede\" viene invece impaginato come scheda pregenerata — una pagina A4 per personaggio, ritratto, statblocco e background — leggendo i master PREGEN-*.md e FASCICOLO-*.md. Affianca export_booklet_pdf.py senza sostituirlo.",
+      "use_case": "«Voglio un volume unico da rilegare, con segnalibri veri e tipografia decente: da dove esce?»",
       "invocation": "python3 scripts/export_booklet_typst.py MANIFEST.json --all",
       "inputSchema": {
         "type": "object",
@@ -857,7 +879,8 @@
     },
     {
       "name": "extract_scene_prompts",
-      "description": "Estrae le scene illustrabili di un arco (read-aloud + copertura immagini) e genera lo scheletro del file dei prompt immagine (ADR-0015); rigenerazione idempotente che non perde le schede gia compilate.",
+      "description": "«Quali scene di quest'arco meritano un'illustrazione, e quali non ce l'hanno ancora?»\n\nEstrae le scene illustrabili di un arco (read-aloud + copertura immagini) e genera lo scheletro del file dei prompt immagine (ADR-0015); rigenerazione idempotente che non perde le schede gia compilate.",
+      "use_case": "«Quali scene di quest'arco meritano un'illustrazione, e quali non ce l'hanno ancora?»",
       "invocation": "python3 scripts/extract_scene_prompts.py <arco>",
       "inputSchema": {
         "type": "object",
@@ -892,7 +915,8 @@
     },
     {
       "name": "hype_homebrew",
-      "description": "Impagina recap o handout in layout Homebrewery V3, senza mai duplicare il filtro spoiler di session_recap.",
+      "description": "«Questo recap voglio darlo ai giocatori impaginato bene: come lo vesto senza rifare il filtro spoiler?»\n\nImpagina recap o handout in layout Homebrewery V3, senza mai duplicare il filtro spoiler di session_recap.",
+      "use_case": "«Questo recap voglio darlo ai giocatori impaginato bene: come lo vesto senza rifare il filtro spoiler?»",
       "invocation": "python3 scripts/hype_homebrew.py",
       "inputSchema": {
         "type": "object",
@@ -932,7 +956,8 @@
     },
     {
       "name": "session_recap",
-      "description": "Recap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
+      "description": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»\n\nRecap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
+      "use_case": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»",
       "invocation": "python3 scripts/session_recap.py",
       "inputSchema": {
         "type": "object",
@@ -972,7 +997,8 @@
     },
     {
       "name": "validate_booklets",
-      "description": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "description": "«I manifest dei booklet puntano tutti a file che esistono, o ne ho rinominato uno?»\n\nGate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "use_case": "«I manifest dei booklet puntano tutti a file che esistono, o ne ho rinominato uno?»",
       "invocation": "python3 scripts/validate_booklets.py --stampa",
       "inputSchema": {
         "type": "object",
@@ -1009,7 +1035,8 @@
     },
     {
       "name": "build_monster_catalog",
-      "description": "Indicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
+      "description": "«Quali statblocchi esistono già nel repo, e dove sono?»\n\nIndicizza ogni statblocco del repo (Bestiario/, archi, STATBLOCCHI) in scripts/monster_catalog.yaml.",
+      "use_case": "«Quali statblocchi esistono già nel repo, e dove sono?»",
       "invocation": "python3 scripts/build_monster_catalog.py",
       "inputSchema": {
         "type": "object",
@@ -1037,7 +1064,8 @@
     },
     {
       "name": "derive_statblocks",
-      "description": "PROPONE i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA, che ANNOTA la proposta quando e' fuori bersaglio invece di sopprimerla. ADR-0033. Scrive un campo solo, con --apply-ts: i TIRI SALVEZZA, e solo dove GS, CA e pf li ha gia' scritti il DM — la base dei TS e' esatta dalle tabelle e l'unica incertezza e' il modificatore di caratteristica, che viene dalla matrice dichiarata. CA e pf non si scrivono mai: dipendono da equipaggiamento e Costituzione, che da una scheda in prosa non si leggono.",
+      "description": "«Questa scheda descrive il mostro a parole ma non dice CA e pf: quali sarebbero, secondo le tabelle?»\n\nPROPONE i valori CA/pf/TS che la prosa di una scheda non dice, derivandoli dalle tabelle: SRD 3.5 come fonte primaria (tipo di creatura, progressioni dei TS, matrici elite/standard, taglia, armature) e la tabella per GS di Pathfinder 1e come sola GUARDIA, che ANNOTA la proposta quando e' fuori bersaglio invece di sopprimerla. ADR-0033. Scrive un campo solo, con --apply-ts: i TIRI SALVEZZA, e solo dove GS, CA e pf li ha gia' scritti il DM — la base dei TS e' esatta dalle tabelle e l'unica incertezza e' il modificatore di caratteristica, che viene dalla matrice dichiarata. CA e pf non si scrivono mai: dipendono da equipaggiamento e Costituzione, che da una scheda in prosa non si leggono.",
+      "use_case": "«Questa scheda descrive il mostro a parole ma non dice CA e pf: quali sarebbero, secondo le tabelle?»",
       "invocation": "python3 scripts/derive_statblocks.py",
       "inputSchema": {
         "type": "object",
@@ -1069,7 +1097,8 @@
     },
     {
       "name": "extract_statblocks",
-      "description": "Migrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "description": "«Le vecchie schede sono prosa: come le porto al blocco statistiche che gli strumenti sanno leggere?»\n\nMigrazione semi-automatica del Bestiario al blocco statistiche machine-readable (ADR-0021): legge la prosa delle schede, ricava il blocco ```statblocco e — con --apply — lo scrive SOLO dove l'estrazione è completa; le altre finiscono in un rapporto con scritto cosa manca. Con --check è il gate: i blocchi presenti si leggono, hanno i campi obbligatori, e il loro GS coincide con quello del nome del file.",
+      "use_case": "«Le vecchie schede sono prosa: come le porto al blocco statistiche che gli strumenti sanno leggere?»",
       "invocation": "python3 scripts/extract_statblocks.py --check",
       "inputSchema": {
         "type": "object",
@@ -1107,7 +1136,8 @@
     },
     {
       "name": "genera_creatura",
-      "description": "COSTRUISCE una creatura o un PNG che nel Bestiario non c'e', da (GS + tipo + taglia + ruolo). Le tabelle SRD 3.5 danno la forma (tipo -> dado dei DV, BAB, TS buoni; taglia -> modificatori; tabelle di classe -> incantesimi al giorno e CD) e il bersaglio per GS da' il livello; il risultato e' collaudato contro mostri veri del SRD. --piu-cattivi applica il template Advanced di Pathfinder 1e SENZA alzare il GS, cioe' la creatura picchia come un GS+1 e lo dichiara. Non scrive MAI dentro Bestiario/: stampa, o scrive in una cartella di lavoro, e nel canone copia il DM (ADR-0033). Va usato per cio' che manca: se nel catalogo c'e' gia' qualcosa di simile, si potenzia invece di generare un doppione.",
+      "description": "«Mi serve un GS 9 non morto in mezz'ora e nel Bestiario non c'è: come lo costruisco con numeri che reggono?»\n\nCOSTRUISCE una creatura o un PNG che nel Bestiario non c'e', da (GS + tipo + taglia + ruolo). Le tabelle SRD 3.5 danno la forma (tipo -> dado dei DV, BAB, TS buoni; taglia -> modificatori; tabelle di classe -> incantesimi al giorno e CD) e il bersaglio per GS da' il livello; il risultato e' collaudato contro mostri veri del SRD. --piu-cattivi applica il template Advanced di Pathfinder 1e SENZA alzare il GS, cioe' la creatura picchia come un GS+1 e lo dichiara. Non scrive MAI dentro Bestiario/: stampa, o scrive in una cartella di lavoro, e nel canone copia il DM (ADR-0033). Va usato per cio' che manca: se nel catalogo c'e' gia' qualcosa di simile, si potenzia invece di generare un doppione.",
+      "use_case": "«Mi serve un GS 9 non morto in mezz'ora e nel Bestiario non c'è: come lo costruisco con numeri che reggono?»",
       "invocation": "python3 scripts/genera_creatura.py --gs 7",
       "inputSchema": {
         "type": "object",
@@ -1189,7 +1219,8 @@
     },
     {
       "name": "validate_bestiario",
-      "description": "Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
+      "description": "«Il Bestiario è a posto, o ho lasciato una scheda con il GS del nome diverso da quello dell'intestazione?»\n\nGate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
+      "use_case": "«Il Bestiario è a posto, o ho lasciato una scheda con il GS del nome diverso da quello dell'intestazione?»",
       "invocation": "python3 scripts/validate_bestiario.py",
       "inputSchema": {
         "type": "object",
@@ -1217,7 +1248,8 @@
     },
     {
       "name": "build_skills",
-      "description": "Costruisce i pacchetti skill per-agente (compact.md/structured.yaml/machine.json) e li deploya in ~/.<agent>/skills/.",
+      "description": "«Come faccio arrivare le skill aggiornate all'agente che uso, nel formato che vuole lui?»\n\nCostruisce i pacchetti skill per-agente (compact.md/structured.yaml/machine.json) e li deploya in ~/.<agent>/skills/.",
+      "use_case": "«Come faccio arrivare le skill aggiornate all'agente che uso, nel formato che vuole lui?»",
       "invocation": "./scripts/build-skills.sh",
       "inputSchema": {
         "type": "object",
@@ -1253,7 +1285,8 @@
     },
     {
       "name": "compress_skills",
-      "description": "Comprime le skill per gli agenti (riduzione token), producendo compact.md/structured.yaml/machine.json.",
+      "description": "«Questa skill è lunga e mangia contesto: quanto si stringe senza perdere quello che dice?»\n\nComprime le skill per gli agenti (riduzione token), producendo compact.md/structured.yaml/machine.json.",
+      "use_case": "«Questa skill è lunga e mangia contesto: quanto si stringe senza perdere quello che dice?»",
       "invocation": "python3 scripts/compress_skills.py",
       "inputSchema": {
         "type": "object",
@@ -1288,7 +1321,8 @@
     },
     {
       "name": "index_skills",
-      "description": "Genera index.json per una skill compressa (per retrieval selettivo).",
+      "description": "«L'agente deve pescare solo il pezzo di skill che gli serve: come glielo indicizzo?»\n\nGenera index.json per una skill compressa (per retrieval selettivo).",
+      "use_case": "«L'agente deve pescare solo il pezzo di skill che gli serve: come glielo indicizzo?»",
       "invocation": "python3 scripts/index_skills.py",
       "inputSchema": {
         "type": "object",
@@ -1324,7 +1358,8 @@
     },
     {
       "name": "measure_tokens",
-      "description": "Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4).",
+      "description": "«Quanto contesto costano le skill oggi, in numeri e non a occhio?»\n\nMisura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4).",
+      "use_case": "«Quanto contesto costano le skill oggi, in numeri e non a occhio?»",
       "invocation": "python3 scripts/measure_tokens.py",
       "inputSchema": {
         "type": "object",
@@ -1355,7 +1390,8 @@
     },
     {
       "name": "sync_skills",
-      "description": "Build + popola i mirror in-repo delle skill (.claude/, .cursor/, ...), tutti gitignorati.",
+      "description": "«Ho modificato una skill: come la vedono Claude e Cursor dentro questo repo, subito?»\n\nBuild + popola i mirror in-repo delle skill (.claude/, .cursor/, ...), tutti gitignorati.",
+      "use_case": "«Ho modificato una skill: come la vedono Claude e Cursor dentro questo repo, subito?»",
       "invocation": "./scripts/sync-skills.sh",
       "inputSchema": {
         "type": "object",
@@ -1383,7 +1419,8 @@
     },
     {
       "name": "validate_skills",
-      "description": "Gate CI skill: SKILL.md valido (frontmatter), link e dati YAML coerenti.",
+      "description": "«Le skill sono ben formate, o ho rotto un frontmatter o un link mentre le scrivevo?»\n\nGate CI skill: SKILL.md valido (frontmatter), link e dati YAML coerenti.",
+      "use_case": "«Le skill sono ben formate, o ho rotto un frontmatter o un link mentre le scrivevo?»",
       "invocation": "python3 scripts/validate_skills.py",
       "inputSchema": {
         "type": "object",
@@ -1412,7 +1449,8 @@
     },
     {
       "name": "check_plans_discipline",
-      "description": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
+      "description": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»\n\nGate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
+      "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
       "invocation": "python3 scripts/check_plans_discipline.py",
       "inputSchema": {
         "type": "object",
@@ -1444,7 +1482,8 @@
     },
     {
       "name": "dm",
-      "description": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto.",
+      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto.",
+      "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "invocation": "python3 scripts/dm.py",
       "inputSchema": {
         "type": "object",
@@ -1484,7 +1523,8 @@
     },
     {
       "name": "install_git_hooks",
-      "description": "Installa gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009).",
+      "description": "«Come faccio a non scoprire in CI quello che il repo poteva dirmi prima del push?»\n\nInstalla gli hook git locali: post-merge (resync mirror skill) e pre-push (gate ADR-0009).",
+      "use_case": "«Come faccio a non scoprire in CI quello che il repo poteva dirmi prima del push?»",
       "invocation": "./scripts/install-git-hooks.sh",
       "inputSchema": {
         "type": "object",
@@ -1503,7 +1543,8 @@
     },
     {
       "name": "mcp_server",
-      "description": "Espone i tool del repo a un client MCP: JSON-RPC su stdio, stdlib, catalogo preso da questo stesso manifest (ADR-0012, ADR-0030). E' una superficie d'esecuzione e si difende come tale: solo allowlist, mai una shell, argomenti validati sullo schema prima di partire, percorsi confinati sotto la radice del repo, timeout e tetto all'output. I tool che scrivono contenuto o fanno commit sono ELENCATI ma non partono senza --allow-write, perche' il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Un'uscita diversa da zero e' un risultato tradotto con gli exit_codes del manifest, non un errore di protocollo.",
+      "description": "«Voglio che l'agente chiami gli strumenti del repo da solo: come glieli espongo?»\n\nEspone i tool del repo a un client MCP: JSON-RPC su stdio, stdlib, catalogo preso da questo stesso manifest (ADR-0012, ADR-0030). E' una superficie d'esecuzione e si difende come tale: solo allowlist, mai una shell, argomenti validati sullo schema prima di partire, percorsi confinati sotto la radice del repo, timeout e tetto all'output. I tool che scrivono contenuto o fanno commit sono ELENCATI ma non partono senza --allow-write, perche' il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Un'uscita diversa da zero e' un risultato tradotto con gli exit_codes del manifest, non un errore di protocollo.",
+      "use_case": "«Voglio che l'agente chiami gli strumenti del repo da solo: come glieli espongo?»",
       "invocation": "python3 scripts/mcp_server.py",
       "inputSchema": {
         "type": "object",
@@ -1539,7 +1580,8 @@
     },
     {
       "name": "new_campaign_group",
-      "description": "Reset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
+      "description": "«Comincio una campagna nuova con un altro gruppo: come parto da uno stato pulito senza perdere questo?»\n\nReset branch-per-gruppo: nuovo branch di campagna con stato azzerato dai template.",
+      "use_case": "«Comincio una campagna nuova con un altro gruppo: come parto da uno stato pulito senza perdere questo?»",
       "invocation": "./scripts/new-campaign-group.sh",
       "inputSchema": {
         "type": "object",
@@ -1569,7 +1611,8 @@
     },
     {
       "name": "tools_manifest",
-      "description": "Fonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json.",
+      "description": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»\n\nFonte di verita' -> artefatti: valida scripts/tools.manifest.json contro lo schema, verifica la copertura degli script e genera registry.json, README.md e mcp-tools.json.",
+      "use_case": "«Il manifest dice ancora la verità sugli script, o qualcuno ha aggiunto un flag senza dichiararlo?»",
       "invocation": "python3 scripts/tools_manifest.py",
       "inputSchema": {
         "type": "object",
@@ -1608,7 +1651,8 @@
     },
     {
       "name": "validate_lingua",
-      "description": "Refusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Non bloccante in CI finche' il rumore non e' a zero; --strict alza gli avvisi a errori.",
+      "description": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»\n\nRefusi meccanici dell'italiano nel contenuto: accenti (perche' -> perche acuto, ne', se stesso), po' con apostrofo, qual e', d eufonica davanti a consonante, spazio prima della punteggiatura, doppi spazi. Salta blocchi di codice, inline, URL, front-matter e guide alla pronuncia. Non bloccante in CI finche' il rumore non e' a zero; --strict alza gli avvisi a errori.",
+      "use_case": "«Ci sono refusi meccanici di italiano, del tipo che una macchina trova meglio di me?»",
       "invocation": "python3 scripts/validate_lingua.py",
       "inputSchema": {
         "type": "object",
@@ -1636,7 +1680,8 @@
     },
     {
       "name": "validate_modules",
-      "description": "Gate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard.",
+      "description": "«Questo master ARC*-DEF-* è al livello che lo standard chiede, o gli manca qualcosa?»\n\nGate CI: verifica i master ARC*-DEF-* contro la checklist della skill rumblingstone-module-standard.",
+      "use_case": "«Questo master ARC*-DEF-* è al livello che lo standard chiede, o gli manca qualcosa?»",
       "invocation": "python3 scripts/validate_modules.py",
       "inputSchema": {
         "type": "object",
@@ -1664,7 +1709,8 @@
     },
     {
       "name": "validate_prosa",
-      "description": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036); sui file nominati stampa sotto anche il profilo delle lunghezze delle frasi, in ordine di lettura con media e scarto, che e' informazione per chi legge e non entra nel verdetto.",
+      "description": "«Questo testo suona scritto da una macchina, e la riscrittura l'ha migliorato o peggiorato?»\n\nMisura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036); sui file nominati stampa sotto anche il profilo delle lunghezze delle frasi, in ordine di lettura con media e scarto, che e' informazione per chi legge e non entra nel verdetto.",
+      "use_case": "«Questo testo suona scritto da una macchina, e la riscrittura l'ha migliorato o peggiorato?»",
       "invocation": "python3 scripts/validate_prosa.py",
       "inputSchema": {
         "type": "object",
@@ -1704,7 +1750,8 @@
     },
     {
       "name": "validate_standalone",
-      "description": "Gate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
+      "description": "«Il modulo autoconclusivo è consegnabile, o ha riferimenti rotti e aree senza numero?»\n\nGate CI per i moduli autoconclusivi, in due famiglie: STANDALONE-* (master markdown — file obbligatori, riferimenti incrociati, schede pregenerate, termini 5e vietati, read-aloud minimi, contatori) e 10-stand-alone/* (moduli scritti in HTML — title, <h1>, link relativi, ancore e id non duplicati).",
+      "use_case": "«Il modulo autoconclusivo è consegnabile, o ha riferimenti rotti e aree senza numero?»",
       "invocation": "python3 scripts/validate_standalone.py",
       "inputSchema": {
         "type": "object",
@@ -1728,7 +1775,8 @@
     },
     {
       "name": "validate_tipografia",
-      "description": "Tre misure sulla LEGGIBILITA' dell'artefatto, che nessun exit code vede (ADR-0032). 1) gerarchia dei titoli nei capitoli dichiarati da un manifest: un h4 sotto un h2 diventa un ramo che non esiste nei segnalibri del PDF. 2) caratteri per riga, calcolati dalla larghezza di colonna del tema e dalle avanzate REALI dei glifi lette dalla tabella hmtx del font incorporato, confrontati con la finestra 45-75. 3) daltonismo: simula protanopia, deuteranopia e tritanopia sulle tavole SVG e trova le coppie di colori distinte in visione normale che sotto una dicromia diventano lo stesso colore. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "description": "«L'artefatto si legge, o ha titoli che saltano un livello e righe troppo lunghe?»\n\nTre misure sulla LEGGIBILITA' dell'artefatto, che nessun exit code vede (ADR-0032). 1) gerarchia dei titoli nei capitoli dichiarati da un manifest: un h4 sotto un h2 diventa un ramo che non esiste nei segnalibri del PDF. 2) caratteri per riga, calcolati dalla larghezza di colonna del tema e dalle avanzate REALI dei glifi lette dalla tabella hmtx del font incorporato, confrontati con la finestra 45-75. 3) daltonismo: simula protanopia, deuteranopia e tritanopia sulle tavole SVG e trova le coppie di colori distinte in visione normale che sotto una dicromia diventano lo stesso colore. Non bloccante finche' il rumore non e' a zero; --strict alza a errore.",
+      "use_case": "«L'artefatto si legge, o ha titoli che saltano un livello e righe troppo lunghe?»",
       "invocation": "python3 scripts/validate_tipografia.py",
       "inputSchema": {
         "type": "object",
@@ -1761,7 +1809,8 @@
     },
     {
       "name": "import_html_module",
-      "description": "Travasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
+      "description": "«Questo modulo scritto a mano in HTML come entra nelle catene del repo, senza riscriverlo?»\n\nTravasa un modulo scritto a mano in HTML (10-stand-alone/*/) nel master markdown che ADR-0003 vuole: le classi del vocabolario diventano blockquote (read-aloud), cornici {{note}} e chiavi d'area, e le tavole SVG in linea escono in file separati e autonomi (i <defs> condivisi vengono copiati dentro ogni tavola, e le maiuscole degli attributi SVG ripristinate — XML e' case-sensitive, html.parser no). E' un'operazione UNA VOLTA SOLA: se i master esistono gia' si ferma, perche' da quel momento il markdown e' il master e rilanciare butterebbe via le correzioni. Davanti a un tag che non conosce lascia passare il contenuto e lo dichiara.",
+      "use_case": "«Questo modulo scritto a mano in HTML come entra nelle catene del repo, senza riscriverlo?»",
       "invocation": "python3 scripts/import_html_module.py <cartella-modulo>",
       "inputSchema": {
         "type": "object",

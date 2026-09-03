@@ -407,10 +407,15 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
         print(f"  ⚠ {label}")
 
     print(f"[dm] doctor — repo: {REPO}")
-    if sys.version_info >= (3, 8):
-        ok(f"python {sys.version.split()[0]}")
-    else:
-        warn(f"python {sys.version.split()[0]} — serve ≥ 3.8")
+    try:
+        import binari as _binari
+        _minimo = ".".join(str(n) for n in _binari.PYTHON_MINIMO)
+        if _binari.python_ok():
+            ok(f"python {sys.version.split()[0]}")
+        else:
+            warn(f"python {sys.version.split()[0]} — serve ≥ {_minimo}")
+    except Exception as exc:  # doctor non deve mai crashare
+        warn(f"check versione di Python fallito: {exc}")
 
     for rel in ("campaign/state.md", "campaign/sessions", "campaign/templates",
                 "scripts/map_templates", "plans/INDEX.md"):
@@ -453,24 +458,37 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
     except Exception as exc:  # doctor non deve mai crashare
         warn(f"check sessione ADR-0007 falliti: {exc}")
 
-    for tool, why in (("pandoc", "recap --pdf"), ("xelatex", "recap --pdf")):
-        if shutil.which(tool):
-            ok(f"{tool} presente ({why})")
-        else:
-            print(f"  ○ {tool} assente — opzionale, serve solo per {why}")
-
-    # Le dipendenze binarie accettate con un ADR (ADR-0020, ADR-0027). Sono
-    # opzionali: qui si dice cosa manca e cosa resta possibile senza, mai un
-    # avviso — `doctor` non deve trasformare un ripiego dichiarato in un difetto.
+    # Tutte le dipendenze esterne, lette da `binari.py` (lotto D di
+    # PIANO-QUALITA-DEL-CODICE). Prima `doctor` aveva la propria lista di
+    # pandoc e xelatex accanto a quella del registro, e le due divergevano.
+    # Sono opzionali: qui si dice cosa manca e cosa resta possibile senza, mai
+    # un avviso — `doctor` non deve trasformare un ripiego dichiarato in un
+    # difetto. L'unica eccezione e' una libreria obbligatoria che manca, che
+    # ferma un gate della CI ed e' quindi un problema vero.
     try:
         import binari as _binari
-        for _b, _p in _binari.stato():
+        for _b, _p in (*_binari.stato(), *_binari.stato_opzionali()):
             if _p:
                 ok(f"{_b.nome} presente ({_b.a_cosa_serve})")
             else:
                 print(f"  ○ {_b.nome} assente — {_b.ripiego}")
+        for _lib, _c_e in _binari.stato_librerie():
+            if _c_e:
+                ok(f"{_lib.nome} presente ({_lib.a_cosa_serve})")
+            elif _lib.obbligatoria:
+                warn(f"{_lib.nome} assente — {_lib.ripiego}")
+            else:
+                print(f"  ○ {_lib.nome} assente — {_lib.ripiego}")
+        _non_pronte = [
+            (_catena, [_n for _n in _servono
+                       if not _binari.disponibile(_n)])
+            for _catena, _servono in _binari.CATENE.items()
+        ]
+        for _catena, _mancano in _non_pronte:
+            if _mancano:
+                print(f"  ○ catena «{_catena}»: manca {', '.join(_mancano)}")
     except Exception as exc:  # doctor non deve mai crashare
-        warn(f"check dipendenze binarie fallito: {exc}")
+        warn(f"check dipendenze esterne fallito: {exc}")
 
     if problems:
         print(f"[dm] doctor: {problems} avvisi")

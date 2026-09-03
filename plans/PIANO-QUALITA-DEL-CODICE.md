@@ -1,6 +1,6 @@
 # PIANO — La qualità del codice, misurata prima e dopo
 
-> **Stato**: 🟡 **in corso** — **lotto B chiuso** (2026-09-03), il resto proposto
+> **Stato**: ✅ **completo** — tutti i lotti chiusi il 2026-09-03 (0, A, B, C, D)
 > **Aperto**: 2026-09-03
 > **Nasce da**: domanda del DM — *«per ogni script si dovrebbe guardare: c'è una
 > libreria o un tool open source che risolve il problema? posso usare oggetti già
@@ -19,13 +19,14 @@
 | Script in `scripts/` | 46 | `ls scripts/*.py \| wc -l` |
 | Righe totali | 17.771 | `wc -l scripts/*.py` |
 | Moduli condivisi in `dmcore/` | 8 | `ls scripts/dmcore/*.py` |
-| Script che usano `dmcore` | **10 su 46** | `grep -l "from dmcore" scripts/*.py \| wc -l` |
-| Script senza un test che li nomini | **18 su 46** | vedi §5 |
+| Script che usano `dmcore` | **10 su 46** → **16** | `grep -l "from dmcore" scripts/*.py \| wc -l` |
+| Script senza un test che li nomini | **18 su 46** → **2** (i due che misurano, di proposito) | vedi §5 |
 | Corpi di funzione **identici** in file diversi | **1** | AST, vedi §5 |
-| Implementazioni di `slug`/`slugify` | **7** | `grep -c "def slug"` |
-| Record del catalogo con id divergente | **9** | vedi §2 |
-| Dipendenze esterne dichiarate | **0** | non esiste `requirements.txt` |
+| Implementazioni di `slug`/`slugify` | **7** definizioni, **10** chiamanti → **1** | `grep -c "def slug"` |
+| Record del catalogo con id divergente | **3** (§1 diceva 9: era sbagliato, §2 ne elencava già 3) | vedi §2 |
+| Dipendenze esterne dichiarate | **0** → **il registro in `scripts/binari.py`**: Python minimo, 9 binari, 2 librerie, 9 catene | `python3 scripts/binari.py` |
 | Script con uno **schema d'uso** documentato | 46 (nel manifest) | `tools_manifest.py --check` |
+| Tool con un **caso d'uso** documentato | **0 su 54** → **54** | `tools_manifest.py --check` |
 
 **La lettura onesta di questi numeri.** Un solo corpo di funzione duplicato su
 17.771 righe è un risultato **buono**: il repo non è un ammasso di copie. Ma
@@ -138,13 +139,22 @@ questa domanda, e la risposta giusta è questa»*. È da lì che nascono i test 
 
 ## §4 · I lotti, con la misura di accettazione
 
-### ⬜ Lotto 0 — L'ADR che manca: perché stdlib-only
+### ✅ Lotto 0 — L'ADR che manca: perché stdlib-only
 La decisione più importante del repo non è scritta. **Accettazione**: un ADR che
 dica il perché (il portatile del DM, la sera della sessione, senza rete), le
 eccezioni ammesse (`pdfcpu` e `typst` sono binari, non librerie — ADR-0027) e il
 **criterio per rivederla**.
 
-### ⬜ Lotto A — Una `slug` sola, e i nove id che si raddrizzano
+**Chiuso il 2026-09-03**: [ADR-0037](adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md).
+Scrivendolo è venuta fuori una cosa che questo piano dava per scontata: la frase
+«il repo è stdlib-only» **oggi è falsa in un punto**. Quattro tool dichiarano
+`pyyaml` e la CI fa `pip install pyyaml` prima di `validate_skills.py`, che è un
+gate bloccante. L'ADR la tratta come debito circoscritto invece di far finta che
+non ci sia, e ne discende una coda: `compress_skills.py` importa `yaml` senza
+guardia e muore con una traccia di stack, dove `validate_skills.py` esce con un
+messaggio e codice 2.
+
+### ✅ Lotto A — Una `slug` sola, e i tre id che si raddrizzano
 `dmcore/testo.py` con **una** implementazione, parametrica su troncamento e
 ripiego. Le sette copie la chiamano. **Accettazione**: `grep -c "def slug"` = 1;
 i nove record divergenti tornano coerenti; un test con `Città`, `Lómyn`,
@@ -152,24 +162,142 @@ i nove record divergenti tornano coerenti; un test con `Città`, `Lómyn`,
 ⚠️ Rigenera il catalogo → alcuni id cambiano: **va fatto in un commit suo**,
 perché i riferimenti esistenti vanno visti.
 
+**Chiuso il 2026-09-03** con `scripts/dmcore/testo.py` (`slug`, `piega_ascii`) e
+25 test in `scripts/tests/test_testo.py`. Sette mutazioni della funzione, sette
+colte. Quello che il piano non aveva previsto:
+
+1. **I chiamanti erano dieci, non sette.** `import_ultraclear`, `validate_maps`
+   ed `export_uvtt` chiamavano `render_map_svg.slugify` dall'esterno, di
+   proposito: quel modulo è la fonte unica della convenzione del nome-file di
+   una mappa. La convenzione resta lì, ora come `nome_mappa()` (48 caratteri,
+   ripiego «mappa»), e chiama la `slug` condivisa.
+2. **Il difetto era di tutte e sette, non di una.** `build_monster_catalog` era
+   l'unica senza `NFKD`, ma tutte facevano `encode("ascii", "ignore")`, che
+   **cancella** i caratteri non-ASCII che NFKD non riduce a una lettera base
+   invece di separarli. Effetto misurato sul corpus vero: `griglia 33×33` →
+   `griglia-3333`, `CR 12–13` → `cr-1213`, `Cutaway Sud→Nord` → `sudnord`. Due
+   valori incollati in uno, e nessuno se n'era accorto perché il risultato è
+   comunque un id valido. `piega_ascii()` mette un separatore.
+3. **Il troncamento sporcava l'id.** `t[:48]` avveniva dopo `strip("-")`, quindi
+   un id tagliato in mezzo a un separatore finiva con un trattino penzolante.
+   Tre SVG su 27 ce l'avevano.
+
+Il conto vero dei record di catalogo sbagliati è **3**, non 9 (§1 corretto; §2
+ne elencava già tre). La rigenerazione, nel suo commit, tocca **3 id di
+catalogo e 5 nomi di SVG**.
+
 ### ✅ Lotto B — I quattro cancelli che nessuno ha mai visto bocciare
 Un test per `validate_bestiario`, `validate_maps`, `validate_modules`,
 `build_monster_catalog` che gli dia in pasto un file **deliberatamente rotto** e
 verifichi che escano **non-zero**. **Accettazione**: 4 gate su 4 con un test
 negativo. È il lotto che vale di più, perché oggi non sappiamo se funzionano.
 
-### ⬜ Lotto C — Il caso d'uso, dove i test nascono
+### ✅ Lotto C — Il caso d'uso, dove i test nascono
 Per i 18 script senza test, una riga di caso d'uso nel manifest (`use_case`:
 *«a quale domanda risponde»*) e, dove il tool decide qualcosa, un test che lo
 verifichi. **Accettazione**: 46/46 con caso d'uso; i tool che *decidono* (non
 quelli che *misurano*) con almeno un test.
 
-### ⬜ Lotto D — L'ambiente riproducibile
+**Chiuso il 2026-09-03.** Il campo `use_case` sta su **54 voci su 54**, è
+obbligatorio nello schema e ha un gate che non si accontenta della presenza: una
+copia del `summary` o una frase che non è una domanda vengono bocciate (provato
+con quattro manifest rotti a posta, quattro bocciati). Arriva anche dove serve,
+in `docs/tools/README.md` e davanti al summary nelle descrizioni MCP, che è il
+posto dove un agente sceglie fra 46 strumenti.
+
+Gli scoperti erano **14**, non 18: il lotto B e il lotto A ne avevano già
+coperti quattro. Dodici decidono e ora hanno un test (`test_tool_decidono.py`,
+35 test); i due che restano fuori sono `measure_tokens` e `compress_skills`, che
+misurano, e un test scritto lì lo dice per iscritto perché non sembri una svista.
+
+⭐ **Il lotto è servito a più dei test.** I difetti che ha trovato sono tutti
+dello stesso tipo: uno strumento che *dichiara* una decisione e poi non la
+prende.
+
+1. **`index_skills` usciva sempre con 0.** `main()` era chiamato senza
+   `sys.exit()`, quindi il valore di ritorno finiva nel nulla: i codici del
+   manifest erano una promessa che solo argparse manteneva.
+2. **`index_skills` accettava una cartella sorgente inesistente** e scriveva un
+   `index.json` con zero voci. Un file che c'è e sembra buono è peggio di un
+   errore.
+3. **`import_watabou` con un JSON rotto usciva con 1 per caso**, non per scelta:
+   `JSONDecodeError` arrivava in cima e Python usciva così. Chi scarica un export
+   da un sito riceveva venti righe di traccia. È lo stesso difetto che
+   `binari.py` aveva già deciso di non fare per i binari.
+4. **`dm_dossier -o` fuori dal repo andava in traccia di stack** su
+   `relative_to`, che alza `ValueError` dove `is_relative_to` risponde e basta.
+5. **`suggest_loot` prometteva un codice 3 irraggiungibile.** Il ramo esiste
+   (riga 319) ma `parse_encounter_md` ha un ripiego che sintetizza sempre una
+   proposta, quindi la lista non è mai vuota. Dato un file che non è un output di
+   `suggest_encounter`, lo strumento ripiegava su un EL **10 scritto nel codice**
+   e generava tesoro invece di protestare.
+
+I primi quattro sono corretti qui. Il quinto è andato al DM, perché cambiarlo
+cambia cosa succede al tavolo.
+
+**✅ Chiuso il 2026-09-03 dal DM, che aveva ragione su due punti**
+([ADR-0038](adr/ADR-0038-l-el-viene-da-una-gerarchia-dichiarata.md)).
+
+Il primo corregge me: *«se è chiamato da suggest_encounter l'EL viene da lì»*.
+È così — `suggest_encounter` emette `**Combined EL**` per ogni proposta, e nella
+catena documentata il 10 non si vedeva mai. Il rischio era più stretto di come
+l'avevo scritto.
+
+Il secondo apre una porta che il lotto non aveva visto: *«si potrebbe generare il
+loot guardando l'avventura»*. La fonte **esiste già** — `campaign/state.md`
+dichiara `**Party APL:** 13` nell'intestazione, fuori dalle regioni `auto:` — e
+**nessuno dei due strumenti la leggeva**. `suggest_encounter` pretendeva `--el` a
+ogni chiamata, uscendo con 2 senza: il numero era nel repo e ogni preparazione di
+scontro lo riscriveva a mano.
+
+Ora la gerarchia è `--el` → il file → il Party APL → il rifiuto, in
+`dmcore/tavolo.py`, e l'origine del numero si stampa. Il 10 muto non c'è più, il
+codice 3 è tornato raggiungibile, e `suggest_encounter` senza argomenti è
+diventato una domanda sensata invece di un errore d'uso. 19 test, **8 mutazioni
+su 8 colte**.
+
+Metodo del lotto B, di nuovo: **10 mutazioni, 10 colte** dopo aver buttato le due
+che non erano mutazioni vere (un rinomino coerente, e un controllo che avevo
+aggiunto ed era ridondante perché `convert()` lo faceva già — la ruota
+riscritta, dentro il piano che parla di ruote riscritte).
+
+### ✅ Lotto D — L'ambiente riproducibile
 Il DM chiede *«quali sono i requisiti software e hardware?»*, e oggi la risposta
 è sparsa fra `GUIDA-SETUP-MACCHINA`, `dm.py doctor` e `binari.py`.
 **Accettazione**: un file solo che dichiari Python minimo, binari opzionali con
 la loro degradazione, e cosa serve *davvero* per ogni catena; `doctor` lo legge
 invece di avere la propria lista.
+
+**Chiuso il 2026-09-03**, estendendo `scripts/binari.py` invece di aggiungere una
+quarta fonte accanto alle tre che c'erano. Ora dichiara `PYTHON_MINIMO`, i due
+binari accettati con un ADR, **sette opzionali** con il loro ripiego, le **due
+librerie** e **nove catene** di lavoro con cosa serve a ciascuna. `dm.py doctor`
+e `docs/guides/GUIDA-SETUP-MACCHINA.md` leggono da lì; `python3 scripts/binari.py`
+stampa il quadro e, nell'ultima sezione, la riga che serve davvero prima di una
+sessione: **quali catene partono stasera**.
+
+Le divergenze erano vere e misurate:
+
+| Domanda | `doctor` diceva | la guida diceva | la CI fa |
+|---|---|---|---|
+| Python minimo | ≥ 3.8 | 3.11+ | installa 3.11 |
+| binari conosciuti | pandoc e xelatex, più i 2 del registro | 8 in tabella | 8 nel manifest |
+
+E una scoperta che ha corretto un ADR appena scritta: **le librerie Python sono
+due, non una.** ADR-0037 diceva che `pyyaml` era l'unica; `Pillow` c'era già, in
+`build_booklet_html.py` e `build_image_derivatives.py`. La differenza fra le due
+è quella che conta, ed è ora scritta nell'ADR: `pyyaml` sta in un gate della CI e
+non degrada, `Pillow` sta fuori dai gate e degrada da sola. La seconda è la forma
+che una dipendenza Python può avere sotto questa regola; la prima è il debito.
+
+**9 mutazioni, 9 colte** (`test_ambiente.py`, 15 test). Due dei test confrontano
+due fonti — il registro contro i workflow, il registro contro il manifest — ed è
+quello il punto: se qualcuno riscrive un numero in uno dei due posti, cadono. Il
+primo giro ne ha trovato subito uno vero: `bash`, dichiarato da quattro tool nel
+manifest, mancava dal registro.
+
+**Coda dell'ADR-0037, chiusa qui**: `compress_skills.py` fa `import yaml` con la
+guardia ed esce con 2 come `validate_skills.py`, invece che con una traccia.
 
 ---
 
@@ -197,14 +325,28 @@ EOF
 che li veda bocciare sono altrettante cose di cui crediamo di fidarci. Costo: mezza
 giornata.
 
-**Sì per il lotto A**, perché c'è un difetto vero e misurabile con nove record
-già sbagliati. Costo: due ore più il commit di rigenerazione.
+**Sì per il lotto A**, perché c'è un difetto vero e misurabile con tre record
+già sbagliati. Costo: due ore più il commit di rigenerazione. *A consuntivo: il
+difetto era più largo di così, vedi il lotto.*
 
 **Sì per il lotto 0**, perché una decisione non scritta viene rimessa in
 discussione ogni volta che qualcuno chiede *«perché non usiamo una libreria?»* —
 com'è appena successo. Costo: un'ora.
 
 **Forse per C e D**, e solo per i tool che *decidono*.
+
+> **A consuntivo (2026-09-03).** Il DM ha chiesto di farli entrambi per intero,
+> `use_case` compreso. Il «forse» era mal riposto in un punto: il lotto C ha
+> trovato **cinque difetti veri**, più di quanti ne avesse trovati il lotto A.
+> Dove il «forse» era giusto è il campo `use_case`: 54 righe di compilazione che
+> non hanno trovato niente, e il cui valore è di là da venire — lo si vedrà
+> quando un agente sceglierà lo strumento giusto perché la descrizione MCP dice
+> a quale domanda risponde. Il lotto D ha trovato tre fonti che divergevano e un
+> errore in un ADR scritta il giorno prima.
+>
+> E il difetto che il lotto C aveva lasciato aperto al DM ne ha generato un
+> altro, più grosso di quello che chiudeva: il repo dichiarava il livello del
+> gruppo e nessuno strumento lo leggeva ([ADR-0038](adr/ADR-0038-l-el-viene-da-una-gerarchia-dichiarata.md)).
 
 **No a una riscrittura OOP**, e no all'adozione di `pytest` come dipendenza: la
 prima aggiungerebbe cerimonia a codice che è già nella forma giusta, la seconda
@@ -236,6 +378,10 @@ print(c('Lómyn RedTongue'), '≠', a('Lómyn RedTongue'))"
 **L'ordine consigliato**: **0** (l'ADR, un'ora, sblocca la discussione sulle
 librerie) → **A** (la `slug`, due ore più un commit di rigenerazione a parte) →
 **C** e **D** se il DM li vuole.
+
+**Aggiornamento 2026-09-03**: 0 e A sono chiusi, restano C e D. I comandi di
+verifica qui sopra vanno letti con i valori nuovi: `def slug` = 1,
+`from dmcore` = 16 su 46 (erano 10), e `test_testo.py` verde con 25 test.
 
 ⚠️ **Il lotto A cambia degli id nel catalogo.** Va in un commit suo, e i
 riferimenti esistenti vanno guardati prima di rigenerare: `grep -rn "l-myn\|d-lite"`.

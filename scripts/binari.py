@@ -17,6 +17,21 @@ giusto.
 
 La regola sta qui, in un posto solo, perche' con due copie diventano due regole.
 
+Cosa serve per far girare il repo (lotto D di PIANO-QUALITA-DEL-CODICE)
+-----------------------------------------------------------------------
+La stessa domanda — *«che cosa devo avere installato?»* — aveva tre risposte che
+non coincidevano: `dm.py doctor` accettava Python 3.8, la guida di setup ne
+chiedeva 3.11, la CI ne installa 3.11; `doctor` aveva la propria lista di
+`pandoc` e `xelatex` che questo file non conosceva; e il manifest dei tool
+dichiarava otto binari mentre qui ce n'erano due.
+
+Ora la dichiarazione sta qui e basta: `PYTHON_MINIMO`, `TUTTI` (i binari
+accettati con un ADR, quelli che uno script pretende con `esigi()`),
+`OPZIONALI` (gli altri, che nessuno pretende e la cui assenza toglie una
+funzione senza rompere niente), `LIBRERIE` (le due dipendenze Python, ADR-0037)
+e `CATENE`, che dice quale catena di lavoro ha bisogno di cosa. `dm.py doctor`
+e la guida di setup leggono da qui.
+
 Codici d'uscita
 ---------------
 `MANCA` (2) e' distinto da 1. Uno script che esce con 2 sta dicendo *«non ho
@@ -32,6 +47,12 @@ import sys
 from typing import NamedTuple
 
 MANCA = 2  # exit code: dipendenza assente. Distinto da 1 = fallimento vero.
+
+#: Versione minima di Python. E' quella che la CI installa e quella che la guida
+#: di setup chiede: se cambia, cambia qui e i due posti che la leggono seguono.
+#: Il 3.11 non e' prudenza, e' un vincolo reale: il codice usa `X | None` nelle
+#: annotazioni valutate e `tomllib`, e i test usano `unittest` moderno.
+PYTHON_MINIMO = (3, 11)
 
 
 class Binario(NamedTuple):
@@ -79,7 +100,159 @@ PDFCPU = Binario(
             "obbligato della catena.",
 )
 
+#: I binari che uno script **pretende** con `esigi()`, ciascuno con il suo ADR.
 TUTTI = (TYPST, PDFCPU)
+
+
+def _opz(nome: str, a_cosa_serve: str, installa: str, ripiego: str) -> Binario:
+    """Un binario che nessuno pretende: manca e si perde una funzione, non la catena.
+
+    Non ha un ADR perche' non e' stata una decisione da prendere: `git` c'e'
+    ovunque, `chromium` e `pandoc` si installano dal gestore di pacchetti e
+    nessuna parte del flusso principale si ferma senza.
+    """
+    return Binario(nome=nome, a_cosa_serve=a_cosa_serve, licenza="—",
+                   adr="—", installa=installa, ripiego=ripiego)
+
+
+#: Gli altri eseguibili che il repo sa usare. Erano sparsi fra la lista dentro
+#: `dm.py doctor`, i campi `external_bins` del manifest e la tabella della guida.
+OPZIONALI = (
+    _opz("git", "clonare, versionare, il branch di gruppo (ADR-0007)",
+         "  Debian/Ubuntu  sudo apt install git\n"
+         "  Fedora         sudo dnf install git\n"
+         "  macOS          xcode-select --install",
+         "senza git il repo non si clona: in pratica c'e' sempre, ed e' l'unico "
+         "di questo gruppo che non ha un ripiego vero."),
+    _opz("bash", "i cinque script shell: build-skills, sync-skills, "
+                 "install-git-hooks, new-campaign-group, Image-to-webp",
+         "  Linux/macOS    c'e' gia'\n"
+         "  Windows        Git Bash (arriva con Git for Windows) oppure WSL",
+         "gli equivalenti in Python esistono per la maggior parte del flusso "
+         "(`dm.py skills build`, `dm.py skills sync`); su Windows senza Git Bash "
+         "restano fuori i cinque script shell."),
+    _opz("chromium", "i PDF dei booklet e i PNG delle mappe",
+         "  Debian/Ubuntu  sudo apt install chromium\n"
+         "  Fedora         sudo dnf install chromium\n"
+         "  Windows        usa Chrome/Edge: set BOOKLET_CHROME=C:\\...\\chrome.exe\n"
+         "  cercato in PATH, in $BOOKLET_CHROME e in /opt/pw-browsers",
+         "i booklet restano in HTML, che e' il formato che si legge al tavolo; "
+         "il PDF e' per chi stampa."),
+    _opz("inkscape", "i PNG delle mappe con resa SVG fedele (`--renderer inkscape`)",
+         "  Debian/Ubuntu  sudo apt install inkscape\n"
+         "  Fedora         sudo dnf install inkscape",
+         "il PNG esce da Chromium, che rende bene ma non identico: la differenza "
+         "si vede sui tratteggi e sui font incorporati."),
+    _opz("pandoc", "`dm.py recap --pdf`, il recap in PDF sobrio",
+         "  Debian/Ubuntu  sudo apt install pandoc texlive-xetex\n"
+         "  Fedora         sudo dnf install pandoc texlive-xetex",
+         "il recap resta in markdown e in HTML, che e' come lo si manda ai "
+         "giocatori nove volte su dieci."),
+    _opz("xelatex", "il motore che pandoc usa per quel PDF",
+         "  arriva con texlive-xetex, vedi pandoc",
+         "come pandoc: senza, `recap --pdf` non parte e il recap resta testo."),
+    _opz("cwebp", "convertire i master delle immagini in WebP",
+         "  Debian/Ubuntu  sudo apt install webp\n"
+         "  Fedora         sudo dnf install libwebp-tools",
+         "le immagini restano PNG: piu' pesanti nel repo, identiche a vedersi."),
+    _opz("shellcheck", "il lint degli script shell (in CI non e' bloccante)",
+         "  Debian/Ubuntu  sudo apt install shellcheck\n"
+         "  Fedora         sudo dnf install ShellCheck",
+         "gli script shell del repo sono cinque e corti: senza shellcheck si "
+         "leggono a mano."),
+)
+
+
+class Libreria(NamedTuple):
+    """Una dipendenza Python. Ce ne sono due, e ADR-0037 dice perche' solo due."""
+
+    nome: str
+    modulo: str
+    a_cosa_serve: str
+    installa: str
+    #: `True` se un gate della CI si ferma senza. Il campo esiste perche' la
+    #: differenza fra le due e' esattamente questa.
+    obbligatoria: bool
+    ripiego: str
+
+
+#: Le uniche due librerie non-stdlib del repo (ADR-0037). `pyyaml` e' un debito
+#: dichiarato: sta nel percorso critico della CI, che infatti la installa.
+#: `Pillow` no, ed e' il modello di come dovrebbe stare una dipendenza Python.
+LIBRERIE = (
+    Libreria(
+        nome="pyyaml", modulo="yaml",
+        a_cosa_serve="il frontmatter delle skill: build, sync, compress, validate",
+        installa="  pip install pyyaml",
+        obbligatoria=True,
+        ripiego="nessuno: `validate_skills.py` e' un gate bloccante e senza "
+                "pyyaml esce con 2. E' il debito che ADR-0037 dichiara.",
+    ),
+    Libreria(
+        nome="Pillow", modulo="PIL",
+        a_cosa_serve="ricomprimere le immagini grandi e generare i derivati",
+        installa="  pip install pillow",
+        obbligatoria=False,
+        ripiego="`build_booklet_html.py` incorpora l'immagine com'e' (file piu' "
+                "pesante, resa identica); `build_image_derivatives.py` esce "
+                "dicendo come installarla.",
+    ),
+)
+
+#: Cosa serve a ciascuna catena di lavoro. La colonna che mancava: sapere che
+#: `typst` esiste non dice se serve stasera.
+CATENE = {
+    "sessione (prep, recap, state)": (),
+    "booklet HTML": (),
+    "booklet PDF": ("chromium",),
+    "edizione da stampa": ("typst",),
+    "libretto imposto": ("typst", "pdfcpu"),
+    "mappe SVG": (),
+    "mappe PNG": ("chromium",),
+    "recap in PDF": ("pandoc", "xelatex"),
+    "skill per gli agenti": ("pyyaml",),
+}
+
+
+def per_nome(nome: str) -> Binario | Libreria | None:
+    """La voce del registro con questo nome, o `None`."""
+    for v in (*TUTTI, *OPZIONALI, *LIBRERIE):
+        if v.nome == nome:
+            return v
+    return None
+
+
+def python_ok() -> bool:
+    """Se l'interprete che sta girando basta."""
+    return sys.version_info >= PYTHON_MINIMO
+
+
+def libreria_presente(lib: Libreria) -> bool:
+    """Se il modulo si importa. Nessun effetto collaterale oltre l'import."""
+    import importlib.util
+    return importlib.util.find_spec(lib.modulo) is not None
+
+
+def disponibile(nome: str) -> bool:
+    """Se la voce del registro con questo nome e' installata.
+
+    Una domanda sola per binari e librerie, perche' chi chiede *«la catena
+    parte?»* non ha motivo di sapere quale delle due cose sia.
+    """
+    voce = per_nome(nome)
+    if voce is None:
+        raise KeyError(f"nessuna dipendenza si chiama {nome!r} nel registro")
+    return trova(voce) is not None if isinstance(voce, Binario) else libreria_presente(voce)
+
+
+def stato_opzionali() -> list[tuple[Binario, str | None]]:
+    """Cosa c'e' e cosa manca fra gli opzionali — per `dm.py doctor`."""
+    return [(b, trova(b)) for b in OPZIONALI]
+
+
+def stato_librerie() -> list[tuple[Libreria, bool]]:
+    """Cosa c'e' e cosa manca fra le librerie — per `dm.py doctor`."""
+    return [(lib, libreria_presente(lib)) for lib in LIBRERIE]
 
 
 def messaggio(b: Binario) -> str:
@@ -116,12 +289,38 @@ def stato() -> list[tuple[Binario, str | None]]:
     return [(b, trova(b)) for b in TUTTI]
 
 
+def _riga(simbolo: str, nome: str, coda: str) -> str:
+    return f"{simbolo} {nome:12} {coda}"
+
+
 if __name__ == "__main__":
-    mancanti = 0
-    for b, p in stato():
-        if p:
-            print(f"✓ {b.nome:8} {p}")
-        else:
-            print(f"⚠ {b.nome:8} assente — {b.ripiego}")
-            mancanti += 1
-    print(f"\n{len(TUTTI) - mancanti}/{len(TUTTI)} dipendenze binarie presenti.")
+    import platform
+
+    v = platform.python_version()
+    minimo = ".".join(str(n) for n in PYTHON_MINIMO)
+    print(_riga("✓" if python_ok() else "✗", "python",
+                f"{v}" + ("" if python_ok() else f" — serve >= {minimo}")))
+
+    print("\nBinari accettati con un ADR (uno script li pretende):")
+    for b, percorso in stato():
+        print(_riga("✓" if percorso else "○", b.nome,
+                    percorso or f"assente — {b.ripiego}"))
+
+    print("\nBinari opzionali (senza, si perde una funzione):")
+    for b, percorso in stato_opzionali():
+        print(_riga("✓" if percorso else "○", b.nome,
+                    percorso or f"assente — {b.a_cosa_serve}"))
+
+    print("\nLibrerie Python (ADR-0037):")
+    for lib, c_e in stato_librerie():
+        etichetta = "obbligatoria" if lib.obbligatoria else "opzionale"
+        print(_riga("✓" if c_e else ("✗" if lib.obbligatoria else "○"),
+                    lib.nome, f"({etichetta}) " + (lib.a_cosa_serve if c_e
+                                                   else f"assente — {lib.ripiego}")))
+
+    print("\nLe catene, e se stasera partono:")
+    for catena, servono in CATENE.items():
+        mancano = [n for n in servono if not disponibile(n)]
+        print(_riga("✓" if not mancano else "○", "",
+                    f"{catena:32} " + ("pronta" if not mancano
+                                       else "manca " + ", ".join(mancano))))

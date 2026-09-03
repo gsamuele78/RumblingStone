@@ -133,6 +133,20 @@ def validate(manifest: dict, schema: dict) -> list[str]:
         for b in ("stdlib_only", "idempotent"):
             if b in t and not isinstance(t[b], bool):
                 errors.append(f"{tid}: '{b}' deve essere booleano")
+        # use_case: la domanda a cui il tool risponde (lotto C di
+        # PIANO-QUALITA-DEL-CODICE). Un campo obbligatorio che si puo' riempire
+        # copiando il summary non serve a niente, quindi qui si controlla che
+        # sia una domanda e che non sia il summary.
+        uc = t.get("use_case")
+        if isinstance(uc, str):
+            if "?" not in uc:
+                errors.append(f"{tid}: use_case non e' una domanda (manca il punto interrogativo)")
+            if len(uc.strip()) < 20:
+                errors.append(f"{tid}: use_case troppo corto per dire qualcosa")
+            if uc.strip() == (t.get("summary") or "").strip():
+                errors.append(f"{tid}: use_case e' una copia del summary")
+        elif "use_case" in t:
+            errors.append(f"{tid}: use_case deve essere una stringa")
         # args
         for a in t.get("args", []):
             if a.get("type") not in arg_type_enum:
@@ -291,7 +305,10 @@ def emit_mcp(manifest: dict) -> str:
                 required.append(key)
         tools.append({
             "name": t["id"].replace("/", "_").replace("-", "_"),
-            "description": t["summary"],
+            # Il caso d'uso viene prima: chi sceglie fra 46 tool ha bisogno di
+            # sapere a quale domanda rispondono, non di come sono fatti.
+            "description": f'{t["use_case"]}\n\n{t["summary"]}',
+            "use_case": t["use_case"],
             "invocation": t["invocation"],
             "inputSchema": {
                 "type": "object",
@@ -356,7 +373,7 @@ def emit_markdown(manifest: dict) -> str:
             git = _md_bool(t.get("side_effects", {}).get("git_commit"))
             exits = " · ".join(f"`{k}`" for k in sorted(t.get("exit_codes", {}), key=int))
             lines.append(
-                f"| `{t['path'].split('/')[-1] or t['id']}` | {t['summary']} "
+                f"| `{t['path'].split('/')[-1] or t['id']}` | {t['use_case']}<br>{t['summary']} "
                 f"| {_md_flags(t)} | {det} | {canon} | {git} | {exits or '—'} |"
             )
         lines.append("")
