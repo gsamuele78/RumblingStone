@@ -88,6 +88,11 @@ Su `ARC07-TEASER-GIOCATORI-STAMPA.pdf` (3 pagine A4), `pdfcpu v0.11.0`:
 
 **Buone.**
 - H3 è sbloccato: un libretto da piegare invece di una risma.
+- Il compagno di questa decisione è `export_booklet_typst.py --formato a5`
+  (2026-09-03): imporre un volume **già** A4 mette due pagine per foglio e
+  scala tutto al 71%, cioè porta il corpo da 10.2 pt a ~7,2. Comporre in A5 a
+  una colonna (9.6 pt) e poi imporre lascia il testo leggibile. Le due cose
+  stanno accanto: l'imposizione piega, il formato decide *cosa* si piega.
 - La regola di degradazione esiste in codice e ha dei test — prima era una frase
   in un piano, e una frase in un piano non ferma nessuno.
 - `typst` ci ha guadagnato: il suo messaggio d'installazione era duplicato nello
