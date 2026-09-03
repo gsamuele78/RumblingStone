@@ -1178,7 +1178,7 @@ def main(argv=None) -> int:
     if args.emit_md and not multi:
         outdir = Path(args.emit_md)
         outdir.mkdir(parents=True, exist_ok=True)
-        stem = rms.slugify(maps[0].title)
+        stem = rms.nome_mappa(maps[0].title)
         json_tmp = outdir / f"{stem}.draft.json"
         json_tmp.write_text(_dumps(drafts[0]) + "\n", encoding="utf-8")
         rc = cmj.main([str(json_tmp), "-o", str(outdir / f"{stem}.md")])

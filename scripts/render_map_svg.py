@@ -51,8 +51,22 @@ import argparse
 import math
 import re
 import sys
-import unicodedata
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.testo import slug  # noqa: E402
+
+
+def nome_mappa(title: str) -> str:
+    """Il pezzo di nome-file che identifica una mappa: 48 caratteri, ripiego «mappa».
+
+    Sta qui e non in `dmcore.testo` perché è una convenzione di questa catena,
+    non una regola di normalizzazione. `import_ultraclear`, `validate_maps` ed
+    `export_uvtt` la leggono da qui per costruire lo stesso nome di questo
+    modulo: se cambia, cambia in un punto.
+    """
+    return slug(title, max_len=48, ripiego="mappa")
+
 
 CELL = 28          # px per grid square (1,5 m)
 MARGIN = 46        # px around the grid for coordinates
@@ -609,12 +623,6 @@ def col_label(i: int) -> str:
         i, rem = divmod(i - 1, 26)
         label = chr(ord("A") + rem) + label
     return label
-
-
-def slugify(title: str) -> str:
-    t = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode()
-    t = re.sub(r"[^A-Za-z0-9]+", "-", t).strip("-").lower()
-    return t[:48] or "mappa"
 
 
 # ---------------------------------------------------------------------------
@@ -1513,7 +1521,7 @@ def main() -> int:
         for i, g in enumerate(maps, 1):
             if args.map and i != args.map:
                 continue
-            name = f"{path.stem}_map{i:02d}_{slugify(g['title'])}.svg"
+            name = f"{path.stem}_map{i:02d}_{nome_mappa(g['title'])}.svg"
             (outdir / name).write_text(render_svg(g, path.name), encoding="utf-8")
             print(f"✓ {outdir / name}")
             total += 1

@@ -1,6 +1,6 @@
 # PIANO — La qualità del codice, misurata prima e dopo
 
-> **Stato**: 🟡 **in corso** — **lotto B chiuso** (2026-09-03), il resto proposto
+> **Stato**: 🟢 **in corso** — **lotti 0, A e B chiusi** (2026-09-03); restano C e D
 > **Aperto**: 2026-09-03
 > **Nasce da**: domanda del DM — *«per ogni script si dovrebbe guardare: c'è una
 > libreria o un tool open source che risolve il problema? posso usare oggetti già
@@ -22,8 +22,8 @@
 | Script che usano `dmcore` | **10 su 46** | `grep -l "from dmcore" scripts/*.py \| wc -l` |
 | Script senza un test che li nomini | **18 su 46** | vedi §5 |
 | Corpi di funzione **identici** in file diversi | **1** | AST, vedi §5 |
-| Implementazioni di `slug`/`slugify` | **7** | `grep -c "def slug"` |
-| Record del catalogo con id divergente | **9** | vedi §2 |
+| Implementazioni di `slug`/`slugify` | **7** definizioni, **10** chiamanti | `grep -c "def slug"` |
+| Record del catalogo con id divergente | **3** (§1 diceva 9: era sbagliato, §2 ne elencava già 3) | vedi §2 |
 | Dipendenze esterne dichiarate | **0** | non esiste `requirements.txt` |
 | Script con uno **schema d'uso** documentato | 46 (nel manifest) | `tools_manifest.py --check` |
 
@@ -138,19 +138,52 @@ questa domanda, e la risposta giusta è questa»*. È da lì che nascono i test 
 
 ## §4 · I lotti, con la misura di accettazione
 
-### ⬜ Lotto 0 — L'ADR che manca: perché stdlib-only
+### ✅ Lotto 0 — L'ADR che manca: perché stdlib-only
 La decisione più importante del repo non è scritta. **Accettazione**: un ADR che
 dica il perché (il portatile del DM, la sera della sessione, senza rete), le
 eccezioni ammesse (`pdfcpu` e `typst` sono binari, non librerie — ADR-0027) e il
 **criterio per rivederla**.
 
-### ⬜ Lotto A — Una `slug` sola, e i nove id che si raddrizzano
+**Chiuso il 2026-09-03**: [ADR-0037](adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md).
+Scrivendolo è venuta fuori una cosa che questo piano dava per scontata: la frase
+«il repo è stdlib-only» **oggi è falsa in un punto**. Quattro tool dichiarano
+`pyyaml` e la CI fa `pip install pyyaml` prima di `validate_skills.py`, che è un
+gate bloccante. L'ADR la tratta come debito circoscritto invece di far finta che
+non ci sia, e ne discende una coda: `compress_skills.py` importa `yaml` senza
+guardia e muore con una traccia di stack, dove `validate_skills.py` esce con un
+messaggio e codice 2.
+
+### ✅ Lotto A — Una `slug` sola, e i tre id che si raddrizzano
 `dmcore/testo.py` con **una** implementazione, parametrica su troncamento e
 ripiego. Le sette copie la chiamano. **Accettazione**: `grep -c "def slug"` = 1;
 i nove record divergenti tornano coerenti; un test con `Città`, `Lómyn`,
 `d'élite` e `12–13` (trattino lungo).
 ⚠️ Rigenera il catalogo → alcuni id cambiano: **va fatto in un commit suo**,
 perché i riferimenti esistenti vanno visti.
+
+**Chiuso il 2026-09-03** con `scripts/dmcore/testo.py` (`slug`, `piega_ascii`) e
+25 test in `scripts/tests/test_testo.py`. Sette mutazioni della funzione, sette
+colte. Quello che il piano non aveva previsto:
+
+1. **I chiamanti erano dieci, non sette.** `import_ultraclear`, `validate_maps`
+   ed `export_uvtt` chiamavano `render_map_svg.slugify` dall'esterno, di
+   proposito: quel modulo è la fonte unica della convenzione del nome-file di
+   una mappa. La convenzione resta lì, ora come `nome_mappa()` (48 caratteri,
+   ripiego «mappa»), e chiama la `slug` condivisa.
+2. **Il difetto era di tutte e sette, non di una.** `build_monster_catalog` era
+   l'unica senza `NFKD`, ma tutte facevano `encode("ascii", "ignore")`, che
+   **cancella** i caratteri non-ASCII che NFKD non riduce a una lettera base
+   invece di separarli. Effetto misurato sul corpus vero: `griglia 33×33` →
+   `griglia-3333`, `CR 12–13` → `cr-1213`, `Cutaway Sud→Nord` → `sudnord`. Due
+   valori incollati in uno, e nessuno se n'era accorto perché il risultato è
+   comunque un id valido. `piega_ascii()` mette un separatore.
+3. **Il troncamento sporcava l'id.** `t[:48]` avveniva dopo `strip("-")`, quindi
+   un id tagliato in mezzo a un separatore finiva con un trattino penzolante.
+   Tre SVG su 27 ce l'avevano.
+
+Il conto vero dei record di catalogo sbagliati è **3**, non 9 (§1 corretto; §2
+ne elencava già tre). La rigenerazione, nel suo commit, tocca **3 id di
+catalogo e 5 nomi di SVG**.
 
 ### ✅ Lotto B — I quattro cancelli che nessuno ha mai visto bocciare
 Un test per `validate_bestiario`, `validate_maps`, `validate_modules`,
@@ -197,8 +230,9 @@ EOF
 che li veda bocciare sono altrettante cose di cui crediamo di fidarci. Costo: mezza
 giornata.
 
-**Sì per il lotto A**, perché c'è un difetto vero e misurabile con nove record
-già sbagliati. Costo: due ore più il commit di rigenerazione.
+**Sì per il lotto A**, perché c'è un difetto vero e misurabile con tre record
+già sbagliati. Costo: due ore più il commit di rigenerazione. *A consuntivo: il
+difetto era più largo di così, vedi il lotto.*
 
 **Sì per il lotto 0**, perché una decisione non scritta viene rimessa in
 discussione ogni volta che qualcuno chiede *«perché non usiamo una libreria?»* —
@@ -236,6 +270,10 @@ print(c('Lómyn RedTongue'), '≠', a('Lómyn RedTongue'))"
 **L'ordine consigliato**: **0** (l'ADR, un'ora, sblocca la discussione sulle
 librerie) → **A** (la `slug`, due ore più un commit di rigenerazione a parte) →
 **C** e **D** se il DM li vuole.
+
+**Aggiornamento 2026-09-03**: 0 e A sono chiusi, restano C e D. I comandi di
+verifica qui sopra vanno letti con i valori nuovi: `def slug` = 1,
+`from dmcore` = 16 su 46 (erano 10), e `test_testo.py` verde con 25 test.
 
 ⚠️ **Il lotto A cambia degli id nel catalogo.** Va in un commit suo, e i
 riferimenti esistenti vanno guardati prima di rigenerare: `grep -rn "l-myn\|d-lite"`.

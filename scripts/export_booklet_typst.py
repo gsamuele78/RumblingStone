@@ -48,10 +48,10 @@ import json
 import re
 import subprocess
 import sys
-import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.testo import slug  # noqa: E402
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
 
@@ -75,11 +75,6 @@ def typ_path(p: Path) -> str:
     fallisce: è l'errore che si prende chiunque monti Typst la prima volta.
     """
     return "/" + p.resolve().relative_to(ROOT).as_posix()
-
-
-def slug(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-") or "capitolo"
 
 
 # ── immagini ─────────────────────────────────────────────────────────────────
@@ -600,7 +595,7 @@ def schede_di(cap: dict, base: Path, f: Path) -> list[tuple[str, str]]:
         print(f"  ⚠ schede senza ritratto: {', '.join(mancanti)}", file=sys.stderr)
     piede = cap.get("footer", "")
     return [
-        (f"{s.numero or i}-{slug(s.nome)}", _scheda_typ(s, i, len(elenco), piede))
+        (f"{s.numero or i}-{slug(s.nome, ripiego='capitolo')}", _scheda_typ(s, i, len(elenco), piede))
         for i, s in enumerate(elenco, 1)
     ]
 
@@ -636,7 +631,7 @@ def fregio_per(titolo: str, file: Path, base: Path, ripiego: str | None = None) 
     for d in (base.parent / "ALLEGATI" / "tavole" / "fregi", ROOT / "docs" / "assets" / "fregi"):
         if not d.is_dir():
             continue
-        chiave = slug(file.stem)
+        chiave = slug(file.stem, ripiego="capitolo")
         for svg in sorted(d.glob("fregio-*.svg")):
             nome = svg.stem[len("fregio-"):]
             if nome and (nome in chiave or chiave.startswith(nome)):
@@ -821,7 +816,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
     # capitolo 12 non è ancora stato convertito.
     RIMANDI.clear()
     for cap, titolo, f in elenco:
-        RIMANDI[f.name] = "cap-" + slug(f.stem)
+        RIMANDI[f.name] = "cap-" + slug(f.stem, ripiego="capitolo")
 
     avvisa_chiavi(man)
     parti = intestazione(man, base=base, carta=carta, formato=formato)

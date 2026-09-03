@@ -38,10 +38,12 @@ import argparse
 import json
 import re
 import sys
-import unicodedata
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from dmcore.testo import slug  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -106,11 +108,6 @@ _SPAZI = re.compile(r"[ \t ]+")
 
 def _pulisci(s: str) -> str:
     return _SPAZI.sub(" ", s).strip()
-
-
-def slug(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-")
 
 
 class Convertitore(HTMLParser):

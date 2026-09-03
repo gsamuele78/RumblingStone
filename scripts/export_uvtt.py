@@ -262,7 +262,7 @@ def main(argv=None) -> int:
         if args.map and i != args.map:
             continue
         uvtt = build_uvtt(m, args.ppg, image_b64)
-        slug = rms.slugify(m["title"])
+        slug = rms.nome_mappa(m["title"])
         name = f"{src.stem}_map{i:02d}_{slug}.{args.ext}"
         dest = out_dir / name
         dest.write_text(json.dumps(uvtt, ensure_ascii=False, indent=1), encoding="utf-8")
