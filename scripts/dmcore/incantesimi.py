@@ -476,62 +476,182 @@ SENZA_LISTA = frozenset({"adepto", "adept"})
 #      CD di 2. È l'effetto più grosso, e `--piu-cattivi` lo applica già;
 #   3. le liste di evocazione PF1e, che offrono creature migliori per livello.
 #
-#: classe → livello → [(nome italiano, nome PRD)].
+#: classe → livello → [(nome italiano, nome PRD)]. **55 righe.**
 #:
-#: ⚠️ **Come sono state controllate, e perché non basta.** Il PRD
-#: (`pathfinder.d20srd.org`, `legacy.aonprd.com`) è fuori dal criterio di rete di
-#: questo ambiente e non si può leggere da qui; le righe sono state verificate una
-#: per una contro d20pfsrd — e il controllo ha trovato **due errori veri**, che
-#: sono esattamente il difetto di cui parla tutto questo file:
+#: L'ancora sta in `pathfinder-1e-srd/references/conversion-guide.md` §«PF1e
+#: spell lists»: sono le liste dell'**Advanced Player's Guide**, cioè gli
+#: incantesimi che PF1e *aggiunge*. La lista core di Pathfinder, nome per nome,
+#: è abbastanza vicina al SRD 3.5 che scambiarla non compra niente — la parte
+#: che un incantatore PF1e ha in più è questa, ed è quella che vale tenere.
+#: `test_incantesimi.py` verifica ogni riga contro quella sezione, con la stessa
+#: disciplina delle liste 3.5.
 #:
-#:   * *ill omen* stava sulla lista di mago al 1°. Non è un incantesimo da
-#:     mago: è da **strega**, psichico e mesmerista. Tolto.
+#: ⚠️ **Il controllo contro la pagina ha trovato tre errori**, e sono lo stesso
+#: genere di difetto per cui esiste tutto questo file:
+#:
+#:   * *ill omen* stava sulla lista di mago al 1°. Non è un incantesimo da mago:
+#:     è da **strega**, psichico e mesmerista. Tolto.
 #:   * *stone call* stava al 3° per il mago. È **sorcerer/wizard 2**. Spostato.
+#:   * *hungry pit* risultava introvabile a una prima estrazione automatica —
+#:     ma c'è, al 5° da mago. Il nome porta il pedice del componente focus
+#:     (`Hungry Pit<sup>F</sup>`) e il parser lo incollava al nome. Un'assenza
+#:     silenziosa dentro un'ancora è peggio di un'ancora mancante, perché il
+#:     test passa lo stesso.
 #:
-#: Quali righe abbiano superato il controllo lo dice `PF1E_VERIFICATI`, e la
-#: tabella con le fonti sta in `pathfinder-1e-srd/references/conversion-guide.md`.
-#: Un blocco che contiene una riga non verificata resta una proposta da leggere
-#: sul PRD, e lo dichiara.
+#: ⚠️ **Il chierico resta scoperto al 1°, 6° e 7°**, e non è una dimenticanza:
+#: a quei livelli l'APG non aggiunge niente che cambi un incontro (al 1° *ant
+#: haul* e *dancing lantern*, al 6° la sola *planar adaptation, mass*, al 7°
+#: nulla). Meglio un buco dichiarato che una riga messa per far quadrare la
+#: tabella.
+#:
+#: Il commento accanto a ogni riga è la descrizione **della pagina**, non una
+#: parafrasi: la scelta di quali importare è mia e va confermata, ma cosa fanno
+#: non è affidato alla memoria di nessuno.
 PF1E_SOLO: dict[str, dict[int, list[tuple[str, str]]]] = {
     "mago": {
-        2: [("fossa", "create pit"), ("pioggia di pietre", "stone call")],
-        3: [("fossa irta", "spiked pit"), ("sfera d'acqua", "aqueous orb")],
-        4: [("fulmini globulari", "ball lightning"), ("fossa acida", "acid pit")],
-        5: [("fossa vorace", "hungry pit")],
-        6: [("scirocco", "sirocco")],
-        8: [("saette", "stormbolts")],
-        9: [("rocce cozzanti", "clashing rocks")],
+        1: [
+            ("fossa d'inciampo", 'stumble gap'),
+            ('spinta idraulica', 'hydraulic push'),
+        ],
+        2: [
+            ('fossa', 'create pit'),
+            ('pioggia di pietre', 'stone call'),
+        ],
+        3: [
+            ('fossa irta', 'spiked pit'),
+            ("sfera d'acqua", 'aqueous orb'),
+        ],
+        4: [
+            ('fulmini globulari', 'ball lightning'),
+            ('fossa acida', 'acid pit'),
+        ],
+        5: [
+            ('fossa vorace', 'hungry pit'),
+            ('serpente di fuoco', 'fire snake'),
+        ],
+        6: [
+            ('scirocco', 'sirocco'),
+        ],
+        7: [
+            ('tizzone ardente', 'firebrand'),
+            ('deviazione', 'deflection'),
+        ],
+        8: [
+            ('saette', 'stormbolts'),
+        ],
+        9: [
+            ('rocce cozzanti', 'clashing rocks'),
+        ],
     },
     "chierico": {
-        4: [("benedizione del fervore", "blessing of fervor")],
-        8: [("saette", "stormbolts")],
+        2: [
+            ('arma del timore', 'weapon of awe'),
+        ],
+        3: [
+            ('manto irato', 'wrathful mantle'),
+        ],
+        4: [
+            ('benedizione del fervore', 'blessing of fervor'),
+        ],
+        5: [
+            ('colonna di vita', 'pillar of life'),
+            ('mondare', 'cleanse'),
+        ],
+        8: [
+            ('saette', 'stormbolts'),
+        ],
+        9: [
+            ('venti della vendetta', 'winds of vengeance'),
+        ],
     },
     "druido": {
-        2: [("pioggia di pietre", "stone call")],
-        3: [("sfera d'acqua", "aqueous orb")],
-        4: [("fulmini globulari", "ball lightning")],
-        6: [("scirocco", "sirocco")],
-        8: [("saette", "stormbolts")],
-        9: [("rocce cozzanti", "clashing rocks")],
+        1: [
+            ('aculei', 'bristle'),
+            ('spinta idraulica', 'hydraulic push'),
+        ],
+        2: [
+            ('pioggia di pietre', 'stone call'),
+        ],
+        3: [
+            ("sfera d'acqua", 'aqueous orb'),
+        ],
+        4: [
+            ('fulmini globulari', 'ball lightning'),
+        ],
+        5: [
+            ('serpente di fuoco', 'fire snake'),
+            ('aspetto del lupo', 'aspect of the wolf'),
+        ],
+        6: [
+            ('scirocco', 'sirocco'),
+        ],
+        7: [
+            ('terrapieno', 'rampart'),
+        ],
+        8: [
+            ('saette', 'stormbolts'),
+        ],
+        9: [
+            ('rocce cozzanti', 'clashing rocks'),
+        ],
     },
     "bardo": {
-        1: [("finale salvifico", "saving finale")],
-        2: [("ispirazione galante", "gallant inspiration")],
+        1: [
+            ('finale salvifico', 'saving finale'),
+        ],
+        2: [
+            ('ispirazione galante', 'gallant inspiration'),
+        ],
+        3: [
+            ('tamburi tonanti', 'thunderous drums'),
+        ],
+        4: [
+            ('esplosione discorde', 'discordant blast'),
+        ],
+        5: [
+            ('dardo assordante', 'deafening song bolt'),
+            ('manto dei sogni', 'cloak of dreams'),
+        ],
+        6: [
+            ('finale letale', 'deadly finale'),
+            ('interdizione dello stolto', "fool's forbiddance"),
+        ],
     },
-    #: ⚠️ L'unica riga rimasta **non verificata**: la ricerca ha trovato la
-    #: scheda di *instant enemy* ma non il livello stampato. Sta qui al 3° per
-    #: memoria, e la memoria in questo repo non conta come fonte.
-    "ranger": {3: [("nemico istantaneo", "instant enemy")]},
-    "paladino": {},
+    "ranger": {
+        1: [
+            ('arco gravitazionale', 'gravity bow'),
+            ('lame pesanti', 'lead blades'),
+        ],
+        2: [
+            ("aspetto dell'orso", 'aspect of the bear'),
+            ('eruzione di frecce', 'arrow eruption'),
+        ],
+        3: [
+            ('nemico istantaneo', 'instant enemy'),
+        ],
+        4: [
+            ('aspetto del lupo', 'aspect of the wolf'),
+            ("spirito dell'arco", 'bow spirit'),
+        ],
+    },
+    "paladino": {
+        1: [
+            ('richiamo del cavaliere', "knight's calling"),
+        ],
+        2: [
+            ('vigore virtuoso', 'righteous vigor'),
+            ('fuoco che avvince', 'fire of entanglement'),
+        ],
+        3: [
+            ('fuoco del giudizio', 'fire of judgment'),
+            ("santificare l'armatura", 'sanctify armor'),
+        ],
+        4: [
+            ('fuoco della vendetta', 'fire of vengeance'),
+            ('colpo risonante', 'resounding blow'),
+        ],
+    },
 }
-#: I nomi PRD la cui riga (classe e livello) è stata **verificata** contro
-#: d20pfsrd. Quelli che non compaiono qui sono proposte da controllare.
-PF1E_VERIFICATI = frozenset({
-    "create pit", "spiked pit", "hungry pit", "acid pit", "stone call",
-    "aqueous orb", "ball lightning", "sirocco", "stormbolts",
-    "clashing rocks", "blessing of fervor", "gallant inspiration",
-    "saving finale",
-})
 PF1E_SOLO["stregone"] = PF1E_SOLO["mago"]
 
 

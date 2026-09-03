@@ -479,24 +479,48 @@ invisibile alla generazione, scoperto al tavolo.
 
 Quello che rende davvero più duro un incantatore PF1e a pari GS è, in ordine:
 
-1. gli incantesimi che in 3.5 **non esistono** — 13 righe, la linea della
-   *fossa*, *scirocco*, *saette*, *benedizione del fervore*;
+1. gli incantesimi che in 3.5 **non esistono** — 55 righe, la linea della
+   *fossa*, *scirocco*, *saette*, *benedizione del fervore*, e per il paladino
+   tutta la linea del *fuoco* legata alla Punizione;
 2. il **+4 alle caratteristiche mentali** del template Advanced, che alza ogni CD
    di 2. È l'effetto più grosso, e `--piu-cattivi` lo applicava già;
 3. le liste di **evocazione** PF1e, che offrono creature migliori per livello.
 
-⚠️ **Il controllo delle righe PF1e ha trovato due errori**, dello stesso genere di
-quello per cui esiste tutto il lotto: *ill omen* stava sulla lista di mago e non
-è un incantesimo da mago (è da strega, psichico, mesmerista); *stone call* stava
-al 3° ed è **sorcerer/wizard 2**. Tolto il primo, spostato il secondo.
+⚠️ **Il controllo delle righe PF1e ha trovato tre errori**, dello stesso genere
+di quello per cui esiste tutto il lotto:
 
-⚠️ **Un limite dell'ambiente, non del piano.** `pathfinder.d20srd.org` e
-`legacy.aonprd.com` sono fuori dal criterio di rete di questo ambiente remoto: le
-righe sono state verificate una per una contro d20pfsrd attraverso la ricerca,
-non lette dal PRD. Una riga resta non verificata (il livello di *instant enemy*),
-e lo dichiara. **Aprire quei due domini nelle impostazioni di rete dell'ambiente**
-permetterebbe di importare le liste di classe PF1e per intero, come è stato fatto
-per la 3.5 — ed è il presupposto del lotto J.
+- *ill omen* stava sulla lista di mago e non è un incantesimo da mago (è da
+  **strega**, psichico, mesmerista);
+- *stone call* stava al 3° ed è **sorcerer/wizard 2**;
+- *hungry pit* risultava introvabile a una prima estrazione automatica. C'è, al
+  5° da mago: il nome porta il pedice del componente focus e il parser lo
+  incollava al nome. **Un'assenza silenziosa dentro un'ancora è peggio di
+  un'ancora mancante**, perché il test passa lo stesso.
+
+E un quarto, nell'ancora stessa: i nomi PF1e portano la virgola **dentro**
+(*pain strike, mass*), e il separatore era la virgola. Sette voci si erano
+spezzate in «mass», «greater», «lesser». Anche questo passava il test, perché
+quelle voci fantasma erano *in più* e non *in meno*: nessuno le cercava. Ora il
+separatore è ` · ` e c'è una guardia che rifiuta un suffisso nudo.
+
+**Il DM ha risolto il blocco di rete consegnando le due pagine.**
+`pathfinder.d20srd.org` resta fuori dal criterio di rete dell'ambiente, ma le
+liste — core e Advanced Player's Guide — sono state passate come file, e da lì
+è nata l'ancora vera: `pathfinder-1e-srd/references/conversion-guide.md`
+§«PF1e spell lists», che tiene le liste **APG** per le sei classi. Sono gli
+incantesimi che PF1e *aggiunge*: la lista core di Pathfinder, nome per nome, è
+abbastanza vicina al SRD 3.5 che tenerla non servirebbe a niente.
+
+Con l'ancora, le righe sono passate da 21 a **55** e non c'è più nessuna riga
+non verificata: `test_incantesimi.py` le controlla tutte contro la sezione, e la
+verifica morde (provato iniettando una riga sbagliata a posta). Sono coperti
+anche il **paladino**, che prima non aveva nessuna riga, e i livelli che erano
+scoperti per mago, druido, bardo e ranger.
+
+⚠️ **Il chierico resta scoperto al 1°, 6° e 7°, ed è voluto**: a quei livelli
+l'APG non aggiunge niente che cambi un incontro. Un buco dichiarato batte una
+riga messa per far quadrare la tabella — una variante «più cattiva» che non è
+più cattiva è il modo peggiore di sbagliare, perché non si vede.
 
 ---
 

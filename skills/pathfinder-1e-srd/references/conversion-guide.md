@@ -93,46 +93,36 @@ first is about spells at all:
 
 ### PF1e-only spells with no 3.5 equivalent
 
-Names are given as the PRD prints them, with a working Italian gloss, because a
-DM who wants one of these has to read the PF1e text — there is no 3.5 paragraph
-to fall back on. Source: PF1e PRD, Core Rulebook and Advanced Player's Guide
-(OGL), class and level checked against [d20pfsrd](https://www.d20pfsrd.com/magic/all-spells/).
+**55 rows**, held in `scripts/dmcore/incantesimi.py` (`PF1E_SOLO`) as
+`(Italian name, PRD name)` pairs with the page's own one-line description beside
+each. They are a curated pick from the full APG lists transcribed below, chosen
+for one thing: whether they change how an encounter goes. The pick is a
+proposal; the class and level of every row are checked by
+`test_incantesimi.py` against the §"PF1e spell lists" section of this file.
 
-The check was worth doing: **it caught two spells on the wrong list**, which is
-the same defect class the 3.5 lists exist to prevent.
+Each is given with its PRD name, because a DM who wants one has to read the PF1e
+text — there is no 3.5 paragraph to fall back on. The generator prints them as
+`nome italiano (PF1e: prd name)` and lists each in the block's `rincari`.
+
+**Transcribing them from the page caught three errors** that had been written
+here by hand from memory first, all of the same kind the 3.5 class lists exist to
+prevent:
 
 - *ill omen* was on the sorcerer/wizard list at 1st. It is a **witch**, psychic
-  and mesmerist spell — not arcane-prepared at all. Removed.
+  and mesmerist spell. Removed.
 - *stone call* was at 3rd for sorcerer/wizard. It is **sorcerer/wizard 2**
   (druid 2, ranger 2). Moved.
+- *hungry pit* looked absent on a first automated pass. It is there, at
+  sorcerer/wizard 5 — the name carries the focus-component superscript
+  (`Hungry Pit`<sup>F</sup>) and the extractor was gluing it to the name. A
+  silent absence inside an anchor is worse than a missing anchor: the test still
+  passes.
 
-| Level | PRD name | Gloss | Lists (checked) | Why it is worth importing |
-|---|---|---|---|---|
-| 1 | *saving finale* | finale salvifico | bard 1 | immediate-action reroll of a failed save for an ally |
-| 2 | *create pit* | fossa | sorc/wiz 2 | the pit line has no 3.5 twin; removes a PC from the fight on a failed Reflex |
-| 2 | *stone call* | pioggia di pietre | druid 2, ranger 2, sorc/wiz 2 | 2d6 bludgeoning over the area plus difficult terrain, no save |
-| 2 | *gallant inspiration* | ispirazione galante | bard 2 | immediate-action +2d4 to a failed attack or check |
-| 3 | *spiked pit* | fossa irta | sorc/wiz 3 | the pit, with spikes on the bottom and the walls |
-| 3 | *aqueous orb* | sfera d'acqua | druid 3, sorc/wiz 3, magus 3 | rolling engulf; control plus forced movement |
-| 3 | *instant enemy* | nemico istantaneo | ranger 3 ⚠️ **level not confirmed** | makes any target the ranger's favoured enemy for the fight |
-| 4 | *ball lightning* | fulmini globulari | druid 4, sorc/wiz 4, shaman 4 | two moving damage globes from one slot |
-| 4 | *acid pit* | fossa acida | sorc/wiz 4 | the pit, plus 2d6 acid per round in the pool at the bottom |
-| 4 | *blessing of fervor* | benedizione del fervore | cleric/oracle 4 | the strongest single party buff PF1e added; a real threat multiplier on a villain's side |
-| 5 | *hungry pit* | fossa vorace | sorc/wiz 5 | the pit that squeezes and crushes what falls in |
-| 6 | *sirocco* | scirocco | druid 6, sorc/wiz 6, magus 6 | 4d6+1/level fire, prone, and fatigued in one burst |
-| 8 | *stormbolts* | saette | cleric 8, druid 8, sorc/wiz 8, witch 8 | 1d8/level electricity (max 20d8) to every target in range |
-| 9 | *clashing rocks* | rocce cozzanti | druid 9, sorc/wiz 9 | the highest single-target damage PF1e added |
-
-⚠️ One row is still unchecked — *instant enemy*'s printed level. The generator
-keeps it and says so; a block that contains it is a proposal to verify.
-
-⚠️ **Why the check was done by search and not from the PRD itself.** This
-environment's network policy does not allow `pathfinder.d20srd.org` or
-`legacy.aonprd.com`, so the rows could not be read from the source document.
-Allowing those two domains in the environment's network settings would let a
-later pass import the PF1e class spell lists properly — the way
-`dnd-35-srd/references/spells.md` holds the 3.5 ones — and turn this table from
-a hand-checked shortlist into a real anchor.
+⚠️ **The cleric has no rows at 1st, 6th or 7th, on purpose.** At those levels the
+APG adds nothing that changes a fight (1st: *ant haul*, *dancing lantern*; 6th:
+*planar adaptation, mass* alone; 7th: nothing). A declared gap beats a row put
+there to make the table look complete — a "harsher" variant that is not harsher
+is the worst kind of wrong, because nobody sees it until the table.
 
 ### What the generator refuses to do
 
@@ -140,3 +130,90 @@ It will not "upgrade" a spell that this file already flags as *nerfed in PF1e*
 (*grease*, *glitterdust*, *black tentacles*, the save-or-die line, the polymorph
 line). Presenting a weaker spell as the harsher variant would be the worst kind
 of wrong: invisible at generation time, and discovered at the table.
+
+---
+
+## PF1e spell lists — the anchor for `--incantesimi pf1e`
+
+These are the **Advanced Player's Guide** spell lists: the spells PF1e *adds*
+on top of what 3.5 already has. Pathfinder's core spell list is, name for name,
+close enough to the 3.5 SRD that swapping one for the other buys nothing (see
+the compatibility table above). What a PF1e caster has that a 3.5 one does not
+is this list, and that is why it is the one worth holding in the repo.
+
+`scripts/dmcore/incantesimi.py` (`PF1E_SOLO`) draws a small curated selection
+from here, and `test_incantesimi.py` checks every row against this section — the
+same discipline as the 3.5 class lists in `dnd-35-srd/references/spells.md`.
+
+⚠️ **What this section is not.** It is not the full PF1e spell list: the core
+half is deliberately absent, because for this repo's purpose it is the 3.5 list
+under another cover. A future pass that wants PF1e-native casters needs the core
+half too.
+
+Source: `pathfinder.d20srd.org`, Advanced Spell Lists (OGL Open Game Content).
+Transcribed from the page itself rather than from memory — the check caught
+*ill omen* on the wrong class list and *stone call* at the wrong level, both of
+which had been written here by hand first.
+
+### Mago / Stregone
+
+- **0**: spark
+- **1**: alter winds · ant haul · break · crafter's curse · crafter's fortune · dancing lantern · expeditious excavation · flare burst · gravity bow · hydraulic push · memory lapse · sculpt corpse · stone fist · stumble gap · touch of gracelessness · touch of the sea · vanish
+- **2**: accelerate poison · arrow eruption · burning gaze · create pit · create treasure map · dust of twilight · elemental speech · elemental touch · fire breath · glide · share language · slipstream · stone call
+- **3**: aqueous orb · blood biography · campfire wall · cloak of winds · devolution · draconic reservoir · elemental aura · enter image · hydraulic torrent · pain strike · seek thoughts · shifting sand · spiked pit · twilight knife · versatile weapon
+- **4**: acid pit · ball lightning · calcific touch · detonate · dragon's breath · firefall · moonstruck · river of wind · shadow projection · share senses · true form · wandering star motes
+- **5**: fire snake · geyser · hungry pit · life bubble · pain strike, mass · phantasmal web · planar adaptation · suffocation · treasure stitching
+- **6**: cloak of dreams · contagious flame · enemy hammer · fluid form · getaway · sirocco · unwilling shield
+- **7**: deflection · expend · firebrand · fly, mass · phantasmal revenge · planar adaptation, mass · rampart · vortex
+- **8**: euphoric tranquility · seamantle · stormbolts · wall of lava
+- **9**: clashing rocks · fiery body · suffocation, mass · tsunami · wall of suppression · winds of vengeance · world wave
+
+### Chierico
+
+- **0**: spark
+- **1**: ant haul · dancing lantern
+- **2**: blessing of courage and life · ghostbane dirge · grace · instant armor · oracle's burden · share language · weapon of awe
+- **3**: blood biography · borrow fortune · elemental speech · enter image · guiding star · nap stack · sacred bond · wrathful mantle
+- **4**: blessing of fervor · planar adaptation · rest eternal · spiritual ally
+- **5**: cleanse · ghostbane dirge, mass · life bubble · pillar of life · snake staff · treasure stitching
+- **6**: planar adaptation, mass
+- **8**: divine vessel · euphoric tranquility · stormbolts
+- **9**: winds of vengeance
+
+### Druido
+
+- **0**: spark
+- **1**: alter winds · ant haul · aspect of the falcon · bristle · call animal · cloak of shade · detect aberration · expeditious excavation · feather step · flare burst · hydraulic push · keen senses · negate aroma · stone fist · touch of the sea
+- **2**: accelerate poison · aspect of the bear · burning gaze · campfire wall · eagle eye · elemental speech · feast of ashes · glide · lockjaw · natural rhythm · pox pustules · scent trail · share language · slipstream · stone call
+- **3**: aqueous orb · cloak of winds · create treasure map · cup of dust · feather step, mass · hide campsite · hydraulic torrent · lily pad stride · nature's exile · shifting sand
+- **4**: aspect of the stag · ball lightning · bloody claws · geyser · grove of respite · life bubble · moonstruck · river of wind · strong jaw · thorn body · true form
+- **5**: aspect of the wolf · blessing of the salamander · fire snake · rest eternal · snake staff · threefold aspect
+- **6**: sirocco · swarm skin
+- **7**: rampart · vortex
+- **8**: euphoric tranquility · seamantle · stormbolts · wall of lava
+- **9**: clashing rocks · tsunami · winds of vengeance · world wave
+
+### Bardo
+
+- **0**: sift · spark · unwitting ally
+- **1**: beguiling gift · borrow skill · dancing lantern · feather step · flare burst · innocence · invigorate · memory lapse · restful sleep · saving finale · share language · solid note · timely inspiration · touch of gracelessness · vanish
+- **2**: blood biography · cacophonous call · create treasure map · dust of twilight · enter image · gallant inspiration · ghostbane dirge · hidden speech · honeyed tongue · versatile weapon
+- **3**: arcane concordance · campfire wall · coordinated effort · elemental speech · feather step, mass · invigorate, mass · jester's jaunt · purging finale · reviving finale · seek thoughts · thunderous drums
+- **4**: denounce · discordant blast · ghostbane dirge, mass · heroic finale · treasure stitching · wandering star motes
+- **5**: bard's escape · cacophonous call, mass · cloak of dreams · deafening song bolt · foe to friend · frozen note · phantasmal web · stunning finale · unwilling shield
+- **6**: brilliant inspiration · deadly finale · euphoric tranquility · fool's forbiddance · getaway · pied piping
+
+### Ranger
+
+- **1**: ant haul · aspect of the falcon · call animal · cloak of shade · dancing lantern · detect aberration · feather step · glide · gravity bow · hunter's howl · keen senses · lead blades · negate aroma · residual tracking · tireless pursuit
+- **2**: accelerate poison · allfood · arrow eruption · aspect of the bear · bloodhound · campfire wall · chameleon stride · create treasure map · eagle eye · guiding star · hide campsite · hunter's eye · lockjaw · perceive cues · protective spirit · slipstream · stone call · versatile weapon
+- **3**: aspect of the stag · bloody claws · cloak of winds · feather step, mass · instant enemy · life bubble · strong jaw · tireless pursuers · venomous bolt
+- **4**: aspect of the wolf · blessing of the salamander · bow spirit · grove of respite
+
+### Paladino
+
+- **1**: challenge evil · ghostbane dirge · grace · hero's defiance · honeyed tongue · knight's calling · rally point · veil of positive energy
+- **2**: aura of greater courage · bestow grace · blessing of courage and life · corruption resistance · fire of entanglement · instant armor · light lance · paladin's sacrifice · righteous vigor · sacred bond · saddle surge · wake of light · weapon of awe
+- **3**: divine transfer · fire of judgment · ghostbane dirge, mass · holy whisper · marks of forbiddance · sanctify armor · wrathful mantle
+- **4**: blaze of glory · fire of vengeance · forced repentance · king's castle · oath of peace · resounding blow · sacrificial oath · stay the hand
+

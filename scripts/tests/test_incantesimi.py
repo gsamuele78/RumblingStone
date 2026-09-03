@@ -47,6 +47,49 @@ INTESTAZIONI = {
 }
 
 
+#: Le classi come le intitola la sezione PF1e → la chiave del generatore.
+INTESTAZIONI_PF = {
+    "Mago / Stregone": ("mago", "stregone"),
+    "Chierico": ("chierico",), "Druido": ("druido",), "Bardo": ("bardo",),
+    "Ranger": ("ranger",), "Paladino": ("paladino",),
+}
+
+
+def _sezione(testo: str, dopo: str, intestazioni: dict,
+             separatore: str = ",") -> dict[str, dict[int, set[str]]]:
+    """Le righe `- **N**: a, b, c` sotto ogni `### Classe`, dopo un titolo.
+
+    ⚠️ Il separatore è un parametro perché le due ancore non possono usarne uno
+    solo: i nomi PF1e portano la virgola **dentro** — *pain strike, mass* —, e
+    spezzarli lì corrompeva l'ancora in silenzio, con sette voci che diventavano
+    «mass», «greater» e «lesser». Il test passava lo stesso, perché quelle voci
+    fantasma non le cercava nessuno: erano *in più*, non *in meno*. È il modo in
+    cui un'ancora smette di ancorare senza che niente lo dica.
+    """
+    coda = testo[testo.index(dopo):]
+    fuori: dict[str, dict[int, set[str]]] = {}
+    corrente: tuple[str, ...] = ()
+    for riga in coda.splitlines():
+        if riga.startswith("### "):
+            corrente = intestazioni.get(riga[4:].strip(), ())
+            for c in corrente:
+                fuori.setdefault(c, {})
+            continue
+        m = re.match(r"- \*\*(\d)\*\*:\s*(.+)", riga.strip())
+        if not m or not corrente:
+            continue
+        voci = {v.strip() for v in m.group(2).split(separatore) if v.strip()}
+        for c in corrente:
+            fuori[c][int(m.group(1))] = voci
+    return fuori
+
+
+def _ancora_pf1e() -> dict[str, dict[int, set[str]]]:
+    """Le liste APG, cioè quello che PF1e aggiunge alla 3.5."""
+    return _sezione(ANCORA_PF.read_text(encoding="utf-8"),
+                    "## PF1e spell lists", INTESTAZIONI_PF, separatore=" · ")
+
+
 def _ancora() -> dict[str, dict[int, set[str]]]:
     """classe → livello → gli incantesimi che quella classe può lanciare."""
     testo = ANCORA.read_text(encoding="utf-8")
@@ -213,15 +256,52 @@ class IlRipiegoRestaDentroLaClasse(unittest.TestCase):
 
 class LaVariantePF1e(unittest.TestCase):
 
-    def test_ogni_incantesimo_pf1e_e_dichiarato_nella_guida(self):
-        """Non c'è una seconda copia che li controlli, ma il nome PRD deve
-        almeno comparire nella tabella scritta nella skill di conversione."""
-        guida = ANCORA_PF.read_text(encoding="utf-8")
+    def test_ogni_riga_pf1e_sta_sulla_lista_di_quella_classe(self):
+        """La stessa disciplina delle liste 3.5, applicata a PF1e.
+
+        La prima versione di questo test controllava solo che il nome PRD
+        *comparisse* nella guida di conversione — cioè in una tabella scritta a
+        mano insieme alle righe che doveva controllare. Non è un'ancora: è la
+        stessa fonte due volte. Ora il confronto è con le liste dell'Advanced
+        Player's Guide trascritte dalla pagina, e il controllo ha trovato tre
+        errori veri (vedi la nota su `PF1E_SOLO`).
+        """
+        ancora = _ancora_pf1e()
+        self.assertTrue(ancora, "la sezione delle liste PF1e è sparita dalla skill")
         for classe, per_livello in INC.PF1E_SOLO.items():
             for livello, voci in per_livello.items():
+                ammessi = ancora[classe].get(livello, set())
                 for _, prd in voci:
-                    with self.subTest(classe=classe, incantesimo=prd):
-                        self.assertIn(f"*{prd}*", guida)
+                    with self.subTest(classe=classe, livello=livello, incantesimo=prd):
+                        self.assertIn(
+                            prd, ammessi,
+                            f"«{prd}» non è sulla lista APG di {classe} al "
+                            f"{livello}° livello. È lo stesso difetto delle "
+                            f"liste 3.5, su un'altra fonte")
+
+    def test_l_ancora_pf1e_non_ha_voci_spezzate(self):
+        """La guardia sul difetto del separatore.
+
+        Nessuna voce può essere un suffisso nudo: se «mass» compare da sola,
+        vuol dire che un nome è stato tagliato in due e l'ancora sta
+        controllando qualcosa che non esiste.
+        """
+        ancora = _ancora_pf1e()
+        for classe, per_livello in ancora.items():
+            for livello, voci in per_livello.items():
+                for v in voci:
+                    with self.subTest(classe=classe, livello=livello, voce=v):
+                        self.assertNotIn(v, {"mass", "greater", "lesser"})
+
+    def test_il_chierico_dichiara_i_suoi_buchi(self):
+        """Tre livelli scoperti, e devono restare scoperti.
+
+        Al 1°, 6° e 7° l'APG non aggiunge al chierico niente che cambi un
+        incontro. Riempirli per far quadrare la tabella darebbe una variante
+        «più cattiva» che non è più cattiva — il modo peggiore di sbagliare,
+        perché non si vede.
+        """
+        self.assertEqual(sorted(INC.PF1E_SOLO["chierico"]), [2, 3, 4, 5, 8, 9])
 
     def test_non_promuove_gli_incantesimi_che_pf1e_ha_indebolito(self):
         """Il modo peggiore di sbagliare: vendere come «più cattivo» qualcosa
@@ -241,6 +321,9 @@ class LaVariantePF1e(unittest.TestCase):
         self.assertTrue(note)
         for riga_base, riga_pf in zip(base, pf):
             self.assertEqual(len(riga_base.split(",")), len(riga_pf.split(",")))
+
+    def test_mago_e_stregone_condividono_anche_le_righe_pf1e(self):
+        self.assertIs(INC.PF1E_SOLO["mago"], INC.PF1E_SOLO["stregone"])
 
     def test_lo_stesso_seme_da_la_stessa_lista(self):
         a, _ = INC.scegli("druido", "controllore", T.CHIERICO[12], _rng(11))
