@@ -1,8 +1,7 @@
 # PIANO — Un generatore di creature e PNG dalle tabelle
 
-> **Stato**: 🟡 **in corso** — lotti A·B·C·D·E·F chiusi, resta l'innesto in
-> `suggest_encounter` (lotto G, aggiunto su richiesta del DM) e le 52 schede
-> del Bestiario · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
+> **Stato**: 🟡 **in corso** — lotti A·B·C·D·E·F·G chiusi; restano le 52
+> schede del Bestiario (lotto H, punto 2 del DM) · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
 > **Decisioni del DM (§5)**: taratura **SRD 3.5 di norma, PF1e come variante
 > più cattiva**; il generatore serve per **quello che nel Bestiario non c'è**;
 > `suggest_encounter` deve poterne pescare una parte. Ruoli e tabelle del
@@ -149,12 +148,22 @@ sa da dove viene e lo si rifà uguale.
 
 ---
 
-### ⬜ Lotto G — Il generatore dentro `suggest_encounter`
+### ✅ Lotto G — Il generatore dentro `suggest_encounter`
 Aggiunto su richiesta del DM dopo l'apertura del piano: `suggest_encounter`
 pesca dal catalogo, e con un'opzione **pesca in parte dal generatore**, così gli
 incontri non escono mai due volte uguali. L'opzione «più cattivi» si propaga
 alla sola parte generata. **Accettazione**: stesso seed → stesso incontro; il
 GS combinato resta quello dichiarato.
+
+**✅ Chiuso 2026-09-03.** `--con-generatore` e `--piu-cattivi`. L'innesto è nel
+**pool**, non nel costruttore: aggiungere candidati e lasciar scegliere la logica
+di bilanciamento di sempre evita di scriverne una seconda da tenere allineata.
+⚠️ Metterli solo nel pool **non bastava**: dodici candidati contro 308 record del
+catalogo non uscivano quasi mai, e l'opzione sembrava accesa senza esserlo — che
+è il modo peggiore di sbagliare, perché non si vede. Ora una creatura generata
+entra per forza in ogni proposta e il resto resta pescato dal Bestiario.
+Verificato: stesso seed → output identico; **senza il flag l'output è byte per
+byte quello di prima**.
 
 ---
 

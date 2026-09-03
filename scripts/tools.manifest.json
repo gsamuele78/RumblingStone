@@ -3322,7 +3322,7 @@
       "category": "A-session-prep",
       "language": "python",
       "invocation": "python3 scripts/suggest_encounter.py",
-      "summary": "Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'.",
+      "summary": "Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata.",
       "stability": "stable",
       "stdlib_only": true,
       "external_bins": [],
@@ -3398,6 +3398,24 @@
           "choices": null,
           "repeatable": false,
           "desc": "Elenca fazioni/ambienti/PNG disponibili."
+        },
+        {
+          "name": "--con-generatore",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Aggiunge al pool creature GENERATE dalle tabelle (genera_creatura.py) e ne forza una in ogni proposta, cosi' gli incontri non escono mai due volte uguali. Le creature generate non stanno nel Bestiario e non ci entrano da sole: sono stampate per intero col loro conto, e nel canone le copia il DM."
+        },
+        {
+          "name": "--piu-cattivi",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Le sole creature generate prendono il template Advanced di Pathfinder 1e senza alzare il GS: piu' dure di quanto il GS prometta, e lo dichiarano. Non tocca i mostri veri del catalogo."
         }
       ],
       "inputs": [

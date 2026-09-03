@@ -13,7 +13,7 @@
 
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
-| `suggest_encounter.py` | Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. | --el · --env · --factions · --alliance · --inject-npc · --wild · --seed · --list-all | ✔ | — | — | `0` · `2` · `3` · `4` |
+| `suggest_encounter.py` | Genera 3-5 proposte di incontro D&D 3.5 per un EL bersaglio, con calcolo CR combinato, per fazione/alleanza o 'wild'. Con --con-generatore una parte dell'incontro viene COSTRUITA dalle tabelle invece che pescata dal catalogo (ADR-0034), cosi' gli incontri non si ripetono; --piu-cattivi rende piu' dura la sola parte generata. | --el · --env · --factions · --alliance · --inject-npc · --wild · --seed · --list-all · --con-generatore · --piu-cattivi | ✔ | — | — | `0` · `2` · `3` · `4` |
 | `suggest_loot.py` | Generatore di tesoro standalone (SRD 3.5) per EL/fazione, consuma l'output di suggest_encounter o flag diretti. | --el · --from-encounter · --factions · --pcs · --wild · --seed · --all-proposals | ✔ | — | — | `0` · `2` · `3` |
 | `suggest_map.py` | Sceglie una griglia tattica ASCII (quadretti da 5 ft) da scripts/map_templates/*.yaml per ambiente/tipo. | --env · --type · --name · --list | ✔ | — | — | `0` · `2` · `3` · `4` |
 
