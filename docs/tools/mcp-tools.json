@@ -1090,6 +1090,88 @@
       "deterministic": true
     },
     {
+      "name": "genera_creatura",
+      "description": "COSTRUISCE una creatura o un PNG che nel Bestiario non c'e', da (GS + tipo + taglia + ruolo). Le tabelle SRD 3.5 danno la forma (tipo -> dado dei DV, BAB, TS buoni; taglia -> modificatori; tabelle di classe -> incantesimi al giorno e CD) e il bersaglio per GS da' il livello; il risultato e' collaudato contro mostri veri del SRD. --piu-cattivi applica il template Advanced di Pathfinder 1e SENZA alzare il GS, cioe' la creatura picchia come un GS+1 e lo dichiara. Non scrive MAI dentro Bestiario/: stampa, o scrive in una cartella di lavoro, e nel canone copia il DM (ADR-0033). Va usato per cio' che manca: se nel catalogo c'e' gia' qualcosa di simile, si potenzia invece di generare un doppione.",
+      "invocation": "python3 scripts/genera_creatura.py --gs 7",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "gs": {
+            "type": "integer",
+            "description": "Grado di sfida bersaglio, da 1 a 20."
+          },
+          "tipo": {
+            "type": "string",
+            "description": "Tipo di creatura SRD (umanoide, gigante, non-morto, esterno...)."
+          },
+          "taglia": {
+            "type": "string",
+            "description": "Taglia SRD."
+          },
+          "ruolo": {
+            "type": "string",
+            "description": "Come combatte.",
+            "enum": [
+              "artigliere",
+              "bruto",
+              "comandante",
+              "controllore",
+              "schermagliatore",
+              "tiratore"
+            ]
+          },
+          "dv": {
+            "type": "integer",
+            "description": "Dadi vita; se omesso li sceglie la regola pratica DV~GS."
+          },
+          "classe": {
+            "type": "string",
+            "description": "Livelli di classe, es. «mago:9». Con questo il GS viene dai livelli."
+          },
+          "elite": {
+            "type": "boolean",
+            "description": "Forza la matrice elite (15,14,13,12,10,8)."
+          },
+          "standard": {
+            "type": "boolean",
+            "description": "Forza la matrice standard (13,12,11,10,9,8)."
+          },
+          "piu-cattivi": {
+            "type": "boolean",
+            "description": "Template Advanced PF1e senza alzare il GS: piu' duro di quanto il GS prometta, e lo dice."
+          },
+          "quanti": {
+            "type": "integer",
+            "description": "Quante creature generare."
+          },
+          "seed": {
+            "type": "integer",
+            "description": "Per riprodurre la stessa creatura."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Blocco e conto in JSON."
+          },
+          "in": {
+            "type": "string",
+            "description": "Cartella di lavoro in cui scrivere. Mai dentro Bestiario/: si rifiuta."
+          }
+        },
+        "required": [
+          "gs"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "creatura generata",
+        "2": "parametri fuori dominio (GS, tipo, classe) o scrittura dentro Bestiario/ rifiutata"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_bestiario",
       "description": "Gate CI della libreria Bestiario/: struttura, naming, header, CR filename-vs-header, catalogo in sync. Con --rules aggiunge warning PF1e non bloccanti.",
       "invocation": "python3 scripts/validate_bestiario.py",

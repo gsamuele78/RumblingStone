@@ -59,129 +59,21 @@ from dmcore.statblock import estrai  # noqa: E402
 from extract_statblocks import APERTURA, e_non_creatura, inserisci, schede  # noqa: E402
 
 # ===========================================================================
-# Le tabelle. SRD 3.5 salvo dove dichiarato.
+# Le tabelle. Stanno in dmcore/tabelle.py, con la provenienza riga per riga.
 # ===========================================================================
+# Stavano qui, ed erano l'unica copia finché il generatore non ha avuto bisogno
+# delle stesse righe. Due copie delle stesse tabelle divergono: e' successo al
+# manifest dei tool, e li' se n'e' accorto un lettore nuovo. Qui il lettore nuovo
+# e' `genera_creatura.py`.
+from dmcore.tabelle import (  # noqa: E402
+    ALIAS_TIPO, ARMATURE, BASIC, CLASSI, ELITE, PER_GS as _PER_GS_PIENA,
+    PER_GS_VERIFICATE, RUOLI_ELITE, SCUDI, TAGLIE, TIPI,
+    media_dado, mod, ts_buono, ts_cattivo,
+)
 
-#: SRD, «Table: Creature Improvement by Type» — dado dei DV, BAB, TS buoni.
-TIPI = {
-    "aberration":         (8,  0.75, ("vol",)),
-    "animal":             (8,  0.75, ("temp", "rifl")),
-    "construct":          (10, 0.75, ()),
-    "dragon":             (12, 1.0,  ("temp", "rifl", "vol")),
-    "elemental":          (8,  0.75, ("rifl",)),
-    "fey":                (6,  0.5,  ("rifl", "vol")),
-    "giant":              (8,  0.75, ("temp",)),
-    "humanoid":           (8,  0.75, ("temp",)),
-    "magical beast":      (10, 1.0,  ("temp", "rifl")),
-    "monstrous humanoid": (8,  1.0,  ("rifl", "vol")),
-    "ooze":               (10, 0.75, ()),
-    "outsider":           (8,  1.0,  ("temp", "rifl", "vol")),
-    "plant":              (8,  0.75, ("temp",)),
-    "undead":             (12, 0.5,  ("vol",)),
-    "vermin":             (8,  0.75, ("temp",)),
-}
-#: Come il tipo si scrive nelle schede (italiano e inglese).
-ALIAS_TIPO = {
-    "aberrazione": "aberration", "animale": "animal", "costrutto": "construct",
-    "drago": "dragon", "elementale": "elemental", "folletto": "fey",
-    "gigante": "giant", "umanoide": "humanoid", "bestia magica": "magical beast",
-    "umanoide mostruoso": "monstrous humanoid", "melma": "ooze",
-    "esterno": "outsider", "pianta": "plant", "non-morto": "undead",
-    "nonmorto": "undead", "parassita": "vermin", "immondo": "outsider",
-    "tiefling": "outsider", "mezzodrago": "dragon",
-}
-
-#: SRD — dado dei DV e TS buoni per classe. Le classi PNG (warrior, adept,
-#: expert, aristocrat, commoner) stanno nel SRD come le altre.
-CLASSI = {
-    "barbarian": (12, ("temp",)),   "barbaro":   (12, ("temp",)),
-    "bard":      (6,  ("rifl", "vol")), "bardo":  (6,  ("rifl", "vol")),
-    "cleric":    (8,  ("temp", "vol")), "chierico": (8, ("temp", "vol")),
-    "druid":     (8,  ("temp", "vol")), "druido": (8,  ("temp", "vol")),
-    "fighter":   (10, ("temp",)),   "guerriero": (10, ("temp",)),
-    "monk":      (8,  ("temp", "rifl", "vol")), "monaco": (8, ("temp", "rifl", "vol")),
-    "paladin":   (10, ("temp",)),   "paladino":  (10, ("temp",)),
-    "ranger":    (8,  ("temp", "rifl")),
-    "rogue":     (6,  ("rifl",)),   "ladro":     (6,  ("rifl",)),
-    "sorcerer":  (4,  ("vol",)),    "stregone":  (4,  ("vol",)),
-    "wizard":    (4,  ("vol",)),    "mago":      (4,  ("vol",)),
-    # classi PNG (SRD)
-    "warrior":   (8,  ("temp",)),   "adept":     (6,  ("vol",)),
-    "expert":    (6,  ("vol",)),    "aristocrat": (8, ("vol",)),
-    "commoner":  (4,  ()),          "esperto":   (6,  ("vol",)),
-    "adepto":    (6,  ("vol",)),    "popolano":  (4,  ()),
-}
-
-#: SRD — armatura naturale e modificatore di CA per taglia.
-TAGLIE = {
-    "fine": (0, +8), "diminutive": (0, +4), "tiny": (0, +2), "minuscola": (0, +2),
-    "small": (0, +1), "piccola": (0, +1),
-    "medium": (0, 0), "media": (0, 0),
-    "large": (2, -1), "grande": (2, -1),
-    "huge": (5, -2), "enorme": (5, -2),
-    "gargantuan": (9, -4), "mastodontica": (9, -4),
-    "colossal": (14, -8), "colossale": (14, -8),
-}
-
-#: SRD «Table: Armor and Shields» — solo le voci che le schede nominano.
-ARMATURE = {
-    "full plate": (8, 1), "piastre": (8, 1), "fullplate": (8, 1),
-    "half-plate": (7, 0), "mezza piastra": (7, 0),
-    "breastplate": (5, 3), "corazza": (5, 3),
-    "chainmail": (5, 2), "cotta di maglia": (5, 2), "maglia": (4, 4),
-    "chain shirt": (4, 4), "camicia di maglia": (4, 4),
-    "scale mail": (4, 3), "scaglie": (4, 3),
-    "studded leather": (3, 5), "cuoio borchiato": (3, 5),
-    "leather": (2, 6), "cuoio": (2, 6),
-    "padded": (1, 8), "imbottita": (1, 8),
-}
-SCUDI = {"heavy shield": 2, "scudo pesante": 2, "tower": 4, "torre": 4,
-         "light shield": 1, "scudo leggero": 1, "buckler": 1, "brocchiere": 1,
-         "shield": 2, "scudo": 2}
-
-#: SRD — matrice elite (15,14,13,12,10,8) e standard (13,12,11,10,9,8).
-#: PF1e le chiama «heroic» e «basic» e sono gli stessi numeri: una matrice sola
-#: per tutti e due i sistemi.
-ELITE = (15, 14, 13, 12, 10, 8)
-BASIC = (13, 12, 11, 10, 9, 8)
-#: I ruoli che meritano la matrice elite: chi ha un nome, chi comanda, chi e' un
-#: boss. Il fondale prende quella standard — ed e' il punto: un mook non deve
-#: avere le caratteristiche di un luogotenente.
-RUOLI_ELITE = ("boss", "elite", "villain", "commander", "captain", "lieutenant",
-               "alfa", "leader", "mastermind", "officer", "ally", "caster")
-
-#: PF1e Bestiary Table 1–1 — il collaudo finale. **Qui il SRD 3.5 non ha un
-#: equivalente**: non esiste una tabella «statistiche per GS» nel SRD, e questa
-#: e' contenuto libero OGL. Serve solo a DIRE se il risultato e' fuori bersaglio,
-#: mai a sostituire il conto.
-PER_GS = {1: (12, 15), 2: (14, 20), 3: (15, 30), 4: (17, 40), 5: (18, 50),
-          6: (19, 65), 7: (20, 85), 8: (21, 100), 9: (23, 115), 10: (24, 130),
-          11: (25, 145), 12: (27, 160), 13: (28, 180), 14: (29, 200),
-          15: (30, 220), 16: (31, 240), 17: (32, 265), 18: (33, 290),
-          19: (34, 320), 20: (35, 350)}
-#: ⚠️ Solo QUESTE righe sono verificate contro la fonte (le righe d'ancora di
-#: `pathfinder-1e-srd/references/monster-advancement.md`, controllate a loro
-#: volta sugli epub PRD). Le altre le ho interpolate io, ed e' una differenza
-#: che va detta invece di sparire dentro una tabella dall'aria autorevole: un
-#: giudizio duro non si dà su una riga che nessuno ha verificato.
-PER_GS_VERIFICATE = frozenset({8, 10, 11, 12, 13, 14, 15, 16})
-
-
-def mod(punteggio: int) -> int:
-    return (punteggio - 10) // 2
-
-
-def ts_buono(dv: int) -> int:
-    return 2 + dv // 2
-
-
-def ts_cattivo(dv: int) -> int:
-    return dv // 3
-
-
-def media_dado(faccia: int) -> float:
-    """La media di un dado, come la usa il SRD per i PNG: (faccia/2) + 0,5."""
-    return faccia / 2 + 0.5
+#: Il collaudo usa due sole colonne della riga per GS: CA e pf. Le altre
+#: (attacco, danno, CD, tiri salvezza) servono al generatore, non a chi legge.
+PER_GS = {gs: (riga[0], riga[1]) for gs, riga in _PER_GS_PIENA.items()}
 
 
 # ===========================================================================

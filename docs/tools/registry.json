@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 53,
+  "tool_count": 54,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -2729,6 +2729,168 @@
         "docs/guides/GUIDA-BESTIARIO.md",
         "plans/adr/ADR-0021-statblocchi-machine-readable.md"
       ]
+    },
+    {
+      "id": "genera_creatura",
+      "path": "scripts/genera_creatura.py",
+      "category": "E-bestiary-catalog",
+      "language": "python",
+      "invocation": "python3 scripts/genera_creatura.py --gs 7",
+      "summary": "COSTRUISCE una creatura o un PNG che nel Bestiario non c'e', da (GS + tipo + taglia + ruolo). Le tabelle SRD 3.5 danno la forma (tipo -> dado dei DV, BAB, TS buoni; taglia -> modificatori; tabelle di classe -> incantesimi al giorno e CD) e il bersaglio per GS da' il livello; il risultato e' collaudato contro mostri veri del SRD. --piu-cattivi applica il template Advanced di Pathfinder 1e SENZA alzare il GS, cioe' la creatura picchia come un GS+1 e lo dichiara. Non scrive MAI dentro Bestiario/: stampa, o scrive in una cartella di lavoro, e nel canone copia il DM (ADR-0033). Va usato per cio' che manca: se nel catalogo c'e' gia' qualcosa di simile, si potenzia invece di generare un doppione.",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--gs",
+          "type": "int",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Grado di sfida bersaglio, da 1 a 20."
+        },
+        {
+          "name": "--tipo",
+          "type": "str",
+          "required": false,
+          "default": "humanoid",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tipo di creatura SRD (umanoide, gigante, non-morto, esterno...)."
+        },
+        {
+          "name": "--taglia",
+          "type": "str",
+          "required": false,
+          "default": "medium",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Taglia SRD."
+        },
+        {
+          "name": "--ruolo",
+          "type": "choice",
+          "required": false,
+          "default": "bruto",
+          "choices": [
+            "artigliere",
+            "bruto",
+            "comandante",
+            "controllore",
+            "schermagliatore",
+            "tiratore"
+          ],
+          "repeatable": false,
+          "desc": "Come combatte."
+        },
+        {
+          "name": "--dv",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dadi vita; se omesso li sceglie la regola pratica DV~GS."
+        },
+        {
+          "name": "--classe",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Livelli di classe, es. «mago:9». Con questo il GS viene dai livelli."
+        },
+        {
+          "name": "--elite",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Forza la matrice elite (15,14,13,12,10,8)."
+        },
+        {
+          "name": "--standard",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Forza la matrice standard (13,12,11,10,9,8)."
+        },
+        {
+          "name": "--piu-cattivi",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Template Advanced PF1e senza alzare il GS: piu' duro di quanto il GS prometta, e lo dice."
+        },
+        {
+          "name": "--quanti",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Quante creature generare."
+        },
+        {
+          "name": "--seed",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Per riprodurre la stessa creatura."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Blocco e conto in JSON."
+        },
+        {
+          "name": "--in",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella di lavoro in cui scrivere. Mai dentro Bestiario/: si rifiuta."
+        }
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "creatura generata",
+        "2": "parametri fuori dominio (GS, tipo, classe) o scrittura dentro Bestiario/ rifiutata"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seed",
+        "notes": "A parita' di seed e parametri il blocco e' identico; senza seed cambia solo il carattere (talento, tattica, debolezza), mai i numeri."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
     },
     {
       "id": "validate_bestiario",
