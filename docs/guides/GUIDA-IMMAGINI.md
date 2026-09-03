@@ -74,8 +74,8 @@ prompt: sono sulle sei leve della skill
 
 ### 2.1 La struttura: due paragrafi, sempre
 
-1. **La scena** — cosa si vede, in prosa concreta;
-2. **La direzione artistica** — resa, luce, palette, mood, composizione.
+1. **La scena**: cosa si vede, in prosa concreta;
+2. **La direzione artistica**: resa, luce, palette, mood, composizione.
 
 In **inglese** (i modelli lo seguono meglio); note e commenti in italiano.
 
@@ -158,10 +158,10 @@ fissa mithral + verde smeraldo + nero-violetto, e le due sole sorgenti di luce.
 
 Ogni scheda ha il campo **Destinatario**:
 
-- **`pg`** — mostrabile ai giocatori: ritrae qualcosa che hanno già vissuto,
+- **`pg`**, mostrabile ai giocatori: ritrae qualcosa che hanno già vissuto,
   o è deliberatamente ambiguo (la soglia di Terros è `pg` perché il guardiano
   sembra ancora solo roccia);
-- **`dm`** — spoiler: non esce prima del suo momento (il ritorno di Durik).
+- **`dm`**, spoiler: non esce prima del suo momento (il ritorno di Durik).
 
 Un'immagine mostrata troppo presto brucia una scena esattamente come un
 titolo rivelatore: vale la stessa disciplina degli handout (ADR-0013 §3).

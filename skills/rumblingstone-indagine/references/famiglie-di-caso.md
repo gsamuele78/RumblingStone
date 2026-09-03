@@ -1,8 +1,8 @@
 # Le sei famiglie di caso
 
 Il congegno è **una** delle risposte possibili, non la struttura. Tutto
-l'impianto — nodi a tre strati, sei porte, ricomposizione, falsi indizi,
-vicolo cieco, Acume e Perizia — è identico in tutte e sei le famiglie: cambia
+l'impianto (nodi a tre strati, sei porte, ricomposizione, falsi indizi,
+vicolo cieco, Acume e Perizia) è identico in tutte e sei le famiglie: cambia
 **cosa** si nasconde, e quindi che tipo di dettagli si posano.
 
 Si sceglie la famiglia **prima** di scrivere i nodi. È la decisione che
@@ -25,7 +25,7 @@ brillano qui più che altrove: FOR dice quanti erano, DES da che parte è
 partito il colpo, COS quanto ci ha messo a morire.
 
 **La chiave tipica**: il dettaglio che **solo il colpevole poteva lasciare o
-sapere** — e che finora sembrava di tutti.
+sapere**, e che finora sembrava di tutti.
 
 **L'errore da evitare**: il colpevole mai comparso prima. Un nome nuovo alla
 rivelazione non è una sorpresa, è un imbroglio. **Il colpevole va conosciuto,
@@ -44,7 +44,7 @@ saprebbe. Non ricorda un'abitudine. Scrive con la mano giusta ma tiene il
 boccale con l'altra.
 
 **La chiave tipica**: la cosa che **la persona vera non avrebbe mai potuto
-dimenticare** — un lutto, un debito, una cicatrice, il nome di un cane.
+dimenticare**: un lutto, un debito, una cicatrice, il nome di un cane.
 
 **L'errore da evitare**: renderlo risolvibile con un tiro di Intuizione. La
 prova sociale dà **una sensazione**, mai il nome; il nome viene
@@ -62,23 +62,23 @@ davanti a chi conta vale dieci volte l'agguato in un vicolo.
 dovrebbe conoscersi e si conosce. Tre decisioni prese lo stesso giorno da tre
 uffici diversi. Un prezzo che si muove prima della notizia.
 
-**La chiave tipica**: **il nodo che collega** — un nome, un pagamento, una
+**La chiave tipica**: **il nodo che collega**: un nome, un pagamento, una
 stanza dove sono passati tutti.
 
 **L'errore da evitare**: farla troppo grande per essere toccata. Vale il
 vincolo del pilastro 5: **la conseguenza politica deve arrivare a misura di
-PG** — una tassa, un sicario, un invito. Una cospirazione che riguarda solo i
+PG**: una tassa, un sicario, un invito. Una cospirazione che riguarda solo i
 regni è un fondale.
 
 **Come finisce**: mai con tutti in catene. Si taglia **un pezzo**, e il resto
-impara e si riorganizza — che è materia per l'arco dopo.
+impara e si riorganizza, che è materia per l'arco dopo.
 
 ## 4. La sparizione — qualcuno o qualcosa non c'è più
 
 **La domanda**: andato via, portato via, o nascosto?
 
 **La firma negli indizi**: **l'assenza stessa**, letta con precisione. Cosa
-manca dalla stanza e cosa no. **Cosa una persona non si è portata dietro** —
+manca dalla stanza e cosa no. **Cosa una persona non si è portata dietro**,
 è la cosa che dice tutto: chi fugge prende i soldi, chi viene preso non prende
 niente, chi vuole sparire lascia apposta quello che lo identifica.
 
@@ -97,14 +97,14 @@ caso, non il ritrovamento.
 
 **La firma negli indizi**: **le prove sono troppo buone.** Tutto torna, tutto
 è a portata di mano, tutto è arrivato al momento giusto. La realtà non è mai
-così ordinata — e questo è l'unico caso in cui *«tutto è significativo»*
+così ordinata, e questo è l'unico caso in cui *«tutto è significativo»*
 (`italiano-nativo.md` §9) è un indizio invece che un tic.
 
-**La chiave tipica**: **l'unico difetto della messinscena** — la cosa che chi
+**La chiave tipica**: **l'unico difetto della messinscena**: la cosa che chi
 ha costruito le prove non poteva sapere.
 
 **L'errore da evitare**: mettere il gruppo in cella e togliergli il gioco. Se
-un PG è accusato, deve poter **agire** — in fuga, in libertà vigilata, con un
+un PG è accusato, deve poter **agire**: in fuga, in libertà vigilata, con un
 termine che scade. Il tempo è la pressione, non le sbarre.
 
 **Come finisce**: scagionarsi **non ripara il danno**. Chi ha creduto
@@ -114,7 +114,7 @@ all'accusa continua a crederci un po', e quello resta addosso per archi.
 
 **La domanda**: cosa fa la macchina, e cosa succede quando è finita.
 
-Famiglia con un file suo: `congegno-e-enigmi.md` — le tre sottofamiglie
+Famiglia con un file suo: `congegno-e-enigmi.md`, con le tre sottofamiglie
 (arcano, aberrante, mistico), la regia del prestigiatore, l'innesco in piena
 vista, l'agenda dei villain, il congegno come terzo attore in combattimento e
 il dosaggio.
@@ -143,7 +143,7 @@ IL COSTO         cosa peggiora mentre i PG capiscono.
 LA PORTA CHIUSA  la cosa che non capiranno mai del tutto.
 ```
 
-**`L'INNESCO` è opzionale fuori dalla famiglia 6** — un caso può non averne.
+**`L'INNESCO` è opzionale fuori dalla famiglia 6**: un caso può non averne.
 Tutte le altre righe sono obbligatorie in tutte e sei.
 
 ## Scegliere in trenta secondi

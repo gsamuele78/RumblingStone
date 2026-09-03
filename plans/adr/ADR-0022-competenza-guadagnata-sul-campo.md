@@ -27,10 +27,10 @@ che chi ci prova e ci riesce **porti a casa qualcosa che resta**.
 La seconda metà è quella pericolosa. Gradi veri, regalati senza limite, al
 decimo caso producono due danni che si vedono tardi e non si disfano:
 
-1. **inflazione di scheda** — un guerriero con dieci gradi gratis in Cercare
+1. **inflazione di scheda**: un guerriero con dieci gradi gratis in Cercare
    ha una scheda che nessuno ha progettato e che il bilanciamento degli
    incontri non conosce;
-2. **erosione della classe** — se tutti hanno Cercare, nessuno *è* quello
+2. **erosione della classe**: se tutti hanno Cercare, nessuno *è* quello
    che cerca, e il giorno in cui un ladro entra nel gruppo scopre che il suo
    mestiere è già coperto.
 

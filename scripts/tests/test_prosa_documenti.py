@@ -4,10 +4,11 @@ Bersaglio diverso dalla prosa di gioco, quindi tic diversi. In una guida non ci
 sono read-aloud; quello che tradisce la macchina è il trattino lungo usato come
 respiro e il numero annunciato prima dell'elenco.
 
-Le soglie sono tarate sulla distribuzione reale del repo (mediana 82 trattini
-ogni mille righe di prosa, quartile alto 118), non scelte a occhio. Questi test
-tengono ferma quella taratura: una soglia che segnala tutto è una soglia che
-verrà spenta, e con lei i rilievi buoni.
+Le soglie sono tarate sulla distribuzione reale del repo, non scelte a occhio:
+mediana 82 trattini ogni mille righe di prosa e quartile alto 118 al momento
+della taratura, mediana 73 dopo la ripulitura del lotto D. Questi test tengono
+ferma quella taratura: una soglia che segnala tutto è una soglia che verrà
+spenta, e con lei i rilievi buoni.
 """
 from __future__ import annotations
 
@@ -98,6 +99,23 @@ class Trattino(unittest.TestCase):
             self.assertEqual(P.controlla_documento(f), [])
 
 
+    def test_l_intervallo_numerico_non_e_un_trattone(self):
+        """`3–4 ore` e `GS 17–19` sono intervalli, e la lineetta enne ci va.
+
+        Contarli chiederebbe di sbagliare la punteggiatura per far tacere il
+        gate. Trenta intervalli su cinquanta righe restano zero rilievi."""
+        testo = _righe(50) + "\n" + "\n".join(["Tre sessioni da 3–4 ore, GS 17–19."] * 15)
+        with documento(testo) as f:
+            self.assertEqual(P.controlla_documento(f), [])
+
+    def test_il_respiro_fra_due_numeri_resta_contato(self):
+        """L'esclusione è per la enne senza spazi, non per «numero — numero»."""
+        testo = _righe(50) + "\n" + "\n".join(["Chiuso 2026-09-03 — 157 su 157."] * 15)
+        with documento(testo) as f:
+            fuori = P.controlla_documento(f)
+        self.assertTrue(any("trattini lunghi" in r for r in fuori), fuori)
+
+
 class ConteggioAnnunciato(unittest.TestCase):
     def test_si_segnala_oltre_la_soglia(self):
         testo = (_righe(45) + "\nCambiano tre cose.\nE per due ragioni.\n"
@@ -118,6 +136,46 @@ class ConteggioAnnunciato(unittest.TestCase):
             fuori = P.controlla_documento(f)
         riga = next(r for r in fuori if "numero annunciato" in r)
         self.assertIn("«tre cose»", riga)
+
+    def test_due_punti_e_la_punteggiatura_non_un_conteggio(self):
+        """«due punti» è il nome del segno `:`, e il gate lo contava.
+
+        Il rilievo su `PIANO-PROSA-CHE-NON-SEMBRI-GENERATA.md` era fatto di due
+        occorrenze su tre di questa forma, dentro la frase che prescrive proprio
+        quel segno come antidoto al trattone. Cercate tutte le occorrenze nei
+        documenti: nessuna annuncia un elenco."""
+        testo = (_righe(45) + "\nIl segno giusto è due punti.\n"
+                 "Anche qui vanno i due punti.\nE altrove due punti ancora.")
+        with documento(testo) as f:
+            self.assertEqual(P.controlla_documento(f), [])
+
+    def test_il_conteggio_citato_non_e_il_conteggio_commesso(self):
+        """Un documento che parla del tic lo cita, e citarlo non è commetterlo.
+
+        Senza questa esclusione il gate segnalava proprio i file che scrivono la
+        norma: il piano, la skill e il changelog che portano gli esempi come
+        prova."""
+        testo = (_righe(45) + "\nIl tic suona come «tre cose» in apertura.\n"
+                 "Oppure come «due ragioni» dette prima dell'elenco.\n"
+                 "O ancora `quattro punti`, annunciati e poi elencati.")
+        with documento(testo) as f:
+            self.assertEqual(P.controlla_documento(f), [])
+
+    def test_il_conteggio_fuori_dalle_virgolette_si_conta_lo_stesso(self):
+        """L'esclusione è per la citazione, non per il documento che ne parla."""
+        testo = (_righe(45) + "\nIl tic suona come «tre cose» in apertura.\n"
+                 "Cambiano tre cose.\nE per due ragioni.\nRestano quattro punti.")
+        with documento(testo) as f:
+            fuori = P.controlla_documento(f)
+        self.assertTrue(any("numero annunciato" in r for r in fuori), fuori)
+
+    def test_gli_altri_nomi_col_numero_due_restano_contati(self):
+        """L'esclusione è la sola coppia «due punti», non la parola «due»."""
+        testo = (_righe(45) + "\nCambiano due cose.\nE per due ragioni.\n"
+                 "Restano due modi.")
+        with documento(testo) as f:
+            fuori = P.controlla_documento(f)
+        self.assertTrue(any("numero annunciato" in r for r in fuori), fuori)
 
 
 class Antitesi(unittest.TestCase):

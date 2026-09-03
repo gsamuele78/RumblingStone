@@ -24,7 +24,7 @@ Tre regole che valgono per ogni lotto e che sono il senso di *«senza stravolger
 
 1. **Si travasa l'apparato e il formato, mai la voce.** Il Drappo è una città in tre
    giorni, la campagna è un'epica in nove archi: le due prose non si toccano. Passano
-   gli **attrezzi** — un indice, una tabella, un formato di audit — non lo stile.
+   gli **attrezzi** (un indice, una tabella, un formato di audit) e non lo stile.
 2. **Il testo già giocato non si riscrive.** ARC-07 è al tavolo *adesso*
    (`campaign/state.md`: «Arco 07 in corso»). Ogni lotto **aggiunge un file** o tocca
    un manifest; nessuno riapre un master per rimaneggiarlo. Vale la stessa regola che
@@ -63,14 +63,14 @@ non dentro di essi.
 
 ### A1 · La cassetta del DM per ARC-07 `✅ 2026-08-31`
 
-**Produce**: `07_il Portale Della Forgia Eterna/ARC07-CASSETTA-DEL-DM.md` — un file
+**Produce**: `07_il Portale Della Forgia Eterna/ARC07-CASSETTA-DEL-DM.md`, un file
 solo, consultabile al tavolo, che copre le voci ADR-0018 che mancano:
 
-1. **foglio del cast**: ogni PNG con nome proprio dei cinque master in una riga —
+1. **foglio del cast**: ogni PNG con nome proprio dei cinque master in una riga,
    ruolo, cosa vuole, **il tic vocale**, in quale master compare;
 2. **guida alla pronuncia** dei nomi non ovvi (Terros, Dauth, Rethmar, i nomi nanici);
 3. **indice dei 260 read-aloud** in ordine di gioco: master · § · prima riga · lunghezza;
-4. **cue sonori** sul modello di `ARC08-16-CUE-SONORI.md` — descrizioni, mai titoli;
+4. **cue sonori** sul modello di `ARC08-16-CUE-SONORI.md`: descrizioni, mai titoli;
 5. **il momento da fotografare**, uno per master;
 6. **nota di accessibilità**.
 
@@ -82,7 +82,7 @@ trenta secondi; ogni read-aloud dell'arco compare nell'indice con il suo rimando
 **Dieta di contesto**: un master alla volta, mai i cinque insieme.
 **Anti-stravolgimento**: nessuna riga dei master viene modificata. Se durante la
 lettura emergono incoerenze, **si annotano**, non si correggono qui.
-**Stima**: mezza giornata. **Priorità: 1** — è l'arco che il tavolo sta giocando.
+**Stima**: mezza giornata. **Priorità: 1**, perché è l'arco che il tavolo sta giocando.
 
 ### A2 · I dieci fregi montati nei booklet della campagna `✅ 2026-08-31`
 
@@ -92,7 +92,7 @@ un arco, lo genera `scripts/build_chapter_marks.py`.
 **Criterio**: `validate_booklets.py --stampa` verde e il medaglione visibile nel PDF.
 **File toccati**: 4 manifest JSON. Nessun contenuto.
 **Engine**: script + Haiku, impegno **basso**.
-**Stima**: ~30 minuti. **Priorità: 2** — rapporto resa/costo più alto del piano.
+**Stima**: ~30 minuti. **Priorità: 2**, il rapporto resa/costo più alto del piano.
 
 ### A3 · Derivate e provenienza per le immagini di ARC-07 `✅ 2026-08-31`
 
@@ -103,8 +103,8 @@ un arco, lo genera `scripts/build_chapter_marks.py`.
 se il tool li accetta; se non li accetta, l'estensione è di poche righe **con un test**
 (ADR-0012), non un rattoppo.
 ⚠️ **E una cosa che non si può inventare**: di quelle immagini non si conosce né il
-modello né il seme. `PROVENIENZA.txt` registra **quello che è vero** — formato, data,
-origine `DA CONFERMARE` — esattamente come si è fatto per i raster di Gemini
+modello né il seme. `PROVENIENZA.txt` registra **quello che è vero**: formato, data,
+origine `DA CONFERMARE`, esattamente come si è fatto per i raster di Gemini
 (ADR-0019 §2-bis). Meglio una riga onesta che una inventata.
 **Criterio**: le derivate esistono, i booklet della campagna non aumentano di peso, i
 gate restano verdi.
@@ -115,7 +115,7 @@ gate restano verdi.
 
 **Produce**: `campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`, sul modello di
 `09-KIT-ANTI-IMPROVVISAZIONE.md` ma **tarato sulla campagna**: 1d20 nomi della Valle
-di Cannath (umani, nani, mezzelfi — separati, perché mescolarli suona falso), prezzi
+di Cannath (umani, nani, mezzelfi separati, perché mescolarli suona falso), prezzi
 di bottega 3.5 per un party di 13° (cioè: **cosa non si trova** più che cosa si
 trova), tre PNG jolly con statblocco al livello giusto, 1d6 «la Valle respira» in cui
 nessuna voce è un gancio.
@@ -125,7 +125,7 @@ un jolly: è canone, e va da un'altra parte).
 **Engine**: Sonnet, impegno **medio**. **Dieta**: glossario + `state.md` §PNG, basta.
 **Anti-stravolgimento**: il kit **non è canone**. Lo dichiara in testa: quello che il
 tavolo trasforma in trama diventa canone *dopo*, via `state.md`.
-**Stima**: ~2 ore. **Priorità: 4** — vale per tutti gli archi, non per uno.
+**Stima**: ~2 ore. **Priorità: 4**, perché vale per tutti gli archi e non per uno.
 
 ### A5 · I prop fisici degli handout di ARC-07 `✅ 2026-08-31`
 
@@ -140,8 +140,8 @@ verde sui manifest che li includono.
 ### A6 · Il dossier delle piste per ARC-09 `⬜ gated`
 
 **Produce**: l'equivalente di `10-DOSSIER-DELLE-PISTE.md` per i misteri che ARC-09 ha
-già — la torre invisibile, le due lettere che provano i traffici Sonjak↔Collezionista,
-il «dottore» — con nodi a tre strati, sei porte e orologio degli indizi
+già: la torre invisibile, le due lettere che provano i traffici Sonjak↔Collezionista,
+il «dottore», con nodi a tre strati, sei porte e orologio degli indizi
 (`rumblingstone-indagine`).
 **Gate**: **dopo** che ARC-07 finisce al tavolo. Scrivere le piste di un arco non
 ancora giocato mentre il precedente è aperto è lavoro che invecchia.
@@ -157,10 +157,10 @@ round e le contingenze. Restano due cose vere.
 ### B1 · L'analisi di bilanciamento dei tre scontri `✅ 2026-08-31`
 
 **Produce**: in `06-VILLAIN-E-AGENDE.md` un **§7-bis** che applica il formato DPR di
-ARC-07 ai tre momenti duri del modulo — la rissa alla fontana, l'assalto alle stalle,
+ARC-07 ai tre momenti duri del modulo: la rissa alla fontana, l'assalto alle stalle,
 la curva nord: danno medio per round delle sei pregenerate, round previsti per
 chiudere, e **chi rischia davvero di cadere**.
-**Criterio**: **nessun numero nuovo** — tutti derivati dagli statblocchi e dalle
+**Criterio**: **nessun numero nuovo**, tutti derivati dagli statblocchi e dalle
 schede già scritte; la conclusione dichiara se lo scontro dura 3 round o 8, perché è
 la cosa che il DM vuole sapere prima di sedersi.
 **Engine**: Sonnet, impegno **medio** (è aritmetica su dati esistenti).
@@ -249,23 +249,23 @@ riga in `plans/CHANGELOG.md`.
 
 ## §8 · Checklist di stato
 
-- ✅ **A1** — cassetta del DM per ARC-07 *(`ARC07-CASSETTA-DEL-DM.md`: 12 PNG col tic, 9 pronunce con le due collisioni Thorek/Thorik e Durik/Durin, indice dei 260 read-aloud per § con il comando che lo rigenera, 12 cue sonori, 5 momenti da fotografare, accessibilità; §7 dichiara che i prop restano scoperti = lotto A5)*
-- ✅ **A2** — i dieci fregi montati nei manifest della campagna *(chiave `fregio` nel manifest: nel modulo il medaglione si trova dal nome del capitolo, nella campagna è dell'arco)*
-- ✅ **A3** — derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
-- ✅ **A4** — kit anti-improvvisazione della Valle *(`campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`: 3×1d20 nomi separati per popolo, i prezzi che dicono **cosa non si trova** a 13°, tre jolly senza agenda, 1d6 «la Valle respira»)*
-- ✅ **A5** — prop fisici per gli handout di ARC-07 *(tre prop nuovi + il difetto trovato: la nota anti-spoiler finiva stampata nella carta dei giocatori)*
-- ⬜ **A6** — dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
-- ✅ **B1** — analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
-- ✅ **B2** — audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
+- ✅ **A1**: cassetta del DM per ARC-07 *(`ARC07-CASSETTA-DEL-DM.md`: 12 PNG col tic, 9 pronunce con le due collisioni Thorek/Thorik e Durik/Durin, indice dei 260 read-aloud per § con il comando che lo rigenera, 12 cue sonori, 5 momenti da fotografare, accessibilità; §7 dichiara che i prop restano scoperti = lotto A5)*
+- ✅ **A2**: i dieci fregi montati nei manifest della campagna *(chiave `fregio` nel manifest: nel modulo il medaglione si trova dal nome del capitolo, nella campagna è dell'arco)*
+- ✅ **A3**: derivate e provenienza per le immagini di ARC-07 *(booklet di Terros: 11,7 MB → 1,7 MB; cinque coppie di duplicati trovate e dichiarate, non cancellate)*
+- ✅ **A4**: kit anti-improvvisazione della Valle *(`campaign/KIT-ANTI-IMPROVVISAZIONE-VALLE.md`: 3×1d20 nomi separati per popolo, i prezzi che dicono **cosa non si trova** a 13°, tre jolly senza agenda, 1d6 «la Valle respira»)*
+- ✅ **A5**: prop fisici per gli handout di ARC-07 *(tre prop nuovi + il difetto trovato: la nota anti-spoiler finiva stampata nella carta dei giocatori)*
+- ⬜ **A6**: dossier delle piste per ARC-09 *(gated: ARC-07 finito al tavolo)*
+- ✅ **B1**: analisi di bilanciamento dei tre scontri del Drappo *(`06-VILLAIN` §7-bis: ~17-18 danni/round di gruppo, l'assalto dura 5-6 round, e Tesio cade in due colpi di Sfregio)*
+- ✅ **B2**: audit della ricchezza del Drappo *(`06-VILLAIN` §7-ter: si esce con quasi gli stessi soldi con cui si entra, ed è il punto del modulo)*
 
 ---
 
 ## Materiale collegato
 
-- [ADR-0018](adr/ADR-0018-apparato-uso-obbligatorio.md) — l'apparato d'uso è parte del contenuto (e il debito dei cinque master)
-- [ADR-0019](adr/ADR-0019-licenza-dei-pesi-non-del-software.md) §2-bis — provenienza quando il seme non c'è
-- [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) — la catena di stampa, già condivisa
-- `skills/rumblingstone-indagine` — il vocabolario per A6
-- `skills/rumblingstone-playtest` — cosa misura se l'apparato funziona (ADR-0018: due tavoli veri)
-- `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` — il modello di A1
-- `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md` — il modello dei suoni, e l'esempio di come si dichiara il debito
+- [ADR-0018](adr/ADR-0018-apparato-uso-obbligatorio.md): l'apparato d'uso è parte del contenuto (e il debito dei cinque master)
+- [ADR-0019](adr/ADR-0019-licenza-dei-pesi-non-del-software.md) §2-bis: provenienza quando il seme non c'è
+- [ADR-0020](adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md): la catena di stampa, già condivisa
+- `skills/rumblingstone-indagine`: il vocabolario per A6
+- `skills/rumblingstone-playtest`: cosa misura se l'apparato funziona (ADR-0018: due tavoli veri)
+- `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md`: il modello di A1
+- `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md`: il modello dei suoni, e l'esempio di come si dichiara il debito

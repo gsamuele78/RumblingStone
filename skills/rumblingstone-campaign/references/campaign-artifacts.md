@@ -87,10 +87,10 @@ active; only Topaz gem lit (state.md §0).*
 
 ### Legacy Rituals (Sequential)
 
-1. **Forge's Defense** — ✅ COMPLETED (vision of Hammerfist battle on wearing)
-2. **Trial of the Deep Hall** — ✅ COMPLETED (Underdark profane temple quest)
-3. **Anvil of the World** — ⏳ In progress (Eternal Forge Earth/Fire Planes)
-4. **Siege of the Eternal Forge** — ⏳ Final ritual (time-travel battle, 1,000 years before ≈372 DR)
+1. **Forge's Defense**: ✅ COMPLETED (vision of Hammerfist battle on wearing)
+2. **Trial of the Deep Hall**: ✅ COMPLETED (Underdark profane temple quest)
+3. **Anvil of the World**: ⏳ In progress (Eternal Forge Earth/Fire Planes)
+4. **Siege of the Eternal Forge**: ⏳ Final ritual (time-travel battle, 1,000 years before ≈372 DR)
 
 ---
 

@@ -30,7 +30,7 @@ the user should never have to ask for "the style" explicitly.
 1. `rumblingstone-campaign/references/campaign-coherence.md` + `campaign/state.md`
    — establish what is true (coherence always beats style).
 2. This file — pick the pillar mix for the scene type (table below).
-3. `references/style-pillars.md` — the nine pillars: what to take,
+3. `references/style-pillars.md`: the nine pillars: what to take,
    what to avoid, fusion rules.
 4. ⚠️ **`references/italiano-nativo.md` — PRIMA DI SCRIVERE**, non prima di
    consegnare. **Spostato qui il 2026-09-02, e il motivo è misurato**: i
@@ -138,7 +138,7 @@ multi-session set piece, study its *shape* first
 
 ## Non-negotiables (checked on every output)
 
-1. **PCs are the protagonists** — every generated scene must give at least
+1. **PCs are the protagonists**: every generated scene must give at least
    one PC a decision, a spotlight, or a consequence of a past choice. No
    scene where NPCs resolve the plot among themselves.
    See `references/pc-protagonism.md`.
@@ -147,24 +147,24 @@ multi-session set piece, study its *shape* first
    off-screen and against party convenience too, with reactions grounded
    in SRD attitude mechanics. No NPC whose only reason to exist is the
    PCs' plot. See `references/living-world.md`.
-2. **Consequences are never forgotten** — meaningful choices write an echo
+2. **Consequences are never forgotten**: meaningful choices write an echo
    (`references/consequence-echoes.md`); generated content must surface at
    least one *past* echo when the fiction allows it.
-3. **Coherence beats style** — if a stylistic flourish contradicts
+3. **Coherence beats style**: if a stylistic flourish contradicts
    `campaign-coherence.md` or `state.md`, drop the flourish, flag the
    conflict. Never retcon for drama.
-4. **No pillar parody** — the pillars are craft sources, not brands to
+4. **No pillar parody**: the pillars are craft sources, not brands to
    imitate loudly. Never name-drop them in generated fiction, never copy
    protected text, characters, or proper nouns from them.
-5. **Tone floor** — adult, slow-build, no modern slang, no fourth-wall
+5. **Tone floor**: adult, slow-build, no modern slang, no fourth-wall
    winks, no victory without cost (inherited from
    `rumblingstone-campaign/references/campaign-coherence.md` §4).
-6. **Un mistero ha una soluzione scritta** — ogni domanda che il modulo pone
+6. **Un mistero ha una soluzione scritta**: ogni domanda che il modulo pone
    ai giocatori ha una risposta preparata e una **rete ridondante** di nodi su
    canali diversi (`rumblingstone-indagine`). Aperto non è sinonimo di
    indefinito: senza soluzione preparata l'errore fecondo diventa
    improvvisazione, e i giocatori se ne accorgono al secondo tentativo.
-7. **La lunghezza non è mai un pilastro** — il registro Eco entra al livello
+7. **La lunghezza non è mai un pilastro**: il registro Eco entra al livello
    della struttura e dell'oggetto, mai a quello del paragrafo. In conflitto
    vincono sempre i tetti di `references/read-aloud-adulti.md`.
 

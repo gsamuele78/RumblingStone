@@ -46,7 +46,7 @@ HTML si apre ovunque e un PDF no.
 
 ### 2. Perché Typst e non gli altri
 
-- **Typst** — Apache 2.0, CLI (`typst compile`), font embedded via `--font-path`,
+- **Typst**: Apache 2.0, CLI (`typst compile`), font embedded via `--font-path`,
   linguaggio di impaginazione scriptabile, compilazione incrementale. Un sorgente
   di testo che sta in git e produce un PDF vero: è il modello che questo repo usa
   già per tutto il resto.
@@ -62,10 +62,10 @@ HTML si apre ovunque e un PDF no.
 È la **prima dipendenza da un binario esterno** del toolkit (finora: solo
 stdlib e un browser headless). Vale quindi ADR-0012 per intero, più due regole:
 
-1. **degradazione pulita** — se `typst` non è installato, l'esportatore dice
+1. **degradazione pulita**: se `typst` non è installato, l'esportatore dice
    quale binario manca e come si installa, ed esce con codice non-zero **senza
    lasciare file a metà**. La catena HTML continua a funzionare da sola;
-2. **il sorgente `.typ` è generato, non scritto a mano** — vale ADR-0003
+2. **il sorgente `.typ` è generato, non scritto a mano**: vale ADR-0003
    (markdown master, layout generati): il contenuto resta nei `.md` del modulo, e
    il `.typ` è un artefatto rigenerabile.
 
@@ -110,9 +110,9 @@ Tre cose emerse solo montando la pipeline, e che vale la pena aver scritto:
 
 ## Copertura
 
-- `scripts/export_booklet_typst.py` — il secondo binario, nel manifest, con la
+- `scripts/export_booklet_typst.py`: il secondo binario, nel manifest, con la
   degradazione pulita se `typst` non è installato
-- `scripts/typst/tema-rumblingstone.typ` — il tema: due colonne, carta avorio,
+- `scripts/typst/tema-rumblingstone.typ`: il tema: due colonne, carta avorio,
   box read-aloud, aperture di capitolo col fregio, tabelle larghe che scavalcano
   le colonne
 - `scripts/typst/scheda-pg.typ` + `scripts/dmcore/schede.py` — **le schede
@@ -121,7 +121,7 @@ Tre cose emerse solo montando la pipeline, e che vale la pena aver scritto:
   master `PREGEN-*.md` e `FASCICOLO-*.md` invece che ricopiati. Il testo a
   colonne va bene per un manuale e non per un foglio che sta in mano tre serate:
   a metà combattimento nessuno cerca la CA dentro un paragrafo
-- `scripts/fonts/` — EB Garamond, Cinzel **e Inconsolata**, ognuno col suo
+- `scripts/fonts/`: EB Garamond, Cinzel **e Inconsolata**, ognuno col suo
   OFL.txt, più i `.woff2` per la catena HTML: la tipografia è embedded su
   **entrambe** le catene, quindi il PDF e la pagina hanno la stessa faccia ovunque
 - [`docs/guides/GUIDA-FLUSSO-LOCALE.md`](../../docs/guides/GUIDA-FLUSSO-LOCALE.md)

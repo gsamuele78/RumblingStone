@@ -98,12 +98,12 @@ X» · «non capisco bene ma potrebbe funzionare» · «ancora un tentativo» (d
 | «Più fix insieme risparmiano tempo» | Non isoli cosa ha funzionato; crei bug nuovi. |
 
 ## Tecniche di supporto (in `references/`)
-- **`root-cause-tracing.md`** — risalire lo stack fino al trigger originale.
-- **`defense-in-depth.md`** — dopo la causa radice, validazione a più livelli
+- **`root-cause-tracing.md`**: risalire lo stack fino al trigger originale.
+- **`defense-in-depth.md`**: dopo la causa radice, validazione a più livelli
   (è il pattern dei nostri `validate_*`).
-- **`condition-based-waiting.md`** — mai sleep arbitrari: poll di una
+- **`condition-based-waiting.md`**, mai sleep arbitrari: poll di una
   condizione con timeout (CI, processi, render).
-- **`find-polluter.sh`** — bisezione per trovare il test che inquina lo stato
+- **`find-polluter.sh`**: bisezione per trovare il test che inquina lo stato
   (esempio d'uso pytest incluso).
 
 ## Nel contesto RumblingStone
