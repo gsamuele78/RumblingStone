@@ -39,20 +39,20 @@ caso l'informazione è sparsa e il climax è **cognitivo**.
 
 ## 2. Le quattro decisioni di design
 
-1. **L'indizio non è una CD, è un nodo a tre strati** — *Fatto* (cosa c'è,
+1. **L'indizio non è una CD, è un nodo a tre strati**: *Fatto* (cosa c'è,
    oggettivo), *Lettura* (cosa significa), *Nome* (chi/che cosa
    precisamente). **Il Fatto non si tira mai**: fallire toglie la lettura,
    mai il fatto. È la regola dei tre indizi resa nativa, e chiude il vicolo
    cieco per costruzione invece che per pezza del DM.
-2. **Sei porte sullo stesso nodo** — ogni nodo dichiara almeno **tre** delle
+2. **Sei porte sullo stesso nodo**: ogni nodo dichiara almeno **tre** delle
    sei caratteristiche come vie d'accesso, e almeno una dev'essere fisica
    (FOR/DES/COS). È la clausola che obbliga chi scrive il modulo a dare
    qualcosa da fare al guerriero, e si controlla a macchina.
-3. **Due monete, non una** — *Acume* (per-PG, si spende nel caso, si azzera)
+3. **Due monete, non una**: *Acume* (per-PG, si spende nel caso, si azzera)
    premia l'intuizione nel momento in cui avviene; *Perizia* (permanente,
    tetto 1 grado/PG/livello) fa sì che un gruppo senza ladro sopperisca nel
    tempo senza sostituire il ladro. Vedi ADR-0022.
-4. **L'enigma non è un lucchetto** — risolto dà un vantaggio, non risolto
+4. **L'enigma non è un lucchetto**: risolto dà un vantaggio, non risolto
    non ferma il caso: lo rende più caro. Un enigma che blocca è una trappola
    per il DM, non per i giocatori.
 

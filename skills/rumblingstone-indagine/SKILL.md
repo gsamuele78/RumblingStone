@@ -149,7 +149,7 @@ sessioni**; **1 sola chiave di lettura** — due chiavi sono due casi.
 
 Il modo più economico che esista di seminare schegge. Una tabella `1d8` all'osteria
 in cui **due voci sono deliberatamente false** — e il DM sa quali — costa quattro
-righe e fa tre cose insieme:
+righe e fa insieme:
 
 1. dà al tavolo materiale da verificare invece che da credere: una diceria falsa
    **si smonta**, ed è una scena;

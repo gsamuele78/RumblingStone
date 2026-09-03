@@ -2,7 +2,7 @@
 
 **Stato**: accettata
 **Data**: 2026-09-02
-**Decisione-fonte**: DM, lotto **H1** — *«per le statistiche usa le tabelle per
+**Decisione-fonte**: DM, lotto **H1**, *«per le statistiche usa le tabelle per
 generare mostri e PNG che sono SRD, o dove non possibile usa i contenuti gratuiti
 di Pathfinder quando non c'è un equivalente nel SRD»*
 **Emenda**: [ADR-0021](ADR-0021-statblocchi-machine-readable.md) §3
@@ -22,7 +22,7 @@ rivelato **tre cose diverse**, e solo una era quella che sembrava.
 `Consiglio_Rethmar` è un **organo collegiale di sette seggi**.
 `Profughi_Guado_di_Drellin` è una **popolazione** di ~1.500 anime, che dichiara
 già di non portare statistiche *(«ruoli + stime dichiarate + puntatore [Private —
-Red Hand of Doom]»)* — ed è una scelta di IP, non una dimenticanza.
+Red Hand of Doom]»)*, ed è una scelta di IP, non una dimenticanza.
 `ondata-giganti-fanteria-cr15` è un **aggregato di combattimento di massa**: il
 suo «GS 15» è un EL, non il GS di una creatura. `Witchwood_e_Tiri_Kitor` e
 `Secondo_Anello_Rethmar` sono **dossier di più PNG**, e il primo lo dice da sé
@@ -51,13 +51,13 @@ i numeri») era indistinguibile dalla causa vera («il lettore non li riconosce�
 | parentesi con testo dentro | `(104 HP with skeleton template)` | 1 |
 
 Sono **numeri del DM**. Derivarli da capo avrebbe voluto dire sostituire valori
-veri con valori calcolati — il danno esatto che ADR-0021 §3 teme. La prova sta in
+veri con valori calcolati, il danno esatto che ADR-0021 §3 teme. La prova sta in
 una scheda sola: per `skeletal-dire-lion-cr6` la derivazione produceva **136 pf**;
 la scheda ne diceva **104**, scritti dal DM.
 
 **Decisione**: il lettore impara i dialetti. E quando il numero era una **stima**
-(`hp ~30`), il blocco lo dice — `fonte: valori approssimati nella prosa d'origine`
-— perché trascrivere `pf: 30` promuoverebbe un'approssimazione a fatto, e al
+(`hp ~30`), il blocco lo dice, con `fonte: valori approssimati nella prosa d'origine`
+perché trascrivere `pf: 30` promuoverebbe un'approssimazione a fatto, e al
 tavolo non si distinguerebbe più da un numero preso da un manuale.
 
 **Esito: da 82 a 92 schede con il blocco per sola lettura**, e altre **8** chiuse
@@ -67,10 +67,10 @@ derivando i soli TS: **100 su 157**, e il debito da 75 a **52**.
 
 `scripts/derive_statblocks.py` implementa la gerarchia di fonti chiesta dal DM:
 
-- **SRD 3.5** per tutto ciò che il SRD copre — tabella dei tipi di creatura (dado
+- **SRD 3.5** per tutto ciò che il SRD copre: tabella dei tipi di creatura (dado
   dei DV, BAB, TS buoni), progressioni dei TS per classe (comprese le classi PNG),
   **matrici delle caratteristiche** (elite 15/14/13/12/10/8, standard
-  13/12/11/10/9/8 — le stesse che PF1e chiama *heroic* e *basic*), armatura
+  13/12/11/10/9/8, le stesse che PF1e chiama *heroic* e *basic*), armatura
   naturale e modificatori per taglia, tabella delle armature;
 - **Pathfinder 1e** solo dove il SRD non ha un equivalente: **non esiste una
   tabella «statistiche per GS» nel SRD 3.5**, e la Tabella 1–1 del Bestiary è
@@ -86,16 +86,16 @@ derivazione sbaglia **non è rumoroso**.
 di sanità: CA 11 per un GS 9, pf 22 per un GS 14, CA 80 per un PNG di GS 8. Il
 motivo è strutturale, non un difetto da correggere con un'altra passata: **le
 schede sono documenti in prosa, non dati.** Un'espressione regolare ci trova
-sempre qualcosa di plausibile — «Esperto 2» quando la riga diceva «Esperto 2 /
+sempre qualcosa di plausibile: «Esperto 2» quando la riga diceva «Esperto 2 /
 Acolita 6», «16d12» quando quello era il conteggio giusto ma le caratteristiche
-no — e un numero sbagliato con l'aria di un conto entra nel canone e ci resta
+no, e un numero sbagliato con l'aria di un conto entra nel canone e ci resta
 fino al tavolo.
 
 **Decisione: lo strumento propone, e scrive una cosa sola.**
 
 La prima versione non scriveva niente, e la guardia *sopprimeva* invece di
 annotare: risultato, zero proposte. **Uno strumento che non dice niente non fa
-correggere niente** — il rilievo è del DM, ed era giusto. Corretto così:
+correggere niente**: il rilievo è del DM, ed era giusto. Corretto così:
 
 1. **la guardia annota.** Una proposta con scritto sopra *«⚠ FUORI BERSAGLIO per
    GS 9»* si guarda e si giudica; una proposta soppressa non esiste. Sono **15**.
@@ -109,12 +109,12 @@ correggere niente** — il rilievo è del DM, ed era giusto. Corretto così:
 3. **CA e pf non si scrivono mai.** Dipendono da equipaggiamento e Costituzione,
    che da una scheda in prosa non si leggono con affidabilità sufficiente. Lì lo
    strumento resta un proponitore, ed è la stessa disciplina di
-   `import_ultraclear.py` per le mappe — bozza più rapporto — che ADR-0021 §3
+   `import_ultraclear.py` per le mappe (bozza più rapporto) che ADR-0021 §3
    cita come precedente.
 
 ⚠️ E `allow_abbrev=False` sul parser, perché `argparse` accettava `--apply` come
-abbreviazione di `--apply-ts`: chi lo scrivesse aspettandosi la scrittura larga —
-quella che **non esiste** — otterrebbe comunque una scrittura.
+abbreviazione di `--apply-ts`: chi lo scrivesse aspettandosi la scrittura larga,
+quella che **non esiste**, otterrebbe comunque una scrittura.
 
 ## Conseguenze
 
@@ -129,7 +129,7 @@ quella che **non esiste** — otterrebbe comunque una scrittura.
 
 **Il prezzo, dichiarato.**
 - **Le 52 restano aperte**, e questo ADR non finge il contrario. Si chiudono a
-  mano, una per una, con lo strumento che propone il conto — ed è una sessione a
+  mano, una per una, con lo strumento che propone il conto, ed è una sessione a
   sé, come il piano diceva.
 - **Il derivatore scrive un campo su tre**, e gli altri due li propone soltanto.
   È poco, ed è deliberato: la parte che scrive è quella dove l'errore si vede.
@@ -142,5 +142,5 @@ quella che **non esiste** — otterrebbe comunque una scrittura.
 
 **Cosa NON decide.** Non emenda ADR-0021 sulla forma del blocco né sul divieto di
 un `Bestiario/dati/*.yaml` parallelo. Emenda **solo** §3, e solo per dire che la
-derivazione dichiarata è ammessa **se supera un collaudo** — cosa che oggi non
+derivazione dichiarata è ammessa **se supera un collaudo**, cosa che oggi non
 succede per nessuna scheda.

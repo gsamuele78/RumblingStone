@@ -251,7 +251,7 @@ comparivano in **zero** guide e **zero** skill.
 ### ⬜ Lotto I — Gli incantatori per lista di classe e funzione
 La revisione che nasce dal difetto dei due druidi: le liste vanno per **lista di
 classe**, non per ruolo né per tradizione. Diciassette liste. La proposta per
-esteso, con la matrice e le tre domande aperte, è in **§7**.
+esteso, con la matrice e le domande aperte, è in **§7**.
 **Accettazione**: ogni incantesimo di ogni lista appartiene davvero a quella
 classe, verificato da un test; nessuna classe riceve la lista di un'altra; le due
 schede ripulite (`arci-druido-circolo-cr14`, `druid-bear-ally-cr12`) tornano

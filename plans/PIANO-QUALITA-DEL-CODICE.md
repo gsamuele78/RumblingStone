@@ -194,7 +194,7 @@ EOF
 ## §6 · Ne vale la pena? La risposta onesta
 
 **Sì per il lotto B, e non è vicino.** Quattro cancelli della CI senza un test
-che li veda bocciare sono quattro cose di cui crediamo di fidarci. Costo: mezza
+che li veda bocciare sono altrettante cose di cui crediamo di fidarci. Costo: mezza
 giornata.
 
 **Sì per il lotto A**, perché c'è un difetto vero e misurabile con nove record

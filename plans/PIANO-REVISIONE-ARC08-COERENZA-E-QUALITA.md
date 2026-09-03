@@ -37,7 +37,7 @@
    canone va **appesa al changelog**, mai riscritta nella storia. (Dopo A0
    state.md distinguerà "giocato" da "preparato": la regola vale per
    entrambi i livelli.)
-2. **Sistema D&D 3.5 SRD only** — niente 5e (no azioni bonus, no
+2. **Sistema D&D 3.5 SRD only**: niente 5e (no azioni bonus, no
    vantaggio/svantaggio meccanici, no legendary actions), niente lore FR
    post-1385 DR. Ambientazione Faerûn 1372 DR.
 3. **Mai inventare** stat, poteri o conoscenze PNG: se serve un dato non
@@ -497,8 +497,8 @@ mancante che emerga si flagga `[INFERRED — needs DM confirmation]`.
 - **Azione**: tabella nel master visivo (A8) o nell'INDICE: file immagine
   → mappa/scena → sessione → prompt d'origine (se rintracciabile) →
   "quando mostrarla". Poi (solo poi) la rinomina A9 delle immagini
-  identificate. Non riconducibili: sezione "non classificate", decisione
-  al DM.
+  identificate. Quelle non riconducibili vanno in una sezione "non
+  classificate", con decisione al DM.
 - **Accettazione**: ≥80% delle immagini classificate; ogni mappa master
   indica la sua immagine se esiste.
 

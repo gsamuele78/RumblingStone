@@ -15,11 +15,11 @@ autonome**: stile dentro il file, tavole disegnate in SVG in linea, ~2.750 righe
 Si apre nel browser ed è bello. Ma stava **fuori da entrambe le catene**, e il
 prezzo era concreto, non teorico:
 
-- **nessun colophon** — il volume era anonimo, senza versione né regime d'uso,
+- **nessun colophon**: il volume era anonimo, senza versione né regime d'uso,
   che è esattamente il buco che ADR-0023 ha chiuso per tutti gli altri;
-- **nessuna edizione da stampa** — niente volume unico, niente segnalibri,
+- **nessuna edizione da stampa**: niente volume unico, niente segnalibri,
   niente impaginazione a due colonne: si stampava una pagina web;
-- **lo stile in quattro copie** — una modifica tipografica andava rifatta quattro
+- **lo stile in quattro copie**: una modifica tipografica andava rifatta quattro
   volte, e la quarta si dimenticava;
 - **le tavole prigioniere della prosa**: un SVG dentro un `<figure>` non si apre
   in un editor vettoriale, non si riusa e non si cita da un altro documento.

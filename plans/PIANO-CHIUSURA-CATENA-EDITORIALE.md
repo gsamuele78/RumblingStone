@@ -1,10 +1,10 @@
 # 🏗️ PIANO — Chiusura della catena editoriale
 
 **Aperto**: 2026-08-27
-**Mandato-fonte (DM)**: dopo il merge della PR #114 — *«guarda la seconda
+**Mandato-fonte (DM)**: dopo il merge della PR #114, *«guarda la seconda
 standalone… se ci sono cose nuove non presenti in questo piano aggiungile come
 altri punti. Poi vai da P1 a P8 e avanti, e poi anche quelli preesistenti, così
-chiudiamo qualcosa — ovviamente con un plan»*.
+chiudiamo qualcosa, ovviamente con un plan»*.
 
 **Da dove viene.** Tre documenti, in ordine di età:
 [`RICERCA-AUDIT-COMPONENTI`](RICERCA-AUDIT-COMPONENTI-E-LIVELLO-EDITORIALE-2026-08.md)
@@ -73,31 +73,31 @@ Ordinati per **quanto si chiude senza chiedere niente a nessuno**.
 
 Il difetto più urgente dei nuovi, e la sua metà indolore.
 
-*Il fatto*: `10-stand-alone/` non corrisponde a nessun pattern dei validatori —
+*Il fatto*: `10-stand-alone/` non corrisponde a nessun pattern dei validatori:
 la CI conosce `STANDALONE-*` (il Drappo) e basta. Quattro file, ~2.750 righe, e
 **nessun controllo di nessun tipo**: un link rotto, un'area rinumerata o un file
 rinominato non li vede nessuno finché non si apre al tavolo.
 
-- [x] **A1** — `validate_standalone.py` riconosce `10-stand-alone/*/` come
+- [x] **A1**: `validate_standalone.py` riconosce `10-stand-alone/*/` come
       **seconda famiglia**: `<title>` non vuoto, almeno un `<h1>`, link relativi
       risolvibili, ancore esistenti **anche verso un altro file del modulo**,
       `id` non duplicati, termini 5e vietati sul testo spogliato dei tag.
-- [x] **A2** — step CI rinominato e bloccante; 14 test in `test_standalone_html.py`,
+- [x] **A2**: step CI rinominato e bloccante; 14 test in `test_standalone_html.py`,
       su cartelle temporanee e **non** sull'Abbazia (un test che dipende dal
       contenuto di un modulo vero diventa rosso il giorno in cui il DM lo riscrive).
-- [x] **A3** — riga in `scripts/README-automation.md` + `tools.manifest.json`
+- [x] **A3**: riga in `scripts/README-automation.md` + `tools.manifest.json`
       aggiornato e artefatti derivati rigenerati (`docs/tools/*`).
 
 **Esito.** Verde sull'Abbazia com'è. Criterio d'accettazione soddisfatto su sei
 casi: ancora rotta, `id` duplicato, `<h1>` tolto, link relativo inesistente,
 ancora inesistente nel file di destinazione → **exit 1**; ripristinati → **exit 0**.
 
-🔎 **Due cose trovate guardando, che il gate non può trovare da solo:**
+🔎 **Trovato guardando, dove il gate non arriva da solo:**
 
 1. **L'«indice navigabile delle 48 aree» non è navigabile**: `indice_maestro.html`
    non contiene **un solo** `href`. I 47 `href` del modulo sono tutti `#bg`/`#bgb`,
-   cioè riferimenti interni alle tavole SVG. Non è un errore — non c'è niente di
-   rotto — ma la promessa del titolo non è mantenuta. È contenuto del DM: **non
+   cioè riferimenti interni alle tavole SVG. Non è un errore, non c'è niente di
+   rotto, ma la promessa del titolo non è mantenuta. È contenuto del DM: **non
    toccato**. Va con P13 (lotto D), dove l'indirizzamento fra documenti diventa
    una convenzione.
 2. Il modulo **non ha master markdown**: il validatore ora lo dice a ogni
@@ -117,24 +117,24 @@ ancora inesistente nel file di destinazione → **exit 1**; ripristinati → **e
 l'Abbazia dimostra che anche il modulo meglio scritto del repo esce **anonimo,
 senza licenza e senza versione**.
 
-- [x] **B1** — un **oggetto** `colophon` nello schema, non cinque chiavi piatte
+- [x] **B1**: un **oggetto** `colophon` nello schema, non cinque chiavi piatte
       (`edizione`, `versione`, `data`, `autori`, `basato_su`, `licenza`, `nota`),
       con `additionalProperties: false`. ⚠️ **Scostamento dal piano scritto**, e il
-      motivo: cinque chiavi sciolte in cima al manifest sono cinque cose da
+      motivo: cinque chiavi sciolte in cima al manifest sono altrettante cose da
       ricordare; un oggetto è una cosa sola e si valida come tale. Ha richiesto di
-      far **ricorrere `validate_booklets.py` negli oggetti annidati** — prima lo
+      far **ricorrere `validate_booklets.py` negli oggetti annidati**: prima lo
       faceva solo per gli array, quindi un refuso lì dentro sarebbe passato in
       silenzio: esattamente il difetto che lo schema esiste per impedire.
-- [x] **B2** — `#colophon()` nel tema: pagina **autonoma e senza testatina**, sul
+- [x] **B2**, `#colophon()` nel tema: pagina **autonoma e senza testatina**, sul
       verso del frontespizio. La testatina c'era alla prima resa e ripeteva due
-      volte lo stesso titolo — visto rendendo la pagina in PNG, non deducendolo.
-- [x] **B3** — entrambe le catene la emettono, con **le stesse voci nello stesso
+      volte lo stesso titolo, visto rendendo la pagina in PNG, non deducendolo.
+- [x] **B3**: entrambe le catene la emettono, con **le stesse voci nello stesso
       ordine** (`VOCI_COLOPHON` in tutte e due, e un test che verifica siano
       identiche). Nessun `today()` in nessun punto.
-- [x] **B4** — esemplare sul manifest del Palio: edizione, versione, data,
+- [x] **B4**, esemplare sul manifest del Palio: edizione, versione, data,
       `basato_su` (SRD 3.5 · OGL 1.0a · adattamento di *Red Hand of Doom*) e la
       riga di licenza che rimanda ad ADR-0005 e alla guida IP.
-- [x] **B5** — 11 casi in `test_booklets.py`, fra cui la retrocompatibilità (senza
+- [x] **B5**: 11 casi in `test_booklets.py`, fra cui la retrocompatibilità (senza
       la chiave il volume esce identico) e la parità d'ordine fra le catene.
 
 **Esito.** Tutti e **11 i volumi del repo compilano davvero** (`validate_booklets
@@ -152,28 +152,28 @@ non averla.
 
 ### ✅ Lotto C — Lo standard del modulo (P9, P10, P12, P14, P15, P19, **P20**) — *chiuso 2026-09-02*
 
-Sei punti, tutti scrittura di skill, **zero decisioni**. È il lotto che trasforma
+Tutti punti di scrittura di skill, **zero decisioni**. È il lotto che trasforma
 l'Abbazia da eccezione fortunata in regola.
 
-- [x] **C0** — ⭐ **P20, punto nuovo del DM**: l'architettura **corpo + appendici** in testa a `module-standard`. Verificato che non era «persa» ma **mai esistita**: `grep -ril "appendice" skills/` non trova niente, nessun master `ARC*-DEF-*` la usa, il Drappo nemmeno. Il corpo è ciò che si gioca in ordine; le appendici sono ciò che si consulta a salto (bestiario, gazetteer, cast, incontri), numerate a lettere.
-- [x] **C1** — `module-standard`: **riscalatura a tre assi** come sezione
+- [x] **C0**, ⭐ **P20, punto nuovo del DM**: l'architettura **corpo + appendici** in testa a `module-standard`. Verificato che non era «persa» ma **mai esistita**: `grep -ril "appendice" skills/` non trova niente, nessun master `ARC*-DEF-*` la usa, il Drappo nemmeno. Il corpo è ciò che si gioca in ordine; le appendici sono ciò che si consulta a salto (bestiario, gazetteer, cast, incontri), numerate a lettere.
+- [x] **C1**, `module-standard`: **riscalatura a tre assi** come sezione
       obbligatoria (livello · numero di PG · durata), con la colonna «cosa si
       perde davvero». Modello: l'indice maestro dell'Abbazia.
-- [x] **C2** — `module-standard`: **avvertenza di contenuto e consenso**, con la
+- [x] **C2**, `module-standard`: **avvertenza di contenuto e consenso**, con la
       sostituzione alternativa già scritta. Aggancio ad ADR-0018.
-- [x] **C3** — `module-standard`: **cancelli d'uscita a tempo** per atto, con il
+- [x] **C3**, `module-standard`: **cancelli d'uscita a tempo** per atto, con il
       rimedio (chi entra in scena e cosa dice se il segnale non è arrivato).
-- [x] **C4** — convenzione **ADR di modulo**: quando una decisione è locale e
+- [x] **C4**, convenzione **ADR di modulo**: quando una decisione è locale e
       quando sale in `plans/adr/`.
-- [x] **C5** — `playtest`: la **dichiarazione del limite** del dry-run — cosa non
+- [x] **C5**, `playtest`: la **dichiarazione del limite** del dry-run: cosa non
       ha potuto verificare, e perché solo il tavolo può.
-- [x] **C6** — `narrative-style`/`indagine`: **dicerie con falsi deliberati** e
+- [x] **C6**, `narrative-style`/`indagine`: **dicerie con falsi deliberati** e
       **tabella di reazione**. Una diceria falsa è un nodo d'indizio a costo zero.
-- [x] **C7** — `playtest` §2.6 rimanda a C1 invece di coprire il solo numero di giocatori.
-- [x] **C8** — **P16 confermato dal DM** («per le mappe vanno bene le verticali,
+- [x] **C7**: `playtest` §2.6 rimanda a C1 invece di coprire il solo numero di giocatori.
+- [x] **C8**: **P16 confermato dal DM** («per le mappe vanno bene le verticali,
       aggiungendo anche le visualizzazioni presenti nella standalone»):
-      `mapmaking` guadagna **le tavole di supporto** — veduta, profilo laterale con
-      quote e **tempi di percorrenza** — con la regola che si aggiungono *quando
+      `mapmaking` guadagna **le tavole di supporto**: veduta, profilo laterale con
+      quote e **tempi di percorrenza**, con la regola che si aggiungono *quando
       rispondono a una domanda che la griglia non può*, non per completezza, e la
       numerazione `Tavola I` / `I-a` / `I-b` che le tiene riconoscibili come lo
       stesso luogo visto in un altro modo.
@@ -184,20 +184,20 @@ l'Abbazia da eccezione fortunata in regola.
 
 ### ✅ Lotto D — I gate a macchina (P13, P3) — *chiuso 2026-09-02*
 
-- [x] **D1** — **numerazione delle aree**: prefisso di livello obbligatorio, e
+- [x] **D1**, **numerazione delle aree**: prefisso di livello obbligatorio, e
       `validate_modules.py` che rifiuta una collisione fra documenti dello stesso
       modulo. È il difetto **D1 del dry-run dell'Abbazia** (16/17/18 usati tre
       volte su tre file): una macchina lo trova gratis, un umano lo trova al tavolo.
-- [x] **D2** — `scripts/validate_lingua.py`, stdlib: perché/perchè, virgolette
+- [x] **D2**, `scripts/validate_lingua.py`, stdlib: perché/perchè, virgolette
       dritte, doppi spazi, apostrofi, d eufonica. Non bloccante alla prima
       passata, poi bloccante quando il rumore è a zero.
-- [x] **D3** — entrambi in CI + `tools.manifest.json` + `README-automation` + test.
+- [x] **D3**: entrambi in CI + `tools.manifest.json` + `README-automation` + test.
 
 **Esito.**
 
 - **D1** trova **dieci ambiguità vere e tuttora aperte** nell'Abbazia: il dry-run
   del modulo aveva corretto la numerazione nelle *chiavi* con i prefissi di
-  livello, ma i rimandi **in prosa** sono rimasti nudi — 55 `area N` senza
+  livello, ma i rimandi **in prosa** sono rimasti nudi: 55 `area N` senza
   prefisso, e dieci numeri (`area 6`, `area 27`…) usati in **file diversi**. Da
   fuori non si distingue se sono la stessa stanza o due. È **warning**, non
   errore: la convenzione nasce oggi.
@@ -214,28 +214,28 @@ l'Abbazia da eccezione fortunata in regola.
 
 ### ✅ Lotto E — La skill dell'edizione (P2, P11, P3-prosa) — *chiuso 2026-09-02* · [ADR-0024](adr/ADR-0024-skill-edizione.md)
 
-- [x] **E1** — ADR: perché la diciassettesima skill è giustificata (la
+- [x] **E1**, ADR: perché la diciassettesima skill è giustificata (la
       motivazione è già scritta nella ricerca §3.1; qui diventa decisione).
-- [x] **E2** — `skills/rumblingstone-edizione/`: colophon, dichiarazioni Product
+- [x] **E2**, `skills/rumblingstone-edizione/`: colophon, dichiarazioni Product
       Identity/Open Content, **gate d'uscita** (la checklist §7 di
       `GUIDA-CONDIVISIONE-IP.md`, che oggi nessuna skill carica), versione ed errata.
-- [x] **E3** — **igiene di licenza per documento** (P11) come tabella obbligatoria
+- [x] **E3**: **igiene di licenza per documento** (P11) come tabella obbligatoria
       in stesura. L'Abbazia è l'implementazione di riferimento: ha separato le
       divinità inventate dai nomi FR non-SRD *prima* del commit, non dopo.
-- [x] **E4** — `references/passate-redazionali.md` in `narrative-style`: le tre
+- [x] **E4**: `references/passate-redazionali.md` in `narrative-style`: le tre
       passate, quando un master è chiuso, come si riapre.
 
 **Esito.** `skills/rumblingstone-edizione/` è la **diciassettesima** skill, e
 ADR-0024 la motiva invece di darla per scontata: il fatto misurato è che
 `grep -rl "GUIDA-CONDIVISIONE-IP" skills/` restituiva **un solo file**, e per
-un'altra ragione — un agente che generava un handout **non incontrava mai** il
+un'altra ragione: un agente che generava un handout **non incontrava mai** il
 gate d'uscita. Una regola scritta che nessuno carica non è una regola.
 
-Sei sezioni: il gate d'uscita (le cinque domande del §7 della guida, con la
+Le sezioni: il gate d'uscita (le cinque domande del §7 della guida, con la
 guida dichiarata **fonte** in caso di divergenza) · l'igiene di licenza compilata
 **in stesura**, con l'Abbazia come esemplare che ha separato le divinità
 inventate dai nomi FR *prima* del commit · quando si compila il colophon e con
-che valori (⛔ mai un `autori` inventato) · l'edizione come oggetto —
+che valori (⛔ mai un `autori` inventato) · l'edizione come oggetto:
 versione, ristampa, errata, oggi **convenzione e non meccanismo**, dichiarato ·
 i confini con le altre cinque skill · e quando **non** serve.
 
@@ -250,15 +250,15 @@ Aperto dal rilievo del tavolo del 2026-09-02: *«incoerenza e prosa inglese
 tradotta male, anche negli echi»*. **ADR-0016 aveva scritto la condizione di
 riapertura, e la condizione è scattata.**
 
-- [x] **P-0** — **ADR-0016 riaperta** con [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md): la decisione resta (l'italiano è la lingua sorgente), cambia la *misura*. Tre date lette insieme — 2026-07-31, 2026-08-01, 2026-09-02 — e in mezzo un motore di stile da 2047 righe: l'ipotesi «manca la norma» è falsificata. — *era*: riaprire ADR-0016 con una revisione: non per cambiare la
-      decisione (l'italiano resta la lingua sorgente — il rilievo dice che la
+- [x] **P-0**: **ADR-0016 riaperta** con [ADR-0025](adr/ADR-0025-riapertura-prosa-tradotta.md): la decisione resta (l'italiano è la lingua sorgente), cambia la *misura*. Tre date lette insieme (2026-07-31, 2026-08-01, 2026-09-02) e in mezzo un motore di stile da 2047 righe: l'ipotesi «manca la norma» è falsificata. *Era*: riaprire ADR-0016 con una revisione: non per cambiare la
+      decisione (l'italiano resta la lingua sorgente; il rilievo dice che la
       qualità non basta, non che serva l'inglese), ma per registrare che il banco
       di prova ha dato esito negativo e cosa si fa di conseguenza.
-- [x] **P-1** — `scripts/validate_prosa.py`: i calchi a firma inequivocabile e i
+- [x] **P-1**, `scripts/validate_prosa.py`: i calchi a firma inequivocabile e i
       **tic a densità** (antitesi «non X: è Y» max 1 per documento, maiuscole di
       portento max 1, trattini lunghi). Non bloccante alla prima passata, come
       `validate_lingua`.
-- [x] **P-2** — il controllo del **glossario** è dentro `validate_prosa.py` invece
+- [x] **P-2**: il controllo del **glossario** è dentro `validate_prosa.py` invece
       che in `validate_modules.py`: è la stessa preoccupazione («la prosa suona
       inglese») e tenerla in un tool solo evita di doverla cercare in due.
       Legge `GLOSSARIO-E-LOCALIZZAZIONE.md`, salta le voci **DNT** (*Aegis Fang*
@@ -268,18 +268,18 @@ riapertura, e la condizione è scattata.**
       il canone dice *Incudine del Mondo*, *Necklace of Eternal Seeds* in 4,
       *Crown of Adamantine* in 3. È il rilievo del tavolo nella sua forma più
       letterale e più facile da correggere.
-- [x] **P-4** — ⭐ **la correzione che risponde alla domanda del DM** («c'è una
+- [x] **P-4**: ⭐ **la correzione che risponde alla domanda del DM** («c'è una
       skill di prosa ma forse va limata?»). La skill non va riscritta: sono 2047
       righe e la norma è esatta. Va spostato **un punto del load order**:
       `italiano-nativo.md` era al **5**, «obbligatorio prima di consegnare»;
       passa al **4**, «prima di scrivere». Il traduttese non è una lista di
-      errori da correggere in revisione — è **come la frase è stata costruita**:
+      errori da correggere in revisione, è **come la frase è stata costruita**:
       correggere dopo cambia le parole e lascia il respiro. La checklist di 30
       secondi resta come ultima passata, e ora rimanda a `validate_prosa`.
-- [x] **P-5** — ⭐ **Il buco che il DM ha trovato con una domanda**: *«il validatore
+- [x] **P-5**: ⭐ **Il buco che il DM ha trovato con una domanda**: *«il validatore
       va anche negli altri contenuti, o solo gli echi sono corretti?»*. Misurato, ed
       era vero: su `02-HINT-THORIK.md` i controlli sui tic coprivano **29 parole su
-      353 — l'8%** — perché guardavano solo dentro `> *…*`. Ora un **file per i
+      353, l'8%**, perché guardavano solo dentro `> *…*`. Ora un **file per i
       giocatori** (hint, teaser, echi, handout, lettera, prop, `pg-*`) è prosa da
       leggere **per intero**, meno i titoli; un file del DM (regia, guida, cassetta,
       statblocchi) resta fuori. Effetto immediato: i cinque file della sessione
@@ -288,8 +288,8 @@ riapertura, e la condizione è scattata.**
       **punendo le convenzioni del repo**: l'**etichetta di battuta**
       (`**AEGIS FANG**,` e `**I BRACIERI:**`, il formato che `editorial-standards.md`
       §2 impone) contata come maiuscola di portento, e il **cappello del DM** in
-      testa agli hint — che sta su più righe di blockquote e va tolto per blocchi.
-- [x] 🟢 **P-3** — **diagnosi fatta, sui file giusti.** Il DM ha indicato quali:
+      testa agli hint, che sta su più righe di blockquote e va tolto per blocchi.
+- [x] 🟢 **P-3**, **diagnosi fatta, sui file giusti.** Il DM ha indicato quali:
       gli hint di **Artemis e Thorik** prima dello scontro con Terros, non i
       registri `*ECHI*` che avevo scansionato all'inizio (quelli sono ledger di
       conseguenze). Con la copertura di P-5 il validatore ora ci trova:
@@ -297,41 +297,41 @@ riapertura, e la condizione è scattata.**
       progressivo e due maiuscole d'enfasi · **ARTEMIS** «la tua testa» ·
       **HELLA** «le tue mani», un progressivo, due maiuscole · **TEASER** due
       maiuscole. Sono i tic del §9, non i calchi: la sintassi è giusta e le
-      **abitudini** sono sempre le stesse — che è precisamente ciò che il tavolo
+      **abitudini** sono sempre le stesse, che è precisamente ciò che il tavolo
       sente quando dice «suona strano».
       ⬜ **Resta la riscrittura**, che è lavoro di voce sul canone e va fatta con
       il DM davanti, non alla cieca.
-- [x] **P-6** — ⭐ **Il caso Hella**: la giocatrice ha detto di **non capirci
+- [x] **P-6**, ⭐ **Il caso Hella**: la giocatrice ha detto di **non capirci
       niente**. `validate_prosa` su quel file è pulito, quindi non era prosa: era
       **progetto**. Misurate le ancore nominate nella prosa dei quattro testi
-      per-PG della stessa sessione — Tordek **8**, Thorik **5**, Artemis **4**,
+      per-PG della stessa sessione: Tordek **8**, Thorik **5**, Artemis **4**,
       **Hella 0** (le due che risultavano stanno nel titolo e nella nota del DM).
       Riceve «una testa grande, ossuta» (è Durik), «spalle larghe, oneste» (è
       Thorik): quattro immagini non attribuite di fila.
       Due regole in `consequence-echoes.md` §3-ter: **almeno un'ancora nominata**,
       e **anche il frammento oscuro porta una riga di lettura**. Il confronto è
       dentro la stessa sessione: Tordek dichiara il frammento incomprensibile *e*
-      chiude con «qualcosa di caro sta cercando la strada di casa» — il giocatore
+      chiude con «qualcosa di caro sta cercando la strada di casa», il giocatore
       non sa cosa, ma sa verso dove; Hella ha «non capisci le parole, ma il senso
       è inequivocabile», che **afferma** un senso senza consegnarlo.
-- [x] **P-7** — ⭐ **Il controllo automatico, dopo l'obiezione del DM** («migliora
+- [x] **P-7**: ⭐ **Il controllo automatico, dopo l'obiezione del DM** («migliora
       il controllo, altrimenti non si corregge niente»). Aveva ragione: la prima
       stesura dava il risultato **rovesciato** e l'avevo tolta invece di
       ripararla. Due cause, entrambe riparate:
-      1. **mancavano le forme brevi** — il canone in prosa scrive «la Corona» e
+      1. **mancavano le forme brevi**: il canone in prosa scrive «la Corona» e
          «l'Anello», non «Corona di Adamantio»: ora ogni voce del glossario
          contribuisce le sue parole piene, più una lista di alias dichiarata;
-      2. **il confronto era case-insensitive** — e metà delle forme brevi sono
+      2. **il confronto era case-insensitive**: e metà delle forme brevi sono
          anche nomi comuni: *«batteva il cuore»* non è il **Cuore di Moradin**,
          *«voci di cristallo»* non è un artefatto. La **maiuscola** è l'unico
          segnale affidabile che il testo offre.
       **Esito**: corretto su tutti e quattro i file della sessione, e su tutto il
-      repo segnala **un solo file** — quello che la giocatrice aveva segnalato.
+      repo segnala **un solo file**, quello che la giocatrice aveva segnalato.
       Perimetro dichiarato: vale dove il glossario **è** il canone, quindi i
       moduli autoconclusivi restano fuori (il Drappo è a Tarsilia, su Golarion:
       i suoi nomi non stanno nel glossario di RumblingStone e non devono starci).
       7 test dedicati, fra cui la regressione del «cuore» minuscolo.
-- [x] ⭐ **P-8** — **l'eco di Hella riscritto, e il tavolo può giudicarlo.** La
+- [x] ⭐ **P-8**, **l'eco di Hella riscritto, e il tavolo può giudicarlo.** La
       diagnosi di P-3 diceva *dove*; questo è il *cosa*. Applicate le due regole
       appena scritte in `consequence-echoes.md` §3-ter, sul file che il
       validatore segnalava da solo su 333:
@@ -340,10 +340,10 @@ riapertura, e la condizione è scattata.**
         Terra») · **Thorik** (regia punto 5: la giocatrice «ha lo stesso momento
         dal suo lato») · **l'Incudine del Mondo** e la risposta a Moradin (il suo
         stesso viaggio, canone giocato). Nessuna è un'anticipazione: sono cose
-        che **Hella** sa e gli altri PG no — ed è la direzione in cui gli echi
+        che **Hella** sa e gli altri PG no, ed è la direzione in cui gli echi
         viaggiano.
       - **la riga di lettura anche dove resta oscuro**: *«Le parole non le
-        capirai — non sono per te. Il tono sì.»* al posto di *«non capisci le
+        capirai: non sono per te. Il tono sì.»* al posto di *«non capisci le
         parole, ma il senso è inequivocabile»*, che affermava un senso senza
         consegnarlo.
       - **il cappello non chiude più la porta**: *«Sono oscuri di proposito, non
@@ -355,12 +355,12 @@ riapertura, e la condizione è scattata.**
       **Accettazione**: `validate_prosa.py` sul file → `✓ nessun calco, nessun
       tic oltre soglia`, ancora inclusa. Prima: 3 rilievi, fra cui l'unico
       «senza una sola ancora nominata» del repo. ⚠️ È **canone di tavolo**: il
-      DM lo approva o lo revoca in un commit — la versione precedente sta nella
+      DM lo approva o lo revoca in un commit; la versione precedente sta nella
       storia di questo file.
 
 **Esito.** `validate_prosa.py` misura **154 rilievi** in 333 file, e ha richiesto
 una taratura vera: la prima passata ne produceva **256** perché segnalava il
-progressivo e il possessivo *ovunque* — ma *«sta piovendo»* è italiano corretto.
+progressivo e il possessivo *ovunque*, ma *«sta piovendo»* è italiano corretto.
 Separati in due famiglie (**sempre** vs **solo read-aloud**): 110, più 12 del
 glossario e i tic a densità. **24 test**, di cui una classe intera (`TestRegistri`)
 esiste per quel falso positivo.
@@ -369,49 +369,49 @@ esiste per quel falso positivo.
 L'antitesi si riconosce dalla forma, e prende tutti e quattro gli esempi di
 `italiano-nativo.md` §9.1 (copula, verbo, sostantivo, trattone).
 ⚠️ **Quello che NON fa**: trova «realizzi che», non trova una scena che suona
-tradotta pur essendo in italiano corretto. Quella è la 2ª passata umana — e la
+tradotta pur essendo in italiano corretto. Quella è la 2ª passata umana, e la
 diagnosi sugli echi (P-3) lo dimostra sul campo.
 
 ### ✅ Lotto F — Le decisioni del DM — **prese E ESEGUITE tutte e quattro il 2026-09-02**
 
 Qui non si eseguiva: si chiedeva. **Le risposte ci sono**, e sbloccano H2, H3 e la
-conversione dell'Abbazia. L'esecuzione di ognuna porta con sé il suo ADR — che si
+conversione dell'Abbazia. L'esecuzione di ognuna porta con sé il suo ADR, che si
 scrive **con** l'implementazione, perché la sezione «conseguenze» di un ADR
 compilata prima di aver eseguito è metà ADR.
 
-- [x] ✅ **F1 — ESEGUITO** (2026-09-02) · [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)
+- [x] ✅ **F1, ESEGUITO** (2026-09-02) · [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)
       **`droplet` 0.3.1** (MIT, © Eric Biedert) e **`in-dexter` 0.7.2** (Apache-2.0,
       JKRB) vendorizzati in `scripts/typst/packages/preview/<nome>/<versione>/`,
-      copiati da `typst/packages` al commit `359500f2`, 112 KB in tutto — tolti i
+      copiati da `typst/packages` al commit `359500f2`, 112 KB in tutto, tolti i
       file che il loro stesso `typst.toml` dichiara in `exclude`, **`LICENSE`
       integri**. `export_booklet_typst.py` passa ora `--package-path`.
       **Accettazione, misurata e non asserita**: lo stesso documento che importa
       entrambi **compila** col percorso vendorizzato e **fallisce** senza
-      (*«failed to download package»* — qui `packages.typst.org` è davvero
+      (*«failed to download package»*: qui `packages.typst.org` è davvero
       irraggiungibile, quindi la prova è vera e non simulata); la cache utente
       di typst resta **inesistente** dopo la compilazione.
       `scripts/tests/test_pacchetti_typst.py`: **7 test**, fra cui la versione
-      del `typst.toml` confrontata con quella della cartella — copiare il nuovo
+      del `typst.toml` confrontata con quella della cartella; copiare il nuovo
       dentro la cartella vecchia è l'errore facile, e l'import continuerebbe a
-      dire `0.3.1` mentre il codice è un altro — e una compilazione con
+      dire `0.3.1` mentre il codice è un altro, e una compilazione con
       **l'ambiente ripulito** (niente proxy, niente `HOME`).
       **Sblocca H2**: capolettera annegato e indice analitico erano la stessa
       decisione, ed è presa.
-- [x] ✅ **F2 — ESEGUITO** (2026-09-02) · [ADR-0027](adr/ADR-0027-imposizione-con-pdfcpu.md)
+- [x] ✅ **F2, ESEGUITO** (2026-09-02) · [ADR-0027](adr/ADR-0027-imposizione-con-pdfcpu.md)
       `pdfcpu` accettato come seconda dipendenza binaria (Apache-2.0, eseguibile
       Go statico, `booklet` nativo), e la **regola di degradazione pulita scritta
       in codice** invece che in un piano: `scripts/binari.py`. `esigi()`
       restituisce il percorso **oppure esce con 2** (`MANCA`, distinto da 1 =
       «ho provato e fallito») **prima** di aprire qualunque file di destinazione
-      — il difetto da evitare non è un crash, è un PDF di 40 pagine su 96
+      Il difetto da evitare non è un crash, è un PDF di 40 pagine su 96
       indistinguibile da uno buono. Ogni binario dichiara il suo **ripiego**.
       La regola ha **due utenti**: `typst` è stato portato sopra lo stesso helper
       nello stesso commit, perché una regola con un utente solo è un caso
       particolare. `dm.py doctor` ora li elenca.
-      **Verificato sul campo, non supposto** — `pdfcpu v0.11.0` su
+      **Verificato sul campo, non supposto**: `pdfcpu v0.11.0` su
       `ARC07-TEASER-GIOCATORI-STAMPA.pdf`: 3 pagine A4 → **2 fogli**, exit 0.
       ⚠️ E una scoperta che l'ADR registra invece di nascondere: **l'output non è
-      byte-identico fra due esecuzioni**. Misurata la causa — è la seconda metà
+      byte-identico fra due esecuzioni**. Misurata la causa: è la seconda metà
       dell'array `/ID`, che `pdfcpu` rigenera a ogni scrittura; `CreationDate` e
       `ModDate` sono identici e **i flussi di contenuto delle pagine hanno lo
       stesso md5**. Quindi *il documento è deterministico, il file no*, e ne
@@ -421,9 +421,9 @@ compilata prima di aver eseguito è metà ADR.
       `-o` (niente rete, come ADR-0026).
       **Sblocca H3**: l'imposizione, cioè un libretto invece di una risma.
       `scripts/tests/test_binari.py`: **8 test**, fra cui *«ogni binario cita un
-      ADR che esiste davvero»* — una dipendenza binaria senza ADR è una
+      ADR che esiste davvero»*: una dipendenza binaria senza ADR è una
       dipendenza entrata di nascosto.
-- [x] ✅ **F3 — ESEGUITO** (2026-09-02) · [ADR-0029](adr/ADR-0029-licenza-doppia-testo-e-script.md)
+- [x] ✅ **F3, ESEGUITO** (2026-09-02) · [ADR-0029](adr/ADR-0029-licenza-doppia-testo-e-script.md)
       `LICENSE` **CC BY-NC-SA 4.0** sul testo, `scripts/LICENSE` **MIT** sugli
       strumenti, e `LICENSES.md` in radice che spiega il taglio. La regola per i
       casi di confine sta scritta: *se lo legge un essere umano al tavolo è testo,
@@ -433,14 +433,14 @@ compilata prima di aver eseguito è metà ADR.
       *garantisce espressamente* il diritto di vendere copie. In un contenzioso
       conta il file.
       I due testi sono presi **verbatim** da `spdx/license-list-data` al commit
-      `a522a89` — non riscritti a memoria, che su un testo legale è il modo di
+      `a522a89`, non riscritti a memoria, che su un testo legale è il modo di
       introdurre una differenza che nessuno rileggerà mai.
-      ⚠️ **Le tre cose che una licenza doppia rischia di far dimenticare**, e che
+      ⚠️ **Quello che una licenza doppia rischia di far dimenticare**, e che
       ora stanno scritte dove si guarda:
-      1. **il contenuto SRD resta Open Game Content sotto OGL 1.0a** — non va
+      1. **il contenuto SRD resta Open Game Content sotto OGL 1.0a**: non va
          sotto CC, e chi lo ridistribuisce si porta dietro la **Sezione 15**. È
          entrato nel cancello d'uscita §7;
-      2. **i marchi altrui non si licenziano perché si nominano** — *Forgotten
+      2. **i marchi altrui non si licenziano perché si nominano**: *Forgotten
          Realms* non diventa nostro da dare;
       3. **MIT su `scripts/` non copre `scripts/typst/packages/`**: quello è
          codice di terzi con la sua licenza (ADR-0026).
@@ -448,28 +448,28 @@ compilata prima di aver eseguito è metà ADR.
       possono fare gli altri con ciò che pubblichiamo; ADR-0005 dice **se e cosa**
       pubblichiamo. Sono due domande diverse e la seconda viene prima. Per il caso
       limite («non commerciale» non è definito con precisione in CC 4.0: un
-      Patreon, un tavolo a pagamento) la risposta non sta nella licenza — è
+      Patreon, un tavolo a pagamento) la risposta non sta nella licenza:
       **fermarsi e chiedere**.
-- [x] ✅ **F4 — ESEGUITO** (2026-09-02) · [ADR-0028](adr/ADR-0028-abbazia-master-markdown.md)
+- [x] ✅ **F4, ESEGUITO** (2026-09-02) · [ADR-0028](adr/ADR-0028-abbazia-master-markdown.md)
       Quattro master markdown, un manifest col **colophon**, **sette tavole**
       estratte in `tavole/*.svg`, e le due catene che compilano: HTML 615 KB,
       **PDF di 34 pagine** con frontespizio, colophon e segnalibri.
-      Il travaso l'ha fatto uno strumento — `scripts/import_html_module.py` — che
+      Il travaso l'ha fatto uno strumento, `scripts/import_html_module.py`, che
       conosce il vocabolario di questa famiglia (`p.ra` → blockquote,
       `div.warn/.mech/.sb/.meta` → `{{note}}`, `div.entry` → chiave d'area,
       `figure > svg` → file separato) e **davanti a un tag che non conosce lo
       dichiara** invece di inventare una traduzione. È **una volta sola** e lo
       impone: se i master esistono già si ferma, perché da lì in poi il markdown
       è il master e rilanciare butterebbe via le correzioni in silenzio.
-      **Accettazione — perdita di contenuto: zero parole su ~20.000.** È il
+      **Accettazione, perdita di contenuto: zero parole su ~20.000.** È il
       confronto che ha trovato tutto il resto, e che nessuna compilazione verde
       avrebbe trovato:
-      - `megereGrinza` — una mia ripulitura di «`** **`» cancellava lo **spazio**
+      - `megereGrinza`: una mia ripulitura di «`** **`» cancellava lo **spazio**
         fra due neretti adiacenti, dentro un nome proprio;
       - i nomi dei PNG **sparati fuori da una tabella** da un `<br>` dentro una
         cella (`<td><b>Dama Orsola Rive</b><br>guerriero 5</td>`);
       - la barra `.meta` che stavo **buttando via**, e che invece dice
-        *«Sostituisce: Tavola I e il blocco Il conto che non torna»* — il
+        *«Sostituisce: Tavola I e il blocco Il conto che non torna»*: il
         rapporto fra un'appendice e il documento principale, non impaginazione;
       - **11 read-aloud su 11**: stavano su `<p class="ra">`, non su un `div`, e
         la prima versione li appiattiva tutti in prosa normale. Tre stanno dentro
@@ -477,14 +477,14 @@ compilata prima di aver eseguito è metà ADR.
         scioglieva la citazione.
       ⚠️ **E due difetti che si vedevano solo guardando la pagina**, non
       compilandola: i `<defs>` condivisi lasciati indietro (ogni tavola citava
-      `url(#rock)` da un file che non c'era più) e — peggio — `html.parser`
+      `url(#rock)` da un file che non c'era più) e, peggio, `html.parser`
       **minuscola tutto mentre XML è case-sensitive**: `viewBox` → `viewbox`
       spariva, `patternUnits` → `patternunits` faceva tornare il riempimento del
       mare al default e lo riduceva a **un quadratino azzurro nell'angolo**. Il
       file restava XML valido. Per questo le pagine sono state **renderizzate e
       guardate**, non solo compilate.
       🔑 Le chiavi d'area prendono il codice: `#### 22 Le Celle` → `#### C22`.
-      Nella conversione la collisione era finalmente a occhio nudo — nello
+      Nella conversione la collisione era finalmente a occhio nudo, nello
       **stesso file** c'erano `#### 3 Corpo di Guardia` (borgo) e `#### 3 Navata`.
       `scripts/tests/test_import_html_module.py`: **15 test**, uno per difetto
       vero.
@@ -492,7 +492,7 @@ compilata prima di aver eseguito è metà ADR.
       sono **da 55 (10 ambigui fra file) a 0**. Lo schema non l'ho inventato: era
       già scritto nell'**indice maestro del modulo**, che aveva diagnosticato il
       difetto (*«16, 17, 18 usati tre volte su tre documenti»*) e prescritto la
-      correzione minima — *i numeri restano, si aggiunge un prefisso di livello* —
+      correzione minima: *i numeri restano, si aggiunge un prefisso di livello*,
       senza però propagarla negli altri tre file. Le 48 aree hanno un codice
       autoritativo: **B** borgo · **A** abbazia livello 0 · **T** campanile ·
       **C** cripta −1 · **G** grotta −2 · **X** contado. Applicato a tutti e 54 i
@@ -502,11 +502,11 @@ compilata prima di aver eseguito è metà ADR.
       in una riga e il **registro dei defunti della cappella del borgo (B6)** in
       un'altra; `area 8` era la **loggia (A8)** e il **punto del ritrovamento
       (B8)**. Quelli sono stati risolti per contesto, mai in blocco.
-      🔧 E la sostituzione meccanica ha rotto cinque articoli elisi — *«Con l'area
+      🔧 E la sostituzione meccanica ha rotto cinque articoli elisi: *«Con l'area
       4 profanata»* → *«Con l'A4»*, che non è italiano. Corretti a mano: un
       codice d'area l'articolo non lo vuole. È il motivo per cui un rename di
       massa si rilegge invece di fidarsene.
-      🔎 **Resta aperto, e va detto**: 63 rimandi in forma **parentetica nuda** —
+      🔎 **Resta aperto, e va detto**: 63 rimandi in forma **parentetica nuda**,
       *«la chiave è in sacrestia (6)»*, *«la botola in cappella (9)»*. Stessa
       classe di ambiguità, ma il gate non li vede e **non si sistemano alla
       cieca**: un `(8)` può essere un'area, un risultato di dado o una CD.
@@ -518,19 +518,19 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
 
 ### ✅ Lotto G — Infrastruttura (P6, P7, P8, P16)
 
-- [x] ✅ **G1 — ESEGUITO** (2026-09-02) · [ADR-0030](adr/ADR-0030-server-mcp-sui-tool.md)
+- [x] ✅ **G1, ESEGUITO** (2026-09-02) · [ADR-0030](adr/ADR-0030-server-mcp-sui-tool.md)
       · progetto per esteso in [SPEC-SERVER-MCP.md](SPEC-SERVER-MCP.md)
       `scripts/mcp_server.py`: JSON-RPC 2.0 su stdio, stdlib, catalogo derivato
       dal manifest. `initialize` · `tools/list` · `tools/call` · `ping`.
       ⭐ **La fonte di verità ha finalmente un lettore, e ha subito trovato tre
       difetti che nessuno vedeva perché nessuno la leggeva:**
-      1. **tre delle 48 voci erano cartelle**, non programmi — `converters/`
+      1. **tre delle 48 voci erano cartelle**, non programmi: `converters/`
          html-to-markdown, pdf-to-md-engine e image-to-webp hanno per invocazione
          *«(vedi …/README)»*. Il descrittore prometteva tre tool che non partono;
       2. **`invocation` non è un comando**: è una riga d'esempio per umani, e
          mescola l'eseguibile con segnaposto e flag di comodo (`MANIFEST.json`,
          `<cartella>`, `--all`, `--check`). **Nove tool su quarantasei** ne hanno
-         uno — un server che la usasse verbatim lancerebbe `--all` che nessuno ha
+         uno: un server che la usasse verbatim lancerebbe `--all` che nessuno ha
          chiesto. Il comando si deriva da `path` + `language`;
       3. **nessuna voce portava gli effetti collaterali**: un client non
          distingueva `validate_prosa` da `state_apply`. Ora ci sono le
@@ -547,58 +547,58 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
       non partono** senza `--allow-write`. ADR-0007 vuole il canone su un branch
       di gruppo con l'occhio del DM sopra; un agente che li lanciasse perché
       «sembrava il passo successivo» non violerebbe una regola di sicurezza,
-      violerebbe **il flusso di lavoro del DM** — che è peggio, perché lì per lì
+      violerebbe **il flusso di lavoro del DM**, che è peggio, perché lì per lì
       non se ne accorge nessuno. Elencati e non nascosti di proposito: un tool
       invisibile diventa una richiesta fatta a mano.
-      📋 **Un'uscita ≠ 0 è un risultato, non un guasto** — `validate_lingua` esce
-      1 per progetto — e porta con sé **il significato del codice preso dal
+      📋 **Un'uscita ≠ 0 è un risultato, non un guasto**: `validate_lingua` esce
+      1 per progetto, e porta con sé **il significato del codice preso dal
       manifest**. È la differenza fra un agente che ritenta a caso e uno che
       cambia parametri.
       **Accettazione**: 24 test (guidano il server *attraverso stdio*, non
-      chiamandone le funzioni) + un gate CI che lo fa **parlare davvero** —
+      chiamandone le funzioni) + un gate CI che lo fa **parlare davvero**,
       `initialize`, `tools/list` con le annotazioni, e `state_apply` che deve
       essere **rifiutato** in sola lettura.
-- [x] ✅ **G2 — ESEGUITO** (2026-09-02) · [ADR-0032](adr/ADR-0032-misurare-la-leggibilita.md)
+- [x] ✅ **G2, ESEGUITO** (2026-09-02) · [ADR-0032](adr/ADR-0032-misurare-la-leggibilita.md)
       `scripts/validate_tipografia.py`: tre misure sulla **leggibilità**, che
       nessun exit code vede. Non bloccante alla prima passata.
-      1. **Gerarchia dei titoli** — un `h4` sotto un `h2` salta l'`h3`, e nei
+      1. **Gerarchia dei titoli**: un `h4` sotto un `h2` salta l'`h3`, e nei
          segnalibri del PDF (la ragione per cui ADR-0020 esiste) diventa un ramo
          che non c'è. ⚠️ **Il perimetro è la decisione**: la prima passata dava
-         **142** salti su tutto il markdown, inclusi i `#####` dei `.hb.md` — che
+         **142** salti su tutto il markdown, inclusi i `#####` dei `.hb.md`, che
          in Homebrewery sono **etichette, non titoli**. Punirli sarebbe stato
          punire una convenzione, il difetto in cui questo repo è già inciampato
          due volte. Ristretto ai **capitoli dichiarati da un manifest**: da 142 a
          **4**. Tre sono handout-oggetto (`PROP-*`) dove il `######` imita il
          documento vero: **segnalati e non esentati**, perché è una chiamata del
          DM e un'esenzione silenziosa è come un gate smette di trovare i difetti.
-      2. **Caratteri per riga** — non stimati, **calcolati**: larghezza di colonna
+      2. **Caratteri per riga**, non stimati, **calcolati**: larghezza di colonna
          dal tema e **avanzate reali dei glifi** lette con `struct` da `head`,
          `cmap` e `hmtx` del font che incorporiamo, su un campione di prosa
          italiana del repo (non un pangramma: le frequenze contano).
-         **Esito: 62,1** — dentro la finestra 45-75. Il tema era giusto; adesso è
+         **Esito: 62,1**, dentro la finestra 45-75. Il tema era giusto; adesso è
          *misurato*, e un font cambiato lo sposta sotto gli occhi di qualcuno
          invece che in copisteria.
-      3. **Daltonismo** — le tre dicromazie simulate (Viénot/Brettel via LMS), e
+      3. **Daltonismo**: le tre dicromazie simulate (Viénot/Brettel via LMS), e
          le coppie **distinte in visione normale** che sotto una dicromia
          collassano. Raggruppate per coppia e non per file: le tavole condividono
-         la palette. **Esito: 21 coppie**, e una che si ripete — l'alizarina
+         la palette. **Esito: 21 coppie**, e una che si ripete: l'alizarina
          `#c0392b`, il rosso dei marcatori di pericolo, collassa sui **bruni del
          terreno** in protanopia (Δ62 → Δ18) su cinque tavole da battaglia, dove i
          marcatori rossi sono la cosa più densa d'informazione che ci sia.
       🔎 **veraPDF: procurato, fatto funzionare davvero, e lasciato fuori dalla CI**
-      — con il referto scritto nell'ADR invece che una rinuncia a scatola chiusa.
+      con il referto scritto nell'ADR invece che una rinuncia a scatola chiusa.
       Maven Central, `greenfield-apps` 1.28.2 più una classe Java di avvio (il fat
       jar **non registra il proprio provider** e la CLI muore da sola). Sul volume
       dell'Abbazia PDF/UA-1 **FAIL**, tre rilievi: *«heading level 3 is skipped»*
-      ×3 — **gli stessi tre** che il controllo §1 trova nel markdown, due misure
-      indipendenti allo stesso numero — più due che sono **di Typst** (manca lo
+      ×3, **gli stessi tre** che il controllo §1 trova nel markdown, due misure
+      indipendenti allo stesso numero, più due che sono **di Typst** (manca lo
       schema XMP di identificazione PDF/UA, mancano le `ViewerPreferences`).
       Fuori dalla CI perché l'unico rilievo azionabile lo troviamo **prima e
       meglio**, nel master dove si corregge; gli altri due resterebbero rossi per
-      sempre; e il costo non è quello di un binario statico — JVM, 9,5 MB di jar e
-      una classe scritta da noi — che è la ragione per cui ADR-0020 e ADR-0027
+      sempre; e il costo non è quello di un binario statico: JVM, 9,5 MB di jar e
+      una classe scritta da noi, che è la ragione per cui ADR-0020 e ADR-0027
       avevano detto sì a `typst` e `pdfcpu`. La ricetta per rifarlo sta nell'ADR.
-- [x] ✅ **G3 — ESEGUITO** (2026-09-02) · [ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md)
+- [x] ✅ **G3, ESEGUITO** (2026-09-02) · [ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md)
       `dm.py volume MANIFEST.json` esegue la catena in ordine, **dichiarato**:
       `prosa → lingua → manifest → colophon → schermo → stampa → imposizione`.
       `--stampa` è il `dm.py stampa` mai fatto, **assorbito** invece che aggiunto;
@@ -608,23 +608,23 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
       copisteria.
       I passi non hanno lo stesso peso, e la differenza è la decisione: `prosa` e
       `lingua` **misurano e non bloccano**; `manifest` e `schermo` sono **guasti
-      duri che fermano la catena** — compilare da un manifest non valido produce
+      duri che fermano la catena**: compilare da un manifest non valido produce
       un artefatto sbagliato *con l'aria di essere andato bene*; `stampa` e
       `imposizione` **degradano pulito** (ADR-0027).
       ⭐ E in coda, **comunque sia andata**, il cancello d'uscita §7 detto a voce.
-      Non è automatizzabile e non si finge che lo sia — ma è il momento in cui un
+      Non è automatizzabile e non si finge che lo sia, ma è il momento in cui un
       volume sta per uscire, ed è il buco che il lotto E aveva misurato: `grep -rl
       "GUIDA-CONDIVISIONE-IP" skills/` dava **un solo file**, e per un'altra
       ragione.
-      **Accettazione**: provato sull'Abbazia dall'inizio alla fine — sette passi,
-      HTML 615 KB, PDF 34 pagine, **libretto imposto** — e 10 test, fra cui
+      **Accettazione**: provato sull'Abbazia dall'inizio alla fine: sette passi,
+      HTML 615 KB, PDF 34 pagine, **libretto imposto**, e 10 test, fra cui
       «un manifest inesistente esce 2 e non compila niente» e «il cancello IP
       viene sempre detto».
-- [x] ✅ **G4 — già chiuso in C8** (2026-09-02). Era la stessa cosa di P16, che il
+- [x] ✅ **G4, già chiuso in C8** (2026-09-02). Era la stessa cosa di P16, che il
       DM aveva confermato nella stessa domanda: `mapmaking` §«tavole di supporto»
       ha veduta, profilo laterale con quote e **tempi di percorrenza**, con la
       regola che si aggiungono **quando rispondono a una domanda che la griglia
-      non può** — non per completezza — e la convenzione di numerazione
+      non può**, non per completezza, e la convenzione di numerazione
       (`Tavola I` zenitale · `I-a` veduta · `I-b` profilo). Resta segnato qui
       perché il piano lo elencava due volte.
 
@@ -632,10 +632,10 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
 
 ### 🟢 Lotto H — Le code preesistenti — *H2, H3, H4 chiusi · H1 misurato bene e ridotto · 2026-09-02*
 
-- [x] 🟢 **H1 — il debito non era dove sembrava** (2026-09-02) · [ADR-0033](adr/ADR-0033-derivare-e-dichiararlo.md)
+- [x] 🟢 **H1, il debito non era dove sembrava** (2026-09-02) · [ADR-0033](adr/ADR-0033-derivare-e-dichiararlo.md)
       Il piano diceva «non è una decisione, è fatica». Eseguendo la decisione del
-      DM — *«usa le tabelle SRD, e il contenuto libero Pathfinder dove il SRD non
-      ha un equivalente»* — il debito si è rivelato **tre cose diverse**.
+      DM, *«usa le tabelle SRD, e il contenuto libero Pathfinder dove il SRD non
+      ha un equivalente»*: il debito si è rivelato **tre cose diverse**.
       1. ⭐ **Cinque schede non sono creature**, e non lo saranno mai: un organo
          collegiale di sette seggi, una popolazione di ~1.500 profughi (che
          dichiara già di non portare statistiche, **per ragioni di IP**), un
@@ -643,7 +643,7 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
          dossier che puntano agli statblocchi che vivono altrove. Forzarci sopra
          un blocco vorrebbe dire **inventare un mostro che non esiste**. Marcate
          `[NON-CREATURA]` **con la ragione scritta nel file**: non un'esenzione
-         silenziosa. Prima risultavano «da migrare» per sempre — debito che
+         silenziosa. Prima risultavano «da migrare» per sempre, debito che
          nessuno poteva estinguere.
       2. ⭐ **Dieci schede i numeri li avevano già**, in dialetti che il lettore
          non sapeva leggere: la tilde d'approssimazione (`hp ~30`), l'italiano
@@ -653,39 +653,39 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
          dentro (`(104 HP with skeleton template)`). Sono **numeri del DM**, e
          derivarli da capo li avrebbe sostituiti con numeri calcolati: per
          `skeletal-dire-lion` la derivazione dava **136 pf**, la scheda ne
-         diceva **104**. E quando il numero era una stima, il blocco lo dice —
+         diceva **104**. E quando il numero era una stima, il blocco lo dice:
          trascrivere `hp ~30` come `pf: 30` promuove un'approssimazione a fatto.
       3. **La derivazione vera: fatta, provata, e non abilitata a scrivere.**
          `derive_statblocks.py` implementa le tabelle SRD (tipi, TS per classe,
          matrici elite/standard, taglie, armature) e usa la Tabella 1–1 di PF1e
-         **come guardia, non come fonte** — il SRD 3.5 non ha una tabella
+         **come guardia, non come fonte**: il SRD 3.5 non ha una tabella
          «statistiche per GS», e i valori PF1e sono più duri a parità di GS.
          ⚠️ **Il collaudo respinge tutte e 60**: CA 11 per un GS 9, pf 22 per un
-         GS 14. Il motivo è strutturale — le schede sono **prosa, non dati**, e
+         GS 14. Il motivo è strutturale: le schede sono **prosa, non dati**, e
          una regex ci trova sempre qualcosa di plausibile («Esperto 2» dove la
          riga diceva «Esperto 2 / Acolita 6»). Un numero sbagliato con l'aria di
          un conto entra nel canone e ci resta fino al tavolo. Perciò lo strumento
          **propone**. ⚠️ La prima versione **sopprimeva** invece di annotare, e
-         produceva **zero** proposte — cioè non correggeva niente. Rilievo del
+         produceva **zero** proposte, cioè non correggeva niente. Rilievo del
          DM, e giusto. Corretto: la guardia **annota** (una proposta con scritto
          sopra *«FUORI BERSAGLIO»* si giudica; una soppressa non esiste), e si
-         scrive **un campo solo — i TS —** e solo dove GS, CA e pf li ha scritti
+         scrive **un campo solo, i TS,** e solo dove GS, CA e pf li ha scritti
          il DM. I tiri salvezza sono la cosa più meccanica del sistema: la base
          è **esatta** dalle tabelle SRD, e l'unica incertezza è il modificatore
          di caratteristica, che viene dalla matrice dichiarata. **CA e pf non si
          scrivono mai**: dipendono da equipaggiamento e Costituzione, che da una
          scheda in prosa non si leggono.
-      **Esito misurato: 100 schede su 157 col blocco** (erano 82) — 10 per sola
-      lettura dei dialetti, 8 derivando i TS — **e il debito da 75 a 52**, di cui
+      **Esito misurato: 100 schede su 157 col blocco** (erano 82): 10 per sola
+      lettura dei dialetti, 8 derivando i TS, **e il debito da 75 a 52**, di cui
       nessuno più falso. Le 52 restano aperte e si chiudono a mano: è la sessione
       a sé che il piano prevedeva, ma ora su un numero vero.
       🔎 Due difetti trovati nel farlo: la **stessa classe letta due volte con
       livelli diversi** (*«Chierico 10 / Prestige …»* e più avanti *«Chierico
-      13»*) dava Tempra +17 per un GS 13 — ora si rifiuta invece di sommare; e
+      13»*) dava Tempra +17 per un GS 13; ora si rifiuta invece di sommare; e
       `argparse` accettava `--apply` come abbreviazione di `--apply-ts`, quindi
       chi scrivesse il primo aspettandosi la scrittura larga otteneva comunque
       una scrittura.
-- [x] ✅ **H2 — ESEGUITO** (2026-09-02). Il tema aveva un commento che diceva
+- [x] ✅ **H2, ESEGUITO** (2026-09-02). Il tema aveva un commento che diceva
       *«se un giorno si vuole l'annegato, si apre un ADR sul vendoring dei
       pacchetti Typst»*: quell'ADR è [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md)
       e il ripiego è scaduto.
@@ -695,19 +695,19 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
       almeno tre righe sotto di sé, e il ripiego va scritto invece che implicito.
       **Indice analitico** con `in-dexter`, chiave `indice_analitico` del manifest.
       ⭐ Le voci **non si annotano a mano**: le marca l'esportatore prendendo i
-      nomi canonici dal glossario, alla prima occorrenza per volume — chiedere a
+      nomi canonici dal glossario, alla prima occorrenza per volume; chiedere a
       chi scrive di marcare ogni ricorrenza è il modo in cui un indice analitico
       resta vuoto per sempre. Verificato sul booklet della sessione Terros: **13
       voci**, raggruppate per lettera, con le pagine (*Portale della Forgia
       Eterna 3, 14*). E se in un volume non compare **nessun** nome del glossario
-      — il caso dei moduli autoconclusivi, che hanno un'ambientazione loro — la
+      Il caso dei moduli autoconclusivi, che hanno un'ambientazione loro, la
       pagina **non si aggiunge**: un «INDICE ANALITICO» vuoto è peggio di niente.
       Le pagine sono state **guardate**, non solo compilate.
-- [x] ✅ **H3 — già chiuso in G3** (verificato 2026-09-02): `dm.py volume --imposto`
+- [x] ✅ **H3, già chiuso in G3** (verificato 2026-09-02): `dm.py volume --imposto`
       impone il libretto con `pdfcpu` ([ADR-0031](adr/ADR-0031-dm-volume-ordine-dei-mestieri.md),
       funzione `_imponi`), e degrada pulito se il binario manca. Riprovato
-      sull'Abbazia: il libretto esce. Non è stato rifatto — è stato verificato.
-- [x] ✅ **H4 — rinuncia confermata**, e resta tale: ADR-0020 la dichiara, e si
+      sull'Abbazia: il libretto esce. Non è stato rifatto: è stato verificato.
+- [x] ✅ **H4, rinuncia confermata**, e resta tale: ADR-0020 la dichiara, e si
       riapre solo il giorno di una tiratura vera. Non toccata di proposito.
 
 ---
@@ -724,7 +724,7 @@ F4 (il più grosso, e va dopo il lotto D sulla numerazione) → F3 (tocca ADR-00
   F ──► H2, H3, G3   (tutto ciò che aspetta il DM)
 ```
 
-**Se si fa un lotto solo**: **A**. Non perché sia il più prezioso — lo è B — ma
+**Se si fa un lotto solo**: **A**. Non perché sia il più prezioso (lo è B) ma
 perché è l'unico dove oggi il repo è *cieco*: 2.750 righe senza nessun controllo
 sono il posto dove il prossimo difetto arriverà al tavolo invece che alla CI.
 

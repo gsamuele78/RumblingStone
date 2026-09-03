@@ -21,13 +21,13 @@ token): l'agente non la ri-verifica a mano.
 ## 2. Read-aloud / boxed text (la resa che i giocatori sentono)
 
 - **Blockquote in corsivo**, 3–10 righe; MAI più di un concetto di scena per box.
-- **Un dettaglio sensoriale concreto per paragrafo** (regola Salvatore) — il
+- **Un dettaglio sensoriale concreto per paragrafo** (regola Salvatore): il
   divino e gli artefatti si sentono **nel corpo** (denti, sterno, dita), non
   si "vedono" soltanto.
-- Chiudere i box di combattimento su un **decision point** («Che fate?») —
+- Chiudere i box di combattimento su un **decision point** («Che fate?»),
   mai risolvere l'azione dei PG dentro il read-aloud.
 - **Occhio da avventuriero, non da architetto** (ADR-0014): il box descrive
-  ciò che si coglie in **sei secondi** — scala per paragone («una bolla
+  ciò che si coglie in **sei secondi**, con scala per paragone («una bolla
   grande come la piazza di un mercato», «una lastra larga quanto la sala di
   una locanda»), materiali, temperatura, odore, cosa è *sbagliato*. Le
   metrature e i Ø restano nel blocco **«Dati per il DM (non da leggere)»**
@@ -39,9 +39,9 @@ token): l'agente non la ri-verifica a mano.
   esito per riuscita e una per fallimento**, chiusura di round. I dadi senza
   descrizione spengono la scena. Esemplare: `ARC07-DEF-1` §9 «FASE 2 — la
   regia dei tre round».
-- Etichettare la regia: `**Read-aloud (pilastro lead).**` — così il prossimo
+- Etichettare la regia: `**Read-aloud (pilastro lead).**`, così il prossimo
   agente sa quale voce continuare.
-- I dialoghi dei PNG: `**NOME (registro/tono):** *«battuta»*` — il tono
+- I dialoghi dei PNG: `**NOME (registro/tono):** *«battuta»*`: il tono
   dichiarato è parte del canone del personaggio.
 
 ## 3. Gerarchia e struttura della pagina
@@ -54,7 +54,7 @@ token): l'agente non la ri-verifica a mano.
 - I numeri di gioco nel testo: **grassetto** (CD 22, 345 pf, +30) così il DM
   li pesca a colpo d'occhio; corsivo per i nomi di incantesimi (*Muro di
   Pietra*).
-- MAIUSCOLE di enfasi: con parsimonia — solo il beat che il DM deve far
+- MAIUSCOLE di enfasi: con parsimonia, solo il beat che il DM deve far
   atterrare (PESO, TUMP), max 1-2 per read-aloud.
 
 ## 4. Igiene editoriale
@@ -66,7 +66,7 @@ token): l'agente non la ri-verifica a mano.
   MAI inventato in silenzio.
 - Tono floor (coherence §4): adulto, slow-build, niente slang moderno,
   niente strizzate d'occhio alla quarta parete, nessuna vittoria senza costo.
-- File name: `PortaleForgia-*`/`ARC*-DEF-*` — niente spazi anomali, casing
+- File name: `PortaleForgia-*`/`ARC*-DEF-*`: niente spazi anomali, casing
   coerente; i file superati prendono il banner e poi `_ARCHIVIO/`.
 
 ## 5. Chi fa cosa (per non sprecare token)

@@ -71,79 +71,79 @@ Defensive casting: DC 15 + spell level
 ## Key Spells by Level (SRD Core)
 
 ### Cantrips / 0-Level
-- **Detect Magic** — detect magical auras in 60-ft cone; concentration up to 1 min/level
-- **Light** — touch; 20-ft radius bright light, 20-ft shadowy beyond; 10 min/level
-- **Mage Hand** — telekinesis, 5 lb limit, close range
-- **Prestidigitation** — minor magical effects, 1 hr
-- **Read Magic** — decipher magical writing
+- **Detect Magic**: detect magical auras in 60-ft cone; concentration up to 1 min/level
+- **Light**: touch; 20-ft radius bright light, 20-ft shadowy beyond; 10 min/level
+- **Mage Hand**: telekinesis, 5 lb limit, close range
+- **Prestidigitation**: minor magical effects, 1 hr
+- **Read Magic**: decipher magical writing
 
 ### 1st Level
-- **Alarm** — ward area; mental or audible alert when triggered; 2 hrs/level
-- **Burning Hands** — 15-ft cone; 1d4/level fire (max 5d4); Ref half
-- **Charm Person** — humanoid regards caster as friendly; Will negates
-- **Color Spray** — blind/stun/unconscious by HD vs. caster level; Will negates
-- **Cure Light Wounds** — 1d8+1/level (max +5) healing
-- **Magic Missile** — 1 missile +1 per 2 levels above 1st (max 5 at CL 9); 1d4+1 force each; no save; SR applies
-- **Shield** — invisible shield; +4 AC; blocks magic missiles; 1 min/level
-- **Sleep** — 4 HD of creatures sleep (lowest HD first); Will negates; 1-round casting time
+- **Alarm**: ward area; mental or audible alert when triggered; 2 hrs/level
+- **Burning Hands**: 15-ft cone; 1d4/level fire (max 5d4); Ref half
+- **Charm Person**: humanoid regards caster as friendly; Will negates
+- **Color Spray**: blind/stun/unconscious by HD vs. caster level; Will negates
+- **Cure Light Wounds**: 1d8+1/level (max +5) healing
+- **Magic Missile**: 1 missile +1 per 2 levels above 1st (max 5 at CL 9); 1d4+1 force each; no save; SR applies
+- **Shield**: invisible shield; +4 AC; blocks magic missiles; 1 min/level
+- **Sleep**: 4 HD of creatures sleep (lowest HD first); Will negates; 1-round casting time
 
 ### 2nd Level
-- **Bull's Strength** — +4 STR; 1 min/level
-- **Darkness** — 20-ft radius of darkness; 10 min/level
-- **Hold Person** — paralyze humanoid; Will negates; 1 round/level
-- **Invisibility** — invisible until attack or cast; 1 min/level
-- **Knock** — open locked/stuck/held/barred door; ignores arcane lock up to 3rd
-- **Mirror Image** — 1d4+1/3 levels images; absorb hits instead of caster
-- **Scorching Ray** — 1 ray (+1/4 levels above 3rd, max 3); 4d6 fire; ranged touch
+- **Bull's Strength**: +4 STR; 1 min/level
+- **Darkness**: 20-ft radius of darkness; 10 min/level
+- **Hold Person**: paralyze humanoid; Will negates; 1 round/level
+- **Invisibility**: invisible until attack or cast; 1 min/level
+- **Knock**: open locked/stuck/held/barred door; ignores arcane lock up to 3rd
+- **Mirror Image**: 1d4+1/3 levels images; absorb hits instead of caster
+- **Scorching Ray**: 1 ray (+1/4 levels above 3rd, max 3); 4d6 fire; ranged touch
 
 ### 3rd Level
-- **Dispel Magic** — cancel magic; max +10 caster level check (3.5 errata: +10 cap)
-- **Fireball** — 20-ft radius; 1d6/level fire (max 10d6); Ref half
-- **Fly** — 60-ft fly speed, good maneuverability; 1 min/level
-- **Haste** — +1 attack on full attack; +1 AC dodge; +1 Ref; +30-ft speed; 1 round/level
-- **Lightning Bolt** — 120-ft line; 1d6/level (max 10d6); Ref half
-- **Slow** — negate haste; −1 attack; −1 AC dodge; −1 Ref; half speed; 1 round/level
+- **Dispel Magic**: cancel magic; max +10 caster level check (3.5 errata: +10 cap)
+- **Fireball**: 20-ft radius; 1d6/level fire (max 10d6); Ref half
+- **Fly**: 60-ft fly speed, good maneuverability; 1 min/level
+- **Haste**: +1 attack on full attack; +1 AC dodge; +1 Ref; +30-ft speed; 1 round/level
+- **Lightning Bolt**: 120-ft line; 1d6/level (max 10d6); Ref half
+- **Slow**: negate haste; −1 attack; −1 AC dodge; −1 Ref; half speed; 1 round/level
 
 ### 4th Level
-- **Confusion** — 1 creature/level; confused condition; Will negates
-- **Dimension Door** — teleport self (+carried) up to long range; no error
-- **Enervation** — 1d4 negative levels; ranged touch; no save; SR Yes
-- **Greater Invisibility** — invisible even while attacking; 1 round/level
-- **Ice Storm** — 20-ft radius; 3d6 bludgeoning + 2d6 cold; no save; 1 round
+- **Confusion**: 1 creature/level; confused condition; Will negates
+- **Dimension Door**: teleport self (+carried) up to long range; no error
+- **Enervation**: 1d4 negative levels; ranged touch; no save; SR Yes
+- **Greater Invisibility**: invisible even while attacking; 1 round/level
+- **Ice Storm**: 20-ft radius; 3d6 bludgeoning + 2d6 cold; no save; 1 round
 
 ### 5th Level
-- **Cone of Cold** — 60-ft cone; 1d6/level cold (max 15d6); Ref half
-- **Dominate Person** — humanoid fully controlled; Will negates; permanent until dispelled
-- **Hold Monster** — as Hold Person but any creature
-- **Teleport** — teleport up to 100 miles/level; possible error table
-- **Wall of Force** — invisible wall; impervious to most attacks; cannot be dispelled
+- **Cone of Cold**: 60-ft cone; 1d6/level cold (max 15d6); Ref half
+- **Dominate Person**: humanoid fully controlled; Will negates; permanent until dispelled
+- **Hold Monster**: as Hold Person but any creature
+- **Teleport**: teleport up to 100 miles/level; possible error table
+- **Wall of Force**: invisible wall; impervious to most attacks; cannot be dispelled
 
 ### 6th Level
-- **Chain Lightning** — primary: 1d6/level; secondary: ½ damage; Ref half
-- **Contingency** — sets spell to trigger when condition met; 1 day/level
-- **Disintegrate** — 2d6/level damage (Fort partial = 5d6); destroys up to 10 cu ft of matter
-- **Globe of Invulnerability** — blocks ≤4th-level spells; 1 round/level
-- **True Seeing** — see through illusions, invisible, polymorphed, etc.; 1 min/level
+- **Chain Lightning**, primary: 1d6/level; secondary: ½ damage; Ref half
+- **Contingency**: sets spell to trigger when condition met; 1 day/level
+- **Disintegrate**: 2d6/level damage (Fort partial = 5d6); destroys up to 10 cu ft of matter
+- **Globe of Invulnerability**: blocks ≤4th-level spells; 1 round/level
+- **True Seeing**: see through illusions, invisible, polymorphed, etc.; 1 min/level
 
 ### 7th Level
-- **Finger of Death** — slays one living creature; Fort partial: on a successful save instead takes 3d6 +1/level (max +25)
-- **Limited Wish** — duplicates most spells ≤6th level; flexible
-- **Reverse Gravity** — objects/creatures fall upward; 1 round/level
-- **Spell Turning** — reflect 1d4+6 levels of spells back; 10 min/level
+- **Finger of Death**, slays one living creature; Fort partial: on a successful save instead takes 3d6 +1/level (max +25)
+- **Limited Wish**: duplicates most spells ≤6th level; flexible
+- **Reverse Gravity**: objects/creatures fall upward; 1 round/level
+- **Spell Turning**: reflect 1d4+6 levels of spells back; 10 min/level
 
 ### 8th Level
-- **Horrid Wilting** — 1d6/level (max 20d6) desiccation; plants/water creatures take d8; Fort half
-- **Incendiary Cloud** — 20-ft radius cloud; 4d6/round fire; Ref half; lingers 1 round/level
-- **Mind Blank** — immune to divination, mental effects; 24 hours
-- **Power Word Stun** — stun creature with ≤150 HP; no save
+- **Horrid Wilting**: 1d6/level (max 20d6) desiccation; plants/water creatures take d8; Fort half
+- **Incendiary Cloud**: 20-ft radius cloud; 4d6/round fire; Ref half; lingers 1 round/level
+- **Mind Blank**: immune to divination, mental effects; 24 hours
+- **Power Word Stun**: stun creature with ≤150 HP; no save
 
 ### 9th Level
-- **Gate** — planar portal or call specific outsider
-- **Imprisonment** — entomb creature; no save; SR Yes
-- **Meteor Swarm** — 4 meteors; 2d6 bludgeon + 6d6 fire each; Ref half
-- **Power Word Kill** — kill creature with ≤100 HP; no save; SR Yes
-- **Time Stop** — 1d4+1 free rounds; others frozen
-- **Wish** — alter reality; limited only by GM discretion; 5,000 XP
+- **Gate**: planar portal or call specific outsider
+- **Imprisonment**: entomb creature; no save; SR Yes
+- **Meteor Swarm**: 4 meteors; 2d6 bludgeon + 6d6 fire each; Ref half
+- **Power Word Kill**: kill creature with ≤100 HP; no save; SR Yes
+- **Time Stop**: 1d4+1 free rounds; others frozen
+- **Wish**: alter reality; limited only by GM discretion; 5,000 XP
 
 ---
 

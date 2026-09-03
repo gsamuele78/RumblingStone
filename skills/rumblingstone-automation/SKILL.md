@@ -65,7 +65,7 @@ poi `state_apply.py --migrate --commit` (inserisce i marker `auto:`).
 
 ## Altri sottocomandi
 
-- `prep --el N --env <amb>` — proposte incontro+mappa+loot (non scrive nulla).
+- `prep --el N --env <amb>`: proposte incontro+mappa+loot (non scrive nulla).
 - **Incontri che non si ripetono** (ADR-0034):
   `suggest_encounter.py --el N --con-generatore` pesca **in parte** dal
   catalogo e in parte da creature costruite sul momento dalle tabelle SRD;
@@ -75,22 +75,21 @@ poi `state_apply.py --migrate --commit` (inserisce i marker `auto:`).
   comandante|controllore|artigliere>`. ⚠️ Non scrive mai dentro `Bestiario/`:
   propone, e nel canone copia il DM. Se nel catalogo c'è già qualcosa di simile,
   **potenziare** è meglio → skill `npc-villain-boosting`.
-- `post --session <file>` — flusso manuale legacy (ledger + report-only).
+- `post --session <file>`: flusso manuale legacy (ledger + report-only).
 - `recap --hype` · `handout --tipo T --da <file>` · `dossier` (⚠️ solo DM) —
   vesti Homebrewery V3: i `.hb.md` sono **generati**, mai editati a mano.
-- `hype setup|start|docker` — Homebrewery self-hosted (ADR-0004).
-- `booklet <manifest.json> [--format html|hb|both] [--pdf|--pdf-all]` —
-  booklet «pergamena» da manifest (**ADR-0013**): HTML autonomo, `.hb.md` V3
+- `hype setup|start|docker`: Homebrewery self-hosted (ADR-0004).
+- `booklet <manifest.json> [--format html|hb|both] [--pdf|--pdf-all]`: booklet «pergamena» da manifest (**ADR-0013**): HTML autonomo, `.hb.md` V3
   per il self-hosted, e **PDF A4 per scheda** (prefissi `pg-`/`dm-`).
   Standard obbligatorio: file del gruppo SEPARATO e spoiler-free (titolo
   evocativo, mai il nome dello scontro), hint/echi per-PG, canone giocato
   annotato nei master. 📘 **Procedura completa**:
   `docs/guides/GUIDA-BOOKLET-E-PDF.md` (prerequisiti, manifest, container
   opzionali, troubleshooting, checklist di consegna).
-- `maps render|validate` — per il *contenuto* delle mappe caricare
+- `maps render|validate`: per il *contenuto* delle mappe caricare
   `rumblingstone-mapmaking` (questa skill copre solo l'invocazione).
-- `skills build|sync` — rebuild dei mirror per-agente (generati, gitignored).
-- `doctor [--ci]` — diagnosi ambiente: primo comando se qualcosa non va.
+- `skills build|sync`: rebuild dei mirror per-agente (generati, gitignored).
+- `doctor [--ci]`: diagnosi ambiente: primo comando se qualcosa non va.
 
 ## Confini con le altre skill
 

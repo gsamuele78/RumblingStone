@@ -12,14 +12,14 @@ only the subsystems listed below, and only when they actually come up.
 
 ## PF1e monster → 3.5 table (checklist)
 
-1. **hp, AC, attacks, damage, saves, DCs, SR, DR, speeds** — keep as printed.
-2. **CMB/CMD** — replace with 3.5 grapple = BAB + Str mod + special size mod
+1. **hp, AC, attacks, damage, saves, DCs, SR, DR, speeds**: keep as printed.
+2. **CMB/CMD**: replace with 3.5 grapple = BAB + Str mod + special size mod
    (Large +4, Huge +8, Gargantuan +12, Colossal +16). For trip/bull rush use
    the 3.5 opposed-check rules with the creature's Str/Dex.
 3. **Perception** → Spot AND Listen at the same bonus (also Search at
    Int-based approximation). **Stealth** → Hide AND Move Silently.
    **Acrobatics** → Balance/Jump/Tumble.
-4. **PF-only feats** — map to nearest 3.5 feat or drop; common maps:
+4. **PF-only feats**: map to nearest 3.5 feat or drop; common maps:
    - Improved Natural Armor / Toughness (PF) → Toughness ×n or Improved
      Toughness `[Non-SRD: Complete Warrior]`
    - Combat Reflexes, Power Attack, Cleave, Vital Strike: Power Attack and
@@ -28,7 +28,7 @@ only the subsystems listed below, and only when they actually come up.
 5. **Channel energy** → 3.5 turn/rebuke undead at cleric level, or keep as a
    house-ruled 30-ft burst (declare which in the encounter file).
 6. **Polymorph-line spells** → use the 3.5 spell text.
-7. **CR** — keep the printed PF1e CR. PF1e monsters of the same CR are
+7. **CR**: keep the printed PF1e CR. PF1e monsters of the same CR are
    slightly tougher than 3.5 ones on average; that is acceptable drift for a
    party that outguns printed 3.5 content (this one does — 4 PCs at level 13
    with artifacts).

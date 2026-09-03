@@ -54,7 +54,7 @@ proprio → `mostri/`. Se ha un nome, una storia e degli obiettivi → `villain/
 - **kebab-case minuscolo**, con il CR alla fine: `bone-naga-cr10.md`,
   `razorfiend-blackspawn-alfa-cr13.md`;
 - **`05` significa CR ½** (`goblin-scout-cr05.md`);
-- il **CR nel nome deve combaciare** con quello dichiarato nell'header —
+- il **CR nel nome deve combaciare** con quello dichiarato nell'header,
   se li cambi, cambiali in entrambi i posti;
 - **varianti**: file distinti **solo se i numeri cambiano** (war adept
   fuoco/ghiaccio = due file). Gli export «con incantesimi / senza
@@ -75,7 +75,7 @@ CD 20). Str 20 Dex 17 Con - Int 16 Wis 15 Cha 17. Spells as Sorcerer 8
 Notes: guardiana della lair del Ghostlord.
 ```
 
-**I sei header sono obbligatori** — senza uno solo, la CI fallisce:
+**I sei header sono obbligatori**: senza uno solo, la CI fallisce:
 
 | Header | Cosa ci scrivi |
 |---|---|
@@ -92,7 +92,7 @@ Notes: guardiana della lair del Ghostlord.
 - niente **poteri inventati senza flag**: se non è attestato, marcalo
   `[INFERRED — needs DM confirmation]`;
 - `Notes:` finale = **come si usa nella campagna** (dove compare, con chi,
-  perché) — è la parte che ti serve davvero al tavolo.
+  perché): è la parte che ti serve davvero al tavolo.
 
 ### Titolo e stato di canone
 
@@ -133,7 +133,7 @@ python3 scripts/build_monster_catalog.py --check    # dry-run: dice solo se è d
 ```
 
 Se lo dimentichi, `validate_bestiario` fallisce in CI con «catalogo non in
-sync». Non è un capriccio: senza rigenerare, il tuo mostro **non esiste**
+sync». Serve davvero: senza rigenerare, il tuo mostro **non esiste**
 per gli strumenti di preparazione.
 
 ---
@@ -156,16 +156,16 @@ Cosa controlla il gate:
 5. il **catalogo è in sync**.
 
 `--rules` non blocca: segnala scostamenti dai benchmark di GS e dalle policy
-dei flag — utile per capire se il CR che hai messo è realistico.
+dei flag, utile per capire se il CR che hai messo è realistico.
 
 ---
 
 ## 6-bis. Il blocco `statblocco` a macchina, e i tre strumenti che lo riempiono
 
 Oltre alla prosa, ogni scheda porta (o dovrebbe portare) un **blocco recintato**
-coi soli numeri — `gs`, `ca`, `pf`, `ts` e il resto — che è quello che leggono la
+coi soli numeri (`gs`, `ca`, `pf`, `ts` e il resto) che è quello che leggono la
 stampa, l'export e i controlli ([ADR-0021](../../plans/adr/ADR-0021-statblocchi-machine-readable.md)).
-**Oggi il Bestiario è a posto: 157 schede su 157** — 124 col blocco, 27 che i
+**Oggi il Bestiario è a posto: 157 schede su 157**: 124 col blocco, 27 che i
 numeri li hanno altrove, 6 che creature non sono. Per riempirlo ci sono **tre**
 strumenti, e fanno cose diverse:
 
@@ -178,24 +178,24 @@ python3 scripts/genera_creatura.py --gs 7        # COSTRUISCE una creatura che n
 ```
 
 **`extract_statblocks` trascrive**: legge i numeri che hai già scritto in prosa.
-Conosce parecchi dialetti — `**hp 34**`, `(5 HP)`, `hp ~30`, `**Punti Ferita:**
+Conosce parecchi dialetti: `**hp 34**`, `(5 HP)`, `hp ~30`, `**Punti Ferita:**
 60`, `**Classe Armatura:** 19`, `**Tiri Salvezza:** Tempra +7, Riflessi +10,
-Volontà +6`, `**Grado di Sfida (GS):** 9`, `TS +2/+9/+1` — quindi **scrivi come ti
+Volontà +6`, `**Grado di Sfida (GS):** 9`, `TS +2/+9/+1`, quindi **scrivi come ti
 viene** e lui probabilmente ci arriva. Se il numero era una stima (`hp ~30`), il
 blocco lo dichiara invece di spacciarla per un dato.
 
 **`derive_statblocks` deriva** dalle tabelle: SRD 3.5 per tipo di creatura,
 progressioni dei TS, matrici elite/standard, taglie e armature; la tabella per GS
 di Pathfinder 1e **solo come guardia**, che marca la proposta *«⚠ FUORI
-BERSAGLIO»* quando il conto non torna. ⚠️ **Scrive un campo solo — i tiri
-salvezza — e solo dove GS, CA e pf li hai scritti tu**: la base dei TS è esatta
+BERSAGLIO»* quando il conto non torna. ⚠️ **Scrive un campo solo, i tiri
+salvezza, e solo dove GS, CA e pf li hai scritti tu**: la base dei TS è esatta
 dalle tabelle, mentre CA e pf dipendono da equipaggiamento e Costituzione, che da
 una scheda in prosa non si leggono. Per quelli **propone e basta**, col conto per
 esteso, e decidi tu ([ADR-0033](../../plans/adr/ADR-0033-derivare-e-dichiararlo.md)).
 
 **`genera_creatura` costruisce** una creatura che nel Bestiario **non c'è**. Non
-legge nessuna scheda: parte da quello che dichiari tu — GS, tipo, taglia, ruolo,
-eventuali livelli di classe — e le tabelle producono i numeri. Vedi §6-ter.
+legge nessuna scheda: parte da quello che dichiari tu: GS, tipo, taglia, ruolo,
+eventuali livelli di classe, e le tabelle producono i numeri. Vedi §6-ter.
 
 ### Quando i numeri stanno da un'altra parte
 
@@ -214,7 +214,7 @@ Si marcano come le non-creature, **ma con una differenza**: il rimando deve dire
 **Key stats**: → `08_.../ARC08-01-GUIDA-DM.md` §PNG Alleati. NON duplicare.
 ```
 
-⚠️ È il marcatore più facile da abusare — basta dire «i numeri stanno altrove» e
+⚠️ È il marcatore più facile da abusare: basta dire «i numeri stanno altrove» e
 nessuno controlla. Perciò `extract_statblocks --check` **controlla**: un rimando
 senza bersaglio, o con un bersaglio che non esiste, fa uscire il gate rosso.
 
@@ -240,21 +240,21 @@ python3 scripts/genera_creatura.py --gs 9 --ruolo artigliere --classe mago:9
 python3 scripts/genera_creatura.py --gs 5 --quanti 3 --seed 42 --in /tmp/bozze
 ```
 
-**I sei ruoli** — bruto, schermagliatore, tiratore, comandante, controllore,
-artigliere — non decidono solo i numeri: ognuno porta un **talento firma**, una
+**I sei ruoli** (bruto, schermagliatore, tiratore, comandante, controllore,
+artigliere) non decidono solo i numeri: ognuno porta un **talento firma**, una
 **tattica in una riga** e una **debolezza sfruttabile**. Quest'ultima è la parte
 che conta: senza, esce un mostro intercambiabile, e un mostro intercambiabile te
 lo scrivi prima da solo che a leggerlo.
 
-**`--piu-cattivi`** applica il template *Advanced* di Pathfinder 1e — +4 a tutte
-le caratteristiche, +2 di armatura naturale, +2 su tutti i tiri — **senza alzare
+**`--piu-cattivi`** applica il template *Advanced* di Pathfinder 1e: +4 a tutte
+le caratteristiche, +2 di armatura naturale, +2 su tutti i tiri, **senza alzare
 il GS**. Il template vale GS +1: la creatura è venduta come GS *n* e picchia come
 GS *n+1*, e **lo dichiara di sé** in una voce del blocco. È una riga sola da
 disfare se al tavolo è troppo.
 
 **Dove finisce.** A schermo, o in una cartella con `--in`. **Mai dentro
 `Bestiario/`**: il tool si rifiuta, e ti dice perché. Nel canone copi tu, dopo
-aver letto — è lo stesso confine di `derive_statblocks`.
+aver letto: è lo stesso confine di `derive_statblocks`.
 
 ⚠️ **Quando NON usarlo.** Se nel catalogo c'è già qualcosa di simile,
 **potenzia** quella (skill `npc-villain-boosting`) invece di generare un
@@ -295,14 +295,14 @@ Si marcano nel titolo, **con la ragione scritta sotto**:
 ```
 
 Da lì in poi la scheda **esce dal debito di migrazione** e **dal catalogo dei
-mostri** — così `suggest_encounter` non può proporti un consiglio comunale come
+mostri**, così `suggest_encounter` non può proporti un consiglio comunale come
 incontro. Non è un'esenzione silenziosa: la ragione si legge nel file.
 
 ---
 
 ## 7. Aggiungere un mostro: la procedura completa
 
-1. **Cerca prima**: `grep -ril "<nome>" Bestiario/` — c'è già qualcosa di simile?
+1. **Cerca prima**: `grep -ril "<nome>" Bestiario/`: c'è già qualcosa di simile?
    Se sì → §8 (potenzia, non duplicare).
 2. **Scegli la cartella** (§1) e il **nome file** col CR (§2).
 3. **Scrivi lo statblock** nel formato standard (§3), citando la fonte.
@@ -310,7 +310,7 @@ incontro. Non è un'esenzione silenziosa: la ragione si legge nel file.
 5. **Rigenera il catalogo**: `python3 scripts/build_monster_catalog.py`.
 6. **Valida**: `python3 scripts/validate_bestiario.py`.
 7. Se cambia il canone di campagna (nuovo villain attivo, morte, alleanza):
-   aggiorna `campaign/state.md` — e ricordati che le scritture di canone
+   aggiorna `campaign/state.md`, e ricordati che le scritture di canone
    passano da `dm.py session` (ADR-0007), non a mano sulle regioni `auto:`.
 8. **Traccia**: riga in `plans/CHANGELOG.md` se è un lotto di lavoro.
 
@@ -328,16 +328,16 @@ scrivere un mostro nuovo**: potenzialo. Il repo ha una skill dedicata,
 | **Livelli di classe** | vuoi dargli un mestiere (il capitano gnoll che è anche chierico) |
 | **Template** (3.5) o **simple template PF1e** (avanzato, elementale…) | vuoi cambiargli natura in fretta, con numeri già tarati |
 
-Chiedi pure a un agente: *«potenzia razorfiend CR 9 per un party APL 13»* —
+Chiedi pure a un agente: *«potenzia razorfiend CR 9 per un party APL 13»*,
 la skill si attiva da sola e applica i benchmark di GS. L'esemplare in repo
 è `Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md` (Huge 16 DV,
 ottenuto avanzando il razorfiend CR 9).
 
-Il file nuovo, se lo crei, segue comunque §2-§3 — e il vecchio **resta**:
+Il file nuovo, se lo crei, segue comunque §2-§3, e il vecchio **resta**:
 la truppa d'ondata e l'élite convivono.
 
 **E il generatore?** Serve per il caso opposto: quando nel catalogo **non c'è
-niente di simile**. Se qualcosa c'è, potenziare è quasi sempre meglio — la
+niente di simile**. Se qualcosa c'è, potenziare è quasi sempre meglio: la
 creatura ha già un nome, una fazione e una storia, e il generatore quelle non
 te le dà (§6-ter).
 

@@ -43,23 +43,23 @@ che si trovavano da soli.
 
 Una cosa alla volta, altrimenti si guarda tutto e non si vede niente.
 
-1. **Aritmetica degli statblocchi** — BAB, TS, CA, CMB/CMD, pf, slot incantesimi,
+1. **Aritmetica degli statblocchi**: BAB, TS, CA, CMB/CMD, pf, slot incantesimi,
    talenti per livello, poteri a *3 + modificatore*.
-2. **CD e raggiungibilità** — per ogni CD: *chi la tira, con che bonus, con che
+2. **CD e raggiungibilità**, per ogni CD: *chi la tira, con che bonus, con che
    probabilità?* Una CD che il personaggio designato fallisce due volte su tre è un
    difetto, non una sfida. **È il rilievo che si trova più spesso.**
-3. **Economia** — equipaggiamento iniziale contro la tabella, tesoro distribuito,
+3. **Economia**: equipaggiamento iniziale contro la tabella, tesoro distribuito,
    e la domanda che nessuno si fa: *«un giocatore può comprare la soluzione del
    problema centrale?»*
-4. **Riferimenti incrociati** — ogni `file` §`sezione` citato esiste davvero.
-5. **Cronologia interna** — date, età, «vent'anni fa», e l'anno del presente
+4. **Riferimenti incrociati**: ogni `file` §`sezione` citato esiste davvero.
+5. **Cronologia interna**: date, età, «vent'anni fa», e l'anno del presente
    dichiarato una volta sola in un posto solo.
-6. **Riscalatura** — non solo il numero di giocatori. I **tre assi** della
+6. **Riscalatura**: non solo il numero di giocatori. I **tre assi** della
    `rumblingstone-module-standard` §16: livello del party, numero di PG, durata
    disponibile. La composizione per 4/5/6/7 si calcola **con i px per GS**, non a
    occhio; per gli altri due assi si verifica che esista la colonna «cosa si perde
    davvero», perché una riscalatura senza quella è aritmetica, non progetto.
-7. **Coerenza d'ambientazione** — nessun fatto di canone altrui inventato; ogni
+7. **Coerenza d'ambientazione**: nessun fatto di canone altrui inventato; ogni
    `[INFERRED]` dichiarato.
 
 **Output**: una tabella `# · rilievo · gravità · esito`, con 🔴 rompe il tavolo /
@@ -157,7 +157,7 @@ risposta deve stare lì.
 La campagna non ha playtest — ha **sessioni giocate**, che sono la stessa cosa con
 più poste in gioco. Trasferibile così com'è:
 
-- la **scheda giocatore** (le tre domande) dopo una sessione cardine;
+- la **scheda giocatore** (§4) dopo una sessione cardine;
 - il **debrief del DM** con le due metriche (improvvisazioni strutturali, ricerche
   oltre i 30 secondi);
 - il **conteggio dello spotlight** — che nella campagna ha un nome già suo,

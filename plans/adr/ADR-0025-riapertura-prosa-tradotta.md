@@ -59,15 +59,15 @@ revisore stanco:
 
 - **i calchi a firma inequivocabile** (`realizzi che`, `assumi che`,
   `eventualmente`, la nominalizzazione) — sempre;
-- **il possessivo sulle parti del corpo e il progressivo** — **solo nel
+- **il possessivo sulle parti del corpo e il progressivo**: **solo nel
   read-aloud**, perché dipendono dal registro: *«sta piovendo»* è italiano
   corretto, e segnalarlo ovunque produceva **256 rilievi** alla prima passata,
   quasi tutti legittimi. Con lo split: 110;
-- **i tic a densità** — l'antitesi «non X: è Y» massimo una per documento, le
+- **i tic a densità**, l'antitesi «non X: è Y» massimo una per documento, le
   maiuscole di portento massimo una, i trattini lunghi. ⭐ È il pezzo che vale
   di più: *«massimo uno per documento»* è la regola che un revisore umano non
   applica mai, perché dovrebbe **contare**;
-- **la forma inglese di un nome che il glossario vuole tradotto** — *Anvil of
+- **la forma inglese di un nome che il glossario vuole tradotto**: *Anvil of
   the World* dove il canone dice *Incudine del Mondo*: trovata in **15 file**,
   ed è il rilievo del tavolo nella sua forma più letterale.
 

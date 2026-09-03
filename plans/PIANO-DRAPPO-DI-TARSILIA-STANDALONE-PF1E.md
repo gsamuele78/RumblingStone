@@ -47,20 +47,20 @@ nel piano e nelle note di provenienza, e nient'altro.
 
 ### Lotto 1 — Impianto giocabile ✅ *(chiuso 2026-08-14)*
 
-- [x] `STANDALONE-Il-Drappo-di-Tarsilia/00-HUB-E-QUICKSTART-DM.md` — hub, quickstart,
+- [x] `STANDALONE-Il-Drappo-di-Tarsilia/00-HUB-E-QUICKSTART-DM.md`: hub, quickstart,
       contratto del tavolo, cosa stampare, ponte fra le tre sessioni
-- [x] `CONTRADE-DI-TARSILIA.md` — le otto contrade: livree, motti nuovi, canti con
+- [x] `CONTRADE-DI-TARSILIA.md`: le otto contrade: livree, motti nuovi, canti con
       effetti, rivalità, tabella di corrispondenza con gli stemmi SVG
-- [x] `REGOLE-DELLA-CORSA-PF1E.md` — il sottosistema: Morale del Rione, Onore del
+- [x] `REGOLE-DELLA-CORSA-PF1E.md`: il sottosistema: Morale del Rione, Onore del
       Fantino, lo Stacco, la Corsa a nove tratti, lo scudiscio, il cavallo scosso
-- [x] `PREGEN-SEI-SCHEDE-PF1E.md` — sei schede complete (statblock, equipaggiamento,
+- [x] `PREGEN-SEI-SCHEDE-PF1E.md`: sei schede complete (statblock, equipaggiamento,
       ufficio, obiettivo personale, come si gioca in un minuto)
 - [x] `01-GIORNO-1-LA-SORTE.md` · `02-GIORNO-2-I-PARTITI-E-LA-CENA.md` ·
       `03-GIORNO-3-LO-STACCO-E-LA-CORSA.md` — le tre sessioni
-- [x] `STATBLOCCHI-PF1E.md` — PNG, rivali, sicari, cavalli
-- [x] `ALLEGATI/mappe/` — 2 mappe dal contratto JSON (piazza, stalle) + render
-- [x] `ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md` — art direction
-- [x] `IP-E-LICENZE.md` — CUP Paizo, OGL, quali bonifiche §7 questa edizione chiude
+- [x] `STATBLOCCHI-PF1E.md`: PNG, rivali, sicari, cavalli
+- [x] `ALLEGATI/mappe/`: 2 mappe dal contratto JSON (piazza, stalle) + render
+- [x] `ALLEGATI/immagini/PROMPT-RITRATTI-E-TAVOLE.md`: art direction
+- [x] `IP-E-LICENZE.md`: CUP Paizo, OGL, quali bonifiche §7 questa edizione chiude
 - [x] tracciatura: questo piano + INDEX + CHANGELOG
 
 **Criterio di accettazione**: un DM che non ha mai letto la campagna RumblingStone
@@ -76,23 +76,23 @@ li chiude.
 - [x] **Nomi senesi ripristinati** su decisione DM (Oca, Torre, Bruco, Istrice, Drago,
       Civetta, Leocorno, Onda) con gli scudi Golarion; nota IP riscritta **onesta**:
       6 bonifiche su 8 chiuse, 1 sospesa, 1 chiusa altrove
-- [x] `04-LUOGHI-E-INTRIGO.md` — quindici luoghi giocabili, il mercato delle
+- [x] `04-LUOGHI-E-INTRIGO.md`: quindici luoghi giocabili, il mercato delle
       informazioni della Civetta, le dicerie (1d6), tre luoghi che non servono a niente
-- [x] `05-INIZIAZIONE-E-EVENTI-PG.md` — come si entra in una contrada, **il rito
+- [x] `05-INIZIAZIONE-E-EVENTI-PG.md`: come si entra in una contrada, **il rito
       d'Investitura** come scena d'apertura, **diciotto eventi personali** (3 per PG)
       con griglia di controllo
-- [x] `06-VILLAIN-E-AGENDE.md` — agende **ora per ora** di Vesca, Sfregio, Salle e
+- [x] `06-VILLAIN-E-AGENDE.md`: agende **ora per ora** di Vesca, Sfregio, Salle e
       Attu; il giro del mondo se i PG stanno fermi; le contromosse; **incontri
       scalabili 4/5/6/7 giocatori** e la variante di 5° livello
-- [x] `07-GUIDA-DM-PASSO-PASSO.md` — la regia: 45 minuti di preparazione, le tre
-      serate minuto per minuto, otto rilanci, le voci dei PNG, le sei cose da non fare
-- [x] `FASCICOLO-SCHEDE-GIOCATORE.md` — sei background in prima persona + **matrice
+- [x] `07-GUIDA-DM-PASSO-PASSO.md`: la regia: 45 minuti di preparazione, le tre
+      serate minuto per minuto, otto rilanci, le voci dei PNG, l'elenco di cosa non fare
+- [x] `FASCICOLO-SCHEDE-GIOCATORE.md`: sei background in prima persona + **matrice
       dei legami 6×6**
-- [x] `ALLEGATI/tavole/build_tavole.py` — mappa della città, il Drappo, sei ritratti,
+- [x] `ALLEGATI/tavole/build_tavole.py`: mappa della città, il Drappo, sei ritratti,
       tutti vettoriali e rigenerabili
-- [x] `PLAYTEST-ALFA.md` — audit meccanico (18 rilievi) + dry-run cronometrato delle
+- [x] `PLAYTEST-ALFA.md`: audit meccanico (18 rilievi) + dry-run cronometrato delle
       tre serate + **nove correzioni applicate al modulo**
-- [x] `homebrew/` — **tre booklet** (DM, Giocatori, Fascicolo) in HTML pergamena +
+- [x] `homebrew/`: **tre booklet** (DM, Giocatori, Fascicolo) in HTML pergamena +
       sorgente Homebrewery + **22 PDF A4** esportati
 
 **Criterio di accettazione**: un DM che non ha mai letto il modulo apre
@@ -106,15 +106,15 @@ bello da masterizzare?»* e dalla ricerca che ne è uscita
 ([`RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE`](RICERCA-COSA-SERVE-A-UN-MODULO-PUBBLICABILE.md)).
 La risposta: non mancava contenuto, mancava **l'apparato d'uso**.
 
-- [x] `08-CASSETTA-DEL-DM.md` — foglio del cast (28 PNG con il tic vocale), guida
+- [x] `08-CASSETTA-DEL-DM.md`: foglio del cast (28 PNG con il tic vocale), guida
       alla **pronuncia**, indice dei **15 read-aloud**, inserto per lo schermo, i
       **suoni**, il **momento da fotografare**, accessibilità
-- [x] `ALLEGATI/handout/` — **quattro prop stampabili**: il contratto di Vesca (piegato
+- [x] `ALLEGATI/handout/`: **quattro prop stampabili**: il contratto di Vesca (piegato
       in tre, che i giocatori possono non aprire mai), la pagina del registro dei morti
       con i nove nomi, la ricevuta `C·S·M`, il decreto affisso
-- [x] `STATO-DEL-MODULO.md` — la memoria fra le tre serate: contatori, patti scritti,
+- [x] `STATO-DEL-MODULO.md`: la memoria fra le tre serate: contatori, patti scritti,
       sette scelte che cambiano il finale, **Echo Ledger**, conteggio dello spotlight
-- [x] `PLAYTEST-SCHEDA-FEEDBACK.md` — scheda giocatore (le tre domande che misurano
+- [x] `PLAYTEST-SCHEDA-FEEDBACK.md`: scheda giocatore (le domande che misurano
       davvero), debrief del DM con **due metriche numeriche**, ciclo alfa→beta→collaudato
 - [x] **skill nuova** `rumblingstone-playtest` — le tre passate, come si legge il
       feedback, come si scrive una correzione. **Vale anche per la campagna**
@@ -123,11 +123,11 @@ La risposta: non mancava contenuto, mancava **l'apparato d'uso**.
       read-aloud minimi, contatori. Registrato nel manifest, in CI
 - [x] `rumblingstone-module-standard` §15-16 — l'apparato d'uso e i prop entrano
       nella checklist
-- [x] **[ADR-0017](adr/ADR-0017-moduli-autoconclusivi-classe-di-artefatto.md)** — i
+- [x] **[ADR-0017](adr/ADR-0017-moduli-autoconclusivi-classe-di-artefatto.md)**: i
       moduli autoconclusivi sono una classe a sé: cosa non possono fare, cosa devono avere
-- [x] **[ADR-0018](adr/ADR-0018-apparato-uso-obbligatorio.md)** — l'apparato d'uso è
+- [x] **[ADR-0018](adr/ADR-0018-apparato-uso-obbligatorio.md)**: l'apparato d'uso è
       parte del contenuto, non un extra. Vale per il modulo **e** per la campagna
-- [x] `ALLEGATI/mappe/uvtt/` — le due mappe esportate per Foundry/Roll20
+- [x] `ALLEGATI/mappe/uvtt/`: le due mappe esportate per Foundry/Roll20
 
 **Criterio di accettazione**: il debrief del DM misura **zero improvvisazioni
 strutturali** e **meno di cinque ricerche sopra i trenta secondi** a serata. Si verifica
