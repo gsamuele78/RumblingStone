@@ -205,7 +205,7 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righ
 - **Difese:** Palisade legno 3m, watchtower 9m, pattuglie 24/7
 - **Loot:** 5,000gp + magic items, prigioni 10 civili
 - **EL:** 14 se full alert (MOLTO pericoloso!)
-- **SVG**: `rendered/SUPPLEMENTO-P1C-MAPPE-CAMPI-DROW-COMPLETO_map02_campo-drow-2-forward-base-98m-80m-grid-6553-scal.svg`
+- **SVG**: `rendered/SUPPLEMENTO-P1C-MAPPE-CAMPI-DROW-COMPLETO_map02_campo-drow-2-forward-base-98m-80m-grid-65-53-sca.svg`
   `[T5c 2026-07-04: griglia COMPLETATA — tutte e 53 le righe presenti,
   larghezza uniforme, strutture posizionate secondo le annotazioni
   (palizzata, cancelli, torretta, recinto ogre, tenda Wyrmlord/tesoro/prigioni);
