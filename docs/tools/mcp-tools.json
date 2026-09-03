@@ -829,6 +829,14 @@
           "per-scheda": {
             "type": "boolean",
             "description": "In piu', un PDF per ogni scheda in schede/ (senza frontespizio): da mandare a un giocatore solo."
+          },
+          "formato": {
+            "type": "string",
+            "description": "«a5» compone il libretto a una colonna (corpo 9.6 pt), da imporre poi due pagine per foglio con «dm volume --imposto» (ADR-0027).",
+            "enum": [
+              "a4",
+              "a5"
+            ]
           }
         },
         "required": [

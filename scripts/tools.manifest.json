@@ -1375,6 +1375,18 @@
           "choices": null,
           "repeatable": false,
           "desc": "In piu', un PDF per ogni scheda in schede/ (senza frontespizio): da mandare a un giocatore solo."
+        },
+        {
+          "name": "--formato",
+          "type": "choice",
+          "required": false,
+          "default": "a4",
+          "choices": [
+            "a4",
+            "a5"
+          ],
+          "repeatable": false,
+          "desc": "«a5» compone il libretto a una colonna (corpo 9.6 pt), da imporre poi due pagine per foglio con «dm volume --imposto» (ADR-0027)."
         }
       ],
       "inputs": [
