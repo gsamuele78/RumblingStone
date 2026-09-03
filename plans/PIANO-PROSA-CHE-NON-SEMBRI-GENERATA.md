@@ -1,6 +1,6 @@
 # PIANO — Prosa che non sembri generata
 
-> **Stato**: 🟡 **in corso** — lotti A·B·C·E·F chiusi (2026-09-03); resta D
+> **Stato**: 🟡 **in corso** — lotti A·B·C·E·F·G chiusi (2026-09-03); resta D
 > **Aperto**: 2026-09-03
 > **Nasce da**: il DM porta due file esterni — la skill *the writing whip* e
 > l'elenco *tropes.fyi* di Ossama Chaib — e chiede se convenga usarli per
@@ -164,6 +164,32 @@ grida e note di regia ci sono prima e dopo e si annullano.
 caso vero. Uno di essi tiene ferma la decisione: se la burstiness smettesse di
 contraddire il giudizio del tavolo, cade e la scelta va riesaminata.
 
+### ✅ Lotto G — Il profilo delle lunghezze, e la prova sui documenti
+Il DM chiede di capire la burstiness prima di decidere se introdurla. Spiegarla
+ha prodotto una prova che mancava e uno strumento che resta.
+
+**La prova che mancava.** L'obiezione onesta era che sulla prosa di gioco la
+metrica sbaglia verso *perché* lì il frammento breve è legittimo, mentre nei
+documenti il sospetto è l'opposto — paragrafi tutti uguali. Misurata su 124
+documenti: mediane fra 0,59 e 0,70 nelle quattro famiglie, bande sovrapposte,
+estremi che classificano il genere del file e non il ritmo. **Non separa niente
+nemmeno lì.** I numeri stanno in ADR-0036, insieme all'artefatto che rende
+`spells.md` il file più «vario» del repo (una lista senza punti finali diventa
+una frase da 587 parole).
+
+**Quello che sopravvive.** La sua forma **non compressa**:
+`--prima-dopo` sui file nominati stampa le lunghezze in ordine di lettura con
+media e scarto. Sul caso Hella si legge in due righe cosa ha fatto la
+riscrittura — sparite le frasi da 3, 6 e 8 parole — e perché il CV mente.
+
+**Accettazione**: il profilo è informazione e non punteggio, e un test lo tiene
+fermo (`test_il_profilo_NON_entra_nel_verdetto`). 8 test nuovi, **5 mutazioni,
+5 cadute**: profilo ordinato invece che di lettura, scarto campionario invece
+che di popolazione, troncamento tolto, profilo acceso sulle scansioni intere,
+profilo dentro il verdetto.
+
+**✅ Chiuso 2026-09-03.**
+
 ⚠️ E un test l'ho dovuto correggere contro me stesso: pretendevo che una frase di
 **una** parola contasse come frammento. Misurando, le frasi di una parola nei
 read-aloud sono **279 e quasi tutte artefatti** dei puntini di sospensione
@@ -176,6 +202,9 @@ read-aloud sono **279 e quasi tutte artefatti** dei puntini di sospensione
 ```bash
 # la riscrittura di un testo e' migliorata? (l'unica misura di qualita' che regge)
 python3 scripts/validate_prosa.py --prima-dopo --rispetto-a HEAD~1 FILE.md
+
+# lo stesso comando su un file nominato stampa sotto il profilo delle lunghezze
+# (informazione, non punteggio: il verdetto resta dei cinque tic contati)
 
 python3 scripts/validate_prosa.py --documenti           # i 54 rilievi aperti
 python3 scripts/validate_prosa.py --documenti plans/INDEX.md

@@ -153,6 +153,96 @@ class ContaTic(unittest.TestCase):
                 self.assertIsNone(P.burstiness(vuoto))
 
 
+class IlProfiloDelleLunghezze(unittest.TestCase):
+    """Il profilo è **informazione, non punteggio**, ed è l'unica parte della
+    burstiness che è sopravvissuta alla verifica.
+
+    Il ragionamento sta in ADR-0036: il coefficiente di variazione comprime in un
+    numero solo due cose opposte — il ritmo vero (periodi ampi chiusi da una
+    frase secca) e il tic dell'IA (una raffica di stoccate da due parole) — e
+    quel numero, sulla riscrittura che il DM ha approvato, va nella direzione
+    sbagliata. Le lunghezze **in ordine di lettura** non comprimono niente: si
+    vede a occhio quale frase è sparita e quale è stata rifusa.
+
+    Perciò questi test controllano una cosa sola oltre alla forma: che il profilo
+    **non entri nel verdetto**. Se ci entrasse, avremmo rimesso dentro dalla
+    finestra la misura che abbiamo buttato dalla porta.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.prima = _versione(INTERMEDIA)
+        cls.dopo = _versione(APPROVATA)
+        if cls.prima is None or cls.dopo is None:
+            raise unittest.SkipTest("storia git non disponibile in questo checkout")
+
+    def test_sono_le_lunghezze_in_ordine_di_lettura(self):
+        """L'ordine è il punto: un profilo ordinato per lunghezza sarebbe un
+        istogramma, e un istogramma non dice **dove** cade la frase corta —
+        che è l'unica cosa che distingue il ritmo dal tic."""
+        p = P.profilo_lunghezze("Uno due tre quattro cinque sei. Uno due tre.")
+        self.assertEqual(p["lunghezze"], [6, 3])
+
+    def test_su_hella_si_vedono_i_frammenti_spariti(self):
+        """Il caso che ha insegnato la lezione, e la ragione per cui il profilo
+        esiste: la riscrittura ha tolto le frasi da 3, 6, 7 e 8 parole
+        (*«Nessuno va spiegato.»*, *«Odore di pietra bagnata e di pelo caldo.»*)
+        rifondendole dentro periodi. Il profilo lo mostra; il CV lo nasconde,
+        perché la media sale più in fretta dello scarto."""
+        a = P.profilo_lunghezze(self.prima)["lunghezze"]
+        b = P.profilo_lunghezze(self.dopo)["lunghezze"]
+        self.assertTrue({3, 6, 7, 8} <= set(a), a)
+        self.assertFalse({3, 6, 7, 8} & set(b), b)
+
+    def test_media_e_scarto_ricostruiscono_la_burstiness(self):
+        """Se i due si separassero, il profilo racconterebbe una storia e la
+        funzione un'altra."""
+        p = P.profilo_lunghezze(self.dopo)
+        self.assertAlmostEqual(p["scarto"] / p["media"], P.burstiness(self.dopo),
+                               places=9)
+
+    def test_su_testo_senza_frasi_e_None(self):
+        for vuoto in ("", "   ", "\n\n"):
+            with self.subTest(testo=repr(vuoto)):
+                self.assertIsNone(P.profilo_lunghezze(vuoto))
+
+    def test_il_profilo_NON_entra_nel_verdetto(self):
+        """Il guardiano di questo lotto. Il verdetto resta deciso dai cinque tic
+        contati; media, scarto e lunghezze non votano."""
+        v = P.confronta(self.prima, self.dopo)
+        for chiave in ("media", "scarto", "lunghezze", "burstiness", "profilo"):
+            self.assertNotIn(chiave, v["delta"])
+
+    def test_le_righe_sono_troncate_se_il_testo_e_lungo(self):
+        """Un file di 215 frasi stamperebbe 215 numeri, e un profilo che non si
+        legge non serve a niente."""
+        lungo = " ".join("Uno due tre quattro." for _ in range(P.PROFILO_MAX + 20))
+        numeri, coda = P.righe_profilo("dopo", lungo)
+        self.assertEqual(len([t for t in numeri.split() if t.isdigit()]),
+                         P.PROFILO_MAX)
+        self.assertIn("+20", numeri)
+        self.assertIn("media", coda)
+
+
+class LaRigaDiComandoConProfilo(unittest.TestCase):
+    def test_il_profilo_compare_sui_file_nominati(self):
+        if _versione(APPROVATA) is None:
+            self.skipTest("storia git non disponibile")
+        righe = P.rapporto_confronto(REPO / ECHI, INTERMEDIA, profilo=True)
+        testo = "\n".join(righe)
+        self.assertIn("media", testo)
+        self.assertIn("scarto", testo)
+
+    def test_su_una_scansione_intera_il_profilo_non_compare(self):
+        """`--prima-dopo` senza file confronta tutto il contenuto: 255 file per
+        tre righe l'uno non è un rapporto, è un muro."""
+        if _versione(APPROVATA) is None:
+            self.skipTest("storia git non disponibile")
+        righe = P.rapporto_confronto(REPO / ECHI, INTERMEDIA)
+        self.assertEqual(len(righe), 1)
+        self.assertNotIn("scarto", righe[0])
+
+
 class LaRigaDiComando(unittest.TestCase):
     def test_prima_dopo_su_un_file_tracciato(self):
         if _versione(APPROVATA) is None:

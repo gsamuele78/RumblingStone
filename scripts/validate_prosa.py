@@ -411,6 +411,53 @@ def burstiness(testo: str) -> float | None:
     return statistics.pstdev(lunghezze) / media if media else None
 
 
+#: Quanti numeri del profilo si stampano prima di troncare. Un file di 215
+#: frasi ne stamperebbe 215, e un profilo che non si legge non serve a niente.
+PROFILO_MAX = 40
+
+
+def profilo_lunghezze(testo: str) -> dict | None:
+    """Le lunghezze delle frasi **in ordine di lettura**, con media e scarto.
+
+    È quello che resta della burstiness dopo la verifica, ed è deliberatamente
+    la sua forma **non compressa**. Il coefficiente di variazione schiaccia in un
+    numero solo due cose opposte — il ritmo vero (periodi ampi chiusi da una
+    frase secca) e il tic dell'IA (una raffica di stoccate da due parole) — e su
+    questo corpus quel numero punta dalla parte sbagliata: vedi ADR-0036.
+
+    La sequenza non schiaccia niente. Sull'eco di Hella si legge in due righe
+    cosa ha fatto la riscrittura approvata::
+
+        prima   14 24 14  3  6 12 22  8 26 …   media 17,1 · scarto  8,9
+        dopo    14 24 14 19 12 28 23 21 23 …   media 21,4 · scarto 10,1
+
+    Le frasi da 3, 6 e 8 parole sono sparite dentro periodi. Il CV scende (0,52
+    → 0,47) perché la media sale più in fretta dello scarto, e direbbe
+    «peggiorata» su una versione che il tavolo ha approvato.
+
+    ⚠️ **Informazione, non punteggio.** Non entra in `conta_tic()` e non vota nel
+    verdetto di `confronta()`; un test lo tiene fermo.
+    """
+    lunghezze = [len(f.split()) for f in _frasi(testo)]
+    if not lunghezze:
+        return None
+    return {"lunghezze": lunghezze,
+            "media": statistics.mean(lunghezze),
+            "scarto": statistics.pstdev(lunghezze)}
+
+
+def righe_profilo(etichetta: str, testo: str) -> list[str]:
+    """Le due righe da stampare: la sequenza e, sotto, media e scarto."""
+    p = profilo_lunghezze(testo)
+    if p is None:
+        return [f"    {etichetta:<9} (nessuna frase)"]
+    mostrati = p["lunghezze"][:PROFILO_MAX]
+    avanzo = len(p["lunghezze"]) - len(mostrati)
+    coda = f"  …+{avanzo}" if avanzo else ""
+    return [f"    {etichetta:<9} " + " ".join(f"{n:>3d}" for n in mostrati) + coda,
+            f"    {'':<9} media {p['media']:.1f} · scarto {p['scarto']:.1f}"]
+
+
 def conta_tic(testo: str) -> dict[str, int]:
     """I tic contabili di un testo. Meno è meglio, per tutti.
 
@@ -452,19 +499,30 @@ def versione_git(percorso: Path, revisione: str) -> str | None:
     return fuori.stdout if fuori.returncode == 0 else None
 
 
-def rapporto_confronto(f: Path, revisione: str) -> list[str]:
+def rapporto_confronto(f: Path, revisione: str, profilo: bool = False) -> list[str]:
+    """Il verdetto su una riscrittura, e — se richiesto — il profilo sotto.
+
+    `profilo` si accende solo sui file nominati sulla riga di comando. Una
+    scansione senza argomenti confronta tutto il contenuto, e 255 file per tre
+    righe l'uno non sono un rapporto: sono un muro.
+    """
     prima = versione_git(f, revisione)
     if prima is None:
         return [f"{f.name}: non esiste a {revisione} — niente da confrontare"]
     if not f.is_file():
         return [f"{f.name}: non esiste adesso"]
-    v = confronta(prima, f.read_text(encoding="utf-8", errors="ignore"))
+    dopo = f.read_text(encoding="utf-8", errors="ignore")
+    v = confronta(prima, dopo)
     if not v["migliorati"] and not v["peggiorati"]:
-        return [f"{f.name}: nessun tic cambiato rispetto a {revisione}"]
-    segni = ", ".join(f"{k} {d:+d}" for k, d in v["delta"].items() if d)
-    verso = ("migliorata" if v["migliorati"] > v["peggiorati"]
-             else "peggiorata" if v["peggiorati"] > v["migliorati"] else "pari")
-    return [f"{f.name}: {verso} rispetto a {revisione} — {segni}"]
+        testa = f"{f.name}: nessun tic cambiato rispetto a {revisione}"
+    else:
+        segni = ", ".join(f"{k} {d:+d}" for k, d in v["delta"].items() if d)
+        verso = ("migliorata" if v["migliorati"] > v["peggiorati"]
+                 else "peggiorata" if v["peggiorati"] > v["migliorati"] else "pari")
+        testa = f"{f.name}: {verso} rispetto a {revisione} — {segni}"
+    if not profilo:
+        return [testa]
+    return [testa] + righe_profilo("prima", prima) + righe_profilo("dopo", dopo)
 
 
 def prosa_documento(testo: str) -> list[str]:
@@ -607,10 +665,13 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
 
     if args.prima_dopo:
+        nominati = bool(args.files)
         bersagli = [Path(f).resolve() for f in args.files] or file_di_contenuto()
-        righe = [r for f in bersagli for r in rapporto_confronto(f, args.rispetto_a)]
+        righe = [r for f in bersagli
+                 for r in rapporto_confronto(f, args.rispetto_a, profilo=nominati)]
         for r in righe:
-            print(f"  · {r}")
+            # le righe del profilo arrivano gia' rientrate: niente pallino
+            print(r if r.startswith("    ") else f"  · {r}")
         print(f"  ({len(bersagli)} file confrontati con {args.rispetto_a})")
         return 0
 
