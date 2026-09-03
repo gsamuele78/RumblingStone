@@ -60,6 +60,7 @@ Non si ridiscutono a ogni volume. Se una serve diversa, si cambia **il tema**.
 | **Margini** | speculari (`inside` 2.0 cm / `outside` 1.5 cm) | rilegato, il margine interno finisce nella piega |
 | **Colophon** | `colophon` nel manifest → pagina sul **verso del frontespizio**, senza testatina ([ADR-0023](../../plans/adr/ADR-0023-colophon-di-edizione.md)) | due PDF dello stesso capitolo stampati a un mese di distanza erano indistinguibili sul tavolo |
 | **Fondo** | avorio; `--carta bianca` per stampare in casa | sessanta pagine di fondo pieno sono una cartuccia |
+| **Formato** | A4 due colonne; `--formato a5` per il libretto, **poi** `--imposto` | imporre un A4 scala il corpo al 71%: si compone in A5 e si piega, non il contrario |
 
 ---
 

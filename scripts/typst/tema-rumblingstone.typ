@@ -131,7 +131,7 @@
 // analitico resta vuoto per sempre.
 #let voce-indice(termine) = index(termine)
 
-#let indice-analitico() = page(columns: 2, header: none)[
+#let indice-analitico(colonne: 2) = page(columns: colonne, header: none)[
   #place(top + center, scope: "parent", float: true,
     block(width: 100%, inset: (bottom: 8pt))[
       #align(center)[
@@ -313,16 +313,27 @@
 // una stampante di casa sono una cartuccia: il volume «da leggere» e il volume
 // «da stampare stasera» non sono lo stesso file.
 #let libro(titolo: "", sottotitolo: "", brand: "", banner: "", meta: "", capitolo: "",
-           apparato: true, carta: "avorio", copertina: none, intro: none,
+           apparato: true, carta: "avorio", formato: "a4", copertina: none, intro: none,
            crediti: none,
            corpo) = {
+  // A5 è il formato «libretto»: **una colonna sola**, perché in A5 due colonne
+  // sarebbero da 5 cm e nessuno impagina un manuale così.
+  //
+  // Sta accanto all'imposizione (ADR-0027), non al posto suo, e la differenza è
+  // il corpo del testo: `pdfcpu booklet` prende il volume A4 e ne mette due per
+  // foglio, cioè **scala tutto al 71%** — 10.2 pt diventano ~7.2, che si
+  // stampano ma non si leggono al tavolo. Comporre in A5 e poi imporre due
+  // pagine per foglio A4 tiene il corpo a 9.6 pt, che è la misura di un manuale
+  // tascabile vero.
+  let a5 = formato == "a5"
   let fondo = if carta == "bianca" { white } else { avorio }
   set document(title: titolo)
   set page(
-    paper: "a4",
+    paper: if a5 { "a5" } else { "a4" },
     // Margini SPECULARI: rilegato o pinzato, il margine interno finisce nella
     // piega. `inside`/`outside` è ciò che distingue un libro da una risma.
-    margin: (inside: 2.0cm, outside: 1.5cm, top: 2.1cm, bottom: 2.0cm),
+    margin: if a5 { (inside: 1.5cm, outside: 1.1cm, top: 1.5cm, bottom: 1.4cm) }
+            else { (inside: 2.0cm, outside: 1.5cm, top: 2.1cm, bottom: 2.0cm) },
     binding: left,
     fill: fondo,
     header: context {
@@ -344,7 +355,8 @@
       align(center)[#text(size: 7pt)[⬦]~#counter(page).display()~#text(size: 7pt)[⬦]]
     },
   )
-  set text(font: SERIF, size: 10.2pt, fill: inchiostro, lang: "it")
+  set text(font: SERIF, size: if a5 { 9.6pt } else { 10.2pt },
+           fill: inchiostro, lang: "it")
   set par(justify: true, leading: 0.62em, first-line-indent: 1.1em)
 
   // Il § nei TITOLI diventa un numero dentro un medaglione — la stessa cornice
@@ -430,6 +442,6 @@
   outline(title: none, depth: 3, indent: 1em)
   pagebreak()
 
-  set page(columns: 2)
+  set page(columns: if a5 { 1 } else { 2 })
   corpo
 }

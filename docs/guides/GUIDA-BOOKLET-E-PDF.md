@@ -57,11 +57,15 @@ uscire.
 
 ---
 
-### 0.1 Le due opzioni che si dimenticano sempre
+### 0.1 Le tre opzioni che si dimenticano sempre
 
 ```bash
 # il volume da stampare in casa: niente fondo avorio, cioè niente cartuccia bruciata
 python3 scripts/export_booklet_typst.py MANIFEST.json --all --carta bianca
+
+# il libretto: composto in A5 a una colonna, poi imposto due pagine per foglio
+python3 scripts/export_booklet_typst.py MANIFEST.json --all --formato a5
+python3 scripts/dm.py volume MANIFEST.json --stampa --imposto
 
 # un booklet HTML leggero (57 KB invece di 460): senza caratteri incorporati,
 # ma su una macchina senza EB Garamond cambia faccia
@@ -463,6 +467,12 @@ generato — quello si rifà a ogni compilazione.
   ⚠️ Il PDF imposto **non si versiona e non si confronta a byte**: l'output di
   `pdfcpu` non è byte-identico fra due esecuzioni — è l'array `/ID`, non il
   contenuto ([ADR-0027](../../plans/adr/ADR-0027-imposizione-con-pdfcpu.md)).
+- **Formato A5** (`--formato a5`, o `"formato": "a5"` nel manifest): compone il
+  volume a **una colonna** con corpo 9.6 pt. Va **insieme** all'imposizione, non
+  al posto suo: imporre un volume A4 mette due pagine per foglio e le scala al
+  71%, cioè porta il corpo a ~7,2 pt — si stampa, non si legge al tavolo.
+  Composto in A5, dopo la piega il corpo resta quello di un tascabile.
+  In A5 anche l'indice analitico va a una colonna: due sarebbero da 5 cm.
 - **Quanto è leggibile**: `python3 scripts/validate_tipografia.py` misura i
   **caratteri per riga** dalle metriche vere del font (oggi **62,1**, dentro la
   finestra 45-75), la **gerarchia dei titoli** — un `h4` sotto un `h2` diventa un

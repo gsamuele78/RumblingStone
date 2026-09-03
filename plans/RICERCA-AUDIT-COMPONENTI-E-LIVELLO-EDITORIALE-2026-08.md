@@ -359,3 +359,29 @@ libreria abbia due velocità.
 
 Gated altrove, come già dichiarato: le illustrazioni raster (GPU del DM), la
 mappa in versione giocatore, il collaudo al tavolo.
+
+---
+
+## §11 · Chiusura (2026-09-03): chi ha chiuso cosa
+
+Fra il 27 agosto e il 3 settembre le quattro code del §10 sono state chiuse — da
+altre sessioni, dentro il **PIANO-CHIUSURA-CATENA-EDITORIALE**, non qui. Vale la
+pena scrivere chi, perché per undici giorni questa ricerca è rimasta indicata in
+`INDEX.md` come «aperta su quattro voci» mentre non lo era più: una riga di
+tracciatura che non si aggiorna è peggio di una riga assente, perché la si crede.
+
+| Coda | Chiusa da | Come |
+|---|---|---|
+| **capolettera annegato** | [ADR-0026](adr/ADR-0026-vendoring-pacchetti-typst.md) | `droplet:0.3.1` **vendorizzato** in `scripts/typst/packages/` con la sua licenza. La decisione che il §5 di questa ricerca diceva «va presa in un ADR suo» è stata presa così |
+| **indice analitico** | ADR-0026 | `in-dexter:0.7.2`, sempre vendorizzato; le voci le marca l'esportatore dal glossario invece che a mano |
+| **imposizione** | [ADR-0027](adr/ADR-0027-imposizione-con-pdfcpu.md) | `pdfcpu` come seconda dipendenza binaria — e la regola di degradazione pulita scritta **una volta sola in codice** (`scripts/binari.py`) invece che a parole in ogni script |
+| **le 19 schede incomplete** | PIANO-CHIUSURA §H | Bestiario **157/157**: hanno insegnato al parser a leggere anche i dossier, invece di fermarsi dove si era fermato l'estrattore |
+
+Resta una cosa sola, aggiunta oggi: **`--formato a5`**. Non è un doppione
+dell'imposizione, le sta accanto — `pdfcpu booklet` prende il volume A4 e ne mette
+due per foglio scalando al 71%, cioè porta il corpo da 10,2 pt a ~7,2. Comporre in
+A5 (una colonna, 9,6 pt) e *poi* imporre tiene la misura di un tascabile vero.
+
+Gated come sempre dichiarato: le illustrazioni raster, la mappa in versione
+giocatore, il collaudo al tavolo, e le schede A4 dei quattro PG — in `PG/` non
+esistono master di scheda personaggio, e il layout aspetta i numeri veri.

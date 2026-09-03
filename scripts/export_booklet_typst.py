@@ -656,7 +656,7 @@ def fregio_per(titolo: str, file: Path, base: Path, ripiego: str | None = None) 
 CHIAVI_NOTE = {
     "title", "subtitle", "brand", "banner", "meta", "footer", "header",
     "player_footer", "front_matter", "cover_image", "cover_tag", "intro_md",
-    "out", "chapters", "carta", "capolettera", "fregio", "colophon",
+    "out", "chapters", "carta", "capolettera", "fregio", "colophon", "formato",
 }
 CHIAVI_SOLO_HTML = {"player_footer", "header", "cover_tag", "out"}
 
@@ -708,7 +708,7 @@ def avvisa_chiavi(man: dict) -> None:
 
 
 def intestazione(man: dict, apparato: bool | None = None, base: Path | None = None,
-                 carta: str = "avorio") -> list[str]:
+                 carta: str = "avorio", formato: str = "a4") -> list[str]:
     """Import e `#show: libro.with(...)`: la testa di ogni sorgente generato."""
     if apparato is None:
         apparato = bool(man.get("front_matter", True))
@@ -739,6 +739,8 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
             extra.append(f"  crediti: {crediti},")
     if carta != "avorio":
         extra.append(f'  carta: {json.dumps(carta, ensure_ascii=False)},')
+    if formato != "a4":
+        extra.append(f'  formato: {json.dumps(formato, ensure_ascii=False)},')
     return [
         f'#import "{typ_path(TEMA)}": *',
         f'#import "{typ_path(SCHEDA_PG)}": scheda',
@@ -810,7 +812,8 @@ def marca_indice(typ: str) -> str:
     return "\n".join(fuori)
 
 
-def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
+def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
+             formato: str = "a4") -> str:
     elenco = capitoli(man, base, tutti)
 
     # Prima le etichette di TUTTI i capitoli, poi la conversione: un rimando in
@@ -821,7 +824,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
         RIMANDI[f.name] = "cap-" + slug(f.stem)
 
     avvisa_chiavi(man)
-    parti = intestazione(man, base=base, carta=carta)
+    parti = intestazione(man, base=base, carta=carta, formato=formato)
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
         if cap.get("layout") == "schede":
@@ -844,7 +847,8 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio") -> str:
         marcato = marca_indice(testo)
         n = marcato.count("#voce-indice[")
         if n:
-            testo = marcato + "\n#indice-analitico()\n"
+            testo = marcato + ("\n#indice-analitico(colonne: 1)\n"
+                               if formato == "a5" else "\n#indice-analitico()\n")
         else:
             # Nessuna voce del glossario in questo volume: e' il caso dei moduli
             # autoconclusivi, che hanno un'ambientazione loro. Una pagina
@@ -921,6 +925,10 @@ def main() -> int:
     ap.add_argument("--carta", choices=("avorio", "bianca"), default="avorio",
                     help="«bianca» toglie il fondo avorio: sessanta pagine di fondo pieno "
                          "su una stampante di casa sono una cartuccia")
+    ap.add_argument("--formato", choices=("a4", "a5"), default=None,
+                    help="«a5» compone il libretto a una colonna (9.6 pt): si impone poi "
+                         "due pagine per foglio A4 con «dm volume --imposto», e il corpo "
+                         "resta leggibile invece di scendere al 71%%")
     ap.add_argument("--per-scheda", action="store_true",
                     help="in più, un PDF per ogni scheda in schede/ (da mandare a un giocatore solo)")
     args = ap.parse_args()
@@ -945,7 +953,8 @@ def main() -> int:
     typ = base / f"{mp.stem.replace('.manifest', '')}.typ"
     pdf = base / f"{mp.stem.replace('.manifest', '')}-STAMPA.pdf"
     try:
-        src = sorgente(man, base, args.all, args.carta)
+        src = sorgente(man, base, args.all, args.carta,
+                       args.formato or man.get("formato", "a4"))
     except SchedaError as e:
         print(f"✗ export_booklet_typst: {e}", file=sys.stderr)
         return 1

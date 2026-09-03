@@ -24,7 +24,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from build_booklet_html import colophon_html  # noqa: E402
 from export_booklet_typst import (  # noqa: E402
-    VOCI_COLOPHON, crediti_typ, dimensioni, inline, md_to_typ,
+    VOCI_COLOPHON, crediti_typ, dimensioni, inline, intestazione, md_to_typ,
 )
 from build_booklet_html import VOCI_COLOPHON as VOCI_HTML  # noqa: E402
 from validate_booklets import carica_schema, controlla_manifest, manifest_del_repo  # noqa: E402
@@ -112,6 +112,30 @@ class TestCapolettera(unittest.TestCase):
 
     def test_un_cappello_di_due_righe_resta_com_e(self):
         self.assertNotIn("#capolettera(", md_to_typ("Due righe soltanto.", capolettera=True))
+
+
+class TestFormato(unittest.TestCase):
+    """A5 è il libretto: una colonna, corpo 9.6 pt.
+
+    Sta accanto all'imposizione (ADR-0027), non al posto suo: `pdfcpu booklet`
+    su un volume A4 mette due pagine per foglio e scala tutto al 71%, cioè
+    10.2 pt diventano ~7.2. Comporre in A5 e poi imporre tiene il corpo dove si
+    legge.
+    """
+
+    def test_a4_non_dichiara_niente(self):
+        """Il default non finisce nel sorgente: un artefatto pulito si legge."""
+        self.assertNotIn("formato:", "\n".join(intestazione({"title": "x"})))
+
+    def test_a5_dichiarato_al_tema(self):
+        self.assertIn('formato: "a5"',
+                      "\n".join(intestazione({"title": "x"}, formato="a5")))
+
+    def test_il_tema_conosce_il_parametro(self):
+        """Anti-drift: se qualcuno rinomina `formato` nel tema, qui si vede."""
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        self.assertIn('formato: "a4"', tema)
+        self.assertIn('formato == "a5"', tema)
 
 
 class TestManifestDelRepo(unittest.TestCase):

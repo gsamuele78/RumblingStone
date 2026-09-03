@@ -65,12 +65,21 @@ class TestCaratteriPerRiga(unittest.TestCase):
 
     def test_i_numeri_del_tema_sono_ancora_quelli_del_tema(self):
         # Se il .typ cambia e queste costanti no, il controllo diventa bugiardo.
+        #
+        # Dal 2026-09-03 il tema ha due formati: i numeri qui sotto sono quelli
+        # dell'A4, che è ciò che `validate_tipografia` misura. L'A5 ha i suoi, e
+        # si controllano accanto — altrimenti il giorno che qualcuno tocca il
+        # ramo A5 questo test resta verde su un tema che non è più quello.
         typ = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
         self.assertIn("inside: 2.0cm", typ)
         self.assertIn("outside: 1.5cm", typ)
-        self.assertIn('paper: "a4"', typ)
-        self.assertIn("columns: 2", typ)
-        self.assertIn(f"size: {T.CORPO_PT}pt", typ)
+        self.assertIn('else { "a4" }', typ)
+        self.assertIn("else { 2 }", typ)
+        self.assertIn(f"else {{ {T.CORPO_PT}pt }}", typ)
+        # e il libretto: una colonna, corpo più piccolo
+        self.assertIn('if a5 { "a5" }', typ)
+        self.assertIn("if a5 { 1 }", typ)
+        self.assertIn("if a5 { 9.6pt }", typ)
 
 
 class TestDaltonismo(unittest.TestCase):
