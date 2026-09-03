@@ -1,6 +1,7 @@
 # PIANO — Un generatore di creature e PNG dalle tabelle
 
-> **Stato**: ✅ **completo** — lotti A→H chiusi (2026-09-03).
+> **Stato**: 🟡 **A→H chiusi** (2026-09-03); resta il **lotto I**, bloccato
+> dalle tre domande di §7.6.
 > **Il debito del Bestiario è chiuso: 157 schede su 157 sistemate.** · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
 > **Decisioni del DM (§5)**: taratura **SRD 3.5 di norma, PF1e come variante
 > più cattiva**; il generatore serve per **quello che nel Bestiario non c'è**;
@@ -247,6 +248,16 @@ comparivano in **zero** guide e **zero** skill.
   potenziare presuppone qualcosa da potenziare;
 - skill `rumblingstone-automation`: le due opzioni di `suggest_encounter`.
 
+### ⬜ Lotto I — Gli incantatori per lista di classe e funzione
+La revisione che nasce dal difetto dei due druidi: le liste vanno per **lista di
+classe**, non per ruolo né per tradizione. Diciassette liste. La proposta per
+esteso, con la matrice e le tre domande aperte, è in **§7**.
+**Accettazione**: ogni incantesimo di ogni lista appartiene davvero a quella
+classe, verificato da un test; nessuna classe riceve la lista di un'altra; le due
+schede ripulite (`arci-druido-circolo-cr14`, `druid-bear-ally-cr12`) tornano
+complete.
+**Bloccato da**: le tre domande di §7.6 — il DM deve rispondere prima.
+
 ---
 
 ## §7 · PROPOSTA — gli incantatori per lista di classe e funzione
@@ -349,3 +360,33 @@ promemoria.
    ✅ bastano (undici)?
 3. **Le liste le scrivo io e le confermi tu**, come per il carattere — o le
    preferisci scritte da te?
+
+
+---
+
+## §8 · Da dove si comincia, in una chat nuova
+
+```bash
+# 1. lo stato reale, non quello che dice questo file
+python3 scripts/extract_statblocks.py --check
+python3 scripts/genera_creatura.py --gs 9 --ruolo controllore --classe druido:9
+
+#    ↑ il secondo comando mostra il difetto ancora aperto: il druido esce
+#      SENZA incantesimi, e lo dichiara. È il lotto I.
+
+# 2. i test che tengono ferma la parte già fatta
+python3 -m pytest scripts/tests/test_genera_creatura.py scripts/tests/test_tabelle.py -q
+```
+
+**Prima di scrivere una riga**: leggere §7 e ottenere dal DM le risposte alle tre
+domande di §7.6. Senza quelle, si scrivono diciassette liste che poi vanno
+rifatte.
+
+**I file da toccare**: `scripts/genera_creatura.py` (`INCANTESIMI`,
+`CLASSI_SENZA_LISTA`), `scripts/dmcore/tabelle.py` (le griglie ci sono già),
+`scripts/tests/test_genera_creatura.py`.
+
+**Le regole del repo che valgono qui**: ADR-0034 (generare e dichiarare),
+ADR-0033 (lo strumento propone, il DM scrive), ADR-0021 (il blocco è un dato).
+E la regola d'oro dei piani: checklist + `INDEX.md` + `CHANGELOG.md` **nello
+stesso commit** (skill `rumblingstone-plans`).

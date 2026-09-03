@@ -212,3 +212,34 @@ metterebbe una dipendenza nel percorso critico della CI per comodità di scrittu
 Il vantaggio vero — TDD — non richiede nessuna delle due, e in questa PR è già
 stato applicato: **quattro difetti trovati dai test che una rilettura non
 avrebbe trovato**.
+
+
+---
+
+## §7 · Da dove si comincia, in una chat nuova
+
+```bash
+# la misura di partenza, rifatta adesso: se i numeri di §1 non tornano,
+# qualcuno ha già lavorato e questo piano va riletto prima di eseguirlo
+grep -l "from dmcore" scripts/*.py | wc -l        # atteso 10
+grep -c "def slug" scripts/*.py | grep -v ':0'    # atteso 7 file
+python3 -m pytest scripts/tests/test_gate_bocciano.py -q   # atteso 22 verdi
+
+# la prova che il difetto del lotto A è reale, su dati veri
+python3 -c "
+import re, unicodedata
+c = lambda s: re.sub(r'[^a-z0-9]+','-', s.lower()).strip('-')
+a = lambda s: re.sub(r'[^a-z0-9]+','-', unicodedata.normalize('NFKD', s).encode('ascii','ignore').decode().lower()).strip('-')
+print(c('Lómyn RedTongue'), '≠', a('Lómyn RedTongue'))"
+```
+
+**L'ordine consigliato**: **0** (l'ADR, un'ora, sblocca la discussione sulle
+librerie) → **A** (la `slug`, due ore più un commit di rigenerazione a parte) →
+**C** e **D** se il DM li vuole.
+
+⚠️ **Il lotto A cambia degli id nel catalogo.** Va in un commit suo, e i
+riferimenti esistenti vanno guardati prima di rigenerare: `grep -rn "l-myn\|d-lite"`.
+
+**Il metodo che ha funzionato nel lotto B, e che vale per gli altri**: scritto il
+test, **mutare il codice che dovrebbe coprire** e verificare che il test cada.
+Nel lotto B ha trovato un difetto nel test stesso, che rileggendolo non si vedeva.
