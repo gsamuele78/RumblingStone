@@ -199,6 +199,28 @@ _RE = {
     # lotto I mandava a capo fra «Temp +6,» e «Rifl +7», e i tre tiri salvezza
     # sparivano tutti e tre. Il punto resta il confine, e ventiquattro caratteri
     # non bastano a scavalcare una frase — ma bastano a scavalcare una riga.
+    # Sesto dialetto, trovato nel lotto I: i tre tiri salvezza su tre righe
+    # d'elenco separate, ognuna col proprio conto fra parentesi —
+    #
+    #     - **Tempra:** +10 (+8 Base, +2 Cos)
+    #     - **Riflessi:** +8 (+4 Base, +4 Des)
+    #     - **Volontà:** +14 (+9 Base, +5 Sag)
+    #
+    # È la forma dei dossier dei villain, e sono nove schede. La riga unica non
+    # li vede perché fra un tiro e l'altro ci sono trenta caratteri e un a capo.
+    # Qui si leggono uno per uno, e si accettano solo se ci sono tutti e tre:
+    # due su tre sarebbe un blocco che sembra completo e non lo è.
+    # Le forbici: «58–90», con il trattino lungo o corto.
+    # ⚠️ Fra l'etichetta e il numero le schede mettono asterischi e due punti in
+    # ordine libero — «**Punti Ferita:** 58–90» ha i due punti PRIMA degli
+    # asterischi. Un separatore permissivo invece di una sequenza fissa.
+    "forbice_pf": re.compile(r"(?:Punti Ferita|\bhp\b|\bPF\b)[:*\s]+"
+                             r"(\d{1,3})\s*[–—-]\s*(\d{1,3})\b", re.I),
+    "forbice_ca": re.compile(r"(?:Classe Armatura|\bCA\b|\bAC\b)[:*\s]+"
+                             r"(\d{1,2})\s*[–—-]\s*(\d{1,2})\b", re.I),
+    "ts_temp": re.compile(r"^\s*[-*]?\s*\**Tempra\**\s*:?\**\s*([+-]\d+)", re.M | re.I),
+    "ts_rifl": re.compile(r"^\s*[-*]?\s*\**Riflessi\**\s*:?\**\s*([+-]\d+)", re.M | re.I),
+    "ts_vol": re.compile(r"^\s*[-*]?\s*\**Volont[àa]\**\s*:?\**\s*([+-]\d+)", re.M | re.I),
     "ts": re.compile(r"Temp[a-zà]*\**\s*\**([+-]\d+)[^.]{0,24}?Rifl[a-zei]*\**\s*\**([+-]\d+)"
                      r"[^.]{0,24}?Vol[a-zontà]*\**\s*\**([+-]\d+)", re.I),
     # Forma compatta: «TS +2/+9/+1», nell'ordine Tempra/Riflessi/Volonta'.
@@ -248,24 +270,41 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
     scheda non migrata.
     """
     sb = Statblocco()
+    # Il GS e il tipo possono stare in testa al documento, fuori dalla sezione
+    # delle statistiche; i numeri della creatura, no. Vedi finestra_statistiche().
+    intero, testo = testo, finestra_statistiche(testo)
     for chiave in ("pf", "ca", "velocita", "iniziativa", "gs", "tipo", "pf_dado"):
         m = _RE[chiave].search(testo)
         if m:
             # `pf` ha due rami alternativi: vale il gruppo che ha catturato.
             valore = next((g for g in m.groups() if g), "")
             setattr(sb, chiave, valore.strip().rstrip(",;"))
+    for chiave in ("gs", "tipo"):
+        if not getattr(sb, chiave):
+            m = _RE[chiave].search(intero)
+            if m:
+                setattr(sb, chiave, m.group(1).strip())
     m = _RE["ca_dettaglio"].search(testo)
     if m:
         # La barra verticale separa i CAMPI nelle schede a coppie chiave/valore:
         # oltre quella non c'è più il dettaglio della CA, c'è un altro campo.
         sb.ca_dettaglio = m.group(1).split("|")[0].strip().lstrip(",").strip()
+    def segno(v: str) -> str:
+        return v if v[0] in "+-" else "+" + v
+
     m = (_RE["ts"].search(testo) or _RE["ts_en"].search(testo)
          or _RE["ts_barre"].search(testo))
     if m:
-        def segno(v: str) -> str:
-            return v if v[0] in "+-" else "+" + v
         sb.ts = (f"Temp {segno(m.group(1))}, Rifl {segno(m.group(2))}, "
                  f"Vol {segno(m.group(3))}")
+    else:
+        # I tre tiri su tre righe separate. Si accettano SOLO se ci sono tutti e
+        # tre: due su tre darebbe un blocco dall'aria completa a cui manca un
+        # numero, che è peggio di un blocco che dichiara di non averlo.
+        pezzi = [_RE[f"ts_{k}"].search(testo) for k in ("temp", "rifl", "vol")]
+        if all(pezzi):
+            sb.ts = ", ".join(f"{nome} {segno(p.group(1))}" for nome, p in
+                              zip(("Temp", "Rifl", "Vol"), pezzi))
     # L'attacco finisce dove finisce la frase: nel formato compatto del repo
     # dopo il danno segue spesso tutt'altro («… (1d4+1). Scurovisione 18 m»).
     sb.attacchi = [f"{a} {_fino_al_punto(b)}" for a, b in _RE["attacco"].findall(testo)][:4]
@@ -290,6 +329,22 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
         except (AttributeError, ValueError):
             sb.pf_dado = ""
 
+    # Una FORBICE lasciata aperta dal DM non è un numero da scegliere.
+    #
+    # Il dossier del Ghostlord scrive «Punti Ferita: 58–90 (13 DV; DM adatta al
+    # livello del party — usare 90 se il party è ottimizzato)» e «Classe
+    # Armatura: 24–26». Prendere il numero basso e tacere butterebbe via
+    # un'istruzione di regia, e la scheda direbbe una cosa che il DM non ha
+    # detto. Il blocco tiene l'estremo basso — serve un numero, e il basso è il
+    # meno rischioso — e la forbice viene scritta accanto, dove si legge.
+    for campo, etichetta in (("pf", "punti ferita"), ("ca", "CA")):
+        m = _RE["forbice_" + campo].search(testo)
+        if m:
+            basso, alto = m.group(1), m.group(2)
+            setattr(sb, campo, basso)
+            sb.voci.append(f"⚠ Forbice del DM: {etichetta} {basso}–{alto} "
+                           "(adattare al livello del gruppo)")
+
     # Se la prosa scriveva «hp ~30», il numero e' una STIMA del DM. Il blocco lo
     # dice, perche' altrimenti al tavolo non si distingue piu' da un numero
     # preso da un manuale — ed e' esattamente la confusione che ADR-0021 vieta.
@@ -305,6 +360,48 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
         nota = "valori approssimati nella prosa d'origine (scritti con «~»)"
         sb.fonte = f"{sb.fonte} · {nota}" if sb.fonte else nota
     return sb, sb.mancanti()
+
+
+def finestra_statistiche(testo: str) -> str:
+    """La parte del documento che parla della creatura di QUESTA scheda.
+
+    ⚠️ Difetto trovato nel lotto I, e vale la pena spiegarlo perché non è
+    evidente: un dossier di villain descrive il villain **e il suo seguito**. Il
+    Conte Valerius ha una sezione «Guardie del Corpo (×2 Guardamaglie)» con
+    «CA: 24 (armatura completa +2)» e «PF: ~100 ciascuno». Il parser leggeva la
+    CA giusta del Conte (13) e ci attaccava il dettaglio delle **guardie**, e
+    marcava i suoi punti ferita esatti come «approssimati» perché il «~» delle
+    guardie era da qualche parte nel file.
+
+    Il risultato era un blocco che sembrava a posto e descriveva due creature
+    diverse — il modo in cui un errore sopravvive a una rilettura.
+
+    Quindi: dove la scheda è strutturata con intestazioni, si guarda **solo la
+    sezione delle statistiche**, cioè da dove compaiono «Punti Ferita» o
+    «Classe Armatura» fino alla prossima intestazione. Dove non lo è, si guarda
+    tutto come prima: le schede compatte non hanno seguito.
+    """
+    righe = testo.split("\n")
+    inizio = None
+    for i, r in enumerate(righe):
+        if re.search(r"\*{0,2}(Punti Ferita|Classe Armatura)\*{0,2}\s*:", r, re.I):
+            inizio = i
+            break
+    if inizio is None:
+        return testo
+    # Si risale all'intestazione che apre la sezione, per non perdere il GS e il
+    # tipo che spesso stanno qualche riga sopra.
+    apertura = 0
+    for i in range(inizio, -1, -1):
+        if righe[i].startswith("#"):
+            apertura = i
+            break
+    fine = len(righe)
+    for i in range(inizio + 1, len(righe)):
+        if righe[i].startswith("#"):
+            fine = i
+            break
+    return "\n".join(righe[apertura:fine])
 
 
 def _approssimato_dove_conta(testo: str) -> bool:
