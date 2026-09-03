@@ -1,7 +1,7 @@
 # PIANO — Un generatore di creature e PNG dalle tabelle
 
-> **Stato**: 🟡 **in corso** — lotti A·B·C·D·E·F·G chiusi; restano le 52
-> schede del Bestiario (lotto H, punto 2 del DM) · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
+> **Stato**: ✅ **completo** — lotti A→H chiusi (2026-09-03).
+> **Il debito del Bestiario è chiuso: 157 schede su 157 sistemate.** · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
 > **Decisioni del DM (§5)**: taratura **SRD 3.5 di norma, PF1e come variante
 > più cattiva**; il generatore serve per **quello che nel Bestiario non c'è**;
 > `suggest_encounter` deve poterne pescare una parte. Ruoli e tabelle del
@@ -198,3 +198,37 @@ Va scritto adesso, o il tool diventa la scorciatoia per tutto:
 - se la creatura ha un ruolo nella trama → **si scrive a mano**, il generatore dà
   al massimo l'ossatura;
 - se serve per **un incontro di passaggio** → è esattamente il suo caso.
+
+### ✅ Lotto H — Le 52 schede che restavano
+Punto 2 del DM: *«finisci le schede dei mostri e PNG che mancano»*.
+
+**✅ Chiuso 2026-09-03 — 157 su 157.** Anche qui, come nel lotto H della catena
+editoriale, il debito **non era una cosa sola**: erano quattro problemi diversi
+contati come uno.
+
+| Quante | Cos'erano | Cosa si è fatto |
+|---:|---|---|
+| **27** | i numeri stanno **altrove** e duplicarli sarebbe peggio: schede dei pregen in `ARC08-02`, PNG alleati in `ARC08-01`, dossier che puntano al proprio statblocco e viceversa, due schede di **stato finale post-mortem** che dicono a chiare lettere di non essere statblocchi | marcatore `[RIMANDO]`, **verificabile**: la scheda deve dire *dove*, e `--check` va a vedere che quel posto esista |
+| **1** | non è una creatura: «Duergar della Scala di Ossa» è un **set d'incontro** di quattro PNG nominati, e il suo «GS 11» è il livello dell'incontro | `[NON-CREATURA]`, la sesta |
+| **11** | avevano i numeri del DM in **dialetti che il parser non leggeva** | tre dialetti nuovi insegnati (vedi sotto) |
+| **13** | dichiaravano i parametri ma non i numeri | costruite con le tabelle SRD, `fonte:` che dice quali campi sono derivati e quali letti |
+
+**I difetti trovati per strada**, che valgono più delle schede:
+
+- il parser leggeva righe che descrivono **altre creature dello stesso dossier**
+  — il Conte Valerius prendeva la CA giusta (13) col dettaglio delle sue guardie
+  («armatura completa +2») e i punti ferita esatti marcati «approssimati» per via
+  del `~` delle guardie. Un blocco che descriveva due creature diverse;
+- una **forbice** lasciata aperta dal DM non è un numero da scegliere: il
+  Ghostlord dice «58–90, il DM adatta al livello del party». Il blocco tiene
+  l'estremo basso e **scrive la forbice accanto**;
+- tre schede dicevano «CA da SRD» citando il file d'origine, che è nel repo:
+  lette invece che ricordate, e **tre numeri su quattro erano sbagliati a
+  memoria** (Bebilith CA 22 e non 19, Phantom Fungus 14 e non 15, Retriever col
+  BAB trascritto +10 dove il SRD dice +7);
+- il generatore dava **CA 11 a un arcimago di GS 14**, perché non contava
+  l'equipaggiamento: un PNG di quel livello ha 27.000 mo addosso, e la prima cosa
+  che compra un incantatore sono bracciali e anello.
+
+⚠️ Le 13 costruite sono **proposte da rileggere al tavolo**, e ognuna lo dichiara
+nel proprio `fonte:`. Il confine di ADR-0033 resta: lo strumento propone.

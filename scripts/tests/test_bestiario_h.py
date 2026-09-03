@@ -75,13 +75,46 @@ class TestNonCreature(unittest.TestCase):
         testo = "# Consiglio [NON-CREATURA]\n\nSette seggi."
         self.assertEqual(E.inserisci(testo, None), testo)
 
-    def test_le_cinque_del_bestiario_sono_marcate(self):
+    def test_quali_schede_del_bestiario_sono_marcate(self):
+        """L'elenco e' chiuso di proposito: il marcatore toglie schede dal conto
+        del debito, e un elenco aperto sarebbe il modo per farlo sparire invece
+        che estinguerlo. Aggiungerne una e' una riga qui **e** una scelta.
+
+        La sesta e' arrivata chiudendo il lotto I: «Duergar della Scala di
+        Ossa» non e' una creatura ma un **set d'incontro** di quattro PNG
+        nominati, e il suo «GS 11» e' il livello dell'incontro.
+        """
         attese = {"Consiglio_Rethmar.md", "Profughi_Guado_di_Drellin.md",
                   "ondata-giganti-fanteria-cr15.md", "Witchwood_e_Tiri_Kitor.md",
-                  "Secondo_Anello_Rethmar.md"}
+                  "Secondo_Anello_Rethmar.md", "duergar-scala-di-ossa-cr11.md"}
         trovate = {f.name for f in (REPO / "Bestiario").rglob("*.md")
                    if E.e_non_creatura(f.read_text(encoding="utf-8"))}
         self.assertEqual(attese, trovate)
+
+    def test_i_rimandi_puntano_tutti_a_qualcosa_che_esiste(self):
+        """Il marcatore [RIMANDO] e' l'altro modo di togliere una scheda dal
+        conto, ed e' quello piu' facile da abusare: basta dire «i numeri stanno
+        altrove» e nessuno controlla. Qui si controlla."""
+        rimandi = [f for f in (REPO / "Bestiario").rglob("*.md")
+                   if E.e_rimando(f.read_text(encoding="utf-8"))]
+        self.assertGreater(len(rimandi), 20, "il lotto I ne ha marcate 27")
+        for f in rimandi:
+            with self.subTest(scheda=f.name):
+                guasto = E.rimando_valido(f, f.read_text(encoding="utf-8"))
+                self.assertIsNone(guasto, guasto)
+
+    def test_il_debito_del_bestiario_e_chiuso(self):
+        """157 su 157 **sistemate**: col blocco, coi numeri altrove, o non
+        creature. Non «migrate»: sistemate. La differenza e' il lotto I."""
+        schede = E.schede()
+        aperte = []
+        for f in schede:
+            testo = f.read_text(encoding="utf-8")
+            if (E.APERTURA in testo or E.e_non_creatura(testo)
+                    or E.e_rimando(testo)):
+                continue
+            aperte.append(f.name)
+        self.assertEqual(aperte, [], f"schede ancora aperte: {aperte}")
 
 
 class TestDerivazione(unittest.TestCase):

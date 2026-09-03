@@ -108,8 +108,17 @@ def bersaglio_del_rimando(testo: str) -> str | None:
     con il percorso fra apici inversi. Non ne invento uno nuovo — le schede lo
     scrivono così da prima che questo marcatore esistesse.
     """
-    m = re.search(r"\*\*Key stats\*\*:.*?`([^`]+)`", testo, re.S)
-    return m.group(1) if m else None
+    # ⚠️ Sulla RIGA, non sul documento. Con `re.S` la ricerca proseguiva oltre la
+    # riga fino al primo apice inverso del file: una scheda che scriveva «Key
+    # stats: vedi statblock» senza dire quale passava il controllo agganciandosi
+    # a un percorso citato trenta righe piu' giu'. Un controllo che si accontenta
+    # e' peggio di nessun controllo, perche' fa credere che qualcuno abbia
+    # guardato.
+    for riga in testo.split("\n"):
+        if "**Key stats**" in riga:
+            m = re.search(r"`([^`]+)`", riga)
+            return m.group(1) if m else None
+    return None
 
 
 def rimando_valido(f: Path, testo: str) -> str | None:

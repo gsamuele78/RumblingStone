@@ -1,5 +1,7 @@
-# URIALLE — Yochlol half-illithid, prima sacerdotessa del raid
+# URIALLE — Yochlol half-illithid, prima sacerdotessa del raid [RIMANDO]
 ## Scheda PNG post-mortem (stato finale: **MORTA**, D13)
+
+**Key stats**: → `06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Belkram.md` e `Urialle.pdf` — statblock e tattiche storici. Questa scheda registra lo **stato finale di canone** (morta in ARC-06), non i numeri.
 
 **Razza/Tipo:** Yochlol half-illithid (sacerdotessa di Lolth)
 **Grado di Sfida:** CR 14 (EL 17 nel raid, su party di ~13° — `06_.../villans.md` r.1)

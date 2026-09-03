@@ -168,16 +168,22 @@ _RE = {
     # mentre i numeri ce li avevano: il DM li aveva scritti approssimati, e il
     # lettore non riconosceva la forma. Sono numeri SUOI, e derivarli da capo
     # avrebbe voluto dire sostituirli con numeri inventati.
-    "pf": re.compile(r"(?i:\*{0,2}Punti Ferita\*{0,2})\s*:?\s*\*{0,2}[~≈]?\s*(\d{1,4})"
+    # Settimo dialetto (lotto I): l'etichetta porta la sigla fra parentesi —
+    # «**Punti Ferita (PF):** **44**», «**Classe Armatura (CA):** **20**». Senza
+    # tollerarla, due schede coi numeri del DM scritti nero su bianco
+    # risultavano vuote, e il derivatore proponeva di rimpiazzarli: 9 punti
+    # ferita al posto di 44, 285 al posto di 405. Cioe' il difetto peggiore che
+    # questa catena possa avere — sostituire un numero del DM con uno inventato.
+    "pf": re.compile(r"(?i:\*{0,2}Punti Ferita(?:\s*\([^)]{0,6}\))?\*{0,2})\s*:?\*{0,2}\s*\*{0,2}[~≈]?\s*(\d{1,4})"
                      r"|\*{0,2}(?:hp|pf|PF|HP)\*{0,2}[:\s]\s*[~≈]?\s*\*{0,2}(\d{1,4})\*{0,2}"
                      # «(104 HP with skeleton template)»: dopo «HP» puo' seguire
                      # del testo dentro la stessa parentesi.
-                     r"|\((\d{1,4})\s*(?:HP|hp|PF|pf)\b"),
+                     r"|\(\*{0,2}[~≈]?\s*(\d{1,4})\s*(?:HP|hp|PF|pf)\b"),
     # I dadi vita, non i dadi di danno: si cercano nella frase di apertura
     # («Small plant, 4d8+16.») o accanto ai pf, mai in fondo a un attacco.
     "pf_dado": re.compile(r"(?:^|\n)[^\n]{0,80}?\b(\d{1,3}d\d{1,2}(?:\s*[+-]\s*\d+)?)\b"
                           r"(?=[^\n]{0,40}(?:\.|\bhp\b|\bpf\b))", re.I),
-    "ca": re.compile(r"(?i:\*{0,2}Classe Armatura\*{0,2})\s*:?\s*\*{0,2}[~≈]?\s*(\d{1,2})"
+    "ca": re.compile(r"(?i:\*{0,2}Classe Armatura(?:\s*\([^)]{0,6}\))?\*{0,2})\s*:?\*{0,2}\s*\*{0,2}[~≈]?\s*(\d{1,2})"
                      r"|\*{0,2}\b(?:AC|CA)\b\*{0,2}[:\s]\s*[~≈]?\s*\*{0,2}(\d{1,2})\*{0,2}"),
     # Il dettaglio della CA e' la parentesi che la segue, e **finisce li'**.
     # Correndo fino a fine riga si portava dietro velocita' e attacchi, che
@@ -192,7 +198,11 @@ _RE = {
     # Il segnale che il numero e' una STIMA e non una lettura. Si conserva:
     # trascrivere «hp ~30» come «pf: 30» promuove un'approssimazione a fatto, e
     # al tavolo non si distinguerebbe piu' da un numero preso da un manuale.
-    "approssimato": re.compile(r"(?:hp|pf|PF|HP|AC|CA)\*{0,2}[:\s]\s*[~≈]"),
+    # Due forme: la tilde PRIMA del numero («hp ~30») e la tilde dentro la
+    # parentesi che segue («(**~405 HP**)»). La seconda mancava, e un drago con
+    # 405 punti ferita dichiaratamente stimati risultava un dato esatto.
+    "approssimato": re.compile(r"(?:hp|pf|PF|HP|AC|CA)\*{0,2}[:\s]\s*[~≈]"
+                               r"|\(\*{0,2}[~≈]\s*\d{1,4}\s*(?:HP|hp|PF|pf)\b"),
     # Il divario fra un tiro e l'altro va tenuto largo: la forma italiana estesa
     # «Tempra +7, Riflessi +10, Volontà +6 (+2 vs incantamento)» ci sta appena.
     # ⚠️ Il gap ammette un a capo (`[^.]` invece di `[^.\n]`): una scheda del

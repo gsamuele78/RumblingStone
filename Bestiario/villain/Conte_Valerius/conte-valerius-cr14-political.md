@@ -1,4 +1,5 @@
-# Conte Valerius — Villain Politico [POINTER — canonical file]
+# Conte Valerius — Villain Politico [POINTER — canonical file] [RIMANDO]
+**Key stats**: → `Bestiario/villain/Conte_Valerius/Conte_Valerius/Conte_Valerius.md` (i numeri stanno lì; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
 **Faction**: rethmar-defender | **Role**: villain-political | **Environment**: urban | **CR**: 14
 **Source**: `Bestiario/villain/Conte_Valerius/Conte_Valerius.md` (canonical scheda, GS 6 combat / **GS effettivo 14+ politico**, Esperto 4 / Aristocratico 4)

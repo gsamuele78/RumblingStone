@@ -257,8 +257,12 @@ SCOSTAMENTO = {
     "schermagliatore": {"pf": -0.10, "ca": +1, "attacco": +1},
     "tiratore":        {"pf": -0.20, "ca": +2, "attacco": +1},
     "comandante":      {"pf": +0.00, "ca": +1, "attacco": +0},
-    "controllore":     {"pf": -0.20, "ca": +0, "attacco": -2},
-    "artigliere":      {"pf": -0.25, "ca": +0, "attacco": -2},
+    # ⚠️ Gli incantatori stanno SOTTO il bersaglio anche sulla CA, e di parecchio.
+    # Il loro GS non lo pagano con la corazza: lo pagano con quello che fanno
+    # fare al campo. Un luogotenente illithid di GS 12 costruito sul bersaglio
+    # pieno usciva con CA 26 — un mind flayer in armatura da paladino.
+    "controllore":     {"pf": -0.20, "ca": -4, "attacco": -2},
+    "artigliere":      {"pf": -0.25, "ca": -4, "attacco": -2},
 }
 
 #: Destrezza tipica per ruolo, che il bersaglio non decide (la CA la si raggiunge
@@ -590,7 +594,16 @@ def _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng):
 def _armatura_del_ruolo(R: Ruolo, livelli: int) -> tuple[int, int]:
     """Cosa indossa. SRD «Table: Armor and Shields»; lo scudo dove ha senso."""
     if R.nome in ("controllore", "artigliere"):
-        return 0, 99                      # nessuna: un mago in armatura non lancia
+        # ⚠️ Un mago in armatura non lancia — ma non per questo va in giro con
+        # CA 11. Difetto trovato costruendo le schede del Bestiario: l'arcimago
+        # del Cerchio degli Otto, GS 14, usciva con CA 11, cioè colpito da
+        # chiunque con un tiro di 2. Un PNG di quel livello ha **27.000 mo** di
+        # equipaggiamento addosso (la tabella EQUIPAGGIAMENTO_PNG lo dice), e la
+        # prima cosa che compra un incantatore sono bracciali dell'armatura e un
+        # anello di protezione. Non è una concessione: è come si costruisce.
+        bracciali = min(8, 1 + livelli // 3)
+        anello = min(5, 1 + livelli // 6)
+        return bracciali + anello, 99
     if R.nome == "tiratore":
         return T.ARMATURE["studded leather"]
     if R.nome == "schermagliatore":

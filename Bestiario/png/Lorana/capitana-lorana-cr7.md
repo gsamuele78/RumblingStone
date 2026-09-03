@@ -1,4 +1,5 @@
-# Capitana Lorana [POINTER — canonical file]
+# Capitana Lorana [POINTER — canonical file] [RIMANDO]
+**Key stats**: → `Bestiario/png/Lorana/Lorana.md` (i numeri stanno lì; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
 **Faction**: rethmar-defender | **Role**: ally-fighter-leader | **Environment**: urban | **CR**: 7
 **Source**: `Bestiario/png/Lorana/Lorana.md` (canonical scheda, GS 7, Guerriero 6 / Esperto 2)
