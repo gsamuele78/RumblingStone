@@ -38,6 +38,10 @@ close, the tool is a different one:
 ```bash
 python3 scripts/genera_creatura.py --gs 7 --tipo umanoide --ruolo bruto
 python3 scripts/genera_creatura.py --gs 7 --ruolo bruto --piu-cattivi
+
+# un incantatore: la lista viene dalla classe, non dal ruolo
+python3 scripts/genera_creatura.py --gs 12 --ruolo controllore \
+    --classe druido:12 --funzione controllore
 ```
 
 It **builds** a creature from the SRD 3.5 tables (ADR-0034); `--piu-cattivi`

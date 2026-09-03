@@ -68,6 +68,20 @@ def _slot(testo: str) -> tuple[int, ...]:
     return tuple(fuori)
 
 
+def _senza_coda(slot: tuple[int, ...]) -> tuple[int, ...]:
+    """La griglia senza gli zeri in coda, per confrontarla con l'ancora.
+
+    Le griglie tengono lo zero del livello che «si apre» (un bardo di 10° ha
+    `3/3/3/2/0`: il 4° livello esiste ma è vuoto finché non arriva il bonus di
+    caratteristica). `_slot` quegli zeri li toglie leggendo il markdown, e il
+    confronto deve togliere gli stessi da tutt'e due i lati.
+    """
+    fuori = list(slot)
+    while fuori and fuori[-1] == 0:
+        fuori.pop()
+    return tuple(fuori)
+
+
 class AncoreIncantatori(unittest.TestCase):
     """Le griglie degli incantesimi contro le righe scritte nella skill 3.5."""
 
@@ -108,6 +122,70 @@ class AncoreIncantatori(unittest.TestCase):
                 self.assertEqual(tabelle.CHIERICO[liv], _slot(cella[1]))
         self.assertIs(tabelle.DRUIDO, tabelle.CHIERICO,
                       "in 3.5 chierico e druido hanno la stessa griglia")
+
+    def test_bardo(self):
+        """Il bardo serviva davvero: `lomyn-redtongue-bardo4-cr3` è nel
+        Bestiario, e fino al lotto I il generatore non sapeva costruirlo."""
+        righe = _righe_markdown(self.testo, "Verified anchor rows (SRD Table: The Bard")
+        self.assertTrue(righe, "la skill non ha le righe d'ancora del bardo")
+        for cella in righe:
+            liv = int(cella[0])
+            with self.subTest(livello=liv):
+                self.assertEqual(_senza_coda(tabelle.BARDO[liv]), _slot(cella[1]))
+                self.assertEqual(_senza_coda(tabelle.BARDO_CONOSCIUTI[liv]),
+                                 _slot(cella[2]))
+
+    def test_ranger_e_paladino(self):
+        """Le due griglie con lo zero finto in testa.
+
+        L'ancora scrive la riga come la stampa il SRD — dal 1° livello — mentre
+        la griglia porta uno zero davanti per tenere l'indice allineato con
+        quelle degli altri incantatori. Il confronto deve togliere quello zero,
+        o il test controllerebbe due cose diverse e non se ne accorgerebbe.
+        """
+        righe = _righe_markdown(self.testo, "Verified anchor rows (SRD Table: The Ranger")
+        self.assertTrue(righe, "la skill non ha le righe d'ancora del ranger")
+        for cella in righe:
+            liv = int(cella[0])
+            with self.subTest(livello=liv):
+                self.assertEqual(_senza_coda(tabelle.RANGER[liv][1:]), _slot(cella[1]))
+        self.assertIs(tabelle.PALADINO, tabelle.RANGER,
+                      "nel SRD ranger e paladino hanno la stessa griglia")
+        for liv in range(1, 21):
+            with self.subTest(livello=liv, cosa="nessun incantesimo di livello 0"):
+                self.assertEqual(tabelle.RANGER[liv][0], 0)
+
+    def test_il_livello_dell_incantatore_di_ranger_e_paladino(self):
+        """`livello − 3`, e non il livello di classe.
+
+        Confonderli darebbe un paladino di 12° che lancia da 12°, con la CD
+        sbagliata di due punti — il genere di errore che al tavolo non si vede
+        finché qualcuno non supera un tiro salvezza che avrebbe dovuto fallire.
+        """
+        self.assertEqual(tabelle.livello_incantatore("paladino", 12), 9)
+        self.assertEqual(tabelle.livello_incantatore("ranger", 4), 1)
+        self.assertEqual(tabelle.livello_incantatore("ranger", 3), 0)
+        for classe in ("mago", "chierico", "druido", "bardo", "stregone"):
+            with self.subTest(classe=classe):
+                self.assertEqual(tabelle.livello_incantatore(classe, 12), 12)
+
+    def test_il_paladino_lancia_su_saggezza(self):
+        """Il difetto che il repo aveva importato da PF1e.
+
+        `classes.md` diceva «CHA-based» per il paladino: è la regola di
+        Pathfinder. Nel SRD 3.5 la CD di un incantesimo da paladino è
+        10 + livello + modificatore di **Saggezza**; il Carisma gli serve per
+        Grazia Divina, Imposizione delle Mani e Punizione. Preso per Carisma,
+        ogni paladino generato sarebbe uscito con la CD sbagliata e la
+        caratteristica sbagliata al primo posto della matrice élite.
+        """
+        for classe in ("ranger", "paladin", "paladino"):
+            with self.subTest(classe=classe):
+                self.assertEqual(tabelle.INCANTATORI[classe][1], "sag")
+        self.assertIn("WIS-based", self.testo)
+        self.assertNotIn(
+            "**Spellcasting**: Divine, 1st–4th level spells, CHA-based", self.testo,
+            "la riga sbagliata è tornata nella skill")
 
     def test_le_griglie_sono_complete_e_monotone(self):
         """Vent'anni di livelli, e nessuna classe che perde slot salendo."""

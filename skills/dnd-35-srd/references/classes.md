@@ -38,7 +38,17 @@ SRD URL pattern: `https://www.d20srd.org/srd/classes/[className].htm`
 ## Bard
 
 **Arcane spells** (up to 6th level, CHA-based, no preparation needed)
-**Bard Spell Slots** (levels 1–20 in SRD; key: 6 spells known at 20th of each level)
+Verified anchor rows (SRD Table: The Bard / Bard Spells Known). Spells/day
+runs 0th–6th level and stops there; the bard is spontaneous, so *known* is the
+column that describes the creature.
+
+| Level | Spells/Day (0/1st/…/6th) | Spells Known (0/1st/…/6th) |
+|---|---|---|
+| 1 | 2 | 4/2 |
+| 5 | 3/3/1 | 6/4/3 |
+| 10 | 3/3/3/2/0 | 6/5/5/4/2 |
+| 15 | 4/4/3/3/3/2 | 6/6/6/5/4/4 |
+| 20 | 4/4/4/4/4/4/4 | 6/6/6/6/6/5/4 |
 
 **Special Features:** Bardic Music (Inspire Courage/Competence/Greatness/Heroics, Countersong, Fascinate, Inspire Courage, Suggestion, Song of Freedom, Inspire Heroics, Mass Suggestion), Bardic Knowledge, Countersong, Fascinate
 
@@ -136,7 +146,15 @@ Fighter is the feat factory. No special class features beyond bon feats and stro
 **Smite Evil**: 1/day at 1st (+1/5 levels); +CHA to attack, +paladin level to damage vs. evil
 **Turn Undead**: from 4th level; 3 + CHA mod ×/day; as a cleric of (paladin level − 3)
 **Remove Disease**: 1/week per 3 levels (6th+)
-**Spellcasting**: Divine, 1st–4th level spells, CHA-based, prepared; starts at 4th level
+**Spellcasting**: Divine, 1st–4th level spells, **WIS-based**, prepared; starts at 4th level.
+Caster level = paladin level − 3, so a 12th-level paladin casts as a 9th-level caster.
+
+> ⚠️ **This line used to read "CHA-based", which is the PF1e rule, not 3.5.**
+> In the 3.5 SRD the paladin's spell DC is 10 + spell level + **Wisdom** modifier;
+> Charisma powers Divine Grace, Lay on Hands, Smite Evil and turning. The error
+> reached this file from a Pathfinder habit and was caught when the generator
+> started building paladins — it would have printed every paladin with the wrong
+> DC and the wrong ability first in the elite array.
 **Special Mount**: 5th level
 
 **Alignment**: Lawful Good only
@@ -152,7 +170,20 @@ Fighter is the feat factory. No special class features beyond bon feats and stro
 
 **Favored Enemy**: +2 bon at 1st; additional enemy every 5 levels; +2 to chosen enemy every 5 levels
 **Wild Empathy, Endurance (3rd), Animal Companion (4th), Woodland Stride (7th), Swift Tracker (8th), Evasion (9th), Camouflage (13th), Hide in Plain Sight (17th)**
-**Spellcasting**: Divine, 1st–4th level, WIS-based, prepared; starts at 4th level
+**Spellcasting**: Divine, 1st–4th level, WIS-based, prepared; starts at 4th level.
+Caster level = ranger level − 3.
+
+Verified anchor rows (SRD Table: The Ranger / The Paladin — same grid). There is
+no 0-level column: these two classes have no orisons, so the first number below
+is the **1st-level** slot.
+
+| Level | Spells/Day (1st/2nd/3rd/4th) |
+|---|---|
+| 4 | 0 |
+| 8 | 1/1 |
+| 12 | 2/2/1 |
+| 16 | 3/3/2/1 |
+| 20 | 4/3/3/3 |
 
 ---
 

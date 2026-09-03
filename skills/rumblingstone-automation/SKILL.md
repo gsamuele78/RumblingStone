@@ -72,7 +72,13 @@ poi `state_apply.py --migrate --commit` (inserisce i marker `auto:`).
   `--piu-cattivi` rende più dura la **sola** parte generata (template *Advanced*
   di PF1e senza alzare il GS), mai i mostri veri del catalogo. Per costruirne
   una sola: `genera_creatura.py --gs N --ruolo <bruto|schermagliatore|tiratore|
-  comandante|controllore|artigliere>`. ⚠️ Non scrive mai dentro `Bestiario/`:
+  comandante|controllore|blaster>` (`artigliere` resta come alias del vecchio
+  nome). Con `--classe` si aggiunge `--funzione <controllore|blaster|supporto|
+  utilita>`: il ruolo dice **come combatte**, la funzione **cosa fa con gli
+  incantesimi**, e le liste vanno per **lista di classe** — mai per tradizione,
+  perché chierico e druido sono tutti e due divini e hanno liste diverse.
+  `--incantesimi pf1e` innesta gli incantesimi PF1e senza equivalente 3.5 (lo
+  accende anche `--piu-cattivi`). ⚠️ Non scrive mai dentro `Bestiario/`:
   propone, e nel canone copia il DM. Se nel catalogo c'è già qualcosa di simile,
   **potenziare** è meglio → skill `npc-villain-boosting`.
 - `post --session <file>`: flusso manuale legacy (ledger + report-only).

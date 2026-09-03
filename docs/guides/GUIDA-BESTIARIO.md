@@ -234,23 +234,71 @@ python3 scripts/genera_creatura.py --gs 7 --tipo umanoide --ruolo bruto
 python3 scripts/genera_creatura.py --gs 7 --ruolo bruto --piu-cattivi
 
 # un PNG con livelli di classe: gli incantesimi vengono dalle tabelle SRD
-python3 scripts/genera_creatura.py --gs 9 --ruolo artigliere --classe mago:9
+python3 scripts/genera_creatura.py --gs 9 --ruolo blaster --classe mago:9
+
+# il ruolo dice COME combatte, la funzione COSA fa con gli incantesimi:
+# un chierico da guerra è ruolo «bruto» e funzione «supporto»
+python3 scripts/genera_creatura.py --gs 9 --ruolo bruto --classe chierico:9 \
+    --funzione supporto
 
 # tre proposte riproducibili, in una cartella di lavoro
 python3 scripts/genera_creatura.py --gs 5 --quanti 3 --seed 42 --in /tmp/bozze
 ```
 
 **I sei ruoli** (bruto, schermagliatore, tiratore, comandante, controllore,
-artigliere) non decidono solo i numeri: ognuno porta un **talento firma**, una
+blaster) non decidono solo i numeri: ognuno porta un **talento firma**, una
 **tattica in una riga** e una **debolezza sfruttabile**. Quest'ultima è la parte
 che conta: senza, esce un mostro intercambiabile, e un mostro intercambiabile te
 lo scrivi prima da solo che a leggerlo.
+
+#### Gli incantatori: due assi, non uno
+
+⚠️ Il ruolo tattico e la **funzione da incantatore** sono due cose diverse, e
+confonderle era un difetto vero del tool fino al lotto I: le liste erano indicate
+per ruolo, e un druido costruito come «controllore» riceveva *armatura magica*,
+*sonno* e *dito della morte* — che sono da mago. Due schede del Bestiario ci sono
+passate.
+
+| Asse | Valori | Cosa decide |
+|---|---|---|
+| `--ruolo` | bruto · schermagliatore · tiratore · comandante · controllore · blaster | come combatte: caratteristiche, arma, CA, punti ferita |
+| `--funzione` | controllore · blaster · supporto · utilità | quali incantesimi sceglie |
+
+La chiave delle liste è la **lista di classe**, non la tradizione: chierico e
+druido sono tutti e due divini e hanno liste diverse, e il bardo ha la sua. Sono
+21 celle su sette classi (mago, stregone, chierico, druido, bardo, ranger,
+paladino); mago e stregone condividono la lista perché nel SRD **è la stessa**.
+Se chiedi una cella che nel gioco non esiste — un mago «supporto» — ripiega su
+un'altra funzione **della stessa classe**, mai sulla lista di un'altra, e te lo
+scrive nel conto.
+
+Se ometti `--funzione`, si deduce dal ruolo (comandante e bruto → supporto,
+tiratore → blaster, schermagliatore → utilità).
+
+⚠️ **L'adepto resta scoperto**: è fuori dalle 21 celle, e il generatore preferisce
+lasciare il vuoto dichiarato piuttosto che dargli la lista del mago.
+
+⚠️ **Ranger e paladino lanciano da `livello − 3`**, e su **Saggezza** — non su
+Carisma, che è la regola di Pathfinder e che questo repo aveva scritta sbagliata
+nella skill 3.5 fino al lotto I.
 
 **`--piu-cattivi`** applica il template *Advanced* di Pathfinder 1e: +4 a tutte
 le caratteristiche, +2 di armatura naturale, +2 su tutti i tiri, **senza alzare
 il GS**. Il template vale GS +1: la creatura è venduta come GS *n* e picchia come
 GS *n+1*, e **lo dichiara di sé** in una voce del blocco. È una riga sola da
 disfare se al tavolo è troppo.
+
+Su un incantatore `--piu-cattivi` accende anche **`--incantesimi pf1e`**, che
+innesta gli incantesimi PF1e che in 3.5 **non esistono** — la linea della *fossa*,
+*scirocco*, *saette*, *benedizione del fervore*. Uno per livello d'incantesimo,
+e ognuno finisce fra i rincari col suo nome PRD, perché va letto lì: non c'è un
+paragrafo 3.5 su cui ripiegare. `--incantesimi srd` lo spegne tenendo il template.
+
+⚠️ **Non scambia gli incantesimi condivisi, ed è deliberato.** Sulla lista comune
+PF1e non è più forte: *grasso*, *polvere scintillante* e i *tentacoli neri* sono
+stati indeboliti, il «salva o muori» convertito in danno, il polimorfismo
+riscritto. Vendere come «più cattivo» qualcosa di più debole è il modo peggiore
+di sbagliare — invisibile alla generazione, e scoperto al tavolo.
 
 **Dove finisce.** A schermo, o in una cartella con `--in`. **Mai dentro
 `Bestiario/`**: il tool si rifiuta, e ti dice perché. Nel canone copi tu, dopo

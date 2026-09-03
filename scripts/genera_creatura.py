@@ -52,7 +52,11 @@ Uso:
 
     python3 scripts/genera_creatura.py --gs 7 --tipo umanoide --ruolo bruto
     python3 scripts/genera_creatura.py --gs 7 --ruolo bruto --piu-cattivi
-    python3 scripts/genera_creatura.py --gs 9 --ruolo artigliere --classe mago:9
+    python3 scripts/genera_creatura.py --gs 9 --ruolo blaster --classe mago:9
+    python3 scripts/genera_creatura.py --gs 9 --ruolo bruto --classe chierico:9 \\
+        --funzione supporto
+    python3 scripts/genera_creatura.py --gs 14 --ruolo controllore \\
+        --classe druido:14 --incantesimi pf1e
     python3 scripts/genera_creatura.py --gs 5 --quanti 3 --seed 42 --json
 
 Solo stdlib.
@@ -70,6 +74,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from dmcore import incantesimi as INC  # noqa: E402
 from dmcore import tabelle as T  # noqa: E402
 from dmcore.statblock import Statblocco, rendi  # noqa: E402
 
@@ -126,11 +131,22 @@ RUOLI = {
         "controllore", ("int", "des", "cos", "sag", "car", "for"),
         "bastone ferrato", "1d6", classe_tipica="mago", risolve_attacco=False,
         descrizione="toglie ai PG le opzioni; il danno viene dopo"),
-    "artigliere": Ruolo(
-        "artigliere", ("int", "cos", "des", "sag", "car", "for"),
+    "blaster": Ruolo(
+        "blaster", ("int", "cos", "des", "sag", "car", "for"),
         "pugnale", "1d4", classe_tipica="mago", risolve_attacco=False,
         descrizione="danno d'area a distanza; fragile se lo si raggiunge"),
 }
+
+#: I nomi vecchi che continuano a funzionare. `artigliere` è come si chiamava
+#: `blaster` fino al lotto I; il DM ha scelto il nome nuovo, ma un alias costa
+#: una riga e salva ogni comando già scritto negli appunti del tavolo. Il nome
+#: **canonico** è quello nuovo, ed è quello che finisce in `fonte:`: due schede
+#: generate con i due nomi devono restare confrontabili.
+ALIAS_RUOLO = {"artigliere": "blaster"}
+
+
+def normalizza_ruolo(nome: str) -> str:
+    return ALIAS_RUOLO.get(nome.strip().lower(), nome.strip().lower())
 
 #: Il carattere — lotto E del piano, e la ragione per cui il tool non è banale.
 #: Senza, escono mostri intercambiabili, e un mostro intercambiabile il DM se lo
@@ -189,7 +205,7 @@ CARATTERE: dict[str, list[tuple[str, str, str]]] = {
         ("Scrutare", "sa dove sono i PG prima che entrino",
          "quello che sa lo dice a nessuno: ucciderlo cieca il gruppo"),
     ],
-    "artigliere": [
+    "blaster": [
         ("Incantesimi Potenziati", "un'area sola, sul grappolo piu' fitto",
          "colpisce anche i suoi: si puo' costringerlo a scegliere"),
         ("Incantesimo Immobile", "lancia da legato o in spazio stretto",
@@ -262,13 +278,13 @@ SCOSTAMENTO = {
     # fare al campo. Un luogotenente illithid di GS 12 costruito sul bersaglio
     # pieno usciva con CA 26 — un mind flayer in armatura da paladino.
     "controllore":     {"pf": -0.20, "ca": -4, "attacco": -2},
-    "artigliere":      {"pf": -0.25, "ca": -4, "attacco": -2},
+    "blaster":         {"pf": -0.25, "ca": -4, "attacco": -2},
 }
 
 #: Destrezza tipica per ruolo, che il bersaglio non decide (la CA la si raggiunge
 #: con l'armatura naturale, ma un tiratore goffo non è un tiratore).
 DESTREZZA = {"bruto": 11, "schermagliatore": 17, "tiratore": 18,
-             "comandante": 13, "controllore": 14, "artigliere": 13}
+             "comandante": 13, "controllore": 14, "blaster": 13}
 
 #: I punteggi mentali, che nessun bersaglio impone. Un mostro senza carattere ha
 #: sempre Int 10: è il modo più veloce per farlo sembrare uguale a tutti gli altri.
@@ -278,7 +294,7 @@ MENTALI = {
     "tiratore":        {"int": 11, "sag": 14, "car": 10},
     "comandante":      {"int": 13, "sag": 13, "car": 16},
     "controllore":     {"int": 18, "sag": 13, "car": 12},
-    "artigliere":      {"int": 18, "sag": 11, "car": 12},
+    "blaster":         {"int": 18, "sag": 11, "car": 12},
 }
 
 #: PF1e, template **Advanced** (verificato in
@@ -354,23 +370,40 @@ def dv_di_partenza(gs: int, tipo: str) -> int:
 def genera(gs: int, *, tipo: str = "humanoid", taglia: str = "medium",
            ruolo: str = "bruto", dv: int | None = None, elite: bool | None = None,
            classe: tuple[str, int] | None = None, piu_cattivi: bool = False,
-           rng: random.Random | None = None) -> tuple[Statblocco, Conto]:
-    """Un blocco completo, e il conto che l'ha prodotto."""
+           rng: random.Random | None = None, funzione: str | None = None,
+           incantesimi_pf1e: bool | None = None) -> tuple[Statblocco, Conto]:
+    """Un blocco completo, e il conto che l'ha prodotto.
+
+    `funzione` è la funzione da incantatore (controllore · blaster · supporto ·
+    utilità) e vale solo con `classe`: il ruolo tattico dice **come combatte**,
+    la funzione **cosa fa con gli incantesimi**, e sono due assi diversi — un
+    bruto con livelli da chierico è un chierico da guerra, ruolo «bruto» e
+    funzione «supporto». Se non la si passa, `FUNZIONE_DA_RUOLO` la deduce.
+
+    `incantesimi_pf1e` lasciato a None segue `piu_cattivi`, che è la lettura
+    naturale: «più cattivo a pari GS» vale per il template e per la lista. Passarlo
+    esplicitamente separa le due metà.
+    """
     rng = rng or random.Random()
+    ruolo = normalizza_ruolo(ruolo)
     if ruolo not in RUOLI:
         raise ValueError(f"ruolo ignoto: {ruolo}")
+    if incantesimi_pf1e is None:
+        incantesimi_pf1e = piu_cattivi
     R = RUOLI[ruolo]
     conto = Conto()
     conto(f"GS {gs} · {tipo} · {taglia} · ruolo {ruolo} — {R.descrizione}")
 
     if classe:
-        sb, conto = _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng)
+        sb, conto = _genera_png(gs, tipo, taglia, R, classe, elite, conto,
+                                rng, funzione, incantesimi_pf1e)
     else:
         sb, conto = _genera_mostro(gs, tipo, taglia, R, dv, piu_cattivi, conto, rng)
 
     if piu_cattivi:
         _applica_advanced(sb, conto)
-    sb.fonte = _fonte(gs, tipo, taglia, ruolo, classe, piu_cattivi, conto)
+    sb.fonte = _fonte(gs, tipo, taglia, ruolo, classe, piu_cattivi, conto,
+                      funzione, incantesimi_pf1e)
     return sb, conto
 
 
@@ -495,7 +528,8 @@ def _genera_mostro(gs, tipo, taglia, R, dv, piu_cattivi, conto, rng):
 
 # ── il PNG: le tabelle decidono, il collaudo riferisce ──────────────────────
 
-def _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng):
+def _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng,
+                funzione=None, incantesimi_pf1e=False):
     """Con i livelli di classe il GS non è un bersaglio: è una conseguenza.
 
     SRD 3.5: un PNG con livelli di classe da PG vale GS = livelli; con le classi
@@ -570,7 +604,8 @@ def _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng):
     ts = _tiri_salvezza(livelli, ts_classe, m, conto)
     voci = []
     if nome_classe in T.INCANTATORI:
-        voci += _voci_incantatore(nome_classe, livelli, m, conto, R.nome, rng)
+        voci += _voci_incantatore(nome_classe, livelli, m, conto, R.nome, rng,
+                                  funzione, incantesimi_pf1e)
     if livelli in T.EQUIPAGGIAMENTO_PNG:
         voci.append(f"Equipaggiamento: {T.EQUIPAGGIAMENTO_PNG[livelli]:,} mo "
                     "(colonna «heroic NPC» PF1e)".replace(",", "."))
@@ -593,7 +628,7 @@ def _genera_png(gs, tipo, taglia, R, classe, elite, conto, rng):
 
 def _armatura_del_ruolo(R: Ruolo, livelli: int) -> tuple[int, int]:
     """Cosa indossa. SRD «Table: Armor and Shields»; lo scudo dove ha senso."""
-    if R.nome in ("controllore", "artigliere"):
+    if R.nome in ("controllore", "blaster"):
         # ⚠️ Un mago in armatura non lancia — ma non per questo va in giro con
         # CA 11. Difetto trovato costruendo le schede del Bestiario: l'arcimago
         # del Cerchio degli Otto, GS 14, usciva con CA 11, cioè colpito da
@@ -712,120 +747,67 @@ def _rincara_attacco(riga: str, delta: int) -> str:
 
 
 # ── gli incantesimi scelti ──────────────────────────────────────────────────
-# Il criterio d'accettazione del lotto D: *nessun incantesimo fuori lista di
-# livello*. Estrarre a sorte da tutto il SRD è il modo più veloce per ottenere un
-# incantatore che al tavolo non si sa giocare — un mago con «individuazione del
-# veleno» preparato e niente per il round in cui i PG gli arrivano addosso.
+# ⚠️ **Qui c'era il difetto che il lotto I chiude.** Le liste stavano in questo
+# file, erano tre, ed erano indicizzate per **ruolo tattico**: «controllore» →
+# lista arcana, «comandante» → lista divina. Un druido costruito come controllore
+# riceveva *armatura magica*, *sonno* e *dito della morte*, che sono da mago; come
+# bruto riceveva *benedizione* e *santuario*, che sono da chierico. Separare
+# arcano e divino non bastava: chierico e druido sono tutti e due divini e hanno
+# liste diverse.
 #
-# Quindi: liste per RUOLO, scritte a mano una volta, tutte da SRD 3.5. Sono
-# poche voci per livello, ed è voluto: sono gli incantesimi che quel ruolo
-# lancerebbe davvero.
-INCANTESIMI = {
-    "controllore": {   # arcano: toglie opzioni ai PG prima di fare danno
-        0: ["prestidigitazione", "luce", "lettura del magico"],
-        1: ["armatura magica", "scudo", "sonno", "riduzione dei nemici"],
-        2: ["immagine speculare", "raggio di indebolimento", "invisibilità",
-            "risata incontenibile di Tasha"],
-        3: ["lentezza", "vento vorticoso", "volare", "dissolvi magie"],
-        4: ["muro di fuoco", "confusione", "porta dimensionale", "terreno illusorio"],
-        5: ["muro di forza", "dominare persone", "telecinesi", "nube mortale"],
-        6: ["disintegrazione", "occhio arcano superiore", "catena di dissolvimenti"],
-        7: ["dito della morte", "prigione", "inversione della gravità"],
-        8: ["labirinto", "urlo doloroso", "campo antimagia"],
-        9: ["desiderio limitato", "arresto del tempo", "sfera di annichilimento"],
-    },
-    "artigliere": {    # arcano: danno d'area, e passare le resistenze
-        0: ["colpo infuocato", "luce", "mano magica"],
-        1: ["dardo incantato", "mani brucianti", "armatura magica"],
-        2: ["raggio rovente", "freccia acida di Melf", "sfocatura"],
-        3: ["palla di fuoco", "fulmine", "volare"],
-        4: ["tempesta di ghiaccio", "muro di fuoco", "occhio arcano"],
-        5: ["cono di freddo", "nube mortale", "richiamare mostri V"],
-        6: ["catena di fulmini", "disintegrazione", "sfera congelante di Otiluke"],
-        7: ["esplosione di fuoco", "dito della morte", "spada arcana"],
-        8: ["tempesta di fuoco", "urlo doloroso", "nube incendiaria"],
-        9: ["parola del potere: uccidere", "meteore", "tempesta elementale"],
-    },
-    "comandante": {    # divino: tiene in piedi i suoi, poi picchia
-        0: ["individuazione del magico", "stabilizzare", "guida"],
-        1: ["benedizione", "scudo della fede", "santuario", "cura ferite leggere"],
-        2: ["arma spirituale", "aiuto", "resistere all'energia", "silenzio"],
-        3: ["preghiera", "dissolvi magie", "invisibilità delle anime"],
-        4: ["potere divino", "libertà di movimento", "immunità agli incantesimi"],
-        5: ["colonna di fuoco", "scacciare il male", "cura ferite leggere di massa"],
-        6: ["danno", "scudo di legge", "cura ferite moderate di massa"],
-        7: ["parola sacra", "rigenerazione", "spada sacra"],
-        8: ["scudo della fede di massa", "terremoto", "nube incendiaria"],
-        9: ["invocare", "guarigione di massa", "temporale iracondo"],
-    },
-}
-#: ⚠️ **DIFETTO NOTO — le liste sono per RUOLO e non per LISTA DI CLASSE.**
-#:
-#: Trovato costruendo le schede del Bestiario, ed è più grave di come sembra:
-#: a un **druido** costruito come «controllore» questo codice dava *armatura
-#: magica*, *sonno* e *dito della morte* — incantesimi da mago, che un druido non
-#: lancia; e come «bruto» gli dava *benedizione*, *santuario* e *scudo della
-#: fede*, che sono da **chierico**. Non basta separare arcano e divino: chierico,
-#: druido e bardo hanno tre liste diverse, e la lista di classe è ciò che decide.
-#:
-#: Le due schede colpite sono state ripulite a mano. Qui resta scritto perché il
-#: prossimo che legge non lo riscopra al tavolo, con un druido che annuncia una
-#: *palla di fuoco*.
-#:
-#: La revisione (tradizione × ruolo: controllore · blaster · supporto · utilità)
-#: è proposta al DM e non ancora approvata.
-#:
-#: I ruoli non incantatori, quando ricevono livelli di classe da incantatore,
-#: pescano dalla lista del ruolo più vicino.
-LISTA_DI_RIPIEGO = {"bruto": "comandante", "schermagliatore": "controllore",
-                    "tiratore": "artigliere"}
-
-
-#: Le classi le cui liste NON sono ancora coperte: per queste il generatore
-#: preferisce **non scegliere** invece di scegliere male. Un blocco senza
-#: incantesimi si riempie in due minuti; un druido con *palla di fuoco* scritta
-#: sopra arriva al tavolo e ci resta.
-CLASSI_SENZA_LISTA = frozenset({"druido", "druid", "adepto", "adept"})
-
-
-def scegli_incantesimi(ruolo: str, slot: tuple[int, ...],
-                       rng: random.Random, classe: str = "") -> list[str]:
-    """Un incantesimo per slot, dalla lista di quel ruolo e di quel livello."""
-    if classe.lower() in CLASSI_SENZA_LISTA:
-        return []
-    lista = INCANTESIMI.get(ruolo) or INCANTESIMI[LISTA_DI_RIPIEGO.get(ruolo, "comandante")]
-    fuori = []
-    for livello, quanti in enumerate(slot):
-        if not quanti or livello == 0 or livello not in lista:
-            continue
-        scelti = rng.sample(lista[livello], min(quanti, len(lista[livello])))
-        fuori.append(f"{livello}°: " + ", ".join(sorted(scelti)))
-    return fuori
+# Ora la chiave è **(lista di classe × funzione)** e le liste stanno in
+# `dmcore/incantesimi.py`, con l'ancora in `dnd-35-srd/references/spells.md` e un
+# test che verifica riga per riga che ogni scelta appartenga a quella classe.
+# Sono 400 righe di dati: tenerle qui avrebbe raddoppiato questo file, e il posto
+# dei dati in questo repo è `dmcore/`.
 
 
 def _voci_incantatore(nome_classe: str, livello: int, m: dict[str, int],
                       conto: Conto, ruolo: str = "comandante",
-                      rng: random.Random | None = None) -> list[str]:
-    """Gli incantesimi al giorno e la CD, dalle tabelle di classe SRD.
+                      rng: random.Random | None = None,
+                      funzione: str | None = None,
+                      pf1e: bool = False) -> list[str]:
+    """Gli incantesimi al giorno, la CD e la scelta, dalle tabelle di classe SRD.
 
-    La parte che il DM ha chiesto per nome. Il livello dell'incantatore e la CD
-    **non** vengono dalla riga per GS: vengono dalla tabella della classe, che è
-    SRD. La riga per GS serve dopo, a dire se la CD è dove dovrebbe stare.
+    Il livello dell'incantatore e la CD **non** vengono dalla riga per GS:
+    vengono dalla tabella della classe, che è SRD. La riga per GS serve dopo, a
+    dire se la CD è dove dovrebbe stare.
     """
     griglia, caratteristica, spontaneo = T.INCANTATORI[nome_classe]
     livello = max(1, min(20, livello))
     slot = griglia[livello]
+    # ⚠️ Per ranger e paladino il livello dell'incantatore **non** è il livello
+    # di classe: è `livello − 3`. Stampare il livello di classe darebbe un
+    # paladino di 12° che «lancia da 12°», e una CD di due punti sbagliata.
+    cl = T.livello_incantatore(nome_classe, livello)
     massimo = T.livello_massimo(griglia, livello)
     mod_car = m[caratteristica]
 
-    fuori = [f"Incantatore di livello {livello} ({nome_classe}, "
-             f"{caratteristica.upper()} {mod_car:+d})",
-             "Incantesimi al giorno: " + "/".join(str(n) for n in slot)]
+    if cl < 1 or massimo == 0:
+        conto(f"{nome_classe} di {livello}° livello: nessun incantesimo — "
+              "nel SRD i primi slot arrivano al 4° livello di classe")
+        return [f"Nessun incantesimo: un {nome_classe} comincia a lanciare "
+                "dal 4° livello di classe"]
+
+    fuori = [f"Incantatore di livello {cl} ({nome_classe}, "
+             f"{caratteristica.upper()} {mod_car:+d})"]
+    if cl != livello:
+        fuori[0] += f" — livello di classe {livello}, meno 3"
+    # Ranger e paladino non hanno incantesimi di livello 0, e la loro griglia
+    # porta uno zero finto in prima posizione per tenere l'indice allineato: va
+    # tolto dalla riga stampata, o il blocco annuncia orisons che non esistono.
+    senza_zero = nome_classe.lower() in T.LIVELLO_INCANTATORE_RIDOTTO
+    mostrati = slot[1:] if senza_zero else slot
+    fuori.append(("Incantesimi al giorno (dal 1° livello): " if senza_zero
+                  else "Incantesimi al giorno: ")
+                 + "/".join(str(n) for n in mostrati))
     if nome_classe in ("cleric", "chierico"):
         fuori.append("+1 slot per livello dai due domini, una volta scelti")
     if spontaneo:
+        conosciuti = (T.BARDO_CONOSCIUTI if nome_classe in ("bard", "bardo")
+                      else T.STREGONE_CONOSCIUTI)
         fuori.append("Incantesimi conosciuti: "
-                     + "/".join(str(n) for n in T.STREGONE_CONOSCIUTI[livello]))
+                     + "/".join(str(n) for n in conosciuti[livello]))
     cd_max = T.cd_incantesimo(massimo, mod_car)
     fuori.append(f"CD degli incantesimi: 10 + livello + {mod_car:+d} "
                  f"(massimo: {massimo}° livello, CD {cd_max})")
@@ -833,37 +815,59 @@ def _voci_incantatore(nome_classe: str, livello: int, m: dict[str, int],
         # SRD: un incantatore spontaneo prende ogni livello d'incantesimo due
         # livelli dopo (2° al 4°, 9° al 18°). A pari livello di classe la sua CD
         # sta un punto o due sotto quella di un preparato, e non è un difetto da
-        # correggere: è la classe. Ma se il DM lo mette a fare l'artigliere di un
+        # correggere: è la classe. Ma se il DM lo mette a fare il blaster di un
         # GS alto e non lo sa, al tavolo scopre un mago che non fa passare nulla.
         fuori.append("⚠ incantatore spontaneo: prende ogni livello d'incantesimo "
                      "due livelli dopo un preparato — per stare sulla stessa CD "
                      "servono ~2 livelli in più")
-    conto(f"incantesimi: tabella SRD di {nome_classe}, livello {livello} → "
-          f"{'/'.join(str(n) for n in slot)}; CD massima {cd_max}")
+    conto(f"incantesimi: tabella SRD di {nome_classe}, livello di classe "
+          f"{livello} → incantatore di {cl}°, "
+          f"{'/'.join(str(n) for n in mostrati)}; CD massima {cd_max}")
     if nome_classe in T.INCANTATORI_SENZA_ANCORA:
         conto(f"⚠ la griglia di {nome_classe} non ha una riga d'ancora nel repo")
 
-    scelti = scegli_incantesimi(ruolo, slot, rng or random.Random(), nome_classe)
-    if not scelti and nome_classe.lower() in CLASSI_SENZA_LISTA:
-        fuori.append(f"⚠ Incantesimi da scegliere a mano: la lista di {nome_classe} "
-                     "non è coperta, e prenderla da un'altra classe darebbe "
-                     "incantesimi che questa classe non lancia")
+    f_chiesta = INC.funzione_di(ruolo, funzione)
+    canonica = INC.CANONICA.get(nome_classe.lower(), nome_classe.lower())
+    if canonica in INC.SENZA_LISTA:
+        fuori.append(f"⚠ Incantesimi da scegliere a mano: la lista di "
+                     f"{nome_classe} non è coperta, e prenderla da un'altra "
+                     "classe darebbe incantesimi che questa classe non lancia")
         conto(f"⚠ nessun incantesimo scelto per {nome_classe}: meglio un vuoto "
               "che una lista di un'altra classe")
+        return fuori
+
+    _, f_usata = INC.cella(canonica, f_chiesta)
+    if f_usata != f_chiesta:
+        conto(f"⚠ la cella «{canonica} × {f_chiesta}» non esiste nel gioco: "
+              f"ripiegato su «{canonica} × {f_usata}», che è una funzione della "
+              "STESSA classe — mai la lista di un'altra")
+    scelti, note_pf1e = INC.scegli(canonica, f_usata, slot,
+                                   rng or random.Random(), pf1e=pf1e)
     if scelti:
-        fuori.append("Preparati — " + " · ".join(scelti))
-        conto(f"incantesimi scelti dalla lista del ruolo «{ruolo}», mai a sorte "
-              "da tutto il SRD: un incantatore con la lista sbagliata non si sa "
-              "giocare al tavolo")
+        # Un bardo e uno stregone **non preparano**: conoscono. È una parola, e
+        # sul blocco la legge il DM al tavolo mentre decide cosa può lanciare.
+        fuori.append(("Conosciuti — " if spontaneo else "Preparati — ")
+                     + " · ".join(scelti))
+        conto(f"incantesimi dalla lista di **{canonica}**, funzione «{f_usata}» "
+              f"(ruolo tattico: {ruolo}) — mai a sorte da tutto il SRD, e mai "
+              "dalla lista di un'altra classe")
+    for nota in note_pf1e:
+        conto.rincaro(f"incantesimo PF1e senza equivalente 3.5 — {nota}; "
+                      "va letto sul PRD, non c'è un paragrafo 3.5 su cui "
+                      "ripiegare")
     return fuori
 
 
-def _fonte(gs, tipo, taglia, ruolo, classe, piu_cattivi, conto: Conto) -> str:
+def _fonte(gs, tipo, taglia, ruolo, classe, piu_cattivi, conto: Conto,
+           funzione=None, incantesimi_pf1e=False) -> str:
     """Da dove viene questa creatura, in una riga che si rilegge fra sei mesi."""
     pezzi = ["generato-SRD-3.5", f"gs={gs}", f"tipo={tipo}", f"taglia={taglia}",
              f"ruolo={ruolo}"]
     if classe:
         pezzi.append(f"classe={classe[0]}:{classe[1]}")
+        pezzi.append(f"funzione={INC.funzione_di(ruolo, funzione)}")
+        if incantesimi_pf1e:
+            pezzi.append("incantesimi=PF1e-senza-equivalente-3.5")
     if piu_cattivi:
         pezzi.append("piu-cattivi=Advanced-PF1e-senza-alzare-il-gs")
     return " ".join(pezzi)
@@ -884,6 +888,15 @@ def _classe(testo: str) -> tuple[str, int]:
     return nome, int(liv)
 
 
+def _ruolo(testo: str) -> str:
+    nome = normalizza_ruolo(testo)
+    if nome not in RUOLI:
+        raise argparse.ArgumentTypeError(
+            f"ruolo ignoto: {testo}. Noti: {', '.join(sorted(RUOLI))}"
+            f" (alias: {', '.join(sorted(ALIAS_RUOLO))})")
+    return nome
+
+
 def _tipo(testo: str) -> str:
     t = T.normalizza_tipo(testo)
     if t is None:
@@ -901,7 +914,21 @@ def costruisci_parser() -> argparse.ArgumentParser:
     p.add_argument("--gs", type=int, required=True, help="grado di sfida (1-20)")
     p.add_argument("--tipo", type=_tipo, default="humanoid")
     p.add_argument("--taglia", default="medium", choices=sorted(T.TAGLIE))
-    p.add_argument("--ruolo", default="bruto", choices=sorted(RUOLI))
+    p.add_argument("--ruolo", default="bruto", type=_ruolo,
+                   help="ruolo tattico: " + ", ".join(sorted(RUOLI))
+                        + f" (alias: {', '.join(sorted(ALIAS_RUOLO))})")
+    p.add_argument("--funzione", default=None, choices=INC.FUNZIONI,
+                   help="funzione da incantatore, se la creatura ha livelli da "
+                        "incantatore. Il ruolo dice COME combatte, la funzione "
+                        "COSA fa con gli incantesimi: un bruto con livelli da "
+                        "chierico è ruolo «bruto» e funzione «supporto». "
+                        "Se omessa si deduce dal ruolo")
+    p.add_argument("--incantesimi", choices=("srd", "pf1e"), default=None,
+                   help="quale lista per gli incantesimi. Di norma SRD 3.5; "
+                        "«pf1e» innesta gli incantesimi PF1e che in 3.5 NON "
+                        "esistono (uno per livello, elencato nei rincari). "
+                        "--piu-cattivi lo accende da sé; questa opzione lo "
+                        "separa dal template")
     p.add_argument("--dv", type=int, default=None,
                    help="dadi vita; se omesso, DV ≈ GS con lo scarto del tipo")
     p.add_argument("--classe", type=_classe, default=None,
@@ -952,7 +979,10 @@ def main(argv: list[str] | None = None) -> int:
     for i in range(args.quanti):
         sb, conto = genera(args.gs, tipo=args.tipo, taglia=args.taglia,
                            ruolo=args.ruolo, dv=args.dv, elite=args.elite,
-                           classe=args.classe, piu_cattivi=args.piu_cattivi, rng=rng)
+                           classe=args.classe, piu_cattivi=args.piu_cattivi,
+                           rng=rng, funzione=args.funzione,
+                           incantesimi_pf1e=(None if args.incantesimi is None
+                                             else args.incantesimi == "pf1e"))
         fuori.append((sb, conto))
 
     if args.json:
