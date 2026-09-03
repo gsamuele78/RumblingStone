@@ -232,3 +232,17 @@ contati come uno.
 
 ⚠️ Le 13 costruite sono **proposte da rileggere al tavolo**, e ognuna lo dichiara
 nel proprio `fonte:`. Il confine di ADR-0033 resta: lo strumento propone.
+
+### ✅ Documentazione
+Un tool che nessuno sa di avere è un tool che non esiste. Misurato prima di
+scrivere: `genera_creatura`, `--piu-cattivi`, `--con-generatore` e `[RIMANDO]`
+comparivano in **zero** guide e **zero** skill.
+
+- `GUIDA-BESTIARIO` §0 (la domanda «serve davvero una scheda nuova?»), §6-bis
+  (tre strumenti invece di due, più «quando i numeri stanno da un'altra parte»),
+  **§6-ter nuova** (costruire una creatura che non c'è, i sei ruoli, il carattere,
+  `--piu-cattivi`, gli incontri che non si ripetono, e ⚠️ quando NON usarlo), §8
+  (il rimando incrociato: potenziare se qualcosa c'è, generare se non c'è);
+- skill `npc-villain-boosting`: una sezione **prima** dell'albero decisionale —
+  potenziare presuppone qualcosa da potenziare;
+- skill `rumblingstone-automation`: le due opzioni di `suggest_encounter`.
