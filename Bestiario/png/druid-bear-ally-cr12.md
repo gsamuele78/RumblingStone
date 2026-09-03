@@ -19,7 +19,7 @@ voci:
   - Incantatore di livello 12 (druido, SAG +4)
   - Incantesimi al giorno: 6/5/4/4/3/3/2
   - CD degli incantesimi: 10 + livello + +4 (massimo: 6° livello, CD 20)
-  - Preparati — 1°: benedizione, cura ferite leggere, santuario, scudo della fede · 2°: aiuto, arma spirituale, resistere all'energia, silenzio · 3°: dissolvi magie, invisibilità delle anime, preghiera · 4°: immunità agli incantesimi, libertà di movimento, potere divino · 5°: colonna di fuoco, cura ferite leggere di massa, scacciare il male · 6°: cura ferite moderate di massa, scudo di legge
+  - ⚠ **Incantesimi da scegliere.** La lista generata era sbagliata: il generatore sceglieva per *ruolo* (arcano/divino) e non per **lista di classe**, e a un druido dava incantesimi da mago o da chierico — *armatura magica*, *benedizione*, *santuario* — che un druido non lancia. Gli slot qui sopra restano giusti (tabella SRD del druido); la scelta aspetta la revisione delle liste per tradizione.
   - In forma di orso crudele: 2 artigli +20, morso +15, afferrare e squarciare
   - Corteccia e aura di ira; mantiene gli incantesimi da druido in forma
 fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=humanoid, taglia=medium, ruolo=bruto, classe=('druido', 12), elite=True, gs=12); derivati: ts; letti dalla prosa: ca, pf, ca_dettaglio. ADR-0034 — proposta da rileggere al tavolo

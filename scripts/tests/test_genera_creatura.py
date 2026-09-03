@@ -188,6 +188,31 @@ class Incantatori(unittest.TestCase):
                                 "incantesimi, e un vuoto è peggio di una lista "
                                 "sbagliata di ruolo")
 
+    def test_una_classe_senza_lista_non_prende_quella_di_un_altra(self):
+        """Il difetto trovato costruendo il Bestiario, e il piu' insidioso di
+        tutti: un druido usciva con *armatura magica* e *dito della morte* (mago)
+        o con *benedizione* e *santuario* (chierico). Il blocco sembrava
+        completo, e al tavolo il druido annunciava un incantesimo che non ha.
+
+        Meglio un vuoto dichiarato che una lista di un'altra classe."""
+        for classe in ("druido", "adepto"):
+            for ruolo in ("controllore", "artigliere", "comandante", "bruto"):
+                with self.subTest(classe=classe, ruolo=ruolo):
+                    sb, _ = G.genera(12, ruolo=ruolo, classe=(classe, 12),
+                                     rng=random.Random(0))
+                    self.assertFalse(any(v.startswith("Preparati") for v in sb.voci),
+                                     f"{classe} non deve ricevere la lista di {ruolo}")
+                    self.assertTrue(any("da scegliere a mano" in v for v in sb.voci),
+                                    "il vuoto va dichiarato, non lasciato in silenzio")
+
+    def test_le_classi_coperte_gli_incantesimi_li_prendono(self):
+        """Il rifiuto vale per le classi scoperte, non per tutte."""
+        for classe in ("mago", "stregone", "chierico"):
+            with self.subTest(classe=classe):
+                sb, _ = G.genera(9, ruolo="controllore", classe=(classe, 9),
+                                 rng=random.Random(0))
+                self.assertTrue(any(v.startswith("Preparati") for v in sb.voci))
+
     def test_le_liste_coprono_tutti_i_livelli(self):
         for ruolo, lista in G.INCANTESIMI.items():
             with self.subTest(ruolo=ruolo):

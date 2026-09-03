@@ -21,7 +21,7 @@ voci:
   - Incantatore di livello 14 (druido, SAG +4)
   - Incantesimi al giorno: 6/5/5/4/4/3/3/2
   - CD degli incantesimi: 10 + livello + +4 (massimo: 7° livello, CD 21)
-  - Preparati — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: muro di forza, nube mortale, telecinesi · 6°: catena di dissolvimenti, disintegrazione, occhio arcano superiore · 7°: dito della morte, prigione
+  - ⚠ **Incantesimi da scegliere.** La lista generata era sbagliata: il generatore sceglieva per *ruolo* (arcano/divino) e non per **lista di classe**, e a un druido dava incantesimi da mago o da chierico — *armatura magica*, *benedizione*, *santuario* — che un druido non lancia. Gli slot qui sopra restano giusti (tabella SRD del druido); la scelta aspetta la revisione delle liste per tradizione.
   - Forma selvatica: elementale Enorme 2/giorno
   - ⚠ La scheda dichiara CD 22: la tabella dà CD 21 al 7° livello d'incantesimo. Il punto che manca viene da un oggetto (+2 a Saggezza) e va messo lì, non nel conto
   - Alleato naturale evocato VII-IX; anima del bosco (evoca treant)

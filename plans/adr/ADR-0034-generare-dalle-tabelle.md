@@ -106,6 +106,37 @@ con le ancore delle skill.
 - **Sei ruoli sono una proposta.** Il piano §5 chiedeva al DM quali servissero
   davvero; sono dati, non rami del codice, e toglierne uno è una riga.
 
+## Emendamento del 2026-09-03 — la lista di classe, non la tradizione
+
+Trovato costruendo le schede del Bestiario, e va scritto qui perché è il difetto
+più insidioso che questo strumento abbia prodotto.
+
+Gli incantesimi erano scelti da liste **per ruolo** — «controllore» pescava
+arcano, «comandante» divino. Sembra ragionevole e **non lo è**: a un druido
+costruito come controllore il generatore dava *armatura magica*, *sonno* e *dito
+della morte*, che sono da mago; come bruto gli dava *benedizione*, *santuario* e
+*scudo della fede*, che sono da **chierico**. Il blocco usciva completo e
+plausibile, e al tavolo il druido avrebbe annunciato un incantesimo che non ha.
+
+**Non basta separare arcano e divino.** Chierico, druido e bardo hanno tre liste
+diverse pur essendo tutti «divini» o «ibridi»: è la **lista di classe** a
+decidere, non la tradizione e tantomeno il ruolo.
+
+Provvedimenti presi subito:
+
+- le due schede colpite sono state ripulite a mano: gli slot restano (vengono
+  dalla tabella SRD del druido, che è giusta), la scelta è dichiarata pendente;
+- il generatore **si rifiuta** di scegliere per una classe la cui lista non è
+  coperta, e lo dice: *«Incantesimi da scegliere a mano»*. Un vuoto dichiarato si
+  riempie in due minuti; una lista sbagliata arriva al tavolo e ci resta;
+- un test lo tiene fermo per druido e adepto, e verifica che le classi coperte
+  gli incantesimi li ricevano lo stesso.
+
+La revisione vera — **tradizione × ruolo**, con le quattro funzioni che il DM ha
+nominato (controllore · blaster · supporto · utilità) e le liste per *classe* —
+è proposta e **non ancora approvata**: sta in
+`plans/PIANO-GENERATORE-CREATURE-E-PNG.md` §7.
+
 ## Quando NON usarlo
 
 Va scritto qui, o il generatore diventa la scorciatoia per tutto:

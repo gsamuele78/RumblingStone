@@ -759,16 +759,40 @@ INCANTESIMI = {
         9: ["invocare", "guarigione di massa", "temporale iracondo"],
     },
 }
+#: ⚠️ **DIFETTO NOTO — le liste sono per RUOLO e non per LISTA DI CLASSE.**
+#:
+#: Trovato costruendo le schede del Bestiario, ed è più grave di come sembra:
+#: a un **druido** costruito come «controllore» questo codice dava *armatura
+#: magica*, *sonno* e *dito della morte* — incantesimi da mago, che un druido non
+#: lancia; e come «bruto» gli dava *benedizione*, *santuario* e *scudo della
+#: fede*, che sono da **chierico**. Non basta separare arcano e divino: chierico,
+#: druido e bardo hanno tre liste diverse, e la lista di classe è ciò che decide.
+#:
+#: Le due schede colpite sono state ripulite a mano. Qui resta scritto perché il
+#: prossimo che legge non lo riscopra al tavolo, con un druido che annuncia una
+#: *palla di fuoco*.
+#:
+#: La revisione (tradizione × ruolo: controllore · blaster · supporto · utilità)
+#: è proposta al DM e non ancora approvata.
+#:
 #: I ruoli non incantatori, quando ricevono livelli di classe da incantatore,
-#: pescano dalla lista del ruolo più vicino. Meglio una lista sbagliata di ruolo
-#: che nessuna: il DM la cambia in dieci secondi, un vuoto no.
+#: pescano dalla lista del ruolo più vicino.
 LISTA_DI_RIPIEGO = {"bruto": "comandante", "schermagliatore": "controllore",
                     "tiratore": "artigliere"}
 
 
+#: Le classi le cui liste NON sono ancora coperte: per queste il generatore
+#: preferisce **non scegliere** invece di scegliere male. Un blocco senza
+#: incantesimi si riempie in due minuti; un druido con *palla di fuoco* scritta
+#: sopra arriva al tavolo e ci resta.
+CLASSI_SENZA_LISTA = frozenset({"druido", "druid", "adepto", "adept"})
+
+
 def scegli_incantesimi(ruolo: str, slot: tuple[int, ...],
-                       rng: random.Random) -> list[str]:
+                       rng: random.Random, classe: str = "") -> list[str]:
     """Un incantesimo per slot, dalla lista di quel ruolo e di quel livello."""
+    if classe.lower() in CLASSI_SENZA_LISTA:
+        return []
     lista = INCANTESIMI.get(ruolo) or INCANTESIMI[LISTA_DI_RIPIEGO.get(ruolo, "comandante")]
     fuori = []
     for livello, quanti in enumerate(slot):
@@ -819,7 +843,13 @@ def _voci_incantatore(nome_classe: str, livello: int, m: dict[str, int],
     if nome_classe in T.INCANTATORI_SENZA_ANCORA:
         conto(f"⚠ la griglia di {nome_classe} non ha una riga d'ancora nel repo")
 
-    scelti = scegli_incantesimi(ruolo, slot, rng or random.Random())
+    scelti = scegli_incantesimi(ruolo, slot, rng or random.Random(), nome_classe)
+    if not scelti and nome_classe.lower() in CLASSI_SENZA_LISTA:
+        fuori.append(f"⚠ Incantesimi da scegliere a mano: la lista di {nome_classe} "
+                     "non è coperta, e prenderla da un'altra classe darebbe "
+                     "incantesimi che questa classe non lancia")
+        conto(f"⚠ nessun incantesimo scelto per {nome_classe}: meglio un vuoto "
+              "che una lista di un'altra classe")
     if scelti:
         fuori.append("Preparati — " + " · ".join(scelti))
         conto(f"incantesimi scelti dalla lista del ruolo «{ruolo}», mai a sorte "
