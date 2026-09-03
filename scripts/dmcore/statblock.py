@@ -195,8 +195,12 @@ _RE = {
     "approssimato": re.compile(r"(?:hp|pf|PF|HP|AC|CA)\*{0,2}[:\s]\s*[~≈]"),
     # Il divario fra un tiro e l'altro va tenuto largo: la forma italiana estesa
     # «Tempra +7, Riflessi +10, Volontà +6 (+2 vs incantamento)» ci sta appena.
-    "ts": re.compile(r"Temp[a-zà]*\**\s*\**([+-]\d+)[^.\n]{0,24}?Rifl[a-zei]*\**\s*\**([+-]\d+)"
-                     r"[^.\n]{0,24}?Vol[a-zontà]*\**\s*\**([+-]\d+)", re.I),
+    # ⚠️ Il gap ammette un a capo (`[^.]` invece di `[^.\n]`): una scheda del
+    # lotto I mandava a capo fra «Temp +6,» e «Rifl +7», e i tre tiri salvezza
+    # sparivano tutti e tre. Il punto resta il confine, e ventiquattro caratteri
+    # non bastano a scavalcare una frase — ma bastano a scavalcare una riga.
+    "ts": re.compile(r"Temp[a-zà]*\**\s*\**([+-]\d+)[^.]{0,24}?Rifl[a-zei]*\**\s*\**([+-]\d+)"
+                     r"[^.]{0,24}?Vol[a-zontà]*\**\s*\**([+-]\d+)", re.I),
     # Forma compatta: «TS +2/+9/+1», nell'ordine Tempra/Riflessi/Volonta'.
     # Una scheda sola la usa, ma e' inequivocabile e costa due righe.
     "ts_barre": re.compile(r"\bTS\s*\**\s*([+-]\d+)\s*/\s*([+-]\d+)\s*/\s*([+-]\d+)"),
@@ -289,10 +293,32 @@ def estrai(testo: str) -> tuple[Statblocco, list[str]]:
     # Se la prosa scriveva «hp ~30», il numero e' una STIMA del DM. Il blocco lo
     # dice, perche' altrimenti al tavolo non si distingue piu' da un numero
     # preso da un manuale — ed e' esattamente la confusione che ADR-0021 vieta.
-    if _RE["approssimato"].search(testo):
+    #
+    # ⚠️ Ma il «~» va cercato dove i valori sono stati LETTI, non in tutto il
+    # documento. Una scheda del lotto I chiudeva con una riga di collaudo — «PF
+    # T1-1 riga CR 8 (CA ~21 / hp ~85)» — che parla della tabella di riferimento,
+    # non della creatura: i suoi numeri erano esatti e il blocco li dichiarava
+    # stimati. Marcare come incerto un numero certo e' lo stesso difetto di
+    # marcare come certo un numero incerto, in direzione opposta: in due mesi
+    # nessuno si fida piu' del marcatore.
+    if _approssimato_dove_conta(testo):
         nota = "valori approssimati nella prosa d'origine (scritti con «~»)"
         sb.fonte = f"{sb.fonte} · {nota}" if sb.fonte else nota
     return sb, sb.mancanti()
+
+
+def _approssimato_dove_conta(testo: str) -> bool:
+    """Vero se il «~» sta su un valore che il parser ha davvero letto.
+
+    Guarda le sole righe in cui pf o CA compaiono come valore della creatura, e
+    salta quelle che parlano di una tabella di riferimento.
+    """
+    for riga in testo.split("\n"):
+        if "T1-1" in riga or "Benchmark" in riga or "riga CR" in riga:
+            continue
+        if _RE["approssimato"].search(riga):
+            return True
+    return False
 
 
 def togli_blocco(testo: str) -> str:

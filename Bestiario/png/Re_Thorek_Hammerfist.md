@@ -1,4 +1,4 @@
-# Re Thorek Hammerfist
+# Re Thorek Hammerfist [RIMANDO]
 **Role**: ally (re di Hammerfist, comandante dei difensori, Arco 08)
 **Status**: alive; **default** sopravvive alla battaglia (a 8 pf al finale, Incontro 3B); **vittoria costosa** = può morire (B1 §2)
 **Location**: Hammerfist Holds, sala del consiglio di guerra → Cuore della Montagna (finale)

@@ -72,10 +72,64 @@ def gs_numerico(v: str) -> float | None:
 #: di significare qualcosa.
 NON_CREATURA = "[NON-CREATURA]"
 
+#: Il marcatore che dice «i numeri di questa creatura stanno ALTROVE, e
+#: duplicarli qui sarebbe peggio».
+#:
+#: È un caso diverso da NON-CREATURA, e tenerli distinti conta. Dieci dossier di
+#: PNG e otto di villain non hanno un blocco perché **non devono averlo**: le
+#: statistiche sono già scritte, per esteso, dentro i documenti d'arco — le
+#: schede stampabili dei pregen in `ARC08-02`, i PNG alleati in `ARC08-01` — e
+#: quattro di quelle schede lo dicono a lettere maiuscole: *NON duplicare*.
+#: Copiarle qui creerebbe una seconda copia che diverge alla prima errata, ed è
+#: esattamente il difetto che ADR-0021 esiste per evitare.
+#:
+#: ⚠️ **Ma un marcatore che toglie schede dal conto è un marcatore che può
+#: nascondere il debito invece di estinguerlo.** Perciò questo, a differenza di
+#: NON-CREATURA, **è verificabile**: la riga deve dire dove sono i numeri, e
+#: `--check` va a vedere che quel posto esista davvero. Un rimando che punta al
+#: vuoto è un errore, non una scheda a posto.
+RIMANDO = "[RIMANDO]"
+
 
 def e_non_creatura(testo: str) -> bool:
     """Vero se la scheda si dichiara non-creatura (nelle prime righe)."""
     return NON_CREATURA in "\n".join(testo.split("\n")[:8])
+
+
+def e_rimando(testo: str) -> bool:
+    """Vero se la scheda dichiara che i suoi numeri stanno altrove."""
+    return RIMANDO in "\n".join(testo.split("\n")[:8])
+
+
+def bersaglio_del_rimando(testo: str) -> str | None:
+    """Il file citato dal rimando, se c'è.
+
+    Il formato è quello che le schede usano già: una riga `**Key stats**: → …`
+    con il percorso fra apici inversi. Non ne invento uno nuovo — le schede lo
+    scrivono così da prima che questo marcatore esistesse.
+    """
+    m = re.search(r"\*\*Key stats\*\*:.*?`([^`]+)`", testo, re.S)
+    return m.group(1) if m else None
+
+
+def rimando_valido(f: Path, testo: str) -> str | None:
+    """`None` se il rimando è a posto, altrimenti il problema.
+
+    Un rimando che non dice dove, o che dice un posto che non esiste, è un modo
+    per far sparire il debito dal conto senza estinguerlo. Vale la pena essere
+    severi qui: è l'unica cosa che rende il marcatore onesto.
+    """
+    bersaglio = bersaglio_del_rimando(testo)
+    if not bersaglio:
+        return f"{f.name}: {RIMANDO} senza una riga «**Key stats**: → `dove`»"
+    # I percorsi delle schede sono abbreviati («08_.../ARC08-01-GUIDA-DM.md»):
+    # si cerca per nome del file, che è quello che identifica davvero.
+    nome = Path(bersaglio.replace("\\", "/")).name
+    if not nome.endswith(".md"):
+        return None          # rimando a una sezione, non a un file: passa
+    if not any(ROOT.rglob(nome)):
+        return f"{f.name}: il rimando punta a «{nome}», che non esiste"
+    return None
 
 
 def schede() -> list[Path]:
@@ -93,7 +147,7 @@ def inserisci(testo: str, sb: Statblocco) -> str:
     fondo sarebbe un dato che nessuno vede. Dopo l'intestazione è il posto dove
     un lettore umano si aspetta i numeri.
     """
-    if APERTURA in testo or e_non_creatura(testo):
+    if APERTURA in testo or e_non_creatura(testo) or e_rimando(testo):
         return testo
     righe = testo.split("\n")
     taglio = 0
@@ -109,6 +163,9 @@ def controlla(f: Path) -> list[str]:
     """I problemi del blocco di UNA scheda (lista vuota = tutto bene)."""
     rel = f.relative_to(ROOT) if ROOT in f.parents else f
     testo = f.read_text(encoding="utf-8")
+    if e_rimando(testo):
+        guasto = rimando_valido(f, testo)
+        return [f"{rel}: {guasto.split(': ', 1)[1]}"] if guasto else []
     try:
         sb = leggi(testo)
     except StatblockError as e:
@@ -142,23 +199,43 @@ def main() -> int:
 
     if args.check:
         problemi = [p for f in elenco for p in controlla(f)]
-        conblocco = sum(1 for f in elenco if APERTURA in f.read_text(encoding="utf-8"))
+        testi = {f: f.read_text(encoding="utf-8") for f in elenco}
+        conblocco = sum(1 for f in elenco if APERTURA in testi[f])
+        nrimandi = sum(1 for f in elenco if e_rimando(testi[f]))
+        nnoncreature = sum(1 for f in elenco if e_non_creatura(testi[f]))
+        # Il conto che conta: quante schede sono SISTEMATE, non quante hanno il
+        # blocco. Una scheda-rimando verificata è sistemata quanto una col
+        # blocco — i numeri esistono, stanno dove la scheda dice.
+        sistemate = conblocco + nrimandi + nnoncreature
         if args.json:
             print(json.dumps({"schede": len(elenco), "con_blocco": conblocco,
+                              "rimandi": nrimandi, "non_creature": nnoncreature,
+                              "sistemate": sistemate,
                               "problemi": problemi}, ensure_ascii=False, indent=2))
         else:
             for p in problemi:
                 print(f"  ✗ {p}", file=sys.stderr)
             stato = "✓" if not problemi else "✗"
+            coda = ""
+            if nrimandi or nnoncreature:
+                pezzi = []
+                if nrimandi:
+                    pezzi.append(f"{nrimandi} coi numeri altrove")
+                if nnoncreature:
+                    pezzi.append(f"{nnoncreature} non-creature")
+                coda = f" (+ {', '.join(pezzi)} → {sistemate}/{len(elenco)} sistemate)"
             print(f"{stato} extract_statblocks --check: {conblocco}/{len(elenco)} schede "
-                  f"hanno il blocco, {len(problemi)} problemi")
+                  f"hanno il blocco{coda}, {len(problemi)} problemi")
         return 1 if problemi else 0
 
-    completi, parziali, gia, non_creature = [], [], [], []
+    completi, parziali, gia, non_creature, rimandi = [], [], [], [], []
     for f in elenco:
         testo = f.read_text(encoding="utf-8")
         if e_non_creatura(testo):
             non_creature.append(f)
+            continue
+        if e_rimando(testo):
+            rimandi.append(f)
             continue
         if APERTURA in testo:
             gia.append(f)
@@ -179,6 +256,7 @@ def main() -> int:
             "schede": len(elenco),
             "gia_migrate": [rel(f) for f in gia],
             "non_creature": [rel(f) for f in non_creature],
+            "rimandi": [rel(f) for f in rimandi],
             "completi": [rel(f) for f, _ in completi],
             "parziali": {rel(f): m for f, m in parziali},
             "applicato": bool(args.apply),
@@ -190,6 +268,9 @@ def main() -> int:
     if non_creature:
         print(f"  {len(non_creature)} non sono creature e non ne devono avere uno "
               f"(marcate {NON_CREATURA})")
+    if rimandi:
+        print(f"  {len(rimandi)} hanno i numeri altrove e non vanno duplicati "
+              f"(marcate {RIMANDO}; --check verifica che il bersaglio esista)")
     print(f"  {len(completi)} blocchi {verbo}")
     print(f"  {len(parziali)} schede da fare a mano — la prosa non dice tutto:")
     conteggio: dict[str, int] = {}

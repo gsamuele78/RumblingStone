@@ -1,4 +1,4 @@
-# Thorin Runaforte
+# Thorin Runaforte [RIMANDO]
 **Role**: ally (pregen giocabile "Eroi di Hammerfist" → PNG dopo, Arco 08)
 **Status**: alive (se sopravvive al giocato); **officia il culto dei caduti** dopo la battaglia (D14)
 **Location**: Hammerfist (supporto divino, flashback → tempio, dopo)

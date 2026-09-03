@@ -1,4 +1,4 @@
-# Borin Ferropugno
+# Borin Ferropugno [RIMANDO]
 **Role**: ally (pregen giocabile "Eroi di Hammerfist" → PNG dopo, Arco 08)
 **Status**: alive (se sopravvive al giocato); **campione di Re Thorek a Hammerfist** (D14)
 **Location**: Hammerfist (flashback pregen → presidio dopo la battaglia)

@@ -1,4 +1,4 @@
-# Fauci di Palude
+# Fauci di Palude [RIMANDO]
 **Role**: villain (drago dell'avanguardia della Mano Rossa, Arco 08)
 **Status**: alive pre-battaglia; **esito a rami (D10)** — vedi sotto
 **Location**: avanguardia in marcia su Hammerfist → cieli sopra la fortezza

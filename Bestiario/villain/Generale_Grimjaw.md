@@ -1,4 +1,4 @@
-# Generale Grimjaw
+# Generale Grimjaw [RIMANDO]
 **Role**: villain (comandante di campo dell'avanguardia, Arco 08)
 **Status**: alive pre-battaglia; **esito condizionale** (☠/🏃) — vedi sotto
 **Location**: campo della Mano Rossa davanti a Hammerfist; ondata finale (Cuore della Montagna) se vivo

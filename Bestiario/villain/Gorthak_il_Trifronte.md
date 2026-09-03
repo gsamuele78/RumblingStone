@@ -1,4 +1,4 @@
-# Gorthak il Trifronte
+# Gorthak il Trifronte [RIMANDO]
 **Role**: villain (ariete vivente dell'avanguardia, Arco 08)
 **Status**: alive pre-battaglia; **esito condizionale** (☠/🏃) — vedi sotto
 **Location**: prima linea d'assalto (cancello/brecce); ultimo boss a terra al finale se vivo

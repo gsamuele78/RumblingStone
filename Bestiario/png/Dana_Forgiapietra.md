@@ -1,4 +1,4 @@
-# Madre Superiora Dana Forgiapietra
+# Madre Superiora Dana Forgiapietra [RIMANDO]
 **Role**: ally (guida spirituale dei difensori, Arco 08)
 **Status**: alive; sopravvive nel default (guarisce Re Thorek al finale)
 **Location**: Hammerfist Holds, tempio di Moradin → Cuore della Montagna (finale)
