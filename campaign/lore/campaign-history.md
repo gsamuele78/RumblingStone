@@ -10,7 +10,7 @@ For party composition, see `campaign-party.md`. For locations, see `fr-cannath-v
 
 ## PART 1: CAMPAIGN PREMISE
 
-**Adventure Path:** Red Hand of Doom (Jacobs & Wyatt, 2006), adapted to Forgotten Realms 1372 DR
+**Adventure Path:** Red Hand of Doom (Jacobs & Baker, 2006), adapted to Forgotten Realms 1372 DR
 **Setting:** Cannath Vale (= Elsir Vale remapped to the Dalelands / Shining South region of Faerûn)
 **System:** D&D 3.5 Edition (d20 SRD / OGL)
 **Party Name:** The Rumbling Stone — a group of mostly dwarves who make heavy sounds and are not stealthy

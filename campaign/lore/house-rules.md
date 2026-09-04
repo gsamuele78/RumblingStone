@@ -6,7 +6,7 @@ Last updated: 1372 DR, Flamerule 1 (in-world) / 2026-03-30 (real world)
 
 ## SETTING: CANNATH VALE (Forgotten Realms — Elsir Vale Adaptation)
 
-The RumblingStone campaign uses *Red Hand of Doom* (Jacobs & Wyatt, 2006) as its adventure
+The RumblingStone campaign uses *Red Hand of Doom* (Jacobs & Baker, 2006) as its adventure
 path, adapted wholesale into the **Forgotten Realms, 1372 DR**. The original Elsir Vale has
 been remapped to **Cannath Vale** in the Eastern Dalelands. For the complete location mapping,
 NPC adaptation, faction notes, and regional encounter tables, see:

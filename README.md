@@ -1,7 +1,7 @@
 # Rumbling Stone
 
 **RumblingStone** is a custom D&D 3.5 campaign set in the Forgotten Realms (Faerûn, 1372 DR).
-It is heavily based on *Red Hand of Doom* (Jacobs & Wyatt, 2006) and adapted from the Elsir Vale to the Dalelands region.
+It is heavily based on *Red Hand of Doom* (Jacobs & Baker, 2006) and adapted from the Elsir Vale to the Dalelands region.
 This repository contains session logs, NPC data, encounters, lore, and custom mechanics tailored for an adult gaming group (emphasizing "Premium Design" and "Shine Time" mechanics).
 
 > 📚 **Documentation index**: start at [`docs/INDEX.md`](docs/INDEX.md) — the
