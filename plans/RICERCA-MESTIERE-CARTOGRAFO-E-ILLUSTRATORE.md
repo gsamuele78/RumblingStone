@@ -131,6 +131,18 @@ forte dove la regola si scrive, debole dove serve un occhio.
 
 ## §5 — Piano di esecuzione in tre fasi *(quando il DM la autorizza)*
 
+> **Taglio dei lotti** (ADR-0045). L'audit è **ricognizione**, i gate sono
+> **costruzione**, le norme sono **giudizio**: tre classi diverse, ed è il motivo
+> per cui la Fase 2 non può partire prima della 1.
+>
+> | Lotto | Classe | `[engine · effort · qualità]` |
+> |---|---|---|
+> | **F1a** misurare i 9 criteri di cartografia su 31 SVG / 17 master | **R** ricognizione | `[subagente `Explore`, `Sonnet 5` · basso-medio · **un numero per riga**, e il comando che lo riproduce]` |
+> | **F1b** misurare i 9 criteri d'illustrazione sul set esistente | **R** ricognizione | `[subagente `Explore`, `Sonnet 5` · basso-medio · come sopra]` |
+> | **F1c** le 6 mappe con l'intestazione discorde (§6) | **K** canone | `[**Opus 5, mai delegato** · xhigh · **una per una**: decidere se sbaglia l'intestazione o la griglia. Un `sed` le rovinerebbe tutte]` |
+> | **F2** i gate sulle righe marcate «macchina» | **C** costruzione | `[Sonnet 5 · medio-alto · ogni gate con un test **che lo prova mordere**, e soglie tarate sui numeri della F1 — non a occhio]` |
+> | **F3** le norme nelle skill esistenti | **G** giudizio | `[Opus 5, sessione principale · alto · il DM riconosce il proprio metro di qualità]` |
+
 **Fase 1 — Audit misurato.** Applicare A1 e B1 agli artefatti che il repo ha:
 **31 SVG / 17 master** per le mappe, e il set di immagini esistente. Uscita: una
 tabella con un numero per riga, non un giudizio.

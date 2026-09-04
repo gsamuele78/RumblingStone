@@ -120,6 +120,46 @@ sono lo standard.
 
 ---
 
+## 3-bis · La classe di ogni lotto rimasto (ADR-0045)
+
+Il taglio segue la **classe di lavoro**, non la dimensione — e serve a rendere
+esplicito il compromesso fra costo e qualità, che finora era un default
+silenzioso.
+
+| Piano | M meccanico | R ricognizione | C costruzione | G giudizio | K canone |
+|---|:---:|:---:|:---:|:---:|:---:|
+| ① Ripresa PR — F1 | 2 | — | 1 | 1 | — |
+| ① F2 | 2 | — | 1 | — | — |
+| ① F3 | 1 | — | 2 | 1 *(il DM)* | — |
+| ① F4 | 1 | — | 3 | 1 | **3** |
+| ② Ricerca sul mestiere | — | 2 | 1 | 1 | **1** |
+| **Totale** | **6** | **2** | **8** | **4** | **4** |
+
+**Come si legge.** Otto lotti su ventiquattro sono **C** — codice con un
+contratto chiaro e dei test — e delegabili. Sei sono **M** e non hanno bisogno di
+niente più di un gate che dica sì o no. **Otto sono G o K**, cioè giudizio o
+canone: quelli restano in sessione principale su `Opus 5` e non si delegano.
+
+⚠️ **Quattro lotti su otto della F4 sono K.** È la misura di quanto la #99 tocchi
+il canone, e la ragione per cui non si mergia in blocco.
+
+⚠️ **La tabella è tarata a occhio.** Nessuno ha eseguito lo stesso lotto su due
+engine per confrontare: è un'ipotesi dichiarata, da correggere quando i lotti
+classificati saranno abbastanza da dire qualcosa.
+
+⚠️ **I 24 non sono tutto il lavoro aperto dell'archivio**, e la mia prima
+stesura lo lasciava intendere. Sono i lotti dei **due piani aperti**. Altri
+undici documenti contengono in tutto **43 caselle `⬜`** — ma quel numero grezzo
+**non è un conteggio di lotti**: separandole sono **29 citate nel testo · 6
+celle vuote · 5 lotti veri · 3 glifi di stato** (il «⬜ NON giocato» di un arco
+non è un lotto). Contarle bene vuol dire **leggerle una per una**, che è un lotto
+**G** e non **R** — e finché non è fatto, «quanto lavoro resta nell'archivio» non
+ha una risposta onesta.
+
+⚠️ **Il guadagno vero non è il prezzo per token.** È la colonna «qualità», che
+costringe a scrivere il collaudo **prima** di partire — e un lotto la cui
+riuscita non si sa descrivere è un lotto tagliato male.
+
 ## 4 · Le decisioni ferme al DM
 
 | # | Piano | Domanda |

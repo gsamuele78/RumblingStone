@@ -71,6 +71,61 @@ successo cinque volte, e le cinque sovrapposizioni sono finite in
 esegue. Se non sai ancora cosa fare, è una ricerca — e la ricerca può poi
 aprire un piano, citandosi.
 
+## 🧭 Come si tagliano i lotti (obbligatoria — ADR-0045)
+
+Ogni lotto **ancora da fare** dichiara tre cose in intestazione:
+
+```
+[engine: <chi lo esegue> · effort: <basso|medio|alto|xhigh|max> · qualità: <come si sa che è finito>]
+```
+
+| Classe | Che cos'è | Engine | Effort | Qualità |
+|---|---|---|---|---|
+| **M · Meccanico** | trasformazione verificabile: **un gate dice** se è giusta | inline, o `Haiku 4.5` in subagente | basso | il gate passa |
+| **R · Ricognizione** | leggere molto, riferire poco, **non decidere** | subagente `Explore`, `Sonnet 5` | basso-medio | i numeri si **riproducono** |
+| **C · Costruzione** | codice con contratto chiaro e test | `Sonnet 5` | medio-alto | test che provano il gate **mordere** |
+| **G · Giudizio** | decidere cosa è vero, cosa si butta, cosa si sovrappone | **`Opus 5`, sessione principale** | alto-xhigh | il DM riconosce il proprio problema |
+| **K · Canone** | tocca la verità della campagna | **`Opus 5`, mai delegato** | xhigh-max | conferma esplicita del DM |
+
+**Come si sceglie la classe — la tabella illustra, queste domande decidono.**
+Si risponde nell'ordine; la prima che scatta assegna la classe.
+
+| | Domanda | Se sì |
+|---|---|---|
+| 1 | **Se sbaglio, se ne accorge il DM al tavolo?** | **K** — nessun gate difende il canone |
+| 2 | Devo decidere qualcosa che **una macchina non può contare**? | **G** |
+| 3 | Il risultato è definito da un **contratto verificabile**? | **C** se il contratto va scritto, **M** se esiste già |
+| 4 | *(nessuna)* Sto solo **leggendo per riferire**? | **R** |
+
+⚠️ **Nessuna delle quattro chiede quanto è grande il lotto.** La dimensione non
+entra nella classificazione, ed è dove l'istinto sbaglia più spesso: *«sostituisci
+Tordek con Thorik in dodici file»* sembra un `sed` ed è la riscrittura di un eco.
+
+**A lotto chiuso, una riga in [`plans/REGISTRO-LOTTI.md`](../../plans/REGISTRO-LOTTI.md)**
+— classe prevista, engine usato, **ha retto?**. È come la tabella smette di
+essere tarata a occhio. Se il lotto è **salito di classe** a metà strada, quella
+riga vale doppio.
+
+**Tre regole che governano la tabella:**
+
+1. **L'effort si abbassa prima dell'engine.** Un modello capace a effort basso
+   spesso batte un modello inferiore a effort alto, e **non spezza la cache** —
+   le cache sono legate al modello, quindi ogni salto di engine la butta.
+2. **Un lotto sale di classe, mai scende.** Nel dubbio fra M e C scegli C; fra G
+   e K scegli K. Un lotto sovradimensionato costa token; uno sottodimensionato
+   costa un errore che arriva al tavolo.
+3. **La colonna «qualità» non è una leva: è il collaudo.** Se non riesci a
+   scriverla, il lotto è **tagliato male** — ritaglialo prima di eseguirlo.
+
+**Dove si taglia**: sulla **classe**, non sulla dimensione. Un lotto che mescola
+classi si divide — la parte **G** decide, la parte **M** esegue.
+
+⚠️ **Non si riclassificano i lotti già chiusi**: instradare un lavoro finito è
+spreco puro.
+
+⚠️ **`Haiku 4.5` non è un Opus più piccolo**: 200K di contesto contro 1M, e
+**non accetta `effort`**. Per lavoro corto e meccanico, non «per risparmiare».
+
 ## ✅ Rituale di chiusura PR (checklist per l'agente)
 
 Prima di aprire (o dichiarare pronta) una PR che completa lavoro pianificato:
