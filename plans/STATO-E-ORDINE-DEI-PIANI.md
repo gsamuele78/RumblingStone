@@ -147,6 +147,15 @@ il canone, e la ragione per cui non si mergia in blocco.
 engine per confrontare: è un'ipotesi dichiarata, da correggere quando i lotti
 classificati saranno abbastanza da dire qualcosa.
 
+⚠️ **I 24 non sono tutto il lavoro aperto dell'archivio**, e la mia prima
+stesura lo lasciava intendere. Sono i lotti dei **due piani aperti**. Altri
+undici documenti contengono in tutto **43 caselle `⬜`** — ma quel numero grezzo
+**non è un conteggio di lotti**: separandole sono **29 citate nel testo · 6
+celle vuote · 5 lotti veri · 3 glifi di stato** (il «⬜ NON giocato» di un arco
+non è un lotto). Contarle bene vuol dire **leggerle una per una**, che è un lotto
+**G** e non **R** — e finché non è fatto, «quanto lavoro resta nell'archivio» non
+ha una risposta onesta.
+
 ⚠️ **Il guadagno vero non è il prezzo per token.** È la colonna «qualità», che
 costringe a scrivere il collaudo **prima** di partire — e un lotto la cui
 riuscita non si sa descrivere è un lotto tagliato male.
