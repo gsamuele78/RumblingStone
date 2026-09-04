@@ -91,6 +91,18 @@ affidata a chi legge il diff.
 
 ## FASE 1 — #63: le 14 griglie tattiche di Hammerfist
 
+> **Taglio dei lotti** (ADR-0045). La fase mescola due classi e si divide:
+>
+> | | Lotto | Classe | `[engine · effort · qualità]` |
+> |---|---|---|---|
+> | **1a** | **D1**: archiviare i `Lotto-*` o tenerne gli SVG | **G** giudizio | `[Opus 5, sessione principale · alto · il DM conferma la scelta]` |
+> | **1b** | portare i tre master markdown e i quattro file di puntamento | **M** meccanico | `[inline · basso · i link risolvono, `validate_modules` verde]` |
+> | **1c** | risolvere i conflitti sui file di puntamento (3 commit di drift) | **C** costruzione | `[Sonnet 5 · medio · nessun riferimento perso rispetto a prima]` |
+> | **1d** | rigenerare gli SVG da zero | **M** meccanico | `[inline · basso · byte-identici a quelli della PR — già provato su L3]` |
+>
+> ⚠️ **1a viene prima di tutto**: dopo ADR-0043 la CI **forza** quella decisione,
+> quindi 1b non parte finché 1a non è presa.
+
 **Perché per prima.** È l'unica delle quattro che si sente **al tavolo**: oggi
 un DM che gioca ARC-08 ha tre mappe su diciassette, e l'incontro del Ponte
 Sospeso non ha una griglia da nessuna parte. Il contenuto è pronto e verificato,
@@ -151,6 +163,15 @@ qualsiasi trova la griglia, e nessun link punta a un master archiviato.
 
 ## FASE 2 — #52: l'overlay professionale sulle mappe degli incendi drow
 
+> **Taglio dei lotti** (ADR-0045). Fase quasi interamente meccanica: il
+> giudizio l'ha già fatto ADR-0006, qui si applica.
+>
+> | | Lotto | Classe | `[engine · effort · qualità]` |
+> |---|---|---|---|
+> | **2a** | portare i due master con le direttive `@` e il JSON della scena nuova | **M** meccanico | `[inline · basso · `grep` trova i due master fra quelli che usano `@`]` |
+> | **2b** | rigenerare i tre SVG | **M** meccanico | `[inline · basso · 2 su 3 byte-identici, il terzo cambia **solo** nome]` |
+> | **2c** | la scena «Foresta in Fiamme» passa lo standard di modulo | **C** costruzione | `[Sonnet 5 · medio · `validate_modules` verde, scala 1,5 m/quadretto]` |
+
 **Perché per seconda.** Costa **una rinominazione** e chiude una dimostrazione
 che serve al metodo, non solo a quella scena.
 
@@ -192,6 +213,19 @@ a mano fra quelli che le usano, e la scena «Foresta in Fiamme» ha un SVG.
 ---
 
 ## FASE 3 — #106: la catena dei raster e Blender come geometria
+
+> **Taglio dei lotti** (ADR-0045). È la fase con più classi diverse, ed è il
+> caso in cui il taglio serve davvero.
+>
+> | | Lotto | Classe | `[engine · effort · qualità]` |
+> |---|---|---|---|
+> | **3a** | portare i due script e i loro 418 test | **M** meccanico | `[inline · basso · i test passano com'erano]` |
+> | **3b** | `SCARTI.txt` — il registro di cosa si butta e perché | **C** costruzione | `[Sonnet 5 · medio · un test che prova che un `--reroll` senza motivo **non** passa]` |
+> | **3c** | gli smoke in CI e il controllo di determinismo del piano di scena | **C** costruzione | `[Sonnet 5 · medio · il controllo boccia un piano non deterministico]` |
+> | **3d** | 🖥 generare i diciotto raster e sceglierli | **G** giudizio | `[**il DM**, sulla sua macchina · — · diciotto immagini che lui tiene]` |
+>
+> ⚠️ **3d non è un lotto di agente.** Il collo di bottiglia è **il giudizio, non
+> la GPU**: ~1,5-2 ore, e quasi tutte sono scegliere quale variante tenere.
 
 **Perché per terza.** Vale molto e non è urgente al tavolo: nessuna sessione si
 blocca perché mancano i diciotto raster del Drappo. E l'ultimo passo **non si può
@@ -269,6 +303,23 @@ sono scegliere quale delle quattro varianti tenere.
 ---
 
 ## FASE 4 — #99: i dati di campagna come dati
+
+> **Taglio dei lotti** (ADR-0045). Gli otto lotti di §4.2 non sono della stessa
+> classe, ed è il motivo per cui vanno presi uno alla volta.
+>
+> | Lotto | Classe | `[engine · effort · qualità]` |
+> |---|---|---|
+> | **4a** `validate_docs` | **C** costruzione | `[Sonnet 5 · medio-alto · il gate boccia una cartella documentata e inesistente, e **non** boccia i 4 falsi positivi noti]` |
+> | **4b** link e path locali | **M** meccanico | `[inline · basso · 0 link rotti su 241, 0 path `/home/jfs/`]` |
+> | **4c** i due tempi di `state.md` | **K** canone | `[**Opus 5, mai delegato** · xhigh · nessun contenuto cancellato, solo etichettato; **due domande al DM** poste, non indovinate]` |
+> | **4d** `state.yaml` (ADR-0017) | **K** canone | `[**Opus 5** · xhigh-max · `state.md` **rigenerato è identico** a quello committato]` |
+> | **4e** una sola via di scrittura | **C** costruzione | `[Sonnet 5 · alto · un test **sui file veri**, non su fixture — vedi §4.4]` |
+> | **4f** prodotto e partita | **C** costruzione | `[Sonnet 5 · alto · un test che dimostra che il reset **non eredita niente**]` |
+> | **4g** schede PG a dati | **K** canone | `[**Opus 5** · alto · le schede generate combaciano con quelle scritte a mano]` |
+> | **4h** `groups/<slug>/` | **G** giudizio | `[Opus 5 · xhigh · **PR dedicata**, come dice la #99 stessa]` |
+>
+> ⚠️ **Quattro lotti su otto sono K o G.** È la misura di quanto questa fase
+> tocchi il canone, e la ragione per cui **non si mergia in blocco**.
 
 **Perché per ultima.** È la più grossa (88 file, +14.078 / −4.931) e tocca la
 parte più delicata del repo — **il canone**. E il suo corpo lo dice da sé:
