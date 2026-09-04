@@ -759,48 +759,64 @@ SCALA: 1 quadrato = 1.5m × 1.5m
 DESPERATE LAST STAND (Round 36-40)
 
       NORD ↑
-      
+
   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 10 🌲🌲🟩🟩🟩🟩🟩💥💥💥💥🟢🟢🟢🟢🟢🟢🟢💥💥💥🟩🟩🟩🟩🌲
+11 🌲🌲🟩🟩🟩🟩🟩💥💥💥💥🟢🟢🟢🟢🟢🟢🟢💥💥💥🟩🟩🟩🟩🌲
+12 🌲🌲🟩🟩🟩🟩🟩💥💥💥💥🟢🟢🟢🟢🟢🟢🟢💥💥💥🟩🟩🟩🟩🌲
+13 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
+14 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
 15 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
-
-18 🌲🟩🟩🟩🟩💥💥🟢🟢🟢🟢🌳🟢🟢🟢🟢🌳🟢🟢💥🟩🟩🟩🟩🌲
+16 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
+17 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
+18 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🌳🟢🟢🟢🟢🌳🟢🟢💥🟩🟩🟩🟩🌲
                           └─┘         └─┘ Young Treants (LARGE!)
 19 🌲🟩🟩🔵🟩💥🟢🟢🟢🟢🌳🌳✨💎✨🌳🌳🟢🟢🟢💥🟩🔵🟩🟩🌲
       └─┘ PG2            └────┘ └─┘ └────┘ Treant Wall + Hellas TRANCE!
-                        NW Tree  HELLAS  NE Tree
 20 🌲🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢✨💎✨🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
                                 └──┘ Glowing transformation (crescita vertical energia)
 21 🌲🟩🟩🟩🟩💥🟢🟢🟢🟢🌳🌳✨💎✨🌳🌳🟢🟢🟢💥🟩🟩🟩🟩🌲
                           └────┘ └─┘ └────┘
-                          SW Tree      SE Tree
-22 🌲🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
-
-24 🌲🟩🟩🔵🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🔵🟩🟩🌲
+22 🌲🟩🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
+23 🌲🟩🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
+24 🌲🟩🟩🟩🔵🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🔵🟩🟩🌲
       └─┘ Borin SOLO!                           └─┘ PG3 (wounded)
-
-28 🌲🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
-
-30 🌲🟩🟩🟩🟩🟩💥💥💥🟢🟢🟢🔥🔥🔥🟢🟢💥💥💥🟩🟩🟩🟩🌲
+25 🌲🟩🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
+26 🌲🟩🟩🟩🟩🟩💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥🟩🟩🟩🟩🌲
+27 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
+28 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
+29 🌲🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🌲
+30 🌲🟩🟩🟩🟩🟩🟩💥💥💥🟢🟢🟢🔥🔥🔥🟢🟢💥💥💥🟩🟩🟩🟩🌲
                                 └────┘ Greater Fire Elemental (O30)
-
-32 🌲🟩🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🟩🟩🌲
-
-34 🌲🟩🟩🟩🟩🟩🟩🟩💥🔴🔴🔴🔴🔴🔴🔴💥🟩🟩🟩🟩🟩🟩🌲
+31 🌲🟩🟩🟩🟩🟩🟩💥💥💥🟢🟢🟢🟢🟢🟢🟢🟢💥💥💥🟩🟩🟩🟩🌲
+32 🌲🟩🟩🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🟩🟩🌲
+33 🌲🟩🟩🟩🟩🟩🟩🟩💥💥🟢🟢🟢🟢🟢🟢🟢💥💥🟩🟩🟩🟩🟩🟩🌲
+34 🌲🟩🟩🟩🟩🟩🟩🟩🟩💥🔴🔴🔴🔴🔴🔴🔴💥🟩🟩🟩🟩🟩🟩🟩🌲
                         └──────────────┘ 10 Drow Warriors advancing
-
-36 🌲🟩🟩🟩🟩🟩🟩🟩🟩🔴🟩🟩🟩🟩🟩🟩🔴🟩🟩🟩🟩🟩🟩🌲
+35 🌲🟩🟩🟩🟩🟩🟩🟩🟩💥🟢🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🌲
+36 🌲🟩🟩🟩🟩🟩🟩🟩🟩🟩🔴🟩🟩🟩🟩🟩🟩🔴🟩🟩🟩🟩🟩🟩🟩🌲
                       └─┘ Ogre 1           └─┘ Ogre 2 (flanks)
-
-38 🌲🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⚫🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🌲
+37 🌲🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🌲
+38 🌲🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⚫🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🌲
                               └─┘ WYRMLORD (preparing charge Round 37!)
 
       SUD ↓
 
-SCALA GRID: 1 quadrato = 1.5m × 1.5m
-DIMENSIONI TOTALI MAPPA: 40 colonne × 40 righe = 60m × 60m
+SCALA GRID: 1 quadrato = 1,5 m × 1,5 m
+DIMENSIONI TOTALI MAPPA: 26 colonne (A-Z) × 29 righe (10-38) = 39 m × 43,5 m
 ```
+
+> ⚠️ **Griglia ridisegnata il 2026-09-04** (ADR-0043 §4). L'intestazione
+> dichiarava *«40 colonne × 40 righe = 60m × 60m»* e la griglia disegnata era
+> **sparsa e irregolare**: 14 righe campione invece di 29 contigue, e larghezze
+> che andavano da 24 a 26 celle. Ora è una griglia vera, **26 colonne (A-Z) ×
+> 29 righe (10-38)**, che è la larghezza che tutte le coordinate del testo
+> usano già (*«Col O»*, *«Col L + S»*, *«O30»*): nessun riferimento è cambiato.
+> Le righe che mancavano sono state riempite **col solo terreno**, letto per
+> colonna dalle righe disegnate sopra e sotto — nessun segnalino di creatura è
+> stato inventato, perché dove stavano le creature lo dice la sequenza
+> round-by-round qui sotto e non la mappa.
 
 ---
 

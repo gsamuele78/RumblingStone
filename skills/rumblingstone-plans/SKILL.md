@@ -41,6 +41,36 @@ sparse nelle PR mergiate e la storia si frammenta. Fonte delle regole:
 3. **una riga in `plans/CHANGELOG.md`**:
    `| data | piano | lotto | riferimento (PR #N / commit) | esito |`.
 
+## 🔍 Regola di apertura (obbligatoria — ADR-0044)
+
+**Prima di aprire un piano nuovo, si guardano quelli che ci sono.** Nell'ordine:
+
+1. **Leggi `plans/INDEX.md`.** È l'unico posto dove sta scritto cosa esiste e a
+   che punto è. Sono trentaquattro documenti: nessuno se li ricorda a memoria, e
+   chi non guarda riscrive.
+2. **Cerca per argomento, non per titolo.** Un piano che copre la tua richiesta
+   può chiamarsi in un altro modo:
+   `grep -ril "<parola chiave>" plans/*.md`.
+3. **Guarda anche le PR aperte.** Un piano può esistere e non essere ancora su
+   `main` — è successo con la #72, che stava in bozza da sei settimane con
+   dentro tre piani commerciali poi riscritti da zero da chi non l'aveva letta.
+4. **Poi decidi, e scrivi quale delle tre è**:
+
+| Se… | Allora |
+|---|---|
+| esiste un piano che copre l'argomento e il lavoro è **dentro il suo perimetro** | **espandi quel piano** con un lotto nuovo. Niente documento nuovo |
+| esiste un piano **vicino** ma il tuo lavoro è un difetto suo | **fix nel piano esistente**, e una riga nel CHANGELOG |
+| non esiste niente che copra l'argomento | **apri**, e nel documento nuovo scrivi **cosa hai guardato prima** e perché non bastava |
+
+⚠️ **Il §1 di un piano nuovo dice sempre cosa NON rifà.** Un piano che non
+dichiara i suoi confini contro i piani vicini si sovrappone entro un mese: è
+successo cinque volte, e le cinque sovrapposizioni sono finite in
+`PIANO-VENDIBILITA`.
+
+**PIANO o RICERCA?** Una **RICERCA** misura un divario e propone; un **PIANO**
+esegue. Se non sai ancora cosa fare, è una ricerca — e la ricerca può poi
+aprire un piano, citandosi.
+
 ## ✅ Rituale di chiusura PR (checklist per l'agente)
 
 Prima di aprire (o dichiarare pronta) una PR che completa lavoro pianificato:
