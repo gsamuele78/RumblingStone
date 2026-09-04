@@ -522,6 +522,45 @@ l'APG non aggiunge niente che cambi un incontro. Un buco dichiarato batte una
 riga messa per far quadrare la tabella — una variante «più cattiva» che non è
 più cattiva è il modo peggiore di sbagliare, perché non si vede.
 
+### §8-ter · La conseguenza sulla licenza, che il lotto aveva aperto in silenzio
+
+Domanda del DM mentre il lotto si chiudeva: *«perché lato licenza non si usa
+l'Open Game License?»*
+
+**Si usa già** — per la porzione che governa, ed è scritto in `LICENSES.md`
+§«Cosa queste due licenze NON coprono». L'OGL non può essere la licenza di tutto
+il repo perché licenzia **Open Game Content**, cioè meccanica di gioco: la prosa
+delle avventure, il canone della Cannath Vale, le mappe e gli script non sono
+OGC, e per quelli servono CC BY-NC-SA e MIT (ADR-0029).
+
+⚠️ **Ma la domanda ha scoperto un buco che questo lotto aveva allargato.**
+`LICENSES.md` dichiarava una sola fonte OGC, l'SRD 3.5. Le fonti sono **due**: i
+bersagli per GS e i template semplici vengono dal Bestiary PF1e da prima di
+questo piano, la ricchezza per livello del PNG dal Core Rulebook, e ora le liste
+di incantesimi dall'Advanced Player's Guide. Materiale Paizo porta le **sue**
+voci di Sezione 15, e nessuna era dichiarata.
+
+Peggio: nel repo **non c'era il testo dell'OGL**. La Sezione 10 dice che una
+copia della licenza va con ogni copia dell'OGC distribuito, e il cancello
+d'uscita di `GUIDA-CONDIVISIONE-IP` §7 lo chiedeva senza avere niente da
+allegare — una casella che si poteva citare ma non passare.
+
+Chiuso: `OGL.txt` con il testo integrale (verbatim dal PRD, che il DM ha
+consegnato) e la Sezione 15 ridotta alle **sei voci** del materiale da cui il
+repo deriva davvero. La catena del PRD ne ha 93 perché raccoglie tutta la linea
+Paizo più il Tome of Horrors; copiarle tutte dichiarerebbe un uso che qui non
+c'è, ed è il modo più rapido di rendere inutile una catena di copyright.
+
+Trovata per strada una citazione larga: `npc-building.md` elencava l'**NPC
+Codex** fra le fonti, ma non ne deriva niente — è un suggerimento di consulto al
+tavolo. Riscritta, perché una fonte dichiarata e non usata è una voce di Sezione
+15 che qualcuno prima o poi aggiunge per scrupolo.
+
+⚠️ **Da decidere al tavolo**: se questa estensione del perimetro OGC meriti un
+ADR suo o basti la riga in `LICENSES.md`. ADR-0029 stabilisce già il principio
+(«l'OGC resta sotto OGL»); qui si nomina una seconda fonte, e la differenza è
+sottile abbastanza da essere una scelta del DM.
+
 ---
 
 ## §9 · PROPOSTA — Lotto J: i template semplici di PF1e

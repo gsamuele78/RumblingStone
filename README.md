@@ -153,8 +153,9 @@ This project contains private lore adaptations based on *Red Hand of Doom*. Mech
 **Licenze, due e col taglio dichiarato** ([`LICENSES.md`](LICENSES.md), [ADR-0029](plans/adr/ADR-0029-licenza-doppia-testo-e-script.md)):
 il **testo** (avventure, canone, guide, skill) è **CC BY-NC-SA 4.0**; gli **strumenti** in `scripts/`
 sono **MIT**. La regola per i casi di confine: se lo legge un essere umano al tavolo è testo, se lo
-esegue una macchina è strumento. ⚠️ Il contenuto derivato dall'**SRD 3.5 resta Open Game Content sotto
-OGL 1.0a**: chi lo ridistribuisce si porta dietro la Sezione 15. E i componenti di terzi vendorizzati
+esegue una macchina è strumento. ⚠️ Il contenuto derivato dall'**SRD 3.5 e da Pathfinder 1e resta
+Open Game Content sotto OGL 1.0a**: chi lo ridistribuisce si porta dietro la Sezione 15, che con il
+testo della licenza sta in [`OGL.txt`](OGL.txt). E i componenti di terzi vendorizzati
 (`droplet`, `in-dexter`, `systematic-debugging`) tengono la loro.
 
 Il repo è a **uso privato / non commerciale**: contiene IP di terzi (Wizards of the Coast / Forgotten Realms non-SRD) che nessuna licenza dell'autore può sanare, e l'arco "Palio di Channathgate" evoca segni tutelati del Palio di Siena. La posture per scenario d'uso (privato OK · pubblicazione gratuita a rischio basso · commerciale non conforme senza bonifiche) e la relativa checklist sono in [`plans/adr/ADR-0005`](plans/adr/ADR-0005-confini-ip-uso-non-commerciale.md) e nel rapporto `09_.../Arco-Post-Hammerfist-P2D-PALIO-VERIFICA-LEGALE-IP.md`.
