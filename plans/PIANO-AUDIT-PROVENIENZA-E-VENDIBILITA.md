@@ -1,6 +1,10 @@
 # PIANO — Audit di provenienza e vendibilità del repo
 
 > **Stato**: 🔵 **proposta, non autorizzata** · **Aperto**: 2026-09-04
+> **Decisioni del DM (2026-09-04, §6)**: si resta su **3.5 e PF1e** — 5e e PF2e
+> più avanti; **il cancello di qualità viene prima di quello di mercato**; la
+> segmentazione (prodotto unico o più prodotti) si decide **dopo** aver misurato
+> la qualità, non prima.
 > **Richiesta-fonte (DM, 2026-09-04)**: *«c'è un obiettivo commerciale, vorrei
 > venderlo se possibile: tutto l'AP completo, gli standalone, e in parte
 > dividendo il tool per DM, il server MCP e il generatore. Per il momento 3.5 e
@@ -248,18 +252,100 @@ scelta di regime per linea di prodotto (che è dove entra la decisione 5e).
 
 ---
 
-## §6 · Cosa resta da decidere, e va deciso dal DM
+## §6 · Le decisioni prese, e quelle che restano
 
-1. **La licenza degli strumenti.** MIT permette a chiunque di rivendere. Se la
-   linea 1 è seria, la scelta (doppia licenza? servizio ospitato? MIT e si vende
-   il servizio?) va fatta **prima** che il codice circoli.
-2. **L'ordine fra 5e e l'audit.** Se il 5e è la porta più larga e nel repo non
-   c'è, forse il primo prodotto vendibile non è un pezzo dell'esistente: è un
-   supplemento nuovo, in 5e, sotto CC BY 4.0, costruito su un sistema originale
-   della riga 3. Costerebbe meno dell'audit completo e produrrebbe ricavo prima.
-   L'audit resta necessario, ma forse non è il **primo** lavoro.
-3. **La provenienza delle tavole raster** (ADR-0005). Blocca il lotto A.
-4. **Che cosa si vende, per davvero.** «Un po' di revenue» da un modulo
-   d'avventura indipendente è un ordine di grandezza diverso da «revenue» da uno
-   strumento in abbonamento. Le due cose vogliono lavori diversi, e sapere quale
-   si insegue cambia l'ordine dei lotti.
+> **Risposte del DM, 2026-09-04**, riportate qui perché il piano si legga da solo.
+
+1. **La licenza degli strumenti.** → **ancora aperta.** Resta il punto più urgente
+   in senso stretto: MIT lascia rivendere a chiunque, e la scelta va fatta prima
+   che il codice circoli, non dopo.
+2. **L'ordine fra 5e e audit.** → **si resta su 3.5 e PF1e**; 5e e PF2e si vedono
+   poi. ⚠️ Questa risposta **supera** la proposta che §2 faceva («il 5e è la porta
+   più larga, forse il primo prodotto va lì»): quella puntava al ritorno più
+   rapido, non al prodotto migliore. La mappa dei regimi in §2 resta valida come
+   riferimento per quando la domanda si riaprirà.
+3. **La provenienza delle tavole raster.** → aperta, e blocca il lotto A.
+4. **Che cosa si vende.** → **si decide dopo**, e la ragione del DM è quella
+   giusta: *«prima il prodotto o i prodotti devono raggiungere una qualità
+   comparabile ai prodotti commerciali equivalenti»*. La segmentazione — un
+   prodotto solo o più prodotti su pubblici diversi — è una domanda di mercato, e
+   non si risponde su materiale che non ha ancora passato il proprio metro.
+
+---
+
+## §7 · Il cancello di qualità, che ora viene prima
+
+La decisione 4 rende la qualità una **precondizione del piano**, non un suo
+capitolo. E la cosa notevole è che il repo ha già i tre metri per misurarla: sono
+stati costruiti tutti, in momenti diversi, e nessuno è mai stato letto insieme
+agli altri.
+
+| Asse | Il metro | Dove sta | Lettura di oggi |
+|---|---|---|---|
+| **Profondità del contenuto** | standard dei master definitivi, benchmark dichiarato **RHoD + AP Paizo** | skill `rumblingstone-module-standard` (checklist vincolante, PR #61) | esiste, ed esiste un esemplare che lo passa (`ARC07-DEF-1`). **Quanti altri lo passino non è mai stato misurato** |
+| **Il libro fisico** | la ricerca sul livello editoriale | `RICERCA-AUDIT-COMPONENTI-E-LIVELLO-EDITORIALE-2026-08` | misurata: **cinque difetti verificati**, D1 e D4 a impatto alto |
+| **Il gioco** | ciclo **alfa → beta → collaudato** | skill `rumblingstone-playtest` §6 | il **Drappo è ad alfa**; gli archi della campagna **non hanno marcatore** |
+
+### ⚠️ Il difetto che da solo impedisce di consegnare qualsiasi cosa
+
+Il **D1** della ricerca di agosto: *le immagini non entrano nel volume da stampa*.
+Il convertitore markdown→Typst non gestisce `![alt](path)`, la sintassi cade nella
+regola dei link, e l'immagine diventa **il testo dell'alt preceduto da un punto
+esclamativo** — `!Stemma Oca`, `!Piazza del Palio`. Tredici righe così sul manifest
+del Palio, sei ritratti così sul fascicolo giocatori del Drappo.
+
+Nessun volume di questo repo è consegnabile finché quel difetto è aperto, e non è
+una questione di rifinitura: è un PDF in vendita che al posto delle illustrazioni
+stampa il loro nome. Insieme al **D4** — nessun gate CI sulla stampa, `typst` non è
+installato in CI — significa che l'unico pezzo del repo dove una regressione
+arriva al DM invece che alla CI è proprio quello che diventerebbe il prodotto.
+
+### La trappola della decisione 4, che va detta
+
+«Prima la qualità, poi vediamo cosa è vendibile» è l'ordine giusto, con un rischio
+preciso: **si può spendere sforzo illimitato per rifinire l'unica cosa che non si
+può vendere comunque.** L'AP adattato da RHoD è quello (§0), e resta il pezzo più
+grosso e più tentante del repo.
+
+La qualità va quindi alzata **puntandola sulle linee di §1**, non sul repo in
+generale. E lì una cosa salta agli occhi: **il Drappo è l'unico artefatto che sia
+insieme vendibile e già passato per una passata di collaudo.** È il candidato
+naturale a essere il primo prodotto, non perché sia il più ambizioso, ma perché è
+il solo su cui le tre colonne della tabella si possono riempire tutte.
+
+### Cosa manca per leggere i tre metri, e non è molto
+
+Nessuno dei tre richiede lavoro nuovo di ricerca: due sono già scritti e uno è già
+misurato. Serve applicarli.
+
+- **Contenuto**: passare i master definitivi esistenti contro la checklist della
+  skill, e contare quanti la passano. È un audit, non una riscrittura.
+- **Libro**: le cinque riparazioni D1–D5 sono già specificate nella ricerca di
+  agosto, §2.1, e la ricerca stessa dice che *«nessuna decisione da prendere, sono
+  bug»*.
+- **Gioco**: il Drappo ha `PLAYTEST-ALFA.md` con audit e dry-run fatti, e il file
+  dichiara da sé cosa resta: *«questo non sostituisce il tavolo vero»*. Il passo a
+  **beta** è una serata con un gruppo vero e i tempi annotati — l'unica cosa in
+  tutto questo elenco che non si può fare al computer.
+
+⚠️ **Il gioco è l'asse su cui il repo è più indietro, ed è quello che un compratore
+sente per primo.** Un prodotto commerciale è stato giocato; il metro del repo dice
+`collaudato` solo dopo **due gruppi diversi**, e oggi nessun modulo della campagna
+porta il marcatore.
+
+### Che ordine avrebbe senso
+
+Non è un lotto di questo piano — è un piano suo, e va aperto quando il DM decide —
+ma la sequenza si vede già:
+
+1. **D1 e D4** (le immagini in stampa, il gate CI su Typst): sono bug specificati,
+   e senza il primo non esce niente;
+2. **il Drappo a beta**: una serata con un gruppo vero, che è anche l'unico modo di
+   sapere se il metro di qualità del repo corrisponde a quello di chi paga;
+3. **l'audit del contenuto** contro la checklist, per sapere quanto dell'esistente
+   è già al livello e quanto va rifatto;
+4. **poi** la domanda sulla segmentazione, che a quel punto ha dei numeri sotto.
+
+E l'audit di provenienza dei lotti A–C resta necessario prima di **vendere**, non
+prima di **migliorare**: le due catene di lavoro sono indipendenti e possono
+correre in parallelo.
