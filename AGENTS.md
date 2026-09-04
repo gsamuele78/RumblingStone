@@ -66,32 +66,90 @@ regenerate via `dm.py recap --hype` / `dm.py handout`, never edit by hand.
 
 ## Skills
 
-This repo ships focused skills plus one legacy meta-router.
-AI agents that support SKILL.md will discover them automatically:
+**Il principio, prima della tabella.** Prima di produrre qualunque cosa,
+chiediti **chi la leggerà** e **in che forma uscirà**. Quelle due risposte —
+non l'argomento — scelgono la skill. Un mostro descritto in un booklet da
+stampare e lo stesso mostro dentro `Bestiario/` non vogliono lo stesso
+apparato; un ADR e un read-aloud sono entrambi prosa italiana e seguono norme
+**opposte** (ADR-0035).
 
-- `skills/dnd-35-srd/`: pure d20 SRD mechanics
-- `skills/forgotten-realms-lore/`: Faerûn 1372 DR canon
-- `skills/rumblingstone-campaign/`: this campaign (PCs, artifacts, arcs, coherence)
-- `skills/rumblingstone-narrative-style/`, **mandatory for all content generation**: nine-pillar style engine (Salvatore prose, LotR depth, Casa di Davide destiny, Andor intrigue, GoT politics, Mercer table technique, BG3 echoes, BG1/2 quest design, il caso ricomposto, anchored on Eco), PC protagonism in good and evil
-- `skills/rumblingstone-mapmaking/`: map generation workflow (Watabou, templates, VTT export)
-- `skills/rumblingstone-automation/`, `dm.py` CLI + session-state pipeline: session end wizard, per-PG recaps, next-session brief, canon writes only under the ADR-0007 triple constraint (group branch + confirmed diff + `auto:` regions)
-- `skills/rumblingstone-plans/`: work-plan archive conventions (INDEX, gates, ADRs)
-- `skills/rumblingstone-playtest/`, **come si collauda**: audit meccanico, dry-run cronometrato, schede di feedback, ciclo alfa → beta → collaudato ([ADR-0018](plans/adr/ADR-0018-apparato-uso-obbligatorio.md))
-- `skills/rumblingstone-art-direction/`, **il mestiere dell'art director**: cosa hanno in comune tutte le immagini di un set (ancora storica in pubblico dominio, schede-personaggio, lock di seed/luce/camera) e **quando un'immagine si butta** invece di tenerla perché «è già venuta» ([ADR-0019](plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md))
-- `skills/rumblingstone-debugging/`: systematic root-cause debugging for infrastructure ONLY (scripts/, CI, pytest, renderer, dm.py); vendored from obra/superpowers (MIT), policy in ADR-0010
-- `skills/pathfinder-1e-srd/`: Pathfinder 1e rules, simple templates, CR benchmarks, 3.5↔PF1e conversion
-- `skills/npc-villain-boosting/`: decision framework + workflow for boosting PNGs/villains/monsters
-- `skills/dnd-35-rules/`: legacy meta-router; points to the skills above
+La tabella qui sotto **illustra** il principio, non lo esaurisce: se il tuo
+compito non c'è, applica la domanda. Le skill marcate **obbligatorie** vanno
+caricate anche se il DM non le nomina — è il DM ad averlo chiesto, e non
+doverle chiedere è il punto.
 
-When any agent answers a question:
+### Cosa carico, in base a cosa sto per fare
 
-1. Match the question to the skill (rules / lore / campaign).
-2. Load that skill's `SKILL.md` first; follow its routing table.
-3. For campaign questions, also load `campaign/state.md` and
+| Sto per… | Carico (obbligatorie in **grassetto**) |
+|---|---|
+| Scrivere prosa che un **giocatore** leggerà o sentirà — read-aloud, handout, dialoghi, teaser, recap, echi | **`rumblingstone-narrative-style`** (+ il suo `references/italiano-nativo.md`, obbligatorio) |
+| Scrivere un **documento del repo** — guida, ADR, piano, README, corpo di PR, messaggio di commit | **`rumblingstone-prosa-documenti`** ⚠️ regole opposte alla riga sopra: non mescolarle |
+| Costruire o giocare un **caso**: mistero, indizi, enigma, ricomposizione, vicolo cieco | **`rumblingstone-indagine`** (sopra `narrative-style`, che resta il fondo) |
+| Consolidare un beat d'arco in un **master definitivo** di qualità AP | **`rumblingstone-module-standard`** |
+| **Impaginare**: booklet, manifest, PDF, tabella che si spezza, font, copertina, edizione da stampa | **`rumblingstone-editoria`** |
+| **Far uscire qualcosa dal repo**: pubblicare, condividere, consegnare, colophon, licenza, OGL, Product Identity, «si può vendere» | **`rumblingstone-edizione`** — il gate d'uscita si passa *prima* di consegnare |
+| Generare o correggere **immagini**: prompt, set coerente, seed/luce/camera, quando un'immagine si butta | **`rumblingstone-art-direction`** |
+| Disegnare o esportare una **mappa** (Watabou, template, UVTT) | **`rumblingstone-mapmaking`** |
+| **Potenziare** un PNG, un villain o un mostro | **`npc-villain-boosting`** — impone il tetto EL ≤ APL+4, il benchmark e il `Boost log:`. Mai potenziare in silenzio |
+| Rispondere su **regole** 3.5 | `dnd-35-srd` (+ `pathfinder-1e-srd` per template semplici, benchmark GS, conversioni 3.5↔PF1e) |
+| Rispondere su **lore** di Faerûn, 1372 DR | `forgotten-realms-lore` |
+| Rispondere su **questa campagna**: PG, artefatti, archi, coerenza | **`rumblingstone-campaign`** + `campaign/state.md` + `references/campaign-coherence.md` |
+| **Chiudere una sessione** o scrivere canone via script | **`rumblingstone-automation`** (unico ingresso: `python3 scripts/dm.py`) — vincolo triplo ADR-0007 |
+| **Collaudare**: audit meccanico, dry-run, schede di feedback, alfa → beta → collaudato | **`rumblingstone-playtest`** |
+| Aprire, aggiornare o chiudere un **piano di lavoro** | **`rumblingstone-plans`** (regola d'oro: piano + `INDEX.md` + `CHANGELOG.md` nello **stesso commit**) |
+| **Debuggare l'infrastruttura**: `scripts/`, CI, pytest, renderer, `dm.py` | `rumblingstone-debugging` — **solo** infrastruttura, mai contenuto |
+
+Due avvertenze che la tabella non può contenere:
+
+- **Le righe si sommano.** Un handout è player-facing *e* impaginato: vuole
+  `narrative-style` **e** `editoria`. Un modulo definitivo che contiene
+  un'indagine vuole `module-standard` **e** `indagine`.
+- **La coerenza batte lo stile.** Se `campaign-coherence` e una regola di
+  stile si contraddicono, vince la coerenza (regola 8 più sotto).
+
+### Inventario completo
+
+Diciotto skill. L'elenco è **verificato da un gate**
+([ADR-0041](plans/adr/ADR-0041-instradamento-delle-skill-con-un-gate.md)):
+`validate_skills.py` fallisce se una directory con `SKILL.md` non è citata qui,
+o se questo documento cita una skill che non esiste.
+
+⚠️ Nessun agente «scopre» queste skill da solo. Alcuni leggono le descrizioni
+del frontmatter, altri caricano solo ciò che un documento gli nomina, altri
+non hanno alcun meccanismo di scoperta. È questa sezione a instradarli.
+
+| Skill | Che cos'è |
+|---|---|
+| `skills/dnd-35-srd/` | meccaniche d20 SRD pure |
+| `skills/pathfinder-1e-srd/` | regole PF1e, template semplici, benchmark GS, conversione 3.5↔PF1e |
+| `skills/forgotten-realms-lore/` | canone di Faerûn, 1372 DR |
+| `skills/npc-villain-boosting/` | framework decisionale e workflow per potenziare PNG, villain e mostri |
+| `skills/rumblingstone-campaign/` | questa campagna: PG, artefatti, archi, coerenza |
+| `skills/rumblingstone-narrative-style/` | motore di stile a nove pilastri (prosa Salvatore, profondità LotR, destino Casa di Davide, intrigo Andor, politica GoT, tecnica di tavolo Mercer, echi BG3, quest design BG1/2, il caso ricomposto), protagonismo dei PG nel bene e nel male |
+| `skills/rumblingstone-indagine/` | come si costruisce e si gioca un **caso**: nodo d'indizio a tre strati, le sei porte, registro Acume/Perizia/Metodo (ADR-0022), ricomposizione, vicolo cieco |
+| `skills/rumblingstone-prosa-documenti/` | come si scrivono i **documenti** del repo perché non suonino generati a macchina — tic di composizione dell'IA, tropi inglesi da non importare |
+| `skills/rumblingstone-module-standard/` | standard di qualità dei master DEF: profondità, struttura, livello di finitura (benchmark: Red Hand of Doom + AP Pathfinder 1e) |
+| `skills/rumblingstone-editoria/` | il mestiere del layout designer e del tipografo: riquadri, blocchi statistiche, dove si tocca (nel tema, mai nel `.typ` generato) |
+| `skills/rumblingstone-edizione/` | il mestiere dell'editore: colophon, Product Identity / Open Content, **gate d'uscita** IP, versione/ristampa/errata |
+| `skills/rumblingstone-art-direction/` | il mestiere dell'art director: cosa hanno in comune le immagini di un set, e quando un'immagine si butta ([ADR-0019](plans/adr/ADR-0019-licenza-dei-pesi-non-del-software.md)) |
+| `skills/rumblingstone-mapmaking/` | workflow di generazione mappe: Watabou, template, export VTT |
+| `skills/rumblingstone-automation/` | CLI `dm.py` e pipeline sessione→stato: wizard di fine sessione, recap per PG, brief; scritture di canone solo sotto il vincolo triplo ADR-0007 |
+| `skills/rumblingstone-playtest/` | come si collauda: audit meccanico, dry-run cronometrato, schede di feedback, ciclo alfa → beta → collaudato ([ADR-0018](plans/adr/ADR-0018-apparato-uso-obbligatorio.md)) |
+| `skills/rumblingstone-plans/` | convenzioni dell'archivio dei piani: INDEX, gate, ADR |
+| `skills/rumblingstone-debugging/` | debugging sistematico per root cause, **solo infrastruttura**; vendorizzata da obra/superpowers (MIT), politica in ADR-0010 |
+| `skills/dnd-35-rules/` | meta-router legacy: rimanda alle skill qui sopra |
+
+### Quando un agente risponde
+
+1. Applica il principio: **chi legge, in che forma esce**. Poi guarda la
+   tabella per compito.
+2. Carica il `SKILL.md` della skill scelta **per primo**; segui la sua tabella
+   di routing interna.
+3. Per domande di campagna, carica anche `campaign/state.md` e
    `skills/rumblingstone-campaign/references/campaign-coherence.md`.
-4. Cite sources: SRD section, FRCS p.X, or `[Private — Red Hand of Doom, p.X]`.
-5. **Never invent** stat blocks, spell effects, NPC stats, or artifact powers.
-   Flag as `[INFERRED — needs DM confirmation]` instead.
+4. Cita le fonti: sezione SRD, FRCS p.X, oppure `[Private — Red Hand of Doom, p.X]`.
+5. **Non inventare mai** blocchi statistiche, effetti di incantesimi, statistiche
+   di PNG o poteri di artefatti. Marca `[INFERRED — needs DM confirmation]`.
 
 ---
 

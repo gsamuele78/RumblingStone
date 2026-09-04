@@ -10,6 +10,9 @@ Checks (hard errors, exit 1):
      relative path resolves to an existing file/dir (repo-relative fallback).
   3. Every data YAML in scripts/ (catalogs, alliances, loot, map templates)
      parses with yaml.safe_load.
+  4. AGENTS.md routes every skill, both directions (ADR-0041):
+     - every skills/<name>/ with a SKILL.md is cited in AGENTS.md
+     - every skills/<name>/ cited in AGENTS.md exists on disk
 
 Warnings (printed, exit 0):
   - reference files not mentioned anywhere in their skill's SKILL.md
@@ -117,6 +120,41 @@ def check_yaml_data(root: Path) -> list[str]:
     return errors
 
 
+SKILL_REF_RE = re.compile(r"skills/([A-Za-z0-9_-]+)/")
+
+
+def check_agents_routing(root: Path) -> list[str]:
+    """ADR-0041: AGENTS.md instrada ogni skill, e non ne cita di inesistenti.
+
+    Il controllo e' bidirezionale di proposito. La direzione skill -> documento
+    prende l'omissione (una skill nuova che nessuno ha instradato). La direzione
+    documento -> skill prende il residuo (una skill rinominata o rimossa che
+    lascia in AGENTS.md un puntatore morto). Il gate non giudica il testo:
+    sa contare, e conta la sola cosa che si e' rotta davvero.
+    """
+    errors: list[str] = []
+    agents = root / "AGENTS.md"
+    if not agents.exists():
+        return ["AGENTS.md: assente — non si puo' verificare l'instradamento (ADR-0041)"]
+    text = agents.read_text(encoding="utf-8")
+
+    on_disk = {d.name for d in (root / "skills").iterdir()
+               if d.is_dir() and (d / "SKILL.md").exists()}
+    cited = set(SKILL_REF_RE.findall(text))
+
+    for name in sorted(on_disk - cited):
+        errors.append(
+            f"AGENTS.md: la skill 'skills/{name}/' esiste ma non e' instradata "
+            f"(ADR-0041 — aggiungila alla tabella per compito e all'inventario)"
+        )
+    for name in sorted(cited - on_disk):
+        errors.append(
+            f"AGENTS.md: cita 'skills/{name}/' che non esiste su disco "
+            f"(ADR-0041 — puntatore morto: rinominata o rimossa?)"
+        )
+    return errors
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument(
@@ -132,7 +170,8 @@ def main() -> int:
     skill_errors, warnings = check_skills(root)
     link_errors = check_links(root)
     yaml_errors = check_yaml_data(root)
-    errors = skill_errors + link_errors + yaml_errors
+    routing_errors = check_agents_routing(root)
+    errors = skill_errors + link_errors + yaml_errors + routing_errors
     n_skills = len(list((root / "skills").glob("*/SKILL.md")))
 
     if args.json:

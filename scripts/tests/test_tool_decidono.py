@@ -70,10 +70,17 @@ class BaseDecisione(unittest.TestCase):
 class TestValidateSkills(BaseDecisione):
     """Il quinto gate della CI, che il lotto B aveva lasciato fuori."""
 
-    def _skill(self, root: Path, frontmatter: str) -> None:
+    def _skill(self, root: Path, frontmatter: str, instrada: bool = True) -> None:
         d = root / "skills" / "finta"
         d.mkdir(parents=True)
         (d / "SKILL.md").write_text(frontmatter, encoding="utf-8")
+        # ADR-0041: un repo con una skill non instradata in AGENTS.md non e' sano.
+        # Il mini-repo lo istrada, cosi' ogni test qui sotto boccia per il proprio
+        # difetto e non per l'instradamento mancante.
+        if instrada:
+            (root / "AGENTS.md").write_text(
+                "## Skills\n\n| Skill | Che cos'e' |\n|---|---|\n"
+                "| `skills/finta/` | una skill di prova |\n", encoding="utf-8")
 
     def test_una_skill_sana_passa(self):
         with cartella() as d:
@@ -94,6 +101,24 @@ class TestValidateSkills(BaseDecisione):
         with cartella() as d:
             self._skill(d, "---\nname: finta\ndescription: Una skill di prova.\n---\n\n"
                            "# Finta\n\nVedi [le regole](references/non-esiste.md).\n")
+            self.assertEsce("validate_skills", 1, esegui("validate_skills.py", "--repo-root", str(d)))
+
+    def test_skill_non_instradata_in_agents_viene_bocciata(self):
+        """ADR-0041: la skill c'e' su disco e AGENTS.md non la nomina."""
+        with cartella() as d:
+            self._skill(d, "---\nname: finta\ndescription: Una skill di prova.\n---\n\n# Finta\n",
+                        instrada=False)
+            (d / "AGENTS.md").write_text("## Skills\n\nnessuna riga.\n", encoding="utf-8")
+            self.assertEsce("validate_skills", 1, esegui("validate_skills.py", "--repo-root", str(d)))
+
+    def test_puntatore_morto_in_agents_viene_bocciato(self):
+        """ADR-0041, l'altra direzione: AGENTS.md nomina una skill che non c'e'."""
+        with cartella() as d:
+            self._skill(d, "---\nname: finta\ndescription: Una skill di prova.\n---\n\n# Finta\n")
+            agents = d / "AGENTS.md"
+            agents.write_text(agents.read_text(encoding="utf-8")
+                              + "| `skills/sparita/` | rinominata e mai aggiornata |\n",
+                              encoding="utf-8")
             self.assertEsce("validate_skills", 1, esegui("validate_skills.py", "--repo-root", str(d)))
 
     def test_il_repo_vero_passa(self):
