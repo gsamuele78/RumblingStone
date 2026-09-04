@@ -1,7 +1,10 @@
 # PIANO — Un generatore di creature e PNG dalle tabelle
 
-> **Stato**: 🟡 **A→H chiusi** (2026-09-03); resta il **lotto I**, bloccato
-> dalle tre domande di §7.6.
+> **Stato**: ✅ **A→I chiusi** (2026-09-03). Le tre domande di §7.6 hanno avuto
+> risposta e il lotto I è fatto: 21 celle, 18 liste, `ranger`/`paladino`/`bardo`
+> che prima il generatore non sapeva costruire, e la variante PF1e sugli
+> incantesimi. **Aperti**: i lotti **J** e **K**, proposti in §9 e §10 su
+> richiesta del DM, non ancora autorizzati.
 > **Il debito del Bestiario è chiuso: 157 schede su 157 sistemate.** · **Aperto**: 2026-09-02 · **Avviato**: 2026-09-03
 > **Decisioni del DM (§5)**: taratura **SRD 3.5 di norma, PF1e come variante
 > più cattiva**; il generatore serve per **quello che nel Bestiario non c'è**;
@@ -248,15 +251,61 @@ comparivano in **zero** guide e **zero** skill.
   potenziare presuppone qualcosa da potenziare;
 - skill `rumblingstone-automation`: le due opzioni di `suggest_encounter`.
 
-### ⬜ Lotto I — Gli incantatori per lista di classe e funzione
+### ✅ Lotto I — Gli incantatori per lista di classe e funzione
 La revisione che nasce dal difetto dei due druidi: le liste vanno per **lista di
-classe**, non per ruolo né per tradizione. Diciassette liste. La proposta per
-esteso, con la matrice e le domande aperte, è in **§7**.
-**Accettazione**: ogni incantesimo di ogni lista appartiene davvero a quella
-classe, verificato da un test; nessuna classe riceve la lista di un'altra; le due
-schede ripulite (`arci-druido-circolo-cr14`, `druid-bear-ally-cr12`) tornano
-complete.
-**Bloccato da**: le tre domande di §7.6 — il DM deve rispondere prima.
+classe**, non per ruolo né per tradizione. La proposta per esteso, con la matrice
+e le domande, è in **§7**; le risposte del DM in **§7.6**.
+
+**✅ Chiuso 2026-09-03.** `scripts/dmcore/incantesimi.py` — **21 celle servite da
+18 liste**, perché mago e stregone condividono la lista (nel SRD *è* la stessa, e
+due copie divergerebbero al primo ritocco). Il ripiego, quando una cella non
+esiste nel gioco, resta **dentro la stessa classe** e lo scrive nel conto: era
+esattamente il vecchio `LISTA_DI_RIPIEGO` a mandare un ruolo sulla lista di
+un'altra classe.
+
+**Quello che il piano non aveva previsto, e che è costato più delle liste**:
+
+| Cosa | Perché il piano non l'aveva visto |
+|---|---|
+| **bardo, ranger e paladino non avevano una griglia** in `tabelle.py` | §8 diceva «le griglie ci sono già». Ce n'erano cinque su otto: senza `BARDO`, `BARDO_CONOSCIUTI`, `RANGER` e `PALADINO` il generatore non poteva costruire un bardo — e `lomyn-redtongue-bardo4-cr3` è nel Bestiario da sempre |
+| ⚠️ **il paladino lanciava su Carisma** in `dnd-35-srd/references/classes.md` | è la regola di **PF1e**. Nel SRD 3.5 la CD è su **Saggezza**; il Carisma serve a Grazia Divina, Imposizione delle Mani e Punizione. Ogni paladino generato sarebbe uscito con la CD sbagliata *e* la caratteristica sbagliata al primo posto della matrice élite |
+| **livello dell'incantatore ≠ livello di classe** per ranger e paladino | `livello − 3`. Un paladino di 12° lancia da 9°: stampare 12 dà due punti di CD di troppo |
+| **un incantatore spontaneo non «prepara»** | il blocco diceva «Preparati» anche per bardo e stregone. È una parola, e la legge il DM al tavolo mentre decide cosa quella creatura può lanciare |
+
+**Le tre correzioni al piano stesso**, che vanno scritte perché il piano le
+sbagliava e qualcuno le rileggerà:
+
+1. **«17 liste» e «undici» erano tutt'e due sbagliati.** Contando la matrice di
+   §7.3: le ✅ sono **16**, le ○ **5** (contando ranger e paladino separati). Il
+   DM ha approvato ✅ + ○, cioè **21 celle**.
+2. ⚠️ **L'esempio di lista druidica in §7.4 conteneva quattro errori.**
+   *Frantumare* non è sulla lista del druido (è da mago, chierico e bardo);
+   *muro di spine* è al 5°, non al 4°; *muro di pietra* al 6°, non al 5°;
+   *tempesta vendicativa* al 9°, non all'8°. Il testo di §7.4 resta com'era, con
+   la nota qui accanto: era la proposta, e cancellarla nasconderebbe che una
+   lista scritta a memoria sbaglia comunque.
+3. ⚠️ **La diagnosi «*dito della morte* è un incantesimo da mago dato a un
+   druido» era falsa.** *Dito della morte* è sulla lista del druido, all'**8°**
+   livello (per il mago sta al 7°). Su quella scheda il difetto non era la
+   classe: era il **livello** — l'altro modo in cui una lista per ruolo
+   sbagliava, meno vistoso e più difficile da vedere al tavolo. L'ha trovato il
+   test, non la rilettura.
+
+**L'ancora, che è la parte che rende il test non circolare.** Le liste di classe
+del SRD stanno ora in `skills/dnd-35-srd/references/spells.md` §«Liste di
+classe», e la divisione del lavoro è netta: la skill dice *cosa quella classe può
+lanciare* (un fatto di regole), il modulo dice *cosa un controllore sceglie
+davvero* (una scelta di progetto). `test_incantesimi.py` verifica l'inclusione
+fra le due — 15 test, ~870 sotto-test.
+
+**Il residuo dichiarato**: l'**adepto**. È fuori dalle 21 celle approvate, e
+resta l'unica classe incantatrice per cui il generatore si rifiuta di scegliere.
+
+**Le due schede** (`arci-druido-circolo-cr14`, `druid-bear-ally-cr12`) sono
+tornate complete, con `funzione` e `seed` scritti in `fonte:` perché si rifacciano
+identiche.
+
+**La variante PF1e sugli incantesimi**, chiesta dal DM in corso d'opera: §8-bis.
 
 ---
 
@@ -355,11 +404,24 @@ promemoria.
 
 ### §7.6 · Le tre domande al DM
 
-1. **`artigliere` o `blaster`?** Cambia il nome dell'opzione.
-2. **Le 17 caselle, o meno?** Ranger e paladino servono al tuo tavolo, o le
-   ✅ bastano (undici)?
-3. **Le liste le scrivo io e le confermi tu**, come per il carattere — o le
-   preferisci scritte da te?
+> **Risposte ricevute il 2026-09-03.**
+
+1. **`artigliere` o `blaster`?**
+   → **`blaster`**, con `artigliere` mantenuto come **alias**: il nome nuovo è
+   quello canonico e finisce in `fonte:`, così due schede generate coi due nomi
+   restano confrontabili, ma nessun comando già scritto negli appunti si rompe.
+2. **Le 17 caselle, o meno?**
+   → **✅ + ○**, cioè tutte. Sono **21** celle, non 17 né 11 (vedi la correzione
+   nel lotto I): ranger e paladino compresi, con le loro liste ridotte a quattro
+   livelli.
+3. **Le liste le scrivo io e le confermi tu?**
+   → **Le propongo io**, come per il carattere, con il test di appartenenza a
+   fare da rete. ⚠️ **Da confermare in PR.**
+
+**E le due conferme che il §5 aveva lasciate appese:**
+
+4. **I sei ruoli** → **confermati** tutti e sei.
+5. **Le 24 terne di `CARATTERE`** → **confermate.**
 
 
 ---
@@ -390,3 +452,185 @@ rifatte.
 ADR-0033 (lo strumento propone, il DM scrive), ADR-0021 (il blocco è un dato).
 E la regola d'oro dei piani: checklist + `INDEX.md` + `CHANGELOG.md` **nello
 stesso commit** (skill `rumblingstone-plans`).
+
+
+---
+
+## §8-bis · La variante PF1e sugli incantesimi (chiesta in corso d'opera)
+
+> Richiesta del DM: *«se il DM vuole per la generazione la versione più potente
+> mantenendo il GS si possano usare gli incantesimi di Pathfinder 1e se più
+> potenti»*.
+
+Il meccanismo c'è: `--incantesimi pf1e`, che `--piu-cattivi` accende da sé
+(«più cattivo a pari GS» vale per il template e per la lista; due interruttori
+per una cosa sola sono due modi di dimenticarne uno). `--incantesimi srd` lo
+spegne tenendo il template.
+
+**Ma il perimetro è più stretto della richiesta, e la ragione va detta.** Sugli
+incantesimi condivisi **PF1e non è più forte: è pari o più debole**, e lo dice la
+tabella di compatibilità che questo repo ha già in
+`pathfinder-1e-srd/references/conversion-guide.md` — *grasso*, *polvere
+scintillante* e i *tentacoli neri* indeboliti via CMB e tiri salvezza, il «salva o
+muori» convertito in danno, il polimorfismo riscritto. Scambiare *palla di fuoco*
+con la *palla di fuoco* PF1e non compra niente: è lo stesso incantesimo. Vendere
+come «più cattivo» qualcosa di più debole sarebbe il modo peggiore di sbagliare:
+invisibile alla generazione, scoperto al tavolo.
+
+Quello che rende davvero più duro un incantatore PF1e a pari GS è, in ordine:
+
+1. gli incantesimi che in 3.5 **non esistono** — 55 righe, la linea della
+   *fossa*, *scirocco*, *saette*, *benedizione del fervore*, e per il paladino
+   tutta la linea del *fuoco* legata alla Punizione;
+2. il **+4 alle caratteristiche mentali** del template Advanced, che alza ogni CD
+   di 2. È l'effetto più grosso, e `--piu-cattivi` lo applicava già;
+3. le liste di **evocazione** PF1e, che offrono creature migliori per livello.
+
+⚠️ **Il controllo delle righe PF1e ha trovato tre errori**, dello stesso genere
+di quello per cui esiste tutto il lotto:
+
+- *ill omen* stava sulla lista di mago e non è un incantesimo da mago (è da
+  **strega**, psichico, mesmerista);
+- *stone call* stava al 3° ed è **sorcerer/wizard 2**;
+- *hungry pit* risultava introvabile a una prima estrazione automatica. C'è, al
+  5° da mago: il nome porta il pedice del componente focus e il parser lo
+  incollava al nome. **Un'assenza silenziosa dentro un'ancora è peggio di
+  un'ancora mancante**, perché il test passa lo stesso.
+
+E un quarto, nell'ancora stessa: i nomi PF1e portano la virgola **dentro**
+(*pain strike, mass*), e il separatore era la virgola. Sette voci si erano
+spezzate in «mass», «greater», «lesser». Anche questo passava il test, perché
+quelle voci fantasma erano *in più* e non *in meno*: nessuno le cercava. Ora il
+separatore è ` · ` e c'è una guardia che rifiuta un suffisso nudo.
+
+**Il DM ha risolto il blocco di rete consegnando le due pagine.**
+`pathfinder.d20srd.org` resta fuori dal criterio di rete dell'ambiente, ma le
+liste — core e Advanced Player's Guide — sono state passate come file, e da lì
+è nata l'ancora vera: `pathfinder-1e-srd/references/conversion-guide.md`
+§«PF1e spell lists», che tiene le liste **APG** per le sei classi. Sono gli
+incantesimi che PF1e *aggiunge*: la lista core di Pathfinder, nome per nome, è
+abbastanza vicina al SRD 3.5 che tenerla non servirebbe a niente.
+
+Con l'ancora, le righe sono passate da 21 a **55** e non c'è più nessuna riga
+non verificata: `test_incantesimi.py` le controlla tutte contro la sezione, e la
+verifica morde (provato iniettando una riga sbagliata a posta). Sono coperti
+anche il **paladino**, che prima non aveva nessuna riga, e i livelli che erano
+scoperti per mago, druido, bardo e ranger.
+
+⚠️ **Il chierico resta scoperto al 1°, 6° e 7°, ed è voluto**: a quei livelli
+l'APG non aggiunge niente che cambi un incontro. Un buco dichiarato batte una
+riga messa per far quadrare la tabella — una variante «più cattiva» che non è
+più cattiva è il modo peggiore di sbagliare, perché non si vede.
+
+### §8-ter · La conseguenza sulla licenza, che il lotto aveva aperto in silenzio
+
+Domanda del DM mentre il lotto si chiudeva: *«perché lato licenza non si usa
+l'Open Game License?»*
+
+**Si usa già** — per la porzione che governa, ed è scritto in `LICENSES.md`
+§«Cosa queste due licenze NON coprono». L'OGL non può essere la licenza di tutto
+il repo perché licenzia **Open Game Content**, cioè meccanica di gioco: la prosa
+delle avventure, il canone della Cannath Vale, le mappe e gli script non sono
+OGC, e per quelli servono CC BY-NC-SA e MIT (ADR-0029).
+
+⚠️ **Ma la domanda ha scoperto un buco che questo lotto aveva allargato.**
+`LICENSES.md` dichiarava una sola fonte OGC, l'SRD 3.5. Le fonti sono **due**: i
+bersagli per GS e i template semplici vengono dal Bestiary PF1e da prima di
+questo piano, la ricchezza per livello del PNG dal Core Rulebook, e ora le liste
+di incantesimi dall'Advanced Player's Guide. Materiale Paizo porta le **sue**
+voci di Sezione 15, e nessuna era dichiarata.
+
+Peggio: nel repo **non c'era il testo dell'OGL**. La Sezione 10 dice che una
+copia della licenza va con ogni copia dell'OGC distribuito, e il cancello
+d'uscita di `GUIDA-CONDIVISIONE-IP` §7 lo chiedeva senza avere niente da
+allegare — una casella che si poteva citare ma non passare.
+
+Chiuso: `OGL.txt` con il testo integrale (verbatim dal PRD, che il DM ha
+consegnato) e la Sezione 15 ridotta alle **sei voci** del materiale da cui il
+repo deriva davvero. La catena del PRD ne ha 93 perché raccoglie tutta la linea
+Paizo più il Tome of Horrors; copiarle tutte dichiarerebbe un uso che qui non
+c'è, ed è il modo più rapido di rendere inutile una catena di copyright.
+
+Trovata per strada una citazione larga: `npc-building.md` elencava l'**NPC
+Codex** fra le fonti, ma non ne deriva niente — è un suggerimento di consulto al
+tavolo. Riscritta, perché una fonte dichiarata e non usata è una voce di Sezione
+15 che qualcuno prima o poi aggiunge per scrupolo.
+
+⚠️ **Da decidere al tavolo**: se questa estensione del perimetro OGC meriti un
+ADR suo o basti la riga in `LICENSES.md`. ADR-0029 stabilisce già il principio
+(«l'OGC resta sotto OGL»); qui si nomina una seconda fonte, e la differenza è
+sottile abbastanza da essere una scelta del DM.
+
+---
+
+## §9 · PROPOSTA — Lotto J: i template semplici di PF1e
+
+> ⚠️ **Proposta, non autorizzata.** Nasce da una domanda del DM: *«ha senso
+> inserire i template (archetipi) di Pathfinder 1e per versioni potenziate dei
+> PNG e mostri della 3.5, quelli sotto licenza aperta e non chiusi da Paizo?»*
+
+**Sì per i template semplici. No per gli archetipi di classe**, e i due non sono
+la stessa cosa — è la prima distinzione da fare.
+
+| | Cos'è | Verdetto |
+|---|---|---|
+| **template semplice** (Advanced, Giant, Young, Celestial, Fiendish, Entropic, Resolute…) | una manciata di modificatori applicati a una creatura finita | **sì**: è aritmetica, si applica a un blocco 3.5 senza attrito, e uno lo usiamo già |
+| **archetipo di classe** (Two-Handed Fighter, Urban Ranger…) | scambia i privilegi di classe di una classe PF1e | **no**: importarli significa importare il telaio di classe di PF1e dentro il 3.5, che è la cosa che la guida di conversione dice di non fare |
+
+**Sulla licenza**, che è la parte della domanda a cui va risposto per primo: i
+template semplici sono **meccanica**, e la meccanica del PRD è Open Game Content
+sotto OGL 1.0a. La Product Identity di Paizo è un'altra cosa — i nomi propri di
+Golarion, le divinità, l'ambientazione, l'illustrazione, il marchio «Pathfinder».
+«Advanced», «Giant», «Young» sono termini meccanici generici: si importano. Il
+gate d'uscita resta quello della skill `rumblingstone-edizione`, e va passato
+**prima** di consegnare, non dopo.
+
+**Cosa costa.** Il repo ha già `ADVANCED` in `genera_creatura.py` e la sezione
+dei template semplici in `pathfinder-1e-srd/references/monster-advancement.md`.
+Il lotto è: generalizzare `--piu-cattivi` in `--template <nome>` (tenendo
+`--piu-cattivi` come alias di `--template advanced`, stessa disciplina della
+rinomina del lotto I), scrivere i cinque o sei template restanti come dati con la
+provenienza per riga, e un test per template che verifichi il conto e che il GS
+dichiarato resti quello chiesto.
+**Accettazione**: ogni template cita la sua riga d'ancora; applicarne uno e
+disfarlo torna al blocco di partenza; `fonte:` dice quale template e quanto vale
+in GS reale.
+
+---
+
+## §10 · PROPOSTA — Lotto K: l'incontro tarato sulla composizione del gruppo
+
+> ⚠️ **Proposta, non autorizzata.** Nasce da una domanda del DM: *«il generatore
+> ha qualcosa per generare il gruppo di incontro che lavora meglio contro un
+> gruppo di incantatori o guerrieri o misti? ha senso?»*
+
+**Oggi non c'è.** `suggest_encounter` sceglie per EL, fazione e ambiente: della
+composizione del party non sa niente, e nemmeno `genera_creatura`.
+
+**Ha senso, ma con una guardia, e la guardia è metà del lotto.** Uno strumento
+che *contrasta* il gruppo scrive, un incontro alla volta, il contrario di quello
+che questa campagna fa: la dottrina dello **Shine Time** dice che ogni PG deve
+avere la sua scena, e un incontro costruito per annullare l'incantatore è un
+incontro in cui quel giocatore sta fermo. Un generatore che ottimizza contro il
+party diventa design anti-giocatore per costruzione, e nessuno se ne accorge
+finché non è la terza sessione di fila.
+
+Quindi il criterio di progetto, prima del codice: **pressione, non contromisure.**
+
+| Composizione | Cosa si propone | Cosa NON si propone |
+|---|---|---|
+| molti incantatori | iniziativa alta, chi chiude la distanza, un TS sulla Volontà decente, terreno che rompe le linee di tiro | *silenzio* su tutta la scena, contromagia sistematica, immunità agli incantesimi |
+| molta mischia | portata, volo, terreno difficile, chi costringe a muoversi | nemici irraggiungibili per tutto lo scontro |
+| misto | una minaccia per asse, sfalsate nel tempo | tutto insieme al primo round |
+
+E una regola dura: **almeno un bersaglio su cui ogni PG ha una presa evidente**,
+verificata dal tool e scritta nella proposta. Se non riesce a produrla, si
+rifiuta invece di proporre l'incontro — lo stesso confine dell'adepto senza lista.
+
+**Cosa costa.** Un profilo del gruppo (che il repo ha già in `PG/` e in
+`campaign/state.md`), un punteggio di pressione per record del catalogo, e
+l'innesto in `suggest_encounter` come un'opzione, non come il comportamento di
+norma.
+**Accettazione**: a parità di seme l'output resta riproducibile; ogni proposta
+dichiara **per ogni PG** su cosa ha presa; il tool si rifiuta quando non ci
+riesce.

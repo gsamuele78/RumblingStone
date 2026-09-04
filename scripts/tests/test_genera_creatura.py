@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import genera_creatura as G  # noqa: E402
+from dmcore import incantesimi as INC  # noqa: E402
 from dmcore import tabelle as T  # noqa: E402
 
 #: Mostri del SRD 3.5, con i numeri del manuale. Sono le ancore: se il
@@ -121,7 +122,7 @@ class Incantatori(unittest.TestCase):
     """La parte che il DM ha chiesto per nome."""
 
     def test_gli_slot_vengono_dalla_tabella_di_classe(self):
-        sb, _ = G.genera(9, ruolo="artigliere", classe=("mago", 9),
+        sb, _ = G.genera(9, ruolo="blaster", classe=("mago", 9),
                          rng=random.Random(0))
         atteso = "/".join(str(n) for n in T.MAGO[9])
         self.assertTrue(any(atteso in v for v in sb.voci),
@@ -141,7 +142,7 @@ class Incantatori(unittest.TestCase):
                                          f"CD {cd} contro una riga da {atteso}")
 
     def test_lo_stregone_porta_gli_incantesimi_conosciuti(self):
-        sb, _ = G.genera(11, ruolo="artigliere", classe=("stregone", 11),
+        sb, _ = G.genera(11, ruolo="blaster", classe=("stregone", 11),
                          rng=random.Random(0))
         self.assertTrue(any("conosciuti" in v for v in sb.voci))
 
@@ -150,79 +151,159 @@ class Incantatori(unittest.TestCase):
                          rng=random.Random(0))
         self.assertTrue(any("domini" in v for v in sb.voci))
 
-    def test_gli_incantesimi_sono_scelti_dalla_lista_del_ruolo(self):
-        """Il criterio del lotto D: nessun incantesimo fuori lista di livello.
+    def _preparati(self, sb):
+        """La riga degli incantesimi scelti, comunque si chiami.
 
-        Estrarre a sorte da tutto il SRD produce un incantatore che al tavolo non
-        si sa giocare — un mago con «individuazione del veleno» preparato e
-        niente per il round in cui i PG gli arrivano addosso.
+        Un preparato li «prepara», un bardo e uno stregone li «conoscono»: sono
+        due etichette diverse per la stessa riga, e un test che ne cercasse una
+        sola passerebbe a vuoto sulla metà delle classi.
         """
-        for ruolo in ("controllore", "artigliere", "comandante"):
-            for livelli in (5, 9, 13, 17):
-                with self.subTest(ruolo=ruolo, livelli=livelli):
-                    sb, _ = G.genera(livelli, ruolo=ruolo, classe=("mago", livelli),
+        for v in sb.voci:
+            for etichetta in ("Preparati — ", "Conosciuti — "):
+                if v.startswith(etichetta):
+                    return v.removeprefix(etichetta)
+        return ""
+
+    def _voci_per_livello(self, riga):
+        for pezzo in riga.split(" · "):
+            liv = int(pezzo.split("°")[0])
+            for nome in pezzo.split(": ", 1)[1].split(", "):
+                yield liv, nome
+
+    def test_gli_incantesimi_vengono_dalla_lista_di_QUELLA_classe(self):
+        """Il criterio d'accettazione del lotto I.
+
+        La versione vecchia di questo test controllava contro `G.INCANTESIMI` —
+        cioè contro la lista del **ruolo**, che era il difetto stesso: un druido
+        con incantesimi da mago lo superava senza fare una piega. Ora il
+        confronto è con la lista della classe, e i nomi che non le appartengono
+        cadono.
+        """
+        casi = [("mago", "controllore"), ("mago", "blaster"),
+                ("chierico", "supporto"), ("druido", "controllore"),
+                ("druido", "blaster"), ("bardo", "controllore"),
+                ("stregone", "blaster")]
+        for classe, funzione in casi:
+            for livelli in (5, 9, 13):
+                with self.subTest(classe=classe, funzione=funzione, livelli=livelli):
+                    sb, _ = G.genera(livelli, ruolo="controllore",
+                                     classe=(classe, livelli), funzione=funzione,
                                      rng=random.Random(4))
-                    riga = next((v for v in sb.voci if v.startswith("Preparati")), "")
+                    riga = self._preparati(sb)
                     self.assertTrue(riga, "un incantatore senza incantesimi scelti")
-                    lista = G.INCANTESIMI[ruolo]
-                    for pezzo in riga.removeprefix("Preparati — ").split(" · "):
-                        liv = int(pezzo.split("°")[0])
-                        for nome in pezzo.split(": ", 1)[1].split(", "):
-                            self.assertIn(nome, lista[liv],
-                                          f"{nome} non è nella lista di {ruolo} "
-                                          f"al {liv}° livello")
+                    lista, _usata = INC.cella(classe, funzione)
+                    for liv, nome in self._voci_per_livello(riga):
+                        self.assertIn(nome, lista[liv],
+                                      f"«{nome}» non è nella lista di {classe} "
+                                      f"({funzione}) al {liv}° livello")
 
     def test_nessun_incantesimo_sopra_il_livello_lanciabile(self):
-        sb, _ = G.genera(5, ruolo="artigliere", classe=("mago", 5),
+        sb, _ = G.genera(5, ruolo="blaster", classe=("mago", 5),
                          rng=random.Random(1))
-        riga = next(v for v in sb.voci if v.startswith("Preparati"))
-        massimo = max(int(p.split("°")[0]) for p in
-                      riga.removeprefix("Preparati — ").split(" · "))
+        riga = self._preparati(sb)
+        massimo = max(liv for liv, _ in self._voci_per_livello(riga))
         self.assertEqual(massimo, T.livello_massimo(T.MAGO, 5))
 
-    def test_ogni_ruolo_incantatore_ha_la_sua_lista(self):
+    def test_ogni_ruolo_ha_una_funzione_da_incantatore(self):
+        """Un ruolo senza funzione finirebbe sul ripiego generico e nessuno se
+        ne accorgerebbe: la creatura uscirebbe comunque con degli incantesimi."""
         for ruolo in G.RUOLI:
             with self.subTest(ruolo=ruolo):
-                self.assertTrue(ruolo in G.INCANTESIMI or ruolo in G.LISTA_DI_RIPIEGO,
-                                "un ruolo senza lista né ripiego resta senza "
-                                "incantesimi, e un vuoto è peggio di una lista "
-                                "sbagliata di ruolo")
+                self.assertIn(ruolo, INC.FUNZIONE_DA_RUOLO)
+                self.assertIn(INC.FUNZIONE_DA_RUOLO[ruolo], INC.FUNZIONI)
 
-    def test_una_classe_senza_lista_non_prende_quella_di_un_altra(self):
-        """Il difetto trovato costruendo il Bestiario, e il piu' insidioso di
-        tutti: un druido usciva con *armatura magica* e *dito della morte* (mago)
-        o con *benedizione* e *santuario* (chierico). Il blocco sembrava
-        completo, e al tavolo il druido annunciava un incantesimo che non ha.
+    def test_il_druido_adesso_gli_incantesimi_li_prende(self):
+        """Il difetto per cui il lotto I esiste, girato: prima il druido usciva
+        vuoto per non uscire sbagliato, e il vuoto era il debito."""
+        for funzione in ("controllore", "blaster", "supporto", "utilita"):
+            with self.subTest(funzione=funzione):
+                sb, _ = G.genera(12, ruolo="controllore", classe=("druido", 12),
+                                 funzione=funzione, rng=random.Random(0))
+                riga = self._preparati(sb)
+                self.assertTrue(riga, "il druido è tornato vuoto")
+                nomi = {n for _, n in self._voci_per_livello(riga)}
+                for da_mago in ("armatura magica", "sonno", "palla di fuoco"):
+                    self.assertNotIn(da_mago, nomi)
+                for da_chierico in ("benedizione", "santuario", "scudo della fede"):
+                    self.assertNotIn(da_chierico, nomi)
 
-        Meglio un vuoto dichiarato che una lista di un'altra classe."""
-        for classe in ("druido", "adepto"):
-            for ruolo in ("controllore", "artigliere", "comandante", "bruto"):
-                with self.subTest(classe=classe, ruolo=ruolo):
-                    sb, _ = G.genera(12, ruolo=ruolo, classe=(classe, 12),
-                                     rng=random.Random(0))
-                    self.assertFalse(any(v.startswith("Preparati") for v in sb.voci),
-                                     f"{classe} non deve ricevere la lista di {ruolo}")
-                    self.assertTrue(any("da scegliere a mano" in v for v in sb.voci),
-                                    "il vuoto va dichiarato, non lasciato in silenzio")
+    def test_l_adepto_resta_l_unico_a_rifiutarsi(self):
+        """Il residuo dichiarato: fuori dalle 21 celle approvate dal DM, e il
+        rifiuto va dichiarato invece che lasciato in silenzio."""
+        sb, _ = G.genera(12, ruolo="comandante", classe=("adepto", 12),
+                         rng=random.Random(0))
+        self.assertFalse(self._preparati(sb))
+        self.assertTrue(any("da scegliere a mano" in v for v in sb.voci))
 
     def test_le_classi_coperte_gli_incantesimi_li_prendono(self):
-        """Il rifiuto vale per le classi scoperte, non per tutte."""
-        for classe in ("mago", "stregone", "chierico"):
+        for classe in ("mago", "stregone", "chierico", "druido", "bardo"):
             with self.subTest(classe=classe):
                 sb, _ = G.genera(9, ruolo="controllore", classe=(classe, 9),
                                  rng=random.Random(0))
-                self.assertTrue(any(v.startswith("Preparati") for v in sb.voci))
+                self.assertTrue(self._preparati(sb))
 
-    def test_le_liste_coprono_tutti_i_livelli(self):
-        for ruolo, lista in G.INCANTESIMI.items():
-            with self.subTest(ruolo=ruolo):
-                self.assertEqual(sorted(lista), list(range(0, 10)))
-                for liv, voci in lista.items():
-                    self.assertGreaterEqual(len(voci), 2, f"{ruolo} {liv}°")
+    def test_ranger_e_paladino_lanciano_da_tre_livelli_sotto(self):
+        """Il livello dell'incantatore non è il livello di classe, e un blocco
+        che li confonde ha la CD sbagliata di due punti."""
+        for classe in ("ranger", "paladino"):
+            with self.subTest(classe=classe):
+                sb, _ = G.genera(12, ruolo="comandante", classe=(classe, 12),
+                                 rng=random.Random(0))
+                riga = next(v for v in sb.voci if v.startswith("Incantatore"))
+                self.assertIn("Incantatore di livello 9", riga)
+                self.assertIn("livello di classe 12", riga)
+                self.assertTrue(self._preparati(sb))
+
+    def test_sotto_il_quarto_ranger_e_paladino_non_lanciano(self):
+        sb, _ = G.genera(3, ruolo="comandante", classe=("paladino", 3),
+                         rng=random.Random(0))
+        self.assertFalse(self._preparati(sb))
+        self.assertTrue(any("dal 4° livello di classe" in v for v in sb.voci))
+
+    def test_il_bardo_porta_i_suoi_conosciuti_non_quelli_dello_stregone(self):
+        sb, _ = G.genera(10, ruolo="comandante", classe=("bardo", 10),
+                         rng=random.Random(0))
+        riga = next(v for v in sb.voci if v.startswith("Incantesimi conosciuti"))
+        atteso = "/".join(str(n) for n in T.BARDO_CONOSCIUTI[10])
+        self.assertIn(atteso, riga)
+        self.assertNotEqual(T.BARDO_CONOSCIUTI[10], T.STREGONE_CONOSCIUTI[10])
+
+    def test_la_funzione_scavalca_quella_del_ruolo(self):
+        """I due assi sono davvero due: un bruto con livelli da chierico è un
+        chierico da guerra, e deve poter prendere la lista di supporto."""
+        a, _ = G.genera(9, ruolo="bruto", classe=("chierico", 9),
+                        rng=random.Random(2))
+        b, _ = G.genera(9, ruolo="bruto", classe=("chierico", 9),
+                        funzione="controllore", rng=random.Random(2))
+        self.assertNotEqual(self._preparati(a), self._preparati(b))
+        self.assertIn("funzione=supporto", a.fonte)
+        self.assertIn("funzione=controllore", b.fonte)
+
+    def test_gli_incantesimi_pf1e_solo_a_richiesta(self):
+        base, _ = G.genera(13, ruolo="blaster", classe=("mago", 13),
+                           rng=random.Random(6))
+        pf, conto = G.genera(13, ruolo="blaster", classe=("mago", 13),
+                             incantesimi_pf1e=True, rng=random.Random(6))
+        self.assertNotIn("PF1e:", self._preparati(base))
+        self.assertIn("PF1e:", self._preparati(pf))
+        self.assertTrue(any("PF1e" in r for r in conto.rincari),
+                        "un innesto PF1e non dichiarato nei rincari è invisibile")
+        self.assertIn("incantesimi=PF1e", pf.fonte)
+
+    def test_piu_cattivi_accende_anche_la_lista(self):
+        """«Più cattivo a pari GS» vale per il template e per la lista: due
+        interruttori per una cosa sola sarebbero due modi di dimenticarne uno."""
+        sb, _ = G.genera(13, ruolo="blaster", classe=("mago", 13),
+                         piu_cattivi=True, rng=random.Random(6))
+        self.assertIn("PF1e:", self._preparati(sb))
+        solo_template, _ = G.genera(13, ruolo="blaster", classe=("mago", 13),
+                                    piu_cattivi=True, incantesimi_pf1e=False,
+                                    rng=random.Random(6))
+        self.assertNotIn("PF1e:", self._preparati(solo_template))
 
     def test_gli_aumenti_ogni_quattro_livelli(self):
         """Senza, un mago di 9° usciva con Intelligenza 15."""
-        sb, _ = G.genera(9, ruolo="artigliere", classe=("mago", 9),
+        sb, _ = G.genera(9, ruolo="blaster", classe=("mago", 9),
                          rng=random.Random(0))
         intelligenza = int(re.search(r"Int (\d+)", sb.attributi).group(1))
         self.assertEqual(intelligenza, T.ELITE[0] + 9 // 4)

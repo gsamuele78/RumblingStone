@@ -33,19 +33,37 @@ lo esegue una macchina è strumento.**
 
 Sono tre cose, e ignorarle è il modo di trasformare una licenza in un problema.
 
-### 1. Il contenuto SRD 3.5 resta sotto OGL 1.0a
+### 1. Il contenuto SRD resta sotto OGL 1.0a — e non è solo 3.5
 
-Statblocchi, incantesimi, classi, oggetti magici e regole derivati dal **System
-Reference Document 3.5** sono **Open Game Content** e restano governati dalla
-**Open Game License 1.0a**, non da CC BY-NC-SA. Le due cose convivono nello
-stesso repo perché riguardano **porzioni diverse** del materiale: la prosa
+Statblocchi, incantesimi, classi, oggetti magici e regole derivati da un
+**System Reference Document** sono **Open Game Content** e restano governati
+dalla **Open Game License 1.0a**, non da CC BY-NC-SA. Le due cose convivono
+nello stesso repo perché riguardano **porzioni diverse** del materiale: la prosa
 originale è nostra e va sotto CC; ciò che deriva dall'SRD resta OGC.
 
-> **Chi ridistribuisce materiale di questo repo che contenga OGC** deve
-> accompagnarlo con la Sezione 15 dell'OGL (la catena delle dichiarazioni di
-> copyright). Non è un adempimento nostro finché il repo resta a uso privato: lo
-> diventa nel momento in cui qualcosa esce, ed è **parte del cancello d'uscita**
-> di [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) §7.
+Le fonti OGC sono **due**, e per un po' questo file ne dichiarava una sola:
+
+| Fonte | Cosa ne viene | Dove sta |
+|---|---|---|
+| **SRD 3.5** (d20 System Reference Document) | regole, incantesimi, classi, mostri, oggetti — il sistema su cui la campagna gira | ovunque |
+| **Pathfinder 1e** (PRD, OGL) | i bersagli per GS e i template semplici (Bestiary Table 1-1), la ricchezza per livello del PNG (Core Rulebook), le liste di incantesimi APG | `skills/pathfinder-1e-srd/`, `scripts/dmcore/tabelle.py`, `scripts/dmcore/incantesimi.py` |
+
+> **La catena della Sezione 15 sta in [`OGL.txt`](OGL.txt)**, insieme al testo
+> integrale della licenza. Sono **sei voci**: quelle del materiale da cui il repo
+> deriva davvero. La catena del PRD di Pathfinder ne ha 93, perché raccoglie
+> l'intera linea Paizo più il Tome of Horrors — copiarle tutte dichiarerebbe un
+> uso che qui non c'è, ed è il modo più rapido di rendere inutile una catena di
+> copyright.
+>
+> **Chi aggiunge materiale derivato da un'altra fonte OGC aggiunge la sua voce in
+> `OGL.txt`, nello stesso commit.** È la regola d'oro dei piani applicata a una
+> cosa che si dimentica più facilmente.
+>
+> Averlo scritto non è un adempimento finché il repo resta a uso privato: lo
+> diventa nel momento in cui qualcosa esce (Sezione 10: una copia della licenza va
+> con ogni copia dell'OGC), ed è **parte del cancello d'uscita** di
+> [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) §7.
+> Il file c'è perché quel cancello si possa **passare**, invece che solo citare.
 
 ### 2. I marchi altrui non si licenziano perché si nominano
 

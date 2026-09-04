@@ -199,7 +199,9 @@ Regola completa: `skills/rumblingstone-mapmaking/references/stile-illustrazione-
 - [ ] Se va in pubblico: nota di §3 in calce, niente `pregen-pcgen/`, niente verbatim non-SRD
 - [ ] Se ci sono illustrazioni: nessun nome di artista vivente, provenienza delle tavole nota
 - [ ] Se porta con sé dell'**Open Game Content** (statblocchi, incantesimi, classi,
-      oggetti derivati dall'SRD 3.5): ci va la **Sezione 15 dell'OGL 1.0a** — §1-bis
+      oggetti derivati dall'SRD 3.5 **o da Pathfinder 1e**): ci va il testo
+      dell'OGL 1.0a con la **Sezione 15**, e sta già scritto in
+      [`OGL.txt`](../../OGL.txt) — allegalo, non riscriverlo — §1-bis
 - [ ] Se c'è di mezzo del denaro: **fermati** e leggi §4
 
 ---

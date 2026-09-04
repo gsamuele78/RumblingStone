@@ -414,7 +414,7 @@ MESCOLA = [
     ("bruto", "humanoid", "medium"), ("bruto", "giant", "large"),
     ("schermagliatore", "humanoid", "medium"), ("tiratore", "humanoid", "medium"),
     ("comandante", "humanoid", "medium"), ("controllore", "monstrous humanoid", "medium"),
-    ("artigliere", "aberration", "medium"),
+    ("blaster", "aberration", "medium"),
 ]
 
 

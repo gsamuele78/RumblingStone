@@ -36,7 +36,12 @@ PROVENIENZA = {
     "ELITE": "SRD 3.5, matrice elite; PF1e la chiama «heroic» e sono gli stessi numeri",
     "BASIC": "SRD 3.5, matrice standard; PF1e la chiama «basic»",
     "INCANTESIMI": "SRD 3.5, tabelle delle classi incantatrici",
-    "CONOSCIUTI": "SRD 3.5, «Table: Sorcerer Spells Known»",
+    "CONOSCIUTI": "SRD 3.5, «Table: Sorcerer Spells Known» e «Table: Bard "
+                   "Spells Known»",
+    "LISTE_INCANTESIMI": "SRD 3.5, le liste di classe — l'ancora in repo è "
+                         "`dnd-35-srd/references/spells.md` §Liste di classe",
+    "PF1E_SOLO": "PF1e PRD/OGL, incantesimi senza un equivalente 3.5 — l'ancora "
+                 "è `pathfinder-1e-srd/references/conversion-guide.md`",
     "PER_GS": "PF1e Bestiary Table 1–1 — il SRD 3.5 non ha un equivalente",
     "PASSI_GS": "PF1e Bestiary, appendice «Monster Advancement»",
     "EQUIPAGGIAMENTO": "PF1e, colonna «heroic NPC» — il SRD 3.5 dà la ricchezza "
@@ -303,6 +308,102 @@ ADEPTO = _griglia("""
 20: 3 3 3 3 3 3
 """)
 
+#: SRD «Table: The Bard» — l'incantatore ibrido, spontaneo, che si ferma al 6°
+#: livello d'incantesimo. Ancore verificate in repo: 1, 5, 10, 15, 20
+#: (`dnd-35-srd/references/classes.md` §Bard).
+#: ⚠️ Il bardo serve davvero: `Bestiario/png/lomyn-redtongue-bardo4-cr3.md` è un
+#: bardo, e fino al lotto I il generatore non sapeva costruirlo.
+BARDO = _griglia("""
+1: 2
+2: 3 0
+3: 3 1
+4: 3 2 0
+5: 3 3 1
+6: 3 3 2
+7: 3 3 2 0
+8: 3 3 3 1
+9: 3 3 3 2
+10: 3 3 3 2 0
+11: 3 3 3 3 1
+12: 3 3 3 3 2
+13: 3 3 3 3 2 0
+14: 4 3 3 3 3 1
+15: 4 4 3 3 3 2
+16: 4 4 4 3 3 2 0
+17: 4 4 4 4 3 3 1
+18: 4 4 4 4 4 3 2
+19: 4 4 4 4 4 4 3
+20: 4 4 4 4 4 4 4
+""")
+
+#: SRD «Table: Bard Spells Known». Come per lo stregone: un bardo non prepara,
+#: e la lista **è** la creatura.
+BARDO_CONOSCIUTI = _griglia("""
+1: 4 2
+2: 5 3
+3: 6 4
+4: 6 4 2
+5: 6 4 3
+6: 6 4 4
+7: 6 5 4 2
+8: 6 5 4 3
+9: 6 5 4 4
+10: 6 5 5 4 2
+11: 6 6 5 4 3
+12: 6 6 5 4 4
+13: 6 6 5 5 4 2
+14: 6 6 6 5 4 3
+15: 6 6 6 5 4 4
+16: 6 6 6 5 5 4 2
+17: 6 6 6 6 5 4 3
+18: 6 6 6 6 5 4 4
+19: 6 6 6 6 5 5 4
+20: 6 6 6 6 6 5 4
+""")
+
+#: SRD «Table: The Ranger» e «Table: The Paladin» — la griglia è **la stessa**,
+#: come lo è quella di chierico e druido. Due cose la rendono diversa da tutte le
+#: altre di questo file, e chi la legge deve saperle:
+#:
+#:   * non c'è la colonna degli incantesimi di livello 0 (ranger e paladino non
+#:     ne hanno), e la prima cifra di ogni riga è quindi lo **0 finto** che tiene
+#:     l'indice allineato con le altre griglie;
+#:   * il **livello dell'incantatore non è il livello di classe**: è
+#:     `livello − 3` (`LIVELLO_INCANTATORE_RIDOTTO`). Un paladino di 12° lancia
+#:     da incantatore di 9°, e la sua CD si calcola su quello.
+#:
+#: Sotto il 4° livello di classe non lanciano nulla, e la riga lo dice con una
+#: griglia di soli zeri invece che con un'assenza: un'assenza andrebbe gestita da
+#: chi chiama, e prima o poi qualcuno se ne dimenticherebbe.
+RANGER = _griglia("""
+1: 0
+2: 0
+3: 0
+4: 0 0
+5: 0 1
+6: 0 1
+7: 0 1 0
+8: 0 1 1
+9: 0 2 1
+10: 0 2 1 0
+11: 0 2 1 1
+12: 0 2 2 1
+13: 0 3 2 1 0
+14: 0 3 2 1 1
+15: 0 3 2 2 1
+16: 0 3 3 2 1
+17: 0 4 3 2 1
+18: 0 4 3 2 2
+19: 0 4 3 3 2
+20: 0 4 3 3 3
+""")
+PALADINO = RANGER
+
+#: Le classi il cui livello dell'incantatore **non** coincide col livello di
+#: classe. Nel SRD sono queste due, e la regola è la stessa: `livello − 3`, con
+#: un minimo di 1 e un massimo di 4° livello d'incantesimo.
+LIVELLO_INCANTATORE_RIDOTTO = frozenset({"ranger", "paladin", "paladino"})
+
 #: classe incantatrice → (griglia, caratteristica primaria, spontaneo?)
 INCANTATORI = {
     "wizard":   (MAGO, "int", False),   "mago":      (MAGO, "int", False),
@@ -310,11 +411,30 @@ INCANTATORI = {
     "cleric":   (CHIERICO, "sag", False), "chierico": (CHIERICO, "sag", False),
     "druid":    (DRUIDO, "sag", False),  "druido":   (DRUIDO, "sag", False),
     "adept":    (ADEPTO, "sag", False),  "adepto":   (ADEPTO, "sag", False),
+    "bard":     (BARDO, "car", True),   "bardo":     (BARDO, "car", True),
+    # ⚠️ Ranger e paladino lanciano su **Saggezza**, non su Carisma. È la
+    # differenza che il repo aveva sbagliata: `classes.md` diceva «CHA-based»
+    # per il paladino, che è la regola di **PF1e**. Nel SRD 3.5 il Carisma del
+    # paladino gli serve per Grazia Divina, Imposizione delle Mani e Punizione;
+    # la CD dei suoi incantesimi è 10 + livello + modificatore di Saggezza.
+    # Prenderla per Carisma avrebbe prodotto paladini con la CD sbagliata e la
+    # caratteristica sbagliata al primo posto della matrice élite.
+    "ranger":   (RANGER, "sag", False),
+    "paladin":  (PALADINO, "sag", False), "paladino": (PALADINO, "sag", False),
 }
 
 #: Le griglie che NON hanno una riga d'ancora nel repo. Usarle è lecito; farlo
 #: senza dirlo no.
 INCANTATORI_SENZA_ANCORA = frozenset({"adept", "adepto"})
+
+#: Il livello dell'incantatore per una classe e un livello di classe. Per quasi
+#: tutti è lo stesso numero; per ranger e paladino è `livello − 3`, e chiamare
+#: questa funzione invece di usare il livello di classe è ciò che evita di
+#: stampare «incantatore di livello 12» per un paladino che lancia da 9°.
+def livello_incantatore(classe: str, livello_classe: int) -> int:
+    if classe.lower() in LIVELLO_INCANTATORE_RIDOTTO:
+        return max(0, livello_classe - 3)
+    return livello_classe
 
 #: I livelli che il test confronta con le ancore delle skill.
 ANCORE = (1, 5, 10, 15, 20)

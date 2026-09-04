@@ -3,7 +3,7 @@
 ## MAP ATTRIBUTION
 
 **Map by**: Arne Haschen (<antariuk@gmail.com>)
-**Based on**: Elsir Vale map by Mike Schley, *Red Hand of Doom* (Jacobs & Wyatt, 2006)
+**Based on**: Elsir Vale map by Mike Schley, *Red Hand of Doom* (Jacobs & Baker, 2006)
 **Tools**: Adobe Photoshop CS3; notebook; pencils
 **Source**: <https://cdna.artstation.com/p/assets/images/images/001/044/588/large/arne-haschen-red-hand-of-doom-cannath-vale-map-gm.jpg>
 **Parchment texture**: coyotemax.deviantart.com
