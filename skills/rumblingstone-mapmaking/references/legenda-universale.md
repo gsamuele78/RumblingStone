@@ -18,7 +18,8 @@
 | 🟥 | Zona letale |
 | 🟦 | Acqua profonda |
 | 🌊 | Acqua / corrente |
-| ⬛ | Struttura (tenda, edificio, dais) |
+| ⬛ | **Edificio** / corpo di fabbrica — muratura piena: blocca vista e movimento |
+| 🔳 | **Dais / pedana rialzata** — ci si sale sopra: **NON è un muro** |
 | ⬜ | Pavimento lavorato |
 | 🏰 | Muro / roccia solida |
 | 🟪 | Pilastro / mithral |
@@ -80,7 +81,16 @@ occlusione ambientale sul terreno adiacente, griglia chiara sopra.
 | 🍄 | Funghi giganti |
 | 🕯 | Candele / rituale |
 | 🌾 | Erba alta / cespugli (occultamento) |
-| ⛺ | Tenda |
+| ⛺ | **Tenda** — telo teso: blocca la vista, si abbatte |
+
+> ⚠️ **ADR-0042 — i tre glifi che stavano sotto ⬛.** Fino al 2026-09-04 `⬛`
+> valeva insieme *«tenda, edificio, dais»*, e l'export UVTT li trattava tutti da
+> muro pieno. Sono tre cose diverse: un edificio è un muro, una **tenda** è un
+> telo che blocca la vista ma si abbatte, un **dais** non è un muro affatto —
+> ci si sale sopra. Adesso hanno un glifo ciascuno: **⬛ edificio · ⛺ tenda ·
+> 🔳 dais**. Se stai disegnando una mappa nuova, usa quello giusto: `⬛` non è
+> più il jolly.
+
 | 🔮 | Cristalli / altare magico |
 | 🪑 | Tavolo e sedie |
 | 🧱 | Muretto / copertura bassa (+4 CA) |

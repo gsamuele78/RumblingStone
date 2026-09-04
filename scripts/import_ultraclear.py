@@ -87,6 +87,14 @@ STRUCT_KEYWORDS: list[tuple[str, str, str]] = [
     ("ponte", "structure", "🌉"),
     ("balista", "structure", "🎯"),
     ("balestra", "structure", "🎯"),
+    # ADR-0042: le tre cose che stavano sotto ⬛ hanno un simbolo ciascuna.
+    ("tenda", "structure", "⛺"),
+    ("tende", "structure", "⛺"),
+    ("padiglione", "structure", "⛺"),
+    ("accampamento", "structure", "⛺"),
+    ("dais", "structure", "🔳"),
+    ("pedana", "structure", "🔳"),
+    ("piattaforma", "structure", "🔳"),
 ]
 
 # keyword (matched on WORD boundaries, so "re" ≠ "torre") → unit token.
@@ -595,7 +603,8 @@ def _emit_from_tables(pmap: ParsedMap, map_size: list[int]) -> tuple[dict, list[
             entry["label"] = e.name + (f" — {e.note}" if e.note else "")
             structures.append(entry)
             target = f"/structures/{len(structures) - 1}"
-        # a fallback default (⬛, no keyword matched) is the most uncertain guess
+        # a fallback default (⬛ = edificio, no keyword matched) is the most
+        # uncertain guess: dopo ADR-0042 ⬛ non e' piu' un jolly per tenda e dais
         _assume(e.name, role, sym, target,
                 extra_expected=None if matched else {"note": "nessuna keyword: default generico"})
         if count is not None:

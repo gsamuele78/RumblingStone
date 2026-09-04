@@ -100,7 +100,10 @@ SYMBOLS: dict[str, dict] = {
     "🟥": {"mode": "fill", "pat": "t_lethal", "fill": "#b94a3c", "it": "Zona letale"},
     "🟦": {"mode": "fill", "pat": "t_deep", "fill": "#4c7ba3", "it": "Acqua profonda"},
     "🌊": {"mode": "fill", "pat": "t_water", "fill": "#6aa5c4", "it": "Acqua / corrente"},
-    "⬛": {"mode": "fill", "pat": "t_struct", "fill": "#6b5b47", "it": "Struttura (tenda, edificio, dais)"},
+    "⬛": {"mode": "fill", "pat": "t_struct", "fill": "#6b5b47",
+           "it": "Edificio / corpo di fabbrica (muratura piena: blocca vista e movimento)"},
+    "🔳": {"mode": "fill", "pat": "t_dais", "fill": "#b9a884",
+           "it": "Dais / pedana rialzata (ci si sale sopra: NON e' un muro)"},
     "⬜": {"mode": "fill", "pat": "t_floor", "fill": "#d8cdb4", "it": "Pavimento lavorato"},
     "🏰": {"mode": "fill", "pat": "t_wall", "fill": "#3f3931", "it": "Muro / roccia solida"},
     "🟪": {"mode": "fill", "pat": "t_pillar", "fill": "#8a67b5", "it": "Pilastro / mithral"},
@@ -153,7 +156,8 @@ SYMBOLS: dict[str, dict] = {
     "🍄": {"mode": "icon", "prop": "pr_mushrooms", "fill": "#ffb4a2", "it": "Funghi giganti"},
     "🕯": {"mode": "icon", "prop": "pr_candles", "fill": "#fff3b0", "it": "Candele / rituale"},
     "🌾": {"mode": "icon", "prop": "pr_bush", "fill": "#b7e4c7", "it": "Erba alta / cespugli (occultamento)"},
-    "⛺": {"mode": "icon", "prop": "pr_tent", "fill": "#e6ccb2", "it": "Tenda"},
+    "⛺": {"mode": "icon", "prop": "pr_tent", "fill": "#e6ccb2",
+           "it": "Tenda (telo teso: blocca la vista, si abbatte)"},
     "🔮": {"mode": "icon", "prop": "pr_crystal", "fill": "#caf0f8", "it": "Cristalli / altare magico"},
     "🪑": {"mode": "icon", "prop": "pr_table", "fill": "#e6ccb2", "it": "Tavolo e sedie"},
     "🧱": {"mode": "icon", "prop": "pr_lowwall", "fill": "#e6ccb2", "it": "Muretto / copertura bassa (+4 CA)"},
@@ -250,6 +254,11 @@ PATTERNS: dict[str, str] = {
         '<path d="M-2 6l8-8M-2 14l16-16M-2 22l24-24M6 30l24-24M14 30l16-16M22 30l8-8" '
         'stroke="#5a4b39" stroke-width="0.9"/>'
         '<path d="M0 14.5h28" stroke="#7d6c56" stroke-width="0.8"/>'),
+    "t_dais": _pattern("t_dais", 28,
+        '<rect width="28" height="28" fill="#b9a884"/>'
+        '<rect x="2.5" y="2.5" width="23" height="23" fill="#c8b795" '
+        'stroke="#9c8b6a" stroke-width="1.1"/>'
+        '<path d="M2.5 25.5h23M25.5 2.5v23" stroke="#8b7a5c" stroke-width="1.4"/>'),
     "t_floor": _pattern("t_floor", 28,
         '<rect width="28" height="28" fill="#d8cdb4"/>'
         '<path d="M0 0.5h28M0 14.5h28M7 0.5v14M21 14.5v14" '
