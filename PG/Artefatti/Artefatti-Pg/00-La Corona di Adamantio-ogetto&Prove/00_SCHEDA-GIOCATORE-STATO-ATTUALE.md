@@ -46,13 +46,21 @@ si era perso in tutte le schede successive)*
 
 | Quando | Effetto permanente | Fonte |
 |---|---|---|
-| **Quando l'hai indossata** (Sala della Corona → P1) | **−2 DES** (il peso e la rigidità sul collo) · **+4 CAR** · **non è più rimovibile** finché non ha tutte e tre le gemme (salvo *Rimuovere Maledizione* CD 25) | `07_…/PortaleForgia-P1-REVISED-Corretta.md`, «Effetti Meccanici Corona» |
+| **Quando l'hai indossata** (Sala della Corona → P1) | **−2 DES** (il peso e la rigidità sul collo) · **+4 CAR** · **non è più rimovibile volontariamente** finché non ha tutte e tre le gemme (salvo *Rimuovere Maledizione* CD 25) — ✅ confermato DM 2026-09-04; si è aperta **solo** per incastonare lo Smeraldo | `07_…/PortaleForgia-P1-REVISED-Corretta.md`, «Effetti Meccanici Corona» |
 | **Al rito dello Smeraldo** (2026-07-31) | **−2 DES** e **+2 COS** — il Peso del Mondo accettato nel corpo | `ARC07-DEF-1` §9, Opzione B |
 
-**Il conto, in chiaro.** DES **10 → 8** (Corona) **→ 6** (rito): oggi **−2** al
-modificatore rispetto alla scheda di partenza, quindi −2 a CA, Riflessi,
-iniziativa e prove di DES. In cambio: **+4 CAR** (8 → 12) e **+2 COS**
-(pf massimi **+1/DV**, Tempra **+1**).
+**Il conto, in chiaro — e attenzione a non leggerlo come un malus solo.**
+
+| | Punteggio DES | Modificatore |
+|---|---|---|
+| Scheda di partenza | **10** | **+0** |
+| −2 quando hai indossato la Corona | 8 | −1 |
+| −2 al rito dello Smeraldo | **6** | **−2** |
+| **Totale pagato** | **−4 al punteggio** | **−2 al modificatore** |
+
+Quindi **−2** a CA, Riflessi, iniziativa e prove di DES rispetto alla scheda di
+partenza — **non −6**: quel 6 è il *punteggio* che ti resta, non il malus.
+In cambio: **+4 CAR** (8 → 12) e **+2 COS** (pf massimi **+1/DV**, Tempra **+1**).
 
 **La terza incastonatura** resta fredda. Si accenderà da sé, e non adesso.
 
@@ -124,10 +132,14 @@ movimenti testa)»*, e sotto scrive perfino il ricalcolo: **DES 10 → 8**,
 nessuna delle schede successive (né qui, né nella `02_Corona_2_Gemme*.html`, né
 nella matrice delle versioni), che elencano solo i bonus. Reintegrato nella
 tabella «Quello che la Corona ti è costato» qui sopra.
-⚠️ **Due cose restano da decidere dal DM**, perché sono ancora nel testo di P1 e
-nessuno le ha né confermate né revocate: il **+4 CAR** e il fatto che la Corona
-**non sia rimovibile** finché mancano gemme. Il +4 CAR è a favore del giocatore,
-la non-rimovibilità è un vincolo di trama — se valgono, valgono entrambi.
+✅ **Decise dal DM il 2026-09-04.** Valgono entrambe, come stanno scritte in P1:
+il **+4 CAR** e la **non-rimovibilità**. Con una precisazione che il modulo non
+aveva: *«la Corona non è rimovibile **volontariamente**; si è rimossa solo per
+incastonare la gemma di Smeraldo»*. Non è una maledizione che resiste a tutto —
+è che **Thorik non se la toglie**, e l'unica volta che è uscita dalla testa è
+stato per aggiungerle una gemma. Da giocare così: se qualcuno gliela vuole
+strappare, la Corona non collabora; se la si apre sull'incudine per incastonare,
+si apre.
 
 **Non ancora sbloccati** (Rituale 4, «Assedio della Forgia Eterna» = il viaggio
 a −1.000): **Corona di Protezione +3**, **Senzienza**, **Rubino**.

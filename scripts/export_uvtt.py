@@ -12,7 +12,7 @@ by validate_maps.py — it is a presentation/export layer for the table.
 
 What is extracted from the grid (universal legend of the repo):
   - line_of_sight  ← cell edges between a WALL cell and a non-wall cell,
-                      greedily merged into straight runs (walls: 🏰 ⬛ 🟪 🗼 🏛).
+                      greedily merged into straight runs (walls: 🏰 ⬛ ⛺ 🟪 🗼 🏛 🗿).
   - portals        ← door cells (🚪): a short segment across the opening.
   - lights         ← light sources (🏮 braziere, 🕯 candele, 🔥 fuoco,
                       🔮 cristalli), or the explicit `lights` of a JSON spec.
@@ -47,7 +47,10 @@ import render_map_svg as rms  # noqa: E402
 
 # Full vision-blocking cells (line_of_sight). Low walls (🧱) give cover but do
 # not block sight, so they are intentionally excluded.
-WALL_SYMS = {"🏰", "⬛", "🟪", "🗼", "🏛", "🗿"}
+# ADR-0042: ⬛ e' l'edificio (muratura piena), ⛺ la tenda — un telo teso
+# blocca la vista quanto un muro, e prima di ADR-0042 non lo faceva. 🔳 (dais)
+# resta FUORI di proposito: su una pedana ci si sale, non ci si sbatte contro.
+WALL_SYMS = {"🏰", "⬛", "⛺", "🟪", "🗼", "🏛", "🗿"}
 DOOR_SYMS = {"🚪"}
 # light source symbol -> (range in grid squares, hex color)
 LIGHT_SYMS = {

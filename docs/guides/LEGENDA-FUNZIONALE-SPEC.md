@@ -265,13 +265,15 @@ Il renderer e l'esportatore UVTT non concordano su cosa sia un muro. La regola
 d'arbitrato resta quella di luglio — **una cella occupata da roccia, edificio,
 torre o statua è impenetrabile e opaca** — ma lo stato del codice è cambiato.
 
-`WALL_SYMS` in `export_uvtt.py` contiene oggi sei simboli: `🏰 ⬛ 🟪 🗼 🏛 🗿`.
+`WALL_SYMS` in `export_uvtt.py` contiene oggi **sette** simboli: `🏰 ⬛ ⛺ 🟪 🗼 🏛 🗿` — `⛺` aggiunto il 2026-09-04 con ADR-0042.
 
 | Simbolo | Etichetta nel renderer | UVTT | Verdetto |
 |---|---|---|---|
 | `🗿` `🗼` `🏛` | Statua · Torre · Edificio/tempio | **è muro** | ✅ **già a posto** — la correzione prevista a luglio risulta applicata |
 | `⛰` | Montagne / creste rocciose | **non è muro** | ❌ **ancora aperta** — il difetto originale |
-| `⬛` | Struttura (**tenda, edificio, dais**) | è muro | ⚠️ **nuovo** — vedi sotto |
+| `⬛` | **Edificio** (muratura piena) | è muro | ✅ **risolto** — vedi §6.2 |
+| `⛺` | **Tenda** | è muro *(dal 2026-09-04)* | ✅ risolto insieme a `⬛` |
+| `🔳` | **Dais / pedana** | **non** è muro, ed è giusto | ✅ glifo nuovo |
 | `🪨` | Rocce/macerie (copertura +4 CA, terreno difficile) | non è muro | ✅ corretto: è copertura **parziale**, non totale |
 
 ### 6.1 · `⛰` — il difetto che resta
@@ -282,21 +284,72 @@ un personaggio attraversa la catena montuosa e ci vede attraverso.
 
 È il bug che la spec esiste per chiudere, ed è ancora lì dopo sei settimane.
 
-### 6.2 · `⬛` — la divergenza nell'altra direzione, che luglio non aveva visto
+### 6.2 · `⬛` — ✅ RISOLTO il 2026-09-04: tre glifi per tre cose
 
-**8.205 celle in 21 file**, ed è il simbolo più usato dei tre. L'etichetta del
-renderer dice *«Struttura (tenda, edificio, dais)»*: **tre cose diverse sotto un
-simbolo solo**, e l'export le tratta tutte da muro pieno.
+**8.216 celle in 24 file**, ed era il simbolo più usato dei tre. L'etichetta del
+renderer diceva *«Struttura (tenda, edificio, dais)»*: **tre cose diverse sotto
+un simbolo solo**, e l'export le trattava tutte da muro pieno.
 
-Un edificio è un muro. Una **tenda** è copertura totale ma distruttibile, e in
-molte scene si entra. Un **dais** — la pedana rialzata di una sala — non è un
-muro affatto: ci si sale sopra, ed è semmai `elevation_m`.
+**Il difetto era peggiore di così, e la spec di luglio non l'aveva visto**: la
+legenda conteneva **già** `⛺ Tenda` e `🏛 Edificio / tempio`. `⬛` non era solo
+sovraccarico — **duplicava due glifi che esistevano**. E `⛺` non era in
+`WALL_SYMS`: le tende disegnate col glifo giusto **non bloccavano nemmeno la
+vista**, mentre quelle disegnate col glifo sbagliato bloccavano tutto. Le due
+direzioni dell'errore si annullavano solo per caso.
 
-⚠️ Questo non si chiude con una riga in `WALL_SYMS`: **il simbolo è
-sovraccarico**, e la correzione giusta è separarlo in tre simboli con funzioni
-diverse, oppure dichiarare `⬛` come «edificio» e spostare tenda e dais altrove.
-È una decisione di legenda, non un bug di export, e va portata al DM prima di
-toccare 8.205 celle.
+**Decisione DM del 2026-09-04** (*«fai 3 glifi separati, altrimenti non si
+capisce niente»*), formalizzata in
+[ADR-0042](../../plans/adr/ADR-0042-tre-glifi-per-tre-cose.md):
+
+| Glifo | Significato | Vista | Movimento | Muro UVTT |
+|---|---|---|---|---|
+| `⬛` | **Edificio / corpo di fabbrica** — muratura piena | blocca | blocca | **sì** *(invariato)* |
+| `⛺` | **Tenda** — telo teso: si taglia, si abbatte, brucia | blocca | blocca finché sta in piedi | **sì** *(era «no»: è il fix)* |
+| `🔳` | **Dais / pedana rialzata** — ci si sale sopra | **no** | **no** | **no**, è quota |
+
+`🔳` è nuovo e non compariva da nessuna parte nel repo: nessuna collisione.
+
+⚠️ **`⬛` non cambia comportamento**, ed è la scelta che rende la decisione
+applicabile subito: nessuna delle 8.216 celle esistenti si muove sotto i piedi
+di nessuno, nessuna geometria di SVG cambia. L'unica differenza negli artefatti
+è **la riga di legenda stampata dentro l'SVG** — 17 SVG rigenerati, 66 righe,
+tutte di legenda.
+
+Il glifo generico tiene il significato **strutturalmente più forte**, non quello
+statisticamente più comune: se avessimo dato a `⬛` il senso di «tenda» (il
+gruppo più numeroso nei conteggi) avremmo cambiato in un colpo solo ogni mappa
+di città e di fortezza già disegnata.
+
+#### La coda: quali celle vanno riclassificate
+
+Le 8.216 celle restano `⬛`. **Non si riscrivono in blocco**: sapere quali sono
+tende, quali edifici e quali dais vuol dire leggere la mappa, non contare i
+caratteri. La coda si smaltisce quando quella mappa viene toccata per altri
+motivi.
+
+| File | Celle `⬛` | Sospetto, da verificare leggendo |
+|---|---:|---|
+| `SUPPLEMENTO-P1C-MAPPE-CAMPI-DROW-COMPLETO.md` | 2.173 | accampamento → quasi tutte **tende** ⛺ |
+| `Hammerfist-Lotto-3-FINALE.md` | 1.256 | fortezza → **edifici**, resta `⬛` |
+| `ARC07-MAPPE-DEFINITIVO.md` | 800 | forgia → edifici **+ l'Altare**: il candidato **dais** 🔳 più probabile del repo (e ha già 93 celle `⛺`) |
+| `ARC07-DEF-5-RITORNO-HAMMERFIST.md` | 684 | fortezza → **edifici** |
+| `tarsilia-la-ruota-giocatori.md` | 642 | città → **edifici** |
+| `tarsilia-la-ruota.md` | 641 | città → **edifici** |
+| `Portale-Forgia-L2-REVISED-UltraClear.md` | 539 | forgia → **edifici** |
+| `Arco-Post-Hammerfist-P1B-Cerchio-Treant-COMPLETO-maps.md` | 519 | da leggere |
+| `scripts/examples/campo-drow-1.md` | 382 | accampamento → **tende** ⛺ |
+| `Portale-Forgia-L1-REVISED-UltraClear.md` | 240 | forgia → **edifici** |
+| altri 14 file | < 100 ciascuno | — |
+
+⚠️ *«Dominata da un significato»* non è *«composta da»*: nel campo drow ci sono
+anche un palizzato e una tenda di comando, e un `sed` non li distingue.
+
+⚠️ **Nessun gate distingue un uso corretto da uno pigro.** Un agente può
+continuare a mettere `⬛` ovunque e la CI resta verde. Il controllo qui è la
+legenda e chi la legge — al contrario di ADR-0041, dove l'invariante era
+contabile. `scripts/tests/test_legenda_glifi.py` verifica che i tre glifi
+restino **distinti** e che `⬛` **non cambi comportamento**: due proprietà
+misurabili, non la correttezza dell'uso.
 
 ### 6.3 · Cosa cambia negli artefatti
 
@@ -305,9 +358,13 @@ statua continua a disegnarsi come prop illustrato e *contemporaneamente* a
 dichiararsi opaca. L'unico artefatto che cambia è l'export UVTT delle mappe con
 `⛰` — ed è esattamente il bug.
 
-⚠️ Per `⬛` il conto è diverso e va detto: se si tolgono tenda e dais dal
-significato del simbolo, cambiano **gli SVG** di quelle celle, non solo l'export.
-Ragione in più per decidere prima di eseguire.
+✅ **Per `⬛` il timore si è rivelato infondato**, e vale la pena dire perché.
+Temevo che togliere tenda e dais dal significato cambiasse **gli SVG** di quelle
+celle. Non succede, perché la decisione lascia a `⬛` la semantica che aveva: le
+celle già disegnate restano edifici e si disegnano identiche. Cambia solo la
+**riga di legenda** dentro l'SVG — 17 file, 66 righe, zero geometria. Il costo
+vero non è nel rendering: è nella **coda di riclassificazione** (§6.2), che è
+lavoro di lettura e non di sostituzione.
 
 ---
 
@@ -332,6 +389,9 @@ Ragione in più per decidere prima di eseguire.
   ⚠️ Ancora vero il 2026-09-04. Il PRD è ora in repo come pagine consegnate dal
   DM (vedi `pathfinder-1e-srd/references/conversion-guide.md`), quindi la
   verifica è diventata possibile — non è più un limite di accesso, è un lotto.
-- ⚠️ **`⬛` è sovraccarico** (§6.2), e la spec di luglio non se n'era accorta.
+- ✅ **`⬛` era sovraccarico** (§6.2) — risolto il 2026-09-04 con tre glifi
+  ([ADR-0042](../../plans/adr/ADR-0042-tre-glifi-per-tre-cose.md)). Resta aperta
+  la **riclassificazione** delle 8.216 celle già disegnate, che è lettura e non
+  sostituzione.
   Finché non è separato, ogni regola scritta per quel simbolo vale per tre cose
   diverse.
