@@ -264,3 +264,102 @@ piano). Serve prima di **vendere**, non prima di **migliorare**.
    scelta 3.5/PF1e **per i soli prodotti**, tenendo la campagna com'è.
 4. **Chi fa il playtest beta del Drappo**, che è l'unica voce di tutto questo
    piano che non si può eseguire al computer.
+
+---
+
+## §7 · La divergenza da RHoD, raccontata dal DM — e la dipendenza che nessuno contava
+
+> **Racconto del DM, 2026-09-04.** L'idea iniziale era far vivere ai giocatori
+> qualcosa di simile al *Signore degli Anelli*; RHoD era l'AP che ci si
+> avvicinava di più, ma condotto al tavolo è risultato *«banale, lineare»*, e la
+> modifica è cominciata subito.
+
+Questo cambia la prognosi di §0 e va scritto, perché §0 era stato costruito sulla
+**auto-descrizione del repo** (*«heavily based on Red Hand of Doom»*), non sul
+contenuto reale.
+
+### Quanto è già divergente, per come il DM lo racconta
+
+| Pezzo | Origine dichiarata | Che cosa ne resta di RHoD |
+|---|---|---|
+| Battaglia di Hammerfist | il Fosso di Helm (Tolkien) | l'idea dell'assedio, non l'assedio di RHoD |
+| Assalto a Rethmar | la battaglia di Gondor (Tolkien), più Harry Potter e il video d'apertura di ToEE | idem |
+| Quest della Corona e gli altri artefatti | **inventata di sana pianta** | niente |
+| L'arco nell'Underdark, il labirinto del minotauro, il giardino dei funghi, i poteri miceliali di Hella | **inventati** (spunto dal salto miceliale della *Discovery*) | niente |
+| La Torre | concetto di follia e aberrazione da *Out of the Abyss*, livelli riscritti ed espansi, fazione drow e portali aggiunti | niente |
+| La discesa nella miniera di Belkram | spunto d'ispirazione | la fazione dei nani di Abbattor, la cittadella deturpata, il beholder cieco, il rompicapo dei dipinti nanici e le stanze sotto il tempio sono **profondamente modificati** |
+
+Un assedio notturno contro numeri schiaccianti, una città assediata che resiste,
+una discesa nel sottosuolo: sono **scene di genere**, non espressione protetta, e
+Tolkien viene prima di RHoD su tutte e tre. Se il racconto regge alla verifica
+file per file, la parentela con RHoD è molto più sottile di quanto §0 assumesse.
+
+⚠️ **Ma «per come il DM lo racconta» non è una verifica.** Nessuno può liberare
+questo materiale da una descrizione a voce: serve il lotto A, e ora si sa cosa
+deve cercare.
+
+### La dipendenza vera, misurata: non è RHoD, è il bestiario
+
+Contando i file che nominano **Product Identity D&D che NON sta nel SRD**:
+
+| Entità | File | Nel SRD? |
+|---|---:|---|
+| **illithid** | **86** | ❌ |
+| **githyanki** | **58** | ❌ |
+| **Circolo degli Otto / Circle of Eight** | **31** | ❌ (Greyhawk) |
+| **mind flayer** | 22 | ❌ |
+| **beholder** | 10 | ❌ |
+| maur · yuan-ti · githzerai · umber hulk | 13 | ❌ |
+
+Per contrasto, questi sono **SRD e quindi liberi**: rakshasa (32 file), treant
+(84), drow (176), retriever (6), basilisco (5), Moradin (169 — la lista di
+divinità del SRD 3.5 lo contiene).
+
+⚠️ **E qui c'è il rovescio che conta.** La concentrazione è nell'**arco 09** —
+27 file con illithid, 33 con githyanki, 15 col Circolo degli Otto — cioè
+**proprio l'arco inventato da zero**. Il contenuto più originale è quello che
+porta più Product Identity altrui: l'invenzione è stata nella trama, il popolamento
+è stato pescato dal bestiario chiuso.
+
+*(Zuggtmoy non compare mai col suo nome: quella sostituzione è già fatta.)*
+
+### Perché questa è una buona notizia
+
+Un mostro si sostituisce; una trama si riscrive. Le **statistiche** di un
+illithid sono meccanica derivabile dal SRD — è l'**identità** a essere protetta,
+non i numeri. Un'aberrazione originale con lo stesso ruolo tattico costa una
+scheda e un nome, non un arco.
+
+Se la divergenza raccontata regge, il conto si ribalta rispetto a §0:
+
+| | Prognosi di §0 | Dopo il racconto del DM |
+|---|---|---|
+| **Struttura RHoD** | il blocco principale | forse leggera, da verificare |
+| **Bestiario non-SRD** | non contato | **~200 occorrenze**, ma economico da chiudere |
+
+### La cosa più dannosa nel repo è un documento del DM
+
+⚠️ Il README dichiara *«heavily based on Red Hand of Doom»*, e la stessa frase
+ricorre in `campaign/lore/`, nelle skill e nei file d'arco. Se la verità è quella
+raccontata qui — ispirazione iniziale, poi divergenza profonda — allora quella
+riga è **inesatta**, ed è al tempo stesso **il documento peggiore del repo per
+una causa commerciale**: un'ammissione di derivazione, scritta dall'autore, che
+il lavoro forse non merita.
+
+Non si tocca per convenienza: si corregge **se e solo se** il lotto A stabilisce
+che è falsa. Riscriverla prima della verifica sarebbe la cosa peggiore di tutte.
+
+### Cosa cambia nel lotto A
+
+L'audit di provenienza cerca ora **due** cose invece di una:
+
+1. **Struttura RHoD** — beat, sequenza, toponimi, PNG. Prognosi: più leggera del
+   previsto, e il metodo è il test del lettore (§3 della risposta al DM: darlo a
+   chi ha condotto RHoD e sentire se dice «stesso genere» o «coi nomi cambiati»);
+2. **Product Identity non-SRD** — il bestiario, il Circolo degli Otto, i nomi
+   propri di Forgotten Realms. Prognosi: più pesante del previsto, e si chiude
+   con un lavoro di sostituzione che è **meccanico, elencabile e finito**.
+
+E una regola per il lavoro nuovo, da subito: **quello che si popola d'ora in poi
+si popola dal SRD.** Ogni illithid aggiunto oggi è un file in più da bonificare
+domani.
