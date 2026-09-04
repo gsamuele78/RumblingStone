@@ -67,6 +67,51 @@ Tarate su lotti realmente eseguiti in questo repo, non in astratto.
 | **G · Giudizio** | Decidere che cosa è vero, che cosa si butta, che cosa si sovrappone | giudicare cinque PR · scrivere un ADR · decidere se un piano è nuovo | **`Opus 5`, sessione principale** | **alto-xhigh** | il DM lo legge e riconosce il proprio problema |
 | **K · Canone** | Tocca la verità della campagna | il Peso a Thorik · riscrivere un eco · ridisegnare una griglia giocata | **`Opus 5`, mai delegato** | **xhigh-max** | conferma esplicita del DM |
 
+### Come si sceglie la classe: tre domande, non cinque esempi
+
+La tabella qui sopra **illustra**; queste tre domande **decidono**. È la lezione
+di ADR-0041 applicata qui: con soli esempi, un lotto non previsto è un buco; con
+un principio davanti, è un caso non ancora illustrato.
+
+**Si risponde nell'ordine, e la prima che scatta assegna la classe.**
+
+| | Domanda | Se sì |
+|---|---|---|
+| 1 | **Se sbaglio, se ne accorge il DM al tavolo?** | **K** — canone. Nessun gate difende il canone: solo il DM sa se al tavolo è andata così |
+| 2 | **Devo decidere qualcosa che una macchina non può contare?** *(cosa è vero, cosa si butta, cosa si sovrappone)* | **G** — giudizio |
+| 3 | **Il risultato è definito da un contratto verificabile?** *(un test che boccia il caso sbagliato)* | **C** se il contratto va **scritto**, **M** se esiste già |
+| 4 | *(nessuna delle precedenti)* Sto solo **leggendo per riferire**? | **R** — ricognizione |
+
+La domanda 1 viene prima di tutte di proposito. Un lotto sul canone che sembra
+meccanico — *«sostituisci Tordek con Thorik in dodici file»* — **non lo è**: la
+correzione del 2026-08-06 sembrava un `sed` ed era la riscrittura di un eco.
+
+⚠️ **Nessuna delle quattro domande chiede quanto è grande il lotto.** La
+dimensione non entra nella classificazione, ed è il punto in cui l'istinto
+sbaglia più spesso.
+
+### Il registro, che è come la tabella smette di essere tarata a occhio
+
+La debolezza dichiarata di questa ADR è che le cinque classi sono **un'ipotesi**.
+Il rimedio non è misurare adesso — non c'è un corpus — ma **accumulare le
+prove mentre si lavora**, che è quello che nessuna delle regole precedenti
+faceva.
+
+Ogni lotto chiuso aggiunge una riga a **`plans/REGISTRO-LOTTI.md`**:
+
+| Data | Lotto | Classe prevista | Engine usato | Ha retto? | Che cosa ha insegnato |
+|---|---|---|---|---|---|
+
+La colonna che conta è **«ha retto?»**: si è dovuto salire di classe a metà
+strada, o il lotto è finito con l'engine e l'effort dichiarati? Tre righe non
+dicono niente; trenta cominciano a dire se la tabella è tarata bene, e **quali
+righe sono tarate male**.
+
+⚠️ **Il registro non è un gate.** Nessuno lo controlla, come per ADR-0044 — è un
+quaderno, e un quaderno lo tiene chi vuole tenerlo. Ma senza di lui questa ADR
+resta un'ipotesi per sempre, ed è l'unica differenza fra una regola che impara e
+una che invecchia.
+
 ### Le tre regole che governano la tabella
 
 1. **L'effort si abbassa prima dell'engine.** Un modello capace a effort basso
@@ -109,8 +154,9 @@ più. I piani d'arco chiusi restano come sono.
 **Negative, e vanno dette.**
 
 - ⚠️ **La tabella è tarata a occhio, non misurata.** Nessuno ha eseguito lo
-  stesso lotto su due engine per confrontare. È un'ipotesi ragionevole da
-  correggere quando i lotti classificati saranno abbastanza da dire qualcosa.
+  stesso lotto su due engine per confrontare. È un'ipotesi ragionevole, e il
+  **registro** è il modo in cui si corregge da sé — ma solo se qualcuno lo
+  tiene. Finché il registro è vuoto, questa riga resta il difetto principale.
 - ⚠️ **Ogni salto di engine butta la cache** (le cache sono legate al modello).
   Su un piano con molti lotti brevi che si alternano, la cascata può costare
   **più** di un modello solo a effort variabile. È il motivo della regola 1.

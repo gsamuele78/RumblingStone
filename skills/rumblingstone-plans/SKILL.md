@@ -87,6 +87,25 @@ Ogni lotto **ancora da fare** dichiara tre cose in intestazione:
 | **G · Giudizio** | decidere cosa è vero, cosa si butta, cosa si sovrappone | **`Opus 5`, sessione principale** | alto-xhigh | il DM riconosce il proprio problema |
 | **K · Canone** | tocca la verità della campagna | **`Opus 5`, mai delegato** | xhigh-max | conferma esplicita del DM |
 
+**Come si sceglie la classe — la tabella illustra, queste domande decidono.**
+Si risponde nell'ordine; la prima che scatta assegna la classe.
+
+| | Domanda | Se sì |
+|---|---|---|
+| 1 | **Se sbaglio, se ne accorge il DM al tavolo?** | **K** — nessun gate difende il canone |
+| 2 | Devo decidere qualcosa che **una macchina non può contare**? | **G** |
+| 3 | Il risultato è definito da un **contratto verificabile**? | **C** se il contratto va scritto, **M** se esiste già |
+| 4 | *(nessuna)* Sto solo **leggendo per riferire**? | **R** |
+
+⚠️ **Nessuna delle quattro chiede quanto è grande il lotto.** La dimensione non
+entra nella classificazione, ed è dove l'istinto sbaglia più spesso: *«sostituisci
+Tordek con Thorik in dodici file»* sembra un `sed` ed è la riscrittura di un eco.
+
+**A lotto chiuso, una riga in [`plans/REGISTRO-LOTTI.md`](../../plans/REGISTRO-LOTTI.md)**
+— classe prevista, engine usato, **ha retto?**. È come la tabella smette di
+essere tarata a occhio. Se il lotto è **salito di classe** a metà strada, quella
+riga vale doppio.
+
 **Tre regole che governano la tabella:**
 
 1. **L'effort si abbassa prima dell'engine.** Un modello capace a effort basso
