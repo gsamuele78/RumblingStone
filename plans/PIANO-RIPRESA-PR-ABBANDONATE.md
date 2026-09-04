@@ -24,6 +24,7 @@ dimensione: è per **rapporto fra ciò che sblocca e ciò che rischia**.
 
 | | PR | Cosa sblocca | Rischio | Costo misurato |
 |---|---|---|---|---|
+| F0 | — | ✅ **chiusa il 2026-09-04**: `⛰` è un muro, e nessun master esce dal controllo | — | ADR-0043 |
 | F1 | **#63** | 14 griglie tattiche che al tavolo mancano | basso | contenuto pronto, SVG **già byte-identici** |
 | F2 | **#52** | l'overlay `@` su master scritti a mano | basso | **una rinominazione** |
 | F3 | **#106** | catena raster riproducibile + Blender | medio | serve la **GPU del DM** per l'ultimo passo |
@@ -48,24 +49,32 @@ Da fare **una volta**, prima di F1, e vale per tutte e quattro.
 | `comfyui_batch.py` e `render_map_blender.py` **non esistono** su `main` | `ls scripts/` |
 | Su `main` non c'è **nessuna** direttiva `@` sulle due mappe di #52, né la scena «Foresta in Fiamme» | `grep -n "@compass\|@path\|@zone\|@mark"` |
 
-### 0.2 · Il prerequisito che manca, e va chiuso prima di F1
+### 0.2 · Il prerequisito ✅ CHIUSO il 2026-09-04, insieme al bug di `⛰`
 
-🔴 **`validate_maps` ha un punto cieco.** Rende solo i master che hanno già
-almeno un SVG committato. Cancellare **tutti** gli SVG di un master lo fa
-sparire dal controllo: la CI resta verde e nessuno guarda più quelle mappe.
-È la stessa classe di difetto dell'assenza che nessun test cerca — e F1 ci
-inciampa dentro per costruzione.
+Il DM ha messo `⛰` in cima alla coda — *«aprilo assolutamente come bug da fixare
+prima di tutti»* — e i due difetti sono usciti insieme perché sono la stessa
+famiglia: **cose che il codice dava per buone senza che nessuno le contasse**.
+Entrambi chiusi da
+[ADR-0043](adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md).
 
-**Deliverable 0.2**: un controllo nuovo in `validate_maps.py` —
+**`⛰` non è un muro nell'export** — 2.423 celle in 21 file. La `Hammerfist-L1`
+ha 338 celle di montagna e produceva **8 segmenti**: tutta la catena invisibile
+al VTT. Adesso **20**.
 
-> un master che **genera mappe** e ha **zero** SVG committati è un errore, a
-> meno che non sia in una lista KO **dichiarata nel file stesso**.
+**Il punto cieco di `validate_maps`** — rendeva solo i markdown con almeno un SVG
+committato, quindi cancellarli tutti faceva **sparire il master dal controllo**.
+Adesso un master che genera mappe e non ha nessun SVG è un **errore**, salvo che
+si dichiari nel proprio testo con
+`<!-- validate_maps: non-renderizzato — motivo -->`.
 
-Più il test che lo prova mordere (un master che genera e non ha SVG → rosso).
+🔎 **Il gate ha trovato due casi già in `main`** appena acceso: due master di
+ARC-09 con quattro mappe mai renderizzate. Renderizzate: **31 SVG / 17 master**
+(erano 27 e 15).
 
-**Perché prima e non dopo**: se F1 entra col punto cieco aperto, i sette SVG
-spariscono e nessuno se ne accorge mai più. Chiuderlo prima significa che F1
-deve **dichiarare** cosa sta deprecando, invece di cancellarlo in silenzio.
+⚠️ **Cosa cambia per F1.** La #63 **non può più** cancellare i sette SVG dei
+master `Lotto-*` in silenzio: o si rigenerano, o quei master si archiviano, o si
+dichiarano. La decisione D1 resta, ma adesso è **forzata dalla CI** invece che
+affidata a chi legge il diff.
 
 ### 0.3 · Il vincolo che si applica a tutte
 
@@ -375,7 +384,8 @@ Vale per **ogni** commit di **ogni** fase.
 | D2 | F3 | I diciotto raster si generano **sulla tua macchina** — quando? La fase si chiude senza, ma la catena resta non collaudata sul risultato vero |
 | D3 | F4 · 4c | Le due domande di G1: il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
 | D4 | F4 | I **13 stemmi e mappe** del `PALIO-BOOKLET` che la #99 lascia in sospeso: si producono o si tolgono i riferimenti? |
-| D5 | fuori piano | `⛰` **non è ancora un muro** (2.415 celle in 16 file): è un bug diagnosticato e non corretto, e non è in nessuna di queste quattro fasi. Lo apro come lotto a sé? |
+| ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
+| D6 | F1 | `…P1C-Rituale-COMPLETO-SCALE` mappa 3 dichiara **40×40** e ha **26×29** celle: il renderer avvisa e disegna lo stesso. La griglia è contenuto — la ridisegno o la lascio con l'avviso? |
 
 ---
 

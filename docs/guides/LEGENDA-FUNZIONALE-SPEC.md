@@ -165,7 +165,7 @@ Valori **neutri**. `mov` = `blocks_movement`, `vista` = `blocks_sight`,
 | 🌊 | Acqua / corrente | no | no | none | none | **2** | no | acqua bassa |
 | 🟧 | Lava raffreddata / pericolo | no | no | none | none | **2** | no | `hazard: {fire, minor}` |
 | 🟥 | Zona letale | no | no | none | none | 1 | no | `hazard: {magic, lethal}` |
-| ⛰ | **Montagne / creste rocciose** | **sì** | **sì** | **total** | none | — | sì | ⚠️ **correzione**: vedi §6 |
+| ⛰ | **Montagne / creste rocciose** | **sì** | **sì** | **total** | none | — | sì | ✅ **corretto** il 2026-09-04 (ADR-0043): vedi §6.1 |
 | 🏰 | Muro / roccia solida | **sì** | **sì** | **total** | none | — | no | |
 | 🟪 | Pilastro / mithral | **sì** | **sì** | **total** | none | — | sì | |
 | ⬛ | Struttura (tenda, edificio, dais) | **sì** | **sì** | **total** | none | — | sì | |
@@ -265,24 +265,77 @@ Il renderer e l'esportatore UVTT non concordano su cosa sia un muro. La regola
 d'arbitrato resta quella di luglio — **una cella occupata da roccia, edificio,
 torre o statua è impenetrabile e opaca** — ma lo stato del codice è cambiato.
 
-`WALL_SYMS` in `export_uvtt.py` contiene oggi **sette** simboli: `🏰 ⬛ ⛺ 🟪 🗼 🏛 🗿` — `⛺` aggiunto il 2026-09-04 con ADR-0042.
+`WALL_SYMS` in `export_uvtt.py` contiene oggi **otto** simboli: `🏰 ⬛ ⛺ ⛰ 🟪 🗼 🏛 🗿` — `⛺` aggiunto con ADR-0042, `⛰` con ADR-0043, entrambi il 2026-09-04.
 
 | Simbolo | Etichetta nel renderer | UVTT | Verdetto |
 |---|---|---|---|
 | `🗿` `🗼` `🏛` | Statua · Torre · Edificio/tempio | **è muro** | ✅ **già a posto** — la correzione prevista a luglio risulta applicata |
-| `⛰` | Montagne / creste rocciose | **non è muro** | ❌ **ancora aperta** — il difetto originale |
+| `⛰` | Montagne / creste rocciose | **è muro** *(dal 2026-09-04)* | ✅ **chiuso** — vedi §6.1 |
 | `⬛` | **Edificio** (muratura piena) | è muro | ✅ **risolto** — vedi §6.2 |
 | `⛺` | **Tenda** | è muro *(dal 2026-09-04)* | ✅ risolto insieme a `⬛` |
 | `🔳` | **Dais / pedana** | **non** è muro, ed è giusto | ✅ glifo nuovo |
 | `🪨` | Rocce/macerie (copertura +4 CA, terreno difficile) | non è muro | ✅ corretto: è copertura **parziale**, non totale |
 
-### 6.1 · `⛰` — il difetto che resta
+### 6.1 · `⛰` — ✅ CHIUSO il 2026-09-04
 
-**2.415 celle in 16 file.** Il renderer disegna la montagna come solida — ombra,
-contorno, riempimento roccioso — e l'export UVTT non ci mette un muro. In Foundry
-un personaggio attraversa la catena montuosa e ci vede attraverso.
+**2.423 celle in 21 file.** Il renderer disegnava la montagna come solida —
+ombra, contorno, riempimento roccioso, e il suo pattern è dentro `HEAVY_PATS` —
+e l'export UVTT non ci metteva un muro. In Foundry un personaggio **attraversava
+la catena montuosa e ci vedeva attraverso**.
 
-È il bug che la spec esiste per chiudere, ed è ancora lì dopo sei settimane.
+Era il bug che questa spec esiste per chiudere, ed è rimasto aperto **sei
+settimane** con la riga di codice da cambiare già scritta qui dentro. Il DM lo ha
+messo in cima alla coda il 2026-09-04; è chiuso da
+[ADR-0043](../../plans/adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md).
+
+**Quanto era grosso**, misurato sull'export prima e dopo:
+
+| Mappa | celle `⛰` | segmenti prima | dopo |
+|---|---:|---:|---:|
+| `Hammerfist-L1-REVISED-Ultra-Clear` | 338 | 8 | **20** |
+| `Hammerfist-L2-REVISED-Ultra-Clear` | 808 | 44 | **66** |
+| `Hammerfist-Lotto-1-Ricognizione` map02 | 179 | 4 | **14** |
+| `hammerfist-L2-assedio` | 1.800 | 50 | **54** |
+
+⚠️ L'ultima riga va letta bene: 1.800 celle e **+4** segmenti soli, perché lì la
+montagna è un bordo compatto e la fusione greedy la riduce a poche corse lunghe.
+Il numero di segmenti misura la **geometria**, non quanta roccia c'è.
+
+`🪨` resta **fuori** dai muri, ed è corretto: è copertura **parziale** (+4 CA,
+terreno difficile), non totale.
+
+⚠️ **Il rovescio, e va detto.** Il muro è binario e la montagna non lo è: un
+valico, una sella, un sentiero fra due creste sono attraversabili nella finzione
+e adesso sono muro nell'export. Chi disegna un passo deve usare un simbolo di
+terreno per il passo, **non** `⛰`. Prima si passava ovunque, adesso non si passa
+da nessuna parte: è il meno sbagliato dei due, non il giusto.
+
+### 6.1-bis · Il punto cieco di `validate_maps`, trovato scrivendo la Fase 0
+
+`validate_maps` rendeva **solo i markdown con almeno un SVG committato**. Il
+rovescio, che nessuno aveva guardato: **cancella tutti gli SVG di un master e
+quel master sparisce dal controllo** — CI verde, e nessuno guarda più quelle
+mappe.
+
+Non è ipotetico: è quello che fa la **PR #63**, che cancella i sette SVG dei tre
+master `Hammerfist-Lotto-*` deprecati **tenendo i master**, che generano ancora
+sette mappe. *«validate_maps verde»* nel corpo di quella PR è vero e significa
+*«nessuno guarda più»*.
+
+Chiuso dallo stesso ADR-0043: un master che genera mappe e non ha **nessun** SVG
+è un errore, salvo che si dichiari nel proprio testo con
+`<!-- validate_maps: non-renderizzato — motivo -->`. Il marcatore sta nel master
+e non in una lista altrove, per la stessa ragione di ADR-0041: una lista in un
+altro file si stacca dalla realtà.
+
+🔎 **Il gate ha trovato subito due casi già in `main`**: `…P1B-Cerchio-Treant`
+e `…P1C-Rituale-COMPLETO-SCALE`, quattro mappe in tutto, mai renderizzate.
+Adesso ci sono — **31 SVG / 17 master**, erano 27 e 15.
+
+⚠️ Renderizzandole è emerso un difetto di **contenuto** in `…P1C` mappa 3:
+l'intestazione dichiara 40×40 e le celle lette sono 26×29. Il renderer avvisa e
+disegna lo stesso. **Non corretto**: la griglia è contenuto, e ridisegnarla è una
+decisione del DM.
 
 ### 6.2 · `⬛` — ✅ RISOLTO il 2026-09-04: tre glifi per tre cose
 
@@ -356,7 +409,7 @@ misurabili, non la correttezza dell'uso.
 **Nessun SVG cambia.** Modo di rendering e funzione sono campi ortogonali: una
 statua continua a disegnarsi come prop illustrato e *contemporaneamente* a
 dichiararsi opaca. L'unico artefatto che cambia è l'export UVTT delle mappe con
-`⛰` — ed è esattamente il bug.
+`⛰` — ed era esattamente il bug, ora chiuso (§6.1).
 
 ✅ **Per `⬛` il timore si è rivelato infondato**, e vale la pena dire perché.
 Temevo che togliere tenda e dais dal significato cambiasse **gli SVG** di quelle
