@@ -125,16 +125,126 @@ domanda per il DM, non un fix.
 
 ---
 
-## Cosa resta aperto
+## Giudizio nel merito delle PR aperte
 
-| # | PR | Giudizio | Cosa ne resta da fare |
-|---|---|---|---|
-| R4 | **#99** | **abbandonata, non superata** | È la più grossa: 88 file, `state.yaml` come sorgente dei fatti + `state.md` generato ([ADR-0017](https://github.com/gsamuele78/RumblingStone/pull/99)), 4 validatori nuovi, schede PG a dati, tre audit. Da valutare **a lotti**, non in blocco |
-| R5 | **#106**, **#63**, **#52** | da giudicare | Analisi nel merito ancora da consegnare al DM |
-| R6 | ⬛ legenda | **decisione DM** | Tre glifi o uno? Vedi R3 |
-| R7 | Corona: +4 CAR e non-rimovibilità | **decisione DM** | Vedi R1 |
+Ogni riga è **verificata sul codice di oggi**, non letta dal corpo della PR.
+
+### #109 — instradamento delle skill · **superata, chiusa**
+
+Aveva ragione sulla diagnosi e ha rinunciato a metà del rimedio: *«nessun gate
+in CI, un gate semantico che indovina sarebbe peggio del problema»*. La premessa
+era sbagliata — il gate non deve indovinare se hai **caricato** la skill giusta,
+deve contare se è **instradata**, e quello è verificabile a macchina. Il DM ha
+rovesciato la rinuncia; il contenuto è nel lotto R2. Il difetto che la #109 non
+aveva misurato è l'**incompletezza** dell'elenco: 13 voci su 18.
+
+### #99 — audit globale su tre assi · **abbandonata, non superata** · la più grossa
+
+88 file, +14.078 / −4.931. **Non è un audit**: è un cambio di architettura dei
+dati di campagna, cresciuto dentro una PR nata read-only. Il corpo lo ammette
+(*«la riga originale non vale più»*).
+
+| Cosa porta | Perché conta |
+|---|---|
+| **ADR-0017** — `state.yaml` come sorgente dei fatti, `state.md` **generato** | `state.md` era **1677 righe di cui 1150 (68%) di changelog**. Lo storico esce in `state-changelog.md` e il file scende a 546 righe |
+| Il vincolo che chiude alla radice il difetto dei «due tempi» | `oggi` e `tempo` **obbligatori** nello schema: un fatto senza tempo dichiarato **non è esprimibile** |
+| **4 validatori nuovi** (`validate_docs/links/pg/state`) + `render_state --check` | `validate_docs` nasce perché `AGENTS.md` documentava `campaign/npcs/`, `locations/`, `encounters/`: **nessuna delle tre è mai esistita** |
+| Schede PG a dati (`PG/schede/*.yaml` + `.md` generati) | oggi le schede PG non esistono come dato da nessuna parte |
+| **ADR-0018** — `groups/<slug>/` invece di branch-per-gruppo | e il **no a un memory store** per gli agenti: sarebbe non versionato e divergente |
+| Il reset per gruppo nuovo **perdeva** | azzerava `state.md` e `sessions/` e lasciava `state.yaml`, `state-changelog.md`, `campaign-history.md` e i recap al gruppo successivo |
+| La correzione del Peso | ✅ già portata fuori nel lotto R1 |
+
+⚠️ **Da non fare in blocco.** È il pezzo che tocca la parte più delicata del
+repo (il canone come dato), e va valutato **a lotti** — G1, G2, G2-bis,
+G2-ter, G2-quater sono già separati nel corpo della PR. Ordine consigliato:
+`validate_docs` per primo (indipendente, chiude un difetto reale), poi ADR-0017.
+
+⚠️ **La sua misura più utile, e va guardata in faccia**: *«la pipeline che
+avrebbe prevenuto questi difetti è costruita, ha 31 test, è al ~98% — e non è
+mai stata accesa.»*
+
+### #106 — catena dei raster + Blender · **abbandonata, non superata** · e risponde alla domanda sull'AI
+
+`comfyui_batch.py` (567 righe, 216 di test) e `render_map_blender.py` (381 +
+346 nello script Blender, 202 di test). **Nessuno dei due esiste su `main`.**
+
+Misurata contro la pratica corrente dell'illustrazione digitale AI-aided, questa
+PR fa **cinque cose su sei**:
+
+| Requisito | #106 |
+|---|---|
+| **Riproducibilità**: prompt, seed, modello e risoluzione fissati fuori dal codice | ✅ annotazione in **commento HTML** sopra il blocco di prompt nel markdown — invisibile nel rendering; il prompt si corregge **nel documento**, mai nello script |
+| **Determinismo prima della scelta** | ✅ il seed è **derivato dall'`id` con SHA-256**, non sorteggiato: due macchine partono dalle stesse diciotto immagini. `--reroll N` cambia tentativo in modo altrettanto ripetibile |
+| **Provenienza scritta** | ✅ `PROVENIENZA.txt` con file · modello e versione · **licenza dei pesi** · seed · data · chi. Il file nasce **prima** delle immagini |
+| **Igiene di licenza sui pesi** | ✅ **exit 1 come codice, non come avvertimento**, se il checkpoint contiene `flux1-dev` e varianti — e *prima* di qualsiasi scrittura o chiamata di rete (ADR-0019: la licenza è dei pesi, non del software) |
+| **Condizionamento da geometria reale, non da prompt** | ✅ `--profondita`: il pass Z di Blender alimenta ControlNet depth, e la **stessa `paint()`** che genera l'SVG risolve la geometria — le due catene **non possono** divergere. Con i due passi scritti nel codice perché non li salti: **normalizza** e **inverti** (saltare l'inversione dà un'immagine che *sembra* giusta e guida il modello al contrario) |
+| **Il giudizio umano nel ciclo** | ⚠️ **il pezzo che manca**: `--fissa-seed` registra la scelta, ma non c'è nessun registro di *cosa è stato scartato e perché*. `rumblingstone-art-direction` dice che **un'immagine si butta** invece di tenerla perché «è già venuta»; qui non c'è dove scriverlo |
+
+Due dettagli che valgono più del resto perché sono **decisioni, non codice**:
+il conteggio del capitolato è diventato un **gate** (*«il capitolato dice
+diciotto, i prompt sono venti»* → CI rossa al diciannovesimo: non è un divieto,
+è un modo di obbligare a **decidere**), e `batch_size` è fisso a 1 sui 6 GiB di
+VRAM misurati.
+
+⚠️ **I diciotto raster non ci sono**: questo ambiente non ha GPU. Il collo di
+bottiglia è **il giudizio, non la GPU** — ~1,5-2 ore sulla macchina del DM.
+
+### #63 — le 17 griglie Ultra-Clear di Hammerfist · **abbandonata, non superata**
+
+**Verificato su `main` oggi**: i tre master `Hammerfist-L{1,2,3}-REVISED-Ultra-
+Clear.md` esistono ma hanno **un `map01` ciascuno** — cioè **3 mappe tattiche su
+17**, esattamente lo stato che la PR descriveva come *prima*. La **3Y Ponte
+Sospeso** non ha alcuna griglia in tutto il repo: compare solo nell'atlante e nel
+Lotto-3 **deprecato**.
+
+**Verificato che non è marcita.** Nonostante **222 commit** di distanza dalla sua
+base e un rifacimento del renderer nel mezzo (*«renderer mappe a fedeltà
+piena»*), i cinque SVG del master L3 rigenerati con lo script di oggi sono
+**byte-identici** a quelli committati nella PR. Le griglie sono compilate da
+contratto JSON, non scritte a mano, e la determinatezza ha retto.
+
+⚠️ **Il problema che introduce, e non è nel corpo della PR.** Cancella **tutti e
+sette** gli SVG dei tre master `Hammerfist-Lotto-*` deprecati, ma **tiene i
+master** (ci aggiunge solo un banner). Verificato: quei master **generano ancora
+7 mappe**. E `validate_maps` **non se ne accorge** — rende solo i markdown che
+hanno già almeno un SVG committato, quindi togliendoli **tutti** il master
+sparisce dal controllo. *«validate_maps verde»* qui non significa che le mappe
+deprecate siano ancora rigenerabili: significa che **nessuno le guarda più**. È
+la stessa classe di difetto delle liste di incantesimi — l'assenza che nessun
+test cerca.
+
+**Rimedio, piccolo**: o si tengono i 7 SVG, o `validate_maps` guadagna un
+controllo per il master che genera mappe e ha **zero** SVG committati senza
+essere su una lista KO dichiarata.
+
+### #52 — overlay professionale sulle mappe degli incendi drow · **abbandonata, non superata**
+
+**Verificato su `main` oggi**: nessuna direttiva `@compass/@path/@zone/@mark` nel
+`Cerchio Sacro della Foresta` né nel supplemento dei campi drow, e la scena
+**«Foresta in Fiamme» non esiste**. I 14 master che oggi usano le direttive sono
+altri.
+
+Il suo valore non è il disegno: è la **dimostrazione** che le direttive `@` di
+[ADR-0006](adr/ADR-0006-annotazioni-mappa-overlay-professionale.md) funzionano
+anche sui master **scritti a mano**, non solo su quelli generati da JSON — e
+in-place, senza ricostruire la griglia (nessuna perdita del disegno esistente).
+
+**Verificato che regge**: rigenerati oggi, due dei tre SVG sono **byte-identici**
+a quelli della PR. Il terzo **cambia solo di nome**, non di contenuto:
+`…grid-6553-scal.svg` → `…grid-65-53-sca.svg`. È la `slug` corretta dal **lotto A
+di PIANO-QUALITA-DEL-CODICE**, che aveva trovato sette implementazioni diverse e
+**tutte e sette** incollavano `65×53` in `6553`. Quindi il costo di riprenderla
+è **una rinominazione**, non un rifacimento.
 
 ---
+
+## Cosa resta da decidere al DM
+
+| # | Domanda |
+|---|---|
+| R6 | Il simbolo **⬛** copre tenda, edificio e dais: **tre glifi o uno?** Non si chiude con una riga in `WALL_SYMS` — cambierebbe gli SVG, non solo l'export |
+| R7 | La Corona di Thorik: il **+4 CAR** e la **non-rimovibilità** sono nel testo di P1 e nessuno li ha né confermati né revocati. Se valgono, valgono entrambi |
+| R8 | **Ordine di ripresa** delle quattro PR abbandonate. La mia proposta: **#63** (contenuto pronto, costo quasi zero, chiude un buco che si sente al tavolo) → **#52** (una rinominazione) → **#106** (serve la tua GPU per l'ultimo passo) → **#99 a lotti** (la più grossa e la più delicata) |
 
 ## Piano di validazione
 
