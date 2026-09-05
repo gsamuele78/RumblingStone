@@ -53,6 +53,36 @@ After Drellin's Ferry, the party travels to **Hammerfist Holds** in The North Wa
 
 The party descends through a chain of connected underground locations:
 
+#### Earth Node Transit (Pre-Arc 01, unnumbered) `[DM 2026-07-26]`
+
+- **Location:** a **private chamber inside Hammerfist Holds**
+- **What happens:** **clerics and druids of Moradin** open a connection through
+  an **earth node**, and send the party into the Underdark. This is the party's
+  entry point — they do not walk down.
+- **Arrival:** the **fungi zone**, which is **under attack by the minotaurs at
+  that very moment**. The attack in progress *is* the hook: it triggers the
+  Minotaur Lair quest.
+- **Significance:** the descent is a **sending**, not an expedition. The party
+  is deposited into someone else's war already in progress, with no route home.
+
+#### The Drow Market of Sonjak (Pre-Arc 01, unnumbered) `[DM 2026-07-26]`
+
+- **Location:** a **fork in the Underdark road, on the way to the Minotaur
+  Lair** — encountered *before* the lair
+- **The descent:** a long, steep stair cut into the rock leads down from the fork
+- **The stair is guarded, and the party does not know it:**
+  - **invisible drow** watch the entire descent
+  - **invisible spiders** hang from the vault above
+  - **only Artemis sees them**, using his powers — and uses that knowledge to
+    **restrain the party's swagger**
+- **The market:** at the bottom the stair opens into a **wide cavern with three
+  tents**. The drow **do not attack — they trade**, at extortionate prices:
+  **potions, weapons, and slaves**
+- **Faction:** a party under **Matrona Sonjak**
+- **Significance:** a drow encounter that is *not* a fight. The danger is the
+  **misstep**, not the battle — and only one PC knows it. The money the party
+  spends here **funds Sonjak**.
+
 #### Minotaur Lair (Pre-Arc 01, unnumbered)
 
 - **Location:** Below Hammerfist Holds, first Underdark area
@@ -62,7 +92,39 @@ The party descends through a chain of connected underground locations:
   - **Il Collezionista** — A Rakshasa who uses a bonded basilisk to turn enemies into macabre statues and sells them to evil clients as trophies. **ESCAPED** — recurring villain.
 - **Key Events:**
   - Il Collezionista escaped the battle. He later formed a hook/alliance with the drow faction, providing them with strange and pure evil artifacts — possibly the same artifacts the drow seek during the Battle of Rethmar.
+  - **How he escaped** `[DM 2026-07-26]`: he **turned invisible**. By then every
+    PC was down **except the monk (Tordek)**, who could not see where he went.
+    He carried away an **obsidian pendant** (or comparable magic item) that moved
+    him elsewhere — another location in Faerûn, or another plane, temporarily.
+    → **Proposed resolution `[INFERRED — needs DM confirmation]`: the Plane of
+    Fire, the salamander forge where his guild trades.** Rationale: his guild
+    *already* has a canonical planar route (Therysol was sold "to salamanders in
+    the Fire Elemental plane, forced to serve at the forge"); obsidian is already
+    tied to the Fire Plane in campaign canon; and it plants Arc 07 three arcs
+    early. ⚠️ Must remain **distinct from and lesser than** the *Sigillo di
+    Ossidiana* (Shar-aligned artifact, `[CANONE — DM 2026-07-23]`).
+  - **The monk is the only witness** — he knows the Collezionista vanished, and
+    does **not** know where. Live hook until Arc 07.
+  - **Encounter composition** (from the XP ledger, `CalcoloPuntiEperienza-current.ods`):
+    *"Il capo dei minotauri **maur** cr 11, una **gorgone** cr 8, un **rakasa**
+    (il Collezionista)"*. ⚠️ The ledger records a **gorgon**; the DM and this
+    document record a **bonded basilisk**. **Basilisk stands** (2 sources of 3)
+    unless the DM rules otherwise.
   - Source: *Underdark* p.95 (Maur), p.93 (Cristal Warriors)
+
+#### Gardens of Resplendent Hues (Pre-Arc 02, unnumbered) `[DM 2026-07-26]`
+
+- **Adapted from:** *Drow of the Underdark* p.189
+- **Discovered:** thanks to **Hella and the fungi**, after the Minotaur Lair
+- **The trials:** **Hella passes them**, and gains the ability to **travel the
+  mycelium**, carrying the rest of the party with her
+  - the other PCs must make a **Fortitude save DC 17** or be **nauseated**
+  - **Artemis fails it**
+- **Why it matters mechanically:** the trials are **not a reward — they are the
+  means**. Without the mycelium the party would have had no way of reaching the
+  Fungi Tower at all.
+- **The condition nobody stated:** the gift carries an unspoken condition. It is
+  **revoked in Arc 05** — see there.
 
 #### Neverlight Grove (Fungi Tower) (Pre-Arc 02, unnumbered)
 
@@ -75,6 +137,25 @@ The party descends through a chain of connected underground locations:
   - *Expedition to the Demonweb Pits* (p.67) creatures used by the drow researchers
   - Portal to deeper levels (used by escaping drow, and later by the party)
 - **Party missed:** The connection between Mother of Fungi, drow architect Sonjak, and Il Collezionista
+- **Zuggtmoy is canon** `[DM 2026-07-26]` — the Queen of Fungi. The XP ledger
+  records a *"maledizione di yuggtmoy"* on the corpses in the tower; she is the
+  reason the myconids are crazed and the chamberlain is demonic. She is believed
+  to **know the location of the ancient dwarven mine**.
+- **Sonjak's pact with Zuggtmoy** `[DM 2026-07-26]`: Sonjak reshaped the tower
+  **in both structure and space** — by **agreement with Zuggtmoy**, in exchange
+  for permission to run her **aberration experiments** there. The tower is not a
+  dungeon: it is a **laboratory paid for with a bargain**.
+- **The audience never taken** `[DM 2026-07-26]`: **Hella wanted to meet
+  Zuggtmoy**, without truly knowing what awaited her — *madness, at minimum*.
+  The party instead chose to **chase the fleeing drow through the portal**,
+  without knowing where it led. By luck, it was the right direction.
+  → Zuggtmoy is therefore **never met on screen**, exactly like Sonjak. Two
+  powers, no faces: only their works are ever seen.
+  → Hella's wish stays **unfulfilled**; she dies in Arc 06 without it.
+- **The one-way portal** `[DM 2026-07-26]`: located **inside the Fungi Tower**.
+  It dumps both the **fleeing drow** and the **party** into the zone near the
+  mine, where they meet the **crystal monster** (the *Cristal Warriors*,
+  *Underdark* p.93).
 
 #### Arc 01 — La Miniera (Ancient Dwarven Mine)
 
@@ -82,6 +163,12 @@ The party descends through a chain of connected underground locations:
 - **Enemies:** Grell Necromancer lair, Grell Patriarch (aberration, defeated)
 - **Cristal Warriors** — Encountered in this area (source: *Underdark* p.93)
 - **Notes:** First part of the ancient dwarven mine. Cristal Warriors encountered in early rooms after portal arrival to the mine complex.
+- **Arrival** `[DM 2026-07-26]`: the party reaches this area through the **one-way
+  portal in the Fungi Tower**, while chasing fleeing drow. The **crystal monster**
+  is the first thing they meet on the other side.
+- ⚠️ **Do not conflate** the *Cristal Warriors* here with the **elder xorn**
+  encountered much later, near Belkram's Tomb (XP ledger: *"1 mostro a 3 gambe —
+  un elder xorn"*). Two different creatures, two different moments.
 
 #### Arc 02 — Scaladossa /
 
@@ -116,6 +203,31 @@ The party descends through a chain of connected underground locations:
 
 - **Source:** `05_aa-stanza-runica/`
 - Ancient dwarven runic puzzle room
+- **La Quest della Gemma dell'Antico Portatore** — spiritual plane (5,800 XP per
+  PC, the single largest award in the ledger)
+- **HELLA LOSES THE MYCELIUM GIFT** `[DM 2026-07-26]` — the pivotal consequence
+  of this arc:
+  - the party **burns the fungi** present in the room, provoking the
+    **fungal wrath**
+  - the gift granted in the *Gardens of Resplendent Hues* is **revoked**
+  - **it was never a price — it was a condition**, and the party violated it
+    without knowing it existed
+  - **the culprit is the party, not an enemy.** Hella pays for someone else's
+    decision
+- **Who knows what** — keep these three levels apart when running or writing it:
+  | Party | Knowledge |
+  |---|---|
+  | **The DM** | the truth: burned fungi → fungal wrath |
+  | **Hella** | that the power is **gone**. She **felt** it and **formed
+    suppositions** — she has no confirmation |
+  | **The group** | may not know they are the cause |
+- **How to run it:** nothing is announced. The loss is a **sensory beat** — the
+  mycelium simply stops answering: a silence where a voice used to be.
+- **Escalation of offence** `[DM 2026-07-26]`: the party first **declined the
+  Queen's audience** (Fungi Tower), then **burned her fungi** here. The fungal
+  wrath is the **second** slight, not a caprice — it has a progression.
+- **Still live:** Hella dies in Arc 06 and returns in Arc 07. Confirmation of
+  *why* she lost the gift can therefore arrive **after her resurrection**.
 
 #### Arc 06 — Stanza Corona di Adamantio (Crown Chamber)
 
@@ -328,12 +440,31 @@ and back to the surface for the Red Hand campaign mainline.
 ```
 [Hammerfist Holds (Surface)] ← Quest from Hammerfist King: find Corona di Adamantio
         ↓
+[EARTH NODE TRANSIT — private chamber inside Hammerfist]   `[DM 2026-07-26]`
+  ├── clerics + druids of Moradin open the connection
+  └── the party is SENT, not walked → arrives in the fungi zone
+        ↓
+[FUNGI ZONE — under minotaur attack, in progress]
+  └── the attack IS the hook: it triggers the Minotaur Lair quest
+        ↓
+[THE DROW MARKET OF SONJAK — fork on the road to the lair] `[DM 2026-07-26]`
+  ├── steep stair; INVISIBLE drow on the descent, INVISIBLE spiders above
+  ├── only Artemis sees them → restrains the party's swagger
+  ├── wide cavern, 3 tents: potions, weapons, SLAVES at extortionate prices
+  └── no combat. The danger is the misstep. The money funds Sonjak
+        ↓
 [Minotaur Lair — Pre-Arc 01, unnumbered]
   ├── Source: Expedition to Undermountain (p.165), Underdark sourcebook
   ├── Maur (Underdark native, CR ~10, defeated)
   ├── Il Collezionista (Rakshasa + bonded basilisk, ESCAPED)
   │   └── Later allies with Sonjak's drow guild → provides evil artifacts
   └── Cristal Warriors (Underdark p.93) — also encountered in 01
+        ↓
+[GARDENS OF RESPLENDENT HUES — the trials]                 `[DM 2026-07-26]`
+  ├── Source: Drow of the Underdark p.189
+  ├── Hella passes the trials → MYCELIUM TRAVEL, party in tow
+  ├── others: Fort DC 17 or nauseated — ARTEMIS FAILS
+  └── NOT a reward: it is the MEANS. Without it, no way to reach the Tower
         ↓
 [Neverlight Grove — Pre-Arc 02, unnumbered]
   ├── Source: Out of the Abyss (5e→3.5 conversion), Expedition to Demonweb Pits (p.67)
@@ -342,7 +473,14 @@ and back to the surface for the Red Hand campaign mainline.
   ├── Web spider infestations, drow aberration researchers
   ├── Demonweb Pits creatures (p.67) used by researchers
   ├── Connection to Sonjak + Mother of Fungi (UNDISCOVERED by party)
-  └── Portal to deeper levels (used by escaping drow, then by party)
+  ├── ZUGGTMOY is canon — Queen of Fungi; "maledizione di yuggtmoy" in the ledger
+  ├── SONJAK'S PACT: she reshaped the tower in structure AND SPACE, by agreement
+  │   with Zuggtmoy, in exchange for her aberration experiments
+  ├── THE AUDIENCE NEVER TAKEN: Hella wanted to meet Zuggtmoy (madness at
+  │   minimum); the party chased the drow instead → Zuggtmoy never seen, like
+  │   Sonjak. Two powers, no faces — only their works
+  └── ONE-WAY PORTAL (inside the Tower): dumps fleeing drow AND the party near
+      the mine → first thing they meet is the CRYSTAL MONSTER
         ↓
 [01_LaMiniera — Ancient Dwarven Mine]
   ├── Source: 01_LaMiniera/
