@@ -305,7 +305,7 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
   fossato (riga 76) al Cancello (riga 72) solo 6 m/4 quadrati — punto di
   massima pressione nemica.
 - **Round-per-round dell'assalto** (Fasi 1-3, bombardamento → carica →
-  pressione continua): vedi `Hammerfist-Lotto-3-FINALE.md` (mappe con lo
+  pressione continua): vedi `_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` (mappe con lo
   schema a fasi dell'assalto della Mano Rossa; questo file REVISED è la
   mappa di riferimento posizioni/distanze, non il copione dell'assalto).
 - **Morale**: nessuna soglia esplicita dichiarata in questo file; vedi

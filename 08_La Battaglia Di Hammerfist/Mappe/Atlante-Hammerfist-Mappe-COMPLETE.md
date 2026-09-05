@@ -50,7 +50,7 @@ narrativa, questo file è la fonte.
 **File deprecati da questa matrice** (banner DEPRECATED aggiunto, D12 — puntano tutti qui):
 `ARC08-90-DEPRECATO-battle-stats-maps.md` (a), `ARC08-91-DEPRECATO-atlante-visivo-v2.md` (b),
 `ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` (c),
-`Mappe/Hammerfist-Lotto-1-Ricognizione.md`, `Mappe/Hammerfist-Lotto-2-Assedio.md`, `Mappe/Hammerfist-Lotto-3-FINALE.md`.
+`Mappe/_ARCHIVIO/Hammerfist-Lotto-1-Ricognizione.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md`.
 
 **File NON deprecati** (master tattici di categoria diversa, non sovrapposti):
 `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md`, `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md`,

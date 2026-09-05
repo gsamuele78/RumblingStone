@@ -1876,7 +1876,7 @@ Se più di 4 bugbear sono caduti, i superstiti si dileguano nei tunnel. Gli hobg
 - ❌ **Fallimento:** Re Thorek viene ucciso — la campagna dell'arco crolla (vedi ARC08-10 Esiti e Contingenze prima di permettere questo esito)
 
 **Riferimenti tattici (griglia completa 33×33, posizioni quadretto per quadretto):**
-- `Mappe/Hammerfist-Lotto-3-FINALE.md` → MAPPA 3Z: INCROCIO SILENZIOSO
+- `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` → MAPPA 3Z: INCROCIO SILENZIOSO
 - `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` → MAPPA 3Z (immagine [158] `hammerfist-3z.png`)
 - `../07_il Portale Della Forgia Eterna/Mappe/TACTICAL-GRIDS-COMPLETE.md` → MAP 19: SILENT CROSSROADS (file combinato, vedi nota di cross-reference)
 

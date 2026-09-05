@@ -109,9 +109,9 @@ master** rilevanti alla sessione.
 | `ARC08-91-DEPRECATO-atlante-visivo-v2.md` | Generazione superata dell'atlante (A8) | idem |
 | `ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` | Generazione superata dell'atlante (A8) | idem |
 | `ARC08-93-DEPRECATO-sessione-interrotta.md` | Stub generico fuori canone (A6) | `ARC08-01-GUIDA-DM.md` |
-| `Mappe/Hammerfist-Lotto-1-Ricognizione.md` | Generazione mappe superata (A8) | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` (+ L1-REVISED) |
-| `Mappe/Hammerfist-Lotto-2-Assedio.md` | Generazione mappe superata (A8) | idem (+ L2-REVISED) |
-| `Mappe/Hammerfist-Lotto-3-FINALE.md` | Generazione mappe superata (A8) | idem (+ L3-REVISED) |
+| `Mappe/_ARCHIVIO/Hammerfist-Lotto-1-Ricognizione.md` | Generazione mappe superata (A8) | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` (+ L1-REVISED) |
+| `Mappe/_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md` | Generazione mappe superata (A8) | idem (+ L2-REVISED) |
+| `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` | Generazione mappe superata (A8) | idem (+ L3-REVISED) |
 
 ### Di servizio
 

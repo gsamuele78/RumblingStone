@@ -39,12 +39,13 @@ registro esiste.
 | 2026-09-04 | **Censimento** dei lotti aperti nei piani | **R** ricognizione | subagente `Explore`, Sonnet 5 | ✅ | Primo lotto delegato sotto ADR-0045. Ha **confermato i miei conteggi M/R/C/G/K esattamente** (6·2·8·4·4 = 24) e ha trovato quello che non avevo visto: **43 caselle `⬜` in altri undici piani**, alcuni dei quali marcati ✅ in `INDEX`. 🔎 Ma il numero grezzo **non è un conteggio di lotti**: separandole, sono **29 citate nel testo · 6 celle vuote · 5 lotti veri · 3 glifi di stato** («⬜ NON giocato» di un arco non è un lotto). Il subagente aveva già segnalato da sé un falso positivo. **Lezione: un lotto R restituisce un numero, e il numero va ancora letto** — la ricognizione misura, non interpreta, ed è per questo che è la classe più economica |
 | 2026-09-04 | **R5** giudicare le PR aperte | **G** giudizio | Opus 5, sessione principale | ⚠️ **non ha retto** | Ha soddisfatto il suo criterio (*«il DM lo legge e riconosce il proprio problema»*) **ed era incompleto**: le PR aperte erano **sei**, ne ha giudicate cinque. Il criterio di **G** è soggettivo, quindi **non vede un'assenza**. È il caso che ha fatto nascere la **quarta regola** di ADR-0045: un lotto su un insieme dichiara il comando che enumera l'insieme |
 | 2026-09-05 | **R9** il censimento rifatto, e la #67 | **G** giudizio | Opus 5, sessione principale | ✅ | Il conteggio è partito da `list_pull_requests --state open`, non dalla memoria né da R5 — ed è così che la #67 è saltata fuori. 🔎 Il verdetto («superata») ha richiesto **G** vero: i motivi della PR andavano cercati uno per uno nel canone di oggi, e la parte che decide non era la data ma **la norma degli handout**, che nel frattempo era cambiata. La parte contabile costa due secondi, la parte di giudizio no: separarle è il punto |
+| 2026-09-05 | **F1 1a** archiviare i `Lotto-*` (D1) | **G** giudizio | Opus 5, sessione principale | ✅ | La parte **G** è durata quanto una domanda: misurare l'insieme (3 master, 7 SVG, i riferimenti) ha **cambiato la forma della scelta** — letto il validatore invece di fidarsi del piano, è saltato fuori che archiviare master **e** SVG insieme li tiene sotto il gate, quindi la terza opzione («cancellare gli SVG con l'opt-out») non serviva. 🐛 E il `grep` ha trovato **14 riferimenti** dove il piano ne diceva **1**: la quarta regola di ADR-0045, scritta ieri, ha morso il giorno dopo |
 
 ---
 
 ## Che cosa dicono le righe finora
 
-Sono **sei**, quindi non dicono ancora niente di statistico. Ma due
+Sono **sette**, quindi non dicono ancora niente di statistico. Ma due
 portano lo stesso insegnamento, e vale la pena guardarlo:
 
 > **La classe non si legge dalla dimensione del diff.** `F0` era una riga in un

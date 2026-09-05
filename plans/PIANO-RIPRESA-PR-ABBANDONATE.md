@@ -95,7 +95,7 @@ affidata a chi legge il diff.
 >
 > | | Lotto | Classe | `[engine · effort · qualità]` |
 > |---|---|---|---|
-> | **1a** | **D1**: archiviare i `Lotto-*` o tenerne gli SVG | **G** giudizio | `[Opus 5, sessione principale · alto · il DM conferma la scelta]` |
+> | **1a** ✅ | **D1**: archiviare i `Lotto-*` o tenerne gli SVG | **G** giudizio | `[Opus 5, sessione principale · alto · il DM conferma la scelta]` — **chiuso 2026-09-05: archiviazione** |
 > | **1b** | portare i tre master markdown e i quattro file di puntamento | **M** meccanico | `[inline · basso · i link risolvono, `validate_modules` verde]` |
 > | **1c** | risolvere i conflitti sui file di puntamento (3 commit di drift) | **C** costruzione | `[Sonnet 5 · medio · nessun riferimento perso rispetto a prima]` |
 > | **1d** | rigenerare gli SVG da zero | **M** meccanico | `[inline · basso · byte-identici a quelli della PR — già provato su L3]` |
@@ -130,10 +130,36 @@ così. Due strade, e la scelta è del DM:
   riscrittura controllata dei riferimenti + `README.md` che documenta la
   politica). Allora la cancellazione degli SVG è **conseguente**, non silenziosa.
 
-📌 **Proposta**: la **(b)**. Il repo ha già la procedura, i `Lotto-*` sono
+✅ **Deciso dal DM il 2026-09-05: la (b), archiviazione** — eseguita in
+`08_…/Mappe/_ARCHIVIO/`, con una variante che costa zero e non perde niente:
+**i sette SVG sono venuti dietro ai loro master invece di essere cancellati**.
+`validate_maps` cerca ogni `**/rendered/*.svg`, quindi `_ARCHIVIO/rendered/`
+resta **dentro** il suo raggio: i sette restano rigenerabili e in sincrono, il
+conteggio non si muove (**31 SVG / 17 master**, come prima), e non serve nessuna
+riga di opt-out. L'obiettivo della (b) — togliere tre master deprecati dalla
+cartella dove stanno i tre definitivi — è raggiunto lo stesso.
+
+🐛 **Il costo era sottostimato in questo piano, e va detto.** §1.1 diceva «il
+riferimento in `L2-REVISED`», al singolare. I riferimenti erano **quattordici in
+cinque file**: `MAPPE-CENSIMENTO` (7 righe), `ARC08-00-INDICE` (3), `ARC08-01-GUIDA-DM`
+(1 — e punta a **MAPPA 3Z Incrocio Silenzioso**, che è una delle cinque mappe che
+il lotto 1b deve portare dentro `L3`), `Atlante-…-COMPLETE` (1), `L2-REVISED` (1),
+più due in `campaign/state.md` **lasciati intatti** perché è un log append-only.
+Tutti riscritti a `_ARCHIVIO/…`. **È lo stesso errore di R5**: un conteggio fatto
+leggendo invece che con un `grep`, in un piano scritto *prima* che ADR-0045
+avesse la sua quarta regola.
+
+📌 **Proposta originale**: la **(b)**. Il repo ha già la procedura, i `Lotto-*` sono
 sorgenti assorbiti esattamente come quelli di ARC-07, e lasciare in `Mappe/` tre
 master deprecati accanto ai tre definitivi è la condizione che genera il prossimo
 errore di puntamento.
+
+### 1.2-bis · La coda `⬛` si accorcia
+
+Archiviare `Hammerfist-Lotto-3-FINALE` toglie **1.256 celle** dalla coda di
+riclassificazione di `LEGENDA-FUNZIONALE-SPEC` §6.2: la coda viva passa da
+**8.216 in 24 file** a **6.960 in 23**. La riga è barrata, non cancellata, e il
+totale del 2026-09-04 resta scritto com'era — era vero allora.
 
 ### 1.3 · Come si porta dentro
 
