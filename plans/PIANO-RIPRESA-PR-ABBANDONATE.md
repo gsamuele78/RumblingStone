@@ -96,9 +96,9 @@ affidata a chi legge il diff.
 > | | Lotto | Classe | `[engine · effort · qualità]` |
 > |---|---|---|---|
 > | **1a** ✅ | **D1**: archiviare i `Lotto-*` o tenerne gli SVG | **G** giudizio | `[Opus 5, sessione principale · alto · il DM conferma la scelta]` — **chiuso 2026-09-05: archiviazione** |
-> | **1b** | portare i tre master markdown e i quattro file di puntamento | **M** meccanico | `[inline · basso · i link risolvono, `validate_modules` verde]` |
-> | **1c** | risolvere i conflitti sui file di puntamento (3 commit di drift) | **C** costruzione | `[Sonnet 5 · medio · nessun riferimento perso rispetto a prima]` |
-> | **1d** | rigenerare gli SVG da zero | **M** meccanico | `[inline · basso · byte-identici a quelli della PR — già provato su L3]` |
+> | **1b** ✅ | portare i tre master markdown e i quattro file di puntamento | **M** meccanico | `[inline · basso · i link risolvono, `validate_modules` verde]` — **chiuso 2026-09-05** |
+> | **1c** ✅ | risolvere i conflitti sui file di puntamento (3 commit di drift) | **C** costruzione | `[Sonnet 5 · medio · nessun riferimento perso rispetto a prima]` — **chiuso 2026-09-05: un solo conflitto vero** |
+> | **1d** ✅ | rigenerare gli SVG da zero | **M** meccanico | `[inline · basso · byte-identici a quelli della PR — già provato su L3]` — **chiuso 2026-09-05: 11 SVG, 7 byte-identici e 4 diversi solo nella legenda/nel nome** |
 >
 > ⚠️ **1a viene prima di tutto**: dopo ADR-0043 la CI **forza** quella decisione,
 > quindi 1b non parte finché 1a non è presa.
@@ -173,6 +173,62 @@ contenuto**, e lo si riverifica.
 3. **Rigenerare gli SVG da zero** con `render_map_svg.py`. Non copiare quelli
    della PR: si rigenerano, e devono venire identici — è già stato provato su L3.
 4. Eseguire la scelta 1.2 (archiviazione o mantenimento).
+
+### 1.3-bis · Com'è andata (2026-09-05)
+
+**I tre master.** `L1` e `L3` erano **intatti** su `main` dal merge-base, quindi
+sono entrati per intero dal branch; `L2` aveva una sola riga di differenza — la
+mia, del lotto 1a — e le è stata riapplicata sopra. Da **1 mappa ciascuno** a
+**3 · 3 · 5 = 11**, e la **3Y Ponte Sospeso** adesso esiste.
+
+**I quattro file di puntamento** si sono fusi a tre vie sul merge-base: tre
+puliti, **un conflitto solo**, ed è esattamente quello che avevo segnalato
+chiudendo 1a — il puntatore 3Z di `ARC08-01-GUIDA-DM`. Risolto tenendo la
+versione della PR, che nomina `L3-REVISED` come **griglia canonica** invece del
+master deprecato, e correggendole il path storico verso `_ARCHIVIO/`. La drift
+di `main` è sopravvissuta: l'Incontro 2F è ancora lì.
+
+**Gli 11 SVG rigenerati da zero.** Sette **byte-identici** a quelli della PR.
+Tre differiscono, e uno cambia nome — tutti e quattro per un motivo solo, che ho
+verificato riga per riga: **zero differenze fuori dal blocco legenda**.
+
+| Cosa | Perché |
+|---|---|
+| 3 SVG con legenda diversa | [ADR-0042](adr/ADR-0042-tre-glifi-per-tre-cose.md), mergiata **dopo** la #63: `⬛ — Struttura (tenda, edificio, dais)` è diventato `⬛ — Edificio / corpo di fabbrica`, e `⛺ — Tenda` ha guadagnato la sua chiosa |
+| 1 SVG che cambia solo nome | `…drago-sui-.svg` → `…drago-sui.svg`: la `slug` corretta dal lotto A di `PIANO-QUALITA-DEL-CODICE`, **la stessa correzione** che aspetta la #52 |
+
+⚠️ **La riga del piano diceva «byte-identici», ed era vera per il disegno, non
+per il file.** Vale la pena tenerla scritta così: quando un renderer migliora,
+«identico» smette di essere il collaudo giusto — quello giusto è *«identico
+fuori dai punti in cui il repo è migliorato, e su quelli spiegabile»*.
+
+**I tre master archiviati** hanno preso l'intestazione migliore della PR — quella
+che manda a `L1/L2/L3-REVISED` *tutte* le griglie, non solo una — **senza** la
+frase «gli SVG di questo file sono stati rimossi», che dopo 1a sarebbe falsa.
+
+### 1.3-ter · Il test che si è rotto, e perché non era una regressione
+
+`test_import_ultraclear` ha due test sul **golden case**, e il golden case
+**era il master vivo** `Hammerfist-L2-REVISED-Ultra-Clear.md`. Portando dentro
+la #63 sono diventati rossi:
+
+- **R1 non più riportato** — la #63 ha reso **uniforme** la griglia che il test
+  si aspettava difettosa. Il difetto è stato corretto: buona notizia;
+- **Dara Occhiolesto non più fra le unità** — il file è passato da **1 mappa a
+  3**, quindi il blocco di annotazioni non appartiene più a `maps[0]`.
+
+Nessuna regressione dell'importatore: **si è mosso il campione**. Il rimedio è
+congelarlo — `scripts/tests/fixtures/ultraclear/golden-hammerfist-L2-2026-07.md`,
+il master com'era su `main` il 2026-09-05, con in testa il commento che dice
+perché sta lì. Verificato che riproduce **tutti e quattro** i difetti-tipo
+(R1, R3, R5, R4) e Dara a `[8, 61]` col token 🟢: nessuna asserzione tolta.
+
+⚠️ **Che cosa si perde.** Prima il test toccava un file vero, e un file vero che
+cambia sotto un collaudo lo fa suonare. Adesso non suona più — e il file vivo
+non ha nessun test che lo guardi. È un compromesso, non un miglioramento netto:
+**un campione di collaudo deve stare fermo, e un documento di campagna non sta
+fermo**; ma chi domani rompesse l'importatore *sul formato nuovo* a tre mappe non
+lo saprebbe da qui. Se serve coprirlo, è un lotto **C** a sé, non questo.
 
 ### 1.4 · Validazione
 

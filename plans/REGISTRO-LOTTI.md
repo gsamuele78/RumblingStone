@@ -40,12 +40,15 @@ registro esiste.
 | 2026-09-04 | **R5** giudicare le PR aperte | **G** giudizio | Opus 5, sessione principale | ⚠️ **non ha retto** | Ha soddisfatto il suo criterio (*«il DM lo legge e riconosce il proprio problema»*) **ed era incompleto**: le PR aperte erano **sei**, ne ha giudicate cinque. Il criterio di **G** è soggettivo, quindi **non vede un'assenza**. È il caso che ha fatto nascere la **quarta regola** di ADR-0045: un lotto su un insieme dichiara il comando che enumera l'insieme |
 | 2026-09-05 | **R9** il censimento rifatto, e la #67 | **G** giudizio | Opus 5, sessione principale | ✅ | Il conteggio è partito da `list_pull_requests --state open`, non dalla memoria né da R5 — ed è così che la #67 è saltata fuori. 🔎 Il verdetto («superata») ha richiesto **G** vero: i motivi della PR andavano cercati uno per uno nel canone di oggi, e la parte che decide non era la data ma **la norma degli handout**, che nel frattempo era cambiata. La parte contabile costa due secondi, la parte di giudizio no: separarle è il punto |
 | 2026-09-05 | **F1 1a** archiviare i `Lotto-*` (D1) | **G** giudizio | Opus 5, sessione principale | ✅ | La parte **G** è durata quanto una domanda: misurare l'insieme (3 master, 7 SVG, i riferimenti) ha **cambiato la forma della scelta** — letto il validatore invece di fidarsi del piano, è saltato fuori che archiviare master **e** SVG insieme li tiene sotto il gate, quindi la terza opzione («cancellare gli SVG con l'opt-out») non serviva. 🐛 E il `grep` ha trovato **14 riferimenti** dove il piano ne diceva **1**: la quarta regola di ADR-0045, scritta ieri, ha morso il giorno dopo |
+| 2026-09-05 | **F1 1b** portare i tre master + i puntamenti | **M** meccanico | inline, Opus 5 | ⚠️ **è salito** | Previsto **M**: «i link risolvono». Ha fatto rossi **due test**, e capire perché era **G** — bisognava distinguere *«la #63 ha rotto l'importatore»* da *«la #63 ha corretto il file che l'importatore usava come campione»*. Un gate che diventa rosso dice **che** qualcosa è cambiato, mai **chi** ha ragione, e quella lettura non è meccanica |
+| 2026-09-05 | **F1 1c** conflitti sui puntamenti | **C** costruzione | inline (merge a tre vie) | ✅ ma **sovradimensionato** | Previsto `Sonnet 5 · medio` per «3 commit di drift». Tre file su quattro si sono fusi **puliti**, il quarto aveva **un conflitto** — e per giunta già identificato e descritto chiudendo 1a. **Chiudere bene il lotto prima ha reso il lotto dopo più piccolo**: un effetto che la tabella dei costi non modella |
+| 2026-09-05 | **F1 1d** rigenerare gli SVG | **M** meccanico | inline | ✅ | Il criterio scritto nel piano — «byte-identici» — era **sbagliato**, e il lotto è riuscito lo stesso perché il criterio si è potuto **riformulare mentre girava**: 7 identici, 4 diversi solo dove il repo è migliorato dopo la #63, e zero differenze fuori dal blocco legenda. 🔎 Un collaudo a uguaglianza esatta invecchia con lo strumento che verifica |
 
 ---
 
 ## Che cosa dicono le righe finora
 
-Sono **sette**, quindi non dicono ancora niente di statistico. Ma due
+Sono **dieci**, quindi non dicono ancora niente di statistico. Ma due
 portano lo stesso insegnamento, e vale la pena guardarlo:
 
 > **La classe non si legge dalla dimensione del diff.** `F0` era una riga in un
