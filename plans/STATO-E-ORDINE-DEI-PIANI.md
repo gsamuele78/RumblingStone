@@ -20,6 +20,7 @@ Sette lotti, dal 2026-09-04. Ognuno con la sua riga nel `CHANGELOG`.
 | **R1** | Il canone su `main` attribuiva a Tordek un pegno permanente di Thorik, per un mese | ✅ corretto in 12 file, con **E-07c riscritta, E-07e annullata, E-07f nuova** |
 | **R2** | `AGENTS.md` elencava **13 skill su 18** e diceva il falso su come si caricano | ✅ [ADR-0041](adr/ADR-0041-instradamento-delle-skill-con-un-gate.md): principio → tabella per compito → inventario, **con un gate bidirezionale** |
 | **R5** | Cinque PR aperte senza giudizio | ✅ giudicate una per una **sul codice di oggi**: #109 superata e chiusa, le altre quattro **abbandonate, non superate** |
+| **R9** *(2026-09-05)* | Il conto di R5 era **incompleto**: la **#67** non aveva giudizio in nessun documento | ✅ **superata** — su `main` gli stessi hint esistono dal 31 luglio come booklet da manifest, e la PR è **contraria alla norma degli handout**. Da chiudere. Zero issue aperte |
 | **R6** | `⬛` valeva insieme *tenda, edificio, dais* su 8.216 celle | ✅ [ADR-0042](adr/ADR-0042-tre-glifi-per-tre-cose.md): tre glifi, e `⬛` **non cambia comportamento** |
 | **R7** | La DES di Thorik scritta in modo ambiguo; due clausole della Corona mai decise | ✅ tabella punteggio/modificatore; **+4 CAR e non-rimovibilità confermati** dal DM |
 | **F0** | `⛰` disegnato solido e non muro nell'export; `validate_maps` con un punto cieco | ✅ [ADR-0043](adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md) |
@@ -109,6 +110,21 @@ tutti esistenti.
 F1 audit (31 SVG / 17 master + set immagini) · F2 i gate scrivibili · F3 le
 norme nelle skill esistenti. **Bloccata su una domanda**: quali mappe pubblicate
 sono lo standard.
+
+### Le PR ancora aperte, oggi
+
+| PR | Verdetto | Dove sta scritto | Che si fa |
+|---|---|---|---|
+| **#63** | abbandonata, **non** superata | ① F1 | si svuota — è la prossima |
+| **#52** | abbandonata, **non** superata | ① F2 | si svuota |
+| **#106** | abbandonata, **non** superata | ① F3 | si svuota, serve la GPU del DM |
+| **#99** | abbandonata, **non** superata | ① F4 | si svuota a otto lotti |
+| **#67** | **superata** | `RICONCILIAZIONE-PR` R9 | **si chiude**, niente da recuperare |
+
+⚠️ **Nessuna delle cinque si mergia com'è.** Le quattro abbandonate hanno una
+base di mesi fa: se ne porta il **contenuto**, non i commit. La #67 non ha
+contenuto da portare, e mergiarla rimetterebbe in circolo un handout che detta
+tattica al giocatore.
 
 ### Code aperte che non sono un piano
 

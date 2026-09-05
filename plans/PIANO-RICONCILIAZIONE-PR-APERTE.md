@@ -125,6 +125,52 @@ domanda per il DM, non un fix.
 
 ---
 
+## Lotto R9 — il censimento rifatto, e la PR che mancava `[✅ fatto]`
+
+`[G giudizio · Opus 5, sessione principale · alto · **ogni PR che `list_pull_requests --state open` restituisce ha una riga di verdetto**]`
+
+**Fonte**: richiesta DM del 2026-09-05 — *«vedi se ci sono PR e piani aperti e
+me li elenchi, così vediamo cosa è rimasto, cosa è superato e cosa c'è da fare
+sul serio; non vorrei piani e PR che si sovrappongono o parzialmente obsolete
+che per sbaglio mergio»*.
+
+Rifatto il conto sulle PR effettivamente aperte oggi, invece di ricopiarlo da
+R5: sono **cinque**, e una — la **#67** — non ha mai avuto un giudizio. R5 ne
+elencava cinque, ma erano #109, #99, #106, #63, #52: la #67 non compare in
+nessuna riga di questo piano, né in `INDEX`, né in `CHANGELOG`, né in
+`STATO-E-ORDINE`.
+
+⚠️ **Perché è sfuggita, e perché è il caso peggiore.** Le altre si notano: 88
+file, o un branch di mesi fa, o un conflitto. La #67 aggiunge **un file solo**,
+non tocca nessun `.md`, non ha conflitti — quindi in una lista di PR è la riga
+che l'occhio salta, ed è l'unica che si potrebbe mergiare senza leggerla. Il
+giudizio è nella sezione qui sotto: **superata, e contraria alla norma di oggi**.
+
+Verificato anche il resto del perimetro: **zero issue aperte** sul repo, e le
+quattro PR abbandonate sono ferme dove le aveva lasciate R5 (nessun commit
+nuovo dopo il 2026-08-15).
+
+### Che cosa ha insegnato su ADR-0045
+
+R5 era **l'esempio di classe G** che sta nella tabella di
+[ADR-0045](adr/ADR-0045-ogni-lotto-dichiara-engine-effort-e-qualita.md)
+(*«giudicare cinque PR»*). Girava sull'engine giusto, all'effort giusto, e ha
+soddisfatto il suo criterio di qualità — *«il DM lo legge e riconosce il proprio
+problema»* — **restando incompleto**. Non è un errore di esecuzione: è che quel
+criterio, per come è scritto, **non può accorgersi di un'assenza**. Si legge una
+lista di cinque verdetti, ci si riconosce dentro, e non si sa che manca il sesto.
+
+Il rimedio non è un criterio più severo per **G**: è togliere al giudizio la
+parte che non è giudizio. Da qui la **quarta regola** di ADR-0045 — *un lotto che
+lavora su un insieme dichiara da dove conta l'insieme* — e la dichiarazione in
+testa a questo lotto, che nomina il comando invece di promettere attenzione.
+
+⚠️ **La classificazione dei 19 lotti di `PIANO-RIPRESA-PR-ABBANDONATE` non
+cambia.** Il difetto era nel lotto che *decide* se una PR si continua o si
+butta, non in quelli che poi la svuotano.
+
+---
+
 ## Giudizio nel merito delle PR aperte
 
 Ogni riga è **verificata sul codice di oggi**, non letta dal corpo della PR.
@@ -235,6 +281,50 @@ a quelli della PR. Il terzo **cambia solo di nome**, non di contenuto:
 di PIANO-QUALITA-DEL-CODICE**, che aveva trovato sette implementazioni diverse e
 **tutte e sette** incollavano `65×53` in `6553`. Quindi il costo di riprenderla
 è **una rinominazione**, non un rifacimento.
+
+### #67 — booklet HTML degli hint per Terros · **superata, da chiudere**
+
+⚠️ **Questa PR il giudizio del 2026-09-04 non l'aveva vista.** R5 dice «cinque PR
+aperte»: erano **sei**. La #67 è sfuggita perché è la più innocua da guardare —
+un file aggiunto, nessun conflitto, nessun `.md` toccato — ed è esattamente il
+profilo che si mergia per sbaglio.
+
+Aggiunge `07_il Portale Della Forgia Eterna/ARC07-BOOKLET-HINT-TERROS.html`:
+428 righe, un booklet HTML **scritto a mano**, quattro pagine per-PG per la
+serata del Guardiano.
+
+**Verificato su `main` oggi.** Lo stesso oggetto esiste, in forma migliore, in
+`07_…/homebrew/sessione-terros/`: manifest ADR-0013, intro, regia, master
+integrale, teaser, e **quattro** handout per-PG — `02-HINT-THORIK`,
+`03-HINT-TORDEK`, `04-HINT-ARTEMIS`, `05-ECHI-HELLA` — con `.hb.md` e `.html`
+generati. Il primo di quei file è arrivato il **31 luglio**, sette giorni dopo
+la #67, e l'ultimo giro di rigenerazione è del **5 settembre**, con dentro la
+correzione R1 del Peso del Mondo.
+
+Non c'è niente da svuotare. Cercati uno per uno, **tutti** i motivi della #67
+sono già nel canone: «Radice a Terra», «Sisma Contrario», «Valvola di Sfogo»,
+«Trinità Divina», «Scudo di Geodi», la pioggia di stalattiti e il cabochon di
+Varis stanno in `ARC07-DEF-1` e in `01-REGIA-SESSIONE`.
+
+**E mergiarla farebbe un danno**, che è la ragione per cui non basta lasciarla
+aperta e ignorarla:
+
+| | La #67 | `main` di oggi |
+|---|---|---|
+| Dove sta | radice dell'arco, fuori da `homebrew/` | dentro la cartella di sessione |
+| Come nasce | HTML a mano, CSS proprio | manifest + `build_booklet_html.py` |
+| Chi la controlla | nessuno: `validate_booklets` non la vede | il gate ADR-0013 |
+| Cosa dice al giocatore | *«fatti Aiutare e vinci una prova di Forza contrapposta»*, *«sei lo star DPS designato»*, la tabella accetta/rifiuta del Seme-Mercato con **l'esito già scritto** | *«qui non ci sono istruzioni: sono cose che il TUO personaggio sente»* |
+
+L'ultima riga è la sola che conta davvero. Gli handout di `main` seguono la
+norma che il tavolo si è dato — al giocatore si danno **sensazioni**, non
+tattiche, e mai l'esito di una scelta prima che la faccia. La #67 gliele dà
+tutte e tre. Non è vecchia: è **contraria alla regola di oggi**, e l'avrebbe
+riaperta di soppiatto dentro un file che nessun validatore guarda.
+
+**Azione**: chiudere la #67 con questa motivazione. Nessun contenuto da
+recuperare — è il secondo caso, dopo la #109, in cui «superata» vuol dire
+davvero superata.
 
 ---
 
