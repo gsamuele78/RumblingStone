@@ -329,9 +329,9 @@ griglia — il disegno esistente non si è perso in nessuno dei tre.
 >
 > | | Lotto | Classe | `[engine · effort · qualità]` |
 > |---|---|---|---|
-> | **3a** | portare i due script e i loro 418 test | **M** meccanico | `[inline · basso · i test passano com'erano]` |
-> | **3b** | `SCARTI.txt` — il registro di cosa si butta e perché | **C** costruzione | `[Sonnet 5 · medio · un test che prova che un `--reroll` senza motivo **non** passa]` |
-> | **3c** | gli smoke in CI e il controllo di determinismo del piano di scena | **C** costruzione | `[Sonnet 5 · medio · il controllo boccia un piano non deterministico]` |
+> | **3a** ✅ | portare i due script e i loro 418 test | **M** meccanico | `[inline · basso · i test passano com'erano]` — **chiuso 2026-09-05: non passavano, e la ragione era buona** |
+> | **3b** ✅ | `SCARTI.txt` — il registro di cosa si butta e perché | **C** costruzione | `[Sonnet 5 · medio · un test che prova che un `--reroll` senza motivo **non** passa]` — **chiuso 2026-09-05: 7 test, e il gate morde anche in CI** |
+> | **3c** ✅ | gli smoke in CI e il controllo di determinismo del piano di scena | **C** costruzione | `[Sonnet 5 · medio · il controllo boccia un piano non deterministico]` — **chiuso 2026-09-05** |
 > | **3d** | 🖥 generare i diciotto raster e sceglierli | **G** giudizio | `[**il DM**, sulla sua macchina · — · diciotto immagini che lui tiene]` |
 >
 > ⚠️ **3d non è un lotto di agente.** Il collo di bottiglia è **il giudizio, non
@@ -397,6 +397,89 @@ motivata**.
 
 ⚠️ **Il collo di bottiglia è il giudizio, non la GPU**: ~1,5-2 ore, e quasi tutte
 sono scegliere quale delle quattro varianti tenere.
+
+### 3.5-bis · Com'è andata (2026-09-05) — 3a, 3b, 3c
+
+**3d resta al DM**, come previsto: qui non c'è GPU, Blender non è installato e
+ComfyUI non è in ascolto. Tutto il resto è dentro.
+
+#### 3a — «i test passano com'erano». Non passavano.
+
+Dieci test rossi su `render_map_blender`, per una ragione sola:
+`render_map_svg.slugify` **su `main` si chiama `nome_mappa`**. È la rinominazione
+del lotto A di `PIANO-QUALITA-DEL-CODICE` — **la terza volta** che quel lotto si
+presenta in questa ripresa: in F1 come nome di file SVG, in F2 come la
+«rinominazione» che era già stata fatta, qui come chiamata rotta. Una riga, e i
+**52 test** dei due script passano.
+
+🔎 **Il criterio del piano era ingenuo, e vale scriverlo.** «I test passano
+com'erano» presuppone che l'ambiente attorno sia fermo. A 222 commit di distanza
+non lo è mai: il criterio giusto per un lotto di trapianto è *«i test passano
+dopo aver riallineato le chiamate a ciò che il repo espone oggi, e il
+riallineamento è meccanico»*.
+
+⚠️ **E c'era una mina, che il piano non poteva vedere.** La PR committa un
+`PROVENIENZA.txt` che avrebbe **cancellato venti righe di provenienza vera** —
+le immagini che il DM ha generato il 2026-08-15 con Gemini, col C2PA, le
+dimensioni, e l'avvertenza che **il seed non è esposto dal servizio**, quindi
+quella serie non è rigenerabile e il PNG *è* l'artefatto. Proprio il contenuto
+che ADR-0019 esiste per proteggere, cancellato dallo strumento che serve a
+proteggerlo. Il file di `main` è stato **ripristinato** e gli si è aggiunto in
+testa il blocco che descrive la catena ComfyUI: le due convenzioni convivono, e
+si distinguono perché nelle righe nuove **il seed c'è**.
+🔎 Verificato che il *codice* invece era a posto: `scrivi_provenienza` conserva
+il file e sostituisce solo la riga omonima. Il pericolo era il file committato,
+non lo script — e sono due cose che si controllano separatamente.
+
+**Il manifest ha cambiato forma** dal merge-base: `use_case` è entrato, e
+`ci_smoke`/`consumes_schema`/`produces_schema`/`docs`/`tests` sono usciti. I tre
+descrittori sono stati **convertiti** alla forma di oggi, non incollati, e i tre
+registri derivati (`registry.json`, `docs/tools/README.md`, `mcp-tools.json`)
+**rigenerati** con `--emit-all` invece che fusi a mano. **57 tool conformi.**
+
+**Un contratto che non tornava**, trovato da un test e non da noi:
+`test_ambiente` pretende che ogni binario dichiarato nel manifest stia nel
+registro di `binari.py`, e **`blender` non c'era**. Senza, `dm.py doctor` non
+avrebbe mai potuto dire che manca. Registrato, con la degradazione scritta:
+*la geometria si risolve lo stesso — `--piano-solo` scrive il piano senza
+Blender, ed è quello il pezzo deterministico; mancano il PNG e il passo di
+profondità, che sono presentazione e non canone.*
+
+#### 3b — il sesto requisito
+
+`SCARTI.txt` accanto a `PROVENIENZA.txt`, forma `id · seed · reroll · motivo`,
+intestazione che spiega la regola. `--motivo` è **obbligatorio con `--reroll`**:
+senza, exit **2** *prima* di leggere, scrivere o chiamare la rete — un rifiuto
+che non si sa spiegare non deve nemmeno cominciare. La scrittura è idempotente
+sulla coppia `(id, reroll)`, come già `scrivi_provenienza` sulla scelta.
+
+📌 **Lo scarto si registra prima di rigenerare**, non dopo: il tentativo di ieri
+è stato buttato comunque, anche se quello di oggi fallisce.
+
+**Sette test**, di cui tre provano che il gate **morde**: reroll senza motivo
+esce 2 e **non crea nessun file**; un motivo di soli spazi non conta; e
+`--reroll 0` non chiede niente, perché il gate riguarda il rifiuto e non la
+generazione — chiedere un motivo dove non c'è nulla da buttare sarebbe attrito
+senza scopo.
+
+#### 3c — la CI prova che i cancelli mordono
+
+Agli smoke si aggiungono `--help`, `--lista` e `--dry-run` della catena raster,
+più **due passi che un `--help` non prova**:
+
+| Passo | Cosa boccia |
+|---|---|
+| **i cancelli mordono** | un `flux1-dev` che *passasse* fa rossa la CI; un `--reroll` senza motivo che *passasse* pure |
+| **piano 3D deterministico** | due giri di `--piano-solo` che non danno lo stesso file |
+
+⚠️ Il secondo è scritto al contrario di come viene naturale: **fallisce se il
+comando riesce**. È l'unico modo di provare un divieto — e senza, un gate che un
+giorno smette di funzionare non lo dice a nessuno, che è la stessa classe di
+difetto di ADR-0043.
+
+Entrambi i passi sono stati **eseguiti in locale** prima di scriverli nel
+workflow: `✓ pesi vietati rifiutati, reroll senza motivo rifiutato` e
+`✓ piano 3D byte-identico su due giri` (48 solidi da 660 celle).
 
 ### 3.6 · Validazione
 

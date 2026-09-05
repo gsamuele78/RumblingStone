@@ -44,12 +44,15 @@ registro esiste.
 | 2026-09-05 | **F1 1c** conflitti sui puntamenti | **C** costruzione | inline (merge a tre vie) | ✅ ma **sovradimensionato** | Previsto `Sonnet 5 · medio` per «3 commit di drift». Tre file su quattro si sono fusi **puliti**, il quarto aveva **un conflitto** — e per giunta già identificato e descritto chiudendo 1a. **Chiudere bene il lotto prima ha reso il lotto dopo più piccolo**: un effetto che la tabella dei costi non modella |
 | 2026-09-05 | **F1 1d** rigenerare gli SVG | **M** meccanico | inline | ✅ | Il criterio scritto nel piano — «byte-identici» — era **sbagliato**, e il lotto è riuscito lo stesso perché il criterio si è potuto **riformulare mentre girava**: 7 identici, 4 diversi solo dove il repo è migliorato dopo la #63, e zero differenze fuori dal blocco legenda. 🔎 Un collaudo a uguaglianza esatta invecchia con lo strumento che verifica |
 | 2026-09-05 | **F2 2a-2b-2c** l'overlay `@` dalla #52 | **M** + **C** | inline | ✅ **sotto stima** | Il lotto **C** (2c, la scena nuova allo standard di modulo) non ha richiesto costruzione: la scena arrivava già conforme e `validate_modules` è passato al primo colpo. E metà del costo di 2b **non esisteva più**: la rinominazione era già su `main`. 🔎 **Due stime del piano smentite in meglio nello stesso lotto** — non perché fossero sciatte, ma perché lavori successivi (lotto A di QUALITA-DEL-CODICE, gate di ADR-0043) ne avevano già chiuso dei pezzi. **Una stima invecchia anche quando nessuno la smentisce**, ed è un argomento per rimisurare all'apertura del lotto, non per stimare meglio all'apertura del piano |
+| 2026-09-05 | **F3 3a** portare i due script e i test | **M** meccanico | inline, Opus 5 | ⚠️ **è salito** | Previsto **M** col criterio «i test passano com'erano». Ne sono falliti dieci, e riallinearli era meccanico (una riga: `slugify` → `nome_mappa`). Ma nello stesso lotto c'era una **mina di canone**: il `PROVENIENZA.txt` della PR avrebbe cancellato venti righe di provenienza vera. Riconoscerla è **K**, non M — e nessun gate l'avrebbe fermata, perché per un validatore un file di testo sostituito è un file di testo. 🔎 **Un lotto di trapianto porta sempre dentro anche ciò che il ramo vecchio dava per assente** |
+| 2026-09-05 | **F3 3b** `SCARTI.txt` | **C** costruzione | inline, Opus 5 | ✅ | Classificato bene: contratto chiaro, sette test, il gate scritto **prima** dell'implementazione perché il criterio del piano lo nominava (*«un test che prova che un reroll senza motivo non passa»*). 🔎 È il caso che mostra a cosa serve la colonna «qualità» di ADR-0045: il collaudo era già scritto all'apertura, quindi non c'è stato niente da decidere a metà strada |
+| 2026-09-05 | **F3 3c** smoke e determinismo in CI | **C** costruzione | inline, Opus 5 | ✅ | I due passi nuovi si scrivono **al contrario** — falliscono se il comando riesce — perché provano un divieto. Eseguiti in locale prima di committarli: un passo di CI scritto e non provato è esattamente il gate che non morde di cui parla ADR-0043 |
 
 ---
 
 ## Che cosa dicono le righe finora
 
-Sono **undici**, quindi non dicono ancora niente di statistico. Ma due
+Sono **quattordici**, quindi non dicono ancora niente di statistico. Ma due
 portano lo stesso insegnamento, e vale la pena guardarlo:
 
 > **La classe non si legge dalla dimensione del diff.** `F0` era una riga in un
