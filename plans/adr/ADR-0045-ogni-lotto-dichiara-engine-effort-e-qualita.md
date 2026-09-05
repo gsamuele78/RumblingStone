@@ -112,7 +112,7 @@ quaderno, e un quaderno lo tiene chi vuole tenerlo. Ma senza di lui questa ADR
 resta un'ipotesi per sempre, ed è l'unica differenza fra una regola che impara e
 una che invecchia.
 
-### Le tre regole che governano la tabella
+### Le quattro regole che governano la tabella
 
 1. **L'effort si abbassa prima dell'engine.** Un modello capace a effort basso
    spesso batte un modello inferiore a effort alto, e **non spezza la cache**.
@@ -124,6 +124,30 @@ una che invecchia.
    lotto è finito. Se non si riesce a scriverla, il lotto è tagliato male e va
    ritagliato prima di eseguirlo — ed è il vero guadagno di questa ADR, più del
    risparmio di token.
+4. **Un lotto che lavora su un insieme dichiara da dove conta l'insieme.**
+   Vale per **G** e per **R**: se il lotto è *«giudica le PR aperte»*, *«conta i
+   piani»*, *«verifica le skill»*, la colonna «qualità» deve contenere anche il
+   **comando che enumera** — l'API, un `ls`, un `grep` — e non «le ho guardate
+   tutte». La completezza è l'unica parte di un lotto **G** che una macchina sa
+   controllare, e va tolta al giudizio.
+
+⚠️ **La quarta regola nasce da un fallimento di questa ADR stessa**, ed è la
+prima riga del registro che dice qualcosa sul metodo invece che sulle classi.
+Il lotto **R5** — *«giudicare cinque PR»*, l'esempio di **G** che sta nella
+tabella qui sopra — è stato eseguito su `Opus 5` in sessione principale, ha
+soddisfatto il suo criterio di qualità (*«il DM lo legge e riconosce il proprio
+problema»*) **ed era incompleto**: le PR aperte erano sei, e la #67 non ha avuto
+nessun verdetto. Il criterio di **G** è soggettivo per costruzione, quindi
+**non può accorgersi di un'assenza**: si può leggere una lista di cinque
+verdetti, riconoscere il proprio problema in tutti e cinque, e non sapere che
+manca il sesto. Un `list_pull_requests --state open` nella colonna «qualità»
+l'avrebbe preso in due secondi.
+
+È la stessa lezione di [ADR-0041](ADR-0041-instradamento-delle-skill-con-un-gate.md),
+dove un elenco scritto a mano diceva 13 skill su 18, e la stessa del quarto
+lotto del registro (*un lotto R restituisce un numero, e il numero va ancora
+letto*). La forma ricorrente è una sola: **quello che si conta a memoria si
+conta male, e la parte contabile di un lavoro di giudizio non è giudizio.**
 
 ### Dove si taglia un lotto
 

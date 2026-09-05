@@ -127,6 +127,8 @@ domanda per il DM, non un fix.
 
 ## Lotto R9 — il censimento rifatto, e la PR che mancava `[✅ fatto]`
 
+`[G giudizio · Opus 5, sessione principale · alto · **ogni PR che `list_pull_requests --state open` restituisce ha una riga di verdetto**]`
+
 **Fonte**: richiesta DM del 2026-09-05 — *«vedi se ci sono PR e piani aperti e
 me li elenchi, così vediamo cosa è rimasto, cosa è superato e cosa c'è da fare
 sul serio; non vorrei piani e PR che si sovrappongono o parzialmente obsolete
@@ -147,6 +149,25 @@ giudizio è nella sezione qui sotto: **superata, e contraria alla norma di oggi*
 Verificato anche il resto del perimetro: **zero issue aperte** sul repo, e le
 quattro PR abbandonate sono ferme dove le aveva lasciate R5 (nessun commit
 nuovo dopo il 2026-08-15).
+
+### Che cosa ha insegnato su ADR-0045
+
+R5 era **l'esempio di classe G** che sta nella tabella di
+[ADR-0045](adr/ADR-0045-ogni-lotto-dichiara-engine-effort-e-qualita.md)
+(*«giudicare cinque PR»*). Girava sull'engine giusto, all'effort giusto, e ha
+soddisfatto il suo criterio di qualità — *«il DM lo legge e riconosce il proprio
+problema»* — **restando incompleto**. Non è un errore di esecuzione: è che quel
+criterio, per come è scritto, **non può accorgersi di un'assenza**. Si legge una
+lista di cinque verdetti, ci si riconosce dentro, e non si sa che manca il sesto.
+
+Il rimedio non è un criterio più severo per **G**: è togliere al giudizio la
+parte che non è giudizio. Da qui la **quarta regola** di ADR-0045 — *un lotto che
+lavora su un insieme dichiara da dove conta l'insieme* — e la dichiarazione in
+testa a questo lotto, che nomina il comando invece di promettere attenzione.
+
+⚠️ **La classificazione dei 19 lotti di `PIANO-RIPRESA-PR-ABBANDONATE` non
+cambia.** Il difetto era nel lotto che *decide* se una PR si continua o si
+butta, non in quelli che poi la svuotano.
 
 ---
 
