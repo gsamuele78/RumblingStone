@@ -250,9 +250,9 @@ qualsiasi trova la griglia, e nessun link punta a un master archiviato.
 >
 > | | Lotto | Classe | `[engine · effort · qualità]` |
 > |---|---|---|---|
-> | **2a** | portare i due master con le direttive `@` e il JSON della scena nuova | **M** meccanico | `[inline · basso · `grep` trova i due master fra quelli che usano `@`]` |
-> | **2b** | rigenerare i tre SVG | **M** meccanico | `[inline · basso · 2 su 3 byte-identici, il terzo cambia **solo** nome]` |
-> | **2c** | la scena «Foresta in Fiamme» passa lo standard di modulo | **C** costruzione | `[Sonnet 5 · medio · `validate_modules` verde, scala 1,5 m/quadretto]` |
+> | **2a** ✅ | portare i due master con le direttive `@` e il JSON della scena nuova | **M** meccanico | `[inline · basso · `grep` trova i due master fra quelli che usano `@`]` — **chiuso 2026-09-05: fusione pulita su entrambi** |
+> | **2b** ✅ | rigenerare i tre SVG | **M** meccanico | `[inline · basso · 2 su 3 byte-identici, il terzo cambia **solo** nome]` — **chiuso 2026-09-05: la rinominazione era già su `main`** |
+> | **2c** ✅ | la scena «Foresta in Fiamme» passa lo standard di modulo | **C** costruzione | `[Sonnet 5 · medio · `validate_modules` verde, scala 1,5 m/quadretto]` — **chiuso 2026-09-05** |
 
 **Perché per seconda.** Costa **una rinominazione** e chiude una dimostrazione
 che serve al metodo, non solo a quella scena.
@@ -291,6 +291,34 @@ Come F1: contenuto, non commit. Estrarre i master e il JSON, applicarli su
 
 **Definizione di fatto**: `grep` delle direttive `@` trova i due master scritti
 a mano fra quelli che le usano, e la scena «Foresta in Fiamme» ha un SVG.
+
+### 2.4 · Com'è andata (2026-09-05)
+
+✅ **Definizione di fatto soddisfatta.** `grep '^@north\|^@mark\|^@path\|^@zone'`
+trova adesso **tre** master scritti a mano fra quelli che usano le direttive —
+i due previsti più la scena nuova — e «Foresta in Fiamme» ha il suo SVG.
+`validate_maps`: **40 SVG / 18 master**.
+
+**Nessun conflitto.** Entrambi i master si sono fusi puliti: la PR aggiunge solo
+blocchi `@` in coda alle griglie, e non tocca niente di ciò che è cambiato dopo.
+
+⚠️ **Due previsioni del piano erano sbagliate, tutte e due in meglio.**
+
+| Il piano diceva | Com'è davvero |
+|---|---|
+| «costo: **una rinominazione**» | **già fatta**: `main` porta `…grid-65-53-sca` dal lotto A di `PIANO-QUALITA-DEL-CODICE`, e il rigenerato ci è caduto sopra da solo. Costo zero |
+| «attesi **+3** SVG» | **+1**. Il `Cerchio Sacro` e la `map01` dei campi drow **esistono già** su `main`: li ha renderizzati il gate di [ADR-0043](adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md), che il 4 settembre ha trovato «due master di ARC-09 con quattro mappe mai renderizzate». Quindi qui **due SVG guadagnano l'overlay** e **uno solo nasce** |
+
+**I quattro SVG rigenerati**: uno byte-identico a quello della PR («Foresta in
+Fiamme»), tre diversi — e come in F1, **zero differenze fuori dal blocco
+legenda**: è la riscrittura di ADR-0042, che sposta `⬛` in cima e lo chiama
+`Edificio / corpo di fabbrica`. La `map01` dei campi drow si è rigenerata
+**identica a quella committata su `main`**: non compare nemmeno fra i file
+modificati.
+
+📌 **La dimostrazione che serviva al metodo è fatta**: le direttive `@` di
+ADR-0006 funzionano su master **scritti a mano**, in place, senza ricostruire la
+griglia — il disegno esistente non si è perso in nessuno dei tre.
 
 ---
 

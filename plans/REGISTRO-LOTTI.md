@@ -43,12 +43,13 @@ registro esiste.
 | 2026-09-05 | **F1 1b** portare i tre master + i puntamenti | **M** meccanico | inline, Opus 5 | ⚠️ **è salito** | Previsto **M**: «i link risolvono». Ha fatto rossi **due test**, e capire perché era **G** — bisognava distinguere *«la #63 ha rotto l'importatore»* da *«la #63 ha corretto il file che l'importatore usava come campione»*. Un gate che diventa rosso dice **che** qualcosa è cambiato, mai **chi** ha ragione, e quella lettura non è meccanica |
 | 2026-09-05 | **F1 1c** conflitti sui puntamenti | **C** costruzione | inline (merge a tre vie) | ✅ ma **sovradimensionato** | Previsto `Sonnet 5 · medio` per «3 commit di drift». Tre file su quattro si sono fusi **puliti**, il quarto aveva **un conflitto** — e per giunta già identificato e descritto chiudendo 1a. **Chiudere bene il lotto prima ha reso il lotto dopo più piccolo**: un effetto che la tabella dei costi non modella |
 | 2026-09-05 | **F1 1d** rigenerare gli SVG | **M** meccanico | inline | ✅ | Il criterio scritto nel piano — «byte-identici» — era **sbagliato**, e il lotto è riuscito lo stesso perché il criterio si è potuto **riformulare mentre girava**: 7 identici, 4 diversi solo dove il repo è migliorato dopo la #63, e zero differenze fuori dal blocco legenda. 🔎 Un collaudo a uguaglianza esatta invecchia con lo strumento che verifica |
+| 2026-09-05 | **F2 2a-2b-2c** l'overlay `@` dalla #52 | **M** + **C** | inline | ✅ **sotto stima** | Il lotto **C** (2c, la scena nuova allo standard di modulo) non ha richiesto costruzione: la scena arrivava già conforme e `validate_modules` è passato al primo colpo. E metà del costo di 2b **non esisteva più**: la rinominazione era già su `main`. 🔎 **Due stime del piano smentite in meglio nello stesso lotto** — non perché fossero sciatte, ma perché lavori successivi (lotto A di QUALITA-DEL-CODICE, gate di ADR-0043) ne avevano già chiuso dei pezzi. **Una stima invecchia anche quando nessuno la smentisce**, ed è un argomento per rimisurare all'apertura del lotto, non per stimare meglio all'apertura del piano |
 
 ---
 
 ## Che cosa dicono le righe finora
 
-Sono **dieci**, quindi non dicono ancora niente di statistico. Ma due
+Sono **undici**, quindi non dicono ancora niente di statistico. Ma due
 portano lo stesso insegnamento, e vale la pena guardarlo:
 
 > **La classe non si legge dalla dimensione del diff.** `F0` era una riga in un
