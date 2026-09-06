@@ -180,8 +180,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 | # | Piano | Domanda |
 |---|---|---|
-| D1 | ① F1 | I master `Hammerfist-Lotto-*` deprecati: **archiviarli** (proposta) o tenerli coi loro SVG? Ora **forzata dalla CI** |
-| D2 | ① F3 | Quando generi i diciotto raster sulla tua macchina |
+| ~~D1~~ | ① F1 | ✅ **decisa 2026-09-05: archiviazione.** I tre master e i **loro 7 SVG** in `08_…/Mappe/_ARCHIVIO/` — gli SVG non cancellati, così la cartella resta dentro il raggio di `validate_maps` |
+| **D2** | ① F3 | 🖥 **Aperta.** Quando generi i diciotto raster sulla tua macchina. Il codice è dentro (F3 3a-3c); manca solo il passo che vuole la GPU, e il collo di bottiglia sono ~1,5-2 h di **giudizio** |
+| ~~D6~~ | ① F1 | ✅ **decisa 2026-09-04: ridisegnata.** La griglia di `…P1C` mappa 3, da 40×40 dichiarate a **26×29** reali. *(Mancava del tutto in questa tabella fino al 2026-09-06 — è il difetto che ha fatto nascere la regola qui sotto.)* |
 | D3 | ① F4 | Il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
 | D4 | ① F4 | I **13 stemmi** del `PALIO-BOOKLET`: produrli o togliere i riferimenti? |
 | D7 | ② | **Quali mappe pubblicate sono lo standard** — bloccante |
