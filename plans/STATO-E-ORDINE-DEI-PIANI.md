@@ -192,13 +192,14 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**7 aperte** · 3 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**8 aperte** · 3 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
 | **D2** | `RIPRESA-PR` | F3 | I diciotto raster si generano **sulla tua macchina** — quando? La fase si chiude senza, ma la catena resta non collaudata sul risultato vero |
 | **D3** | `RIPRESA-PR` | F4 · 4c | Le due domande di G1: il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
 | **D4** | `RIPRESA-PR` | F4 | I **13 stemmi e mappe** del `PALIO-BOOKLET` che la #99 lascia in sospeso: si producono o si tolgono i riferimenti? |
+| **D11** | `RIPRESA-PR` | F4 · 4b | La #72 aveva **cinque** ADR (ex-0014…ex-0018). Ne sono stati recuperati **tre**: ADR-0039, ADR-0040 e ora ADR-0048. Restano **ex-0015** (dipendenze a livelli e pacchettizzazione, 7.530 byte) ed **ex-0018** (edizione commerciale dell'AP originale, 8.033 byte): si recuperano o si lasciano andare? |
 | **D7** | `RICERCA-MESTIERE` | metro di paragone | Quali due o tre **mappe pubblicate sono lo standard** che vuoi raggiungere? Senza un riferimento scelto da te, l'audit misura contro un'idea mia di «mappa buona» — **bloccante** |
 | **D8** | `RICERCA-MESTIERE` | stampa | Il tavolo stampa **a colori o in bianco e nero**? Cambia il peso di A1.6 e A1.7 da «bello avere» a bloccante |
 | **D9** | `RICERCA-MESTIERE` | doppia versione | DM/giocatori: la vuoi **su tutte le mappe** o solo sulle hero map? Oggi ce l'ha **una** |
