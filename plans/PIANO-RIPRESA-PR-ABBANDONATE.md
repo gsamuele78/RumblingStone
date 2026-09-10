@@ -640,11 +640,42 @@ spostata di un livello. Finché il path era assoluto e irraggiungibile, la
 seconda rottura **non era visibile**. ⚠️ Ora però partono, e partendo
 sovrascrivono HTML editato a mano: il README lo dice.
 
-**Trovato e lasciato fuori, dichiarato**: `docs/INDEX.md` §4 elenca gli ADR fino
-a **0020** — ne mancano **28**. È un'**assenza**, non un percorso sbagliato, e
-`validate_docs` non la vede: stessa forma delle 13 skill su 18 di ADR-0041. E i
-**51 link rotti su 51** nei booklet generati, che sono un difetto del
-generatore, non della documentazione. Due lotti nuovi, non 4b.
+**I due ADR rimasti della #72, giudicati prima di proporli** (⚠️ e non dopo: era
+il rilievo del DM — *«bisogna valutare se sono superati prima di marcarli
+recuperabili»*, che è ADR-0044 applicata a sé stessa).
+
+**ex-0015 — dipendenze a livelli e pacchettizzazione. 🔴 Contraddetto, non
+superato: non si recupera.** Proponeva tre livelli di dipendenza, con un
+livello 1 che ammetteva `numpy` · `scipy` · `networkx` · `tcod` per un linter di
+progettazione. Il 3 settembre **ADR-0037** ha deciso l'opposto, e con il DM:
+*«gli script Python di questo repo usano la sola libreria standard; le dipendenze
+esterne ammesse sono binari, non pacchetti Python»*, perché gli strumenti girano
+sul portatile del DM la sera della sessione. Recuperare ex-0015 significherebbe
+**riaprire ADR-0037**, non colmare un vuoto. E le due gambe su cui stava in piedi
+non ci sono più: il consumatore che giustificava il livello 1
+(`scripts/lint_map_design.py`) **non è mai stato scritto**, e l'audit che ne
+misurava il guadagno non è nel repo. L'unica parte viva — la pacchettizzazione,
+`pyproject.toml` assente e **24** `sys.path.insert` — ha già casa in **ADR-0040**
+e nel lotto 0.2 di `PIANO-VENDIBILITA`.
+
+**ex-0018 — l'edizione commerciale come AP originale. 🟡 Non superato: la
+conclusione sì, la misura no.** Diventa **D11**, con i suoi due avvertimenti
+scritti nella domanda: l'ADR è una *proposta* con gate legale, e l'audit da cui
+dipende non è in repo.
+
+**L'indice degli ADR, chiuso nello stesso lotto.** `docs/INDEX.md` §4 si era
+fermato ad **ADR-0020** mentre `plans/adr/` era arrivata a **0048**: **28
+assenze**, invisibili a tutto quello che 4b aveva costruito fin lì, perché
+nessun link era rotto — i percorsi citati esistevano tutti, mancavano le righe.
+È la forma esatta delle 13 skill su 18 di ADR-0041. Le 28 righe sono scritte a
+mano, perché la colonna «Tema» è editoriale; ma **la completezza no**: un terzo
+controllo di `--sorgenti` conta gli ADR **dalla cartella** e boccia se l'indice
+ne salta uno. Scriverle e basta, sapendo che ridriverebbero, era l'errore che
+questo repo continua a registrare.
+
+**Lasciato fuori, dichiarato**: i **51 link rotti su 51** nei booklet generati,
+che sono un difetto del generatore e non della documentazione. Un lotto nuovo,
+non 4b.
 
 ### 4.3 · Il lotto 4d, e perché vale la pena
 
@@ -737,7 +768,7 @@ Vale per **ogni** commit di **ogni** fase.
 | D2 | F3 | I diciotto raster si generano **sulla tua macchina** — quando? La fase si chiude senza, ma la catena resta non collaudata sul risultato vero |
 | D3 | F4 · 4c | Le due domande di G1: il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
 | D4 | F4 | I **13 stemmi e mappe** del `PALIO-BOOKLET` che la #99 lascia in sospeso: si producono o si tolgono i riferimenti? |
-| D11 | F4 · 4b | La #72 aveva **cinque** ADR (ex-0014…ex-0018). Ne sono stati recuperati **tre**: ADR-0039, ADR-0040 e ora ADR-0048. Restano **ex-0015** (dipendenze a livelli e pacchettizzazione, 7.530 byte) ed **ex-0018** (edizione commerciale dell'AP originale, 8.033 byte): si recuperano o si lasciano andare? |
+| D11 | F4 · 4b | **L'ADR ex-0018 della #72 si recupera?** Decide che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD — e porta con sé il **perimetro della v1** (archi 07+08 dentro, 195.739 parole dell'arco 09 fuori, arco 06 da riscrivere, `campaign/` privato per sempre), il vincolo sui marchi, e la regola che *rinominare non basta*. ⚠️ **La conclusione ce l'hai già** (`PIANO-VENDIBILITA` C1 e §5 linea 4); quello che non esiste da nessuna parte è **la misura per arco** e il perimetro. 🔴 **Due cose da sapere prima di dire sì**: l'ADR è in stato **«proposta — gate: decisione DM + verifica di un avvocato IP»**, quindi recuperarlo apre una domanda, non la chiude; e l'audit su cui poggia (`AUDIT-DERIVAZIONE-IP-CAMPAGNA.md`) **non è nel repo**, quindi andrebbe rifatto o il perimetro resta un'asserzione senza prova. 🔎 Rimisurato oggi, il debito è **cresciuto**: `Belkram` era in 49 file, ora **82**; `Moradin` da 1.502 a **1.680** occorrenze; e le fonti WotC dichiarate in `campaign/lore/campaign-history.md` compaiono anche **dentro le skill**, che l'ADR non aveva guardato |
 | ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
 | ~~D6~~ | F1 | ✅ **decisa 2026-09-04: ridisegnata.** `…P1C` mappa 3 dichiarava 40×40 e aveva righe da 24 a 26 celle: rifatta **26×29**, nessuna coordinata del testo cambiata |
 

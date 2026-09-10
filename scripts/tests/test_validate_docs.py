@@ -181,6 +181,25 @@ class TestSorgenti(unittest.TestCase):
         self.assertFalse([f for f in md if f.endswith(".hb.md")])
 
 
+class TestIndiceADR(unittest.TestCase):
+    """Lotto 4b: un elenco a mano accanto a una cartella si sfasa.
+
+    `docs/INDEX.md` §4 si era fermato ad ADR-0020 mentre `plans/adr/` era a 0048:
+    ventotto assenze, invisibili al controllo sui percorsi perche' nessun link
+    era rotto. Stessa forma delle 13 skill su 18 di ADR-0041.
+    """
+
+    def test_il_repo_e_allineato(self):
+        self.assertEqual(vd.indice_adr(), [], "ADR esistenti e non elencati")
+
+    def test_conta_dalla_cartella_non_dall_elenco(self):
+        """Quarta regola di ADR-0045: l'insieme si conta dalla fonte."""
+        su_disco = {f.name for f in (ROOT / vd.CARTELLA_ADR).glob("ADR-*.md")}
+        citati = set(vd.LINK_ADR.findall((ROOT / vd.INDICE_ADR).read_text(encoding="utf-8")))
+        self.assertGreater(len(su_disco), 40)
+        self.assertEqual(su_disco - citati, set())
+
+
 class TestGateSorgentiSulRepoVero(unittest.TestCase):
     def test_zero_link_rotti_e_zero_percorsi_assoluti(self):
         """La condizione per tenere `--sorgenti` in CI. Lotto 4b."""
@@ -190,6 +209,7 @@ class TestGateSorgentiSulRepoVero(unittest.TestCase):
             problemi.extend(vd.check_doc(d, tops, solo_link=True))
         for d in vd.sorgenti(".md", ".py"):
             problemi.extend(vd.percorsi_assoluti(d))
+        problemi.extend(vd.indice_adr())
         self.assertEqual(problemi, [], f"il repo non e' pulito: {problemi}")
 
 

@@ -85,6 +85,14 @@ IGNORE_LINE_ALT = "validate-docs: ignore"
 # scrivania di chi scrive, e sono corrette. Il segno che distingue le due cose
 # e' il **nome del repo dentro il percorso**.
 NOME_REPO = "RumblingStone"
+
+# L'indice degli ADR: un elenco a mano accanto a una cartella. Al lotto 4b si era
+# fermato ad ADR-0020 mentre la cartella era a 0048 — **ventotto assenze**, che il
+# controllo sui percorsi non vede perche' i percorsi citati esistono tutti. E' la
+# forma esatta di ADR-0041 (13 skill elencate su 18 esistenti).
+INDICE_ADR = "docs/INDEX.md"
+CARTELLA_ADR = "plans/adr"
+LINK_ADR = re.compile(r"\(\.\./plans/adr/(ADR-\d{4}[^)]*\.md)\)")
 TOKEN_HOME = re.compile(r"/home/[A-Za-z0-9._][A-Za-z0-9._-]*/[^\s`'\"()\[\]<>]*")
 
 # --- SORGENTI ---------------------------------------------------------------
@@ -279,6 +287,24 @@ def paths_from_inline(text: str, tops: set[str]) -> list[tuple[int, str]]:
     return out
 
 
+def indice_adr() -> list[dict]:
+    """Gli ADR che esistono su disco e non compaiono in `docs/INDEX.md` §4.
+
+    Un'assenza, non un percorso sbagliato: nessun link e' rotto, manca una riga.
+    L'insieme si conta da `plans/adr/` — quarta regola di ADR-0045 — invece di
+    fidarsi dell'elenco che si sta controllando.
+    """
+    indice = ROOT / INDICE_ADR
+    cartella = ROOT / CARTELLA_ADR
+    if not indice.exists() or not cartella.is_dir():
+        return []
+    citati = set(LINK_ADR.findall(indice.read_text(encoding="utf-8", errors="ignore")))
+    esistenti = {f.name for f in cartella.glob("ADR-*.md")}
+    return [{"doc": INDICE_ADR, "line": 0, "path": f"{CARTELLA_ADR}/{nome}",
+             "source": "indice", "reason": "ADR esistente e non elencato"}
+            for nome in sorted(esistenti - citati)]
+
+
 def check_doc(doc_rel: str, tops: set[str], solo_link: bool = False) -> list[dict]:
     """I percorsi citati e inesistenti di un documento.
 
@@ -338,6 +364,7 @@ def main(argv=None) -> int:
         # I path assoluti si cercano anche negli script: e' li' che fanno danno.
         for d in sorgenti(".md", ".py"):
             problems.extend(percorsi_assoluti(d))
+        problems.extend(indice_adr())
     else:
         docs = args.doc or DEFAULT_DOCS
         for d in docs:
@@ -351,7 +378,8 @@ def main(argv=None) -> int:
         return 1 if problems else 0
 
     assoluti = [p for p in problems if p["source"] == "assoluto"]
-    inesistenti = [p for p in problems if p["source"] != "assoluto"]
+    mancanti = [p for p in problems if p["source"] == "indice"]
+    inesistenti = [p for p in problems if p["source"] not in {"assoluto", "indice"}]
 
     if not problems:
         coda = ", nessun percorso inesistente ne' assoluto" if args.sorgenti else ", nessun percorso inesistente"
@@ -368,6 +396,11 @@ def main(argv=None) -> int:
         print("\nLa documentazione asserisce una struttura che il filesystem non ha.",
               file=sys.stderr)
         print("Correggere il documento (o creare il percorso). Finding T4, audit 2026-08-05.",
+              file=sys.stderr)
+    if mancanti:
+        print(f"\n{len(mancanti)} ADR esistono e non sono elencati in {INDICE_ADR} §4.",
+              file=sys.stderr)
+        print("Un indice a mano accanto a una cartella si sfasa. Aggiungere la riga.",
               file=sys.stderr)
     if assoluti:
         print("\nUn percorso assoluto rende il documento vero su un solo computer.",
