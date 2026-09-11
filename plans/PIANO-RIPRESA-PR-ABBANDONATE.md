@@ -767,6 +767,59 @@ passa da 1.677 a **546 righe**; lo storico esce in `state-changelog.md`.
 vincola la **forma**, non la **verità**. Un fatto sbagliato con un tempo giusto
 passa.
 
+### 4.5-bis · D3 risposta dal DM (2026-09-11): una domanda su due si scioglie
+
+**Il calendario non era un difetto.** L'apparente contraddizione — `state.md`
+dice Giorno di Marcia **19** mentre l'arco 08 è ⬜ **non giocato** — è il
+**viaggio nel tempo**, ed è già scritto in due master:
+
+| Dove | Cosa dice |
+|---|---|
+| `ARC08-00-INDICE` righe 17-19 | i PG *«riemergono al Cuore della Montagna al **Giorno 3** e chiudono la battaglia al **March Clock Day 19** (sync con la caduta di Terrelton)»* |
+| `ARC07-DEF-5` §94 | *«siete arrivati al **Giorno 3** (≈ March Clock Day 18-19): il **sync** con l'ARC-08»* |
+| `state.md` riga 54 | lo chiama già **«Day 19 (target sync)»** |
+
+Il Giorno 3 è il terzo giorno **dell'assedio**, il Day 19 è il **March Clock**:
+due orologi diversi, e il documento li allinea. Quel che resta è **una parola**:
+la riga 136 dice *«Current March Day: 19 (Terrelton just fell…)»* al passato,
+come se fosse già successo, mentre è il bersaglio a cui il salto del Rubino
+consegna i PG. Si corregge il tempo verbale, non il numero.
+
+🔎 **Ottavo presupposto invecchiato.** Il piano dava «19 vs ~15» per una
+contraddizione di canone da far decidere al DM. Non lo era: era una domanda a
+cui il repo aveva **già** risposto in due posti, e che nessuno aveva collegato.
+
+**Il COS di Thorik invece è un difetto vero, e all'incontrario.** Il DM: *«non
+ha ancora giocato la parte della resurrezione di Hella»*. Quindi `state.md` riga
+76 non ha un'ambiguità: **registra come pagato un prezzo mai pagato** — *«−2 perm
+CON sacrificed for Hella's resurrection (NEVER restored)»*. Oggi Thorik ha
+**−4 DES e +2 COS**, e basta. È il vero «secondo tempo» del file, e sta sulla
+scheda di un PG, non sul calendario.
+
+### 4.5-ter · Le tre strade di Thorik esistono già, e il documento sa di essere sbilanciato
+
+Il DM ha chiesto se esista un'alternativa migliore al −2 COS.
+[`ARC07-DEF-3`](../07_il%20Portale%20Della%20Forgia%20Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md)
+§5 ne ha **tre**, più il rifiuto, e la regola d'oro dice che *«la resurrezione
+non è in ostaggio: col Cuore, Hella torna comunque. I sacrifici comprano la
+qualità del ritorno»*.
+
+| Strada | Costo | Peso vero a livello 13 |
+|---|---|---|
+| **Il Sangue della Stirpe** (base) | −2 COS permanente | −13 pf, −1 Tempra, **per sempre** |
+| **La Memoria della Battaglia** | −3.000 PE | ≈ **23%** di un livello (13→14 costa 13.000 PE) |
+| **Il Filo dell'Ascia** | Aegis Fang perde *Returning* fino al pieno risveglio | si sente **ogni round** di ARC-08, e finisce |
+| Rifiuto | — | Hella senza RD 3/−; allo Step 5 servono 3 successi su 3 |
+
+⚠️ **E il difetto che il DM ha visto è reale — il documento lo ammette da solo**,
+con la nota *«il più pesante dei tre — cade sul PG più carico di artefatti»*.
+Misurati accanto, gli altri due doni **non costano niente**: Tordek paga **−500
+PE** (≈ 4% di un livello) e Artemis **uno slot per 24 h**.
+
+🔴 **Quindi la sproporzione non si risolve alleggerendo Thorik.** Qualunque cosa
+paghi lui, finché gli altri due pagano una cifra simbolica il tema del prezzo non
+regge. Le due leve sono indipendenti, e vanno mosse insieme.
+
 ### 4.4 · La regressione da non ripetere
 
 🔁 La #99 racconta una sua regressione: lo split dello storico aveva rotto
@@ -837,7 +890,7 @@ Vale per **ogni** commit di **ogni** fase.
 |---|---|---|
 | ~~D1~~ | F1 | ✅ **decisa 2026-09-05: archiviazione.** I tre master e i loro 7 SVG in `_ARCHIVIO/`; gli SVG non cancellati, così la cartella resta dentro il raggio di `validate_maps` |
 | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM **con Gemini** il 2026-08-15, montati nel modulo, `validate_standalone` verde. `comfyui_batch --lista` dava «6 da fare» per un **disallineamento di nomi**, corretto in questo lotto. La domanda vera è: **l'arte del Drappo è di Gemini, la catena di F3 genera con SDXL in locale — quale delle due è il canone del modulo?** Le differenze che contano (ADR-0019 §2, che questo caso l'aveva previsto): Gemini **non espone il seed**, quindi la serie è irripetibile e il PNG è la sorgente; i suoi termini sono un **contratto che cambia**, verificato per di più su fonti secondarie; SDXL è OpenRAIL++-M, **perpetua**. Di contro la provenienza di Gemini è **firmata C2PA**, e SDXL su queste immagini **nessuno l'ha visto**. 🔵 **Metodo scelto dal DM il 2026-09-11: collaudo prima di scegliere** — la decisione **resta aperta**, si chiude quando il DM ha visto il confronto. Il DM: *«voglio fare prima un collaudo con 2 o 3 immagini e vedere davvero la qualità prima di buttare quelle di Gemini, che sono carine»*. Si generano **due o tre** immagini con SDXL in una cartella a parte, si mettono accanto alle attuali, e A (tenere Gemini) o B (rigenerare tutto) si sceglie **guardando**. Il collaudo chiude anche il buco vero di F3 — la catena mai provata contro un ComfyUI reale — al costo di due immagini invece che diciotto |
-| D3 | F4 · 4c | Le due domande di G1: il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
+| D3 | F4 · 4c | **Risposta del DM il 2026-09-11, e delle due domande una si scioglie.** 🟢 **Il calendario NON è un difetto.** Il DM: *«il calendario è avanti ma verrà resettato esattamente al Giorno 19 perché i PG viaggeranno indietro nel tempo»* — la Forgia Eterna serve a questo. Ed è **già documentato**: `ARC08-00-INDICE` righe 17-19 dicono che i PG *«riemergono al Cuore della Montagna al **Giorno 3** e chiudono la battaglia al **March Clock Day 19** (sync con la caduta di Terrelton)»*, e `ARC07-DEF-5` §94 dà «Giorno 3 ≈ March Clock Day 18-19». `state.md` riga 54 lo chiama già **«Day 19 (target sync)»**. Resta **una parola**: la riga 136 dice *«Current March Day: 19 (Terrelton just fell as Hammerfist ended)»* al passato, come se fosse successo. Va detta al futuro. Non è un difetto di canone, è un tempo verbale. 🐛 **Il COS di Thorik è un difetto vero, e l'opposto di quel che il piano pensava.** Il DM: *«non ha ancora giocato la parte della resurrezione di Hella»*. Quindi `state.md` riga 76 registra come **pagato** (*«−2 perm CON sacrificed for Hella's resurrection (NEVER restored)»*) un costo che **non è mai stato pagato**. Oggi Thorik ha **−4 DES e +2 COS**, punto. 🔵 **Cosa resta da decidere**: quale delle strade di `ARC07-DEF-3` §5 Thorik potrà scegliere al tavolo — il DM ha chiesto se esista un'alternativa migliore al −2 COS, e le alternative **esistono già scritte** (vedi §4.5-bis) |
 | ~~D4~~ | F4 | ✅ **chiusa il 2026-09-11: non era una domanda.** Misurato invece di ricordare: il `PALIO-BOOKLET` cita **14 file** — 8 stemmi, 4 mappe, 2 immagini — ed **esistono tutti e 14**. SVG veri da 2,7-5,4 KB, due PNG da ~2 MB, e `CREDITS.md` con l'attribuzione **CC BY 3.0** a game-icons.net già in regola. Niente da produrre, niente da togliere. 🔎 Settimo presupposto invecchiato di questa campagna, e la chiusura era rimasta indietro di un giro: annunciata il 2026-09-11 e non eseguita nello stesso commit |
 | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD, e porta il **perimetro della v1**. ✅ **I due avvertimenti che bloccavano la domanda sono tolti**: l'audit mancante è stato **rifatto da zero** ([`AUDIT-DERIVAZIONE-IP-CAMPAGNA`](../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md)), e la tesi **regge sul repo di oggi** — archi 07+08 a **0,2** e **0,7** occorrenze RHoD per 1.000 parole contro il **5,6** dell'arco 09. 🔎 **E la misura ha aggiunto due cose che la #72 non sapeva**: il **`Bestiario/` è a 3,0** e **esce col modulo** — un perimetro che tace su di lui lascia fuori il conto una dipendenza vera — e i **moduli autoconclusivi sono già puliti** (`10-stand-alone` e il Drappo a **0,0**), quindi su quest'asse il prodotto della linea 3 di `PIANO-VENDIBILITA` è pronto. 🔴 **Cosa resta da decidere al DM**: (a) si adotta il perimetro così com'è? (b) il **bestiario** sta dentro o fuori? (c) l'ADR resta proposta finché non c'è la **verifica di un avvocato IP**, che l'audit non sostituisce — conta i nomi, non la struttura |
 | ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
