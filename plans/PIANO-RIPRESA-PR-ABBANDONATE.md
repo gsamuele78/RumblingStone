@@ -774,6 +774,58 @@ Vale per **ogni** commit di **ogni** fase.
 
 ---
 
+## Cosa resta dopo 4b (2026-09-11)
+
+> Scritto perché ne resti traccia su `main`, non in una chat. Due tabelle,
+> divise per **chi aspetta chi**: la prima non aspetta nessuno, la seconda
+> aspetta te.
+>
+> ⚠️ Le domande **non sono ricopiate qui**. Vivono nella tabella marcata di §«Le
+> decisioni che restano al DM», e l'elenco unico è
+> [STATO-E-ORDINE §4](STATO-E-ORDINE-DEI-PIANI.md), generato da
+> `decisioni_dm.py` ([ADR-0047](adr/ADR-0047-le-decisioni-aperte-hanno-una-casa-sola.md)).
+> Un secondo elenco a mano accanto a quello generato è **esattamente** lo
+> sfasamento che quell'ADR esiste per impedire: qui ci sono solo i numeri.
+
+### Il lavoro che non aspetta nessuno
+
+| Cosa | Dove vive | Classe |
+|---|---|---|
+| **Attuazione di ADR-0048** — `scripts/legend.yaml` e i consumatori che ne derivano. L'ADR è *accettata, non attuata*: una decisione **senza cancello** finché il lotto non si chiude | lotto **1.1** di [`PIANO-VENDIBILITA`](PIANO-VENDIBILITA.md) | C |
+| **I 51 link rotti su 51 nei booklet generati** — il generatore copia link relativi alla radice dentro file tre livelli più in basso. Si aggiusta la sorgente, non l'artefatto | `build_booklet_html.py` · `hype_homebrew.py` | M |
+| **4e** una sola via di scrittura · **4f** prodotto e partita | §4.2, dipendono da 4d | C |
+| **`validate_prosa`: 161 rilievi in 340 file** (non bloccante). ⚠️ Il piano diceva «13»: era una misura vecchia e di un altro validatore | `scripts/validate_prosa.py` | M |
+
+### Il lavoro fermo su una tua decisione
+
+| Cosa | Aspetta | Perché non posso deciderlo io |
+|---|---|---|
+| **3d** — i diciotto raster | **D2** | serve la tua macchina, e il collo di bottiglia è il giudizio sulle immagini, non il tempo GPU |
+| **4c** — i due tempi di `state.md` | **D3** | è canone: due fatti del tavolo che solo tu sai |
+| I 13 stemmi e mappe del `PALIO-BOOKLET` | **D4** | si producono o si tolgono i riferimenti: è una scelta di prodotto |
+| Recuperare l'ADR ex-0018 della #72 | **D11** | ed è una *proposta* con gate legale, non una decisione tecnica |
+| **4d** `state.yaml` · **4g** schede PG a dati · **4h** `groups/<slug>/` | 4c prima | K e G: si prendono uno alla volta, e 4h vuole una PR dedicata |
+
+### ⚠️ Quattro PR aperte col contenuto già su `main`
+
+È il rischio da cui questa ripresa è partita — *«non vorrei piani e PR che si
+sovrappongono o che sono parzialmente obsolete ma che per sbaglio le mergio»* — e
+**oggi è ancora aperto**:
+
+| PR | Stato reale | Cosa succede se si mergia per sbaglio |
+|---|---|---|
+| **#63** | contenuto portato (F1: lotti 1a-1d) | riporta indietro 11 SVG e i puntatori a tre vie già risolti |
+| **#52** | contenuto portato (F2: lotti 2a-2c) | idem sugli overlay `@` |
+| **#67** | giudicata **superata** in R9 | reintroduce un handout fuori pipeline che **detta tattica al giocatore** |
+| **#106** | aperta **solo** per 3d | il resto è già su `main` |
+| **#99** | in corso, lotto per lotto | 4a e 4b sono dentro; il resto no |
+
+🔴 **Nessuna di queste va mergiata.** #63, #52 e #67 si **chiudono** (il contenuto
+è già dove serve); #106 e #99 restano aperte come segnaposto di ciò che manca.
+Chiuderle è un'azione sul tuo repo e aspetta una tua parola.
+
+---
+
 ## Come si misura che il piano è finito
 
 Non «quattro PR chiuse». Queste:
