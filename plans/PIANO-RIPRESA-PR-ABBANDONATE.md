@@ -806,23 +806,40 @@ Vale per **ogni** commit di **ogni** fase.
 | Recuperare l'ADR ex-0018 della #72 | **D11** | ed è una *proposta* con gate legale, non una decisione tecnica |
 | **4d** `state.yaml` · **4g** schede PG a dati · **4h** `groups/<slug>/` | 4c prima | K e G: si prendono uno alla volta, e 4h vuole una PR dedicata |
 
-### ⚠️ Quattro PR aperte col contenuto già su `main`
+### Le PR: da sei a due (chiuse il 2026-09-11)
 
-È il rischio da cui questa ripresa è partita — *«non vorrei piani e PR che si
-sovrappongono o che sono parzialmente obsolete ma che per sbaglio le mergio»* — e
-**oggi è ancora aperto**:
+Il rischio da cui questa ripresa è partita — *«non vorrei piani e PR che si
+sovrappongono o che sono parzialmente obsolete ma che per sbaglio le mergio»* —
+**non è più aperto**. Tre PR il cui contenuto era già su `main` sono state
+chiuse su decisione del DM, ognuna con la sua motivazione scritta nel thread.
 
-| PR | Stato reale | Cosa succede se si mergia per sbaglio |
+| PR | Esito | Perché |
 |---|---|---|
-| **#63** | contenuto portato (F1: lotti 1a-1d) | riporta indietro 11 SVG e i puntatori a tre vie già risolti |
-| **#52** | contenuto portato (F2: lotti 2a-2c) | idem sugli overlay `@` |
-| **#67** | giudicata **superata** in R9 | reintroduce un handout fuori pipeline che **detta tattica al giocatore** |
-| **#106** | aperta **solo** per 3d | il resto è già su `main` |
-| **#99** | in corso, lotto per lotto | 4a e 4b sono dentro; il resto no |
+| ~~#63~~ | 🔒 **chiusa** | contenuto portato dalla F1 (1a-1d). Mergiarla avrebbe riportato indietro 11 SVG rigenerati e tre file di puntamento già fusi a tre vie |
+| ~~#52~~ | 🔒 **chiusa** | contenuto portato dalla F2 (2a-2c): le direttive `@` girano su tre master scritti a mano |
+| ~~#67~~ | 🔒 **chiusa, superata** | l'oggetto esiste su `main` dal 31 luglio come booklet da manifest, e la versione della PR **detta tattica al giocatore** — contraria alla norma di oggi, non solo vecchia |
+| **#106** | 🟡 aperta | resta **solo** per 3d, che aspetta **D2**. Tutto il resto della catena raster è su `main` |
+| **#99** | 🟡 aperta | segnaposto della F4: 4a e 4b sono dentro, da 4c in poi no |
 
-🔴 **Nessuna di queste va mergiata.** #63, #52 e #67 si **chiudono** (il contenuto
-è già dove serve); #106 e #99 restano aperte come segnaposto di ciò che manca.
-Chiuderle è un'azione sul tuo repo e aspetta una tua parola.
+⚠️ **Le due che restano non vanno mergiate**: sono segnaposto di lavoro che
+manca, non rami da integrare. Si chiuderanno quando l'ultimo lotto che le
+riguarda sarà su `main` — 3d per la #106, 4h per la #99.
+
+### Cosa manca per dire che questa revisione è finita
+
+Cinque cose, e **tre delle cinque aspettano te**:
+
+| | Cosa | Chi |
+|---|---|---|
+| 1 | **3d** — i diciotto raster generati e giudicati, poi la #106 si chiude | DM (**D2**) |
+| 2 | **4c** — i due tempi di `state.md`, che sblocca 4d · 4g · 4h | DM (**D3**) |
+| 3 | **D4** e **D11** — gli stemmi del Palio, e se recuperare l'ADR ex-0018 | DM |
+| 4 | **4d → 4h** — il canone come dato, uno alla volta; poi la #99 si chiude | macchina, dopo il 2 |
+| 5 | Le tre code dichiarate: attuazione di **ADR-0048**, i **51 link** dei booklet generati, i **161 rilievi** di prosa | macchina, quando si vuole |
+
+🔴 **Il collo di bottiglia non è il lavoro: sono le decisioni.** Le voci 1, 2 e 3
+non hanno alcun ostacolo tecnico — la macchina può eseguirle il giorno dopo la
+risposta. La 4 dipende dalla 2. Solo la 5 è libera da subito.
 
 ---
 
