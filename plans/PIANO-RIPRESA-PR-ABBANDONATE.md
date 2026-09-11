@@ -839,7 +839,7 @@ Vale per **ogni** commit di **ogni** fase.
 | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM **con Gemini** il 2026-08-15, montati nel modulo, `validate_standalone` verde. `comfyui_batch --lista` dava «6 da fare» per un **disallineamento di nomi**, corretto in questo lotto. La domanda vera è: **l'arte del Drappo è di Gemini, la catena di F3 genera con SDXL in locale — quale delle due è il canone del modulo?** Le differenze che contano (ADR-0019 §2, che questo caso l'aveva previsto): Gemini **non espone il seed**, quindi la serie è irripetibile e il PNG è la sorgente; i suoi termini sono un **contratto che cambia**, verificato per di più su fonti secondarie; SDXL è OpenRAIL++-M, **perpetua**. Di contro la provenienza di Gemini è **firmata C2PA**, e SDXL su queste immagini **nessuno l'ha visto**. 🔵 **Metodo scelto dal DM il 2026-09-11: collaudo prima di scegliere** — la decisione **resta aperta**, si chiude quando il DM ha visto il confronto. Il DM: *«voglio fare prima un collaudo con 2 o 3 immagini e vedere davvero la qualità prima di buttare quelle di Gemini, che sono carine»*. Si generano **due o tre** immagini con SDXL in una cartella a parte, si mettono accanto alle attuali, e A (tenere Gemini) o B (rigenerare tutto) si sceglie **guardando**. Il collaudo chiude anche il buco vero di F3 — la catena mai provata contro un ComfyUI reale — al costo di due immagini invece che diciotto |
 | D3 | F4 · 4c | Le due domande di G1: il **−2 COS di Thorik** e il **Giorno di Marcia 19 vs ~15** |
 | D4 | F4 | I **13 stemmi e mappe** del `PALIO-BOOKLET` che la #99 lascia in sospeso: si producono o si tolgono i riferimenti? |
-| D11 | F4 · 4b | **L'ADR ex-0018 della #72 si recupera?** Decide che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD — e porta con sé il **perimetro della v1** (archi 07+08 dentro, 195.739 parole dell'arco 09 fuori, arco 06 da riscrivere, `campaign/` privato per sempre), il vincolo sui marchi, e la regola che *rinominare non basta*. ⚠️ **La conclusione ce l'hai già** (`PIANO-VENDIBILITA` C1 e §5 linea 4); quello che non esiste da nessuna parte è **la misura per arco** e il perimetro. 🔴 **Due cose da sapere prima di dire sì**: l'ADR è in stato **«proposta — gate: decisione DM + verifica di un avvocato IP»**, quindi recuperarlo apre una domanda, non la chiude; e l'audit su cui poggia (`AUDIT-DERIVAZIONE-IP-CAMPAGNA.md`) **non è nel repo**, quindi andrebbe rifatto o il perimetro resta un'asserzione senza prova. 🔎 Rimisurato oggi, il debito è **cresciuto**: `Belkram` era in 49 file, ora **82**; `Moradin` da 1.502 a **1.680** occorrenze; e le fonti WotC dichiarate in `campaign/lore/campaign-history.md` compaiono anche **dentro le skill**, che l'ADR non aveva guardato |
+| D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD, e porta il **perimetro della v1**. ✅ **I due avvertimenti che bloccavano la domanda sono tolti**: l'audit mancante è stato **rifatto da zero** ([`AUDIT-DERIVAZIONE-IP-CAMPAGNA`](../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md)), e la tesi **regge sul repo di oggi** — archi 07+08 a **0,2** e **0,7** occorrenze RHoD per 1.000 parole contro il **5,6** dell'arco 09. 🔎 **E la misura ha aggiunto due cose che la #72 non sapeva**: il **`Bestiario/` è a 3,0** e **esce col modulo** — un perimetro che tace su di lui lascia fuori il conto una dipendenza vera — e i **moduli autoconclusivi sono già puliti** (`10-stand-alone` e il Drappo a **0,0**), quindi su quest'asse il prodotto della linea 3 di `PIANO-VENDIBILITA` è pronto. 🔴 **Cosa resta da decidere al DM**: (a) si adotta il perimetro così com'è? (b) il **bestiario** sta dentro o fuori? (c) l'ADR resta proposta finché non c'è la **verifica di un avvocato IP**, che l'audit non sostituisce — conta i nomi, non la struttura |
 | ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
 | ~~D6~~ | F1 | ✅ **decisa 2026-09-04: ridisegnata.** `…P1C` mappa 3 dichiarava 40×40 e aveva righe da 24 a 26 celle: rifatta **26×29**, nessuna coordinata del testo cambiata |
 
@@ -896,21 +896,26 @@ chiuse su decisione del DM, ognuna con la sua motivazione scritta nel thread.
 manca, non rami da integrare. Si chiuderanno quando l'ultimo lotto che le
 riguarda sarà su `main` — 3d per la #106, 4h per la #99.
 
-### Cosa manca per dire che questa revisione è finita
+### Cosa manca per dire che questa revisione è finita (agg. 2026-09-11)
 
-Cinque cose, e **tre delle cinque aspettano te**:
+Le decisioni aperte sono scese **da 8 a 5**, e la forma del residuo è cambiata:
+**quasi tutto quel che resta aspetta il DM**, non la macchina.
 
-| | Cosa | Chi |
-|---|---|---|
-| 1 | **3d** — ⚠️ **non più «generare i diciotto»**: esistono già (§3.6). Resta il **collaudo di due o tre immagini** con SDXL e il confronto con quelle di Gemini, ~20 min sulla macchina del DM. Poi la #106 si chiude | DM (**D2**, metodo scelto) |
-| 2 | **4c** — i due tempi di `state.md`, che sblocca 4d · 4g · 4h | DM (**D3**) |
-| 3 | **D4** e **D11** — gli stemmi del Palio, e se recuperare l'ADR ex-0018 | DM |
-| 4 | **4d → 4h** — il canone come dato, uno alla volta; poi la #99 si chiude | macchina, dopo il 2 |
-| 5 | Le tre code dichiarate: attuazione di **ADR-0048**, i **51 link** dei booklet generati, i **161 rilievi** di prosa | macchina, quando si vuole |
+| | Cosa | Chi | Stato |
+|---|---|---|---|
+| 1 | **3d** — il collaudo di 2-3 immagini SDXL accanto a quelle di Gemini, poi la #106 si chiude | DM (**D2**) | 🟡 metodo scelto, **rimandato dal DM** |
+| 2 | **4c** — i due tempi di `state.md`, che sblocca 4d · 4g · 4h | DM (**D3**) | 🟡 **rimandato dal DM** |
+| 3 | **D11** — il perimetro dell'AP originale, e se il **bestiario** ci sta dentro | DM | 🟢 **decidibile**: l'audit che mancava è stato rifatto |
+| 4 | **D12** — la riga `17` duplicata nell'arena circolare di `L2` | DM | 🟢 piccola, ma indovinarla sposterebbe celle |
+| 5 | **4d → 4h** — il canone come dato, uno alla volta; poi la #99 si chiude | macchina, **dopo il 2** | ⬜ |
+| 6 | Le code dichiarate: attuazione di **ADR-0048**, i **51 link** dei booklet generati, i **161 rilievi** di prosa | macchina, quando si vuole | ⬜ |
 
-🔴 **Il collo di bottiglia non è il lavoro: sono le decisioni.** Le voci 1, 2 e 3
-non hanno alcun ostacolo tecnico — la macchina può eseguirle il giorno dopo la
-risposta. La 4 dipende dalla 2. Solo la 5 è libera da subito.
+✅ **Chiuse dall'ultima revisione di questa sezione**: D4 (era morta — gli
+allegati del Palio esistono tutti), D7, D8, D9 e D10.
+
+🔴 **Il collo di bottiglia non è cambiato: sono le decisioni.** Le voci 1-4 non
+hanno alcun ostacolo tecnico. La 5 dipende dalla 2. Solo la 6 è libera da subito,
+ed è la meno importante.
 
 ---
 
