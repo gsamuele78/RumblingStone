@@ -190,6 +190,74 @@ cui sei mappe sono rimaste così).
 
 ---
 
+## §6-bis — Rilette una per una (2026-09-11), e la tabella §6 era sbagliata
+
+Il DM ha chiesto di leggerle tutte e proporre mappa per mappa. Contate le celle
+invece di fidarsi delle intestazioni, **tre righe su sei di §6 non reggono**, e
+soprattutto **non sono tutte lo stesso difetto**: sono tre famiglie diverse, e
+due chiedono decisioni opposte.
+
+### Famiglia A — sbaglia l'intestazione, la griglia è giusta
+
+| Master · mappa | Dichiara | Griglia vera | Proposta |
+|---|---|---|---|
+| `Portale-Forgia-L1` · 1 | 20×13 | **20 colonne × 14 righe** | correggere l'intestazione a `20×14`. Una riga di scarto, nessuna coordinata cambia |
+| `Portale-Forgia-L2` · 1 | «53 COLONNE × 10 RIGHE» | **21 colonne × 53 righe** | ⚠️ è **trasposta** *e* sbagliata: correggere a `21×53`. Il numero 53 era giusto ma sull'asse sbagliato |
+| `Portale-Forgia-L2` · 2 | 33×33 | **33 colonne × 25 righe** | correggere a `33×25` |
+
+Su queste la proposta è la stessa: **si tocca l'etichetta, mai la griglia**. La
+griglia è ciò su cui si gioca; l'intestazione è un cartellino, e il cartellino
+mente.
+
+### Famiglia B — l'intestazione è **giusta**, la griglia è incompleta
+
+| Master · mappa | Dichiara | Disegnato | Il conto torna? |
+|---|---|---|---|
+| `…P1C-Rituale` · Campo Drow 1 | 53×40 (80 m × 60 m a 1,5 m) | **~33 colonne, 9 righe su 40** | ✅ 80 ÷ 1,5 = 53 · 60 ÷ 1,5 = 40. **L'aritmetica è corretta** |
+| `Hammerfist-L2` · Disposizione Generale | 60×108 (1 quadretto = 3 m) | **60 colonne × 99 righe** | mancano **9 righe** |
+
+🔴 **Qui correggere l'intestazione sarebbe il rimedio sbagliato.** Rimpicciolire
+l'etichetta per farla combaciare con quel che è disegnato **restringerebbe il
+campo di battaglia** — nel Campo Drow 1 da 80×60 m a circa 50×14 m. Sono mappe
+**disegnate a metà**, non mal etichettate.
+
+**Proposta**: marcarle come **estratto** in modo esplicito e verificabile,
+lasciando l'area dichiarata dov'è. Completarle è lavoro di progettazione — cosa
+c'è in quelle righe è una scelta di gioco, non una correzione — e va deciso a
+parte.
+
+### Famiglia C — nessun difetto
+
+| Master · mappa | Dichiara | Griglia vera |
+|---|---|---|
+| `Hammerfist-L2` · 2A Fortezza | 120×80 | **120 × 80** ✅ |
+| `Hammerfist-L2` · 2B Bastioni | 40×26 | **40 × 26** ✅ |
+
+⚠️ **§6 dava `Hammerfist-L2` mappa 1 per «dichiara 120×80, griglia vera 50×80»**:
+è falso, la griglia ha esattamente 120 colonne e 80 righe. L'ipotesi che «120×80
+fossero metri» non regge: se lo fossero, a 1,5 m il campo sarebbe 80×53
+quadretti, e i quadretti disegnati sono 120×80. **Nessuna azione.**
+
+E la sesta riga di §6, `Hammerfist-Lotto-2-Assedio`, è finita in `_ARCHIVIO/`
+con la decisione D1: è un master deprecato, fuori dal perimetro.
+
+### Cosa resta da approvare
+
+**Tre correzioni di etichetta** (famiglia A), **due marcature di estratto**
+(famiglia B), **zero interventi** su famiglia C. Gli originali vanno in
+`_ARCHIVIO/` prima di toccarli, come chiesto dal DM.
+
+⚠️ **Una nota sull'archiviazione, da decidere insieme alle proposte**: per la
+famiglia A la modifica è **una riga di cartellino**, e `git` conserva già ogni
+versione precedente. Una copia in `_ARCHIVIO/` creerebbe un **secondo master**
+della stessa mappa, che `validate_maps` poi sorveglia come se fosse vivo — è
+esattamente ciò che è successo con D1, dove però i master erano davvero
+superati. Proposta: archiviare **solo** dove si tocca la griglia (oggi: nessuno),
+e per le etichette fidarsi di `git`. Se il DM preferisce la copia comunque, si fa
+— basta saperlo prima.
+
+---
+
 ## §7 — Le domande al DM prima di partire
 
 > I numeri **D7-D10** erano citati in `STATO-E-ORDINE` §4 **senza esistere qui**:
@@ -201,7 +269,7 @@ cui sei mappe sono rimaste così).
 
 | # | Ambito | Domanda |
 |---|---|---|
-| D7 | metro di paragone | Quali due o tre **mappe pubblicate sono lo standard** che vuoi raggiungere? Senza un riferimento scelto da te, l'audit misura contro un'idea mia di «mappa buona» — **bloccante** |
-| D8 | stampa | Il tavolo stampa **a colori o in bianco e nero**? Cambia il peso di A1.6 e A1.7 da «bello avere» a bloccante |
-| D9 | doppia versione | DM/giocatori: la vuoi **su tutte le mappe** o solo sulle hero map? Oggi ce l'ha **una** |
-| D10 | §6 | Le **sei mappe con l'intestazione discorde**: le sistemo io una per una, o le guardi prima tu? |
+| ~~D7~~ | metro di paragone | ✅ **decisa 2026-09-11: le mappe di *Red Hand of Doom* e quelle di *Rise of the Runelords* (Paizo)** — *«voglio quella qualità e risultato, o il più vicino possibile»*. 🔎 Le prime **sono già nel repo**: **69 immagini** in `00_Red Hand Of Doom/Immagini/`, divise in `MappeIncontri`, `MappeLuoghiTattiche`, `MappeVarie` — il metro si guarda, non si immagina. ⚠️ **Rise of the Runelords non si porta nel repo**: è IP Paizo (ADR-0005). Si nomina come riferimento e si tiene fuori; l'audit cita numeri e criteri, mai i file |
+| ~~D8~~ | stampa | ✅ **decisa 2026-09-11: a colori.** A1.6 (daltonismo) e A1.7 (resa in grigi) **restano non bloccanti**: la seconda perde quasi tutto il suo senso, la prima no — il daltonismo non dipende dalla stampante, e va tenuta come avviso |
+| ~~D9~~ | doppia versione | ✅ **decisa 2026-09-11: né tutte né solo le hero map — quelle che nascondono qualcosa.** Il DM: *«per le mappe che hanno interazione con i giocatori e che devono nascondere cose ai giocatori o dettagli che devono scoprire»*. Il criterio è **funzionale**, quindi decidibile da chi scrive la mappa e non da una lista: se la griglia contiene una porta segreta, un nemico non ancora visto, una trappola o un indizio da scoprire, serve la versione giocatori. Oggi ce l'ha **una sola** (`tarsilia-la-ruota-giocatori`) |
+| D10 | §6 | Le mappe con l'intestazione discorde. ✅ **Metodo scelto dal 2026-09-11: le leggo tutte e propongo mappa per mappa, il DM approva; gli originali vanno in `_ARCHIVIO/` prima di toccarli.** 🔎 **Lette il 2026-09-11, e la tabella §6 era sbagliata in tre punti su sei** — vedi §6-bis. La decisione **resta aperta**: si chiude quando il DM ha approvato le proposte |
