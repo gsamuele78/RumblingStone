@@ -1,8 +1,9 @@
 <!-- Proposta di ridisegno, NON canone. Il master ARC07-DEF-3 non e' stato toccato. -->
 # Proposta — I Tre Doni della resurrezione di Hella
 
-**Stato**: 🔵 **proposta, revisione 3** — gate: **approvazione del DM dopo il confronto di §6**
-**Data**: 2026-09-12 (v2 al mattino, **v3 dopo il rilievo del DM**) · **Lotto**: 4c
+**Stato**: 🔵 **proposta, revisione 4** — il DM ha **scelto** i doni di Tordek e Artemis; resta da approvare l'insieme
+**Data**: 2026-09-12 (v2 → v3 dopo il primo rilievo → **v4 con le scelte del DM**) · **Lotto**: 4c
+**👉 Leggi [§0-bis](#0-bis--la-versione-scelta-dal-dm-2026-09-12--v4)**: è la versione viva. Il resto è il menù da cui è uscita
 **Sostituirebbe**: [`ARC07-DEF-3`](../07_il%20Portale%20Della%20Forgia%20Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md) §5 e la sua sintesi in §0-bis
 **Definirebbe anche**: il potere **#6 della Collana** (`I Doni dei Semi`), oggi marcato `[Meccanica esatta da definire col DM]`
 
@@ -23,6 +24,103 @@ prima di rispondere, perché sono la specifica del ridisegno:
 
 **La v3 cambia la domanda.** In v1 e in v2 la domanda era *«quanto sei disposto a
 pagare?»* — una tassa. In v3 è: **«che pezzo di te lasci crescere in lei?»**
+
+---
+
+## 0-bis. 🎯 LA VERSIONE SCELTA DAL DM (2026-09-12) — **v4**
+
+> Il DM ha scelto **un dono per PG**, non una scala. Le tre scale di §2.5 restano
+> sotto come **il menù da cui è uscita questa scelta**, non come regola.
+> Sue le scelte di Tordek e Artemis; su Thorik ha chiesto *«qualcosa di sensato»*
+> e la proposta è mia.
+
+| Chi | Dona (esce dal suo artefatto **per sempre**) | 🌱 Nel seme di Hella germoglia |
+|---|---|---|
+| 🛡️ **Thorik** | **Lo Smeraldo della Corona** — la carica di terremoto **1/settimana** | **La Radice che Spacca** — 1/settimana, azione standard: radici erompono in un raggio di 9 m. Terreno difficile finché lei resta in piedi, e chi è dentro fa **Riflessi CD 19** o è **immobilizzato** 1d4 round |
+| ⚒️ **Tordek** | **Ancoraggio della Montagna** (2/giorno, immediata) | **Pelle di Adamantio — RD 3/adamantino** |
+| 🔮 **Artemis** | **Dono dell'Unità** (1/giorno, rapida) | **Il Dono Passato di Mano** — 1/giorno, rapida: **azione standard extra** a un alleato entro 9 m. 🌱 **Anche a Durik** |
+
+### Perché lo Smeraldo è la cosa sensata per Thorik
+
+Non è il potere più forte che ha: è **quello che ha già pagato**.
+
+Il −2 DES / +2 COS permanenti del 2026-07-31 Thorik li ha versati **per incastonare
+lo Smeraldo** — è il rito in cui si è inginocchiato sotto il Peso del Mondo invece
+di comprarne l'uscita col bottino dell'arco (eco **E-07c**). Donare lo Smeraldo
+significa **dare via la cosa per cui ha già sanguinato**, ed è l'unico modo di
+fargli pagare due volte **senza chiedergli un secondo malus di caratteristica**.
+È esattamente la richiesta che ha aperto tutta questa revisione.
+
+E in più: **non collide con niente**. Il *Returning* di Aegis Fang è già scritto
+come temporaneo in due schede (§2.11); la Senzienza della Corona blocca il
+risveglio dell'ascia; lo Smeraldo è **suo, permanente, e non incatenato a nulla**.
+
+🔵 **Alternativa, se preferisci un costo continuo invece che periodico**:
+**Stone's Awareness** — la Corona smette di fargli sentire la pietra (trappole e
+lingue attraverso la roccia), e Hella sente attraverso le radici tutto ciò che
+tocca terra entro 18 m. Si sente **ogni sessione** invece che una volta a
+settimana, ma è più debole come dono.
+
+### I due numeri che la scheda di Hella ha corretto
+
+🔎 Ho letto **§7-bis** (`ARC07-DEF-3`, Hella risorta) invece di ricordarla, e due
+cose cambiano:
+
+1. 🟢 **Hella non ha nessuna RD di base.** L'Ibrido Treant le dà Resistenza al
+   Freddo 15, Rigenerazione 1/round a contatto con la terra, Radicamento e le tre
+   Prove — **nessuna riduzione del danno**. Quindi il dono di Tordek è la **sua
+   unica RD** e non c'è nessun problema di non-cumulo. **RD 3/adamantino**: tiene
+   il numero e il nome che il canone di v1 aveva già promesso (*«Pelle di
+   Adamantio (RD 3/−)»*), e la rende «inferiore» dove serve — **solo l'adamantio
+   taglia l'adamantio**, che è anche la ragione per cui si chiama così.
+2. 🔴 **Hella ha VULNERABILITÀ AL FUOCO ×1,5** (tipo Vegetale). È la sua
+   debolezza più grande, e con Artemis che dona il Dono dell'Unità **nessuno dei
+   tre doni la copre**. Nell'ARC-08 c'è Abithriax (drago rosso adulto) e una
+   battaglia campale piena di fuoco. **Non lo decido io** — vedi la domanda 6 di
+   §6.
+
+### 🚪 Il rifiuto — conseguenze **sul seme e sull'artefatto**
+
+Richiesta del DM: *«ogni PG può rinunciare a dare il dono ma ha delle conseguenze
+sia su Hella che sull'artefatto»*. Le conseguenze sull'artefatto **non sono una
+punizione di Moradin**: sono i tre artefatti che **hanno visto**, e tutti e tre
+hanno una personalità già scritta nel canone.
+
+| Chi rifiuta | 🌱 Su Hella (il seme) | ⚒️ Sul suo artefatto |
+|---|---|---|
+| 🛡️ **Thorik** | Seme I **dormiente**: niente Radice che Spacca. La Collana resta com'è in scheda | **Aegis Fang ha un'opinione, ed è Ego 14.** L'ascia era lì. Da qui in poi, quando Thorik le chiede qualcosa in una scena che riguarda **Hella o dei nani da proteggere**, l'Ego **tira l'opposizione** (oggetti intelligenti 3.5) invece di obbedire in silenzio. Non lo abbandona: **lo giudica**. La scheda lo consente già — *«in disaccordo grave l'arma può opporsi»*, e *«serve il popolo nanico prima del portatore»*. 🔓 **Finisce** la prima volta che Thorik rischia qualcosa di suo per Hella |
+| ⚒️ **Tordek** | Seme II dormiente: **Hella resta senza nessuna RD** — e non ne ha di base | **I Bracieri tacciono una settimana.** La Voce nella Forgia non avverte, non commenta, non scherza: per 7 giorni il DM non dà **nessun** suggerimento tramite loro. Poi tornano — e **la prima frase dopo il silenzio è sul rifiuto** |
+| 🔮 **Artemis** | Seme III dormiente: niente azione extra, e **Durik non la riceve** | **L'Anello si spegne 24 ore**, tutto compreso — Ali d'Ombra, Passo d'Ombra, i quattro 1/giorno, la Doppia Fiamma. Non è Moradin: è l'Anello, **nato dalla Colonna di Mithral della Forgia**, che ha visto il portatore dire di no **alla Forgia**. Dopo 24 h funziona tutto come prima. ⚠️ E il DM segna in privato che **«ciò che dorme nell'Anello» ha visto** |
+
+⚠️ **Perché questo non tradisce la regola «il rifiuto è una quest, non una
+punizione»** (v1, approvata): le tre conseguenze sono **relazionali e
+reversibili** — l'ascia smette di giudicare, i Bracieri riparlano, l'Anello si
+riaccende. E **resta intatta** la regola del riempimento retroattivo: lo slot
+vuoto si colma in ARC-09 con un atto di sacrificio, e il dono si attiva
+all'indietro (§2.6).
+
+🔴 **Ma va detto**: aggiungere una conseguenza sull'artefatto **sposta il rifiuto
+da "scelta legittima" a "scelta che costa"**. È quel che il DM ha chiesto, ed è
+coerente col fatto che gli altri due pagano davvero. Chi vuole tenere il rifiuto
+del tutto neutro deve togliere la colonna di destra.
+
+### ⚖️ È bilanciato, il set scelto?
+
+| Chi | Costo, misurato | Peso |
+|---|---|---|
+| **Thorik** | 1 uso/**settimana** di un terremoto, **più** il fatto che è la gemma per cui aveva già pagato −2 DES permanenti | 🔴 **il più alto**, ed è quel che volevi |
+| **Artemis** | 1/giorno di **economia d'azione** — in 3.5 un'azione standard extra vale più di quanto sembri | 🟡 **medio-alto**: il potere più forte dei tre in valore grezzo |
+| **Tordek** | 2/giorno di una difesa **di nicchia** (annulla spostamento forzato) | 🟢 **il più basso** |
+
+🟢 **L'ordine è quello giusto**: Thorik > Artemis > Tordek, e Thorik in testa
+senza un secondo malus di caratteristica.
+
+🔴 **Un solo squilibrio vero: Tordek paga meno degli altri due**, e riceve —
+tramite Hella — il dono più solido dei tre (una RD permanente su un PG che non ne
+ha). Se vuoi pareggiarlo, la correzione più piccola è fargli donare **Ancoraggio
+della Montagna *e* Tremore del Forgiatore** (1/giorno): sono i due poteri di
+Terra dei Bracieri, escono insieme, e il conto torna. **Una riga, e la scelgo io
+solo se me lo dici.**
 
 ---
 
@@ -472,7 +570,9 @@ la Collana si porta dietro da quando è stata scritta. La toglierei per ultima.
 | | Domanda |
 |---|---|
 | **0** 🆕 | 🔴 **Il grado II di Thorik collide col canone** (§2.11): due schede scrivono già il «Filo dell'Ascia» come **temporaneo**, e lo Stadio 1 di Aegis Fang è *«+4 Holy **Returning**»*. **α** si tiene temporaneo · **β** si riscrive lo Stadio 1 · **γ** 🎯 **si dona lo Smeraldo della Corona invece del *Returning*** — l'unica che non rompe niente |
-| **1** | Si adotta **v3**? (o v2, o v1 coi numeri ritoccati) |
+| **1** | Si adotta la **v4** di §0-bis? (le tue scelte + lo Smeraldo per Thorik) |
+| **6** 🆕 | 🔴 **La vulnerabilità al fuoco ×1,5 di Hella resta scoperta.** Col Dono dell'Unità al posto della Doppia Fiamma, nessuno dei tre doni la copre — e nell'ARC-08 ci sono Abithriax e una battaglia piena di fuoco. **A** si accetta (è una debolezza vera di un Vegetale, e va giocata) · **B** Artemis dona la **Doppia Fiamma** invece del Dono dell'Unità · **C** si copre altrove (un oggetto, un incantesimo preparato). 🎯 Io terrei **A**: una vulnerabilità che il tavolo sente è meglio di una scheda senza spigoli |
+| **7** 🆕 | **Tordek paga meno degli altri due** (§0-bis, ultima riga): gli si aggiunge **Tremore del Forgiatore** (1/g) accanto all'Ancoraggio, o si accetta che sia il più leggero? |
 | **2** | 🔴 **Il grado III di Artemis**: lo si avverte in privato, o si toglie? *(§5.4 punto 2 — è la domanda che non posso decidere io)* |
 | **3** | Il **trapianto permanente** ti va come principio? È la gamba su cui poggia tutto: se un potere non può lasciare l'artefatto di chi lo dona, v3 cade e si torna a v2 |
 | **4** | La riga **7-8** di §2.8 tocca un beat dell'ARC-09 (Cerchio Sacro): la tieni? |
