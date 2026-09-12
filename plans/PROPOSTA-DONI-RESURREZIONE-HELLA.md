@@ -36,7 +36,7 @@ pagare?»* — una tassa. In v3 è: **«che pezzo di te lasci crescere in lei?»
 
 | Chi | Dona (esce dal suo artefatto **per sempre**) | 🌱 Nel seme di Hella germoglia |
 |---|---|---|
-| 🛡️ **Thorik** | **Il +2 di deflessione della Corona** — la protezione che la Corona dà **a lui** | **Lo Scudo del Custode** — 1/giorno, azione immediata: Hella prende su di sé il danno destinato a un alleato entro 9 m, **dimezzato** |
+| 🛡️ **Thorik** | **Il +2 di deflessione della Corona** — la protezione che la Corona dà **a lui**. Costo: **−1 CA permanente**, e ogni volta che Hella usa lo Scudo **Thorik è accelerato 3 round, poi affaticato** (§0-ter) | **Lo Scudo del Custode** — 1/giorno, azione immediata: Hella prende su di sé il danno destinato a un alleato entro 9 m, **dimezzato** |
 | ⚒️ **Tordek** | **Ancoraggio della Montagna** (2/giorno, immediata) | **Pelle di Adamantio — RD 3/adamantino** |
 | 🔮 **Artemis** | **Dono dell'Unità** (1/giorno, rapida) | **Il Dono Passato di Mano** — 1/giorno, rapida: **azione standard extra** a un alleato entro 9 m. 🌱 **Anche a Durik** |
 
@@ -72,17 +72,16 @@ combinazione delle otto in cui i tre poteri **si moltiplicano invece di
 sommarsi**, ed è il motivo per cui il dono dell'Eletto è quello giusto da mettere
 in mezzo: **tiene insieme gli altri due.**
 
-#### Il costo, e perché è il più alto dei tre
+#### Il costo
 
-🔴 **−2 alla CA, permanenti, su un guerriero di prima linea.** Si sente **ogni
-round di ogni combattimento**, dove gli altri due pagano 2/giorno e 1/giorno. E
-si somma a un buco che ha già: la Corona gli ha portato la DES a **6** (−4 al
-punteggio, −2 al modificatore), quindi con questo dono la sua CA scende di **4
-punti** rispetto a un guerriero nano di 13° senza artefatti.
+La prima stesura chiedeva **−2 alla CA permanenti**. Il DM l'ha **dimezzato e
+reso dinamico** — vedi **[§0-ter](#0-ter--leco-del-custode--lidea-del-dm-e-laritmetica)**,
+che è dove sta adesso la meccanica vera del costo.
 
-⚠️ **È pesante davvero, e va detto prima**: è il costo più alto dell'intera
-proposta, ed è quello che il DM ha chiesto per l'Eletto — ma se al tavolo lo
-giudichi troppo, la variante di sotto costa **zero adesso**.
+⚠️ Il punto di partenza resta: su un guerriero di prima linea la CA è la cosa
+che si sente **ogni round**, e Thorik ha già la DES a **6** per via della Corona
+(−4 al punteggio, −2 al modificatore). Qualunque taratura si scelga, è lì che
+paga.
 
 🔵 **Variante anti-non-morti, se preferisci il taglio che avevi in mente** —
 **«La Fede nel Metallo»**: Thorik dona la **Sacralità futura di Aegis Fang**. Al
@@ -105,6 +104,70 @@ Senzienza).
 ⚠️ **Perché non è più lo Smeraldo**: non si accumulava. Resta valido come terza
 scelta se vuoi il costo periodico invece che continuo, ma è quello che risponde
 peggio alla domanda che hai fatto adesso.
+
+### 0-ter · 🔄 L'Eco del Custode — l'idea del DM, e l'aritmetica
+
+Il DM (2026-09-12): *«invece di −2 alla CA permanente, −1 CA ma ogni volta che
+Hella usa lo Scudo del Custode Thorik è accelerato per 3 round»*.
+
+#### Perché è meglio della mia versione
+
+La mia era un prezzo: paghi e basta. Questa **chiude un anello**:
+
+> Thorik dà la protezione → Hella la usa per proteggere qualcun altro → e la
+> protezione **torna a lui trasformata**, come velocità.
+
+È lo stesso principio del **seme che restituisce** (§2.7), ma invece di
+succedere una volta sola in tutta la campagna succede **ogni volta**, in
+combattimento, davanti a tutti. E caratterizza: Thorik non viene premiato, gli
+si muove qualcosa dentro **quando vede che qualcuno è stato colpito al posto
+suo**. Quello è il Custode.
+
+E completa la catena, che adesso coinvolge **tutti e quattro** in un round solo:
+
+| | Chi | Cosa succede |
+|---|---|---|
+| 1 | 🌙 **Hella** | prende addosso il colpo per Artemis, **dimezzato** |
+| 2 | ⚒️ **Tordek** | la sua **RD 3/adamantino** lo riduce ancora |
+| 3 | 🛡️ **Thorik** | **scatta** — accelerato, perché lei ha appena fatto il suo mestiere |
+| 4 | 🔮 **Artemis** | è in piedi, e ha l'**azione standard extra** per chiudere |
+
+#### 🔴 Ma i numeri non tornano: così Thorik **ci guadagna**
+
+L'accelerazione in 3.5 non è un fiore all'occhiello. *Haste* dà: **un attacco
+extra al BAB pieno** (in attacco completo), **+30 ft di velocità**, **+1 CA di
+schivata**, **+1 ai Riflessi**, **+1 al tiro per colpire**.
+
+| Cosa | Valore, al metro degli oggetti 3.5 |
+|---|---|
+| **−1 CA di deflessione** permanente | ≈ **2.000 mo** (un *anello di protezione +1*) |
+| **3 round/giorno di accelerazione** | ≈ **3.600 mo** (gli *stivali della velocità* costano 12.000 mo per 10 round/giorno) |
+
+🔴 **Thorik esce in attivo di circa 1.600 mo** — e il conto vero è peggiore,
+perché il **+1 CA di schivata dell'accelerazione cancella il −1** proprio nei
+round in cui sta incassando, e perché quei 3 round scattano **esattamente quando
+le cose vanno male**, cioè quando l'accelerazione vale di più.
+
+⚠️ **Così com'è, il dono di Thorik diventa il più leggero dei tre** — l'opposto
+di quel che il DM aveva chiesto due messaggi fa.
+
+#### Le tre tarature
+
+| | Come | Bilancio |
+|---|---|---|
+| **A** | **così com'è**: −1 CA + 3 round accelerato | 🔴 Thorik **ci guadagna**. Va bene solo se accetti che il suo sia il dono più leggero |
+| **B** 🎯 | **−1 CA + 3 round accelerato, poi *affaticato*** (−2 FOR, −2 DES, niente corsa né carica) finché non riposa | 🟢 **la raccomando.** La spinta si paga **subito dopo**, com'è sempre stato in 3.5 — è l'ira del barbaro, e su un nano guerriero è perfetta. E si autoregola: **più Hella protegge il party, più Thorik si brucia** |
+| **C** | **−2 CA** (com'era) **+ 3 round accelerato**, senza coda | 🟡 regge, ma torna a un malus statico grosso. Durante i 3 round è a −1 netto, fuori a −2 |
+
+🌱 **E la B ha una coda narrativa che le altre due non hanno**: Thorik affaticato
+è Thorik che ha bisogno di essere protetto — e la prossima volta **è Hella a
+poterlo scudare**. L'anello si chiude in tutte e due le direzioni, e il debito
+morale di `state.md §7` smette di essere una riga e diventa una cosa che succede
+al tavolo.
+
+⚠️ **Numeri da tarare al tavolo**: 3 round è la mia stima, non una misura. Se al
+collaudo l'accelerazione domina la scena, si scende a **1 round**; se non si nota,
+si sale a **1 round per ogni 10 danni assorbiti** (massimo 3).
 
 ### I due numeri che la scheda di Hella ha corretto
 
@@ -153,7 +216,7 @@ del tutto neutro deve togliere la colonna di destra.
 
 | Chi | Costo, misurato | Peso |
 |---|---|---|
-| **Thorik** | **−2 alla CA, permanenti**, su un guerriero di prima linea che ha già la DES a 6 per via della Corona: **ogni round di ogni combattimento** | 🔴 **il più alto**, ed è l'unico costo **continuo** dei tre |
+| **Thorik** | **−1 CA permanente** (era −2), più **affaticato dopo ogni scatto** nella taratura **B** di §0-ter: la spinta la paga subito dopo | 🟡 **dipende dalla taratura**: con **A** diventa il **più leggero** dei tre; con **B** o **C** resta il più alto |
 | **Artemis** | 1/giorno di **economia d'azione** — in 3.5 un'azione standard extra vale più di quanto sembri | 🟡 **medio-alto**: il potere più forte dei tre in valore grezzo |
 | **Tordek** | 2/giorno di una difesa **di nicchia** (annulla spostamento forzato) | 🟢 **il più basso** |
 
@@ -619,8 +682,8 @@ la Collana si porta dietro da quando è stata scritta. La toglierei per ultima.
 | | Domanda |
 |---|---|
 | ~~**0**~~ | ✅ **sciolta dalla v4.** La collisione di §2.11 resta un **rilievo vero sul canone** (il «Filo dell'Ascia» è già scritto come temporaneo in due schede, e lo Stadio 1 promette *«+4 Holy **Returning**»*), ma **non blocca più niente**: la v4 non chiede a Thorik il *Returning*. Resta solo da sapere se vuoi che quelle due schede restino come sono — 🎯 sì, non le toccherei |
-| **1** | Si adotta la **v4** di §0-bis? Per Thorik: **A** lo Scudo del Custode (−2 CA permanenti, e **tiene insieme gli altri due doni**) 🎯 · **B** La Fede nel Metallo (la Sacralità futura di Aegis Fang: anti-non-morti e anti-Sonjak, ma **costa zero adesso**) · **C** lo Smeraldo (costo periodico, **non si accumula**) |
-| **6** 🆕 | 🔴 **La vulnerabilità al fuoco ×1,5 di Hella resta scoperta.** Col Dono dell'Unità al posto della Doppia Fiamma, nessuno dei tre doni la copre — e nell'ARC-08 ci sono Abithriax e una battaglia piena di fuoco. **A** si accetta (è una debolezza vera di un Vegetale, e va giocata) · **B** Artemis dona la **Doppia Fiamma** invece del Dono dell'Unità · **C** si copre altrove (un oggetto, un incantesimo preparato). 🎯 Io terrei **A**: una vulnerabilità che il tavolo sente è meglio di una scheda senza spigoli |
+| **1** | Si adotta la **v4** di §0-bis? Per Thorik: **A** lo Scudo del Custode (**tiene insieme gli altri due doni**) 🎯 · **B** La Fede nel Metallo (la Sacralità futura di Aegis Fang: anti-non-morti e anti-Sonjak, ma **costa zero adesso**) · **C** lo Smeraldo (**non si accumula**) |
+| **8** 🆕 | 🔄 **La taratura dell'Eco del Custode** (§0-ter), se si sceglie A: **α** −1 CA + 3 round accelerato **così com'è** — 🔴 Thorik **ci guadagna** (3 round/giorno di accelerazione ≈ 3.600 mo contro i ≈ 2.000 di un −1 di deflessione) · **β** 🎯 −1 CA + 3 round accelerato **poi affaticato** finché non riposa — la spinta si paga subito dopo, come l'ira del barbaro · **γ** −2 CA + 3 round accelerato senza coda || **6** 🆕 | 🔴 **La vulnerabilità al fuoco ×1,5 di Hella resta scoperta.** Col Dono dell'Unità al posto della Doppia Fiamma, nessuno dei tre doni la copre — e nell'ARC-08 ci sono Abithriax e una battaglia piena di fuoco. **A** si accetta (è una debolezza vera di un Vegetale, e va giocata) · **B** Artemis dona la **Doppia Fiamma** invece del Dono dell'Unità · **C** si copre altrove (un oggetto, un incantesimo preparato). 🎯 Io terrei **A**: una vulnerabilità che il tavolo sente è meglio di una scheda senza spigoli |
 | **7** 🆕 | **Tordek paga meno degli altri due** (§0-bis, ultima riga): gli si aggiunge **Tremore del Forgiatore** (1/g) accanto all'Ancoraggio, o si accetta che sia il più leggero? |
 | **2** | 🔴 **Il grado III di Artemis**: lo si avverte in privato, o si toglie? *(§5.4 punto 2 — è la domanda che non posso decidere io)* |
 | **3** | Il **trapianto permanente** ti va come principio? È la gamba su cui poggia tutto: se un potere non può lasciare l'artefatto di chi lo dona, v3 cade e si torna a v2 |
