@@ -127,7 +127,7 @@ tavolo si vede — Moradin non lo dice, Hella sì, al risveglio.
 | | Dona | Thorik perde, per sempre | Nel Seme I germoglia |
 |---|---|---|---|
 | **~~I~~** | ~~Lo Smeraldo della Corona~~ | — | 🚫 **precluso**: Moradin all'Eletto chiede almeno il Ramo |
-| **II · Ramo** | ***Returning*** **di Aegis Fang** | 🔴 **L'ascia non torna più.** Ogni lancio va raccolto, per il resto della campagna. È il potere che usa **in ogni round in cui lancia** | **Il Richiamo del Legno** — azione gratuita, 1/round: la Collana richiama a Hella un'arma o un oggetto entro 9 m. 🌱 **E se il Seme III è evocato, Durik può portarglielo** — l'ascia che tornava da sola adesso torna perché *qualcuno gliela riporta* |
+| **II · Ramo** | ***Returning*** **di Aegis Fang** | 🔴 **L'ascia non torna più**: ogni lancio va raccolto. ⚠️ **Vedi §2.11 — questa riga collide col canone**: due schede-artefatto scrivono già questo eco come **temporaneo** (fino al Risveglio pieno), e il profilo dello Stadio 1 è *«+4 Holy **Returning**»*. Renderlo permanente **contraddice la progressione dichiarata di Aegis Fang** | **Il Guardiano che Torna** — 🌱 *«ciò che lanci, torna»*, tradotto in druidico sul potere **#4** che la Collana ha già (`Evocazione dei Guardiani`): quando un guardiano evocato viene distrutto **il seme non resta speso** — rigermoglia all'alba come se non fosse mai caduto; e **1/giorno Hella richiama a sé un guardiano** entro 30 m con un'azione di movimento. ⚠️ Sostituisce «Il Richiamo del Legno» della prima stesura di v3: richiamare *armi* a una druida che non ne lancia era **un dono quasi inutile**, ed era la riga peggiore delle otto |
 | **III · Radice** | **La Senzienza della Corona** — la voce che il **Rituale 4** le darebbe | 🔴 **La Corona non parlerà mai.** Thorik torna dal viaggio a −1.000 con il Rubino e la Corona +3, ma **senza la Senzienza**. E 🔴 **il colpo rimbalza su Aegis Fang**: `state.md` dice che il risveglio pieno dell'ascia richiede *«Assedio della Forgia + Corona Senziente»* — una delle due condizioni **non si verificherà più**, e ne serve una nuova (quest ARC-09) | **La Voce nel Seme** — la Collana **si sveglia**. Parla a Hella: consiglia, avverte, dice cosa pensa il Sogno della Terra. 1/giorno il DM le dà **un'informazione vera** sul luogo, sulla terra o su una creatura vegetale/elementale, senza tiro |
 
 #### ⚒️ TORDEK — Seme II · *«Il Respiro»*
@@ -136,7 +136,7 @@ tavolo si vede — Moradin non lo dice, Hella sì, al risveglio.
 |---|---|---|---|
 | **I · Scheggia** | **Ancoraggio della Montagna** (2/giorno, immediata) | il potere **lascia i Bracieri**. Nel P5 e in ARC-08, dove i giganti spingono e i draghi afferrano, se ne accorge | **Ancora Viva** — 2/giorno, azione immediata: Hella annulla uno spostamento forzato o un teletrasporto su di sé o su un alleato adiacente. 🌱 **Mentre tocca terra nuda vale anche contro *spingere* e *sbilanciare*** — l'ancoraggio nanico che diventa radice |
 | **II · Ramo** | **Pelle di Scorie e Pietra** — la RD 5/adamantino continua | 🔴 **Ogni colpo che prende fa 5 danni in più**, per il resto della campagna. Su un monaco che sta in prima linea, in una battaglia campale, è il costo più caro dei nove in termini di pura sopravvivenza | **Corteccia di Scorie** — 🌱 **non è un potere nuovo: potenzia quello che la Collana ha già.** `Corteccia del Guardiano` passa da *+3 armatura naturale* a **+3 armatura naturale e RD 5/adamantino**, e per un **Ibrido Treant** è la differenza fra reggere una carica e no |
-| **III · Radice** | **La Voce nella Forgia** — la senzienza dei Bracieri | 🔴 **I Bracieri tacciono. Per sempre.** Niente più avvertimenti, niente più *«Bestia grossa. Ci vuole un martello più grosso.»* Sulla scheda **non cambia un numero**; al tavolo Tordek perde **l'unico interlocutore che ha** — e i Bracieri sono l'unico artefatto del party che parla davvero | **La Voce nel Seme** *(se Thorik non ha già dato la sua)* — la Collana si sveglia, come sopra. 🌱 **Se entrambe le voci arrivano** (Thorik III + Tordek III), la Collana non parla con una voce sola: parla con **due**, e non sempre d'accordo — un nano della forgia e una corona di pietra che discutono dentro un albero. Il DM le gioca come due consiglieri distinti |
+| **III · Radice** | **La Voce nella Forgia** — la senzienza dei Bracieri | 🔴 **I Bracieri tacciono. Per sempre.** Niente più avvertimenti, niente più *«Bestia grossa. Ci vuole un martello più grosso.»* Sulla scheda **non cambia un numero**; al tavolo Tordek perde **l'unico interlocutore che ha**. ⚠️ **Correzione alla prima stesura di v3**, che diceva *«i Bracieri sono l'unico artefatto del party che parla davvero»*: è **falso**. **Aegis Fang è senziente, Ego 14**, parla Comune e Nanico e comunica in telepatia. La differenza vera è un'altra, e regge lo stesso: Aegis Fang *«parla poco e dà consigli solo nelle situazioni più disperate»*, i Bracieri commentano | **La Voce nel Seme** *(se Thorik non ha già dato la sua)* — la Collana si sveglia, come sopra. 🌱 **Se entrambe le voci arrivano** (Thorik III + Tordek III), la Collana non parla con una voce sola: parla con **due**, e non sempre d'accordo — un nano della forgia e una corona di pietra che discutono dentro un albero. Il DM le gioca come due consiglieri distinti |
 
 ⚠️ **Perché il grado III di Tordek non è «la prossima evoluzione dei Bracieri»**:
 non ce n'è una dichiarata. Fuoco ✅ e Terra ✅ sono entrambi completi e il repo
@@ -150,6 +150,103 @@ di un artefatto dentro una proposta sui doni** — e non è questa la sede.
 | **I · Scheggia** | **Dono dell'Unità** (rapida, 1/giorno) | il potere **lascia l'Anello**. È l'unico potere dell'Anello che serve a un *altro*, e Artemis smette di poterlo dare | **Il Dono Passato di Mano** — 1/giorno, azione rapida: Hella dà un'azione standard extra a un alleato entro 9 m. 🌱 **E può darla a Durik**, che è nel seme che l'ha ricevuto: il guardiano di pietra agisce due volte |
 | **II · Ramo** | **Benedizione della Doppia Fiamma** — Resistenza al Fuoco 10 **e** il **+1d6 fuoco / +1d6 freddo** sull'*Eldritch Blast* | 🔴 **L'Eldritch Blast torna nudo: −2d6 a ogni raffica, ogni round, per sempre.** È il potere che Artemis usa **più di ogni altro** — è letteralmente ciò che fa a ogni turno. Il prezzo più **visibile** dei nove | **Doppia Fiamma nel Legno** — 🌱 **e qui il dono vale doppio proprio per lei**: un **Ibrido Treant** è di tipo Pianta, e le piante bruciano. La Resistenza al Fuoco 10 le **cancella la vulnerabilità di tipo**, e in forma d'**Avatar della Radice** i suoi attacchi di schianto infliggono **+1d6 fuoco e +1d6 freddo**. Il warlock che dà il suo fuoco all'albero che ne aveva paura |
 | **III · Radice** | **«Ciò che dorme nell'Anello»** — la reazione autonoma se Artemis venisse trasformato contro la sua volontà | 🔴 **Artemis perde la sua rete, e non saprà mai cos'era.** Il DM cancella il segreto dalla sua scheda. Sul foglio **non cambia niente**; nel momento in cui sarebbe scattato, **non scatta**. È il prezzo più crudele dei nove ed è **invisibile fino al giorno in cui si vede** | **Ciò che dorme nel Seme** — se **Hella** viene trasformata, dominata o soppressa contro la sua volontà, il seme **reagisce da solo**. Il DM sa cosa fa. Nessun altro al tavolo lo sa. 🌱 E il seme è quello di **Durik**: la cosa che si sveglia per difenderla ha già un corpo |
+
+### 2.5-bis · 🌱 Le otto strade su una pagina — **cosa riceve Hella**
+
+La colonna che conta per decidere. Tutti i doni sono **permanenti** e vivono
+**nella Collana**, non su Hella: se la Collana le venisse tolta, se ne vanno
+con lei (requisito del portatore, scheda §Requisiti).
+
+| # | Chi | Grado | Cosa perde il donatore | 🌱 **Cosa ottiene Hella** |
+|---|---|---|---|---|
+| 1 | **Thorik** | **II · Ramo** | *Returning* di Aegis Fang ⚠️ §2.11 | **Il Guardiano che Torna** — un guardiano evocato che cade **non consuma il seme** (rigermoglia all'alba); **1/giorno** lo richiama a sé entro 30 m, azione di movimento. *Potenzia il potere #4 della Collana* |
+| 2 | **Thorik** | **III · Radice** | la futura Senzienza della Corona **+ il risveglio di Aegis Fang** | **La Voce nel Seme** — la Collana si sveglia e le parla; **1/giorno** un'informazione **vera**, senza tiro, su terreno, piante o elementali |
+| 3 | **Tordek** | **I · Scheggia** | Ancoraggio della Montagna (2/g) | **Ancora Viva** — **2/giorno**, azione immediata: annulla uno spostamento forzato o un teletrasporto su sé o un alleato adiacente. **Su terra nuda vale anche contro *spingere* e *sbilanciare*** |
+| 4 | **Tordek** | **II · Ramo** | **RD 5/adamantino** continua | **Corteccia di Scorie** — `Corteccia del Guardiano` passa da *+3 armatura naturale* a **+3 armatura naturale e RD 5/adamantino**. *Potenzia il potere #2 della Collana* |
+| 5 | **Tordek** | **III · Radice** | la Voce nella Forgia (senzienza dei Bracieri) | **La Voce nel Seme** — come sopra. 🌱 Se arrivano **entrambe** le voci (2+5), la Collana parla con **due**, e non sempre d'accordo |
+| 6 | **Artemis** | **I · Scheggia** | Dono dell'Unità (1/g) | **Il Dono Passato di Mano** — **1/giorno**, azione rapida: un'**azione standard extra** a un alleato entro 9 m. 🌱 **Anche a Durik**, che è nel seme che l'ha ricevuto |
+| 7 | **Artemis** | **II · Ramo** | Benedizione della Doppia Fiamma (Resist Fire 10 **+** EB +1d6 fuoco/+1d6 freddo) | **Doppia Fiamma nel Legno** — **Resistenza al Fuoco 10**, che per un **Ibrido Treant** (tipo Pianta) **cancella la vulnerabilità di tipo**; e in forma d'**Avatar della Radice** gli schianti fanno **+1d6 fuoco e +1d6 freddo** |
+| 8 | **Artemis** | **III · Radice** | «ciò che dorme nell'Anello» | **Ciò che dorme nel Seme** — se **Hella** è trasformata, dominata o soppressa contro la sua volontà, il seme **reagisce da solo**. Il DM sa cosa fa; nessuno al tavolo lo sa |
+
+### 2.10 · ⚖️ Sono bilanciati? — **misurato, e la risposta onesta è «in parte»**
+
+La domanda del DM merita numeri, non una rassicurazione. Ho messo costi e doni
+sulla stessa scala: **quanto si sente per scontro**.
+
+#### I costi
+
+| # | Costo, misurato | Peso |
+|---|---|---|
+| 1 · Thorik II | dipende da **quanto lancia l'ascia**, e 🔴 **non lo so: la sua scheda non è nel repo** (lotto 4g). Su un nano da mischia è quasi zero; su un lanciatore è ogni round | ❓ **non misurabile** |
+| 2 · Thorik III | **0 adesso**. Perde uno sblocco futuro, e ne blocca un secondo (Aegis Fang) | 🟡 0 ora, grande dopo |
+| 3 · Tordek I | 2 usi/giorno di una difesa di nicchia | 🟢 piccolo |
+| 4 · Tordek II | **~5 danni per ogni colpo subito**. In prima linea, 4-8 colpi a scontro = **20-40 danni a scontro** | 🔴 **grande, costante** |
+| 5 · Tordek III | **0** meccanico | 🟡 solo narrativo |
+| 6 · Artemis I | 1/giorno di **economia d'azione** — in 3.5 vale più di quanto sembri | 🟢 piccolo-medio |
+| 7 · Artemis II | **−7 medi a raffica** (−2d6) **ogni round**: ~**−35 a scontro** su 5 round, più la Resistenza al Fuoco | 🔴 **grande, costante** |
+| 8 · Artemis III | **0** meccanico | 🟡 solo narrativo |
+
+#### I doni
+
+| # | Dono | Forza |
+|---|---|---|
+| 1 | Il Guardiano che Torna | 🟡 medio (era 🔴 **quasi nullo** nella prima stesura — vedi §2.5) |
+| 2 · 5 | La Voce nel Seme | 🟢 debole in meccanica, forte al tavolo |
+| 3 | Ancora Viva | 🟡 medio |
+| 4 | Corteccia di Scorie | 🔴 **forte** |
+| 6 | Il Dono Passato di Mano | 🔴 **forte** |
+| 7 | Doppia Fiamma nel Legno | 🔴 **forte** |
+| 8 | Ciò che dorme nel Seme | ❓ ignoto per costruzione |
+
+#### Il verdetto
+
+🟢 **Dentro ogni personaggio i tre gradi sono coerenti**: si paga poco e si
+riceve poco, si paga molto e si riceve molto. **Non esiste la strada dominante
+di v1** — nessuna riga compra la stessa merce a meno.
+
+🔴 **Ma non sono tre scelte equivalenti, e la v3 lo diceva male.** Sono un
+**listino a tre prezzi con tre merci diverse**: il grado II costa il massimo e
+rende il massimo, il I e il III costano e rendono poco *in meccanica*. È un
+design legittimo — si sceglie **quanto** spendere, non solo **cosa** — ma è
+diverso da «tre opzioni pari», e §4 V1 lo lasciava intendere.
+
+🔴 **Tre buchi veri, misurati:**
+
+| | Il buco | Quanto è grave |
+|---|---|---|
+| **A** | **Il grado II di Thorik non è misurabile** senza la sua scheda, e per canone è **temporaneo** (§2.11). Siccome il grado I gli è precluso, **potrebbe finire per pagare meno di tutti** — l'opposto di quel che il DM ha chiesto | 🔴 **blocca**: va deciso prima |
+| **B** | **Il grado I di Artemis costa più del grado I di Tordek**: un'azione standard extra batte una difesa di nicchia 2/giorno | 🟡 piccolo, si pareggia dando a Tordek anche `Tremore del Forgiatore` (1/g) |
+| **C** | **Il grado III non costa niente sulla scheda a nessuno dei tre.** Chi ottimizza lo prende come il più economico — e in cambio riceve il dono meccanicamente più debole. Si compensa da sé, ma per caso, non per progetto | 🟡 dichiarato |
+
+### 2.11 · 🔴 La collisione che la domanda del DM ha fatto emergere
+
+Il grado II di Thorik **esiste già nel canone, ed è temporaneo.** Lo scrivono
+**due** schede-artefatto:
+
+> `00_Aegis_Fang-SCHEDA-GIOCATORE-STATO-ATTUALE.md`: *«Aegis Fang **perde il
+> Ritornante** finché non raggiunge il Risveglio pieno»*
+> `00_Aegis_Fang-MASTER-DM.md`: *«se al rituale … Thorik ha scelto
+> l'alternativa «Filo dell'Ascia» … perde la proprietà *Returning* fino al
+> **Risveglio pieno** (Stadio 1)»*, con la fonte citata in `_ARCHIVIO/`.
+
+E lo Stadio 1 è **«+4 Holy *Returning* Dwarven Waraxe»**: il *Returning*
+**torna** al risveglio, per progetto.
+
+🔴 **Quindi renderlo permanente, come fa v3, contraddice la progressione
+dichiarata dell'artefatto** — e la contraddice in due schede più un master
+archiviato. Tre strade, e **la scelta è del DM**:
+
+| | Strada | Conseguenza |
+|---|---|---|
+| **α** | **si tiene temporaneo**, come già scritto | v3 perde la sua regola *«nessuna strada a tempo»* per una riga su otto. Costo: la coerenza del principio |
+| **β** | **si rende permanente** e si riscrive il profilo dello Stadio 1 (da *Holy Returning* a *Holy* e basta) | costo: si tocca un artefatto oltre il perimetro dei Doni |
+| **γ** | **si cambia il grado II di Thorik**: invece del *Returning* dona **lo Smeraldo della Corona** (terremoto 1/settimana), che è permanente senza collidere con niente | 🎯 **la raccomando**: è l'unica che non rompe nulla, e lo Smeraldo era il grado I preclusogli — promosso a Ramo, visto che 1/settimana pesa più di 1/giorno |
+
+⚠️ **E c'è un'interazione fra i due gradi di Thorik che v3 non aveva visto**: il
+grado III blocca il Risveglio pieno di Aegis Fang; il grado II toglie il
+*Returning* «fino al Risveglio pieno». **Presi insieme** — cosa impossibile,
+un grado per PG — sarebbero stati permanenti per accidente. Non è un difetto
+attivo, ma dice che quei due gradi non erano indipendenti come pensavo.
 
 ### 2.6 · Il rifiuto, e cosa succede al seme
 
@@ -248,7 +345,7 @@ E in tutti e tre i casi, una volta sola: **la restituzione** (§2.7).
 
 | # | Prova | Criterio |
 |---|---|---|
-| V1 | **nessuna strada dominante** | per ogni PG i tre gradi danno **tre semi diversi**: non c'è «la stessa merce più economica» |
+| V1 | **nessuna strada dominante** | per ogni PG i tre gradi danno **tre semi diversi**: non c'è «la stessa merce più economica». ⚠️ **Corretto in §2.10**: questo non vuol dire «tre opzioni pari». Sono un **listino a tre prezzi con tre merci diverse** — il grado II costa e rende il massimo, il I e il III costano e rendono poco *in meccanica*. Legittimo, ma va detto |
 | V2 | **nessuna strada gratis** | tutti e nove i gradi sono **permanenti**; nessuna rinuncia a tempo |
 | V3 | **ognuno paga sul proprio artefatto** | nessun costo cade su una caratteristica o sui PE |
 | V4 | **la conseguenza tocca la Collana** | ogni riga della colonna destra **innesta o potenzia** un potere della Collana, non un'abilità sciolta |
@@ -374,6 +471,7 @@ la Collana si porta dietro da quando è stata scritta. La toglierei per ultima.
 
 | | Domanda |
 |---|---|
+| **0** 🆕 | 🔴 **Il grado II di Thorik collide col canone** (§2.11): due schede scrivono già il «Filo dell'Ascia» come **temporaneo**, e lo Stadio 1 di Aegis Fang è *«+4 Holy **Returning**»*. **α** si tiene temporaneo · **β** si riscrive lo Stadio 1 · **γ** 🎯 **si dona lo Smeraldo della Corona invece del *Returning*** — l'unica che non rompe niente |
 | **1** | Si adotta **v3**? (o v2, o v1 coi numeri ritoccati) |
 | **2** | 🔴 **Il grado III di Artemis**: lo si avverte in privato, o si toglie? *(§5.4 punto 2 — è la domanda che non posso decidere io)* |
 | **3** | Il **trapianto permanente** ti va come principio? È la gamba su cui poggia tutto: se un potere non può lasciare l'artefatto di chi lo dona, v3 cade e si torna a v2 |

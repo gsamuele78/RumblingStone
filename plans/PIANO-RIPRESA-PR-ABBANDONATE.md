@@ -905,6 +905,35 @@ invece di una; il grado III di Thorik implica una quest nuova per Aegis Fang; e
 valutare** — «ciò che dorme nell'Anello», di cui non sa niente. Va avvertito in
 privato o tolto: è l'unica riga della proposta che **non posso decidere io**.
 
+#### 🐛 «Quali sono i poteri, e sono bilanciati?» — la domanda che ha trovato tre difetti
+
+Il DM: *«mica l'hai detto, cosa decido se non li conosco. E un'altra cosa: sono
+bilanciati?»*. Aveva ragione due volte, e verificare la seconda ne ha trovati
+altri due.
+
+1. 🔴 **La v3 non metteva mai in fila cosa ottiene Hella.** Descriveva i costi in
+   prosa; la colonna che serve per decidere non c'era. → **§2.5-bis**, le otto
+   strade su una pagina.
+2. 🔴 **«Sono bilanciati?» non aveva risposta misurata**, e la risposta onesta è
+   **«in parte»** → **§2.10**. Dentro ogni PG i gradi sono coerenti e la strada
+   dominante di v1 non c'è, **ma non sono tre scelte pari**: sono un listino a
+   tre prezzi con tre merci diverse. Il criterio **V1 diceva il contrario ed è
+   stato corretto**.
+3. 🐛 **Due errori miei**, trovati leggendo le schede invece di ricordarle:
+   avevo scritto che i Bracieri sono *«l'unico artefatto del party che parla
+   davvero»* — **falso, Aegis Fang è senziente Ego 14**; e «Il Richiamo del
+   Legno» — richiamare **armi** a una **druida che non ne lancia** — era il dono
+   peggiore delle otto. Sostituito con «Il Guardiano che Torna».
+4. 🔴 **La collisione vera (§2.11)**: il grado II di Thorik **è già canone, ed è
+   temporaneo**. Due schede-artefatto scrivono che col «Filo dell'Ascia» l'ascia
+   perde il Ritornante *«fino al Risveglio pieno»*, e lo Stadio 1 è **«+4 Holy
+   *Returning*»** — torna per progetto. Renderlo permanente contraddice la
+   progressione dichiarata. Diventa la **domanda 0** di D13.
+
+🔎 **La forma è quella di tutta questa campagna**: avevo *ricordato* le schede
+invece di rileggerle, e due asserzioni su tre erano false. È ADR-0044 applicato
+al contenuto invece che ai piani.
+
 #### 🐛 E scrivendo D13, il gate delle decisioni ha mostrato un punto cieco
 
 Ho scritto la riga nuova come `restato **verde a 12 decisioni**. Non l'ha rifiutata: l'ha **saltata in
