@@ -170,7 +170,15 @@ leggevano tutti `rms.SYMBOLS`. La duplicazione vera erano i **set di funzione**.
 **2. E peggiore in un punto che nessuno aveva guardato.** Vedi sopra: otto posti,
 non cinque.
 
-**3. Il `function` è più povero di quanto §1 prometta, e non è una scorciatoia.**
+**3. Il `function` è nato povero, ed è durato mezza giornata.**
+📌 **Aggiornamento del 2026-09-12**: il DM ha **ratificato** la specifica
+(D1), e i campi neutri sono entrati per tutti e 56 i simboli — con tre deroghe
+motivate e la luce risolta a favore del codice. Vedi `PIANO-VENDIBILITA` §10.
+Il paragrafo sotto resta perché descrive lo stato in cui il lotto 1.1 è stato
+consegnato, ed è la ragione per cui la ratifica è stata una decisione separata
+invece di una riga presa di straforo.
+
+**Com'era al momento della consegna di 1.1.**
 Qui ci sono `wall`, `door`, `light`, `hazard`: **solo i fatti che il codice già
 applica**. `cover`, `obscurement`, `move_cost`, `elevation_m`, `climb`,
 `nameable` non ci sono perché

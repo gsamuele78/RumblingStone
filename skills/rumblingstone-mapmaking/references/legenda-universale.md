@@ -59,7 +59,7 @@
 | 🏮 | Braciere / fonte di luce | — |
 | 🪓 | Rastrelliera / armi | — |
 | 🛏 | Giaciglio | — |
-| 📦 | Casse / rifornimenti | — |
+| 📦 | Casse / rifornimenti | **sì** |
 | 🐴 | Cavalcature | — |
 | 🕸 | Ragnatele (terreno difficile) | — |
 | ❄ | Ghiaccio | — |

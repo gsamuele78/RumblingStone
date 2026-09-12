@@ -9,6 +9,15 @@
         "fill": "#55754d",
         "altezza_m": 5.0,
         "texture": "fogliame"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": true,
+        "deroga_uvtt": "il muro UVTT e' binario e il bosco no: blocca la vista ATTRAVERSO la cella, non DENTRO. Farlo muro pieno vorrebbe dire che un PG in mezzo agli alberi non vede il quadretto adiacente. Il glifo del margine e' il lotto di ADR-0049 (decisione DM del 2026-09-12).",
+        "cover": "half",
+        "obscurement": "heavy",
+        "move_cost": 4,
+        "nameable": false
       }
     },
     "🌿": {
@@ -19,6 +28,14 @@
         "fill": "#9db97b",
         "altezza_m": 0.4,
         "texture": "erba"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "light",
+        "move_cost": 2,
+        "nameable": false
       }
     },
     "🟩": {
@@ -29,6 +46,14 @@
         "fill": "#b3c489",
         "altezza_m": 0.0,
         "texture": "erba"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false
       }
     },
     "🟫": {
@@ -39,6 +64,14 @@
         "fill": "#b08d68",
         "altezza_m": 0.0,
         "texture": "terra-battuta"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false
       }
     },
     "🟨": {
@@ -49,6 +82,14 @@
         "fill": "#e4cf9c",
         "altezza_m": 0.0,
         "texture": "sabbia"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false
       }
     },
     "🟧": {
@@ -58,6 +99,18 @@
         "pat": "t_lava",
         "fill": "#d59650",
         "altezza_m": 0.0
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": false,
+        "hazard": {
+          "kind": "fire",
+          "severity": "minor"
+        }
       }
     },
     "🟥": {
@@ -67,6 +120,18 @@
         "pat": "t_lethal",
         "fill": "#b94a3c",
         "altezza_m": 0.0
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false,
+        "hazard": {
+          "kind": "magic",
+          "severity": "lethal"
+        }
       }
     },
     "🟦": {
@@ -77,6 +142,14 @@
         "fill": "#4c7ba3",
         "altezza_m": -0.6,
         "texture": "acqua"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "swim": true,
+        "nameable": false
       }
     },
     "🌊": {
@@ -87,6 +160,14 @@
         "fill": "#6aa5c4",
         "altezza_m": -0.3,
         "texture": "acqua"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": false
       }
     },
     "⬛": {
@@ -100,7 +181,11 @@
         "texture": "legno"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "🔳": {
@@ -119,6 +204,14 @@
         "fill": "#d8cdb4",
         "altezza_m": 0.0,
         "texture": "pavimento"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false
       }
     },
     "🏰": {
@@ -132,7 +225,11 @@
         "texture": "muratura"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": false
       }
     },
     "🟪": {
@@ -146,7 +243,11 @@
         "texture": "pietra-chiara"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "⛰": {
@@ -160,7 +261,11 @@
         "texture": "roccia"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "🪨": {
@@ -171,6 +276,16 @@
         "fill": "#ced4da",
         "altezza_m": 0.9,
         "texture": "roccia"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 2,
+        "prone_concealment": true,
+        "destructible": true,
+        "nameable": true
       }
     },
     "🔥": {
@@ -181,11 +296,20 @@
         "fill": "#ffb4a2"
       },
       "function": {
-        "light": {
-          "quadretti": 5.0,
-          "colore": "ffb37a"
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "light",
+        "move_cost": 1,
+        "nameable": false,
+        "hazard": {
+          "kind": "fire",
+          "severity": "major"
         },
-        "hazard": true
+        "light": {
+          "raggio_m": 7.5,
+          "colore": "ffb37a"
+        }
       }
     },
     "💥": {
@@ -196,7 +320,16 @@
         "fill": "#ffb4a2"
       },
       "function": {
-        "hazard": true
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "light",
+        "move_cost": 1,
+        "nameable": false,
+        "hazard": {
+          "kind": "fire",
+          "severity": "major"
+        }
       }
     },
     "💀": {
@@ -207,7 +340,16 @@
         "fill": "#e9ecef"
       },
       "function": {
-        "hazard": true
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false,
+        "hazard": {
+          "kind": "fall",
+          "severity": "major"
+        }
       }
     },
     "🕳": {
@@ -219,7 +361,15 @@
         "altezza_m": -2.5
       },
       "function": {
-        "hazard": true
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "nameable": true,
+        "hazard": {
+          "kind": "fall",
+          "severity": "lethal"
+        }
       }
     },
     "🔵": {
@@ -272,6 +422,14 @@
         "fill": "#b7e4c7",
         "altezza_m": 5.5,
         "texture": "fogliame"
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "deroga_uvtt": "e' una CREATURA, non terreno: un treant si muove, un muro no. Lo dice la spec stessa (§4.2 -> §7). Decisione DM del 2026-09-12.",
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "⭐": {
@@ -281,6 +439,14 @@
         "prop": "pr_star",
         "fill": "#fff3b0",
         "piatto": true
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🚪": {
@@ -292,7 +458,14 @@
         "piatto": true
       },
       "function": {
-        "door": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "deroga_uvtt": "ha gia' la sua geometria nell'export: `door: true` produce un varco, non un segmento di muro. Chiusa e' un muro, aperta un passaggio, e lo stato non e' una proprieta' del simbolo (spec §7).",
+        "door": true,
+        "cover": "total",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🗼": {
@@ -304,7 +477,11 @@
         "altezza_m": 9.0
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "🏺": {
@@ -314,6 +491,14 @@
         "prop": "pr_urn",
         "fill": "#f8f9fa",
         "altezza_m": 0.9
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🔔": {
@@ -322,6 +507,14 @@
         "mode": "icon",
         "prop": "pr_bell",
         "fill": "#fff3b0"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "💎": {
@@ -330,6 +523,14 @@
         "mode": "icon",
         "prop": "pr_gem",
         "fill": "#caf0f8"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "👑": {
@@ -338,6 +539,14 @@
         "mode": "icon",
         "prop": "pr_crown",
         "fill": "#fff3b0"
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🏮": {
@@ -349,8 +558,13 @@
         "altezza_m": 1.4
       },
       "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "nameable": true,
         "light": {
-          "quadretti": 6.0,
+          "raggio_m": 9.0,
           "colore": "ffd9a0"
         }
       }
@@ -362,6 +576,14 @@
         "prop": "pr_rack",
         "fill": "#e9ecef",
         "altezza_m": 1.6
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🛏": {
@@ -371,6 +593,14 @@
         "prop": "pr_bed",
         "fill": "#e9ecef",
         "altezza_m": 0.5
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "📦": {
@@ -380,6 +610,14 @@
         "prop": "pr_crate",
         "fill": "#e6ccb2",
         "altezza_m": 1.1
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "destructible": true,
+        "nameable": true
       }
     },
     "🐴": {
@@ -388,6 +626,14 @@
         "mode": "icon",
         "prop": "pr_horse",
         "fill": "#e6ccb2"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🕸": {
@@ -399,7 +645,16 @@
         "altezza_m": 0.6
       },
       "function": {
-        "hazard": true
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "light",
+        "move_cost": 4,
+        "nameable": false,
+        "hazard": {
+          "kind": "magic",
+          "severity": "minor"
+        }
       }
     },
     "❄": {
@@ -411,7 +666,16 @@
         "altezza_m": 0.1
       },
       "function": {
-        "hazard": true
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": false,
+        "hazard": {
+          "kind": "cold",
+          "severity": null
+        }
       }
     },
     "⚡": {
@@ -422,11 +686,20 @@
         "fill": "#fff3b0"
       },
       "function": {
-        "light": {
-          "quadretti": 4.0,
-          "colore": "fff0a0"
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": false,
+        "hazard": {
+          "kind": "electric",
+          "severity": "major"
         },
-        "hazard": true
+        "light": {
+          "raggio_m": 6.0,
+          "colore": "fff0a0"
+        }
       }
     },
     "🌀": {
@@ -435,6 +708,14 @@
         "mode": "icon",
         "prop": "pr_portal",
         "fill": "#caf0f8"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "⬇": {
@@ -444,6 +725,15 @@
         "prop": "pr_down",
         "fill": "#dee2e6",
         "piatto": true
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "climb": "easy",
+        "nameable": false
       }
     },
     "🏛": {
@@ -456,7 +746,11 @@
         "texture": "pietra-chiara"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true
       }
     },
     "🌋": {
@@ -465,6 +759,18 @@
         "mode": "icon",
         "prop": "pr_volcano",
         "fill": "#ffb4a2"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "heavy",
+        "move_cost": 2,
+        "nameable": true,
+        "hazard": {
+          "kind": "fire",
+          "severity": "lethal"
+        }
       }
     },
     "🗿": {
@@ -476,7 +782,12 @@
         "altezza_m": 2.2
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "destructible": true,
+        "nameable": true
       }
     },
     "🌉": {
@@ -486,6 +797,14 @@
         "prop": "pr_bridge",
         "fill": "#e6ccb2",
         "altezza_m": 0.8
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🎯": {
@@ -495,6 +814,14 @@
         "prop": "pr_target",
         "fill": "#fff3b0",
         "piatto": true
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🖼": {
@@ -504,6 +831,14 @@
         "prop": "pr_mural",
         "fill": "#dee2e6",
         "piatto": true
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "✨": {
@@ -515,8 +850,14 @@
         "piatto": true
       },
       "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true,
         "light": {
-          "quadretti": 3.0,
+          "raggio_m": 4.5,
           "colore": "e6ccff"
         }
       }
@@ -528,6 +869,14 @@
         "prop": "pr_swords",
         "fill": "#dee2e6",
         "piatto": true
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "⚰": {
@@ -537,6 +886,14 @@
         "prop": "pr_coffin",
         "fill": "#e6ccb2",
         "altezza_m": 0.8
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true
       }
     },
     "🛢": {
@@ -545,6 +902,14 @@
         "mode": "icon",
         "prop": "pr_barrel",
         "fill": "#e6ccb2"
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "destructible": true,
+        "nameable": true
       }
     },
     "🪜": {
@@ -553,6 +918,14 @@
         "mode": "icon",
         "prop": "pr_stairs",
         "fill": "#dee2e6"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": true
       }
     },
     "🦴": {
@@ -561,6 +934,14 @@
         "mode": "icon",
         "prop": "pr_bones",
         "fill": "#e9ecef"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": true
       }
     },
     "🍄": {
@@ -569,6 +950,14 @@
         "mode": "icon",
         "prop": "pr_mushrooms",
         "fill": "#ffb4a2"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "light",
+        "move_cost": 2,
+        "nameable": true
       }
     },
     "🕯": {
@@ -579,8 +968,14 @@
         "fill": "#fff3b0"
       },
       "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "none",
+        "move_cost": 1,
+        "nameable": true,
         "light": {
-          "quadretti": 3.0,
+          "raggio_m": 4.5,
           "colore": "ffe6b3"
         }
       }
@@ -591,6 +986,15 @@
         "mode": "icon",
         "prop": "pr_bush",
         "fill": "#b7e4c7"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "none",
+        "obscurement": "light",
+        "move_cost": 2,
+        "prone_concealment": true,
+        "nameable": true
       }
     },
     "⛺": {
@@ -601,7 +1005,12 @@
         "fill": "#e6ccb2"
       },
       "function": {
-        "wall": true
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "destructible": true,
+        "nameable": true
       }
     },
     "🔮": {
@@ -612,8 +1021,13 @@
         "fill": "#caf0f8"
       },
       "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "nameable": true,
         "light": {
-          "quadretti": 4.0,
+          "raggio_m": 6.0,
           "colore": "b3e6ff"
         }
       }
@@ -624,6 +1038,14 @@
         "mode": "icon",
         "prop": "pr_table",
         "fill": "#e6ccb2"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 2,
+        "nameable": true
       }
     },
     "🧱": {
@@ -632,6 +1054,15 @@
         "mode": "icon",
         "prop": "pr_lowwall",
         "fill": "#e6ccb2"
+      },
+      "function": {
+        "blocks_movement": false,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "move_cost": 1,
+        "climb": "easy",
+        "nameable": true
       }
     }
   }

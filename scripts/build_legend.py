@@ -31,7 +31,10 @@ DERIVATO = RADICE / "legend.json"
 
 CAMPI_RENDER = ("mode", "pat", "prop", "fill", "heavy",
                 "altezza_m", "piatto", "texture")
-CAMPI_FUNZIONE = ("wall", "door", "light", "hazard")
+CAMPI_FUNZIONE = ("blocks_movement", "blocks_sight", "blocks_line_of_effect",
+                  "deroga_uvtt", "door", "cover", "obscurement", "move_cost",
+                  "climb", "swim", "prone_concealment", "destructible",
+                  "nameable", "hazard", "light")
 
 
 def _carica_yaml() -> dict:

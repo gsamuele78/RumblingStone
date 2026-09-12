@@ -257,7 +257,7 @@ ciò che porta il primo utente.
 
 | # | Decisione | Perché ora, e cosa costa |
 |---|---|---|
-| **D1** 🆕 | **Si ratifica la specifica funzionale?** `docs/guides/LEGENDA-FUNZIONALE-SPEC.md` è ferma su *«proposta, gate DM»* dal 26 luglio. I suoi campi (`cover`, `obscurement`, `move_cost`, `elevation_m`, `climb`, `nameable`) **non sono in `legend.yaml`** perché non sono canone. | 🔴 **2.101 celle in 38 file.** Se `WALL_SYMS` derivasse da `blocks_sight` come la spec lo dichiara, diventerebbero muri nell'UVTT: `🌲` **2.073**, `🌳` 18, `📦` 10. `🌲` da solo è grande quanto `⛰` (2.423), che è costato **ADR-0043** e una decisione esplicita. Finché non si decide, 9 etichette su 63 tengono la funzione in prosa e nessuno script la può interrogare. ⚠️ Dentro c'è anche la **luce**: la spec la dà in metri (`🏮 6`, `🕯 1.5`, `✨ 3`, `🔮 3`), il codice in quadretti (`6.0 · 3.0 · 3.0 · 4.0`) — a 1,5 m/quadretto sono **quattro valori diversi su quattro**, e ha vinto il codice perché il criterio d'uscita era la byte-identità |
+| ~~**D1**~~ | ✅ **DECISA il 2026-09-12 — la spec funzionale è ratificata.** Vedi §10 per cosa è entrato e a che prezzo. In sintesi: i campi neutri entrano tutti per i **56 simboli** che ne hanno uno; `📦` diventa muro; `🌲` e `🌳` **no**, con deroga motivata; la luce resta quella del codice, scritta in metri. | ✅ Costo pagato: **+4 polilinee** su ciascuno dei 2 `.uvtt` committati, **zero** SVG. Il resto è additivo. 🔵 Ne è nata [**ADR-0049**](adr/ADR-0049-il-margine-del-bosco-e-un-glifo-a-se.md): `🌲` avrà un glifo per il margine, con una coda di **1.873 celle** da rileggere |
 | **D2** 🆕 | **Quanto è alta una tenda, e quanto un dais?** Nella catena Blender `⛺` e `🔳` non hanno un'altezza propria: si estrudono entrambi al default generico di **0,6 m**, mentre un edificio sta a **3,2**. | 🐛 **Terzo sintomo di ADR-0042**, e il primo trovato **da un gate** invece che da un bug al tavolo: `legend/single-source` ha scoperto la tabella `ALTEZZE`, dove il commento accanto a `⬛` diceva ancora *«edificio, tenda, dais»* — il significato di **prima** della decisione che lo aveva abolito. Migrato **com'era**: l'altezza di una tenda è contenuto, non refactoring. Nessun artefatto 3D è committato, quindi il costo di deciderla adesso è **zero** |
 
 ### Aperte da prima, senza costo misurato
@@ -469,3 +469,97 @@ non solo a passare.
 | ⬜ | `rules/<sistema>.yaml`, i tre profili | lotto **1.2** |
 | ⬜ | dominio fuori da `render_map_svg.py` | lotto **1.3** |
 | ⬜ | riclassificare le 6.960 celle `⬛` | coda di ADR-0042, è lettura non sostituzione |
+
+---
+
+## §10 · Lotto 1.1-bis — la ratifica funzionale (D1 decisa il 2026-09-12)
+
+> `[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests/test_legenda_fonte_unica.py -q`
+> verde con 21 test; **40 SVG byte-identici**, i 2 `.uvtt` cambiano di **+4
+> polilinee** ciascuno e il delta è misurato prima]`
+
+### 10.1 · Cosa ha deciso il DM, e cosa costa
+
+D1 non era una decisione: erano **tre**, con prezzi molto diversi. Presentate
+separate e decise separate.
+
+| | Decisione | Costo pagato |
+|---|---|---|
+| **a** | ✅ **I campi neutri entrano tutti** — `blocks_movement`, `blocks_sight`, `cover`, `obscurement`, `move_cost`, `nameable`, più `climb`, `swim`, `destructible`, `prone_concealment`, `hazard{kind,severity}` dalle Note | **zero**: nessuno script li legge ancora. Diventano il dato di partenza del lotto **1.2** |
+| **b** | ✅ **`📦` diventa muro**; `🌲` e `🌳` **no** | **+4 polilinee** su ciascuno dei 2 `.uvtt` committati |
+| **c** | ✅ **La luce resta quella del codice**, scritta in metri | **zero**: la conversione a 1,5 m/quadretto torna esatta |
+
+🔎 **Il conteggio del piano era gonfio, e l'ho corretto misurando meglio.** §9
+diceva 2.101 celle in 38 file: era `str.count` su tutto il markdown, quindi
+contava le righe di legenda e la prosa. Le **celle vere dentro le griglie sono
+1.889 in 8 master**. La conclusione non cambia — `🌲` da solo resta della taglia
+di `⛰` — ma il numero sì.
+
+### 10.2 · La scoperta sulla luce
+
+I valori della specifica **sono le regole 3.5 alla lettera**, quelli del codice
+sono generosi di casa:
+
+| | Codice | Spec | 3.5 RAW |
+|---|---:|---:|---|
+| `🏮` braciere | 6,0 quadretti | 4,0 | torcia = 20 ft = 4 quadretti |
+| `🕯` candele | 3,0 | **1,0** | candela = 5 ft = 1 quadretto |
+| `✨` · `🔮` | 3,0 · 4,0 | 2,0 · 2,0 | — |
+
+Il repo illumina da **1,5 a 3 volte** più del manuale. La decisione è tenere il
+codice: le mappe notturne sono state disegnate e giocate con quella luce, e
+dimezzarla per aderenza al manuale le spegnerebbe tutte insieme. La divergenza
+si chiude **scrivendo in metri i valori del codice**, non cambiandoli.
+
+### 10.3 · Il problema di progetto, e come è stato risolto
+
+🔴 **La tentazione era un secondo booleano.** Dopo la ratifica esistono due
+affermazioni diverse: `blocks_sight` (il fatto neutro — un bosco *blocca la
+vista attraverso la cella*) e «l'export UVTT ci mette un segmento». Tenerle in
+due campi indipendenti avrebbe **ricreato le due fonti** che ADR-0048 aveva
+appena finito di unire, e sarebbero divergite in silenzio come `SYMBOLS` e
+`WALL_SYMS` prima di ADR-0042.
+
+**Il muro si deriva** da `blocks_sight` meno le **deroghe**, e una deroga deve
+scrivere il proprio motivo in `deroga_uvtt`. Sono tre, tutte con una ragione che
+non è comodità:
+
+| | Perché deroga |
+|---|---|
+| `🌲` | il muro del VTT è binario e il bosco no. Muro pieno = un PG **dentro** gli alberi non vede il quadretto adiacente, e l'inseguimento nel bosco — il motivo per cui quelle mappe esistono — diventa ingiocabile. → [ADR-0049](adr/ADR-0049-il-margine-del-bosco-e-un-glifo-a-se.md) |
+| `🌳` | è una **creatura**, non terreno: un treant si muove, un muro no. Lo dice la spec stessa (§4.2 → §7) |
+| `🚪` | ha già la sua geometria: `door: true` produce un varco. Chiusa è un muro, aperta un passaggio, e lo stato non è una proprietà del simbolo |
+
+### 10.4 · Trovato ratificando, accettato, dichiarato
+
+🐛 **`🌋` non era classificato come pericolo.** La spec gli dà
+`hazard: {fire, lethal}`; il codice lo metteva fra le *strutture*, come un tavolo.
+Sono **12 celle in un master solo** (`Portale-Forgia-L2`), nessun artefatto
+dell'import è committato, e una bocca vulcanica è un pericolo: correzione
+accettata dentro la ratifica.
+
+⚠️ **`❄` va nella direzione opposta e non l'ho forzato.** Il codice lo tratta da
+pericolo dal primo giorno; la specifica **non lo classifica affatto**. Tengo la
+classificazione e scrivo `severity: null`: dire «è un pericolo, la gravità non è
+decisa» è vero, inventarne una no.
+
+### 10.5 · Validazione
+
+Tre prove a rovescio sul meccanismo nuovo, tutte rosse quando devono:
+
+| Prova | Esito |
+|---|---|
+| una deroga con un motivo vuoto (`boh`) | ✅ `test_ogni_deroga_ha_un_motivo_vero` rosso |
+| una deroga nuova su `⛰`, con un motivo che *sembra* serio | ✅ **due** test rossi: le deroghe decise e i valori congelati |
+| un campo `wall: true` rimesso accanto al fatto neutro | ✅ `test_il_muro_e_derivato_non_dichiarato` rosso |
+
+Più: 40 SVG byte-identici, le luci identiche al quadretto, il delta dei 2 `.uvtt`
+misurato **prima** di rigenerarli e coincidente (+4 polilinee ciascuno).
+
+### 10.6 · Cosa resta aperto
+
+| | Cosa | Dove va |
+|---|---|---|
+| ⬜ | `🌲`: il glifo del margine e la coda di **1.873 celle** | **ADR-0049**, lotto 1.1-ter |
+| 🔵 | **D2** — l'altezza di `⛺` e `🔳` nella catena Blender | ancora al DM, §8 |
+| ⬜ | i tre profili di regole; ⚠️ la riga `move_cost: 4` di **PF1e** resta fuori finché non è verificata sul PRD (il valore neutro `4` è 3.5 RAW ed è entrato) | lotto **1.2** |

@@ -137,26 +137,97 @@ class TestLaFonteEUnaSola(unittest.TestCase):
             self.assertEqual(set(insieme) - simboli, set(), nome)
 
     def test_niente_numeri_di_gioco_nella_legenda(self):
-        """ADR-0048 §5: «+4 CA» e «20%» vivono nei profili, non qui.
+        """ADR-0048 §5: «+4 CA», «20%» e «x2» vivono nei profili, non qui.
 
-        ⚠️ Il controllo e' sui **campi funzione**, non sulle etichette: 9
-        etichette portano ancora la funzione in prosa («copertura +4 CA»), ed
-        e' un debito noto che questo lotto non chiude — la ratifica della spec
-        funzionale e' la decisione D1 di PIANO-VENDIBILITA §8.
+        E' cio' che permette di supportare 3.5, PF1e e 5e senza tre legende:
+        `half` diventa +4 CA in 3.5 e +2 in 5e, e la legenda non lo sa.
         """
         dati = json.loads((ROOT / "scripts" / "legend.json").read_text(encoding="utf-8"))
-        ammessi = {"wall", "door", "light", "hazard"}
+        ammessi = {"blocks_movement", "blocks_sight", "blocks_line_of_effect",
+                   "deroga_uvtt", "door", "cover", "obscurement", "move_cost",
+                   "climb", "swim", "prone_concealment", "destructible",
+                   "nameable", "hazard", "light"}
+        vocabolario = {
+            "cover": {"none", "half", "three_quarters", "total"},
+            "obscurement": {"none", "light", "heavy"},
+            "climb": {"none", "easy", "moderate", "hard", "sheer"},
+            "move_cost": {1, 2, 4},
+        }
         for sim, voce in dati["symbols"].items():
-            self.assertEqual(set(voce.get("function", {})) - ammessi, set(), sim)
+            f = voce.get("function", {})
+            self.assertEqual(set(f) - ammessi, set(), sim)
+            for campo, valori in vocabolario.items():
+                if campo in f:
+                    self.assertIn(f[campo], valori, f"{sim}.{campo}")
+
+    def test_la_spec_funzionale_e_ratificata_per_intero(self):
+        """56 simboli su 56 che una funzione ce l'hanno (DM, 2026-09-12).
+
+        I 7 restanti non sono un buco: 6 sono token di creatura, e la spec
+        §4.5 dice che le unita' `function` non ce l'hanno — hanno `unit`.
+        Il settimo e' 🔳, nato con ADR-0042 dopo la riverifica della spec, e
+        quella decisione la sua funzione la dichiara per esteso.
+        """
+        con = [s for s, v in legenda.simboli().items()
+               if json.loads((ROOT / "scripts" / "legend.json")
+                             .read_text(encoding="utf-8"))["symbols"][s].get("function")]
+        self.assertEqual(len(con), 56)
+        unita = [s for s, v in legenda.simboli().items() if v["mode"] == "unit"]
+        self.assertEqual(len(unita), 6)
+        for u in unita:
+            self.assertNotIn(u, con, f"{u} e' un token: non ha function")
+
+
+class TestLeDerogheSonoDichiarate(unittest.TestCase):
+    """Il muro UVTT deriva dal fatto neutro, meno le deroghe — e ognuna motiva.
+
+    🔴 **La tentazione era un secondo booleano.** `blocks_sight` dice cosa fa
+    la cella nella finzione; l'export UVTT ci mette un segmento o no. Sono
+    due affermazioni diverse, e metterle in due campi indipendenti avrebbe
+    ricreato le due fonti che ADR-0048 ha appena finito di unire: diverrebbero
+    in silenzio, come `SYMBOLS` e `WALL_SYMS` prima di ADR-0042.
+
+    Quindi il muro **si deriva**, e chi diverge deve scrivere perche'. Questo
+    test e' il prezzo della deroga: senza motivo, e' rossa.
+    """
+
+    ATTESE = {"🌲", "🌳", "🚪"}
+
+    def test_ogni_deroga_ha_un_motivo_vero(self):
+        for sim, motivo in legenda.deroghe().items():
+            self.assertGreater(len(motivo), 60,
+                               f"{sim}: una deroga senza motivo e' una svista "
+                               f"travestita da decisione")
+
+    def test_le_deroghe_sono_solo_quelle_decise(self):
+        """Una deroga nuova non deve poter comparire senza che qualcuno la veda."""
+        self.assertEqual(set(legenda.deroghe()), self.ATTESE)
+
+    def test_una_deroga_esiste_solo_dove_c_e_qualcosa_da_derogare(self):
+        dati = json.loads((ROOT / "scripts" / "legend.json").read_text(encoding="utf-8"))
+        for sim in legenda.deroghe():
+            self.assertTrue(dati["symbols"][sim]["function"]["blocks_sight"],
+                            f"{sim} deroga da un muro che non ci sarebbe comunque")
+
+    def test_il_muro_e_derivato_non_dichiarato(self):
+        """Se qualcuno rimettesse un campo `wall`, sarebbero due fonti di nuovo."""
+        sorgente = (ROOT / "scripts" / "legend.yaml").read_text(encoding="utf-8")
+        self.assertNotIn("wall: true", sorgente,
+                         "il muro si deriva da blocks_sight meno le deroghe")
+
+    def test_la_foresta_e_una_decisione_non_una_dimenticanza(self):
+        """🌲 non e' muro per scelta del DM: il glifo del margine e' ADR-0049."""
+        self.assertNotIn("🌲", legenda.muri())
+        self.assertIn("ADR-0049", legenda.deroghe()["🌲"])
 
 
 class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
     """Il criterio d'uscita di ADR-0048 §4: nessuna regressione visiva."""
 
     CONGELATI = {
-        "muri": {"🏰", "⬛", "⛺", "⛰", "🟪", "🗼", "🏛", "🗿"},
+        "muri": {"🏰", "⬛", "⛺", "⛰", "🟪", "🗼", "🏛", "🗿", "📦"},
         "porte": {"🚪"},
-        "pericoli": {"🔥", "💥", "💀", "🕳", "⚡", "❄", "🕸"},
+        "pericoli": {"🔥", "💥", "💀", "🕳", "⚡", "❄", "🕸", "🌋", "🟧", "🟥"},
         "pesanti": {"t_wall", "t_struct", "t_pillar", "t_mountain"},
         "piatti": {"🚪", "⬇", "🎯", "⭐", "✨", "⚔", "🖼"},
     }
@@ -204,6 +275,18 @@ class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
         self.assertEqual(rmb.ALTEZZE, legenda.altezze())
         self.assertEqual(rmb.PIATTI, set(legenda.piatti()))
         self.assertEqual(rmb.TEXTURE, legenda.texture())
+
+    def test_le_luci_valgono_ancora_i_quadretti_di_prima(self):
+        """La legenda le dichiara in metri; l'uscita non e' cambiata di un byte.
+
+        Decisione DM del 2026-09-12: la spec dava i raggi RAW di 3.5 (torcia
+        20 ft, candela 5 ft) e il repo illumina 1,5-3 volte di piu'. Ha vinto
+        il codice, perche' le mappe notturne sono state disegnate con questa
+        luce. La divergenza si e' chiusa scrivendo in metri i valori del
+        codice, non cambiandoli.
+        """
+        atteso = {"🔥": 5.0, "🏮": 6.0, "⚡": 4.0, "✨": 3.0, "🕯": 3.0, "🔮": 4.0}
+        self.assertEqual({s: q for s, (q, _) in legenda.luci().items()}, atteso)
 
     def test_la_voragine_non_e_una_sorgente_di_luce(self):
         """🕳 stava fra le luci con raggio 0.0, e l'export lo scartava.

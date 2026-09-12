@@ -18,21 +18,35 @@
 > no, muro no). I 6 simboli-unità non hanno `function` **per progetto** (§4.5),
 > quindi la copertura reale della §4 è **56 su 56 di quelli che ne hanno una**.
 >
-> 🔴 **E questa specifica è ancora «proposta», non canone — è il punto che
-> conta.** L'attuazione di ADR-0048 (2026-09-12) ha creato `scripts/legend.yaml`
-> con **solo i fatti che il codice già applica**: `wall`, `door`, `light`,
-> `hazard`. `cover`, `obscurement`, `move_cost`, `elevation_m`, `climb` e
-> `nameable` **non ci sono**, perché ratificarli è una decisione con un prezzo
-> misurato — `🌲` (2.073 celle), `🌳` (18) e `📦` (10) diventerebbero muri
-> nell'export UVTT, **2.101 celle in 38 file**, quanto `⛰` che è costato
-> ADR-0043. È la **decisione D1** di
-> [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md) §8.
+> ✅ **Ratificata il 2026-09-12, e i campi neutri sono in `scripts/legend.yaml`**
+> per tutti e 56 i simboli che una funzione ce l'hanno. Il conteggio del costo
+> è stato **rimisurato meglio in quell'occasione**: 1.889 celle vere dentro le
+> griglie, non le 2.101 che il conteggio grezzo dava contando anche legende e
+> prosa.
 >
-> ⚠️ **Divergenza aperta sulla luce**: §4.3 la dà in **metri**
-> (`🏮 6` · `🕯 1.5` · `✨ 3` · `🔮 3`), il codice in **quadretti**
-> (`6.0` · `3.0` · `3.0` · `4.0`). A 1,5 m/quadretto sono quattro valori diversi
-> su quattro. In `legend.yaml` ha vinto il codice, perché il criterio d'uscita
-> della migrazione era la byte-identità degli artefatti; la scelta è dentro D1.
+> 🔴 **Tre deroghe, e §4 va letta con quelle accanto.** Il muro dell'export UVTT
+> si deriva da `blocks_sight`, **meno** i simboli che dichiarano un
+> `deroga_uvtt` motivato:
+>
+> | | La §4 dice | L'export UVTT | Perché |
+> |---|---|---|---|
+> | `🌲` | blocca la vista | **non** è muro | il muro del VTT è binario e il bosco no — §7 lo dice contro se stessa. → [ADR-0049](../../plans/adr/ADR-0049-il-margine-del-bosco-e-un-glifo-a-se.md): il margine avrà un glifo suo |
+> | `🌳` | blocca la vista | **non** è muro | è una **creatura** (§4.2 → §7): si muove |
+> | `📦` | blocca la vista | ✅ **è muro** | ratificato: costa +4 polilinee sui 2 `.uvtt` committati |
+>
+> ⚠️ **La luce: ha vinto il codice, e vale la pena sapere perché.** §4.3 dà i
+> raggi **RAW di 3.5** — torcia 20 ft, candela 5 ft — mentre il repo illumina da
+> **1,5 a 3 volte** di più (`🏮` 6 quadretti contro 4, `🕯` 3 contro 1). Le
+> mappe notturne sono state disegnate e giocate con quella luce: dimezzarla per
+> aderenza al manuale le spegnerebbe tutte insieme. La divergenza si è chiusa
+> scrivendo in metri i valori del codice, non cambiandoli.
+>
+> 🐛 **E ratificando è saltato fuori un difetto**: `🌋` (§4.2,
+> `hazard: {fire, lethal}`) era classificato dall'import fra le **strutture**,
+> come un tavolo. Corretto — 12 celle in un master. Al contrario `❄`, che il
+> codice tratta da pericolo, qui **non è classificato affatto**: porta
+> `severity: null`, perché dire «è un pericolo, la gravità non è decisa» è vero
+> e inventarne una no.
 >
 > **Cosa è cambiato**: §6 è stata riscritta sui numeri di oggi. Tre delle quattro
 > correzioni previste a luglio **risultano già applicate** nel codice attuale; una
@@ -52,7 +66,10 @@
 > **Attuazione**: lotto 1.1 di
 > [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md) — ✅ **fatta il
 > 2026-09-12**, limitatamente ai campi già canonici (vedi sopra).
-> **Data**: 2026-07-26 · **Stato**: specifica proposta, gate DM.
+> **Data**: 2026-07-26 · **Stato**: ✅ **ratificata dal DM il 2026-09-12**
+> (decisione D1 di [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md) §8,
+> attuazione in §10), con **tre deroghe motivate** e una divergenza risolta a
+> favore del codice. I dettagli sotto.
 
 ---
 
