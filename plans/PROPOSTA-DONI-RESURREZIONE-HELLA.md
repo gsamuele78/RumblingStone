@@ -1,13 +1,22 @@
-<!-- Proposta di ridisegno, NON canone. Il master ARC07-DEF-3 non e' stato toccato. -->
+<!-- ATTUATA il 2026-09-12: il canone vivo e' ARC07-DEF-3 §5. Qui resta il ragionamento. -->
 # Proposta — I Tre Doni della resurrezione di Hella
 
-**Stato**: 🔵 **proposta, revisione 4** — il DM ha **scelto** i doni di Tordek e Artemis; resta da approvare l'insieme
-**Data**: 2026-09-12 (v2 → v3 dopo il primo rilievo → **v4 con le scelte del DM**) · **Lotto**: 4c
-**👉 Leggi [§0-bis](#0-bis--la-versione-scelta-dal-dm-2026-09-12--v4)**: è la versione viva. Il resto è il menù da cui è uscita
-**Sostituirebbe**: [`ARC07-DEF-3`](../07_il%20Portale%20Della%20Forgia%20Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md) §5 e la sua sintesi in §0-bis
-**Definirebbe anche**: il potere **#6 della Collana** (`I Doni dei Semi`), oggi marcato `[Meccanica esatta da definire col DM]`
+**Stato**: ✅ **ATTUATA il 2026-09-12** — approvata dal DM e portata nel canone
+**Data**: 2026-09-12 (v2 → v3 → v4 con le scelte del DM → **v4-bis, approvata**) · **Lotto**: 4c
 
-> ⚠️ **Il master non è stato modificato**, e non lo sarà finché il DM non approva.
+> ✅ **QUESTO DOCUMENTO NON È PIÙ LA FONTE.** Il canone vivo dei Tre Doni è
+> **[`ARC07-DEF-3` §5](../07_il%20Portale%20Della%20Forgia%20Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md)**,
+> e le conseguenze stanno nelle schede dei quattro artefatti, nella
+> [Collana](../PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md)
+> (potere **#6**, che non è più `[da definire col DM]`) e in `campaign/state.md`
+> §7 `[I TRE DONI]`.
+>
+> Resta qui perché è **il ragionamento**: cosa non funzionava in v1, cosa avevo
+> sbagliato in v2 e in v3, e i numeri con cui si è arrivati alla versione
+> approvata. Si legge per capire **perché**, non per giocare.
+>
+> 🧊 Le istantanee dei dodici file com'erano prima stanno in
+> [`_ARCHIVIO/doni-v1-2026-09-12/`](../07_il%20Portale%20Della%20Forgia%20Eterna/_ARCHIVIO/doni-v1-2026-09-12/README.md).
 
 ---
 
