@@ -1582,6 +1582,6 @@ entries — they become campaign history.
             il "-2 COS" perche' e' quel che i piani dicevano in quelle date.
             Sono record storici, e restano.
             DONI v2: la proposta di ridisegno dei tre Doni (§5 di ARC07-DEF-3)
-            e' in plans/PROPOSTA-DONI-RESURREZIONE-HELLA-v2.md e NON e' canone
+            e' in plans/PROPOSTA-DONI-RESURREZIONE-HELLA.md e NON e' canone
             finche' il DM non la approva. Il master non e' stato toccato.
 ```

@@ -855,7 +855,7 @@ sintatticamente perfette e i percorsi che citano esistono tutti.
 
 Il DM ha chiesto di togliere il −2 COS, di rendere adeguati i doni di Tordek e
 Artemis, e di **confrontare il nuovo col vecchio prima di approvare**. Il
-risultato è [`PROPOSTA-DONI-RESURREZIONE-HELLA-v2`](PROPOSTA-DONI-RESURREZIONE-HELLA-v2.md),
+risultato è [`PROPOSTA-DONI-RESURREZIONE-HELLA`](PROPOSTA-DONI-RESURREZIONE-HELLA.md),
 🔵 **proposta**: `ARC07-DEF-3` §5 **non è stato toccato**.
 
 Due cose che la misura ha aggiunto a §4.5-ter, e che spostano la diagnosi:
@@ -871,6 +871,39 @@ Due cose che la misura ha aggiunto a §4.5-ter, e che spostano la diagnosi:
    economica. Ne segue che **il −2 COS lo paga solo chi interpreta contro il
    proprio interesse** — il design mette una tassa sulla buona fede. Cambiare i
    numeri non lo toglie.
+
+#### 🔁 v2 bocciata, v3 scritta (2026-09-12, stesso giorno)
+
+Il DM ha letto la v2 e l'ha respinta su **tre punti, tutti fondati**:
+
+| Il rilievo | Cos'era davvero |
+|---|---|
+| *«non hai proposto nulla né per Artemis né per Tordek che siano davvero adeguati»* | avevo tolto il −2 COS e **pareggiato verso il basso**: ad Artemis spegnevo quattro poteri 1/giorno **proteggendogli esplicitamente Ali d'Ombra e Passo d'Ombra**, cioè la roba buona; a Tordek prendevo `Ancoraggio` e `Salto Infuocato`, **due poteri periferici su quindici** |
+| *«che conseguenze hanno per Hella, per i suoi poteri e per l'artefatto»* | 🔴 **nessuna, sull'artefatto.** I nove doni erano **abilità sciolte**. Non toccavano la **Collana dei Semi Eterni**, che ha tre semi e ha scritto dentro di sé che *«custodiscono i sacrifici che i compagni offrirono al rituale»*. Il gancio era nel repo e non l'avevo usato |
+| *«per gli altri non deve essere gratis o facile»* | in v2 **due registri su tre erano temporanei**. Una rinuncia che scade non è una scelta |
+
+🌱 **v3 cambia la domanda.** Da *«quanto sei disposto a pagare?»* a **«che pezzo
+di te lasci crescere in lei?»**. Il dono è un **trapianto**: un potere lascia
+l'artefatto del donatore **per sempre** e germoglia in un seme della Collana,
+dove diventa druidico. Il party non perde la capacità — cambia mano e forma.
+
+Tre gradi (**Scheggia** un potere giornaliero · **Ramo** un potere continuo ·
+**Radice** la voce dell'artefatto o il suo futuro), **tutti permanenti**. Thorik
+porta più peso in tre modi verificabili, e uno **lo dice `state.md`**: il
+risveglio pieno di Aegis Fang richiede *«Corona Senziente»*, quindi il suo grado
+III è l'unico che ricade su un **secondo** artefatto.
+
+🌱 **E la v3 chiude un `[da definire col DM]` che non era suo**: il potere **#6**
+della Collana (`I Doni dei Semi`) è marcato così da quando l'artefatto esiste.
+§2.7 lo definisce **con le parole della scheda stessa** — *«restituire quel
+sacrificio nel momento del bisogno»* — una volta sola, per una scena, e **decide
+Hella**. È anche la riga che rende v3 etica invece che punitiva.
+
+⚠️ **Quel che v3 peggiora, dichiarato**: tocca **quattro** schede-artefatto
+invece di una; il grado III di Thorik implica una quest nuova per Aegis Fang; e
+🔴 **il grado III di Artemis fa pagare una cosa che il giocatore non può
+valutare** — «ciò che dorme nell'Anello», di cui non sa niente. Va avvertito in
+privato o tolto: è l'unica riga della proposta che **non posso decidere io**.
 
 #### 🐛 E scrivendo D13, il gate delle decisioni ha mostrato un punto cieco
 
@@ -993,7 +1026,7 @@ Vale per **ogni** commit di **ogni** fase.
 | ~~D1~~ | F1 | ✅ **decisa 2026-09-05: archiviazione.** I tre master e i loro 7 SVG in `_ARCHIVIO/`; gli SVG non cancellati, così la cartella resta dentro il raggio di `validate_maps` |
 | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM **con Gemini** il 2026-08-15, montati nel modulo, `validate_standalone` verde. `comfyui_batch --lista` dava «6 da fare» per un **disallineamento di nomi**, corretto in questo lotto. La domanda vera è: **l'arte del Drappo è di Gemini, la catena di F3 genera con SDXL in locale — quale delle due è il canone del modulo?** Le differenze che contano (ADR-0019 §2, che questo caso l'aveva previsto): Gemini **non espone il seed**, quindi la serie è irripetibile e il PNG è la sorgente; i suoi termini sono un **contratto che cambia**, verificato per di più su fonti secondarie; SDXL è OpenRAIL++-M, **perpetua**. Di contro la provenienza di Gemini è **firmata C2PA**, e SDXL su queste immagini **nessuno l'ha visto**. 🔵 **Metodo scelto dal DM il 2026-09-11: collaudo prima di scegliere** — la decisione **resta aperta**, si chiude quando il DM ha visto il confronto. Il DM: *«voglio fare prima un collaudo con 2 o 3 immagini e vedere davvero la qualità prima di buttare quelle di Gemini, che sono carine»*. Si generano **due o tre** immagini con SDXL in una cartella a parte, si mettono accanto alle attuali, e A (tenere Gemini) o B (rigenerare tutto) si sceglie **guardando**. Il collaudo chiude anche il buco vero di F3 — la catena mai provata contro un ComfyUI reale — al costo di due immagini invece che diciotto |
 | ~~D3~~ | F4 · 4c | ✅ **chiusa il 2026-09-12, eseguita nello stesso commit in cui e' stata dichiarata chiusa** (la lezione di D4). Il DM ha risposto il 2026-09-11 e il lotto 4c ha applicato entrambe le risposte: il **Giorno di Marcia 19** e' il punto di sincronia a cui il calendario torna col viaggio nel tempo — non un difetto, un tempo verbale, corretto; il **-2 COS di Thorik** era registrato come versato per una scena mai giocata, tolto dal presente insieme ai **-500 PE di Tordek**, che avevano lo stesso difetto e che nessuno aveva notato. 🔎 **E il lotto ha trovato il resto della stessa crepa**: §1 collocava tutti e quattro i PG dopo Hammerfist e dava **Hella viva**, mentre §6 dello stesso file la dava *«dead — resurrection pending»*. Vedi **§4.2-quater** |
-| **D13** 🆕 | F4 · 4c | 🔵 **Si adottano i Tre Doni v2?** Nasce dalla richiesta del DM del 2026-09-12: *«togliere il -2 COS ... rivedi i doni di Tordek e Artemis che devono essere adeguati ... una volta creato questo nuova modalita si confronta con quello esistente per valutare il bilanciamento prima di approvarlo»*. La proposta e' [`PROPOSTA-DONI-RESURREZIONE-HELLA-v2`](PROPOSTA-DONI-RESURREZIONE-HELLA-v2.md) e **`ARC07-DEF-3` §5 non e' stato toccato**. 🔴 **Il difetto misurato non e' il prezzo di Thorik**: (a) il costo di Artemis e' **zero per errore di sistema** — chiede uno *slot* a un Warlock, che non ne ha; (b) le tre strade di ogni PG danno **lo stesso dono**, quindi non sono una scelta ma un listino, e il -2 COS lo paga **solo chi interpreta contro il proprio interesse**. v2 risponde con **tre strade, tre doni diversi** su tre registri di costo comparabili (Carne / Voto / Oggetto), il permanente diventa una **cessione** che il party non perde, e il prezzo si registra col meccanismo gia' approvato di §6 (nessuna coercizione adesso, il conto in ARC-08/09). 🔵 **Tre domande**: (1) tutto v2, o solo la correzione minima di §5.4 (due righe: doni diversi per Thorik + *danno* a COS invece di *risucchio*), o si resta a v1? (2) **al tuo tavolo si gioca il danno alle caratteristiche?** Se no, il registro Carne va rifatto **prima** di approvare: e' il singolo modo in cui v2 fallisce. (3) il registro **Oggetto** — cessione permanente di *Returning*, Ancoraggio, Dono dell'Unita — ti va? E' la gamba su cui poggia la simmetria del prezzo permanente |
+| **D13** | F4 · 4c | 🔵 **Si adottano i Tre Doni v3?** — **revisione 3 del 2026-09-12, dopo che il DM ha bocciato la v2 su tre punti, tutti fondati.** La v2 aveva tolto il -2 COS di Thorik e **pareggiato verso il basso**: per Artemis spegneva quattro poteri 1/giorno **proteggendogli Ali d'Ombra e Passo d'Ombra**, per Tordek prendeva due poteri periferici su quindici, due registri su tre erano **temporanei**, e nessuno dei nove doni toccava la **Collana dei Semi Eterni** — cioe' l'artefatto di Hella. 🌱 **v3 cambia la domanda**: non «quanto sei disposto a pagare» ma **«che pezzo di te lasci crescere in lei»**. Ogni PG dona **un potere del proprio artefatto**, che lo lascia **per sempre** e **germoglia in un seme della Collana**: il party non perde la capacita, cambia mano e forma. Tre gradi — **Scheggia** (potere giornaliero) · **Ramo** (potere continuo) · **Radice** (la voce dell'artefatto, o il suo futuro) — **tutti permanenti, nessuna strada a tempo**. Thorik porta piu' peso in **tre modi verificabili**: il grado I gli e' precluso, e' l'unico a donare da **due** artefatti, ed e' l'unico il cui grado III ricade su un secondo artefatto — ricaduta **citata da `state.md`**, non inventata (il risveglio pieno di Aegis Fang richiede «Corona Senziente»). 🌱 **E definisce il potere #6 della Collana**, marcato `[da definire col DM]` da quando l'artefatto esiste: **il seme restituisce** — una volta sola, per una scena, e **decide Hella**. 🔴 **Le domande**: (1) v3, v2 o v1 coi numeri ritoccati? (2) **il grado III di Artemis** — dona «cio' che dorme nell'Anello» senza sapere cos'e': lo si avverte in privato o si toglie? E' l'unica cosa della proposta che non posso decidere io. (3) il **trapianto permanente** ti va come principio? Se un potere non puo' lasciare l'artefatto di chi dona, v3 cade. (4) la riga 7-8 di §2.8 tocca il Cerchio Sacro dell'ARC-09: la tieni? (5) il grado III di Thorik implica una **quest nuova** per il risveglio di Aegis Fang: la accetti? |
 | ~~D4~~ | F4 | ✅ **chiusa il 2026-09-11: non era una domanda.** Misurato invece di ricordare: il `PALIO-BOOKLET` cita **14 file** — 8 stemmi, 4 mappe, 2 immagini — ed **esistono tutti e 14**. SVG veri da 2,7-5,4 KB, due PNG da ~2 MB, e `CREDITS.md` con l'attribuzione **CC BY 3.0** a game-icons.net già in regola. Niente da produrre, niente da togliere. 🔎 Settimo presupposto invecchiato di questa campagna, e la chiusura era rimasta indietro di un giro: annunciata il 2026-09-11 e non eseguita nello stesso commit |
 | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD, e porta il **perimetro della v1**. ✅ **I due avvertimenti che bloccavano la domanda sono tolti**: l'audit mancante è stato **rifatto da zero** ([`AUDIT-DERIVAZIONE-IP-CAMPAGNA`](../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md)), e la tesi **regge sul repo di oggi** — archi 07+08 a **0,2** e **0,7** occorrenze RHoD per 1.000 parole contro il **5,6** dell'arco 09. 🔎 **E la misura ha aggiunto due cose che la #72 non sapeva**: il **`Bestiario/` è a 3,0** e **esce col modulo** — un perimetro che tace su di lui lascia fuori il conto una dipendenza vera — e i **moduli autoconclusivi sono già puliti** (`10-stand-alone` e il Drappo a **0,0**), quindi su quest'asse il prodotto della linea 3 di `PIANO-VENDIBILITA` è pronto. 🔴 **Cosa resta da decidere al DM**: (a) si adotta il perimetro così com'è? (b) il **bestiario** sta dentro o fuori? (c) l'ADR resta proposta finché non c'è la **verifica di un avvocato IP**, che l'audit non sostituisce — conta i nomi, non la struttura |
 | ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
