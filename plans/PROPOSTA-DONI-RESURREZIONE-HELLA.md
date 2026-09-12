@@ -36,30 +36,75 @@ pagare?»* — una tassa. In v3 è: **«che pezzo di te lasci crescere in lei?»
 
 | Chi | Dona (esce dal suo artefatto **per sempre**) | 🌱 Nel seme di Hella germoglia |
 |---|---|---|
-| 🛡️ **Thorik** | **Lo Smeraldo della Corona** — la carica di terremoto **1/settimana** | **La Radice che Spacca** — 1/settimana, azione standard: radici erompono in un raggio di 9 m. Terreno difficile finché lei resta in piedi, e chi è dentro fa **Riflessi CD 19** o è **immobilizzato** 1d4 round |
+| 🛡️ **Thorik** | **Il +2 di deflessione della Corona** — la protezione che la Corona dà **a lui** | **Lo Scudo del Custode** — 1/giorno, azione immediata: Hella prende su di sé il danno destinato a un alleato entro 9 m, **dimezzato** |
 | ⚒️ **Tordek** | **Ancoraggio della Montagna** (2/giorno, immediata) | **Pelle di Adamantio — RD 3/adamantino** |
 | 🔮 **Artemis** | **Dono dell'Unità** (1/giorno, rapida) | **Il Dono Passato di Mano** — 1/giorno, rapida: **azione standard extra** a un alleato entro 9 m. 🌱 **Anche a Durik** |
 
-### Perché lo Smeraldo è la cosa sensata per Thorik
+### Perché lo Scudo del Custode, per Thorik
 
-Non è il potere più forte che ha: è **quello che ha già pagato**.
+Il DM ha chiesto tre cose insieme: **in linea col personaggio**, **col suo
+ruolo**, e — la richiesta nuova, che cambia il criterio — **che si accumuli coi
+doni degli altri due**. Lo Smeraldo della proposta precedente reggeva sulle
+prime due e **falliva sulla terza**: un terremoto 1/settimana non si somma a
+niente, sta per conto suo.
 
-Il −2 DES / +2 COS permanenti del 2026-07-31 Thorik li ha versati **per incastonare
-lo Smeraldo** — è il rito in cui si è inginocchiato sotto il Peso del Mondo invece
-di comprarne l'uscita col bottino dell'arco (eco **E-07c**). Donare lo Smeraldo
-significa **dare via la cosa per cui ha già sanguinato**, ed è l'unico modo di
-fargli pagare due volte **senza chiedergli un secondo malus di caratteristica**.
-È esattamente la richiesta che ha aperto tutta questa revisione.
+**Thorik non le dà un potere. Le dà il suo mestiere.**
 
-E in più: **non collide con niente**. Il *Returning* di Aegis Fang è già scritto
-come temporaneo in due schede (§2.11); la Senzienza della Corona blocca il
-risveglio dell'ascia; lo Smeraldo è **suo, permanente, e non incatenato a nulla**.
+È l'unico del party che sta davanti per scelta: si è inginocchiato sotto il Peso
+del Mondo invece di comprarne l'uscita, e ha accettato la Corona sapendo che gli
+toglieva la DES. Donare il **+2 di deflessione** significa che la Corona **smette
+di proteggere lui** perché lui possa passare a Hella la cosa che sa fare: **stare
+in mezzo**. È il paradosso del custode, ed è la sua riga da sempre.
 
-🔵 **Alternativa, se preferisci un costo continuo invece che periodico**:
-**Stone's Awareness** — la Corona smette di fargli sentire la pietra (trappole e
-lingue attraverso la roccia), e Hella sente attraverso le radici tutto ciò che
-tocca terra entro 18 m. Si sente **ogni sessione** invece che una volta a
-settimana, ma è più debole come dono.
+#### 🔗 E qui i tre doni diventano una catena — la richiesta del DM
+
+Un colpo da **40** che arriverebbe su Artemis:
+
+| Passo | Di chi è il dono | Effetto |
+|---|---|---|
+| 1 | 🛡️ **Thorik** | Hella se lo prende addosso, **dimezzato** → **20** |
+| 2 | ⚒️ **Tordek** | passa attraverso la sua **RD 3/adamantino** → **17** |
+| 3 | 🔮 **Artemis** | Artemis è ancora in piedi **e** ha l'**azione standard extra** per chiudere lo scontro |
+
+**40 danni diventano 17, su un bersaglio che li regge, e il bersaglio salvato
+agisce due volte.** Nessuno dei tre doni, da solo, fa questo. È l'unica
+combinazione delle otto in cui i tre poteri **si moltiplicano invece di
+sommarsi**, ed è il motivo per cui il dono dell'Eletto è quello giusto da mettere
+in mezzo: **tiene insieme gli altri due.**
+
+#### Il costo, e perché è il più alto dei tre
+
+🔴 **−2 alla CA, permanenti, su un guerriero di prima linea.** Si sente **ogni
+round di ogni combattimento**, dove gli altri due pagano 2/giorno e 1/giorno. E
+si somma a un buco che ha già: la Corona gli ha portato la DES a **6** (−4 al
+punteggio, −2 al modificatore), quindi con questo dono la sua CA scende di **4
+punti** rispetto a un guerriero nano di 13° senza artefatti.
+
+⚠️ **È pesante davvero, e va detto prima**: è il costo più alto dell'intera
+proposta, ed è quello che il DM ha chiesto per l'Eletto — ma se al tavolo lo
+giudichi troppo, la variante di sotto costa **zero adesso**.
+
+🔵 **Variante anti-non-morti, se preferisci il taglio che avevi in mente** —
+**«La Fede nel Metallo»**: Thorik dona la **Sacralità futura di Aegis Fang**. Al
+Risveglio pieno (Stadio 1) l'ascia diventerebbe *«+4 **Sacra** Ritornante»* con
+**+2d6 contro aberranti, non morti e draghi**: donandola, si sveglia **+4
+Ritornante Dragondoom e basta**. Hella riceve **La Linfa Sacra** — i suoi attacchi
+naturali e gli schianti in forma d'Avatar contano come **sacri** e infliggono
+**+2d6 a non morti e aberrazioni**.
+· 🎯 **Contro chi serve**: il **Ghostlord** dell'ARC-09 e le aberrazioni di
+**Sonjak**, che è una *Chierica Matrona drow* — non-morti e energia negativa sono
+il suo mestiere.
+· 🔗 **Si accumula lo stesso**, ma per moltiplicazione diversa: l'**azione
+standard extra** di Artemis raddoppia il round in cui quel +2d6 conta, e la **RD**
+di Tordek la tiene in piedi in mezzo alla calca di non-morti.
+· ⚖️ **Il baratto**: costa **zero adesso** e molto dopo — quindi è più leggera
+di quanto il DM abbia chiesto per Thorik, e tocca il profilo dichiarato dello
+Stadio 1 (una proprietà sola, non tutto il risveglio: molto meno invasiva della
+Senzienza).
+
+⚠️ **Perché non è più lo Smeraldo**: non si accumulava. Resta valido come terza
+scelta se vuoi il costo periodico invece che continuo, ma è quello che risponde
+peggio alla domanda che hai fatto adesso.
 
 ### I due numeri che la scheda di Hella ha corretto
 
@@ -88,7 +133,7 @@ hanno una personalità già scritta nel canone.
 
 | Chi rifiuta | 🌱 Su Hella (il seme) | ⚒️ Sul suo artefatto |
 |---|---|---|
-| 🛡️ **Thorik** | Seme I **dormiente**: niente Radice che Spacca. La Collana resta com'è in scheda | **Aegis Fang ha un'opinione, ed è Ego 14.** L'ascia era lì. Da qui in poi, quando Thorik le chiede qualcosa in una scena che riguarda **Hella o dei nani da proteggere**, l'Ego **tira l'opposizione** (oggetti intelligenti 3.5) invece di obbedire in silenzio. Non lo abbandona: **lo giudica**. La scheda lo consente già — *«in disaccordo grave l'arma può opporsi»*, e *«serve il popolo nanico prima del portatore»*. 🔓 **Finisce** la prima volta che Thorik rischia qualcosa di suo per Hella |
+| 🛡️ **Thorik** | Seme I **dormiente**: niente Scudo del Custode — e 🔗 **la catena di §0-bis non esiste**: senza il dimezzamento, la RD di Tordek lavora da sola su danno pieno | **Aegis Fang ha un'opinione, ed è Ego 14.** L'ascia era lì. Da qui in poi, quando Thorik le chiede qualcosa in una scena che riguarda **Hella o dei nani da proteggere**, l'Ego **tira l'opposizione** (oggetti intelligenti 3.5) invece di obbedire in silenzio. Non lo abbandona: **lo giudica**. La scheda lo consente già — *«in disaccordo grave l'arma può opporsi»*, e *«serve il popolo nanico prima del portatore»*. 🔓 **Finisce** la prima volta che Thorik rischia qualcosa di suo per Hella |
 | ⚒️ **Tordek** | Seme II dormiente: **Hella resta senza nessuna RD** — e non ne ha di base | **I Bracieri tacciono una settimana.** La Voce nella Forgia non avverte, non commenta, non scherza: per 7 giorni il DM non dà **nessun** suggerimento tramite loro. Poi tornano — e **la prima frase dopo il silenzio è sul rifiuto** |
 | 🔮 **Artemis** | Seme III dormiente: niente azione extra, e **Durik non la riceve** | **L'Anello si spegne 24 ore**, tutto compreso — Ali d'Ombra, Passo d'Ombra, i quattro 1/giorno, la Doppia Fiamma. Non è Moradin: è l'Anello, **nato dalla Colonna di Mithral della Forgia**, che ha visto il portatore dire di no **alla Forgia**. Dopo 24 h funziona tutto come prima. ⚠️ E il DM segna in privato che **«ciò che dorme nell'Anello» ha visto** |
 
@@ -108,12 +153,16 @@ del tutto neutro deve togliere la colonna di destra.
 
 | Chi | Costo, misurato | Peso |
 |---|---|---|
-| **Thorik** | 1 uso/**settimana** di un terremoto, **più** il fatto che è la gemma per cui aveva già pagato −2 DES permanenti | 🔴 **il più alto**, ed è quel che volevi |
+| **Thorik** | **−2 alla CA, permanenti**, su un guerriero di prima linea che ha già la DES a 6 per via della Corona: **ogni round di ogni combattimento** | 🔴 **il più alto**, ed è l'unico costo **continuo** dei tre |
 | **Artemis** | 1/giorno di **economia d'azione** — in 3.5 un'azione standard extra vale più di quanto sembri | 🟡 **medio-alto**: il potere più forte dei tre in valore grezzo |
 | **Tordek** | 2/giorno di una difesa **di nicchia** (annulla spostamento forzato) | 🟢 **il più basso** |
 
 🟢 **L'ordine è quello giusto**: Thorik > Artemis > Tordek, e Thorik in testa
-senza un secondo malus di caratteristica.
+**senza un secondo malus di caratteristica** — la CA non è una caratteristica, e
+non tocca pf, TS o prove.
+
+🔗 **E il dono di Thorik è l'unico che moltiplica gli altri due** (§0-bis): è il
+motivo per cui sta in mezzo alla catena invece che accanto agli altri.
 
 🔴 **Un solo squilibrio vero: Tordek paga meno degli altri due**, e riceve —
 tramite Hella — il dono più solido dei tre (una RD permanente su un PG che non ne
@@ -338,7 +387,7 @@ archiviato. Tre strade, e **la scelta è del DM**:
 |---|---|---|
 | **α** | **si tiene temporaneo**, come già scritto | v3 perde la sua regola *«nessuna strada a tempo»* per una riga su otto. Costo: la coerenza del principio |
 | **β** | **si rende permanente** e si riscrive il profilo dello Stadio 1 (da *Holy Returning* a *Holy* e basta) | costo: si tocca un artefatto oltre il perimetro dei Doni |
-| **γ** | **si cambia il grado II di Thorik**: invece del *Returning* dona **lo Smeraldo della Corona** (terremoto 1/settimana), che è permanente senza collidere con niente | 🎯 **la raccomando**: è l'unica che non rompe nulla, e lo Smeraldo era il grado I preclusogli — promosso a Ramo, visto che 1/settimana pesa più di 1/giorno |
+| **γ** | **si cambia quel che dona Thorik** | 🎯 **la strada presa dalla v4**: non il *Returning* ma il **+2 di deflessione della Corona** (§0-bis). Permanente, non collide con niente, e in più **si accumula coi doni degli altri due** — cosa che né il *Returning* né lo Smeraldo facevano |
 
 ⚠️ **E c'è un'interazione fra i due gradi di Thorik che v3 non aveva visto**: il
 grado III blocca il Risveglio pieno di Aegis Fang; il grado II toglie il
@@ -569,8 +618,8 @@ la Collana si porta dietro da quando è stata scritta. La toglierei per ultima.
 
 | | Domanda |
 |---|---|
-| **0** 🆕 | 🔴 **Il grado II di Thorik collide col canone** (§2.11): due schede scrivono già il «Filo dell'Ascia» come **temporaneo**, e lo Stadio 1 di Aegis Fang è *«+4 Holy **Returning**»*. **α** si tiene temporaneo · **β** si riscrive lo Stadio 1 · **γ** 🎯 **si dona lo Smeraldo della Corona invece del *Returning*** — l'unica che non rompe niente |
-| **1** | Si adotta la **v4** di §0-bis? (le tue scelte + lo Smeraldo per Thorik) |
+| ~~**0**~~ | ✅ **sciolta dalla v4.** La collisione di §2.11 resta un **rilievo vero sul canone** (il «Filo dell'Ascia» è già scritto come temporaneo in due schede, e lo Stadio 1 promette *«+4 Holy **Returning**»*), ma **non blocca più niente**: la v4 non chiede a Thorik il *Returning*. Resta solo da sapere se vuoi che quelle due schede restino come sono — 🎯 sì, non le toccherei |
+| **1** | Si adotta la **v4** di §0-bis? Per Thorik: **A** lo Scudo del Custode (−2 CA permanenti, e **tiene insieme gli altri due doni**) 🎯 · **B** La Fede nel Metallo (la Sacralità futura di Aegis Fang: anti-non-morti e anti-Sonjak, ma **costa zero adesso**) · **C** lo Smeraldo (costo periodico, **non si accumula**) |
 | **6** 🆕 | 🔴 **La vulnerabilità al fuoco ×1,5 di Hella resta scoperta.** Col Dono dell'Unità al posto della Doppia Fiamma, nessuno dei tre doni la copre — e nell'ARC-08 ci sono Abithriax e una battaglia piena di fuoco. **A** si accetta (è una debolezza vera di un Vegetale, e va giocata) · **B** Artemis dona la **Doppia Fiamma** invece del Dono dell'Unità · **C** si copre altrove (un oggetto, un incantesimo preparato). 🎯 Io terrei **A**: una vulnerabilità che il tavolo sente è meglio di una scheda senza spigoli |
 | **7** 🆕 | **Tordek paga meno degli altri due** (§0-bis, ultima riga): gli si aggiunge **Tremore del Forgiatore** (1/g) accanto all'Ancoraggio, o si accetta che sia il più leggero? |
 | **2** | 🔴 **Il grado III di Artemis**: lo si avverte in privato, o si toglie? *(§5.4 punto 2 — è la domanda che non posso decidere io)* |
