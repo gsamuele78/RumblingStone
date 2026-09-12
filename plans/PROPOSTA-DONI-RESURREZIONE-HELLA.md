@@ -36,9 +36,9 @@ pagare?»* — una tassa. In v3 è: **«che pezzo di te lasci crescere in lei?»
 
 | Chi | Dona (esce dal suo artefatto **per sempre**) | 🌱 Nel seme di Hella germoglia |
 |---|---|---|
-| 🛡️ **Thorik** | **Il +2 di deflessione della Corona** — la protezione che la Corona dà **a lui**. Costo: **−1 CA permanente**, e ogni volta che Hella usa lo Scudo **Thorik è accelerato 3 round, poi affaticato** (§0-ter) | **Lo Scudo del Custode** — 1/giorno, azione immediata: Hella prende su di sé il danno destinato a un alleato entro 9 m, **dimezzato** |
+| 🛡️ **Thorik** | **Il +2 di deflessione della Corona** — la protezione che la Corona dà **a lui**. Costo: **−1 CA permanente**, e ogni volta che Hella usa lo Scudo **Thorik scatta verso chi è stato protetto**, accelerato 3 round (§0-ter) | **Lo Scudo del Custode** — 1/giorno, azione immediata: Hella prende su di sé il danno destinato a un alleato entro 9 m, **dimezzato** |
 | ⚒️ **Tordek** | **Ancoraggio della Montagna** (2/giorno, immediata) | **Pelle di Adamantio — RD 3/adamantino** |
-| 🔮 **Artemis** | **Dono dell'Unità** (1/giorno, rapida) | **Il Dono Passato di Mano** — 1/giorno, rapida: **azione standard extra** a un alleato entro 9 m. 🌱 **Anche a Durik** |
+| 🔮 **Artemis** | **1d6 di Eldritch Blast, per sempre** — da **7d6** a **6d6** | **Il Rovo Eldritch** — **a volontà**, azione standard, contatto a distanza 18 m: **2d6** (metà rovi, metà fuoco). Non si esaurisce mai |
 
 ### Perché lo Scudo del Custode, per Thorik
 
@@ -64,7 +64,8 @@ Un colpo da **40** che arriverebbe su Artemis:
 |---|---|---|
 | 1 | 🛡️ **Thorik** | Hella se lo prende addosso, **dimezzato** → **20** |
 | 2 | ⚒️ **Tordek** | passa attraverso la sua **RD 3/adamantino** → **17** |
-| 3 | 🔮 **Artemis** | Artemis è ancora in piedi **e** ha l'**azione standard extra** per chiudere lo scontro |
+| 3 | 🔄 **l'anello** | **Thorik scatta verso Artemis**, accelerato: va dove il pericolo si è appena manifestato |
+| 4 | 🔮 **Artemis** | e Hella, che ha speso l'**azione immediata** per scudare, **non resta senza far niente nel suo turno**: il **Rovo** è a volontà |
 
 **40 danni diventano 17, su un bersaglio che li regge, e il bersaglio salvato
 agisce due volte.** Nessuno dei tre doni, da solo, fa questo. È l'unica
@@ -132,42 +133,111 @@ E completa la catena, che adesso coinvolge **tutti e quattro** in un round solo:
 | 3 | 🛡️ **Thorik** | **scatta** — accelerato, perché lei ha appena fatto il suo mestiere |
 | 4 | 🔮 **Artemis** | è in piedi, e ha l'**azione standard extra** per chiudere |
 
-#### 🔴 Ma i numeri non tornano: così Thorik **ci guadagna**
+#### 🎯 La direzione: **verso chi è stato protetto** (correzione del DM)
 
-L'accelerazione in 3.5 non è un fiore all'occhiello. *Haste* dà: **un attacco
-extra al BAB pieno** (in attacco completo), **+30 ft di velocità**, **+1 CA di
-schivata**, **+1 ai Riflessi**, **+1 al tiro per colpire**.
+Il DM: *«modifica l'haste verso quello che è stato protetto dallo Scudo del
+Custode, magari più figo e facile da giocare»*. Ha ragione su tutti e due i
+fronti, e il secondo conta quanto il primo.
 
-| Cosa | Valore, al metro degli oggetti 3.5 |
+> **L'Eco del Custode.** Quando Hella usa lo Scudo, Thorik è **accelerato per 3
+> round**, e in quei round **si muove verso chi lei ha appena protetto**: almeno
+> un'azione di movimento per round che riduca la distanza, o l'accelerazione si
+> spegne.
+
+**Perché è più bello**: non corre verso il nemico — corre verso **la persona**.
+È la differenza fra un guerriero e un custode, e si vede senza spiegarla.
+
+**Perché è più facile da giocare**: la direzione è **già sul tavolo**. Nessuna
+condizione da ricordare, nessun conto: *«sei accelerato, e vai da lui»*. Un
+affaticamento da tracciare fino al riposo — la mia proposta di prima — sarebbe
+stata la cosa che il tavolo dimentica alla terza sessione.
+
+**E si taglia il costo da solo**, senza una regola in più:
+
+| Dov'è chi è stato protetto | Cosa ottiene davvero Thorik |
 |---|---|
-| **−1 CA di deflessione** permanente | ≈ **2.000 mo** (un *anello di protezione +1*) |
-| **3 round/giorno di accelerazione** | ≈ **3.600 mo** (gli *stivali della velocità* costano 12.000 mo per 10 round/giorno) |
+| **adiacente o vicino** | accelerazione piena, **attacco extra compreso** — ma è già in mezzo al pericolo, che è dove il colpo è appena arrivato |
+| **lontano** | i 3 round se li **spende correndo**: in 3.5 non si fa attacco completo dopo un movimento, quindi l'attacco extra **non scatta**. Gli restano +30 ft, +1 CA, +1 Riflessi, +1 al colpire |
 
-🔴 **Thorik esce in attivo di circa 1.600 mo** — e il conto vero è peggiore,
-perché il **+1 CA di schivata dell'accelerazione cancella il −1** proprio nei
-round in cui sta incassando, e perché quei 3 round scattano **esattamente quando
-le cose vanno male**, cioè quando l'accelerazione vale di più.
+🟢 **È la taratura migliore delle tre che avevo proposto**, perché non aggiunge
+niente da ricordare: il vincolo *è* la scena.
 
-⚠️ **Così com'è, il dono di Thorik diventa il più leggero dei tre** — l'opposto
-di quel che il DM aveva chiesto due messaggi fa.
+#### ⚖️ Il conto, con la direzione dentro
 
-#### Le tre tarature
+L'accelerazione in 3.5 dà: **un attacco extra al BAB pieno** (solo in attacco
+completo), **+30 ft**, **+1 CA di schivata**, **+1 Riflessi**, **+1 al colpire**.
 
-| | Come | Bilancio |
-|---|---|---|
-| **A** | **così com'è**: −1 CA + 3 round accelerato | 🔴 Thorik **ci guadagna**. Va bene solo se accetti che il suo sia il dono più leggero |
-| **B** 🎯 | **−1 CA + 3 round accelerato, poi *affaticato*** (−2 FOR, −2 DES, niente corsa né carica) finché non riposa | 🟢 **la raccomando.** La spinta si paga **subito dopo**, com'è sempre stato in 3.5 — è l'ira del barbaro, e su un nano guerriero è perfetta. E si autoregola: **più Hella protegge il party, più Thorik si brucia** |
-| **C** | **−2 CA** (com'era) **+ 3 round accelerato**, senza coda | 🟡 regge, ma torna a un malus statico grosso. Durante i 3 round è a −1 netto, fuori a −2 |
+| Cosa | Al metro degli oggetti 3.5 |
+|---|---|
+| **−1 CA di deflessione**, permanente | ≈ **2.000 mo** (*anello di protezione +1*) |
+| **3 round di accelerazione**, **1/giorno al massimo** e solo se Hella spende il suo Scudo, **con l'obbligo di muoversi** | ≈ **2.000-3.000 mo** — meno dei 3.600 secchi, perché metà delle volte l'attacco extra non scatta |
 
-🌱 **E la B ha una coda narrativa che le altre due non hanno**: Thorik affaticato
-è Thorik che ha bisogno di essere protetto — e la prossima volta **è Hella a
-poterlo scudare**. L'anello si chiude in tutte e due le direzioni, e il debito
-morale di `state.md §7` smette di essere una riga e diventa una cosa che succede
-al tavolo.
+🟡 **Adesso è circa in pari**, e la differenza è nella forma: Thorik paga una
+cosa **permanente e certa** e riceve una cosa **condizionata e rara** — subordinata
+a un potere 1/giorno di **un'altra giocatrice**.
 
-⚠️ **Numeri da tarare al tavolo**: 3 round è la mia stima, non una misura. Se al
-collaudo l'accelerazione domina la scena, si scende a **1 round**; se non si nota,
-si sale a **1 round per ogni 10 danni assorbiti** (massimo 3).
+⚠️ **Va detta una cosa sola, e poi la decidi tu.** Due messaggi fa avevi chiesto
+che Thorik portasse *«un pochino di peso in più»*. Con questa versione **non lo
+porta più in meccanica**: il suo dono è diventato **il più interessante dei tre**,
+non il più pesante. Il peso gli resta **narrativo** (è l'Eletto che cede la
+protezione della Corona) e in quel **−1 permanente**.
+🎯 **A me sta bene così** — un dono che crea una scena vale più di un dono che
+crea un malus — ma se vuoi rimettere il peso bastano due parole: **−2 CA invece
+di −1**, e resta tutto il resto.
+
+⚠️ **I 3 round sono una stima, non una misura.** Al collaudo: se domina la scena
+si scende a **1 round**; se non si nota, **1 round ogni 10 danni assorbiti**
+(massimo 3).
+
+### 0-quater · 🔮 Il dono di Artemis cambia — la sovrapposizione che il DM ha visto
+
+Il DM: *«Artemis deve dare un altro dono a Hella invece dell'azione gratuita,
+altrimenti è una sovrapposizione con questo potere»*.
+
+🔎 **Ed è vero, ed è una sovrapposizione di *progetto*, non di regole.** Il dono
+di Thorik e il vecchio dono di Artemis vivevano nella **stessa casella**: dare
+tempo a qualcun altro. Hella si sarebbe ritrovata **due bottoni per lo stesso
+mestiere** — «faccio agire un compagno in più» con l'azione extra, «faccio
+scattare Thorik» con lo Scudo. Due poteri, un solo effetto sul tavolo.
+
+#### 🌿 Il Rovo Eldritch
+
+**Artemis dona 1d6 di Eldritch Blast, per sempre**: da **7d6** a **6d6**.
+
+> **Il Rovo Eldritch.** **A volontà**, azione standard, contatto a distanza,
+> gittata 18 m: **2d6 danni**, metà da rovi che si avvitano fuori dal terreno,
+> metà **fuoco** — la scintilla di Artemis che passa nel legno. Non si consuma,
+> non si prepara, non finisce mai.
+
+**Perché è la cosa più warlock che esista.** Un warlock non è forte perché
+colpisce duro: è forte perché **può farlo tutto il giorno**. È la definizione
+della classe, ed è l'unica cosa che nessun altro del party può regalare — Thorik
+e Tordek hanno poteri a uso, Artemis ha una cosa che **non finisce**.
+
+**Perché serve a lei, e a nessuna delle altre due caselle.** Hella è una druida:
+quando gli slot finiscono, o quando è in forma selvatica e i round contano, **non
+ha un'opzione a distanza affidabile**. Il Rovo non fa molti danni — 2d6 al 13°
+livello sono pochi — e non deve: **il suo valore è che c'è sempre**. Zero
+sovrapposizione con la RD di Tordek (difesa) e con lo Scudo di Thorik (tempo).
+
+🌱 **E c'è l'ironia giusta**: Hella ha **vulnerabilità al fuoco ×1,5**, e adesso
+**porta il fuoco**. Il warlock le dà l'unica cosa che potrebbe farle male, e in
+mano sua diventa un rovo che brucia.
+
+**Il costo.** L'Eldritch Blast è il potere che Artemis usa **più di ogni altro**
+— è letteralmente quel che fa a ogni turno. Perderne **1d6 per sempre** è ~11%
+del suo colpo, sentito **ogni round della campagna**. È la stessa classe di peso
+della RD di Tordek, e più pesante del vecchio 1/giorno.
+
+🔵 **Alternativa, se preferisci un dono dall'Anello invece che dalla classe** —
+**«L'Occhio nel Legno»**: Artemis dona la **Vista Potenziata** dell'Anello e
+perde Scurovisione 36 m, **Vista del Diavolo** e vista crepuscolare. Hella vede
+attraverso il buio, **anche magico**, entro 18 m.
+· 🎯 **Contro chi serve**: le **tenebre** dei drow di **Sonjak**, che è il modo
+in cui quella compagnia combatte.
+· ⚠️ **Ma è in parte ridondante**: Hella ha già **Scurovisione 27 m** da Dream
+Dwarf, quindi il dono vero è **solo** la parte sulle tenebre magiche — un dono
+stretto, che in metà delle sessioni non si accende. Il Rovo si usa sempre.
 
 ### I due numeri che la scheda di Hella ha corretto
 
@@ -198,7 +268,7 @@ hanno una personalità già scritta nel canone.
 |---|---|---|
 | 🛡️ **Thorik** | Seme I **dormiente**: niente Scudo del Custode — e 🔗 **la catena di §0-bis non esiste**: senza il dimezzamento, la RD di Tordek lavora da sola su danno pieno | **Aegis Fang ha un'opinione, ed è Ego 14.** L'ascia era lì. Da qui in poi, quando Thorik le chiede qualcosa in una scena che riguarda **Hella o dei nani da proteggere**, l'Ego **tira l'opposizione** (oggetti intelligenti 3.5) invece di obbedire in silenzio. Non lo abbandona: **lo giudica**. La scheda lo consente già — *«in disaccordo grave l'arma può opporsi»*, e *«serve il popolo nanico prima del portatore»*. 🔓 **Finisce** la prima volta che Thorik rischia qualcosa di suo per Hella |
 | ⚒️ **Tordek** | Seme II dormiente: **Hella resta senza nessuna RD** — e non ne ha di base | **I Bracieri tacciono una settimana.** La Voce nella Forgia non avverte, non commenta, non scherza: per 7 giorni il DM non dà **nessun** suggerimento tramite loro. Poi tornano — e **la prima frase dopo il silenzio è sul rifiuto** |
-| 🔮 **Artemis** | Seme III dormiente: niente azione extra, e **Durik non la riceve** | **L'Anello si spegne 24 ore**, tutto compreso — Ali d'Ombra, Passo d'Ombra, i quattro 1/giorno, la Doppia Fiamma. Non è Moradin: è l'Anello, **nato dalla Colonna di Mithral della Forgia**, che ha visto il portatore dire di no **alla Forgia**. Dopo 24 h funziona tutto come prima. ⚠️ E il DM segna in privato che **«ciò che dorme nell'Anello» ha visto** |
+| 🔮 **Artemis** | Seme III dormiente: **niente Rovo Eldritch** — Hella resta senza opzione a distanza quando gli slot finiscono | **L'Anello si spegne 24 ore**, tutto compreso — Ali d'Ombra, Passo d'Ombra, i quattro 1/giorno, la Doppia Fiamma. Non è Moradin: è l'Anello, **nato dalla Colonna di Mithral della Forgia**, che ha visto il portatore dire di no **alla Forgia**. Dopo 24 h funziona tutto come prima. ⚠️ E il DM segna in privato che **«ciò che dorme nell'Anello» ha visto** |
 
 ⚠️ **Perché questo non tradisce la regola «il rifiuto è una quest, non una
 punizione»** (v1, approvata): le tre conseguenze sono **relazionali e
@@ -217,12 +287,14 @@ del tutto neutro deve togliere la colonna di destra.
 | Chi | Costo, misurato | Peso |
 |---|---|---|
 | **Thorik** | **−1 CA permanente** (era −2), più **affaticato dopo ogni scatto** nella taratura **B** di §0-ter: la spinta la paga subito dopo | 🟡 **dipende dalla taratura**: con **A** diventa il **più leggero** dei tre; con **B** o **C** resta il più alto |
-| **Artemis** | 1/giorno di **economia d'azione** — in 3.5 un'azione standard extra vale più di quanto sembri | 🟡 **medio-alto**: il potere più forte dei tre in valore grezzo |
+| **Artemis** | **−1d6 di Eldritch Blast, per sempre** (7d6 → 6d6): ~11% del colpo che usa **a ogni turno** | 🔴 **alto, e continuo** — la stessa classe di peso di Tordek |
 | **Tordek** | 2/giorno di una difesa **di nicchia** (annulla spostamento forzato) | 🟢 **il più basso** |
 
-🟢 **L'ordine è quello giusto**: Thorik > Artemis > Tordek, e Thorik in testa
+⚠️ **Con la v4-bis l'ordine cambia**: **Artemis ≈ Tordek > Thorik** in meccanica pura, perché il costo di Thorik si è alleggerito a −1 CA e gli torna indietro come accelerazione. Il suo peso adesso è **narrativo**. Se lo vuoi di nuovo in testa, **−2 CA invece di −1** e l'ordine torna quello di prima.
+
+~~🟢 **L'ordine è quello giusto**: Thorik > Artemis > Tordek, e Thorik in testa
 **senza un secondo malus di caratteristica** — la CA non è una caratteristica, e
-non tocca pf, TS o prove.
+non tocca pf, TS o prove.~~
 
 🔗 **E il dono di Thorik è l'unico che moltiplica gli altri due** (§0-bis): è il
 motivo per cui sta in mezzo alla catena invece che accanto agli altri.
@@ -683,8 +755,8 @@ la Collana si porta dietro da quando è stata scritta. La toglierei per ultima.
 |---|---|
 | ~~**0**~~ | ✅ **sciolta dalla v4.** La collisione di §2.11 resta un **rilievo vero sul canone** (il «Filo dell'Ascia» è già scritto come temporaneo in due schede, e lo Stadio 1 promette *«+4 Holy **Returning**»*), ma **non blocca più niente**: la v4 non chiede a Thorik il *Returning*. Resta solo da sapere se vuoi che quelle due schede restino come sono — 🎯 sì, non le toccherei |
 | **1** | Si adotta la **v4** di §0-bis? Per Thorik: **A** lo Scudo del Custode (**tiene insieme gli altri due doni**) 🎯 · **B** La Fede nel Metallo (la Sacralità futura di Aegis Fang: anti-non-morti e anti-Sonjak, ma **costa zero adesso**) · **C** lo Smeraldo (**non si accumula**) |
-| **8** 🆕 | 🔄 **La taratura dell'Eco del Custode** (§0-ter), se si sceglie A: **α** −1 CA + 3 round accelerato **così com'è** — 🔴 Thorik **ci guadagna** (3 round/giorno di accelerazione ≈ 3.600 mo contro i ≈ 2.000 di un −1 di deflessione) · **β** 🎯 −1 CA + 3 round accelerato **poi affaticato** finché non riposa — la spinta si paga subito dopo, come l'ira del barbaro · **γ** −2 CA + 3 round accelerato senza coda || **6** 🆕 | 🔴 **La vulnerabilità al fuoco ×1,5 di Hella resta scoperta.** Col Dono dell'Unità al posto della Doppia Fiamma, nessuno dei tre doni la copre — e nell'ARC-08 ci sono Abithriax e una battaglia piena di fuoco. **A** si accetta (è una debolezza vera di un Vegetale, e va giocata) · **B** Artemis dona la **Doppia Fiamma** invece del Dono dell'Unità · **C** si copre altrove (un oggetto, un incantesimo preparato). 🎯 Io terrei **A**: una vulnerabilità che il tavolo sente è meglio di una scheda senza spigoli |
-| **7** 🆕 | **Tordek paga meno degli altri due** (§0-bis, ultima riga): gli si aggiunge **Tremore del Forgiatore** (1/g) accanto all'Ancoraggio, o si accetta che sia il più leggero? |
+| **8** | 🔄 **L'Eco del Custode è tarato** con la direzione *«verso chi è stato protetto»*, che si autoregola (§0-ter). Resta solo: **il peso di Thorik ti sta bene com'è** — il più *interessante* dei tre invece del più *pesante* — o rimetti **−2 CA invece di −1**? 🎯 lo lascerei a −1 |
+| **9** 🆕 | 🔮 **Il dono di Artemis**: **A** 🎯 **Il Rovo Eldritch** (dona 1d6 di EB per sempre; Hella ottiene un attacco **a volontà** 2d6 a 18 m — la cosa più warlock che esista, e l'unica casella che nessun altro può riempire) · **B** **L'Occhio nel Legno** (dona la Vista Potenziata dell'Anello; Hella vede nel buio **anche magico** — utile contro le tenebre dei drow di Sonjak, ma **in parte ridondante**: ha già Scurovisione 27 m, quindi il dono vero è solo la parte magica) || **7** 🆕 | **Tordek paga meno degli altri due** (§0-bis, ultima riga): gli si aggiunge **Tremore del Forgiatore** (1/g) accanto all'Ancoraggio, o si accetta che sia il più leggero? |
 | **2** | 🔴 **Il grado III di Artemis**: lo si avverte in privato, o si toglie? *(§5.4 punto 2 — è la domanda che non posso decidere io)* |
 | **3** | Il **trapianto permanente** ti va come principio? È la gamba su cui poggia tutto: se un potere non può lasciare l'artefatto di chi lo dona, v3 cade e si torna a v2 |
 | **4** | La riga **7-8** di §2.8 tocca un beat dell'ARC-09 (Cerchio Sacro): la tieni? |
