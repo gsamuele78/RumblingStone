@@ -7,10 +7,32 @@
 > (era ADR-0016) e per il lotto 1.1 di
 > [PIANO-VENDIBILITA](../../plans/PIANO-VENDIBILITA.md).
 >
-> **Cosa ha retto alla riverifica**: l'inventario dei **62 simboli** è ancora
-> esatto — `SYMBOLS` in `render_map_svg.py` ne contiene esattamente 62, come a
-> luglio. Lo schema neutro e i tre profili non sono stati toccati da nessuno
-> nel frattempo, perché la spec non era in repo.
+> **Cosa ha retto alla riverifica**: l'inventario dei **62 simboli** era ancora
+> esatto al 2026-09-04. Lo schema neutro e i tre profili non sono stati toccati
+> da nessuno nel frattempo, perché la spec non era in repo.
+>
+> 📌 **Rimisurato il 2026-09-12: i simboli sono 63.** `🔳` (dais) è entrato con
+> [ADR-0042](../../plans/adr/ADR-0042-tre-glifi-per-tre-cose.md) il 2026-09-04,
+> **dopo** questa riverifica, ed è l'unico dei 63 la cui `function` non compare
+> nella §4 qui sotto — ma quell'ADR la dichiara per esteso (vista no, movimento
+> no, muro no). I 6 simboli-unità non hanno `function` **per progetto** (§4.5),
+> quindi la copertura reale della §4 è **56 su 56 di quelli che ne hanno una**.
+>
+> 🔴 **E questa specifica è ancora «proposta», non canone — è il punto che
+> conta.** L'attuazione di ADR-0048 (2026-09-12) ha creato `scripts/legend.yaml`
+> con **solo i fatti che il codice già applica**: `wall`, `door`, `light`,
+> `hazard`. `cover`, `obscurement`, `move_cost`, `elevation_m`, `climb` e
+> `nameable` **non ci sono**, perché ratificarli è una decisione con un prezzo
+> misurato — `🌲` (2.073 celle), `🌳` (18) e `📦` (10) diventerebbero muri
+> nell'export UVTT, **2.101 celle in 38 file**, quanto `⛰` che è costato
+> ADR-0043. È la **decisione D1** di
+> [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md) §8.
+>
+> ⚠️ **Divergenza aperta sulla luce**: §4.3 la dà in **metri**
+> (`🏮 6` · `🕯 1.5` · `✨ 3` · `🔮 3`), il codice in **quadretti**
+> (`6.0` · `3.0` · `3.0` · `4.0`). A 1,5 m/quadretto sono quattro valori diversi
+> su quattro. In `legend.yaml` ha vinto il codice, perché il criterio d'uscita
+> della migrazione era la byte-identità degli artefatti; la scelta è dentro D1.
 >
 > **Cosa è cambiato**: §6 è stata riscritta sui numeri di oggi. Tre delle quattro
 > correzioni previste a luglio **risultano già applicate** nel codice attuale; una
@@ -28,7 +50,8 @@
 > [ADR-0039](../../plans/adr/ADR-0039-profili-regole-multisistema.md)
 > (profili multi-sistema e confini di licenza; era ADR-0016).
 > **Attuazione**: lotto 1.1 di
-> [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md).
+> [`PIANO-VENDIBILITA`](../../plans/PIANO-VENDIBILITA.md) — ✅ **fatta il
+> 2026-09-12**, limitatamente ai campi già canonici (vedi sopra).
 > **Data**: 2026-07-26 · **Stato**: specifica proposta, gate DM.
 
 ---

@@ -181,17 +181,15 @@ Le due catene di lavoro sono **indipendenti**: la provenienza serve prima di
 
 ### Fase 1 — Il dominio e la legenda unica
 
-- **⬜ 1.1 — La legenda come fonte unica**
-  ([ADR-0048](adr/ADR-0048-legenda-funzionale-fonte-unica.md), era ADR-0014
-  della #72). La spec è **già in repo** dal 2026-09-04
-  (`docs/guides/LEGENDA-FUNZIONALE-SPEC.md`, 62 simboli): resta da fare
-  l'attuazione, cioè `scripts/legend.yaml` e i consumatori che ne derivano.
-  ⚠️ Chiude un difetto **ancora aperto**: `SYMBOLS` del renderer e `WALL_SYMS`
-  dell'export UVTT sono due tabelle separate, e l'SVG stampato e la scena
-  Foundry non concordano su cosa sia un muro. 🔴 **Il costo del ritardo è
-  misurato**: ADR-0042 e ADR-0043 hanno rattoppato due sintomi di questa stessa
-  causa, uno per volta, con due ADR separati. *Accettazione*:
-  `legend/single-source` fallisce se un consumatore usa un set proprio.
+- **✅ 1.1 — La legenda come fonte unica** — *fatto il 2026-09-12*, dettaglio in
+  **§9**. ([ADR-0048](adr/ADR-0048-legenda-funzionale-fonte-unica.md), era
+  ADR-0014 della #72.) `scripts/legend.yaml` è la fonte, `legend.json` il
+  derivato che i consumatori leggono con stdlib, e `legend/single-source` è il
+  cancello che l'ADR dichiarava **assente**. *Accettazione soddisfatta*: il gate
+  fallisce se un consumatore usa un set proprio — **provato a rovescio**.
+  🔎 **E ha morso al primo uso**: i posti in cui viveva la legenda non erano
+  cinque ma **otto**, e le tre tabelle in più (`ALTEZZE`, `PIATTI`, `TEXTURE` in
+  `render_map_blender.py`) nessuna misura le aveva contate.
 - **⬜ 1.2 — I tre profili di regole**. ⚠️ `move_cost: 4` di PF1e è l'unico valore
   della specifica mai verificato sul PRD: da confermare prima di rilasciare quel
   profilo. *Accettazione*: `rules/profile-incomplete` è **error**;
@@ -253,6 +251,17 @@ ciò che porta il primo utente.
 
 ## §8 · Le decisioni aperte
 
+### Al DM, con il costo misurato
+
+<!-- decisioni-dm: VENDIBILITA -->
+
+| # | Decisione | Perché ora, e cosa costa |
+|---|---|---|
+| **D1** 🆕 | **Si ratifica la specifica funzionale?** `docs/guides/LEGENDA-FUNZIONALE-SPEC.md` è ferma su *«proposta, gate DM»* dal 26 luglio. I suoi campi (`cover`, `obscurement`, `move_cost`, `elevation_m`, `climb`, `nameable`) **non sono in `legend.yaml`** perché non sono canone. | 🔴 **2.101 celle in 38 file.** Se `WALL_SYMS` derivasse da `blocks_sight` come la spec lo dichiara, diventerebbero muri nell'UVTT: `🌲` **2.073**, `🌳` 18, `📦` 10. `🌲` da solo è grande quanto `⛰` (2.423), che è costato **ADR-0043** e una decisione esplicita. Finché non si decide, 9 etichette su 63 tengono la funzione in prosa e nessuno script la può interrogare. ⚠️ Dentro c'è anche la **luce**: la spec la dà in metri (`🏮 6`, `🕯 1.5`, `✨ 3`, `🔮 3`), il codice in quadretti (`6.0 · 3.0 · 3.0 · 4.0`) — a 1,5 m/quadretto sono **quattro valori diversi su quattro**, e ha vinto il codice perché il criterio d'uscita era la byte-identità |
+| **D2** 🆕 | **Quanto è alta una tenda, e quanto un dais?** Nella catena Blender `⛺` e `🔳` non hanno un'altezza propria: si estrudono entrambi al default generico di **0,6 m**, mentre un edificio sta a **3,2**. | 🐛 **Terzo sintomo di ADR-0042**, e il primo trovato **da un gate** invece che da un bug al tavolo: `legend/single-source` ha scoperto la tabella `ALTEZZE`, dove il commento accanto a `⬛` diceva ancora *«edificio, tenda, dais»* — il significato di **prima** della decisione che lo aveva abolito. Migrato **com'era**: l'altezza di una tenda è contenuto, non refactoring. Nessun artefatto 3D è committato, quindi il costo di deciderla adesso è **zero** |
+
+### Aperte da prima, senza costo misurato
+
 1. **Licenza del core** — raccomandazione: **lasciarlo MIT**. ADR-0040 chiedeva
    il rilicenziamento quando il repo era GPL-3; oggi MIT permette già di vendere,
    e cambiarla costa l'adozione senza proteggere il passato.
@@ -263,3 +272,200 @@ ciò che porta il primo utente.
    si guardano le PR aperte.* Sei settimane di lavoro sono state riscritte da capo
    perché nessuno ha guardato una bozza. Vale la pena metterla nella skill
    `rumblingstone-plans`.
+
+---
+
+## §9 · Lotto 1.1 in dettaglio — la legenda come fonte unica
+
+> `[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests -q` verde con il
+> gate `legend/single-source`; **40 SVG e 2 UVTT byte-identici** prima e dopo]`
+>
+> 🔎 **Erano «130» quando ho scritto questo piano, e la misura mi ha smentito
+> durante l'esecuzione**: `git ls-files '*.svg'` ne conta 130, ma 90 sono prop
+> illustrati e non mappe. Sotto `validate_maps` ce ne sono **40**, di 18 master.
+>
+> **Decisione attuata**: [ADR-0048](adr/ADR-0048-legenda-funzionale-fonte-unica.md).
+> **Spec normativa**: [`LEGENDA-FUNZIONALE-SPEC`](../docs/guides/LEGENDA-FUNZIONALE-SPEC.md).
+
+### 9.0 · Informazioni mancanti e assunzioni dichiarate
+
+**Cosa mi manca, e come procedo lo stesso**
+
+1. **La spec funzionale non è ratificata.** La sua riga 32 dice *«Stato:
+   specifica proposta, **gate DM**»*. I suoi valori di `cover`, `obscurement`,
+   `move_cost`, `nameable`, `elevation_m`, `climb` non sono canone: sono una
+   proposta di luglio che nessuno ha approvato. → **assunzione**: `legend.yaml`
+   v1 porta **solo i fatti che il codice già applica oggi**, e la ratifica della
+   spec diventa una decisione DM con il suo costo misurato (§9.1.4).
+2. **`radius_m` della spec e `LIGHT_SYMS` del codice non concordano** (§9.1.3).
+   → **assunzione**: vince il codice, perché il criterio d'uscita è la
+   byte-identità; la divergenza va nella stessa decisione.
+
+**Assunzioni di progetto**
+
+3. **YAML sorgente + JSON derivato committato.** Non è una mia scelta: è la
+   forma che ADR-0048 §2 prescrive (*«o da un `legend.json` committato e
+   verificato in CI, come già si fa per `docs/tools/`»*). Il motivo è
+   [ADR-0037](adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md): `pyyaml` è un
+   **debito dichiarato**, e non può entrare nel percorso di rendering. Il
+   generatore lo usa, i consumatori leggono `json` di stdlib.
+   ⚠️ **Costo dichiarato**: due file invece di uno, e un gate di sincronia in
+   più. L'alternativa — un terzo parser YAML fatto a mano, come i due già in
+   `suggest_map.py` e `suggest_encounter.py` — sarebbe **la malattia che questa
+   decisione cura**.
+4. **`Z_ORDER` resta nel renderer.** È ordine di pittura per *pattern*, nessun
+   consumatore lo duplica, e spostarlo allargherebbe il lotto senza chiudere
+   niente. Non è una svista.
+
+### 9.1 — FASE 1 · Audit, misurato sul repo di oggi (`563a6a9`)
+
+#### 9.1.1 · Lo stato vero è **migliore** di come lo racconta l'ADR
+
+L'ADR-0048 è stato riverificato il 2026-09-10 e ha già **due giorni di ruggine**.
+Rimisurato:
+
+| Cosa dice l'ADR | Cosa c'è davvero |
+|---|---|
+| «quattro script maturi» da rifattorizzare | ✅ **il render è già a fonte unica**: `compile_map_json`, `import_ultraclear` e `render_map_blender` fanno tutti `rms.SYMBOLS`. Nessuno ridichiara i simboli |
+| «`HEAVY_PATS` seconda tabella nel renderer» | ⚠️ **non è una seconda tabella**: è un attributo di *rendering* indicizzato per pattern, non per simbolo. Va nella legenda come `render.heavy`, ma non era una divergenza |
+| «`legenda-universale.md` copia manuale» | ✅ **misurata: non è divergente.** Elenca tutti e 63 i simboli e le etichette coincidono; le sole 3 differenze sono grassetti e un trattino al posto di una parentesi |
+| «i 62 simboli» (spec §4, riga 10) | ❌ **63**. `🔳` è entrato con ADR-0042 dopo la riverifica |
+
+🔎 **Decimo presupposto invecchiato di questa campagna** — e stavolta in meglio:
+il lotto è più piccolo di come è scritto.
+
+#### 9.1.2 · La duplicazione vera: **quattro set in due script**
+
+| Set | Dove | Cardinalità | Tutti dentro `SYMBOLS`? |
+|---|---|---:|---|
+| `WALL_SYMS` | `export_uvtt.py:63` | 8 | ✅ sì |
+| `DOOR_SYMS` | `export_uvtt.py:64` | 1 | ✅ sì |
+| `LIGHT_SYMS` | `export_uvtt.py:66` | 7 (con valori) | ✅ sì |
+| `HAZARD_SYMS` | `import_ultraclear.py:72` | 7 | ✅ sì |
+
+Nessun orfano: **oggi le due tabelle non divergono in appartenenza**. Il difetto
+non è un errore presente, è che **niente impedisce il prossimo** — ed è
+esattamente ciò che l'ADR dichiara come limite: *«niente impedisce a un quinto
+consumatore di nascere col suo set privato»*, cosa già successa due volte.
+
+E **9 etichette su 63** portano ancora la funzione di gioco in prosa
+(`🌲 ⬛ 🔳 🪨 🕸 🌋 🌾 ⛺ 🧱`): «copertura +4 CA», «blocca vista e movimento»,
+«NON e' un muro». Prosa che nessuno script può interrogare.
+
+#### 9.1.3 · La spec copre 56 simboli su 63, e i 7 che restano **non sono un buco**
+
+| Categoria | N | Perché |
+|---|---:|---|
+| con `function` dichiarata nella spec §4 | 56 | — |
+| unità (`🔵 🔴 ⚫ 🟡 🟢 🟣`) | 6 | ✅ **per progetto**: la spec §4.5 dice che le unità *non hanno* `function`, hanno `unit: {side, role}` |
+| `🔳` dais | 1 | ⚠️ nato dopo la riverifica — ma la sua funzione **è già decisa** da [ADR-0042](adr/ADR-0042-tre-glifi-per-tre-cose.md) §tabella: vista no, movimento no, muro no |
+
+🔴 **Conclusione che cambia il lotto**: non c'è **nessun valore da inventare**.
+Ogni dato che serve è già deciso da qualche parte — nel codice, nella spec, o in
+un ADR. Questo lotto non prende decisioni di contenuto.
+
+⚠️ **Tranne una divergenza, e va detta**: la spec dà la luce in **metri**
+(`🏮 radius_m: 6`, `🕯 1.5`, `✨ 3`, `🔮 3`), il codice in **quadretti**
+(`🏮 6.0`, `🕯 3.0`, `✨ 3.0`, `🔮 4.0`). A 1,5 m/quadretto sono **quattro
+valori diversi su quattro**. Vince il codice (byte-identità), e la divergenza va
+al DM.
+
+#### 9.1.4 · Cosa costerebbe ratificare la spec — il numero che serve al DM
+
+Se `WALL_SYMS` derivasse da `function.blocks_sight` come la spec lo dichiara,
+**tre simboli entrerebbero fra i muri** che oggi non ci sono (`🚪` no: le porte
+hanno già la loro geometria):
+
+| Simbolo | Occorrenze nei markdown tracciati |
+|---|---:|
+| `🌲` Foresta densa | **2.073** |
+| `🌳` Treant | 18 |
+| `📦` Casse | 10 |
+| **totale** | **2.101 in 38 file** |
+
+🔴 **`🌲` da solo è grande quanto `⛰`** (2.423 celle), che è costato
+[ADR-0043](adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md)
+e una decisione esplicita del DM. Non si fa di straforo dentro un lotto di
+architettura: stessa classe, stesso trattamento. → **decisione D1 di questo
+piano** (§8).
+
+#### 9.1.5 · Trovato misurando, fuori scopo, dichiarato
+
+🐛 **La tabella «Oggetti» di `legenda-universale.md` è spezzata in due.** Un
+blocco `>` di nota ADR-0042 sta **in mezzo alle righe**, e ogni lettore markdown
+la rende come **due tabelle** con le ultime tre voci (`🔮 🪑 🧱`) orfane
+dell'intestazione. La generazione di §9.2.6 la ripara di conseguenza — non come
+correzione a mano, ma perché un file generato non può avere quella forma.
+
+### 9.2 — FASE 2 · Sviluppo
+
+Un commit, un merge. Ordine di esecuzione, ciascun passo verificabile da solo.
+
+#### 9.2.1 · `scripts/legend.yaml` — generato **dal codice**, non trascritto
+
+⚠️ Trascrivere 63 simboli a mano introdurrebbe errori che la byte-identità
+troverebbe ma che costerebbero un giro. Il file nasce da uno **script una-tantum**
+che serializza `SYMBOLS` + i quattro set così come sono adesso; i commenti di
+ADR-0042 e ADR-0043 — che sono memoria istituzionale, non decorazione — si
+riportano a mano **sopra** le voci che spiegano.
+
+#### 9.2.2 · `scripts/build_legend.py` → `scripts/legend.json`
+
+Generatore, `pyyaml` in `external_deps` (l'eccezione già ammessa da ADR-0037).
+Uscita deterministica e committata, come `monster_catalog.yaml`.
+
+#### 9.2.3 · `scripts/dmcore/legenda.py` — il lettore, **stdlib**
+
+`json` e basta. Espone `simboli()`, `pattern_pesanti()`, `muri()`, `porte()`,
+`luci()`, `pericoli()`. Sta in `dmcore/` per la stessa ragione di `testo.py`:
+è la casa dei dati condivisi fra script.
+
+#### 9.2.4 · I consumatori derivano
+
+`render_map_svg.SYMBOLS` e `HEAVY_PATS`; `export_uvtt.WALL_SYMS`/`DOOR_SYMS`/
+`LIGHT_SYMS`; `import_ultraclear.HAZARD_SYMS`. **La forma del dict non cambia**
+(`mode`/`pat`/`prop`/`fill`/`it`): quattro script e sei test la leggono, e
+cambiarla sarebbe un secondo lotto travestito da primo.
+
+#### 9.2.5 · Il cancello che mancava: `legend/single-source`
+
+Il criterio d'accettazione scritto in §6 di questo piano, finalmente eseguibile.
+Analisi `ast` dei cinque consumatori: **un set o dict letterale di emoji a
+livello di modulo è un errore**. È il presidio che ADR-0048 dichiara assente.
+
+#### 9.2.6 · `legenda-universale.md` si genera
+
+Tabelle fra marcatori `<!-- legenda:auto-begin/end -->`, prosa fuori. Ripara
+anche §9.1.5.
+
+#### 9.2.7 · Regola d'oro (ADR-0009) e ADR-0047
+
+ADR-0048 → **attuata**; §6 lotto 1.1 → ✅ con i numeri veri; nota alla spec
+(63 non 62); `plans/INDEX.md`; `plans/CHANGELOG.md`; **§8 diventa una tabella
+marcata** `<!-- decisioni-dm: VENDIBILITA -->` con la decisione D1 di §9.1.4, e
+`decisioni_dm.py --emit` rigenera l'aggregato.
+
+### 9.3 — FASE 3 · Validazione
+
+Il criterio resta quello della campagna: **ogni cancello si prova a rovescio**,
+non solo a passare.
+
+| Prova | Come | Atteso |
+|---|---|---|
+| **Byte-identità SVG** | `validate_maps.py` | 40 SVG identici |
+| **Byte-identità UVTT** | rigenerare i 2 `.uvtt` e `diff` | zero righe |
+| **YAML↔JSON in sincronia** | rigenerare, `diff` | zero |
+| **`legend/single-source` morde** | rimettere `WALL_SYMS = {...}` letterale in `export_uvtt.py` | 🔴 rosso |
+| **la legenda-skill morde** | cambiare un'etichetta nel YAML senza rigenerare | 🔴 rosso |
+| **i 4 set sopravvivono** | confronto con i valori congelati di oggi | identici |
+| **non-regressione** | `pytest scripts/tests -q`, `tools_manifest --check`, `validate_docs --sorgenti`, `check_plans_discipline`, `decisioni_dm --check` | verdi |
+
+### 9.4 · Cosa **non** fa questo lotto, dichiarato
+
+| | Cosa | Perché |
+|---|---|---|
+| 🔵 | ratificare la spec funzionale (`cover`, `obscurement`, `move_cost`, `nameable`, `elevation_m`, `climb`) | **decisione DM**: 2.101 celle, §9.1.4 |
+| 🔵 | luce in metri o in quadretti | stessa decisione, §9.1.3 |
+| ⬜ | `rules/<sistema>.yaml`, i tre profili | lotto **1.2** |
+| ⬜ | dominio fuori da `render_map_svg.py` | lotto **1.3** |
+| ⬜ | riclassificare le 6.960 celle `⬛` | coda di ADR-0042, è lettura non sostituzione |
