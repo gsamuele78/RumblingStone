@@ -43,6 +43,10 @@ from dmcore.regions import RegionError, find_regions, replace_region, wrap  # no
 from state_sync import extract_events, _suggest  # noqa: E402
 
 STATE_REL = Path("campaign") / "state.md"
+# Lo storico vive nel proprio file dal 2026-09-16 (lotto 4d-2): erano 1.179
+# righe, il 71% di state.md, e lo stato vivo non si leggeva piu' perche' la
+# storia gli stava sopra. `state_apply` lo segue li'.
+CHANGELOG_REL = Path("campaign") / "state-changelog.md"
 SESSIONS_REL = Path("campaign") / "sessions"
 
 #: Day di arrivo dell'orda a Rethmar (waypoint finale §2.1 — canone RHoD adattato).
@@ -73,23 +77,56 @@ def migrate(text: str) -> "tuple[str, list[str]]":
         m2 = DAYS_LEFT_RE.search(text, end)
         if m2 and m2.start() == end:  # riga immediatamente successiva
             end = text.find("\n", m2.end()) + 1
+        # 🔴 Se la riga NON e' autonoma, marcarla corromperebbe il canone.
+        #
+        # Questo codice presumeva una riga a se'. Il lotto 4c (2026-09-12) ha
+        # trasformato il March Day nell'inizio di un PARAGRAFO di cinque righe
+        # — «**Current March Day:** **19** — e' il punto di sincronia previsto,
+        # non un giorno gia' trascorso…» — che spiega perche' quel numero e' un
+        # bersaglio e non un passato.
+        #
+        # Marcandone solo la prima riga, `apply_march_clock` la sostituirebbe e
+        # lascerebbe le altre quattro **orfane, a meta' frase**. Trovato
+        # accendendo la via di scrittura nel lotto 4d-2: non era mai emerso
+        # perche' `--migrate` non era mai stato eseguito.
+        #
+        # Si rifiuta invece di indovinare dove finisce il paragrafo: allargare
+        # la regione fino alla riga vuota cancellerebbe la nota del DM al primo
+        # aggiornamento, che e' il danno peggiore dei due.
+        resto = text[end:].split("\n", 1)[0]
+        if resto.strip() and not resto.lstrip().startswith(("|", "#", "-", "*", ">")):
+            raise RegionError(
+                "la riga '**Current March Day:**' continua nel paragrafo "
+                f"successivo ({resto.strip()[:48]}…): marcarla corromperebbe il "
+                "canone al primo aggiornamento. Serve una riga autonoma per la "
+                "macchina, accanto alla prosa — decisione del DM")
         text = text[:start] + wrap("march-clock", text[start:end]) + "\n" + text[end:]
         added.append("march-clock")
 
-    existing = find_regions(text)
-    if "changelog" not in existing:
-        h = re.search(r"^##\s*8\.\s*Changelog.*$", text, re.M)
-        if not h:
-            raise RegionError("sezione '## 8. Changelog' non trovata: "
-                              "impossibile migrare la regione changelog")
-        fences = [f for f in FENCE_RE.finditer(text, h.end())]
-        if len(fences) < 2:
-            raise RegionError("blocco ``` del changelog non trovato dopo §8")
-        start = fences[0].start()
-        end = text.find("\n", fences[1].end()) + 1
-        text = text[:start] + wrap("changelog", text[start:end]) + "\n" + text[end:]
-        added.append("changelog")
+    return text, added
 
+
+def migrate_changelog(text: str) -> "tuple[str, list[str]]":
+    """Avvolge nel marker `changelog` l'ULTIMO blocco fenced dello storico.
+
+    ⚠️ L'ultimo, non il primo: `campaign/state-changelog.md` ne contiene
+    **tre** consecutivi, e `state_apply` appende sempre in coda. Marcare il
+    primo significherebbe scrivere le voci nuove in mezzo a quelle del maggio
+    2026.
+    """
+    added: list[str] = []
+    if "changelog" in find_regions(text):
+        return text, added
+    fences = list(FENCE_RE.finditer(text))
+    if len(fences) < 2:
+        raise RegionError("nessun blocco ``` in state-changelog.md: "
+                          "impossibile migrare la regione changelog")
+    start = fences[-2].start()
+    end = text.find("\n", fences[-1].end()) + 1
+    if end == 0:
+        end = len(text)
+    text = text[:start] + wrap("changelog", text[start:end]) + "\n" + text[end:]
+    added.append("changelog")
     return text, added
 
 
@@ -207,35 +244,49 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
         else:
             manual.append(_suggest(name, groups))
 
+    clog_path = repo / CHANGELOG_REL
+    clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
+    clog_originale = clog
     if applied:
         entry = (f"{date.today().isoformat()}  {session_label}: "
                  + "; ".join(applied) + " (state_apply).")
-        try:
-            candidate = append_changelog(text, entry)
-            print("\n[apply] proposta changelog §8:")
-            print(_diff(text, candidate, str(STATE_REL)))
-            if _confirm("[apply] appendo al changelog?", assume_yes):
-                text = candidate
-        except RegionError as exc:
-            print(f"[apply] ⚠ changelog non applicabile ({exc}) — aggiorna §8 a mano")
+        if clog is None:
+            print(f"[apply] ⚠ {CHANGELOG_REL} assente — aggiorna lo storico a mano")
+        else:
+            try:
+                candidate = append_changelog(clog, entry)
+                print(f"\n[apply] proposta changelog ({CHANGELOG_REL}):")
+                print(_diff(clog, candidate, str(CHANGELOG_REL)))
+                if _confirm("[apply] appendo al changelog?", assume_yes):
+                    clog = candidate
+            except RegionError as exc:
+                print(f"[apply] ⚠ changelog non applicabile ({exc}) — "
+                      f"aggiorna {CHANGELOG_REL} a mano")
 
     if manual:
         print("\n[apply] proposte NON meccaniche — applicale a mano in state.md:")
         for line in manual:
             print(line)
 
-    if text == original:
+    if text == original and clog == clog_originale:
         print("\n[apply] ✓ niente da scrivere (già allineato o tutto rifiutato)")
         return 0
     if check:
         print("\n[apply] --check: nessuna scrittura eseguita")
         return 0
 
-    state_path.write_text(text, encoding="utf-8")
-    print(f"\n[apply] ✓ scritto {state_path}")
+    toccati = []
+    if text != original:
+        state_path.write_text(text, encoding="utf-8")
+        print(f"\n[apply] ✓ scritto {state_path}")
+        toccati.append(str(STATE_REL))
+    if clog is not None and clog != clog_originale:
+        clog_path.write_text(clog, encoding="utf-8")
+        print(f"[apply] ✓ scritto {clog_path}")
+        toccati.append(str(CHANGELOG_REL))
     if do_commit:
         sha = gitio.commit_paths(
-            repo, [str(STATE_REL)],
+            repo, toccati,
             f"state: {'; '.join(applied) or 'sync'} — {session_label} [state_apply]")
         print(f"[apply] ✓ commit {sha}" if sha else "[apply] (nulla da committare)")
     else:
@@ -261,17 +312,48 @@ def main(argv: "list[str] | None" = None) -> int:
 
     if args.migrate:
         state_path = repo / STATE_REL
+        clog_path = repo / CHANGELOG_REL
         text = state_path.read_text(encoding="utf-8")
+        clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
+        # Le due regioni si marcano in modo INDIPENDENTE: una che non si puo'
+        # marcare in sicurezza non deve impedire l'altra. Il changelog vive in
+        # un file suo dal 2026-09-16, e bloccarlo perche' il March Day di
+        # state.md e' annegato nella prosa sarebbe punire il file sbagliato.
+        added: list[str] = []
+        problemi: list[str] = []
+        new_text = text
         try:
-            new_text, added = migrate(text)
+            new_text, aggiunti = migrate(text)
+            added += aggiunti
         except RegionError as exc:
-            print(f"[apply] ✗ migrazione fallita: {exc}", file=sys.stderr)
+            problemi.append(f"march-clock: {exc}")
+        new_clog = None
+        if clog is None:
+            problemi.append(f"{CHANGELOG_REL} assente: regione changelog non marcabile")
+        else:
+            try:
+                new_clog, aggiunti = migrate_changelog(clog)
+                added += aggiunti
+            except RegionError as exc:
+                problemi.append(f"changelog: {exc}")
+        for pr in problemi:
+            print(f"[apply] ⚠ {pr}", file=sys.stderr)
+        if not added and problemi:
+            gia = [k for k, s in (("march-clock", text), ("changelog", clog or ""))
+                   if f"key={k}" in s]
+            if gia:
+                print(f"[apply] ✓ gia' marcate: {', '.join(gia)} — "
+                      f"resta da risolvere quanto sopra")
+                return 1
+            print("[apply] ✗ nessuna regione marcata", file=sys.stderr)
             return 1
         if not added:
             print("[apply] ✓ marker già presenti — niente da fare")
             return 0
         if args.check:
             print(_diff(text, new_text, str(STATE_REL)))
+            if new_clog is not None:
+                print(_diff(clog, new_clog, str(CHANGELOG_REL)))
             print("[apply] --check: nessuna scrittura eseguita")
             return 0
         if not args.no_guard:
@@ -282,10 +364,17 @@ def main(argv: "list[str] | None" = None) -> int:
             except gitio.BranchGuardError as exc:
                 print(f"[apply] ✗ {exc}", file=sys.stderr)
                 return 1
-        state_path.write_text(new_text, encoding="utf-8")
-        print(f"[apply] ✓ marker inseriti: {', '.join(added)}")
+        toccati = []
+        if new_text != text:
+            state_path.write_text(new_text, encoding="utf-8")
+            toccati.append(str(STATE_REL))
+        if new_clog is not None and new_clog != clog:
+            clog_path.write_text(new_clog, encoding="utf-8")
+            toccati.append(str(CHANGELOG_REL))
+        print(f"[apply] ✓ marker inseriti: {', '.join(added)} "
+              f"(in {', '.join(toccati)})")
         if args.commit:
-            sha = gitio.commit_paths(repo, [str(STATE_REL)],
+            sha = gitio.commit_paths(repo, toccati,
                                      "state: migrazione marker auto: (ADR-0007)")
             print(f"[apply] ✓ commit {sha}" if sha else "[apply] (nulla da committare)")
         return 0
