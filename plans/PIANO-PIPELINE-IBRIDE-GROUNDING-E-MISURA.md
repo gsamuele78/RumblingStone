@@ -312,7 +312,7 @@ critica con un secondo modello resta possibile, e resta un ponte.
 
 | Fase | Cosa risponde | Stato |
 |---|---|---|
-| **A · Audit e prerequisiti** | Cosa c'è davvero, cosa manca, cosa è già stato deciso contro, e quanto rumore produrrebbe un gate nuovo sul canone di oggi | §1, §2, §3 di questo documento sono fatti. Resta la misura di rumore, che è il primo atto del lotto A |
+| **A · Audit e prerequisiti** | Cosa c'è davvero, cosa manca, cosa è già stato deciso contro, e quanto rumore produrrebbe un gate nuovo sul canone di oggi | ✅ **fatta**. §1, §2, §3 e la misura di rumore del lotto A, che ha trovato un difetto vero in un modulo standalone e un prerequisito che il piano non aveva visto (lotto A0) |
 | **B · Costruzione** | I lotti A, B, C, E di §6, ognuno con la sua dichiarazione ADR-0045 e il suo collaudo scritto prima di partire | ⬜ da aprire |
 | **C · Collaudo e misura** | Il lotto D: il banco che rende vere o false le percentuali del documento sorgente, e il protocollo con cui si rimisurano | ⬜ da aprire |
 
@@ -370,11 +370,66 @@ quadretto non passa, e sulla griglia non si vede.
 transitabili distinti è quasi sempre un errore di trascrizione. Vale come avviso,
 non come errore.
 
-**Il primo atto del lotto è una misura, non del codice.** Si esegue G1-G4 sui 18
-master esistenti e si conta. Se il rumore è alto il gate nasce **non bloccante**,
-come `validate_lingua`, `validate_prosa` e `validate_tipografia`, e diventa
-`--strict` il giorno in cui il rumore è zero. Il repo ha già imparato che un gate
-rumoroso viene spento e allora non trova più nemmeno i difetti veri.
+### La misura di rumore: fatta il 2026-09-16, e ha cambiato il lotto
+
+Il piano diceva che il primo atto sarebbe stata una misura. È stata eseguita con
+un prototipo usa-e-getta, non committato, su **tutti i 18 master (40 griglie)**.
+
+| Segnale | Conteggio grezzo |
+|---|---:|
+| Sacche isolate dall'area principale | **97** (1.301 celle) |
+| ↳ di cui **con dentro un segnalino di creatura** | **58** |
+| ↳ di cui vuote (nicchie, vuoti nella roccia) | 26 |
+| ↳ di cui **artefatto della legenda incompleta** | 13 |
+| Porte che non connettono due lati | **15** |
+| Griglie dove una creatura Grande non attraversa tutto l'aperto | **12** |
+| Simboli usati nei master e **assenti dalla legenda** | **14 distinti**, 527 celle |
+
+⚠️ **Il prototipo ha sbagliato due volte prima di dare questi numeri, e le due
+volte contano.** Alla prima passata dava **zero** celle bloccanti sulla fortezza
+di Hammerfist, cioè un risultato assurdo: `dmcore.legenda.simboli()` espone la
+vista **di rendering**, non `function`, e il modulo **non ha un accessore per
+`blocks_movement`**. Alla seconda dava **194 porte cieche**: la regola contava
+una porta come ostacolo per la porta accanto, e due battenti adiacenti si
+bocciavano a vicenda. Corretta, il numero è **15**. Un gate che nascesse
+con quei difetti dentro produrrebbe 194 falsi allarmi al primo giro e viene spento la
+settimana dopo.
+
+**Il difetto vero, trovato e verificato a mano.**
+`STANDALONE-Il-Drappo-di-Tarsilia/ALLEGATI/mappe/tarsilia-stalle.md` disegna
+**tre box da 12 quadretti chiusi su quattro lati** da `🏰` (muratura piena:
+blocca vista e movimento), **senza un solo `🚪`**. Dentro due di essi stanno
+`🟢` a **H12** e **L12**, che il master stesso nomina: *«H12 box del cavallo»*,
+*«Il cavallo della contrada»*, *«Regina, la mula»*. E la tattica scritta nello
+stesso file dice che l'obiettivo di Sfregio è *«azzoppare il cavallo con la pasta
+corrosiva (1 round intero, cavallo fermo)»*, che richiede di stargli **adiacente**.
+Esportata con `export_uvtt.py`, quella mappa mette su Foundry tre muri opachi e
+invalicabili attorno all'animale: **la scena centrale dell'incontro non si può
+giocare**. Il rimedio è piccolo e la legenda ce l'ha già: `🚪` sul fronte di ogni
+box, oppure `🧱` per i divisori, che è `blocks_movement: false` e `cover: half`,
+cioè esattamente un separé da stalla.
+
+**Cosa cambia nel lotto.** Il rumore **non** è zero, quindi il gate nasce non
+bloccante come `validate_lingua`, `validate_prosa` e `validate_tipografia`. Ma
+soprattutto nasce un prerequisito che questo piano non aveva visto.
+
+### Lotto A0 · Chiudere la legenda, prima del gate
+
+I **14 simboli fuori legenda** non hanno `function`, quindi il codice li tratta
+come transitabili. Da lì vengono 13 delle 97 sacche: la più vistosa è il
+`CORTILE INTERNO` di `ARC07-MAPPE-DEFINITIVO`, dove le prime tre righe sono
+`☁` e `🐉` — **il cielo sopra il cortile**, che diventa una «zona irraggiungibile»
+perché nessuno ha mai detto al codice cos'è una nuvola.
+
+Entrambe piccole, entrambe prima di G1-G4:
+
+1. I 14 simboli entrano in `scripts/legend.yaml` con la loro `function`, oppure
+   il gate della legenda li rifiuta esplicitamente. Un simbolo che sta in una
+   griglia e non nella legenda è già oggi un buco di ADR-0048 che nessuno conta.
+2. `dmcore.legenda` prende l'accessore che gli manca — il fatto neutro
+   `blocks_movement`, accanto a `muri()`, `porte()` e `pericoli()`. Senza, ogni
+   consumatore se lo ricalcola dal JSON grezzo, che è la malattia che ADR-0048
+   ha curato.
 
 **Collaudo.** Test in `scripts/tests/test_grounding.py`: per ciascuno dei quattro
 controlli, una fixture che **deve** essere bocciata e una che **deve** passare
@@ -551,7 +606,7 @@ prossima analisi può partire dai numeri veri invece che dalla memoria.
 
 | # | Fase | Domanda |
 |---|---|---|
-| D1 | Lotto A | **Cosa fa il grounding quando trova un difetto in una mappa di canone già giocata?** Tre risposte possibili, e cambiano il lotto: (a) **segnala e basta**, il gate nasce non bloccante e il canone resta com'è; (b) **segnala e si correggono le mappe**, che vuol dire toccare griglie approvate e forse coordinate citate nei moduli; (c) **si esenta il canone esistente** e il gate vale solo sulle mappe nuove, col rischio che l'esenzione silenziosa nasconda i difetti veri (è il difetto che ADR-0032 §1 ha già evitato una volta). 🔵 La proposta è **(a)**, con il numero di rumore misurato prima di scrivere il gate |
+| D1 | Lotto A | **Cosa fa il grounding quando trova un difetto in una mappa di canone già giocata?** 🔎 **Non è più una domanda astratta: la misura del 2026-09-16 c'è.** 97 sacche isolate su 40 griglie, di cui **58 con dentro un segnalino di creatura**, 15 porte cieche, 12 griglie che una creatura Grande non attraversa. Una sola sacca è stata verificata a mano fino in fondo, ed **era un difetto vero**: i tre box delle stalle di Tarsilia, chiusi da `🏰` senza `🚪`, con dentro il cavallo che la tattica scritta dice di raggiungere. Le altre 57 **non sono state triangolate**, e il conto grezzo non dice quante siano difetti. Le tre risposte restano: (a) **segnala e basta**, gate non bloccante, canone invariato; (b) **segnala e si correggono le mappe**, cioè toccare griglie approvate; (c) **si esenta il canone esistente**, col rischio dell'esenzione silenziosa che ADR-0032 §1 ha già evitato una volta. 🔵 La proposta resta **(a)**, e adesso con un motivo misurato: 58 segnali non triangolati non possono bloccare una CI. Ma Tarsilia va corretta comunque, perché è un modulo standalone destinato a uscire |
 | D2 | Lotto B · B1 | **Dove vive il contratto d'estrazione dalla prosa?** Dentro `skills/rumblingstone-mapmaking/SKILL.md`, dove ogni agente lo vede sempre e paga i token a ogni conversazione, oppure in un file di riferimento caricato solo quando la skill instrada là. `measure_tokens.py` sa dare il costo delle due strade sullo stesso testo: la domanda si può decidere con un numero invece che a occhio |
 | D3 | Lotto E | **Il ponte `llm_bridge.py` si costruisce, o ADR-0050 resta scritta e il codice aspetta?** La proposta è aspettare: con A e B chiusi il ciclo funziona a mano, e allora si vedrà se il ponte fa risparmiare davvero. Serve una risposta solo quando A e B sono chiusi |
 | D4 | Lotto D | **Quante scene il DM è disposto ad annotare?** Il banco di misura della prosa esiste solo se qualcuno dice quali testi sono buoni, e l'unico che può dirlo è chi li ha visti funzionare al tavolo. Con zero scene annotate il lotto D copre le prime tre famiglie di §6 e la quarta resta fuori, il che è una risposta legittima e va detta invece che rimandata |
