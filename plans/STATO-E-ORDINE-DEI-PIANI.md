@@ -233,6 +233,41 @@ python3 scripts/decisioni_dm.py --check   # gate: l'aggregato combacia coi piani
 python3 scripts/decisioni_dm.py --emit    # rigenera §4 dopo aver toccato un piano
 ```
 
+### La quinta voce — prima di **creare** un ADR o un piano
+
+⚠️ **Le quattro sopra riguardano chi *chiude* un lotto. Questa riguarda chi
+*apre* un documento**, ed è nata da un errore vero.
+
+🐛 **`ADR-0049` è stato assegnato due volte in due giorni**: all'edizione
+commerciale (PR #138) e poi al margine del bosco (PR #141), perché chi scriveva
+il secondo non aveva guardato la cartella. Nessun controllo poteva vederlo —
+nessun link era rotto e nessun ADR mancava dall'indice, che mostrava
+semplicemente due righe con lo stesso numero.
+
+**Il numero di un ADR è la sua identità**: si cita nei commit, nei piani, nel
+codice e nei changelog. Due decisioni che lo condividono rendono ambigua ogni
+citazione **all'indietro**, sui documenti già scritti.
+
+```bash
+python3 scripts/validate_docs.py --prossimo-adr   # PRIMA di scrivere l'ADR
+```
+
+Stampa l'ultimo numero sul disco e il primo libero, e **esce 1** se una
+collisione esiste già. Il numero si conta da `plans/adr/`, non dall'indice:
+quarta regola di ADR-0045, e in questo caso l'indice era proprio il documento
+che non se n'era accorto.
+
+**Per un piano nuovo** il numero non c'è, ma la regola è la stessa e ha già la
+sua decisione: si legge `plans/INDEX.md` **prima** di aprirlo
+([ADR-0044](adr/ADR-0044-prima-si-guardano-i-piani-che-ci-sono.md)).
+Un piano duplicato non rompe le citazioni, ma divide il lavoro in due posti che
+divergono — ed è già costato sei settimane con la PR #72.
+
+⚠️ **Il limite, dichiarato**: `validate_docs --sorgenti` vede la collisione
+**dopo** che il file esiste, quindi in CI arriva comunque; `--prossimo-adr` è la
+metà preventiva, e funziona solo se la si esegue. È una regola con un cancello
+in fondo, non un cancello all'ingresso.
+
 ⚠️ **Il resto di questo documento resta scritto a mano**, e resta una
 fotografia: l'ordine delle fasi, le dipendenze, i costi. Il gate copre la
 tabella delle decisioni, non il giudizio che c'è attorno.

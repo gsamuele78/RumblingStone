@@ -315,3 +315,64 @@ class TestIFileNuoviNonSonoInvisibili(unittest.TestCase):
         self.assertIn("--exclude-standard", sorgente)
         for f in vd.sorgenti():
             self.assertFalse(f.startswith("build/"), f)
+
+
+class TestIlNumeroDiUnAdrEUnico(unittest.TestCase):
+    """🐛 `ADR-0049` e' stato dato DUE VOLTE in due giorni (2026-09-16).
+
+    Prima all'edizione commerciale (PR #138), poi al margine del bosco
+    (PR #141), perche' chi scriveva il secondo — io — non ha guardato la
+    cartella. **Nessun controllo poteva vederlo**: nessun link era rotto e
+    nessun ADR mancava dall'indice, che si limitava a mostrare due righe con
+    lo stesso numero.
+
+    Il numero di un ADR e' la sua identita': si cita nei commit, nei piani, nel
+    codice e nei changelog. Due decisioni che lo condividono rendono ambigua
+    ogni citazione **all'indietro**, sui documenti gia' scritti — e il repo ne
+    ha centinaia.
+
+    ⚠️ Il limite: il gate vede la collisione **dopo** che il file esiste. La
+    meta' preventiva e' `--prossimo-adr`, ed e' per quello che la regola d'oro
+    dice di eseguirlo PRIMA di scrivere.
+    """
+
+    def test_sul_repo_vero_nessun_numero_e_doppio(self):
+        self.assertEqual(vd.adr_duplicati(), [])
+
+    def test_il_gate_morde(self):
+        """Ricreata la collisione vera, non una inventata."""
+        gemello = ROOT / "plans" / "adr" / "ADR-0051-ZZZ-prova-collisione.md"
+        gemello.write_text("# prova\n", encoding="utf-8")
+        try:
+            duplicati = vd.adr_duplicati()
+            self.assertTrue(duplicati, "due file con ADR-0051 devono dare rosso")
+            self.assertEqual({p["path"] for p in duplicati}, {"ADR-0051"})
+            esito = subprocess.run(
+                [sys.executable, "scripts/validate_docs.py", "--sorgenti"],
+                cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(esito.returncode, 1)
+        finally:
+            gemello.unlink()
+
+    def test_il_prossimo_numero_e_quello_giusto(self):
+        """La meta' che rende la regola seguibile invece che solo esigibile."""
+        usati = vd.numeri_adr()
+        atteso = f"ADR-{max(int(n) for n in usati) + 1:04d}"
+        self.assertEqual(vd.prossimo_adr(), atteso)
+        esito = subprocess.run(
+            [sys.executable, "scripts/validate_docs.py", "--prossimo-adr"],
+            cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(esito.returncode, 0, esito.stderr)
+        self.assertIn(atteso, esito.stdout)
+
+    def test_il_comando_segnala_le_collisioni_gia_presenti(self):
+        gemello = ROOT / "plans" / "adr" / "ADR-0051-ZZZ-prova-collisione.md"
+        gemello.write_text("# prova\n", encoding="utf-8")
+        try:
+            esito = subprocess.run(
+                [sys.executable, "scripts/validate_docs.py", "--prossimo-adr"],
+                cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(esito.returncode, 1)
+            self.assertIn("ADR-0051", esito.stderr)
+        finally:
+            gemello.unlink()

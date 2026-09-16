@@ -1993,7 +1993,7 @@
     },
     {
       "name": "validate_docs",
-      "description": "«Il documento che un agente legge per primo descrive una cartella che non c'e'. Come faccio ad accorgermene prima che lui ci vada a cercare?»\n\nGate anti-deriva fra documentazione e filesystem: ogni percorso citato nei documenti d'ingresso (AGENTS.md, README.md, docs/INDEX.md) deve esistere davvero.",
+      "description": "«Il documento che un agente legge per primo descrive una cartella che non c'e'. Come faccio ad accorgermene prima che lui ci vada a cercare?»\n\nGate anti-deriva fra documentazione e filesystem: ogni percorso citato nei documenti d'ingresso (AGENTS.md, README.md, docs/INDEX.md) deve esistere davvero. Dal 2026-09-16 enumera anche i file NUOVI non ancora in stage (prima un documento appena creato era invisibile al controllo) e boccia due ADR che condividono lo stesso numero.",
       "use_case": "«Il documento che un agente legge per primo descrive una cartella che non c'e'. Come faccio ad accorgermene prima che lui ci vada a cercare?»",
       "invocation": "python3 scripts/validate_docs.py",
       "inputSchema": {
@@ -2010,6 +2010,10 @@
           "json": {
             "type": "boolean",
             "description": "Rapporto machine-readable invece del testo."
+          },
+          "prossimo-adr": {
+            "type": "boolean",
+            "description": "Stampa l'ultimo ADR sul disco e il primo numero libero. Da eseguire PRIMA di scrivere un ADR nuovo: quinta voce della regola d'oro (ADR-0009). Esce 1 se una collisione esiste gia'."
           }
         },
         "required": [],

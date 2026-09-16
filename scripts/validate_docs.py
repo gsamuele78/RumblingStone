@@ -364,6 +364,50 @@ def indice_adr() -> list[dict]:
             for nome in sorted(esistenti - citati)]
 
 
+def numeri_adr() -> "dict[str, list[str]]":
+    """`numero -> file che lo usano`. Piu' di uno e' una collisione."""
+    cartella = ROOT / CARTELLA_ADR
+    if not cartella.is_dir():
+        return {}
+    fuori: "dict[str, list[str]]" = {}
+    for f in sorted(cartella.glob("ADR-*.md")):
+        m = re.match(r"ADR-(\d{4})", f.name)
+        if m:
+            fuori.setdefault(m.group(1), []).append(f.name)
+    return fuori
+
+
+def prossimo_adr() -> str:
+    """Il primo numero libero: quello che chi scrive un ADR nuovo deve usare."""
+    usati = numeri_adr()
+    return f"ADR-{max((int(n) for n in usati), default=0) + 1:04d}"
+
+
+def adr_duplicati() -> list[dict]:
+    """🐛 Due ADR con lo stesso numero (regola d'oro, dal 2026-09-16).
+
+    E' successo: `ADR-0049` e' stato dato **due volte in due giorni** — prima
+    all'edizione commerciale (PR #138), poi al margine del bosco (PR #141),
+    perche' chi scriveva il secondo non ha guardato la cartella. Nessun link
+    era rotto e nessun ADR era assente dall'indice, quindi **nessuno dei
+    controlli esistenti poteva vederlo**: l'indice si limitava a mostrare due
+    righe con lo stesso numero.
+
+    Il numero di un ADR e' la sua identita': si cita nei commit, nei piani,
+    nel codice e nei changelog. Due decisioni che lo condividono rendono ogni
+    citazione ambigua **all'indietro**, sui documenti gia' scritti.
+
+    ⚠️ Il limite: questo vede la collisione **dopo** che il file esiste. Chi
+    scrive un ADR nuovo trova il numero giusto con
+    `python3 scripts/validate_docs.py --prossimo-adr`.
+    """
+    return [{"doc": f"{CARTELLA_ADR}/{f}", "line": 0, "path": f"ADR-{numero}",
+             "source": "duplicato",
+             "reason": f"numero ADR usato da {len(file)} decisioni diverse"}
+            for numero, file in sorted(numeri_adr().items()) if len(file) > 1
+            for f in file]
+
+
 def check_doc(doc_rel: str, tops: set[str], solo_link: bool = False) -> list[dict]:
     """I percorsi citati e inesistenti di un documento.
 
@@ -408,7 +452,24 @@ def main(argv=None) -> int:
                          "Esclude generati, mirror per-agente e pacchetti vendored.")
     ap.add_argument("--verbose", action="store_true", help="Elenca anche i percorsi verificati con successo.")
     ap.add_argument("--json", action="store_true", help="Report in JSON (opt-in).")
+    ap.add_argument("--prossimo-adr", action="store_true",
+                    help="Stampa l'ultimo ADR sul disco e il primo numero libero. "
+                         "Da eseguire PRIMA di scrivere un ADR nuovo: e' la regola "
+                         "d'oro dei numeri (ADR-0009).")
     args = ap.parse_args(argv)
+
+    if getattr(args, "prossimo_adr", False):
+        usati = numeri_adr()
+        print(f"Ultimo ADR sul disco: ADR-{max(usati, default='0000')}"
+              f"  ({len(usati)} numeri usati, {sum(len(v) for v in usati.values())} file)")
+        print(f"Il prossimo numero libero: {prossimo_adr()}")
+        collisioni = {n: f for n, f in usati.items() if len(f) > 1}
+        if collisioni:
+            print("\n⚠ collisioni gia' presenti:", file=sys.stderr)
+            for n, f in sorted(collisioni.items()):
+                print(f"  ADR-{n}: " + " · ".join(f), file=sys.stderr)
+            return 1
+        return 0
 
     if args.sorgenti and args.doc:
         ap.error("--sorgenti enumera l'insieme da solo: non si combina con --doc")
@@ -424,6 +485,7 @@ def main(argv=None) -> int:
         for d in sorgenti(".md", ".py"):
             problems.extend(percorsi_assoluti(d))
         problems.extend(indice_adr())
+        problems.extend(adr_duplicati())
     else:
         docs = args.doc or DEFAULT_DOCS
         for d in docs:
@@ -438,6 +500,7 @@ def main(argv=None) -> int:
 
     assoluti = [p for p in problems if p["source"] == "assoluto"]
     mancanti = [p for p in problems if p["source"] == "indice"]
+    duplicati = [p for p in problems if p["source"] == "duplicato"]
     inesistenti = [p for p in problems if p["source"] not in {"assoluto", "indice"}]
 
     if not problems:
@@ -461,6 +524,17 @@ def main(argv=None) -> int:
               file=sys.stderr)
         print("Un indice a mano accanto a una cartella si sfasa. Aggiungere la riga.",
               file=sys.stderr)
+    if duplicati:
+        numeri = sorted({p["path"] for p in duplicati})
+        print(f"\n{len(numeri)} numero/i ADR usato/i da piu' decisioni: "
+              + ", ".join(numeri), file=sys.stderr)
+        print("Il numero di un ADR e' la sua identita': si cita nei commit, nei piani",
+              file=sys.stderr)
+        print("e nei changelog, e due decisioni che lo condividono rendono ambigua ogni",
+              file=sys.stderr)
+        print("citazione gia' scritta. Rinumerare quello piu' recente e correggere i",
+              file=sys.stderr)
+        print(f"riferimenti. Il primo libero: {prossimo_adr()}", file=sys.stderr)
     if assoluti:
         print("\nUn percorso assoluto rende il documento vero su un solo computer.",
               file=sys.stderr)
