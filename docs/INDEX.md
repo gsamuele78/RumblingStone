@@ -106,6 +106,7 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0048](../plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md) | La **legenda funzionale è la fonte unica**: la funzione di gioco di un simbolo è un dato, non prosa né un `set` cablato (era ADR-0014 nella #72) |
 | [ADR-0049](../plans/adr/ADR-0049-il-margine-del-bosco-e-un-glifo-a-se.md) | **Il margine del bosco è un glifo a sé**: `🌲` diventa opaco, la fascia che si attraversa no — perché il muro del VTT è binario e il bosco non lo è |
 | [ADR-0049](../plans/adr/ADR-0049-edizione-commerciale-ap-originale.md) | 🔵 **Proposta**: l'edizione commerciale è un **AP originale autonomo**, mai un'espansione di *Red Hand of Doom* — gate: decisione DM + avvocato IP (era ADR-0018 nella #72) |
+| [ADR-0050](../plans/adr/ADR-0050-il-confine-dichiarato-fra-codice-e-llm.md) | **Il confine fra il codice e l'LLM è dichiarato**: gli script restano deterministici, stdlib e offline; una chiamata a un modello vive solo in un ponte opzionale che degrada pulito, non è mai un passo bloccante della CI e produce candidati, non artefatti |
 
 ## 5. Archivio piani
 
