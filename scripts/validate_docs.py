@@ -118,16 +118,39 @@ def _e_generato(rel: str) -> bool:
 
 
 def sorgenti(*estensioni: str) -> list[str]:
-    """I file tracciati con quelle estensioni, meno i generati e i vendored.
+    """I file scritti a mano con quelle estensioni, meno i generati e i vendored.
 
     Enumera da `git ls-files`, non da un elenco scritto a mano: e' la quarta
     regola di ADR-0045 — un lotto che lavora su un insieme dichiara da dove lo
     conta. `-z` perche' nel repo ci sono nomi con spazi (gli archi 00-09).
+
+    🐛 **E conta anche i file NUOVI non ancora in stage**, dal 2026-09-16.
+    Prima no, e il buco era vero: `git ls-files` elenca i file **tracciati**,
+    quindi un documento appena creato era **invisibile al cancello** finche'
+    qualcuno non lo aggiungeva. Chi scriveva un ADR nuovo con un link rotto
+    dentro vedeva verde in locale e rosso in CI un minuto dopo, al primo
+    `git add` — che e' il modo peggiore di scoprirlo, perche' il controllo
+    locale aveva gia' dato il via libera.
+
+    Successo davvero, ed e' cosi' che e' stato trovato: `ADR-0050`, creato nel
+    lotto 4d-1, citava `ADR-0041-contare-cio-che-e-dichiarato.md` — un nome
+    inventato, il file vero e' `ADR-0041-instradamento-delle-skill-con-un-gate`.
+    Il giro completo dei sedici cancelli, eseguito apposta prima di spingere,
+    l'aveva dato **verde due volte**.
+
+    `--others --exclude-standard` aggiunge i non tracciati rispettando
+    `.gitignore`, quindi build e artefatti restano fuori.
     """
     modelli = [f"*{e}" for e in (estensioni or (".md",))]
-    out = subprocess.run(["git", "ls-files", "-z", *modelli],
-                         cwd=ROOT, capture_output=True, text=True, check=True).stdout
-    return sorted(f for f in out.split("\0") if f and not _e_generato(f))
+    tracciati = subprocess.run(["git", "ls-files", "-z", *modelli],
+                               cwd=ROOT, capture_output=True, text=True,
+                               check=True).stdout
+    nuovi = subprocess.run(["git", "ls-files", "-z", "--others",
+                            "--exclude-standard", *modelli],
+                           cwd=ROOT, capture_output=True, text=True,
+                           check=True).stdout
+    trovati = set(tracciati.split("\0")) | set(nuovi.split("\0"))
+    return sorted(f for f in trovati if f and not _e_generato(f))
 
 
 def ignored_lines(text: str) -> set[int]:

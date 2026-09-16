@@ -8,6 +8,7 @@ quelli che ne difendono la credibilità.
 """
 from __future__ import annotations
 
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -264,3 +265,53 @@ class TestGateSorgentiSulRepoVero(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestIFileNuoviNonSonoInvisibili(unittest.TestCase):
+    """🐛 Il cancello era cieco ai file non ancora in stage (2026-09-16).
+
+    `sorgenti()` enumerava da `git ls-files`, che elenca i **tracciati**: un
+    documento appena creato non veniva guardato finche' qualcuno non lo
+    aggiungeva. Chi scriveva un ADR nuovo con un link rotto dentro vedeva
+    **verde in locale e rosso in CI** un minuto dopo, al primo `git add`.
+
+    E' successo davvero: `ADR-0050`, creato nel lotto 4d-1, citava un nome di
+    file inventato per ADR-0041, e il giro completo dei sedici cancelli —
+    eseguito apposta prima di spingere — l'aveva dato verde **due volte**. Il
+    difetto non era la disattenzione di chi scriveva: era che il controllo
+    locale **non poteva** vederlo.
+    """
+
+    def test_un_file_nuovo_entra_nell_enumerazione(self):
+        nuovo = ROOT / "plans" / "adr" / "ZZZ-prova-file-nuovo.md"
+        nuovo.write_text("[x](ADR-9999-che-non-esiste.md)\n", encoding="utf-8")
+        try:
+            self.assertIn("plans/adr/ZZZ-prova-file-nuovo.md", vd.sorgenti(),
+                          "un file nuovo non tracciato deve essere gia' guardato")
+        finally:
+            nuovo.unlink()
+
+    def test_e_il_gate_lo_boccia(self):
+        """L'altra meta': vederlo non basta, deve anche diventare rosso."""
+        nuovo = ROOT / "plans" / "adr" / "ZZZ-prova-file-nuovo.md"
+        nuovo.write_text("[x](ADR-9999-che-non-esiste.md)\n", encoding="utf-8")
+        try:
+            esito = subprocess.run(
+                [sys.executable, "scripts/validate_docs.py", "--sorgenti"],
+                cwd=ROOT, capture_output=True, text=True)
+            self.assertEqual(esito.returncode, 1)
+            self.assertIn("ZZZ-prova-file-nuovo", esito.stdout + esito.stderr)
+        finally:
+            nuovo.unlink()
+
+    def test_i_file_ignorati_restano_fuori(self):
+        """`--exclude-standard` e' la meta' che impedisce al gate di esplodere.
+
+        Senza, l'enumerazione si mangerebbe `build/`, le cache e tutto cio'
+        che `.gitignore` tiene fuori — e un gate che boccia troppo viene
+        spento al primo giro.
+        """
+        sorgente = (ROOT / "scripts" / "validate_docs.py").read_text(encoding="utf-8")
+        self.assertIn("--exclude-standard", sorgente)
+        for f in vd.sorgenti():
+            self.assertFalse(f.startswith("build/"), f)

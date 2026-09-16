@@ -279,7 +279,7 @@ che questa decisione esiste per impedire.
 **Quindi il campo è opzionale in quelle quattro sezioni, e la regola R7 di
 `validate_state.py` le CONTA a ogni esecuzione**: oggi **58**. Un numero che si
 vede non cresce in silenzio, e il giorno in cui il DM dichiara quei tempi scende
-da sé. È la forma di [ADR-0041](ADR-0041-contare-cio-che-e-dichiarato.md):
+da sé. È la forma di [ADR-0041](ADR-0041-instradamento-delle-skill-con-un-gate.md):
 contare ciò che non è dichiarato vale più che indovinarlo.
 
 ### Cosa resta fuori, dichiarato
