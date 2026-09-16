@@ -50,22 +50,50 @@ class TestLoStoricoHaUnFileSuo(unittest.TestCase):
                       CHANGELOG.read_text(encoding="utf-8"))
 
 
+ANCORA = "2026-05-01  Initial state.md created"
+
+
 class TestLoSpostamentoNonHaRiscrittoNiente(unittest.TestCase):
     """Il criterio d'uscita: le righe spostate sono quelle di prima.
 
     Confrontate contro **git**, non contro una copia fatta al momento: e' la
     sola prova che non si e' perso o riordinato niente per strada.
+
+    🐛 **E la prima versione di questo test era vera una volta sola.**
+    Confrontava contro `HEAD`, che al momento in cui l'ho scritto era ancora il
+    commit *prima* dello split. Committando, `HEAD` e' diventato lo split
+    stesso e §8 di `state.md` un puntatore: il test e' passato in locale e ha
+    fatto **rossa la CI**, per sempre. Un test ancorato alla POSIZIONE di un
+    commit misura quando lo esegui, non cosa afferma.
+
+    Adesso il commit di riferimento si trova per **contenuto**: l'ultimo in cui
+    `state.md` conteneva ancora la prima riga dello storico.
     """
+
+    def _commit_prima_dello_split(self) -> "str | None":
+        sha = subprocess.run(
+            ["git", "log", "--format=%H", "--", "campaign/state.md"],
+            cwd=ROOT, capture_output=True, text=True).stdout.split()
+        for s in sha:
+            testo = subprocess.run(["git", "show", f"{s}:campaign/state.md"],
+                                   cwd=ROOT, capture_output=True, text=True).stdout
+            if ANCORA in testo:
+                return s
+        return None
 
     def _sezione_8_di(self, ref: str) -> list[str]:
         testo = subprocess.run(["git", "show", f"{ref}:campaign/state.md"],
                                cwd=ROOT, capture_output=True, text=True).stdout
-        if "## 8. Changelog" not in testo:
-            self.skipTest(f"{ref} non ha §8 in state.md")
+        if ANCORA not in testo:
+            self.skipTest(f"{ref} non porta lo storico in state.md")
         return testo.split("## 8. Changelog (append-only)", 1)[1].strip("\n").splitlines()
 
     def test_le_righe_sono_identiche_a_quelle_di_prima_dello_split(self):
-        prima = self._sezione_8_di("HEAD")
+        ref = self._commit_prima_dello_split()
+        if ref is None:
+            self.skipTest("nessun commit con lo storico dentro state.md "
+                          "(clone shallow?)")
+        prima = self._sezione_8_di(ref)
         nuovo = CHANGELOG.read_text(encoding="utf-8").splitlines()
         # il corpo comincia dopo l'intestazione e le righe di citazione
         i = next(n for n, r in enumerate(nuovo)
