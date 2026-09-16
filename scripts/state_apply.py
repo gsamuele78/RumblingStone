@@ -10,9 +10,17 @@ Divisione dei ruoli (piano AUTOMAZIONE §3):
   - tutto il resto (prosa, tabelle villain, §1 party) resta proposta da
     applicare a mano: viene stampato, mai toccato.
 
-Regioni gestite (v1):
-  march-clock   righe "Current March Day" / "Days remaining" (§2.1)
-  changelog     blocco append-only del §8
+Regioni gestite:
+  march-clock   righe "Current March Day" / "Days remaining" (§2.1, state.md)
+  changelog     blocco append-only (state-changelog.md)
+  clock villain campo `clock` dei record di `campaign/state.yaml` (§3)
+
+I tre master (ADR-0050, `dmcore/masters.py`): i fatti tabellari stanno in
+`campaign/state.yaml` e da li' si RIGENERANO in state.md; la prosa sta in
+`campaign/state.md`; lo storico in `campaign/state-changelog.md`. Le proposte
+che restano a mano dicono in QUALE dei tre vanno: dirle tutte «in state.md»
+significava dire al DM di scriverle dove il prossimo `render_state.py` le
+cancella.
 
 Uso:
     python3 scripts/state_apply.py --migrate            # inserisce i marker (una tantum, idempotente)
@@ -39,10 +47,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dmcore import REPO  # noqa: E402
 from dmcore import config as cfg  # noqa: E402
 from dmcore import gitio  # noqa: E402
+from dmcore.masters import per_master  # noqa: E402
 from dmcore.regions import RegionError, find_regions, replace_region, wrap  # noqa: E402
 from state_sync import extract_events, _suggest  # noqa: E402
 
 STATE_REL = Path("campaign") / "state.md"
+#: I fatti tabellari (§0, §1, §2.4, §3, §4, §6, §7.E) hanno qui il loro master
+#: dal lotto 4d-1: le tabelle di state.md sono una VISTA generata (ADR-0050).
+STATE_YAML_REL = Path("campaign") / "state.yaml"
 # Lo storico vive nel proprio file dal 2026-09-16 (lotto 4d-2): erano 1.179
 # righe, il 71% di state.md, e lo stato vivo non si leggeva piu' perche' la
 # storia gli stava sopra. `state_apply` lo segue li'.
@@ -162,6 +174,56 @@ def _diff(old: str, new: str, label: str) -> str:
         fromfile=f"a/{label}", tofile=f"b/{label}", n=2))
 
 
+def rigenera_tabelle(md: str, yaml_text: str) -> str:
+    """Le regioni `gen:state:` di state.md, rifatte dal YAML appena scritto.
+
+    🔴 Senza questo passo la scrittura in `state.yaml` lascerebbe `state.md`
+    indietro di una sessione, e `render_state.py --check` — che gira in CI —
+    diventerebbe rosso subito dopo un `state_apply` andato a buon fine. Il tool
+    che aggiorna il canone non puo' lasciare il repo in uno stato che il
+    cancello del canone boccia.
+    """
+    import yaml as _yaml  # pyyaml: debito dichiarato (ADR-0037), import tardivo
+
+    import render_state
+    nuovo, mancanti = render_state.apply_regions(md, _yaml.safe_load(yaml_text))
+    if mancanti:
+        raise RegionError(
+            "marcatori gen:state: assenti in state.md: " + ", ".join(mancanti))
+    return nuovo
+
+
+def _clock_villain(dati_yaml: str, name: str, groups: tuple) -> "tuple[int, str, str] | None":
+    """(indice, valore nuovo, etichetta) del clock da far avanzare, o None.
+
+    None significa «non identificato con certezza»: il chiamante lascia la
+    proposta a mano. Non c'e' un ripiego, ed e' voluto — con tredici villain in
+    tabella, avanzare il clock del villain sbagliato e' canone rotto in
+    silenzio, il danno che ADR-0041 chiede di non correre.
+    """
+    import yaml as _yaml
+
+    from dmcore.statedata import fondo_del_clock, trova_villain
+    dati = _yaml.safe_load(dati_yaml)
+    if name == "ritual_clock":
+        a, b = groups
+        # §2.0 e' l'unico clock su diciotto: il denominatore lo identifica.
+        i = trova_villain(dati, fondo=18, numeratore=a)
+        if i is None:
+            return None
+        return i, f"{b}/18", f"Ritual Clock {a}/18 → {b}/18"
+    if name == "villain_clock":
+        chi, a, b = groups
+        i = trova_villain(dati, nome=chi, numeratore=a)
+        if i is None:
+            return None
+        fondo = fondo_del_clock(dati, i)
+        if fondo is None:
+            return None
+        return i, f"{b}/{fondo}", f"clock {chi} {a}/{fondo} → {b}/{fondo}"
+    return None
+
+
 def _confirm(prompt: str, assume_yes: bool) -> bool:
     if assume_yes:
         return True
@@ -189,13 +251,18 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
             return 1
         if not check:
             import subprocess
+            # ⚠️ Tutti e tre i master, non solo state.md: dal 2026-09-16 questo
+            # tool scrive anche in state.yaml, e un file sporco fuori dalla
+            # guardia e' un `git revert` che non torna indietro del tutto.
             dirty = subprocess.run(
-                ["git", "-C", str(repo), "status", "--porcelain", "--", str(STATE_REL)],
+                ["git", "-C", str(repo), "status", "--porcelain", "--",
+                 str(STATE_REL), str(STATE_YAML_REL), str(CHANGELOG_REL)],
                 capture_output=True, text=True).stdout.strip()
             if dirty:
-                print("[apply] ✗ campaign/state.md ha modifiche non committate: "
-                      "committa (o scarta) prima, così l'undo resta `git revert` "
-                      "(ADR-0007 vincolo 4)", file=sys.stderr)
+                print("[apply] ✗ un master di campagna ha modifiche non committate:\n"
+                      f"{dirty}\n"
+                      "        committa (o scarta) prima, così l'undo resta "
+                      "`git revert` (ADR-0007 vincolo 4)", file=sys.stderr)
                 return 1
 
     if session_name:
@@ -214,8 +281,12 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
 
     text = state_path.read_text(encoding="utf-8")
     original = text
+    yaml_path = repo / STATE_YAML_REL
+    ydata = yaml_path.read_text(encoding="utf-8") if yaml_path.exists() else None
+    ydata_originale = ydata
     applied: list[str] = []
-    manual: list[str] = []
+    #: (trigger, testo) — il trigger serve a dire in QUALE master va la proposta
+    manual: "list[tuple[str, str]]" = []
     session_label = f"sessione {ev['date']} ({ev['file']})"
 
     for name, raw, groups in ev["hits"]:
@@ -227,7 +298,7 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
                 candidate = apply_march_clock(text, b, session_label)
             except RegionError as exc:
                 print(f"[apply] ⚠ march_clock non applicabile ({exc}) — resta manuale")
-                manual.append(_suggest(name, groups))
+                manual.append((name, _suggest(name, groups)))
                 continue
             if candidate == text:
                 print(f"[apply] march-clock già a Day {b} — niente da fare (idempotente)")
@@ -238,11 +309,54 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
                 text = candidate
                 applied.append(f"March Clock Day {a} → Day {b}")
             else:
-                manual.append(_suggest(name, groups))
-        elif name == "ritual_clock" and groups[0] == groups[1]:
-            continue  # nessun cambiamento: niente rumore
+                manual.append((name, _suggest(name, groups)))
+        elif name in ("ritual_clock", "villain_clock"):
+            if groups[-2] == groups[-1]:
+                continue  # nessun cambiamento: niente rumore
+            if ydata is None:
+                print(f"[apply] ⚠ {STATE_YAML_REL} assente — {name} resta manuale")
+                manual.append((name, _suggest(name, groups)))
+                continue
+            esito = _clock_villain(ydata, name, groups)
+            if esito is None:
+                # Zero corrispondenze o piu' d'una: si dichiara, non si sceglie.
+                print(f"[apply] ⚠ {name} {' '.join(map(str, groups))}: nessun "
+                      f"villain identificato con certezza in {STATE_YAML_REL} — "
+                      "resta manuale")
+                manual.append((name, _suggest(name, groups)))
+                continue
+            indice, valore, etichetta = esito
+            try:
+                from dmcore.statedata import StateDataError, imposta_campo
+                nuovo_yaml = imposta_campo(ydata, "villain", indice, "clock", valore)
+            except StateDataError as exc:
+                print(f"[apply] ⚠ {etichetta} non applicabile ({exc}) — resta manuale")
+                manual.append((name, _suggest(name, groups)))
+                continue
+            if nuovo_yaml == ydata:
+                print(f"[apply] {etichetta} già a posto — niente da fare (idempotente)")
+                continue
+            print(f"\n[apply] proposta {name} → {STATE_YAML_REL} (§3 villain)")
+            print(_diff(ydata, nuovo_yaml, str(STATE_YAML_REL)))
+            if _confirm("[apply] applico questo blocco?", assume_yes):
+                ydata = nuovo_yaml
+                applied.append(etichetta)
+            else:
+                manual.append((name, _suggest(name, groups)))
         else:
-            manual.append(_suggest(name, groups))
+            manual.append((name, _suggest(name, groups)))
+
+    # Le tabelle di state.md sono una VISTA: dopo aver toccato il master vanno
+    # rigenerate nello stesso giro, o il repo resta in uno stato che
+    # `render_state.py --check` boccia.
+    if ydata is not None and ydata != ydata_originale:
+        try:
+            text = rigenera_tabelle(text, ydata)
+        except RegionError as exc:
+            print(f"[apply] ✗ {exc}: annullo anche la scrittura in "
+                  f"{STATE_YAML_REL} (un master senza la sua vista è drift)",
+                  file=sys.stderr)
+            return 1
 
     clog_path = repo / CHANGELOG_REL
     clog = clog_path.read_text(encoding="utf-8") if clog_path.exists() else None
@@ -264,11 +378,20 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
                       f"aggiorna {CHANGELOG_REL} a mano")
 
     if manual:
-        print("\n[apply] proposte NON meccaniche — applicale a mano in state.md:")
-        for line in manual:
-            print(line)
+        # 🔴 «applicale a mano in state.md», che questo blocco diceva fino al
+        # 2026-09-16, era l'istruzione per perderne meta': le tabelle di
+        # state.md sono generate da state.yaml e un'edizione a mano sparisce al
+        # prossimo `render_state.py`, senza errore e senza avviso.
+        print("\n[apply] proposte NON meccaniche — ognuna nel SUO master (ADR-0050):")
+        for master, righe in per_master(manual).items():
+            if master is None:
+                print("\n  ⚠ destinazione non dichiarata in dmcore/masters.py:")
+            else:
+                print(f"\n  → `{master.file}` — {master.nota}")
+            for line in righe:
+                print(f"    {line}")
 
-    if text == original and clog == clog_originale:
+    if text == original and clog == clog_originale and ydata == ydata_originale:
         print("\n[apply] ✓ niente da scrivere (già allineato o tutto rifiutato)")
         return 0
     if check:
@@ -276,9 +399,16 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
         return 0
 
     toccati = []
+    # Prima il master, poi la vista: se il processo muore in mezzo, il fatto e'
+    # salvo e `render_state.py` ricostruisce il resto. All'inverso si
+    # perderebbe il dato e resterebbe una tabella che nessuno sa rigenerare.
+    if ydata is not None and ydata != ydata_originale:
+        yaml_path.write_text(ydata, encoding="utf-8")
+        print(f"\n[apply] ✓ scritto {yaml_path}")
+        toccati.append(str(STATE_YAML_REL))
     if text != original:
         state_path.write_text(text, encoding="utf-8")
-        print(f"\n[apply] ✓ scritto {state_path}")
+        print(f"[apply] ✓ scritto {state_path}")
         toccati.append(str(STATE_REL))
     if clog is not None and clog != clog_originale:
         clog_path.write_text(clog, encoding="utf-8")
@@ -290,7 +420,8 @@ def run(repo: Path, session_name: "str | None", check: bool, assume_yes: bool,
             f"state: {'; '.join(applied) or 'sync'} — {session_label} [state_apply]")
         print(f"[apply] ✓ commit {sha}" if sha else "[apply] (nulla da committare)")
     else:
-        print("[apply] ricordati il commit: git add campaign/state.md && git commit")
+        print("[apply] ricordati il commit: git add "
+              + " ".join(toccati) + " && git commit")
     return 0
 
 
