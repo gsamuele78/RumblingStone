@@ -90,11 +90,21 @@ class TestNonCreature(unittest.TestCase):
         Non ha statistiche perche' non e' nessuno in particolare: le schede dei
         suoi membri stanno negli statblocchi d'arco, e ognuna dichiara
         `**Faction**: zhentarim`.
+
+        L'ottava e' dello stesso giorno, e nasce da una riga di canone del DM:
+        `Zalkatar.md` e' il **dossier del conclave della Torre Invisibile**.
+        Zalkatar una scheda ce l'ha — GS 13, nell'arco P2A — ma questo file non
+        la duplica: registra che **lui e' «il Padrone delle Menti»** del
+        laboratorio di ARC-04, e quindi il compratore degli schiavi drow di
+        Sonjak, l'innestatore delle Yochlol half-illithid che uccidono Hella, e
+        il proprietario della stanza in cui l'Anello di Artemis si e' risvegliato.
+        E' un dossier di fazione, non una creatura: le sue creature dichiarano
+        `**Faction**: illithid-zalkatar`.
         """
         attese = {"Consiglio_Rethmar.md", "Profughi_Guado_di_Drellin.md",
                   "ondata-giganti-fanteria-cr15.md", "Witchwood_e_Tiri_Kitor.md",
                   "Secondo_Anello_Rethmar.md", "duergar-scala-di-ossa-cr11.md",
-                  "Zhentarim_Dauth.md"}
+                  "Zhentarim_Dauth.md", "Zalkatar.md"}
         trovate = {f.name for f in (REPO / "Bestiario").rglob("*.md")
                    if E.e_non_creatura(f.read_text(encoding="utf-8"))}
         self.assertEqual(attese, trovate)

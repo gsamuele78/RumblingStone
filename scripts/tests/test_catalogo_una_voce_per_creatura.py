@@ -195,5 +195,73 @@ class TestLeDecisioniDiCanoneDel17Settembre(unittest.TestCase):
                       "la voce a GS 13 non dice che non e' il boss che si gioca")
 
 
+class TestIDueConclaviIllithid(unittest.TestCase):
+    """🔴 Canone del DM, 2026-09-17: **Zalkatar è «il Padrone delle Menti»**
+    del laboratorio di ARC-04.
+
+    Una riga che cuce quattro archi. Il repo dichiarava gia' **due** conclavi
+    illithid rivali — Xal'thor chiama Zalkatar «biologo da torre», Zalkatar
+    chiama lui «cacciatore di mandria» — ma nessuno dei due era una fazione:
+    gli illithid stavano sparsi su **quattro** etichette diverse, e Zarim era
+    marcato `red-hand` mentre la sua stessa scheda dice *«legato alla fazione
+    di Xal'thor»*.
+    """
+
+    def test_le_due_fazioni_esistono_e_non_si_mescolano(self):
+        zal = {m["name"] for m in CATALOGO if m["faction"] == "illithid-zalkatar"}
+        xal = {m["name"] for m in CATALOGO if m["faction"] == "illithid-xal-thor"}
+        self.assertGreaterEqual(len(zal), 11, "la Torre Invisibile ha perso i suoi custodi")
+        self.assertGreaterEqual(len(xal), 5, "l'invasione planare ha perso i suoi")
+        self.assertEqual(zal & xal, set(), "i due conclavi sono rivali, non si sovrappongono")
+
+    def test_i_custodi_della_torre_sono_di_zalkatar(self):
+        indice = {m["name"]: m["faction"] for m in CATALOGO}
+        for nome in ("Guardiano di Luce (elementale/costrutto)", "Golem Bibliotecario",
+                     "Spettri di Conoscenza", "Sciame di Libri Animati",
+                     "Elementale del Caos", "Grell (Torre Invisibile)"):
+            with self.subTest(creatura=nome):
+                self.assertEqual(indice.get(nome), "illithid-zalkatar")
+
+    def test_zarim_non_e_piu_mano_rossa(self):
+        """🐛 La sua scheda diceva «legato alla fazione di Xal'thor» e il
+        catalogo lo dava `red-hand`: due valori per lo stesso fatto."""
+        zarim = [m for m in CATALOGO if m["name"].startswith("Zarim")]
+        self.assertTrue(zarim)
+        for m in zarim:
+            with self.subTest(voce=m["source_file"]):
+                self.assertEqual(m["faction"], "illithid-xal-thor")
+
+    def test_zalkatar_non_e_una_parola_chiave_della_mano_rossa(self):
+        """La correzione nel builder, provata sul sorgente.
+
+        `zalkatar` stava nell'elenco di `red-hand`: un illithid warlock
+        classificato come comandante della Mano Rossa.
+        """
+        sorgente = (ROOT / "scripts" / "build_monster_catalog.py").read_text(encoding="utf-8")
+        elenco = re.search(r'"red-hand":\s*\[(.*?)\]', sorgente, re.S).group(1)
+        self.assertNotIn('"zalkatar"', elenco)
+
+    def test_il_dossier_di_zalkatar_non_finge_di_essere_una_creatura(self):
+        """⚠️ Il marcatore e' una stringa esatta, non prosa.
+
+        La prima stesura scriveva `[NON-CREATURA — dossier di fazione]`, e
+        `build_monster_catalog` cerca `[NON-CREATURA]` alla lettera: il dossier
+        era finito nel pool degli incontri come un mostro da GS 13.
+        """
+        d = ROOT / "Bestiario" / "villain" / "Zalkatar" / "Zalkatar.md"
+        self.assertTrue(d.exists())
+        self.assertIn("[NON-CREATURA]", d.read_text(encoding="utf-8").split("\n")[0])
+        self.assertNotIn("ZALKATAR — Illithid Warlock",
+                         " · ".join(m["name"] for m in CATALOGO))
+
+    def test_il_dossier_registra_il_canone_e_le_sue_prove(self):
+        """Un collegamento di canone vale per le prove che cita, non per l'idea."""
+        t = (ROOT / "Bestiario" / "villain" / "Zalkatar" / "Zalkatar.md").read_text(encoding="utf-8")
+        for prova in ("Padrone delle Menti", "ex-schiavi drow", "Yochlol half-illithid",
+                      "Ring of Chaotic Illumination", "biologo da torre"):
+            with self.subTest(prova=prova):
+                self.assertIn(prova, t)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,7 +1,7 @@
 # Xal'thor — Illithid Commander [POINTER — canonical file] [RIMANDO]
 **Key stats**: → `Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md` (i numeri stanno lì; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
-**Faction**: aberration | **Role**: boss-psi-commander | **Environment**: urban,dungeon | **CR**: 14
+**Faction**: illithid-xal-thor | **Role**: boss-psi-commander | **Environment**: urban,dungeon | **CR**: 14
 **Source**: `Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md` (canonical scheda, GS 14, Illithid + Psion 6, livello effettivo 14)
 **Status**: POINTER — NON duplicare lo statblock qui.
 

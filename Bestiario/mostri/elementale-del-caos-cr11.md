@@ -1,7 +1,7 @@
 # Elementale del Caos [POINTER — statblocco nell'arco] [RIMANDO]
 **Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE3-STATBLOCCHI-Livello4.md` (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
-**Faction**: unknown | **Role**: generalist | **Environment**: dungeon | **CR**: 11
+**Faction**: illithid-zalkatar | **Role**: generalist | **Environment**: dungeon | **CR**: 11
 **Source**: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE3-STATBLOCCHI-Livello4.md` (statblocco d'arco, GS 11)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 

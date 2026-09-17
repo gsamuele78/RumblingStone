@@ -2023,6 +2023,68 @@ drago lo *nomina* soltanto → ripuntandola a `P5-FASTPLAY` il `P6-INTEGRAZIONE`
 Hammerfist**, l'antenato di Othrek. Due PNG di canone che nessuno strumento
 raggiungeva, trovati da una correzione di percorso.
 
+#### 4.8.13 · Lotto **4d-7** — il Padrone delle Menti ha un nome, e gli illithid una fazione
+
+`[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests/test_catalogo_una_voce_per_creatura.py` verde; 871 test; `validate_bestiario` in sync su 397 record]`
+
+Il DM, il 2026-09-17: *«sì, è Zalkatar il Padrone delle Menti»*. Una riga, e
+chiude la quarta domanda di 4d-6 — *«gli illithid di Xal'thor cosa facevano?»*
+
+##### La risposta era che la domanda riguardava l'altro conclave
+
+Le due ipotesi del DM erano **l'Anello del Caos** e **lo scambio di schiavi con
+Sonjak**. Misurate contro il canone scritto:
+
+| Ipotesi | Esito |
+|---|---|
+| Xal'thor cerca l'Anello | ❌ la sua scheda dichiara *«**unico bersaglio** al Torneo: i Bracieri Gemelli»* e rifiuta esplicitamente l'Orbe. Un terzo obiettivo gli toglierebbe l'unica cosa che lo rende **il villain di Tordek** |
+| Scambio di schiavi con Sonjak | ✅ **non è un'ipotesi: è già giocato e mai spiegato.** I Grimlock Ceremorphi di ARC-04 sono **«ex-schiavi drow»**, e le Yochlol half-illithid del raid alla Corona portano un template che *qualcuno* ha innestato |
+
+🔴 **Ma il compratore non poteva essere Xal'thor, e il canone lo dice con le sue
+parole.** I due conclavi si disprezzano proprio su questo: Xal'thor chiama
+Zalkatar *«biologo da torre, ossessionato da esperimenti sterili»*; Zalkatar
+chiama lui *«cacciatore di mandria»*. Un vivaio di girini con celle d'innesto
+**è** il biologo da torre.
+
+E c'era una terza prova che nessuno aveva letto insieme alle altre: il **Ring of
+Chaotic Illumination si risveglia in quel laboratorio**
+(`campaign-artifacts.md`), quando Artemis rifiuta la classe di prestigio. Il
+conclave che gestiva quella stanza ha una ragione **documentata** per inseguire
+Artemis — e l'arco di Artemis **è già** la Torre di Zalkatar.
+
+##### Cosa è entrato
+
+- **`Bestiario/villain/Zalkatar/Zalkatar.md`** — dossier `[NON-CREATURA]` che
+  registra il canone con le sue quattro prove, e il filo Sonjak → laboratorio →
+  Anello → Torre.
+- **Due fazioni dichiarate**: `illithid-zalkatar` (13 voci: la Torre, Sethrax, i
+  custodi) e `illithid-xal-thor` (6: Xal'thor, la Forma del Nucleo, Zarim, gli
+  schiavi psionici). Le **9 voci `unknown`** che 4d-6 aveva lasciato al DM sono
+  chiuse.
+- **Cross-riferimenti** nei tre punti dove il DM li cercherà: i due file del
+  laboratorio ARC-04, la scheda di Sonjak, quella di Urialle.
+
+🐛 **Quel che la misura ha trovato per strada.** Prima di questo canone gli
+illithid stavano su **quattro** etichette diverse: **Zarim** era marcato
+`red-hand` mentre la sua stessa scheda dice *«legato alla fazione di Xal'thor»*,
+Xal'thor era `aberration`, la sua Forma del Nucleo `unknown`. E
+`build_monster_catalog.py` teneva la parola **`zalkatar` nell'elenco di parole
+chiave di `red-hand`**: un illithid warlock classificato come Mano Rossa.
+
+⚠️ **E scrivere il cross-riferimento ha spostato una fazione da solo.** Citare
+Zalkatar nella scheda di **Urialle** ha fatto passare l'euristica da
+`aberration` a `illithid-zalkatar` — ma Urialle combatte per **Sonjak**: lui le
+ha solo innestato il template. La correzione non è stata togliere la citazione,
+è stata **dichiarare** la sua fazione (ADR-0041): un valore dichiarato non lo
+sposta una menzione.
+
+🔎 **E il marcatore `[NON-CREATURA]` è una stringa esatta, non prosa.** La prima
+stesura del dossier scriveva `[NON-CREATURA — dossier di fazione]`, e il
+builder cerca la forma letterale: Zalkatar era finito nel pool degli incontri
+come un mostro da GS 13. L'ha visto il cancello delle non-creature, che tiene un
+elenco **deliberatamente chiuso** — *«aggiungerne una è una riga qui e una
+scelta»*.
+
 #### 4.8.6 — FASE 3 · Validazione
 
 | Prova | Criterio |

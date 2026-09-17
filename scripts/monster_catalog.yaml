@@ -107,13 +107,6 @@ monsters:
     role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/myconid-guard-cr4.md"
-  - id: grell-torre-invisibile-561f15
-    name: "Grell (Torre Invisibile)"
-    cr: 5.0
-    faction: aberration
-    role: flier
-    environment: dungeon
-    source_file: "Bestiario/mostri/grell-torre-cr5.md"
   - id: grimlock-ceremorfo-326e16
     name: "Grimlock Ceremorfo"
     cr: 5.0
@@ -191,13 +184,6 @@ monsters:
     role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/carcassa-vivente-cr9.md"
-  - id: oblex-versione-media-avanzata-db7632
-    name: "Oblex (versione media/avanzata)"
-    cr: 9.0
-    faction: aberration
-    role: generalist
-    environment: dungeon
-    source_file: "Bestiario/mostri/oblex-avanzato-cr9.md"
   - id: 00-cr10-guardiano-delle-rovine-prima-della-cattedrale-srd-bebilith-d-d-wiki-ae0d28
     name: "00 Cr10 Guardiano Delle Rovine Prima Della Cattedrale Srd Bebilith   D&D Wiki"
     cr: 10.0
@@ -275,21 +261,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/00_scaladossa-abbattor-funghi/Fight_fungi_colony-formatted.txt"
-  - id: sethrax-il-velato-emissario-illithid-della-torre-invisibile-fab37e
-    name: "SETHRAX IL VELATO — EMISSARIO ILLITHID DELLA TORRE INVISIBILE"
-    cr: 12.0
-    faction: aberration
-    role: generalist
-    environment: any
-    source_file: "Bestiario/villain/Sethrax_il_Velato/Sethrax.md"
-  - id: zarim-luogotenente-illithid-aebddf
-    name: "Zarim — luogotenente illithid"
-    cr: 12.0
-    faction: aberration
-    role: villain
-    environment: any
-    source_file: "Bestiario/villain/Zarim/Zarim.md"
-    notes: "distinto da Xal'thor (comandante) e Sethrax (agente al Torneo)."
   - id: antenato-nanico-cr13-c87193
     name: "Antenato Nanico Cr13"
     cr: 13.0
@@ -332,34 +303,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "03_la Cittadella/01_Il Guardiano/Il Guardiano Beholder.html"
-  - id: stat-blocchi-boss-zalkatar-illithid-warlock-cr-13-972015
-    name: "Stat blocchi – Boss Zalkatar Illithid Warlock (CR 13)"
-    cr: 13.0
-    faction: aberration
-    role: boss
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md"
-  - id: urialle-yochlol-half-illithid-prima-sacerdotessa-del-raid-0d668b
-    name: "URIALLE — Yochlol half-illithid, prima sacerdotessa del raid"
-    cr: 14.0
-    faction: aberration
-    role: generalist
-    environment: dungeon
-    source_file: "Bestiario/villain/Urialle/Urialle.md"
-  - id: xal-thor-coordinatore-illithid-dell-invasione-planare-033fe8
-    name: "XAL'THOR — COORDINATORE ILLITHID DELL'INVASIONE PLANARE"
-    cr: 14.0
-    faction: aberration
-    role: generalist
-    environment: any
-    source_file: "Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md"
-  - id: xal-thor-illithid-commander-e82cf7
-    name: "Xal'thor — Illithid Commander"
-    cr: 14.0
-    faction: aberration
-    role: boss-psi-commander
-    environment: urban
-    source_file: "Bestiario/villain/Xal_thor/xal-thor-illithid-commander-cr14.md"
   - id: parte-1c-rituale-di-hellas-e-tre-ondate-difensive-b8dac1
     name: "Parte 1C – Rituale di Hellas e Tre Ondate Difensive"
     cr: 5.0
@@ -1137,6 +1080,13 @@ monsters:
     role: caster-divine
     environment: underdark
     source_file: "Bestiario/villain/Sonjak/Sonjak.md"
+  - id: urialle-yochlol-half-illithid-prima-sacerdotessa-del-raid-0d668b
+    name: "URIALLE — Yochlol half-illithid, prima sacerdotessa del raid"
+    cr: 14.0
+    faction: drow-sonjak
+    role: caster-divine
+    environment: underdark
+    source_file: "Bestiario/villain/Urialle/Urialle.md"
   - id: battaglia-finale-fase-1-6850b8
     name: "Battaglia Finale – Fase 1"
     cr: 15.0
@@ -1370,6 +1320,140 @@ monsters:
     environment: mountain
     source_file: "Bestiario/png/Thorin_Runaforte.md"
     notes: "uno dei 4 pregen (D6). ⚠️ **Thorin** = pregen chierico; **Thorik** = PG guerriero; **Thorek** = re. Tre persone diverse (D2, A10)."
+  - id: schiavo-psionico-cultista-69d482
+    name: "Schiavo Psionico / Cultista"
+    cr: 4.0
+    faction: illithid-xal-thor
+    role: fodder
+    environment: urban
+    source_file: "Bestiario/mostri/schiavo-psionico-cultista-cr4.md"
+  - id: zarim-luogotenente-illithid-aebddf
+    name: "Zarim — luogotenente illithid"
+    cr: 12.0
+    faction: illithid-xal-thor
+    role: villain
+    environment: any
+    source_file: "Bestiario/villain/Zarim/Zarim.md"
+    notes: "distinto da Xal'thor (comandante) e Sethrax (agente al Torneo)."
+  - id: zarim-luogotenente-illithid-di-xal-thor-f9212b
+    name: "Zarim — luogotenente illithid di Xal'thor"
+    cr: 12.0
+    faction: illithid-xal-thor
+    role: elite-psi-caster
+    environment: urban
+    source_file: "Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md"
+  - id: xal-thor-coordinatore-illithid-dell-invasione-planare-033fe8
+    name: "XAL'THOR — COORDINATORE ILLITHID DELL'INVASIONE PLANARE"
+    cr: 14.0
+    faction: illithid-xal-thor
+    role: generalist
+    environment: any
+    source_file: "Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md"
+  - id: xal-thor-illithid-commander-e82cf7
+    name: "Xal'thor — Illithid Commander"
+    cr: 14.0
+    faction: illithid-xal-thor
+    role: boss-psi-commander
+    environment: urban
+    source_file: "Bestiario/villain/Xal_thor/xal-thor-illithid-commander-cr14.md"
+  - id: xal-thor-variante-forma-del-nucleo-a8031c
+    name: "Xal'thor — variante «Forma del Nucleo»"
+    cr: 16.0
+    faction: illithid-xal-thor
+    role: boss
+    environment: urban
+    source_file: "Bestiario/villain/xal-thor-forma-del-nucleo-cr16.md"
+  - id: costrutto-di-guardia-armatura-animata-avanzata-60c0d7
+    name: "Costrutto di Guardia (Armatura Animata Avanzata)"
+    cr: 5.0
+    faction: illithid-zalkatar
+    role: melee-heavy
+    environment: dungeon
+    source_file: "Bestiario/mostri/costrutto-di-guardia-cr5.md"
+  - id: grell-torre-invisibile-561f15
+    name: "Grell (Torre Invisibile)"
+    cr: 5.0
+    faction: illithid-zalkatar
+    role: flier
+    environment: dungeon
+    source_file: "Bestiario/mostri/grell-torre-cr5.md"
+  - id: sciame-di-libri-animati-0a389d
+    name: "Sciame di Libri Animati"
+    cr: 6.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: dungeon
+    source_file: "Bestiario/mostri/sciame-libri-animati-cr6.md"
+  - id: echo-construct-copia-illusoria-tangibile-fbcd1d
+    name: "Echo Construct (copia illusoria tangibile)"
+    cr: 7.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: dungeon
+    source_file: "Bestiario/mostri/echo-construct-cr7.md"
+  - id: spettri-di-conoscenza-2ac8be
+    name: "Spettri di Conoscenza"
+    cr: 7.0
+    faction: illithid-zalkatar
+    role: caster-arcane
+    environment: dungeon
+    source_file: "Bestiario/mostri/spettri-di-conoscenza-cr7.md"
+  - id: oblex-versione-media-avanzata-db7632
+    name: "Oblex (versione media/avanzata)"
+    cr: 9.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: dungeon
+    source_file: "Bestiario/mostri/oblex-avanzato-cr9.md"
+  - id: golem-bibliotecario-919fdf
+    name: "Golem Bibliotecario"
+    cr: 10.0
+    faction: illithid-zalkatar
+    role: melee-heavy
+    environment: dungeon
+    source_file: "Bestiario/mostri/golem-bibliotecario-cr10.md"
+  - id: guardiano-di-luce-elementale-costrutto-137b57
+    name: "Guardiano di Luce (elementale/costrutto)"
+    cr: 10.0
+    faction: illithid-zalkatar
+    role: melee-heavy
+    environment: dungeon
+    source_file: "Bestiario/mostri/guardiano-di-luce-cr10.md"
+  - id: parte-2a-torre-invisibile-fda0d2
+    name: "Parte 2A – Torre Invisibile"
+    cr: 10.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: mountain
+    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE2-Livelli2-3.md"
+  - id: elementale-del-caos-cf3818
+    name: "Elementale del Caos"
+    cr: 11.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: dungeon
+    source_file: "Bestiario/mostri/elementale-del-caos-cr11.md"
+  - id: parte-2a-torre-invisibile-cae99e
+    name: "Parte 2A – Torre Invisibile"
+    cr: 11.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: mountain
+    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE3-Livello4.md"
+  - id: sethrax-il-velato-emissario-illithid-della-torre-invisibile-fab37e
+    name: "SETHRAX IL VELATO — EMISSARIO ILLITHID DELLA TORRE INVISIBILE"
+    cr: 12.0
+    faction: illithid-zalkatar
+    role: generalist
+    environment: any
+    source_file: "Bestiario/villain/Sethrax_il_Velato/Sethrax.md"
+  - id: stat-blocchi-boss-zalkatar-illithid-warlock-cr-13-972015
+    name: "Stat blocchi – Boss Zalkatar Illithid Warlock (CR 13)"
+    cr: 13.0
+    faction: illithid-zalkatar
+    role: boss
+    environment: mountain
+    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md"
   - id: loxo-warrior-3-f4dec5
     name: "Loxo Warrior 3"
     cr: 4.0
@@ -1927,13 +2011,6 @@ monsters:
     role: elite-envoy-caster
     environment: thornwaste
     source_file: "Bestiario/villain/emissario-red-hand-cr12.md"
-  - id: zarim-illithid-luogotenente-cr12-f9212b
-    name: "zarim-illithid-luogotenente-cr12"
-    cr: 12.0
-    faction: red-hand
-    role: elite-psi-caster
-    environment: urban
-    source_file: "Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md"
   - id: battaglia-finale-fase-2-aa8806
     name: "Battaglia Finale – Fase 2"
     cr: 13.0
@@ -2357,20 +2434,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/png/Lirien/Lirien.md"
-  - id: schiavo-psionico-cultista-69d482
-    name: "Schiavo Psionico / Cultista"
-    cr: 4.0
-    faction: unknown
-    role: fodder
-    environment: urban
-    source_file: "Bestiario/mostri/schiavo-psionico-cultista-cr4.md"
-  - id: costrutto-di-guardia-armatura-animata-avanzata-60c0d7
-    name: "Costrutto di Guardia (Armatura Animata Avanzata)"
-    cr: 5.0
-    faction: unknown
-    role: melee-heavy
-    environment: dungeon
-    source_file: "Bestiario/mostri/costrutto-di-guardia-cr5.md"
   - id: minotaur-karkilan-cr5-a551fd
     name: "Minotaur Karkilan Cr5"
     cr: 5.0
@@ -2413,13 +2476,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Ozzyrandion green 8 liv.htm"
-  - id: sciame-di-libri-animati-0a389d
-    name: "Sciame di Libri Animati"
-    cr: 6.0
-    faction: unknown
-    role: generalist
-    environment: dungeon
-    source_file: "Bestiario/mostri/sciame-libri-animati-cr6.md"
   - id: capitan-loranna-anitah-becbe7
     name: "Capitan Loranna Anitah"
     cr: 7.0
@@ -2434,13 +2490,6 @@ monsters:
     role: generalist
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/duergar_mage_rougue_8.htm"
-  - id: echo-construct-copia-illusoria-tangibile-fbcd1d
-    name: "Echo Construct (copia illusoria tangibile)"
-    cr: 7.0
-    faction: unknown
-    role: generalist
-    environment: dungeon
-    source_file: "Bestiario/mostri/echo-construct-cr7.md"
   - id: jorr-natherson-474dd7
     name: "Jorr Natherson"
     cr: 7.0
@@ -2455,13 +2504,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/monaco pugno del destino cr7.htm"
-  - id: spettri-di-conoscenza-2ac8be
-    name: "Spettri di Conoscenza"
-    cr: 7.0
-    faction: unknown
-    role: caster-arcane
-    environment: dungeon
-    source_file: "Bestiario/mostri/spettri-di-conoscenza-cr7.md"
   - id: fantino-cavaliere-corsa-pulita-51bed3
     name: "Fantino Cavaliere — \"corsa pulita\""
     cr: 8.0
@@ -2546,20 +2588,6 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-STATBLOCCHI.md"
-  - id: golem-bibliotecario-919fdf
-    name: "Golem Bibliotecario"
-    cr: 10.0
-    faction: unknown
-    role: melee-heavy
-    environment: dungeon
-    source_file: "Bestiario/mostri/golem-bibliotecario-cr10.md"
-  - id: guardiano-di-luce-elementale-costrutto-137b57
-    name: "Guardiano di Luce (elementale/costrutto)"
-    cr: 10.0
-    faction: unknown
-    role: melee-heavy
-    environment: dungeon
-    source_file: "Bestiario/mostri/guardiano-di-luce-cr10.md"
   - id: incontro-1-pattuglia-elementali-piccoli-f5e82e
     name: "INCONTRO 1: PATTUGLIA ELEMENTALI PICCOLI"
     cr: 10.0
@@ -2574,13 +2602,6 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-STATBLOCCHI.md"
-  - id: parte-2a-torre-invisibile-fda0d2
-    name: "Parte 2A – Torre Invisibile"
-    cr: 10.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE2-Livelli2-3.md"
   - id: feat-alliance-system-standalone-loot-generator-v2-dmg-3-5-tab-3-5-c8cb26
     name: "feat: Alliance System + Standalone Loot Generator v2 (DMG 3.5 Tab. 3-5)"
     cr: 10.0
@@ -2609,13 +2630,6 @@ monsters:
     role: caster-divine
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/abbathor_clerics11.htm"
-  - id: elementale-del-caos-cf3818
-    name: "Elementale del Caos"
-    cr: 11.0
-    faction: unknown
-    role: generalist
-    environment: dungeon
-    source_file: "Bestiario/mostri/elementale-del-caos-cr11.md"
   - id: epic-fight-dwarf-duergar-810ce0
     name: "Epic Fight Dwarf Duergar"
     cr: 11.0
@@ -2644,13 +2658,6 @@ monsters:
     role: generalist
     environment: aerial
     source_file: "07_il Portale Della Forgia Eterna/PortaleForgia-P3-PianoFuoco-PARTE1.md"
-  - id: parte-2a-torre-invisibile-cae99e
-    name: "Parte 2A – Torre Invisibile"
-    cr: 11.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE3-Livello4.md"
   - id: shadow-marsh-complete-guide-c9fb2d
     name: "Shadow Marsh Complete Guide"
     cr: 12.0
@@ -2700,13 +2707,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md"
-  - id: xal-thor-variante-forma-del-nucleo-a8031c
-    name: "Xal'thor — variante «Forma del Nucleo»"
-    cr: 16.0
-    faction: unknown
-    role: boss
-    environment: urban
-    source_file: "Bestiario/villain/xal-thor-forma-del-nucleo-cr16.md"
   - id: thug-spettatore-sicario-guerriero-3-24b2bc
     name: "Thug spettatore / sicario — Guerriero 3"
     cr: 3.0

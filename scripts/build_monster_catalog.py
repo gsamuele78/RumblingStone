@@ -52,6 +52,16 @@ CR_PATTERNS = [
 # don't get swallowed by the hobgoblin horde.
 FACTION_KEYWORDS = {
     "dragon": ["abithriax", "arbitrax", "regiarix", "ozyrrandion", "tyrgarun", "fauci di palude", "razorfiend", "drago rosso", "drago nero", "drago verde", "drago blu", "dragon adult", "dragon young", "wyrmling", "drago "],
+    # I due conclavi illithid vanno PRIMA di `aberration`, che altrimenti se li
+    # prende tutti con `mind flayer`/`illithid`. Sono fazioni distinte e ostili
+    # fra loro (canone: Xal'thor chiama Zalkatar «biologo da torre», Zalkatar
+    # chiama lui «cacciatore di mandria»), e il DM ha dichiarato il 2026-09-17
+    # che Zalkatar e' «il Padrone delle Menti» del laboratorio di ARC-04.
+    "illithid-zalkatar": ["zalkatar", "sethrax", "kethran", "torre invisibile",
+                          "padrone delle menti", "spettri di conoscenza",
+                          "golem bibliotecario", "guardiano di luce"],
+    "illithid-xal-thor": ["xal'thor", "xal thor", "xal-thor", "zarim",
+                          "schiavo psionico", "forma del nucleo"],
     "aberration": ["myconid", "beholder", "bebilith", "retriever", "grell", "xorn", "black pudding", "cubo gelatinoso", "celebromorf", "phantom fungus", "antenato nanico", "mind flayer", "illithid"],
     "ghostlord-undead": ["ghostlord", "bone naga", "deathlock", "skeletal", "spectre", "allip", "lich", "ghost lion"],
     "rakshasa": ["rakshasa", "collezionista"],
@@ -65,7 +75,9 @@ FACTION_KEYWORDS = {
     "rethmar-defender": ["rethmar", "valerius", "lorana"],
     "dauth-defender": ["dauth", "thorek", "dwarf defender", "tordek", "morlin", "rurik"],
     "hammerfist-hero": ["borin ferropugno", "dara occhiolesto", "thorin runaforte", "nala cantapietre", "tempestas", "dana forgiapietra", "lunapiena", "ventolesto", "orion pelleorsa"],
-    "red-hand": ["hobgoblin", "red hand", "mano rossa", "wyrmlord", "goblin", "worg", "bugbear", "orc", "ogre", "ettin", "hell hound", "kulkor", "draxoksus", "koth", "azarr kul", "tiamat", "saarvith", "zalkatar"],
+    "red-hand": ["hobgoblin", "red hand", "mano rossa", "wyrmlord", "goblin", "worg", "bugbear", "orc", "ogre", "ettin", "hell hound", "kulkor", "draxoksus", "koth", "azarr kul", "tiamat", "saarvith"],
+    # ⚠️ «zalkatar» stava in questo elenco: e' un illithid warlock della
+    # Torre Invisibile, non un comandante della Mano Rossa.
 }
 
 

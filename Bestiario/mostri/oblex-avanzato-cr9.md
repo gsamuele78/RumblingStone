@@ -1,7 +1,7 @@
 # Oblex (versione media/avanzata) [POINTER — statblocco nell'arco] [RIMANDO]
 **Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE2-STATBLOCCHI-Livelli2-3.md` (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
-**Faction**: aberration | **Role**: generalist | **Environment**: dungeon | **CR**: 9
+**Faction**: illithid-zalkatar | **Role**: generalist | **Environment**: dungeon | **CR**: 9
 **Source**: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE2-STATBLOCCHI-Livelli2-3.md` (statblocco d'arco, GS 9)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 
