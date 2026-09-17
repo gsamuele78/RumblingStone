@@ -1144,8 +1144,7 @@ Vale per **ogni** commit di **ogni** fase.
 | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD, e porta il **perimetro della v1**. ✅ **I due avvertimenti che bloccavano la domanda sono tolti**: l'audit mancante è stato **rifatto da zero** ([`AUDIT-DERIVAZIONE-IP-CAMPAGNA`](../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md)), e la tesi **regge sul repo di oggi** — archi 07+08 a **0,2** e **0,7** occorrenze RHoD per 1.000 parole contro il **5,6** dell'arco 09. 🔎 **E la misura ha aggiunto due cose che la #72 non sapeva**: il **`Bestiario/` è a 3,0** e **esce col modulo** — un perimetro che tace su di lui lascia fuori il conto una dipendenza vera — e i **moduli autoconclusivi sono già puliti** (`10-stand-alone` e il Drappo a **0,0**), quindi su quest'asse il prodotto della linea 3 di `PIANO-VENDIBILITA` è pronto. 🔴 **Cosa resta da decidere al DM**: (a) si adotta il perimetro così com'è? (b) il **bestiario** sta dentro o fuori? (c) l'ADR resta proposta finché non c'è la **verifica di un avvocato IP**, che l'audit non sostituisce — conta i nomi, non la struttura |
 | ~~D14~~ | F4 · 4d-2 | ✅ **CHIUSA E ATTUATA il 2026-09-16, nello stesso commit.** Il DM: *«la riga va in state.yml e poi riportata in state.md»*. Misurata, la risposta regge: la tabella dei waypoint è **dato puro** (10 righe) e il March Day è **un campo** (`march_clock.giorno_corrente`); il paragrafo di cinque righe che spiega perché il Giorno 19 è un bersaglio e non un passato resta **prosa, sotto e fuori** dalla regione generata. Separati, la macchina riscrive la sua riga a ogni sessione senza mai toccare la nota del DM — che era il nodo. ⚠️ La regione `auto:march-clock` **sparisce**, e marcarla oggi sarebbe *peggio* di prima: una regione dentro una `gen:state:` sono due scrittori sullo stesso testo. Sparisce anche `RETHMAR_DAY = 42`, cablato in `state_apply`: era la seconda fonte di verità più piccola del repo, e sopravviveva perché nessuno aveva mai eseguito il tool. Vedi **§4.8.9** e [ADR-0052](adr/ADR-0052-cosa-e-dato-e-cosa-e-prosa.md) |
 | ~~D16~~ | F4 · 4d-2 | ✅ **CHIUSA E ATTUATA il 2026-09-16, nello stesso commit.** Il DM ha scelto l'enumerazione **con il compagno**: `attivo · latitante · neutralizzato · morto · ignoto`, più `reversibile`. ⚒️ `neutralizzato` copre il caso più frequente al tavolo — sconfitto ma non morto — e senza di lui il DM dovrebbe scrivere `morto` per non scrivere `attivo`. 🔴 **E `reversibile` è la metà che conta**: in questa campagna un morto torna (il Ghostlord nasce da un morto, Sal è protetto da un paradosso auto-consistente, Hella è morta in attesa del rito), quindi registrare «morto» senza dire se è definitivo è registrare **meno di quel che il canone sa**. La regola **R9** lo pretende. ⚠️ `state_apply` scrive `stato` ma **non** `reversibile`: il primo è la lettura letterale del log, il secondo è una decisione narrativa, e R9 la chiede al DM alla prima esecuzione — provato sul canone vero. 🔎 **§4 conoscenze è stata esclusa dopo averla misurata**, benché il DM avesse chiesto di includerla: tre righe non sono persone e tre persone compaiono sotto due nomi, quindi `stato` lì vorrebbe dire un valore privo di senso in tre casi e due copie divergenti in altri tre. Va nell'anagrafica del lotto della chiave. Vedi **§4.8.9** |
-| **D17** 🆕 | F4 · 4d-4 | 🔵 **I due villain senza scheda: si scrivono o si tolgono da §3?** Il lotto della chiave verso `Bestiario/` (campo `scheda:` + cancello che verifica il percorso) è deciso, ma misurando è emerso che **Zalkatar (Illithid Warlock)** e **Wyrmlord Saarvith + Regiarix** hanno una riga in §3 con agenda e clock in corsa, e **nessuna scheda nel Bestiario** — mentre gli altri 11 ce l'hanno. Le strade: (a) si scrivono le due schede mancanti, e il cancello può pretendere che `scheda:` esista su tutte le righe; (b) il campo resta opzionale e le righe senza scheda **si contano** come le 58 righe senza `tempo` (forma di ADR-0041); (c) le due righe escono da §3 perché non sono villain attivi ma comparse. ⚠️ È **contenuto, non infrastruttura**: scrivere due schede è canone, e non lo decido io. Stesso discorso per gli **8 PNG su 31** di §4 che non si agganciano |
-| ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
+| ~~D17~~ | F4 · 4d-4 | ✅ **CHIUSA E ATTUATA il 2026-09-17, nello stesso commit.** Scelta la via del **contare**: scrivere due statblock è canone, e un lotto d'infrastruttura non scrive canone; togliere da §3 due villain con clock in corsa (Zalkatar 6/8, Saarvith 3/8) sarebbe **perdere stato vivo** per far tornare un conto. 🔴 **E rimisurando è emerso il fatto che decide l'architettura**: allentare il confronto di stringhe non riduce l'ignoranza, la **traveste** — aggancia «Zalkatar» a Xal'thor o Zarim (due illithid diversi), «Saarvith + Regiarix» a Wyrmlord Karruk, il Cerchio Druidico all'orso alleato, e «Zalkatar (via Sethrax)» a **Sethrax**, che è il tramite e non il soggetto. Quest'ultimo è il peggiore: punta a un PNG che esiste, quindi supera ogni controllo di esistenza. ✅ Attuata come **anagrafica dichiarata** — 28 voci, 24 con scheda verificata contro il filesystem (R11), 4 buchi contati con il perché scritto (R12). Vedi **§4.8.10** e [ADR-0053](adr/ADR-0053-la-chiave-verso-il-bestiario-si-dichiara.md) |\n| ~~D5~~ | ~~fuori piano~~ | ✅ **deciso e fatto il 2026-09-04**: il DM l'ha messo in cima alla coda, ed è chiuso insieme al punto cieco di `validate_maps` (ADR-0043) |
 | ~~D6~~ | F1 | ✅ **decisa 2026-09-04: ridisegnata.** `…P1C` mappa 3 dichiarava 40×40 e aveva righe da 24 a 26 celle: rifatta **26×29**, nessuna coordinata del testo cambiata |
 
 ---
@@ -1743,6 +1742,69 @@ del commit, che è esattamente il lavoro per cui esiste.
 | ⬜ | **la chiave verso `Bestiario/`** — campo `scheda:` + cancello che verifica il percorso; è il lotto successivo, deciso dal DM | 2 villain e 8 PNG da risolvere a mano |
 | ⬜ | le tabelle ancora non modellate (§2.2, §2.3, §2.5, §5, §7.R) | **46 righe** |
 | ⬜ | §7 fili narrativi: semi-strutturati, e modellarli adesso vorrebbe dire indovinare uno schema | 24 bullet |
+
+#### 4.8.10 · Lotto **4d-4** — la chiave verso il Bestiario (D17 chiusa)
+
+[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests -q` → 830 test;
+`render_state.py --check` **byte-identico** dopo tutto il lotto; sei cancelli
+nuovi provati all'indietro, tutti rossi]
+
+##### FASE 1 · Audit — e il numero di ieri era ottimista
+
+ADR-0052 aveva misurato **11 villain su 13** e **23 righe di §4 su 31**
+agganciabili per somiglianza. Rimisurando prima di costruire, quel confronto era
+**severo**: pretendeva tutte le parole del nome della cartella, e produceva solo
+silenzi. Allentandolo, le righe agganciate salgono — e le nuove risposte sono
+**sbagliate**:
+
+| Riga in `state.yaml` | Cosa aggancia un confronto permissivo | |
+|---|---|---|
+| `Zalkatar (Illithid Warlock)` | `Xal_thor` **oppure** `Zarim` | due illithid diversi |
+| `Wyrmlord Saarvith + Regiarix` | `Wyrmlord_Karruk` | un altro wyrmlord |
+| `Zalkatar (via Sethrax)` | `Sethrax_il_Velato` | ma chi **sa** è Zalkatar |
+| `Druid Circle of the Sacred Forest` | `druid-bear-ally-cr12.md` | l'orso alleato |
+
+🔴 **È la misura che decide l'architettura.** Un matcher più generoso non riduce
+l'ignoranza: la **traveste**. Il quarto caso è il peggiore perché «Sethrax» è un
+PNG che esiste davvero — il collegamento sbagliato supera qualunque controllo di
+esistenza.
+
+🔎 **Seconda cosa emersa misurando**: il `Bestiario/` non ha un file per persona.
+La scheda canonica sta in `X/X/X.md` o `X/X.md`, il `*-crN.md` in cima è spesso
+un **puntatore**, e Brenna Sorvane, Sertieren e Norro Wiston vivono come
+**sezione dentro un file di gruppo**. Nessuna derivazione dal nome può saperlo.
+
+##### FASE 2 · Sviluppo
+
+Sezione `png` in `state.yaml`: **28 voci** (`id` · `nome` · `tipo` · `scheda`),
+e `png_id` sulle **13** righe di §3 e le **31** di §4. Tre regole nuove in
+`validate_state`: **R10** (l'id risolve, è unico, e un buco porta il perché),
+**R11** (la scheda esiste sul filesystem), **R12** (i buchi si contano).
+
+**D17 — quattro buchi, e si contano.** Le tre strade erano scrivere le schede,
+contarle, o togliere le righe da §3. Contarle: scrivere due statblock è canone e
+un lotto d'infrastruttura non scrive canone; togliere da §3 due villain con
+clock in corsa (Zalkatar 6/8, Saarvith 3/8) sarebbe **perdere stato vivo** per
+far tornare un conto. Due dei quattro (`cerchio-sacro`, `lathander-mask`) sono
+**buchi corretti**: nessuna scheda è la risposta giusta.
+
+##### FASE 3 · Validazione
+
+| Prova | Criterio |
+|---|---|
+| **le schede esistono** | 24 percorsi verificati contro il filesystem, non contro una lista |
+| **la chiave corregge il matcher** | un test riproduce i quattro errori e verifica che l'anagrafica **non** li segua |
+| **il DM non paga niente** | `render_state --check` byte-identico: `png_id` non compare in `state.md` |
+| **i cancelli mordono** | 6 sabotaggi → 6 rossi |
+| **non-regressione** | 830 test, `validate_docs --sorgenti`, `dm.py doctor` |
+
+##### Cosa resta
+
+| | Cosa | |
+|---|---|---|
+| 🔵 | **le due schede mancanti** (Zalkatar, Saarvith+Regiarix) | contenuto, aspetta il DM |
+| ⬜ | `stato` sale dall'anagrafica: allora anche i PNG di §4 ne hanno uno | il `tipo` esiste già per quel giorno |
+| ⬜ | tabelle non modellate (§2.2, §2.3, §2.5, §5, §7.R) | 46 righe |
 
 #### 4.8.6 — FASE 3 · Validazione
 

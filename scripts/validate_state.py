@@ -44,6 +44,10 @@ Regole di coerenza (oltre allo schema)
   R9  `reversibile` è obbligatorio appena `stato` non è `attivo`: in questa
       campagna un morto torna, e registrare l'uscita di scena senza dire se è
       definitiva è registrare meno di quello che il canone sa
+  R10 ogni `png_id` risolve a una voce dell'anagrafica `png`, gli id sono unici,
+      e un `scheda: null` porta sempre il proprio perché
+  R11 ogni `scheda` dichiarata punta a un file che esiste davvero
+  R12 le voci senza scheda si CONTANO, per la stessa ragione di R7 e R8
 
 Uso
   python3 scripts/validate_state.py [--file PATH] [--json] [--verbose]
@@ -265,6 +269,73 @@ def reversibilita_mancante(d: dict) -> "list[str]":
     return errs
 
 
+# --- la chiave verso il Bestiario (D17) --------------------------------------
+
+#: Le sezioni le cui righe puntano all'anagrafica `png`.
+CON_PNG_ID = ("villain", "conoscenze")
+
+
+def riferimenti_rotti(d: dict) -> "list[str]":
+    """R10 · ogni `png_id` risolve a una voce dell'anagrafica.
+
+    Un id che non risolve e' un collegamento rotto che **nessuno vedrebbe**: il
+    nome per esteso resta leggibile nella riga, quindi il documento sembra sano
+    e solo la macchina inciampa.
+    """
+    noti = {r.get("id") for r in d.get("png") or []}
+    errs = []
+    for nome in CON_PNG_ID:
+        for i, r in enumerate(d.get(nome) or []):
+            pid = r.get("png_id")
+            if pid and pid not in noti:
+                errs.append(f"R10 · {nome}[{i}]: png_id '{pid}' non e' "
+                            "nell'anagrafica `png`")
+    return errs
+
+
+def schede_inesistenti(d: dict, radice: Path) -> "list[str]":
+    """R11 · ogni `scheda` dichiarata punta a un file che esiste davvero.
+
+    🔴 E' la regola che rende la chiave una chiave. Senza, `scheda` sarebbe una
+    stringa plausibile — cioe' la stessa cosa che si aveva prima, scritta meglio.
+    Le schede si spostano e si rinominano: questa regola se ne accorge il giorno
+    stesso, non sei settimane dopo al tavolo.
+    """
+    errs = []
+    for i, r in enumerate(d.get("png") or []):
+        s = r.get("scheda")
+        if s and not (radice / s).exists():
+            errs.append(f"R11 · png[{i}] ({r.get('id')}): la scheda '{s}' "
+                        "non esiste sul filesystem")
+    return errs
+
+
+def anagrafica_incoerente(d: dict) -> "list[str]":
+    """R10-bis · id unici, e un `scheda: null` porta sempre il suo perche'.
+
+    Un buco senza motivo scritto e' indistinguibile da una dimenticanza, e alla
+    rilettura qualcuno lo «corregge» indovinando — che e' il danno che tutto
+    questo lotto esiste per evitare.
+    """
+    errs = []
+    visti = {}
+    for i, r in enumerate(d.get("png") or []):
+        pid = r.get("id")
+        if pid in visti:
+            errs.append(f"R10-bis · png[{i}]: id '{pid}' gia' usato a png[{visti[pid]}]")
+        visti[pid] = i
+        if r.get("scheda") is None and not r.get("perche_senza_scheda"):
+            errs.append(f"R10-bis · png[{i}] ({pid}): `scheda: null` senza "
+                        "`perche_senza_scheda` — un buco senza motivo scritto "
+                        "verra' riempito indovinando")
+    return errs
+
+
+def png_senza_scheda(d: dict) -> "list[str]":
+    """R12 · chi non ha una scheda si CONTA, come R7 e R8."""
+    return [r.get("id") for r in d.get("png") or [] if r.get("scheda") is None]
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         prog="validate_state.py",
@@ -290,7 +361,9 @@ def main(argv=None) -> int:
 
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
     errors = (validate_schema(data, schema) + coherence_rules(data, schema)
-              + reversibilita_mancante(data))
+              + reversibilita_mancante(data) + riferimenti_rotti(data)
+              + anagrafica_incoerente(data)
+              + schede_inesistenti(data, ROOT))
 
     if args.json:
         print(json.dumps({"report_version": 1, "file": str(args.file.relative_to(ROOT)),
@@ -325,6 +398,12 @@ def main(argv=None) -> int:
               + ", ".join(f"{k} {v}" for k, v in sorted(ignoti.items())))
         print("     Non è un errore: è la risposta onesta quando i PG non "
               "sanno l'esito. Scende quando il DM lo dichiara.")
+    orfani = png_senza_scheda(data)
+    if orfani:
+        print(f"  ⚠ R12 · {len(orfani)} voci dell'anagrafica senza scheda nel "
+              f"Bestiario: {', '.join(orfani)}")
+        print("     Ognuna dichiara il perche'. Scrivere le schede mancanti e' "
+              "contenuto, non infrastruttura.")
     print(f"✓ validate_state: {args.file.name} valido — "
           f"{len(data['archi'])} archi, {len(data['party'])} PG, "
           f"{len(data['artefatti'])} artefatti, {aperti} [INFERRED] aperti, "
