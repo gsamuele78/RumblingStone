@@ -4,7 +4,7 @@
 portano statblocchi in prosa — Taglia/Tipo, DV, CA, TS — scritti dal DM. Ma
 `build_monster_catalog.py` e `suggest_encounter.py` costruiscono il pool degli
 incontri scansionando i file **con la forma dello statblock**, e quella forma
-d'arco non sempre la ha. Risultato: **37 fra PNG, villain e creature** avevano
+d'arco non sempre la ha. Risultato: **47 fra PNG, villain e creature** avevano
 statistiche complete e **nessuno strumento le raggiungeva**.
 
 Fra questi il campione del Torneo di Dauth (Monk 14), il boss dei campi drow
@@ -16,7 +16,11 @@ restano dove il DM le ha scritte — duplicarle creerebbe la seconda copia che
 ADR-0021 vieta.
 
 ⚠️ **Questo test e' il presidio.** Senza, il prossimo documento d'arco con
-statblocchi esce dal pool in silenzio, esattamente come questi trentasette.
+statblocchi esce dal pool in silenzio, esattamente come questi quarantasette.
+
+🔎 E il cancello se l'e' guadagnato subito: una volta scritto giusto ha trovato
+da solo **tre file** che la ricerca a mano aveva saltato — i villain iconici del
+torneo, le comparse dell'arena, i nemici della Quest di Hella.
 """
 from __future__ import annotations
 
@@ -103,8 +107,12 @@ class TestOgniStatblocDArcoEraggiungibile(unittest.TestCase):
                 self.assertIn("**Source**", testo)
 
     def test_il_pool_degli_incontri_e_cresciuto_e_resta_grande(self):
-        """Il guadagno pratico, fissato: erano 305 voci, adesso sono 342."""
-        self.assertGreaterEqual(len(CATALOGO), 342)
+        """Il guadagno pratico, fissato: erano 305 voci, adesso sono 352.
+
+        ⚠️ La soglia si alza quando il pool cresce: lasciarla sotto il valore
+        vero renderebbe il cancello piu' debole di quanto puo' essere.
+        """
+        self.assertGreaterEqual(len(CATALOGO), 352)
 
     def test_i_pointer_d_arco_puntano_a_file_che_esistono(self):
         """Stessa disciplina di R11 sull'anagrafica: un percorso si prova."""
