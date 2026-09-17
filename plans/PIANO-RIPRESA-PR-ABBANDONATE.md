@@ -1818,6 +1818,72 @@ forza nel `Bestiario/`** — due boss da GS 13 stanno in un arco.
 | ⬜ | `stato` sale dall'anagrafica: allora anche i PNG di §4 ne hanno uno | il `tipo` esiste già per quel giorno |
 | ⬜ | tabelle non modellate (§2.2, §2.3, §2.5, §5, §7.R) | 46 righe |
 
+#### 4.8.11 · Lotto **4d-5** — i PNG d'arco che nessuno strumento raggiungeva
+
+[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests -q` → 839 test;
+catalogo da **305 a 352** voci; il cancello nuovo ha trovato da solo **tre file**
+che la mia ricerca a mano aveva saltato]
+
+##### FASE 1 · Audit
+
+Richiesta del DM: *«verifica se in tutta la prosa degli archi ci sono altri PNG,
+villain e mostri che non sono presenti nel bestiario png e villain, e aggiungili»*.
+
+| Misura | |
+|---|---:|
+| documenti d'arco con statblocchi **in prosa** (Taglia/Tipo, DV, CA, TS) | **19** |
+| soggetti con statistiche estratti | **47 + 14** nominati con classe e livello |
+| già raggiungibili dagli strumenti | 10 |
+| 🔴 **con statistiche scritte e invisibili a ogni strumento** | **47** |
+
+🔴 **Il difetto, in una riga**: `build_monster_catalog.py` e
+`suggest_encounter.py` costruiscono il pool degli incontri scansionando i file
+che hanno **la forma** dello statblocco, e la forma d'arco spesso non la ha. Il
+campione del Torneo di Dauth (Monk 14), il boss dei campi drow (GS 13) e il
+Drago Rosso che guida l'invasione (GS 15) erano **scritti e irraggiungibili**.
+
+##### FASE 2 · Sviluppo — POINTER, non copie
+
+Quarantasette voci nuove col pattern **già in uso** nel repo
+(`capitana-lorana-cr7.md`): una voce che **rimanda** al file d'arco. Le
+statistiche restano dove il DM le ha scritte, perché duplicarle creerebbe la
+seconda copia che **ADR-0021** vieta.
+
+- **PNG nominati** (13): Grandmaster Rihan · Tetsu «Serpente di Vento» · Lady
+  Koryn · Ironclad Bruiser · Mistress of Mirrors · Thrain Ironfist · Grom
+  Skullcrusher · Zhen Windwhisper · Kira · Maestra Shen · Killiar Arrowswift
+- **Villain** (5): Xilthra Vel'ssin · Saarvith & Regiarix · Kragar il Re delle
+  Catene · Il Campione Caduto · Xal'thor «Forma del Nucleo»
+- **Creature** (29): la Torre Invisibile (golem, oblex, grell, sciami), i campi
+  drow, la colonia fungina, i comprimari dell'arena
+
+⚠️ **Grom Skullcrusher non è l'Ogre Skullcrusher**: barbaro GS 14 contro ogre
+GS 5. È la forma d'errore che 4d-4 aveva documentato, e un test la fissa.
+
+##### FASE 3 · Validazione
+
+| Prova | Criterio |
+|---|---|
+| **il pool è cresciuto** | `suggest_encounter` passa da **305 a 352** creature |
+| **il cancello trova da solo** | ha segnalato **3 file** che la ricerca a mano aveva saltato: i villain iconici del torneo, le comparse dell'arena, i nemici della Quest di Hella |
+| **i POINTER non copiano** | un test boccia una voce POINTER che porti statistiche: sarebbe la seconda copia |
+| **due vie di raggiungibilità** | il criterio è «gli strumenti ci arrivano», non «esiste una voce»: `build_monster_catalog` raggiunge già alcuni file d'arco direttamente |
+| **non-regressione** | 839 test, `validate_bestiario` (162 statblock), nove gate verdi |
+
+🐛 **E il cancello è nato sbagliato due volte, in un modo istruttivo.** Prima
+cercava l'aggancio nel campo `source_file` del catalogo — che però registra il
+file **scansionato**, cioè la voce del Bestiario, non l'arco a cui rimanda: dava
+per scoperti quattro file agganciati. Poi ignorava la seconda via, quella
+diretta. Il criterio giusto non è «esiste una voce nel Bestiario»: è **«gli
+strumenti ci arrivano»**.
+
+##### Cosa resta
+
+🔵 I POINTER dichiarano `faction: unknown` per i sedici comprimari del Torneo:
+non sono difensori di Dauth né Mano Rossa, e **inventare una fazione nuova per
+farli stare in tabella sarebbe inventare canone**. Il giorno che il DM decide
+come si chiama quel gruppo, sono sedici righe da cambiare.
+
 #### 4.8.6 — FASE 3 · Validazione
 
 | Prova | Criterio |
