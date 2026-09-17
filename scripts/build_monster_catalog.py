@@ -186,6 +186,102 @@ def extract_cr(text, fname=""):
                 continue
     return None
 
+# --- D18: un documento con piu' creature vale piu' di un record ---------------
+#
+# 🔴 **Il difetto misurato il 2026-09-17.** Questo builder produceva **un record
+# per file** e prendeva il primo GS che trovava. Un documento d'arco con dodici
+# creature diventava quindi **una voce sola**, intitolata al documento e con un
+# GS arbitrario: «Parte 2A – Torre Invisibile», GS 10. Erano **19 record** cosi',
+# e in `suggest_encounter --el 10` comparivano come se fossero mostri.
+#
+# Non era un buco di copertura — le creature della Torre hanno tutte voce propria
+# nel Bestiario — ma rumore che il DM vedeva al tavolo.
+#
+# Decisione del DM (D18): **spezzarli per intestazione, verificando che non
+# esistano gia'.**
+#
+# ⚠️ **La deduplica e' la parte delicata, ed e' ancorata a un fatto dichiarato.**
+# Confrontare nomi per somiglianza e' esattamente l'errore che ADR-0053 vieta.
+# Qui il confronto si fa **solo dentro l'insieme delle voci del Bestiario che
+# citano QUESTO file come `Source`** — cioe' un legame che qualcuno ha scritto,
+# non indovinato. Fuori da quell'insieme non si confronta niente.
+
+#: Un'intestazione che nomina una creatura porta il suo GS: «## 3. Guardiano di
+#: Luce (Elementale/Costrutto, CR 10)». Senza GS non e' un soggetto giocabile.
+SEZIONE = re.compile(
+    r"^#{2,4}\s+(?P<titolo>[^\n]*?\b(?:CR|GS)\s*~?\s*(?P<cr>\d+(?:[.,]\d+)?)"
+    r"(?:\s*[-–]\s*\d+)?[^\n]*)$",
+    re.M | re.IGNORECASE)
+
+#: Sotto questa soglia il documento descrive UNA creatura, e il record di file
+#: e' gia' quello giusto: spezzare non guadagnerebbe niente.
+MIN_SEZIONI = 2
+
+_RUMORE = re.compile(r"\b(?:cr|gs|ciascuno|ciascuna|circa|modello|versione|"
+                     r"avanzata?|media?|xp|px|el)\b|[0-9]", re.IGNORECASE)
+
+
+def _parole(titolo):
+    """Le parole che identificano un soggetto, senza la punteggiatura e i numeri."""
+    pulito = _RUMORE.sub(" ", titolo)
+    return {p for p in re.split(r"[^\wàèéìòù']+", pulito.lower()) if len(p) > 2}
+
+
+def sezioni_creatura(content):
+    """Le intestazioni che nominano una creatura con il suo GS.
+
+    Restituisce `[(titolo_pulito, cr), ...]`. Il titolo perde la numerazione
+    d'elenco («3. ») e la coda fra parentesi che porta solo il GS.
+    """
+    fuori = []
+    for m in SEZIONE.finditer(content):
+        # ⚠️ La numerazione e' **multi-livello** nel Palio («### 3.2 Drow
+        # Chierica»): togliere solo `\d+[.)]` lasciava «2 Drow Chierica», cioe'
+        # un nome che comincia per cifra. Misurato su otto voci.
+        titolo = re.sub(r"^\s*\d+(?:\.\d+)*[.)]?\s+", "", m.group("titolo")).strip()
+        # «Guardiano di Luce (Elementale/Costrutto, CR 10)» → si tiene tutto
+        # tranne il pezzo che ripete il GS, che diventa un campo a se'.
+        titolo = re.sub(r"[(,—–-]\s*(?:CR|GS)\s*~?\s*[\d.,\s–-]+\)?\s*$", "",
+                        titolo, flags=re.IGNORECASE).strip(" (,—–-")
+        # Se la coda tagliata ha lasciato una parentesi che non chiude piu'
+        # («Aldemar Vosk (LN»), si taglia da li': un nome a meta' e' peggio di
+        # un nome corto.
+        if titolo.count("(") > titolo.count(")"):
+            titolo = titolo[:titolo.rfind("(")].strip(" ,—–-")
+        if not titolo:
+            continue
+        try:
+            cr = float(m.group("cr").replace(",", "."))
+        except ValueError:
+            continue
+        fuori.append((titolo, cr))
+    return fuori
+
+
+def gia_nel_bestiario(titolo, cr, coperti):
+    """Il soggetto ha gia' una voce che punta a questo stesso file?
+
+    `coperti` sono **solo** le voci del Bestiario che dichiarano questo file
+    come fonte. Dentro quell'insieme il confronto per parole e' sicuro: il
+    legame documento↔voce e' gia' stato affermato da qualcuno, e qui si decide
+    soltanto *quale* delle sue voci corrisponde a *quale* intestazione.
+    """
+    mie = _parole(titolo)
+    if not mie:
+        return True          # un titolo senza parole proprie non si sa dedurre
+    for nome, cr_voce in coperti:
+        sue = _parole(nome)
+        if not sue:
+            continue
+        if sue <= mie or mie <= sue:
+            return True
+        # nomi diversi ma stesso GS e meta' delle parole in comune: e' la
+        # stessa creatura scritta due volte (p.es. «Grell» / «Grell (Torre)»)
+        if cr_voce == cr and len(mie & sue) >= max(1, min(len(mie), len(sue)) // 2):
+            return True
+    return False
+
+
 def extract_name(content, fname):
     # First try H1 markdown
     m = re.search(r'^#\s+(.+?)$', content, re.MULTILINE)
@@ -232,8 +328,48 @@ def should_skip(path):
         return True
     return False
 
+#: Da quali righe una voce del Bestiario dichiara il proprio bersaglio.
+#: ⚠️ Una riga puo' citarne **piu' di uno** — Skullcrusher il Nero ha i numeri
+#: nel FASTPLAY e la verifica nell'ERRATA. La prima stesura si fermava al primo
+#: percorso, e il secondo file restava scoperto: risultato, due voci per lo
+#: stesso drago. Trovato dal cancello di D18 al primo giro.
+_RIGA_FONTE = re.compile(r"^\*\*(?:Source|Key stats)\*\*.*$", re.M)
+_PERCORSO = re.compile(r"`([^`]+\.md)`")
+_NOME_VOCE = re.compile(r"^#\s+(.+?)(?:\s*\[|$)", re.M)
+
+
+def _fonti_dichiarate(testo):
+    """Tutti i percorsi citati nelle righe `**Source**` / `**Key stats**`."""
+    return {c for riga in _RIGA_FONTE.findall(testo) for c in _PERCORSO.findall(riga)}
+
+
+def copertura_del_bestiario(root):
+    """`{file d'arco: [(nome della voce, GS), ...]}` — chi copre gia' che cosa.
+
+    Serve alla deduplica di D18 e **solo** a quella: dice, per un dato
+    documento, quali soggetti hanno gia' una scheda che lo cita. E' un legame
+    dichiarato nel file, non dedotto da una somiglianza di nomi.
+    """
+    fuori = {}
+    for p in sorted((root / "Bestiario").rglob("*.md")):
+        testo = read_file_safe(p)
+        m = _NOME_VOCE.search(testo)
+        if not m:
+            continue
+        nome = re.sub(r"\[.*?\]", "", m.group(1)).strip()
+        cr = extract_cr(testo, p.name)
+        for citato in _fonti_dichiarate(testo):
+            for base in (root, p.parent, p.parent.parent):
+                if (base / citato).exists():
+                    rel = str((base / citato).resolve().relative_to(root.resolve()))
+                    fuori.setdefault(rel, []).append((nome, cr))
+                    break
+    return fuori
+
+
 def scan_directory(root):
     records = []
+    copertura = copertura_del_bestiario(root)
     valid_ext = {'.md', '.txt', '.htm', '.html', '.pcg'}
     # sorted() => walk deterministico su ogni filesystem/checkout (il CI gate
     # "catalogo in sync" confronta byte-per-byte)
@@ -325,6 +461,36 @@ def scan_directory(root):
         rec_id = f"{slug(name, max_len=80)}-{short_hash(rel)}"
         notes_m = re.search(r'\*\*Notes\*\*[:\s]*(.+?)$', content, re.MULTILINE)
         notes = notes_m.group(1).strip() if notes_m else ""
+
+        # D18 — un documento d'arco con piu' creature si spezza per intestazione.
+        # Le schede del `Bestiario/` non si toccano: una scheda e' gia' un
+        # soggetto solo, e le sue sezioni interne sono capacita', non creature.
+        sezioni = [] if rel.startswith("Bestiario/") else sezioni_creatura(content)
+        if sezioni:
+            coperti = copertura.get(rel, [])
+            scoperte = [(t, c) for t, c in sezioni if not gia_nel_bestiario(t, c, coperti)]
+            if len(sezioni) >= MIN_SEZIONI:
+                for titolo, cr_sez in scoperte:
+                    records.append({
+                        "id": f"{slug(titolo, max_len=80)}-{short_hash(rel + titolo)}",
+                        "name": titolo,
+                        "cr": cr_sez,
+                        "faction": faction,
+                        "role": dichiarato(DICH_ROLE, testa) or guess_role(titolo),
+                        "environment": env,
+                        "source_file": rel,
+                        "notes": notes[:200],
+                    })
+            # 🔴 Il record intitolato al DOCUMENTO sparisce **solo** quando ogni
+            # creatura che il documento nomina ha gia' una voce propria. Se ne
+            # resta anche una scoperta, il record di file e' l'unica cosa che la
+            # tiene nel pool, e toglierlo sarebbe il difetto opposto a D18:
+            # meno rumore e **meno creature**.
+            if not scoperte:
+                continue
+            if len(sezioni) >= MIN_SEZIONI:
+                continue
+
         records.append({
             "id": rec_id,
             "name": name,

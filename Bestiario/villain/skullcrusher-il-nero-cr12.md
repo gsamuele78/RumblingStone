@@ -1,8 +1,8 @@
 # Skullcrusher il Nero — drago nero ancestrale [POINTER — statblocco nell'arco] [RIMANDO]
-**Key stats**: → `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
+**Key stats**: → `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` e `07_il Portale Della Forgia Eterna/ERRATA-ARC07-35-Verification.md` §2.3 (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
 **Faction**: red-hand | **Role**: flier | **Environment**: aerial | **CR**: 12
-**Source**: `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (statblocco d'arco, drago nero adulto; battaglia antica di ~372 DR (ARC-07 P6))
+**Source**: `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` (statblocco giocabile, GS 12: CA 27, PF 240, soffio acido 12d4 CD 24; battaglia antica di ~372 DR)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 
 ## Summary
@@ -15,6 +15,8 @@ Questa voce esiste perche' `build_monster_catalog.py` e `suggest_encounter.py` s
 
 ## Notes
 
-⚠️ **Due numeri dichiarati e non riconciliati**: `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` r.25 dice *«Adult Black Dragon CR 11»*, `07_il Portale Della Forgia Eterna/Mappe/ARC07-MAPPE-DEFINITIVO.md` r.558 dice **GS 12** per la mappa tattica BOSS 24x18. Questa voce registra il GS della mappa; la riconciliazione e' del DM.
+🔎 **Lo statblocco sta nel FASTPLAY, non nella sintesi.** La prima stesura di questa voce puntava a `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md`, che il drago lo **nomina** soltanto; i numeri stanno in `-P5-FASTPLAY.md`, e `07_il Portale Della Forgia Eterna/ERRATA-ARC07-35-Verification.md` §2.3 lo dichiara per esteso. L'ha trovato il cancello di D18, che vedeva due voci «Skullcrusher il Nero».
+
+✅ **GS 12 — deciso dal DM il 2026-09-17.** La riga di `PortaleForgia-P6-INTEGRAZIONE-Completa.md` diceva `CR 11` e quella di `Mappe/ARC07-MAPPE-DEFINITIVO.md` r.558 diceva **GS 12**: vale il secondo, e il file d'archivio porta adesso l'errata accanto alla riga.
 
 🔴 **Terzo «Skullcrusher» del repo**, e i tre non vanno confusi: *Grom Skullcrusher* (Barbaro 14, Torneo di Dauth), *Ogre Skullcrusher* (GS 5), e questo drago. E' la forma d'errore che `test_grom_non_e_l_ogre_skullcrusher` gia' presidia.

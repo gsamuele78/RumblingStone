@@ -15,4 +15,4 @@ Questa voce esiste perche' `build_monster_catalog.py` e `suggest_encounter.py` s
 
 ## Notes
 
-⚠️ Non e' una creatura in piu': e' lo stesso scontro in due elezioni diverse — narrativa (GS 13) e combattimento (GS 15). Sceglierne una, non sommarle.
+✅ **Non e' il boss che si gioca — deciso dal DM il 2026-09-17.** E' lo stesso scontro in due elezioni: questa cornice narrativa a GS 13, e il master di combattimento a **GS 15** (`Bestiario/villain/terros-l-antico-cr15.md`). **Al tavolo vale Terros, GS 15.** Questa voce resta raggiungibile perche' la cornice e' un MASTER dichiarato dalla matrice e il DM puo' volerne le scene, ma non e' un secondo mostro: non sommarli e non proporli insieme.

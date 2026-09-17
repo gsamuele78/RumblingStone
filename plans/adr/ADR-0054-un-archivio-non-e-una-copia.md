@@ -114,7 +114,7 @@ file è `…/Lorana/Lorana/Lorana.md`).
 
 ## Conseguenze
 
-**Quel che si guadagna.** Il pool degli incontri passa da **352 a 372 voci**, e
+**Quel che si guadagna.** Il pool degli incontri passa da **352 a 397 voci** (372 col censimento, poi D18), e
 le venti nuove non sono comparse: sono l'intero cast dell'Abbazia della Rotta
 Sicura (Padre Anselmo Grifo GS 9, le Tre Sorelle del Frangente, i corsari della
 *Zanna di Bruma*), **Terros l'Antico GS 15**, **Skullcrusher il Nero** —
@@ -129,23 +129,48 @@ scritto nel test — la prova all'indietro gira **sul file vero dell'Abbazia**,
 non su un fixture, quindi un restringimento futuro si vede subito; una forma
 nuova, no.
 
-⚠️ **Due incoerenze trovate misurando e NON risolte qui**, perché sono canone e
-la scelta è del DM. Sono dichiarate nelle voci nuove, non nascoste:
+✅ **Le due incoerenze che questo lotto aveva dichiarato aperte sono state
+decise dal DM il 2026-09-17**, e la decisione è scritta dove si legge:
 
-- **Skullcrusher il Nero** vale `CR 11` in `PortaleForgia-P6-INTEGRAZIONE-Completa.md`
-  r.25 e **GS 12** in `Mappe/ARC07-MAPPE-DEFINITIVO.md` r.558;
-- il boss del Piano della Terra esiste in due elezioni — **GS 13** nella cornice
-  narrativa, **GS 15** (Terros) nel master di combattimento. La matrice dice che
-  è voluto (D8); le due voci lo dicono a chi le apre.
+| | Deciso |
+|---|---|
+| **Skullcrusher il Nero** — `CR 11` in un file, **GS 12** in un altro | **GS 12**; l'archivio porta l'errata accanto alla riga |
+| Il boss del Piano della Terra — **GS 13** narrativo contro **GS 15** ricalibrato | **GS 15 (Terros)** è il boss che si gioca; la cornice a GS 13 resta raggiungibile ma dichiara di non essere un secondo mostro |
 
-🔵 **E una cosa che resta da fare, misurata.** Il catalogo contiene **19 record
-intitolati al documento invece che alla creatura** — «Parte 2A – Torre
-Invisibile», «Stat blocchi – Torneo di Dauth» — perché `build_monster_catalog.py`
-produce **un record per file** e prende il primo GS che trova. La Torre ne ha
-sei per dodici creature. Non è un buco di copertura (le dodici hanno voce
-propria), è rumore nel pool: `suggest_encounter --el 10` può proporre un
-*documento* come se fosse un mostro. Spezzare i file multi-creatura in record
-distinti cambia gli `id`, quindi è una decisione, non una correzione: **D18**.
+🔎 **E correggendo Skullcrusher il cancello di D18 ha trovato un errore mio**: la
+voce che avevo appena scritto puntava a `PortaleForgia-P6-INTEGRAZIONE-Completa.md`,
+che il drago lo **nomina** soltanto. I numeri (CA 27, PF 240, soffio 12d4 CD 24)
+stanno in `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md`, e `ERRATA-ARC07-35-Verification.md`
+§2.3 li dichiara per esteso. Il cancello lo ha visto perché contava **due**
+«Skullcrusher il Nero» nel catalogo.
+
+## D18 — spezzare per intestazione, verificando che non esistano già
+
+**Decisa dal DM il 2026-09-17**, nella forma che il lotto aveva proposto come (a).
+`build_monster_catalog.py` produceva **un record per file**: un documento con
+dodici creature diventava una voce intitolata al documento, con un GS arbitrario.
+
+**19 → 8**, e il pool passa da **372 a 397**. Quel che ne è uscito non sono
+comparse: gli **otto fantini del Palio**, i **Sicari di Sonjak**, il Gonfaloniere
+Aldemar Vosk, la Drow Chierica di Lolth, gli esempi d'onda di Rethmar.
+
+⚠️ **La deduplica è la parte che poteva far danno**, ed è ancorata a un fatto
+dichiarato: si confrontano i nomi **solo** dentro l'insieme delle voci del
+Bestiario che citano *quel* documento come `Source`. Il legame documento↔voce
+l'ha scritto qualcuno; la somiglianza sceglie solo *quale* voce corrisponde a
+*quale* intestazione, dentro un insieme già ristretto a mano. È il modo di
+rispettare ADR-0053 senza rinunciare a dedurre.
+
+🔴 **E il rischio opposto ha il suo presidio.** Togliere il record di file per
+«fare pulizia» toglierebbe creature dal pool quando il documento ne contiene una
+che nessuna voce nomina. Il record sparisce **solo** quando ogni creatura che il
+documento nomina ha già la sua voce: gli **otto** che restano sono quelli dove
+non è vero, e vanno bene così.
+
+🐛 Due difetti nei nomi generati, trovati misurando: la numerazione del Palio è
+**multi-livello** (`### 3.2 Drow Chierica`) e lasciava nomi che cominciavano per
+cifra; e la coda tagliata lasciava parentesi mai chiuse («Aldemar Vosk (LN»).
+Entrambi hanno un cancello.
 
 ## Riferimenti
 

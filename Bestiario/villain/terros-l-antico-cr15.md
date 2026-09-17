@@ -15,4 +15,6 @@ Questa voce esiste perche' `build_monster_catalog.py` e `suggest_encounter.py` s
 
 ## Notes
 
+✅ **GS 15 e' il boss giocato — confermato dal DM il 2026-09-17**, contro la cornice narrativa che lo dava a GS 13. Il power-up e' voluto (D8: artefatti unici → scontri duri).
+
 La cornice narrativa dello stesso scontro sta in `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P4-PianoTerra-COMPLETO-alternative.md`; lo statblocco operativo in `07_il Portale Della Forgia Eterna/_ARCHIVIO/PortaleForgia-P4-PianoTerra-RICALIBRATO.md` §7. Tre file, un solo scontro: i numeri si correggono in `Terros.md`.
