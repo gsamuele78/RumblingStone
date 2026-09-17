@@ -34,23 +34,63 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import yaml  # noqa: E402
 
+from dmcore.censimento import STATBLOCCO as STAT, documenti_con_statistiche  # noqa: E402
+
 CATALOGO = yaml.safe_load(
     (ROOT / "scripts" / "monster_catalog.yaml").read_text(encoding="utf-8"))["monsters"]
 
-#: La forma dello statblocco in prosa usata dagli archi (quella del file Zalkatar).
-STAT = re.compile(r"^\s*[-*]\s*(Taglia/Tipo|DV|CA|TS|BAB)\s*:", re.M | re.I)
-ARCHI = [p for p in ROOT.glob("0*") if p.is_dir()] + [p for p in ROOT.glob("1*") if p.is_dir()]
+#: 🔴 **Il censimento e' rinato il 2026-09-17, e il difetto era qui.** Questo
+#: file cercava una forma sola di statblocco — quella con il trattino, la sola
+#: che avevo sotto gli occhi scrivendolo. Il repo ne usa **tre**, e le altre due
+#: nascondevano quindici documenti, fra cui un'avventura stand-alone intera.
+#: Le tre forme, e la regola sugli archivi, stanno adesso in `dmcore.censimento`
+#: con la misura scritta accanto.
+
+#: Documenti che portano marche meccaniche ma **non sono roster di creature**.
+#: Si dichiarano con il motivo, come `perche_senza_scheda` nell'anagrafica PNG
+#: (ADR-0053): un'esclusione senza motivo scritto e' indistinguibile da una
+#: dimenticanza, ed e' cosi' che questo cancello aveva perso l'Abbazia.
+FUORI_RAGGIO = {
+    "06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/00-La Corona di Adamantio-ogetto&Prove/000_Guida_Dm_Corona_adamantio_ogetto_prove_rituali_sfide.md":
+        "guida all'artefatto: le marche sono bonus di gemme e CD di rituali, non creature",
+    "06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/00-La Corona di Adamantio-ogetto&Prove/00_corona_di_adamantio_momento_risveglio_1_prova_scheda_giocatore.md":
+        "scheda per il giocatore della Corona: poteri dell'artefatto, nessuna creatura",
+    "07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md":
+        "schede dei PG (§1 «Il party degli avventurieri»): i PG non stanno nel Bestiario",
+    "08_La Battaglia Di Hammerfist/mass_combat_guide_Dm.md":
+        "sistema di combattimento di massa: le statistiche sono esempi di unita', non un roster",
+    "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P1C-Rituale-COMPLETO-SCALE.md":
+        "regia del rituale; i drow delle tre ondate hanno schede proprie in Bestiario/mostri/drow-*",
+}
+
+#: Dove una voce puo' dichiarare il proprio bersaglio.
+_INTESTAZIONI = ("**Source**", "**Key stats**", "**File correlati**")
+_CITAZIONE = re.compile(r"`([^`]+\.md)`")
+
+
+def _documenti_raggiunti() -> "set[str]":
+    """Percorsi d'arco che uno strumento puo' davvero aprire.
+
+    ⚠️ Si **risolve** il percorso, non si cerca la sottostringa. La prima
+    stesura confrontava stringhe, e undici voci che citavano
+    ``08_.../ARC08-01-GUIDA-DM.md`` risultavano agganciate: un umano capisce
+    quei puntini, `Path.exists()` no. Erano POINTER che non puntavano.
+    """
+    raggiunti = {m["source_file"] for m in CATALOGO}
+    for b in (ROOT / "Bestiario").rglob("*.md"):
+        for riga in b.read_text(encoding="utf-8", errors="replace").splitlines():
+            if not riga.startswith(_INTESTAZIONI):
+                continue
+            for citato in _CITAZIONE.findall(riga):
+                for cand in (ROOT / citato, b.parent / citato, b.parent.parent / citato):
+                    if cand.exists():
+                        raggiunti.add(str(cand.resolve().relative_to(ROOT.resolve())))
+                        break
+    return raggiunti
 
 
 def _documenti_con_statistiche() -> "list[Path]":
-    fuori = []
-    for base in ARCHI:
-        for p in base.rglob("*.md"):
-            if "_ARCHIVIO" in str(p) or "homebrew" in str(p):
-                continue
-            if len(STAT.findall(p.read_text(encoding="utf-8", errors="replace"))) >= 4:
-                fuori.append(p)
-    return fuori
+    return [ROOT / r for r in documenti_con_statistiche(ROOT)]
 
 
 class TestOgniStatblocDArcoEraggiungibile(unittest.TestCase):
@@ -67,27 +107,41 @@ class TestOgniStatblocDArcoEraggiungibile(unittest.TestCase):
         # quindi nella riga `**Source**` delle voci, che e' dove il POINTER
         # dichiara il proprio bersaglio. (La prima versione di questo test
         # cercava nel campo sbagliato e dava per scoperti quattro file agganciati.)
-        citati = set()
-        for b in (ROOT / "Bestiario").rglob("*.md"):
-            for riga in b.read_text(encoding="utf-8", errors="replace").splitlines():
-                if riga.startswith(("**Source**", "**Key stats**")):
-                    citati.add(riga)
+        #
         # E la seconda via: `build_monster_catalog` raggiunge DIRETTAMENTE alcuni
         # file d'arco, quando la loro forma gli basta (Zalkatar, Regiarix, il
         # Treant Corrotto). Un documento raggiungibile per quella strada non ha
         # bisogno di un POINTER: il criterio e' «gli strumenti ci arrivano»,
         # non «esiste una voce nel Bestiario».
-        citati |= {m["source_file"] for m in CATALOGO}
-        citati = "\n".join(citati)
+        raggiunti = _documenti_raggiunti()
         orfani = []
         for p in _documenti_con_statistiche():
             rel = str(p.relative_to(ROOT))
-            if rel not in citati:
-                orfani.append(rel)
+            if rel in raggiunti or rel in FUORI_RAGGIO:
+                continue
+            orfani.append(rel)
         self.assertEqual(orfani, [],
                          "documenti d'arco con statistiche che nessuna voce del "
-                         "Bestiario aggancia — servono voci POINTER:\n  "
+                         "Bestiario aggancia — servono voci POINTER, oppure una "
+                         "riga in FUORI_RAGGIO che dica PERCHE' non e' un roster:\n  "
                          + "\n  ".join(orfani))
+
+    def test_ogni_esclusione_dichiarata_e_vera(self):
+        """Un'esclusione e' un'affermazione, e si prova — come R13 sui buchi.
+
+        🔴 `FUORI_RAGGIO` dice «questo documento porta numeri ma non creature».
+        Se il file sparisce o viene rinominato, l'esclusione resta e copre il
+        nulla; se il documento smette di essere escluso dal censimento, la riga
+        e' morta. Entrambi i casi vanno visti il giorno stesso.
+        """
+        censiti = set(documenti_con_statistiche(ROOT))
+        for rel, motivo in FUORI_RAGGIO.items():
+            with self.subTest(doc=rel.rsplit("/", 1)[-1]):
+                self.assertTrue((ROOT / rel).exists(), f"escluso un file inesistente: {rel}")
+                self.assertIn(rel, censiti,
+                              "questa riga non esclude piu' niente: il censimento "
+                              "non raccoglie piu' il documento")
+                self.assertGreater(len(motivo), 30, "il motivo va scritto per esteso")
 
     def test_i_pointer_non_duplicano_le_statistiche(self):
         """ADR-0021: una voce POINTER rimanda, non copia.
@@ -107,12 +161,12 @@ class TestOgniStatblocDArcoEraggiungibile(unittest.TestCase):
                 self.assertIn("**Source**", testo)
 
     def test_il_pool_degli_incontri_e_cresciuto_e_resta_grande(self):
-        """Il guadagno pratico, fissato: erano 305 voci, adesso sono 352.
+        """Il guadagno pratico, fissato: 305 → 352 (lotto 4d-5) → **372** (4d-6).
 
         ⚠️ La soglia si alza quando il pool cresce: lasciarla sotto il valore
         vero renderebbe il cancello piu' debole di quanto puo' essere.
         """
-        self.assertGreaterEqual(len(CATALOGO), 352)
+        self.assertGreaterEqual(len(CATALOGO), 372)
 
     def test_i_pointer_d_arco_puntano_a_file_che_esistono(self):
         """Stessa disciplina di R11 sull'anagrafica: un percorso si prova."""
@@ -209,6 +263,21 @@ class TestIlCatalogoLeggeQuelCheEDichiarato(unittest.TestCase):
         self.assertNotIn("mano-rossa", fazioni)
         self.assertGreaterEqual(
             len([m for m in CATALOGO if m["faction"] == "red-hand"]), 74)
+
+    def test_le_voci_dell_abbazia_sono_entrate(self):
+        """🔴 Un'avventura **intera** stava fuori dal censimento fino al 4d-6.
+
+        `10-stand-alone/L'Abbazia della Rotta Sicura` sono 1.419 righe con un
+        appendice di statblocchi tutto suo, e non aveva **una sola** voce nel
+        Bestiario. Non e' sfuggita per poco: il matcher pretendeva il trattino
+        (`- CA:`) e l'Abbazia scrive `**CA** 15`, quindi il documento valeva
+        zero marche su zero e usciva dal conteggio in silenzio.
+        """
+        nomi = " · ".join(m["name"] for m in CATALOGO)
+        for atteso in ("Padre Anselmo Grifo", "Ghebro Malaluna", "Grinza",
+                       "Marea", "Madre Ilaria Sonda", "Tiberio Sarda"):
+            with self.subTest(soggetto=atteso):
+                self.assertIn(atteso, nomi)
 
     def test_il_dossier_di_fazione_non_finge_di_essere_una_creatura(self):
         d = ROOT / "Bestiario" / "villain" / "Zhentarim_Dauth" / "Zhentarim_Dauth.md"

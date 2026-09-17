@@ -1145,6 +1145,7 @@ Vale per **ogni** commit di **ogni** fase.
 | ~~D14~~ | F4 · 4d-2 | ✅ **CHIUSA E ATTUATA il 2026-09-16, nello stesso commit.** Il DM: *«la riga va in state.yml e poi riportata in state.md»*. Misurata, la risposta regge: la tabella dei waypoint è **dato puro** (10 righe) e il March Day è **un campo** (`march_clock.giorno_corrente`); il paragrafo di cinque righe che spiega perché il Giorno 19 è un bersaglio e non un passato resta **prosa, sotto e fuori** dalla regione generata. Separati, la macchina riscrive la sua riga a ogni sessione senza mai toccare la nota del DM — che era il nodo. ⚠️ La regione `auto:march-clock` **sparisce**, e marcarla oggi sarebbe *peggio* di prima: una regione dentro una `gen:state:` sono due scrittori sullo stesso testo. Sparisce anche `RETHMAR_DAY = 42`, cablato in `state_apply`: era la seconda fonte di verità più piccola del repo, e sopravviveva perché nessuno aveva mai eseguito il tool. Vedi **§4.8.9** e [ADR-0052](adr/ADR-0052-cosa-e-dato-e-cosa-e-prosa.md) |
 | ~~D16~~ | F4 · 4d-2 | ✅ **CHIUSA E ATTUATA il 2026-09-16, nello stesso commit.** Il DM ha scelto l'enumerazione **con il compagno**: `attivo · latitante · neutralizzato · morto · ignoto`, più `reversibile`. ⚒️ `neutralizzato` copre il caso più frequente al tavolo — sconfitto ma non morto — e senza di lui il DM dovrebbe scrivere `morto` per non scrivere `attivo`. 🔴 **E `reversibile` è la metà che conta**: in questa campagna un morto torna (il Ghostlord nasce da un morto, Sal è protetto da un paradosso auto-consistente, Hella è morta in attesa del rito), quindi registrare «morto» senza dire se è definitivo è registrare **meno di quel che il canone sa**. La regola **R9** lo pretende. ⚠️ `state_apply` scrive `stato` ma **non** `reversibile`: il primo è la lettura letterale del log, il secondo è una decisione narrativa, e R9 la chiede al DM alla prima esecuzione — provato sul canone vero. 🔎 **§4 conoscenze è stata esclusa dopo averla misurata**, benché il DM avesse chiesto di includerla: tre righe non sono persone e tre persone compaiono sotto due nomi, quindi `stato` lì vorrebbe dire un valore privo di senso in tre casi e due copie divergenti in altri tre. Va nell'anagrafica del lotto della chiave. Vedi **§4.8.9** |
 | ~~D17~~ | F4 · 4d-4 | ✅ **CHIUSA il 2026-09-17 — e la domanda aveva una premessa falsa, trovata dal DM.** Era posta come «i due villain senza scheda: si scrivono, si contano o escono da §3?». 🐛 **Tre delle quattro voci che avevo dichiarato senza scheda ce l'avevano.** Il DM: *«controlla bene negli archi o nel bestiario se c'è qualcosa magari annegato come prosa»*. **Zalkatar** ha uno statblocco a **GS 13** (14d4+70, CA 24) in `09_…/P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md`; **Saarvith + Regiarix** ne hanno uno a **GS 13** in `09_…/P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md`, e il file `FASE4` accanto dichiara esplicitamente *«le statistiche sono lì; questo è la regia dello scontro»*; il **Cerchio Druidico** ne ha uno in `Bestiario/mostri/cerchio-druid7-cr7.md`, marcato [ACCEPTED — DM-canon 2026-05-05]. L'errore non è stato non trovarle: ho cercato **solo dentro `Bestiario/`**, e allargando la ricerca ho **troncato l'output a sei righe** concludendo da una lista tagliata. ✅ Non c'era niente da scrivere né da togliere: c'era da **cercare meglio**. Resta **un** buco su 28 (`lathander-mask`), ed è corretto. ⚠️ **Conseguenza di progetto**: una scheda non vive per forza nel `Bestiario/`, e un cancello tarato lì avrebbe continuato a dare per mancanti due boss da GS 13. Nasce **R13**, che mette alla prova ogni buco dichiarato contro tutto il repo. Vedi **§4.8.10** e [ADR-0053](adr/ADR-0053-la-chiave-verso-il-bestiario-si-dichiara.md) |\n| ~~D6~~ | F1 | ✅ **decisa 2026-09-04: ridisegnata.** `…P1C` mappa 3 dichiarava 40×40 e aveva righe da 24 a 26 celle: rifatta **26×29**, nessuna coordinata del testo cambiata |
+| D18 | F4 · 4d-6 | 🔵 **Aperta il 2026-09-17, misurata.** Il catalogo contiene **19 record intitolati al documento invece che alla creatura** — «Parte 2A – Torre Invisibile», «Stat blocchi – Torneo di Dauth», «Parte 2D — Statblocchi e Comprimari». Causa: `build_monster_catalog.py` produce **un record per file** e prende il primo GS che trova, quindi un documento con dodici creature diventa una voce sola con un GS arbitrario. 🔎 **Non è un buco di copertura**: le creature della Torre hanno tutte voce propria (nove), e questi record ci stanno *accanto*. È **rumore nel pool** — `suggest_encounter --el 10` può proporre un *documento* come se fosse un mostro, e la Torre ne porta sei. ⚠️ **Perché è una decisione e non una correzione**: spezzare i file multi-creatura in record distinti cambia gli `id` (che sono `slug(nome)-hash(percorso)`), quindi cambia ogni riferimento esterno al catalogo. Tre strade: **(a)** spezzarli per intestazione `##`, **(b)** sopprimere il record di file quando esistono già voci proprie che lo citano come `Source`, **(c)** lasciarli e accettare il rumore. Vedi **§4.8.12** e [ADR-0054](adr/ADR-0054-un-archivio-non-e-una-copia.md) |
 
 ---
 
@@ -1929,6 +1930,70 @@ Ghaurush. Un alias dichiarato per l'unico sinonimo certo, e nient'altro.
 |---|---|---:|
 | 🔵 | **9 voci ancora `unknown`**: la Torre di Zalkatar e gli illithid di Xal'thor. Il DM non ne ha parlato, e derivare `zalkatar-torre` dal pattern `<padrone>-<dominio>` sarebbe una mia scelta | 9 |
 | 🔵 | **vocabolario da consolidare**: `underdark` è usato come fazione (è un ambiente), e `rhod-allies` sta accanto a `red-hand` | 4 valori |
+
+#### 4.8.12 · Lotto **4d-6** — il censimento conosceva una forma su tre, e gli archivi erano master
+
+`[K canone · Opus 5 · alto · `python3 -m pytest scripts/tests/test_censimento_forme.py scripts/tests/test_png_archi_nel_bestiario.py` verde su 3 cancelli provati all'indietro; `validate_bestiario` in sync su 372 record; 130 citazioni POINTER tutte risolte]`
+
+Il DM, il 2026-09-17: *«considera tutta la prosa davvero negli archi, vedi
+nell'arco la Torre di Zalkatar se c'è qualcosa non detto, vedi anche negli
+archivi se è stato tralasciato qualcosa»*. Rimisurando **senza troncare
+l'output** — la lezione esplicita di D17 — il cancello scritto il giorno prima
+si è rivelato sbagliato in tre modi indipendenti.
+
+##### FASE 1 · Accertamento
+
+| Cosa | Misura |
+|---|---:|
+| Forme di statblocco in uso nel repo | **3** (il matcher ne conosceva **1**) |
+| Documenti d'arco con statistiche, rimisurati | **23 → 38** |
+| File d'archivio con statblocchi che la matrice dichiara **MASTER** | **5 su 5** |
+| Citazioni POINTER abbreviate (`08_.../ARC08-01-…`) | **11** |
+| Citazioni POINTER con percorso sbagliato di un livello | **6** |
+| Record del catalogo intitolati al documento invece che alla creatura | **19** |
+
+🔴 **Il caso che decide il lotto.** Il matcher pretendeva il trattino (`- CA:`);
+`10-stand-alone/L'Abbazia della Rotta Sicura` scrive `**CA** 15`, quindi valeva
+**zero marche su zero**. Un'avventura stand-alone **intera** — 1.419 righe, con
+un appendice di statblocchi tutto suo — era fuori dal censimento in silenzio, e
+non aveva una sola voce nel Bestiario.
+
+🔎 **E la Torre di Zalkatar era coperta**, contrariamente al sospetto: tutte e
+nove le creature hanno voce propria. Quel che non era detto sta altrove — vedi
+D18 sotto.
+
+##### FASE 2 · Sviluppo
+
+1. **`scripts/dmcore/censimento.py`** (nuovo): le tre forme, la soglia, e
+   `master_archiviati()` che legge `ARC07-MATRICE-VERSIONI.md` invece di
+   indovinare dal nome della cartella. L'inline resta **stretto** apposta.
+2. **20 voci POINTER nuove**: il cast dell'Abbazia (9), i master d'archivio
+   dell'ARC-07 (Terros GS 15, Skullcrusher il Nero, Zog'tar Deatheye, lo Xorn
+   Anziano, l'Elementale Anziano, Thorgrim Barbadiferro), l'ARC-06 (Yochlol
+   half-illithid, Dire Worg corrotto), l'ARC-04 (Grimlock Ceremorfo, Drow
+   Psionica, Carcassa Vivente). Pool: **352 → 372**.
+3. **17 percorsi POINTER corretti**, e il criterio d'aggancio passa da
+   «sottostringa» a «`Path.exists()`».
+4. **`FUORI_RAGGIO`**: cinque documenti che portano numeri ma non creature (le
+   schede dei PG, il sistema di combattimento di massa, le guide della Corona),
+   ognuno **con il motivo scritto**.
+
+##### FASE 3 · Validazione
+
+| Prova | Esito |
+|---|---|
+| Rimettere l'esclusione cieca di `_ARCHIVIO` | 🔴 rosso (`Terros.md` esce dal raggio) |
+| Restringere il matcher alla forma col trattino | 🔴 rosso (9 test) |
+| Riabbreviare un percorso a `08_.../…` | 🔴 rosso |
+| `python3 -m pytest scripts/tests -q` | ✅ **843 → 853** passati (2.832 → 2.938 subtest) |
+| `validate_bestiario` · `validate_state` · `validate_docs --sorgenti` · `tools_manifest --check` | ✅ tutti verdi |
+
+⚠️ **Non tocca** `test_archivi_non_indicizzati.py`: i master d'archivio
+diventano **raggiungibili** via POINTER, non **indicizzati**. Ogni
+`source_file` resta dentro `Bestiario/`, quindi la regola dei doppioni
+(305 → 311 nell'incidente del 2026-09-12) continua a valere.
+
+Vedi [ADR-0054](adr/ADR-0054-un-archivio-non-e-una-copia.md).
 
 #### 4.8.6 — FASE 3 · Validazione
 
