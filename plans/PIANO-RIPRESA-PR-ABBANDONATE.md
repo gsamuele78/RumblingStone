@@ -1877,12 +1877,58 @@ per scoperti quattro file agganciati. Poi ignorava la seconda via, quella
 diretta. Il criterio giusto non è «esiste una voce nel Bestiario»: è **«gli
 strumenti ci arrivano»**.
 
+##### 4.8.11-bis · Il DM ha dato la fazione, e trovando dove metterla è saltato fuori un difetto peggiore
+
+Il lotto aveva lasciato `faction: unknown` sui comprimari del Torneo. Il DM
+l'ha chiusa il 2026-09-17: *«sono emissari al soldo degli Zhentarim; gli
+interessano gli scambi commerciali di merci del mercato nero extraplanare,
+venuti per il Torneo di Dauth, e in parte minacciati anche loro dall'avanzata
+della Mano Rossa»*.
+
+Combacia con la lore canonica già in repo — *«THE ZHENTARIM (The Black
+Network) — Goals: economic and political domination of all Faerûn trade
+routes»* — quindi la fazione `zhentarim` nasce **dichiarata**, non inventata.
+**15 voci**, più il dossier `Bestiario/villain/Zhentarim_Dauth/`.
+
+⚠️ **E la mia frase precedente era imprecisa**: avevo scritto «sedici
+comprimari del Torneo», ma le voci con `faction: unknown` erano **27**, di cui
+15 del Torneo. Le altre sono la Torre di Zalkatar (7), gli illithid di Xal'thor
+(2) e l'Erinni, che è finita a `red-hand` perché il suo stesso file la colloca
+nell'onda epica di Rethmar.
+
+🔴 **Il difetto vero, trovato applicando la fazione.**
+`build_monster_catalog.py` **indovinava** fazione, ruolo e ambiente da euristiche
+su parole chiave, e **ignorava le intestazioni** che ogni statblocco dichiara e
+che `validate_bestiario` pretende. Due valori per lo stesso fatto: quello nel
+file, e quello nel catalogo — e negli strumenti finiva il secondo. L'ho visto
+perché l'intestazione diceva `zhentarim` e il catalogo registrava
+`dauth-defender`, mentre il file *sembrava* giusto a chiunque lo aprisse.
+
+| Campo | Record in cui il catalogo contraddiceva il file |
+|---|---:|
+| `faction` | **56** |
+| `role` | **138** |
+| `environment` | **77** |
+
+Esempi: «Aberrazione Fungina Alfa» marcata `drow-sonjak` perché la parola
+«drow» compariva nel testo; il Grell della Torre Invisibile marcato `mountain`.
+
+**Corretto**: il valore dichiarato vince, l'euristica resta come ripiego per i
+documenti che non dichiarano niente (i `.txt`, i moduli d'arco). È ADR-0041
+applicato a questo tool.
+
+⚠️ **Una regressione evitata di misura**: prima l'euristica *normalizzava* tutto
+su una lista chiusa. Leggendo le intestazioni, le **6** creature che dichiarano
+`mano-rossa` si sarebbero separate dalle **68** che dichiarano `red-hand` — e
+`suggest_encounter --faction red-hand` avrebbe smesso di trovare Ushgar e
+Ghaurush. Un alias dichiarato per l'unico sinonimo certo, e nient'altro.
+
 ##### Cosa resta
 
-🔵 I POINTER dichiarano `faction: unknown` per i sedici comprimari del Torneo:
-non sono difensori di Dauth né Mano Rossa, e **inventare una fazione nuova per
-farli stare in tabella sarebbe inventare canone**. Il giorno che il DM decide
-come si chiama quel gruppo, sono sedici righe da cambiare.
+| | | |
+|---|---|---:|
+| 🔵 | **9 voci ancora `unknown`**: la Torre di Zalkatar e gli illithid di Xal'thor. Il DM non ne ha parlato, e derivare `zalkatar-torre` dal pattern `<padrone>-<dominio>` sarebbe una mia scelta | 9 |
+| 🔵 | **vocabolario da consolidare**: `underdark` è usato come fazione (è un ambiente), e `rhod-allies` sta accanto a `red-hand` | 4 valori |
 
 #### 4.8.6 — FASE 3 · Validazione
 

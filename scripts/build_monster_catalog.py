@@ -17,7 +17,7 @@ Schema record:
   - id: slug unico (fname-without-ext + short hash)
     name: display name
     cr: float o int o null
-    faction: red-hand|drow-sonjak|gnoll|loxo-centaur-corrupted|githyanki-vaereth|teschio-nero-thay|rakshasa|ghostlord-undead|rethmar-defender|dauth-defender|cerchio-druid|aberration|unknown
+    faction: red-hand|drow-sonjak|gnoll|loxo-centaur-corrupted|githyanki-vaereth|teschio-nero-thay|rakshasa|ghostlord-undead|rethmar-defender|dauth-defender|cerchio-druid|aberration|zhentarim|unknown
     role: melee|ranged|caster|mount|leader|boss|fodder|...
     environment: any|underdark|forest|urban|aerial|...
     source_file: path relativo al root
@@ -92,6 +92,50 @@ ROLE_KEYWORDS = {
     "ranged": ["ranger", "archer", "longbow", "crossbow"],
     "fodder": ["warrior", "regular", "militia", "fanteria"],
 }
+
+# --- il valore DICHIARATO vince su quello indovinato ------------------------
+#
+# 🔴 Fino al 2026-09-17 questo builder **indovinava** fazione, ruolo e ambiente
+# da euristiche su parole chiave, e **ignorava le intestazioni** che ogni
+# statblocco dichiara e che `validate_bestiario` pretende. Due valori per lo
+# stesso fatto: quello che il DM scrive nel file, e quello che finisce nel
+# catalogo — e nel catalogo finiva il secondo.
+#
+# Si e' visto aggiungendo la fazione `zhentarim` ai combattenti del Torneo di
+# Dauth: l'intestazione diceva `zhentarim`, il catalogo registrava
+# `dauth-defender`, e nessuno se ne accorgeva perche' il file *sembrava* giusto.
+#
+# Adesso l'euristica resta, ma solo come **ripiego** per i documenti che non
+# dichiarano niente (i .txt e i moduli d'arco). E' la forma di ADR-0041:
+# contare quel che e' dichiarato vale piu' che indovinarlo.
+DICH_FACTION = re.compile(r"\*\*Faction\*\*:\s*([A-Za-z0-9_-]+)")
+DICH_ROLE = re.compile(r"\*\*Role\*\*:\s*([A-Za-z0-9_-]+)")
+DICH_ENV = re.compile(r"\*\*Environment\*\*:\s*([A-Za-z0-9_-]+)")
+
+
+#: Sinonimi esatti, non giudizi: prima della correzione l'euristica normalizzava
+#: tutto sulla lista chiusa, e leggere le intestazioni **spaccherebbe** una
+#: fazione in due nomi. `mano-rossa` e' l'italiano di `red-hand`, e le sei
+#: creature che lo dichiarano sono comandanti della Mano Rossa (Ushgar,
+#: Ghaurush, il Chierico di Gruumsh): `suggest_encounter --faction red-hand`
+#: deve continuare a trovarle.
+#:
+#: ⚠️ Qui ci vanno SOLO i sinonimi certi. `underdark` usato come fazione, o
+#: `rhod-allies`, non sono sinonimi di niente: restano come sono, visibili, e
+#: consolidarli e' una decisione di vocabolario che spetta al DM.
+ALIAS_FACTION = {"mano-rossa": "red-hand"}
+
+
+def dichiarato(rx, testo):
+    """Il valore scritto nell'intestazione, o None se il file non lo dichiara.
+
+    ⚠️ Per `Environment` si prende il PRIMO valore: qualche scheda ne dichiara
+    due separati da virgola (`forest,mountain`), e i filtri di
+    `suggest_encounter` confrontano un ambiente solo.
+    """
+    m = rx.search(testo)
+    return m.group(1).strip().lower() if m else None
+
 
 def short_hash(s):
     return hashlib.sha1(s.encode('utf-8')).hexdigest()[:6]
@@ -272,9 +316,12 @@ def scan_directory(root):
         if cr is None:
             continue  # no CR → can't use in encounter builder
         name = extract_name(content, path.name)
-        faction = guess_faction(name + " " + rel + " " + content[:500])
-        env = guess_env(content[:500] + " " + rel)
-        role = guess_role(content[:500] + " " + name)
+        testa = content[:600]
+        faction = dichiarato(DICH_FACTION, testa) or guess_faction(
+            name + " " + rel + " " + content[:500])
+        faction = ALIAS_FACTION.get(faction, faction)
+        env = dichiarato(DICH_ENV, testa) or guess_env(content[:500] + " " + rel)
+        role = dichiarato(DICH_ROLE, testa) or guess_role(content[:500] + " " + name)
         rec_id = f"{slug(name, max_len=80)}-{short_hash(rel)}"
         notes_m = re.search(r'\*\*Notes\*\*[:\s]*(.+?)$', content, re.MULTILINE)
         notes = notes_m.group(1).strip() if notes_m else ""

@@ -1,7 +1,7 @@
 # Erinni (versione potenziata) [POINTER — statblocco nell'arco] [RIMANDO]
 **Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
-**Faction**: unknown | **Role**: flier | **Environment**: any | **CR**: 8
+**Faction**: red-hand | **Role**: flier | **Environment**: any | **CR**: 8
 **Source**: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` (statblocco d'arco, GS 8)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 

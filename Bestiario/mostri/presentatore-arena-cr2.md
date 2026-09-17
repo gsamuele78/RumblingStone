@@ -1,7 +1,7 @@
 # Presentatore / Annunciatore dell'Arena [POINTER — statblocco nell'arco] [RIMANDO]
 **Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2B-Torneo-Tordek-BATTLE-STATS-e-FRASE-IMPATTO.md` (i numeri stanno li'; duplicarli qui creerebbe una seconda copia che diverge alla prima errata — ADR-0021).
 
-**Faction**: unknown | **Role**: fodder | **Environment**: urban | **CR**: 2
+**Faction**: dauth-defender | **Role**: fodder | **Environment**: urban | **CR**: 2
 **Source**: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2B-Torneo-Tordek-BATTLE-STATS-e-FRASE-IMPATTO.md` (statblocco d'arco, GS 2)
 **Status**: POINTER — NON duplicare lo statblock qui. Usare sempre il file d'arco.
 

@@ -27,35 +27,35 @@ monsters:
     name: "Myconid Worker (operaio)"
     cr: 2.0
     faction: aberration
-    role: generalist
+    role: fodder
     environment: underdark
     source_file: "Bestiario/mostri/myconid-worker-cr2.md"
   - id: phantom-fungus-da18f7
     name: "Phantom Fungus"
     cr: 3.0
     faction: aberration
-    role: generalist
+    role: melee-heavy
     environment: underdark
     source_file: "Bestiario/villain/phantom-fungus-cr3.md"
   - id: myconid-guard-guardia-2382a2
     name: "Myconid Guard (guardia)"
     cr: 4.0
     faction: aberration
-    role: generalist
+    role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/myconid-guard-cr4.md"
   - id: grell-torre-invisibile-561f15
     name: "Grell (Torre Invisibile)"
     cr: 5.0
     faction: aberration
-    role: generalist
-    environment: mountain
+    role: flier
+    environment: dungeon
     source_file: "Bestiario/mostri/grell-torre-cr5.md"
   - id: myconid-elite-guard-guardia-scelta-f9194e
     name: "Myconid Elite Guard (guardia scelta)"
     cr: 5.0
     faction: aberration
-    role: generalist
+    role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/myconid-elite-guard-cr5.md"
   - id: stanza-celebromorfosi-fc73d2
@@ -97,7 +97,7 @@ monsters:
     name: "Myconid Sovereign (sovrano miconide)"
     cr: 7.0
     faction: aberration
-    role: generalist
+    role: caster-boss
     environment: underdark
     source_file: "Bestiario/mostri/myconid-sovereign-cr7.md"
   - id: 00-cubo-gelatinoso-powerup-3b3bd0
@@ -114,6 +114,13 @@ monsters:
     role: caster-divine
     environment: underdark
     source_file: "04_tomba_di_Belkram/02_Celebromorfosi/drow-cleric.html"
+  - id: oblex-versione-media-avanzata-db7632
+    name: "Oblex (versione media/avanzata)"
+    cr: 9.0
+    faction: aberration
+    role: generalist
+    environment: dungeon
+    source_file: "Bestiario/mostri/oblex-avanzato-cr9.md"
   - id: 00-cr10-guardiano-delle-rovine-prima-della-cattedrale-srd-bebilith-d-d-wiki-ae0d28
     name: "00 Cr10 Guardiano Delle Rovine Prima Della Cattedrale Srd Bebilith   D&D Wiki"
     cr: 10.0
@@ -125,8 +132,8 @@ monsters:
     name: "Bebilith (guardiano delle rovine)"
     cr: 10.0
     faction: aberration
-    role: generalist
-    environment: any
+    role: melee-heavy-boss
+    environment: dungeon
     source_file: "Bestiario/villain/bebilith-guardiano-cr10.md"
   - id: grellpatriarca-86c3a8
     name: "Grellpatriarca"
@@ -146,9 +153,23 @@ monsters:
     name: "Retriever (demone cacciatore)"
     cr: 11.0
     faction: aberration
-    role: generalist
-    environment: mountain
+    role: melee-heavy-boss
+    environment: any
     source_file: "Bestiario/villain/retriever-cr11.md"
+  - id: aberrazione-fungina-alfa-ce7b71
+    name: "Aberrazione Fungina Alfa"
+    cr: 12.0
+    faction: aberration
+    role: boss
+    environment: underdark
+    source_file: "Bestiario/mostri/aberrazione-fungina-alfa-cr12.md"
+  - id: cervello-fungino-errante-1d18be
+    name: "Cervello Fungino Errante"
+    cr: 12.0
+    faction: aberration
+    role: caster-arcane
+    environment: underdark
+    source_file: "Bestiario/mostri/cervello-fungino-errante-cr12.md"
   - id: fight-fungi-colony-419a6c
     name: "Fight Fungi Colony"
     cr: 12.0
@@ -188,17 +209,10 @@ monsters:
     name: "Zarim — luogotenente illithid"
     cr: 12.0
     faction: aberration
-    role: generalist
+    role: villain
     environment: any
     source_file: "Bestiario/villain/Zarim/Zarim.md"
     notes: "distinto da Xal'thor (comandante) e Sethrax (agente al Torneo)."
-  - id: zarim-illithid-luogotenente-cr12-f9212b
-    name: "zarim-illithid-luogotenente-cr12"
-    cr: 12.0
-    faction: aberration
-    role: generalist
-    environment: any
-    source_file: "Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md"
   - id: antenato-nanico-cr13-c87193
     name: "Antenato Nanico Cr13"
     cr: 13.0
@@ -206,12 +220,19 @@ monsters:
     role: generalist
     environment: dungeon
     source_file: "04_tomba_di_Belkram/Antenato_Nanico_cr13.html"
+  - id: avatar-minore-di-madre-dei-funghi-f0c65f
+    name: "Avatar Minore di Madre dei Funghi"
+    cr: 13.0
+    faction: aberration
+    role: boss
+    environment: underdark
+    source_file: "Bestiario/mostri/avatar-minore-madre-funghi-cr13.md"
   - id: beholder-death-tyrant-difensore-del-tempio-7facf2
     name: "Beholder, Death Tyrant (difensore del tempio)"
     cr: 13.0
     faction: aberration
-    role: generalist
-    environment: any
+    role: caster-boss
+    environment: dungeon
     source_file: "Bestiario/villain/beholder-death-tyrant-cr13.md"
   - id: belkram-3baada
     name: "Belkram"
@@ -259,8 +280,8 @@ monsters:
     name: "Xal'thor — Illithid Commander"
     cr: 14.0
     faction: aberration
-    role: boss
-    environment: any
+    role: boss-psi-commander
+    environment: urban
     source_file: "Bestiario/villain/Xal_thor/xal-thor-illithid-commander-cr14.md"
   - id: parte-1c-rituale-di-hellas-e-tre-ondate-difensive-b8dac1
     name: "Parte 1C – Rituale di Hellas e Tre Ondate Difensive"
@@ -273,7 +294,7 @@ monsters:
     name: "Cerchio Sacro Druid 7 (Hella ally)"
     cr: 7.0
     faction: cerchio-druid
-    role: caster-divine
+    role: divine-caster
     environment: forest
     source_file: "Bestiario/mostri/cerchio-druid7-cr7.md"
   - id: avarthel-druido-mezzelfo-f190cd
@@ -301,21 +322,21 @@ monsters:
     name: "Nemici del Cerchio Sacro (Quest Hellas)"
     cr: 9.0
     faction: cerchio-druid
-    role: caster-divine
+    role: generalist
     environment: forest
     source_file: "Bestiario/mostri/nemici-cerchio-sacro-hellas-cr9.md"
   - id: druid-bear-ally-cr12-675a3a
     name: "druid-bear-ally-cr12"
     cr: 12.0
     faction: cerchio-druid
-    role: caster-divine
+    role: ally-wildshape-tank
     environment: forest
     source_file: "Bestiario/png/druid-bear-ally-cr12.md"
   - id: arci-druido-circolo-cr14-738991
     name: "arci-druido-circolo-cr14"
     cr: 14.0
     faction: cerchio-druid
-    role: caster-divine
+    role: caster-divine-boss
     environment: forest
     source_file: "Bestiario/png/arci-druido-circolo-cr14.md"
   - id: errata-corrige-parte-2-3-3-5-verification-ae9189
@@ -336,35 +357,21 @@ monsters:
     name: "Presentatore / Annunciatore dell'Arena"
     cr: 2.0
     faction: dauth-defender
-    role: generalist
-    environment: mountain
+    role: fodder
+    environment: urban
     source_file: "Bestiario/mostri/presentatore-arena-cr2.md"
-  - id: thug-spettatore-sicario-guerriero-3-24b2bc
-    name: "Thug spettatore / sicario — Guerriero 3"
-    cr: 3.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/thug-sicario-ftr3-cr3.md"
-  - id: schiavo-psionico-cultista-69d482
-    name: "Schiavo Psionico / Cultista"
-    cr: 4.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/schiavo-psionico-cultista-cr4.md"
   - id: dauth-dwarf-defender-fighter-6-36053c
     name: "Dauth Dwarf Defender (Fighter 6)"
     cr: 6.0
     faction: dauth-defender
     role: melee-heavy
-    environment: any
+    environment: urban
     source_file: "Bestiario/mostri/dauth-dwarf-defender-cr6.md"
   - id: khorn-ufficiale-nanico-di-hammerfist-fighter-8-4f5356
     name: "Khorn, ufficiale nanico di Hammerfist (Fighter 8)"
     cr: 8.0
     faction: dauth-defender
-    role: boss
+    role: leader-commander
     environment: mountain
     source_file: "Bestiario/png/Khorn/khorn-ufficiale-hammerfist-cr8.md"
   - id: parte-2b-torneo-di-dauth-03a53f
@@ -385,23 +392,9 @@ monsters:
     name: "Pillar Golem (difesa dell'Arena)"
     cr: 8.0
     faction: dauth-defender
-    role: generalist
-    environment: mountain
+    role: melee-heavy
+    environment: urban
     source_file: "Bestiario/mostri/pillar-golem-arena-cr8.md"
-  - id: avversario-brawler-pugno-pesante-145156
-    name: "Avversario Brawler «Pugno Pesante»"
-    cr: 9.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/avversario-brawler-pugno-pesante-cr9.md"
-  - id: avversario-agile-giorno-1-rogue-monk-d2a453
-    name: "Avversario agile Giorno 1 (Rogue/Monk)"
-    cr: 9.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/avversario-agile-giorno1-cr9.md"
   - id: rurik-gorunn-martello-di-moradin-10-liv-dde9f6
     name: "Rurik Gorunn Martello Di Moradin 10 Liv"
     cr: 10.0
@@ -409,53 +402,18 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Rurik Gorunn martello di moradin 10 liv.htm"
-  - id: rurik-gorunn-martello-di-moradin-5fa38c
-    name: "Rurik Gorunn, Martello di Moradin"
-    cr: 10.0
-    faction: dauth-defender
-    role: generalist
-    environment: any
-    source_file: "Bestiario/png/rurik-gorunn-cr10.md"
   - id: dauth-commander-mercenari-nani-cr11-511ad4
     name: "dauth-commander-mercenari-nani-cr11"
     cr: 11.0
     faction: dauth-defender
-    role: boss
-    environment: any
+    role: leader-commander
+    environment: mountain
     source_file: "Bestiario/png/dauth-commander-mercenari-nani-cr11.md"
-  - id: ironclad-bruiser-fighter-12-nano-8e532e
-    name: "Ironclad Bruiser — Fighter 12 (Nano)"
-    cr: 12.0
-    faction: dauth-defender
-    role: melee-heavy
-    environment: mountain
-    source_file: "Bestiario/png/ironclad-bruiser-cr12.md"
-  - id: lady-koryn-rogue-12-601695
-    name: "Lady Koryn — Rogue 12"
-    cr: 12.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/lady-koryn-cr12.md"
-  - id: mistress-of-mirrors-sorcerer-10-rogue-2-e747c7
-    name: "Mistress of Mirrors — Sorcerer 10 / Rogue 2"
-    cr: 12.0
-    faction: dauth-defender
-    role: caster-arcane
-    environment: mountain
-    source_file: "Bestiario/png/mistress-of-mirrors-cr12.md"
-  - id: morlin-coalhewer-forgiatore-di-moradin-ab78c2
-    name: "Morlin Coalhewer, forgiatore di Moradin"
-    cr: 12.0
-    faction: dauth-defender
-    role: caster-divine
-    environment: any
-    source_file: "Bestiario/png/morlin-coalhewer-cr12.md"
   - id: nala-cantapietre-aeab1e
     name: "Nala Cantapietre"
     cr: 12.0
     faction: dauth-defender
-    role: generalist
+    role: ally
     environment: mountain
     source_file: "Bestiario/png/Nala_Cantapietre.md"
     notes: "uno dei 4 pregen (D6)."
@@ -480,49 +438,14 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2B-Torneo-Tordek-BATTLE-STATS-e-VILLAIN-ICONICI-Parte2.md"
-  - id: tetsu-serpente-di-vento-monk-12-2ccb30
-    name: "Tetsu «Serpente di Vento» — Monk 12"
-    cr: 12.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/tetsu-serpente-di-vento-cr12.md"
-  - id: il-campione-caduto-d3a974
-    name: "«Il Campione Caduto»"
-    cr: 12.0
-    faction: dauth-defender
-    role: boss
-    environment: mountain
-    source_file: "Bestiario/villain/il-campione-caduto-cr12.md"
   - id: borin-ferropugno-86a214
     name: "Borin Ferropugno"
     cr: 13.0
     faction: dauth-defender
-    role: generalist
+    role: ally
     environment: mountain
     source_file: "Bestiario/png/Borin_Ferropugno.md"
     notes: "uno dei 4 pregen (D6). Distinto dai Rumbling Stones (PG reali). NON confondere Thorin (pregen chierico) con Thorik (PG) o Thorek (re), D2."
-  - id: kragar-il-re-delle-catene-3beff7
-    name: "Kragar, il Re delle Catene"
-    cr: 13.0
-    faction: dauth-defender
-    role: boss
-    environment: mountain
-    source_file: "Bestiario/villain/kragar-re-delle-catene-cr13.md"
-  - id: maestra-shen-tigre-bianca-8df488
-    name: "Maestra Shen «Tigre Bianca»"
-    cr: 13.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/maestra-shen-tigre-bianca-cr13.md"
-  - id: grandmaster-rihan-monk-14-6a83f9
-    name: "Grandmaster Rihan — Monk 14"
-    cr: 14.0
-    faction: dauth-defender
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/grandmaster-rihan-cr14.md"
   - id: il-portale-della-forgia-eterna-cc9716
     name: "IL PORTALE DELLA FORGIA ETERNA"
     cr: 14.0
@@ -541,7 +464,7 @@ monsters:
     name: "Madre Superiora Dana Forgiapietra"
     cr: 14.0
     faction: dauth-defender
-    role: caster-divine
+    role: ally
     environment: mountain
     source_file: "Bestiario/png/Dana_Forgiapietra.md"
     notes: "adattamento originale (clero nanico RumblingStone). Named survivor canonico (`campaign-coherence.md` §1, insieme a Re Thorek)."
@@ -556,37 +479,22 @@ monsters:
     name: "Re Thorek Hammerfist"
     cr: 16.0
     faction: dauth-defender
-    role: generalist
+    role: ally
     environment: mountain
     source_file: "Bestiario/png/Re_Thorek_Hammerfist.md"
     notes: "distinto da **Thorik** (PG guerriero) e **Thorin** Runaforte (pregen chierico), D2. È già in `campaign/state.md` §4 (NPC knowledge) come colui che ha nominato i Custodi Eterni."
-  - id: xal-thor-variante-forma-del-nucleo-a8031c
-    name: "Xal'thor — variante «Forma del Nucleo»"
-    cr: 16.0
-    faction: dauth-defender
-    role: boss
-    environment: mountain
-    source_file: "Bestiario/villain/xal-thor-forma-del-nucleo-cr16.md"
   - id: ozyrrandion-drago-verde-juvenile-a48a82
     name: "Ozyrrandion, Drago Verde (Juvenile)"
     cr: 8.0
     faction: dragon
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/villain/ozyrrandion-drago-verde-cr8.md"
-  - id: razorfiend-white-variant-bcf693
-    name: "Razorfiend — White Variant"
-    cr: 8.0
-    faction: dragon
-    role: generalist
+    role: flier-boss
     environment: swamp
-    source_file: "Bestiario/mostri/razorfiend-white-cr8.md"
-    notes: "1 assegnato a Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti."
+    source_file: "Bestiario/villain/ozyrrandion-drago-verde-cr8.md"
   - id: signore-ventolesto-755b44
     name: "Signore Ventolesto"
     cr: 8.0
     faction: dragon
-    role: boss
+    role: ally
     environment: aerial
     source_file: "Bestiario/png/Signore_Ventolesto.md"
     notes: "adattamento originale. Alleato aereo temporaneo, non ricorrente costante."
@@ -597,42 +505,11 @@ monsters:
     role: flier
     environment: underdark
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Ozyrrandion drago Verde cr8.pcg"
-  - id: razorfiend-draconic-spawn-red-variant-8807d0
-    name: "Razorfiend (Draconic Spawn) — Red Variant"
-    cr: 9.0
-    faction: dragon
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/mostri/razorfiend-red-cr9.md"
-    notes: "2 assegnati a Wyrmlord Karruk (Rethmar Fase 1 assault)."
-  - id: razorfiend-blue-variant-c8d4c1
-    name: "Razorfiend — Blue Variant"
-    cr: 9.0
-    faction: dragon
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/mostri/razorfiend-blue-cr9.md"
-    notes: "1 assegnato a Ozyrrandion/Tower; rimosso se Zalkatar cade (P2A)."
-  - id: razorfiend-green-variant-a1fa7c
-    name: "Razorfiend — Green Variant"
-    cr: 9.0
-    faction: dragon
-    role: generalist
-    environment: swamp
-    source_file: "Bestiario/mostri/razorfiend-green-cr9.md"
-    notes: "2 supporto Azarr Kul avatar (Rethmar Fase 3). Letali in foresta."
-  - id: therysol-therisol-ex-ysolde-048979
-    name: "Therysol / Therisol (ex Ysolde)"
-    cr: 9.0
-    faction: dragon
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/png/Therysol/therysol-tiefling-mezzodrago-cr9.md"
   - id: capitano-lunapiena-08f701
     name: "Capitano Lunapiena"
     cr: 10.0
     faction: dragon
-    role: flier
+    role: ally
     environment: forest
     source_file: "Bestiario/png/Capitano_Lunapiena.md"
     notes: "adattamento originale. Comanda i 12 ranger elfici e coordina col Signore Ventolesto (`Bestiario/png/Signore_Ventolesto.md`)."
@@ -668,16 +545,9 @@ monsters:
     name: "Arbitrax, Drago Rosso (Young Adult)"
     cr: 13.0
     faction: dragon
-    role: flier
-    environment: aerial
+    role: flier-boss
+    environment: mountain
     source_file: "Bestiario/villain/arbitrax-drago-rosso-cr13.md"
-  - id: razorfiend-blackspawn-alfa-spawn-draconico-d-elite-1a1697
-    name: "Razorfiend «Blackspawn Alfa» — spawn draconico d'élite"
-    cr: 13.0
-    faction: dragon
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md"
   - id: rhest-fase-4-boss-saarvith-regiarix-cr-13-05f3cd
     name: "Rhest Fase 4 – Boss Saarvith & Regiarix (CR 13)"
     cr: 13.0
@@ -692,18 +562,11 @@ monsters:
     role: boss
     environment: forest
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md"
-  - id: saarvith-regiarix-boss-di-rhest-8b67b0
-    name: "Saarvith & Regiarix — Boss di Rhest"
-    cr: 13.0
-    faction: dragon
-    role: boss
-    environment: swamp
-    source_file: "Bestiario/villain/saarvith-regiarix-cr13.md"
   - id: orion-pelleorsa-f9b811
     name: "Orion Pelleorsa"
     cr: 14.0
     faction: dragon
-    role: flier
+    role: ally
     environment: forest
     source_file: "Bestiario/png/Orion_Pelleorsa.md"
     notes: "adattamento originale. Non affiliato al Sacred Forest né ai Tiri Kitor."
@@ -725,7 +588,7 @@ monsters:
     name: "Fauci di Palude"
     cr: 15.0
     faction: dragon
-    role: flier
+    role: villain
     environment: aerial
     source_file: "Bestiario/villain/Fauci_di_Palude.md"
     notes: "adattamento RHoD (drago d'avanguardia upscalato). Il \"Soffio a Cono\" è house-rule (ERRATA §2). Rami e contabilità in `ARC08-10-ESITI-E-CONTINGENZE.md` §4."
@@ -736,18 +599,11 @@ monsters:
     role: flier
     environment: aerial
     source_file: "Bestiario/villain/Azarr_Kul/Azarr_Kul/Azarr_Kul.md"
-  - id: tyrgarun-blue-old-dragon-sky-terror-of-rethmar-d8e679
-    name: "Tyrgarun — Blue Old Dragon (Sky-Terror of Rethmar)"
-    cr: 18.0
-    faction: dragon
-    role: flier
-    environment: urban
-    source_file: "Bestiario/villain/Tyrgarun/tyrgarun-blue-old-cr18.md"
   - id: tyrgarun-il-terrore-del-cielo-di-rethmar-68011c
     name: "Tyrgarun — il Terrore del Cielo di Rethmar"
     cr: 18.0
     faction: dragon
-    role: flier
+    role: villain
     environment: urban
     source_file: "Bestiario/villain/Tyrgarun/Tyrgarun.md"
     notes: "distinto dagli altri draghi (Arbitrax rosso, Ozyrrandion verde)."
@@ -755,7 +611,7 @@ monsters:
     name: "Drow Warrior"
     cr: 1.0
     faction: drow-sonjak
-    role: fodder
+    role: fodder-melee
     environment: underdark
     source_file: "Bestiario/mostri/drow-warrior-cr1.md"
     notes: "200+ nella casata Sonjak. Fanteria drow base."
@@ -770,7 +626,7 @@ monsters:
     name: "Drow Fighter 3 (House Soldier)"
     cr: 4.0
     faction: drow-sonjak
-    role: melee-heavy
+    role: melee-skirmisher
     environment: underdark
     source_file: "Bestiario/mostri/drow-fighter3-cr4.md"
     notes: "Guardia élite casata. ~60 nella Sonjak."
@@ -781,18 +637,11 @@ monsters:
     role: flier
     environment: underdark
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/00_Hell Hound-mezzoimmondi-cr4.pcg"
-  - id: ainin-chierico-dell-underdark-cleric-5-4daa52
-    name: "Ainin, Chierico dell'Underdark (Cleric 5)"
-    cr: 5.0
-    faction: drow-sonjak
-    role: caster-divine
-    environment: underdark
-    source_file: "Bestiario/mostri/underdark-cleric-ainin-cr5.md"
   - id: drow-noble-house-guard-ftr-2-rog-2-2cf759
     name: "Drow Noble House Guard (Ftr 2/Rog 2)"
     cr: 5.0
     faction: drow-sonjak
-    role: generalist
+    role: elite-skirmisher
     environment: underdark
     source_file: "Bestiario/mostri/drow-noble-guard-cr5.md"
     notes: "Bodyguard Sajak. ~15 nella casata."
@@ -849,14 +698,14 @@ monsters:
     name: "Drow Fungal Minion"
     cr: 6.0
     faction: drow-sonjak
-    role: generalist
+    role: fodder
     environment: underdark
     source_file: "Bestiario/mostri/drow-fungal-minion-cr6.md"
   - id: drow-guerriero-campi-b-c-3c0160
     name: "Drow Guerriero (Campi B/C)"
     cr: 6.0
     faction: drow-sonjak
-    role: generalist
+    role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/drow-guerriero-campi-cr6.md"
   - id: system-information-a38123
@@ -880,25 +729,18 @@ monsters:
     role: caster-divine
     environment: underdark
     source_file: "Bestiario/pregen-pcgen/Underdark cleric cr6 Ainin - (0 Points) in Statblock Format.html"
-  - id: dovil-runecaster-deep-diviner-diviner-5-deep-diviner-1-fighter-1-b17bbb
-    name: "Dovil Runecaster / Deep Diviner (Diviner 5/Deep Diviner 1/Fighter 1)"
-    cr: 7.0
-    faction: drow-sonjak
-    role: caster-arcane
-    environment: underdark
-    source_file: "Bestiario/mostri/underdark-dovil-runecaster-cr7.md"
   - id: drow-guerriero-d-avamposto-f12c0f
     name: "Drow Guerriero d'Avamposto"
     cr: 7.0
     faction: drow-sonjak
-    role: generalist
+    role: melee-heavy
     environment: underdark
     source_file: "Bestiario/mostri/drow-guerriero-avamposto-cr7.md"
   - id: drow-pyromancer-minore-52887d
     name: "Drow Pyromancer (minore)"
     cr: 7.0
     faction: drow-sonjak
-    role: generalist
+    role: caster-arcane
     environment: underdark
     source_file: "Bestiario/mostri/drow-pyromancer-minore-cr7.md"
   - id: system-information-ed1b40
@@ -961,7 +803,7 @@ monsters:
     name: "Drow Wizard 7 (Arcanist)"
     cr: 8.0
     faction: drow-sonjak
-    role: caster-arcane
+    role: arcane-blaster
     environment: underdark
     source_file: "Bestiario/mostri/drow-wizard7-cr8.md"
     notes: "Supporto magia Sonjak."
@@ -969,8 +811,8 @@ monsters:
     name: "Ogre Micelio — Sporeborn di Sonjak (Barbaro 4)"
     cr: 8.0
     faction: drow-sonjak
-    role: generalist
-    environment: underdark
+    role: melee-heavy-aberrante
+    environment: underground
     source_file: "Bestiario/mostri/ogre-micelio-sporeborn-cr8.md"
   - id: sentinella-drow-ranger-16ac8a
     name: "Sentinella Drow Ranger"
@@ -997,7 +839,7 @@ monsters:
     name: "Drow Pyromancer (completo)"
     cr: 9.0
     faction: drow-sonjak
-    role: generalist
+    role: caster-arcane
     environment: underdark
     source_file: "Bestiario/mostri/drow-pyromancer-completo-cr9.md"
   - id: system-information-9e939f
@@ -1039,14 +881,14 @@ monsters:
     name: "Drow Assassina di Lolth (Ladro 4 / Assassino 5)"
     cr: 10.0
     faction: drow-sonjak
-    role: generalist
+    role: caster-subdolo
     environment: underdark
     source_file: "Bestiario/mostri/drow-assassina-lolth-cr10.md"
   - id: soprastante-drow-caster-di-supporto-91da3b
     name: "Soprastante Drow (caster di supporto)"
     cr: 10.0
     faction: drow-sonjak
-    role: generalist
+    role: caster-divine
     environment: underdark
     source_file: "Bestiario/mostri/soprastante-drow-cr10.md"
   - id: stat-blocchi-sabotaggio-campi-drow-1-3-221e0f
@@ -1063,18 +905,11 @@ monsters:
     role: generalist
     environment: underdark
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-Sabotaggio-Campi-Drow-Upscale-CR12.md"
-  - id: bruto-deforme-del-sottosuolo-gigante-di-pietra-deforme-barbaro-2-b83335
-    name: "Bruto Deforme del Sottosuolo (Gigante di Pietra deforme, Barbaro 2)"
-    cr: 11.0
-    faction: drow-sonjak
-    role: generalist
-    environment: underdark
-    source_file: "Bestiario/mostri/bruto-deforme-sottosuolo-cr11.md"
   - id: drow-priestess-of-lolth-9-sajak-rituals-61589c
     name: "Drow Priestess of Lolth 9 (Sajak rituals)"
     cr: 11.0
     faction: drow-sonjak
-    role: caster-divine
+    role: divine-caster-boss
     environment: underdark
     source_file: "Bestiario/mostri/drow-priestess9-cr11.md"
     notes: "Usata per Notte dei Drow Fase 0 + rituale Spider-Kiss. Matrona Sajak simile ma CR 13-14."
@@ -1082,7 +917,7 @@ monsters:
     name: "Drow Trickster Arcano — «Dita di Ragnatela» (Ladro 3 / Mago 5 / Trickster Arcano 2)"
     cr: 11.0
     faction: drow-sonjak
-    role: generalist
+    role: caster-subdolo
     environment: underdark
     source_file: "Bestiario/mostri/drow-trickster-arcano-cr11.md"
   - id: errata-corrige-parte-1-quest-hellas-3-5-verification-2393ba
@@ -1099,20 +934,6 @@ monsters:
     role: generalist
     environment: underdark
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P1B-Cerchio-Treant-COMPLETO.md"
-  - id: aberrazione-fungina-alfa-ce7b71
-    name: "Aberrazione Fungina Alfa"
-    cr: 12.0
-    faction: drow-sonjak
-    role: boss
-    environment: underdark
-    source_file: "Bestiario/mostri/aberrazione-fungina-alfa-cr12.md"
-  - id: cervello-fungino-errante-1d18be
-    name: "Cervello Fungino Errante"
-    cr: 12.0
-    faction: drow-sonjak
-    role: generalist
-    environment: underdark
-    source_file: "Bestiario/mostri/cervello-fungino-errante-cr12.md"
   - id: statblocchi-chiave-missioni-brevi-cr-12-a42581
     name: "Statblocchi chiave – Missioni brevi CR 12"
     cr: 12.0
@@ -1131,23 +952,16 @@ monsters:
     name: "Zin'thara Vel'Ryn «la Voce di Ragnatela» — Ombraiola di Sonjak"
     cr: 12.0
     faction: drow-sonjak
-    role: boss
+    role: boss-caster-subdolo
     environment: underdark
     source_file: "Bestiario/villain/Zin_thara_Vel_Ryn/zin-thara-vel-ryn-cr12.md"
   - id: zin-thara-vel-ryn-la-voce-di-ragnatela-6f7e2a
     name: "Zin'thara Vel'Ryn — «la Voce di Ragnatela»"
     cr: 12.0
     faction: drow-sonjak
-    role: generalist
+    role: villain
     environment: underdark
     source_file: "Bestiario/villain/Zin_thara_Vel_Ryn/Zin_thara_Vel_Ryn.md"
-  - id: avatar-minore-di-madre-dei-funghi-f0c65f
-    name: "Avatar Minore di Madre dei Funghi"
-    cr: 13.0
-    faction: drow-sonjak
-    role: boss
-    environment: underdark
-    source_file: "Bestiario/mostri/avatar-minore-madre-funghi-cr13.md"
   - id: belkram-il-vecchio-portatore-redento-in-punto-di-morte-b4de13
     name: "BELKRAM — il vecchio portatore, redento in punto di morte"
     cr: 13.0
@@ -1183,11 +997,60 @@ monsters:
     role: generalist
     environment: underdark
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE1-ASSEDIO-TESTO.md"
+  - id: duergar-ladro-rogue-1-telon-d60174
+    name: "Duergar Ladro (Rogue 1) — «Telon»"
+    cr: 1.0
+    faction: duergar-abbathor
+    role: ranged
+    environment: underdark
+    source_file: "Bestiario/mostri/duergar-ladro1-cr1.md"
+  - id: duergar-guerriero-fighter-2-lokee-ce521e
+    name: "Duergar Guerriero (Fighter 2) — «Lokee»"
+    cr: 3.0
+    faction: duergar-abbathor
+    role: melee-heavy
+    environment: underdark
+    source_file: "Bestiario/mostri/duergar-guerriero2-cr3.md"
+  - id: duergar-chierico-di-abbathor-cleric-3-brother-justin-32c98d
+    name: "Duergar Chierico di Abbathor (Cleric 3) — «Brother Justin»"
+    cr: 4.0
+    faction: duergar-abbathor
+    role: caster-divine
+    environment: underdark
+    source_file: "Bestiario/mostri/duergar-chierico3-cr4.md"
+  - id: duergar-mago-wizard-3-necromante-losse-hinge-c6252e
+    name: "Duergar Mago (Wizard 3, necromante) — «Losse hinge»"
+    cr: 4.0
+    faction: duergar-abbathor
+    role: caster-arcane
+    environment: underdark
+    source_file: "Bestiario/mostri/duergar-mago3-cr4.md"
+  - id: duergar-mago-ladro-rogue-3-wizard-4-f56ae1
+    name: "Duergar Mago/Ladro (Rogue 3 / Wizard 4)"
+    cr: 7.0
+    faction: duergar-abbathor
+    role: caster-arcane
+    environment: underdark
+    source_file: "Bestiario/mostri/duergar-mago-ladro8-cr7.md"
+  - id: cavaliere-antipaladino-di-abbathor-blackguard-e4bb66
+    name: "Cavaliere Antipaladino di Abbathor (Blackguard)"
+    cr: 9.0
+    faction: duergar-abbathor
+    role: melee-heavy
+    environment: underdark
+    source_file: "Bestiario/villain/abbathor-blackguard-cr9.md"
+  - id: alto-chierico-di-abbathor-cleric-11-4eea94
+    name: "Alto Chierico di Abbathor (Cleric 11)"
+    cr: 11.0
+    faction: duergar-abbathor
+    role: caster-divine-boss
+    environment: underdark
+    source_file: "Bestiario/villain/abbathor-cleric11-cr11.md"
   - id: skeletal-dire-lion-ghostlord-pride-4c7cc1
     name: "Skeletal Dire Lion (Ghostlord Pride)"
     cr: 6.0
     faction: ghostlord-undead
-    role: generalist
+    role: melee-shock
     environment: any
     source_file: "Bestiario/mostri/skeletal-dire-lion-cr6.md"
   - id: leoni-spettrali-guardie-incorporee-afd43d
@@ -1195,27 +1058,27 @@ monsters:
     cr: 7.0
     faction: ghostlord-undead
     role: generalist
-    environment: mountain
+    environment: any
     source_file: "Bestiario/mostri/leoni-spettrali-cr7.md"
   - id: deathlock-ghostlord-mage-0c1f7a
     name: "Deathlock (Ghostlord mage)"
     cr: 8.0
     faction: ghostlord-undead
-    role: generalist
+    role: arcane-caster
     environment: any
     source_file: "Bestiario/mostri/deathlock-cr8.md"
   - id: ghost-lion-spettrale-cr8-e70f7c
     name: "ghost-lion-spettrale-cr8"
     cr: 8.0
     faction: ghostlord-undead
-    role: generalist
-    environment: any
+    role: guardian-incorporeal
+    environment: thornwaste
     source_file: "Bestiario/mostri/ghost-lion-spettrale-cr8.md"
   - id: bone-naga-ghostlord-servant-6a1fa3
     name: "Bone Naga (Ghostlord servant)"
     cr: 10.0
     faction: ghostlord-undead
-    role: generalist
+    role: caster-melee
     environment: any
     source_file: "Bestiario/mostri/bone-naga-cr10.md"
   - id: missioni-brevi-0-8-cr-12-a4fcaf
@@ -1250,77 +1113,77 @@ monsters:
     name: "Githyanki Warrior (Ftr 3)"
     cr: 4.0
     faction: githyanki-vaereth
-    role: melee-heavy
-    environment: any
+    role: melee-elite
+    environment: astral
     source_file: "Bestiario/mostri/githyanki-warrior3-cr4.md"
   - id: swarm-di-pseudodraconici-gith-9f1ffb
     name: "Swarm di Pseudodraconici Gith"
     cr: 8.0
     faction: githyanki-vaereth
-    role: generalist
-    environment: mountain
+    role: flier
+    environment: aerial
     source_file: "Bestiario/mostri/swarm-pseudodraconici-gith-cr8.md"
   - id: githyanki-knight-elite-cr10-55ab28
     name: "githyanki-knight-elite-cr10"
     cr: 10.0
     faction: githyanki-vaereth
-    role: melee-heavy
-    environment: any
+    role: elite-psi-warrior
+    environment: urban
     source_file: "Bestiario/mostri/githyanki-knight-elite-cr10.md"
   - id: githyanki-captain-ftr-8-wiz-3-gish-287b34
     name: "Githyanki Captain (Ftr 8/Wiz 3 Gish)"
     cr: 12.0
     faction: githyanki-vaereth
-    role: boss
+    role: gish-elite
     environment: any
     source_file: "Bestiario/mostri/githyanki-captain-gish-cr12.md"
   - id: gnoll-warrior-2-9d5fca
     name: "Gnoll Warrior 2"
     cr: 2.0
     faction: gnoll
-    role: fodder
-    environment: plain
+    role: melee-fodder
+    environment: any
     source_file: "Bestiario/mostri/gnoll-warrior2-cr2.md"
   - id: flind-gnoll-elite-mm-ii-549a03
     name: "Flind (Gnoll Elite — MM II)"
     cr: 3.0
     faction: gnoll
-    role: generalist
-    environment: plain
+    role: melee-elite
+    environment: any
     source_file: "Bestiario/mostri/flind-cr3.md"
   - id: gnoll-hyenodon-rider-df7b38
     name: "Gnoll Hyenodon Rider"
     cr: 4.0
     faction: gnoll
-    role: generalist
+    role: mounted-melee
     environment: plain
     source_file: "Bestiario/mostri/gnoll-hyenodon-rider-cr4.md"
   - id: gnoll-ranger-4-artigli-neri-scout-cd048e
     name: "Gnoll Ranger 4 (Artigli Neri scout)"
     cr: 5.0
     faction: gnoll
-    role: ranged
+    role: ranged-scout
     environment: forest
     source_file: "Bestiario/mostri/gnoll-ranger4-cr5.md"
   - id: gnoll-cleric-6-of-yeenoghu-765186
     name: "Gnoll Cleric 6 of Yeenoghu"
     cr: 7.0
     faction: gnoll
-    role: caster-divine
-    environment: plain
+    role: divine-caster
+    environment: any
     source_file: "Bestiario/mostri/gnoll-cleric-yeenoghu-cr7.md"
   - id: gnoll-chieftain-barbarian-8-786e10
     name: "Gnoll Chieftain (Barbarian 8)"
     cr: 10.0
     faction: gnoll
-    role: boss
-    environment: plain
+    role: melee-boss
+    environment: any
     source_file: "Bestiario/mostri/gnoll-chieftain-cr10.md"
   - id: dara-occhiolesto-953f41
     name: "Dara Occhiolesto"
     cr: 12.0
     faction: hammerfist-hero
-    role: ranged
+    role: ally
     environment: forest
     source_file: "Bestiario/png/Dara_Occhiolesto.md"
     notes: "uno dei 4 pregen (D6)."
@@ -1328,7 +1191,7 @@ monsters:
     name: "Thorin Runaforte"
     cr: 12.0
     faction: hammerfist-hero
-    role: caster-divine
+    role: ally
     environment: mountain
     source_file: "Bestiario/png/Thorin_Runaforte.md"
     notes: "uno dei 4 pregen (D6). ⚠️ **Thorin** = pregen chierico; **Thorik** = PG guerriero; **Thorek** = re. Tre persone diverse (D2, A10)."
@@ -1336,36 +1199,64 @@ monsters:
     name: "Loxo Warrior 3"
     cr: 4.0
     faction: loxo-centaur-corrupted
-    role: fodder
+    role: melee-heavy
     environment: plain
     source_file: "Bestiario/mostri/loxo-warrior3-cr4.md"
   - id: centaur-ranger-4-corrupted-d8bb54
     name: "Centaur Ranger 4 (Corrupted)"
     cr: 5.0
     faction: loxo-centaur-corrupted
-    role: ranged
-    environment: forest
+    role: ranged-skirmisher
+    environment: plain
     source_file: "Bestiario/mostri/centaur-ranger4-corrupted-cr5.md"
   - id: centaur-chieftain-fighter-6-ae7aca
     name: "Centaur Chieftain (Fighter 6)"
     cr: 7.0
     faction: loxo-centaur-corrupted
-    role: boss
+    role: melee-boss
     environment: plain
     source_file: "Bestiario/mostri/centaur-chieftain-cr7.md"
   - id: loxo-shaman-druid-6-172952
     name: "Loxo Shaman (Druid 6)"
     cr: 7.0
     faction: loxo-centaur-corrupted
-    role: caster-divine
-    environment: forest
+    role: divine-caster
+    environment: plain
     source_file: "Bestiario/mostri/loxo-shaman6-cr7.md"
+  - id: ariete-da-guerra-del-martello-di-moradin-cavalcatura-da-paladino-65c77a
+    name: "Ariete da guerra del Martello di Moradin (cavalcatura da paladino)"
+    cr: 2.0
+    faction: martello-moradin
+    role: mount
+    environment: mountain
+    source_file: "Bestiario/png/cavalcatura-ariete-moradin-cr2.md"
+  - id: rurik-gorunn-martello-di-moradin-5fa38c
+    name: "Rurik Gorunn, Martello di Moradin"
+    cr: 10.0
+    faction: martello-moradin
+    role: melee-heavy
+    environment: mountain
+    source_file: "Bestiario/png/rurik-gorunn-cr10.md"
+  - id: morlin-coalhewer-forgiatore-di-moradin-ab78c2
+    name: "Morlin Coalhewer, forgiatore di Moradin"
+    cr: 12.0
+    faction: martello-moradin
+    role: caster-divine
+    environment: mountain
+    source_file: "Bestiario/png/morlin-coalhewer-cr12.md"
+  - id: balvar-fuocospento-il-consigliere-dell-orda-cr-13-685ec8
+    name: "Balvar Fuocospento, il Consigliere dell'Orda (CR 13)"
+    cr: 13.0
+    faction: orda-antica-372dr
+    role: caster-divine-boss
+    environment: mountain
+    source_file: "Bestiario/villain/balvar-fuocospento-cr13.md"
   - id: cultista-rakshasa-rog-3-72a1a5
     name: "Cultista Rakshasa (Rog 3)"
     cr: 3.0
     faction: rakshasa
-    role: generalist
-    environment: any
+    role: skirmisher-stealth
+    environment: urban
     source_file: "Bestiario/mostri/cultista-rakshasa-cr3.md"
   - id: maestro-varis-seta-argento-10c4d7
     name: "MAESTRO VARIS \"SETA-ARGENTO\""
@@ -1399,14 +1290,21 @@ monsters:
     name: "Il Collezionista (Maestro Varis \"Seta-Argento\")"
     cr: 18.0
     faction: rakshasa
-    role: boss
-    environment: any
+    role: boss-shadow-mastermind
+    environment: urban
     source_file: "Bestiario/villain/Il_Collezionista_Rakshasa/il-collezionista-rakshasa-cr18.md"
+  - id: therysol-therisol-ex-ysolde-048979
+    name: "Therysol / Therisol (ex Ysolde)"
+    cr: 9.0
+    faction: rakshasa-hunter
+    role: ally-skirmisher-caster
+    environment: urban
+    source_file: "Bestiario/png/Therysol/therysol-tiefling-mezzodrago-cr9.md"
   - id: goblin-warrior-1-ca9dbf
     name: "Goblin Warrior 1"
     cr: 0.5
     faction: red-hand
-    role: fodder
+    role: fodder-ranged
     environment: any
     source_file: "Bestiario/mostri/goblin-warrior1-cr05.md"
     notes: "800 nell'orda, fornitori di frecce."
@@ -1414,7 +1312,7 @@ monsters:
     name: "Blue (Psionic Goblinoid)"
     cr: 1.0
     faction: red-hand
-    role: generalist
+    role: psionic-support
     environment: any
     source_file: "Bestiario/mostri/blue-psion-cr1.md"
     notes: "10 unità nel core. Supporto scouts/communicator."
@@ -1481,13 +1379,6 @@ monsters:
     role: fodder
     environment: any
     source_file: "Bestiario/mostri/hobgoblin-regular-warrior4-cr3.md"
-  - id: lomyn-redtongue-bardo-mezzelfo-4233cd
-    name: "Lómyn RedTongue, bardo mezzelfo"
-    cr: 3.0
-    faction: red-hand
-    role: generalist
-    environment: any
-    source_file: "Bestiario/png/lomyn-redtongue-bardo4-cr3.md"
   - id: orco-regular-warrior-4-705d68
     name: "Orco Regular (Warrior 4)"
     cr: 3.0
@@ -1513,14 +1404,14 @@ monsters:
     name: "Hell Hound mezzo-immondo (dragonblood)"
     cr: 4.0
     faction: red-hand
-    role: flier
-    environment: aerial
+    role: melee-heavy
+    environment: any
     source_file: "Bestiario/mostri/hell-hound-mezzoimmondo-cr4.md"
   - id: goblin-worg-raider-fighter-5-056916
     name: "Goblin Worg Raider (Fighter 5)"
     cr: 5.0
     faction: red-hand
-    role: melee-heavy
+    role: ranged
     environment: any
     source_file: "Bestiario/mostri/goblin-worg-raider-ftr5-cr5.md"
   - id: goblin-worg-raider-cr5-070868
@@ -1548,7 +1439,7 @@ monsters:
     name: "Hobgoblin Sergente (Fighter 5)"
     cr: 5.0
     faction: red-hand
-    role: melee-heavy
+    role: melee-leader
     environment: any
     source_file: "Bestiario/mostri/hobgoblin-sergente-cr5.md"
     notes: "240 exemplaries in RHoD horde. Command 10-20 regular hobgoblin."
@@ -1556,7 +1447,7 @@ monsters:
     name: "Hobgoblin Veterans (Warrior 6)"
     cr: 5.0
     faction: red-hand
-    role: fodder
+    role: melee-heavy
     environment: any
     source_file: "Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md"
   - id: hobgoblin-veterans-6-liv-e795f7
@@ -1566,11 +1457,18 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/hobgoblin veterans 6 liv.htm"
+  - id: karkilan-minotauro-berserk-d481f8
+    name: "Karkilan, Minotauro Berserk"
+    cr: 5.0
+    faction: red-hand
+    role: melee-heavy
+    environment: dungeon
+    source_file: "Bestiario/villain/minotauro-karkilan-cr5.md"
   - id: ogre-skullcrusher-e8fdb6
     name: "Ogre Skullcrusher"
     cr: 5.0
     faction: red-hand
-    role: generalist
+    role: melee-heavy
     environment: mountain
     source_file: "Bestiario/mostri/ogre-skullcrusher-cr5.md"
   - id: ogre-skullcrusher-cr5-636f53
@@ -1605,8 +1503,8 @@ monsters:
     name: "Koth, «Signore dei Dragoni» (Bugbear Sorcerer)"
     cr: 6.0
     faction: red-hand
-    role: flier
-    environment: aerial
+    role: caster-arcane
+    environment: any
     source_file: "Bestiario/villain/koth-signore-dei-dragoni-cr6.md"
   - id: signore-dei-dragoni-koth-4bf0b0
     name: "Signore Dei Dragoni Koth"
@@ -1654,24 +1552,31 @@ monsters:
     name: "KulkorZhul War Adept (Sorcerer 7, dragonblood)"
     cr: 7.0
     faction: red-hand
-    role: flier
-    environment: aerial
+    role: caster-arcane
+    environment: any
     source_file: "Bestiario/mostri/kulkorzhul-war-adept-cr7.md"
   - id: monaco-pugno-del-destino-monk-7-40f6dd
     name: "Monaco «Pugno del Destino» (Monk 7)"
     cr: 7.0
     faction: red-hand
-    role: generalist
+    role: melee-heavy
     environment: any
     source_file: "Bestiario/mostri/monaco-pugno-del-destino-cr7.md"
   - id: warpriest-di-tiamat-cleric-7-a38a80
     name: "Warpriest di Tiamat (Cleric 7)"
     cr: 7.0
     faction: red-hand
-    role: caster-divine
+    role: divine-caster
     environment: any
     source_file: "Bestiario/mostri/warpriest-tiamat-cr7.md"
     notes: "20 unità. Ruolo: buff + emergency heal orda. Turn rebuke for undead ally."
+  - id: erinni-versione-potenziata-a26686
+    name: "Erinni (versione potenziata)"
+    cr: 8.0
+    faction: red-hand
+    role: flier
+    environment: any
+    source_file: "Bestiario/mostri/erinni-rethmar-cr8.md"
   - id: hobgoblin-shamano-draconico-cr8-aec25d
     name: "Hobgoblin Shamano Draconico Cr8 "
     cr: 8.0
@@ -1697,14 +1602,22 @@ monsters:
     name: "Mira Serani, «l'Aranea» — Aranea Stregone 6, CR 8 (calibrata PG 8-9)"
     cr: 8.0
     faction: red-hand
-    role: caster-arcane
-    environment: any
+    role: caster-infiltrator
+    environment: urban
     source_file: "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md"
+  - id: razorfiend-white-variant-bcf693
+    name: "Razorfiend — White Variant"
+    cr: 8.0
+    faction: red-hand
+    role: guard-melee
+    environment: cold
+    source_file: "Bestiario/mostri/razorfiend-white-cr8.md"
+    notes: "1 assegnato a Azarr Kul guard (Rethmar Fase 3). Più debole delle altre varianti."
   - id: hobgoblin-captain-cr8-026188
     name: "hobgoblin-captain-cr8"
     cr: 8.0
     faction: red-hand
-    role: boss
+    role: elite-officer
     environment: any
     source_file: "Bestiario/mostri/hobgoblin-captain-cr8.md"
   - id: kulkorzhul-war-adept-cr9-acid-64ed6a
@@ -1746,37 +1659,68 @@ monsters:
     name: "Ogre Frantumapietra delle Fauci Profonde (Barbaro 6)"
     cr: 9.0
     faction: red-hand
-    role: generalist
-    environment: swamp
+    role: melee-heavy
+    environment: underground
     source_file: "Bestiario/mostri/ogre-frantumapietra-barbaro6-cr9.md"
+  - id: razorfiend-draconic-spawn-red-variant-8807d0
+    name: "Razorfiend (Draconic Spawn) — Red Variant"
+    cr: 9.0
+    faction: red-hand
+    role: melee-heavy
+    environment: any
+    source_file: "Bestiario/mostri/razorfiend-red-cr9.md"
+    notes: "2 assegnati a Wyrmlord Karruk (Rethmar Fase 1 assault)."
+  - id: razorfiend-blue-variant-c8d4c1
+    name: "Razorfiend — Blue Variant"
+    cr: 9.0
+    faction: red-hand
+    role: skirmisher-shock
+    environment: aerial
+    source_file: "Bestiario/mostri/razorfiend-blue-cr9.md"
+    notes: "1 assegnato a Ozyrrandion/Tower; rimosso se Zalkatar cade (P2A)."
+  - id: razorfiend-green-variant-a1fa7c
+    name: "Razorfiend — Green Variant"
+    cr: 9.0
+    faction: red-hand
+    role: ambusher-gas
+    environment: forest
+    source_file: "Bestiario/mostri/razorfiend-green-cr9.md"
+    notes: "2 supporto Azarr Kul avatar (Rethmar Fase 3). Letali in foresta."
   - id: wyrmlord-karruk-06681e
     name: "Wyrmlord Karruk"
     cr: 10.0
     faction: red-hand
-    role: boss
-    environment: mountain
+    role: melee-commander
+    environment: battlefield
     source_file: "Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr10.md"
     notes: "Guida assalto Rethmar Fase 1. Con 2 Razorfiend Red + 300 hobgoblin."
   - id: wyrmlord-karruk-comandante-gigante-della-mano-rossa-146439
     name: "Wyrmlord Karruk — comandante gigante della Mano Rossa"
     cr: 10.0
     faction: red-hand
-    role: boss
+    role: villain
     environment: any
     source_file: "Bestiario/villain/Wyrmlord_Karruk/Wyrmlord_Karruk.md"
     notes: "uno dei Wyrmlord della campagna; distinto da Koth e dagli altri."
+  - id: bruto-deforme-del-sottosuolo-gigante-di-pietra-deforme-barbaro-2-b83335
+    name: "Bruto Deforme del Sottosuolo (Gigante di Pietra deforme, Barbaro 2)"
+    cr: 11.0
+    faction: red-hand
+    role: melee-heavy
+    environment: underdark
+    source_file: "Bestiario/mostri/bruto-deforme-sottosuolo-cr11.md"
   - id: chierico-di-gruumsh-orco-chierico-11-c94818
     name: "Chierico di Gruumsh (Orco, Chierico 11)"
     cr: 11.0
     faction: red-hand
-    role: caster-divine
-    environment: any
+    role: caster-divino
+    environment: underground
     source_file: "Bestiario/mostri/chierico-gruumsh-cr11.md"
   - id: tiamat-warpriest-elite-cr11-97fc9c
     name: "tiamat-warpriest-elite-cr11"
     cr: 11.0
     faction: red-hand
-    role: caster-divine
+    role: caster-divine-elite
     environment: any
     source_file: "Bestiario/mostri/tiamat-warpriest-elite-cr11.md"
   - id: armate-composizione-dettagliata-rhod-army-atlas-41c91e
@@ -1790,10 +1734,24 @@ monsters:
     name: "Gorthak il Trifronte"
     cr: 12.0
     faction: red-hand
-    role: flier
+    role: villain
     environment: aerial
     source_file: "Bestiario/villain/Gorthak_il_Trifronte.md"
     notes: "adattamento RHoD (unità pesante upscalata). Non confondere con il \"Fauci di Diamante\" (Xorn di ARC-07 P4), nome simile ma creatura diversa."
+  - id: emissario-red-hand-cr12-ba4075
+    name: "emissario-red-hand-cr12"
+    cr: 12.0
+    faction: red-hand
+    role: elite-envoy-caster
+    environment: thornwaste
+    source_file: "Bestiario/villain/emissario-red-hand-cr12.md"
+  - id: zarim-illithid-luogotenente-cr12-f9212b
+    name: "zarim-illithid-luogotenente-cr12"
+    cr: 12.0
+    faction: red-hand
+    role: elite-psi-caster
+    environment: urban
+    source_file: "Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md"
   - id: battaglia-finale-fase-2-aa8806
     name: "Battaglia Finale – Fase 2"
     cr: 13.0
@@ -1801,61 +1759,89 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE2-RITUALISTI-TESTO.md"
+  - id: razorfiend-blackspawn-alfa-spawn-draconico-d-elite-1a1697
+    name: "Razorfiend «Blackspawn Alfa» — spawn draconico d'élite"
+    cr: 13.0
+    faction: red-hand
+    role: elite-brute
+    environment: any
+    source_file: "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md"
+  - id: saarvith-regiarix-boss-di-rhest-8b67b0
+    name: "Saarvith & Regiarix — Boss di Rhest"
+    cr: 13.0
+    faction: red-hand
+    role: boss
+    environment: swamp
+    source_file: "Bestiario/villain/saarvith-regiarix-cr13.md"
   - id: ushgar-occhio-reso-capo-guerra-degli-ausiliari-orcheschi-orco-barbaro-13-bc877b
     name: "Ushgar «Occhio Reso» — Capo-guerra degli ausiliari orcheschi (Orco, Barbaro 13)"
     cr: 13.0
     faction: red-hand
-    role: generalist
-    environment: any
+    role: mini-boss
+    environment: hills
     source_file: "Bestiario/villain/Ushgar_Occhio_Reso/ushgar-occhio-reso-cr13.md"
   - id: generale-grimjaw-39a630
     name: "Generale Grimjaw"
     cr: 14.0
     faction: red-hand
-    role: boss
+    role: villain
     environment: mountain
     source_file: "Bestiario/villain/Generale_Grimjaw.md"
     notes: "adattamento RHoD (Wyrmlord-like upscalato). Distinto da Khorn (nanico) e dagli altri comandanti."
+  - id: azarr-kul-final-cr15-592c05
+    name: "azarr-kul-final-cr15"
+    cr: 15.0
+    faction: red-hand
+    role: boss-warpriest-dragonrider
+    environment: any
+    source_file: "Bestiario/villain/Azarr_Kul/azarr-kul-final-cr15.md"
   - id: ghaurush-cenerevento-generale-elementalista-della-mano-rossa-f854ff
     name: "Ghaurush «Cenerevento» — Generale Elementalista della Mano Rossa"
     cr: 16.0
     faction: red-hand
-    role: caster-arcane
-    environment: mountain
+    role: boss-caster-brute
+    environment: any
     source_file: "Bestiario/villain/Ghaurush_Cenerevento/ghaurush-cenerevento-cr16.md"
   - id: ghaurush-cenerevento-il-generale-che-voleva-una-valle-5b896e
     name: "Ghaurush «Cenerevento» — il generale che voleva una valle"
     cr: 16.0
     faction: red-hand
-    role: generalist
+    role: villain
     environment: any
     source_file: "Bestiario/villain/Ghaurush_Cenerevento/Ghaurush_Cenerevento.md"
   - id: avatar-tiamat-cr17-f1141f
     name: "avatar-tiamat-cr17"
     cr: 17.0
     faction: red-hand
-    role: flier
-    environment: aerial
+    role: boss-epic-dragon
+    environment: any
     source_file: "Bestiario/villain/Avatar_Tiamat/avatar-tiamat-cr17.md"
   - id: ghaurush-cenerevento-secondo-incontro-il-preventivo-e-scaduto-2be8b3
     name: "Ghaurush «Cenerevento» — Secondo Incontro, «il preventivo è scaduto»"
     cr: 18.0
     faction: red-hand
-    role: caster-arcane
-    environment: mountain
+    role: boss-caster
+    environment: any
     source_file: "Bestiario/villain/Ghaurush_Cenerevento/ghaurush-cenerevento-secondo-incontro-cr18.md"
+  - id: tyrgarun-blue-old-dragon-sky-terror-of-rethmar-d8e679
+    name: "Tyrgarun — Blue Old Dragon (Sky-Terror of Rethmar)"
+    cr: 18.0
+    faction: red-hand
+    role: aerial-hazard
+    environment: aerial
+    source_file: "Bestiario/villain/Tyrgarun/tyrgarun-blue-old-cr18.md"
   - id: rethmar-militia-warrior-1-a05ff1
     name: "Rethmar Militia (Warrior 1)"
     cr: 0.5
     faction: rethmar-defender
-    role: melee-heavy
+    role: fodder-defender
     environment: urban
     source_file: "Bestiario/mostri/rethmar-militia-cr05.md"
   - id: rethmar-city-guard-fighter-2-97048a
     name: "Rethmar City Guard (Fighter 2)"
     cr: 2.0
     faction: rethmar-defender
-    role: melee-heavy
+    role: melee-defender
     environment: urban
     source_file: "Bestiario/mostri/rethmar-city-guard-cr2.md"
   - id: conte-valerius-il-finanziatore-dell-orda-9285f1
@@ -1876,21 +1862,14 @@ monsters:
     name: "Capitana Lorana"
     cr: 7.0
     faction: rethmar-defender
-    role: melee-heavy
+    role: ally-fighter-leader
     environment: urban
     source_file: "Bestiario/png/Lorana/capitana-lorana-cr7.md"
-  - id: erinni-versione-potenziata-a26686
-    name: "Erinni (versione potenziata)"
-    cr: 8.0
-    faction: rethmar-defender
-    role: generalist
-    environment: urban
-    source_file: "Bestiario/mostri/erinni-rethmar-cr8.md"
   - id: khorn-12872f
     name: "Khorn"
     cr: 8.0
     faction: rethmar-defender
-    role: generalist
+    role: ally
     environment: urban
     source_file: "Bestiario/png/Khorn/Khorn.md"
     notes: "citato in `09_.../Arco-Post-Hammerfist-HOOKS-Thorik-RethmarLetter.md` (r.135/157). Alternativa a Thorik che va di persona a Rethmar."
@@ -1898,14 +1877,14 @@ monsters:
     name: "Mira Serani, «l'Aranea» — la faccia rubata"
     cr: 8.0
     faction: rethmar-defender
-    role: generalist
+    role: villain
     environment: any
     source_file: "Bestiario/villain/Mira_Serani/Mira_Serani.md"
   - id: conte-valerius-villain-politico-432059
     name: "Conte Valerius — Villain Politico"
     cr: 14.0
     faction: rethmar-defender
-    role: melee-heavy
+    role: villain-political
     environment: urban
     source_file: "Bestiario/villain/Conte_Valerius/conte-valerius-cr14-political.md"
   - id: maestro-tempestas-il-tonante-di-rethmar-452711
@@ -1933,7 +1912,7 @@ monsters:
     name: "Avatar di Tiamat — Regina Cromatica (manifestazione)"
     cr: 17.0
     faction: rethmar-defender
-    role: generalist
+    role: villain
     environment: urban
     source_file: "Bestiario/villain/Avatar_Tiamat/Avatar_Tiamat.md"
     notes: "il climax assoluto della campagna. Distinta dai Wyrmlord che la servono."
@@ -1951,6 +1930,13 @@ monsters:
     role: caster-divine
     environment: urban
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md"
+  - id: jorr-natherson-guida-delle-paludi-665a79
+    name: "Jorr Natherson, guida delle paludi"
+    cr: 7.0
+    faction: rhod-allies
+    role: ranged
+    environment: forest
+    source_file: "Bestiario/png/jorr-natherson-cr7.md"
   - id: capitana-lythiel-alar-wen-il-vento-della-quercia-f47382
     name: "CAPITANA LYTHIEL ALAR-WEN — IL VENTO DELLA QUERCIA"
     cr: 5.0
@@ -1969,7 +1955,7 @@ monsters:
     name: "Killiar Arrowswift"
     cr: 11.0
     faction: starsong-elf
-    role: generalist
+    role: ranged
     environment: forest
     source_file: "Bestiario/png/killiar-arrowswift-cr11.md"
   - id: starsong-hill-alleanza-con-i-tiri-kitor-cr-13-456da1
@@ -1990,8 +1976,8 @@ monsters:
     name: "arcimago-circolo-otto-cr14"
     cr: 14.0
     faction: starsong-elf
-    role: caster-arcane
-    environment: forest
+    role: caster-arcane-boss
+    environment: any
     source_file: "Bestiario/png/arcimago-circolo-otto-cr14.md"
   - id: thayan-heavy-infantry-fighter-3-84a6e7
     name: "Thayan Heavy Infantry (Fighter 3)"
@@ -2004,30 +1990,44 @@ monsters:
     name: "Thayan Knight (PrC Complete Warrior)"
     cr: 8.0
     faction: teschio-nero-thay
-    role: melee-heavy
+    role: mounted-elite
     environment: any
     source_file: "Bestiario/mostri/thayan-knight-cr8.md"
   - id: thayan-red-wizard-7-evoker-50abb1
     name: "Thayan Red Wizard 7 (Evoker)"
     cr: 9.0
     faction: teschio-nero-thay
-    role: caster-arcane
+    role: arcane-blaster
     environment: any
     source_file: "Bestiario/mostri/thayan-red-wizard7-cr9.md"
   - id: teschio-nero-commander-ftr-8-bbn-2-529583
     name: "Teschio Nero Commander (Ftr 8/Bbn 2)"
     cr: 10.0
     faction: teschio-nero-thay
-    role: boss
+    role: melee-boss
     environment: any
     source_file: "Bestiario/mostri/teschio-nero-commander-cr10.md"
-  - id: duergar-ladro-rogue-1-telon-d60174
-    name: "Duergar Ladro (Rogue 1) — «Telon»"
-    cr: 1.0
-    faction: unknown
-    role: generalist
+  - id: ainin-chierico-dell-underdark-cleric-5-4daa52
+    name: "Ainin, Chierico dell'Underdark (Cleric 5)"
+    cr: 5.0
+    faction: underdark
+    role: caster-divine
     environment: underdark
-    source_file: "Bestiario/mostri/duergar-ladro1-cr1.md"
+    source_file: "Bestiario/mostri/underdark-cleric-ainin-cr5.md"
+  - id: bothor-melvur-guerrieri-dell-underdark-3b3b8c
+    name: "Bothor / Melvur, guerrieri dell'Underdark"
+    cr: 6.0
+    faction: underdark
+    role: melee-heavy
+    environment: underdark
+    source_file: "Bestiario/png/bothor-malvur-cr6.md"
+  - id: dovil-runecaster-deep-diviner-diviner-5-deep-diviner-1-fighter-1-b17bbb
+    name: "Dovil Runecaster / Deep Diviner (Diviner 5/Deep Diviner 1/Fighter 1)"
+    cr: 7.0
+    faction: underdark
+    role: caster-arcane
+    environment: underdark
+    source_file: "Bestiario/mostri/underdark-dovil-runecaster-cr7.md"
   - id: duergar-ladro-1liv-2cr-7ab9a6
     name: "Duergar Ladro 1Liv 2Cr"
     cr: 1.0
@@ -2035,13 +2035,6 @@ monsters:
     role: ranged
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_ladro_1liv_2cr.html"
-  - id: ariete-da-guerra-del-martello-di-moradin-cavalcatura-da-paladino-65c77a
-    name: "Ariete da guerra del Martello di Moradin (cavalcatura da paladino)"
-    cr: 2.0
-    faction: unknown
-    role: mount
-    environment: any
-    source_file: "Bestiario/png/cavalcatura-ariete-moradin-cr2.md"
   - id: cavalcatura-martello-di-moradin-ariete-e90c57
     name: "Cavalcatura Martello Di Moradin Ariete"
     cr: 2.0
@@ -2063,13 +2056,6 @@ monsters:
     role: caster-divine
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_Chierico_3liv_4cr.html"
-  - id: duergar-guerriero-fighter-2-lokee-ce521e
-    name: "Duergar Guerriero (Fighter 2) — «Lokee»"
-    cr: 3.0
-    faction: unknown
-    role: melee-heavy
-    environment: underdark
-    source_file: "Bestiario/mostri/duergar-guerriero2-cr3.md"
   - id: duergar-mago-3liv-4cr-19d01a
     name: "Duergar Mago 3Liv 4Cr"
     cr: 3.0
@@ -2077,20 +2063,13 @@ monsters:
     role: caster-arcane
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/Duergar_mago_3liv_4cr.html"
-  - id: duergar-chierico-di-abbathor-cleric-3-brother-justin-32c98d
-    name: "Duergar Chierico di Abbathor (Cleric 3) — «Brother Justin»"
-    cr: 4.0
-    faction: unknown
-    role: caster-divine
-    environment: underdark
-    source_file: "Bestiario/mostri/duergar-chierico3-cr4.md"
-  - id: duergar-mago-wizard-3-necromante-losse-hinge-c6252e
-    name: "Duergar Mago (Wizard 3, necromante) — «Losse hinge»"
-    cr: 4.0
+  - id: lomyn-redtongue-bardo-mezzelfo-4233cd
+    name: "Lómyn RedTongue, bardo mezzelfo"
+    cr: 3.0
     faction: unknown
     role: caster-arcane
-    environment: underdark
-    source_file: "Bestiario/mostri/duergar-mago3-cr4.md"
+    environment: urban
+    source_file: "Bestiario/png/lomyn-redtongue-bardo4-cr3.md"
   - id: lirien-amaranti-il-giullare-spezzato-404cba
     name: "Lirien Amaranti — «Il Giullare Spezzato»"
     cr: 4.0
@@ -2098,20 +2077,20 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/png/Lirien/Lirien.md"
+  - id: schiavo-psionico-cultista-69d482
+    name: "Schiavo Psionico / Cultista"
+    cr: 4.0
+    faction: unknown
+    role: fodder
+    environment: urban
+    source_file: "Bestiario/mostri/schiavo-psionico-cultista-cr4.md"
   - id: costrutto-di-guardia-armatura-animata-avanzata-60c0d7
     name: "Costrutto di Guardia (Armatura Animata Avanzata)"
     cr: 5.0
     faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/costrutto-di-guardia-cr5.md"
-  - id: karkilan-minotauro-berserk-d481f8
-    name: "Karkilan, Minotauro Berserk"
-    cr: 5.0
-    faction: unknown
     role: melee-heavy
-    environment: any
-    source_file: "Bestiario/villain/minotauro-karkilan-cr5.md"
+    environment: dungeon
+    source_file: "Bestiario/mostri/costrutto-di-guardia-cr5.md"
   - id: minotaur-karkilan-cr5-a551fd
     name: "Minotaur Karkilan Cr5"
     cr: 5.0
@@ -2133,13 +2112,6 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE1-STATBLOCCHI.md"
-  - id: bothor-melvur-guerrieri-dell-underdark-3b3b8c
-    name: "Bothor / Melvur, guerrieri dell'Underdark"
-    cr: 6.0
-    faction: unknown
-    role: melee-heavy
-    environment: underdark
-    source_file: "Bestiario/png/bothor-malvur-cr6.md"
   - id: green-dragon-dbdc05
     name: "Green Dragon"
     cr: 6.0
@@ -2159,7 +2131,7 @@ monsters:
     cr: 6.0
     faction: unknown
     role: generalist
-    environment: mountain
+    environment: dungeon
     source_file: "Bestiario/mostri/sciame-libri-animati-cr6.md"
   - id: stat-blocchi-torre-invisibile-livelli-2-3-1333aa
     name: "Stat blocchi – Torre Invisibile Livelli 2–3"
@@ -2182,19 +2154,12 @@ monsters:
     role: generalist
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/duergar_mage_rougue_8.htm"
-  - id: duergar-mago-ladro-rogue-3-wizard-4-f56ae1
-    name: "Duergar Mago/Ladro (Rogue 3 / Wizard 4)"
-    cr: 7.0
-    faction: unknown
-    role: caster-arcane
-    environment: underdark
-    source_file: "Bestiario/mostri/duergar-mago-ladro8-cr7.md"
   - id: echo-construct-copia-illusoria-tangibile-fbcd1d
     name: "Echo Construct (copia illusoria tangibile)"
     cr: 7.0
     faction: unknown
     role: generalist
-    environment: mountain
+    environment: dungeon
     source_file: "Bestiario/mostri/echo-construct-cr7.md"
   - id: jorr-natherson-474dd7
     name: "Jorr Natherson"
@@ -2203,13 +2168,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Jorr Natherson.htm"
-  - id: jorr-natherson-guida-delle-paludi-665a79
-    name: "Jorr Natherson, guida delle paludi"
-    cr: 7.0
-    faction: unknown
-    role: ranged
-    environment: forest
-    source_file: "Bestiario/png/jorr-natherson-cr7.md"
   - id: monaco-pugno-del-destino-cr7-1237f9
     name: "Monaco Pugno Del Destino Cr7"
     cr: 7.0
@@ -2221,8 +2179,8 @@ monsters:
     name: "Spettri di Conoscenza"
     cr: 7.0
     faction: unknown
-    role: generalist
-    environment: mountain
+    role: caster-arcane
+    environment: dungeon
     source_file: "Bestiario/mostri/spettri-di-conoscenza-cr7.md"
   - id: jorr-natherson-8liv-3ef29f
     name: "Jorr Natherson 8Liv"
@@ -2245,20 +2203,6 @@ monsters:
     role: generalist
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/blackguard.htm"
-  - id: cavaliere-antipaladino-di-abbathor-blackguard-e4bb66
-    name: "Cavaliere Antipaladino di Abbathor (Blackguard)"
-    cr: 9.0
-    faction: unknown
-    role: generalist
-    environment: underdark
-    source_file: "Bestiario/villain/abbathor-blackguard-cr9.md"
-  - id: oblex-versione-media-avanzata-db7632
-    name: "Oblex (versione media/avanzata)"
-    cr: 9.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/mostri/oblex-avanzato-cr9.md"
   - id: parte-2d-giorno-1-il-mercato-dei-sottobanco-e-la-tratta-dd4355
     name: "Parte 2D — GIORNO 1: Il Mercato dei Sottobanco e la Tratta"
     cr: 9.0
@@ -2305,15 +2249,15 @@ monsters:
     name: "Golem Bibliotecario"
     cr: 10.0
     faction: unknown
-    role: generalist
-    environment: mountain
+    role: melee-heavy
+    environment: dungeon
     source_file: "Bestiario/mostri/golem-bibliotecario-cr10.md"
   - id: guardiano-di-luce-elementale-costrutto-137b57
     name: "Guardiano di Luce (elementale/costrutto)"
     cr: 10.0
     faction: unknown
-    role: generalist
-    environment: mountain
+    role: melee-heavy
+    environment: dungeon
     source_file: "Bestiario/mostri/guardiano-di-luce-cr10.md"
   - id: parte-2a-torre-invisibile-fda0d2
     name: "Parte 2A – Torre Invisibile"
@@ -2350,19 +2294,12 @@ monsters:
     role: caster-divine
     environment: dungeon
     source_file: "Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/abbathor_clerics11.htm"
-  - id: alto-chierico-di-abbathor-cleric-11-4eea94
-    name: "Alto Chierico di Abbathor (Cleric 11)"
-    cr: 11.0
-    faction: unknown
-    role: caster-divine
-    environment: underdark
-    source_file: "Bestiario/villain/abbathor-cleric11-cr11.md"
   - id: elementale-del-caos-cf3818
     name: "Elementale del Caos"
     cr: 11.0
     faction: unknown
     role: generalist
-    environment: mountain
+    environment: dungeon
     source_file: "Bestiario/mostri/elementale-del-caos-cr11.md"
   - id: epic-fight-dwarf-duergar-810ce0
     name: "Epic Fight Dwarf Duergar"
@@ -2392,13 +2329,6 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE3-STATBLOCCHI-Livello4.md"
-  - id: zhen-windwhisper-monk-11-4324a9
-    name: "Zhen Windwhisper — Monk 11"
-    cr: 11.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/zhen-windwhisper-cr11.md"
   - id: il-portale-della-forgia-eterna-e24352
     name: "IL PORTALE DELLA FORGIA ETERNA"
     cr: 12.0
@@ -2406,13 +2336,6 @@ monsters:
     role: flier
     environment: aerial
     source_file: "07_il Portale Della Forgia Eterna/PortaleForgia-P3-PianoFuoco-PARTE1.md"
-  - id: kira-rogue-12-80817d
-    name: "Kira — Rogue 12"
-    cr: 12.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/png/kira-rogue12-cr12.md"
   - id: shadow-marsh-complete-guide-c9fb2d
     name: "Shadow Marsh Complete Guide"
     cr: 12.0
@@ -2427,13 +2350,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "03_la Cittadella/00_shadow-marsh/shadow-marsh-horror-html.html"
-  - id: emissario-red-hand-cr12-ba4075
-    name: "emissario-red-hand-cr12"
-    cr: 12.0
-    faction: unknown
-    role: caster-divine
-    environment: any
-    source_file: "Bestiario/villain/emissario-red-hand-cr12.md"
   - id: arc-08-handout-giocatore-battaglia-di-hammerfist-b6e756
     name: "ARC-08 — Handout Giocatore (Battaglia di Hammerfist)"
     cr: 13.0
@@ -2441,20 +2357,6 @@ monsters:
     role: generalist
     environment: mountain
     source_file: "08_La Battaglia Di Hammerfist/ARC08-15-HANDOUTS-GIOCATORE.md"
-  - id: balvar-fuocospento-il-consigliere-dell-orda-cr-13-685ec8
-    name: "Balvar Fuocospento, il Consigliere dell'Orda (CR 13)"
-    cr: 13.0
-    faction: unknown
-    role: generalist
-    environment: mountain
-    source_file: "Bestiario/villain/balvar-fuocospento-cr13.md"
-  - id: thrain-ironfist-dwarf-fighter-13-caf0fb
-    name: "Thrain Ironfist — Dwarf Fighter 13"
-    cr: 13.0
-    faction: unknown
-    role: melee-heavy
-    environment: mountain
-    source_file: "Bestiario/png/thrain-ironfist-cr13.md"
   - id: ushgar-occhio-reso-il-capo-guerra-che-vuole-un-pezzo-di-carta-0678e3
     name: "Ushgar «Occhio Reso» — il capo-guerra che vuole un pezzo di carta"
     cr: 13.0
@@ -2462,13 +2364,6 @@ monsters:
     role: generalist
     environment: any
     source_file: "Bestiario/villain/Ushgar_Occhio_Reso/Ushgar_Occhio_Reso.md"
-  - id: grom-skullcrusher-barbarian-14-aeaa95
-    name: "Grom Skullcrusher — Barbarian 14"
-    cr: 14.0
-    faction: unknown
-    role: melee-heavy
-    environment: mountain
-    source_file: "Bestiario/png/grom-skullcrusher-cr14.md"
   - id: salvatore-sal-della-luna-d-argento-4be1cb
     name: "SALVATORE \"SAL\" DELLA LUNA D'ARGENTO"
     cr: 14.0
@@ -2490,10 +2385,115 @@ monsters:
     role: boss
     environment: any
     source_file: "07_il Portale Della Forgia Eterna/ERRATA-ARC07-35-Verification.md"
-  - id: azarr-kul-final-cr15-592c05
-    name: "azarr-kul-final-cr15"
-    cr: 15.0
+  - id: xal-thor-variante-forma-del-nucleo-a8031c
+    name: "Xal'thor — variante «Forma del Nucleo»"
+    cr: 16.0
     faction: unknown
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/villain/Azarr_Kul/azarr-kul-final-cr15.md"
+    role: boss
+    environment: urban
+    source_file: "Bestiario/villain/xal-thor-forma-del-nucleo-cr16.md"
+  - id: thug-spettatore-sicario-guerriero-3-24b2bc
+    name: "Thug spettatore / sicario — Guerriero 3"
+    cr: 3.0
+    faction: zhentarim
+    role: fodder
+    environment: urban
+    source_file: "Bestiario/mostri/thug-sicario-ftr3-cr3.md"
+  - id: avversario-brawler-pugno-pesante-145156
+    name: "Avversario Brawler «Pugno Pesante»"
+    cr: 9.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/mostri/avversario-brawler-pugno-pesante-cr9.md"
+  - id: avversario-agile-giorno-1-rogue-monk-d2a453
+    name: "Avversario agile Giorno 1 (Rogue/Monk)"
+    cr: 9.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/mostri/avversario-agile-giorno1-cr9.md"
+  - id: zhen-windwhisper-monk-11-4324a9
+    name: "Zhen Windwhisper — Monk 11"
+    cr: 11.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/zhen-windwhisper-cr11.md"
+  - id: ironclad-bruiser-fighter-12-nano-8e532e
+    name: "Ironclad Bruiser — Fighter 12 (Nano)"
+    cr: 12.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/ironclad-bruiser-cr12.md"
+  - id: kira-rogue-12-80817d
+    name: "Kira — Rogue 12"
+    cr: 12.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/kira-rogue12-cr12.md"
+  - id: lady-koryn-rogue-12-601695
+    name: "Lady Koryn — Rogue 12"
+    cr: 12.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/lady-koryn-cr12.md"
+  - id: mistress-of-mirrors-sorcerer-10-rogue-2-e747c7
+    name: "Mistress of Mirrors — Sorcerer 10 / Rogue 2"
+    cr: 12.0
+    faction: zhentarim
+    role: caster-arcane
+    environment: urban
+    source_file: "Bestiario/png/mistress-of-mirrors-cr12.md"
+  - id: tetsu-serpente-di-vento-monk-12-2ccb30
+    name: "Tetsu «Serpente di Vento» — Monk 12"
+    cr: 12.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/tetsu-serpente-di-vento-cr12.md"
+  - id: il-campione-caduto-d3a974
+    name: "«Il Campione Caduto»"
+    cr: 12.0
+    faction: zhentarim
+    role: boss
+    environment: urban
+    source_file: "Bestiario/villain/il-campione-caduto-cr12.md"
+  - id: kragar-il-re-delle-catene-3beff7
+    name: "Kragar, il Re delle Catene"
+    cr: 13.0
+    faction: zhentarim
+    role: boss
+    environment: urban
+    source_file: "Bestiario/villain/kragar-re-delle-catene-cr13.md"
+  - id: maestra-shen-tigre-bianca-8df488
+    name: "Maestra Shen «Tigre Bianca»"
+    cr: 13.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/maestra-shen-tigre-bianca-cr13.md"
+  - id: thrain-ironfist-dwarf-fighter-13-caf0fb
+    name: "Thrain Ironfist — Dwarf Fighter 13"
+    cr: 13.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/thrain-ironfist-cr13.md"
+  - id: grandmaster-rihan-monk-14-6a83f9
+    name: "Grandmaster Rihan — Monk 14"
+    cr: 14.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/grandmaster-rihan-cr14.md"
+  - id: grom-skullcrusher-barbarian-14-aeaa95
+    name: "Grom Skullcrusher — Barbarian 14"
+    cr: 14.0
+    faction: zhentarim
+    role: melee-heavy
+    environment: urban
+    source_file: "Bestiario/png/grom-skullcrusher-cr14.md"

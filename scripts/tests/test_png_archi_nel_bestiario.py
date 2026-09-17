@@ -149,5 +149,71 @@ class TestINomiCheIlTornEoHaPortato(unittest.TestCase):
         self.assertNotEqual(grom[0]["cr"], ogre[0]["cr"])
 
 
+class TestIlCatalogoLeggeQuelCheEDichiarato(unittest.TestCase):
+    """🔴 Il difetto trovato aggiungendo una fazione — 2026-09-17.
+
+    `build_monster_catalog.py` **indovinava** fazione, ruolo e ambiente da
+    euristiche su parole chiave, e **ignorava le intestazioni** che ogni
+    statblocco dichiara e che `validate_bestiario` pretende. Due valori per lo
+    stesso fatto: quello scritto nel file e quello nel catalogo — e negli
+    strumenti finiva il secondo.
+
+    Si e' visto assegnando `zhentarim` ai combattenti del Torneo: l'intestazione
+    diceva `zhentarim`, il catalogo registrava `dauth-defender`, e il file
+    *sembrava* giusto a chiunque lo aprisse.
+
+    Rimisurato dopo la correzione: **56 fazioni, 138 ruoli e 77 ambienti**
+    erano sbagliati. Fra questi «Aberrazione Fungina Alfa» marcata
+    `drow-sonjak` (la parola «drow» compariva nel testo) e il Grell della Torre
+    Invisibile marcato `mountain`.
+    """
+
+    def test_la_fazione_dichiarata_finisce_nel_catalogo(self):
+        indice = {m["source_file"]: m for m in CATALOGO}
+        controllati = 0
+        for p in (ROOT / "Bestiario").rglob("*-cr*.md"):
+            rel = str(p.relative_to(ROOT))
+            m = indice.get(rel)
+            if not m:
+                continue
+            testa = p.read_text(encoding="utf-8", errors="replace")[:600]
+            dich = re.search(r"\*\*Faction\*\*:\s*([A-Za-z0-9_-]+)", testa)
+            if not dich:
+                continue
+            controllati += 1
+            atteso = dich.group(1).lower()
+            # un solo alias dichiarato: `mano-rossa` e' l'italiano di `red-hand`
+            atteso = {"mano-rossa": "red-hand"}.get(atteso, atteso)
+            with self.subTest(voce=m["name"][:40]):
+                self.assertEqual(m["faction"], atteso)
+        self.assertGreater(controllati, 140, "quasi nessuna scheda dichiara: "
+                           "il test non sta provando quello che dice")
+
+    def test_gli_zhentarim_del_torneo_sono_una_fazione_vera(self):
+        """Canone dichiarato dal DM il 2026-09-17: emissari della Rete Nera,
+        interessati al mercato nero extraplanare, minacciati anch'essi dalla
+        Mano Rossa."""
+        z = [m for m in CATALOGO if m["faction"] == "zhentarim"]
+        self.assertGreaterEqual(len(z), 15)
+        nomi = " · ".join(m["name"] for m in z)
+        for atteso in ("Grandmaster Rihan", "Lady Koryn", "Kragar"):
+            with self.subTest(png=atteso):
+                self.assertIn(atteso, nomi)
+
+    def test_la_mano_rossa_non_si_spacca_in_due_nomi(self):
+        """L'alias evita una regressione vera: prima della correzione
+        l'euristica normalizzava tutto, e leggere le intestazioni avrebbe
+        separato le sei creature che dichiarano `mano-rossa` dalle 68 che
+        dichiarano `red-hand`."""
+        fazioni = {m["faction"] for m in CATALOGO}
+        self.assertNotIn("mano-rossa", fazioni)
+        self.assertGreaterEqual(
+            len([m for m in CATALOGO if m["faction"] == "red-hand"]), 74)
+
+    def test_il_dossier_di_fazione_non_finge_di_essere_una_creatura(self):
+        d = ROOT / "Bestiario" / "villain" / "Zhentarim_Dauth" / "Zhentarim_Dauth.md"
+        self.assertTrue(d.exists())
+        self.assertIn("[NON-CREATURA]", d.read_text(encoding="utf-8").split("\n")[0])
+
 if __name__ == "__main__":
     unittest.main()
