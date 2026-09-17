@@ -80,16 +80,47 @@ class TestLAnagraficaEsisteEdECoerente(unittest.TestCase):
         non_persone = [r["id"] for r in DATI["png"] if r["tipo"] != "persona"]
         self.assertGreaterEqual(len(non_persone), 3, non_persone)
 
-    def test_i_due_villain_senza_scheda_sono_quelli_misurati(self):
-        """D17: il buco e' contenuto, non infrastruttura, e resta contato.
+    def test_resta_un_solo_buco_ed_e_quello_giusto(self):
+        """🐛 **Questo test diceva quattro, ed era sbagliato in tre casi su
+        quattro.**
 
-        Se un giorno qualcuno scrive le due schede, questo test cade — ed e'
-        il momento giusto per aggiornarlo, perche' vuol dire che il buco e'
-        chiuso.
+        La prima anagrafica cercava le schede **solo dentro `Bestiario/`**, poi
+        un `grep` troncato a sei righe mi ha fatto concludere da una lista
+        tagliata. Zalkatar e Saarvith+Regiarix hanno **statblocchi completi a
+        GS 13** nell'arco 09, e il Cerchio Druidico ne ha uno nel Bestiario
+        sotto un nome che la ricerca non copriva.
+
+        Resta `lathander-mask`, e quello e' un buco corretto: due divinita' non
+        sono una creatura.
         """
-        self.assertEqual(set(vs.png_senza_scheda(DATI)),
-                         {"zalkatar", "saarvith-regiarix",
-                          "cerchio-sacro", "lathander-mask"})
+        self.assertEqual(set(vs.png_senza_scheda(DATI)), {"lathander-mask"})
+
+    def test_una_scheda_puo_vivere_fuori_dal_bestiario(self):
+        """La lezione, resa una prova: `scheda` e' «dove stanno le statistiche»,
+        non «dove nel Bestiario»."""
+        fuori = [r for r in DATI["png"]
+                 if r["scheda"] and not r["scheda"].startswith("Bestiario/")]
+        self.assertGreaterEqual(len(fuori), 2,
+                                "le schede d'arco sono sparite dall'anagrafica")
+        for r in fuori:
+            with self.subTest(png=r["id"]):
+                self.assertTrue((ROOT / r["scheda"]).exists())
+
+    def test_un_buco_dichiarato_viene_messo_alla_prova(self):
+        """🔴 R13 provata all'indietro **sull'errore vero**.
+
+        Rimettere `zalkatar` a «senza scheda» deve far rosso il cancello: e'
+        esattamente lo stato in cui l'anagrafica e' nata, ed e' passato.
+        """
+        import copy
+        finto = copy.deepcopy(DATI)
+        i = next(n for n, r in enumerate(finto["png"]) if r["id"] == "zalkatar")
+        finto["png"][i]["scheda"] = None
+        self.assertTrue(vs.buchi_con_candidati(finto, ROOT))
+
+    def test_un_buco_senza_candidati_passa(self):
+        """L'altra meta': due divinita' non hanno un file che ne porti il nome."""
+        self.assertEqual(vs.buchi_con_candidati(DATI, ROOT), [])
 
 
 class TestLaChiaveEMiglioreDelConfrontoDiStringhe(unittest.TestCase):

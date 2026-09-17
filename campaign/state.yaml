@@ -650,13 +650,11 @@ png:
 - id: zalkatar
   nome: Zalkatar (Illithid Warlock)
   tipo: persona
-  scheda: null
-  perche_senza_scheda: 'nessuna scheda: compare solo citato in Tempestas.md, Xal_thor.md e Sethrax.md — decisione D17'
+  scheda: 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md
 - id: saarvith-regiarix
   nome: Wyrmlord Saarvith + Regiarix
   tipo: persona
-  scheda: null
-  perche_senza_scheda: 'nessuna scheda: citati solo nei documenti di Rethmar — decisione D17'
+  scheda: 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md
 - id: xal-thor
   nome: Xal'thor (Illithid Coordinator)
   tipo: persona
@@ -740,8 +738,7 @@ png:
 - id: cerchio-sacro
   nome: Cerchio Druidico della Foresta Sacra
   tipo: gruppo
-  scheda: null
-  perche_senza_scheda: 'gruppo senza scheda propria: esistono i singoli druidi (arci-druido-circolo-cr14.md), non il Cerchio'
+  scheda: Bestiario/mostri/cerchio-druid7-cr7.md
 - id: tiri-kitor
   nome: Tiri Kitor (elfi selvaggi di Witchwood)
   tipo: gruppo

@@ -65,25 +65,43 @@ Tre regole la tengono vera, e sono tutte provate a mordere:
   questa regola se ne accorge il giorno stesso, non sei settimane dopo al tavolo.
 - **R12** — le voci senza scheda si **contano** a ogni esecuzione, come R7 (il
   tempo non dichiarato) e R8 (gli stati ignoti). Forma di ADR-0041.
+- **R13** — 🐛 **nata da un errore mio, e lo dice.** Un buco dichiarato è
+  un'affermazione forte: dice «ho cercato e non c'è». Questa regola la mette
+  alla prova a ogni esecuzione contro **tutto** il repo scritto a mano, non solo
+  contro il `Bestiario/`. Se emergono file che portano quel nome, o uno di essi
+  è la scheda, o va detto in `candidati_esclusi` perché non lo è. Provata
+  all'indietro **sullo stato in cui l'anagrafica è nata**: rimettendo `zalkatar`
+  a «senza scheda», il cancello diventa rosso.
 
-### D17 — i quattro buchi, e cosa se ne fa
+### D17 — e la premessa della domanda era falsa
 
-Il DM aveva tre strade: scrivere le schede mancanti, contarle, o togliere le
-righe da §3. **Contarle**, e per un motivo preciso: scrivere due statblock è
-canone, e un lotto di infrastruttura non scrive canone; togliere da §3 due
-villain con clock in corsa (Zalkatar a 6/8, Saarvith a 3/8) sarebbe **perdere
-stato vivo** per far tornare un conto.
+🐛 **La prima stesura di questo ADR diceva che quattro voci non avevano una
+scheda. Tre di quelle quattro ce l'avevano, e il DM me l'ha fatto notare.**
 
-| | Perché non ha scheda |
+L'errore non è stato non trovarle: è stato **come ho concluso**. Ho cercato le
+schede **solo dentro `Bestiario/`**, e quando ho allargato la ricerca ho
+troncato l'output a sei righe con `head -6` — concludendo «non esistono» da una
+lista tagliata. Le tre righe che mancavano dall'output erano proprio i file che
+cercavo.
+
+| | Dove la scheda era davvero |
 |---|---|
-| `zalkatar` | compare solo citato in `Tempestas.md`, `Xal_thor.md`, `Sethrax.md` |
-| `saarvith-regiarix` | citati solo nei documenti di Rethmar |
-| `cerchio-sacro` | esistono i singoli druidi, non il Cerchio come gruppo |
-| `lathander-mask` | due divinità, non una creatura: una scheda del Bestiario non sarebbe la cosa giusta |
+| `zalkatar` | `09_…/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` — **GS 13**, 14d4+70, CA 24, statblocco completo |
+| `saarvith-regiarix` | `09_…/Arco-Post-Hammerfist-P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md` — **GS 13**; il file `FASE4` accanto dichiara *«le statistiche sono lì; questo è la regia dello scontro, non le duplica»* |
+| `cerchio-sacro` | `Bestiario/mostri/cerchio-druid7-cr7.md` — «Cerchio Sacro Druid 7 (Hella ally) [ACCEPTED — DM-canon 2026-05-05]», `statblocco` validato, e la nota «30 druidi + 5 Treant alleanza» |
+| `lathander-mask` | **nessuna, e va bene così**: due divinità non sono una creatura |
 
-I primi due sono lavoro di contenuto che aspetta il DM. Gli altri due sono
-**buchi corretti**: nessuna scheda è la risposta giusta, e dirlo vale più che
-inventare un rimando.
+**Quindi D17 non aveva bisogno di essere decisa nel modo in cui era posta.** Non
+c'era niente da scrivere e niente da togliere: c'era da **cercare meglio**. La
+risposta è che le schede si dichiarano dove stanno — e due di esse stanno in un
+arco, non nel Bestiario.
+
+Resta un buco su ventotto, ed è corretto.
+
+⚠️ **Una scheda non vive per forza nel `Bestiario/`.** È la conseguenza di
+progetto più importante di questa correzione: `scheda` significa «dove stanno le
+statistiche», non «dove nel Bestiario». Un cancello tarato sul Bestiario
+avrebbe continuato a dare per mancanti due boss da GS 13 che il DM ha scritto.
 
 ## Alternative scartate
 
@@ -97,9 +115,10 @@ inventare un rimando.
 ## Conseguenze
 
 **Quel che si guadagna.** Da `state.yaml` alla scheda in un passo, verificato:
-un algoritmo segue `png_id` → `png[].scheda` e apre un file che c'è. E l'errore
-di attribuzione più insidioso — la conoscenza di Zalkatar messa in conto a
-Sethrax — è **scritto**, quindi non si ripete.
+un algoritmo segue `png_id` → `png[].scheda` e apre un file che c'è. E i due
+errori che questo lotto ha attraversato sono **scritti**, quindi non si
+ripetono: la conoscenza di Zalkatar messa in conto a Sethrax (R10 la fissa), e
+un buco dichiarato senza aver cercato dappertutto (R13 lo mette alla prova).
 
 **Quel che si perde.** Ventotto voci da tenere vere, e un `png_id` in più su 44
 righe. Il costo si paga a ogni PNG nuovo: prima si dichiara, poi si nomina.

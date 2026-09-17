@@ -636,7 +636,7 @@
             ]
           },
           "scheda": {
-            "description": "Percorso VERIFICATO a un file del Bestiario, oppure null con il perche'. R11 controlla che esista; R12 conta i null.",
+            "description": "Percorso VERIFICATO al documento che porta le statistiche, ovunque viva: il `Bestiario/` per la maggior parte, ma anche un arco — Zalkatar e Saarvith+Regiarix hanno il loro statblocco a GS 13 dentro l'arco 09, e cercarli solo nel Bestiario li aveva fatti dichiarare inesistenti. R11 controlla che il file esista, R12 conta i null, R13 mette alla prova ogni null contro tutto il repo.",
             "type": [
               "string",
               "null"
@@ -645,6 +645,14 @@
           "perche_senza_scheda": {
             "type": "string",
             "minLength": 8
+          },
+          "candidati_esclusi": {
+            "description": "File che PORTANO il nome della voce ma non ne sono la scheda. Serve a spegnere R13 dove il falso positivo e' reale — e ogni voce qui e' una cosa che qualcuno ha guardato, non una che ha saltato.",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
           }
         }
       }

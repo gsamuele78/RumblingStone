@@ -48,6 +48,8 @@ Regole di coerenza (oltre allo schema)
       e un `scheda: null` porta sempre il proprio perché
   R11 ogni `scheda` dichiarata punta a un file che esiste davvero
   R12 le voci senza scheda si CONTANO, per la stessa ragione di R7 e R8
+  R13 un buco dichiarato non deve avere candidati evidenti nel repo: dire
+      «ho cercato e non c'è» è un'affermazione, e va messa alla prova
 
 Uso
   python3 scripts/validate_state.py [--file PATH] [--json] [--verbose]
@@ -336,6 +338,61 @@ def png_senza_scheda(d: dict) -> "list[str]":
     return [r.get("id") for r in d.get("png") or [] if r.get("scheda") is None]
 
 
+#: Cartelle che rispecchiano o generano altro: cercarci dentro trova copie,
+#: non originali.
+FUORI_RAGGIO = ("build/", ".claude/", ".chatgpt/", ".windsurf/", ".github/",
+                "plans/", "_ARCHIVIO/", "docs/audit/")
+
+
+def _parole_chiave(rec: dict) -> "list[str]":
+    """Le parole con cui si cerca la scheda di una voce: dall'`id`, lunghe >4."""
+    return [p for p in str(rec.get("id", "")).split("-") if len(p) > 4]
+
+
+def buchi_con_candidati(d: dict, radice: Path) -> "list[str]":
+    """R13 · un buco dichiarato non deve avere candidati evidenti nel repo.
+
+    🐛 **Questa regola nasce da un errore mio, e lo dice.** Costruendo
+    l'anagrafica ho cercato le schede **solo dentro `Bestiario/`**, poi ho
+    troncato un `grep` a sei righe e ho concluso dalla lista tagliata che
+    Zalkatar e Saarvith+Regiarix non avessero una scheda da nessuna parte.
+    Ne avevano una ciascuno, **con statblocco completo a GS 13**, nell'arco 09 —
+    e il Cerchio Druidico ne aveva una nel Bestiario sotto un nome che la mia
+    ricerca non copriva. Tre buchi su quattro erano falsi, e li ho scritti in un
+    ADR.
+
+    Un buco dichiarato e' un'affermazione forte: dice «ho cercato e non c'e'».
+    Questa regola la mette alla prova a ogni esecuzione, su **tutto** il repo
+    scritto a mano — perche' una scheda puo' vivere in un arco, non solo nel
+    Bestiario. Se emergono candidati, o uno di quelli e' la scheda, o va detto
+    in `candidati_esclusi` perche' non lo e'.
+    """
+    errs = []
+    fonti = None
+    for i, r in enumerate(d.get("png") or []):
+        if r.get("scheda") is not None:
+            continue
+        chiavi = _parole_chiave(r)
+        if not chiavi:
+            continue
+        if fonti is None:
+            fonti = [p for p in radice.rglob("*.md")
+                     if not any(e in str(p.relative_to(radice)) + "/" for e in FUORI_RAGGIO)]
+        esclusi = {str(x) for x in r.get("candidati_esclusi") or []}
+        trovati = [str(p.relative_to(radice)) for p in fonti
+                   if any(k in p.name.lower() for k in chiavi)
+                   and str(p.relative_to(radice)) not in esclusi]
+        if trovati:
+            errs.append(
+                f"R13 · png[{i}] ({r.get('id')}): dichiarato senza scheda, ma "
+                f"esistono {len(trovati)} file che ne portano il nome — "
+                f"{', '.join(trovati[:3])}"
+                + (" …" if len(trovati) > 3 else "")
+                + ". O uno di questi e' la scheda, o va scritto in "
+                "`candidati_esclusi` perche' non lo e'.")
+    return errs
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         prog="validate_state.py",
@@ -363,7 +420,8 @@ def main(argv=None) -> int:
     errors = (validate_schema(data, schema) + coherence_rules(data, schema)
               + reversibilita_mancante(data) + riferimenti_rotti(data)
               + anagrafica_incoerente(data)
-              + schede_inesistenti(data, ROOT))
+              + schede_inesistenti(data, ROOT)
+              + buchi_con_candidati(data, ROOT))
 
     if args.json:
         print(json.dumps({"report_version": 1, "file": str(args.file.relative_to(ROOT)),
