@@ -2121,6 +2121,24 @@
       "deterministic": true
     },
     {
+      "name": "validate_norme_editoriali",
+      "description": "«Questa norma di stile la guarda qualcuno, o e' ferma da settimane senza che nessuno se ne accorga?»\n\nVerifica che ogni norma editoriale sia registrata e che ogni rimando a uno strumento di misura esista davvero.",
+      "use_case": "«Questa norma di stile la guarda qualcuno, o e' ferma da settimane senza che nessuno se ne accorga?»",
+      "invocation": "python3 scripts/validate_norme_editoriali.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
+      },
+      "deterministic": true
+    },
+    {
       "name": "validate_prosa",
       "description": "«Questo testo suona scritto da una macchina, e la riscrittura l'ha migliorato o peggiorato?»\n\nMisura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036); sui file nominati stampa sotto anche il profilo delle lunghezze delle frasi, in ordine di lettura con media e scarto, che e' informazione per chi legge e non entra nel verdetto.",
       "use_case": "«Questo testo suona scritto da una macchina, e la riscrittura l'ha migliorato o peggiorato?»",

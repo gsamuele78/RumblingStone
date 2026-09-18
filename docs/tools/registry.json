@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 64,
+  "tool_count": 65,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -5099,6 +5099,52 @@
       "tests": [],
       "docs": [
         "skills/rumblingstone-module-standard/SKILL.md"
+      ]
+    },
+    {
+      "id": "validate_norme_editoriali",
+      "path": "scripts/validate_norme_editoriali.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/validate_norme_editoriali.py",
+      "summary": "Verifica che ogni norma editoriale sia registrata e che ogni rimando a uno strumento di misura esista davvero.",
+      "use_case": "«Questa norma di stile la guarda qualcuno, o e' ferma da settimane senza che nessuno se ne accorga?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [],
+      "inputs": [
+        {
+          "path": "skills/REGISTRO-NORME-EDITORIALI.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Sola lettura."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_norme_editoriali.py",
+      "tests": [
+        "scripts/tests/test_norme_editoriali.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0056-una-norma-senza-misura-non-esiste.md"
       ]
     },
     {

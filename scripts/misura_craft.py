@@ -316,6 +316,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--densita", action="store_true",
                     help="normalizza ogni conteggio su 1.000 righe (confronto fra documenti di taglia diversa)")
+    ap.add_argument("--spotlight", action="store_true",
+                    help="equilibrio dei quattro PG contro la norma «no PC >40%» di pc-protagonism.md")
     ap.add_argument("--box", action="store_true",
                     help="i box read-aloud contro le soglie di read-aloud-adulti.md")
     ap.add_argument("--copertura", action="store_true",
@@ -346,6 +348,27 @@ def main() -> int:
             else:
                 cella.append(f"{v:>11d}")
         print(f"{nome:{largh}}{nfile[nome]:>4} {righe[nome]:>6} | " + " | ".join(cella))
+
+    if args.spotlight:
+        print("\n\nEQUILIBRIO DELLO SPOTLIGHT (`pc-protagonism.md`: «no PC >40%»)\n")
+        print("⚠️  **Indicatore, non la norma.** La norma conta le *scene marcate*;")
+        print("    qui si contano le menzioni del nome, che e' cio' che si puo'")
+        print("    misurare senza una marcatura che il repo non ha. Uno squilibrio")
+        print("    puo' essere voluto (il Torneo *di Tordek*), un PG a ZERO no.\n")
+        print(f"{'bersaglio':30}" + "".join(f"{p:>9}" for p in PG) + f"{'max':>7}  norma")
+        for nome, modelli in BERSAGLI.items():
+            testo, _, _ = carica(modelli)
+            c = {p: len(re.findall(rf"\b{p}\b", testo, re.I)) for p in PG}
+            tot = sum(c.values())
+            if tot < 8:
+                continue
+            top = 100 * max(c.values()) / tot
+            assenti = [p for p, v in c.items() if v == 0]
+            nota = "🔴 " + ", ".join(assenti) + " MAI nominati" if assenti else (
+                   "🟡 sbilanciato" if top > 40 else "✓")
+            print(f"{nome:30}" + "".join(f"{c[p]:>9}" for p in PG)
+                  + f"{top:>6.0f}%  {nota}")
+        print()
 
     if args.box:
         print("\n\nI BOX READ-ALOUD CONTRO LE SOGLIE DICHIARATE "
