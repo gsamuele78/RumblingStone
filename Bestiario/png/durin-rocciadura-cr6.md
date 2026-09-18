@@ -32,8 +32,26 @@ Entrambi lo dicono **antenato di Othrek**, entrambi lo mettono alla porta con
 la pattuglia: e' lo stesso personaggio, rinominato e ri-livellato nel
 consolidamento senza che nessuno registrasse la scelta.
 
-Questa voce segue il **master vivo** — e' la regola del repo (vince chi
-dichiara, e il DEF e' il file che si apre al tavolo) — ma il **cognome non e'
-una sfumatura**: «Hammerfist» lo fa del clan che regna sulla fortezza,
-«Rocciadura» di un'altra famiglia. Se l'antenato di Othrek deve portare il
-nome del clan, va corretto **il master**, non questa voce.
+🔎 **E il cognome non e' piu' in discussione: «Rocciadura» e' canone in due
+posti indipendenti**, trovati cercando il 2026-09-18 dopo che il DM ha chiesto
+di controllare davvero.
+
+| Fonte | Cosa dice |
+|---|---|
+| `campaign/GLOSSARIO-E-LOCALIZZAZIONE.md` r.74 | `Durin Rocciadura → Durin Hardstone`, marcato **«parlante»** (nome che si traduce) |
+| `08_.../ERRATA-ARC08-DESCRIZIONE-EPICA.md` r.68 | *«**Durin** sopravvive solo come **cognome**: Tordek **Durinheart**, **Durin Rocciadura**»* — e nella stessa riga chiarisce che il richiamo dinastico della campagna e' **Moradin**, non Durin |
+
+Quindi `_ARCHIVIO/P6-INTEGRAZIONE` («Durin Hammerfist, Grr 8») non e' una
+variante legittima: e' la **forma vecchia**, superata dal consolidamento e
+gia' corretta altrove. Cambiare il cognome oggi vorrebbe dire toccare **tre**
+file di canone (master, glossario, errata), non questa voce.
+
+⚠️ **Il livello, invece, resta una scelta aperta e piccola.** Guerriero 6
+(master) contro Guerriero 8 (archivio): Durin **non e' mai uno scontro
+statuito** — guida i PG alla porta, e al piu' muore alle mura nella Scena 4,
+che e' una battaglia di massa. Nessuno dei due numeri regge un incontro, e per
+questo la voce segue il master senza forzare.
+
+🔴 **E non e' uno dei quattro PNG giocabili.** Quelli sono di ARC-08, nel
+**1372**: Borin Ferropugno (GS 13), Dara Occhiolesto, Thorin Runaforte e Nala
+Cantapietre (GS 12). Durin e' di mille anni prima e non compare in ARC-08.
