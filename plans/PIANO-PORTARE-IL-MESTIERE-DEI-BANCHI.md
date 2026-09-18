@@ -56,6 +56,13 @@ avanti. Le parti indietro sono ARC-08 e ARC-09, e lo stesso DEF-1.
 Sul resto del mestiere DEF-4 copre **11 congegni su 17 (65%)** — esattamente
 quanto il Palio (65%) e sopra DEF-2 (47%), DEF-3 (41%), DEF-5 (41%).
 
+⚠️ **Ma la risposta ha una seconda metà, e la prima versione di questo piano
+non ce l'aveva.** Sui pilastri DEF-4 è avanti; sugli **standard redazionali**
+— che sono scritti, numerici e normativi quanto i pilastri — è indietro come
+tutti tranne DEF-1: **una sola** regia etichettata su 5 read-aloud, **zero**
+dialoghi nella forma prescritta, **zero** chiusure su «Che fate?», e uno dei
+suoi due box veri **supera il tetto delle 12 righe**. Il perché sta in §1.3.
+
 ### «È migliorabile, e dove?»
 
 Sì, e in tre punti precisi, tutti misurati contro i banchi:
@@ -154,7 +161,72 @@ prima del commit sono andate rosse:
 | rimesso `^>` largo sul read-aloud | 🔴 `test_la_nota_editoriale_non_conta` |
 | rimesso il grassetto obbligatorio sullo spotlight | 🔴 `test_il_PG_conta_anche_senza_grassetto` |
 
-### 1.3 · Trovato misurando, **fuori scopo, dichiarato**
+### 1.3 · 🔴 Il lavoro annegato in un commit — l'ipotesi del DM, verificata
+
+Il DM il 2026-09-18: *«non era stato definito qualcosa di più grande? erano
+stati fatti degli aggiornamenti dello stile della scrittura per rendere le
+scene editoriali più effettive ed importanti — probabilmente è annegato in
+qualche commit che non è stato seguito»*.
+
+**Era esatto, e l'audit precedente non l'aveva visto perché non aveva letto le
+fonti.** I congegni del §1.1 li avevo presi da `module-standard` e dalla skill
+dell'indagine. Le skill hanno una cartella `references/` — **dieci file solo in
+`rumblingstone-narrative-style`** — e dentro ci sono standard di scrittura
+**numerici** che nessuno misura.
+
+#### Cosa esiste davvero, ed è normativo
+
+| File | Cosa prescrive |
+|---|---|
+| `references/read-aloud-adulti.md` (171 righe) | **si ascolta, non si legge**: box **≤ 12 righe** (2-4 per un round di combattimento), **un solo nome proprio nuovo per box**, niente parentesi né incisi, max due livelli di subordinate, l'ultima riga è quella che resta |
+| `references/editorial-standards.md` §2 | `**Read-aloud (pilastro lead).**` per etichettare la regia · `**NOME (registro/tono):** *«battuta»*` per i dialoghi |
+| `ADR-0014` (regia sensoriale obbligatoria) | **nessuna sequenza a battute senza regia** (apertura di round, una battuta per attore, esito riuscita **e** fallimento, chiusura) · **occhio da avventuriero, non da architetto** · **chiusura su «Che fate?»** |
+| `references/passate-redazionali.md` · `italiano-nativo.md` · `varieta-fra-archi.md` | le tre passate, i tic dell'IA, la tavolozza d'arco |
+
+#### E i due commit che li hanno introdotti senza applicarli
+
+| Commit | Cosa ha aggiunto | Cosa ha applicato |
+|---|---|---|
+| `10795aa` (PR #89) | `read-aloud-adulti.md`, **171 righe** di standard | 🔴 **nessun file d'arco**: 7 file toccati, tutti skill/piani/glossario |
+| `d9c357b` | `ADR-0014` + 21 righe in `module-standard` + 13 in `editorial-standards` | **ARC07-DEF-1 e basta** (309 righe) |
+
+🔎 **Ed è questo che spiega la tabella del §2**: DEF-1 svetta in ogni colonna
+non perché sia scritto meglio, ma perché **è l'unico documento che ha ricevuto
+il trattamento**. Tre colonne indipendenti lo provano:
+
+| Congegno ADR-0014 | DEF-1 | tutti gli altri 11 bersagli |
+|---|---:|---:|
+| regia di round (una battuta per attore) | 3 | **0** |
+| chiusura su «Che fate?» | 1 | **0** |
+| dialogo nella forma prescritta | 3 | 3 *(DEF-3: 1 · DEF-5: 2)* |
+
+**«Che fate?» esiste una volta sola in tutto il repo**, ed è prescritto per
+**ogni** box di combattimento.
+
+#### Perché nessuno se n'è accorto: il cancello sembra coprirlo e non lo copre
+
+🔴 `validate_modules.py` — l'unico lint redazionale — ha **due buchi**:
+
+1. **Conta le occorrenze della parola.** `n_readaloud = len(re.findall(r"[Rr]ead-aloud", text))`, avviso sotto 5. Un master con cinque **menzioni** e **zero box** passa. DEF-4 ha 5 box veri e DEF-5 ne ha **zero**, e nessuno dei due è mai stato segnalato.
+2. **Gira solo su `ARC*-DEF-*.md`.** ARC-08, ARC-09, il Palio e l'Abbazia — **96 file su 100** — non sono mai stati guardati da nessun cancello. È la ragione per cui «Scalare lo scontro» sta a zero in 71 file: è nella checklist, ma la checklist non arriva lì.
+
+E nessuna delle soglie numeriche di `read-aloud-adulti.md` è sotto cancello.
+Misurate adesso (`misura_craft --box`):
+
+| Bersaglio | box | >12 righe | con parentesi | >1 nome proprio |
+|---|---:|---:|---:|---:|
+| ★ **Abbazia** | 11 | **0** | **0** | 1 |
+| ★ Palio | 40 | 0 | 2 | 17 |
+| DEF-1 | 14 | 2 | 6 | 12 |
+| **DEF-4** | 2 | **1** | 2 | 2 |
+| DEF-5 · Torre · Battaglia Finale | **0** | — | — | — |
+| ARC-08 | 82 | 0 | 3 | **63** |
+
+🟢 **L'Abbazia rispetta la norma quasi alla perfezione** — zero box oltre il
+tetto, zero parentesi — ed è la prova che il metro non è impossibile: è la
+norma del repo, applicata da un documento solo.
+
+### 1.4 · Trovato misurando, **fuori scopo, dichiarato**
 
 - **La Torre di Zalkatar non ha una sola battuta di dialogo** in 12 file, né
   `«…»` né virgolette dritte. Zalkatar è *il padrone delle menti* (canone DM) e
@@ -169,6 +241,22 @@ prima del commit sono andate rosse:
 Sette lotti, **in ordine di rapporto fra danno al tavolo e costo**. Ogni lotto è
 un commit, e ogni commit porta la sua misura prima/dopo (ADR-0036).
 
+### Onda 0 — il cancello, prima della prosa *(nuova, da §1.3)*
+
+🔴 **Va per prima perché senza di lei ogni lotto di prosa è reversibile in
+silenzio**: gli standard ci sono da luglio e agosto, e sono rimasti fermi
+proprio perché nessuno li guardava.
+
+| | Lotto | Cosa |
+|---|---|---|
+| ⬜ | **S0a · `validate_modules` conti i box, non le parole** | oggi `len(re.findall("[Rr]ead-aloud"))` ≥ 5 basta: DEF-5 ha **zero box** e passa. Si conta `box_read_aloud()`, e si applicano le soglie di `read-aloud-adulti.md` (≤12 righe, un nome proprio, niente parentesi) come **avvisi** al primo giro |
+| ⬜ | **S0b · il lint esca dai 5 DEF** | ARC-08, ARC-09, Palio e Abbazia — **96 file su 100** — non sono mai stati guardati. Prima in sola lettura, per misurare quanto verrebbe rosso, **poi** si sceglie la soglia |
+
+⚠️ **Il rischio di S0b, dichiarato**: accendere il lint su 96 file mai
+controllati produrrà centinaia di rilievi. Per questo il lotto **misura
+prima e blocca poi**, ed è l'errore che il repo ha già evitato una volta
+(`validate_docs --sorgenti`, lotto 4b).
+
 ### Onda A — quello che manca *al tavolo* (un DM ne ha bisogno mentre gioca)
 
 | | Lotto | Cosa | Perché prima |
@@ -181,7 +269,8 @@ un commit, e ogni commit porta la sua misura prima/dopo (ADR-0036).
 
 | | Lotto | Cosa |
 |---|---|---|
-| ⬜ | **S4 · I read-aloud di DEF-4 e DEF-5** | DEF-4 ne ha 5 in 955 righe, DEF-5 **zero** in 513. Banco: il Palio (41) e ARC-08 (90) |
+| ⬜ | **S4 · I read-aloud di DEF-4 e DEF-5** | DEF-4 ne ha 5 in 955 righe, DEF-5 **zero** in 513. Banco: il Palio (41) e ARC-08 (90). ⚠️ Si scrivono **al metro di `read-aloud-adulti.md`**, non a occhio: ≤12 righe, un nome proprio nuovo, niente parentesi |
+| ⬜ | **S4-bis · ADR-0014 esce da DEF-1** | la regia di round, la chiusura su «Che fate?» e il dialogo `**NOME (registro):**` esistono **solo** in DEF-1 (e 3 battute sparse). Sono prescritti per **ogni** modulo dal 2026-07-30 |
 | ⬜ | **S5 · La Torre parla** | 12 file, **zero dialogo**. Zalkatar, i grimlock ceremorfi, i drow psionici: nessuno ha una battuta |
 | ⬜ | **S6 · I read-aloud della Battaglia Finale** | 16 file, zero letture. È il climax della campagna |
 

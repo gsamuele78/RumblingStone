@@ -92,6 +92,40 @@ sbagliati, e un sesto difetto non era in nessun rilevatore:
 L'ultima riga è la stessa forma d'errore del censimento tarato sul campione, e
 adesso non può più restare muta: `espandi()` fallisce rumorosamente.
 
+## 🔴 Addendum (stesso giorno) — e anche la diagnosi era sbagliata
+
+Il DM, letta la prima versione: *«ma sei sicuro? controlla davvero tutto…
+parti da quello che è definito davvero per la parte di scrittura, stile e
+linea editoriale, e che c'è davvero nel repo skills»*.
+
+Aveva ragione, e l'errore era **lo stesso di cui questo ADR parla, commesso un
+livello più in su**: avevo preso i congegni da due skill e non avevo aperto la
+cartella `references/`, che in `rumblingstone-narrative-style` contiene **dieci
+file**. Dentro ci sono standard di scrittura **numerici e normativi** che
+nessuno misurava — e una delle mie conclusioni era falsa per quel motivo:
+
+> ~~«voci PNG: pretendeva `Nome: «…»`, una forma inventata che nessun documento
+> usa»~~ → `editorial-standards.md` §2 la **prescrive**
+> (`**NOME (registro/tono):** *«battuta»*`). Non è inventata: **è dichiarata e
+> quasi nessuno la segue** — sei occorrenze in tutto il repo.
+
+**Perché il difetto è lo stesso.** Un rilevatore tarato sul campione dichiara
+copertura che non ha; un *criterio* tarato su due skill su diciotto fa
+esattamente lo stesso, e in più sembra completo. La regola che ne esce, e che
+questo ADR aggiunge alla decisione:
+
+> **Un congegno entra nel metro solo dopo aver letto la fonte che lo dichiara —
+> il file, non il titolo del file.** Il terzo campo di `CONGEGNI` non è una
+> citazione decorativa: è la prova che qualcuno è andato a leggere.
+
+E il fatto misurato che ne è uscito, il più grave del lotto: **ADR-0014
+(«regia sensoriale obbligatoria», luglio 2026) è stato applicato a un
+documento solo**, `ARC07-DEF-1`, nel commit che lo ha introdotto. La
+chiusura su «Che fate?» che prescrive per **ogni** box di combattimento
+esiste **una volta in tutto il repo**. Il lint che avrebbe dovuto
+presidiarlo conta le occorrenze della **parola** «read-aloud» e gira solo
+sui 5 master DEF: **96 file su 100 non sono mai stati guardati**.
+
 ## Alternative scartate
 
 1. **Contare la copertura dei nove pilastri.** Scartata: contraddice la fusion

@@ -90,7 +90,13 @@ class TestEcoConosceIlPlurale(unittest.TestCase):
 
 class TestIlDialogoHaDueConvenzioni(unittest.TestCase):
     """🐛 Il rilevatore pretendeva `Nome: «…»`: **zero in tutti i 12 bersagli**.
-    Una forma inventata, che nessun documento del repo usa.
+
+    ⚠️ **E la diagnosi che avevo dato era sbagliata a sua volta.** Avevo
+    concluso «una forma inventata, che nessun documento usa». È il contrario:
+    `editorial-standards.md` §2 la **prescrive** — `**NOME (registro/tono):**
+    *«battuta»*` — e la si trova **sei volte in tutto il repo**. Il congegno
+    `dialogo nella forma dichiarata` misura adesso proprio quello; questo qui
+    conta le battute **comunque scritte**, che è un'altra domanda.
 
     ⚠️ E le virgolette dritte non sono automaticamente dialogo: nel Palio
     `"…"` da' **128 hit** e sono **titoli di canzoni**. Il discrimine e'
@@ -160,6 +166,84 @@ class TestIlPilastroDichiarato(unittest.TestCase):
                                        "DEF-5 Ritorno Hammerfist"])
         self.assertIn("★ Abbazia (stand-alone)", senza)
         self.assertIn("DEF-1 Piano della Terra", senza)
+
+
+class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
+    """🔎 Il DM il 2026-09-18: *«parti da quello che è definito davvero per la
+    parte di scrittura, stile e linea editoriale, e che c'è davvero nel repo
+    skills»*. Partendo da lì si trova che gli standard esistono, sono
+    **numerici**, e nessun cancello li guarda.
+
+    `validate_modules.py` conta le occorrenze della **parola** «read-aloud» e
+    si ferma a cinque: un master con cinque menzioni e **zero box** passa.
+    """
+
+    def test_la_regia_etichettata_e_la_forma_prescritta(self):
+        """`editorial-standards` §2 chiede `**Read-aloud (pilastro lead).**`."""
+        self.assertEqual(
+            conta("regia etichettata **Read-aloud (X)**",
+                  "> **Read-aloud (LotR lead).** *La sala si apre.*"), 1)
+        self.assertEqual(conta("regia etichettata **Read-aloud (X)**",
+                               "> **Read-aloud.** *senza pilastro*"), 0)
+
+    def test_il_dialogo_prescritto_non_e_una_forma_inventata(self):
+        """🔴 Correzione a una mia conclusione sbagliata.
+
+        Avevo scritto che `Nome: «…»` era «una forma che nessun documento
+        usa». È il contrario: `editorial-standards` §2 la **prescrive** come
+        `**NOME (registro/tono):** *«battuta»*`. Il fatto misurato non è che
+        la forma sia inventata — è che **quasi nessuno la segue**: esiste
+        sei volte in tutto il repo.
+        """
+        self.assertEqual(
+            conta("dialogo nella forma dichiarata",
+                  '**BALVAR (stanco, passato remoto):** *«Fu una notte lunga.»*'), 1)
+
+    def test_i_box_non_contano_le_note_editoriali(self):
+        """🐛 Trovato due volte, la seconda in `box_read_aloud`.
+
+        Scritta larga (`^>\\s*[*_]`), la funzione apriva un box su
+        `> **Sostituisce e fonde**` e dava **51 box «con parentesi» su 67**
+        in DEF-1: erano note di redazione, non letture.
+        """
+        nota = "> **Sistema: D&D 3.5 SRD** (max PF1e), MAI 5e.\n"
+        prosa = "> *La sala si apre, e l'aria sa di ferro.*\n"
+        self.assertEqual(len(MC.box_read_aloud(nota)), 0)
+        self.assertEqual(len(MC.box_read_aloud(prosa)), 1)
+
+    def test_il_tetto_delle_dodici_righe_morde(self):
+        corto = "> *" + "riga.*\n> *".join(["a"] * 5) + "*\n"
+        lungo = "> *" + "riga.*\n> *".join(["a"] * 20) + "*\n"
+        self.assertEqual(MC.difetti_dei_box(corto)["oltre 12 righe"], 0)
+        self.assertEqual(MC.difetti_dei_box(lungo)["oltre 12 righe"], 1)
+
+    def test_l_abbazia_rispetta_il_proprio_standard(self):
+        """Il banco misurato contro la norma che il repo dichiara: **zero**
+        box oltre il tetto e **zero** con parentesi, su undici. È la ragione
+        per cui è un banco, e la prova che il metro non è impossibile."""
+        testo, _, _ = MC.carica(MC.BERSAGLI["★ Abbazia (stand-alone)"])
+        d = MC.difetti_dei_box(testo)
+        self.assertGreaterEqual(d["box"], 10)
+        self.assertEqual(d["oltre 12 righe"], 0)
+        self.assertEqual(d["con parentesi"], 0)
+
+    def test_ADR_0014_e_stato_applicato_a_un_documento_solo(self):
+        """🔎 Il fatto che il DM sospettava, misurato.
+
+        `ADR-0014` (regia sensoriale obbligatoria) fu applicato nel commit
+        `d9c357b` a **ARC07-DEF-1 e basta**. Questo test non impone che resti
+        così: impone che **cambiarlo sia deliberato**. Quando la regia di
+        round arriverà in un secondo documento, questo cancello va aggiornato
+        a mano — ed è esattamente il segnale che il lotto è stato fatto.
+        """
+        con = []
+        for nome in MC.BERSAGLI:
+            testo, _, _ = MC.carica(MC.BERSAGLI[nome])
+            if conta("regia di round (una battuta per attore)", testo):
+                con.append(nome)
+        self.assertEqual(con, ["DEF-1 Piano della Terra"],
+                         "la regia di round e' comparsa altrove (bene!) oppure "
+                         "e' sparita da DEF-1 (male): aggiornare di proposito")
 
 
 class TestIBersagliNonSiCampionanoInSilenzio(unittest.TestCase):

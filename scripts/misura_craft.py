@@ -45,8 +45,34 @@ l'ignoranza*. Le correzioni, ognuna con la misura che l'ha imposta:
 | **read-aloud** | `^>` prendeva **qualsiasi** citazione, comprese le note editoriali. DEF-1 segnava **183** e sono `> **Sistema: D&D 3.5 SRD**`, `> **Sostituisce e fonde**`; l'Abbazia ne segnava 11 e sono **tutti** prosa in corsivo. Il numero diceva il contrario del vero | stretto (`> *`) → DEF-1 **24**, Abbazia **11 invariati** |
 | **spotlight per PG** | pretendeva il **grassetto**. Il Palio nomina tutti e quattro i PG 13 volte, mai in grassetto → segnava 0. Misurava la formattazione, non il beat | tolto `\*\*` |
 | **eco** | non conosceva il plurale «**Echi**» — e così il Palio, che ha un **file intero** chiamato `PALIO-CONSEGUENZE-ECHI.md`, segnava **zero echi** | `\bech[io]\b` |
-| **voci PNG** | pretendeva `Nome: «…»`: **zero ovunque**, in 12 bersagli. Una forma inventata, che nessun documento usa | conta le battute `«…»` |
+| **voci PNG** | pretendeva `Nome: «…»`: **zero ovunque**, in 12 bersagli | conta le battute `«…»` comunque scritte |
 | **grigio politico** | l'alternativa `\bWant\b` (dalla skill, in inglese) non matcha **niente** in tutto il repo | rimossa |
+
+🔴 **E la diagnosi delle «voci PNG» era sbagliata a sua volta**, per lo stesso
+motivo per cui lo erano i rilevatori: non avevo letto la fonte. Avevo concluso
+«una forma inventata, che nessun documento usa». È il contrario —
+`references/editorial-standards.md` §2 la **prescrive**:
+`**NOME (registro/tono):** *«battuta»*`. Il fatto vero non è che la forma sia
+inventata: è che **esiste sei volte in tutto il repo**.
+
+## Gli standard redazionali scritti e mai messi sotto cancello
+
+Il DM, il 2026-09-18: *«parti da quello che è definito davvero per la parte di
+scrittura, stile e linea editoriale, e che c'è davvero nel repo skills»*.
+Partendo da lì si trovano quattro congegni **dichiarati, numerici, e non
+misurati da nessuno** — sono gli ultimi quattro dell'elenco qui sotto, più le
+soglie di `--box`:
+
+| Dove | Cosa prescrive | Chi lo controlla |
+|---|---|---|
+| `references/read-aloud-adulti.md` §2 | box **≤ 12 righe** (2-4 per un round), **un solo nome proprio nuovo**, niente parentesi | **nessuno** |
+| `references/editorial-standards.md` §2 | `**Read-aloud (pilastro lead).**` · `**NOME (registro):** *«…»*` | **nessuno** |
+| `ADR-0014` §1-2 | regia di round, chiusura su «Che fate?», occhio da avventuriero | **nessuno** |
+
+⚠️ `validate_modules.py` sembra coprirli e non li copre: conta le occorrenze
+della **parola** «read-aloud» e si ferma a cinque, quindi un master con cinque
+menzioni e **zero box** passa. E gira **solo** su `ARC*-DEF-*.md`: ARC-08,
+ARC-09, il Palio e l'Abbazia non sono mai stati guardati da nessun cancello.
 
 ⚠️ **Le virgolette dritte non sono dialogo, qui.** `"[^"]{12,}"` sembrava
 l'altra convenzione: nel Palio dà **128 hit**, e sono **titoli di canzoni**
@@ -142,6 +168,27 @@ CONGEGNI = [
                 r"Salvatore|Pillars|PoE)[^)\n]{0,24}(?:lead|support)\)", re.I),
      "fusion rule — UN pilastro guida, al più due di supporto"),
 
+    # ── I quattro qui sotto non vengono dai pilastri: vengono dagli STANDARD
+    # REDAZIONALI scritti e mai applicati. Vedi §«Il lavoro annegato» nel piano.
+    ("regia etichettata **Read-aloud (X)**",
+     re.compile(r"\*\*Read-aloud\s*\([^)\n]{2,30}\)"),
+     "editorial-standards §2 — «così il prossimo agente sa quale voce continuare»"),
+
+    ("dialogo nella forma dichiarata",
+     re.compile(r"\*\*[A-ZÀ-Ù][^*\n]{1,40}\([^)\n]{2,30}\)\s*:?\*\*\s*\*?«"),
+     "editorial-standards §2 — `**NOME (registro/tono):** *«battuta»*`"),
+
+    ("chiusura su decision point",
+     re.compile(r"«?\bChe fate\?|\bChe cosa fate\?|\bCosa fate\?", re.I),
+     "ADR-0014 §2 — i box di combattimento chiudono su «Che fate?»"),
+
+    # ⚠️ Il vocabolario e' quello che DEF-1 usa davvero — ADR-0014 lo nomina
+    # esemplare — non quello dell'ADR, che descrive il congegno a parole sue.
+    ("regia di round (una battuta per attore)",
+     re.compile(r"regia dei .{0,12}round|giro del round|descrizioni da leggere|"
+                r"apertura di round|chiusura di round|micro-box", re.I),
+     "ADR-0014 §1 — nessuna sequenza a battute senza regia"),
+
     ("grigio politico",
      re.compile(r"fazione recuperabil|crede di aver ragione|ha (?:le sue|una sua) ragion|"
                 r"\bLeva\b\s*[=:]|ricattabil|vizio\s*/\s*leva|non è (?:un )?(?:cattivo|mostro)\b",
@@ -152,6 +199,56 @@ CONGEGNI = [
 
 def misura(testo: str) -> "dict[str, int]":
     return {nome: len(rx.findall(testo)) for nome, rx, _ in CONGEGNI}
+
+
+#: Le soglie di `read-aloud-adulti.md` §2, scritte e mai messe sotto cancello.
+#: ⚠️ `editorial-standards.md` §2 dice «3-10 righe», `read-aloud-adulti.md` §2
+#: dice 8-12 per un'apertura di scena. Il tetto duro comune e' **12**, ed e'
+#: quello che si misura: le due fonti non concordano sul minimo e questo
+#: script non sceglie per loro.
+TETTO_RIGHE = 12
+
+
+def box_read_aloud(testo: str) -> "list[list[str]]":
+    """I box read-aloud veri: citazioni in corsivo, spezzate alla riga vuota."""
+    # ⚠️ Lo stesso `[*_][^*_\s]` del rilevatore: `> **Nota**` NON apre un box.
+    # Scritto largo, questa funzione contava le note editoriali come read-aloud
+    # e dava 51 box «con parentesi» su 67 in DEF-1 — erano note, non letture.
+    apre = re.compile(r"^>\s*[*_][^*_\s]")
+    box, corrente = [], []
+    for riga in testo.splitlines():
+        if apre.match(riga) or (corrente and riga.startswith(">")):
+            corrente.append(riga)
+        else:
+            if corrente:
+                box.append(corrente)
+            corrente = []
+    if corrente:
+        box.append(corrente)
+    return box
+
+
+#: Un nome proprio: maiuscola interna alla frase, non a inizio riga o dopo punto.
+_NOME = re.compile(r"(?<![.!?»\n]\s)(?<!^)\b([A-ZÀ-Ù][a-zà-ù']{2,})")
+
+
+def difetti_dei_box(testo: str) -> "dict[str, int]":
+    """Quante volte i box violano le soglie dichiarate.
+
+    🔴 Nessuna di queste e' controllata da `validate_modules.py`, che conta
+    le **occorrenze della parola** «read-aloud» e si ferma a cinque.
+    """
+    lunghi = parentesi = nomi = 0
+    for b in box_read_aloud(testo):
+        if len(b) > TETTO_RIGHE:
+            lunghi += 1
+        testo_box = " ".join(b)
+        if "(" in testo_box:
+            parentesi += 1
+        if len(set(_NOME.findall(testo_box))) > 1:
+            nomi += 1
+    return {"box": len(box_read_aloud(testo)), "oltre 12 righe": lunghi,
+            "con parentesi": parentesi, ">1 nome proprio": nomi}
 
 
 #: Fuori misura, con la ragione scritta: una versione superata o una errata
@@ -219,6 +316,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--densita", action="store_true",
                     help="normalizza ogni conteggio su 1.000 righe (confronto fra documenti di taglia diversa)")
+    ap.add_argument("--box", action="store_true",
+                    help="i box read-aloud contro le soglie di read-aloud-adulti.md")
     ap.add_argument("--copertura", action="store_true",
                     help="quanti congegni su N, e quali hanno i banchi che qui mancano")
     ap.add_argument("--mancanti", action="store_true",
@@ -247,6 +346,20 @@ def main() -> int:
             else:
                 cella.append(f"{v:>11d}")
         print(f"{nome:{largh}}{nfile[nome]:>4} {righe[nome]:>6} | " + " | ".join(cella))
+
+    if args.box:
+        print("\n\nI BOX READ-ALOUD CONTRO LE SOGLIE DICHIARATE "
+              "(`read-aloud-adulti.md` §2)\n")
+        print("🔴 Nessuna di queste soglie e' sotto cancello: `validate_modules`")
+        print("   conta le occorrenze della PAROLA «read-aloud» e si ferma a 5.\n")
+        print(f"{'bersaglio':30} {'box':>5} {'>12 righe':>10} "
+              f"{'parentesi':>10} {'>1 nome':>8}")
+        for nome, modelli in BERSAGLI.items():
+            testo, _, _ = carica(modelli)
+            d = difetti_dei_box(testo)
+            print(f"{nome:30} {d['box']:>5} {d['oltre 12 righe']:>10} "
+                  f"{d['con parentesi']:>10} {d['>1 nome proprio']:>8}")
+        print()
 
     if args.copertura:
         banchi = [n for n in dati if n.startswith("★")]

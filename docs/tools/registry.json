@@ -4637,6 +4637,15 @@
           "desc": "Normalizza ogni conteggio su 1.000 righe (confronto fra documenti di taglia diversa)."
         },
         {
+          "name": "--box",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "I box read-aloud contro le soglie di read-aloud-adulti.md (<=12 righe, un nome proprio, niente parentesi)."
+        },
+        {
           "name": "--copertura",
           "type": "bool",
           "required": false,
