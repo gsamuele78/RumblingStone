@@ -23,9 +23,10 @@
    chiusi come *piano* e ⬜ come *gioco*. **Assunzione**: si interviene solo
    dove manca un congegno **operativo al tavolo** (contingenze, vie non
    combattive, scalatura), non per uniformare lo stile di prosa.
-3. **Se la «quarta colonna» e gli ADR interni sono da estendere o restano una
-   firma dell'Abbazia.** È la domanda vera di §3.1 e **la lascio aperta al DM**:
-   il piano la registra come decisione, non la decide.
+3. ~~Se la «quarta colonna» e gli ADR interni sono da estendere.~~ ✅ **Chiusa
+   dal DM il 2026-09-18, e la risposta era «sono due cose diverse»**: la
+   quarta colonna diventa norma del repo ([ADR-0057](adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md)),
+   i dodici ADR interni restano dell'Abbazia, e l'Abbazia non si tocca.
 
 **Assunzione trasversale**: ogni numero qui viene da `misura_craft.py` eseguito
 sul repo al commit corrente. **Non è un voto** (ADR-0055): dice dove guardare.
@@ -84,9 +85,10 @@ Nessun altro documento del repo — 100 file misurati — li porta:
 
 1. **ADR interni al documento** (13 occorrenze). L'Abbazia scrive **dentro
    l'avventura** il *perché* di ogni scelta di design. Nessun arco lo fa.
-2. **La «quarta colonna» sensoriale** (5 occorrenze, ADR-12 dell'Abbazia):
-   la regola contro «l'atmosfera divora l'indagine» — *il dettaglio che non dici
-   mai appartiene a chi fa la domanda*.
+2. **La «quarta colonna» sensoriale** (ADR-12 dell'Abbazia): la regola contro
+   «l'atmosfera divora l'indagine» — *il dettaglio che non dici mai appartiene
+   a chi fa la domanda*. ✅ **Il DM l'ha presa, ed è l'unica delle due**:
+   [ADR-0057](adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md).
 
 E due che l'Abbazia ha in quantità doppia rispetto a chiunque: **contingenze**
 (32 in 1.422 righe, 22,5/1.000 — il primato) e **vie non combattive** (12).
@@ -119,7 +121,7 @@ Palio hanno e questo documento no):
 |---|---|---|
 | **scalare lo scontro** | DEF-1 (3), DEF-4 (1) | 🔴 **tutti e dieci gli altri, a zero** — ed è una *sidebar obbligatoria* di `module-standard` §8 |
 | **ADR interni** | solo l'Abbazia (13) | tutto il resto |
-| **quarta colonna** | solo l'Abbazia (5) | tutto il resto |
+| ~~**quarta colonna**~~ | ✅ **promossa a norma del repo** (ADR-0057): Abbazia + `ARC07-DEF-1` | il resto — ma 🔎 **nel repo giocabile esisteva un solo blocco sensoriale**: gli archi il sensoriale lo scrivono dentro i read-aloud |
 
 🔴 **La scalatura è il buco più grosso del repo**, e non è un'impressione: la
 lingua della scalatura (`scalatura`, `Scalare lo scontro`, `party più forte`,
@@ -349,7 +351,7 @@ prima e blocca poi**, ed è l'errore che il repo ha già evitato una volta
 
 | | Lotto | Cosa |
 |---|---|---|
-| 🔵 | **S7 · La quarta colonna e gli ADR interni** | portarli nella skill dello stile e in un arco pilota — **solo se il DM decide che sono standard e non firma dell'Abbazia** |
+| ✅ | **S7 · La quarta colonna** | ✅ chiuso 2026-09-18 — [ADR-0057](adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md), norma in `editorial-standards.md` §2 e applicata all'unico blocco che esisteva. **Gli ADR interni restano dell'Abbazia**, per decisione del DM |
 
 ---
 
@@ -396,6 +398,6 @@ che è l'unica che conta e che **nessuno script può chiudere**.
 
 | # | Fase | Domanda |
 |---|---|---|
-| D1 | F2 · S7 | **Gli ADR interni al documento e la «quarta colonna» sensoriale sono standard, o restano la firma dell'Abbazia?** Sono 13 e 5 occorrenze, in **un documento solo su 100** — l'unico congegno del repo che un banco ha e nessun altro. Estenderli è lavoro su tutti gli archi e un'aggiunta alla skill dello stile; lasciarli all'Abbazia è una scelta legittima, ma finché non è **scritta** sembra una dimenticanza. Il lotto S7 è gated su questa risposta |
+| ~~D1~~ | F2 · S7 | ✅ **DECISA E ATTUATA il 2026-09-18, nello stesso commit.** Il DM ha **separato le due cose**: *«l'unica cosa da prendere è l'ADR quarta colonna, che può essere usata in diversi contesti nei vari archi [...] gli ADR interni li lascerei all'Abbazia [...] ma ovviamente la versione nell'Abbazia rimane così com'è senza estensione»*. → [ADR-0057](adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md): la quarta colonna entra in `editorial-standards.md` §2 come norma del repo; i dodici ADR interni restano dell'Abbazia; l'Abbazia **non si tocca**. 🔎 **Misurato prima di scrivere la norma, e il numero ha cambiato cosa aspettarsi**: nel repo giocabile esisteva **un solo** blocco sensoriale strutturato (`ARC07-DEF-1` §4) — gli archi il sensoriale lo scrivono dentro la prosa dei read-aloud, non in schede. Come retrofit la norma vale **un posto**; il suo valore è prospettico, sui lotti S4-S6. ⚠️ **La forma è diversa dall'Abbazia, e apposta**: negli archi le schede sono **elenchi**, quindi la norma è sul *blocco* e non sulla colonna — in tabella è la quarta colonna, in elenco l'ultimo punto. Imporre la tabella avrebbe riscritto la forma per portare il contenuto |
 | D2 | F2 · S4-S6 | **ARC-08 e ARC-09 si rifiniscono nello stile, o si toccano solo dove manca un congegno operativo al tavolo?** Cambia l'ampiezza dei lotti da «aggiungere una sidebar» a «riscrivere prosa». I due archi sono chiusi come *piano* e ⬜ come *gioco*: la Torre non ha **una sola battuta** in 12 file e la Battaglia Finale **zero read-aloud** in 16, ma nessuno dei due è mai stato giocato, quindi nessuno li ha visti mancare |
 | D3 | F2 · S2-S3 | **DEF-1 è 🟡 in corso al tavolo: i lotti su di lui restano additivi?** Il piano assume di sì (si aggiungono sidebar, non si riscrive prosa già letta ai giocatori), ma è un'assunzione mia. DEF-1 ha **0 vie non combattive in 2.277 righe**: colmarlo è additivo, ma toccare i suoi read-aloud non lo sarebbe |

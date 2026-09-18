@@ -150,8 +150,9 @@ CONGEGNI = [
      "🔎 Abbazia — il PERCHÉ di ogni scelta, dentro l'avventura"),
 
     ("quarta colonna sensoriale",
-     re.compile(r"quarta colonna|non lo dici mai|appartiene a chi (?:tira|fa la domanda)", re.I),
-     "🔎 Abbazia ADR-12 — contro «l'atmosfera divora l'indagine»"),
+     re.compile(r"quarta colonna|cosa NON dire|non lo dici mai|"
+                r"appartiene a chi (?:tira|fa la domanda)", re.I),
+     "ADR-0057 (era ADR-12 dell'Abbazia) — contro «l'atmosfera divora l'indagine»"),
 
     ("battute di dialogo",
      re.compile(r"«[^»]{4,}»|\"[^\"\n]*?\s\S+\s\S+[^\"\n]*?[.!?…,]\""),

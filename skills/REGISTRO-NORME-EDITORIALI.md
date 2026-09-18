@@ -42,6 +42,7 @@
 | `read-aloud-adulti.md` | box di combattimento chiude su **«Che fate?»** | 🟢 congegno `chiusura su decision point` |
 | `editorial-standards.md` | `**Read-aloud (pilastro lead).**` etichettato | 🟢 congegno `regia etichettata **Read-aloud (X)**` |
 | `editorial-standards.md` | `**NOME (registro/tono):** *«battuta»*` | 🟢 congegno `dialogo nella forma dichiarata` |
+| `editorial-standards.md` | **la quarta colonna**: un blocco sensoriale chiude con «Cosa NON dire» (ADR-0057) | 🟡 congegno `quarta colonna sensoriale` — conta **chi ce l'ha**, non accusa chi non ce l'ha: non esiste modo automatico di sapere se un blocco *avrebbe dovuto* averla |
 | `editorial-standards.md` | terminologia canonica (CD non DC, 5e bandito, metri) | 🟢 `validate_modules.py` §BANNED — ma **solo sui 5 master DEF** |
 | `editorial-standards.md` | blockquote **3-10 righe**; max **1-2 MAIUSCOLE** per read-aloud | 🟡 parziale — `--box` usa il tetto **12** di `read-aloud-adulti`; le due fonti non concordano sul minimo e lo script **non sceglie per loro**. Le maiuscole non sono misurate |
 | `style-pillars.md` | *fusion rule*: **un lead, max due support** per scena | 🟢 congegno `PILASTRO dichiarato (lead/support)` — conta la marca, non la conformità |
@@ -83,7 +84,7 @@
 | | Norme registrate |
 |---|---:|
 | 🟢 misurate | 13 |
-| 🟡 misurate in parte, con il limite scritto | 5 |
+| 🟡 misurate in parte, con il limite scritto | 6 |
 | 🔴 **non misurate, con la ragione scritta** | 11 |
 | ⚪ non applicabili | 2 |
 
