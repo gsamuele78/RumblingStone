@@ -226,6 +226,68 @@ Misurate adesso (`misura_craft --box`):
 tetto, zero parentesi — ed è la prova che il metro non è impossibile: è la
 norma del repo, applicata da un documento solo.
 
+### 1.3-bis · Il pattern è sistemico: **tre standard, tre documenti**
+
+Il DM, terza domanda: *«cerca se esiste altro presente nel repo e mai letto ed
+attivato»*. Misurato:
+
+| Standard | Introdotto | Applicato a | Resto del repo |
+|---|---|---|---|
+| `read-aloud-adulti.md` (171 righe) | PR #89, agosto | 🔴 **nessun file** | — |
+| **ADR-0014** regia sensoriale | luglio | **ARC07-DEF-1** | zero |
+| **ADR-0018** apparato d'uso | — | **ARC-08** | zero |
+
+`ADR-0018` chiede **sette** elementi — foglio del cast, guida alla pronuncia,
+indice dei read-aloud, inserto per lo schermo, cue sonori, il momento da
+fotografare, nota di accessibilità. Misurati su 12 bersagli: **tutti e sette
+esistono in ARC-08 e in nessun altro posto**. L'Abbazia e il Palio ne hanno
+uno (una menzione di pronuncia); i cinque master DEF, zero.
+
+🔴 **Tre standard ottimi, tre documenti, nessun seguito.** Non sono tre
+incidenti: è la forma di lavoro del repo — lo standard si scrive, si applica
+al documento su cui si stava lavorando, e finisce lì. È la ragione per cui
+[ADR-0056](adr/ADR-0056-una-norma-senza-misura-non-esiste.md) porta il
+corollario *«introdurre uno standard non è aver fatto il lavoro»*.
+
+### 1.3-ter · Confronto con un vero progetto editoriale (Paizo AP, RHoD)
+
+Il DM: *«c'è qualcosa che esiste in un vero progetto editoriale e che qui non
+è presente o automatizzabile?»*. Confronto con l'apparato di produzione di un
+Adventure Path (Paizo, *Rise of the Runelords*) e di *Red Hand of Doom*.
+
+**Quello che il repo ha già, e regge il confronto** — e vale dirlo, perché la
+risposta onesta non è «manca tutto»:
+
+| Pratica AP | Qui |
+|---|---|
+| house style + style guide | `narrative-style` + 10 `references/` |
+| tre passate redazionali (struttura → voce → bozze) | `passate-redazionali.md` |
+| statblocchi validati a macchina | `validate_bestiario.py`, `validate_statblock` |
+| budget XP e tesoro per capitolo | checklist §Budget PX + WBL audit |
+| sidebar di scalatura | `module-standard` §8 *(scritta, non applicata)* |
+| mappe con scala dichiarata, export VTT | pipeline 3 modalità + UVTT |
+| art order / brief illustrazioni | `art-direction` + `ai-media-prompts` |
+| handout come deliverable separati | sì |
+| apparato da tavolo (cast, pronuncia, cue) | ADR-0018 *(un arco)* |
+| errata, colophon, OGL/Product Identity | sì |
+| playtest con schede di feedback | `rumblingstone-playtest` |
+
+**Quello che manca davvero, ed è automatizzabile:**
+
+| | Cosa | Perché conta in un AP | Costo |
+|---|---|---|---|
+| 🔴 **A** | **Nessun budget di PAROLE.** Il repo misura righe; un AP si commissiona e si impagina **a parole** (una parte di capitolo ha un tetto, e il tetto governa le pagine). Cercato: `word count`, `budget di parole`, `parole per sezione` — **zero occorrenze in tutto il repo** | è ciò che tiene il **ritmo** e rende il volume stampabile senza tagli dell'ultimo minuto | basso: contare e dichiarare un tetto per §, come già si fa per i PX |
+| 🔴 **B** | **Nessuna validazione dei rimandi interni.** Nei moduli e nel Bestiario ci sono **317 rimandi `§N` distinti**, e nessuno script li verifica. In un AP è il «see page 42», e lo controlla lo sviluppatore prima dell'impaginazione | un rimando rotto al tavolo costa al DM il tempo di cercare a mano, a sessione in corso | medio: il validatore deve capire i rimandi **fra file** (`§6-bis` sta in DEF-1 e lo citano DEF-2..5) |
+| 🟡 **C** | **«Adventure at a glance»**: una tabella per modulo con ogni incontro, EL, XP e dove sta. Esiste sparso (budget PX, indice) ma non come **una** tabella navigabile | è la pagina che un DM guarda per decidere quanto gioca stasera | basso: si genera dai dati che già esistono |
+| 🟡 **D** | **Turnover checklist** per capitolo prima dell'impaginazione, firmata | in Paizo è il passaggio autore → sviluppatore → layout | basso: `validate_booklets --stampa` esiste, manca il rito |
+
+⚠️ **Su B non riporto un conteggio di rimandi rotti, e la ragione è la regola
+d'oro appena scritta.** La mia prima misura ne dava **231**: era falsa, perché
+contava per-file e i rimandi sono **fra file** — `§6-bis` è definito in DEF-1
+riga 681 e citato legittimamente da altri quattro master. Il numero vero si
+saprà **dopo** aver scritto il validatore, non prima. Dichiarare una cifra qui
+sarebbe ripetere l'errore che questo piano documenta.
+
 ### 1.4 · Trovato misurando, **fuori scopo, dichiarato**
 
 - **La Torre di Zalkatar non ha una sola battuta di dialogo** in 12 file, né
@@ -273,6 +335,15 @@ prima e blocca poi**, ed è l'errore che il repo ha già evitato una volta
 | ⬜ | **S4-bis · ADR-0014 esce da DEF-1** | la regia di round, la chiusura su «Che fate?» e il dialogo `**NOME (registro):**` esistono **solo** in DEF-1 (e 3 battute sparse). Sono prescritti per **ogni** modulo dal 2026-07-30 |
 | ⬜ | **S5 · La Torre parla** | 12 file, **zero dialogo**. Zalkatar, i grimlock ceremorfi, i drow psionici: nessuno ha una battuta |
 | ⬜ | **S6 · I read-aloud della Battaglia Finale** | 16 file, zero letture. È il climax della campagna |
+
+### Onda P — le pratiche da AP che mancano *(da §1.3-ter)*
+
+| | Lotto | Cosa |
+|---|---|---|
+| ⬜ | **P1 · Il validatore dei rimandi `§`** | 317 rimandi, zero controllo. Deve capire i rimandi **fra file**: è il motivo per cui non porto un conteggio di rotti in questo piano. Prima si scrive, poi si misura |
+| ⬜ | **P2 · Budget di parole** | il repo non conta le parole da nessuna parte. Un tetto per § — come il budget PX — e `misura_craft` che lo riporta |
+| ⬜ | **P3 · ADR-0018 esce da ARC-08** | i sette elementi dell'apparato esistono in **un arco su dodici**. Il più utile al tavolo e il più economico: la **guida alla pronuncia** e il **foglio del cast** si estraggono dai dati che ci sono già |
+| 🔵 | **P4 · «Adventure at a glance»** | una tabella per modulo: ogni incontro, EL, XP, dove sta. Generabile — gated su P2, perché condivide il posto in pagina |
 
 ### Onda C — i due congegni dell'Abbazia *(gated sul DM, §3.1)*
 
