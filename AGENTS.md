@@ -125,6 +125,82 @@ da un buon proposito:
 > file d'arco, l'altro perché ne ha toccato uno. **Una norma nuova arriva con
 > il suo lotto di applicazione e la sua misura, o non è arrivata.**
 
+#### 🔴 Quarto obbligo: **la self-check prima di consegnare** *(aggiunto lo stesso giorno)*
+
+Il DM, poche ore dopo la prima stesura: *«perché non è partita automaticamente?
+Non è che c'è una skill che l'aveva previsto?»*
+
+**Ce l'aveva.** `rumblingstone-narrative-style` ha una sezione
+**«Self-check before delivering generated content»**: il controllo di coerenza
+più **sette domande**. Non era partita perché i tre obblighi qui sopra dicono
+**«leggi»** e **«misura»**, non **«esegui la self-check prima di consegnare»** —
+e una riscrittura è esattamente il momento in cui serve.
+
+> **4. Prima di consegnare prosa di gioco, esegui la self-check della skill.**
+> Non «tienila a mente»: **eseguila**, domanda per domanda. Dove la domanda è
+> misurabile, la risposta è un **comando**, non un'impressione.
+
+| Domanda della self-check | Come si risponde |
+|---|---|
+| 1 · Quale pilastro guida la scena? *(se «tutti» → riscrivi)* | `misura_craft` → `PILASTRO dichiarato (lead/support)` |
+| 2 · Almeno un PG agisce, sceglie o riceve un'eco? | `--spotlight` (indicatore) |
+| 3 · Ho scritto o fatto riemergere un'eco? | congegno `eco / conseguenze a distanza` |
+| 4 · Sopravvive senza i numeri di serie — niente nomi presi in prestito? | **giudizio**, nessuna misura |
+| 5 · Ogni PNG nominato ha un *Want* che non riguarda i PG? | congegno `grigio politico` |
+| 6 · La rete d'indizi è ridondante, e la risposta sbagliata porta comunque da qualche parte? | congegni `nodo d'indizio` + `modi di fallimento` |
+| 7 · **Qualche box è cresciuto oltre il tetto perché la prosa era venuta bene?** *(→ taglia; vince il tetto)* | `misura_craft --box`, colonna `>12 righe` |
+
+🔎 **La settima non è un esempio scelto a caso: è quella che ho fallito.** La
+riscrittura di `ARC07-DEF-4` del 2026-09-18 ha lasciato un box da **15 righe**
+— proprio quello meglio scritto, l'ingresso di Balvar — e l'ho corretto solo
+dopo che il DM ha fatto questa domanda. Spezzandolo in tre battute il testo è
+**migliorato**, perché il silenzio del vecchio è diventato la prima battuta.
+La domanda 7 esiste per quello.
+
+⚠️ **E la self-check non basta da sola**: due congegni che la skill dichiara —
+`[HDYWTDT]` (il finisher va al giocatore, ai punti di morte dei boss) e
+*yes-and with teeth* (l'invenzione del giocatore entra nel canone **e** genera
+una complicazione) — erano a **zero in tutti e nove gli archi** e non erano
+nemmeno nel metro. Adesso sono due congegni di `misura_craft`. **Se una cosa
+sta in una skill e in nessun rilevatore, prima o poi sparisce.**
+
+#### 🧭 Quinto obbligo: **l'ordine di caricamento è a strati, e sta in un dato**
+
+Il DM: *«fai un ordine gerarchico delle skill che eviti di far saltare le skill
+[…] verifica se ci sono skill che si sovrappongono e orchestrale in maniera
+smart, con meccanismi davvero misurabili»*.
+
+> **5. Prima di caricare, applica l'algoritmo a cinque domande di
+> [`skills/ORCHESTRAZIONE.md`](skills/ORCHESTRAZIONE.md).** Cinque strati più
+> la consultazione, otto conflitti ognuno con un vincitore dichiarato, e un
+> gate (`validate_skills.py`) che boccia una skill senza posto nella gerarchia.
+
+| # | Domanda | Cosa carichi |
+|---|---|---|
+| 1 | **Tocco il canone?** | sì → **L0 sempre**, e batte tutti (regola 8) |
+| 2 | **Chi legge?** | giocatore → `narrative-style` · il repo → `prosa-documenti`. ⚠️ **una sola delle due, mai entrambe** (ADR-0035) |
+| 3 | **Che cosa sto scrivendo?** | L2: `indagine` · `module-standard` · `npc-villain-boosting` |
+| 4 | **In che forma esce?** | L3: `editoria` · `edizione` · `mapmaking` · `art-direction` |
+| 5 | **Che gesto sto facendo?** | L4: `plans` · `automation` · `playtest` · `debugging` |
+
+Solo la **2** ha una risposta sola; dalla 3 in poi si somma. La consultazione
+(SRD, lore) si apre per un **fatto**, mai per decidere.
+
+🔎 **La gerarchia non è stata inventata**: esisteva già, sparsa in **cinque
+frasi** di questo documento («la coerenza batte lo stile», «sopra
+`narrative-style`, che resta il fondo», «regole opposte», «le righe si
+sommano», «read-aloud ceilings winning any conflict»). Erano tutte corrette e
+**nessuna verificabile**. Le diciotto skill entrano in diciotto caselle, una
+per una — ed è la prova che la struttura c'era.
+
+⚠️ **E «massimizzare l'uso» è il bersaglio sbagliato, dichiarato in
+[ADR-0058](plans/adr/ADR-0058-orchestrazione-a-strati-delle-skill.md).**
+Caricarle tutte e diciotto sarebbe il danno: `narrative-style` e
+`prosa-documenti` dettano regole **opposte** sullo stesso italiano, e insieme
+danno un testo che sbaglia in entrambi i modi. **Il bersaglio misurabile è
+*zero omissioni di ciò che è obbligatorio*** — e l'obbligo vero è su **L0-L2**.
+L4 e LR **non** si caricano per sicurezza.
+
 ### Cosa carico, in base a cosa sto per fare
 
 | Sto per… | Carico (obbligatorie in **grassetto**) |
