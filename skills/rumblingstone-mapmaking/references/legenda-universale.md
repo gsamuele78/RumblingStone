@@ -20,6 +20,7 @@
 | 🟧 | Lava raffreddata / pericolo | — |
 | 🟥 | Zona letale | — |
 | 🟦 | Acqua profonda | — |
+| 🌫 | Vuoto / aria (niente pavimento, gravita' alterata: vale la nota della mappa) | — |
 | 🌊 | Acqua / corrente | — |
 | ⬛ | Edificio / corpo di fabbrica (muratura piena: blocca vista e movimento) | **sì** |
 | 🔳 | Dais / pedana rialzata (ci si sale sopra: NON e' un muro) | — |

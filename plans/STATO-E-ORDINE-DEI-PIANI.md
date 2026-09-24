@@ -520,11 +520,11 @@ grep -oE '^\| 2026-[0-9-]+ \| `[0-9a-f]{40}` \| `claude/[^`]+`' plans/PIANO-PRAT
 | | Cosa | Classe | Dove | Da dove si parte |
 |---|---|---|---|---|
 | ✅ | **Le correzioni del ramo Salvatore**: la de-pietrificazione e i PF su `main`; la riga su Sonjak adattata, perché Sal non conosce quel nome (scheda di Sonjak). Corretto anche `Armate-COMPOSIZIONE-DETTAGLIATA.md` §8, che faceva di Sajak e Sonjak due persone (GS 12 → 13, dalla scheda) | **K** | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) 4j-2 | fatto; il ramo si cancella dopo il merge |
-| ⬜ | **Il punto cieco del registro dei rami**: `contenuti_nei_rami.py` conta i file nuovi e non vede le modifiche a file esistenti. Il prototipo c'è: `plans/esperimenti/misura-rami/misura_rami.py`, righe aggiunte contro `main`, con il ramo Salvatore come controllo positivo | **C** | RIPRESA-PR 4j-5 | portare il prototipo in `contenuti_nei_rami.py --righe`, con un test che fa rosso sul ramo Salvatore |
+| ✅ | **Il punto cieco del registro dei rami**: `contenuti_nei_rami.py --righe RAMO…` confronta riga per riga; rosso su Salvatore, verde su `documento-stemmi-alternativi` | **C** | RIPRESA-PR 4j-5 | fatto; il prototipo `misura_rami.py` resta come superato |
 | ✅ | **D7 = no**: gli 11 rami del gruppo B restano. Otto hanno tutto su `main`, tre hanno varianti che si possono estrarre | DM | PRATICHE §7 | le varianti dei tre sono RIPRESA-PR 4j-4 |
-| 🟡 | **Le varianti dei rami giudicati**: decise dal DM. Entra solo il simbolo 🌫 del #42; #109 e #67 no | **G** | RIPRESA-PR 4j-4 | il 🌫 va nella PR della parte di codice di 4j |
+| ✅ | **Le varianti dei rami giudicati**: decise dal DM. Il simbolo 🌫 del #42 è nella legenda (64 simboli) e due mappe di ARC-07 che lo usavano sono rigenerate; #109 e #67 no | **G** | RIPRESA-PR 4j-4 | fatto |
 | ✅ | **Il Torneo di Dauth di maggio**: recuperati, con le scelte del DM, gli strumenti di regia del master (§6-§10), la sotto-quest di Thorik (Verric, Consiglio, mura), quattro aggiunte a Hella e due ad Artemis; corretto «Stonefist» in Durinheart | **K** | RIPRESA-PR 4j-1 (D8 = no) | fatto; il ramo si cancella dopo il merge |
-| ⬜ | **La correzione di `measure_tokens.py`** (ramo `optimize-skills-agent-folders-dwJC4`): contare i file che una skill obbliga a caricare, senza i quali le query di campagna risultano sottostimate | **C** | RIPRESA-PR 4j-3 (D8 = no) | rifarla sul codice di oggi, con un test |
+| ✅ | **La correzione di `measure_tokens.py`**: il preload si legge dal «load order» del `SKILL.md`; le domande di campagna passano da 3.500-5.600 token a 18.500-23.000 | **C** | RIPRESA-PR 4j-3 | fatto |
 | ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati stasera: gli stessi del mattino | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
 | ✅ | **Dependabot per `converters/`** (PRATICHE D9): sì agli avvisi, che vengono dal grafo; no alle PR settimanali. `dependabot.yml` resta sulla radice e lo dice in un commento | DM | PRATICHE §7 | fatto |
 | 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del segreto (DM), la revisione con l'IA (impostazioni) | | PRATICHE PI-3 | si guarda alla prossima PR |
@@ -560,3 +560,74 @@ marca `[INFERRED — needs DM confirmation]` invece di dirla verificata.
 | ~~PRATICHE D8~~: no, con il recupero in RIPRESA-PR 4j-1 e 4j-3 | PRATICHE §7 |
 | ~~La regola della de-pietrificazione~~: verificata sulle schede PCGen del repo; via del DM al porting (RIPRESA-PR 4j-2) | PRATICHE §7.2 |
 | ~~PRATICHE D9~~: decisa, avvisi sì e PR settimanali no | PRATICHE §7 |
+
+---
+
+## 9 · 🔁 Ripartire da qui — dopo la chiusura di RIPRESA-PR 4j (2026-09-24, notte)
+
+> **Perché questa sezione.** Il DM: *«concluso la parte 4j si aggiorna con cosa
+> fatto e si mergia, in modo da poter riaprire una nuova chat con cosa rimane da
+> fare»*. §8 resta com'era, con le righe chiuse segnate. Questa sezione dice cosa
+> resta dopo 4j, e da dove parte la prossima sessione.
+
+### 9.1 · Cosa ha chiuso 4j
+
+| Sotto-lotto | Cosa | PR |
+|---|---|---|
+| 4j-1 | il Torneo di Dauth di maggio, recuperato e adattato al canone di oggi | [#165](https://github.com/gsamuele78/RumblingStone/pull/165) |
+| 4j-2 | le correzioni di Salvatore, una adattata; `Armate-COMPOSIZIONE-DETTAGLIATA.md` §8 | [#164](https://github.com/gsamuele78/RumblingStone/pull/164) |
+| 4j-3 | `measure_tokens.py` conta il preload obbligatorio delle skill | quella che porta questa sezione |
+| 4j-4 | 🌫 nella legenda; #109 e #67 no | 🌫 nella PR di questa sezione, il resto nella #165 |
+| 4j-5 | `contenuti_nei_rami.py --righe` | quella che porta questa sezione |
+
+Il dettaglio, con «Com'è andato» per ciascuno, è in
+[RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) §4.12.
+
+### 9.2 · I rami che il DM può cancellare
+
+Sei rami hanno il loro sotto-lotto chiuso (RIPRESA-PR §4.12, FASE 3). Lo SHA è
+quello misurato in PRATICHE §7.2, e il comando cancella un ramo solo se la sua
+testa è ancora quella: un ramo che nel frattempo ha ricevuto un commit resta.
+
+```bash
+git fetch --prune origin
+while read sha b; do
+  [ "$(git rev-parse "origin/$b" 2>/dev/null)" = "$sha" ] && git push origin --delete "$b"
+done <<'RAMI'
+895863241eaff57d135ed1b2527bd9f55009c2c1 claude/review-tournament-integration-yYlwv
+64df2ebc8f87992e951b212e59996866ad4bf326 claude/salvatore-character-art-wSjuH
+b5e04d2d78799a56bcfa8257c09bc0d817d61e28 claude/optimize-skills-agent-folders-dwJC4
+4986ce87cb7826c804df3be3c34a1f3e3614b30b claude/dnd-map-generation-research-55pzry
+c45c9cc43d64cb6723682a96f56b58f364267cfe claude/golarion-pregen-character-sheets-cstheq
+23f14b607be177699b915c33dbaa7f9e022dee6a claude/terros-battle-hints-booklet-hfvbef
+RAMI
+```
+
+Gli altri dieci rami `claude/*` restano (D7 = no), e resta
+`campaign-group-rumblingstone-dm-gianfranco`, che è la partita (ADR-0007).
+Le sessioni d'agente non possono cancellare rami remoti: lo fa il DM.
+
+### 9.3 · Cosa resta, in ordine
+
+| | Cosa | Classe | Dove | Da dove si parte |
+|---|---|---|---|---|
+| ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati dopo 4j: gli stessi | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
+| ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome: `…DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md` è per il DM e viene misurato come testo per i giocatori | **C** | RIPRESA-PR §4.12, 4j-1 | il criterio del nome in `validate_prosa.py`, con un test |
+| ⬜ | **Le regole di 3.5 fuori rete**: dire in `dnd-35-srd/references/resources.md` che il testo degli incantesimi c'è nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga nella skill e la sua voce nel registro delle norme |
+| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA di GitHub | | PRATICHE PI-3 | si guarda alla prossima PR |
+| 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main`, e le due righe nella skill `rumblingstone-plans` e nel Playbook | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
+| 🟡 | **Le azioni della CI su Node.js 20** | | PRATICHE PI-3 | aspetta Dependabot |
+| ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
+| ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4 | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
+| ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
+| ⬜ | **🧲 e 🤖**, gli altri due simboli locali che il renderer disegna come emoji. E una domanda che 🌫 ha aperto: quando un simbolo è universale, la nota locale della mappa («ZERO-G DILEMMA…» in map03) non arriva più nella legenda dell'SVG | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 · RIPRESA-PR 4j-4 | come 🌫: prima si legge che cosa vuol dire il simbolo in ogni mappa che lo usa, poi legenda, test, mappe rigenerate |
+
+### 9.4 · Il primo comando della prossima sessione
+
+```bash
+git fetch --prune origin
+python3 scripts/fase1.py <i file che stai per toccare>
+python3 scripts/decisioni_dm.py --check
+```
+
+Le decisioni aperte al DM sono in §4, generata da `decisioni_dm.py`.

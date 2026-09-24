@@ -4388,7 +4388,7 @@
       "category": "F-skill-pipeline",
       "language": "python",
       "invocation": "python3 scripts/measure_tokens.py",
-      "summary": "Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4).",
+      "summary": "Misura la dimensione in token delle skill (tiktoken se disponibile, altrimenti chars/4), contando per ogni domanda anche il preload obbligatorio dichiarato nel «load order» del SKILL.md (lotto 4j-3).",
       "use_case": "«Quanto contesto costano le skill oggi, in numeri e non a occhio?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -4453,7 +4453,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": null,
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_measure_tokens.py"
+      ],
       "docs": [
         "scripts/README.md"
       ]
@@ -4867,7 +4869,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/contenuti_nei_rami.py --fetch",
-      "summary": "I file che esistono in un ramo o in una PR, chiuse comprese, e mai su main ne' per nome ne' per contenuto. Ogni riga deve avere un posto nel registro plans/contenuti-nei-rami.json; quelle senza posto sono il lavoro perso che si cerca (lotto 4i-2).",
+      "summary": "I file che esistono in un ramo o in una PR, chiuse comprese, e mai su main ne' per nome ne' per contenuto. Ogni riga deve avere un posto nel registro plans/contenuti-nei-rami.json; quelle senza posto sono il lavoro perso che si cerca (lotto 4i-2). Con --righe confronta riga per riga i rami nominati: vede le correzioni a file che main ha gia', che il controllo sui file non vede (lotto 4j-5).",
       "use_case": "«Si e' perso qualcosa nelle PR chiuse o nei commit spinti dopo un merge, che su main non e' mai arrivato?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -4910,6 +4912,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Report in JSON."
+        },
+        {
+          "name": "--righe",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Uno o piu' rami (senza origin/): conta le righe di testo mai arrivate su main, ne' identiche ne' quasi identiche (difflib >= 0.9)."
         }
       ],
       "inputs": [
@@ -4923,7 +4934,7 @@
       "outputs": [],
       "exit_codes": {
         "0": "ogni file mai arrivato ha un posto (o nessun ramo da misurare)",
-        "1": "righe senza posto (solo con --check) o registro malformato",
+        "1": "righe senza posto (solo con --check), un ramo con righe mai arrivate (solo con --righe) o registro malformato",
         "2": "uso errato"
       },
       "determinism": {

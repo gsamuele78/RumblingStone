@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """misura_rami.py: le righe che un ramo aggiunge esistono su main?
 
+SUPERATO dal lotto 4j-5 (2026-09-24): la stessa misura vive in
+`python3 scripts/contenuti_nei_rami.py --righe RAMO...`, con i test. Resta
+qui come prototipo, perché PRATICHE §7.2 cita i numeri che ha prodotto.
+
 Nasce il 2026-09-24 (PRATICHE D7 e D8). Il registro dei rami
 (`scripts/contenuti_nei_rami.py`) conta i file nuovi e non vede le modifiche a
 file esistenti: un ramo con tre correzioni di canone mai arrivate su `main`
