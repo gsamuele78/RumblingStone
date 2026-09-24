@@ -611,7 +611,8 @@ Le sessioni d'agente non possono cancellare rami remoti: lo fa il DM.
 
 | | Cosa | Classe | Dove | Da dove si parte |
 |---|---|---|---|---|
-| ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati dopo 4j: gli stessi | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
+| ✅ | **I 24 refusi di `validate_lingua`**: letti uno per uno, **11 erano veri** e sono corretti in 5 file («ad Damarath», «nè… E'», gli spazi della Corona da PDF, due refusi nel box di Tordek, un URL); gli altri 13 sono falsi positivi del validatore | **M** | nessun piano | fatto; restano 13, tutti nella riga sotto |
+| ⬜ | **I 13 falsi positivi di `validate_lingua`**: il mascheramento del codice inline con «x» fa sembrare parole i due spazi prima di un'ancora (7, `PROMPT-IMMAGINI-07ILP.md`); «spazio prima della punteggiatura» scatta su una cella di tabella che contiene solo «?» (1) e sul rapporto «5.8 : 1» (5). Il testo è giusto, da correggere è la regola | **C** | nessun piano | `validate_lingua.py`, con un test per ciascuno dei tre casi e uno che provi che «familiare : è» resta rosso; a zero il passo può diventare `--strict` |
 | ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome: `…DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md` è per il DM e viene misurato come testo per i giocatori | **C** | RIPRESA-PR §4.12, 4j-1 | il criterio del nome in `validate_prosa.py`, con un test |
 | ⬜ | **Le regole di 3.5 fuori rete**: dire in `dnd-35-srd/references/resources.md` che il testo degli incantesimi c'è nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga nella skill e la sua voce nel registro delle norme |
 | 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA di GitHub | | PRATICHE PI-3 | si guarda alla prossima PR |
@@ -631,3 +632,56 @@ python3 scripts/decisioni_dm.py --check
 ```
 
 Le decisioni aperte al DM sono in §4, generata da `decisioni_dm.py`.
+
+---
+
+## 10 · 🔁 Ripartire da qui — dopo la #167 (2026-09-24, notte)
+
+> **Perché questa sezione.** Il DM: *«registra le modifiche e mergia la 167 e
+> riinizia in una nuova chat con quello che bisogna ancora fare»*. §9 resta
+> com'era, con la riga dei refusi chiusa; questa sezione dice cosa ha fatto la
+> chat della #167 e da dove riparte la prossima.
+
+### 10.1 · Cosa ha fatto la #167
+
+| Cosa | Esito |
+|---|---|
+| I «24 refusi» di `validate_lingua` | letti uno per uno: **11 veri**, corretti su 8 righe di 5 file; **13 falsi positivi**, che vengono dalla regola e diventano il primo lotto di §10.2 |
+| La Corona di Adamantio (`PG/Artefatti/LaCorona_di_Adamantio-DM.md`) | corrette le tre righe «Dopo  X : L'…»; restano **120 legature** tipografiche su 107 righe («aﬀresco»), che il validatore non vede |
+| Il box del risveglio di Tordek | corretti «familiare :» e «vuoto  pronto… una altra»; il secondo il validatore non lo vedeva |
+| `REGISTRO-LOTTI.md` | una riga «metà è salita»: un lotto **M** che si fida del gate non regge quando è il gate a sbagliare |
+
+Il dettaglio è nella riga del CHANGELOG del 2026-09-24 «§9.3: i refusi di
+`validate_lingua`» e nel corpo della
+[#167](https://github.com/gsamuele78/RumblingStone/pull/167).
+
+🔎 **I sei rami di §9.2 ci sono ancora**, rimisurati dopo la #167 con le stesse
+teste. Il comando di §9.2 vale così com'è; lo lancia il DM.
+
+### 10.2 · Cosa resta, in ordine
+
+| | Cosa | Classe | Dove | Da dove si parte |
+|---|---|---|---|---|
+| ⬜ | **I 13 falsi positivi di `validate_lingua`**: il mascheramento con «x» (7), la cella «?» (1), il rapporto «5.8 : 1» (5) | **C** | §9.3 | `validate_lingua.py`, un test per ogni caso e uno che provi «familiare : è» ancora rosso; a zero, il passo in CI diventa `--strict` |
+| ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome | **C** | §9.3 | il criterio del nome in `validate_prosa.py`, con un test |
+| ⬜ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
+| ⬜ | **Le 120 legature della Corona** | **M** | §10.1 | prima si conta in tutto il repo, poi si decide se è un lotto solo o uno per file; la qualità è «nessuna legatura, nessun'altra riga cambiata» |
+| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA | | PRATICHE PI-3 | si guarda alla prossima PR |
+| 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main` | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
+| 🟡 | **Le azioni della CI su Node.js 20** | | PRATICHE PI-3 | aspetta Dependabot |
+| ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
+| ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4 | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
+| ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
+| ⬜ | **🧲 e 🤖** e la nota locale che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 | come §9.3, ultima riga |
+
+La regola di §8.3 resta: un lotto per PR; dopo il merge il ramo della sessione
+si ricrea da `main` e ospita il lotto dopo.
+
+### 10.3 · Il primo comando della prossima sessione
+
+```bash
+git fetch --prune origin
+python3 scripts/fase1.py <i file che stai per toccare>
+python3 scripts/decisioni_dm.py --check
+python3 scripts/validate_lingua.py     # 13 attesi, tutti di §10.2 prima riga
+```
