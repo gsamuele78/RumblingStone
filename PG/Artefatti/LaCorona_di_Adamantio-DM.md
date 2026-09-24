@@ -768,7 +768,7 @@ visibile mostra un nano che scopre la corona. Il resto è sbiadito.
 ◦ Individuazione del Magico: Rivela un'aura di divinazione forte su tutta la parete.
 ◦ Vedere Invisibilità: Non rivela nulla di nuovo... per ora.
 
-• Dopo  Forge’s Defense : L'aﬀresco si anima, mostrando la scena del sogno. Un nuovo
+• Dopo Forge’s Defense: L'aﬀresco si anima, mostrando la scena del sogno. Un nuovo
 
 pannello si rivela magicamente.
 
@@ -794,7 +794,7 @@ compongono un indovinello: "Dove l'onore è in catene e la fede è perduta, la c
 
 tempo attende di essere trovata."
 
-• Dopo  Trial of the Deep Hall : L'aﬀresco si aggiorna, mostrando il nano liberato. Un nuovo
+• Dopo Trial of the Deep Hall: L'aﬀresco si aggiorna, mostrando il nano liberato. Un nuovo
 
 pannello appare.
 
@@ -808,7 +808,7 @@ che ha la forma perfetta di un'incudine. Sopra di essa, ﬂuttua la sagoma spiri
 
 Moradin, con un martello in mano, in attesa."
 
-• Dopo  Anvil of the World : L'ultimo pannello si svela.
+• Dopo Anvil of the World: L'ultimo pannello si svela.
 
 ◦ Descrizione dell'Aﬀresco (da leggere al giocatore): "L'intero ciclo è ora completo.
 

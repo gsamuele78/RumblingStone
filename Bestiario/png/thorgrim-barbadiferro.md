@@ -27,7 +27,7 @@ Fino al 2026-09-18 questo file era `thorgrim-barbadiferro-cr13.md` e diceva
 | `melee-heavy` | nel modulo e' una **prova sociale**: Diplomazia/Intimidire **CD 20** |
 
 Con quella voce nel pool, `suggest_encounter --cr 13` poteva proporre al DM un
-nano di cui non esistono nè PF nè CA. E' la forma d'errore di **ADR-0053** —
+nano di cui non esistono né PF né CA. È la forma d'errore di **ADR-0053** —
 una chiave dedotta invece che dichiarata — commessa da me il 2026-09-17.
 
 ## Chi e', al tavolo

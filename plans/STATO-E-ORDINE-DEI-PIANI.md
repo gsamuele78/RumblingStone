@@ -611,7 +611,8 @@ Le sessioni d'agente non possono cancellare rami remoti: lo fa il DM.
 
 | | Cosa | Classe | Dove | Da dove si parte |
 |---|---|---|---|---|
-| ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati dopo 4j: gli stessi | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
+| ✅ | **I 24 refusi di `validate_lingua`**: letti uno per uno, **11 erano veri** e sono corretti in 5 file («ad Damarath», «nè… E'», gli spazi della Corona da PDF, due refusi nel box di Tordek, un URL); gli altri 13 sono falsi positivi del validatore | **M** | nessun piano | fatto; restano 13, tutti nella riga sotto |
+| ⬜ | **I 13 falsi positivi di `validate_lingua`**: il mascheramento del codice inline con «x» fa sembrare parole i due spazi prima di un'ancora (7, `PROMPT-IMMAGINI-07ILP.md`); «spazio prima della punteggiatura» scatta su una cella di tabella che contiene solo «?» (1) e sul rapporto «5.8 : 1» (5). Il testo è giusto, da correggere è la regola | **C** | nessun piano | `validate_lingua.py`, con un test per ciascuno dei tre casi e uno che provi che «familiare : è» resta rosso; a zero il passo può diventare `--strict` |
 | ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome: `…DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md` è per il DM e viene misurato come testo per i giocatori | **C** | RIPRESA-PR §4.12, 4j-1 | il criterio del nome in `validate_prosa.py`, con un test |
 | ⬜ | **Le regole di 3.5 fuori rete**: dire in `dnd-35-srd/references/resources.md` che il testo degli incantesimi c'è nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga nella skill e la sua voce nel registro delle norme |
 | 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA di GitHub | | PRATICHE PI-3 | si guarda alla prossima PR |
