@@ -519,7 +519,7 @@ grep -oE '^\| 2026-[0-9-]+ \| `[0-9a-f]{40}` \| `claude/[^`]+`' plans/PIANO-PRAT
 
 | | Cosa | Classe | Dove | Da dove si parte |
 |---|---|---|---|---|
-| ✅ | **Le correzioni del ramo Salvatore**: la de-pietrificazione e i PF su `main`; la riga su Sonjak adattata, perché Sal non conosce quel nome (scheda di Sonjak). Trovata una riga contraddittoria in `Armate-COMPOSIZIONE-DETTAGLIATA.md` §8, al DM | **K** | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) 4j-2 | fatto; il ramo si cancella dopo il merge |
+| ✅ | **Le correzioni del ramo Salvatore**: la de-pietrificazione e i PF su `main`; la riga su Sonjak adattata, perché Sal non conosce quel nome (scheda di Sonjak). Corretto anche `Armate-COMPOSIZIONE-DETTAGLIATA.md` §8, che faceva di Sajak e Sonjak due persone (GS 12 → 13, dalla scheda) | **K** | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) 4j-2 | fatto; il ramo si cancella dopo il merge |
 | ⬜ | **Il punto cieco del registro dei rami**: `contenuti_nei_rami.py` conta i file nuovi e non vede le modifiche a file esistenti. Il prototipo c'è: `plans/esperimenti/misura-rami/misura_rami.py`, righe aggiunte contro `main`, con il ramo Salvatore come controllo positivo | **C** | RIPRESA-PR 4j-5 | portare il prototipo in `contenuti_nei_rami.py --righe`, con un test che fa rosso sul ramo Salvatore |
 | ✅ | **D7 = no**: gli 11 rami del gruppo B restano. Otto hanno tutto su `main`, tre hanno varianti che si possono estrarre | DM | PRATICHE §7 | le varianti dei tre sono RIPRESA-PR 4j-4 |
 | ⬜ | **Le varianti dei rami giudicati** (#42, #109, #67): un elenco entra/non entra, riga per riga | **G** | RIPRESA-PR 4j-4 | `misura_rami.py` su ciascuno, poi lettura |

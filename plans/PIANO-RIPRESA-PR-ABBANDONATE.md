@@ -2959,10 +2959,14 @@ proponeva, la terza no:
   momento «a-ha» dei PG. La riga di `main` («Matrona Sajak») era già giusta
   dal punto di vista di Sal; si aggiunge solo una nota per il DM che dice chi è.
 
-🔎 **Trovato e non corretto**: `00_Red Hand Of Doom/Armate-COMPOSIZIONE-DETTAGLIATA.md`
-§8 scrive «Matrona Sajak, Sonjak (enforcer)», che si legge come due persone.
-Canone e scheda dicono una persona sola. È una riga K fuori da questo lotto:
-va al DM.
+🔎 **Trovato, e corretto su richiesta del DM**: `00_Red Hand Of Doom/Armate-COMPOSIZIONE-DETTAGLIATA.md`
+§8 scriveva «Matrona Sajak, Sonjak (enforcer)» e aveva in tabella «Sonjak
+(enforcer)» con GS 12: due persone, e un GS diverso dalla scheda. Canone e
+scheda dicono una persona sola, la Matrona, con GS 13. Il DM: *«correggi
+anche questo con l'analisi fatta»*. Ora il §8 dice che Sonjak comanda, che
+Salvatore la conosce solo come «Matrona Sajak», e la tabella porta GS 13 e il
+percorso della scheda. Le note «Sajak rituali» ed «Élite Sajak» restano: usano
+il nome come alias, e l'alias è canone.
 
 Il ramo `claude/salvatore-character-art-wSjuH` si può cancellare quando questo
 sotto-lotto è su `main`.
