@@ -2893,7 +2893,7 @@ disabilitato finché non si riallinea. Poi due righe: il passo «Update branch
 prima del merge» nella checklist di chiusura della skill `rumblingstone-plans`,
 e una nel Playbook dove si parla di rami.
 
-### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[🟡 aperto il 2026-09-24 · 4j-1 ✅ · 4j-2 ✅ · 4j-3 ⬜ · 4j-4 🟡 · 4j-5 ⬜]`
+### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[✅ chiuso il 2026-09-24 · 4j-1 ✅ · 4j-2 ✅ · 4j-3 ✅ · 4j-4 ✅ · 4j-5 ✅]`
 
 Nasce dalla pulizia dei rami di PRATICHE (D5, D7, D8). Il DM: *«per D7 e D8
 prima misura davvero se non c'è niente, non ti fidare»*, e dopo la misura:
@@ -3000,13 +3000,37 @@ il nome come alias, e l'alias è canone.
 Il ramo `claude/salvatore-character-art-wSjuH` si può cancellare quando questo
 sotto-lotto è su `main`.
 
-#### 4j-3 · `measure_tokens.py` e i file di caricamento obbligatorio ⬜
+#### 4j-3 · `measure_tokens.py` e i file di caricamento obbligatorio ✅
 `[engine: Sonnet 5 · effort: medio · qualità: un test che fa rosso se una query di campagna non conta i file che la skill obbliga a caricare]`
 
 Classe **C**. Rifatta sul codice di oggi, non portata: il ramo è di maggio,
 quando le skill erano quattro.
 
-#### 4j-4 · Le varianti dei tre rami giudicati 🟡
+**Com'è andato (2026-09-24).** Il ramo cablava nello script i file da
+precaricare. Oggi li legge dal `SKILL.md`: la lista numerata che segue la riga
+«load order» è il preload, risolto rispetto alla skill, a `skills/` o alla
+radice. Un file che non esiste si dice (MISSING in tabella, avviso su stderr)
+invece di contare zero.
+
+| Domanda | Prima | Dopo | di cui preload |
+|---|---:|---:|---:|
+| Campaign: what's Thorik's status? | 5.564 | 22.938 | 17.374 |
+| Campaign: current arc state? | 3.521 | 20.895 | 17.374 |
+| Campaign: can artifact X be used again? | 4.430 | 18.480 | 17.374 |
+
+«Prima» è lo script di `main` rilanciato sulle skill di oggi. La terza cresce
+meno delle altre perché la sua reference è `campaign-coherence.md`, che adesso
+sta nel preload e si conta una volta. Il risparmio rispetto a caricare tutto
+`skills/` scende dal 97-98% all'88-90% per le domande di campagna; per regole e lore non cambia niente, perché quelle skill non
+dichiarano un preload. `test_tool_decidono.py` tiene fuori `measure_tokens`
+apposta (una misura non decide); `test_measure_tokens.py` collauda il lettore
+del preload, non la misura, e lo dice nel docstring. Tre dei sei test vanno
+rossi se il lettore si rompe.
+
+Il ramo `claude/optimize-skills-agent-folders-dwJC4` si può cancellare: le altre
+righe che porta sono infrastruttura di maggio rifatta dopo (PRATICHE §7.2).
+
+#### 4j-4 · Le varianti dei tre rami giudicati ✅
 `[engine: Opus 5.5 · effort: alto · qualità: per ogni ramo un elenco di varianti con la proposta entra/non entra, e il DM che decide riga per riga]`
 
 Classe **G**. #42, #109, #67: il giudizio del DM di allora riguardava la PR
@@ -3023,18 +3047,69 @@ intera. Qui si guarda se dentro c'è qualcosa che vale da solo, per esempio le
 | #67 | il booklet HTML di hint per Terros | **no**: c'è quello da manifest, e questo detta tattica e anticipa l'esito |
 | — | «Tordek Stonefist» in `Bestiario/png/Maewen/Maewen.md` e negli statblock del Torneo | **corretto** in Durinheart, nella PR di 4j-1 |
 
+**Com'è andato (2026-09-24).** 🌫 è in `scripts/legend.yaml` come riempimento
+`t_void`, senza altezza, senza copertura e senza pericolo: si attraversa e si
+vede attraverso. Il motivo viene dal ramo della #42, con due correnti e due
+punti di luce, e si dipinge per primo. Legenda rigenerata a 64 simboli, 57 con
+una funzione; i due numeri congelati in `test_legenda_fonte_unica.py` sono
+aggiornati con la nota del perché. `test_glifo_vuoto.py` controlla che 🌫 non
+sia un muro né un pericolo e che una griglia lo disegni.
+
+🔎 Il piano diceva che nessuna mappa esistente cambiava. Due cambiano:
+`ARC07-MAPPE-DEFINITIVO` usava già 🌫 come simbolo locale, in 346 celle (20 in
+map02, 326 in map03), che fino a oggi uscivano come emoji grezzo. È il difetto 4
+di [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1, chiuso
+per 🌫; 🧲 e 🤖 restano.
+
+🔴 **E le due mappe gli davano due regole.** In map02 è la gravità laterale, «non
+attraversare»; in map03 è lo zero-G dove Artemis vola e Terros perde la
+rigenerazione. L'etichetta del ramo #42, «abisso da attraversare», era sbagliata
+per map02. Quella nuova dice solo ciò che hanno in comune (niente pavimento,
+gravità alterata) e rimanda alla nota della mappa, che nel master c'è. Il prezzo:
+nella legenda dell'SVG la nota locale di map03 («ZERO-G DILEMMA…») è sostituita
+dall'etichetta universale, come per ogni simbolo della legenda. Resta nel master.
+
 Dopo il 🌫, i rami #42, #109 e #67 si possono cancellare.
 
-#### 4j-5 · Il punto cieco del registro ⬜
+#### 4j-5 · Il punto cieco del registro ✅
 `[engine: Sonnet 5 · effort: medio · qualità: contenuti_nei_rami --righe fa rosso sul ramo Salvatore e verde su documento-stemmi-alternativi]`
 
 Classe **C**. `contenuti_nei_rami.py` conta i file nuovi e non vede le
 modifiche a file esistenti. Il prototipo è `misura_rami.py`; entra nello
 script come opzione `--righe`, con i due rami qui sopra come casi di test.
 
+**Com'è andato (2026-09-24).** `contenuti_nei_rami.py --righe RAMO…` indicizza
+le righe di `main` con `git archive`, prende le righe che il ramo aggiunge dal
+punto d'incontro e le divide in identiche, quasi (difflib ≥ 0,9 sullo stesso
+file o su uno con lo stesso nome) e mai arrivate. Esce 1 se un ramo ne ha, 2 se
+il ramo non esiste. Il criterio di qualità regge: rosso su Salvatore, verde su
+`documento-stemmi-alternativi-ehgi9m` (31 righe su 31 già su `main`).
+
+I test girano in un repository temporaneo con tre rami che toccano un file che
+`main` ha già: il controllo sui file non vede niente, quello sulle righe vede la
+correzione. Tre test vanno rossi se ogni riga conta come identica.
+`misura_rami.py` resta in `plans/esperimenti/` come prototipo superato, perché
+PRATICHE §7.2 cita i suoi numeri.
+
 **FASE 3 · Validazione.** `misura_rami.py` rilanciato sui sei rami della
 tabella: ogni riga mancante è su `main` oppure ha il suo «perché no» scritto
 dal DM. Poi, e solo poi, il ramo si cancella con lo stesso registro dei 38.
+
+**Fatta il 2026-09-24**, con `contenuti_nei_rami.py --righe` al posto del
+prototipo, contro `main` prima del merge della parte di codice:
+
+| Ramo | Mai arrivate | Perché si può cancellare |
+|---|---:|---|
+| `review-tournament-integration-yYlwv` | 812 su 834 | il recupero è adattato, non copiato: le righe non tornano uguali. Cosa entra e cosa no è la tabella di 4j-1 |
+| `salvatore-character-art-wSjuH` | 2 su 3 | entrambe adattate (4j-2) |
+| `optimize-skills-agent-folders-dwJC4` | 182 su 281 | `measure_tokens` rifatto (4j-3); il resto è infrastruttura di maggio rifatta dopo |
+| `dnd-map-generation-research-55pzry` (#42) | 245 su 264 | le griglie sono già in `ARC07-MAPPE-DEFINITIVO.md`; le 11 righe del renderer entrano con questa PR |
+| `golarion-pregen-character-sheets-cstheq` (#109) | 130 su 134 | il DM: no (4j-4) |
+| `terros-battle-hints-booklet-hfvbef` (#67) | 308 su 364 | il DM: no (4j-4) |
+
+Un numero alto qui non vuol dire lavoro perso: dice dove leggere, e la lettura
+è scritta nel sotto-lotto. I sei rami si possono cancellare quando la PR della
+parte di codice di 4j è su `main`; la cancellazione la fa il DM.
 
 ## Come si misura che il piano è finito
 
