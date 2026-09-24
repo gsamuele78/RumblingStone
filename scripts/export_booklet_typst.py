@@ -270,7 +270,18 @@ def inline(s: str) -> str:
     for ent, ch in _ENTITA.items():
         s = s.replace(ent, ch)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: _link(m.group(1), m.group(2)), s)
-    return _unesc(_inline(s))
+    out = _unesc(_inline(s))
+    # In Typst certi segni hanno un senso solo A INIZIO riga: «= » apre un
+    # titolo, «- » e «+ » una lista, «/ » un termine da definire. Dentro una
+    # cella il contenuto comincia una riga nuova, e «| **La leva** | = suo
+    # nipote |» (ARC07-DEF-4 §4-ter) diventava un TITOLO: un segnalibro spurio
+    # nel PDF, a pagina 58. Una barra rovescia davanti lo fa tornare testo.
+    if _STRUTTURA_A_INIZIO.match(out):
+        out = "\\" + out
+    return out
+
+
+_STRUTTURA_A_INIZIO = re.compile(r"(=+|[-+/])(\s|$)")
 
 
 def _celle(riga: str) -> list[str]:

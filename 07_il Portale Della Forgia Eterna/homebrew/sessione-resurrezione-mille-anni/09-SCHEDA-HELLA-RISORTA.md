@@ -98,4 +98,4 @@ Oltre alle sei carte che hanno tutti:
 
 **Durik** ha la sua scheda. Cammina con te.
 
-![L'Avatar della Radice](../../Immagini/Hella_elementale.png)
+![L'Avatar della Radice](../../Immagini/web/Hella_elementale.jpg)

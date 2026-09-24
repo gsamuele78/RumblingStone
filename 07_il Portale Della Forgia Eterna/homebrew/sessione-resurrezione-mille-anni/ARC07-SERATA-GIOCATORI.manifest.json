@@ -11,15 +11,61 @@
   "cover_image": "../../Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg",
   "out": "ARC07-SERATA-GIOCATORI.html",
   "chapters": [
-    {"title": "✉ Echi — Thorik", "file": "03-ECHI-THORIK.md", "tag": "player"},
-    {"title": "✉ Echi — Tordek", "file": "04-ECHI-TORDEK.md", "tag": "player"},
-    {"title": "✉ Echi — Artemis", "file": "05-ECHI-ARTEMIS.md", "tag": "player"},
-    {"title": "✉ Echi — Hella", "file": "06-ECHI-HELLA.md", "tag": "player"},
-    {"title": "✉ La preghiera della resurrezione", "file": "10-HANDOUT-PREGHIERA.md", "tag": "player"},
-    {"title": "✉ Le carte dei Doni", "file": "07-CARTE-DEI-DONI.md", "tag": "player"},
-    {"title": "✉ Hella, tornata", "file": "09-SCHEDA-HELLA-RISORTA.md", "tag": "player"},
-    {"title": "✉ Durik, il guardiano di pietra", "file": "08-SCHEDA-DURIK.md", "tag": "player"},
-    {"title": "✉ Le Cronache dei Quattro Eroi", "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md", "tag": "player"}
+    {
+      "title": "✉ Echi — Thorik",
+      "file": "03-ECHI-THORIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Tordek",
+      "file": "04-ECHI-TORDEK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Artemis",
+      "file": "05-ECHI-ARTEMIS.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Hella",
+      "file": "06-ECHI-HELLA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La preghiera della resurrezione",
+      "file": "10-HANDOUT-PREGHIERA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Thorik",
+      "file": "07a-CARTA-DONO-THORIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Tordek",
+      "file": "07b-CARTA-DONO-TORDEK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Artemis",
+      "file": "07c-CARTA-DONO-ARTEMIS.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Hella, tornata",
+      "file": "09-SCHEDA-HELLA-RISORTA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Durik, il guardiano di pietra",
+      "file": "08-SCHEDA-DURIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Le Cronache dei Quattro Eroi",
+      "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md",
+      "tag": "player"
+    }
   ],
   "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg"
 }

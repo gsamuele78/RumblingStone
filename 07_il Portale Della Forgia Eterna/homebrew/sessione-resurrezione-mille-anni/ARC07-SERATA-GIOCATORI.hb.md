@@ -217,23 +217,21 @@ la testa: l'ha sentito. Si può ritentare, con −2 per ogni tentativo.*
 
 \page
 
-# ✉ Le carte dei Doni
+# ✉ La carta del Dono — Thorik
 
 {{note
 ##### ✉ HANDOUT GIOCATORE
 Pagina da consegnare al giocatore indicato, in privato.
 }}
 
-# Le carte dei Doni
+# La carta del Dono — Thorik
 
-> *Tre carte, una per chi officia. Il DM le consegna allo Step 5 del rito,
-> quando Moradin chiede. Si leggono in silenzio. Nessuno è obbligato: Hella
+> *Il DM la consegna allo Step 5 del rito, una a chi officia,
+> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
 > torna comunque, perché il Cuore basta da solo. Il dono compra **come**
 > torna, non **se**.*
 
 ---
-
-## 🛡️ Thorik — la Corona
 
 > *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
 > ricorderà.»*
@@ -255,9 +253,24 @@ scena intera. Poi mai più.
 
 *Non le dai un potere. Le passi il tuo mestiere: stare davanti.*
 
----
 
-## ⚒️ Tordek — i Bracieri
+\page
+
+# ✉ La carta del Dono — Tordek
+
+{{note
+##### ✉ HANDOUT GIOCATORE
+Pagina da consegnare al giocatore indicato, in privato.
+}}
+
+# La carta del Dono — Tordek
+
+> *Il DM la consegna allo Step 5 del rito, una a chi officia,
+> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
+> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
+> torna, non **se**.*
+
+---
 
 > *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
 > ricorderà.»*
@@ -275,9 +288,24 @@ scena intera. Poi mai più.
 *Nel buio lei ha sentito una voce che la teneva ferma. Adesso l'ancora passa a
 chi l'ha usata.*
 
----
 
-## 🔮 Artemis — l'Anello
+\page
+
+# ✉ La carta del Dono — Artemis
+
+{{note
+##### ✉ HANDOUT GIOCATORE
+Pagina da consegnare al giocatore indicato, in privato.
+}}
+
+# La carta del Dono — Artemis
+
+> *Il DM la consegna allo Step 5 del rito, una a chi officia,
+> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
+> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
+> torna, non **se**.*
+
+---
 
 > *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
 > ricorderà.»*
@@ -405,7 +433,7 @@ Oltre alle sei carte che hanno tutti:
 
 **Durik** ha la sua scheda. Cammina con te.
 
-![L'Avatar della Radice](../../Immagini/Hella_elementale.png)
+![L'Avatar della Radice](../../Immagini/web/Hella_elementale.jpg)
 
 
 \page
@@ -422,7 +450,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
 
-![Durik riforgiato, occhi di topazio](../../../PG/Immagini/durik2.png)
+![Durik riforgiato, occhi di topazio](../../../PG/Immagini/web/durik2.jpg)
 
 > *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
 > e la pietra se l'è tenuto.*
@@ -511,7 +539,7 @@ succede, di solito dopo.
 | 4 | **immune all'acido**; il morso conta anche come ferro freddo |
 | 5 | immune a tutti i danni da energia; +2 SAG, e capisce le tue parole senza ambiguità |
 
-![Durik, di fronte](../../../PG/Immagini/DurikFront2.png)
+![Durik, di fronte](../../../PG/Immagini/web/DurikFront2.jpg)
 
 
 \page

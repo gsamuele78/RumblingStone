@@ -3,7 +3,7 @@
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
 
-![Durik riforgiato, occhi di topazio](../../../PG/Immagini/durik2.png)
+![Durik riforgiato, occhi di topazio](../../../PG/Immagini/web/durik2.jpg)
 
 > *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
 > e la pietra se l'è tenuto.*
@@ -92,4 +92,4 @@ succede, di solito dopo.
 | 4 | **immune all'acido**; il morso conta anche come ferro freddo |
 | 5 | immune a tutti i danni da energia; +2 SAG, e capisce le tue parole senza ambiguità |
 
-![Durik, di fronte](../../../PG/Immagini/DurikFront2.png)
+![Durik, di fronte](../../../PG/Immagini/web/DurikFront2.jpg)

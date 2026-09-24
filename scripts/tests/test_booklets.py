@@ -98,6 +98,15 @@ class TestEnfasi(unittest.TestCase):
     def test_asterisco_che_non_e_enfasi(self):
         self.assertEqual(inline("3 * 4 caselle"), "3 \\* 4 caselle")
 
+    def test_segno_di_struttura_a_inizio_cella_resta_testo(self):
+        """«= suo nipote» in una cella di DEF-4 diventava un titolo in Typst."""
+        self.assertEqual(inline("= suo nipote"), "\\= suo nipote")
+        self.assertEqual(inline("/ 8"), "\\/ 8")
+        self.assertEqual(inline("- nota"), "\\- nota")
+        # ma un segno attaccato a un numero non è struttura, e resta com'è
+        self.assertEqual(inline("+2 alla CA"), "+2 alla CA")
+        self.assertEqual(inline("-5 pf"), "-5 pf")
+
     def test_enfasi_mai_chiusa_non_esce_dal_paragrafo(self):
         """Un master con un asterisco dispari non deve mangiarsi il resto."""
         self.assertTrue(inline("**aperto e mai chiuso").endswith("]"))

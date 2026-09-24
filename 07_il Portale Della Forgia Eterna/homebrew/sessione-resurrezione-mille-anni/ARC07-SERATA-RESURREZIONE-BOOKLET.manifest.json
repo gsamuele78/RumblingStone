@@ -19,22 +19,96 @@
   "intro_md": "00-INTRO-DOVE-SIAMO.md",
   "out": "ARC07-SERATA-RESURREZIONE-BOOKLET.html",
   "chapters": [
-    {"title": "I · Regia della serata", "file": "01-REGIA-SERATA.md", "tag": "dm"},
-    {"title": "II · Il cast e i suoi echi", "file": "02-CAST-ED-ECHI-PNG.md", "tag": "dm"},
-    {"title": "La cassetta del DM — cast, pronuncia, read-aloud, suoni", "file": "../../ARC07-CASSETTA-DEL-DM.md", "tag": "dm"},
-    {"title": "III · Master — Il Ritorno e gli Affreschi (DEF-2)", "file": "../../ARC07-DEF-2-RITORNO-E-AFFRESCHI.md", "tag": "dm"},
-    {"title": "IV · Master — La Resurrezione di Hella (DEF-3)", "file": "../../ARC07-DEF-3-RESURREZIONE-HELLA.md", "tag": "dm"},
-    {"title": "V · Master — Il Viaggio a 1.000 anni fa (DEF-4)", "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md", "tag": "dm"},
-    {"title": "Collana dei Semi Eterni — scheda DM", "file": "../../../PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md", "tag": "dm"},
-    {"title": "✉ Echi — Thorik", "file": "03-ECHI-THORIK.md", "tag": "player"},
-    {"title": "✉ Echi — Tordek", "file": "04-ECHI-TORDEK.md", "tag": "player"},
-    {"title": "✉ Echi — Artemis", "file": "05-ECHI-ARTEMIS.md", "tag": "player"},
-    {"title": "✉ Echi — Hella", "file": "06-ECHI-HELLA.md", "tag": "player"},
-    {"title": "✉ La preghiera della resurrezione", "file": "10-HANDOUT-PREGHIERA.md", "tag": "player"},
-    {"title": "✉ Le carte dei Doni", "file": "07-CARTE-DEI-DONI.md", "tag": "player"},
-    {"title": "✉ Hella, tornata", "file": "09-SCHEDA-HELLA-RISORTA.md", "tag": "player"},
-    {"title": "✉ Durik, il guardiano di pietra", "file": "08-SCHEDA-DURIK.md", "tag": "player"},
-    {"title": "✉ Le Cronache dei Quattro Eroi", "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md", "tag": "player"}
+    {
+      "title": "I · Regia della serata",
+      "file": "01-REGIA-SERATA.md",
+      "tag": "dm"
+    },
+    {
+      "title": "II · Il cast e i suoi echi",
+      "file": "02-CAST-ED-ECHI-PNG.md",
+      "tag": "dm"
+    },
+    {
+      "title": "La cassetta del DM — cast, pronuncia, read-aloud, suoni",
+      "file": "../../ARC07-CASSETTA-DEL-DM.md",
+      "tag": "dm"
+    },
+    {
+      "title": "III · Master — Il Ritorno e gli Affreschi (DEF-2)",
+      "file": "../../ARC07-DEF-2-RITORNO-E-AFFRESCHI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "IV · Master — La Resurrezione di Hella (DEF-3)",
+      "file": "../../ARC07-DEF-3-RESURREZIONE-HELLA.md",
+      "tag": "dm"
+    },
+    {
+      "title": "V · Master — Il Viaggio a 1.000 anni fa (DEF-4)",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "Collana dei Semi Eterni — scheda DM",
+      "file": "../../../PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md",
+      "tag": "dm"
+    },
+    {
+      "title": "✉ Echi — Thorik",
+      "file": "03-ECHI-THORIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Tordek",
+      "file": "04-ECHI-TORDEK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Artemis",
+      "file": "05-ECHI-ARTEMIS.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Echi — Hella",
+      "file": "06-ECHI-HELLA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La preghiera della resurrezione",
+      "file": "10-HANDOUT-PREGHIERA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Thorik",
+      "file": "07a-CARTA-DONO-THORIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Tordek",
+      "file": "07b-CARTA-DONO-TORDEK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ La carta del Dono — Artemis",
+      "file": "07c-CARTA-DONO-ARTEMIS.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Hella, tornata",
+      "file": "09-SCHEDA-HELLA-RISORTA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Durik, il guardiano di pietra",
+      "file": "08-SCHEDA-DURIK.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Le Cronache dei Quattro Eroi",
+      "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md",
+      "tag": "player"
+    }
   ],
   "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg"
 }

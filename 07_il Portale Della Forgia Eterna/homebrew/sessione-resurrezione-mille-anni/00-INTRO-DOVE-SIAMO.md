@@ -64,3 +64,22 @@ li decide la Sala:
 
 Le pagine ✉ stanno anche in un secondo volume, `ARC07-SERATA-GIOCATORI`, da
 stampare a parte e tagliare.
+
+**Come si stampa** (lo standard di [`GUIDA-BOOKLET-E-PDF`](../../../docs/guides/GUIDA-BOOKLET-E-PDF.md)):
+
+Dalla radice del repo, con `C` la cartella di questo booklet:
+
+- **il volume del DM**, da stampare, con segnalibri:
+  `python3 scripts/export_booklet_typst.py C/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json --all`
+- **una pagina ✉ per file**, da stampare o mandare a un giocatore (undici
+  file in `C/pdf/`):
+  `python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf`
+- **tutte le pagine ✉ in un volume**:
+  `python3 scripts/export_booklet_typst.py C/ARC07-SERATA-GIOCATORI.manifest.json --all`
+
+⚠️ Nel volume unico dei giocatori le pagine corte stanno una dopo l'altra: gli
+echi di Thorik, Tordek e Artemis possono finire sullo stesso foglio. Per
+consegnarli a persone diverse si usano i PDF singoli della seconda riga.
+I PDF non stanno nel repo (`*.pdf` è ignorato): si rigenerano coi comandi qui
+sopra.
+

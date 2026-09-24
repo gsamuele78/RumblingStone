@@ -17,12 +17,20 @@
 | Atto | Cosa | Master | Minuti | Si consegna | Musica / immagine |
 |---|---|---|---:|---|---|
 | **0** | Prima di cominciare | questa pagina | 10 | ✉ gli echi privati a Thorik, Tordek, Artemis | — |
-| **I** | Il risveglio nella Sala | `DEF-2` §7-bis, §4 (A5, A7, A8), §7 | 25 | — | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg` |
-| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5 · ✉ echi di Hella, scheda di Hella, scheda di Durik al §7 | `ilCuoreDiMoradin.jpg` · `LaCanzoneDellePietre.mp3` dallo Step 5 |
+| **I** | Il risveglio nella Sala | `DEF-2` §7-bis, §4 (A5, A7, A8), §7 | 25 | — | l'immagine della Sala con gli otto affreschi |
+| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5 · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
 | — | Pausa | | 15 | | |
-| **III** | La soglia | `DEF-3` §12 | 15 | ✉ Le Cronache dei Quattro Eroi | `Sala Forgia Eterna - Camera Ottagono…jpg`, di nuovo. Il portale non ha ancora un'immagine: vedi §7, riga 6 |
+| **III** | La soglia | `DEF-3` §12 | 15 | ✉ Le Cronache dei Quattro Eroi | la Sala, di nuovo: il portale non ha ancora un'immagine (§7, riga 6) |
 | **IV** | Mille anni fa, fino all'alba | `DEF-4` §3 Scena 1 → Scena 3, §4-ter, §4-bis, §5 | 120 | l'orologio della notte, su un foglio in vista | — |
 | **Stop** | Il primo ariete | `DEF-4` §2 Zona 3 | 5 | | |
+
+**Le immagini e la musica**, nell'ordine in cui servono:
+
+- la Sala con gli otto affreschi, Atti I e III:
+  `Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg`;
+- il Cuore di Moradin, Atto II dopo il §3: `Immagini/web/ilCuoreDiMoradin.jpg`;
+- Durik, Atto II al §7: è sulla sua scheda (`PG/Immagini/web/durik2.jpg`);
+- *La canzone delle pietre*, dallo Step 5 al risveglio: `Musica/LaCanzoneDellePietre.mp3`.
 
 **Totale**: circa **4 ore e 40**. Se la serata ne ha quattro, i tagli sono già
 scritti in fondo a ogni atto, sotto **«Se sei in ritardo»**.
@@ -40,7 +48,7 @@ l'orologio della notte, che servirà solo nell'Atto IV.
 | Scheda | Perché |
 |---|---|
 | Corona di Adamantio, §«Il dono al rito di Hella» | se Thorik dona, la deflessione scende a +1 |
-| Bracieri Gemelli (`PG/Artefatti/Artefatti-Pg/Tordek/01_Bracieri_Gemelli_di_Moradin.md`) | se Tordek dona, l'Ancoraggio sparisce |
+| Bracieri Gemelli, §«Il dono al rito di Hella» | se Tordek dona, l'Ancoraggio sparisce |
 | Anello dell'Illuminazione Caotica | se Artemis dona, *Eldritch Blast* 7d6 → 6d6 |
 | Collana dei Semi Eterni, pagina 1 | nasce stasera |
 
@@ -372,7 +380,7 @@ Tutto quello che si annota stasera, in un posto. Si trascrive col wizard,
 | ☐ | Balvar: ascoltato / ucciso / ignorato · «dite che c'ero»: promesso? · la Catena letta da chi? | |
 | ☐ | Zog'tar: ucciso in silenzio / spettacolare / umiliato · Cintura bruciata? | |
 | ☐ | Vatore: ignorato / parlato / derubato / ferito / tentato di uccidere | |
-| ☐ | Tacche spese all'uscita dalla tenda | / 8 |
+| ☐ | Tacche spese all'uscita dalla tenda | … su 8 |
 | ☐ | Durik: prima Prova di Risonanza della serata? | |
 
 **Echi da armare** nel registro §7.E di `state.md`, se il tavolo li ha
