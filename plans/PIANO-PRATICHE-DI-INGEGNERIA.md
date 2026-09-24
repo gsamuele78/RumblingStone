@@ -260,9 +260,9 @@ pratica nuova che la fa diventare rossa si corregge o si toglie.
 | ~~D5~~ | PI-2 | ✅ **Risposta del DM il 2026-09-24: sì** (*«d1-d5 del piano pratiche di ingegneria sì»*). L'elenco misurato dopo `git fetch --prune` è di **38** rami, ed è nella risposta al DM dello stesso giorno: si cancellano quando il DM lo conferma. **I 39 rami remoti già interamente su `main` si cancellano?** L'elenco lo produce `misura_flusso`; `contenuti-nei-rami.json` conferma che non portano niente di nuovo. Proposta: sì, dopo che hai visto l'elenco |
 
 | ~~D6~~ | tutti | ✅ **Risposta del DM il 2026-09-24: (a).** **Come si esegue la regola di D1 dopo la #160?** (a) un ramo e una PR per lotto, (b) si aspetta il merge della #160 e si riparte sullo stesso ramo un lotto alla volta. Da qui ogni lotto di questo piano ha un ramo suo e una PR sua in bozza |
-| D7 | PI-2 | **Gli 11 rami che non portano niente di nuovo si cancellano?** Sono in §7.2, gruppo B: cinque puntano esattamente alla testa di una PR mergiata con squash, sei hanno una PR chiusa il cui contenuto è su `main` o è stato giudicato superato o rifiutato. Il loro contenuto resta comunque in `refs/pull/<N>/head`, che GitHub non cancella. Proposta: sì, con lo stesso comando e lo stesso registro dei 38 |
-| D8 | PI-2 | **I due rami senza PR e con lavoro in parte superato si cancellano?** `optimize-skills-agent-folders-dwJC4` e `review-tournament-integration-yYlwv` (§7.2, gruppo C). I file nuovi sono tutti su `main` o superati, tranne due già registrati come tali; le modifiche a file esistenti non sono state confrontate riga per riga, e dopo la cancellazione li ricrea solo lo SHA scritto qui. Proposta: sì, perché le modifiche sono di maggio su file riscritti da allora; no, se vuoi prima il confronto |
-| D9 | PI-3 | **Dependabot anche per `converters/`?** Il grafo delle dipendenze di GitHub legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`, che hanno `requirements.txt` veri; `dependabot.yml` guarda solo la radice. AGENTS.md dice che `converters/` è un mondo a parte, fuori da ADR-0037. Proposta: sì per gli avvisi di sicurezza, che arrivano comunque dal grafo; no per le PR di aggiornamento settimanali, finché nessuno usa quei convertitori con regolarità |
+| D7 | PI-2 | **Gli 11 rami del gruppo B si cancellano?** Il DM ha chiesto di misurare prima, senza fidarsi della classificazione (2026-09-24). Misurati riga per riga con `plans/esperimenti/misura-rami/misura_rami.py`: otto hanno tutte le righe su `main`, tranne scarti letti uno per uno e spiegati in §7.2; tre (#42, #109, #67) portano righe che su `main` non ci sono, ma giudicate dal DM (rifiutato, superato, superato) e conservate in `refs/pull/<N>/head`. Proposta: sì a tutti e undici |
+| D8 | PI-2 | **I due rami senza PR si cancellano?** Misurati: **no**. `review-tournament-integration-yYlwv` porta 813 righe del Torneo di Dauth che su `main` non ci sono, e il lotto A di PIANO-REVISIONE-ARC09 ha riscritto a luglio gli stessi file credendoli mai scritti. `optimize-skills-agent-folders-dwJC4` porta la correzione di `measure_tokens.py` sui file di caricamento obbligatorio, assente su `main`. Proposta: si tengono e diventano due lotti di recupero (STATO-E-ORDINE §8.2); si cancellano dopo |
+| ~~D9~~ | PI-3 | ✅ **Risposta del DM il 2026-09-24: sì agli avvisi, no alle PR settimanali** (*«d9 ok, non le PR di aggiornamenti settimanali»*). **Dependabot anche per `converters/`?** Gli avvisi di sicurezza vengono dal grafo delle dipendenze, che legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`; `dependabot.yml` resta sulla radice, e un commento in testa dice perché |
 
 PI-4 non ha una decisione qui: dipende dalla D6 di CICLO-SESSIONE.
 
@@ -372,50 +372,74 @@ riferimenti.
 | `80a91a220763f58d184a8f1947b29942c260e848` | `claude/pr-105-raster-generation-bq0efs` | PR #106 aperta |
 | `64df2ebc8f87992e951b212e59996866ad4bf326` | `claude/salvatore-character-art-wSjuH` | **porta tre correzioni che su `main` non ci sono**: vedi sotto |
 
-**B · non portano niente di nuovo (D7)**
+**B · misurati riga per riga (D7)**
 
-| SHA della testa | Ramo | Dove sta il contenuto |
-|---|---|---|
-| `aab266cc89fde924998f02b3227f0c564b7ad96f` | `claude/campaign-session-tools-j2dzx1` | testa della #92, mergiata con squash |
-| `006338e384399923eae4405dfd62f07745b09122` | `claude/documento-stemmi-alternativi-ehgi9m` | testa della #102, mergiata con squash |
-| `3e4315336db109940d53783e59be5f71d0606b18` | `claude/rumbling-stone-casters-oxzi2w` | testa della #98, mergiata con squash |
-| `219a5eb031dd24256959c0f762281ead4685aa91` | `claude/paizo-editorial-components-qky8nv` | testa della #120, mergiata con squash |
-| `7293e923a6739a00c8641a21f9c65585249fc4e3` | `claude/scripts-audit-documentation-u48g28` | testa della #66, mergiata con squash |
-| `571c209c4076264159dca04a60ca1f3b41b52dbf` | `claude/hammerfist-maps-ultra-clear-9pczfe` | #63 chiusa il 2026-09-11: contenuto riportato da RIPRESA-PR F1 |
-| `e5cf517799550a81fedf0767313be7c892c992f5` | `claude/map-generation-pipeline-7ka5a7` | #52 chiusa il 2026-09-11: contenuto riportato da RIPRESA-PR F2 |
-| `974e9260193453e4c0b385a7d08001f838d9194e` | `claude/document-audit-prd-cleanup-j5ipln` | #143 chiusa, registro: portato |
-| `4986ce87cb7826c804df3be3c34a1f3e3614b30b` | `claude/dnd-map-generation-research-55pzry` | #42 chiusa, registro: rifiutato |
-| `c45c9cc43d64cb6723682a96f56b58f364267cfe` | `claude/golarion-pregen-character-sheets-cstheq` | #109 chiusa, registro: superato |
-| `23f14b607be177699b915c33dbaa7f9e022dee6a` | `claude/terros-battle-hints-booklet-hfvbef` | #67 chiusa, registro: superato |
+Il DM, sulla classificazione qui sopra: *«prima misura davvero se non c'è
+niente, non ti fidare»*. Aveva ragione a chiederlo: la prima stesura di
+questa tabella dava #52 e #63 per «riportati» senza averlo contato, e la
+misura ha trovato due rami su tredici che non vanno cancellati (gruppo C).
 
-**C · senza PR, lavoro in parte superato (D8)**
+Lo strumento è `plans/esperimenti/misura-rami/misura_rami.py`: per ogni riga
+che il ramo aggiunge, cerca la stessa riga su `main`, poi una quasi uguale
+(somiglianza ≥ 0,9) nello stesso file o in un file con lo stesso nome. SVG e
+immagini non contano. Il controllo positivo è il ramo Salvatore: 3 righe
+mancanti su 3. Le righe mancanti degli altri rami sono state lette.
 
-| SHA della testa | Ramo | Cosa porta |
-|---|---|---|
-| `b5e04d2d78799a56bcfa8257c09bc0d817d61e28` | `claude/optimize-skills-agent-folders-dwJC4` | due commit del 2026-05-02 su 15 file. `agents.conf` è su `main` rifatto; `validate_skill_paths.py` è superato da `validate_docs --sorgenti` (registro); le modifiche agli altri 13 file non sono state confrontate |
-| `895863241eaff57d135ed1b2527bd9f55009c2c1` | `claude/review-tournament-integration-yYlwv` | un commit del 2026-05-03: sei file nuovi del Torneo di Dauth, cinque su `main` con lo stesso nome, il sesto (`…DAY3-DAUTH-CITY-SIEGE.md`) superato nel registro; più righe aggiunte a tre file del Torneo e a `campaign/state.md` |
+| SHA della testa | Ramo | Righe aggiunte | Mancanti su `main` | Cosa sono le mancanti |
+|---|---|---:|---:|---|
+| `006338e384399923eae4405dfd62f07745b09122` | `claude/documento-stemmi-alternativi-ehgi9m` (#102) | 31 | 0 | — |
+| `aab266cc89fde924998f02b3227f0c564b7ad96f` | `claude/campaign-session-tools-j2dzx1` (#92) | 808 | 5 | l'avvertenza sul «−2 DES» di Tordek, tolta apposta perché era il malus di un altro PG (STATO-E-ORDINE §1, R1) |
+| `3e4315336db109940d53783e59be5f71d0606b18` | `claude/rumbling-stone-casters-oxzi2w` (#98) | 104 | 2 | la voce di Ushgar in `monster_catalog.yaml`, rigenerata con un nome nuovo |
+| `219a5eb031dd24256959c0f762281ead4685aa91` | `claude/paizo-editorial-components-qky8nv` (#120) | 1.115 | 20 | numeri della misura della prosa del 2026-09-03, poi rimisurati |
+| `7293e923a6739a00c8641a21f9c65585249fc4e3` | `claude/scripts-audit-documentation-u48g28` (#66) | 17.856 | 166 | descrizioni nei manifest e nei registri degli strumenti, file generati e rigenerati da allora |
+| `571c209c4076264159dca04a60ca1f3b41b52dbf` | `claude/hammerfist-maps-ultra-clear-9pczfe` (#63) | 1.422 | 28 | avvisi sui master `Lotto-*` e righe di piano del ramo; RIPRESA-PR F1 ha riportato le griglie tenendo i sette SVG che la #63 toglieva |
+| `e5cf517799550a81fedf0767313be7c892c992f5` | `claude/map-generation-pipeline-7ka5a7` (#52) | 147 | 1 | la riga di CHANGELOG del ramo |
+| `974e9260193453e4c0b385a7d08001f838d9194e` | `claude/document-audit-prd-cleanup-j5ipln` (#143) | 572 | 5 | le stesse righe con un marcatore `validate-docs` aggiunto, e il titolo dell'ADR rinumerato 0067 |
+| `4986ce87cb7826c804df3be3c34a1f3e3614b30b` | `claude/dnd-map-generation-research-55pzry` (#42) | 264 | 245 | **contenuto vero** (un master del Portale, 11 righe di `render_map_svg.py`): PR rifiutata dal DM il 2026-09-03, resta in `refs/pull/42/head` |
+| `c45c9cc43d64cb6723682a96f56b58f364267cfe` | `claude/golarion-pregen-character-sheets-cstheq` (#109) | 134 | 130 | **contenuto vero** (ADR-0021 e il caricamento esplicito delle skill): superato da ADR-0041, resta in `refs/pull/109/head` |
+| `23f14b607be177699b915c33dbaa7f9e022dee6a` | `claude/terros-battle-hints-booklet-hfvbef` (#67) | 364 | 308 | **contenuto vero** (un booklet HTML): superato dal booklet da manifest, resta in `refs/pull/67/head` |
+
+**C · da tenere: portano lavoro che su `main` non c'è (D8 = no)**
+
+| SHA della testa | Ramo | Righe aggiunte | Mancanti | Cosa porta |
+|---|---|---:|---:|---|
+| `895863241eaff57d135ed1b2527bd9f55009c2c1` | `claude/review-tournament-integration-yYlwv` | 834 | 813 | il Torneo di Dauth di maggio: master del DM, echi a lungo periodo, sotto-quest di Artemis, Hella e Thorik, il Giorno 3 |
+| `b5e04d2d78799a56bcfa8257c09bc0d817d61e28` | `claude/optimize-skills-agent-folders-dwJC4` | 281 | 182 | per lo più infrastruttura di maggio rifatta dopo (`agents.conf`, `build-skills.sh`, `validate_skill_paths.py`); **ma** la correzione di `measure_tokens.py` che conta i file di caricamento obbligatorio non c'è su `main` |
+
+🔴 **Il Torneo di Dauth è stato scritto due volte.** Il 2026-07-02 il lotto A
+di [PIANO-REVISIONE-ARC09](PIANO-REVISIONE-ARC09-COERENZA-E-QUALITA.md) (voce
+A8) ha trovato «inesistenti» i file del Torneo citati come fonte e li ha
+creati consolidando il materiale sparso, dichiarando le sotto-quest di Artemis
+e Hella e il Giorno 3 «mai scritte». Erano scritte dal 2026-05-03, in questo
+ramo, mai mergiato. Le versioni di `main` sono più corte per il master (166
+righe contro 290) e per gli echi (93 contro 229), più lunghe per Artemis e
+Hella, riscritte a settembre. Il Giorno 3 di maggio contraddice il canone di
+oggi su Karruk (registro dei rami, D22). È lo schema della #72: un lavoro
+riscritto da chi non sapeva che esisteva.
 
 🔴 **Il ramo Salvatore, e il punto cieco che ha mostrato.** Un commit del
 2026-05-02, tre righe su due file, e nessuna delle tre è su `main`:
 
-- `Bestiario/villain/Salvatore/Salvatore.md` dice ancora «Matrona **Sajak**»,
-  dove il resto del canone ha Sonjak;
+- `Bestiario/villain/Salvatore/Salvatore.md` scrive «Matrona Sajak»; il ramo
+  aggiunge che è Sonjak. **Non è un errore**: `state.md` dice
+  «Sonjak (= Matrona Sajak)», quindi Sajak è un alias ammesso e la riga del
+  ramo è un chiarimento;
 - lo stesso file dà i PF come «79 (14 DV: 13d6+28)», e il ramo li scrive
   «79 (14d6+28)»;
-- il testo P2C fa ancora de-pietrificare le statue con *Rimuovere
-  Maledizione* (CD 22); il ramo lo sostituisce con *Pietra in Carne* o
-  *Sciogliere Incantesimo*, perché la pietrificazione non è una maledizione.
-  `[INFERRED — needs DM confirmation]`: coerente con l'SRD come lo ricordo,
-  ma d20srd.org non è raggiungibile dalla rete della sessione e la verifica
-  sulla fonte non c'è.
+- il testo P2C fa de-pietrificare le statue con *Rimuovere Maledizione*; il
+  ramo lo sostituisce con *Pietra in Carne* o *Sciogliere Incantesimo*.
+  **Verificato sulle schede PCGen del repo**
+  (`Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Duergar_figther_ponte/cleric_11_abbathr_spell.htm`):
+  *Break Enchantment* (PHB p. 207) «frees subjects from enchantments,
+  alterations, curses, and petrification», ed è di 5° livello (CD 19 contro
+  la CD 17 di *Remove Curse*, 3°, per lo stesso chierico); *Remove Curse*
+  (p. 270) toglie le maledizioni e non nomina la pietrificazione. Il livello di
+  *Stone to Flesh* non è in nessun file del repo.
 
-Il ramo era nel gruppo dei cancellabili per un solo motivo: il registro dei
-rami **conta i file nuovi e non vede le modifiche a file esistenti**, e i due
-file del ramo esistono su `main` con un altro percorso o lo stesso. Tre
-correzioni di canone sarebbero sparite con la cancellazione, senza un
-controllo rosso. Il porting è un lotto di classe **K** (tocca il canone) e sta
-in STATO-E-ORDINE §8; il punto cieco del registro è un lotto di classe **C**,
-nello stesso posto.
+Il ramo sembrava cancellabile perché il registro dei rami **conta i file
+nuovi e non vede le modifiche a file esistenti**. Il porting è un lotto K, il
+punto cieco un lotto C: STATO-E-ORDINE §8.2. `misura_rami.py` è il prototipo
+del secondo.
 
 ## §8 · Ordine
 
@@ -427,9 +451,9 @@ PR sua: il primo esercizio della norma di PI-2 è questo piano stesso.
 
 - ✅ Fase 1 · audit (§2, 2026-09-24)
 - ⬜ PI-1 · `main` protetto e merge automatico (DM, con 4i-3). 2026-09-24: `main` risulta `protected: true` via API; il dettaglio delle regole, il merge automatico e la sicurezza non si leggono da qui e si verificano alla prima PR indietro rispetto a `main`
-- 🟡 PI-3 · Dependabot, segreti, `pip-audit`. 2026-09-24: `dependabot.yml`, `pip-audit` in CI (non bloccante), runner fissato a `ubuntu-24.04`; restano la prima PR di Dependabot, la prova del segreto (DM) e la revisione con l'IA (impostazioni)
+- 🟡 PI-3 · Dependabot, segreti, `pip-audit`. D9 decisa: `converters/` solo con gli avvisi del grafo. 2026-09-24: `dependabot.yml`, `pip-audit` in CI (non bloccante), runner fissato a `ubuntu-24.04`; restano la prima PR di Dependabot, la prova del segreto (DM) e la revisione con l'IA (impostazioni)
 - ⬜ PI-6 · canone toccato nella PR
-- ⬜ PI-2 · `misura_flusso` e la norma delle 400 righe. 2026-09-24: cancellati i 38 rami già su `main` (D5); 17 rimasti classificati in §7.2, D7 e D8 aperte
+- ⬜ PI-2 · `misura_flusso` e la norma delle 400 righe. 2026-09-24: cancellati i 38 rami già su `main` (D5); 17 rimasti misurati riga per riga in §7.2: D7 (11 cancellabili) aperta, D8 misurata e proposta no (2 rami con lavoro mai arrivato)
 - ⬜ PI-5 · proprietà sui parser
 - ⬜ PI-4 · scenari tracciati (se CICLO-SESSIONE D6 = a)
 - ⬜ Fase 3 · rimisura a 30 giorni
