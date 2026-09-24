@@ -82,7 +82,7 @@ li decide la Sala:
 | Cassetta del DM, Atlante mappe | ⚠ DM | come sempre |
 | Echi privati per PG | ✉ uno a testa | Thorik, Tordek, Artemis all'inizio; Hella quando lo dice la regia |
 | Il Cuore di Moradin (immagine) | ✉ a tutti | subito dopo la rivelazione del reliquiario (`DEF-3` §3) |
-| Carte dei Doni | ✉ ai tre donatori | allo Step 5 del rito, quando Moradin chiede |
+| Carte dei Doni | ✉ solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |
 | Scheda di Hella risorta, scheda di Durik | ✉ alla giocatrice di Hella | al risveglio (`DEF-3` §7) |
 | Le Cronache dei Quattro Eroi | ✉ a tutti | alla soglia, quando la Corona apre l'affresco del Tempo |
 
@@ -138,7 +138,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 |---|---|---|---:|---|---|
 | **0** | Prima di cominciare | questa pagina | 10 | ✉ gli echi privati a Thorik, Tordek, Artemis | — |
 | **I** | Il risveglio nella Sala | `DEF-2` §7-bis, §4 (A5, A7, A8), §7 | 25 | — | l'immagine della Sala con gli otto affreschi |
-| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5 · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
+| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5, **dopo il sì** · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
 | — | Pausa | | 15 | | |
 | **III** | La soglia | `DEF-3` §12 | 15 | ✉ Le Cronache dei Quattro Eroi | la Sala, di nuovo: il portale non ha ancora un'immagine (§7, riga 6) |
 | **IV** | Mille anni fa, fino all'alba | `DEF-4` §3 Scena 1 → Scena 3, §4-ter, §4-bis, §5 | 120 | l'orologio della notte, su un foglio in vista | — |
@@ -267,11 +267,32 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 
 Lo Step 5 contiene tre scene in una, e l'ordine conta:
 
-1. **Moradin chiede i Doni** (§5). Adesso consegni le **Carte dei Doni** a
-   Thorik, Tordek e Artemis. Ognuno la legge in silenzio. Poi Moradin dice la
-   sua riga: *«Chi dona cosa? Nessuno è obbligato.»* Lascia il silenzio.
-   ⚠️ **Il DM deve dire chiaro quanto costa**, `DEF-3` §1 lo prescrive: la carta
-   lo dice per iscritto, tu lo confermi a voce.
+1. **Moradin chiede i Doni** (§5), e dice **il prezzo, non il premio**. Una frase
+   a testa, guardando il giocatore, nella voce di Moradin:
+
+   | A chi | Cosa dice Moradin |
+   |---|---|
+   | Thorik | *«La protezione che la Corona dà a te passa a lei. Tu resti con un punto di meno, per sempre.»* |
+   | Tordek | *«L'ancora dei Bracieri passa a lei. Da oggi, chi ti spinge ti sposta.»* |
+   | Artemis | *«Un pezzo del tuo fuoco passa a lei. Sette dadi diventano sei, a ogni colpo, per sempre.»* |
+
+   Poi la riga del master: *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono
+   mancato, la carne lo ricorderà.»* E lascia il silenzio. **Si gioca di
+   ruolo**: chi dona lo dice e lo fa, come sta scritto nei tre box di §5.
+
+   **Le Carte dei Doni si consegnano DOPO**, e solo a chi ha donato: sono la
+   ricevuta di quello che ha dato e di quello che è germogliato in Hella (lo
+   Scudo e l'Eco, la Pelle di Adamantio, il Rovo, la restituzione). A chi
+   rifiuta non si dà niente, e **non si annuncia** la reazione del suo
+   artefatto: la scopre giocando (`DEF-3` §5, tabella delle reazioni).
+
+   > ⚖️ **Perché il prezzo si dice e il premio no.** `DEF-3` §1 chiede due
+   > volte che il DM dica chiaro quanto costa: un sacrificio fatto senza
+   > saperlo non è un sacrificio, è una trappola del DM. Ma se si dice anche
+   > cosa riceve Hella, il tavolo si mette a fare i conti, e la scena diventa
+   > un confronto fra numeri. Così il prezzo è noto, e il premio è una
+   > scoperta. Resta ignota anche la cosa che conta di più: **cosa succede a
+   > chi dice di no**.
 2. **I tre tirano Volontà CD 18** (servono 2 successi su 3; **3 su 3** se i Doni
    versati sono uno o nessuno).
 3. **La Custode delle Radici** entra dal Sud vuoto del cerchio (§6). Il suo
@@ -4962,20 +4983,16 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Thorik
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** Il **+2 di deflessione** che la Corona dà a te.
+**Quello che hai dato, per sempre.** Il **+2 di deflessione** che la Corona dà a te.
 Scende a **+1**: **−1 alla CA** per il resto della campagna.
 
-**Cosa germoglia in Hella.** **Lo Scudo del Custode.** Una volta al giorno,
+**Quello che è germogliato in Hella.** **Lo Scudo del Custode.** Una volta al giorno,
 azione immediata: quando un alleato entro **9 m** sta per subire danno, Hella
 lo prende su di sé, **dimezzato**.
 
@@ -4987,7 +5004,7 @@ spegne. *«Sei accelerato. E vai da lui.»*
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
-*Non le dai un potere. Le passi il tuo mestiere: stare davanti.*
+*Non le hai dato un potere. Le hai passato il tuo mestiere: stare davanti.*
 
 
 \page
@@ -5001,28 +5018,24 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Tordek
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** **Ancoraggio della Montagna**: due volte al giorno,
+**Quello che hai dato, per sempre.** **Ancoraggio della Montagna**: due volte al giorno,
 azione immediata, nessuno ti sposta. **Lascia i Bracieri.** Dove i giganti
 spingono e i draghi afferrano, quel bottone non c'è più.
 
-**Cosa germoglia in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
+**Quello che è germogliato in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
 l'**unica** riduzione del danno che avrà.
 
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
-*Nel buio lei ha sentito una voce che la teneva ferma. Adesso l'ancora passa a
-chi l'ha usata.*
+*Nel buio lei ha sentito una voce che la teneva ferma. Adesso l'ancora è passata
+a chi l'ha usata.*
 
 
 \page
@@ -5036,20 +5049,16 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Artemis
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** **Un dado del tuo *Eldritch Blast***: da **7d6** a
+**Quello che hai dato, per sempre.** **Un dado del tuo *Eldritch Blast***: da **7d6** a
 **6d6**. Non una volta: **ogni colpo**, per il resto della campagna.
 
-**Cosa germoglia in Hella.** **Il Rovo Eldritch.** **A volontà**, azione
+**Quello che è germogliato in Hella.** **Il Rovo Eldritch.** **A volontà**, azione
 standard, attacco di contatto a distanza, **18 m**: **2d6**, metà rovi che
 escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
 
@@ -5057,7 +5066,7 @@ escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
 scena intera. Poi mai più.
 
 *Un warlock non è forte perché colpisce duro. È forte perché può farlo tutto
-il giorno. È esattamente questo che le dai.*
+il giorno. È esattamente questo che le hai dato.*
 
 
 \page

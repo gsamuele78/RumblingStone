@@ -253,20 +253,16 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Thorik
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** Il **+2 di deflessione** che la Corona dà a te.
+**Quello che hai dato, per sempre.** Il **+2 di deflessione** che la Corona dà a te.
 Scende a **+1**: **−1 alla CA** per il resto della campagna.
 
-**Cosa germoglia in Hella.** **Lo Scudo del Custode.** Una volta al giorno,
+**Quello che è germogliato in Hella.** **Lo Scudo del Custode.** Una volta al giorno,
 azione immediata: quando un alleato entro **9 m** sta per subire danno, Hella
 lo prende su di sé, **dimezzato**.
 
@@ -278,7 +274,7 @@ spegne. *«Sei accelerato. E vai da lui.»*
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
-*Non le dai un potere. Le passi il tuo mestiere: stare davanti.*
+*Non le hai dato un potere. Le hai passato il tuo mestiere: stare davanti.*
 
 
 \page
@@ -292,28 +288,24 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Tordek
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** **Ancoraggio della Montagna**: due volte al giorno,
+**Quello che hai dato, per sempre.** **Ancoraggio della Montagna**: due volte al giorno,
 azione immediata, nessuno ti sposta. **Lascia i Bracieri.** Dove i giganti
 spingono e i draghi afferrano, quel bottone non c'è più.
 
-**Cosa germoglia in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
+**Quello che è germogliato in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
 l'**unica** riduzione del danno che avrà.
 
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
-*Nel buio lei ha sentito una voce che la teneva ferma. Adesso l'ancora passa a
-chi l'ha usata.*
+*Nel buio lei ha sentito una voce che la teneva ferma. Adesso l'ancora è passata
+a chi l'ha usata.*
 
 
 \page
@@ -327,20 +319,16 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Artemis
 
-> *Il DM la consegna allo Step 5 del rito, una a chi officia,
-> quando Moradin chiede. Si legge in silenzio. Nessuno è obbligato: Hella
-> torna comunque, perché il Cuore basta da solo. Il dono compra **come**
-> torna, non **se**.*
+> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
+> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
+> torna indietro.*
 
 ---
 
-> *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la carne lo
-> ricorderà.»*
-
-**Cosa dai, per sempre.** **Un dado del tuo *Eldritch Blast***: da **7d6** a
+**Quello che hai dato, per sempre.** **Un dado del tuo *Eldritch Blast***: da **7d6** a
 **6d6**. Non una volta: **ogni colpo**, per il resto della campagna.
 
-**Cosa germoglia in Hella.** **Il Rovo Eldritch.** **A volontà**, azione
+**Quello che è germogliato in Hella.** **Il Rovo Eldritch.** **A volontà**, azione
 standard, attacco di contatto a distanza, **18 m**: **2d6**, metà rovi che
 escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
 
@@ -348,7 +336,7 @@ escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
 scena intera. Poi mai più.
 
 *Un warlock non è forte perché colpisce duro. È forte perché può farlo tutto
-il giorno. È esattamente questo che le dai.*
+il giorno. È esattamente questo che le hai dato.*
 
 
 \page

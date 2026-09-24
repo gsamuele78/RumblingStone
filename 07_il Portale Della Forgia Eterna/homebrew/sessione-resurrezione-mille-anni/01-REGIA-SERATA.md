@@ -18,7 +18,7 @@
 |---|---|---|---:|---|---|
 | **0** | Prima di cominciare | questa pagina | 10 | ✉ gli echi privati a Thorik, Tordek, Artemis | — |
 | **I** | Il risveglio nella Sala | `DEF-2` §7-bis, §4 (A5, A7, A8), §7 | 25 | — | l'immagine della Sala con gli otto affreschi |
-| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5 · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
+| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5, **dopo il sì** · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
 | — | Pausa | | 15 | | |
 | **III** | La soglia | `DEF-3` §12 | 15 | ✉ Le Cronache dei Quattro Eroi | la Sala, di nuovo: il portale non ha ancora un'immagine (§7, riga 6) |
 | **IV** | Mille anni fa, fino all'alba | `DEF-4` §3 Scena 1 → Scena 3, §4-ter, §4-bis, §5 | 120 | l'orologio della notte, su un foglio in vista | — |
@@ -147,11 +147,32 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 
 Lo Step 5 contiene tre scene in una, e l'ordine conta:
 
-1. **Moradin chiede i Doni** (§5). Adesso consegni le **Carte dei Doni** a
-   Thorik, Tordek e Artemis. Ognuno la legge in silenzio. Poi Moradin dice la
-   sua riga: *«Chi dona cosa? Nessuno è obbligato.»* Lascia il silenzio.
-   ⚠️ **Il DM deve dire chiaro quanto costa**, `DEF-3` §1 lo prescrive: la carta
-   lo dice per iscritto, tu lo confermi a voce.
+1. **Moradin chiede i Doni** (§5), e dice **il prezzo, non il premio**. Una frase
+   a testa, guardando il giocatore, nella voce di Moradin:
+
+   | A chi | Cosa dice Moradin |
+   |---|---|
+   | Thorik | *«La protezione che la Corona dà a te passa a lei. Tu resti con un punto di meno, per sempre.»* |
+   | Tordek | *«L'ancora dei Bracieri passa a lei. Da oggi, chi ti spinge ti sposta.»* |
+   | Artemis | *«Un pezzo del tuo fuoco passa a lei. Sette dadi diventano sei, a ogni colpo, per sempre.»* |
+
+   Poi la riga del master: *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono
+   mancato, la carne lo ricorderà.»* E lascia il silenzio. **Si gioca di
+   ruolo**: chi dona lo dice e lo fa, come sta scritto nei tre box di §5.
+
+   **Le Carte dei Doni si consegnano DOPO**, e solo a chi ha donato: sono la
+   ricevuta di quello che ha dato e di quello che è germogliato in Hella (lo
+   Scudo e l'Eco, la Pelle di Adamantio, il Rovo, la restituzione). A chi
+   rifiuta non si dà niente, e **non si annuncia** la reazione del suo
+   artefatto: la scopre giocando (`DEF-3` §5, tabella delle reazioni).
+
+   > ⚖️ **Perché il prezzo si dice e il premio no.** `DEF-3` §1 chiede due
+   > volte che il DM dica chiaro quanto costa: un sacrificio fatto senza
+   > saperlo non è un sacrificio, è una trappola del DM. Ma se si dice anche
+   > cosa riceve Hella, il tavolo si mette a fare i conti, e la scena diventa
+   > un confronto fra numeri. Così il prezzo è noto, e il premio è una
+   > scoperta. Resta ignota anche la cosa che conta di più: **cosa succede a
+   > chi dice di no**.
 2. **I tre tirano Volontà CD 18** (servono 2 successi su 3; **3 su 3** se i Doni
    versati sono uno o nessuno).
 3. **La Custode delle Radici** entra dal Sud vuoto del cerchio (§6). Il suo
