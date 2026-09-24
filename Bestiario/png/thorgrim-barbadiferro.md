@@ -32,6 +32,10 @@ una chiave dedotta invece che dichiarata — commessa da me il 2026-09-17.
 
 ## Chi e', al tavolo
 
+🩸 **Cugino di Re Thorek I** *(decisione DM 2026-09-24)*: nipoti dello stesso
+re, quello che perse la Corona contro Skullcrusher. **Frostcleaver è del re**;
+Thorgrim porta **Aegis Fang**.
+
 **L'antico portatore di Aegis Fang**, il vecchio guerriero che a ~372 DR
 riceve i PG insieme a **Re Thorek I** e fissa la Corona sulla loro fronte:
 *«Quella gemma… mio nonno la perse contro Skullcrusher. Se dite il vero,

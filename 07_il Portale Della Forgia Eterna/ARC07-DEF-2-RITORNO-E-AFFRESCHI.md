@@ -376,12 +376,17 @@ tornare — presagio della resurrezione, non garanzia.*
 > al trono nella Stanza della Corona, e tocca la Corona. Il flash di luce dorata,
 > la transizione — e poi il campo di battaglia dove hai combattuto fianco a
 > fianco con gli eroi che ti hanno preceduto. Uno di loro è **THORGRIM
-> BARBADIFERRO**, portatore della Corona otto secoli fa, il Frostcleaver in
+> BARBADIFERRO**, che mille anni fa portò la tua stessa ascia, Aegis Fang in
 > pugno. Nel frastuono senza suono dell'affresco le sue labbra dicono: «Portala
 > bene, fratello. Ora è tua.» E all'alba, quando la luce dorata inonda il campo,
 > la Corona non è più posata: è FUSA alla fronte, parte di chi la porta. L'affresco si
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
+> ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
+> della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
+> Thorek I, suo cugino (`DEF-4` §3 Scena 1-bis); Thorgrim è l'antico portatore
+> di **Aegis Fang**, e il viaggio è a mille anni fa.*
+
 - **Interazione (Thorik osserva 1 min, TS Volontà CD 17 — il fallimento è il
   dono).** *Fallimento:* rivive tutto — paura, speranza, la **perdita di Hella**
   — e **piange**; catarsi. La Corona brilla come *Daylight*; Moradin: *«Piangere

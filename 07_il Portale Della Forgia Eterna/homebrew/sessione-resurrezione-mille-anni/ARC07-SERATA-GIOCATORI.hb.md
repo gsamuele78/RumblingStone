@@ -179,6 +179,26 @@ che ero io.
 
 \page
 
+# ✉ Il Cuore di Moradin
+
+{{note
+##### ✉ HANDOUT GIOCATORE
+Pagina da consegnare al giocatore indicato, in privato.
+}}
+
+# Il Cuore di Moradin
+
+> *Da mostrare al tavolo subito dopo il box del reliquiario (`DEF-3` §3), non
+> prima: se lo vedono prima, la rivelazione diventa una conferma.*
+
+![Il Cuore di Moradin sull'Altare della Forgia Eterna](../../Immagini/web/ilCuoreDiMoradin.jpg)
+
+> *Un cuore nanico di rubino, grande come un pugno. Quattro camere, i vasi
+> visibili. Batte sessanta volte al minuto.*
+
+
+\page
+
 # ✉ La preghiera della resurrezione
 
 {{note
@@ -193,6 +213,13 @@ Pagina da consegnare al giocatore indicato, in privato.
 > come si legge un contratto davanti a chi lo deve firmare.*
 
 ---
+
+> *Vorrak Moradin, hragn tul-vesh!*
+> *Hella drenn-okh hald: torn, torn-vrath!*
+
+*Si pronuncia VÒR-rak mo-RA-din, HRAGN tul-VESH, con la erre battuta. Vuol
+dire: «Padre Moradin, ferro sotto la montagna! Hella, figlia della pietra:
+torna, la strada non è finita!» Poi, in italiano:*
 
 > *Padre che batti il ferro sotto la montagna,*
 > *questa è caduta, e noi siamo rimasti in piedi.*
@@ -344,11 +371,13 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ## Il corpo nuovo
 
+![Hella, tornata](../../../PG/Immagini/web/Hella.jpg)
+
 > *Respiri, e l'aria ha un sapore. Te n'eri dimenticata.*
 >
 > *Le dita sono un poco più lunghe di come le ricordavi, e le unghie hanno la
-> grana della corteccia giovane. Fra i capelli rossi corre una venatura che
-> non è un capello. Chi ti guarda negli occhi li trova color ambra, e distoglie
+> grana della corteccia giovane. Le orecchie si sono fatte a punta, come foglie
+> appena aperte. Fra i capelli biondi corre una venatura che non è un capello. Chi ti guarda negli occhi li trova color ambra, e distoglie
 > lo sguardo un istante prima di quanto farebbe con un nano.*
 >
 > *La pietra sotto i piedi la senti anche con gli stivali: antica, forte, dalla
@@ -483,8 +512,8 @@ Media · Neutrale Buono · compagno di Hella
 | **Tiri salvezza** | Tempra **+11** · Riflessi **+10** · Volontà **+6** |
 | **Caratteristiche** | FOR 22 · DES 15 · COS 17 · INT 4 · SAG 14 · CAR 8 |
 
-¹ *I 12 DV sono canone; i punti ferita sono ricalcolati per questa scheda
-`[INFERRED — conferma DM]`: se la tua scheda ne ha altri, vale la tua.*
+¹ *12 DV da canone; i punti ferita (12d10+36) sono confermati dal DM il
+2026-09-24.*
 
 ### Cosa sa fare
 

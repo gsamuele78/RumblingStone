@@ -9,11 +9,13 @@
 
 ## Il corpo nuovo
 
+![Hella, tornata](../../../PG/Immagini/web/Hella.jpg)
+
 > *Respiri, e l'aria ha un sapore. Te n'eri dimenticata.*
 >
 > *Le dita sono un poco più lunghe di come le ricordavi, e le unghie hanno la
-> grana della corteccia giovane. Fra i capelli rossi corre una venatura che
-> non è un capello. Chi ti guarda negli occhi li trova color ambra, e distoglie
+> grana della corteccia giovane. Le orecchie si sono fatte a punta, come foglie
+> appena aperte. Fra i capelli biondi corre una venatura che non è un capello. Chi ti guarda negli occhi li trova color ambra, e distoglie
 > lo sguardo un istante prima di quanto farebbe con un nano.*
 >
 > *La pietra sotto i piedi la senti anche con gli stivali: antica, forte, dalla

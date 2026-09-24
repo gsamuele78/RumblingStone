@@ -6,6 +6,13 @@
 
 ---
 
+> *Vorrak Moradin, hragn tul-vesh!*
+> *Hella drenn-okh hald: torn, torn-vrath!*
+
+*Si pronuncia VÒR-rak mo-RA-din, HRAGN tul-VESH, con la erre battuta. Vuol
+dire: «Padre Moradin, ferro sotto la montagna! Hella, figlia della pietra:
+torna, la strada non è finita!» Poi, in italiano:*
+
 > *Padre che batti il ferro sotto la montagna,*
 > *questa è caduta, e noi siamo rimasti in piedi.*
 >

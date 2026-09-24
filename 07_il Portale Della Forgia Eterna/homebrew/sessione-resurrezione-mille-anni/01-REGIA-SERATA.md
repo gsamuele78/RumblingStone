@@ -136,7 +136,7 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 | La Sala trattiene il fiato | §2 | box di apertura, poi la tabella dei sensi. **Rispetta la colonna «Cosa NON dire»**: il battito sotto l'Altare è la rivelazione di §3 |
 | Le sei porte | §2 | opzionali. La **CAR grezza CD 13** con Therysol dà la battuta degli undicimila respiri: è la migliore della serata e costa un tiro |
 | L'incasso vuoto | §2-bis | solo se qualcuno guarda la Corona. **Non dire** che si riempie a −1000 |
-| Il Cuore di Moradin | §3 | mostra `ilCuoreDiMoradin.jpg` **dopo** il box, non prima |
+| Il Cuore di Moradin | §3 | **dopo** il box, mostra la pagina ✉ *Il Cuore di Moradin* (l'immagine). Canone: il Cuore sta **dentro** l'Altare, che si apre come un fiore di metallo; al rito si posa **sul petto di Hella** |
 | Il rito, Step 1-4 | §4 | apertura di round, micro-box, esito scritto. Chiudi ogni step su **«Che fate?»** |
 | **Step 5 — il richiamo** | §4, §5, §6 | ▶ vedi II.1 qui sotto |
 | Step 6 — Moradin | §4 | tre secondi. Non allungarlo |
@@ -290,18 +290,11 @@ in una frase: *«Otto tacche fino all'alba. Ogni cosa che scegliete ne costa.»*
 Le tariffe sono nel master. La tabella da tenere d'occhio è quella di uscita
 dalla tenda: **≤ 6 in tempo, 7 di corsa, 8 l'alba vi coglie fuori.**
 
-⚠️ **I semi di Hella.** `DEF-4` Scena 1-bis dice che Hella pianta *«i 3 semi di
-treant»* e all'alba ha tre Treant. Quel testo è anteriore al rito: stasera i
-tre semi **sono nella Collana**. Due modi di onorarlo senza inventare, **scegli
-tu** al tavolo:
-
-- **A · la Collana** *(consigliato)*: all'alba Hella usa l'**Evocazione dei
-  Guardiani** sui semi I e II → due **Treant di Adamantio** (statblock `DEF-3`
-  §7). Costa due delle tre cariche del giorno, e la tacca resta 1;
-- **B · la ghianda**: se al rito Hella ha trovato la **ghianda annerita** e non
-  l'ha ancora piantata, «il primo suolo sacro che tocca» può essere questo.
-  Nessun Treant all'alba, ma una quercia che fra mille anni sarà vecchia di
-  mille anni. È un'eco, non un vantaggio tattico. `[PROPOSTA — conferma DM]`
+⚠️ **I semi di Hella.** La prima stesura di `DEF-4` le faceva piantare *«i 3
+semi di treant»*: al rito quei semi sono entrati nella Collana. **Il master è
+stato allineato il 2026-09-24**: all'alba Hella evoca **due Treant di
+Adamantio** con la Collana (due cariche su tre, la tacca resta una). L'uso
+della ghianda annerita resta una `[PROPOSTA]` da confermare: è scritta lì.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
@@ -404,15 +397,21 @@ blocca la serata; tutte vanno sapute prima di trovarsele davanti.
 | # | Cosa | Cosa fare stasera |
 |---|---|---|
 | 1 | **Durik**: `DEF-3` §7 lo dice «compagno a pieno titolo», la scheda del viaggio v2 §10 «evocato, 1 ora» | risolto dalla decisione **S3**: sempre presente |
-| 2 | **Durik a 12 DV**: la tabella di risonanza dà *«+1d8+3 pf»* per due DV di un d10 | la scheda usa **12d10+36 = 102 pf**, marcato `[INFERRED]` |
+| 2 | **Durik a 12 DV**: la tabella di risonanza dà *«+1d8+3 pf»* per due DV di un d10 | **12d10+36 = 102 pf**, confermati dal DM il 2026-09-24 |
 | 3 | **Periapto di Saggezza +2 e Collana +4**: `DEF-3` §11 C scrive «sinergia +4+2 SAG». In 3.5 due bonus di **potenziamento** alla stessa caratteristica **non si sommano** (SRD, *Combining Magical Effects*) | vale solo il **+4**. Il Periapto resta un oggetto da rivendere o da dare a un altro |
 | 4 | **L'equipaggiamento di Hella**: `DEF-3` §7-bis dice cuoio borchiato +2, scudo di legno +1, scimitarra +1; §11 C dice armatura di cuoio +2, falcetto o scudo leggero +1 | vince **la scheda della giocatrice**, che è la fonte più vecchia e l'unica giocata |
-| 5 | **I tre semi di treant a −1000** (`DEF-4` Scena 1-bis), anteriori al rito | IV.3, due opzioni |
+| 5 | **I tre semi di treant a −1000** (`DEF-4` Scena 1-bis), anteriori al rito | **corretto nel master**: due Treant di Adamantio dalla Collana (IV.3) |
 | 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp`, che `DEF-4` §9 indica per «il portale del Tempo», è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione). `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` §12 per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
-| 7 | **La preghiera nanica di `DEF-3` §4**, *«Khazâd ai-mênu…»*, riprende parola per parola il grido di guerra dei nani di Tolkien. La skill dello stile lo vieta (non-negoziabile 4: niente testo o nomi presi dalle fonti) | l'handout della preghiera è **solo in italiano**, scritto nuovo. La riga del master resta da sostituire, e la decisione è tua |
+| 7 | **La preghiera nanica di `DEF-3` §4**, *«Khazâd ai-mênu…»*, riprende parola per parola il grido di guerra dei nani di Tolkien. La skill dello stile lo vieta (non-negoziabile 4: niente testo o nomi presi dalle fonti) | **corretto il 2026-09-24**: master e handout hanno due versi di nanico scritto per la campagna, con la traduzione e la preghiera in italiano |
 | 8 | **Durik nella Cassetta del DM** era descritto come *«il nano che emerge dal Rituale»* e con un tic vocale. È un cane e non parla | corretto nella Cassetta con questo lotto |
 
-E una nona, fuori da questo arco: in `state.md` §1 e §5 **Therysol** è
-chiamata *he / him*, mentre la sua scheda (`Bestiario/png/Therysol/`) e tutti i
-master d'arco la vogliono **donna** (Ysolde). Qui si usa il femminile. La
-correzione di `state.md` spetta al DM.
+E una nona, fuori da questo arco: in `state.md` §5 **Therysol** era *him*, mentre
+la sua scheda (`Bestiario/png/Therysol/`) e tutti i master la vogliono **donna**
+(Ysolde). **Corretto il 2026-09-24** su decisione del DM.
+
+> ✅ **Decisioni del DM del 2026-09-24, applicate ai master**: Re Thorek I e
+> Thorgrim sono cugini; Frostcleaver è del re e nell'affresco A3 Thorgrim tiene
+> Aegis Fang; Zeth è di mille anni fa (Ghostlord e ARC-09 riallineati); Balvar
+> ha INT 16 e SAG 20; l'Occhio di Ossidiana è un occhio vero; **Hella è come
+> nei ritratti**, bionda con le orecchie a punta (`DEF-3` §7 e la sua scheda
+> allineati); Durik ha 102 pf; la preghiera ha due versi di nanico nuovo.

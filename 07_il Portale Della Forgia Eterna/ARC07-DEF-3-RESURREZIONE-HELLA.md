@@ -352,9 +352,17 @@ Il DM le legge senza inventare, e la scena non si spegne mai sul numero:
 > chiami?»* La frase che dice diventa canone, e Hella la ricorderà al risveglio.
 
 **STEP 1 — Invocazione (Thorik · Conoscenze religioni CD 15).** La preghiera
-nanica antica (handout §12): *«Khazâd ai-mênu, Moradin Uzbad… Hella Vala-mara,
-azaghâl núr!»* (*Nano è caduto, Moradin Re… Hella Potere-casa, ritorna vita!*).
+nanica antica (handout §12): *«Vorrak Moradin, hragn tul-vesh! Hella
+drenn-okh hald: torn, torn-vrath!»* (*Padre Moradin, ferro sotto la montagna!
+Hella, figlia della pietra: torna, la strada non è finita!*). Poi la preghiera
+per intero, in italiano, dall'handout.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
+
+> ✏️ *Sostituita il 2026-09-24 su decisione del DM: la riga di prima riprendeva
+> parola per parola il grido di guerra dei nani di Tolkien, e la skill dello
+> stile lo vieta (non-negoziabile 4). Il nanico qui sopra è scritto per questa
+> campagna: si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
+> battuta e le vocali brevi.*
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
 > *Tordek, il respiro rallenta da sé. C'è un battito — il Cuore di Moradin — e
@@ -627,12 +635,13 @@ malizia (Andor: la macchina non odia, esegue).
 > si ferma. E poi — lei INSPIRA. Netto. Improvviso. Profondo, come chi riemerge
 > dall'acqua un istante prima di annegare. Il petto si alza. Ricade. RESPIRA. E
 > gli occhi si aprono — non più marroni: **ambra dorata**. La pelle ha un
-> sottotono di muschio pallido; tra i capelli rossi corre una venatura di
+> sottotono di muschio pallido; tra i capelli biondi corre una venatura di
 > corteccia sottile; e attorno a lei l'aria sa di terra bagnata e di linfa. È
 > Hella. È cambiata. È VIVA.*
 
 **Aspetto (Ibrido Treant):** pelle verdastra sottile, occhi ambra-dorati,
-corteccia fine nei capelli, dita un po' più lunghe (unghie come corteccia,
+capelli biondi mossi con una venatura di corteccia fine, orecchie appuntite come
+foglie giovani *(com'è nei ritratti: decisione DM 2026-09-24)*, dita un po' più lunghe (unghie come corteccia,
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
 

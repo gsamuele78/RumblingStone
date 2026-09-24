@@ -70,76 +70,11 @@ Non perché fosse troppo. Perché avevo paura del numero dopo.»*
 
 ## A Hammerfist, mille anni fa
 
-### Durin Rocciadura — la pattuglia
-
-| | |
-|---|---|
-| **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
-| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
-| **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
-| **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
-| **Eco che arma** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
-
-### Re Thorek I — il re giovane di una fortezza giovane
-
-| | |
-|---|---|
-| **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
-| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
-| **Sa** | la profezia, perché l'ha incisa stanotte: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
-| **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
-| **Eco che arma** | la prova di fiducia: aiuti pieni o dimezzati, e il **Torque di Thorek I** (`DEF-4` §8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
-
-⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
-
-### Thorgrim Barbadiferro — l'antenato
-
-| | |
-|---|---|
-| **Vuole** | che l'ascia torni in una mano che sa perché la tiene |
-| **Suona** | non trema la voce, tremano gli occhi. Nomina il sangue, mai la persona |
-| **Eco che porta** | l'affresco A3: *«Portala bene, fratello. Ora è tua.»* Thorik l'ha già visto dire quella frase, e adesso lo sente dal vivo |
-| **Eco che arma** | la Cerimonia delle 100 Asce (ARC-08) |
-
-### Mastro Costruttore Zeth — il seme del Ghostlord
-
-| | |
-|---|---|
-| **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
-| **Suona** | mezz'elfo, occhi febbrili, parla mentre traccia rune. `[PROPOSTA]`: finisce le frasi degli altri |
-| **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
-| **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
-| **Eco che arma** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo**. Costa una tacca cercarlo |
-
-### Balvar Fuocospento — il runaio esiliato
-
-| | |
-|---|---|
-| **Vuole** | che Hammerfist cada **in fretta**, perché un assedio lungo è fame, e lui l'ha già vista. E che qualcuno dica che c'era |
-| **Suona** | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
-| **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
-| **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
-| **Eco che arma** | *«dite che c'ero»*: se promesso, un pannello in più negli affreschi, e Aegis Fang lo riconosce. Se lo uccidono senza ascoltarlo, una lastra d'ardesia a metà che qualcuno troverà in ARC-09 |
-
-### Zog'tar Deatheye — il generale
-
-| | |
-|---|---|
-| **Vuole** | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar |
-| **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
-| **Sa** | niente dei PG, a meno che il corridore non arrivi |
-| **Eco che arma** | come muore decide come comincia il duello (`DEF-4` §3 Scena 3). Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
-
-### Vatore — il ladro che diventerà Sal
-
-| | |
-|---|---|
-| **Vuole** | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri |
-| **Suona** | il tono del collega, non del nemico. Poche parole. Terrore reverenziale mal nascosto |
-| **Sa** | di aver visto quattro persone che non dovrebbero esistere. Il **Sigillo di Ossidiana** divora anime, e lo sa |
-| **Non sa** | niente di Sal. Nessuno al tavolo lo sa |
-| **Eco che porta** | il pollice sullo stipite nel sogno di Artemis |
-| **Eco che arma** | la sincronizzazione su Sal nel 1372 (`DEF-4` §5): sanguina nello stesso punto, gli manca un asso, li teme, li odia. Qualunque cosa facciano, **sopravvive** |
+Le schede di Durin, Re Thorek I, Thorgrim, Zeth, Balvar, Zog'tar, Vatore e
+Skullcrusher stanno nel capitolo **«Il cast di mille anni fa»**, con l'aspetto
+e il riquadro del ritratto. Il file è uno solo
+(`homebrew/volume-mille-anni/01-CAST-MILLE-ANNI.md`) ed entra sia in questo
+booklet sia nel volume del viaggio.
 
 ---
 

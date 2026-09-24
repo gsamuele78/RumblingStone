@@ -30,6 +30,11 @@
       "tag": "dm"
     },
     {
+      "title": "II-bis · Il cast di mille anni fa",
+      "file": "../volume-mille-anni/01-CAST-MILLE-ANNI.md",
+      "tag": "dm"
+    },
+    {
       "title": "La cassetta del DM — cast, pronuncia, read-aloud, suoni",
       "file": "../../ARC07-CASSETTA-DEL-DM.md",
       "tag": "dm"
@@ -72,6 +77,11 @@
     {
       "title": "✉ Echi — Hella",
       "file": "06-ECHI-HELLA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Il Cuore di Moradin",
+      "file": "11-TAVOLA-CUORE-DI-MORADIN.md",
       "tag": "player"
     },
     {

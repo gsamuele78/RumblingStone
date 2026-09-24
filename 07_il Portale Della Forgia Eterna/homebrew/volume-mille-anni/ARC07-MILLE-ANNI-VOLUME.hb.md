@@ -1,3 +1,246 @@
+<!-- GENERATO da scripts/build_booklet_html.py --format hb (ADR-0013).
+     Manifest: ARC07-MILLE-ANNI-VOLUME.manifest.json — i capitoli CITANO i master (ADR-0003).
+     Le immagini restano riferimenti relativi al repo: per la resa con
+     immagini incorporate usa la via HTML (--format html). -->
+
+{{frontCover}}
+
+{{logo ![](/assets/naturalCritLogoRed.svg)}}
+
+# RUMBLING STONE
+## Il Viaggio a Mille Anni fa
+___
+
+### Hammerfist ≈372 DR · la notte dell'orda · il duello con Skullcrusher · il Rituale della Forgia Eterna
+
+{{banner VOLUME DEL DM}}
+
+{{footnote
+  Avventura D&D 3.5 per 4 personaggi di 13° livello · Faerûn, ≈372 DR (mille anni prima del 1372) · Campagna privata RumblingStone · master ARC07-DEF-4 integrale, cast, statblocchi, mappa, carry-over, handout
+}}
+
+\page
+
+# Il viaggio a mille anni fa — il volume
+
+> *Il portale non vi trasporta: vi rifà. Per un istante lunghissimo siete
+> scomposti nei vostri mille anni, e quando vi ricomponete dall'altra parte le
+> ferite che avevate non ci sono più.*
+>
+> *C'è odore di calcare appena tagliato. Le mura sono bianche. Su una targa di
+> bronzo, alle porte, qualcuno ha inciso il vostro destino stamattina.*
+
+**Cos'è questo volume.** Tutto il beat del viaggio a ≈372 DR in un solo libro,
+da stampare o da tenere sul tablet: il master `ARC07-DEF-4` integrale, le
+schede del cast, lo statblocco di Balvar, la tabella B4 che porta le ferite del
+duello fino a Fauci di Palude, la mappa del cortile a pergamena e l'handout
+delle Cronache.
+
+**Sostituisce il Fascicolo V** (`homebrew/ARC07-BOOKLET-FASCICOLO-5-P5-MILLE-ANNI.hb.md`),
+un riassunto di luglio che non conosce Balvar, l'orologio della notte, Zeth, il
+Rituale 4 e l'Aura della Forgia Eterna: tutto è arrivato dopo, con le
+riscritture di settembre. Il fascicolo resta nel repo come storia; al tavolo si
+usa questo.
+
+**Come si gioca, in due sessioni** *(decisione S1 del DM, 2026-09-24)*:
+
+| Sessione | Da dove a dove | Nel master |
+|---|---|---|
+| **2026-09-25**, insieme alla resurrezione | l'arrivo, la targa, Durin, il consiglio di Re Thorek I, la notte con le sue otto tacche, Zeth, Balvar, Zog'tar, Vatore. **Ci si ferma al primo ariete sulle mura** | §3 Scene 1-3, §4-ter, §4-bis, §5 |
+| **la successiva** | le mura all'alba, il duello con Skullcrusher, il Rituale della Forgia Eterna, il ritorno | §3 Scene 4-6, §4, §4-quater, §9 → `ARC07-DEF-5` |
+
+La regia minuto per minuto della prima metà sta nel booklet della serata
+(`homebrew/sessione-resurrezione-mille-anni/`, capitolo I, Atto IV). Qui c'è il
+materiale completo, per entrambe le sessioni.
+
+**Cosa annotare, per la sessione dopo.** Le tacche spese all'uscita dalla tenda,
+come è morto Zog'tar (in silenzio, in modo spettacolare, umiliato), se
+qualcuno ha letto la runa sulla scaglia del drago, cosa hanno promesso a
+Balvar, e l'esito con Vatore. Decidono come comincia il duello.
+
+**Cosa è stato corretto nel master il 2026-09-24**, per allinearlo al canone
+giocato dopo la sua ultima riscrittura:
+
+- i «3 semi di treant» da piantare la notte: dopo il rito stanno nella
+  Collana. All'alba Hella evoca **due Treant di Adamantio** (Scena 1-bis);
+- il **Marchio di Varis** era scritto come probabile: nel canone giocato **non è
+  attivo**, e la risonanza con Vatore non scatta (§1, Artemis);
+- **Durik** entra nel viaggio e nel duello, con la sua vulnerabilità all'acido
+  (§1, e una battuta nella regia dei round di §4);
+- il **dono a metà** di `DEF-3` §9 si incassa qui, al primo uso (§1, Hella);
+- l'immagine del portale era la foto di un testo (§9).
+
+**Quattro contraddizioni, decise dal DM il 2026-09-24** e già scritte nei
+file che le contenevano:
+
+| | Cosa dicevano i file | Cosa vale adesso |
+|---|---|---|
+| 1 | **Chi ha perso la Corona.** Re Thorek I diceva *«suo nonno»*, Thorgrim *«mio nonno»* | sono **cugini**, nipoti dello stesso re caduto contro Skullcrusher (`DEF-4` Scena 1-bis, scheda di Thorgrim) |
+| 2 | **Frostcleaver.** In mano a Re Thorek I in `DEF-4`, a Thorgrim nell'affresco A3 | è **del re**. Nell'affresco Thorgrim tiene **Aegis Fang**, mille anni fa (`DEF-2` A3, `PortaleForgia-P2`) |
+| 3 | **Zeth.** La scheda del Ghostlord diceva ottocento anni fa, un'invasione phaerimm, un lich di epoca Netherese | **mille anni fa, durante l'assedio dell'orda**; il cultista di Shar è la mano del Collezionista. Riallineati il Ghostlord, due file di ARC-09 e il Consiglio di Rethmar |
+| 4 | **Balvar.** INT 9 e SAG 18 nella riga generata, INT 16 e SAG 20 nel testo | vale il testo: la riga dello statblocco è stata corretta |
+
+E due dettagli: l'**Occhio di Ossidiana** di Zog'tar è un occhio vero, al posto
+dell'occhio destro (statblocco in `DEF-4` §4-bis).
+
+**Come si rigenera**, dalla radice del repo:
+
+- volume completo, schermo e stampa:
+  `python3 scripts/dm.py volume "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json" --stampa`
+- solo le pagine ✉, un PDF ciascuna:
+  `python3 scripts/dm.py booklet <lo stesso manifest> --pdf`
+
+
+\page
+
+# I · Il cast di mille anni fa
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Il cast di mille anni fa
+
+> **Come si usa.** Una scheda per ogni PNG e villain di Hammerfist ≈372 DR, in
+> ordine di entrata. Ogni scheda ha sei righe fisse: **aspetto** (per
+> descriverlo e per il ritratto), **cosa vuole** (e non riguarda i PG), **come
+> suona**, **cosa sa e cosa no**, **in scena** (dove stanno i numeri) e
+> **l'eco**. Le voci vengono dalla Cassetta del DM e dai master; dove un master
+> tace la riga è marcata `[PROPOSTA]`, e la cambi senza chiedere.
+>
+> ⚠️ **Le statistiche non si copiano qui** (ADR-0021): stanno nel master
+> `ARC07-DEF-4`, che è in questo stesso volume, e la riga «in scena» dice dove.
+> Una seconda copia diverge alla prima errata.
+>
+> 🖼 **I ritratti non esistono ancora.** Sotto ogni nome c'è il prompt da
+> usare (sezione «Ritratti del cast di mille anni fa» di
+> `Immagini/PROMPT-IMMAGINI-07ILP.md`) e il nome del file. Quando il ritratto
+> c'è, si sostituisce quella riga con l'immagine e si rilancia `dm.py volume`.
+
+---
+
+## Durin Rocciadura, la pattuglia
+
+*🖼 Ritratto da generare: il prompt **R1** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/durin-rocciadura.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. `[PROPOSTA]`: si vede dal modo in cui tiene l'ascia troppo stretta |
+| **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
+| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
+| **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
+| **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
+| **In scena** | `DEF-4` §3 Scena 1-bis (i tre modi di farsi riconoscere) · statistiche §4-bis: Guerriero 6, PF 52, CA 22 |
+| **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
+
+## Re Thorek I, il re di una fortezza giovane
+
+*🖼 Ritratto da generare: il prompt **R2** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/re-thorek-i.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. `[PROPOSTA]`: una corona semplice, senza gemme |
+| **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
+| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
+| **Sa** | la profezia, perché l'ha incisa stanotte: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher. **Thorgrim è suo cugino**: lo stesso nonno |
+| **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
+| **In scena** | `DEF-4` §3 Scena 1-bis, il consiglio di guerra. Guerriero 16; **non combatte** e non ha uno statblocco completo |
+| **Eco** | la prova di fiducia (aiuti pieni o dimezzati) e il **Torque di Thorek I** (`DEF-4` §8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
+
+⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
+
+## Thorgrim Barbadiferro, l'antenato
+
+*🖼 Ritratto da generare: il prompt **R3** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/thorgrim-barbadiferro.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | un vecchio seduto che non si alza. Le mani sulle ginocchia, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
+| **Vuole** | che l'ascia torni in una mano che sa perché la tiene. È **cugino di Re Thorek I**: il nonno che perse la Corona è lo stesso |
+| **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
+| **In scena** | `DEF-4` §3 Scena 2, prova sociale **CD 20**. È una **non-creatura**: nessuno statblocco esiste, e non va inventato |
+| **Eco** | l'affresco A3 (*«Portala bene, fratello. Ora è tua.»*) e la Cerimonia delle 100 Asce in ARC-08 |
+
+## Mastro Costruttore Zeth, il seme del Ghostlord
+
+*🖼 Ritratto da generare: il prompt **R4** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/zeth-mastro-costruttore.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. `[PROPOSTA]`: col gesso, e ne cancella metà col pollice |
+| **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
+| **Suona** | parla mentre lavora. `[PROPOSTA]`: finisce le frasi degli altri |
+| **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
+| **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
+| **In scena** | `DEF-4` §3 Scena 1-bis, «Seme del Ghostlord». Costa **una tacca** della notte cercarlo |
+| **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
+
+## Balvar Fuocospento, il runaio esiliato
+
+*🖼 Ritratto da generare: il prompt **R5** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/balvar-fuocospento.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | nano dello scudo vecchio, grembiule di cuoio, seduto su uno sgabello da bottega in fondo alla tenda. Sulle ginocchia una lastra d'ardesia, in mano una punta di ferro |
+| **Vuole** | che Hammerfist cada **in fretta**, perché un assedio lungo è fame, e lui l'ha già vista. E che qualcuno dica che c'era |
+| **Suona** | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
+| **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
+| **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
+| **In scena** | `DEF-4` §4-ter · statblocco nel capitolo **«Balvar Fuocospento — scheda del Bestiario»** di questo volume |
+| **Eco** | *«dite che c'ero»*: se promesso, un pannello in più negli affreschi, e Aegis Fang lo riconosce. Se lo uccidono senza ascoltarlo, una lastra a metà che qualcuno troverà in ARC-09 |
+
+## Zog'tar Deatheye, il generale
+
+*🖼 Ritratto da generare: il prompt **R6** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/zogtar-deatheye.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di piastre annerite. L'ascia a due mani appoggiata alla spalla. Al posto di un occhio, una pietra nera levigata: l'**Occhio di Ossidiana** |
+| **Vuole** | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar |
+| **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
+| **Sa** | niente dei PG, a meno che il corridore non arrivi |
+| **In scena** | `DEF-4` §4-bis: statblocco, quattro guardie, tattiche round per round, due vie che non passano dall'iniziativa |
+| **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
+
+L'Occhio di Ossidiana è **un occhio vero**, al posto dell'occhio destro (decisione del DM, 2026-09-24).
+
+## Vatore, il ladro che diventerà Sal
+
+*🖼 Ritratto da generare: il prompt **R7** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/vatore.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | lo stesso volto di Sal, irriconoscibile nel portamento. Vesti di seta grigia di taglio drow, cappuccio, niente ornamenti. Stringe al petto un fagotto |
+| **Vuole** | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri |
+| **Suona** | il tono del collega, non del nemico. Monosillabi. Terrore reverenziale mal nascosto |
+| **Sa** | di aver visto quattro persone che non dovrebbero esistere. Che il **Sigillo di Ossidiana** divora anime |
+| **Non sa** | niente di Sal. Nessuno al tavolo lo sa |
+| **In scena** | `DEF-4` §5: cinque risposte del party, tutte grigie · il Sigillo nello stesso paragrafo · scheda completa di Sal in `Bestiario/villain/Salvatore/` |
+| **Eco** | la sincronizzazione su Sal nel 1372: sanguina nello stesso punto, gli manca un asso, li teme, li odia. Qualunque cosa facciano, **sopravvive** |
+
+## Skullcrusher il Nero, il capostipite
+
+*🖼 Ritratto da generare: la scheda **41** di `Immagini/PROMPT-IMMAGINI-07ILP.md`; salvalo come `Immagini/ritratti/skullcrusher-il-nero.jpg`.*
+
+| | |
+|---|---|
+| **Aspetto** | drago nero adulto, snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
+| **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
+| **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
+| **In scena** | `DEF-4` §4: statblocco GS 12, regia dei primi due round, il cortile, i tre esiti. Si gioca nella **sessione dopo** questa serata |
+| **Eco** | la tabella B4 (in questo volume): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
+
+
+\page
+
+# II · Master — Il Viaggio a 1.000 anni fa (DEF-4)
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
 # ARC-07 · DEFINITIVO #4 — IL VIAGGIO A 1.000 ANNI FA
 ## Il Portale della Forgia Eterna — Hammerfist ≈372 DR, il duello con Skullcrusher, il Rubino
 
@@ -244,7 +487,7 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
 
 > **Come si usa.** Le prime tre colonne sono quello che i PG colgono **in sei
 > secondi** senza tirare. La quarta è **vincolante quanto le altre**
-> ([ADR-0057](../plans/adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md)):
+> ([ADR-0057](../../../plans/adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md)):
 > sono le cose che il tavolo deve **scoprire**, e che l'atmosfera, se ti scaldi,
 > racconta al posto loro.
 
@@ -1489,3 +1732,209 @@ devastante. In aria è sicuro ma i suoi danni calano. Portalo giù, o colpiscilo
 dall'alto: la scelta è dei PG.
 ════════════════════════════════════════════════════════════════════════
 ```
+
+
+\page
+
+# III · Balvar Fuocospento — scheda del Bestiario
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Balvar Fuocospento, il Consigliere dell'Orda (CR 13) [INFERRED — creato 2026-07-31 su richiesta DM]
+**Faction**: orda-antica-372dr | **Role**: caster-divine-boss | **Environment**: mountain | **CR**: 13 | **Source**: creato per `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` (assedio di Hammerfist ≈372 DR) — richiesta DM «un incantatore memorabile e antico che possa rivaleggiare coi Rumbling Stone» | **Status**: inferred-dm-request
+
+
+```statblocco
+gs: 13
+tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
+ca: 24
+ca-dettaglio: contatto 12, colto 22 (mithral +2, anello +2, DES +2)
+pf: 96
+ts: Temp +13, Rifl +8, Vol +17
+attributi: For 12 Des 14 Cos 16 Int 16 Sag 20 Car 14
+velocita: 6 m
+iniziativa: +2
+attacchi:
+  - Mischia martello da guerra runico +1 +10/+5 (1d8+2)
+```
+
+> [INFERRED — needs DM confirmation] `pf-dado` tolto da `scripts/conformita_statblocchi.py`: portava «1d8+2», che non sono i dadi vita (pf-dado «1d8+2» ha 1 dado, il testo dichiara 13 DV). I dadi non si ricostruiscono senza inventare: la composizione delle classi non e' leggibile o comprende una classe non SRD. Da completare a mano.
+
+> ✅ `attributi` **allineati al testo della scheda** su decisione del DM (2026-09-24): la riga generata da `scripts/genera_attributi.py` diceva Int 9, Sag 18, Car 10, e contraddiceva il profilo sotto (Int 16, Sag 20, Car 14) e i TS di Volontà.
+
+Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE. **hp 96** (13 DV); **CA 24**, contatto 12, colto 22 (mithral +2, anello +2, DES +2). Init +2; Vel 6 m. TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia). BAB +8; Lotta +9. For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14.
+**Mischia** martello da guerra runico +1 +10/+5 (1d8+2). Domini **Inganno** e **Runa** `[INFERRED: dominio Runa = FRCS]`. Incantesimi da Chierico 9 (CD 15+liv): tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*.
+**RUNE INCISE (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Rune tipiche: *dimensional anchor* sulla soglia, *blade barrier* su una parete, *silence* su sé stesso, **la Catena** (sotto).
+**LA CATENA DI SKULLCRUSHER (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.
+**LEGGERE IL FUORI-POSTO (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**
+Scurovisione 18 m. Immune a paura (patto con Abbathor). **Debolezza**: le sue rune sono **scritte** — chi legge il nanico antico e le vede può contrastarle (vedi il modulo).
+Notes: consigliere del generale **Zog'tar Deatheye** (CR 14) all'assedio di ≈372 DR. Nano dello scudo **esiliato**, ex-runaio della fortezza, passato ad Abbathor. Non è il capo: è **il motivo per cui il capo ha un drago**. Dossier narrativo, tattiche e ganci → `ARC07-DEF-4` §4-ter.
+
+
+\page
+
+# IV · Le mappe a stampa
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Le mappe a stampa
+
+> **Cosa c'è.** La griglia del cortile del duello (M7-B) resa a pergamena dal
+> renderer del repo, alla scala di **1,5 m per quadretto**: si stampa e si mette
+> sul tavolo. La vista strategica M7-A (fortezza, campo, mura) è schematica per
+> scelta e resta in ASCII, in fondo al master `DEF-4`.
+
+## M7-B · il cortile interno, 36 × 27 m
+
+![Il cortile interno di Hammerfist, arena del duello con Skullcrusher](../../Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
+
+**Legenda di gioco.** Il drago entra dall'alto sulla colonna V e resta in quota
+finché qualcuno non lo porta giù. I PG partono dalle righe 16-17, Re Thorek I
+alle loro spalle. Le macerie danno copertura +4. I camminamenti sono a +4,5 m,
+con gli arcieri nani. Le posizioni di dettaglio, il terreno e l'evoluzione
+round per round stanno nell'Atlante (`Mappe/ARC07-MAPPE-DEFINITIVO.md`, M7-B).
+
+**Cosa c'è nel cortile e non è disegnato**: le corde degli arieti, la fucina
+accesa da stanotte, la cisterna sotto il pozzo, le campane della torre nord.
+La tabella di cosa succede se qualcuno le usa è in `DEF-4` §4, «Il cortile».
+Il DM non la legge ai giocatori: la tiene sotto gli occhi e risponde.
+
+
+\page
+
+# V · La Forgia ricorda le ferite — carry-over B4
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# B4 — "LA FORGIA RICORDA LE FERITE" (tabella di carry-over)
+## Ponte meccanico P5 (duello con Skullcrusher, ≈372 DR) → ARC-08 (Fauci di Palude, 1372 DR)
+
+> **Stato (B4)**: ⭐ deliverable cross-arc più importante dell'arco. Traduce
+> l'**esito del duello con Skullcrusher** (P5 fast-play, Scena 5) in un
+> **effetto quantificato** sullo statblock di **Fauci di Palude** nell'ARC-08
+> (`08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`, GS
+> 15, 312 PF). Chiude il task **ARC-08 A12**.
+>
+> **Fonte narrativa**: Moradin, P5-DEFINITIVO-PARTE2 r.290 — *«Ogni ferita che
+> infliggi ora all'antenato, la mia Forgia la ricorderà quando affronterai il
+> discendente.»* + Aegis Fang, P6 r.746 (*"sangue Skullcrusher chiama"*).
+>
+> ✅ **Valori APPROVATI dal DM (2026-07-03)** — canone di carry-over. Sistema
+> **D&D 3.5** — solo bonus tipizzati (competenza/circostanza/morale), **niente
+> vantaggio/svantaggio 5e**. (Il DM può sempre ritoccare in corsa, ma questi
+> sono i valori di riferimento su cui l'ARC-08 può contare.)
+
+---
+
+## 1. INPUT DAL P5 (cosa registra il fast-play)
+
+Dalla **Scena 5** del `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` si registrano due dati:
+
+1. **Esito del duello**: `UCCISO` / `FERITO GRAVE` / `FUGGITO`.
+2. **Ferite ancestrali segnate** (`N`): numero di colpi andati a segno su
+   Skullcrusher durante il duello (la "Cicatrice della Forgia"). Cap
+   consigliato **N ≤ 3** ai fini del bonus.
+
+---
+
+## 2. TABELLA ESITO → EFFETTO SU FAUCI DI PALUDE (1372)
+
+| Esito del duello | Effetto sullo statblock di Fauci (GS 15, 312 PF) | Razionale |
+|---|---|---|
+| **UCCISO** (Skullcrusher a 0 pf) | **Cicatrice ancestrale attiva**: Fauci entra in campo con **−10% PF** (312 → **281 PF**) e **Presenza Terrificante CD 25 → 23** contro i **portatori degli artefatti** (Thorik/Corona, Tordek/Bracieri+Cintura, Hella/Collana, Artemis/Ring). | La stirpe porta la ferita mortale del capostipite: il sangue "ricorda" di poter cadere. |
+| **FERITO GRAVE** (fugge sotto ⅓ pf) | **−1 uso del soffio**: il primo **Soffio a Cono** (1/giorno) è **indisponibile**; il soffio in linea parte comunque ma la **prima** volta a −2 alla CD (27 invece di 29). Nessuna riduzione di PF. | La ferita non è letale ma "storpia" l'arma migliore del sangue. |
+| **FUGGITO** (Skullcrusher si allontana quasi illeso) | Fauci **vi ha visti e riconosciuti**: **+2 iniziativa** e nessuna sorpresa contro di voi (sa chi siete) **MA morale fragile** — **fugge sotto i 75 PF** invece di 50 (soglia di ritirata alzata di 25). | Il drago è forte ma il sangue teme già i "quattro del futuro": più cauto, meno disposto a morire. |
+
+---
+
+## 3. BONUS PER "FERITE ANCESTRALI SEGNATE" (N)
+
+Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
+
+- **Ogni ferita ancestrale segnata** dà ai **portatori d'artefatto**, **solo
+  contro Fauci nel 1372**, a **scelta unica del gruppo** all'inizio della
+  battaglia:
+  - **+1 di competenza ai tiri per colpire** contro Fauci, **oppure**
+  - **+1d6 danni** ai colpi che vanno a segno su Fauci.
+- Cap: **N ≤ 3** (max **+3 TxC** o **+3d6**).
+- **Cicatrice fisica** (se Aegis Fang colpì Skullcrusher in volo, P5 Scena 5):
+  Fauci ha una **cicatrice a forma di martello** su un'ala → **−2 metri alla
+  Volare** (45 → 43) e i PG che lo sanno hanno **+2 di circostanza** a
+  colpirlo mentre è in volo.
+
+---
+
+## 4. IL GANCIO INVERSO — AEGIS FANG "SENTE" FAUCI
+
+- Quando Fauci di Palude entra in scena nel 1372, **Aegis Fang canta**
+  (*"sangue Skullcrusher chiama"*, P6 r.746). Meccanicamente: **Thorik ottiene
+  +2 di circostanza ai tiri per colpire contro Fauci** (bonus di circostanza
+  3.5, definito e non 5e) e **avverte in anticipo** il primo soffio di Fauci
+  (può dichiarare *pronto a ripararsi* → TS Riflessi del soffio **+2**).
+- È l'eco meccanica del legame ancestrale: l'arma che uccise il capostipite
+  riconosce il discendente.
+
+---
+
+## 5. PROPAGAZIONE (checklist)
+
+- [x] **Tabella creata** (questo file), con esiti aperti e valori quantificati.
+- [x] **Nota nello statblock ARC-08 di Fauci**: aggiunto un rimando a questo
+  file in `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`
+  §FAUCI DI PALUDE.
+- [x] **P5 fast-play** rimanda qui (Scena 5 + sezione carry-over).
+- [x] **Valori validati dal DM (2026-07-03)** → l'ARC-08 A12 può integrarli
+  come canone (riga matrice esiti + read-aloud del primo avvistamento).
+
+
+\page
+
+# ✉ Le Cronache dei Quattro Eroi
+
+{{note
+##### ✉ HANDOUT GIOCATORE
+Pagina da consegnare al giocatore indicato, in privato.
+}}
+
+<!-- Auto-generated — do not edit by hand.
+     Sorgente: 07_il Portale Della Forgia Eterna/ARC07-HANDOUTS.md
+     Rigenera con: python3 scripts/dm.py handout --tipo profezia --da 07_il Portale Della Forgia Eterna/ARC07-HANDOUTS.md
+     Incolla tutto su https://homebrewery.naturalcrit.com/ (New brew). -->
+
+{{margin-top:60px}}
+
+{{banner PROFEZIA}}
+
+# Le Cronache dei Quattro Eroi
+
+{{note
+> *Dalle Cronache di Thorgrim Barbadiferro, incise nella pietra di Hammerfist:*
+>
+> *«Quando la Mano Rossa calò sul nostro focolare e il cielo si fece nero di
+> ali, non fu un re a salvarci, né un esercito. Furono **Quattro Eroi** venuti
+> da un tempo che non era ancora. Portavano una corona di stelle di pietra, un
+> martello che cantava, un anello di luce e ombra, e con loro camminava la vita
+> stessa rifiorita dalla morte.*
+>
+> *Abbatterono il drago nero e spezzarono l'orda. Poi svanirono, come erano
+> venuti, lasciando solo il loro nome nella roccia.»*
+>
+> — Moradin, nella mente di Thorik: *«Le Cronache dicono che 'Quattro Eroi'
+> salvarono Hammerfist. Siete VOI. Siete sempre stati voi. Andate. Chiudete il
+> cerchio.»*
+}}
+
+{{margin-top:30px}}
+
+{{footnote Handout giocatori · 2026-07-10 · Rumbling Stone}}
+{{pageNumber,auto}}
+
