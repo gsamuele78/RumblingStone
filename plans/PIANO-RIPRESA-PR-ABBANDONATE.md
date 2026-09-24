@@ -2893,7 +2893,7 @@ disabilitato finché non si riallinea. Poi due righe: il passo «Update branch
 prima del merge» nella checklist di chiusura della skill `rumblingstone-plans`,
 e una nel Playbook dove si parla di rami.
 
-### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[🟡 aperto il 2026-09-24 · 4j-1 ⬜ · 4j-2 ✅ · 4j-3 ⬜ · 4j-4 ⬜ · 4j-5 ⬜]`
+### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[🟡 aperto il 2026-09-24 · 4j-1 ✅ · 4j-2 ✅ · 4j-3 ⬜ · 4j-4 🟡 · 4j-5 ⬜]`
 
 Nasce dalla pulizia dei rami di PRATICHE (D5, D7, D8). Il DM: *«per D7 e D8
 prima misura davvero se non c'è niente, non ti fidare»*, e dopo la misura:
@@ -2926,7 +2926,7 @@ e il ramo è il modo più semplice di ritrovarli.
 
 **FASE 2 · Sviluppo, un ramo e una PR per sotto-lotto (PRATICHE D6).**
 
-#### 4j-1 · Il Torneo di Dauth di maggio ⬜
+#### 4j-1 · Il Torneo di Dauth di maggio ✅
 `[engine: Opus 5.5, sessione principale · effort: xhigh · qualità: per ognuno dei sei file una tabella «cosa entra, dove, perché no», confermata dal DM prima di scrivere; zero contraddizioni col canone di oggi (Karruk)]`
 
 Classe **K**. Il confronto è file per file, fra la versione di maggio e quella
@@ -2936,6 +2936,35 @@ di Hella (dove `main` è più lungo), il Giorno 3 (superato nel registro, perch�
 fa di Karruk un hobgoblin chierico GS 12 a Dauth). La domanda non è quale
 versione vince: è quali **varianti** di maggio mancano a quella di oggi.
 
+**Com'è andato (2026-09-24).** Letti tutti e sei i file di maggio contro le
+versioni di luglio. Il master di luglio era un indice; quello di maggio era uno
+strumento di regia. Le sotto-quest di Hella e Artemis avevano la stessa premessa
+nelle due stesure, quella di Thorik no: a luglio era solo la logistica delle
+lance. Il DM ha scelto cosa entra con due giri di domande; tutto è adattato al
+canone di oggi (calendario Day 28-33, lance da Hammerfist, D10, D13, Karruk a
+Rethmar).
+
+| Entra | Dove | Adattamento |
+|---|---|---|
+| Griglia dei milestone, gruppo diviso, fazioni e cena, notti, scelte grigie | master §6-§10 (checklist spostata a §11) | 🔎 `HOOKS-Tordek-DauthInvitation` §3.3 rimandava già al «§7 split-party» del master: era la sezione di maggio, e il rimando era rotto da luglio. Esclusi due sogni su quattro: quello di Tordek gli dava una discendenza githyanki, quello di Artemis doppiava il Sogno della Doppia Maschera |
+| Il sergente Verric, le tre vie, il Consiglio di crisi, le prove sulle mura | SUBQUEST-Thorik §3-bis, §4.1, §4-bis | la staffetta la manda Khorn in marcia; gli effetti vanno sul Fronte di Dauth e sulla Carta D. **Non recuperati** i «volontari di Dauth»: romperebbero D10 |
+| Sylith, la variante della fonte vitale, il cucciolo, la Freccia della Promessa | SUBQUEST-Hella §2-bis | Sylith c'è solo se al Day 24 non è rimasta al Sacred Forest (DauthInvitation §3.3); la fonte vale solo per la via PURIFICA; il cucciolo non diventa compagno (Hella ha Durik); tolto l'effetto della freccia sul rito del Sacred Forest, che nel calendario viene prima |
+| Il grimorio come favore della cellula, il ramo DARK-B | SUBQUEST-Artemis §2.3 | il grimorio è il Libro della Verità Nascosta che la Torre ha già (Livello 2); l'emissario è Vashet |
+| 10 righe di echi | CONSEGUENZE-ECHI §3 | — |
+
+**Non entra**: il Giorno 3 di maggio (Karruk comandante a Dauth, contro il
+canone), il «Tordek Stonefist» di maggio. Il cognome giusto, Durinheart, è stato
+corretto anche dove maggio l'aveva lasciato su `main`: la scheda di Maewen e gli
+statblock del Torneo (decisione del DM in 4j-4).
+
+🔎 **Un falso positivo trovato strada facendo**: `validate_prosa` tratta
+`…DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md` come testo per i giocatori perché il
+nome contiene «ECHI-», e conta come enfasi le sigle delle intestazioni (10 su
+`main`, 9 dopo questo lotto). Il file è per il DM. Si corregge nel misuratore, in
+un lotto suo.
+
+Il ramo `claude/review-tournament-integration-yYlwv` si può cancellare dopo il
+merge.
 #### 4j-2 · Le correzioni di Salvatore ✅
 `[engine: Opus 5.5 · effort: alto · qualità: le tre righe su main, la regola verificata su una fonte del repo, il DM conferma]`
 
@@ -2977,12 +3006,24 @@ sotto-lotto è su `main`.
 Classe **C**. Rifatta sul codice di oggi, non portata: il ramo è di maggio,
 quando le skill erano quattro.
 
-#### 4j-4 · Le varianti dei tre rami giudicati ⬜
+#### 4j-4 · Le varianti dei tre rami giudicati 🟡
 `[engine: Opus 5.5 · effort: alto · qualità: per ogni ramo un elenco di varianti con la proposta entra/non entra, e il DM che decide riga per riga]`
 
 Classe **G**. #42, #109, #67: il giudizio del DM di allora riguardava la PR
 intera. Qui si guarda se dentro c'è qualcosa che vale da solo, per esempio le
 11 righe di `render_map_svg.py` della #42. Ne esce un elenco, non codice.
+
+
+**Decisioni del DM (2026-09-24).**
+
+| Ramo | Cosa c'è che su `main` manca | Decisione |
+|---|---|---|
+| #42 | le quattro griglie sono già in `ARC07-MAPPE-DEFINITIVO.md` (T-2, T-3, T-5, T-6); resta il simbolo 🌫 «vuoto / aria» con il suo motivo nel renderer | **entra**: nella legenda (ADR-0048), con un test. È codice: va nella PR della parte di codice di 4j |
+| #109 | una riga «Caricami quando…» in testa a ogni `SKILL.md` | **no**: AGENTS.md e `skills/ORCHESTRAZIONE.md` lo dicono già, con un gate |
+| #67 | il booklet HTML di hint per Terros | **no**: c'è quello da manifest, e questo detta tattica e anticipa l'esito |
+| — | «Tordek Stonefist» in `Bestiario/png/Maewen/Maewen.md` e negli statblock del Torneo | **corretto** in Durinheart, nella PR di 4j-1 |
+
+Dopo il 🌫, i rami #42, #109 e #67 si possono cancellare.
 
 #### 4j-5 · Il punto cieco del registro ⬜
 `[engine: Sonnet 5 · effort: medio · qualità: contenuti_nei_rami --righe fa rosso sul ramo Salvatore e verde su documento-stemmi-alternativi]`
