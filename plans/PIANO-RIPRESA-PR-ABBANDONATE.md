@@ -2893,7 +2893,7 @@ disabilitato finché non si riallinea. Poi due righe: il passo «Update branch
 prima del merge» nella checklist di chiusura della skill `rumblingstone-plans`,
 e una nel Playbook dove si parla di rami.
 
-### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[⬜ aperto il 2026-09-24 · 4j-1 · 4j-2 · 4j-3 · 4j-4 · 4j-5]`
+### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[🟡 aperto il 2026-09-24 · 4j-1 ⬜ · 4j-2 ✅ · 4j-3 ⬜ · 4j-4 ⬜ · 4j-5 ⬜]`
 
 Nasce dalla pulizia dei rami di PRATICHE (D5, D7, D8). Il DM: *«per D7 e D8
 prima misura davvero se non c'è niente, non ti fidare»*, e dopo la misura:
@@ -2936,11 +2936,36 @@ di Hella (dove `main` è più lungo), il Giorno 3 (superato nel registro, perch�
 fa di Karruk un hobgoblin chierico GS 12 a Dauth). La domanda non è quale
 versione vince: è quali **varianti** di maggio mancano a quella di oggi.
 
-#### 4j-2 · Le correzioni di Salvatore ⬜
+#### 4j-2 · Le correzioni di Salvatore ✅
 `[engine: Opus 5.5 · effort: alto · qualità: le tre righe su main, la regola verificata su una fonte del repo, il DM conferma]`
 
 Classe **K**. Il DM ha dato il via il 2026-09-24. La de-pietrificazione è
 verificata sulle schede PCGen del repo (PRATICHE §7.2).
+
+**Com'è andato (2026-09-24).** Due righe su tre sono entrate nella sostanza che il ramo
+proponeva, la terza no:
+
+- testo P2C: *Pietra in Carne* o *Spezzare Incantamento*, con accanto il nome
+  inglese, la pagina del PHB e il livello, perché il repo non usava ancora un
+  nome italiano per *Break Enchantment* (il ramo scriveva «Sciogliere
+  Incantesimo»). E una frase che dice perché *Rimuovere Maledizione* non basta;
+- `Salvatore.md`: PF «79 (14d6+28)». I 14 DV sono tutti d6 (Bardo, Accordo
+  Sublime, Spia), e 6 + 13 × 3,5 + 28 dà 79;
+- `Salvatore.md`, datori di lavoro: 🔴 **la riga del ramo era sbagliata per la
+  scheda di Sonjak.** Il ramo scriveva «Sonjak (Drow Matrona) — *Matrona
+  Sajak* nel codice operativo di Sal», come se Sal conoscesse il nome Sonjak.
+  La scheda di Sonjak dice il contrario: catturato, Sal rivela di lavorare per
+  «Matrona Sajak» e **non** sa il nome di campagna, ed è da lì che nasce il
+  momento «a-ha» dei PG. La riga di `main` («Matrona Sajak») era già giusta
+  dal punto di vista di Sal; si aggiunge solo una nota per il DM che dice chi è.
+
+🔎 **Trovato e non corretto**: `00_Red Hand Of Doom/Armate-COMPOSIZIONE-DETTAGLIATA.md`
+§8 scrive «Matrona Sajak, Sonjak (enforcer)», che si legge come due persone.
+Canone e scheda dicono una persona sola. È una riga K fuori da questo lotto:
+va al DM.
+
+Il ramo `claude/salvatore-character-art-wSjuH` si può cancellare quando questo
+sotto-lotto è su `main`.
 
 #### 4j-3 · `measure_tokens.py` e i file di caricamento obbligatorio ⬜
 `[engine: Sonnet 5 · effort: medio · qualità: un test che fa rosso se una query di campagna non conta i file che la skill obbliga a caricare]`
