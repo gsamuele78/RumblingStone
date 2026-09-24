@@ -11,6 +11,50 @@
 
 ---
 
+## 0 · 🧭 Adesso — l'unica lista viva
+
+> **Perché c'è.** Fino al 2026-09-24 ogni chat aggiungeva in coda una sezione
+> «Ripartire da qui» (§6, §7, §8, §9, §10), e ognuna ricopiava la lista di
+> quella prima. Per sapere dove si era bisognava leggere l'ultima e fidarsi che
+> fosse aggiornata. Da qui in avanti la lista vive **solo in questa sezione** e
+> si corregge sul posto: una riga chiusa diventa ✅ con la PR, la riga dopo
+> diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
+> e non si aggiornano più.
+
+**Ultimo aggiornamento**: 2026-09-24, PR [#168](https://github.com/gsamuele78/RumblingStone/pull/168).
+
+| | Cosa | Classe | Dove sta il dettaglio | Da dove si parte |
+|---|---|---|---|---|
+| ✅ | I 24 «refusi» di `validate_lingua`: 11 veri corretti | M | §10.1 · #167 | fatto |
+| ✅ | I 13 falsi positivi di `validate_lingua`; il passo in CI blocca i refusi (non gli avvisi) | C | CHANGELOG 2026-09-24 · #168 | fatto |
+| ✅ | Il falso positivo di `validate_prosa` sul registro delle conseguenze del Torneo di Dauth | C | CHANGELOG 2026-09-24 · #168 | fatto |
+| ▶ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | M + G3 | §8.3 | una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
+| ⬜ | **Le 120 legature della Corona** (`aﬀresco`) | M | §10.1 | prima si conta in tutto il repo, poi si decide se è un lotto o uno per file; qualità: nessuna legatura, nessun'altra riga cambiata |
+| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA; le azioni della CI su Node.js 20 | | PRATICHE PI-3 | si guarda alla prossima PR |
+| 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main` | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
+| ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
+| ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4 | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
+| ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
+| ⬜ | **🧲 e 🤖**, e la nota locale di una mappa che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 · §9.3 | prima si legge che cosa vuol dire il simbolo in ogni mappa che lo usa |
+| 🙋 | **Al DM**: cancellare i sei rami di §9.2 (le sessioni d'agente non possono) | | §9.2 | il comando è lì, e tocca un ramo solo se la testa è ancora quella misurata |
+
+Le decisioni aperte al DM sono in §4, generata da `decisioni_dm.py`.
+
+**Il primo comando di una sessione nuova**:
+
+```bash
+git fetch --prune origin
+python3 scripts/fase1.py <i file che stai per toccare>
+python3 scripts/decisioni_dm.py --check
+python3 scripts/validate_lingua.py     # 0 refusi attesi: il passo in CI è bloccante
+```
+
+Un lotto per PR, salvo lotti piccoli della stessa famiglia che il DM chiede di
+tenere insieme (come i due validatori della #168). Dopo il merge il ramo della
+sessione si ricrea da `main`.
+
+---
+
 ## 1 · Cosa è stato fatto in questa tornata
 
 Sette lotti, dal 2026-09-04. Ognuno con la sua riga nel `CHANGELOG`.
@@ -276,6 +320,10 @@ riuscita non si sa descrivere è un lotto tagliato male.
 Chi chiude un lotto aggiorna **quattro** cose nello stesso commit: la checklist
 del piano, `INDEX.md`, `CHANGELOG.md` e — se cambia l'ordine o le dipendenze —
 **questo documento**.
+
+In questo documento si aggiorna **§0**, sul posto: la riga chiusa diventa ✅, la
+successiva ▶. Non si aggiunge una sezione «Ripartire da qui» in coda: §6-§10
+sono nate così, e ognuna ricopiava la lista di quella prima.
 
 Le prime tre le controlla `check_plans_discipline`. La quarta era *«una debolezza
 dichiarata»*, e il 2026-09-06 ha ceduto: §4 dava una decisione aperta il giorno
@@ -660,28 +708,10 @@ teste. Il comando di §9.2 vale così com'è; lo lancia il DM.
 
 ### 10.2 · Cosa resta, in ordine
 
-| | Cosa | Classe | Dove | Da dove si parte |
-|---|---|---|---|---|
-| ⬜ | **I 13 falsi positivi di `validate_lingua`**: il mascheramento con «x» (7), la cella «?» (1), il rapporto «5.8 : 1» (5) | **C** | §9.3 | `validate_lingua.py`, un test per ogni caso e uno che provi «familiare : è» ancora rosso; a zero, il passo in CI diventa `--strict` |
-| ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome | **C** | §9.3 | il criterio del nome in `validate_prosa.py`, con un test |
-| ⬜ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
-| ⬜ | **Le 120 legature della Corona** | **M** | §10.1 | prima si conta in tutto il repo, poi si decide se è un lotto solo o uno per file; la qualità è «nessuna legatura, nessun'altra riga cambiata» |
-| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA | | PRATICHE PI-3 | si guarda alla prossima PR |
-| 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main` | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
-| 🟡 | **Le azioni della CI su Node.js 20** | | PRATICHE PI-3 | aspetta Dependabot |
-| ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
-| ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4 | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
-| ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
-| ⬜ | **🧲 e 🤖** e la nota locale che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 | come §9.3, ultima riga |
-
-La regola di §8.3 resta: un lotto per PR; dopo il merge il ramo della sessione
-si ricrea da `main` e ospita il lotto dopo.
+La tabella che stava qui è passata in **§0**, dove si corregge sul posto. Le
+prime due righe sono state chiuse nella #168.
 
 ### 10.3 · Il primo comando della prossima sessione
 
-```bash
-git fetch --prune origin
-python3 scripts/fase1.py <i file che stai per toccare>
-python3 scripts/decisioni_dm.py --check
-python3 scripts/validate_lingua.py     # 13 attesi, tutti di §10.2 prima riga
-```
+Passato in **§0**. Qui diceva «13 attesi» per `validate_lingua`; dopo la #168
+sono 0.

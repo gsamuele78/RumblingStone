@@ -355,7 +355,11 @@ PER_I_GIOCATORI = re.compile(
     r"HINT-|TEASER|ECHI-|GIOCATORI|HANDOUT|LETTERA|PROFEZIA|AVVISO|PROP|^pg-",
     re.I)
 # Anche dentro un file per i giocatori, questi sono per il DM: non si contano.
-PER_IL_DM = re.compile(r"REGIA|GUIDA-DM|CASSETTA|DM-MASTER|STATBLOCCHI", re.I)
+# CONSEGUENZE: «ECHI-» nel nome vale per `05-ECHI-HELLA.md`, che si legge al
+# giocatore, e non per `…DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md`, che è il
+# registro degli esiti per il DM. Gli altri tre file «CONSEGUENZE» erano già
+# fuori perché il loro nome non chiude «ECHI» con il trattino.
+PER_IL_DM = re.compile(r"REGIA|GUIDA-DM|CASSETTA|DM-MASTER|STATBLOCCHI|CONSEGUENZE", re.I)
 
 # Due cose che SEMBRANO enfasi e non lo sono, e che vanno tolte prima di contare.
 #
