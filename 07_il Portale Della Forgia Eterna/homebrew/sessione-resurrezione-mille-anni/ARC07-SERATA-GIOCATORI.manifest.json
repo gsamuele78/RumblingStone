@@ -1,0 +1,25 @@
+{
+  "brand": "RUMBLING STONE · ARC-07 · IL PORTALE DELLA FORGIA ETERNA",
+  "title": "Il Cuore e la Porta",
+  "subtitle": "Le pagine da consegnare: echi, preghiera, doni, Hella tornata, Durik, le Cronache",
+  "banner": "HANDOUT GIOCATORI",
+  "meta": "Da stampare e tagliare. Ogni pagina si consegna quando lo dice la regia del DM: non tutte insieme, non prima",
+  "header": "Le pagine ✉ della serata. Il DM le consegna una alla volta.",
+  "footer": "Il Cuore e la Porta",
+  "player_footer": "Il Cuore e la Porta",
+  "front_matter": false,
+  "cover_image": "../../Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg",
+  "out": "ARC07-SERATA-GIOCATORI.html",
+  "chapters": [
+    {"title": "✉ Echi — Thorik", "file": "03-ECHI-THORIK.md", "tag": "player"},
+    {"title": "✉ Echi — Tordek", "file": "04-ECHI-TORDEK.md", "tag": "player"},
+    {"title": "✉ Echi — Artemis", "file": "05-ECHI-ARTEMIS.md", "tag": "player"},
+    {"title": "✉ Echi — Hella", "file": "06-ECHI-HELLA.md", "tag": "player"},
+    {"title": "✉ La preghiera della resurrezione", "file": "10-HANDOUT-PREGHIERA.md", "tag": "player"},
+    {"title": "✉ Le carte dei Doni", "file": "07-CARTE-DEI-DONI.md", "tag": "player"},
+    {"title": "✉ Hella, tornata", "file": "09-SCHEDA-HELLA-RISORTA.md", "tag": "player"},
+    {"title": "✉ Durik, il guardiano di pietra", "file": "08-SCHEDA-DURIK.md", "tag": "player"},
+    {"title": "✉ Le Cronache dei Quattro Eroi", "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md", "tag": "player"}
+  ],
+  "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg"
+}

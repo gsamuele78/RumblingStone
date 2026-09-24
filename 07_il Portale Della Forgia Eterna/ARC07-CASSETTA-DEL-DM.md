@@ -52,7 +52,7 @@ prima.
 
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
-| **Durik** — il nano che emerge dal Rituale | tornare, e non essere un debito per nessuno | dice le cose **due volte**, la seconda più piano *[PROPOSTA]* | `#1` §9 fase 3 · `#3` §7 |
+| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi *(corretto 2026-09-24: la riga lo diceva un nano che parla)* | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
 | **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` scena 1-bis |
 | **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` scena 1-bis, §4-bis |

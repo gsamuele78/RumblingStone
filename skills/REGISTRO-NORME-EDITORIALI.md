@@ -77,6 +77,7 @@
 | `ADR-0014` §1 | **nessuna sequenza a battute senza regia** (apertura di round, una battuta per attore, esito riuscita **e** fallimento, chiusura) | **maggiore** | 🟢 congegno `regia di round (una battuta per attore)` — e dice che esiste **in un documento solo** |
 | `ADR-0014` §2 | **occhio da avventuriero**: scala per paragone, niente metrature nel box | **minore** · `metratura_nella_voce_narrante` | 🟢 `misura_craft --metrature` — **28 box su 477 (6%)**, in 9 file. Cerca la **forma** numero + unità di *spazio* (m · cm · quadretti · °C · Ø), non il numero: «tre round» e «sessanta battiti al minuto» sono legittimi. Falsi positivi **contati a mano: 1 su 28**, un PNG che dice «8-15 km» in un dialogo |
 | `rumblingstone-module-standard` §5 | un testo **per i giocatori** porta almeno **un'ancora nominata**: un nome del canone che chi legge riconosca | **maggiore** · `testo_giocatori_senza_ancore` | 🟢 `validate_prosa.py` — 🐛 **stessa storia del trattino**: misurata e mai registrata. 🔎 Nasce da un rilievo del tavolo — la giocatrice di Hella non capiva i suoi echi, e contando le ancore nei quattro testi per-PG della stessa sessione: Tordek 8, Thorik 5, Artemis 4, **Hella 0** |
+| `consequence-echoes.md` §3-ter, regola 3 | un eco per un PG **non anticipa**: niente numeri o meccaniche, niente scelte che il tavolo deve ancora fare, nessuna spiegazione del frammento | **maggiore** | 🔴 non misurato — «anticipare una scelta» dipende da cosa succede **dopo** nel modulo, e un rilevatore dovrebbe leggere il master insieme all'eco. Il segnale povero (cifre e «CD» dentro un testo per i giocatori) prenderebbe anche le schede, che i numeri li devono avere. 🔎 Nasce da un rilievo del DM il 2026-09-24, sui fogli della serata della resurrezione |
 | `rumblingstone-module-standard` | le 16 sezioni obbligatorie della checklist | **maggiore** | 🟡 `validate_modules.py` — **solo su `ARC*-DEF-*.md`**: 96 file su 100 non sono mai guardati |
 | `rumblingstone-module-standard` §8 | sidebar **«Scalare lo scontro»** obbligatoria per i boss | **maggiore** | 🟢 congegno `scalare lo scontro` — e dice **zero** in tutti i 71 file di ARC-08 e ARC-09 |
 | `rumblingstone-prosa-documenti` | norme sui **documenti** del repo (non sul contenuto di gioco) | **minore** | 🟢 `validate_prosa.py --documenti` |
@@ -95,7 +96,7 @@
 |---|---:|
 | 🟢 misurate | 22 |
 | 🟡 misurate in parte, con il limite scritto | 8 |
-| 🔴 **non misurate, con la ragione scritta** | 9 |
+| 🔴 **non misurate, con la ragione scritta** | 10 |
 | ⚪ non applicabili | 2 |
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se

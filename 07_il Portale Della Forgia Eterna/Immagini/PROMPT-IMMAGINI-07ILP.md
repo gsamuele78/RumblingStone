@@ -18,6 +18,41 @@
 - **Coerenza**: genera prima la scena-madre, poi le altre chiedendo
   *«same world, same palette and lighting as the previous image»*.
 
+## Schede-personaggio (skill `rumblingstone-art-direction` §3)
+
+> Aggiunte il 2026-09-24. Si copiano **parola per parola** in ogni prompt in
+> cui il personaggio compare.
+
+```
+HELLA — nana adulta · bassa, spalle larghe, proporzioni naniche
+VOLTO      viso tondo e largo · occhi ambra dorata · pelle con un sottotono
+           verde muschio · orecchie TONDE, non a punta
+CAPELLI    rossi, folti, in trecce pesanti, con una venatura sottile di corteccia
+INDOSSA    cuoio borchiato venato di corteccia · colore: verde muschio
+SEGNO      il torc vivo di legno e metallo con tre semi; Durik al fianco
+```
+
+⚠️ **I ritratti esistenti di Hella** (`PG/Immagini/Hella*.webp|png`) la
+mostrano con **orecchie a punta e capelli biondi**: per il gate di rifiuto
+(§6, punto 3) non sono riconoscibili rispetto a questa scheda. Restano come
+sorgente (ADR-0019 §2-bis), non vanno nei booklet. Si salva
+`Hella_elementale.png`, che mostra l'Avatar della Radice e non il volto.
+
+```
+DURIK — cane da galoppo, maschio · levriero da caccia, non un mastino
+CORPO      pietra scura porosa intrecciata a vene di mithral, come muscolo su osso
+OCCHI      topazio, oro-arancio: l'unica nota calda
+INDOSSA    niente: nessun collare, nessuna bardatura
+SEGNO      si mette sempre FRA qualcuno e il pericolo
+```
+
+✅ `PG/Immagini/durik2.png` e `DurikFront2.png` rispettano la scheda (occhi di
+topazio accesi) e sono quelle del booklet. `Durik1.png`/`Duric.png` (lo
+stesso file due volte) e `duricFront.png` sono varianti della stessa serie,
+con gli occhi spenti.
+
+---
+
 ## Copertura attuale
 
 - Scene con read-aloud trovate: **46**
@@ -555,20 +590,35 @@ artisti viventi]
 
 - **Fonte**: `ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` — A6 — «Il Viaggio Attraverso il Tempo» (SUD-OVEST · temporale → 80%)
 - **Etichetta regia**: Andor lead — il tempo incerto).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `pg` · **Formato**: `16:9 splash` (sostituisce `PortaleDellaForgiaEterna.webp`, che è un'immagine di testo)
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Questo affresco è doloroso da guardare a lungo. Mostra due scene SOVRAPPOSTE, come una doppia esposizione che il cervello si rifiuta di separare. Nella prima — Anno −1000 — Hammerfist è giovane, le mura appena erette e ancora lucide; i nani combattono un'orda primitiva di orchetti, e un drago nero GIOVANE si tuffa sulle fortificazioni: il capostipite di una stirpe che riconoscerete. Nella seconda — Anno 1372, ADESSO — Hammerfist è assediata, le mura segnate, l'esercito della Mano Rossa schierato sotto, e Fauci di Palude — lo stesso sangue, mille anni più vecchio e più grande — circola sopra co
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A fresco as tall as three men, set in a frame of gold and adamantine on
+the wall of a dark octagonal hall. Its surface is liquid glass that shows two
+scenes at once, like a double exposure the eye refuses to separate. In one,
+a young white-walled dwarven fortress under attack by a primitive horde, a
+young black dragon diving on the ramparts. In the other, the same fortress
+centuries older, soot-black walls, a vast army below and a much larger black
+dragon circling above. Where the two scenes overlap, at the centre, a
+vertical oval of gold light pulses like a doorway.
+
+In the foreground, out of focus and seen from behind, a dwarf with a crown
+set with two lit gems, green and amber, and one empty socket.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: the fresco is the only light source,
+gold at the centre, cold blue at the edges. Palette: gold, soot black, bone
+white, a single black dragon silhouette in each scene. Mood: vertigo, dread,
+invitation. Wide composition.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, runes, inscriptions, watermark, signature, modern objects, cartoon, photographic realism`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 23 · A8 — «Il Ritorno Trionfale» (SUD · vuoto → 60%)  `[a8-il-ritorno-trionfale-sud-vuoto-60]`
@@ -675,40 +725,76 @@ artisti viventi]
 
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §6 — IL DEBITO DELLA RADICE (il filo grigio del piano spirituale) [CANONE — DM 2026-07-23; il ramo (A/B/C) si gioca]
 - **Etichetta regia**: GoT lead — la creditrice paziente).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `dm` (la Custode non si mostra prima dello Step 5) · **Formato**: `3:4 handout`
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Nel momento in cui lo spirito di Hella varca la soglia tra i mondi, la luce dorata dell'Altare vacilla — e qualcos'altro è nella Sala con voi. Non un mostro: una PRESENZA. Ha la forma di una donna di radici e pietra, alta come Therysol, gli occhi due nodi di legno antico. Non è ostile. Non è gentile. È come la montagna: c'è, e aspetta. Parla, e la sua voce è il rumore di una faglia che si assesta: LA CUSTODE DELLE RADICI: «Una radice strappata lascia un vuoto. Il vuoto va colmato — è legge, non capriccio. Non oggi. Non con lei: il Forgiatore la protegge, e io non discuto col Forgiatore. Ma il 
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A tall figure standing at the empty southern edge of a ritual circle, in a
+vast octagonal hall of basalt and gold. She is shaped like a woman but made
+of roots and stone: a trunk-like body of braided dark roots, shoulders of
+lichen-grey rock, long arms that end in fingers of fine root. Where eyes
+should be there are two old knots of wood. She is as tall as a doorway and
+perfectly still, the way a mountain is still. Around her feet the gold light
+of the hall dims and thins, as if it were being politely refused.
+
+She is not threatening and not kind. Her posture is that of a patient
+official waiting for a signature. The hall behind her is out of focus: a
+glowing altar, three small figures kneeling at the edges of the circle.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: warm gold key from the altar on the
+left, cold green-grey rim light on her, the only cold colour in the image.
+Muted palette: basalt black, old gold, root brown, lichen grey. Mood:
+solemn, neutral, inevitable. Vertical composition, the figure off-centre.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, watermark, signature, monster, horror, dryad, nymph, leaves and flowers, glowing eyes, beautiful face, cartoon`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 29 · §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)  `[7-il-risveglio-hella-torna-durik-si-lega-la-collana-nasce]`
 
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `pg` **dopo** la scena (è il ritorno: mostrarla prima lo brucia) · **Formato**: `16:9 splash`
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Silenzio. Cinque secondi. Dieci. Il Cuore di Moradin, sopra il petto di Hella, rallenta: novanta battiti… sessanta… si ferma. E poi — lei INSPIRA. Netto. Improvviso. Profondo, come chi riemerge dall'acqua un istante prima di annegare. Il petto si alza. Ricade. RESPIRA. E gli occhi si aprono — non più marroni: ambra dorata. La pelle ha un sottotono di muschio pallido; tra i capelli rossi corre una venatura di corteccia sottile; e attorno a lei l'aria sa di terra bagnata e di linfa. È Hella. È cambiata. È VIVA.
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A dwarf woman lying on a mithral altar at the centre of a vast octagonal
+hall, at the exact instant she breathes in again after death: chest lifting,
+lips parted, eyes just opened. A fist-sized ruby shaped like a heart rests on
+her breastbone, its light fading. Thin golden roots run from her hands and
+brow into the altar, painless, like veins of sap.
+
+HELLA: an adult dwarf woman, short and broad-shouldered, sturdy dwarven
+proportions; round broad face with a faint moss-green undertone to the skin;
+amber-gold eyes; ROUNDED ears, not pointed; thick red hair in heavy braids,
+with one thin vein of pale bark running through it; studded leather armour
+veined with bark, moss-green cloak; at her throat a living torc of wood and
+metal set with three seeds.
+
+Three armoured figures kneel at the edges of a ritual circle around her,
+seen from behind, small and dark against the gold. A large dog of dark stone
+and mithral, with topaz eyes, stands at the altar's edge and has not yet
+moved.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: single warm gold light from the altar
+below, high contrast, the rest of the hall in deep shadow. Palette: old gold,
+basalt black, moss green, ruby red, one note of topaz. Mood: awe, relief,
+held breath. Camera slightly above, three-quarter angle on the altar.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, watermark, signature, pointed ears, elf, blonde hair, young girl, slim human proportions, angel wings, halo, gore, cartoon`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 30 · §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)  `[7-il-risveglio-hella-torna-durik-si-lega-la-collana-nasce-2]`
@@ -735,20 +821,40 @@ artisti viventi]
 
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno del fedele).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `pg` dopo il risveglio · **Formato**: `3:4 handout` (è la copertina della scheda di Durik)
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Prima che qualcuno possa rispondere, un rumore di pietra su pietra: il grande cane di mithral e roccia scura — quello che ha preso forma nel Piano della Terra e da allora non si è mai allontanato dal corpo — si fa avanti. Non abbaia: non sa più farlo. Appoggia la testa massiccia sul petto di Hella, gli occhi di topazio socchiusi, e resta così. Lei alza una mano tremante e la posa tra le sue orecchie di granito. «…Durik?» Il cane emette un suono che non è un verso: è il click lontano di una faglia che si assesta. È tornato anche lui. Non l'aveva mai davvero lasciata.
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A large sighthound made of dark stone braided with veins of mithral rests
+his heavy head on the chest of a dwarf woman who is sitting up on an altar,
+just returned from death. His topaz eyes are half-closed. She has one
+trembling hand between his ears. Nobody else is in the frame.
+
+HELLA: an adult dwarf woman, short and broad-shouldered, sturdy dwarven
+proportions; round broad face with a faint moss-green undertone to the skin;
+amber-gold eyes; ROUNDED ears, not pointed; thick red hair in heavy braids,
+with one thin vein of pale bark running through it; studded leather armour
+veined with bark, moss-green cloak; at her throat a living torc of wood and
+metal set with three seeds.
+
+The hound: deep chest, long legs, heavy jaws; matte porous stone with thin
+ribbons of mithral following the lines of tendons; no plates, no joints, no
+collar. He is not a statue and not a golem: the pose must read as an old dog
+who has waited a long time.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: warm gold from below and left, soft,
+the background falling into shadow. Palette: basalt, mithral silver, moss
+green, red hair, topaz. Mood: tender, quiet, intimate. Tight composition,
+vertical.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, watermark, signature, golem, robot, mechanical joints, armor plates, collar, red or blue glowing eyes, pointed ears, elf, blonde hair, cute cartoon dog, chibi`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 32 · §8 — IL RACCONTO DELLE PROVE (l'asimmetria si scioglie) — spotlight di Hella  `[8-il-racconto-delle-prove-l-asimmetria-si-scioglie-spotlight]`
@@ -775,20 +881,34 @@ artisti viventi]
 
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — ZONA 1 — La Fortezza Giovane (Hammerfist appena eretta)
 - **Etichetta regia**: LotR lead — deep time al contrario).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `pg` all'arrivo · **Formato**: `16:9 splash`
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Conoscete Hammerfist: le sue sale annerite dai secoli, le statue consumate, i nomi dei re incisi e riincisi. Ma QUESTA Hammerfist non ha ancora storia. Le mura sono bianche di pietra appena tagliata, gli spigoli ancora vivi. Le statue dei re sono una sola. E sulla porta, la targa di bronzo con la profezia dei Quattro Eroi è stata incisa OGGI, l'inchiostro del cesello ancora fresco. Camminate dentro la vostra stessa leggenda mentre viene scritta. È vertiginoso: ogni pietra che toccate, tra mille anni, la toccherete di nuovo — vecchia di un millennio.
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A young dwarven fortress carved into a mountainside at dusk, seen from its
+own gate. Its walls are white, freshly cut limestone with sharp unweathered
+edges; a single statue of a king stands in the courtyard, the only one.
+Stonemasons' scaffolding still leans against one tower. On the gate, a
+bronze plaque, freshly engraved, catches the last light; bronze shavings lie
+on the ground beneath it. Beyond the walls, far off, the smoke of a thousand
+campfires rises from a horde encamped on the plain.
+
+Dwarves in simple mail move along the walls carrying buckets and spears; one
+has stopped to stare at the viewer.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: low warm sunset from the right, long
+shadows, campfire glow on the horizon. Palette: limestone white, bronze,
+dusk orange, smoke grey. Mood: something is beginning; everything is new
+and already under threat. Wide establishing shot, camera at eye level.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, readable inscription on the plaque, watermark, signature, ruins, moss, weathered stone, modern objects, cartoon`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 34 · ZONA 2 — Il Mare di Tende (l'orda, di notte)  `[zona-2-il-mare-di-tende-l-orda-di-notte]`
@@ -935,20 +1055,36 @@ artisti viventi]
 
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — §4 — BOSS: SKULLCRUSHER IL NERO (il duello — unico scontro tattico)
 - **Etichetta regia**: Salvatore — l'ingresso del mostro).
-- **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
-- **Stato**: ⬜ prompt da scrivere
+- **Destinatario**: `dm` fino al duello, poi `pg` · **Formato**: `16:9 splash`
+- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Il cielo si spezza. Skullcrusher il Nero cala come una montagna alata, e l'acido gli sfrigola dalle fauci prima ancora che apra la bocca. Dove atterra, la pietra fuma. Aegis Fang urla nella mente di Thorik — non canta, URLA: «SANGUE ANTICO. ARTEFICE DI LACRIME. IL PRIMO NERO.» E la Corona vi mostra due immagini sovrapposte, tremanti l'una sull'altra: questo drago, adesso — e Fauci di Palude, mille anni nel futuro, sopra le mura di una Hammerfist che brucia. Sono lo stesso sangue. E voi state per insegnare a quel sangue, per la prima volta, che cosa vuol dire aver paura.
 
 **Prompt (EN)**
 ```text
-[DA SCRIVERE — vedi ADR-0015 §2: paragrafo scena + paragrafo direzione
-artistica; scala per paragone, materiali, luce, mood; niente nomi di
-artisti viventi]
+A huge black dragon landing in the stone courtyard of a young dwarven
+fortress at dawn. Acid drips from his closed jaws and the flagstones smoke
+where it falls. He is lean and arrogant rather than bloated: long neck,
+narrow horned skull, wings still half-open from the dive, scales matte black
+with an oily green sheen. He has never lost a fight and it shows in the way
+he holds his head.
+
+Along the walls, hundreds of dwarves have stopped fighting to look up. In
+the foreground, four small figures seen from behind face him: one with a
+great axe and a crown, one bare-handed monk with glowing braziers on his
+wrists, one caster wreathed in light and shadow, and a red-haired dwarf
+woman with a stone hound at her side.
+
+Painterly digital illustration, classic early-2000s fantasy roleplaying
+sourcebook look, visible brushwork over a crisp underdrawing, very high
+detail on stone grain and metal. Lighting: cold grey dawn from above, the dragon's
+shadow falling across the courtyard, smoke from the acid. Palette: black,
+slate grey, sickly acid green, dawn pink at the horizon. Mood: the moment
+before the first blow. Low camera, the dragon filling the upper half.
 ```
 
-**Da evitare**: `text, letters, watermark, signature, modern objects, cartoon`
+**Da evitare**: `text, letters, watermark, signature, red dragon, fire breath, cartoon, chibi, modern objects, symmetrical composition`
 **Note di coerenza d'arco**: vedi «Bibbia visiva» in testa a questo file.
 
 ### 42 · §5 — VATORE (Sal a −1000: la scena grigia + la sincronizzazione)  `[5-vatore-sal-a-1000-la-scena-grigia-la-sincronizzazione]`

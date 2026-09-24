@@ -183,6 +183,16 @@ NORME_SCOPERTE = (
         "sblocca": None,
     },
     {
+        "chiave": "eco_che_anticipa",
+        "norma": "consequence-echoes.md §3-ter regola 3 — un eco per un PG non anticipa",
+        "prerequisito": "ogni eco per un PG dichiara quale scena del master prepara",
+        "forma": None,
+        "dove": "nessuna forma prescritta: i fogli-eco non dicono a quale scena "
+                "portano, e senza quel legame nessuno sa cosa sarebbe un'anticipazione",
+        "rilevatore_pronto": None,
+        "sblocca": "una convenzione di marcatura eco → scena, poi il confronto col master",
+    },
+    {
         "chiave": "due_livelli_di_subordinate",
         "norma": "read-aloud-adulti.md — max due livelli di subordinate",
         "prerequisito": None,
