@@ -2893,6 +2893,79 @@ disabilitato finché non si riallinea. Poi due righe: il passo «Update branch
 prima del merge» nella checklist di chiusura della skill `rumblingstone-plans`,
 e una nel Playbook dove si parla di rami.
 
+### 4.12 · Lotto **4j** — il lavoro rimasto nei rami, misurato riga per riga `[⬜ aperto il 2026-09-24 · 4j-1 · 4j-2 · 4j-3 · 4j-4 · 4j-5]`
+
+Nasce dalla pulizia dei rami di PRATICHE (D5, D7, D8). Il DM: *«per D7 e D8
+prima misura davvero se non c'è niente, non ti fidare»*, e dopo la misura:
+*«D7 no, D8 no solo se è previsto davvero il recupero, altrimenti mantieni;
+ci sono delle varianti che si possono estrarre e integrare nel main»*.
+
+**FASE 1 · Audit (fatta il 2026-09-24).** `plans/esperimenti/misura-rami/misura_rami.py`
+prende le righe che un ramo aggiunge e le cerca su `main`, identiche o quasi
+(≥ 0,9). La tabella completa, con SHA e lettura delle righe mancanti, è in
+[PRATICHE §7.2](PIANO-PRATICHE-DI-INGEGNERIA.md). Quello che conta qui è la
+parte che **non** è su `main`:
+
+| Ramo | Righe mancanti | Che cosa |
+|---|---:|---|
+| `claude/review-tournament-integration-yYlwv` (nessuna PR) | 813 su 834 | il Torneo di Dauth di maggio, riscritto a luglio da chi lo credeva inesistente (PIANO-REVISIONE-ARC09, voce A8) |
+| `claude/salvatore-character-art-wSjuH` (nessuna PR) | 3 su 3 | due correzioni al villain Salvatore e una di regole nel testo P2C |
+| `claude/optimize-skills-agent-folders-dwJC4` (nessuna PR) | 182 su 281 | per lo più infrastruttura rifatta; ma la correzione di `measure_tokens.py` sui file di caricamento obbligatorio non c'è |
+| `claude/dnd-map-generation-research-55pzry` (#42, rifiutata) | 245 su 264 | un master del Portale (L3 Ultra-Clear) e 11 righe di `render_map_svg.py` |
+| `claude/golarion-pregen-character-sheets-cstheq` (#109, superata) | 130 su 134 | ADR-0021 sul caricamento esplicito delle skill, superato da ADR-0041 |
+| `claude/terros-battle-hints-booklet-hfvbef` (#67, superata) | 308 su 364 | il booklet HTML degli hint di Terros, superato da quello da manifest |
+
+Gli altri otto rami del gruppo B hanno su `main` tutto quello che aggiungono,
+salvo scarti letti uno per uno in PRATICHE §7.2.
+
+**La regola del lotto: nessuno di questi rami si cancella prima che il suo
+sotto-lotto sia chiuso.** Chiuso vuol dire: la variante è entrata su `main`,
+oppure il DM ha scritto perché non entra. Per i tre con una PR il contenuto
+resta anche in `refs/pull/<N>/head`, ma il DM ha deciso di tenerli (D7 = no),
+e il ramo è il modo più semplice di ritrovarli.
+
+**FASE 2 · Sviluppo, un ramo e una PR per sotto-lotto (PRATICHE D6).**
+
+#### 4j-1 · Il Torneo di Dauth di maggio ⬜
+`[engine: Opus 5.5, sessione principale · effort: xhigh · qualità: per ognuno dei sei file una tabella «cosa entra, dove, perché no», confermata dal DM prima di scrivere; zero contraddizioni col canone di oggi (Karruk)]`
+
+Classe **K**. Il confronto è file per file, fra la versione di maggio e quella
+di luglio o settembre: master del DM (290 righe contro 166), echi a lungo
+periodo (229 contro 93), sotto-quest di Thorik (170 contro 107), di Artemis e
+di Hella (dove `main` è più lungo), il Giorno 3 (superato nel registro, perché
+fa di Karruk un hobgoblin chierico GS 12 a Dauth). La domanda non è quale
+versione vince: è quali **varianti** di maggio mancano a quella di oggi.
+
+#### 4j-2 · Le correzioni di Salvatore ⬜
+`[engine: Opus 5.5 · effort: alto · qualità: le tre righe su main, la regola verificata su una fonte del repo, il DM conferma]`
+
+Classe **K**. Il DM ha dato il via il 2026-09-24. La de-pietrificazione è
+verificata sulle schede PCGen del repo (PRATICHE §7.2).
+
+#### 4j-3 · `measure_tokens.py` e i file di caricamento obbligatorio ⬜
+`[engine: Sonnet 5 · effort: medio · qualità: un test che fa rosso se una query di campagna non conta i file che la skill obbliga a caricare]`
+
+Classe **C**. Rifatta sul codice di oggi, non portata: il ramo è di maggio,
+quando le skill erano quattro.
+
+#### 4j-4 · Le varianti dei tre rami giudicati ⬜
+`[engine: Opus 5.5 · effort: alto · qualità: per ogni ramo un elenco di varianti con la proposta entra/non entra, e il DM che decide riga per riga]`
+
+Classe **G**. #42, #109, #67: il giudizio del DM di allora riguardava la PR
+intera. Qui si guarda se dentro c'è qualcosa che vale da solo, per esempio le
+11 righe di `render_map_svg.py` della #42. Ne esce un elenco, non codice.
+
+#### 4j-5 · Il punto cieco del registro ⬜
+`[engine: Sonnet 5 · effort: medio · qualità: contenuti_nei_rami --righe fa rosso sul ramo Salvatore e verde su documento-stemmi-alternativi]`
+
+Classe **C**. `contenuti_nei_rami.py` conta i file nuovi e non vede le
+modifiche a file esistenti. Il prototipo è `misura_rami.py`; entra nello
+script come opzione `--righe`, con i due rami qui sopra come casi di test.
+
+**FASE 3 · Validazione.** `misura_rami.py` rilanciato sui sei rami della
+tabella: ogni riga mancante è su `main` oppure ha il suo «perché no» scritto
+dal DM. Poi, e solo poi, il ramo si cancella con lo stesso registro dei 38.
+
 ## Come si misura che il piano è finito
 
 Non «quattro PR chiuse». Queste:

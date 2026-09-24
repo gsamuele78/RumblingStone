@@ -202,7 +202,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**15 aperte** · 42 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**15 aperte** · 45 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -228,6 +228,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D4~~ | `PRATICHE` | PI-1 | ✅ **Risposta del DM il 2026-09-24: sì** (*«d1-d5 del piano pratiche di ingegneria sì»*). **Il merge automatico delle PR verdi**, una volta protetto `main`? Proposta: sì, ed è ciò che rende economiche le PR piccole |
 | ~~D5~~ | `PRATICHE` | PI-2 | ✅ **Risposta del DM il 2026-09-24: sì** (*«d1-d5 del piano pratiche di ingegneria sì»*). L'elenco misurato dopo `git fetch --prune` è di **38** rami, ed è nella risposta al DM dello stesso giorno: si cancellano quando il DM lo conferma. **I 39 rami remoti già interamente su `main` si cancellano?** L'elenco lo produce `misura_flusso`; `contenuti-nei-rami.json` conferma che non portano niente di nuovo. Proposta: sì, dopo che hai visto l'elenco |
 | ~~D6~~ | `PRATICHE` | tutti | ✅ **Risposta del DM il 2026-09-24: (a).** **Come si esegue la regola di D1 dopo la #160?** (a) un ramo e una PR per lotto, (b) si aspetta il merge della #160 e si riparte sullo stesso ramo un lotto alla volta. Da qui ogni lotto di questo piano ha un ramo suo e una PR sua in bozza |
+| ~~D7~~ | `PRATICHE` | PI-2 | ✅ **Risposta del DM il 2026-09-24: no.** Gli 11 rami del gruppo B restano. La misura riga per riga (`plans/esperimenti/misura-rami/misura_rami.py`) dà otto rami con tutto su `main` e tre (#42, #109, #67) con contenuto giudicato ma non su `main`; il DM: *«ci sono delle varianti che si possono estrarre e integrare nel main»*. Le varianti dei tre sono il lotto [RIPRESA-PR 4j-4](PIANO-RIPRESA-PR-ABBANDONATE.md) |
+| ~~D8~~ | `PRATICHE` | PI-2 | ✅ **Risposta del DM il 2026-09-24: no, e il recupero previsto davvero** (*«no solo se è previsto davvero il recupero, altrimenti mantieni»*). I due rami senza PR restano finché il loro recupero non è chiuso: il Torneo di Dauth di maggio è [RIPRESA-PR 4j-1](PIANO-RIPRESA-PR-ABBANDONATE.md), `measure_tokens.py` è 4j-3 |
+| ~~D9~~ | `PRATICHE` | PI-3 | ✅ **Risposta del DM il 2026-09-24: sì agli avvisi, no alle PR settimanali** (*«d9 ok, non le PR di aggiornamenti settimanali»*). **Dependabot anche per `converters/`?** Gli avvisi di sicurezza vengono dal grafo delle dipendenze, che legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`; `dependabot.yml` resta sulla radice, e un commento in testa dice perché |
 | ~~D1~~ | `QUALITA-CODICE` | E1 · E3 | ✅ **decisa dal DM il 2026-09-23: sì**, il verificatore condivide il lettore ([ADR-0066](adr/ADR-0066-le-creature-hanno-una-libreria-e-il-verificatore-non-importa-la-scelta.md)). **Il verificatore condivide il lettore?** Oggi lo fa già: importa 23 simboli da `genera_attributi`. **Sì** (consigliato): il lettore va in `dmcore/lettura_creatura.py` e lo usano tutti; l'indipendenza sta nelle regole e nella scelta, che il verificatore non importa mai (E4 lo prova). **No**: il verificatore tiene un lettore suo, copiato, più sicuro contro un errore di lettura condiviso e con una seconda copia da tenere allineata a mano |
 | ~~D2~~ | `QUALITA-CODICE` | E6 | ✅ **decisa dal DM il 2026-09-23: (a)**, vince `genera_attributi`; attuata in E6. **Quale tabella dei ruoli vince?** Dei 6 ruoli di `genera_creatura`, 4 ordinano le caratteristiche diversamente dal profilo corrispondente di `genera_attributi` (schermagliatore, tiratore, blaster, controllore). **(a)** vince `genera_attributi`: cambiano i PNG che `genera_creatura` genera d'ora in poi, nessun blocco del Bestiario; **(b)** vince `genera_creatura`: cambiano gli `attributi` di alcuni dei 15 blocchi scelti dall'array, che il DM vede prima; **(c)** si tengono separate e si dichiara perché |
 | ~~D3~~ | `QUALITA-CODICE` | E9 | ✅ **decisa dal DM il 2026-09-23: sì, subito**; attuata in E9. **`dm.py bestiario` si fa in questo lotto o dopo?** Costa poco e non dipende dalla libreria; farlo prima di E8 vuol dire toccare `dm.py` due volte se un'interfaccia cambia |
@@ -440,10 +443,10 @@ aveva 3.357: è il motivo della regola, non un precedente.
 
 | | Cosa | Dove | Da dove si parte |
 |---|---|---|---|
-| 🟡 | **Pulizia dei rami già su `main`** (D5 sì). Rimisurati: 38, gli stessi, con lo SHA di ognuno. La sessione d'agente non può cancellarli (i permessi rifiutano `git push --delete`): li cancella il DM col comando qui sotto la tabella | [PRATICHE](PIANO-PRATICHE-DI-INGEGNERIA.md) §7.1 | rimisurare col comando di §7.1 del piano, poi cancellare. Dopo il merge della #160 anche `claude/festive-tesla-tgsauj` è su `main` |
+| ✅ | **Pulizia dei rami già su `main`** (D5 sì): 38 su 38 cancellati dal DM il 2026-09-24, con lo SHA di ognuno in PRATICHE §7.1. I 17 rami rimasti sono in §8 | [PRATICHE](PIANO-PRATICHE-DI-INGEGNERIA.md) §7.1 e §7.2 | fatto |
 | ✅ | **Il registro dei rami dopo il merge** (fatto il 2026-09-24, 216 riferimenti, 50 file mai arrivati; tolte anche le voci di `PIANO-LEVEL-DESIGN-…` e `agents.conf`, ormai identici su `main`): la voce `pr/160` passa da `in-volo` a `portato`, e la testata di `docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md` esce dalla misura | `plans/contenuti-nei-rami.json` | `python3 scripts/contenuti_nei_rami.py --fetch` |
 | 🟡 | **PI-1 · 4i-3**, `main` protetto: verificato `protected: true`; manca la prova della prima PR indietro rispetto a `main`, e le due righe nella skill `rumblingstone-plans` e nel Playbook | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) §4.11.6 | la prima PR del §7.1 che resta indietro |
-| 🟡 | **PI-3** (Dependabot, `pip-audit` non bloccante e runner fissato fatti nel ramo `claude/focused-meitner-pgyb20`; restano la prima PR di Dependabot, la prova del segreto e la revisione con l'IA): `dependabot.yml`, `pip-audit`, prova del blocco dei segreti; la revisione con l'IA di GitHub che fallisce per il modello; l'esito di CodeQL JavaScript | PRATICHE PI-3 | primo lotto da fare, ramo suo |
+| 🟡 | **PI-3**: `dependabot.yml`, `pip-audit` non bloccante e runner fissato a `ubuntu-24.04` sono su `main` con la [#162](https://github.com/gsamuele78/RumblingStone/pull/162). CodeQL JavaScript verde sulla #162. Restano la prima PR di Dependabot, la prova del blocco dei segreti e la revisione con l'IA di GitHub, che sulla #162 non è comparsa | PRATICHE PI-3 | §8 |
 | ⬜ | **PI-6** canone toccato nella PR, **PI-2** `misura_flusso`, **PI-5** proprietà sui parser, **PI-4** scenari tracciati (dopo CICLO D6) | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
 | ⬜ | **Ciclo di sessione e menu**: Fase 0 (ADR-0068, contratti, D1-D6), poi F1-F4 | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
 | ⬜ | **RIPRESA-PR** 4g e 4h; PR aperte #99 e #106 | RIPRESA-PR, §3 qui sopra | `python3 scripts/contenuti_nei_rami.py --fetch` |
@@ -451,6 +454,8 @@ aveva 3.357: è il motivo della regola, non un precedente.
 | ✅ | **`ubuntu-latest` passa a Ubuntu 26 dal 19 ottobre 2026**: fissato `ubuntu-24.04` nei due job, si prova 26.04 in una PR sua (avviso di GitHub) | PRATICHE PI-3 | prima di quella data: o si fissa `runs-on: ubuntu-24.04`, o si prova la CI su `ubuntu-26.04` in una PR e si tiene `latest` |
 | ⬜ | **`validate_lingua` rosso su `main`**: 24 refusi in 8 file (misurato il 2026-09-24). Il passo è non bloccante, ma GitHub lo annota come errore («exit code 1») anche con la CI verde, e confonde chi legge | nessun piano: nasce qui | `python3 scripts/validate_lingua.py`, poi correggere in una PR di soli refusi |
 | ✅ | **L'esperimento BDD**: feature, step e i 16 mutanti restano come prova riproducibile, fuori dalla CI | [RICERCA-BDD-O-TDD](RICERCA-BDD-O-TDD-2026-09.md) §3 | `plans/esperimenti/bdd-gruppo-nuovo/` |
+
+✅ *Eseguito dal DM il 2026-09-24: 38 rami cancellati su 38.*
 
 **La pulizia dei rami, per il DM.** Cancella soltanto i 38 nomi della tabella
 di PRATICHE §7.1, e ciascuno solo se è ancora interamente su `main`. Un ramo
@@ -481,4 +486,77 @@ grep -oE '^\| 2026-[0-9-]+ \| `[0-9a-f]{40}` \| `claude/[^`]+`' plans/PIANO-PRAT
 |---|---|
 | **D1-D6** del ciclo di sessione (cronaca automatica, alleanze, chi scrive la prosa, che menu, immagini, BDD) | CICLO-SESSIONE §8 |
 | La revisione di sicurezza con l'IA di GitHub: cambiare modello o spegnerla | PRATICHE PI-3 |
+| Le D7 e D8 di PRATICHE, i rami rimasti | §8 qui sotto |
 
+---
+
+## 8 · 🔁 Ripartire da qui — dopo la #162 (2026-09-24, sera)
+
+> **Perché questa sezione.** Il DM ha chiesto di ripartire da qui
+> *«considerando quello che è stato fatto e aggiornando di conseguenza»*. §7
+> resta com'era, con le righe chiuse segnate; questa sezione dice lo stato di
+> adesso e cosa viene dopo.
+
+### 8.1 · Cosa è successo dopo §7
+
+- La [#162](https://github.com/gsamuele78/RumblingStone/pull/162) è su `main`
+  (`87bd083`): PI-3 in parte, il registro dei rami dopo la #160, i 38 rami con
+  il loro SHA.
+- Il DM ha cancellato i 38 rami. Rimisurato con `git ls-remote`: non ce n'è
+  più nessuno.
+- La CI di `main` dopo il merge è verde e gira su `ubuntu-24.04`. Il passo
+  `pip-audit` gira; essendo non bloccante GitHub lo mostra verde comunque, e la
+  prova che non trova niente resta quella locale (13 pacchetti, nessuna
+  vulnerabilità nota).
+- Dependabot ha aggiornato il grafo delle dipendenze e **non ha ancora aperto
+  PR**. Il suo primo giro, prima della #162, ha letto anche
+  `converters/Html_to_markdown` e `converters/pdf-to-md-engine`, che
+  `dependabot.yml` non copre.
+- Sulla #162 il bot di revisione di Codex ha risposto solo che il limite d'uso
+  è esaurito: nessuna revisione.
+
+### 8.2 · Cosa resta, in ordine
+
+| | Cosa | Classe | Dove | Da dove si parte |
+|---|---|---|---|---|
+| ⬜ | **Le correzioni del ramo Salvatore**: la de-pietrificazione con *Pietra in Carne* o *Sciogliere Incantesimo* al posto di *Rimuovere Maledizione* (verificata sulle schede PCGen del repo, PRATICHE §7.2), la notazione dei PF «14d6+28», e il chiarimento che Sajak è Sonjak (alias già in `state.md`, non un errore) | **K** | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) 4j-2; via del DM il 2026-09-24 | `Bestiario/villain/Salvatore/Salvatore.md` e il testo P2C di `09_…`, un ramo suo. Il ramo `claude/salvatore-character-art-wSjuH` si cancella solo dopo |
+| ⬜ | **Il punto cieco del registro dei rami**: `contenuti_nei_rami.py` conta i file nuovi e non vede le modifiche a file esistenti. Il prototipo c'è: `plans/esperimenti/misura-rami/misura_rami.py`, righe aggiunte contro `main`, con il ramo Salvatore come controllo positivo | **C** | RIPRESA-PR 4j-5 | portare il prototipo in `contenuti_nei_rami.py --righe`, con un test che fa rosso sul ramo Salvatore |
+| ✅ | **D7 = no**: gli 11 rami del gruppo B restano. Otto hanno tutto su `main`, tre hanno varianti che si possono estrarre | DM | PRATICHE §7 | le varianti dei tre sono RIPRESA-PR 4j-4 |
+| ⬜ | **Le varianti dei rami giudicati** (#42, #109, #67): un elenco entra/non entra, riga per riga | **G** | RIPRESA-PR 4j-4 | `misura_rami.py` su ciascuno, poi lettura |
+| ⬜ | **Il Torneo di Dauth di maggio** (ramo `review-tournament-integration-yYlwv`, 813 righe mai arrivate): confrontarlo con le versioni di luglio e settembre, e decidere cosa entra. Il Giorno 3 contraddice il canone su Karruk | **K** | RIPRESA-PR 4j-1 (D8 = no) | un file alla volta: master del DM, echi, sotto-quest |
+| ⬜ | **La correzione di `measure_tokens.py`** (ramo `optimize-skills-agent-folders-dwJC4`): contare i file che una skill obbliga a caricare, senza i quali le query di campagna risultano sottostimate | **C** | RIPRESA-PR 4j-3 (D8 = no) | rifarla sul codice di oggi, con un test |
+| ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati stasera: gli stessi del mattino | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
+| ✅ | **Dependabot per `converters/`** (PRATICHE D9): sì agli avvisi, che vengono dal grafo; no alle PR settimanali. `dependabot.yml` resta sulla radice e lo dice in un commento | DM | PRATICHE §7 | fatto |
+| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del segreto (DM), la revisione con l'IA (impostazioni) | | PRATICHE PI-3 | si guarda alla prossima PR |
+| ⬜ | **Da §7.2, invariati**: PI-1 · 4i-3 (la prova della prima PR indietro rispetto a `main`), Node.js 20 (aspetta Dependabot), PI-6, PI-2, PI-5, PI-4, il ciclo di sessione, RIPRESA-PR 4g e 4h | | §7.2 | nell'ordine di §7.2 |
+
+### 8.3 · Come si lavora da una sessione con un ramo solo
+
+La regola resta **un lotto, un ramo, una PR** (PRATICHE D6). Una sessione
+d'agente però ha un ramo assegnato e non ne apre altri. Il modo che ha
+funzionato con la #162: un lotto sul ramo, PR, merge, poi il ramo si
+ricrea da `main` con lo stesso nome e ospita il lotto successivo. Nessun
+lotto si somma a un altro nella stessa PR.
+
+🔎 **Le regole di 3.5 fuori rete.** La skill `dnd-35-srd` non contiene il
+testo degli incantesimi: `spells.md` ha le scuole e qualche esempio, e
+`resources.md` manda a d20srd.org, che dalla sessione non si raggiunge. Il
+testo c'è però nelle esportazioni PCGen di `Bestiario/pregen-pcgen/`, che per
+ogni incantesimo preparato riportano effetto, livello (ricavabile dalla CD) e
+pagina del PHB. È da lì che si è verificata la de-pietrificazione. Dirlo nella
+skill è una riga in `resources.md`, e sarebbe una norma nuova da registrare
+(G3): un lotto suo.
+
+Due cose che la sessione non può fare, viste stasera: cancellare rami
+remoti (i permessi rifiutano `git push --delete`) e raggiungere d20srd.org
+(la rete lo blocca). La prima la fa il DM; per la seconda una regola si
+marca `[INFERRED — needs DM confirmation]` invece di dirla verificata.
+
+### 8.4 · Le decisioni aperte al DM che nascono qui
+
+| Decisione | Dove |
+|---|---|
+| ~~PRATICHE D7~~: no, i rami restano; varianti in RIPRESA-PR 4j-4 | PRATICHE §7 |
+| ~~PRATICHE D8~~: no, con il recupero in RIPRESA-PR 4j-1 e 4j-3 | PRATICHE §7 |
+| ~~La regola della de-pietrificazione~~: verificata sulle schede PCGen del repo; via del DM al porting (RIPRESA-PR 4j-2) | PRATICHE §7.2 |
+| ~~PRATICHE D9~~: decisa, avvisi sì e PR settimanali no | PRATICHE §7 |
