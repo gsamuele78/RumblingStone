@@ -2,7 +2,7 @@
   "_cos_e": "Il registro dei file che esistono in un ramo o in una PR e mai su main: a ognuno un posto. Lo legge scripts/contenuti_nei_rami.py (PIANO-RIPRESA-PR-ABBANDONATE §4.11, lotto 4i-2). Stati ammessi e significato: nello script, STATI.",
   "misura": {
     "data": "2026-09-24",
-    "riferimenti": 216,
+    "riferimenti": 179,
     "file_mai_arrivati": 50
   },
   "rami": [

@@ -260,6 +260,9 @@ pratica nuova che la fa diventare rossa si corregge o si toglie.
 | ~~D5~~ | PI-2 | ✅ **Risposta del DM il 2026-09-24: sì** (*«d1-d5 del piano pratiche di ingegneria sì»*). L'elenco misurato dopo `git fetch --prune` è di **38** rami, ed è nella risposta al DM dello stesso giorno: si cancellano quando il DM lo conferma. **I 39 rami remoti già interamente su `main` si cancellano?** L'elenco lo produce `misura_flusso`; `contenuti-nei-rami.json` conferma che non portano niente di nuovo. Proposta: sì, dopo che hai visto l'elenco |
 
 | ~~D6~~ | tutti | ✅ **Risposta del DM il 2026-09-24: (a).** **Come si esegue la regola di D1 dopo la #160?** (a) un ramo e una PR per lotto, (b) si aspetta il merge della #160 e si riparte sullo stesso ramo un lotto alla volta. Da qui ogni lotto di questo piano ha un ramo suo e una PR sua in bozza |
+| D7 | PI-2 | **Gli 11 rami che non portano niente di nuovo si cancellano?** Sono in §7.2, gruppo B: cinque puntano esattamente alla testa di una PR mergiata con squash, sei hanno una PR chiusa il cui contenuto è su `main` o è stato giudicato superato o rifiutato. Il loro contenuto resta comunque in `refs/pull/<N>/head`, che GitHub non cancella. Proposta: sì, con lo stesso comando e lo stesso registro dei 38 |
+| D8 | PI-2 | **I due rami senza PR e con lavoro in parte superato si cancellano?** `optimize-skills-agent-folders-dwJC4` e `review-tournament-integration-yYlwv` (§7.2, gruppo C). I file nuovi sono tutti su `main` o superati, tranne due già registrati come tali; le modifiche a file esistenti non sono state confrontate riga per riga, e dopo la cancellazione li ricrea solo lo SHA scritto qui. Proposta: sì, perché le modifiche sono di maggio su file riscritti da allora; no, se vuoi prima il confronto |
+| D9 | PI-3 | **Dependabot anche per `converters/`?** Il grafo delle dipendenze di GitHub legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`, che hanno `requirements.txt` veri; `dependabot.yml` guarda solo la radice. AGENTS.md dice che `converters/` è un mondo a parte, fuori da ADR-0037. Proposta: sì per gli avvisi di sicurezza, che arrivano comunque dal grafo; no per le PR di aggiornamento settimanali, finché nessuno usa quei convertitori con regolarità |
 
 PI-4 non ha una decisione qui: dipende dalla D6 di CICLO-SESSIONE.
 
@@ -342,6 +345,78 @@ nella tabella: con quello un ramo cancellato si ricrea
 | 2026-09-23 | `b36ce256dcff7a3bb7f53c916eaaf22a5b6f54e6` | `claude/gallant-sagan-to3cr6` |
 | 2026-09-23 | `2a9700f197cec83a1ae0724c1ed2ee54aa9dc41d` | `claude/youthful-thompson-o1kktp` |
 
+✅ **Cancellati dal DM il 2026-09-24**: 38 su 38, verificato con
+`git ls-remote` subito dopo. Sono spariti anche `claude/festive-tesla-tgsauj`
+e `claude/focused-meitner-pgyb20`, i rami delle #160 e #162, tolti al merge.
+
+### §7.2 · I 17 rami rimasti, misurati il 2026-09-24 dopo la pulizia
+
+Nessuno è interamente contenuto in `main`, quindi il ciclo di §7.1 non li
+vede. Ma non vuol dire che portino lavoro nuovo: una PR mergiata con squash
+lascia il ramo «fuori» da `main` anche se il suo contenuto c'è tutto. Il
+metodo: la testa del ramo confrontata con le teste delle PR
+(`git ls-remote origin 'refs/pull/*/head'`), `git cherry`, il registro dei
+rami, e per i casi dubbi il diff contro `main`.
+
+🔎 **Il fatto che rende sicura la cancellazione**: quando un ramo con una PR
+viene cancellato, GitHub tiene il suo contenuto in `refs/pull/<N>/head`.
+Lo si è visto sulle PR dei 38: le loro teste sono ancora tutte lì, 162
+riferimenti.
+
+**A · da tenere**
+
+| SHA della testa | Ramo | Perché |
+|---|---|---|
+| `d100709a4271cd88403093d27d3a4a84bdd03930` | `campaign-group-rumblingstone-dm-gianfranco` | ramo di partita del gruppo (ADR-0007) |
+| `fce049071d6156d76321b5fb2c7ac733071d5930` | `claude/stone-audit-best-practices-yver7k` | PR #99 aperta |
+| `80a91a220763f58d184a8f1947b29942c260e848` | `claude/pr-105-raster-generation-bq0efs` | PR #106 aperta |
+| `64df2ebc8f87992e951b212e59996866ad4bf326` | `claude/salvatore-character-art-wSjuH` | **porta tre correzioni che su `main` non ci sono**: vedi sotto |
+
+**B · non portano niente di nuovo (D7)**
+
+| SHA della testa | Ramo | Dove sta il contenuto |
+|---|---|---|
+| `aab266cc89fde924998f02b3227f0c564b7ad96f` | `claude/campaign-session-tools-j2dzx1` | testa della #92, mergiata con squash |
+| `006338e384399923eae4405dfd62f07745b09122` | `claude/documento-stemmi-alternativi-ehgi9m` | testa della #102, mergiata con squash |
+| `3e4315336db109940d53783e59be5f71d0606b18` | `claude/rumbling-stone-casters-oxzi2w` | testa della #98, mergiata con squash |
+| `219a5eb031dd24256959c0f762281ead4685aa91` | `claude/paizo-editorial-components-qky8nv` | testa della #120, mergiata con squash |
+| `7293e923a6739a00c8641a21f9c65585249fc4e3` | `claude/scripts-audit-documentation-u48g28` | testa della #66, mergiata con squash |
+| `571c209c4076264159dca04a60ca1f3b41b52dbf` | `claude/hammerfist-maps-ultra-clear-9pczfe` | #63 chiusa il 2026-09-11: contenuto riportato da RIPRESA-PR F1 |
+| `e5cf517799550a81fedf0767313be7c892c992f5` | `claude/map-generation-pipeline-7ka5a7` | #52 chiusa il 2026-09-11: contenuto riportato da RIPRESA-PR F2 |
+| `974e9260193453e4c0b385a7d08001f838d9194e` | `claude/document-audit-prd-cleanup-j5ipln` | #143 chiusa, registro: portato |
+| `4986ce87cb7826c804df3be3c34a1f3e3614b30b` | `claude/dnd-map-generation-research-55pzry` | #42 chiusa, registro: rifiutato |
+| `c45c9cc43d64cb6723682a96f56b58f364267cfe` | `claude/golarion-pregen-character-sheets-cstheq` | #109 chiusa, registro: superato |
+| `23f14b607be177699b915c33dbaa7f9e022dee6a` | `claude/terros-battle-hints-booklet-hfvbef` | #67 chiusa, registro: superato |
+
+**C · senza PR, lavoro in parte superato (D8)**
+
+| SHA della testa | Ramo | Cosa porta |
+|---|---|---|
+| `b5e04d2d78799a56bcfa8257c09bc0d817d61e28` | `claude/optimize-skills-agent-folders-dwJC4` | due commit del 2026-05-02 su 15 file. `agents.conf` è su `main` rifatto; `validate_skill_paths.py` è superato da `validate_docs --sorgenti` (registro); le modifiche agli altri 13 file non sono state confrontate |
+| `895863241eaff57d135ed1b2527bd9f55009c2c1` | `claude/review-tournament-integration-yYlwv` | un commit del 2026-05-03: sei file nuovi del Torneo di Dauth, cinque su `main` con lo stesso nome, il sesto (`…DAY3-DAUTH-CITY-SIEGE.md`) superato nel registro; più righe aggiunte a tre file del Torneo e a `campaign/state.md` |
+
+🔴 **Il ramo Salvatore, e il punto cieco che ha mostrato.** Un commit del
+2026-05-02, tre righe su due file, e nessuna delle tre è su `main`:
+
+- `Bestiario/villain/Salvatore/Salvatore.md` dice ancora «Matrona **Sajak**»,
+  dove il resto del canone ha Sonjak;
+- lo stesso file dà i PF come «79 (14 DV: 13d6+28)», e il ramo li scrive
+  «79 (14d6+28)»;
+- il testo P2C fa ancora de-pietrificare le statue con *Rimuovere
+  Maledizione* (CD 22); il ramo lo sostituisce con *Pietra in Carne* o
+  *Sciogliere Incantesimo*, perché la pietrificazione non è una maledizione.
+  `[INFERRED — needs DM confirmation]`: coerente con l'SRD come lo ricordo,
+  ma d20srd.org non è raggiungibile dalla rete della sessione e la verifica
+  sulla fonte non c'è.
+
+Il ramo era nel gruppo dei cancellabili per un solo motivo: il registro dei
+rami **conta i file nuovi e non vede le modifiche a file esistenti**, e i due
+file del ramo esistono su `main` con un altro percorso o lo stesso. Tre
+correzioni di canone sarebbero sparite con la cancellazione, senza un
+controllo rosso. Il porting è un lotto di classe **K** (tocca il canone) e sta
+in STATO-E-ORDINE §8; il punto cieco del registro è un lotto di classe **C**,
+nello stesso posto.
+
 ## §8 · Ordine
 
 PI-1 e PI-3 prima, perché sono impostazioni e costano minuti. Poi PI-6, che
@@ -354,7 +429,7 @@ PR sua: il primo esercizio della norma di PI-2 è questo piano stesso.
 - ⬜ PI-1 · `main` protetto e merge automatico (DM, con 4i-3). 2026-09-24: `main` risulta `protected: true` via API; il dettaglio delle regole, il merge automatico e la sicurezza non si leggono da qui e si verificano alla prima PR indietro rispetto a `main`
 - 🟡 PI-3 · Dependabot, segreti, `pip-audit`. 2026-09-24: `dependabot.yml`, `pip-audit` in CI (non bloccante), runner fissato a `ubuntu-24.04`; restano la prima PR di Dependabot, la prova del segreto (DM) e la revisione con l'IA (impostazioni)
 - ⬜ PI-6 · canone toccato nella PR
-- ⬜ PI-2 · `misura_flusso` e la norma delle 400 righe
+- ⬜ PI-2 · `misura_flusso` e la norma delle 400 righe. 2026-09-24: cancellati i 38 rami già su `main` (D5); 17 rimasti classificati in §7.2, D7 e D8 aperte
 - ⬜ PI-5 · proprietà sui parser
 - ⬜ PI-4 · scenari tracciati (se CICLO-SESSIONE D6 = a)
 - ⬜ Fase 3 · rimisura a 30 giorni

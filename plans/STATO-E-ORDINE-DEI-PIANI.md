@@ -202,7 +202,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**15 aperte** · 42 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**18 aperte** · 42 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -218,6 +218,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | **D4** | `PIPELINE-IBRIDE` | Lotto D | **Quante scene il DM è disposto ad annotare?** Il banco di misura della prosa esiste solo se qualcuno dice quali testi sono buoni, e l'unico che può dirlo è chi li ha visti funzionare al tavolo. Con zero scene annotate il lotto D copre le prime tre famiglie di §6 e la quarta resta fuori, il che è una risposta legittima e va detta invece che rimandata |
 | **D2** | `MESTIERE-BANCHI` | F2 · S4-S6 | **ARC-08 e ARC-09 si rifiniscono nello stile, o si toccano solo dove manca un congegno operativo al tavolo?** Cambia l'ampiezza dei lotti da «aggiungere una sidebar» a «riscrivere prosa». I due archi sono chiusi come *piano* e ⬜ come *gioco*: la Torre non ha **una sola battuta** in 12 file e la Battaglia Finale **zero read-aloud** in 16, ma nessuno dei due è mai stato giocato, quindi nessuno li ha visti mancare |
 | **D3** | `MESTIERE-BANCHI` | F2 · S2-S3 | **DEF-1 è 🟡 in corso al tavolo: i lotti su di lui restano additivi?** Il piano assume di sì (si aggiungono sidebar, non si riscrive prosa già letta ai giocatori), ma è un'assunzione mia. DEF-1 ha **0 vie non combattive in 2.277 righe**: colmarlo è additivo, ma toccare i suoi read-aloud non lo sarebbe |
+| **D7** | `PRATICHE` | PI-2 | **Gli 11 rami che non portano niente di nuovo si cancellano?** Sono in §7.2, gruppo B: cinque puntano esattamente alla testa di una PR mergiata con squash, sei hanno una PR chiusa il cui contenuto è su `main` o è stato giudicato superato o rifiutato. Il loro contenuto resta comunque in `refs/pull/<N>/head`, che GitHub non cancella. Proposta: sì, con lo stesso comando e lo stesso registro dei 38 |
+| **D8** | `PRATICHE` | PI-2 | **I due rami senza PR e con lavoro in parte superato si cancellano?** `optimize-skills-agent-folders-dwJC4` e `review-tournament-integration-yYlwv` (§7.2, gruppo C). I file nuovi sono tutti su `main` o superati, tranne due già registrati come tali; le modifiche a file esistenti non sono state confrontate riga per riga, e dopo la cancellazione li ricrea solo lo SHA scritto qui. Proposta: sì, perché le modifiche sono di maggio su file riscritti da allora; no, se vuoi prima il confronto |
+| **D9** | `PRATICHE` | PI-3 | **Dependabot anche per `converters/`?** Il grafo delle dipendenze di GitHub legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`, che hanno `requirements.txt` veri; `dependabot.yml` guarda solo la radice. AGENTS.md dice che `converters/` è un mondo a parte, fuori da ADR-0037. Proposta: sì per gli avvisi di sicurezza, che arrivano comunque dal grafo; no per le PR di aggiornamento settimanali, finché nessuno usa quei convertitori con regolarità |
 | **D2** | `RIPRESA-PR` | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM **con Gemini** il 2026-08-15, montati nel modulo, `validate_standalone` verde. `comfyui_batch --lista` dava «6 da fare» per un **disallineamento di nomi**, corretto in questo lotto. La domanda vera è: **l'arte del Drappo è di Gemini, la catena di F3 genera con SDXL in locale — quale delle due è il canone del modulo?** Le differenze che contano (ADR-0019 §2, che questo caso l'aveva previsto): Gemini **non espone il seed**, quindi la serie è irripetibile e il PNG è la sorgente; i suoi termini sono un **contratto che cambia**, verificato per di più su fonti secondarie; SDXL è OpenRAIL++-M, **perpetua**. Di contro la provenienza di Gemini è **firmata C2PA**, e SDXL su queste immagini **nessuno l'ha visto**. 🔵 **Metodo scelto dal DM il 2026-09-11: collaudo prima di scegliere** — la decisione **resta aperta**, si chiude quando il DM ha visto il confronto. Il DM: *«voglio fare prima un collaudo con 2 o 3 immagini e vedere davvero la qualità prima di buttare quelle di Gemini, che sono carine»*. Si generano **due o tre** immagini con SDXL in una cartella a parte, si mettono accanto alle attuali, e A (tenere Gemini) o B (rigenerare tutto) si sceglie **guardando**. Il collaudo chiude anche il buco vero di F3 — la catena mai provata contro un ComfyUI reale — al costo di due immagini invece che diciotto |
 | **D11** | `RIPRESA-PR` | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un **AP originale autonomo**, mai un'espansione di RHoD, e porta il **perimetro della v1**. ✅ **I due avvertimenti che bloccavano la domanda sono tolti**: l'audit mancante è stato **rifatto da zero** ([`AUDIT-DERIVAZIONE-IP-CAMPAGNA`](../docs/audit/AUDIT-DERIVAZIONE-IP-CAMPAGNA.md)), e la tesi **regge sul repo di oggi** — archi 07+08 a **0,2** e **0,7** occorrenze RHoD per 1.000 parole contro il **5,6** dell'arco 09. 🔎 **E la misura ha aggiunto due cose che la #72 non sapeva**: il **`Bestiario/` è a 3,0** e **esce col modulo** — un perimetro che tace su di lui lascia fuori il conto una dipendenza vera — e i **moduli autoconclusivi sono già puliti** (`10-stand-alone` e il Drappo a **0,0**), quindi su quest'asse il prodotto della linea 3 di `PIANO-VENDIBILITA` è pronto. 🔴 **Cosa resta da decidere al DM**: (a) si adotta il perimetro così com'è? (b) il **bestiario** sta dentro o fuori? (c) l'ADR resta proposta finché non c'è la **verifica di un avvocato IP**, che l'audit non sostituisce — conta i nomi, non la struttura |
 | **D12** | `RICERCA-MESTIERE` | §6-bis | 🐛 **`Portale-Forgia-L2` mappa 2 ha una riga `17` duplicata** — una alla riga 290 del sorgente, una alla 297. Quale delle due debba portare un altro numero (19? 24?) lo sa solo chi ha disegnato l'arena circolare: **indovinarlo sposterebbe delle celle**, quindi è rimasto com'è e marcato nel master |
@@ -440,10 +443,10 @@ aveva 3.357: è il motivo della regola, non un precedente.
 
 | | Cosa | Dove | Da dove si parte |
 |---|---|---|---|
-| 🟡 | **Pulizia dei rami già su `main`** (D5 sì). Rimisurati: 38, gli stessi, con lo SHA di ognuno. La sessione d'agente non può cancellarli (i permessi rifiutano `git push --delete`): li cancella il DM col comando qui sotto la tabella | [PRATICHE](PIANO-PRATICHE-DI-INGEGNERIA.md) §7.1 | rimisurare col comando di §7.1 del piano, poi cancellare. Dopo il merge della #160 anche `claude/festive-tesla-tgsauj` è su `main` |
+| ✅ | **Pulizia dei rami già su `main`** (D5 sì): 38 su 38 cancellati dal DM il 2026-09-24, con lo SHA di ognuno in PRATICHE §7.1. I 17 rami rimasti sono in §8 | [PRATICHE](PIANO-PRATICHE-DI-INGEGNERIA.md) §7.1 e §7.2 | fatto |
 | ✅ | **Il registro dei rami dopo il merge** (fatto il 2026-09-24, 216 riferimenti, 50 file mai arrivati; tolte anche le voci di `PIANO-LEVEL-DESIGN-…` e `agents.conf`, ormai identici su `main`): la voce `pr/160` passa da `in-volo` a `portato`, e la testata di `docs/audit/AUDIT-LEVEL-DESIGN-E-INQUADRATURA.md` esce dalla misura | `plans/contenuti-nei-rami.json` | `python3 scripts/contenuti_nei_rami.py --fetch` |
 | 🟡 | **PI-1 · 4i-3**, `main` protetto: verificato `protected: true`; manca la prova della prima PR indietro rispetto a `main`, e le due righe nella skill `rumblingstone-plans` e nel Playbook | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) §4.11.6 | la prima PR del §7.1 che resta indietro |
-| 🟡 | **PI-3** (Dependabot, `pip-audit` non bloccante e runner fissato fatti nel ramo `claude/focused-meitner-pgyb20`; restano la prima PR di Dependabot, la prova del segreto e la revisione con l'IA): `dependabot.yml`, `pip-audit`, prova del blocco dei segreti; la revisione con l'IA di GitHub che fallisce per il modello; l'esito di CodeQL JavaScript | PRATICHE PI-3 | primo lotto da fare, ramo suo |
+| 🟡 | **PI-3**: `dependabot.yml`, `pip-audit` non bloccante e runner fissato a `ubuntu-24.04` sono su `main` con la [#162](https://github.com/gsamuele78/RumblingStone/pull/162). CodeQL JavaScript verde sulla #162. Restano la prima PR di Dependabot, la prova del blocco dei segreti e la revisione con l'IA di GitHub, che sulla #162 non è comparsa | PRATICHE PI-3 | §8 |
 | ⬜ | **PI-6** canone toccato nella PR, **PI-2** `misura_flusso`, **PI-5** proprietà sui parser, **PI-4** scenari tracciati (dopo CICLO D6) | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
 | ⬜ | **Ciclo di sessione e menu**: Fase 0 (ADR-0068, contratti, D1-D6), poi F1-F4 | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | le D1-D6 del DM |
 | ⬜ | **RIPRESA-PR** 4g e 4h; PR aperte #99 e #106 | RIPRESA-PR, §3 qui sopra | `python3 scripts/contenuti_nei_rami.py --fetch` |
@@ -451,6 +454,8 @@ aveva 3.357: è il motivo della regola, non un precedente.
 | ✅ | **`ubuntu-latest` passa a Ubuntu 26 dal 19 ottobre 2026**: fissato `ubuntu-24.04` nei due job, si prova 26.04 in una PR sua (avviso di GitHub) | PRATICHE PI-3 | prima di quella data: o si fissa `runs-on: ubuntu-24.04`, o si prova la CI su `ubuntu-26.04` in una PR e si tiene `latest` |
 | ⬜ | **`validate_lingua` rosso su `main`**: 24 refusi in 8 file (misurato il 2026-09-24). Il passo è non bloccante, ma GitHub lo annota come errore («exit code 1») anche con la CI verde, e confonde chi legge | nessun piano: nasce qui | `python3 scripts/validate_lingua.py`, poi correggere in una PR di soli refusi |
 | ✅ | **L'esperimento BDD**: feature, step e i 16 mutanti restano come prova riproducibile, fuori dalla CI | [RICERCA-BDD-O-TDD](RICERCA-BDD-O-TDD-2026-09.md) §3 | `plans/esperimenti/bdd-gruppo-nuovo/` |
+
+✅ *Eseguito dal DM il 2026-09-24: 38 rami cancellati su 38.*
 
 **La pulizia dei rami, per il DM.** Cancella soltanto i 38 nomi della tabella
 di PRATICHE §7.1, e ciascuno solo se è ancora interamente su `main`. Un ramo
@@ -481,4 +486,65 @@ grep -oE '^\| 2026-[0-9-]+ \| `[0-9a-f]{40}` \| `claude/[^`]+`' plans/PIANO-PRAT
 |---|---|
 | **D1-D6** del ciclo di sessione (cronaca automatica, alleanze, chi scrive la prosa, che menu, immagini, BDD) | CICLO-SESSIONE §8 |
 | La revisione di sicurezza con l'IA di GitHub: cambiare modello o spegnerla | PRATICHE PI-3 |
+| Le D7 e D8 di PRATICHE, i rami rimasti | §8 qui sotto |
 
+---
+
+## 8 · 🔁 Ripartire da qui — dopo la #162 (2026-09-24, sera)
+
+> **Perché questa sezione.** Il DM ha chiesto di ripartire da qui
+> *«considerando quello che è stato fatto e aggiornando di conseguenza»*. §7
+> resta com'era, con le righe chiuse segnate; questa sezione dice lo stato di
+> adesso e cosa viene dopo.
+
+### 8.1 · Cosa è successo dopo §7
+
+- La [#162](https://github.com/gsamuele78/RumblingStone/pull/162) è su `main`
+  (`87bd083`): PI-3 in parte, il registro dei rami dopo la #160, i 38 rami con
+  il loro SHA.
+- Il DM ha cancellato i 38 rami. Rimisurato con `git ls-remote`: non ce n'è
+  più nessuno.
+- La CI di `main` dopo il merge è verde e gira su `ubuntu-24.04`. Il passo
+  `pip-audit` gira; essendo non bloccante GitHub lo mostra verde comunque, e la
+  prova che non trova niente resta quella locale (13 pacchetti, nessuna
+  vulnerabilità nota).
+- Dependabot ha aggiornato il grafo delle dipendenze e **non ha ancora aperto
+  PR**. Il suo primo giro, prima della #162, ha letto anche
+  `converters/Html_to_markdown` e `converters/pdf-to-md-engine`, che
+  `dependabot.yml` non copre.
+- Sulla #162 il bot di revisione di Codex ha risposto solo che il limite d'uso
+  è esaurito: nessuna revisione.
+
+### 8.2 · Cosa resta, in ordine
+
+| | Cosa | Classe | Dove | Da dove si parte |
+|---|---|---|---|---|
+| ⬜ | **Le tre correzioni del ramo Salvatore**: «Sajak» → Sonjak, PF «14 DV: 13d6+28» → «14d6+28», la de-pietrificazione con *Pietra in Carne* o *Sciogliere Incantesimo* al posto di *Rimuovere Maledizione* | **K** | PRATICHE §7.2, riquadro 🔴 | `Bestiario/villain/Salvatore/Salvatore.md` e il testo P2C di `09_…`; conferma del DM sulla regola, poi un ramo suo. Il ramo `claude/salvatore-character-art-wSjuH` si cancella solo dopo |
+| ⬜ | **Il punto cieco del registro dei rami**: `contenuti_nei_rami.py` conta i file nuovi e non vede le modifiche a file esistenti. Proposta: per ogni commit che `git cherry` dà come non equivalente, `git apply --reverse --check` del suo diff su `main`; se non si applica al contrario, la modifica non è arrivata | **C** | RIPRESA-PR, estende 4i-2 | il test che deve fare rosso è proprio il ramo Salvatore |
+| ⬜ | **D7 e D8**: 11 rami che non portano niente di nuovo, due senza PR col lavoro in parte superato | DM | PRATICHE §7 e §7.2 | lo stesso comando dei 38, con i nomi del gruppo B (e C, se D8 è sì) |
+| ⬜ | **I 24 refusi di `validate_lingua`** in 8 file, rimisurati stasera: gli stessi del mattino | **M** | nessun piano | `python3 scripts/validate_lingua.py`, una PR di soli refusi |
+| ⬜ | **Dependabot per `converters/`** (PRATICHE D9): le due cartelle hanno `requirements.txt` veri, fuori dal perimetro di ADR-0037. Aggiungerle a `dependabot.yml` è una riga ciascuna | DM | PRATICHE §7 | la decisione, poi una PR piccola |
+| 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del segreto (DM), la revisione con l'IA (impostazioni) | | PRATICHE PI-3 | si guarda alla prossima PR |
+| ⬜ | **Da §7.2, invariati**: PI-1 · 4i-3 (la prova della prima PR indietro rispetto a `main`), Node.js 20 (aspetta Dependabot), PI-6, PI-2, PI-5, PI-4, il ciclo di sessione, RIPRESA-PR 4g e 4h | | §7.2 | nell'ordine di §7.2 |
+
+### 8.3 · Come si lavora da una sessione con un ramo solo
+
+La regola resta **un lotto, un ramo, una PR** (PRATICHE D6). Una sessione
+d'agente però ha un ramo assegnato e non ne apre altri. Il modo che ha
+funzionato con la #162: un lotto sul ramo, PR, merge, poi il ramo si
+ricrea da `main` con lo stesso nome e ospita il lotto successivo. Nessun
+lotto si somma a un altro nella stessa PR.
+
+Due cose che la sessione non può fare, viste stasera: cancellare rami
+remoti (i permessi rifiutano `git push --delete`) e raggiungere d20srd.org
+(la rete lo blocca). La prima la fa il DM; per la seconda una regola si
+marca `[INFERRED — needs DM confirmation]` invece di dirla verificata.
+
+### 8.4 · Le decisioni aperte al DM che nascono qui
+
+| Decisione | Dove |
+|---|---|
+| **PRATICHE D7**: cancellare gli 11 rami del gruppo B | PRATICHE §7 |
+| **PRATICHE D8**: cancellare i due rami del gruppo C | PRATICHE §7 |
+| La regola della de-pietrificazione nel testo P2C (parte della correzione Salvatore) | PRATICHE §7.2 |
+| **PRATICHE D9**: Dependabot anche per `converters/` | PRATICHE §7 |
