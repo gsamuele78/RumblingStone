@@ -662,7 +662,7 @@ teste. Il comando di §9.2 vale così com'è; lo lancia il DM.
 
 | | Cosa | Classe | Dove | Da dove si parte |
 |---|---|---|---|---|
-| ⬜ | **I 13 falsi positivi di `validate_lingua`**: il mascheramento con «x» (7), la cella «?» (1), il rapporto «5.8 : 1» (5) | **C** | §9.3 | `validate_lingua.py`, un test per ogni caso e uno che provi «familiare : è» ancora rosso; a zero, il passo in CI diventa `--strict` |
+| ✅ | **I 13 falsi positivi di `validate_lingua`**: il codice ora si maschera con «¤», che non è una lettera (7); la corsa di spazi prima della punteggiatura deve partire da una parola, non da «\|» (1), e i due punti fra due cifre non contano (5). Cinque test nuovi, quattro rossi sul validatore di prima; «familiare : è» e «5 : poi» restano rossi. Il passo in CI è **bloccante sugli errori**. `--strict` no: alzerebbe a errori anche i ~2.450 avvisi (virgolette dritte, «E'») | **C** | §9.3 | fatto; il comando di §10.3 ora dà 0 refusi |
 | ⬜ | **Il falso positivo di `validate_prosa`** sui file con «ECHI-» nel nome | **C** | §9.3 | il criterio del nome in `validate_prosa.py`, con un test |
 | ⬜ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | **M** + G3 | §8.3 | una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
 | ⬜ | **Le 120 legature della Corona** | **M** | §10.1 | prima si conta in tutto il repo, poi si decide se è un lotto solo o uno per file; la qualità è «nessuna legatura, nessun'altra riga cambiata» |

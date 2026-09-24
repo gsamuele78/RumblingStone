@@ -119,12 +119,11 @@ jobs:
       - name: Moduli standalone (STANDALONE-* e 10-stand-alone/*)
         run: python scripts/validate_standalone.py
 
-      # Non bloccante alla prima passata: la convenzione nasce oggi e il
-      # contenuto esistente la rispetta a meta'. Diventa bloccante (--strict)
-      # il giorno in cui il rumore e' a zero — non prima, o il gate viene
-      # disattivato e allora non trova piu' nemmeno i refusi veri.
-      - name: Lingua italiana — refusi meccanici (non bloccante)
-        continue-on-error: true
+      # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
+      # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
+      # dritte, «E'») restano ~2.450 e non bloccano: --strict li alzerebbe a
+      # errori, e si mette il giorno in cui anche quelli sono a zero.
+      - name: Lingua italiana — refusi meccanici
         run: python scripts/validate_lingua.py
 
       # Idem: misura la norma di italiano-nativo.md (calchi, tic a densita',
