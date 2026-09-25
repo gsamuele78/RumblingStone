@@ -88,11 +88,17 @@ active; only Topaz gem lit (state.md §0).*
 ### Powers To Awaken (Via Legacy Rituals)
 
 1. **Adamantine Will (Su):** Immunity to charm/compulsion + +4 racial vs mental effects, on natural ground. *Unlocked by: Anvil of the World (Ritual 3, in progress)*
-2. **Mantle of Stone and Spirit (Su):** Continuous Mind Blank; epic/evil DR 5; Commune 1/month in an Earth Node. *Unlocked by: Anvil of the World (Ritual 3)*
+2. **Mantle of Stone and Spirit (Su):** Continuous Mind Blank; **DR 5/epic and evil** (DM 2026-09-25, D7); Commune 1/month in an Earth Node. *Unlocked by: Anvil of the World (Ritual 3) — ✅ active*
 3. **Aura of the Eternal Forge (Su):** after the duel, not on arrival; lasts until dawn the first time, then **1/week**: *divine power* + *protection from evil* to the four; to every dwarf within 30 m also *bless* and one *stone shape*; +4 morale to attacks and saves for dwarves who see Thorik; enemies Will DC 20 or shaken 1 min. The healing half is the portal's healing (Scene 1) and does not stack. *Unlocked by: Ritual 4* (DM 2026-09-20)
-4. **Crown of Protection +3** and **Sentience** (warm or cold, by the Gift choice). With the Gift given, +2 or +3 is open question D5. *Unlocked by: Ritual 4*
+4. **Crown of Protection +3** (**+2** if Thorik gave the deflection at Hella's rite, DM D5) and **Sentience** (warm or cold, by the Gift choice). *Unlocked by: Ritual 4*
 
-**Waiting for the DM (D1, D3, D4 of the audit):** the **Resonance** with Aegis Fang from the played modules (+2 sacred to all saves, +1d6 sacred vs chaotic or evil, *Ancestral Recall* 1/day, *Echo of Heroes* 1/combat); the four gifts of wearing it (fear immunity, darkvision 36 m, *Aura of Command* 1/day, *Guidance of Moradin* 1/day); the three Topaz powers of P3 (*Sense of Time*, *Temporal Vision*, *Slow Time* 1/day). Not canon until answered.
+**Canon from the played modules (DM answers of 2026-09-25, audit §7-bis):**
+- **Resonance with Aegis Fang** (both carried by Thorik, as printed on the table's quick reference of 16/01/2026): +2 sacred to all saves; the axe deals +1d6 sacred vs chaotic or evil; *Ancestral Recall* 1/day (disarmed, the axe flies back from 30 m). **No** *Echo of Heroes* (struck from that printout). Vs dragons only the A7 bane on Fauci.
+- **The four gifts of wearing it** (P1): fear immunity, darkvision 36 m, *Aura of Command* 1/day (*command* DC 15, CL 13), *Guidance of Moradin* 1/day (senses the direction of the missing gem).
+- **Topaz** (P3): *Sense of Time* (always knows how long until Hammerfist) and *Temporal Vision* (echoes of a place's past). *Slow Time* and the generic «+1 to all powers» were dropped.
+- Portal cost at −1,000: **both apply** (1d10 years to Thorik; Artemis pays the pledge or Fort DC 25). Ritual 4 itself costs nothing.
+- Levels in the crown's book (5th…20th) are **indicative**: the ritual decides.
+- Sentience: Int 16, Wis 17, Cha 18, Ego 20, but it **never** contests Ego against Thorik.
 
 ### Three Sacred Gems
 
@@ -131,11 +137,11 @@ Band of polished obsidian with gold veins (Lathander), silver glyphs (Mask), and
 | Stage | Trigger | Powers | State |
 |---|---|---|---|
 | S0 · the chaos ring | bond with Artemis | Enhanced Vision, Wings of Shadow, Shadow Step; two dormant crisis powers. 42,000 gp | past |
-| S1 · the two deities | Lathander and Mask claim it; Cerebromorphosis crisis in Belkram's Tomb | Mask awake: +4 Spot in darkness, +2 deflection AC while flying, 3/day +1d6 electricity on a charge, *Mask's Whispers* (ghost sound 3/day, silence 1/day, +2 Move Silently/Hide); three crisis powers incl. *Twilight Sanctuary*. 52,000 gp | past, table use to confirm (D11) |
+| S1 · the two deities | Lathander and Mask claim it; Cerebromorphosis crisis in Belkram's Tomb | written in the Lord of Sun and Shadow analysis (Mask awake, *Twilight Sanctuary*), **never given to the player** (DM D11): at the table only the crisis happened, and Dawn's Defiance saved Artemis. 52,000 gp | DM-only history |
 | S2 · Reforged | Artemis **refused** Lord of Sun and Shadow (crisis **Option C**, «my path is mine»), then the Eternal Forge | the list below. 163,400 gp | **today** |
-| S3 · Ultimate Chaos | Invisible Tower: Zalkatar defeated, or purified by giving up a ring power | **not written anywhere** | ARC-09, to design (D13) |
+| S3 · Ultimate Chaos | Invisible Tower: Zalkatar defeated, or purified by giving up a ring power | **draft for DM approval** (D13): *Willed Dawn* and *Twilight Purge* 1/day, *Price of Harmony* | ARC-09, not canon yet |
 
-Option C effects on Artemis's sheet are open question D12 (proposal: the Italian master's *Mental Fortress*, +2 on saves vs divine influence).
+**Option C on Artemis's sheet (DM D12):** *Mental Fortress*, +2 permanent on saves vs divine influence (the Italian master). The English PDF's heavier effects do not apply. Crisis powers work as in the Reforged PDF, without the first version's 1/week limit (D9); *Harmonious Duality* (+1 charge with the Crown) was struck from the 16/01 printout and is gone.
 
 ### Stats
 

@@ -318,6 +318,32 @@ Le stesse domande sono in `plans/PIANO-REVISIONE-TRASVERSALE-COERENZA-E-QUALITA.
 | D12 | **Gli effetti della Opzione C** sulla scheda di Artemis: quelli del master italiano, del PDF inglese, o nessuno? | **La Fortezza Mentale** del master italiano (+2 ai TS contro l'influenza divina); la penalità ai poteri di crisi è superata dalla riforgiatura |
 | D13 | **I poteri del Caos Ultimo** (stadio 3 dell'Anello, Torre Invisibile) | Da progettare col DM. Una proposta di forma, non canone, è sulla pagina `04_Anello_S3_Caos_Ultimo_DM.html` |
 
+
+### §7-bis · Le risposte del DM (2026-09-25, pomeriggio)
+
+Prima di chiedere, ho cercato le versioni **stampate** fuori da `PG/Artefatti/`.
+Due stampe del 16/01/2026 hanno correzioni fatte a mano al tavolo, che nessun
+file markdown aveva registrato: la quick reference delle sinergie
+(`07_…/SinergieArteFattiQuickReference.pdf`) toglie l'*Eco degli Eroi* dalla
+Risonanza e la *Dualità Armoniosa* dalla sinergia Corona + Anello, lasciando le
+righe vuote; `BenedizioniDiMoradin.pdf` tiene tre benedizioni su sei. Le copie
+della cartella `06_` sono identiche a quelle di `PG/`.
+
+| # | Decisione | Applicata in |
+|---|---|---|
+| D1 | **La stampa del 16/01**: Risonanza = +2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*. Niente *Eco degli Eroi*; contro i draghi solo il Bane di A7 su Fauci | pagine Corona e Aegis, `SINERGIE` S0, skill |
+| D3 | **Tutti e quattro** i bonus di quando l'ha indossata sono canone | pagine Corona, skill |
+| D4 | Del Topazio restano **Percezione del Tempo** e **Visione Temporale**; tolti *Rallentare il Tempo* e il «+1» | pagine Corona, skill |
+| D5 | Dopo il Rituale 4: **+3**, o **+2** se ha donato | pagina Corona S3, skill |
+| D6 | Al portale si pagano **entrambi**: 1d10 anni a Thorik, pegno o Tempra CD 25 ad Artemis | pagina DM Corona S2 |
+| D7 | RD del Manto **5/epico e male** (il PDF del 2025, contro la mia proposta) | pagine Corona, scheda markdown, skill. ⚠️ `state.md` §6 dice ancora «RD 5/epico»: si corregge sul ramo del gruppo |
+| D8 | Senzienza **Int 16, Sag 17, Car 18, Ego 20**, senza dominio | pagina Corona S3 |
+| D9 | Poteri di crisi come nel **PDF riforgiato**; *Dualità Armoniosa* tolta | pagine Riforgiato e S0 |
+| D10 | Livelli **indicativi**: decide il rituale | pagine Corona |
+| D11 | Lo stadio 1 dell'Anello **non è mai stato dato**: al tavolo c'è stata solo la crisi | pagina giocatore S1 tolta, DM resta |
+| D12 | Ad Artemis la **Fortezza Mentale** (+2 ai TS contro l'influenza divina) | pagine Riforgiato e S1 DM, skill. ⚠️ va sulla scheda di Artemis e in `state.md` col prossimo `dm.py session end` |
+| D13 | **Aperta**, con una bozza da approvare: *Alba Voluta* e *Purificazione del Crepuscolo* 1/giorno, e il *Prezzo dell'Armonia* | `04_Anello_S3_Caos_Ultimo_DM.html` |
+
 ---
 
 ## §8 · Il versionamento (ADR-0071)
