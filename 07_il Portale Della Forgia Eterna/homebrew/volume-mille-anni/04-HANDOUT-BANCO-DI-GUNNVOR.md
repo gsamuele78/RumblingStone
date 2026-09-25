@@ -2,7 +2,7 @@
 
 > *Gesso su una lavagna, sopra il banco. Le cifre sono in monete d'oro.*
 
-**STANOTTE NON SI VENDE. SI SCAMBIA.**
+**Stanotte non si vende. Si scambia.**
 
 | | Quanto | Ce n'è |
 |---|---:|---:|
