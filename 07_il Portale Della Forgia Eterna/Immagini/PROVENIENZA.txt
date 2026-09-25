@@ -82,12 +82,12 @@ ritratti/zogtar-deatheye.jpg · Canva AI generate-image, media MAHWL_YsfgQ · te
 ritratti/re-thorek-i.jpg · Canva AI generate-image, media MAHWLyU_oPo · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
 ritratto-thorgrim-barbadiferro.png · Canva AI generate-image, media MAHWLyX0Wa0 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · SCELTA, file non ancora qui (il DM ha mandato la prima versione, MAHWL-NDQRs, scartata)
 ritratti/durin-rocciadura.jpg · Canva AI generate-image, media MAHWLxfub5Q · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
-ritratto-zeth-mastro-costruttore.png · Canva AI generate-image, media MAHWLzJWJXI · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
-ritratto-vatore.png · Canva AI generate-image, media MAHWL25-bj4 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
+ritratti/zeth-mastro-costruttore.jpg · Canva AI generate-image, media MAHWLzJWJXI · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
+ritratti/vatore.jpg · Canva AI generate-image, media MAHWL25-bj4 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
 tavola-portale-del-tempo.png · Canva AI generate-image, media MAHWLyz44U8 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
 tavola-custode-delle-radici.jpg · Canva AI generate-image, media MAHWL6WcCpw · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
-tavola-cuore-di-moradin.png · Canva AI generate-image, media MAHWLy0nGm4 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
+tavola-cuore-di-moradin.jpg · Canva AI generate-image, media MAHWLy0nGm4 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 1600×899 ricevuto dal DM in chat
 tavola-risveglio-di-hella.png · Canva AI generate-image, media MAHWL21y19U · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
 tavola-durik-e-hella.png · Canva AI generate-image, media MAHWL6svafI · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
 tavola-hammerfist-giovane.png · Canva AI generate-image, media MAHWLwYjXcE · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
-tavola-skullcrusher-nel-cortile.png · Canva AI generate-image, media MAHWL-laBHk · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
+tavola-skullcrusher-nel-cortile.webp · Canva AI generate-image, media MAHWL-laBHk · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, WebP 1600×899 ricevuto dal DM in chat; derivata web/tavola-skullcrusher-nel-cortile.jpg (Pillow, JPEG q88 progressivo, come build_image_derivatives.py)

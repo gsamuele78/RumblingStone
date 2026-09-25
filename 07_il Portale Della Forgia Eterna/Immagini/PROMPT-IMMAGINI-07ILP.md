@@ -685,7 +685,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §3 — IL CUORE DI MORADIN (rivelazione del reliquiario)
 - **Etichetta regia**: Salvatore — il sacro che si sente nel corpo).
 - **Destinatario**: `pg` **dopo** il box del §3 · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24) · immagine esistente: `ilCuoreDiMoradin.png`
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-cuore-di-moradin.jpg` (1600 × 899). **Sostituisce `ilCuoreDiMoradin.png` al §3**: il box dice che il Cuore sta *dentro* l'Altare che si apre, e la vecchia immagine lo mette sopra. La vecchia resta per la copertina del booklet e per `DEF-2` e `DEF-5`
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Thorik, posi le mani sulla superficie di mithral, e l'Altare SI APRE. Non c'erano cuciture, un istante fa: ora una camera interna di trenta centimetri si schiude come un fiore di metallo. Dentro, sospeso nella luce dorata, un cristallo di rubino sanguigno grande come il tuo pugno — e ha la forma ESATTA di un cuore nanico: quattro camere, i vasi visibili, tutto scolpito in rubino divino trasparente. E pulsa. Sessanta battiti al minuto. Il ritmo di un cuore a riposo. Quando lo sfiori, senti calore. Vita. Creazione pura. E capisci, senza che nessuno te lo dica, che questo si spenderà UNA volta so
@@ -930,7 +930,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — §4 — BOSS: SKULLCRUSHER IL NERO (il duello — unico scontro tattico)
 - **Etichetta regia**: Salvatore — l'ingresso del mostro).
 - **Destinatario**: `dm` fino al duello, poi `pg` · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: 🟡 generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-skullcrusher-nel-cortile.webp` (1600 × 899) con la derivata in `web/`. **Difetto noto**: il cane di Hella è una bestia massiccia di pietra, non il levriero Durik. Si vede di spalle e piccolo; da rigenerare se il DM lo vuole fedele
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Il cielo si spezza. Skullcrusher il Nero cala come una montagna alata, e l'acido gli sfrigola dalle fauci prima ancora che apra la bocca. Dove atterra, la pietra fuma. Aegis Fang urla nella mente di Thorik — non canta, URLA: «SANGUE ANTICO. ARTEFICE DI LACRIME. IL PRIMO NERO.» E la Corona vi mostra due immagini sovrapposte, tremanti l'una sull'altra: questo drago, adesso — e Fauci di Palude, mille anni nel futuro, sopra le mura di una Hammerfist che brucia. Sono lo stesso sangue. E voi state per insegnare a quel sangue, per la prima volta, che cosa vuol dire aver paura.
@@ -1143,7 +1143,7 @@ SEGNO      Aegis Fang, l'ascia da guerra nanica, appoggiata al fianco
 ### R4 · Mastro Costruttore Zeth  `[ritratto-zeth-mastro-costruttore]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/zeth-mastro-costruttore.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 ZETH (≈372 DR) — mezz'elfo adulto, magro
@@ -1185,7 +1185,7 @@ SEGNO      l'ascia a due mani appoggiata alla spalla
 ### R7 · Vatore  `[ritratto-vatore]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/vatore.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 VATORE — umano sulla quarantina · asciutto, silenzioso

@@ -288,15 +288,15 @@ che non deve mancare» di ogni scheda.
 | `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | **nel repo** come `ritratti/re-thorek-i.jpg`: corona di ferro senza gemme, Frostcleaver in pugno, mappa sul tavolo |
 | `ritratto-thorgrim-barbadiferro` | [MAHWLyX0Wa0](https://www.canva.com/M/MAHWLyX0Wa0) | seconda passata, **scelta**: la prima (`MAHWL-NDQRs`), arrivata dal DM in chat, tiene la reliquia in mano e nasconde il callo che `DEF-4` chiede. File non ancora qui |
 | `ritratto-durin-rocciadura` | [MAHWLxfub5Q](https://www.canva.com/M/MAHWLxfub5Q) | **nel repo** come `ritratti/durin-rocciadura.jpg`: mani strette sull'ascia, scudo blu, torce dietro |
-| `ritratto-zeth-mastro-costruttore` | [MAHWLzJWJXI](https://www.canva.com/M/MAHWLzJWJXI) | galleria con torcia, tunica ocra, mano sulla parete incisa; tiene |
-| `ritratto-vatore` | [MAHWL25-bj4](https://www.canva.com/M/MAHWL25-bj4) | cappuccio, fagotto al petto, tende di notte; tiene |
+| `ritratto-zeth-mastro-costruttore` | [MAHWLzJWJXI](https://www.canva.com/M/MAHWLzJWJXI) | **nel repo** come `ritratti/zeth-mastro-costruttore.jpg`: gesso in mano, runa sotto il pollice, il leone di pietra dietro |
+| `ritratto-vatore` | [MAHWL25-bj4](https://www.canva.com/M/MAHWL25-bj4) | **nel repo** come `ritratti/vatore.jpg`: il fagotto stretto al petto, le tende di notte |
 | `tavola-portale-del-tempo` | [MAHWLyz44U8](https://www.canva.com/M/MAHWLyz44U8) | affresco ottagonale con drago, nano di spalle; **la doppia esposizione delle due fortezze non si legge** in miniatura |
 | `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | **nel repo** come `tavola-custode-delle-radici.jpg`, in `DEF-3` §6 |
-| `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | reliquiario a petali aperti, cuore di rubino nella luce; tiene |
+| `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | **nel repo** come `tavola-cuore-di-moradin.jpg` e **scelta al posto di `ilCuoreDiMoradin`** per il §3: il Cuore sta dentro il reliquiario aperto, come dice il box |
 | `tavola-risveglio-di-hella` | [MAHWL21y19U](https://www.canva.com/M/MAHWL21y19U) | seconda passata: Durik ha muso lungo e corpo magro; da verificare che Hella abbia le proporzioni di una nana |
 | `tavola-durik-e-hella` | [MAHWL6svafI](https://www.canva.com/M/MAHWL6svafI) | seconda passata: Durik snello a muso lungo; Hella piccola, da verificare che non si legga elfa |
 | `tavola-hammerfist-giovane` | [MAHWLwYjXcE](https://www.canva.com/M/MAHWLwYjXcE) | terza passata: fortezza medievale con impalcature al tramonto, tende sulla piana; i fuochi sono piccoli |
-| `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | drago nero nel cortile, quattro figure di spalle; tiene |
+| `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | **nel repo** come `tavola-skullcrusher-nel-cortile.webp`, in `DEF-4`. **Il cane di Hella è sbagliato**: una bestia massiccia di pietra, non il levriero. Tenuta perché è l'unica e si vede di spalle; candidata a una seconda passata |
 
 Il **portale** va ancora verificato a piena risoluzione. Se il DM scarta
 un'immagine, il motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`,

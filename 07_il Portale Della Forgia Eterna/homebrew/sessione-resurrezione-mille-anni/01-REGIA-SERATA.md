@@ -28,7 +28,7 @@
 
 - la Sala con gli otto affreschi, Atti I e III:
   `Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg`;
-- il Cuore di Moradin, Atto II dopo il §3: `Immagini/web/ilCuoreDiMoradin.jpg`;
+- il Cuore di Moradin, Atto II dopo il §3: `Immagini/tavola-cuore-di-moradin.jpg`;
 - Durik, Atto II al §7: è sulla sua scheda (`PG/Immagini/web/durik2.jpg`);
 - *La canzone delle pietre*, dallo Step 5 al risveglio: `Musica/LaCanzoneDellePietre.mp3`.
 

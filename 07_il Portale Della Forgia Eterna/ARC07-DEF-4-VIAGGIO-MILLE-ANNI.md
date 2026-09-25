@@ -675,7 +675,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 | **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
 | **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
-| **Ritratto** | da generare: `id=ritratto-zeth-mastro-costruttore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Mastro Costruttore Zeth, il seme del Ghostlord](Immagini/ritratti/zeth-mastro-costruttore.jpg)
 
 - **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE, DM 2026-07-23).**
   Il party incrocia il **Mastro Costruttore Zeth** nelle gallerie, un mezz'elfo dagli occhi
@@ -1039,7 +1041,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
 | **Sa** | di aver visto quattro persone che non dovrebbero esistere. Che il **Sigillo di Ossidiana** divora anime |
 | **Non sa** | niente di Sal. Nessuno al tavolo lo sa |
 | **Eco** | la sincronizzazione su Sal nel 1372: sanguina nello stesso punto, gli manca un asso, li teme, li odia. Qualunque cosa facciano, **sopravvive** |
-| **Ritratto** | da generare: `id=ritratto-vatore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Vatore, il ladro che diventerà Sal](Immagini/ritratti/vatore.jpg)
 
 > **La scena "molto bella" (canone `Bestiario/villain/Salvatore/Salvatore.md`).**
 > **Quando**: al ritorno dalla tenda, fra le tende del campo. Se il tavolo ha
@@ -1187,7 +1191,9 @@ Appendice A)*
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
-| **Ritratto** | la tavola `id=tavola-skullcrusher-nel-cortile` |
+| **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+
+![Skullcrusher nel cortile](Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
 > **Mappa M7-B.** Il drago entra dall'alto (quota ~45 m) e picchia sul cortile
 > interno. È il capostipite della stirpe di **Fauci di Palude**: ogni ferita che
