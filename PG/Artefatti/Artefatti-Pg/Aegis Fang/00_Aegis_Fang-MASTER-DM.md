@@ -34,7 +34,7 @@ vincoli*).
 | Stadio | Trigger di sblocco | Poteri che sblocca | Stato | Documentato in |
 |---|---|---|---|---|
 | **0 — Base (legame attuale)** | Legame con Thorik (portatore nanico degno) | +2 Returning Dwarven Waraxe *Dragondoom*; senziente Ego 14; poteri inferiori | ✅ ORA (state.md §6: *pre-full-awakening*) | `Aegis Fang.docx`/`.pdf` |
-| **1 — Risveglio pieno** | **Apoteosi del portatore nell'Assedio della Forgia** + allineamento cosmico con la **Corona d'Adamantio pienamente Senziente** | +4 Holy Returning Dwarven Waraxe; Ego 20; *Ritornante inesorabile*; *Taglio del Cacciatore*; *Condotto Divino di Moradin*; aura telepatica razziale | ⬜ non ancora raggiunto (evento post-Siege ARC-07 P5) | `05_Aegis_Fang_Final_Awakening.html` |
+| **1 — Risveglio pieno** | **Apoteosi del portatore nell'Assedio della Forgia** + allineamento cosmico con la **Corona d'Adamantio pienamente Senziente** | +4 Holy Returning Dwarven Waraxe; Ego 20; *Ritornante inesorabile*; *Taglio del Cacciatore*; *Condotto Divino di Moradin*; aura telepatica razziale (telepatia 90 m, nani vicini immuni alla paura) | ⬜ non ancora raggiunto (evento post-Siege ARC-07 P5) | `05_Aegis_Fang_Final_Awakening.html` |
 
 ---
 
@@ -66,8 +66,11 @@ vincoli*).
   **Guarigione (Heal), LI 15°**, selettivamente su **tutti i nani alleati**
   entro 9 m dallo schianto.
 - **Aura di sinergia razziale** (passiva): presenza telepatica coi
-  comandanti nanici in campo (buff di comando/morale). [INFERRED: effetto
-  numerico non quantificato nell'HTML — da fissare col DM se serve un bonus.]
+  comandanti nanici in campo: **telepatia coi nani entro 90 m**, e i **nani
+  vicini (18 m) sono immuni alla paura**. *(Era `[INFERRED — effetto non
+  quantificato]`; risolto dalla fonte il 2026-09-25: l'HTML li quantifica
+  entrambi, il raggio di 18 m sta nel suo calcolo del valore. Audit:
+  `../../ARTEFATTI-AUDIT-POTERI-2026-09-25.md` §2.)*
 
 ---
 

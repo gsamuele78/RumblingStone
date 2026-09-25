@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corona di Adamantio — VERSIONE DM (2 Gemme + Rituale 3)</title>
+    <meta name="versione-artefatto" content="corona · S2 · r2 · 2026-09-25">
+    <title>Corona di Adamantio — Stadio 2, Topazio e Smeraldo (VERSIONE DM)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
@@ -28,12 +29,26 @@
         .block-nuovo { border: 2px solid #4b5320; background: rgba(75, 83, 32, 0.07); }
         .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
         .spento .power-header { color: #777; }
-        .dmbox { background: rgba(139,0,0,0.05); border: 2px solid #8B0000; padding: 12px; margin: 14px 0; border-radius: 5px; }
-        .dmbox h3 { color: #8B0000; font-size: 12.5pt; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; }
-        table.led { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 8px 0; }
-        table.led th, table.led td { border: 1px solid #b8860b; padding: 4px 7px; text-align: left; }
-        table.led th { background: rgba(184,134,11,0.18); }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
         .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #4b5320, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
     </style>
 </head>
 
@@ -41,14 +56,14 @@
 
     <div class="header">
         <h1 class="class-title">Corona di Adamantio</h1>
-        <div class="subtitle">Stato di Risveglio: 2 Gemme — Topazio &amp; Smeraldo</div>
-        <div style="margin-top:8px;display:inline-block;background:#8B0000;color:#f8f6f0;font-size:9pt;font-weight:bold;letter-spacing:2px;padding:3px 14px;border-radius:3px;">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="subtitle">Stadio 2 — due gemme: Topazio e Smeraldo</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
         <div class="dwarven">"La Montagna non trema, il Tempo scorre, ma la base regge."</div>
     </div>
 
     <div class="quote">
-        <strong>La Leggenda Divina</strong><br>
-        «Prima che i nani scrivessero la loro prima runa, Moradin prese un frammento del cuore del mondo. Sulla sua incudine lo forgiò non con il fuoco vivo, ma con il potere della memoria assoluta incastonata nella Pietra. Quando sia il costrutto inalterato del Tempo che il cuore della Terra Vera pulsano insieme per la prima volta nella corona, la mente del nano muta irrevocabilmente incatenandosi al suolo granitico. Egli diviene una fortezza ambulante di granitica dedizione e un immutabile pilastro per la sua gente.»
+        <strong>La Leggenda</strong><br>
+        «Prima che i nani scrivessero la loro prima runa, prima che la montagna stessa avesse un nome, Moradin prese un frammento del cuore del mondo. Sulla sua Incudine del Mondo lo forgiò non con il fuoco, ma con la memoria e con la possibilità, e ci mise dentro l'eco di ogni martello che avrebbe mai battuto. Non fece un oggetto di potere: fece un'ancora per la storia dei nani. Non è stata fatta per i re. È stata fatta per forgiarli, quando la storia rischia di finire.»
     </div>
 
     <div class="quote" style="border-left-color: #4b5320; background: rgba(75, 83, 32, 0.08);">
@@ -57,9 +72,9 @@
     </div>
 
     <div class="requirements">
-        <strong>Slot:</strong> testa (artefatto maggiore) · <strong>Peso:</strong> 1,5 kg · <strong>Legata a:</strong> Thorik<br>
-        <strong>Aura:</strong> Invocazione, Divinazione e Abiurazione travolgente [Legale, Buono]<br>
-        <strong>Livello incantatore:</strong> 20°<br>
+        <strong>Prerequisiti del portatore:</strong> nano o mezzonano · bonus di attacco base +5 · fede vera in Moradin <strong>oppure</strong> legame accertato con <em>Aegis Fang</em>.<br>
+        <strong>Slot:</strong> testa (artefatto maggiore) · <strong>Peso:</strong> 1,5 kg · <strong>Legata a:</strong> Thorik · <strong>Allineamento:</strong> Legale Buono<br>
+        <strong>Aura:</strong> Invocazione, Divinazione e Abiurazione travolgente · <strong>Livello incantatore:</strong> 20°<br>
         <strong>Rituali Leggendari completati:</strong> 1 (Difesa della Forgia) · 2 (Prova della Sala Profonda) · <strong>3 (Incudine del Mondo)</strong>
     </div>
 
@@ -69,25 +84,15 @@
         <div class="power-header">Corona di Protezione +2 <span>Rituale 1</span></div>
         <div class="mechanic">Straordinario (Str) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <strong>+2 di deviazione alla CA</strong>, finché la porti.
+            <strong>+2 di deviazione alla CA</strong>, finché la porti.<br>☐ <em>Se al rito di Hella hai donato la deflessione: <strong>+1</strong>, per sempre.</em>
         </div>
     </div>
 
     <div class="power-block">
         <div class="power-header">Consapevolezza della Pietra <span>Rituale 1</span></div>
-        <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | Su terra o pietra naturale | LI 20°</div>
+        <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <em>Individuare porte segrete</em>, <em>scoprire trappole</em> e <strong>Comprendere Linguaggi</strong>, a volontà.<br>
-            Coi piedi su terra o pietra naturale: <strong>+1 morale</strong> ad attacco e danni, <strong>+2 intuizione alla CA</strong>.
-        </div>
-    </div>
-
-    <div class="power-block">
-        <div class="power-header">Intuito di Moradin <span>Rituale 2</span></div>
-        <div class="mechanic">Magico (Mag) | 1/giorno | Azione standard | Durata 10 minuti | LI 20°</div>
-        <div class="desc-text">
-            <strong>+4 intuizione</strong> alle prove di Artigianato (fabbro), sempre.<br>
-            Una volta al giorno: <em>Vista del Vero</em> per dieci minuti.
+            <em>Individuare porte segrete</em>, <em>scoprire trappole</em> e <em>comprendere linguaggi</em>, a volontà.<br>Coi piedi su terra o pietra naturale: <strong>+1 morale</strong> ad attacco e danni, <strong>+2 intuizione alla CA</strong>.
         </div>
     </div>
 
@@ -105,148 +110,198 @@
         <div class="power-header">Manto di Pietra e Spirito <span class="nuovo">nuovo</span></div>
         <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <strong>Mente Vuota</strong> permanente, come l'incantesimo ma soprannaturale: immune a ogni effetto mentale e alla divinazione che ti cerca. Questo vale ovunque, anche staccato da terra.<br>
-            <strong>Riduzione del danno 5/epico</strong> <span class="mechanic">[da confermare col DM: la fonte scrive «5/epic and evil»]</span><br>
-            In un <strong>Nodo Terrestre</strong>, <strong>1/mese</strong>: <em>Comunione</em> (LI 20°, azione di 1 round). Domande a Moradin; risposte sì o no.
+            <strong>Mente Vuota</strong> permanente, come l'incantesimo ma soprannaturale: niente legge i tuoi pensieri e niente ti trova con la divinazione. Vale ovunque, anche staccato da terra.<br><strong>Riduzione del danno 5/epico</strong> <span class="conferma">da confermare col DM · D7</span><br>In un <strong>Nodo Terrestre</strong>, <strong>1/mese</strong>: <em>Comunione</em> con Moradin (LI 20°, un round). Risponde sì o no.
+        </div>
+    </div>
+
+    <div class="power-block attesa">
+        <div class="power-header">Quello che ti ha dato quando l'hai messa <span class="conferma">da confermare col DM · D3</span></div>
+        <div class="mechanic">Dal momento in cui l'hai indossata | LI 13°-20°</div>
+        <div class="desc-text">
+            Il modulo in cui l'hai presa elenca quattro doni insieme al +4 di Carisma. Il Carisma è confermato; questi quattro aspettano il DM:<ul><li><strong>Immunità alla paura</strong>, magica e naturale.</li><li><strong>Scurovisione 36 m</strong>, il doppio di quella di un nano.</li><li><strong>Aura di Comando</strong>, 1/giorno: <em>Comando</em> CD 15, soprannaturale, LI 13°.</li><li><strong>Guida di Moradin</strong>, 1/giorno: senti da che parte sta quello che la Corona cerca. Finché manca una gemma, è quella.</li></ul>
+        </div>
+    </div>
+
+    <h2>Poteri da attivare</h2>
+
+    <div class="power-block">
+        <div class="power-header">Intuito di Moradin <span>Rituale 2</span></div>
+        <div class="mechanic">Magico (Mag) | 1/giorno | Azione standard | 10 minuti | LI 20°</div>
+        <div class="desc-text">
+            <strong>+4 intuizione</strong> alle prove di Artigianato (fabbro), sempre.<br>Una volta al giorno: <em>Vista del Vero</em> per dieci minuti.
+        </div>
+    </div>
+
+    <h2>Con Aegis Fang</h2>
+
+    <div class="power-block attesa">
+        <div class="power-header">Con Aegis Fang in mano — la Risonanza <span class="conferma">da confermare col DM · D1</span></div>
+        <div class="mechanic">Sempre attiva finché porti entrambe | Thorik solo</div>
+        <div class="desc-text">
+            La Corona e l'ascia vengono dalla stessa mano, e da quando le porti insieme lo sanno:<ul><li><strong>+2 sacro a tutti i tiri salvezza.</strong></li><li>L'ascia fa <strong>+1d6 danni sacri</strong> contro le creature caotiche o malvagie.</li><li><strong>Richiamo Ancestrale</strong>, 1/giorno, azione gratuita: se sei disarmato e l'ascia è entro 30 m, ti torna in mano subito, senza attacchi d'opportunità.</li><li><strong>Eco degli Eroi</strong>, 1 per combattimento, azione veloce: per 5 round <strong>+2 morale</strong> all'attacco e <strong>+1d6</strong> ai danni. Chi ti guarda entro 18 m vede i nani morti combattere al tuo fianco: Volontà CD 18 o scosso per un round.</li></ul>
         </div>
     </div>
 
     <h2>Le gemme</h2>
 
     <div class="power-block">
-        <div class="power-header">◆ Topazio — il Tempo Immutabile <span>accesa</span></div>
+        <div class="power-header">◆ Topazio — il Tempo Immutabile <span>acceso</span></div>
         <div class="mechanic">Soprannaturale (Sop) | 1/mese | Rituale di 1 ora | Solo da un Nodo Terrestre | LI 20°</div>
         <div class="desc-text">
-            Riavvolge tempo e spazio, e porta te e fino a <strong>8 creature consenzienti</strong> in un punto di forgiatura del passato.<br><br>
-            <strong>Per chi non è nano né fedele di Moradin</strong> il dio esige un pegno, a scelta del gruppo:
-            <ul>
-                <li>un punto permanente di Costituzione;</li>
-                <li>un tesoro da almeno 5.000 mo;</li>
-                <li>un servizio futuro e vincolante.</li>
-            </ul>
-            <strong>Se rifiutate</strong>: chi non è benedetto tira <strong>Tempra CD 25</strong>, o resta parzialmente pietrificato finché non lo curano.<br>
-            <strong>Il prezzo del portatore</strong>: <strong>1d10 anni</strong> di vita, permanenti, a ogni viaggio.
+            Riavvolge tempo e spazio, e porta te e fino a <strong>8 creature consenzienti</strong> in un punto di forgiatura del passato.<br><br><strong>Per chi non è nano né fedele di Moradin</strong> il dio chiede un pegno, a scelta del gruppo: un punto permanente di Costituzione, un tesoro da almeno 5.000 mo, oppure un servizio futuro e vincolante.<br><strong>Se il pegno non si paga</strong>: chi non è benedetto tira <strong>Tempra CD 25</strong>, o resta in parte pietrificato (−3 m di velocità, −2 DES) finché non lo curano.<br><strong>Il prezzo del portatore</strong>: <strong>1d10 anni</strong> di vita, permanenti, a ogni viaggio.
+        </div>
+    </div>
+
+    <div class="power-block attesa">
+        <div class="power-header">◆ Quello che il Topazio ti ha dato oltre al viaggio <span class="conferma">da confermare col DM · D4</span></div>
+        <div class="mechanic">Dal rituale della Piramide di Fuoco</div>
+        <div class="desc-text">
+            <ul><li><strong>Percezione del Tempo</strong> (sempre): sai sempre quanto tempo passa, e quanti giorni e ore mancano a Hammerfist.</li><li><strong>Visione Temporale</strong> (quando capita): nei luoghi dove è successo qualcosa di grosso, a volte lo rivedi.</li><li><strong>Rallentare il Tempo</strong>, 1/giorno, azione veloce: per 3 round sei accelerato, come <em>velocità</em>, solo tu. Non si somma ad altre accelerazioni.</li></ul>
         </div>
     </div>
 
     <div class="power-block block-nuovo">
-        <div class="power-header">◆ Smeraldo — la Vera Terra <span class="nuovo">accesa ora</span></div>
+        <div class="power-header">◆ Smeraldo — la Vera Terra <span class="nuovo">acceso ora</span></div>
         <div class="mechanic">Magico (Mag) | 1/settimana | Azione standard | LI 20°</div>
         <div class="desc-text">
-            <strong>Costo</strong>: seppellire nel terreno una gemma o un'arma perfetta da <strong>1.000 mo</strong>. Non è un pagamento: è un tributo, e la terra la differenza la sente.<br>
-            Scegli uno dei tre:
-            <ul>
-                <li><strong>Bastione della Terra</strong> — un muro di pietra spesso 9 metri, fino a 140 metri cubi. Non si perfora.</li>
-                <li><strong>Forgia della Vita</strong> — la terra torna fertile per 30 metri di raggio, e resta <em>consacrata</em> per sempre.</li>
-                <li><strong>Giudizio della Montagna</strong> — terremoto in un raggio di 15 metri, <strong>Riflessi CD 22</strong>. Risparmia i nani che designi, e le loro opere.</li>
-            </ul>
+            <strong>Costo</strong>: seppellire una gemma o un'arma perfetta da <strong>1.000 mo</strong>. La terra la differenza la sente.<br>Scegli uno dei tre:<ul><li><strong>Bastione della Terra</strong>: un muro di pietra spesso 9 metri, fino a 140 metri cubi.</li><li><strong>Forgia della Vita</strong>: la terra torna fertile per 30 metri di raggio, e resta <em>consacrata</em>.</li><li><strong>Giudizio della Montagna</strong>: terremoto in un raggio di 15 metri, <strong>Riflessi CD 22</strong>. Risparmia i nani che designi, e le loro opere.</li></ul>E insieme al Topazio tiene ferma la strada del tempo: con due pietre il viaggio non si sfalda.
         </div>
     </div>
 
     <div class="power-block spento">
-        <div class="power-header">◆ La terza incastonatura <span>vuota</span></div>
+        <div class="power-header">◆ Quel che resta vuoto <span>fredda</span></div>
+        <div class="desc-text">È fredda, e da quando lo Smeraldo si è acceso lo è di più. Le altre due, se le sfiori, rispondono. Questa aspetta qualcosa che non è ancora successo.</div>
+    </div>
+
+    <h2>Quello che la Corona ti è costato</h2>
+    <table>
+        <tr><th>Quando</th><th>Effetto permanente</th></tr>
+        <tr><td><strong>Quando l'hai indossata</strong></td><td><strong>−2 DES</strong> (il peso, e la testa che non gira più libera) · <strong>+4 CAR</strong> · non te la togli: si è aperta <strong>solo</strong> per incastonare una gemma</td></tr>
+            <tr><td><strong>Al rito dello Smeraldo</strong></td><td><strong>−2 DES</strong> e <strong>+2 COS</strong>: il Peso del Mondo, accettato nel corpo</td></tr>
+            <tr><td>☐ <strong>Al rito di Hella</strong>, se doni</td><td>la deflessione scende di uno, per sempre</td></tr>
+    </table>
+        <p style="font-size:10pt;margin:6px 0 0 0;">DES: 10 di partenza, 8 con la Corona addosso, 6 dopo il rito. Sono <strong>−4 al punteggio</strong> e <strong>−2 al modificatore</strong>: −2 a CA, Riflessi, iniziativa e prove di DES, non −6. In cambio <strong>+4 CAR</strong> e <strong>+2 COS</strong>.</p>
+
+    <h2>Il sentiero dei rituali</h2>
+    <table>
+        <tr><th></th><th>Rituale</th><th>Dove, o come</th><th>Il prezzo</th><th>Sblocca</th></tr>
+        <tr><td class="c">✅</td><td><strong>1 · Difesa della Forgia</strong></td><td>indossarla: la visione della battaglia di Hammerfist</td><td>2.500 mo in armi o argento</td><td>Consapevolezza della Pietra · Corona di Protezione +2</td></tr>
+        <tr><td class="c">✅</td><td><strong>2 · Prova della Sala Profonda</strong></td><td>la Piramide di Fuoco, e il Topazio</td><td>12.500 mo in gemme</td><td>Intuito di Moradin · il Topazio</td></tr>
+        <tr><td class="c">✅</td><td><strong>3 · Incudine del Mondo</strong></td><td>il Nodo della Terra, dopo Terros</td><td>un pezzo di te: il Peso del Mondo</td><td>Volontà Adamantina · Manto di Pietra e Spirito · lo Smeraldo</td></tr>
+        <tr><td class="c">⬜</td><td><strong>4 · Assedio della Forgia Eterna</strong></td><td>l'atto finale, in cui userai il potere della Corona per riscrivere la storia</td><td>—</td><td>la Corona di Protezione cresce · la Corona parla · la terza pietra · un potere che la Corona non ha mai avuto: l'<strong>Aura della Forgia Eterna</strong></td></tr>
+    </table>
+    <p style="font-size:10pt;margin:4px 0 0 0;">E quando la Corona sarà intera, non sarà la sola a svegliarsi.</p>
+
+    <h2>Il dono al rito di Hella</h2>
+    <div class="power-block">
+        <div class="power-header">☐ Il +2 di deflessione <span>da segnare al rito</span></div>
         <div class="desc-text">
-            È fredda, e da quando lo Smeraldo si è acceso lo è di più. Le altre due, se le sfiori, rispondono. Questa aspetta qualcosa che non è ancora successo.
+            Al rito di resurrezione puoi dare a Hella <strong>la protezione che la Corona dà a te</strong>. Esce dalla Corona <strong>per sempre</strong>: la deflessione scende a <strong>+1</strong>.<br>
+            Nel suo seme diventa lo <strong>Scudo del Custode</strong>: una volta al giorno, azione immediata, lei prende su di sé il danno destinato a un alleato entro 9 m, <strong>dimezzato</strong>.<br>
+            E ti torna addosso: ogni volta che lei usa lo Scudo sei <strong>accelerato per 3 round</strong>, e in quei round ti muovi <strong>verso chi lei ha protetto</strong>, almeno un'azione di movimento per round che accorci la distanza, o l'accelerazione si spegne.<br>
+            <strong>Una volta sola</strong>, nel momento del bisogno, lei potrà rendertela per una scena intera.<br><br>
+            ☐ <strong>Dono</strong> &nbsp;&nbsp; ☐ <strong>Rifiuto</strong>: la deflessione resta +2, e il seme di Hella resta dormiente.
         </div>
     </div>
 
     <h2>Quando gli artefatti si parlano</h2>
-
     <div class="requirements" style="font-size: 10pt;">
-        La Corona non lavora da sola. Con l'<strong>Anello</strong> di Artemis e i <strong>Bracieri</strong> di Tordek fa quattro cose: <strong>+1 schivare</strong> contro i Legali vicini · <strong>Visione Planare</strong> 1/giorno · <strong>Colpo dell'Alba Oscura</strong> 1/giorno insieme ad Aegis Fang · e la <strong>Trinità Divina</strong>, 1/giorno per cinque round, quando siete tutti e tre entro 9 metri.<br>
-        <strong>Con Hella.</strong> Quando usa lo <strong>Scudo del Custode</strong> sei accelerato 3 round e scatti verso chi ha protetto. <strong>Radici della Memoria</strong> si sveglia quando lei pianterà la Ghianda al Cerchio della Quercia Vecchia: da allora, su terreno naturale, la tua Consapevolezza della Pietra vale anche per lei. E quando la Foresta Sacra vi avrà accolti, con la Collana la Trinità diventerà la <strong>Quaternità</strong>.<br>
+        Con l'<strong>Anello</strong> di Artemis: entro 3 metri <strong>+1 schivare</strong> alla CA contro i Legali, e 1/giorno <strong>Visione Planare</strong> più <em>dissolvi illusioni</em> in 9 metri. Con <strong>Aegis Fang</strong> e l'Anello: il <strong>Colpo dell'Alba Oscura</strong>, 1/giorno: Artemis lancia la Luce di Lathander, tu colpisci lo stesso bersaglio con +2 e +2d6 sacri. Con Anello e <strong>Bracieri</strong>: la <strong>Trinità Divina</strong>, 1/giorno per cinque round, quando siete tutti e tre entro 9 metri e ognuno spende un'azione di movimento.<br><strong>Con Hella.</strong> ☐ Se hai donato: quando lei usa lo <strong>Scudo del Custode</strong> sei accelerato 3 round e scatti verso chi ha protetto. <strong>Radici della Memoria</strong> si sveglierà quando lei pianterà la Ghianda al Cerchio della Quercia Vecchia: da allora, su terreno naturale, la tua Consapevolezza della Pietra vale anche per lei. E quando la Foresta Sacra vi avrà accolti, con la Collana la Trinità diventerà la <strong>Quaternità</strong>.<br>
         Condizioni e numeri esatti: <em>PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md</em>. Si dichiarano prima, e costano un'azione a testa.
+    </div>
+
+    <div class="quote">
+        <strong>Il giuramento del portatore</strong><br>
+        «Io sono la pietra che ricorda,<br>la forgia che sopporta,<br>il martello che ricostruisce.<br>Dalla luce di Moradin io difendo,<br>e dalla sua incudine io sono riforgiato.»
     </div>
 
     <div class="quote" style="margin-top: 18px;">
         <strong>Vincolo.</strong> La Corona serve la memoria dei nani, non chi la porta. Il giorno in cui Thorik tradisse Moradin o la stirpe, i poteri non si spegnerebbero con un lampo. Semplicemente, la mattina dopo, non risponderebbero.
     </div>
 
-    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
-
-    <div class="dmbox">
-        <h3>Cosa manca, e da dove arriva</h3>
-        <table class="led">
-            <tr><th>Non ancora sbloccato</th><th>Si sblocca con</th></tr>
-            <tr><td><strong>Corona di Protezione +3</strong> (da +2)</td><td rowspan="3"><strong>Rituale 4 — «Assedio della Forgia Eterna»</strong>, cioè il <strong>viaggio a −1.000</strong> (master #4): usare il Topazio per tornare all'inizio della battaglia antica e guidare i nani alla vittoria</td></tr>
-            <tr><td><strong>Senzienza</strong> della Corona</td></tr>
-            <tr><td><strong>RUBINO</strong> — la Possanza Nanica</td></tr>
-        </table>
-        Il Rubino è <strong>monouso</strong>: si accende alla vittoria antica e <strong>si consuma</strong> per riportare i PG al 1372. Dopo, l'incastonatura è vetro scuro e <strong>non è riattivabile</strong> — chiunque dica il contrario è un'incoerenza da segnalare.
+    <div class="power-block grigio">
+        <div class="power-header">Valore teorico (stadio 2)</div>
+        <div class="corpo">Come artefatto maggiore è inestimabile, e non si vende. Per il bilancio di ricchezza della scheda: <strong>~190.000 mo</strong> <span class="mechanic">stima, non prezzo</span></div>
     </div>
 
-    <div class="dmbox">
-        <h3>Audit del rituale (2026-08-01) — tre cose</h3>
-        <p><strong>1. «Anvil of the World» è il Rituale Legacy 3, ed è il rito del §9 di <em>ARC07-DEF-1</em>.</strong> Sono lo stesso evento: entrambi chiedono un Nodo Terrestre primordiale, entrambi citano <strong>40.500 mo</strong>. Sblocca <strong>due</strong> poteri: <em>Volontà Adamantina</em> <strong>e</strong> <em>Manto di Pietra e Spirito</em>. Le vecchie schede avevano solo il primo.</p>
-        <p><strong>2. Il costo — discrepanza chiusa.</strong> <em>LaCorona_di_Adamantio-DM.md</em> r.628 chiede 40.500 mo <strong>e</strong> un sacrificio personale; il modulo ARC-07 lo presentava come <strong>alternativa</strong>, e al tavolo è stata pagata la sola metà personale. <strong>✅ DECISIONE DM 2026-08-01: il rito è completo.</strong> Il pegno personale versato è alto abbastanza. Non riaprire il conto.</p>
-        <p><strong>3. A pagare è stato il portatore.</strong> Il pegno l'ha versato <strong>Thorik</strong> (−2 DES / +2 COS permanenti), come scrive l'Opzione B del §9 di <em>ARC07-DEF-1</em> e come chiede il testo di Moradin, che parla al <em>portatore</em>. <em>Rettifica del 2026-08-06:</em> dal 31/07 al 06/08 questa riga attribuiva il pegno a <strong>Tordek</strong> e la chiamava «deviazione voluta». Era un refuso. L'eco viva è <strong>E-07c</strong> in <em>state.md</em> §7.E; <strong>E-07e</strong> (nata dall'errore) è <strong>annullata</strong>, e la presenza verde al rito è l'eco <strong>E-07f</strong>.</p>
-        <p><strong>3-bis. Come contare i riti.</strong> Al tavolo l'Incudine del Mondo è il <strong>secondo rito celebrato</strong> (il primo è la Prova della Sala Profonda); nella numerazione del modulo è il <strong>Rituale 3</strong>, che conta anche il Risveglio. Sono lo stesso evento — se il giocatore dice «il secondo rito», intende questo.</p>
-        <p><strong>3-bis. Come contare i riti.</strong> Al tavolo l'Incudine del Mondo è il <strong>secondo rito celebrato</strong> (il primo è la Prova della Sala Profonda); nella numerazione del modulo è il <strong>Rituale 3</strong>, che conta anche il Risveglio. Sono lo stesso evento — se il giocatore dice «il secondo rito», intende questo.</p>
-    </div>
-
-    <div class="dmbox" style="border-width:3px;">
-        <h3>🩸 Il bilancio di Thorik — leggere prima del rito di Hella</h3>
-        <p><em>Rilievo del DM: il giocatore sente di sacrificare molto per quello che riceve, e potrebbe essere stanco di pagare in nome di Moradin.</em> <strong>Ha ragione, e i numeri lo dicono.</strong></p>
-
-        <table class="led">
-            <tr><th>Ha pagato</th><th>Quando</th></tr>
-            <tr><td>è <strong>morto</strong> ed è stato riportato indietro</td><td>Guado di Drellin, Arco 00</td></tr>
-            <tr><td>porta la Corona — che è un <strong>dovere</strong>, non un premio</td><td>da ARC-06</td></tr>
-            <tr><td><strong>ha versato di persona il pegno del rito</strong>: −2 DES / +2 COS permanenti, senza delegarlo e senza svuotare il bottino del party</td><td>rito dello Smeraldo, 2026-07-31</td></tr>
-            <tr><th>Gli sarà chiesto</th><th>Fra quanto</th></tr>
-            <tr><td><strong>−2 COS permanenti</strong> — il modulo stesso lo chiama <em>«il più pesante dei tre»</em></td><td><strong>prossima sessione</strong> (rito di Hella, §5 Dono 1)</td></tr>
-            <tr><td colspan="2">⚠️ <strong>Guarda la somma prima di proporglielo.</strong> Il rito dello Smeraldo gli ha dato <strong>+2 COS</strong>; il Sangue della Stirpe gliene toglie <strong>2</strong>. Netto sulla COS: <strong>zero</strong>. Cioè <em>due pegni permanenti per tornare esattamente dov'era</em> — e il giocatore che ha già fatto il conto lo vedrà. Questo non è un argomento per togliere il Dono 1: è l'argomento più forte a favore delle alternative del §5, e in particolare del <strong>Filo dell'Ascia</strong>. <strong>Decisione da prendere al tavolo, non d'ufficio.</strong></td></tr>
-            <tr><td><strong>−2 DES solo per averla indossata</strong>, più la clausola — <strong>✅ confermata dal DM il 2026-09-04</strong> — che <strong>non è rimovibile volontariamente</strong> finché mancano gemme (si è aperta <em>solo</em> per incastonare lo Smeraldo) — <em>«peso e restrizione movimenti testa»</em>. Il modulo scrive perfino il ricalcolo: <strong>DES 10 → 8</strong>, CA 22 → 21 (in cambio CAR 8 → 12)</td><td>quando l'ha presa dal trono, <code>PortaleForgia-P1</code> — <strong>reintegrato</strong>: era sparito da tutte le schede successive</td></tr>
-            <tr><td colspan="2">📐 <strong>Il conto della DES, per intero — e come non leggerlo male.</strong> Punteggio: 10 di base → <strong>8</strong> con la Corona addosso → <strong>6</strong> dopo il rito. Sono <strong>due</strong> pegni da −2, quindi <strong>−4 al punteggio</strong> e <strong>−2 al modificatore</strong> (da +0 a −2) rispetto alla scheda di partenza. <em>Il 6 è quel che gli resta, non quanto ha perso.</em> Da tenere presente quando il giocatore dice di aver pagato troppo: <strong>ha ragione anche su questo</strong>, e nessuna scheda glielo stava più riconoscendo.</td></tr>
-            <tr><td><strong>1d10 anni di vita</strong>, permanenti</td><td>la sessione dopo (Rituale 4 / viaggio a −1.000)</td></tr>
-            <tr><td>guidare di persona la difesa di Rethmar</td><td>ARC-09</td></tr>
-        </table>
-
-        <p><strong>Due colpi permanenti in due sessioni consecutive.</strong> Se il giocatore lo dice adesso, è perché ha fatto il conto prima di te.</p>
-
-        <p><strong>La diagnosi non è che riceve poco — è che non lo sente.</strong> Guarda cosa gli ha dato la Corona: +2 CA, +4 ai TS, immunità, riduzione del danno, Vista del Vero, Mente Vuota. <strong>Sono tutte difese passive.</strong> Nessuna fa un momento al tavolo. I costi invece sono <em>tutti</em> scene narrate. Il rapporto meccanico è generoso; quello percepito è pessimo, e il percepito è l'unico che conta.</p>
-
-        <h3 style="margin-top:14px;">Le quattro mosse, in ordine di efficacia</h3>
-        <p><strong>1. Fai vedere una difesa mentre salva.</strong> È il rimedio più rapido e costa zero. Un incantatore prova a dominarlo e <strong>rimbalza</strong> su <em>Mente Vuota</em> — e lo capisce il tavolo, non solo lui. Hai due occasioni già scritte: <strong>Balvar</strong> al #4 e <strong>Zalkatar</strong> in ARC-09. Una difesa invisibile che si vede una volta smette di essere invisibile per sempre.</p>
-
-        <p><strong>2. Al rito di Hella, offri le alternative SUBITO.</strong> Il §5 di <em>ARC07-DEF-3</em> dà a Thorik <strong>tre strade oltre al rifiuto</strong>, e dice di leggerle «solo se il giocatore esita». <strong>Sta già esitando, con una sessione di anticipo.</strong> Mettile sul tavolo tutte e tre:</p>
-        <table class="led">
-            <tr><th>Strada</th><th>Costo</th><th>Come la sente il giocatore</th></tr>
-            <tr><td>Il Sangue della Stirpe</td><td>−2 COS permanente</td><td>il terzo pezzo di sé in tre archi</td></tr>
-            <tr><td>La Memoria della Battaglia</td><td>−3.000 PE</td><td>doloroso ma <strong>recuperabile</strong></td></tr>
-            <tr><td><strong>Il Filo dell'Ascia</strong> ⭐</td><td>Aegis Fang perde <em>Returning</em> fino al pieno risveglio</td><td><strong>paga l'artefatto, non il corpo</strong>, ed è temporaneo</td></tr>
-        </table>
-        <p>⭐ <strong>Il Filo dell'Ascia è la strada giusta per questo giocatore</strong>: stesso peso drammatico, ma il prezzo lo mette l'ascia. Ed è più bello — l'arma «dona il proprio richiamo» a una morta perché torni. <strong>Non spingerlo: mettila in fila con le altre e lascialo scegliere.</strong></p>
-
-        <p><strong>3. Moradin deve dare una volta senza chiedere niente.</strong> Finora ogni scambio è stato una transazione, e un dio che manda solo fatture diventa un padrone di casa. Serve <strong>un dono non richiesto e non pagato</strong>, e lo slot esiste già: <strong>l'affresco A3</strong> (master #2), dove <em>il fallimento del TS è il dono</em>. Giocalo lì, e non spiegarlo.</p>
-
-        <p><strong>4. Lascia che lo dica in faccia.</strong> La scena più forte disponibile è Thorik che dice a Moradin di essere stanco — e <strong>Moradin che non si difende</strong>. Niente sermoni, niente giustificazioni: registro nanico, meno parole del necessario.</p>
-        <div class="quote" style="margin:10px 0;">
-            <strong>THORIK:</strong> <em>«Quanto ancora.»</em> — non è una domanda, e non mettere il punto interrogativo.<br><br>
-            <strong>MORADIN</strong> (dopo un silenzio lungo abbastanza da diventare scomodo): <em>«Finché non ne resta niente, se lo lascio fare a te. Per questo non lo lascio fare a te.»</em>
-        </div>
-        <p>E poi <strong>chiudi la scena</strong>. Nessuna concessione meccanica, nessuna promessa. Un dio che ammette di star chiedendo troppo vale più di uno sconto.</p>
-
-        <p><strong>Il ritorno esiste, ed è vicino:</strong> il Rituale 4 dà <strong>Corona +3</strong> e soprattutto la <strong>Senzienza</strong>. Da lì la Corona <em>parla</em>, e Thorik smette di essere solo a portarla. Puoi anticipargliene la <strong>forma</strong> senza i dettagli — un giocatore che sa che un ritorno arriva regge un costo; uno che non lo sa, smette di pagare.</p>
-    </div>
-
-    <div class="power-block" style="background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 20px;">
-        <div class="power-header" style="color: #666; font-size: 11pt;">Valore magico e costruttivo teorico (2 gemme + Rituale 3)</div>
-        <div style="font-size: 9.5pt; color: #444;">
-            Come <strong>artefatto maggiore</strong> il valore complessivo è ovviamente <em>Inestimabile</em>. Al netto delle pure metriche dei manuali, però: protezioni base più protezioni mentali inamovibili (immunità assoluta e +4 razziale forzati su LI 20), <strong>Mente Vuota permanente</strong> e <strong>riduzione del danno</strong>, potenziamenti tellurici distruttivi (terremoti estesi e muri di montagna che da soli superano le decine di migliaia di monete a utilizzo isolato), più la rarità del componente originario della forgia divina. Stima lorda per il bilancio di scheda a questo stadio: <strong>~190.000 mo</strong> <span class="mechanic">stima, non prezzo: l'artefatto non è vendibile né replicabile</span>
-        </div>
-    </div>
-
-    <div class="power-block" style="background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 10px;">
-        <div class="power-header" style="color: #666; font-size: 11pt;">Registro sblocchi (compila a penna)</div>
-        <div style="font-size: 9.5pt; color: #444;">
+    <div class="power-block grigio">
+        <div class="power-header">Registro sblocchi (compila a penna)</div>
+        <div class="corpo">
             Rituale 1 — Difesa della Forgia · <em>giocato</em><br>
             Rituale 2 — Prova della Sala Profonda · <em>giocato</em><br>
-            <strong>Rituale 3 — Incudine del Mondo · giocato 2026-07-31</strong> (Nodo della Terra, guardiano abbattuto, pegno personale versato)<br>
+            <strong>Rituale 3 — Incudine del Mondo · giocato 2026-07-31</strong> (Nodo della Terra, Terros abbattuto, pegno personale versato)<br>
             <strong>Smeraldo · acceso 2026-07-31</strong><br>
+            ☐ Dono al rito di Hella · ______________<br>
+            ☐ Rituale 4 · ______________<br>
             _______________________________________________
         </div>
     </div>
+
+    <div class="solo-dm"></div>
+    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
+
+    <div class="dm">
+        <h3>La progressione intera, in una tabella</h3>
+        <table>
+            <tr><th>Stadio</th><th>Rituale e dove</th><th>Costo</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+            <tr><td><strong>0</strong> · indossata</td><td>1 · Difesa della Forgia, al primo contatto (<code>PortaleForgia-P1</code> §5)</td><td>2.500 mo · −2 Volontà per 24 h dopo la visione · −2 DES, +4 CAR, non rimovibile</td><td>Consapevolezza, Protezione +2 · i quattro doni di P1 (D3) · la Risonanza con Aegis (D1)</td><td><code>00_Corona_0_Gemme</code></td><td>✅ passato</td></tr>
+            <tr><td><strong>1</strong> · Topazio</td><td>2 · Prova della Sala Profonda, alla Piramide di Fuoco (<code>P3</code> §10)</td><td>12.500 mo in gemme (pagati)</td><td>Intuito di Moradin · Topazio · i tre poteri di P3 (D4)</td><td><code>01_Corona_1_Gemma</code></td><td>✅ passato</td></tr>
+            <tr><td><strong>2</strong> · Smeraldo</td><td>3 · Incudine del Mondo, nel Nodo della Terra (<code>ARC07-DEF-1</code> §9)</td><td>il pegno di Thorik: −2 DES, +2 COS (la metà materiale non è stata pagata, rito completo per decisione DM 2026-08-01)</td><td>Volontà Adamantina · Manto · Smeraldo · Chiave del Tempo</td><td><code>02_Corona_2_Gemme</code></td><td>▶ <strong>oggi</strong></td></tr>
+            <tr><td><strong>3</strong> · Rubino</td><td>4 · Assedio della Forgia Eterna, dopo il duello con Skullcrusher (<code>ARC07-DEF-4</code> Scena 12)</td><td>nessuno per il rito; il viaggio col Topazio ha il suo prezzo (D6)</td><td>Corona +3 (D5) · Senzienza · Aura della Forgia Eterna 1/settimana · Rubino, che si spende nel ritorno · Aegis Fang Stadio 1</td><td><code>03_Corona_3_Gemme</code></td><td>⬜ la sessione dopo la serata</td></tr>
+        </table>
+        <p>Le schede degli stadi passati servono al tavolo per due cose: ricostruire cosa Thorik aveva in una scena passata, e mostrare al giocatore quanto è cresciuta. Non si ristampano a ogni sessione.</p>
+        <p><strong>Weapons of Legacy.</strong> La struttura è quella: un rituale per stadio, un prezzo pagato dal portatore, un livello minimo per potere. Il libro è <code>[Private — Weapons of Legacy, WotC 2005]</code>, e di quel libro qui c'è solo la forma.</p>
+    </div>
+
+    <div class="dm">
+        <h3>La serata del 2026-09-25, per la Corona</h3>
+        <table>
+            <tr><th>Momento</th><th>Cosa succede alla Corona</th><th>Fonte</th></tr>
+            <tr><td>Atto I, la Sala</td><td>nessun effetto. Se un PG guarda la Corona: l'incasso vuoto che non riflette la luce. <strong>Non dire</strong> che si riempie a −1.000</td><td><code>DEF-3</code> §2-bis</td></tr>
+            <tr><td>Atto II, il rito · <strong>il Dono</strong></td><td>Thorik si toglie la Corona (la seconda volta in assoluto) e la posa sul petto di Hella. <strong>Dona</strong>: deflessione +1, Scudo del Custode a Hella, la Corona non protesta e da allora si scalda quando l'Eco lo fa scattare. <strong>Rifiuta</strong>: la Corona tace, il seme I resta dormiente, e al Rituale 4 la Senzienza arriverà fredda</td><td><code>DEF-3</code> §5</td></tr>
+            <tr><td>Atto III, la soglia</td><td>la Corona apre il portale con due pietre su tre. <strong>Non dire</strong> che il Rubino si spende di là</td><td><code>DEF-3</code> §8-ter</td></tr>
+            <tr><td>Atto IV, il portale</td><td>Guarigione del passaggio: non tocca il −4 DES né il −1 CA del Dono. Il prezzo del Topazio (1d10 anni, pegno di Artemis): <strong>D6</strong></td><td><code>DEF-4</code> Scena 1</td></tr>
+            <tr><td>Fine serata</td><td>si chiude al <strong>primo ariete</strong> (decisione S1). <strong>Il Rituale 4 è la sessione dopo</strong></td><td>regia della serata §5</td></tr>
+        </table>
+        <p>Da annotare a fine serata: dono o rifiuto (serve alla voce della Corona al Rituale 4) e l'anno di invecchiamento se lo si tira.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Aegis Fang, stasera</h3>
+        <p><strong>A7</strong> (Atto I): se Thorik appoggia l'ascia alla cornice, l'ascia parla e nasce il <strong>Bane contro Fauci di Palude</strong>: +2 competenza all'attacco, +3d6 danni, critico ×4, e 1 per incontro <em>scosso</em> 1d4 round (Volontà CD 22). Solo contro Fauci. <strong>Reazione al Dono</strong>: se Thorik dona, per un arco intero non tira più l'opposizione dell'Ego; se rifiuta, lo giudica nelle scene che riguardano Hella o dei nani da proteggere, finché lui non rischia qualcosa di suo per lei. Dettagli nella pagina DM di Aegis Fang.</p>
+    </div>
+
+    <div class="dm">
+        <h3>🩸 Il bilancio di Thorik, con i Doni di oggi</h3>
+        <table>
+            <tr><th>Ha pagato</th><th>Quando</th></tr>
+            <tr><td>è <strong>morto</strong> ed è stato riportato indietro</td><td>Guado di Drellin</td></tr>
+            <tr><td>−2 DES per averla indossata, e non se la toglie</td><td>dal P1</td></tr>
+            <tr><td><strong>il pegno del rito, di persona</strong>: −2 DES, +2 COS</td><td>rito dello Smeraldo, 2026-07-31</td></tr>
+            <tr><th>Gli sarà chiesto</th><th>Quando</th></tr>
+            <tr><td><strong>−1 CA per sempre</strong>, se dona la deflessione. Il vecchio «−2 COS» del Sangue della Stirpe è superato dal 2026-09-12, come il Filo dell'Ascia</td><td>stasera</td></tr>
+            <tr><td>1d10 anni col Topazio, se D6 dice sì</td><td>stasera, al portale</td></tr>
+            <tr><td>guidare di persona la difesa di Rethmar</td><td>ARC-09</td></tr>
+        </table>
+        <p>Il Dono di oggi è il più leggero dei tre sulla carta, e il giocatore lo vedrà: <strong>−1 CA, e in cambio si muove</strong> ogni volta che Hella para per qualcuno. È la prima volta che la Corona gli toglie una difesa e gli dà un momento al tavolo. Diglielo con quelle parole, se esita.</p>
+        <p><strong>Le difese che salvano si mostrano.</strong> Mente Vuota, Volontà Adamantina e immunità sono tutte passive: fai rimbalzare una dominazione davanti al tavolo almeno una volta (Balvar a −1.000, Zalkatar in ARC-09).</p>
+        <p><strong>Il ritorno è vicino.</strong> Al Rituale 4 la Corona parla. Anticipargliene la forma, senza i dettagli, gli fa reggere il costo.</p>
+        <p style="font-size:10pt;"><strong>MORADIN</strong>, se Thorik gli dice che è stanco (dopo un silenzio lungo abbastanza da diventare scomodo): <em>«Finché non ne resta niente, se lo lascio fare a te. Per questo non lo lascio fare a te.»</em> Poi chiudi la scena.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Il Rituale 3, già deciso</h3>
+        <p><strong>L'Incudine del Mondo è il rito del §9 di <code>ARC07-DEF-1</code></strong>: stesso evento, stesso Nodo. Sblocca due poteri, Volontà Adamantina e Manto. Il master chiede 40.500 mo <strong>e</strong> un sacrificio personale; il modulo li offriva come alternativa; al tavolo si è pagata la sola metà personale, e <strong>il rito è completo</strong> (DM 2026-08-01). A pagare è stato <strong>Thorik</strong> (rettifica DM 2026-08-06). ⚠️ La voce del 2026-07-31 di <code>state-changelog.md</code> scrive «scelta A, sacrificio materiale»: è il log di quel giorno, append-only; vale la rettifica in <code>DEF-1</code> §9, bottino intatto.</p>
+        <p>Al tavolo è il <strong>secondo rito celebrato</strong>; il modulo lo numera 3 perché conta anche il Risveglio.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Le domande aperte che toccano questo stadio</h3>
+        <table><tr><th>#</th><th>Domanda, e la proposta</th></tr><tr><td><strong>D1</strong></td><td>la <strong>Risonanza</strong> con Aegis Fang è attiva dal P1? Proposta: sì; il <em>Bane</em> +3d6 ×4 resta solo contro Fauci (A7).</td></tr><tr><td><strong>D3</strong></td><td>i quattro doni di quando l'ha indossata (paura, scurovisione, Comando, Guida)? Proposta: sì.</td></tr><tr><td><strong>D4</strong></td><td>i tre poteri del Topazio in P3 (Percezione, Visione, Rallentare)? Proposta: sì; il «+1 a tutti i poteri» no.</td></tr><tr><td><strong>D5</strong></td><td>la deflessione dopo il Rituale 4 se ha donato? Proposta: +2.</td></tr><tr><td><strong>D6</strong></td><td>al portale, 1d10 anni a Thorik e pegno o Tempra CD 25 ad Artemis? Proposta: sì a entrambi.</td></tr><tr><td><strong>D7</strong></td><td>RD del Manto 5/epico o 5/epico e male? Il giocatore ha letto entrambe: «epica e malvagia» nel PDF del 2025, «5/epico» nella pagina del 2026-07-31. Proposta: 5/epico, l'ultima letta.</td></tr><tr><td><strong>D10</strong></td><td>i livelli minimi del libro della Corona contano? Proposta: no, decide il rituale; Thorik ha già poteri da 15° e 17° per decisione del DM.</td></tr></table>
+        <p>Il dettaglio di ogni domanda, con le fonti: <code>PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md</code> §7. Finché il DM non risponde, i blocchi tratteggiati in rosso nella pagina del giocatore non sono canone: si possono cancellare a penna.</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione corona · S2 · r2 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
 
 </body>
 </html>
