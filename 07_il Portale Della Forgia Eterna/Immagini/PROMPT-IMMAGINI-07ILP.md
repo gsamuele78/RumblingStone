@@ -1157,7 +1157,7 @@ SEGNO      traccia rune sulle pareti dei tunnel [col gesso: PROPOSTA]
 ### R5 · Balvar Fuocospento  `[ritratto-balvar-fuocospento]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/balvar-fuocospento.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 BALVAR — nano dello scudo, vecchio · curvo sul lavoro

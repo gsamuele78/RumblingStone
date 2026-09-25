@@ -365,6 +365,11 @@ scripts/comfyui-local/ComfyUI/
 # Come si rigenerano: python3 scripts/build_image_derivatives.py PG/Immagini
 !PG/Immagini/web/*.jpg
 
+# I ritratti dell'ARC-07 generati con un servizio (Canva, 2026-09-25): senza seme
+# non si rifanno, quindi il file È il sorgente e va versionato (ADR-0019 §2-bis).
+# Il percorso è quello dell'atlante, PROMPT-IMMAGINI-07ILP.md, schede R1-R7.
+!07_il Portale Della Forgia Eterna/Immagini/ritratti/*.jpg
+
 # Texture per il render 3D delle mappe: CC0 riscaricabili, non master (ADR-0003).
 # La convenzione delle cartelle sta in scripts/blender/texture/README.md.
 scripts/blender/texture/*/

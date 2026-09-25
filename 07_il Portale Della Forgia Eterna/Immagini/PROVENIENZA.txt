@@ -77,7 +77,7 @@ canva.com; chi esporta salva il PNG col nome indicato e toglie questa nota.
 Riferimenti usati per le due tavole di Hella: PG/Immagini/web/Hella4.jpg,
 PG/Immagini/web/durik2.jpg (caricati in Canva come MAHWLxN6giU, MAHWL1xURrU).
 
-ritratto-balvar-fuocospento.png · Canva AI generate-image, media MAHWLw8QnOo · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
+ritratti/balvar-fuocospento.jpg · Canva AI generate-image, media MAHWLw8QnOo · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM · NEL REPO, JPEG 533×800 ricevuto dal DM in chat (copia ridotta, da sostituire con l'originale)
 ritratto-zogtar-deatheye.png · Canva AI generate-image, media MAHWL_YsfgQ · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
 ritratto-re-thorek-i.png · Canva AI generate-image, media MAHWLyU_oPo · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM
 ritratto-thorgrim-barbadiferro.png · Canva AI generate-image, media MAHWLyX0Wa0 · termini di servizio Canva · seed — · 2026-09-25 · Claude per il DM

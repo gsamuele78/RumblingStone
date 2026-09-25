@@ -893,7 +893,9 @@ Appendice A)*
 | **Suona** | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
-| **Ritratto** | da generare: `id=ritratto-balvar-fuocospento`, per primo |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Balvar Fuocospento, il runaio esiliato](../../Immagini/ritratti/balvar-fuocospento.jpg)
 
 > **Perché esiste.** Due giocatori hanno chiesto la stessa cosa da due lati:
 > Artemis non ha mai niente da individuare, Thorik non incontra mai

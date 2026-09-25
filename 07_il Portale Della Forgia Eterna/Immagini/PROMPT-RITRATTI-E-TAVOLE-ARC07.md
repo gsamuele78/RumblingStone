@@ -283,7 +283,7 @@ che non deve mancare» di ogni scheda.
 
 | id | Media Canva | Prima lettura |
 |---|---|---|
-| `ritratto-balvar-fuocospento` | [MAHWLw8QnOo](https://www.canva.com/M/MAHWLw8QnOo) | vecchio nano, barba bianca, grembiule, lastra sulle ginocchia e punta in mano; da verificare che la punta tocchi l'ardesia |
+| `ritratto-balvar-fuocospento` | [MAHWLw8QnOo](https://www.canva.com/M/MAHWLw8QnOo) | **nel repo** come `ritratti/balvar-fuocospento.jpg`, verificato a 533 × 800: la punta tocca l'ardesia. È la copia ridotta arrivata in chat |
 | `ritratto-zogtar-deatheye` | [MAHWL_YsfgQ](https://www.canva.com/M/MAHWL_YsfgQ) | seconda passata: la pietra nera nell'orbita destra si vede, volto illuminato da sinistra |
 | `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | barba bianca in trecce, ascia chiara in pugno, mappa sul tavolo; da verificare la corona senza gemme |
 | `ritratto-thorgrim-barbadiferro` | [MAHWLyX0Wa0](https://www.canva.com/M/MAHWLyX0Wa0) | seconda passata: guarda in alto la luce, mani vuote a palmi in su, ascia accanto; il callo va verificato a piena risoluzione |
