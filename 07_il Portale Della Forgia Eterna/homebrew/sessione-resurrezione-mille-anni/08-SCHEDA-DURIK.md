@@ -79,7 +79,9 @@ contro un nemico grosso, non regge.
 
 **Se viene distrutto** torna polvere, e la polvere torna nel terzo seme della
 Collana. Con una carica dell'**Evocazione dei Guardiani** lo richiami subito,
-per un'ora. All'alba è di nuovo intero, e resta.
+per un'ora. All'alba è di nuovo intero, e resta. Se l'Evocazione è spenta,
+perché hai chiamato i due Treant insieme, non puoi richiamarlo subito: torna
+all'alba.
 
 ---
 

@@ -2504,7 +2504,10 @@ foglio *Hella, tornata*):
 - **Avatar della Radice** (1/g: Ibrido Treant/Nano Enorme 10 round — +8 FOR,
   portata, schianti);
 - **Evocazione dei Guardiani** (3/g): semi I e II → **Treant di Adamantio**
-  (statblocco in Appendice A); seme III → **Durik**, se è stato distrutto;
+  per 1 ora (statblocco in Appendice A); seme III → **Durik**, se è stato
+  distrutto. I semi tornano all'alba. Chiamare i due Treant insieme spegne
+  l'Evocazione per un mese: Durik distrutto torna solo all'alba;
+- la Collana **funziona anche in forma selvatica**;
 - **I Doni dei Semi** (3 slot): custodiscono i sacrifici del party — se un PG ha
   rifiutato (§5), il suo slot è **vuoto** e si potrà colmare in gioco.
 
@@ -2843,7 +2846,9 @@ ARTEFATTO: Collana dei Semi Eterni (§7).
 **Statblock — TREANT DI ADAMANTIO (evocato).** Costrutto/Vegetale, Grande · PF 90
 (RD 10/adamantio) · CA 24 (−1 taglia, +15 nat) · Vel 9 m · 2 schianti +18 (2d8+9)
 · **Siegebreaker** (danni ×2 a oggetti/strutture, ignora Durezza <20) · i colpi
-contano come adamantio. *«Corteccia di ferro freddo, foglie di mithral affilato,
+contano come adamantio · dura **1 ora**, al massimo due, uno per seme. Con
+Tordek donatore entro 9 m, resistenza al fuoco 10; con Artemis donatrice, quando
+lei usa *Luce di Lathander*, Rigenerazione 1. *«Corteccia di ferro freddo, foglie di mithral affilato,
 un cuore di energia terrestre.»*
 
 <!-- nuova-pagina -->

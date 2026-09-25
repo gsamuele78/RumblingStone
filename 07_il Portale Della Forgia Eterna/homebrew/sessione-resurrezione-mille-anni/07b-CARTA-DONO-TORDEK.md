@@ -15,6 +15,9 @@ spingono e i draghi afferrano, quel bottone non c'è più.
 **Quello che è germogliato in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
 l'**unica** riduzione del danno che avrà.
 
+**E i Bracieri scaldano il bosco.** Finché sei entro **9 m**, i Treant di
+Adamantio che Hella evoca hanno **resistenza al fuoco 10**.
+
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
