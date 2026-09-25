@@ -343,6 +343,7 @@ della cartella `06_` sono identiche a quelle di `PG/`.
 | D11 | Lo stadio 1 dell'Anello **non è mai stato dato**: al tavolo c'è stata solo la crisi | pagina giocatore S1 tolta, DM resta |
 | D12 | Ad Artemis la **Fortezza Mentale** (+2 ai TS contro l'influenza divina) | pagine Riforgiato e S1 DM, skill. ⚠️ va sulla scheda di Artemis e in `state.md` col prossimo `dm.py session end` |
 | D13 | **Aperta**, con una bozza da approvare: *Alba Voluta* e *Purificazione del Crepuscolo* 1/giorno, e il *Prezzo dell'Armonia* | `04_Anello_S3_Caos_Ultimo_DM.html` |
+| D14 | Aegis Fang: il giocatore la usa **ritornante** (corretto: è nel `.docx` dal primo giorno) e con poteri che nessuna fonte scriveva. Il DM: *bane* contro i non morti e **Tuono** +1d6 sonoro contro non morti e aberrazioni, accesi da un TS sulla Volontà **CD 16** che tira l'ascia; la **Dragondoom** è la punizione del MIC (3/giorno, +1d6…+4d6 per taglia). Restano `[INFERRED]` la durata e il bonus del TS | pagine Aegis S0 (r4), master, skill. ⚠️ `state.md` §6 via `dm.py session end` |
 
 ---
 

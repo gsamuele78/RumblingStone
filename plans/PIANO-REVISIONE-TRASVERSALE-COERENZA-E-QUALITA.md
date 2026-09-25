@@ -422,6 +422,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 | ~~D11~~ | Lo stadio 1 dell'Anello (Mask sveglio) è stato usato al tavolo? | **Deciso**: no, solo la crisi; pagina giocatore tolta |
 | ~~D12~~ | Gli effetti della Opzione C sulla scheda di Artemis? | **Deciso**: la Fortezza Mentale |
 | D13 | I poteri del Caos Ultimo (Anello, stadio 3)? | Bozza da approvare sulla pagina DM: *Alba Voluta* e *Purificazione del Crepuscolo* 1/giorno, e il *Prezzo dell'Armonia* |
+| ~~D14~~ | Aegis Fang: i poteri usati al tavolo e mai scritti (Ritornante, *bane*, Tuono, Dragondoom)? | **Deciso**: *bane* contro i non morti e Tuono +1d6 sonoro contro non morti e aberrazioni, TS Volontà CD 16 tirato dall'ascia; Dragondoom come nel MIC |
 
 ---
 
@@ -454,7 +455,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 - [x] T1 · [x] T2 · [x] T3 · [x] T4 — **LOTTO T-A COMPLETO (2026-07-03)**
 - [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (resta opzionale/estetico solo l'SVG dei 16 narrativi)
 - [x] T6a (sessione 3, 2026-07-03) · [x] T6b (sessioni 6-8, 2026-07-04: Aegis master + Cerebro eletto + Corona consolidata/riconciliata + campaign-artifacts sync) · [x] T6c (sessione 11, 2026-07-04: doppia colonna §6, conferma DM T-D10) — **LOTTO ARTEFATTI COMPLETO**
-- [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [ ] T10-c · [ ] T10-d · [ ] T10-e · [ ] T10-f · [x] T10-g (11 risposte del DM applicate; resta D13, la bozza del Caos Ultimo)
+- [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [ ] T10-c · [ ] T10-d · [ ] T10-e · [ ] T10-f · [x] T10-g (12 risposte del DM applicate, D14 su Aegis Fang compresa; resta D13, la bozza del Caos Ultimo)
 - [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) — schede, sinergie, propagazione
 - [x] T-D1…T-D12 — decisioni acquisite (2026-07-03/04); **ZERO domande DM
   aperte** (sessione 11, 2026-07-04: risolti Corona×2, Bracieri, Campo

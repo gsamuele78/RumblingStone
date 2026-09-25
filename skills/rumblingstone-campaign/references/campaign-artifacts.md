@@ -33,8 +33,10 @@ Adapted from Forgotten Realms lore (originally Wulfgar's warhammer). In this cam
 - **Alignment:** **Lawful Neutral** (the original sheet `Aegis Fang.docx`; this file said Lawful Good until 2026-09-25)
 - **Sentient:** Int 10, Wis 15, Cha 15, **Ego 14**; speech, telepathy, darkvision 18 m, hearing
 - **Lesser powers:** *cure moderate wounds* 3/day, *resist energy* 1/day
+- **Dragondoom** (DM 2026-09-25, D14; values as the DM reports the MIC, text not in the repo): 3/day, declared before the attack roll, vs a Large or larger dragon: +1d6 Large, +2d6 Huge, +3d6 Gargantuan, +4d6 Colossal; wasted on a miss
+- **The axe's will** (DM 2026-09-25, D14; in play at the table, on no sheet before): **bane vs undead** (SRD bane: +2 enhancement, +2d6) and **Thunder** +1d6 sonic vs undead and aberrations. Each switches on if the axe succeeds on a **Will save DC 16**; the axe rolls, when Thorik asks for its help or, in extreme cases, on its own against its sworn enemies. [INFERRED — needs DM confirmation] duration (proposal: until the end of the fight) and the axe's save bonus (proposal: none, a flat d20 ≥ 16)
 - **Weight:** 4 kg
-- **Tonight (2026-09-25), fresco A7:** if Thorik rests the axe on the frame, it speaks and gains the **bane vs Fauci di Palude** (+2 attack, +3d6, ×4 crit, 1/encounter *shaken* 1d4 rounds, Will DC 22). Only vs Fauci; vs other dragons it stays +2d6 Dragondoom
+- **Tonight (2026-09-25), fresco A7:** if Thorik rests the axe on the frame, it speaks and gains the **bane vs Fauci di Palude** (+2 attack, +3d6, ×4 crit, 1/encounter *shaken* 1d4 rounds, Will DC 22). Only vs Fauci; vs other dragons the Dragondoom smite applies
 
 ### Full Awakening (After Siege of the Eternal Forge Ritual)
 
