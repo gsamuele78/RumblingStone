@@ -33,7 +33,7 @@ Adapted from Forgotten Realms lore (originally Wulfgar's warhammer). In this cam
 - **Alignment:** **Lawful Neutral** (the original sheet `Aegis Fang.docx`; this file said Lawful Good until 2026-09-25)
 - **Sentient:** Int 10, Wis 15, Cha 15, **Ego 14**; speech, telepathy, darkvision 18 m, hearing
 - **Lesser powers:** *cure moderate wounds* 3/day, *resist energy* 1/day
-- **Dragondoom** (DM 2026-09-25, D14: this is the axe's power vs dragons; no bane vs undead or aberrations at Stage 0; values as the DM reports the MIC, text not in the repo): 3/day, declared before the attack roll, vs a Large or larger dragon: +1d6 Large, +2d6 Huge, +3d6 Gargantuan, +4d6 Colossal; wasted on a miss
+- **Dragondoom** (DM 2026-09-25, D14: this is the axe's power vs dragons; no bane vs undead or aberrations at Stage 0) [Private — MIC p. 33]: melee property, +1 equivalent, CL 7th; 3/day, swift action (command), declared before the attack roll, vs a dragon-type creature Large or larger: +1d6 per size above Medium (+1d6 Large … +4d6 Colossal); wasted on a miss or a non-dragon target. Thrown attacks: the text is silent, the DM rules at the table
 - **Weight:** 4 kg
 - **Tonight (2026-09-25), fresco A7:** if Thorik rests the axe on the frame, it speaks and gains the **bane vs Fauci di Palude** (+2 attack, +3d6, ×4 crit, 1/encounter *shaken* 1d4 rounds, Will DC 22). Only vs Fauci; vs other dragons the Dragondoom smite applies
 

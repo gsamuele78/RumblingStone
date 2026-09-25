@@ -51,11 +51,18 @@ vincoli*).
 
 - **Dragondoom** (DM 2026-09-25, D14: è **questo** il potere dell'ascia
   contro i draghi; allo stadio 0 non c'è nessun *bane* contro non morti o
-  aberrazioni, che arrivano solo con lo stadio 1): la punizione del *Magic Item
-  Compendium* come la riporta il DM — 3/giorno, dichiarata **prima** del tiro
-  d'attacco, contro un drago Grande o più: **+1d6** Grande, **+2d6** Enorme,
-  **+3d6** Mastodontico, **+4d6** Colossale; se l'attacco manca l'uso è perso.
-  Il testo del MIC non è nel repo (non SRD): valori non verificati qui.
+  aberrazioni, che arrivano solo con lo stadio 1)
+  [Private — Magic Item Compendium, p. 33, mostrato dal DM il 2026-09-25]:
+  proprietà da arma da mischia, **equivalente +1**, LI 7°, aura moderata di
+  trasmutazione; lama incisa con un drago decapitato. **3/giorno**, **azione
+  veloce** (comando), dichiarata **prima** del tiro d'attacco, contro una
+  creatura del tipo drago di taglia Grande o più: **+1d6** per ogni taglia
+  sopra Media (+1d6 Grande, +2d6 Enorme, +3d6 Mastodontica, +4d6 Colossale).
+  Se l'attacco manca, o il bersaglio non è un drago, l'uso è perso.
+  Sull'attacco lanciato il testo tace: decide il DM al tavolo.
+  Per il prezzo (T10-f), solo la parte d'arma: +2, Ritornante (+1) e
+  Dragondoom (+1) fanno un bonus equivalente **+4** (32.000 mo più l'ascia
+  perfetta); senzienza e poteri inferiori si contano a parte.
 
 ### Stadio 1 — Risveglio pieno (dall'HTML, post-Assedio — ⬜ futuro)
 - **Potenziamento**: diviene **+4 Ascia da Guerra Nanica Sacra (Holy)
