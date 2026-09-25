@@ -576,12 +576,13 @@ rinnovabili 1/giorno tornando alla Sala.
 
 | Benedizione | Effetto 3.5 | Sostituisce (valore) |
 |---|---|---|
-| **Pelle di Pietra** | Resist. Fuoco 10 + Freddo 5 | *Resist Energy* (1.000 mo) |
-| **Cuore Incrollabile** | come *Endure Elements* potenziato + 2 TS Tempra vs ambiente | *Endure Elements* (~500 mo) |
-| **Vigore della Forgia** | 3 cariche/giorno, azione std: cura 3d8+10 a sé (o a un cristallo, `DEF-1` §6) | pozioni di cura |
+| **Pelle di Pietra** | passiva, 24 h: resistenza al fuoco 10 e al freddo 5 | *Resist Energy* (1.000 mo) |
+| **Cuore Incrollabile** | passiva, 24 h: immunità al caldo e al freddo ambientali non letali, +2 ai TS su Tempra contro gli effetti ambientali | *Endure Elements* (~500 mo) |
+| **Vigore della Forgia** | 3 cariche al giorno, tornano all'alba. Azione standard: cura 3d8+5 a sé (o a un cristallo, `DEF-1` §6); a contatto, 2d8+2 a un alleato | pozioni di cura |
 | **Forza della Montagna** *(solo nel Piano della Terra)* | ignora la gravità 2×, +2 FOR vs gravità | — (specifica dell'arco) |
 
-> Handout carte-singole nel PDF `BenedizioniDiMoradin.pdf` (§11).
+> Le carte sono il PDF `BenedizioniDiMoradin.pdf` (§11): tre benedizioni per tutti.
+> Forza della Montagna vale solo nel Piano della Terra e non ha una carta.
 
 ---
 

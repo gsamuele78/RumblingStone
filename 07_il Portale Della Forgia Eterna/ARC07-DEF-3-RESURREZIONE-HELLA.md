@@ -957,7 +957,7 @@ verde-oro funziona **ma la sente ostile** (vulnerabilità). Evoca un orso: appar
 mezzo-corteccia, cambiato dalla sua nuova affinità.
 
 **Le Benedizioni di Moradin su Hella** (Moradin: *«Combatterai i miei figli.
-Proteggili. Proteggi il focolare.»*) — le 6 standard (`DEF-2` §7) **+**:
+Proteggili. Proteggi il focolare.»*) — le tre del PDF (`DEF-2` §7) **+**:
 - **Mantello della Fiamma** (Resist Fuoco **20**) — **cruciale**: mitiga la sua
   vulnerabilità per una battaglia (falla valere prima di Skullcrusher/Fauci).
 - **Benedizione di Moradin Incarnato** (1/battaglia): +2 sacro att/danni, +4 vs
