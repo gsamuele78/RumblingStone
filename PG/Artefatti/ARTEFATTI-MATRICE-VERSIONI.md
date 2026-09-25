@@ -127,6 +127,31 @@ ARC-07 B9; file combinato player+DM, ora la parte DM). **⭐ HANDOUT giocatore**
 post-resurrection" (stato preparato): vedi [T4-a]. Gli **slot-dono del party
 (3)** si legano al ramo del rifiuto del P3B §2-BIS.
 
+**⭐ PAGINE stampabili** (2026-09-25), nella famiglia di `02_Corona_2_Gemme.html`
+(blocchi di potere, riga meccanica, leggenda, versione giocatore e versione DM):
+
+| File | Per chi |
+|---|---|
+| `Artefatti-Pg/Hella/01_Collana_Radicata.html` | la giocatrice |
+| `Artefatti-Pg/Hella/01_Collana_Radicata_DM.html` | il DM: lore da rivelare, ramo del rifiuto, scheda tecnica, la Quaternità, stati futuri |
+| `Artefatti-Pg/Hella/02_Durik_Guardiano_di_Pietra.html` | la giocatrice: Durik vive nel terzo seme, e la sua pagina sta accanto a quella della Collana |
+| `Artefatti-Pg/Hella/02_Durik_Guardiano_di_Pietra_DM.html` | il DM: quando assegnare le Prove di Risonanza, perché ha questo aspetto, come non usarlo |
+
+L'immagine della Collana è `collana-dei-semi-eterni.jpg` (Canva AI, provenienza in
+`PROVENIENZA.txt`); quella di Durik è `PG/Immagini/web/DurikFront2.jpg`. I poteri vengono
+dai fogli consegnati alla serata della resurrezione (`09-SCHEDA-HELLA-RISORTA.md`,
+`08-SCHEDA-DURIK.md`). Il PDF si esporta dalla pagina (Chromium, «Stampa»); non è nel repo.
+
+L'handout `00_…` della Collana ora è solo un rimando a queste pagine. Il lore del master
+DM è allineato a `DEF-3` (i semi sul corpo, un dono per seme, l'Impronta di Durik nel
+terzo). Decisioni del DM del 2026-09-25, scritte nelle pagine, nel master, nelle
+sinergie e nella skill di campagna: al massimo due Treant, e insieme spengono
+l'Evocazione per un mese; tipi dei poteri (Sop, i due doni nel corpo Str, il Rovo Mag);
+la scheda tecnica è canone; F1-F4 sono canone, F1 e F4 chiuse finché non si gioca la
+loro condizione. Chiusi anche gli ultimi tre punti: la Collana funziona sempre, anche in
+forma selvatica; i semi tornano all'alba; gli stati futuri hanno i momenti
+canone e i poteri da scrivere in ARC-09.
+
 ## 6. SINERGIE (party)
 
 **⭐ MASTER**: `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md` (creato in T4 —

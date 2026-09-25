@@ -96,6 +96,13 @@
       ],
       "stato": "in-volo",
       "dove": "PR aperta sopra la #173: il Drappo esce dalla beta e le marcature di ARC-07 chiuse col DM"
+    },
+    {
+      "ref": [
+        "origin/claude/pagina-collana"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #177 aperta: le pagine stampabili della Collana dei Semi Eterni e di Durik, giocatrice e DM"
     }
   ],
   "file": [

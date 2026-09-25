@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durik Riforgiato — il Guardiano di Pietra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 12mm; }
+        html { background: #f3f1e8; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #8f9a96; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #34403d; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .motto { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #9a6a12; text-shadow: 0 0 2px #e0a030; font-weight: bold; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        .dm-tag { display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 2px 10px; border-radius: 3px; margin: 6px 0 2px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #8f9a96; background: rgba(46, 139, 122, 0.08); }
+        .quote.cambiato { border-left-color: #34403d; background: rgba(75, 83, 32, 0.07); }
+        h2 { color: #34403d; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #8f9a96; padding-bottom: 3px; margin: 16px 0 10px 0; text-transform: uppercase; }
+        .ritratto { display: block; margin: 0 auto 10px auto; max-width: 62%; height: auto; border: 2px solid #34403d; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #8f9a96; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #1f5f55; border-bottom: 1px dashed #8f9a96; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #5a5a50; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt; }
+        .tag { background: #34403d; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-acceso { border: 2px solid #34403d; background: rgba(46, 139, 122, 0.08); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #9a6a12; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #34403d, #5a5a50); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #8f9a96; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .conferma { font-family: "Courier New", monospace; font-size: 9pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2 { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="class-title">Durik Riforgiato</h1>
+        <div class="subtitle">Il Guardiano di Pietra — compagno di Hella, nel terzo seme della Collana</div>
+        
+        <div class="motto">«Si mette sempre fra te e quello che ti vuole male.»</div>
+    </div>
+
+    <img src="../../../Immagini/web/DurikFront2.jpg" alt="Durik Riforgiato" class="ritratto">
+
+    <div class="quote">
+        <strong>La Leggenda del Fedele</strong><br>
+        «Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra, e la pietra se l'è tenuto. Quando la montagna ha ceduto lo Smeraldo, la polvere del guardiano sconfitto ha preso la sua forma. A Moradin avevi risposto che doveva proteggere te. Lo fa. Non gliel'hai mai insegnato.»
+    </div>
+
+    <div class="quote cambiato">
+        <strong>Com'è fatto.</strong><br>
+        Un cane da galoppo di mithral intrecciato a roccia scura, come muscolo a osso, con vene di luce verde fra le placche. Occhi di topazio. Non abbaia più: quando vuole dirti qualcosa fa un click, come una pietra che si assesta in un muro a secco.
+    </div>
+
+    <div class="requirements">
+        <strong>Tipo:</strong> bestia magica (animale potenziato, sottotipo Terra) · <strong>Taglia:</strong> Media · <strong>Allineamento:</strong> Neutrale Buono<br>
+        <strong>Legato a:</strong> Hella, e al terzo seme della Collana · <strong>Prove di Risonanza:</strong> 1<br>
+        <strong>Dadi Vita:</strong> 12d10+36 · <strong>102 pf</strong> · <strong>Iniziativa</strong> +2 · <strong>Velocità</strong> 12 m, scavare 3 m in terra morbida
+    </div>
+
+    <h2>Le statistiche</h2>
+
+    <table>
+        <tr><th style="width:30%">Voce</th><th>Valore</th></tr>
+        <tr><td><strong>CA</strong></td><td><strong>21</strong> (+2 DES, +9 naturale) · contatto 12 · colto alla sprovvista 19</td></tr>
+        <tr><td><strong>Attacco base / Lotta</strong></td><td>+9 / +15</td></tr>
+        <tr><td><strong>Attacco</strong></td><td>morso <strong>+15</strong> mischia (<strong>2d6+6</strong>, 19-20/×2)</td></tr>
+        <tr><td><strong>Attacco completo</strong></td><td>morso <strong>+15</strong> (2d6+6) e 2 artigli <strong>+13</strong> (1d4+3)</td></tr>
+        <tr><td><strong>Spazio / portata</strong></td><td>1,5 m / 1,5 m</td></tr>
+        <tr><td><strong>Tiri salvezza</strong></td><td>Tempra <strong>+11</strong> · Riflessi <strong>+10</strong> · Volontà <strong>+6</strong></td></tr>
+        <tr><td><strong>Caratteristiche</strong></td><td>FOR 22 · DES 15 · COS 17 · INT 4 · SAG 14 · CAR 8</td></tr>
+    </table>
+
+    <h2>Quello che è</h2>
+
+    <div class="power-block">
+        <div class="power-header">Corteccia di granito e mithral <span>sempre</span></div>
+        <div class="mechanic">Straordinario (Str) | RD 5/adamantio | Resistenza al freddo 10</div>
+        <div class="desc-text">Regge a tutto tranne l'adamantio.</div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Colpi magici <span>sempre</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Sempre attivo</div>
+        <div class="desc-text">I suoi attacchi superano la RD come armi magiche, e il <strong>morso conta come adamantio</strong>.</div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Percezione tellurica <span>18 m</span></div>
+        <div class="mechanic">Straordinario (Str) | Sempre attivo | Solo a terra</div>
+        <div class="desc-text">Sente chi si muove a terra entro 18 m, anche al buio, anche invisibile. Non chi vola. <strong>Il click vuol dire: sotto.</strong></div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Immunità, e il suo punto debole <span>sempre</span></div>
+        <div class="mechanic">Straordinario (Str) | Charme · compulsione · paralisi · sonno · pietrificazione · veleno</div>
+        <div class="desc-text">L'<strong>acido</strong> gli fa <strong>+50%</strong>: la pietra si corrode.</div>
+    </div>
+
+    <div class="incisione">◆ Il legame ◆</div>
+
+    <div class="power-block block-acceso">
+        <div class="power-header">Fedeltà assoluta <span class="tag">tuo</span></div>
+        <div class="mechanic">Straordinario (Str) | Volontà CD 18</div>
+        <div class="desc-text">Nessuna magia lo mette contro di te. Chi prova a charmarlo o dominarlo deve superare <strong>Volontà CD 18</strong>, o perde l'incantesimo.</div>
+    </div>
+
+    <div class="power-block block-acceso">
+        <div class="power-header">Legame <span class="tag">18 m</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Ordini col pensiero</div>
+        <div class="desc-text">Gli dai ordini col pensiero entro <strong>18 m</strong>, senza parlare. Oltre, fa l'ultima cosa che gli hai chiesto, o ti protegge.</div>
+    </div>
+
+    <div class="power-block block-acceso">
+        <div class="power-header">Empatia della pietra <span class="tag">qualunque distanza</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Finché uno dei due ha pietra sotto i piedi</div>
+        <div class="desc-text">Sente il tuo umore, e ti manda il suo: pericolo, calma, fretta. Viaggia nel Sogno della Terra.</div>
+    </div>
+
+    <h2>Come si gioca</h2>
+
+    <div class="requirements">
+        <strong>Sta sempre con te.</strong> Non serve evocarlo.<br>
+        <strong>Se non gli dai ordini, ti protegge</strong>: si mette fra te e il pericolo, e chi vuole arrivarti addosso deve passare da lui o girargli intorno.<br>
+        <strong>Non è fatto per combattere da solo.</strong> È uno scudo che morde: rende a fianco di Thorik o di Tordek, per prendere un nemico ai fianchi, o quando afferra e tiene fermo qualcuno mentre gli altri lavorano.<br>
+        <strong>Se viene distrutto</strong> torna polvere, e la polvere torna nel terzo seme. Con una carica dell'Evocazione dei Guardiani lo richiami subito, per un'ora. All'alba è di nuovo intero, e resta. Se l'Evocazione è spenta, perché hai chiamato i due Treant insieme, non puoi richiamarlo subito: torna all'alba.
+    </div>
+
+    <h2>Come cresce</h2>
+
+    <table>
+        <tr><th style="width:12%">Prove</th><th>Cosa cambia</th></tr>
+        <tr><td class="c"><strong>1</strong> ✓</td><td>12 DV, il morso passa a 2d6+6. <em>È già successa: è il motivo per cui è così.</em></td></tr>
+        <tr><td class="c">2 ☐</td><td>RD <strong>8</strong>/adamantio · percezione tellurica <strong>27 m</strong></td></tr>
+        <tr><td class="c">3 ☐</td><td>diventa <strong>Grande</strong>: +4 FOR, −2 DES, +4 armatura naturale; nuovo attacco, schianto 2d6+9</td></tr>
+        <tr><td class="c">4 ☐</td><td><strong>immune all'acido</strong>; il morso conta anche come ferro freddo</td></tr>
+        <tr><td class="c">5 ☐</td><td>immune a tutti i danni da energia; +2 SAG, e capisce le tue parole senza ambiguità</td></tr>
+    </table>
+    <div class="quote" style="font-size:10pt;">Durik non cresce con i tuoi livelli. Cresce quando il legame fra voi si mette alla prova. Il DM te lo dice quando succede, di solito dopo.</div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Registro (compila a penna)</div>
+        <div class="corpo">
+            Legato ad Hella al risveglio · data: ______________________<br>
+            Distrutto e richiamato: ______________________<br>
+            _______________________________________________
+        </div>
+    </div>
+
+</body>
+</html>
