@@ -77,10 +77,12 @@
 | `ADR-0014` §1 | **nessuna sequenza a battute senza regia** (apertura di round, una battuta per attore, esito riuscita **e** fallimento, chiusura) | **maggiore** | 🟢 congegno `regia di round (una battuta per attore)` — e dice che esiste **in un documento solo** |
 | `ADR-0014` §2 | **occhio da avventuriero**: scala per paragone, niente metrature nel box | **minore** · `metratura_nella_voce_narrante` | 🟢 `misura_craft --metrature` — **28 box su 477 (6%)**, in 9 file. Cerca la **forma** numero + unità di *spazio* (m · cm · quadretti · °C · Ø), non il numero: «tre round» e «sessanta battiti al minuto» sono legittimi. Falsi positivi **contati a mano: 1 su 28**, un PNG che dice «8-15 km» in un dialogo |
 | `rumblingstone-module-standard` §5 | un testo **per i giocatori** porta almeno **un'ancora nominata**: un nome del canone che chi legge riconosca | **maggiore** · `testo_giocatori_senza_ancore` | 🟢 `validate_prosa.py` — 🐛 **stessa storia del trattino**: misurata e mai registrata. 🔎 Nasce da un rilievo del tavolo — la giocatrice di Hella non capiva i suoi echi, e contando le ancore nei quattro testi per-PG della stessa sessione: Tordek 8, Thorik 5, Artemis 4, **Hella 0** |
+| `consequence-echoes.md` §3-ter, regola 3 | un eco per un PG **non anticipa**: niente numeri o meccaniche, niente scelte che il tavolo deve ancora fare, nessuna spiegazione del frammento | **maggiore** | 🔴 non misurato — «anticipare una scelta» dipende da cosa succede **dopo** nel modulo, e un rilevatore dovrebbe leggere il master insieme all'eco. Il segnale povero (cifre e «CD» dentro un testo per i giocatori) prenderebbe anche le schede, che i numeri li devono avere. 🔎 Nasce da un rilievo del DM il 2026-09-24, sui fogli della serata della resurrezione |
 | `rumblingstone-module-standard` | le 16 sezioni obbligatorie della checklist | **maggiore** | 🟡 `validate_modules.py` — **solo su `ARC*-DEF-*.md`**: 96 file su 100 non sono mai guardati |
 | `rumblingstone-module-standard` §8 | sidebar **«Scalare lo scontro»** obbligatoria per i boss | **maggiore** | 🟢 congegno `scalare lo scontro` — e dice **zero** in tutti i 71 file di ARC-08 e ARC-09 |
 | `rumblingstone-prosa-documenti` | norme sui **documenti** del repo (non sul contenuto di gioco) | **minore** | 🟢 `validate_prosa.py --documenti` |
 | `rumblingstone-editoria` | impaginazione, riquadri, statblocchi in stampa | **maggiore** | 🟢 `validate_booklets.py --stampa` |
+| `rumblingstone-editoria` §2 · §4.4 | una **mappa** in un booklet **entra in colonna (≤ 48 celle) o va su una pagina A4** a una colonna, e non va mai a capo; oltre 110 celle scende sotto i 9 pt | **maggiore** | 🟢 `validate_booklets.py --stampa` — compila ogni volume con l'esportatore che applica la regola da sé (`CELLE_COLONNA`, `#griglia`), e `TestMappeCheNonEntranoInColonna` ne tiene i casi. La soglia delle 110 celle è un **avviso** dell'esportatore, non un rosso: la mappa resta leggibile, solo più piccola. 🔎 Nasce dalle mappe di `DEF-2` uscite a brandelli nel volume della serata, 2026-09-25 |
 | `ADR-0060` (norma WotC/Paizo) | **caratteristiche e abilità maiuscole** nelle quattro forme meccaniche: `Forza 25` · `Nuotare +9` · `prova di X` con una CD · `bonus di X` | **minore** · `caratteristica_minuscola` | 🟢 `validate_prosa.py --caratteristiche` — 258 occorrenze sotto controllo, soglia **zero**, e **fuori dalle quattro forme non si misura** (una frase discorsiva senza CD non si vede: costerebbe più falsi positivi di quanti errori trovi) |
 | `read-aloud-adulti.md` + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** · `read_aloud_presuppone` | 🟢 `misura_craft --p1` — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
 | `ADR-0059` (MQM) | il **punteggio di qualità pesato**: severità 1 / 5 / **25**, soglia per classe, critico pass-fail | — è il metro, non una norma che un documento possa violare | 🟢 `punteggio_mqm.py --soglia` — 515 documenti, soglie da `specifiche-qualita.yaml` misurate con `--distribuzione`. ⚠️ Copre **4 norme su 40**: entra solo ciò che ha già un rilevatore |
@@ -93,9 +95,9 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 22 |
+| 🟢 misurate | 23 |
 | 🟡 misurate in parte, con il limite scritto | 8 |
-| 🔴 **non misurate, con la ragione scritta** | 9 |
+| 🔴 **non misurate, con la ragione scritta** | 10 |
 | ⚪ non applicabili | 2 |
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se

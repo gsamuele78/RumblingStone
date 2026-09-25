@@ -360,6 +360,11 @@ scripts/comfyui-local/ComfyUI/
 #   "07_il Portale Della Forgia Eterna/Immagini" --max 1600
 !07_il Portale Della Forgia Eterna/Immagini/web/*.jpg
 
+# Stessa ragione per i ritratti dei PG (serata della resurrezione, 2026-09-24):
+# i PNG di Durik pesano 7,5 MB l'uno e le schede da stampa li userebbero così.
+# Come si rigenerano: python3 scripts/build_image_derivatives.py PG/Immagini
+!PG/Immagini/web/*.jpg
+
 # Texture per il render 3D delle mappe: CC0 riscaricabili, non master (ADR-0003).
 # La convenzione delle cartelle sta in scripts/blender/texture/README.md.
 scripts/blender/texture/*/

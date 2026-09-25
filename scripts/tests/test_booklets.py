@@ -24,7 +24,9 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from build_booklet_html import colophon_html  # noqa: E402
 from export_booklet_typst import (  # noqa: E402
-    VOCI_COLOPHON, crediti_typ, dimensioni, inline, intestazione, md_to_typ,
+    CELLE_COLONNA, VOCI_COLOPHON, crediti_typ, dimensioni, e_griglia_mappa, e_mappa, inline,
+    intestazione,
+    larghezza_visiva, md_to_typ,
 )
 from build_booklet_html import VOCI_COLOPHON as VOCI_HTML  # noqa: E402
 from validate_booklets import carica_schema, controlla_manifest, manifest_del_repo  # noqa: E402
@@ -98,9 +100,147 @@ class TestEnfasi(unittest.TestCase):
     def test_asterisco_che_non_e_enfasi(self):
         self.assertEqual(inline("3 * 4 caselle"), "3 \\* 4 caselle")
 
+    def test_segno_di_struttura_a_inizio_cella_resta_testo(self):
+        """«= suo nipote» in una cella di DEF-4 diventava un titolo in Typst."""
+        self.assertEqual(inline("= suo nipote"), "\\= suo nipote")
+        self.assertEqual(inline("/ 8"), "\\/ 8")
+        self.assertEqual(inline("- nota"), "\\- nota")
+        # ma un segno attaccato a un numero non è struttura, e resta com'è
+        self.assertEqual(inline("+2 alla CA"), "+2 alla CA")
+        self.assertEqual(inline("-5 pf"), "-5 pf")
+
     def test_enfasi_mai_chiusa_non_esce_dal_paragrafo(self):
         """Un master con un asterisco dispari non deve mangiarsi il resto."""
         self.assertTrue(inline("**aperto e mai chiuso").endswith("]"))
+
+
+class TestDirettiveDiPagina(unittest.TestCase):
+    """Appendici e mappe su pagine A4 a una colonna (richiesta DM 2026-09-25)."""
+
+    def test_un_commento_qualsiasi_non_finisce_nel_pdf(self):
+        typ = md_to_typ("Testo.\n\n<!-- nota privata\nsu due righe -->\n\nAltro.")
+        self.assertNotIn("<!--", typ)
+        self.assertNotIn("nota privata", typ)
+
+    def test_pagina_a_una_colonna_si_apre_e_si_chiude(self):
+        typ = md_to_typ("<!-- pagina: una-colonna -->\n\n## Appendice\n\nDati.\n\n<!-- /pagina -->\n")
+        self.assertIn("#page(columns: 1)[", typ)
+        self.assertEqual(typ.count("#page(columns: 1)["), typ.count("\n]"))
+
+    def test_pagina_lasciata_aperta_si_chiude_col_capitolo(self):
+        typ = md_to_typ("<!-- pagina: una-colonna -->\n\nDati.")
+        self.assertTrue(typ.rstrip().endswith("]"))
+
+    def test_una_mappa_su_pagina_a_una_colonna_non_supera_il_foglio(self):
+        """M7-C, verticale, a tutta larghezza usciva dal bordo alto del foglio."""
+        with tempfile.TemporaryDirectory(dir=REPO) as d:   # dentro il repo: --root
+            (Path(d) / "m.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1261"/>')
+            dentro = md_to_typ("<!-- pagina: una-colonna -->\n\n![M](m.svg)\n\n<!-- /pagina -->", base=Path(d))
+            fuori = md_to_typ("![M](m.svg)", base=Path(d))
+        self.assertIn("pagina: true", dentro)
+        self.assertNotIn("pagina: true", fuori)
+
+    def test_nuova_pagina_non_viene_assorbita_dal_paragrafo(self):
+        typ = md_to_typ("Una riga.\n<!-- nuova-pagina -->\nUn'altra.")
+        self.assertIn("#pagebreak(weak: true)", typ.split("\n"))
+
+
+class TestMappeCheNonEntranoInColonna(unittest.TestCase):
+    """Una mappa o sta in colonna o va su una pagina A4 (richiesta DM 2026-09-25).
+
+    Nel volume della serata le due mappe della Sala di `DEF-2`, larghe 72
+    celle, erano stampate nel corpo a due colonne e andavano a capo a brandelli.
+    """
+
+    LARGA = "```\n" + "═" * 72 + "\n NORD ▼ [P1 → Stanza della Corona]\n```"
+    STRETTA = "```\nA B C\n⬛ ⬛ ⬛\n```"
+
+    def test_un_emoji_vale_due_celle_e_mezza(self):
+        self.assertEqual(larghezza_visiva("ab"), 2)
+        self.assertEqual(larghezza_visiva("⬛"), 2.5)
+        self.assertEqual(larghezza_visiva("🗿\ufe0f"), 2.5)   # il selettore di variante non occupa
+
+    def test_la_griglia_stretta_resta_in_colonna(self):
+        typ = md_to_typ("### Mappa\n\n" + self.STRETTA)
+        self.assertNotIn("#page(", typ)
+        self.assertIn("#griglia(", typ)
+
+    def test_la_griglia_larga_va_su_a4_col_suo_titolo(self):
+        typ = md_to_typ("Prima.\n\n### Mappa S-1\n\n> Nota.\n\n" + self.LARGA + "\n\nDopo.")
+        righe = typ.split("\n")
+        pagina = righe.index("#page(columns: 1)[")
+        titolo = next(i for i, r in enumerate(righe) if r.startswith("=== Mappa"))
+        griglia = next(i for i, r in enumerate(righe) if r.startswith("#griglia("))
+        self.assertLess(pagina, titolo, "il titolo non resta in fondo alla colonna")
+        self.assertLess(titolo, griglia)
+        self.assertLess(righe.index("Prima."), pagina)
+
+    def test_la_pagina_automatica_si_chiude_alla_sezione_dopo(self):
+        typ = md_to_typ("## Mappe\n\n" + self.LARGA + "\n\n### S-2\n\n" + self.LARGA
+                        + "\n\n## Altro\n\nTesto.")
+        righe = typ.split("\n")
+        self.assertEqual(typ.count("#page(columns: 1)["), 1, "le due mappe della sezione stanno insieme")
+        self.assertLess(righe.index("]"), next(i for i, r in enumerate(righe) if r.startswith("== Altro")))
+
+    def test_dentro_una_pagina_esplicita_non_se_ne_apre_un_altra(self):
+        typ = md_to_typ("<!-- pagina: una-colonna -->\n\n" + self.LARGA + "\n\n<!-- /pagina -->")
+        self.assertEqual(typ.count("#page(columns: 1)["), 1)
+
+    def test_la_griglia_non_va_mai_a_capo_nel_tema(self):
+        """Il corpo scende finché la riga più larga ci sta; mai il raw nudo."""
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        self.assertIn("#let griglia(", tema)
+        self.assertNotIn("#raw(", md_to_typ(self.LARGA))
+
+    def test_una_mappa_immagine_fuori_pagina_va_su_a4(self):
+        with tempfile.TemporaryDirectory(dir=REPO) as d:
+            (Path(d) / "x_map01_sala.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1261"/>')
+            typ = md_to_typ("### Sala\n\n![La Sala](x_map01_sala.svg)", base=Path(d))
+        self.assertIn("#page(columns: 1)[", typ)
+        self.assertIn("pagina: true", typ)
+
+    def test_riconosce_le_mappe(self):
+        self.assertTrue(e_mappa("", "Mappe/rendered/M7C_map01_tenda.svg"))
+        self.assertTrue(e_mappa("La mappa della Sala", "x.svg"))
+        self.assertFalse(e_mappa("Hella", "PG/Immagini/web/Hella.jpg"))
+
+    def test_un_comando_largo_non_apre_una_pagina(self):
+        """Una riga di `bash` in un elenco del Drappo apriva una pagina A4 intera."""
+        cmd = "```bash\npython3 scripts/export_booklet_typst.py STANDALONE/homebrew/X.json\n```"
+        typ = md_to_typ("### Cosa stampare\n\n" + cmd)
+        self.assertNotIn("#page(", typ)
+        self.assertNotIn("larga: true", typ)
+
+    def test_uno_schema_larghissimo_scavalca_le_colonne(self):
+        schema = "```\n" + "─" * 90 + "\n```"
+        typ = md_to_typ("### Struttura\n\n" + schema)
+        self.assertNotIn("#page(", typ)
+        self.assertIn("larga: true", typ)
+
+    def test_riconosce_una_griglia_dalla_forma(self):
+        self.assertTrue(e_griglia_mappa(["@north S", "01 ⬛ ⬛"]))
+        self.assertTrue(e_griglia_mappa(["⬛ ⬛ ⬛ ⬛ ⬛"] * 3))
+        self.assertTrue(e_griglia_mappa(["x"], "MAPPA T-1 — Piano della Terra"))
+        self.assertFalse(e_griglia_mappa(["python3 scripts/dm.py volume"], "Rigenerare"))
+
+    def test_ogni_capitolo_si_apre_su_una_pagina_sua(self):
+        """Il titolo è un float: senza salto di pagina saliva sopra la coda del
+        capitolo di prima. Nel fascicolo dei giocatori gli echi privati di
+        Thorik e di Tordek finivano sullo stesso foglio (2026-09-25)."""
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        apertura = tema.split("#let capitolo-aperto(", 1)[1].split("\n}\n", 1)[0]
+        self.assertIn("pagebreak(weak: true)", apertura)
+        self.assertLess(apertura.index("pagebreak("), apertura.index("place("))
+
+    def test_un_ritratto_verticale_non_supera_i_16_cm(self):
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        figura = tema.split("#let figura(percorso, didascalia:", 1)[1].split("\n}\n", 1)[0]
+        self.assertIn("alta > 16cm", figura)
+
+    def test_la_soglia_e_quella_misurata(self):
+        """217,7 pt di colonna / 4,5 pt di cella Inconsolata a 9 pt."""
+        self.assertEqual(CELLE_COLONNA, 48)
 
 
 class TestCapolettera(unittest.TestCase):

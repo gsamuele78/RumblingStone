@@ -105,7 +105,7 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
   **living rhinoceros** — NOT a stone/animated creature and NOT a separate
   companion. The earlier "stone rhinoceros, DR 5/adamantine, animated" label
   was a mix-up with Durik. DM clarified 2026-07-03.)
-- Therysol (Tiefling Half-Dragon NPC, traveling separately, hunting Il Collezionista's guild)
+- Therysol (Tiefling Half-Dragon NPC, **she** — born Ysolde, see `Bestiario/png/Therysol/`; traveling separately, hunting Il Collezionista's guild)
 - **Maestro Tempestas** (Half-elf Bard 12/Arcmage 2, GS 14, recurring messenger of Rethmar; canonized 2026-05-04 as the "bard storm caller" who helped the party escape Lorana's city in Arc 00 — vedi `Bestiario/png/Tempestas/Tempestas.md`). Not constantly present; drops in via *Shadow Walk* every 1–2 sessions with intel.
 - **Lirien Amaranti** — «Il Giullare Spezzato» (Mezzelfo CN, Ladro-Scout 4/
   Bardo 1, GS 4; canonizzato 2026-07-20 — vedi `Bestiario/png/Lirien/Lirien.md`).
@@ -381,7 +381,7 @@ the listed consequence triggers.
 | Artemis | Varis "Seta-Argento" | Deliver one Underdark artifact per quarter · **⚠️ 2026-07-31: ha il Seme-Mercato in mano, non toccato (nessun Marchio). La partita con Varis è aperta e alla pari** | Varis cuts off the Mantello dei Tiri Salvezza supply |
 | Artemis | Mask cult (suspected) | Unknown — they've been watching the Ring | Black-bag attempt during a vulnerable moment |
 | Hella | Druid Circle | Pass the Sacred Forest ritual within 12 days | Circle will not aid at Rethmar |
-| Party (collective) | Therysol | Help him strike Il Collezionista's Dauth cell | Therysol withdraws his combat support |
+| Party (collective) | Therysol | Help her strike Il Collezionista's Dauth cell | Therysol withdraws her combat support |
 
 ---
 

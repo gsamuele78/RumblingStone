@@ -1,0 +1,50 @@
+{
+  "brand": "RUMBLING STONE · ARC-07 · IL PORTALE DELLA FORGIA ETERNA",
+  "title": "Il Viaggio a Mille Anni fa",
+  "subtitle": "Hammerfist ≈372 DR · la notte dell'orda · il duello con Skullcrusher · il Rituale della Forgia Eterna",
+  "banner": "VOLUME DEL DM",
+  "meta": "Avventura D&D 3.5 per 4 personaggi di 13° livello · Faerûn, ≈372 DR (mille anni prima del 1372) · Campagna privata RumblingStone · master ARC07-DEF-4 in ordine di gioco, con appendici di statistiche e mappe, carry-over, handout",
+  "header": "Tutto il beat del viaggio a mille anni fa: il master in ordine di gioco, dal tramonto all'alba, con le appendici di statistiche e mappe su pagine A4, la tabella B4 e i due handout. I capitoli ⚠ sono del DM; le pagine ✉ si consegnano ai giocatori.",
+  "footer": "Il Viaggio a Mille Anni fa",
+  "player_footer": "Le Cronache dei Quattro Eroi",
+  "colophon": {
+    "edizione": "Volume del DM",
+    "versione": "v2",
+    "data": "2026-09-25",
+    "autori": "Il DM di RumblingStone, con l'agente di scrittura del repo",
+    "basato_su": "D&D 3.5 SRD (OGL 1.0a); adattamento privato di Red Hand of Doom (Wizards of the Coast, 2006)",
+    "licenza": "materiale del DM, uso privato del tavolo, non diffondere",
+    "nota": "Sostituisce il Fascicolo V di luglio. v2: il master è riordinato in ordine di gioco (decisione DM 2026-09-25)"
+  },
+  "cover_image": "../../Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg",
+  "intro_md": "00-INTRO-VOLUME.md",
+  "out": "ARC07-MILLE-ANNI-VOLUME.html",
+  "chapters": [
+    {
+      "title": "I · Master — Il Viaggio a 1.000 anni fa (DEF-4)",
+      "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "tag": "dm"
+    },
+    {
+      "title": "II · Balvar Fuocospento — scheda del Bestiario",
+      "file": "../../../Bestiario/villain/balvar-fuocospento-cr13.md",
+      "tag": "dm"
+    },
+    {
+      "title": "III · La Forgia ricorda le ferite — carry-over B4",
+      "file": "../../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md",
+      "tag": "dm"
+    },
+    {
+      "title": "✉ Le Cronache dei Quattro Eroi",
+      "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Il piano di battaglia di Re Thorek I",
+      "file": "03-HANDOUT-PIANO-DI-BATTAGLIA.md",
+      "tag": "player"
+    }
+  ],
+  "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg"
+}

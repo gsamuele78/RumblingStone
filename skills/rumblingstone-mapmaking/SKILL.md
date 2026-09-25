@@ -55,6 +55,14 @@ are **generated artifacts — never hand-edit them**. CI
    be rendered. The in-fence `LEGENDA · 🧲 descrizione · …` line is parsed
    automatically: local symbols get their real description in the SVG legend
    (universal SYMBOLS keep their canonical text).
+7. **A map inside a booklet either fits a column or gets an A4 page**
+   (DM, 2026-09-25). A column holds 48 cells, an A4 one-column page 110
+   (an emoji counts 2.5). Put map sections in an appendix between
+   `<!-- pagina: una-colonna -->` and `<!-- /pagina -->`; keep every grid
+   line, side annotation and `LEGENDA` line within 110 cells so it prints at
+   full 9 pt. The typst exporter enforces the column/A4 split on its own
+   (`rumblingstone-editoria` §4, point 4), but a 180-cell legend line still
+   shrinks the whole map: shorten the annotation, never the grid.
 
 ## Domain → File
 

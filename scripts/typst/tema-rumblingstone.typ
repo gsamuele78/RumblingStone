@@ -29,6 +29,11 @@
 // Apertura di capitolo: il medaglione + il titolo, su tutta la larghezza delle
 // due colonne. È il segno che dice al lettore dov'è prima che legga il titolo.
 #let capitolo-aperto(titolo, fregio) = {
+  // Un capitolo si apre su una pagina sua. Il titolo è un float in cima alla
+  // pagina: se il capitolo di prima finiva a metà pagina, il titolo nuovo
+  // saliva SOPRA la coda di quello (volume del −1000, 2026-09-25: le note del
+  // carry-over B4 stampate sotto il titolo delle Cronache).
+  pagebreak(weak: true)
   // L'heading (voce d'indice + segnalibro PDF) va emesso PRIMA del float:
   // altrimenti la testatina della pagina d'apertura mostra ancora il capitolo
   // precedente, perché la query si risolve prima che il float atterri.
@@ -180,9 +185,22 @@
 // Una figura. In due colonne un'immagine più larga della colonna va in float a
 // piena larghezza, esattamente come le tabelle larghe: dentro la colonna
 // verrebbe scalata fino a non vedersi più.
-#let figura(percorso, didascalia: none, larga: false, alt: none) = {
+#let figura(percorso, didascalia: none, larga: false, pagina: false, alt: none) = {
+  // `pagina`: l'immagine sta su un foglio a una colonna (appendici, mappe) e
+  // non deve superarne l'altezza, didascalia compresa.
+  // Fuori da una pagina dedicata, un'immagine non supera i 16 cm: un ritratto
+  // verticale a tutta larghezza su una colonna sola è più alto del foglio,
+  // scivola alla pagina dopo e lascia il suo titolo da solo in fondo a quella
+  // prima (la scheda di Hella nel fascicolo dei giocatori, 2026-09-25).
   let corpo = figure(
-    image(percorso, width: 100%, alt: alt),
+    if pagina { image(percorso, width: 100%, height: 21cm, fit: "contain", alt: alt) }
+    else {
+      layout(spazio => {
+        let alta = measure(image(percorso, width: spazio.width)).height
+        if alta > 16cm { align(center, image(percorso, height: 16cm, alt: alt)) }
+        else { image(percorso, width: 100%, alt: alt) }
+      })
+    },
     caption: if didascalia == none { none } else {
       text(size: 8.4pt, style: "italic", fill: seppia)[#didascalia]
     },
@@ -191,6 +209,26 @@
   )
   if larga { place(top, float: true, scope: "parent", clearance: 12pt, block(width: 100%, corpo)) }
   else { block(width: 100%, above: 0.8em, below: 0.8em, corpo) }
+}
+
+// Una griglia a spaziatura fissa (mappa ASCII, schema, statblocco
+// preformattato) non va mai a capo: una mappa che va a capo è una fila di
+// simboli. Se è più larga dello spazio, il corpo scende finché ci sta, non
+// sotto i 5,5 pt. Che la griglia stia in colonna o su una pagina A4 lo decide
+// l'esportatore (`CELLE_COLONNA`); qui si garantisce solo che non si spezzi.
+// `larga`: uno schema che non è una mappa e non entra in colonna nemmeno a
+// 5,5 pt scavalca le due colonne, come una tabella larga.
+#let griglia(testo, corpo: 9pt, minimo: 5.5pt, larga: false) = {
+  let dentro = layout(spazio => {
+    let fatto(dim) = { show raw: set text(size: dim); raw(testo, block: true) }
+    let naturale = measure(fatto(corpo)).width
+    let dim = if naturale > spazio.width {
+      calc.max(minimo, corpo * (spazio.width / naturale) * 0.98)
+    } else { corpo }
+    block(breakable: not larga, width: 100%, fatto(dim))
+  })
+  if larga { place(top, float: true, scope: "parent", clearance: 12pt, dentro) }
+  else { dentro }
 }
 
 // Una tabella da 4+ colonne in una colonna da 8 cm diventa illeggibile: si

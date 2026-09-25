@@ -48,6 +48,7 @@ import json
 import re
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -117,7 +118,7 @@ def dimensioni(f: Path) -> tuple[int, int] | None:
     return None
 
 
-def figura(alt: str, src: str, base: Path) -> str:
+def figura(alt: str, src: str, base: Path, pagina: bool = False) -> str:
     """`![alt](src)` → `#figura(...)`, con l'avviso se il file non c'è.
 
     Prima di questa funzione la sintassi cadeva nella regola dei link e
@@ -147,7 +148,12 @@ def figura(alt: str, src: str, base: Path) -> str:
     if alt.strip():
         voci.append(f"didascalia: [{inline(alt)}]")
         voci.append(f"alt: {json.dumps(alt, ensure_ascii=False)}")
-    if larga:
+    if pagina:
+        # Dentro una pagina a una colonna l'immagine è la pagina: una mappa
+        # verticale a tutta larghezza è più alta del foglio, e Typst la faceva
+        # uscire dal bordo alto col suo titolo (M7-C, 2026-09-25).
+        voci.append("pagina: true")
+    elif larga:
         voci.append("larga: true")
     return "#figura(" + ", ".join(voci) + ")"
 
@@ -270,17 +276,94 @@ def inline(s: str) -> str:
     for ent, ch in _ENTITA.items():
         s = s.replace(ent, ch)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: _link(m.group(1), m.group(2)), s)
-    return _unesc(_inline(s))
+    out = _unesc(_inline(s))
+    # In Typst certi segni hanno un senso solo A INIZIO riga: «= » apre un
+    # titolo, «- » e «+ » una lista, «/ » un termine da definire. Dentro una
+    # cella il contenuto comincia una riga nuova, e «| **La leva** | = suo
+    # nipote |» (ARC07-DEF-4 §4-ter) diventava un TITOLO: un segnalibro spurio
+    # nel PDF, a pagina 58. Una barra rovescia davanti lo fa tornare testo.
+    if _STRUTTURA_A_INIZIO.match(out):
+        out = "\\" + out
+    return out
+
+
+_STRUTTURA_A_INIZIO = re.compile(r"(=+|[-+/])(\s|$)")
 
 
 def _celle(riga: str) -> list[str]:
     return [c.strip() for c in riga.strip().strip("|").split("|")]
 
 
-_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[|§§HB-)")
+_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[|§§HB-|<!--)")
 
 
 _IMG = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+
+# Due direttive d'impaginazione, scritte come commenti perché la catena HTML le
+# ignori: `<!-- pagina: una-colonna -->` … `<!-- /pagina -->` mette quello che
+# sta in mezzo su pagine A4 a una colonna (appendici, statistiche, mappe), e
+# `<!-- nuova-pagina -->` va a capo pagina. Ogni altro commento si butta.
+_COMMENTO = re.compile(r"<!--.*?-->", re.S)
+_DIRETTIVA = re.compile(r"<!--\s*(pagina:\s*una-colonna|/pagina|nuova-pagina)\s*-->")
+
+# Una griglia a spaziatura fissa (mappa ASCII, schema, statblocco preformattato)
+# che va a capo non è più una mappa: è una fila di simboli. Nel volume della
+# serata (2026-09-25) le due mappe della Sala di `DEF-2`, larghe 72 celle, sono
+# uscite a brandelli in una colonna che ne tiene 48. Una colonna del corpo a
+# 9 pt Inconsolata è larga 217,7 pt, e una cella 4,5 pt: da qui il 48. Un emoji
+# nel carattere di ripiego occupa due celle e mezza, misurato sullo stesso PDF.
+CELLE_COLONNA = 48
+# Una pagina A4 a una colonna è larga 17,5 cm, cioè 496 pt: 110 celle a 9 pt.
+# Oltre, la griglia scende di corpo; e sotto i 5,5 pt una mappa non si legge.
+CELLE_PAGINA = 110
+
+
+def larghezza_visiva(riga: str) -> float:
+    """Le celle che una riga occupa in monospazio; un emoji ne vale 2,5."""
+    n = 0.0
+    for ch in riga:
+        if unicodedata.combining(ch) or ch in "\ufe0f\ufe0e\u200d":
+            continue
+        n += 2.5 if unicodedata.east_asian_width(ch) in ("W", "F") else 1
+    return n
+
+
+def _orizzontale(f: Path) -> bool:
+    """La stessa soglia di `figura()`: larga almeno 1,25 volte l'altezza."""
+    d = dimensioni(f.resolve()) if f.is_file() else None
+    return bool(d) and d[0] >= d[1] * 1.25
+
+
+# Ciò che, risalendo dalla mappa al suo titolo, non è più testo della sezione.
+_NON_TESTO = ("#page", "#griglia", "#figura", "#tabella", "#statblocco", "#pagebreak", "  [")
+
+
+# Uno schema o un comando più largo della colonna non è una mappa: scende di
+# corpo fino a 5,5 pt dentro la colonna, e sotto quel corpo (78 celle) scavalca
+# le due colonne come una tabella larga. Una pagina A4 per una riga di `bash`
+# lascerebbe mezza colonna vuota.
+CELLE_COLONNA_MINIMO = 78
+RIGHE_FLOTTANTE = 40
+
+
+def e_griglia_mappa(blocco: list[str], titolo: str = "") -> bool:
+    """Un blocco preformattato è una mappa se lo dice il titolo o se ne ha la forma.
+
+    La forma: la bussola del contratto (`@north`), l'intestazione delle colonne
+    (`COL →`), una legenda, o almeno tre righe con cinque simboli di griglia.
+    """
+    if re.search(r"\bmapp[ae]\b|\bpianta\b|\bgriglia\b|\bbattle ?map\b", titolo, re.I):
+        return True
+    testo = "\n".join(blocco)
+    if "@north" in testo or "LEGENDA" in testo or re.search(r"^\s*COL\s*→", testo, re.M):
+        return True
+    fitte = sum(1 for r in blocco if sum(unicodedata.east_asian_width(c) in ("W", "F") for c in r) >= 5)
+    return fitte >= 3
+
+
+def e_mappa(alt: str, src: str) -> bool:
+    """Un'immagine è una mappa se sta in `Mappe/`, se è un render di mappa o se lo dice l'alt."""
+    return bool(re.search(r"(^|/)Mappe/|_map\d|\bmapp[ae]\b|\bpianta\b", f"{src} {alt}", re.I))
 
 
 # I prop sono sorgenti HOMEBREWERY (.hb.md): usano una sintassi a blocchi che il
@@ -335,13 +418,64 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
             _IMG.sub(lambda m: "\n" + m.group(0) + "\n", ln) if _IMG.search(ln) else ln
             for ln in md.split("\n")
         )
+    # I commenti HTML non sono testo: la catena HTML li toglie, questa li
+    # stampava letterali («<!-- … -->» in mezzo alla pagina). Restano solo le
+    # direttive d'impaginazione, che diventano pagine a una colonna.
+    md = _COMMENTO.sub(lambda m: m.group(0) if _DIRETTIVA.fullmatch(m.group(0)) else "", md)
     righe = _spoglia_homebrewery(md.split("\n"))
     primo_paragrafo = None
     ultimo_titolo = ""
     out: list[str] = []
+    aperte = 0
+    # Livello del titolo che ha aperto una pagina A4 AUTOMATICA (una mappa che
+    # non entrava in colonna): la pagina si chiude al prossimo titolo di pari
+    # livello o superiore, cioè quando finisce la sezione della mappa.
+    auto: int | None = None
     i = 0
+
+    def _su_a4() -> None:
+        """Apre una pagina A4 a una colonna e ci porta dentro il titolo della mappa.
+
+        Si risale fino al titolo più alto fra gli ultimi otto pezzi, purché in
+        mezzo ci sia solo testo: un titolo lasciato in fondo alla colonna, con
+        la sua mappa sulla pagina dopo, è il difetto che si nota per primo.
+        """
+        nonlocal aperte, auto
+        k, livello = len(out), 4
+        j = len(out) - 1
+        while j >= 0 and len(out) - j <= 8:
+            s = out[j]
+            if s.startswith("="):
+                k, livello = j, len(s) - len(s.lstrip("="))
+            elif s in ("]", ")", "#leggi[", "#nota[") or s.startswith(_NON_TESTO):
+                break
+            j -= 1
+        # Il fregio prima del titolo resta nella colonna: chiude la sezione di prima.
+        out.insert(k, "#page(columns: 1)[")
+        aperte += 1
+        auto = livello
+        print(f"  · una griglia o una mappa più larga della colonna va su una pagina A4: "
+              f"«{ultimo_titolo or 'senza titolo'}»", file=sys.stderr)
+
     while i < len(righe):
         ln = righe[i]
+
+        d = _DIRETTIVA.fullmatch(ln.strip())
+        if d:
+            if d.group(1) == "nuova-pagina":
+                out.append("#pagebreak(weak: true)")
+            elif d.group(1) == "/pagina":
+                if aperte:
+                    out.append("]")
+                    aperte -= 1
+                auto = None
+            elif not aperte:
+                out.append("#page(columns: 1)[")
+                aperte += 1
+            else:
+                auto = None                  # la pagina automatica diventa esplicita
+            i += 1
+            continue
 
         if ln.strip().startswith("```"):               # blocco di codice
             recinto = ln.strip()
@@ -357,8 +491,21 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 # forma-dato invece del mostro.
                 out.append(statblocco_typ("\n".join(blocco), ultimo_titolo))
                 continue
+            celle = max((larghezza_visiva(r) for r in blocco), default=0)
+            larga = False
+            if not aperte and celle > CELLE_COLONNA:
+                if e_griglia_mappa(blocco, ultimo_titolo) or (
+                        celle > CELLE_COLONNA_MINIMO and len(blocco) > RIGHE_FLOTTANTE):
+                    _su_a4()
+                elif celle > CELLE_COLONNA_MINIMO:
+                    larga = True
+            if celle > CELLE_PAGINA:
+                print(f"  ⚠ una griglia larga {celle:g} celle scende sotto i 9 pt anche su A4 "
+                      f"(«{ultimo_titolo or 'senza titolo'}»): accorcia le annotazioni a "
+                      f"{CELLE_PAGINA} celle", file=sys.stderr)
             testo = "\n".join(blocco).replace("`", "\u0060")
-            out.append("#block(breakable: true)[#raw(\"" + testo.replace('"', '\\"').replace("\n", "\\n") + "\", block: true)]")
+            out.append("#griglia(" + json.dumps(testo, ensure_ascii=False)
+                       + (", larga: true" if larga else "") + ")")
             continue
 
         if ln.strip().startswith("|") and i + 1 < len(righe) and re.match(
@@ -403,7 +550,12 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
 
         m_img = _IMG.fullmatch(ln.strip())
         if m_img is not None and base is not None:
-            fig = figura(m_img.group(1), m_img.group(2), base)
+            if not aperte and e_mappa(m_img.group(1), m_img.group(2)) \
+                    and not _orizzontale(base / m_img.group(2)):
+                # Una mappa orizzontale scavalca già le due colonne; una
+                # verticale, in una colonna da 8 cm, non si legge.
+                _su_a4()
+            fig = figura(m_img.group(1), m_img.group(2), base, pagina=aperte > 0)
             if fig:
                 out.append(fig)
             i += 1
@@ -411,6 +563,10 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
 
         if re.match(r"^#{1,4}\s", ln):
             lvl = len(ln) - len(ln.lstrip("#"))
+            if auto is not None and lvl <= auto:
+                out.append("]")
+                aperte -= 1
+                auto = None
             ultimo_titolo = re.sub(r"\s*\[[^\]]*\]\s*$", "", ln[lvl:].strip())
             out.append("=" * lvl + " " + inline(ln[lvl:].strip()))
         elif re.match(r"^---+\s*$", ln):
@@ -449,6 +605,9 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 "#capolettera(" + json.dumps(testo[0], ensure_ascii=False)
                 + ", [" + testo[1:] + "])"
             )
+    # Una pagina a una colonna lasciata aperta chiude col capitolo: Typst
+    # altrimenti muore con «unclosed delimiter» in fondo al volume.
+    out.extend("]" * aperte)
     return "\n".join(out)
 
 
