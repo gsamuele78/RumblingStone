@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="bracieri · S1 · r1 · 2026-09-25">
+    <title>Bracieri Gemelli di Moradin — Stadio 1, Fuoco (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #8B2500; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #8B2500; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #8B2500; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #8B2500; background: rgba(139, 37, 0, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #8B2500, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote" style="border-left-color:#8B0000;background:rgba(139,0,0,0.10);">
+        <strong>Copia DM — non darla al giocatore.</strong> La pagina di Tordek per questo stadio è <em>04_Bracieri_Gemelli_Scheda_PG_Fuoco.html (e il PDF «Bracieri Gemelli di Moradin (Fuoco)», che ne è la stampa)</em>.
+    </div>
+
+    <div class="header">
+        <h1 class="class-title">Bracieri Gemelli di Moradin</h1>
+        <div class="subtitle">Stadio 1 — il Risveglio della Fiamma</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Una forgia senza fuoco non crea.»</div>
+    </div>
+
+    <div class="requirements">
+        <strong>Topazio-Fuoco</strong> nel guanto sinistro, incavo vuoto nel destro · <strong>Int 10 · Sag 14 · Car 14 · Ego 12</strong> · LI 20° · TS propri Tempra 20, Riflessi 14, Volontà 18
+    </div>
+
+    <div class="dm">
+        <h3>La progressione dei Bracieri, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria dell'Attacco Poderoso · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> (giocatore) e <code>04_…_Fuoco_DM</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral nel Tempio Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra · Frantumare · Diventare una Collina · Ego 18</td><td><code>05_…_Completa</code> e <code>05_…_Completa_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code> (solo DM)</td><td>⬜ ARC-09, da approvare</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Cosa aveva Tordek allo stadio 1</h3>
+        <table>
+        <tr><th>Potere</th><th>Regola</th></tr>
+        <tr><td>Castigo del Drago (Su)</td><td>contro draghi e sottotipo drago: +2 al potenziamento e +2d6 danni</td></tr>
+        <tr><td>Maestria dell'Attacco Poderoso (Ex)</td><td>la penalità al tiro di Attacco Poderoso scende di 1</td></tr>
+        <tr><td>Cuore di Brace (Su)</td><td>resistenza al fuoco 10; ignora il calore ambientale fino a 10 danni per round</td></tr>
+        <tr><td>Passo di Brace (Su)</td><td>+3 m di velocità finché resta un uso di Salto Fiammeggiante</td></tr>
+        <tr><td>Pugni di Magma (Su) 3/giorno</td><td>veloce, 1 round: +Sag danni da fuoco ai colpi senz'armi; Tempra CD 18 o infermo 1 round</td></tr>
+        <tr><td>Colpi del Fuoco (Su) 3/giorno</td><td>standard: +4d6 fuoco, Tempra CD 18 o spinto 1,5 m, 2d6 fuoco agli adiacenti (Riflessi CD 18 dimezza)</td></tr>
+        <tr><td>Salto Fiammeggiante (Su) 3/giorno</td><td>movimento: un solo tiro d20 + For + gradi di Saltare, distanza per decine e per Sag; anello di fuoco 2d6 in 3 m all'arrivo</td></tr>
+        <tr><td>Cariche di devastazione</td><td>quelle della Cintura (D17 del piano ARC-07), non dei guanti</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Due stesure, una scheda</h3>
+        <p>Il file <em>01_Bracieri_Gemelli_di_Moradin.md</em>, «Versione 1», ha una stesura diversa: <em>Pugno di Moradin</em> invece di <em>Pugni di Magma</em>, <em>Salto Infuocato</em> con +10 a Saltare invece di <em>Passo di Brace</em>, nessuna carica. <strong>Vale la 04</strong>, perché è quella che il giocatore ha letto (regola del 2026-09-20) e perché il PDF «Fuoco» è la sua stampa. La Versione 1 resta nel file come storia.</p>
+        <p><strong>Prezzo.</strong> Il file 01 stima lo stadio 1 a circa 60.400 mo, ma su poteri della Versione 1 (Pugno di Moradin, +10 Saltare). Per la 04 il conto va rifatto: lotto T10-f, nell'audit.</p>
+        <p><strong>Il passaggio allo stadio 2</strong>: Rituale 2, <em>Prova della Galleria Profonda</em>. Innesco: la Sentinella di Mithral nel Tempio Mithral (<em>03_Risveglio_Completo_Bracieri_Terra.md</em>); requisito: rompere con i pugni un geode tattico durante lo scontro; sacrificio: seppellire un oggetto magico caro (circa 10.000 mo).</p>
+    </div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Registro (compila a penna)</div>
+        <div class="corpo">
+            Stadio 1 — passato · Battesimo delle Fiamme il ______________ · sacrificio: ______________
+        </div>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S1 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+</body>
+</html>

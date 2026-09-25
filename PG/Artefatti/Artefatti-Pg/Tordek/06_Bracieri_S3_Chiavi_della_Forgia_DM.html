@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="bracieri · S3 · r1 · 2026-09-25">
+    <title>Bracieri Gemelli di Moradin — Stadio 3, le Chiavi della Forgia (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #8B2500; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #8B2500; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #8B2500; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #8B2500; background: rgba(139, 37, 0, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #8B2500, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="class-title">Bracieri Gemelli di Moradin</h1>
+        <div class="subtitle">Stadio 3 — le Chiavi della Forgia · bozza da approvare</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Una forgia senza fuoco non crea, ma un fuoco senza pietra non dura.»</div>
+    </div>
+
+    <div class="requirements" style="border-color:#8B0000;">
+        <strong>Questa pagina non ha una controparte per il giocatore</strong>: nessuna fonte del repo scrive un terzo stadio dei Bracieri. Qui c'è quello che le fonti dicono dei Bracieri dopo la Forgia, e una proposta per il DM. Non è canone finché il DM non la approva (D16).
+    </div>
+
+    <div class="dm">
+        <h3>La progressione dei Bracieri, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria dell'Attacco Poderoso · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> (giocatore) e <code>04_…_Fuoco_DM</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral nel Tempio Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra · Frantumare · Diventare una Collina · Ego 18</td><td><code>05_…_Completa</code> e <code>05_…_Completa_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code> (solo DM)</td><td>⬜ ARC-09, da approvare</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Cosa dicono le fonti</h3>
+        <table>
+        <tr><th>Fonte</th><th>Cosa dice</th></tr>
+        <tr><td><code>…P2B-Torneo-Tordek-OTTO-PORTE-e-ORBE.md</code> §2.1.1</td><td>Xal'thor, al Giorno 3 del Torneo di Dauth, vuole <strong>solo i Bracieri</strong>: sono <strong>chiavi planari per la Forgia Eterna</strong></td></tr>
+        <tr><td><code>RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md</code></td><td>l'obiettivo di Xal'thor non è rubarli ma <strong>convincere Tordek</strong> che il Piano della Terra è in pericolo, perché apra lui un portale</td></tr>
+        <tr><td><code>…P2C-Salvatore-Mercante-TESTO.md</code></td><td>Sal vende a Tordek un cristallo nanico «identico ai Bracieri»: è un <strong>dreno di risonanza</strong>, 1 carica ogni 6 ore nella stessa stanza</td></tr>
+        <tr><td><code>…P3-BATTAGLIA-FINALE-MYTHAL-FOCUS</code> §PG2</td><td>al Mythal Tordek regge coi Bracieri (Fuoco + Terra); l'Orbe delle Otto Porte, se vinto, è un secondo focus</td></tr>
+        <tr><td>il DM, 2026-09-25</td><td>«i requisiti sono stati svolti nell'arco della Forgia Eterna (magari con ulteriori conseguenze possibili?)»</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>🟡 BOZZA per il DM — le Chiavi della Forgia (D16, non canone finché non la approvi)</h3>
+        <p>L'idea viene dalle fonti: i Bracieri <strong>sono</strong> chiavi planari verso la Forgia Eterna, e Xal'thor lo sa. Il terzo stadio è Tordek che scopre di tenere in mano una porta, e sceglie cosa farne. La conseguenza che il DM chiedeva c'è: Xal'thor vuole che la apra lui.</p>
+        <table>
+            <tr><th>Cosa</th><th>Proposta</th><th>Da dove viene</th></tr>
+            <tr><td><strong>Innesco</strong></td><td>al Torneo di Dauth, Giorno 3, Tordek <strong>non apre</strong> il portale che Xal'thor gli chiede, e tiene i Bracieri. Se lo apre ingannato, lo stadio 3 arriva lo stesso, ma la Forgia ha un ospite illithid e i Bracieri lo sanno</td><td>P2B, Espansione narrativa</td></tr>
+            <tr><td><strong>La Chiave</strong> (Mag)</td><td>1/settimana, i due pugni battuti insieme: <em>spostamento planare</em> (LI 20°) <strong>solo</strong> verso la Forgia Eterna, per Tordek e chi lo tocca; da lì, il ritorno al punto di partenza</td><td>«chiavi planari per la Forgia Eterna»</td></tr>
+            <tr><td><strong>Mente di Pietra</strong> (Su)</td><td>+4 ai TS contro i poteri psionici e gli ammaliamenti che vogliono fargli usare i Bracieri. È la montagna che non si sposta</td><td>l'inganno di Xal'thor; il nome richiama il Cammino nella Tempesta</td></tr>
+            <tr><td><strong>La conseguenza</strong></td><td>ogni uso della Chiave è sentito da chi cerca la Forgia: il DM avanza di un passo un orologio (Xal'thor, i Githyanki di Vaereth, o chi ne prende il posto in ARC-10)</td><td>il Clock Githyanki di P2B §2.1.3, come modello</td></tr>
+            <tr><td><strong>Ego</strong></td><td>resta 18. Il dreno di Sal, se Tordek lo tiene, ruba anche l'uso settimanale della Chiave</td><td>P2C</td></tr>
+        </table>
+        <p>Restano fuori, di proposito: poteri di danno nuovi (Tordek ne ha già abbastanza) e un terzo incavo. I Bracieri sono <strong>gemelli</strong>: due gemme, due piani. Prezzo, come controllo: <em>spostamento planare</em> una volta a settimana vale poco in monete; il valore vero è la porta. Lotto T10-f.</p>
+        <p><strong>Da decidere</strong>: approvi lo stadio con questo innesco e questi due poteri? E l'orologio della conseguenza, chi lo muove?</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S3 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+</body>
+</html>

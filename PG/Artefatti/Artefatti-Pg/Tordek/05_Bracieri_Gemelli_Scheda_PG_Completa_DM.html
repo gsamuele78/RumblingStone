@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="bracieri · S2 · r3 · 2026-09-25">
+    <title>Bracieri Gemelli di Moradin — Stadio 2, Fuoco e Terra (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #8B2500; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #8B2500; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #8B2500; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #8B2500; background: rgba(139, 37, 0, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #8B2500, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote" style="border-left-color:#8B0000;background:rgba(139,0,0,0.10);">
+        <strong>Copia DM — non darla al giocatore.</strong> La pagina di Tordek per questo stadio è <em>05_Bracieri_Gemelli_Scheda_PG_Completa.html</em>.
+    </div>
+
+    <div class="header">
+        <h1 class="class-title">Bracieri Gemelli di Moradin</h1>
+        <div class="subtitle">Stadio 2 — Cuore di Fuoco e Pietra</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Un fuoco senza pietra non dura.»</div>
+    </div>
+
+    <div class="requirements">
+        <strong>Topazio-Fuoco</strong> e <strong>Geode di Smeraldo</strong> · <strong>Int 14 · Sag 16 · Car 16 · Ego 18</strong> · LI 20° · colpi senz'armi magici, legali e buoni per superare la RD
+    </div>
+
+    <div class="dm">
+        <h3>La progressione dei Bracieri, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria dell'Attacco Poderoso · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> (giocatore) e <code>04_…_Fuoco_DM</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral nel Tempio Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra · Frantumare · Diventare una Collina · Ego 18</td><td><code>05_…_Completa</code> e <code>05_…_Completa_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code> (solo DM)</td><td>⬜ ARC-09, da approvare</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Cosa è cambiato dallo stadio 1, e quando</h3>
+        <table>
+        <tr><th>Cosa</th><th>Quando, e da dove</th></tr>
+        <tr><td>Pelle di Scorie e Pietra (RD 5/adamantio) · Pugno Frana · Tremore del Forgiatore · Ancoraggio della Montagna · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra</td><td>Rituale 2, la Sentinella di Mithral (<em>03_…</em>). RD 5: la bozza <em>.md</em> diceva 3, corretta nella riconciliazione del 2026-07-04</td></tr>
+        <tr><td><strong>Benedizione della Forgia Eterna</strong>: cariche 3 → 4, una carica gratuita su 18-20 naturale, <em>Frantumare</em> 1/giorno su critico</td><td>l'Altare del Cuore di Moradin (ARC-07). <strong>Permanente</strong>: decisione del DM del 2026-07-04</td></tr>
+        <tr><td><strong>Diventare una Collina</strong> 1/giorno</td><td>Terros abbattuto, 2026-07-31 (K-B28)</td></tr>
+        <tr><td>La reazione al Dono (l'Ancoraggio a Hella)</td><td><em>ARC07-DEF-3</em> §5 (Doni v4-bis, 2026-09-12)</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Al rito di Hella</h3>
+        <p>Se Tordek <strong>dona l'Ancoraggio della Montagna</strong>, il potere lascia i Bracieri per sempre e Hella riceve <em>Pelle di Adamantio</em> (RD 3/adamantio). La Voce nella Forgia commenta una volta sola («Bene. Un'ancora serve a chi affonda, non a chi sta a riva.») e da lì avverte Tordek <strong>un round prima</strong> di ogni spostamento forzato. Se <strong>rifiuta</strong>, tacciono una settimana; al settimo giorno riparlano, e la prima frase è sul rifiuto. Una volta sola, per sempre, Hella può rendergli l'Ancoraggio per una scena.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Cose che si confondono al tavolo</h3>
+        <ul>
+        <li><strong>Le cariche di devastazione sono della Cintura</strong> (D17 del piano ARC-07): la scheda dei Bracieri le riporta per comodità. È un solo gruppo, 4 al giorno con la Benedizione.</li>
+        <li><strong>Castigo del Drago</strong> dei Bracieri (+2 e +2d6, come un <em>bane</em>) e <strong>Dragondoom</strong> di Aegis Fang (punizione 3/giorno, da +1d6 a +4d6 per taglia) sono due poteri diversi.</li>
+        <li><strong>Frantumare</strong> fa danno sonoro: è l'unico danno sonoro fra gli artefatti del gruppo.</li>
+        <li><strong>Prezzo.</strong> Il file 01 stima lo stadio completo a circa 94.900 mo, sulla stesura della Versione 1 e senza Benedizione né Collina: il conto vero è nel lotto T10-f, nell'audit.</li>
+    </ul>
+    </div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Registro (compila a penna)</div>
+        <div class="corpo">
+            Stadio 2 — oggi · Collina sbloccata 2026-07-31 · al rito di Hella, Tordek ☐ dona ☐ rifiuta l'Ancoraggio · ______________
+        </div>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S2 · r3 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+</body>
+</html>

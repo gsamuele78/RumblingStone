@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="bracieri · S0 · r1 · 2026-09-25">
+    <title>Bracieri Gemelli di Moradin — Stadio 0, dormienti (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #8B2500; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #8B2500; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #8B2500; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #8B2500; background: rgba(139, 37, 0, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #8B2500, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote" style="border-left-color:#8B0000;background:rgba(139,0,0,0.10);">
+        <strong>Copia DM — non darla al giocatore.</strong> La pagina di Tordek per questo stadio è <em>00_Bracieri_S0_Dormienti.html</em>.
+    </div>
+
+    <div class="header">
+        <h1 class="class-title">Bracieri Gemelli di Moradin</h1>
+        <div class="subtitle">Stadio 0 — dormienti</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Una forgia senza fuoco non crea.»</div>
+    </div>
+
+    <div class="quote">
+        Coppia di guanti di adamantio annerito, lavorati a piastre sovrapposte come le nocche e le falangi di un gigantesco pugno nanico. Sul dorso, rune naniche di Moradin intorno a due incavi vuoti. Sono freddi. Pesano come devono pesare, e basta.
+    </div>
+
+    <div class="requirements">
+        <strong>Slot:</strong> mani · <strong>Peso:</strong> 2,5 kg · <strong>Allineamento:</strong> Legale Buono · <strong>Legati a:</strong> Tordek
+    </div>
+
+    <h2>Quello che sono</h2>
+
+    <div class="power-block">
+        <div class="power-header">Requisiti del portatore <span>per sempre</span></div>
+        <div class="desc-text">
+            <strong>Nano</strong> · allineamento <strong>non malvagio e non caotico puro</strong> · bonus di attacco base <strong>+11</strong> o più · colpi senz'armi o armi contundenti naniche · <strong>Moradin</strong> riconosciuto come divinità maggiore, con forge, templi e clan onorati.<br>
+            Se un requisito viene meno, i guanti tornano semplici guanti di adamantio, a qualunque stadio siano.
+        </div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Dormienti <span>nessun potere</span></div>
+        <div class="desc-text">
+            Finché non li risveglia la forgia, sono guanti di adamantio e nient'altro. Ogni tanto, quando chiudi il pugno, le rune si scaldano appena.
+        </div>
+    </div>
+
+    <div class="power-block spento">
+        <div class="power-header">Quello che dorme</div>
+        <div class="desc-text">
+            Due incavi vuoti, sul dorso dei due guanti. Uno aspetta il fuoco, l'altro la pietra.
+        </div>
+    </div>
+
+    <div class="solo-dm"></div>
+    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
+
+    <div class="dm">
+        <h3>La progressione dei Bracieri, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria dell'Attacco Poderoso · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> (giocatore) e <code>04_…_Fuoco_DM</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral nel Tempio Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra · Frantumare · Diventare una Collina · Ego 18</td><td><code>05_…_Completa</code> e <code>05_…_Completa_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code> (solo DM)</td><td>⬜ ARC-09, da approvare</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>Da dove viene questa pagina</h3>
+        <ul>
+            <li><strong>Aspetto e requisiti</strong>: <em>01_Bracieri_Gemelli_di_Moradin.md</em>, «Requisiti del Portatore» e «Se uno di questi requisiti viene meno, i guanti si riducono a semplici guanti di adamantio».</li>
+            <li><strong>I Guanti della Devastazione.</strong> Nella scena del risveglio (<em>02_Risveglio_Bracieri_di_Moradin.md</em>) i guanti che Tordek porta si chiamano ancora <em>Guanti della Devastazione</em> e «sono ora i Bracieri». Le <strong>cariche di devastazione</strong> (i <em>Devastation Gauntlets</em> del MIC) stanno oggi sulla <strong>Cintura della Devastazione</strong>, un oggetto custom del PG spostato alla cintura per liberare le mani (D17 del piano ARC-07, <em>00_Cintura_della_Devastazione.md</em>). Sulle schede dei Bracieri compaiono come sinergia: <strong>è un solo gruppo di cariche</strong>, non due.</li>
+            <li><strong>Il passaggio allo stadio 1</strong>: Rituale 1, <em>Battesimo delle Fiamme</em>. Innesco: sconfiggere l'Elementale del Fuoco Anziano; requisito: nessun altro artefatto maggiore per il colpo di grazia; sacrificio: 5.000 mo di metalli preziosi alla forgia (<em>01_…</em>, cap. 4).</li>
+        </ul>
+    </div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Registro (compila a penna)</div>
+        <div class="corpo">
+            Stadio 0 — passato · risvegliati sul Piano del Fuoco il ______________
+        </div>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S0 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+</body>
+</html>

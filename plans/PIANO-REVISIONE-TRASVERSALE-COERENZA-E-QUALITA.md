@@ -399,10 +399,10 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 
 - [x] **T10-a** [engine: Opus, sessione principale · effort: xhigh · qualità: il DM riconosce la Corona che ricordava; nessun potere senza fonte] — audit potere per potere dei cinque artefatti su master, schede, PDF, moduli giocati e storia; la **Corona in quattro stadi**, otto pagine; i Doni v4-bis su Aegis, Anello, Bracieri; il registro delle versioni e `test_versioni_artefatti.py`
 - [x] **T10-b** [engine: Opus · effort: alto · qualità: ogni stadio ha una fonte citata] — **l'Anello in quattro stadi**: S0, S1 (dal PDF di Lord of Sun and Shadow), S2 (il Riforgiato), S3 solo DM
-- [ ] **T10-c** [engine: Opus · effort: alto · qualità: pagine S0/S1 dai file `04_` e dal PDF «Fuoco», S3 solo dopo la risposta del DM] — **i Bracieri a stadi**: dormienti, Fuoco, Terra (fatto), un terzo stadio da progettare
-- [ ] **T10-d** [engine: Opus · effort: alto · qualità: la materia di ARC-09 P1B/P1C riportata, non riscritta] — **la Collana a stadi**: i semi prima del rito, Radicata (fatto), Fiorita, Foresta che Cammina
-- [ ] **T10-e** [engine: Sonnet · effort: medio · qualità: i numeri di `05_Aegis_Fang_Final_Awakening.html`] — **Aegis Fang stadio 1**, giocatore e DM
-- [ ] **T10-f** [engine: Sonnet · effort: medio · qualità: ogni voce col riferimento alla tabella dei prezzi SRD] — i **prezzi voce per voce** della Corona e dell'Anello, per sostituire le stime a parole che si contraddicono
+- [x] **T10-c** (2026-09-25, sera) [engine: Opus · effort: alto · qualità: pagine S0/S1 dai file `04_` e dal PDF «Fuoco», S3 solo dopo la risposta del DM] — **i Bracieri a stadi**: S0 dormienti (G+DM), S1 Fuoco (la scheda 04 + DM), S2 (DM nuova), S3 *le Chiavi della Forgia* solo DM, bozza (D16)
+- [x] **T10-d** (2026-09-25, sera) [engine: Opus · effort: alto · qualità: la materia di ARC-09 P1B/P1C riportata, non riscritta] — **la Collana a stadi**: S0 i semi (solo DM), Radicata, Fiorita e Foresta che Cammina solo DM, bozze (D17). P1B/P1C avevano quattro semi: riportati a tre
+- [x] **T10-e** (2026-09-25, sera) [engine: Opus · effort: medio · qualità: i numeri di `05_Aegis_Fang_Final_Awakening.html`] — **Aegis Fang stadio 1**, giocatore e DM; resta la D15 (Dragondoom e poteri inferiori allo stadio 1)
+- [x] **T10-f** (2026-09-25, sera) [engine: Opus · effort: medio · qualità: ogni voce col riferimento alla tabella dei prezzi SRD] — i **prezzi voce per voce**: audit §10. La *Mente Vuota* vale 120.000 mo e non 240.000 (dura 24 ore); la pagina del Manto taceva l'immunità mentale; le stime dei Bracieri erano sulla stesura superata
 - [x] **T10-g** (2026-09-25, pomeriggio: 11 risposte applicate, D2 chiusa dalla fonte; resta D13) [engine: Opus · effort: xhigh · qualità: conferma esplicita del DM] — applicare le risposte alle domande qui sotto: togliere le marcature «da confermare», alzare la revisione delle pagine toccate, aggiornare `SINERGIE` (D1) e la skill
 
 <!-- decisioni-dm: TRASVERSALE-ARTEFATTI -->
@@ -421,7 +421,10 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 | ~~D10~~ | I livelli minimi del libro della Corona contano? | **Deciso**: indicativi |
 | ~~D11~~ | Lo stadio 1 dell'Anello (Mask sveglio) è stato usato al tavolo? | **Deciso**: no, solo la crisi; pagina giocatore tolta |
 | ~~D12~~ | Gli effetti della Opzione C sulla scheda di Artemis? | **Deciso**: la Fortezza Mentale |
-| D13 | I poteri del Caos Ultimo (Anello, stadio 3)? | Bozza da approvare sulla pagina DM: *Alba Voluta* e *Purificazione del Crepuscolo* 1/giorno, e il *Prezzo dell'Armonia* |
+| ~~D13~~ | I poteri del Caos Ultimo (Anello, stadio 3)? | **Deciso**: *Alba Voluta* e *Purificazione del Crepuscolo* (senza cura) 1/giorno; il potere del *Prezzo dell'Armonia* lo sceglie Artemis e lo eredita Zalkatar |
+| D15 | Aegis Fang allo stadio 1 tiene la *Dragondoom* e i poteri inferiori dello stadio 0? | Sì: uno stadio aggiunge e non toglie (equivalente +8) |
+| D16 | Il terzo stadio dei Bracieri, *le Chiavi della Forgia* (Torneo di Dauth, Xal'thor)? | Bozza sulla pagina DM `06_Bracieri_S3_Chiavi_della_Forgia_DM.html`: *La Chiave* 1/settimana verso la Forgia, *Mente di Pietra*, un orologio a ogni uso |
+| D17 | La Collana Fiorita e la Foresta che Cammina: i poteri? | Bozze sulle pagine DM `03_Collana_S2_Fiorita_DM.html` e `04_Collana_S3_Foresta_che_Cammina_DM.html`, dalla materia di ARC-09 riportata a tre semi |
 | ~~D14~~ | Aegis Fang: i poteri usati al tavolo e mai scritti (Ritornante, *bane*, Tuono, Dragondoom)? | **Deciso**: vale la scheda del repo, Ritornante e Dragondoom (la punizione del MIC); niente *bane* né Tuono allo stadio 0 |
 
 ---

@@ -46,6 +46,8 @@ When Corona di Adamantio is fully awakened and Thorik completes all Legacy Ritua
 - *Divine Channeling of Moradin* 1/day: *heal* (CL 15) on all allied dwarves within 9 m
 - Telepathy with dwarves (90 m); dwarves near Thorik (18 m) are immune to fear
 - **When:** at Ritual 4 (`ARC07-DEF-4` Scene 12, Moment 3), as a scene. The player's crown sheet of 22/10/2025 already said «after completing Ritual: Siege of the Eternal Forge»
+- **Pages (2026-09-25):** `Aegis Fang/01_Aegis_Fang_Stadio1{,_DM}.html` (S1 r1), handed over after the scene
+- **Open (D15):** does Stage 1 keep Dragondoom and the Stage 0 lesser powers? The source does not name them and its value (+7, 98,000 gp) leaves Dragondoom out. Proposal: yes, they stay (+8, 128,000 gp) `[INFERRED — needs DM confirmation]`
 
 ### Synergies
 
@@ -89,7 +91,7 @@ active; only Topaz gem lit (state.md §0).*
 ### Powers To Awaken (Via Legacy Rituals)
 
 1. **Adamantine Will (Su):** Immunity to charm/compulsion + +4 racial vs mental effects, on natural ground. *Unlocked by: Anvil of the World (Ritual 3, in progress)*
-2. **Mantle of Stone and Spirit (Su):** Continuous Mind Blank; **DR 5/epic and evil** (DM 2026-09-25, D7); Commune 1/month in an Earth Node. *Unlocked by: Anvil of the World (Ritual 3) — ✅ active*
+2. **Mantle of Stone and Spirit (Su):** Continuous Mind Blank (immune to **all** mind-affecting effects and to divination, anywhere; this makes Adamantine Will redundant while the Mantle works); **DR 5/epic and evil** (DM 2026-09-25, D7); Commune 1/month in an Earth Node. *Unlocked by: Anvil of the World (Ritual 3) — ✅ active*
 3. **Aura of the Eternal Forge (Su):** after the duel, not on arrival; lasts until dawn the first time, then **1/week**: *divine power* + *protection from evil* to the four; to every dwarf within 30 m also *bless* and one *stone shape*; +4 morale to attacks and saves for dwarves who see Thorik; enemies Will DC 20 or shaken 1 min. The healing half is the portal's healing (Scene 1) and does not stack. *Unlocked by: Ritual 4* (DM 2026-09-20)
 4. **Crown of Protection +3** (**+2** if Thorik gave the deflection at Hella's rite, DM D5) and **Sentience** (warm or cold, by the Gift choice). *Unlocked by: Ritual 4*
 
@@ -140,7 +142,7 @@ Band of polished obsidian with gold veins (Lathander), silver glyphs (Mask), and
 | S0 · the chaos ring | bond with Artemis | Enhanced Vision, Wings of Shadow, Shadow Step; two dormant crisis powers. 42,000 gp | past |
 | S1 · the two deities | Lathander and Mask claim it; Cerebromorphosis crisis in Belkram's Tomb | written in the Lord of Sun and Shadow analysis (Mask awake, *Twilight Sanctuary*), **never given to the player** (DM D11): at the table only the crisis happened, and Dawn's Defiance saved Artemis. 52,000 gp | DM-only history |
 | S2 · Reforged | Artemis **refused** Lord of Sun and Shadow (crisis **Option C**, «my path is mine»), then the Eternal Forge | the list below. 163,400 gp | **today** |
-| S3 · Ultimate Chaos | Invisible Tower: Zalkatar defeated, or purified by giving up a ring power | **draft for DM approval** (D13): *Willed Dawn* and *Twilight Purge* 1/day, *Price of Harmony* | ARC-09, not canon yet |
+| S3 · Ultimate Chaos | Invisible Tower: Zalkatar defeated, or purified by giving up a ring power | **DM decision 2026-09-25 (D13)**: *Alba Voluta* 1/day (immediate, *break enchantment* CL 15 on self vs enchantment or transformation, no failed save needed); *Purificazione del Crepuscolo* 1/day (standard, 1d6 divine/HD to aberrations within 9 m, no save, ring stays on, **no** healing: that stays with the crisis version); *Price of Harmony* if Zalkatar is purified: **Artemis chooses** which of the six activatable Reforged powers is lost forever, and **Zalkatar inherits it** as a permanent ally. Destroyed: ring evolves, no loss, no ally. Failed: no evolution | ARC-09; player page handed over at the Tower |
 
 **Option C on Artemis's sheet (DM D12):** *Mental Fortress*, +2 permanent on saves vs divine influence (the Italian master). The English PDF's heavier effects do not apply. Crisis powers work as in the Reforged PDF, without the first version's 1/week limit (D9); *Harmonious Duality* (+1 charge with the Crown) was struck from the 16/01 printout and is gone.
 
@@ -207,6 +209,17 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 > di Moradin*, *Salto Infuocato*); the sheet wins (DM rule 2026-09-20: the sheet
 > the player read decides).
 
+### Stages (ADR-0071, 2026-09-25)
+
+| Stage | Trigger | Pages | State |
+|---|---|---|---|
+| S0 · dormant | a worthy dwarf wears them | `Tordek/00_Bracieri_S0_Dormienti{,_DM}.html` | ✅ past |
+| S1 · Fire | Ritual 1, Baptism of Flames (Elder Fire Elemental) | `04_Bracieri_Gemelli_Scheda_PG_Fuoco.html` + `_DM` | ✅ past |
+| S2 · Fire and Earth | Ritual 2, Trial of the Deep Gallery (Mithral Sentinel); then Forge Blessing and Terros | `05_Bracieri_Gemelli_Scheda_PG_Completa.html` + `_DM` | ▶ today |
+| S3 · the Keys of the Forge | **draft (D16)**: at the Dauth Tournament Tordek refuses to open the portal Xal'thor asks for; *La Chiave* 1/week plane shift to the Eternal Forge only; *Mente di Pietra* +4 vs psionics and enchantments aimed at the gauntlets; a clock advances at each use | `06_Bracieri_S3_Chiavi_della_Forgia_DM.html` (DM only) | ⬜ not canon |
+
+The devastation charges on the gauntlet sheets are the **Belt's** (D17 of the ARC-07 plan): one pool, not two.
+
 ### Fire Phase Powers (✅ AWAKENED — Baptism of Flames)
 
 1. **Dragon Bane (Dragon Doom):** +2 attack, +2d6 damage vs. dragons
@@ -215,7 +228,7 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 4. **Colpi del Fuoco (3/day, Su):** Standard attack, +4d6 fire, push 5 ft (Fort DC 18), adjacent 2d6 fire (Ref DC 18)
 5. **Cuore di Brace:** Fire Resistance 10 (continuous)
 6. **Salto Fiammeggiante (3/day, Su):** Move action; special jump (d20 + STR + Jump ranks, distance scaled by WIS), landing deals 2d6 fire in 3 m radius
-7. **Passo di Brace:** +3 m speed and +10 competence to Jump while a Salto use remains
+7. **Passo di Brace:** +3 m speed while a Salto use remains (the +10 to Jump belonged to the superseded Version 1 draft, not to the sheet)
 8. **Sentient Voice:** Whispers dwarven advice; refuses powers if wielder betrays dwarven ideals
 9. **Forge Blessing** (permanent, DM 2026-07-04): devastation charges 4/day (Belt of Devastation, D17), free charge on natural 18-20, *shatter* 1/day after a confirmed critical
 
@@ -238,6 +251,7 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 
 - Fire Phase: ~60,400 gp
 - Full (Fire + Earth): ~94,900 gp
+- ⚠️ Both estimates were made on the superseded Version 1 draft (they count Pugno di Moradin and +10 Jump, and miss Passo di Brace, the Blessing and the Hill): see the SRD price check in `PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md` §10
 
 ---
 
@@ -253,6 +267,17 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 Created during Hella's resurrection ritual from 3 Treant seeds laid on her body (hands and brow). At Step 4 they germinated and entered her, making her a Treant hybrid. Each companion then opened one seed with **a power of his own artifact** (the transplant of `ARC07-DEF-3` §5, see "Resurrection Gifts" below); the third seed also carries Durik's Imprint. The seeds formed a living torc of wood and metal. It was not forged: it germinated.
 
 **Player and DM pages** (canon, 2026-09-25): `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_Radicata{,_DM}.html`; Durik: `02_Durik_Guardiano_di_Pietra{,_DM}.html`.
+
+**Stages** (the moments are canon, the powers of S2 and S3 are not yet):
+
+| Stage | Trigger | Pages | State |
+|---|---|---|---|
+| S0 · the seeds | — (three treant seeds on Hella's body) | `00_Collana_S0_I_Semi_DM.html` (DM only) | ✅ past |
+| S1 · Radicata | the resurrection rite | `01_Collana_Radicata{,_DM}.html` | ▶ after the rite |
+| S2 · Fiorita | Ritual of the Sacred Circle (ARC-09 P1, Sacred Forest) | `03_Collana_S2_Fiorita_DM.html`, **draft (D17)**: *Radici che Sentono*, *Il Muro dei Guardiani* 1/day, Avatar 2/day, a Dauth echo | ⬜ not canon |
+| S3 · Foresta che Cammina | the Battle of Rethmar, the Mythal circle (ARC-09 P3) | `04_Collana_S3_Foresta_che_Cammina_DM.html`, **draft (D17)**: two Treants together without the month of silence, *Radici nel Mythal* | ⬜ not canon |
+
+⚠️ ARC-09 P1B and P1C were written before the rite and speak of a «Collana dei Semi Treant» with **four** seeds that Hella already wore. Canon: **three** seeds, born at the rite. «Damarath» is the old name of Rethmar.
 
 ### Stats
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="collana · S3 · r1 · 2026-09-25">
+    <title>Collana dei Semi Eterni — Stadio 3, Foresta che Cammina (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #2e5e2e; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #2e5e2e; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #2e5e2e; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #2e5e2e; background: rgba(46, 94, 46, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #2e5e2e, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="class-title">Collana dei Semi Eterni</h1>
+        <div class="subtitle">Stadio 3 — Foresta che Cammina · bozza da approvare</div>
+        <div class="banner">VERSIONE DM · NON DARE ALLA GIOCATRICE</div>
+        <div class="dwarven">«Non un muro davanti a voi: una radice sotto di voi.»</div>
+    </div>
+
+    <div class="requirements" style="border-color:#8B0000;">
+        <strong>Bozza per il DM (D17), non canone.</strong> Il momento è canone: la Battaglia di Rethmar, il Circolo del Mythal.
+    </div>
+
+    <div class="dm">
+        <h3>La progressione della Collana, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · i semi</td><td>—</td><td>tre semi di treant, nessun potere</td><td><code>00_Collana_S0_I_Semi_DM</code> (solo DM)</td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · Radicata</td><td>il rito di resurrezione (<em>ARC07-DEF-3</em>)</td><td>Saggezza della Terra · Corteccia del Guardiano · Avatar della Radice · Evocazione dei Guardiani · i tre semi e i doni · la restituzione</td><td><code>01_Collana_Radicata</code> e <code>_DM</code></td><td>▶ dopo il rito</td></tr>
+        <tr><td><strong>2</strong> · Fiorita</td><td><strong>canone</strong>: il Rituale del Cerchio Sacro (ARC-09 P1, la Foresta Sacra)</td><td><strong>bozza</strong> (D17)</td><td><code>03_Collana_S2_Fiorita_DM</code> (solo DM)</td><td>⬜ ARC-09</td></tr>
+        <tr><td><strong>3</strong> · Foresta che Cammina</td><td><strong>canone</strong>: la Battaglia di Rethmar, il Circolo (ARC-09 P3)</td><td><strong>bozza</strong> (D17)</td><td><code>04_Collana_S3_Foresta_che_Cammina_DM</code> (solo DM)</td><td>⬜ ARC-09</td></tr>
+    </table>
+    <p><em>01_Collana_dei_Semi_Eterni.md</em>, «Stati futuri»: «I momenti sono canone […] I poteri no: le righe qui sotto sono direzioni, e si scrivono quando si prepara ARC-09, con la conferma del DM». Per questo gli stadi 2 e 3 hanno solo la pagina DM, con una bozza.</p>
+    <p>⚠️ <strong>Damarath</strong> è il vecchio nome di <strong>Rethmar</strong> nel brainstorm di ARC-09: la città finale è Rethmar (<em>PIANO-REVISIONE-ARC09</em>, D2).</p>
+    </div>
+
+    <div class="dm">
+        <h3>Cosa dicono le fonti</h3>
+        <table>
+        <tr><th>Fonte</th><th>Cosa dice</th></tr>
+        <tr><td><em>01_Collana_dei_Semi_Eterni.md</em>, «Stati futuri»</td><td>Foresta che Cammina: alla Battaglia di Rethmar / Circolo urbano; «evocazioni potenziate, legame col Mythal»</td></tr>
+        <tr><td><code>…P3-BATTAGLIA-FINALE-MYTHAL-FOCUS</code>, PG 4</td><td>in forma d'Avatar Hella collega il Mythal al <strong>terreno</strong>: radici che fermano i giganti, venti che deviano i soffi</td></tr>
+        <tr><td><em>01_Collana_Radicata_DM.html</em>, «La Quaternità»</td><td>il cerchio dei quattro si sblocca con la Trinità, le Radici della Memoria e la quest della Foresta Sacra: arriva <strong>prima</strong> di Rethmar e resta un potere del gruppo, non dello stadio</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>🟡 BOZZA per il DM — Foresta che Cammina (D17)</h3>
+        <p>Le due direzioni scritte sono «evocazioni potenziate» e «legame col Mythal». La bozza dà una regola a ciascuna, e lascia il resto dov'è.</p>
+        <table>
+            <tr><th>Potere proposto</th><th>Regola</th><th>Da dove viene</th></tr>
+            <tr><td><strong>La Foresta che Cammina</strong> (Sop)</td><td>i due Treant di Adamantio si possono evocare insieme <strong>senza</strong> il mese di silenzio, una volta al giorno. Il limite di due resta</td><td>«evocazioni potenziate»</td></tr>
+            <tr><td><strong>Radici nel Mythal</strong> (Sop)</td><td>dentro un mythal o un cerchio druidico consacrato, in forma d'Avatar: le creature Enormi o più grandi nemiche entro 9 m hanno velocità dimezzata (radici), e i soffi che attraversano l'area concedono +4 ai TS degli alleati</td><td>P3, «radici che fermano giganti, venti che deviano soffi»</td></tr>
+        </table>
+        <p>Restano fuori, di proposito: la Quaternità (è del gruppo, e arriva prima) e ogni potere nuovo di danno. Hella è una guaritrice.</p>
+        <p><strong>Da decidere</strong>: approvi le due regole? Il legame col Mythal deve valere solo a Rethmar o in ogni cerchio consacrato?</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione collana · S3 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+</body>
+</html>

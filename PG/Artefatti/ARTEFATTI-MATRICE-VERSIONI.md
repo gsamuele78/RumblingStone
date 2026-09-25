@@ -43,17 +43,24 @@
 <!-- versioni-artefatti -->
 | Artefatto | Stadio | Pagina giocatore | Pagina DM | Versione | Stato |
 |---|---|---|---|---|---|
-| corona | 0 · indossata | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme_DM.html` | `corona · S0 · r2 · 2026-09-25` | ✅ passato |
-| corona | 1 · Topazio | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma.html` | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma_DM.html` | `corona · S1 · r3 · 2026-09-25` | ✅ passato |
-| corona | 2 · Smeraldo | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme_DM.html` | `corona · S2 · r3 · 2026-09-25` | ▶ oggi |
-| corona | 3 · Rubino | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme_DM.html` | `corona · S3 · r3 · 2026-09-25` | ⬜ al Rituale 4 |
+| corona | 0 · indossata | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme_DM.html` | `corona · S0 · r3 · 2026-09-25` | ✅ passato |
+| corona | 1 · Topazio | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma.html` | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma_DM.html` | `corona · S1 · r4 · 2026-09-25` | ✅ passato |
+| corona | 2 · Smeraldo | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme_DM.html` | `corona · S2 · r4 · 2026-09-25` | ▶ oggi |
+| corona | 3 · Rubino | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme_DM.html` | `corona · S3 · r4 · 2026-09-25` | ⬜ al Rituale 4 |
 | aegis | 0 · pre-risveglio | `Aegis Fang/00_Aegis_Fang_Stadio0.html` | `Aegis Fang/00_Aegis_Fang_Stadio0_DM.html` | `aegis · S0 · r6 · 2026-09-25` | ▶ oggi |
-| anello | 0 · l'anello del caos | `ringOfChaoticIllumination/01_Anello_S0_Originale.html` | `ringOfChaoticIllumination/01_Anello_S0_Originale_DM.html` | `anello · S0 · r2 · 2026-09-25` | ✅ passato |
-| anello | 1 · le due divinità | — | `ringOfChaoticIllumination/02_Anello_S1_Due_Divinita_DM.html` | `anello · S1 · r2 · 2026-09-25` | scritto, mai dato al giocatore (D11) |
+| aegis | 1 · risveglio pieno | `Aegis Fang/01_Aegis_Fang_Stadio1.html` | `Aegis Fang/01_Aegis_Fang_Stadio1_DM.html` | `aegis · S1 · r1 · 2026-09-25` | ⬜ al Rituale 4 (D15 aperta) |
+| anello | 0 · l'anello del caos | `ringOfChaoticIllumination/01_Anello_S0_Originale.html` | `ringOfChaoticIllumination/01_Anello_S0_Originale_DM.html` | `anello · S0 · r3 · 2026-09-25` | ✅ passato |
+| anello | 1 · le due divinità | — | `ringOfChaoticIllumination/02_Anello_S1_Due_Divinita_DM.html` | `anello · S1 · r3 · 2026-09-25` | scritto, mai dato al giocatore (D11) |
 | anello | 2 · il Riforgiato | `ringOfChaoticIllumination/00_Ring_Riforgiato.html` | `ringOfChaoticIllumination/00_Ring_Riforgiato_DM.html` | `anello · S2 · r3 · 2026-09-25` | ▶ oggi |
-| anello | 3 · il Caos Ultimo | — | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo_DM.html` | `anello · S3 · r2 · 2026-09-25` | ⬜ bozza da approvare (D13) |
-| bracieri | 2 · Fuoco e Terra | `Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.html` | — | `bracieri · S2 · r2 · 2026-09-25` | ▶ oggi |
+| anello | 3 · il Caos Ultimo | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo.html` | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo_DM.html` | `anello · S3 · r3 · 2026-09-25` | ⬜ alla Torre Invisibile (D13 decisa) |
+| bracieri | 0 · dormienti | `Tordek/00_Bracieri_S0_Dormienti.html` | `Tordek/00_Bracieri_S0_Dormienti_DM.html` | `bracieri · S0 · r1 · 2026-09-25` | ✅ passato |
+| bracieri | 1 · Fuoco | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco.html` | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco_DM.html` | `bracieri · S1 · r1 · 2026-09-25` | ✅ passato |
+| bracieri | 2 · Fuoco e Terra | `Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.html` | `Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa_DM.html` | `bracieri · S2 · r3 · 2026-09-25` | ▶ oggi |
+| bracieri | 3 · le Chiavi della Forgia | — | `Tordek/06_Bracieri_S3_Chiavi_della_Forgia_DM.html` | `bracieri · S3 · r1 · 2026-09-25` | ⬜ bozza da approvare (D16) |
+| collana | 0 · i semi | — | `Hella/00_Collana_S0_I_Semi_DM.html` | `collana · S0 · r1 · 2026-09-25` | ✅ passato (solo DM: la Collana non esisteva) |
 | collana | 1 · Radicata | `Hella/01_Collana_Radicata.html` | `Hella/01_Collana_Radicata_DM.html` | `collana · S1 · r2 · 2026-09-25` | ▶ dopo il rito |
+| collana | 2 · Fiorita | — | `Hella/03_Collana_S2_Fiorita_DM.html` | `collana · S2 · r1 · 2026-09-25` | ⬜ Cerchio Sacro, bozza da approvare (D17) |
+| collana | 3 · Foresta che Cammina | — | `Hella/04_Collana_S3_Foresta_che_Cammina_DM.html` | `collana · S3 · r1 · 2026-09-25` | ⬜ Rethmar, bozza da approvare (D17) |
 | durik | 1 · Radicata | `Hella/02_Durik_Guardiano_di_Pietra.html` | `Hella/02_Durik_Guardiano_di_Pietra_DM.html` | `durik · S1 · r1 · 2026-09-25` | ▶ dopo il rito |
 
 **Le revisioni del 2026-09-25 pomeriggio** (`r2`/`r3`) applicano le risposte del DM alle domande D1-D12 dell'audit: tolte le marcature «da confermare». La pagina del giocatore dell'Anello S1 è stata tolta (D11: mai data al tavolo).
@@ -64,9 +71,10 @@ due gemme del 2026-08-01 e la sua versione DM) e `corona · S3 · r1` sono in
 `aegis · S0 · r1`, `anello · S2 · r1`, `bracieri · S2 · r1`, `collana · S1 · r1`
 sono le stesse pagine prima di questo audit: la storia le tiene (`git log`).
 
-**Stadi che mancano.** Anello S3 senza poteri (D13); Bracieri S0-S1 e S3,
-Collana S0 e S2-S3, Aegis S1: i lotti T10-c/T10-d/T10-e del piano trasversale.
-La Corona è l'unico artefatto con tutti gli stadi.
+**Stadi (2026-09-25, sera).** Tutti gli artefatti hanno una pagina per ogni
+stadio. Dove il momento è canone ma i poteri no, la pagina è **solo DM** e porta
+una bozza: Aegis S1 ha la D15 aperta, Bracieri S3 la D16, Collana S2 e S3 la
+D17. Le pagine del giocatore di quegli stadi si fanno quando il DM approva.
 
 ---
 
@@ -149,7 +157,7 @@ Cartella `Artefatti-Pg/Aegis Fang/`:
 
 **Versione definitiva, per stadio (2026-09-25)**: S0 `01_Anello_S0_Originale{,_DM}.html`,
 S1 `02_Anello_S1_Due_Divinita{,_DM}.html`, S2 `00_Ring_Riforgiato{,_DM}.html` (oggi),
-S3 `04_Anello_S3_Caos_Ultimo_DM.html` (solo DM: poteri da progettare, D13). Registro §0,
+S3 `04_Anello_S3_Caos_Ultimo{,_DM}.html` (D13 decisa il 2026-09-25; la pagina del giocatore si consegna alla Torre). Registro §0,
 confronto in `ARTEFATTI-AUDIT-POTERI-2026-09-25.md` §3. Lo stadio 1 viene dal PDF
 `Artemis/Cerebromorphosis/Lord of Sun and Shadow - Power Analysis & Transformation Choices.pdf`,
 che nessuna versione successiva riportava.
