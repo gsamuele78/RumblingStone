@@ -82,6 +82,7 @@
 | `rumblingstone-module-standard` §8 | sidebar **«Scalare lo scontro»** obbligatoria per i boss | **maggiore** | 🟢 congegno `scalare lo scontro` — e dice **zero** in tutti i 71 file di ARC-08 e ARC-09 |
 | `rumblingstone-prosa-documenti` | norme sui **documenti** del repo (non sul contenuto di gioco) | **minore** | 🟢 `validate_prosa.py --documenti` |
 | `rumblingstone-editoria` | impaginazione, riquadri, statblocchi in stampa | **maggiore** | 🟢 `validate_booklets.py --stampa` |
+| `rumblingstone-editoria` §2 · §4.4 | una **mappa** in un booklet **entra in colonna (≤ 48 celle) o va su una pagina A4** a una colonna, e non va mai a capo; oltre 110 celle scende sotto i 9 pt | **maggiore** | 🟢 `validate_booklets.py --stampa` — compila ogni volume con l'esportatore che applica la regola da sé (`CELLE_COLONNA`, `#griglia`), e `TestMappeCheNonEntranoInColonna` ne tiene i casi. La soglia delle 110 celle è un **avviso** dell'esportatore, non un rosso: la mappa resta leggibile, solo più piccola. 🔎 Nasce dalle mappe di `DEF-2` uscite a brandelli nel volume della serata, 2026-09-25 |
 | `ADR-0060` (norma WotC/Paizo) | **caratteristiche e abilità maiuscole** nelle quattro forme meccaniche: `Forza 25` · `Nuotare +9` · `prova di X` con una CD · `bonus di X` | **minore** · `caratteristica_minuscola` | 🟢 `validate_prosa.py --caratteristiche` — 258 occorrenze sotto controllo, soglia **zero**, e **fuori dalle quattro forme non si misura** (una frase discorsiva senza CD non si vede: costerebbe più falsi positivi di quanti errori trovi) |
 | `read-aloud-adulti.md` + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** · `read_aloud_presuppone` | 🟢 `misura_craft --p1` — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
 | `ADR-0059` (MQM) | il **punteggio di qualità pesato**: severità 1 / 5 / **25**, soglia per classe, critico pass-fail | — è il metro, non una norma che un documento possa violare | 🟢 `punteggio_mqm.py --soglia` — 515 documenti, soglie da `specifiche-qualita.yaml` misurate con `--distribuzione`. ⚠️ Copre **4 norme su 40**: entra solo ciò che ha già un rilevatore |
@@ -94,7 +95,7 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 22 |
+| 🟢 misurate | 23 |
 | 🟡 misurate in parte, con il limite scritto | 8 |
 | 🔴 **non misurate, con la ragione scritta** | 10 |
 | ⚪ non applicabili | 2 |

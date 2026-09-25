@@ -44,7 +44,7 @@
 | §9 | **Echo Ledger** | conseguenze a lungo termine del beat |
 | §10 | **Avanzamento** | budget PX per scena + tesoro/benedizioni pregenerate |
 | §11 | **Ponte** al master #3 + **Handout & Asset** |
-| MAPPE | **S-1 Sala ottagonale · S-2 Stanza della Corona** | ASCII ultra-clear 1,5 m |
+| App. | **Mappe**: S-1 Sala ottagonale · S-2 Stanza della Corona | griglie 1,5 m, su pagina A4 a una colonna |
 
 ---
 
@@ -810,12 +810,15 @@ sistema «La Forgia Ricorda» promosso qui dal master #1 §10.
 
 ---
 
-## MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto)
+<!-- pagina: una-colonna -->
+
+## APPENDICE — MAPPE (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**: `Mappe/ARC07-MAPPE-DEFINITIVO.md`. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
+> identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna:
+> larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.
 
 ### MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)
 
@@ -869,8 +872,8 @@ A8 60% · A7 ⏳~3g18h. La Sala HA REGISTRATO la vittoria: mostralo.
 ════════════════════════════════════════════════════════════════════════
 @north S
 COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 muro→PARETE della CRONACA · 🌀 portale drow SIGILLATO (dietro)
-12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO (E-F12, VUOTO: la Corona è di Thorik) · 🖼️ Dipinti Invisibili
+13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
+12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
 11     🔲 ⬛ 🔲 ⬛ ✝️ ⬛ ⬛ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
 10     🔲 ⬛ 🔲 ⬛ ⬛ ⬛ ⬛ 🔲 ⬛ ⬛   B10 = ex nascondiglio Yochlol 2
 09     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   H09 = ex nascondiglio Yochlol 1
@@ -880,16 +883,18 @@ COL →   A  B  C  D  E  F  G  H  I  J
 05     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
 04     ⬛ ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ ⬛ ⬛
 03     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO (D-F02, sud · collegamento P1 ↔ Sala della Forgia)
+02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO sud D-F02, verso la Sala della Forgia
 01     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   SUD
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ⬛ pavimento (ora pulito) · 🔲 colonne parallele (copertura +4 CA,
 spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
-restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie (terreno difficile) · 📜 muro dietro il
-trono = ora PARETE della CRONACA (incisioni-specchio, DEF-2 §6) · 🌀 portale
-drow SIGILLATO (dietro il muro; inerte dalla caduta di Urialle) · 👑 trono
-vuoto · 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di
-Belkram (ARC-06) · 🚪 ingresso sud.
+restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
+deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
+(terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
+(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (dietro il muro;
+inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
+🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
+(ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
 ```
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   Ora **santuario sicuro** (Consacrare) — il *desecrate* di ARC-06 è dissolto.
@@ -912,3 +917,5 @@ Belkram (ARC-06) · 🚪 ingresso sud.
   Cronaca (specchio della Sala S-1). A resurrezione avvenuta, la sagoma-druida
   è **piena**.
 - **Riferimento**: geometria = `06_.../Tactics_and_maps.md`; stato = DEF-2 §6/§10.
+
+<!-- /pagina -->

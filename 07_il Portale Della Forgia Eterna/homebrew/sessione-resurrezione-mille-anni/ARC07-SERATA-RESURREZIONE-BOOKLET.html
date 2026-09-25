@@ -184,7 +184,7 @@
 <p>Le pagine ✉ stanno anche in un secondo volume, <code>ARC07-SERATA-GIOCATORI</code>, da stampare a parte e tagliare.</p>
 <p><strong>Come si stampa</strong> (lo standard di <code>GUIDA-BOOKLET-E-PDF</code>):</p>
 <p>Dalla radice del repo, con <code>C</code> la cartella di questo booklet:</p>
-<ul><li><strong>il volume del DM</strong>, da stampare, con segnalibri: <code>python3 scripts/export_booklet_typst.py C/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json --all</code></li><li><strong>una pagina ✉ per file</strong>, da stampare o mandare a un giocatore (undici file in <code>C/pdf/</code>): <code>python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf</code></li><li><strong>tutte le pagine ✉ in un volume</strong>: <code>python3 scripts/export_booklet_typst.py C/ARC07-SERATA-GIOCATORI.manifest.json --all</code></li></ul>
+<ul><li><strong>il volume del DM</strong>, da stampare, con segnalibri: <code>python3 scripts/export_booklet_typst.py C/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json --all</code></li><li><strong>una pagina ✉ per file</strong>, da stampare o mandare a un giocatore (tredici file in <code>C/pdf/</code>): <code>python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf</code></li><li><strong>tutte le pagine ✉ in un volume</strong>: <code>python3 scripts/export_booklet_typst.py C/ARC07-SERATA-GIOCATORI.manifest.json --all</code></li></ul>
 <p>⚠️ Nel volume unico dei giocatori le pagine corte stanno una dopo l'altra: gli echi di Thorik, Tordek e Artemis possono finire sullo stesso foglio. Per consegnarli a persone diverse si usano i PDF singoli della seconda riga. I PDF non stanno nel repo (<code>*.pdf</code> è ignorato): si rigenerano coi comandi qui sopra.</p><div class="pagefoot"><span>La Resurrezione e i Mille Anni</span><span class="n">1</span></div></div>
 </section>
 <section class="pane" id="c1">
@@ -359,7 +359,7 @@
 <div class="desc"><p class="readaloud">⭐ <strong>MASTER DEFINITIVO — beat HUB (ritorno &amp; conseguenze, non un dungeon di combattimento).</strong> Come i capitoli non-combat dei migliori AP (l'interludio, l'investigazione, il downtime), questo modulo vive di <strong>atmosfera, scelte e conseguenze</strong>: le sezioni solo-combattimento (tattiche round-per-round, scaling del boss) non si applicano — tutto il resto dello standard AP sì. <strong>Sostituisce e fonde</strong>: <code>PortaleForgia-P2-REVISED-Corretta-PARTE1.md</code> (gli 8 affreschi + geografia della Sala + Benedizioni), la parte "Sala/ affreschi" di <code>PortaleForgia-P2-REVISED-Corretta-PARTE2.md</code>, <code>_ARCHIVIO/PortaleForgia-Interludio-Terra.md</code> (cambiamenti della Sala + Stanza della Corona purificata) e il sistema <strong>«La Forgia Ricorda»</strong> progettato nel master #1 §10 — di cui questo file è la <strong>casa definitiva</strong>.</p><p class="readaloud"><strong>Sistema: D&amp;D 3.5 SRD</strong> (max PF1e), MAI 5e. Italiano, <strong>CD</strong> non DC. Faerûn 1372 DR. Scala mappe <strong>1,5 m/quadretto</strong>.</p><p class="readaloud"><strong>Stato al tavolo</strong>: si gioca <strong>al ritorno dal Piano della Terra</strong> (dopo il master #1), <strong>prima</strong> della resurrezione di Hella (master #3). Ordine D2. <strong>Canone a monte</strong>: Topazio (Fuoco) e Smeraldo (Terra) presi; corpo di Hella vegliato da Therysol nella Sala; il suo spirito ha già viaggiato (i PG <strong>non lo sanno</strong>). Countdown Hammerfist all'arrivo: <strong>~3g 20h</strong> (<code>[CANONE GIOCATO]</code>: sono entrati da Terros senza riposare). <strong>Registro completo dei riposi in §0-bis</strong>; il sogno del riposo qui nella Sala è il <strong>§7-bis</strong>.</p></div>
 <hr class="rule">
 <h2 class="sec">INDICE DEL MODULO</h2>
-<div class="tablewrap"><table><thead><tr><th>§</th><th>Sezione</th><th>Contenuto</th></tr></thead><tbody><tr><td>§0</td><td><strong>Quickstart DM</strong></td><td>dove siete, cosa fa questo beat, cosa stampare, come si chiude</td></tr><tr><td>§0-bis</td><td><strong>Quick-Reference</strong></td><td>CD delle interazioni, countdown, la Cronaca in una pagina; box PF1e</td></tr><tr><td>§1</td><td><strong>Highlight per PG</strong></td><td>cosa vive ciascuno tra gli affreschi (conoscenza asimmetrica)</td></tr><tr><td>§2</td><td><strong>Le due Zone</strong></td><td>Atlante: la Sala della Forgia (ottagono) + la Stanza della Corona</td></tr><tr><td>§3</td><td><strong>«La Forgia Ricorda»</strong></td><td>il sistema definitivo della Cronaca Vivente (regole + gancio)</td></tr><tr><td>§4</td><td><strong>Gli Otto Affreschi</strong></td><td>A1-A8: stato dopo la Terra, interazione, cosa incidono, Sviluppi</td></tr><tr><td>§5</td><td><strong>La Visione Condivisa</strong></td><td>il rito corale dei Quattro Eroi Predestinati (A2)</td></tr><tr><td>§6</td><td><strong>La Stanza della Corona</strong></td><td>il luogo della morte di Hella: le incisioni-specchio</td></tr><tr><td>§7</td><td><strong>Le Benedizioni di Moradin</strong></td><td>rinnovo all'Altare (sostituti delle pozioni)</td></tr><tr><td>§8</td><td><strong>Contingenze &amp; fallimento</strong></td><td>«Se i PG fanno X»; sprecare il countdown; toccare ciò che non va toccato</td></tr><tr><td>§9</td><td><strong>Echo Ledger</strong></td><td>conseguenze a lungo termine del beat</td></tr><tr><td>§10</td><td><strong>Avanzamento</strong></td><td>budget PX per scena + tesoro/benedizioni pregenerate</td></tr><tr><td>§11</td><td><strong>Ponte</strong> al master #3 + <strong>Handout &amp; Asset</strong></td></tr><tr><td>MAPPE</td><td><strong>S-1 Sala ottagonale · S-2 Stanza della Corona</strong></td><td>ASCII ultra-clear 1,5 m</td></tr></tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>§</th><th>Sezione</th><th>Contenuto</th></tr></thead><tbody><tr><td>§0</td><td><strong>Quickstart DM</strong></td><td>dove siete, cosa fa questo beat, cosa stampare, come si chiude</td></tr><tr><td>§0-bis</td><td><strong>Quick-Reference</strong></td><td>CD delle interazioni, countdown, la Cronaca in una pagina; box PF1e</td></tr><tr><td>§1</td><td><strong>Highlight per PG</strong></td><td>cosa vive ciascuno tra gli affreschi (conoscenza asimmetrica)</td></tr><tr><td>§2</td><td><strong>Le due Zone</strong></td><td>Atlante: la Sala della Forgia (ottagono) + la Stanza della Corona</td></tr><tr><td>§3</td><td><strong>«La Forgia Ricorda»</strong></td><td>il sistema definitivo della Cronaca Vivente (regole + gancio)</td></tr><tr><td>§4</td><td><strong>Gli Otto Affreschi</strong></td><td>A1-A8: stato dopo la Terra, interazione, cosa incidono, Sviluppi</td></tr><tr><td>§5</td><td><strong>La Visione Condivisa</strong></td><td>il rito corale dei Quattro Eroi Predestinati (A2)</td></tr><tr><td>§6</td><td><strong>La Stanza della Corona</strong></td><td>il luogo della morte di Hella: le incisioni-specchio</td></tr><tr><td>§7</td><td><strong>Le Benedizioni di Moradin</strong></td><td>rinnovo all'Altare (sostituti delle pozioni)</td></tr><tr><td>§8</td><td><strong>Contingenze &amp; fallimento</strong></td><td>«Se i PG fanno X»; sprecare il countdown; toccare ciò che non va toccato</td></tr><tr><td>§9</td><td><strong>Echo Ledger</strong></td><td>conseguenze a lungo termine del beat</td></tr><tr><td>§10</td><td><strong>Avanzamento</strong></td><td>budget PX per scena + tesoro/benedizioni pregenerate</td></tr><tr><td>§11</td><td><strong>Ponte</strong> al master #3 + <strong>Handout &amp; Asset</strong></td></tr><tr><td>App.</td><td><strong>Mappe</strong>: S-1 Sala ottagonale · S-2 Stanza della Corona</td><td>griglie 1,5 m, su pagina A4 a una colonna</td></tr></tbody></table></div>
 <hr class="rule">
 <h2 class="sec">§0 — QUICKSTART DM</h2>
 <p><strong>Dove siete.</strong> Attraversato a ritroso il portale della Terra, i tre Custodi (Thorik, Tordek, Artemis) rientrano nella <strong>Sala della Forgia Eterna</strong> — l'hub divino dell'arco: un ottagono di basalto e oro, l'Altare del <strong>Cuore di Moradin</strong> al centro, <strong>otto affreschi</strong> viventi alle pareti, il corpo di Hella vegliato da Therysol. La Corona porta ora <strong>due gemme</strong> (Topazio + Smeraldo).</p>
@@ -527,8 +527,8 @@
 <h3 class="sub">FILE-FONTE ASSORBITI DA QUESTO MASTER (→ <code>_ARCHIVIO/</code> a consolidamento chiuso)</h3>
 <p><code>PortaleForgia-P2-REVISED-Corretta-PARTE1.md</code> (8 affreschi, geografia Sala, Benedizioni) · parte "Sala/affreschi" di <code>PortaleForgia-P2-REVISED-Corretta-PARTE2.md</code> · <code>_ARCHIVIO/PortaleForgia-Interludio-Terra.md</code> (cambiamenti Sala + Stanza della Corona) · sistema «La Forgia Ricorda» promosso qui dal master #1 §10. <em>(La resurrezione — Altare, Cuore di Moradin, rito — è il master #3, non qui.)</em></p>
 <hr class="rule">
-<h2 class="sec">MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto)</h2>
-<div class="desc"><p class="readaloud">📗 <strong>Versione a piena scheda tattica</strong> (posizioni PG/PNG/villain, terreno &amp; altitudini, tattiche di villain/mostri, evoluzione) nell'<strong>Atlante Mappe Definitivo</strong>: <code>Mappe/ARC07-MAPPE-DEFINITIVO.md</code>. Le griglie qui sotto sono identiche; là hanno gli add-on DM. <strong>I booklet includono l'Atlante.</strong></p></div>
+<h2 class="sec">APPENDICE — MAPPE (scala 1,5 m/quadretto)</h2>
+<div class="desc"><p class="readaloud">📗 <strong>Versione a piena scheda tattica</strong> (posizioni PG/PNG/villain, terreno &amp; altitudini, tattiche di villain/mostri, evoluzione) nell'<strong>Atlante Mappe Definitivo</strong>: <code>Mappe/ARC07-MAPPE-DEFINITIVO.md</code>. Le griglie qui sotto sono identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna: larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.</p></div>
 <h3 class="sub">MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)</h3>
 <pre class="mono">════════════════════════════════════════════════════════════════════════
  SALA DELLA FORGIA ETERNA — ottagono Ø 40 m (26 quadretti) · soffitto 15 m
@@ -571,8 +571,8 @@ A8 60% · A7 ⏳~3g18h. La Sala HA REGISTRATO la vittoria: mostralo.
 ════════════════════════════════════════════════════════════════════════
 @north S
 COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 muro→PARETE della CRONACA · 🌀 portale drow SIGILLATO (dietro)
-12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO (E-F12, VUOTO: la Corona è di Thorik) · 🖼️ Dipinti Invisibili
+13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
+12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
 11     🔲 ⬛ 🔲 ⬛ ✝️ ⬛ ⬛ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
 10     🔲 ⬛ 🔲 ⬛ ⬛ ⬛ ⬛ 🔲 ⬛ ⬛   B10 = ex nascondiglio Yochlol 2
 09     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   H09 = ex nascondiglio Yochlol 1
@@ -582,16 +582,18 @@ COL →   A  B  C  D  E  F  G  H  I  J
 05     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
 04     ⬛ ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ ⬛ ⬛
 03     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO (D-F02, sud · collegamento P1 ↔ Sala della Forgia)
+02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO sud D-F02, verso la Sala della Forgia
 01     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   SUD
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ⬛ pavimento (ora pulito) · 🔲 colonne parallele (copertura +4 CA,
 spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
-restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie (terreno difficile) · 📜 muro dietro il
-trono = ora PARETE della CRONACA (incisioni-specchio, DEF-2 §6) · 🌀 portale
-drow SIGILLATO (dietro il muro; inerte dalla caduta di Urialle) · 👑 trono
-vuoto · 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di
-Belkram (ARC-06) · 🚪 ingresso sud.</pre>
+restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
+deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
+(terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
+(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (dietro il muro;
+inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
+🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
+(ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.</pre>
 <ul><li><strong>Tipo / scala</strong>: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto. Ora <strong>santuario sicuro</strong> (Consacrare) — il <em>desecrate</em> di ARC-06 è dissolto.</li><li><strong>Terreno &amp; luce</strong>: pavimento pulito; macerie 🪨 (B07/H07/I11) = terreno difficile; colonne 🔲 e statue 🗿 = copertura +4. La luce viola-verde delle torce drow è <strong>sostituita</strong> dalla luce calda del Portale: illuminazione normale (niente miss chance).</li><li><strong>Posizioni notevoli (INVARIATE da ARC-06)</strong>: trono <strong>E-F12</strong>; muro dietro il trono <strong>D-F13</strong> (durezza 8, 360 pf/3 m, Spezzare CD 35) → ora vi si incide la <strong>Cronaca</strong> («La Seconda Gemma», la sagoma-druida che si riempie, DEF-2 §6); <strong>portale drow E13</strong> dietro il muro, <strong>sigillato e inerte</strong>; Dipinti Invisibili <strong>J11-J12</strong>; ingresso <strong>D-F02</strong> (sud). Reliquia nascosta sotto il trono (Osservare CD 22, DEF-2 §10).</li><li><strong>Memoria del luogo (regia)</strong>: qui sedeva Belkram (✝️ E11) col worg, qui cadde <strong>Hella</strong> (ARC-06). I muschi e le ragnatele drow <strong>seccano</strong> sulle macerie e nelle alcove (la purificazione avanza a vista, sessione dopo sessione). Chi posa la mano sull'incisione della druida e ne dice il nome sente la <strong>pietra CALDA</strong> (DEF-2 §6).</li><li><strong>Evoluzione</strong>: ogni beat dell'arco aggiunge una riga alla Parete della Cronaca (specchio della Sala S-1). A resurrezione avvenuta, la sagoma-druida è <strong>piena</strong>.</li><li><strong>Riferimento</strong>: geometria = <code>06_.../Tactics_and_maps.md</code>; stato = DEF-2 §6/§10.</li></ul></div>
     <div class="pagefoot"><span>La Resurrezione e i Mille Anni · III · Master — Il Ritorno e gli Affreschi (DEF-2)</span>
     <span class="n">4</span></div>
@@ -2516,19 +2518,19 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
 02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
 03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰   camminamenti a +4,5 m, arcieri nani
+04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰   camminamenti +4,5 m, arcieri
 05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
 07    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta d&#x27;atterraggio del drago, 4,5 m
+09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
 10    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i quattro PG e Re Thorek I, vedi le callout
+16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
 17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
 ════════════════════════════════════════════════════════════════════════

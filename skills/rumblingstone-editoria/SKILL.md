@@ -53,6 +53,8 @@ Non si ridiscutono a ogni volume. Se una serve diversa, si cambia **il tema**.
 |---|---|---|
 | **Tabella** | ≥ 4 colonne → scavalca le due colonne | in una colonna da 8 cm si spezzano perfino le parole del titolo |
 | **Immagine** | orizzontale (larghezza ≥ 1.25 × altezza) → piena larghezza; verticale → dentro la colonna | un'illustrazione ridotta a francobollo non è un'illustrazione |
+| **Mappa** | entra in colonna (≤ 48 celle) o va su una **pagina A4 a una colonna**, col suo titolo. Mai a capo, mai rimpicciolita dentro la colonna. Vale per la griglia e per la mappa disegnata verticale | una mappa che va a capo è una fila di simboli; in una colonna da 8 cm una pianta non si legge |
+| **Schema o comando largo** | non è una mappa: scende di corpo in colonna fino a 5,5 pt, oltre le 78 celle scavalca le due colonne | una pagina A4 per una riga di `bash` lascia mezza colonna vuota |
 | **Riquadro** | `#leggi` = si legge ad alta voce · `#nota` = regia del DM · `#riquadro` = regola opzionale | tre casi diversi che a occhio nudo devono restare diversi |
 | **Titolo** | `sticky`: non resta in fondo alla colonna senza il suo testo | è il difetto che si nota per primo sfogliando |
 | **Apertura di capitolo** | fregio + titolo a piena larghezza, e un **versale** sul primo paragrafo | dice dove sei prima che tu legga il titolo |
@@ -91,9 +93,9 @@ manifest.json ──┬─► build_booklet_html.py ──► .html + .hb.md
 
 ---
 
-## §4 · I tre modi in cui questa catena si è rotta davvero
+## §4 · I modi in cui questa catena si è rotta davvero
 
-Sono qui perché sono i tre da cercare per primi quando «il PDF viene male».
+Sono qui perché sono i primi da cercare quando «il PDF viene male».
 
 1. **La sintassi che cade in un'altra regola.** La sintassi dell'immagine finiva nella regola
    dei link e usciva stampato come `!alt`: tredici righe nel booklet del Palio.
@@ -110,6 +112,29 @@ Sono qui perché sono i tre da cercare per primi quando «il PDF viene male».
    → qualunque cosa aggiungi al tema, aggiungi **il caso** a
    `scripts/tests/test_booklets.py`, e ricorda che `validate_booklets --stampa`
    è ciò che rende vera la frase «funziona».
+4. **La mappa che va a capo.** Nel volume della serata del 2026-09-25 le due
+   mappe della Sala di `DEF-2`, larghe 72 celle, stavano nel corpo a due
+   colonne. Una colonna ne tiene 48: sono uscite a brandelli, e nessun gate se
+   n'è accorto perché il PDF compilava. *Sintomo*: una mappa ASCII con le righe
+   spezzate in due, o una legenda che scende a pagina dopo.
+   → la decisione non è più a mano. `md_to_typ` misura ogni blocco
+   preformattato (`larghezza_visiva`, un emoji vale 2,5 celle) e porta su una
+   pagina A4 a una colonna, col suo titolo, ogni mappa più larga di
+   `CELLE_COLONNA`; il tema (`#griglia`) non la manda mai a capo. Nei master
+   la forma buona resta quella esplicita: le mappe in un'appendice fra
+   `<!-- pagina: una-colonna -->` e `<!-- /pagina -->`, come `DEF-2`, `DEF-3`
+   e `DEF-4`. Una riga oltre `CELLE_PAGINA` (110) scende sotto i 9 pt anche su
+   A4, e l'esportatore lo dice: si accorcia l'annotazione, non si stringe la
+   mappa. I casi sono in `TestMappeCheNonEntranoInColonna`.
+
+### Il controllo a vista, prima di consegnare
+
+Un PDF che compila non è un PDF giusto: il difetto 4 compilava. Prima di
+mandare un volume, si guardano **le pagine con le mappe**. Le trova Typst
+stesso: una sonda `query(raw.where(block: true))` e `query(image)` in coda a
+una copia del `.typ` (dentro il repo, per via di `--root`) dà il numero di
+pagina di ogni griglia e di ogni immagine, e
+`typst compile --pages N,M --ppi 70` le rende in PNG da guardare.
 
 ---
 
