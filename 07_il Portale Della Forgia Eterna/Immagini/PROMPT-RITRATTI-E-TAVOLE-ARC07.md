@@ -284,14 +284,14 @@ che non deve mancare» di ogni scheda.
 | id | Media Canva | Prima lettura |
 |---|---|---|
 | `ritratto-balvar-fuocospento` | [MAHWLw8QnOo](https://www.canva.com/M/MAHWLw8QnOo) | **nel repo** come `ritratti/balvar-fuocospento.jpg`, verificato a 533 × 800: la punta tocca l'ardesia. È la copia ridotta arrivata in chat |
-| `ritratto-zogtar-deatheye` | [MAHWL_YsfgQ](https://www.canva.com/M/MAHWL_YsfgQ) | seconda passata: la pietra nera nell'orbita destra si vede, volto illuminato da sinistra |
-| `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | barba bianca in trecce, ascia chiara in pugno, mappa sul tavolo; da verificare la corona senza gemme |
-| `ritratto-thorgrim-barbadiferro` | [MAHWLyX0Wa0](https://www.canva.com/M/MAHWLyX0Wa0) | seconda passata: guarda in alto la luce, mani vuote a palmi in su, ascia accanto; il callo va verificato a piena risoluzione |
-| `ritratto-durin-rocciadura` | [MAHWLxfub5Q](https://www.canva.com/M/MAHWLxfub5Q) | barba castana, piastre ammaccate, ascia stretta, torce dietro; tiene |
+| `ritratto-zogtar-deatheye` | [MAHWL_YsfgQ](https://www.canva.com/M/MAHWL_YsfgQ) | seconda passata, **nel repo** come `ritratti/zogtar-deatheye.jpg`, **specchiata**: a piena vista la pietra era nell'occhio sinistro, e `DEF-4` la vuole nel destro |
+| `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | **nel repo** come `ritratti/re-thorek-i.jpg`: corona di ferro senza gemme, Frostcleaver in pugno, mappa sul tavolo |
+| `ritratto-thorgrim-barbadiferro` | [MAHWLyX0Wa0](https://www.canva.com/M/MAHWLyX0Wa0) | seconda passata, **scelta**: la prima (`MAHWL-NDQRs`), arrivata dal DM in chat, tiene la reliquia in mano e nasconde il callo che `DEF-4` chiede. File non ancora qui |
+| `ritratto-durin-rocciadura` | [MAHWLxfub5Q](https://www.canva.com/M/MAHWLxfub5Q) | **nel repo** come `ritratti/durin-rocciadura.jpg`: mani strette sull'ascia, scudo blu, torce dietro |
 | `ritratto-zeth-mastro-costruttore` | [MAHWLzJWJXI](https://www.canva.com/M/MAHWLzJWJXI) | galleria con torcia, tunica ocra, mano sulla parete incisa; tiene |
 | `ritratto-vatore` | [MAHWL25-bj4](https://www.canva.com/M/MAHWL25-bj4) | cappuccio, fagotto al petto, tende di notte; tiene |
 | `tavola-portale-del-tempo` | [MAHWLyz44U8](https://www.canva.com/M/MAHWLyz44U8) | affresco ottagonale con drago, nano di spalle; **la doppia esposizione delle due fortezze non si legge** in miniatura |
-| `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | figura alta di radici, tre figure inginocchiate sullo sfondo; tiene |
+| `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | **nel repo** come `tavola-custode-delle-radici.jpg`, in `DEF-3` §6 |
 | `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | reliquiario a petali aperti, cuore di rubino nella luce; tiene |
 | `tavola-risveglio-di-hella` | [MAHWL21y19U](https://www.canva.com/M/MAHWL21y19U) | seconda passata: Durik ha muso lungo e corpo magro; da verificare che Hella abbia le proporzioni di una nana |
 | `tavola-durik-e-hella` | [MAHWL6svafI](https://www.canva.com/M/MAHWL6svafI) | seconda passata: Durik snello a muso lungo; Hella piccola, da verificare che non si legga elfa |

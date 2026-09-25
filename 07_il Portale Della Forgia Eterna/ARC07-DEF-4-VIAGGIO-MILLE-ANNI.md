@@ -373,7 +373,9 @@ bianche, nessun cavaliere sul drago.)*
 | **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
 | **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
 | **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
-| **Ritratto** | da generare: `id=ritratto-durin-rocciadura` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Durin Rocciadura, la pattuglia](Immagini/ritratti/durin-rocciadura.jpg)
 
 **La pattuglia di Durin (riconoscimento — 3 vie).** Nel bosco a est delle mura,
 una pattuglia nanica (6 veterani) li ferma.
@@ -490,7 +492,9 @@ la gente smette di parlare.
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
 | **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I** (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
-| **Ritratto** | da generare: `id=ritratto-re-thorek-i` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Re Thorek I, il re di una fortezza giovane](Immagini/ritratti/re-thorek-i.jpg)
 
 ⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
 
@@ -503,7 +507,7 @@ la gente smette di parlare.
 | **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
 | **Non combatte** | è una non-creatura: nessuno statblocco esiste, e non va inventato |
 | **Eco** | l'affresco A3 (*«Portala bene, fratello. Ora è tua.»*) e la Cerimonia delle 100 Asce in ARC-08 |
-| **Ritratto** | da generare: `id=ritratto-thorgrim-barbadiferro` |
+| **Ritratto** | in arrivo: la versione scelta è la seconda generata con Canva, a mani vuote col callo in vista. La prima, con la reliquia in mano, contraddiceva questa scheda |
 
 **Il re.** Re Thorek I (Guerriero 16, 182 anni, Frostcleaver in pugno) vuole
 vedere da vicino la Corona che suo nonno perse contro Skullcrusher cinquant'anni
@@ -943,7 +947,9 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
-| **Ritratto** | da generare: `id=ritratto-zogtar-deatheye` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Zog'tar Deatheye, il generale](Immagini/ritratti/zogtar-deatheye.jpg)
 
 **Il round di sorpresa.** I PG invisibili hanno un **round di sorpresa pieno** se
 nessuno ha parlato ad alta voce o lanciato incantesimi che li rivelano. Parlare

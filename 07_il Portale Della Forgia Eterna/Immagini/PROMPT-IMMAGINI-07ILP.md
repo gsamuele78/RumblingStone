@@ -698,7 +698,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §6 — IL DEBITO DELLA RADICE (il filo grigio del piano spirituale) [CANONE — DM 2026-07-23; il ramo (A/B/C) si gioca]
 - **Etichetta regia**: GoT lead — la creditrice paziente).
 - **Destinatario**: `dm` (la Custode non si mostra prima dello Step 5) · **Formato**: `3:4 handout`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-custode-delle-radici.jpg` e in `DEF-3` §6, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Nel momento in cui lo spirito di Hella varca la soglia tra i mondi, la luce dorata dell'Altare vacilla — e qualcos'altro è nella Sala con voi. Non un mostro: una PRESENZA. Ha la forma di una donna di radici e pietra, alta come Therysol, gli occhi due nodi di legno antico. Non è ostile. Non è gentile. È come la montagna: c'è, e aspetta. Parla, e la sua voce è il rumore di una faglia che si assesta: LA CUSTODE DELLE RADICI: «Una radice strappata lascia un vuoto. Il vuoto va colmato — è legge, non capriccio. Non oggi. Non con lei: il Forgiatore la protegge, e io non discuto col Forgiatore. Ma il 
@@ -1101,7 +1101,7 @@ human hands, faceted gemstone cut like a jewel, cartoon, neon glow, bokeh hearts
 ### R1 · Durin Rocciadura  `[ritratto-durin-rocciadura]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/durin-rocciadura.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 DURIN — nano adulto, veterano · largo, non alto
@@ -1115,7 +1115,7 @@ SEGNO      l'ascia doppia, tenuta troppo stretta
 ### R2 · Re Thorek I  `[ritratto-re-thorek-i]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/re-thorek-i.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 RE THOREK I — nano di 182 anni · massiccio, eretto
@@ -1129,7 +1129,7 @@ SEGNO      l'ascia Frostcleaver, sempre in pugno
 ### R3 · Thorgrim Barbadiferro  `[ritratto-thorgrim-barbadiferro]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/thorgrim-barbadiferro.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: 🟡 generato con Canva AI; scelta la **seconda versione** (`MAHWLyX0Wa0`, mani vuote e callo visibile, come chiede `DEF-4`). La prima, con la reliquia in mano, è scartata. Il file della seconda non è ancora nel repo
 
 ```
 THORGRIM — nano vecchio · seduto, non si alza
@@ -1171,7 +1171,7 @@ SEGNO      la lastra d'ardesia sulle ginocchia e la punta di ferro in mano
 ### R6 · Zog'tar Deatheye  `[ritratto-zogtar-deatheye]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/zogtar-deatheye.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione. **Specchiato**: l'originale aveva la pietra nell'occhio sinistro
 
 ```
 ZOG'TAR — mezzo-ogre · grande quanto una porta di stalla

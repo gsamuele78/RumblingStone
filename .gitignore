@@ -369,6 +369,9 @@ scripts/comfyui-local/ComfyUI/
 # non si rifanno, quindi il file È il sorgente e va versionato (ADR-0019 §2-bis).
 # Il percorso è quello dell'atlante, PROMPT-IMMAGINI-07ILP.md, schede R1-R7.
 !07_il Portale Della Forgia Eterna/Immagini/ritratti/*.jpg
+# Le tavole stanno accanto al file dei prompt, col nome dell'id (§3 di
+# PROMPT-RITRATTI-E-TAVOLE-ARC07.md), per la stessa ragione.
+!07_il Portale Della Forgia Eterna/Immagini/tavola-*.jpg
 
 # Texture per il render 3D delle mappe: CC0 riscaricabili, non master (ADR-0003).
 # La convenzione delle cartelle sta in scripts/blender/texture/README.md.

@@ -771,6 +771,9 @@ momento entra la Custode: §6.
 | **Sa** | il Voto della Radice, parola per parola. Che il Forgiatore protegge Hella, e che con lui non si discute |
 | **Non sa** | chi sono gli altri tre, e non le interessa |
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
+| **Tavola** | qui sotto. Solo per il DM fino allo Step 5: mostrata prima, toglie la sorpresa della presenza |
+
+![La Custode delle Radici al margine del cerchio](Immagini/tavola-custode-delle-radici.jpg)
 
 **Chi/cosa è.** La Custode delle Radici — un **psicopompo neutrale** del Sogno
 della Terra (CANONE DM 2026-07-23: **si aggancia al Cerchio Sacro di ARC-09** —
@@ -1116,6 +1119,7 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 | Momento | Immagine |
 |---|---|
 | Il Cuore di Moradin, dopo il §3 | `Immagini/web/ilCuoreDiMoradin.jpg` |
+| La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
 | Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
 | Il reliquiario che si apre, fedele al testo | da generare: `id=tavola-cuore-di-moradin` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
