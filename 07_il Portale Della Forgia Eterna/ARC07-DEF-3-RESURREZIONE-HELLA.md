@@ -828,6 +828,8 @@ foglie giovani *(com'è nei ritratti: decisione DM 2026-09-24)*, dita un po' pi�
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
 
+![Il risveglio di Hella](Immagini/tavola-risveglio-di-hella.jpg)
+
 > **Read-aloud — le prime parole (voce rauca, non usata da settimane).** *«Io…
 > dove… respirare è… difficile.»* *Gli occhi ambra cercano, si fermano su
 > Tordek.* *«Tordek? Sei… reale? O sto ancora sognando? Ero sotto terra. Buio.
@@ -1120,7 +1122,7 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 |---|---|
 | Il Cuore di Moradin, dopo il §3 | `Immagini/tavola-cuore-di-moradin.jpg`: il reliquiario aperto, fedele al box. `ilCuoreDiMoradin` lo mostrava appoggiato sopra l'Altare, e resta per la copertina e per `DEF-2` e `DEF-5` |
 | La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
-| Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
+| Il risveglio di Hella | `Immagini/tavola-risveglio-di-hella.jpg`, in §7 dopo il box. `Hella_elementale` resta per l'Avatar della Radice |
 | Durik e Hella, dopo il risveglio | `Immagini/tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
 

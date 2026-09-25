@@ -293,9 +293,9 @@ che non deve mancare» di ogni scheda.
 | `tavola-portale-del-tempo` | [MAHWLyz44U8](https://www.canva.com/M/MAHWLyz44U8) | **nel repo** come `tavola-portale-del-tempo.jpg`, in `DEF-4` Scena 1: le due fortezze e i due draghi si leggono, l'ovale d'oro al centro, la Corona con due gemme accese e un incasso vuoto |
 | `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | **nel repo** come `tavola-custode-delle-radici.jpg`, in `DEF-3` §6 |
 | `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | **nel repo** come `tavola-cuore-di-moradin.jpg` e **scelta al posto di `ilCuoreDiMoradin`** per il §3: il Cuore sta dentro il reliquiario aperto, come dice il box |
-| `tavola-risveglio-di-hella` | [MAHWL21y19U](https://www.canva.com/M/MAHWL21y19U) | seconda passata: Durik ha muso lungo e corpo magro; da verificare che Hella abbia le proporzioni di una nana |
+| `tavola-risveglio-di-hella` | [MAHWL21y19U](https://www.canva.com/M/MAHWL21y19U) | **nel repo** come `tavola-risveglio-di-hella.jpg`, in `DEF-3` §7 dopo il box del risveglio |
 | `tavola-durik-e-hella` | [MAHWL6svafI](https://www.canva.com/M/MAHWL6svafI) | **nel repo** come `tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK`. Scelta fra le due versioni: qui Durik è il levriero di `durik2`, nella prima è sdraiato e massiccio |
-| `tavola-hammerfist-giovane` | [MAHWLwYjXcE](https://www.canva.com/M/MAHWLwYjXcE) | terza passata: fortezza medievale con impalcature al tramonto, tende sulla piana; i fuochi sono piccoli |
+| `tavola-hammerfist-giovane` | [MAHWLwYjXcE](https://www.canva.com/M/MAHWLwYjXcE) | **nel repo** come `tavola-hammerfist-giovane.jpg`, in `DEF-4` Scena 1. La prima versione (`MAHWL9hrJvc`) è nel repo per la Scena 3: vedi sotto |
 | `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | **nel repo** come `tavola-skullcrusher-nel-cortile.webp`, in `DEF-4`. **Il cane di Hella è sbagliato**: una bestia massiccia di pietra, non il levriero. Tenuta perché è l'unica e si vede di spalle; candidata a una seconda passata |
 
 Il **portale** va ancora verificato a piena risoluzione. Se il DM scarta
@@ -315,9 +315,24 @@ per qualunque modello e non solo per Canva:
 | `ritratto-thorgrim-barbadiferro` | teneva la reliquia in mano | mani vuote a palmi in su, lo sguardo verso una luce fuori campo, «he holds nothing» |
 | `tavola-risveglio-di-hella` | Durik sembrava un lupo | il levriero descritto per forma (muso lungo, torace stretto, vita sottile), «not a wolf, no fur»; Hella «short, stocky» |
 | `tavola-durik-e-hella` | come sopra, e Hella elfa | stesse due correzioni |
-| `tavola-hammerfist-giovane` | niente fuochi sulla piana | punto di vista dall'alto sopra la porta, il campo di tende a destra nella valle. La seconda prova è uscita come **una città moderna al tramonto** ed è scartata anch'essa; la terza aggiunge «medieval», le merlature e «no modern buildings, no city lights» |
+| `tavola-hammerfist-giovane` | niente fuochi sulla piana | punto di vista dall'alto sopra la porta, il campo di tende a destra nella valle. La seconda prova, sulla miniatura, sembrava una città moderna; la terza aggiunge «medieval», le merlature e «no modern buildings, no city lights» |
 
-Il costo della fortezza è istruttivo: senza un campo per i negativi, «pietra
-bianca a spigoli vivi vista dall'alto al tramonto» basta a portare il modello in
-una città di oggi. Con Canva i negativi vanno scritti come frasi esplicite, e
-conviene nominare l'epoca.
+⚠️ **Correzione del 2026-09-25.** Qui c'era scritto che la seconda prova della
+fortezza era «una città moderna al tramonto», e che il motivo era la mancanza
+dei negativi. **Era sbagliato.** Il giudizio era fatto sulla miniatura di 200 ×
+113 pixel; a piena risoluzione (`MAHWL7ajay0`, arrivata dal DM) è una fortezza
+medievale fedele al prompt: parapetto bianco, targa, statua, impalcatura, fuochi
+sulla piana. Resta scartata, ma per un'altra ragione: è un render 3D
+fotografico, e il set è dipinto a olio. La lezione vera è quella del gate di
+rifiuto: **un'immagine si scarta a piena risoluzione, mai sulla miniatura.**
+
+### Terza consegna del DM: le tre fortezze e i due risvegli
+
+Il DM ha mandato a piena vista tutte e tre le fortezze e i due risvegli.
+
+| id | Scelta | Perché |
+|---|---|---|
+| `tavola-risveglio-di-hella` | la **seconda** (`MAHWL21y19U`) | il levriero, gli occhi d'ambra, il rubino sullo sterno, le radici d'oro dalle mani: tutto il box di `DEF-3` §7. La prima ha di nuovo il lupo |
+| `tavola-hammerfist-giovane` | la **terza** (`MAHWLwYjXcE`), per la Scena 1 | la fortezza vista da lontano e i fuochi dell'orda sulla piana: è il box «la fortezza, da lontano» |
+| `tavola-hammerfist-giovane-porta` | la **prima** (`MAHWL9hrJvc`), ripescata per la Scena 3 | scartata perché mancavano i fuochi, è invece esattamente il box «la porta e la targa»: pietra bianca appena tagliata, una sola statua di re, la targa di bronzo e i trucioli sul selciato |
+| — | la seconda (`MAHWL7ajay0`) resta fuori | render 3D fotografico, fuori dall'ancora a olio del set |

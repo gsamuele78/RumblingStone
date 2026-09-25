@@ -20,7 +20,7 @@ ritratto-zogtar-deatheye · seed — · reroll 0 · Canva MAHWL9gzPGg: la pietra
 ritratto-thorgrim-barbadiferro · seed — · reroll 0 · Canva MAHWL-NDQRs: tiene la reliquia in mano invece di guardarla, callo non visibile
 tavola-risveglio-di-hella · seed — · reroll 0 · Canva MAHWL0hctuk: Durik sembra un lupo, non un levriero
 tavola-durik-e-hella · seed — · reroll 0 · Canva MAHWLxqQ-Ns: Durik lupesco, Hella si legge elfa piu' che nana
-tavola-hammerfist-giovane · seed — · reroll 0 · Canva MAHWL9hrJvc: i fuochi del campo sulla piana non si vedono
-tavola-hammerfist-giovane · seed — · reroll 1 · Canva MAHWL7ajay0: esce una citta' moderna al tramonto, non una fortezza medievale
+tavola-hammerfist-giovane · seed — · reroll 0 · Canva MAHWL9hrJvc: i fuochi del campo sulla piana non si vedono. RIPESCATA il 2026-09-25 per la Scena 3 (tavola-hammerfist-giovane-porta.jpg): è il box della porta e della targa
+tavola-hammerfist-giovane · seed — · reroll 1 · Canva MAHWL7ajay0: render 3D fotografico, fuori dall'ancora a olio del set. (Il motivo scritto prima, «citta' moderna», era un errore di lettura della miniatura: a piena risoluzione e' una fortezza medievale)
 ritratto-zogtar-deatheye · seed — · reroll 1 · Canva MAHWL_YsfgQ: sostituita dalla terza versione del DM (occhio destro senza specchiare, 1033×1523)
 tavola-durik-e-hella · seed — · reroll 1 · Canva MAHWLxqQ-Ns a piena vista (DM, 2026-09-25): Durik sdraiato e massiccio; vince la seconda, levriero in piedi come durik2

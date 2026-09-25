@@ -344,6 +344,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 Quando la testa torna a posto, guardano dove sono.
 
+![La fortezza giovane, da lontano](Immagini/tavola-hammerfist-giovane.jpg)
+
 > **Read-aloud (LotR lead) — la fortezza, da lontano.** *A ovest, fra i
 > tronchi, si vedono le torri di una fortezza che conoscete, più basse di come
 > le ricordate. Più in là, verso sud, i fuochi dell'orda cominciano ad
@@ -416,6 +418,8 @@ tavolo deve sapere prima del consiglio:
 
 Durin li porta alla porta principale. Le guardie vedono la Corona e non
 toccano nessuno. Prima di entrare c'è la targa.
+
+![La porta e la targa di bronzo](Immagini/tavola-hammerfist-giovane-porta.jpg)
 
 > **Read-aloud (LotR lead) — deep time al contrario.** *Conoscete Hammerfist:
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
@@ -1589,7 +1593,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 | Momento | Immagine |
 |---|---|
 | Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
-| La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
+| La fortezza giovane, all'arrivo | `Immagini/tavola-hammerfist-giovane.jpg`, Scena 1; e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa, Scena 3 |
 | Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
 | I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`). Manca Thorgrim |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |

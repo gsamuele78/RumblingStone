@@ -711,7 +711,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno).
 - **Destinatario**: `pg` **dopo** la scena (è il ritorno: mostrarla prima lo brucia) · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, **seconda versione** (`MAHWL21y19U`); nel repo come `Immagini/tavola-risveglio-di-hella.jpg` (1600 × 899), in `DEF-3` §7
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Silenzio. Cinque secondi. Dieci. Il Cuore di Moradin, sopra il petto di Hella, rallenta: novanta battiti… sessanta… si ferma. E poi — lei INSPIRA. Netto. Improvviso. Profondo, come chi riemerge dall'acqua un istante prima di annegare. Il petto si alza. Ricade. RESPIRA. E gli occhi si aprono — non più marroni: ambra dorata. La pelle ha un sottotono di muschio pallido; tra i capelli rossi corre una venatura di corteccia sottile; e attorno a lei l'aria sa di terra bagnata e di linfa. È Hella. È cambiata. È VIVA.
@@ -777,7 +777,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — ZONA 1 — La Fortezza Giovane (Hammerfist appena eretta)
 - **Etichetta regia**: LotR lead — deep time al contrario).
 - **Destinatario**: `pg` all'arrivo · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, in due immagini: `Immagini/tavola-hammerfist-giovane.jpg` per l'arrivo (Scena 1, i fuochi dell'orda) e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa (Scena 3)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Conoscete Hammerfist: le sue sale annerite dai secoli, le statue consumate, i nomi dei re incisi e riincisi. Ma QUESTA Hammerfist non ha ancora storia. Le mura sono bianche di pietra appena tagliata, gli spigoli ancora vivi. Le statue dei re sono una sola. E sulla porta, la targa di bronzo con la profezia dei Quattro Eroi è stata incisa OGGI, l'inchiostro del cesello ancora fresco. Camminate dentro la vostra stessa leggenda mentre viene scritta. È vertiginoso: ogni pietra che toccate, tra mille anni, la toccherete di nuovo — vecchia di un millennio.

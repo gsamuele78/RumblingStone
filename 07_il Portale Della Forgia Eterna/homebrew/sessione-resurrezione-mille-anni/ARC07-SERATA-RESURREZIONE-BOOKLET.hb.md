@@ -2617,6 +2617,8 @@ foglie giovani *(com'è nei ritratti: decisione DM 2026-09-24)*, dita un po' pi�
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
 
+![Il risveglio di Hella](../../Immagini/tavola-risveglio-di-hella.jpg)
+
 > **Read-aloud — le prime parole (voce rauca, non usata da settimane).** *«Io…
 > dove… respirare è… difficile.»* *Gli occhi ambra cercano, si fermano su
 > Tordek.* *«Tordek? Sei… reale? O sto ancora sognando? Ero sotto terra. Buio.
@@ -2909,7 +2911,7 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 |---|---|
 | Il Cuore di Moradin, dopo il §3 | `Immagini/tavola-cuore-di-moradin.jpg`: il reliquiario aperto, fedele al box. `ilCuoreDiMoradin` lo mostrava appoggiato sopra l'Altare, e resta per la copertina e per `DEF-2` e `DEF-5` |
 | La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
-| Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
+| Il risveglio di Hella | `Immagini/tavola-risveglio-di-hella.jpg`, in §7 dopo il box. `Hella_elementale` resta per l'Avatar della Radice |
 | Durik e Hella, dopo il risveglio | `Immagini/tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
 
@@ -3416,6 +3418,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 Quando la testa torna a posto, guardano dove sono.
 
+![La fortezza giovane, da lontano](../../Immagini/tavola-hammerfist-giovane.jpg)
+
 > **Read-aloud (LotR lead) — la fortezza, da lontano.** *A ovest, fra i
 > tronchi, si vedono le torri di una fortezza che conoscete, più basse di come
 > le ricordate. Più in là, verso sud, i fuochi dell'orda cominciano ad
@@ -3488,6 +3492,8 @@ tavolo deve sapere prima del consiglio:
 
 Durin li porta alla porta principale. Le guardie vedono la Corona e non
 toccano nessuno. Prima di entrare c'è la targa.
+
+![La porta e la targa di bronzo](../../Immagini/tavola-hammerfist-giovane-porta.jpg)
 
 > **Read-aloud (LotR lead) — deep time al contrario.** *Conoscete Hammerfist:
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
@@ -4661,7 +4667,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 | Momento | Immagine |
 |---|---|
 | Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
-| La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
+| La fortezza giovane, all'arrivo | `Immagini/tavola-hammerfist-giovane.jpg`, Scena 1; e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa, Scena 3 |
 | Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
 | I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`). Manca Thorgrim |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
