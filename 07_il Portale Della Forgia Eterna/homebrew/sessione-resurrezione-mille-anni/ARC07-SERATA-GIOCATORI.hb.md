@@ -467,7 +467,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
 
-![Durik riforgiato, occhi di topazio](../../../PG/Immagini/web/durik2.jpg)
+![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
 
 > *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
 > e la pietra se l'è tenuto.*

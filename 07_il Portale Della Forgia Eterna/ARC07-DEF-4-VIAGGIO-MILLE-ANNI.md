@@ -304,6 +304,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 ### SCENA 1 — Il portale e il bosco al tramonto
 
+![Il portale del Tempo](Immagini/tavola-portale-del-tempo.jpg)
+
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante lunghissimo i
 > colori si rovesciano, e vi passano davanti vite intere di nani: nascono,
 > battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna
@@ -951,7 +953,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
 
-![Zog'tar Deatheye, il generale](Immagini/ritratti/zogtar-deatheye.jpg)
+![Zog'tar Deatheye, il generale](Immagini/web/zogtar-deatheye.jpg)
 
 **Il round di sorpresa.** I PG invisibili hanno un **round di sorpresa pieno** se
 nessuno ha parlato ad alta voce o lanciato incantesimi che li rivelano. Parlare
@@ -1586,10 +1588,10 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione (verificato il 2026-09-24). Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
+| Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
 | La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
-| Skullcrusher nel cortile | da generare: scheda **41** |
-| I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
+| Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
+| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`). Manca Thorgrim |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
 
 ### Musica

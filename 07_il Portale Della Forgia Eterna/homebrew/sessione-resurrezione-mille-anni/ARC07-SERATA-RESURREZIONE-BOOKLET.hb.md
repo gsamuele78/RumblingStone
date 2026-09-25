@@ -559,7 +559,7 @@ blocca la serata; tutte vanno sapute prima di trovarsele davanti.
 | 3 | **Periapto di Saggezza +2 e Collana +4**: `DEF-3` §11 C scrive «sinergia +4+2 SAG». In 3.5 due bonus di **potenziamento** alla stessa caratteristica **non si sommano** (SRD, *Combining Magical Effects*) | vale solo il **+4**. Il Periapto resta un oggetto da rivendere o da dare a un altro. **Corretto nel master il 2026-09-25** |
 | 4 | **L'equipaggiamento di Hella**: `DEF-3` Appendice A dice cuoio borchiato +2, scudo di legno +1, scimitarra +1; §11 C dice armatura di cuoio +2, falcetto o scudo leggero +1 | vince **la scheda della giocatrice**, che è la fonte più vecchia e l'unica giocata |
 | 5 | **I tre semi di treant a −1000** (`DEF-4`, la notte nella fortezza), anteriori al rito | **corretto nel master**: due Treant di Adamantio dalla Collana (IV.3) |
-| 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp`, che `DEF-4` §9 indica per «il portale del Tempo», è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione). `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
+| 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione): per il portale del Tempo ora c'è `tavola-portale-del-tempo.jpg`, in `DEF-4` Scena 1. `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
 | 7 | **La preghiera nanica di `DEF-3` §4**, *«Khazâd ai-mênu…»*, riprende parola per parola il grido di guerra dei nani di Tolkien. La skill dello stile lo vieta (non-negoziabile 4: niente testo o nomi presi dalle fonti) | **corretto il 2026-09-24**: master e handout hanno due versi di nanico scritto per la campagna, con la traduzione e la preghiera in italiano |
 | 8 | **Durik nella Cassetta del DM** era descritto come *«il nano che emerge dal Rituale»* e con un tic vocale. È un cane e non parla | corretto nella Cassetta con questo lotto |
 
@@ -2910,6 +2910,7 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 | Il Cuore di Moradin, dopo il §3 | `Immagini/tavola-cuore-di-moradin.jpg`: il reliquiario aperto, fedele al box. `ilCuoreDiMoradin` lo mostrava appoggiato sopra l'Altare, e resta per la copertina e per `DEF-2` e `DEF-5` |
 | La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
 | Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
+| Durik e Hella, dopo il risveglio | `Immagini/tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
 
 ### Musica
@@ -3374,6 +3375,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 | **4** · Il consiglio di guerra | la sala del trono | **Re Thorek I**, **Thorgrim Barbadiferro** | Diplomazia o Intimidire **CD 20** | 25 min |
 
 ### SCENA 1 — Il portale e il bosco al tramonto
+
+![Il portale del Tempo](../../Immagini/tavola-portale-del-tempo.jpg)
 
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante lunghissimo i
 > colori si rovesciano, e vi passano davanti vite intere di nani: nascono,
@@ -4022,7 +4025,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
 
-![Zog'tar Deatheye, il generale](../../Immagini/ritratti/zogtar-deatheye.jpg)
+![Zog'tar Deatheye, il generale](../../Immagini/web/zogtar-deatheye.jpg)
 
 **Il round di sorpresa.** I PG invisibili hanno un **round di sorpresa pieno** se
 nessuno ha parlato ad alta voce o lanciato incantesimi che li rivelano. Parlare
@@ -4657,10 +4660,10 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione (verificato il 2026-09-24). Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
+| Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
 | La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
-| Skullcrusher nel cortile | da generare: scheda **41** |
-| I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
+| Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
+| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`). Manca Thorgrim |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
 
 ### Musica
@@ -5623,7 +5626,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
 
-![Durik riforgiato, occhi di topazio](../../../PG/Immagini/web/durik2.jpg)
+![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
 
 > *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
 > e la pietra se l'è tenuto.*

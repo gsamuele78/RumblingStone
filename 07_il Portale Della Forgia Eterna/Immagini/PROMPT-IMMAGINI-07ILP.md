@@ -592,7 +592,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` — A6 — «Il Viaggio Attraverso il Tempo» (SUD-OVEST · temporale → 80%)
 - **Etichetta regia**: Andor lead — il tempo incerto).
 - **Destinatario**: `pg` · **Formato**: `16:9 splash` (sostituisce `PortaleDellaForgiaEterna.webp`, che è un'immagine di testo)
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-portale-del-tempo.jpg` (1600 × 899) e in `DEF-4` Scena 1
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Questo affresco è doloroso da guardare a lungo. Mostra due scene SOVRAPPOSTE, come una doppia esposizione che il cervello si rifiuta di separare. Nella prima — Anno −1000 — Hammerfist è giovane, le mura appena erette e ancora lucide; i nani combattono un'orda primitiva di orchetti, e un drago nero GIOVANE si tuffa sulle fortificazioni: il capostipite di una stirpe che riconoscerete. Nella seconda — Anno 1372, ADESSO — Hammerfist è assediata, le mura segnate, l'esercito della Mano Rossa schierato sotto, e Fauci di Palude — lo stesso sangue, mille anni più vecchio e più grande — circola sopra co
@@ -744,7 +744,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno del fedele).
 - **Destinatario**: `pg` dopo il risveglio · **Formato**: `3:4 handout` (è la copertina della scheda di Durik)
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, **seconda versione** (`MAHWL6svafI`): Durik levriero in piedi, lo stesso di `durik2`. Nel repo come `Immagini/tavola-durik-e-hella.jpg` (533 × 800, copia della chat), copertina di `08-SCHEDA-DURIK`
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Prima che qualcuno possa rispondere, un rumore di pietra su pietra: il grande cane di mithral e roccia scura — quello che ha preso forma nel Piano della Terra e da allora non si è mai allontanato dal corpo — si fa avanti. Non abbaia: non sa più farlo. Appoggia la testa massiccia sul petto di Hella, gli occhi di topazio socchiusi, e resta così. Lei alza una mano tremante e la posa tra le sue orecchie di granito. «…Durik?» Il cane emette un suono che non è un verso: è il click lontano di una faglia che si assesta. È tornato anche lui. Non l'aveva mai davvero lasciata.
@@ -1171,7 +1171,7 @@ SEGNO      la lastra d'ardesia sulle ginocchia e la punta di ferro in mano
 ### R6 · Zog'tar Deatheye  `[ritratto-zogtar-deatheye]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/zogtar-deatheye.jpg`
-- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione. **Specchiato**: l'originale aveva la pietra nell'occhio sinistro
+- **Stato**: ✅ nel repo la **terza versione**, mandata dal DM il 2026-09-25: `Immagini/ritratti/zogtar-deatheye.webp` (1033 × 1523), derivata di stampa in `web/`. Ha la pietra nell'occhio destro senza specchiare. Strumento da confermare
 
 ```
 ZOG'TAR — mezzo-ogre · grande quanto una porta di stalla

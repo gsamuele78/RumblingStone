@@ -369,6 +369,7 @@ scripts/comfyui-local/ComfyUI/
 # non si rifanno, quindi il file È il sorgente e va versionato (ADR-0019 §2-bis).
 # Il percorso è quello dell'atlante, PROMPT-IMMAGINI-07ILP.md, schede R1-R7.
 !07_il Portale Della Forgia Eterna/Immagini/ritratti/*.jpg
+!07_il Portale Della Forgia Eterna/Immagini/ritratti/*.webp
 # Le tavole stanno accanto al file dei prompt, col nome dell'id (§3 di
 # PROMPT-RITRATTI-E-TAVOLE-ARC07.md), per la stessa ragione.
 !07_il Portale Della Forgia Eterna/Immagini/tavola-*.jpg
