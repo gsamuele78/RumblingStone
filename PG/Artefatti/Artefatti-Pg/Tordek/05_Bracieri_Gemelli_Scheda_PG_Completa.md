@@ -205,8 +205,6 @@ Una volta per round, quando metti a segno un **Critico Confermato** usando Attac
   Foresta Sacra vi avrà accolti, con la Collana la Trinità diventerà la
   **Quaternità**: nel cerchio completo l'Ancoraggio torna, a tutti e quattro.
 
-Condizioni e numeri esatti: `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md`.
-
 ## Benedizione della Forgia Eterna (Moradin)
 
 Dopo il **contatto con l'Altare del Cuore di Moradin** nella Sala della Forgia

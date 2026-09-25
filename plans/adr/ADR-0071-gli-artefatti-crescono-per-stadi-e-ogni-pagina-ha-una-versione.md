@@ -51,6 +51,10 @@ vicina invece che dalla più completa.
 3. **Ogni pagina ha una versione**, nella meta
    `<meta name="versione-artefatto" content="artefatto · S<stadio> · r<revisione> · <data>">`
    e in fondo alla pagina. La revisione sale a ogni modifica del contenuto.
+   Sulla pagina del giocatore il piede dice **solo la versione**: il percorso
+   del registro e i nomi dei file sono apparato di lavoro, e non vanno in
+   stampa ([ADR-0070](ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md)).
+   La pagina DM li tiene, perché è lì che il DM li cerca.
 4. **Il registro è uno**: la tabella `<!-- versioni-artefatti -->` in
    `PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` §0.
 5. **La revisione superata si archivia** in `_ARCHIVIO/` della cartella

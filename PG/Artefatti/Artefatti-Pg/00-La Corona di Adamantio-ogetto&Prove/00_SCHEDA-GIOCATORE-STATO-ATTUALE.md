@@ -35,7 +35,7 @@ d'oro, una di verde. La terza è fredda.*
 | **Consapevolezza della Pietra** (Sop) | su terra/pietra naturale **+1 morale** att./danni e **+2 intuizione CA**; **porte segrete**, **trappole** e **Comprendere Linguaggi** a volontà *(DM 2026-07-04)* | Rit. 1 |
 | **Intuito di Moradin** (Sop) | **Vista del Vero** 1/giorno; **+4 intuizione** Artigianato (fabbro) | Rit. 2 |
 | ⭐ **Volontà Adamantina** (Sop) | su terra/pietra: **immune a charme e compulsione**, **+4 razziale ai TS** vs altri effetti mentali | **Rit. 3** |
-| ⭐ **Manto di Pietra e Spirito** (Sop) | **Mente Vuota** permanente (immune al mentale **e** alla divinazione, **ovunque, anche staccato da terra**); **RD 5/epico e male** (DM 2026-09-25, D7: come nel PDF del giocatore del 2025); in un Nodo Terrestre **1/mese Comunione** (LI 20°, 1 round) | **Rit. 3** |
+| ⭐ **Manto di Pietra e Spirito** (Sop) | **Mente Vuota** permanente (immune al mentale **e** alla divinazione, **ovunque, anche staccato da terra**); **RD 5/epico e male**: la supera solo un'arma insieme epica e malvagia; in un Nodo Terrestre **1/mese Comunione** (LI 20°, 1 round) | **Rit. 3** |
 
 **Gemme accese:**
 

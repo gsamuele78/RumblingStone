@@ -20,8 +20,8 @@
 > mappe **1,5 m/quadretto** (eccezione: CM-1 eredita la **scala 3 m** della
 > geometria canonica ARC-08 — vedi nota A4 sulla mappa).
 >
-> **Stato al tavolo**: si gioca **subito dopo** la vittoria del −1000 (master
-> #4). Chiude l'ARC-07 e apre l'**ARC-08** (Battaglia di Hammerfist).
+> **Stato al tavolo**: si gioca **subito dopo** la vittoria del −1000 (
+> `DEF-4`). Chiude l'ARC-07 e apre l'**ARC-08** (Battaglia di Hammerfist).
 > **Canone in uscita** (fonte stabile `state.md §1/§6`, D8): Corona **3 gemme
 > accese**; **Cuore di Moradin SPESO**; **Thorik −4 DES / +2 COS / +4 CAR** permanenti (**−1 CA** in più se ha donato al rito); **Hella
 > viva** (Ibrido Treant, Collana, Durik); party **APL 13**.
@@ -49,7 +49,7 @@
 
 ## §0 — QUICKSTART DM
 
-**Dove siete.** Avete vinto la battaglia antica (master #4). Sulla fronte di
+**Dove siete.** Avete vinto la battaglia antica (`DEF-4`). Sulla fronte di
 Thorik il **Rubino** si è acceso — «Cuore della Leggenda» — e la sua luce vi
 sta strappando via dal −1000. Ma non tornerete in un interludio tranquillo: il
 Rubino vi deposita **dove serve**, al **Cuore della Montagna**, la caverna
@@ -90,7 +90,7 @@ stato d'arco); la mappa **CM-1**; l'handout **«Lo Stato dei Custodi»** (§9).
 - **Corona di Adamantio**: **3 gemme accese** (Topazio/Tempo, Smeraldo/Terra, Rubino/Leggenda). Il Rubino è ora **single-use SPESO** (motore del ritorno).
 - **Cuore di Moradin**: **SPESO** (resurrezione).
 - **Thorik**: **−4 DES / +2 COS / +4 CAR** permanenti; **−1 CA** se ha donato il +2 di deflessione al rito. **Hella**: viva (Ibrido Treant, Collana, Durik). **Bracieri** completi. **Ring** riforgiato.
-- **Carry-over B4** verso Fauci: registrato al master #4 (esito Skullcrusher + N ferite).
+- **Carry-over B4** verso Fauci: registrato al `DEF-4` (esito Skullcrusher + N ferite).
 - **Countdown**: siete arrivati al **Giorno 3** (≈ March Clock Day 18-19): il **sync** con l'ARC-08. Valore preciso in consegna, secondo il registro dei riposi (`ARC07-DEF-2` §0-bis): **≈ 3g 03h** se hanno dormito prima di Terros, **≈ 3g 15h** se no. Il viaggio a −1.000 **non consuma orologio** (il Rubino riporta all'istante di partenza).
 
 ### In che stato consegni il party all'ARC-08 (per ramo)
@@ -113,7 +113,7 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
 > - **Il ritorno nel tempo**: nessun costo meccanico ai PG (il Rubino paga, ed è
 >   speso). Non riportano oggetti del −1000 se non ciò che è «loro»/legato (le
 >   pozioni antiche svaniscono all'alba; il Sigillo rubato a Vatore è l'eccezione,
->   master #4). Trattalo come una **cornice**, non un puzzle.
+>   `DEF-4`). Trattalo come una **cornice**, non un puzzle.
 > - **L'Aura dell'Apparizione** (§4): trattala come *fear/awe* di area a CD fissa
 >   (PF1e *frightful presence*-like), CD 25, un solo TS.
 
@@ -135,7 +135,7 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
 - Torna viva in una Hammerfist che brucia — la **casa**. Per l'Ibrido Treant,
   proteggere il focolare è ora *letteralmente* natura. Attorno a lei, all'arrivo,
   **radici cristalline crescono spontanee** dall'altare (segno del suo legame
-  col Sogno della Terra — e del **Debito della Radice**, master #3 §6, che la
+  col Sogno della Terra — e del **Debito della Radice**, `DEF-3` §6, che la
   segue).
 
 ### ⚒️ TORDEK — il pugno che ha imparato a trattenersi (Mercer support)
@@ -144,7 +144,7 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
   suo fianco nel presente** — non un ricordo, non uno spirito: lei.
 
 ### 🔮 ARTEMIS — il predone che ha visto il futuro del suo nemico (Andor support)
-- Torna sapendo cosa non dovrebbe sapere: ha visto **Vatore** (master #4 §5). Se
+- Torna sapendo cosa non dovrebbe sapere: ha visto **Vatore** (`DEF-4` §5). Se
   lo ha segnato/derubato, la **sincronizzazione** lo aspetta in ARC-09 (Sal).
   L'Anello, all'arrivo, pulsa fra luce e ombra — non un dono divino, la sua
   natura riforgiata che riconosce di essere **tornata a casa** nel tempo giusto.
@@ -190,7 +190,7 @@ paura per i difensori — CANONE DM 2026-07-23). Vedi CM-1.
 ## §3 — L'ACCENSIONE DEL RUBINO & IL RITORNO (la regia del salto)
 
 > Riusa la regia di P5-DEFINITIVO §4.2-4.3. Il Rubino si accende **alla vittoria
-> antica** (master #4 Scena 6): è il **motore del ritorno**, e resta poi
+> antica** (`DEF-4` Scena 6): è il **motore del ritorno**, e resta poi
 > **speso** (single-use, `campaign-artifacts.md`).
 
 > **Read-aloud (Casa di Davide — la leggenda registrata).** *Sulle mura di
@@ -309,16 +309,16 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 
 | Eco/filo (origine) | Stato in uscita | Dove paga |
 |---|---|---|
-| **Carry-over B4** (Skullcrusher→Fauci, #4) | esito duello + N ferite registrati | ARC-08 (statblock Fauci) |
-| **Aegis Fang «sente» Fauci** (#2 A7 / #4) | +2 circostanza a Thorik vs Fauci + preavviso soffio | ARC-08 |
-| **Debito della Radice** (#3 §6) | pegno al Sogno della Terra (A/B/C) | ARC-09 (Cerchio Sacro/Ghostlord) |
-| **Seme del Ghostlord** (#4 §1-bis) | Zeth avviato alla lichificazione (mano del Collezionista) | ARC-09 (dilemma di Hella) |
-| **Vatore/Sal** (#4 §5) | sincronizzazione (se segnato/derubato/ferito) | ARC-09 (Sal) |
-| **Seme-Mercato di Varis** (#1 §6-bis) | Marchio di Varis / rispetto | ARC-09 |
-| **Doni mancati alla resurrezione** (#3 §5) | Hella senza RD 3 / Timeless / Rinascita, se rifiutati | ARC-08/09 |
-| **Tono del Rubino** (#4) | «nessuna pietà / dovere / vigile» | ARC-08 (colore Corona) |
+| **Carry-over B4** (Skullcrusher→Fauci, `DEF-4`) | esito duello + N ferite registrati | ARC-08 (statblock Fauci) |
+| **Aegis Fang «sente» Fauci** (#2 A7 / `DEF-4`) | +2 circostanza a Thorik vs Fauci + preavviso soffio | ARC-08 |
+| **Debito della Radice** (`DEF-3` §6) | pegno al Sogno della Terra (A/B/C) | ARC-09 (Cerchio Sacro/Ghostlord) |
+| **Seme del Ghostlord** (`DEF-4` §1-bis) | Zeth avviato alla lichificazione (mano del Collezionista) | ARC-09 (dilemma di Hella) |
+| **Vatore/Sal** (`DEF-4` §5) | sincronizzazione (se segnato/derubato/ferito) | ARC-09 (Sal) |
+| **Seme-Mercato di Varis** (`DEF-1` §6-bis) | Marchio di Varis / rispetto | ARC-09 |
+| **Doni mancati alla resurrezione** (`DEF-3` §5) | Hella senza RD 3 / Timeless / Rinascita, se rifiutati | ARC-08/09 |
+| **Tono del Rubino** (`DEF-4`) | «nessuna pietà / dovere / vigile» | ARC-08 (colore Corona) |
 | **Cronache dei Quattro Eroi compiute** | fama presso i nani → **Custodi Eterni** | ARC-08 E5 / Cerimonia 100 Asce |
-| **La Cronaca Vivente** (#2) | A8 verso il 100% (il finale che i PG dipingono) | ARC-08/09 |
+| **La Cronaca Vivente** (`DEF-2`) | A8 verso il 100% (il finale che i PG dipingono) | ARC-08/09 |
 
 ---
 
@@ -350,7 +350,7 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | **Collana di Durik / Ibrido Treant** (Hella) | artefatto vivo | resurrezione consolidata |
 | **Aegis Fang** (canta contro Fauci) | artefatto | +2 circostanza vs Fauci (B4) |
 | Bottino ordinario del Piano della Terra | consolidato | ~34.950 mo |
-| Corredo recuperato di Hella (master #3) | consolidato | ~16.900 mo |
+| Corredo recuperato di Hella (`DEF-3`) | consolidato | ~16.900 mo |
 
 > Il **delta di WBL ordinario si colma a Hammerfist** (ARC-08 B4): armeria nanica,
 > gratitudine di Re Thorek, bottino dell'orda. Nessun doppio conteggio. `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`
@@ -372,7 +372,7 @@ avete fatto nel passato presenterà il conto.*
    gemme (poteri), artefatti al massimo stato, i costi pagati (Thorik **−4 DES**, e **−1 CA** se ha
    donato al rito), il
    carry-over vs Fauci. Da consegnare a chiusura d'arco.
-2. **La tavola dell'Affresco A8** (master #2) al 60→80%: la leggenda quasi
+2. **La tavola dell'Affresco A8** (`DEF-2`) al 60→80%: la leggenda quasi
    completa, che l'ARC-08 porterà al 100%.
 
 ### Immagini (atlante C1 — momenti d'uso)

@@ -1418,11 +1418,13 @@ def render_svg(grid: dict, source_name: str) -> str:
             out.append(f'<text x="{lx}" y="{y}" font-size="14">{emoji}</text>')
         out.append(f'<text x="{lx + 27}" y="{y}" font-size="11" fill="{INK}">{emoji} — {label}</text>')
 
-    # --- footer ---------------------------------------------------------------------
+    # --- provenienza -----------------------------------------------------------------
+    # Un commento e non un testo: chi apre il file la legge, la stampa no. Era
+    # una riga in corsivo in fondo a ogni mappa, e in un volume diceva al tavolo
+    # il nome di un file del repo (ADR-0070, classe A).
     out.append(
-        f'<text x="{ox}" y="{height - 16}" font-size="9" font-style="italic" '
-        f'fill="{INK_SOFT}">fonte: {_esc(source_name)} · SVG generato da '
-        f'scripts/render_map_svg.py (stile pergamena) — non modificare a mano</text>'
+        f'<!-- fonte: {_esc(source_name)} · SVG generato da '
+        f'scripts/render_map_svg.py (stile pergamena) · non modificare a mano -->'
     )
 
     out.append("</svg>")

@@ -20,8 +20,7 @@
 > continuano a scendere senza fare rumore.*
 
 **Questo è il beat del ritorno** — la Sala della Forgia Eterna, gli Otto
-Affreschi e la Stanza della Corona (master `ARC07-DEF-2-RITORNO-E-AFFRESCHI.md`,
-ARC-07 #2). Si gioca **dopo Terros** e **prima della resurrezione di Hella**.
+Affreschi e la Stanza della Corona (`DEF-2`). Si gioca **dopo Terros** e **prima della resurrezione di Hella**.
 
 **Non è tempo morto.** È il capitolo in cui la campagna si guarda allo
 specchio: la Cronaca Vivente incide nelle pareti ciò che i PG hanno appena

@@ -214,7 +214,9 @@ torna, la strada non è finita!» Poi, in italiano:*
 > *Abbiamo portato le pietre che volevi.*
 > *Abbiamo pagato quello che chiedevi.*
 > *Quello che manca, chiedilo adesso, e lo paghiamo.*
->
+
+*Un respiro, poi l'ultima strofa:*
+
 > *Hella, figlia della pietra che sogna,*
 > *torna.*
 > *La tua strada non è finita.*
@@ -278,6 +280,9 @@ spingono e i draghi afferrano, quel bottone non c'è più.
 **Quello che è germogliato in Hella.** **Pelle di Adamantio: RD 3/adamantino.** È
 l'**unica** riduzione del danno che avrà.
 
+**E i Bracieri scaldano il bosco.** Finché sei entro **9 m**, i Treant di
+Adamantio che Hella evoca hanno **resistenza al fuoco 10**.
+
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 
@@ -305,6 +310,9 @@ Pagina da consegnare al giocatore indicato, in privato.
 **Quello che è germogliato in Hella.** **Il Rovo Eldritch.** **A volontà**, azione
 standard, attacco di contatto a distanza, **18 m**: **2d6**, metà rovi che
 escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
+
+**E la tua luce fa crescere il bosco.** Quando usi *Luce di Lathander* entro
+**9 m** dai Treant di Hella, hanno **Rigenerazione 1** per tutta la durata.
 
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
@@ -374,24 +382,32 @@ Un torc di legno e metallo, alla temperatura di chi lo porta. Tre semi: due
 verdi venati d'adamantio, il terzo grigio-verde e ruvido. Toccandolo senti il
 peso di una testa appoggiata sul petto.
 
+**Funziona sempre**, anche in forma selvatica: ha le radici sotto la pelle, e
+non si fonde nel corpo nuovo.
+
 | Potere | Effetto |
 |---|---|
 | **Saggezza della Terra** | +4 di potenziamento alla Saggezza. ⚠️ **Non si somma** al Periapto di Saggezza: vale il bonus più alto |
 | **Corteccia del Guardiano** | +3 di armatura naturale alla CA |
 | **Avatar della Radice** | 1 volta al giorno, azione standard: diventi un **Ibrido Treant Enorme** per 10 round. +8 FOR, portata estesa, schianti. Torna all'alba |
-| **Evocazione dei Guardiani** | 3 volte al giorno, azione standard, un seme per volta. Semi I e II: un **Treant di Adamantio**. Seme III: **Durik**, se è stato distrutto |
+| **Evocazione dei Guardiani** | 3 volte al giorno, azione standard, un seme per volta. Semi I e II: un **Treant di Adamantio**, per **1 ora**. Seme III: **Durik**, se è stato distrutto: torna subito, per un'ora, e all'alba è di nuovo intero. I semi usati tornano all'alba |
 
 **Treant di Adamantio** *(evocato)* · Grande · 90 pf · RD 10/adamantio · CA 24 ·
 velocità 9 m · 2 schianti **+18** (2d8+9) · danni doppi a oggetti e strutture,
 ignora la durezza sotto 20 · i suoi colpi contano come adamantio.
 
+**Due Treant insieme costano caro.** Al massimo due, uno per seme. Se li chiami
+tutti e due nello stesso momento, per **un mese** la Collana non evoca più:
+niente Treant, e se Durik cade non torna subito, ma all'alba. Il resto della
+Collana non si spegne.
+
 ### I doni dei tuoi compagni
 
 | | Seme | Da chi | Cosa ti dà |
 |---|---|---|---|
-| ☐ | I | Thorik, la sua deflessione | **Scudo del Custode**: 1 volta al giorno, azione immediata, prendi su di te il danno destinato a un alleato entro 9 m, **dimezzato**. E Thorik scatta verso chi hai protetto |
+| ☐ | I | Thorik, la sua deflessione | **Scudo del Custode**: 1 volta al giorno, azione immediata, prendi su di te il danno destinato a un alleato entro 9 m, **dimezzato**. E Thorik scatta verso chi hai protetto, accelerato per tre round |
 | ☐ | II | Tordek, il suo Ancoraggio | **Pelle di Adamantio**: **RD 3/adamantino**. La tua unica |
-| ☐ | III | Artemis, un dado del suo colpo | **Rovo Eldritch**: a volontà, azione standard, contatto a distanza 18 m, **2d6**, metà rovi e metà fuoco |
+| ☐ | III | Artemis, un dado del suo colpo | **Rovo Eldritch**: a volontà, azione standard, contatto a distanza 18 m, **2d6**, metà rovi e metà fuoco. È magico: la resistenza agli incantesimi vale |
 
 **La restituzione.** Una volta sola per ogni seme germogliato, azione
 immediata, **decidi tu**: il seme rende al compagno quello che aveva dato, per
@@ -401,13 +417,26 @@ l'evocazione.
 Un seme senza dono resta **dormiente**: evoca il suo guardiano, ma non
 germoglia niente sopra.
 
+### Quando la Collana parla con gli altri artefatti
+
+La Collana è fatta con pezzi degli altri tre. Questi fili valgono quando chi
+porta l'altro artefatto è entro **9 m**:
+
+- **Con i Bracieri di Tordek**, se ha donato: i tuoi Treant hanno
+  **resistenza al fuoco 10**;
+- **Con l'Anello di Artemis**, se ha donato: quando usa *Luce di Lathander*,
+  i tuoi Treant hanno **Rigenerazione 1** per tutta la durata. Durik no: è
+  pietra, non pianta;
+- **Con la Corona di Thorik**: dorme ancora. Si sveglia quando pianterai la
+  Ghianda al Cerchio della Quercia Vecchia.
+
 ---
 
 ## Le benedizioni di Moradin, su di te
 
 > *«Combatterai i miei figli. Proteggili. Proteggi il focolare.»*
 
-Oltre alle sei carte che hanno tutti:
+Oltre alle carte che hanno tutti:
 
 - **Mantello della Fiamma**: resistenza al fuoco **20** per una battaglia.
   Tienilo per quella in cui brucerà;
@@ -505,7 +534,9 @@ contro un nemico grosso, non regge.
 
 **Se viene distrutto** torna polvere, e la polvere torna nel terzo seme della
 Collana. Con una carica dell'**Evocazione dei Guardiani** lo richiami subito,
-per un'ora. All'alba è di nuovo intero, e resta.
+per un'ora. All'alba è di nuovo intero, e resta. Se l'Evocazione è spenta,
+perché hai chiamato i due Treant insieme, non puoi richiamarlo subito: torna
+all'alba.
 
 ---
 
@@ -557,7 +588,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 >
 > *Abbatterono il drago nero e spezzarono l'orda. Poi svanirono, come erano
 > venuti, lasciando solo il loro nome nella roccia.»*
->
+
 > — Moradin, nella mente di Thorik: *«Le Cronache dicono che 'Quattro Eroi'
 > salvarono Hammerfist. Siete VOI. Siete sempre stati voi. Andate. Chiudete il
 > cerchio.»*

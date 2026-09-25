@@ -52,7 +52,7 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import slug, togli_storico  # noqa: E402
+from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa, slug, togli_storico  # noqa: E402
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
 
@@ -925,7 +925,8 @@ def intestazione(man: dict, apparato: bool | None = None, base: Path | None = No
             f = (base / intro).resolve()
             if f.is_file():
                 extra.append("  intro: [\n"
-                             + md_to_typ(f.read_text(encoding="utf-8"), f.parent)
+                             + md_to_typ(leggi_per_la_stampa(f, capitoli_del_volume(base, man)),
+                                         f.parent)
                              + "\n  ],")
             else:
                 print(f"  ⚠ intro_md mancante: {intro}", file=sys.stderr)
@@ -1020,6 +1021,9 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         RIMANDI[f.name] = "cap-" + slug(f.stem, ripiego="capitolo")
 
     avvisa_chiavi(man)
+    # I rimandi a un master («master #3», «DEF-3 §7») diventano il suo capitolo
+    # in questo volume, o se ne vanno (ADR-0070, classe D).
+    nel_volume = capitoli_del_volume(base, man)
     parti = intestazione(man, base=base, carta=carta, formato=formato)
     predefinito = bool(man.get("capolettera", True))
     for cap, titolo, f in elenco:
@@ -1031,7 +1035,7 @@ def sorgente(man: dict, base: Path, tutti: bool, carta: str = "avorio",
         parti.append(f"#capitolo-aperto({json.dumps(titolo, ensure_ascii=False)}, "
                      f"{'none' if not fr else json.dumps(fr, ensure_ascii=False)})")
         parti.append(f"#metadata(\"capitolo\") <{RIMANDI[f.name]}>")
-        corpo = md_to_typ(f.read_text(encoding="utf-8"), f.parent,
+        corpo = md_to_typ(leggi_per_la_stampa(f, nel_volume), f.parent,
                           capolettera=bool(cap.get("capolettera", predefinito)))
         corpo = re.sub(r"\A\s*=\s[^\n]*\n", "", corpo)   # il titolo lo dà il manifest
         parti.append(corpo)

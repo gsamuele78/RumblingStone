@@ -1,8 +1,8 @@
 {
   "_cos_e": "Il registro dei file che esistono in un ramo o in una PR e mai su main: a ognuno un posto. Lo legge scripts/contenuti_nei_rami.py (PIANO-RIPRESA-PR-ABBANDONATE §4.11, lotto 4i-2). Stati ammessi e significato: nello script, STATI.",
   "misura": {
-    "data": "2026-09-24",
-    "riferimenti": 179,
+    "data": "2026-09-25",
+    "riferimenti": 192,
     "file_mai_arrivati": 50
   },
   "rami": [
@@ -64,60 +64,64 @@
         "pr/170",
         "origin/claude/stato-dopo-169"
       ],
-      "stato": "in-volo",
-      "dove": "PR #170 aperta: STATO-E-ORDINE dopo la #169 e il controllo a vista dei volumi"
+      "stato": "portato",
+      "dove": "PR #170 fusa il 2026-09-25 (02fb825): STATO-E-ORDINE dopo la #169 e il controllo a vista dei volumi; il ramo e' stato tolto dopo il merge"
     },
     {
       "ref": [
         "pr/171",
         "origin/claude/storico-fuori-stampa"
       ],
-      "stato": "in-volo",
-      "dove": "PR #171 aperta, sopra la #170: la storia delle scelte fuori stampa (ADR-0069)"
+      "stato": "portato",
+      "dove": "PR #171 fusa il 2026-09-25 (6975da2): la storia delle scelte fuori stampa (ADR-0069); il ramo e' stato tolto dopo il merge"
     },
     {
       "ref": [
+        "pr/173",
         "origin/claude/tabelle-larghe"
       ],
-      "stato": "in-volo",
-      "dove": "PR aperta sopra la #171: le tabelle che in colonna vanno a capo scavalcano le due colonne (STATO-E-ORDINE §13)"
+      "stato": "portato",
+      "dove": "PR #173 fusa il 2026-09-25 (444499e): le tabelle che in colonna vanno a capo scavalcano le due colonne (STATO-E-ORDINE §13); il ramo e' stato tolto dopo il merge"
     },
     {
       "ref": [
         "pr/172",
         "origin/claude/canva-ai-image-generation-odi153"
       ],
-      "stato": "in-volo",
-      "dove": "PR #172 aperta (bozza, un'altra sessione): ARC-07 immagini, prima esecuzione dei prompt con Canva AI"
+      "stato": "portato",
+      "dove": "PR #172 portata su main il 2026-09-25 dentro la catena #170-#174 (2526100, poi eef36a9): i ritratti e le tavole di ARC-07; il ramo e' stato tolto dopo il merge"
     },
     {
       "ref": [
+        "pr/174",
         "origin/claude/drappo-fuori-beta"
       ],
-      "stato": "in-volo",
-      "dove": "PR aperta sopra la #173: il Drappo esce dalla beta e le marcature di ARC-07 chiuse col DM"
-    },
-    {
-      "ref": [
-        "origin/claude/pagina-collana"
-      ],
-      "stato": "in-volo",
-      "dove": "PR #177 aperta: le pagine stampabili della Collana dei Semi Eterni e di Durik, giocatrice e DM"
-    },
-    {
-      "ref": [
-        "origin/claude/artefatti-audit-corona-2gemme"
-      ],
-      "stato": "in-volo",
-      "dove": "PR in bozza: audit dei poteri degli artefatti, Corona e Anello a stadi, versioni (ADR-0070, TRASVERSALE T10)"
+      "stato": "portato",
+      "dove": "PR #174 fusa il 2026-09-25 (eef36a9): il Drappo esce dalla beta e le marcature di ARC-07 chiuse col DM; il ramo e' stato tolto dopo il merge"
     },
     {
       "ref": [
         "pr/175",
         "origin/claude/corredo-della-serata"
       ],
+      "stato": "portato",
+      "dove": "PR #175 fusa il 2026-09-25 (bc8d15f): il corredo della serata (CICLO-SESSIONE 2f) e l'apparato fuori dalla stampa (2g, ADR-0070)"
+    },
+    {
+      "ref": [
+        "pr/178",
+        "origin/claude/artefatti-audit-corona-2gemme"
+      ],
       "stato": "in-volo",
-      "dove": "PR #175 aperta (bozza): il corredo della serata e l'apparato di lavoro fuori dalla stampa, ADR-0070"
+      "dove": "PR #178 in bozza: audit dei poteri, tutti gli artefatti a stadi, una versione per pagina (ADR-0071, TRASVERSALE T10)"
+    },
+    {
+      "ref": [
+        "pr/177",
+        "origin/claude/pagina-collana"
+      ],
+      "stato": "portato",
+      "dove": "PR #177 fusa il 2026-09-25 (7c08996): le pagine stampabili della Collana dei Semi Eterni e di Durik"
     }
   ],
   "file": [

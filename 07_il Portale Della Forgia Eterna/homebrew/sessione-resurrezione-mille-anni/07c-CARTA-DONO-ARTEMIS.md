@@ -15,6 +15,9 @@
 standard, attacco di contatto a distanza, **18 m**: **2d6**, metà rovi che
 escono dal terreno e metà **fuoco**. Non si prepara e non finisce mai.
 
+**E la tua luce fa crescere il bosco.** Quando usi *Luce di Lathander* entro
+**9 m** dai Treant di Hella, hanno **Rigenerazione 1** per tutta la durata.
+
 **Una volta sola.** Nel momento del bisogno Hella può **rendertelo** per una
 scena intera. Poi mai più.
 

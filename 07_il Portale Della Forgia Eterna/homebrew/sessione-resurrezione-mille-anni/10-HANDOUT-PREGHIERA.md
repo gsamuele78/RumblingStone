@@ -25,7 +25,9 @@ torna, la strada non è finita!» Poi, in italiano:*
 > *Abbiamo portato le pietre che volevi.*
 > *Abbiamo pagato quello che chiedevi.*
 > *Quello che manca, chiedilo adesso, e lo paghiamo.*
->
+
+*Un respiro, poi l'ultima strofa:*
+
 > *Hella, figlia della pietra che sogna,*
 > *torna.*
 > *La tua strada non è finita.*
