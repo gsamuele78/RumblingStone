@@ -227,3 +227,67 @@ great axe, a bare-handed dwarf monk with glowing braziers on his wrists, a
 caster wreathed in light and shadow, a blonde dwarf woman with a stone hound,
 cold grey dawn light, low camera, no text
 ```
+
+---
+
+## §4 · Prima esecuzione con Canva AI (2026-09-25)
+
+Il DM ha chiesto di provare questi prompt con **Canva AI** invece che con
+`comfyui_batch.py`. Sono state generate tutte e quattordici le immagini, una per
+blocco `img`, e stanno nella libreria Canva del DM. **I PNG non sono ancora in
+questa cartella**: la sessione che le ha generate non raggiungeva `canva.com`
+(politica di rete dell'ambiente), quindi non poteva esportarle. Si esportano da
+Canva col nome dell'`id` e si committano insieme alla loro riga, che è già in
+`PROVENIENZA.txt`.
+
+### Cosa cambia rispetto a ComfyUI
+
+| | ComfyUI (§1-§3) | Canva AI |
+|---|---|---|
+| Seme | sì, l'immagine si rifà identica | **nessuno**: il file esportato è il sorgente (ADR-0019 §2-bis) |
+| Negativi | campo separato | nessun campo: sono scritti in coda al prompt come «no text, no watermark…», e tengono meno |
+| Formato | 832 × 1216 e 1536 × 864 | rapporti fissi: **2:3** per i ritratti e per le due tavole verticali, **16:9** per le altre |
+| Riferimenti | LoRA / IP-Adapter | immagini di riferimento: per le due tavole di Hella si sono usati `PG/Immagini/web/Hella4.jpg` e `durik2.jpg` |
+| Licenza | pesi SDXL, OpenRAIL++-M | termini di servizio Canva; il modello non è dichiarato. Si rileggono prima di pubblicare |
+
+### Come si è composto il prompt
+
+- **Ritratti**: `look comune` + `ancora storica` + soggetto + negativi, in
+  quest'ordine, in un solo testo.
+- **Tavole**: `ancora storica` + soggetto + negativi, senza il look comune,
+  come dice §3.
+- **Tavole di Hella**: in più, la richiesta di tenere il volto del primo
+  riferimento e il segugio del secondo, **resi a olio e non in 3D**. `Hella4` è
+  un render 3D e senza quella riga lo stile del riferimento vince su quello del
+  set.
+- **Fortezza giovane**: la targa di bronzo chiede «solo ornamento, nessuna
+  lettera leggibile», perché senza il campo dei negativi il testo è il rischio
+  più alto.
+
+### Le quattordici immagini
+
+La colonna *Prima lettura* è fatta **sulla miniatura** restituita da Canva
+(circa 130 × 200 pixel). Non sostituisce il gate di rifiuto di
+`rumblingstone-art-direction` §6, che va fatto a piena risoluzione sulla «cosa
+che non deve mancare» di ogni scheda.
+
+| id | Media Canva | Prima lettura |
+|---|---|---|
+| `ritratto-balvar-fuocospento` | [MAHWLw8QnOo](https://www.canva.com/M/MAHWLw8QnOo) | vecchio nano, barba bianca, grembiule, lastra sulle ginocchia e punta in mano; da verificare che la punta tocchi l'ardesia |
+| `ritratto-zogtar-deatheye` | [MAHWL9gzPGg](https://www.canva.com/M/MAHWL9gzPGg) | mezzo-ogre in piastre scure con ascia in spalla; **la pietra nera nell'occhio destro non si distingue** in miniatura |
+| `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | barba bianca in trecce, ascia chiara in pugno, mappa sul tavolo; da verificare la corona senza gemme |
+| `ritratto-thorgrim-barbadiferro` | [MAHWL-NDQRs](https://www.canva.com/M/MAHWL-NDQRs) | seduto, barba grigia; **tiene la reliquia in mano** invece di guardarla in alto, e il callo sul palmo non si vede |
+| `ritratto-durin-rocciadura` | [MAHWLxfub5Q](https://www.canva.com/M/MAHWLxfub5Q) | barba castana, piastre ammaccate, ascia stretta, torce dietro; tiene |
+| `ritratto-zeth-mastro-costruttore` | [MAHWLzJWJXI](https://www.canva.com/M/MAHWLzJWJXI) | galleria con torcia, tunica ocra, mano sulla parete incisa; tiene |
+| `ritratto-vatore` | [MAHWL25-bj4](https://www.canva.com/M/MAHWL25-bj4) | cappuccio, fagotto al petto, tende di notte; tiene |
+| `tavola-portale-del-tempo` | [MAHWLyz44U8](https://www.canva.com/M/MAHWLyz44U8) | affresco ottagonale con drago, nano di spalle; **la doppia esposizione delle due fortezze non si legge** in miniatura |
+| `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | figura alta di radici, tre figure inginocchiate sullo sfondo; tiene |
+| `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | reliquiario a petali aperti, cuore di rubino nella luce; tiene |
+| `tavola-risveglio-di-hella` | [MAHWL0hctuk](https://www.canva.com/M/MAHWL0hctuk) | Hella sull'altare, figure inginocchiate; **Durik sembra un lupo**, non un levriero |
+| `tavola-durik-e-hella` | [MAHWLxqQ-Ns](https://www.canva.com/M/MAHWLxqQ-Ns) | scena tenera e calda; **Durik di nuovo lupesco**, e Hella rischia di leggersi elfa più che nana |
+| `tavola-hammerfist-giovane` | [MAHWL9hrJvc](https://www.canva.com/M/MAHWL9hrJvc) | pietra bianca al tramonto, targa ornata; **i fuochi del campo sulla piana non si vedono** |
+| `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | drago nero nel cortile, quattro figure di spalle; tiene |
+
+Le quattro righe in grassetto sono candidate al rifiuto. Se il DM le scarta, il
+motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`, e l'immagine si
+rigenera: con Canva non c'è seme da cambiare, si corregge il prompt.
