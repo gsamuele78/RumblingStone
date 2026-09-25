@@ -513,7 +513,9 @@ la gente smette di parlare.
 | **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
 | **Non combatte** | è una non-creatura: nessuno statblocco esiste, e non va inventato |
 | **Eco** | l'affresco A3 (*«Portala bene, fratello. Ora è tua.»*) e la Cerimonia delle 100 Asce in ARC-08 |
-| **Ritratto** | in arrivo: la versione scelta è la seconda generata con Canva, a mani vuote col callo in vista. La prima, con la reliquia in mano, contraddiceva questa scheda |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Thorgrim Barbadiferro, l'antenato](Immagini/ritratti/thorgrim-barbadiferro.jpg)
 
 **Il re.** Re Thorek I (Guerriero 16, 182 anni, Frostcleaver in pugno) vuole
 vedere da vicino la Corona che suo nonno perse contro Skullcrusher cinquant'anni
@@ -1595,7 +1597,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 | Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
 | La fortezza giovane, all'arrivo | `Immagini/tavola-hammerfist-giovane.jpg`, Scena 1; e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa, Scena 3 |
 | Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
-| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`). Manca Thorgrim |
+| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`) |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
 
 ### Musica
