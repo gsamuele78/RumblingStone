@@ -369,9 +369,9 @@ bianche, nessun cavaliere sul drago.)*
 
 | | |
 |---|---|
-| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. `[PROPOSTA]`: si vede dal modo in cui tiene l'ascia troppo stretta |
+| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. Si vede dal modo in cui tiene l'ascia troppo stretta |
 | **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
-| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
+| **Suona** | la voce gli scappa in alto quando è teso. Ride un attimo prima di dire una cosa seria |
 | **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
 | **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
 | **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
@@ -487,9 +487,9 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. `[PROPOSTA]`: una corona semplice, senza gemme |
+| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. Una corona semplice, senza gemme |
 | **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
-| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
+| **Suona** | lento, al passato remoto quando cita la profezia. Parla al plurale anche di sé, *«la fortezza pensa»* |
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
@@ -659,9 +659,9 @@ mangiano), fabbri che affilano le armi, chierici che benedicono.
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
   **una carica sola** per richiamarlo.
-  `[PROPOSTA — conferma DM]` Se al rito Hella ha trovato la **ghianda
-  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» può
-  essere questo: niente Treant in più, ma una quercia che fra mille anni sarà
+  Se al rito Hella ha trovato la **ghianda
+  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
+  questo: niente Treant in più, ma una quercia che fra mille anni sarà
   vecchia di mille anni.
 
 **Scheda d'entrata — Mastro Costruttore Zeth, il seme del Ghostlord** *(nelle
@@ -669,9 +669,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 
 | | |
 |---|---|
-| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. `[PROPOSTA]`: col gesso, e ne cancella metà col pollice |
+| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. Col gesso, e ne cancella metà col pollice |
 | **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
-| **Suona** | parla mentre lavora. `[PROPOSTA]`: finisce le frasi degli altri |
+| **Suona** | parla mentre lavora. Finisce le frasi degli altri |
 | **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
 | **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
@@ -1378,10 +1378,9 @@ che l'incontro ha appena scelto.
 
 #### La scena, in tre momenti
 
-> ✏️ `[PROPOSTA — conferma DM]` *Il nano molto vecchio del box qui sotto può
-> essere **Thorgrim**: è l'unico vecchio che i PG conoscono qui, e ha appena
-> tenuto in mano la loro ascia. Il box non lo nomina, quindi regge in tutti e due
-> i casi.*
+> ✏️ *Il nano molto vecchio del box qui sotto è **Thorgrim**: è l'unico vecchio
+> che i PG conoscono qui, e ha appena tenuto in mano la loro ascia. Il box non lo
+> nomina: se il tavolo chiede chi è, il nome lo dà il DM.*
 
 > **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
 > un'incudine, e si vede: il piano è segnato da mille anni di martelli. Intorno
@@ -1896,8 +1895,6 @@ d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) 
 La griglia e i tre blocchi di accompagnamento stanno in
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`, compilati dal contratto JSON
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` (modalità 3 della skill delle
-mappe: la griglia non si scrive a mano). La geometria è una `[PROPOSTA — conferma
-DM]`: il master dice dove stanno le quattro rune e chi c'è, non quanto è grande
-la tenda.
+mappe: la griglia non si scrive a mano). La tenda misura 18 m × 16,5 m.
 
 <!-- /pagina -->

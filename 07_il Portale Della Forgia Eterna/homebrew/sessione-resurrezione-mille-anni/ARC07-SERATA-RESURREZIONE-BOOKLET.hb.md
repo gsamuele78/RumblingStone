@@ -448,8 +448,8 @@ Le tariffe sono nel master. La tabella da tenere d'occhio è quella di uscita
 dalla tenda: **≤ 6 in tempo, 7 di corsa, 8 l'alba vi coglie fuori.**
 
 ⚠️ **I semi di Hella.** All'alba Hella evoca **due Treant di Adamantio** con
-la Collana (due cariche su tre, la tacca resta una). L'uso della ghianda
-annerita resta una `[PROPOSTA]` da confermare: è scritta in `DEF-4`, Scena 5.
+la Collana (due cariche su tre, la tacca resta una). Se la ghianda annerita
+non è ancora piantata, la pianta qui: `DEF-4`, Scena 5.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
@@ -562,7 +562,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ⚠️ **Cosa questo file NON fa.** Non riscrive niente, non aggiunge fatti e non
 decide nulla: **rimanda**. Dove i master tacciono — ed è il caso di qualche tic
-vocale — la voce proposta è marcata **[PROPOSTA]** e il DM la cambia senza
+vocale — la voce è stata scelta qui ed è canone, e il DM la cambia senza
 chiedere il permesso a nessuno. I master restano la fonte di verità.
 
 | § | Cosa |
@@ -587,9 +587,9 @@ prima.
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
 | **Terros l'Antico** — guardiano del Nodo di Terra, GS 15 | che nessuno tocchi lo Smeraldo. Non odia: **custodisce** | parla **lentissimo**, come chi non ha mai avuto fretta in diecimila anni. Non alza mai la voce, nemmeno quando colpisce | `#1` §8 |
-| **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. *[PROPOSTA]* | `#1` §7b |
+| **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. | `#1` §7b |
 | **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | `#4` Scena 11 |
-| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` Scena 8 *[PROPOSTA]* |
+| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` Scena 8 |
 | **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | `#4` Scena 7 |
 | **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | `#4` Scena 9 |
 
@@ -599,8 +599,8 @@ prima.
 |---|---|---|---|
 | **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
-| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` Scena 4 |
-| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` Scena 2, Appendice A |
+| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» | `#4` Scena 4 |
+| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria | `#4` Scena 2, Appendice A |
 | **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | `#4` Scena 4 |
 | **Il Custode** (ruolo, non persona) | leggere i pannelli e ricordare un fatto vero | — (è una funzione: la assume un PG) | `#2` §3-4 |
 
@@ -2133,8 +2133,8 @@ Thorik, che la legge ad alta voce.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
 
-> *La preghiera si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
-> battuta e le vocali brevi.*
+**Pronuncia della preghiera**: **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la
+erre battuta e le vocali brevi.
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
 > *Tordek, il respiro rallenta da sé. C'è un battito — il Cuore di Moradin — e
@@ -2458,7 +2458,7 @@ momento entra la Custode: §6.
 | | |
 |---|---|
 | **Vuole** | che il vuoto lasciato dalla radice strappata si colmi. Non odia nessuno e non ha fretta |
-| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. `[PROPOSTA]`: non guarda mai chi parla, guarda Hella |
+| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. Non guarda mai chi parla, guarda Hella |
 | **Sa** | il Voto della Radice, parola per parola. Che il Forgiatore protegge Hella, e che con lui non si discute |
 | **Non sa** | chi sono gli altri tre, e non le interessa |
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
@@ -2764,12 +2764,13 @@ rimesso dritto undici volte.»* Da lì si riparte.
 
 | Oggetto (corredo di Hella, restituito) | Valore |
 |---|---|
-| **Armatura di cuoio +2** (ora venata di corteccia, adattata all'Ibrido) | ~4.000 mo |
+| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido) | ~4.000 mo |
 | **Mantello della Resistenza +2** | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo/arma druidica +1** (falcetto o scudo leggero) | ~2.000 mo |
+| **Scudo di legno +1** | ~1.000 mo |
+| **Scimitarra +1** | ~2.300 mo |
 | **Bacchetta di Cura Ferite Moderate** (25 cariche) | ~1.600 mo |
-| **LORDO restituito** | **~15.600 mo** |
+| **LORDO restituito** | **~16.900 mo** |
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -2886,9 +2887,6 @@ ARTEFATTO: Collana dei Semi Eterni (§7).
 ============================================================
 ```
 
-⚠️ *L'equipaggiamento della scheda (cuoio borchiato, scudo di legno, scimitarra)
-e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidono del tutto.
-Vale la scheda della giocatrice. `[INFERRED — needs DM confirmation]`*
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
 
@@ -3326,9 +3324,9 @@ bianche, nessun cavaliere sul drago.)*
 
 | | |
 |---|---|
-| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. `[PROPOSTA]`: si vede dal modo in cui tiene l'ascia troppo stretta |
+| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. Si vede dal modo in cui tiene l'ascia troppo stretta |
 | **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
-| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
+| **Suona** | la voce gli scappa in alto quando è teso. Ride un attimo prima di dire una cosa seria |
 | **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
 | **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
 | **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
@@ -3438,9 +3436,9 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. `[PROPOSTA]`: una corona semplice, senza gemme |
+| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. Una corona semplice, senza gemme |
 | **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
-| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
+| **Suona** | lento, al passato remoto quando cita la profezia. Parla al plurale anche di sé, *«la fortezza pensa»* |
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
@@ -3606,9 +3604,9 @@ mangiano), fabbri che affilano le armi, chierici che benedicono.
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
   **una carica sola** per richiamarlo.
-  `[PROPOSTA — conferma DM]` Se al rito Hella ha trovato la **ghianda
-  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» può
-  essere questo: niente Treant in più, ma una quercia che fra mille anni sarà
+  Se al rito Hella ha trovato la **ghianda
+  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
+  questo: niente Treant in più, ma una quercia che fra mille anni sarà
   vecchia di mille anni.
 
 **Scheda d'entrata — Mastro Costruttore Zeth, il seme del Ghostlord** *(nelle
@@ -3616,9 +3614,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 
 | | |
 |---|---|
-| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. `[PROPOSTA]`: col gesso, e ne cancella metà col pollice |
+| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. Col gesso, e ne cancella metà col pollice |
 | **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
-| **Suona** | parla mentre lavora. `[PROPOSTA]`: finisce le frasi degli altri |
+| **Suona** | parla mentre lavora. Finisce le frasi degli altri |
 | **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
 | **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
@@ -4273,10 +4271,9 @@ che l'incontro ha appena scelto.
 
 #### La scena, in tre momenti
 
-> ✏️ `[PROPOSTA — conferma DM]` *Il nano molto vecchio del box qui sotto può
-> essere **Thorgrim**: è l'unico vecchio che i PG conoscono qui, e ha appena
-> tenuto in mano la loro ascia. Il box non lo nomina, quindi regge in tutti e due
-> i casi.*
+> ✏️ *Il nano molto vecchio del box qui sotto è **Thorgrim**: è l'unico vecchio
+> che i PG conoscono qui, e ha appena tenuto in mano la loro ascia. Il box non lo
+> nomina: se il tavolo chiede chi è, il nome lo dà il DM.*
 
 > **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
 > un'incudine, e si vede: il piano è segnato da mille anni di martelli. Intorno
@@ -4760,9 +4757,7 @@ d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) 
 La griglia e i tre blocchi di accompagnamento stanno in
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`, compilati dal contratto JSON
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` (modalità 3 della skill delle
-mappe: la griglia non si scrive a mano). La geometria è una `[PROPOSTA — conferma
-DM]`: il master dice dove stanno le quattro rune e chi c'è, non quanto è grande
-la tenda.
+mappe: la griglia non si scrive a mano). La tenda misura 18 m × 16,5 m.
 
 <!-- /pagina -->
 

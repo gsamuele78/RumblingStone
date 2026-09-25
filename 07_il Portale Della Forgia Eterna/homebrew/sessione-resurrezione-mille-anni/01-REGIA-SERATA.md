@@ -330,8 +330,8 @@ Adamantio** con la Collana (due cariche su tre, la tacca resta una). L'uso
 della ghianda annerita resta una `[PROPOSTA]` da confermare: è scritta lì.
 <!-- /storico -->
 ⚠️ **I semi di Hella.** All'alba Hella evoca **due Treant di Adamantio** con
-la Collana (due cariche su tre, la tacca resta una). L'uso della ghianda
-annerita resta una `[PROPOSTA]` da confermare: è scritta in `DEF-4`, Scena 5.
+la Collana (due cariche su tre, la tacca resta una). Se la ghianda annerita
+non è ancora piantata, la pianta qui: `DEF-4`, Scena 5.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 

@@ -1120,7 +1120,7 @@ SEGNO      l'ascia doppia, tenuta troppo stretta
 ```
 RE THOREK I — nano di 182 anni · massiccio, eretto
 VOLTO      barba bianca lunghissima, divisa in tre trecce · occhi grigi pesanti
-INDOSSA    armatura di mithral · colore: argento e blu scuro · corona semplice senza gemme [PROPOSTA]
+INDOSSA    armatura di mithral · colore: argento e blu scuro · corona semplice senza gemme
 SEGNO      l'ascia Frostcleaver, sempre in pugno
 ```
 

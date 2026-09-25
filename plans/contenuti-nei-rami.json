@@ -81,6 +81,21 @@
       ],
       "stato": "in-volo",
       "dove": "PR aperta sopra la #171: le tabelle che in colonna vanno a capo scavalcano le due colonne (STATO-E-ORDINE §13)"
+    },
+    {
+      "ref": [
+        "pr/172",
+        "origin/claude/canva-ai-image-generation-odi153"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #172 aperta (bozza, un'altra sessione): ARC-07 immagini, prima esecuzione dei prompt con Canva AI"
+    },
+    {
+      "ref": [
+        "origin/claude/drappo-fuori-beta"
+      ],
+      "stato": "in-volo",
+      "dove": "PR aperta sopra la #173: il Drappo esce dalla beta e le marcature di ARC-07 chiuse col DM"
     }
   ],
   "file": [

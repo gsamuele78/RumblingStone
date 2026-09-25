@@ -776,7 +776,7 @@ momento entra la Custode: §6.
 | | |
 |---|---|
 | **Vuole** | che il vuoto lasciato dalla radice strappata si colmi. Non odia nessuno e non ha fretta |
-| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. `[PROPOSTA]`: non guarda mai chi parla, guarda Hella |
+| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. Non guarda mai chi parla, guarda Hella |
 | **Sa** | il Voto della Radice, parola per parola. Che il Forgiatore protegge Hella, e che con lui non si discute |
 | **Non sa** | chi sono gli altri tre, e non le interessa |
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
@@ -1082,12 +1082,13 @@ rimesso dritto undici volte.»* Da lì si riparte.
 
 | Oggetto (corredo di Hella, restituito) | Valore |
 |---|---|
-| **Armatura di cuoio +2** (ora venata di corteccia, adattata all'Ibrido) | ~4.000 mo |
+| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido) | ~4.000 mo |
 | **Mantello della Resistenza +2** | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo/arma druidica +1** (falcetto o scudo leggero) | ~2.000 mo |
+| **Scudo di legno +1** | ~1.000 mo |
+| **Scimitarra +1** | ~2.300 mo |
 | **Bacchetta di Cura Ferite Moderate** (25 cariche) | ~1.600 mo |
-| **LORDO restituito** | **~15.600 mo** |
+| **LORDO restituito** | **~16.900 mo** |
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -1204,9 +1205,11 @@ ARTEFATTO: Collana dei Semi Eterni (§7).
 ============================================================
 ```
 
+<!-- storico -->
 ⚠️ *L'equipaggiamento della scheda (cuoio borchiato, scudo di legno, scimitarra)
-e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidono del tutto.
-Vale la scheda della giocatrice. `[INFERRED — needs DM confirmation]`*
+e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidevano. Il DM ha
+deciso il 2026-09-25: vale la scheda della giocatrice, e il §11 C è allineato.*
+<!-- /storico -->
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
 
