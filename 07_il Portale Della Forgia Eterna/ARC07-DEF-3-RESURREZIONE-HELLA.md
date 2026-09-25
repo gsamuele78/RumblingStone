@@ -432,7 +432,9 @@ drenn-okh hald: torn, torn-vrath!»* (*Padre Moradin, ferro sotto la montagna!
 Hella, figlia della pietra: torna, la strada non è finita!*). Poi la preghiera
 per intero, in italiano, dall'handout.
 **✉ Si consegna qui: *la preghiera della resurrezione*** al giocatore di
-Thorik, che la legge ad alta voce.
+Thorik, che la legge ad alta voce, in piedi a nord del cerchio, con la mano
+sull'Altare. Non a memoria: la legge, come si legge un contratto davanti a chi
+lo deve firmare.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
 > <!-- storico -->
@@ -884,7 +886,9 @@ foglio *Hella, tornata*):
 Lo statblocco del **Treant di Adamantio** è in **Appendice A**.
 
 **✉ Si consegna qui, alla giocatrice di Hella**: **Hella, tornata** (le righe da
-aggiungere alla sua scheda), **Durik** e il suo **eco privato**. La scheda
+aggiungere alla sua scheda, che per il resto resta la sua), **Durik** nel
+momento in cui appoggia la testa sul petto di Hella, e il suo **eco privato**.
+Le caselle dei Doni sul foglio di Hella le segni tu, dopo il rito. La scheda
 completa per il DM è in Appendice A.
 
 ---

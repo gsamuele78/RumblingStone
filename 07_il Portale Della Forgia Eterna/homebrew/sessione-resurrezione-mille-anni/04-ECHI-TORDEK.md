@@ -1,8 +1,10 @@
 # Tordek — lo zaino
 
+<!-- consegna -->
 > *Per il giocatore di Tordek. È quello che hai sognato dormendo nella Sala
 > della Forgia. Il DM ti chiede di leggerlo ad alta voce; la riga in fondo è
 > solo per te.*
+<!-- /consegna -->
 
 ---
 

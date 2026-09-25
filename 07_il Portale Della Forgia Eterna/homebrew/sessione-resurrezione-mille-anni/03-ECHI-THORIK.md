@@ -1,8 +1,10 @@
 # Thorik — le mani sotto la trave
 
+<!-- consegna -->
 > *Per il giocatore di Thorik. È quello che hai sognato dormendo nella Sala
 > della Forgia. Il DM ti chiede di leggerlo ad alta voce; la riga in fondo è
 > solo per te.*
+<!-- /consegna -->
 
 ---
 

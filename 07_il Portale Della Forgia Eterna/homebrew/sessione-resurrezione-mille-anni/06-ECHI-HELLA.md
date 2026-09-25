@@ -1,8 +1,10 @@
 # Hella — dall'altra parte, e ritorno
 
+<!-- consegna -->
 > *Per la giocatrice di Hella. Due fogli: il primo lo leggi ad alta voce agli
 > altri quando il DM te lo chiede, il secondo è un promemoria per quando Hella
 > potrà raccontare.*
+<!-- /consegna -->
 
 ---
 

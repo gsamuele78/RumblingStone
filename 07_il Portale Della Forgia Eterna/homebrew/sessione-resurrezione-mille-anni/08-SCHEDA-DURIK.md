@@ -1,7 +1,9 @@
 # Durik, il guardiano di pietra
 
+<!-- consegna -->
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
+<!-- /consegna -->
 
 ![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
 

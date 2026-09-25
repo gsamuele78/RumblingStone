@@ -168,8 +168,13 @@ def riscala_link(testo: str, da_cartella, a_cartella) -> str:
 # Il blocco: i due marcatori ciascuno su una riga sua. Se l'apertura avesse
 # del testo dopo, la regola arriverebbe fino al primo «/storico» che chiude una
 # riga, anche venti righe più in basso: è successo, nel Palio, con l'intestazione.
+#
+# Lo stesso blocco con `consegna` al posto di `storico` chiude l'istruzione di
+# consegna in testa a un foglio ✉ («Si consegna al risveglio…», «Il DM te la
+# consegna dopo…»): è del DM, e la dice la regia della serata, non il foglio che
+# il giocatore tiene in mano.
 _STORICO_RIGHE = re.compile(
-    r"^[ \t>]*<!--\s*storico\s*-->[ \t]*\n.*?^[ \t>]*<!--\s*/storico\s*-->[ \t]*(?:\n|\Z)",
+    r"^[ \t>]*<!--\s*(storico|consegna)\s*-->[ \t]*\n.*?^[ \t>]*<!--\s*/\1\s*-->[ \t]*(?:\n|\Z)",
     re.S | re.M)
 _STORICO_IN_LINEA = re.compile(r"<!--\s*storico\s*-->.*?<!--\s*/storico\s*-->", re.S)
 # Una riga di tabella non si può chiudere fra due marcatori senza spezzare la
@@ -220,6 +225,8 @@ def togli_storico(md: str) -> str:
 
     >>> togli_storico("Prima.\\n<!-- storico -->\\n> diceva altro\\n<!-- /storico -->\\nDopo.")
     'Prima.\\nDopo.'
+    >>> togli_storico("# Durik\\n\\n<!-- consegna -->\\n> *Si consegna al risveglio.*\\n<!-- /consegna -->\\n\\nEra il tuo cane.")
+    '# Durik\\n\\n\\nEra il tuo cane.'
     >>> togli_storico("| 1 | resta |\\n| 7 | coperto <!-- storico: riga --> |\\n")
     '| 1 | resta |\\n'
     >>> togli_storico("> <!-- storico -->v1. <!-- /storico -->Modulo.\\n> Resta.\\n<!-- storico -->\\nvia\\n<!-- /storico -->\\n")

@@ -91,3 +91,19 @@ Quello che si paga:
   nel Palio si portava via l'intera intestazione, e una virgola che faceva
   perdere il contenuto di una parentesi. Una regola che toglie testo sbaglia
   in silenzio: il test sul corpus vero è la ragione per cui questa si può usare.
+
+## Estensione: l'istruzione di consegna sui fogli ✉
+
+Lo stesso giorno, rileggendo il volume dei giocatori della serata, il DM ha
+trovato in testa a undici fogli l'istruzione di consegna scritta per lui: «Si
+consegna al risveglio, quando Durik appoggia la testa sul petto di Hella»,
+«Il DM te la consegna dopo che hai scelto di donare». Il giocatore che riceve
+il foglio non ne ha bisogno, e in due casi gli anticipa la scena.
+
+La stessa funzione chiude anche il blocco `<!-- consegna -->` …
+`<!-- /consegna -->`. Quello che diceva il blocco resta nel master, nella riga
+**✉ Si consegna qui**, o nella regia della serata: tre informazioni che non
+c'erano (come si legge la preghiera, le caselle dei Doni che segna il DM, la
+seconda metà dell'eco di Hella) sono state aggiunte lì prima di chiudere i
+blocchi. Il test `TestIFogliDeiGiocatori` boccia un capitolo `player` che
+stampa ancora un'istruzione di consegna.

@@ -142,5 +142,26 @@ class TestSulCorpusVero(unittest.TestCase):
                 f"<!-- storico --> … <!-- /storico --> (rumblingstone-editoria §4.6)")
 
 
+
+class TestIFogliDeiGiocatori(unittest.TestCase):
+    """Un foglio ✉ va in mano al giocatore: l'istruzione di consegna («Si consegna
+    al risveglio…», «Il DM te la consegna dopo…») è del DM e sta nella regia.
+    Il 2026-09-25 undici fogli della serata la stampavano in testa."""
+
+    # «si consegna il Peso di contrada», minuscolo e dentro una frase, è il Palio:
+    # finzione, non un'istruzione al DM
+    CONSEGNA = re.compile(r"\bSi consegna|te l[ao] consegna|Da mostrare al tavolo")
+
+    def test_nessuna_istruzione_di_consegna_sui_fogli(self):
+        for m in REPO.glob("**/*.manifest.json"):
+            if m.name == "tools.manifest.json" or "/build/" in m.as_posix():
+                continue
+            for c in json.loads(m.read_text(encoding="utf-8")).get("chapters", []):
+                f = (m.parent / c.get("file", "")).resolve()
+                if c.get("tag") != "player" or not f.is_file():
+                    continue
+                for riga in togli_storico(f.read_text(encoding="utf-8")).split("\n"):
+                    self.assertNotRegex(riga, self.CONSEGNA, f"{m.name} → {f.name}")
+
 if __name__ == "__main__":
     unittest.main()
