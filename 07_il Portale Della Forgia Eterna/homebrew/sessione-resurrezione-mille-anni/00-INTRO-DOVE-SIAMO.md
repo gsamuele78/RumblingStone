@@ -63,7 +63,7 @@ li decide la Sala:
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
-| Echi privati | uno a testa | Thorik, Tordek, Artemis all'inizio; Hella al risveglio (`DEF-3` §7) |
+| Echi privati | uno a testa | Thorik, Tordek, Artemis all'inizio; Hella all'inizio del risveglio nella Sala, quando legge il suo sogno (regia, Atto I) |
 | Il Cuore di Moradin (immagine) | a tutti | subito dopo la rivelazione del reliquiario (`DEF-3` §3) |
 | La preghiera della resurrezione | al giocatore di Thorik | allo Step 1 (`DEF-3` §4) |
 | Carte dei Doni | solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |

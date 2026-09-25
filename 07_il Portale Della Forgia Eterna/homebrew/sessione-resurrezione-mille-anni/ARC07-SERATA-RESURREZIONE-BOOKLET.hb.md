@@ -83,7 +83,7 @@ li decide la Sala:
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
-| Echi privati | uno a testa | Thorik, Tordek, Artemis all'inizio; Hella al risveglio (cap. IV §7) |
+| Echi privati | uno a testa | Thorik, Tordek, Artemis all'inizio; Hella all'inizio del risveglio nella Sala, quando legge il suo sogno (regia, Atto I) |
 | Il Cuore di Moradin (immagine) | a tutti | subito dopo la rivelazione del reliquiario (cap. IV §3) |
 | La preghiera della resurrezione | al giocatore di Thorik | allo Step 1 (cap. IV §4) |
 | Carte dei Doni | solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |
@@ -1751,10 +1751,11 @@ deve essere già fatto.
 | Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
 | prima di cominciare (la regia della serata, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
+| all'inizio del risveglio nella Sala (regia, Atto I, punto 3) | l'**eco privato di Hella** | alla giocatrice di Hella, che legge il sogno ad alta voce | «Echi — Hella» |
 | §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
 | §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
 | §5, **dopo il sì** di chi dona | **la carta del Dono** | solo a chi ha donato | «La carta del Dono», una per chi dona |
-| §7, dopo il box di Durik | **Hella, tornata**, **Durik** e l'eco privato di Hella | alla giocatrice di Hella | «Hella, tornata» · «Durik, il guardiano di pietra» · «Echi — Hella» |
+| §7, dopo il box di Durik | **Hella, tornata** e **Durik** | alla giocatrice di Hella | «Hella, tornata» · «Durik, il guardiano di pietra» |
 | §8-ter, mentre la Corona apre il varco | **Le Cronache dei Quattro Eroi** | a tutti | «Le Cronache dei Quattro Eroi» |
 
 ⚠️ **Il prezzo dei Doni si dice, la carta no.** Moradin dice a voce cosa costa
@@ -2512,7 +2513,9 @@ Lo statblocco del **Treant di Adamantio** è in **Appendice A**.
 
 **✉ Si consegna qui, alla giocatrice di Hella**: **Hella, tornata** (le righe da
 aggiungere alla sua scheda, che per il resto resta la sua), **Durik** nel
-momento in cui appoggia la testa sul petto di Hella, e il suo **eco privato**.
+momento in cui appoggia la testa sul petto di Hella. Il suo **eco privato**
+ce l'ha già dall'Atto I: la seconda metà, «Quello che hai attraversato», le
+serve adesso, per il racconto del §8.
 Le caselle dei Doni sul foglio di Hella le segni tu, dopo il rito. La scheda
 completa per il DM è in Appendice A.
 
