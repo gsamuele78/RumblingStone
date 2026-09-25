@@ -284,7 +284,21 @@ def inline(s: str) -> str:
     # nel PDF, a pagina 58. Una barra rovescia davanti lo fa tornare testo.
     if _STRUTTURA_A_INIZIO.match(out):
         out = "\\" + out
-    return out
+    return _RIGA_DA_COMPILARE.sub(_spezzabile, out)
+
+
+# Una riga da compilare («Cosa taglierei: ______») è una parola sola per chi
+# impagina: non va a capo, esce dalla colonna e si stampa sopra quella accanto
+# (le schede di feedback del Drappo, 2026-09-25). Tiene la lunghezza che le ha
+# dato l'autore, ma ogni otto trattini ha un punto dove può andare a capo. Si
+# fa qui e non nel tema, perché una regola del tema toccherebbe anche le mappe
+# ASCII, dove un punto di rottura in più è proprio il difetto da evitare.
+_RIGA_DA_COMPILARE = re.compile(r"(?:\\_){9,}")
+
+
+def _spezzabile(m: "re.Match[str]") -> str:
+    n = len(m.group(0)) // 2
+    return "\u200b".join("\\_" * min(8, n - k) for k in range(0, n, 8))
 
 
 _STRUTTURA_A_INIZIO = re.compile(r"(=+|[-+/])(\s|$)")
@@ -344,6 +358,12 @@ _NON_TESTO = ("#page", "#griglia", "#figura", "#tabella", "#statblocco", "#pageb
 # lascerebbe mezza colonna vuota.
 CELLE_COLONNA_MINIMO = 78
 RIGHE_FLOTTANTE = 40
+# Una tabella da quattro colonne in su scavalca le due colonne come float, e un
+# float non si spezza. Misurato sui volumi del repo il 2026-09-25: le tabelle da
+# 18 e 20 righe del Drappo stanno in una pagina, quella da 48 dell'Abbazia no e
+# si stampava sopra se stessa. Oltre questa soglia va su una pagina A4 a una
+# colonna, dove scorre e si spezza come il testo.
+RIGHE_TABELLA_FLOTTANTE = 30
 
 
 def e_griglia_mappa(blocco: list[str], titolo: str = "") -> bool:
@@ -433,7 +453,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
     auto: int | None = None
     i = 0
 
-    def _su_a4() -> None:
+    def _su_a4(cosa: str = "una griglia o una mappa più larga della colonna") -> None:
         """Apre una pagina A4 a una colonna e ci porta dentro il titolo della mappa.
 
         Si risale fino al titolo più alto fra gli ultimi otto pezzi, purché in
@@ -454,7 +474,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
         out.insert(k, "#page(columns: 1)[")
         aperte += 1
         auto = livello
-        print(f"  · una griglia o una mappa più larga della colonna va su una pagina A4: "
+        print(f"  · {cosa} va su una pagina A4: "
               f"«{ultimo_titolo or 'senza titolo'}»", file=sys.stderr)
 
     while i < len(righe):
@@ -518,7 +538,9 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 corpo.append(_celle(righe[i]))
                 i += 1
             n = len(testa)
-            out.append(f"#tabella({n},")
+            if n >= 4 and len(corpo) > RIGHE_TABELLA_FLOTTANTE and not aperte:
+                _su_a4(f"una tabella da {len(corpo)} righe, troppo alta per scavalcare le colonne,")
+            out.append(f"#tabella({n}, pagina: true," if aperte else f"#tabella({n},")
             out += [f"  [*{inline(h)}*]," if h.strip() else "  []," for h in testa]
             for r in corpo:
                 out += [f"  [{inline(c)}]," for c in (r + [""] * n)[:n]]

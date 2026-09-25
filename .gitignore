@@ -343,8 +343,9 @@ scripts/comfyui-local/ComfyUI/
 # Export VTT: artefatti locali di export_uvtt.py (import nativo Foundry/Roll20)
 **/rendered/vtt/
 
-# Sorgenti Typst generati dai manifest dei booklet (--keep-typ): artefatti
-**/homebrew/*.typ
+# Sorgenti Typst generati dai manifest dei booklet (--keep-typ): artefatti.
+# Anche nelle sottocartelle: i volumi di ARC-07 stanno in homebrew/<sessione>/.
+**/homebrew/**/*.typ
 
 # Eccezione al blocco «*.jpg» qui sopra, che serve a tenere fuori foto e scansioni.
 # Queste sei sono le derivate leggere dei ritratti dipinti (~100 KB l'una): le

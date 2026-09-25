@@ -126,6 +126,26 @@ Sono qui perché sono i primi da cercare quando «il PDF viene male».
    e `DEF-4`. Una riga oltre `CELLE_PAGINA` (110) scende sotto i 9 pt anche su
    A4, e l'esportatore lo dice: si accorcia l'annotazione, non si stringe la
    mappa. I casi sono in `TestMappeCheNonEntranoInColonna`.
+5. **Ciò che esce dalla colonna.** Trovati il 2026-09-25 compilando tutti i
+   quindici volumi prima e dopo la regola del punto 4. Tre forme, e due
+   c'erano da mesi:
+   - un percorso in `codice` o una parola come `PortaleDellaForgiaEterna` è
+     una parola sola, non va a capo e si stampa sopra la colonna accanto
+     (otto pagine in quattro volumi). → il tema spezza il codice in linea dopo
+     `/ _ . -` e fra minuscola e maiuscola;
+   - una riga da compilare `______` fa lo stesso (le schede di feedback del
+     Drappo). → l'esportatore la spezza ogni otto trattini, e lo fa lui e
+     non il tema, perché una regola del tema toccherebbe anche le mappe;
+   - una tabella da quattro colonne in su è un float, e un float non si
+     spezza: l'indice delle 48 aree dell'Abbazia usciva dal fondo e si
+     stampava sopra se stesso. → oltre 30 righe va su una pagina A4 a una
+     colonna, dove scorre (`RIGHE_TABELLA_FLOTTANTE`).
+
+   Il punto 4 ne ha portato una quarta: una figura su pagina A4 riservava
+   **sempre** 21 cm, anche per una mappa da 16, e la coda della pagina
+   scivolava sola alla successiva (una riga a pagina 4 del Palio, un fregio a
+   pagina 62). → il tetto si applica misurando l'immagine, come per i 16 cm.
+   I casi sono in `TestCioCheEsceDallaColonna` e `TestFiguraSuPaginaCompilata`.
 
 ### Il controllo a vista, prima di consegnare
 
@@ -135,6 +155,24 @@ stesso: una sonda `query(raw.where(block: true))` e `query(image)` in coda a
 una copia del `.typ` (dentro il repo, per via di `--root`) dà il numero di
 pagina di ogni griglia e di ogni immagine, e
 `typst compile --pages N,M --ppi 70` le rende in PNG da guardare.
+
+Quando si tocca il tema o l'esportatore, le pagine da guardare sono tutte, e
+non si trovano a occhio. Si compilano i volumi **prima e dopo** la modifica
+(il prima da un `git worktree` sul commit di partenza) e si confrontano tre
+numeri per volume, leggendo il PDF con PyMuPDF:
+
+| Si conta | Che cosa dice |
+|---|---|
+| le pagine | un salto grande (il Palio da 52 a 64) chiede di guardare dove |
+| le pagine con meno di 120 caratteri di corpo e nessuna immagine | una riga o un fregio rimasti soli |
+| le coppie di righe di testo che si sovrappongono, e il testo oltre i 30 pt dal bordo del foglio | ciò che esce dalla colonna, punto 5 |
+
+Il 2026-09-25, su `main` dopo la #169, la terza riga contava 1.474
+sovrapposizioni in quattro volumi (1.462 nella sola tabella dell'Abbazia) e
+otto pagine oltre il bordo; dopo la correzione, zero e zero. Resta un falso
+positivo noto: una parola maiuscola che tocca il bordo della sua cella senza
+uscirne (Drappo, pagina 31). PyMuPDF non è fra le dipendenze del repo (AGPL, e serve solo
+qui): per questo è un controllo che si fa, non un cancello in CI.
 
 ---
 
