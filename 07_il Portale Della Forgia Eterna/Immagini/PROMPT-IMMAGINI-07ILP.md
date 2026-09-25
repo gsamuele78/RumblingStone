@@ -1092,11 +1092,12 @@ human hands, faceted gemstone cut like a jewel, cartoon, neon glow, bokeh hearts
 > mani, la luce da sinistra, il segno del personaggio ben visibile, nessuna
 > scritta. Skullcrusher ha già la scheda **41**, la Custode la **28**.
 >
-> ⚠️ **Cosa è canone e cosa no.** Ruolo, abiti, armi e segno vengono dai
-> master e dal Bestiario. **I tratti del volto** (colore della barba, il naso
-> rotto di Durin, le zanne di Zog'tar) i master non li dicono: sono `[PROPOSTA]`,
-> scelti perché ogni volto sia riconoscibile da lontano. Si cambiano prima di
-> generare, non dopo.
+> ⚠️ **Cosa è canone.** Ruolo, abiti, armi e segno vengono dai master e dal
+> Bestiario. **I tratti del volto** sono canone anche loro, e li fissano i sette
+> ritratti in `Immagini/ritratti/`: dove una scheda e il ritratto non
+> coincidevano ha vinto il ritratto. Un ritratto nuovo si fa su queste schede.
+> L'arma resta quella dello statblocco anche quando il ritratto la disegna
+> diversa (Durin: ascia doppia nel master, a una lama nel ritratto).
 
 ### R1 · Durin Rocciadura  `[ritratto-durin-rocciadura]`
 
@@ -1105,8 +1106,8 @@ human hands, faceted gemstone cut like a jewel, cartoon, neon glow, bokeh hearts
 
 ```
 DURIN — nano adulto, veterano · largo, non alto
-VOLTO      barba castana corta e legata · naso rotto una volta · sguardo che non si ferma
-INDOSSA    armatura completa ammaccata, scudo tondo · colore: blu scuro di Hammerfist
+VOLTO      barba castana lunga, raccolta in una treccia sola · sguardo che non si ferma
+INDOSSA    armatura completa ammaccata, cappuccio verde, scudo tondo · colore: ferro scuro, lo scudo blu di Hammerfist
 SEGNO      l'ascia doppia, tenuta troppo stretta
 ```
 
@@ -1119,7 +1120,7 @@ SEGNO      l'ascia doppia, tenuta troppo stretta
 
 ```
 RE THOREK I — nano di 182 anni · massiccio, eretto
-VOLTO      barba bianca lunghissima, divisa in tre trecce · occhi grigi pesanti
+VOLTO      barba bianca lunghissima, divisa in quattro trecce · occhi grigi pesanti
 INDOSSA    armatura di mithral · colore: argento e blu scuro · corona semplice senza gemme
 SEGNO      l'ascia Frostcleaver, sempre in pugno
 ```
@@ -1134,7 +1135,7 @@ SEGNO      l'ascia Frostcleaver, sempre in pugno
 ```
 THORGRIM — nano vecchio · seduto, non si alza
 VOLTO      barba grigio ferro · occhi lucidi che non se ne accorgono
-MANI       grandi, sulle ginocchia, con il callo della presa d'ascia
+MANI       grandi, aperte verso la luce con i palmi in su, e il callo della presa d'ascia
 SEGNO      Aegis Fang, l'ascia da guerra nanica, appoggiata al fianco
 ```
 
@@ -1149,7 +1150,7 @@ SEGNO      Aegis Fang, l'ascia da guerra nanica, appoggiata al fianco
 ZETH (≈372 DR) — mezz'elfo adulto, magro
 VOLTO      zigomi alti, occhi febbrili, barba di qualche giorno
 INDOSSA    tunica da capomastro impolverata fino ai gomiti · colore: ocra
-SEGNO      traccia rune sulle pareti dei tunnel [col gesso: PROPOSTA]
+SEGNO      traccia rune col gesso sulle pareti dei tunnel
 ```
 
 **Prompt**: eseguibile in [`PROMPT-RITRATTI-E-TAVOLE-ARC07.md`](PROMPT-RITRATTI-E-TAVOLE-ARC07.md), `id=ritratto-zeth-mastro-costruttore` — stesso stile del Drappo di Tarsilia (look comune, ancora fiamminga, negativi). Si genera con `comfyui_batch.py --prompts`.
@@ -1162,7 +1163,7 @@ SEGNO      traccia rune sulle pareti dei tunnel [col gesso: PROPOSTA]
 ```
 BALVAR — nano dello scudo, vecchio · curvo sul lavoro
 VOLTO      barba bianca sporca di polvere d'ardesia · occhi calmi
-INDOSSA    grembiule di cuoio da bottega · colore: grigio ardesia
+INDOSSA    grembiule di cuoio da bottega su una casacca trapuntata · colore: verde scuro e cuoio
 SEGNO      la lastra d'ardesia sulle ginocchia e la punta di ferro in mano
 ```
 

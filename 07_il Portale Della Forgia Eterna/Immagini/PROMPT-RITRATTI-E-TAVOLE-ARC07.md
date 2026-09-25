@@ -57,9 +57,9 @@ oversaturated
 ```
 
 **Formati**: ritratti **832 × 1216** (verticali, come le schede del Drappo),
-tavole **1536 × 864**. I tratti del volto che i master non dicono sono
-`[PROPOSTA]` e stanno nelle schede-personaggio di `PROMPT-IMMAGINI-07ILP.md`: si
-cambiano lì e qui prima di generare, non dopo.
+tavole **1536 × 864**. I tratti del volto stanno nelle schede-personaggio di
+`PROMPT-IMMAGINI-07ILP.md` e sono canone: li fissano i ritratti in
+`Immagini/ritratti/`. Un prompt qui sotto si cambia solo insieme alla sua scheda.
 
 ---
 
@@ -75,7 +75,7 @@ da generare» diventa l'immagine.
 ```
 [look comune] + old shield dwarf seated on a workshop stool at the back of a
 war tent of black hide, white beard dusted grey with slate powder, calm
-unhurried eyes, leather workshop apron, a slab of slate on his knees and an
+unhurried eyes, leather workshop apron over a quilted dark green tunic, a slab of slate on his knees and an
 iron stylus in his right hand, engraving slowly, he has just looked up
 ```
 *La cosa che non deve mancare*: la punta di ferro sull'ardesia. Non smette di incidere.
@@ -95,7 +95,7 @@ counting on his fingers, dwarven bones hanging from the tent behind him
 **Re Thorek I — il re di una fortezza giovane**
 <!-- img id=ritratto-re-thorek-i size=832x1216 stile=ritratto serie=base -->
 ```
-[look comune] + ancient dwarf king, very long white beard in three braids,
+[look comune] + ancient dwarf king, very long white beard in four braids,
 heavy grey eyes, mithral armour, dark blue cloak, plain iron crown with no
 gems, a great axe of pale blue-white steel with frost patterns along the
 blade in his right hand, a war map on a stone table, freshly cut white walls
@@ -107,8 +107,8 @@ blade in his right hand, a war map on a stone table, freshly cut white walls
 ```
 [look comune] + old dwarf warrior seated on a stone bench, head tilted back,
 looking up at a golden light falling from above out of frame, iron-grey beard,
-eyes wet without him noticing, empty hands open on his knees with palms turned
-up, the thick callus of an axe grip visible across the right palm, a
+eyes wet without him noticing, empty hands open and raised toward the light,
+palms turned up, the thick callus of an axe grip visible across the right palm, a
 single-bladed dwarven war axe with a haft worn smooth leaning beside him, he
 holds nothing
 ```
@@ -117,9 +117,9 @@ holds nothing
 **Durin Rocciadura — la pattuglia**
 <!-- img id=ritratto-durin-rocciadura size=832x1216 stile=ritratto serie=base -->
 ```
-[look comune] + dwarf veteran guard at night in a pine forest, short brown
-beard tied in one knot, a nose broken once, eyes that keep moving, dented
-full plate, round shield painted dark blue on his back, a double-headed axe
+[look comune] + dwarf veteran guard at night in a pine forest, long brown
+beard gathered in a single braid, eyes that keep moving, dented dark full
+plate, green hood, round shield rimmed in dark blue on his back, a double-headed axe
 held too tightly in both hands, torches of six other dwarves blurred behind
 ```
 *La cosa che non deve mancare*: le mani strette sull'ascia. Ha paura.

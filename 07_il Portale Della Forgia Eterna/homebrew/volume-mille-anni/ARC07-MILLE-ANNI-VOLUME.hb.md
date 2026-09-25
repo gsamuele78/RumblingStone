@@ -566,7 +566,7 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | un vecchio seduto che non si alza. Le mani sulle ginocchia, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
+| **Aspetto** | un vecchio seduto che non si alza. Le mani aperte verso la luce, i palmi in su, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
 | **Vuole** | che l'ascia torni in una mano che sa perché la tiene |
 | **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
 | **Non combatte** | è una non-creatura: nessuno statblocco esiste, e non va inventato |
@@ -594,8 +594,8 @@ e i futuri.»*
 Thorik, e quando il re tace parla lui.
 
 > **Read-aloud (Mercer lead, Casa di Davide support).** *Il vecchio sulla panca
-> non si è mosso. Ha le mani appoggiate sulle ginocchia, e sono mani che hanno
-> tenuto la stessa ascia che tiene Thorik: si vede dal callo, nello stesso punto.
+> non si è mosso. Tiene le mani aperte verso la luce, i palmi in su, e sono mani
+> che hanno tenuto la stessa ascia di Thorik: si vede dal callo, nello stesso punto.
 > Guarda la corona sulla fronte di Thorik per il tempo di tre respiri. Poi gli
 > occhi gli si riempiono e lui non se ne accorge, perché sta già parlando.*
 >
