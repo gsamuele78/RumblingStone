@@ -4,51 +4,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="versione-artefatto" content="bracieri · S3 · r1 · 2026-09-25">
+    <meta name="versione-artefatto" content="bracieri · S3 · r2 · 2026-09-25">
     <title>Bracieri Gemelli di Moradin — Stadio 3, le Chiavi della Forgia (VERSIONE DM)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap"
+        rel="stylesheet">
     <style>
-        @page { size: A4; margin: 0.5in; }
-        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
-        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
-        .class-title { font-size: 24pt; font-weight: bold; color: #8B2500; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
-        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
-        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B4513; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
-        h2 { color: #8B2500; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
-        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
-        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
-        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
-        .desc-text { padding-top: 5px; }
-        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
-        ul { margin-top: 5px; margin-bottom: 5px; }
-        li { margin-bottom: 4px; }
-        .nuovo { background: #8B2500; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
-        .block-nuovo { border: 2px solid #8B2500; background: rgba(139, 37, 0, 0.07); }
-        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
-        .spento .power-header { color: #777; }
-        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
-        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
-        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
-        th { background: linear-gradient(135deg, #8B2500, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
-        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
-        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
-        td.c { text-align: center; }
-        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
-        .grigio .power-header { color: #666; font-size: 11pt; }
-        .grigio .corpo { font-size: 9.5pt; color: #444; }
-        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
-        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
-        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
-        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
-        @media print {
-            body { padding: 0; background: none; }
-            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
-            h2, .incisione { break-after: avoid; page-break-after: avoid; }
-            .solo-dm { break-before: page; page-break-before: always; }
+        /* ── Page Setup ── */
+        @page {
+            size: A4;
+            margin: 0.5in;
         }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IM Fell English', 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1e100a;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(160deg, #f9f5ee 0%, #ede6d3 100%);
+        }
+
+        /* ── Typography ── */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Cinzel', serif;
+        }
+
+        .class-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 22pt;
+            font-weight: 700;
+            color: #6b1c07;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(139, 45, 10, 0.25);
+        }
+
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 12pt;
+            color: #4a2e1a;
+            margin: 4px 0;
+            letter-spacing: 1px;
+        }
+
+        .dwarven {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 10.5pt;
+            color: #8b1a00;
+            text-shadow: 0 0 4px rgba(255, 80, 0, 0.3);
+            font-weight: 700;
+            text-align: center;
+            margin-top: 6px;
+            letter-spacing: 0.5px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 13.5pt;
+            font-weight: 600;
+            color: #6b1c07;
+            border-bottom: 2px solid #c08020;
+            padding-bottom: 3px;
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #3d1f0a;
+            margin: 14px 0 6px 0;
+        }
+
+        /* ── Layout ── */
+        .header {
+            text-align: center;
+            border-bottom: 3px double #8b4513;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+        /* ── Artifact Image ── */
+        .artifact-image {
+            display: block;
+            margin: 0 auto 14px auto;
+            max-width: 22%;
+            height: auto;
+            border: 4px solid #8b4513;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+        }
+
+        /* ── Stat / Info Blocks ── */
+        .stat-block {
+            background: rgba(139, 69, 19, 0.05);
+            border: 1px solid #8b4513;
+            border-left: 4px solid #8b4513;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+            border-radius: 4px;
+            font-size: 10.5pt;
+        }
+
+        .lore-block {
+            background: rgba(100, 50, 10, 0.04);
+            border: 1px dashed #a06020;
+            border-left: 4px solid #c08020;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            border-radius: 4px;
+            font-style: italic;
+            font-size: 10pt;
+            color: #3a1f08;
+        }
+
+        .req-block {
+            background: rgba(70, 20, 0, 0.06);
+            border: 1px solid #8b2500;
+            border-left: 4px solid #8b2500;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+            border-radius: 4px;
+            font-size: 10pt;
+        }
+
+        .req-block ul {
+            margin: 4px 0;
+            padding-left: 18px;
+        }
+
+        .req-block li {
+            margin: 3px 0;
+        }
+
+        .warning-box {
+            background: rgba(180, 30, 0, 0.07);
+            border: 1px solid #8b2500;
+            padding: 7px 12px;
+            border-radius: 4px;
+            font-size: 10pt;
+            margin-top: 8px;
+            color: #6b1000;
+        }
+
+        /* ── Tables ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background: linear-gradient(135deg, #6b1c07, #9b3a0f);
+            color: #f5e6c8;
+            padding: 6px 8px;
+            text-align: center;
+            font-weight: 600;
+            border: 1px solid #4a1205;
+            font-family: 'Cinzel', serif;
+            font-size: 9.5pt;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 5px 7px;
+            text-align: left;
+            border: 1px solid #c09050;
+            background: rgba(252, 248, 238, 0.85);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: rgba(240, 228, 200, 0.85);
+        }
+
+        /* ── Power Tables (Attivabili) ── */
+        .table-attivabili th {
+            background: linear-gradient(135deg, #7a0000, #c03000);
+            color: #fff5e0;
+            border-color: #5a0000;
+        }
+
+        .table-attivabili td {
+            border-color: #c06030;
+            background: rgba(255, 248, 240, 0.9);
+        }
+
+        .table-attivabili tr:nth-child(even) td {
+            background: rgba(255, 235, 215, 0.9);
+        }
+
+        /* ── Earth Power Table ── */
+        .table-terra th {
+            background: linear-gradient(135deg, #2d5a1b, #4a8c2a);
+            color: #ffffdf;
+            border-color: #1a3d0d;
+        }
+
+        .table-terra td {
+            border-color: #6a9a40;
+            background: rgba(240, 252, 235, 0.9);
+        }
+
+        .table-terra tr:nth-child(even) td {
+            background: rgba(220, 240, 210, 0.9);
+        }
+
+        /* ── Passive Table ── */
+        .table-passivi th {
+            background: linear-gradient(135deg, #1a4070, #2d6aaa);
+            color: #e8f0ff;
+            border-color: #0d2a55;
+        }
+
+        .table-passivi td {
+            border-color: #3060a0;
+            background: rgba(235, 243, 255, 0.9);
+        }
+
+        .table-passivi tr:nth-child(even) td {
+            background: rgba(215, 230, 255, 0.9);
+        }
+
+        /* ── CSS helper classes replacing inline styles ── */
+        .row-title {
+            font-weight: bold;
+            color: #8b0000;
+        }
+
+        .row-center {
+            text-align: center;
+        }
+
+        .row-center-green {
+            text-align: center;
+            color: #1a4010;
+            font-weight: bold;
+        }
+
+        /* ── Synergy Box ── */
+        .synergy-box {
+            background: rgba(0, 80, 0, 0.05);
+            border: 2px solid #2d7a1a;
+            padding: 12px 14px;
+            margin: 14px 0;
+            border-radius: 6px;
+        }
+
+        .synergy-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 11pt;
+            color: #1a4a0a;
+            margin-bottom: 6px;
+        }
+
+        /* ── Blessing Box ── */
+        .blessing-box {
+            background: rgba(180, 100, 0, 0.06);
+            border: 2px solid #c08020;
+            padding: 12px 14px;
+            margin: 14px 0;
+            border-radius: 6px;
+        }
+
+        .blessing-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 11pt;
+            color: #7a4800;
+            margin-bottom: 6px;
+        }
+
+        /* ── Jump Detail Box ── */
+        .jump-details {
+            border: 2px solid #daa520;
+            padding: 14px;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 8px;
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+
+        .jump-title {
+            margin-top: 0;
+            border-bottom: 1px solid #daa520;
+            color: #b8860b;
+            padding-bottom: 5px;
+            font-size: 11pt;
+            font-family: 'Cinzel', serif;
+        }
+
+        .details-paragraph {
+            margin-bottom: 5px;
+        }
+
+        .details-list {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        .details-list-item {
+            margin-bottom: 5px;
+        }
+
+        .details-list-zero {
+            margin-top: 0;
+        }
+
+        .example-box {
+            font-size: 0.9em;
+            background: rgba(255, 255, 255, 0.65);
+            padding: 9px;
+            border-radius: 4px;
+            border: 1px dashed #daa520;
+            margin-top: 10px;
+        }
+
+        /* ── Cheat Sheet ── */
+        .cheat-sheet {
+            border: 2px solid #8b4513;
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 18px;
+            background: rgba(254, 250, 244, 0.9);
+            page-break-inside: avoid;
+        }
+
+        .cheat-sheet-title {
+            text-align: center;
+            margin: 0 0 10px 0;
+            color: #6b1c07;
+            border-bottom: 1px solid #8b4513;
+            padding-bottom: 5px;
+            font-family: 'Cinzel', serif;
+            font-size: 11pt;
+        }
+
+        /* ── Senzienza Box ── */
+        .senzienza-box {
+            background: rgba(50, 0, 80, 0.05);
+            border: 1px solid #600080;
+            border-left: 4px solid #800090;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+            border-radius: 4px;
+            font-size: 10.5pt;
+        }
+
+        /* ── Lists ── */
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 3px 0;
+        }
+
+        /* ── Value Table ── */
+        .value-block {
+            background: rgba(139, 69, 19, 0.04);
+            border: 1px solid #b08030;
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+        }
+
+        .value-header {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 10.5pt;
+            color: #6b3010;
+            margin: 0 0 6px 0;
+        }
+
+        .value-content {
+            font-size: 10pt;
+        }
+
+        /* ── Section divider ── */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 12pt;
+            font-weight: 600;
+            color: #fff5e0;
+            background: linear-gradient(135deg, #6b1c07, #9b3a0f);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin: 18px 0 8px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title-earth {
+            font-family: 'Cinzel', serif;
+            font-size: 12pt;
+            font-weight: 600;
+            color: #e8ffd8;
+            background: linear-gradient(135deg, #2d5a1b, #4a8c2a);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin: 18px 0 8px 0;
+            letter-spacing: 0.5px;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            background: rgba(0, 0, 0, 0.06);
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        /* ── Print ── */
+        @media print {
+            body {
+                font-size: 10pt;
+                padding: 0;
+                background: white;
+            }
+
+            .artifact-image {
+                max-width: 20%;
+            }
+
+            table,
+            .stat-block,
+            h2,
+            h3,
+            h4,
+            .synergy-box,
+            .cheat-sheet,
+            .jump-details,
+            .lore-block,
+            .req-block,
+            .blessing-box {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .header {
+                border-bottom: 2px solid #8b4513;
+                margin-bottom: 14px;
+            }
+        }
+            .dmbox { background: rgba(139,0,0,0.05); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dmbox h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .dmbanner { text-align:center; margin: 6px 0; } .dmbanner span { background:#8B0000; color:#f8f6f0; font-size:9pt; font-weight:bold; letter-spacing:2px; padding:3px 14px; border-radius:3px; }
+        .bozza { border: 2px dashed #8B0000; background: rgba(139,0,0,0.03); padding: 10px 12px; border-radius: 5px; }
+        .spento { opacity: 0.8; border-style: dashed !important; }
+        @media print { .solo-dm { break-before: page; page-break-before: always; } .dmbox, table { break-inside: avoid; } }
     </style>
 </head>
 
@@ -56,53 +484,177 @@
 
     <div class="header">
         <h1 class="class-title">Bracieri Gemelli di Moradin</h1>
-        <div class="subtitle">Stadio 3 — le Chiavi della Forgia · bozza da approvare</div>
-        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="subtitle">Twin Hearth-Gauntlets of Moradin</div>
+        <div class="subtitle">Stato: le Chiavi della Forgia — bozza da approvare (D16)</div>
+        <div class="dmbanner"><span>VERSIONE DM · NON DARE AL GIOCATORE</span></div>
         <div class="dwarven">«Una forgia senza fuoco non crea, ma un fuoco senza pietra non dura.»</div>
     </div>
 
-    <div class="requirements" style="border-color:#8B0000;">
-        <strong>Questa pagina non ha una controparte per il giocatore</strong>: nessuna fonte del repo scrive un terzo stadio dei Bracieri. Qui c'è quello che le fonti dicono dei Bracieri dopo la Forgia, e una proposta per il DM. Non è canone finché il DM non la approva (D16).
+    <div class="warning-box" style="margin-bottom:12px;">
+        <strong>Questa pagina non ha ancora una controparte per il giocatore</strong>: nessuna fonte del repo scrive un terzo stadio dei Bracieri. La prima parte è la scheda come Tordek la leggerebbe; la seconda, da «Solo DM» in poi, le fonti e le domande. Non è canone finché il DM non la approva.
     </div>
 
-    <div class="dm">
-        <h3>La progressione dei Bracieri, in una tabella</h3>
-        <table>
-        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
-        <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
-        <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria dell'Attacco Poderoso · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> (giocatore) e <code>04_…_Fuoco_DM</code></td><td>✅ passato</td></tr>
-        <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral nel Tempio Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello di Fuoco e Pietra · Frantumare · Diventare una Collina · Ego 18</td><td><code>05_…_Completa</code> e <code>05_…_Completa_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
-        <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code> (solo DM)</td><td>⬜ ARC-09, da approvare</td></tr>
+    <h2>Aspetto &amp; Lore</h2>
+
+    <div class="lore-block bozza">
+        <p>Prima che la Forgia Eterna fosse una sala, prima che la Corona di Adamantio fosse posata su una fronte mortale, Moradin sollevò dalla roccia due blocchi di adamantio ancora rovente. Li immerse nel magma del Piano del Fuoco finché non bevvero la furia delle fiamme, poi li incatenò al cuore del Piano della Terra perché imparassero il peso della montagna.</p>
+        <p>Chi li ha forgiati non ne ha fatto soltanto dei pugni. Il Topazio ricorda la strada del Fuoco, lo Smeraldo quella della Pietra, e tutte e due portano allo stesso posto: l'Incudine da cui sono usciti. I Bracieri sono <strong>chiavi</strong>, e qualcuno, al Torneo di Dauth, lo sapeva prima di Tordek.</p>
+        <p>Quando i pugni si battono l'uno contro l'altro, il suono non è più quello di due placche tettoniche che si assestano. È una porta.</p>
+    </div>
+
+    <div class="stat-block">
+        <strong>Guanto Sinistro:</strong> <em>Topazio-Fuoco</em>. <strong>Guanto Destro:</strong> <em>Geode di Smeraldo</em>. Le rune che li legano, quando i pugni si toccano, disegnano l'Incudine del Mondo.
+    </div>
+
+    <h2>Statistiche dell'Artefatto</h2>
+
+    <table>
+        <tbody>
+            <tr><th>Campo</th><th>Valore</th><th>Campo</th><th>Valore</th></tr>
+            <tr><td><strong>Tipo</strong></td><td>Artefatto Legale Buono</td><td><strong>Slot</strong></td><td>Mani</td></tr>
+            <tr><td><strong>Aura</strong></td><td>Travolgente (Evocazione, Abiurazione, Invocazione, Trasmutazione)</td><td><strong>Livello Incantatore</strong></td><td>20°</td></tr>
+            <tr><td><strong>Ego</strong></td><td>18 — Intelligenza 14, Saggezza 16, Carisma 16</td><td><strong>TS Propri</strong></td><td>Tempra 20 / Riflessi 14 / Volontà 18</td></tr>
+        </tbody>
     </table>
+
+    <h2>Tutto quello che resta dello stadio 2</h2>
+    <p>Lo stadio 3 <strong>aggiunge</strong>. Restano tutti i poteri della scheda <em>Fuoco e Terra</em>: Pelle di Scorie e Pietra (RD 5/adamantio), Cuore di Brace, Castigo del Drago, Maestria dell'Attacco Poderoso, Cariche di Devastazione (4, benedette), Frantumare, Passo di Brace, Vista della Galleria, Cammino nella Tempesta, e gli attivabili qui sotto.</p>
+    <div class="cheat-sheet">
+        <h4 class="cheat-sheet-title">Riepilogo Tattico (Cheat Sheet)</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Potere</th>
+                    <th>Azione</th>
+                    <th>Usi</th>
+                    <th>Effetto Rapido</th>
+                </tr>
+                <tr>
+                    <td><strong>Pugni di Magma</strong></td>
+                    <td>Swift</td>
+                    <td>3/gg</td>
+                    <td>+Sag danni Fuoco su tutti i colpi; TS Tempra CD 18 o Infermo 1 round.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pugno Frana</strong></td>
+                    <td>Standard</td>
+                    <td>3/gg</td>
+                    <td>+4d6 Contundenti; TS Rif CD 19 o Prono + AoE Equilibrio CD 15 adiacenti.</td>
+                </tr>
+                <tr>
+                    <td><strong>Colpi del Fuoco</strong></td>
+                    <td>Standard</td>
+                    <td>3/gg</td>
+                    <td>+4d6 Fuoco; Spinta 1,5m (Temp CD 18); AoE 2d6 Fuoco adiacenti (Rif CD 18 dimezza).</td>
+                </tr>
+                <tr>
+                    <td><strong>Tremore Forgiatore</strong></td>
+                    <td>Standard</td>
+                    <td>1/gg</td>
+                    <td>AoE 6m: 2d6 Contundenti + Prono (Rif CD 18). Danno doppio strutture.</td>
+                </tr>
+                <tr>
+                    <td><strong>Ancoraggio Montagna</strong></td>
+                    <td>Immediata</td>
+                    <td>2/gg</td>
+                    <td>Nega movimento forzato. +4 TS vs quell'effetto.</td>
+                </tr>
+                <tr>
+                    <td><strong>Salto Fiammegiante</strong></td>
+                    <td>Movimento</td>
+                    <td>3/gg</td>
+                    <td>Super Salto (1d20+For+Saltare). AoE 3m Fuoco all'arrivo 2d6 (Rif dimezza).</td>
+                </tr>
+                <tr style="background:rgba(75,83,32,0.10);">
+                    <td><strong>Diventare una Collina</strong> ⭐</td>
+                    <td>Movimento<br><small>(1ª volta: <strong>automatica</strong>)</small></td>
+                    <td>1/gg</td>
+                    <td>Taglia <strong>Grande</strong> per 1 min: FOR +2, DES −2, −1 TxC e CA, portata e spazio ×2, <strong>+4 taglia a spinta/lotta/sgambetto</strong>, danno senz'armi +1 dado, −4 Nascondersi. <strong>Solo in pericolo</strong>: creatura Enorme+ sul campo, un compagno a 0 pf, o tu sotto metà pf.</td>
+                </tr>
+                <tr>
+                    <td><strong>Martello (Sinergia)</strong></td>
+                    <td>Gratuita</td>
+                    <td>1/round su critico</td>
+                    <td>Spendi 1 Carica → attiva effetto Colpi del Fuoco o Pugno Frana senza consumare usi.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cariche Devastazione</strong></td>
+                    <td>Gratuita</td>
+                    <td>3 (4 benedetto)/gg</td>
+                    <td>Su critico: 1C→+2d6F / 2C→+3d6F / 3C→+4d6F. Su 18–20 nat: 1 carica gratis.</td>
+                </tr>
+                <tr>
+                    <td><strong>Frantumare (Shatter)</strong></td>
+                    <td>Gratuita</td>
+                    <td>1/gg</td>
+                    <td>Dopo critico: Shatter CL13 CD16 sul nemico. Devastante vs strutture/cristallo.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="dm">
+    <div class="section-title">Le Chiavi della Forgia — proposta</div>
+
+    <table class="table-attivabili bozza">
+        <tbody>
+            <tr><th>Potere</th><th>Usi</th><th>Azione</th><th>Effetto</th></tr>
+            <tr><td><span class="row-title">La Chiave (Mag)</span></td><td>1/settimana</td><td>Azione di round completo (i due pugni battuti insieme)</td><td><em>Spostamento planare</em> (LI 20°) <strong>solo verso la Forgia Eterna</strong>, per Tordek e chi lo tocca; da lì, il ritorno al punto di partenza.</td></tr>
+            <tr><td><span class="row-title">Mente di Pietra (Su)</span></td><td>sempre</td><td>—</td><td><strong>+4 ai TS</strong> contro i poteri psionici e gli ammaliamenti che vogliono fargli usare i Bracieri. È la montagna che non si sposta.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="solo-dm"></div>
+    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
+
+    <div class="dmbox">
+        <h3>La progressione dei Bracieri</h3>
+        
+    <table class="">
+        <tbody>
+            <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Scheda</th><th>Stato</th></tr>
+            <tr><td><strong>0</strong> · dormienti</td><td>un nano degno li indossa</td><td>guanti di adamantio; i requisiti del portatore</td><td><code>00_Bracieri_S0_Dormienti</code></td><td>✅ passato</td></tr>
+            <tr><td><strong>1</strong> · Fuoco</td><td>Rituale 1, <em>Battesimo delle Fiamme</em>: l'Elementale del Fuoco Anziano sul Piano del Fuoco</td><td>Castigo del Drago · Maestria · Cariche · Cuore di Brace · Passo di Brace · Pugni di Magma · Colpi del Fuoco · Salto Fiammeggiante · Ego 12</td><td><code>04_…_Fuoco</code> e <code>_DM</code></td><td>✅ passato</td></tr>
+            <tr><td><strong>2</strong> · Fuoco e Terra</td><td>Rituale 2, <em>Prova della Galleria Profonda</em>: la Sentinella di Mithral; poi la Benedizione della Forgia e Terros</td><td>+ Pelle di Scorie e Pietra · Pugno Frana · Tremore · Ancoraggio · Vista della Galleria · Cammino nella Tempesta · Martello · Frantumare · Diventare una Collina · +10 a Saltare · Ego 18</td><td><code>05_…_Completa</code> e <code>_DM</code></td><td>▶ <strong>oggi</strong></td></tr>
+            <tr><td><strong>3</strong> · le Chiavi della Forgia</td><td>proposta: il Torneo di Dauth, Xal'thor</td><td><strong>bozza</strong> (D16)</td><td><code>06_Bracieri_S3_Chiavi_della_Forgia_DM</code></td><td>⬜ da approvare</td></tr>
+        </tbody>
+    </table>
+
+    </div>
+
+    <div class="dmbox">
         <h3>Cosa dicono le fonti</h3>
-        <table>
-        <tr><th>Fonte</th><th>Cosa dice</th></tr>
-        <tr><td><code>…P2B-Torneo-Tordek-OTTO-PORTE-e-ORBE.md</code> §2.1.1</td><td>Xal'thor, al Giorno 3 del Torneo di Dauth, vuole <strong>solo i Bracieri</strong>: sono <strong>chiavi planari per la Forgia Eterna</strong></td></tr>
-        <tr><td><code>RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md</code></td><td>l'obiettivo di Xal'thor non è rubarli ma <strong>convincere Tordek</strong> che il Piano della Terra è in pericolo, perché apra lui un portale</td></tr>
-        <tr><td><code>…P2C-Salvatore-Mercante-TESTO.md</code></td><td>Sal vende a Tordek un cristallo nanico «identico ai Bracieri»: è un <strong>dreno di risonanza</strong>, 1 carica ogni 6 ore nella stessa stanza</td></tr>
-        <tr><td><code>…P3-BATTAGLIA-FINALE-MYTHAL-FOCUS</code> §PG2</td><td>al Mythal Tordek regge coi Bracieri (Fuoco + Terra); l'Orbe delle Otto Porte, se vinto, è un secondo focus</td></tr>
-        <tr><td>il DM, 2026-09-25</td><td>«i requisiti sono stati svolti nell'arco della Forgia Eterna (magari con ulteriori conseguenze possibili?)»</td></tr>
+        
+    <table class="">
+        <tbody>
+            <tr><th>Fonte</th><th>Cosa dice</th></tr>
+            <tr><td><code>…P2B-Torneo-Tordek-OTTO-PORTE-e-ORBE.md</code> §2.1.1</td><td>Xal'thor, al Giorno 3 del Torneo di Dauth, vuole <strong>solo i Bracieri</strong>: sono <strong>chiavi planari per la Forgia Eterna</strong></td></tr>
+            <tr><td><code>RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md</code></td><td>l'obiettivo di Xal'thor non è rubarli ma <strong>convincere Tordek</strong> che il Piano della Terra è in pericolo, perché apra lui un portale</td></tr>
+            <tr><td><code>…P2C-Salvatore-Mercante-TESTO.md</code></td><td>Sal vende a Tordek un cristallo nanico «identico ai Bracieri»: è un <strong>dreno di risonanza</strong>, 1 carica ogni 6 ore nella stessa stanza</td></tr>
+            <tr><td><code>…P3-BATTAGLIA-FINALE-MYTHAL-FOCUS</code> §PG2</td><td>al Mythal Tordek regge coi Bracieri (Fuoco + Terra); l'Orbe delle Otto Porte, se vinto, è un secondo focus</td></tr>
+            <tr><td>il DM, 2026-09-25</td><td>«i requisiti sono stati svolti nell'arco della Forgia Eterna (magari con ulteriori conseguenze possibili?)»</td></tr>
+        </tbody>
     </table>
+
     </div>
 
-    <div class="dm">
-        <h3>🟡 BOZZA per il DM — le Chiavi della Forgia (D16, non canone finché non la approvi)</h3>
-        <p>L'idea viene dalle fonti: i Bracieri <strong>sono</strong> chiavi planari verso la Forgia Eterna, e Xal'thor lo sa. Il terzo stadio è Tordek che scopre di tenere in mano una porta, e sceglie cosa farne. La conseguenza che il DM chiedeva c'è: Xal'thor vuole che la apra lui.</p>
-        <table>
+    <div class="dmbox">
+        <h3>🟡 La bozza, per il DM (D16)</h3>
+        
+    <table class="">
+        <tbody>
             <tr><th>Cosa</th><th>Proposta</th><th>Da dove viene</th></tr>
             <tr><td><strong>Innesco</strong></td><td>al Torneo di Dauth, Giorno 3, Tordek <strong>non apre</strong> il portale che Xal'thor gli chiede, e tiene i Bracieri. Se lo apre ingannato, lo stadio 3 arriva lo stesso, ma la Forgia ha un ospite illithid e i Bracieri lo sanno</td><td>P2B, Espansione narrativa</td></tr>
-            <tr><td><strong>La Chiave</strong> (Mag)</td><td>1/settimana, i due pugni battuti insieme: <em>spostamento planare</em> (LI 20°) <strong>solo</strong> verso la Forgia Eterna, per Tordek e chi lo tocca; da lì, il ritorno al punto di partenza</td><td>«chiavi planari per la Forgia Eterna»</td></tr>
-            <tr><td><strong>Mente di Pietra</strong> (Su)</td><td>+4 ai TS contro i poteri psionici e gli ammaliamenti che vogliono fargli usare i Bracieri. È la montagna che non si sposta</td><td>l'inganno di Xal'thor; il nome richiama il Cammino nella Tempesta</td></tr>
+            <tr><td><strong>La Chiave</strong></td><td>come sopra</td><td>«chiavi planari per la Forgia Eterna»</td></tr>
+            <tr><td><strong>Mente di Pietra</strong></td><td>come sopra</td><td>l'inganno di Xal'thor</td></tr>
             <tr><td><strong>La conseguenza</strong></td><td>ogni uso della Chiave è sentito da chi cerca la Forgia: il DM avanza di un passo un orologio (Xal'thor, i Githyanki di Vaereth, o chi ne prende il posto in ARC-10)</td><td>il Clock Githyanki di P2B §2.1.3, come modello</td></tr>
             <tr><td><strong>Ego</strong></td><td>resta 18. Il dreno di Sal, se Tordek lo tiene, ruba anche l'uso settimanale della Chiave</td><td>P2C</td></tr>
-        </table>
-        <p>Restano fuori, di proposito: poteri di danno nuovi (Tordek ne ha già abbastanza) e un terzo incavo. I Bracieri sono <strong>gemelli</strong>: due gemme, due piani. Prezzo, come controllo: <em>spostamento planare</em> una volta a settimana vale poco in monete; il valore vero è la porta. Lotto T10-f.</p>
-        <p><strong>Da decidere</strong>: approvi lo stadio con questo innesco e questi due poteri? E l'orologio della conseguenza, chi lo muove?</p>
+        </tbody>
+    </table>
+<p>Restano fuori, di proposito: poteri di danno nuovi e un terzo incavo. I Bracieri sono <strong>gemelli</strong>: due gemme, due piani.</p><p><strong>Da decidere</strong>: approvi lo stadio con questo innesco e questi due poteri? E l'orologio della conseguenza, chi lo muove?</p>
     </div>
 
-    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S3 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione bracieri · S3 · r2 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
 </body>
+
 </html>

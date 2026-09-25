@@ -388,7 +388,16 @@ Cosa ho trovato costruendoli, oltre alle tre domande:
 - **I Bracieri hanno due stesure dello stadio 1.** `01_…md` «Versione 1» (Pugno
   di Moradin, Salto Infuocato con +10 a Saltare) e la scheda `04_…Fuoco`
   (Pugni di Magma, Passo di Brace). Vale la **04**, che il giocatore ha letto e
-  che il PDF «Fuoco» stampa.
+  che il PDF «Fuoco» stampa. Il +10 a Saltare della Versione 1 torna allo **stadio 2**:
+  la scheda 05 lo dà col Salto Fiammeggiante, finché resta un uso.
+- **Le schede degli stadi hanno la lore e lo stile delle originali** (richiesta del
+  DM prima del merge). I Bracieri S0, S1 e S3 sono costruiti sulla scheda 05
+  (aspetto e lore, statistiche, requisiti, senzienza, tabelle dei poteri, dettagli
+  del Salto, riepilogo tattico); la pagina DM dello stadio 2 è la 05 intera più la
+  parte DM; la vecchia scheda 04 è in `_ARCHIVIO/pagine-v1-2026-09-25/`. Le
+  pagine della Collana S2 e S3 partono dalla Radicata e portano tutti i poteri che
+  restano, con i nuovi tratteggiati; Aegis S1 ha la lore e il valore della sua
+  fonte; l'Anello S3 riporta scheda tecnica e poteri del Riforgiato.
 - **Le cariche di devastazione sono della Cintura** (D17 del piano ARC-07): le
   schede dei Bracieri le riportano come sinergia. È un solo gruppo di cariche.
 
@@ -502,7 +511,7 @@ Avatar) e la tabella non li sa contare. Le voci che sa contare:
 - **Bracieri**: resistenza al fuoco 10 = 12.000; *Frantumare* 1/giorno (livello 2,
   LI 3) = 2 × 3 × 1.800 ÷ 5 = 2.160. Le stime del file `01_` (~60.400 per il Fuoco,
   ~94.900 completo) sono fatte sulla **Versione 1**, non sulla scheda 04 che vale:
-  contano *Pugno di Moradin* e +10 a Saltare, che la scheda non ha, e non contano
+  contano *Pugno di Moradin*, che la scheda non ha, e non contano
   Passo di Brace, Benedizione e Collina, che la scheda ha. **Sono da rifare**
   quando il DM vuole un numero; per la completezza il confronto basta.
 - **Collana**: +4 Saggezza = 4² × 1.000 = 16.000; +3 armatura naturale = 3² × 2.000 = 18.000.

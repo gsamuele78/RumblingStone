@@ -228,7 +228,7 @@ The devastation charges on the gauntlet sheets are the **Belt's** (D17 of the AR
 4. **Colpi del Fuoco (3/day, Su):** Standard attack, +4d6 fire, push 5 ft (Fort DC 18), adjacent 2d6 fire (Ref DC 18)
 5. **Cuore di Brace:** Fire Resistance 10 (continuous)
 6. **Salto Fiammeggiante (3/day, Su):** Move action; special jump (d20 + STR + Jump ranks, distance scaled by WIS), landing deals 2d6 fire in 3 m radius
-7. **Passo di Brace:** +3 m speed while a Salto use remains (the +10 to Jump belonged to the superseded Version 1 draft, not to the sheet)
+7. **Passo di Brace:** +3 m speed while a Salto use remains. The Stage 2 sheet (05 HTML) adds **+10 competence to Jump** while a use remains; the Fire sheet (04) did not have it
 8. **Sentient Voice:** Whispers dwarven advice; refuses powers if wielder betrays dwarven ideals
 9. **Forge Blessing** (permanent, DM 2026-07-04): devastation charges 4/day (Belt of Devastation, D17), free charge on natural 18-20, *shatter* 1/day after a confirmed critical
 
@@ -251,7 +251,7 @@ The devastation charges on the gauntlet sheets are the **Belt's** (D17 of the AR
 
 - Fire Phase: ~60,400 gp
 - Full (Fire + Earth): ~94,900 gp
-- ⚠️ Both estimates were made on the superseded Version 1 draft (they count Pugno di Moradin and +10 Jump, and miss Passo di Brace, the Blessing and the Hill): see the SRD price check in `PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md` §10
+- ⚠️ Both estimates were made on the superseded Version 1 draft (they count Pugno di Moradin, which the sheet does not have, and miss Passo di Brace, the Blessing and the Hill): see the SRD price check in `PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md` §10
 
 ---
 
