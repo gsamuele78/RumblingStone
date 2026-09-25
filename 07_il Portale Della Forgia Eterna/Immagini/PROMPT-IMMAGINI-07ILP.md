@@ -1129,7 +1129,7 @@ SEGNO      l'ascia Frostcleaver, sempre in pugno
 ### R3 · Thorgrim Barbadiferro  `[ritratto-thorgrim-barbadiferro]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/thorgrim-barbadiferro.jpg`
-- **Stato**: 🟡 generato con Canva AI; scelta la **seconda versione** (`MAHWLyX0Wa0`, mani vuote e callo visibile, come chiede `DEF-4`). La prima, con la reliquia in mano, è scartata. Il file della seconda non è ancora nel repo
+- **Stato**: 🟡 generato con Canva AI; scelta la versione a mani vuote e callo visibile, come chiede `DEF-4`. La prima, con la reliquia in mano, è scartata. La seconda (`MAHWLyX0Wa0`) il DM non la trovava in Canva ed è stata **rigenerata** il 2026-09-25 come `MAHWMYEg1KY`, con lo stesso prompt. Il file non è ancora nel repo
 
 ```
 THORGRIM — nano vecchio · seduto, non si alza
