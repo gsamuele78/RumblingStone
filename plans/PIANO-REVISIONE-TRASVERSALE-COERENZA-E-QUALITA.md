@@ -422,9 +422,9 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 | ~~D11~~ | Lo stadio 1 dell'Anello (Mask sveglio) è stato usato al tavolo? | **Deciso**: no, solo la crisi; pagina giocatore tolta |
 | ~~D12~~ | Gli effetti della Opzione C sulla scheda di Artemis? | **Deciso**: la Fortezza Mentale |
 | ~~D13~~ | I poteri del Caos Ultimo (Anello, stadio 3)? | **Deciso**: *Alba Voluta* e *Purificazione del Crepuscolo* (senza cura) 1/giorno; il potere del *Prezzo dell'Armonia* lo sceglie Artemis e lo eredita Zalkatar |
-| D15 | Aegis Fang allo stadio 1 tiene la *Dragondoom* e i poteri inferiori dello stadio 0? | Sì: uno stadio aggiunge e non toglie (equivalente +8) |
-| D16 | Il terzo stadio dei Bracieri, *le Chiavi della Forgia* (Torneo di Dauth, Xal'thor)? | Bozza sulla pagina DM `06_Bracieri_S3_Chiavi_della_Forgia_DM.html`: *La Chiave* 1/settimana verso la Forgia, *Mente di Pietra*, un orologio a ogni uso |
-| D17 | La Collana Fiorita e la Foresta che Cammina: i poteri? | Bozze sulle pagine DM `03_Collana_S2_Fiorita_DM.html` e `04_Collana_S3_Foresta_che_Cammina_DM.html`, dalla materia di ARC-09 riportata a tre semi |
+| ~~D15~~ | Aegis Fang allo stadio 1 tiene la *Dragondoom* e i poteri inferiori dello stadio 0? | **Deciso**: restano tutti (equivalente +8) |
+| ~~D16~~ | Il terzo stadio dei Bracieri, *le Chiavi della Forgia* (Torneo di Dauth, Xal'thor)? | **Deciso**: approvato com'era proposto (La Chiave, Mente di Pietra, l'orologio) |
+| ~~D17~~ | La Collana Fiorita e la Foresta che Cammina: i poteri? | **Deciso**: approvate come proposte; *Radici nel Mythal* in ogni cerchio consacrato |
 | ~~D14~~ | Aegis Fang: i poteri usati al tavolo e mai scritti (Ritornante, *bane*, Tuono, Dragondoom)? | **Deciso**: vale la scheda del repo, Ritornante e Dragondoom (la punizione del MIC); niente *bane* né Tuono allo stadio 0 |
 
 ---

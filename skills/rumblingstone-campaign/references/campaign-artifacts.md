@@ -47,7 +47,7 @@ When Corona di Adamantio is fully awakened and Thorik completes all Legacy Ritua
 - Telepathy with dwarves (90 m); dwarves near Thorik (18 m) are immune to fear
 - **When:** at Ritual 4 (`ARC07-DEF-4` Scene 12, Moment 3), as a scene. The player's crown sheet of 22/10/2025 already said «after completing Ritual: Siege of the Eternal Forge»
 - **Pages (2026-09-25):** `Aegis Fang/01_Aegis_Fang_Stadio1{,_DM}.html` (S1 r1), handed over after the scene
-- **Open (D15):** does Stage 1 keep Dragondoom and the Stage 0 lesser powers? The source does not name them and its value (+7, 98,000 gp) leaves Dragondoom out. Proposal: yes, they stay (+8, 128,000 gp) `[INFERRED — needs DM confirmation]`
+- **Decided (D15, DM 2026-09-25):** Stage 1 keeps Dragondoom and the Stage 0 lesser powers (a stage adds, never removes): +8 equivalent, 128,000 gp. Vs a dragon, Hunter's Cut (+2d6 holy, always) and the Dragondoom smite stack
 
 ### Synergies
 
@@ -216,7 +216,7 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 | S0 · dormant | a worthy dwarf wears them | `Tordek/00_Bracieri_S0_Dormienti{,_DM}.html` | ✅ past |
 | S1 · Fire | Ritual 1, Baptism of Flames (Elder Fire Elemental) | `04_Bracieri_Gemelli_Scheda_PG_Fuoco.html` + `_DM` | ✅ past |
 | S2 · Fire and Earth | Ritual 2, Trial of the Deep Gallery (Mithral Sentinel); then Forge Blessing and Terros | `05_Bracieri_Gemelli_Scheda_PG_Completa.html` + `_DM` | ▶ today |
-| S3 · the Keys of the Forge | **draft (D16)**: at the Dauth Tournament Tordek refuses to open the portal Xal'thor asks for; *La Chiave* 1/week plane shift to the Eternal Forge only; *Mente di Pietra* +4 vs psionics and enchantments aimed at the gauntlets; a clock advances at each use | `06_Bracieri_S3_Chiavi_della_Forgia_DM.html` (DM only) | ⬜ not canon |
+| S3 · the Keys of the Forge | **DM decision 2026-09-25 (D16)**: at the Dauth Tournament Tordek refuses to open the portal Xal'thor asks for; *La Chiave* 1/week plane shift to the Eternal Forge only; *Mente di Pietra* +4 vs psionics and enchantments aimed at the gauntlets; a clock advances at each use | `06_Bracieri_S3_Chiavi_della_Forgia{,_DM}.html` | ⬜ at Dauth |
 
 The devastation charges on the gauntlet sheets are the **Belt's** (D17 of the ARC-07 plan): one pool, not two.
 
@@ -268,14 +268,14 @@ Created during Hella's resurrection ritual from 3 Treant seeds laid on her body 
 
 **Player and DM pages** (canon, 2026-09-25): `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_Radicata{,_DM}.html`; Durik: `02_Durik_Guardiano_di_Pietra{,_DM}.html`.
 
-**Stages** (the moments are canon, the powers of S2 and S3 are not yet):
+**Stages** (moments and powers canon since 2026-09-25, D17):
 
 | Stage | Trigger | Pages | State |
 |---|---|---|---|
 | S0 · the seeds | — (three treant seeds on Hella's body) | `00_Collana_S0_I_Semi_DM.html` (DM only) | ✅ past |
 | S1 · Radicata | the resurrection rite | `01_Collana_Radicata{,_DM}.html` | ▶ after the rite |
-| S2 · Fiorita | Ritual of the Sacred Circle (ARC-09 P1, Sacred Forest) | `03_Collana_S2_Fiorita_DM.html`, **draft (D17)**: *Radici che Sentono*, *Il Muro dei Guardiani* 1/day, Avatar 2/day, a Dauth echo | ⬜ not canon |
-| S3 · Foresta che Cammina | the Battle of Rethmar, the Mythal circle (ARC-09 P3) | `04_Collana_S3_Foresta_che_Cammina_DM.html`, **draft (D17)**: two Treants together without the month of silence, *Radici nel Mythal* | ⬜ not canon |
+| S2 · Fiorita | Ritual of the Sacred Circle (ARC-09 P1, Sacred Forest) | `03_Collana_S2_Fiorita{,_DM}.html`, **DM decision 2026-09-25 (D17)**: *Radici che Sentono*, *Il Muro dei Guardiani* 1/day, Avatar 2/day, a Dauth echo | ⬜ at the Sacred Circle |
+| S3 · Foresta che Cammina | the Battle of Rethmar, the Mythal circle (ARC-09 P3) | `04_Collana_S3_Foresta_che_Cammina{,_DM}.html`, **DM decision 2026-09-25 (D17)**: two Treants together without the month of silence, *Radici nel Mythal* | ⬜ at Rethmar |
 
 ⚠️ ARC-09 P1B and P1C were written before the rite and speak of a «Collana dei Semi Treant» with **four** seeds that Hella already wore. Canon: **three** seeds, born at the rite. «Damarath» is the old name of Rethmar.
 

@@ -357,6 +357,20 @@ pagina del giocatore si fa quando il DM approva.
 | D16 | **Il terzo stadio dei Bracieri**, *le Chiavi della Forgia*: innesco al Torneo di Dauth (Tordek non apre il portale che Xal'thor gli chiede), *La Chiave* 1/settimana verso la Forgia Eterna, *Mente di Pietra* +4 contro psionici e ammaliamenti, un orologio che avanza a ogni uso | bozza sulla pagina `06_Bracieri_S3_Chiavi_della_Forgia_DM.html`. Le fonti dicono che i Bracieri **sono** chiavi planari: la bozza parte da lì |
 | D17 | **La Collana Fiorita e la Foresta che Cammina**: i momenti sono canone, i poteri no. Fiorita: *Radici che Sentono*, *Il Muro dei Guardiani* 1/giorno, Avatar 2/giorno, un'eco di Dauth; Foresta che Cammina: i due Treant insieme senza il mese di silenzio, *Radici nel Mythal* | bozze sulle pagine `03_Collana_S2_Fiorita_DM.html` e `04_Collana_S3_Foresta_che_Cammina_DM.html`, dalla materia di ARC-09 P1B, P1C e P3 riportata a tre semi |
 
+**Le risposte del DM, la sera stessa (2026-09-25)**:
+
+| # | Decisione | Applicata in |
+|---|---|---|
+| D15 | Aegis Fang allo stadio 1 **tiene** Dragondoom e poteri inferiori (equivalente +8) | pagine Aegis S1 (r4), master, skill, `state.yaml` |
+| D16 | Il terzo stadio dei Bracieri, **le Chiavi della Forgia**, approvato com'era proposto | pagine Bracieri S3 giocatore e DM (r3), skill |
+| D17 | Fiorita e Foresta che Cammina approvate come proposte, *Radici nel Mythal* in ogni cerchio consacrato | pagine Collana S2 e S3 giocatrice e DM (r3), Radicata DM, skill |
+
+Con l'autorizzazione del DM, **una volta sola**, sono state scritte in
+`campaign/state.yaml` (e rigenerato `state.md`) tre righe di fatti decisi:
+Aegis Fang Dragondoom (D14, D15), il Manto con RD 5/epico e male (D7), la
+Fortezza Mentale di Artemis (D12). Niente esiti della serata: quelli restano
+a `dm.py session end`.
+
 ---
 
 ## §8 · Il versionamento (ADR-0071)
@@ -373,9 +387,9 @@ dicevano «S1», che con i quattro stadi dell'Anello è diventato «S2»).
 |---|---|---|
 | Corona | 0, 1, 2, 3 (giocatore e DM) | — |
 | Anello | 0 (G+DM), 1 (solo DM, D11), 2 (G+DM), 3 (G+DM, D13 decisa) | — |
-| Aegis Fang | 0 (G+DM), 1 (G+DM) | la D15 sulla pagina dello stadio 1 |
-| Bracieri | 0 (G+DM), 1 (la scheda «Fuoco» + DM), 2 (G+DM), 3 (solo DM, bozza) | la D16, poi la pagina del giocatore dello stadio 3 |
-| Collana | 0 (solo DM: la Collana non esisteva), 1 (G+DM), 2 e 3 (solo DM, bozze) | la D17, poi le pagine della giocatrice |
+| Aegis Fang | 0 (G+DM), 1 (G+DM) | — (D15 decisa) |
+| Bracieri | 0, 1, 2, 3 (G+DM) | — (D16 decisa) |
+| Collana | 0 (solo DM: la Collana non esisteva), 1, 2, 3 (G+DM) | — (D17 decisa) |
 
 Cosa ho trovato costruendoli, oltre alle tre domande:
 
@@ -499,7 +513,7 @@ tabella; il *Prezzo dell'Armonia* toglie il potere che Artemis sceglie.
 |---|---|---|
 | 0 | +2, Ritornante (+1), Dragondoom (+1) = equivalente +4 | 4² × 2.000 = 32.000, + 330 l'ascia perfetta |
 | 1 | +4, Sacra (+2), Ritornante (+1) = equivalente +7 | 7² × 2.000 = **98.000**, come dice la fonte |
-| 1, con la D15 | + Dragondoom = equivalente +8 | 8² × 2.000 = 128.000 |
+| 1 (D15) | + Dragondoom = equivalente +8 | 8² × 2.000 = 128.000 |
 | 1 | *Guarigione* 1/giorno, come base | 6 × 11 × 1.800 ÷ 5 = 23.760; che colpisca **tutti** i nani entro 9 m è fuori tabella |
 | 0 e 1 | senzienza, poteri inferiori, telepatia, immunità alla paura dei nani | tabella degli oggetti intelligenti, non applicata qui |
 

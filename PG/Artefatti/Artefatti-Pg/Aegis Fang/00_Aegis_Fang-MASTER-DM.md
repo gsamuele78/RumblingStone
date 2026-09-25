@@ -68,6 +68,8 @@ vincoli*).
 - **Potenziamento**: diviene **+4 Ascia da Guerra Nanica Sacra (Holy)
   Ritornante**; taglio 1d10, 20/×3; senziente **Int 16, Sag 17, Car 18,
   Ego 20**.
+- **Tiene tutto lo stadio 0** (DM 2026-09-25, D15): la *Dragondoom* e i poteri
+  inferiori restano; uno stadio aggiunge e non toglie. Equivalente +8.
 - **Ritornante inesorabile** (costante): in combinazione col portatore, non
   smarrisce mai l'orientamento e **non può essere sottratta con l'inganno**
   (oltre al Ritornante di base).
