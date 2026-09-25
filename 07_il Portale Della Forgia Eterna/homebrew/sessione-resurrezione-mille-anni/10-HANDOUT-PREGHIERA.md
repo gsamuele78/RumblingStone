@@ -1,8 +1,10 @@
 # La preghiera della resurrezione
 
+<!-- consegna -->
 > *Per il giocatore di Thorik, allo Step 1 del rito. Si legge in piedi, a nord
 > del cerchio, con la mano sull'Altare. Non si recita a memoria: si legge,
 > come si legge un contratto davanti a chi lo deve firmare.*
+<!-- /consegna -->
 
 ---
 

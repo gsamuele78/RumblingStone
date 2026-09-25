@@ -1,8 +1,10 @@
 # La carta del Dono — Thorik
 
+<!-- consegna -->
 > *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
 > detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
 > torna indietro.*
+<!-- /consegna -->
 
 ---
 
