@@ -646,7 +646,7 @@ preso la prima tacca.
 
 | Scena | Dove | Chi entra | Tacche |
 |---|---|---|---:|
-| **5** · La notte nella fortezza | quartieri ospiti, fucina, gallerie | **Zeth** | da 0 a 7, a scelta |
+| **5** · La notte nella fortezza | quartieri ospiti, fucina, gallerie | **Zeth**, **Gunnvor** | da 0 a 7, a scelta |
 | **6** · Il mare di tende | dalla postierla al centro del campo | — | 2, più 1 per fallimento |
 | **7** · La tenda del comando | la tenda di Zog'tar | **Balvar** | 1 se gli parlano |
 | **8** · Zog'tar | la stessa tenda | **Zog'tar** | — |
@@ -670,6 +670,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Banchetto e benedizioni (Scena 5, facoltativo, +1 morale 12 h) | **1** |
 | Hella veglia i semi della Collana: i Treant dell'alba (Scena 5) | **1** |
 | Cercare il Mastro Costruttore Zeth (Scena 5) | **1** |
+| La fucina di notte: comprare, vendere, barattare con Gunnvor (Scena 5) | **1** |
 | Attraversare il mare di tende (Scena 6, skill challenge) | **2** |
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar invece di colpire subito (Scena 7) | **1** |
@@ -740,6 +741,164 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   tacche: recupero pieno, e poi il campo si attraversa di corsa). Il momentum
   spinge al breve. ⚠️ La guarigione del passaggio (Scena 1) li ha già rimessi in
   piedi: il riposo serve solo a chi ha speso qualcosa da allora.
+
+#### ⚒️ La fucina di notte — Gunnvor, e lo scambio *(1 tacca)*
+
+Si arriva qui se i PG vogliono comprare, vendere o barattare. La fortezza
+non ha un mercato: ha una fucina che lavora per l'alba, e una maestra armaiola
+che decide cosa ne esce.
+
+> **Read-aloud (Salvatore lead, Andor support) — la fucina.** *La fucina è
+> l'unico posto della fortezza dove nessuno parla sottovoce. Tre forge accese, e
+> davanti a ognuna una fila di ragazzi con in mano quello che hanno trovato: un
+> piccone, una vanga, la spada del padre. Una nana con le braccia bruciate fino
+> al gomito prende ogni lama, la guarda di taglio contro la brace e la mette in
+> uno di due mucchi. Quale sia quello buono non lo dice. Sul banco dietro di lei
+> c'è poco: qualche fiasca chiusa con la cera, un mazzo di frecce, un'ascia
+> avvolta in un panno che nessuno tocca. Vi vede entrare. Non smette di
+> lavorare. Alza il mento verso quello che avete addosso, e aspetta.*
+
+**GUNNVOR (asciutta, senza alzare gli occhi dalla lama):** *«Stanotte non
+vendo. Scambio. Quello che serve sulle mura lo pago bene, e lo pago in braccia:
+questa fiasca vale un ragazzo che non va su con la vanga. Il resto… il resto
+tenetevelo. Non ho tempo di pesarlo.»*
+
+**Scheda d'entrata — Gunnvor, maestra armaiola della fortezza giovane**
+
+| | |
+|---|---|
+| **Aspetto** | nana di mezza età, braccia bruciate fino al gomito, un grembiule di cuoio che ha più toppe che cuoio. Porta il martello infilato nella cintura come un'arma |
+| **Vuole** | che i duecento vecchi e ragazzi vadano sulle mura con un'arma vera. Non riguarda i PG: c'era prima di loro e ci sarà dopo |
+| **Teme** | di aver sbagliato mucchio. Una lama incrinata data a un ragazzo è un ragazzo morto, e l'ha già fatto una volta |
+| **Suona** | conta tutto in **braccia**: quanti difensori arma una cosa. Una pozione «vale un braccio», le monete «non armano nessuno» |
+| **Sa** | cosa c'è in fortezza, cosa manca, e che le mura reggono due ore |
+| **Non sa** | chi sono i PG, a meno che al consiglio non abbiano avuto la **fiducia piena**: allora lo sa da Durin, e comincia da *amichevole* |
+| **Eco** | quello che le lasciano stanotte resta qui, e fra mille anni qualcuno lo trova (§7) |
+
+**Dati per il DM (non da leggere)**
+
+- **Convincerla.** Parte *indifferente*. Una prova di **Diplomazia** con
+  risultato **15** la porta ad *amichevole* (tabella degli atteggiamenti dei PNG
+  dell'SRD): allora apre il banco. Con la **fiducia piena** del consiglio parte
+  già *amichevole* e la prova non serve. Se un PG porta **in vista** qualcosa
+  col simbolo della **Mano Rossa**, preso nel 1372, parte *ostile*: è lo stesso
+  segno delle tende là fuori.
+- **Chi aiuta a smistare.** Un PG che si mette al banco con lei, **Artigianato
+  (fabbricare armi) o Valutare CD 15**, le fa guadagnare un'ora: il premio di
+  guerra qui sotto scende da ×1,5 a ×1,25 su quello che il gruppo compra.
+  `[INFERRED — needs DM confirmation]`. È un posto per chi, nel gruppo, ha le
+  mani da fabbro: Gunnvor lo guarda lavorare per un minuto, poi gli passa il
+  mucchio buono.
+- **La tacca.** Tutta la trattativa costa **una** tacca, anche se il gruppo
+  compra e vende dieci cose.
+
+**Il profilo della fortezza come mercato** *(supporto Pathfinder 1e,
+opzionale e dichiarato, come quello di §0-bis)*
+
+Le regole degli insediamenti di Pathfinder 1e danno un numero a una cosa che il
+3.5 lascia al DM. Hammerfist ≈372 DR, con i suoi mille difensori e le famiglie
+nelle miniere, è una **cittadina** (*small town*: valore base 1.000 mo, limite
+d'acquisto 5.000 mo, incantesimi fino al 4° livello). È **devota**: cinquanta
+chierici di Moradin alzano gli incantesimi al **5° livello**. E l'assedio fa
+quello che fa la qualità *impoverita*: dimezza valore base, limite d'acquisto e
+oggetti magici in vendita.
+
+| Voce | Stanotte |
+|---|---|
+| **Valore base** (un oggetto che costa fino a questa cifra c'è con il 75% di probabilità) | **500 mo** |
+| **Limite d'acquisto** (il massimo che il mercato paga per un oggetto solo) | **2.500 mo** |
+| **Incantesimi a pagamento** | fino al **5° livello**, dai chierici di Moradin |
+| **Il forziere del re** | fino a **10.000 mo** in tutto, **solo** con la fiducia piena del consiglio, e **solo** per cose che servono all'alba `[INFERRED — needs DM confirmation]` |
+
+Il forziere del re paga solo quello che arma o cura un difensore.
+
+**Le monete del 1372 valgono a peso**. Cinquanta
+monete fanno mezzo chilo, come sempre; il pesatore della fucina le mette sulla
+bilancia e ne trattiene **una su dieci** per il disturbo `[INFERRED — needs DM
+confirmation]`. Sopra c'è la faccia di un re che nessuno conosce, e un nano la
+morde. Un PG che vuole farle passare per buone senza discussioni: **Raggirare
+contro Percepire Intenzioni** del pesatore, un esperto con **+8**
+`[INFERRED — needs DM confirmation]`. Se fallisce, qualcuno comincia a
+chiedersi da quale regno vengano quattro stranieri che pagano in oro mai visto.
+
+##### Il banco di Gunnvor — cosa vende stanotte
+
+Prezzi dell'SRD 3.5; i servizi col metodo SRD (livello dell'incantesimo ×
+livello dell'incantatore × 10 mo, più le componenti costose), come nel
+`KIT-ANTI-IMPROVVISAZIONE-VALLE` §2. Le quantità sono quelle del banco: finite
+quelle, non ce ne sono altre.
+
+| Cosa | Prezzo | Quante | Nota per il DM |
+|---|---:|---:|---|
+| Pozione di *cura ferite leggere* | 50 mo | 6 | le *gravi* ci sono, ma sono i doni del re (§8 B) |
+| Pozione di *cura ferite moderate* | 300 mo | 2 | |
+| Acqua santa, la fiasca | 25 mo | 10 | temprata nella vasca della forgia |
+| Antitossina | 50 mo | 4 | |
+| Borsa del guaritore | 50 mo | 3 | |
+| Ascia da guerra nanica perfetta | 330 mo | 3 | |
+| Corazza di piastre completa perfetta | 1.650 mo | 1 | di una guardia reale caduta cinquant'anni fa, ripulita |
+| Ascia da guerra nanica d'adamantio | 3.330 mo | 1 | sopra il valore base: c'è, ma Gunnvor la dà solo contro qualcosa che le serve |
+| Frecce, quadrelli, fuoco dell'alchimista, olio | — | 0 | tutto sulle mura. Semmai li compra lei, qui sotto |
+| Mithral lavorato | — | 0 | nella fortezza giovane non ce n'è |
+| *Ristorare inferiore* · *rimuovi malattia* | 60 · 150 mo | a richiesta | |
+| *Neutralizza veleno* · *ristorare* | 280 · 380 mo | a richiesta | *ristorare* con 100 mo di polvere di diamante inclusi |
+| *Rianimare morti* | 5.450 mo | 1 | le 5.000 di diamante incluse, e c'è un diamante solo in tutta la fortezza |
+
+⚠️ **Ogni incantesimo di 4° o 5° livello comprato stanotte è un incantesimo che
+all'alba manca sulle mura.** Per ognuno, tira una volta sul *Registro delle
+Perdite* di ARC-08 alla Scena 10 `[INFERRED — needs DM confirmation]`. Gunnvor
+non lo dice; il chierico che lancia sì, se glielo chiedono.
+
+##### Cosa compra, e a quanto
+
+| Cosa portano i PG | Chi la prende | A quanto | Perché |
+|---|---|---|---|
+| Pozioni di cura, pergamene di cura | i chierici | **×1,5** il prezzo SRD, dal forziere del re | braccia rimesse in piedi |
+| Fuoco dell'alchimista, olio, borse dell'impedimento, pietre del tuono | Gunnvor | **×1,5** | sulle mura, contro le scale |
+| Frecce e quadrelli, anche comuni | Gunnvor | **×1,5** | se ne consumano più di quante se ne facciano |
+| Armi e armature magiche | il forziere del re | **metà** del prezzo SRD, come sempre | le dà alle guardie reali |
+| Razioni, corda, bende | Gunnvor | prezzo pieno | le famiglie nelle miniere mangiano anche loro |
+| Barre di mithral, piastre della Sentinella, cristalli d'adamantio | Gunnvor | prezzo pieno, **fuori** dal forziere del re, e non oltre il limite d'acquisto: il Geode Titanico (5.000 mo) lo paga 2.500 | è metallo: l'SRD lo scambia a valore pieno. Ma stanotte non si forgia niente |
+| Gemme (i geodi d'ametista, il granato stellato) | il pesatore | **metà** | una pietra non ferma un ogre `[INFERRED — needs DM confirmation]` |
+| Monete del 1372 | il pesatore | a peso, meno una su dieci | vedi sopra |
+
+Il **Cuore di Terros** (20.000 mo) non lo compra nessuno: nella fortezza non ci sono
+ventimila monete in un posto solo, e i chierici non lo toccano.
+
+⚠️ **Il premio di guerra ha un tetto**: il ×1,5 si paga col forziere del re, e
+il forziere ha 10.000 mo. Oltre, si torna al prezzo SRD. Un gruppo che prova a
+fare cassa sull'assedio se ne accorge alla terza fiasca, quando Gunnvor smette
+di contare in braccia.
+
+**Cosa non compra, e cosa non vende**
+
+- **Niente che venga da un drago.** Una squama, un dente, una pelle conciata:
+  Gunnvor la getta sul pavimento. Il drago è sopra le loro teste.
+- **Niente con la Mano Rossa**, come sopra.
+- **Niente che odori di non morte.** I chierici la vedono prima di lei.
+- **Non vende** l'ascia di Thorgrim, né il Torque del re, né le armi delle
+  quindici guardie. Se i PG le chiedono, la risposta è una sola, e la dà senza
+  guardarli.
+
+**L'ascia nel panno.** È un'**ascia da guerra nanica +1 del gelo** (SRD: +2 di
+bonus equivalente, 8.330 mo), finita ieri per la guardia del re, e sulla lama
+ha lo stesso disegno di brina dell'ascia di Re Thorek. È del re: la vende solo
+lui, e solo con la fiducia piena. Se la prendono i PG, una
+guardia reale fa l'alba con un'ascia comune: tira sul *Registro delle Perdite*
+alla Scena 10. Nel 1372 nessun fabbro sa fare quel disegno
+`[INFERRED — needs DM confirmation]`.
+
+**Quello che nel 372 non esiste ancora.** Il DM non deve sapere quando è nato
+un incantesimo o un oggetto. La timeline è **auto-consistente** (§6): quello che
+i PG insegnano, vendono o lasciano qui **è già stato** insegnato, venduto,
+lasciato. Una pergamena venduta ai chierici diventa l'origine di una preghiera
+che i nani del 1372 recitano senza sapere da dove venga. Ai nani sembra strano,
+e basta: nessun paradosso, solo un'eco da scrivere in §7.
+
+**Cosa torna nel 1372**: quello che i PG **portano
+addosso** quando il Rubino si accende. Quello che hanno **consumato** qui resta
+qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia**: le
+righe della fucina in §7.
 
 ### SCENA 6 — Il mare di tende
 
@@ -1508,7 +1667,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono cambiare il passato** (salvare qualcuno destinato a morire, avvisare i nani di eventi futuri) | Timeline auto-consistente: ci **provano**, ma "va sempre come doveva". Il nano che vogliono salvare muore comunque, in un altro modo. Non è fato crudele: è che **è già successo**. Ottimo pathos, zero paradossi. |
-| **Cercano tesori/conoscenze da riportare nel futuro** | Possono! Ma la maggior parte **non attraversa** il Rubino (solo ciò che è "loro" torna — corpi, artefatti legati). L'**eccezione canonica** è il **Sigillo di Ossidiana** rubato a Vatore (Appendice B): il Cronolito che lo lega a Vatore lo fa «passare» come gancio ARC-09. |
+| **Cercano tesori/conoscenze da riportare nel futuro** | Possono. Torna ciò che **portano addosso** quando il Rubino si accende, anche se l'hanno comprato alla fucina (Scena 5); le conoscenze tornano con chi le sa. Resta qui ciò che consumano, vendono o lasciano, e ritorna come reliquia (§7). Il **Sigillo di Ossidiana** rubato a Vatore (Appendice B) torna come il resto, e con lui il Cronolito che lo lega a Vatore: è il gancio ARC-09. |
 | **Vogliono reclutare Thorgrim / portarlo nel futuro** | Impossibile (non è "loro"): Thorgrim resta, e la sua eco è la Cerimonia delle 100 Asce (ARC-08). Commovente: si separano da un fratello che è già polvere da mille anni. |
 | **Evitano del tutto il duello con Skullcrusher** | Difficile ma possibile (montaggio): allora il Rubino si accende comunque (la fortezza regge), ma **senza ferite ancestrali** → nessun carry-over B4 (Fauci al 1372 a piena forza). La scelta ha un prezzo futuro. |
 | **FALLIMENTO — il duello va malissimo / un PG cade / fuggono sconfitti** | Non c'è TPK: la timeline **esige** che vincano (la profezia È incisa). Se il combattimento crolla, Thorgrim e gli antenati **intervengono** e ricacciano il drago (a caro prezzo: molti nani antichi muoiono — pathos, e la Cerimonia delle 100 Asce ne porterà i nomi). I PG vincono "sporco": **nessuna ferita ancestrale** registrata, il Rubino si accende col tono «misericordia/dovere», e portano il peso di essere stati salvati dagli avi che erano venuti a salvare. |
@@ -1529,6 +1688,9 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **La Senzienza arriva calda o fredda** (Scena 12) | il ramo lo ha deciso «La Resurrezione di Hella» §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
+| **Le monete del 1372 spese alla fucina** (Scena 5) | un pugno di monete con la faccia di re che nel 372 non erano nati, murate mille anni fa nella fucina o nelle fondamenta. I nani del 1372 non se le spiegano; i PG sì | ARC-08, la prima volta che a Hammerfist si scava o si ripara un muro | registro delle conseguenze |
+| **Quello che i PG hanno venduto a Gunnvor** (Scena 5) | una loro arma appesa nella sala degli antenati con un nome che non è il loro; il loro mithral nei cardini di una porta o nelle fibbie della guardia; una pergamena diventata «la preghiera dei quattro». Una riga per oggetto, scelta dal DM `[INFERRED — needs DM confirmation]` | ARC-08 (Cerimonia delle 100 Asce) o quando il DM ne ha bisogno | registro delle conseguenze |
+| **L'ascia del gelo** (Scena 5, se la comprano) | la guardia reale che l'ha ceduta è sul *Registro delle Perdite*; la brina sulla lama è la stessa dell'ascia di Re Thorek, e nel 1372 nessuno sa farla | ARC-08, davanti a un'arma nanica antica | registro delle conseguenze |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
@@ -1559,9 +1721,10 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore) + un **corno da guerra di ferro nero** (curiosità, 300 mo) | ~300 mo |
 | Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
 
-> ⚠️ **Cosa torna nel 1372**: solo ciò che è "loro" o legato (corpi, artefatti,
-> il Sigillo rubato). Le pozioni consumate qui restano qui; i doni indossati
-> tornano. Il DM decida caso per caso (§6).
+> ⚠️ **Cosa torna nel 1372**: ciò che i PG **portano
+> addosso** quando il Rubino si accende, doni del re compresi, più il Sigillo
+> rubato (§6). Quello che hanno **consumato** qui resta qui. Quello che hanno
+> **venduto** alla fucina (Scena 5) resta qui, e ritorna come reliquia (§7).
 
 ---
 
@@ -1584,6 +1747,9 @@ Hammerfist** («Il Ritorno a Hammerfist», il raccordo all'ARC-08).
 3. **Statblock di Skullcrusher** (Appendice A.1) per il duello.
 4. **Il piano di battaglia di Re Thorek I**, nel volume dei giocatori,
    da mettere sul tavolo di guerra (Scena 4).
+5. **Il banco della fucina**, nel volume dei giocatori: la lavagna di
+   Gunnvor, con i prezzi di stanotte. Si consegna quando la convincono ad aprire
+   il banco (Scena 5), non prima.
 
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |

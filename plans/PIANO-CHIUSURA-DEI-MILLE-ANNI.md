@@ -238,8 +238,35 @@ l'apparato è fermo permette di misurare **solo** l'effetto della prosa.
 | ✅ | **D-B** — Il Rituale 4 si gioca **DOPO il combattimento**, all'esito dell'incontro, e **senza ulteriori costi** | **decisa dal DM 2026-09-19** |
 | ✅ | **D-C** — verificato: **non si riscrivono** | i nove erano **tre**, e i tre sono nomi noti o un nome spezzato in due parole. Il difetto stava nel metro, ed è corretto |
 | ✅ | **D-D** — allineare i tre master a `state.md` (**niente −2 COS**) | **confermata dal DM 2026-09-19** → M2.0 chiuso |
+| ✅ | **D-E** — a −1.000 il gruppo può **commerciare** con la fortezza assediata: una scena alla fucina, una tabella per i giocatori, una per il DM con gli echi | **decisa dal DM 2026-09-25**: le monete del 1372 **valgono a peso**; torna nel 1372 **ciò che i PG portano addosso**, resta qui ciò che consumano o vendono, e ritorna come reliquia → lotto **M5** |
 
 ---
+
+## 5-bis · Lotto M5 — la fucina di notte *(2026-09-25, dopo la chiusura)*
+
+Il DM: *«il gruppo arriva a −1000 e vuole commerciare nonostante l'assedio:
+cosa gli posso far commerciare, con che limite, cosa è disponibile mille anni
+prima […] e cosa sarebbero disposti a comprare gli armaioli di Hammerfist?»*
+
+- [x] **M5.1** `ARC07-DEF-4` Scena 5: la **fucina di notte** (1 tacca, riga
+  nell'orologio): un box, la scheda d'entrata di Gunnvor, il profilo della
+  fortezza come mercato (insediamenti PF1e, dichiarati come supporto), il
+  banco con i prezzi SRD, cosa compra e cosa rifiuta, l'ascia del gelo, la
+  regola di quello che nel 372 non esiste ancora
+- [x] **M5.2** la decisione D-E scritta dove si usa: §6, §7 (tre righe
+  d'eco), §8 B; e nell'audit del tesoro, che diceva il contrario
+- [x] **M5.3** il foglio per i giocatori, `volume-mille-anni/04-HANDOUT-BANCO-DI-GUNNVOR.md`,
+  nel volume dei giocatori e nel corredo della serata; stampato, sta in una
+  pagina
+- **Misure**: box di DEF-4 da 23 a 24, nessuno oltre 12 righe, parentesi e
+  nomi propri invariati (2 e 2, preesistenti). Otto voci marcate
+  `[INFERRED — needs DM confirmation]`: il forziere del re da 10.000 mo, il
+  pesatore (la trattenuta e il suo +8), lo sconto di chi aiuta al banco, le gemme a
+  metà, il costo sulle mura degli incantesimi di 4°-5°, l'ascia del gelo nel
+  1372, le reliquie
+- ⚠️ **Cosa non si è potuto misurare**: le monete che i PG hanno in tasca. Il
+  repo non le registra, né in `state.md` né altrove; il limite di spesa
+  quindi viene dalla fortezza, non dalla loro borsa
 
 ## 6 · Il numero ADR
 
