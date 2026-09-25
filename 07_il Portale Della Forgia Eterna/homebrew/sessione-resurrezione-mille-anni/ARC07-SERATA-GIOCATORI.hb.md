@@ -231,7 +231,9 @@ torna, la strada non è finita!» Poi, in italiano:*
 > *Abbiamo portato le pietre che volevi.*
 > *Abbiamo pagato quello che chiedevi.*
 > *Quello che manca, chiedilo adesso, e lo paghiamo.*
->
+
+*Un respiro, poi l'ultima strofa:*
+
 > *Hella, figlia della pietra che sogna,*
 > *torna.*
 > *La tua strada non è finita.*
@@ -589,7 +591,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 >
 > *Abbatterono il drago nero e spezzarono l'orda. Poi svanirono, come erano
 > venuti, lasciando solo il loro nome nella roccia.»*
->
+
 > — Moradin, nella mente di Thorik: *«Le Cronache dicono che 'Quattro Eroi'
 > salvarono Hammerfist. Siete VOI. Siete sempre stati voi. Andate. Chiudete il
 > cerchio.»*

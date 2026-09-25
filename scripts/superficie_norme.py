@@ -193,6 +193,18 @@ NORME_SCOPERTE = (
         "sblocca": "una convenzione di marcatura eco → scena, poi il confronto col master",
     },
     {
+        "chiave": "hero_map_fedele_all_svg",
+        "norma": "rumblingstone-mapmaking regola 8 — una hero map di Canva AI che "
+                 "sposta porte, stanze o accessi rispetto all'SVG si butta",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "il fatto sta in un raster dipinto, non in un testo: confrontarlo "
+                "con l'SVG chiede visione artificiale. Resta il gate di rifiuto di "
+                "chi guarda le due immagini sovrapposte",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
         "chiave": "due_livelli_di_subordinate",
         "norma": "read-aloud-adulti.md — max due livelli di subordinate",
         "prerequisito": None,

@@ -336,3 +336,31 @@ Il DM ha mandato a piena vista tutte e tre le fortezze e i due risvegli.
 | `tavola-hammerfist-giovane` | la **terza** (`MAHWLwYjXcE`), per la Scena 1 | la fortezza vista da lontano e i fuochi dell'orda sulla piana: è il box «la fortezza, da lontano» |
 | `tavola-hammerfist-giovane-porta` | la **prima** (`MAHWL9hrJvc`), ripescata per la Scena 3 | scartata perché mancavano i fuochi, è invece esattamente il box «la porta e la targa»: pietra bianca appena tagliata, una sola statua di re, la targa di bronzo e i trucioli sul selciato |
 | — | la seconda (`MAHWL7ajay0`) resta fuori | render 3D fotografico, fuori dall'ancora a olio del set |
+
+---
+
+## §5 · Confronto immagine-scheda
+
+Il passo 4 della procedura di `rumblingstone-art-direction` §7-bis: ogni immagine
+tenuta si guarda **a piena vista** accanto alla sua scheda-personaggio
+(`PROMPT-IMMAGINI-07ILP.md`) o al box che illustra. Sui tratti del volto vince il
+ritratto, e la scheda si allinea; l'arma resta quella dello statblocco. Le
+decisioni del DM sono del 2026-09-25 (`plans/STATO-E-ORDINE-DEI-PIANI.md`
+§12.1-ter). `validate_corredo.py` boccia un blocco `img` senza la sua riga qui.
+
+| id | Confrontata con | Cosa non coincideva | Esito |
+|---|---|---|---|
+| `ritratto-balvar-fuocospento` | scheda R5 | la casacca è verde sotto il grembiule, la scheda diceva grigio ardesia | tenuta; vale il ritratto, scheda allineata |
+| `ritratto-zogtar-deatheye` | scheda R6 | niente, nella terza versione del DM | tenuta; le prime due scartate (`SCARTI.txt`) |
+| `ritratto-re-thorek-i` | scheda R2 | quattro trecce invece di tre | tenuta; vale il ritratto |
+| `ritratto-thorgrim-barbadiferro` | scheda R3 e box di `DEF-4` Scena 4 | mani aperte verso la luce, il box le voleva sulle ginocchia | tenuta; corretto il box di `DEF-4` e la scheda d'entrata |
+| `ritratto-durin-rocciadura` | scheda R1 e statblocco | barba lunga in una treccia, nessun naso rotto, cappuccio verde; ascia a una lama | tenuta; vale il ritratto sul volto, l'ascia resta doppia come nello statblocco |
+| `ritratto-zeth-mastro-costruttore` | scheda R4 | niente | tenuta |
+| `ritratto-vatore` | scheda R7 | niente; il volto non si confronta con Sal, che nel repo non ha un'immagine | tenuta |
+| `tavola-portale-del-tempo` | box di `DEF-4` Scena 1 | niente sulla miniatura: da riguardare a piena risoluzione (§4) | tenuta, con la verifica aperta |
+| `tavola-custode-delle-radici` | box di `DEF-3` §6 | niente | tenuta |
+| `tavola-cuore-di-moradin` | box di `DEF-3` §3 | niente: il Cuore sta nel reliquiario aperto, come dice il box | tenuta, al posto di `ilCuoreDiMoradin` |
+| `tavola-risveglio-di-hella` | scheda di Hella e di Durik, box di `DEF-3` §7 | niente nella seconda; nella prima Durik era un lupo | tenuta la seconda |
+| `tavola-durik-e-hella` | scheda di Hella e di Durik | niente nella seconda; nella prima Durik sdraiato e massiccio, Hella elfa | tenuta la seconda |
+| `tavola-hammerfist-giovane` | box di `DEF-4` Scena 1 e Scena 3 | la prima non ha i fuochi, la seconda è un render 3D | tenuta la terza per la Scena 1; la prima ripescata per la Scena 3 come `tavola-hammerfist-giovane-porta` |
+| `tavola-skullcrusher-nel-cortile` | scheda di Durik | il cane di Hella è una bestia massiccia di pietra, non il levriero | tenuta con riserva: è l'unica e Durik si vede di spalle; candidata a una seconda passata |

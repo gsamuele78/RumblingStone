@@ -320,14 +320,15 @@ non un binario.
 > CD 20.*
 
 ### A1 — «L'Alba del Mondo» (NORD · statico)
-> **Read-aloud (LotR lead — deep time).** *Il primo affresco mostra un'era in
+> **Read-aloud (LotR lead — deep time) — 1 di 2.** *Il primo affresco mostra un'era in
 > cui il mondo era ancora caos. Al centro, alto dieci metri, MORADIN: muscoli
 > di granito, barba intrecciata d'oro, mithral e adamantio, e negli occhi le
 > fiamme della creazione. Davanti a lui un'incudine titanica, grande quanto una
 > montagna. Nella sinistra, Frostforge — il martello leggendario, testa di
 > adamantio stellare, manico di ferro grezzo. Nella destra, la CORONA DI
-> ADAMANTIO in fase di nascita, che brilla come una stella appena accesa.
-> Intorno, il caos primordiale: fiamme alte chilometri, fulmini che spaccano la
+> ADAMANTIO in fase di nascita, che brilla come una stella appena accesa.*
+
+> **2 di 2 — dopo che hanno guardato.** *Intorno, il caos primordiale: fiamme alte chilometri, fulmini che spaccano la
 > realtà, pietra liquida che ribolle, ombre antiche che tentano di avvolgere
 > tutto. Ma Moradin è CALMO. Concentrato. Guarda la Corona con amore paterno.
 > Non forgia per potere: forgia per PROTEGGERE i figli nanici che ancora non
@@ -418,7 +419,7 @@ occhi e diventa il pannello-conseguenza del master #1.
 - **Benedizione della Cronaca:** +1 sacro a una prova di FOR o TS Tempra.
 
 ### A6 — «Il Viaggio Attraverso il Tempo» (SUD-OVEST · temporale → 80%)
-> **Read-aloud (Andor lead — il tempo incerto).** *Questo affresco è doloroso
+> **Read-aloud (Andor lead — il tempo incerto) — 1 di 2.** *Questo affresco è doloroso
 > da guardare a lungo. Mostra due scene SOVRAPPOSTE, come una doppia esposizione
 > che il cervello si rifiuta di separare. Nella prima — **Anno −1000** —
 > Hammerfist è giovane, le mura appena erette e ancora lucide; i nani combattono
@@ -427,15 +428,18 @@ occhi e diventa il pannello-conseguenza del master #1.
 > — **Anno 1372, ADESSO** — Hammerfist è assediata, le mura segnate, l'esercito
 > della Mano Rossa schierato sotto, e **Fauci di Palude** — lo stesso sangue,
 > mille anni più vecchio e più grande — circola sopra come un avvoltoio. Le due
-> scene si alternano ogni tre battiti, e non capite quale sia «reale». Ma dopo
+> scene si alternano ogni tre battiti, e non capite quale sia «reale».*
+
+> **2 di 2 — la rivelazione, dopo tre battiti.** *Ma dopo
 > la Terra qualcosa è cambiato: le immagini si mettono a fuoco, e al centro
 > della doppia esposizione **pulsa un portale dorato**. Una porta. Sul passato.
 > E la Corona di Thorik, con due gemme accese, risponde al suo battito.*
-> **Attivazione (canone D5/D16):** il portale del Tempo si apre con **Topazio +
-> Smeraldo** (che i PG ora hanno); il **Rubino NON apre il portale** — si
-> accende **solo alla vittoria antica** e riporta i PG al 1372 (cucitura al
-> Cuore della Montagna → master #5). Coerente con `LaCorona_di_Adamantio-DM.md`,
-> state.md §6, `campaign-artifacts.md`.
+
+**Attivazione (canone D5/D16):** il portale del Tempo si apre con **Topazio +
+Smeraldo** (che i PG ora hanno); il **Rubino NON apre il portale** — si
+accende **solo alla vittoria antica** e riporta i PG al 1372 (cucitura al
+Cuore della Montagna → master #5). Coerente con `LaCorona_di_Adamantio-DM.md`,
+state.md §6, `campaign-artifacts.md`.
 - **Interazione (Artemis — NON la visione divina).** L'Anello vibra sul caos
   temporale; **Sapienza Magica CD 18**: Artemis capisce che la porta si sta
   aprendo e *dove* porta (il passato). Beat di **curiosità avida** (§1). Nessun
@@ -670,8 +674,8 @@ decidere se dire la verità: **quella conversazione vale una scena**.
 > disordine ricchissimo tenuto in ordine da qualcuno di molto bravo. Nel sogno
 > ci torni — ma da fuori, e la porta del mercato non è la porta del mercato.
 > È l'affresco del Tempo.*
->
-> *È **socchiusa**, e dallo spiraglio viene aria vera, che sa di fumo di forgia
+
+> **2 di 2 — dopo una pausa, quando Artemis ha riconosciuto la porta.** *È **socchiusa**, e dallo spiraglio viene aria vera, che sa di fumo di forgia
 > e di neve. Mille anni di aria. E sai, col tipo di certezza che hai solo nei
 > sogni, che oltre c'è tutto quello che il mondo ha dimenticato di aver perso:
 > interi cataloghi, cose senza proprietario da dieci secoli.*

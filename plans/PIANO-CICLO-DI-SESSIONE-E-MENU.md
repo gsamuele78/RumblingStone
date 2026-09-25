@@ -1,6 +1,6 @@
 # PIANO — Il ciclo di sessione automatizzato, e il menu che lo guida
 
-> **Stato**: 🔵 **pianificato** (2026-09-24). Nessun lotto eseguito; il primo
+> **Stato**: 🟡 **in corso** (2026-09-25): chiuso 2f, il resto da fare. Pianificato il 2026-09-24; il primo
 > gate è la Fase 0 (ADR e decisioni del DM). **Rev. 2** (stesso giorno): il
 > metodo non è più solo TDD, ma contratto prima, nucleo puro e test a strati
 > (§5.0), su domanda del DM.
@@ -12,6 +12,12 @@
 > *«un menu testuale con le varie parti che possono essere richiamate e che in
 > background chiamano dm.py con sottocomandi ed opzioni»*, pronto per essere
 > avvolto da un'interfaccia grafica.
+>
+> **Aggiornamento del 2026-09-25**: chiuso il lotto **2f**, la norma del
+> corredo della serata e il suo controllo, chiesto dal DM prima di 2c e 2e
+> perché il corredo di ARC-07 era già stato fatto a mano. 2c e 2e restano da
+> fare: 2f dice **che cosa** compone il corredo, loro lo **genereranno** dalle
+> scene scelte invece che da un file scritto a mano.
 >
 > **Cosa assorbe**: il sotto-lotto **4f-5** di `PIANO-RIPRESA-PR-ABBANDONATE`
 > (le proposte di fine sessione che diventano domande) diventa la Fase 1b.
@@ -328,6 +334,37 @@ ADR-0067 ne fa una bozza.
 Classe **C**. Il manifest del booklet del DM e di quello dei giocatori si
 genera dalle scene scelte; poi `dm.py booklet` o `dm.py volume`.
 
+#### ✅ 2f · Il corredo della serata: la norma e il suo controllo
+`[engine: Opus 5.5, sessione principale · effort: alto · qualità: il corredo di ARC-07 passa, e un corredo con un pezzo tolto è rosso]`
+
+Classe **C** con una parte **G** (quali pezzi sono obbligatori). Il DM, il
+2026-09-25: quando dice «genera il booklet» deve uscire l'intero corredo della
+serata, riveduto con le regole in vigore, senza chiederlo ogni volta. Misurato
+quel giorno: nessuna norma lo elencava.
+
+- la norma in `rumblingstone-automation`, «Il corredo della serata», con il
+  rimando da `rumblingstone-editoria` §2-bis passo 10; registrata (G3) in
+  `skills/REGISTRO-NORME-EDITORIALI.md` §3, due righe;
+- il contratto `scripts/schemas/corredo_serata.schema.json` (versione 1, solo
+  additivo, §5.0 punti 1-2) e il primo corredo dichiarato,
+  `ARC07-SERATA-RESURREZIONE.corredo.json`;
+- il controllo `scripts/validate_corredo.py`, in CI senza `--stampa`, e
+  `dm.py corredo <file> --stampa` che controlla i pezzi, fa ogni volume con la
+  catena di `volume` e il `.hb.md`, e misura i PDF. 23 test in
+  `test_corredo.py`, fra cui un PDF con due righe sovrapposte apposta;
+- il lotto di applicazione sul corredo di ARC-07: sei box oltre le 12 righe
+  (quattro in `DEF-2`, la preghiera, le Cronache) spezzati in battute senza
+  cambiare parole, la nota di attivazione del portale tolta dal riquadro
+  read-aloud dove si sarebbe stampata, la sezione «Confronto immagine-scheda»
+  nel file dei prompt;
+- nello stesso lotto, su richiesta del DM, le due procedure delle immagini:
+  `rumblingstone-art-direction` §7-bis (Canva AI, confronto PNG per PNG) e
+  `rumblingstone-mapmaking` regola 8 (la hero map di Canva AI, e quando si
+  butta).
+
+Quello che 2f **non** fa: generare il corredo dalle scene (è 2c) né scrivere i
+manifest da solo (è 2e); misurare il PDF in CI (è la D7).
+
 ### Fase 3 · Il menu
 
 #### ⬜ 3a · `dm.py menu`, testuale
@@ -402,6 +439,7 @@ test che non hanno bisogno di una tastiera.
 | D3 | F2 · 2d | **Chi scrive la prosa di gioco che manca** (interazioni dei PNG, testo degli handout, echi)? (a) il DM, o una sessione di agente con le skill, partendo dal brief; (b) una bozza del ponte di ADR-0067, che riapre il lotto E-bis escluso il 2026-07-20. Proposta: (a) adesso, (b) da rivalutare dopo il collaudo |
 | D4 | F3 · 3a | **Che menu?** Numerato in testo semplice (libreria standard, funziona ovunque e si avvolge facilmente) oppure a schermo intero con `curses` (che su Windows non c'è). Proposta: numerato |
 | D5 | F2 · 2c | **Le immagini mancanti si generano durante la preparazione?** Serve ComfyUI sulla macchina del DM e minuti per immagine. Proposta: la preparazione le **elenca** e lancia `comfyui_batch` solo se il DM lo chiede |
+| D7 | F2 · 2f | **PyMuPDF in CI?** `validate_corredo --stampa` conta righe sovrapposte e testo sul bordo leggendo il PDF con PyMuPDF, che è AGPL e oggi non è fra le dipendenze (`rumblingstone-editoria` §4). In CI la misura quindi si dichiara saltata, e il PDF difettoso lo trova solo chi esegue il controllo in locale. (a) ammetterla in `requirements-dev.txt`, come pytest: è uno strumento di verifica e non esce dal repo; (b) tenerla fuori, come oggi. Proposta: (a), dopo aver riletto la licenza con `rumblingstone-edizione` |
 | D6 | F0 · 0c | **BDD con un framework, o solo la sua pratica?** Misurato in [RICERCA-BDD-O-TDD-2026-09](RICERCA-BDD-O-TDD-2026-09.md): `behave` trova gli stessi 16 difetti su 16 del TDD, con +42% di righe, +45% di tempo e 3 MB di dipendenze contro ADR-0037; in cambio il `.feature` si legge senza aprire Python. (a) la pratica senza framework: scenari con identificatore in §4, test che li citano, un gate stdlib che li tiene allineati; (b) `pytest-bdd` con un'eccezione ad ADR-0037; (c) niente, come oggi. Proposta: (a) |
 
 ---
@@ -419,6 +457,6 @@ test che non hanno bisogno di una tastiera.
 
 - ⬜ Fase 0 · 0a ADR-0068 · 0c i contratti versionati · 0b risposte a D1-D6
 - ⬜ Fase 1 · 1a motore dei moduli · 1b proposte → domande (ex 4f-5) · 1c cronaca · 1d catena di chiusura
-- ⬜ Fase 2 · 2a controllo e turno del mondo · 2b ricognizione · 2c inventario · 2d brief di scrittura · 2e manifest
+- 🟡 Fase 2 · ✅ 2f il corredo della serata (2026-09-25) · ⬜ 2a controllo e turno del mondo · 2b ricognizione · 2c inventario · 2d brief di scrittura · 2e manifest
 - ⬜ Fase 3 · 3a menu testuale · 3b menu in JSON
 - ⬜ Fase 4 · 4a collaudo al tavolo

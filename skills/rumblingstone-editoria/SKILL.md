@@ -42,6 +42,9 @@ Le due catene leggono **lo stesso manifest**. Non si sostituiscono: un booklet
 HTML si apre ovunque e un PDF no.
 
 **Prima di consegnare qualsiasi cosa**: `python3 scripts/validate_booklets.py --stampa`.
+Per una serata, il volume è un pezzo del corredo, e il comando è
+`python3 scripts/dm.py corredo <SERATA>.corredo.json --stampa`
+(`rumblingstone-automation`, «Il corredo della serata»).
 
 ---
 
@@ -84,6 +87,11 @@ perché il prossimo volume nasca già così invece di essere corretto dopo.
 | 8 | **Niente esce dalla colonna**: codice in linea, righe da compilare e tabelle lunghe si sistemano da soli | §4.5 | `TestCioCheEsceDallaColonna` |
 | 8-bis | **Una tabella che in colonna va a capo in ogni cella scavalca le due colonne**, da sola; l'autore la forza con `<!-- tabella: larga -->` o `<!-- tabella: colonna -->` | §2, §4.7 | `TestTabelleLargheCompilate` |
 | 9 | **Prima di consegnare**: `validate_booklets --stampa`, poi il controllo a vista prima e dopo | §4, «Il controllo a vista» | chi consegna |
+| 10 | **Il booklet non esce da solo**: è un pezzo del corredo della serata, con il volume dei fogli ✉, gli echi, le carte e i prompt. «Genera il booklet» vuol dire `dm.py corredo <SERATA>.corredo.json --stampa` | `rumblingstone-automation`, «Il corredo della serata» | `validate_corredo.py`, che misura anche il PDF (sovrapposizioni, margini, box ≤ 12 righe) |
+
+Il passo 10 è la misura del «controllo a vista» di §4 fatta da uno script: le
+sovrapposizioni e il testo sul bordo li conta `validate_corredo.py --pdf`, quando
+PyMuPDF c'è. Le pagine con le mappe restano da guardare.
 
 I passi 5-8 li fanno il tema e l'esportatore: chi scrive il master non deve
 ricordarseli, e se un volume li viola si corregge il tema. I passi 1-4 sono di

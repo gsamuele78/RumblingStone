@@ -10,7 +10,9 @@ description: >
   "prossima sessione", "brief", "teaser", "recap", "recap per-PG",
   "state.md", "March Clock", "XP ledger", "branch di gruppo",
   "campaign-group", "Homebrewery", "hype", "handout", "dossier",
-  "doctor", "doctor --ci", "prep incontro", "suggest_encounter".
+  "doctor", "doctor --ci", "prep incontro", "suggest_encounter",
+  "genera il booklet", "prepara la serata", "corredo", "corredo della serata",
+  "stampa la sessione", "dm.py corredo", "validate_corredo".
 ---
 
 # RumblingStone — Automazione DM (`dm.py` e pipeline di sessione)
@@ -92,6 +94,58 @@ Setup una-tantum di un nuovo gruppo: `dm.py session branch --group <nome>`
 poi `state_apply.py --migrate --commit` (marca la regione `changelog` di
 `state-changelog.md`; in `state.md` non c'è più niente da marcare).
 
+## Il corredo della serata (norma, dal 2026-09-25)
+
+Quando il DM dice **«genera il booklet»**, «prepara la serata» o «stampa la
+sessione», l'agente non consegna un volume: consegna **il corredo intero** della
+serata, riveduto con le regole in vigore, senza che il DM debba elencarlo. Vale
+lo stesso per «genera i prompt» o «genera le immagini»: si fa la parte
+immagini del corredo, con la sua procedura.
+
+La norma nasce da una misura. Il 2026-09-25 la serata della resurrezione di
+Hella aveva sette pezzi sparsi in tre cartelle, e nessun documento diceva quali
+fossero: il booklet del DM aveva la sua tecnica, il resto lo teneva insieme la
+memoria di chi l'aveva scritto.
+
+| Pezzo | Obbligatorio | Si scrive con | Chi lo controlla |
+|---|---|---|---|
+| **booklet del DM**: regia, cassetta, master in ordine di gioco con le appendici A4 | sì | `rumblingstone-editoria` §2-bis, i nove passi | `validate_booklets`, `dm.py volume` |
+| **volume dei fogli ✉**: tutte le pagine da consegnare, solo capitoli `player` | sì | `rumblingstone-narrative-style` | `validate_corredo`: ogni foglio ✉ del booklet ci sta, nessun capitolo `dm` |
+| **volume di approfondimento** (il −1000 della serata ARC-07) | se la serata ne ha uno | come il booklet | come il booklet |
+| **echi per PG**: un file per ogni PG al tavolo | sì | `consequence-echoes.md`, regola 3: un eco non anticipa | `validate_corredo` per la presenza; la regola 3 no (vedi sotto) |
+| **carte e handout**: doni, schede, preghiere, tavole, documenti | quelli che il master consegna | `narrative-style`, e `rumblingstone-indagine` per un documento d'indagine | `validate_corredo`: esistono e stanno nel volume dei fogli |
+| **prompt delle immagini**, con la sezione «Confronto immagine-scheda» | se la serata ha immagini nuove | `rumblingstone-art-direction` §7-bis | `validate_corredo`: ogni blocco `img` ha il suo file e la sua riga nel confronto |
+| **PDF da stampa** di ogni volume | sì | `typst` via `dm.py corredo --stampa` | `validate_corredo --pdf`: 0 righe sovrapposte, 0 testo a meno di 30 pt dal bordo, box ≤ 12 righe; `validate_booklets --stampa` |
+
+Il corredo si **dichiara** in un file `<SERATA>.corredo.json` accanto al booklet
+del DM (contratto: `scripts/schemas/corredo_serata.schema.json`, versionato e
+solo additivo). Esemplare: `07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE.corredo.json`.
+
+**In ordine**, quando il DM lo chiede:
+
+1. si scrivono o si rivedono i pezzi con le skill della tabella, e la
+   self-check di `narrative-style` si esegue su ogni pagina ✉ (regola G4);
+2. si aggiorna il `.corredo.json`: un foglio nuovo entra nel manifest dei fogli
+   **e** nel corredo;
+3. `python3 scripts/dm.py corredo <SERATA>.corredo.json --stampa`: controlla i
+   pezzi, e se ne manca uno si ferma senza compilare niente; poi fa ogni volume
+   con la catena di `volume` (prosa, lingua, manifest, colophon, schermo,
+   stampa), rifà il `.hb.md`, e misura i PDF;
+4. si guardano a vista le pagine con le mappe (`rumblingstone-editoria` §4, «Il
+   controllo a vista»): nessuna misura sa se una mappa si legge;
+5. si consegna solo con il passo 3 verde. Se PyMuPDF manca, la misura del PDF
+   è **saltata e dichiarata**: si dice al DM, non si scrive «0 sovrapposizioni».
+
+Un box read-aloud oltre le 12 righe si spezza in battute, nella forma di Balvar
+in `DEF-4`, e non si taglia: il controllo lo misura sul testo **senza lo
+storico**, cioè su quello che si stampa (ADR-0069).
+
+⚠️ **Quello che il controllo non vede.** Se un eco anticipa una scelta
+(regola 3 degli echi), se una pagina ✉ è scritta bene, se la riga «✉ Si
+consegna qui» del master corrisponde al foglio giusto: sono giudizio, e restano
+a chi scrive e al DM. E il corredo è preparazione, non canone: cosa è successo
+al tavolo si chiude con `dm.py session end` sul ramo del gruppo (ADR-0007).
+
 ## Altri sottocomandi
 
 - `prep --el N --env <amb>`: proposte incontro+mappa+loot (non scrive nulla).
@@ -127,6 +181,9 @@ poi `state_apply.py --migrate --commit` (marca la regione `changelog` di
   annotato nei master. 📘 **Procedura completa**:
   `docs/guides/GUIDA-BOOKLET-E-PDF.md` (prerequisiti, manifest, container
   opzionali, troubleshooting, checklist di consegna).
+- `corredo <SERATA>.corredo.json [--stampa]`: l'intero corredo della serata
+  (sezione qui sopra). Controlla i pezzi con `validate_corredo.py`, fa ogni
+  volume con la catena di `volume` e il `.hb.md`, poi misura i PDF.
 - `maps render|validate`: per il *contenuto* delle mappe caricare
   `rumblingstone-mapmaking` (questa skill copre solo l'invocazione).
 - `skills build|sync`: rebuild dei mirror per-agente (generati, gitignored).
