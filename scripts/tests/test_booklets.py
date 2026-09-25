@@ -112,6 +112,37 @@ class TestEnfasi(unittest.TestCase):
         self.assertTrue(inline("**aperto e mai chiuso").endswith("]"))
 
 
+class TestDirettiveDiPagina(unittest.TestCase):
+    """Appendici e mappe su pagine A4 a una colonna (richiesta DM 2026-09-25)."""
+
+    def test_un_commento_qualsiasi_non_finisce_nel_pdf(self):
+        typ = md_to_typ("Testo.\n\n<!-- nota privata\nsu due righe -->\n\nAltro.")
+        self.assertNotIn("<!--", typ)
+        self.assertNotIn("nota privata", typ)
+
+    def test_pagina_a_una_colonna_si_apre_e_si_chiude(self):
+        typ = md_to_typ("<!-- pagina: una-colonna -->\n\n## Appendice\n\nDati.\n\n<!-- /pagina -->\n")
+        self.assertIn("#page(columns: 1)[", typ)
+        self.assertEqual(typ.count("#page(columns: 1)["), typ.count("\n]"))
+
+    def test_pagina_lasciata_aperta_si_chiude_col_capitolo(self):
+        typ = md_to_typ("<!-- pagina: una-colonna -->\n\nDati.")
+        self.assertTrue(typ.rstrip().endswith("]"))
+
+    def test_una_mappa_su_pagina_a_una_colonna_non_supera_il_foglio(self):
+        """M7-C, verticale, a tutta larghezza usciva dal bordo alto del foglio."""
+        with tempfile.TemporaryDirectory(dir=REPO) as d:   # dentro il repo: --root
+            (Path(d) / "m.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1261"/>')
+            dentro = md_to_typ("<!-- pagina: una-colonna -->\n\n![M](m.svg)\n\n<!-- /pagina -->", base=Path(d))
+            fuori = md_to_typ("![M](m.svg)", base=Path(d))
+        self.assertIn("pagina: true", dentro)
+        self.assertNotIn("pagina: true", fuori)
+
+    def test_nuova_pagina_non_viene_assorbita_dal_paragrafo(self):
+        typ = md_to_typ("Una riga.\n<!-- nuova-pagina -->\nUn'altra.")
+        self.assertIn("#pagebreak(weak: true)", typ.split("\n"))
+
+
 class TestCapolettera(unittest.TestCase):
 
     def test_solo_su_un_paragrafo_abbastanza_lungo(self):

@@ -18,11 +18,11 @@
 |---|---|---|---:|---|---|
 | **0** | Prima di cominciare | questa pagina | 10 | ✉ gli echi privati a Thorik, Tordek, Artemis | — |
 | **I** | Il risveglio nella Sala | `DEF-2` §7-bis, §4 (A5, A7, A8), §7 | 25 | — | l'immagine della Sala con gli otto affreschi |
-| **II** | La resurrezione di Hella | `DEF-3` §2 → §8 | 90 | ✉ Carte dei Doni allo Step 5, **dopo il sì** · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
+| **II** | La resurrezione di Hella | `DEF-3` §2 → §8-bis | 90 | ✉ Carte dei Doni allo Step 5, **dopo il sì** · ✉ scheda di Hella e scheda di Durik al §7 | il Cuore di Moradin dopo il §3 · *La canzone delle pietre* dallo Step 5 |
 | — | Pausa | | 15 | | |
-| **III** | La soglia | `DEF-3` §12 | 15 | ✉ Le Cronache dei Quattro Eroi | la Sala, di nuovo: il portale non ha ancora un'immagine (§7, riga 6) |
-| **IV** | Mille anni fa, fino all'alba | `DEF-4` §3 Scena 1 → Scena 3, §4-ter, §4-bis, §5 | 120 | l'orologio della notte, su un foglio in vista | — |
-| **Stop** | Il primo ariete | `DEF-4` §2 Zona 3 | 5 | | |
+| **III** | La soglia | `DEF-3` §8-ter | 15 | ✉ Le Cronache dei Quattro Eroi | la Sala, di nuovo: il portale non ha ancora un'immagine (§7, riga 6) |
+| **IV** | Mille anni fa, fino all'alba | `DEF-4` Atto I e Atto II, Scene 1-9 | 120 | ✉ il piano di battaglia al consiglio · l'orologio della notte, su un foglio in vista | — |
+| **Stop** | Il primo ariete | `DEF-4` Scena 10, primo box | 5 | | |
 
 **Le immagini e la musica**, nell'ordine in cui servono:
 
@@ -39,8 +39,8 @@ scritti in fondo a ogni atto, sotto **«Se sei in ritardo»**.
 
 ## §1 · Atto 0 — Prima di cominciare
 
-**Sul tavolo**: la mappa **S-1** (la Sala) e **R-1** (il cerchio del rito)
-dall'Atlante; il PDF delle Benedizioni di Moradin; un foglio bianco per
+**Sul tavolo**: la pianta della Sala e il cerchio del rito (`DEF-3`,
+Appendice B); la tenda del comando, M7-C (`DEF-4`, Appendice D); il PDF delle Benedizioni di Moradin; un foglio bianco per
 l'orologio della notte, che servirà solo nell'Atto IV.
 
 **Le schede che cambiano stasera**, da tenere a portata:
@@ -70,6 +70,20 @@ avanti, ed è la prima cosa che le dai dopo tre sessioni di silenzio.
 > sogno di Hella (è l'unica che parla dall'altra parte), e nell'Atto II, allo
 > Step 5, è lei a scegliere se sentire o no il nome gridato. Trovi i due
 > momenti marcati 🌙.
+
+### Gli echi del passato che stasera tornano
+
+Le righe dell'Echo Ledger (`state.md` §7.E) che questa serata **incassa**. Una
+per scena, e il posto dove cade.
+
+| Eco | Da dove viene | Dove si paga stasera |
+|---|---|---|
+| **E-07f** | la luce verde sotto la trave, al rito dello Smeraldo | `DEF-3` §8, *«Ero io, Thorik.»* Si chiude |
+| **E-07c** | Thorik ha pagato il Peso dove nessuno guarda | `DEF-3` §2-bis: al rito gli chiedono di pagare di nuovo, e lui si muove per primo |
+| **E-07d** | l'ultimo suono di Terros era un assenso | A5: la Forgia registra una vittoria **onorata** |
+| **E-07a / E-07b** | il Seme di Varis nello zaino di Tordek | il sogno di Tordek. Se lo racconta, **Artemis decide se dire la verità** |
+| la zampa sul margine | Durik nato dalla polvere di Terros | A5, poi `DEF-3` §7 |
+| il Marchio di Varis | **non attivo** | quindi l'Anello **non pizzica** allo Step 3: salta la riga di `DEF-3` §1 |
 
 ---
 
@@ -138,10 +152,11 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 | L'incasso vuoto | §2-bis | solo se qualcuno guarda la Corona. **Non dire** che si riempie a −1000 |
 | Il Cuore di Moradin | §3 | **dopo** il box, mostra la pagina ✉ *Il Cuore di Moradin* (l'immagine). Canone: il Cuore sta **dentro** l'Altare, che si apre come un fiore di metallo; al rito si posa **sul petto di Hella** |
 | Il rito, Step 1-4 | §4 | apertura di round, micro-box, esito scritto. Chiudi ogni step su **«Che fate?»** |
-| **Step 5 — il richiamo** | §4, §5, §6 | ▶ vedi II.1 qui sotto |
-| Step 6 — Moradin | §4 | tre secondi. Non allungarlo |
+| **Step 5 — il richiamo** | §5, §6 | ▶ vedi II.1 qui sotto |
+| Step 6 — Moradin | §7, in apertura | tre secondi. Non allungarlo |
 | Il risveglio | §7 | ▶ vedi II.2 |
 | Il racconto delle prove | §8 | ▶ vedi II.3 |
+| La prima ora: Hella prova il corpo, Hella e Tordek | §8-bis | ▶ vedi II.3, in fondo |
 
 ### II.1 · Lo Step 5, dove si decide la serata
 
@@ -224,7 +239,7 @@ La scena che il tavolo aspetta è la rivelazione a Thorik: *«Ero io, Thorik.»*
 Il box è nel master. **Dopo quel box non aggiungere niente**: l'eco E-07f si
 chiude lì, ed è pagata.
 
-**Poi, il momento privato Hella e Tordek** (`DEF-3` §7-bis): cinque minuti, e li
+**Poi, il momento privato Hella e Tordek** (`DEF-3` §8-bis): cinque minuti, e li
 improvvisano loro. Se la serata è in ritardo, **questo non si taglia**: si
 taglia la prep di battaglia.
 
@@ -244,7 +259,7 @@ taglia la prep di battaglia.
 
 ## §4 · Atto III — La soglia *(15 minuti)*
 
-`DEF-3` §12, «La soglia». Tre battute: il box dell'affresco A6 con i tre punti
+`DEF-3` §8-ter, «La soglia». Tre battute: il box dell'affresco A6 con i tre punti
 di luce, la riga di Moradin (*«Con due pietre il varco si apre…»*), la tabella
 delle tre scelte.
 
@@ -267,14 +282,16 @@ Se chiedono, Moradin non promette niente oltre la sua riga.
 
 | Blocco | `DEF-4` | Modalità | Minuti |
 |---|---|---|---:|
-| L'arrivo, la guarigione del passaggio, lo shock | §3 Scena 1 | automatico + TS Volontà **CD 20** | 10 |
-| La targa di bronzo | §3 Scena 1, nodo d'indizio | tre strati, sei porte | 15 |
-| La pattuglia di Durin e il consiglio di Re Thorek I | §3 Scena 1-bis | **scene complete** | 25 |
-| **L'orologio della notte** | §3 | 8 tacche su un foglio in vista | — |
-| Le scelte della notte: riposo, banchetto, Zeth, i semi di Hella | §3 Scena 1-bis | a tacche | 20 |
-| L'infiltrazione, Balvar, Zog'tar | §3 Scena 3 · §4-ter · §4-bis | **combattimento completo** | 45 |
-| Vatore | §5 | durante la Scena 3 | 10 |
-| Stop: le mura all'alba | §2 Zona 3 | un box | 5 |
+| L'arrivo nel bosco, la guarigione del passaggio, lo shock | Scena 1 | automatico + TS Volontà **CD 20** | 10 |
+| La pattuglia di Durin e la cavalcata | Scena 2 | tre vie, nessun tiro se sinceri | 10 |
+| La porta e la targa di bronzo | Scena 3, nodo d'indizio | tre strati, sei porte | 15 |
+| Il consiglio di guerra, Re Thorek I e Thorgrim | Scena 4 | ✉ il piano di battaglia · prova di fiducia | 15 |
+| **L'orologio della notte** | §4, in testa all'Atto II | 8 tacche su un foglio in vista | — |
+| La notte nella fortezza: riposo, banchetto, Zeth, i semi di Hella | Scena 5 | a tacche | 15 |
+| La postierla e il mare di tende | Scena 6 | skill challenge | 15 |
+| La tenda: Balvar, poi Zog'tar | Scene 7-8 · mappa M7-C | **combattimento completo** | 30 |
+| Vatore, fra le tende al ritorno | Scena 9 | scena grigia | 10 |
+| Stop: il primo ariete | Scena 10, primo box | un box | 5 |
 
 ### IV.1 · L'arrivo
 
@@ -313,8 +330,9 @@ della ghianda annerita resta una `[PROPOSTA]` da confermare: è scritta lì.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
-Leggi **`DEF-4` §4-ter prima di giocare la Scena 3**. Tre cose che al tavolo si
-dimenticano:
+Leggi **`DEF-4` Scena 7 prima di arrivare alla tenda**. Balvar parla in nanico
+antico, a bassa voce, a tre passi dal generale che non capisce. Tre cose che al
+tavolo si dimenticano:
 
 - la **runa sulla soglia** impedisce i teletrasporti: chi entra, entra e basta;
 - Balvar **non chiama la guardia**. Il box è in tre battute, e fra una e
@@ -331,7 +349,7 @@ si usa stanotte**: si userà nel duello. Annotalo, e annota chi l'ha letta.
 
 ### IV.5 · Zog'tar
 
-**Combattimento completo** su griglia (statblock `DEF-4` §4-bis), perché è
+**Combattimento completo** su griglia (statistiche in `DEF-4` Appendice A.2, mappa M7-C in Appendice D), perché è
 l'unico scontro della serata e il primo di Hella da risorta. Le due vie che non
 passano dall'iniziativa (l'Occhio contro il padrone, il corridore che non
 parte) sono nel master: **leggile prima**, così le riconosci se il tavolo ci
@@ -346,7 +364,7 @@ arriva da solo.
 
 ### IV.6 · Vatore
 
-`DEF-4` §5, durante l'infiltrazione o all'uscita dalla tenda. L'Anello di
+`DEF-4` Scena 9, al ritorno fra le tende. L'Anello di
 Artemis diventa **gelido**: è il pollice sullo stipite del suo sogno, e lui lo
 sa. Non nominare Sal. Le cinque risposte del party sono tutte grigie; il
 Cronolito garantisce che Vatore sopravviva.
@@ -354,14 +372,14 @@ Cronolito garantisce che Vatore sopravviva.
 ### IV.7 · Lo stop
 
 Quando escono dalla tenda, conta le tacche e leggi la riga della tabella di
-uscita che corrisponde. Poi il box della **Zona 3** (`DEF-4` §2, *«Il primo
+uscita che corrisponde. Poi il primo box della **Scena 10** (*«Il primo
 ariete arriva alle mura…»*). Finisce su **«Che fate?»**.
 
 **Non rispondere.** Chiudi la serata lì: *«Ce lo dite la prossima volta.»*
 
 **Se sei in ritardo** nell'Atto IV, nell'ordine: la targa diventa il solo
 **Fatto** gratis; la pattuglia di Durin si riassume in tre righe (via A, la
-Corona); Zog'tar passa in **FAST-PLAY** (un assalto coordinato, un tiro
+Corona); Zog'tar passa alla **versione veloce** (`DEF-4` Appendice C.2: un assalto coordinato, un tiro
 contrapposto). **Balvar non si taglia**: è l'unica scena che cambia il duello.
 
 ---
@@ -413,10 +431,10 @@ blocca la serata; tutte vanno sapute prima di trovarsele davanti.
 |---|---|---|
 | 1 | **Durik**: `DEF-3` §7 lo dice «compagno a pieno titolo», la scheda del viaggio v2 §10 «evocato, 1 ora» | risolto dalla decisione **S3**: sempre presente |
 | 2 | **Durik a 12 DV**: la tabella di risonanza dà *«+1d8+3 pf»* per due DV di un d10 | **12d10+36 = 102 pf**, confermati dal DM il 2026-09-24 |
-| 3 | **Periapto di Saggezza +2 e Collana +4**: `DEF-3` §11 C scrive «sinergia +4+2 SAG». In 3.5 due bonus di **potenziamento** alla stessa caratteristica **non si sommano** (SRD, *Combining Magical Effects*) | vale solo il **+4**. Il Periapto resta un oggetto da rivendere o da dare a un altro |
-| 4 | **L'equipaggiamento di Hella**: `DEF-3` §7-bis dice cuoio borchiato +2, scudo di legno +1, scimitarra +1; §11 C dice armatura di cuoio +2, falcetto o scudo leggero +1 | vince **la scheda della giocatrice**, che è la fonte più vecchia e l'unica giocata |
-| 5 | **I tre semi di treant a −1000** (`DEF-4` Scena 1-bis), anteriori al rito | **corretto nel master**: due Treant di Adamantio dalla Collana (IV.3) |
-| 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp`, che `DEF-4` §9 indica per «il portale del Tempo», è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione). `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` §12 per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
+| 3 | **Periapto di Saggezza +2 e Collana +4**: `DEF-3` §11 C scrive «sinergia +4+2 SAG». In 3.5 due bonus di **potenziamento** alla stessa caratteristica **non si sommano** (SRD, *Combining Magical Effects*) | vale solo il **+4**. Il Periapto resta un oggetto da rivendere o da dare a un altro. **Corretto nel master il 2026-09-25** |
+| 4 | **L'equipaggiamento di Hella**: `DEF-3` Appendice A dice cuoio borchiato +2, scudo di legno +1, scimitarra +1; §11 C dice armatura di cuoio +2, falcetto o scudo leggero +1 | vince **la scheda della giocatrice**, che è la fonte più vecchia e l'unica giocata |
+| 5 | **I tre semi di treant a −1000** (`DEF-4`, la notte nella fortezza), anteriori al rito | **corretto nel master**: due Treant di Adamantio dalla Collana (IV.3) |
+| 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp`, che `DEF-4` §9 indica per «il portale del Tempo», è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione). `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
 | 7 | **La preghiera nanica di `DEF-3` §4**, *«Khazâd ai-mênu…»*, riprende parola per parola il grido di guerra dei nani di Tolkien. La skill dello stile lo vieta (non-negoziabile 4: niente testo o nomi presi dalle fonti) | **corretto il 2026-09-24**: master e handout hanno due versi di nanico scritto per la campagna, con la traduzione e la preghiera in italiano |
 | 8 | **Durik nella Cassetta del DM** era descritto come *«il nano che emerge dal Rituale»* e con un tic vocale. È un cane e non parla | corretto nella Cassetta con questo lotto |
 

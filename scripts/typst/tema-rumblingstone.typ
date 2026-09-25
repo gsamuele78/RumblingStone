@@ -180,9 +180,12 @@
 // Una figura. In due colonne un'immagine più larga della colonna va in float a
 // piena larghezza, esattamente come le tabelle larghe: dentro la colonna
 // verrebbe scalata fino a non vedersi più.
-#let figura(percorso, didascalia: none, larga: false, alt: none) = {
+#let figura(percorso, didascalia: none, larga: false, pagina: false, alt: none) = {
+  // `pagina`: l'immagine sta su un foglio a una colonna (appendici, mappe) e
+  // non deve superarne l'altezza, didascalia compresa.
   let corpo = figure(
-    image(percorso, width: 100%, alt: alt),
+    if pagina { image(percorso, width: 100%, height: 21cm, fit: "contain", alt: alt) }
+    else { image(percorso, width: 100%, alt: alt) },
     caption: if didascalia == none { none } else {
       text(size: 8.4pt, style: "italic", fill: seppia)[#didascalia]
     },

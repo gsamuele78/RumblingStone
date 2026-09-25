@@ -28,7 +28,7 @@ voci:
 
 ## STORIA: IL TRADIMENTO CHE L'HA CREATO
 
-Mille anni fa (≈372 DR), Zeth era il **mastro costruttore** delle prime gallerie sotterranee di Hammerfist — un mezz'elfo che aveva legato la sua anima alla montagna per proteggere il suo popolo dall'orda di Zog'tar Deatheye, che assediava la fortezza giovane. Credeva di eseguire un rituale di *Consacrazione* a Silvanus. Fu ingannato da un chierico incappucciato di Shar, **mano del Collezionista attraverso il tempo**, che gli diede i componenti di una Lichificazione (`ARC07-DEF-4` §3 Scena 1-bis, «Seme del Ghostlord»: i PG sono lì quella notte).
+Mille anni fa (≈372 DR), Zeth era il **mastro costruttore** delle prime gallerie sotterranee di Hammerfist — un mezz'elfo che aveva legato la sua anima alla montagna per proteggere il suo popolo dall'orda di Zog'tar Deatheye, che assediava la fortezza giovane. Credeva di eseguire un rituale di *Consacrazione* a Silvanus. Fu ingannato da un chierico incappucciato di Shar, **mano del Collezionista attraverso il tempo**, che gli diede i componenti di una Lichificazione (`ARC07-DEF-4` Scena 5, «Seme del Ghostlord»: i PG sono lì quella notte).
 
 > *Allineato il 2026-09-24 su decisione del DM: la scheda diceva «ottocento anni fa» e «un'invasione phaerimm», `ARC07-DEF-4` (canone DM del 2026-07-23) mille anni fa e l'orda. Vale il secondo; il cultista di Shar e la mano del Collezionista sono la stessa persona.*
 

@@ -1,7 +1,7 @@
 # Thorgrim Barbadiferro — l'antico portatore di Aegis Fang [NON-CREATURA]
 
 **Faction**: hammerfist-372dr | **Role**: social | **Environment**: mountain
-**Source**: `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` §3 SCENA 2 · `07_il Portale Della Forgia Eterna/ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` (l'affresco)
+**Source**: `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Scena 4 · `07_il Portale Della Forgia Eterna/ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` (l'affresco)
 **Status**: NON-CREATURA — **non ha uno statblocco**, e non deve entrare nel pool degli incontri.
 
 ## Perche' non e' una creatura
@@ -42,7 +42,7 @@ riceve i PG insieme a **Re Thorek I** e fissa la Corona sulla loro fronte:
 mostratela.»* Aegis Fang canta la stessa nota nelle sue mani e in quelle dei
 PG, a mille anni di distanza.
 
-- **La scena** e' `ARC07-DEF-4` §3 SCENA 2: prova di gruppo **CD 20** →
+- **La scena** e' `ARC07-DEF-4` Scena 4, il consiglio di guerra: prova di gruppo **CD 20** →
   fiducia piena (invisibilita', benedizioni, mappa del campo); fallimento →
   aiuti dimezzati, con −2 alla Scena 3.
 - **L'eco**: riecheggia nella **Cerimonia delle 100 Asce** (ARC-08), e la sua

@@ -4,13 +4,13 @@
   "subtitle": "Il risveglio nella Forgia · il rito del Cuore di Moradin · Hammerfist mille anni fa, fino all'alba",
   "banner": "BOOKLET DI SESSIONE",
   "meta": "Sessione D&D 3.5 per 4 personaggi di 13° livello (Hella torna al rito) · Faerûn, Flamerule 1372 DR e ≈372 DR · Campagna privata RumblingStone · regia DM, cast ed echi, master DEF-2/3/4 integrali, handout per PG",
-  "header": "La serata del 2026-09-25: regia in ordine di gioco, il cast con gli echi, i tre master integrali e le pagine da consegnare. I capitoli ⚠ sono del DM; le pagine ✉ si consegnano ai giocatori quando la regia lo dice.",
+  "header": "La serata del 2026-09-25: la regia, la cassetta del DM, i tre master in ordine di gioco con le loro appendici A4 di statistiche e mappe, e le pagine da consegnare. I capitoli ⚠ sono del DM; le pagine ✉ si consegnano ai giocatori quando il master lo dice.",
   "footer": "La Resurrezione e i Mille Anni",
   "player_footer": "Il Cuore e la Porta",
   "colophon": {
     "edizione": "Booklet di sessione",
-    "versione": "v1",
-    "data": "2026-09-24",
+    "versione": "v2",
+    "data": "2026-09-25",
     "autori": "Il DM di RumblingStone, con l'agente di scrittura del repo",
     "basato_su": "D&D 3.5 SRD (OGL 1.0a); adattamento privato di Red Hand of Doom (Wizards of the Coast, 2006)",
     "licenza": "materiale del DM, uso privato del tavolo, non diffondere"
@@ -25,17 +25,7 @@
       "tag": "dm"
     },
     {
-      "title": "II · Il cast e i suoi echi",
-      "file": "02-CAST-ED-ECHI-PNG.md",
-      "tag": "dm"
-    },
-    {
-      "title": "II-bis · Il cast di mille anni fa",
-      "file": "../volume-mille-anni/01-CAST-MILLE-ANNI.md",
-      "tag": "dm"
-    },
-    {
-      "title": "La cassetta del DM — cast, pronuncia, read-aloud, suoni",
+      "title": "II · La cassetta del DM — cast, pronuncia, read-aloud, suoni",
       "file": "../../ARC07-CASSETTA-DEL-DM.md",
       "tag": "dm"
     },
@@ -55,7 +45,7 @@
       "tag": "dm"
     },
     {
-      "title": "Collana dei Semi Eterni — scheda DM",
+      "title": "VI · Collana dei Semi Eterni — scheda DM",
       "file": "../../../PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md",
       "tag": "dm"
     },
@@ -117,6 +107,11 @@
     {
       "title": "✉ Le Cronache dei Quattro Eroi",
       "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Il piano di battaglia di Re Thorek I",
+      "file": "../volume-mille-anni/03-HANDOUT-PIANO-DI-BATTAGLIA.md",
       "tag": "player"
     }
   ],

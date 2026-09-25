@@ -117,7 +117,7 @@ def dimensioni(f: Path) -> tuple[int, int] | None:
     return None
 
 
-def figura(alt: str, src: str, base: Path) -> str:
+def figura(alt: str, src: str, base: Path, pagina: bool = False) -> str:
     """`![alt](src)` → `#figura(...)`, con l'avviso se il file non c'è.
 
     Prima di questa funzione la sintassi cadeva nella regola dei link e
@@ -147,7 +147,12 @@ def figura(alt: str, src: str, base: Path) -> str:
     if alt.strip():
         voci.append(f"didascalia: [{inline(alt)}]")
         voci.append(f"alt: {json.dumps(alt, ensure_ascii=False)}")
-    if larga:
+    if pagina:
+        # Dentro una pagina a una colonna l'immagine è la pagina: una mappa
+        # verticale a tutta larghezza è più alta del foglio, e Typst la faceva
+        # uscire dal bordo alto col suo titolo (M7-C, 2026-09-25).
+        voci.append("pagina: true")
+    elif larga:
         voci.append("larga: true")
     return "#figura(" + ", ".join(voci) + ")"
 
@@ -288,10 +293,17 @@ def _celle(riga: str) -> list[str]:
     return [c.strip() for c in riga.strip().strip("|").split("|")]
 
 
-_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[|§§HB-)")
+_BLOCCO = re.compile(r"^(#{1,4}\s|>|---+\s*$|\s*[-*]\s+|\s*\d+\.\s+|\s*\||```|!\[|§§HB-|<!--)")
 
 
 _IMG = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+
+# Due direttive d'impaginazione, scritte come commenti perché la catena HTML le
+# ignori: `<!-- pagina: una-colonna -->` … `<!-- /pagina -->` mette quello che
+# sta in mezzo su pagine A4 a una colonna (appendici, statistiche, mappe), e
+# `<!-- nuova-pagina -->` va a capo pagina. Ogni altro commento si butta.
+_COMMENTO = re.compile(r"<!--.*?-->", re.S)
+_DIRETTIVA = re.compile(r"<!--\s*(pagina:\s*una-colonna|/pagina|nuova-pagina)\s*-->")
 
 
 # I prop sono sorgenti HOMEBREWERY (.hb.md): usano una sintassi a blocchi che il
@@ -346,13 +358,32 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
             _IMG.sub(lambda m: "\n" + m.group(0) + "\n", ln) if _IMG.search(ln) else ln
             for ln in md.split("\n")
         )
+    # I commenti HTML non sono testo: la catena HTML li toglie, questa li
+    # stampava letterali («<!-- … -->» in mezzo alla pagina). Restano solo le
+    # direttive d'impaginazione, che diventano pagine a una colonna.
+    md = _COMMENTO.sub(lambda m: m.group(0) if _DIRETTIVA.fullmatch(m.group(0)) else "", md)
     righe = _spoglia_homebrewery(md.split("\n"))
     primo_paragrafo = None
     ultimo_titolo = ""
     out: list[str] = []
+    aperte = 0
     i = 0
     while i < len(righe):
         ln = righe[i]
+
+        d = _DIRETTIVA.fullmatch(ln.strip())
+        if d:
+            if d.group(1) == "nuova-pagina":
+                out.append("#pagebreak(weak: true)")
+            elif d.group(1) == "/pagina":
+                if aperte:
+                    out.append("]")
+                    aperte -= 1
+            elif not aperte:
+                out.append("#page(columns: 1)[")
+                aperte += 1
+            i += 1
+            continue
 
         if ln.strip().startswith("```"):               # blocco di codice
             recinto = ln.strip()
@@ -414,7 +445,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
 
         m_img = _IMG.fullmatch(ln.strip())
         if m_img is not None and base is not None:
-            fig = figura(m_img.group(1), m_img.group(2), base)
+            fig = figura(m_img.group(1), m_img.group(2), base, pagina=aperte > 0)
             if fig:
                 out.append(fig)
             i += 1
@@ -460,6 +491,9 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
                 "#capolettera(" + json.dumps(testo[0], ensure_ascii=False)
                 + ", [" + testo[1:] + "])"
             )
+    # Una pagina a una colonna lasciata aperta chiude col capitolo: Typst
+    # altrimenti muore con «unclosed delimiter» in fondo al volume.
+    out.extend("]" * aperte)
     return "\n".join(out)
 
 

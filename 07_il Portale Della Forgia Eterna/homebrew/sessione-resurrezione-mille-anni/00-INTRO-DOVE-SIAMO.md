@@ -53,15 +53,20 @@ li decide la Sala:
 
 | Capitolo | Per chi | Quando |
 |---|---|---|
-| I · Regia della serata | ⚠ DM | da leggere prima, da tenere aperto durante |
-| II · Il cast e i suoi echi | ⚠ DM | durante: una riga per ogni PNG che parla |
-| III-V · Master integrali DEF-2, DEF-3, DEF-4 | ⚠ DM | i paragrafi che la regia cita |
-| Cassetta del DM, Atlante mappe | ⚠ DM | come sempre |
-| Echi privati per PG | ✉ uno a testa | Thorik, Tordek, Artemis all'inizio; Hella quando lo dice la regia |
+| I · Regia della serata | ⚠ DM | da leggere prima, da tenere aperto durante; contiene gli echi del passato che stasera tornano |
+| II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
+| III-V · Master DEF-2, DEF-3, DEF-4 | ⚠ DM | **si leggono in avanti**, nell'ordine in cui si gioca. Ogni PNG ha la sua **scheda d'entrata** nella scena in cui compare; statistiche e mappe sono nelle **appendici A4** in fondo a ciascun master |
+| VI · Collana dei Semi Eterni, scheda DM | ⚠ DM | la scheda dell'artefatto, da consultare |
+| Echi privati per PG | ✉ uno a testa | Thorik, Tordek, Artemis all'inizio; Hella al risveglio (`DEF-3` §7) |
 | Il Cuore di Moradin (immagine) | ✉ a tutti | subito dopo la rivelazione del reliquiario (`DEF-3` §3) |
+| La preghiera della resurrezione | ✉ al giocatore di Thorik | allo Step 1 (`DEF-3` §4) |
 | Carte dei Doni | ✉ solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |
 | Scheda di Hella risorta, scheda di Durik | ✉ alla giocatrice di Hella | al risveglio (`DEF-3` §7) |
-| Le Cronache dei Quattro Eroi | ✉ a tutti | alla soglia, quando la Corona apre l'affresco del Tempo |
+| Le Cronache dei Quattro Eroi | ✉ a tutti | alla soglia (`DEF-3` §8-ter), quando la Corona apre l'affresco del Tempo |
+| Il piano di battaglia di Re Thorek I | ✉ a tutti | al consiglio di guerra (`DEF-4` Scena 4) |
+
+I tre master segnano **✉ Si consegna qui** nel punto esatto di ogni foglio, e
+`DEF-3` §0 ha la stessa tabella in ordine di gioco.
 
 Le pagine ✉ stanno anche in un secondo volume, `ARC07-SERATA-GIOCATORI`, da
 stampare a parte e tagliare.
@@ -72,7 +77,7 @@ Dalla radice del repo, con `C` la cartella di questo booklet:
 
 - **il volume del DM**, da stampare, con segnalibri:
   `python3 scripts/export_booklet_typst.py C/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json --all`
-- **una pagina ✉ per file**, da stampare o mandare a un giocatore (undici
+- **una pagina ✉ per file**, da stampare o mandare a un giocatore (tredici
   file in `C/pdf/`):
   `python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf`
 - **tutte le pagine ✉ in un volume**:

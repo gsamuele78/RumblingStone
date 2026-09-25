@@ -827,7 +827,7 @@ artisti viventi]
 
 ### 36 · SCENA 1 — L'Arrivo e le Cronache dei Quattro Eroi  `[scena-1-l-arrivo-e-le-cronache-dei-quattro-eroi]`
 
-- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 1 — L'Arrivo e le Cronache dei Quattro Eroi
+- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 1 — Il portale e il bosco al tramonto
 - **Etichetta regia**: .
 - **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
 - **Stato**: ⬜ prompt da scrivere
@@ -847,7 +847,7 @@ artisti viventi]
 
 ### 37 · SCENA 2 — Thorgrim Barbadiferro e gli Antenati [FAST-PLAY — assorbita in 1-bis se giochi le scene complete]  `[scena-2-thorgrim-barbadiferro-e-gli-antenati-fast-play-assor]`
 
-- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 2 — Thorgrim Barbadiferro e gli Antenati [FAST-PLAY — assorbita in 1-bis se giochi le scene complete]
+- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 4 — Il consiglio di guerra di Re Thorek I
 - **Etichetta regia**: .
 - **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
 - **Stato**: ⬜ prompt da scrivere
@@ -867,7 +867,7 @@ artisti viventi]
 
 ### 38 · SCENA 3 — Infiltrazione e Zog'tar [FAST-PLAY / COMBATTIMENTO COMPLETO]  `[scena-3-infiltrazione-e-zog-tar-fast-play-combattimento-comp]`
 
-- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 3 — Infiltrazione e Zog'tar [FAST-PLAY / COMBATTIMENTO COMPLETO]
+- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENE 7-8 — La tenda del comando, Zog'tar
 - **Etichetta regia**: .
 - **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
 - **Stato**: ⬜ prompt da scrivere
@@ -887,7 +887,7 @@ artisti viventi]
 
 ### 39 · SCENA 4 — Le Mura sotto Assalto (alba)  `[scena-4-le-mura-sotto-assalto-alba]`
 
-- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 4 — Le Mura sotto Assalto (alba)
+- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 10 — Le mura all'alba
 - **Etichetta regia**: .
 - **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
 - **Stato**: ⬜ prompt da scrivere
@@ -907,7 +907,7 @@ artisti viventi]
 
 ### 40 · SCENA 6 — Il Rubino e il Ritorno  `[scena-6-il-rubino-e-il-ritorno]`
 
-- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 6 — Il Rubino e il Ritorno
+- **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — SCENA 13 — Il Rubino e il ritorno
 - **Etichetta regia**: Casa di Davide — la profezia compiuta).
 - **Destinatario**: `[da decidere: pg | dm]`  ·  **Formato**: `[16:9 splash | 3:4 handout | 1:1 token]`
 - **Stato**: ⬜ prompt da scrivere
@@ -1087,7 +1087,7 @@ human hands, faceted gemstone cut like a jewel, cartoon, neon glow, bokeh hearts
 > `PROMPT-RITRATTI-E-TAVOLE-ARC07.md`. Si genera prima **R5 Balvar** (è il volto che conta di più) e gli
 > altri chiedendo *«same painting style, same lighting as the previous
 > image»*. Il file si salva in `Immagini/ritratti/<nome>.jpg`, poi nella scheda
-> del cast (`01-CAST-MILLE-ANNI.md`) la riga «Ritratto da generare» diventa
+> d'entrata di `ARC07-DEF-4` la riga «Ritratto» diventa
 > l'immagine. **Gate di rifiuto** (skill `rumblingstone-art-direction` §6): le
 > mani, la luce da sinistra, il segno del personaggio ben visibile, nessuna
 > scritta. Skullcrusher ha già la scheda **41**, la Custode la **28**.

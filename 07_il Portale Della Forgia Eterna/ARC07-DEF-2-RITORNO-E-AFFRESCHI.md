@@ -384,7 +384,7 @@ tornare — presagio della resurrezione, non garanzia.*
 > te per finire di dipingerlo.*
 > ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
 > della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
-> Thorek I, suo cugino (`DEF-4` §3 Scena 1-bis); Thorgrim è l'antico portatore
+> Thorek I, suo cugino (`DEF-4` Scena 4); Thorgrim è l'antico portatore
 > di **Aegis Fang**, e il viaggio è a mille anni fa.*
 
 - **Interazione (Thorik osserva 1 min, TS Volontà CD 17 — il fallimento è il

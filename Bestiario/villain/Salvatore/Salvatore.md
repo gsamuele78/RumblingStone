@@ -237,7 +237,7 @@ Se i PG scelgono di combatterlo, il primo punto di danno che riceve è la svolta
 
 ## Il Sigillo di Ossidiana — l'artefatto che lo ha reso Sal `[CANONE — DM 2026-07-23]`
 
-> Cross-source: scheda completa in `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` §5 (Artefatto); thread `campaign/state.md §7 [SIGILLO DI OSSIDIANA]`.
+> Cross-source: scheda completa in `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice B; thread `campaign/state.md §7 [SIGILLO DI OSSIDIANA]`.
 
 Ciò che Vatore ha rubato al −1000 e con cui è diventato **Sal**. Sigillo di
 **ossidiana nera** allineato a **Shar** (Signora della Notte — perdita,
