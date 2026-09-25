@@ -22,6 +22,7 @@
 > Cuore della Montagna). **Canone**: la Corona ha Topazio + Smeraldo (aprono il
 > portale del Tempo); il **Rubino si accende SOLO alla vittoria antica** (D5/D16).
 >
+> <!-- storico -->
 > 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo segue l'ordine
 > in cui si gioca, dal tramonto all'alba, in tre atti e tredici scene. Ogni PNG
 > entra nella scena in cui i PG lo incontrano, con la sua **scheda d'entrata**.
@@ -32,6 +33,7 @@
 > pattuglia. Nessun contenuto di gioco è stato tolto. Dieci passi della prosa
 > si contraddicevano con l'ordine degli eventi o col canone, e sono stati
 > corretti: l'elenco è in §9, «Cosa è cambiato nel riordino».
+> <!-- /storico -->
 
 ---
 
@@ -50,7 +52,7 @@
 | §6 | **Contingenze & sconfitta** | «se i PG fanno X»; il paradosso; una sconfitta nel passato |
 | §7 | **Echo Ledger** | carry-over B4, Vatore→Sal, tono del Rubino |
 | §8 | **Avanzamento** | budget PX per scena, tesoro pregenerato |
-| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica, cosa è cambiato |
+| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica<!-- storico -->, cosa è cambiato<!-- /storico --> |
 | App. A | **Statistiche** | Skullcrusher, Zog'tar e le guardie, Durin, Balvar, le creature del campo |
 | App. B | **Il Sigillo di Ossidiana** | l'artefatto che Vatore ha appena rubato |
 | App. C | **Le versioni veloci** | le stesse scene a montaggio, per chi ha poco tempo |
@@ -279,8 +281,8 @@ notte = furtività CD 20; ogni fuoco è luce fioca a 3 m. Vedi M7-A zoom.
 
 ### ZONA 3 — Le Mura all'Alba (l'assalto)
 
-Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la serata del
-2026-09-25.
+Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la prima delle due
+sessioni del viaggio<!-- storico --> (la serata del 2026-09-25)<!-- /storico -->.
 
 **Terreno (callout):** camminamenti sopraelevati (+4,5 m); brecce dove gli
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
@@ -420,10 +422,12 @@ toccano nessuno. Prima di entrare c'è la targa.
 > di un re, una sola. Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova. Sotto, sul selciato, qualcosa luccica.*
 
+<!-- storico -->
 ⚠️ *Il box di prima diceva che la targa era la profezia dei Quattro Eroi e che
 era stata incisa oggi, cioè dava il **Fatto** e la **Lettura** del nodo qui sotto
 prima che qualcuno la guardasse. Adesso la targa si vede e basta; i trucioli sul
 selciato sono la porta 👁️ lasciata aperta.*
+<!-- /storico -->
 
 #### 🔍 Nodo d'indizio — la targa di bronzo *(Fatto · Lettura · Nome)*
 
@@ -602,8 +606,8 @@ preso la prima tacca.
 > **Perché esiste.** La scelta del riposo della Scena 5 era già un orologio, scritto
 > a parole, in ore che non tornavano con queste tacche. Ma un tempo che non si segna non si sente,
 > e il tavolo non può *scegliere di correre un rischio* se non sa quanto ha in
-> mano. Questo è il congegno che i due banchi del repo — il Palio e l'Abbazia —
-> usano per reggere la tensione, e questo master ne aveva **una menzione sola**.
+> mano.<!-- storico --> Questo è il congegno che i due banchi del repo — il Palio e l'Abbazia —
+> usano per reggere la tensione, e questo master ne aveva **una menzione sola**.<!-- /storico -->
 
 **Si segna su un foglio, in vista.** Dal tramonto all'alba ci sono **8 tacche**,
 e quando il foglio arriva sul tavolo la prima è già segnata: il consiglio. Ogni
@@ -635,7 +639,7 @@ cercare Zeth sì. È la regola dell'Abbazia (`ADR-10` interno: *l'oppressione
 avanza sulle scoperte*), e serve a non punire proprio il comportamento che
 questo master vuole ottenere — **guardarsi intorno**.
 
-🔎 **E qui l'orologio dice una cosa che il testo prima non diceva**: parlare con
+🔎 **E qui l'orologio dice una cosa<!-- storico --> che il testo prima non diceva<!-- /storico -->**: parlare con
 Balvar, cercare Zeth e fare il banchetto costano **3 tacche** in tutto. Sono i
 tre pezzi migliori della notte, e sommati sono anche il rischio più grosso. È
 il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
@@ -645,10 +649,10 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale 12 h se
 mangiano), fabbri che affilano le armi, chierici che benedicono.
-- **HELLA — i Treant dell'alba.** *(Allineato al rito il 2026-09-24: la prima
+- **HELLA — i Treant dell'alba.**<!-- storico --> *(Allineato al rito il 2026-09-24: la prima
   stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
   tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
-  si piantano più.)* All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
+  si piantano più.)*<!-- /storico --> All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
   I e II: **due Treant di Adamantio** (statblock `DEF-3` §7: 90 pf, RD
   10/adamantio, 2 schianti +18, danni doppi alle strutture) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
@@ -769,10 +773,12 @@ rune, come fa sempre. La conversazione con Balvar si fa **a tre passi dal
 generale**, ed è questa la tensione della scena. Quando finisce, o quando
 qualcuno colpisce, comincia la Scena 8.
 
+<!-- storico -->
 ⚠️ *La stesura di prima metteva Balvar e Zog'tar nella stessa tenda senza dire
 come Balvar potesse parlare con i PG davanti al generale. La percezione viene
 dal suo statblocco; la lingua e l'angolo buio sono regia, e non gli danno niente
 che non abbia già.*
+<!-- /storico -->
 
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
@@ -806,11 +812,13 @@ Zog'tar sa uccidere diecimila uomini, Balvar sa **dove** vanno colpite le mura.
 
 #### ⚖️ Il grigio — perché **crede di aver ragione** *(pilastro GoT)*
 
+> <!-- storico -->
 > **Aggiunto nella riscrittura del 2026-09-18.** Balvar era già il personaggio
 > migliore del master, ma era scritto come **un nemico interessante**, non come
 > una fazione. La differenza è che di un nemico interessante si chiede *come lo
 > batto*; di una fazione che crede di aver ragione si chiede *cosa vuole, e cosa
 > gli costa averlo*. È l'unica riga che il pilastro 5 chiede davvero.
+> <!-- /storico -->
 
 | | |
 |---|---|
@@ -849,6 +857,7 @@ funziona solo se non l'hanno ancora minacciato.
 >
 > **Che fate?**
 
+<!-- storico -->
 ⚠️ **Spezzato in tre il 2026-09-18, e non per pignoleria.** Era **un box da 15
 righe**, sopra il tetto di 12 di `read-aloud-adulti.md` §2, e la self-check
 della skill dello stile ha una domanda apposta: *«Did any box grow past the
@@ -857,6 +866,7 @@ prosa **era** diventata interessante, ed è il motivo per cui era cresciuta.
 Spezzandolo in tre beat si guadagna anche una cosa che il box unico non aveva:
 **Balvar aspetta che i PG reagiscano prima di parlare**, e il suo silenzio
 diventa la prima battuta.
+<!-- /storico -->
 
 #### La cosa che lo rende memorabile: sa da dove venite
 
@@ -1094,7 +1104,7 @@ L'artefatto che stringe al petto è in **Appendice B**.
 > **Il percorso dell'atto.** Dal primo ariete al ritorno. Le mura, il drago che
 > cala sul cortile, il rito all'incudine, la luce del Rubino.
 >
-> 🛑 **La serata del 2026-09-25 si ferma al primo box della Scena 10.** Il resto
+> 🛑 **La prima sessione<!-- storico --> (la serata del 2026-09-25)<!-- /storico --> si ferma al primo box della Scena 10.** Il resto
 > dell'atto è della sessione dopo.
 
 | Scena | Dove | Chi entra | Prova |
@@ -1120,6 +1130,7 @@ caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
 >
 > **Che fate?**
 
+<!-- storico -->
 ⚠️ **Perché questo box è stato riscritto** *(riscrittura 2026-09-18)*. Il
 precedente diceva *«Dove vi gettate, la linea tiene»* e chiamava i PG *«quattro
 leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
@@ -1131,6 +1142,7 @@ leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
   sono due delle sei cose che fanno staccare un lettore adulto. Il nano che si
   sputa nelle mani fa lo stesso lavoro e non chiede di essere creduto.
 
+<!-- /storico -->
 Poi, quando le prime scale arrivano in cima:
 
 > **Read-aloud (Salvatore lead).** *Il camminamento è largo quanto un tavolo da
@@ -1203,6 +1215,7 @@ Appendice A)*
 > mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra
 > mura che bruciano, che non hai mai visto.*
 
+<!-- storico -->
 ⚠️ **Perché è stato spezzato in due** *(2026-09-18)*. Il box unico portava
 **nove nomi propri** e finiva su *«state per insegnare a quel sangue cosa vuol
 dire aver paura»* — che dice ai giocatori cosa stanno per fare, cioè
@@ -1210,14 +1223,17 @@ dire aver paura»* — che dice ai giocatori cosa stanno per fare, cioè
 risucchio, le braci che si piegano, lo scudo che cade), la visione è un
 **micro-box per un solo PG** come chiede `ADR-0014` §1, e l'ultima riga è
 **«Che fate?»** invece di una promessa.
+<!-- /storico -->
 
 #### 🎬 La regia dei primi due round — una battuta per attore *(ADR-0014 §1)*
 
+> <!-- storico -->
 > **Perché c'è.** Sotto trovi le tattiche **del drago**, che questo master aveva
 > già e sono buone. Quello che mancava è l'altra metà, che `ADR-0014` prescrive
 > dal luglio 2026 per **ogni** sequenza a battute e che esisteva in **un solo
 > documento del repo**: i PG agiscono uno alla volta, e se ogni turno è un tiro
 > senza descrizione il pathos evapora al terzo round.
+> <!-- /storico -->
 >
 > **Non sono numeri nuovi.** CD e danni restano quelli dell'Appendice A. Qui c'è solo
 > **cosa leggere, quando**, e sono sei secondi a testa.
@@ -1395,8 +1411,8 @@ sé**, come una serratura che riconosce la chiave. La Corona passa a **+3**.
 > *Want* è la montagna, non il portatore: ha accettato tre gemme e un pegno
 > perché le servivano, e lo dirà con la stessa calma con cui dice tutto il resto.
 
-**Momento 3 — Aegis Fang si sveglia** *(decisione DM: è una scena, non una riga
-di scheda)*. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
+**Momento 3 — Aegis Fang si sveglia**<!-- storico --> *(decisione DM: è una scena, non una riga
+di scheda)*<!-- /storico -->. È una scena, non una riga di scheda. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
 1 full awakening»*. L'Assedio è questo, ed è appena stato vinto.
 
 > **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
@@ -1584,6 +1600,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 
 ---
 
+<!-- storico -->
 ### Cosa è cambiato nel riordino del 2026-09-25
 
 Il DM ha chiesto un master che si legga in avanti, e una prosa che abbia un
@@ -1612,6 +1629,7 @@ antica» di `_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (deprecata).
 `PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` resta **vivo** (tabella
 DM-approved citata da qui e dall'ARC-08). `Bestiario/villain/Salvatore/Salvatore.md`
 resta vivo (Vatore/Sal).
+<!-- /storico -->
 
 ---
 

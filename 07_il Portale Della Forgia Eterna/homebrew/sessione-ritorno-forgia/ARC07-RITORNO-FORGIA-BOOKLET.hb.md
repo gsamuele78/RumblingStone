@@ -58,7 +58,7 @@ Hammerfist preme sul riposo. Nessun nemico, nessun combattimento.
 - **Bottino intatto** `[canone giocato]`: al rito **nessuno si è spogliato**.
   Geode Titanico, **Cuore di Terros** e geodi sono ancora del party.
 - **THORIK ha accettato il Peso nel corpo**: **−2 DES / +2 COS permanenti**
-  *(corretto 2026-08-06: il pegno è del portatore, non di Tordek)*.
+  .
   Per chi fa già l'ancora è diventare ancora più immobile — CA, Riflessi e
   iniziativa scendono di 1, i pf salgono. **Attenzione a come lo giochi**: la
   DES era già la sua statistica povera, quindi il malus **non si vede** e il
@@ -181,8 +181,7 @@ sacrificabile.
    Benedizioni le sostituiscono. Rinnovo all'Altare, 10 minuti di preghiera,
    Conoscenze (religioni) CD 12.
 
-8. **Il riposo lungo — e il sogno** (vedi §2 qui sotto). `[CANONE GIOCATO:
-   dormono nella Sala.]` Non è solo un riposo: **otto ore vere in quattro ore
+8. **Il riposo lungo — e il sogno** (vedi §2 qui sotto). Non è solo un riposo: **otto ore vere in quattro ore
    di mondo**, e le quattro ore in più i PG le vivono **dentro il sonno**. Il
    master ha le quattro scene, una per giocatore, nel **§7-bis «Le Quattro Ore
    Rubate»** — Thorik e le mani sotto l'architrave, Tordek e lo zaino
@@ -198,7 +197,7 @@ sacrificabile.
 ## 2. La scelta del riposo — non suggerire tu la risposta
 
 **Dormire nella Sala sono otto ore vere** — riposo lungo pieno, tutto recuperato.
-Lo sconto è **solo sull'orologio del mondo**. `[CANONE 2026-07-31]` Due tariffe,
+Lo sconto è **solo sull'orologio del mondo**. Due tariffe,
 e una è un regalo che **i giocatori non devono sapere**:
 
 | Dove dormono | 8 ore costano | In cambio |
@@ -272,8 +271,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > master #1), **prima** della resurrezione di Hella (master #3). Ordine D2.
 > **Canone a monte**: Topazio (Fuoco) e Smeraldo (Terra) presi; corpo di Hella
 > vegliato da Therysol nella Sala; il suo spirito ha già viaggiato (i PG **non
-> lo sanno**). Countdown Hammerfist all'arrivo: **~3g 20h** (`[CANONE GIOCATO]`:
-> sono entrati da Terros senza riposare). **Registro completo dei riposi in
+> lo sanno**). Countdown Hammerfist all'arrivo: **~3g 20h** (> sono entrati da Terros senza riposare). **Registro completo dei riposi in
 > §0-bis**; il sogno del riposo qui nella Sala è il **§7-bis**.
 
 ---
@@ -295,7 +293,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §9 | **Echo Ledger** | conseguenze a lungo termine del beat |
 | §10 | **Avanzamento** | budget PX per scena + tesoro/benedizioni pregenerate |
 | §11 | **Ponte** al master #3 + **Handout & Asset** |
-| MAPPE | **S-1 Sala ottagonale · S-2 Stanza della Corona** | ASCII ultra-clear 1,5 m |
+| App. | **Mappe**: S-1 Sala ottagonale · S-2 Stanza della Corona | griglie 1,5 m, su pagina A4 a una colonna |
 
 ---
 
@@ -349,7 +347,7 @@ Sala costa solo **−4 h** (tariffa divina, §0-bis) e porta con sé il sogno de
 > 📍 **Questo è il file che possiede l'orologio.** Master #1 §8c-4 e la regia di
 > sessione ne riportano solo l'estratto: se i numeri divergono, **vale questo**.
 
-#### Le due tariffe del riposo `[CANONE — DM 2026-07-31]`
+#### Le due tariffe del riposo
 
 | Dove dormono | 8 ore di sonno costano | Perché |
 |---|---|---|
@@ -373,8 +371,8 @@ ri-sottrarli: sono dentro. Da lì in poi il registro è additivo.
 |---|---|---|---|---|
 | **R1** | Piano del Fuoco, prima della piramide | ✅ giocato | dentro l'ancora | — |
 | **R2** | **Sala**, dopo il Piano del Fuoco | ✅ giocato | **+2 h** (ri-prezzato −6 h → −4 h) | **3g 20h** |
-| **R3** | Piano della Terra, prima della camera di Terros | ❌ **NON fatto** — sono entrati da Terros senza dormire `[CANONE GIOCATO 2026-07-31]` | 0 | **3g 20h** |
-| **R4** | **Sala della Forgia**, dopo Terros e prima del rito | ✅ **giocato: dormono nella Sala** `[CANONE GIOCATO]` | **−4 h** | **3g 16h** |
+| **R3** | Piano della Terra, prima della camera di Terros | ❌ **NON fatto** — sono entrati da Terros senza dormire | 0 | **3g 20h** |
+| **R4** | **Sala della Forgia**, dopo Terros e prima del rito | ✅ **giocato: dormono nella Sala** | **−4 h** | **3g 16h** |
 | — | il rito di resurrezione | prossimo | ~1 h | 3g 15h |
 | — | viaggio a −1.000 (#4) | previsto | **0 h** — il Rubino riporta all'istante di partenza | 3g 15h |
 | — | **consegna all'ARC-08** | | | **≈ 3g 15h** |
@@ -468,7 +466,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
   cupidigia avrà cosa mordere (e Vatore lo aspetta).
 - Se ha preso il **Marchio di Varis** (master #1 §6-bis, CANONE), qui l'Anello lo
   «pizzica» ogni volta che passa davanti ad A6: il marchio e il caos temporale
-  risuonano (conseguenza canonica del Marchio, DM 2026-07-23).
+  risuonano (conseguenza canonica del Marchio).
 
 ### 🌙 HELLA — la promessa dipinta (solo manifestazione, mai dialogo)
 - Hella non ha coscienza di ciò che accade: il suo spirito è nell'Incudine del
@@ -623,16 +621,17 @@ tornare — presagio della resurrezione, non garanzia.*
 
 ### A3 — «La Visione del Risveglio» (NORD-EST · personale Thorik)
 > **Read-aloud (Salvatore — la memoria che sanguina).** *Questo affresco mostra
-> eventi di poche ore fa. Thorik, sei TU. Ti vedi avvicinare esitante al trono
-> nella Stanza della Corona. Ti vedi toccare la Corona. Il flash di luce dorata,
+> eventi di poche ore fa. Thorik, sei TU. La figura dipinta si avvicina esitante
+> al trono nella Stanza della Corona, e tocca la Corona. Il flash di luce dorata,
 > la transizione — e poi il campo di battaglia dove hai combattuto fianco a
-> fianco con gli eroi che ti hanno preceduto. Uno lo riconosci: **THORGRIM
-> BARBADIFERRO**, portatore della Corona otto secoli fa, il Frostcleaver in
-> pugno. Nel frastuono senza suono dell'affresco, leggi le sue labbra: «Portala
+> fianco con gli eroi che ti hanno preceduto. Uno di loro è **THORGRIM
+> BARBADIFERRO**, che mille anni fa portò la tua stessa ascia, Aegis Fang in
+> pugno. Nel frastuono senza suono dell'affresco le sue labbra dicono: «Portala
 > bene, fratello. Ora è tua.» E all'alba, quando la luce dorata inonda il campo,
-> ti vedi con la Corona FUSA alla fronte, diventata parte di te. L'affresco si
+> la Corona non è più posata: è FUSA alla fronte, parte di chi la porta. L'affresco si
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
+
 - **Interazione (Thorik osserva 1 min, TS Volontà CD 17 — il fallimento è il
   dono).** *Fallimento:* rivive tutto — paura, speranza, la **perdita di Hella**
   — e **piange**; catarsi. La Corona brilla come *Daylight*; Moradin: *«Piangere
@@ -734,13 +733,13 @@ dipingendo con le loro scelte.
 
 **Procedura.** Thorik tocca A2 con la Corona; **tutti e 3 TS Volontà CD 18**;
 con **≥2 successi** la visione si apre per tutti.
-> **Read-aloud.** *L'affresco esplode di chiarezza per dieci secondi, e vedete
-> un futuro POSSIBILE, non promesso: Hammerfist salva, le bandiere naniche al
+> **Read-aloud.** *Per dieci secondi l'affresco esplode di chiarezza su un
+> futuro POSSIBILE, non promesso: Hammerfist salva, le bandiere naniche al
 > vento; voi quattro — **Hella viva** — davanti a Re Thorek; la mano di lei
 > nella mano di Thorik; Artemis con le ali d'ombra spiegate; Tordek in
 > meditazione, l'aura di ki visibile; e sotto il balcone, mille nani che
-> gridano: «Eroi! Salvatori!». Poi la visione svanisce. Ma la sensazione
-> resta, incisa più a fondo di qualsiasi affresco: QUESTO È POSSIBILE. Dipende
+> gridano: «Eroi! Salvatori!». Poi la visione svanisce, e quello che resta è
+> inciso più a fondo di qualsiasi affresco: QUESTO È POSSIBILE. Dipende
 > da voi.*
 - **Effetto — Speranza Rinnovata.** **+1 morale all'attacco per 1 ora**; e la
   determinazione del party ha un àncora (usala come DM se esitano: la Cronaca
@@ -774,8 +773,8 @@ dopo lettera, la **Cronaca dei Custodi** in rune naniche:
 
 > **Read-aloud (posando lo sguardo sull'incisione).** *Thorik, tu ricordi
 > questa parete coperta del sangue di Hella. Ora il sangue non c'è più: al suo
-> posto, la pietra si sta scolpendo da sola. Vedi la Corona incisa, due gemme
-> che ardono. E vedi lei — o l'ombra di lei — scavata nel granito il giorno in
+> posto, la pietra si sta scolpendo da sola. C'è la Corona incisa, due gemme
+> che ardono. E c'è lei — o l'ombra di lei — scavata nel granito il giorno in
 > cui è caduta. Ma l'ombra si sta chiudendo, come una ferita che rimargina dal
 > fondo. La montagna sta ricordando Hella viva prima ancora che lo sia.*
 
@@ -820,7 +819,7 @@ rinnovabili 1/giorno tornando alla Sala.
 
 ---
 
-## §7-bis — «LE QUATTRO ORE RUBATE»: cosa si sogna dormendo nella Forgia `[CANONE — DM 2026-07-31]`
+## §7-bis — «LE QUATTRO ORE RUBATE»: cosa si sogna dormendo nella Forgia
 
 ### Prima la regola, perché è la domanda che nasce sempre
 
@@ -835,11 +834,11 @@ scena**: se dormono otto ore e il mondo ne conta quattro, **quattro ore devono
 stare da qualche parte**. Stanno nel sogno. Il tempo che la Forgia non spende
 fuori, lo spende **dentro di loro**.
 
-> **Read-aloud — l'addormentarsi (Salvatore + LotR).** *Vi stendete sul basalto
-> tiepido, e la Sala fa una cosa che nessuna locanda ha mai fatto: **si abbassa
+> **Read-aloud — l'addormentarsi (Salvatore + LotR).** *Il basalto è tiepido
+> sotto la schiena, e la Sala fa una cosa che nessuna locanda ha mai fatto: **si abbassa
 > di tono**. La luce dorata non si spegne — si ritira, come una brace coperta
-> per la notte. L'ultima cosa che sentite prima di andare giù è il rumore
-> minutissimo di uno scalpello che lavora molto lontano, dall'altra parte di
+> per la notte. L'ultima cosa prima di andare giù è un rumore
+> minutissimo: uno scalpello che lavora molto lontano, dall'altra parte di
 > una parete che non esiste.*
 >
 > *Poi dormite. E il sonno è lungo. Molto più lungo di una notte.*
@@ -877,11 +876,6 @@ sottile: è un uomo la cui identità è *reggere*, e che per la prima volta ha
 scoperto di **non aver retto da solo** — e la cosa non lo ha diminuito. Se il
 giocatore ne parla, ascolta e non risolvere.
 
-*(Nota di canone, 2026-08-06: fino a questa data la scena di Thorik era il suo
-rovescio — «qualcun altro ci è arrivato prima, tu sei quello in piedi» — scritta
-quando il pegno era attribuito per errore a Tordek, e questa scena stava sotto
-il suo nome. Il pegno è del portatore: la scena torna a lui, insieme alle mani
-fredde.)*
 
 ### ⚒️ TORDEK — lo zaino
 
@@ -989,7 +983,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 ### A. Budget PX del beat (party 3 PG, APL eff. 12 · PG di 13°)
 > Beat **hub**: PX di **storia e interpretazione**, non di combattimento.
 
-| Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| Scena | Tipo | PX/PG |
 |---|---|---|
 | Ritorno e lettura della Cronaca (entrambe le stanze) | storia | 400 |
 | A3 — catarsi di Thorik (beat personale riuscito, per chiunque lo giochi bene) | roleplay | 300 |
@@ -1009,7 +1003,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 | Dove | Oggetto / dono (pregenerato) | Valore |
 |---|---|---|
 | Altare (§7) | **4 Benedizioni** rinnovabili — equivalenti a Resist Energy (1.000), Endure Elements (500), pozioni di cura (3/giorno), Forza della Montagna | ricchezza speciale (non-WBL) |
-| A8 (manifestazione) | **Ghianda di Speranza** (CANONE DM 2026-07-23): è la **stessa ghianda annerita** che Hella stringe nel pugno dalla morte (master #3 §7-bis); l'affresco A8 la «mostra» come segno. Al rito del #3 diventa un piccolo àncora druidico (+1 sacro 1/g al Radicamento) **o** va nel 1° seme della Collana. Curiosità sacra, 0 mo. | — |
+| A8 (manifestazione) | **Ghianda di Speranza**: è la **stessa ghianda annerita** che Hella stringe nel pugno dalla morte (master #3 §7-bis); l'affresco A8 la «mostra» come segno. Al rito del #3 diventa un piccolo àncora druidico (+1 sacro 1/g al Radicamento) **o** va nel 1° seme della Collana. Curiosità sacra, 0 mo. | — |
 | Stanza della Corona | Sotto il dais del trono (Osservare CD 22): **reliquia dei Custodi caduti** — un anello sigillo nanico annerito, appartenuto a un portatore della Corona di ere fa (200 mo per un collezionista; +2 di circostanza a Diplomazia coi nani devoti se indossato) | 200 mo |
 
 Ricchezza speciale (Corona 2/3, Bracieri completi) già contata al master #1.
@@ -1056,12 +1050,15 @@ sistema «La Forgia Ricorda» promosso qui dal master #1 §10.
 
 ---
 
-## MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto)
+<!-- pagina: una-colonna -->
+
+## APPENDICE — MAPPE (scala 1,5 m/quadretto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**: `Mappe/ARC07-MAPPE-DEFINITIVO.md`. Le griglie qui sotto sono
-> identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
+> identiche; là hanno gli add-on DM. Qui stanno su una pagina A4 a una colonna:
+> larghe 72 caratteri, in una colonna da 8 cm andrebbero a capo.
 
 ### MAPPA S-1 — LA SALA DELLA FORGIA ETERNA (ottagono, 8 affreschi)
 
@@ -1115,8 +1112,8 @@ A8 60% · A7 ⏳~3g18h. La Sala HA REGISTRATO la vittoria: mostralo.
 ════════════════════════════════════════════════════════════════════════
 @north S
 COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 muro→PARETE della CRONACA · 🌀 portale drow SIGILLATO (dietro)
-12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO (E-F12, VUOTO: la Corona è di Thorik) · 🖼️ Dipinti Invisibili
+13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
+12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
 11     🔲 ⬛ 🔲 ⬛ ✝️ ⬛ ⬛ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
 10     🔲 ⬛ 🔲 ⬛ ⬛ ⬛ ⬛ 🔲 ⬛ ⬛   B10 = ex nascondiglio Yochlol 2
 09     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   H09 = ex nascondiglio Yochlol 1
@@ -1126,16 +1123,18 @@ COL →   A  B  C  D  E  F  G  H  I  J
 05     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
 04     ⬛ ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ ⬛ ⬛
 03     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO (D-F02, sud · collegamento P1 ↔ Sala della Forgia)
+02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO sud D-F02, verso la Sala della Forgia
 01     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   SUD
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ⬛ pavimento (ora pulito) · 🔲 colonne parallele (copertura +4 CA,
 spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
-restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie (terreno difficile) · 📜 muro dietro il
-trono = ora PARETE della CRONACA (incisioni-specchio, DEF-2 §6) · 🌀 portale
-drow SIGILLATO (dietro il muro; inerte dalla caduta di Urialle) · 👑 trono
-vuoto · 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di
-Belkram (ARC-06) · 🚪 ingresso sud.
+restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
+deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
+(terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
+(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (dietro il muro;
+inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
+🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
+(ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
 ```
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   Ora **santuario sicuro** (Consacrare) — il *desecrate* di ARC-06 è dissolto.
@@ -1158,4 +1157,6 @@ Belkram (ARC-06) · 🚪 ingresso sud.
   Cronaca (specchio della Sala S-1). A resurrezione avvenuta, la sagoma-druida
   è **piena**.
 - **Riferimento**: geometria = `06_.../Tactics_and_maps.md`; stato = DEF-2 §6/§10.
+
+<!-- /pagina -->
 

@@ -28,6 +28,7 @@
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
+> <!-- storico -->
 > 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo si legge in
 > avanti, nell'ordine in cui la serata accade: la Sala, le gemme, il Cuore, gli
 > step del rito, i Doni dentro lo Step 5, il richiamo, la Custode, lo Step 6 che
@@ -38,6 +39,7 @@
 > Dove i giocatori ricevono un foglio c'è la riga **✉ Si consegna qui**; la
 > tabella in §0 le mette in fila. I numeri di sezione da §0 a §12 non sono
 > cambiati.
+> <!-- /storico -->
 
 ---
 
@@ -85,8 +87,8 @@ attraversato il suo spirito (§8). Poi il party è di **4**, pronto per il #4.
 
 **Chi c'è.** Thorik, Tordek, Artemis (officianti); **Therysol** (veglia, testimone);
 **Moradin** (divino, manifesto per 3 secondi allo Step 6); **Hella** (morta →
-viva); e — al momento del richiamo — **la Custode delle Radici** (§6, CANONE
-DM 2026-07-23; il ramo A/B/C si gioca).
+viva); e — al momento del richiamo — **la Custode delle Radici** (§6<!-- storico -->, CANONE
+DM 2026-07-23<!-- /storico -->; il ramo A/B/C si gioca).
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i sei
 fogli per i giocatori, nella tabella qui sotto; le mappe dell'**Appendice B**
@@ -433,11 +435,16 @@ per intero, in italiano, dall'handout.
 Thorik, che la legge ad alta voce.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
+> <!-- storico -->
 > ✏️ *Sostituita il 2026-09-24 su decisione del DM: la riga di prima riprendeva
 > parola per parola il grido di guerra dei nani di Tolkien, e la skill dello
 > stile lo vieta (non-negoziabile 4). Il nanico qui sopra è scritto per questa
 > campagna: si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
 > battuta e le vocali brevi.*
+> <!-- /storico -->
+
+**Pronuncia della preghiera**: **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la
+erre battuta e le vocali brevi.
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
 > *Tordek, il respiro rallenta da sé. C'è un battito — il Cuore di Moradin — e
@@ -474,12 +481,14 @@ Step 5 (*«Il Sud del cerchio è vuoto…»*) e passa al §5.
 
 ### 🔨 Come lo chiede Moradin: il perché, lo scopo, il prezzo `[riscritto 2026-09-25 su richiesta del DM]`
 
+> <!-- storico -->
 > ✏️ **Perché è cambiato.** Prima c'era una riga sola: *«Chi dona cosa? Nessuno
 > è obbligato. Ma ogni dono mancato, la carne lo ricorderà.»* Il DM ha fatto
 > notare che con quella i giocatori possono dire sì o no, ma non sanno **a che
 > cosa**: un dio che chiede un sacrificio deve dire perché lo chiede e che cosa
 > ne farà. Adesso sono quattro battute, e la voce è quella del **Cuore**: la
 > forma visibile di Moradin arriva solo allo Step 6.
+> <!-- /storico -->
 
 **Battuta 1 · il perché.** Si legge appena i tre sono in cerchio per lo Step 5,
 **prima** dei tiri di Volontà. La voce di Moradin è lenta e bassa, e non

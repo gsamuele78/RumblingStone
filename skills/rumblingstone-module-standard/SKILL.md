@@ -44,8 +44,26 @@ lettera dal corpo. Nel corpo un mostro si nomina; i suoi numeri stanno
 nell'appendice, una volta sola.
 
 ⚠️ Non è una riorganizzazione dei contenuti obbligatori qui sotto: sono gli
-**stessi** contenuti, disposti secondo come si usano. I cinque master esistenti
-non si riscrivono — vale sui **nuovi** consolidamenti.
+**stessi** contenuti, disposti secondo come si usano. I master esistenti si
+riordinano solo quando il DM lo chiede, come è successo con `ARC07-DEF-3` e
+`ARC07-DEF-4` il 2026-09-25 (#169): quei due sono ora l'**esemplare** del
+riordino.
+
+Quello che la #169 ha reso canone, e che vale per ogni master nuovo o
+riordinato:
+
+- **La scheda d'entrata del PNG sta nella scena** in cui i PG lo incontrano
+  (aspetto, come suona, cosa vuole, cosa sa); i suoi numeri stanno in
+  appendice.
+- **Statistiche e mappe in appendici A4** fra `<!-- pagina: una-colonna -->` e
+  `<!-- /pagina -->`: una pagina da tenere aperta durante lo scontro.
+- **«✉ Si consegna qui»** nel punto esatto in cui un foglio passa ai giocatori,
+  e una tabella in §0 che li mette in fila.
+- **La storia del master non sta nel corpo.** Una nota «riordinato il…», «il box
+  di prima diceva…» o «cosa è cambiato» si avvolge in `<!-- storico -->`: nel
+  repo si legge, in stampa no
+  ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md);
+  la tecnica completa è in `rumblingstone-editoria` §2-bis).
 
 **Esemplare**: `10-stand-alone/L'abbazia Della Rotta Sicura/` — corpo (i quattro
 atti) + Appendice A (fazione corsara, borgo, livello 0), Appendice B

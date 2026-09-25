@@ -171,8 +171,8 @@ combinarle.
 > bilancia dell'Oca lo verifica in pubblico: resina, legname, tessuto, grano. Un
 > giocatore che apre la borsa e offre contanti si sente rispondere, con cortesia, che
 > *«il Peso si pesa, non si conta»*. Dillo la prima volta che qualcuno ci prova, e
-> nessuno se la prenderà. *(Correzione del playtest alfa, rilievo 3: pagando in
-> contanti l'intera serata evaporava.)*
+> nessuno se la prenderà.<!-- storico --> *(Correzione del playtest alfa, rilievo 3: pagando in
+> contanti l'intera serata evaporava.)*<!-- /storico -->
 
 ### Via 1 — La resina (onesta, lenta)
 

@@ -4,6 +4,7 @@
 > scritti bene e sono profondi, ma **al tavolo non si consultano**: nessuno cerca
 > un PNG in mezzo a milleseicento righe mentre quattro persone aspettano.
 >
+> <!-- storico -->
 > Questa è la fetta che mancava — l'**apparato d'uso** di
 > [ADR-0018](../plans/adr/ADR-0018-apparato-uso-obbligatorio.md), che l'arco
 > aveva **una voce su nove** (il quick-reference dentro ogni master). Sei pagine
@@ -12,12 +13,13 @@
 > **Modello**: `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` e
 > `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md`.
 > **Stato**: apparato d'uso (non canone narrativo). **Data**: 2026-08-31.
+> <!-- /storico -->
 
 ⚠️ **Cosa questo file NON fa.** Non riscrive niente, non aggiunge fatti e non
 decide nulla: **rimanda**. Dove i master tacciono — ed è il caso di qualche tic
 vocale — la voce proposta è marcata **[PROPOSTA]** e il DM la cambia senza
-chiedere il permesso a nessuno. I master restano la fonte di verità
-(ADR-0018: i cinque `ARC*-DEF-*` non si riscrivono retroattivamente).
+chiedere il permesso a nessuno. I master restano la fonte di verità<!-- storico -->
+(ADR-0018: i cinque `ARC*-DEF-*` non si riscrivono retroattivamente)<!-- /storico -->.
 
 | § | Cosa |
 |---|---|
@@ -27,7 +29,7 @@ chiedere il permesso a nessuno. I master restano la fonte di verità
 | 4 | I suoni dell'arco |
 | 5 | Il momento da fotografare, uno per master |
 | 6 | Accessibilità |
-| 7 | Cosa resta scoperto, dichiarato |
+| 7 | Cosa resta scoperto, dichiarato <!-- storico: riga --> |
 
 ---
 
@@ -52,7 +54,7 @@ prima.
 
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
-| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi *(corretto 2026-09-24: la riga lo diceva un nano che parla)* | `#1` §9 fase 3 · `#3` §7 |
+| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi<!-- storico --> *(corretto 2026-09-24: la riga lo diceva un nano che parla)*<!-- /storico --> | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
 | **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` Scena 4 |
 | **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` Scena 2, Appendice A |
@@ -230,6 +232,7 @@ serata è in ritardo, **si taglia altro** — non questo.
 - **Ritmo**: il master `#1` è lungo il doppio degli altri. Se la sessione è di
   tre ore, **arriva fino alla Sentinella e fermati lì**: è una soglia naturale.
 
+<!-- storico -->
 ---
 
 ## §7 · Cosa resta scoperto — dichiarato
@@ -258,3 +261,4 @@ onestà di `ARC08-16-CUE-SONORI.md`).
 - `ARC07-00-INDICE.md` — l'indice dell'arco (file → parte → stato)
 - `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` — il modello
 - `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md` — il modello dei suoni
+<!-- /storico -->

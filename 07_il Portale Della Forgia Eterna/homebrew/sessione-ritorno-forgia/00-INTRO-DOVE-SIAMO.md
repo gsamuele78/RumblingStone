@@ -35,7 +35,7 @@ Hammerfist preme sul riposo. Nessun nemico, nessun combattimento.
 - **Bottino intatto** `[canone giocato]`: al rito **nessuno si è spogliato**.
   Geode Titanico, **Cuore di Terros** e geodi sono ancora del party.
 - **THORIK ha accettato il Peso nel corpo**: **−2 DES / +2 COS permanenti**
-  *(corretto 2026-08-06: il pegno è del portatore, non di Tordek)*.
+  <!-- storico -->*(corretto 2026-08-06: il pegno è del portatore, non di Tordek)*<!-- /storico -->.
   Per chi fa già l'ancora è diventare ancora più immobile — CA, Riflessi e
   iniziativa scendono di 1, i pf salgono. **Attenzione a come lo giochi**: la
   DES era già la sua statistica povera, quindi il malus **non si vede** e il

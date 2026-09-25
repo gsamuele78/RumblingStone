@@ -52,7 +52,7 @@ import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import slug  # noqa: E402
+from dmcore.testo import slug, togli_storico  # noqa: E402
 from dmcore.schede import Scheda, SchedaError, leggi_schede  # noqa: E402
 from dmcore.statblock import StatblockError, leggi as leggi_statblocco  # noqa: E402
 
@@ -438,6 +438,10 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
             _IMG.sub(lambda m: "\n" + m.group(0) + "\n", ln) if _IMG.search(ln) else ln
             for ln in md.split("\n")
         )
+    # La storia delle scelte (blocchi `<!-- storico -->` e attribuzioni come
+    # «[CANONE — DM 2026-07-31]») resta nel sorgente e non va in stampa. Prima
+    # dei commenti: i marcatori sono commenti, e il testo fra i due non lo è.
+    md = togli_storico(md)
     # I commenti HTML non sono testo: la catena HTML li toglie, questa li
     # stampava letterali («<!-- … -->» in mezzo alla pagina). Restano solo le
     # direttive d'impaginazione, che diventano pagine a una colonna.

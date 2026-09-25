@@ -57,7 +57,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore.testo import riscala_link  # noqa: E402
+from dmcore.testo import riscala_link, togli_storico  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Lo stile «pergamena» canonico (identico all'anteprima visiva e all'artefatto
@@ -343,6 +343,8 @@ def md_to_html(md: str, base: Path) -> str:
     """Convertitore markdown→HTML minimale ma fedele ai master del repo:
     heading, tabelle, citazioni (→ cornice .desc), liste, code fence
     (→ blocco mono per le mappe ASCII), immagini (SVG inline / data-URI)."""
+    # La storia delle scelte non va in stampa (stessa funzione della catena Typst).
+    md = togli_storico(md)
     md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
     lines = md.splitlines()
     out: list[str] = []
@@ -652,7 +654,7 @@ def build_hb(manifest_path: Path, out_override: Path | None = None) -> Path:
     dest = out.resolve().parent
 
     def _incorpora(sorgente: Path) -> str:
-        return riscala_link(sorgente.read_text(encoding="utf-8"),
+        return riscala_link(togli_storico(sorgente.read_text(encoding="utf-8")),
                             sorgente.resolve().parent, dest)
 
     if mf.get("intro_md"):

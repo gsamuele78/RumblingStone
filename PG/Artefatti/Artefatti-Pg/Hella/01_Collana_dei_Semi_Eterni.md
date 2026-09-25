@@ -17,10 +17,12 @@
 ## SCHEDA GIOCATORE – VERSIONE 1
 ### "La Collana dei Tre Semi"
 
+> <!-- storico -->
 > **📄 Handout separato (T7, 2026-07-04)**: la scheda da **dare al giocatore**
 > è ora `00_Collana-SCHEDA-GIOCATORE-STATO-ATTUALE.md` (solo poteri sbloccati,
 > 2 snapshot). Questa sezione resta nel master DM come riferimento — **non
 > consegnare questo file al giocatore** (contiene la SCHEDA COMPLETA DM sotto).
+> <!-- /storico -->
 
 ---
 
