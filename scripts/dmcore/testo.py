@@ -457,10 +457,19 @@ def traduci_rimandi(md: str, sorgente: Path, capitoli: "dict[Path, str]") -> str
     >>> _ = (d / "ARC07-DEF-1-X.md").write_text("# ARC-07 · DEFINITIVO #1 — IL PIANO DELLA TERRA (x)")
     >>> traduci_rimandi("| Terros | `DEF-1` §8 |, e DEF-3 §7, come nel master #1.", io, vol)
     '| Terros | «Il Piano della Terra» §8 |, e cap. IV §7, come nel master #1.'
+
+    Un capitolo che sta fuori dall'arco, come la pagina di un artefatto,
+    trova i master nella cartella dei capitoli del volume:
+
+    >>> fuori = pathlib.Path(tempfile.mkdtemp()) / "Collana.md"
+    >>> traduci_rimandi("statblocco in `DEF-3`, Appendice A.2", fuori, vol)
+    'statblocco in cap. IV, Appendice A.2'
     """
     io = sorgente.resolve()
     md = _traduci_nomi_di_file(md, io, capitoli)
     radice = _radice_dell_arco(sorgente)
+    if radice is None:
+        radice = next(filter(None, map(_radice_dell_arco, sorted(capitoli))), None)
     if radice is None:
         return md
 

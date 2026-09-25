@@ -142,6 +142,7 @@ Band of polished obsidian with gold veins (Lathander), silver glyphs (Mask), and
 - **Crown + Ring (Active, 1/day):** Planar Vision (see through elemental portals) + Dispel Illusion 30 ft burst
 - **Aegis + Ring (Dark Dawn Strike, 1/day):** Coordinated: Artemis casts Daylight→Thorik attacks→+2 attack, +2d6 sacred
 - **Divine Trinity (Crown + Ring + Bracieri, 1/day, 5 rounds):** See campaign-party.md
+- **Necklace synergies F1-F4** (canon 2026-09-25): see the chart at the end of this file and `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md`
 
 ---
 
@@ -205,7 +206,9 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 
 ### Description
 
-Created during Hella's resurrection ritual from 3 Treant seeds that germinated and fused with her body through Moradin's divine intervention. The seeds absorbed the sacrifices of each party member (Thorik's blood/HP, Tordek's Ki/XP, Artemis's invocation slot) and formed a living torc of wood and metal.
+Created during Hella's resurrection ritual from 3 Treant seeds laid on her body (hands and brow). At Step 4 they germinated and entered her, making her a Treant hybrid. Each companion then opened one seed with **a power of his own artifact** (the transplant of `ARC07-DEF-3` §5, see "Resurrection Gifts" below); the third seed also carries Durik's Imprint. The seeds formed a living torc of wood and metal. It was not forged: it germinated.
+
+**Player and DM pages** (canon, 2026-09-25): `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_Radicata{,_DM}.html`; Durik: `02_Durik_Guardiano_di_Pietra{,_DM}.html`.
 
 ### Stats
 
@@ -214,10 +217,11 @@ Created during Hella's resurrection ritual from 3 Treant seeds that germinated a
 
 ### Powers
 
-1. **Saggezza della Terra:** +4 Wisdom (Enhancement)
-2. **Armatura Naturale:** +3 Natural AC
-3. **Avatar della Radice (1/day):** Transform into Huge Treant/Dwarf hybrid for 10 rounds (+8 STR, reach, slam attacks)
-4. **Evocazione dei Guardiani (3/day):** Summon an Adamantine Treant (see below). Standard action, lasts 1 hour. Max 1 active; or 3 together as "Nova" (destroys necklace for 1 month)
+1. **Saggezza della Terra (Su):** +4 Wisdom (Enhancement); does not stack with the Periapt of Wisdom
+2. **Corteccia del Guardiano (Su):** +3 Natural AC
+3. **Avatar della Radice (Su, 1/day):** Transform into Huge Treant/Dwarf hybrid for 10 rounds (+8 STR, reach, slam attacks)
+4. **Evocazione dei Guardiani (Su, 3/day, one seed each):** seeds I and II summon an Adamantine Treant (see below), standard action, 1 hour; **max 2 Treant**. Summoning **both together** shuts the Evocation off for **one month** (no Treant, and a destroyed Durik is not recalled at once: he returns at dawn); the rest of the necklace keeps working. The one exception is the night at −1000, when Hella calls two at dawn. Seed III recalls **Durik** only if he has been destroyed: he is always present (DM decision S3)
+5. **Technical (DM):** always works, also in wild shape or polymorphed (rooted under the skin, it does not meld); spent seeds regrow at dawn; CL 20th; not dispellable, *disjunction* suppresses it 1d4 rounds; destroyed only with all three seeds spent and burned in a fire the bearer cannot perceive; if Hella betrays the Root Vow the seeds stop germinating until she reaffirms it with a deed
 
 ### Adamantine Treant (Summoned)
 
@@ -236,17 +240,18 @@ Created during Hella's resurrection ritual from 3 Treant seeds that germinated a
 > and grows in one of the Necklace's seeds (`ARC07-DEF-3` §5, DM 2026-09-12).
 > A PC who refuses leaves that seed **dormant**, and **his artifact reacts**.
 
-- **Lo Scudo del Custode** (from Thorik — he gives the Crown's **+2 deflection**,
+- **Lo Scudo del Custode (Ex)** (from Thorik — he gives the Crown's **+2 deflection**,
   keeping **−1 AC** forever): 1/day, immediate action, Hella takes the damage
   aimed at an ally within 9 m, **halved**. 🔄 *Eco del Custode*: whenever she uses
   it, **Thorik is hasted 3 rounds and moves toward the one she protected**.
-- **Pelle di Adamantio:** **DR 3/adamantine** (from Tordek — he gives *Ancoraggio
+- **Pelle di Adamantio (Ex):** **DR 3/adamantine** (from Tordek — he gives *Ancoraggio
   della Montagna*, which leaves the Braziers forever). This is Hella's **only**
   DR: the Treant Hybrid grants none, and she took the Root path, not the Guard path.
-- **Il Rovo Eldritch** (from Artemis — he gives **1d6 of Eldritch Blast**,
+- **Il Rovo Eldritch (Sp)** (from Artemis — he gives **1d6 of Eldritch Blast**,
   7d6 → 6d6, forever): **at will**, standard action, ranged touch 18 m, **2d6**
   (half thorns, half fire).
-- 🌱 **The seed gives back:** once per seed, ever — Hella's call, immediate action
+- The two gifts that germinated in her body are **Ex** (they work in an antimagic field); the Bramble is **Sp** like the *Eldritch Blast* it comes from (spell resistance applies).
+- 🌱 **The seed gives back (Su):** once per seed, ever — Hella's call, immediate action
   — the seed returns to the donor what he gave, **for one whole scene**.
 
 ### Treant Hybrid Template (Permanent Transformation)
@@ -377,6 +382,12 @@ All synergies activate when artifact bearers are within 30 ft (9m) of each other
 | **Corona + Ring** (Active) | Swift action | Planar Vision + Dispel Illusion 30 ft | 1/day |
 | **Aegis + Ring** (Dark Dawn Strike) | Coordinated same-round | +2 attack, +2d6 sacred to Thorik | 1/day |
 | **Divine Trinity** (Crown+Ring+Bracieri) | All 3 spend Move action | Fear/Charm immunity, +4 sacred saves, +2 sacred AC, Good/Lawful DR bypass, Aura of Awe DC 20 | 1/day, 5 rounds |
+| **F1 Radici della Memoria** (Necklace+Crown) | 🔒 Hella plants the Acorn at the Old Oak Circle (ARC-09) | on natural ground Thorik's Stone Awareness extends to Hella; she sees through her Treant | Constant |
+| **F2 Il Bosco e la Fucina** (Necklace+Bracieri) | Tordek gave the Anchoring at the rite | Hella's Adamantine Treant gain fire resistance 10 | While a Treant is active |
+| **F3 Alba nel Sottobosco** (Necklace+Ring) | Artemis gave the Eldritch Blast die at the rite | when Artemis uses Lathander's Light, allied Treant gain Regeneration 1 for the duration (not Durik: stone, not plant) | With Lathander's Light (1/day) |
+| **F4 Quaternità** (all 4) | 🔒 Trinity unlocked + F1 awake + Sacred Forest quest done; all 4 spend a Move action | Trinity effects for **7 rounds**, and **the Anchoring returns**: while they don't move, the 4 bearers cannot be tripped or pushed | 1/day; **replaces** the Trinity when Hella is present (they don't stack) |
+
+Also: when Hella uses the **Shield of the Custodian**, Thorik is hasted 3 rounds and moves toward the one she protected.
 
 ---
 
