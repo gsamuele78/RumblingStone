@@ -104,8 +104,16 @@
         "pr/175",
         "origin/claude/corredo-della-serata"
       ],
+      "stato": "portato",
+      "dove": "PR #175 fusa il 2026-09-25 (bc8d15f): il corredo della serata (CICLO-SESSIONE 2f) e l'apparato fuori dalla stampa (2g, ADR-0070)"
+    },
+    {
+      "ref": [
+        "pr/178",
+        "origin/claude/artefatti-audit-corona-2gemme"
+      ],
       "stato": "in-volo",
-      "dove": "PR #175 aperta (bozza): il corredo della serata (CICLO-SESSIONE 2f) e l'apparato fuori dalla stampa (2g, ADR-0070)"
+      "dove": "PR #178 in bozza: audit dei poteri, tutti gli artefatti a stadi, una versione per pagina (ADR-0071, TRASVERSALE T10)"
     },
     {
       "ref": [

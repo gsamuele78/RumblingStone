@@ -12,9 +12,12 @@
 
 ## 📄 PAGINA 1 — OGGI AL TAVOLO `[aggiornata 2026-07-31]`
 
-*Stampare questa pagina ADESSO. Canone: **Topazio + Smeraldo accesi**,
-**Rituale 3 «Incudine del Mondo» completato**. La versione impaginata da dare
-al giocatore è `02_Corona_2_Gemme.html`.*
+*Canone: **Topazio + Smeraldo accesi**, **Rituale 3 «Incudine del Mondo»
+completato**. Le pagine da stampare sono quelle a stadi (ADR-0071): oggi
+`02_Corona_2_Gemme.html` per il giocatore e `02_Corona_2_Gemme_DM.html` per il
+DM; le versioni vive sono nel registro di `PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md`
+§0. Questa scheda markdown resta la fonte di lavoro, e le pagine a stadi sono
+più complete: portano anche i poteri dei moduli giocati in attesa del DM.*
 
 ### Corona di Adamantio *(artefatto maggiore — legata a Thorik)*
 
@@ -117,12 +120,11 @@ modulo e come parla il testo di Moradin, che si rivolge al portatore.
 rito celebrato** dopo la Prova della Sala Profonda; il modulo lo numera
 **Rituale 3** perché conta anche il Risveglio. Stesso evento.
 
-**3-ter. Il −2 COS non c'è ancora.** ⚠️ Oggi Thorik ha **+2 COS** da questo
-rito e **nessun −2 COS**: quel malus è il prezzo del Dono «Il Sangue della
-Stirpe» al rito di Hella (`ARC07-DEF-3` §5), **scena non ancora giocata**.
-Quando arriverà, i due si **sommano a zero** — due pegni permanenti per tornare
-al punto di partenza. Vale la pena guardarlo prima di proporglielo: vedi «Il
-bilancio di Thorik» sulla versione DM della scheda.
+**3-ter. Nessun −2 COS.** Oggi Thorik ha **+2 COS** da questo rito e nessun
+malus di Costituzione. Il «Sangue della Stirpe» (−2 COS) era un Dono della
+prima stesura, **superato il 2026-09-12**: al rito di Hella Thorik dona il **+2
+di deflessione** della Corona (sezione in fondo a questa scheda). *(Corretto
+nell'audit del 2026-09-25: questa nota era rimasta alla stesura v1.)*
 
 **3-quater. Il −2 DES «di quando l'ha indossata» esiste, e s'era perso.**
 `PortaleForgia-P1-REVISED-Corretta.md` — il beat in cui Thorik prende la Corona

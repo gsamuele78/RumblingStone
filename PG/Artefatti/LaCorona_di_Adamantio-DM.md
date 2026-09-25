@@ -23,6 +23,20 @@
 > è superato). Il resto (deviazione +2→+3, Moradin's Insight, Adamantine
 > Will, gemme) è coerente tra master e HTML.
 
+> **Audit dei poteri (2026-09-25).** Quattro punti di questo master sono
+> **superati** da decisioni successive, e non vanno riportati in una scheda:
+> (1) al Rituale 4 **non** si distrugge la Gemma del Tempo: si spende il
+> **Rubino**, nel ritorno al 1372 (D16, `ARC07-DEF-4` Scene 12-13);
+> (2) il **Rubino** non è un potere settimanale: entra al Rituale 4 ed è
+> monouso; (3) l'**Aura della Forgia Eterna** non è automatica all'arrivo né
+> un evento unico: viene dopo il duello, dura fino all'alba la prima volta e
+> poi resta **1/settimana** (DM 2026-09-20); (4) la **Senzienza** e il
+> completamento con Aegis Fang arrivano al **Rituale 4**, non «dopo il
+> Rituale 1» (lo diceva già il PDF del giocatore del 22/10/2025). Inoltre la
+> scheda finale qui sotto chiede fra i prerequisiti «almeno un incantesimo
+> divino»: tutte le altre fonti no, e Thorik è guerriero. Le pagine a stadi e le
+> domande aperte: `PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md`.
+
 ## Capitolo 1: L'Anima dell'Artefatto
 
 Lore per il Giocatore (Da Rivelare tramite Leggende o Scritte Antiche)

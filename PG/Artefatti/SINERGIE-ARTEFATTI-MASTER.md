@@ -1,6 +1,6 @@
 # SINERGIE ARTEFATTI — MASTER (quick-reference DM)
 
-> **Versione: 2026-09-25** (prima: 2026-07-03, T4) — questo file è il **master versionato**
+> **Versione: 2026-09-25b** (prima: 2026-09-25, 2026-07-03 T4; «b» = aggiunta S0, decisione D1) — questo file è il **master versionato**
 > delle sinergie tra gli artefatti dei Rumbling Stones. Gli export
 > (`Artefatti-Pg/Sinergie_Artefatti_QuickReference.html`,
 > `07_.../SinergieArteFattiQuickReference.pdf`) sono 📸 snapshot **da
@@ -18,6 +18,7 @@
 
 | # | Combinazione | Attivazione | Effetto | Frequenza |
 |---|---|---|---|---|
+| S0 | **Corona + Aegis Fang** — *la Risonanza* (Thorik porta entrambe) | sempre | **+2 sacro a tutti i TS**; l'ascia fa **+1d6 sacri** contro caotici o malvagi; *Richiamo Ancestrale*: disarmato, l'ascia gli torna in mano da 30 m | costante; il Richiamo 1/giorno. Canone DM 2026-09-25 (D1): vale la quick reference stampata il 16/01/2026, senza l'*Eco degli Eroi* che vi era stata tolta |
 | S1 | **Corona + Ring** (passiva) | entro 3 m | +1 schivare alla CA contro creature Legali | costante |
 | S2 | **Corona + Ring** (attiva) | azione veloce | **Visione Planare** (vedere attraverso i portali elementali) + **Dissolvi Illusioni** raggio 9 m | 1/giorno |
 | S3 | **Aegis Fang + Ring** — *Colpo dell'Alba Oscura* | coordinata nello stesso round: Artemis lancia Luce di Lathander → Thorik attacca lo stesso bersaglio | **+2 attacco, +2d6 sacri** a Thorik | 1/giorno |

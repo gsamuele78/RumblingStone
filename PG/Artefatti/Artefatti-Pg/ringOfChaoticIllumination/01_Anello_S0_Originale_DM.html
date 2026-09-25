@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="anello · S0 · r4 · 2026-09-25">
+    <title>Anello dell'Illuminazione Caotica — Stadio 0, l'anello del caos (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #5b2a86; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B0000; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #5b2a86; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #5b2a86; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #5b2a86; background: rgba(91, 42, 134, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #5b2a86, #2c1840); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="class-title">Anello dell'Illuminazione Caotica</h1>
+        <div class="subtitle">Stadio 0 — l'anello del caos, prima delle divinità</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Il vero potere deriva dal Caos»</div>
+    </div>
+
+    <div class="quote">
+        <strong>Storia conosciuta</strong><br>
+        Durante l'Era dei Tormenti, quando gli dèi camminavano su Toril, questo anello fu forgiato nel mezzo di una battaglia fra forze divine. Secoli dopo lo recuperò una maga di Netheril, Vess'ith Shadowweaver, e l'anello tenne una parte del suo potere divino.
+    </div>
+
+    <div class="quote" style="border-left-color: #5b2a86; background: rgba(91, 42, 134, 0.08);">
+        <strong>Com'era.</strong><br>
+        Un cerchio di ossidiana con dentro una luce viola che pulsa. Quando lo tocca un warlock caotico, sulla superficie compaiono lettere infernali: <em>«Il vero potere deriva dal Caos»</em>. Per chiunque altro è un'acquamarina blu cobalto con dei riflessi che si muovono.
+    </div>
+
+    <div class="requirements">
+        <strong>Slot:</strong> anello · <strong>Legato a:</strong> Artemis · <strong>Comandi:</strong> in infernale, impressi nella mente di chi lo porta<br>
+        <strong>Per chi non è destinato a portarlo</strong> sembra un <em>anello di resistenza +3</em>.
+    </div>
+
+    <h2>Poteri</h2>
+
+    <div class="power-block">
+        <div class="power-header">Visione Potenziata <span>sempre</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Costante | Comando <em>«Noctis Revelum»</em> / <em>«Noctis Velum»</em>, azione gratuita</div>
+        <div class="desc-text">
+            <strong>Scurovisione 36 m</strong>. Vedi nell'oscurità magica fino a <strong>18 m</strong>. Visione crepuscolare.
+        </div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Ali d'Ombra <span>a volontà</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Azione gratuita | Comando <em>«Umbra Volum»</em> / <em>«Umbra Cessum»</em></div>
+        <div class="desc-text">
+            Ali eteree d'ombra e di fulmini viola. <strong>Volo 18 m</strong>, manovrabilità buona. Finché sono aperte hai il talento <strong>Attacco in Volo</strong>.
+        </div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Passo d'Ombra <span>1 ogni 5 round</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Azione di movimento | Comando <em>«Tenebris Saltum»</em></div>
+        <div class="desc-text">
+            Ti teletrasporti fra le ombre fino a <strong>18 m</strong>. Parti e arrivi in penombra o al buio.
+        </div>
+    </div>
+
+    <div class="power-block spento">
+        <div class="power-header">Ciò che dorme <span>non sbloccato</span></div>
+        <div class="desc-text">C'è qualcosa, nell'anello, che non risponde ai comandi. Scalda il dito quando qualcosa prova a cambiarti contro la tua volontà, e poi torna freddo.</div>
+    </div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Valore teorico (stadio 0)</div>
+        <div class="corpo">Prezzo di mercato: <strong>42.000 mo</strong>.</div>
+    </div>
+
+    <div class="solo-dm"></div>
+    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
+
+    <div class="dm">
+        <h3>La progressione dell'Anello, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · l'anello del caos</td><td>il legame con Artemis, un warlock caotico</td><td>Visione Potenziata · Ali d'Ombra · Passo d'Ombra · due poteri di crisi dormienti</td><td><code>01_Anello_S0_Originale</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · le due divinità</td><td>Lathander e Mask lo reclamano; la crisi di Cerebromorphosis, nella Tomba di Belkram</td><td>i poteri di Mask si svegliano; tre poteri di crisi di Lathander</td><td><code>02_Anello_S1_Due_Divinita_DM</code> (solo DM)</td><td>scritto, <strong>mai dato al giocatore</strong> (D11): al tavolo c'è stata solo la crisi</td></tr>
+        <tr><td><strong>2</strong> · il Riforgiato</td><td>Artemis <strong>rifiuta</strong> Lord of Sun and Shadow (Opzione C, «il mio sentiero è mio»); alla Forgia Eterna l'anello assorbe la Colonna di Mithral e le Doppie Fiamme</td><td>quattro costanti · sei attivabili · due di crisi · le sinergie</td><td><code>00_Ring_Riforgiato</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · il Caos Ultimo</td><td>la Torre Invisibile: Zalkatar sconfitto, o purificato rinunciando a un potere</td><td><em>Alba Voluta</em> · <em>Purificazione del Crepuscolo</em> · il <em>Prezzo dell'Armonia</em> se Zalkatar viene purificato (D13, DM 2026-09-25)</td><td><code>04_Anello_S3_Caos_Ultimo</code> (giocatore, da consegnare alla Torre) e <code>_DM</code></td><td>⬜ ARC-09</td></tr>
+    </table>
+    <p><strong>I prezzi, come controllo.</strong> Stadio 0: <strong>42.000 mo</strong> nella scheda italiana del giocatore, <strong>62.000 gp</strong> nella prima versione inglese. Stadio 1: <strong>52.000 gp</strong>, e l'analisi dice «aumentato per la doppia natura divina», che torna col 42.000 e non col 62.000: vale la scheda italiana. Stadio 2: <strong>163.400 gp</strong>, voce per voce nel master <em>Revised</em>; la tabella non conta il <em>Passo d'Ombra</em> né i poteri di crisi, che quindi sono gratis nel prezzo. Nessun prezzo nasconde un potere che le schede non abbiano.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Ciò che dorme: i poteri di Lathander</h3>
+        <p>Dalla prima versione (<code>PG/Artefatti/Ring of Chaotic Illumination.md</code>). Si attivano <strong>solo</strong> contro una trasformazione mentale imposta (cerebromorfosi, vampirismo, licantropia):</p>
+        <ul>
+            <li><strong>Sfida dell'Alba</strong> (<em>Dawn's Defiance</em>): azione immediata, <em>Spezzare Incantamento</em> (LI 15°); luce del giorno in 3 m per 1 round per DV; immunità alle intrusioni mentali per 24 ore. <strong>1/settimana</strong>.</li>
+            <li><strong>Purificazione Solare</strong> (<em>Solar Purge</em>): quando scatta la Sfida dell'Alba, 1d6 danni divini per DV del portatore a tutte le aberrazioni entro 9 m, senza TS; cura metà dei danni inflitti e toglie un livello negativo o un risucchio. L'anello si spegne per 24 ore.</li>
+        </ul>
+        <p>Il limite di 1/settimana, il bagliore di 3 m e la cura della Purificazione sono di questa versione. Oggi vale il PDF riforgiato, che non li ha (D9, DM 2026-09-25).</p>
+    </div>
+
+    <div class="dm">
+        <h3>Quello che la seconda generazione aggiungeva (mai confermato al tavolo)</h3>
+        <p><code>PG/Artefatti/Ring_of_chaotic_illumination-master.md</code>, «documento riservato DM»: l'anello si chiama <em>Sigillo del Crepuscolo di Mask</em>; ha <strong>Int 14, Sag 12, Car 16, Ego 12</strong>; la <strong>prova di legame</strong> è Volontà CD 17 al tocco di un warlock caotico, e se fallisce l'anello si fonde con la carne; porta chi lo indossa a <strong>Caotico Buono</strong>; ha un gemello, lo <strong>Scettro di Ylluminuk</strong>, in una città perduta di Netheril. Niente di questo è arrivato nelle schede del giocatore né nelle versioni dopo, e lo Scettro non è mai entrato in un arco. Il Riforgiato <strong>non ha Ego</strong>. È materiale da cui pescare, non canone.</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione anello · S0 · r4 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+
+</body>
+</html>

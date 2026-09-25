@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corona di Adamantio (2 Gemme — Topazio &amp; Smeraldo, dopo l'Incudine del Mondo)</title>
+    <meta name="versione-artefatto" content="corona · S2 · r5 · 2026-09-25">
+    <title>Corona di Adamantio — Stadio 2, Topazio e Smeraldo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
@@ -28,7 +29,26 @@
         .block-nuovo { border: 2px solid #4b5320; background: rgba(75, 83, 32, 0.07); }
         .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
         .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
         .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #4b5320, #6b4a2e); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
     </style>
 </head>
 
@@ -36,13 +56,13 @@
 
     <div class="header">
         <h1 class="class-title">Corona di Adamantio</h1>
-        <div class="subtitle">Stato di Risveglio: 2 Gemme — Topazio &amp; Smeraldo</div>
+        <div class="subtitle">Stadio 2 — due gemme: Topazio e Smeraldo</div>
         <div class="dwarven">"La Montagna non trema, il Tempo scorre, ma la base regge."</div>
     </div>
 
     <div class="quote">
-        <strong>La Leggenda Divina</strong><br>
-        «Prima che i nani scrivessero la loro prima runa, Moradin prese un frammento del cuore del mondo. Sulla sua incudine lo forgiò non con il fuoco vivo, ma con il potere della memoria assoluta incastonata nella Pietra. Quando sia il costrutto inalterato del Tempo che il cuore della Terra Vera pulsano insieme per la prima volta nella corona, la mente del nano muta irrevocabilmente incatenandosi al suolo granitico. Egli diviene una fortezza ambulante di granitica dedizione e un immutabile pilastro per la sua gente.»
+        <strong>La Leggenda</strong><br>
+        «Prima che i nani scrivessero la loro prima runa, prima che la montagna stessa avesse un nome, Moradin prese un frammento del cuore del mondo. Sulla sua Incudine del Mondo lo forgiò non con il fuoco, ma con la memoria e con la possibilità, e ci mise dentro l'eco di ogni martello che avrebbe mai battuto. Non fece un oggetto di potere: fece un'ancora per la storia dei nani. Non è stata fatta per i re. È stata fatta per forgiarli, quando la storia rischia di finire.»
     </div>
 
     <div class="quote" style="border-left-color: #4b5320; background: rgba(75, 83, 32, 0.08);">
@@ -51,9 +71,9 @@
     </div>
 
     <div class="requirements">
-        <strong>Slot:</strong> testa (artefatto maggiore) · <strong>Peso:</strong> 1,5 kg · <strong>Legata a:</strong> Thorik<br>
-        <strong>Aura:</strong> Invocazione, Divinazione e Abiurazione travolgente [Legale, Buono]<br>
-        <strong>Livello incantatore:</strong> 20°<br>
+        <strong>Prerequisiti del portatore:</strong> nano o mezzonano · bonus di attacco base +5 · fede vera in Moradin <strong>oppure</strong> legame accertato con <em>Aegis Fang</em>.<br>
+        <strong>Slot:</strong> testa (artefatto maggiore) · <strong>Peso:</strong> 1,5 kg · <strong>Legata a:</strong> Thorik · <strong>Allineamento:</strong> Legale Buono<br>
+        <strong>Aura:</strong> Invocazione, Divinazione e Abiurazione travolgente · <strong>Livello incantatore:</strong> 20°<br>
         <strong>Rituali Leggendari completati:</strong> 1 (Difesa della Forgia) · 2 (Prova della Sala Profonda) · <strong>3 (Incudine del Mondo)</strong>
     </div>
 
@@ -63,25 +83,15 @@
         <div class="power-header">Corona di Protezione +2 <span>Rituale 1</span></div>
         <div class="mechanic">Straordinario (Str) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <strong>+2 di deviazione alla CA</strong>, finché la porti.
+            <strong>+2 di deviazione alla CA</strong>, finché la porti.<br>☐ <em>Se al rito di Hella hai donato la deflessione: <strong>+1</strong>, per sempre.</em>
         </div>
     </div>
 
     <div class="power-block">
         <div class="power-header">Consapevolezza della Pietra <span>Rituale 1</span></div>
-        <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | Su terra o pietra naturale | LI 20°</div>
+        <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <em>Individuare porte segrete</em>, <em>scoprire trappole</em> e <strong>Comprendere Linguaggi</strong>, a volontà.<br>
-            Coi piedi su terra o pietra naturale: <strong>+1 morale</strong> ad attacco e danni, <strong>+2 intuizione alla CA</strong>.
-        </div>
-    </div>
-
-    <div class="power-block">
-        <div class="power-header">Intuito di Moradin <span>Rituale 2</span></div>
-        <div class="mechanic">Magico (Mag) | 1/giorno | Azione standard | Durata 10 minuti | LI 20°</div>
-        <div class="desc-text">
-            <strong>+4 intuizione</strong> alle prove di Artigianato (fabbro), sempre.<br>
-            Una volta al giorno: <em>Vista del Vero</em> per dieci minuti.
+            <em>Individuare porte segrete</em>, <em>scoprire trappole</em> e <em>comprendere linguaggi</em>, a volontà.<br>Coi piedi su terra o pietra naturale: <strong>+1 morale</strong> ad attacco e danni, <strong>+2 intuizione alla CA</strong>.
         </div>
     </div>
 
@@ -99,80 +109,134 @@
         <div class="power-header">Manto di Pietra e Spirito <span class="nuovo">nuovo</span></div>
         <div class="mechanic">Soprannaturale (Sop) | Sempre attivo | LI 20°</div>
         <div class="desc-text">
-            <strong>Mente Vuota</strong> permanente, come l'incantesimo ma soprannaturale: immune a ogni effetto mentale e alla divinazione che ti cerca. Questo vale ovunque, anche staccato da terra.<br>
-            <strong>Riduzione del danno 5/epico e male</strong>: la supera solo un'arma che sia insieme epica e malvagia.<br>
-            In un <strong>Nodo Terrestre</strong>, <strong>1/mese</strong>: <em>Comunione</em> (LI 20°, azione di 1 round). Domande a Moradin; risposte sì o no.
+            <strong>Mente Vuota</strong> permanente, come l'incantesimo ma soprannaturale: sei <strong>immune a tutti gli effetti mentali</strong>, niente legge i tuoi pensieri e niente ti trova con la divinazione. Vale ovunque, anche staccato da terra.<br><strong>Riduzione del danno 5/epico e male</strong>: la supera solo un'arma che sia insieme epica e malvagia.<br>In un <strong>Nodo Terrestre</strong>, <strong>1/mese</strong>: <em>Comunione</em> con Moradin (LI 20°, un round). Risponde sì o no.
+        </div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">Quello che ti ha dato quando l'hai messa <span>dal primo giorno</span></div>
+        <div class="mechanic">Dal momento in cui l'hai indossata | LI 13°-20°</div>
+        <div class="desc-text">
+            Insieme al +4 di Carisma, dal giorno in cui te la sei messa in testa:<ul><li><strong>Immunità alla paura</strong>, magica e naturale.</li><li><strong>Scurovisione 36 m</strong>, il doppio di quella di un nano.</li><li><strong>Aura di Comando</strong>, 1/giorno: <em>Comando</em> CD 15, soprannaturale, LI 13°.</li><li><strong>Guida di Moradin</strong>, 1/giorno: senti da che parte sta quello che la Corona cerca. Finché manca una gemma, è quella.</li></ul>
+        </div>
+    </div>
+
+    <h2>Poteri da attivare</h2>
+
+    <div class="power-block">
+        <div class="power-header">Intuito di Moradin <span>Rituale 2</span></div>
+        <div class="mechanic">Magico (Mag) | 1/giorno | Azione standard | 10 minuti | LI 20°</div>
+        <div class="desc-text">
+            <strong>+4 intuizione</strong> alle prove di Artigianato (fabbro), sempre.<br>Una volta al giorno: <em>Vista del Vero</em> per dieci minuti.
+        </div>
+    </div>
+
+    <h2>Con Aegis Fang</h2>
+
+    <div class="power-block">
+        <div class="power-header">Con Aegis Fang in mano — la Risonanza <span>sempre</span></div>
+        <div class="mechanic">Sempre attiva finché porti entrambe | Thorik solo</div>
+        <div class="desc-text">
+            La Corona e l'ascia vengono dalla stessa mano, e da quando le porti insieme lo sanno:<ul><li><strong>+2 sacro a tutti i tiri salvezza.</strong></li><li>L'ascia fa <strong>+1d6 danni sacri</strong> contro le creature caotiche o malvagie.</li><li><strong>Richiamo Ancestrale</strong>, 1/giorno, azione gratuita: se sei disarmato e l'ascia è entro 30 m, ti torna in mano subito, senza attacchi d'opportunità.</li></ul>
         </div>
     </div>
 
     <h2>Le gemme</h2>
 
     <div class="power-block">
-        <div class="power-header">◆ Topazio — il Tempo Immutabile <span>accesa</span></div>
+        <div class="power-header">◆ Topazio — il Tempo Immutabile <span>acceso</span></div>
         <div class="mechanic">Soprannaturale (Sop) | 1/mese | Rituale di 1 ora | Solo da un Nodo Terrestre | LI 20°</div>
         <div class="desc-text">
-            Riavvolge tempo e spazio, e porta te e fino a <strong>8 creature consenzienti</strong> in un punto di forgiatura del passato.<br><br>
-            <strong>Per chi non è nano né fedele di Moradin</strong> il dio esige un pegno, a scelta del gruppo:
-            <ul>
-                <li>un punto permanente di Costituzione;</li>
-                <li>un tesoro da almeno 5.000 mo;</li>
-                <li>un servizio futuro e vincolante.</li>
-            </ul>
-            <strong>Se rifiutate</strong>: chi non è benedetto tira <strong>Tempra CD 25</strong>, o resta parzialmente pietrificato finché non lo curano.<br>
-            <strong>Il prezzo del portatore</strong>: <strong>1d10 anni</strong> di vita, permanenti, a ogni viaggio.
+            Riavvolge tempo e spazio, e porta te e fino a <strong>8 creature consenzienti</strong> in un punto di forgiatura del passato.<br><br><strong>Per chi non è nano né fedele di Moradin</strong> il dio chiede un pegno, a scelta del gruppo: un punto permanente di Costituzione, un tesoro da almeno 5.000 mo, oppure un servizio futuro e vincolante.<br><strong>Se il pegno non si paga</strong>: chi non è benedetto tira <strong>Tempra CD 25</strong>, o resta in parte pietrificato (−3 m di velocità, −2 DES) finché non lo curano.<br><strong>Il prezzo del portatore</strong>: <strong>1d10 anni</strong> di vita, permanenti, a ogni viaggio.
+        </div>
+    </div>
+
+    <div class="power-block">
+        <div class="power-header">◆ Quello che il Topazio ti ha dato oltre al viaggio <span>sempre</span></div>
+        <div class="mechanic">Dal rituale della Piramide di Fuoco</div>
+        <div class="desc-text">
+            <ul><li><strong>Percezione del Tempo</strong> (sempre): sai sempre quanto tempo passa, e quanti giorni e ore mancano a Hammerfist.</li><li><strong>Visione Temporale</strong> (quando capita): nei luoghi dove è successo qualcosa di grosso, a volte lo rivedi.</li></ul>
         </div>
     </div>
 
     <div class="power-block block-nuovo">
-        <div class="power-header">◆ Smeraldo — la Vera Terra <span class="nuovo">accesa ora</span></div>
+        <div class="power-header">◆ Smeraldo — la Vera Terra <span class="nuovo">acceso ora</span></div>
         <div class="mechanic">Magico (Mag) | 1/settimana | Azione standard | LI 20°</div>
         <div class="desc-text">
-            <strong>Costo</strong>: seppellire nel terreno una gemma o un'arma perfetta da <strong>1.000 mo</strong>. Non è un pagamento: è un tributo, e la terra la differenza la sente.<br>
-            Scegli uno dei tre:
-            <ul>
-                <li><strong>Bastione della Terra</strong> — un muro di pietra spesso 9 metri, fino a 140 metri cubi. Non si perfora.</li>
-                <li><strong>Forgia della Vita</strong> — la terra torna fertile per 30 metri di raggio, e resta <em>consacrata</em> per sempre.</li>
-                <li><strong>Giudizio della Montagna</strong> — terremoto in un raggio di 15 metri, <strong>Riflessi CD 22</strong>. Risparmia i nani che designi, e le loro opere.</li>
-            </ul>
+            <strong>Costo</strong>: seppellire una gemma o un'arma perfetta da <strong>1.000 mo</strong>. La terra la differenza la sente.<br>Scegli uno dei tre:<ul><li><strong>Bastione della Terra</strong>: un muro di pietra spesso 9 metri, fino a 140 metri cubi.</li><li><strong>Forgia della Vita</strong>: la terra torna fertile per 30 metri di raggio, e resta <em>consacrata</em>.</li><li><strong>Giudizio della Montagna</strong>: terremoto in un raggio di 15 metri, <strong>Riflessi CD 22</strong>. Risparmia i nani che designi, e le loro opere.</li></ul>E insieme al Topazio tiene ferma la strada del tempo: con due pietre il viaggio non si sfalda.
         </div>
     </div>
 
     <div class="power-block spento">
-        <div class="power-header">◆ La terza incastonatura <span>vuota</span></div>
+        <div class="power-header">◆ Quel che resta vuoto <span>fredda</span></div>
+        <div class="desc-text">È fredda, e da quando lo Smeraldo si è acceso lo è di più. Le altre due, se le sfiori, rispondono. Questa aspetta qualcosa che non è ancora successo.</div>
+    </div>
+
+    <h2>Quello che la Corona ti è costato</h2>
+    <table>
+        <tr><th>Quando</th><th>Effetto permanente</th></tr>
+        <tr><td><strong>Quando l'hai indossata</strong></td><td><strong>−2 DES</strong> (il peso, e la testa che non gira più libera) · <strong>+4 CAR</strong> · non te la togli: si è aperta <strong>solo</strong> per incastonare una gemma</td></tr>
+            <tr><td><strong>Al rito dello Smeraldo</strong></td><td><strong>−2 DES</strong> e <strong>+2 COS</strong>: il Peso del Mondo, accettato nel corpo</td></tr>
+            <tr><td>☐ <strong>Al rito di Hella</strong>, se doni</td><td>la deflessione scende di uno, per sempre</td></tr>
+    </table>
+        <p style="font-size:10pt;margin:6px 0 0 0;">DES: 10 di partenza, 8 con la Corona addosso, 6 dopo il rito. Sono <strong>−4 al punteggio</strong> e <strong>−2 al modificatore</strong>: −2 a CA, Riflessi, iniziativa e prove di DES, non −6. In cambio <strong>+4 CAR</strong> e <strong>+2 COS</strong>.</p>
+
+    <h2>Il sentiero dei rituali</h2>
+    <table>
+        <tr><th></th><th>Rituale</th><th>Dove, o come</th><th>Il prezzo</th><th>Sblocca</th></tr>
+        <tr><td class="c">✅</td><td><strong>1 · Difesa della Forgia</strong></td><td>indossarla: la visione della battaglia di Hammerfist</td><td>2.500 mo in armi o argento</td><td>Consapevolezza della Pietra · Corona di Protezione +2</td></tr>
+        <tr><td class="c">✅</td><td><strong>2 · Prova della Sala Profonda</strong></td><td>la Piramide di Fuoco, e il Topazio</td><td>12.500 mo in gemme</td><td>Intuito di Moradin · il Topazio</td></tr>
+        <tr><td class="c">✅</td><td><strong>3 · Incudine del Mondo</strong></td><td>il Nodo della Terra, dopo Terros</td><td>un pezzo di te: il Peso del Mondo</td><td>Volontà Adamantina · Manto di Pietra e Spirito · lo Smeraldo</td></tr>
+        <tr><td class="c">⬜</td><td><strong>4 · Assedio della Forgia Eterna</strong></td><td>l'atto finale, in cui userai il potere della Corona per riscrivere la storia</td><td>—</td><td>la Corona di Protezione cresce · la Corona parla · la terza pietra · un potere che la Corona non ha mai avuto: l'<strong>Aura della Forgia Eterna</strong></td></tr>
+    </table>
+    <p style="font-size:10pt;margin:4px 0 0 0;">E quando la Corona sarà intera, non sarà la sola a svegliarsi.</p>
+
+    <h2>Il dono al rito di Hella</h2>
+    <div class="power-block">
+        <div class="power-header">☐ Il +2 di deflessione <span>da segnare al rito</span></div>
         <div class="desc-text">
-            È fredda, e da quando lo Smeraldo si è acceso lo è di più. Le altre due, se le sfiori, rispondono. Questa aspetta qualcosa che non è ancora successo.
+            Al rito di resurrezione puoi dare a Hella <strong>la protezione che la Corona dà a te</strong>. Esce dalla Corona <strong>per sempre</strong>: la deflessione scende a <strong>+1</strong>.<br>
+            Nel suo seme diventa lo <strong>Scudo del Custode</strong>: una volta al giorno, azione immediata, lei prende su di sé il danno destinato a un alleato entro 9 m, <strong>dimezzato</strong>.<br>
+            E ti torna addosso: ogni volta che lei usa lo Scudo sei <strong>accelerato per 3 round</strong>, e in quei round ti muovi <strong>verso chi lei ha protetto</strong>, almeno un'azione di movimento per round che accorci la distanza, o l'accelerazione si spegne.<br>
+            <strong>Una volta sola</strong>, nel momento del bisogno, lei potrà rendertela per una scena intera.<br><br>
+            ☐ <strong>Dono</strong> &nbsp;&nbsp; ☐ <strong>Rifiuto</strong>: la deflessione resta +2, e il seme di Hella resta dormiente.
         </div>
     </div>
 
     <h2>Quando gli artefatti si parlano</h2>
-
     <div class="requirements" style="font-size: 10pt;">
-        La Corona non lavora da sola. Con l'<strong>Anello</strong> di Artemis e i <strong>Bracieri</strong> di Tordek fa quattro cose: <strong>+1 schivare</strong> contro i Legali vicini · <strong>Visione Planare</strong> 1/giorno · <strong>Colpo dell'Alba Oscura</strong> 1/giorno insieme ad Aegis Fang · e la <strong>Trinità Divina</strong>, 1/giorno per cinque round, quando siete tutti e tre entro 9 metri.<br>
-        <strong>Con Hella.</strong> Quando usa lo <strong>Scudo del Custode</strong> sei accelerato 3 round e scatti verso chi ha protetto. <strong>Radici della Memoria</strong> si sveglia quando lei pianterà la Ghianda al Cerchio della Quercia Vecchia: da allora, su terreno naturale, la tua Consapevolezza della Pietra vale anche per lei. E quando la Foresta Sacra vi avrà accolti, con la Collana la Trinità diventerà la <strong>Quaternità</strong>.<br>
+        Con l'<strong>Anello</strong> di Artemis: entro 3 metri <strong>+1 schivare</strong> alla CA contro i Legali, e 1/giorno <strong>Visione Planare</strong> più <em>dissolvi illusioni</em> in 9 metri. Con <strong>Aegis Fang</strong> e l'Anello: il <strong>Colpo dell'Alba Oscura</strong>, 1/giorno: Artemis lancia la Luce di Lathander, tu colpisci lo stesso bersaglio con +2 e +2d6 sacri. Con Anello e <strong>Bracieri</strong>: la <strong>Trinità Divina</strong>, 1/giorno per cinque round, quando siete tutti e tre entro 9 metri e ognuno spende un'azione di movimento.<br><strong>Con Hella.</strong> ☐ Se hai donato: quando lei usa lo <strong>Scudo del Custode</strong> sei accelerato 3 round e scatti verso chi ha protetto. <strong>Radici della Memoria</strong> si sveglierà quando lei pianterà la Ghianda al Cerchio della Quercia Vecchia: da allora, su terreno naturale, la tua Consapevolezza della Pietra vale anche per lei. E quando la Foresta Sacra vi avrà accolti, con la Collana la Trinità diventerà la <strong>Quaternità</strong>.<br>
         Si dichiarano prima, e costano un'azione a testa.
+    </div>
+
+    <div class="quote">
+        <strong>Il giuramento del portatore</strong><br>
+        «Io sono la pietra che ricorda,<br>la forgia che sopporta,<br>il martello che ricostruisce.<br>Dalla luce di Moradin io difendo,<br>e dalla sua incudine io sono riforgiato.»
     </div>
 
     <div class="quote" style="margin-top: 18px;">
         <strong>Vincolo.</strong> La Corona serve la memoria dei nani, non chi la porta. Il giorno in cui Thorik tradisse Moradin o la stirpe, i poteri non si spegnerebbero con un lampo. Semplicemente, la mattina dopo, non risponderebbero.
     </div>
 
-    <div class="power-block" style="background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 20px;">
-        <div class="power-header" style="color: #666; font-size: 11pt;">Valore magico e costruttivo teorico (2 gemme + Rituale 3)</div>
-        <div style="font-size: 9.5pt; color: #444;">
-            Come <strong>artefatto maggiore</strong> il valore complessivo è ovviamente <em>Inestimabile</em>. Al netto delle pure metriche dei manuali, però: protezioni base più protezioni mentali inamovibili (immunità assoluta e +4 razziale forzati su LI 20), <strong>Mente Vuota permanente</strong> e <strong>riduzione del danno</strong>, potenziamenti tellurici distruttivi (terremoti estesi e muri di montagna che da soli superano le decine di migliaia di monete a utilizzo isolato), più la rarità del componente originario della forgia divina. Stima lorda per il bilancio di scheda a questo stadio: <strong>~190.000 mo</strong> <span class="mechanic">stima, non prezzo: l'artefatto non è vendibile né replicabile</span>
-        </div>
+    <div class="power-block grigio">
+        <div class="power-header">Valore teorico (stadio 2)</div>
+        <div class="corpo">Come artefatto maggiore è inestimabile, e non si vende. Per il bilancio di ricchezza della scheda: <strong>~190.000 mo</strong>, dalla pagina a due gemme del 2026-08-01 <span class="mechanic">stima, non prezzo</span></div>
     </div>
 
-    <div class="power-block" style="background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 10px;">
-        <div class="power-header" style="color: #666; font-size: 11pt;">Registro sblocchi (compila a penna)</div>
-        <div style="font-size: 9.5pt; color: #444;">
+    <div class="power-block grigio">
+        <div class="power-header">Registro sblocchi (compila a penna)</div>
+        <div class="corpo">
             Rituale 1 — Difesa della Forgia · <em>giocato</em><br>
             Rituale 2 — Prova della Sala Profonda · <em>giocato</em><br>
-            <strong>Rituale 3 — Incudine del Mondo · giocato 2026-07-31</strong> (Nodo della Terra, guardiano abbattuto, pegno personale versato)<br>
+            <strong>Rituale 3 — Incudine del Mondo · giocato 2026-07-31</strong> (Nodo della Terra, Terros abbattuto, pegno personale versato)<br>
             <strong>Smeraldo · acceso 2026-07-31</strong><br>
+            ☐ Dono al rito di Hella · ______________<br>
+            ☐ Rituale 4 · ______________<br>
             _______________________________________________
         </div>
     </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione corona · S2 · r5 · 2026-09-25</p>
 
 </body>
 </html>
