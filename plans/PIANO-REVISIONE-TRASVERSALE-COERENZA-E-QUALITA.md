@@ -422,7 +422,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 | ~~D11~~ | Lo stadio 1 dell'Anello (Mask sveglio) è stato usato al tavolo? | **Deciso**: no, solo la crisi; pagina giocatore tolta |
 | ~~D12~~ | Gli effetti della Opzione C sulla scheda di Artemis? | **Deciso**: la Fortezza Mentale |
 | D13 | I poteri del Caos Ultimo (Anello, stadio 3)? | Bozza da approvare sulla pagina DM: *Alba Voluta* e *Purificazione del Crepuscolo* 1/giorno, e il *Prezzo dell'Armonia* |
-| ~~D14~~ | Aegis Fang: i poteri usati al tavolo e mai scritti (Ritornante, *bane*, Tuono, Dragondoom)? | **Deciso**: *bane* contro i non morti e Tuono +1d6 sonoro contro non morti e aberrazioni, TS Volontà CD 16 tirato dall'ascia; Dragondoom come nel MIC |
+| ~~D14~~ | Aegis Fang: i poteri usati al tavolo e mai scritti (Ritornante, *bane*, Tuono, Dragondoom)? | **Deciso**: vale la scheda del repo, Ritornante e Dragondoom (la punizione del MIC); niente *bane* né Tuono allo stadio 0 |
 
 ---
 

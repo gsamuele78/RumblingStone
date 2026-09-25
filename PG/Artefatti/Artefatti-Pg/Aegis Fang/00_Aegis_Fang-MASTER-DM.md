@@ -49,25 +49,13 @@ vincoli*).
 - **Poteri inferiori**: *cura ferite moderate* 3/giorno; *resistere
   all'energia* (resist energy) 1/giorno.
 
-- **Dragondoom** (DM 2026-09-25, D14): la punizione del *Magic Item
+- **Dragondoom** (DM 2026-09-25, D14: è **questo** il potere dell'ascia
+  contro i draghi; allo stadio 0 non c'è nessun *bane* contro non morti o
+  aberrazioni, che arrivano solo con lo stadio 1): la punizione del *Magic Item
   Compendium* come la riporta il DM — 3/giorno, dichiarata **prima** del tiro
   d'attacco, contro un drago Grande o più: **+1d6** Grande, **+2d6** Enorme,
   **+3d6** Mastodontico, **+4d6** Colossale; se l'attacco manca l'uso è perso.
   Il testo del MIC non è nel repo (non SRD): valori non verificati qui.
-- **La volontà dell'ascia** (DM 2026-09-25, D14 — giocata al tavolo, mai
-  scritta prima in una scheda o in un PDF):
-  - ***bane* contro i non morti**: +2 al potenziamento e +2d6 danni (valori
-    del *bane* della SRD);
-  - **Tuono**: +1d6 danni sonori contro non morti e aberrazioni;
-  - ognuno si accende se **l'ascia** supera un **TS sulla Volontà CD 16**. Il
-    dado lo tira l'ascia quando Thorik le chiede aiuto o, nei casi estremi,
-    da sola contro i suoi nemici giurati.
-  - [INFERRED — needs DM confirmation] la durata (proposta: fino alla fine
-    dello scontro) e il bonus del TS dell'ascia (proposta: nessuno, d20
-    secco ≥ 16, come detto al tavolo).
-  - Allo stadio 1 il *Taglio del Cacciatore* rende costanti +2d6 sacri contro
-    gli stessi tipi: se la volontà dell'ascia resti in più si decide al
-    Rituale 4.
 
 ### Stadio 1 — Risveglio pieno (dall'HTML, post-Assedio — ⬜ futuro)
 - **Potenziamento**: diviene **+4 Ascia da Guerra Nanica Sacra (Holy)
