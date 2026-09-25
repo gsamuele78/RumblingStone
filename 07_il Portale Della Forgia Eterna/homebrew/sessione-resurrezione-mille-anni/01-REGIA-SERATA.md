@@ -3,7 +3,7 @@
 > **Cos'è.** La scaletta della serata, in ordine di gioco. Non riscrive i
 > master: dice **quale paragrafo aprire, quando, per quanto**, cosa consegnare
 > e cosa annotare. Dove un master e questa regia non si trovano d'accordo,
-> vince il master, e prima ancora vince `campaign/state.md`.
+> vince il master, e prima ancora vince lo stato della campagna.
 >
 > **Pilastri della serata**: Casa di Davide guida il rito (tre persone che
 > pagano per una quarta), BG3 guida il risveglio (tornano cose di tre sessioni
@@ -57,8 +57,8 @@ Di' solo: *«Questo è quello che avete sognato. Leggetelo quando ve lo dico.»*
 La giocatrice di Hella non riceve niente adesso: il suo foglio arriva più
 avanti, ed è la prima cosa che le dai dopo tre sessioni di silenzio.
 
-> 📐 **Com'è fatto un eco, da stasera** (`consequence-echoes.md` §3-ter, tre
-> regole). Ogni foglio ha **un solo frammento**, il sogno, che si legge ad
+> 📐 **Com'è fatto un eco, da stasera**<!-- apparato --> (`consequence-echoes.md` §3-ter)<!-- /apparato -->, tre
+> regole. Ogni foglio ha **un solo frammento**, il sogno, che si legge ad
 > alta voce. Sotto c'è **una riga «solo per te»** che dà un nome e una
 > direzione: chi, o cosa, e verso dove guardare. Non spiega il sogno, non
 > anticipa i Doni, non dà numeri. Se un giocatore chiede di più, **rispondi
@@ -73,7 +73,7 @@ avanti, ed è la prima cosa che le dai dopo tre sessioni di silenzio.
 
 ### Gli echi del passato che stasera tornano
 
-Le righe dell'Echo Ledger (`state.md` §7.E) che questa serata **incassa**. Una
+Le righe dell'Echo Ledger<!-- apparato --> (`state.md` §7.E)<!-- /apparato --> che questa serata **incassa**. Una
 per scena, e il posto dove cade.
 
 | Eco | Da dove viene | Dove si paga stasera |
@@ -249,11 +249,11 @@ taglia la prep di battaglia.
 
 | | Cosa | Dove va dopo |
 |---|---|---|
-| ☐ | Thorik: **dona / rifiuta** il +2 di deflessione | `ARC07-CONSEGUENZE-ECHI.md` §2-bis, la casella vuota. **Serve all'Atto IV della sessione dopo**: decide la voce della Corona al Rituale 4 |
+| ☐ | Thorik: **dona / rifiuta** il +2 di deflessione | la casella vuota del registro delle conseguenze. **Serve all'Atto IV della sessione dopo**: decide la voce della Corona al Rituale 4 |
 | ☐ | Tordek: **dona / rifiuta** l'Ancoraggio | scheda Bracieri |
 | ☐ | Artemis: **dona / rifiuta** 1d6 di *Eldritch Blast* | scheda Anello |
 | ☐ | Successi allo Step 5: **3 / 2 / 1 / 0** | se 2: il PG che ha fallito ha il dono «a metà» e **lo scopre a −1000**, al primo uso (`DEF-3` §9) |
-| ☐ | La Custode: **A / B / C** | `state.md` §7 [DEBITO DELLA RADICE] |
+| ☐ | La Custode: **A / B / C** | il filo del Debito della Radice |
 | ☐ | La frase del finisher allo Step 5 | è canone: la ricordano tutti |
 | ☐ | La ghianda annerita: trovata? piantata o messa in un seme? | `DEF-3` §11 C |
 
@@ -266,8 +266,7 @@ di luce, la riga di Moradin (*«Con due pietre il varco si apre…»*), la tabel
 delle tre scelte.
 
 **Consegna qui le Cronache dei Quattro Eroi**, a tutti, mentre la Corona apre
-la porta. `ARC07-HANDOUTS.md` lo prescrive: è il momento in cui scoprono di
-essere la profezia.
+la porta: è il momento in cui scoprono di essere la profezia.
 
 🎭 **Therysol non vuole che vadano**, e lo dice solo se qualcuno glielo chiede.
 Se nessuno glielo chiede, annota che nessuno l'ha fatto. In ARC-08 lei lo
@@ -282,7 +281,7 @@ Se chiedono, Moradin non promette niente oltre la sua riga.
 
 **Decisione S1**: si gioca fino al primo ariete. Il resto è della sessione dopo.
 
-| Blocco | `DEF-4` | Modalità | Minuti |
+| Blocco | Dove | Modalità | Minuti |
 |---|---|---|---:|
 | L'arrivo nel bosco, la guarigione del passaggio, lo shock | Scena 1 | automatico + TS Volontà **CD 20** | 10 |
 | La pattuglia di Durin e la cavalcata | Scena 2 | tre vie, nessun tiro se sinceri | 10 |
@@ -393,9 +392,8 @@ contrapposto). **Balvar non si taglia**: è l'unica scena che cambia il duello.
 
 ## §6 · Il registro di fine serata
 
-Tutto quello che si annota stasera, in un posto. Si trascrive col wizard,
-`python3 scripts/dm.py session`, **sul ramo del gruppo**, mai a mano su `main`
-(ADR-0007).
+Tutto quello che si annota stasera, in un posto. Si trascrive col wizard di
+fine sessione, **sul ramo del gruppo**<!-- apparato --> (`python3 scripts/dm.py session`, mai a mano su `main`, ADR-0007)<!-- /apparato -->.
 
 | | Cosa | Esito |
 |---|---|---|
@@ -416,7 +414,7 @@ Tutto quello che si annota stasera, in un posto. Si trascrive col wizard,
 | ☐ | Tacche spese all'uscita dalla tenda | … su 8 |
 | ☐ | Durik: prima Prova di Risonanza della serata? | |
 
-**Echi da armare** nel registro §7.E di `state.md`, se il tavolo li ha
+**Echi da armare** nel registro degli echi, se il tavolo li ha
 prodotti (proposte, il DM decide quali):
 
 | ID proposto | Da cosa | Tono |

@@ -245,6 +245,7 @@ jobs:
       - name: Manifest dei booklet (schema, file, immagini, parità fra le catene)
         run: python scripts/validate_booklets.py --spiega
 
+
       - name: Install typst (versione FISSATA, mai «latest»)
         # Un compilatore che si aggiorna da solo è una CI che diventa rossa di
         # notte per una riga che nessuno ha scritto. La versione si alza a mano,
@@ -262,6 +263,13 @@ jobs:
         # avevano mai compilato e nessuno poteva accorgersene. Ora ogni manifest
         # del repo produce un PDF vero, con i segnalibri.
         run: python scripts/validate_booklets.py --stampa
+
+      - name: Il corredo della serata (pezzi, doppioni, box, e i suoi PDF misurati)
+        # rumblingstone-automation, «Il corredo della serata»; ADR-0070. Con
+        # --stampa compila i volumi del corredo e li misura con PyMuPDF
+        # (requirements-dev.txt, D7 di CICLO-SESSIONE): righe sovrapposte, testo
+        # sul bordo, apparato di lavoro. --rigoroso: una misura saltata è rossa.
+        run: python scripts/validate_corredo.py --stampa --rigoroso
 
       - name: Schede pregenerate — un PDF per giocatore
         run: |

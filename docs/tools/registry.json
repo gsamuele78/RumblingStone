@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 76,
+  "tool_count": 77,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -3142,7 +3142,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/validate_booklets.py --stampa",
-      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri e non stampi apparato di lavoro oltre il tetto del volume (ADR-0070, con PyMuPDF). È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
       "use_case": "«I manifest dei booklet puntano tutti a file che esistono, o ne ho rinominato uno?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -3199,6 +3199,12 @@
           "kind": "markdown",
           "required": true,
           "schema": null
+        },
+        {
+          "path": "scripts/apparato-residui.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
         }
       ],
       "outputs": [
@@ -3235,6 +3241,122 @@
       "docs": [
         "docs/guides/GUIDA-BOOKLET-E-PDF.md",
         "plans/adr/ADR-0020-edizione-da-stampa-su-un-secondo-binario.md",
+        "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "validate_corredo",
+      "path": "scripts/validate_corredo.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/validate_corredo.py C.corredo.json --stampa",
+      "summary": "Il controllo del corredo della serata (norma in rumblingstone-automation, «Il corredo della serata»): da un *.corredo.json verifica che ci siano il booklet del DM, il volume dei fogli da consegnare, gli eventuali volumi di approfondimento, gli echi di ogni PG, le carte e gli handout, e che i fogli ✉ stiano solo nel volume dei giocatori e che nessun capitolo si stampi in due volumi del corredo (ADR-0070); che ogni blocco img dei prompt abbia la sua immagine e la sua riga nel confronto immagine-scheda; che nessun box read-aloud superi le 12 righe nel testo che va in stampa. Con --stampa compila ogni volume e misura il PDF: righe di testo sovrapposte e testo a meno di 30 pt dal bordo (PyMuPDF, facoltativo: senza, la misura si dichiara saltata).",
+      "use_case": "«Ho detto genera il booklet: è uscito tutto quello che serve alla serata, e i PDF sono buoni?»",
+      "stability": "stable",
+      "stdlib_only": true,
+      "external_bins": [
+        "typst"
+      ],
+      "args": [
+        {
+          "name": "corredo",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "I file *.corredo.json (default: tutti quelli del repo)."
+        },
+        {
+          "name": "--stampa",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Compila ogni volume con typst e misura il PDF; toglie i PDF che prima non c'erano."
+        },
+        {
+          "name": "--pdf",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Misura i PDF -STAMPA.pdf già compilati, senza ricompilarli: è il passo finale di dm.py corredo --stampa."
+        },
+        {
+          "name": "--rigoroso",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Una misura saltata (typst o PyMuPDF assente) è rossa."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esito machine-readable su stdout."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.corredo.json",
+          "kind": "json",
+          "required": true,
+          "schema": "scripts/schemas/corredo_serata.schema.json"
+        },
+        {
+          "path": "i manifest, i master e i file dei prompt citati dal corredo",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/apparato-residui.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout (o JSON con --json)",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "corredo completo",
+        "1": "un pezzo mancante o difettoso",
+        "2": "uso errato"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "I corredi in ordine alfabetico; nessun wallclock nell'output."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/corredo_serata.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python scripts/validate_corredo.py --help",
+      "tests": [
+        "scripts/tests/test_corredo.py"
+      ],
+      "docs": [
+        "skills/rumblingstone-automation/SKILL.md",
         "scripts/README-automation.md"
       ]
     },
@@ -5020,7 +5142,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto.",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -5029,7 +5151,7 @@
       ],
       "args": [
         {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|bestiario",
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario",
           "type": "subcommand",
           "required": true,
           "default": null,
@@ -5045,10 +5167,11 @@
             "skills",
             "doctor",
             "volume",
+            "corredo",
             "bestiario"
           ],
           "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita)."
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF."
         }
       ],
       "inputs": [

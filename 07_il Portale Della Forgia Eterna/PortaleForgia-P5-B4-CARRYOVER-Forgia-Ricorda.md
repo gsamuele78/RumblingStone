@@ -4,8 +4,8 @@
 > **Stato (B4)**: ⭐ deliverable cross-arc più importante dell'arco. Traduce
 > l'**esito del duello con Skullcrusher** (P5 fast-play, Scena 5) in un
 > **effetto quantificato** sullo statblock di **Fauci di Palude** nell'ARC-08
-> (`08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`, GS
-> 15, 312 PF). Chiude il task **ARC-08 A12**.
+> (GS 15, 312 PF)<!-- apparato -->, `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`.
+> Chiude il task **ARC-08 A12**<!-- /apparato -->.
 >
 > **Fonte narrativa**: Moradin, P5-DEFINITIVO-PARTE2 r.290 — *«Ogni ferita che
 > infliggi ora all'antenato, la mia Forgia la ricorderà quando affronterai il
@@ -20,7 +20,7 @@
 
 ## 1. INPUT DAL P5 (cosa registra il fast-play)
 
-Dalla **Scena 5** del `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` si registrano due dati:
+Dalla **Scena 5** del duello si registrano due dati:
 
 1. **Esito del duello**: `UCCISO` / `FERITO GRAVE` / `FUGGITO`.
 2. **Ferite ancestrali segnate** (`N`): numero di colpi andati a segno su

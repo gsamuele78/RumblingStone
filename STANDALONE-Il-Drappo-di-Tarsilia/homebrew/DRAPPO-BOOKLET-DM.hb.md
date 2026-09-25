@@ -188,22 +188,22 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | File | Cosa contiene |
 |---|---|
 | **questo** | premessa, quickstart, cosa stampare, le tre sessioni a colpo d'occhio, tagli, avanzamento |
-| `CONTRADE-DI-TARSILIA.md` | le otto contrade: livree, motti, canti con effetti, rivalità, stemmi |
-| `REGOLE-DELLA-CORSA-PF1E.md` | il sottosistema: Morale del Rione, Onore del Fantino, lo Stacco, la Corsa |
-| `PREGEN-SEI-SCHEDE-PF1E.md` | le sei schede complete, pronte da stampare |
-| `01-GIORNO-1-LA-SORTE.md` | Sessione 1 |
-| `02-GIORNO-2-I-PARTITI-E-LA-CENA.md` | Sessione 2 |
-| `03-GIORNO-3-LO-STACCO-E-LA-CORSA.md` | Sessione 3 |
-| `04-LUOGHI-E-INTRIGO.md` | quindici luoghi pronti: osterie, botteghe, il mercato delle informazioni, le dicerie |
-| `05-INIZIAZIONE-E-EVENTI-PG.md` | il rito d'apertura + **diciotto eventi personali**, tre per PG |
-| `06-VILLAIN-E-AGENDE.md` | le agende dei villain **ora per ora**, il giro del mondo, gli **incontri scalabili** 4/5/6/7 |
-| `07-GUIDA-DM-PASSO-PASSO.md` | **la regia**: le tre serate minuto per minuto, i rilanci, le voci dei PNG |
+| cap. IV | le otto contrade: livree, motti, canti con effetti, rivalità, stemmi |
+| cap. V | il sottosistema: Morale del Rione, Onore del Fantino, lo Stacco, la Corsa |
+| cap. XIII | le sei schede complete, pronte da stampare |
+| cap. IX | Sessione 1 |
+| cap. X | Sessione 2 |
+| cap. XI | Sessione 3 |
+| cap. VII | quindici luoghi pronti: osterie, botteghe, il mercato delle informazioni, le dicerie |
+| cap. VI | il rito d'apertura + **diciotto eventi personali**, tre per PG |
+| cap. VIII | le agende dei villain **ora per ora**, il giro del mondo, gli **incontri scalabili** 4/5/6/7 |
+| cap. II | **la regia**: le tre serate minuto per minuto, i rilanci, le voci dei PNG |
 | `FASCICOLO-SCHEDE-GIOCATORE.md` | i sei background da dare in mano + la matrice dei legami |
-| `09-KIT-ANTI-IMPROVVISAZIONE.md` | **quando escono dal copione**: 1d20 nomi, prezzi di bottega, tre PNG jolly con statblocco, 1d6 «la città respira» |
-| `10-DOSSIER-DELLE-PISTE.md` | **quando invece indagano**: i tre misteri come piste con nodi, la rete degli indizi, l'orologio, il falso indizio dei quattro quaranta |
-| `08-CASSETTA-DEL-DM.md` | **l'apparato d'uso**: foglio del cast, pronuncia, indice dei read-aloud, inserto per lo schermo, i suoni, il momento da fotografare, accessibilità |
+| «III-bis · Kit anti-improvvisazione» | **quando escono dal copione**: 1d20 nomi, prezzi di bottega, tre PNG jolly con statblocco, 1d6 «la città respira» |
+| «III-ter · Il dossier delle piste» | **quando invece indagano**: i tre misteri come piste con nodi, la rete degli indizi, l'orologio, il falso indizio dei quattro quaranta |
+| cap. III | **l'apparato d'uso**: foglio del cast, pronuncia, indice dei read-aloud, inserto per lo schermo, i suoni, il momento da fotografare, accessibilità |
 | `STATO-DEL-MODULO.md` | la memoria fra le tre serate: contatori, patti, scelte, **Echo Ledger**. Da copiare per gruppo |
-| `STATBLOCCHI-PF1E.md` | PNG, rivali, sicari, cavalli |
+| cap. XII | PNG, rivali, sicari, cavalli |
 | `ALLEGATI/mappe/` | la Ruota, **la Ruota in versione giocatore** e le stalle: JSON, master emoji-grid, SVG |
 | `ALLEGATI/tavole/` | **tavole vettoriali**: mappa della città, il Drappo, sei ritratti (rigenerabili) |
 | `ALLEGATI/handout/` | **i quattro prop da stampare**: il contratto di Vesca, la pagina del registro, la ricevuta, il decreto |
@@ -268,10 +268,10 @@ dopo, anche.
        STANDALONE-Il-Drappo-di-Tarsilia/homebrew/DRAPPO-SCHEDE-PG.manifest.json
    ```
 
-   e vengono da `PREGEN-SEI-SCHEDE-PF1E.md` + `FASCICOLO-SCHEDE-GIOCATORE.md`, che
+   e vengono da cap. XIII + `FASCICOLO-SCHEDE-GIOCATORE.md`, che
    restano i master: si può anche stampare direttamente quei due file, ma il PDF è
    quello che si dà in mano;
-2. il **volantino delle otto contrade** — la tabella §1 di `CONTRADE-DI-TARSILIA.md`,
+2. il **volantino delle otto contrade** — la tabella §1 di cap. IV,
    con gli stemmi;
 3. la **matrice dei legami** (prima tabella di `FASCICOLO-SCHEDE-GIOCATORE.md`), una
    copia a testa — sulla scheda ognuno vede **solo la propria riga**, e la matrice
@@ -287,18 +287,18 @@ Una volta dati, **non si ritirano**.
 
 **Per il DM:**
 
-- **`07-GUIDA-DM-PASSO-PASSO.md`** e **`08-CASSETTA-DEL-DM.md`** — sono i due file
+- **cap. II** e **cap. III** — sono i due file
   che tieni aperti tutta la sera;
 - **`STATO-DEL-MODULO.md`**, copiato e stampato: si compila a matita a fine serata;
 - questo file e il file della giornata che si gioca;
-- `06-VILLAIN-E-AGENDE.md` §1 (l'agenda di Vesca) e `05-INIZIAZIONE` §5 (la griglia
+- cap. VIII §1 (l'agenda di Vesca) e `05-INIZIAZIONE` §5 (la griglia
   degli eventi personali, da spuntare);
-- `REGOLE-DELLA-CORSA-PF1E.md` §2 e §4 (una pagina in tutto: i due contatori e la
+- cap. V §2 e §4 (una pagina in tutto: i due contatori e la
   Corsa);
 - il segnapunti dei contatori — due righe su un foglio, si aggiornano a vista.
 
 **Sul tavolo, se ci sono:** otto segnalini colorati per le contrade (i colori delle
-livree stanno in `CONTRADE-DI-TARSILIA.md` §1) e un mazzo di carte da usare come
+livree stanno in cap. IV §1) e un mazzo di carte da usare come
 ordine di corsa.
 
 ---
@@ -743,7 +743,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 ## §1 · Il foglio del cast
 
 **Legenda**: ✦ compare in tutte e tre le serate · ◆ una volta sola · ⚔ statblocco in
-`STATBLOCCHI-PF1E.md`
+cap. XII
 
 ### Chi comanda
 
@@ -1092,9 +1092,9 @@ Tre casi in cui **non** si improvvisa, e si dice al tavolo *«questo lo decidiam
 prossima volta»*:
 
 1. **una regola della corsa** — sono scritte, e cambiarle a metà rompe il gioco del
-   Giorno 3 (`REGOLE-DELLA-CORSA-PF1E.md`);
+   Giorno 3 (cap. V);
 2. **un segreto di un PG** — appartiene a quel giocatore, non al DM
-   (`05-INIZIAZIONE-E-EVENTI-PG.md` §4-bis);
+   (cap. VI §4-bis);
 3. **la matematica di un incontro** — le tabelle 4/5/6/7 sono già calcolate. A
    occhio, di sera, viene sempre troppo duro o troppo molle.
 
@@ -1142,7 +1142,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ## §0 · Come si leggono i nodi
 
-Formato della skill `rumblingstone-indagine` (`references/nodi-e-sei-porte.md`), in
+Formato della skill `rumblingstone-indagine`, in
 tre righe:
 
 ```
@@ -1165,7 +1165,7 @@ giocatori dal proprio gioco**.
 
 ## §1 · Di che famiglia è questo caso
 
-**Cospirazione**, non «chi è stato» (`famiglie-di-caso.md`). Nessuno è morto, non c'è
+**Cospirazione**, non «chi è stato». Nessuno è morto, non c'è
 un colpevole da nominare: c'è **una catena di persone che si passano un incarico** —
 Vesca dice *«che non corrano»*, Salle traduce, Sfregio esegue — e ciascuno può dire
 il vero negando.
@@ -1337,7 +1337,7 @@ soli non si fa.
 
 ## §5 · La rete — chi porta cosa, e su quale canale
 
-La regola della rete ridondante (`nodi-e-sei-porte.md` §4) qui ha una clausola in
+La regola della rete ridondante qui ha una clausola in
 più, ed è la sola cosa che il registro Eco aggiunge: **i nodi ridondanti devono stare
 su canali diversi**. Tre documenti sono **un** canale — se il gruppo non legge, non
 legge tre volte.
@@ -1391,7 +1391,7 @@ il tavolo troverà un nesso vero, lo verificherà, gli tornerà, e da quel momen
 **tirerà dentro anche le candele e le monete**.
 
 **Non c'è niente da risolvere.** È il falso indizio col manuale rispettato
-(`ricomposizione.md` §6): è **vero**, la conclusione sbagliata è la più economica, e
+: è **vero**, la conclusione sbagliata è la più economica, e
 scoprire che è sbagliata costa qualcosa.
 
 **Come si gioca**, e sono tre righe che valgono la sezione:
@@ -1418,7 +1418,7 @@ scoprire che è sbagliata costa qualcosa.
 
 ## §8 · Quando non trovano niente
 
-Le tre mosse, in ordine, e nessuna è «il DM spiega» (`nodi-e-sei-porte.md` §5):
+Le tre mosse, in ordine, e nessuna è «il DM spiega»:
 
 1. **Sposta l'indizio, non la soluzione.** Il nodo che non hanno trovato compare
    altrove, per bocca di chi ha una ragione sua (§6).
@@ -1438,7 +1438,7 @@ dire al tavolo che l'indagine era decorativa.
 
 Ogni pista ha **un** momento in cui le cose smettono di essere separate. La scena la
 fa **un giocatore**, se ci arriva; il DM la tiene scritta come rete di sicurezza e la
-legge solo se il tavolo non ci arriva (`ricomposizione.md`).
+legge solo se il tavolo non ci arriva.
 
 | Pista | Il picco | Cosa dice la scena |
 |---|---|---|
@@ -1475,10 +1475,10 @@ ragionare.
 |---|---|
 | Nodi, sei porte, rete ridondante, vicolo cieco | skill `rumblingstone-indagine` |
 | Il registro Eco: il documento e le sue assenze, l'errore fecondo | `rumblingstone-indagine/references/documento-ed-errore-fecondo.md` |
-| Le agende ora per ora, e le contromosse | `06-VILLAIN-E-AGENDE.md` |
-| I diciotto eventi personali (dove vivono C1, C5, B1, B3) | `05-INIZIAZIONE-E-EVENTI-PG.md` |
-| I luoghi, Occo e le dicerie | `04-LUOGHI-E-INTRIGO.md` |
-| Il finale alternativo e il Drappo | `03-GIORNO-3-LO-STACCO-E-LA-CORSA.md` §7.1, §8 |
+| Le agende ora per ora, e le contromosse | cap. VIII |
+| I diciotto eventi personali (dove vivono C1, C5, B1, B3) | cap. VI |
+| I luoghi, Occo e le dicerie | cap. VII |
+| Il finale alternativo e il Drappo | cap. XI §7.1, §8 |
 | Dove si annota una teoria del tavolo diventata vera | `STATO-DEL-MODULO.md` |
 
 
@@ -1570,7 +1570,7 @@ fretta e non se ne rende conto.
   raccoglitori di resina a salario fisso e mantiene l'ospizio per dieci anni.
   **L'offerta è vera e sarebbe rispettata.** Costerebbe solo il nome della contrada
   e il seggio.
-- **Cosa fa se rifiutano**: manda Sfregio (vedi `STATBLOCCHI-PF1E.md`). Non a
+- **Cosa fa se rifiutano**: manda Sfregio (vedi cap. XII). Non a
   uccidere: a rendere impossibile correre.
 
 > **Regia.** Vesca non deve mai fare la cattiva in scena. La prima volta che parla ai
@@ -1619,7 +1619,7 @@ Detesta Attu in modo personale e antico: l'Oca ha fatto fallire il padre.
 ## §5 · I canti
 
 Ogni contrada ha una ballata. Alla Cena e nelle osterie si canta contro, e si vince
-o si perde morale (meccanica in `REGOLE-DELLA-CORSA-PF1E.md` §3).
+o si perde morale (meccanica in cap. V §3).
 
 **Istrice — *La divisa in tre***
 Testo giocabile, da cantare male e in coro:
@@ -1752,7 +1752,7 @@ La Sovrintendente estrae da due sacchetti di tela: da uno il nome della contrada
 l'altro il nome del cavallo. Otto cavalli, otto contrade, e chi ha il cavallo giusto
 ha già vinto un terzo della corsa.
 
-**I cavalli** (`STATBLOCCHI-PF1E.md` §5) si dividono in tre categorie:
+**I cavalli** (cap. XII §5) si dividono in tre categorie:
 
 | Categoria | Ritmo | Quanti |
 |---|---|---|
@@ -2374,7 +2374,7 @@ contro il **Raggirare** del PG per capire se è vera e se è già nota. Poi vend
 
 | Cosa vendono | Costo | Verità |
 |---|---|---|
-| L'agenda di Vesca per i tre giorni | un segreto vero di un PG | **completa e vera** (`06-VILLAIN-E-AGENDE.md` §1) |
+| L'agenda di Vesca per i tre giorni | un segreto vero di un PG | **completa e vera** (cap. VIII §1) |
 | Chi ha pagato Sfregio | il nome del mediatore, non il committente | vera ma **incompleta**: porta a un mediatore, non a Vesca |
 | La clausola piccola nel patto di Attu | 100 mo o un favore | vera |
 | Chi, nel rione dell'Istrice, vuole accettare l'offerta del Bruco | un'informazione qualsiasi | vera, e fa **male**: sono undici famiglie, e Occo legge i nomi ad alta voce |
@@ -2527,7 +2527,7 @@ e non ha chiesto come. È vigliaccheria, non innocenza, e va giocata così.
 
 ## §2 · Sfregio — l'esecutore
 
-Statblocco: `STATBLOCCHI-PF1E.md` §3. **Non conosce Vesca** e non l'ha mai vista.
+Statblocco: cap. XII §3. **Non conosce Vesca** e non l'ha mai vista.
 
 **Vuole**: essere pagato e non lasciare tracce. **Teme**: le prigioni di terra —
 c'è stato quattro anni a Cassomir.
@@ -2707,7 +2707,7 @@ Capita, se il gruppo arriva da un'altra avventura. Tre correzioni e basta:
 > (`07_il Portale Della Forgia Eterna/ARC07-DEF-1` §8, «Analisi DPR»), applicato qui.
 >
 > ⚠️ **Nessun numero nuovo**: tutto è calcolato dagli statblocchi di
-> `STATBLOCCHI-PF1E.md` e dalle schede di `PREGEN-SEI-SCHEDE-PF1E.md`. Sono medie
+> cap. XII e dalle schede di cap. XIII. Sono medie
 > di tavolo, non fisica: servono a decidere il ritmo, non a sostituire i dadi.
 
 ### Il gruppo — danno medio per round, contro CA 16
@@ -2756,7 +2756,7 @@ il gruppo fa ~11-12 a round e l'assalto passa a **7 round** — troppo. **Per qu
 > **Perché c'è.** Un modulo di tre giorni che parte da un problema di **soldi** (il
 > Peso di contrada) deve saper dire quanto denaro passa davvero per le mani del
 > gruppo — se non altro perché qualcuno continuerà a giocare quei personaggi.
-> Formato preso dagli audit della campagna (`ARC07-TESORO-WBL-AUDIT.md`), che
+> Formato preso dagli audit della campagna, che
 > chiudono con la regola *«ricchezza d'uscita = ingresso dell'arco dopo»*.
 
 **Riferimento PF1e**: un PG di **3° livello** sta a **~3.000 mo** di equipaggiamento.
@@ -2812,7 +2812,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Giorno 1 — La Sorte
 
 **Sessione 1 di 3 · 3–4 ore · sei PG di 3° livello**
-Serve: questo file, `REGOLE-DELLA-CORSA-PF1E.md` §2, `STATBLOCCHI-PF1E.md` §1 e §4,
+Serve: questo file, cap. V §2, cap. XII §1 e §4,
 la mappa della Ruota, le sei schede.
 
 | § | Cosa |
@@ -3057,7 +3057,7 @@ brutte figure per arrivarci.
 ![La Ruota il giorno della corsa](../ALLEGATI/immagini/web/tavola-la-ruota.jpg)
 *La Ruota, il giorno della corsa.*
 
-**Meccanica completa**: `REGOLE-DELLA-CORSA-PF1E.md` §2. Qui c'è solo la scena.
+**Meccanica completa**: cap. V §2. Qui c'è solo la scena.
 
 Al tramonto la Sovrintendente sale sul palchetto con due sacchetti di tela grezza. Un
 chierichetto dell'Oca li tiene. Otto cavalli sono legati sotto il porticato
@@ -3069,7 +3069,7 @@ biglietti, il chierichetto comprato, un'illusione), si tira ora, prova per prova
 tutta la piazza che guarda. Ogni tiro è pubblico: descrivi cosa vede la gente, non
 cosa fa il PG.
 
-**I cavalli** (`STATBLOCCHI-PF1E.md` §5):
+**I cavalli** (cap. XII §5):
 
 | Nome | Categoria | Ritmo | Carattere |
 |---|---|---|---|
@@ -3105,7 +3105,7 @@ che hanno bevuto e che oggi hanno sentito il loro Capitano prendersi del ladro d
 contrade in piazza.
 
 **Incontro — GS 3** *(a cinque giocatori: togli un tintore; a quattro: togline due)*
-5 × **tintore mezzo ubriaco** (`STATBLOCCHI-PF1E.md` §4.1, esperto 1, GS 1/3).
+5 × **tintore mezzo ubriaco** (cap. XII §4.1, esperto 1, GS 1/3).
 
 **Cosa vogliono**: rompere il naso a qualcuno, non uccidere nessuno. Attaccano a mani
 nude e con bastoni da tinozza (**danno non letale**). Se un PG estrae una lama vera,
@@ -3204,7 +3204,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Giorno 2 — I Partiti e la Cena
 
 **Sessione 2 di 3 · 3–4 ore**
-Serve: questo file, `REGOLE-DELLA-CORSA-PF1E.md` §3 e §4, `STATBLOCCHI-PF1E.md`
+Serve: questo file, cap. V §3 e §4, cap. XII
 §2–§4, la mappa delle stalle (`ALLEGATI/mappe/tarsilia-stalle.md` e l'SVG in
 `rendered/`).
 
@@ -3301,7 +3301,7 @@ parallelo**, nelle osterie, mentre la trattativa è in corso.
 > con *individuazione dei pensieri* (ma la parete è di pietra: serve la porta aperta,
 > cioè serve che qualcuno la faccia aprire).
 
-**Le tre offerte sul tavolo** (dettaglio in `CONTRADE-DI-TARSILIA.md` §3):
+**Le tre offerte sul tavolo** (dettaglio in cap. IV §3):
 
 | Chi | Chiede | Offre | La trappola |
 |---|---|---|---|
@@ -3309,7 +3309,7 @@ parallelo**, nelle osterie, mentre la trattativa è in corso.
 | **Barbanera** (Onda) | niente, se non che l'Istrice non aiutino Attu | scorta ai battellieri per il cavallo e la stalla, stanotte | mantiene alla lettera e non oltre: se il patto dice «alla stalla», al fantino non ci pensa nessuno |
 | **Vesca** (Bruco) | il ritiro, ancora | il contratto di ieri, immutato | nessuna. E questo è il problema |
 
-**Meccanica**: `REGOLE-DELLA-CORSA-PF1E.md` §4. Ogni patto stretto **si scrive su un
+**Meccanica**: cap. V §4. Ogni patto stretto **si scrive su un
 foglietto** e resta al centro del tavolo fino alla fine del modulo.
 
 **Le altre quattro contrade** trattano fra loro anche se i PG non fanno niente. Al
@@ -3329,7 +3329,7 @@ primi.
 ## §3 · Il duello dei canti
 
 Pomeriggio, nelle osterie, e poi la sera in piazza. **Meccanica**:
-`REGOLE-DELLA-CORSA-PF1E.md` §3.
+cap. V §3.
 
 **Tre duelli disponibili**, uno per osteria. Berenice può farli tutti e tre; se ne
 fa tre e ne perde due, il Morale scende più di quanto sarebbe sceso restando a casa.
@@ -3432,7 +3432,7 @@ nessuno. L'unica variabile è se l'Istrice lo sanno prima.
 guardia. Mappa: `ALLEGATI/mappe/` → *le stalle dell'Istrice*, 21 × 15 quadretti, 1,5 m
 per quadretto.
 
-**Chi arriva**: **Sfregio** (`STATBLOCCHI-PF1E.md` §3) con **quattro bravacci del
+**Chi arriva**: **Sfregio** (cap. XII §3) con **quattro bravacci del
 canale**. Sfregio è un adepto di Norgorber che fa il lavoro sporco per chi paga; non
 lavora per Vesca, lavora per il *mediatore* di Vesca, e questa differenza domani
 permetterà a Vesca di dire il vero giurando di non saperne niente.
@@ -3585,7 +3585,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 # Giorno 3 — Lo Stacco e la Corsa
 
 **Sessione 3 di 3 · 3–4 ore · i PG sono di 4° livello**
-Serve: questo file, `REGOLE-DELLA-CORSA-PF1E.md` **tutto**, la mappa della Ruota, i
+Serve: questo file, cap. V **tutto**, la mappa della Ruota, i
 foglietti dei patti del Giorno 2, i due contatori.
 
 | § | Cosa |
@@ -3651,7 +3651,7 @@ basta, e il rione risponde. **Morale +1**, senza tiri. Alcune cose si danno.
 
 Nella tintoria del Bruco, terzo tino, legato ma non malmenato: la
 consegna era «tenetelo fino a mezzogiorno». I due che lo guardano sono **bravacci del
-canale** (§`STATBLOCCHI-PF1E.md` §4.2) e uno dei due è **Pico**, il ragazzo della
+canale** (§cap. XII §4.2) e uno dei due è **Pico**, il ragazzo della
 rissa alla fontana — se i PG lo hanno curato al Giorno 1, apre la porta lui e chiede
 scusa senza guardare nessuno in faccia.
 
@@ -3722,7 +3722,7 @@ non sul fantino. Le contro-mosse del giocatore di Vanna valgono uguale.
 
 ## §4 · Lo Stacco
 
-**Meccanica**: `REGOLE-DELLA-CORSA-PF1E.md` §5. Otto contrade, sette fra le funi, una
+**Meccanica**: cap. V §5. Otto contrade, sette fra le funi, una
 di rincorsa.
 
 > **Read-aloud (lead: Salvatore — il corpo prima dell'azione).**
@@ -3753,7 +3753,7 @@ Stacco venga annullato — con i fischi che ne conseguono.
 ## §5 · La Corsa — la regia dei tre giri
 
 Nove tratti: **Dritto**, **Curva Nord**, **Curva Sud**, per tre volte.
-Le CD e i modificatori stanno in `REGOLE-DELLA-CORSA-PF1E.md` §6.
+Le CD e i modificatori stanno in cap. V §6.
 
 **L'ordine di ogni tratto, sempre lo stesso, e non cambiarlo:**
 
@@ -4141,7 +4141,7 @@ zoccoli −2 (1d6+1), For 16, Des 14, Cos 17, Int 2, Sag 13, Car 6, CMD 18.
 
 Sopra al profilo si applica il **Ritmo** — *voce originale di questo modulo*, non una
 regola del Core: è il modificatore che il cavallo dà alle prove di Cavalcare in Corsa
-(`REGOLE-DELLA-CORSA-PF1E.md` §6).
+(cap. V §6).
 
 | Nome | Categoria | **Ritmo** | Cosa sa il DM e i giocatori no |
 |---|---|---|---|

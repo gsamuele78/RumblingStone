@@ -64,6 +64,13 @@ riordinato:
   repo si legge, in stampa no
   ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md);
   la tecnica completa è in `rumblingstone-editoria` §2-bis).
+- **L'intestazione di lavorazione non va in stampa.** «MASTER DEFINITIVO»,
+  «Sostituisce e fonde», i file-fonte, «MAI 5e / CD non DC» stanno in un solo
+  blocco `<!-- apparato -->` in testa al file; sotto, lo stato al tavolo
+  scritto come fatto («Quando si gioca», «Com'è il mondo a quel punto»). Un
+  altro master si cita `DEF-N §x`, e l'esportatore lo traduce nel capitolo del
+  volume o nel titolo del master; mai «master #N», mai il nome di un file
+  ([ADR-0070](../../plans/adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md)).
 
 **Esemplare**: `10-stand-alone/L'abbazia Della Rotta Sicura/` — corpo (i quattro
 atti) + Appendice A (fazione corsara, borgo, livello 0), Appendice B

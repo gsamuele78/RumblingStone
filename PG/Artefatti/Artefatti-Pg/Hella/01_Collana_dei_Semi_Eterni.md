@@ -6,11 +6,13 @@
 > **Stato attuale**: ⏳ **forgiatura imminente** — la Collana nasce DURANTE
 > il rituale di resurrezione P3B (prossima sessione), dai tre semi e dai
 > sacrifici del party. Questa scheda è pronta per quel momento.
+> <!-- apparato -->
 > **Fonti**: `07_.../PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`
 > (creazione e poteri base), `...HELLA-IL-VIAGGIO...-v2.md` §8-§10 (Durik
 > e integrazione), `...IL-VIAGGIO...-risultati.md` (esiti giocati del
 > viaggio dello spirito), `campaign/state.md` §6.
 > **Formato**: gemello di `../Tordek/01_Bracieri_Gemelli_di_Moradin.md`.
+> <!-- /apparato -->
 
 ---
 
@@ -68,7 +70,7 @@ campagna — spesa la carica, torna disponibile all'alba.
 #### 4. Evocazione dei Guardiani (3/giorno – Sop, un seme per evocazione)
 Azione standard.
 
-- **Seme I e Seme II** → un **Treant di Adamantio** (statblocco in `ARC07-DEF-3`,
+- **Seme I e Seme II** → un **Treant di Adamantio** (statblocco in `DEF-3`,
   Appendice A.2), per **1 ora**. Al massimo **due**, uno per seme.
 - **Seme III** → **Durik**, ma solo **se è stato distrutto**: Durik è sempre
   presente (decisione S3 della serata), e il seme lo richiama subito, per un'ora.
@@ -86,13 +88,13 @@ l'Avatar della Radice e come Durik.
 Il legame fra Hella e Durik nel **Sogno della Terra** è sulla scheda di Durik:
 *Empatia della pietra* (sente il suo umore a qualunque distanza e le manda il
 proprio, finché uno dei due ha pietra sotto i piedi) e *Legame* (ordini col
-pensiero entro 18 m). Vedi `02_Durik_Guardiano_di_Pietra.html`.
+pensiero entro 18 m).<!-- apparato --> Vedi `02_Durik_Guardiano_di_Pietra.html`.<!-- /apparato -->
 
 #### 6. I Doni dei Semi (3 slot) `[CANONE — DM 2026-09-12]`
 I tre semi custodiscono i **sacrifici che i compagni offrirono al
 rituale**, e da oggi si sa **quali**: al rito ogni PG dona **un potere del
 proprio artefatto**, che lascia quell'artefatto **per sempre** e
-**germoglia qui** (`ARC07-DEF-3` §5 — il trapianto).
+**germoglia qui**: è il trapianto, al §5 del rito di resurrezione.
 
 | Seme | Chi ha donato, e cosa | 🌱 Cosa germoglia |
 |---|---|---|
@@ -138,7 +140,7 @@ direzioni, e si scrivono quando si prepara ARC-09, con la conferma del DM.
 #### Lore (da rivelare gradualmente)
 
 La Collana non fu forgiata: **germogliò**. I tre semi di treant erano
-posati sul corpo di Hella, sulle mani e sulla fronte (`ARC07-DEF-3` §4).
+posati sul corpo di Hella, sulle mani e sulla fronte (`DEF-3` §4).
 Il Cuore di Moradin, spendendosi per riportarla, non si limitò a
 riannodare un'anima a un corpo: allo Step 4 i semi germogliarono ed
 entrarono in lei. Poi ogni compagno aprì un seme con un dono del proprio
@@ -183,7 +185,7 @@ con un atto.
 - **Fotosintesi/Empatia vegetale** sono del TIPO Ibrido Treant (P3B), non
   della Collana: se si scrive la scheda differenziale di Hella, tenerli
   separati (fonte: v2 §7 "Bonus Fisso").
-- **Regola di coerenza** (state.md §6): il Cuore di Moradin è SPESO.
+- **Regola di coerenza**: il Cuore di Moradin è SPESO.
   Nessun potere della Collana può "riattivarlo" — se un engine lo
   propone, è una violazione da segnalare.
 

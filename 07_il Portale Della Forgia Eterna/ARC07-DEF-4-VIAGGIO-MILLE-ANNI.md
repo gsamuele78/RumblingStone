@@ -1,6 +1,7 @@
 # ARC-07 · DEFINITIVO #4 — IL VIAGGIO A 1.000 ANNI FA
 ## Il Portale della Forgia Eterna — Hammerfist ≈372 DR, il duello con Skullcrusher, il Rubino
 
+<!-- apparato -->
 > ⭐ **MASTER DEFINITIVO — fast-play cinematografico (D1: una sessione).** Non
 > un dungeon completo: una **sessione-leggenda** a montaggio, con **un solo
 > scontro tattico** (il duello con Skullcrusher) reso a qualità AP. Benchmark di
@@ -15,12 +16,16 @@
 >
 > **Sistema: D&D 3.5 SRD** (max PF1e), MAI 5e. Italiano, **CD** non DC. Il
 > viaggio è a **1.000 anni prima ≈372 DR** (D7). Scala mappe **1,5 m/quadretto**.
+<!-- /apparato -->
+
+> **Una sessione-leggenda a montaggio**, con **un solo scontro tattico** (il
+> duello con Skullcrusher). Il viaggio è a **1.000 anni prima, ≈372 DR**.
 >
-> **Stato al tavolo**: si gioca **dopo** la resurrezione di Hella (master #3):
+> **Quando si gioca**: **dopo** la resurrezione di Hella (`DEF-3`):
 > il party è di **4 PG** (Hella tornata), **APL 13 pieno**. Alla vittoria il
-> **Rubino** si accende e riporta i PG al 1372 → **master #5** (raccordo al
+> **Rubino** si accende e riporta i PG al 1372 → **`DEF-5`** (raccordo al
 > Cuore della Montagna). **Canone**: la Corona ha Topazio + Smeraldo (aprono il
-> portale del Tempo); il **Rubino si accende SOLO alla vittoria antica** (D5/D16).
+> portale del Tempo); il **Rubino si accende SOLO alla vittoria antica**.
 >
 > <!-- storico -->
 > 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo segue l'ordine
@@ -97,7 +102,7 @@ partire (`DEF-3` §8-ter).
 
 **Come si chiude.** Vinta la battaglia antica, il **Rubino** si accende («Cuore
 della Leggenda»): la profezia è compiuta — era sempre stata vostra. La luce vi
-strappa al passato. → **master #5: il ritorno a Hammerfist** (riemersione al
+strappa al passato. → **`DEF-5`: il ritorno a Hammerfist** (riemersione al
 Cuore della Montagna, Giorno 3 dell'assedio del 1372).
 
 ---
@@ -144,7 +149,7 @@ Cuore della Montagna, Giorno 3 dell'assedio del 1372).
 
 ### La regola, dalla skill dello stile: **assorbi, poi rilancia**
 
-`references/style-pillars.md` §Mercer la chiama *«yes-and with teeth»*:
+Al tavolo la chiamano *«yes-and with teeth»*:
 **l'invenzione del giocatore entra nel canone *e* genera una complicazione.**
 Non «sì»; non «no». **Sì, e adesso c'è un problema nuovo.**
 
@@ -173,7 +178,7 @@ il mondo reagisca, **funziona**. Se è generica («cerco un modo»), chiedi
 
 ### 🎁 Il finisher va al giocatore — `[HDYWTDT]`
 
-`style-pillars.md` §Mercer lo chiede per iscritto: al colpo che uccide un boss,
+È una regola della campagna: al colpo che uccide un boss,
 **la narrazione passa a chi l'ha tirato**. In questo master ci sono **due**
 punti, e li trovi marcati nel testo:
 
@@ -360,9 +365,9 @@ fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
 contare dopo il consiglio. Il drago è Skullcrusher e **non attacca**: aspetta
 l'alba, e i nani lo sanno. Dentro le mura le forge battono giorno e notte, e il
-rumore arriva fin qui. *(Ambiente recuperato da
+rumore arriva fin qui.<!-- apparato --> *(Ambiente recuperato da
 `_ARCHIVIO/PortaleForgia-P5-DEFINITIVO-PARTE1.md`, allineato al canone: mura
-bianche, nessun cavaliere sul drago.)*
+bianche, nessun cavaliere sul drago.)*<!-- /apparato -->
 
 - ► **Esito**: chi ha fallito il TS arriva alla pattuglia ancora confuso, e Durin
   lo nota.
@@ -526,11 +531,16 @@ vedere da vicino la Corona che suo nonno perse contro Skullcrusher cinquant'anni
 fa. La riconosce, e si inginocchia; con lui si inginocchiano le quindici guardie
 della sala. Poi, ancora in ginocchio, recita la profezia.
 
+<!-- storico -->
 ⚠️ **Thorik non si toglie la Corona.** La prima stesura, in
 `_ARCHIVIO/PortaleForgia-P5-DEFINITIVO-PARTE1.md`, gliela faceva togliere
 davanti al re; ma in `DEF-3` §5 Thorik se la toglie per la seconda volta in vita
 sua, sul petto di Hella, e il master lo dice. Il re scende i gradini e la guarda
 dov'è: due pietre accese e un incasso vuoto.
+<!-- /storico -->
+⚠️ **Thorik non si toglie la Corona.** Se l'è già tolta una volta, sul petto di
+Hella (`DEF-3` §5). Il re scende i gradini e la guarda dov'è: due pietre accese
+e un incasso vuoto.
 
 **RE THOREK I (lento, passato remoto, come chi cita a memoria):** *«Quattro
 eroi dal fuoco e dalla pietra… nella notte più oscura salveranno gli antenati
@@ -700,7 +710,7 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   Murato**: i "componenti" sono in realtà per una **Lichificazione**, inflittagli
   dalla fazione del **Collezionista** che viaggia tra i piani e le epoche. I PG
   seminano (senza saperlo) il dilemma etico di Hella su Zeth in ARC-09. Registra
-  nell'Echo Ledger (§7) e in `state.md §7`.
+  nell'Echo Ledger (§7) e nel registro di fine serata.
 - **Riposo — scelta**: **breve** (2 tacche: metà slot e pf) o **lungo** (5
   tacche: recupero pieno, e poi il campo si attraversa di corsa). Il momentum
   spinge al breve. ⚠️ La guarigione del passaggio (Scena 1) li ha già rimessi in
@@ -812,8 +822,7 @@ Appendice A)*
 > Artemis non ha mai niente da individuare, Thorik non incontra mai
 > incantatori (`DM-CAMPAIGN-PLAYBOOK` §1-bis). Balvar è la risposta — ma non è
 > un boss in più appiccicato al modulo: è **il motivo per cui l'orda ha un
-> drago**. Toglilo e il duello della Scena 11 cambia. Statblock:
-> `Bestiario/villain/balvar-fuocospento-cr13.md`.
+> drago**. Toglilo e il duello della Scena 11 cambia. Statblocco: Appendice A.4.
 
 #### Chi è
 
@@ -1063,7 +1072,7 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
 
 ![Vatore, il ladro che diventerà Sal](Immagini/ritratti/vatore.jpg)
 
-> **La scena "molto bella" (canone `Bestiario/villain/Salvatore/Salvatore.md`).**
+> **La scena "molto bella".**
 > **Quando**: al ritorno dalla tenda, fra le tende del campo. Se il tavolo ha
 > fretta si sposta nel caos delle mura (Scena 10), e il box funziona uguale. I
 > PG **incrociano un ladro** che non c'entra con l'orda — un
@@ -1111,9 +1120,9 @@ con un **terrore reverenziale mal mascherato**.
 > sempre: Vatore DEVE sopravvivere per diventare Sal — il Cronolito lo garantisce.
 > I PG possono segnarlo, derubarlo, terrorizzarlo, non cancellarlo.)*
 
-> **Registrazione**: annota l'esito in `state.md §7` (thread «[VATORE/SAL]») e
-> nell'Echo Ledger (§7). Cross-link: `Bestiario/villain/Salvatore/Salvatore.md`
-> §Sincronizzazione.
+> **Registrazione**: annota l'esito nel registro di fine serata (il filo
+> «[VATORE/SAL]») e nell'Echo Ledger (§7).<!-- apparato --> Cross-link: `Bestiario/villain/Salvatore/Salvatore.md`
+> §Sincronizzazione.<!-- /apparato -->
 
 L'artefatto che stringe al petto è in **Appendice B**.
 
@@ -1372,12 +1381,11 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 | **Hella appena risorta** — vuoi proteggerla | Il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità) — dà alla giocatrice spazio per il suo primo scontro |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
-### SCENA 12 — Il Rituale della Forgia Eterna `[CANONE — state.md §5; D-B/D-A, DM 2026-09-19]`
+### SCENA 12 — Il Rituale della Forgia Eterna
 
-> **Cos'è, e perché esisteva solo in `state.md`.** Questo viaggio **è** il
+> **Cos'è.** Questo viaggio **è** il
 > **Rituale Legacy 4**, che la matrice degli artefatti chiama *«Siege of the
-> Eternal Forge»*. `state.md` §5 dice che **Corona +3, Senzienza e Rubino si
-> sbloccano qui**. Fino a oggi il master consegnava il duello e basta: il DM
+> Eternal Forge»*: **Corona +3, Senzienza e Rubino si sbloccano qui**. Fino a oggi il master consegnava il duello e basta: il DM
 > tornava dal tavolo a segnare un avanzamento che nel modulo non era successo.
 >
 > ⏱️ **Quando** *(decisione DM)*: **dopo il combattimento**, sull'esito
@@ -1433,8 +1441,8 @@ sé**, come una serratura che riconosce la chiave. La Corona passa a **+3**.
 > perché le servivano, e lo dirà con la stessa calma con cui dice tutto il resto.
 
 **Momento 3 — Aegis Fang si sveglia**<!-- storico --> *(decisione DM: è una scena, non una riga
-di scheda)*<!-- /storico -->. È una scena, non una riga di scheda. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
-1 full awakening»*. L'Assedio è questo, ed è appena stato vinto.
+di scheda)*<!-- /storico -->. È una scena, non una riga di scheda: l'ascia resta com'è finché l'Assedio non
+è vinto, e poi si risveglia del tutto. L'Assedio è questo, ed è appena stato vinto.
 
 > **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
 > nella mano di Thorik, e non è il calore della forgia. È la prima volta in tre
@@ -1457,7 +1465,7 @@ di scheda)*<!-- /storico -->. È una scena, non una riga di scheda. `state.md` �
 
 #### ⚠️ Due cose per il DM, e una da decidere
 
-- **Il Rubino è a uso singolo e si spende nel ritorno** (D16, `DEF-5` §3). Non
+- **Il Rubino è a uso singolo e si spende nel ritorno** (`DEF-5` §3). Non
   è un potere nuovo in tasca: è il motore del viaggio di casa.
 - **Non ci sono altri costi qui** — né TS, né pegni, né punti caratteristica.
 
@@ -1513,12 +1521,12 @@ che la Corona sa fare da quando è intera.
 > vi strappa via, verso casa, verso una fortezza che brucia mille anni più in là.*
 
 ⚠️ *Il box di prima chiamava il Rubino «la terza gemma, muta da sempre»; ma
-l'incasso è vuoto per tutto l'arco (`state.md` §5, e Balvar lo dice: «Tu ne hai
+l'incasso è vuoto per tutto l'arco (e Balvar lo dice: «Tu ne hai
 due»), e la pietra entra solo al Rituale della Scena 12.*
-- **Attivazione gemme (D5/D16)**: portale aperto da Topazio+Smeraldo; il **Rubino
+- **Attivazione gemme**: portale aperto da Topazio+Smeraldo; il **Rubino
   si accende SOLO ORA** e diventa il motore del ritorno al 1372.
-- **Raccordo (D16)**: → riemersione al **Cuore della Montagna**, Giorno 3
-  dell'assedio del 1372. La **cucitura** è il **master #5**.
+- **Raccordo**: → riemersione al **Cuore della Montagna**, Giorno 3
+  dell'assedio del 1372. La **cucitura** è il **`DEF-5`**.
 - ► **Esito**: il **tono del Rubino** dipende da come è finito il duello (§7).
   Corona ora a **3 gemme accese**.
 
@@ -1540,18 +1548,18 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 
 | Evento (qui) | Eco | Quando riemerge | Dove si gestisce |
 |---|---|---|---|
-| **Esito del duello con Skullcrusher** (Scena 11) | UCCISO/FERITO/FUGGITO → effetto quantificato su Fauci di Palude | ARC-08 (boss di Hammerfist) | **`PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`** + statblock Fauci ARC-08 |
+| **Esito del duello con Skullcrusher** (Scena 11) | UCCISO/FERITO/FUGGITO → effetto quantificato su Fauci di Palude | ARC-08 (boss di Hammerfist) | **«La Forgia ricorda le ferite»** + statblock Fauci ARC-08 |
 | **Ferite ancestrali segnate** (N≤3) | +N TxC **o** +Nd6 ai portatori vs Fauci; Aegis Fang in volo → cicatrice d'ala (−2 Volare Fauci) | ARC-08 | B4 §3 |
 | **Aegis Fang «sente» Fauci** (gancio inverso) | +2 circostanza a Thorik vs Fauci + preavviso del soffio | ARC-08 | B4 §4 |
-| **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | **state.md §7** + `Bestiario/villain/Salvatore/` |
-| **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (mano del Collezionista attraverso il tempo) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | **state.md §7** + `Bestiario/villain/Ghostlord/` |
+| **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | registro di fine serata + scheda di Sal |
+| **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (mano del Collezionista attraverso il tempo) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | registro di fine serata + scheda del Ghostlord |
 | **Scelte-costo vs Zog'tar** (Scena 8) | Thorik affaticato / Cintura di Tordek «assaggiata» o disciplinata / tono del Rubino | ARC-08 (vs Fauci) | Scena 8 + B4 |
-| **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 | ARC-08 ingresso | `ARC07-CONSEGUENZE-ECHI.md` §2 |
-| **La Senzienza arriva calda o fredda** (Scena 12) | il ramo lo ha deciso `DEF-3` §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | `state.md` §5 · `ARC07-CONSEGUENZE-ECHI.md` |
-| **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | `Bestiario/` scheda Aegis Fang + `state.md` §5 |
-| **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | `ARC07-CONSEGUENZE-ECHI.md` |
+| **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 | ARC-08 ingresso | registro delle conseguenze dell'arco |
+| **La Senzienza arriva calda o fredda** (Scena 12) | il ramo lo ha deciso `DEF-3` §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
+| **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
+| **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
-| **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | `state.md §7 [SIGILLO DI OSSIDIANA]` + `Bestiario/villain/Salvatore/` |
+| **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
 ---
 
@@ -1569,7 +1577,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **TOTALE beat** | | **~7.600/PG** |
 
 > Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
-> party **matura il 14° verso Hammerfist** (D8). Le parti giocate non si ritoccano.
+> party **matura il 14° verso Hammerfist**. Le parti giocate non si ritoccano.
 
 ### B. Tesoro PREGENERATO (i doni di Re Thorek I + il bottino del passato)
 | Dove | Oggetto (pregenerato) | Valore |
@@ -1586,14 +1594,14 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 
 ---
 
-## §9 — PONTE al master #5 + HANDOUT & ASSET
+## §9 — PONTE verso il ritorno a Hammerfist + HANDOUT & ASSET
 
 **Ponte.** Il Rubino acceso, la profezia compiuta, la Corona a **tre gemme**: la
 luce strappa i quattro al passato. Ma non tornano nella Sala della Forgia da cui
 erano partiti — il Rubino, «Cuore della Leggenda», li deposita **dove serve**:
 al **Cuore della Montagna**, sotto Hammerfist, il **Giorno 3 dell'assedio del
-1372**, mentre la fortezza brucia sopra di loro. → **master #5: il Ritorno a
-Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
+1372**, mentre la fortezza brucia sopra di loro. → **il Ritorno a
+Hammerfist** (`DEF-5`, il raccordo all'ARC-08).
 
 ### Handout giocatore
 1. **Le Cronache dei Quattro Eroi** — la pagina di profezia, consegnata alla
@@ -1603,7 +1611,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 2. **La tabella di carry-over B4** (per il DM): esito del duello → effetto su
    Fauci nel 1372.
 3. **Statblock di Skullcrusher** (Appendice A.1) per il duello.
-4. **Il piano di battaglia di Re Thorek I** — `homebrew/volume-mille-anni/03-HANDOUT-PIANO-DI-BATTAGLIA.md`,
+4. **Il piano di battaglia di Re Thorek I**, nel volume dei giocatori,
    da mettere sul tavolo di guerra (Scena 4).
 
 ### Immagini (atlante C1 — momenti d'uso)
@@ -1643,6 +1651,7 @@ cambiato.
 | 9 | Vatore *«ha appena visto quattro individui respingere un'orda»*, durante l'infiltrazione | di notte l'orda non è ancora stata respinta: li ha visti uscire dalla tenda del generale | Scena 9 |
 | 10 | il Rubino era *«la terza gemma, muta da sempre»* | l'incasso è vuoto fino al Rituale | Scena 13 |
 
+<!-- apparato -->
 ### FILE-FONTE ASSORBITI DA QUESTO MASTER (→ `_ARCHIVIO/` a consolidamento chiuso)
 `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` (master da tavolo B3) · `PortaleForgia-P5-DEFINITIVO-PARTE1/2.md`
 (prosa estesa) · `_ARCHIVIO/PortaleForgia-P5-RICALIBRATO.md` (deprecato) · sezione «battaglia
@@ -1650,6 +1659,7 @@ antica» di `_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (deprecata).
 `PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` resta **vivo** (tabella
 DM-approved citata da qui e dall'ARC-08). `Bestiario/villain/Salvatore/Salvatore.md`
 resta vivo (Vatore/Sal).
+<!-- /apparato -->
 <!-- /storico -->
 
 ---
@@ -1724,7 +1734,7 @@ delle 100 Asce (ARC-08) può portarne il nome — eco commovente.*
 
 ### A.4 · Balvar Fuocospento (Scena 7)
 
-Lo statblocco completo è nel Bestiario, `Bestiario/villain/balvar-fuocospento-cr13.md`,
+Lo statblocco completo è nel Bestiario<!-- apparato --> (`Bestiario/villain/balvar-fuocospento-cr13.md`)<!-- /apparato -->,
 e nel volume del viaggio è il capitolo che segue questo master. Qui non si
 copia: una seconda copia diverge alla prima errata.
 
@@ -1784,9 +1794,9 @@ standard dell'SRD: nessuna ha una scheda sua nel repo.
 
 > **Gancio ARC-09.** Se i PG lo **rubano a Vatore** e lo riportano nel presente
 > (paradosso auto-consistente del Cronolito), Sal si presenta **senza il suo
-> asso** e la **sincronizzazione** con lui si complica (vedi la tabella della Scena 9). Scheda
-> speditiva → `Bestiario/villain/Salvatore/Salvatore.md` §Sigillo; thread
-> `state.md §7 [SIGILLO DI OSSIDIANA]`.
+> asso** e la **sincronizzazione** con lui si complica (vedi la tabella della Scena 9). Il
+> filo è «[SIGILLO DI OSSIDIANA]», nel registro di fine serata.<!-- apparato --> Scheda
+> speditiva → `Bestiario/villain/Salvatore/Salvatore.md` §Sigillo.<!-- /apparato -->
 
 <!-- nuova-pagina -->
 
@@ -1843,7 +1853,7 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
-> Definitivo**: `Mappe/ARC07-MAPPE-DEFINITIVO.md`. Le griglie qui sotto sono
+> Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
 > identiche; là hanno gli add-on DM. Le versioni a pergamena di M7-B e M7-C
 > sono all'inizio di questa appendice.
 
@@ -1914,9 +1924,11 @@ d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) 
 
 #### MAPPA M7-C — LA TENDA DEL COMANDO (Scene 7 e 8)
 
+<!-- apparato -->
 La griglia e i tre blocchi di accompagnamento stanno in
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`, compilati dal contratto JSON
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` (modalità 3 della skill delle
-mappe: la griglia non si scrive a mano). La tenda misura 18 m × 16,5 m.
+mappe: la griglia non si scrive a mano).
+<!-- /apparato --> La tenda misura 18 m × 16,5 m.
 
 <!-- /pagina -->

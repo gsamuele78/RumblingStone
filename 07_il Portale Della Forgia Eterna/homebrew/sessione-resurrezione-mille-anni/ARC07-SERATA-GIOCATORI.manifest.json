@@ -7,6 +7,14 @@
   "header": "Le pagine ✉ della serata. Il DM le consegna una alla volta.",
   "footer": "Il Cuore e la Porta",
   "player_footer": "Il Cuore e la Porta",
+  "colophon": {
+    "edizione": "Volume dei giocatori",
+    "versione": "v1",
+    "data": "2026-09-25",
+    "autori": "Il DM di RumblingStone, con l'agente di scrittura del repo",
+    "basato_su": "D&D 3.5 SRD (OGL 1.0a); adattamento privato di Red Hand of Doom (Wizards of the Coast, 2006)",
+    "licenza": "materiale del tavolo, da consegnare ai giocatori quando lo dice la regia"
+  },
   "front_matter": false,
   "cover_image": "../../Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg",
   "out": "ARC07-SERATA-GIOCATORI.html",

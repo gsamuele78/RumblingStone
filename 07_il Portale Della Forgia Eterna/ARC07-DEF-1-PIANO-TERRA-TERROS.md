@@ -1,6 +1,7 @@
 # ARC-07 · DEFINITIVO #1 — IL PIANO DELLA TERRA & TERROS L'ANTICO
 ## Il Portale della Forgia Eterna — Seconda Gemma (Smeraldo della Forza)
 
+<!-- apparato -->
 > ⭐ **MASTER DEFINITIVO — versione unica, piena e autosufficiente.**
 > **Sostituisce e fonde** in una sola lettura giocabile — **senza tagliare
 > nulla** — i seguenti file (che restano nel repo con banner e, a
@@ -18,10 +19,14 @@
 > speciali 3.5 con ricarica, usati nel suo turno; i contro-momenti dei PG
 > sono **azioni preparate** o **prove contrapposte**. Italiano, **CD** non DC.
 > Faerûn 1372 DR. Scala mappe **1,5 m/quadretto**.
+<!-- /apparato -->
+
+> **Il Piano della Terra e Terros l'Antico**: la seconda gemma, lo Smeraldo
+> della Forza.
 >
 > **Stato al tavolo**: 🟡 **IN CORSO** (è la parte che state giocando).
-> **Ordine di gioco (D2)**: Terra (questo) → Resurrezione di Hella (#3) →
-> Viaggio a 1.000 anni fa (#4) → Ritorno a Hammerfist (#5).
+> **Ordine di gioco**: Terra (questo) → Resurrezione di Hella (`DEF-3`) →
+> Viaggio a 1.000 anni fa (`DEF-4`) → Ritorno a Hammerfist (`DEF-5`).
 > **Canone a monte**: il viaggio dello spirito di Hella è **concluso e
 > superato** (`...IL-VIAGGIO-NELL'INCUDINE-DEL-MONDO-risultati.md`); i PG
 > **non lo sanno**, vedono solo Durik prendere forma (§9).
@@ -49,7 +54,7 @@
 | §10 | **La Forgia Ricorda** | pannelli-conseguenza negli affreschi (Sala + Stanza della Corona) |
 | §11 | **Echo Ledger** | conseguenze a lungo termine del beat |
 | §11-bis | **Avanzamento** | PX, tesoro ordinario, valore artefatti |
-| §12 | **Ritorno alla Sala** | ponte al master #2 |
+| §12 | **Ritorno alla Sala** | ponte al `DEF-2` |
 | §13 | **Handout & Asset** | stampabili, immagini per momento, musica |
 | MAPPE | **T-1…T-6** | ASCII ultra-clear 1,5 m/quadretto |
 
@@ -75,19 +80,18 @@ sarà una passeggiata: la fisica stessa del piano è un nemico.
 | ~~Therysol~~ | — | — | ❌ **NON scende** (veglia il corpo) |
 
 APL effettivo **12** (3 PG, **niente guaritore**). Gli scontri sono **duri di
-proposito** (D8): gli artefatti unici compensano l'assenza di Hella.
+proposito**: gli artefatti unici compensano l'assenza di Hella.
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (una pagina, tutto lo
 scontro); gli **handout del §13**; le 6 mappe (§MAPPE); gli statblock di
 **Terros** (§8), della **Sentinella di Mithral** (§7b), degli **Xorn** (§5);
-la scheda Bracieri completa
-(`PG/Artefatti/Artefatti-Pg/Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.md`);
+la scheda Bracieri completa di Tordek;
 il PDF **Benedizioni di Moradin**.
 
 **Come finisce.** Smeraldo forgiato nella Corona con la **volontà e i poteri
 combinati di tutti e tre** (§9) → gli affreschi della Sala **e** della Stanza
 della Corona incidono un nuovo pannello (§10, "La Forgia Ricorda") → si apre
-la strada alla resurrezione di Hella (#3). Countdown Hammerfist a fine parte:
+la strada alla resurrezione di Hella (`DEF-3`). Countdown Hammerfist a fine parte:
 **~3g 20h** — o **~3g 08h** se hanno dormito prima di Terros. Le due tariffe
 del riposo (ordinario **−12 h**, Sala della Forgia **−4 h**) e il registro
 completo stanno in `ARC07-DEF-2` §0-bis.
@@ -202,7 +206,7 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
   informazione tattica.
 
 ### 🔮 ARTEMIS — il predone avido (NIENTE tentazioni divine)
-> **Correzione canone (DM).** Le tentazioni di Lathander/Mask **NON sono mai
+> Le tentazioni di Lathander/Mask **non sono mai
 > state giocate**: Artemis **non sa nemmeno che esistono**. Sono materiale
 > aggiunto a valle. **In questo master non compaiono** (né qui, né come
 > «Occhio di Lathander» nello scontro con Terros). Il beat di Artemis nasce
@@ -283,7 +287,7 @@ il countdown è sceso.
 > Prima di attraversare, la Sala **si prepara da sola**. (Gli altri affreschi
 > sono già cambiati dopo il Fuoco — A4 chiuso, A7-Hammerfist peggiorato, A8 che
 > registra le vostre gesta: quella è la **Cronaca Vivente**, dettaglio nel
-> master #2. Qui conta l'apertura della Terra.)
+> `DEF-2`. Qui conta l'apertura della Terra.)
 
 > **Read-aloud (Salvatore + LotR).** *Un rombo basso, profondo. Non viene dai
 > muri: viene dalle OSSA. Le colonne tremano — non di paura, di risonanza.
@@ -662,7 +666,7 @@ centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 | Conoscenze (Natura/Dungeoneering) | 18 | Dimostrare di capire l'ecosistema → +1 |
 | Intrattenere (Canto) | 22 | Cantare in armonia coi cristalli → **+2** (fallito: **−1** ai successi) |
 | Utilizzare Oggetti Magici (Corona/Anello) | 15 | Riconoscono Moradin → +1 |
-| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, 3d8+10) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
+| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
 
 > **La prova del cristallo crepato è il cuore emotivo della scena** (il tuo
 > "riforgiare il cristallo"): non tagliarla. Cristalli curabili in **E02** e
@@ -974,8 +978,7 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 
 **Bracieri Gemelli — COMPLETI (Fuoco + Terra):** RD 5/adamantio; **Pugno
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
-attivi. *(Scheda piena:
-`PG/Artefatti/Artefatti-Pg/Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.md`.)*
+attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
 **XP Sentinella**: ~2.400 (CR ~11) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`. **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
 
@@ -1295,7 +1298,7 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
   superficie (contro-momento "Radice a Terra"), assorbendo gli schianti dietro
   Aegis Fang + Corona.
 
-### Analisi DPR (guida di bilanciamento DM — ripristinata da _ARCHIVIO/Terros.md)
+### Analisi DPR (guida di bilanciamento DM)
 
 | PG | Danno medio/round vs CA 26 | Nota |
 |---|---|---|
@@ -1609,7 +1612,7 @@ arriva a risorse piene. Mostra l'affresco, non minacciare l'orologio.
 > Sconfitto Terros, si sbriciola e dal torace, tenuto a galla dal magnetismo
 > sul centro dell'Altare, emerge un nucleo di luce verde così denso da
 > **piegare la gravità**: lo **Smeraldo della Forza**. Il rituale segue le
-> regole della Corona (`00_corona_di_adamantio...md`, Rituale 3). È uno **skill
+> regole della Corona (Rituale 3). È uno **skill
 > challenge ad alta tensione** in **tre fasi**: prendere la Forza — e presto
 > riportare un morto — **ha un prezzo, e ogni compagno deve volerlo e donare
 > qualcosa.**
@@ -1636,7 +1639,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 
 > **Regia (asimmetria).** Thorik **non sa** che la presenza verde è Hella; per
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non
-> torna Hella (#3).**
+> torna Hella (`DEF-3`).**
 
 > ### ✅ CANONE GIOCATO (DM 2026-07-31, rettifica) — scelta B: il PESO NEL CORPO, e lo prende THORIK
 >
@@ -1675,11 +1678,10 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Thorik**:
 >   è Hella, e lui **non lo sa** — l'asimmetria originale del modulo, intatta.
 >   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3. È l'eco
->   **E-07f** in `state.md` §7.E, ed è la più forte che esca da questa scena.
+>   **E-07f** nel registro degli echi, ed è la più forte che esca da questa scena.
 > - **Che cosa cambia davvero per Thorik.** La DES era già la sua statistica
 >   povera — **10 di base**, e la Corona gliene aveva già tolti 2 quando se
->   l'è messa in testa (`PortaleForgia-P1-REVISED-Corretta.md`, «Limitazioni»:
->   *DES 10 → 8*). Questi altri due lo portano a **6**: **un punto solo** di CA,
+>   l'è messa in testa (le «Limitazioni» della Corona: *DES 10 → 8*). Questi altri due lo portano a **6**: **un punto solo** di CA,
 >   Riflessi e iniziativa in più. Il tavolo non lo vedrà. Il +2 COS invece lo
 >   rende *migliore* nell'unica cosa per cui lo misurano. **Ha pagato dove non
 >   si vede e lo elogeranno per la metà che si vede** — è l'eco **E-07c**.
@@ -1894,13 +1896,13 @@ gravitazionale accanto all'Altare.
 > vedranno chiaramente al #3.)*
 
 > **CORREZIONE DI CANONE (importante).** I file-fonte lo chiamavano «Cane da
-> Guerra **COSTRUTTO/animato**». **Errato** — e `state.md §1` lo segna come
-> confusione. È **DURIK RIFORGIATO, il Guardiano di Pietra**: il **compagno
+> Guerra **COSTRUTTO/animato**». **Errato**, e lo stato della campagna lo segna
+> come confusione. È **DURIK RIFORGIATO, il Guardiano di Pietra**: il **compagno
 > animale vivente** di Hella, riforgiato (12 DV, mithral intrecciato a pietra
 > scura, occhi di topazio, aspetto «Protegge Hella»), non un golem generico.
 > Qui, nel Piano della Terra, **prende forma** grazie allo spirito di Hella e
 > all'Impronta caduta nel Sogno della Terra (Prova II del suo viaggio);
-> diventa **suo compagno a pieno titolo** solo alla resurrezione (#3), evocato
+> diventa **suo compagno a pieno titolo** solo alla resurrezione (`DEF-3`), evocato
 > dal **terzo seme della Collana**. Non parla: i suoi versi sono suoni di
 > pietra — click, faglie lontane. *(Fonti: `...IL-VIAGGIO...-risultati.md`
 > §0/§5; `01_Collana_dei_Semi_Eterni.md`.)*
@@ -1912,21 +1914,21 @@ gravitazionale accanto all'Altare.
   di terreno corrotto o *Terremoto* controllato; ogni uso richiede preghiera e
   offerta (1.000 mo per Moradin).
 - **Chiave del Tempo**: assieme al Topazio, lo Smeraldo **stabilizza la matrice
-  temporale** → rende sicuro il Viaggio a 1.000 anni fa (#4).
+  temporale** → rende sicuro il Viaggio a 1.000 anni fa (`DEF-4`).
 
 **Aspetto Corona**: gemma oro-arancio (fronte, Tempo) + gemma verde profondo
 (tempia sinistra, Solidità). Manca solo il **Rubino** (si accenderà alla
-vittoria del -1000, #4).
+vittoria del -1000, `DEF-4`).
 
 ---
 
 ## §10 — «LA FORGIA RICORDA»: CONSEGUENZE NEGLI AFFRESCHI (Cronaca Vivente)
 
-> **Sistema definitivo** (progettato qui, sviluppato a pieno nel master #2).
+> **Sistema definitivo** (progettato qui, sviluppato a pieno nel `DEF-2`).
 > Gli affreschi della **Sala della Forgia** e le incisioni della **Stanza della
 > Corona** non sono arte statica: sono la **cronaca vivente di Moradin**. Ogni
 > gesta dei Custodi vi **incide un pannello nuovo**. Al ritorno alla Sala
-> (master #2) i PG troveranno i cambiamenti qui elencati — in **entrambe** le
+> (`DEF-2`) i PG troveranno i cambiamenti qui elencati — in **entrambe** le
 > stanze.
 
 | Luogo | Pannello che appare | Dettaglio |
@@ -1942,7 +1944,7 @@ davanti a un pannello **completato**: **1/giorno per pannello**, **+1 morale
 di FOR o un TS Tempra), non cumulabile con sé stesso. In più, un Custode può
 **"leggere" un pannello completato** per rammentare un **fatto vero** già
 vissuto (aiuto-memoria diegetico su gesta/nemici passati, non divinazione sul
-futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
+futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 
 ---
 
@@ -1950,14 +1952,14 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 
 | Evento (qui) | Eco | Quando riemerge | Dove si gestisce |
 |---|---|---|---|
-| **Scelta di Varis** (avidità/giustizia, §6) | Varis socio-che-sa-troppo **o** nemico permanente | ARC-09 (rete Varis/Il Collezionista) | state.md §3/§5 |
+| **Scelta di Varis** (avidità/giustizia, §6) | Varis socio-che-sa-troppo **o** nemico permanente | ARC-09 (rete Varis/Il Collezionista) | fili di Varis e del Collezionista |
 | **Avidità di Artemis** (§5/§9) | Se dà via il bottino al Rituale: rinuncia dolorosa; se lo trattiene: party sceglie il sacrificio personale di Thorik | ARC-08 (WBL) / RP continuo | Echo Ledger |
-| **Seme-Mercato di Varis** (§6-bis) | Preso → **Marchio di Varis** (localizza Artemis, riscuote una volta); Rifiutato → Varis lo rispetta come "sfuggito" | ARC-09 (Varis/Il Collezionista); eco possibile già al #4 con Vatore | §6-bis + state.md §3/§5 |
-| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS **permanenti** | ARC-08 ingresso / sempre | state.md §1/§6 |
-| **Bracieri completi + coscienza** (§7b) | Possono **rifiutare i poteri** se Tordek tradisce gli ideali nanici | ogni scelta morale dura | `01_Bracieri_Gemelli_di_Moradin.md` |
-| **Thorik ha già visto Fauci in forma spirituale** (Corona/Topazio, §1) | Il "sangue Skullcrusher" che riconosce; premonizione di Hammerfist | #4 (Skullcrusher) → ARC-08 | carry-over «La Forgia ricorda le ferite» + `.../Corona.../000_Guida_Dm...md` |
-| **Durik prende forma** (§9) | Il seme III della Collana lo evocherà; carta emotiva a Hammerfist | #3 → ARC-08 | `01_Collana_dei_Semi_Eterni.md` |
-| **Pannelli della Cronaca** (§10) | La quarta figura di Hella si "riempie" → presagio resurrezione | #2 e #3 | master #2 |
+| **Seme-Mercato di Varis** (§6-bis) | Preso → **Marchio di Varis** (localizza Artemis, riscuote una volta); Rifiutato → Varis lo rispetta come "sfuggito" | ARC-09 (Varis/Il Collezionista); eco possibile già al #4 con Vatore | §6-bis + fili di Varis e del Collezionista |
+| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
+| **Bracieri completi + coscienza** (§7b) | Possono **rifiutare i poteri** se Tordek tradisce gli ideali nanici | ogni scelta morale dura | scheda dei Bracieri |
+| **Thorik ha già visto Fauci in forma spirituale** (Corona/Topazio, §1) | Il "sangue Skullcrusher" che riconosce; premonizione di Hammerfist | #4 (Skullcrusher) → ARC-08 | carry-over «La Forgia ricorda le ferite» + guida della Corona |
+| **Durik prende forma** (§9) | Il seme III della Collana lo evocherà; carta emotiva a Hammerfist | #3 → ARC-08 | scheda della Collana |
+| **Pannelli della Cronaca** (§10) | La quarta figura di Hella si "riempie" → presagio resurrezione | #2 e #3 | `DEF-2` |
 
 ---
 
@@ -2019,14 +2021,14 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 
 ### C. Ricchezza speciale / artefatti acquisiti qui (conteggio SEPARATO)
 
-> Metodo `ARC07-TESORO-WBL-AUDIT.md`: gli artefatti sono **ricchezza
+> Metodo dell'audit del tesoro dell'arco: gli artefatti sono **ricchezza
 > campagna-definente**, contati a parte, **non** colmano il WBL ordinario. Ma
 > il loro **valore di mercato** è la misura del *potere* dei PG — ecco perché va
 > registrato per valutare l'avanzamento.
 
 | PG | Artefatto toccato in questo beat | Valore di riferimento | Stato dopo il beat |
 |---|---|---|---|
-| **Thorik** | **Corona di Adamantio** — +**Smeraldo** (2ª gemma) | (artefatto maggiore, non a listino) | 2/3 gemme (Topazio+Smeraldo); manca il Rubino (#4) |
+| **Thorik** | **Corona di Adamantio** — +**Smeraldo** (2ª gemma) | (artefatto maggiore, non a listino) | 2/3 gemme (Topazio+Smeraldo); manca il Rubino (`DEF-4`) |
 | **Tordek** | **Bracieri Gemelli di Moradin** — **completati** (Fuoco+Terra) | (artefatto maggiore) | pieni poteri + coscienza attiva |
 | **Tordek** | Cintura della Devastazione (già posseduta) | ~18.000 mo (MIC) | invariata |
 | **Artemis** | **Ring of Chaotic Illumination** (Reforged) | **163.400 mo** (unico) | invariato; +eventuale **Frammento di Mercato** se prende il Seme (§6-bis) |
@@ -2041,7 +2043,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 
 ---
 
-## §12 — RITORNO ALLA SALA (ponte al master #2)
+## §12 — RITORNO ALLA SALA (ponte al `DEF-2`)
 
 > **Read-aloud.** *Dall'altra parte del portale, la Sala della Forgia: la stessa
 > luce dorata immutabile — ma qualcosa È mutato. L'affresco
@@ -2053,7 +2055,7 @@ Countdown Hammerfist: **~3g 20h**, o **~3g 08h** se hanno dormito prima di
 Terros (registro completo: `ARC07-DEF-2` §0-bis). Il party è esausto: Moradin
 consiglia un riposo lungo — **nella Sala costa solo −4 h**, e loro non sanno
 perché. **Poi**: gli affreschi e la Stanza della
-Corona (master #2), quindi la **resurrezione di Hella** (master #3).
+Corona (`DEF-2`), quindi la **resurrezione di Hella** (`DEF-3`).
 
 **Tesori ordinari della parte**: mithral grezzo + geodi (~5.200 mo) + Geode
 Titanico (5.000) + Cuore di Terros (20.000, spesso sacrificato al Rituale) +
@@ -2092,15 +2094,16 @@ contata a parte (audit WBL).
 - **`Musica/LaCanzoneDellePietre.mp3`** — qui ha UN momento: la **Fase 2 del
   Rituale** (§9), quando Tordek batte i pugni sull'Altare al ritmo del cuore di
   Thorik. Falla partire al primo colpo: il tema pietra/forgia È quel ritmo.
-  (Il suo momento principale resta la resurrezione, master #3.)
+  (Il suo momento principale resta la resurrezione, `DEF-3`.)
 
 ---
 
+<!-- apparato -->
 ### FILE-FONTE ASSORBITI DA QUESTO MASTER (→ `_ARCHIVIO/` a consolidamento chiuso)
 `_ARCHIVIO/PortaleForgia-P4-PianoTerra-COMPLETO-alternative.md` ·
 `_ARCHIVIO/PortaleForgia-P4-PianoTerra-RICALIBRATO.md` · `_ARCHIVIO/Terros.md` ·
 `_ARCHIVIO/PortaleForgia-Interludio-Terra.md` (apertura A5 + iscrizione + eco di Hella —
-assorbiti in §1/§2; le variazioni degli affreschi A4/A7/A8 vanno al master #2) ·
+assorbiti in §1/§2; le variazioni degli affreschi A4/A7/A8 vanno al `DEF-2`) ·
 `Mappe/_ARCHIVIO/TACTICAL-GRIDS-COMPLETE.md` MAP 5 (ambiente dinamico → §4) e MAP 6
 (scenografia della camera → §8; **canone risolto**: il "Golem di Mithral"
 delle immagini/MAP 6 è la **Sentinella** del §7b, il boss è **Terros**) ·
@@ -2108,6 +2111,7 @@ delle immagini/MAP 6 è la **Sentinella** del §7b, il boss è **Terros**) ·
 finale del Fuoco/P3) ·
 `PG/Artefatti/Artefatti-Pg/Tordek/03_Risveglio_Completo_Bracieri_Terra.md`
 *(le schede Bracieri e Collana restano vive in `PG/Artefatti/`).*
+<!-- /apparato -->
 
 ---
 
@@ -2115,7 +2119,7 @@ finale del Fuoco/P3) ·
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
-> Definitivo**: `Mappe/ARC07-MAPPE-DEFINITIVO.md`. Le griglie qui sotto sono
+> Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
 > identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
 
 ### MAPPA T-1 — PIANO DELLA TERRA: orizzonte & percorso (schematica)
