@@ -301,6 +301,12 @@ def _spezzabile(m: "re.Match[str]") -> str:
     return "\u200b".join("\\_" * min(8, n - k) for k in range(0, n, 8))
 
 
+def _testo_semplice(s: str) -> str:
+    """Un titolo markdown come testo piano: niente asterischi, backtick né link."""
+    s = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", s)
+    return re.sub(r"[*_`]", "", s).strip()
+
+
 _STRUTTURA_A_INIZIO = re.compile(r"(=+|[-+/])(\s|$)")
 
 
@@ -318,7 +324,7 @@ _IMG = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 # sta in mezzo su pagine A4 a una colonna (appendici, statistiche, mappe), e
 # `<!-- nuova-pagina -->` va a capo pagina. Ogni altro commento si butta.
 _COMMENTO = re.compile(r"<!--.*?-->", re.S)
-_DIRETTIVA = re.compile(r"<!--\s*(pagina:\s*una-colonna|/pagina|nuova-pagina)\s*-->")
+_DIRETTIVA = re.compile(r"<!--\s*(pagina:\s*una-colonna|/pagina|nuova-pagina|tabella:\s*(?:larga|colonna))\s*-->")
 
 # Una griglia a spaziatura fissa (mappa ASCII, schema, statblocco preformattato)
 # che va a capo non è più una mappa: è una fila di simboli. Nel volume della
@@ -455,6 +461,7 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
     # non entrava in colonna): la pagina si chiude al prossimo titolo di pari
     # livello o superiore, cioè quando finisce la sezione della mappa.
     auto: int | None = None
+    forza_tabella: str | None = None
     i = 0
 
     def _su_a4(cosa: str = "una griglia o una mappa più larga della colonna") -> None:
@@ -486,7 +493,12 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
 
         d = _DIRETTIVA.fullmatch(ln.strip())
         if d:
-            if d.group(1) == "nuova-pagina":
+            if d.group(1).startswith("tabella"):
+                # vale per la prima tabella che segue: `larga` la fa scavalcare
+                # le due colonne, `colonna` la tiene dentro anche se la misura
+                # direbbe il contrario
+                forza_tabella = "true" if d.group(1).endswith("larga") else "false"
+            elif d.group(1) == "nuova-pagina":
                 out.append("#pagebreak(weak: true)")
             elif d.group(1) == "/pagina":
                 if aperte:
@@ -544,7 +556,11 @@ def md_to_typ(md: str, base: Path | None = None, capolettera: bool = False) -> s
             n = len(testa)
             if n >= 4 and len(corpo) > RIGHE_TABELLA_FLOTTANTE and not aperte:
                 _su_a4(f"una tabella da {len(corpo)} righe, troppo alta per scavalcare le colonne,")
-            out.append(f"#tabella({n}, pagina: true," if aperte else f"#tabella({n},")
+            forza = f" larga: {forza_tabella}," if forza_tabella else ""
+            if ultimo_titolo:
+                forza += " sezione: " + json.dumps(_testo_semplice(ultimo_titolo), ensure_ascii=False) + ","
+            forza_tabella = None
+            out.append(f"#tabella({n}, pagina: true," if aperte else f"#tabella({n},{forza}")
             out += [f"  [*{inline(h)}*]," if h.strip() else "  []," for h in testa]
             for r in corpo:
                 out += [f"  [{inline(c)}]," for c in (r + [""] * n)[:n]]

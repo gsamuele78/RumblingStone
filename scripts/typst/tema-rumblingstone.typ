@@ -233,16 +233,37 @@
   else { dentro }
 }
 
-// Una tabella da 4+ colonne in una colonna da 8 cm diventa illeggibile: si
-// spezzano perfino le parole del titolo. Sopra quella soglia scavalca le due
-// colonne, che è quello che fa un manuale stampato.
-// `pagina`: la tabella sta già su un foglio a una colonna. Lì non serve che
-// scavalchi niente, e un float non si spezza: una tabella più alta di un
-// foglio usciva dal fondo e si stampava sopra se stessa (l'indice delle 48
-// aree dell'Abbazia, 1.462 righe sovrapposte a pagina 32).
-#let tabella(n, pagina: false, ..celle) = {
-  let corpo = block(breakable: true)[
-  #table(
+// Una tabella che in una colonna da 8 cm va a capo in ogni cella non si legge:
+// si spezzano perfino le parole del titolo. Allora scavalca le due colonne, in
+// cima o in fondo alla pagina dove è citata (`auto`), che è quello che fa un
+// manuale stampato. Nel punto esatto non si può: Typst 0.15 non bilancia le
+// colonne, e un blocco a due colonne interrotto a metà pagina riempie solo
+// quella di sinistra (provato il 2026-09-25).
+//
+// Chi decide:
+// - `larga: true` / `false`: l'autore, con `<!-- tabella: larga -->` o
+//   `<!-- tabella: colonna -->` sopra la tabella nel master;
+// - `auto`: la misura. Da quattro colonne in su scavalca sempre; sotto,
+//   scavalca se in colonna diventa più alta di `TABELLA-SOGLIA` volte quanto
+//   sarebbe a tutta pagina. Misurato sui tre volumi della #169: 125 tabelle in
+//   colonna, e 100 erano alte il doppio o quasi, cioè andavano a capo in ogni
+//   cella.
+// - una tabella da due o tre colonne più alta di `TABELLA-FLOAT-MAX` a tutta
+//   pagina resta in colonna, dove scorre: un float non si spezza. Da quattro
+//   colonne in su scavalca comunque, perché in colonna le celle si
+//   sovrappongono (l'Abbazia, pagina 26, provato il 2026-09-25); oltre le 30
+//   righe l'esportatore la manda su una pagina A4.
+// `pagina`: la tabella sta già su un foglio a una colonna, e lì non scavalca
+// niente (l'indice delle 48 aree dell'Abbazia si stampava sopra se stesso).
+#let TABELLA-SOGLIA = 1.8
+#let TABELLA-FLOAT-MAX = 20cm
+#let TABELLA-COLONNA = 8.1cm
+#let TABELLA-PAGINA = 17.5cm
+// `sezione`: il titolo della sezione in cui la tabella è citata. Un float sale
+// in cima alla pagina e può finire sopra il suo titolo, o nella pagina dopo;
+// scavalcando porta con sé una riga che dice a quale sezione appartiene.
+#let tabella(n, pagina: false, larga: auto, sezione: none, ..celle) = {
+  let griglia = table(
     columns: n,
     stroke: none,
     inset: (x: 6pt, y: 4.5pt),
@@ -250,9 +271,28 @@
                       else if calc.odd(row) { boxLato } else { none },
     ..celle
   )
-]
-  if n >= 4 and not pagina { place(top, float: true, scope: "parent", clearance: 10pt, corpo) }
-  else { corpo }
+  let corpo = block(breakable: true, griglia)
+  let scavalca = place(auto, float: true, scope: "parent", clearance: 10pt, block(width: 100%)[
+    #if sezione != none [
+      #text(font: TITOLI, size: 7.5pt, fill: seppia, tracking: 0.3pt)[#upper(sezione)]
+      #v(-4pt)
+    ]
+    #griglia
+  ])
+  if pagina or larga == false { corpo }
+  else if larga == true { context if page.columns < 2 { corpo } else { scavalca } }
+  else {
+    context {
+      // una pagina a una colonna (A5, appendici A4) non ha niente da scavalcare
+      if page.columns < 2 { return corpo }
+      let alta = measure(griglia, width: TABELLA-PAGINA).height
+      let stretta = measure(griglia, width: TABELLA-COLONNA).height
+      if n >= 4 { scavalca }
+      else if alta > TABELLA-FLOAT-MAX { corpo }
+      else if stretta > TABELLA-SOGLIA * alta { scavalca }
+      else { corpo }
+    }
+  }
 }
 
 // Blocco statistiche: il riquadro del mostro/PNG, coi numeri dove il DM li

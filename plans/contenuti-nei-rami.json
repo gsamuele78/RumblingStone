@@ -58,6 +58,29 @@
       "ref": "origin/campaign-group-*",
       "stato": "partita",
       "dove": "ADR-0007: i rami di gruppo portano la partita, che su main non va"
+    },
+    {
+      "ref": [
+        "pr/170",
+        "origin/claude/stato-dopo-169"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #170 aperta: STATO-E-ORDINE dopo la #169 e il controllo a vista dei volumi"
+    },
+    {
+      "ref": [
+        "pr/171",
+        "origin/claude/storico-fuori-stampa"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #171 aperta, sopra la #170: la storia delle scelte fuori stampa (ADR-0069)"
+    },
+    {
+      "ref": [
+        "origin/claude/tabelle-larghe"
+      ],
+      "stato": "in-volo",
+      "dove": "PR aperta sopra la #171: le tabelle che in colonna vanno a capo scavalcano le due colonne (STATO-E-ORDINE §13)"
     }
   ],
   "file": [

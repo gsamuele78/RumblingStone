@@ -34,6 +34,7 @@
 | ✅ | **Editoria**: una mappa entra in colonna (48 celle) o va su A4 e non va mai a capo; ogni capitolo apre una pagina; immagini fuori da una pagina dedicata sotto i 16 cm. Norma registrata (43 norme) | C + G3 | `rumblingstone-editoria` §2 e §4.4 · #169 | fatto |
 | ✅ | **Il controllo a vista di tutti i volumi dopo la regola editoriale della #169**: quindici volumi compilati prima e dopo `a9fe251`. Un difetto veniva dalla #169 (la figura su A4 riservava sempre 21 cm), tre c'erano da prima (codice in linea, righe `____`, tabelle più alte di un foglio). Corretti nel tema e nell'esportatore: sovrapposizioni da 1.474 a 0 | C + G3 | §11.3 · `rumblingstone-editoria` §4.5 | fatto |
 | ✅ | **La storia delle scelte non va in stampa**: blocchi `<!-- storico -->` nei sorgenti e attribuzioni di forma fissa tolte dalle due catene con la stessa funzione; la tecnica per fare un booklet, con le regole della #169, scritta come canone | C + G3 | §12.2 · ADR-0069 · `rumblingstone-editoria` §2-bis e §4.6 | fatto: righe con un segnale di storia nei PDF da 257 a 67, storia vera in stampa da 161 righe a 15 dichiarate |
+| ✅ | **Le tabelle che in colonna vanno a capo in ogni cella scavalcano le due colonne**, misurate dal tema; marcatore `<!-- tabella: larga -->` / `colonna` per l'autore; i PDF della #169 rifatti con tutte le regole nuove | C + G3 | §13 · `rumblingstone-editoria` §2 e §4.7 | fatto: nei volumi della #169 100 tabelle su 125 erano alte il doppio in colonna; ora 330 tabelle larghe su tutti i volumi, 60% nella stessa pagina |
 | 🙋 | **Al DM, poi all'agente: chiudere le `[PROPOSTA]` e gli `[INFERRED]`**, perché diventino canone o vengano bocciate. **621 marcature in 209 file**; tolte le 140 che stanno in piani e skill (descrivono la convenzione) e le 20 in archivio, ne restano **circa 460 nel contenuto** | K | §12.1 | l'agente prepara le domande **un arco alla volta**, prima ARC-07 perché si gioca adesso; il DM risponde «canone» o «bocciata»; l'agente applica, toglie la marcatura e rimisura il conto |
 | 🙋 | **Al DM: i capitoli da beta del Drappo** (IP e licenze, playtest alfa, stato del modulo, scheda di feedback) stanno nel volume del DM. Per uscire dalla beta vanno tolti dal manifest o tenuti? | | §12.2 | una risposta; l'agente cambia il manifest |
 | 🙋 | **Al DM: chiudere la serata del 2026-09-25.** In `campaign/sessions/` non c'è ancora il log: cosa è successo al tavolo lo sa solo il DM | K | regia della serata §6 (il registro) · `rumblingstone-automation` | `python3 scripts/dm.py session end` sul ramo `campaign-group-rumblingstone-dm-gianfranco`, mai su `main` (ADR-0007) |
@@ -415,7 +416,7 @@ per momento del ciclo.
 |---|---|---|---|
 | ✅ | **2C** — i box read-aloud che presuppongono un'azione del giocatore | [PIANO-QUATTRO-ORDINI](PIANO-QUATTRO-ORDINI-2026-09-20.md) §2C | *chiuso il 2026-09-21*: `misura_craft --p1` → **22 su 477**, e sono un **elenco nominale** (12 dialoghi · 6 falsi positivi · 2 visioni · 1 canto · 1 condizionale), ancorato file per file da `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`. ⚠️ **Non si porta a zero**: il rilevatore dichiara di non distinguere il dialogo dalla narrazione *(485 box dal 2026-09-25: una nota di allineamento in `DEF-2` A3, le battute di Moradin che chiedono i Doni in `DEF-3` §5, e i quattro box nuovi di `DEF-4` riordinato: il bosco, la sala del trono, la postierla, la tenda; i residui restano 22)* <!-- attesa: 22 box su 485 --> |
 | ⬜ | **M1-M3** — marcare gli incontri | [PIANO-MARCATURA-DEGLI-INCONTRI](PIANO-MARCATURA-DEGLI-INCONTRI.md) | `python3 scripts/validate_modules.py --tetto-el` → oggi **zero incontri marcati** |
-| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte; 45: la storia delle scelte fuori stampa)* <!-- attesa: 45 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
+| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte; 45: la storia delle scelte fuori stampa; 46: le tabelle che in colonna vanno a capo)* <!-- attesa: 46 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
 | 🟡 | **F1.5 + F3.3** — i due campioni e il κ | idem | ✅ F1.5 chiuso; F3.3 **eseguito sul campione B: κ = 0,0** *(misurato 2026-09-21)*. La metrica si dichiara non affidabile e **non entra in CI**. Le manca una norma che morda, e la strada è la verifica aritmetica degli statblocchi, sbloccata dagli `attributi` (riga sotto) |
 | ✅ | **Conformità meccanica degli statblocchi** — tutti i lotti chiusi: L1, L2, L2-bis, L3, L4, L5, L6, L6-ter, L7; restano solo **decisioni del DM** (§9) | [RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI](RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI.md) §8-9 | `python3 scripts/conformita_statblocchi.py --check` → **ogni `pf-dado` registra i dadi vita** · `python3 scripts/conformita_statblocchi.py --riepilogo` → **101 tornano, 0 da correggere, 0 scarti del generatore, 0 decisioni aperte al DM** *(misurato 2026-09-23, dopo D1-D12)* <!-- attesa: da correggere 0 --> |
 | ✅ | ~~i 27 ADR mancanti in `docs/INDEX.md` §4~~ | *nessun lotto: non c'era niente da fare* | `validate_docs --sorgenti` → **0** *(misurato 2026-09-21)*. 🐛 **I 27 non sono mai esistiti**: il buco più grande che `plans/adr/` abbia mai avuto è stato **uno**, il 2026-09-12, e da `14694c4` (16 settembre) l'indice è completo. Vedi §6.5 |
@@ -908,4 +909,58 @@ la #169 ha reso obbligatorio nei master.
   dichiarata, e riscriverla è una scelta sul modulo.
 - Una frase di storia senza data né formula il test non la vede. Il marcatore
   resta un obbligo di chi scrive, scritto in `module-standard`.
+
+---
+
+## 13 · Le tabelle strette, e i PDF della #169 rifatti (2026-09-25)
+
+> **Perché questa sezione.** Il DM: *«rifammi i pdf della 169 vedendo come
+> vengono applicate davvero queste nuove skills. Le tabelle ristrette in una
+> colonna saranno illegibili: vedere se esiste un marcatore per tabelle o
+> specchietti che per dimensione vanno su una colonna, e adattare il layout
+> perché vengano rappresentati a una colonna, e poi si continua a due»*.
+
+**Cosa c'era.** Un solo criterio: le tabelle da quattro colonne in su
+scavalcavano le due colonne, e salivano sempre in cima alla pagina. Nessun
+marcatore per l'autore. Nessuna tabella stava dentro un riquadro: gli
+specchietti riassuntivi sono tabelle normali, e le note del DM sono prosa,
+che in colonna si legge.
+
+**La misura.** Con una sonda nel tema, Typst ha misurato ogni tabella dei tre
+volumi della #169 in colonna (8,1 cm) e a tutta pagina (17,5 cm). Delle 125
+rimaste in colonna, **100 erano alte almeno 1,8 volte** quanto a tutta pagina,
+cioè andavano a capo in ogni cella; la peggiore 22,8 cm contro 6,3.
+
+**Cosa non si può fare.** Mettere la tabella nel punto esatto e ripartire a due
+colonne: Typst 0.15.1 non bilancia le colonne, e un blocco a due colonne
+interrotto a metà pagina riempie solo quella di sinistra. Provato e scartato.
+
+**Cosa si fa.** Come un manuale stampato: la tabella scavalca le due colonne in
+cima o in fondo alla pagina dove è citata (`auto`), e porta una riga col titolo
+della sezione, perché può finire sopra il suo titolo o alla pagina dopo. La
+decide il tema misurando (soglia 1,8, scelta fra 1,8 e 2,2 provate sui PDF:
+la 1,8 lasciava nella stessa pagina una quota maggiore). L'autore può forzarla
+con `<!-- tabella: larga -->` o `<!-- tabella: colonna -->`. Nelle pagine a una
+colonna (A5, appendici A4, fogli dei giocatori) non scavalca niente.
+
+**Il risultato su tutti i quindici volumi.** 330 tabelle larghe: 198 nella
+stessa pagina del loro testo, 111 nella successiva, 20 più lontano, dove molte
+tabelle si susseguono (il Drappo e la serata). Zero sovrapposizioni, zero testo
+oltre il bordo, nessuna pagina quasi vuota nuova; la serata passa da 101 a 102
+pagine, il Drappo da 92 a 94, il Palio da 61 a 62.
+
+**Un errore mio, preso dalla misura.** La prima versione teneva in colonna ogni
+tabella più alta di 20 cm a tutta pagina, anche quelle da cinque colonne: a
+pagina 26 dell'Abbazia le celle si stampavano una sopra l'altra. Il limite ora
+vale solo per le tabelle da due e tre colonne.
+
+**I PDF della #169 rifatti** (booklet della serata 102 pagine, fogli dei
+giocatori 18, volume del −1000 40) sono stati consegnati al DM in chat; sono
+artefatti e non entrano nel repo.
+
+⚠️ **Quello che resta.** Quanto lontano finisce un float non lo controlla
+nessun cancello: è la misura di questa sezione, da ripetere quando si cambia il
+tema. Le 20 tabelle a due o più pagine dal loro testo si possono avvicinare
+solo spezzando le sequenze di tabelle nei master, o forzandone qualcuna in
+colonna col marcatore: è una scelta di chi scrive, caso per caso.
 
