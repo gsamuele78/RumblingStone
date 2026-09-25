@@ -2552,8 +2552,8 @@ i doni del viaggio (§1) e i Doni del party (§5).
 | **Eco che porta** | la lastra del ricordo caduta nella Prova II del viaggio, l'Impronta nel terzo seme. E la zampa col topazio sul margine dell'affresco A5 |
 | **Eco che arma** | la prima Prova di Risonanza della serata (se combatte con Hella contro Zog'tar). Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: `01_Collana` cap. 3 la chiede con un read-aloud |
 
-Da questo momento Durik è il suo **compagno animale** a pieno titolo, evocato dal
-**terzo seme** della Collana.
+Da questo momento Durik è il suo **compagno animale** a pieno titolo, sempre al
+suo fianco. Se viene distrutto, lo richiama il **terzo seme** della Collana.
 
 **La Collana dei Semi Eterni nasce.** I tre semi assorbono i sacrifici e si
 fondono in un **torc vivente** di legno e metallo (la giocatrice la trova nel
@@ -2562,7 +2562,7 @@ foglio *Hella, tornata*):
 - **Avatar della Radice** (1/g: Ibrido Treant/Nano Enorme 10 round — +8 FOR,
   portata, schianti);
 - **Evocazione dei Guardiani** (3/g): semi I e II → **Treant di Adamantio**
-  (statblocco in Appendice A); seme III → **Durik**;
+  (statblocco in Appendice A); seme III → **Durik**, se è stato distrutto;
 - **I Doni dei Semi** (3 slot): custodiscono i sacrifici del party — se un PG ha
   rifiutato (§5), il suo slot è **vuoto** e si potrà colmare in gioco.
 
@@ -2763,7 +2763,7 @@ rimesso dritto undici volte.»* Da lì si riparte.
 | Oggetto | Chi | Stato dopo il rito | Valore di riferimento |
 |---|---|---|---|
 | **Collana dei Semi Eterni** | Hella | **nasce ora** (Radicata): +4 SAG, +3 CA nat, Avatar della Radice, Evocazione dei Guardiani (Treant/Durik), 3 slot-dono | artefatto minore (non-WBL) |
-| **Durik Riforgiato** (12 DV) | Hella | compagno a pieno titolo (evocato dal 3° seme) | — |
+| **Durik Riforgiato** (12 DV) | Hella | compagno a pieno titolo, sempre presente; il 3° seme lo richiama se è distrutto | — |
 | **Cuore di Moradin** | (altare) | **SPESO** (single-use) — non torna | — |
 | **Corona di Adamantio** | Thorik | invariata (2/3 gemme); pronta ad aprire il portale del Tempo | già contata (#1) |
 
@@ -2890,7 +2890,7 @@ Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
 ------------------------------------------------------------
 COMPAGNO — DURIK RIFORGIATO (12 DV) · RD 5/adamantio · Tremorsense · legame
 telepatico entro 18 m · si frappone tra Hella e il pericolo ("Protegge Hella").
-Evocato dal 3° seme della Collana. (Il rinoceronte visto in gioco è la FORMA
+Sempre presente; il 3° seme della Collana lo richiama se è distrutto. (Il rinoceronte visto in gioco è la FORMA
 SELVATICA di Hella, non un compagno.)
 EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2, Scudo di Legno +1,
 Scimitarra +1, Periapto di Saggezza +2, Mantello della Resistenza +2, Bacchetta
@@ -4936,12 +4936,13 @@ livelli. Percorsi previsti dal canone preparato
 
 #### Lore (da rivelare gradualmente)
 
-La Collana non fu forgiata: **germogliò**. Quando il party depose i tre
-semi sull'altare della Forgia Eterna e vi aggiunse i propri sacrifici,
-il Cuore di Moradin — spendendosi per riportare Hella — non si limitò a
-riannodare un'anima a un corpo. Passò attraverso il Sogno della Terra,
-e il Sogno restituì ciò che vi era stato affidato: i sacrifici dei
-compagni (nei primi due semi) e l'Impronta di Durik (nel terzo).
+La Collana non fu forgiata: **germogliò**. I tre semi di treant erano
+posati sul corpo di Hella, sulle mani e sulla fronte (`ARC07-DEF-3` §4).
+Il Cuore di Moradin, spendendosi per riportarla, non si limitò a
+riannodare un'anima a un corpo: allo Step 4 i semi germogliarono ed
+entrarono in lei. Poi ogni compagno aprì un seme con un dono del proprio
+artefatto (`DEF-3` §5), e il terzo seme prese anche l'Impronta di Durik,
+che il Sogno della Terra custodiva dalla Prova II del viaggio.
 
 Per questo la Collana non è un oggetto di Hella: è **la memoria del
 motivo per cui Hella è tornata**. I nani che conoscono il lore della

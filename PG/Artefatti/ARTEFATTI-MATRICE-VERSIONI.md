@@ -127,15 +127,25 @@ ARC-07 B9; file combinato player+DM, ora la parte DM). **⭐ HANDOUT giocatore**
 post-resurrection" (stato preparato): vedi [T4-a]. Gli **slot-dono del party
 (3)** si legano al ramo del rifiuto del P3B §2-BIS.
 
-**⭐ PAGINA giocatore stampabile** (2026-09-25): `Artefatti-Pg/Hella/01_Collana_Radicata.html`,
-gemella di `ringOfChaoticIllumination/00_Ring_Riforgiato.html`, con l'immagine
-`collana-dei-semi-eterni.jpg` (Canva AI, provenienza in `PROVENIENZA.txt`). I poteri
-vengono dal foglio consegnato alla serata della resurrezione,
-`07_…/homebrew/sessione-resurrezione-mille-anni/09-SCHEDA-HELLA-RISORTA.md`. ⚠️ Il master
-DM e l'handout `00_…` sono rimasti indietro rispetto a quel foglio: fanno ancora
-*evocare* Durik (dalla serata è sempre presente, e il seme III lo richiama solo se è
-stato distrutto) e portano `[INFERRED]` che il lotto delle marcature di `PG/` deve
-chiudere col DM. Il PDF si esporta dalla pagina (Chromium, «Stampa»); non è nel repo.
+**⭐ PAGINE stampabili** (2026-09-25), nella famiglia di `02_Corona_2_Gemme.html`
+(blocchi di potere, riga meccanica, leggenda, versione giocatore e versione DM):
+
+| File | Per chi |
+|---|---|
+| `Artefatti-Pg/Hella/01_Collana_Radicata.html` | la giocatrice |
+| `Artefatti-Pg/Hella/01_Collana_Radicata_DM.html` | il DM: lore da rivelare, ramo del rifiuto, scheda tecnica con gli `[INFERRED]`, stati futuri, tre punti in cui le fonti non coincidono |
+| `Artefatti-Pg/Hella/02_Durik_Guardiano_di_Pietra.html` | la giocatrice: Durik vive nel terzo seme, e la sua pagina sta accanto a quella della Collana |
+| `Artefatti-Pg/Hella/02_Durik_Guardiano_di_Pietra_DM.html` | il DM: quando assegnare le Prove di Risonanza, perché ha questo aspetto, come non usarlo |
+
+L'immagine della Collana è `collana-dei-semi-eterni.jpg` (Canva AI, provenienza in
+`PROVENIENZA.txt`); quella di Durik è `PG/Immagini/web/DurikFront2.jpg`. I poteri vengono
+dai fogli consegnati alla serata della resurrezione (`09-SCHEDA-HELLA-RISORTA.md`,
+`08-SCHEDA-DURIK.md`). Il PDF si esporta dalla pagina (Chromium, «Stampa»); non è nel repo.
+
+⚠️ L'handout `00_…` della Collana è rimasto indietro rispetto a quei fogli (Durik
+*evocato*, `[INFERRED]`): lo sostituiscono le pagine qui sopra, e si chiude nel lotto
+delle marcature di `PG/`. Il lore del master DM è allineato a `DEF-3` (i semi sul corpo,
+un dono per seme, l'Impronta di Durik nel terzo).
 
 ## 6. SINERGIE (party)
 

@@ -868,8 +868,8 @@ i doni del viaggio (§1) e i Doni del party (§5).
 | **Eco che porta** | la lastra del ricordo caduta nella Prova II del viaggio, l'Impronta nel terzo seme. E la zampa col topazio sul margine dell'affresco A5 |
 | **Eco che arma** | la prima Prova di Risonanza della serata (se combatte con Hella contro Zog'tar). Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: `01_Collana` cap. 3 la chiede con un read-aloud |
 
-Da questo momento Durik è il suo **compagno animale** a pieno titolo, evocato dal
-**terzo seme** della Collana.
+Da questo momento Durik è il suo **compagno animale** a pieno titolo, sempre al
+suo fianco. Se viene distrutto, lo richiama il **terzo seme** della Collana.
 
 **La Collana dei Semi Eterni nasce.** I tre semi assorbono i sacrifici e si
 fondono in un **torc vivente** di legno e metallo (la giocatrice la trova nel
@@ -878,7 +878,7 @@ foglio *Hella, tornata*):
 - **Avatar della Radice** (1/g: Ibrido Treant/Nano Enorme 10 round — +8 FOR,
   portata, schianti);
 - **Evocazione dei Guardiani** (3/g): semi I e II → **Treant di Adamantio**
-  (statblocco in Appendice A); seme III → **Durik**;
+  (statblocco in Appendice A); seme III → **Durik**, se è stato distrutto;
 - **I Doni dei Semi** (3 slot): custodiscono i sacrifici del party — se un PG ha
   rifiutato (§5), il suo slot è **vuoto** e si potrà colmare in gioco.
 
@@ -1079,7 +1079,7 @@ rimesso dritto undici volte.»* Da lì si riparte.
 | Oggetto | Chi | Stato dopo il rito | Valore di riferimento |
 |---|---|---|---|
 | **Collana dei Semi Eterni** | Hella | **nasce ora** (Radicata): +4 SAG, +3 CA nat, Avatar della Radice, Evocazione dei Guardiani (Treant/Durik), 3 slot-dono | artefatto minore (non-WBL) |
-| **Durik Riforgiato** (12 DV) | Hella | compagno a pieno titolo (evocato dal 3° seme) | — |
+| **Durik Riforgiato** (12 DV) | Hella | compagno a pieno titolo, sempre presente; il 3° seme lo richiama se è distrutto | — |
 | **Cuore di Moradin** | (altare) | **SPESO** (single-use) — non torna | — |
 | **Corona di Adamantio** | Thorik | invariata (2/3 gemme); pronta ad aprire il portale del Tempo | già contata (#1) |
 
@@ -1206,7 +1206,7 @@ Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
 ------------------------------------------------------------
 COMPAGNO — DURIK RIFORGIATO (12 DV) · RD 5/adamantio · Tremorsense · legame
 telepatico entro 18 m · si frappone tra Hella e il pericolo ("Protegge Hella").
-Evocato dal 3° seme della Collana. (Il rinoceronte visto in gioco è la FORMA
+Sempre presente; il 3° seme della Collana lo richiama se è distrutto. (Il rinoceronte visto in gioco è la FORMA
 SELVATICA di Hella, non un compagno.)
 EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2, Scudo di Legno +1,
 Scimitarra +1, Periapto di Saggezza +2, Mantello della Resistenza +2, Bacchetta

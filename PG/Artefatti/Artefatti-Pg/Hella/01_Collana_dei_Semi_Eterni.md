@@ -135,12 +135,13 @@ livelli. Percorsi previsti dal canone preparato
 
 #### Lore (da rivelare gradualmente)
 
-La Collana non fu forgiata: **germogliò**. Quando il party depose i tre
-semi sull'altare della Forgia Eterna e vi aggiunse i propri sacrifici,
-il Cuore di Moradin — spendendosi per riportare Hella — non si limitò a
-riannodare un'anima a un corpo. Passò attraverso il Sogno della Terra,
-e il Sogno restituì ciò che vi era stato affidato: i sacrifici dei
-compagni (nei primi due semi) e l'Impronta di Durik (nel terzo).
+La Collana non fu forgiata: **germogliò**. I tre semi di treant erano
+posati sul corpo di Hella, sulle mani e sulla fronte (`ARC07-DEF-3` §4).
+Il Cuore di Moradin, spendendosi per riportarla, non si limitò a
+riannodare un'anima a un corpo: allo Step 4 i semi germogliarono ed
+entrarono in lei. Poi ogni compagno aprì un seme con un dono del proprio
+artefatto (`DEF-3` §5), e il terzo seme prese anche l'Impronta di Durik,
+che il Sogno della Terra custodiva dalla Prova II del viaggio.
 
 Per questo la Collana non è un oggetto di Hella: è **la memoria del
 motivo per cui Hella è tornata**. I nani che conoscono il lore della
