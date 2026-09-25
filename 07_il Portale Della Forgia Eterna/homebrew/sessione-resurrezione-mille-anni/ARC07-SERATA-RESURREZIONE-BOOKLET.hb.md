@@ -4848,9 +4848,9 @@ incidente.
 - Essere **Hella** (l'artefatto è nato dal SUO rituale di resurrezione:
   i semi hanno assorbito i sacrifici dei suoi compagni e il suo viaggio
   nella Soglia — non riconosce altri portatori).
-- Tipo **Ibrido Treant** attivo (se il template venisse mai soppresso o
-  rimosso, i poteri della Collana si sospendono con esso
-  `[INFERRED — needs DM confirmation]`).
+- La Collana **funziona sempre**: in forma selvatica, polimorfata, o se la
+  forma ibrida venisse soppressa. Ha le radici sotto la pelle, e non si fonde
+  nel nuovo corpo come l'equipaggiamento.
 
 ### Poteri Conosciuti (Stato: Radicata)
 
@@ -4880,8 +4880,8 @@ l'Evocazione per **un mese**: niente Treant, e Durik distrutto non si richiama
 subito (torna all'alba). Il resto della Collana non si spegne. L'unica eccezione
 è la notte a −1000, quando Hella ne evoca due all'alba.
 
-I semi spesi si "richiudono" e rigermogliano all'alba successiva
-`[INFERRED — needs DM confirmation sul ritmo di ricarica]`.
+I semi spesi si "richiudono" e rigermogliano **all'alba** successiva, come
+l'Avatar della Radice e come Durik.
 
 #### 5. Legame del Sogno → l'Empatia della pietra di Durik
 Il legame fra Hella e Durik nel **Sogno della Terra** è sulla scheda di Durik:
@@ -4920,8 +4920,9 @@ torna a 7d6. Il seme **resta germogliato**, ma non restituirà mai più.
 ## STATI FUTURI (non ancora sbloccati)
 
 Come i Bracieri di Tordek, la Collana cresce con la storia, non coi
-livelli. Percorsi previsti dal canone preparato
-`[INFERRED — si sbloccano in ARC-09, needs DM confirmation]`:
+livelli. **I momenti sono canone**: la Collana cresce al Rituale del Cerchio
+Sacro e alla Battaglia di Rethmar. **I poteri no**: le righe qui sotto sono
+direzioni, e si scrivono quando si prepara ARC-09, con la conferma del DM.
 
 | Stato | Trigger previsto | Semi di potere |
 |---|---|---|

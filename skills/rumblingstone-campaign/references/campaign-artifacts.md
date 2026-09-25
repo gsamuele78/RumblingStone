@@ -221,7 +221,7 @@ Created during Hella's resurrection ritual from 3 Treant seeds laid on her body 
 2. **Corteccia del Guardiano (Su):** +3 Natural AC
 3. **Avatar della Radice (Su, 1/day):** Transform into Huge Treant/Dwarf hybrid for 10 rounds (+8 STR, reach, slam attacks)
 4. **Evocazione dei Guardiani (Su, 3/day, one seed each):** seeds I and II summon an Adamantine Treant (see below), standard action, 1 hour; **max 2 Treant**. Summoning **both together** shuts the Evocation off for **one month** (no Treant, and a destroyed Durik is not recalled at once: he returns at dawn); the rest of the necklace keeps working. The one exception is the night at −1000, when Hella calls two at dawn. Seed III recalls **Durik** only if he has been destroyed: he is always present (DM decision S3)
-5. **Technical (DM):** CL 20th; not dispellable, *disjunction* suppresses it 1d4 rounds; destroyed only with all three seeds spent and burned in a fire the bearer cannot perceive; if Hella betrays the Root Vow the seeds stop germinating until she reaffirms it with a deed
+5. **Technical (DM):** always works, also in wild shape or polymorphed (rooted under the skin, it does not meld); spent seeds regrow at dawn; CL 20th; not dispellable, *disjunction* suppresses it 1d4 rounds; destroyed only with all three seeds spent and burned in a fire the bearer cannot perceive; if Hella betrays the Root Vow the seeds stop germinating until she reaffirms it with a deed
 
 ### Adamantine Treant (Summoned)
 

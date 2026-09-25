@@ -148,8 +148,9 @@ terzo). Decisioni del DM del 2026-09-25, scritte nelle pagine, nel master, nelle
 sinergie e nella skill di campagna: al massimo due Treant, e insieme spengono
 l'Evocazione per un mese; tipi dei poteri (Sop, i due doni nel corpo Str, il Rovo Mag);
 la scheda tecnica è canone; F1-F4 sono canone, F1 e F4 chiuse finché non si gioca la
-loro condizione. Nel master restano tre `[INFERRED]`: soppressione della forma ibrida,
-ricarica dei semi all'alba, stati futuri.
+loro condizione. Chiusi anche gli ultimi tre punti: la Collana funziona sempre, anche in
+forma selvatica; i semi tornano all'alba; gli stati futuri hanno i momenti
+canone e i poteri da scrivere in ARC-09.
 
 ## 6. SINERGIE (party)
 
