@@ -1,9 +1,11 @@
 # Hella, tornata
 
+<!-- consegna -->
 > *Per la giocatrice di Hella, al risveglio. La tua scheda resta la tua: livelli,
 > incantesimi preparati, equipaggiamento. Questo foglio dice **cosa aggiungere**
 > e **cosa è cambiato**. Dove una riga ha una casella, la segna il DM dopo il
 > rito.*
+<!-- /consegna -->
 
 ---
 

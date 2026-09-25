@@ -199,6 +199,16 @@ Sono qui perché sono i primi da cercare quando «il PDF viene male».
    ne scrive una che dice solo il fatto. `test_storico.py` fa da tetto: 15
    righe dichiarate, file per file, e una in più è rossa.
 
+   **Il foglio ✉ non dice quando si consegna.** «Si consegna al risveglio»,
+   «Il DM te la consegna dopo che hai scelto», «Da mostrare subito dopo il
+   box» sono istruzioni per il DM: stanno nella riga **✉ Si consegna qui** del
+   master o nella regia della serata, e sul foglio che il giocatore tiene in
+   mano si chiudono fra `<!-- consegna -->` e `<!-- /consegna -->`, con la
+   stessa funzione. Prima di chiuderle si controlla che la regia dica tutto
+   quello che dicevano. `TestIFogliDeiGiocatori` boccia un capitolo `player`
+   che le stampa ancora; non vede «Per il giocatore di…», che su alcuni fogli
+   è un'istruzione al giocatore e non al DM.
+
 7. **La tabella che in colonna va a capo in ogni cella.** Fino al 2026-09-25
    scavalcavano le due colonne solo le tabelle da quattro colonne in su. Una
    da due o tre con frasi nelle celle restava in 8 cm e diventava alta il

@@ -92,6 +92,7 @@
 ### PIANO-REVISIONE-ARC07
 - ✅ _(2026-09-25: le `[PROPOSTA]` e gli `[INFERRED]` della cartella chiusi col DM, tutto canone; equipaggiamento di Hella dalla scheda, corredo ~16.900 mo. STATO-E-ORDINE §12.1)_
 - ✅ _(2026-09-25: i volti dei sette PNG del −1000 canone, confrontati coi ritratti della #172. STATO-E-ORDINE §12.1-ter)_
+- ✅ _(2026-09-25: i fogli ✉ della serata senza l'istruzione di consegna per il DM, che passa nella regia e in `DEF-3`)_
 - ⬜ _(da definire al tavolo: date/XP/loot reali per chiudere B1)_
 
 ### PIANO-REVISIONE-ARC08

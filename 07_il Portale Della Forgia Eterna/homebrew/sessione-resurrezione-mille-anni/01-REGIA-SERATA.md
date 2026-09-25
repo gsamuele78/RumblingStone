@@ -105,7 +105,9 @@ inciso** mentre dormivano.
    te» non si legge ad alta voce.**
 3. 🌙 **Poi la giocatrice di Hella legge il suo**, dal foglio che le dai
    adesso: *«Non dormi più, tu.»* Nessuno commenta. Anche lei tiene per sé la
-   riga in fondo, che le dice chi sono la forma che aspetta e la voce.
+   riga in fondo, che le dice chi sono la forma che aspetta e la voce. La
+   seconda metà del foglio, *«Quello che hai attraversato»*, non si legge
+   adesso: è il suo promemoria per il racconto del §8.
 4. Leggi il box del risveglio (**`DEF-2` §7-bis, «Al risveglio»**).
 
 ⚠️ **Non spiegare nulla di più della riga.** Se Thorik chiede di chi erano le

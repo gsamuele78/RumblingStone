@@ -230,7 +230,9 @@ inciso** mentre dormivano.
    te» non si legge ad alta voce.**
 3. 🌙 **Poi la giocatrice di Hella legge il suo**, dal foglio che le dai
    adesso: *«Non dormi più, tu.»* Nessuno commenta. Anche lei tiene per sé la
-   riga in fondo, che le dice chi sono la forma che aspetta e la voce.
+   riga in fondo, che le dice chi sono la forma che aspetta e la voce. La
+   seconda metà del foglio, *«Quello che hai attraversato»*, non si legge
+   adesso: è il suo promemoria per il racconto del §8.
 4. Leggi il box del risveglio (**`DEF-2` §7-bis, «Al risveglio»**).
 
 ⚠️ **Non spiegare nulla di più della riga.** Se Thorik chiede di chi erano le
@@ -2133,7 +2135,9 @@ drenn-okh hald: torn, torn-vrath!»* (*Padre Moradin, ferro sotto la montagna!
 Hella, figlia della pietra: torna, la strada non è finita!*). Poi la preghiera
 per intero, in italiano, dall'handout.
 **✉ Si consegna qui: *la preghiera della resurrezione*** al giocatore di
-Thorik, che la legge ad alta voce.
+Thorik, che la legge ad alta voce, in piedi a nord del cerchio, con la mano
+sull'Altare. Non a memoria: la legge, come si legge un contratto davanti a chi
+lo deve firmare.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
 
@@ -2570,7 +2574,9 @@ foglio *Hella, tornata*):
 Lo statblocco del **Treant di Adamantio** è in **Appendice A**.
 
 **✉ Si consegna qui, alla giocatrice di Hella**: **Hella, tornata** (le righe da
-aggiungere alla sua scheda), **Durik** e il suo **eco privato**. La scheda
+aggiungere alla sua scheda, che per il resto resta la sua), **Durik** nel
+momento in cui appoggia la testa sul petto di Hella, e il suo **eco privato**.
+Le caselle dei Doni sul foglio di Hella le segni tu, dopo il rito. La scheda
 completa per il DM è in Appendice A.
 
 ---
@@ -5007,9 +5013,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Thorik — le mani sotto la trave
 
-> *Per il giocatore di Thorik. È quello che hai sognato dormendo nella Sala
-> della Forgia. Il DM ti chiede di leggerlo ad alta voce; la riga in fondo è
-> solo per te.*
 
 ---
 
@@ -5039,9 +5042,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Tordek — lo zaino
 
-> *Per il giocatore di Tordek. È quello che hai sognato dormendo nella Sala
-> della Forgia. Il DM ti chiede di leggerlo ad alta voce; la riga in fondo è
-> solo per te.*
 
 ---
 
@@ -5075,9 +5075,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Artemis — la porta socchiusa
 
-> *Per il giocatore di Artemis. È quello che hai sognato dormendo nella Sala
-> della Forgia. Il DM ti chiede di leggerlo ad alta voce; la riga in fondo è
-> solo per te.*
 
 ---
 
@@ -5109,9 +5106,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Hella — dall'altra parte, e ritorno
 
-> *Per la giocatrice di Hella. Due fogli: il primo lo leggi ad alta voce agli
-> altri quando il DM te lo chiede, il secondo è un promemoria per quando Hella
-> potrà raccontare.*
 
 ---
 
@@ -5164,8 +5158,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Il Cuore di Moradin
 
-> *Da mostrare al tavolo subito dopo il box del reliquiario (`DEF-3` §3), non
-> prima: se lo vedono prima, la rivelazione diventa una conferma.*
 
 ![Il Cuore di Moradin nel reliquiario aperto](../../Immagini/tavola-cuore-di-moradin.jpg)
 
@@ -5184,9 +5176,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La preghiera della resurrezione
 
-> *Per il giocatore di Thorik, allo Step 1 del rito. Si legge in piedi, a nord
-> del cerchio, con la mano sull'Altare. Non si recita a memoria: si legge,
-> come si legge un contratto davanti a chi lo deve firmare.*
 
 ---
 
@@ -5231,9 +5220,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Thorik
 
-> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
-> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
-> torna indietro.*
 
 ---
 
@@ -5266,9 +5252,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Tordek
 
-> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
-> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
-> torna indietro.*
 
 ---
 
@@ -5297,9 +5280,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # La carta del Dono — Artemis
 
-> *Il DM te la consegna **dopo** che hai scelto di donare. Il prezzo te l'ha
-> detto Moradin prima; qui c'è quello che è germogliato in Hella, e cosa ti
-> torna indietro.*
 
 ---
 
@@ -5328,10 +5308,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Hella, tornata
 
-> *Per la giocatrice di Hella, al risveglio. La tua scheda resta la tua: livelli,
-> incantesimi preparati, equipaggiamento. Questo foglio dice **cosa aggiungere**
-> e **cosa è cambiato**. Dove una riga ha una casella, la segna il DM dopo il
-> rito.*
 
 ---
 
@@ -5442,8 +5418,6 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 # Durik, il guardiano di pietra
 
-> *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
-> la testa sul petto di Hella. Da quel momento è tuo.*
 
 ![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
 
