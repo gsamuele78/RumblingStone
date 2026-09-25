@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="anello · S1 · r1 · 2026-09-25">
+    <title>Anello dell'Illuminazione Caotica — Stadio 1, le due divinità (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #5b2a86; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B0000; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #5b2a86; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #5b2a86; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #5b2a86; background: rgba(91, 42, 134, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #5b2a86, #2c1840); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="class-title">Anello dell'Illuminazione Caotica</h1>
+        <div class="subtitle">Stadio 1 — le due divinità</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«L'alba e l'ombra, nello stesso anello»</div>
+    </div>
+
+    <div class="quote">
+        <strong>Storia conosciuta</strong><br>
+        Durante l'Era dei Tormenti, quando gli dèi camminavano su Toril, questo anello fu forgiato nel mezzo di una battaglia fra forze divine. Secoli dopo lo recuperò una maga di Netheril, Vess'ith Shadowweaver, e l'anello tenne una parte del suo potere divino.
+    </div>
+
+    <div class="quote" style="border-left-color: #5b2a86; background: rgba(91, 42, 134, 0.08);">
+        <strong>Cos'è cambiato.</strong><br>
+        Lathander e Mask hanno messo gli occhi sull'anello, e tutti e due insieme. L'ombra si è svegliata per prima: l'anello adesso ti copre, ti fa sparire nei rumori, e quando voli ti tiene più lontano dai colpi. La luce invece dorme ancora, e si sveglia solo quando qualcosa prova a rifarti da dentro.
+    </div>
+
+    <div class="requirements">
+        <strong>Slot:</strong> anello · <strong>Legato a:</strong> Artemis · <strong>Doppia natura:</strong> Mask sveglio, Lathander in attesa<br>
+        <strong>Da confermare:</strong> questo stadio è scritto nell'analisi del percorso di Lord of Sun and Shadow; che sia stato usato al tavolo lo decide il DM. <span class="conferma">da confermare col DM · D11</span>
+    </div>
+
+    <h2>I poteri di Mask</h2>
+
+    <div class="power-block">
+        <div class="power-header">Visione Potenziata <span>sempre</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Costante</div>
+        <div class="desc-text">
+            <strong>Scurovisione 36 m</strong>, oscurità magica fino a <strong>18 m</strong>, visione crepuscolare. E <strong>+4 competenza a Osservare</strong> al buio.
+        </div>
+    </div>
+
+    <div class="power-block block-nuovo">
+        <div class="power-header">Ali d'Ombra <span class="nuovo">cresciute</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | Azione gratuita</div>
+        <div class="desc-text">
+            <strong>Volo 18 m</strong>, manovrabilità buona, <strong>Attacco in Volo</strong>. In volo hai <strong>+2 di deviazione alla CA</strong>.<br><strong>3/giorno</strong>, in una carica: le ali crepitano e il colpo fa <strong>+1d6 elettricità</strong>.
+        </div>
+    </div>
+
+    <div class="power-block block-nuovo">
+        <div class="power-header">Sussurri di Mask <span class="nuovo">nuovo</span></div>
+        <div class="mechanic">Soprannaturale (Sop) | LI 10°</div>
+        <div class="desc-text">
+            <em>Suono fantasma</em> <strong>3/giorno</strong> · <em>Silenzio</em> <strong>1/giorno</strong> · sempre <strong>+2 competenza</strong> a Muoversi Silenziosamente e Nascondersi.
+        </div>
+    </div>
+
+    <div class="power-block spento">
+        <div class="power-header">La luce che dorme <span>solo in crisi</span></div>
+        <div class="desc-text">Lathander non si fa sentire. Se qualcosa prova a cambiarti contro la tua volontà, l'anello risponde da solo. Come, lo scopri quando succede.</div>
+    </div>
+
+    <div class="power-block grigio">
+        <div class="power-header">Valore teorico (stadio 1)</div>
+        <div class="corpo">Prezzo di mercato: <strong>52.000 mo</strong>, aumentato per la doppia natura divina.</div>
+    </div>
+
+    <div class="solo-dm"></div>
+    <h2 style="color:#8B0000;border-bottom-color:#8B0000;">⚠️ Solo DM — da qui in poi</h2>
+
+    <div class="dm">
+        <h3>La progressione dell'Anello, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · l'anello del caos</td><td>il legame con Artemis, un warlock caotico</td><td>Visione Potenziata · Ali d'Ombra · Passo d'Ombra · due poteri di crisi dormienti</td><td><code>01_Anello_S0_Originale</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · le due divinità</td><td>Lathander e Mask lo reclamano; la crisi di Cerebromorphosis, nella Tomba di Belkram</td><td>i poteri di Mask si svegliano; tre poteri di crisi di Lathander</td><td><code>02_Anello_S1_Due_Divinita</code></td><td>✅ passato, uso al tavolo da confermare (D11)</td></tr>
+        <tr><td><strong>2</strong> · il Riforgiato</td><td>Artemis <strong>rifiuta</strong> Lord of Sun and Shadow (Opzione C, «il mio sentiero è mio»); alla Forgia Eterna l'anello assorbe la Colonna di Mithral e le Doppie Fiamme</td><td>quattro costanti · sei attivabili · due di crisi · le sinergie</td><td><code>00_Ring_Riforgiato</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · il Caos Ultimo</td><td>la Torre Invisibile: Zalkatar sconfitto, o purificato rinunciando a un potere</td><td><strong>non scritti</strong> in nessuna fonte</td><td><code>04_Anello_S3_Caos_Ultimo_DM</code></td><td>⬜ ARC-09, da progettare (D13)</td></tr>
+    </table>
+    <p><strong>I prezzi, come controllo.</strong> Stadio 0: <strong>42.000 mo</strong> nella scheda italiana del giocatore, <strong>62.000 gp</strong> nella prima versione inglese. Stadio 1: <strong>52.000 gp</strong>, e l'analisi dice «aumentato per la doppia natura divina», che torna col 42.000 e non col 62.000: vale la scheda italiana. Stadio 2: <strong>163.400 gp</strong>, voce per voce nel master <em>Revised</em>; la tabella non conta il <em>Passo d'Ombra</em> né i poteri di crisi, che quindi sono gratis nel prezzo. Nessun prezzo nasconde un potere che le schede non abbiano.</p>
+    </div>
+
+    <div class="dm">
+        <h3>I tre poteri di crisi di Lathander</h3>
+        <p>Da <code>Lord of Sun and Shadow - Power Analysis &amp; Transformation Choices.pdf</code>. Solo contro una trasformazione involontaria:</p>
+        <ul>
+            <li><strong>Sfida dell'Alba</strong>: <em>Spezzare Incantamento</em> LI 15°, luce del giorno 3 m per 1 round/DV, immunità mentale 24 ore. <strong>1/settimana</strong>.</li>
+            <li><strong>Purificazione Solare</strong>: 1d6 divini/DV alle aberrazioni entro 9 m, cura metà, toglie un livello negativo; l'anello spento 24 ore.</li>
+            <li><strong>Santuario del Crepuscolo</strong>: barriera di luce e ombra; <strong>RI 15 + DV</strong> contro ammaliamento e necromanzia; <strong>+4 sacro</strong> ai TS contro morte e risucchio; 1 ora per DV; <strong>1/mese</strong>. ⚠️ È in questa sola fonte: il <em>Revised</em> non l'ha più.</li>
+        </ul>
+        <p>⚠️ In questa fonte il <em>Passo d'Ombra</em> non è fra i poteri dell'anello: l'analisi lo attribuisce alla classe di prestigio. Il Riforgiato ce l'ha di nuovo.</p>
+    </div>
+
+    <div class="dm">
+        <h3>La crisi di Cerebromorphosis, e la scelta di Artemis</h3>
+        <p>Tre giorni di tiri salvezza (CD 19): Tempra all'alba per Lathander, Volontà al tramonto per Mask. Al terzo giorno le divinità offrono quattro strade (master: <code>Artemis/Cerebromorphosis/Italiano/cerebromorphosis_italian-final.md</code>). <strong>Artemis ha scelto la C, il Rifiuto</strong>: <em>«Rifiuto le vostre offerte, il mio sentiero è mio.»</em></p>
+        <table>
+            <tr><th>Effetto della C</th><th>Master italiano (eletto)</th><th>PDF inglese</th></tr>
+            <tr><td>allineamento</td><td>invariato</td><td>—</td></tr>
+            <tr><td>poteri di Lathander</td><td>restano solo di crisi, «con penalità»</td><td>−2 al livello incantatore; Sfida dell'Alba 1/mese invece di 1/settimana</td></tr>
+            <tr><td>bonus permanente</td><td><strong>Fortezza Mentale</strong>: +2 ai TS contro l'influenza divina</td><td>+2 intuizione ai TS contro ammaliamento</td></tr>
+            <tr><td>altro</td><td>la porta di Lord of Sun and Shadow resta aperta, se diventa Caotico Buono</td><td>poteri di Mask raddoppiati per un mese · anello non rimovibile 30 giorni · difetto <em>Sfiducia nell'intervento divino</em> (−2 ai TS contro incantesimi divini benefici) · un talento bonus (Riflessi Fulminei o Volontà di Ferro) · riconoscere tipo e DV di un'aberrazione, Conoscenze CD 20</td></tr>
+        </table>
+        <p><strong>Domanda D12</strong>: quali di questi effetti stanno sulla scheda di Artemis? Nessuno compare in <code>state.md</code> né in <code>campaign-party.md</code>. Proposta: la <strong>Fortezza Mentale</strong> del master italiano, che è il master eletto; la penalità ai poteri di crisi è superata dalla riforgiatura, perché il <em>Revised</em> li dà senza penalità.</p>
+        <p>Il rifiuto è anche il motivo per cui oggi le divinità <strong>osservano e non aiutano</strong> (il Sogno della Doppia Maschera, ARC-09).</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione anello · S1 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+
+</body>
+</html>

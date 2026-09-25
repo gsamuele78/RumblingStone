@@ -103,6 +103,21 @@
       ],
       "stato": "in-volo",
       "dove": "PR #177 aperta: le pagine stampabili della Collana dei Semi Eterni e di Durik, giocatrice e DM"
+    },
+    {
+      "ref": [
+        "origin/claude/artefatti-audit-corona-2gemme"
+      ],
+      "stato": "in-volo",
+      "dove": "PR in bozza: audit dei poteri degli artefatti, Corona e Anello a stadi, versioni (ADR-0070, TRASVERSALE T10)"
+    },
+    {
+      "ref": [
+        "pr/175",
+        "origin/claude/corredo-della-serata"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #175 aperta (bozza): il corredo della serata e l'apparato di lavoro fuori dalla stampa, ADR-0070"
     }
   ],
   "file": [

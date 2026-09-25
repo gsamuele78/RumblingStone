@@ -5,6 +5,14 @@ These are custom items not found in any published sourcebook. For canonical FR a
 
 Sources: Campaign files in `PG/Artefatti/`, arc documents `06_`–`09_`
 
+**Stages and versions (ADR-0071, 2026-09-25).** Every artifact grows in
+**stages** (a ritual, a quest or a choice opens each one, *Weapons of Legacy*
+style), and every stage has a player page and a DM page. Which page is live,
+and its version, is in the registry `PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md`
+§0; the power-by-power audit with sources and the open DM questions (D1-D13) is
+`PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md`. Powers marked there
+«da confermare col DM» are **not canon** until the DM answers.
+
 ---
 
 ## ARTIFACT 1: AEGIS FANG (Thorik's Axe)
@@ -18,21 +26,25 @@ Sources: Campaign files in `PG/Artefatti/`, arc documents `06_`–`09_`
 
 Adapted from Forgotten Realms lore (originally Wulfgar's warhammer). In this campaign, Aegis Fang is a **dwarven waraxe** that bonded with Thorik during his death and resurrection at Drellin's Ferry. The weapon is a divine instrument of Moradin.
 
-### Current Stats (Pre-Full Awakening)
+### Current Stats (Stage 0, Pre-Full Awakening)
 
-- **Type:** +2 Dwarven Waraxe, Returning
-- **Special:** Bonded to Thorik; cannot be permanently lost; returns when thrown (as Returning)
-- **Alignment:** Lawful Good
+- **Type:** +2 Dwarven Waraxe, Returning, *Dragondoom* (MIC p. 33)
+- **Special:** Bonded to Thorik; returns when thrown (as Returning)
+- **Alignment:** **Lawful Neutral** (the original sheet `Aegis Fang.docx`; this file said Lawful Good until 2026-09-25)
+- **Sentient:** Int 10, Wis 15, Cha 15, **Ego 14**; speech, telepathy, darkvision 18 m, hearing
+- **Lesser powers:** *cure moderate wounds* 3/day, *resist energy* 1/day
 - **Weight:** 4 kg
+- **Tonight (2026-09-25), fresco A7:** if Thorik rests the axe on the frame, it speaks and gains the **bane vs Fauci di Palude** (+2 attack, +3d6, ×4 crit, 1/encounter *shaken* 1d4 rounds, Will DC 22). Only vs Fauci; vs other dragons it stays +2d6 Dragondoom
 
 ### Full Awakening (After Siege of the Eternal Forge Ritual)
 
 When Corona di Adamantio is fully awakened and Thorik completes all Legacy Rituals:
 
-- Becomes **+4 Dwarven Waraxe, Sacred, Returning**
-- +2d6 Sacred damage vs. aberrations, undead, and dragons
-- CL 18; telepathy with dwarves (90m range)
-- Thorik's presence makes dwarven allies immune to Fear
+- Becomes **+4 Dwarven Waraxe, Holy, Returning**; Int 16, Wis 17, Cha 18, **Ego 20**
+- +2d6 Sacred damage vs. evil **and** vs. aberrations, undead, and dragons
+- *Divine Channeling of Moradin* 1/day: *heal* (CL 15) on all allied dwarves within 9 m
+- Telepathy with dwarves (90 m); dwarves near Thorik (18 m) are immune to fear
+- **When:** at Ritual 4 (`ARC07-DEF-4` Scene 12, Moment 3), as a scene. The player's crown sheet of 22/10/2025 already said «after completing Ritual: Siege of the Eternal Forge»
 
 ### Synergies
 
@@ -60,6 +72,8 @@ Forged by Moradin from a shard of creation — not merely a crown of power but "
 - **Material:** Adamantine and deep crystal
 - **Alignment:** Lawful Good
 - **Prerequisites:** Dwarf or Half-Dwarf, BAB +5, True Faith in Moradin OR bonded with Aegis Fang
+- **Costs paid by the bearer:** −2 DEX and +4 CHA on wearing it, and it cannot be removed voluntarily (opened only to set the Emerald) — DM 2026-09-04; −2 DEX / +2 CON from the Ritual 3 pledge. DEX 10 → 8 → 6
+- **Four stages** (player + DM page each): S0 worn · S1 Topaz · S2 Emerald (**today**) · S3 Ruby (at Ritual 4)
 
 ### Active Powers (Currently Available)
 
@@ -75,15 +89,18 @@ active; only Topaz gem lit (state.md §0).*
 
 1. **Adamantine Will (Su):** Immunity to charm/compulsion + +4 racial vs mental effects, on natural ground. *Unlocked by: Anvil of the World (Ritual 3, in progress)*
 2. **Mantle of Stone and Spirit (Su):** Continuous Mind Blank; epic/evil DR 5; Commune 1/month in an Earth Node. *Unlocked by: Anvil of the World (Ritual 3)*
-3. **Aura of the Eternal Forge (Su):** One-time full heal + divine buffs to time-travelers and all dwarves within 30 m. *Unlocked by: Siege of the Eternal Forge (Ritual 4, final)*
+3. **Aura of the Eternal Forge (Su):** after the duel, not on arrival; lasts until dawn the first time, then **1/week**: *divine power* + *protection from evil* to the four; to every dwarf within 30 m also *bless* and one *stone shape*; +4 morale to attacks and saves for dwarves who see Thorik; enemies Will DC 20 or shaken 1 min. The healing half is the portal's healing (Scene 1) and does not stack. *Unlocked by: Ritual 4* (DM 2026-09-20)
+4. **Crown of Protection +3** and **Sentience** (warm or cold, by the Gift choice). With the Gift given, +2 or +3 is open question D5. *Unlocked by: Ritual 4*
+
+**Waiting for the DM (D1, D3, D4 of the audit):** the **Resonance** with Aegis Fang from the played modules (+2 sacred to all saves, +1d6 sacred vs chaotic or evil, *Ancestral Recall* 1/day, *Echo of Heroes* 1/combat); the four gifts of wearing it (fear immunity, darkvision 36 m, *Aura of Command* 1/day, *Guidance of Moradin* 1/day); the three Topaz powers of P3 (*Sense of Time*, *Temporal Vision*, *Slow Time* 1/day). Not canon until answered.
 
 ### Three Sacred Gems
 
 | Gem | Color | Ritual to Activate | Status | Power |
 |---|---|---|---|---|
 | **Immutable Time** | Topaz | Fire Plane ritual | ✅ ACTIVATED | Time travel 1/month from Earth Node; activation = 1 hour of concentration (DM ruling 2026-07-04); costs 1d10 years aging |
-| **True Earth** | Emerald | Earth Plane ritual | ⏳  ACTIVATED AFTER ANVIL OF THE WORLD | Wall of Stone / Heal Earth / Controlled Earthquake 1/week (costs 1,000 gp) |
-| **Dwarven Might** | Ruby | Battle 1,000 yrs before (≈372 DR) | ⏳ ACTIVATES AT DAWN | Buff self+allies with strength/courage 1/week; -2 STR for 24h after |
+| **True Earth** | Emerald | Earth Plane ritual (Ritual 3, played 2026-07-31) | ✅ ACTIVATED | Wall of Stone / Heal Earth / Controlled Earthquake 1/week (costs 1,000 gp); with the Topaz it steadies the time journey |
+| **Dwarven Might** | Ruby | Ritual 4, after the duel at ≈372 DR | ⬜ enters at Ritual 4, **single use: spent on the return to 1372** (D16) | none as a power: it is the engine of the journey home. The old «1/week buff, −2 STR» is superseded |
 
 ### Legacy Rituals (Sequential)
 
@@ -108,6 +125,17 @@ Originally forged during the Era of Torments (Time of Troubles, 1358 DR) when go
 ### Physical Appearance (Reforged)
 
 Band of polished obsidian with gold veins (Lathander), silver glyphs (Mask), and violet core (warlock's chaos). To non-chosen, it appears as a simple cobalt blue aquamarine ring.
+
+### Stages (ADR-0071)
+
+| Stage | Trigger | Powers | State |
+|---|---|---|---|
+| S0 · the chaos ring | bond with Artemis | Enhanced Vision, Wings of Shadow, Shadow Step; two dormant crisis powers. 42,000 gp | past |
+| S1 · the two deities | Lathander and Mask claim it; Cerebromorphosis crisis in Belkram's Tomb | Mask awake: +4 Spot in darkness, +2 deflection AC while flying, 3/day +1d6 electricity on a charge, *Mask's Whispers* (ghost sound 3/day, silence 1/day, +2 Move Silently/Hide); three crisis powers incl. *Twilight Sanctuary*. 52,000 gp | past, table use to confirm (D11) |
+| S2 · Reforged | Artemis **refused** Lord of Sun and Shadow (crisis **Option C**, «my path is mine»), then the Eternal Forge | the list below. 163,400 gp | **today** |
+| S3 · Ultimate Chaos | Invisible Tower: Zalkatar defeated, or purified by giving up a ring power | **not written anywhere** | ARC-09, to design (D13) |
+
+Option C effects on Artemis's sheet are open question D12 (proposal: the Italian master's *Mental Fortress*, +2 on saves vs divine influence).
 
 ### Stats
 
@@ -166,18 +194,27 @@ Forged by Moradin from two blocks of adamantine — immersed in Fire Plane magma
 - **Intelligence (Full):** INT 14, WIS 16, CHA 16, Ego 18
 - **Prerequisites:** Dwarf, non-evil/non-chaotic, BAB +11, unarmed or dwarf bludgeon style, honors Moradin
 
+> **Names follow the player's sheet** (`05_Bracieri_Gemelli_Scheda_PG_Completa`,
+> and the Fire PDF): *Pugni di Magma*, *Salto Fiammeggiante*, *Passo di Brace*.
+> `01_Bracieri_Gemelli_di_Moradin.md` still has the first draft's names (*Pugno
+> di Moradin*, *Salto Infuocato*); the sheet wins (DM rule 2026-09-20: the sheet
+> the player read decides).
+
 ### Fire Phase Powers (✅ AWAKENED — Baptism of Flames)
 
 1. **Dragon Bane (Dragon Doom):** +2 attack, +2d6 damage vs. dragons
 2. **Power Attack Mastery:** Reduce PA penalty by 1 (min 0)
-3. **Pugno di Moradin (3/day, Su):** Swift; +WIS sacred damage to unarmed, push 5 ft on hit (Fort DC 18)
+3. **Pugni di Magma (3/day, Su):** Swift; for 1 round +WIS fire damage on unarmed strikes; hit enemies Fort DC 18 or sickened 1 round
 4. **Colpi del Fuoco (3/day, Su):** Standard attack, +4d6 fire, push 5 ft (Fort DC 18), adjacent 2d6 fire (Ref DC 18)
 5. **Cuore di Brace:** Fire Resistance 10 (continuous)
-6. **Salto Infuocato (3/day, Su):** Move action; special jump (d20 + STR + Jump ranks + WIS), landing deals 2d6 fire in 3m radius
-7. **Jump Bonus:** +10 competence to Jump (passive while charges remain)
+6. **Salto Fiammeggiante (3/day, Su):** Move action; special jump (d20 + STR + Jump ranks, distance scaled by WIS), landing deals 2d6 fire in 3 m radius
+7. **Passo di Brace:** +3 m speed and +10 competence to Jump while a Salto use remains
 8. **Sentient Voice:** Whispers dwarven advice; refuses powers if wielder betrays dwarven ideals
+9. **Forge Blessing** (permanent, DM 2026-07-04): devastation charges 4/day (Belt of Devastation, D17), free charge on natural 18-20, *shatter* 1/day after a confirmed critical
 
-### Earth Phase Powers (⏳ COMPLETING — Trial of the Deep Gallery)
+### Earth Phase Powers (✅ AWAKENED — Trial of the Deep Gallery, played)
+
+0. **Diventare una Collina** (1/day, unlocked by Terros 2026-07-31): Large size 1 min; first time automatic when a Huge+ foe brings Tordek under half hp, then move action only if a Huge+ creature is on the field, an ally is at 0 hp, or Tordek is under half hp
 
 1. **Pelle di Scorie e Pietra:** DR 5/adamantine (continuous)
 2. **Pugno Frana (3/day, Su):** Standard attack, +4d6 bludgeoning, target prone (Ref DC 19), adjacent must Balance DC 15 or prone

@@ -389,6 +389,40 @@
 - **Accettazione** ✅ (parte cross-link): ogni eco della tabella ha il suo
   aggancio nel file bersaglio; nessun eco orfano.
 
+### T10. Audit dei poteri di tutti gli artefatti, stadi e versioni (2026-09-25)
+
+Richiesta del DM: *«la scheda di Thorik non è aggiornata correttamente… controlla
+bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello di
+*Weapons of Legacy* con una controparte DM, e il versionamento. Audit:
+`PG/Artefatti/ARTEFATTI-AUDIT-POTERI-2026-09-25.md`. Decisione strutturale:
+[ADR-0071](adr/ADR-0071-gli-artefatti-crescono-per-stadi-e-ogni-pagina-ha-una-versione.md).
+
+- [x] **T10-a** [engine: Opus, sessione principale · effort: xhigh · qualità: il DM riconosce la Corona che ricordava; nessun potere senza fonte] — audit potere per potere dei cinque artefatti su master, schede, PDF, moduli giocati e storia; la **Corona in quattro stadi**, otto pagine; i Doni v4-bis su Aegis, Anello, Bracieri; il registro delle versioni e `test_versioni_artefatti.py`
+- [x] **T10-b** [engine: Opus · effort: alto · qualità: ogni stadio ha una fonte citata] — **l'Anello in quattro stadi**: S0, S1 (dal PDF di Lord of Sun and Shadow), S2 (il Riforgiato), S3 solo DM
+- [ ] **T10-c** [engine: Opus · effort: alto · qualità: pagine S0/S1 dai file `04_` e dal PDF «Fuoco», S3 solo dopo la risposta del DM] — **i Bracieri a stadi**: dormienti, Fuoco, Terra (fatto), un terzo stadio da progettare
+- [ ] **T10-d** [engine: Opus · effort: alto · qualità: la materia di ARC-09 P1B/P1C riportata, non riscritta] — **la Collana a stadi**: i semi prima del rito, Radicata (fatto), Fiorita, Foresta che Cammina
+- [ ] **T10-e** [engine: Sonnet · effort: medio · qualità: i numeri di `05_Aegis_Fang_Final_Awakening.html`] — **Aegis Fang stadio 1**, giocatore e DM
+- [ ] **T10-f** [engine: Sonnet · effort: medio · qualità: ogni voce col riferimento alla tabella dei prezzi SRD] — i **prezzi voce per voce** della Corona e dell'Anello, per sostituire le stime a parole che si contraddicono
+- [ ] **T10-g** [engine: Opus · effort: xhigh · qualità: conferma esplicita del DM] — applicare le risposte alle domande qui sotto: togliere le marcature «da confermare», alzare la revisione delle pagine toccate, aggiornare `SINERGIE` (D1) e la skill
+
+<!-- decisioni-dm: TRASVERSALE-ARTEFATTI -->
+
+| # | Domanda | Proposta |
+|---|---|---|
+| D1 | La **Risonanza** fra Corona e Aegis Fang dei moduli giocati (+2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*, *Eco degli Eroi*) è attiva dal P1? | Sì; il *Bane* +3d6 ×4 solo contro Fauci (A7) |
+| ~~D2~~ | Il blocco «Sinergia con Aegis Fang» del master vale dal Rituale 1? | Chiusa dalla fonte: il PDF del giocatore del 22/10/2025 lo mette al Rituale 4 |
+| D3 | I bonus di quando Thorik ha indossato la Corona (immunità alla paura, scurovisione 36 m, *Aura di Comando*, *Guida di Moradin*)? | Sì a tutti e quattro |
+| D4 | I poteri del Topazio in P3 (*Percezione del Tempo*, *Visione Temporale*, *Rallentare il Tempo*) e il «+1 a tutti i poteri»? | Sì ai tre, no al +1 generico |
+| D5 | La deflessione dopo il Rituale 4 se Thorik ha donato: +2 o +3? | +2 |
+| D6 | Al portale per −1.000: 1d10 anni a Thorik, e pegno o Tempra CD 25 ad Artemis? | Sì a entrambi |
+| D7 | RD del Manto: 5/epico o 5/epico e male? | 5/epico |
+| D8 | La Senzienza della Corona: Int 16, Sag 17, Car 18, Ego 20? | Sì, e l'Ego non si tira contro Thorik |
+| D9 | Anello: i dettagli di crisi della prima versione, e la *Dualità Armoniosa*? | No e no: vale il *Revised* |
+| D10 | I livelli minimi del libro della Corona contano? | No, decide il rituale |
+| D11 | Lo stadio 1 dell'Anello (Mask sveglio) è stato usato al tavolo? | Lo sa il DM; la pagina resta come storia |
+| D12 | Gli effetti della Opzione C sulla scheda di Artemis? | La *Fortezza Mentale* del master italiano |
+| D13 | I poteri del Caos Ultimo (Anello, stadio 3)? | Da progettare col DM; una forma proposta sulla pagina DM |
+
 ---
 
 ## §4 — ORDINE DI ESECUZIONE, ENGINE E BUDGET
@@ -420,6 +454,7 @@
 - [x] T1 · [x] T2 · [x] T3 · [x] T4 — **LOTTO T-A COMPLETO (2026-07-03)**
 - [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (resta opzionale/estetico solo l'SVG dei 16 narrativi)
 - [x] T6a (sessione 3, 2026-07-03) · [x] T6b (sessioni 6-8, 2026-07-04: Aegis master + Cerebro eletto + Corona consolidata/riconciliata + campaign-artifacts sync) · [x] T6c (sessione 11, 2026-07-04: doppia colonna §6, conferma DM T-D10) — **LOTTO ARTEFATTI COMPLETO**
+- [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [ ] T10-c · [ ] T10-d · [ ] T10-e · [ ] T10-f · [ ] T10-g (12 domande al DM)
 - [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) — schede, sinergie, propagazione
 - [x] T-D1…T-D12 — decisioni acquisite (2026-07-03/04); **ZERO domande DM
   aperte** (sessione 11, 2026-07-04: risolti Corona×2, Bracieri, Campo

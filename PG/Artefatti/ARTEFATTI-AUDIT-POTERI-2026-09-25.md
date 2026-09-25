@@ -42,9 +42,16 @@ Scene 1, 12, 13; la regia della serata; `campaign/state.md` §1, §6, §7.E;
 `_ARCHIVIO/doni-v1-2026-09-12/`; per l'Anello le due generazioni in
 `PG/Artefatti/` e la cartella `Old/`; per Aegis Fang il `.docx` originale.
 
-⚠️ **Non letti**: i PDF binari dell'Anello in `Old/` e in `Cerebromorphosis/`
-(sono export delle versioni `.md` lette), e i log delle sessioni vere, che nel
-repo non ci sono: `campaign/sessions/` ha una sessione di maggio e i log
+**I PDF, letti anche loro** (testo estratto con `pypdf`, 17 file): il PDF del
+giocatore della Corona (`LaCorona_di_Adamantio.pdf`, stampato il 22/10/2025) e
+quello DM; `Aegis Fang.pdf`; `Ring of Chaotic Illumination (Reforged).pdf`, il
+PDF di `Old/` e quello della seconda generazione; `Bracieri Gemelli di Moradin
+(Fuoco).pdf`; la scheda PCGen di Tordek; i sei PDF di `Cerebromorphosis/`,
+fra cui l'analisi di Lord of Sun and Shadow. Il PDF DM della Corona coincide
+col master markdown, che ne è la conversione; Aegis e Anello *Reforged*
+coincidono coi loro master. Quello che i PDF aggiungono è in §1.5 e §3.
+
+⚠️ **Non letti**: i log delle sessioni vere, che nel repo non ci sono: `campaign/sessions/` ha una sessione di maggio e i log
 retroattivi `[INFERRED]`. Dove il tavolo ha deciso a voce e nessuno l'ha
 scritto, questo audit non lo può sapere.
 
@@ -100,12 +107,36 @@ scheda giocatore · **02** pagina a 2 gemme prima di questo audit · **Sk**
 | Smeraldo: **Chiave del Tempo** (stabilizza il viaggio) | — | ✅ DEF-1 §9 | — | ❌ | — | — | DEF-1, canone giocato. Aggiunto alla pagina come tratto, non come potere attivabile |
 | Rubino | ⚠️ 1/settimana, sbloccato al Rit. 3 | ✅ monouso | ⚠️ 1/settimana | «vuota» | ⚠️ «si accende all'alba» | ✅ speso | **monouso, entra al Rituale 4 e si spende nel ritorno**: D16, `DEF-4` Scene 12-13 (DM 2026-09-19). Il Rubino settimanale del master è superato |
 | Rituale 4 → Corona +3 | ✅ | ✅ DEF-4 | — | solo DM | ✅ | ✅ | tutti. Con il Dono: **domanda D5** |
-| Rituale 4 → Senzienza | ⚠️ «dopo il Rituale 1, con Aegis» | ✅ DEF-4 | ⚠️ «quando impugni entrambi» | solo DM | — | ✅ | **Rituale 4**: `DEF-4` Scena 12 (DM 2026-09-19), `state.md`, e la scheda Fase 2 che dice *«la piena senzienza al completamento»*. Vedi D2 |
+| Rituale 4 → Senzienza | ⚠️ «dopo il Rituale 1, con Aegis» | ✅ DEF-4 | ⚠️ «quando impugni entrambi» | solo DM | — | ✅ | **Rituale 4**: `DEF-4` Scena 12 (DM 2026-09-19), `state.md`, la scheda Fase 2 (*«al completamento»*) e soprattutto il **PDF del giocatore** del 22/10/2025: *«dopo aver completato Ritual: Siege of the Eternal Forge»*. D2 chiusa dalla fonte |
 | Rituale 4 → Aura della Forgia Eterna | ⚠️ evento unico all'arrivo | ✅ DEF-4 Momento 4 | — | ❌ | ⚠️ evento unico | ✅ matrice | **dopo il duello, fino all'alba la prima volta, poi 1/settimana**: DM 2026-09-20 |
 | Rituale 4 → «la Gemma del Tempo si disintegra» | ✅ | ❌ | — | — | — | — | **superato**: il Topazio resta, si spende il Rubino (D16). Il master descriveva un Rituale 4 di una scena sola |
 | Rituale 4 → costi | 1d10 anni + pegno alleati | «senza ulteriori costi» (DEF-4 Scena 12) | — | — | — | — | il rito non costa niente; il **viaggio** col Topazio sì: **domanda D6** |
 | Costi dei rituali («Rituale della Donazione») | R1 2.500 mo · R2 12.500 mo · R3 40.500 mo + pegno | R2 pagato (Fase 2); R3 solo pegno (DEF-1) | — | ❌ | — | — | riportati nel registro della pagina. R1: al tavolo non registrato |
 | Giuramento del Portatore | ✅ | — | ✅ | ❌ | — | — | reintegrato |
+
+### 1.5 · Cosa aggiunge il PDF del giocatore (22/10/2025)
+
+È la prima scheda stampata, quella che il DM ricorda «con molti più poteri e
+i riti da fare». Coincide con `00_scheda_Giocatore.md` tranne tre righe:
+
+- il **Manto**: *«Mente Vuota… e una riduzione al danno epica e malvagia»*.
+  Il giocatore ha letto «epica e malvagia» qui e «5/epico» sulla pagina del
+  2026-07-31: D7 resta aperta, con questa informazione in più;
+- il **Rubino** «richiede Anvil of the World»: superato da D16;
+- la **sinergia con Aegis Fang** si attiva *«dopo aver completato Ritual:
+  Siege of the Eternal Forge»*, con «Liv Inc 18°»: chiude D2.
+
+### 1.6 · I prezzi, come controllo
+
+Il DM ha suggerito di usare i calcoli di prezzo per scoprire poteri mancanti.
+Per la Corona le fonti danno **stime a parole, non tabelle**: ~85.000 mo a una
+gemma, ~190.000 a due, ~315.000 a tre (quest'ultima col Rubino settimanale,
+superato). Non contano poteri che le schede non abbiano. Però **si
+contraddicono**: la stima a tre gemme dà alla sola *Mente Vuota* ~240.000 mo,
+e la pagina a due gemme, che la *Mente Vuota* ce l'ha già, dice ~190.000 in
+tutto. Rifarle con la tabella dei prezzi della SRD è il lotto T10-f. Le due
+stime degli stadi 0 e 3 che avevo scritto in una prima stesura delle pagine
+non avevano fonte, e sono state tolte.
 
 ### 1.3 · La sinergia con Aegis Fang: due strati, che il master confonde
 
@@ -168,7 +199,10 @@ moduli giocati tengono separate:
 | `Old/` | export delle due generazioni, deprecati |
 | `00_Ring_of_Chaotic_Illumination_Revised.md` | ⭐ master (A10), inglese, *Reforged* |
 | `00_Ring-SCHEDA-GIOCATORE-STATO-ATTUALE.md` | scheda viva, con il Dono |
-| `00_Ring_Riforgiato.html` / `_DM.html` | **definitive dopo questo audit**; prima mancava il Dono |
+| `00_Ring_Riforgiato.html` / `_DM.html` | **definitive dopo questo audit** per lo stadio 2; prima mancava il Dono |
+| `Artemis/Cerebromorphosis/…Lord of Sun and Shadow - Power Analysis….pdf` | **lo stadio 1 dell'Anello**, che nessuna versione successiva riportava: i poteri di Mask svegli, tre poteri di crisi, le quattro scelte A-D della crisi |
+| `Artemis/Cerebromorphosis/Italiano/cerebromorphosis_italian-final.md` | master eletto del sistema di crisi: la **Opzione C, Rifiuto**, è la scelta di Artemis |
+| `Old/Ring_of_chaotic_illumination_pg*.html` | la scheda italiana del giocatore dello stadio 0: **42.000 mo**, i tre poteri, i comandi in infernale |
 | `Artemis/Cerebromorphosis/` | sottosistema di crisi, non poteri dell'anello |
 | `PrestigeClass/lord_sun_shadow/` | percorso rifiutato: nessun potere in gioco |
 
@@ -185,6 +219,27 @@ moduli giocati tengono separate:
 | *Parlare coi Morti* sul corpo di Hella 1/giorno | ❌ | ❌ | — | ✅ P1 §7, «fino alla resurrezione» | temporaneo: **scade stasera**. Nota DM |
 | Il Dono (1d6 di *Eldritch Blast*) e le reazioni | scheda md ✅ | ❌ | — | `DEF-3` §5 | aggiunto |
 | Sinergie S1-S3 | ✅ | ✅ | — | P2 §9 (+4 all'Alba Oscura) | S1-S3 come nel master delle sinergie (T4, ripetuto dal Revised) |
+
+### 3.1 · Gli stadi dell'Anello
+
+| Stadio | Innesco (dalle fonti) | Poteri | Pagine |
+|---|---|---|---|
+| **S0** · l'anello del caos | il legame con Artemis | Visione Potenziata, Ali d'Ombra, Passo d'Ombra; due poteri di crisi dormienti. **42.000 mo** | `01_Anello_S0_Originale{,_DM}` |
+| **S1** · le due divinità | Lathander e Mask; la crisi di Cerebromorphosis nella Tomba di Belkram | Mask sveglio: +4 Osservare al buio, **+2 deviazione in volo**, 3/giorno +1d6 elettricità in carica, **Sussurri di Mask**; crisi: Sfida dell'Alba, Purificazione Solare, **Santuario del Crepuscolo** (1/mese, solo qui). **52.000 mo** | `02_Anello_S1_Due_Divinita{,_DM}` |
+| **S2** · il Riforgiato | il **Rifiuto** di Lord of Sun and Shadow (Opzione C) e la Forgia | quattro costanti, sei attivabili, due di crisi. **163.400 gp** | `00_Ring_Riforgiato{,_DM}` |
+| **S3** · il Caos Ultimo | la Torre Invisibile: Zalkatar sconfitto, o purificato rinunciando a un potere (P2A-PARTE4) | **nessuna fonte li scrive** | `04_Anello_S3_Caos_Ultimo_DM` (solo DM) |
+
+**I prezzi.** 42.000 mo (scheda italiana dello stadio 0) contro 62.000 gp
+(prima versione inglese); l'analisi dello stadio 1 dice 52.000 «aumentato per
+la doppia natura», che torna solo col 42.000. La tabella voce per voce del
+*Revised* (163.400 gp) non conta il *Passo d'Ombra* né i poteri di crisi. Nessun
+prezzo nasconde un potere che le schede non abbiano.
+
+**La Opzione C.** Il master italiano le dà la *Fortezza Mentale* (+2 ai TS
+contro l'influenza divina) e poteri di Lathander solo di crisi «con penalità»;
+il PDF inglese la fa molto più pesante (−2 LI, Sfida dell'Alba 1/mese, un
+difetto, un talento bonus, anello non rimovibile 30 giorni). Nessuna delle due
+è sulla scheda di Artemis in `state.md` o in `campaign-party.md`: domanda D12.
 
 ---
 
@@ -226,8 +281,9 @@ Doni sono già caselle. **Definitive, nessuna modifica.**
 
 | File | Cosa |
 |---|---|
-| `02_Corona_2_Gemme.html`, `02_Corona_2_Gemme_DM.html` | riscritte complete |
-| `03_Corona_3_Gemme.html` | banner «superata, non stampare» |
+| `00…03_Corona_*{,_DM}.html` | **otto pagine a stadi**, giocatore e DM; le revisioni precedenti di 01, 02, 02_DM e 03 in `_ARCHIVIO/pagine-v1-2026-09-25/` |
+| `01_Anello_S0_Originale{,_DM}.html`, `02_Anello_S1_Due_Divinita{,_DM}.html`, `04_Anello_S3_Caos_Ultimo_DM.html` | **gli stadi dell'Anello** che mancavano |
+| `plans/adr/ADR-0071-…`, `scripts/tests/test_versioni_artefatti.py`, `skills/REGISTRO-NORME-EDITORIALI.md` | il versionamento, il suo gate, la norma registrata |
 | `00_SCHEDA-GIOCATORE-STATO-ATTUALE.md` (Corona) | nota 3-ter dei Doni v1 corretta; rimando alle pagine |
 | `LaCorona_di_Adamantio-DM.md` | banner con i quattro punti superati |
 | `00_Aegis_Fang_Stadio0{,_DM}.html` | Dono v4-bis, sinergie, Stadio 1 e A7 lato DM |
@@ -249,11 +305,40 @@ Le stesse domande sono in `plans/PIANO-REVISIONE-TRASVERSALE-COERENZA-E-QUALITA.
 | # | Domanda | Proposta |
 |---|---|---|
 | D1 | **La Risonanza fra Corona e Aegis Fang** (P1 §6, P2 §9, la quick reference data al tavolo): +2 sacro a tutti i TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale* 1/giorno, *Eco degli Eroi* 1/combattimento. Il master delle sinergie l'ha tolta il 2026-07-03 senza dirlo. È attiva? | **Sì**, dal P1: è nel modulo giocato e nell'handout. Entra in `SINERGIE` come **S0**. Il *Bane* +3d6 ×4 invece resta **solo contro Fauci**, come dice A7: contro gli altri draghi vale il +2d6 della *Dragondoom* |
-| D2 | **Il blocco «Sinergia con Aegis Fang» del master** (senzienza, +4 sacra, telepatia, *Guarigione*) si sblocca «dopo il Rituale 1»? | **No, al Rituale 4**, com'è in `DEF-4` Scena 12, in `state.md` e nella scheda Fase 2 (*«al completamento»*). Il master mescola i due strati di §1.3 |
 | D3 | **I bonus di quando l'ha indossata** (P1 §5): immunità alla paura, scurovisione 36 m, *Aura di Comando* 1/giorno (*Comando* CD 15, LI 13), *Guida di Moradin* 1/giorno. Il 2026-09-04 ha confermato solo +4 CAR e non-rimovibilità dallo stesso blocco | **Sì a tutti e quattro**: stanno nello stesso elenco di cui metà è già canone, e nessuna fonte li revoca |
 | D4 | **I poteri del Topazio** (P3 §10): *Percezione del Tempo* (sa quanto manca a Hammerfist), *Visione Temporale* (echi del passato dei luoghi), *Rallentare il Tempo* 1/giorno (accelerato 3 round, solo lui). E il «+1 a tutti i poteri della Corona»? | **Sì ai tre**: la *Percezione* era sulla scheda Fase 2 che il giocatore ha letto. **No al +1 generico**: non dice a cosa si somma, e nessuna scheda l'ha mai applicato. ⚠️ *Rallentare il Tempo* e l'Eco del Custode sono entrambi *accelerazione*: non si sommano |
 | D5 | **La deflessione dopo il Rituale 4, se Thorik ha donato**: +2 (il rito aggiunge uno) o +3 (il rito la porta a +3 comunque)? | **+2**. `DEF-3` §5: *«La Corona protegge di 1 in meno, per sempre»* |
 | D6 | **Il Topazio al viaggio a −1.000**: si tira l'invecchiamento di 1d10 anni? E Artemis, che non è né nano né fedele di Moradin, paga il pegno o tira Tempra CD 25? `DEF-4` non ne parla, e la Scena 12 dice «senza ulteriori costi» per il **rito** | **Sì a entrambi, al portale**: sono il prezzo del Topazio, stampato sulla scheda da luglio; D-B esclude i costi del rito, non quelli del viaggio. La *Guarigione del passaggio* non li toglie, come non toglie il −4 DES |
-| D7 | **La RD del Manto**: 5/epico o 5/epico **e** male? | **5/epico**: è quel che la scheda del giocatore dice dal 2026-07-31 |
+| ~~D2~~ | chiusa dalla fonte: il PDF del giocatore del 22/10/2025 mette la sinergia completa con Aegis Fang «dopo aver completato Ritual: Siege of the Eternal Forge» | — |
+| D7 | **La RD del Manto**: 5/epico o 5/epico **e** male? Il giocatore ha letto «epica e malvagia» nel PDF del 2025 e «5/epico» nella pagina del 2026-07-31 | **5/epico**, l'ultima letta |
 | D8 | **La Senzienza della Corona**: il master le dà Int 16, Sag 17, Car 18, **Ego 20**, gli stessi numeri dello Stadio 1 di Aegis Fang. Li ha entrambi? | **Sì, e la Corona non tira mai l'Ego contro Thorik**: `DEF-4` la vuole voce calda o fredda, con un *Want* suo (la montagna), non un padrone. Se il DM preferisce, niente punteggi |
 | D9 | **L'Anello**: (a) i poteri di crisi tornano ai dettagli della prima versione (*Dawn's Defiance* 1/settimana con luce 3 m; *Solar Purge* che cura metà dei danni e toglie un livello negativo)? (b) la *Dualità Armoniosa* dei moduli (+1 carica con la Corona vicina) come si traduce, visto che il Riforgiato non ha cariche? | (a) **No**: vince il Revised, eletto dopo e con la fiducia bassa del DM sulle versioni vecchie. (b) **Tolta**: era scritta per l'anello a cariche della P1, e nessuna scheda del Riforgiato l'ha mai portata |
+| D10 | **I livelli minimi** del libro della Corona (5°, 6°, 13°, 15°, 17°, 20°) contano? Thorik è di 13° e ha già Volontà Adamantina (15°) e Manto (17°) per decisione del DM | **No, decide il rituale**; la tabella dei livelli resta sulle pagine come indicazione |
+| D11 | **Lo stadio 1 dell'Anello** (i poteri di Mask svegli, dall'analisi di Lord of Sun and Shadow) è stato usato al tavolo? | Il DM lo sa; la pagina c'è comunque, perché è la storia dell'anello e spiega da dove viene il Riforgiato |
+| D12 | **Gli effetti della Opzione C** sulla scheda di Artemis: quelli del master italiano, del PDF inglese, o nessuno? | **La Fortezza Mentale** del master italiano (+2 ai TS contro l'influenza divina); la penalità ai poteri di crisi è superata dalla riforgiatura |
+| D13 | **I poteri del Caos Ultimo** (stadio 3 dell'Anello, Torre Invisibile) | Da progettare col DM. Una proposta di forma, non canone, è sulla pagina `04_Anello_S3_Caos_Ultimo_DM.html` |
+
+---
+
+## §8 · Il versionamento (ADR-0071)
+
+Ogni pagina viva porta `artefatto · S<stadio> · r<revisione> · <data>` e sta
+nel registro di `ARTEFATTI-MATRICE-VERSIONI.md` §0; le revisioni superate vanno
+in `_ARCHIVIO/`. Il test `scripts/tests/test_versioni_artefatti.py` li tiene
+allineati, e ha trovato un errore al primo giro (le pagine del Riforgiato
+dicevano «S1», che con i quattro stadi dell'Anello è diventato «S2»).
+
+## §9 · Quello che resta, artefatto per artefatto
+
+| Artefatto | Stadi con le pagine | Stadi da fare | Materia già scritta |
+|---|---|---|---|
+| Corona | 0, 1, 2, 3 | — | — |
+| Anello | 0, 1, 2, 3 (solo DM) | la pagina giocatore di S3 | nessuna: D13 |
+| Aegis Fang | 0 | 1 | `05_Aegis_Fang_Final_Awakening.html`, `DEF-4` Scena 12 |
+| Bracieri | 2 | 0 (dormienti, i requisiti), 1 (Fuoco), 3 | S1: `04_…Fuoco` e il PDF «Fuoco»; S3: nessuna. Il DM suggerisce «ulteriori conseguenze»: il Torneo di Dauth (l'Orbe delle Otto Porte, e Xal'thor che vuole i Bracieri) è il gancio più vicino |
+| Collana | 1 (Radicata) | 0 (i semi prima del rito), 2 (Fiorita), 3 (Foresta che Cammina) | S2: `Arco-Post-Hammerfist-P1B-Cerchio-Treant` (connessione empatica, evocazione di Treant minori, +5 ai tiri del rituale) e `-P1C-Rituale` (il Muro dei Guardiani); S3: `…P3-BATTAGLIA-FINALE-MYTHAL-FOCUS` |
+
+⚠️ **Una nota per il DM sui Bracieri**: la scheda PCGen di Tordek (12° livello)
+porta equipaggiati i *guanti della forza dell'orco*, sullo stesso slot dei
+Bracieri. È una scheda vecchia; se è ancora quella in uso, uno dei due non
+funziona.

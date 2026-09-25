@@ -88,6 +88,7 @@
 | `rumblingstone-editoria` §4.5 | **niente esce dalla colonna**: il codice in linea si spezza dopo `/ _ . -` e fra minuscola e maiuscola, una riga da compilare ogni otto trattini, una tabella da quattro colonne e più di 30 righe va su una pagina A4; una figura su pagina non riserva più spazio della sua altezza | **maggiore** | 🟡 `TestCioCheEsceDallaColonna` e `TestFiguraSuPaginaCompilata` (in `test_booklets.py`) tengono i casi, e `validate_booklets.py --stampa` compila con le regole attive. **Il PDF finito non lo misura nessun cancello**: la misura (sovrapposizioni e testo oltre il bordo) legge il PDF con PyMuPDF, che è AGPL e non è fra le dipendenze; è la procedura di §4 «Il controllo a vista», da ripetere quando si tocca il tema. 🔎 Nasce dal controllo di tutti i volumi dopo la #169, 2026-09-25: 1.474 sovrapposizioni in quattro volumi, poi zero |
 | `ADR-0060` (norma WotC/Paizo) | **caratteristiche e abilità maiuscole** nelle quattro forme meccaniche: `Forza 25` · `Nuotare +9` · `prova di X` con una CD · `bonus di X` | **minore** · `caratteristica_minuscola` | 🟢 `validate_prosa.py --caratteristiche` — 258 occorrenze sotto controllo, soglia **zero**, e **fuori dalle quattro forme non si misura** (una frase discorsiva senza CD non si vede: costerebbe più falsi positivi di quanti errori trovi) |
 | `read-aloud-adulti.md` + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** · `read_aloud_presuppone` | 🟢 `misura_craft --p1` — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
+| `ADR-0071` | ogni **pagina viva di un artefatto** porta la **versione** (`artefatto · S<stadio> · r<rev> · <data>`) che il registro di `ARTEFATTI-MATRICE-VERSIONI.md` §0 le assegna, e una revisione superata va in `_ARCHIVIO/` senza la meta | **maggiore** | 🟢 `test_versioni_artefatti.py` (in `scripts/tests/`) — 20 pagine registrate il 2026-09-25; morde su pagina mancante, versione diversa, pagina viva fuori registro, archivio con la meta. ⚠️ Non vede se pagina giocatore e pagina DM dicono la stessa cosa nella parte comune |
 | `ADR-0059` (MQM) | il **punteggio di qualità pesato**: severità 1 / 5 / **25**, soglia per classe, critico pass-fail | — è il metro, non una norma che un documento possa violare | 🟢 `punteggio_mqm.py --soglia` — 515 documenti, soglie da `specifiche-qualita.yaml` misurate con `--distribuzione`. ⚠️ Copre **4 norme su 40**: entra solo ciò che ha già un rilevatore |
 | `npc-villain-boosting` | **EL ≤ APL+4**, e oltre il tetto serve un `Boost log:` | **critico** | 🔴 non misurato — il controllo **esiste** (`validate_modules.py --tetto-el`, APL letto da `state.md`) ma **non ha superficie**: la forma `**EL**: [N]` che `AGENTS.md` prescrive ha **zero occorrenze**, e i 150 «EL N» nudi mescolano dichiarazioni e menzioni. Prerequisito: marcare gli incontri |
 | `ADR-0060` (norma WotC/Paizo) | le **sigle** di caratteristica — `For 25`, `Des 14`, 688 occorrenze | — non applicabile: le sigle sono maiuscole per costruzione | ⚪ non applicabile — sono maiuscole per costruzione, non c'è niente da controllare |
@@ -98,7 +99,7 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 25 |
+| 🟢 misurate | 26 |
 | 🟡 misurate in parte, con il limite scritto | 9 |
 | 🔴 **non misurate, con la ragione scritta** | 10 |
 | ⚪ non applicabili | 2 |
@@ -115,7 +116,7 @@
 | Severità | Peso | Quante | Cosa ci finisce |
 |---|---:|---:|---|
 | **critico** | 25 | **1** | solo `EL ≤ APL+4` senza `Boost log:`. È l'unica norma **di questo registro** che rende un documento ingiocabile: gli altri due critici di ADR-0059 — statblocco inventato, contraddizione con `state.md` — sono norme di **canone**, e il canone qui non ci abita |
-| **maggiore** | 5 | **15** | le norme **prescrittive** con una forma o un numero: box ≤ 12 righe, la forma del dialogo, le 16 sezioni obbligatorie, lo spotlight sotto il 40%, le tre porte per nodo |
+| **maggiore** | 5 | **16** | le norme **prescrittive** con una forma o un numero: box ≤ 12 righe, la forma del dialogo, le 16 sezioni obbligatorie, lo spotlight sotto il 40%, le tre porte per nodo |
 | **minore** | 1 | **20** | i congegni assenti dove sarebbero serviti e le prassi disattese: `[HDYWTDT]`, i tic dell'IA, la regola Paizo sui read-aloud, le maiuscole di caratteristica |
 | — | — | **3** | e la ragione è scritta accanto: due non sono norme che un documento possa violare (i repertori di pattern, il punteggio stesso), una non è applicabile |
 
@@ -135,7 +136,7 @@ guarda**.
 | | 🟢 misurata | 🟡 in parte | 🔴 per niente | totale | **pesata** |
 |---|---:|---:|---:|---:|---:|
 | **critico** (25) | — | — | **1** | 1 | 0 |
-| **maggiore** (5) | 10 | 3 | 3 | 16 | **3** |
+| **maggiore** (5) | 11 | 3 | 3 | 17 | **3** |
 | **minore** (1) | 11 | 5 | 5 | 21 | **9** |
 | senza peso | 1 | — | — | 3 *(+2 ⚪)* | — |
 

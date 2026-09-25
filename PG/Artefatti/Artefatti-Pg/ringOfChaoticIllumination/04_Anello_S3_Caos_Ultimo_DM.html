@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="versione-artefatto" content="anello · S3 · r1 · 2026-09-25">
+    <title>Anello dell'Illuminazione Caotica — Stadio 3, il Caos Ultimo (VERSIONE DM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0.5in; }
+        body { font-family: 'Times New Roman', serif; font-size: 11pt; line-height: 1.4; color: #2c1810; margin: 0; padding: 20px; background: linear-gradient(135deg, #f8f6f0 0%, #ede8dc 100%); }
+        .header { text-align: center; border-bottom: 3px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+        .class-title { font-size: 24pt; font-weight: bold; color: #5b2a86; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 14pt; font-style: italic; color: #5d4e37; margin: 5px 0; }
+        .quote { font-style: italic; text-align: center; color: #5d4e37; font-size: 11pt; margin: 15px 0; padding: 10px; border-left: 3px solid #daa520; background: rgba(218, 165, 32, 0.1); }
+        .dwarven { font-family: 'Cinzel Decorative', cursive; font-size: 12pt; color: #8B0000; text-shadow: 0 0 2px #daa520; font-weight: bold; font-style: normal; letter-spacing: 1px; text-align: center; margin-top: 5px; }
+        h2 { color: #5b2a86; font-size: 14pt; font-weight: bold; border-bottom: 2px solid #daa520; padding-bottom: 3px; margin: 15px 0 10px 0; text-transform: uppercase; }
+        .power-block { background: rgba(255, 255, 255, 0.6); border: 1px solid #daa520; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        .power-header { font-weight: bold; font-size: 12pt; color: #8B0000; border-bottom: 1px dashed #daa520; padding-bottom: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+        .mechanic { font-family: "Courier New", monospace; font-size: 9.5pt; color: #333; background: #e9e9e9; padding: 2px 4px; border-radius: 3px; border: 1px solid #ccc; margin-bottom: 5px; display: inline-block; }
+        .desc-text { padding-top: 5px; }
+        .requirements { background: rgba(139, 69, 19, 0.05); border: 2px solid #8B4513; padding: 10px; margin: 15px 0; border-radius: 5px; font-size: 10pt;}
+        ul { margin-top: 5px; margin-bottom: 5px; }
+        li { margin-bottom: 4px; }
+        .nuovo { background: #5b2a86; color: #f8f6f0; font-size: 8.5pt; font-weight: bold; letter-spacing: 1px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase; }
+        .block-nuovo { border: 2px solid #5b2a86; background: rgba(91, 42, 134, 0.07); }
+        .spento { background: rgba(120, 120, 120, 0.12); border: 1px dashed #999; color: #555; }
+        .spento .power-header { color: #777; }
+        .attesa { border: 2px dashed #8B0000; background: rgba(139, 0, 0, 0.03); }
+        .incisione { text-align: center; font-family: 'Cinzel Decorative', cursive; color: #8B4513; font-size: 10.5pt; margin: 18px 0 6px 0; letter-spacing: 1px; }
+        table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+        th { background: linear-gradient(135deg, #5b2a86, #2c1840); color: white; padding: 5px 4px; border: 1px solid #654321; }
+        td { padding: 4px 6px; border: 1px solid #c9a55a; background: rgba(248, 246, 240, 0.8); vertical-align: top; }
+        tr:nth-child(even) td { background: rgba(237, 232, 220, 0.8); }
+        td.c { text-align: center; }
+        .grigio { background: rgba(220, 220, 220, 0.4); border-color: #888; margin-top: 12px; }
+        .grigio .power-header { color: #666; font-size: 11pt; }
+        .grigio .corpo { font-size: 9.5pt; color: #444; }
+        .conferma { font-family: "Courier New", monospace; font-size: 8.5pt; color: #8B0000; background: #f6e6e6; border: 1px solid #d9b0b0; padding: 1px 4px; border-radius: 3px; font-style: normal; white-space: nowrap; }
+        .dm { background: rgba(139, 0, 0, 0.04); border: 2px solid #8B0000; padding: 12px 14px; margin: 14px 0; border-radius: 5px; }
+        .dm h3 { color: #8B0000; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px; font-size: 12pt; }
+        .banner { margin-top: 8px; display: inline-block; background: #8B0000; color: #f8f6f0; font-size: 9pt; font-weight: bold; letter-spacing: 2px; padding: 3px 14px; border-radius: 3px; }
+        @media print {
+            body { padding: 0; background: none; }
+            .power-block, .requirements, .dm, table, .quote { break-inside: avoid; page-break-inside: avoid; }
+            h2, .incisione { break-after: avoid; page-break-after: avoid; }
+            .solo-dm { break-before: page; page-break-before: always; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="class-title">Anello dell'Illuminazione Caotica</h1>
+        <div class="subtitle">Stadio 3 — il Caos Ultimo · da progettare</div>
+        <div class="banner">VERSIONE DM · NON DARE AL GIOCATORE</div>
+        <div class="dwarven">«Il Caos lo amo. Un guinzaglio no.»</div>
+    </div>
+
+    <div class="requirements" style="border-color:#8B0000;">
+        <strong>Questa pagina non ha una controparte per il giocatore</strong>, perché i poteri del Caos Ultimo non sono scritti in nessuna fonte del repo. Qui c'è quello che le fonti dicono sull'innesco e sui dintorni, e la domanda al DM. Quando il DM avrà deciso, la pagina del giocatore si fa da questa.
+    </div>
+
+    <div class="dm">
+        <h3>La progressione dell'Anello, in una tabella</h3>
+        <table>
+        <tr><th>Stadio</th><th>Innesco</th><th>Poteri</th><th>Pagina</th><th>Stato</th></tr>
+        <tr><td><strong>0</strong> · l'anello del caos</td><td>il legame con Artemis, un warlock caotico</td><td>Visione Potenziata · Ali d'Ombra · Passo d'Ombra · due poteri di crisi dormienti</td><td><code>01_Anello_S0_Originale</code></td><td>✅ passato</td></tr>
+        <tr><td><strong>1</strong> · le due divinità</td><td>Lathander e Mask lo reclamano; la crisi di Cerebromorphosis, nella Tomba di Belkram</td><td>i poteri di Mask si svegliano; tre poteri di crisi di Lathander</td><td><code>02_Anello_S1_Due_Divinita</code></td><td>✅ passato, uso al tavolo da confermare (D11)</td></tr>
+        <tr><td><strong>2</strong> · il Riforgiato</td><td>Artemis <strong>rifiuta</strong> Lord of Sun and Shadow (Opzione C, «il mio sentiero è mio»); alla Forgia Eterna l'anello assorbe la Colonna di Mithral e le Doppie Fiamme</td><td>quattro costanti · sei attivabili · due di crisi · le sinergie</td><td><code>00_Ring_Riforgiato</code></td><td>▶ <strong>oggi</strong></td></tr>
+        <tr><td><strong>3</strong> · il Caos Ultimo</td><td>la Torre Invisibile: Zalkatar sconfitto, o purificato rinunciando a un potere</td><td><strong>non scritti</strong> in nessuna fonte</td><td><code>04_Anello_S3_Caos_Ultimo_DM</code></td><td>⬜ ARC-09, da progettare (D13)</td></tr>
+    </table>
+    <p><strong>I prezzi, come controllo.</strong> Stadio 0: <strong>42.000 mo</strong> nella scheda italiana del giocatore, <strong>62.000 gp</strong> nella prima versione inglese. Stadio 1: <strong>52.000 gp</strong>, e l'analisi dice «aumentato per la doppia natura divina», che torna col 42.000 e non col 62.000: vale la scheda italiana. Stadio 2: <strong>163.400 gp</strong>, voce per voce nel master <em>Revised</em>; la tabella non conta il <em>Passo d'Ombra</em> né i poteri di crisi, che quindi sono gratis nel prezzo. Nessun prezzo nasconde un potere che le schede non abbiano.</p>
+    </div>
+
+    <div class="dm">
+        <h3>Cosa dicono le fonti</h3>
+        <table>
+        <tr><th>Fonte</th><th>Cosa dice</th></tr>
+        <tr><td><code>state.md</code> §6</td><td>«Unchanged; awaits further evolution at Invisible Tower»</td></tr>
+        <tr><td><code>campaign-story-arcs.md</code>, indice generale ARC-09</td><td>«Zalkatar defeated: Ring reaches Ultimate Chaos form»; «Risveglio poteri Ring: Ultimate Chaos abilities», senza elenco</td></tr>
+        <tr><td><code>…P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md</code> §1</td><td>quattro vie: distruzione, negoziazione, controllo, e <strong>Armonia/Sacrificio</strong>: usando l'anello <strong>rinunciano a un potere</strong> per purificare Zalkatar, che diventa alleato permanente di Artemis</td></tr>
+        <tr><td>idem, «Se falliscono»</td><td>l'anello <strong>non evolve</strong>; la Torre diventa mobile, Zalkatar nemesi di ARC-10; Artemis può inseguirla entro il Giorno 35</td></tr>
+        <tr><td><code>…HOOKS-Artemis-TorreInvisibile.md</code> §3</td><td>l'anello vibra alla Cerimonia delle 100 Asce; è stato <strong>strumento di ricerca di Zalkatar</strong>, ex chierico di Mask; il Sogno della Doppia Maschera dà +2 Volontà contro Zalkatar e +1d6 al primo attacco di ogni round della fase 3 (+2d6 se Artemis ha riconosciuto la donna cieca di Dauth); dopo la vittoria, una <strong>cortesia non richiesta</strong> delle due divinità, «non sarà un patto»</td></tr>
+        <tr><td><code>00_Ring_Riforgiato_DM.html</code></td><td>contro Zalkatar l'anello dà +4 ai TS contro la sua psionica e può purificare uno dei suoi incantesimi</td></tr>
+    </table>
+    </div>
+
+    <div class="dm">
+        <h3>La domanda D13, e una proposta di struttura</h3>
+        <p><strong>Quali poteri ha il Caos Ultimo?</strong> Le fonti fissano l'innesco e il prezzo possibile, non i poteri. Una proposta di forma, <strong>non canone</strong>, sul modello di <em>Weapons of Legacy</em> e di quello che la Corona fa già:</p>
+        <ul>
+            <li><strong>Il rituale</strong> è la Torre. Il prezzo è quello che P2A scrive già: rinunciare a un potere dell'anello per purificare Zalkatar. Chi sceglie di distruggerlo evolve comunque, ma senza l'alleato.</li>
+            <li><strong>Cosa cresce</strong>: la cosa che Artemis ha scelto, cioè tenere luce e ombra senza piegarsi. Per esempio i poteri di crisi che diventano volontari, una volta al giorno: è la ricompensa che la Opzione A offriva a chi accettava il patto, qui guadagnata senza patto.</li>
+            <li><strong>La cortesia non richiesta</strong> delle divinità è un dono, non un potere dell'anello: il DM la decide a parte.</li>
+        </ul>
+        <p>Da decidere col DM prima di scrivere una riga: nome dei poteri, usi, e se il Dono di stasera (il dado di <em>Eldritch Blast</em> dato a Hella) cambia qualcosa. Registrata come D13 in <code>plans/PIANO-REVISIONE-TRASVERSALE-COERENZA-E-QUALITA.md</code> §3, lotto T10.</p>
+    </div>
+
+    <p style="font-size:8.5pt;color:#777;text-align:right;margin-top:14px;">Versione anello · S3 · r1 · 2026-09-25 · registro: <em>PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md</em> §0</p>
+
+</body>
+</html>
