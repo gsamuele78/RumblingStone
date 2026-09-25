@@ -253,8 +253,8 @@ prima […] e cosa sarebbero disposti a comprare gli armaioli di Hammerfist?»*
   fortezza come mercato (insediamenti PF1e, dichiarati come supporto), il
   banco con i prezzi SRD, cosa compra e cosa rifiuta, l'ascia del gelo, la
   regola di quello che nel 372 non esiste ancora
-- [x] **M5.2** la decisione D-E scritta dove si usa: §6, §7 (tre righe
-  d'eco), §8 B; e nell'audit del tesoro, che diceva il contrario
+- [x] **M5.2** la decisione D-E scritta dove si usa: §6, §7 (una riga
+  d'eco; il dettaglio in Scena 5, perché la tabella larga in stampa non sfori la pagina), §8 B; e nell'audit del tesoro, che diceva il contrario
 - [x] **M5.3** il foglio per i giocatori, `volume-mille-anni/04-HANDOUT-BANCO-DI-GUNNVOR.md`,
   nel volume dei giocatori e nel corredo della serata; stampato, sta in una
   pagina

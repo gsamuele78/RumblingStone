@@ -3748,8 +3748,21 @@ e basta: nessun paradosso, solo un'eco da scrivere in §7.
 
 **Cosa torna nel 1372**: quello che i PG **portano
 addosso** quando il Rubino si accende. Quello che hanno **consumato** qui resta
-qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia**: le
-righe della fucina in §7.
+qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
+
+**Gli echi della fucina**, uno per ogni cosa lasciata `[INFERRED — needs DM confirmation]`:
+
+- **le monete del 1372**: un pugno di monete con la faccia di re che nel 372 non
+  erano nati, murate nella fucina o nelle fondamenta. Riemergono in ARC-08 la
+  prima volta che a Hammerfist si scava o si ripara un muro. I nani non se le
+  spiegano; i PG sì;
+- **gli oggetti venduti**: un'arma dei PG appesa nella sala degli antenati con
+  un nome che non è il loro, il loro mithral nei cardini di una porta, una
+  pergamena diventata «la preghiera dei quattro». Una riga per oggetto, alla
+  Cerimonia delle 100 Asce o quando serve al DM;
+- **l'ascia del gelo**, se la comprano: la guardia che l'ha ceduta è sul
+  *Registro delle Perdite*, e in ARC-08, davanti a un'arma nanica antica, la
+  brina sulla lama è quella che nessuno sa più fare.
 
 ### SCENA 6 — Il mare di tende
 
@@ -4539,9 +4552,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **La Senzienza arriva calda o fredda** (Scena 12) | il ramo lo ha deciso cap. IV §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
-| **Le monete del 1372 spese alla fucina** (Scena 5) | un pugno di monete con la faccia di re che nel 372 non erano nati, murate mille anni fa nella fucina o nelle fondamenta. I nani del 1372 non se le spiegano; i PG sì | ARC-08, la prima volta che a Hammerfist si scava o si ripara un muro | registro delle conseguenze |
-| **Quello che i PG hanno venduto a Gunnvor** (Scena 5) | una loro arma appesa nella sala degli antenati con un nome che non è il loro; il loro mithral nei cardini di una porta o nelle fibbie della guardia; una pergamena diventata «la preghiera dei quattro». Una riga per oggetto, scelta dal DM `[INFERRED — needs DM confirmation]` | ARC-08 (Cerimonia delle 100 Asce) o quando il DM ne ha bisogno | registro delle conseguenze |
-| **L'ascia del gelo** (Scena 5, se la comprano) | la guardia reale che l'ha ceduta è sul *Registro delle Perdite*; la brina sulla lama è la stessa dell'ascia di Re Thorek, e nel 1372 nessuno sa farla | ARC-08, davanti a un'arma nanica antica | registro delle conseguenze |
+| **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[INFERRED — needs DM confirmation]` | ARC-08, a Hammerfist | registro delle conseguenze |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
