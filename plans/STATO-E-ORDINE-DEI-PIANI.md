@@ -21,7 +21,7 @@
 > diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
 > e non si aggiornano più.
 
-**Ultimo aggiornamento**: 2026-09-25, dopo il merge della [#169](https://github.com/gsamuele78/RumblingStone/pull/169) (`61fe39c`). Cosa ha chiuso e cosa ha lasciato aperto: §11.
+**Ultimo aggiornamento**: 2026-09-25, dopo il merge della [#169](https://github.com/gsamuele78/RumblingStone/pull/169) (`61fe39c`). Cosa ha chiuso e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
 
 | | Cosa | Classe | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|---|---|
@@ -33,6 +33,9 @@
 | ✅ | **`DEF-4` e `DEF-3` in ordine di gioco**; mappe di `DEF-2` in appendice A4; M7-C nuova, M7-B corretta; discorso di Moradin sui Doni in `DEF-3` §5 | C | §11.1 · `DEF-4` §9 · #169 | fatto |
 | ✅ | **Editoria**: una mappa entra in colonna (48 celle) o va su A4 e non va mai a capo; ogni capitolo apre una pagina; immagini fuori da una pagina dedicata sotto i 16 cm. Norma registrata (43 norme) | C + G3 | `rumblingstone-editoria` §2 e §4.4 · #169 | fatto |
 | ✅ | **Il controllo a vista di tutti i volumi dopo la regola editoriale della #169**: quindici volumi compilati prima e dopo `a9fe251`. Un difetto veniva dalla #169 (la figura su A4 riservava sempre 21 cm), tre c'erano da prima (codice in linea, righe `____`, tabelle più alte di un foglio). Corretti nel tema e nell'esportatore: sovrapposizioni da 1.474 a 0 | C + G3 | §11.3 · `rumblingstone-editoria` §4.5 | fatto |
+| ✅ | **La storia delle scelte non va in stampa**: blocchi `<!-- storico -->` nei sorgenti e attribuzioni di forma fissa tolte dalle due catene con la stessa funzione; la tecnica per fare un booklet, con le regole della #169, scritta come canone | C + G3 | §12.2 · ADR-0069 · `rumblingstone-editoria` §2-bis e §4.6 | fatto: righe con un segnale di storia nei PDF da 257 a 67, storia vera in stampa da 161 righe a 15 dichiarate |
+| 🙋 | **Al DM, poi all'agente: chiudere le `[PROPOSTA]` e gli `[INFERRED]`**, perché diventino canone o vengano bocciate. **621 marcature in 209 file**; tolte le 140 che stanno in piani e skill (descrivono la convenzione) e le 20 in archivio, ne restano **circa 460 nel contenuto** | K | §12.1 | l'agente prepara le domande **un arco alla volta**, prima ARC-07 perché si gioca adesso; il DM risponde «canone» o «bocciata»; l'agente applica, toglie la marcatura e rimisura il conto |
+| 🙋 | **Al DM: i capitoli da beta del Drappo** (IP e licenze, playtest alfa, stato del modulo, scheda di feedback) stanno nel volume del DM. Per uscire dalla beta vanno tolti dal manifest o tenuti? | | §12.2 | una risposta; l'agente cambia il manifest |
 | 🙋 | **Al DM: chiudere la serata del 2026-09-25.** In `campaign/sessions/` non c'è ancora il log: cosa è successo al tavolo lo sa solo il DM | K | regia della serata §6 (il registro) · `rumblingstone-automation` | `python3 scripts/dm.py session end` sul ramo `campaign-group-rumblingstone-dm-gianfranco`, mai su `main` (ADR-0007) |
 | 🙋 | **Al DM: le domande rimaste nei master di ARC-07** | K | §11.2 | una risposta per riga; l'agente poi toglie la marcatura |
 | 🙋 | **Al DM**: generare i sette ritratti e le sei tavole; il grido *«Baruk Khazâd! Khazâd ai-mênu!»* di Tolkien resta, voluto, in `PortaleForgia-P1` e nell'errata di ARC-08 | | `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md`, stile del Drappo | `comfyui_batch.py --prompts <file> --serie tutto` sulla macchina del DM |
@@ -412,7 +415,7 @@ per momento del ciclo.
 |---|---|---|---|
 | ✅ | **2C** — i box read-aloud che presuppongono un'azione del giocatore | [PIANO-QUATTRO-ORDINI](PIANO-QUATTRO-ORDINI-2026-09-20.md) §2C | *chiuso il 2026-09-21*: `misura_craft --p1` → **22 su 477**, e sono un **elenco nominale** (12 dialoghi · 6 falsi positivi · 2 visioni · 1 canto · 1 condizionale), ancorato file per file da `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`. ⚠️ **Non si porta a zero**: il rilevatore dichiara di non distinguere il dialogo dalla narrazione *(485 box dal 2026-09-25: una nota di allineamento in `DEF-2` A3, le battute di Moradin che chiedono i Doni in `DEF-3` §5, e i quattro box nuovi di `DEF-4` riordinato: il bosco, la sala del trono, la postierla, la tenda; i residui restano 22)* <!-- attesa: 22 box su 485 --> |
 | ⬜ | **M1-M3** — marcare gli incontri | [PIANO-MARCATURA-DEGLI-INCONTRI](PIANO-MARCATURA-DEGLI-INCONTRI.md) | `python3 scripts/validate_modules.py --tetto-el` → oggi **zero incontri marcati** |
-| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte)* <!-- attesa: 44 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
+| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte; 45: la storia delle scelte fuori stampa)* <!-- attesa: 45 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
 | 🟡 | **F1.5 + F3.3** — i due campioni e il κ | idem | ✅ F1.5 chiuso; F3.3 **eseguito sul campione B: κ = 0,0** *(misurato 2026-09-21)*. La metrica si dichiara non affidabile e **non entra in CI**. Le manca una norma che morda, e la strada è la verifica aritmetica degli statblocchi, sbloccata dagli `attributi` (riga sotto) |
 | ✅ | **Conformità meccanica degli statblocchi** — tutti i lotti chiusi: L1, L2, L2-bis, L3, L4, L5, L6, L6-ter, L7; restano solo **decisioni del DM** (§9) | [RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI](RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI.md) §8-9 | `python3 scripts/conformita_statblocchi.py --check` → **ogni `pf-dado` registra i dadi vita** · `python3 scripts/conformita_statblocchi.py --riepilogo` → **101 tornano, 0 da correggere, 0 scarti del generatore, 0 decisioni aperte al DM** *(misurato 2026-09-23, dopo D1-D12)* <!-- attesa: da correggere 0 --> |
 | ✅ | ~~i 27 ADR mancanti in `docs/INDEX.md` §4~~ | *nessun lotto: non c'era niente da fare* | `validate_docs --sorgenti` → **0** *(misurato 2026-09-21)*. 🐛 **I 27 non sono mai esistiti**: il buco più grande che `plans/adr/` abbia mai avuto è stato **uno**, il 2026-09-12, e da `14694c4` (16 settembre) l'indice è completo. Vedi §6.5 |
@@ -820,4 +823,89 @@ sbagliata al posto giusto) le misure non lo vedono.
 206 sembravano mai arrivati. Con `git fetch --unshallow` lo stesso comando dà
 50 file, tutti col loro posto, e `--check` è verde. Il registro è giusto;
 lo strumento non dice che sta misurando su metà storia. È una riga di §0.
+
+---
+
+## 12 · La storia delle scelte fuori stampa, e le marcature aperte (2026-09-25)
+
+> **Perché questa sezione.** Il DM, sulla #170: *«1 da aggiungere come task:
+> chiudere tutte le proposte e inferred nel repo, così si decide e diventano
+> canone o sono bocciate. 2 per tutti i booklet e gli echi rimuovere le parti
+> che riguardano le scelte fatte nel repo; prima misura, poi prova a spostarle
+> in una parte non renderizzata, e se il risultato è più pulito si aggiunge
+> come tecnica per creare i booklet, insieme alle modifiche fatte nella 169»*.
+
+### 12.1 · Le `[PROPOSTA]` e gli `[INFERRED]`, contati
+
+Contati su ogni `.md` tracciato il 2026-09-25: **621 marcature in 209 file**,
+542 `[INFERRED …]` e 79 `[PROPOSTA …]`.
+
+| Dove | Marcature |
+|---|---:|
+| `Bestiario/` | 212 |
+| piani, skill, documenti (descrivono la convenzione: non si chiudono) | 140 |
+| ARC-07 | 85 |
+| ARC-09 | 54 |
+| `campaign/` | 50 |
+| ARC-08 | 32 |
+| `PG/` | 26 |
+| altri (censimenti, RHoD, Drappo, stanza della Corona) | 22 |
+| di cui in `_ARCHIVIO/` | 20 |
+
+Sono decisioni di canone, quindi K: nessuna si chiude senza il DM. Il lavoro si
+taglia per arco, nell'ordine in cui si gioca. Per ogni lotto l'agente prepara
+le domande (una riga ciascuna, col file e la proposta), il DM risponde
+«canone» o «bocciata», e l'agente applica: se canone toglie la marcatura, se
+bocciata toglie o riscrive la riga, e in entrambi i casi rimisura il conto.
+Le domande Q1-Q5 di §11.2 sono il primo pezzo del lotto di ARC-07.
+
+### 12.2 · La storia delle scelte fuori stampa
+
+**La misura, prima di toccare.** Sugli 80 file che i manifest stampano, 181
+righe portavano un segnale di storia (date di lavoro del repo, «decisione del
+DM», «prima diceva», «riscritto», «cosa è cambiato»). Lette a mano: 161 vere,
+20 falsi positivi, cioè frasi della finzione («la Sala non è cambiata») e
+regole («a scelta del DM»). Nei quindici PDF le righe con un segnale erano 257.
+
+**La prova.** La storia è rimasta nei sorgenti, accanto alla riga che spiega,
+fra `<!-- storico -->` e `<!-- /storico -->`; le due catene di stampa la saltano
+con la stessa funzione, `dmcore.testo.togli_storico`, che toglie da sola anche
+le attribuzioni di forma fissa (`[CANONE — DM …]`, «(decisione DM …)»).
+Segnati a mano 27 file, fra cui i quattro master `DEF` di ARC-07, la Cassetta,
+la regia della serata, le introduzioni dei volumi, il Palio e tre note di
+playtest del Drappo.
+
+**Il risultato.**
+
+| | Prima | Dopo |
+|---|---:|---:|
+| righe dei PDF con un segnale di storia (finzione compresa) | 257 | 67 |
+| storia vera che arriva in stampa | 161 righe | 15, dichiarate |
+| pagine: volume del −1000 · serata · Terros | 42 · 104 · 48 | 40 · 101 · 47 |
+| sovrapposizioni · pagine quasi vuote nuove | 0 · 0 | 0 · 0 |
+
+Le 15 righe rimaste sono in `scripts/tests/test_storico.py` col loro motivo:
+date d'edizione, date di gioco, la provenienza di due immagini del Palio, un
+`[INFERRED]` nell'intestazione di Balvar, due marche spezzate dentro gli
+statblocchi e cinque righe dei capitoli da beta del Drappo.
+
+**Due errori della funzione, presi prima del merge** e diventati casi del test:
+un marcatore in linea a inizio riga veniva letto come l'inizio di un blocco, e
+nel Palio si portava via l'intera intestazione; una marca che va a capo, tolta
+dentro uno statblocco, univa due righe e mandava quello di Terros su una pagina
+sua. Il test sul corpus morde: rimettendo il secondo errore diventa rosso.
+
+**Diventa canone.** [ADR-0069](adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md);
+la tecnica completa per fare un booklet, con le regole della #169, è in
+`rumblingstone-editoria` §2-bis, e `rumblingstone-module-standard` dice cosa
+la #169 ha reso obbligatorio nei master.
+
+⚠️ **Quello che resta fuori.**
+- Gli `.html` del Drappo non sono stati rigenerati: qui la rigenerazione
+  incorpora i font, e il file cresce di megabyte per una differenza che non è
+  di contenuto. I `.hb.md` del Drappo sì.
+- L'errata dell'Abbazia («nel testo originale era…») è rimasta: è un'errata
+  dichiarata, e riscriverla è una scelta sul modulo.
+- Una frase di storia senza data né formula il test non la vede. Il marcatore
+  resta un obbligo di chi scrive, scritto in `module-standard`.
 

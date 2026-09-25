@@ -1648,6 +1648,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > ✅ **Esito giocato: il Peso l'ha accettato THORIK, il portatore** — come
 > scrive l'Opzione B qui sopra.
 >
+> <!-- storico -->
 > 🔁 **Correzione del 2026-08-06.** Dal 2026-07-31 al 2026-08-06 questo blocco
 > diceva l'opposto — «deviazione voluta: si è inginocchiato il monaco» — e
 > attribuiva il pegno a **Tordek**. Era un refuso, segnalato dal DM. La riga che
@@ -1655,6 +1656,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > lettura sbagliata si era propagata a `state.md` (intestazione e **due echi**,
 > E-07c ed E-07e), alla scheda della Corona e ai booklet. Tutto riportato al
 > portatore.
+> <!-- /storico -->
 >
 > | | Effetto permanente |
 > |---|---|
@@ -1964,10 +1966,10 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 > **A cosa serve.** Per valutare la progressione al tavolo servono **tre**
 > numeri, non uno: i **PX** guadagnati, il **tesoro ordinario** (conta verso il
 > WBL) e la **ricchezza speciale/artefatti** (conta verso il *potere* effettivo,
-> anche se non verso il WBL). Il precedente accounting a fasi era andato perso:
+> anche se non verso il WBL).<!-- storico --> Il precedente accounting a fasi era andato perso:
 > qui è ripristinato. Cifre PX dall'`ERRATA-ARC07-35-Verification.md` (APL 12/D15) e
 > `ARC07-TESORO-WBL-AUDIT.md`; **cross-check completato 2026-07-23** (i tag
-> `[verif. ✓ …]` sono stati riscontrati, nessuna divergenza residua).
+> `[verif. ✓ …]` sono stati riscontrati, nessuna divergenza residua).<!-- /storico -->
 
 ### A. Budget PX del modulo, sezione per sezione (party 3 PG, APL eff. 12 · PG di 13°)
 

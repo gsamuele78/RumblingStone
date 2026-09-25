@@ -382,10 +382,12 @@ tornare — presagio della resurrezione, non garanzia.*
 > la Corona non è più posata: è FUSA alla fronte, parte di chi la porta. L'affresco si
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
+> <!-- storico -->
 > ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
 > della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
 > Thorek I, suo cugino (`DEF-4` Scena 4); Thorgrim è l'antico portatore
 > di **Aegis Fang**, e il viaggio è a mille anni fa.*
+> <!-- /storico -->
 
 - **Interazione (Thorik osserva 1 min, TS Volontà CD 17 — il fallimento è il
   dono).** *Fallimento:* rivive tutto — paura, speranza, la **perdita di Hella**
@@ -631,11 +633,13 @@ sottile: è un uomo la cui identità è *reggere*, e che per la prima volta ha
 scoperto di **non aver retto da solo** — e la cosa non lo ha diminuito. Se il
 giocatore ne parla, ascolta e non risolvere.
 
+<!-- storico -->
 *(Nota di canone, 2026-08-06: fino a questa data la scena di Thorik era il suo
 rovescio — «qualcun altro ci è arrivato prima, tu sei quello in piedi» — scritta
 quando il pegno era attribuito per errore a Tordek, e questa scena stava sotto
 il suo nome. Il pegno è del portatore: la scena torna a lui, insieme alle mani
 fredde.)*
+<!-- /storico -->
 
 ### ⚒️ TORDEK — lo zaino
 

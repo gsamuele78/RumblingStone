@@ -1689,11 +1689,6 @@ diventerebbe subito una copia vecchia.
 | 7 | Leocorno | `golarion/07-unicorno.svg` |
 | 8 | Onda | `golarion/08-onda.svg` |
 
-⚠️ **I nomi dei file sono quelli della serie di origine** e non corrispondono ai nomi
-di Tarsilia: il file `04-istrice.svg` è lo scudo del'**Istrice**. Il cartiglio
-dipinto dentro lo scudo porta ancora il motto della serie di origine — per l'uso a
-questo tavolo va bene, per una stampa pulita vanno rigenerati coi motti del §1. È
-tracciato come Lotto 3 in `plans/PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md`.
 
 
 \page
@@ -1887,8 +1882,6 @@ Ogni tratto, ogni fantino tira **Cavalcare** contro la CD del tratto. Somma il
 > è nato**, ed è esattamente il motivo per cui la contrada lo tiene invece di mandare
 > un cavaliere in armatura. Vale per tutti e otto i fantini, PG e PNG. Chiunque
 > **non** sia un fantino di contrada e provi a montare in corsa si becca il −5 pieno.
-> *(Correzione del playtest alfa, rilievo 1: con il malus pieno e una Rozza, il
-> fantino falliva la Curva Nord due volte su tre e cadeva.)*
 
 **Le Lunghezze** — il punteggio della Corsa. Tutte le contrade **partono da 0**; lo
 Stacco assegna ±1 (§5). Non c'è un tetto: si segnano su un foglio a vista, una riga
@@ -2172,9 +2165,6 @@ li porta in casa. Melchio è l'unico che li riconosce a colpo d'occhio.
 
 ## §4-bis · Come si tratta un segreto di PG (nota di regia)
 
-> ⚠️ **Questa sezione stava per errore in fondo a `FASCICOLO-SCHEDE-GIOCATORE.md`**,
-> che è un file ✉ **da mettere in mano ai giocatori**: elencava i collegamenti fra i
-> segreti a chi non doveva ancora conoscerli. Spostata qui il 2026-08-15.
 
 Ogni «cosa che non dici» è **un segreto che il giocatore possiede**, non un colpo di
 scena che gli spetta subire. Se un giocatore decide di rivelarlo prima del previsto,
@@ -2994,8 +2984,7 @@ combinarle.
 > bilancia dell'Oca lo verifica in pubblico: resina, legname, tessuto, grano. Un
 > giocatore che apre la borsa e offre contanti si sente rispondere, con cortesia, che
 > *«il Peso si pesa, non si conta»*. Dillo la prima volta che qualcuno ci prova, e
-> nessuno se la prenderà. *(Correzione del playtest alfa, rilievo 3: pagando in
-> contanti l'intera serata evaporava.)*
+> nessuno se la prenderà.
 
 ### Via 1 — La resina (onesta, lenta)
 
@@ -3733,8 +3722,6 @@ mano dal primo giorno.
 
 **Effetto**: **Morale −2** invece di −3, e **Onore invariato** — il colpo va su Vanna,
 non sul fantino. Le contro-mosse del giocatore di Vanna valgono uguale.
-*(Correzione del playtest alfa, rilievo I: con la confessione al Giorno 2, la scena
-evaporava in sei minuti e il Giorno 3 perdeva il suo unico colpo basso.)*
 
 ---
 

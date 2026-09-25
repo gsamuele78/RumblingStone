@@ -500,8 +500,7 @@ Media · Neutrale Buono · compagno di Hella
 | **Tiri salvezza** | Tempra **+11** · Riflessi **+10** · Volontà **+6** |
 | **Caratteristiche** | FOR 22 · DES 15 · COS 17 · INT 4 · SAG 14 · CAR 8 |
 
-¹ *12 DV da canone; i punti ferita (12d10+36) sono confermati dal DM il
-2026-09-24.*
+¹ *12 DV, 12d10+36 punti ferita.*
 
 ### Cosa sa fare
 

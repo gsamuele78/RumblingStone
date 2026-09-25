@@ -11,7 +11,7 @@
 > infliggi ora all'antenato, la mia Forgia la ricorderà quando affronterai il
 > discendente.»* + Aegis Fang, P6 r.746 (*"sangue Skullcrusher chiama"*).
 >
-> ✅ **Valori APPROVATI dal DM (2026-07-03)** — canone di carry-over. Sistema
+> ✅ <!-- storico -->**Valori APPROVATI dal DM (2026-07-03)** — <!-- /storico -->**Canone di carry-over.** Sistema
 > **D&D 3.5** — solo bonus tipizzati (competenza/circostanza/morale), **niente
 > vantaggio/svantaggio 5e**. (Il DM può sempre ritoccare in corsa, ma questi
 > sono i valori di riferimento su cui l'ARC-08 può contare.)
@@ -66,6 +66,7 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 - È l'eco meccanica del legame ancestrale: l'arma che uccise il capostipite
   riconosce il discendente.
 
+<!-- storico -->
 ---
 
 ## 5. PROPAGAZIONE (checklist)
@@ -77,3 +78,4 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 - [x] **P5 fast-play** rimanda qui (Scena 5 + sezione carry-over).
 - [x] **Valori validati dal DM (2026-07-03)** → l'ARC-08 A12 può integrarli
   come canone (riga matrice esiti + read-aloud del primo avvistamento).
+<!-- /storico -->

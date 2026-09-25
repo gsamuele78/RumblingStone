@@ -322,11 +322,16 @@ in una frase: *«Otto tacche fino all'alba. Ogni cosa che scegliete ne costa.»*
 Le tariffe sono nel master. La tabella da tenere d'occhio è quella di uscita
 dalla tenda: **≤ 6 in tempo, 7 di corsa, 8 l'alba vi coglie fuori.**
 
+<!-- storico -->
 ⚠️ **I semi di Hella.** La prima stesura di `DEF-4` le faceva piantare *«i 3
 semi di treant»*: al rito quei semi sono entrati nella Collana. **Il master è
 stato allineato il 2026-09-24**: all'alba Hella evoca **due Treant di
 Adamantio** con la Collana (due cariche su tre, la tacca resta una). L'uso
 della ghianda annerita resta una `[PROPOSTA]` da confermare: è scritta lì.
+<!-- /storico -->
+⚠️ **I semi di Hella.** All'alba Hella evoca **due Treant di Adamantio** con
+la Collana (due cariche su tre, la tacca resta una). L'uso della ghianda
+annerita resta una `[PROPOSTA]` da confermare: è scritta in `DEF-4`, Scena 5.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
@@ -420,6 +425,7 @@ prodotti (proposte, il DM decide quali):
 | E-07j | Balvar, «dite che c'ero» | grigio, lunga |
 | E-07k | Vatore, qualunque esito | grigio, lunga (ARC-09) |
 
+<!-- storico -->
 ---
 
 ## §7 · Incongruenze trovate preparando la serata
@@ -448,3 +454,4 @@ la sua scheda (`Bestiario/png/Therysol/`) e tutti i master la vogliono **donna**
 > ha INT 16 e SAG 20; l'Occhio di Ossidiana è un occhio vero; **Hella è come
 > nei ritratti**, bionda con le orecchie a punta (`DEF-3` §7 e la sua scheda
 > allineati); Durik ha 102 pf; la preghiera ha due versi di nanico nuovo.
+<!-- /storico -->

@@ -21,7 +21,10 @@ li decide la Sala:
    **Ci si ferma al primo ariete sulle mura.** Il duello con Skullcrusher e il
    Rituale 4 sono della sessione dopo.
 
+<!-- storico -->
 **Decisioni del DM prese il 2026-09-24** *(valgono per questo booklet)*:
+<!-- /storico -->
+**Come si gioca questa serata**:
 
 | | Decisione | Dove pesa |
 |---|---|---|

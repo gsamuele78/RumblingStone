@@ -136,20 +136,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > scritti bene e sono profondi, ma **al tavolo non si consultano**: nessuno cerca
 > un PNG in mezzo a milleseicento righe mentre quattro persone aspettano.
 >
-> Questa è la fetta che mancava — l'**apparato d'uso** di
-> [ADR-0018](../../../plans/adr/ADR-0018-apparato-uso-obbligatorio.md), che l'arco
-> aveva **una voce su nove** (il quick-reference dentro ogni master). Sei pagine
-> che nessuno legge per piacere, e che si aprono ogni volta che si gioca.
->
-> **Modello**: `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` e
-> `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md`.
-> **Stato**: apparato d'uso (non canone narrativo). **Data**: 2026-08-31.
 
 ⚠️ **Cosa questo file NON fa.** Non riscrive niente, non aggiunge fatti e non
 decide nulla: **rimanda**. Dove i master tacciono — ed è il caso di qualche tic
 vocale — la voce proposta è marcata **[PROPOSTA]** e il DM la cambia senza
-chiedere il permesso a nessuno. I master restano la fonte di verità
-(ADR-0018: i cinque `ARC*-DEF-*` non si riscrivono retroattivamente).
+chiedere il permesso a nessuno. I master restano la fonte di verità.
 
 | § | Cosa |
 |---|---|
@@ -159,7 +150,6 @@ chiedere il permesso a nessuno. I master restano la fonte di verità
 | 4 | I suoni dell'arco |
 | 5 | Il momento da fotografare, uno per master |
 | 6 | Accessibilità |
-| 7 | Cosa resta scoperto, dichiarato |
 
 ---
 
@@ -175,20 +165,20 @@ prima.
 |---|---|---|---|
 | **Terros l'Antico** — guardiano del Nodo di Terra, GS 15 | che nessuno tocchi lo Smeraldo. Non odia: **custodisce** | parla **lentissimo**, come chi non ha mai avuto fretta in diecimila anni. Non alza mai la voce, nemmeno quando colpisce | `#1` §8 |
 | **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. *[PROPOSTA]* | `#1` §7b |
-| **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | `#4` §4 |
-| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` scena 3 *[PROPOSTA]* |
-| **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | `#4` §4-ter |
-| **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | `#4` §5 |
+| **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | `#4` Scena 11 |
+| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` Scena 8 *[PROPOSTA]* |
+| **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | `#4` Scena 7 |
+| **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | `#4` Scena 9 |
 
 ### Chi sta dalla vostra
 
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
-| **Durik** — il nano che emerge dal Rituale | tornare, e non essere un debito per nessuno | dice le cose **due volte**, la seconda più piano *[PROPOSTA]* | `#1` §9 fase 3 · `#3` §7 |
+| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
-| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` scena 1-bis |
-| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` scena 1-bis, §4-bis |
-| **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | `#4` scena 2 |
+| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` Scena 4 |
+| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` Scena 2, Appendice A |
+| **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | `#4` Scena 4 |
 | **Il Custode** (ruolo, non persona) | leggere i pannelli e ricordare un fatto vero | — (è una funzione: la assume un PG) | `#2` §3-4 |
 
 ⚠️ **Fauci** e **Skullcrusher** arrivano da prima di quest'arco e tornano dopo:
@@ -265,10 +255,10 @@ giocherai e leggile a voce. Tre. Non trenta.
 
 | N. | Dove |
 |---|---|
-| 7 | §5 Vatore · 7 il Sigillo di Ossidiana |
-| 6 | §4-ter «Chi è» (Balvar) |
-| 4 | testata · §4 Skullcrusher |
-| ≤2 | §0 quickstart · le 3 zone · le 6 scene · supporto PF1e |
+| 7 | Scena 9 Vatore · 7 il Sigillo di Ossidiana (Appendice B) |
+| 6 | Scena 7, Balvar |
+| 4 | testata · Scena 11 Skullcrusher |
+| ≤2 | §0 quickstart · le 3 zone · le altre scene · supporto PF1e |
 
 ### `#5` RITORNO A HAMMERFIST — **18 blocchi**
 
@@ -362,34 +352,6 @@ serata è in ritardo, **si taglia altro** — non questo.
 - **Ritmo**: il master `#1` è lungo il doppio degli altri. Se la sessione è di
   tre ore, **arriva fino alla Sentinella e fermati lì**: è una soglia naturale.
 
----
-
-## §7 · Cosa resta scoperto — dichiarato
-
-Perché nessuno creda che l'arco sia a norma quando non lo è ancora (è la stessa
-onestà di `ARC08-16-CUE-SONORI.md`).
-
-| Voce ADR-0018 | Stato |
-|---|---|
-| 1 · foglio del cast | ✅ §1 |
-| 2 · pronuncia | ✅ §2 |
-| 3 · indice read-aloud | ✅ §3 |
-| 4 · inserto per lo schermo | ✅ **già esistente**: il §0-bis quick-reference dentro ogni master |
-| 5 · cue sonori | ✅ §4 |
-| 6 · momento da fotografare | ✅ §5 |
-| 7 · **prop fisici** | ✅ `homebrew/HANDOUT-*.hb.md` — **cinque fogli** da consegnare. ⚠️ *Correzione: quando ho scritto questa riga la prima volta dicevo che mancavano tutti. Non era vero: le Cronache dei Quattro Eroi avevano già il loro prop dal 2026-07-10. Ne mancavano tre, e ora ci sono.* La **nota per il DM che non si stampa** resta in `ARC07-HANDOUTS.md` («Quando darlo», le fonti, l'avviso anti-spoiler B4): il generatore la toglie dal prop apposta |
-| 8 · accessibilità | ✅ §6 |
-| 9 · memoria fra le sessioni | ✅ coperta da `campaign/state.md` + ADR-0007 — **non si duplica** |
-
----
-
-## Materiale collegato
-
-- [ADR-0018](../../../plans/adr/ADR-0018-apparato-uso-obbligatorio.md) — perché l'apparato è parte del contenuto
-- [`PIANO-TRAVASO-DRAPPO-CAMPAGNA`](../../../plans/PIANO-TRAVASO-DRAPPO-CAMPAGNA.md) — il lotto A1 è questo file
-- `ARC07-00-INDICE.md` — l'indice dell'arco (file → parte → stato)
-- `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` — il modello
-- `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md` — il modello dei suoni
 
 
 \page
@@ -449,7 +411,7 @@ esistono solo come echi.
    read-aloud «Dove Siamo» (copertina del booklet DM). Questo booklet col
    titolo vero resta SOLO al DM.
 2. **La scena privata di Artemis — il Seme-Mercato di Varis** (master
-   **§6-bis**, integrale). 📍 **Posizione a canone (DM 2026-07-30): dentro
+   **§6-bis**, integrale). 📍 **Posizione a canone: dentro
    il Tempio, DOPO la Sentinella**, lungo il corridoio che scende verso la
    camera del guardiano — l'ultimo tratto prima di Terros. Il cabochon è
    affiorato **nella crepa aperta dal duello** (il master spiega perché il
@@ -465,7 +427,7 @@ esistono solo come echi.
 3. **L'ingresso nella camera e il risveglio** (master **§8a-8b**, nuovi):
    niente porta da forzare — la **soglia di mithral si apre da sé** e i PG
    **escono direttamente sull'Altare**, che è **attraccato** al bordo come
-   una chiatta al molo (canone DM 2026-07-30). Leggi il read-aloud **«i sei
+   una chiatta al molo. Leggi il read-aloud **«i sei
    secondi della soglia»** (cosa colgono in un'occhiata), poi il risveglio
    del Guardiano, poi il **distacco**: l'Altare molla l'ormeggio e si
    **centra nella sfera**. Chi è sopra viaggia con lui; chi è rimasto sulla
@@ -549,7 +511,7 @@ esistono solo come echi.
   sconfitta del party: espulsi, affaticati, −12 ore di countdown (§8
   Contingenze).
 
-## 4. Canone nuovo di stasera (decisioni DM 2026-07-31)
+## 4. Canone nuovo di stasera
 
 Cinque cose sono cambiate rispetto alla stampa precedente. Se hai il master
 vecchio in mano, **butta quelle pagine**.
@@ -617,7 +579,7 @@ L'orologio **non** è la leva: costa −12 h, ma la soglia critica resta lontana
 (sotto). **Non recitare un'urgenza che i numeri non sostengono**: mostra
 l'affresco, non minacciare la scadenza.
 
-### L'orologio di Hammerfist — registro dei riposi `[CANONE 2026-07-31]`
+### L'orologio di Hammerfist — registro dei riposi
 
 Due tariffe, e una è un regalo che **i giocatori non devono sapere**:
 
@@ -900,7 +862,7 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
   l'asimmetria** che hai chiesto. **Default qui**: non un dialogo, ma un
   **frammento onirico a senso unico** — Tordek, sfiorando la Corona, riceve
   **tre parole nel nanico dei sogni**, senza voce (*«stabilità… germogli…
-  tornare»*) e nient'altro. **✅ CANONE (DM 2026-07-21): frammento onirico** —
+  tornare»*) e nient'altro. **✅ CANONE: frammento onirico** —
   il contatto telepatico pieno dell'Interludio è superato.
 
 ---
@@ -1020,6 +982,16 @@ lontani.
   gravità tira, sempre (2× ridotta a "solo" opprimente dalla Benedizione);
   i cristalli sono freddi al tocco, mai ghiacciati — il freddo educato
   della pietra che non ha fretta.
+- 🚫 **Cosa NON dire** *(vincolante quanto le quattro righe sopra —
+  [ADR-0057](../../../plans/adr/ADR-0057-la-quarta-colonna-e-di-tutto-il-repo.md))*:
+  - **che il BOOM sono i cristalli *vivi*.** È la rivelazione dell'**Incontro
+    2** (§6, Campo Cristalli Viventi): qui si sente solo una campana sepolta
+    che nessuno ha suonato. Se lo dici adesso, §6 diventa una conferma.
+  - **che il *pull* laterale indica la strada.** La bussola è **Aegis Fang che
+    vibra**, e si guadagna orientandosi. Il pull è una stranezza del posto: se
+    lo trasformi in un'indicazione, togli l'unica prova di orientamento del §4.
+  - **«magia elementale».** I PG sentono **ozono**. La categoria sta nello
+    statblock, non nel naso di chi cammina (ADR-0014 §2, il mostro spiegato).
 
 > **Read-aloud (orizzonte).** *Davanti, nella direzione che indica Aegis Fang:
 > a portata di mano, piattaforme di cristallo unite da ponti di pietra
@@ -1089,8 +1061,8 @@ gravità: strisciate); linee di vista spezzate ogni 6-9 m (agguati facili);
 > triangoli, esagoni, cerchi concentrici — la geometria di una mente, non del
 > caso. E si MUOVONO: si inclinano verso di voi come girasoli verso un sole che
 > non c'è, e cantano. Non è metafora: ogni cristallo tiene una nota, e le
-> migliaia di note insieme formano un accordo così vasto che lo sentite nello
-> sterno prima che nelle orecchie. Al centro del giardino, alta come tre nani,
+> migliaia di note insieme formano un accordo così vasto che arriva allo
+> sterno prima che alle orecchie. Al centro del giardino, alta come tre nani,
 > una madre di luce: sfaccettature a migliaia, e dietro ognuna, un pensiero.*
 
 **Terreno (callout):** corridoio libero centrale (riga 06 della MAPPA T-3);
@@ -1105,7 +1077,7 @@ la zona si può **aggirare** da sud (+30 min).
 > esiste, si stende un oceano di roccia grigia — onde lente come pensieri di
 > montagna, creste che impiegano un'ora a rompersi, correnti di granito
 > liquido che scorrono senza suono. Toccarlo è come toccare il fianco di un
-> toro: cede, e sotto senti il muscolo. E là, sospeso a cinquanta metri sopra
+> toro: cede, e sotto c'è il muscolo. E là, sospeso a cinquanta metri sopra
 > le onde, RUOTA il Tempio: un cubo d'argento di cento metri di lato, perfetto
 > come un dado lanciato da un dio e mai atterrato. Aegis Fang, nella mano di
 > Thorik, vibra così forte che il braccio duole. Siete arrivati. Manca solo
@@ -1251,7 +1223,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 > con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
 > round, Artemis a ~2/3 pf in uscita.*
 
-**XP**: ~4.800 (Fauci di Diamante CR 11 + 2 Xorn CR 6) `verif. ✓ ERRATA/TESORO-WBL 2026-07-23`. **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
+**XP**: ~4.800 (Fauci di Diamante CR 11 + 2 Xorn CR 6). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
 ---
@@ -1263,13 +1235,13 @@ crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 > La Madre Cristallo **rileva** il suo spirito e ne riferisce un moto **senza
 > parole tattiche** (§1 Hella). Mantieni l'atmosfera, togli il "consiglio".
 >
-> **Canone di questa run (DM 2026-07-21).** La **runa parassita di Varis alla
+> **Canone di questa run.** La **runa parassita di Varis alla
 > Madre Cristallo NON è mai stata giocata**: Artemis **non è mai stato tentato
 > qui** — quella scena è rimossa dal canone di questo incontro. La quest
 > personale di Artemis è **il Seme-Mercato lungo la strada** (§6-bis), che
 > funziona **anche se il party salta del tutto questo incontro**.
 >
-> **✅ CANONE GIOCATO (DM 2026-07-24).** Il party HA affrontato i Cristalli
+> **✅ CANONE GIOCATO.** Il party HA affrontato i Cristalli
 > Viventi e ha **superato lo skill challenge**: ha ottenuto la **Frequenza
 > della Confusione** E il **Diapason Armonico** (successo critico). ⚠️ Il
 > **Diapason è stato poi SPESO** contro la Sentinella (§7b): al boss non è
@@ -1334,9 +1306,9 @@ come **Successo Critico**, il **Diapason Armonico** (frammento: **stun Terros
 
 ---
 
-## §6-bis — IL SEME-MERCATO DI VARIS (quest personale di Artemis, NEL TEMPIO) `[CANONE — DM 2026-07-23; posizione aggiornata DM 2026-07-30; l'esito (accetta/rifiuta) si gioca]`
+## §6-bis — IL SEME-MERCATO DI VARIS (quest personale di Artemis, NEL TEMPIO)
 
-> **Dove e quando (canone DM 2026-07-30).** **Dentro il Tempio di Mithral,
+> **Dove e quando.** **Dentro il Tempio di Mithral,
 > DOPO la Sentinella** (§7b), lungo il corridoio che scende verso la camera
 > del guardiano — l'ultimo tratto di strada prima di Terros. La scena resta
 > **indipendente** da tutto il resto (funziona anche se il party ha saltato
@@ -1430,7 +1402,7 @@ finora la propria avidità nell'arco:
 > pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
 > avanti. Registra l'esito nell'**Echo Ledger** (§11).
 
-> ### ✅ CANONE GIOCATO (DM 2026-07-31) — la terza strada: PRESO, MAI TOCCATO
+> ### ✅ CANONE GIOCATO — la terza strada: PRESO, MAI TOCCATO
 >
 > **Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
 > pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
@@ -1500,7 +1472,7 @@ finora la propria avidità nell'arco:
 > (Viaggio a 1.000 anni fa), dove **Sal è presente come "Vatore"**: se Artemis
 > porta il Marchio di Varis, il DM può far riconoscere a Vatore la "firma" del
 > mercato — un filo che lega passato e presente della rete di **Varis ↔ Il
-> Collezionista** (CANONE DM 2026-07-23: le due reti sono collegate).
+> Collezionista** (le due reti sono collegate).
 
 ---
 
@@ -1521,7 +1493,7 @@ combinato che valorizza ognuno (vedi **MAPPA T-4**):
   Take 10 = 26 ✓) fino al cubo e colpisce le **Rune di Attracco** esterne,
   stabilizzando l'ingresso per far attraccare Artemis e trainare Thorik.
 
-> **✅ CANONE GIOCATO (DM 2026-07-24) — «la salita cantata».** Al tavolo
+> **✅ CANONE GIOCATO — «la salita cantata».** Al tavolo
 > l'attraversamento è stato risolto in variante: il party ha **cantato la
 > Frequenza della Confusione** e la risonanza ha **sollevato blocchi di
 > pietra dall'oceano sottostante**, impilandoli in una scala ascendente
@@ -1609,7 +1581,7 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 > **I BRACIERI (voce da vecchio fabbro, nella mente di Tordek):**
 > *«Incudine e Martello. Ora sei completo.»*
 
-> **✅ CANONE GIOCATO (DM 2026-07-24) — il Diapason è stato SPESO qui.**
+> **✅ CANONE GIOCATO — il Diapason è stato SPESO qui.**
 > Durante il duello con la Sentinella il party ha attivato il **Diapason
 > Armonico** innescandolo con la **Frequenza della Confusione**: il
 > frammento ha scatenato un **Grido Superiore** (*greater shout*) contro il
@@ -1622,7 +1594,7 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
 attivi. *(Scheda piena:
 `PG/Artefatti/Artefatti-Pg/Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.md`.)*
-**XP Sentinella**: ~2.400 (CR ~11) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`. **Loot**: residuo del
+**XP Sentinella**: ~2.400 (CR ~11). **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
 
 ---
@@ -1642,15 +1614,13 @@ golem (~5.000 mo di frammenti di mithral).
 **Dati per il DM (non da leggere).** Camera **sferica**, Ø **60 m**, a
 **gravità zero** ovunque tranne l'**Altare della Forza** (piattaforma di
 mithral, **13,5 × 9 m** = **9 × 6 quadretti** da 1,5 m con gli angoli
-smussati, gravità normale, rune verde smeraldo) `[CANONE — DM 2026-07-31;
-ERRATA: le vecchie stesure dicevano «Ø 6 m», misura in cui Terros da solo
-occupava 9 quadretti su 16]`. Dormiente sull'Altare, **Terros**: **10 m**
+smussati, gravità normale, rune verde smeraldo). Dormiente sull'Altare, **Terros**: **10 m**
 di mole stratificata (basalto, granito, marmo, adamantio), geologia
 vivente — ma sulla griglia **occupa 3×3 quadretti** (Enorme, spazio 4,5 m):
 i 10 m sono l'altezza che vedono i PG, non l'impronta. Vedi **MAPPA T-6**
 (che ritrae la situazione **dal round 2 in poi**, ad Altare centrato).
 
-**Come ci si entra (canone DM 2026-07-30).** Nessuna porta da forzare,
+**Come ci si entra.** Nessuna porta da forzare,
 nessun enigma: il corridoio finisce in una **soglia circolare** di mithral
 che **si apre da sola** al passaggio della Corona e dei Bracieri — il Tempio
 riconosce i suoi. Non c'è un ponte da attraversare e non si «sbuca nel
@@ -1688,20 +1658,20 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > troppo tempo. Non si muove. Non ha respiro. Occupa un terzo della
 > piattaforma. **Che fate?***
 
-> **Read-aloud (il risveglio del guardiano — LotR + Salvatore).** *All'inizio
-> lo scambiate per una formazione della caverna: una collina di roccia
+> **Read-aloud (il risveglio del guardiano — LotR + Salvatore).** *A prima
+> vista è una formazione della caverna: una collina di roccia
 > stratificata, ere sovrapposte come pagine di un libro di pietra. Poi la
-> collina RESPIRA. Una fenditura si apre lungo quella che credevate una parete
+> collina RESPIRA. Una fenditura si apre lungo quella che sembrava una parete
 > — è una palpebra. Due occhi di cristallo grezzo si accendono di una luce
 > minerale, fredda, priva di odio e priva di pietà, come lo sguarderebbe una
 > montagna. Non c'è collera: c'è PESO. Terros si erge, e ogni suo movimento è
-> il suono di una faglia che si assesta, un boato basso che sentite nei denti
-> prima che nelle orecchie. La gravità della sala si inclina verso di lui,
+> il suono di una faglia che si assesta, un boato basso che arriva ai denti
+> prima che alle orecchie. La gravità della sala si inclina verso di lui,
 > come se il piano stesso lo riconoscesse padrone. Aegis Fang, nella mano di
 > Thorik, tace di colpo: davanti all'Incudine del Mondo, anche una voce antica
 > abbassa il capo.*
 
-### 8b. IL DISTACCO — l'Altare si centra sul guardiano `[CANONE — DM 2026-07-30]`
+### 8b. IL DISTACCO — l'Altare si centra sul guardiano
 
 **Cosa succede.** Nel **round del risveglio** (round 1), l'Altare **molla
 l'ormeggio** e scivola fino al **centro esatto della sfera**, come se il
@@ -1761,7 +1731,7 @@ una sfera nuda:
 - **Acustica drammatica**: i passi di Terros rimbombano; un suo colpo pieno è un
   **tuono** che (nel Piano) si sente a un chilometro.
 
-> **✅ CANONE RISOLTO (DM 2026-07-21): il boss è TERROS, l'Elementale della
+> **✅ CANONE RISOLTO: il boss è TERROS, l'Elementale della
 > Terra (CR 15).** Le vecchie mappe/immagini "Boss Mithral Golem" (MAP 6,
 > `Camera Nodo Terra - Boss Mithral Golem…webp`) appartengono a una
 > generazione superata del design: **il Golem delle immagini È la Sentinella
@@ -1778,7 +1748,7 @@ hanno **saltato** l'incontro non la possiedono, e se hanno fatto **fallimento
 critico** l'urlo ha già svegliato e preparato Terros. In entrambi i casi: boss
 a piena forza — la scelta al campo dei Cristalli SI SENTE qui.
 
-> **✅ CANONE GIOCATO (DM 2026-07-24) — stato delle armi soniche al boss.**
+> **✅ CANONE GIOCATO — stato delle armi soniche al boss.**
 > Il party **possiede la Frequenza** (skill challenge superato, §6) → il
 > **malus round 1 si attiva con la SOLA Frequenza**: il Diapason non serve
 > per questo (è — era — l'arma separata anti-arrocco: stun 1 round senza TS,
@@ -1819,7 +1789,7 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
    terra/pietra (l'Altare CONTA come terra); −4 att/danno vs
    chi è in aria/volo. → dilemma per i PG: stabilità (Altare)
    vs evitare il bonus del boss (zero-G).
-2) PUSH / SPINGERE (Ex) `[CANONE — DM 2026-07-31]`: UNA VOLTA PER
+2) PUSH / SPINGERE (Ex): UNA VOLTA PER
    ROUND, a scelta di Terros, uno degli schianti andati a segno
    porta con sé la spinta. NON costa nulla: cavalca l'attacco (nei
    round in cui usa Onda/Stalattiti/Scudo non ci sono schianti,
@@ -1919,12 +1889,12 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 > **Read-aloud — il primo scambio (coreografia, Salvatore).** *Terros non
 > carica: si LASCIA CADERE in avanti, e la camera intera cade con lui — l'Onda
 > Gravitazionale vi strappa l'Altare da sotto i piedi come una tovaglia. Thorik,
-> tu senti l'armatura diventare àncora e bandiera insieme: Aegis Fang morde il
-> bordo dell'Altare, il braccio urla, ma tieni. Tordek, il mondo ruota e tu
+> l'armatura è àncora e bandiera insieme: Aegis Fang morde il
+> bordo dell'Altare, il braccio urla, e il morso tiene. Tordek, il mondo ruota e tu
 > ruoti con lui — i Bracieri sussurrano una parola sola, «peso», e i tuoi piedi
 > trovano il muro come fosse pavimento. Artemis, tu sei l'unico per cui nulla è
-> cambiato: le Ali d'Ombra non obbediscono alla terra. Da lassù vedi tutto —
-> il boss, l'Altare, i tuoi compagni aggrappati al mondo capovolto. La sua
+> cambiato: le Ali d'Ombra non obbediscono alla terra. Da lassù restano sotto
+> di te il boss, l'Altare, i tuoi compagni aggrappati al mondo capovolto. La sua
 > testa di roccia si volta lenta verso di te, l'unico che non è caduto. Che
 > fate?*
 
@@ -2021,14 +1991,14 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 | **Vogliono riposare dentro il Tempio prima del boss** | Possibile (l'Anticamera post-Sentinella è sicura), e **probabile**. Costa **−12 h** di orologio (tariffa ordinaria, `ARC07-DEF-2` §0-bis) — ma il prezzo vero **non è il timer**: è che **Terros ti arriva a risorse piene**, quindi scatta il ramo «party straripante di risorse» del riquadro *Scalare lo scontro* (**§8c-4**). Mostra l'affresco A7, non minacciare la scadenza: a 3g 08h la soglia critica è ancora lontana. |
 | **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. *La sconfitta costa tempo e orgoglio, non la campagna.* |
 
-**Durata attesa 4–6 round. XP** ~5.400/PG (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
+**Durata attesa 4–6 round. XP** ~5.400/PG (CR 15, 3 PG).
 **Loot**: **Geode Titanico** (5.000 mo, cristalli d'adamantio) + **Cuore di
 Terros** (oggetto meraviglioso: componente da **20.000 mo**, o base per un
 *Amuleto di Armatura Naturale +5*) — l'occhio di Artemis ci si posa subito.
 
 ---
 
-### 8c. QUANDO ARRIVA ADDOSSO A TERROS — manuale d'uso del guardiano `[CANONE — DM 2026-07-31]`
+### 8c. QUANDO ARRIVA ADDOSSO A TERROS — manuale d'uso del guardiano
 
 > **Cos'è questa sezione e cosa NON è.** Non è un prontuario di combo per i
 > giocatori: è la **lista delle cose che il party può tirare fuori e cosa fa
@@ -2210,7 +2180,7 @@ lo scontro sui 4-6 round invece che su 3. E ti regala l'immagine giusta —
 guardiano è **già in piedi, già schermato, già in attesa**. Il prezzo del
 sonno lo vedono in faccia prima che sull'affresco.
 
-**Orologio, estratto** `[CANONE — DM 2026-07-31]`. Il registro completo dei
+**Orologio, estratto**. Il registro completo dei
 riposi, con le tariffe e la progressione dell'affresco A7, vive in
 **`ARC07-DEF-2` §0-bis**, che è il file che possiede l'orologio: se i numeri
 divergono, vale quello.
@@ -2232,7 +2202,7 @@ arriva a risorse piene. Mostra l'affresco, non minacciare l'orologio.
 
 ---
 
-> ### ✅ CANONE GIOCATO (DM 2026-07-31) — TERROS È CADUTO
+> ### ✅ CANONE GIOCATO — TERROS È CADUTO
 >
 > Il party è entrato nella camera **senza aver riposato** (niente ramo «34 DV»:
 > Terros è stato affrontato al profilo pieno standard) e **ha vinto**. Il
@@ -2284,7 +2254,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non
 > torna Hella (#3).**
 
-> ### ✅ CANONE GIOCATO (DM 2026-07-31, rettifica) — scelta B: il PESO NEL CORPO, e lo prende THORIK
+> ### ✅ CANONE GIOCATO — scelta B: il PESO NEL CORPO, e lo prende THORIK
 >
 > **Nessun sacrificio materiale.** Il bottino dell'arco è **intatto**: Geode
 > Titanico, **Cuore di Terros**, residuo golem e geodi restano al party, e
@@ -2294,13 +2264,6 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > ✅ **Esito giocato: il Peso l'ha accettato THORIK, il portatore** — come
 > scrive l'Opzione B qui sopra.
 >
-> 🔁 **Correzione del 2026-08-06.** Dal 2026-07-31 al 2026-08-06 questo blocco
-> diceva l'opposto — «deviazione voluta: si è inginocchiato il monaco» — e
-> attribuiva il pegno a **Tordek**. Era un refuso, segnalato dal DM. La riga che
-> il blocco stesso indicava come «l'unica da correggere» non era l'unica: la
-> lettura sbagliata si era propagata a `state.md` (intestazione e **due echi**,
-> E-07c ed E-07e), alla scheda della Corona e ai booklet. Tutto riportato al
-> portatore.
 >
 > | | Effetto permanente |
 > |---|---|
@@ -2610,14 +2573,11 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 > **A cosa serve.** Per valutare la progressione al tavolo servono **tre**
 > numeri, non uno: i **PX** guadagnati, il **tesoro ordinario** (conta verso il
 > WBL) e la **ricchezza speciale/artefatti** (conta verso il *potere* effettivo,
-> anche se non verso il WBL). Il precedente accounting a fasi era andato perso:
-> qui è ripristinato. Cifre PX dall'`ERRATA-ARC07-35-Verification.md` (APL 12/D15) e
-> `ARC07-TESORO-WBL-AUDIT.md`; **cross-check completato 2026-07-23** (i tag
-> `[verif. ✓ …]` sono stati riscontrati, nessuna divergenza residua).
+> anche se non verso il WBL).
 
 ### A. Budget PX del modulo, sezione per sezione (party 3 PG, APL eff. 12 · PG di 13°)
 
-| § | Incontro / prova | GS / tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| § | Incontro / prova | GS / tipo | PX/PG |
 |---|---|---|---|
 | §4 | Ambiente dinamico superato (polvere, stalattiti, fenditure — se attraversato senza scorciatoie) | premio di storia | 300 |
 | §5 | Xorn: «Fauci di Diamante» (CR 11) + 2 Xorn (CR 6) — **qualunque via** (combattuta, demolita o negoziata) | EL ~13 | 1.700 |
@@ -2687,8 +2647,8 @@ futuro). *Lista completa degli 8 affreschi e del gancio → master #2.*
 
 ## §12 — RITORNO ALLA SALA (ponte al master #2)
 
-> **Read-aloud.** *Attraversate il portale a ritroso. La Sala della Forgia vi
-> accoglie con la sua luce dorata immutabile — ma qualcosa È mutato. L'affresco
+> **Read-aloud.** *Dall'altra parte del portale, la Sala della Forgia: la stessa
+> luce dorata immutabile — ma qualcosa È mutato. L'affresco
 > di Est si è chiuso come una porta; quello del Tempo brucia nitido; e nella
 > nebbia della parete di Nord-Ovest, la quarta figura ha ora un contorno. La
 > Corona di Thorik pesa di una gemma in più.*

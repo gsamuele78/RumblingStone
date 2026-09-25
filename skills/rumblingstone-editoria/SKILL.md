@@ -66,6 +66,30 @@ Non si ridiscutono a ogni volume. Se una serve diversa, si cambia **il tema**.
 
 ---
 
+## §2-bis · Come si fa un booklet: la tecnica, in ordine
+
+Canone dal 2026-09-25. Mette in fila le regole nate al lavoro sulla serata
+della resurrezione (#169) e sul controllo di tutti i volumi che è venuto dopo,
+perché il prossimo volume nasca già così invece di essere corretto dopo.
+
+| # | Passo | Dove sta la regola | Chi lo controlla |
+|---|---|---|---|
+| 1 | **Il master si legge in avanti**: il corpo nell'ordine in cui si gioca, e ogni PNG entra con la sua scheda d'entrata nella scena in cui i PG lo incontrano | `rumblingstone-module-standard`, «Corpo e appendici» | `validate_modules.py` sulle sezioni, il DM sull'ordine |
+| 2 | **Statistiche e mappe in appendici** fra `<!-- pagina: una-colonna -->` e `<!-- /pagina -->`, cioè su pagine A4 a una colonna | §4.4 | l'esportatore |
+| 3 | **Dove i giocatori ricevono un foglio**, una riga «✉ Si consegna qui» | `rumblingstone-module-standard` | a vista |
+| 4 | **La storia delle scelte non va in stampa**: si avvolge in `<!-- storico -->` … `<!-- /storico -->` ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md)) | §4.6 | `test_storico.py`, un tetto file per file |
+| 5 | **Una mappa entra in colonna** (≤ 48 celle) **o va su A4**, e non va mai a capo; oltre 110 celle si accorcia l'annotazione | §2, §4.4 | l'esportatore, `TestMappeCheNonEntranoInColonna` |
+| 6 | **Ogni capitolo apre una pagina** | il tema, `capitolo-aperto` | automatico |
+| 7 | **Un'immagine** fuori da una pagina dedicata resta sotto i 16 cm, su una pagina A4 sotto i 21, **misurando** l'immagine | §4.5 | `TestFiguraSuPaginaCompilata` |
+| 8 | **Niente esce dalla colonna**: codice in linea, righe da compilare e tabelle lunghe si sistemano da soli | §4.5 | `TestCioCheEsceDallaColonna` |
+| 9 | **Prima di consegnare**: `validate_booklets --stampa`, poi il controllo a vista prima e dopo | §4, «Il controllo a vista» | chi consegna |
+
+I passi 5-8 li fanno il tema e l'esportatore: chi scrive il master non deve
+ricordarseli, e se un volume li viola si corregge il tema. I passi 1-4 sono di
+chi scrive, e nessuna macchina li fa al posto suo.
+
+---
+
 ## §3 · Dove si tocca cosa
 
 ```
@@ -146,6 +170,25 @@ Sono qui perché sono i primi da cercare quando «il PDF viene male».
    scivolava sola alla successiva (una riga a pagina 4 del Palio, un fregio a
    pagina 62). → il tetto si applica misurando l'immagine, come per i 16 cm.
    I casi sono in `TestCioCheEsceDallaColonna` e `TestFiguraSuPaginaCompilata`.
+6. **La storia delle scelte in stampa.** «✏️ Allineato il 2026-09-24 su
+   decisione del DM», «il box di prima diceva…», `[CANONE — DM 2026-07-31]`, un
+   §9 «Cosa è cambiato»: servono nel repo e al tavolo sono rumore. Il
+   2026-09-25 erano 257 righe nei quindici PDF. → nel sorgente restano, e le
+   due catene le saltano con `dmcore.testo.togli_storico`
+   ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md)).
+   Chi scrive usa tre forme:
+
+   | Forma | Per |
+   |---|---|
+   | `<!-- storico -->` e `<!-- /storico -->`, ciascuno su una riga sua | un paragrafo o un riquadro |
+   | gli stessi marcatori dentro la riga | una frase o un inciso |
+   | `<!-- storico: riga -->` dentro una cella | una riga di tabella, che due marcatori spezzerebbero su GitHub |
+
+   Le attribuzioni di forma fissa (`[CANONE …]`, «(decisione DM data)»,
+   `[verif. ✓ …]`, «(ADR-NNNN)») se ne vanno da sole. Quando storia e fatto
+   stanno nella stessa frase, la frase vecchia va nel blocco storico e sotto se
+   ne scrive una che dice solo il fatto. `test_storico.py` fa da tetto: 15
+   righe dichiarate, file per file, e una in più è rossa.
 
 ### Il controllo a vista, prima di consegnare
 

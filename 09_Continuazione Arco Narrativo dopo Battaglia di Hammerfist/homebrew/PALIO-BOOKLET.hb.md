@@ -87,17 +87,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 # Parte 2D — I Distretti di Channathgate (guida alla città, stile "Volo")
 
-> **Versione**: v1 (2026-07-17) — **canone fornito dal DM** (file "Fazioni",
-> corrispondenze contrade ↔ nomi FR dei quartieri) integrato col canone
-> esistente di `...P2D-PALIO-CONTRADE-STEMMI-CANTI.md` (divinità, patroni e
-> Meraviglie combaciano ✓). Mappa master della città:
+> Mappa master della città:
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
-> ⚠️ I due PNG sono forniti dal DM (chat 2026-07-17) e vanno caricati in
-> `P2D-Palio-Allegati/immagini/` — le immagini incollate in chat non
-> arrivano come file all'engine.
 
 ---
 
@@ -215,7 +209,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 # Parte 2D — Il Palio di Channathgate (Avventura Urbana Sandbox)
 
-> **Versione**: v1 (2026-07-01). Modulo doppio-uso: **(a)** avventura autoconclusiva
+> Modulo doppio-uso: **(a)** avventura autoconclusiva
 > giocabile in D&D 3.5 / Pathfinder 1e (sandbox urbano di 3 giorni, APL 12–13);
 > **(b)** snodo geopolitico della campagna RumblingStone — vedi il file gemello
 > `Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-INTEGRAZIONE.md` per sync assedio,
@@ -264,10 +258,6 @@ Ogni contrada ha una struttura di governo (il **Seggio**/Deputazione). Assegna i
 
 ---
 
-> **⚠️ ESPANSIONE v2 (2026-07-01)**: questo file resta valido come *regole-base*, ma
-> l'arco è stato espanso a **8 contrade** (aggiunta **l'Onda**), **3–4 sessioni**, mappe e
-> stemmi. Punto d'ingresso aggiornato: **`Arco-Post-Hammerfist-P2D-PALIO-DM-MASTER-REFERENCE.md`**.
-> Contrade complete (con stemmi/canti): `...P2D-PALIO-CONTRADE-STEMMI-CANTI.md`.
 
 ## 1. Le Contrade (8 fazioni + rivalità)
 
@@ -280,9 +270,9 @@ e confraternite laiche: non erano mai atee, ma di una religiosità **civica e fe
 > **Nota di conversione (Golarion → Faerûn)**: la campagna è ambientata nei Reami.
 > Le divinità sono state riconvertite dal pantheon di Golarion a quello faerûniano.
 >
-> **Nota patrimonio/IP** *(aggiornata 2026-08-10)*: il Palio di Siena e le sue contrade
+> **Nota patrimonio/IP**: il Palio di Siena e le sue contrade
 > sono citati come **ispirazione storico-culturale** (fatti di pubblico dominio). Scudi,
-> **livree** e simboli divini sono **originali** di questa campagna, e dal 2026-08-09 le
+> **livree** e simboli divini sono **originali** di questa campagna, e le
 > livree **non coincidono più** con quelle reali (vedi VERIFICA-LEGALE-IP §3.2). I **motti**
 > sono riscritti ma restano **parafrasi riconoscibili** di quelli reali: non dichiararli
 > "originali" (VERIFICA-LEGALE-IP §3.3). Le **figure** degli stemmi **non sono nostre**:
@@ -723,10 +713,9 @@ spesso più efficace che offrirgli di vincere.
 
 ## Livree di Channathgate (palette canonica)
 
-Dal 2026-08-09 gli scudi **non usano più le livree di Siena**: ogni distretto ha una
+Gli scudi **non usano le livree di Siena**: ogni distretto ha una
 livrea propria, derivata dalla **divinità patrona** e dal **nome faerûniano del
-quartiere**. Nessuna combinazione coincide con quelle delle 17 contrade reali (chiude il
-punto 3 della checklist di bonifica in `...P2D-PALIO-VERIFICA-LEGALE-IP.md` §7).
+quartiere**. Nessuna combinazione coincide con quelle delle 17 contrade reali.
 
 | Contrada · Distretto | Livrea | Campo | Secondario | Bordo / liste | Metallo figura |
 |---|---|---|---|---|---|
@@ -757,7 +746,7 @@ sono in `#8d9aa6`, cioè un argento più scuro di quello della torre — la rego
 
 ## Nota grafica — le figure degli stemmi
 
-Dal 2026-08-10 le **figure** degli otto scudi sono icone di **game-icons.net**, ricolorate
+Le **figure** degli otto scudi sono icone di **game-icons.net**, ricolorate
 nella livrea del distretto e inserite negli scudi originali della campagna. Attribuzione
 completa e testi di licenza: **`P2D-Palio-Allegati/stemmi/CREDITS.md`**.
 
@@ -801,9 +790,8 @@ Nethys, Calistria, Shelyn, Gozreh/Desna. Stesse figure, **stesse meccaniche 3.5*
 solo divinità, livrea e simbolo in campo. Mappatura, livree e note di licenza Paizo:
 `golarion/README.md`. Rigenerabile con `golarion/build_golarion_shields.py`.
 
-Serve a due cose: girare l'arco in un tavolo Pathfinder senza riscrivere nulla, e — visto che
-AVVENTURA §1 dichiara le divinità faerûniane «riconvertite da Golarion» — **documentare il
-pantheon di partenza**, che non era scritto da nessuna parte.
+Serve a girare l'arco in un tavolo Pathfinder senza riscrivere nulla, e dice da quale
+pantheon sono state riconvertite le divinità faerûniane di AVVENTURA §1.
 
 ## Nota IP (ripetuta qui per chiarezza)
 Nomi delle contrade e riferimenti al Palio = **fatti storico-culturali** citati come
@@ -2015,8 +2003,6 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 # Parte 2D — IL PALIO DI CHANNATHGATE · DM MASTER REFERENCE
 
-> **Versione**: v2 (2026-07-01) — arco espanso a **8 contrade**, **3–4 sessioni**,
-> mappe e stemmi allegati.
 > **Doppia natura**: (a) **avventura autoconclusiva** giocabile in D&D 3.5 / PF1e
 > (sandbox urbano-politico, APL 12–13); (b) **snodo geopolitico massivo** della campagna
 > RumblingStone che decide rinforzi, Meraviglie e voto del Consiglio per l'assedio di
@@ -2223,7 +2209,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 # Parte 2D — Il Palio di Channathgate: INTEGRAZIONE con RumblingStone
 
-> **Versione**: v1 (2026-07-01). File gemello di
+> File gemello di
 > `Arco-Post-Hammerfist-P2D-PALIO-CHANNATHGATE-AVVENTURA.md` (regole del Palio).
 > Questo documento sincronizza il Palio con: **March Clock / Ritual Clock**, i
 > **clock dei villain**, il **Consiglio di Rethmar**, i **difensori** e le

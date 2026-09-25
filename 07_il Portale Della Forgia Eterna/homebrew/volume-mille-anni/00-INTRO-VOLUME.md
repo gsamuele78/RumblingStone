@@ -12,21 +12,23 @@ da stampare o da tenere sul tablet: il master `ARC07-DEF-4`, lo statblocco di
 Balvar, la tabella B4 che porta le ferite del duello fino a Fauci di Palude, e i
 due handout, le Cronache e il piano di battaglia.
 
-**Dal 2026-09-25 il master si legge in avanti.** Tre atti, tredici scene, dal
+**<!-- storico -->Dal 2026-09-25 <!-- /storico -->Il master si legge in avanti.** Tre atti, tredici scene, dal
 tramonto all'alba: ogni PNG entra con la sua **scheda d'entrata** nella scena in
 cui i PG lo incontrano, e in fondo ci sono quattro appendici su pagine A4 a una
 colonna: le **statistiche** (A), il **Sigillo di Ossidiana** (B), le **versioni
-veloci** (C) e le **mappe** a pergamena, fra cui la nuova M7-C della tenda del
-comando (D). Il capitolo separato del cast e quello delle mappe non ci sono
-più: erano una seconda copia di quello che adesso sta nel master.
+veloci** (C) e le **mappe** a pergamena, fra cui la <!-- storico -->nuova <!-- /storico -->M7-C della tenda del
+comando (D).<!-- storico --> Il capitolo separato del cast e quello delle mappe non ci sono
+più: erano una seconda copia di quello che adesso sta nel master.<!-- /storico -->
 
+<!-- storico -->
 **Sostituisce il Fascicolo V** (`homebrew/ARC07-BOOKLET-FASCICOLO-5-P5-MILLE-ANNI.hb.md`),
 un riassunto di luglio che non conosce Balvar, l'orologio della notte, Zeth, il
 Rituale 4 e l'Aura della Forgia Eterna: tutto è arrivato dopo, con le
 riscritture di settembre. Il fascicolo resta nel repo come storia; al tavolo si
 usa questo.
+<!-- /storico -->
 
-**Come si gioca, in due sessioni** *(decisione S1 del DM, 2026-09-24)*:
+**Come si gioca, in due sessioni**<!-- storico --> *(decisione S1 del DM, 2026-09-24)*<!-- /storico -->:
 
 | Sessione | Da dove a dove | Nel master |
 |---|---|---|
@@ -42,6 +44,7 @@ come è morto Zog'tar (in silenzio, in modo spettacolare, umiliato), se
 qualcuno ha letto la runa sulla scaglia del drago, cosa hanno promesso a
 Balvar, e l'esito con Vatore. Decidono come comincia il duello.
 
+<!-- storico -->
 **Cosa è stato corretto nel master il 2026-09-24**, per allinearlo al canone
 giocato dopo la sua ultima riscrittura:
 
@@ -66,10 +69,13 @@ file che le contenevano:
 
 E due dettagli: l'**Occhio di Ossidiana** di Zog'tar è un occhio vero, al posto
 dell'occhio destro (statblocco in `DEF-4` Appendice A.2).
+<!-- /storico -->
 
+<!-- storico -->
 **Come si rigenera**, dalla radice del repo:
 
 - volume completo, schermo e stampa:
   `python3 scripts/dm.py volume "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json" --stampa`
 - solo le pagine ✉, un PDF ciascuna:
   `python3 scripts/dm.py booklet <lo stesso manifest> --pdf`
+<!-- /storico -->

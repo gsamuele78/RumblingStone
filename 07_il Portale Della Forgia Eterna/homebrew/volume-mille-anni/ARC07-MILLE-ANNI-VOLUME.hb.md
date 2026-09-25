@@ -35,21 +35,15 @@ da stampare o da tenere sul tablet: il master `ARC07-DEF-4`, lo statblocco di
 Balvar, la tabella B4 che porta le ferite del duello fino a Fauci di Palude, e i
 due handout, le Cronache e il piano di battaglia.
 
-**Dal 2026-09-25 il master si legge in avanti.** Tre atti, tredici scene, dal
+**Il master si legge in avanti.** Tre atti, tredici scene, dal
 tramonto all'alba: ogni PNG entra con la sua **scheda d'entrata** nella scena in
 cui i PG lo incontrano, e in fondo ci sono quattro appendici su pagine A4 a una
 colonna: le **statistiche** (A), il **Sigillo di Ossidiana** (B), le **versioni
-veloci** (C) e le **mappe** a pergamena, fra cui la nuova M7-C della tenda del
-comando (D). Il capitolo separato del cast e quello delle mappe non ci sono
-più: erano una seconda copia di quello che adesso sta nel master.
+veloci** (C) e le **mappe** a pergamena, fra cui la M7-C della tenda del
+comando (D).
 
-**Sostituisce il Fascicolo V** (`homebrew/ARC07-BOOKLET-FASCICOLO-5-P5-MILLE-ANNI.hb.md`),
-un riassunto di luglio che non conosce Balvar, l'orologio della notte, Zeth, il
-Rituale 4 e l'Aura della Forgia Eterna: tutto è arrivato dopo, con le
-riscritture di settembre. Il fascicolo resta nel repo come storia; al tavolo si
-usa questo.
 
-**Come si gioca, in due sessioni** *(decisione S1 del DM, 2026-09-24)*:
+**Come si gioca, in due sessioni**:
 
 | Sessione | Da dove a dove | Nel master |
 |---|---|---|
@@ -65,37 +59,7 @@ come è morto Zog'tar (in silenzio, in modo spettacolare, umiliato), se
 qualcuno ha letto la runa sulla scaglia del drago, cosa hanno promesso a
 Balvar, e l'esito con Vatore. Decidono come comincia il duello.
 
-**Cosa è stato corretto nel master il 2026-09-24**, per allinearlo al canone
-giocato dopo la sua ultima riscrittura:
 
-- i «3 semi di treant» da piantare la notte: dopo il rito stanno nella
-  Collana. All'alba Hella evoca **due Treant di Adamantio** (Scena 5);
-- il **Marchio di Varis** era scritto come probabile: nel canone giocato **non è
-  attivo**, e la risonanza con Vatore non scatta (§1, Artemis);
-- **Durik** entra nel viaggio e nel duello, con la sua vulnerabilità all'acido
-  (§1, e una battuta nella regia dei round della Scena 11);
-- il **dono a metà** di `DEF-3` §9 si incassa qui, al primo uso (§1, Hella);
-- l'immagine del portale era la foto di un testo (§9).
-
-**Quattro contraddizioni, decise dal DM il 2026-09-24** e già scritte nei
-file che le contenevano:
-
-| | Cosa dicevano i file | Cosa vale adesso |
-|---|---|---|
-| 1 | **Chi ha perso la Corona.** Re Thorek I diceva *«suo nonno»*, Thorgrim *«mio nonno»* | sono **cugini**, nipoti dello stesso re caduto contro Skullcrusher (`DEF-4` Scena 4, scheda di Thorgrim) |
-| 2 | **Frostcleaver.** In mano a Re Thorek I in `DEF-4`, a Thorgrim nell'affresco A3 | è **del re**. Nell'affresco Thorgrim tiene **Aegis Fang**, mille anni fa (`DEF-2` A3, `PortaleForgia-P2`) |
-| 3 | **Zeth.** La scheda del Ghostlord diceva ottocento anni fa, un'invasione phaerimm, un lich di epoca Netherese | **mille anni fa, durante l'assedio dell'orda**; il cultista di Shar è la mano del Collezionista. Riallineati il Ghostlord, due file di ARC-09 e il Consiglio di Rethmar |
-| 4 | **Balvar.** INT 9 e SAG 18 nella riga generata, INT 16 e SAG 20 nel testo | vale il testo: la riga dello statblocco è stata corretta |
-
-E due dettagli: l'**Occhio di Ossidiana** di Zog'tar è un occhio vero, al posto
-dell'occhio destro (statblocco in `DEF-4` Appendice A.2).
-
-**Come si rigenera**, dalla radice del repo:
-
-- volume completo, schermo e stampa:
-  `python3 scripts/dm.py volume "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json" --stampa`
-- solo le pagine ✉, un PDF ciascuna:
-  `python3 scripts/dm.py booklet <lo stesso manifest> --pdf`
 
 
 \page
@@ -131,16 +95,6 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Cuore della Montagna). **Canone**: la Corona ha Topazio + Smeraldo (aprono il
 > portale del Tempo); il **Rubino si accende SOLO alla vittoria antica** (D5/D16).
 >
-> 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo segue l'ordine
-> in cui si gioca, dal tramonto all'alba, in tre atti e tredici scene. Ogni PNG
-> entra nella scena in cui i PG lo incontrano, con la sua **scheda d'entrata**.
-> Le statistiche, l'artefatto di Vatore, le versioni veloci e le mappe stanno
-> nelle **Appendici A-D**, su pagine A4 a una colonna. Nella stesura di prima le
-> sezioni aggiunte a ogni revisione erano in coda (Balvar, il duello, il
-> Rituale, Zog'tar, Vatore), e il consiglio di guerra era un paragrafo dentro la
-> pattuglia. Nessun contenuto di gioco è stato tolto. Dieci passi della prosa
-> si contraddicevano con l'ordine degli eventi o col canone, e sono stati
-> corretti: l'elenco è in §9, «Cosa è cambiato nel riordino».
 
 ---
 
@@ -159,7 +113,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §6 | **Contingenze & sconfitta** | «se i PG fanno X»; il paradosso; una sconfitta nel passato |
 | §7 | **Echo Ledger** | carry-over B4, Vatore→Sal, tono del Rubino |
 | §8 | **Avanzamento** | budget PX per scena, tesoro pregenerato |
-| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica, cosa è cambiato |
+| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica |
 | App. A | **Statistiche** | Skullcrusher, Zog'tar e le guardie, Durin, Balvar, le creature del campo |
 | App. B | **Il Sigillo di Ossidiana** | l'artefatto che Vatore ha appena rubato |
 | App. C | **Le versioni veloci** | le stesse scene a montaggio, per chi ha poco tempo |
@@ -177,7 +131,7 @@ nero. Su una targa di bronzo alle porte, una profezia già incisa parla di
 **«Quattro Eroi dal futuro»**. Quei Quattro siete voi: la leggenda che avete
 sempre creduto passato è il vostro presente. **Paradosso bootstrap.**
 
-**Come si gioca** *(decisione DM 2026-09-25)*. Il corpo di questo master è
+**Come si gioca**. Il corpo di questo master è
 scritto **a scene complete**, nell'ordine in cui si giocano. Gli scontri si
 fanno su griglia: la tenda del comando (Scena 8, mappa **M7-C**) e il cortile
 del duello (Scena 11, mappa **M7-B**). Le scene senza scontro hanno una prova di
@@ -315,7 +269,7 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
 - ⚠️ **Vulnerabilità al fuoco** (costo del viaggio): Skullcrusher è acido, non
   fuoco — ma l'orda ha incendiari. E se evoca l'**Avatar della Radice** (Enorme),
   diventa un bersaglio: gioca il dilemma.
-- 🐾 **Durik c'è, sempre** *(decisione DM 2026-09-24)*: attraversa il portale con
+- 🐾 **Durik c'è, sempre**: attraversa il portale con
   lei, perché è legato alla Collana. Contro Skullcrusher conta una riga della sua
   scheda: **vulnerabile all'acido, +50%**. Il soffio del drago è l'unica cosa in
   questo viaggio che lo corrode davvero, e la giocatrice lo sa.
@@ -337,13 +291,13 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
   tempo. L'Anello lo **percepisce** (aura temporale) prima di chiunque. È il PG
   giusto per fiutare che quel ladro «non è di qui» — e per decidere cosa farne
   (grigio: robarlo? ucciderlo? lasciarlo?). La sua avidità incontra un pari.
-- ⚠️ **Il Marchio di Varis non è attivo** `[CANONE GIOCATO 2026-07-31]`: Artemis
+- ⚠️ **Il Marchio di Varis non è attivo**: Artemis
   ha preso il Seme senza toccarlo e l'ha fatto mettere nello zaino di Tordek, e
   il Marchio si chiude col tocco. Quindi la risonanza qui sotto **non scatta**.
   Scatta solo se, prima del viaggio, qualcuno ha toccato il Seme: allora la
   sente chi lo ha toccato, anche se è Tordek. *Se scatta*: il marchio
   «riconosce» la firma temporale di Vatore, due fili della **stessa rete**
-  (Varis ↔ Il Collezionista, CANONE DM 2026-07-23), mille anni prima che esista.
+  (Varis ↔ Il Collezionista), mille anni prima che esista.
 
 ---
 
@@ -388,8 +342,8 @@ notte = furtività CD 20; ogni fuoco è luce fioca a 3 m. Vedi M7-A zoom.
 
 ### ZONA 3 — Le Mura all'Alba (l'assalto)
 
-Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la serata del
-2026-09-25.
+Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la prima delle due
+sessioni del viaggio.
 
 **Terreno (callout):** camminamenti sopraelevati (+4,5 m); brecce dove gli
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
@@ -423,8 +377,7 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 > dietro il crinale. Uno di voi ha le ginocchia bagnate e non si ricorda di
 > essere caduto.*
 
-- ⚕️ **GUARIGIONE DEL PASSAGGIO (all'arrivo, automatica)** `[CANONE — DM
-  2026-07-31]`: attraversare mille anni **rimette in ordine il corpo**. I quattro
+- ⚕️ **GUARIGIONE DEL PASSAGGIO (all'arrivo, automatica)**: attraversare mille anni **rimette in ordine il corpo**. I quattro
   arrivano a **pf pieni**, senza livelli di affaticamento, con danni da
   caratteristica temporanei azzerati e **tutti gli usi giornalieri ricaricati**
   (invocazioni, poteri dei Bracieri, sinergie 1/giorno, incantesimi di Hella).
@@ -529,10 +482,6 @@ toccano nessuno. Prima di entrare c'è la targa.
 > di un re, una sola. Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova. Sotto, sul selciato, qualcosa luccica.*
 
-⚠️ *Il box di prima diceva che la targa era la profezia dei Quattro Eroi e che
-era stata incisa oggi, cioè dava il **Fatto** e la **Lettura** del nodo qui sotto
-prima che qualcuno la guardasse. Adesso la targa si vede e basta; i trucioli sul
-selciato sono la porta 👁️ lasciata aperta.*
 
 #### 🔍 Nodo d'indizio — la targa di bronzo *(Fatto · Lettura · Nome)*
 
@@ -649,7 +598,7 @@ più giovane. Quando prende quella di Thorik tiene in mano la stessa arma due
 volte, e il legno suona per questo (§1: «canta la stessa nota»). Nella stesura
 di prima Thorgrim chiedeva la corona e riceveva l'ascia.*
 
-> 🩸 **Re Thorek I e Thorgrim sono cugini** *(decisione DM 2026-09-24)*: nipoti
+> 🩸 **Re Thorek I e Thorgrim sono cugini**: nipoti
 > dello **stesso re**, quello caduto contro Skullcrusher cinquant'anni prima.
 > Per questo dicono tutti e due *«mio nonno»*, e nessuno dei due mente. La
 > Corona è il lutto del re; l'ascia, Aegis Fang, è rimasta a Thorgrim.
@@ -711,8 +660,7 @@ preso la prima tacca.
 > **Perché esiste.** La scelta del riposo della Scena 5 era già un orologio, scritto
 > a parole, in ore che non tornavano con queste tacche. Ma un tempo che non si segna non si sente,
 > e il tavolo non può *scegliere di correre un rischio* se non sa quanto ha in
-> mano. Questo è il congegno che i due banchi del repo — il Palio e l'Abbazia —
-> usano per reggere la tensione, e questo master ne aveva **una menzione sola**.
+> mano.
 
 **Si segna su un foglio, in vista.** Dal tramonto all'alba ci sono **8 tacche**,
 e quando il foglio arriva sul tavolo la prima è già segnata: il consiglio. Ogni
@@ -744,7 +692,7 @@ cercare Zeth sì. È la regola dell'Abbazia (`ADR-10` interno: *l'oppressione
 avanza sulle scoperte*), e serve a non punire proprio il comportamento che
 questo master vuole ottenere — **guardarsi intorno**.
 
-🔎 **E qui l'orologio dice una cosa che il testo prima non diceva**: parlare con
+🔎 **E qui l'orologio dice una cosa**: parlare con
 Balvar, cercare Zeth e fare il banchetto costano **3 tacche** in tutto. Sono i
 tre pezzi migliori della notte, e sommati sono anche il rischio più grosso. È
 il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
@@ -754,10 +702,7 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale 12 h se
 mangiano), fabbri che affilano le armi, chierici che benedicono.
-- **HELLA — i Treant dell'alba.** *(Allineato al rito il 2026-09-24: la prima
-  stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
-  tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
-  si piantano più.)* All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
+- **HELLA — i Treant dell'alba.** All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
   I e II: **due Treant di Adamantio** (statblock `DEF-3` §7: 90 pf, RD
   10/adamantio, 2 schianti +18, danni doppi alle strutture) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
@@ -782,7 +727,7 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
 | **Ritratto** | da generare: `id=ritratto-zeth-mastro-costruttore` |
 
-- **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE, DM 2026-07-23).**
+- **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE).**
   Il party incrocia il **Mastro Costruttore Zeth** nelle gallerie, un mezz'elfo dagli occhi
   febbrili, che traccia rune sui tunnel: *«Le mura di Thorek potrebbero cedere.
   Ma legherò la mia anima alla montagna in una Consacrazione. I miei leoni di
@@ -878,10 +823,6 @@ rune, come fa sempre. La conversazione con Balvar si fa **a tre passi dal
 generale**, ed è questa la tensione della scena. Quando finisce, o quando
 qualcuno colpisce, comincia la Scena 8.
 
-⚠️ *La stesura di prima metteva Balvar e Zog'tar nella stessa tenda senza dire
-come Balvar potesse parlare con i PG davanti al generale. La percezione viene
-dal suo statblocco; la lingua e l'angolo buio sono regia, e non gli danno niente
-che non abbia già.*
 
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
@@ -915,11 +856,6 @@ Zog'tar sa uccidere diecimila uomini, Balvar sa **dove** vanno colpite le mura.
 
 #### ⚖️ Il grigio — perché **crede di aver ragione** *(pilastro GoT)*
 
-> **Aggiunto nella riscrittura del 2026-09-18.** Balvar era già il personaggio
-> migliore del master, ma era scritto come **un nemico interessante**, non come
-> una fazione. La differenza è che di un nemico interessante si chiede *come lo
-> batto*; di una fazione che crede di aver ragione si chiede *cosa vuole, e cosa
-> gli costa averlo*. È l'unica riga che il pilastro 5 chiede davvero.
 
 | | |
 |---|---|
@@ -958,14 +894,6 @@ funziona solo se non l'hanno ancora minacciato.
 >
 > **Che fate?**
 
-⚠️ **Spezzato in tre il 2026-09-18, e non per pignoleria.** Era **un box da 15
-righe**, sopra il tetto di 12 di `read-aloud-adulti.md` §2, e la self-check
-della skill dello stile ha una domanda apposta: *«Did any box grow past the
-ceiling because the prose got interesting? → cut; the ceiling wins»*. Qui la
-prosa **era** diventata interessante, ed è il motivo per cui era cresciuta.
-Spezzandolo in tre beat si guadagna anche una cosa che il box unico non aveva:
-**Balvar aspetta che i PG reagiscano prima di parlare**, e il suo silenzio
-diventa la prima battuta.
 
 #### La cosa che lo rende memorabile: sa da dove venite
 
@@ -1045,7 +973,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 | | |
 |---|---|
-| **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di piastre annerite. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero *(decisione DM 2026-09-24)* |
+| **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di piastre annerite. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero |
 | **Vuole** | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar |
 | **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
@@ -1156,7 +1084,7 @@ il Sigillo di Ossidiana** (Appendice B) e pianifica la fuga nel futuro (userà u
 Cronolito). Ha appena visto **quattro ombre uscire vive dalla tenda del generale**, e nelle
 cronache che non dovrebbe aver letto i Quattro sono quattro: ne è **ossessionato**. Personalità: freddo, parla il meno possibile, li osserva
 con un **terrore reverenziale mal mascherato**.
-> **Canone (DM 2026-07-23) — cosa lo corrompe.** Vatore è **già marcio di
+> **Canone — cosa lo corrompe.** Vatore è **già marcio di
 > avidità e sete di potere**: non gli importano le conseguenze. Ha rubato il
 > Sigillo *sapendo* che divora anime — e ha deciso che le pagherà con quelle
 > degli altri, e poi con la propria. È questa scelta, non un incidente, a
@@ -1203,7 +1131,7 @@ L'artefatto che stringe al petto è in **Appendice B**.
 > **Il percorso dell'atto.** Dal primo ariete al ritorno. Le mura, il drago che
 > cala sul cortile, il rito all'incudine, la luce del Rubino.
 >
-> 🛑 **La serata del 2026-09-25 si ferma al primo box della Scena 10.** Il resto
+> 🛑 **La prima sessione si ferma al primo box della Scena 10.** Il resto
 > dell'atto è della sessione dopo.
 
 | Scena | Dove | Chi entra | Prova |
@@ -1228,17 +1156,6 @@ caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
 > tirarla fuori. In basso, le scale salgono.*
 >
 > **Che fate?**
-
-⚠️ **Perché questo box è stato riscritto** *(riscrittura 2026-09-18)*. Il
-precedente diceva *«Dove vi gettate, la linea tiene»* e chiamava i PG *«quattro
-leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
-
-- `editorial-standards.md` §2 — **mai risolvere l'azione dei PG dentro il
-  read-aloud**. «La linea tiene» era l'**esito della prova di gruppo** della
-  Scena 10, letto prima che qualcuno tirasse.
-- `read-aloud-adulti.md` §4 — *il predestinato senza costo* e *tutto epico*
-  sono due delle sei cose che fanno staccare un lettore adulto. Il nano che si
-  sputa nelle mani fa lo stesso lavoro e non chiede di essere creduto.
 
 Poi, quando le prime scale arrivano in cima:
 
@@ -1312,21 +1229,9 @@ Appendice A)*
 > mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra
 > mura che bruciano, che non hai mai visto.*
 
-⚠️ **Perché è stato spezzato in due** *(2026-09-18)*. Il box unico portava
-**nove nomi propri** e finiva su *«state per insegnare a quel sangue cosa vuol
-dire aver paura»* — che dice ai giocatori cosa stanno per fare, cioè
-**l'esito**. Adesso l'ingresso è **quello che il corpo sente** (freddo, il
-risucchio, le braci che si piegano, lo scudo che cade), la visione è un
-**micro-box per un solo PG** come chiede `ADR-0014` §1, e l'ultima riga è
-**«Che fate?»** invece di una promessa.
 
-#### 🎬 La regia dei primi due round — una battuta per attore *(ADR-0014 §1)*
+#### 🎬 La regia dei primi due round — una battuta per attore
 
-> **Perché c'è.** Sotto trovi le tattiche **del drago**, che questo master aveva
-> già e sono buone. Quello che mancava è l'altra metà, che `ADR-0014` prescrive
-> dal luglio 2026 per **ogni** sequenza a battute e che esisteva in **un solo
-> documento del repo**: i PG agiscono uno alla volta, e se ogni turno è un tiro
-> senza descrizione il pathos evapora al terzo round.
 >
 > **Non sono numeri nuovi.** CD e danni restano quelli dell'Appendice A. Qui c'è solo
 > **cosa leggere, quando**, e sono sei secondi a testa.
@@ -1443,7 +1348,7 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 | **Hella appena risorta** — vuoi proteggerla | Il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità) — dà alla giocatrice spazio per il suo primo scontro |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
-### SCENA 12 — Il Rituale della Forgia Eterna `[CANONE — state.md §5; D-B/D-A, DM 2026-09-19]`
+### SCENA 12 — Il Rituale della Forgia Eterna
 
 > **Cos'è, e perché esisteva solo in `state.md`.** Questo viaggio **è** il
 > **Rituale Legacy 4**, che la matrice degli artefatti chiama *«Siege of the
@@ -1451,7 +1356,7 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 > sbloccano qui**. Fino a oggi il master consegnava il duello e basta: il DM
 > tornava dal tavolo a segnare un avanzamento che nel modulo non era successo.
 >
-> ⏱️ **Quando** *(decisione DM)*: **dopo il combattimento**, sull'esito
+> ⏱️ **Quando**: **dopo il combattimento**, sull'esito
 > dell'incontro. Non è una prova sotto pressione ed è **senza ulteriori costi** —
 > il prezzo di questo arco Thorik lo ha già versato altrove.
 
@@ -1504,8 +1409,7 @@ sé**, come una serratura che riconosce la chiave. La Corona passa a **+3**.
 > *Want* è la montagna, non il portatore: ha accettato tre gemme e un pegno
 > perché le servivano, e lo dirà con la stessa calma con cui dice tutto il resto.
 
-**Momento 3 — Aegis Fang si sveglia** *(decisione DM: è una scena, non una riga
-di scheda)*. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
+**Momento 3 — Aegis Fang si sveglia**. È una scena, non una riga di scheda. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
 1 full awakening»*. L'Assedio è questo, ed è appena stato vinto.
 
 > **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
@@ -1533,7 +1437,7 @@ di scheda)*. `state.md` §5 dice: *«Unchanged until the Siege is won → then S
   è un potere nuovo in tasca: è il motore del viaggio di casa.
 - **Non ci sono altri costi qui** — né TS, né pegni, né punti caratteristica.
 
-#### Momento 4 — l'Aura della Forgia Eterna `[CANONE — DM 2026-09-20]`
+#### Momento 4 — l'Aura della Forgia Eterna
 
 **Il quarto potere, quello che la Corona non aveva mai avuto.** La matrice
 degli artefatti lo chiama *Aura of the Eternal Forge* e lo dà al **Rituale 4,
@@ -1630,7 +1534,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 ## §8 — AVANZAMENTO (budget PX per scena + tesoro pregenerato)
 
 ### A. Budget PX del beat (party 4 PG, APL 13)
-| Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| Scena | Tipo | PX/PG |
 |---|---|---|
 | Scene 1-4: l'arrivo, Durin, la targa, il consiglio | storia/social | 600 |
 | Scene 6-8: il campo, Balvar, Zog'tar (GS 14) | combattimento veloce | 2.400 |
@@ -1681,7 +1585,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione (verificato il 2026-09-24). Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
+| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione. Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
 | La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
 | Skullcrusher nel cortile | da generare: scheda **41** |
 | I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
@@ -1693,34 +1597,6 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 
 ---
 
-### Cosa è cambiato nel riordino del 2026-09-25
-
-Il DM ha chiesto un master che si legga in avanti, e una prosa che abbia un
-senso logico e cronologico. Riordinando sono venuti fuori dieci punti in cui il
-testo si contraddiceva con l'ordine degli eventi o col canone. Sono corretti
-nel testo; qui c'è l'elenco, perché chi ha una stampa vecchia sappia cosa è
-cambiato.
-
-| | Cosa diceva la stesura di prima | Perché non reggeva | Dove è corretto |
-|---|---|---|---|
-| 1 | il box d'arrivo leggeva la targa: *«Quei Quattro Eroi… siete VOI»* | dava il **Nome** del nodo d'indizio, che il master stesso dice di non regalare mai; e lo dava prima che la pattuglia li trovasse | Scena 1 (il bosco) e Scena 3 (la porta) |
-| 2 | il box della Zona 1 diceva che la targa era stata incisa **oggi** | era la **Lettura** del nodo, detta gratis | Scena 3 |
-| 3 | il consiglio di guerra era un paragrafo dentro la pattuglia, e la Scena 2 «Thorgrim» era «assorbita» in una scena che non la conteneva | Thorgrim esisteva solo nella versione veloce | Scena 4 |
-| 4 | Thorgrim chiedeva la corona e riceveva l'ascia | due oggetti diversi nella stessa battuta | Scena 4 |
-| 5 | la fonte di luglio faceva togliere la Corona a Thorik davanti al re | in `DEF-3` §5 se la toglie per la seconda volta in vita sua, per Hella | Scena 4 |
-| 6 | il riposo era in ore (3 h, 6 h) che non tornavano con le tacche | l'orologio è in tacche, e la guarigione del passaggio aveva già rimesso in piedi tutti | Scena 5 |
-| 7 | Balvar parlava con i PG davanti a Zog'tar, senza dire come | nanico antico, a bassa voce, in fondo alla tenda | Scena 7 |
-| 8 | Zog'tar *«muore in questa scena, la storia dice così»* | la Via A lo lascia vivo e umiliato | Scena 8 |
-| 9 | Vatore *«ha appena visto quattro individui respingere un'orda»*, durante l'infiltrazione | di notte l'orda non è ancora stata respinta: li ha visti uscire dalla tenda del generale | Scena 9 |
-| 10 | il Rubino era *«la terza gemma, muta da sempre»* | l'incasso è vuoto fino al Rituale | Scena 13 |
-
-### FILE-FONTE ASSORBITI DA QUESTO MASTER (→ `_ARCHIVIO/` a consolidamento chiuso)
-`_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` (master da tavolo B3) · `PortaleForgia-P5-DEFINITIVO-PARTE1/2.md`
-(prosa estesa) · `_ARCHIVIO/PortaleForgia-P5-RICALIBRATO.md` (deprecato) · sezione «battaglia
-antica» di `_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (deprecata).
-`PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` resta **vivo** (tabella
-DM-approved citata da qui e dall'ARC-08). `Bestiario/villain/Salvatore/Salvatore.md`
-resta vivo (Vatore/Sal).
 
 ---
 
@@ -1729,7 +1605,7 @@ resta vivo (Vatore/Sal).
 ## APPENDICE A — STATISTICHE
 
 > Una pagina A4 a una colonna, da tenere aperta durante gli scontri. I numeri
-> stanno **solo qui** (ADR-0021): le schede d'entrata nelle scene dicono chi è
+> stanno **solo qui**: le schede d'entrata nelle scene dicono chi è
 > il PNG, questa appendice dice quanto fa male.
 
 ### A.1 · Skullcrusher il Nero (Scena 11)
@@ -2023,7 +1899,6 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `pf-dado` tolto da `scripts/conformita_statblocchi.py`: portava «1d8+2», che non sono i dadi vita (pf-dado «1d8+2» ha 1 dado, il testo dichiara 13 DV). I dadi non si ricostruiscono senza inventare: la composizione delle classi non e' leggibile o comprende una classe non SRD. Da completare a mano.
 
-> ✅ `attributi` **allineati al testo della scheda** su decisione del DM (2026-09-24): la riga generata da `scripts/genera_attributi.py` diceva Int 9, Sag 18, Car 10, e contraddiceva il profilo sotto (Int 16, Sag 20, Car 14) e i TS di Volontà.
 
 Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE. **hp 96** (13 DV); **CA 24**, contatto 12, colto 22 (mithral +2, anello +2, DES +2). Init +2; Vel 6 m. TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia). BAB +8; Lotta +9. For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14.
 **Mischia** martello da guerra runico +1 +10/+5 (1d8+2). Domini **Inganno** e **Runa** `[INFERRED: dominio Runa = FRCS]`. Incantesimi da Chierico 9 (CD 15+liv): tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*.
@@ -2056,7 +1931,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > infliggi ora all'antenato, la mia Forgia la ricorderà quando affronterai il
 > discendente.»* + Aegis Fang, P6 r.746 (*"sangue Skullcrusher chiama"*).
 >
-> ✅ **Valori APPROVATI dal DM (2026-07-03)** — canone di carry-over. Sistema
+> ✅ **Canone di carry-over.** Sistema
 > **D&D 3.5** — solo bonus tipizzati (competenza/circostanza/morale), **niente
 > vantaggio/svantaggio 5e**. (Il DM può sempre ritoccare in corsa, ma questi
 > sono i valori di riferimento su cui l'ARC-08 può contare.)
@@ -2111,17 +1986,6 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 - È l'eco meccanica del legame ancestrale: l'arma che uccise il capostipite
   riconosce il discendente.
 
----
-
-## 5. PROPAGAZIONE (checklist)
-
-- [x] **Tabella creata** (questo file), con esiti aperti e valori quantificati.
-- [x] **Nota nello statblock ARC-08 di Fauci**: aggiunto un rimando a questo
-  file in `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`
-  §FAUCI DI PALUDE.
-- [x] **P5 fast-play** rimanda qui (Scena 5 + sezione carry-over).
-- [x] **Valori validati dal DM (2026-07-03)** → l'ARC-08 A12 può integrarli
-  come canone (riga matrice esiti + read-aloud del primo avvistamento).
 
 
 \page

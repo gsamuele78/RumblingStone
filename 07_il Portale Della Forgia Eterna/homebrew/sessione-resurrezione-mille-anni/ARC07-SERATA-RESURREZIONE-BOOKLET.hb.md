@@ -44,7 +44,7 @@ li decide la Sala:
    **Ci si ferma al primo ariete sulle mura.** Il duello con Skullcrusher e il
    Rituale 4 sono della sessione dopo.
 
-**Decisioni del DM prese il 2026-09-24** *(valgono per questo booklet)*:
+**Come si gioca questa serata**:
 
 | | Decisione | Dove pesa |
 |---|---|---|
@@ -447,11 +447,9 @@ in una frase: *«Otto tacche fino all'alba. Ogni cosa che scegliete ne costa.»*
 Le tariffe sono nel master. La tabella da tenere d'occhio è quella di uscita
 dalla tenda: **≤ 6 in tempo, 7 di corsa, 8 l'alba vi coglie fuori.**
 
-⚠️ **I semi di Hella.** La prima stesura di `DEF-4` le faceva piantare *«i 3
-semi di treant»*: al rito quei semi sono entrati nella Collana. **Il master è
-stato allineato il 2026-09-24**: all'alba Hella evoca **due Treant di
-Adamantio** con la Collana (due cariche su tre, la tacca resta una). L'uso
-della ghianda annerita resta una `[PROPOSTA]` da confermare: è scritta lì.
+⚠️ **I semi di Hella.** All'alba Hella evoca **due Treant di Adamantio** con
+la Collana (due cariche su tre, la tacca resta una). L'uso della ghianda
+annerita resta una `[PROPOSTA]` da confermare: è scritta in `DEF-4`, Scena 5.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
@@ -512,8 +510,7 @@ contrapposto). **Balvar non si taglia**: è l'unica scena che cambia il duello.
 ## §6 · Il registro di fine serata
 
 Tutto quello che si annota stasera, in un posto. Si trascrive col wizard,
-`python3 scripts/dm.py session`, **sul ramo del gruppo**, mai a mano su `main`
-(ADR-0007).
+`python3 scripts/dm.py session`, **sul ramo del gruppo**, mai a mano su `main`.
 
 | | Cosa | Esito |
 |---|---|---|
@@ -545,34 +542,6 @@ prodotti (proposte, il DM decide quali):
 | E-07j | Balvar, «dite che c'ero» | grigio, lunga |
 | E-07k | Vatore, qualunque esito | grigio, lunga (ARC-09) |
 
----
-
-## §7 · Incongruenze trovate preparando la serata
-
-Otto cose che i file dicono in modo diverso, o che non reggono. Nessuna
-blocca la serata; tutte vanno sapute prima di trovarsele davanti.
-
-| # | Cosa | Cosa fare stasera |
-|---|---|---|
-| 1 | **Durik**: `DEF-3` §7 lo dice «compagno a pieno titolo», la scheda del viaggio v2 §10 «evocato, 1 ora» | risolto dalla decisione **S3**: sempre presente |
-| 2 | **Durik a 12 DV**: la tabella di risonanza dà *«+1d8+3 pf»* per due DV di un d10 | **12d10+36 = 102 pf**, confermati dal DM il 2026-09-24 |
-| 3 | **Periapto di Saggezza +2 e Collana +4**: `DEF-3` §11 C scrive «sinergia +4+2 SAG». In 3.5 due bonus di **potenziamento** alla stessa caratteristica **non si sommano** (SRD, *Combining Magical Effects*) | vale solo il **+4**. Il Periapto resta un oggetto da rivendere o da dare a un altro. **Corretto nel master il 2026-09-25** |
-| 4 | **L'equipaggiamento di Hella**: `DEF-3` Appendice A dice cuoio borchiato +2, scudo di legno +1, scimitarra +1; §11 C dice armatura di cuoio +2, falcetto o scudo leggero +1 | vince **la scheda della giocatrice**, che è la fonte più vecchia e l'unica giocata |
-| 5 | **I tre semi di treant a −1000** (`DEF-4`, la notte nella fortezza), anteriori al rito | **corretto nel master**: due Treant di Adamantio dalla Collana (IV.3) |
-| 6 | **Due immagini dell'arco non sono illustrazioni.** `PortaleDellaForgiaEterna.webp`, che `DEF-4` §9 indica per «il portale del Tempo», è la fotografia di un blocco di testo (un'iscrizione in nanico e la sua traduzione). `Mappa della Sala … Rituale del Cuore di Moradin.webp`, indicata da `DEF-3` per il rito, è un grafico a punti su assi in metri | non mostrarle. Il portale e il rito sono fra i prompt da generare (`Immagini/PROMPT-IMMAGINI-07ILP.md`) |
-| 7 | **La preghiera nanica di `DEF-3` §4**, *«Khazâd ai-mênu…»*, riprende parola per parola il grido di guerra dei nani di Tolkien. La skill dello stile lo vieta (non-negoziabile 4: niente testo o nomi presi dalle fonti) | **corretto il 2026-09-24**: master e handout hanno due versi di nanico scritto per la campagna, con la traduzione e la preghiera in italiano |
-| 8 | **Durik nella Cassetta del DM** era descritto come *«il nano che emerge dal Rituale»* e con un tic vocale. È un cane e non parla | corretto nella Cassetta con questo lotto |
-
-E una nona, fuori da questo arco: in `state.md` §5 **Therysol** era *him*, mentre
-la sua scheda (`Bestiario/png/Therysol/`) e tutti i master la vogliono **donna**
-(Ysolde). **Corretto il 2026-09-24** su decisione del DM.
-
-> ✅ **Decisioni del DM del 2026-09-24, applicate ai master**: Re Thorek I e
-> Thorgrim sono cugini; Frostcleaver è del re e nell'affresco A3 Thorgrim tiene
-> Aegis Fang; Zeth è di mille anni fa (Ghostlord e ARC-09 riallineati); Balvar
-> ha INT 16 e SAG 20; l'Occhio di Ossidiana è un occhio vero; **Hella è come
-> nei ritratti**, bionda con le orecchie a punta (`DEF-3` §7 e la sua scheda
-> allineati); Durik ha 102 pf; la preghiera ha due versi di nanico nuovo.
 
 
 \page
@@ -590,20 +559,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > scritti bene e sono profondi, ma **al tavolo non si consultano**: nessuno cerca
 > un PNG in mezzo a milleseicento righe mentre quattro persone aspettano.
 >
-> Questa è la fetta che mancava — l'**apparato d'uso** di
-> [ADR-0018](../../../plans/adr/ADR-0018-apparato-uso-obbligatorio.md), che l'arco
-> aveva **una voce su nove** (il quick-reference dentro ogni master). Sei pagine
-> che nessuno legge per piacere, e che si aprono ogni volta che si gioca.
->
-> **Modello**: `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` e
-> `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md`.
-> **Stato**: apparato d'uso (non canone narrativo). **Data**: 2026-08-31.
 
 ⚠️ **Cosa questo file NON fa.** Non riscrive niente, non aggiunge fatti e non
 decide nulla: **rimanda**. Dove i master tacciono — ed è il caso di qualche tic
 vocale — la voce proposta è marcata **[PROPOSTA]** e il DM la cambia senza
-chiedere il permesso a nessuno. I master restano la fonte di verità
-(ADR-0018: i cinque `ARC*-DEF-*` non si riscrivono retroattivamente).
+chiedere il permesso a nessuno. I master restano la fonte di verità.
 
 | § | Cosa |
 |---|---|
@@ -613,7 +573,6 @@ chiedere il permesso a nessuno. I master restano la fonte di verità
 | 4 | I suoni dell'arco |
 | 5 | Il momento da fotografare, uno per master |
 | 6 | Accessibilità |
-| 7 | Cosa resta scoperto, dichiarato |
 
 ---
 
@@ -638,7 +597,7 @@ prima.
 
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
-| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi *(corretto 2026-09-24: la riga lo diceva un nano che parla)* | `#1` §9 fase 3 · `#3` §7 |
+| **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
 | **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` Scena 4 |
 | **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` Scena 2, Appendice A |
@@ -816,34 +775,6 @@ serata è in ritardo, **si taglia altro** — non questo.
 - **Ritmo**: il master `#1` è lungo il doppio degli altri. Se la sessione è di
   tre ore, **arriva fino alla Sentinella e fermati lì**: è una soglia naturale.
 
----
-
-## §7 · Cosa resta scoperto — dichiarato
-
-Perché nessuno creda che l'arco sia a norma quando non lo è ancora (è la stessa
-onestà di `ARC08-16-CUE-SONORI.md`).
-
-| Voce ADR-0018 | Stato |
-|---|---|
-| 1 · foglio del cast | ✅ §1 |
-| 2 · pronuncia | ✅ §2 |
-| 3 · indice read-aloud | ✅ §3 |
-| 4 · inserto per lo schermo | ✅ **già esistente**: il §0-bis quick-reference dentro ogni master |
-| 5 · cue sonori | ✅ §4 |
-| 6 · momento da fotografare | ✅ §5 |
-| 7 · **prop fisici** | ✅ `homebrew/HANDOUT-*.hb.md` — **cinque fogli** da consegnare. ⚠️ *Correzione: quando ho scritto questa riga la prima volta dicevo che mancavano tutti. Non era vero: le Cronache dei Quattro Eroi avevano già il loro prop dal 2026-07-10. Ne mancavano tre, e ora ci sono.* La **nota per il DM che non si stampa** resta in `ARC07-HANDOUTS.md` («Quando darlo», le fonti, l'avviso anti-spoiler B4): il generatore la toglie dal prop apposta |
-| 8 · accessibilità | ✅ §6 |
-| 9 · memoria fra le sessioni | ✅ coperta da `campaign/state.md` + ADR-0007 — **non si duplica** |
-
----
-
-## Materiale collegato
-
-- [ADR-0018](../../../plans/adr/ADR-0018-apparato-uso-obbligatorio.md) — perché l'apparato è parte del contenuto
-- [`PIANO-TRAVASO-DRAPPO-CAMPAGNA`](../../../plans/PIANO-TRAVASO-DRAPPO-CAMPAGNA.md) — il lotto A1 è questo file
-- `ARC07-00-INDICE.md` — l'indice dell'arco (file → parte → stato)
-- `STANDALONE-Il-Drappo-di-Tarsilia/08-CASSETTA-DEL-DM.md` — il modello
-- `08_La Battaglia Di Hammerfist/ARC08-16-CUE-SONORI.md` — il modello dei suoni
 
 
 \page
@@ -878,8 +809,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > master #1), **prima** della resurrezione di Hella (master #3). Ordine D2.
 > **Canone a monte**: Topazio (Fuoco) e Smeraldo (Terra) presi; corpo di Hella
 > vegliato da Therysol nella Sala; il suo spirito ha già viaggiato (i PG **non
-> lo sanno**). Countdown Hammerfist all'arrivo: **~3g 20h** (`[CANONE GIOCATO]`:
-> sono entrati da Terros senza riposare). **Registro completo dei riposi in
+> lo sanno**). Countdown Hammerfist all'arrivo: **~3g 20h** (> sono entrati da Terros senza riposare). **Registro completo dei riposi in
 > §0-bis**; il sogno del riposo qui nella Sala è il **§7-bis**.
 
 ---
@@ -955,7 +885,7 @@ Sala costa solo **−4 h** (tariffa divina, §0-bis) e porta con sé il sogno de
 > 📍 **Questo è il file che possiede l'orologio.** Master #1 §8c-4 e la regia di
 > sessione ne riportano solo l'estratto: se i numeri divergono, **vale questo**.
 
-#### Le due tariffe del riposo `[CANONE — DM 2026-07-31]`
+#### Le due tariffe del riposo
 
 | Dove dormono | 8 ore di sonno costano | Perché |
 |---|---|---|
@@ -979,8 +909,8 @@ ri-sottrarli: sono dentro. Da lì in poi il registro è additivo.
 |---|---|---|---|---|
 | **R1** | Piano del Fuoco, prima della piramide | ✅ giocato | dentro l'ancora | — |
 | **R2** | **Sala**, dopo il Piano del Fuoco | ✅ giocato | **+2 h** (ri-prezzato −6 h → −4 h) | **3g 20h** |
-| **R3** | Piano della Terra, prima della camera di Terros | ❌ **NON fatto** — sono entrati da Terros senza dormire `[CANONE GIOCATO 2026-07-31]` | 0 | **3g 20h** |
-| **R4** | **Sala della Forgia**, dopo Terros e prima del rito | ✅ **giocato: dormono nella Sala** `[CANONE GIOCATO]` | **−4 h** | **3g 16h** |
+| **R3** | Piano della Terra, prima della camera di Terros | ❌ **NON fatto** — sono entrati da Terros senza dormire | 0 | **3g 20h** |
+| **R4** | **Sala della Forgia**, dopo Terros e prima del rito | ✅ **giocato: dormono nella Sala** | **−4 h** | **3g 16h** |
 | — | il rito di resurrezione | prossimo | ~1 h | 3g 15h |
 | — | viaggio a −1.000 (#4) | previsto | **0 h** — il Rubino riporta all'istante di partenza | 3g 15h |
 | — | **consegna all'ARC-08** | | | **≈ 3g 15h** |
@@ -1074,7 +1004,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
   cupidigia avrà cosa mordere (e Vatore lo aspetta).
 - Se ha preso il **Marchio di Varis** (master #1 §6-bis, CANONE), qui l'Anello lo
   «pizzica» ogni volta che passa davanti ad A6: il marchio e il caos temporale
-  risuonano (conseguenza canonica del Marchio, DM 2026-07-23).
+  risuonano (conseguenza canonica del Marchio).
 
 ### 🌙 HELLA — la promessa dipinta (solo manifestazione, mai dialogo)
 - Hella non ha coscienza di ciò che accade: il suo spirito è nell'Incudine del
@@ -1239,10 +1169,6 @@ tornare — presagio della resurrezione, non garanzia.*
 > la Corona non è più posata: è FUSA alla fronte, parte di chi la porta. L'affresco si
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
-> ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
-> della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
-> Thorek I, suo cugino (`DEF-4` Scena 4); Thorgrim è l'antico portatore
-> di **Aegis Fang**, e il viaggio è a mille anni fa.*
 
 - **Interazione (Thorik osserva 1 min, TS Volontà CD 17 — il fallimento è il
   dono).** *Fallimento:* rivive tutto — paura, speranza, la **perdita di Hella**
@@ -1431,7 +1357,7 @@ rinnovabili 1/giorno tornando alla Sala.
 
 ---
 
-## §7-bis — «LE QUATTRO ORE RUBATE»: cosa si sogna dormendo nella Forgia `[CANONE — DM 2026-07-31]`
+## §7-bis — «LE QUATTRO ORE RUBATE»: cosa si sogna dormendo nella Forgia
 
 ### Prima la regola, perché è la domanda che nasce sempre
 
@@ -1488,11 +1414,6 @@ sottile: è un uomo la cui identità è *reggere*, e che per la prima volta ha
 scoperto di **non aver retto da solo** — e la cosa non lo ha diminuito. Se il
 giocatore ne parla, ascolta e non risolvere.
 
-*(Nota di canone, 2026-08-06: fino a questa data la scena di Thorik era il suo
-rovescio — «qualcun altro ci è arrivato prima, tu sei quello in piedi» — scritta
-quando il pegno era attribuito per errore a Tordek, e questa scena stava sotto
-il suo nome. Il pegno è del portatore: la scena torna a lui, insieme alle mani
-fredde.)*
 
 ### ⚒️ TORDEK — lo zaino
 
@@ -1600,7 +1521,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 ### A. Budget PX del beat (party 3 PG, APL eff. 12 · PG di 13°)
 > Beat **hub**: PX di **storia e interpretazione**, non di combattimento.
 
-| Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| Scena | Tipo | PX/PG |
 |---|---|---|
 | Ritorno e lettura della Cronaca (entrambe le stanze) | storia | 400 |
 | A3 — catarsi di Thorik (beat personale riuscito, per chiunque lo giochi bene) | roleplay | 300 |
@@ -1620,7 +1541,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 | Dove | Oggetto / dono (pregenerato) | Valore |
 |---|---|---|
 | Altare (§7) | **4 Benedizioni** rinnovabili — equivalenti a Resist Energy (1.000), Endure Elements (500), pozioni di cura (3/giorno), Forza della Montagna | ricchezza speciale (non-WBL) |
-| A8 (manifestazione) | **Ghianda di Speranza** (CANONE DM 2026-07-23): è la **stessa ghianda annerita** che Hella stringe nel pugno dalla morte (master #3 §7-bis); l'affresco A8 la «mostra» come segno. Al rito del #3 diventa un piccolo àncora druidico (+1 sacro 1/g al Radicamento) **o** va nel 1° seme della Collana. Curiosità sacra, 0 mo. | — |
+| A8 (manifestazione) | **Ghianda di Speranza**: è la **stessa ghianda annerita** che Hella stringe nel pugno dalla morte (master #3 §7-bis); l'affresco A8 la «mostra» come segno. Al rito del #3 diventa un piccolo àncora druidico (+1 sacro 1/g al Radicamento) **o** va nel 1° seme della Collana. Curiosità sacra, 0 mo. | — |
 | Stanza della Corona | Sotto il dais del trono (Osservare CD 22): **reliquia dei Custodi caduti** — un anello sigillo nanico annerito, appartenuto a un portatore della Corona di ere fa (200 mo per un collezionista; +2 di circostanza a Diplomazia coi nani devoti se indossato) | 200 mo |
 
 Ricchezza speciale (Corona 2/3, Bracieri completi) già contata al master #1.
@@ -1812,21 +1733,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > compiuto il viaggio nell'Incudine del Mondo** (verità piena / ferita aperta /
 > Via della Radice — tutte le prove superate); i PG **non lo sanno ancora** —
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
-> `[CANONE GIOCATO 2026-07-31]` — registro dei riposi in `ARC07-DEF-2` §0-bis,
+> registro dei riposi in `ARC07-DEF-2` §0-bis,
 > che è il file che possiede l'orologio. Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
-> 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo si legge in
-> avanti, nell'ordine in cui la serata accade: la Sala, le gemme, il Cuore, gli
-> step del rito, i Doni dentro lo Step 5, il richiamo, la Custode, lo Step 6 che
-> apre il risveglio, il racconto, la prima ora, la soglia. Prima lo Step 6 stava
-> **prima** dei Doni e della Custode, che però succedono durante lo Step 5, e la
-> soglia stava dopo contingenze, echi e PX. La scheda completa di Hella e lo
-> statblocco dei Treant sono in **Appendice A**, le mappe in **Appendice B**.
-> Dove i giocatori ricevono un foglio c'è la riga **✉ Si consegna qui**; la
-> tabella in §0 le mette in fila. I numeri di sezione da §0 a §12 non sono
-> cambiati.
 
 ---
 
@@ -1874,8 +1785,7 @@ attraversato il suo spirito (§8). Poi il party è di **4**, pronto per il #4.
 
 **Chi c'è.** Thorik, Tordek, Artemis (officianti); **Therysol** (veglia, testimone);
 **Moradin** (divino, manifesto per 3 secondi allo Step 6); **Hella** (morta →
-viva); e — al momento del richiamo — **la Custode delle Radici** (§6, CANONE
-DM 2026-07-23; il ramo A/B/C si gioca).
+viva); e — al momento del richiamo — **la Custode delle Radici** (§6; il ramo A/B/C si gioca).
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i sei
 fogli per i giocatori, nella tabella qui sotto; le mappe dell'**Appendice B**
@@ -1988,7 +1898,7 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   fuoco ×1,5**, prezzo della Via della Radice, e adesso **porta il fuoco**.
 - Se porta il **Marchio di Varis** (#1 §6-bis, CANONE): l'Anello, durante la
   stabilizzazione (Step 3), «pizzica» — il caos vitale e il marchio del mercato
-  risuonano. Gancio muto (conseguenza canonica del Marchio, DM 2026-07-23).
+  risuonano. Gancio muto (conseguenza canonica del Marchio).
 
 ### 🌙 HELLA — il ritorno (da qui, PG a pieno titolo)
 - Fino al risveglio: **nessuna coscienza** (solo le sensazioni del viaggio,
@@ -2049,7 +1959,7 @@ durante gli step).
 **THERYSOL (piano, senza voltarsi):** *«Undicimila. Poi ho smesso di contare.
 Non perché fosse troppo. Perché avevo paura del numero dopo.»*
 
-### La Sala per sensi — e cosa non dire *(ADR-0057)*
+### La Sala per sensi — e cosa non dire
 
 | 👁 Occhi | 👂 Orecchie | ✋ Pelle e naso | 🚫 **Cosa NON dire** |
 |---|---|---|---|
@@ -2057,7 +1967,7 @@ Non perché fosse troppo. Perché avevo paura del numero dopo.»*
 | i semi sul corpo hanno una **venatura che si muove**, lenta, come linfa in un tronco tagliato | quando qualcuno parla, la voce **non ha eco**: la sala se la prende | odore di **ferro caldo e di terra piovuta**, due cose che non stanno insieme | ❌ che la terra piovuta **è Hella**: che il corpo stia già cambiando è ciò che i PG devono **notare da soli** |
 | la Corona sulla fronte di Thorik ha **due gemme accese e un incasso vuoto** | | il metallo dell'Altare **non è freddo**, e un nano lo trova sbagliato | ❌ che l'incasso vuoto **è il Rubino e si apre col viaggio**: vedi §2-bis, si guadagna |
 
-### Le sei porte — interagire con la Sala *(prove grezze, ADR-0022)*
+### Le sei porte — interagire con la Sala
 
 Nessuna richiede un grado speso. Sono **opzionali**: chi non le tocca non perde
 niente, chi le tocca entra nel rito già dentro la scena.
@@ -2074,7 +1984,7 @@ niente, chi le tocca entra nel rito già dentro la scena.
 
 ---
 
-## §2-bis — LE DUE GEMME ACCESE, E LA TERZA CHE MANCA `[CANONE — state.md §5]`
+## §2-bis — LE DUE GEMME ACCESE, E LA TERZA CHE MANCA
 
 > **Perché sta qui.** I PG hanno speso due archi a cercare quelle pietre. Se il
 > rito le ignora, quelle sessioni diventano un corridoio verso questa. Questa
@@ -2174,7 +2084,7 @@ fiore di metallo; al rito si posa sul petto di Hella.
 > suo cuore (allineamento preciso). I tre semi (mani + fronte). I tre officianti
 > ai punti cardinali, il Sud vuoto. Moradin guida telepaticamente.
 
-### ⚙️ Come si gioca questo rito — la regia `(ADR-0014)`
+### ⚙️ Come si gioca questo rito — la regia
 
 > **Il difetto che questa sezione chiude.** Sei step con sei CD sono una lista
 > di tiri. Un rito è una **scena a turni**: ha un'apertura, un giro in cui
@@ -2222,10 +2132,8 @@ per intero, in italiano, dall'handout.
 Thorik, che la legge ad alta voce.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
-> ✏️ *Sostituita il 2026-09-24 su decisione del DM: la riga di prima riprendeva
-> parola per parola il grido di guerra dei nani di Tolkien, e la skill dello
-> stile lo vieta (non-negoziabile 4). Il nanico qui sopra è scritto per questa
-> campagna: si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
+
+> *La preghiera si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
 > battuta e le vocali brevi.*
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
@@ -2254,21 +2162,15 @@ Step 5 (*«Il Sud del cerchio è vuoto…»*) e passa al §5.
 
 ---
 
-## §5 — I TRE DONI (il trapianto) `[CANONE — DM 2026-09-12]`
+## §5 — I TRE DONI (il trapianto)
 
 > **La regola d'oro.** La resurrezione **non è in ostaggio**: col Cuore, Hella
 > torna comunque. I doni comprano la **qualità del ritorno**. Moradin **chiede,
 > non impone**, e prima di chiedere dice **perché** e **a cosa serve**: il
 > discorso è qui sotto.
 
-### 🔨 Come lo chiede Moradin: il perché, lo scopo, il prezzo `[riscritto 2026-09-25 su richiesta del DM]`
+### 🔨 Come lo chiede Moradin: il perché, lo scopo, il prezzo
 
-> ✏️ **Perché è cambiato.** Prima c'era una riga sola: *«Chi dona cosa? Nessuno
-> è obbligato. Ma ogni dono mancato, la carne lo ricorderà.»* Il DM ha fatto
-> notare che con quella i giocatori possono dire sì o no, ma non sanno **a che
-> cosa**: un dio che chiede un sacrificio deve dire perché lo chiede e che cosa
-> ne farà. Adesso sono quattro battute, e la voce è quella del **Cuore**: la
-> forma visibile di Moradin arriva solo allo Step 6.
 
 **Battuta 1 · il perché.** Si legge appena i tre sono in cerchio per lo Step 5,
 **prima** dei tiri di Volontà. La voce di Moradin è lenta e bassa, e non
@@ -2529,7 +2431,7 @@ momento entra la Custode: §6.
 
 ---
 
-## §6 — IL DEBITO DELLA RADICE (il filo grigio del piano spirituale) `[CANONE — DM 2026-07-23; il ramo (A/B/C) si gioca]`
+## §6 — IL DEBITO DELLA RADICE (il filo grigio del piano spirituale)
 
 > **Cosa fa questo filo (richiesta DM).** Riportare Hella è giusto — ma non è
 > **gratis per il mondo**. Nel viaggio, Hella scelse la **Via della Radice** e
@@ -2562,7 +2464,7 @@ momento entra la Custode: §6.
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
 
 **Chi/cosa è.** La Custode delle Radici — un **psicopompo neutrale** del Sogno
-della Terra (CANONE DM 2026-07-23: **si aggancia al Cerchio Sacro di ARC-09** —
+della Terra (**si aggancia al Cerchio Sacro di ARC-09** —
 la quest della druida Hella, `09_.../Quest 1 – Druida Hellas: Il Cerchio Sacro
 della Foresta.md`). Non combatte, non minaccia: **contratta**. Il DM la
 gioca come un funzionario dell'ordine naturale — cortese, inflessibile, senza
@@ -2610,7 +2512,7 @@ malizia (Andor: la macchina non odia, esegue).
 
 **Aspetto (Ibrido Treant):** pelle verdastra sottile, occhi ambra-dorati,
 capelli biondi mossi con una venatura di corteccia fine, orecchie appuntite come
-foglie giovani *(com'è nei ritratti: decisione DM 2026-09-24)*, dita un po' più lunghe (unghie come corteccia,
+foglie giovani, dita un po' più lunghe (unghie come corteccia,
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
 
@@ -2835,7 +2737,7 @@ rimesso dritto undici volte.»* Da lì si riparte.
 ### A. Budget PX del beat (party 3→4 PG, APL eff. 12-13 · PG di 13°)
 > Beat **hub** rituale: PX di storia, sacrificio e roleplay.
 
-| Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| Scena | Tipo | PX/PG |
 |---|---|---|
 | Il rito corale completato (Step 1-6) | rito corale | 800 |
 | La scelta-costo di ogni PG (§5, qualunque strada) | roleplay/sacrificio | 400 |
@@ -2873,7 +2775,7 @@ rimesso dritto undici volte.»* Da lì si riparte.
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
 > raccolse in vita (è la stessa **«Ghianda di Speranza»** che l'affresco A8
 > mostra, master #2). Al risveglio Hella la pianta nel primo suolo sacro che
-> tocca (CANONE DM 2026-07-23): diventa un piccolo **àncora druidico** (+1 sacro
+> tocca: diventa un piccolo **àncora druidico** (+1 sacro
 > 1/giorno al Radicamento) **o** va nel 1° seme-dono vuoto della Collana — scelta
 > della giocatrice. 0 mo commerciali, peso emotivo enorme.
 
@@ -2906,7 +2808,7 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 |---|---|
 | Il Cuore di Moradin, dopo il §3 | `Immagini/web/ilCuoreDiMoradin.jpg` |
 | Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
-| La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
+| La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione |
 | Il reliquiario che si apre, fedele al testo | da generare: `id=tavola-cuore-di-moradin` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
 
 ### Musica
@@ -3090,16 +2992,6 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Cuore della Montagna). **Canone**: la Corona ha Topazio + Smeraldo (aprono il
 > portale del Tempo); il **Rubino si accende SOLO alla vittoria antica** (D5/D16).
 >
-> 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo segue l'ordine
-> in cui si gioca, dal tramonto all'alba, in tre atti e tredici scene. Ogni PNG
-> entra nella scena in cui i PG lo incontrano, con la sua **scheda d'entrata**.
-> Le statistiche, l'artefatto di Vatore, le versioni veloci e le mappe stanno
-> nelle **Appendici A-D**, su pagine A4 a una colonna. Nella stesura di prima le
-> sezioni aggiunte a ogni revisione erano in coda (Balvar, il duello, il
-> Rituale, Zog'tar, Vatore), e il consiglio di guerra era un paragrafo dentro la
-> pattuglia. Nessun contenuto di gioco è stato tolto. Dieci passi della prosa
-> si contraddicevano con l'ordine degli eventi o col canone, e sono stati
-> corretti: l'elenco è in §9, «Cosa è cambiato nel riordino».
 
 ---
 
@@ -3118,7 +3010,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | §6 | **Contingenze & sconfitta** | «se i PG fanno X»; il paradosso; una sconfitta nel passato |
 | §7 | **Echo Ledger** | carry-over B4, Vatore→Sal, tono del Rubino |
 | §8 | **Avanzamento** | budget PX per scena, tesoro pregenerato |
-| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica, cosa è cambiato |
+| §9 | **Ponte + Handout & Asset** | le Cronache, il piano di battaglia, immagini, musica |
 | App. A | **Statistiche** | Skullcrusher, Zog'tar e le guardie, Durin, Balvar, le creature del campo |
 | App. B | **Il Sigillo di Ossidiana** | l'artefatto che Vatore ha appena rubato |
 | App. C | **Le versioni veloci** | le stesse scene a montaggio, per chi ha poco tempo |
@@ -3136,7 +3028,7 @@ nero. Su una targa di bronzo alle porte, una profezia già incisa parla di
 **«Quattro Eroi dal futuro»**. Quei Quattro siete voi: la leggenda che avete
 sempre creduto passato è il vostro presente. **Paradosso bootstrap.**
 
-**Come si gioca** *(decisione DM 2026-09-25)*. Il corpo di questo master è
+**Come si gioca**. Il corpo di questo master è
 scritto **a scene complete**, nell'ordine in cui si giocano. Gli scontri si
 fanno su griglia: la tenda del comando (Scena 8, mappa **M7-C**) e il cortile
 del duello (Scena 11, mappa **M7-B**). Le scene senza scontro hanno una prova di
@@ -3274,7 +3166,7 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
 - ⚠️ **Vulnerabilità al fuoco** (costo del viaggio): Skullcrusher è acido, non
   fuoco — ma l'orda ha incendiari. E se evoca l'**Avatar della Radice** (Enorme),
   diventa un bersaglio: gioca il dilemma.
-- 🐾 **Durik c'è, sempre** *(decisione DM 2026-09-24)*: attraversa il portale con
+- 🐾 **Durik c'è, sempre**: attraversa il portale con
   lei, perché è legato alla Collana. Contro Skullcrusher conta una riga della sua
   scheda: **vulnerabile all'acido, +50%**. Il soffio del drago è l'unica cosa in
   questo viaggio che lo corrode davvero, e la giocatrice lo sa.
@@ -3296,13 +3188,13 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
   tempo. L'Anello lo **percepisce** (aura temporale) prima di chiunque. È il PG
   giusto per fiutare che quel ladro «non è di qui» — e per decidere cosa farne
   (grigio: robarlo? ucciderlo? lasciarlo?). La sua avidità incontra un pari.
-- ⚠️ **Il Marchio di Varis non è attivo** `[CANONE GIOCATO 2026-07-31]`: Artemis
+- ⚠️ **Il Marchio di Varis non è attivo**: Artemis
   ha preso il Seme senza toccarlo e l'ha fatto mettere nello zaino di Tordek, e
   il Marchio si chiude col tocco. Quindi la risonanza qui sotto **non scatta**.
   Scatta solo se, prima del viaggio, qualcuno ha toccato il Seme: allora la
   sente chi lo ha toccato, anche se è Tordek. *Se scatta*: il marchio
   «riconosce» la firma temporale di Vatore, due fili della **stessa rete**
-  (Varis ↔ Il Collezionista, CANONE DM 2026-07-23), mille anni prima che esista.
+  (Varis ↔ Il Collezionista), mille anni prima che esista.
 
 ---
 
@@ -3347,8 +3239,8 @@ notte = furtività CD 20; ogni fuoco è luce fioca a 3 m. Vedi M7-A zoom.
 
 ### ZONA 3 — Le Mura all'Alba (l'assalto)
 
-Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la serata del
-2026-09-25.
+Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la prima delle due
+sessioni del viaggio.
 
 **Terreno (callout):** camminamenti sopraelevati (+4,5 m); brecce dove gli
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
@@ -3382,8 +3274,7 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 > dietro il crinale. Uno di voi ha le ginocchia bagnate e non si ricorda di
 > essere caduto.*
 
-- ⚕️ **GUARIGIONE DEL PASSAGGIO (all'arrivo, automatica)** `[CANONE — DM
-  2026-07-31]`: attraversare mille anni **rimette in ordine il corpo**. I quattro
+- ⚕️ **GUARIGIONE DEL PASSAGGIO (all'arrivo, automatica)**: attraversare mille anni **rimette in ordine il corpo**. I quattro
   arrivano a **pf pieni**, senza livelli di affaticamento, con danni da
   caratteristica temporanei azzerati e **tutti gli usi giornalieri ricaricati**
   (invocazioni, poteri dei Bracieri, sinergie 1/giorno, incantesimi di Hella).
@@ -3488,10 +3379,6 @@ toccano nessuno. Prima di entrare c'è la targa.
 > di un re, una sola. Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova. Sotto, sul selciato, qualcosa luccica.*
 
-⚠️ *Il box di prima diceva che la targa era la profezia dei Quattro Eroi e che
-era stata incisa oggi, cioè dava il **Fatto** e la **Lettura** del nodo qui sotto
-prima che qualcuno la guardasse. Adesso la targa si vede e basta; i trucioli sul
-selciato sono la porta 👁️ lasciata aperta.*
 
 #### 🔍 Nodo d'indizio — la targa di bronzo *(Fatto · Lettura · Nome)*
 
@@ -3608,7 +3495,7 @@ più giovane. Quando prende quella di Thorik tiene in mano la stessa arma due
 volte, e il legno suona per questo (§1: «canta la stessa nota»). Nella stesura
 di prima Thorgrim chiedeva la corona e riceveva l'ascia.*
 
-> 🩸 **Re Thorek I e Thorgrim sono cugini** *(decisione DM 2026-09-24)*: nipoti
+> 🩸 **Re Thorek I e Thorgrim sono cugini**: nipoti
 > dello **stesso re**, quello caduto contro Skullcrusher cinquant'anni prima.
 > Per questo dicono tutti e due *«mio nonno»*, e nessuno dei due mente. La
 > Corona è il lutto del re; l'ascia, Aegis Fang, è rimasta a Thorgrim.
@@ -3670,8 +3557,7 @@ preso la prima tacca.
 > **Perché esiste.** La scelta del riposo della Scena 5 era già un orologio, scritto
 > a parole, in ore che non tornavano con queste tacche. Ma un tempo che non si segna non si sente,
 > e il tavolo non può *scegliere di correre un rischio* se non sa quanto ha in
-> mano. Questo è il congegno che i due banchi del repo — il Palio e l'Abbazia —
-> usano per reggere la tensione, e questo master ne aveva **una menzione sola**.
+> mano.
 
 **Si segna su un foglio, in vista.** Dal tramonto all'alba ci sono **8 tacche**,
 e quando il foglio arriva sul tavolo la prima è già segnata: il consiglio. Ogni
@@ -3703,7 +3589,7 @@ cercare Zeth sì. È la regola dell'Abbazia (`ADR-10` interno: *l'oppressione
 avanza sulle scoperte*), e serve a non punire proprio il comportamento che
 questo master vuole ottenere — **guardarsi intorno**.
 
-🔎 **E qui l'orologio dice una cosa che il testo prima non diceva**: parlare con
+🔎 **E qui l'orologio dice una cosa**: parlare con
 Balvar, cercare Zeth e fare il banchetto costano **3 tacche** in tutto. Sono i
 tre pezzi migliori della notte, e sommati sono anche il rischio più grosso. È
 il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
@@ -3713,10 +3599,7 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale 12 h se
 mangiano), fabbri che affilano le armi, chierici che benedicono.
-- **HELLA — i Treant dell'alba.** *(Allineato al rito il 2026-09-24: la prima
-  stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
-  tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
-  si piantano più.)* All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
+- **HELLA — i Treant dell'alba.** All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
   I e II: **due Treant di Adamantio** (statblock `DEF-3` §7: 90 pf, RD
   10/adamantio, 2 schianti +18, danni doppi alle strutture) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
@@ -3741,7 +3624,7 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
 | **Ritratto** | da generare: `id=ritratto-zeth-mastro-costruttore` |
 
-- **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE, DM 2026-07-23).**
+- **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE).**
   Il party incrocia il **Mastro Costruttore Zeth** nelle gallerie, un mezz'elfo dagli occhi
   febbrili, che traccia rune sui tunnel: *«Le mura di Thorek potrebbero cedere.
   Ma legherò la mia anima alla montagna in una Consacrazione. I miei leoni di
@@ -3837,10 +3720,6 @@ rune, come fa sempre. La conversazione con Balvar si fa **a tre passi dal
 generale**, ed è questa la tensione della scena. Quando finisce, o quando
 qualcuno colpisce, comincia la Scena 8.
 
-⚠️ *La stesura di prima metteva Balvar e Zog'tar nella stessa tenda senza dire
-come Balvar potesse parlare con i PG davanti al generale. La percezione viene
-dal suo statblocco; la lingua e l'angolo buio sono regia, e non gli danno niente
-che non abbia già.*
 
 **Scheda d'entrata — Balvar Fuocospento, il runaio esiliato** *(statistiche:
 Appendice A)*
@@ -3874,11 +3753,6 @@ Zog'tar sa uccidere diecimila uomini, Balvar sa **dove** vanno colpite le mura.
 
 #### ⚖️ Il grigio — perché **crede di aver ragione** *(pilastro GoT)*
 
-> **Aggiunto nella riscrittura del 2026-09-18.** Balvar era già il personaggio
-> migliore del master, ma era scritto come **un nemico interessante**, non come
-> una fazione. La differenza è che di un nemico interessante si chiede *come lo
-> batto*; di una fazione che crede di aver ragione si chiede *cosa vuole, e cosa
-> gli costa averlo*. È l'unica riga che il pilastro 5 chiede davvero.
 
 | | |
 |---|---|
@@ -3917,14 +3791,6 @@ funziona solo se non l'hanno ancora minacciato.
 >
 > **Che fate?**
 
-⚠️ **Spezzato in tre il 2026-09-18, e non per pignoleria.** Era **un box da 15
-righe**, sopra il tetto di 12 di `read-aloud-adulti.md` §2, e la self-check
-della skill dello stile ha una domanda apposta: *«Did any box grow past the
-ceiling because the prose got interesting? → cut; the ceiling wins»*. Qui la
-prosa **era** diventata interessante, ed è il motivo per cui era cresciuta.
-Spezzandolo in tre beat si guadagna anche una cosa che il box unico non aveva:
-**Balvar aspetta che i PG reagiscano prima di parlare**, e il suo silenzio
-diventa la prima battuta.
 
 #### La cosa che lo rende memorabile: sa da dove venite
 
@@ -4004,7 +3870,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 | | |
 |---|---|
-| **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di piastre annerite. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero *(decisione DM 2026-09-24)* |
+| **Aspetto** | mezzo-ogre, grande quanto una porta di stalla, armatura completa di piastre annerite. L'ascia a due mani appoggiata alla spalla. Al posto dell'occhio destro, una pietra nera levigata: l'**Occhio di Ossidiana**, un occhio vero |
 | **Vuole** | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar |
 | **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
@@ -4115,7 +3981,7 @@ il Sigillo di Ossidiana** (Appendice B) e pianifica la fuga nel futuro (userà u
 Cronolito). Ha appena visto **quattro ombre uscire vive dalla tenda del generale**, e nelle
 cronache che non dovrebbe aver letto i Quattro sono quattro: ne è **ossessionato**. Personalità: freddo, parla il meno possibile, li osserva
 con un **terrore reverenziale mal mascherato**.
-> **Canone (DM 2026-07-23) — cosa lo corrompe.** Vatore è **già marcio di
+> **Canone — cosa lo corrompe.** Vatore è **già marcio di
 > avidità e sete di potere**: non gli importano le conseguenze. Ha rubato il
 > Sigillo *sapendo* che divora anime — e ha deciso che le pagherà con quelle
 > degli altri, e poi con la propria. È questa scelta, non un incidente, a
@@ -4162,7 +4028,7 @@ L'artefatto che stringe al petto è in **Appendice B**.
 > **Il percorso dell'atto.** Dal primo ariete al ritorno. Le mura, il drago che
 > cala sul cortile, il rito all'incudine, la luce del Rubino.
 >
-> 🛑 **La serata del 2026-09-25 si ferma al primo box della Scena 10.** Il resto
+> 🛑 **La prima sessione si ferma al primo box della Scena 10.** Il resto
 > dell'atto è della sessione dopo.
 
 | Scena | Dove | Chi entra | Prova |
@@ -4187,17 +4053,6 @@ caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
 > tirarla fuori. In basso, le scale salgono.*
 >
 > **Che fate?**
-
-⚠️ **Perché questo box è stato riscritto** *(riscrittura 2026-09-18)*. Il
-precedente diceva *«Dove vi gettate, la linea tiene»* e chiamava i PG *«quattro
-leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
-
-- `editorial-standards.md` §2 — **mai risolvere l'azione dei PG dentro il
-  read-aloud**. «La linea tiene» era l'**esito della prova di gruppo** della
-  Scena 10, letto prima che qualcuno tirasse.
-- `read-aloud-adulti.md` §4 — *il predestinato senza costo* e *tutto epico*
-  sono due delle sei cose che fanno staccare un lettore adulto. Il nano che si
-  sputa nelle mani fa lo stesso lavoro e non chiede di essere creduto.
 
 Poi, quando le prime scale arrivano in cima:
 
@@ -4271,21 +4126,9 @@ Appendice A)*
 > mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra
 > mura che bruciano, che non hai mai visto.*
 
-⚠️ **Perché è stato spezzato in due** *(2026-09-18)*. Il box unico portava
-**nove nomi propri** e finiva su *«state per insegnare a quel sangue cosa vuol
-dire aver paura»* — che dice ai giocatori cosa stanno per fare, cioè
-**l'esito**. Adesso l'ingresso è **quello che il corpo sente** (freddo, il
-risucchio, le braci che si piegano, lo scudo che cade), la visione è un
-**micro-box per un solo PG** come chiede `ADR-0014` §1, e l'ultima riga è
-**«Che fate?»** invece di una promessa.
 
-#### 🎬 La regia dei primi due round — una battuta per attore *(ADR-0014 §1)*
+#### 🎬 La regia dei primi due round — una battuta per attore
 
-> **Perché c'è.** Sotto trovi le tattiche **del drago**, che questo master aveva
-> già e sono buone. Quello che mancava è l'altra metà, che `ADR-0014` prescrive
-> dal luglio 2026 per **ogni** sequenza a battute e che esisteva in **un solo
-> documento del repo**: i PG agiscono uno alla volta, e se ogni turno è un tiro
-> senza descrizione il pathos evapora al terzo round.
 >
 > **Non sono numeri nuovi.** CD e danni restano quelli dell'Appendice A. Qui c'è solo
 > **cosa leggere, quando**, e sono sei secondi a testa.
@@ -4402,7 +4245,7 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 | **Hella appena risorta** — vuoi proteggerla | Il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità) — dà alla giocatrice spazio per il suo primo scontro |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
-### SCENA 12 — Il Rituale della Forgia Eterna `[CANONE — state.md §5; D-B/D-A, DM 2026-09-19]`
+### SCENA 12 — Il Rituale della Forgia Eterna
 
 > **Cos'è, e perché esisteva solo in `state.md`.** Questo viaggio **è** il
 > **Rituale Legacy 4**, che la matrice degli artefatti chiama *«Siege of the
@@ -4410,7 +4253,7 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 > sbloccano qui**. Fino a oggi il master consegnava il duello e basta: il DM
 > tornava dal tavolo a segnare un avanzamento che nel modulo non era successo.
 >
-> ⏱️ **Quando** *(decisione DM)*: **dopo il combattimento**, sull'esito
+> ⏱️ **Quando**: **dopo il combattimento**, sull'esito
 > dell'incontro. Non è una prova sotto pressione ed è **senza ulteriori costi** —
 > il prezzo di questo arco Thorik lo ha già versato altrove.
 
@@ -4463,8 +4306,7 @@ sé**, come una serratura che riconosce la chiave. La Corona passa a **+3**.
 > *Want* è la montagna, non il portatore: ha accettato tre gemme e un pegno
 > perché le servivano, e lo dirà con la stessa calma con cui dice tutto il resto.
 
-**Momento 3 — Aegis Fang si sveglia** *(decisione DM: è una scena, non una riga
-di scheda)*. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
+**Momento 3 — Aegis Fang si sveglia**. È una scena, non una riga di scheda. `state.md` §5 dice: *«Unchanged until the Siege is won → then Stage
 1 full awakening»*. L'Assedio è questo, ed è appena stato vinto.
 
 > **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
@@ -4492,7 +4334,7 @@ di scheda)*. `state.md` §5 dice: *«Unchanged until the Siege is won → then S
   è un potere nuovo in tasca: è il motore del viaggio di casa.
 - **Non ci sono altri costi qui** — né TS, né pegni, né punti caratteristica.
 
-#### Momento 4 — l'Aura della Forgia Eterna `[CANONE — DM 2026-09-20]`
+#### Momento 4 — l'Aura della Forgia Eterna
 
 **Il quarto potere, quello che la Corona non aveva mai avuto.** La matrice
 degli artefatti lo chiama *Aura of the Eternal Forge* e lo dà al **Rituale 4,
@@ -4589,7 +4431,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 ## §8 — AVANZAMENTO (budget PX per scena + tesoro pregenerato)
 
 ### A. Budget PX del beat (party 4 PG, APL 13)
-| Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
+| Scena | Tipo | PX/PG |
 |---|---|---|
 | Scene 1-4: l'arrivo, Durin, la targa, il consiglio | storia/social | 600 |
 | Scene 6-8: il campo, Balvar, Zog'tar (GS 14) | combattimento veloce | 2.400 |
@@ -4640,7 +4482,7 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione (verificato il 2026-09-24). Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
+| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione. Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
 | La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
 | Skullcrusher nel cortile | da generare: scheda **41** |
 | I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
@@ -4652,34 +4494,6 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 
 ---
 
-### Cosa è cambiato nel riordino del 2026-09-25
-
-Il DM ha chiesto un master che si legga in avanti, e una prosa che abbia un
-senso logico e cronologico. Riordinando sono venuti fuori dieci punti in cui il
-testo si contraddiceva con l'ordine degli eventi o col canone. Sono corretti
-nel testo; qui c'è l'elenco, perché chi ha una stampa vecchia sappia cosa è
-cambiato.
-
-| | Cosa diceva la stesura di prima | Perché non reggeva | Dove è corretto |
-|---|---|---|---|
-| 1 | il box d'arrivo leggeva la targa: *«Quei Quattro Eroi… siete VOI»* | dava il **Nome** del nodo d'indizio, che il master stesso dice di non regalare mai; e lo dava prima che la pattuglia li trovasse | Scena 1 (il bosco) e Scena 3 (la porta) |
-| 2 | il box della Zona 1 diceva che la targa era stata incisa **oggi** | era la **Lettura** del nodo, detta gratis | Scena 3 |
-| 3 | il consiglio di guerra era un paragrafo dentro la pattuglia, e la Scena 2 «Thorgrim» era «assorbita» in una scena che non la conteneva | Thorgrim esisteva solo nella versione veloce | Scena 4 |
-| 4 | Thorgrim chiedeva la corona e riceveva l'ascia | due oggetti diversi nella stessa battuta | Scena 4 |
-| 5 | la fonte di luglio faceva togliere la Corona a Thorik davanti al re | in `DEF-3` §5 se la toglie per la seconda volta in vita sua, per Hella | Scena 4 |
-| 6 | il riposo era in ore (3 h, 6 h) che non tornavano con le tacche | l'orologio è in tacche, e la guarigione del passaggio aveva già rimesso in piedi tutti | Scena 5 |
-| 7 | Balvar parlava con i PG davanti a Zog'tar, senza dire come | nanico antico, a bassa voce, in fondo alla tenda | Scena 7 |
-| 8 | Zog'tar *«muore in questa scena, la storia dice così»* | la Via A lo lascia vivo e umiliato | Scena 8 |
-| 9 | Vatore *«ha appena visto quattro individui respingere un'orda»*, durante l'infiltrazione | di notte l'orda non è ancora stata respinta: li ha visti uscire dalla tenda del generale | Scena 9 |
-| 10 | il Rubino era *«la terza gemma, muta da sempre»* | l'incasso è vuoto fino al Rituale | Scena 13 |
-
-### FILE-FONTE ASSORBITI DA QUESTO MASTER (→ `_ARCHIVIO/` a consolidamento chiuso)
-`_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md` (master da tavolo B3) · `PortaleForgia-P5-DEFINITIVO-PARTE1/2.md`
-(prosa estesa) · `_ARCHIVIO/PortaleForgia-P5-RICALIBRATO.md` (deprecato) · sezione «battaglia
-antica» di `_ARCHIVIO/PortaleForgia-P6-INTEGRAZIONE-Completa.md` (deprecata).
-`PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` resta **vivo** (tabella
-DM-approved citata da qui e dall'ARC-08). `Bestiario/villain/Salvatore/Salvatore.md`
-resta vivo (Vatore/Sal).
 
 ---
 
@@ -4688,7 +4502,7 @@ resta vivo (Vatore/Sal).
 ## APPENDICE A — STATISTICHE
 
 > Una pagina A4 a una colonna, da tenere aperta durante gli scontri. I numeri
-> stanno **solo qui** (ADR-0021): le schede d'entrata nelle scene dicono chi è
+> stanno **solo qui**: le schede d'entrata nelle scene dicono chi è
 > il PNG, questa appendice dice quanto fa male.
 
 ### A.1 · Skullcrusher il Nero (Scena 11)
@@ -4981,10 +4795,6 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 ## SCHEDA GIOCATORE – VERSIONE 1
 ### "La Collana dei Tre Semi"
 
-> **📄 Handout separato (T7, 2026-07-04)**: la scheda da **dare al giocatore**
-> è ora `00_Collana-SCHEDA-GIOCATORE-STATO-ATTUALE.md` (solo poteri sbloccati,
-> 2 snapshot). Questa sezione resta nel master DM come riferimento — **non
-> consegnare questo file al giocatore** (contiene la SCHEDA COMPLETA DM sotto).
 
 ---
 
@@ -5049,7 +4859,7 @@ un'impronta che è tornata a riempirsi. Finché Durik è evocato ed entro
 ferito / distrutto). Non è telepatia: è la connessione razziale Dream
 Dwarf amplificata dal viaggio `[INFERRED — needs DM confirmation]`.
 
-#### 6. I Doni dei Semi (3 slot) `[CANONE — DM 2026-09-12]`
+#### 6. I Doni dei Semi (3 slot)
 I tre semi custodiscono i **sacrifici che i compagni offrirono al
 rituale**, e da oggi si sa **quali**: al rito ogni PG dona **un potere del
 proprio artefatto**, che lascia quell'artefatto **per sempre** e
@@ -5639,8 +5449,7 @@ Media · Neutrale Buono · compagno di Hella
 | **Tiri salvezza** | Tempra **+11** · Riflessi **+10** · Volontà **+6** |
 | **Caratteristiche** | FOR 22 · DES 15 · COS 17 · INT 4 · SAG 14 · CAR 8 |
 
-¹ *12 DV da canone; i punti ferita (12d10+36) sono confermati dal DM il
-2026-09-24.*
+¹ *12 DV, 12d10+36 punti ferita.*
 
 ### Cosa sa fare
 
