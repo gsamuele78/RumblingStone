@@ -227,8 +227,14 @@ _METADATI_BESTIARIO = re.compile(r"^\*\*Faction\*\*:[^\n]*\*\*Source\*\*:[^\n]*(
 # «(`01_Bracieri.md` r.83)»), e la citazione delle fonti in corsivo,
 # «*(Fonte: `…md` §Scena C)*». Una parentesi con altro testo resta: dentro
 # può esserci un fatto, e lo riscrive chi scrive.
+#
+# ⚠️ Ogni pezzo dopo il percorso comincia con uno spazio e non ne contiene: così
+# la regex ha un solo modo di leggere una stringa. La prima stesura, con
+# `\s*` facoltativo e `§[\w.-]+`, poteva spezzare «-r.0» in più modi, e CodeQL
+# l'ha segnalata come backtracking esponenziale sulla #175.
 _PARENTESI_FILE = re.compile(
-    r"[ \t]*\(\s*`[^`\n]+\.(?:md|json|ya?ml)`(?:\s*(?:§[\w.-]+|r\.\s?\d+))*\s*\)")
+    r"[ \t]*\(`[^`\n]+\.(?:md|json|ya?ml)`"
+    r"(?:[ \t]+(?:§[\w.]+(?:-[a-z]+)?|r\.[ ]?\d+)){0,3}[ \t]*\)")
 _CITAZIONE_FONTI = re.compile(r"[ \t]*\*\(Font[ei]:[^()]*?(?:\([^()]*\)[^()]*?)*\)\*")
 
 
@@ -389,7 +395,9 @@ def capitoli_del_volume(base: "Path", dato: dict) -> "dict[Path, str]":
 # Un nome di file fra backtick, anche abbreviato con «...» o «…» davanti
 # («`...P2D-PALIO-DM-MASTER-REFERENCE.md` §3»): se è un capitolo del volume
 # diventa il suo capitolo, come «DEF-3».
-_NOME_DI_FILE = re.compile(r"`(?:\.\.\.|…)?\s*[^`\s]*?(?P<coda>[\w'.-]+\.md)`(?P<sez>" + _SEZIONE + r")")
+# Il token si prende intero e la coda si calcola dopo: una regex che separa
+# prefisso e nome in due gruppi adiacenti può farlo in troppi modi (CodeQL, #175).
+_NOME_DI_FILE = re.compile(r"`(?P<tok>[^`\s]+\.md)`(?P<sez>" + _SEZIONE + r")")
 
 
 def _traduci_nomi_di_file(md: str, io: "Path", capitoli: "dict[Path, str]") -> str:
@@ -403,7 +411,7 @@ def _traduci_nomi_di_file(md: str, io: "Path", capitoli: "dict[Path, str]") -> s
     'Vedi questo capitolo.'
     """
     def sostituisci(m: "re.Match") -> str:
-        coda = m.group("coda").lstrip(".")
+        coda = m.group("tok").replace("\\", "/").rsplit("/", 1)[-1].lstrip(".…")
         trovati = [f for f in capitoli if f.name == coda or f.name.endswith(coda)]
         if len(trovati) != 1:
             return m.group(0)
