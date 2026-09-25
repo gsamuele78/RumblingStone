@@ -51,7 +51,7 @@ Non si ridiscutono a ogni volume. Se una serve diversa, si cambia **il tema**.
 
 | Elemento | Regola | Perché |
 |---|---|---|
-| **Tabella** | ≥ 4 colonne → scavalca le due colonne | in una colonna da 8 cm si spezzano perfino le parole del titolo |
+| **Tabella** | scavalca le due colonne, in cima o in fondo alla pagina dove è citata, se ha ≥ 4 colonne **o** se in colonna diventa più alta di 1,8 volte quanto sarebbe a tutta pagina (lo misura il tema). Porta con sé il titolo della sezione. L'autore decide con `<!-- tabella: larga -->` o `<!-- tabella: colonna -->` sopra la tabella | in una colonna da 8 cm una tabella a due o tre colonne con frasi va a capo in ogni cella: nei volumi della #169 erano 100 su 125 |
 | **Immagine** | orizzontale (larghezza ≥ 1.25 × altezza) → piena larghezza; verticale → dentro la colonna | un'illustrazione ridotta a francobollo non è un'illustrazione |
 | **Mappa** | entra in colonna (≤ 48 celle) o va su una **pagina A4 a una colonna**, col suo titolo. Mai a capo, mai rimpicciolita dentro la colonna. Vale per la griglia e per la mappa disegnata verticale | una mappa che va a capo è una fila di simboli; in una colonna da 8 cm una pianta non si legge |
 | **Schema o comando largo** | non è una mappa: scende di corpo in colonna fino a 5,5 pt, oltre le 78 celle scavalca le due colonne | una pagina A4 per una riga di `bash` lascia mezza colonna vuota |
@@ -82,6 +82,7 @@ perché il prossimo volume nasca già così invece di essere corretto dopo.
 | 6 | **Ogni capitolo apre una pagina** | il tema, `capitolo-aperto` | automatico |
 | 7 | **Un'immagine** fuori da una pagina dedicata resta sotto i 16 cm, su una pagina A4 sotto i 21, **misurando** l'immagine | §4.5 | `TestFiguraSuPaginaCompilata` |
 | 8 | **Niente esce dalla colonna**: codice in linea, righe da compilare e tabelle lunghe si sistemano da soli | §4.5 | `TestCioCheEsceDallaColonna` |
+| 8-bis | **Una tabella che in colonna va a capo in ogni cella scavalca le due colonne**, da sola; l'autore la forza con `<!-- tabella: larga -->` o `<!-- tabella: colonna -->` | §2, §4.7 | `TestTabelleLargheCompilate` |
 | 9 | **Prima di consegnare**: `validate_booklets --stampa`, poi il controllo a vista prima e dopo | §4, «Il controllo a vista» | chi consegna |
 
 I passi 5-8 li fanno il tema e l'esportatore: chi scrive il master non deve
@@ -189,6 +190,21 @@ Sono qui perché sono i primi da cercare quando «il PDF viene male».
    stanno nella stessa frase, la frase vecchia va nel blocco storico e sotto se
    ne scrive una che dice solo il fatto. `test_storico.py` fa da tetto: 15
    righe dichiarate, file per file, e una in più è rossa.
+
+7. **La tabella che in colonna va a capo in ogni cella.** Fino al 2026-09-25
+   scavalcavano le due colonne solo le tabelle da quattro colonne in su. Una
+   da due o tre con frasi nelle celle restava in 8 cm e diventava alta il
+   doppio: misurate con Typst sui tre volumi della #169, **100 su 125**
+   (la peggiore: 22,8 cm in colonna, 6,3 a tutta pagina). → il tema misura la
+   tabella in colonna e a tutta pagina, e se il rapporto supera 1,8 la fa
+   scavalcare. Nel punto esatto non si può: Typst 0.15 non bilancia le
+   colonne, e un blocco a due colonne interrotto a metà pagina riempie solo
+   quella di sinistra. La tabella va quindi in cima o in fondo alla pagina
+   (`auto`), come in un manuale stampato, e porta una riga col titolo della
+   sezione, perché può finire sopra il suo titolo o alla pagina dopo. Su tutti
+   i volumi: 330 tabelle larghe, 60% nella stessa pagina del loro testo, 34%
+   nella successiva, 6% più lontano. Una da due o tre colonne più alta di
+   20 cm a tutta pagina resta in colonna, perché un float non si spezza.
 
 ### Il controllo a vista, prima di consegnare
 

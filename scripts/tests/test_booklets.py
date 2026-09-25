@@ -311,7 +311,72 @@ class TestCioCheEsceDallaColonna(unittest.TestCase):
         tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
         tabella = tema.split("#let tabella(", 1)[1].split("\n}\n", 1)[0]
         self.assertIn("pagina: false", tabella)
-        self.assertIn("not pagina", tabella)
+        self.assertIn("if pagina or larga == false { corpo }", tabella)
+        self.assertIn("page.columns < 2", tabella)
+
+
+class TestTabelleLarghe(unittest.TestCase):
+    """Una tabella che in colonna va a capo in ogni cella scavalca le due colonne
+    (richiesta DM 2026-09-25). Nei tre volumi della #169 erano 100 su 125."""
+
+    TAB = "| A | B | C |\n|---|---|---|\n| x | y | z |"
+
+    def test_il_marcatore_forza_la_tabella_che_segue(self):
+        larga = md_to_typ("<!-- tabella: larga -->\n" + self.TAB + "\n\n" + self.TAB)
+        self.assertEqual(larga.count("larga: true"), 1, "vale solo per la prima tabella")
+        stretta = md_to_typ("<!-- tabella: colonna -->\n" + self.TAB)
+        self.assertIn("larga: false", stretta)
+
+    def test_la_tabella_porta_la_sua_sezione(self):
+        typ = md_to_typ("### Le prove di **gruppo**\n\n" + self.TAB)
+        self.assertIn('sezione: "Le prove di gruppo"', typ)
+
+
+@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+class TestTabelleLargheCompilate(unittest.TestCase):
+    """Compilate. Un float non si interroga (`place` non è localizzabile), quindi
+    si misura la sua conseguenza: se la tabella scavalca, il testo che la segue
+    in colonna riparte dove era; se resta in colonna, la distanza fra i due
+    segnaposto è la sua altezza."""
+
+    CELLA = "una frase lunga che in una colonna da otto centimetri va a capo in ogni cella"
+
+    def _float(self, corpo: str, colonne: int = 2) -> int:
+        """1 se la tabella è uscita dalla colonna, 0 se ci è rimasta."""
+        segno = '#context [#metadata(here().position().y.cm()) <{}>]\n'
+        with tempfile.TemporaryDirectory(dir=REPO) as d:
+            typ = Path(d) / "t.typ"
+            typ.write_text(
+                '#import "/scripts/typst/tema-rumblingstone.typ": *\n'
+                f'#set page(paper: "a4", columns: {colonne})\n'
+                + segno.format("prima") + corpo + segno.format("dopo"), encoding="utf-8")
+            esito = subprocess.run(
+                ["typst", "eval", "query(<dopo>).first().value - query(<prima>).first().value",
+                 "--in", str(typ),
+                 "--root", str(REPO), "--font-path", str(REPO / "scripts" / "fonts"),
+                 "--package-path", str(REPO / "scripts" / "typst" / "packages")],
+                capture_output=True, text=True)
+            self.assertEqual(esito.returncode, 0, esito.stderr)
+            return 1 if float(esito.stdout.strip()) < 0.5 else 0
+
+    def _tab(self, testo: str, **kw) -> str:
+        extra = "".join(f"{k}: {v}, " for k, v in kw.items())
+        celle = ", ".join(f"[{testo}]" for _ in range(9))
+        return f"#tabella(3, {extra}[*A*], [*B*], [*C*], {celle})\n"
+
+    def test_quella_che_va_a_capo_scavalca(self):
+        self.assertEqual(self._float(self._tab(self.CELLA)), 1)
+
+    def test_quella_corta_resta_in_colonna(self):
+        self.assertEqual(self._float(self._tab("x")), 0)
+
+    def test_su_una_pagina_a_una_colonna_non_scavalca(self):
+        self.assertEqual(self._float(self._tab(self.CELLA), colonne=1), 0)
+        self.assertEqual(self._float(self._tab("x", larga="true"), colonne=1), 0)
+
+    def test_il_marcatore_vince_sulla_misura(self):
+        self.assertEqual(self._float(self._tab(self.CELLA, larga="false")), 0)
+        self.assertEqual(self._float(self._tab("x", larga="true")), 1)
 
 
 @unittest.skipIf(shutil.which("typst") is None, "typst non installato")
