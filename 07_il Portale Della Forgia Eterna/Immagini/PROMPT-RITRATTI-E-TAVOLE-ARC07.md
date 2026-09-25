@@ -83,8 +83,10 @@ iron stylus in his right hand, engraving slowly, he has just looked up
 **Zog'tar Deatheye — il generale**
 <!-- img id=ritratto-zogtar-deatheye size=832x1216 stile=ritratto serie=base -->
 ```
-[look comune] + huge half-ogre warlord, short tusks, old scars, a smooth
-polished black obsidian stone set into his right eye socket, blackened full
+[look comune] + huge half-ogre warlord, face lit strongly by a torch from the
+left, left eye normal, in place of his RIGHT eye a smooth polished black
+obsidian stone set into the socket, glossy, with a sharp highlight and a faint
+living gleam like a pupil, no eyepatch, short tusks, old scars, blackened full
 plate with rust-red cloth, two-handed greataxe resting on his shoulder,
 counting on his fingers, dwarven bones hanging from the tent behind him
 ```
@@ -103,10 +105,12 @@ blade in his right hand, a war map on a stone table, freshly cut white walls
 **Thorgrim Barbadiferro — l'antenato**
 <!-- img id=ritratto-thorgrim-barbadiferro size=832x1216 stile=ritratto serie=base -->
 ```
-[look comune] + old dwarf warrior seated on a stone bench, iron-grey beard,
-eyes wet without him noticing, large hands resting on his knees with the
-callus of an axe grip visible on the right palm, a single-bladed dwarven war
-axe with a haft worn smooth leaning beside him, looking up at a relic
+[look comune] + old dwarf warrior seated on a stone bench, head tilted back,
+looking up at a golden light falling from above out of frame, iron-grey beard,
+eyes wet without him noticing, empty hands open on his knees with palms turned
+up, the thick callus of an axe grip visible across the right palm, a
+single-bladed dwarven war axe with a haft worn smooth leaning beside him, he
+holds nothing
 ```
 *La cosa che non deve mancare*: il callo sul palmo. È lo stesso di Thorik.
 
@@ -183,22 +187,25 @@ resting on the altar's rim, warmth rising from it, no text
 **Il risveglio di Hella** *(scheda 29 · ai giocatori solo dopo il rito)*
 <!-- img id=tavola-risveglio-di-hella size=1536x864 stile=tavola serie=base -->
 ```
-a dwarf woman lying on a mithral altar at the instant she breathes in again
-after death, chest lifting, eyes just opened and amber-gold, light wavy
+a short stocky broad-shouldered dwarf woman, sturdy dwarven proportions,
+lying on a mithral altar at the instant she breathes in again after death, chest lifting, eyes just opened and amber-gold, light wavy
 blonde hair with small green leaves and a thin vein of bark, pointed ears
 like young leaves, a fist-sized ruby shaped like a heart fading on her
 breastbone, thin golden roots running from her hands into the altar, three
-armoured figures kneeling at the edge of a ritual circle, a large dog of dark
-stone and mithral with topaz eyes waiting at the altar's edge, warm gold
-light from below, no text
+armoured figures kneeling at the edge of a ritual circle, a greyhound-like
+sighthound of dark porous stone and mithral with topaz eyes waiting at the
+altar's edge, long narrow snout, deep narrow chest, thin tucked waist, long
+thin legs, not a wolf, no fur, warm gold light from below, no text
 ```
 
 **Durik e Hella** *(scheda 31 · dopo il risveglio)*
 <!-- img id=tavola-durik-e-hella size=832x1216 stile=tavola serie=base -->
 ```
-a large sighthound made of dark porous stone braided with ribbons of mithral
-along the tendons, topaz eyes half closed, resting his heavy head on the
-chest of a dwarf woman just returned from death, sitting up on an altar, one
+a large greyhound-like sighthound, long narrow snout, deep narrow chest, thin
+tucked waist, long thin legs, not a wolf, no fur, made of dark porous stone
+braided with ribbons of mithral along the tendons, topaz eyes half closed,
+resting his long head on the chest of a short stocky dwarf woman just
+returned from death, sitting up on an altar, one
 trembling hand between his ears, her light blonde hair with small leaves,
 pointed ears like young leaves, no collar, no mechanical joints, tender and
 quiet, warm light from below left, no text
@@ -207,12 +214,15 @@ quiet, warm light from below left, no text
 **La fortezza giovane** *(scheda 33 · all'arrivo a −1000)*
 <!-- img id=tavola-hammerfist-giovane size=1536x864 stile=tavola serie=base -->
 ```
-epic fantasy matte-painting, a young dwarven fortress carved into a
-mountainside at dusk seen from its own gate, walls of freshly cut white
-limestone with sharp unweathered edges, a single king's statue in the
-courtyard, stonemasons' scaffolding against one tower, a freshly engraved
-bronze plaque on the gate with bronze shavings beneath it, far off the smoke
-of a thousand campfires on the plain, low warm sunset, no text
+medieval epic fantasy matte-painting, a young dwarven stronghold carved into
+a rocky mountainside at dusk, seen from high on the mountain above its gate,
+crenellated walls and square towers of freshly cut pale limestone with sharp
+unweathered edges, wooden stonemasons' scaffolding lashed against one tower,
+a single king's statue in the courtyard, a freshly engraved bronze plaque of
+abstract ornament on the iron-bound gate with bronze shavings beneath it,
+below on the right a wide dark valley plain with a besieging camp of hide
+tents, hundreds of small orange campfires like embers and thin columns of
+grey smoke, low warm sunset, no modern buildings, no city lights, no text
 ```
 
 **Skullcrusher nel cortile** *(scheda 41 · solo DM fino al duello)*
@@ -266,7 +276,7 @@ Canva col nome dell'`id` e si committano insieme alla loro riga, che è già in
 
 ### Le quattordici immagini
 
-La colonna *Prima lettura* è fatta **sulla miniatura** restituita da Canva
+La tabella è aggiornata alla seconda passata. La colonna *Prima lettura* è fatta **sulla miniatura** restituita da Canva
 (circa 130 × 200 pixel). Non sostituisce il gate di rifiuto di
 `rumblingstone-art-direction` §6, che va fatto a piena risoluzione sulla «cosa
 che non deve mancare» di ogni scheda.
@@ -274,21 +284,40 @@ che non deve mancare» di ogni scheda.
 | id | Media Canva | Prima lettura |
 |---|---|---|
 | `ritratto-balvar-fuocospento` | [MAHWLw8QnOo](https://www.canva.com/M/MAHWLw8QnOo) | vecchio nano, barba bianca, grembiule, lastra sulle ginocchia e punta in mano; da verificare che la punta tocchi l'ardesia |
-| `ritratto-zogtar-deatheye` | [MAHWL9gzPGg](https://www.canva.com/M/MAHWL9gzPGg) | mezzo-ogre in piastre scure con ascia in spalla; **la pietra nera nell'occhio destro non si distingue** in miniatura |
+| `ritratto-zogtar-deatheye` | [MAHWL_YsfgQ](https://www.canva.com/M/MAHWL_YsfgQ) | seconda passata: la pietra nera nell'orbita destra si vede, volto illuminato da sinistra |
 | `ritratto-re-thorek-i` | [MAHWLyU_oPo](https://www.canva.com/M/MAHWLyU_oPo) | barba bianca in trecce, ascia chiara in pugno, mappa sul tavolo; da verificare la corona senza gemme |
-| `ritratto-thorgrim-barbadiferro` | [MAHWL-NDQRs](https://www.canva.com/M/MAHWL-NDQRs) | seduto, barba grigia; **tiene la reliquia in mano** invece di guardarla in alto, e il callo sul palmo non si vede |
+| `ritratto-thorgrim-barbadiferro` | [MAHWLyX0Wa0](https://www.canva.com/M/MAHWLyX0Wa0) | seconda passata: guarda in alto la luce, mani vuote a palmi in su, ascia accanto; il callo va verificato a piena risoluzione |
 | `ritratto-durin-rocciadura` | [MAHWLxfub5Q](https://www.canva.com/M/MAHWLxfub5Q) | barba castana, piastre ammaccate, ascia stretta, torce dietro; tiene |
 | `ritratto-zeth-mastro-costruttore` | [MAHWLzJWJXI](https://www.canva.com/M/MAHWLzJWJXI) | galleria con torcia, tunica ocra, mano sulla parete incisa; tiene |
 | `ritratto-vatore` | [MAHWL25-bj4](https://www.canva.com/M/MAHWL25-bj4) | cappuccio, fagotto al petto, tende di notte; tiene |
 | `tavola-portale-del-tempo` | [MAHWLyz44U8](https://www.canva.com/M/MAHWLyz44U8) | affresco ottagonale con drago, nano di spalle; **la doppia esposizione delle due fortezze non si legge** in miniatura |
 | `tavola-custode-delle-radici` | [MAHWL6WcCpw](https://www.canva.com/M/MAHWL6WcCpw) | figura alta di radici, tre figure inginocchiate sullo sfondo; tiene |
 | `tavola-cuore-di-moradin` | [MAHWLy0nGm4](https://www.canva.com/M/MAHWLy0nGm4) | reliquiario a petali aperti, cuore di rubino nella luce; tiene |
-| `tavola-risveglio-di-hella` | [MAHWL0hctuk](https://www.canva.com/M/MAHWL0hctuk) | Hella sull'altare, figure inginocchiate; **Durik sembra un lupo**, non un levriero |
-| `tavola-durik-e-hella` | [MAHWLxqQ-Ns](https://www.canva.com/M/MAHWLxqQ-Ns) | scena tenera e calda; **Durik di nuovo lupesco**, e Hella rischia di leggersi elfa più che nana |
-| `tavola-hammerfist-giovane` | [MAHWL9hrJvc](https://www.canva.com/M/MAHWL9hrJvc) | pietra bianca al tramonto, targa ornata; **i fuochi del campo sulla piana non si vedono** |
+| `tavola-risveglio-di-hella` | [MAHWL21y19U](https://www.canva.com/M/MAHWL21y19U) | seconda passata: Durik ha muso lungo e corpo magro; da verificare che Hella abbia le proporzioni di una nana |
+| `tavola-durik-e-hella` | [MAHWL6svafI](https://www.canva.com/M/MAHWL6svafI) | seconda passata: Durik snello a muso lungo; Hella piccola, da verificare che non si legga elfa |
+| `tavola-hammerfist-giovane` | [MAHWLwYjXcE](https://www.canva.com/M/MAHWLwYjXcE) | terza passata: fortezza medievale con impalcature al tramonto, tende sulla piana; i fuochi sono piccoli |
 | `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | drago nero nel cortile, quattro figure di spalle; tiene |
 
-Le sei righe con una parte in grassetto si guardano per prime: cinque sono
-candidate al rifiuto, il portale va solo verificato a piena risoluzione. Se il
-DM scarta un'immagine, il motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`, e l'immagine si
-rigenera: con Canva non c'è seme da cambiare, si corregge il prompt.
+Il **portale** va ancora verificato a piena risoluzione. Se il DM scarta
+un'immagine, il motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`,
+e l'immagine si rigenera: con Canva non c'è seme da cambiare, si corregge il
+prompt.
+
+### Seconda passata: le cinque scartate
+
+Il DM ha scartato le cinque candidate della prima passata. Ogni motivo è in
+`SCARTI.txt`, e la correzione è entrata **nei blocchi di §2 e §3**, perché vale
+per qualunque modello e non solo per Canva:
+
+| id | Difetto | Correzione del prompt |
+|---|---|---|
+| `ritratto-zogtar-deatheye` | la pietra nell'occhio non si vedeva | inquadratura più stretta, luce da sinistra sul volto, occhio sinistro normale e destro di pietra detti entrambi, «no eyepatch» |
+| `ritratto-thorgrim-barbadiferro` | teneva la reliquia in mano | mani vuote a palmi in su, lo sguardo verso una luce fuori campo, «he holds nothing» |
+| `tavola-risveglio-di-hella` | Durik sembrava un lupo | il levriero descritto per forma (muso lungo, torace stretto, vita sottile), «not a wolf, no fur»; Hella «short, stocky» |
+| `tavola-durik-e-hella` | come sopra, e Hella elfa | stesse due correzioni |
+| `tavola-hammerfist-giovane` | niente fuochi sulla piana | punto di vista dall'alto sopra la porta, il campo di tende a destra nella valle. La seconda prova è uscita come **una città moderna al tramonto** ed è scartata anch'essa; la terza aggiunge «medieval», le merlature e «no modern buildings, no city lights» |
+
+Il costo della fortezza è istruttivo: senza un campo per i negativi, «pietra
+bianca a spigoli vivi vista dall'alto al tramonto» basta a portare il modello in
+una città di oggi. Con Canva i negativi vanno scritti come frasi esplicite, e
+conviene nominare l'epoca.
