@@ -147,18 +147,14 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 
 Lo Step 5 contiene tre scene in una, e l'ordine conta:
 
-1. **Moradin chiede i Doni** (§5), e dice **il prezzo, non il premio**. Una frase
-   a testa, guardando il giocatore, nella voce di Moradin:
-
-   | A chi | Cosa dice Moradin |
-   |---|---|
-   | Thorik | *«La protezione che la Corona dà a te passa a lei. Tu resti con un punto di meno, per sempre.»* |
-   | Tordek | *«L'ancora dei Bracieri passa a lei. Da oggi, chi ti spinge ti sposta.»* |
-   | Artemis | *«Un pezzo del tuo fuoco passa a lei. Sette dadi diventano sei, a ogni colpo, per sempre.»* |
-
-   Poi la riga del master: *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono
-   mancato, la carne lo ricorderà.»* E lascia il silenzio. **Si gioca di
-   ruolo**: chi dona lo dice e lo fa, come sta scritto nei tre box di §5.
+1. **Moradin chiede i Doni** (`DEF-3` §5, «Come lo chiede Moradin»). Sono
+   **quattro battute** nella voce del Cuore, da leggere prima dei tiri:
+   **il perché** (il fuoco da solo non forgia, serve il metallo), **a cosa
+   serve** (quello che date mette radice in lei e combatte con voi; chi non dà
+   lascia il suo seme chiuso), **il prezzo** detto a ciascuno per nome, col
+   numero subito dopo a voce normale, e **la domanda**: *«Chi di voi dà?»*.
+   Poi taci. **Si gioca di ruolo**: chi dona lo dice e lo fa, come sta scritto
+   nei tre box di §5.
 
    **Le Carte dei Doni si consegnano DOPO**, e solo a chi ha donato: sono la
    ricevuta di quello che ha dato e di quello che è germogliato in Hella (lo
@@ -166,13 +162,11 @@ Lo Step 5 contiene tre scene in una, e l'ordine conta:
    rifiuta non si dà niente, e **non si annuncia** la reazione del suo
    artefatto: la scopre giocando (`DEF-3` §5, tabella delle reazioni).
 
-   > ⚖️ **Perché il prezzo si dice e il premio no.** `DEF-3` §1 chiede due
-   > volte che il DM dica chiaro quanto costa: un sacrificio fatto senza
-   > saperlo non è un sacrificio, è una trappola del DM. Ma se si dice anche
-   > cosa riceve Hella, il tavolo si mette a fare i conti, e la scena diventa
-   > un confronto fra numeri. Così il prezzo è noto, e il premio è una
-   > scoperta. Resta ignota anche la cosa che conta di più: **cosa succede a
-   > chi dice di no**.
+   > ⚖️ **Cosa si dice e cosa no.** Si dicono il perché, lo scopo e il prezzo:
+   > senza i primi due i giocatori scelgono al buio, senza il terzo il
+   > sacrificio è una trappola del DM (`DEF-3` §1 lo chiede due volte). Non si
+   > dice la **forma** del dono, né che cosa fa l'artefatto di chi rifiuta.
+   > La tabella «Cosa sanno i giocatori» in `DEF-3` §5 tiene la lista.
 2. **I tre tirano Volontà CD 18** (servono 2 successi su 3; **3 su 3** se i Doni
    versati sono uno o nessuno).
 3. **La Custode delle Radici** entra dal Sud vuoto del cerchio (§6). Il suo

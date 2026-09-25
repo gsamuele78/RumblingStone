@@ -267,18 +267,14 @@ consegnare i fogli, come giocare Durik, e cosa annotare.
 
 Lo Step 5 contiene tre scene in una, e l'ordine conta:
 
-1. **Moradin chiede i Doni** (§5), e dice **il prezzo, non il premio**. Una frase
-   a testa, guardando il giocatore, nella voce di Moradin:
-
-   | A chi | Cosa dice Moradin |
-   |---|---|
-   | Thorik | *«La protezione che la Corona dà a te passa a lei. Tu resti con un punto di meno, per sempre.»* |
-   | Tordek | *«L'ancora dei Bracieri passa a lei. Da oggi, chi ti spinge ti sposta.»* |
-   | Artemis | *«Un pezzo del tuo fuoco passa a lei. Sette dadi diventano sei, a ogni colpo, per sempre.»* |
-
-   Poi la riga del master: *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono
-   mancato, la carne lo ricorderà.»* E lascia il silenzio. **Si gioca di
-   ruolo**: chi dona lo dice e lo fa, come sta scritto nei tre box di §5.
+1. **Moradin chiede i Doni** (`DEF-3` §5, «Come lo chiede Moradin»). Sono
+   **quattro battute** nella voce del Cuore, da leggere prima dei tiri:
+   **il perché** (il fuoco da solo non forgia, serve il metallo), **a cosa
+   serve** (quello che date mette radice in lei e combatte con voi; chi non dà
+   lascia il suo seme chiuso), **il prezzo** detto a ciascuno per nome, col
+   numero subito dopo a voce normale, e **la domanda**: *«Chi di voi dà?»*.
+   Poi taci. **Si gioca di ruolo**: chi dona lo dice e lo fa, come sta scritto
+   nei tre box di §5.
 
    **Le Carte dei Doni si consegnano DOPO**, e solo a chi ha donato: sono la
    ricevuta di quello che ha dato e di quello che è germogliato in Hella (lo
@@ -286,13 +282,11 @@ Lo Step 5 contiene tre scene in una, e l'ordine conta:
    rifiuta non si dà niente, e **non si annuncia** la reazione del suo
    artefatto: la scopre giocando (`DEF-3` §5, tabella delle reazioni).
 
-   > ⚖️ **Perché il prezzo si dice e il premio no.** `DEF-3` §1 chiede due
-   > volte che il DM dica chiaro quanto costa: un sacrificio fatto senza
-   > saperlo non è un sacrificio, è una trappola del DM. Ma se si dice anche
-   > cosa riceve Hella, il tavolo si mette a fare i conti, e la scena diventa
-   > un confronto fra numeri. Così il prezzo è noto, e il premio è una
-   > scoperta. Resta ignota anche la cosa che conta di più: **cosa succede a
-   > chi dice di no**.
+   > ⚖️ **Cosa si dice e cosa no.** Si dicono il perché, lo scopo e il prezzo:
+   > senza i primi due i giocatori scelgono al buio, senza il terzo il
+   > sacrificio è una trappola del DM (`DEF-3` §1 lo chiede due volte). Non si
+   > dice la **forma** del dono, né che cosa fa l'artefatto di chi rifiuta.
+   > La tabella «Cosa sanno i giocatori» in `DEF-3` §5 tiene la lista.
 2. **I tre tirano Volontà CD 18** (servono 2 successi su 3; **3 su 3** se i Doni
    versati sono uno o nessuno).
 3. **La Custode delle Radici** entra dal Sud vuoto del cerchio (§6). Il suo
@@ -2410,8 +2404,79 @@ Tordek se la vuole.)*
 
 > **La regola d'oro.** La resurrezione **non è in ostaggio**: col Cuore, Hella
 > torna comunque. I doni comprano la **qualità del ritorno**. Moradin **chiede,
-> non impone**: *«Chi dona cosa? Nessuno è obbligato. Ma ogni dono mancato, la
-> carne lo ricorderà.»*
+> non impone**, e prima di chiedere dice **perché** e **a cosa serve**: il
+> discorso è qui sotto.
+
+### 🔨 Come lo chiede Moradin: il perché, lo scopo, il prezzo `[riscritto 2026-09-25 su richiesta del DM]`
+
+> ✏️ **Perché è cambiato.** Prima c'era una riga sola: *«Chi dona cosa? Nessuno
+> è obbligato. Ma ogni dono mancato, la carne lo ricorderà.»* Il DM ha fatto
+> notare che con quella i giocatori possono dire sì o no, ma non sanno **a che
+> cosa**: un dio che chiede un sacrificio deve dire perché lo chiede e che cosa
+> ne farà. Adesso sono quattro battute, e la voce è quella del **Cuore**: la
+> forma visibile di Moradin arriva solo allo Step 6.
+
+**Battuta 1 · il perché.** Si legge appena i tre sono in cerchio per lo Step 5,
+**prima** dei tiri di Volontà. La voce di Moradin è lenta e bassa, e non
+alza mai il tono: il peso ce l'hanno le parole.
+
+> *Sul petto di Hella il Cuore batte una volta, più forte degli altri. La voce
+> che segue non passa dall'aria: arriva nello sterno, come arriva il colpo di
+> un maglio dall'altra parte della montagna.*
+>
+> **MORADIN:** *«Voi tre, che l'avete portata fin qui.
+> Io sono il fuoco. Il fuoco scalda e fonde, e da solo non ha mai forgiato
+> niente: alla forgia serve il metallo. Hella torna, e questo lo do io, senza
+> chiedere niente in cambio. Ma la morte l'ha svuotata, e nel petto ha tre
+> semi che la mia mano non apre.»*
+
+**Battuta 2 · a cosa serve.**
+
+> *Il battito torna al suo passo. La voce no: resta.*
+>
+> **MORADIN:** *«Un seme così germoglia soltanto da quello che un compagno dà
+> di sé. Chi dà, lo perde per sempre. Ma non va sprecato: mette radice in lei,
+> prende la sua forma, e da domani combatte accanto a voi con le sue mani. Io
+> non lo prendo. Il ferro lavorato a freddo si crepa alla prima tempra, e un
+> dono strappato è ferro freddo. Chi non dà non perde niente: il suo seme resta
+> chiuso, e Hella torna senza quella parte.»*
+
+**Battuta 3 · il prezzo, a ciascuno.** La voce si posa su un giocatore alla
+volta, e il DM lo guarda. Dopo la frase di Moradin, **fuori dalla voce**, il DM
+dice il numero: un sacrificio fatto senza sapere quanto costa è una trappola.
+
+| A chi | Moradin | Poi il DM, a voce normale |
+|---|---|---|
+| 🛡️ Thorik | *«Thorik. La Corona ti fa da scudo. Metà di quello scudo passerà a lei, e non tornerà.»* | la deflessione della Corona scende da **+2** a **+1**: **−1 alla CA, per sempre** |
+| ⚒️ Tordek | *«Tordek. Quando il mondo ti spinge, i Bracieri ti piantano nella pietra. Quella radice passerà a lei. Da domani, chi ti spinge ti sposta.»* | **Ancoraggio della Montagna** lascia i Bracieri **per sempre** |
+| 🔮 Artemis | *«Artemis. Un pezzo del tuo fuoco passerà a lei. Colpirai meno forte, a ogni colpo, finché vivi.»* | ***Eldritch Blast*** da **7d6** a **6d6**, **per sempre** |
+
+**Battuta 4 · la domanda.**
+
+> *Il Cuore rallenta. Sotto l'Altare, il battito aspetta.*
+>
+> **MORADIN:** *«Non vi chiedo se le volete bene: l'avete portata fin qui. Vi
+> chiedo che cosa di voi siete disposti a lasciare nella sua carne. Nessuno è
+> obbligato, e io non giudicherò nessuno. Chi di voi dà?»*
+
+Poi **si tace**, e si gioca di ruolo: chi dona lo dice e lo fa, come nei tre box
+qui sotto. **La Carta del Dono si consegna dopo il sì**, e solo a chi ha donato.
+
+**Cosa sanno i giocatori quando scelgono, e cosa no.** Il perché, lo scopo e il
+prezzo si dicono; la **forma** del dono resta una scoperta, perché se il tavolo
+la conosce si mette a fare i conti e la scena diventa un confronto fra numeri.
+
+| Moradin lo dice | Resta da scoprire |
+|---|---|
+| il Cuore riporta Hella in ogni caso; i semi no | che cosa germoglia: lo Scudo, la Pelle, il Rovo |
+| quello che date diventa suo, e combatte con voi | che i tre doni fanno catena |
+| il prezzo di ciascuno, col numero | che la Collana può **restituire** il dono, una volta |
+| chi rifiuta lascia il suo seme chiuso | come reagisce l'**artefatto** di chi rifiuta |
+| | che il seme chiuso si può riempire più avanti, in ARC-09 |
+
+⚠️ *«Io non giudicherò nessuno»* è vero alla lettera: Moradin non giudica. Gli
+artefatti sì (tabella delle reazioni, più sotto). Se un giocatore lo nota dopo,
+la frase ha fatto il suo lavoro.
 
 > **🌱 Che cos'è un Dono, in questo rito.** Non è una tassa: è un **trapianto**.
 > Il donatore dà **un potere del proprio artefatto**. Quel potere **lascia il suo
