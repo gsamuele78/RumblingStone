@@ -592,7 +592,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` — A6 — «Il Viaggio Attraverso il Tempo» (SUD-OVEST · temporale → 80%)
 - **Etichetta regia**: Andor lead — il tempo incerto).
 - **Destinatario**: `pg` · **Formato**: `16:9 splash` (sostituisce `PortaleDellaForgiaEterna.webp`, che è un'immagine di testo)
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-portale-del-tempo.jpg` (1600 × 899) e in `DEF-4` Scena 1
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Questo affresco è doloroso da guardare a lungo. Mostra due scene SOVRAPPOSTE, come una doppia esposizione che il cervello si rifiuta di separare. Nella prima — Anno −1000 — Hammerfist è giovane, le mura appena erette e ancora lucide; i nani combattono un'orda primitiva di orchetti, e un drago nero GIOVANE si tuffa sulle fortificazioni: il capostipite di una stirpe che riconoscerete. Nella seconda — Anno 1372, ADESSO — Hammerfist è assediata, le mura segnate, l'esercito della Mano Rossa schierato sotto, e Fauci di Palude — lo stesso sangue, mille anni più vecchio e più grande — circola sopra co
@@ -685,7 +685,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §3 — IL CUORE DI MORADIN (rivelazione del reliquiario)
 - **Etichetta regia**: Salvatore — il sacro che si sente nel corpo).
 - **Destinatario**: `pg` **dopo** il box del §3 · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24) · immagine esistente: `ilCuoreDiMoradin.png`
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-cuore-di-moradin.jpg` (1600 × 899). **Sostituisce `ilCuoreDiMoradin.png` al §3**: il box dice che il Cuore sta *dentro* l'Altare che si apre, e la vecchia immagine lo mette sopra. La vecchia resta per la copertina del booklet e per `DEF-2` e `DEF-5`
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Thorik, posi le mani sulla superficie di mithral, e l'Altare SI APRE. Non c'erano cuciture, un istante fa: ora una camera interna di trenta centimetri si schiude come un fiore di metallo. Dentro, sospeso nella luce dorata, un cristallo di rubino sanguigno grande come il tuo pugno — e ha la forma ESATTA di un cuore nanico: quattro camere, i vasi visibili, tutto scolpito in rubino divino trasparente. E pulsa. Sessanta battiti al minuto. Il ritmo di un cuore a riposo. Quando lo sfiori, senti calore. Vita. Creazione pura. E capisci, senza che nessuno te lo dica, che questo si spenderà UNA volta so
@@ -698,7 +698,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §6 — IL DEBITO DELLA RADICE (il filo grigio del piano spirituale) [CANONE — DM 2026-07-23; il ramo (A/B/C) si gioca]
 - **Etichetta regia**: GoT lead — la creditrice paziente).
 - **Destinatario**: `dm` (la Custode non si mostra prima dello Step 5) · **Formato**: `3:4 handout`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-custode-delle-radici.jpg` e in `DEF-3` §6, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Nel momento in cui lo spirito di Hella varca la soglia tra i mondi, la luce dorata dell'Altare vacilla — e qualcos'altro è nella Sala con voi. Non un mostro: una PRESENZA. Ha la forma di una donna di radici e pietra, alta come Therysol, gli occhi due nodi di legno antico. Non è ostile. Non è gentile. È come la montagna: c'è, e aspetta. Parla, e la sua voce è il rumore di una faglia che si assesta: LA CUSTODE DELLE RADICI: «Una radice strappata lascia un vuoto. Il vuoto va colmato — è legge, non capriccio. Non oggi. Non con lei: il Forgiatore la protegge, e io non discuto col Forgiatore. Ma il 
@@ -711,7 +711,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno).
 - **Destinatario**: `pg` **dopo** la scena (è il ritorno: mostrarla prima lo brucia) · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, **seconda versione** (`MAHWL21y19U`); nel repo come `Immagini/tavola-risveglio-di-hella.jpg` (1600 × 899), in `DEF-3` §7
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Silenzio. Cinque secondi. Dieci. Il Cuore di Moradin, sopra il petto di Hella, rallenta: novanta battiti… sessanta… si ferma. E poi — lei INSPIRA. Netto. Improvviso. Profondo, come chi riemerge dall'acqua un istante prima di annegare. Il petto si alza. Ricade. RESPIRA. E gli occhi si aprono — non più marroni: ambra dorata. La pelle ha un sottotono di muschio pallido; tra i capelli rossi corre una venatura di corteccia sottile; e attorno a lei l'aria sa di terra bagnata e di linfa. È Hella. È cambiata. È VIVA.
@@ -744,7 +744,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-3-RESURREZIONE-HELLA.md` — §7 — IL RISVEGLIO (Hella torna, Durik si lega, la Collana nasce)
 - **Etichetta regia**: Salvatore — il ritorno del fedele).
 - **Destinatario**: `pg` dopo il risveglio · **Formato**: `3:4 handout` (è la copertina della scheda di Durik)
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, **seconda versione** (`MAHWL6svafI`): Durik levriero in piedi, lo stesso di `durik2`. Nel repo come `Immagini/tavola-durik-e-hella.jpg` (533 × 800, copia della chat), copertina di `08-SCHEDA-DURIK`
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Prima che qualcuno possa rispondere, un rumore di pietra su pietra: il grande cane di mithral e roccia scura — quello che ha preso forma nel Piano della Terra e da allora non si è mai allontanato dal corpo — si fa avanti. Non abbaia: non sa più farlo. Appoggia la testa massiccia sul petto di Hella, gli occhi di topazio socchiusi, e resta così. Lei alza una mano tremante e la posa tra le sue orecchie di granito. «…Durik?» Il cane emette un suono che non è un verso: è il click lontano di una faglia che si assesta. È tornato anche lui. Non l'aveva mai davvero lasciata.
@@ -777,7 +777,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — ZONA 1 — La Fortezza Giovane (Hammerfist appena eretta)
 - **Etichetta regia**: LotR lead — deep time al contrario).
 - **Destinatario**: `pg` all'arrivo · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: ✅ generata con Canva AI il 2026-09-25, in due immagini: `Immagini/tavola-hammerfist-giovane.jpg` per l'arrivo (Scena 1, i fuochi dell'orda) e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa (Scena 3)
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Conoscete Hammerfist: le sue sale annerite dai secoli, le statue consumate, i nomi dei re incisi e riincisi. Ma QUESTA Hammerfist non ha ancora storia. Le mura sono bianche di pietra appena tagliata, gli spigoli ancora vivi. Le statue dei re sono una sola. E sulla porta, la targa di bronzo con la profezia dei Quattro Eroi è stata incisa OGGI, l'inchiostro del cesello ancora fresco. Camminate dentro la vostra stessa leggenda mentre viene scritta. È vertiginoso: ogni pietra che toccate, tra mille anni, la toccherete di nuovo — vecchia di un millennio.
@@ -930,7 +930,7 @@ artisti viventi]
 - **Fonte**: `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` — §4 — BOSS: SKULLCRUSHER IL NERO (il duello — unico scontro tattico)
 - **Etichetta regia**: Salvatore — l'ingresso del mostro).
 - **Destinatario**: `dm` fino al duello, poi `pg` · **Formato**: `16:9 splash`
-- **Stato**: ✅ prompt scritto (2026-09-24, serata della resurrezione)
+- **Stato**: 🟡 generata con Canva AI il 2026-09-25, nel repo come `Immagini/tavola-skullcrusher-nel-cortile.webp` (1600 × 899) con la derivata in `web/`. **Difetto noto**: il cane di Hella è una bestia massiccia di pietra, non il levriero Durik. Si vede di spalle e piccolo; da rigenerare se il DM lo vuole fedele
 
 > *Estratto sorgente (da cui ricavare il prompt — non è il prompt):*
 > Il cielo si spezza. Skullcrusher il Nero cala come una montagna alata, e l'acido gli sfrigola dalle fauci prima ancora che apra la bocca. Dove atterra, la pietra fuma. Aegis Fang urla nella mente di Thorik — non canta, URLA: «SANGUE ANTICO. ARTEFICE DI LACRIME. IL PRIMO NERO.» E la Corona vi mostra due immagini sovrapposte, tremanti l'una sull'altra: questo drago, adesso — e Fauci di Palude, mille anni nel futuro, sopra le mura di una Hammerfist che brucia. Sono lo stesso sangue. E voi state per insegnare a quel sangue, per la prima volta, che cosa vuol dire aver paura.
@@ -1101,7 +1101,7 @@ human hands, faceted gemstone cut like a jewel, cartoon, neon glow, bokeh hearts
 ### R1 · Durin Rocciadura  `[ritratto-durin-rocciadura]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/durin-rocciadura.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 DURIN — nano adulto, veterano · largo, non alto
@@ -1115,7 +1115,7 @@ SEGNO      l'ascia doppia, tenuta troppo stretta
 ### R2 · Re Thorek I  `[ritratto-re-thorek-i]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/re-thorek-i.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 RE THOREK I — nano di 182 anni · massiccio, eretto
@@ -1129,7 +1129,7 @@ SEGNO      l'ascia Frostcleaver, sempre in pugno
 ### R3 · Thorgrim Barbadiferro  `[ritratto-thorgrim-barbadiferro]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/thorgrim-barbadiferro.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Versione a mani vuote e palmi in vista, come chiede `DEF-4`; la prima, con la reliquia in mano, è scartata. La seconda (`MAHWLyX0Wa0`) il DM non la trovava in Canva ed è stata rigenerata come `MAHWMYEg1KY`
 
 ```
 THORGRIM — nano vecchio · seduto, non si alza
@@ -1143,7 +1143,7 @@ SEGNO      Aegis Fang, l'ascia da guerra nanica, appoggiata al fianco
 ### R4 · Mastro Costruttore Zeth  `[ritratto-zeth-mastro-costruttore]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/zeth-mastro-costruttore.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 ZETH (≈372 DR) — mezz'elfo adulto, magro
@@ -1157,7 +1157,7 @@ SEGNO      traccia rune sulle pareti dei tunnel [col gesso: PROPOSTA]
 ### R5 · Balvar Fuocospento  `[ritratto-balvar-fuocospento]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/balvar-fuocospento.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 BALVAR — nano dello scudo, vecchio · curvo sul lavoro
@@ -1171,7 +1171,7 @@ SEGNO      la lastra d'ardesia sulle ginocchia e la punta di ferro in mano
 ### R6 · Zog'tar Deatheye  `[ritratto-zogtar-deatheye]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/zogtar-deatheye.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ nel repo la **terza versione**, mandata dal DM il 2026-09-25: `Immagini/ritratti/zogtar-deatheye.webp` (1033 × 1523), derivata di stampa in `web/`. Ha la pietra nell'occhio destro senza specchiare. Strumento da confermare
 
 ```
 ZOG'TAR — mezzo-ogre · grande quanto una porta di stalla
@@ -1185,7 +1185,7 @@ SEGNO      l'ascia a due mani appoggiata alla spalla
 ### R7 · Vatore  `[ritratto-vatore]`
 
 - **Destinatario**: `pg` dopo l'incontro · **Formato**: `3:4 ritratto` · **File**: `Immagini/ritratti/vatore.jpg`
-- **Stato**: ✅ prompt scritto (2026-09-24)
+- **Stato**: ✅ generato con Canva AI il 2026-09-25 e nel repo, a 533 × 800: è la copia arrivata dalla chat, non l'originale Canva. Da sostituire con l'esportazione a piena risoluzione
 
 ```
 VATORE — umano sulla quarantina · asciutto, silenzioso
