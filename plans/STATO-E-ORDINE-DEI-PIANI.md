@@ -35,11 +35,13 @@
 | ✅ | **Il controllo a vista di tutti i volumi dopo la regola editoriale della #169**: quindici volumi compilati prima e dopo `a9fe251`. Un difetto veniva dalla #169 (la figura su A4 riservava sempre 21 cm), tre c'erano da prima (codice in linea, righe `____`, tabelle più alte di un foglio). Corretti nel tema e nell'esportatore: sovrapposizioni da 1.474 a 0 | C + G3 | §11.3 · `rumblingstone-editoria` §4.5 | fatto |
 | ✅ | **La storia delle scelte non va in stampa**: blocchi `<!-- storico -->` nei sorgenti e attribuzioni di forma fissa tolte dalle due catene con la stessa funzione; la tecnica per fare un booklet, con le regole della #169, scritta come canone | C + G3 | §12.2 · ADR-0069 · `rumblingstone-editoria` §2-bis e §4.6 | fatto: righe con un segnale di storia nei PDF da 257 a 67, storia vera in stampa da 161 righe a 15 dichiarate |
 | ✅ | **Le tabelle che in colonna vanno a capo in ogni cella scavalcano le due colonne**, misurate dal tema; marcatore `<!-- tabella: larga -->` / `colonna` per l'autore; i PDF della #169 rifatti con tutte le regole nuove | C + G3 | §13 · `rumblingstone-editoria` §2 e §4.7 | fatto: nei volumi della #169 100 tabelle su 125 erano alte il doppio in colonna; ora 330 tabelle larghe su tutti i volumi, 60% nella stessa pagina |
-| 🙋 | **Al DM, poi all'agente: chiudere le `[PROPOSTA]` e gli `[INFERRED]`**, perché diventino canone o vengano bocciate. **621 marcature in 209 file**; tolte le 140 che stanno in piani e skill (descrivono la convenzione) e le 20 in archivio, ne restano **circa 460 nel contenuto** | K | §12.1 | l'agente prepara le domande **un arco alla volta**, prima ARC-07 perché si gioca adesso; il DM risponde «canone» o «bocciata»; l'agente applica, toglie la marcatura e rimisura il conto |
-| 🙋 | **Al DM: i capitoli da beta del Drappo** (IP e licenze, playtest alfa, stato del modulo, scheda di feedback) stanno nel volume del DM. Per uscire dalla beta vanno tolti dal manifest o tenuti? | | §12.2 | una risposta; l'agente cambia il manifest |
+| ✅ | **Le `[PROPOSTA]` e gli `[INFERRED]` di ARC-07 chiusi**: il DM ha deciso il 2026-09-25, tutto canone; l'equipaggiamento di Hella è quello della sua scheda | K | §12.1 | fatto: 32 marcature dei sorgenti chiuse, 5 restano (tre descrivono una convenzione, due sono i tratti del volto nei prompt) |
+| ▶ | **Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi**, un lotto alla volta: 568 in tutto il repo, circa 400 nel contenuto | K | §12.1 | agente: il prossimo lotto è ARC-08 (32), poi ARC-09 (53), `campaign/` (50), `PG/` (22), il Bestiario (212) per ultimo perché è il più grande |
+| ✅ | **I tratti del volto dei sette PNG di ARC-07 sono canone**, confrontati col ritratto della #172 uno per uno: dove scheda e ritratto non coincidevano il DM ha fatto vincere il ritratto (Durin, Re Thorek, Balvar); per Thorgrim ha corretto il box di `DEF-4` sulle mani aperte verso la luce | K | §12.1-ter | fatto: nessuna `[PROPOSTA]` nei due file dei prompt. L'arma di Durin resta l'ascia doppia dello statblocco, il ritratto ne disegna una a una lama |
+| ✅ | **I capitoli da beta del Drappo usciti dal volume del DM** (IP e licenze, playtest alfa, stato del modulo, schede di feedback), su decisione del DM | M | §12.2 | fatto: da 94 a 83 pagine, nessun rimando alla beta nel PDF; i file restano nel repo |
 | 🙋 | **Al DM: chiudere la serata del 2026-09-25.** In `campaign/sessions/` non c'è ancora il log: cosa è successo al tavolo lo sa solo il DM | K | regia della serata §6 (il registro) · `rumblingstone-automation` | `python3 scripts/dm.py session end` sul ramo `campaign-group-rumblingstone-dm-gianfranco`, mai su `main` (ADR-0007) |
-| 🙋 | **Al DM: le domande rimaste nei master di ARC-07** | K | §11.2 | una risposta per riga; l'agente poi toglie la marcatura |
-| 🙋 | **Al DM**: generare i sette ritratti e le sei tavole; il grido *«Baruk Khazâd! Khazâd ai-mênu!»* di Tolkien resta, voluto, in `PortaleForgia-P1` e nell'errata di ARC-08 | | `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md`, stile del Drappo | `comfyui_batch.py --prompts <file> --serie tutto` sulla macchina del DM |
+| ✅ | **Le domande rimaste nei master di ARC-07** (Q1-Q5) | K | §11.2 · §12.1 | fatto: tutte canone il 2026-09-25 |
+| 🟡 | **I sette ritratti e le otto tavole sono nel repo** (#172, Canva AI). Restano: gli originali a piena risoluzione al posto delle copie da chat a 533 × 800, e Skullcrusher nel cortile, dove il cane di Hella è sbagliato; il grido *«Baruk Khazâd! Khazâd ai-mênu!»* di Tolkien resta, voluto, in `PortaleForgia-P1` e nell'errata di ARC-08 | | `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` §4 | DM: esportare da Canva gli originali, stesso nome di file |
 | ▶ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | M + G3 | §8.3 | agente: una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
 | ⬜ | **Le 120 legature della Corona** (`aﬀresco`) | M | §10.1 | agente: prima si conta in tutto il repo, poi si decide se è un lotto o uno per file; qualità: nessuna legatura, nessun'altra riga cambiata |
 | ⬜ | **Due residui editoriali minori**: l'ultima riga dell'indice delle 48 aree dell'Abbazia cade sola a pagina 35; il Palio stampa «Naviga i capitoli qui sopra», che è una frase della catena HTML | M | §11.3 | agente: il primo si prova con una soglia di righe per pagina, il secondo va tolto dall'introduzione del manifest solo nella stampa |
@@ -762,6 +764,9 @@ test nuovi di §11.3: 1.365 passati, nessuno saltato.
 
 ### 11.2 · Le domande rimaste nei master di ARC-07
 
+✅ **Chiuse il 2026-09-25**: il DM ha risposto «canone» a tutte e cinque, e per
+Q3 vale la scheda della giocatrice. Come sono state applicate: §12.1.
+
 Sono marcate nei file e nessuna è una decisione di un piano, perciò non
 entrano nell'aggregato di §4. Si risponde qui sotto o nel file; l'agente poi
 toglie la marcatura.
@@ -859,6 +864,51 @@ le domande (una riga ciascuna, col file e la proposta), il DM risponde
 «canone» o «bocciata», e l'agente applica: se canone toglie la marcatura, se
 bocciata toglie o riscrive la riga, e in entrambi i casi rimisura il conto.
 Le domande Q1-Q5 di §11.2 sono il primo pezzo del lotto di ARC-07.
+
+**Il lotto di ARC-07, chiuso il 2026-09-25.** Nella cartella c'erano 82
+marcature fuori dall'archivio: 45 negli `.hb.md` generati, che si puliscono
+rigenerandoli, e 37 nei sorgenti. Il DM ha risposto per gruppi, e tutte
+le risposte sono state «canone»:
+
+| Gruppo | Marcature | Decisione |
+|---|---:|---|
+| Recitazione dei PNG (Durin, Re Thorek I, Zeth, la Custode, la Sentinella, Zog'tar) | 12 | canone |
+| Trama: Thorgrim nel Rituale, la ghianda annerita, la tenda M7-C 18 × 16,5 m | 6 | canone |
+| Equipaggiamento di Hella | 1 | vale la scheda: cuoio borchiato +2, scudo di legno +1, scimitarra +1 |
+| Regole e numeri inferiti (durate, un ruling, morale, PX, tesoro, soglie) | 12 | canone come scritti |
+
+Una conseguenza da dire: il §11 C di `DEF-3` elencava un solo «scudo/arma +1»
+da 2.000 mo, la scheda ne ha due. Con i prezzi SRD il corredo di Hella passa da
+~15.600 a **~16.900 mo**, e il tesoro ordinario dell'arco da ~52.050 a
+**~53.350 mo**; allineati `DEF-3`, `DEF-5` e l'audit del tesoro.
+
+Restano 5 marcature: tre frasi che descrivono la convenzione (riscritte perché
+non dicano più che i valori sono da confermare, e l'istruzione di `DEF-4` su
+come segnare un'improvvisazione futura), una riga dentro un blocco storico, e i
+tratti del volto nei prompt delle immagini, che non erano nella domanda.
+
+Nel repo: da **621 a 568** marcature. Il prossimo lotto è ARC-08.
+
+### 12.1-bis · Il Drappo esce dalla beta
+
+Su decisione del DM (2026-09-25) il volume del DM non contiene più i quattro
+capitoli da beta: playtest alfa, IP e licenze, stato del modulo, schede di
+feedback. I file restano nel repo; `STATO-DEL-MODULO.md` si stampa a parte, come
+dice l'hub. Due note «(playtest alfa, serata…)» nelle giornate e due righe della
+mappa dei file dell'hub sono passate nello storico. Il volume va da 94 a 83
+pagine, e nel PDF non resta un rimando alla beta.
+
+### 12.1-ter · I volti dei PNG di ARC-07, confrontati coi ritratti
+
+La #172 ha portato i sette ritratti. Il confronto con le schede, PNG per PNG:
+
+| PNG | Scheda e ritratto | Decisione del DM |
+|---|---|---|
+| Durin | il ritratto ha la barba lunga in una treccia, nessun naso rotto, cappuccio verde, ascia a una lama | vale il ritratto; l'ascia resta doppia perché lo è nello statblocco |
+| Re Thorek I | quattro trecce invece di tre; il resto coincide | vale il ritratto |
+| Thorgrim | mani aperte verso la luce, il box diceva sulle ginocchia | si corregge il box di `DEF-4` e la scheda d'entrata |
+| Balvar | casacca verde sotto il grembiule invece del grigio ardesia | vale il ritratto |
+| Zeth, Zog'tar, Vatore | coincidono | canone; il volto di Vatore non si confronta con Sal, che non ha un'immagine nel repo |
 
 ### 12.2 · La storia delle scelte fuori stampa
 

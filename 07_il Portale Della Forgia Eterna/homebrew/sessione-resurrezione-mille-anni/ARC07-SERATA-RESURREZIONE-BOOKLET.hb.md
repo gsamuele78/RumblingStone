@@ -153,7 +153,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 - la Sala con gli otto affreschi, Atti I e III:
   `Immagini/web/Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).jpg`;
-- il Cuore di Moradin, Atto II dopo il §3: `Immagini/web/ilCuoreDiMoradin.jpg`;
+- il Cuore di Moradin, Atto II dopo il §3: `Immagini/tavola-cuore-di-moradin.jpg`;
 - Durik, Atto II al §7: è sulla sua scheda (`PG/Immagini/web/durik2.jpg`);
 - *La canzone delle pietre*, dallo Step 5 al risveglio: `Musica/LaCanzoneDellePietre.mp3`.
 
@@ -448,8 +448,8 @@ Le tariffe sono nel master. La tabella da tenere d'occhio è quella di uscita
 dalla tenda: **≤ 6 in tempo, 7 di corsa, 8 l'alba vi coglie fuori.**
 
 ⚠️ **I semi di Hella.** All'alba Hella evoca **due Treant di Adamantio** con
-la Collana (due cariche su tre, la tacca resta una). L'uso della ghianda
-annerita resta una `[PROPOSTA]` da confermare: è scritta in `DEF-4`, Scena 5.
+la Collana (due cariche su tre, la tacca resta una). Se la ghianda annerita
+non è ancora piantata, la pianta qui: `DEF-4`, Scena 5.
 
 ### IV.4 · La tenda: Balvar prima di Zog'tar
 
@@ -562,7 +562,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ⚠️ **Cosa questo file NON fa.** Non riscrive niente, non aggiunge fatti e non
 decide nulla: **rimanda**. Dove i master tacciono — ed è il caso di qualche tic
-vocale — la voce proposta è marcata **[PROPOSTA]** e il DM la cambia senza
+vocale — la voce è stata scelta qui ed è canone, e il DM la cambia senza
 chiedere il permesso a nessuno. I master restano la fonte di verità.
 
 | § | Cosa |
@@ -587,9 +587,9 @@ prima.
 | Chi | Cosa vuole | Il tic | Dove |
 |---|---|---|---|
 | **Terros l'Antico** — guardiano del Nodo di Terra, GS 15 | che nessuno tocchi lo Smeraldo. Non odia: **custodisce** | parla **lentissimo**, come chi non ha mai avuto fretta in diecimila anni. Non alza mai la voce, nemmeno quando colpisce | `#1` §8 |
-| **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. *[PROPOSTA]* | `#1` §7b |
+| **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. | `#1` §7b |
 | **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | `#4` Scena 11 |
-| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` Scena 8 *[PROPOSTA]* |
+| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | `#4` Scena 8 |
 | **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | `#4` Scena 7 |
 | **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | `#4` Scena 9 |
 
@@ -599,8 +599,8 @@ prima.
 |---|---|---|---|
 | **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi | `#1` §9 fase 3 · `#3` §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | `#2`, `#3` |
-| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» *[PROPOSTA]* | `#4` Scena 4 |
-| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria *[PROPOSTA]* | `#4` Scena 2, Appendice A |
+| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» | `#4` Scena 4 |
+| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria | `#4` Scena 2, Appendice A |
 | **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | `#4` Scena 4 |
 | **Il Custode** (ruolo, non persona) | leggere i pannelli e ricordare un fatto vero | — (è una funzione: la assume un PG) | `#2` §3-4 |
 
@@ -2133,8 +2133,8 @@ Thorik, che la legge ad alta voce.
 Successo: l'Altare arde d'oro, il Cuore accelera a 90 bpm.
 
 
-> *La preghiera si pronuncia **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la erre
-> battuta e le vocali brevi.*
+**Pronuncia della preghiera**: **VÒR-rak mo-RA-din, HRAGN tul-VESH**, con la
+erre battuta e le vocali brevi.
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
 > *Tordek, il respiro rallenta da sé. C'è un battito — il Cuore di Moradin — e
@@ -2458,10 +2458,13 @@ momento entra la Custode: §6.
 | | |
 |---|---|
 | **Vuole** | che il vuoto lasciato dalla radice strappata si colmi. Non odia nessuno e non ha fretta |
-| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. `[PROPOSTA]`: non guarda mai chi parla, guarda Hella |
+| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. Non guarda mai chi parla, guarda Hella |
 | **Sa** | il Voto della Radice, parola per parola. Che il Forgiatore protegge Hella, e che con lui non si discute |
 | **Non sa** | chi sono gli altri tre, e non le interessa |
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
+| **Tavola** | qui sotto. Solo per il DM fino allo Step 5: mostrata prima, toglie la sorpresa della presenza |
+
+![La Custode delle Radici al margine del cerchio](../../Immagini/tavola-custode-delle-radici.jpg)
 
 **Chi/cosa è.** La Custode delle Radici — un **psicopompo neutrale** del Sogno
 della Terra (**si aggancia al Cerchio Sacro di ARC-09** —
@@ -2515,6 +2518,8 @@ capelli biondi mossi con una venatura di corteccia fine, orecchie appuntite come
 foglie giovani, dita un po' più lunghe (unghie come corteccia,
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
+
+![Il risveglio di Hella](../../Immagini/tavola-risveglio-di-hella.jpg)
 
 > **Read-aloud — le prime parole (voce rauca, non usata da settimane).** *«Io…
 > dove… respirare è… difficile.»* *Gli occhi ambra cercano, si fermano su
@@ -2764,12 +2769,13 @@ rimesso dritto undici volte.»* Da lì si riparte.
 
 | Oggetto (corredo di Hella, restituito) | Valore |
 |---|---|
-| **Armatura di cuoio +2** (ora venata di corteccia, adattata all'Ibrido) | ~4.000 mo |
+| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido) | ~4.000 mo |
 | **Mantello della Resistenza +2** | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo/arma druidica +1** (falcetto o scudo leggero) | ~2.000 mo |
+| **Scudo di legno +1** | ~1.000 mo |
+| **Scimitarra +1** | ~2.300 mo |
 | **Bacchetta di Cura Ferite Moderate** (25 cariche) | ~1.600 mo |
-| **LORDO restituito** | **~15.600 mo** |
+| **LORDO restituito** | **~16.900 mo** |
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -2806,10 +2812,11 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il Cuore di Moradin, dopo il §3 | `Immagini/web/ilCuoreDiMoradin.jpg` |
-| Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
+| Il Cuore di Moradin, dopo il §3 | `Immagini/tavola-cuore-di-moradin.jpg`: il reliquiario aperto, fedele al box. `ilCuoreDiMoradin` lo mostrava appoggiato sopra l'Altare, e resta per la copertina e per `DEF-2` e `DEF-5` |
+| La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
+| Il risveglio di Hella | `Immagini/tavola-risveglio-di-hella.jpg`, in §7 dopo il box. `Hella_elementale` resta per l'Avatar della Radice |
+| Durik e Hella, dopo il risveglio | `Immagini/tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione |
-| Il reliquiario che si apre, fedele al testo | da generare: `id=tavola-cuore-di-moradin` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
 
 ### Musica
 - **`Musica/LaCanzoneDellePietre.mp3`** — **QUI è il suo momento pieno**: falla
@@ -2886,9 +2893,6 @@ ARTEFATTO: Collana dei Semi Eterni (§7).
 ============================================================
 ```
 
-⚠️ *L'equipaggiamento della scheda (cuoio borchiato, scudo di legno, scimitarra)
-e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidono del tutto.
-Vale la scheda della giocatrice. `[INFERRED — needs DM confirmation]`*
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
 
@@ -3264,6 +3268,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 ### SCENA 1 — Il portale e il bosco al tramonto
 
+![Il portale del Tempo](../../Immagini/tavola-portale-del-tempo.jpg)
+
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante lunghissimo i
 > colori si rovesciano, e vi passano davanti vite intere di nani: nascono,
 > battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna
@@ -3301,6 +3307,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 Quando la testa torna a posto, guardano dove sono.
 
+![La fortezza giovane, da lontano](../../Immagini/tavola-hammerfist-giovane.jpg)
+
 > **Read-aloud (LotR lead) — la fortezza, da lontano.** *A ovest, fra i
 > tronchi, si vedono le torri di una fortezza che conoscete, più basse di come
 > le ricordate. Più in là, verso sud, i fuochi dell'orda cominciano ad
@@ -3326,13 +3334,15 @@ bianche, nessun cavaliere sul drago.)*
 
 | | |
 |---|---|
-| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. `[PROPOSTA]`: si vede dal modo in cui tiene l'ascia troppo stretta |
+| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. Si vede dal modo in cui tiene l'ascia troppo stretta |
 | **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
-| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
+| **Suona** | la voce gli scappa in alto quando è teso. Ride un attimo prima di dire una cosa seria |
 | **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
 | **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
 | **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
-| **Ritratto** | da generare: `id=ritratto-durin-rocciadura` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Durin Rocciadura, la pattuglia](../../Immagini/ritratti/durin-rocciadura.jpg)
 
 **La pattuglia di Durin (riconoscimento — 3 vie).** Nel bosco a est delle mura,
 una pattuglia nanica (6 veterani) li ferma.
@@ -3371,6 +3381,8 @@ tavolo deve sapere prima del consiglio:
 
 Durin li porta alla porta principale. Le guardie vedono la Corona e non
 toccano nessuno. Prima di entrare c'è la targa.
+
+![La porta e la targa di bronzo](../../Immagini/tavola-hammerfist-giovane-porta.jpg)
 
 > **Read-aloud (LotR lead) — deep time al contrario.** *Conoscete Hammerfist:
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
@@ -3438,14 +3450,16 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. `[PROPOSTA]`: una corona semplice, senza gemme |
+| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. Una corona semplice, senza gemme |
 | **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
-| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
+| **Suona** | lento, al passato remoto quando cita la profezia. Parla al plurale anche di sé, *«la fortezza pensa»* |
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
 | **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I** (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
-| **Ritratto** | da generare: `id=ritratto-re-thorek-i` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Re Thorek I, il re di una fortezza giovane](../../Immagini/ritratti/re-thorek-i.jpg)
 
 ⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
 
@@ -3453,12 +3467,14 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | un vecchio seduto che non si alza. Le mani sulle ginocchia, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
+| **Aspetto** | un vecchio seduto che non si alza. Le mani aperte verso la luce, i palmi in su, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
 | **Vuole** | che l'ascia torni in una mano che sa perché la tiene |
 | **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
 | **Non combatte** | è una non-creatura: nessuno statblocco esiste, e non va inventato |
 | **Eco** | l'affresco A3 (*«Portala bene, fratello. Ora è tua.»*) e la Cerimonia delle 100 Asce in ARC-08 |
-| **Ritratto** | da generare: `id=ritratto-thorgrim-barbadiferro` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Thorgrim Barbadiferro, l'antenato](../../Immagini/ritratti/thorgrim-barbadiferro.jpg)
 
 **Il re.** Re Thorek I (Guerriero 16, 182 anni, Frostcleaver in pugno) vuole
 vedere da vicino la Corona che suo nonno perse contro Skullcrusher cinquant'anni
@@ -3479,8 +3495,8 @@ e i futuri.»*
 Thorik, e quando il re tace parla lui.
 
 > **Read-aloud (Mercer lead, Casa di Davide support).** *Il vecchio sulla panca
-> non si è mosso. Ha le mani appoggiate sulle ginocchia, e sono mani che hanno
-> tenuto la stessa ascia che tiene Thorik: si vede dal callo, nello stesso punto.
+> non si è mosso. Tiene le mani aperte verso la luce, i palmi in su, e sono mani
+> che hanno tenuto la stessa ascia di Thorik: si vede dal callo, nello stesso punto.
 > Guarda la corona sulla fronte di Thorik per il tempo di tre respiri. Poi gli
 > occhi gli si riempiono e lui non se ne accorge, perché sta già parlando.*
 >
@@ -3606,9 +3622,9 @@ mangiano), fabbri che affilano le armi, chierici che benedicono.
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
   **una carica sola** per richiamarlo.
-  `[PROPOSTA — conferma DM]` Se al rito Hella ha trovato la **ghianda
-  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» può
-  essere questo: niente Treant in più, ma una quercia che fra mille anni sarà
+  Se al rito Hella ha trovato la **ghianda
+  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
+  questo: niente Treant in più, ma una quercia che fra mille anni sarà
   vecchia di mille anni.
 
 **Scheda d'entrata — Mastro Costruttore Zeth, il seme del Ghostlord** *(nelle
@@ -3616,13 +3632,15 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 
 | | |
 |---|---|
-| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. `[PROPOSTA]`: col gesso, e ne cancella metà col pollice |
+| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. Col gesso, e ne cancella metà col pollice |
 | **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
-| **Suona** | parla mentre lavora. `[PROPOSTA]`: finisce le frasi degli altri |
+| **Suona** | parla mentre lavora. Finisce le frasi degli altri |
 | **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
 | **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
-| **Ritratto** | da generare: `id=ritratto-zeth-mastro-costruttore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Mastro Costruttore Zeth, il seme del Ghostlord](../../Immagini/ritratti/zeth-mastro-costruttore.jpg)
 
 - **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE).**
   Il party incrocia il **Mastro Costruttore Zeth** nelle gallerie, un mezz'elfo dagli occhi
@@ -3731,7 +3749,9 @@ Appendice A)*
 | **Suona** | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
-| **Ritratto** | da generare: `id=ritratto-balvar-fuocospento`, per primo |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Balvar Fuocospento, il runaio esiliato](../../Immagini/ritratti/balvar-fuocospento.jpg)
 
 > **Perché esiste.** Due giocatori hanno chiesto la stessa cosa da due lati:
 > Artemis non ha mai niente da individuare, Thorik non incontra mai
@@ -3875,7 +3895,9 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
-| **Ritratto** | da generare: `id=ritratto-zogtar-deatheye` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Zog'tar Deatheye, il generale](../../Immagini/web/zogtar-deatheye.jpg)
 
 **Il round di sorpresa.** I PG invisibili hanno un **round di sorpresa pieno** se
 nessuno ha parlato ad alta voce o lanciato incantesimi che li rivelano. Parlare
@@ -3965,7 +3987,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
 | **Sa** | di aver visto quattro persone che non dovrebbero esistere. Che il **Sigillo di Ossidiana** divora anime |
 | **Non sa** | niente di Sal. Nessuno al tavolo lo sa |
 | **Eco** | la sincronizzazione su Sal nel 1372: sanguina nello stesso punto, gli manca un asso, li teme, li odia. Qualunque cosa facciano, **sopravvive** |
-| **Ritratto** | da generare: `id=ritratto-vatore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Vatore, il ladro che diventerà Sal](../../Immagini/ritratti/vatore.jpg)
 
 > **La scena "molto bella" (canone `Bestiario/villain/Salvatore/Salvatore.md`).**
 > **Quando**: al ritorno dalla tenda, fra le tende del campo. Se il tavolo ha
@@ -4102,7 +4126,9 @@ Appendice A)*
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
-| **Ritratto** | la tavola `id=tavola-skullcrusher-nel-cortile` |
+| **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+
+![Skullcrusher nel cortile](../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
 > **Mappa M7-B.** Il drago entra dall'alto (quota ~45 m) e picchia sul cortile
 > interno. È il capostipite della stirpe di **Fauci di Palude**: ogni ferita che
@@ -4273,10 +4299,9 @@ che l'incontro ha appena scelto.
 
 #### La scena, in tre momenti
 
-> ✏️ `[PROPOSTA — conferma DM]` *Il nano molto vecchio del box qui sotto può
-> essere **Thorgrim**: è l'unico vecchio che i PG conoscono qui, e ha appena
-> tenuto in mano la loro ascia. Il box non lo nomina, quindi regge in tutti e due
-> i casi.*
+> ✏️ *Il nano molto vecchio del box qui sotto è **Thorgrim**: è l'unico vecchio
+> che i PG conoscono qui, e ha appena tenuto in mano la loro ascia. Il box non lo
+> nomina: se il tavolo chiede chi è, il nome lo dà il DM.*
 
 > **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
 > un'incudine, e si vede: il piano è segnato da mille anni di martelli. Intorno
@@ -4482,10 +4507,10 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione. Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
-| La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
-| Skullcrusher nel cortile | da generare: scheda **41** |
-| I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
+| Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
+| La fortezza giovane, all'arrivo | `Immagini/tavola-hammerfist-giovane.jpg`, Scena 1; e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa, Scena 3 |
+| Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
+| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`) |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
 
 ### Musica
@@ -4760,9 +4785,7 @@ d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) 
 La griglia e i tre blocchi di accompagnamento stanno in
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`, compilati dal contratto JSON
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` (modalità 3 della skill delle
-mappe: la griglia non si scrive a mano). La geometria è una `[PROPOSTA — conferma
-DM]`: il master dice dove stanno le quattro rune e chi c'è, non quanto è grande
-la tenda.
+mappe: la griglia non si scrive a mano). La tenda misura 18 m × 16,5 m.
 
 <!-- /pagina -->
 
@@ -5140,7 +5163,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 > *Da mostrare al tavolo subito dopo il box del reliquiario (`DEF-3` §3), non
 > prima: se lo vedono prima, la rivelazione diventa una conferma.*
 
-![Il Cuore di Moradin sull'Altare della Forgia Eterna](../../Immagini/web/ilCuoreDiMoradin.jpg)
+![Il Cuore di Moradin nel reliquiario aperto](../../Immagini/tavola-cuore-di-moradin.jpg)
 
 > *Un cuore nanico di rubino, grande come un pugno. Quattro camere, i vasi
 > visibili. Batte sessanta volte al minuto.*
@@ -5416,7 +5439,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 > *Per la giocatrice di Hella. Si consegna al risveglio, quando Durik appoggia
 > la testa sul petto di Hella. Da quel momento è tuo.*
 
-![Durik riforgiato, occhi di topazio](../../../PG/Immagini/web/durik2.jpg)
+![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
 
 > *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
 > e la pietra se l'è tenuto.*

@@ -776,10 +776,13 @@ momento entra la Custode: §6.
 | | |
 |---|---|
 | **Vuole** | che il vuoto lasciato dalla radice strappata si colmi. Non odia nessuno e non ha fretta |
-| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. `[PROPOSTA]`: non guarda mai chi parla, guarda Hella |
+| **Suona** | come una faglia che si assesta: lenta, bassa, **senza pronomi di cortesia**. Il DM la gioca come un funzionario, cortese e inflessibile. Non guarda mai chi parla, guarda Hella |
 | **Sa** | il Voto della Radice, parola per parola. Che il Forgiatore protegge Hella, e che con lui non si discute |
 | **Non sa** | chi sono gli altri tre, e non le interessa |
 | **Eco che arma** | il **Debito della Radice**, A/B/C (§6). Paga in ARC-09, al Cerchio Sacro. Qualunque risposta scelgano, **Hella al risveglio sa che è suo**: la battuta è nel §8 |
+| **Tavola** | qui sotto. Solo per il DM fino allo Step 5: mostrata prima, toglie la sorpresa della presenza |
+
+![La Custode delle Radici al margine del cerchio](Immagini/tavola-custode-delle-radici.jpg)
 
 **Chi/cosa è.** La Custode delle Radici — un **psicopompo neutrale** del Sogno
 della Terra (CANONE DM 2026-07-23: **si aggancia al Cerchio Sacro di ARC-09** —
@@ -833,6 +836,8 @@ capelli biondi mossi con una venatura di corteccia fine, orecchie appuntite come
 foglie giovani *(com'è nei ritratti: decisione DM 2026-09-24)*, dita un po' più lunghe (unghie come corteccia,
 funzionali). Stessa personalità, stessi ricordi, stesse abilità druidiche — più
 i doni del viaggio (§1) e i Doni del party (§5).
+
+![Il risveglio di Hella](Immagini/tavola-risveglio-di-hella.jpg)
 
 > **Read-aloud — le prime parole (voce rauca, non usata da settimane).** *«Io…
 > dove… respirare è… difficile.»* *Gli occhi ambra cercano, si fermano su
@@ -1082,12 +1087,13 @@ rimesso dritto undici volte.»* Da lì si riparte.
 
 | Oggetto (corredo di Hella, restituito) | Valore |
 |---|---|
-| **Armatura di cuoio +2** (ora venata di corteccia, adattata all'Ibrido) | ~4.000 mo |
+| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido) | ~4.000 mo |
 | **Mantello della Resistenza +2** | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo/arma druidica +1** (falcetto o scudo leggero) | ~2.000 mo |
+| **Scudo di legno +1** | ~1.000 mo |
+| **Scimitarra +1** | ~2.300 mo |
 | **Bacchetta di Cura Ferite Moderate** (25 cariche) | ~1.600 mo |
-| **LORDO restituito** | **~15.600 mo** |
+| **LORDO restituito** | **~16.900 mo** |
 
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
@@ -1124,10 +1130,11 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il Cuore di Moradin, dopo il §3 | `Immagini/web/ilCuoreDiMoradin.jpg` |
-| Il risveglio di Hella | `Immagini/web/Hella_elementale.jpg` |
+| Il Cuore di Moradin, dopo il §3 | `Immagini/tavola-cuore-di-moradin.jpg`: il reliquiario aperto, fedele al box. `ilCuoreDiMoradin` lo mostrava appoggiato sopra l'Altare, e resta per la copertina e per `DEF-2` e `DEF-5` |
+| La Custode delle Radici, allo Step 5 | `Immagini/tavola-custode-delle-radici.jpg`, in §6 |
+| Il risveglio di Hella | `Immagini/tavola-risveglio-di-hella.jpg`, in §7 dopo il box. `Hella_elementale` resta per l'Avatar della Radice |
+| Durik e Hella, dopo il risveglio | `Immagini/tavola-durik-e-hella.jpg`, copertina di `08-SCHEDA-DURIK` |
 | La Sala durante il rito | la **pianta a pergamena** dell'Appendice B. ⚠️ `Mappa della Sala della Forgia Eterna durante il Rituale del Cuore di Moradin.webp` è un grafico, non un'illustrazione (verificato il 2026-09-24) |
-| Il reliquiario che si apre, fedele al testo | da generare: `id=tavola-cuore-di-moradin` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
 
 ### Musica
 - **`Musica/LaCanzoneDellePietre.mp3`** — **QUI è il suo momento pieno**: falla
@@ -1204,9 +1211,11 @@ ARTEFATTO: Collana dei Semi Eterni (§7).
 ============================================================
 ```
 
+<!-- storico -->
 ⚠️ *L'equipaggiamento della scheda (cuoio borchiato, scudo di legno, scimitarra)
-e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidono del tutto.
-Vale la scheda della giocatrice. `[INFERRED — needs DM confirmation]`*
+e quello del §11 C (cuoio, falcetto o scudo leggero) non coincidevano. Il DM ha
+deciso il 2026-09-25: vale la scheda della giocatrice, e il §11 C è allineato.*
+<!-- /storico -->
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
 

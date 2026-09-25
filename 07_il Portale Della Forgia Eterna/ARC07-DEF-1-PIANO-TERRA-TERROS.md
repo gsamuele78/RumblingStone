@@ -1424,7 +1424,7 @@ mostro ha.
 **Chilling Tentacles (i «tentacoli neri»).** Invocazione *Greater*: *black
 tentacles* a **CL 13** + **2d6 freddo/round** a chiunque sia dentro. Area
 **raggio 6 m** (cerchio da 12 m). Presa dei tentacoli **+21**. I tentacoli
-sono **immuni a ogni danno**. `[INFERRED: durata 1 round/livello]`
+sono **immuni a ogni danno**. Durata 1 round per livello.
 
 | Interazione | Verdetto per il DM |
 |---|---|
@@ -1524,7 +1524,7 @@ Neutrale, e la sua RD è 10/—.**
 | Sinergia | Effetto reale su Terros |
 |---|---|
 | **S1 — Paradox Blessing** (Corona+Anello): +1 CA schivare vs **Legali** entro 3 m | ❌ **inerte**: Terros è Neutrale |
-| **S2 — Corona+Anello attiva**: Visione Planare + dissolvi illusioni | ⚠️ nessuna illusione. Ma concedi che la **Visione Planare** mostri Terros **dentro la pietra** durante l'Earth Glide, negandogli l'agguato per un round `[INFERRED — ruling]` |
+| **S2 — Corona+Anello attiva**: Visione Planare + dissolvi illusioni | ⚠️ nessuna illusione. Ma concedi che la **Visione Planare** mostri Terros **dentro la pietra** durante l'Earth Glide, negandogli l'agguato per un round |
 | **S3 — Colpo dell'Alba Oscura** (Aegis Fang+Anello, 1/giorno) | ✅ +2 attacco, +2d6 sacro. I sacri stanno **sopra** l'unica sottrazione della RD → entrano interi (+7). Vale il massimo **quando è alzato lo Scudo di Geodi** (CA 30) |
 | **S4 — Trinità Divina** (i tre portatori entro 9 m, una azione di movimento a testa) | vedi la scomposizione qui sotto |
 

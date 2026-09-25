@@ -367,6 +367,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 ### SCENA 1 — Il portale e il bosco al tramonto
 
+![Il portale del Tempo](../../Immagini/tavola-portale-del-tempo.jpg)
+
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante lunghissimo i
 > colori si rovesciano, e vi passano davanti vite intere di nani: nascono,
 > battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna
@@ -404,6 +406,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 Quando la testa torna a posto, guardano dove sono.
 
+![La fortezza giovane, da lontano](../../Immagini/tavola-hammerfist-giovane.jpg)
+
 > **Read-aloud (LotR lead) — la fortezza, da lontano.** *A ovest, fra i
 > tronchi, si vedono le torri di una fortezza che conoscete, più basse di come
 > le ricordate. Più in là, verso sud, i fuochi dell'orda cominciano ad
@@ -429,13 +433,15 @@ bianche, nessun cavaliere sul drago.)*
 
 | | |
 |---|---|
-| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. `[PROPOSTA]`: si vede dal modo in cui tiene l'ascia troppo stretta |
+| **Aspetto** | veterano, armatura completa e scudo, ascia doppia. Sta davanti ai suoi sei e ha paura. Si vede dal modo in cui tiene l'ascia troppo stretta |
 | **Vuole** | riportare a casa i suoi sei. Ha paura e fa il suo lavoro lo stesso |
-| **Suona** | la voce gli scappa in alto quando è teso. `[PROPOSTA]`: ride un attimo prima di dire una cosa seria |
+| **Suona** | la voce gli scappa in alto quando è teso. Ride un attimo prima di dire una cosa seria |
 | **Sa** | il bosco a est delle mura, il campo dell'orda visto da lontano |
 | **Non sa** | chi siano i PG, finché non vede la Corona o sente il tuono |
 | **Eco** | è l'**antenato di Othrek**, a Hammerfist nel 1372. Se muore alle mura, la Cerimonia delle 100 Asce può portarne il nome |
-| **Ritratto** | da generare: `id=ritratto-durin-rocciadura` in `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Durin Rocciadura, la pattuglia](../../Immagini/ritratti/durin-rocciadura.jpg)
 
 **La pattuglia di Durin (riconoscimento — 3 vie).** Nel bosco a est delle mura,
 una pattuglia nanica (6 veterani) li ferma.
@@ -474,6 +480,8 @@ tavolo deve sapere prima del consiglio:
 
 Durin li porta alla porta principale. Le guardie vedono la Corona e non
 toccano nessuno. Prima di entrare c'è la targa.
+
+![La porta e la targa di bronzo](../../Immagini/tavola-hammerfist-giovane-porta.jpg)
 
 > **Read-aloud (LotR lead) — deep time al contrario.** *Conoscete Hammerfist:
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
@@ -541,14 +549,16 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. `[PROPOSTA]`: una corona semplice, senza gemme |
+| **Aspetto** | 182 anni, e li porta come un muro porta la pioggia. Armatura di mithral, l'ascia **Frostcleaver** in pugno anche al tavolo di guerra. Una corona semplice, senza gemme |
 | **Vuole** | reggere le mura fino all'alba. Ottocento nani contro diecimila |
-| **Suona** | lento, al passato remoto quando cita la profezia. `[PROPOSTA]`: parla al plurale anche di sé, *«la fortezza pensa»* |
+| **Suona** | lento, al passato remoto quando cita la profezia. Parla al plurale anche di sé, *«la fortezza pensa»* |
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
 | **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I** (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
-| **Ritratto** | da generare: `id=ritratto-re-thorek-i` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Re Thorek I, il re di una fortezza giovane](../../Immagini/ritratti/re-thorek-i.jpg)
 
 ⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
 
@@ -556,12 +566,14 @@ la gente smette di parlare.
 
 | | |
 |---|---|
-| **Aspetto** | un vecchio seduto che non si alza. Le mani sulle ginocchia, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
+| **Aspetto** | un vecchio seduto che non si alza. Le mani aperte verso la luce, i palmi in su, e il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia |
 | **Vuole** | che l'ascia torni in una mano che sa perché la tiene |
 | **Suona** | la voce non trema, gli occhi sì. Nomina il sangue, mai la persona: *«il sangue riconosce il sangue»* |
 | **Non combatte** | è una non-creatura: nessuno statblocco esiste, e non va inventato |
 | **Eco** | l'affresco A3 (*«Portala bene, fratello. Ora è tua.»*) e la Cerimonia delle 100 Asce in ARC-08 |
-| **Ritratto** | da generare: `id=ritratto-thorgrim-barbadiferro` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Thorgrim Barbadiferro, l'antenato](../../Immagini/ritratti/thorgrim-barbadiferro.jpg)
 
 **Il re.** Re Thorek I (Guerriero 16, 182 anni, Frostcleaver in pugno) vuole
 vedere da vicino la Corona che suo nonno perse contro Skullcrusher cinquant'anni
@@ -582,8 +594,8 @@ e i futuri.»*
 Thorik, e quando il re tace parla lui.
 
 > **Read-aloud (Mercer lead, Casa di Davide support).** *Il vecchio sulla panca
-> non si è mosso. Ha le mani appoggiate sulle ginocchia, e sono mani che hanno
-> tenuto la stessa ascia che tiene Thorik: si vede dal callo, nello stesso punto.
+> non si è mosso. Tiene le mani aperte verso la luce, i palmi in su, e sono mani
+> che hanno tenuto la stessa ascia di Thorik: si vede dal callo, nello stesso punto.
 > Guarda la corona sulla fronte di Thorik per il tempo di tre respiri. Poi gli
 > occhi gli si riempiono e lui non se ne accorge, perché sta già parlando.*
 >
@@ -709,9 +721,9 @@ mangiano), fabbri che affilano le armi, chierici che benedicono.
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
   **una carica sola** per richiamarlo.
-  `[PROPOSTA — conferma DM]` Se al rito Hella ha trovato la **ghianda
-  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» può
-  essere questo: niente Treant in più, ma una quercia che fra mille anni sarà
+  Se al rito Hella ha trovato la **ghianda
+  annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
+  questo: niente Treant in più, ma una quercia che fra mille anni sarà
   vecchia di mille anni.
 
 **Scheda d'entrata — Mastro Costruttore Zeth, il seme del Ghostlord** *(nelle
@@ -719,13 +731,15 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
 
 | | |
 |---|---|
-| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. `[PROPOSTA]`: col gesso, e ne cancella metà col pollice |
+| **Aspetto** | mezz'elfo, occhi febbrili, polvere di roccia fino ai gomiti. Traccia rune sulle pareti dei tunnel. Col gesso, e ne cancella metà col pollice |
 | **Vuole** | che le gallerie non cedano. È disposto a legarci l'anima |
-| **Suona** | parla mentre lavora. `[PROPOSTA]`: finisce le frasi degli altri |
+| **Suona** | parla mentre lavora. Finisce le frasi degli altri |
 | **Sa** | che un chierico incappucciato gli ha dato «i componenti perfetti» |
 | **Non sa** | che quei componenti servono a una **lichificazione**, e che la mano è del **Collezionista** attraverso il tempo |
 | **Eco** | il **dilemma di Hella su Zeth il Murato** in ARC-09. I PG assistono all'origine del Ghostlord **senza saperlo** |
-| **Ritratto** | da generare: `id=ritratto-zeth-mastro-costruttore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Mastro Costruttore Zeth, il seme del Ghostlord](../../Immagini/ritratti/zeth-mastro-costruttore.jpg)
 
 - **⚫ SEME DEL GHOSTLORD (hook a lunghissimo termine — CANONE).**
   Il party incrocia il **Mastro Costruttore Zeth** nelle gallerie, un mezz'elfo dagli occhi
@@ -834,7 +848,9 @@ Appendice A)*
 | **Suona** | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
 | **Sa** | **che i PG non sono di questo secolo**, unico in tutta Hammerfist. Dove vanno colpite le mura. La runa-vincolo sulla scaglia del drago, perché l'ha incisa lui |
 | **Non dice** | che ha un nipote di diciannove anni sul camminamento. Mai per primo |
-| **Ritratto** | da generare: `id=ritratto-balvar-fuocospento`, per primo |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Balvar Fuocospento, il runaio esiliato](../../Immagini/ritratti/balvar-fuocospento.jpg)
 
 > **Perché esiste.** Due giocatori hanno chiesto la stessa cosa da due lati:
 > Artemis non ha mai niente da individuare, Thorik non incontra mai
@@ -978,7 +994,9 @@ Balvar è morto da mille anni comunque vada. Ma:
 | **Suona** | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Sa** | niente dei PG, a meno che il corridore non sia arrivato |
 | **Eco** | come muore decide come comincia il duello. Se viene **umiliato e non ucciso**, la Mano Rossa ha un generale in più nella sua storia |
-| **Ritratto** | da generare: `id=ritratto-zogtar-deatheye` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Zog'tar Deatheye, il generale](../../Immagini/web/zogtar-deatheye.jpg)
 
 **Il round di sorpresa.** I PG invisibili hanno un **round di sorpresa pieno** se
 nessuno ha parlato ad alta voce o lanciato incantesimi che li rivelano. Parlare
@@ -1068,7 +1086,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
 | **Sa** | di aver visto quattro persone che non dovrebbero esistere. Che il **Sigillo di Ossidiana** divora anime |
 | **Non sa** | niente di Sal. Nessuno al tavolo lo sa |
 | **Eco** | la sincronizzazione su Sal nel 1372: sanguina nello stesso punto, gli manca un asso, li teme, li odia. Qualunque cosa facciano, **sopravvive** |
-| **Ritratto** | da generare: `id=ritratto-vatore` |
+| **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
+
+![Vatore, il ladro che diventerà Sal](../../Immagini/ritratti/vatore.jpg)
 
 > **La scena "molto bella" (canone `Bestiario/villain/Salvatore/Salvatore.md`).**
 > **Quando**: al ritorno dalla tenda, fra le tende del campo. Se il tavolo ha
@@ -1205,7 +1225,9 @@ Appendice A)*
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
-| **Ritratto** | la tavola `id=tavola-skullcrusher-nel-cortile` |
+| **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+
+![Skullcrusher nel cortile](../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
 > **Mappa M7-B.** Il drago entra dall'alto (quota ~45 m) e picchia sul cortile
 > interno. È il capostipite della stirpe di **Fauci di Palude**: ogni ferita che
@@ -1376,10 +1398,9 @@ che l'incontro ha appena scelto.
 
 #### La scena, in tre momenti
 
-> ✏️ `[PROPOSTA — conferma DM]` *Il nano molto vecchio del box qui sotto può
-> essere **Thorgrim**: è l'unico vecchio che i PG conoscono qui, e ha appena
-> tenuto in mano la loro ascia. Il box non lo nomina, quindi regge in tutti e due
-> i casi.*
+> ✏️ *Il nano molto vecchio del box qui sotto è **Thorgrim**: è l'unico vecchio
+> che i PG conoscono qui, e ha appena tenuto in mano la loro ascia. Il box non lo
+> nomina: se il tavolo chiede chi è, il nome lo dà il DM.*
 
 > **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
 > un'incudine, e si vede: il piano è segnato da mille anni di martelli. Intorno
@@ -1585,10 +1606,10 @@ Hammerfist** (la cucitura D16, il raccordo all'ARC-08).
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
 |---|---|
-| Il portale del Tempo / l'arrivo | ⚠️ **nessuna immagine adatta**: `PortaleDellaForgiaEterna.webp` è la fotografia di un blocco di testo, non un'illustrazione. Il prompt per rifarla è la scheda **22** di `Immagini/PROMPT-IMMAGINI-07ILP.md` |
-| La fortezza giovane, all'arrivo | da generare: scheda **33** dello stesso file |
-| Skullcrusher nel cortile | da generare: scheda **41** |
-| I ritratti del cast | da generare: sezione «Ritratti del cast di mille anni fa» dello stesso file; i riquadri sono già nel volume `homebrew/volume-mille-anni/` |
+| Il portale del Tempo / l'arrivo | `Immagini/tavola-portale-del-tempo.jpg`, in apertura della Scena 1. Sostituisce `PortaleDellaForgiaEterna.webp`, che è la fotografia di un blocco di testo |
+| La fortezza giovane, all'arrivo | `Immagini/tavola-hammerfist-giovane.jpg`, Scena 1; e `Immagini/tavola-hammerfist-giovane-porta.jpg` per la porta e la targa, Scena 3 |
+| Skullcrusher nel cortile | `Immagini/web/tavola-skullcrusher-nel-cortile.jpg`, sotto la scheda del drago (Scena 11) |
+| I ritratti del cast | sotto le schede d'entrata, da `Immagini/ritratti/` (Zog'tar da `Immagini/web/`) |
 | L'affresco del Tempo (partenza) | `Sala Forgia Eterna - Camera Ottagono con 8 Affreschi Divini (Parte 2).webp` |
 
 ### Musica
@@ -1863,9 +1884,7 @@ d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) 
 La griglia e i tre blocchi di accompagnamento stanno in
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`, compilati dal contratto JSON
 `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` (modalità 3 della skill delle
-mappe: la griglia non si scrive a mano). La geometria è una `[PROPOSTA — conferma
-DM]`: il master dice dove stanno le quattro rune e chi c'è, non quanto è grande
-la tenda.
+mappe: la griglia non si scrive a mano). La tenda misura 18 m × 16,5 m.
 
 <!-- /pagina -->
 

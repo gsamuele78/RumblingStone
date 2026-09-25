@@ -350,7 +350,7 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | **Collana di Durik / Ibrido Treant** (Hella) | artefatto vivo | resurrezione consolidata |
 | **Aegis Fang** (canta contro Fauci) | artefatto | +2 circostanza vs Fauci (B4) |
 | Bottino ordinario del Piano della Terra | consolidato | ~34.950 mo |
-| Corredo recuperato di Hella (master #3) | consolidato | ~15.600 mo |
+| Corredo recuperato di Hella (master #3) | consolidato | ~16.900 mo |
 
 > Il **delta di WBL ordinario si colma a Hammerfist** (ARC-08 B4): armeria nanica,
 > gratitudine di Re Thorek, bottino dell'orda. Nessun doppio conteggio. `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`

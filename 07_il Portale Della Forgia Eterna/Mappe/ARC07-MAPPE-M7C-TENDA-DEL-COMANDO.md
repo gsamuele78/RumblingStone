@@ -75,7 +75,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
-| B | [trigger] | [PROPOSTA — conferma DM] Geometria nuova del 2026-09-25: DEF-4 dice 'tenda enorme, di pelle nera e ossa di nani' e dove stanno le quattro rune, non le misure. La tenda e' 18 m x 16,5 m; si cambia qui e si ricompila. | [effetto] |
+| B | [trigger] | La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani; la geometria si cambia qui e si ricompila. | [effetto] |
 | B | [trigger] | I PG arrivano da nord, dalla fortezza. La soglia e' illuminata, il fondo no: Balvar siede dove i bracieri non arrivano (Scena 7). | [effetto] |
 | B | [trigger] | Runa 3: su Balvar (silenzio a comando). Runa 4: vuota, la incide durante lo scontro. | [effetto] |
 

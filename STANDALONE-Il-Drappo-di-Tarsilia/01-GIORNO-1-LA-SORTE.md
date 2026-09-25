@@ -73,8 +73,8 @@ il Bruco nel consiglio di marzo, e non l'ha nascosto a nessuno.
 ## §2 · Il rione al mattino — sei micro-scene
 
 **Tre in scena adesso, tre da distribuire dopo.** Sei micro-scene consecutive
-lasciano gli ultimi due giocatori ad aspettare venti minuti *(playtest alfa, serata
-1)*. Quindi: gioca **A, C, F** qui, e tieni **B, D, E** per i buchi del §4, quando
+lasciano gli ultimi due giocatori ad aspettare venti minuti<!-- storico --> *(playtest alfa, serata
+1)*<!-- /storico -->. Quindi: gioca **A, C, F** qui, e tieni **B, D, E** per i buchi del §4, quando
 gli altri stanno contrattando.
 
 Ognuna dà a **un** PG una cosa che gli altri non hanno. Non richiedono prove: si

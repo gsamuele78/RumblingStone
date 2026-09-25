@@ -67,9 +67,9 @@ RESIDUI = {
     "Arco-Post-Hammerfist-P2D-PALIO-MAPPE.md": 2,
     # l'intestazione della scheda è un [INFERRED]: si chiude con la decisione del DM
     "balvar-fuocospento-cr13.md": 1,
-    # due capitoli da beta del Drappo: se restano nel volume lo decide il DM
-    "IP-E-LICENZE.md": 4,
-    "PLAYTEST-ALFA.md": 1,
+    # i capitoli da beta del Drappo (IP e licenze, playtest alfa, stato del
+    # modulo, schede di feedback) sono usciti dal volume del DM il 2026-09-25,
+    # su decisione del DM: le loro 5 righe non vanno più in stampa
 }
 
 
