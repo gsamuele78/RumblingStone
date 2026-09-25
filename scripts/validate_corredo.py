@@ -16,23 +16,26 @@ Il corredo si dichiara in un file `*.corredo.json` accanto al booklet del DM
 1. **manca un pezzo**: un manifest, un file di echi, una carta, un handout, un
    file di prompt;
 2. **un PG non ha i suoi echi**, o i suoi echi non stanno nel volume dei fogli;
-3. **un foglio ✉ del booklet del DM non è nel volume dei fogli**: il DM lo
-   legge nella regia e al tavolo non ha niente da consegnare;
+3. **un foglio ✉ sta in un volume che non è quello dei giocatori**: il
+   booklet del DM lo cita per titolo, non lo ristampa (ADR-0070);
 4. **il volume dei fogli contiene un capitolo del DM**: è uno spoiler stampato;
 5. **un'immagine dei prompt non c'è**, o non ha la sua riga nella tabella
    «Confronto immagine-scheda» del file dei prompt;
 6. **un box read-aloud supera le 12 righe** in un capitolo che va in stampa,
    misurato con `misura_craft.box_read_aloud` sul testo senza lo storico
    (quello che si stampa, ADR-0069);
-7. con `--stampa`: **un volume non compila** (`validate_booklets`), oppure il
-   PDF ha **righe di testo che si sovrappongono** o **testo a meno di 30 pt
-   dal bordo del foglio** (`rumblingstone-editoria` §4, «Il controllo a vista»).
+7. **lo stesso capitolo sta in due volumi** del corredo: una pagina si stampa
+   una volta (ADR-0070);
+8. con `--stampa`: **un volume non compila** (`validate_booklets`), oppure il
+   PDF ha **righe di testo che si sovrappongono**, **testo a meno di 30 pt
+   dal bordo del foglio** (`rumblingstone-editoria` §4, «Il controllo a
+   vista») o **apparato di lavoro stampato** oltre il tetto dichiarato per quel
+   volume in `scripts/apparato-residui.json` (ADR-0070).
 
-⚠️ Il punto 7 legge il PDF con PyMuPDF, che è AGPL e **non è fra le
-dipendenze del repo** (è per questo che in `editoria` è una procedura e non un
-cancello). Senza, la misura delle sovrapposizioni si **dichiara saltata** e non
-si finge fatta; con `--rigoroso` un salto è rosso. La compilazione, invece, c'è
-sempre dove c'è `typst`.
+Il punto 8 legge il PDF con PyMuPDF, che è fra le dipendenze di sviluppo
+(`requirements-dev.txt`, D7 di CICLO-SESSIONE) e gira in CI. Senza, la misura
+si **dichiara saltata** e non si finge fatta; con `--rigoroso` un salto è
+rosso. La compilazione, invece, c'è sempre dove c'è `typst`.
 
 Uso:
     python3 scripts/validate_corredo.py                    # ogni corredo del repo
@@ -192,11 +195,15 @@ def controlla_corredo(cp: Path) -> "tuple[list[str], list[str]]":
             if tag != "player":
                 errori.append(f"{rel}: il volume dei fogli contiene un capitolo del DM "
                               f"({_rel(f)}, tag «{tag}»): è uno spoiler stampato")
-    if dm:
-        for f, tag in capitoli(dm):
-            if tag == "player" and f not in nei_fogli:
-                errori.append(f"{rel}: il booklet del DM ha il foglio ✉ {_rel(f)}, che "
-                              "il volume dei fogli non ha: al tavolo non c'è niente da consegnare")
+    # I fogli ✉ stanno solo nel volume dei giocatori (ADR-0070): il booklet del
+    # DM e i volumi di approfondimento li citano per titolo, non li ristampano.
+    for m in (dm, *extra):
+        if not m:
+            continue
+        for f, tag in capitoli(m):
+            if tag == "player":
+                errori.append(f"{rel}: {m.name} stampa il foglio ✉ {_rel(f)}: i fogli "
+                              "stanno solo nel volume dei giocatori, qui si citano per titolo")
 
     for pg in dato["pg"]:
         eco = dato["echi"].get(pg)
@@ -218,6 +225,17 @@ def controlla_corredo(cp: Path) -> "tuple[list[str], list[str]]":
         p = esiste("immagini.prompt", pr)
         if p:
             errori += controlla_immagini(p)
+
+    # Una pagina si stampa una volta (ADR-0070): lo stesso capitolo in due
+    # volumi dello stesso corredo va su carta due volte.
+    dove_sta: "dict[Path, list[str]]" = {}
+    for m in manifest:
+        for f, _ in capitoli(m):
+            dove_sta.setdefault(f, []).append(m.name)
+    for f, volumi in sorted(dove_sta.items()):
+        if len(volumi) > 1:
+            errori.append(f"{rel}: {_rel(f)} si stampa {len(volumi)} volte "
+                          f"({', '.join(volumi)}): una pagina va in un volume solo")
 
     visti: "set[Path]" = set()
     for m in manifest:
@@ -254,20 +272,124 @@ def fuori_margine(righe, larghezza: float, altezza: float) -> "list[str]":
             or x1 > larghezza - MARGINE_PT or y1 > altezza - MARGINE_PT]
 
 
-def misura_pdf(pdf: Path) -> "tuple[list[str], str]":
-    """(difetti, nota). La nota non è vuota quando la misura è saltata."""
+# ─────────────────────────────────────────────── l'apparato in stampa (ADR-0070)
+#
+# Le firme delle classi A (metadati del repo), B (storia sfuggita al marcatore)
+# e D (rimandi interni), cercate nel testo che il PDF stampa davvero. Non si
+# cercano nei sorgenti: la stessa riga può stamparsi in un volume e non in un
+# altro (un rimando tradotto, un blocco tolto), e conta la carta.
+#
+# ⚠️ I falsi positivi sono dichiarati, non nascosti: un nome di file dentro la
+# finzione, un «#1» che non è un rimando. Per questo ogni volume ha un tetto in
+# `scripts/apparato-residui.json`, con il perché, come `RESIDUI` di
+# `test_storico.py`; il bersaglio è zero.
+FIRME_APPARATO = (
+    ("A", "intestazione di lavorazione",
+     r"MASTER DEFINITIVO|Sostituisce e fonde|FILE-FONTE|ASSORBITI DA QUESTO|standard AP"
+     r"|a consolidamento"),
+    ("A", "promemoria di sistema", r"MAI 5e|CD non DC"),
+    ("A", "nome di file", r"\b[\w'.…-]+\.(?:md|json|ya?ml|py|typ)\b"),
+    ("A", "percorso o comando del repo",
+     r"_ARCHIVIO/|\bscripts/|\bpython3\b|\bplans/|\bBestiario/"),
+    ("A", "sigla di file", r"\bARC\d\d-[A-Z]{3,}"),
+    ("A", "decisione del repo", r"\b(?:canone|Ordine) D\d{1,2}\b|\(D\d{1,2}(?:/D\d{1,2})?\)"),
+    ("B", "storia delle scelte", r"Correzione canone|prima diceva|su decisione del DM"),
+    ("D", "rimando a un master",
+     r"\bmaster\s*#\s*\d|\bDEF-\d\b|(?<![\w#])#[1-9] (?=Scena|§|Appendice|Atto)"),
+)
+_FIRME = [(c, n, re.compile(rx)) for c, n, rx in FIRME_APPARATO]
+RESIDUI_APPARATO = ROOT / "scripts" / "apparato-residui.json"
+
+
+def normalizza_pagina(testo: str) -> str:
+    """Il testo di una pagina come lo legge chi la guarda: parole intere.
+
+    Typst spezza le parole lunghe con un trattino morbido e i percorsi con uno
+    spazio di larghezza zero; senza toglierli, «MA-/STER» e «_​ARCHIVIO/​» non
+    si riconoscono.
+    """
+    testo = testo.replace("\u200b", "").replace("\u00ad\n", "").replace("\u00ad", "")
+    return re.sub(r"\s+", " ", testo)
+
+
+def rilievi_apparato(pagine: "list[str]") -> "list[tuple[int, str, str, str]]":
+    """(pagina, classe, firma, estratto) per ogni apparato stampato. Pura.
+
+    Due firme sullo stesso punto contano una volta.
+    """
+    fuori = []
+    for n, grezzo in enumerate(pagine, 1):
+        testo = normalizza_pagina(grezzo)
+        prese: "list[tuple[int, int]]" = []
+        for classe, nome, rx in _FIRME:
+            for m in rx.finditer(testo):
+                if any(a < m.end() and m.start() < b for a, b in prese):
+                    continue
+                prese.append((m.start(), m.end()))
+                fuori.append((n, classe, nome, testo[max(0, m.start() - 30):m.end() + 30]))
+    return fuori
+
+
+def tetto_apparato(manifest: Path) -> "tuple[int, str]":
+    """Il tetto dichiarato per questo volume (0 se non è dichiarato) e il perché."""
+    if not RESIDUI_APPARATO.is_file():
+        return 0, ""
+    dati = json.loads(RESIDUI_APPARATO.read_text(encoding="utf-8")).get("volumi", {})
+    voce = dati.get(_rel(manifest))
+    return (voce["tetto"], voce.get("perche", "")) if voce else (0, "")
+
+
+def controlla_apparato(manifest: Path, pagine: "list[str]") -> "list[str]":
+    """Il volume sta sotto il suo tetto, e il tetto non è più alto del vero."""
+    rilievi = rilievi_apparato(pagine)
+    tetto, _ = tetto_apparato(manifest)
+    nome = _rel(manifest)
+    if len(rilievi) > tetto:
+        primi = "; ".join(f"p.{p} {c} {f}: «{e.strip()}»" for p, c, f, e in rilievi[:6])
+        return [f"{nome}: {len(rilievi)} rilievi d'apparato in stampa, tetto {tetto} "
+                f"(ADR-0070) — {primi}"]
+    if len(rilievi) < tetto:
+        return [f"{nome}: {len(rilievi)} rilievi d'apparato e il tetto dice {tetto}: "
+                "abbassalo in scripts/apparato-residui.json, il tetto si "
+                "deriva e non si ricorda"]
+    return []
+
+
+def testo_del_pdf(pdf: Path) -> "list[str] | None":
+    """Il testo di ogni pagina, o None se PyMuPDF non c'è."""
     try:
         import pymupdf  # noqa: PLC0415
     except ImportError:
-        return [], ("PyMuPDF assente: sovrapposizioni e margini NON misurati "
-                    "(pip install pymupdf; AGPL, non è fra le dipendenze del repo)")
+        return None
+    with pymupdf.open(pdf) as doc:
+        return [pagina.get_text() for pagina in doc]
+
+
+def misura_pdf(pdf: Path, manifest: "Path | None" = None) -> "tuple[list[str], str]":
+    """(difetti, nota). La nota non è vuota quando la misura è saltata.
+
+    Con il manifest misura anche l'apparato stampato contro il tetto del volume.
+    """
+    try:
+        import pymupdf  # noqa: PLC0415
+    except ImportError:
+        return [], ("PyMuPDF assente: sovrapposizioni, margini e apparato NON "
+                    "misurati (pip install -r requirements-dev.txt)")
     difetti = []
+    if manifest is not None:
+        difetti += controlla_apparato(manifest, testo_del_pdf(pdf) or [])
     with pymupdf.open(pdf) as doc:
         for n, pagina in enumerate(doc, 1):
             righe = []
             for blocco in pagina.get_text("dict")["blocks"]:
                 for riga in blocco.get("lines", []):
                     t = "".join(s["text"] for s in riga["spans"]).strip()
+                    # Il versale d'apertura è una lettera sola a più di 20 pt,
+                    # e il riquadro del suo glifo scende sulle righe accanto per
+                    # costruzione: non è una sovrapposizione (trovato sul
+                    # volume del −1000, pagina 40, e guardato a vista).
+                    if len(t) <= 1 and max((s["size"] for s in riga["spans"]), default=0) > 20:
+                        continue
                     if t:
                         righe.append((tuple(riga["bbox"]), t))
             for ta, tb in sovrapposizioni(righe):
@@ -288,7 +410,7 @@ def stampa(manifest: Path) -> "tuple[list[str], str]":
         if esito.returncode != 0 or not pdf.is_file():
             coda = (esito.stderr or esito.stdout).strip().splitlines()[-4:]
             return [f"{_rel(manifest)}: la stampa fallisce — " + " / ".join(coda)], ""
-        return misura_pdf(pdf)
+        return misura_pdf(pdf, manifest)
     finally:
         if not cera_prima:
             pdf.unlink(missing_ok=True)
@@ -337,7 +459,7 @@ def main(argv: "list[str] | None" = None) -> int:
                 if not pdf.is_file():
                     errori.append(f"{_rel(m)}: il PDF da stampa non c'è ({pdf.name})")
                     continue
-                d, nota = misura_pdf(pdf)
+                d, nota = misura_pdf(pdf, m)
                 errori += d
                 compilati += 1
                 if nota and nota not in note:

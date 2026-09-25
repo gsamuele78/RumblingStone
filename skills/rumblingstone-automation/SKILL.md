@@ -109,13 +109,13 @@ memoria di chi l'aveva scritto.
 
 | Pezzo | Obbligatorio | Si scrive con | Chi lo controlla |
 |---|---|---|---|
-| **booklet del DM**: regia, cassetta, master in ordine di gioco con le appendici A4 | sì | `rumblingstone-editoria` §2-bis, i nove passi | `validate_booklets`, `dm.py volume` |
-| **volume dei fogli ✉**: tutte le pagine da consegnare, solo capitoli `player` | sì | `rumblingstone-narrative-style` | `validate_corredo`: ogni foglio ✉ del booklet ci sta, nessun capitolo `dm` |
-| **volume di approfondimento** (il −1000 della serata ARC-07) | se la serata ne ha uno | come il booklet | come il booklet |
+| **booklet del DM**: regia, cassetta, i master che si giocano (due per una serata normale, anche il terzo per una sessione lunga) in ordine di gioco con le appendici A4. Nessun foglio ✉: la regia li cita per titolo | sì | `rumblingstone-editoria` §2-bis | `validate_booklets`, `dm.py volume` |
+| **volume dei fogli ✉**: tutte le pagine da consegnare, solo capitoli `player`. È l'unico posto dove un foglio si stampa | sì | `rumblingstone-narrative-style` | `validate_corredo`: nessun capitolo `dm` qui, nessun foglio ✉ altrove |
+| **volume di approfondimento** | solo se non ristampa un capitolo del booklet | come il booklet | `validate_corredo`: lo stesso capitolo in due volumi è rosso |
 | **echi per PG**: un file per ogni PG al tavolo | sì | `consequence-echoes.md`, regola 3: un eco non anticipa | `validate_corredo` per la presenza; la regola 3 no (vedi sotto) |
 | **carte e handout**: doni, schede, preghiere, tavole, documenti | quelli che il master consegna | `narrative-style`, e `rumblingstone-indagine` per un documento d'indagine | `validate_corredo`: esistono e stanno nel volume dei fogli |
 | **prompt delle immagini**, con la sezione «Confronto immagine-scheda» | se la serata ha immagini nuove | `rumblingstone-art-direction` §7-bis | `validate_corredo`: ogni blocco `img` ha il suo file e la sua riga nel confronto |
-| **PDF da stampa** di ogni volume | sì | `typst` via `dm.py corredo --stampa` | `validate_corredo --pdf`: 0 righe sovrapposte, 0 testo a meno di 30 pt dal bordo, box ≤ 12 righe; `validate_booklets --stampa` |
+| **PDF da stampa** di ogni volume | sì | `typst` via `dm.py corredo --stampa` | `validate_corredo --pdf`: 0 righe sovrapposte, 0 testo a meno di 30 pt dal bordo, box ≤ 12 righe, **0 apparato di lavoro** (ADR-0070); `validate_booklets --stampa` |
 
 Il corredo si **dichiara** in un file `<SERATA>.corredo.json` accanto al booklet
 del DM (contratto: `scripts/schemas/corredo_serata.schema.json`, versionato e
@@ -133,8 +133,17 @@ solo additivo). Esemplare: `07_il Portale Della Forgia Eterna/homebrew/sessione-
    stampa), rifà il `.hb.md`, e misura i PDF;
 4. si guardano a vista le pagine con le mappe (`rumblingstone-editoria` §4, «Il
    controllo a vista»): nessuna misura sa se una mappa si legge;
-5. si consegna solo con il passo 3 verde. Se PyMuPDF manca, la misura del PDF
-   è **saltata e dichiarata**: si dice al DM, non si scrive «0 sovrapposizioni».
+5. si consegna solo con il passo 3 verde. PyMuPDF è fra le dipendenze di
+   sviluppo (`pip install -r requirements-dev.txt`); se manca, la misura del
+   PDF è **saltata e dichiarata**: si dice al DM, non si scrive «0
+   sovrapposizioni».
+
+**Una pagina si stampa una volta**, e **l'apparato di lavoro non va in stampa**
+([ADR-0070](../../plans/adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md)):
+i metadati del repo stanno in `<!-- apparato -->`, i rimandi si scrivono
+`DEF-N` e l'esportatore li traduce nel capitolo del volume. Per ARC-07 il
+booklet della serata stampa `DEF-2`, `DEF-3` e `DEF-4`; il volume del −1000 è un
+libro a sé, fuori da questo corredo.
 
 Un box read-aloud oltre le 12 righe si spezza in battute, nella forma di Balvar
 in `DEF-4`, e non si taglia: il controllo lo misura sul testo **senza lo

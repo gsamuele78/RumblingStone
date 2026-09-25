@@ -98,6 +98,14 @@
       ],
       "stato": "portato",
       "dove": "PR #174 fusa il 2026-09-25 (eef36a9): il Drappo esce dalla beta e le marcature di ARC-07 chiuse col DM; il ramo e' stato tolto dopo il merge"
+    },
+    {
+      "ref": [
+        "pr/175",
+        "origin/claude/corredo-della-serata"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #175 aperta (bozza): il corredo della serata (CICLO-SESSIONE 2f) e l'apparato fuori dalla stampa (2g, ADR-0070)"
     }
   ],
   "file": [

@@ -59,7 +59,7 @@ def _corredo(d: Path) -> Path:
         (d / nome).write_text(testo, encoding="utf-8")
     fogli = [{"file": f, "tag": "player"} for f in ("eco-a.md", "eco-b.md", "carta.md")]
     (d / "DM.manifest.json").write_text(json.dumps(
-        {"title": "DM", "chapters": [{"file": "regia.md", "tag": "dm"}, *fogli]}), encoding="utf-8")
+        {"title": "DM", "chapters": [{"file": "regia.md", "tag": "dm"}]}), encoding="utf-8")
     (d / "FOGLI.manifest.json").write_text(json.dumps(
         {"title": "Fogli", "chapters": fogli}), encoding="utf-8")
     c = d / "S.corredo.json"
@@ -136,11 +136,22 @@ class TestIlVolumeDeiFogli(_Base):
         (self.d / "FOGLI.manifest.json").write_text(
             json.dumps({"title": "Fogli", "chapters": capitoli}), encoding="utf-8")
 
-    def test_un_foglio_del_dm_che_i_fogli_non_hanno(self):
-        self._fogli([{"file": "eco-a.md", "tag": "player"},
-                     {"file": "eco-b.md", "tag": "player"}])
+    def test_un_foglio_ristampato_nel_booklet_del_dm(self):
+        (self.d / "DM.manifest.json").write_text(json.dumps(
+            {"title": "DM", "chapters": [{"file": "regia.md", "tag": "dm"},
+                                         {"file": "carta.md", "tag": "player"}]}), encoding="utf-8")
         e = self.errori()
-        self.assertTrue(any("carta.md" in x and "volume dei fogli non ha" in x for x in e), e)
+        self.assertTrue(any("carta.md" in x and "solo nel volume dei giocatori" in x for x in e), e)
+        self.assertTrue(any("carta.md" in x and "si stampa 2 volte" in x for x in e), e)
+
+    def test_lo_stesso_master_in_due_volumi(self):
+        (self.d / "APPROF.manifest.json").write_text(json.dumps(
+            {"title": "Secondo libro", "chapters": [{"file": "regia.md", "tag": "dm"}]}),
+            encoding="utf-8")
+        dato = self.dato()
+        dato["approfondimento"] = ["APPROF.manifest.json"]
+        self.scrivi(dato)
+        self.assertTrue(any("regia.md si stampa 2 volte" in e for e in self.errori()))
 
     def test_uno_spoiler_nei_fogli(self):
         self._fogli([{"file": f, "tag": "player"} for f in ("eco-a.md", "eco-b.md", "carta.md")]
@@ -231,6 +242,77 @@ class TestUscita(unittest.TestCase):
             c = _corredo(d)
             (d / "carta.md").unlink()
             self.assertEqual(vc.main([str(c)]), 1)
+        finally:
+            shutil.rmtree(d)
+
+
+class TestLApparatoInStampa(unittest.TestCase):
+    """ADR-0070: le firme delle classi A, B e D nel testo del PDF, e il tetto."""
+
+    PAGINA = ("⭐ MASTER DEFINITIVO — beat HUB. Sostituisce e fonde: P2.md. MAI 5e.\n"
+              "Correzione canone (DM). Poi il master #3 §7, e DEF-4.\n"
+              "Il nano alza il boccale #1 e si consegna alla guardia.")
+
+    def test_le_tre_classi(self):
+        classi = [c for _, c, _, _ in vc.rilievi_apparato([self.PAGINA])]
+        self.assertIn("A", classi)
+        self.assertIn("B", classi)
+        self.assertEqual(classi.count("D"), 2)
+
+    def test_la_finzione_non_e_apparato(self):
+        # «#1» senza «master», e «si consegna» dentro la finzione: i due falsi
+        # positivi che il prompt del DM prevedeva, e che la firma non prende.
+        self.assertEqual(vc.rilievi_apparato(["Il boccale #1. Si consegna alla guardia."]), [])
+
+    def test_la_parola_spezzata_si_riconosce(self):
+        self.assertTrue(vc.rilievi_apparato(["FILE-FONTE ASSORBITI DA QUESTO MA\u00ad\nSTER"]))
+        self.assertTrue(vc.rilievi_apparato(["in _\u200bARCHIVIO/\u200bP5.md"]))
+
+    def test_oltre_il_tetto_e_rosso(self):
+        errori = vc.controlla_apparato(Path("/non/nel/registro.manifest.json"), [self.PAGINA])
+        self.assertTrue(errori and "tetto 0" in errori[0], errori)
+
+    def test_un_tetto_piu_alto_del_vero_e_rosso(self):
+        palio = (REPO / "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist"
+                 / "homebrew" / "PALIO-BOOKLET.manifest.json")
+        tetto, perche = vc.tetto_apparato(palio)
+        self.assertGreater(tetto, 0)
+        self.assertTrue(perche)
+        errori = vc.controlla_apparato(palio, ["pagina pulita"])
+        self.assertTrue(errori and "abbassalo" in errori[0], errori)
+
+    def test_ogni_residuo_ha_il_suo_perche(self):
+        dati = json.loads(vc.RESIDUI_APPARATO.read_text(encoding="utf-8"))["volumi"]
+        for manifest, voce in dati.items():
+            self.assertTrue((REPO / manifest).is_file(), manifest)
+            self.assertGreater(voce["tetto"], 0, manifest)
+            self.assertGreater(len(voce["perche"]), 20, manifest)
+
+
+class TestIRimandiTradotti(unittest.TestCase):
+    """ADR-0070, classe D: un rimando diventa il capitolo del volume."""
+
+    def test_gli_esempi_della_funzione(self):
+        import doctest  # noqa: PLC0415
+        import dmcore.testo as testo  # noqa: PLC0415
+        esito = doctest.testmod(testo)
+        self.assertEqual(esito.failed, 0)
+
+    def test_un_volume_vero(self):
+        d = Path(tempfile.mkdtemp())
+        try:
+            (d / "ARC07-DEF-1-A.md").write_text("# ARC-07 · DEFINITIVO #1 — IL PIANO DELLA TERRA\n")
+            (d / "ARC07-DEF-2-B.md").write_text("# X\nPrima (master #1). Poi `DEF-3` §7 e DEF-1 §9.\n")
+            (d / "ARC07-DEF-3-C.md").write_text("# Y\n")
+            (d / "V.manifest.json").write_text(json.dumps({"title": "V", "chapters": [
+                {"title": "III · Il Ritorno", "file": "ARC07-DEF-2-B.md"},
+                {"title": "IV · La Resurrezione", "file": "ARC07-DEF-3-C.md"}]}))
+            from dmcore.testo import capitoli_del_volume, leggi_per_la_stampa  # noqa: PLC0415
+            dato = json.loads((d / "V.manifest.json").read_text())
+            testo = leggi_per_la_stampa(d / "ARC07-DEF-2-B.md", capitoli_del_volume(d, dato))
+            self.assertIn("Prima («Il Piano della Terra»).", testo)
+            self.assertIn("cap. IV §7", testo)
+            self.assertIn("«Il Piano della Terra» §9", testo)
         finally:
             shutil.rmtree(d)
 

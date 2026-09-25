@@ -80,7 +80,7 @@ perché il prossimo volume nasca già così invece di essere corretto dopo.
 | 1 | **Il master si legge in avanti**: il corpo nell'ordine in cui si gioca, e ogni PNG entra con la sua scheda d'entrata nella scena in cui i PG lo incontrano | `rumblingstone-module-standard`, «Corpo e appendici» | `validate_modules.py` sulle sezioni, il DM sull'ordine |
 | 2 | **Statistiche e mappe in appendici** fra `<!-- pagina: una-colonna -->` e `<!-- /pagina -->`, cioè su pagine A4 a una colonna | §4.4 | l'esportatore |
 | 3 | **Dove i giocatori ricevono un foglio**, una riga «✉ Si consegna qui» | `rumblingstone-module-standard` | a vista |
-| 4 | **La storia delle scelte non va in stampa**: si avvolge in `<!-- storico -->` … `<!-- /storico -->` ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md)) | §4.6 | `test_storico.py`, un tetto file per file |
+| 4 | **Apparato, storia e istruzioni di consegna non vanno in stampa** ([ADR-0069](../../plans/adr/ADR-0069-la-storia-delle-scelte-resta-nel-sorgente.md), [ADR-0070](../../plans/adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md)): i metadati del repo in `<!-- apparato -->`, la storia in `<!-- storico -->`, l'istruzione di consegna in `<!-- consegna -->`; lo stato al tavolo si riscrive come fatto; i rimandi si scrivono `DEF-N` e li traduce l'esportatore | §4.6, §4.8 | `test_storico.py` sui sorgenti; sul PDF `validate_booklets --stampa`, con un tetto per volume in `scripts/apparato-residui.json` |
 | 5 | **Una mappa entra in colonna** (≤ 48 celle) **o va su A4**, e non va mai a capo; oltre 110 celle si accorcia l'annotazione | §2, §4.4 | l'esportatore, `TestMappeCheNonEntranoInColonna` |
 | 6 | **Ogni capitolo apre una pagina** | il tema, `capitolo-aperto` | automatico |
 | 7 | **Un'immagine** fuori da una pagina dedicata resta sotto i 16 cm, su una pagina A4 sotto i 21, **misurando** l'immagine | §4.5 | `TestFiguraSuPaginaCompilata` |
@@ -224,6 +224,25 @@ Sono qui perché sono i primi da cercare quando «il PDF viene male».
    nella successiva, 6% più lontano. Una da due o tre colonne più alta di
    20 cm a tutta pagina resta in colonna, perché un float non si spezza.
 
+8. **L'apparato di lavoro in stampa** ([ADR-0070](../../plans/adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md)).
+   Tolta la storia, nei PDF della serata di ARC-07 restavano 150 occorrenze
+   nel booklet e 87 nel volume del −1000: «MASTER DEFINITIVO … Sostituisce e
+   fonde», nomi di file, «master #3», «MAI 5e», la didascalia «fonte: X.md»
+   in fondo a ogni mappa. Chi scrive usa quattro classi:
+
+   | Classe | In stampa | Chi scrive fa |
+   |---|---|---|
+   | **A** metadati del repo | mai | l'intestazione del master in un blocco `<!-- apparato -->`, uno per file; un percorso isolato con gli stessi marcatori in linea. La riga del Bestiario, la parentesi di soli percorsi e `*(Fonte: …)*` se ne vanno da sole |
+   | **B** storia | mai | `<!-- storico -->`, e sotto il fatto senza storia |
+   | **C** stato al tavolo | sì | lo riscrive come fatto: «Quando si gioca», «Com'è il mondo a quel punto» |
+   | **D** rimandi | tradotti | scrive `DEF-N §x`, meglio fra parentesi dopo il nome della cosa. L'esportatore lo fa diventare «cap. IV §x» se il master è nel volume, il titolo del master se non c'è |
+
+   E **una pagina si stampa una volta**: i fogli ✉ stanno solo nel volume dei
+   giocatori, e lo stesso capitolo non sta in due volumi dello stesso corredo
+   (`validate_corredo.py`). Il rilevatore legge il testo del PDF, perché la
+   stessa riga si stampa in un volume e non in un altro; ogni volume ha il suo
+   tetto, col perché, in `scripts/apparato-residui.json`, e il bersaglio è zero.
+
 ### Il controllo a vista, prima di consegnare
 
 Un PDF che compila non è un PDF giusto: il difetto 4 compilava. Prima di
@@ -248,8 +267,12 @@ Il 2026-09-25, su `main` dopo la #169, la terza riga contava 1.474
 sovrapposizioni in quattro volumi (1.462 nella sola tabella dell'Abbazia) e
 otto pagine oltre il bordo; dopo la correzione, zero e zero. Resta un falso
 positivo noto: una parola maiuscola che tocca il bordo della sua cella senza
-uscirne (Drappo, pagina 31). PyMuPDF non è fra le dipendenze del repo (AGPL, e serve solo
-qui): per questo è un controllo che si fa, non un cancello in CI.
+uscirne (Drappo, pagina 31). PyMuPDF è fra le dipendenze di sviluppo dal 2026-09-25 (AGPL,
+si usa senza modifiche per verificare; D7 di `PIANO-CICLO-DI-SESSIONE-E-MENU`),
+e `validate_corredo.py --stampa` conta sovrapposizioni e testo sul bordo del
+corredo in CI. Sugli altri volumi resta un controllo che si fa a mano: il Drappo
+delle schede ne ha 185, fra layout e falsi positivi, e nessuno li ha ancora
+guardati.
 
 ---
 

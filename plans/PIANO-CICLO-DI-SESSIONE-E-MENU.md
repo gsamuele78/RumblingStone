@@ -1,6 +1,6 @@
 # PIANO — Il ciclo di sessione automatizzato, e il menu che lo guida
 
-> **Stato**: 🟡 **in corso** (2026-09-25): chiuso 2f, il resto da fare. Pianificato il 2026-09-24; il primo
+> **Stato**: 🟡 **in corso** (2026-09-25): chiusi 2f e 2g, il resto da fare. Pianificato il 2026-09-24; il primo
 > gate è la Fase 0 (ADR e decisioni del DM). **Rev. 2** (stesso giorno): il
 > metodo non è più solo TDD, ma contratto prima, nucleo puro e test a strati
 > (§5.0), su domanda del DM.
@@ -365,6 +365,38 @@ quel giorno: nessuna norma lo elencava.
 Quello che 2f **non** fa: generare il corredo dalle scene (è 2c) né scrivere i
 manifest da solo (è 2e); misurare il PDF in CI (è la D7).
 
+#### ✅ 2g · L'apparato di lavoro fuori dalla stampa, e ogni pagina una volta
+`[engine: Opus 5.5, sessione principale · effort: alto · qualità: il corredo di ARC-07 a zero rilievi d'apparato e zero doppioni; ogni altro volume sotto un tetto dichiarato col suo perché]`
+
+Classe **C** con una parte **G** (cosa è apparato, cosa è stato al tavolo) e una
+**K** confermata dal DM (quali master entrano nel booklet della serata). Il DM,
+il 2026-09-25 sulla #175: l'apparato di lavoro esce dai volumi, e ogni pagina si
+stampa una volta; poi, a lavoro avviato, i rimandi restano nella forma
+standard `DEF-N`, e il manifest decide quali DEF entrano.
+
+- [ADR-0070](adr/ADR-0070-l-apparato-di-lavoro-non-va-in-stampa-e-ogni-pagina-si-stampa-una-volta.md):
+  quattro classi (A metadati del repo, B storia, C stato al tavolo, D rimandi);
+  `rumblingstone-editoria` §2-bis passo 4 e §4.8, `module-standard`, la norma
+  del corredo in `rumblingstone-automation`;
+- `dmcore.testo`: il blocco `<!-- apparato -->`, tre forme fisse della classe A
+  (la riga del Bestiario, la parentesi di soli percorsi, `*(Fonte: …)*`), e
+  `traduci_rimandi`, chiamata dalle due catene: `DEF-N` e i nomi di file
+  diventano il capitolo del volume o il titolo del master preso dall'H1;
+- il rilevatore sul PDF in `validate_corredo.py`, eseguito da
+  `validate_booklets --stampa` su ogni volume con i tetti di
+  `scripts/apparato-residui.json`; i doppioni del corredo; PyMuPDF in
+  `requirements-dev.txt` (D7) e la misura in CI;
+- la didascalia degli SVG diventa un commento: 41 SVG rigenerati;
+- il lotto di applicazione: i cinque master di ARC-07, la cassetta, le tre
+  regie, le introduzioni, la Collana, il carry-over B4, Balvar; i manifest
+  della serata (il booklet stampa `DEF-2`, `DEF-3`, `DEF-4` e nessun foglio ✉;
+  il −1000 esce dal corredo e perde i due fogli ✉).
+
+Misura: booklet della serata da 150 rilievi a 0 (e da 106 a 90 pagine), −1000
+da 87 a 2, Ritorno da 60 a 0, Terros da 93 a 0, Palio da 65 a 26, Drappo da 97
+a 43. Restano dichiarati i residui di quattro volumi: il Palio e il Drappo
+chiedono un giudizio dentro il modulo, e sono il prossimo lotto.
+
 ### Fase 3 · Il menu
 
 #### ⬜ 3a · `dm.py menu`, testuale
@@ -439,7 +471,7 @@ test che non hanno bisogno di una tastiera.
 | D3 | F2 · 2d | **Chi scrive la prosa di gioco che manca** (interazioni dei PNG, testo degli handout, echi)? (a) il DM, o una sessione di agente con le skill, partendo dal brief; (b) una bozza del ponte di ADR-0067, che riapre il lotto E-bis escluso il 2026-07-20. Proposta: (a) adesso, (b) da rivalutare dopo il collaudo |
 | D4 | F3 · 3a | **Che menu?** Numerato in testo semplice (libreria standard, funziona ovunque e si avvolge facilmente) oppure a schermo intero con `curses` (che su Windows non c'è). Proposta: numerato |
 | D5 | F2 · 2c | **Le immagini mancanti si generano durante la preparazione?** Serve ComfyUI sulla macchina del DM e minuti per immagine. Proposta: la preparazione le **elenca** e lancia `comfyui_batch` solo se il DM lo chiede |
-| D7 | F2 · 2f | **PyMuPDF in CI?** `validate_corredo --stampa` conta righe sovrapposte e testo sul bordo leggendo il PDF con PyMuPDF, che è AGPL e oggi non è fra le dipendenze (`rumblingstone-editoria` §4). In CI la misura quindi si dichiara saltata, e il PDF difettoso lo trova solo chi esegue il controllo in locale. (a) ammetterla in `requirements-dev.txt`, come pytest: è uno strumento di verifica e non esce dal repo; (b) tenerla fuori, come oggi. Proposta: (a), dopo aver riletto la licenza con `rumblingstone-edizione` |
+| ~~D7~~ | F2 · 2f | ✅ **Decisa dal DM il 2026-09-25: sì**, in `requirements-dev.txt`; lotto 2g. **PyMuPDF in CI?** `validate_corredo --stampa` conta righe sovrapposte e testo sul bordo leggendo il PDF con PyMuPDF, che è AGPL e oggi non è fra le dipendenze (`rumblingstone-editoria` §4). In CI la misura quindi si dichiara saltata, e il PDF difettoso lo trova solo chi esegue il controllo in locale. (a) ammetterla in `requirements-dev.txt`, come pytest: è uno strumento di verifica e non esce dal repo; (b) tenerla fuori, come oggi. Proposta: (a), dopo aver riletto la licenza con `rumblingstone-edizione` |
 | D6 | F0 · 0c | **BDD con un framework, o solo la sua pratica?** Misurato in [RICERCA-BDD-O-TDD-2026-09](RICERCA-BDD-O-TDD-2026-09.md): `behave` trova gli stessi 16 difetti su 16 del TDD, con +42% di righe, +45% di tempo e 3 MB di dipendenze contro ADR-0037; in cambio il `.feature` si legge senza aprire Python. (a) la pratica senza framework: scenari con identificatore in §4, test che li citano, un gate stdlib che li tiene allineati; (b) `pytest-bdd` con un'eccezione ad ADR-0037; (c) niente, come oggi. Proposta: (a) |
 
 ---
@@ -457,6 +489,6 @@ test che non hanno bisogno di una tastiera.
 
 - ⬜ Fase 0 · 0a ADR-0068 · 0c i contratti versionati · 0b risposte a D1-D6
 - ⬜ Fase 1 · 1a motore dei moduli · 1b proposte → domande (ex 4f-5) · 1c cronaca · 1d catena di chiusura
-- 🟡 Fase 2 · ✅ 2f il corredo della serata (2026-09-25) · ⬜ 2a controllo e turno del mondo · 2b ricognizione · 2c inventario · 2d brief di scrittura · 2e manifest
+- 🟡 Fase 2 · ✅ 2f il corredo della serata (2026-09-25) · ✅ 2g l'apparato fuori dalla stampa (2026-09-25) · ⬜ 2g-bis i residui del Palio e del Drappo · ⬜ 2a controllo e turno del mondo · 2b ricognizione · 2c inventario · 2d brief di scrittura · 2e manifest
 - ⬜ Fase 3 · 3a menu testuale · 3b menu in JSON
 - ⬜ Fase 4 · 4a collaudo al tavolo

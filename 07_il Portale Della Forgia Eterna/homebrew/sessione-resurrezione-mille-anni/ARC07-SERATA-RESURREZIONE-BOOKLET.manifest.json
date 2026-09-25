@@ -3,17 +3,18 @@
   "title": "La Resurrezione e i Mille Anni",
   "subtitle": "Il risveglio nella Forgia · il rito del Cuore di Moradin · Hammerfist mille anni fa, fino all'alba",
   "banner": "BOOKLET DI SESSIONE",
-  "meta": "Sessione D&D 3.5 per 4 personaggi di 13° livello (Hella torna al rito) · Faerûn, Flamerule 1372 DR e ≈372 DR · Campagna privata RumblingStone · regia DM, cast ed echi, master DEF-2/3/4 integrali, handout per PG",
-  "header": "La serata del 2026-09-25: la regia, la cassetta del DM, i tre master in ordine di gioco con le loro appendici A4 di statistiche e mappe, e le pagine da consegnare. I capitoli ⚠ sono del DM; le pagine ✉ si consegnano ai giocatori quando il master lo dice.",
+  "meta": "Sessione lunga D&D 3.5 per 4 personaggi di 13° livello (Hella torna al rito) · Faerûn, Flamerule 1372 DR e ≈372 DR · Campagna privata RumblingStone · regia della serata, cast e voci, il ritorno, la resurrezione e il viaggio a mille anni fa in ordine di gioco. Le pagine ✉ sono nel volume dei giocatori",
+  "header": "La serata del 2026-09-25: la regia, la cassetta del DM, il ritorno, la resurrezione e il viaggio a mille anni fa, in ordine di gioco, con le loro appendici A4 di statistiche e mappe. Le pagine ✉ sono nel volume dei giocatori, e la regia dice quando consegnarle.",
   "footer": "La Resurrezione e i Mille Anni",
   "player_footer": "Il Cuore e la Porta",
   "colophon": {
     "edizione": "Booklet di sessione",
-    "versione": "v2",
+    "versione": "v3",
     "data": "2026-09-25",
     "autori": "Il DM di RumblingStone, con l'agente di scrittura del repo",
     "basato_su": "D&D 3.5 SRD (OGL 1.0a); adattamento privato di Red Hand of Doom (Wizards of the Coast, 2006)",
-    "licenza": "materiale del DM, uso privato del tavolo, non diffondere"
+    "licenza": "materiale del DM, uso privato del tavolo, non diffondere",
+    "nota": "v3: una pagina si stampa una volta. Le pagine ✉ sono solo nel volume dei giocatori"
   },
   "cover_image": "../../Immagini/web/ilCuoreDiMoradin.jpg",
   "intro_md": "00-INTRO-DOVE-SIAMO.md",
@@ -25,94 +26,29 @@
       "tag": "dm"
     },
     {
-      "title": "II · La cassetta del DM — cast, pronuncia, read-aloud, suoni",
+      "title": "II · La cassetta del DM: cast, pronuncia, read-aloud, suoni",
       "file": "../../ARC07-CASSETTA-DEL-DM.md",
       "tag": "dm"
     },
     {
-      "title": "III · Master — Il Ritorno e gli Affreschi (DEF-2)",
+      "title": "III · Il Ritorno e gli Affreschi",
       "file": "../../ARC07-DEF-2-RITORNO-E-AFFRESCHI.md",
       "tag": "dm"
     },
     {
-      "title": "IV · Master — La Resurrezione di Hella (DEF-3)",
+      "title": "IV · La Resurrezione di Hella",
       "file": "../../ARC07-DEF-3-RESURREZIONE-HELLA.md",
       "tag": "dm"
     },
     {
-      "title": "V · Master — Il Viaggio a 1.000 anni fa (DEF-4)",
+      "title": "V · Il Viaggio a Mille Anni fa",
       "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
       "tag": "dm"
     },
     {
-      "title": "VI · Collana dei Semi Eterni — scheda DM",
+      "title": "VI · La Collana dei Semi Eterni",
       "file": "../../../PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md",
       "tag": "dm"
-    },
-    {
-      "title": "✉ Echi — Thorik",
-      "file": "03-ECHI-THORIK.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Echi — Tordek",
-      "file": "04-ECHI-TORDEK.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Echi — Artemis",
-      "file": "05-ECHI-ARTEMIS.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Echi — Hella",
-      "file": "06-ECHI-HELLA.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Il Cuore di Moradin",
-      "file": "11-TAVOLA-CUORE-DI-MORADIN.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ La preghiera della resurrezione",
-      "file": "10-HANDOUT-PREGHIERA.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ La carta del Dono — Thorik",
-      "file": "07a-CARTA-DONO-THORIK.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ La carta del Dono — Tordek",
-      "file": "07b-CARTA-DONO-TORDEK.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ La carta del Dono — Artemis",
-      "file": "07c-CARTA-DONO-ARTEMIS.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Hella, tornata",
-      "file": "09-SCHEDA-HELLA-RISORTA.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Durik, il guardiano di pietra",
-      "file": "08-SCHEDA-DURIK.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Le Cronache dei Quattro Eroi",
-      "file": "../HANDOUT-1-cronache-quattro-eroi.hb.md",
-      "tag": "player"
-    },
-    {
-      "title": "✉ Il piano di battaglia di Re Thorek I",
-      "file": "../volume-mille-anni/03-HANDOUT-PIANO-DI-BATTAGLIA.md",
-      "tag": "player"
     }
   ],
   "fregio": "../../../docs/assets/fregi/fregio-arco-07-forgia.svg"

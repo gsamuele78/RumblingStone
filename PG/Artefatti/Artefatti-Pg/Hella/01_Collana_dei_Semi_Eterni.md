@@ -6,11 +6,13 @@
 > **Stato attuale**: ⏳ **forgiatura imminente** — la Collana nasce DURANTE
 > il rituale di resurrezione P3B (prossima sessione), dai tre semi e dai
 > sacrifici del party. Questa scheda è pronta per quel momento.
+> <!-- apparato -->
 > **Fonti**: `07_.../PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`
 > (creazione e poteri base), `...HELLA-IL-VIAGGIO...-v2.md` §8-§10 (Durik
 > e integrazione), `...IL-VIAGGIO...-risultati.md` (esiti giocati del
 > viaggio dello spirito), `campaign/state.md` §6.
 > **Formato**: gemello di `../Tordek/01_Bracieri_Gemelli_di_Moradin.md`.
+> <!-- /apparato -->
 
 ---
 
@@ -72,8 +74,8 @@ Hella per la durata indicata in P3B:
 - **Seme I e Seme II** → un **Treant di Adamantio** (statblock in P3B
   COMPLETO — usare quello, non ricrearlo).
 - **Seme III** → **DURIK RIFORGIATO, il Guardiano di Pietra** (12 DV —
-  scheda completa in `...IL-VIAGGIO...-v2.md` §10 con la rinomina
-  Nymeria→Durik). Non è un'evocazione generica: è LUI. Non parla; i suoi
+  scheda completa nella sua scheda<!-- apparato -->, `...IL-VIAGGIO...-v2.md` §10 con la rinomina
+  Nymeria→Durik<!-- /apparato -->). Non è un'evocazione generica: è LUI. Non parla; i suoi
   versi sono suoni di pietra — click, strofinio di roccia, il movimento
   lontano di una faglia.
 
@@ -91,7 +93,7 @@ Dwarf amplificata dal viaggio `[INFERRED — needs DM confirmation]`.
 I tre semi custodiscono i **sacrifici che i compagni offrirono al
 rituale**, e da oggi si sa **quali**: al rito ogni PG dona **un potere del
 proprio artefatto**, che lascia quell'artefatto **per sempre** e
-**germoglia qui** (`ARC07-DEF-3` §5 — il trapianto).
+**germoglia qui**: è il trapianto, al §5 del rito di resurrezione.
 
 | Seme | Chi ha donato, e cosa | 🌱 Cosa germoglia |
 |---|---|---|
@@ -181,7 +183,7 @@ con un atto `[INFERRED — leva narrativa per il DM, non meccanica]`.
 - **Fotosintesi/Empatia vegetale** sono del TIPO Ibrido Treant (P3B), non
   della Collana: se si scrive la scheda differenziale di Hella, tenerli
   separati (fonte: v2 §7 "Bonus Fisso").
-- **Regola di coerenza** (state.md §6): il Cuore di Moradin è SPESO.
+- **Regola di coerenza**: il Cuore di Moradin è SPESO.
   Nessun potere della Collana può "riattivarlo" — se un engine lo
   propone, è una violazione da segnalare.
 

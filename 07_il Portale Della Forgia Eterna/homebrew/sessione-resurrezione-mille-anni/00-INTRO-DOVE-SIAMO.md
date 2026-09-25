@@ -11,15 +11,14 @@
 **Questa è la serata del 2026-09-25.** Tre beat in fila, nell'ordine in cui
 li decide la Sala:
 
-1. **Il risveglio nella Forgia** — la parte di `ARC07-DEF-2` che non avete
-   ancora giocato: i sogni delle quattro ore rubate e gli affreschi che
+1. **Il risveglio nella Forgia**, la parte di `DEF-2` che non avete ancora
+   giocato: i sogni delle quattro ore rubate e gli affreschi che
    incidono la vittoria su Terros. In forma **breve**, venticinque minuti.
-2. **La resurrezione di Hella** — `ARC07-DEF-3` per intero: il rito, i tre
-   Doni, la Custode delle Radici, il risveglio, Durik che si lega a lei.
-3. **Mille anni fa, fino all'alba** — `ARC07-DEF-4` dall'arrivo alla notte:
-   la targa, Durin, Re Thorek I, l'orologio della notte, Balvar, Zog'tar.
-   **Ci si ferma al primo ariete sulle mura.** Il duello con Skullcrusher e il
-   Rituale 4 sono della sessione dopo.
+2. **La resurrezione di Hella**, `DEF-3` per intero: il rito, i tre Doni, la
+   Custode delle Radici, il risveglio, Durik che si lega a lei.
+3. **Mille anni fa, fino all'alba**, `DEF-4` dall'arrivo alla notte: la targa, Durin, Re Thorek I, l'orologio
+   della notte, Balvar, Zog'tar. **Ci si ferma al primo ariete sulle mura.**
+   Il duello con Skullcrusher e il Rituale 4 sono della sessione dopo.
 
 <!-- storico -->
 **Decisioni del DM prese il 2026-09-24** *(valgono per questo booklet)*:
@@ -31,9 +30,9 @@ li decide la Sala:
 | **S1** | La serata copre `DEF-3` e `DEF-4` **fino all'alba**. Il duello e il Rituale 4 si giocano nella sessione successiva | regia, Atto IV |
 | **S2** | `DEF-2` non è stato giocato: si apre con una **versione breve** (sogni, A5, A7, A8, Benedizioni) | regia, Atto I |
 | **S3** | **Durik è sempre presente**, come un compagno normale. Se viene distrutto torna polvere nel terzo seme; la Collana lo rievoca spendendo una carica (1 ora) e all'alba torna intero e stabile | scheda di Durik |
-| **S4** | Illustrazioni: si usano quelle esistenti; per le mancanti ci sono i **prompt** in `Immagini/PROMPT-IMMAGINI-07ILP.md` | regia, «Cosa mostrare» |
+| **S4** | Illustrazioni: si usano quelle esistenti<!-- apparato -->; per le mancanti ci sono i **prompt** in `Immagini/PROMPT-IMMAGINI-07ILP.md`<!-- /apparato --> | regia, «Cosa mostrare» |
 
-**Stato al tavolo, entrando** *(da `campaign/state.md` §0, §1, §6)*:
+**Stato al tavolo, entrando**:
 
 - **Orologio di Hammerfist**: **3g 16h**. Hanno dormito nella Sala (riposo
   R4, tariffa divina −4 h). Il rito costa circa un'ora. Il viaggio a −1000
@@ -52,43 +51,39 @@ li decide la Sala:
   Non è ancora legato a lei.
 - **Therysol**: veglia il corpo da sei giorni.
 
-**Come usare questo booklet.**
+**Come usare questo booklet e il volume dei giocatori.**
 
 | Capitolo | Per chi | Quando |
 |---|---|---|
 | I · Regia della serata | ⚠ DM | da leggere prima, da tenere aperto durante; contiene gli echi del passato che stasera tornano |
 | II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
-| III-V · Master DEF-2, DEF-3, DEF-4 | ⚠ DM | **si leggono in avanti**, nell'ordine in cui si gioca. Ogni PNG ha la sua **scheda d'entrata** nella scena in cui compare; statistiche e mappe sono nelle **appendici A4** in fondo a ciascun master |
-| VI · Collana dei Semi Eterni, scheda DM | ⚠ DM | la scheda dell'artefatto, da consultare |
-| Echi privati per PG | ✉ uno a testa | Thorik, Tordek, Artemis all'inizio; Hella al risveglio (`DEF-3` §7) |
-| Il Cuore di Moradin (immagine) | ✉ a tutti | subito dopo la rivelazione del reliquiario (`DEF-3` §3) |
-| La preghiera della resurrezione | ✉ al giocatore di Thorik | allo Step 1 (`DEF-3` §4) |
-| Carte dei Doni | ✉ solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |
-| Scheda di Hella risorta, scheda di Durik | ✉ alla giocatrice di Hella | al risveglio (`DEF-3` §7) |
-| Le Cronache dei Quattro Eroi | ✉ a tutti | alla soglia (`DEF-3` §8-ter), quando la Corona apre l'affresco del Tempo |
-| Il piano di battaglia di Re Thorek I | ✉ a tutti | al consiglio di guerra (`DEF-4` Scena 4) |
+| III-V · Il Ritorno e gli Affreschi, La Resurrezione di Hella, Il Viaggio a Mille Anni fa | ⚠ DM | **si leggono in avanti**, nell'ordine in cui si gioca. Ogni PNG ha la sua **scheda d'entrata** nella scena in cui compare; statistiche e mappe sono nelle **appendici A4** in fondo a ciascun capitolo |
+| VI · La Collana dei Semi Eterni | ⚠ DM | la scheda dell'artefatto, da consultare |
+| **Il volume dei giocatori**, *Il Cuore e la Porta* | ✉ | tutte le pagine da consegnare, una volta sola, qui sotto in ordine di consegna |
 
-I tre master segnano **✉ Si consegna qui** nel punto esatto di ogni foglio, e
+| Pagina ✉ del volume dei giocatori | A chi | Quando |
+|---|---|---|
+| Echi privati | uno a testa | Thorik, Tordek, Artemis all'inizio; Hella al risveglio (`DEF-3` §7) |
+| Il Cuore di Moradin (immagine) | a tutti | subito dopo la rivelazione del reliquiario (`DEF-3` §3) |
+| La preghiera della resurrezione | al giocatore di Thorik | allo Step 1 (`DEF-3` §4) |
+| Carte dei Doni | solo a chi dona | allo Step 5, **dopo** che ha scelto di donare: il prezzo lo dice prima Moradin, a voce |
+| Hella, tornata · Durik, il guardiano di pietra | alla giocatrice di Hella | al risveglio (`DEF-3` §7) |
+| Le Cronache dei Quattro Eroi | a tutti | alla soglia (`DEF-3` §8-ter), quando la Corona apre l'affresco del Tempo |
+| Il piano di battaglia di Re Thorek I | a tutti | al consiglio di guerra (`DEF-4` Scena 4) |
+
+I capitoli segnano **✉ Si consegna qui** nel punto esatto di ogni foglio, e
 `DEF-3` §0 ha la stessa tabella in ordine di gioco.
 
-Le pagine ✉ stanno anche in un secondo volume, `ARC07-SERATA-GIOCATORI`, da
-stampare a parte e tagliare.
-
+<!-- apparato -->
 **Come si stampa** (lo standard di [`GUIDA-BOOKLET-E-PDF`](../../../docs/guides/GUIDA-BOOKLET-E-PDF.md)):
+il corredo intero, con un comando dalla radice del repo:
+`python3 scripts/dm.py corredo "07_il Portale Della Forgia Eterna/homebrew/sessione-resurrezione-mille-anni/ARC07-SERATA-RESURREZIONE.corredo.json" --stampa`.
+Fa questo booklet e il volume dei giocatori, e ne misura i PDF. Per una pagina ✉ per file, da mandare a un giocatore:
+`python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf`,
+con `C` la cartella di questo booklet. I PDF non stanno nel repo (`*.pdf` è
+ignorato): si rigenerano coi comandi.
+<!-- /apparato -->
 
-Dalla radice del repo, con `C` la cartella di questo booklet:
-
-- **il volume del DM**, da stampare, con segnalibri:
-  `python3 scripts/export_booklet_typst.py C/ARC07-SERATA-RESURREZIONE-BOOKLET.manifest.json --all`
-- **una pagina ✉ per file**, da stampare o mandare a un giocatore (tredici
-  file in `C/pdf/`):
-  `python3 scripts/dm.py booklet C/ARC07-SERATA-GIOCATORI.manifest.json --pdf`
-- **tutte le pagine ✉ in un volume**:
-  `python3 scripts/export_booklet_typst.py C/ARC07-SERATA-GIOCATORI.manifest.json --all`
-
-⚠️ Nel volume unico dei giocatori le pagine corte stanno una dopo l'altra: gli
-echi di Thorik, Tordek e Artemis possono finire sullo stesso foglio. Per
-consegnarli a persone diverse si usano i PDF singoli della seconda riga.
-I PDF non stanno nel repo (`*.pdf` è ignorato): si rigenerano coi comandi qui
-sopra.
-
+⚠️ Nel volume dei giocatori le pagine corte stanno una dopo l'altra: gli echi
+di Thorik, Tordek e Artemis possono finire sullo stesso foglio. Per
+consegnarli a persone diverse si tagliano, o si stampano una per file.

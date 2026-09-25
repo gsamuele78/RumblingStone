@@ -5270,7 +5270,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/validate_booklets.py --stampa",
-      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri. È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
+      "summary": "Gate dei booklet: valida ogni *.manifest.json contro schemas/booklet_manifest.schema.json, verifica che capitoli, copertina, introduzione e IMMAGINI dei master esistano, dichiara quali chiavi consuma ciascuna delle due catene (HTML e stampa) e — con --stampa — compila davvero ogni volume con typst controllando che il PDF abbia i segnalibri e non stampi apparato di lavoro oltre il tetto del volume (ADR-0070, con PyMuPDF). È il controllo che mancava: due booklet della campagna non avevano mai compilato e tredici immagini del Palio uscivano in stampa come testo.",
       "use_case": "«I manifest dei booklet puntano tutti a file che esistono, o ne ho rinominato uno?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -5327,6 +5327,12 @@
           "kind": "markdown",
           "required": true,
           "schema": null
+        },
+        {
+          "path": "scripts/apparato-residui.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
         }
       ],
       "outputs": [
@@ -5372,7 +5378,7 @@
       "category": "D-materials",
       "language": "python",
       "invocation": "python3 scripts/validate_corredo.py C.corredo.json --stampa",
-      "summary": "Il controllo del corredo della serata (norma in rumblingstone-automation, «Il corredo della serata»): da un *.corredo.json verifica che ci siano il booklet del DM, il volume dei fogli da consegnare, gli eventuali volumi di approfondimento, gli echi di ogni PG, le carte e gli handout, e che ogni foglio ✉ del booklet stia nel volume dei fogli; che ogni blocco img dei prompt abbia la sua immagine e la sua riga nel confronto immagine-scheda; che nessun box read-aloud superi le 12 righe nel testo che va in stampa. Con --stampa compila ogni volume e misura il PDF: righe di testo sovrapposte e testo a meno di 30 pt dal bordo (PyMuPDF, facoltativo: senza, la misura si dichiara saltata).",
+      "summary": "Il controllo del corredo della serata (norma in rumblingstone-automation, «Il corredo della serata»): da un *.corredo.json verifica che ci siano il booklet del DM, il volume dei fogli da consegnare, gli eventuali volumi di approfondimento, gli echi di ogni PG, le carte e gli handout, e che i fogli ✉ stiano solo nel volume dei giocatori e che nessun capitolo si stampi in due volumi del corredo (ADR-0070); che ogni blocco img dei prompt abbia la sua immagine e la sua riga nel confronto immagine-scheda; che nessun box read-aloud superi le 12 righe nel testo che va in stampa. Con --stampa compila ogni volume e misura il PDF: righe di testo sovrapposte e testo a meno di 30 pt dal bordo (PyMuPDF, facoltativo: senza, la misura si dichiara saltata).",
       "use_case": "«Ho detto genera il booklet: è uscito tutto quello che serve alla serata, e i PDF sono buoni?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -5437,6 +5443,12 @@
           "path": "i manifest, i master e i file dei prompt citati dal corredo",
           "kind": "markdown",
           "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/apparato-residui.json",
+          "kind": "json",
+          "required": false,
           "schema": null
         }
       ],

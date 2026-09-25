@@ -2,6 +2,7 @@
 # ARC-07 · DEFINITIVO #3 — LA RESURREZIONE DI HELLA
 ## Il Portale della Forgia Eterna — il Cuore di Moradin, i Doni, il Debito della Radice
 
+<!-- apparato -->
 > ⭐ **MASTER DEFINITIVO — beat HUB rituale (il cuore emotivo dell'arco).**
 > È la scena per cui esiste l'intero ARC-07 (G0). Non è un combattimento: è
 > un **rito corale**, tre sacrifici che sono scelte, un risveglio, e un
@@ -16,15 +17,21 @@
 >
 > **Sistema: D&D 3.5 SRD** (max PF1e), MAI 5e. Italiano, **CD** non DC.
 > Faerûn 1372 DR. Scala mappe **1,5 m/quadretto**.
+> Ordine di gioco D2, nonostante la sigla storica "3B".
+<!-- /apparato -->
+
+> **Il cuore emotivo dell'arco.** Non è un combattimento: è un **rito corale**,
+> tre sacrifici che sono scelte, un risveglio, e un **prezzo che il mondo
+> esige** (il filo grigio).
 >
-> **Stato al tavolo**: si gioca **dopo** il Ritorno & Affreschi (master #2) e
-> **prima** del Viaggio a 1.000 anni fa (master #4). Ordine D2 — nonostante la
-> sigla storica "3B". **Canone a monte**: lo spirito di Hella **ha già
+> **Quando si gioca**: **dopo** il Ritorno e gli Affreschi (`DEF-2`) e
+> **prima** del Viaggio a 1.000 anni fa (`DEF-4`). **Com'è il mondo a quel
+> punto**: lo spirito di Hella **ha già
 > compiuto il viaggio nell'Incudine del Mondo** (verità piena / ferita aperta /
 > Via della Radice — tutte le prove superate); i PG **non lo sanno ancora** —
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
-> `[CANONE GIOCATO 2026-07-31]` — registro dei riposi in `ARC07-DEF-2` §0-bis,
-> che è il file che possiede l'orologio. Il party arriva **riposato** (hanno
+> `[CANONE GIOCATO 2026-07-31]` — il registro dei riposi è in `DEF-2` §0-bis,
+> che possiede l'orologio. Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
@@ -63,7 +70,7 @@
 | §9 | **Contingenze & fallimento** | «se i PG fanno X»; i modi di fallimento dello Step 5 |
 | §10 | **Echo Ledger** | conseguenze a lungo termine |
 | §11 | **Avanzamento** | PX, artefatti, il corredo di Hella |
-| §12 | **Ponte + Handout & Asset** | verso il master #4; handout, immagini, musica |
+| §12 | **Ponte + Handout & Asset** | verso il viaggio a mille anni fa (`DEF-4`); handout, immagini, musica |
 | App. A | **Statistiche** | la scheda completa di Hella risorta, il Treant di Adamantio |
 | App. B | **Mappe** | la Sala della Forgia a pergamena, il cerchio del rito |
 
@@ -73,7 +80,7 @@
 
 **Dove siete.** Nella **Sala della Forgia Eterna**, davanti all'Altare del Cuore
 di Moradin. La Corona porta due gemme; gli affreschi hanno registrato la vittoria
-della Terra (master #2); il corpo di Hella riposa, vegliato da Therysol. Resta
+della Terra (`DEF-2`); il corpo di Hella riposa, vegliato da Therysol. Resta
 un solo atto prima di lasciare la Forgia: **riportarla indietro.**
 
 **Cosa fa questo beat.** È **il momento per cui l'arco esiste**. (1) Moradin
@@ -97,8 +104,8 @@ fogli per i giocatori, nella tabella qui sotto; le mappe dell'**Appendice B**
 
 **Come si chiude.** Hella viva, i Doni tessuti (o i debiti aperti), il Debito
 della Radice registrato, la Collana al collo, Durik al fianco. La Corona può ora
-aprire il **portale del Tempo** (Topazio + Smeraldo). → **master #4: il Viaggio
-a 1.000 anni fa** (Hella è il 4° PG, APL 13 pieno).
+aprire il **portale del Tempo** (Topazio + Smeraldo). → **il Viaggio a 1.000 anni fa
+(`DEF-4`)** (Hella è il 4° PG, APL 13 pieno).
 
 
 ### ✉ Cosa si consegna, e quando
@@ -107,14 +114,14 @@ Il DM ha sul tavolo sei fogli per i giocatori. Si danno **in quest'ordine**, e
 mai prima del momento scritto: ognuno risponde a una domanda che il tavolo si
 deve essere già fatto.
 
-| Quando | Cosa | A chi | Il file |
+| Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
-| prima di cominciare (la regia della serata, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | `homebrew/sessione-resurrezione-mille-anni/03-05-ECHI-*.md` |
-| §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | `…/11-TAVOLA-CUORE-DI-MORADIN.md` |
-| §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | `…/10-HANDOUT-PREGHIERA.md` |
-| §5, **dopo il sì** di chi dona | **la carta del Dono** | solo a chi ha donato | `…/07a-07c-CARTA-DONO-*.md` |
-| §7, dopo il box di Durik | **Hella, tornata**, **Durik** e l'eco privato di Hella | alla giocatrice di Hella | `…/09-SCHEDA-HELLA-RISORTA.md` · `…/08-SCHEDA-DURIK.md` · `…/06-ECHI-HELLA.md` |
-| §8-ter, mentre la Corona apre il varco | **Le Cronache dei Quattro Eroi** | a tutti | `homebrew/HANDOUT-1-cronache-quattro-eroi.hb.md` |
+| prima di cominciare (la regia della serata, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
+| §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
+| §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
+| §5, **dopo il sì** di chi dona | **la carta del Dono** | solo a chi ha donato | «La carta del Dono», una per chi dona |
+| §7, dopo il box di Durik | **Hella, tornata**, **Durik** e l'eco privato di Hella | alla giocatrice di Hella | «Hella, tornata» · «Durik, il guardiano di pietra» · «Echi — Hella» |
+| §8-ter, mentre la Corona apre il varco | **Le Cronache dei Quattro Eroi** | a tutti | «Le Cronache dei Quattro Eroi» |
 
 ⚠️ **Il prezzo dei Doni si dice, la carta no.** Moradin dice a voce cosa costa
 (§5); la carta, con quello che germoglia in Hella, arriva dopo il sì. Se la
@@ -179,7 +186,7 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   lui **scatta verso quella persona**. Il DM lo narri come un riflesso, non come
   un bonus — *«ti muovi prima di decidere di muoverti»*.
 - **Non sa** che la "presenza verde" che gli alleviò le spalle al Piano della
-  Terra (master #1 §9) era lei. Lo scoprirà al §8, e sarà uno dei momenti più
+  Terra (`DEF-1` §9) era lei. Lo scoprirà al §8, e sarà uno dei momenti più
   forti della campagna: *ha già portato peso per Hella, senza saperlo.*
 
 ### ⚒️ TORDEK — il faro nel buio (Mercer lead qui)
@@ -199,7 +206,7 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   esattamente la cosa che regala.
 - 🌱 Al tavolo la nota da far cadere una volta sola: Hella ha **vulnerabilità al
   fuoco ×1,5**, prezzo della Via della Radice, e adesso **porta il fuoco**.
-- Se porta il **Marchio di Varis** (#1 §6-bis, CANONE): l'Anello, durante la
+- Se porta il **Marchio di Varis** (`DEF-1` §6-bis): l'Anello, durante la
   stabilizzazione (Step 3), «pizzica» — il caos vitale e il marchio del mercato
   risuonano. Gancio muto (conseguenza canonica del Marchio, DM 2026-07-23).
 
@@ -241,7 +248,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-master #2); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+`DEF-2`); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -287,7 +294,7 @@ niente, chi le tocca entra nel rito già dentro la scena.
 
 ---
 
-## §2-bis — LE DUE GEMME ACCESE, E LA TERZA CHE MANCA `[CANONE — state.md §5]`
+## §2-bis — LE DUE GEMME ACCESE, E LA TERZA CHE MANCA
 
 > **Perché sta qui.** I PG hanno speso due archi a cercare quelle pietre. Se il
 > rito le ignora, quelle sessioni diventano un corridoio verso questa. Questa
@@ -311,7 +318,7 @@ niente, chi le tocca entra nel rito già dentro la scena.
 
 ### La riga che nessuno ha ancora detto a Thorik
 
-`state.md` §7.E lo registra come eco **E-07c**: al rito dello Smeraldo gli è
+Il registro degli echi lo tiene come **E-07c**: al rito dello Smeraldo gli è
 stato chiesto *«un pezzo di te stesso»*, e non l'ha delegato. Ha pagato
 **−2 DES e +2 COS**, che sommati ai −2 DES della Corona fanno **−4 al
 punteggio** — un punto solo di CA, Riflessi e iniziativa al tavolo.
@@ -369,7 +376,7 @@ della soglia, §8-ter**. Qui è un difetto che si nota, non una promessa che si 
 | **Sa** | tutto quello che la Forgia ha visto. Non dice mai di più di quello che serve al passo dopo |
 | **Eco che arma** | le sue reazioni ai Doni (§5): *«La Forgia piega il metallo che riceve»* al dono, *«la paura del prezzo è già il prezzo»* al rifiuto. Sono le frasi che i giocatori si ripeteranno |
 
-> **⚠️ Canone (state.md §6):** il Cuore di Moradin è **single-use**. Dopo il
+> **⚠️ Canone:** il Cuore di Moradin è **single-use**. Dopo il
 > rito è **SPESO** — NON torna nell'Altare. Se un file/engine lo "riusa" dopo
 > l'arco, è una violazione da segnalare. (La vecchia riga "Cuore ritornato
 > nell'Altare" è superata.)
@@ -788,8 +795,8 @@ momento entra la Custode: §6.
 
 **Chi/cosa è.** La Custode delle Radici — un **psicopompo neutrale** del Sogno
 della Terra (CANONE DM 2026-07-23: **si aggancia al Cerchio Sacro di ARC-09** —
-la quest della druida Hella, `09_.../Quest 1 – Druida Hellas: Il Cerchio Sacro
-della Foresta.md`). Non combatte, non minaccia: **contratta**. Il DM la
+la quest della druida Hella<!-- apparato -->, `09_.../Quest 1 – Druida Hellas: Il Cerchio Sacro
+della Foresta.md`<!-- /apparato -->). Non combatte, non minaccia: **contratta**. Il DM la
 gioca come un funzionario dell'ordine naturale — cortese, inflessibile, senza
 malizia (Andor: la macchina non odia, esegue).
 
@@ -801,8 +808,8 @@ malizia (Andor: la macchina non odia, esegue).
 | **B. Rifiutare / sfidare** (i PG cacciano la Custode, o Hella nega il debito) | La Custode **non combatte**: china il capo e si ritira. *«Come volete. Ma il vuoto si colma da sé — e la natura non è delicata.»* | Sessioni dopo, **qualcosa risale** dal Sogno per riempire il vuoto: un aggancio a un nemico ARC-09 (un non-morto della terra nel dominio del Ghostlord, o una **crepa** che la corruzione fungina di Sonjak sfrutta). Il rifiuto non è punito da un dio: è la natura che riempie i vuoti. |
 | **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio, la Collana **non perde mai** il terzo seme (Durik rigermoglia sempre). |
 
-> **Registrazione (obbligatoria).** Segna la scelta in **`state.md §7`** (thread
-> di mondo vivo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
+> **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
+> (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
 > **a lungo termine**: paga in ARC-09, non subito. **Nessuna meccanica coercitiva
 > ora** (PF1e: patto non-coercitivo): è un obbligo che il mondo ricorda.
 
@@ -912,7 +919,7 @@ Quando è pronta a parlare, Hella racconta le **tre prove** dell'Incudine del Mo
 
 **Le rivelazioni incrociate (i momenti forti):**
 - **Thorik scopre** che la presenza verde che gli alleviò il peso al Piano della
-  Terra (#1 §9) **era lei**: *ha già portato peso per lui, dall'aldilà.*
+  Terra (`DEF-1` §9) **era lei**: *ha già portato peso per lui, dall'aldilà.*
 > **Read-aloud (Casa di Davide — il debito che si scioglie).** *Hella si volta
 > verso Thorik, e c'è qualcosa nei suoi occhi ambra che lui non sa ancora
 > leggere.* *«Quando eri nel Piano della Terra, sotto la montagna che ti
@@ -929,7 +936,7 @@ Quando è pronta a parlare, Hella racconta le **tre prove** dell'Incudine del Mo
   *«Avete dato lui. Lo capisco. Ma una parte di me non ve lo perdonerà mai del
   tutto — e una parte vi ringrazierà per sempre.»*).
 
-**Sviluppi.** Questo racconto **incide** l'affresco A3 (master #2): dopo il rito,
+**Sviluppi.** Questo racconto **incide** l'affresco A3 (`DEF-2`): dopo il rito,
 A3 aggiunge la scena di Hella viva che posa una mano sulla spalla di Thorik. Il
 cerchio del lutto si chiude.
 
@@ -944,7 +951,7 @@ verde-oro funziona **ma la sente ostile** (vulnerabilità). Evoca un orso: appar
 mezzo-corteccia, cambiato dalla sua nuova affinità.
 
 **Le Benedizioni di Moradin su Hella** (Moradin: *«Combatterai i miei figli.
-Proteggili. Proteggi il focolare.»*) — le 6 standard (master #2 §7) **+**:
+Proteggili. Proteggi il focolare.»*) — le 6 standard (`DEF-2` §7) **+**:
 - **Mantello della Fiamma** (Resist Fuoco **20**) — **cruciale**: mitiga la sua
   vulnerabilità per una battaglia (falla valere prima di Skullcrusher/Fauci).
 - **Benedizione di Moradin Incarnato** (1/battaglia): +2 sacro att/danni, +4 vs
@@ -984,8 +991,8 @@ non promette. Dice quello che sa, e non di più.
 
 | La scelta | Cosa costa | Cosa apre |
 |---|---|---|
-| **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il master #4 parte con una posta reale invece che con un viaggio turistico |
-| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 16h** in `state.md`), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
+| **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il viaggio a mille anni fa (`DEF-4`) parte con una posta reale invece che con un viaggio turistico |
+| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 16h**), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
 | **Mandare avanti uno solo** | Moradin rifiuta: *«Il varco conta quattro. Ne ha contati quattro anche mille anni fa.»* | niente — ma la battuta dice al tavolo **che di là li aspettano in quattro** |
 
 > 🎭 **Grigio politico.** Therysol non vuole che vadano. Il suo *Want* non
@@ -998,8 +1005,8 @@ non promette. Dice quello che sa, e non di più.
 > respira da tre ore. **«Che fate?»**
 
 ⚠️ **Non dire** che il Rubino sta *dentro* la battaglia di −1.000 e si spende
-lì: è la posta del master #4, e `state.md` la registra come **single-use SPENT
-at the ancient battle**. Qui il tavolo deve solo sapere che di là c'è una
+lì: è la posta del viaggio (`DEF-4`), e lo stato della campagna la registra come
+**spesa nella battaglia antica**. Qui il tavolo deve solo sapere che di là c'è una
 pietra, non cosa le succederà.
 
 **✉ Si consegna qui, a tutti: *Le Cronache dei Quattro Eroi***, mentre la Corona
@@ -1012,7 +1019,7 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono resuscitarla PRIMA (Parte 2, appena ritrovata)** | Impossibile: i semi di treant e il viaggio dello spirito non sono ancora avvenuti. Moradin: *«Non ancora. Deve prima attraversare la Terra dentro di sé.»* |
-| **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, il countdown A7 scorre e Hella resta morta: è una scelta, con un costo (Tordek devastato, nessun 4° PG al #4). |
+| **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, il countdown A7 scorre e Hella resta morta: è una scelta, con un costo (Tordek devastato, nessun 4° PG al `DEF-4`). |
 | **Chiedono a Moradin di resuscitarla senza costi** | *«La magia non basta. Serve la vita. Io do il Cuore; voi date il resto — o lei torna monca di ciò che potevate donarle.»* (rifiuto totale, §5). |
 | **Attaccano/scacciano la Custode delle Radici** (§6) | Non combatte: si ritira (ramo B). Nessun scontro — ma il vuoto si colmerà da sé, peggio. |
 | **Un PG vuole sacrificare la PROPRIA vita** (oltre il richiesto) | Moradin **rifiuta**: *«Non chiedo una morte per una vita. Chiedo un dono, non un baratto di anime. Rimetti via quel coraggio: ti servirà domani.»* (evita il martirio gratuito). |
@@ -1045,15 +1052,15 @@ rimesso dritto undici volte.»* Da lì si riparte.
 
 | Evento (qui) | Eco | Quando riemerge | Dove si gestisce |
 |---|---|---|---|
-| 🛡️ **Thorik dona il +2 di deflessione** | −1 CA permanente; e ogni volta che lei scuda qualcuno **lui scatta** (Eco del Custode). Hella gli deve un debito morale | **ogni scontro** in cui lo Scudo si accende | state.md §1/§7 |
+| 🛡️ **Thorik dona il +2 di deflessione** | −1 CA permanente; e ogni volta che lei scuda qualcuno **lui scatta** (Eco del Custode). Hella gli deve un debito morale | **ogni scontro** in cui lo Scudo si accende | registro di fine serata |
 | ⚒️ **Tordek dona l'Ancoraggio** | i Bracieri non lo hanno più; in cambio **avvertono un round prima** dello spostamento forzato | P5, ARC-08 (giganti, draghi che afferrano) | `PG/Artefatti/.../Tordek/` |
 | 🔮 **Artemis dona 1d6 di EB** | l'*Eldritch Blast* resta a **6d6** per il resto della campagna | **ogni round in cui spara** | `PG/Artefatti/.../ringOfChaoticIllumination/` |
-| **Chi rifiuta un Dono** (§5) | **seme dormiente** (niente Scudo / niente RD / niente Rovo) **e l'artefatto reagisce**: Aegis Fang giudica, i Bracieri tacciono 7 giorni, l'Anello si spegne 24 h | ARC-08 (1ª ferita critica / 0 pf / lame drow) | `ARC08-REGISTRO-PERDITE` / HOOKS ARC-09 |
+| **Chi rifiuta un Dono** (§5) | **seme dormiente** (niente Scudo / niente RD / niente Rovo) **e l'artefatto reagisce**: Aegis Fang giudica, i Bracieri tacciono 7 giorni, l'Anello si spegne 24 h | ARC-08 (1ª ferita critica / 0 pf / lame drow) | registro delle perdite di ARC-08, ganci di ARC-09 |
 | 🌱 **La Collana restituisce** (potere #6) | **una volta sola per seme**: Hella rende al donatore ciò che aveva dato, per una scena | quando lei decide | `PG/Artefatti/.../Hella/01_Collana…` |
 | **Rifiuto totale** | 3 slot-dono vuoti sulla Collana | quest personali ARC-09 (un atto di sacrificio per slot) | HOOKS-INTEGRATION-MASTER |
-| **Il Debito della Radice** (§6) | pegno al Sogno della Terra (A: quest / B: vuoto che risale / C: Durik ponte) | ARC-09 (Cerchio Sacro / Ghostlord / corruzione fungina) | **state.md §7** + questo file |
-| **Thorik scopre "la presenza verde"** (§8) | il legame Thorik-Hella si approfondisce (fama/anointing) | ARC-08/09 (bond, Cerimonia 100 Asce) | state.md §7.R |
-| **Cuore di Moradin SPESO** | catalizzatore consumato per sempre | tutto l'arco a valle | state.md §6 |
+| **Il Debito della Radice** (§6) | pegno al Sogno della Terra (A: quest / B: vuoto che risale / C: Durik ponte) | ARC-09 (Cerchio Sacro / Ghostlord / corruzione fungina) | registro di fine serata, §6 |
+| **Thorik scopre "la presenza verde"** (§8) | il legame Thorik-Hella si approfondisce (fama/anointing) | ARC-08/09 (bond, Cerimonia 100 Asce) | registro degli echi |
+| **Cuore di Moradin SPESO** | catalizzatore consumato per sempre | tutto l'arco a valle | stato degli artefatti |
 | **Aegis Fang, se Thorik ha donato** | l'arma **smette di dubitare di lui**: nessuna prova di opposizione per un arco intero | ARC-08 | `PG/Artefatti/.../Aegis Fang/` |
 
 
@@ -1072,8 +1079,8 @@ rimesso dritto undici volte.»* Da lì si riparte.
 | Il Racconto delle Prove (§8) | roleplay/spotlight | 300 |
 | **TOTALE beat** | | **~1.900/PG** |
 
-> Interludio come il master #2: piccolo in PX, enorme in campagna. Somma alla
-> Terra (~11.600) e all'Affreschi (~1.900) → il 14° matura a Hammerfist (D8).
+> Interludio come il ritorno nella Sala (`DEF-2`): piccolo in PX, enorme in campagna. Somma alla
+> Terra (~11.600) e all'Affreschi (~1.900) → il 14° matura a Hammerfist.
 
 ### B. Artefatti & tesoro (ricchezza speciale, conteggio separato)
 | Oggetto | Chi | Stato dopo il rito | Valore di riferimento |
@@ -1081,7 +1088,7 @@ rimesso dritto undici volte.»* Da lì si riparte.
 | **Collana dei Semi Eterni** | Hella | **nasce ora** (Radicata): +4 SAG, +3 CA nat, Avatar della Radice, Evocazione dei Guardiani (Treant/Durik), 3 slot-dono | artefatto minore (non-WBL) |
 | **Durik Riforgiato** (12 DV) | Hella | compagno a pieno titolo (evocato dal 3° seme) | — |
 | **Cuore di Moradin** | (altare) | **SPESO** (single-use) — non torna | — |
-| **Corona di Adamantio** | Thorik | invariata (2/3 gemme); pronta ad aprire il portale del Tempo | già contata (#1) |
+| **Corona di Adamantio** | Thorik | invariata (2/3 gemme); pronta ad aprire il portale del Tempo | già contata (`DEF-1`) |
 
 ### C. Tesoro PREGENERATO — il ritorno del corredo di Hella
 > Un rito non è una stanza-tesoro, ma questo beat ha il suo loot naturale: alla
@@ -1102,34 +1109,33 @@ rimesso dritto undici volte.»* Da lì si riparte.
 > **Sorpresa nascosta (Osservare CD 20, sul corpo di Hella prima del rito):**
 > la **ghianda annerita** stretta nel pugno da quando è morta — l'ultima che
 > raccolse in vita (è la stessa **«Ghianda di Speranza»** che l'affresco A8
-> mostra, master #2). Al risveglio Hella la pianta nel primo suolo sacro che
+> mostra, `DEF-2`). Al risveglio Hella la pianta nel primo suolo sacro che
 > tocca (CANONE DM 2026-07-23): diventa un piccolo **àncora druidico** (+1 sacro
 > 1/giorno al Radicamento) **o** va nel 1° seme-dono vuoto della Collana — scelta
 > della giocatrice. 0 mo commerciali, peso emotivo enorme.
 
 > **Cuore di Moradin — dopo la spesa:** non lascia loot (si dissolve), ma sulla
 > superficie dell'Altare resta un'**impronta a forma di cuore**, tiepida per
-> sempre: la Sala ricorda anche questo (pannello-Cronaca, master #2).
+> sempre: la Sala ricorda anche questo (pannello-Cronaca, `DEF-2`).
 
-Le Benedizioni si rinnovano all'Altare (master #2 §7). Nessun altro loot
+Le Benedizioni si rinnovano all'Altare (`DEF-2` §7). Nessun altro loot
 ordinario (è un rito).
 
 
 ---
 
-## §12 — PONTE al master #4 + HANDOUT & ASSET
+## §12 — PONTE verso il viaggio a mille anni fa + HANDOUT & ASSET
 
 **Ponte.** Hella è viva, il party è di **quattro**, e la soglia (§8-ter) è
 stata attraversata. Al di là c'è Hammerfist come era **mille anni fa**, e una
-battaglia che deciderà, nel passato, le sorti del presente. → **master #4: il
-Viaggio a 1.000 anni fa** (Hella è il 4° PG).
+battaglia che deciderà, nel passato, le sorti del presente. → **il Viaggio a 1.000 anni fa
+(`DEF-4`)** (Hella è il 4° PG).
 
 ### Handout giocatore
 
 Sono i sei fogli della tabella di §0, «Cosa si consegna, e quando»: gli echi, il
 Cuore, la preghiera, le carte dei Doni, Hella tornata con Durik, le Cronache.
-Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
-`ARC07-SERATA-GIOCATORI` li stampa un foglio ciascuno.
+Sono nel volume dei giocatori, *Il Cuore e la Porta*, un foglio ciascuno.
 
 ### Immagini (atlante C1 — momenti d'uso)
 | Momento | Immagine |
@@ -1148,18 +1154,20 @@ Stanno in `homebrew/sessione-resurrezione-mille-anni/`, e il volume
 
 ---
 
+<!-- apparato -->
 ### FILE-FONTE ASSORBITI DA QUESTO MASTER (→ `_ARCHIVIO/` a consolidamento chiuso)
 `_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md` (master B2: rito, sacrifici,
 ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md`
 (deprecato) · risultati del viaggio (`...-MONDO-risultati.md`, canone integrato).
 *(Le schede Collana/Durik restano vive in `PG/Artefatti/`.)*
+<!-- /apparato -->
 
 <!-- pagina: una-colonna -->
 
 ## APPENDICE A — STATISTICHE
 
 > Una pagina A4 a una colonna. La giocatrice di Hella ha la sua versione, le
-> righe da aggiungere alla scheda (`09-SCHEDA-HELLA-RISORTA.md`); questa è la
+> righe da aggiungere alla scheda (*Hella, tornata*, nel volume dei giocatori); questa è la
 > scheda completa per il DM, e i numeri stanno qui una volta sola.
 
 ### A.1 · Hella Oakenshield, risorta (§7)
@@ -1246,7 +1254,7 @@ sull'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
-> Definitivo**: `Mappe/ARC07-MAPPE-DEFINITIVO.md`. Le griglie qui sotto sono
+> Definitivo**<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->. Le griglie qui sotto sono
 > identiche; là hanno gli add-on DM. La pianta a pergamena della Sala è
 > all'inizio di questa appendice.
 
@@ -1254,7 +1262,7 @@ sull'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
 
 ```
 ════════════════════════════════════════════════════════════════════════
- IL CERCHIO DEL RITO — al centro della Sala della Forgia (ottagono, master #2)
+ IL CERCHIO DEL RITO — al centro della Sala della Forgia (l'ottagono degli affreschi)
  Cerchio rituale Ø 6 m (raggio 3 m) attorno all'Altare · Sud lasciato VUOTO
 ════════════════════════════════════════════════════════════════════════
                           NORD  ▼
