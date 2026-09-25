@@ -127,6 +127,16 @@ ARC-07 B9; file combinato player+DM, ora la parte DM). **⭐ HANDOUT giocatore**
 post-resurrection" (stato preparato): vedi [T4-a]. Gli **slot-dono del party
 (3)** si legano al ramo del rifiuto del P3B §2-BIS.
 
+**⭐ PAGINA giocatore stampabile** (2026-09-25): `Artefatti-Pg/Hella/01_Collana_Radicata.html`,
+gemella di `ringOfChaoticIllumination/00_Ring_Riforgiato.html`, con l'immagine
+`collana-dei-semi-eterni.jpg` (Canva AI, provenienza in `PROVENIENZA.txt`). I poteri
+vengono dal foglio consegnato alla serata della resurrezione,
+`07_…/homebrew/sessione-resurrezione-mille-anni/09-SCHEDA-HELLA-RISORTA.md`. ⚠️ Il master
+DM e l'handout `00_…` sono rimasti indietro rispetto a quel foglio: fanno ancora
+*evocare* Durik (dalla serata è sempre presente, e il seme III lo richiama solo se è
+stato distrutto) e portano `[INFERRED]` che il lotto delle marcature di `PG/` deve
+chiudere col DM. Il PDF si esporta dalla pagina (Chromium, «Stampa»); non è nel repo.
+
 ## 6. SINERGIE (party)
 
 **⭐ MASTER**: `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md` (creato in T4 —

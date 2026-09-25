@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collana dei Semi Eterni — Radicata (stato attuale)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <!-- Gemella di ../ringOfChaoticIllumination/00_Ring_Riforgiato.html: stessa
+         struttura, tavolozza di muschio, corteccia e adamantio. I poteri vengono
+         dal foglio «Hella, tornata» della serata della resurrezione
+         (07_…/homebrew/sessione-resurrezione-mille-anni/09-SCHEDA-HELLA-RISORTA.md),
+         che è il canone consegnato al tavolo. -->
+    <style>
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        html {
+            background: #eef0e4;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+            line-height: 1.4;
+            color: #22301c;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f6f7f0 0%, #e6eadb 100%);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #3d5a2a;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .class-title {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #3d5a2a;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 14pt;
+            font-style: italic;
+            color: #5a5a3c;
+            margin: 5px 0;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            color: #4a4a30;
+            font-size: 13pt;
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid #8a9aa0;
+            background: rgba(138, 154, 160, 0.12);
+        }
+
+        .voto {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 14pt;
+            color: #2f4a1e;
+            text-shadow: 0 0 4px #9acd32;
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #3d5a2a;
+            font-size: 16pt;
+            font-weight: bold;
+            border-bottom: 2px solid #8a9aa0;
+            padding-bottom: 3px;
+            margin: 20px 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #4a4a30;
+            font-size: 14pt;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+        }
+
+        .ability-name {
+            font-weight: bold;
+            color: #3d5a2a;
+        }
+
+        .ability-type {
+            font-style: italic;
+            color: #5a5a3c;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 11pt;
+        }
+
+        th {
+            background: linear-gradient(135deg, #3d5a2a, #5b4a2e);
+            color: white;
+            padding: 8px 4px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #2c3f1e;
+        }
+
+        td {
+            padding: 6px 4px;
+            text-align: center;
+            border: 1px solid #8a9aa0;
+            background: rgba(246, 247, 240, 0.85);
+        }
+
+        tr:nth-child(even) td {
+            background: rgba(230, 234, 219, 0.85);
+        }
+
+        td.l { text-align: left; }
+        td.casella { font-size: 16pt; width: 6%; }
+
+        .requirements {
+            background: rgba(61, 90, 42, 0.08);
+            border: 2px solid #3d5a2a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .guardiano {
+            background: rgba(138, 154, 160, 0.12);
+            border: 2px solid #6f7f86;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 11pt;
+        }
+
+        .doni {
+            background: rgba(154, 205, 50, 0.07);
+            border: 2px solid #5b7f2e;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .artifact-image {
+            display: block;
+            margin: 0 auto 10px auto;
+            max-width: 26%;
+            height: auto;
+            border: 2px solid #3d5a2a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .dm-box { border: 2px dashed #5b4a2e; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .dm-box h3 { color: #5b4a2e; margin-top: 0; text-transform: uppercase; letter-spacing: 1px; font-size: 13pt; }
+        .dormiente { background: rgba(120,120,120,0.10); border: 2px dashed #999; padding: 15px; margin: 15px 0; border-radius: 5px; color: #555; }
+
+        @media print {
+            body { padding: 0; font-size: 11pt; background: none; }
+            table { font-size: 10pt; margin: 10px 0; }
+            h2 { margin: 14px 0 8px 0; }
+            .artifact-image { max-width: 30%; }
+            table, .requirements, .guardiano, .doni, .dormiente, .dm-box {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            h2, h3 { break-after: avoid; page-break-after: avoid; }
+            tr { break-inside: avoid; page-break-inside: avoid; }
+            p, li { orphans: 3; widows: 3; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="class-title">Collana dei Semi Eterni</h1>
+        <div class="subtitle">Germogliata alla Forgia Eterna, al rito di Hella — stato: Radicata</div>
+        <div class="voto">&laquo;Non un muro davanti a voi: una radice sotto di voi.&raquo;</div>
+    </div>
+
+    <img src="collana-dei-semi-eterni.jpg" alt="Collana dei Semi Eterni" class="artifact-image">
+
+    <div class="quote">
+        Un torc di legno e metallo, alla temperatura di chi lo porta. Tre semi: due verdi, venati d'adamantio come radici in miniatura; il terzo grigio-verde e ruvido come corteccia. Toccandolo senti il peso di una testa appoggiata sul petto.
+    </div>
+
+    <div class="requirements">
+        <strong>Slot:</strong> collo &middot; <strong>Legata a:</strong> Hella, e a nessun altro &middot; <strong>Nata da:</strong> il rito della resurrezione, e i doni dei compagni<br>
+        <strong>Stadio:</strong> Radicata<br>
+        <strong>Non si toglie per caso:</strong> le estremità affondano appena sotto la pelle, come radichette. Toglierla è una scelta, mai un incidente.
+    </div>
+
+    <h2>Poteri sempre attivi</h2>
+
+    <table>
+        <tr><th style="width:28%">Potere</th><th>Effetto</th></tr>
+        <tr>
+            <td><span class="ability-name">Saggezza della Terra</span><br><span class="ability-type">costante</span></td>
+            <td class="l"><strong>+4 di potenziamento alla Saggezza</strong>. Non si somma al Periapto di Saggezza: vale il bonus più alto.</td>
+        </tr>
+        <tr>
+            <td><span class="ability-name">Corteccia del Guardiano</span><br><span class="ability-type">costante</span></td>
+            <td class="l"><strong>+3 di armatura naturale</strong> alla CA.</td>
+        </tr>
+    </table>
+
+    <h2>Poteri da attivare</h2>
+
+    <table>
+        <tr><th style="width:26%">Potere</th><th style="width:20%">Azione &middot; usi</th><th>Effetto</th></tr>
+        <tr>
+            <td><span class="ability-name">Avatar della Radice</span><br><span class="ability-type">Sop</span></td>
+            <td>standard<br>1/giorno</td>
+            <td class="l">Diventi un <strong>Ibrido Treant Enorme</strong> per <strong>10 round</strong>: <strong>+8 FOR</strong>, portata estesa, schianti. Torna all'alba.</td>
+        </tr>
+        <tr>
+            <td><span class="ability-name">Evocazione dei Guardiani</span><br><span class="ability-type">Sop &middot; un seme per volta</span></td>
+            <td>standard<br>3/giorno</td>
+            <td class="l">Semi I e II: un <strong>Treant di Adamantio</strong>. Seme III: <strong>Durik</strong>, se è stato distrutto.</td>
+        </tr>
+    </table>
+
+    <div class="guardiano">
+        <span class="ability-name">Treant di Adamantio</span> <em>(evocato)</em> &middot; Grande &middot; <strong>90 pf</strong> &middot; RD 10/adamantio &middot; <strong>CA 24</strong> &middot; velocità 9 m &middot; 2 schianti <strong>+18</strong> (2d8+9) &middot; danni doppi a oggetti e strutture, ignora la durezza sotto 20 &middot; i suoi colpi contano come adamantio.
+    </div>
+
+    <h2>I doni dei tuoi compagni</h2>
+
+    <div class="doni">
+        <p style="margin-top:0">Al rito ognuno ha dato un potere del proprio artefatto. Quel potere non torna indietro: è germogliato qui.</p>
+        <table>
+            <tr><th></th><th style="width:8%">Seme</th><th style="width:26%">Da chi</th><th>Cosa ti dà</th></tr>
+            <tr>
+                <td class="casella">&#9744;</td><td><strong>I</strong></td>
+                <td class="l">Thorik, la sua deflessione</td>
+                <td class="l"><span class="ability-name">Scudo del Custode</span>: 1 volta al giorno, azione immediata, prendi su di te il danno destinato a un alleato entro <strong>9 m</strong>, <strong>dimezzato</strong>. E Thorik scatta verso chi hai protetto.</td>
+            </tr>
+            <tr>
+                <td class="casella">&#9744;</td><td><strong>II</strong></td>
+                <td class="l">Tordek, il suo Ancoraggio</td>
+                <td class="l"><span class="ability-name">Pelle di Adamantio</span>: <strong>RD 3/adamantino</strong>. La tua unica.</td>
+            </tr>
+            <tr>
+                <td class="casella">&#9744;</td><td><strong>III</strong></td>
+                <td class="l">Artemis, un dado del suo colpo</td>
+                <td class="l"><span class="ability-name">Rovo Eldritch</span>: a volontà, azione standard, contatto a distanza <strong>18 m</strong>, <strong>2d6</strong>, metà rovi e metà fuoco.</td>
+            </tr>
+        </table>
+        <p><strong>La restituzione.</strong> Una volta sola per ogni seme germogliato, azione immediata, <strong>decidi tu</strong>: il seme rende al compagno quello che aveva dato, per una scena intera. Poi quel seme non restituisce più. Non consuma l'evocazione.</p>
+        <p style="margin-bottom:0">Un seme senza dono resta <strong>dormiente</strong>: evoca il suo guardiano, ma non germoglia niente sopra.</p>
+    </div>
+
+    <div class="dormiente">
+        <h3 style="margin-top:0;color:#666;">Ciò che dorme</h3>
+        La Collana cresce con la storia, non coi livelli. Radicata è il suo primo stato, non l'ultimo. Quando cambierà, lo saprai perché sarà successo.
+    </div>
+
+    <div class="requirements">
+        <strong>Vincolo.</strong> La Collana riconosce solo Hella, e serve la memoria della Terra. Non è un oggetto suo: è il ricordo del perché è tornata.
+    </div>
+
+    <div class="dm-box">
+        <h3>Registro (compila a penna)</h3>
+        Germogliata al rito di resurrezione &middot; data: ____________________<br>
+        Doni ricevuti: I &#9744; &nbsp; II &#9744; &nbsp; III &#9744;<br>
+        Restituzioni spese: I &#9744; &nbsp; II &#9744; &nbsp; III &#9744;<br>
+        _______________________________________________<br>
+        _______________________________________________
+    </div>
+
+</body>
+
+</html>
