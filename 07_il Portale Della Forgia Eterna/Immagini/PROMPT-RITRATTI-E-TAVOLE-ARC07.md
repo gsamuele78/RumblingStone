@@ -288,6 +288,7 @@ che non deve mancare» di ogni scheda.
 | `tavola-hammerfist-giovane` | [MAHWL9hrJvc](https://www.canva.com/M/MAHWL9hrJvc) | pietra bianca al tramonto, targa ornata; **i fuochi del campo sulla piana non si vedono** |
 | `tavola-skullcrusher-nel-cortile` | [MAHWL-laBHk](https://www.canva.com/M/MAHWL-laBHk) | drago nero nel cortile, quattro figure di spalle; tiene |
 
-Le quattro righe in grassetto sono candidate al rifiuto. Se il DM le scarta, il
-motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`, e l'immagine si
+Le sei righe con una parte in grassetto si guardano per prime: cinque sono
+candidate al rifiuto, il portale va solo verificato a piena risoluzione. Se il
+DM scarta un'immagine, il motivo va in `SCARTI.txt` come fa `comfyui_batch.py --reroll`, e l'immagine si
 rigenera: con Canva non c'è seme da cambiare, si corregge il prompt.
