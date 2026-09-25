@@ -192,15 +192,17 @@
   // verticale a tutta larghezza su una colonna sola è più alto del foglio,
   // scivola alla pagina dopo e lascia il suo titolo da solo in fondo a quella
   // prima (la scheda di Hella nel fascicolo dei giocatori, 2026-09-25).
+  // Il tetto si applica misurando, mai con un'altezza fissa adattata a
+  // «contain»: la cornice sarebbe alta 21 cm anche per una mappa da 16, e
+  // la coda della pagina scivolerebbe alla successiva (il Palio, 2026-09-25:
+  // una riga sola a pagina 4, un fregio solo a pagina 62).
+  let tetto = if pagina { 21cm } else { 16cm }
   let corpo = figure(
-    if pagina { image(percorso, width: 100%, height: 21cm, fit: "contain", alt: alt) }
-    else {
-      layout(spazio => {
-        let alta = measure(image(percorso, width: spazio.width)).height
-        if alta > 16cm { align(center, image(percorso, height: 16cm, alt: alt)) }
-        else { image(percorso, width: 100%, alt: alt) }
-      })
-    },
+    layout(spazio => {
+      let alta = measure(image(percorso, width: spazio.width)).height
+      if alta > tetto { align(center, image(percorso, height: tetto, alt: alt)) }
+      else { image(percorso, width: 100%, alt: alt) }
+    }),
     caption: if didascalia == none { none } else {
       text(size: 8.4pt, style: "italic", fill: seppia)[#didascalia]
     },
@@ -234,7 +236,11 @@
 // Una tabella da 4+ colonne in una colonna da 8 cm diventa illeggibile: si
 // spezzano perfino le parole del titolo. Sopra quella soglia scavalca le due
 // colonne, che è quello che fa un manuale stampato.
-#let tabella(n, ..celle) = {
+// `pagina`: la tabella sta già su un foglio a una colonna. Lì non serve che
+// scavalchi niente, e un float non si spezza: una tabella più alta di un
+// foglio usciva dal fondo e si stampava sopra se stessa (l'indice delle 48
+// aree dell'Abbazia, 1.462 righe sovrapposte a pagina 32).
+#let tabella(n, pagina: false, ..celle) = {
   let corpo = block(breakable: true)[
   #table(
     columns: n,
@@ -245,7 +251,7 @@
     ..celle
   )
 ]
-  if n >= 4 { place(top, float: true, scope: "parent", clearance: 10pt, corpo) }
+  if n >= 4 and not pagina { place(top, float: true, scope: "parent", clearance: 10pt, corpo) }
   else { corpo }
 }
 
@@ -429,6 +435,15 @@
   }
   show strong: set text(fill: rgb("#4a2c12"), weight: 600)
   show raw: set text(font: MONO, size: 9pt)
+  // Un percorso in `codice` è una parola sola: senza punti di rottura esce
+  // dalla colonna e si stampa sopra quella accanto (il volume del −1000 e la
+  // sessione di Terros, 2026-09-25). Si spezza dopo / _ . - e fra una
+  // minuscola e una maiuscola (`PortaleDellaForgiaEterna`), e non altrove.
+  show raw.where(block: false): it => {
+    show regex("[/_.\-]"): c => c + sym.zws
+    show regex("\p{Ll}\p{Lu}"): c => c.text.first() + sym.zws + c.text.last()
+    it
+  }
 
   if not apparato {
     corpo

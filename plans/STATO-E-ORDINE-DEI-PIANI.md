@@ -21,20 +21,25 @@
 > diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
 > e non si aggiornano più.
 
-**Ultimo aggiornamento**: 2026-09-25, i master `DEF-3` e `DEF-4` in ordine di gioco per la serata (ramo `claude/eager-fermat-ftrmzd`).
+**Ultimo aggiornamento**: 2026-09-25, dopo il merge della [#169](https://github.com/gsamuele78/RumblingStone/pull/169) (`61fe39c`). Cosa ha chiuso e cosa ha lasciato aperto: §11.
 
 | | Cosa | Classe | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|---|---|
 | ✅ | I 24 «refusi» di `validate_lingua`: 11 veri corretti | M | §10.1 · #167 | fatto |
 | ✅ | I 13 falsi positivi di `validate_lingua`; il passo in CI blocca i refusi (non gli avvisi) | C | CHANGELOG 2026-09-24 · #168 | fatto |
 | ✅ | Il falso positivo di `validate_prosa` sul registro delle conseguenze del Torneo di Dauth | C | CHANGELOG 2026-09-24 · #168 | fatto |
-| ✅ | **La serata del 2026-09-25**: booklet DM e volume giocatori per la resurrezione di Hella e il −1000 fino all'alba; decisioni S1-S4 del DM; regola 3 degli echi (*un eco non anticipa*) | C + G3 | CHANGELOG 2026-09-24 · `07_…/homebrew/sessione-resurrezione-mille-anni/` | fatto; **dopo la serata** si chiude col wizard `dm.py session` sul ramo del gruppo, dal registro in regia §6 |
-| ✅ | **Al DM, dalla preparazione della serata**: nove decisioni prese il 2026-09-24 e applicate (cugini, Frostcleaver, Zeth a mille anni, Balvar, Occhio di Ossidiana, Hella come nei ritratti, Therysol donna, Durik 102 pf, preghiera in nanico nuovo) | | regia della serata §7 · CHANGELOG | fatto |
-| ✅ | **Il volume del viaggio a −1000**, rigenerato con `dm.py volume --stampa` e i master allineati; ritratti del cast con i prompt R1-R7 | C | `07_…/homebrew/volume-mille-anni/` | fatto; i ritratti si generano sulla macchina del DM |
-| ✅ | **`DEF-4` e `DEF-3` in ordine di gioco**, su richiesta del DM del 2026-09-25: corpo che si legge in avanti, schede d'entrata dei PNG nelle scene, statistiche e mappe in appendici A4 a una colonna, dieci contraddizioni di prosa corrette in `DEF-4`, ✉ segnati nel punto di consegna; mappa nuova M7-C della tenda; M7-B corretto | C | CHANGELOG 2026-09-25 · `DEF-4` §9 «Cosa è cambiato» | fatto; la geometria di M7-C è una `[PROPOSTA]` del DM |
-| 🙋 | **Al DM**: il grido *«Baruk Khazâd! Khazâd ai-mênu!»* di Tolkien resta, voluto, in `PortaleForgia-P1` e nell'errata di ARC-08; generare i sette ritratti e le sei tavole | | `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md`, stile del Drappo | `comfyui_batch.py --prompts <file> --serie tutto` sulla macchina del DM |
-| ▶ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | M + G3 | §8.3 | una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
-| ⬜ | **Le 120 legature della Corona** (`aﬀresco`) | M | §10.1 | prima si conta in tutto il repo, poi si decide se è un lotto o uno per file; qualità: nessuna legatura, nessun'altra riga cambiata |
+| ✅ | **La serata del 2026-09-25**: booklet DM, 13 pagine ✉ per i giocatori e il volume «Il viaggio a mille anni fa»; decisioni S1-S4 del DM; regola 3 degli echi (*un eco non anticipa*, `consequence-echoes.md` §3-ter) | C + G3 | §11.1 · #169 | fatto |
+| ✅ | **Nove decisioni del DM** del 2026-09-24 applicate ai master (cugini Thorek e Thorgrim, Frostcleaver, Zeth a mille anni, Balvar INT 16 e SAG 20, Occhio di Ossidiana, Hella come nei ritratti, Therysol donna, Durik 102 pf, preghiera in nanico) | K | regia della serata §7 · #169 | fatto |
+| ✅ | **`DEF-4` e `DEF-3` in ordine di gioco**; mappe di `DEF-2` in appendice A4; M7-C nuova, M7-B corretta; discorso di Moradin sui Doni in `DEF-3` §5 | C | §11.1 · `DEF-4` §9 · #169 | fatto |
+| ✅ | **Editoria**: una mappa entra in colonna (48 celle) o va su A4 e non va mai a capo; ogni capitolo apre una pagina; immagini fuori da una pagina dedicata sotto i 16 cm. Norma registrata (43 norme) | C + G3 | `rumblingstone-editoria` §2 e §4.4 · #169 | fatto |
+| ✅ | **Il controllo a vista di tutti i volumi dopo la regola editoriale della #169**: quindici volumi compilati prima e dopo `a9fe251`. Un difetto veniva dalla #169 (la figura su A4 riservava sempre 21 cm), tre c'erano da prima (codice in linea, righe `____`, tabelle più alte di un foglio). Corretti nel tema e nell'esportatore: sovrapposizioni da 1.474 a 0 | C + G3 | §11.3 · `rumblingstone-editoria` §4.5 | fatto |
+| 🙋 | **Al DM: chiudere la serata del 2026-09-25.** In `campaign/sessions/` non c'è ancora il log: cosa è successo al tavolo lo sa solo il DM | K | regia della serata §6 (il registro) · `rumblingstone-automation` | `python3 scripts/dm.py session end` sul ramo `campaign-group-rumblingstone-dm-gianfranco`, mai su `main` (ADR-0007) |
+| 🙋 | **Al DM: le domande rimaste nei master di ARC-07** | K | §11.2 | una risposta per riga; l'agente poi toglie la marcatura |
+| 🙋 | **Al DM**: generare i sette ritratti e le sei tavole; il grido *«Baruk Khazâd! Khazâd ai-mênu!»* di Tolkien resta, voluto, in `PortaleForgia-P1` e nell'errata di ARC-08 | | `Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md`, stile del Drappo | `comfyui_batch.py --prompts <file> --serie tutto` sulla macchina del DM |
+| ▶ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | M + G3 | §8.3 | agente: una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
+| ⬜ | **Le 120 legature della Corona** (`aﬀresco`) | M | §10.1 | agente: prima si conta in tutto il repo, poi si decide se è un lotto o uno per file; qualità: nessuna legatura, nessun'altra riga cambiata |
+| ⬜ | **Due residui editoriali minori**: l'ultima riga dell'indice delle 48 aree dell'Abbazia cade sola a pagina 35; il Palio stampa «Naviga i capitoli qui sopra», che è una frase della catena HTML | M | §11.3 | agente: il primo si prova con una soglia di righe per pagina, il secondo va tolto dall'introduzione del manifest solo nella stampa |
+| ⬜ | **`fase1.py` in un clone shallow** dice «65 file senza posto» nei rami, e sono falsi: con la storia intera `contenuti_nei_rami --check` è verde (50 file, tutti col loro posto) | C | §11.4 | agente: riconoscere il clone shallow e dirlo, come fa già `contenuti_nei_rami.py` quando non ha niente da misurare |
 | 🟡 | **PI-3, il resto**: la prima PR di Dependabot, la prova del blocco dei segreti (DM), la revisione con l'IA; le azioni della CI su Node.js 20 | | PRATICHE PI-3 | si guarda alla prossima PR |
 | 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main` | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
 | ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
@@ -407,7 +412,7 @@ per momento del ciclo.
 |---|---|---|---|
 | ✅ | **2C** — i box read-aloud che presuppongono un'azione del giocatore | [PIANO-QUATTRO-ORDINI](PIANO-QUATTRO-ORDINI-2026-09-20.md) §2C | *chiuso il 2026-09-21*: `misura_craft --p1` → **22 su 477**, e sono un **elenco nominale** (12 dialoghi · 6 falsi positivi · 2 visioni · 1 canto · 1 condizionale), ancorato file per file da `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`. ⚠️ **Non si porta a zero**: il rilevatore dichiara di non distinguere il dialogo dalla narrazione *(485 box dal 2026-09-25: una nota di allineamento in `DEF-2` A3, le battute di Moradin che chiedono i Doni in `DEF-3` §5, e i quattro box nuovi di `DEF-4` riordinato: il bosco, la sala del trono, la postierla, la tenda; i residui restano 22)* <!-- attesa: 22 box su 485 --> |
 | ⬜ | **M1-M3** — marcare gli incontri | [PIANO-MARCATURA-DEGLI-INCONTRI](PIANO-MARCATURA-DEGLI-INCONTRI.md) | `python3 scripts/validate_modules.py --tetto-el` → oggi **zero incontri marcati** |
-| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa)* <!-- attesa: 43 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
+| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte)* <!-- attesa: 44 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
 | 🟡 | **F1.5 + F3.3** — i due campioni e il κ | idem | ✅ F1.5 chiuso; F3.3 **eseguito sul campione B: κ = 0,0** *(misurato 2026-09-21)*. La metrica si dichiara non affidabile e **non entra in CI**. Le manca una norma che morda, e la strada è la verifica aritmetica degli statblocchi, sbloccata dagli `attributi` (riga sotto) |
 | ✅ | **Conformità meccanica degli statblocchi** — tutti i lotti chiusi: L1, L2, L2-bis, L3, L4, L5, L6, L6-ter, L7; restano solo **decisioni del DM** (§9) | [RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI](RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI.md) §8-9 | `python3 scripts/conformita_statblocchi.py --check` → **ogni `pf-dado` registra i dadi vita** · `python3 scripts/conformita_statblocchi.py --riepilogo` → **101 tornano, 0 da correggere, 0 scarti del generatore, 0 decisioni aperte al DM** *(misurato 2026-09-23, dopo D1-D12)* <!-- attesa: da correggere 0 --> |
 | ✅ | ~~i 27 ADR mancanti in `docs/INDEX.md` §4~~ | *nessun lotto: non c'era niente da fare* | `validate_docs --sorgenti` → **0** *(misurato 2026-09-21)*. 🐛 **I 27 non sono mai esistiti**: il buco più grande che `plans/adr/` abbia mai avuto è stato **uno**, il 2026-09-12, e da `14694c4` (16 settembre) l'indice è completo. Vedi §6.5 |
@@ -720,3 +725,99 @@ prime due righe sono state chiuse nella #168.
 
 Passato in **§0**. Qui diceva «13 attesi» per `validate_lingua`; dopo la #168
 sono 0.
+
+---
+
+## 11 · Dopo la #169 (2026-09-25)
+
+> **Perché questa sezione.** Il DM, dopo il merge della
+> [#169](https://github.com/gsamuele78/RumblingStone/pull/169): *«continua il
+> lavoro che c'è da fare guardando i piani, e scrivi nello stato che cosa è
+> stato fatto e che cosa manca»*. La lista viva resta §0; qui c'è il diario.
+
+### 11.1 · Cosa ha chiuso la #169
+
+| Cosa | Dove |
+|---|---|
+| La serata del 2026-09-25: booklet del DM, 13 pagine ✉ per i giocatori, il volume «Il viaggio a mille anni fa» | `07_…/homebrew/sessione-resurrezione-mille-anni/` · `homebrew/volume-mille-anni/` |
+| `ARC07-DEF-4` in ordine di gioco: tre atti, tredici scene, schede d'entrata dei PNG, appendici A4 da A a D, dieci contraddizioni corrette | `DEF-4` §9 «Cosa è cambiato» |
+| `ARC07-DEF-3`: lo Step 6 dopo i Doni e la Custode, §8-bis e §8-ter, le righe «✉ Si consegna qui», appendici A e B, il discorso di Moradin sui Doni in §5 | `DEF-3` |
+| `ARC07-DEF-2`: le mappe in un'appendice A4 | `DEF-2` |
+| M7-C, la tenda del comando, nuova; M7-B corretta | `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.{json,md}` · `ARC07-MAPPE-DEFINITIVO.md` |
+| Nove decisioni del DM applicate ai master | regia della serata §7 |
+| Regola 3 degli echi: un eco non anticipa | `consequence-echoes.md` §3-ter |
+| Una mappa entra in colonna o va su A4; ogni capitolo apre una pagina; immagini fuori pagina sotto i 16 cm | `rumblingstone-editoria` §2 e §4.4 · `rumblingstone-mapmaking` regola 7 |
+| Catalogo dei mostri a 379 voci, impronta delle creature rigenerata | `build_monster_catalog --check` verde |
+
+Rimisurato su `main` il 2026-09-25: `validate_norme_editoriali` 43 norme prima
+di questa sessione, `build_monster_catalog --check` 379 voci in pari,
+`decisioni_dm --check` 15 aperte su 60 e allineato. `pytest scripts/tests`
+su `main` dà 1.336 passati e 20 saltati in un ambiente senza `typst` né Pillow;
+con i due installati, come in CI, i saltati girano. A fine sessione, con i nove
+test nuovi di §11.3: 1.365 passati, nessuno saltato.
+
+### 11.2 · Le domande rimaste nei master di ARC-07
+
+Sono marcate nei file e nessuna è una decisione di un piano, perciò non
+entrano nell'aggregato di §4. Si risponde qui sotto o nel file; l'agente poi
+toglie la marcatura.
+
+| # | Dove | La domanda |
+|---|---|---|
+| Q1 | `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` | La tenda misura 18 m × 16,5 m. `DEF-4` dice dove stanno le quattro rune e chi c'è, non quanto è grande: va bene così? |
+| Q2 | `DEF-4` Scena 12, riga 1365 | Il nano molto vecchio del Rituale è Thorgrim? Il box non lo nomina, quindi regge in tutti e due i casi |
+| Q3 | `DEF-3` Appendice A, riga 1200 | L'equipaggiamento di Hella: la scheda dice cuoio borchiato, scudo di legno e scimitarra, il §11 C dice cuoio, falcetto o scudo leggero. Oggi vale la scheda della giocatrice |
+| Q4 | `DEF-4` riga 658 | Se al rito Hella ha trovato la ghianda annerita e non l'ha ancora piantata, il suolo sacro del −1000 può essere il suo? |
+| Q5 | `DEF-4` righe 370-372, 486-488, 668-670 · `DEF-3` riga 770 | Sette dettagli di recitazione nelle schede d'entrata (Durin, Re Thorek I, Zeth, la Custode): come stanno in scena e come parlano. Sono proposte, e un «sì a tutte» basta |
+
+### 11.3 · Il controllo a vista dopo la regola editoriale
+
+La #169 ha cambiato il tema e l'esportatore, quindi tutti i volumi, non solo
+i tre della serata. I quindici manifest sono stati compilati sul commit prima
+della regola (`34a0b70`) e su `main`, e letti con PyMuPDF. La procedura sta
+adesso in `rumblingstone-editoria` §4, «Il controllo a vista».
+
+| Volume | Pagine prima → dopo la #169 → adesso |
+|---|---|
+| Palio | 52 → 64 → 61 |
+| Drappo, booklet del DM | 83 → 92 → 92 |
+| Serata della resurrezione | 95 → 104 → 104 |
+| Serata, fogli dei giocatori | 13 → 18 → 18 |
+| Abbazia della Rotta Sicura | 34 → 36 → 38 |
+| Terros · volume del −1000 · ritorno alla Forgia · prop del Drappo | +3 · +2 · +1 · +2 |
+| gli altri cinque | invariati |
+
+La crescita viene da «ogni capitolo apre una pagina», ed è voluta. Le mappe
+larghe della sessione di Terros e del Palio ora stanno su A4 e non vanno a
+capo: su `main` prima della #169 uscivano dal foglio in quattro pagine di
+Terros, ora in nessuna.
+
+I difetti trovati, e dove sono stati corretti:
+
+| Difetto | Da quando | Correzione |
+|---|---|---|
+| Una figura su pagina A4 riservava sempre 21 cm: nel Palio una riga sola a pagina 4 e un fregio solo a pagina 62 | dalla #169, che ci manda ogni mappa verticale | tema, `figura()`: il tetto si applica misurando |
+| Percorsi in `codice` e parole come `PortaleDellaForgiaEterna` uscivano dalla colonna | da prima | tema, `show raw.where(block: false)` |
+| Righe da compilare `____` uscivano dalla colonna (schede di feedback del Drappo) | da prima | esportatore, `_RIGA_DA_COMPILARE` |
+| L'indice delle 48 aree dell'Abbazia, un float più alto di un foglio, si stampava sopra se stesso: 1.462 righe sovrapposte | da prima | esportatore, `RIGHE_TABELLA_FLOTTANTE` = 30, e `tabella(pagina: true)` nel tema |
+| I `.typ` dei volumi in `homebrew/<sessione>/` non erano ignorati da git | da prima | `.gitignore`, `**/homebrew/**/*.typ` |
+
+Sovrapposizioni di testo su `main`: 1.474 in quattro volumi; adesso zero.
+Pagine con testo oltre il bordo: otto in quattro volumi; adesso zero, più un
+falso positivo noto. Restano due residui minori, in §0.
+
+⚠️ **Quello che non è stato guardato a occhio.** Le pagine sono state
+scelte dalle misure, e guardate una per una solo dove una misura segnalava
+qualcosa o dove la pagina conteneva una mappa del Palio, di Terros o
+dell'Abbazia. Un difetto che non sposta il testo (un colore, un'immagine
+sbagliata al posto giusto) le misure non lo vedono.
+
+### 11.4 · Una misura falsa evitata
+
+`fase1.py`, nel clone della sessione, diceva *«108 file mai arrivati su
+`main`, 65 senza posto»*. Il clone era shallow: `rev-list --objects` vedeva
+206 commit su una storia più lunga, e i file entrati su `main` prima di quei
+206 sembravano mai arrivati. Con `git fetch --unshallow` lo stesso comando dà
+50 file, tutti col loro posto, e `--check` è verde. Il registro è giusto;
+lo strumento non dice che sta misurando su metà storia. È una riga di §0.
+

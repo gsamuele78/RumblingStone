@@ -14,6 +14,8 @@ Solo `unittest`: la CI non installa pytest.
 from __future__ import annotations
 
 import json
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -236,11 +238,114 @@ class TestMappeCheNonEntranoInColonna(unittest.TestCase):
     def test_un_ritratto_verticale_non_supera_i_16_cm(self):
         tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
         figura = tema.split("#let figura(percorso, didascalia:", 1)[1].split("\n}\n", 1)[0]
-        self.assertIn("alta > 16cm", figura)
+        self.assertIn("16cm", figura)
+        self.assertIn("alta > tetto", figura)
+
+    def test_la_figura_su_pagina_non_riserva_21_cm(self):
+        """`height: 21cm` + `fit: "contain"` faceva una cornice alta 21 cm anche
+        per una mappa da 16: la coda della pagina scivolava alla successiva
+        (il Palio, 2026-09-25: una riga sola a pagina 4, un fregio a pagina 62)."""
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        figura = tema.split("#let figura(percorso, didascalia:", 1)[1].split("\n}\n", 1)[0]
+        self.assertNotIn('fit: "contain"', figura)
+        self.assertIn("21cm", figura)
 
     def test_la_soglia_e_quella_misurata(self):
         """217,7 pt di colonna / 4,5 pt di cella Inconsolata a 9 pt."""
         self.assertEqual(CELLE_COLONNA, 48)
+
+
+class TestCioCheEsceDallaColonna(unittest.TestCase):
+    """Il controllo a vista di tutti i volumi dopo la #169 (2026-09-25).
+
+    Tre difetti c'erano già prima della regola delle mappe e nessun gate li
+    vedeva, perché il PDF compilava: un percorso in `codice` e una riga da
+    compilare `____` non vanno a capo e si stampano sopra la colonna accanto;
+    una tabella larga più alta di un foglio, che è un float, esce dal fondo.
+    """
+
+    def test_una_riga_da_compilare_si_spezza_ogni_otto(self):
+        out = inline("Cosa taglierei: " + "_" * 40)
+        self.assertIn("\u200b", out)
+        self.assertNotIn("\\_" * 9, out)
+        self.assertEqual(out.replace("\u200b", "").count("\\_"), 40, "la lunghezza resta quella")
+
+    def test_una_riga_corta_resta_com_era(self):
+        self.assertNotIn("\u200b", inline("Nome: " + "_" * 8))
+
+    def test_il_codice_in_linea_si_spezza_nel_tema(self):
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        regola = tema.split("show raw.where(block: false)", 1)[1].split("\n  }\n", 1)[0]
+        self.assertIn("sym.zws", regola)
+        self.assertIn("\\p{Ll}\\p{Lu}", regola, "PortaleDellaForgiaEterna ha bisogno di un punto")
+
+    def test_le_griglie_non_prendono_punti_di_rottura(self):
+        """La regola dei `____` sta nell'esportatore apposta: nel tema toccherebbe
+        anche le mappe ASCII, dove andare a capo è il difetto."""
+        typ = md_to_typ("```\n" + "_" * 30 + "\n```")
+        self.assertNotIn("\u200b", typ)
+
+    @staticmethod
+    def _tabella(righe: int, colonne: int = 5) -> str:
+        testa = "| " + " | ".join(f"C{k}" for k in range(colonne)) + " |"
+        riga = "| " + " | ".join("x" for _ in range(colonne)) + " |"
+        sep = "|" + "---|" * colonne
+        return "\n".join([testa, sep] + [riga] * righe)
+
+    def test_una_tabella_lunga_va_su_a4_e_non_galleggia(self):
+        typ = md_to_typ("### Indice delle 48 aree\n\n" + self._tabella(48))
+        righe = typ.split("\n")
+        self.assertIn("#page(columns: 1)[", righe)
+        self.assertIn("#tabella(5, pagina: true,", righe)
+        self.assertLess(righe.index("#page(columns: 1)["),
+                        next(i for i, r in enumerate(righe) if r.startswith("=== Indice")))
+
+    def test_una_tabella_da_venti_righe_resta_in_colonna(self):
+        """Le tabelle da 18 e 20 righe del Drappo stanno in un foglio."""
+        typ = md_to_typ("### Contrade\n\n" + self._tabella(20))
+        self.assertNotIn("#page(", typ)
+        self.assertIn("#tabella(5,", typ)
+        self.assertNotIn("pagina: true", typ)
+
+    def test_il_tema_non_fa_galleggiare_la_tabella_su_pagina(self):
+        tema = (REPO / "scripts" / "typst" / "tema-rumblingstone.typ").read_text(encoding="utf-8")
+        tabella = tema.split("#let tabella(", 1)[1].split("\n}\n", 1)[0]
+        self.assertIn("pagina: false", tabella)
+        self.assertIn("not pagina", tabella)
+
+
+@unittest.skipIf(shutil.which("typst") is None, "typst non installato")
+class TestFiguraSuPaginaCompilata(unittest.TestCase):
+    """Compilata davvero: il testo dopo una mappa quadrata comincia sotto la
+    mappa, non 21 cm più in basso."""
+
+    def test_il_testo_segue_la_mappa(self):
+        with tempfile.TemporaryDirectory(dir=REPO) as d:
+            cartella = Path(d)
+            (cartella / "quadrata.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">'
+                '<rect width="1000" height="1000" fill="#963"/></svg>', encoding="utf-8")
+            rel = "/" + cartella.relative_to(REPO).as_posix()
+            (cartella / "p.typ").write_text(
+                '#import "/scripts/typst/tema-rumblingstone.typ": *\n'
+                '#set page(paper: "a4", margin: 2cm)\n'
+                '#context [#metadata(here().position().y.cm()) <sopra>]\n'
+                f'#figura("{rel}/quadrata.svg", pagina: true)\n'
+                '#context [#metadata(here().position().y.cm()) <sotto>]\n',
+                encoding="utf-8")
+            def y(etichetta: str) -> float:
+                esito = subprocess.run(
+                    ["typst", "query", "--root", str(REPO),
+                     "--font-path", str(REPO / "scripts" / "fonts"),
+                     "--package-path", str(REPO / "scripts" / "typst" / "packages"),
+                     str(cartella / "p.typ"), f"<{etichetta}>", "--field", "value", "--one"],
+                    capture_output=True, text=True)
+                self.assertEqual(esito.returncode, 0, esito.stderr)
+                return float(esito.stdout)
+            salto = y("sotto") - y("sopra")
+        # 17 cm di mappa (larga quanto la pagina) più i margini della figura.
+        self.assertLess(salto, 19.0, f"la figura occupa {salto:.1f} cm: la cornice è ancora fissa")
+        self.assertGreater(salto, 16.5)
 
 
 class TestCapolettera(unittest.TestCase):
