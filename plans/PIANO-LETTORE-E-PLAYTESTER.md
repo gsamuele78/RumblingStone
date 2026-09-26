@@ -6,7 +6,7 @@
 > due letture a freddo fatte da un agente con una rubrica fissa
 > (`skills/rumblingstone-playtest/references/`).
 >
-> **Stato**: 🟡 F1-F2 chiusi, F3 quasi (manca la seconda lettura) · **Decisore**: DM ·
+> **Stato**: 🟡 F1-F3 chiusi; restano al DM le statistiche di Skullcrusher e l'origine del Rubino · **Decisore**: DM ·
 > **Decisione**: [ADR-0073](adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md)
 > **Gate**: `copertura_scene.py --check` verde; su `ARC07-DEF-4` la lettura a
 > freddo ripetuta dopo F3 non trova più rilievi 🔴 nelle Scene 5-9
@@ -134,7 +134,10 @@ La sessione si è fermata prima dell'infiltrazione. Si parte dalle Scene 6-9.
 - [x] C1 delle Scene 2 e 8: un box per la pattuglia di Durin e uno per Zog'tar
       che si alza dal seggio. I due residui temporanei sono scaduti, e il
       cancello ha chiesto di toglierli
-- [ ] una seconda lettura a freddo sul testo corretto: nessun 🔴 nelle Scene 5-9
+- [x] una seconda lettura a freddo sul testo corretto: il lettore non trova
+      🔴 nelle Scene 5-9, il playtester due (il corno durante lo scontro, il
+      ritorno a piedi). Chiusi subito dopo, con il 🔴 del drago attaccato di
+      notte e otto 🟠. Resoconto: `esperimenti/lettore-playtester-def4/SECONDA-LETTURA.md`
 - [ ] ⚠️ **da decidere (DM)**: TS, DV, RI e incantesimi di Skullcrusher (A.1)
       non ci sono; i nomi e le regole marcati `[INFERRED]` in questo lotto
 

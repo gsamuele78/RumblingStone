@@ -109,6 +109,14 @@
     },
     {
       "ref": [
+        "pr/180",
+        "origin/claude/lettore-playtester"
+      ],
+      "stato": "in-volo",
+      "dove": "PR #180 aperta: PIANO-LETTORE-E-PLAYTESTER F1-F3 (ADR-0073, copertura_scene.py, DEF-4 prima dell'infiltrazione)"
+    },
+    {
+      "ref": [
         "pr/179",
         "origin/claude/fucina-di-notte-e-immagini"
       ],

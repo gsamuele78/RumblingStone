@@ -640,7 +640,9 @@ l'orda, e **affrontare Skullcrusher** all'alba.
 - **Prova di gruppo**: Diplomazia/Intimidire **CD 20** (**CD 16** se alla porta
   hanno preso il **Nome**) → **fiducia piena**: 4 Pozioni di Invisibilità CL 12,
   le Benedizioni di Moradin +2/+2, la mappa accurata del campo. Fallimento:
-  aiuti dimezzati, −2 alle prove della Scena 6.
+  aiuti dimezzati, −2 alle prove della Scena 6. **Dimezzati** vuol dire: 2
+  pozioni di invisibilità invece di 4, Benedizioni a +1/+1, e niente mappa
+  `[INFERRED — needs DM confirmation]`.
 
 **I numeri del re** *(per il DM; sono anche nel piano di battaglia, §9)*:
 
@@ -698,10 +700,11 @@ tacca è mezz'ora scarsa di gioco reale.
 | Hella veglia i semi della Collana: i Treant dell'alba (Scena 5) | **1** |
 | Cercare il Mastro Costruttore Zeth (Scena 5) | **1** |
 | Sorvolare il campo invece di attraversarlo (Scena 6, variante dall'alto) | **1** |
-| La fucina di notte: comprare, vendere, barattare con Gunnvor (Scena 5) | **1** |
+| La fucina di notte: comprare, vendere, barattare con Gunnvor, e nella stessa tacca la cappella, la bottega di Kettra e le rune di Zeth (Scena 5) | **1** |
 | Attraversare il mare di tende (Scena 6, skill challenge) | **2** |
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar invece di colpire subito (Scena 7) | **1** |
+| Tornare a piedi dalla tenda alle mura: ogni blocco **fallito** (Scena 8) | **+1** |
 
 **Quando le tacche finiscono, sorge il sole.** Non è una punizione: è la Scena 10
 che comincia, con i PG dove sono in quel momento.
@@ -936,6 +939,9 @@ quelle, non ce ne sono altre.
 |---|---:|---:|---|
 | Pozione di *cura ferite leggere* | 50 mo | 6 | le *gravi* ci sono, ma sono i doni del re (§8 B) |
 | Pozione di *cura ferite moderate* | 300 mo | 2 | |
+| Pozione di *volare* | 750 mo | 3 | 5° livello dell'incantatore, 5 minuti. Le vende Sorella Brynja. Quante: quelle comprate al tavolo |
+| Pozione di *invisibilità* | 300 mo | 5 | 3° livello, 3 minuti. Da Brynja, come sopra |
+| Bacchetta di *cura ferite leggere*, 50 cariche | 750 mo | 2 | da Brynja, come sopra |
 | Acqua santa, la fiasca | 25 mo | 10 | temprata nella vasca della forgia |
 | Antitossina | 50 mo | 4 | |
 | Borsa del guaritore | 50 mo | 3 | |
@@ -1109,7 +1115,7 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 |---|---|---|
 | *Volare*, pozione (5° livello) | 5 minuti | 18 m di velocità, circa 1.800 m in tutto: basta per l'andata, **non** per il ritorno |
 | *Invisibilità*, pozione comprata (3°) | 3 minuti | 1 km lo copre appena. Quelle del re durano 12 minuti |
-| *Silenzio* sulla pietra | a lungo | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
+| *Silenzio* sulla pietra | quanto dice la pietra: un *silenzio* SRD dura 1 round per livello `[DM: la pietra è quella che il tavolo ha comprato]` | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
 - **Le tacche**. Il volo costa **1 tacca** invece
   delle 2 dello skill challenge.
@@ -1174,7 +1180,9 @@ usa due cose diverse, e tutte e due si possono fare:
   legge il nanico antico sa che sono legati ai nani.
 - **Balvar non vuole che scattino.** Il boato sveglia Zog'tar e rovina la
   trattativa della Scena 7. Se li legge prima della soglia, dice in nanico
-  antico, piano: *«Non la soglia. Il telo a sinistra.»* Il consiglio non gli
+  antico, piano, attraverso la pelle della tenda: *«Non la soglia. Il telo a
+  sinistra.»* È il telo del fianco sinistro, non quello sopra il seggio che
+  porta il glifo. Il consiglio non gli
   costa niente, e d'ora in poi i PG gli devono qualcosa.
 
 **Come torna il drago**. Il **corno da
@@ -1194,6 +1202,11 @@ e il drago arriva sull'assalto.
 | lo squadrone hobgoblin | sei, in fila, gli scudi tutti con lo stesso segno rosso. Marciano al passo anche di notte | ordini di una sillaba, e nessuno risponde |
 | il corridore | un hobgoblin ragazzo, senza armatura per correre più forte | ripete il messaggio a mezza voce per non dimenticarlo |
 
+- **Lo scontro nella tenda è l'allarme.** Al primo grido di Zog'tar, Grask si
+  sveglia e suona **entro 1d4 round**. Non suona se i PG se ne sono occupati
+  prima: dorme seduto fuori, e lo si lega, lo si addormenta o gli si ruba il
+  corno. Oppure se il *silenzio* copre lui o il corno: un corno che non fa
+  suono non chiama nessuno.
 - **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
   finiti. Gira sul campo e li cerca. Se li trova, soffia una volta e torna al
@@ -1556,6 +1569,14 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   perdono la prima azione). Se l'orda è stata **pre-allertata** (corridore,
   allarme): un successo in meno sulle mura (Scena 10), e Zog'tar non è di
   sorpresa.
+
+**Il ritorno a piedi** `[INFERRED — needs DM confirmation]`. Dalla tenda alle
+mura si rigiocano i **cinque blocchi** della Scena 6, con le stesse regole.
+L'invisibilità del re a questo punto è finita, quindi si tira **Nascondersi
+CD 22**. Ogni blocco fallito aggiunge una tacca all'orologio. Se il corno ha
+suonato, la CD sale di **+4** e il drago è in aria (Scena 6). Chi torna in volo
+segue «Il ritorno» della variante dall'alto. Vatore (Scena 9) si incontra a
+metà strada.
 
 **Se Zog'tar è catturato** `[INFERRED — needs DM confirmation]`. Sa dove
 colpiranno all'alba: il punto che Balvar ha segnato sulla mappa, lo stesso che
@@ -2054,6 +2075,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **Cercano tesori/conoscenze da riportare nel futuro** | Possono. Torna ciò che **portano addosso** quando il Rubino si accende, anche se l'hanno comprato alla fucina (Scena 5); le conoscenze tornano con chi le sa. Resta qui ciò che consumano, vendono o lasciano, e ritorna come reliquia (§7). Il **Sigillo di Ossidiana** rubato a Vatore (Appendice B) torna come il resto, e con lui il Cronolito che lo lega a Vatore: è il gancio ARC-09. |
 | **Attaccano la pattuglia di Durin** (Scena 2) | `[INFERRED — needs DM confirmation]` Durin è un Guerriero 6 con sei veterani: contro PG di 13° livello non regge un round, e lo sa. Alla prima ferita grave getta l'ascia e grida *«Se siete dei nostri, dimostratelo!»*. I PG arrivano alla porta lo stesso, con Durin ferito, e al consiglio (Scena 4) la CD della prova sale di **+4**. Se Durin muore, un veterano senza nome prende il suo posto, e la Cerimonia delle 100 Asce porta il nome di Durin |
 | **Vogliono reclutare Thorgrim / portarlo nel futuro** | Impossibile (non è "loro"): Thorgrim resta, e la sua eco è la Cerimonia delle 100 Asce (ARC-08). Commovente: si separano da un fratello che è già polvere da mille anni. |
+| **Vogliono attaccare il drago di notte, sulle colline** | `[INFERRED — needs DM confirmation]` Si può. Le colline sono a qualche chilometro, e il drago vede al buio e sente chi è invisibile entro 18 m. Di notte non combatte per l'orda: combatte due round per orgoglio, poi vola via, perché la Catena lo lega al campo e non alle colline. Il danno che ha preso **resta** all'alba, ma il duello comincia **senza sorpresa**: li conosce. Costa **2 tacche**, e la Scena 7 resta da fare |
 | **Evitano del tutto il duello con Skullcrusher** | Difficile ma possibile (montaggio): allora il Rubino si accende comunque (la fortezza regge), ma **senza ferite ancestrali** → nessun carry-over B4 (Fauci al 1372 a piena forza). La scelta ha un prezzo futuro. |
 | **FALLIMENTO — il duello va malissimo / un PG cade / fuggono sconfitti** | Non c'è TPK: la timeline **esige** che vincano (la profezia È incisa). Se il combattimento crolla, Thorgrim e gli antenati **intervengono** e ricacciano il drago (a caro prezzo: molti nani antichi muoiono — pathos, e la Cerimonia delle 100 Asce ne porterà i nomi). I PG vincono "sporco": **nessuna ferita ancestrale** registrata, il Rubino si accende col tono «misericordia/dovere», e portano il peso di essere stati salvati dagli avi che erano venuti a salvare. |
 
@@ -2229,7 +2251,9 @@ Nano dello scudo, **Chierico 9 di Abbathor / Runecaster 4**, NE · **pf 96**
 (13 DV) · **CA 24**, contatto 12, colto 22 · Iniz +2 · Vel 6 m · TS Temp +13,
 Rifl +8, **Vol +17** · BAB +8, Lotta +9 · For 12, Des 14, Cos 16, Int 16,
 **Sag 20**, Car 14 · martello da guerra runico +1 +10/+5 (1d8+2) ·
-scurovisione 18 m, immune alla paura.
+scurovisione 18 m, immune alla paura. **Leggere il Fuori-Posto** (Su,
+3/giorno): come *individuazione del magico*, ma sulle anomalie del tempo;
+percepisce chi non appartiene a questo secolo.
 
 **Incantesimi** da chierico di 13° livello, **CD 15 + livello**: *dispel magic,
 magic circle against good, greater magic weapon, divination, righteous might,
