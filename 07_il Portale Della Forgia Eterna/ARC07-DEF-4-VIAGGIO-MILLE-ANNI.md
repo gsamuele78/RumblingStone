@@ -718,7 +718,8 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   dell'incantatore), **70 minuti** dall'attivazione, come vuole l'SRD. Attivarla
   è un'azione standard. Contro il soffio di Skullcrusher (12d4) toglie 20 danni a
   ogni soffio. Se la attivano uscendo dalla postierla, all'alba è scaduta: va
-  attivata quando il drago compare. Prezzo di pergamena SRD, 350 mo.
+  attivata quando il drago compare. Prezzo di pergamena SRD, 350 mo. Per
+  **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido.
 - **Riposo — scelta**: **breve** (2 tacche: metà slot e pf) o **lungo** (5
   tacche: recupero pieno, e poi il campo si attraversa di corsa). Il momentum
   spinge al breve. ⚠️ La guarigione del passaggio (Scena 1) li ha già rimessi in
@@ -971,8 +972,15 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | *Silenzio* sulla pietra | a lungo | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
 - **Le tacche.** Il volo costa **1 tacca** invece delle 2 dello skill challenge
-  `[INFERRED — needs DM confirmation]`. Chi non vola, e le pozioni sono tre, va
-  a piedi con lo skill challenge qui sopra, oppure resta alla postierla.
+  `[INFERRED — needs DM confirmation]`.
+- **Chi vola, e chi no** `[CANONE — DM 2026-09-26]`. Tre pozioni per Thorik,
+  Tordek e Hella; **Artemis vola a volontà** con la sua invocazione
+  `[Private source]`, quindi è coperta. **Durik** non vola: o resta alla
+  postierla, o **Hella lo rimanda nel terzo seme** della Collana per la notte.
+  La scheda della Collana dice già che all'alba è di nuovo intero: così torna
+  per il duello senza spendere cariche. Richiamarlo prima, alla tenda, costa
+  una carica dell'Evocazione dei Guardiani e vale un'ora. Con i due Treant
+  dell'alba, che ne costano due, le cariche finiscono tutte e tre.
 - **Il ritorno si fa a piedi**, perché la pozione è finita all'andata. È lì
   che li trova Vatore (Scena 9), come scritto.
 - **Chi li può scoprire in volo.** Nessuno, se restano sopra i 20 m: i lupi
