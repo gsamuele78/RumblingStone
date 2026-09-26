@@ -112,8 +112,8 @@
         "pr/178",
         "origin/claude/artefatti-audit-corona-2gemme"
       ],
-      "stato": "in-volo",
-      "dove": "PR #178 in bozza: audit dei poteri, tutti gli artefatti a stadi, una versione per pagina (ADR-0071, TRASVERSALE T10)"
+      "stato": "portato",
+      "dove": "PR #178 fusa il 2026-09-25 (93fda02): audit dei poteri, tutti gli artefatti a stadi, una versione per pagina (ADR-0071, TRASVERSALE T10)"
     },
     {
       "ref": [

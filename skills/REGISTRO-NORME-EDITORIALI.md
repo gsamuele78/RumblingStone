@@ -95,6 +95,7 @@
 | `ADR-0060` (norma WotC/Paizo) | **caratteristiche e abilità maiuscole** nelle quattro forme meccaniche: `Forza 25` · `Nuotare +9` · `prova di X` con una CD · `bonus di X` | **minore** · `caratteristica_minuscola` | 🟢 `validate_prosa.py --caratteristiche` — 258 occorrenze sotto controllo, soglia **zero**, e **fuori dalle quattro forme non si misura** (una frase discorsiva senza CD non si vede: costerebbe più falsi positivi di quanti errori trovi) |
 | `read-aloud-adulti.md` + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** · `read_aloud_presuppone` | 🟢 `misura_craft --p1` — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
 | `ADR-0071` | ogni **pagina viva di un artefatto** porta la **versione** (`artefatto · S<stadio> · r<rev> · <data>`) che il registro di `ARTEFATTI-MATRICE-VERSIONI.md` §0 le assegna, e una revisione superata va in `_ARCHIVIO/` senza la meta | **maggiore** | 🟢 `test_versioni_artefatti.py` (in `scripts/tests/`) — 20 pagine registrate il 2026-09-25; morde su pagina mancante, versione diversa, pagina viva fuori registro, archivio con la meta. ⚠️ Non vede se pagina giocatore e pagina DM dicono la stessa cosa nella parte comune |
+| `ADR-0072` | ogni **pagina viva di un artefatto** porta la **sua immagine dentro** (webp, `data:` URI, marcata `data-immagine-artefatto`), niente immagini collegate, **≤ 300 KB**; una pagina senza immagine è fra le mancanti di `immagini-artefatti.json`, con la ragione | **minore** | 🟢 `test_immagini_artefatti.py` (in `scripts/tests/`) — 36 pagine vive il 2026-09-25: 27 con l'immagine messa dallo strumento, 2 che l'avevano già, 7 mancanti dichiarate; morde su un'immagine collegata, sul peso, sull'immagine assegnata e assente. ⚠️ Non vede se l'immagine è quella giusta per lo stadio |
 | `ADR-0059` (MQM) | il **punteggio di qualità pesato**: severità 1 / 5 / **25**, soglia per classe, critico pass-fail | — è il metro, non una norma che un documento possa violare | 🟢 `punteggio_mqm.py --soglia` — 515 documenti, soglie da `specifiche-qualita.yaml` misurate con `--distribuzione`. ⚠️ Copre **4 norme su 40**: entra solo ciò che ha già un rilevatore |
 | `npc-villain-boosting` | **EL ≤ APL+4**, e oltre il tetto serve un `Boost log:` | **critico** | 🔴 non misurato — il controllo **esiste** (`validate_modules.py --tetto-el`, APL letto da `state.md`) ma **non ha superficie**: la forma `**EL**: [N]` che `AGENTS.md` prescrive ha **zero occorrenze**, e i 150 «EL N» nudi mescolano dichiarazioni e menzioni. Prerequisito: marcare gli incontri |
 | `ADR-0060` (norma WotC/Paizo) | le **sigle** di caratteristica — `For 25`, `Des 14`, 688 occorrenze | — non applicabile: le sigle sono maiuscole per costruzione | ⚪ non applicabile — sono maiuscole per costruzione, non c'è niente da controllare |
@@ -105,7 +106,7 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 30 |
+| 🟢 misurate | 31 |
 | 🟡 misurate in parte, con il limite scritto | 10 |
 | 🔴 **non misurate, con la ragione scritta** | 11 |
 | ⚪ non applicabili | 2 |
@@ -123,7 +124,7 @@
 |---|---:|---:|---|
 | **critico** | 25 | **1** | solo `EL ≤ APL+4` senza `Boost log:`. È l'unica norma **di questo registro** che rende un documento ingiocabile: gli altri due critici di ADR-0059 — statblocco inventato, contraddizione con `state.md` — sono norme di **canone**, e il canone qui non ci abita |
 | **maggiore** | 5 | **21** | le norme **prescrittive** con una forma o un numero: box ≤ 12 righe, la forma del dialogo, le 16 sezioni obbligatorie, lo spotlight sotto il 40%, le tre porte per nodo |
-| **minore** | 1 | **21** | i congegni assenti dove sarebbero serviti e le prassi disattese: `[HDYWTDT]`, i tic dell'IA, la regola Paizo sui read-aloud, le maiuscole di caratteristica |
+| **minore** | 1 | **22** | i congegni assenti dove sarebbero serviti e le prassi disattese: `[HDYWTDT]`, i tic dell'IA, la regola Paizo sui read-aloud, le maiuscole di caratteristica |
 | — | — | **3** | e la ragione è scritta accanto: due non sono norme che un documento possa violare (i repertori di pattern, il punteggio stesso), una non è applicabile |
 
 ⚠️ **Un candidato al critico che non è stato promosso, e perché.** *«Ogni fatto

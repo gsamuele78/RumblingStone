@@ -1244,6 +1244,31 @@
       "deterministic": true
     },
     {
+      "name": "incorpora_immagini_artefatti",
+      "description": "«Ho rigenerato una scheda di un artefatto: l'immagine c'è ancora, e la pagina si passa a un giocatore come un file solo?»\n\nMette l'immagine di ogni artefatto dentro la sua pagina viva (ADR-0072): legge PG/Artefatti/immagini-artefatti.json e il registro delle pagine vive di ARTEFATTI-MATRICE-VERSIONI.md §0, riduce il master a 480 px, lo ricomprime in webp qualità 72 e lo inserisce come data: URI sotto la testata, marcato data-immagine-artefatto. Rilanciato sostituisce e non duplica; un <img> relativo senza voce nel JSON lo incorpora allo stesso modo. I master restano file e non li tocca.",
+      "use_case": "«Ho rigenerato una scheda di un artefatto: l'immagine c'è ancora, e la pagina si passa a un giocatore come un file solo?»",
+      "invocation": "python3 scripts/incorpora_immagini_artefatti.py [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Non scrive; esce 1 se una pagina va rifatta. Non serve Pillow."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "PG/Artefatti/Artefatti-Pg/**/*.html"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "pagine da rifare (--check) o Pillow assente"
+      },
+      "deterministic": true
+    },
+    {
       "name": "session_recap",
       "description": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»\n\nRecap italiano spoiler-safe (tono R.A. Salvatore) dagli ultimi N session log; taglia sempre le note private DM.",
       "use_case": "«Cosa mando al gruppo dopo la sessione, che si legga come un racconto e non riveli le mie note?»",

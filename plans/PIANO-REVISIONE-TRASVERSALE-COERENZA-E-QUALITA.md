@@ -404,6 +404,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 - [x] **T10-e** (2026-09-25, sera) [engine: Opus · effort: medio · qualità: i numeri di `05_Aegis_Fang_Final_Awakening.html`] — **Aegis Fang stadio 1**, giocatore e DM; resta la D15 (Dragondoom e poteri inferiori allo stadio 1)
 - [x] **T10-f** (2026-09-25, sera) [engine: Opus · effort: medio · qualità: ogni voce col riferimento alla tabella dei prezzi SRD] — i **prezzi voce per voce**: audit §10. La *Mente Vuota* vale 120.000 mo e non 240.000 (dura 24 ore); la pagina del Manto taceva l'immunità mentale; le stime dei Bracieri erano sulla stesura superata
 - [x] **T10-g** (2026-09-25, pomeriggio: 11 risposte applicate, D2 chiusa dalla fonte; resta D13) [engine: Opus · effort: xhigh · qualità: conferma esplicita del DM] — applicare le risposte alle domande qui sotto: togliere le marcature «da confermare», alzare la revisione delle pagine toccate, aggiornare `SINERGIE` (D1) e la skill
+- [x] **T10-h** (2026-09-25, notte) [engine: Opus · effort: medio · qualità: ogni pagina viva ≤ 300 KB, niente immagini collegate] — **l'immagine dentro la scheda**, come nelle schede di prima: `incorpora_immagini_artefatti.py` dal dato `immagini-artefatti.json`, webp 480 px; `test_immagini_artefatti.py`; [ADR-0072](adr/ADR-0072-la-scheda-porta-la-sua-immagine-dentro.md). Mancano Aegis Fang e i Bracieri dormienti: da commissionare
 
 <!-- decisioni-dm: TRASVERSALE-ARTEFATTI -->
 
@@ -458,7 +459,7 @@ bene i poteri di tutti gli artefatti e lo storico»*, poi gli stadi sul modello 
 - [x] T1 · [x] T2 · [x] T3 · [x] T4 — **LOTTO T-A COMPLETO (2026-07-03)**
 - [x] T5a (sessione 2) · [x] T5b (sessioni 4+9: companion su tutte le mappe REVISED da giocare) · [x] T5c (sessioni 9-10: griglia Campo Drow 2 completata + companion su tutti i 16 file narrativi ARC-09) — **LOTTO MAPPE COMPLETO** (resta opzionale/estetico solo l'SVG dei 16 narrativi)
 - [x] T6a (sessione 3, 2026-07-03) · [x] T6b (sessioni 6-8, 2026-07-04: Aegis master + Cerebro eletto + Corona consolidata/riconciliata + campaign-artifacts sync) · [x] T6c (sessione 11, 2026-07-04: doppia colonna §6, conferma DM T-D10) — **LOTTO ARTEFATTI COMPLETO**
-- [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [ ] T10-c · [ ] T10-d · [ ] T10-e · [ ] T10-f · [x] T10-g (12 risposte del DM applicate, D14 su Aegis Fang compresa; resta D13, la bozza del Caos Ultimo)
+- [x] **T10-a · T10-b** (2026-09-25: audit dei poteri, Corona e Anello a stadi, versioni) · [x] T10-c · [x] T10-d · [x] T10-e · [x] T10-f · [x] T10-g (tutte le domande del DM chiuse, D13-D17 comprese) · [x] T10-h (l'immagine dentro la scheda)
 - [x] T7 (sessione 7, 2026-07-04: schede Aegis/Ring/Bracieri/Collana) · [ ] T8 (gated: quest ARC-09 giocata) · [x] T9 cross-link (sessione 5, 2026-07-04; chiusura post-gioco P3B ancora gated) — schede, sinergie, propagazione
 - [x] T-D1…T-D12 — decisioni acquisite (2026-07-03/04); **ZERO domande DM
   aperte** (sessione 11, 2026-07-04: risolti Corona×2, Bracieri, Campo

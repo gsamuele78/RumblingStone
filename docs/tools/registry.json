@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 77,
+  "tool_count": 78,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -3028,6 +3028,79 @@
       "tests": [],
       "docs": [
         "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "incorpora_immagini_artefatti",
+      "path": "scripts/incorpora_immagini_artefatti.py",
+      "category": "D-materials",
+      "language": "python",
+      "invocation": "python3 scripts/incorpora_immagini_artefatti.py [--check]",
+      "summary": "Mette l'immagine di ogni artefatto dentro la sua pagina viva (ADR-0072): legge PG/Artefatti/immagini-artefatti.json e il registro delle pagine vive di ARTEFATTI-MATRICE-VERSIONI.md §0, riduce il master a 480 px, lo ricomprime in webp qualità 72 e lo inserisce come data: URI sotto la testata, marcato data-immagine-artefatto. Rilanciato sostituisce e non duplica; un <img> relativo senza voce nel JSON lo incorpora allo stesso modo. I master restano file e non li tocca.",
+      "use_case": "«Ho rigenerato una scheda di un artefatto: l'immagine c'è ancora, e la pagina si passa a un giocatore come un file solo?»",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [
+        "pillow"
+      ],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive; esce 1 se una pagina va rifatta. Non serve Pillow."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/Artefatti/immagini-artefatti.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "PG/Artefatti/Artefatti-Pg/**/*.html",
+          "kind": "html",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "pagine da rifare (--check) o Pillow assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stessa versione di Pillow, stessi byte."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/incorpora_immagini_artefatti.py --check",
+      "tests": [
+        "scripts/tests/test_immagini_artefatti.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0072-la-scheda-porta-la-sua-immagine-dentro.md"
       ]
     },
     {

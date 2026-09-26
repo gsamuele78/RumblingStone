@@ -43,7 +43,7 @@ Non si sommano al WBL ordinario (sono plot/campagna, come l'audit ARC-09):
 | P2 Sala Forgia | nessun tesoro monetario (hub di prove) | — | `ARC07-DEF-2` |
 | P3 Piano Fuoco | bottino elementale/altare (pre-perimetro, non consolidato) | ? | `P3-PianoFuoco` / `RicalibrazioneScontri` |
 | **P4 Piano Terra** | **LORDO pregenerato**: barre mithral, geodi, Lacrima di Cristallo, piastre Sentinella, **Geode Titanico + Cuore di Terros (20.000 mo)**, offerta antica — ⚠️ il **Rituale Opzione A può azzerarlo** (sacrificio 40.500 mo) | **~34.950 mo** (0 se via A) | `ARC07-DEF-1` §11-bis B |
-| **P5 Viaggio** | **scaglia del Primo Nero** (trofeo, se Skullcrusher ucciso); le ricompense di Re Thorek I sono **tempo soggettivo** e **non tornano** (svaniscono all'alba, tranne il legato) | ~1.500 mo | `ARC07-DEF-4` §Avanzamento |
+| **P5 Viaggio** | **scaglia del Primo Nero** (trofeo, se Skullcrusher ucciso); i doni di Re Thorek I **tornano se i PG li portano addosso** (DM 2026-09-25, `ARC07-DEF-4` §8 B); quello che consumano o vendono alla fucina (Scena 5) resta a −1.000. Lo scambio alla fucina **converte** ricchezza e non ne crea, tranne il premio di guerra, che ha il tetto del forziere del re | ~1.500 mo | `ARC07-DEF-4` §Avanzamento |
 
 **Tesoro ordinario contato ora**: ~16.900 (dote di Hella) **+ fino a ~34.950**
 (Piano Terra, se NON speso nel Rituale via A) **+ ~1.500** (scaglia) = **fino a

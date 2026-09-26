@@ -43,25 +43,25 @@
 <!-- versioni-artefatti -->
 | Artefatto | Stadio | Pagina giocatore | Pagina DM | Versione | Stato |
 |---|---|---|---|---|---|
-| corona | 0 · indossata | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme_DM.html` | `corona · S0 · r4 · 2026-09-25` | ✅ passato |
-| corona | 1 · Topazio | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma.html` | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma_DM.html` | `corona · S1 · r5 · 2026-09-25` | ✅ passato |
-| corona | 2 · Smeraldo | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme_DM.html` | `corona · S2 · r5 · 2026-09-25` | ▶ oggi |
-| corona | 3 · Rubino | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme_DM.html` | `corona · S3 · r5 · 2026-09-25` | ⬜ al Rituale 4 |
+| corona | 0 · indossata | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/00_Corona_0_Gemme_DM.html` | `corona · S0 · r5 · 2026-09-25` | ✅ passato |
+| corona | 1 · Topazio | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma.html` | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma_DM.html` | `corona · S1 · r6 · 2026-09-25` | ✅ passato |
+| corona | 2 · Smeraldo | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme_DM.html` | `corona · S2 · r6 · 2026-09-25` | ▶ oggi |
+| corona | 3 · Rubino | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme_DM.html` | `corona · S3 · r6 · 2026-09-25` | ⬜ al Rituale 4 |
 | aegis | 0 · pre-risveglio | `Aegis Fang/00_Aegis_Fang_Stadio0.html` | `Aegis Fang/00_Aegis_Fang_Stadio0_DM.html` | `aegis · S0 · r7 · 2026-09-25` | ▶ oggi |
 | aegis | 1 · risveglio pieno | `Aegis Fang/01_Aegis_Fang_Stadio1.html` | `Aegis Fang/01_Aegis_Fang_Stadio1_DM.html` | `aegis · S1 · r4 · 2026-09-25` | ⬜ al Rituale 4 |
-| anello | 0 · l'anello del caos | `ringOfChaoticIllumination/01_Anello_S0_Originale.html` | `ringOfChaoticIllumination/01_Anello_S0_Originale_DM.html` | `anello · S0 · r4 · 2026-09-25` | ✅ passato |
-| anello | 1 · le due divinità | — | `ringOfChaoticIllumination/02_Anello_S1_Due_Divinita_DM.html` | `anello · S1 · r3 · 2026-09-25` | scritto, mai dato al giocatore (D11) |
-| anello | 2 · il Riforgiato | `ringOfChaoticIllumination/00_Ring_Riforgiato.html` | `ringOfChaoticIllumination/00_Ring_Riforgiato_DM.html` | `anello · S2 · r4 · 2026-09-25` | ▶ oggi |
-| anello | 3 · il Caos Ultimo | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo.html` | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo_DM.html` | `anello · S3 · r5 · 2026-09-25` | ⬜ alla Torre Invisibile (D13 decisa) |
+| anello | 0 · l'anello del caos | `ringOfChaoticIllumination/01_Anello_S0_Originale.html` | `ringOfChaoticIllumination/01_Anello_S0_Originale_DM.html` | `anello · S0 · r5 · 2026-09-25` | ✅ passato |
+| anello | 1 · le due divinità | — | `ringOfChaoticIllumination/02_Anello_S1_Due_Divinita_DM.html` | `anello · S1 · r4 · 2026-09-25` | scritto, mai dato al giocatore (D11) |
+| anello | 2 · il Riforgiato | `ringOfChaoticIllumination/00_Ring_Riforgiato.html` | `ringOfChaoticIllumination/00_Ring_Riforgiato_DM.html` | `anello · S2 · r5 · 2026-09-25` | ▶ oggi |
+| anello | 3 · il Caos Ultimo | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo.html` | `ringOfChaoticIllumination/04_Anello_S3_Caos_Ultimo_DM.html` | `anello · S3 · r6 · 2026-09-25` | ⬜ alla Torre Invisibile (D13 decisa) |
 | bracieri | 0 · dormienti | `Tordek/00_Bracieri_S0_Dormienti.html` | `Tordek/00_Bracieri_S0_Dormienti_DM.html` | `bracieri · S0 · r4 · 2026-09-25` | ✅ passato |
-| bracieri | 1 · Fuoco | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco.html` | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco_DM.html` | `bracieri · S1 · r4 · 2026-09-25` | ✅ passato |
+| bracieri | 1 · Fuoco | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco.html` | `Tordek/04_Bracieri_Gemelli_Scheda_PG_Fuoco_DM.html` | `bracieri · S1 · r5 · 2026-09-25` | ✅ passato |
 | bracieri | 2 · Fuoco e Terra | `Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa.html` | `Tordek/05_Bracieri_Gemelli_Scheda_PG_Completa_DM.html` | `bracieri · S2 · r6 · 2026-09-25` | ▶ oggi |
-| bracieri | 3 · le Chiavi della Forgia | `Tordek/06_Bracieri_S3_Chiavi_della_Forgia.html` | `Tordek/06_Bracieri_S3_Chiavi_della_Forgia_DM.html` | `bracieri · S3 · r3 · 2026-09-25` | ⬜ a Dauth (D16 decisa) |
+| bracieri | 3 · le Chiavi della Forgia | `Tordek/06_Bracieri_S3_Chiavi_della_Forgia.html` | `Tordek/06_Bracieri_S3_Chiavi_della_Forgia_DM.html` | `bracieri · S3 · r4 · 2026-09-25` | ⬜ a Dauth (D16 decisa) |
 | collana | 0 · i semi | — | `Hella/00_Collana_S0_I_Semi_DM.html` | `collana · S0 · r3 · 2026-09-25` | ✅ passato (solo DM: la Collana non esisteva) |
-| collana | 1 · Radicata | `Hella/01_Collana_Radicata.html` | `Hella/01_Collana_Radicata_DM.html` | `collana · S1 · r5 · 2026-09-25` | ▶ dopo il rito |
-| collana | 2 · Fiorita | `Hella/03_Collana_S2_Fiorita.html` | `Hella/03_Collana_S2_Fiorita_DM.html` | `collana · S2 · r3 · 2026-09-25` | ⬜ al Cerchio Sacro (D17 decisa) |
-| collana | 3 · Foresta che Cammina | `Hella/04_Collana_S3_Foresta_che_Cammina.html` | `Hella/04_Collana_S3_Foresta_che_Cammina_DM.html` | `collana · S3 · r3 · 2026-09-25` | ⬜ a Rethmar (D17 decisa) |
-| durik | 1 · Radicata | `Hella/02_Durik_Guardiano_di_Pietra.html` | `Hella/02_Durik_Guardiano_di_Pietra_DM.html` | `durik · S1 · r2 · 2026-09-25` | ▶ dopo il rito |
+| collana | 1 · Radicata | `Hella/01_Collana_Radicata.html` | `Hella/01_Collana_Radicata_DM.html` | `collana · S1 · r6 · 2026-09-25` | ▶ dopo il rito |
+| collana | 2 · Fiorita | `Hella/03_Collana_S2_Fiorita.html` | `Hella/03_Collana_S2_Fiorita_DM.html` | `collana · S2 · r4 · 2026-09-25` | ⬜ al Cerchio Sacro (D17 decisa) |
+| collana | 3 · Foresta che Cammina | `Hella/04_Collana_S3_Foresta_che_Cammina.html` | `Hella/04_Collana_S3_Foresta_che_Cammina_DM.html` | `collana · S3 · r4 · 2026-09-25` | ⬜ a Rethmar (D17 decisa) |
+| durik | 1 · Radicata | `Hella/02_Durik_Guardiano_di_Pietra.html` | `Hella/02_Durik_Guardiano_di_Pietra_DM.html` | `durik · S1 · r3 · 2026-09-25` | ▶ dopo il rito |
 
 **Le revisioni del 2026-09-25 pomeriggio** (`r2`/`r3`) applicano le risposte del DM alle domande D1-D12 dell'audit: tolte le marcature «da confermare». La pagina del giocatore dell'Anello S1 è stata tolta (D11: mai data al tavolo).
 
@@ -76,6 +76,14 @@ stadio, per il giocatore e per il DM. Le ultime tre decisioni (D15 Aegis S1,
 D16 Bracieri S3, D17 Collana S2-S3) le ha prese il DM la sera stessa. Restano
 solo DM, perché non hanno un giocatore: l'Anello S1 (mai dato) e la Collana S0
 (la Collana non esisteva).
+
+**Immagini (2026-09-25, notte, ADR-0072).** Ogni pagina porta la sua
+immagine dentro, in webp, come le schede di prima: quale immagine lo dice
+`immagini-artefatti.json`, la mette `python3 scripts/incorpora_immagini_artefatti.py`.
+⚠️ **Dopo ogni rigenerazione di una pagina va rilanciato**: i generatori
+riscrivono l'HTML intero, e `test_immagini_artefatti.py` diventa rosso.
+Mancano un'immagine di Aegis Fang e una dei Bracieri dormienti: da
+commissionare (`rumblingstone-art-direction`).
 
 ---
 
