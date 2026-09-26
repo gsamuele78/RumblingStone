@@ -311,9 +311,8 @@ le persone con cui il gruppo ha trattato davvero.
   vecchio del rito è Re Thorek se il tavolo non ha incontrato Thorgrim
 - Tutto marcato `[INFERRED — needs DM confirmation]`. Box di DEF-4 da 25 a 28,
   nessuno oltre 12 righe
-- ⚠️ **Da dire al DM, non corretto qui**: la scheda di Balvar dice «incantesimi
-  da chierico 9» e insieme *blade barrier*, che è di 6°: torna solo contando i 4
-  livelli di Runecaster (13°). E il modulo chiama Hammerfist «fortezza giovane,
+- [x] **M7.5** il DM conferma i nomi (Brynja, Kettra, Grask, Hrodgar) e Balvar **chierico di 13° livello** (9 + Runecaster 4), anche nella sua scheda del Bestiario
+- ⚠️ **Resta aperto**: il modulo chiama Hammerfist «fortezza giovane,
   appena eretta» mentre Balvar ne è stato il runaio prima che nascessero i
   bisnonni dei nani di oggi
 

@@ -696,7 +696,7 @@ i prezzi).
 > chiameranno. Una sola è sveglia. Conta fiale su un panno, a voce bassa, e
 > ricomincia da capo ogni volta che arriva a trenta.*
 
-**Scheda d'entrata — Sorella Brynja, la chierica che conta** `[INFERRED — needs DM confirmation]`
+**Scheda d'entrata — Sorella Brynja, la chierica che conta** `[CANONE — DM 2026-09-26]`
 
 | | |
 |---|---|
@@ -711,7 +711,7 @@ i prezzi).
 **La bottega dell'alchimista.** In fondo al corridoio della fucina, dove
 l'odore di zolfo copre quello del carbone.
 
-**Scheda d'entrata — Kettra, l'alchimista del re** `[INFERRED — needs DM confirmation]`
+**Scheda d'entrata — Kettra, l'alchimista del re** `[CANONE — DM 2026-09-26]`
 
 | | |
 |---|---|
@@ -1061,7 +1061,7 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
 **Le rune di Balvar alla tenda** `[CANONE — DM 2026-09-26]`. Balvar
 conosce i nani: sa che di notte mandano esploratori, invisibili quando possono.
-Le sue rune le lancia al **13° livello** (chierico 9 e Runecaster 4). Alla tenda
+Lancia gli incantesimi, rune comprese, da **chierico di 13° livello** (chierico 9 e Runecaster 4, che avanza il lancio: `[CANONE — DM 2026-09-26]`). Alla tenda
 usa due cose diverse, e tutte e due si possono fare:
 
 | Dove | Cosa fa | La regola |
@@ -1099,7 +1099,7 @@ e Skullcrusher deve tornare. Di notte il drago va sulle colline perché odia la
 Catena, e si allontana quanto la runa glielo lascia fare. All'alba l'araldo suona
 e il drago arriva sull'assalto.
 
-**L'araldo, Grask** `[INFERRED — needs DM confirmation]`: hobgoblin di
+**L'araldo, Grask** `[CANONE — DM 2026-09-26]`: hobgoblin di
 quindici anni, magro, con il corno legato al polso da una cinghia perché una
 volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, e si
 sveglia al primo grido. Vuole una cosa sola: non perderlo più.
@@ -1561,7 +1561,7 @@ leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
 <!-- /storico -->
 Poi, quando le prime scale arrivano in cima:
 
-**Il capitano delle mura, Hrodgar** `[INFERRED — needs DM confirmation]`: nano
+**Il capitano delle mura, Hrodgar** `[CANONE — DM 2026-09-26]`: nano
 con la barba bruciata da un lato, di un'altra battaglia, e un elmo senza cresta
 perché la cresta si vede da lontano. Dà gli ordini con una parola sola. Vuole
 tenere il tratto est fino a che il re non gli dice di lasciarlo, e sa dove la
