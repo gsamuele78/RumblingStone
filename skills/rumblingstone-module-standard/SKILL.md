@@ -55,6 +55,14 @@ riordinato:
 - **La scheda d'entrata del PNG sta nella scena** in cui i PG lo incontrano
   (aspetto, come suona, cosa vuole, cosa sa); i suoi numeri stanno in
   appendice.
+- **Ogni scena apre con il suo contratto**: `**In scena** — Dove: luogo ·
+  luogo — Chi: persona · persona`. Ogni luogo ha un box che lo nomina
+  nell'etichetta; ogni persona ha la scheda d'entrata, oppure, se è una
+  comparsa, una riga nella tabella **Comparse** della scena
+  (`| Chi | Com'è | Come parla |`). Anche chi non ha un nome: la guardia, il
+  capitano, l'araldo. Lo misura `copertura_scene.py` in CI
+  ([ADR-0073](../../plans/adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md));
+  un master nuovo nasce sotto il cancello.
 - **Statistiche e mappe in appendici A4** fra `<!-- pagina: una-colonna -->` e
   `<!-- /pagina -->`: una pagina da tenere aperta durante lo scontro.
 - **«✉ Si consegna qui»** nel punto esatto in cui un foglio passa ai giocatori,
