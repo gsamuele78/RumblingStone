@@ -971,8 +971,8 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | *Invisibilità*, pozione comprata (3°) | 3 minuti | 1 km lo copre appena. Quelle del re durano 12 minuti |
 | *Silenzio* sulla pietra | a lungo | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
-- **Le tacche.** Il volo costa **1 tacca** invece delle 2 dello skill challenge
-  `[INFERRED — needs DM confirmation]`.
+- **Le tacche** `[CANONE — DM 2026-09-26]`. Il volo costa **1 tacca** invece
+  delle 2 dello skill challenge.
 - **Chi vola, e chi no** `[CANONE — DM 2026-09-26]`. Tre pozioni per Thorik,
   Tordek e Hella; **Artemis vola a volontà** con la sua invocazione
   `[Private source]`, quindi è coperta. **Durik** non vola: o resta alla
@@ -981,8 +981,13 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
   per il duello senza spendere cariche. Richiamarlo prima, alla tenda, costa
   una carica dell'Evocazione dei Guardiani e vale un'ora. Con i due Treant
   dell'alba, che ne costano due, le cariche finiscono tutte e tre.
-- **Il ritorno si fa a piedi**, perché la pozione è finita all'andata. È lì
-  che li trova Vatore (Scena 9), come scritto.
+- **Il ritorno** `[CANONE — DM 2026-09-26]`. Si torna in volo finché
+  bastano le pozioni e le pergamene prese nelle avventure di prima. Quando
+  finiscono, o si scende e si va a piedi, o **Artemis porta** chi resta a terra,
+  uno alla volta. ⚠️ Un nano in armatura completa pesa più di cento chili: se
+  Artemis riesce a sollevarlo lo dice la sua Forza, e con un carico pesante
+  vola più piano. Chi torna a piedi incontra Vatore (Scena 9) come scritto; chi
+  torna in volo lo vede dall'alto, e la scena comincia da dove atterra.
 - **Chi li può scoprire in volo.** Nessuno, se restano sopra i 20 m: i lupi
   fiutano a 9 m, il drago è sulle colline. Il rischio è **l'atterraggio**.
 - **La bolla alla tenda.** Se la pietra arriva a meno di 6 m dalla tenda, le
@@ -999,16 +1004,17 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | **L'araldo col corno** | dorme fuori dalla tenda, dalla parte del campo. All'allarme suona il corno entro **1d4 round** |
 | **Skullcrusher** | dalle colline al campo ci mette **circa 7 minuti** dal primo suono del corno. Vede al buio e sente chi è invisibile entro 18 m |
 
-**Le rune di Balvar alla tenda** `[INFERRED — needs DM confirmation]`. Balvar
+**Le rune di Balvar alla tenda** `[CANONE — DM 2026-09-26]`. Balvar
 conosce i nani: sa che di notte mandano esploratori, invisibili quando possono.
 Per questo ogni sera, prima di cena, controlla e riscrive tre *glifi di
-interdizione* (chierico 3°, dominio della Runa). L'SRD li fa durare finché non
+interdizione* (chierico 3°, dominio della Runa), al **13° livello**: le sue
+rune le lancia da chierico 9 e Runecaster 4. L'SRD li fa durare finché non
 scattano; «ogni giorno» vuol dire che ogni sera rifà quelli scattati, a 200 mo
 di polvere di diamante l'uno.
 
 | Dove | Cosa fa |
 |---|---|
-| **La soglia della tenda** | scoppio **sonoro**, 4d8, Riflessi CD 18 dimezza. Il boato sveglia la tenda ed è l'allarme |
+| **La soglia della tenda** | scoppio **sonoro**, 5d8, Riflessi CD 18 dimezza. Il boato sveglia la tenda ed è l'allarme |
 | **Il telo sopra il seggio** | lo stesso, per chi taglia la tela ed entra dall'alto |
 | **La custodia del corno** | lo stesso, per chi prova a rubarlo |
 
@@ -1021,14 +1027,14 @@ di polvere di diamante l'uno.
   scelta, e costa in tutti e due i casi.
 - **Trovarli e leggerli.** Cercare **CD 28**; toglierli con Disattivare
   Congegni CD 28 serve la capacità del ladro, oppure *dissolvi magie* contro
-  il 9° livello. Ma sono **scritti**, come tutte le sue rune: chi li vede e
+  il 13° livello (CD 24). Ma sono **scritti**, come tutte le sue rune: chi li vede e
   legge il nanico antico sa che sono legati ai nani.
 - **Balvar non vuole che scattino.** Il boato sveglia Zog'tar e rovina la
   trattativa della Scena 7. Se li legge prima della soglia, dice in nanico
   antico, piano: *«Non la soglia. Il telo a sinistra.»* Il consiglio non gli
   costa niente, e d'ora in poi i PG gli devono qualcosa.
 
-**Come torna il drago** `[INFERRED — needs DM confirmation]`. Il **corno da
+**Come torna il drago** `[CANONE — DM 2026-09-26]`. Il **corno da
 guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
 gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
 e Skullcrusher deve tornare. Di notte il drago va sulle colline perché odia la

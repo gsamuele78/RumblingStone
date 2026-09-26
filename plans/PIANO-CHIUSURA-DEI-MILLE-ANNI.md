@@ -286,6 +286,7 @@ andare sulle colline di notte, ma non sanno come e quando torna.
   fecondo (il «nano prigioniero» è Balvar)
 - [x] **M6.5** *(stesso giorno, domanda del DM)* le **rune di Balvar alla tenda**: tre *glifi di interdizione* legati ai nani, scoppio sonoro che fa da allarme, spenti dalla bolla di silenzio; la tabella degli esploratori dice «non esatto» invece di «falso». Marcato `[INFERRED]`
 - [x] **M6.6** *(stesso giorno)* chi vola: Artemis a volontà, tre pozioni per gli altri; Durik resta alla postierla o torna nel seme della Collana fino all'alba (decisione del DM)
+- [x] **M6.7** *(stesso giorno)* il DM conferma rune, corno e tacche: tolte le marche `[INFERRED]`. Le rune di Balvar al 13° livello (chierico 9 + Runecaster 4), scoppio 5d8. Il ritorno: pozioni e pergamene delle avventure di prima, poi a piedi o portati da Artemis
 - [x] **M6.4** Scena 5: le rune di Zeth (D-F). Correzione: le pozioni del re
   duravano «120 minuti», e per l'SRD sono 12
 - **Misure**: box di DEF-4 da 24 a 25, nessuno oltre 12 righe; stampa del
