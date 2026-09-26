@@ -6,7 +6,7 @@
 > due letture a freddo fatte da un agente con una rubrica fissa
 > (`skills/rumblingstone-playtest/references/`).
 >
-> **Stato**: 🟡 F1-F2 chiusi, F3 in corso · **Decisore**: DM ·
+> **Stato**: 🟡 F1-F2 chiusi, F3 quasi (manca la seconda lettura) · **Decisore**: DM ·
 > **Decisione**: [ADR-0073](adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md)
 > **Gate**: `copertura_scene.py --check` verde; su `ARC07-DEF-4` la lettura a
 > freddo ripetuta dopo F3 non trova più rilievi 🔴 nelle Scene 5-9
@@ -112,12 +112,31 @@ Misurate su DEF-4 prima e dopo, controllando a mano ogni segnalazione (G2, G6):
 
 La sessione si è fermata prima dell'infiltrazione. Si parte dalle Scene 6-9.
 
-- [ ] i rilievi 🔴 e 🟠 dei due rapporti, ricontrollati **sul testo di oggi**
-      (molti sono già chiusi da M5-M7)
-- [ ] il contratto «In scena» su tutte le tredici scene, `contratto: true` nel
-      profilo
-- [ ] C1 della Scena 2: un box per la pattuglia di Durin
+- [x] i rilievi 🔴 e 🟠 dei due rapporti, ricontrollati **sul testo di oggi**:
+      diversi erano già chiusi da M5-M7 (invisibilità a 12 minuti, sorvolo,
+      guardie, araldo, capitano). Chiusi qui, nelle Scene 6-9: lo skill
+      challenge (prova di gruppo per blocco, cinque blocchi, quanto copre
+      l'invisibilità), la pattuglia dei tre fallimenti, «+2 nemici» diventato
+      «un successo in meno» sulle mura, cosa fa Balvar quando comincia lo
+      scontro e l'EL combinato, le sue tre rune nella tenda allineate alla
+      scheda del Bestiario (la quarta è la Catena), quando si vede la runa e
+      come si colpisce, la Corona «sentita» se sono invisibili, da dove si
+      entra nella tenda, il round di sorpresa SRD, Zog'tar catturato e la
+      sconfitta nella tenda, Vatore senza statistiche e il Cronolito, le
+      abilità non 3.5. Fuori dalle 6-9: la riga di §6 per chi attacca la
+      pattuglia di Durin, il soffio del drago in linea
+- [x] i numeri di Balvar copiati in Appendice A.4, come ha chiesto il DM, e
+      `TestLaCopiaDiBalvar` che confronta le due copie
+- [x] il contratto «In scena» su tutte le tredici scene, `contratto: true`.
+      Ha trovato da solo **la bottega di Kettra senza box**, e ha costretto a
+      scrivere le comparse: i sei veterani, le guardie della porta, il
+      pesatore, Grask, le creature del campo, le quattro guardie, Hrodgar
+- [x] C1 delle Scene 2 e 8: un box per la pattuglia di Durin e uno per Zog'tar
+      che si alza dal seggio. I due residui temporanei sono scaduti, e il
+      cancello ha chiesto di toglierli
 - [ ] una seconda lettura a freddo sul testo corretto: nessun 🔴 nelle Scene 5-9
+- [ ] ⚠️ **da decidere (DM)**: TS, DV, RI e incantesimi di Skullcrusher (A.1)
+      non ci sono; i nomi e le regole marcati `[INFERRED]` in questo lotto
 
 ### F4 · Gli altri master di ARC-07 — ⬜
 

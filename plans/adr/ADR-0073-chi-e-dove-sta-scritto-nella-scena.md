@@ -46,8 +46,8 @@ Lo strumento ha due metà, con due compiti diversi.
      nel foglio del cast dello stand-alone;
    - **C3**: il **contratto «In scena»**. Ogni scena apre con
      `**In scena** — Dove: … — Chi: …`; ogni luogo ha un box che lo nomina
-     nell'etichetta, ogni persona una scheda d'entrata o una riga fra le
-     **Comparse** della scena;
+     nell'etichetta, ogni persona una scheda d'entrata o una riga in una
+     tabella **Comparse** del modulo, messa dove la si incontra la prima volta;
    - **C4**: nessuna scheda o battuta della scena sta fuori dal suo *Chi*.
 
 Il contratto è la risposta al limite di fondo. Non si può misurare un'assenza,

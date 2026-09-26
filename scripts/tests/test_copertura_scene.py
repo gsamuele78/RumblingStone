@@ -98,5 +98,25 @@ class TestIlRepo(unittest.TestCase):
                 self.assertTrue(m.get("perche", "").strip(), f"{m['file']}: senza contratto e senza ragione")
 
 
+class TestLaCopiaDiBalvar(unittest.TestCase):
+    """Il DM vuole i numeri di Balvar nel modulo, non solo nel Bestiario
+    (2026-09-26). Una seconda copia diverge alla prima errata: questo test è
+    il prezzo della ripetizione, e la rende sicura."""
+
+    #: I numeri, non le etichette: il Bestiario scrive «hp 96», il modulo «pf 96».
+    NUMERI = (r"(?:pf|hp):? 96", r"ca:? 24", r"vol \+17", r"sag 20", r"bab \+8",
+              r"lotta \+9", r"\+10/\+5 \(1d8\+2\)")
+
+    def test_i_numeri_sono_gli_stessi(self):
+        import re
+        bestiario = (ROOT / "Bestiario/villain/balvar-fuocospento-cr13.md").read_text(encoding="utf-8")
+        modulo = (ROOT / "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md").read_text(encoding="utf-8")
+        a4 = modulo.split("### A.4 · Balvar Fuocospento", 1)[1].split("### A.5", 1)[0]
+        piano = lambda s: re.sub(r"[*_`]", "", s).lower()
+        for n in self.NUMERI:
+            self.assertRegex(piano(bestiario), n, f"il Bestiario non dice più «{n}»")
+            self.assertRegex(piano(a4), n, f"DEF-4 A.4 non dice più «{n}»: allinea le due copie")
+
+
 if __name__ == "__main__":
     unittest.main()

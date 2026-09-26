@@ -58,8 +58,9 @@ riordinato:
 - **Ogni scena apre con il suo contratto**: `**In scena** — Dove: luogo ·
   luogo — Chi: persona · persona`. Ogni luogo ha un box che lo nomina
   nell'etichetta; ogni persona ha la scheda d'entrata, oppure, se è una
-  comparsa, una riga nella tabella **Comparse** della scena
-  (`| Chi | Com'è | Come parla |`). Anche chi non ha un nome: la guardia, il
+  comparsa, una riga in una tabella **Comparse**
+  (`| Chi | Com'è | Come parla |`) nella scena in cui la si incontra la prima
+  volta. Anche chi non ha un nome: la guardia, il
   capitano, l'araldo. Lo misura `copertura_scene.py` in CI
   ([ADR-0073](../../plans/adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md));
   un master nuovo nasce sotto il cancello.

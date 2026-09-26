@@ -176,6 +176,9 @@ def analizza(testo: str, profilo: dict, schede_extra: "list[str]") -> "list[tupl
     rilievi = []
     fonti_schede = [testo] + schede_extra
     schede = nomi_schede(fonti_schede)
+    # Una comparsa si descrive dove la si incontra la prima volta, e vale per
+    # le scene dopo: come la scheda d'entrata, si cerca in tutto il modulo.
+    compar = comparse(testo)
     cast = righe_cast(schede_extra) if profilo.get("cast") else []
     elenco = schede + cast
 
@@ -201,7 +204,6 @@ def analizza(testo: str, profilo: dict, schede_extra: "list[str]") -> "list[tupl
             if not coperto(luogo, labels):
                 rilievi.append(("C3", k, f"Dove: {luogo} — nessun box con quel luogo nell'etichetta"))
         chi = voci(m.group("chi"))
-        compar = comparse(corpo)
         for persona in chi:
             if not coperto(persona, elenco + compar):
                 rilievi.append(("C3", k, f"Chi: {persona} — né scheda d'entrata né riga fra le Comparse"))

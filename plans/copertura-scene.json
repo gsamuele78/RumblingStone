@@ -36,12 +36,12 @@
     },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
-      "perche": "il contratto entra con la revisione di DEF-4 (PIANO-LETTORE-E-PLAYTESTER F3)",
+      "perche": "contratto applicato il 2026-09-26 (PIANO-LETTORE-E-PLAYTESTER F3): tutte e tredici le scene",
       "regole": [
         "C1",
         "C2"
       ],
-      "contratto": false
+      "contratto": true
     },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
@@ -115,20 +115,6 @@
     }
   ],
   "residui": [
-    {
-      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
-      "regola": "C1",
-      "scena": "SCENA 2",
-      "voce": "nessun box read-aloud",
-      "perche": "🔴 la pattuglia di Durin arriva senza niente da leggere: la corregge PIANO-LETTORE-E-PLAYTESTER F3"
-    },
-    {
-      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
-      "regola": "C1",
-      "scena": "SCENA 8",
-      "voce": "nessun box read-aloud",
-      "perche": "da decidere in F3: la Scena 8 continua la tenda della 7"
-    },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
       "regola": "C2",
