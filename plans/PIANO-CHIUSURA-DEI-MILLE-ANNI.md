@@ -292,6 +292,31 @@ andare sulle colline di notte, ma non sanno come e quando torna.
 - **Misure**: box di DEF-4 da 24 a 25, nessuno oltre 12 righe; stampa del
   corredo e dei 15 volumi pulita
 
+## 5-quater · Lotto M7 — chi si incontra e dove *(2026-09-26)*
+
+Il DM: *«nell'avventura così come è scritta mancano davvero le descrizioni delle
+stanze e dei PNG che incontrano, li ho dovuti inventare sul momento»*. Misurato:
+le schede d'entrata dei PNG principali c'erano; mancavano i luoghi della notte e
+le persone con cui il gruppo ha trattato davvero.
+
+- [x] **M7.1** Scena 5: i quartieri ospiti, la cappella con **Sorella Brynja**,
+  la bottega di **Kettra** l'alchimista (le bombe di fuoco, prezzate come una
+  pozione), le gallerie di Zeth. Tre box nuovi
+- [x] **M7.2** Scena 6: le rune della tenda rese possibili. Soglia: *epurare
+  invisibilità* come runa incisa di Balvar (la regola sta nella sua scheda, non
+  nell'SRD); telo e corno: *glifo di interdizione* SRD. L'araldo **Grask**
+- [x] **M7.3** Scena 7: le quattro guardie; perché Balvar è con l'orda e perché
+  Zog'tar si fida; come Balvar sa dei PG, dalla **Corona** e non dall'ascia
+- [x] **M7.4** Scena 10: il capitano delle mura **Hrodgar**. Scena 12: il
+  vecchio del rito è Re Thorek se il tavolo non ha incontrato Thorgrim
+- Tutto marcato `[INFERRED — needs DM confirmation]`. Box di DEF-4 da 25 a 28,
+  nessuno oltre 12 righe
+- ⚠️ **Da dire al DM, non corretto qui**: la scheda di Balvar dice «incantesimi
+  da chierico 9» e insieme *blade barrier*, che è di 6°: torna solo contando i 4
+  livelli di Runecaster (13°). E il modulo chiama Hammerfist «fortezza giovane,
+  appena eretta» mentre Balvar ne è stato il runaio prima che nascessero i
+  bisnonni dei nani di oggi
+
 ## 6 · Il numero ADR
 
 L'ultimo ADR è **0058**; **0059** è già prenotato dal

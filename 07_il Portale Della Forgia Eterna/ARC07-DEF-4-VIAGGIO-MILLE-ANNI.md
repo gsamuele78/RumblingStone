@@ -673,6 +673,54 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale 12 h se
 mangiano), fabbri che affilano le armi, chierici che benedicono.
+
+> **Read-aloud (LotR lead) — i quartieri ospiti.** *Una sala bassa, scavata e
+> non costruita: il soffitto porta ancora i colpi dello scalpello, dritti e
+> fitti come le righe di un registro. Sei brande di legno nuovo lungo il muro,
+> e su ognuna una coperta piegata in quattro da qualcuno che aveva fretta. In
+> fondo un focolare che tira male. Dalla porta aperta entra il rumore della
+> fortezza che non dorme: martelli, passi, un bambino che piange e poi smette.*
+
+*Il luogo* `[INFERRED — needs DM confirmation]`: erano gli alloggi dei minatori,
+prima che la miniera diventasse fortezza. Nel soffitto c'è una crepa chiusa col
+piombo, del primo crollo, e nessuno ci dorme sotto.
+
+**La cappella dei chierici.** Due porte più in là dei quartieri. È qui che si
+comprano pozioni, bacchette e incantesimi (il banco della fucina, più sotto, ha
+i prezzi).
+
+> **Read-aloud (Casa di Davide lead) — la cappella.** *Non c'è un altare. C'è
+> un'incudine vecchia, portata giù dalla prima forgia, e intorno ai suoi piedi
+> la pietra è consumata a conca da generazioni di ginocchia. Venti chierici
+> dormono seduti, con la schiena al muro, per essere già in piedi quando li
+> chiameranno. Una sola è sveglia. Conta fiale su un panno, a voce bassa, e
+> ricomincia da capo ogni volta che arriva a trenta.*
+
+**Scheda d'entrata — Sorella Brynja, la chierica che conta** `[INFERRED — needs DM confirmation]`
+
+| | |
+|---|---|
+| **Aspetto** | nana giovane per guidare una cappella, i capelli rasati ai lati come chi porta l'elmo, le mani screpolate dall'acqua santa fredda |
+| **Vuole** | che all'alba ci siano incantesimi per le mura. Non per chi paga, per chi sale sulle scale |
+| **Teme** | di dover scegliere chi curare, e di scegliere male davanti a tutti |
+| **Suona** | conta ad alta voce, sempre. Fa ogni domanda due volte, la seconda più piano |
+| **Sa** | quanti incantesimi restano ai cinquanta chierici, e che in tutta la fortezza c'è un diamante solo |
+| **Vende** | le pozioni, le bacchette e gli incantesimi del banco della fucina. Chierica di Moradin di 9° livello, perché *rianimare morti* è di 5° |
+| **Eco** | ogni incantesimo di 4° o 5° che vende stanotte manca sulle mura: lo dice lei, se glielo chiedono |
+
+**La bottega dell'alchimista.** In fondo al corridoio della fucina, dove
+l'odore di zolfo copre quello del carbone.
+
+**Scheda d'entrata — Kettra, l'alchimista del re** `[INFERRED — needs DM confirmation]`
+
+| | |
+|---|---|
+| **Aspetto** | nana di mezza età senza sopracciglia, bruciate da anni. Un grembiule pieno di buchi rotondi, ognuno di una goccia diversa |
+| **Vuole** | finire le fiasche per le mura prima dell'alba. Ogni fiasca che vende è una fiasca in meno sulle scale |
+| **Suona** | ride quando qualcosa sta quasi per andare storto, e solo allora |
+| **Vende** | il fuoco dell'alchimista è finito, è tutto alle mura. Ha poche **bombe di fuoco** sue: una fiasca da lanciare che fa una *palla di fuoco* da 5d6, Riflessi CD 14, raggio 6 m, a 750 mo, prezzata come una pozione di 3° livello al 5° dell'incantatore |
+| **Eco** | le bombe sono una sua invenzione, e nel 1372 nessuno sa più farle così |
+
 - **HELLA — i Treant dell'alba.**<!-- storico --> *(Allineato al rito il 2026-09-24: la prima
   stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
   tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
@@ -687,6 +735,13 @@ mangiano), fabbri che affilano le armi, chierici che benedicono.
   annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
   questo: niente Treant in più, ma una quercia che fra mille anni sarà
   vecchia di mille anni.
+
+> **Read-aloud (Andor lead) — le gallerie.** *Sotto la fucina il caldo finisce
+> di colpo. Le gallerie sono strette, puntellate con travi nuove che sanno
+> ancora di resina, e ogni dieci passi una lampada a olio fa il suo cerchio di
+> luce e poi niente. Sulle pareti ci sono segni a gesso, e metà sono stati
+> cancellati col pollice. Da un punto più in fondo arriva il suono paziente di
+> un martelletto su pietra.*
 
 **Scheda d'entrata — Mastro Costruttore Zeth, il seme del Ghostlord** *(nelle
 gallerie sotto la fucina; cercarlo costa una tacca)*
@@ -1006,25 +1061,28 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
 **Le rune di Balvar alla tenda** `[CANONE — DM 2026-09-26]`. Balvar
 conosce i nani: sa che di notte mandano esploratori, invisibili quando possono.
-Per questo ogni sera, prima di cena, controlla e riscrive tre *glifi di
-interdizione* (chierico 3°, dominio della Runa), al **13° livello**: le sue
-rune le lancia da chierico 9 e Runecaster 4. L'SRD li fa durare finché non
-scattano; «ogni giorno» vuol dire che ogni sera rifà quelli scattati, a 200 mo
-di polvere di diamante l'uno.
+Le sue rune le lancia al **13° livello** (chierico 9 e Runecaster 4). Alla tenda
+usa due cose diverse, e tutte e due si possono fare:
 
-| Dove | Cosa fa |
-|---|---|
-| **La soglia della tenda** | scoppio **sonoro**, 5d8, Riflessi CD 18 dimezza. Il boato sveglia la tenda ed è l'allarme |
-| **Il telo sopra il seggio** | lo stesso, per chi taglia la tela ed entra dall'alto |
-| **La custodia del corno** | lo stesso, per chi prova a rubarlo |
+| Dove | Cosa fa | La regola |
+|---|---|---|
+| **La soglia** | *epurare invisibilità*: chiunque sia invisibile entro 19,5 m diventa visibile, per 13 minuti. **Non fa rumore** | una delle sue **quattro rune incise** (scheda nel Bestiario, `[Private source]`); la quarta è la Catena del drago |
+| **Il telo sopra il seggio** | scoppio **sonoro**, 5d8, Riflessi CD 18 dimezza. Il boato sveglia la tenda ed è l'allarme | *glifo di interdizione*, SRD |
+| **La custodia del corno** | lo stesso, per chi prova a rubarlo | *glifo di interdizione*, SRD |
 
-- **Sono legati ai nani.** L'SRD permette di legare un glifo a una razza, e
-  Balvar lo fa perché è dai nani che si difende. Un invisibile li fa scattare
+- **Perché la soglia è una runa e non un glifo.** Il glifo dell'SRD accetta solo
+  incantesimi che fanno danno, ed *epurare* non ne fa. Le rune incise di Balvar
+  invece scattano con qualunque incantesimo che conosce, alla condizione
+  scritta. I due glifi costano 200 mo di polvere di diamante l'uno: ogni sera
+  Balvar rifà quelli scattati.
+- **Sono legati ai nani.** L'SRD permette di legare un glifo a una razza, e la
+  runa scatta alla condizione che Balvar scrive: «un nano varca la soglia». Lo
+  fa perché è dai nani che si difende. Un invisibile li fa scattare
   come un visibile. Chi nel gruppo non è nano passa senza niente.
-- **Il silenzio li spegne.** Dentro la bolla della pietra nessuno subisce
-  danni sonori e il boato non esce. La pietra che alla tenda fa scoprire le
-  guardie (vedi sopra) è anche l'unica cosa che rende muti i glifi. È una
-  scelta, e costa in tutti e due i casi.
+- **Il silenzio spegne i glifi, non la soglia.** Dentro la bolla della pietra
+  nessuno subisce danni sonori e il boato non esce. *Epurare* invece non fa
+  rumore, e il silenzio non lo ferma: chi varca la soglia invisibile si ritrova
+  visibile davanti a quattro guardie, in una tenda muta.
 - **Trovarli e leggerli.** Cercare **CD 28**; toglierli con Disattivare
   Congegni CD 28 serve la capacità del ladro, oppure *dissolvi magie* contro
   il 13° livello (CD 24). Ma sono **scritti**, come tutte le sue rune: chi li vede e
@@ -1040,6 +1098,11 @@ gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
 e Skullcrusher deve tornare. Di notte il drago va sulle colline perché odia la
 Catena, e si allontana quanto la runa glielo lascia fare. All'alba l'araldo suona
 e il drago arriva sull'assalto.
+
+**L'araldo, Grask** `[INFERRED — needs DM confirmation]`: hobgoblin di
+quindici anni, magro, con il corno legato al polso da una cinghia perché una
+volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, e si
+sveglia al primo grido. Vuole una cosa sola: non perderlo più.
 
 - **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
@@ -1082,6 +1145,11 @@ un equivoco che gli conviene.
 
 **Mappa M7-C** (Appendice D). I PG entrano da nord, dalla parte della fortezza.
 La soglia è illuminata, il fondo no.
+
+**Le quattro guardie** *(statistiche: Appendice A.2)*: hobgoblin in armatura
+nera laccata, tutti uguali di proposito. Non parlano: al generale rispondono
+battendo l'asta per terra, una volta sì, due no. Vogliono che Zog'tar non li
+veda mai esitare, perché l'ultimo che ha esitato è sul seggio, fra i teschi.
 
 **Come va la scena, in ordine.** Nella tenda ci sono due persone che contano, e
 **parla prima quella che non dovrebbe**. Zog'tar è sul seggio con le sue
@@ -1189,12 +1257,35 @@ Spezzandolo in tre beat si guadagna anche una cosa che il box unico non aveva:
 diventa la prima battuta.
 <!-- /storico -->
 
-#### La cosa che lo rende memorabile: sa da dove venite
+#### Perché è con l'orda, e perché Zog'tar si fida `[INFERRED — needs DM confirmation]`
+
+- **Perché è con l'orda.** Esiliato senza processo, come dice la sua scheda, ha
+  trovato in Abbathor un dio che non gli chiede di perdonare. Il prezzo che ha
+  chiesto a Zog'tar non è oro: è che la fortezza cada **in fretta**, e che chi si
+  arrende non venga toccato. Sul camminamento c'è suo nipote.
+- **Perché Zog'tar si fida.** Non ciecamente: per tre ragioni che vede. Balvar gli
+  ha dato un drago, e nessun altro poteva. In dieci notti le sue rune hanno
+  fermato due incursioni di esploratori nanici, ed è per questo che gli
+  esploratori da allora guardano soltanto dalle mura. E Balvar non chiede il
+  comando né il bottino: un uomo che non vuole niente di quello che vuoi tu non
+  è un rivale.
+- **Cosa Zog'tar non sa.** Il patto sulla resa, che Balvar non gli ha mai detto
+  in quei termini.
+
+#### La cosa che lo rende memorabile: sa che non siete di qui
 
 **Leggere il Fuori-Posto** (3/giorno) è l'unica capacità che conta davvero. In
 tutta Hammerfist del ≈372 DR, **Balvar è il solo che sa che i PG non
 appartengono a questo secolo** — e non lo dice a nessuno, perché
 un'informazione che nessuno ha vale più di un'informazione condivisa.
+
+**Come lo sa, e cosa non sa.** *Leggere il Fuori-Posto* gli dice che i PG non
+sono di questo secolo, non di quale. Il resto lo capisce dalla **Corona**. Da
+giovane, quando era il runaio della fortezza, l'ha vista sulla testa del vecchio
+re, quello che l'ha persa contro Skullcrusher cinquant'anni fa: per questo dice
+*«la finirono con tre gemme»*. Adesso la vede sulla fronte di uno straniero,
+con due gemme accese. Ne deduce che viene da **dopo**, e da molto dopo. L'anno,
+i nomi e quello che è successo nel frattempo non li sa.
 
 **Non li smaschera. Tratta.** È un mercante di segreti come Varis è un mercante
 di merce, e la scena giusta è la stessa: un affare vero con un amo vero.
@@ -1470,6 +1561,13 @@ leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
 <!-- /storico -->
 Poi, quando le prime scale arrivano in cima:
 
+**Il capitano delle mura, Hrodgar** `[INFERRED — needs DM confirmation]`: nano
+con la barba bruciata da un lato, di un'altra battaglia, e un elmo senza cresta
+perché la cresta si vede da lontano. Dà gli ordini con una parola sola. Vuole
+tenere il tratto est fino a che il re non gli dice di lasciarlo, e sa dove la
+pietra è più giovane: lo stesso punto che Balvar ha segnato sulla mappa di
+Zog'tar.
+
 > **Read-aloud (Salvatore lead).** *Il camminamento è largo quanto un tavolo da
 > pranzo e lungo quanto la fortezza. Sotto, l'orda non urla più: ha smesso
 > quando ha cominciato a salire, e il silenzio che ha lasciato è peggio. Un
@@ -1707,6 +1805,11 @@ che l'incontro ha appena scelto.
 > ✏️ *Il nano molto vecchio del box qui sotto è **Thorgrim**: è l'unico vecchio
 > che i PG conoscono qui, e ha appena tenuto in mano la loro ascia. Il box non lo
 > nomina: se il tavolo chiede chi è, il nome lo dà il DM.*
+>
+> ✏️ *Se il tavolo **non ha incontrato Thorgrim** al consiglio, il vecchio è
+> **Re Thorek**. E se i giocatori si sono convinti che Thorgrim sia uno di loro,
+> nessuno qui li smentisce: la Cerimonia delle 100 Asce, in ARC-08, dirà il nome
+> giusto. `[INFERRED — needs DM confirmation]`*
 
 > **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
 > un'incudine, e si vede: il piano è segnato da mille anni di martelli. Intorno
