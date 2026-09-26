@@ -1011,10 +1011,39 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | Chi | Cosa fa |
 |---|---|
 | **Il campo** | niente. Dorme, e non guarda in alto |
-| **Balvar** | li vede comunque, invisibili o no, e **non dà l'allarme**: tratta, come nella Scena 7. Ha *epurare invisibilità*, ma lo usa solo se il combattimento lo tocca |
+| **Balvar** | li vede comunque, invisibili o no, e **non dà l'allarme**: tratta, come nella Scena 7. Le sue difese sono le rune alla tenda, qui sotto. Ha *epurare invisibilità*, ma lo usa solo se il combattimento lo tocca |
 | **Zog'tar e le guardie** | come nella Scena 8. Se sopravvive al primo round, la prima cosa che grida è il nome dell'araldo |
 | **L'araldo col corno** | dorme fuori dalla tenda, dalla parte del campo. All'allarme suona il corno entro **1d4 round** |
 | **Skullcrusher** | dalle colline al campo ci mette **circa 7 minuti** dal primo suono del corno. Vede al buio e sente chi è invisibile entro 18 m |
+
+**Le rune di Balvar alla tenda** `[INFERRED — needs DM confirmation]`. Balvar
+conosce i nani: sa che di notte mandano esploratori, invisibili quando possono.
+Per questo ogni sera, prima di cena, controlla e riscrive tre *glifi di
+interdizione* (chierico 3°, dominio della Runa). L'SRD li fa durare finché non
+scattano; «ogni giorno» vuol dire che ogni sera rifà quelli scattati, a 200 mo
+di polvere di diamante l'uno.
+
+| Dove | Cosa fa |
+|---|---|
+| **La soglia della tenda** | scoppio **sonoro**, 4d8, Riflessi CD 18 dimezza. Il boato sveglia la tenda ed è l'allarme |
+| **Il telo sopra il seggio** | lo stesso, per chi taglia la tela ed entra dall'alto |
+| **La custodia del corno** | lo stesso, per chi prova a rubarlo |
+
+- **Sono legati ai nani.** L'SRD permette di legare un glifo a una razza, e
+  Balvar lo fa perché è dai nani che si difende. Un invisibile li fa scattare
+  come un visibile. Chi nel gruppo non è nano passa senza niente.
+- **Il silenzio li spegne.** Dentro la bolla della pietra nessuno subisce
+  danni sonori e il boato non esce. La pietra che alla tenda fa scoprire le
+  guardie (vedi sopra) è anche l'unica cosa che rende muti i glifi. È una
+  scelta, e costa in tutti e due i casi.
+- **Trovarli e leggerli.** Cercare **CD 28**; toglierli con Disattivare
+  Congegni CD 28 serve la capacità del ladro, oppure *dissolvi magie* contro
+  il 9° livello. Ma sono **scritti**, come tutte le sue rune: chi li vede e
+  legge il nanico antico sa che sono legati ai nani.
+- **Balvar non vuole che scattino.** Il boato sveglia Zog'tar e rovina la
+  trattativa della Scena 7. Se li legge prima della soglia, dice in nanico
+  antico, piano: *«Non la soglia. Il telo a sinistra.»* Il consiglio non gli
+  costa niente, e d'ora in poi i PG gli devono qualcosa.
 
 **Come torna il drago** `[INFERRED — needs DM confirmation]`. Il **corno da
 guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
@@ -1033,15 +1062,15 @@ e il drago arriva sull'assalto.
   il duello comincia con il drago già in collera. Il corno è **scritto**, quindi
   si legge: nanico antico o Sapienza Magica CD 22 rivelano a cosa serve.
 
-**Cosa sanno gli esploratori nanici, e cosa è sbagliato.** Hanno guardato il
+**Cosa sanno gli esploratori nanici, e cosa non è esatto.** Hanno guardato il
 campo per dieci giorni dalle mura, senza mai entrarci. Durin lo racconta se
-glielo chiedono, e non sa quali cose sono vere.
+glielo chiedono, e non sa quali cose sono esatte.
 
 | Cosa dicono | Com'è davvero |
 |---|---|
 | «Il drago va sulle colline al tramonto e torna all'alba» | vero a metà: torna quando il corno lo chiama. Il sesto giorno il corno ha suonato tardi e il drago è arrivato tardi. L'hanno notato, e l'hanno preso per caccia |
 | «Ogni mattina gli orchi suonano la sveglia» | è il corno che chiama il drago, e loro non l'hanno collegato |
-| «Nel campo c'è un nano prigioniero, lo fanno lavorare a una forgia» | falso: è Balvar, e non è prigioniero di nessuno |
+| «Nel campo c'è un nano prigioniero, lo fanno lavorare a una forgia» | non esatto: il nano è Balvar, e nessuno lo sorveglia. All'alba gira fra le tende con uno scalpello: sono le sue rune |
 | «La tenda nera al centro è del generale» | vero |
 
 La terza riga è un **errore fecondo**: un tavolo che va a «salvare il nano

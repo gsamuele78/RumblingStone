@@ -284,6 +284,7 @@ andare sulle colline di notte, ma non sanno come e quando torna.
   suona di notte e se lo rubano. Marcato `[INFERRED]`
 - [x] **M6.3** Cosa sanno gli esploratori e cosa sbagliano, con un errore
   fecondo (il «nano prigioniero» è Balvar)
+- [x] **M6.5** *(stesso giorno, domanda del DM)* le **rune di Balvar alla tenda**: tre *glifi di interdizione* legati ai nani, scoppio sonoro che fa da allarme, spenti dalla bolla di silenzio; la tabella degli esploratori dice «non esatto» invece di «falso». Marcato `[INFERRED]`
 - [x] **M6.4** Scena 5: le rune di Zeth (D-F). Correzione: le pozioni del re
   duravano «120 minuti», e per l'SRD sono 12
 - **Misure**: box di DEF-4 da 24 a 25, nessuno oltre 12 righe; stampa del
