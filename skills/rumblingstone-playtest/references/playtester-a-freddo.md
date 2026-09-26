@@ -19,6 +19,11 @@ nell'ordine di gioco, nessuna storia di git.
    modulo dichiari quali sono le opzioni.
 3. **Chi fa cosa**: ogni giocatore ha qualcosa da fare in questa scena? Un PG
    senza azione per un'intera scena è un rilievo.
+4. **Le domande del developer**, per ogni scontro e ogni luogo sorvegliato: *e
+   se volano, e se sono invisibili?* · *chi sente il rumore, e in quanti round
+   arriva?* · *il PG che non vola e non ha gittata, cosa fa?* · *lo skill
+   challenge dice chi tira, cosa, e quanto costa un fallimento?* Le spiega
+   `rumblingstone-module-standard/references/sviluppo-degli-incontri.md`.
 
 ## I sette codici
 

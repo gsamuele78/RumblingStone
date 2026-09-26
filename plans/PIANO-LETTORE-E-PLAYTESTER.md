@@ -141,6 +141,12 @@ La sessione si è fermata prima dell'infiltrazione. Si parte dalle Scene 6-9.
 - [ ] ⚠️ **da decidere (DM)**: TS, DV, RI e incantesimi di Skullcrusher (A.1)
       non ci sono; i nomi e le regole marcati `[INFERRED]` in questo lotto
 
+⚠️ **Dal 2026-09-26 `DEF-4` non vale più come caso di calibrazione cieca.** La
+rubrica del playtester ha preso le domande del developer
+(`RICERCA-MANUALE-DEL-MASTER-2026-09`), e due di quelle («e se volano?», «chi
+sente il rumore?») sono nate dai suoi difetti. Una calibrazione nuova si fa su
+un modulo che la rubrica non ha mai visto.
+
 ### F4 · Gli altri master di ARC-07 — ⬜
 
 - [ ] DEF-5 per primo, perché si gioca subito dopo DEF-4: Madre Dana, Re Thorek,

@@ -215,6 +215,15 @@ regga davanti a delle persone lo dice **`rumblingstone-playtest`**: audit meccan
 dry-run cronometrato, schede di feedback, e il ciclo **alfa → beta → collaudato**.
 Un master che ha passato `validate_modules.py` è **alfa**, non finito.
 
+**Prima** della lettura a freddo, le domande del **developer**:
+[`references/sviluppo-degli-incontri.md`](references/sviluppo-degli-incontri.md).
+Sono sette, e ognuna viene da un difetto vero: chi resta senza niente da fare
+(la lente dei Tier), cosa succede se volano o sono invisibili, i tre tiri
+salvezza, chi sente il rumore, il boss che cambia invece di allungarsi, lo
+skill challenge scritto per intero, e chi si diverte in ogni scena. Da dove
+vengono, e cosa è stato scartato:
+`plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`.
+
 ## Verifica automatica (CI, zero token)
 
 > ⚠️ I punti **15-16** non sono controllati da `validate_modules.py`: un gate a
