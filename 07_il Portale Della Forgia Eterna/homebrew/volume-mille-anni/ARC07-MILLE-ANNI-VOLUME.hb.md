@@ -670,6 +670,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Banchetto e benedizioni (Scena 5, facoltativo, +1 morale 12 h) | **1** |
 | Hella veglia i semi della Collana: i Treant dell'alba (Scena 5) | **1** |
 | Cercare il Mastro Costruttore Zeth (Scena 5) | **1** |
+| Sorvolare il campo invece di attraversarlo (Scena 6, variante dall'alto) | **1** |
 | La fucina di notte: comprare, vendere, barattare con Gunnvor (Scena 5) | **1** |
 | Attraversare il mare di tende (Scena 6, skill challenge) | **2** |
 | Ogni **fallimento** nello skill challenge | **+1** |
@@ -737,6 +738,12 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   dalla fazione del **Collezionista** che viaggia tra i piani e le epoche. I PG
   seminano (senza saperlo) il dilemma etico di Hella su Zeth in ARC-09. Registra
   nell'Echo Ledger (§7) e nel registro di fine serata.
+- **Le rune di Zeth, se gliele chiedono**. Zeth incide rune
+  da un colpo solo: ***resistere all'energia*, acido 20** (7° livello
+  dell'incantatore), **70 minuti** dall'attivazione, come vuole l'SRD. Attivarla
+  è un'azione standard. Contro il soffio di Skullcrusher (12d4) toglie 20 danni a
+  ogni soffio. Se la attivano uscendo dalla postierla, all'alba è scaduta: va
+  attivata quando il drago compare. Prezzo di pergamena SRD, 350 mo.
 - **Riposo — scelta**: **breve** (2 tacche: metà slot e pf) o **lungo** (5
   tacche: recupero pieno, e poi il campo si attraversa di corsa). Il momentum
   spinge al breve. ⚠️ La guarigione del passaggio (Scena 1) li ha già rimessi in
@@ -924,7 +931,7 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 > **DURIN:** *«Tornate. Il Padre non butta via un dono così.»*
 
 **Prima di uscire**, se la fiducia al consiglio è stata piena: ognuno beve la
-**Pozione di Invisibilità** (CL 12, 120 minuti), e le **Benedizioni di Moradin**
+**Pozione di Invisibilità** (CL 12, 12 minuti: l'SRD dà 1 minuto per livello), e le **Benedizioni di Moradin**
 sono già addosso (+2 morale al colpire e ai danni, 12 ore).
 
 > **Read-aloud (Salvatore — l'infiltrazione).** *Fuori dalle mura, il buio è
@@ -966,6 +973,80 @@ hobgoblin che sta per andare alla tenda. Fermarlo **non richiede di ucciderlo**:
 - ► **Esito**: *la tenda raggiunta senza farsi vedere* · *con una pattuglia alle
   calcagna* · *con il campo pre-allertato* (corridore, allarme: +2 nemici sulle
   mura nella Scena 10, e Zog'tar sveglio).
+
+#### ✈️ Variante — dall'alto, invisibili e in silenzio
+
+Un tavolo che ha comprato alla fucina pozioni di *volare* e d'*invisibilità*, e
+ha una pietra che porta il *silenzio*, può passare **sopra** il campo invece che
+in mezzo. È un buon piano, e il modulo lo premia: **niente prova di gruppo**.
+Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
+
+> **Read-aloud (Salvatore lead) — il volo.** *Da quassù il campo è una
+> brace sparsa su un pendio. I fuochi mandano tutti lo stesso odore di
+> grasso, e nessuno, laggiù, guarda in alto. Un russare sale fin qui, così
+> forte da sembrare vicino. Poi la pietra fa il suo lavoro, e il mondo si
+> spegne: niente russare, niente vento, nemmeno il fiato.*
+
+**I numeri dell'SRD, che decidono il piano**
+
+| | Quanto dura | Cosa vuol dire stanotte |
+|---|---|---|
+| *Volare*, pozione (5° livello) | 5 minuti | 18 m di velocità, circa 1.800 m in tutto: basta per l'andata, **non** per il ritorno |
+| *Invisibilità*, pozione comprata (3°) | 3 minuti | 1 km lo copre appena. Quelle del re durano 12 minuti |
+| *Silenzio* sulla pietra | a lungo | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
+
+- **Le tacche.** Il volo costa **1 tacca** invece delle 2 dello skill challenge
+  `[INFERRED — needs DM confirmation]`. Chi non vola, e le pozioni sono tre, va
+  a piedi con lo skill challenge qui sopra, oppure resta alla postierla.
+- **Il ritorno si fa a piedi**, perché la pozione è finita all'andata. È lì
+  che li trova Vatore (Scena 9), come scritto.
+- **Chi li può scoprire in volo.** Nessuno, se restano sopra i 20 m: i lupi
+  fiutano a 9 m, il drago è sulle colline. Il rischio è **l'atterraggio**.
+- **La bolla alla tenda.** Se la pietra arriva a meno di 6 m dalla tenda, le
+  guardie di dentro si accorgono che la loro voce è sparita. Una esce dalla
+  bolla e grida: è l'allarme. La pietra si lascia **fuori**, o si entra senza.
+
+**Le tattiche più probabili, per chi sta nel campo**
+
+| Chi | Cosa fa |
+|---|---|
+| **Il campo** | niente. Dorme, e non guarda in alto |
+| **Balvar** | li vede comunque, invisibili o no, e **non dà l'allarme**: tratta, come nella Scena 7. Ha *epurare invisibilità*, ma lo usa solo se il combattimento lo tocca |
+| **Zog'tar e le guardie** | come nella Scena 8. Se sopravvive al primo round, la prima cosa che grida è il nome dell'araldo |
+| **L'araldo col corno** | dorme fuori dalla tenda, dalla parte del campo. All'allarme suona il corno entro **1d4 round** |
+| **Skullcrusher** | dalle colline al campo ci mette **circa 7 minuti** dal primo suono del corno. Vede al buio e sente chi è invisibile entro 18 m |
+
+**Come torna il drago** `[INFERRED — needs DM confirmation]`. Il **corno da
+guerra di ferro nero** (§8 B) non è una curiosità: Balvar ci ha inciso la runa
+gemella di quella sulla scaglia sternale. Quando il corno suona, la Catena tira
+e Skullcrusher deve tornare. Di notte il drago va sulle colline perché odia la
+Catena, e si allontana quanto la runa glielo lascia fare. All'alba l'araldo suona
+e il drago arriva sull'assalto.
+
+- **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
+  sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
+  finiti. Gira sul campo e li cerca. Se li trova, soffia una volta e torna al
+  campo. All'alba il duello si fa lo stesso, ma **senza sorpresa**: il drago
+  parte già in quota e conosce il loro odore.
+- **Se rubano o rompono il corno**, all'alba nessuno chiama il drago. Arriva
+  tardi, a metà mattina e da solo, furioso: le mura hanno un'ora di respiro, e
+  il duello comincia con il drago già in collera. Il corno è **scritto**, quindi
+  si legge: nanico antico o Sapienza Magica CD 22 rivelano a cosa serve.
+
+**Cosa sanno gli esploratori nanici, e cosa è sbagliato.** Hanno guardato il
+campo per dieci giorni dalle mura, senza mai entrarci. Durin lo racconta se
+glielo chiedono, e non sa quali cose sono vere.
+
+| Cosa dicono | Com'è davvero |
+|---|---|
+| «Il drago va sulle colline al tramonto e torna all'alba» | vero a metà: torna quando il corno lo chiama. Il sesto giorno il corno ha suonato tardi e il drago è arrivato tardi. L'hanno notato, e l'hanno preso per caccia |
+| «Ogni mattina gli orchi suonano la sveglia» | è il corno che chiama il drago, e loro non l'hanno collegato |
+| «Nel campo c'è un nano prigioniero, lo fanno lavorare a una forgia» | falso: è Balvar, e non è prigioniero di nessuno |
+| «La tenda nera al centro è del generale» | vero |
+
+La terza riga è un **errore fecondo**: un tavolo che va a «salvare il nano
+prigioniero» trova Balvar lo stesso, e la trattativa della Scena 7 comincia con
+un equivoco che gli conviene.
 
 ### SCENA 7 — La tenda del comando
 
@@ -1729,7 +1810,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **Pozioni di Cura Ferite Serie** dell'antica fucina (curano 3d8+11) | ~3.000 mo |
 | Scena 4 (dono cerimoniale) | **Torque di Thorek I** — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
 | Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
-| Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore) + un **corno da guerra di ferro nero** (curiosità, 300 mo) | ~300 mo |
+| Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore) + il **corno da guerra di ferro nero** che chiama il drago (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
 | Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
 
 > ⚠️ **Cosa torna nel 1372**: ciò che i PG **portano

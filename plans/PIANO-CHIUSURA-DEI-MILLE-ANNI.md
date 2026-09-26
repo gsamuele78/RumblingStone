@@ -239,6 +239,7 @@ l'apparato è fermo permette di misurare **solo** l'effetto della prosa.
 | ✅ | **D-C** — verificato: **non si riscrivono** | i nove erano **tre**, e i tre sono nomi noti o un nome spezzato in due parole. Il difetto stava nel metro, ed è corretto |
 | ✅ | **D-D** — allineare i tre master a `state.md` (**niente −2 COS**) | **confermata dal DM 2026-09-19** → M2.0 chiuso |
 | ✅ | **D-E** — a −1.000 il gruppo può **commerciare** con la fortezza assediata: una scena alla fucina, una tabella per i giocatori, una per il DM con gli echi | **decisa dal DM 2026-09-25**: le monete del 1372 **valgono a peso**; torna nel 1372 **ciò che i PG portano addosso**, resta qui ciò che consumano o vendono, e ritorna come reliquia → lotto **M5** |
+| ✅ | **D-F** — le rune di Zeth sono *resistere all'energia* acido **20**, durata SRD (70 minuti); di notte il drago va sulle colline, e come torni lo decide il modulo | **decisa dal DM 2026-09-26** → lotto **M6** |
 
 ---
 
@@ -267,6 +268,26 @@ prima […] e cosa sarebbero disposti a comprare gli armaioli di Hammerfist?»*
 - ⚠️ **Cosa non si è potuto misurare**: le monete che i PG hanno in tasca. Il
   repo non le registra, né in `state.md` né altrove; il limite di spesa
   quindi viene dalla fortezza, non dalla loro borsa
+
+## 5-ter · Lotto M6 — dall'alto *(2026-09-26)*
+
+Il DM: il gruppo vuole **infiltrarsi volando invisibile, con una pietra del
+silenzio**; il campo è largo circa 2 km; gli esploratori hanno visto il drago
+andare sulle colline di notte, ma non sanno come e quando torna.
+
+- [x] **M6.1** Scena 6, «Variante dall'alto»: i numeri SRD (*volare* 5 minuti,
+  *invisibilità* 3 e 12, *silenzio* 6 m), 1 tacca invece di 2, le tattiche
+  probabili per ognuno nel campo, e l'allarme che nasce dalla bolla di silenzio
+  alla tenda
+- [x] **M6.2** Come torna il drago: il **corno di ferro nero** del §8 B, che già
+  esisteva come curiosità, diventa il richiamo della Catena; cosa succede se
+  suona di notte e se lo rubano. Marcato `[INFERRED]`
+- [x] **M6.3** Cosa sanno gli esploratori e cosa sbagliano, con un errore
+  fecondo (il «nano prigioniero» è Balvar)
+- [x] **M6.4** Scena 5: le rune di Zeth (D-F). Correzione: le pozioni del re
+  duravano «120 minuti», e per l'SRD sono 12
+- **Misure**: box di DEF-4 da 24 a 25, nessuno oltre 12 righe; stampa del
+  corredo e dei 15 volumi pulita
 
 ## 6 · Il numero ADR
 
