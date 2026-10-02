@@ -27,7 +27,7 @@ pytest>=8.0
 # PRATICHE PI-3 (D2 del 2026-09-24): le vulnerabilita' note nelle dipendenze
 # dei due file. Gira in CI, non bloccante per il primo mese. Licenza
 # Apache-2.0. In locale: `pip-audit -r requirements-dev.txt`.
-pip-audit>=2.10
+pip-audit>=2.10.1
 
 # D7 di PIANO-CICLO-DI-SESSIONE-E-MENU (DM, 2026-09-25: sì). Legge il PDF dei
 # volumi per misurare righe sovrapposte, testo sul bordo e apparato di lavoro
