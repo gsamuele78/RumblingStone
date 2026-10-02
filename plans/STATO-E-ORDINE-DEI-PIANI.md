@@ -76,7 +76,7 @@
 | ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4. **D1-D6 decise il 2026-09-30**: la cronaca si aggiorna da sola, le alleanze sono un dato, la prosa la scrive l'agente con le skill, menu numerato, le immagini si elencano con le descrizioni (o Canva), BDD senza framework | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | agente: la Fase 0 |
 | ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
 | ⬜ | **🧲 e 🤖**, e la nota locale di una mappa che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 · §9.3 | prima si legge che cosa vuol dire il simbolo in ogni mappa che lo usa |
-| 🙋 | **Al DM**: cancellare nove rami, i sei di §9.2 più tre fusi o con ogni patch su `main` (le sessioni d'agente non possono). Misurato il 2026-10-02 | | §15.5 | il comando è lì, e tocca un ramo solo se la testa è ancora quella misurata |
+| ✅ | **I nove rami fusi o portati, cancellati** dal DM il 2026-10-02: i sei di §9.2 più tre fusi o con ogni patch su `main`. Prima della cancellazione, un tag per ramo su `origin` (`archivio/2026-10-02/<ramo>`) e un bundle verificato in `~/rumblingstone-backup-rami/`, con `ripristina.sh` | | §15.5 | fatto: su `origin` restano dieci rami oltre a `main`; `contenuti_nei_rami --check` verde, da 26 a 18 riferimenti |
 | ✅ | **I master DEF di ARC-08 e ARC-09, le decisioni e la divisione**: D1-D3 decise, 4 master per ARC-08 e 12 per ARC-09 approvati (A1), misure di partenza (A2). *(2026-09-27)* | G + R | [MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A1-A2 · PR #182 | fatto |
 | ✅ | **Il ciclo del master vale per ogni piano** ([ADR-0075](adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md)): sette passi in `module-standard`, e ogni piano che riscrive contenuto li cita. *(2026-09-27)* | G3 | MASTER-DEF §1-bis · PR #182 | fatto |
 | ▶ | **DEF-1, 2, 3 nella forma del ciclo** *(30 settembre, sera)*: passi 1-4 fatti (scene, contratto, schede, apparati), box letti al tavolo invariati. Letture cieche: DEF-1 lettore 🔴 2, DEF-2 🔴 2 + 2, DEF-3 🔴 1 + 2, DEF-1 playtester 🔴 1; corretti quelli che il testo risolve, le due risposte nuove di DEF-2 sono canone (DM, 30 settembre), gli altri sono D34-D37 | K / C | LETTORE F4 · `esperimenti/f4-def1-def3/` | DM: D35 (il rito che va male), D36 (sei rilievi di regole), D37 (la Sentinella); D34 e D9 sono decise. Poi agente: applica e rilegge |
@@ -1423,6 +1423,8 @@ c45c9cc43d64cb6723682a96f56b58f364267cfe claude/golarion-pregen-character-sheets
 3e4315336db109940d53783e59be5f71d0606b18 claude/rumbling-stone-casters-oxzi2w
 RAMI
 ```
+
+**Eseguito dal DM il 2026-10-02**, e verificato: i nove rami non ci sono più su `origin`, i nove tag `archivio/2026-10-02/*` puntano agli SHA della tabella, il bundle `~/rumblingstone-backup-rami/rami-2026-10-02.bundle` contiene i nove ref e passa `git bundle verify`. Per ripristinare: `~/rumblingstone-backup-rami/ripristina.sh [ramo]`, che usa il bundle o, se manca, i tag.
 
 Dopo: `contenuti_nei_rami.py --check` deve restare verde. I rami tolti
 aggiungono voci all'avviso «nel registro ma non più nei rami», che è la riga
