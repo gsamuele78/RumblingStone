@@ -76,7 +76,7 @@
 | ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4. **D1-D6 decise il 2026-09-30**: la cronaca si aggiorna da sola, le alleanze sono un dato, la prosa la scrive l'agente con le skill, menu numerato, le immagini si elencano con le descrizioni (o Canva), BDD senza framework | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | agente: la Fase 0 |
 | ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
 | ⬜ | **🧲 e 🤖**, e la nota locale di una mappa che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 · §9.3 | prima si legge che cosa vuol dire il simbolo in ogni mappa che lo usa |
-| 🙋 | **Al DM**: cancellare i sei rami di §9.2 (le sessioni d'agente non possono) | | §9.2 | il comando è lì, e tocca un ramo solo se la testa è ancora quella misurata |
+| 🙋 | **Al DM**: cancellare nove rami, i sei di §9.2 più tre fusi o con ogni patch su `main` (le sessioni d'agente non possono). Misurato il 2026-10-02 | | §15.5 | il comando è lì, e tocca un ramo solo se la testa è ancora quella misurata |
 | ✅ | **I master DEF di ARC-08 e ARC-09, le decisioni e la divisione**: D1-D3 decise, 4 master per ARC-08 e 12 per ARC-09 approvati (A1), misure di partenza (A2). *(2026-09-27)* | G + R | [MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A1-A2 · PR #182 | fatto |
 | ✅ | **Il ciclo del master vale per ogni piano** ([ADR-0075](adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md)): sette passi in `module-standard`, e ogni piano che riscrive contenuto li cita. *(2026-09-27)* | G3 | MASTER-DEF §1-bis · PR #182 | fatto |
 | ▶ | **DEF-1, 2, 3 nella forma del ciclo** *(30 settembre, sera)*: passi 1-4 fatti (scene, contratto, schede, apparati), box letti al tavolo invariati. Letture cieche: DEF-1 lettore 🔴 2, DEF-2 🔴 2 + 2, DEF-3 🔴 1 + 2, DEF-1 playtester 🔴 1; corretti quelli che il testo risolve, le due risposte nuove di DEF-2 sono canone (DM, 30 settembre), gli altri sono D34-D37 | K / C | LETTORE F4 · `esperimenti/f4-def1-def3/` | DM: D35 (il rito che va male), D36 (sei rilievi di regole), D37 (la Sentinella); D34 e D9 sono decise. Poi agente: applica e rilegge |
@@ -1378,3 +1378,52 @@ manutenzione del server, con un test che faccia passare lo schema dal filtro.
 D17, le quattro incoerenze, le D1-D6 di BOX-DI-LUOGO, la corsa del DM a freddo
 su DEF-5, RIPRESA-PR 4g e 4h. Per l'agente, fra un'attesa e l'altra, le righe
 ⬜ di classe M e C di §0 non aspettano nessuno.
+
+### 15.5 · I rami fusi o portati, da cancellare
+
+Il DM, il 2026-10-02: *«vedi se tutti quei branch sono già mergiati nel main e
+se sì chiudili»*. Misurato ramo per ramo con `git rev-list main..ramo` (commit
+che `main` non ha) e `git cherry main ramo` (commit la cui patch su `main`
+c'è già con un altro SHA). Nessuno dei diciassette rami è fuso commit per
+commit, tranne `focused-meitner-pgyb20`. Nove si possono cancellare:
+
+| Ramo | Perché |
+|---|---|
+| `review-tournament-integration-yYlwv`, `salvatore-character-art-wSjuH`, `optimize-skills-agent-folders-dwJC4`, `dnd-map-generation-research-55pzry`, `golarion-pregen-character-sheets-cstheq`, `terros-battle-hints-booklet-hfvbef` | i sei di §9.2: validati riga per riga in RIPRESA-PR §4.12 FASE 3. Il recupero a cui la D8 di PRATICHE li legava (4j-1, 4j-3, 4j-4) è chiuso dal 2026-09-24; la testa di ognuno è ancora quella misurata |
+| `focused-meitner-pgyb20` | fuso: zero commit fuori da `main` (#166) |
+| `documento-stemmi-alternativi-ehgi9m`, `rumbling-stone-casters-oxzi2w` | ogni commit ha la sua patch già su `main` (`git cherry` tutto `-`); per il primo, 31 righe su 31 (RIPRESA-PR §4.12) |
+
+Restano, e non sono fusi:
+
+| Ramo | Perché resta |
+|---|---|
+| `campaign-group-rumblingstone-dm-gianfranco` | è la partita (ADR-0007), non va mai su `main` |
+| `stone-audit-best-practices-yver7k` (#99), `pr-105-raster-generation-bq0efs` (#106) | i segnaposto di RIPRESA-PR, «in volo» nel registro (§14.4) |
+| `document-audit-prd-cleanup-j5ipln` (#143) | contenuto «portato» con altri commit: due patch che `main` non ha |
+| `campaign-session-tools-j2dzx1`, `hammerfist-maps-ultra-clear-9pczfe`, `map-generation-pipeline-7ka5a7`, `paizo-editorial-components-qky8nv`, `scripts-audit-documentation-u48g28` | commit con patch che `main` non ha; la D7 di PRATICHE li tiene. Vanno guardati uno per uno prima di decidere |
+
+La sessione d'agente non ha il permesso di cancellare rami remoti. Il comando
+è per il DM: cancella un ramo solo se la sua testa è ancora quella misurata il
+2026-10-02, e con lo SHA il ramo si ripristina
+(`git push origin <sha>:refs/heads/<ramo>`).
+
+```bash
+git fetch --prune origin
+while read sha b; do
+  [ "$(git rev-parse "origin/$b" 2>/dev/null)" = "$sha" ] && git push origin --delete "$b"
+done <<'RAMI'
+895863241eaff57d135ed1b2527bd9f55009c2c1 claude/review-tournament-integration-yYlwv
+64df2ebc8f87992e951b212e59996866ad4bf326 claude/salvatore-character-art-wSjuH
+b5e04d2d78799a56bcfa8257c09bc0d817d61e28 claude/optimize-skills-agent-folders-dwJC4
+4986ce87cb7826c804df3be3c34a1f3e3614b30b claude/dnd-map-generation-research-55pzry
+c45c9cc43d64cb6723682a96f56b58f364267cfe claude/golarion-pregen-character-sheets-cstheq
+23f14b607be177699b915c33dbaa7f9e022dee6a claude/terros-battle-hints-booklet-hfvbef
+0004256b134dbc7bc8810893f191213ad28632b5 claude/focused-meitner-pgyb20
+006338e384399923eae4405dfd62f07745b09122 claude/documento-stemmi-alternativi-ehgi9m
+3e4315336db109940d53783e59be5f71d0606b18 claude/rumbling-stone-casters-oxzi2w
+RAMI
+```
+
+Dopo: `contenuti_nei_rami.py --check` deve restare verde. I rami tolti
+aggiungono voci all'avviso «nel registro ma non più nei rami», che è la riga
+⬜ del registro in §0.
