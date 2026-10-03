@@ -21,7 +21,7 @@
 > diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
 > e non si aggiornano più.
 
-**Ultimo aggiornamento**: 2026-10-02, dopo il merge della #200 (`5f3cb520`), che ha portato su `main` anche #186-#199, #187 e #188: le sole PR aperte sono #99 e #106, e il da fare è in §14.4-bis. Prima: 2026-09-30 notte, il giro delle quattro letture su DEF-4 e DEF-5 (riga ▶ qui sotto). Prima: 2026-09-30, dopo il merge della #182 (`c80af16`), della #183 (`ac97197`) e della #184. **La fotografia della tornata, con i numeri, i piani aperti e le decisioni per piano, è il §14.** DEF-4 pronto per la prossima serata, ARC-07 al ciclo del master con DEF-5 ai passi 1-6, e la prova cieca di `P-ABITATO` riuscita. Le righe marcate *(PR #183)* e *(30 settembre)* qui sotto dicono cosa è fatto e cosa resta; il dettaglio è in [LETTORE-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis e F4. Prima: il 2026-09-25, dopo il merge delle #170-#174 (`eef36a9`) e della #176, e i lotti 2f e 2g di CICLO-SESSIONE. Cosa ha chiuso la #169 e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
+**Ultimo aggiornamento**: 2026-10-03, dopo il merge della #215 (la tavola di fuori nel Drappo, ADR-0080). Il CHANGELOG del 2026-10-03 porta anche #213 e #214 (le quattro scelte del DM sul foglio di stile; la coda del secondo lettore), che questa fotografia non aveva ancora: la loro coda sta in [PIANO-CODA-DEL-SECONDO-LETTORE](PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md). Il da fare in ordine per ripartire è in §14.4-ter. Prima: 2026-10-02, dopo il merge della #200 (`5f3cb520`), che ha portato su `main` anche #186-#199, #187 e #188: le sole PR aperte sono #99 e #106, e il da fare è in §14.4-bis. Prima: 2026-09-30 notte, il giro delle quattro letture su DEF-4 e DEF-5 (riga ▶ qui sotto). Prima: 2026-09-30, dopo il merge della #182 (`c80af16`), della #183 (`ac97197`) e della #184. **La fotografia della tornata, con i numeri, i piani aperti e le decisioni per piano, è il §14.** DEF-4 pronto per la prossima serata, ARC-07 al ciclo del master con DEF-5 ai passi 1-6, e la prova cieca di `P-ABITATO` riuscita. Le righe marcate *(PR #183)* e *(30 settembre)* qui sotto dicono cosa è fatto e cosa resta; il dettaglio è in [LETTORE-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis e F4. Prima: il 2026-09-25, dopo il merge delle #170-#174 (`eef36a9`) e della #176, e i lotti 2f e 2g di CICLO-SESSIONE. Cosa ha chiuso la #169 e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
 
 | | Cosa | Classe | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|---|---|
@@ -37,6 +37,8 @@
 | ✅ | **Le tabelle che in colonna vanno a capo in ogni cella scavalcano le due colonne**, misurate dal tema; marcatore `<!-- tabella: larga -->` / `colonna` per l'autore; i PDF della #169 rifatti con tutte le regole nuove | C + G3 | §13 · `rumblingstone-editoria` §2 e §4.7 | fatto: nei volumi della #169 100 tabelle su 125 erano alte il doppio in colonna; ora 330 tabelle larghe su tutti i volumi, 60% nella stessa pagina |
 | ✅ | **Le `[PROPOSTA]` e gli `[INFERRED]` di ARC-07 chiusi**: il DM ha deciso il 2026-09-25, tutto canone; l'equipaggiamento di Hella è quello della sua scheda | K | §12.1 | fatto: 32 marcature dei sorgenti chiuse, 5 restano (tre descrivono una convenzione, due sono i tratti del volto nei prompt) |
 | ✅ | **Il giro di merge del 2026-10-02**: la serie AGENT-SKILLS (#186, #189-#199), #187, #188 e la #200 su `main`; restano aperte solo #99 e #106 | C | §14.4-bis · #200 | fatto: il da fare in ordine è in §14.4-bis, a partire dal lotto D13 da approvare |
+| ✅ | **Drappo L9: la tavola di fuori** (`02-GIORNO-2` §2-bis) e [ADR-0080](adr/ADR-0080-le-fonti-di-pubblico-dominio-entrano-come-logica.md): un innesto da una fonte di pubblico dominio, come logica e mai come personaggi. D1-D4 decise il 2026-10-03; nessun altro innesto (Torre Invisibile e Strappo fra le Ere esclusi) | G | [DRAPPO](PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 · #215 | fatto lo scritto; il collaudo è la riga sotto |
+| ⬜ | **Drappo L9, il collaudo**: lettore e playtester a freddo sul §2-bis (passo 6 di ADR-0075, rubrica di LETTORE F5), dry-run cronometrato (sta in cinque minuti per taglio?), booklet `DRAPPO-BOOKLET-DM` da rigenerare con `validate_booklets`, poi il tavolo. La scena resta **alfa** | G | DRAPPO Lotto 9 | agente: due agenti che non vedono il piano; poi il DM al tavolo |
 | ▶ | **Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi**, un lotto alla volta: 568 in tutto il repo, circa 400 nel contenuto | K | §12.1 | agente: il prossimo lotto è ARC-08 (32), poi ARC-09 (53), `campaign/` (50), `PG/` (22), il Bestiario (212) per ultimo perché è il più grande |
 | ✅ | **Le pagine stampabili della Collana dei Semi Eterni e di Durik**, giocatrice e DM, nella famiglia della Corona a 2 gemme; **le sinergie della Collana (F1-F4, la Quaternità) canone** e scritte in ogni pagina di artefatto | K | `PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` §5 · `SINERGIE-ARTEFATTI-MASTER.md` | fatto: decisioni del DM su Treant, tipi dei poteri, scheda tecnica e sinergie applicate a pagine, master, skill di campagna. Chiusi anche gli ultimi tre punti (forma selvatica, ricarica all'alba, momenti degli stati futuri); i poteri degli stati futuri si scrivono in ARC-09. `state.md` §6 non toccato: il canone si scrive sul ramo del gruppo (ADR-0007) |
 | ✅ | **I fogli ✉ della serata non portano più l'istruzione di consegna per il DM**: undici fogli la stampavano in testa. Chiusa fra `<!-- consegna -->`; la regia e `DEF-3` ora dicono tutto quello che diceva (la preghiera letta in piedi con la mano sull'Altare, le caselle dei Doni che segna il DM, la seconda metà dell'eco di Hella) | C + G3 | ADR-0069, «Estensione» · `rumblingstone-editoria` §4.5 punto 6 | fatto: `TestIFogliDeiGiocatori` verde su 26 fogli `player` |
@@ -301,7 +303,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**17 aperte** · 127 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**17 aperte** · 131 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -345,6 +347,10 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D5~~ | `CICLO-SESSIONE` | F2 · 2c | ✅ **Decisa il 2026-09-30**: la preparazione elenca le immagini mancanti con la descrizione da dare a un generatore, oppure le fa con Canva come per la serata precedente. Era: **Le immagini mancanti si generano durante la preparazione?** Serve ComfyUI sulla macchina del DM e minuti per immagine. Proposta: la preparazione le **elenca** e lancia `comfyui_batch` solo se il DM lo chiede |
 | ~~D7~~ | `CICLO-SESSIONE` | F2 · 2f | ✅ **Decisa dal DM il 2026-09-25: sì**, in `requirements-dev.txt`; lotto 2g. **PyMuPDF in CI?** `validate_corredo --stampa` conta righe sovrapposte e testo sul bordo leggendo il PDF con PyMuPDF, che è AGPL e oggi non è fra le dipendenze (`rumblingstone-editoria` §4). In CI la misura quindi si dichiara saltata, e il PDF difettoso lo trova solo chi esegue il controllo in locale. (a) ammetterla in `requirements-dev.txt`, come pytest: è uno strumento di verifica e non esce dal repo; (b) tenerla fuori, come oggi. Proposta: (a), dopo aver riletto la licenza con `rumblingstone-edizione` |
 | ~~D6~~ | `CICLO-SESSIONE` | F0 · 0c | ✅ **Decisa il 2026-09-30**: (a): la pratica senza framework. Era: **BDD con un framework, o solo la sua pratica?** Misurato in [RICERCA-BDD-O-TDD-2026-09](RICERCA-BDD-O-TDD-2026-09.md): `behave` trova gli stessi 16 difetti su 16 del TDD, con +42% di righe, +45% di tempo e 3 MB di dipendenze contro ADR-0037; in cambio il `.feature` si legge senza aprire Python. (a) la pratica senza framework: scenari con identificatore in §4, test che li citano, un gate stdlib che li tiene allineati; (b) `pytest-bdd` con un'eccezione ad ADR-0037; (c) niente, come oggi. Proposta: (a) |
+| ~~D1~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«approvo con tutte le premesse e verifiche che vuoi fare»*): l'innesto nel Drappo parte, con la forma proposta |
+| ~~D2~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«D2 ok»*): le tre correzioni restano. Era: **Confermi le tre correzioni?** Dedotto da me: la scena sta ai Partiti e non alla Cena; l'enigma senza risposta è tolto; le rose dipinte sono tolte. Sono scelte mie, e il DM approvando non le aveva viste |
+| ~~D3~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«d3 ok»*): il foglietto letto a tutti resta nella scena. Era: **Il foglietto letto a tutti è una regola che vuoi?** Dà ai cinque fuori un modo di pesare sulla trattativa di Vanna, ed è l'unica cosa della scena che tocca i Partiti. Alternativa: tavola senza porta |
+| ~~D4~~ | `DRAPPO-TAVOLA` | futuro | ✅ **Decisa il 2026-10-03** (il DM: *«d4 non adottarlo»*): le altre due proposte **non si adottano**, e il Drappo resta l'unico innesto. Era: **Le altre due proposte della valutazione** (la Torre Invisibile in ARC-09, liv. 2-3; lo Strappo fra le Ere come appendice opzionale di DEF-5) restano non decise. Vanno decise prima di toccare altri file |
 | ~~D1~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: la chiave del quiz di DEF-4 è approvata |
 | ~~D2~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: alla q8 valgono tutti e due i desideri di Balvar (Hammerfist che cade in fretta, e qualcuno che dica che c'era) |
 | ~~D3~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: il riquadro *La serata in tre frasi* entra in testa a DEF-4 |
@@ -1193,7 +1199,7 @@ D39 (DEF-4, l'orologio senza margine) e le mappe M7-B e M7-C (lotto D28).
 | MASTER-DEF-ARC08-ARC09 | ~15 | A3: il canone di ARC-08 contro lo stato del tavolo, dopo F4 | agente, poi DM |
 | REVISIONE-ARC07 | ~95 | le sessioni giocate al tavolo | tavolo |
 | REVISIONE-TRASVERSALE | ~90 | T8 e T9, legati al tavolo | tavolo |
-| DRAPPO-DI-TARSILIA | ~90 | L6 e il collaudo | DM |
+| DRAPPO-DI-TARSILIA | ~90 | L9 il collaudo a freddo della tavola di fuori; poi L6 e il tavolo | agente, poi DM |
 | MISURA-EDITORIALE-STANDARD | ~90 | la soglia κ ≥ 0,6 prima di entrare in CI | agente |
 | INTEGRAZIONE-PIPELINE-MAPPE | ~92 | collaudo al tavolo | DM |
 | RIPRESA-PR-ABBANDONATE | ~88 | 3d (D2, il collaudo SDXL) e 4d-4h, uno alla volta | DM, poi agente |
@@ -1256,6 +1262,26 @@ RIPRESA-PR, e fonderle riporterebbe su `main` versioni di agosto.
 4. Le D1-D6 di BOX-DI-LUOGO, che sbloccano la chat editoriale di quel piano.
 5. Una corsa del DM a freddo su DEF-5 con le undici voci `P-*` (D12).
 6. RIPRESA-PR 4g e 4h, che chiudono #99 e #106.
+
+### 14.4-ter · Ripartire in una chat pulita (2026-10-03)
+
+Il DM: *«aggiorna tutti i piani in modo che si può continuare in una chat pulita»*.
+Su `main` non c'è niente di aperto a metà: la #215 è fusa, le sole PR aperte
+restano #99 e #106 (§14.4). Il da fare, **in questo ordine**, e chi lo sblocca:
+
+| # | Cosa | Chi | Dove sta |
+|---|---|---|---|
+| 1 | **Approvare il lotto D13** (undici documenti di revisione, 23 modifiche con `applica --auto`, quattro da guardare) e rispondere a **D17** («sembra» seguito dalla smentita) | DM | `plans/scrittura/revisioni-D13/LEGGIMI.md` · §14.4-bis |
+| 2 | **La coda del secondo lettore**: il genere di *Torre* e quattro concordanze (decide il DM); poi gli accenti di 57 schede del Bestiario (lotto meccanico) e i 32 campi troncati nei prompt immagini | DM, poi agente | [CODA-DEL-SECONDO-LETTORE](PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md), col suo primo messaggio per una chat pulita |
+| 3 | **Il collaudo di Drappo L9**: due letture a freddo, dry-run, booklet rigenerati | agente | DRAPPO Lotto 9 |
+| 4 | **Le quattro incoerenze di canone** trovate da L11 e L12 (Fauci nell'handout, le pozioni antiche fra DEF-4 e DEF-5, il «−2 COS» di Thorik in `ARC08-11`, le tre descrizioni del Rubino) | DM, poi agente | `plans/scrittura/RISULTATI.md` |
+| 5 | **LETTORE F4**: il giro 2 su DEF-4 e DEF-5, dopo D38, D39 e il lotto mappe D28; poi **MASTER-DEF A3**, che aspetta F4 | DM, poi agente | LETTORE-PLAYTESTER · MASTER-DEF |
+| 6 | **Le D1-D6 di BOX-DI-LUOGO** e **una corsa del DM a freddo su DEF-5** con le undici voci `P-*` | DM | BOX-DI-LUOGO · D12 di AGENT-SKILLS |
+| 7 | **RIPRESA-PR 4g e 4h**, che chiudono #99 e #106 | agente | RIPRESA-PR |
+
+Le decisioni aperte al DM sono **17** (`decisioni_dm.py --check`); le più
+urgenti per la prossima serata sono D31 e D33 di LETTORE-PLAYTESTER. VENDIBILITA
+resta **non autorizzato**.
 
 ### 14.5 · Le decisioni al DM, per piano
 
