@@ -49,8 +49,8 @@ Carroll è del 1865 e del 1871, e il testo originale è libero ovunque. Ma:
   invita la domanda sui diritti delle versioni disegnate, e funziona solo per chi
   riconosce il riferimento.
 - **Un innesto dentro i DEF di ARC-07.** I cinque master sono nel ciclo di lettura
-  a freddo e una scena nuova invaliderebbe le letture. Resta aperta come
-  appendice opzionale, con decisione del DM (D3 del lotto).
+  a freddo e una scena nuova invaliderebbe le letture. Il DM l'ha esclusa
+  il 2026-10-03 (D4 del lotto), insieme alla Torre Invisibile di ARC-09.
 - **Nessun innesto.** Rinuncia a una tavola che dà ai cinque giocatori fuori scena
   qualcosa da fare, che è un difetto misurato nel playtest alfa (72 minuti).
 

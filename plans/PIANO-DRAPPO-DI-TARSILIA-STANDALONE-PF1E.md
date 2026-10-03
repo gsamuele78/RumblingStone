@@ -285,9 +285,15 @@ cose che la proposta non sapeva:
 | # | Fase | Domanda |
 |---|---|---|
 | ~~D1~~ | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«approvo con tutte le premesse e verifiche che vuoi fare»*): l'innesto nel Drappo parte, con la forma proposta |
-| D2 | L9 | **Confermi le tre correzioni?** Dedotto da me: la scena sta ai Partiti e non alla Cena; l'enigma senza risposta è tolto; le rose dipinte sono tolte. Sono scelte mie, e il DM approvando non le aveva viste |
-| D3 | L9 | **Il foglietto letto a tutti è una regola che vuoi?** Dà ai cinque fuori un modo di pesare sulla trattativa di Vanna, ed è l'unica cosa della scena che tocca i Partiti. Alternativa: tavola senza porta |
-| D4 | futuro | **Le altre due proposte della valutazione** (la Torre Invisibile in ARC-09, liv. 2-3; lo Strappo fra le Ere come appendice opzionale di DEF-5) restano non decise. Vanno decise prima di toccare altri file |
+| ~~D2~~ | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«D2 ok»*): le tre correzioni restano. Era: **Confermi le tre correzioni?** Dedotto da me: la scena sta ai Partiti e non alla Cena; l'enigma senza risposta è tolto; le rose dipinte sono tolte. Sono scelte mie, e il DM approvando non le aveva viste |
+| ~~D3~~ | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«d3 ok»*): il foglietto letto a tutti resta nella scena. Era: **Il foglietto letto a tutti è una regola che vuoi?** Dà ai cinque fuori un modo di pesare sulla trattativa di Vanna, ed è l'unica cosa della scena che tocca i Partiti. Alternativa: tavola senza porta |
+| ~~D4~~ | futuro | ✅ **Decisa il 2026-10-03** (il DM: *«d4 non adottarlo»*): le altre due proposte **non si adottano**, e il Drappo resta l'unico innesto. Era: **Le altre due proposte della valutazione** (la Torre Invisibile in ARC-09, liv. 2-3; lo Strappo fra le Ere come appendice opzionale di DEF-5) restano non decise. Vanno decise prima di toccare altri file |
+
+<!-- eco: DRAPPO-TAVOLA 2026-10-03 -->
+- **Decise**: D1, l'innesto nel Drappo parte (decisa prima, lo stesso giorno); D2, le tre correzioni alla proposta restano; D3, il foglietto di dodici parole letto a tutti resta; D4, le altre proposte non si adottano
+- **Aperte**: nessuna decisione. Restano i passi del lotto non fatti: lettura a freddo, dry-run, booklet, tavolo
+- **Cambiate**: nessuna rispetto alla proposta; D4 chiude invece di rimandare
+- **Dedotto da me**: che *«non adottarlo»*, al singolare, valga per **tutte e due** le proposte di D4 (la Torre Invisibile e lo Strappo fra le Ere). Se il DM voleva escludere solo una, lo dica e riapro l'altra
 
 ### ⚠️ Divergenza con `claude/golarion-pathfinder-campaign-xbyvzt`
 
