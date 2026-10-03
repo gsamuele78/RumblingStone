@@ -301,7 +301,10 @@ def languagetool(testo: str, url: str) -> "list[Segnalazione]":
         return []
     fuori = []
     for m in risposta.get("matches", []):
-        riga = testo.count("\n", 0, m.get("offset", 0)) + 1
+        # LanguageTool conta gli offset in unità UTF-16: un'emoji vale due, e con
+        # `testo.count` la riga scivolava in avanti (misurato il 2026-10-03, ADR-0079).
+        prima = testo.encode("utf-16-le")[:2 * m.get("offset", 0)].decode("utf-16-le", "replace")
+        riga = prima.count("\n") + 1
         proposta = ", ".join(x["value"] for x in m.get("replacements", [])[:3])
         fuori.append(Segnalazione(riga, riga, "grammatica",
                                   f"{m.get('message', '')}" + (f" → {proposta}" if proposta else "")))
