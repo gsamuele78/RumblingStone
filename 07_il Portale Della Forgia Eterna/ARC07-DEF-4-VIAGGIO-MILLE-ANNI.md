@@ -1,3 +1,4 @@
+<!-- revisione-testo: r1 · 2026-10-03 -->
 # ARC-07 · DEFINITIVO #4 — IL VIAGGIO A 1.000 ANNI FA
 ## Il Portale della Forgia Eterna — Hammerfist ≈372 DR, il duello con Skullcrusher, il Rubino
 
@@ -678,10 +679,10 @@ preso la prima tacca.
 **Dove si riprende** `[CANONE — DM 2026-09-27]`. Al tavolo del 25 settembre
 il gruppo ha fatto il consiglio e poi il giro della fortezza: la fucina,
 l'alchimista, la cappella, e sono scesi nelle gallerie a cercare Zeth. Sul
-foglio ci sono quindi **3 tacche**. Ne restano 5: il campo e il ritorno ci
+foglio ci sono quindi **3 tacche**. Ne restano 6: il campo e il ritorno ci
 stanno, le otto ore di sonno no.
 
-**Si segna su un foglio, in vista.** Dal tramonto all'alba ci sono **8 tacche**,
+**Si segna su un foglio, in vista.** Dal tramonto all'alba ci sono **9 tacche** `[CANONE — DM 2026-10-03, D39]`,
 e quando il foglio arriva sul tavolo la prima è già segnata: il consiglio. Ogni
 tacca è mezz'ora scarsa di gioco reale.
 
@@ -696,7 +697,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | La fucina di notte: comprare, vendere, barattare con Gunnvor, e nella stessa tacca la cappella, la bottega di Kettra e le rune di Zeth (Scena 5) | **1** |
 | Attraversare il mare di tende (Scena 6, skill challenge) | **2** |
 | Ogni **fallimento** nello skill challenge | **+1** |
-| Parlare con Balvar invece di colpire subito (Scena 7) | **1** |
+| Parlare con Balvar invece di colpire subito (Scena 7) · durante lo scontro nella tenda `[CANONE — DM 2026-10-03, D39]` | **1** · **0** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) `[CANONE — DM, D22]` | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
 
@@ -705,9 +706,9 @@ che comincia, con i PG dove sono in quel momento.
 
 | Tacche spese all'arrivo alle mura (il ritorno compreso) | Come si arriva alle mura |
 |---|---|
-| ≤ 6 | in tempo. Si rientra, si schiera, le mura e il duello vanno come scritto. Le tacche che restano prima dell'8 si spendono con la tabella qui sopra, come nella Scena 5: tre ore di sosta (2) ci stanno, otto ore di sonno (6) no. La fucina, la cappella e la bottega sono aperte come nella Scena 5 |
-| 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
-| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio `[CANONE — DM 2026-09-30, D21]`: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio `[INFERRED — needs DM confirmation]`. ⚠️ Con 3 tacche già spese, una sola scelta lenta porta qui: è la decisione D39 |
+| ≤ 7 | in tempo. Si rientra, si schiera, le mura e il duello vanno come scritto. Le tacche che restano prima della 9 si spendono con la tabella qui sopra, come nella Scena 5: tre ore di sosta (2) ci stanno, otto ore di sonno (6) no. La fucina, la cappella e la bottega sono aperte come nella Scena 5 |
+| 8 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
+| 9 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio `[CANONE — DM 2026-09-30, D21]`: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio `[INFERRED — needs DM confirmation]`. Con le 3 tacche già spese, ci si arriva con due scelte lente, non con una `[CANONE — DM 2026-10-03, D39]` |
 
 ⚠️ **L'orologio corre sulle SCELTE, non sul tempo reale.** Un tavolo che discute
 mezz'ora su cosa fare non spende una tacca; un tavolo che decide di andare a
@@ -716,7 +717,7 @@ avanza sulle scoperte*), e serve a non punire proprio il comportamento che
 questo master vuole ottenere — **guardarsi intorno**.
 
 🔎 **E qui l'orologio dice una cosa<!-- storico --> che il testo prima non diceva<!-- /storico -->**: parlare con
-Balvar, cercare Zeth e fare il banchetto costano **3 tacche** in tutto. Sono i
+Balvar prima dello scontro, cercare Zeth e fare il banchetto costano **3 tacche** in tutto; parlargli mentre si combatte nella tenda non costa niente, ma si parla sotto i colpi di Zog'tar. Sono i
 tre pezzi migliori della notte, e sommati sono anche il rischio più grosso. È
 il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 
@@ -1269,8 +1270,8 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
 > **Read-aloud (Salvatore lead) — il volo.** *Da quassù il campo è una
 > brace sparsa su un pendio. I fuochi mandano tutti lo stesso odore di
-> grasso, e nessuno, laggiù, guarda in alto. Un russare sale fin qui, così
-> forte da sembrare vicino. Poi la pietra fa il suo lavoro, e il mondo si
+> grasso, e nessuno, laggiù, guarda in alto. Un russare sale fin qui, forte
+> come se venisse dalla tenda accanto. Poi la pietra fa il suo lavoro, e il mondo si
 > spegne: niente russare, niente vento, nemmeno il fiato.*
 
 **I numeri dell'SRD, che decidono il piano**

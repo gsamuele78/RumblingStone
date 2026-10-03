@@ -5,7 +5,7 @@
 > perché la misura ha trovato difetti veri che **non ho corretto**: o perché la
 > scelta è del DM, o perché sono un lotto di contenuto da fare a parte.
 >
-> **Stato**: lotto di infrastruttura chiuso (PR #214); coda aperta.
+> **Stato**: lotto di infrastruttura chiuso (PR #214); punto 1 chiuso il 2026-10-03; coda aperta dal punto 2.
 
 ## 1. Fatto (PR #214)
 
@@ -23,6 +23,12 @@
       riga con una freccia lontana; 14 righe di grafie sbagliate corrette in 6 file
 
 ## 2. Da fare, in ordine di urgenza
+
+**1. ✅ Fatto il 2026-10-03.** Il DM: *«Torre la»*. Le cinque righe con *del
+Torre* e *dal Torre* rimaste nei sorgenti del Drappo (le altre stavano nei
+booklet generati) dicono *della Torre*, *dalla Torre*; *alle Civetta* è *alla
+Civetta*; *della Mano Rossa* ×3, *nella Tana dei Minotauri*, *dalla prova di
+Conoscenze*. Il booklet del DM del Drappo è rigenerato. Il testo di prima:
 
 **1. Il genere di *Torre* nel modulo del Palio (decide il DM).** Il modulo scrive
 *della Torre* 15 volte e *del Torre* 12, e *alla Civetta* 8 volte contro 1 *alle
@@ -65,6 +71,16 @@ si risolve con uno strumento. Resta il lettore a freddo di
 secondo lettore di questo piano. Da rivedere se le regole italiane di
 LanguageTool migliorano: la procedura sta nella ricerca e si rifà in un'ora.
 
+## 2-bis. Le decisioni al DM
+
+<!-- decisioni-dm: CODA-SECONDO-LETTORE -->
+
+| # | Punto | Domanda |
+|---|---|---|
+| ~~D1~~ | 1 | ✅ **Decisa il 2026-10-03**: *la Torre*. Era: **la contrada del Palio è *la Torre* o *il Torre*?** |
+| **D2** | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`?); a mano solo se non c'è |
+| **D3** | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
+
 ## 3. Quando usare il secondo lettore
 
 Su un master o un handout **prima** di dichiararlo definitivo, come il lettore a
@@ -77,7 +93,7 @@ non è un cancello.
 
 Il primo messaggio, da incollare:
 
-> Leggi `plans/PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md` §2. Parti dal punto 1:
-> chiedimi se la contrada è *la Torre* o *il Torre*, poi uniforma le 12 righe del
-> modulo del Palio e correggi i quattro difetti di concordanza elencati. Prima
-> `python3 scripts/fase1.py --check` sui file; apri una PR in bozza.
+> Leggi `plans/PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md` §2. Il punto 1 è
+> fatto: parti dal punto 2, gli accenti del Bestiario (lotto meccanico, nessuna
+> decisione). Prima `python3 scripts/fase1.py --check` sui file; apri una PR in
+> bozza. I punti 3 e 4 aspettano D2 e D3 di §2-bis.
