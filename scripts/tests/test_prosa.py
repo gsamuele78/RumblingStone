@@ -335,6 +335,17 @@ class TestFoglioDiStile(unittest.TestCase):
             p.write_text("Una porta di mithril.", encoding="utf-8")
             self.assertEqual([m for m in controlla(p) if "grafia esclusa" in m], [])
 
+    def test_una_riga_che_cita_un_file_non_si_corregge(self):
+        # Il nome di file con gli spazi non si puo' riconoscere dal contesto: la
+        # riga che cita un percorso e' esente, e il costo e' dichiarato nell'ADR.
+        self.assertEqual(self._grafie("Vedi Quest 1 - Druida Hellas.md per il resto."), [])
+        self.assertTrue(self._grafie("Il druido Hellas entra nel cerchio."))
+
+    def test_le_quattro_decisioni_del_dm_sono_refusi(self):
+        stati = {f: s for f, _, s, _ in forme_escluse()}
+        for forma in ("Hellas", "Cannathgate", "Therisol", "azione rapida"):
+            self.assertEqual(stati[forma], "refuso", forma)
+
     def test_uno_snapshot_storico_non_si_riscrive(self):
         # Il terzo guasto: il primo giro ha corretto una cartella con il suo
         # `_SNAPSHOT-STORICO.md`, perche' il controllo conosceva solo `_ARCHIVIO`.

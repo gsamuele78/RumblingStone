@@ -305,12 +305,12 @@ sotto e rigenera.
 
 ## §4.bis — Worked Example: file di sessione
 
-Ecco un esempio completo. Immagina che nella sessione 14 il party completi la Quest Hellas (Arc-09 P1A), uccida un razorfiend di ricognizione, e avanzi March Clock di 2 giorni.
+Ecco un esempio completo. Immagina che nella sessione 14 il party completi la Quest Hella (Arc-09 P1A), uccida un razorfiend di ricognizione, e avanzi March Clock di 2 giorni.
 
 📄 `campaign/sessions/2026-05-12_session-14.md`
 
 ```markdown
-# Session 14 — Il Cerchio Sacro di Hellas (2026-05-12)
+# Session 14 — Il Cerchio Sacro di Hella (2026-05-12)
 
 **Players present**: Artemis (Tordek PG1), Luca (Hella PG3), Marco (Thorik PG2), Giulia (Maewen PG4)
 **Location**: Shaarcah Forest, radura del Cerchio Treant
@@ -319,7 +319,7 @@ Ecco un esempio completo. Immagina che nella sessione 14 il party completi la Qu
 
 ## Summary
 
-I PG raggiungono il Cerchio Sacro dopo l'imboscata dei worg rider. Hellas completa il rituale di
+I PG raggiungono il Cerchio Sacro dopo l'imboscata dei worg rider. Hella completa il rituale di
 comunione con Silvanus (CD 22 Knowledge Nature — riuscito al 3° tentativo, 2 ore in-game),
 ottenendo l'alleanza dei **druidi-orsi mutaforma** (vedi
 `Arco-Post-Hammerfist-P1B-Cerchio-Treant-COMPLETO.md` §3).
@@ -371,8 +371,8 @@ Sempre sessione 14. Il DM apre `state.md` e applica questi cambi (mostrato come 
 
  | Arc | Fase | Stato | March Clock | PG Lv |
  |---|---|---|---|---|
--| 09 P1A Hellas | 🟡 in corso | Day 27 | 13 |
-+| 09 P1A Hellas | ✅ completato | Day 29 | 13 |
+-| 09 P1A Hella | 🟡 in corso | Day 27 | 13 |
++| 09 P1A Hella | ✅ completato | Day 29 | 13 |
 -| 09 P2 Rhest | ⬜ non iniziato | — | — |
 +| 09 P2 Rhest | 🟡 approccio | Day 29 | 13 |
 
@@ -416,7 +416,7 @@ E poi:
 
 ```bash
 git add -A
-git commit -m "Session 14: Cerchio Sacro Hellas completato, Day 27->29, druidi-orsi alleati"
+git commit -m "Session 14: Cerchio Sacro Hella completato, Day 27->29, druidi-orsi alleati"
 git push
 ```
 
@@ -435,7 +435,7 @@ Apri `campaign/state.md` §0 per vedere il cruscotto in tempo reale. Template:
 | 02 Scaladossa | ✅ | completato | — | 7 | — |
 | ... | ... | ... | ... | ... | ... |
 | 08 Hammerfist | ✅ | completato | Day 19 | 12 | Sync point ✓ |
-| 09 P1A Hellas | 🟡 | in corso | Day 27 | 13 | Deadline Day 30 |
+| 09 P1A Hella | 🟡 | in corso | Day 27 | 13 | Deadline Day 30 |
 | 09 P2 Rhest | ⬜ | non iniziato | — | — | Regiarix vivo |
 | 09 P3 Rethmar | ⬜ | non iniziato | Target Day 40 | — | Battaglia finale |
 

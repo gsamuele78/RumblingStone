@@ -140,7 +140,7 @@ tre grafie costa una giornata di *grep*.
 > | Stato | Cosa succede |
 > |---|---|
 > | `refuso` | la decisione è presa: ogni occorrenza è un rilievo di `terminologia_non_canonica` (maggiore) |
-> | `DM?` | due grafie convivono e **la scelta è del DM**: non è un rilievo, ma `--foglio` le conta e le elenca finché non decide |
+> | `DM?` | due grafie convivono e **la scelta è del DM**: non è un rilievo, ma `--foglio` le conta e le elenca finché non decide. Oggi nessuna riga è in questo stato |
 >
 > **Come si aggiunge una riga.** Prima si guarda il contesto: una forma può
 > essere un altro PNG (*Garruk* non è *Karruk*), un nome di file
@@ -153,10 +153,10 @@ tre grafie costa una giornata di *grep*.
 |---|---|---|---|
 | `Regiarax` | Regiarix | refuso | il nome del boss di RHoD è *Regiarix*; la correzione era già stata fatta una volta (`state-changelog.md`) e una citazione di fonte era rimasta |
 | `mithril` | mithral | refuso | in 3.5 il metallo si scrive *mithral* (SRD); *mithril* è la grafia di Tolkien. Il repo scrive *mithral* nel resto dei file e WotC lo prescrive nella guida di casa |
-| `Hellas` | Hella | DM? | il PG è *Hella Oakenshield* (§2), ma i file dell'arco 09 e perfino `state.md` scrivono *Hellas*, e due nomi di file lo contengono: va deciso se è l'errore o la forma voluta, perché il nome di file va rinominato insieme ai rimandi |
-| `Channathgate` | Cannathgate | DM? | il §5 mette *Dennovar → Cannathgate*, ma il §5 stesso scrive *Palio di Channathgate*, e il Palio ha il nome nei titoli dei file. Una città o due grafie? |
-| `Therisol` | Therysol | DM? | il glossario (§4) dice *Therysol*, ma il file di scheda in `Bestiario/` si intitola «Therysol / Therisol (ex Ysolde)» e la scheda scrive *Therisol* ovunque |
-| `azione rapida` | azione veloce | DM? | il §1 dichiara *azione veloce*; la Corona di Adamantio e cinque file usano *azione rapida*, ed è un artefatto in mano ai PG: lo decide il DM, non un sostituisci |
+| `Hellas` | Hella | refuso | decisione del DM, 2026-10-03: il PG si chiama *Hella* (§2). Un nome di file o di cartella che contiene *Hellas* non è una grafia e resta com'è finché il file non si rinomina |
+| `Cannathgate` | Channathgate | refuso | decisione del DM, 2026-10-03: la città è *Channathgate*, come il *Palio di Channathgate* (§5). *Cannath Vale* resta com'è |
+| `Therisol` | Therysol | refuso | decisione del DM, 2026-10-03: il glossario (§4) dice *Therysol* |
+| `azione rapida` | azione veloce | refuso | decisione del DM, 2026-10-03: *swift action* si rende *azione veloce*, come nelle traduzioni e nelle regole italiane di comunità del 3.5 e come dice il §1 |
 
 > **Fuori dalla tabella, di proposito.** *DC* → *CD* è già un divieto di
 > `validate_modules.py` (`BANNED`) e di `validate_standalone.py`: una norma, un

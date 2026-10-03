@@ -121,7 +121,8 @@ di Vale: 14 test nuovi, fra cui i falsi positivi e i guasti trovati lungo la str
 | Refusi aperti sul contenuto di gioco | 17 | 0 |
 | Righe corrette | | 17, in 6 file |
 | Refusi per 100.000 parole | 2,03 | 0 |
-| Scelte del DM in sospeso che nessun controllo vedeva | 4 (285 occorrenze) | 4, ora elencate e contate |
+| Scelte del DM in sospeso che nessun controllo vedeva | 4 (285 occorrenze) | 0: decise il 2026-10-03 e applicate |
+| Righe corrette con le quattro decisioni | | 200, in 24 file, più `state.yaml`, quattro file di skill e il catalogo dei mostri rigenerato |
 | Documenti sotto soglia MQM | 0 su 521 | 0 su 521 |
 | Rilievi delle altre norme di prosa | 229 | 229 |
 | Falsi positivi del rilevatore, contati a mano | | 0 su 17 |
@@ -133,6 +134,7 @@ di stile esiste ed è eseguibile, il difetto non ricade (cancello a zero in CI),
 e le quattro scelte del DM sono ora un numero e non un sospetto. Il recall del
 rilevatore non è stimato: i test lo verificano solo sulle forme già scritte, e
 una grafia nuova la scopre il generatore o un lettore, non il controllo.
+Le correzioni delle scelte del DM seguono la sorgente: `state.md` si rigenera da `state.yaml` (ADR-0050), il catalogo dei mostri e il dossier con i loro script. Una riga che cita un nome di file non si corregge (il rimando si romperebbe): è un'esenzione dichiarata del controllo, e il costo è che una grafia sbagliata in prosa sulla stessa riga di un percorso passa.
 Il generatore ha un limite noto: non vede le differenze sull'ultima lettera, e i
 suoi filtri sono stati tarati sullo stesso campione di 9 candidati, quindi la
 precisione dopo i filtri non è indipendente.
@@ -142,9 +144,11 @@ precisione dopo i filtri non è indipendente.
 - Chi sceglie una grafia la scrive nel §8: la riga costa dieci secondi, come
   dice già la §7 del glossario, e dopo non si discute più.
 - La CI blocca il ritorno di un refuso deciso. Le righe `DM?` non bloccano mai.
-- Le quattro decisioni sono del DM e restano aperte: *Hellas* o *Hella*,
-  *Channathgate* o *Cannathgate* (il §5 del glossario stesso scrive entrambe),
-  *Therisol* o *Therysol*, *azione rapida* o *azione veloce*. Quando il DM
-  sceglie, la riga passa a `refuso` e si corregge con una sola passata.
+- Le quattro scelte sono state prese dal DM il 2026-10-03 e passano a `refuso`:
+  il PG si chiama *Hella*, la città *Channathgate*, la PNG *Therysol*, e
+  *swift action* si rende *azione veloce* (come nelle traduzioni e nelle regole
+  italiane di comunità del 3.5; non ho trovato un testo ufficiale da citare).
+  La riga `DM?` resta nel meccanismo per le scelte future, ma oggi la tabella
+  non ne ha.
 - Una norma nuova arriva con la sua misura: la riga del registro è nel
   commit, e il gate `validate_norme_editoriali.py` la verifica.

@@ -449,11 +449,19 @@ def _rx_forma(forma: str) -> "re.Pattern[str]":
     return re.compile(rf"(?<![\w`/.-]){re.escape(forma)}(?![\w`/-])", flag)
 
 
+#: Una riga che cita un file per nome: il nome non si cambia insieme al testo,
+#: perche' romperebbe il rimando. Il costo e' dichiarato: una grafia sbagliata in
+#: prosa, sulla stessa riga di un percorso, passa.
+_PERCORSO = re.compile(r"\.(?:md|webp|png|pdf|json|ya?ml|svg|txt|htm)\b", re.I)
+
+
 def _spiega_il_cambio(riga: str, canonica: str) -> bool:
-    """La riga che **dice** il cambio («Regiarax» → «Regiarix») non e' un errore."""
+    """La riga che **dice** il cambio («Regiarax» → «Regiarix») non e' un errore,
+    e nemmeno quella che cita un nome di file (`_PERCORSO`)."""
     # ⚠️ Con il confine di parola, non con `in`: «hella» sta dentro «Hellas», e
     # il primo rapporto contava zero *Hellas* proprio per questo.
-    return "→" in riga or bool(_rx_forma(canonica).search(riga))
+    return ("→" in riga or bool(_rx_forma(canonica).search(riga))
+            or bool(_PERCORSO.search(riga)))
 
 
 def occorrenze_forma(testo: str, forma: str, canonica: str) -> "list[int]":

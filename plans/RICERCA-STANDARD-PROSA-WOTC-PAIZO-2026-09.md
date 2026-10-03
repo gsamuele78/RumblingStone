@@ -294,8 +294,9 @@ regole `substitution` e `consistency` (MIT).
 **Misurato sul repo di gioco** (521 file, 837.305 parole, archivi esclusi):
 **17 refusi aperti** (*mithril* in 16 righe di 5 file, *Regiarax* in una), che
 nessuna norma pesata vedeva, e **4 scelte del DM** in 285 occorrenze (*Hellas*,
-*Channathgate*, *Therisol*, *azione rapida*). Dopo la correzione i refusi sono 0
-e il cancello CI è a zero.
+*Channathgate*, *Therisol*, *azione rapida*). Il DM le ha prese lo stesso giorno
+(*Hella*, *Channathgate*, *Therysol*, *azione veloce*) e sono state applicate:
+200 righe in 24 file. Dopo la correzione i refusi sono 0 e il cancello CI è a zero.
 
 🔴 **Tre errori miei, tutti trovati dalla misura e non dalla lettura.**
 
