@@ -8,14 +8,17 @@
 > campioni, confrontati con ciò che il repo già segnala. Nessun file di
 > contenuto è stato toccato.
 >
-> **Stato**: misura chiusa, decisione **proposta** in
+> **Stato**: misura chiusa in due giri (il secondo con un secondo lettore cieco,
+> §9), decisione **proposta** in
 > [ADR-0079](adr/ADR-0079-un-secondo-rilevatore-per-la-prosa.md), in attesa del DM.
 
 ## 0. Cosa mancava, e cosa si è assunto
 
 Mancava un'etichetta di riferimento (gold) per la lingua italiana del repo: non
-esiste. La precisione è quindi **il giudizio di un lettore solo**, che ha letto
-ogni rilievo con la riga attorno. Non c'è un secondo lettore e non c'è un κ. Un
+esiste. Nel primo giro la precisione era **il giudizio di un lettore solo**, che
+ha letto ogni rilievo con la riga attorno, senza secondo lettore e senza κ. Il
+secondo giro (§9) ha aggiunto un secondo lettore a cieco e ha cambiato due
+numeri; **dove §9 e §3 divergono, vale §9**. Un
 rilievo conta come vero quando un correttore di bozze lo cambierebbe nel testo
 nostro; un errore in un testo inglese copiato da altri non conta.
 
@@ -133,7 +136,8 @@ poiche, cioe, verra, sara…* seguite da apostrofo):
 La regex **trova tutto ciò che LanguageTool trova di vero e 58 righe in più**.
 Il contributo marginale di LanguageTool su questa regola è zero. Resta
 `ARTICOLATA_SOSTANTIVO`: 3 veri su 10, cioè *del Mano Rossa* (due righe in un
-file) e *dalla Conoscenze*. **S5 non passa** (3 contro 10).
+file) e *dalla Conoscenze*. **S5 non passa** (3 contro 10). *Corretto in §9: con il secondo lettore i veri
+di `ARTICOLATA_SOSTANTIVO` sono 11 righe su 20, e S5 passa per quella regola.*
 
 **Capacità grammaticale, a parte.** Venti frasi scritte da me con un errore
 noto ciascuno (concordanza, congiuntivo, periodo ipotetico, articolo, ausiliare,
@@ -242,14 +246,14 @@ locale. Questo vincolo è la condizione, e l'ADR lo scrive.
 | | LanguageTool (ridotto) | Vale (stile generato) | proselint |
 |---|---|---|---|
 | Rilievi sul contenuto | 189 (di 94.755) | 21 | 3.167 |
-| Precisione, campione letto | **86%** su 100 | 11/11 identici ai nostri; 5 veri su 10 sul foglio | **0/20** italiano |
+| Precisione, campione letto | 86% (1° lettore), **78%** (2° lettore, κ 0,53) su 100; 91% con le sole due regole buone | 11/11 identici ai nostri; 5 veri su 10 sul foglio (2° lettore concorde) | **0/40** italiano (2 lettori) |
 | Veri che il repo non vede | molti, ma una regex li trova | **5** (maschere del foglio) | 0 |
-| Veri che solo lui trova | 3 (genere di *Mano Rossa*, *Conoscenze*) | 0 | 0 |
+| Veri che solo lui trova | 11 righe in 5 difetti (§9: genere di *Mano Rossa*, *la Torre*, *la Civetta*, *la Tana*, *Conoscenze*) | 0 | 0 |
 | Tempo | 171-189 s | 3 s | 14 s |
 | Dimensione | 252 MB, JVM | 65 MB | 1 pacchetto |
 | S1 | passa | non applicabile | non passa |
 | S2 (alla lettera) | passa | non passa | non passa |
-| S5 (contro la regex) | **non passa** | non passa | non passa |
+| S5 (contro la regex) | non passa per `GR_04_002`; **passa per `ARTICOLATA_SOSTANTIVO`** (§9) | non passa | non passa |
 | S3, S4 | passano | passano | passano |
 
 **Conclusione onesta**: il miglioramento che LanguageTool sembra dare è
@@ -258,11 +262,9 @@ di una JVM e 252 MB in CI. Vale non apporta niente di nuovo come motore, ma
 ha rivelato cinque errori veri e un difetto del foglio di stile. proselint non
 serve.
 
-## 8. Cosa non so
+## 8. Cosa non so (primo giro; aggiornato in §9)
 
-- La precisione è di un lettore solo. Su 100 rilievi, 86 ± 7 punti (intervallo
-  di Wilson al 95%): sopra il 70% con margine, ma i 45 contesti distinti
-  scendono il margine.
+- La precisione era di un lettore solo (primo giro). Superato in §9: κ = 0,53.
 - Non ho una misura del **richiamo** sugli errori che il repo non sa descrivere:
   non c'è un corpus con gli errori marcati. La prova a 20 frasi è un indizio,
   non una misura.
@@ -271,109 +273,237 @@ serve.
 - Non ho provato Vale con dizionari Hunspell o con `Vale.Spelling`.
 - I tempi di CI sono quelli del sandbox, non di un runner.
 
+## 9. Secondo giro: un secondo lettore, a cieco
+
+**Perché.** La precisione del primo giro era di un lettore solo, e un lettore solo
+non dice quanto del suo 86% sia giudizio e quanto sia abitudine. Il DM ha chiesto
+un secondo lettore. Ne ho usato uno indipendente: un agente Opus che riceve solo
+il passaggio, il contesto e le istruzioni, **senza le mie etichette** (che stavano
+in un'altra cartella che gli era vietato aprire), con l'ordine mescolato e gli
+indici rinumerati. Ha etichettato V (vero), F (falso) o ALTRUI (errore in un testo
+inglese copiato). Sull'agente va detto subito il limite: è un modello, non una
+persona, e un modello può sbagliare in modo correlato a chi scrive questa
+ricerca. Per questo l'appendice elenca i 14 casi in cui i due lettori divergono,
+e il DM li può rileggere in due minuti.
+
+**Accordo.** Sui 100 rilievi di validazione: accordo 86%, **κ di Cohen = 0,53**
+(moderato, non buono). Il primo lettore ha 86 veri, il secondo 78, in comune 75.
+Le 14 divergenze non sono rumore: sono due categorie.
+
+| Divergenza | Casi | Chi aveva ragione |
+|---|---:|---|
+| `COMMA_PARENTHESIS_WHITESPACE`: io vero, lui falso | 11 | **lui**. Sono *urban,plane* nel campo Environment (metadato, non prosa) e `Etichetta regia: .` con il campo vuoto (artefatto della conversione). Avevo contato come veri due tipi di cosa che un correttore non toccherebbe |
+| `ARTICOLATA_SOSTANTIVO`: io falso, lui vero | 3 | **lui**. *dal Torre*, *del Torre*, *alle Civetta*: nel modulo del Palio la contrada è *della Torre* 15 volte e *del Torre* 12, *alla Civetta* 8 volte. Il genere di un nome proprio oscilla. Non è un prestito inglese, come avevo scritto |
+
+**Cosa cambia nei numeri.**
+
+| | Primo lettore | Secondo lettore |
+|---|---:|---:|
+| `GR_04_002` | 72/76 | 72/76 |
+| `COMMA_PARENTHESIS_WHITESPACE` | 11/14 | **0/14** |
+| `ARTICOLATA_SOSTANTIVO` | 3/10 | **6/10** |
+| Tre regole insieme | 86/100 | **78/100** (Wilson 69-85%) |
+| `GR_04_002` + `ARTICOLATA_SOSTANTIVO` | 75/86 | **78/86 = 91%** |
+
+La configurazione giusta ha due regole, non tre: `COMMA_PARENTHESIS_WHITESPACE`
+esce. Le 20 righe di `ARTICOLATA_SOSTANTIVO` nel contenuto di gioco, lette tutte
+da me alla luce di questo: **11 vere**, in **5 difetti distinti** (*del Mano
+Rossa* ×3, *la Torre* ×5, *la Civetta*, *nel Tana dei Minotauri*, *dalla
+Conoscenze*), 9 false (*il sorgente*, *il session log*, *al PR*, *al lavanda*).
+Questo è l'unico contributo di LanguageTool che una regex non riproduce: un
+articolo che non concorda con un nome proprio di cui il repo ha già visto l'altro
+genere. **S5 passa per questa regola** (11 righe contro 10), e lo passa per poco.
+
+**Gli altri campioni, con il secondo lettore.**
+
+| Campione | Letti | Secondo lettore | Primo lettore | Cosa dice |
+|---|---:|---|---|---|
+| Ortografia scartata e minuscola (S3) | 115 | **0 veri** | 0 su 40 | nessun refuso italiano nei bucket che avevo scartato in blocco (inglese, nomi, sigle, parole italiane che il dizionario non conosce: *nanica*, *elementali*, *multiclasse*) |
+| proselint (S2) | 40 | 0 veri, 5 altrui | 0 su 20 | confermato: non serve |
+| Foglio di stile, 10 righe di Vale (S4) | 10 | 5 V, 5 F | 5 V, 5 F | **identici** (κ = 1): le cinque grafie mascherate dal foglio sono vere |
+| Regole spente (S5) | 74 | 11 V | 0 su 5 per regola | vedi sotto |
+| Box read-aloud, ortografia (S6) | 260 | 7 V | n/a | vedi sotto |
+
+**Le regole spente, riviste.** Con otto rilievi per regola e un lettore diverso,
+due delle regole che avevo spento hanno un residuo vero:
+
+- `UNPAIRED_BRACKETS` 5/8, e tutti e cinque nello stesso file
+  (`PROMPT-IMMAGINI-07ILP.md`, riga 252: *«- **Etichetta regia**: isolamento).»*,
+  una parentesi chiusa senza apertura, campo troncato nel sorgente). Un difetto.
+  Nel primo giro avevo scritto che conta male le parentesi che attraversano una
+  cella: era vero per altri casi, non per questo.
+- `ST_03_001` 5/8 (*legato a Aegis Fang*, *a area*): la *d* eufonica davanti alla
+  stessa vocale. È una norma tipografica reale (*ad Aegis*). LanguageTool stesso
+  la chiama «ammessa», e **il repo non ha una norma** (nessun file in `skills/`
+  la prescrive), quindi sarebbe una decisione del DM, non un rilievo.
+- `ITALIAN_WORD_REPEAT_RULE` 1/8 (*Solo solo nella Torre*); le altre sette erano
+  la mia maschera `X X` o testo inglese.
+- Tutte le altre (`ER_01_00x`, `ER_02_001`, `ST_01_00x`, `GR_07_001`, `GR_10_003`,
+  `GR_04_001`, `DOUBLE_PUNCTUATION`, `WHITESPACE_PUNCTUATION`): **0 su 8** per
+  regola, anche col secondo lettore. Restano spente.
+
+**Il caso migliore per l'ortografia: la prosa letta ai giocatori.** Ho fatto
+girare LanguageTool solo sui 549 box read-aloud (221.000 caratteri, 24 secondi),
+dove il gergo di statblock non c'è. Rilievi 1.375, 630 dopo il filtro dei nomi, e
+215 parole distinte. Il secondo lettore ne ha confermate **4**: *avalanga*
+(*valanga*), *emergato* (*emerso*), *sguarderebbe* (*guarderebbe*), *bianche-azzurre*
+(*bianco-azzurre*). Il 2%. Su 30 maiuscole a inizio frase, 0 vere; su 6 parentesi,
+0. Il resto sono parole italiane vere che il dizionario non conosce (*mithral*, 35
+volte, e *nanici*, 17) o inglese. **Neanche sul testo pulito l'ortografia di
+LanguageTool è utilizzabile**: per trovare due refusi bisogna leggere
+duecentoquindici segnalazioni.
+
+**Il richiamo, misurato con un corpus che non ho scritto io.** Un secondo agente
+Opus ha scritto, senza accesso a nessuno strumento di correzione, 100 frasi nel
+registro della campagna: 80 con un errore noto (8 per ciascuno di dieci tipi) e
+20 corrette, scelte per ingannare un correttore (*un'eco*, *Gli gnoll*, gergo
+inglese). Le ho passate a LanguageTool, ai rilevatori del repo e a Vale.
+
+| | Errori colpiti sul punto (su 80) | Falsi allarmi sulle 20 corrette |
+|---|---:|---:|
+| LanguageTool, tutte le regole | **28** (35%) | **12** |
+| LanguageTool, configurazione ridotta | 1 (1%) | 0 |
+| `validate_lingua` + `ciclo_prosa.segnala` | 2 (2,5%) | 0 |
+| Vale con lo stile generato | 0 | 0 |
+
+Per tipo: ripetizione di parola 8/8, refuso 8/8 e accento 7/8 (LanguageTool);
+articolo 3/8 e preposizione articolata 2/8; **accordo soggetto-verbo,
+accordo nome-aggettivo, congiuntivo, ausiliare, tempi e clitici 0/40** per
+chiunque. Due avvertenze: il corpus l'ha scritto un modello, e alcune sue
+«frasi con errore» sono discutibili (*ha crollato*, *hanno corso*, *sarà
+riaccesa*); e i 28 di LanguageTool vengono quasi tutti da ortografia e
+ripetizione, cioè dalle regole che sul repo reale sono il 99% di rumore.
+
+**Cosa cambia, in una riga per decisione.**
+
+1. **La configurazione ridotta passa da tre regole a due** (`GR_04_002`,
+   `ARTICOLATA_SOSTANTIVO`); a queste si possono aggiungere per un uso
+   facoltativo `UNPAIRED_BRACKETS` e `ITALIAN_WORD_REPEAT_RULE` (un difetto
+   ciascuna nel repo).
+2. **LanguageTool ha un contributo reale che una regex non riproduce**:
+   5 difetti di concordanza sui nomi propri, più 1 parentesi troncata e 1
+   parola ripetuta. Sette difetti in tutto il contenuto di gioco: non è il
+   «miglioramento evidente» che la soglia del DM chiede, ma non è zero come
+   avevo scritto.
+3. **I rilevatori del repo sono più ciechi di quanto si pensasse**: 2 errori su
+   80 in un corpus neutro. Non è un difetto di LanguageTool né di Vale: le
+   grammatiche mancano a tutti. È una cosa che il repo non aveva mai misurato.
+4. **Vale resta senza contributo come motore**, e il suo valore è quello del
+   secondo parere sul foglio (S4, confermato da un secondo lettore).
+5. **La raccomandazione A resta in piedi, e B diventa difendibile**: vedi
+   ADR-0079.
+
+**Cosa non so, dopo il secondo giro.** Il secondo lettore è un modello. κ = 0,53
+è moderato: due lettori umani potrebbero divergere in altri punti. Il corpus del
+richiamo è di un solo scrittore. Non ho misurato quanti difetti di concordanza
+ci siano davvero nel repo: so solo che LanguageTool ne ha trovati 5 e che sul
+corpus neutro non vede nessuna concordanza di verbo o aggettivo, quindi 5 è un
+minimo.
+
 ## Appendice A. Il campione di validazione (100 rilievi, seme 3510)
 
-Etichette date a mano. «Vero» = un correttore lo cambierebbe nel testo nostro.
+Etichette di entrambi i lettori. TP = un correttore lo cambierebbe nel testo nostro.
+Le 14 righe dove le due colonne divergono sono quelle da rileggere.
 
-| # | Regola | File:riga | Frammento | Etichetta |
-|---|---|---|---|---|
-| 0 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md:318 | «del Torre» | FP |
-| 1 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:45 | «e'» | TP |
-| 2 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:3 | «e'» | TP |
-| 3 | GR_04_002 | Bestiario/villain/ostro-il-muto-cr5.md:12 | «e'» | TP |
-| 4 | GR_04_002 | Bestiario/mostri/guardiano-di-luce-cr10.md:12 | «e'» | TP |
-| 5 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-2-RITORNO-E-AFFRESCHI.md:192 | «Da'» | FP |
-| 6 | GR_04_002 | Bestiario/mostri/sentinella-drow-ranger-cr8.md:12 | «e'» | TP |
-| 7 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:23 | «e'» | TP |
-| 8 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/Il_Collezionista_Rakshasa/il-collezionista-rakshasa-cr18.md:5 | «,plane» | TP |
-| 9 | GR_04_002 | Bestiario/mostri/marea-annis-cr6.md:12 | «e'» | TP |
-| 10 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:10 | «e'» | TP |
-| 11 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:50 | «e'» | TP |
-| 12 | GR_04_002 | Bestiario/mostri/spettri-di-conoscenza-cr7.md:12 | «e'» | TP |
-| 13 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-MATRICE-VERSIONI.md:35 | «e'» | TP |
-| 14 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:506 | «del Mano» | TP |
-| 15 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:24 | «e'» | TP |
-| 16 | GR_04_002 | Bestiario/mostri/half-illithid-yochlol-cr11.md:12 | «e'» | TP |
-| 17 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:5 | «e'» | TP |
-| 18 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:5 | «e'» | TP |
-| 19 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:32 | «e'» | TP |
-| 20 | GR_04_002 | Bestiario/mostri/carcassa-vivente-cr9.md:12 | «e'» | TP |
-| 21 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:52 | «e'» | TP |
-| 22 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:55 | «e'» | TP |
-| 23 | GR_04_002 | Bestiario/mostri/drow-fungal-minion-cr6.md:12 | «e'» | TP |
-| 24 | ARTICOLATA_SOSTANTIVO | Bestiario/villain/Sethrax_il_Velato/Sethrax.md:40 | «al lavanda» | FP |
-| 25 | ARTICOLATA_SOSTANTIVO | campaign/DM-CAMPAIGN-PLAYBOOK.md:301 | «nel session» | FP |
-| 26 | GR_04_002 | Bestiario/mostri/grinza-megera-acquatica-cr4.md:12 | «e'» | TP |
-| 27 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:212 | «.» | TP |
-| 28 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-MATRICE-VERSIONI.md:36 | «e'» | TP |
-| 29 | GR_04_002 | Bestiario/png/lady-koryn-cr12.md:12 | «e'» | TP |
-| 30 | ARTICOLATA_SOSTANTIVO | campaign/DM-CAMPAIGN-PLAYBOOK.md:299 | «dai uno» | FP |
-| 31 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:28 | «E'» | TP |
-| 32 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/ghost-lion-spettrale-cr8.md:3 | «,ruins» | TP |
-| 33 | GR_04_002 | Bestiario/png/rurik-gorunn-cr10.md:21 | «e'» | TP |
-| 34 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:5 | «e'» | TP |
-| 35 | GR_04_002 | Bestiario/mostri/costrutto-di-guardia-cr5.md:12 | «e'» | TP |
-| 36 | GR_04_002 | Bestiario/png/kira-rogue12-cr12.md:12 | «e'» | TP |
-| 37 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:19 | «e'» | TP |
-| 38 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/emissario-red-hand-cr12.md:3 | «,ruins» | TP |
-| 39 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:25 | «E'» | TP |
-| 40 | GR_04_002 | Bestiario/villain/saarvith-regiarix-cr13.md:12 | «e'» | TP |
-| 41 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:54 | «e'» | TP |
-| 42 | COMMA_PARENTHESIS_WHITESPACE | campaign/lore/dm-guide-to-be-adapted-tips&tricks.md:1159 | «,you» | FP |
-| 43 | GR_04_002 | Bestiario/mostri/dire-worg-fiendish-corrotto-cr10.md:16 | «e'» | TP |
-| 44 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md:190 | «dal Torre» | FP |
-| 45 | GR_04_002 | Bestiario/villain/ostro-il-muto-cr5.md:10 | «e'» | TP |
-| 46 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:21 | «e'» | TP |
-| 47 | GR_04_002 | Bestiario/mostri/grinza-megera-acquatica-cr4.md:16 | «e'» | TP |
-| 48 | GR_04_002 | Bestiario/villain/sedda-corvara-cr6.md:12 | «e'» | TP |
-| 49 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:10 | «e'» | TP |
-| 50 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:45 | «e'» | TP |
-| 51 | GR_04_002 | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ESITI-CONSEGUENZE.md:377 | «città'» | FP |
-| 52 | GR_04_002 | Bestiario/mostri/cervello-fungino-errante-cr12.md:12 | «e'» | TP |
-| 53 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:831 | «.» | TP |
-| 54 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md:23 | «(» | FP |
-| 55 | GR_04_002 | Bestiario/mostri/drow-scout-ranger5-cr5.md:12 | «e'» | TP |
-| 56 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:192 | «.» | TP |
-| 57 | GR_04_002 | Bestiario/png/zhen-windwhisper-cr11.md:12 | «e'» | TP |
-| 58 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:53 | «e'» | TP |
-| 59 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/githyanki-knight-elite-cr10.md:3 | «,plains» | TP |
-| 60 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/ondata-giganti-fanteria-cr15.md:7 | «,urban» | TP |
-| 61 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:26 | «e'» | TP |
-| 62 | GR_04_002 | campaign/state-changelog.md:8 | «e'» | TP |
-| 63 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:35 | «e'» | TP |
-| 64 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:3 | «e'» | TP |
-| 65 | GR_04_002 | Bestiario/png/madre-ilaria-sonda-cr7.md:12 | «e'» | TP |
-| 66 | GR_04_002 | Bestiario/png/grom-skullcrusher-cr14.md:12 | «e'» | TP |
-| 67 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:871 | «.» | TP |
-| 68 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:29 | «e'» | TP |
-| 69 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md:941 | «Da'» | FP |
-| 70 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:26 | «e'» | TP |
-| 71 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:27 | «e'» | TP |
-| 72 | GR_04_002 | Bestiario/mostri/swarm-pseudodraconici-gith-cr8.md:12 | «e'» | TP |
-| 73 | GR_04_002 | Bestiario/mostri/drow-pyromancer-completo-cr9.md:12 | «e'» | TP |
-| 74 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:439 | «del Mano» | TP |
-| 75 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:34 | «e'» | TP |
-| 76 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md:760 | «Da'» | FP |
-| 77 | GR_04_002 | Bestiario/mostri/drow-psionica-mezzo-illithid-cr8.md:12 | «e'» | TP |
-| 78 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:17 | «e'» | TP |
-| 79 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:3 | «e'» | TP |
-| 80 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:13 | «e'» | TP |
-| 81 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:5 | «e'» | TP |
-| 82 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:44 | «e'» | TP |
-| 83 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:373 | «del Mano» | TP |
-| 84 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:3 | «e'» | TP |
-| 85 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:14 | «E'» | TP |
-| 86 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:20 | «e'» | TP |
-| 87 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:35 | «e'» | TP |
-| 88 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:17 | «e'» | TP |
-| 89 | GR_04_002 | Bestiario/png/bothor-malvur-cr6.md:3 | «e'» | TP |
-| 90 | GR_04_002 | Bestiario/villain/ghebro-malaluna-cr8.md:12 | «e'» | TP |
-| 91 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:16 | «e'» | TP |
-| 92 | COMMA_PARENTHESIS_WHITESPACE | campaign/lore/dm-guide-to-be-adapted-tips&tricks.md:1269 | «)» | FP |
-| 93 | GR_04_002 | Bestiario/png/tetsu-serpente-di-vento-cr12.md:12 | «e'» | TP |
-| 94 | GR_04_002 | Bestiario/png/tiberio-sarda-cr6.md:12 | «e'» | TP |
-| 95 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md:3 | «,dungeon» | TP |
-| 96 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-VERIFICA-LEGALE-IP.md:143 | «del label» | FP |
-| 97 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:453 | «.» | TP |
-| 98 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md:387 | «alle Civetta» | FP |
-| 99 | GR_04_002 | Bestiario/mostri/avatar-minore-madre-funghi-cr13.md:12 | «e'» | TP |
+| # | Regola | File:riga | Frammento | Primo lettore | Secondo lettore |
+|---|---|---|---|---|---|
+| 0 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md:318 | «del Torre» | FP | TP |
+| 1 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:45 | «e'» | TP | TP |
+| 2 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:3 | «e'» | TP | TP |
+| 3 | GR_04_002 | Bestiario/villain/ostro-il-muto-cr5.md:12 | «e'» | TP | TP |
+| 4 | GR_04_002 | Bestiario/mostri/guardiano-di-luce-cr10.md:12 | «e'» | TP | TP |
+| 5 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-2-RITORNO-E-AFFRESCHI.md:192 | «Da'» | FP | FP |
+| 6 | GR_04_002 | Bestiario/mostri/sentinella-drow-ranger-cr8.md:12 | «e'» | TP | TP |
+| 7 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:23 | «e'» | TP | TP |
+| 8 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/Il_Collezionista_Rakshasa/il-collezionista-rakshasa-cr18.md:5 | «,plane» | TP | FP |
+| 9 | GR_04_002 | Bestiario/mostri/marea-annis-cr6.md:12 | «e'» | TP | TP |
+| 10 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:10 | «e'» | TP | TP |
+| 11 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:50 | «e'» | TP | TP |
+| 12 | GR_04_002 | Bestiario/mostri/spettri-di-conoscenza-cr7.md:12 | «e'» | TP | TP |
+| 13 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-MATRICE-VERSIONI.md:35 | «e'» | TP | TP |
+| 14 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:506 | «del Mano» | TP | TP |
+| 15 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:24 | «e'» | TP | TP |
+| 16 | GR_04_002 | Bestiario/mostri/half-illithid-yochlol-cr11.md:12 | «e'» | TP | TP |
+| 17 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:5 | «e'» | TP | TP |
+| 18 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:5 | «e'» | TP | TP |
+| 19 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:32 | «e'» | TP | TP |
+| 20 | GR_04_002 | Bestiario/mostri/carcassa-vivente-cr9.md:12 | «e'» | TP | TP |
+| 21 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:52 | «e'» | TP | TP |
+| 22 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:55 | «e'» | TP | TP |
+| 23 | GR_04_002 | Bestiario/mostri/drow-fungal-minion-cr6.md:12 | «e'» | TP | TP |
+| 24 | ARTICOLATA_SOSTANTIVO | Bestiario/villain/Sethrax_il_Velato/Sethrax.md:40 | «al lavanda» | FP | FP |
+| 25 | ARTICOLATA_SOSTANTIVO | campaign/DM-CAMPAIGN-PLAYBOOK.md:301 | «nel session» | FP | FP |
+| 26 | GR_04_002 | Bestiario/mostri/grinza-megera-acquatica-cr4.md:12 | «e'» | TP | TP |
+| 27 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:212 | «.» | TP | FP |
+| 28 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-MATRICE-VERSIONI.md:36 | «e'» | TP | TP |
+| 29 | GR_04_002 | Bestiario/png/lady-koryn-cr12.md:12 | «e'» | TP | TP |
+| 30 | ARTICOLATA_SOSTANTIVO | campaign/DM-CAMPAIGN-PLAYBOOK.md:299 | «dai uno» | FP | FP |
+| 31 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:28 | «E'» | TP | TP |
+| 32 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/ghost-lion-spettrale-cr8.md:3 | «,ruins» | TP | FP |
+| 33 | GR_04_002 | Bestiario/png/rurik-gorunn-cr10.md:21 | «e'» | TP | TP |
+| 34 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:5 | «e'» | TP | TP |
+| 35 | GR_04_002 | Bestiario/mostri/costrutto-di-guardia-cr5.md:12 | «e'» | TP | TP |
+| 36 | GR_04_002 | Bestiario/png/kira-rogue12-cr12.md:12 | «e'» | TP | TP |
+| 37 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:19 | «e'» | TP | TP |
+| 38 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/emissario-red-hand-cr12.md:3 | «,ruins» | TP | FP |
+| 39 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:25 | «E'» | TP | TP |
+| 40 | GR_04_002 | Bestiario/villain/saarvith-regiarix-cr13.md:12 | «e'» | TP | TP |
+| 41 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:54 | «e'» | TP | TP |
+| 42 | COMMA_PARENTHESIS_WHITESPACE | campaign/lore/dm-guide-to-be-adapted-tips&tricks.md:1159 | «,you» | FP | ALTRUI |
+| 43 | GR_04_002 | Bestiario/mostri/dire-worg-fiendish-corrotto-cr10.md:16 | «e'» | TP | TP |
+| 44 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md:190 | «dal Torre» | FP | TP |
+| 45 | GR_04_002 | Bestiario/villain/ostro-il-muto-cr5.md:10 | «e'» | TP | TP |
+| 46 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:21 | «e'» | TP | TP |
+| 47 | GR_04_002 | Bestiario/mostri/grinza-megera-acquatica-cr4.md:16 | «e'» | TP | TP |
+| 48 | GR_04_002 | Bestiario/villain/sedda-corvara-cr6.md:12 | «e'» | TP | TP |
+| 49 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:10 | «e'» | TP | TP |
+| 50 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:45 | «e'» | TP | TP |
+| 51 | GR_04_002 | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ESITI-CONSEGUENZE.md:377 | «città'» | FP | FP |
+| 52 | GR_04_002 | Bestiario/mostri/cervello-fungino-errante-cr12.md:12 | «e'» | TP | TP |
+| 53 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:831 | «.» | TP | FP |
+| 54 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md:23 | «(» | FP | FP |
+| 55 | GR_04_002 | Bestiario/mostri/drow-scout-ranger5-cr5.md:12 | «e'» | TP | TP |
+| 56 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:192 | «.» | TP | FP |
+| 57 | GR_04_002 | Bestiario/png/zhen-windwhisper-cr11.md:12 | «e'» | TP | TP |
+| 58 | GR_04_002 | Bestiario/png/thorgrim-barbadiferro.md:53 | «e'» | TP | TP |
+| 59 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/githyanki-knight-elite-cr10.md:3 | «,plains» | TP | FP |
+| 60 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/mostri/ondata-giganti-fanteria-cr15.md:7 | «,urban» | TP | FP |
+| 61 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:26 | «e'» | TP | TP |
+| 62 | GR_04_002 | campaign/state-changelog.md:8 | «e'» | TP | TP |
+| 63 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:35 | «e'» | TP | TP |
+| 64 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:3 | «e'» | TP | TP |
+| 65 | GR_04_002 | Bestiario/png/madre-ilaria-sonda-cr7.md:12 | «e'» | TP | TP |
+| 66 | GR_04_002 | Bestiario/png/grom-skullcrusher-cr14.md:12 | «e'» | TP | TP |
+| 67 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:871 | «.» | TP | FP |
+| 68 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:29 | «e'» | TP | TP |
+| 69 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md:941 | «Da'» | FP | FP |
+| 70 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:26 | «e'» | TP | TP |
+| 71 | GR_04_002 | Bestiario/villain/skullcrusher-il-nero-cr12.md:27 | «e'» | TP | TP |
+| 72 | GR_04_002 | Bestiario/mostri/swarm-pseudodraconici-gith-cr8.md:12 | «e'» | TP | TP |
+| 73 | GR_04_002 | Bestiario/mostri/drow-pyromancer-completo-cr9.md:12 | «e'» | TP | TP |
+| 74 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:439 | «del Mano» | TP | TP |
+| 75 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:34 | «e'» | TP | TP |
+| 76 | GR_04_002 | 07_il Portale Della Forgia Eterna/ARC07-DEF-3-RESURREZIONE-HELLA.md:760 | «Da'» | FP | FP |
+| 77 | GR_04_002 | Bestiario/mostri/drow-psionica-mezzo-illithid-cr8.md:12 | «e'» | TP | TP |
+| 78 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:17 | «e'» | TP | TP |
+| 79 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:3 | «e'» | TP | TP |
+| 80 | GR_04_002 | Bestiario/villain/terros-l-antico-cr15.md:13 | «e'» | TP | TP |
+| 81 | GR_04_002 | Bestiario/mostri/underdark-dovil-runecaster-cr7.md:5 | «e'» | TP | TP |
+| 82 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:44 | «e'» | TP | TP |
+| 83 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/RUMBLINGSTONE — ESPANSIONE NARRATIVA POST-HAMMERFIST.md:373 | «del Mano» | TP | TP |
+| 84 | GR_04_002 | Bestiario/mostri/underdark-cleric-ainin-cr5.md:3 | «e'» | TP | TP |
+| 85 | GR_04_002 | Bestiario/villain/zog-tar-deatheye-cr15.md:14 | «E'» | TP | TP |
+| 86 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:20 | «e'» | TP | TP |
+| 87 | GR_04_002 | Bestiario/png/durin-rocciadura-cr6.md:35 | «e'» | TP | TP |
+| 88 | GR_04_002 | Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md:17 | «e'» | TP | TP |
+| 89 | GR_04_002 | Bestiario/png/bothor-malvur-cr6.md:3 | «e'» | TP | TP |
+| 90 | GR_04_002 | Bestiario/villain/ghebro-malaluna-cr8.md:12 | «e'» | TP | TP |
+| 91 | GR_04_002 | Bestiario/png/re-thorek-i-cr16.md:16 | «e'» | TP | TP |
+| 92 | COMMA_PARENTHESIS_WHITESPACE | campaign/lore/dm-guide-to-be-adapted-tips&tricks.md:1269 | «)» | FP | ALTRUI |
+| 93 | GR_04_002 | Bestiario/png/tetsu-serpente-di-vento-cr12.md:12 | «e'» | TP | TP |
+| 94 | GR_04_002 | Bestiario/png/tiberio-sarda-cr6.md:12 | «e'» | TP | TP |
+| 95 | COMMA_PARENTHESIS_WHITESPACE | Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md:3 | «,dungeon» | TP | FP |
+| 96 | ARTICOLATA_SOSTANTIVO | 09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2D-PALIO-VERIFICA-LEGALE-IP.md:143 | «del label» | FP | FP |
+| 97 | COMMA_PARENTHESIS_WHITESPACE | 07_il Portale Della Forgia Eterna/Immagini/PROMPT-IMMAGINI-07ILP.md:453 | «.» | TP | FP |
+| 98 | ARTICOLATA_SOSTANTIVO | STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md:387 | «alle Civetta» | FP | TP |
+| 99 | GR_04_002 | Bestiario/mostri/avatar-minore-madre-funghi-cr13.md:12 | «e'» | TP | TP |
