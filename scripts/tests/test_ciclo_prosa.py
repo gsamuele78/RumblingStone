@@ -202,6 +202,19 @@ class TestLanguageTool(unittest.TestCase):
         self.assertEqual((seg[0].riga, seg[0].norma), (2, "grammatica"))
         self.assertIn("le case", seg[0].dettaglio)
 
+    def test_gli_offset_sono_in_utf16(self):
+        """Un'emoji sono due unità per LanguageTool: la riga non deve scivolare."""
+        import io
+        import json as _json
+        testo = "🔥🔥🔥🔥\nab\nc\nd\ne"
+        risposta = {"matches": [{"offset": 4 * 2 + 1 + 3, "message": "x",
+                                 "replacements": []}]}
+        finto = mock.MagicMock()
+        finto.__enter__.return_value = io.StringIO(_json.dumps(risposta))
+        with mock.patch.object(cp.urllib.request, "urlopen", return_value=finto):
+            seg = cp.languagetool(testo, "http://localhost:8081")
+        self.assertEqual(seg[0].riga, 3)
+
 
 class TestIlDocumentoBastaASeStesso(unittest.TestCase):
     def test_andata_e_ritorno(self):
