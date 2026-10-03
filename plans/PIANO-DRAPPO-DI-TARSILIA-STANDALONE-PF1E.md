@@ -231,6 +231,64 @@ stampa senza toccare altro.
       rotte; gli è stata aggiunta la **ragione** quando il file manca perché è una
       derivata gitignorata — la trappola in cui sono cadute due sessioni di fila
 
+### Lotto 9 — La tavola di fuori 🟡 *(aperto 2026-10-03: scena scritta, collaudo a freddo gated)*
+
+[engine: Opus, sessione principale · effort: alto · qualità: i gate del modulo verdi, box al metro, e la scena che regge a una lettura a freddo e a un dry-run cronometrato]
+
+**Origine.** Il DM ha chiesto se nei master convenisse innestare qualcosa di
+*Alice nel Paese delle Meraviglie*. La valutazione ha proposto tre posti; il DM ha
+approvato quello del Drappo (2026-10-03). La scelta di metodo è [ADR-0080](adr/ADR-0080-le-fonti-di-pubblico-dominio-entrano-come-logica.md).
+
+**Cosa ho guardato prima (ADR-0044).** `PIANO-DRAPPO` è 🟡 in corso e il lavoro sta
+dentro il suo perimetro, quindi è un lotto suo e non un piano nuovo.
+`PIANO-INNESTI-SFIDE` riguarda incontri nel canone giocato, non il Drappo.
+`PIANO-LETTORE-E-PLAYTESTER` F5 dà il contratto di lettura sugli stand-alone e resta
+il gate del passo 6.
+
+**Cosa NON rifà.** Non tocca i cinque DEF di ARC-07 né i master di ARC-08/09. Non
+aggiunge contatori (il modulo ne ha due, e il gate li controlla). Non aggiunge piste né
+falsi indizi. Non cambia le regole dei Partiti (`REGOLE-DELLA-CORSA-PF1E.md` §4).
+
+**Dove ho corretto la proposta approvata**, perché leggendo il modulo ho trovato tre
+cose che la proposta non sapeva:
+
+| Proposta del 2026-10-03 | Cosa ho trovato | Cosa ho fatto |
+|---|---|---|
+| Il tè dei matti alla **Cena della vigilia** | La Cena è del rione, ottanta persone dell'Istrice. Il tavolo dove nessuno si siede perché sedersi è prendere posizione è il **mercato del grano** (§2 dei Partiti), e il playtest alfa ha misurato 72 minuti di cinque giocatori fuori scena | La scena è al §2-bis, sotto il portico del mercato, per i cinque che aspettano. La Cena resta com'è |
+| Un **indovinello senza risposta** innestato sui quattro quaranta | `10-DOSSIER` §7: un solo falso indizio per modulo, ed è già quello. Un secondo insegna al tavolo che i fatti non contano | Tolto. Il Maestro sbaglia i numeri degli articoli, e il pilastro li corregge: è un Fatto, non si tira. I numeri evitano i quaranta |
+| Il **pittore e le rose dipinte** sulla pista C | La pista C è la pista morale, «senza premio meccanico», e il registro di Rasca nasconde nove morti: una gag la guasterebbe | Tolto. Il Drappo non cambia di una riga |
+
+**Cosa è stato scritto** (2026-10-03):
+
+- [x] `02-GIORNO-2` §2-bis, *La tavola di fuori*: box di apertura di 11 righe, il
+      regolamento sul pilastro (tre articoli coi numeri veri), il Maestro di Tavola
+      (il funzionario di `09-KIT` §3, già previsto alla Cena), il Dormiente (tre
+      dicerie della tabella di `04-LUOGHI` §5, nessuna nuova), la porta con il
+      foglietto di dodici parole letto a tutti, l'eco alla Cena
+- [x] Innesti: indice e puntatore in `02-GIORNO-2` §2, la fascia di `07-GUIDA` §4, la
+      riga «non è un mistero» in `10-DOSSIER` §10, il «dove si incontra» in `09-KIT` §3,
+      la nota di pubblico dominio in `IP-E-LICENZE` §5-bis, la domanda 0 in `PLAYTEST-ALFA` §5
+- [x] Misura: `validate_standalone` verde; `validate_prosa` nessun tic oltre soglia;
+      `ciclo_prosa segnala` stesso numero di segnalazioni di prima (2 e 2, entrambe già
+      nel file, nessuna nella scena nuova)
+- [ ] **Passo 6 del ciclo (ADR-0075): lettore e playtester a freddo** sul §2-bis. ⬜ non
+      fatto: servono due agenti che non vedono questo piano, con la rubrica di
+      `PIANO-LETTORE` F5
+- [ ] **Dry-run cronometrato**: la tavola sta dentro i cinque minuti di un taglio?
+      ⬜ non fatto
+- [ ] Regenerare i booklet `homebrew/DRAPPO-BOOKLET-DM` dalla fonte aggiornata, e
+      controllare con `validate_booklets`. ⬜ non fatto in questo lotto
+- [ ] Tavolo vero (L3 di questo piano). La scena resta **alfa** finché non è giocata
+
+<!-- decisioni-dm: DRAPPO-TAVOLA -->
+
+| # | Fase | Domanda |
+|---|---|---|
+| ~~D1~~ | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«approvo con tutte le premesse e verifiche che vuoi fare»*): l'innesto nel Drappo parte, con la forma proposta |
+| D2 | L9 | **Confermi le tre correzioni?** Dedotto da me: la scena sta ai Partiti e non alla Cena; l'enigma senza risposta è tolto; le rose dipinte sono tolte. Sono scelte mie, e il DM approvando non le aveva viste |
+| D3 | L9 | **Il foglietto letto a tutti è una regola che vuoi?** Dà ai cinque fuori un modo di pesare sulla trattativa di Vanna, ed è l'unica cosa della scena che tocca i Partiti. Alternativa: tavola senza porta |
+| D4 | futuro | **Le altre due proposte della valutazione** (la Torre Invisibile in ARC-09, liv. 2-3; lo Strappo fra le Ere come appendice opzionale di DEF-5) restano non decise. Vanno decise prima di toccare altri file |
+
 ### ⚠️ Divergenza con `claude/golarion-pathfinder-campaign-xbyvzt`
 
 Le schede sono state fatte su `claude/golarion-pregen-character-sheets-cstheq` mentre
