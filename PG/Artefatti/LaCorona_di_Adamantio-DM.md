@@ -246,7 +246,7 @@ terreno come oﬀerta.
 
 Potere (Sopran., 1/settimana):
 
-Come azione rapida, avvolge il portatore e gli alleati entro 9 metri in una luce divina per 10 round,
+Come azione veloce, avvolge il portatore e gli alleati entro 9 metri in una luce divina per 10 round,
 
 conferendo Giusto Potere e Pelle di Pietra al portatore, Potere divino e Ispirare Coraggio (+3) agli
 
@@ -743,7 +743,7 @@ Terremoto (versione controllata).
 
 • Gem: Gem of Dwarven Might (Gemma della Potenza Nanica)
 
-◦ Sblocco: Rituale 3. Attivazione: Azione rapida. Frequenza: 1/settimana. Durata: 10
+◦ Sblocco: Rituale 3. Attivazione: Azione veloce. Frequenza: 1/settimana. Durata: 10
 
 round. LI: 20°.
 
