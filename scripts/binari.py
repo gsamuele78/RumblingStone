@@ -124,13 +124,13 @@ OPZIONALI = (
          "  macOS          xcode-select --install",
          "senza git il repo non si clona: in pratica c'e' sempre, ed e' l'unico "
          "di questo gruppo che non ha un ripiego vero."),
-    _opz("bash", "i cinque script shell: build-skills, sync-skills, "
-                 "install-git-hooks, new-campaign-group, Image-to-webp",
+    _opz("bash", "gli script shell: build-skills, sync-skills, install-git-hooks, "
+                 "new-campaign-group, avvia_languagetool, Image-to-webp",
          "  Linux/macOS    c'e' gia'\n"
          "  Windows        Git Bash (arriva con Git for Windows) oppure WSL",
          "gli equivalenti in Python esistono per la maggior parte del flusso "
          "(`dm.py skills build`, `dm.py skills sync`); su Windows senza Git Bash "
-         "restano fuori i cinque script shell."),
+         "restano fuori gli script shell."),
     _opz("chromium", "i PDF dei booklet e i PNG delle mappe",
          "  Debian/Ubuntu  sudo apt install chromium\n"
          "  Fedora         sudo dnf install chromium\n"
@@ -138,6 +138,20 @@ OPZIONALI = (
          "  cercato in PATH, in $BOOKLET_CHROME e in /opt/pw-browsers",
          "i booklet restano in HTML, che e' il formato che si legge al tavolo; "
          "il PDF e' per chi stampa."),
+    _opz("java", "il server LanguageTool locale, il secondo lettore facoltativo "
+                 "(`avvia_languagetool.sh`, ADR-0079): serve Java 17 o superiore",
+         "  Debian/Ubuntu  sudo apt install default-jre\n"
+         "  Fedora         sudo dnf install java-17-openjdk\n"
+         "  macOS          brew install openjdk",
+         "il secondo lettore resta spento: `ciclo_prosa.py segnala` funziona lo "
+         "stesso con i soli rilevatori del repo, che sono quelli che contano."),
+    _opz("mvn", "scaricare una volta i jar di LanguageTool da Maven Central "
+                "(`avvia_languagetool.sh`, ADR-0079)",
+         "  Debian/Ubuntu  sudo apt install maven\n"
+         "  Fedora         sudo dnf install maven\n"
+         "  macOS          brew install maven",
+         "come per `java`: senza Maven non si scarica LanguageTool e il secondo "
+         "lettore non parte; nessun altro passo ne dipende."),
     _opz("blender", "il render 3D delle mappe (`render_map_blender.py`) e il passo "
                     "di profondita' che alimenta ControlNet",
          "  Debian/Ubuntu  sudo apt install blender\n"
