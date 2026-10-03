@@ -446,7 +446,10 @@ def _rx_forma(forma: str) -> "re.Pattern[str]":
     """Una forma tutta minuscola si cerca senza badare alla maiuscola (*Mithril*
     a inizio frase e' la stessa forma); un nome proprio, con la maiuscola."""
     flag = re.I if forma == forma.lower() else 0
-    return re.compile(rf"(?<![\w`/.-]){re.escape(forma)}(?![\w`/-])", flag)
+    # Il confine non esclude la barra: *Hellas/druidi* e *Witchwood/Hellas* sono
+    # prosa. Un percorso («porta/mithril/cartella») ha la barra da entrambi i
+    # lati ed e' scartato in `occorrenze_forma`. ADR-0079.
+    return re.compile(rf"(?<![\w`.-]){re.escape(forma)}(?![\w`-])", flag)
 
 
 #: Una riga che cita un file per nome: il nome non si cambia insieme al testo,
@@ -455,20 +458,37 @@ def _rx_forma(forma: str) -> "re.Pattern[str]":
 _PERCORSO = re.compile(r"\.(?:md|webp|png|pdf|json|ya?ml|svg|txt|htm)\b", re.I)
 
 
-def _spiega_il_cambio(riga: str, canonica: str) -> bool:
+def _freccia_accanto(riga: str, forma: str) -> bool:
+    """La freccia che **lega** la forma esclusa a un'altra: «*mithril* →», «→ Hellas».
+    Una freccia lontana («… se riesce → COMPLETE!») non spiega niente."""
+    f = re.escape(forma)
+    return bool(re.search(rf"{f}[\s*_\"«»'`]{{0,6}}→|→[\s*_\"«»'`]{{0,6}}{f}", riga,
+                          re.I if forma == forma.lower() else 0))
+
+
+def _spiega_il_cambio(riga: str, canonica: str, forma: str = "") -> bool:
     """La riga che **dice** il cambio («Regiarax» → «Regiarix») non e' un errore,
     e nemmeno quella che cita un nome di file (`_PERCORSO`)."""
     # ⚠️ Con il confine di parola, non con `in`: «hella» sta dentro «Hellas», e
     # il primo rapporto contava zero *Hellas* proprio per questo.
-    return ("→" in riga or bool(_rx_forma(canonica).search(riga))
-            or bool(_PERCORSO.search(riga)))
+    # ⚠️ Una freccia lontana non spiega niente: «**Hellas:** Round 40 … → COMPLETE!»
+    # la usava come scusa e la grafia sbagliata passava (ADR-0079). Conta la
+    # freccia accanto alla forma, o la forma canonica sulla stessa riga.
+    return (bool(_rx_forma(canonica).search(riga)) or bool(_PERCORSO.search(riga))
+            or (bool(forma) and _freccia_accanto(riga, forma)))
 
 
 def occorrenze_forma(testo: str, forma: str, canonica: str) -> "list[int]":
     """I numeri di riga in cui la forma esclusa compare davvero."""
     rx = _rx_forma(forma)
+
+    def _fuori_da_un_percorso(riga: str) -> bool:
+        return any(not (m.start() > 0 and riga[m.start() - 1] == "/"
+                        and m.end() < len(riga) and riga[m.end()] == "/")
+                   for m in rx.finditer(riga))
+
     return [n for n, riga in enumerate(testo.splitlines(), 1)
-            if rx.search(riga) and not _spiega_il_cambio(riga, canonica)]
+            if _fuori_da_un_percorso(riga) and not _spiega_il_cambio(riga, canonica, forma)]
 
 
 _FOGLIO: "list[tuple[str, str, str, str]] | None" = None

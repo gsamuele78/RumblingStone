@@ -1,7 +1,9 @@
 # ADR-0079 — Un secondo rilevatore per la prosa: Vale, LanguageTool, proselint
 
-- **Stato**: **proposta** (in attesa della risposta del DM; niente di quanto
-  segue è in vigore)
+- **Stato**: **accettata, opzione B** (il DM, il 2026-10-03: *«da usare quando
+  serve un secondo lettore come verifica […] altrimenti vai di B»*). Le opzioni
+  C e D restano scartate. La parte «Decisione proposta» qui sotto è il testo su
+  cui il DM ha risposto; l'esito è nella sezione «Esito: opzione B applicata».
 - **Data**: 2026-10-03
 - **Decisori**: DM (Gianfranco Samuele), agente
 - **Decisione-fonte**: il DM, il 2026-10-03, dopo la PR #213: se la licenza MIT
@@ -180,3 +182,45 @@ Si introduce l'eccezione a questo ADR (che passa da *proposta* ad *accettata*,
 con la riga della scelta), si scrivono le soglie e i pesi **prima**, si
 implementa con test e si rimisura il miglioramento sul repo. Niente di questo è
 stato fatto.
+
+## Esito: opzione B applicata
+
+Il DM ha scelto di tenere LanguageTool **come secondo lettore quando serve una
+verifica**, non come rilevatore di default. È l'opzione B, che comprende A. Fatto
+nello stesso lotto, con test:
+
+| Cosa | Dove | Misura dopo |
+|---|---|---|
+| Avviso sull'apostrofo al posto dell'accento (*e'*, *gia'*, *perche'*) | `validate_lingua.py`, sezione `AVVISI`; mai un errore | 156 righe di contenuto, 0 falsi *Da'* e *po'*; gli avvisi del repo passano da 2.446 a 2.598 e la CI non si ferma |
+| Le due maschere del foglio di stile | `validate_prosa.py`: la barra non scarta più la forma (solo `/forma/`); una freccia lontana non spiega il cambio | 14 righe di **grafie sbagliate** che il gate non vedeva, in 6 file; corrette nello stesso lotto (*Hellas* → *Hella* in 13 righe, *Cannathgate* → *Channathgate* in 1). `--foglio --strict` torna a zero |
+| Gli offset UTF-16 di LanguageTool | `ciclo_prosa.languagetool()` | test che fallisce sul vecchio codice |
+| LanguageTool come secondo lettore | `ciclo_prosa.py segnala FILE --languagetool http://127.0.0.1:8081` | tre regole (`ARTICOLATA_SOSTANTIVO`, `UNPAIRED_BRACKETS`, `ITALIAN_WORD_REPEAT_RULE`), preprocessore che tiene i numeri di riga, **rifiuta ogni indirizzo non locale** (test), 52 s su tutto il contenuto |
+| Avvio del server | `scripts/avvia_languagetool.sh [PORTA]` | scarica LanguageTool 6.8 da Maven Central in `~/.cache`, ascolta solo su `127.0.0.1`; niente nel repo |
+
+Cosa **non** è stato fatto, di proposito: LanguageTool non è in CI, non pesa nel
+punteggio MQM e non ha una riga nel registro delle norme, perché non introduce
+una norma: la grafia italiana era già la norma, e il rilevatore che la misura in
+modo permanente è la regex di `validate_lingua`. Il secondo lettore è uno
+strumento di verifica, non un cancello. Nessuna soglia da dichiarare, quindi:
+nessun peso.
+
+**Cosa produce oggi sul repo** (rimisurato con la funzione vera, non con il mio
+script di prova): 84 segnalazioni in 52 secondi, e conviene leggerle sapendo da
+dove vengono.
+
+- `UNPAIRED_BRACKETS` 45, di cui **32 in un solo file**
+  (`PROMPT-IMMAGINI-07ILP.md`, il campo *Etichetta regia* troncato nel
+  sorgente: un difetto sistematico di quel file che nessun altro rilevatore
+  vede). Non l'ho corretto: il file è un elenco di prompt e il difetto sembra
+  uscire da chi lo compila, non da un refuso. Resta al DM.
+- `ARTICOLATA_SOSTANTIVO` 21, di cui 11 vere in 5 difetti (§9 della ricerca):
+  *del Mano Rossa* ×3, *la Torre* ×5, *la Civetta*, *nel Tana dei Minotauri*,
+  *dalla Conoscenze*. Non corretti: la scelta del genere di *Torre* è del DM
+  (il modulo usa 15 volte *della* e 12 volte *del*).
+- `ITALIAN_WORD_REPEAT_RULE` 18, per lo più in testi inglesi copiati.
+
+**Il costo che resta.** Chi lo usa deve avere Java 17 e Maven la prima volta, e
+leggere un elenco in cui poco più della metà è vero. Per questo non è un
+cancello. Se in un anno le regole grammaticali italiane di LanguageTool
+migliorano, la procedura di misura sta nella ricerca e si rifà in un'ora.
+

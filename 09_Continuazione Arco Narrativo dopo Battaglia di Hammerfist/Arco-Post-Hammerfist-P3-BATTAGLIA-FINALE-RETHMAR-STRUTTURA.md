@@ -19,7 +19,7 @@ Basata sulla struttura della Battle of Brindol di Red Hand of Doom[web:86][web:1
   - Ghostlord (non morti pro/contro).  
   - Sabotaggio Drow & Missioni Brevi (logistica e ondate speciali ridotte).  
   - Torneo di Tordek (300 mercenari nani in arrivo).  
-  - Rituali di Hellas/druidi‑orsi. [web:86][web:109][web:115]
+  - Rituali di Hella/druidi‑orsi. [web:86][web:109][web:115]
 
 ---
 

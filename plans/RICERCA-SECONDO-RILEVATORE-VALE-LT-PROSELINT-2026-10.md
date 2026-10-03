@@ -5,11 +5,12 @@
 > rivalutarli con una misura. Qui sono installati davvero, fatti girare sul
 > contenuto di gioco (521 file, archivi e snapshot esclusi con
 > `validate_prosa.file_di_gioco()`) e sui documenti (414 file), letti a mano su
-> campioni, confrontati con ciò che il repo già segnala. Nessun file di
-> contenuto è stato toccato.
+> campioni, confrontati con ciò che il repo già segnala. Durante la misura nessun
+> file di contenuto è stato toccato; le 14 righe corrette dopo la scelta del DM
+> sono in ADR-0079, «Esito».
 >
 > **Stato**: misura chiusa in due giri (il secondo con un secondo lettore cieco,
-> §9), decisione **proposta** in
+> §9), decisione presa dal DM (opzione B) in
 > [ADR-0079](adr/ADR-0079-un-secondo-rilevatore-per-la-prosa.md), in attesa del DM.
 
 ## 0. Cosa mancava, e cosa si è assunto
@@ -216,8 +217,8 @@ I cinque veri sono mascherati da due scorciatoie di `validate_prosa`
 riga con una freccia `→`), scritte da me nella PR #213 per non segnalare i
 percorsi e le righe che spiegano un cambio. **Il secondo rilevatore ha trovato
 un difetto del primo.** Si ripara nel primo, in due righe: non serve Vale per
-farlo. Non l'ho riparato qui, perché cambia cosa il gate segnala e i cinque
-file andrebbero corretti nello stesso lotto.
+farlo. Riparato dopo la scelta del DM (ADR-0079, «Esito»), con le grafie corrette
+nello stesso lotto: erano 14 righe in 6 file.
 
 Cosa **non** aggiunge Vale: i suoi tipi di regola (`existence`, `substitution`,
 `consistency`, `repetition`, `occurrence`) sono quelli che il repo ha già come
