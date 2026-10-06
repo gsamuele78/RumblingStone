@@ -1228,6 +1228,11 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 - **l'ascia del gelo**, se la comprano: la guardia che l'ha ceduta è fra i
   caduti del 372, e in ARC-08, davanti a un'arma nanica antica, la
   brina sulla lama è quella che nessuno sa più fare.
+- **i due pezzi del capo fabbro** `[CANONE — DM 2026-10-06]`: l'ascia
+  d'adamantio +2 e lo scudo dagli spuntoni gelidi tornano nel 1372 addosso ai
+  PG. La prima volta che un fabbro di Hammerfist li vede, riconosce il segno
+  della forgia di Thorek I, e li tratta come tratta il Torque
+  `[INFERRED — needs DM confirmation]`.
 
 ### SCENA 6 — Il mare di tende
 
@@ -2517,8 +2522,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **La Senzienza arriva calda o fredda** (`DEF-5` §3, dopo il Rubino) | il ramo lo ha deciso `DEF-3` §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
-| **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[INFERRED — needs DM confirmation]` | ARC-08, a Hammerfist | registro delle conseguenze |
-| **I due pezzi del capo fabbro** (Scena 5): l'ascia d'adamantio +2 e lo scudo dagli spuntoni gelidi `[CANONE — DM 2026-10-06]` | tornano nel 1372 addosso ai PG. Un fabbro di Hammerfist riconosce il segno della forgia di Thorek I, e li tratta come tratta il Torque `[INFERRED — needs DM confirmation]` | ARC-08, la prima volta che un fabbro nanico li vede | registro delle conseguenze |
+| **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo, i due pezzi del capo fabbro | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[INFERRED — needs DM confirmation]` | ARC-08, a Hammerfist | registro delle conseguenze |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
