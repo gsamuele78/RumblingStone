@@ -5,7 +5,7 @@
 > perché la misura ha trovato difetti veri che **non ho corretto**: o perché la
 > scelta è del DM, o perché sono un lotto di contenuto da fare a parte.
 >
-> **Stato**: lotto di infrastruttura chiuso (PR #214); punto 1 chiuso il 2026-10-03; coda aperta dal punto 2.
+> **Stato**: lotto di infrastruttura chiuso (PR #214); punti 1 e 2 chiusi (2026-10-03 e 2026-10-06); restano 3 e 4, che aspettano D2 e D3.
 
 ## 1. Fatto (PR #214)
 
@@ -41,6 +41,15 @@ Tana dei Minotauri* (riga 20 dello stesso file), *dalla Conoscenze*
 (`EST-FASE4-SAARVITH-REGIARIX-BOSS-CR13.md`, riga 77). Dopo, rilanciare
 `ciclo_prosa.py segnala --languagetool` sui file toccati e controllare che i
 rilievi veri siano a zero.
+
+**2. ✅ Fatto il 2026-10-06.** 143 righe in 78 schede (non 140 in 57: il conto
+del 2026-10-03 era su un'altra versione dell'avviso), sostituite solo le forme
+della lista di `validate_lingua` e mai dentro il codice in linea: *e'* 125,
+*perche'* 70, *gia'* 10, *piu'* 7, *puo'* 3, *cosi'* 1. `pregen-pcgen/`
+escluso. Avvisi del validatore da 2.598 a 2.457; `validate_bestiario`,
+`extract_statblocks`, `conformita_statblocchi` verdi, catalogo dei mostri
+invariato. Resta *verita'* in una scheda della Badessa: non è nella lista del
+validatore, e si aggiunge alla lista o si lascia. Il testo di prima:
 
 **2. Gli accenti del Bestiario (nessuna decisione da prendere).** 140 delle 156
 righe dell'avviso sull'apostrofo stanno in `Bestiario/`, e 67 sono lo stesso
@@ -93,7 +102,6 @@ non è un cancello.
 
 Il primo messaggio, da incollare:
 
-> Leggi `plans/PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md` §2. Il punto 1 è
-> fatto: parti dal punto 2, gli accenti del Bestiario (lotto meccanico, nessuna
-> decisione). Prima `python3 scripts/fase1.py --check` sui file; apri una PR in
-> bozza. I punti 3 e 4 aspettano D2 e D3 di §2-bis.
+> Leggi `plans/PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md` §2. I punti 1 e 2
+> sono fatti; i punti 3 e 4 aspettano D2 e D3 di §2-bis: chiedimele, poi
+> applica. Prima `python3 scripts/fase1.py --check` sui file.
