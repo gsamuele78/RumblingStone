@@ -973,7 +973,7 @@ quelle, non ce ne sono altre.
 |---|---:|---:|---|
 | Pozione di *cura ferite leggere* | 50 mo | 6 | le *gravi* ci sono, ma sono i doni del re (§8 B) |
 | Pozione di *cura ferite moderate* | 300 mo | 2 | |
-| Pozione di *volare* | 750 mo | 3 | 5° livello dell'incantatore, 5 minuti. Le vende Sorella Brynja. Quante: quelle comprate al tavolo `[CANONE — DM 2026-09-25]` |
+| Pozione di *volare* | 750 mo | 5 | 5° livello dell'incantatore, 5 minuti. Non si vendono: le **regala il re**, tramite il sergente, per la missione nel campo `[CANONE — DM 2026-10-06]` (il conto della fucina, più sotto) |
 | Pozione di *invisibilità* | 300 mo | 5 | 3° livello, 3 minuti. Da Brynja, come sopra |
 | Bacchetta di *cura ferite leggere*, 50 cariche | 750 mo | 2 | da Brynja, come sopra |
 | Acqua santa, la fiasca | 25 mo | 10 | temprata nella vasca della forgia |
@@ -981,7 +981,7 @@ quelle, non ce ne sono altre.
 | Borsa del guaritore | 50 mo | 3 | |
 | Ascia da guerra nanica perfetta | 330 mo | 3 | |
 | Corazza di piastre completa perfetta | 1.650 mo | 1 | di una guardia reale caduta cinquant'anni fa, ripulita |
-| Ascia da guerra nanica d'adamantio | 3.330 mo | 1 | sopra il valore base: c'è, ma Gunnvor la dà solo contro qualcosa che le serve |
+| Ascia da guerra nanica d'adamantio | 3.030 mo | 1 | sopra il valore base: c'è, ma Gunnvor la dà solo contro qualcosa che le serve |
 | Frecce, quadrelli, fuoco dell'alchimista, olio | — | 0 | tutto sulle mura. Semmai li compra lei, qui sotto |
 | Mithral lavorato | — | 0 | nella fortezza giovane non ce n'è |
 | *Ristorare inferiore* · *rimuovi malattia* | 60 · 150 mo | a richiesta | |
@@ -1085,7 +1085,7 @@ hanno lasciate, e hanno fatto bene. Con i prezzi dell'SRD viene così:
 |---|---|---|---|
 | Asce e balestre naniche comuni o perfette | Gunnvor | **prezzo pieno** SRD | ognuna arma un ragazzo che salirebbe con la vanga. È l'unica merce per cui alza gli occhi dalla lama |
 | Armature naniche comuni o perfette | Gunnvor | **prezzo pieno** | come sopra |
-| Armi e armature naniche **d'adamantio** | il forziere del re | **metà** del prezzo SRD, anche **oltre** il limite d'acquisto, finché il forziere ha monete `[INFERRED — needs DM confirmation]` | le vuole il re per la guardia reale. Sono l'unica eccezione al limite: una piastra completa d'adamantio vale 16.500 mo e ne frutta 8.250, cioè quasi tutto il forziere. Un'ascia d'adamantio (3.330) ne frutta 1.665 |
+| Armi e armature naniche **d'adamantio** | il forziere del re | **metà** del prezzo SRD, anche **oltre** il limite d'acquisto, finché il forziere ha monete `[INFERRED — needs DM confirmation]` | le vuole il re per la guardia reale. Sono l'unica eccezione al limite: una piastra completa d'adamantio vale 16.500 mo e ne frutta 8.250, cioè quasi tutto il forziere. Un'ascia d'adamantio (3.030: il costo dell'adamantio comprende già l'arma perfetta, SRD) ne frutta 1.515 |
 | Armi e armature magiche | il forziere del re | **metà**, entro il limite | la tabella qui sopra |
 | Lame, picche, scudi degli orchi | nessuno | — | hanno il segno della Mano Rossa, o l'odore delle tende là fuori |
 
@@ -1096,6 +1096,105 @@ chiede il premio sulle pozioni trova il forziere quasi vuoto, e Brynja lo dice.
 Oltre quei tetti la risposta è la stessa di Gunnvor: *«Tenetevelo. Non ho tempo
 di pesarlo.»* Per chiudere il conto, il DM somma quello che ricorda di aver
 venduto al tavolo, dimezza, e taglia ai tetti.
+
+##### Il conto della fucina, come l'ha giocato il tavolo `[CANONE — DM 2026-10-06]`
+
+Il resoconto l'ha mandato il giocatore di Artemis dopo la sessione. Il DM ha
+tenuto la mano larga: era il primo banco da mesi, e i nani sono ricchi di gemme
+e un po' avidi. Dove questo conto e le quantità del banco qui sopra non
+coincidono, vale questo conto.
+
+Per il tavolo ci sono altri due personaggi, inventati al momento:
+
+- **il sergente**, che per ordine del re porta ai PG i doni per la missione nel
+  campo degli orchi. Non ha ancora un nome;
+- **il capo fabbro**, che vende loro i due pezzi rari della forgia. Se il DM non
+  gli dà un altro nome, è Gunnvor `[INFERRED — needs DM confirmation]`.
+
+**I doni del re**, portati dal sergente (la fiducia al consiglio era piena):
+
+| Cosa | Quante | Nota |
+|---|---:|---|
+| Pozione di *volare* (5° livello, 5 minuti) | 5 | per sorvolare il campo (Scena 6) |
+| Pozione di *cura ferite gravi* all'11° livello, 3d8+11 | 4 | la *Benedizione degli Antenati* di §8 B. Al tavolo si chiamano «di CFC»: in 3.5 una pozione arriva al 3° livello, e *cura ferite critiche* è di 4° |
+
+**Cosa hanno venduto.** Gunnvor paga a prezzo pieno le armi e le armature
+naniche comuni. Il forziere del re paga la magia a metà, al massimo 2.500 mo per
+oggetto, fino a 10.000 mo in tutto. Quello che il forziere non copre lo paga il
+pesatore, **in gemme**.
+
+| Cosa | Quante | Prezzo SRD | Chi paga | Incasso |
+|---|---:|---:|---|---:|
+| Corazza di piastre completa | 6 | 1.500 | Gunnvor | 9.000 |
+| Scudo pesante di metallo perfetto | 1 | 170 | Gunnvor | 170 |
+| Ascia da guerra nanica perfetta | 3 | 330 | Gunnvor | 990 |
+| Balestra leggera perfetta | 4 | 335 | Gunnvor | 1.340 |
+| Balestra pesante | 3 | 50 | Gunnvor | 150 |
+| Balestra pesante a ripetizione | 1 | 400 | Gunnvor | 400 |
+| Corazza di piastre completa +1 | 2 | 2.650 | forziere | 2.650 |
+| Corazza di piastre completa di mithral +1 | 1 | 11.500 | forziere | 2.500 (limite d'acquisto) |
+| Battleplate nanica +1 (non è nell'SRD: prezzata come una piastra completa +1) `[INFERRED — needs DM confirmation]` | 1 | 2.650 | forziere | 1.325 |
+| Scudo pesante di metallo +1 | 7 | 1.170 | forziere | 4.095 |
+| Scudo pesante di metallo +3 | 1 | 9.170 | forziere | 2.500 (limite d'acquisto) |
+| Ascia da guerra nanica +1 | 1 | 2.330 | forziere | 1.165 |
+| Morning star +1 | 1 | 2.308 | forziere | 1.154 |
+| **Totale** | | | Gunnvor 12.050 · forziere 10.000 · pesatore 5.389 **in gemme** | **27.439** |
+
+La magia vale 15.389 mo a metà prezzo: il forziere si ferma a 10.000, e i
+5.389 che restano li paga il pesatore in gemme. Le gemme valgono anche nel
+1372, le monete del 372 no.
+
+**Cosa hanno comprato.** Le pozioni e le pergamene sono **scorte** della
+cappella e della bottega: nessuno le prepara in una notte, e in 3.5 un
+alchimista senza incantesimi non fa pozioni magiche. Kettra le vende, non le ha
+fatte lei.
+
+| Cosa | Quante | Da chi | Prezzo | Totale |
+|---|---:|---|---:|---:|
+| Ascia da guerra nanica d'adamantio +2 | 1 | il capo fabbro | SRD 11.030, pagata col −15% fatto al tavolo | 9.350 |
+| Scudo pesante di metallo +2, spuntoni +1 *gelidi* | 1 | il capo fabbro | SRD 12.480, pagato col −15% sul conto del tavolo (12.520) | 10.642 |
+| Runa di *resistere all'energia*, acido 20 (Zeth) | 2 | Zeth | 350 | 700 |
+| Bacchetta di *cura ferite leggere*, 50 cariche | 10 | Brynja | 750 | 7.500 |
+| Pergamena di *ristorare* | 4 | Brynja | 800 (polvere di diamante compresa) | 3.200 |
+| Pergamena di *cura ferite critiche* | 3 | Brynja | 700 | 2.100 |
+| Pergamena di *cura ferite gravi* | 5 | Brynja | 375 | 1.875 |
+| Pergamena di *neutralizza veleno* | 3 | Brynja | 700 | 2.100 |
+| Pozione di *cura ferite gravi* (5° livello) | 3 | Brynja | 750 | 2.250 |
+| Pozione «di CFC»: una quinta della scorta di §8 B, 3d8+11 `[INFERRED — needs DM confirmation]` | 1 | Brynja | 1.650 | 1.650 |
+| Pozione di *neutralizza veleno* | 5 | Brynja o Kettra | 750 | 3.750 |
+| Pozione di *invisibilità* | 2 | Brynja | 300 | 600 |
+| Pozione di *velocità* | 3 | Kettra | 750 | 2.250 |
+| **Totale** | | | | **47.967** |
+
+Il saldo a carico del gruppo è di circa **20.500 mo**. Se lo pagano in monete
+del 1372, il pesatore ne trattiene una su dieci, e ne servono circa **22.800**.
+
+L'ascia e lo scudo **non sono stati fatti stanotte**: erano già nella forgia,
+pezzi rari che il capo fabbro teneva da parte. Tornano nel 1372 con i PG, che li
+portano addosso, e là sono **reliquie** (§7).
+
+**Le richieste rimaste aperte**, con la risposta del banco:
+
+| Richiesta | Risposta |
+|---|---|
+| Identificare le pozioni | sì: Kettra, fino a 35 pozioni in 35 minuti (vedi sopra). Brynja degli altri oggetti dice solo la scuola |
+| Piccone d'adamantio | non è nel banco, ma la fortezza era una miniera: uno c'è, degli scavatori di **Zeth**. Piccone pesante, 3.008 mo. Non lo vendono: lo scambiano con qualcosa che faccia reggere le gallerie, per esempio i cristalli d'adamantio `[INFERRED — needs DM confirmation]` |
+| Pergamene di *silenzio* | 2, a 150 mo. Oppure la pietra di Brynja, 160 mo, 8 minuti |
+| Pergamene di *identificare* | 1, a 125 mo, dal forziere del re |
+| *Rimuovi paralisi* | 3 pergamene a 150 mo. Pozioni no. Come servizio, 180 mo |
+| *Rimuovi maledizione* | 1 pergamena, l'ultima, a 375 mo. Come servizio, 270 mo |
+| Pozioni di *ingrandire persona* | la cappella non ne ha. Nel forziere del re ce ne sono 2, prese a un mercante come l'*identificare*: 250 mo l'una, 5 minuti `[INFERRED — needs DM confirmation]` |
+
+Il prossimo banco, per quello che qui non c'è, è l'armeria nanica del 1372,
+dopo la battaglia (ARC-08 B4). `DEF-5` comincia nel mezzo dell'assedio, e un
+mercato non ce l'ha.
+
+⚠️ **Quello che i PG hanno comprato manca sulle mura.** Dieci bacchette sono le
+cure della cappella per l'alba, e le pergamene di 4° livello le ha scritte
+Brynja per lo stesso motivo. Se la Scena 10 non è ancora stata giocata, si tira
+una volta sul *Registro delle Perdite* per le bacchette e una per ogni tipo di
+pergamena di 4° comprata (*ristorare*, *cura ferite critiche*, *neutralizza
+veleno*): quattro tiri in tutto `[INFERRED — needs DM confirmation]`.
 
 **L'ascia nel panno.** È un'**ascia da guerra nanica +1 del gelo** (SRD: +2 di
 bonus equivalente, 8.330 mo), finita ieri per la guardia del re, e sulla lama
@@ -2419,6 +2518,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
 | **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[INFERRED — needs DM confirmation]` | ARC-08, a Hammerfist | registro delle conseguenze |
+| **I due pezzi del capo fabbro** (Scena 5): l'ascia d'adamantio +2 e lo scudo dagli spuntoni gelidi `[CANONE — DM 2026-10-06]` | tornano nel 1372 addosso ai PG. Un fabbro di Hammerfist riconosce il segno della forgia di Thorek I, e li tratta come tratta il Torque `[INFERRED — needs DM confirmation]` | ARC-08, la prima volta che un fabbro nanico li vede | registro delle conseguenze |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
@@ -2453,7 +2553,7 @@ arriva, arriva per scelta del DM, e non per la tabella: è la decisione D40.
 ### B. Tesoro PREGENERATO (i doni di Re Thorek I + il bottino del passato)
 | Dove | Oggetto (pregenerato) | Valore |
 |---|---|---|
-| Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **Pozioni di Cura Ferite Serie** dell'antica fucina (curano 3d8+11) | ~3.000 mo |
+| Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **pozioni di *cura ferite gravi*** dell'antica fucina, all'11° livello dell'incantatore (curano 3d8+11). Al tavolo le ha consegnate **il sergente** per ordine del re, e i giocatori le chiamano «di CFC»: curano quanto una CFC al minimo livello `[CANONE — DM 2026-10-06]` | 6.600 mo (3 × 11 × 50 l'una) |
 | Scena 4 (dono cerimoniale) | **Torque di Thorek I** — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
 | Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
 | Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore) + il **corno da guerra di ferro nero** che chiama il drago (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
