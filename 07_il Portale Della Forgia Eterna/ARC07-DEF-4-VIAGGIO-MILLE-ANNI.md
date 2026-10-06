@@ -1107,9 +1107,8 @@ coincidono, vale questo conto.
 Per il tavolo ci sono altri due personaggi, inventati al momento:
 
 - **il sergente**, che per ordine del re porta ai PG i doni per la missione nel
-  campo degli orchi. Non ha ancora un nome;
-- **il capo fabbro**, che vende loro i due pezzi rari della forgia. Se il DM non
-  gli dà un altro nome, è Gunnvor `[INFERRED — needs DM confirmation]`.
+  campo degli orchi. Resta senza nome: è una comparsa;
+- **il capo fabbro**, che vende loro i due pezzi rari della forgia. È Gunnvor.
 
 **I doni del re**, portati dal sergente (la fiducia al consiglio era piena):
 
@@ -1133,15 +1132,15 @@ pesatore, **in gemme**.
 | Balestra pesante a ripetizione | 1 | 400 | Gunnvor | 400 |
 | Corazza di piastre completa +1 | 2 | 2.650 | forziere | 2.650 |
 | Corazza di piastre completa di mithral +1 | 1 | 11.500 | forziere | 2.500 (limite d'acquisto) |
-| Battleplate nanica +1 (non è nell'SRD: prezzata come una piastra completa +1) `[INFERRED — needs DM confirmation]` | 1 | 2.650 | forziere | 1.325 |
+| Battleplate nanica +1 (non è nell'SRD: il DM la valuta 4.500) | 1 | 4.500 | forziere | 2.250 |
 | Scudo pesante di metallo +1 | 7 | 1.170 | forziere | 4.095 |
 | Scudo pesante di metallo +3 | 1 | 9.170 | forziere | 2.500 (limite d'acquisto) |
 | Ascia da guerra nanica +1 | 1 | 2.330 | forziere | 1.165 |
 | Morning star +1 | 1 | 2.308 | forziere | 1.154 |
-| **Totale** | | | Gunnvor 12.050 · forziere 10.000 · pesatore 5.389 **in gemme** | **27.439** |
+| **Totale** | | | Gunnvor 12.050 · forziere 10.000 · pesatore 6.314 **in gemme** | **28.364** |
 
-La magia vale 15.389 mo a metà prezzo: il forziere si ferma a 10.000, e i
-5.389 che restano li paga il pesatore in gemme. Le gemme valgono anche nel
+La magia vale 16.314 mo a metà prezzo: il forziere si ferma a 10.000, e i
+6.314 che restano li paga il pesatore in gemme. Le gemme valgono anche nel
 1372, le monete del 372 no.
 
 **Cosa hanno comprato.** Le pozioni e le pergamene sono **scorte** della
@@ -1160,14 +1159,14 @@ fatte lei.
 | Pergamena di *cura ferite gravi* | 5 | Brynja | 375 | 1.875 |
 | Pergamena di *neutralizza veleno* | 3 | Brynja | 700 | 2.100 |
 | Pozione di *cura ferite gravi* (5° livello) | 3 | Brynja | 750 | 2.250 |
-| Pozione «di CFC»: una quinta della scorta di §8 B, 3d8+11 `[INFERRED — needs DM confirmation]` | 1 | Brynja | 1.650 | 1.650 |
+| Pozione «di CFC»: una quinta della scorta di §8 B, 3d8+11 | 1 | Brynja | 1.650 | 1.650 |
 | Pozione di *neutralizza veleno* | 5 | Brynja o Kettra | 750 | 3.750 |
 | Pozione di *invisibilità* | 2 | Brynja | 300 | 600 |
 | Pozione di *velocità* | 3 | Kettra | 750 | 2.250 |
 | **Totale** | | | | **47.967** |
 
-Il saldo a carico del gruppo è di circa **20.500 mo**. Se lo pagano in monete
-del 1372, il pesatore ne trattiene una su dieci, e ne servono circa **22.800**.
+Il saldo a carico del gruppo è di circa **19.600 mo**. Se lo pagano in monete
+del 1372, il pesatore ne trattiene una su dieci, e ne servono circa **21.800**.
 
 L'ascia e lo scudo **non sono stati fatti stanotte**: erano già nella forgia,
 pezzi rari che il capo fabbro teneva da parte. Tornano nel 1372 con i PG, che li
@@ -1178,12 +1177,12 @@ portano addosso, e là sono **reliquie** (§7).
 | Richiesta | Risposta |
 |---|---|
 | Identificare le pozioni | sì: Kettra, fino a 35 pozioni in 35 minuti (vedi sopra). Brynja degli altri oggetti dice solo la scuola |
-| Piccone d'adamantio | non è nel banco, ma la fortezza era una miniera: uno c'è, degli scavatori di **Zeth**. Piccone pesante, 3.008 mo. Non lo vendono: lo scambiano con qualcosa che faccia reggere le gallerie, per esempio i cristalli d'adamantio `[INFERRED — needs DM confirmation]` |
+| Piccone d'adamantio | non è nel banco, ma la fortezza era una miniera: uno c'è, degli scavatori di **Zeth**. Piccone pesante, 3.008 mo. Non lo vendono: lo scambiano con qualcosa che faccia reggere le gallerie, per esempio i cristalli d'adamantio |
 | Pergamene di *silenzio* | 2, a 150 mo. Oppure la pietra di Brynja, 160 mo, 8 minuti |
 | Pergamene di *identificare* | 1, a 125 mo, dal forziere del re |
 | *Rimuovi paralisi* | 3 pergamene a 150 mo. Pozioni no. Come servizio, 180 mo |
 | *Rimuovi maledizione* | 1 pergamena, l'ultima, a 375 mo. Come servizio, 270 mo |
-| Pozioni di *ingrandire persona* | la cappella non ne ha. Nel forziere del re ce ne sono 2, prese a un mercante come l'*identificare*: 250 mo l'una, 5 minuti `[INFERRED — needs DM confirmation]` |
+| Pozioni di *ingrandire persona* | nessuna: nella fortezza nessuno lancia incantesimi arcani, e il forziere del re non ne ha |
 
 Il prossimo banco, per quello che qui non c'è, è l'armeria nanica del 1372,
 dopo la battaglia (ARC-08 B4). `DEF-5` comincia nel mezzo dell'assedio, e un
@@ -1194,7 +1193,7 @@ cure della cappella per l'alba, e le pergamene di 4° livello le ha scritte
 Brynja per lo stesso motivo. Se la Scena 10 non è ancora stata giocata, si tira
 una volta sul *Registro delle Perdite* per le bacchette e una per ogni tipo di
 pergamena di 4° comprata (*ristorare*, *cura ferite critiche*, *neutralizza
-veleno*): quattro tiri in tutto `[INFERRED — needs DM confirmation]`.
+veleno*): quattro tiri in tutto.
 
 **L'ascia nel panno.** È un'**ascia da guerra nanica +1 del gelo** (SRD: +2 di
 bonus equivalente, 8.330 mo), finita ieri per la guardia del re, e sulla lama
@@ -1231,8 +1230,7 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 - **i due pezzi del capo fabbro** `[CANONE — DM 2026-10-06]`: l'ascia
   d'adamantio +2 e lo scudo dagli spuntoni gelidi tornano nel 1372 addosso ai
   PG. La prima volta che un fabbro di Hammerfist li vede, riconosce il segno
-  della forgia di Thorek I, e li tratta come tratta il Torque
-  `[INFERRED — needs DM confirmation]`.
+  della forgia di Thorek I, e li tratta come tratta il Torque.
 
 ### SCENA 6 — Il mare di tende
 
