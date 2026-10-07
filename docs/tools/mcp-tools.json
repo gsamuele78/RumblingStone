@@ -573,7 +573,7 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "status|guard|ensure": {
+          "comando": {
             "type": "string",
             "description": "status = diagnosi; guard = exit 1 se il canone non e' scrivibile; ensure = crea/passa al branch.",
             "enum": [
@@ -588,7 +588,7 @@
           }
         },
         "required": [
-          "status|guard|ensure"
+          "comando"
         ],
         "additionalProperties": false
       },
@@ -2315,7 +2315,7 @@
       "inputSchema": {
         "type": "object",
         "properties": {
-          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario": {
+          "comando": {
             "type": "string",
             "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF.",
             "enum": [
@@ -2336,7 +2336,7 @@
           }
         },
         "required": [
-          "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario"
+          "comando"
         ],
         "additionalProperties": false
       },
