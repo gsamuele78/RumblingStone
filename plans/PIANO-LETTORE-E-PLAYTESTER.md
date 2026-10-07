@@ -344,7 +344,7 @@ luoghi, se hanno senso di esistere»*.
       coi prezzi SRD per il moltiplicatore della condizione, le stanze libere,
       cosa si sente al bancone; dove non si dorme in locanda; le monete antiche al
       bancone
-- [ ] D43: quante monete del 372 hanno i PG
+- [x] D43 decisa e applicata: zero monete di Thorek I in proporzione al conto, 6.250 mo di conio elfico nell'hoard di Regiarix, il prezzo da collezione solo sulle prime dieci monete
 
 ### F4 · Gli altri master di ARC-07 — ⬜ · allargato il 2026-09-27 (ADR-0075)
 
@@ -577,13 +577,13 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | D40 | F4 | **I PX del beat sono circa tre volte la tabella SRD** (Skullcrusher: 5.400 a testa scritti, ~1.460 da tabella). Il 14° livello di DEF-5 poggia su quella cifra. Proposta: **(a)** si tiene la cifra come premio di storia, detto apertamente; **(b)** si scende al conto SRD, e il 14° arriva dopo DEF-5 |
 | ~~D41~~ | F3-ter | ✅ **Decisa il 2026-10-07**: strada **B**. Il re dà il Giorno 21 le reliquie vendute a Gunnvor nel 372 e copre la differenza in gemme, fino a 10.000 mo per PG; vale anche la tacca nel legno del conto. Applicata in `ARC08-17` §2-§3 |
 | ~~D42~~ | F3-ter | ✅ **Decisa il 2026-10-07**: sì a tutto. Profili PF1e di Rethmar, Dauth e Channathgate, le casse, i loxo, la Cintura del monaco come premio del Torneo, il Tempio di Rethmar con un chierico di 13° e un diamante. Marcati `[CANONE — DM 2026-10-07, D42]` nei banchi e in `ARC08-17` |
-| D43 | F3-quater | **Quante monete antiche hanno i PG, e quali.** Il conto della fucina di `ARC07-DEF-4` chiude con un saldo pagato dal gruppo, quindi non dice se i PG hanno avuto monete del 372 di resto. Le monete di Thorek I sono le più pericolose dei banchi §9 (nuove di conio, mille anni dopo). **(a)** Quante ne hanno in tasca, se ne hanno. **(b)** L'hoard di Regiarix ha una parte in conio elfico di Rhest sommersa? Oggi è `[INFERRED]`. Le altre monete antiche sono canone: le 7 di platino di `DEF-1` §8 |
+| ~~D43~~ | F3-quater | ✅ **Decisa il 2026-10-07** (il DM: *«1 calcola in proporzione, 2 ok»*). **(a)** In proporzione al conto della fucina le monete di Thorek I in tasca ai PG sono **zero**: la borsa al momento di pagare (10.000 in monete del 372, 6.314 in gemme, 19.603 in monete del 1372) è uguale ai conti (35.917), quindi tutto torna ai nani. **(b)** Sì: un quarto delle monete dell'hoard di Regiarix è conio elfico, **6.250 mo**, nella stessa proporzione delle reliquie di Rhest sul tesoro non magico. Applicata nei banchi §9 e in `ARC08-17` §3 |
 
 <!-- eco: LETTORE-PLAYTESTER 2026-10-07 -->
-- **Decise**: D41, strada B (le reliquie del 372 date dal re il Giorno 21); D42, tutti e cinque i punti (profili delle città, casse, loxo, Cintura del monaco, Tempio di Rethmar)
-- **Aperte**: D43, nuova: quante monete del 372 hanno i PG, e se l'hoard di Regiarix ha conio elfico
+- **Decise**: D41, strada B (le reliquie del 372 date dal re il Giorno 21); D42, tutti e cinque i punti (profili delle città, casse, loxo, Cintura del monaco, Tempio di Rethmar); D43, in un secondo messaggio: le monete del 372 calcolate in proporzione (zero) e il conio elfico di Rhest (sì, 6.250 mo)
+- **Aperte**: nessuna. D43, aperta e chiusa lo stesso giorno: zero monete del 372 in proporzione, 6.250 mo di conio elfico nell'hoard di Regiarix
 - **Cambiate**: nessuna rispetto alle proposte
-- **Dedotto da me**: che con la B valga anche la parte della proposta sulle gemme a copertura della differenza, fino a 10.000 mo per PG, e la tacca nel legno del conto; che «D42 ok» copra tutti e cinque i punti; che le «monete antiche» siano tutte quelle che il gruppo può avere (Thorek I, le pre-imperiali di `DEF-1`, quelle di Rhest e di Talar, quelle del Collezionista) e non solo quelle del 372
+- **Dedotto da me**: che «calcola in proporzione» voglia dire pagare ogni conto con la borsa in proporzione a quello che c'era dentro, banco per banco, e che il risultato zero vada scritto anche se toglie la scena più forte (la scena resta per una moneta trovata dopo); che il prezzo da collezione valga per le prime dieci monete per collezionista, altrimenti 6.250 monete elfiche varrebbero 62.500 mo; che con la B valga anche la parte della proposta sulle gemme a copertura della differenza, fino a 10.000 mo per PG, e la tacca nel legno del conto; che «D42 ok» copra tutti e cinque i punti; che le «monete antiche» siano tutte quelle che il gruppo può avere (Thorek I, le pre-imperiali di `DEF-1`, quelle di Rhest e di Talar, quelle del Collezionista) e non solo quelle del 372
 
 ## 5 · Validazione
 

@@ -224,8 +224,10 @@ solo, il capo armaiolo.
 | **Come si vede** | gira la lama, guarda il segno sul tallone, e la mette da parte senza dire niente |
 | **Che via lascia** | riportarla alla famiglia del caduto. Chi lo fa trova l'atteggiamento dei nani della rocca un passo più in alto fino alla partenza, e il capo armaiolo lavora per lui per primo |
 
-**Le monete di Thorek I.** Se i PG hanno ancora monete del 372 (il resto della
-fucina, se il DM ne ha dato: D43), qui succede la cosa più grossa. Il tesoriere
+**Le monete di Thorek I.** In proporzione al conto della fucina i PG non ne hanno
+più nessuna (D43, il calcolo è nei banchi di ARC-09 §9). La scena resta per il
+giorno in cui ne trovano una, nella sala degli antenati o nelle mura che si
+riparano: qui succede la cosa più grossa. Il tesoriere
 le riconosce al primo conto, perché è la faccia del re fondatore scolpita sopra
 il trono, e vede che sono **nuove di conio**. Non le spende: le porta a Re
 Thorek.

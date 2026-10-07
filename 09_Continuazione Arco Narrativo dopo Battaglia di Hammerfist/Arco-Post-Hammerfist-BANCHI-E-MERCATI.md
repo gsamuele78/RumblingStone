@@ -935,9 +935,9 @@ mo l'una per un collezionista**, il doppio da Varis. Una moneta antica, quindi,
 
 | Moneta | Da dove | Com'è | Il problema |
 |---|---|---|---|
-| **Le monete di Thorek I** | il resto della fucina del 372, se il DM ne ha dato (il conto dice solo che il gruppo ha pagato un saldo) | oro nanico, la faccia del re fondatore col torque. **Nuove di conio**: mille anni in tasca, nessuno in mano | sono le più pericolose. Una moneta di mille anni fa che non ha mai girato è una cosa che non può esistere |
+| **Le monete di Thorek I** | il resto della fucina del 372: **nessuna**, calcolato in proporzione qui sotto (D43). Le regole servono se ne trovano altre | oro nanico, la faccia del re fondatore col torque. **Nuove di conio**: mille anni in tasca, nessuno in mano | sono le più pericolose. Una moneta di mille anni fa che non ha mai girato è una cosa che non può esistere |
 | **Le monete pre-imperiali** | `ARC07-DEF-1` §8, sotto l'altare di Terros: sette, di platino | consumate, verdi negli incavi | nessuno, salvo la curiosità: sono antiche e lo sembrano |
-| **Le monete elfiche di Rhest** | l'hoard di Regiarix (audit del tesoro §3.1: monete corrose e reliquie di Rhest sommersa); una parte è conio elfico `[INFERRED — needs DM confirmation]` | argento, la foglia di un albero che non cresce più nel vale | per un elfo sono corredo funebre |
+| **Le monete elfiche di Rhest** | l'hoard di Regiarix: **6.250 mo** delle sue 25.000 in monete sono conio elfico, in proporzione qui sotto `[CANONE — DM 2026-10-07, D43]` | oro pallido, la foglia di un albero che non cresce più nel vale | per un elfo sono corredo funebre |
 | **Le monete di Talar** | la cassa della quartiermastra (§4) | argento recente, una torre coniata | una città saccheggiata il Giorno 21: per i suoi profughi sono la prova di chi ha venduto chi |
 | **Le monete del Collezionista** | ogni affare con lui (§8) | moneta corrente, con un *marchio arcano* invisibile | non se ne accorge nessun mercante: se ne accorge la gilda, ogni volta che passano di mano |
 
@@ -960,10 +960,41 @@ mo l'una per un collezionista**, il doppio da Varis. Una moneta antica, quindi,
   di `DEF-1`: platino da 10 mo, 100 mo a un collezionista). Varis paga il doppio,
   come dice lo stesso canone; Sal venti volte (§8). Solo chi colleziona paga così:
   un bottegaio no.
+- **Il collezionista ne vuole poche.** Il prezzo da collezione vale per le
+  **prime dieci monete** di ogni tipo, per ogni collezionista. Le altre le
+  compra a peso, come chiunque: nessuno nel vale paga diecimila monete come
+  diecimila rarità.
 - **Fonderle.** Un fabbro le fonde in un lingotto per un'ora di lavoro. Il
   lingotto è merce di scambio e vale il suo peso **pieno** (SRD, le merci di
   scambio non si dimezzano), e non racconta niente a nessuno. Il valore da
   collezione è perso.
+
+### Quante ne hanno davvero `[CANONE — DM 2026-10-07, D43: «calcola in proporzione»]`
+
+**Le monete di Thorek I: zero.** Il conto della fucina (`ARC07-DEF-4`, «Il conto
+della fucina») si chiude così, banco per banco, e ogni pagamento si fa con la
+borsa in proporzione a quello che c'è dentro in quel momento:
+
+| Banco | I nani pagano ai PG | I PG pagano ai nani | Monete del 372 che restano |
+|---|---:|---:|---:|
+| Gunnvor | 12.050 mo in monete | 19.992 mo (l'ascia e lo scudo) | 0: si compensa, e i PG le devono 7.942 |
+| il forziere del re | 10.000 mo in monete | — | 10.000, per ora |
+| il pesatore | 6.314 mo in gemme | — | — |
+| Brynja, Kettra, Zeth | — | 27.975 mo | |
+| **La borsa al momento di pagare** | 10.000 in monete del 372 · 6.314 in gemme · 19.603 in monete del 1372 (il saldo del conto) = **35.917** | **35.917** fra Gunnvor e la cappella | |
+
+La borsa e i conti sono la stessa cifra, perché il saldo di 19.600 mo del conto è
+proprio la differenza fra quello che i PG hanno comprato e quello che hanno
+venduto. In proporzione ogni conto si paga col 27,8% di monete del 372, il 17,6%
+di gemme e il 54,6% di monete del 1372, e alla fine non resta niente. Le monete di
+Thorek I sono rimaste a Hammerfist, nelle mani di chi le aveva coniate, e la frase
+del conto (*«le monete del 372 no»*) torna vera anche così.
+
+**Le monete elfiche di Rhest: 6.250 mo.** L'hoard di Regiarix (audit del tesoro
+§3.1) ha 25.000 mo in monete, 20.000 in gemme e 15.000 in reliquie di Rhest
+sommersa: 60.000 mo di tesoro che non è magia. Le reliquie elfiche ne sono un
+quarto, e un quarto delle monete è conio elfico: **6.250 monete d'oro**, 125
+libbre. A peso valgono 6.250 mo. Da collezione, le prime dieci per collezionista.
 
 ### Luogo per luogo: chi se ne accorge, cosa sa, cosa succede
 

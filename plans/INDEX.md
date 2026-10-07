@@ -100,7 +100,7 @@
 - ▶ _(2026-10-01: **da qui riparte la chat editoriale.** Fatto: F2.10 di MISURA, PR #188. Da leggere prima: il piano per intero (il §3 conserva il materiale del DM e il template d'area verificato), `read-aloud-adulti.md` §2-bis, `module-standard` §7. Aspettano il DM: D1-D6. Senza decisioni si può fare B4, la riga degli oggetti)_
 
 ### PIANO-LETTORE-E-PLAYTESTER
-- ✅ _(2026-10-07, F3-quater: D41 (le reliquie del 372) e D42 decise e applicate; le monete antiche nei banchi §9, con chi se ne accorge e cosa succede; le locande di ARC-09 quartiere per quartiere. Aperta D43, le monete del 372 in tasca ai PG)_
+- ✅ _(2026-10-07, F3-quater: D41 (le reliquie del 372) e D42 decise e applicate; le monete antiche nei banchi §9, con chi se ne accorge e cosa succede; le locande di ARC-09 quartiere per quartiere. D43 chiusa lo stesso giorno: zero monete del 372 in proporzione al conto, 6.250 mo di conio elfico a Rhest)_
 - ✅ _(2026-10-07, F3-ter: i banchi di ARC-08 e ARC-09 scritti sulla norma del banco: Hammerfist 1372 chiuso durante l'assedio e socchiuso dopo, nove banchi nell'arco 09 con prezzi SRD, quantità, limiti e casse. Aperte D41 (le promesse di Hammerfist) e D42 (i numeri che nessun file dava))_
 - ▶ _(2026-09-30, notte: il giro delle quattro letture su DEF-4 e DEF-5, con la rubrica nuova del DM a freddo; la procedura scritta nel ciclo del master. Aperta D38)_
 - ▶ _(2026-09-30, sera: D9 chiusa, box spezzati; *silenzio* a 1 minuto per livello. Aperte D27, D35-D37)_
