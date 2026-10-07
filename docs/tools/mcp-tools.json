@@ -1997,6 +1997,29 @@
       "deterministic": true
     },
     {
+      "name": "avvia_languagetool",
+      "description": "«Voglio una verifica in più sulla grammatica di un master, senza mandare il testo a un servizio esterno: come avvio il server?»\n\nAvvia un server LanguageTool 6.8 locale (solo 127.0.0.1) per il secondo lettore di `ciclo_prosa.py segnala --languagetool`; scarica i jar da Maven Central in ~/.cache la prima volta.",
+      "use_case": "«Voglio una verifica in più sulla grammatica di un master, senza mandare il testo a un servizio esterno: come avvio il server?»",
+      "invocation": "./scripts/avvia_languagetool.sh [PORTA]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "PORTA": {
+            "type": "integer",
+            "description": "Porta locale del server (default 8081)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Java o Maven mancante"
+      },
+      "deterministic": true
+    },
+    {
       "name": "azzera_partita",
       "description": "«Un gruppo nuovo riparte da zero: cosa si azzera, cosa resta, e la sua CI e' verde?»\n\nAzzera la PARTITA per un gruppo nuovo (stato, storico, sessioni, recap) e lascia il prodotto; l'elenco e' dmcore/partita.py. Valida il nuovo state.yaml prima di scrivere e rigenera state.md (ADR-0050 §7).",
       "use_case": "«Un gruppo nuovo riparte da zero: cosa si azzera, cosa resta, e la sua CI e' verde?»",
@@ -2121,7 +2144,7 @@
           },
           "languagetool": {
             "type": "string",
-            "description": "URL di un server LanguageTool: aggiunge le segnalazioni grammaticali (facoltativo)."
+            "description": "Il secondo lettore (ADR-0079): URL di un server LanguageTool LOCALE, avviato da scripts/avvia_languagetool.sh. Tre regole, solo localhost, facoltativo e fuori dalla CI."
           },
           "auto": {
             "type": "boolean",

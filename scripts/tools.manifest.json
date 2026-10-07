@@ -3141,6 +3141,61 @@
       ]
     },
     {
+      "id": "avvia_languagetool",
+      "path": "scripts/avvia_languagetool.sh",
+      "category": "G-orchestration-governance",
+      "language": "bash",
+      "invocation": "./scripts/avvia_languagetool.sh [PORTA]",
+      "summary": "Avvia un server LanguageTool 6.8 locale (solo 127.0.0.1) per il secondo lettore di `ciclo_prosa.py segnala --languagetool`; scarica i jar da Maven Central in ~/.cache la prima volta.",
+      "use_case": "«Voglio una verifica in più sulla grammatica di un master, senza mandare il testo a un servizio esterno: come avvio il server?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "bash",
+        "java",
+        "mvn"
+      ],
+      "args": [
+        {
+          "name": "PORTA",
+          "type": "int",
+          "required": false,
+          "default": 8081,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Porta locale del server (default 8081)."
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Java o Maven mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Avvia un servizio; lo stesso testo dà gli stessi rilievi (misurato: due giri identici)."
+      },
+      "side_effects": {
+        "git_commit": false,
+        "network": true,
+        "writes_canon": false,
+        "notes": "Rete solo la prima volta (Maven Central); poi il server ascolta solo su 127.0.0.1."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [
+        "scripts/tests/test_ciclo_prosa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0079-un-secondo-rilevatore-per-la-prosa.md"
+      ],
+      "external_deps": []
+    },
+    {
       "id": "mcp_server",
       "path": "scripts/mcp_server.py",
       "category": "G-orchestration-governance",
@@ -8163,7 +8218,7 @@
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "URL di un server LanguageTool: aggiunge le segnalazioni grammaticali (facoltativo)."
+          "desc": "Il secondo lettore (ADR-0079): URL di un server LanguageTool LOCALE, avviato da scripts/avvia_languagetool.sh. Tre regole, solo localhost, facoltativo e fuori dalla CI."
         },
         {
           "name": "--auto",

@@ -322,6 +322,17 @@ class TestFoglioDiStile(unittest.TestCase):
         self.assertEqual(occorrenze_forma("Hellas entra.", "Hellas", "Hella"), [1])
         self.assertEqual(occorrenze_forma("Hella entra.", "Hellas", "Hella"), [])
 
+    def test_la_barra_in_prosa_non_nasconde_la_grafia(self):
+        # ADR-0079: un secondo parere (Vale) trovo «Hellas/druidi» e «Witchwood/Hellas»,
+        # che il confine di parola scambiava per percorsi.
+        self.assertTrue(self._grafie("Rituali di Hellas/druidi orsi."))
+        self.assertTrue(self._grafie("Area Witchwood/Hellas, alleato."))
+        self.assertEqual(self._grafie("cartella/Hellas/sotto resta un percorso."), [])
+
+    def test_una_freccia_lontana_non_spiega_il_cambio(self):
+        self.assertTrue(self._grafie("**Hellas:** Round 40, se riesce → COMPLETE!"))
+        self.assertEqual(self._grafie("Hellas → il nome corretto sta nel glossario."), [])
+
     def test_un_altro_png_non_e_un_refuso(self):
         # Garruk e Karruk sono due PNG: e' il falso positivo che ha fatto
         # scrivere gli omonimi voluti.
