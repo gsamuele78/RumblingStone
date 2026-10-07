@@ -17,11 +17,11 @@ jobs:
     # la prova, non perche' e' cambiata l'etichetta (PRATICHE PI-3).
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0   # serve al gate di tracciatura (diff vs base ref)
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -178,6 +178,12 @@ jobs:
       - name: Prosa — traduttese e tic dell'IA (non bloccante)
         continue-on-error: true
         run: python scripts/validate_prosa.py
+
+      # BLOCCANTE, soglia zero: il foglio di stile (glossario §8, ADR-0078).
+      # Una grafia gia' decisa non torna a scriversi nell'altro modo. Le scelte
+      # del DM ancora in sospeso (`DM?`) si contano ma non bloccano.
+      - name: Prosa — foglio di stile, zero refusi aperti
+        run: python scripts/validate_prosa.py --foglio --strict
 
       # 🔴 BLOCCANTE, e la ragione sta in ADR-0056: una norma editoriale che
       # nessuno misura non fa rumore quando viene ignorata. «read-aloud-adulti»
@@ -402,9 +408,9 @@ jobs:
     runs-on: ubuntu-24.04
     needs: validate
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -415,7 +421,7 @@ jobs:
         run: ./scripts/build-skills.sh --no-deploy
 
       - name: Upload packages artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: skill-packages
           path: build/

@@ -21,7 +21,7 @@
 > diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
 > e non si aggiornano più.
 
-**Ultimo aggiornamento**: 2026-10-07: DEF-4 chiuso nel canone, e il lotto mappe D28 come prossimo lavoro. Prima: 2026-10-02, sera, dopo il merge della #205 (`cf527ad`). Ricontrollati commit, PR e rami contro questa lista: la fotografia con i numeri di oggi, quello che mancava e quello che è superato è il §15. Prima: 2026-10-02, dopo il merge della #200 (`5f3cb520`), che ha portato su `main` anche #186-#199, #187 e #188: le sole PR aperte sono #99 e #106, e il da fare è in §14.4-bis. Prima: 2026-09-30 notte, il giro delle quattro letture su DEF-4 e DEF-5 (riga ▶ qui sotto). Prima: 2026-09-30, dopo il merge della #182 (`c80af16`), della #183 (`ac97197`) e della #184. **La fotografia della tornata, con i numeri, i piani aperti e le decisioni per piano, è il §14.** DEF-4 pronto per la prossima serata, ARC-07 al ciclo del master con DEF-5 ai passi 1-6, e la prova cieca di `P-ABITATO` riuscita. Le righe marcate *(PR #183)* e *(30 settembre)* qui sotto dicono cosa è fatto e cosa resta; il dettaglio è in [LETTORE-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis e F4. Prima: il 2026-09-25, dopo il merge delle #170-#174 (`eef36a9`) e della #176, e i lotti 2f e 2g di CICLO-SESSIONE. Cosa ha chiuso la #169 e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
+**Ultimo aggiornamento**: 2026-10-07, notte: DEF-4 chiuso nel canone con la #222, i due booklet completi, e il lotto mappe D28 come prossimo lavoro. Prima: 2026-10-07, sera: completata e chiusa la #206 (§15), fuse le PR di Dependabot. Prima: 2026-10-07, con la #218 (i banchi, le monete antiche e le locande di ARC-08 e ARC-09; D41-D43 decise). Il controllo contro le PR ha trovato **una PR mergiata che l'archivio non conosceva**: la #217 (`7343093`, 2026-10-06), il conto della fucina di `ARC07-DEF-4` giocato al tavolo, ora nel CHANGELOG e qui sotto. Le PR aperte rimisurate sono in §3, «Le PR ancora aperte, oggi». Prima: 2026-10-03, dopo il merge della #215 (la tavola di fuori nel Drappo, ADR-0080). Il CHANGELOG del 2026-10-03 porta anche #213 e #214 (le quattro scelte del DM sul foglio di stile; la coda del secondo lettore), che questa fotografia non aveva ancora: la loro coda sta in [PIANO-CODA-DEL-SECONDO-LETTORE](PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md). Il da fare in ordine per ripartire è in §14.4-ter. Prima: 2026-10-02, dopo il merge della #200 (`5f3cb520`), che ha portato su `main` anche #186-#199, #187 e #188: le sole PR aperte sono #99 e #106, e il da fare è in §14.4-bis. Prima: 2026-09-30 notte, il giro delle quattro letture su DEF-4 e DEF-5 (riga ▶ qui sotto). Prima: 2026-09-30, dopo il merge della #182 (`c80af16`), della #183 (`ac97197`) e della #184. **La fotografia della tornata, con i numeri, i piani aperti e le decisioni per piano, è il §14.** DEF-4 pronto per la prossima serata, ARC-07 al ciclo del master con DEF-5 ai passi 1-6, e la prova cieca di `P-ABITATO` riuscita. Le righe marcate *(PR #183)* e *(30 settembre)* qui sotto dicono cosa è fatto e cosa resta; il dettaglio è in [LETTORE-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis e F4. Prima: il 2026-09-25, dopo il merge delle #170-#174 (`eef36a9`) e della #176, e i lotti 2f e 2g di CICLO-SESSIONE. Cosa ha chiuso la #169 e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
 
 | | Cosa | Classe | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|---|---|
@@ -37,10 +37,15 @@
 | ✅ | **Le tabelle che in colonna vanno a capo in ogni cella scavalcano le due colonne**, misurate dal tema; marcatore `<!-- tabella: larga -->` / `colonna` per l'autore; i PDF della #169 rifatti con tutte le regole nuove | C + G3 | §13 · `rumblingstone-editoria` §2 e §4.7 | fatto: nei volumi della #169 100 tabelle su 125 erano alte il doppio in colonna; ora 330 tabelle larghe su tutti i volumi, 60% nella stessa pagina |
 | ✅ | **Le `[PROPOSTA]` e gli `[INFERRED]` di ARC-07 chiusi**: il DM ha deciso il 2026-09-25, tutto canone; l'equipaggiamento di Hella è quello della sua scheda | K | §12.1 | fatto: 32 marcature dei sorgenti chiuse, 5 restano (tre descrivono una convenzione, due sono i tratti del volto nei prompt) |
 | ✅ | **Il giro di merge del 2026-10-02**: la serie AGENT-SKILLS (#186, #189-#199), #187, #188 e la #200 su `main`; restano aperte solo #99 e #106 | C | §14.4-bis · #200 | fatto: il da fare in ordine è in §14.4-bis, a partire dal lotto D13 da approvare |
-| ✅ | **La configurazione degli agenti** *(2026-10-02)*: `.claudeignore` e `.serena/project.yml` con i server Python, Bash e Markdown (#201, #202); Serena acceso all'avvio in OpenCode e `test_genera_creatura` senza l'usage di argparse nell'output (#203); `.mcp.json` collega `scripts/mcp_server.py` in sola lettura, plugin e skill generiche caricati su richiesta, `AGENTS.md` dice quali MCP sono spenti (#205) | C | CHANGELOG 2026-10-02 · `AGENTS.md` «Strumenti esterni» | fatto. Due tool del server (`campaign_branch`, `dm`) non si caricano: il loro sottocomando ha nome `status\|guard\|ensure` e `prep\|post\|…` in `scripts/tools.manifest.json`, e `mcp_server.py` lo passa come nome di proprietà, che l'API rifiuta (§15.4) |
-| 🙋 | **Al DM: il lotto D13 e la D17 di AGENT-SKILLS** *(2026-10-02)*: undici documenti di revisione, 23 modifiche applicabili con `ciclo_prosa.py applica --auto` e quattro da guardare; la D17 decide se i cinque box con «sembra» seguito dalla smentita restano | G | `plans/scrittura/revisioni-D13/LEGGIMI.md` · §14.4-bis | DM: approvare il lotto, rispondere alla D17; agente: `applica` e rimisura. Oggi niente è applicato |
-| 🙋 | **Al DM: quattro incoerenze di canone** trovate dalle corse di L11 e L12: il carry-over su Fauci nell'handout di DEF-5 §9, le pozioni antiche fra DEF-4 §6 e DEF-5 §0-bis, il «−2 COS» di Thorik in `ARC08-11` contro `state.md`, le tre descrizioni del Rubino | K | `plans/scrittura/RISULTATI.md` «Cosa hanno trovato le corse» | DM: quale versione vince, una riga per incoerenza |
-| 🙋 | **Al DM: le D1-D6 di BOX-DI-LUOGO** (il tetto del box di luogo, le dimensioni nella prima frase, il tipo del box, i box già giocati, l'Abbazia *keyed*, il template d'area) | G | [BOX-DI-LUOGO](PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE.md) | DM; poi la chat editoriale di quel piano, da B1 |
+| ✅ | **Il conto della fucina di DEF-4, come l'ha giocato il tavolo** *(PR #217, mergiata il 2026-10-06 senza riga nell'archivio, aggiunta il 2026-10-07)*: venduto, comprato, il saldo di circa 19.600 mo, le richieste rimaste aperte, l'eco delle reliquie nella Scena 5 | K | `ARC07-DEF-4` Scena 5 · CHANGELOG 2026-10-06 | fatto |
+| ✅ | **La configurazione degli agenti** *(2026-10-02)*: `.claudeignore` e `.serena/project.yml` (#201, #202); Serena all'avvio in OpenCode e `test_genera_creatura` pulito (#203); `.mcp.json` collega `scripts/mcp_server.py` in sola lettura, plugin e skill generiche su richiesta (#205). **I due tool che il server scartava** (`campaign_branch`, `dm`: la chiave del sottocomando era «status\|guard\|ensure») si chiamano ora «comando»: 89 su 89 costruiscono la riga, e un test lo tiene (2026-10-07) | C | CHANGELOG 2026-10-02 e 2026-10-07 · `scripts/tools_manifest.py` `mcp_key` | fatto |
+| 🙋 | **Al DM: il lotto D13 e la D17 di AGENT-SKILLS** *(dalla #206)*: undici documenti di revisione, 23 modifiche applicabili con `ciclo_prosa.py applica --auto` e quattro da guardare; la D17 decide se i box con «sembra» seguito dalla smentita restano | G | `plans/scrittura/revisioni-D13/LEGGIMI.md` · §14.4-bis | DM: approvare il lotto, rispondere alla D17; agente: `applica` e rimisura |
+| 🙋 | **Al DM: quattro incoerenze di canone** trovate dalle corse di L11 e L12 *(dalla #206)*: il carry-over su Fauci nell'handout di DEF-5 §9, le pozioni antiche fra DEF-4 §6 e DEF-5 §0-bis, il «−2 COS» di Thorik in `ARC08-11` contro `state.md`, le tre descrizioni del Rubino | K | `plans/scrittura/RISULTATI.md` «Cosa hanno trovato le corse» | DM: quale versione vince, una riga per incoerenza |
+| 🙋 | **Al DM: le D1-D6 di BOX-DI-LUOGO** *(dalla #206)*: il tetto del box di luogo, le dimensioni nella prima frase, il tipo del box, i box già giocati, l'Abbazia *keyed*, il template d'area | G | [BOX-DI-LUOGO](PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE.md) | DM; poi la chat editoriale di quel piano, da B1 |
+| ✅ | **Il registro dei rami potato e completo** *(2026-10-07)*: le dieci voci scadute tolte (otto le contava la #206, più due); la #216 registrata come «in volo»; `contenuti_nei_rami --check` verde e senza avvisi, 42 file tutti col loro posto | M | §15.2 · `plans/contenuti-nei-rami.json` | fatto |
+| ✅ | **I banchi di ARC-08 e ARC-09** *(PR #218)*: Hammerfist 1372 chiuso durante l'assedio e socchiuso dopo; nove banchi nell'arco 09 con prezzi SRD, quantità, limiti e casse; oggetti maledetti alla Torre e ai campi drow; le monete antiche (§9 dei banchi); le locande quartiere per quartiere. D41 (le reliquie del 372), D42 e D43 decise il 2026-10-07 | C + K | LETTORE F3-ter, F3-quater · `ARC08-17` · `Arco-Post-Hammerfist-BANCHI-E-MERCATI.md` · `Arco-Post-Hammerfist-LOCANDE.md` | fatto. Restano le letture a freddo (`P-ABITATO`) quando i banchi entrano nei master di MASTER-DEF |
+| ✅ | **Drappo L9: la tavola di fuori** (`02-GIORNO-2` §2-bis) e [ADR-0080](adr/ADR-0080-le-fonti-di-pubblico-dominio-entrano-come-logica.md): un innesto da una fonte di pubblico dominio, come logica e mai come personaggi. D1-D4 decise il 2026-10-03; nessun altro innesto (Torre Invisibile e Strappo fra le Ere esclusi) | G | [DRAPPO](PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 · #215 | fatto lo scritto; il collaudo è la riga sotto |
+| ⬜ | **Drappo L9, il collaudo**: lettore e playtester a freddo sul §2-bis (passo 6 di ADR-0075, rubrica di LETTORE F5), dry-run cronometrato (sta in cinque minuti per taglio?), booklet `DRAPPO-BOOKLET-DM` da rigenerare con `validate_booklets`, poi il tavolo. La scena resta **alfa** | G | DRAPPO Lotto 9 | agente: due agenti che non vedono il piano; poi il DM al tavolo |
 | ✅ | **DEF-4 chiuso nel canone** *(2026-10-07)*: 51 marcature `[INFERRED]` a zero con le risposte del DM (Q1-Q50, D27, D39, D40); nel 372 l'orda è di Zog'tar, non la Mano Rossa; Skullcrusher e Zog'tar Avanzati PF1e senza alzare il GS; le Cronache «quando l'orda calò»; il giro 2 delle quattro letture (il playtester a zero 🔴); Zog'tar Barbaro 14 con mithral e Colpo Devastante, la tenda alta 6 m, chi vola, il drago che arriva al corno, *comando* «Cadi»; **i due booklet completi** (volume del DM 59 pagine, fascicolo dei giocatori 19) in HTML, Homebrewery, PDF da stampa e libretto, con typst 0.15.1 e pdfcpu 0.11.0 installati in locale | K | [LETTORE-E-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-ter · `esperimenti/def4-giro2/` | fatto: restano le mappe qui sotto e il giro 3 |
 | ▶ | **Subito, in una sessione nuova: il lotto mappe D28 di Hammerfist, 372 e 1372** *(ordine del DM, 2026-10-07; DEF-4 è su `main` con la #222)*. M7-C deve mostrare anche il palo centrale (6 m) e i lati (3 m). M7-A senza un orientamento coerente (postierla a nord, campo a sud, bosco a est); nel cortile M7-B mancano gru, fucina, cisterna e campane; la tenda M7-C senza le posizioni; mancano la sezione a livelli di Hammerfist e le griglie di fucina, gallerie, cappella, alchimista e armeria. Ogni mappa in due stati, **372 e 1372**: nel 1372 le stesse sale sono il campo di battaglia dell'invasione, per la **ritirata** dei difensori verso il Cuore della Montagna e per la **riconquista** quando arrivano i Rumbling Stones (`DEF-5`, ARC-08). Non è un piano nuovo (§0 lo vieta per le mappe): è il lotto D28 di LETTORE-E-PLAYTESTER | C | [LETTORE-E-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis, D28 · `rumblingstone-mapmaking` | agente, sessione nuova: si parte da `Mappe/ARC07-MAPPE-DEFINITIVO.md` (M7-A, M7-B), `Mappe/ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` e la MAPPA 5 dell'Atlante di Hammerfist (CM-1). Poi il giro 3 delle letture su DEF-4, **un subagente alla volta**, e solo dopo DEF-5 |
 | ▶ | **Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi**, un lotto alla volta: 568 in tutto il repo, circa 400 nel contenuto | K | §12.1 | agente: il prossimo lotto è ARC-08 (32), poi ARC-09 (53), `campaign/` (50), `PG/` (22), il Bestiario (212) per ultimo perché è il più grande |
@@ -70,15 +75,14 @@
 | ▶ | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | M + G3 | §8.3 | agente: una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
 | ⬜ | **Le 120 legature della Corona** (`aﬀresco`) | M | §10.1 | agente: prima si conta in tutto il repo, poi si decide se è un lotto o uno per file; qualità: nessuna legatura, nessun'altra riga cambiata |
 | ⬜ | **Due residui editoriali minori**: l'ultima riga dell'indice delle 48 aree dell'Abbazia cade sola a pagina 35; il Palio stampa «Naviga i capitoli qui sopra», che è una frase della catena HTML | M | §11.3 | agente: il primo si prova con una soglia di righe per pagina, il secondo va tolto dall'introduzione del manifest solo nella stampa |
-| ⬜ | **`fase1.py` in un clone shallow** dice «65 file senza posto» nei rami, e sono falsi: con la storia intera `contenuti_nei_rami --check` è verde (50 file, tutti col loro posto) | C | §11.4 | agente: riconoscere il clone shallow e dirlo, come fa già `contenuti_nei_rami.py` quando non ha niente da misurare |
-| ⬜ | **Otto voci del registro dei rami senza più un ramo**: `contenuti_nei_rami --check` è verde ma avvisa per otto file (cinque ADR dei rami, da ADR-0014 a ADR-0018; `PIANO-PRODOTTO-TOOLKIT-VENDIBILE` e `PIANO-EDIZIONE-COMMERCIALE-AP-ORIGINALE`; il soggetto della discesa). Sono tutti già «portato», «rifiutato» o «superato», e il ramo che li conteneva non c'è più | M | `plans/contenuti-nei-rami.json` · §15.2 | agente: togliere le otto voci o segnarle come archivio, poi `--check` senza avvisi |
-| 🟡 | **PI-3, il resto**: la prova del blocco dei segreti (DM), la revisione con l'IA; le azioni della CI su Node.js 20. Dependabot ha aperto le sue prime sei PR il 2026-09-24, ma su `upstream` (EarlRagnar78/RumblingStone #19-#24) e non su `origin`: tre portano `checkout`, `setup-python` e `upload-artifact` alla v7, cioè la riga di Node.js 20 | | PRATICHE PI-3 · §15.2 | agente: gli stessi aggiornamenti in una PR su `origin`, con la CI verde; DM: chiudere le sei su `upstream` |
+| ✅ | **`fase1.py` e `contenuti_nei_rami` in un clone shallow** non misurano più: lo dicono, e chiedono `git fetch --unshallow`. Il 2026-10-07, shallow, davano 61 file e decine «senza posto»; con la storia intera erano 42 | C | §11.4 · §15.2 | fatto, con il suo test |
+| 🟡 | **PI-3, il resto**: la prova del blocco dei segreti (DM), la revisione con l'IA. Le PR di Dependabot su `origin` (#207-#212, dal 2026-10-02) si fondono una alla volta il 2026-10-07, e con le tre azioni alla v7 si chiude anche la riga di Node.js 20 (§15.3) | | PRATICHE PI-3 · §15.3 | DM: la prova del segreto |
 | 🟡 | **PI-1 · 4i-3**: la prova della prima PR indietro rispetto a `main` | | RIPRESA-PR §4.11.6 | la prima PR che resta indietro |
 | ⬜ | **PI-6**, **PI-2**, **PI-5**, **PI-4** (dopo CICLO D6) | | PRATICHE §5 e §8 | in quest'ordine, una PR ciascuno |
 | ⬜ | **Ciclo di sessione e menu**: Fase 0, poi F1-F4. **D1-D6 decise il 2026-09-30**: la cronaca si aggiorna da sola, le alleanze sono un dato, la prosa la scrive l'agente con le skill, menu numerato, le immagini si elencano con le descrizioni (o Canva), BDD senza framework | | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | agente: la Fase 0 |
 | ⬜ | **RIPRESA-PR 4g e 4h**; PR aperte #99 e #106 | | RIPRESA-PR | `python3 scripts/contenuti_nei_rami.py --fetch` |
 | ⬜ | **🧲 e 🤖**, e la nota locale di una mappa che non arriva nella legenda | | [RENDER-MAPPE-FEDELTA](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md) §1 · §9.3 | prima si legge che cosa vuol dire il simbolo in ogni mappa che lo usa |
-| ✅ | **I nove rami fusi o portati, cancellati** dal DM il 2026-10-02: i sei di §9.2 più tre fusi o con ogni patch su `main`. Prima della cancellazione, un tag per ramo su `origin` (`archivio/2026-10-02/<ramo>`) e un bundle verificato in `~/rumblingstone-backup-rami/`, con `ripristina.sh` | | §15.5 | fatto: su `origin` restano dieci rami oltre a `main`; `contenuti_nei_rami --check` verde, da 26 a 18 riferimenti |
+| ✅ | **I nove rami fusi o portati, cancellati** dal DM il 2026-10-02: i sei di §9.2 più tre fusi o con ogni patch su `main`, con un tag per ramo su `origin` (`archivio/2026-10-02/<ramo>`) e un bundle verificato con `ripristina.sh` *(dalla #206, portata il 2026-10-07)* | | §15 · CHANGELOG 2026-10-02 | fatto: su `origin` restano i rami di §15.2 |
 | ✅ | **I master DEF di ARC-08 e ARC-09, le decisioni e la divisione**: D1-D3 decise, 4 master per ARC-08 e 12 per ARC-09 approvati (A1), misure di partenza (A2). *(2026-09-27)* | G + R | [MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A1-A2 · PR #182 | fatto |
 | ✅ | **Il ciclo del master vale per ogni piano** ([ADR-0075](adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md)): sette passi in `module-standard`, e ogni piano che riscrive contenuto li cita. *(2026-09-27)* | G3 | MASTER-DEF §1-bis · PR #182 | fatto |
 | ▶ | **DEF-1, 2, 3 nella forma del ciclo** *(30 settembre, sera)*: passi 1-4 fatti (scene, contratto, schede, apparati), box letti al tavolo invariati. Letture cieche: DEF-1 lettore 🔴 2, DEF-2 🔴 2 + 2, DEF-3 🔴 1 + 2, DEF-1 playtester 🔴 1; corretti quelli che il testo risolve, le due risposte nuove di DEF-2 sono canone (DM, 30 settembre), gli altri sono D34-D37 | K / C | LETTORE F4 · `esperimenti/f4-def1-def3/` | DM: D35 (il rito che va male), D36 (sei rilievi di regole), D37 (la Sentinella); D34 e D9 sono decise. Poi agente: applica e rilegge |
@@ -90,7 +94,7 @@
 | ✅ | **Niente riposi brevi e lunghi** in 3.5 e PF1e *(PR #183)*: sei righe corrette in DEF-1, 2, 4; il controllo `RIPOSO_5E` in `validate_modules` e `validate_standalone`; la tabella del riposo SRD in `dnd-35-srd` | C + G3 | LETTORE F3-bis | fatto |
 | ✅ | **Il banco** *(PR #183)*: la norma `module-standard/references/il-banco.md` (cosa vende e quante, servizi, identificare, tetti, la spezia facoltativa); `copertura_scene` C6 e C7; `P-ABITATO`; §2-bis del kit anti-improvvisazione. Registro delle norme a 68 | C + G3 | LETTORE F3-bis | fatto |
 | ✅ | **Le decisioni di DEF-4** *(30 settembre, sera)*: D12 (la pietra di *silenzio*: Brynja resta di 9°, la pietra è all'8°, 8 minuti), D14-D17, D19, D21, D23, D25, D29, D30, e D7 (Balvar runaio di altre fortezze, venuto a Hammerfist per la sua abilità). Applicate a DEF-4 e DEF-5 | K | LETTORE «Decisioni aperte» · PR #185 | fatto |
-| 🙋 | **Al DM: le marcature `[INFERRED]` di DEF-4 e DEF-5**: erano 44 in DEF-4 il 30 settembre, il 2026-10-02 sono 51 in DEF-4 e 12 in DEF-5 (`grep -c INFERRED`), fra cui il livello e il prezzo delle rune di Zeth, il +15 di Kettra, i tetti del forziere e delle gemme, le ore di sonno di Grask, le gru delle mura, i talenti e gli incantesimi di Skullcrusher | K | `ARC07-DEF-4` (cercare `INFERRED`) | DM: confermare in blocco o correggere; l'agente toglie la marcatura |
+| 🙋 | **Al DM: le marcature `[INFERRED]` di DEF-4 e DEF-5**: erano 44 in DEF-4 il 30 settembre, il 2026-10-07 sono 51 in DEF-4 e 12 in DEF-5 (`grep -c INFERRED`), fra cui il livello e il prezzo delle rune di Zeth, il +15 di Kettra, i tetti del forziere e delle gemme, le ore di sonno di Grask, le gru delle mura, i talenti e gli incantesimi di Skullcrusher | K | `ARC07-DEF-4` (cercare `INFERRED`) | DM: confermare in blocco o correggere; l'agente toglie la marcatura |
 | 🙋 | **D27** *(30 settembre, sera)*: il messaggio del DM del 2026-09-27 si interrompe a «considera che i…». La D26 è fatta: il registro delle letture a freddo è `registro_letture.py`, in CI, lotto L4 di AGENT-SKILLS (#193) | G | §4 | DM: D27 |
 | ⬜ | **Il lotto mappe D28**: sezione a livelli di Hammerfist nel 372 (più si scende, più le sale sono ampie, come Erebor) e griglie da 1,5 m di fucina, gallerie, alchimista, cappella e armeria, coerenti con le Scene 4-5 già giocate, con le varianti del 1372 | C | LETTORE F3-bis | agente con `rumblingstone-mapmaking`; prima `fase1.py` sulle mappe M7 di ARC-07 |
 | ✅ | **La quarta lettura cieca di DEF-4** *(30 settembre)*: lettore 45 rilievi (🔴 1, nuovo: la profezia, D33), playtester 29 (🔴 0). Sei 🟠 corretti subito, tre dei quali lasciati dalla D6 | C | LETTORE F3-bis · `esperimenti/def4-seconda-serata/lettura-quarta-*` | fatto |
@@ -228,7 +232,7 @@ sono lo standard.
 
 ### Le PR ancora aperte, oggi
 
-*Rimisurato il 2026-09-24 sull'elenco delle PR aperte del repo. La tabella di
+*Rimisurato il 2026-10-07 (prima il 2026-09-24) sull'elenco delle PR aperte del repo. La tabella di
 prima era ferma al 2026-09-04: dava aperte #63, #52 e #67, chiuse l'11
 settembre, e non conosceva la #143.*
 
@@ -238,6 +242,9 @@ settembre, e non conosceva la #143.*
 | **#160** | lotti 4e, 4f, 4i di RIPRESA-PR, CICLO-SESSIONE, RICERCA-BDD, PRATICHE | CHANGELOG del 2026-09-24 | ✅ **mergiata il 2026-09-24**. Cosa ha lasciato aperto: §7 |
 | **#106** | abbandonata, **non** superata | ① F3 · 3d | resta aperta finché il DM non ha fatto il collaudo SDXL (D2): serve la sua GPU |
 | **#99** | abbandonata, **non** superata | ① F4 · 4f, 4g, 4h | si svuota: restano tre lotti, e 4h vuole una PR sua |
+| **#216** | bozza aperta dal 2026-10-03: la revisione della prosa misurata (D13, D17, D38, D39, la Torre). Fino al 2026-10-07 **non stava in nessun piano** né in questa tabella | da leggere: il suo corpo nomina i piani che tocca | va riletta contro `main` prima di qualunque merge; il DM decide se riprenderla |
+| **#206** | lo STATO dopo la #205 | §15 | ✅ **chiusa il 2026-10-07**: il contenuto che valeva ancora è portato su `main` con la PR di §15 (righe di §0, CHANGELOG del 2026-10-02), e le due voci aperte che conteneva sono fatte |
+| **#207-#212** | Dependabot dal 2026-10-02: tre azioni della CI (checkout, setup-python, upload-artifact a 7) e tre requisiti pip (pillow, pip-audit, tiktoken) | PRATICHE PI-3 · §15.3 | ✅ **fuse il 2026-10-07**, una alla volta, ognuna con la sua riga nel CHANGELOG |
 
 ⚠️ **Nessuna delle due si mergia com'è.** Hanno una base di agosto: se ne porta
 il **contenuto**, non i commit, come si è fatto con la #143.
@@ -308,7 +315,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**17 aperte** · 127 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**17 aperte** · 137 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -352,6 +359,10 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D5~~ | `CICLO-SESSIONE` | F2 · 2c | ✅ **Decisa il 2026-09-30**: la preparazione elenca le immagini mancanti con la descrizione da dare a un generatore, oppure le fa con Canva come per la serata precedente. Era: **Le immagini mancanti si generano durante la preparazione?** Serve ComfyUI sulla macchina del DM e minuti per immagine. Proposta: la preparazione le **elenca** e lancia `comfyui_batch` solo se il DM lo chiede |
 | ~~D7~~ | `CICLO-SESSIONE` | F2 · 2f | ✅ **Decisa dal DM il 2026-09-25: sì**, in `requirements-dev.txt`; lotto 2g. **PyMuPDF in CI?** `validate_corredo --stampa` conta righe sovrapposte e testo sul bordo leggendo il PDF con PyMuPDF, che è AGPL e oggi non è fra le dipendenze (`rumblingstone-editoria` §4). In CI la misura quindi si dichiara saltata, e il PDF difettoso lo trova solo chi esegue il controllo in locale. (a) ammetterla in `requirements-dev.txt`, come pytest: è uno strumento di verifica e non esce dal repo; (b) tenerla fuori, come oggi. Proposta: (a), dopo aver riletto la licenza con `rumblingstone-edizione` |
 | ~~D6~~ | `CICLO-SESSIONE` | F0 · 0c | ✅ **Decisa il 2026-09-30**: (a): la pratica senza framework. Era: **BDD con un framework, o solo la sua pratica?** Misurato in [RICERCA-BDD-O-TDD-2026-09](RICERCA-BDD-O-TDD-2026-09.md): `behave` trova gli stessi 16 difetti su 16 del TDD, con +42% di righe, +45% di tempo e 3 MB di dipendenze contro ADR-0037; in cambio il `.feature` si legge senza aprire Python. (a) la pratica senza framework: scenari con identificatore in §4, test che li citano, un gate stdlib che li tiene allineati; (b) `pytest-bdd` con un'eccezione ad ADR-0037; (c) niente, come oggi. Proposta: (a) |
+| ~~D1~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«approvo con tutte le premesse e verifiche che vuoi fare»*): l'innesto nel Drappo parte, con la forma proposta |
+| ~~D2~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«D2 ok»*): le tre correzioni restano. Era: **Confermi le tre correzioni?** Dedotto da me: la scena sta ai Partiti e non alla Cena; l'enigma senza risposta è tolto; le rose dipinte sono tolte. Sono scelte mie, e il DM approvando non le aveva viste |
+| ~~D3~~ | `DRAPPO-TAVOLA` | L9 | ✅ **Decisa il 2026-10-03** (il DM: *«d3 ok»*): il foglietto letto a tutti resta nella scena. Era: **Il foglietto letto a tutti è una regola che vuoi?** Dà ai cinque fuori un modo di pesare sulla trattativa di Vanna, ed è l'unica cosa della scena che tocca i Partiti. Alternativa: tavola senza porta |
+| ~~D4~~ | `DRAPPO-TAVOLA` | futuro | ✅ **Decisa il 2026-10-03** (il DM: *«d4 non adottarlo»*): le altre due proposte **non si adottano**, e il Drappo resta l'unico innesto. Era: **Le altre due proposte della valutazione** (la Torre Invisibile in ARC-09, liv. 2-3; lo Strappo fra le Ere come appendice opzionale di DEF-5) restano non decise. Vanno decise prima di toccare altri file |
 | ~~D1~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: la chiave del quiz di DEF-4 è approvata |
 | ~~D2~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: alla q8 valgono tutti e due i desideri di Balvar (Hammerfist che cade in fretta, e qualcuno che dica che c'era) |
 | ~~D3~~ | `LETTORE-PLAYTESTER` | F7 | ✅ **Decisa il 2026-09-27**: il riquadro *La serata in tre frasi* entra in testa a DEF-4 |
@@ -385,6 +396,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D32~~ | `LETTORE-PLAYTESTER` | F4 | ✅ **Decisa il 2026-09-30**: sì: il Cuore di Moradin fa parte della Forgia e non entra nella meccanica del ritorno; l'ancora è la Forgia. Era: **Il Cuore di Moradin è speso o fa da ancora?** DEF-5 lo dà SPESO per la resurrezione di Hella, e nello stesso §3 lo fa agganciare gli spiriti dei PG «nella Forgia del 1372». Proposta: l'ancora è la **Forgia** (il luogo), non l'artefatto speso; si toglie il Cuore dalla meccanica del ritorno |
 | ~~D33~~ | `LETTORE-PLAYTESTER` | F3-bis | ✅ **Decisa il 2026-09-30**: sì: la targa dice «quattro eroi dal fuoco e dalla pietra» in tutti e tre i punti; le Cronache dicono «quattro eroi» senza «dal futuro», e il «dal futuro» lo capisce il tavolo. Era: **La profezia: le Cronache in mano ai giocatori dicono già «eroi dal futuro»** (🔴 della quarta lettura di DEF-4). Il nodo della targa vieta di dire che la profezia parla di loro, la porta *Sapere* dice che è stata cancellata dalle cronache del 1372, e il testo della targa ha tre versioni («dal futuro», «dal fuoco e dalla pietra», e quella lunga del re). Proposta: la targa dice **«quattro eroi dal fuoco e dalla pietra»** in tutti e tre i punti; le Cronache che i giocatori hanno parlano di «quattro eroi» senza «dal futuro», e il «dal futuro» lo capisce il tavolo |
 | ~~D34~~ | `LETTORE-PLAYTESTER` | F4 | ✅ **Decisa il 2026-09-30**: Tordek salta da un detrito sopra l'oceano, a metà strada; il Tempio è a 40 m; la strada si crea suonando il Diapason e tenendo la musica, con prove che sollevano blocchi dall'oceano. Quante prove e cosa costa un fallimento restano `[INFERRED]` nel master. Era: **DEF-1 Scena 6: da dove parte il salto verso il Tempio, e quanto è lontano?** (🔴 del lettore a freddo). Il modulo dice il portale a 50 m sopra l'oceano e i detriti fluttuanti, ma non la distanza dalla riva né da dove salta Tordek; la mappa T-4 lo fa partire dal pelo dell'oceano. Proposta: una catena di detriti parte dalla riva e sale fino al portale; ogni balzo è Saltare CD 25 (circa 7,5 m in 3.5), a ~20 m dal portale la gravità del Tempio cattura chi salta; il Tempio ruota sopra l'oceano a circa 40 m dalla riva, cioè sei-sette balzi |
+| ~~D41~~ | `LETTORE-PLAYTESTER` | F3-ter | ✅ **Decisa il 2026-10-07**: strada **B**. Il re dà il Giorno 21 le reliquie vendute a Gunnvor nel 372 e copre la differenza in gemme, fino a 10.000 mo per PG; vale anche la tacca nel legno del conto. Applicata in `ARC08-17` §2-§3 |
+| ~~D42~~ | `LETTORE-PLAYTESTER` | F3-ter | ✅ **Decisa il 2026-10-07**: sì a tutto. Profili PF1e di Rethmar, Dauth e Channathgate, le casse, i loxo, la Cintura del monaco come premio del Torneo, il Tempio di Rethmar con un chierico di 13° e un diamante. Marcati `[CANONE — DM 2026-10-07, D42]` nei banchi e in `ARC08-17` |
+| ~~D43~~ | `LETTORE-PLAYTESTER` | F3-quater | ✅ **Decisa il 2026-10-07** (il DM: *«1 calcola in proporzione, 2 ok»*). **(a)** In proporzione al conto della fucina le monete di Thorek I in tasca ai PG sono **zero**: la borsa al momento di pagare (10.000 in monete del 372, 6.314 in gemme, 19.603 in monete del 1372) è uguale ai conti (35.917), quindi tutto torna ai nani. **(b)** Sì: un quarto delle monete dell'hoard di Regiarix è conio elfico, **6.250 mo**, nella stessa proporzione delle reliquie di Rhest sul tesoro non magico. Applicata nei banchi §9 e in `ARC08-17` §3 |
 | ~~D1~~ | `MASTER-DEF` | A1 | ✅ **Decisa il 2026-09-27.** ARC-08: **quattro master**; ARC-09: **uno per beat**, circa dodici. Le fonti hanno spostato il taglio di ARC-08 rispetto alla proposta (il passaggio pregen → PG cade a metà della Sessione 3, non fra due master): la tabella in «A1» taglia per sessione, e attende l'OK |
 | ~~D2~~ | `MASTER-DEF` | S1-S2 | ✅ **Decisa il 2026-09-27: rifinire.** I master nascono completi di read-aloud, battute, contingenze e vie non combattive. Chiude anche la D2 di MESTIERE-BANCHI: confluiscono qui S5 e S6. S4 resta là perché riguarda ARC-07 (vedi §1) |
 | ~~D3~~ | `MASTER-DEF` | S4 | ✅ **Decisa il 2026-09-27: sì, solo forma.** Il contratto «In scena» e i rilievi di `domande_developer` come note del DM; nessuna riga di prosa cambiata, coerente con la D1 di MESTIERE-BANCHI |
@@ -403,6 +417,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D6~~ | `PRATICHE` | tutti | ✅ **Risposta del DM il 2026-09-24: (a).** **Come si esegue la regola di D1 dopo la #160?** (a) un ramo e una PR per lotto, (b) si aspetta il merge della #160 e si riparte sullo stesso ramo un lotto alla volta. Da qui ogni lotto di questo piano ha un ramo suo e una PR sua in bozza |
 | ~~D7~~ | `PRATICHE` | PI-2 | ✅ **Risposta del DM il 2026-09-24: no.** Gli 11 rami del gruppo B restano. La misura riga per riga (`plans/esperimenti/misura-rami/misura_rami.py`) dà otto rami con tutto su `main` e tre (#42, #109, #67) con contenuto giudicato ma non su `main`; il DM: *«ci sono delle varianti che si possono estrarre e integrare nel main»*. Le varianti dei tre sono il lotto [RIPRESA-PR 4j-4](PIANO-RIPRESA-PR-ABBANDONATE.md) |
 | ~~D8~~ | `PRATICHE` | PI-2 | ✅ **Risposta del DM il 2026-09-24: no, e il recupero previsto davvero** (*«no solo se è previsto davvero il recupero, altrimenti mantieni»*). I due rami senza PR restano finché il loro recupero non è chiuso: il Torneo di Dauth di maggio è [RIPRESA-PR 4j-1](PIANO-RIPRESA-PR-ABBANDONATE.md), `measure_tokens.py` è 4j-3 |
+| ~~D10~~ | `PRATICHE` | PI-3b | ✅ **Risposta del DM il 2026-10-07: sì, raggruppate** (*«le PR settimanali vanno bene se non spalmate»*). **Una PR per pacchetto o una per ecosistema?** Applicata con i `groups` di Dependabot, una PR a settimana per ecosistema, la sicurezza a parte |
+| ~~D11~~ | `PRATICHE` | PI-3b | ✅ **Risposta del DM il 2026-10-07: sì** (*«usa pip-audit in modo che Dependabot aggiorni facendo l'audit e verificando che non rompe niente o che è necessario un aggiornamento del codice sorgente»*). **Ogni aggiornamento si prova prima di entrare?** Applicata con `dipendenze.yml`: audit bloccante sulle PR di dipendenze, test sulle versioni minime, commento nella PR quando è rossa |
+| ~~D12~~ | `PRATICHE` | PI-3b | ✅ **Risposta del DM il 2026-10-07: sì** (*«controlla il Dockerfile e aggiornalo se necessario in automatico usando Dependabot»*). **Docker sotto Dependabot?** Applicata: ecosistema `docker` su `scripts/booklet-container`, base portata a Debian 13 e fissata per digest |
 | ~~D9~~ | `PRATICHE` | PI-3 | ✅ **Risposta del DM il 2026-09-24: sì agli avvisi, no alle PR settimanali** (*«d9 ok, non le PR di aggiornamenti settimanali»*). **Dependabot anche per `converters/`?** Gli avvisi di sicurezza vengono dal grafo delle dipendenze, che legge già `converters/Html_to_markdown` e `converters/pdf-to-md-engine`; `dependabot.yml` resta sulla radice, e un commento in testa dice perché |
 | ~~D1~~ | `QUALITA-CODICE` | E1 · E3 | ✅ **decisa dal DM il 2026-09-23: sì**, il verificatore condivide il lettore ([ADR-0066](adr/ADR-0066-le-creature-hanno-una-libreria-e-il-verificatore-non-importa-la-scelta.md)). **Il verificatore condivide il lettore?** Oggi lo fa già: importa 23 simboli da `genera_attributi`. **Sì** (consigliato): il lettore va in `dmcore/lettura_creatura.py` e lo usano tutti; l'indipendenza sta nelle regole e nella scelta, che il verificatore non importa mai (E4 lo prova). **No**: il verificatore tiene un lettore suo, copiato, più sicuro contro un errore di lettura condiviso e con una seconda copia da tenere allineata a mano |
 | ~~D2~~ | `QUALITA-CODICE` | E6 | ✅ **decisa dal DM il 2026-09-23: (a)**, vince `genera_attributi`; attuata in E6. **Quale tabella dei ruoli vince?** Dei 6 ruoli di `genera_creatura`, 4 ordinano le caratteristiche diversamente dal profilo corrispondente di `genera_attributi` (schermagliatore, tiratore, blaster, controllore). **(a)** vince `genera_attributi`: cambiano i PNG che `genera_creatura` genera d'ora in poi, nessun blocco del Bestiario; **(b)** vince `genera_creatura`: cambiano gli `attributi` di alcuni dei 15 blocchi scelti dall'array, che il DM vede prima; **(c)** si tengono separate e si dichiara perché |
@@ -546,9 +563,9 @@ per momento del ciclo.
 
 | | Lotto | Dove | Il comando che dice a che punto è |
 |---|---|---|---|
-| ✅ | **2C** — i box read-aloud che presuppongono un'azione del giocatore | [PIANO-QUATTRO-ORDINI](PIANO-QUATTRO-ORDINI-2026-09-20.md) §2C | *chiuso il 2026-09-21*: `misura_craft --p1` → **22 su 477**, e sono un **elenco nominale** (12 dialoghi · 6 falsi positivi · 2 visioni · 1 canto · 1 condizionale), ancorato file per file da `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`. ⚠️ **Non si porta a zero**: il rilevatore dichiara di non distinguere il dialogo dalla narrazione *(485 box dal 2026-09-25: una nota di allineamento in `DEF-2` A3, le battute di Moradin che chiedono i Doni in `DEF-3` §5, e i quattro box nuovi di `DEF-4` riordinato: il bosco, la sala del trono, la postierla, la tenda; i residui restano 22. I lotti 2f e 2g di CICLO-SESSIONE lo lasciano a 485: il sogno di Artemis spezzato in due battute ne aggiunge uno in `DEF-2`; in `DEF-1` sparisce una riga che il rilevatore scambiava per un box (`>   *DES 10 → 8*)`), riscrivendo il rimando alla Corona)* <!-- attesa: 22 box su 485 --> |
+| ✅ | **2C** — i box read-aloud che presuppongono un'azione del giocatore | [PIANO-QUATTRO-ORDINI](PIANO-QUATTRO-ORDINI-2026-09-20.md) §2C | *chiuso il 2026-09-21*: `misura_craft --p1` → **22 su 477**, e sono un **elenco nominale** (12 dialoghi · 6 falsi positivi · 2 visioni · 1 canto · 1 condizionale), ancorato file per file da `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`. ⚠️ **Non si porta a zero**: il rilevatore dichiara di non distinguere il dialogo dalla narrazione *(485 box dal 2026-09-25: una nota di allineamento in `DEF-2` A3, le battute di Moradin che chiedono i Doni in `DEF-3` §5, e i quattro box nuovi di `DEF-4` riordinato: il bosco, la sala del trono, la postierla, la tenda; i residui restano 22. I lotti 2f e 2g di CICLO-SESSIONE lo lasciano a 485: il sogno di Artemis spezzato in due battute ne aggiunge uno in `DEF-2`; in `DEF-1` sparisce una riga che il rilevatore scambiava per un box (`>   *DES 10 → 8*)`), riscrivendo il rimando alla Corona. Dal 2026-10-07 i box sono **511** su 487 file: `main` era già a 502, e l'attesa passava solo perché i file misurati erano 485; i banchi di ARC-08 e ARC-09 aggiungono due file e nove box, le locande un file e due box: **513** su 488. I residui restano 22)* <!-- attesa: 22 box su 513 --> |
 | ⬜ | **M1-M3** — marcare gli incontri | [PIANO-MARCATURA-DEGLI-INCONTRI](PIANO-MARCATURA-DEGLI-INCONTRI.md) | `python3 scripts/validate_modules.py --tetto-el` → oggi **zero incontri marcati** |
-| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte; 45: la storia delle scelte fuori stampa; 46: le tabelle che in colonna vanno a capo; 50 col lotto 2f di CICLO-SESSIONE: il corredo della serata, i suoi PDF, le immagini con un servizio, la hero map di Canva AI; 52 col 2g: l'apparato fuori dalla stampa, una pagina una volta; 53 col lotto T10 di TRASVERSALE: la versione su ogni pagina di artefatto; 54 col T10-h: l'immagine dentro la pagina; 55 col lotto F1 di LETTORE-E-PLAYTESTER: chi e dove sta scritto nella scena; 59 con le domande del developer, da RICERCA-MANUALE-DEL-MASTER; 62 con ADR-0074 e il quiz a due agenti: l'apparato generato e le copie sincronizzate, la chiave del quiz, il tetto degli appunti; 63 con domande_developer, che misura quattro righe delle domande del developer e divide la §1 dalla §7; 69 col lotto L1 di AGENT-SKILLS-ESTERNE, il 2026-10-01: il lettore a freddo legge a scene, con il diario; 70 con L2: ogni master dichiara la sua serata; 71 con L4: la lettura nuova quando il master cambia; 75 con D13: niente «sembra» nel read-aloud; 76 con ADR-0077: i tic minori in gruppo; 77 con la lettura che frena l'automatico; 78 con l'indice dei references; 82 col merge del 2026-10-02 della PR #188, che porta le quattro del lotto F2.10 di MISURA-EDITORIALE: il box di luogo in poche frasi, senza creature, nell'ordine consigliato, e l'area chiave di *Dungeon*)* <!-- attesa: 82 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
+| ✅ | **F1.1/F1.2/F1.3** — mappare le norme su severità | [PIANO-MISURA-EDITORIALE](PIANO-MISURA-EDITORIALE-STANDARD.md) | *chiuso il 2026-09-21*: `punteggio_mqm --norme` → **12 norme su 41** (la mattina erano **4 su 39**, e il «~40» era scritto a mano e sbagliato; poi F2.7-F2.9 hanno collegato i rilevatori che esistevano e registrato due norme mai elencate). *(42 dal 2026-09-24: si è aggiunta la regola 3 degli echi, non misurata; 43 dal 2026-09-25: la mappa che entra in colonna o va su A4, misurata dal gate di stampa; 44 lo stesso giorno: niente esce dalla colonna, misurata in parte; 45: la storia delle scelte fuori stampa; 46: le tabelle che in colonna vanno a capo; 50 col lotto 2f di CICLO-SESSIONE: il corredo della serata, i suoi PDF, le immagini con un servizio, la hero map di Canva AI; 52 col 2g: l'apparato fuori dalla stampa, una pagina una volta; 53 col lotto T10 di TRASVERSALE: la versione su ogni pagina di artefatto; 54 col T10-h: l'immagine dentro la pagina; 55 col lotto F1 di LETTORE-E-PLAYTESTER: chi e dove sta scritto nella scena; 59 con le domande del developer, da RICERCA-MANUALE-DEL-MASTER; 62 con ADR-0074 e il quiz a due agenti: l'apparato generato e le copie sincronizzate, la chiave del quiz, il tetto degli appunti; 63 con domande_developer, che misura quattro righe delle domande del developer e divide la §1 dalla §7; 69 col lotto L1 di AGENT-SKILLS-ESTERNE, il 2026-10-01: il lettore a freddo legge a scene, con il diario; 70 con L2: ogni master dichiara la sua serata; 71 con L4: la lettura nuova quando il master cambia; 75 con D13: niente «sembra» nel read-aloud; 76 con ADR-0077: i tic minori in gruppo; 77 con la lettura che frena l'automatico; 78 con l'indice dei references; 82 col merge del 2026-10-02 della PR #188, che porta le quattro del lotto F2.10 di MISURA-EDITORIALE: il box di luogo in poche frasi, senza creature, nell'ordine consigliato, e l'area chiave di *Dungeon*; 83 col lotto F2.11 del 2026-10-03: il foglio di stile, la grafia dei nomi e dei termini)* <!-- attesa: 83 norme; qui ne entrano 12 --> La severità è una colonna del registro — **1 critico · 15 maggiori · 20 minori** — e `misura_craft --discriminante` dice che i congegni-rumore sono **zero su 23** <!-- attesa: 0 congegni su 23 --> |
 | 🟡 | **F1.5 + F3.3** — i due campioni e il κ | idem | ✅ F1.5 chiuso; F3.3 **eseguito sul campione B: κ = 0,0** *(misurato 2026-09-21)*. La metrica si dichiara non affidabile e **non entra in CI**. Le manca una norma che morda, e la strada è la verifica aritmetica degli statblocchi, sbloccata dagli `attributi` (riga sotto) |
 | ✅ | **Conformità meccanica degli statblocchi** — tutti i lotti chiusi: L1, L2, L2-bis, L3, L4, L5, L6, L6-ter, L7; restano solo **decisioni del DM** (§9) | [RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI](RICERCA-CONFORMITA-MECCANICA-STATBLOCCHI.md) §8-9 | `python3 scripts/conformita_statblocchi.py --check` → **ogni `pf-dado` registra i dadi vita** · `python3 scripts/conformita_statblocchi.py --riepilogo` → **101 tornano, 0 da correggere, 0 scarti del generatore, 0 decisioni aperte al DM** *(misurato 2026-09-23, dopo D1-D12)* <!-- attesa: da correggere 0 --> |
 | ✅ | ~~i 27 ADR mancanti in `docs/INDEX.md` §4~~ | *nessun lotto: non c'era niente da fare* | `validate_docs --sorgenti` → **0** *(misurato 2026-09-21)*. 🐛 **I 27 non sono mai esistiti**: il buco più grande che `plans/adr/` abbia mai avuto è stato **uno**, il 2026-09-12, e da `14694c4` (16 settembre) l'indice è completo. Vedi §6.5 |
@@ -1200,7 +1217,7 @@ D39 (DEF-4, l'orologio senza margine) e le mappe M7-B e M7-C (lotto D28).
 | MASTER-DEF-ARC08-ARC09 | ~15 | A3: il canone di ARC-08 contro lo stato del tavolo, dopo F4 | agente, poi DM |
 | REVISIONE-ARC07 | ~95 | le sessioni giocate al tavolo | tavolo |
 | REVISIONE-TRASVERSALE | ~90 | T8 e T9, legati al tavolo | tavolo |
-| DRAPPO-DI-TARSILIA | ~90 | L6 e il collaudo | DM |
+| DRAPPO-DI-TARSILIA | ~90 | L9 il collaudo a freddo della tavola di fuori; poi L6 e il tavolo | agente, poi DM |
 | MISURA-EDITORIALE-STANDARD | ~90 | la soglia κ ≥ 0,6 prima di entrare in CI | agente |
 | INTEGRAZIONE-PIPELINE-MAPPE | ~92 | collaudo al tavolo | DM |
 | RIPRESA-PR-ABBANDONATE | ~88 | 3d (D2, il collaudo SDXL) e 4d-4h, uno alla volta | DM, poi agente |
@@ -1264,9 +1281,29 @@ RIPRESA-PR, e fonderle riporterebbe su `main` versioni di agosto.
 5. Una corsa del DM a freddo su DEF-5 con le undici voci `P-*` (D12).
 6. RIPRESA-PR 4g e 4h, che chiudono #99 e #106.
 
+### 14.4-ter · Ripartire in una chat pulita (2026-10-03)
+
+Il DM: *«aggiorna tutti i piani in modo che si può continuare in una chat pulita»*.
+Su `main` non c'è niente di aperto a metà: la #215 è fusa, le sole PR aperte
+restano #99 e #106 (§14.4). Il da fare, **in questo ordine**, e chi lo sblocca:
+
+| # | Cosa | Chi | Dove sta |
+|---|---|---|---|
+| 1 | **Approvare il lotto D13** (undici documenti di revisione, 23 modifiche con `applica --auto`, quattro da guardare) e rispondere a **D17** («sembra» seguito dalla smentita) | DM | `plans/scrittura/revisioni-D13/LEGGIMI.md` · §14.4-bis |
+| 2 | **La coda del secondo lettore**: il genere di *Torre* e quattro concordanze (decide il DM); poi gli accenti di 57 schede del Bestiario (lotto meccanico) e i 32 campi troncati nei prompt immagini | DM, poi agente | [CODA-DEL-SECONDO-LETTORE](PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md), col suo primo messaggio per una chat pulita |
+| 3 | **Il collaudo di Drappo L9**: due letture a freddo, dry-run, booklet rigenerati | agente | DRAPPO Lotto 9 |
+| 4 | **Le quattro incoerenze di canone** trovate da L11 e L12 (Fauci nell'handout, le pozioni antiche fra DEF-4 e DEF-5, il «−2 COS» di Thorik in `ARC08-11`, le tre descrizioni del Rubino) | DM, poi agente | `plans/scrittura/RISULTATI.md` |
+| 5 | **LETTORE F4**: il giro 2 su DEF-4 e DEF-5, dopo D38, D39 e il lotto mappe D28; poi **MASTER-DEF A3**, che aspetta F4 | DM, poi agente | LETTORE-PLAYTESTER · MASTER-DEF |
+| 6 | **Le D1-D6 di BOX-DI-LUOGO** e **una corsa del DM a freddo su DEF-5** con le undici voci `P-*` | DM | BOX-DI-LUOGO · D12 di AGENT-SKILLS |
+| 7 | **RIPRESA-PR 4g e 4h**, che chiudono #99 e #106 | agente | RIPRESA-PR |
+
+Le decisioni aperte al DM sono **17** (`decisioni_dm.py --check`); le più
+urgenti per la prossima serata sono D31 e D33 di LETTORE-PLAYTESTER. VENDIBILITA
+resta **non autorizzato**.
+
 ### 14.5 · Le decisioni al DM, per piano
 
-> ⚠️ **Superata il 2026-10-02**: le aperte sono 17, non 34. Il conto di oggi è in §15.3.
+> ⚠️ **Superata il 2026-10-02**: le aperte erano 17, non 34 (§15.1). Il conto vivo è sempre in §4.
 
 Sono **34**, in §4 con la proposta di ognuna. Contate per piano:
 
@@ -1295,139 +1332,58 @@ Poi si legge il §0 di questo file, e la riga ▶ dice da dove si parte.
 
 ---
 
-## 15 · Il punto al 2026-10-02, sera: il controllo contro commit, PR e rami
+## 15 · Il 2026-10-07: la #206 completata e chiusa, le Dependabot fuse
 
-Il DM, il 2026-10-02: *«controlla cosa è stato fatto continuando
-STATO-E-ORDINE-DEI-PIANI, vedi se nei commit precedenti o PR è rimasto appeso
-qualcosa non riportato qui, e prima di partire aggiorna tutto con quello fatto,
-quello chiuso, cosa da fare e cosa è diventato obsoleto»*. Misurato con la
-storia intera (`git fetch --all --prune`, clone non shallow), su `main` a
-`cf527ad`. La lista viva resta il §0, già corretta; qui ci sono i numeri e il
-perché di ogni correzione.
+Il DM, il 2026-10-07: *«controlla se c'è qualcosa di appeso e non completato
+nella 206, completalo se ha senso […] chiudi la 206, se serve mergia, e mergia le
+dependabot una alla volta»*.
 
-### 15.1 · I piani, contati da `INDEX.md`
+La #206 (aperta il 2026-10-02) era il controllo di questo file contro commit, PR
+e rami dopo la #205. Non si poteva fondere: è in conflitto con tutto quello che
+STATO ha preso dopo (la #213, la #214, la #215, la #217, la #218). Il suo §15
+fotografava il 2026-10-02, e i numeri sono quelli di quel giorno; qui resta il
+loro esito, e il contenuto che valeva ancora è entrato in §0.
 
-| Stato | 30 settembre (§14.1) | Oggi |
-|---|---:|---:|
-| ✅ o 🟢 chiusi o eseguiti | 32 | 32 |
-| 🟡 in corso | 11 | 13 |
-| 🔵 pianificati o proposti, non partiti | 8 | 8 |
-| **In tutto** | **51** | **53** |
+### 15.1 · Cosa è stato portato dalla #206
 
-I due in più sono AGENT-SKILLS-ESTERNE (~95%, aperto il 30 settembre) e
-BOX-DI-LUOGO-E-AREA-CHIAVE (~15%, aperto il 2026-10-01). Nessuno dei due era in
-§14.3. LETTORE-E-PLAYTESTER è a ~90% in `INDEX.md`, non a ~88.
+| Dalla #206 | Oggi |
+|---|---|
+| La riga ✅ della configurazione degli agenti (#201-#203, #205) | in §0, con la correzione dei due tool MCP (§15.2) |
+| Le tre righe 🙋: il lotto D13 e la D17, le quattro incoerenze di canone, le D1-D6 di BOX-DI-LUOGO | in §0, invariate: sono ancora aperte (17 decisioni in §4, le stesse di allora) |
+| La correzione delle righe di D26 (fatta con L4, #193), di DEF-1/2/3 (D34 e D9 decise), degli `[INFERRED]` (51 in DEF-4, 12 in DEF-5) | in §0, ricontate il 2026-10-07: gli stessi numeri |
+| I nove rami fusi o portati, cancellati dal DM il 2026-10-02 con tag e bundle | in §0 come ✅, e le tre righe di quel giorno nel CHANGELOG |
+| §14.5 superata (34 decisioni contro 17) | marcata in §14.5 |
+| Le sei PR di Dependabot su `upstream` (EarlRagnar78 #19-#24) | superato: Dependabot ha aperto le stesse su `origin` (#207-#212), e quelle si sono fuse (§15.3). Le sei su `upstream` le chiude il DM |
 
-### 15.2 · Cosa era rimasto appeso e qui non c'era
+### 15.2 · Cosa la #206 lasciava aperto, e ora è fatto
 
-| Cosa | Dove si vede | Ora in §0 |
+| Voce | Cosa si è fatto |
+|---|---|
+| **Due tool MCP scartati** (`campaign_branch`, `dm`): il nome della proprietà era l'elenco delle scelte, «status\|guard\|ensure», e l'API accetta solo `[a-zA-Z0-9_.-]` | `mcp_key` in `scripts/tools_manifest.py` chiama «comando» un sottocomando e toglie i caratteri non ammessi; `docs/tools/mcp-tools.json` rigenerato; due test in `test_mcp_server.py`. `mcp_server.py --self-check`: 89 su 89 |
+| **Le voci del registro dei rami senza più un ramo**: otto per la #206, dieci oggi | tolte da `plans/contenuti-nei-rami.json`: il registro va potato quando una voce non trova più niente (lo dice lo script). La loro storia sta nei commit |
+| **`fase1.py` in un clone shallow** | `contenuti_nei_rami.shallow()`: in un clone shallow i due script lo dicono e non misurano. Era il caso di questa sessione: shallow davano 61 file e decine «senza posto», con la storia intera 42, tutti col loro posto. Un test |
+
+E una che la #206 non poteva vedere: la **#216**, aperta il 2026-10-03, aveva
+nove file senza posto nel registro, e `contenuti_nei_rami --check` era rosso.
+Ora è registrata come «in volo», e il controllo è verde e senza avvisi.
+
+### 15.3 · Le Dependabot, una alla volta
+
+Le sei PR di Dependabot (#207-#212) avevano la CI rossa per una sola ragione: il
+cancello della regola d'oro (`check_plans_discipline`) boccia un file
+strutturale toccato senza una riga nel CHANGELOG, e Dependabot non la scrive. A
+ognuna, prima del merge, si è allineato il ramo a `main` e aggiunta la riga; poi
+la CI verde, poi il merge, e la successiva solo dopo.
+
+| PR | Cosa | Effetto |
 |---|---|---|
-| #201, #202, #203 e #205, la configurazione degli agenti: tracciate nel `CHANGELOG`, assenti da questo file | `gh pr list --state merged` | riga ✅ |
-| Il lotto D13, la D17, le quattro incoerenze di canone, le D1-D6 di BOX-DI-LUOGO: stavano solo nell'elenco di §14.4-bis, nessuna riga in §0 | §14.4-bis | tre righe 🙋 |
-| Sei PR di Dependabot aperte dal 2026-09-24 su `upstream` (EarlRagnar78/RumblingStone #19-#24): pytest, pillow, tiktoken, e `checkout`, `setup-python`, `upload-artifact` alla v7. `upstream/main` è indietro di 182 commit; i suoi tre commit che `main` non ha sono merge senza differenze | `gh pr list -R EarlRagnar78/RumblingStone` · `git diff main...upstream/main` vuoto | riga PI-3 riscritta |
-| Otto voci del registro dei rami il cui ramo non esiste più | `contenuti_nei_rami --check` | riga ⬜ |
+| #207 | `actions/checkout` da v4 a v7 | la riga di Node.js 20 di PI-3 comincia a chiudersi |
+| #208 | `actions/setup-python` da v5 a v7 | idem |
+| #209 | `actions/upload-artifact` da v4 a v7 | idem: con le tre, nessuna azione della CI gira più su Node.js 20 |
+| #210 | `Pillow>=12.3.0` | |
+| #211 | `pip-audit>=2.10.1` | |
+| #212 | `tiktoken>=0.14.0` | |
 
-Le PR aperte su `origin` restano due, **#99 e #106**, per la ragione di §14.4.
-I rami di `origin` con commit fuori da `main` sono diciassette, il più recente
-del 2026-09-16; il registro dà un posto a ognuno dei 42 file che contengono
-(`--check` verde). I sei rami di §9.2 ci sono ancora: la riga 🙋 resta.
-
-### 15.3 · Cosa è superato
-
-| Dove | Cosa diceva | Perché non vale più |
-|---|---|---|
-| §14.5 | 34 decisioni aperte, D31 e D33 le più urgenti | `decisioni_dm.py --check` ne conta **17** su 144. D31 e D33 sono decise dal 30 settembre |
-| §14.1, §14.3 | 51 piani; LETTORE a ~88 | 53 piani, LETTORE a ~90 (§15.1) |
-| §0, riga D26 e D27 | «aprire il lotto di D26» | fatto con L4 di AGENT-SKILLS (#193): `registro_letture.py` in CI |
-| §0, riga DEF-1, 2, 3 | il DM decide D34 e D9 | decise; restano D35, D36, D37 |
-| §0, riga `[INFERRED]` | 44 in DEF-4 | 51 in DEF-4 e 12 in DEF-5 |
-| `INDEX.md`, riga LETTORE | aperte D7-D10, D12, D14-D17, D19, D21, D23, D25-D27, D29-D33 | aperte D27 e D35-D40; le altre sono decise |
-
-Le diciassette decisioni aperte, per piano:
-
-| Piano | Aperte |
-|---|---|
-| LETTORE-PLAYTESTER | D27, D35, D36, D37, D38, D39, D40 |
-| BOX-DI-LUOGO | D1-D6 |
-| RIPRESA-PR | D2 (Gemini o SDXL), D11 (il perimetro dell'edizione) |
-| AGENT-SKILLS | D17 |
-| RICERCA-MESTIERE | D12 (la riga 17 duplicata di una mappa) |
-
-### 15.4 · Cosa resta aperto, verificato oggi
-
-Le righe ⬜ di §0 che si potevano verificare sul repo sono ancora vere:
-
-- il rilevatore dei box apre solo `**Read-aloud …**`, non le battute
-  etichettate come `**2 di 3 — …**` (`misura_craft.box_read_aloud`);
-- le legature: 102 righe con `ﬀ`, `ﬁ` o `ﬂ` in
-  `PG/Artefatti/LaCorona_di_Adamantio-DM.md`;
-- `fase1.py` non riconosce il clone shallow (lo fanno già
-  `contenuti_nei_rami.py` e `adozioni_in_attesa.py`);
-- nessuna riga su PCGen in `dnd-35-srd/references/resources.md`;
-- il lotto D13 non è applicato (`revisioni-D13/LEGGIMI.md`: «Niente è stato
-  applicato»);
-- L10 `commit-archaeologist` è spenta: un file su una soglia di tre
-  (`adozioni_in_attesa.py`).
-
-Uno nuovo, dalla #205: il server `rumblingstone-tools` espone 75 tool su 77.
-`campaign_branch` e `dm` hanno un sottocomando il cui nome è l'elenco delle
-scelte (`status|guard|ensure`, `prep|post|…`) in `scripts/tools.manifest.json`,
-e `mcp_server.py` lo usa come nome di proprietà: l'API accetta solo
-`[a-zA-Z0-9_.-]`. Lotto C, da aprire in PRATICHE o in un piano di
-manutenzione del server, con un test che faccia passare lo schema dal filtro.
-
-**Da dove si riparte.** L'ordine di §14.4-bis vale ancora: il lotto D13 e la
-D17, le quattro incoerenze, le D1-D6 di BOX-DI-LUOGO, la corsa del DM a freddo
-su DEF-5, RIPRESA-PR 4g e 4h. Per l'agente, fra un'attesa e l'altra, le righe
-⬜ di classe M e C di §0 non aspettano nessuno.
-
-### 15.5 · I rami fusi o portati, da cancellare
-
-Il DM, il 2026-10-02: *«vedi se tutti quei branch sono già mergiati nel main e
-se sì chiudili»*. Misurato ramo per ramo con `git rev-list main..ramo` (commit
-che `main` non ha) e `git cherry main ramo` (commit la cui patch su `main`
-c'è già con un altro SHA). Nessuno dei diciassette rami è fuso commit per
-commit, tranne `focused-meitner-pgyb20`. Nove si possono cancellare:
-
-| Ramo | Perché |
-|---|---|
-| `review-tournament-integration-yYlwv`, `salvatore-character-art-wSjuH`, `optimize-skills-agent-folders-dwJC4`, `dnd-map-generation-research-55pzry`, `golarion-pregen-character-sheets-cstheq`, `terros-battle-hints-booklet-hfvbef` | i sei di §9.2: validati riga per riga in RIPRESA-PR §4.12 FASE 3. Il recupero a cui la D8 di PRATICHE li legava (4j-1, 4j-3, 4j-4) è chiuso dal 2026-09-24; la testa di ognuno è ancora quella misurata |
-| `focused-meitner-pgyb20` | fuso: zero commit fuori da `main` (#166) |
-| `documento-stemmi-alternativi-ehgi9m`, `rumbling-stone-casters-oxzi2w` | ogni commit ha la sua patch già su `main` (`git cherry` tutto `-`); per il primo, 31 righe su 31 (RIPRESA-PR §4.12) |
-
-Restano, e non sono fusi:
-
-| Ramo | Perché resta |
-|---|---|
-| `campaign-group-rumblingstone-dm-gianfranco` | è la partita (ADR-0007), non va mai su `main` |
-| `stone-audit-best-practices-yver7k` (#99), `pr-105-raster-generation-bq0efs` (#106) | i segnaposto di RIPRESA-PR, «in volo» nel registro (§14.4) |
-| `document-audit-prd-cleanup-j5ipln` (#143) | contenuto «portato» con altri commit: due patch che `main` non ha |
-| `campaign-session-tools-j2dzx1`, `hammerfist-maps-ultra-clear-9pczfe`, `map-generation-pipeline-7ka5a7`, `paizo-editorial-components-qky8nv`, `scripts-audit-documentation-u48g28` | commit con patch che `main` non ha; la D7 di PRATICHE li tiene. Vanno guardati uno per uno prima di decidere |
-
-La sessione d'agente non ha il permesso di cancellare rami remoti. Il comando
-è per il DM: cancella un ramo solo se la sua testa è ancora quella misurata il
-2026-10-02, e con lo SHA il ramo si ripristina
-(`git push origin <sha>:refs/heads/<ramo>`).
-
-```bash
-git fetch --prune origin
-while read sha b; do
-  [ "$(git rev-parse "origin/$b" 2>/dev/null)" = "$sha" ] && git push origin --delete "$b"
-done <<'RAMI'
-895863241eaff57d135ed1b2527bd9f55009c2c1 claude/review-tournament-integration-yYlwv
-64df2ebc8f87992e951b212e59996866ad4bf326 claude/salvatore-character-art-wSjuH
-b5e04d2d78799a56bcfa8257c09bc0d817d61e28 claude/optimize-skills-agent-folders-dwJC4
-4986ce87cb7826c804df3be3c34a1f3e3614b30b claude/dnd-map-generation-research-55pzry
-c45c9cc43d64cb6723682a96f56b58f364267cfe claude/golarion-pregen-character-sheets-cstheq
-23f14b607be177699b915c33dbaa7f9e022dee6a claude/terros-battle-hints-booklet-hfvbef
-0004256b134dbc7bc8810893f191213ad28632b5 claude/focused-meitner-pgyb20
-006338e384399923eae4405dfd62f07745b09122 claude/documento-stemmi-alternativi-ehgi9m
-3e4315336db109940d53783e59be5f71d0606b18 claude/rumbling-stone-casters-oxzi2w
-RAMI
-```
-
-**Eseguito dal DM il 2026-10-02**, e verificato: i nove rami non ci sono più su `origin`, i nove tag `archivio/2026-10-02/*` puntano agli SHA della tabella, il bundle `~/rumblingstone-backup-rami/rami-2026-10-02.bundle` contiene i nove ref e passa `git bundle verify`. Per ripristinare: `~/rumblingstone-backup-rami/ripristina.sh [ramo]`, che usa il bundle o, se manca, i tag.
-
-Dopo: `contenuti_nei_rami.py --check` deve restare verde. I rami tolti
-aggiungono voci all'avviso «nel registro ma non più nei rami», che è la riga
-⬜ del registro in §0.
+⚠️ Per le prossime PR di Dependabot vale lo stesso: la riga nel CHANGELOG la
+aggiunge chi la fonde. Se il DM preferisce che il cancello le esenti, è una riga
+in `check_plans_discipline.py`, e la decide lui.
