@@ -22,7 +22,7 @@
 # 13 file, fra cui dmcore/statedata.py: senza, lo stato di campagna non si
 # legge e i cancelli delle skill non partono. Non degrada: è un debito vero,
 # e ADR-0037 lo dice.
-pyyaml>=6.0
+pyyaml>=6.0.3
 
 # ── opzionali, con degradazione dichiarata ───────────────────────────────
 # build_image_derivatives.py (stampa come installarla ed esce 1) e
