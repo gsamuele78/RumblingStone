@@ -1748,11 +1748,48 @@ motivo per cui la Scena 7 viene prima.
   alla tenda in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**: sono
   «i rinforzi» di cui parla la Scena 7. Statistiche in Appendice A.6. Chi
   resta oltre il loro arrivo combatte l'orda, non più un generale.
+- **La tenda è alta 6 m al palo centrale e 3 m ai lati**. Chi vola
+  sotto il telo resta fuori dalla portata dell'ascia (3 m). Le risposte
+  dell'orda, tutte SRD:
+  - **Zog'tar** tiene **tre giavellotti Grandi** accanto al seggio: +20 a
+    distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
+    palo centrale** (Forza **CD 20**, azione standard): il telo crolla, e chi è
+    in volo sotto finisce a terra, intralciato, finché non supera Riflessi
+    **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
+    round;
+  - **Balvar**, se combatte: *dissolvi magie* sul volo, *barriera di lame* sul
+    palo, *àncora dimensionale* su chi si teletrasporta;
+  - **il sacerdote**: *comando* «Giù!» (Volontà CD 13) su chi vola;
+  - **le guardie**: giavellotti, +9 a distanza (1d6+4).
+- **Il corno e il drago sulla tenda**. Il corno è magico: Balvar ci ha
+  inciso la runa gemella della Catena, e quando suona il drago **deve**
+  tornare, anche se dorme. Dalle colline ci mette **circa 7 minuti, 70 round**
+  dal primo suono. Quindi arriva sulla tenda solo se il corno ha suonato
+  **prima** dello scontro (un allarme durante l'infiltrazione, Scena 6) o se i
+  PG si attardano dopo. **Se quando arriva Zog'tar o almeno una guardia sono
+  ancora in piedi**, Skullcrusher entra nello scontro, ed è uno scontro in cui
+  si scappa o si muore: EL **18-19**, oltre il tetto di APL+4, voluto dal DM.
+  Si vede arrivare: il corno, poi l'ombra che passa sul telo e il fuoco dei
+  bracieri che si piega. L'uscita è il telo tagliato e il buio fuori.
+  - **Come combatte, da drago nero che si chiama Skullcrusher**: non atterra fra
+    le tende. Strappa il telo con un passaggio radente (Attacco in Volo, artigli
+    sul telo: la tenda è scoperchiata) e **soffia sulla linea più lunga che
+    prende più PG**, anche se ci sono dentro le sue guardie: se le prende, le
+    guarda sciogliersi e ride. Poi resta sopra, a 12-15 m, e picchia su chi è
+    isolato o ferito, mai su chi lo sfida. Usa *oscurità* sulla tenda per
+    togliere la vista a chi non vede al buio, e *corrompere l'acqua* su chi
+    beve. Non insegue fuori dal campo: la Catena lo tiene lì.
+  - **Cosa si porta all'alba**: i pf che ha perso stanotte restano persi, e il
+    duello della Scena 11 comincia **senza sorpresa**, perché li conosce.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
   OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Le 4 guardie
   ingaggiano i PG più esposti.
 - **Round 2-3**: carica il bersaglio che fa più danni, **Colpo Possente**
-  moderato (−5/+10) se ha colpito bene. Se Artemis lo martella, si gira su di lui.
+  moderato (−5/+10) se ha colpito bene.
+  Contro chi porta armatura leggera o niente (Artemis, Hella in forma
+  normale) non alza l'Attacco Poderoso: usa il **Colpo Devastante** e lo
+  scaglia lontano, contro il palo o fuori dal telo. Separa il gruppo e lascia
+  vivo il bersaglio. Se Artemis lo martella, si gira su di lui.
 - **Soglia 30% pf**: combatte disperato, cerca di **portare un PG con sé** nella
   morte (un ultimo Colpo Possente pieno −10/+20).
 - **Se è pre-allertato** (il corridore è arrivato, o c'è stato un allarme):
@@ -2649,35 +2686,40 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 ```
 ============================================================
    ZOG'TAR DEATHEYE — generale dell'orda antica (GS 15, Avanzato)
-   Mezzo-Ogre/Orco · Barbaro 11 / Guerriero 4 · Grande · CM
+   Mezzo-Ogre/Orco · Barbaro 14 / Guerriero 1 · Grande · CM
 ============================================================
 PF: 283 (15 DV, massimi per dado) · 328 in Ira Superiore
-CA 24 (−1 taglia, +10 arm. completa +2, +1 DES, +4 nat) · 22 in Ira
-   l'armatura completa limita la DES a +1 (SRD)
-   tocco 10 · impreparato 24 (Schivare Prodigioso Migliorato)
+CA 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat)
+   · 24 in Ira. Il mithral alza la DES massima a +3 (SRD);
+   è preda presa ai nani, e i nani la riconoscono
+   tocco 12 · impreparato 26 (Schivare Prodigioso Migliorato)
 Iniz +9 · Velocità 12 m
 BAB/Lotta: +15 / +29 (+32 in Ira)
 FOR 30 (36 in Ira) · DES 20 · COS 24 (30 in Ira) · INT 16 · SAG 16 · CAR 18
 Ascoltare +11 · Osservare +3 · Intimidire +14   [CANONE — DM 2026-10-07, Q30: 8 gradi
    in Ascoltare, 10 in Intimidire, nessuno in Osservare]
-In Ira: ascia a due mani +1 +29/+24/+19 (3d6+22, 19-20/×3)
-Fuori dall'Ira (round di sorpresa): +26/+21/+16 (3d6+18)
-TS: Tempra +18 (+21 in Ira) · Riflessi +9 · Volontà +9 (+12 in Ira)
+In Ira: ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3)
+Fuori dall'Ira (round di sorpresa): +26/+21/+16 (3d6+16)
+Colpo Devastante (azione standard): +25 in Ira, 3d6+20;
+   Riflessi con CD pari al danno, o vola via di 3 m e cade
+   prono (+1d6 a lui e all'ostacolo se ne incontra uno)
+TS: Tempra +18 (+21 in Ira) · Riflessi +9 · Volontà +9 (+12 in Ira;
+   +16 contro gli ammaliamenti, Volontà Indomita)
 ------------------------------------------------------------
-• Ira Barbarica Superiore (5/g, con Ira Extra): +6 FOR, +6 COS,
-  +3 Volontà, −2 CA, 11 round. Dopo l'Ira è affaticato
+• Ira Barbarica Superiore (6/g, con Ira Extra): +6 FOR, +6 COS,
+  +3 Volontà, −2 CA, 13 round. Dopo l'Ira è affaticato
   (l'Ira Instancabile arriva al 17°)
-• RD 2/— (barbaro 10-12) · Schivare Prodigioso Migliorato ·
-  Percepire Trappole +3
+• RD 3/— (barbaro 13) · Schivare Prodigioso Migliorato ·
+  Percepire Trappole +4 · Volontà Indomita (14°)
 • Presenza Minacciosa: entro 9 m, Vol CD 22 o scosso 1d4 round
 • Attacco Poderoso a due mani: fino a −15 al colpire per +30 ai danni
 • OCCHIO DI OSSIDIANA (artefatto minore maledetto, incastonato al posto
   dell'occhio destro, canone del DM): 3/g azione di movimento,
   marca un bersaglio → −2 CA contro Zog'tar e +2 danni subiti da lui, 5 round.
   Prezzo: Zog'tar è VULNERABILE alla luce divina (Luce di Lathander/Corona).
-Talenti (9): Attacco Poderoso, Ira Extra, Critico Migliorato (ascia),
-   Arma Focalizzata e Arma Specializzata (ascia), Robustezza ×2,
-   Iniziativa Migliorata, Volontà di Ferro
+Talenti (7): Attacco Poderoso, Spingere Migliorato, Colpo
+   Devastante (talento da mostro, SRD), Ira Extra, Iniziativa
+   Migliorata, Volontà di Ferro, Arma Focalizzata (ascia)
 Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata)
    — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza
    da reggere più di un round. PF massimi per dado: scelta del DM.
@@ -2686,6 +2728,12 @@ Boost log: 2026-10-07 — template Avanzato PF1e, completo
    — GS 15 → 15 (vale 16): il GS non sale perché la tenda è
    già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi
    più di due round contro questi PG e questi artefatti.
+Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 /
+   Guerriero 1 (stessi 15 DV), armatura di mithral, Colpo
+   Devastante e Spingere Migliorato al posto di Robustezza ×2,
+   Arma Specializzata e Critico Migliorato — GS 15 → 15 — il DM
+   vuole RD 3/— e Volontà Indomita, e un colpo che separi il
+   gruppo invece di un danno che uccide Artemis in un colpo.
 GUARDIE (4): Hobgoblin Guerriero 8 · CA 20 · PF 60 · spadone +14 (2d6+6)
    TS Temp +8, Rifl +3, Vol +1 · Iniz +1 · Vel 6 m (armatura pesante)
    Ascoltare +1 · Osservare +1   [CANONE — DM 2026-10-07, Q30:

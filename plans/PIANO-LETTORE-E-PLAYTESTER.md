@@ -445,6 +445,15 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       reggere più di due round contro questi PG e questi artefatti): 283 pf, 328
       in Ira, CA 24, ascia +29 (3d6+22). La tenda resta a EL 17, il tetto.
       `Boost log:` nel master e nel Bestiario. Skullcrusher era già Avanzato (Q37)
+- [x] Zog'tar rifatto su richiesta del DM (2026-10-07): Barbaro 14 / Guerriero 1
+      (stessi 15 DV e pf), RD 3/—, Volontà Indomita, armatura completa di
+      mithral (CA 26), Colpo Devastante al posto di danno in più, per non
+      uccidere Artemis in un colpo. La tenda è alta 6 m al palo e 3 m ai lati;
+      contro chi vola: giavellotti, il palo abbattuto, *dissolvi magie*,
+      *comando*. **Il drago sulla tenda**: il corno è magico (la runa gemella
+      della Catena), il drago arriva in circa 70 round, e se trova Zog'tar o le
+      guardie in piedi entra nello scontro, EL 18-19, voluto dal DM, con l'avviso
+      e l'uscita scritti
 - [ ] **subito, in una sessione nuova**: il lotto mappe D28 (STATO-E-ORDINE §0),
       poi il giro 3 delle letture, un subagente alla volta
 - [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
