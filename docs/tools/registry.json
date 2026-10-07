@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 93,
+  "tool_count": 94,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4949,6 +4949,61 @@
       ]
     },
     {
+      "id": "avvia_languagetool",
+      "path": "scripts/avvia_languagetool.sh",
+      "category": "G-orchestration-governance",
+      "language": "bash",
+      "invocation": "./scripts/avvia_languagetool.sh [PORTA]",
+      "summary": "Avvia un server LanguageTool 6.8 locale (solo 127.0.0.1) per il secondo lettore di `ciclo_prosa.py segnala --languagetool`; scarica i jar da Maven Central in ~/.cache la prima volta.",
+      "use_case": "«Voglio una verifica in più sulla grammatica di un master, senza mandare il testo a un servizio esterno: come avvio il server?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "bash",
+        "java",
+        "mvn"
+      ],
+      "args": [
+        {
+          "name": "PORTA",
+          "type": "int",
+          "required": false,
+          "default": 8081,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Porta locale del server (default 8081)."
+        }
+      ],
+      "inputs": [],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "1": "Java o Maven mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Avvia un servizio; lo stesso testo dà gli stessi rilievi (misurato: due giri identici)."
+      },
+      "side_effects": {
+        "git_commit": false,
+        "network": true,
+        "writes_canon": false,
+        "notes": "Rete solo la prima volta (Maven Central); poi il server ascolta solo su 127.0.0.1."
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [
+        "scripts/tests/test_ciclo_prosa.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0079-un-secondo-rilevatore-per-la-prosa.md"
+      ],
+      "external_deps": []
+    },
+    {
       "id": "azzera_partita",
       "path": "scripts/azzera_partita.py",
       "category": "G-orchestration-governance",
@@ -5258,7 +5313,7 @@
           "default": null,
           "choices": null,
           "repeatable": false,
-          "desc": "URL di un server LanguageTool: aggiunge le segnalazioni grammaticali (facoltativo)."
+          "desc": "Il secondo lettore (ADR-0079): URL di un server LanguageTool LOCALE, avviato da scripts/avvia_languagetool.sh. Tre regole, solo localhost, facoltativo e fuori dalla CI."
         },
         {
           "name": "--auto",
@@ -7478,7 +7533,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/validate_prosa.py",
-      "summary": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); e la forma inglese di un nome che il glossario vuole tradotto. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036); sui file nominati stampa sotto anche il profilo delle lunghezze delle frasi, in ordine di lettura con media e scarto, che e' informazione per chi legge e non entra nel verdetto.",
+      "summary": "Misura la norma di italiano-nativo.md: calchi a firma inequivocabile (realizzi che, assumi che, eventualmente, nominalizzazioni) sempre; possessivo sulle parti del corpo e progressivo SOLO nel read-aloud (dipendono dal registro); tic dell'IA a densita' (antitesi 'non X: e Y' max 1 per documento, maiuscole di portento max 1, trattini lunghi); la forma inglese di un nome che il glossario vuole tradotto e, dal 2026-10-03, le grafie che il foglio di stile (glossario §8) ha già escluso. Non bloccante finche' il rumore non e' a zero; --strict alza a errore. Con --documenti misura guide, ADR, piani e skill invece del contenuto di gioco: sono due prose con due norme (ADR-0035). Con --prima-dopo confronta due versioni dello stesso testo e dice se la riscrittura ha migliorato: e' l'unica misura di qualita' che su questo corpus regge (ADR-0036); sui file nominati stampa sotto anche il profilo delle lunghezze delle frasi, in ordine di lettura con media e scarto, che e' informazione per chi legge e non entra nel verdetto.",
       "use_case": "«Questo testo suona scritto da una macchina, e la riscrittura l'ha migliorato o peggiorato?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -7528,6 +7583,24 @@
           "choices": null,
           "repeatable": false,
           "desc": "La revisione git con cui confrontare (default: HEAD)."
+        },
+        {
+          "name": "--foglio",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il foglio di stile (GLOSSARIO-E-LOCALIZZAZIONE.md §8) contro il repo di gioco, archivi esclusi: per ogni grafia esclusa le occorrenze e i file, i refusi aperti (con --strict, exit 1 se ce ne sono) e le scelte del DM ancora in sospeso. ADR-0078."
+        },
+        {
+          "name": "--proponi-grafie",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppie di nomi a una sola lettera di distanza, con almeno un nome del registro dei 322, da portare al foglio di stile. Sono proposte e non rilievi: decide un umano, dopo aver guardato il contesto. Non vede le differenze sull'ultima lettera."
         }
       ],
       "inputs": [
