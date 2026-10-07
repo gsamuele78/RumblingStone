@@ -1757,8 +1757,13 @@ motivo per cui la Scena 7 viene prima.
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
-  - **Balvar**, se combatte: *dissolvi magie* sul volo, che è la sua sola
-    risposta a chi vola, e *barriera di lame* sul palo. *Àncora dimensionale*
+  - **Balvar**, se combatte: *dissolvi magie* sul volo, e **comando superiore**
+    (5° livello, uno slot che aveva libero): una
+    parola a un bersaglio per ogni livello, tutti entro 9 m l'uno dall'altro,
+    Volontà **CD 20**, e si ripete ogni round per 13 round. «Giù!» su chi vola:
+    nell'SRD *comando* fa solo gettare a terra; che un PG in volo **cada** è
+    una scelta del DM `[INFERRED — needs DM confirmation]`. Thorik è immune
+    (Mente Vuota della Corona). E *barriera di lame* sul palo. *Àncora dimensionale*
     non c'entra col volo: blocca il teletrasporto e la *porta dimensionale*, e
     chi è ancorato continua a volare (SRD). La tiene per chi prova a sparire;
   - **il sacerdote**: *comando* «Giù!» (Volontà CD 13) su chi vola;
@@ -2793,7 +2798,7 @@ anomalie del tempo; percepisce chi non appartiene a questo secolo.
 **Incantesimi** da chierico di 13° livello, **CD 15 + livello**: *dispel magic,
 magic circle against good, greater magic weapon, divination, righteous might,
 blade barrier* (13d6, Riflessi CD 21), *slay living* (Tempra CD 20), *silence,
-invisibility purge, glyph of warding, dimensional anchor*.
+invisibility purge, glyph of warding, dimensional anchor*, *greater command* (Volontà CD 20).
 
 **Rune incise**: quattro, e scattano alla condizione scritta senza consumare
 uno slot. Qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).
@@ -3026,7 +3031,7 @@ voci:
 
 
 Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE. **hp 96** (13 DV); **CA 24**, contatto 12, colto 22 (mithral +2, anello +2, DES +2). Init +2; Vel 6 m. TS Temp +13, Rifl +8, **Vol +17** (+2 razziale vs magia). BAB +8; Lotta +9. For 12, Des 14, Cos 16, Int 16, **Sag 20**, Car 14.
-**Mischia** martello da guerra runico +1 +10/+5 (1d8+2). Domini **Inganno** e **Runa** `[INFERRED: dominio Runa = FRCS]`. Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*.
+**Mischia** martello da guerra runico +1 +10/+5 (1d8+2). Domini **Inganno** e **Runa** `[INFERRED: dominio Runa = FRCS]`. Incantesimi da **chierico di 13° livello**: è chierico 9 **e** Runecaster 4, e il Runecaster avanza il lancio (per questo ha *blade barrier*, che è di 6°). CD 15+liv: tipici *dispel magic, magic circle against good, greater magic weapon, divination, righteous might, blade barrier, slay living, silence, invisibility purge, glyph of warding, dimensional anchor*, *greater command* (aggiunto il 2026-10-07 su richiesta del DM: uno slot di 5° libero).
 **RUNE INCISE (Runecaster 4)**: incide fino a **4 rune persistenti** su superfici o creature consenzienti/legate; una runa incisa **non consuma slot al momento dell'uso** e scatta alla condizione scritta. Rune tipiche: *dimensional anchor* sulla soglia, *blade barrier* su una parete, *silence* su sé stesso, **la Catena** (sotto).
 **LA CATENA DI SKULLCRUSHER (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.
 **LEGGERE IL FUORI-POSTO (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**

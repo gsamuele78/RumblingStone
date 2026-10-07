@@ -1757,8 +1757,13 @@ motivo per cui la Scena 7 viene prima.
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
-  - **Balvar**, se combatte: *dissolvi magie* sul volo, che è la sua sola
-    risposta a chi vola, e *barriera di lame* sul palo. *Àncora dimensionale*
+  - **Balvar**, se combatte: *dissolvi magie* sul volo, e **comando superiore**
+    (5° livello, uno slot che aveva libero `[CANONE — DM 2026-10-07]`): una
+    parola a un bersaglio per ogni livello, tutti entro 9 m l'uno dall'altro,
+    Volontà **CD 20**, e si ripete ogni round per 13 round. «Giù!» su chi vola:
+    nell'SRD *comando* fa solo gettare a terra; che un PG in volo **cada** è
+    una scelta del DM `[INFERRED — needs DM confirmation]`. Thorik è immune
+    (Mente Vuota della Corona). E *barriera di lame* sul palo. *Àncora dimensionale*
     non c'entra col volo: blocca il teletrasporto e la *porta dimensionale*, e
     chi è ancorato continua a volare (SRD). La tiene per chi prova a sparire;
   - **il sacerdote**: *comando* «Giù!» (Volontà CD 13) su chi vola;
@@ -2862,7 +2867,7 @@ anomalie del tempo; percepisce chi non appartiene a questo secolo.
 **Incantesimi** da chierico di 13° livello, **CD 15 + livello**: *dispel magic,
 magic circle against good, greater magic weapon, divination, righteous might,
 blade barrier* (13d6, Riflessi CD 21), *slay living* (Tempra CD 20), *silence,
-invisibility purge, glyph of warding, dimensional anchor*.
+invisibility purge, glyph of warding, dimensional anchor*, *greater command* (Volontà CD 20).
 
 **Rune incise**: quattro, e scattano alla condizione scritta senza consumare
 uno slot. Qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).

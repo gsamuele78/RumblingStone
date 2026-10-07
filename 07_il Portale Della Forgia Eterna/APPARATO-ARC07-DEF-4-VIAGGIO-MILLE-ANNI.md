@@ -75,6 +75,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | round 1 e slay living (Tempra | 20 |
 | SCENA 8 | Forza | 20 |
 | SCENA 8 | terra, intralciato, finché non supera Riflessi | 15 |
+| SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |
 | SCENA 8 | comando «Giù!» (Volontà | 13 |
 | SCENA 8 | Dalla soglia lancia comando («Giù!», Volontà | 13 |
 | SCENA 8 | Sapienza Magica | 20 |
