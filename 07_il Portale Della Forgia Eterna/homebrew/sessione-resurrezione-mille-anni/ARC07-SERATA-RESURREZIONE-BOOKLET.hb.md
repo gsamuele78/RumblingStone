@@ -5648,6 +5648,7 @@ Ascoltare +11 · Osservare +3 · Intimidire +14   [CANONE — DM 2026-10-07, Q30
    in Ascoltare, 10 in Intimidire, nessuno in Osservare]
 In Ira: ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3)
 Fuori dall'Ira (round di sorpresa): +26/+21/+16 (3d6+16)
+A distanza: 3 giavellotti Grandi +20 in Ira (1d8+13), incremento 9 m
 Colpo Devastante (azione standard): +25 in Ira, 3d6+20;
    Riflessi con CD pari al danno, o vola via di 3 m e cade
    prono (+1d6 a lui e all'ostacolo se ne incontra uno)
@@ -5683,6 +5684,7 @@ Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 /
    vuole RD 3/— e Volontà Indomita, e un colpo che separi il
    gruppo invece di un danno che uccide Artemis in un colpo.
 GUARDIE (4): Hobgoblin Guerriero 8 · CA 20 · PF 60 · spadone +14 (2d6+6)
+   giavellotti +9 a distanza (1d6+4), incremento 9 m
    TS Temp +8, Rifl +3, Vol +1 · Iniz +1 · Vel 6 m (armatura pesante)
    Ascoltare +1 · Osservare +1   [CANONE — DM 2026-10-07, Q30:
    guerriero 8 SRD sulle caratteristiche dell'hobgoblin, senza gradi
