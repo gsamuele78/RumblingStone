@@ -284,6 +284,42 @@ Cronolito, la tabella B4 e le ferite ancestrali, il momento in cui Balvar usa il
 Fuori-Posto, e gli oggetti del cortile che la mappa M7-B non ha (è un lotto di
 mappe, non di testo).
 
+### F3-ter · I banchi di ARC-08 e ARC-09 — ✅ (2026-10-07)
+
+`[engine: Opus, sessione principale · effort: medio · qualità: prezzi ricalcolati a mano sull'SRD, profili PF1e verificati sulla fonte, box al metro di read-aloud-adulti]` — **C**, con due decisioni al DM (D41, D42)
+
+Il DM, il 2026-10-06: *«cerca se ci sono aree nei luoghi dell'AP per il
+mercanteggio […] crea questi mercatini, cosa vendono, il valore massimo, in modo
+da non doverlo inventare al volo ogni volta»*. La norma del banco (F3-bis) era
+arrivata con una sola applicazione, la fucina di Gunnvor in DEF-4. Questo lotto
+è la seconda: gli archi che i master DEF non coprono ancora.
+
+Cosa ho guardato prima: `il-banco.md`, la Scena 5 di DEF-4 col conto giocato,
+il kit della Valle §2, i due audit del tesoro, le schede di Sal, Varis, il
+Collezionista, Sonjak, la cella Zhentarim, il Consiglio di Rethmar, e i file di
+luogo dell'arco 09. Nessun piano li copriva: PIANO-MASTER-DEF scriverà i master,
+e quando li scriverà ogni banco di qui entra nella scena che gli spetta.
+
+- [x] `08_.../ARC08-17-BANCO-HAMMERFIST-1372.md`: il banco chiuso durante
+      l'assedio, socchiuso dopo la Cerimonia (Hammerfist con 90 superstiti è un
+      villaggio impoverito), e le promesse della Guida messe contro i tempi di
+      fabbricazione dell'SRD. Tre strade per mantenerle, con le reliquie del 372
+      come proposta (D41)
+- [x] `09_.../Arco-Post-Hammerfist-BANCHI-E-MERCATI.md`: nove banchi (il Cerchio,
+      Dauth che cambia col calendario, la Torre di Zalkatar e il campo di Sonjak
+      con un terzo della merce maledetta dall'elenco SRD, i recinti di loxo e
+      centauri, Rethmar, Channathgate, Sal, il Collezionista con la sua
+      clausola), più dove il banco non c'è e gli echi di ogni banco
+- [x] «Damarath» letto come Rethmar (D2 di PIANO-REVISIONE-ARC09); il kit della
+      Valle §2 rimanda ai banchi e dice perché Channathgate supera il tetto dei
+      4.000 mo; i due indici d'arco e il quickstart di ARC-09 citano i file nuovi
+- [x] misure: 9 box, nessuno oltre le 12 righe, nessuna parentesi, nessun box con
+      più di un nome proprio nuovo (`fase1.py`); `ciclo_prosa segnala` 0 e 0
+      dopo una correzione; `validate_prosa --strict` e `validate_lingua --strict`
+      verdi; `copertura_scene --check` verde
+- [ ] le letture a freddo (lettore e playtester, codice `P-ABITATO`) quando i
+      banchi entrano nei master di PIANO-MASTER-DEF
+
 ### F4 · Gli altri master di ARC-07 — ⬜ · allargato il 2026-09-27 (ADR-0075)
 
 `[engine: Opus, sessione principale · effort: xhigh · qualità: i sette passi del ciclo del master, per ogni DEF]` — **K** per DEF-5 (si gioca subito), **C** per gli altri
@@ -513,6 +549,8 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | D38 | F4 | **DEF-5: quando si gioca la Fase 0 dell'ARC-08?** (🔴 del playtester e del developer a freddo, 30 settembre). DEF-5 fa arrivare i PG nel Cuore della Montagna nell'ultima resistenza, col drago sulle mura e il riposo impossibile; la tabella dei rami prometteva una Fase 0 (consiglio di guerra, preparativi) prima della battaglia. Dopo D31 «sopra la prima ondata è già passata» le due cose non stanno insieme. Proposta: la Fase 0 si gioca **dopo** il drago ai bastioni: prima il Cuore, poi Fauci, poi il consiglio di guerra per le ondate che restano. E l'aura dell'Apparizione segue l'SRD della presenza terrificante: ogni orco tira, chi fallisce (quasi tutti, con Volontà −2 contro CD 25) è in panico, chi fa 20 è scosso; la Scena 3 si gioca con i pochi che restano e con i nemici che arrivano dopo (CM-1) |
 | D39 | F4 | **L'orologio di DEF-4 non ha margine.** Con le 3 tacche già spese dal gruppo di oggi, parlare con Balvar (1) o fallire un solo blocco del campo porta a 8 tacche: l'alba fuori dalle mura, e la Scena 10 non si gioca. Lo dicono sia il playtester sia il developer del giro 1. Proposta: **(a)** la soglia 🔴 passa a 9 tacche; **(b)** parlare con Balvar costa 0 se lo si fa durante lo scontro nella tenda; **(c)** si lascia così: l'alba fuori è l'esito più probabile, ed è voluto |
 | D40 | F4 | **I PX del beat sono circa tre volte la tabella SRD** (Skullcrusher: 5.400 a testa scritti, ~1.460 da tabella). Il 14° livello di DEF-5 poggia su quella cifra. Proposta: **(a)** si tiene la cifra come premio di storia, detto apertamente; **(b)** si scende al conto SRD, e il 14° arriva dopo DEF-5 |
+| D41 | F3-ter | **Le promesse di Hammerfist nel 1372** (`ARC08-17` §2). La Guida promette a ogni PG un oggetto magico su misura (~10.000 mo nell'audit), ma per l'SRD un oggetto da 10.000 mo chiede dieci giorni di lavoro e un fabbro col talento, che nessuna scheda della rocca dichiara, e i PG partono il Giorno 22. Tre strade: **(A)** l'oggetto arriva a Rethmar prima del Giorno 42; **(B)** il re dà le reliquie che i PG vendettero a Gunnvor nel 372 (la corazza di mithral +1, lo scudo +3 e il resto del conto della fucina), e copre la differenza in gemme; **(C)** gemme al posto dell'oggetto. Proposta: **B**. Vale anche per la «tacca nel legno del conto», il premio di guerra a ×1,5 pagato dopo la vittoria |
+| D42 | F3-ter | **I numeri dei banchi di ARC-09 che nessun file dava** (`Arco-Post-Hammerfist-BANCHI-E-MERCATI.md`). **(a)** I profili PF1e: Rethmar grande città impoverita (valore base 4.000, limite 25.000), Dauth piccola città devota e strategica che diventa prospera per la fiera e impoverita dopo l'invasione, Channathgate grande città prospera e legata alla magia (valore base 12.000, limite 85.000, incantesimi fino al 9°). **(b)** Le casse (Piuma d'Oro 250.000, gilda di Thornwall 40.000, Varis 30.000, drow 15.000). **(c)** «gli accampamenti dei loro» letto come i loxo. **(d)** la Cintura del monaco come premio del Torneo. **(e)** il Tempio di Rethmar con un chierico di 13° e un solo diamante da 10.000 mo |
 
 ## 5 · Validazione
 

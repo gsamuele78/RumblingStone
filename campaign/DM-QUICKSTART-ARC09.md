@@ -136,6 +136,8 @@ di tutte le fasi).
 
 **Hooks integration master**: `Arco-Post-Hammerfist-HOOKS-INTEGRATION-MASTER.md`.
 
+**Banchi e mercati** (cosa si vende, quante, a che prezzo, fino a quale tetto, in ogni luogo dell'arco): `Arco-Post-Hammerfist-BANCHI-E-MERCATI.md`.
+
 ---
 
 ## §6 — Scheduling rapido (chi appare quando)
