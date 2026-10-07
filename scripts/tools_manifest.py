@@ -282,7 +282,16 @@ def mcp_key(nome_arg: str) -> str:
     comando (`scripts/mcp_server.py`). Con due regole per lo stesso nome, una
     delle due invecchia e il server chiama i tool con flag che non esistono.
     """
-    return nome_arg.split("/")[0].lstrip("-").replace(" ", "_") or nome_arg
+    base = nome_arg.split("/")[0].lstrip("-").replace(" ", "_") or nome_arg
+    # 🐛 Fino al 2026-10-07 un sottocomando si chiamava come l'elenco delle sue
+    # scelte («status|guard|ensure»), e l'API dei tool accetta solo nomi di
+    # proprieta' `[a-zA-Z0-9_.-]{1,64}`: il client scartava l'intero tool, e il
+    # server ne esponeva 75 su 77 (`campaign_branch` e `dm`). Le scelte restano
+    # nell'`enum`; la chiave diventa «comando». Il posizionale si ricostruisce
+    # dal nome nel manifest, non dalla chiave, quindi la riga di comando non cambia.
+    if "|" in base:
+        return "comando"
+    return re.sub(r"[^a-zA-Z0-9_.-]", "_", base)[:64]
 
 
 def emit_mcp(manifest: dict) -> str:
