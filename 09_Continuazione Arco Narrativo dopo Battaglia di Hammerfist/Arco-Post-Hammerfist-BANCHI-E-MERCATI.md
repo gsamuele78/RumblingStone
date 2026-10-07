@@ -12,9 +12,11 @@
 > [`ARC08-17-BANCO-HAMMERFIST-1372.md`](../08_La%20Battaglia%20Di%20Hammerfist/ARC08-17-BANCO-HAMMERFIST-1372.md).
 > **Richiesta**: il DM, 2026-10-06: *«creare questi mercatini, cosa vendono, il
 > valore massimo, in modo da non doverlo inventare al volo ogni volta»*.
-> **Stato**: proposta. Prezzi e regole vengono dall'SRD 3.5; ogni quantità,
-> cassa o profilo che non sta in un file citato porta
-> `[INFERRED — needs DM confirmation]`.
+> **Stato**: i profili delle città, le casse, i loxo, la Cintura del monaco e il
+> Tempio di Rethmar sono canone dal 2026-10-07 (D42, `[CANONE — DM 2026-10-07, D42]`).
+> Prezzi e regole vengono dall'SRD 3.5; quello che resta senza un file citato
+> porta ancora `[INFERRED — needs DM confirmation]`.
+> **Dove si dorme**: [`Arco-Post-Hammerfist-LOCANDE.md`](Arco-Post-Hammerfist-LOCANDE.md).
 
 ---
 
@@ -41,9 +43,9 @@
   alla vigilia dell'assedio (§6). Channathgate, che il canone chiama *la più
   grande città mercantile del vale dopo Rethmar*, è quella dove si trova
   davvero tutto (§7), perché non è assediata e vive di commercio.
-- **I «loro» degli accampamenti sono i loxo.** Nel canone i loxo e i centauri
-  stanno sempre insieme, schiavi della Mano Rossa (`...P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`
-  §2). Se il DM intendeva un'altra cosa, il §5 va riletto.
+- **I «loro» degli accampamenti sono i loxo** `[CANONE — DM 2026-10-07, D42]`. Nel canone i loxo e i
+  centauri stanno sempre insieme, schiavi della Mano Rossa
+  (`...P3-BATTAGLIA-FINALE-ARMATE-SYNC.md` §2).
 - **I «principi» sono i principi mercanti di Channathgate**: il Gonfaloniere, la
   Balìa delle gilde, le contrade (§7).
 - **Il kit della Valle dice che nella Valle non c'è magia sopra i 4.000 mo**
@@ -222,7 +224,7 @@ parte viene da fuori dal mondo, per le Otto Porte. Qui si trovano soprattutto
 
 **Il profilo di Dauth come mercato** *(supporto Pathfinder 1e, opzionale e
 dichiarato)*. Una **piccola città** (valore base 4.000 mo, limite d'acquisto
-25.000 mo, incantesimi fino al 6° livello) `[INFERRED — needs DM confirmation]`,
+25.000 mo, incantesimi fino al 6° livello) `[CANONE — DM 2026-10-07, D42]`,
 **devota** (un livello d'incantesimo in più, per la Confraternita) e in **posizione
 strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
 
@@ -231,7 +233,7 @@ strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
 | **Valore base** | **5.600 mo** | **2.200 mo** |
 | **Limite d'acquisto** | **37.500 mo** | **12.500 mo** |
 | **Incantesimi a pagamento** | fino al **7° livello** | fino al **7° livello** |
-| **La cassa** | **60.000 mo** fra tutti i banchi `[INFERRED — needs DM confirmation]` | **15.000 mo** |
+| **La cassa** | **60.000 mo** fra tutti i banchi `[CANONE — DM 2026-10-07, D42]` | **15.000 mo** |
 
 **Chi si trova qui** *(durante la fiera)*
 
@@ -292,7 +294,7 @@ Torneo finisce dopodomani, e dopodomani non ne ho più.»*
 | Periapto della saggezza +2 · Guanti della destrezza +2 | 4.000 mo | 1 · 1 | |
 | Stivali del passo e del balzo | 5.500 mo | 1 | appena sotto il valore base della fiera: dal Giorno 33 non c'è più |
 | Amuleto dei pugni possenti +1 | 6.000 mo | 0 | sopra il valore base: ce l'ha la Rete Nera, più sotto |
-| Cintura del monaco | 13.000 mo | 1 | **non si vende**. La proposta è che sia il premio del Torneo, accanto alla borsa del campione `[INFERRED — needs DM confirmation]`: i premi oggi sono in `...DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md`, e la cintura lì non c'è |
+| Cintura del monaco | 13.000 mo | 1 | **non si vende**. È il premio del Torneo, accanto alla borsa del campione `[CANONE — DM 2026-10-07, D42]`: i premi oggi sono in `...DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md`, e la cintura lì non c'è |
 
 **Identificare.** La speziala identifica le pozioni: Sapienza Magica +15 e
 prende 10 `[INFERRED — needs DM confirmation]`, una al minuto, gratis se si
@@ -502,8 +504,7 @@ ditemi cosa portate.»*
 | Notizie di Rethmar, della Corona, di Sal | non le paga in oro: le paga con **la libertà di uno schiavo** del recinto, un loxo o un centauro | 🔴 un'informazione vera su Rethmar data qui arriva alla Mano Rossa. Il DM toglie un vantaggio dei PG nella Fase 0 di Rethmar `[INFERRED — needs DM confirmation]` |
 | Prigionieri | **100 mo** a testa | finiscono sul carro di Sal. Chi vende un prigioniero mette un anello nella catena del Collezionista, e il DM avanza di uno il filo del Collezionista |
 
-**La cassa**: **15.000 mo** in gemme e monete di Talar, in tutto `[INFERRED —
-needs DM confirmation]`.
+**La cassa**: **15.000 mo** in gemme e monete di Talar, in tutto `[CANONE — DM 2026-10-07, D42]`.
 
 **Diventare merce.** Se la copertura salta (un Raggirare fallito di 5 o più, o
 un PG riconosciuto dal campo), il campo prova a **prenderli vivi**: il
@@ -585,7 +586,7 @@ già deciso cosa sparisce per prima. Quella che il brainstorm chiamava
 
 **Il profilo di Rethmar come mercato** *(supporto Pathfinder 1e, opzionale e
 dichiarato)*. Una **grande città** (valore base 8.000 mo, limite d'acquisto 50.000
-mo, incantesimi fino al 7° livello) `[INFERRED — needs DM confirmation]`,
+mo, incantesimi fino al 7° livello) `[CANONE — DM 2026-10-07, D42]`,
 **impoverita** dai profughi e dalle requisizioni.
 
 | Voce | Alla vigilia dell'assedio |
@@ -600,7 +601,7 @@ mo, incantesimi fino al 7° livello) `[INFERRED — needs DM confirmation]`,
 | Ruolo | Chi, e dove |
 |---|---|
 | comando | il **Consiglio**; per la guerra, il capitano **Brenna Sorvane** |
-| culto | **il Tempio**, nel quartiere alto: un chierico di 13° `[INFERRED — needs DM confirmation]` |
+| culto | **il Tempio**, nel quartiere alto: un chierico di 13° `[CANONE — DM 2026-10-07, D42]` |
 | rimedi | i guaritori dei profughi, nel campo della capitana **Lorana** |
 | bottega | i magazzini della gilda di **Aldric Thornwall**; la bottega di **Varis «Seta-Argento»** |
 | messaggi | **Tempestas**, quando c'è; **Lirien** al Ponte Nuovo |
@@ -663,7 +664,7 @@ cassa della gilda tiene.
 | *Rimuovi maledizione* · *spezzare incantamento* | 150 · 450 mo | *spezzare incantamento* libera anche una statua viva (`...P2C-Salvatore-Mercante-TESTO.md`) |
 | *Rianimare morti* | 5.450 mo | una settimana d'attesa (kit §2) |
 | *Guarigione* · *rigenerazione* | 660 · 910 mo | |
-| *Resurrezione* | 10.910 mo | il Tempio ha **un** diamante da 10.000 mo `[INFERRED — needs DM confirmation]` |
+| *Resurrezione* | 10.910 mo | il Tempio ha **un** diamante da 10.000 mo `[CANONE — DM 2026-10-07, D42]` |
 
 ⚠️ Il chierico lo dice a chi compra: ogni incantesimo di 5° o più lanciato prima
 del Giorno 42 è uno slot che il Tempio non avrà nella Fase 0, quando i drow
@@ -699,14 +700,14 @@ si vende quello che altrove nessuno può pagare. I principi mercanti sono il
 dichiarato)*. Una **grande città** (valore base 8.000 mo, limite d'acquisto 50.000
 mo, incantesimi fino al 7° livello), **prospera** (valore base +30%, limite
 d'acquisto +50%) e **legata alla magia** per le Guglie del Drago (valore base e
-limite d'acquisto +20%, incantesimi +2 livelli) `[INFERRED — needs DM confirmation]`.
+limite d'acquisto +20%, incantesimi +2 livelli) `[CANONE — DM 2026-10-07, D42]`.
 
 | Voce | Durante il Palio |
 |---|---|
 | **Valore base** | **12.000 mo** |
 | **Limite d'acquisto** | **85.000 mo** |
 | **Incantesimi a pagamento** | fino al **7° livello** dai templi e dalle Guglie; l'**8° e il 9°** esistono, ma chi li lancia non vende: si chiedono alle Guglie come favore di contrada (il Palio) |
-| **La cassa** | la Piuma d'Oro: **250.000 mo**, in monete o in lettere di cambio `[INFERRED — needs DM confirmation]` |
+| **La cassa** | la Piuma d'Oro: **250.000 mo**, in monete o in lettere di cambio `[CANONE — DM 2026-10-07, D42]` |
 
 **Dove si va, per cosa** *(i quartieri di `...P2D-PALIO-DISTRETTI-CHANNATHGATE.md`)*
 
@@ -846,7 +847,8 @@ al Collezionista:
 
 | Cosa | A quanto | Perché |
 |---|---|---|
-| Qualunque cosa venga dalla Hammerfist di mille anni fa: l'ascia d'adamantio +2 e lo scudo dagli spuntoni gelidi di Gunnvor, le monete del 372 | **il doppio** del prezzo SRD | Vatore c'era. Sal sa cosa valgono e per chi |
+| Qualunque cosa venga dalla Hammerfist di mille anni fa: l'ascia d'adamantio +2 e lo scudo dagli spuntoni gelidi di Gunnvor | **il doppio** del prezzo SRD | Vatore c'era. Sal sa cosa valgono e per chi |
+| Le monete del 372 | **venti volte** il valore del metallo (§9) | come sopra. È l'unico che non chiede da dove vengono, perché lo sa |
 | Notizie degli artefatti dei PG | in gemme, quanto chiedono | le rivende |
 | Il resto | niente | *«Guagliò, non sono un rigattiere»* |
 
@@ -920,7 +922,70 @@ aiuto contro la cella di Dauth.
 
 ---
 
-## §9 · Echi · cosa lascia ogni banco *(per il registro, `state.md` §7.E)*
+## §9 · Le monete antiche · cosa succede quando un mercante se ne accorge
+
+I PG pagano, prima o poi, con monete che nessuno nel 1372 ha mai speso. La regola
+viene da due posti del canone: il conto della fucina di `ARC07-DEF-4` dice che
+*«le gemme valgono anche nel 1372, le monete del 372 no»*, e l'offerta sotto
+l'altare di `ARC07-DEF-1` §8 dà a 7 monete di platino naniche pre-imperiali **100
+mo l'una per un collezionista**, il doppio da Varis. Una moneta antica, quindi,
+**non è moneta corrente**: vale come metallo, o come pezzo da collezione.
+
+### Quali monete, e da dove
+
+| Moneta | Da dove | Com'è | Il problema |
+|---|---|---|---|
+| **Le monete di Thorek I** | il resto della fucina del 372, se il DM ne ha dato (il conto dice solo che il gruppo ha pagato un saldo) | oro nanico, la faccia del re fondatore col torque. **Nuove di conio**: mille anni in tasca, nessuno in mano | sono le più pericolose. Una moneta di mille anni fa che non ha mai girato è una cosa che non può esistere |
+| **Le monete pre-imperiali** | `ARC07-DEF-1` §8, sotto l'altare di Terros: sette, di platino | consumate, verdi negli incavi | nessuno, salvo la curiosità: sono antiche e lo sembrano |
+| **Le monete elfiche di Rhest** | l'hoard di Regiarix (audit del tesoro §3.1: monete corrose e reliquie di Rhest sommersa); una parte è conio elfico `[INFERRED — needs DM confirmation]` | argento, la foglia di un albero che non cresce più nel vale | per un elfo sono corredo funebre |
+| **Le monete di Talar** | la cassa della quartiermastra (§4) | argento recente, una torre coniata | una città saccheggiata il Giorno 21: per i suoi profughi sono la prova di chi ha venduto chi |
+| **Le monete del Collezionista** | ogni affare con lui (§8) | moneta corrente, con un *marchio arcano* invisibile | non se ne accorge nessun mercante: se ne accorge la gilda, ogni volta che passano di mano |
+
+### Le regole, una volta per tutte
+
+- **Accorgersene.** Chi maneggia monete per mestiere (un cambiavalute, un
+  pesatore, un locandiere che conta l'incasso) si accorge **sempre** che una
+  moneta non è del vale. Riconoscere il conio chiede **Conoscenze (storia) CD
+  20**, o **Valutare CD 20**; un nano davanti al conio di Thorek I ha CD 15
+  `[INFERRED — needs DM confirmation]`. Sulle monete di Thorek I, chi riconosce il
+  conio vede anche che sono nuove, ed è lì che comincia la domanda.
+- **Farle passare.** Mescolarle alle altre e sperare: **Raggirare contro
+  Percepire Intenzioni** di chi conta, come col pesatore del 372. Riesce una volta
+  per banco; la seconda volta il mercante conta con più attenzione.
+- **Come metallo.** Chi le accetta le pesa: 50 monete fanno una libbra (SRD), e
+  ogni moneta vale quanto la moneta dello stesso metallo. Trattiene **una su
+  dieci** per il cambio, come il pesatore del 372; una banca (la Piuma d'Oro) una
+  su venti.
+- **Come pezzo da collezione.** **Dieci volte** il valore del metallo (il canone
+  di `DEF-1`: platino da 10 mo, 100 mo a un collezionista). Varis paga il doppio,
+  come dice lo stesso canone; Sal venti volte (§8). Solo chi colleziona paga così:
+  un bottegaio no.
+- **Fonderle.** Un fabbro le fonde in un lingotto per un'ora di lavoro. Il
+  lingotto è merce di scambio e vale il suo peso **pieno** (SRD, le merci di
+  scambio non si dimezzano), e non racconta niente a nessuno. Il valore da
+  collezione è perso.
+
+### Luogo per luogo: chi se ne accorge, cosa sa, cosa succede
+
+| Luogo | Chi se ne accorge | Cosa fa | Cosa sa, e cosa dice | La conseguenza |
+|---|---|---|---|---|
+| **Hammerfist 1372** | il tesoriere del re, al primo conto | non le spende: le porta al re | riconosce la faccia di Thorek I, il re fondatore, scolpita sopra il trono `[INFERRED — needs DM confirmation]` | `ARC08-17` §3: è un'eco della fucina, e la più forte |
+| **Il Cerchio** | nessuno: il Cerchio non conta | le prende a metà, come tutte | Saraah, davanti alla foglia elfica di Rhest, sa che è corredo di morti | rifiuto delle monete elfiche, e l'atteggiamento verso chi le porta scende di un passo |
+| **Dauth** | la speziala, o chiunque al Mercato Basso | le pesa, una su dieci | i nani di Dauth riconoscono Thorek I. In un giorno il Mercato Basso dice che *«sono tornati i quattro eroi»* delle Cronache, quelli della targa di Hammerfist (`DEF-4`, D33 di LETTORE: *quattro eroi dal fuoco e dalla pietra*) | la folla del Torneo guarda Tordek in un altro modo: il DM lo usa come una carta, una volta. La **Rete Nera** compra le monete a quindici volte il metallo, e vende la notizia a chi paga: il Collezionista la sa in **1d4 giorni** |
+| **La Torre** | Zalkatar, subito: sono il suo campo di studio | le vuole | una moneta mai consumata, coniata mille anni fa: per lui è una prova che i PG hanno viaggiato nel tempo | le paga con un oggetto onesto del suo tavolo, a scelta del PG. Da quel momento Zalkatar sa del viaggio, e `state.md` §4 prende una riga nuova |
+| **I campi drow** | la quartiermastra le pesa e basta | metallo, una su dieci | niente. Le manda a Sonjak con il resto della cassa | Sal le vede passare: sa chi le ha portate, e da dove (§8) |
+| **I recinti** | nessuno | — | — | — |
+| **Rethmar** | Thornwall (le pesa); **Kellin** al Ponte Nuovo, se ci pagano da bere | metallo, una su dieci | Kellin non sa cosa sono, ma la sera stessa lo sa mezzo quartiere basso. **Sertieren** e **Pyriel**, se le vedono, riconoscono il conio e la sua impossibilità | Varis compra a venti volte (il doppio del collezionista); e Varis è un anello della catena del Collezionista. Pyriel scrive tutto nel suo archivio delle transazioni |
+| **Channathgate** | il cambiavalute della Piuma d'Oro | metallo, una su venti; oppure all'asta, il secondo giorno, da dieci a quindici volte | la Piuma non fa domande. La **Civetta** compra il nome di chi le ha vendute | il Conte Valerius lo sa la sera stessa. Le Guglie del Drago ne vogliono una da studiare, e la pagano con un favore |
+| **Sal** | lui | venti volte | sa tutto: Vatore era lì | nessuna, salvo che adesso sa che le avete ancora |
+| **Il Collezionista** | lui | dieci volte, con le sue monete segnate in cambio | sa tutto | la sua gilda ha in mano sia le monete antiche sia la traccia di quelle nuove |
+
+**Una riga per il registro.** La prima volta che una moneta di Thorek I passa di
+mano fuori da Hammerfist, il DM segna in `state.md` §4 chi l'ha vista. È
+l'informazione più costosa che i PG si portano addosso: dice dove sono stati, e
+quando.
+
+## §10 · Echi · cosa lascia ogni banco *(per il registro, `state.md` §7.E)*
 
 | Cosa è successo al banco | L'eco | Dove torna |
 |---|---|---|
@@ -935,10 +1000,12 @@ aiuto contro la cella di Dauth.
 | Monete del Collezionista nelle borse dei PG | la gilda sa dove sono | ogni volta che le spendono |
 | Un trofeo dato a una contrada invece che venduto | un'alleanza in più per il Palio | Channathgate, Giorni 3-4 del Palio |
 | Il lavoro dei PG sul bosco bruciato | querce già alte | Rethmar, se il Cerchio combatte |
+| Una moneta di Thorek I spesa fuori da Hammerfist | chi l'ha vista sa del viaggio nel tempo | `state.md` §4, una riga per chi |
+| Monete elfiche di Rhest mostrate a un elfo | corredo funebre: l'elfo non dimentica | Starsong Hill, prima dell'alleanza |
 
 ---
 
-## §10 · Misura
+## §11 · Misura
 
 - `python3 scripts/copertura_scene.py --check`, regola **C6**: dove qualcuno
   vende, c'è un prezzo in mo.

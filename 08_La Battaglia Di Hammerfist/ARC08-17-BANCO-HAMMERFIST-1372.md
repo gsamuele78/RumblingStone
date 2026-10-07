@@ -11,8 +11,9 @@
 > disperata non credo che riescano nemmeno a fornire gli oggetti promessi»*.
 > **Gemello di arco**: i banchi di ARC-09 in
 > [`Arco-Post-Hammerfist-BANCHI-E-MERCATI.md`](../09_Continuazione%20Arco%20Narrativo%20dopo%20Battaglia%20di%20Hammerfist/Arco-Post-Hammerfist-BANCHI-E-MERCATI.md).
-> **Stato**: proposta. Ogni numero che non viene dall'SRD o da un file citato
-> porta `[INFERRED — needs DM confirmation]`.
+> **Stato**: la strada delle reliquie (§2, B) è canone dal 2026-10-07 (D41), e
+> così il profilo della rocca e la sua cassa (D42). Il resto che non viene
+> dall'SRD o da un file citato porta `[INFERRED — needs DM confirmation]`.
 
 ---
 
@@ -109,7 +110,7 @@ Resta la domanda del DM: la rocca può darle?
 | Armi e armature perfette su misura | **non subito**. La fucina fa punte di freccia, e una corazza perfetta chiede settimane di prove di Artigianato (SRD) | dopo Rethmar |
 | L'oggetto magico su misura (~10.000 mo per PG, audit §3) | **non in tempo**. Per l'SRD un oggetto magico chiede **un giorno di lavoro ogni 1.000 mo** del prezzo base, e un fabbro con il talento giusto, che nessuna scheda della rocca dichiara. Un oggetto da 10.000 mo cominciato il Giorno 21 è pronto il **Giorno 31**, e i PG partono il **Giorno 22** | dopo Rethmar, se il fabbro esiste (§0, punto 2) |
 
-Al DM restano tre strade, da decidere prima della Cerimonia:
+Le strade erano tre. **Il DM ha scelto la B il 2026-10-07** `[CANONE — DM 2026-10-07, D41]`; la A e la C restano scritte per memoria.
 
 **A · Aspettare.** L'oggetto si fa, e arriva a Rethmar prima del Giorno 42,
 portato dalle lance di **Khorn** se marciano o da un messo. Onesta e lenta: i
@@ -133,9 +134,10 @@ e il re le può dare il Giorno 21 senza aspettare nessun fabbro:
 
 Il valore non si divide in parti uguali: la corazza di mithral e lo scudo +3
 stanno vicino ai 10.000 mo della promessa, il resto no. Il re copre la
-differenza in gemme. **È la strada che consiglio**: non chiede di inventare un
-fabbro, non contraddice i tempi dell'SRD, e fa pagare l'eco della fucina di
-Gunnvor nel modo più duro, perché i PG riconoscono la propria merce.
+differenza in gemme, fino a 10.000 mo per PG in tutto. Non serve inventare un
+fabbro, i tempi dell'SRD restano veri, e l'eco della fucina di Gunnvor si paga
+nel modo più duro, perché i PG riconoscono la propria merce. **È la strada
+scelta.**
 
 **C · Gemme al posto dell'oggetto.** Il re paga in gemme il valore della
 promessa (10.000 mo per PG) e i PG comprano a Dauth o a Channathgate. È la più
@@ -170,9 +172,9 @@ Dana e Thorin, come PNG con nome, lanciano oltre quel tetto.
 | Voce | Dopo la Cerimonia |
 |---|---|
 | **Valore base** | **250 mo** |
-| **Limite d'acquisto** | **1.250 mo** per oggetto al capo armaiolo; il forziere del re fino a **5.000 mo** `[INFERRED — needs DM confirmation]` |
+| **Limite d'acquisto** | **1.250 mo** per oggetto al capo armaiolo; il forziere del re fino a **5.000 mo** `[CANONE — DM 2026-10-07, D42]` |
 | **Incantesimi a pagamento** | fino al **6° livello**, da Dana (chierica 12) |
-| **La cassa** | il forziere ha **20.000 mo in gemme** oltre la gratitudine, e paga solo in gemme `[INFERRED — needs DM confirmation]` |
+| **La cassa** | il forziere ha **20.000 mo in gemme** oltre la gratitudine, e paga solo in gemme `[CANONE — DM 2026-10-07, D42]` |
 
 ##### Cosa vende
 
@@ -222,10 +224,29 @@ solo, il capo armaiolo.
 | **Come si vede** | gira la lama, guarda il segno sul tallone, e la mette da parte senza dire niente |
 | **Che via lascia** | riportarla alla famiglia del caduto. Chi lo fa trova l'atteggiamento dei nani della rocca un passo più in alto fino alla partenza, e il capo armaiolo lavora per lui per primo |
 
-**Eco.** Le reliquie del §2, se il re le dà, portano con sé la domanda che i
+**Le monete di Thorek I.** Se i PG hanno ancora monete del 372 (il resto della
+fucina, se il DM ne ha dato: D43), qui succede la cosa più grossa. Il tesoriere
+le riconosce al primo conto, perché è la faccia del re fondatore scolpita sopra
+il trono, e vede che sono **nuove di conio**. Non le spende: le porta a Re
+Thorek.
+
+| | |
+|---|---|
+| **Cosa sa il re** | la leggenda dei quattro eroi delle Cronache, e la targa della porta (*quattro eroi dal fuoco e dalla pietra*, D33 di LETTORE). Con le reliquie del §2 in mano, e quelle monete sul tavolo, la leggenda ha quattro facce |
+| **Cosa chiede** | da dove vengono, e lo chiede una volta sola, da solo, senza il consiglio |
+| **Cosa offre** | le compra tutte per la sala degli antenati a **dieci volte** il valore del metallo, in gemme (il prezzo da collezionista di `DEF-1` §8) |
+| **La conseguenza** | se i PG dicono il vero, il re lo tiene per sé e il loro titolo di Custodi Eterni smette di essere un onore e diventa un giuramento: da quel giorno Hammerfist manda a chiamarli, non li invita. Se mentono, il re capisce che mentono (Percepire Intenzioni +12 `[INFERRED — needs DM confirmation]`) e non dice niente. Nala, che era nella stanza, fa una canzone sui quattro eroi, e la canzone arriva a Dauth prima di Tordek |
+
+**Dove si dorme.** Durante l'assedio, una branda nella sala dei feriti o sulle
+mura fra un turno e l'altro. Dopo la Cerimonia i Custodi Eterni hanno una sala
+loro, gratis, con il pasto della rocca (il vitto *buono* dell'SRD, che a un
+estraneo costerebbe 5 ma al giorno). Una locanda, nella rocca, non c'è mai stata.
+Le locande dell'arco 09 sono in
+[`Arco-Post-Hammerfist-LOCANDE.md`](../09_Continuazione%20Arco%20Narrativo%20dopo%20Battaglia%20di%20Hammerfist/Arco-Post-Hammerfist-LOCANDE.md).
+
+**Eco.** Le reliquie del §2 portano con sé la domanda che i
 nani non sanno fare: perché quattro stranieri di mille anni fa avevano lo stesso
-segno sulle armi? Il DM la lascia aperta. Se i PG scelgono la strada **C**, le
-reliquie restano appese, e in ARC-10 qualcuno le ruba.
+segno sulle armi? Il DM la lascia aperta, salvo che i PG non la chiudano con le monete qui sopra.
 
 ---
 
