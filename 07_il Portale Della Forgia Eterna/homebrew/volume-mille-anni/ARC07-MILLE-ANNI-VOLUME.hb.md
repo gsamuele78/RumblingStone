@@ -1757,8 +1757,10 @@ motivo per cui la Scena 7 viene prima.
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
-  - **Balvar**, se combatte: *dissolvi magie* sul volo, *barriera di lame* sul
-    palo, *àncora dimensionale* su chi si teletrasporta;
+  - **Balvar**, se combatte: *dissolvi magie* sul volo, che è la sua sola
+    risposta a chi vola, e *barriera di lame* sul palo. *Àncora dimensionale*
+    non c'entra col volo: blocca il teletrasporto e la *porta dimensionale*, e
+    chi è ancorato continua a volare (SRD). La tiene per chi prova a sparire;
   - **il sacerdote**: *comando* «Giù!» (Volontà CD 13) su chi vola;
   - **le guardie**: giavellotti, +9 a distanza (1d6+4).
 - **Il corno e il drago sulla tenda**. Il corno è magico: Balvar ci ha
