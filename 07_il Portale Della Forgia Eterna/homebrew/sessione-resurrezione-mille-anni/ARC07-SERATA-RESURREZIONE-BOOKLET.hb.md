@@ -4698,13 +4698,16 @@ motivo per cui la Scena 7 viene prima.
   - **Balvar**, se combatte: *dissolvi magie* sul volo, e **comando superiore**
     (5° livello, uno slot che aveva libero): una
     parola a un bersaglio per ogni livello, tutti entro 9 m l'uno dall'altro,
-    Volontà **CD 20**, e si ripete ogni round per 13 round. «Giù!» su chi vola:
-    nell'SRD *comando* fa solo gettare a terra; che un PG in volo **cada** è
-    una scelta del DM `[INFERRED — needs DM confirmation]`. Thorik è immune
+    Volontà **CD 20**, e si ripete ogni round per 13 round. L'ordine è **«Cadi»**
+    (*«A terra!»*), uno dei cinque dell'SRD: il bersaglio cade a terra e resta
+    prono un round, obbedendo al meglio che può. Chi vola **scende fino a
+    terra** nel suo turno, senza danni da caduta, e si mette prono: sotto un telo
+    alto 6 m ci arriva sempre. Se fosse troppo in alto per toccare terra in un
+    turno, l'incantesimo fallisce (SRD). Thorik è immune
     (Mente Vuota della Corona). E *barriera di lame* sul palo. *Àncora dimensionale*
     non c'entra col volo: blocca il teletrasporto e la *porta dimensionale*, e
     chi è ancorato continua a volare (SRD). La tiene per chi prova a sparire;
-  - **il sacerdote**: *comando* «Giù!» (Volontà CD 13) su chi vola;
+  - **il sacerdote**: *comando* «Cadi!» (Volontà CD 13) su chi vola: scende a terra e resta prono un round;
   - **le guardie**: giavellotti, +9 a distanza (1d6+4).
 - **Il corno e il drago sulla tenda**. Il corno è magico: Balvar ci ha
   inciso la runa gemella della Catena, e quando suona il drago **deve**
@@ -4745,7 +4748,7 @@ motivo per cui la Scena 7 viene prima.
 - **Il sacerdote dell'orda**. Dorme nella
   tenda accanto, a dieci passi. Al primo grido o al corno arriva dopo **1d4+1
   round**, con *vedere invisibilità* già addosso se ha sentito il corno. Dalla
-  soglia lancia *comando* («Giù!», Volontà CD 13) sul PG più vicino a Zog'tar,
+  soglia lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
   poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del
   generale. È un adepto: con Balvar, Zog'tar e le guardie la tenda arriva a EL
   17, il tetto. Statistiche in A.2.
