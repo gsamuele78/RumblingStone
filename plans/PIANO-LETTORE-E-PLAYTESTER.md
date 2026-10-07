@@ -284,6 +284,68 @@ Cronolito, la tabella B4 e le ferite ancestrali, il momento in cui Balvar usa il
 Fuori-Posto, e gli oggetti del cortile che la mappa M7-B non ha (è un lotto di
 mappe, non di testo).
 
+### F3-ter · I banchi di ARC-08 e ARC-09 — ✅ (2026-10-07)
+
+`[engine: Opus, sessione principale · effort: medio · qualità: prezzi ricalcolati a mano sull'SRD, profili PF1e verificati sulla fonte, box al metro di read-aloud-adulti]` — **C**, con due decisioni al DM (D41, D42)
+
+Il DM, il 2026-10-06: *«cerca se ci sono aree nei luoghi dell'AP per il
+mercanteggio […] crea questi mercatini, cosa vendono, il valore massimo, in modo
+da non doverlo inventare al volo ogni volta»*. La norma del banco (F3-bis) era
+arrivata con una sola applicazione, la fucina di Gunnvor in DEF-4. Questo lotto
+è la seconda: gli archi che i master DEF non coprono ancora.
+
+Cosa ho guardato prima: `il-banco.md`, la Scena 5 di DEF-4 col conto giocato,
+il kit della Valle §2, i due audit del tesoro, le schede di Sal, Varis, il
+Collezionista, Sonjak, la cella Zhentarim, il Consiglio di Rethmar, e i file di
+luogo dell'arco 09. Nessun piano li copriva: PIANO-MASTER-DEF scriverà i master,
+e quando li scriverà ogni banco di qui entra nella scena che gli spetta.
+
+- [x] `08_.../ARC08-17-BANCO-HAMMERFIST-1372.md`: il banco chiuso durante
+      l'assedio, socchiuso dopo la Cerimonia (Hammerfist con 90 superstiti è un
+      villaggio impoverito), e le promesse della Guida messe contro i tempi di
+      fabbricazione dell'SRD. Tre strade per mantenerle, con le reliquie del 372
+      come proposta (D41)
+- [x] `09_.../Arco-Post-Hammerfist-BANCHI-E-MERCATI.md`: nove banchi (il Cerchio,
+      Dauth che cambia col calendario, la Torre di Zalkatar e il campo di Sonjak
+      con un terzo della merce maledetta dall'elenco SRD, i recinti di loxo e
+      centauri, Rethmar, Channathgate, Sal, il Collezionista con la sua
+      clausola), più dove il banco non c'è e gli echi di ogni banco
+- [x] «Damarath» letto come Rethmar (D2 di PIANO-REVISIONE-ARC09); il kit della
+      Valle §2 rimanda ai banchi e dice perché Channathgate supera il tetto dei
+      4.000 mo; i due indici d'arco e il quickstart di ARC-09 citano i file nuovi
+- [x] misure: 9 box, nessuno oltre le 12 righe, nessuna parentesi, nessun box con
+      più di un nome proprio nuovo (`fase1.py`); `ciclo_prosa segnala` 0 e 0
+      dopo una correzione; `validate_prosa --strict` e `validate_lingua --strict`
+      verdi; `copertura_scene --check` verde
+- [ ] le letture a freddo (lettore e playtester, codice `P-ABITATO`) quando i
+      banchi entrano nei master di PIANO-MASTER-DEF
+
+### F3-quater · Le monete antiche e le locande — ✅ (2026-10-07)
+
+`[engine: Opus, sessione principale · effort: medio · qualità: prezzi SRD verificati sulla fonte, box al metro]` — **C**, con una decisione al DM (D43)
+
+Il DM, il 2026-10-07, dopo aver chiuso D41 (B) e D42: *«cosa succede quando i
+mercanti dei luoghi si accorgono che vengono pagati con monete antiche, che
+informazioni hanno, hanno conseguenze? Verifica anche le locande e simili per
+dormire con i prezzi a notte, e creale per i vari quartieri delle città o
+luoghi, se hanno senso di esistere»*.
+
+- [x] D41 e D42 applicate: `ARC08-17` §2 con la strada B, i numeri di D42 marcati
+      `[CANONE — DM 2026-10-07, D42]` nei banchi e in `ARC08-17`
+- [x] banchi §9 · le monete antiche: cinque tipi (Thorek I, pre-imperiali di
+      `DEF-1`, elfiche di Rhest, di Talar, segnate dal Collezionista), le regole
+      (accorgersene, farle passare, a peso con una su dieci, da collezione a dieci
+      volte come in `DEF-1`, fonderle), e luogo per luogo chi se ne accorge, cosa
+      sa e cosa succede. Due righe nuove negli echi
+- [x] `ARC08-17` §3: le monete di Thorek I davanti al re, e dove si dorme nella rocca
+- [x] `09_.../Arco-Post-Hammerfist-LOCANDE.md`: le due locande del canone (il Ponte
+      Nuovo, Ai Tre Remi) e quelle nuove, una per quartiere dove ha senso (quattro a
+      Dauth, quattro a Rethmar, nove a Channathgate, compresi i balconi sul Campo),
+      coi prezzi SRD per il moltiplicatore della condizione, le stanze libere,
+      cosa si sente al bancone; dove non si dorme in locanda; le monete antiche al
+      bancone
+- [x] D43 decisa e applicata: zero monete di Thorek I in proporzione al conto, 6.250 mo di conio elfico nell'hoard di Regiarix, il prezzo da collezione solo sulle prime dieci monete
+
 ### F4 · Gli altri master di ARC-07 — ⬜ · allargato il 2026-09-27 (ADR-0075)
 
 `[engine: Opus, sessione principale · effort: xhigh · qualità: i sette passi del ciclo del master, per ogni DEF]` — **K** per DEF-5 (si gioca subito), **C** per gli altri
@@ -513,6 +575,15 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | D38 | F4 | **DEF-5: quando si gioca la Fase 0 dell'ARC-08?** (🔴 del playtester e del developer a freddo, 30 settembre). DEF-5 fa arrivare i PG nel Cuore della Montagna nell'ultima resistenza, col drago sulle mura e il riposo impossibile; la tabella dei rami prometteva una Fase 0 (consiglio di guerra, preparativi) prima della battaglia. Dopo D31 «sopra la prima ondata è già passata» le due cose non stanno insieme. Proposta: la Fase 0 si gioca **dopo** il drago ai bastioni: prima il Cuore, poi Fauci, poi il consiglio di guerra per le ondate che restano. E l'aura dell'Apparizione segue l'SRD della presenza terrificante: ogni orco tira, chi fallisce (quasi tutti, con Volontà −2 contro CD 25) è in panico, chi fa 20 è scosso; la Scena 3 si gioca con i pochi che restano e con i nemici che arrivano dopo (CM-1) |
 | D39 | F4 | **L'orologio di DEF-4 non ha margine.** Con le 3 tacche già spese dal gruppo di oggi, parlare con Balvar (1) o fallire un solo blocco del campo porta a 8 tacche: l'alba fuori dalle mura, e la Scena 10 non si gioca. Lo dicono sia il playtester sia il developer del giro 1. Proposta: **(a)** la soglia 🔴 passa a 9 tacche; **(b)** parlare con Balvar costa 0 se lo si fa durante lo scontro nella tenda; **(c)** si lascia così: l'alba fuori è l'esito più probabile, ed è voluto |
 | D40 | F4 | **I PX del beat sono circa tre volte la tabella SRD** (Skullcrusher: 5.400 a testa scritti, ~1.460 da tabella). Il 14° livello di DEF-5 poggia su quella cifra. Proposta: **(a)** si tiene la cifra come premio di storia, detto apertamente; **(b)** si scende al conto SRD, e il 14° arriva dopo DEF-5 |
+| ~~D41~~ | F3-ter | ✅ **Decisa il 2026-10-07**: strada **B**. Il re dà il Giorno 21 le reliquie vendute a Gunnvor nel 372 e copre la differenza in gemme, fino a 10.000 mo per PG; vale anche la tacca nel legno del conto. Applicata in `ARC08-17` §2-§3 |
+| ~~D42~~ | F3-ter | ✅ **Decisa il 2026-10-07**: sì a tutto. Profili PF1e di Rethmar, Dauth e Channathgate, le casse, i loxo, la Cintura del monaco come premio del Torneo, il Tempio di Rethmar con un chierico di 13° e un diamante. Marcati `[CANONE — DM 2026-10-07, D42]` nei banchi e in `ARC08-17` |
+| ~~D43~~ | F3-quater | ✅ **Decisa il 2026-10-07** (il DM: *«1 calcola in proporzione, 2 ok»*). **(a)** In proporzione al conto della fucina le monete di Thorek I in tasca ai PG sono **zero**: la borsa al momento di pagare (10.000 in monete del 372, 6.314 in gemme, 19.603 in monete del 1372) è uguale ai conti (35.917), quindi tutto torna ai nani. **(b)** Sì: un quarto delle monete dell'hoard di Regiarix è conio elfico, **6.250 mo**, nella stessa proporzione delle reliquie di Rhest sul tesoro non magico. Applicata nei banchi §9 e in `ARC08-17` §3 |
+
+<!-- eco: LETTORE-PLAYTESTER 2026-10-07 -->
+- **Decise**: D41, strada B (le reliquie del 372 date dal re il Giorno 21); D42, tutti e cinque i punti (profili delle città, casse, loxo, Cintura del monaco, Tempio di Rethmar); D43, in un secondo messaggio: le monete del 372 calcolate in proporzione (zero) e il conio elfico di Rhest (sì, 6.250 mo)
+- **Aperte**: nessuna. D43, aperta e chiusa lo stesso giorno: zero monete del 372 in proporzione, 6.250 mo di conio elfico nell'hoard di Regiarix
+- **Cambiate**: nessuna rispetto alle proposte
+- **Dedotto da me**: che «calcola in proporzione» voglia dire pagare ogni conto con la borsa in proporzione a quello che c'era dentro, banco per banco, e che il risultato zero vada scritto anche se toglie la scena più forte (la scena resta per una moneta trovata dopo); che il prezzo da collezione valga per le prime dieci monete per collezionista, altrimenti 6.250 monete elfiche varrebbero 62.500 mo; che con la B valga anche la parte della proposta sulle gemme a copertura della differenza, fino a 10.000 mo per PG, e la tacca nel legno del conto; che «D42 ok» copra tutti e cinque i punti; che le «monete antiche» siano tutte quelle che il gruppo può avere (Thorek I, le pre-imperiali di `DEF-1`, quelle di Rhest e di Talar, quelle del Collezionista) e non solo quelle del 372
 
 ## 5 · Validazione
 

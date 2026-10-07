@@ -395,9 +395,9 @@ ONDATA 2 POSITIONS (Round 22 Fase 2)
          SUD ↓
 
 DISTANZE:
-- Hellas (O20) → Hell Hounds (O35): 22.5m (15 quadrati) - 2 rounds arrival
-- Clerics (L-R, 27) → Hellas: 10.5m (7 quadrati) - FLAME STRIKE RANGE!
-- Assassin (O35) → Hellas: 22.5m (15 quadrati) - 3 rounds sneak if undetected
+- Hella (O20) → Hell Hounds (O35): 22.5m (15 quadrati) - 2 rounds arrival
+- Clerics (L-R, 27) → Hella: 10.5m (7 quadrati) - FLAME STRIKE RANGE!
+- Assassin (O35) → Hella: 22.5m (15 quadrati) - 3 rounds sneak if undetected
 
 SCALA: Ogni quadrato = 1.5m × 1.5m
 ```
@@ -566,9 +566,9 @@ PG DEFENDERS (Exhausted, some wounded):
 🟢 Earth Elementals (if summoned): Cols L + S, Riga 23 (intercept)
 
 DISTANZE CRITICAL:
-- Wyrmlord (O38) → Hellas (O20): 27m (18 quadrati) - 3 rounds charge
+- Wyrmlord (O38) → Hella (O20): 27m (18 quadrati) - 3 rounds charge
 - Ogres (L-S, 36) → Seedlings (N-P, 20): 24m (16 quadrati) - 2 rounds
-- Fire Elem (O34) → Hellas (O20): 21m (14 quadrati) - 2 rounds
+- Fire Elem (O34) → Hella (O20): 21m (14 quadrati) - 2 rounds
 
 SCALA: 1 quadrato = 1.5m × 1.5m
 ```
@@ -856,7 +856,7 @@ DIMENSIONI TOTALI MAPPA: 26 colonne (A-Z) × 29 righe (10-38) = 39 m × 43,5 m
   - Hold Wyrmlord (Borin duello)
   - Slow Ogres (uccidere o kite)
   - Suppress drow archers (AOE spells)
-- **Hellas:** Round 40 = ultime resistenze (Will DC 22), se riesce → COMPLETE!
+- **Hella:** Round 40 = ultime resistenze (Will DC 22), se riesce → COMPLETE!
 
 **ROUND 41-45:**
 - **Hella:** Fase finale automatica, NO checks needed

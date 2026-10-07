@@ -329,7 +329,7 @@ Tordek lo finisce con un critico di +3 greataxe di Moradin. Nessun PG giù.
 
 ## Key decisions
 
-- Hellas ACCETTA il patto con Silvanus → ora è Druid 12 / Hierophant 1 (trigger livello 13 ritardato)
+- Hella ACCETTA il patto con Silvanus → ora è Druid 12 / Hierophant 1 (trigger livello 13 ritardato)
 - Party decide di NON tornare a Rethmar subito → prosegue verso Lhesper (P2 Rhest) invece
 - Maewen rivela backstory sul padre elfico → potenziale hook Tiri-Kitor per P3
 
@@ -349,7 +349,7 @@ Tordek lo finisce con un critico di +3 greataxe di Moradin. Nessun PG giù.
 
 - **March Clock**: Day 27 → Day 29 (+2)
 - **Ritual Clock Azarr Kul**: nessun avanzamento (PG non hanno interagito)
-- **Hellas alleanza druidi-orsi**: CONFERMATA → +150 druidi-orsi alla difesa Fase 1-2 di Rethmar
+- **Hella alleanza druidi-orsi**: CONFERMATA → +150 druidi-orsi alla difesa Fase 1-2 di Rethmar
 - **Regiarix**: ancora vivo (P2 non completato)
 - **Ghostlord**: status immutato (ancora nemico)
 
@@ -399,7 +399,7 @@ Sempre sessione 14. Il DM apre `state.md` e applica questi cambi (mostrato come 
  ## §6 World Events Log
 
 +### Day 29 — Cerchio Sacro completato (Session 14)
-+- Hellas patto Silvanus → Hierophant 1
++- Hella patto Silvanus → Hierophant 1
 +- Alleanza druidi-orsi mutaforma confermata (+150 unità Fase 1-2 Rethmar)
 +- Razorfiend ricognitore eliminato in Shaarcah Forest
 +
@@ -407,7 +407,7 @@ Sempre sessione 14. Il DM apre `state.md` e applica questi cambi (mostrato come 
 
  ## §8 Changelog
 
-+2026-05-12  Session 14: Cerchio Sacro Hellas completato. Day 27→29. Alleanza
++2026-05-12  Session 14: Cerchio Sacro Hella completato. Day 27→29. Alleanza
 +            druidi-orsi confermata (+150 Rethmar difese). Regiarix ancora vivo.
 +            Next: approccio a Lhesper per P2.
 ```
