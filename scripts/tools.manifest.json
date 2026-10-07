@@ -757,7 +757,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/check_plans_discipline.py",
-      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
+      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. Passa se i commit strutturali sono tutti di Dependabot (PI-3b).",
       "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
       "stability": "stable",
       "stdlib_only": true,
