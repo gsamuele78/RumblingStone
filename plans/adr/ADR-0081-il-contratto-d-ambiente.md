@@ -1,6 +1,6 @@
 # ADR-0081 — Il contratto d'ambiente: una dichiarazione, un orchestratore, e si toglie solo ciò che si possiede
 
-- **Stato**: **accettata** (il DM, il 2026-10-08, D1-D10 di [PIANO-AMBIENTE-RIPRODUCIBILE](../PIANO-AMBIENTE-RIPRODUCIBILE.md)); **non attuata**. D11 (gli hook) si conferma all'apertura del lotto A4
+- **Stato**: **accettata** (il DM, il 2026-10-08, D1-D11 di [PIANO-AMBIENTE-RIPRODUCIBILE](../PIANO-AMBIENTE-RIPRODUCIBILE.md)); **non attuata**
 - **Data**: 2026-10-08
 - **Decisori**: DM (Gianfranco Samuele), agente
 - **Rapporti**: estende il lotto D di [PIANO-QUALITA-DEL-CODICE](../PIANO-QUALITA-DEL-CODICE.md) (`binari.py`); rispetta [ADR-0002](ADR-0002-cli-unica-dm-orchestratore.md) (un solo ingresso) e [ADR-0007](ADR-0007-scritture-canone-triplo-vincolo.md) (il canone non si tocca); emenda [ADR-0037](ADR-0037-stdlib-only-e-le-sue-eccezioni.md) col lock (lotto A3); convive con PI-3 e PI-3b di [PIANO-PRATICHE-DI-INGEGNERIA](../PIANO-PRATICHE-DI-INGEGNERIA.md)
