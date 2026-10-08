@@ -440,7 +440,7 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Decise**: D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo
 - **Aperte**: D8 il corredo dei simboli con la regola di posa, e se anticiparlo a D28; D9 le porte segrete nella versione per i giocatori. Nate dalla domanda del DM nello stesso messaggio
 - **Cambiate**: nessuna, tutte come proposte
-- **Dedotto da me**: che «approved as proposed» valga anche per lo stato di ADR-0082, che passa da proposta ad accettata; che la domanda sugli «asset» parli della legenda dei simboli e non di immagini raster (le mappe del repo sono griglie di simboli e l'arte è vettoriale, regola 5); che «scaricare» nel messaggio voglia dire «scale», per salire e scendere
+- **Dedotto da me**: che «approved as proposed» valga anche per lo stato di ADR-0082, che passa da proposta ad accettata; che la domanda sugli «asset» parli della legenda dei simboli e non di immagini raster (le mappe del repo sono griglie di simboli e l'arte è vettoriale, regola 5); che «scaricare» nel messaggio voglia dire «scale», per salire e scendere (✅ confermato dal DM lo stesso giorno: *«staircase»*)
 
 ---
 
