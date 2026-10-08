@@ -739,7 +739,7 @@ che comincia, con i PG dove sono in quel momento.
 |---|---|
 | ≤ 6 | in tempo. Si rientra, si schiera, le mura e il duello vanno come scritto. Le tacche che restano prima dell'8 si spendono con la tabella qui sopra, come nella Scena 5: tre ore di sosta (2) ci stanno, otto ore di sonno (6) no. La fucina, la cappella e la bottega sono aperte come nella Scena 5 |
 | 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
-| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio `[CANONE — DM 2026-09-30, D21]`: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio `[CANONE — DM 2026-10-07, Q32]`. Con 3 tacche già spese, una sola scelta lenta porta ancora qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche (D39) |
+| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio `[CANONE — DM 2026-09-30, D21]`: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio `[CANONE — DM 2026-10-07, Q32]`. Con 3 tacche già spese, una sola scelta lenta porta ancora qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
 
 ⚠️ **L'orologio corre sulle SCELTE, non sul tempo reale.** Un tavolo che discute
 mezz'ora su cosa fare non spende una tacca; un tavolo che decide di andare a
@@ -2836,7 +2836,7 @@ Abilità: Ascoltare +29, Cercare +29, Concentrazione +32,
 ------------------------------------------------------------
 PERCHÉ GS 14 (scelta del DM): la nota D8 lo voleva GS 12,
 un Adulto "potenziato" senza numeri. Adesso è un drago
-dell'SRD intero, Avanzato senza alzare il GS (Q37).
+dell'SRD intero, Avanzato senza alzare il GS.
 EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4.
 Il vero climax resta Fauci nel 1372: qui si semina.
 ============================================================
@@ -2982,7 +2982,7 @@ non sono nel blocco, e `test_copertura_scene.py` li confronta a parte.
 ### A.5 · Re Thorek I e Thorgrim Barbadiferro (Scena 4)
 
 Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo;
-Thorgrim è un vecchio, vivo e fragile, che non combatte (Q47). Se il tavolo li porta in combattimento, è una
+Thorgrim è un vecchio, vivo e fragile, che non combatte. Se il tavolo li porta in combattimento, è una
 scelta del DM e va segnata come `[CANONE — DM 2026-10-07, Q38]`.
 
 ### A.6 · Le creature del campo (Scena 6)

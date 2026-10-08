@@ -3705,7 +3705,7 @@ che comincia, con i PG dove sono in quel momento.
 |---|---|
 | ≤ 6 | in tempo. Si rientra, si schiera, le mura e il duello vanno come scritto. Le tacche che restano prima dell'8 si spendono con la tabella qui sopra, come nella Scena 5: tre ore di sosta (2) ci stanno, otto ore di sonno (6) no. La fucina, la cappella e la bottega sono aperte come nella Scena 5 |
 | 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
-| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio. Con 3 tacche già spese, una sola scelta lenta porta ancora qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche (D39) |
+| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio. Con 3 tacche già spese, una sola scelta lenta porta ancora qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
 
 ⚠️ **L'orologio corre sulle SCELTE, non sul tempo reale.** Un tavolo che discute
 mezz'ora su cosa fare non spende una tacca; un tavolo che decide di andare a
@@ -5706,14 +5706,12 @@ Abilità: Ascoltare +29, Cercare +29, Concentrazione +32,
 ------------------------------------------------------------
 PERCHÉ GS 14 (scelta del DM): la nota D8 lo voleva GS 12,
 un Adulto "potenziato" senza numeri. Adesso è un drago
-dell'SRD intero, Avanzato senza alzare il GS (Q37).
+dell'SRD intero, Avanzato senza alzare il GS.
 EL 14 sulla carta, 15 al tavolo: sotto il tetto di APL+4.
-Boost log: 2026-10-07 — template Avanzato PF1e, completo
-— GS 14 → 14 (vale 15) — il DM lo vuole più forte senza
-salire di EL.
 Il vero climax resta Fauci nel 1372: qui si semina.
 ============================================================
 ```
+
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
 
@@ -5746,8 +5744,7 @@ CA 26 (−1 taglia, +10 arm. completa di mithral +2, +3 DES, +4 nat)
 Iniz +9 · Velocità 12 m
 BAB/Lotta: +15 / +29 (+32 in Ira)
 FOR 30 (36 in Ira) · DES 20 · COS 24 (30 in Ira) · INT 16 · SAG 16 · CAR 18
-Ascoltare +11 · Osservare +3 · Intimidire +14   [CANONE — DM 2026-10-07, Q30: 8 gradi
-   in Ascoltare, 10 in Intimidire, nessuno in Osservare]
+Ascoltare +11 · Osservare +3 · Intimidire +14   (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
 In Ira: ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3)
 Fuori dall'Ira (round di sorpresa): +26/+21/+16 (3d6+16)
 A distanza: 3 giavellotti Grandi +20 in Ira (1d8+13), incremento 9 m
@@ -5771,28 +5768,13 @@ TS: Tempra +18 (+21 in Ira) · Riflessi +9 · Volontà +9 (+12 in Ira;
 Talenti (7): Attacco Poderoso, Spingere Migliorato, Colpo
    Devastante (talento da mostro, SRD), Ira Extra, Iniziativa
    Migliorata, Volontà di Ferro, Arma Focalizzata (ascia)
-Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata)
-   — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza
-   da reggere più di un round. PF massimi per dado: scelta del DM.
-Boost log: 2026-10-07 — template Avanzato PF1e, completo
-   (+4 a tutte le caratteristiche, +2 di armatura naturale)
-   — GS 15 → 15 (vale 16): il GS non sale perché la tenda è
-   già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi
-   più di due round contro questi PG e questi artefatti.
-Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 /
-   Guerriero 1 (stessi 15 DV), armatura di mithral, Colpo
-   Devastante e Spingere Migliorato al posto di Robustezza ×2,
-   Arma Specializzata e Critico Migliorato — GS 15 → 15 — il DM
-   vuole RD 3/— e Volontà Indomita, e un colpo che separi il
-   gruppo invece di un danno che uccide Artemis in un colpo.
 GUARDIE (4): Hobgoblin Guerriero 8 · CA 20 · PF 60 · spadone +14 (2d6+6)
    giavellotti +9 a distanza (1d6+4), incremento 9 m
    TS Temp +8, Rifl +3, Vol +1 · Iniz +1 · Vel 6 m (armatura pesante)
-   Ascoltare +1 · Osservare +1   [CANONE — DM 2026-10-07, Q30:
-   guerriero 8 SRD sulle caratteristiche dell'hobgoblin, senza gradi
-   nelle due abilità]
+   Ascoltare +1 · Osservare +1   (guerriero 8 SRD sulle caratteristiche dell'hobgoblin, senza gradi nelle due abilità)
 ============================================================
 ```
+
 
 **Il sacerdote dell'orda** (Scena 8)
 
@@ -5852,7 +5834,7 @@ uno slot. Qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).
 ### A.5 · Re Thorek I e Thorgrim Barbadiferro (Scena 4)
 
 Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo;
-Thorgrim è un vecchio, vivo e fragile, che non combatte (Q47). Se il tavolo li porta in combattimento, è una
+Thorgrim è un vecchio, vivo e fragile, che non combatte. Se il tavolo li porta in combattimento, è una
 scelta del DM e va segnata come.
 
 ### A.6 · Le creature del campo (Scena 6)
