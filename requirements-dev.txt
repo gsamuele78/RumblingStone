@@ -60,4 +60,5 @@ scipy>=1.14
 # dei font OFL dei volumi che il renderer incorpora nelle mappe
 # (`scripts/build_font_mappe.py`). Gira solo quando cambia l'insieme dei
 # caratteri: il renderer legge il risultato committato e resta stdlib. MIT.
-fonttools[woff]>=4.60
+# Pavimento 4.60.2: pip-audit sulle minime trova CVE-2025-66034 nella 4.60.0.
+fonttools[woff]>=4.60.2
