@@ -60,6 +60,7 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                            └──┘ PORTA SUD: Col J-K (uscita verso Forgia)
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+@tipo tattica interni
 ```
 
 ### VISTA 2: PROSPETTIVA 3D (Guardando da Porta Nord)
@@ -328,6 +329,7 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW, W, NW quadranti)
+@tipo tattica interni
 ```
 
 ---

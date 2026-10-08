@@ -1,4 +1,4 @@
-"""M4 esatta nel collaudo, con tcod (ADR-0084).
+"""M4 esatta nel collaudo con tcod, M1 e M2 con scipy (ADR-0084).
 
 La misura che ha deciso: sull'intero corpus (43.423 celle) la visibilita' da
 ogni cella costa 75 s in libreria standard e 0,7 s con tcod, con lo stesso
@@ -58,11 +58,46 @@ class TestM4(unittest.TestCase):
         self.assertLess(m4, 0.45)
         self.assertNotIn("m4/esposizione", _codici(p))
 
+    def test_m1_e_m2_come_il_calcolo_a_mano(self):
+        """La misura che ha fatto entrare scipy: differenza zero sul corpus.
+        Il riferimento e' il calcolo a mano di prima, copiato com'era."""
+        from collections import deque
+
+        def a_mano(c, perc):
+            cop = {(x, y) for x, y, s in c.G.tutte()
+                   if C.F.get(s, {}).get("cover") in ("half", "three_quarters", "total")}
+            vicino = {(x, y) for x, y in perc
+                      if any((x + a, y + b) in cop for a in range(-2, 3) for b in range(-2, 3))}
+            aperto, visti, piu = perc - vicino, set(), 0
+            for p0 in aperto:
+                if p0 in visti:
+                    continue
+                visti.add(p0)
+                coda, k = deque([p0]), 0
+                while coda:
+                    a = coda.popleft()
+                    k += 1
+                    for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                        b = (a[0] + d[0], a[1] + d[1])
+                        if b in aperto and b not in visti:
+                            visti.add(b)
+                            coda.append(b)
+                piu = max(piu, k)
+            return len(vicino) / len(perc), piu / len(perc)
+
+        for righe in (APERTA, _divisa(), _divisa((4, 8), porta=False)):
+            p = _master(self.tmp, "c.md", righe, ["@north N"])
+            g = C.R.extract_maps(p.read_text(encoding="utf-8"))[0]
+            c = C.Collaudo(p, 1, g, {})
+            perc = c.percorribili()
+            for atteso, avuto in zip(a_mano(c, perc), c._copertura_e_vuoto(perc)):
+                self.assertAlmostEqual(atteso, avuto)
+
     def test_e_un_avviso_non_un_errore(self):
         self.assertEqual(C.CLASSE["m4/esposizione"], "A")
 
     def test_senza_tcod_il_collaudo_si_ferma_e_dice_perche(self):
-        with mock.patch.object(C, "_tcod", side_effect=ImportError("tcod")), \
+        with mock.patch.object(C, "_dipendenze", side_effect=ImportError("tcod")), \
                 mock.patch("sys.stderr") as err:
             self.assertEqual(C.main([str(self.tmp / "nessuno.md")]), 2)
         self.assertIn("requirements-dev.txt", "".join(a[0][0] for a in err.write.call_args_list))

@@ -233,6 +233,21 @@ LIBRERIE = (
         ripiego="nessuno: `collaudo_mappe.py` esce con 2 e dice come installarla. "
                 "Le mappe si disegnano, si renderizzano e si esportano senza.",
     ),
+    Libreria(
+        nome="scipy", modulo="scipy",
+        a_cosa_serve="M1 e M2 del collaudo delle mappe (`scipy.ndimage`)",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=True,
+        ripiego="nessuno: `collaudo_mappe.py` esce con 2, come senza tcod.",
+    ),
+    Libreria(
+        nome="fonttools", modulo="fontTools",
+        a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=False,
+        ripiego="il renderer usa i sottoinsiemi gia' committati; senza fonttools "
+                "non si possono solo rigenerare (`build_font_mappe.py` esce con 2).",
+    ),
 )
 
 #: Cosa serve a ciascuna catena di lavoro. La colonna che mancava: sapere che
@@ -245,7 +260,7 @@ CATENE = {
     "libretto imposto": ("typst", "pdfcpu"),
     "mappe SVG": (),
     "mappe PNG": ("chromium",),
-    "collaudo mappe": ("tcod",),
+    "collaudo mappe": ("tcod", "scipy"),
     "recap in PDF": ("pandoc", "xelatex"),
     "skill per gli agenti": ("pyyaml",),
 }

@@ -35,6 +35,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 23 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 @north N
+@tipo tattica interni
 @mark 1 ; S17 ; Orchi che saccheggiano la fucina (GS ½)
 @mark 2 ; AF17 ; Orchi nell'armeria vuota (GS ½)
 @mark 3 ; N12 ; Retroguardia nanica alla barricata

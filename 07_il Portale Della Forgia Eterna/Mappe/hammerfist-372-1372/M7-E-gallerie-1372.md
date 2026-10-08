@@ -36,6 +36,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 24 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 @north N
+@tipo tattica caverna
 @mark 1 ; J10 ; Colonna dei novanta, cinque per round
 @mark 2 ; B16 ; Inseguitori dal tunnel della statua (GS ½)
 @path Ritirata: dal tunnel della statua al Cuore ; A16 G16 G10 P10 P19 AH19 ; #2c8c3c

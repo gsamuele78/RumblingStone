@@ -70,6 +70,7 @@ PESI = {
     "posa/fra-livelli": 5,
     "posa/solo-master": 10,
     "posa/verso-illeggibile": 1,
+    "tipo/illeggibile": 1,
     "raggiungibile/unita": 5,
     "raggiungibile/obiettivo": 5,
 }
@@ -84,6 +85,7 @@ CLASSE.update({
     "m1/copertura": "A",
     "m2/vuoto": "A",
     "m4/esposizione": "A",
+    "tipo/mancante": "A",
 })
 TATTICI = {"nord/mancante", "posa/nel-muro", "posa/recinto", "posa/sul-pavimento",
            "posa/asse-ambiguo", "posa/verso-contro-muri",
@@ -95,14 +97,15 @@ FUORI = "FUORI"
 MOTIVO_MINIMO = 15
 
 
-def _tcod():
-    """tcod e numpy: obbligatorie per il collaudo (ADR-0084), che gira in CI e
-    nelle mani di chi disegna, non al tavolo. Importate qui perche' chi importa
-    il modulo per il resto (i test, l'MCP) non le paghi."""
+def _dipendenze():
+    """numpy, tcod e scipy.ndimage: obbligatorie per il collaudo (ADR-0084),
+    che gira in CI e nelle mani di chi disegna, non al tavolo. Importate qui
+    perche' chi importa il modulo per il resto (i test, l'MCP) non le paghi."""
     import numpy
     import tcod
     import tcod.map  # noqa: F401
-    return numpy, tcod
+    from scipy import ndimage
+    return numpy, tcod, ndimage
 
 
 def n(c):
@@ -126,15 +129,19 @@ def _cella(token: str, righe: list[int]):
 
 
 def direttive(annotazioni: list[str]) -> dict:
-    d = {"tipo": None, "deroghe": {}, "collega": [], "taglia": [], "giocatori": False,
-         "north": False}
+    d = {"tipo": None, "ambiente": None, "tipo_grezzo": None, "deroghe": {}, "collega": [],
+         "taglia": [], "giocatori": False, "north": False}
     for riga in annotazioni:
         s = riga.strip()
         tipo, _, resto = s[1:].partition(" ")
         tipo = tipo.lower()
         parti = [p.strip() for p in resto.split(";")]
         if tipo == "tipo":
-            d["tipo"] = resto.strip().lower() or None
+            # `@tipo tattica caverna`: il tipo decide i controlli, l'ambiente il corredo
+            parole = resto.strip().lower().split()
+            d["tipo_grezzo"] = resto.strip() or None
+            d["tipo"] = parole[0] if parole else None
+            d["ambiente"] = parole[1] if len(parole) > 1 else None
         elif tipo == "deroga" and parti and parti[0]:
             d["deroghe"][parti[0]] = parti[1] if len(parti) > 1 else ""
         elif tipo == "collega" and len(parti) >= 2:
@@ -199,7 +206,8 @@ class Collaudo:
         self.corpus = corpus
         self.rilievi: list[dict] = []
         self.assi: Counter = Counter()
-        self.tattica = (self.d["tipo"] or "tattica") == "tattica"
+        # un tipo che non si legge non spegne i controlli: resta tattica
+        self.tattica = self.d["tipo"] not in ("strategica", "schema")
 
     # --- grafo ---------------------------------------------------------------
     def percorribili(self) -> set:
@@ -267,6 +275,16 @@ class Collaudo:
                             f"la legenda locale dice «{k} = {v[:50]}», la universale "
                             f"«{LEG[k].get('label', '')}»: si cambia il simbolo, non la legenda")
 
+        if not self.d["tipo"]:
+            self.rileva("tipo/mancante", None,
+                        "la mappa non dichiara @tipo: si collauda come tattica. "
+                        f"@tipo <{'|'.join(legenda.TIPI_MAPPA)}> [{'|'.join(legenda.AMBIENTI_MAPPA)}]")
+        elif (self.d["tipo"] not in legenda.TIPI_MAPPA
+              or (self.d["ambiente"] and self.d["ambiente"] not in legenda.AMBIENTI_MAPPA)):
+            self.rileva("tipo/illeggibile", None,
+                        f"@tipo {self.d['tipo_grezzo']}: il tipo e' uno di {', '.join(legenda.TIPI_MAPPA)}, "
+                        f"l'ambiente uno di {', '.join(legenda.AMBIENTI_MAPPA)}")
+
         if not self.d["north"]:
             self.rileva("nord/mancante", None,
                         "la mappa tattica non dichiara @north: il nord e' implicito in alto")
@@ -321,12 +339,7 @@ class Collaudo:
 
         # metriche dell'audit (solo mappe >= 12x12)
         if G.W >= 12 and G.H >= 12 and perc:
-            cop = {(x, y) for x, y, c in G.tutte()
-                   if F.get(c, {}).get("cover") in ("half", "three_quarters", "total")}
-            vicino = {(x, y) for x, y in perc
-                      if any((x + a, y + b) in cop for a in range(-2, 3) for b in range(-2, 3))}
-            m1 = len(vicino) / len(perc)
-            m2 = self._vuoto(perc - vicino) / len(perc)
+            m1, m2 = self._copertura_e_vuoto(perc)
             if m1 < 0.60:
                 self.rileva("m1/copertura", None,
                             f"M1 = {m1:.2f}: solo il {m1:.0%} del percorribile ha una copertura entro "
@@ -516,7 +529,7 @@ class Collaudo:
         """M4 esatta (ADR-0084): da ogni cella percorribile, la frazione del
         percorribile che si vede, con lo shadowcasting simmetrico di tcod.
         Nessun campionamento: tutte le celle, ogni volta."""
-        np, tcod = _tcod()
+        np, tcod, _ = _dipendenze()
         G = self.G
         trasp = np.array([[not F.get(G.at(x, y), {}).get("blocks_sight") and G.at(x, y) != FUORI
                            for x in range(G.W)] for y in range(G.H)], dtype=bool)
@@ -534,23 +547,25 @@ class Collaudo:
             somma += int((vista & maschera).sum())
         return somma / (len(origini) * totale)
 
-    def _vuoto(self, aperto) -> int:
-        visti, piu = set(), 0
-        for c in aperto:
-            if c in visti:
-                continue
-            visti.add(c)
-            coda, k = deque([c]), 0
-            while coda:
-                a = coda.popleft()
-                k += 1
-                for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-                    b = (a[0] + d[0], a[1] + d[1])
-                    if b in aperto and b not in visti:
-                        visti.add(b)
-                        coda.append(b)
-            piu = max(piu, k)
-        return piu
+    def _copertura_e_vuoto(self, perc) -> tuple[float, float]:
+        """M1 e M2 con scipy.ndimage (ADR-0084): M1 la frazione del percorribile
+        con una copertura entro 2 quadretti (Chebyshev), M2 il piu' grande
+        spazio aperto senza coperture, a 4-connessione. Stesso risultato del
+        calcolo a mano di prima, sei volte piu' veloce."""
+        np, _, ndimage = _dipendenze()
+        G = self.G
+        P = np.zeros((G.H, G.W), dtype=bool)
+        K = np.zeros((G.H, G.W), dtype=bool)
+        for x, y, c in G.tutte():
+            if F.get(c, {}).get("cover") in ("half", "three_quarters", "total"):
+                K[y, x] = True
+        for x, y in perc:
+            P[y, x] = True
+        vicino = ndimage.binary_dilation(K, structure=np.ones((5, 5), dtype=bool)) & P
+        etichette, quante = ndimage.label(P & ~vicino)
+        piu = int(np.bincount(etichette.ravel())[1:].max()) if quante else 0
+        totale = int(P.sum())
+        return int(vicino.sum()) / totale, piu / totale
 
     def distanza(self) -> int:
         return sum(PESI[r["codice"]] for r in self.rilievi
@@ -560,6 +575,7 @@ class Collaudo:
         return {"file": str(self.file.relative_to(REPO)) if self.file.is_relative_to(REPO) else str(self.file),
                 "mappa": self.indice, "titolo": self.G.g["title"][:90],
                 "tipo": self.d["tipo"] or "tattica (implicita)",
+                "ambiente": self.d["ambiente"],
                 "dimensioni": [self.G.W, self.G.H],
                 "distanza_giocabilita": self.distanza(),
                 "chiusure": {k: self.assi.get(k, 0)
@@ -584,9 +600,9 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
 
     try:
-        _tcod()
+        _dipendenze()
     except ImportError:
-        print("✗ collaudo_mappe ha bisogno di tcod e numpy (ADR-0084): "
+        print("✗ collaudo_mappe ha bisogno di tcod, scipy e numpy (ADR-0084): "
               "pip install -r requirements-dev.txt", file=sys.stderr)
         return 2
     file = bersagli(args.files)

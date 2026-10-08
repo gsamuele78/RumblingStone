@@ -1,6 +1,6 @@
 # PIANO — Il collaudo delle mappe, e un generatore che non consegna bozze ingiocabili
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D9, D11 e D13-D16 decise dal DM lo stesso giorno, D10 (i glifi) e D12 (le mappe della #225) aperte · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
+> **Stato**: 🟡 in corso (2026-10-08), D1-D9, D11 e D13-D18 decise dal DM lo stesso giorno, D10 (i glifi), D12 (le mappe della #225) e D19 (tre classificazioni) aperte · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
 > **Nasce da**: il documento *«Algorithmic Frameworks and Automated Evaluation
 > Architectures for Deterministic Map Generation in Tabletop Role-Playing
 > Games»*, portato dal DM il 2026-10-08 con la richiesta di verificare cosa si
@@ -674,6 +674,9 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 | ~~D14~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **I casi che i vicini non decidono?** Proposta: la direttiva `@verso <cella> ; NS\|EO`; senza, avviso e glifo come oggi |
 | ~~D15~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **Come si usa Battle for Wesnoth?** Proposta: solo l'idea delle regole di terreno, nessun file e nessun simbolo nuovo |
 | ~~D16~~ | V2-quater, V5 | ✅ **Decisa il 2026-10-08, sera, il DM: obbligatoria nel collaudo**, non come proposto. Era: **Come si tratta `tcod`?** Proposta: opzionale per V5, importata nella funzione, con il ripiego esatto e lento in libreria standard. Alternative: obbligatoria nel collaudo (scelta), nessuna dipendenza |
+| ~~D17~~ | V2-quater, V5 | ✅ **Decisa il 2026-10-08, sera (secondo messaggio), il DM: scipy per M1 e M2**, non come proposto. Era: **Quali librerie ammettere, rimisurate sul loro compito?** Proposta: nessuna. scipy entra obbligatoria nel collaudo come tcod; fonttools solo sviluppo, per i font delle mappe (RESA-ASSET). networkx, shapely, hypothesis, resvg-py restano fuori (ADR-0084, emendamento) |
+| ~~D18~~ | V2 | ✅ **Decisa il 2026-10-08, sera (secondo messaggio), il DM: come proposto.** Era: **`@tipo` su tutte le 44 mappe?** Proposta: tipo (tattica, strategica, schema) e ambiente (interni, caverna, esterno, abitato), con l'elenco in `dmcore/legenda.py` e i campi `tipo`/`ambiente` nel contratto JSON |
+| D19 | V2, V3 | **Le tre classificazioni dubbie.** Portale L2 mappa 1 (il titolo letto è «[COLONNA K = 15m da Nord]»: tattica caverna?), M7-E nel 372 e nel 1372 (gallerie scavate: caverna o interni? è legato a `🟤` della D12). Proposta: come in `esperimenti/dipendenze-e-asset-2026-10/classificazione-mappe.tsv`, da confermare |
 
 <!-- eco: COLLAUDO-MAPPE 2026-10-08 -->
 - **Decise**: (primo messaggio) D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo. (Secondo messaggio) D8 il set dei simboli prima di D28, e D28 rifatto col set nuovo · D9 le porte segrete non compaiono nella versione per i giocatori · D11 un ruolo LLM di collaudo
@@ -685,6 +688,10 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Aperte** (la sera): D10 e D12 restano aperte; nessuna nuova
 - **Cambiate** (la sera): D16 dalla proposta «opzionale con ripiego» a «obbligatoria», quindi il collaudo passa al piano di sviluppo di ADR-0037 (ADR-0084) invece di restare in libreria standard con un'eccezione
 - **Dedotto da me** (la sera): che «obbligatoria nel collaudo» voglia dire usarla subito e non solo dichiararla, quindi M4 esatta anticipata da V5 come primo uso (una dipendenza senza chiamanti sarebbe solo rumore per `pip-audit`); che `numpy` vada in `requirements-dev.txt` accanto a `tcod` perché `collaudo_mappe` la importa direttamente; che gli SVG dell'archivio di Hammerfist si rigenerino come i derivati del corpus, sul precedente di ADR-0070
+- **Decise** (la sera, secondo messaggio): D17 scipy per M1 e M2, obbligatoria nel collaudo · D18 `@tipo` con tipo e ambiente su tutte le 44 mappe
+- **Aperte** (la sera, secondo messaggio): D19 le tre classificazioni dubbie
+- **Cambiate** (la sera, secondo messaggio): D17 dalla proposta «nessuna libreria» a scipy (e fonttools solo sviluppo, che va nel piano RESA-ASSET)
+- **Dedotto da me** (la sera, secondo messaggio): che l'ambiente stia nella stessa direttiva del tipo (`@tipo tattica caverna`) invece che in una direttiva nuova; che un tipo illeggibile lasci accesi i controlli tattici; che le mappe da contratto JSON prendano la categoria dal contratto e non dalla griglia, perché la griglia si rigenera
 
 ---
 
@@ -700,9 +707,9 @@ Fase A — Audit
 ☑ A6  editori, community e ricerca: chi verifica le mappe (§2.5-bis)
 
 Fase S — Sviluppo
-☑ V0  decisioni D1-D9 e D11 (2026-10-08), D13-D16 (la sera) · □ D10 · □ D12
+☑ V0  decisioni D1-D9 e D11 (2026-10-08), D13-D18 (la sera) · □ D10 · □ D12 · □ D19
 ☑ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest (2026-10-08: 20 test, 38 mappe, 97 errori, 53 avvisi)
-□ V2  @tipo e @deroga; 38 griglie classificate; due norme registrate
+☑ V2  @tipo con l'ambiente (D18, 2026-10-08, sera): 44 griglie su 44 classificate, 3 dubbie in D19; `tipo` e `ambiente` nel contratto JSON; norma registrata · □ @deroga resta da applicare dove serve, in V3
 ☑ V2-quater l'asse delle chiusure e le dipendenze misurate (2026-10-08, sera: D13-D16, ADR-0083 e ADR-0084; `dmcore/chiusure.py` per collaudo, renderer e UVTT, 36 porte e 13 portali raddrizzati, 13 SVG rigenerati; `tcod` nel collaudo, M4 esatta; Wesnoth solo come idea)
 ☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · □ D10 i glifi, da confermare al tavolo
 □ V3  correzioni del corpus, mappa per mappa col DM

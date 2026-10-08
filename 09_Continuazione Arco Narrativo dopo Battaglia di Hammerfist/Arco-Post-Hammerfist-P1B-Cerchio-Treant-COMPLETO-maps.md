@@ -177,6 +177,7 @@ DISTANZE CHIAVE:
 @path Avanzata PG (dal sentiero nord) ; O2 O9 O18 ; #2b9348
 @zone F10-X30 ; Zona verde protetta (raggio 15 m, +2 PF/round)
 @zone C7-AB33 ; Anello di fumo, cenere e terra bruciata (i drow bruciano la foresta)
+@tipo tattica esterno
 ```
 
 ---

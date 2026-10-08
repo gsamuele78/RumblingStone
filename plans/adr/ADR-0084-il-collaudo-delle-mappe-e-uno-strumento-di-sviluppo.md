@@ -94,3 +94,32 @@ più cara, e V6 avrà i percorsi pesati di `tcod.path` se servono.
 **Quando si rivede.** Se il collaudo entra nella catena della sessione (per
 esempio un controllo delle mappe nel corredo della serata), la ragione di
 ADR-0037 torna a valere e `tcod` va resa opzionale.
+
+---
+
+## Emendamento della stessa sera: scipy entra, gli altri quattro restano fuori con una misura migliore
+
+**Stato**: accettato dal DM il 2026-10-08 (D17 di COLLAUDO-MAPPE). **Misura**:
+[`esperimenti/dipendenze-e-asset-2026-10/`](../esperimenti/dipendenze-e-asset-2026-10/RISULTATI.md).
+
+Il DM ha chiesto perché `resvg-py`, `hypothesis`, `networkx`, `scipy` e
+`shapely` fossero rimasti fuori, e di misurarli sul compito per cui li si
+adotterebbe, non su uno solo. Rimisurati:
+
+| Libreria | Compito | Misura | Esito |
+|---|---|---|---|
+| `scipy` | M1 e M2 del collaudo | 20 ms contro 105, risultato identico al decimale | **entra**, obbligatoria nel collaudo come `tcod` (D17, scelta del DM; la proposta era «nessuna») |
+| `networkx` | strozzature e anelli (V7) | 461 ms contro 209 del Tarjan in casa, identico su 44 mappe su 44 | fuori: più lenta |
+| `shapely` | muri dell'export UVTT | 175 polilinee invece di 1.674 oggetti, ma 1.674 muri in Foundry in entrambi i casi | fuori: al tavolo non cambia niente |
+| `hypothesis` | test di proprietà sul grafo del collaudo | 5 mutanti su 6, gli stessi del generatore a seme fisso | fuori: aggiunge solo il controesempio minimo |
+| `resvg-py` | PNG senza browser | 5 volte più lento di Chromium, 5-9% dei pixel diversi | fuori |
+
+`scipy.ndimage` sostituisce in `collaudo_mappe.py` il calcolo a mano di M1 e
+M2; il test `test_m1_e_m2_come_il_calcolo_a_mano` tiene il vecchio calcolo come
+riferimento. Il guadagno assoluto è piccolo (85 ms su un collaudo di 2,5 s), e
+lo si dice: entra perché il DM l'ha voluta, con la misura scritta accanto.
+
+**fonttools** (MIT) entra fra le dipendenze di sviluppo per un'altra ragione,
+la resa delle mappe ([ADR-0085](ADR-0085-la-resa-delle-mappe-e-uguale-su-ogni-macchina.md)):
+serve solo a rigenerare i sottoinsiemi dei font, e il renderer resta in
+libreria standard.

@@ -35,6 +35,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 23 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 @north N
+@tipo tattica interni
 @mark 1 ; Q7 ; Sorella Brynja, che conta le fiale
 @mark 2 ; P4 ; Venti chierici che dormono seduti
 @mark 3 ; AF7 ; Kettra, l'alchimista del re

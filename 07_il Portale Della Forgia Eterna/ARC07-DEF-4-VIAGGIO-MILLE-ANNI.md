@@ -3178,6 +3178,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 8 ; T8 ; Il pozzo sulla cisterna
 @mark 9 ; T4 ; Le campane della torre nord
 @mark 10 ; W18 ; La postierla
+@tipo tattica esterno
 ```
 
 ### Sotto la montagna: la Scena 5

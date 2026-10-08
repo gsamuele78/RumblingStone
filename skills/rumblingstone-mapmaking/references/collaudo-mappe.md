@@ -53,6 +53,8 @@ oltre una fossa o una creatura), una creatura Grande occupa 2×2 e un'Enorme 3×
 | `ingombro/grande` | A | la creatura dichiarata con `@taglia` non arriva ai PG col suo ingombro |
 | `posa/sul-pavimento` | A | un mobile che chiude l'unico varco |
 | `posa/recinto` | A | una cella di sbarre senza porta né grata |
+| `tipo/mancante` | A | la mappa non dichiara `@tipo`: si collauda come tattica |
+| `tipo/illeggibile` | E | un tipo o un ambiente fuori elenco (`dmcore/legenda.py`); i controlli tattici restano accesi |
 | `posa/verso-illeggibile` | E | una direttiva `@verso` che non si legge, o che punta a una cella senza chiusura |
 | `posa/asse-ambiguo` | A | una chiusura con muri e passaggi su tutti e due gli assi: si disegna est-ovest finché il DM non scrive `@verso` |
 | `posa/verso-contro-muri` | A | `@verso` dice un asse, i muri intorno l'altro: vince la direttiva, ma forse è un errore di battitura |
@@ -69,7 +71,8 @@ renderer le ignora, quindi l'SVG non cambia.
 
 ```
 @north N                              il nord (obbligatorio nelle tattiche)
-@tipo tattica                         oppure strategica, schema
+@tipo tattica caverna                 tipo: tattica, strategica o schema;
+                                      ambiente: interni, caverna, esterno o abitato
 @collega B05 ; Mappe/ATLANTE.md#3 D12 la scala in B05 porta a D12 della mappa 3
 @taglia J07 ; Grande                  la creatura in J07 non è Media
 @vista giocatori                      questa è la versione per i giocatori

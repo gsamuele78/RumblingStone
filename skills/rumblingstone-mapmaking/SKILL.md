@@ -38,11 +38,19 @@ are **generated artifacts — never hand-edit them**. CI
 3. Use ONLY the universal legend symbols (`references/legenda-universale.md`);
    `scripts/legend.yaml` is the source of truth (ADR-0048): renderer, UVTT
    export, importer and the Blender chain all derive from it.
-   Local extra symbols render as raw emoji and must be declared in the file.
+   Local extra symbols must be declared in the file; they render with the
+   Noto Emoji SVG from `scripts/emoji-noto/` (ADR-0085), so they look the same
+   on every machine — run `python3 scripts/build_emoji_noto.py` after adding
+   one. A concept becomes universal only when it means the same thing in every
+   map that uses it.
 4. Every map ships with the three companion blocks (Ambiente / Tattiche /
    Evoluzione) per `campaign/templates/mappa-tattica-template.md`.
-5. All art is procedural/in-house (no external assets, no tracing of
-   third-party art — style conventions yes, files never).
+5. Art is procedural/in-house by default. A third-party file enters a map
+   only under ADR-0085: a licence that allows redistribution without imposing
+   itself (CC0, CC BY, CC BY-NC, Apache-2.0, OFL, MIT — never CC BY-SA or GPL),
+   with the licence and a `CREDITS.md` (author, changes) in its folder. No
+   tracing of third-party art. The map text uses the volumes' fonts, embedded
+   (`scripts/fonts/mappe/`, `build_font_mappe.py`).
 6. **Fidelity contract** (piano RENDER-MAPPE-FEDELTÀ, 2026-07-23): side
    annotations on a grid row start after **≥3 spaces** (or a detached `│`
    preceded by ≥2 spaces, or box-drawing) — the parser never reads them as

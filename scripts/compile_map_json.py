@@ -240,6 +240,15 @@ def validate(spec: dict) -> tuple[int, int]:
     if not isinstance(title, str) or not (3 <= len(title) <= 100):
         errors.append("'title': stringa obbligatoria (3-100 caratteri).")
 
+    # tipo e ambiente (D18): lo stesso elenco del collaudo
+    from dmcore import legenda as _legenda
+    if "tipo" in spec and spec["tipo"] not in _legenda.TIPI_MAPPA:
+        errors.append(f"'tipo': uno di {', '.join(_legenda.TIPI_MAPPA)}.")
+    if "ambiente" in spec and spec["ambiente"] not in _legenda.AMBIENTI_MAPPA:
+        errors.append(f"'ambiente': uno di {', '.join(_legenda.AMBIENTI_MAPPA)}.")
+    if "ambiente" in spec and "tipo" not in spec:
+        errors.append("'ambiente' senza 'tipo': dichiara anche il tipo.")
+
     # map_size
     size = spec.get("map_size")
     cols = rows = 0
@@ -515,6 +524,8 @@ def _annotation_lines(spec: dict) -> list[str]:
     lines: list[str] = []
     if spec.get("north"):
         lines.append(f"@north {spec['north']}")
+    if spec.get("tipo"):
+        lines.append(f"@tipo {spec['tipo']}" + (f" {spec['ambiente']}" if spec.get("ambiente") else ""))
 
     # numbered roster (one @mark per unit)
     for i, u in enumerate(spec.get("units", []) or [], 1):
