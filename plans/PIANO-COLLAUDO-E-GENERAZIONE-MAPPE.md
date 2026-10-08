@@ -9,7 +9,7 @@
 > Coast per D&D 3.5 e Pathfinder 1e; di misurare prima cosa c'è e cosa va
 > migliorato o validato; poi un piano e un ADR che coprano tutti i passi.
 > **Decisione**: [ADR-0082](adr/ADR-0082-la-mappa-si-collauda-come-grafo-prima-che-come-immagine.md) (accettata il 2026-10-08, non attuata; l'estensione sulla posa dei simboli è la D8).
-> **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto.
+> **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto. *(D28 l'ha chiuso la #225, fusa dal DM lo stesso giorno, prima del set nuovo: il passaggio delle sue mappe al set è la D12.)*
 > **Misura riproducibile**: `python3 -I plans/esperimenti/collaudo-mappe-2026-10/misura_mappe.py`, uscita del 2026-10-08 in [`misura-2026-10-08.txt`](esperimenti/collaudo-mappe-2026-10/misura-2026-10-08.txt), commit `8297670`.
 >
 > **In breve**: il repo sa disegnare una mappa in modo deterministico e
@@ -37,7 +37,7 @@ della legenda. `fase1.py` sui file toccati: nessun archivio fra i bersagli.
 | [ADR-0048](adr/ADR-0048-legenda-funzionale-fonte-unica.md), [ADR-0043](adr/ADR-0043-le-montagne-sono-muri-e-nessun-master-esce-dal-controllo.md), VENDIBILITA §10 | `legend.yaml` con `blocks_movement`, `blocks_sight`, `cover`, `move_cost`; SVG e UVTT leggono gli stessi muri | **il dato c'è**: era il prerequisito che a luglio mancava. Nessuno script legge ancora `cover` né `move_cost` |
 | [INTEGRAZIONE-PIPELINE-MAPPE-3-MODALITÀ](PIANO-INTEGRAZIONE-PIPELINE-MAPPE-3-MODALITA.md), [RENDER-FEDELTÀ](PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md), [IMPORT-ULTRACLEAR](PIANO-IMPORT-ULTRACLEAR-ASCII-TO-JSON.md), [RICERCA-GENERATORI-MAPPE](RICERCA-GENERATORI-MAPPE-QUALITA-RHOD.md) | produzione: tre modalità, contratto JSON, UVTT, renderer, import | **si usano**, non si toccano. Il generatore di V9 scrive nel contratto JSON che già esiste |
 | [PIANO-EDITOR-VISUALE-MAPPE](PIANO-EDITOR-VISUALE-MAPPE-TATTICHE.md) | editor a griglia, progetto separato | fuori. Il formato dei rilievi di V1 è pensato perché l'editor possa mostrarli, come già il `--json-report` di `import_ultraclear` |
-| Lotto **D28** di [LETTORE-E-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) | le mappe di Hammerfist nel 372 e nel 1372 | **viene prima** e non si tocca. Le sue griglie nuove sono il primo banco di prova di V1 |
+| Lotto **D28** di [LETTORE-E-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) | le mappe di Hammerfist nel 372 e nel 1372 | **viene prima** e non si tocca. Chiuso dalla #225 il 2026-10-08 (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, M7-D, M7-E, M7-F); le sue sei griglie sono il primo banco di prova di V1, §3 «D28 col collaudo» |
 | [ADR-0037](adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md), [ADR-0039](adr/ADR-0039-profili-regole-multisistema.md), [ADR-0005](adr/ADR-0005-confini-ip-uso-non-commerciale.md) | solo libreria standard; numeri nei profili; niente mappe di terzi come dato | vincoli. L'ADR-0015 della PR #72, che chiedeva `scipy`, `networkx` e `tcod`, resta rifiutato: §2.3 mostra che non servono |
 
 ---
@@ -384,10 +384,35 @@ effetti oggi; è scritto nel test e non è corretto qui.
 stessa riga** (`_resolve_bases`). Un'icona nella prima colonna di una stanza, o
 in un corridoio verticale largo uno, viene quindi disegnata **sulla roccia**:
 le brande, le rastrelliere e la prima forgia di D28 sembravano dentro il muro
-al primo rendering. Le mappe D28 sono disegnate tenendone conto; il renderer
+al primo rendering della stesura poi ritirata. Quella stesura lo aggirava; il renderer
 non è stato toccato, perché cambiare la regola cambia i 41 SVG di oggi.
 
 `[engine: Sonnet 5 · effort: medio · qualità: l'icona prende il terreno più frequente fra i quattro vicini; il delta dei 41 SVG misurato e mostrato al DM prima di rigenerarli]` · **C**, da fare quando il DM vuole
+
+### D28 col collaudo · cosa dice lo strumento sulle mappe della #225
+
+Il lotto D28 l'ha fatto un'altra sessione, fusa dal DM con la #225 mentre
+questo ramo ne faceva una seconda stesura. Nel merge di `main` la stesura di
+questo ramo è ritirata e vince la #225: sono le mappe che il DM ha deciso con
+D44-D48. Le sei griglie nuove passate da `collaudo_mappe.py`:
+
+| Mappa | Errori | Avvisi | Cosa |
+|---|---|---|---|
+| M7-D, 372 e 1372 | 0 | 0 | — |
+| M7-F, 372 e 1372 | 0 | 0 | — |
+| M7-E, 1372 | 0 | 5 | quattro `🏮` in gallerie larghe uno (`posa/sul-pavimento`), e le cinque zone che ne vengono |
+| M7-E, 372 | **1** | 5 | gli stessi avvisi, e **Zeth in K10 non si raggiunge** (`raggiungibile/unita`): il braciere in M10 chiude la galleria fra lui e la scala |
+
+🔎 L'errore è vero, non del metro: in una galleria di 1,5 m un braciere è un
+ostacolo, e la legenda universale lo tratta così. Al tavolo il DM lo
+scavalca senza pensarci; un VTT con i muri derivati no. Si corregge in un modo
+solo, spostando la luce, ed è una posizione: la decide il DM (D12).
+
+Le mappe della #225 hanno già `@north`, e usano `🪜` per tutte e cinque le
+scale. Il set nuovo direbbe `🔼` o `🔽` con la `@collega` alla gemella, e
+`🟤` per la caverna se il DM lo conferma. Neanche questo è fatto: sono mappe
+decise dal DM, fuse da un'ora, e cambiarle in silenzio è proprio ciò che
+ADR-0007 vieta.
 
 ### V3 · Le correzioni del corpus
 
@@ -541,7 +566,7 @@ sono le mappe di D28.
 ## §5 · Ordine e dipendenze
 
 ```
-V2-bis ─► V1 (+ @tipo, @deroga) ─► V11-bis ─► D28 (LETTORE, rifatto e collaudato)
+V2-bis ─► V1 (+ @tipo, @deroga) ─► V11-bis ─► D28 (fatto dalla #225, collaudato; il set nuovo è la D12)
                                                  └─► AMBIENTE A1-A8 ─► V2 ─► V3 ─► V4
                                                                         └──► V5 ─► V8
                         └─► V6 ─► V7
@@ -592,6 +617,7 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 | ~~D9~~ | V2-bis | ✅ **Decisa il 2026-10-08, il DM: sì.** Era: **Le porte segrete nella versione per i giocatori**: si disegnano come muro (il giocatore non sa che c'è) e il collaudo boccia una porta segreta che compare in una mappa per i giocatori? Proposta: sì |
 | D10 | V2-bis | **I glifi del set nuovo**: quelli della tabella di V2-bis? Proposta: sì; se un glifo non si legge bene al tavolo, si cambia lì, prima che una mappa lo usi |
 | ~~D11~~ | V11-bis | ✅ **Decisa il 2026-10-08, il DM: serve un ruolo LLM in più** che controlli che le mappe siano corrette, che gli algoritmi richiesti siano stati usati e che le parti sbagliate siano state corrette (*«it will need another llm role for checking that maps are correct»*). Diventa V11-bis: il collaudatore di mappe |
+| D12 | D28, V3 | **Le mappe della #225 passano al set nuovo?** Le cinque `🪜` diventano `🔼`/`🔽` con `@collega`, e il braciere di M7-E in M10 (e i tre gemelli) si sposta in una nicchia del muro, perché oggi chiude la galleria fra la scala e Zeth. Proposta: sì, in un lotto solo, con i sei SVG rigenerati e il collaudo a zero errori |
 
 <!-- eco: COLLAUDO-MAPPE 2026-10-08 -->
 - **Decise**: (primo messaggio) D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo. (Secondo messaggio) D8 il set dei simboli prima di D28, e D28 rifatto col set nuovo · D9 le porte segrete non compaiono nella versione per i giocatori · D11 un ruolo LLM di collaudo

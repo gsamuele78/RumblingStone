@@ -12,11 +12,11 @@ M7-C — La tenda del comando di Zog'tar (notte, ≈372 DR)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟢 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-03 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-04 🟩 🟩 ⛺ ⛺ ⛺ 🟩 🟩 ⛺ ⛺ ⛺ ⛺ ⛺ 🚪 ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
-05 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🦴 🟫 🟫 🔴 🟫 🔴 🟫 🟫 🟫 🪓 ⛺ 🟩 🟩 ⛺ ⛺ ⛺ 🟩 🟩
-06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🏮 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
-07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟡 🟩 🟩 🟩
+03 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+04 🟩 🟩 ⛺ ⛺ ⛺ 🟩 🟩 ⛺ ⛺ ⛺ ⛺ ⛺ 🚪 ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+05 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🦴 🟫 🟫 🔴 🟫 🔴 🟫 🟫 🟫 🪓 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🏮 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🪑 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 09 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟪 🟫 🟫 🟫 🟫 🦴 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 10 🟩 🟩 ⛺ ⛺ ⛺ 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
@@ -40,8 +40,6 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 @mark 6 ; P12 ; Guardia hobgoblin (Guerriero 8)
 @mark 7 ; L5 ; Guardia hobgoblin (Guerriero 8)
 @mark 8 ; N5 ; Guardia hobgoblin (Guerriero 8)
-@mark 9 ; P3 ; Grask, l'araldo: dorme seduto fuori dalla soglia, la custodia del corno incatenata al polso (Combattente 1)
-@mark 10 ; W7 ; Il sacerdote dell'orda, nella tenda accanto: arriva in 1d4+1 round (Adepto 7)
 @path Il corridore hobgoblin (complicazione 6 della Scena 6) ; Z7 U3 N3 ; #d62828
 ```
 
@@ -66,8 +64,6 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | Orda | Guardia hobgoblin | 🔴 | 1 | Guerriero 8 | P12 |
 | Orda | Guardia hobgoblin | 🔴 | 1 | Guerriero 8 | L5 |
 | Orda | Guardia hobgoblin | 🔴 | 1 | Guerriero 8 | N5 |
-| Orda | Grask, l'araldo: dorme seduto fuori dalla soglia, la custodia del corno incatenata al polso | 🔴 | 1 | Combattente 1 | P3 |
-| Orda | Il sacerdote dell'orda, nella tenda accanto: arriva in 1d4+1 round | 🟡 | 1 | Adepto 7 | W7 |
 
 - **Disposizione iniziale**: [chi è dove e perché — vedi tabella Forze]
 - **Round 1-2**: [reazione al contatto]
@@ -79,11 +75,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
-| B | [trigger] | La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani; la geometria si cambia qui e si ricompila. | [effetto] |
+| B | [trigger] | La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani, alta 6 m al palo centrale e 3 m ai lati; la geometria si cambia qui e si ricompila. | [effetto] |
 | B | [trigger] | I PG arrivano da nord, dalla fortezza. La soglia e' illuminata, il fondo no: Balvar siede dove i bracieri non arrivano (Scena 7). | [effetto] |
 | B | [trigger] | Runa 3: su Balvar (silenzio a comando). Runa 4: vuota, la incide durante lo scontro. | [effetto] |
-| B | [trigger] | Quote canoniche (DM, 2026-10-07): il telo e' alto 6 m al palo centrale e 3 m ai lati. Chi vola sotto il telo resta fuori dalla portata dell'ascia (3 m). Lotto D28, 2026-10-08. | [effetto] |
-| B | [trigger] | Grask dorme fuori, davanti alla soglia; il sacerdote dorme nella tenda a est, a dieci passi (Scena 8). Lotto D28, 2026-10-08. | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.
 

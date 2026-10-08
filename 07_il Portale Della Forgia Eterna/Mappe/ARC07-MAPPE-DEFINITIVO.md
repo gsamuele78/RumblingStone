@@ -45,9 +45,12 @@
 | **S-2** | Stanza della Corona (purificata) | **geometria canonica ARC-06**: `06_.../CoronaDiAdamantio/Tactics_and_maps.md` + stato DEF-2 | hub/scenica | ✅ |
 | **R-1** | Il Cerchio del Rito (resurrezione) | DEF-3 | rituale/scenica | ✅ |
 | **M7-A** | Hammerfist ≈372 DR (fortezza & orda) | DEF-4 | strategica | ✅ |
-| **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ (rifatta col lotto D28, 2026-10-08) |
-| **M7-C** | La tenda del comando | DEF-4 | tattica | ✅ `ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json` |
-| **D28-1…4** | Hammerfist 372 e 1372: l'ala nella roccia (fucina, bottega, quartieri, cappella, armeria) e le gallerie di Zeth, più le due sezioni a livelli | DEF-4 Scena 5 · ARC-08 | tattica + sezioni | ✅ `ARC07-MAPPE-D28-HAMMERFIST.md`, collaudo a zero errori |
+| **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ |
+| **M7-C** | La tenda del comando di Zog'tar | DEF-4 Scene 7-8, contratto JSON (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json`) | tattica | ✅ |
+| **M7-S** | Hammerfist in sezione, 372 e 1372 | lotto D28, `ARC07-MAPPE-HAMMERFIST-372-1372.md` | sezione | ✅ |
+| **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 e 1372 (D48) |
+| **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30, D48; contratto JSON | tattica | ✅ 372 e 1372 |
+| **M7-F** | La fucina grande, livello −3 (372 e 1372) | D45, D48; contratto JSON | tattica | ✅ 372 e 1372 |
 | **CM-1** | Il Cuore della Montagna (1372, arrivo) | **geometria canonica ARC-08**: Atlante-Hammerfist **MAPPA 5** (⚠️ scala 3 m) + regia DEF-5 | scenica/climax 3B | ✅ |
 
 > Rese SVG storiche (ancora valide, stanze «prima visita»): `Portale-Forgia-L1`
@@ -58,7 +61,7 @@
 - **DEF-1 · Piano della Terra**: T-1 · T-2 · T-3 · T-4 · T-5 · T-6
 - **DEF-2 · Ritorno & Affreschi**: S-1 · S-2
 - **DEF-3 · Resurrezione**: R-1
-- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · D28 (l'ala nella roccia e le gallerie, 372 e 1372)
+- **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
 - **DEF-5 · Ritorno a Hammerfist**: CM-1
 
 ---
@@ -492,43 +495,39 @@ LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin · † corpo di Hella · 🌰 3
 ════════════════════════════════════════════════════════════════════════
  HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
 ════════════════════════════════════════════════════════════════════════
-                                NORD ▲
-   ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  LA MONTAGNA  ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
-   ⛰ l'ala nella roccia: fucina, bottega, quartieri, cappella ⛰ 🗼 torre
-   ⛰ [Sala del Trono: Re Thorek I]       → Livello 0 (mappe D28)     ⛰
-   ⛰ ╔══════════ CORTILE INTERNO (M7-B, il duello all'alba) ══════════╗
-     ║  🗿 statua del re antenato      ⛲ pozzo e cisterna              ║
-     ╚═════════════════════ porta interna ═════════════════════════════╝
- ▒ ╔══════════════════════ CORTILE ESTERNO ═══════════════════╗
- ▒ ║ 🏰 camminamenti a 18 m · BRECCIA ▓▓ sul camminamento est ║      🌲🌲
- ▒ ╚════════════ PORTA PRINCIPALE (Scena 3, la targa) ═══════╝      🌲 BOSCO
- ▒ postierla: feritoia nella roccia                                   🌲 a est:
- ▒ viva, sul fianco ovest [PROPOSTA]   ▲▲▲ scale d'assedio, arieti    🌲 il portale
-                                                                      🌲 a 500 m
-     — spianata davanti alla porta —
-     ⛺⛺⛺⛺⛺⛺⛺⛺⛺ MARE DI TENDE, largo circa 2 km ⛺⛺⛺⛺⛺⛺⛺⛺
-     GP1▪ ⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺   👤 VATORE (Scena 9)        ▪GP2
-          ⛺⛺  ║ TENDA DEL ║ ⛺⛺⛺   dalla postierla ~1 km:
-          ⛺⛺  ║ COMANDO   ║ ⛺⛺⛺   cinque blocchi da 200 m
-          ⛺⛺  ╚═══════════╝ ⛺⛺⛺   Zog'tar e 4 guardie (M7-C)
-     GP3▪ ⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺⛺⛺             ▪GP4
-             oltre il campo: le colline del drago [PROPOSTA]     SUD ▼
+                       NORD ▲  la montagna: dentro, le sale scendono (M7-S)
+   ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
+        ╔════════════════ 🔔 torre nord ═════════╗
+        ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
+        ║  CORTILE INTERNO → M7-B (il duello)     ║     mura bianche, sicura
+        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
+              ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
+                                                   ┊      🌲 ✦ portale, ~500 m
+   ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+   GP1▪ ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺ ▪GP2 ┊  ← Zona 2: MARE DI TENDE
+   ⛺⛺⛺⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺⛺⛺ ◄┘  via dei PG: fianco est, poi da nord
+   ⛺⛺⛺⛺⛺⛺ ║ TENDA DEL  ║ ⛺⛺⛺⛺⛺      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
+   ⛺⛺⛺⛺⛺⛺ ║  COMANDO   ║ ⛺⛺⛺⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺⛺⛺⛺⛺⛺ ╚═══════════╝ ⛺⛺⛺⛺⛺      👤 VATORE fra le tende (Sc. 9)
+   GP3▪ ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺ ▪GP4
+                       SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · ⛰ montagna · 🏰 mura (bianche, nuove) · ▓ breccia · ⛺ tende
-(copertura) · ▪GP posti di guardia · ╔╗ tenda del comando · 👤 Vatore ·
-🌲 bosco · ▒ roccia viva. Skullcrusher cala sul cortile interno → M7-B.
+LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
+▫ postierla · ⛺ tende (copertura) · ▪GP posti di guardia · ╔╗ tenda del
+comando · ┊◄ la via dei PG · 👤 Vatore · ⚔️ scontro · ✦ arrivo del portale.
+Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
 - **Tipo / scala**: strategica (infiltrazione + orientamento). Non è una griglia
   di combattimento; il duello è su M7-B.
-- **Orientamento** (lotto D28, 2026-10-08, dal testo giocato): la montagna a
-  **nord**, il bosco a **est** con il portale a 500 m dalle mura (Scena 1), il
-  campo a **sud** (Scena 1: «verso sud, i fuochi dell'orda»); la postierla è una
-  feritoia nella roccia viva (Scena 6), sul fianco ovest `[PROPOSTA — needs DM
-  confirmation]`. Prima la mappa diceva «postierla nord» e metteva il cortile
-  interno fuori dalle mura: l'avevano segnato tutte e quattro le letture a freddo.
-- **Terreno & zone**: **Zona 1** = Hammerfist giovane (mura bianche, sicura; il
-  portale lascia i PG **fuori**, nel bosco a est) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
+- **Orientamento** (D44, 2026-10-08): nord in alto, la montagna. La fortezza
+  ci si appoggia; porta principale e **postierla** sono nel muro sud, la
+  postierla all'angolo sud-est sotto la torre est. Il campo dell'orda sta a sud,
+  il bosco a est: il portale lascia i PG lì, a circa 500 m dalle mura (Scena 1).
+  I PG escono dalla postierla, scendono lungo il fianco est del campo e arrivano
+  alla tenda del comando da nord, dalla parte della fortezza.
+- **Terreno & zone**: **Zona 1** = Hammerfist giovane (mura bianche, sicura, arrivo
+  del portale) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
   = copertura) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
   guardia** GP1-GP4 ai margini.
 - **Posizioni notevoli**: **Tenda del Comando** (Zog'tar Deatheye, GS 14, + 4
@@ -542,67 +541,72 @@ LEGENDA · ⛰ montagna · 🏰 mura (bianche, nuove) · ▓ breccia · ⛺ tend
 - **Evoluzione**: raggiunto il cortile all'alba → **Skullcrusher** entra dall'alto → M7-B.
 - **Riferimento**: DEF-4 Scene 2-9; la tenda del comando è la mappa M7-C (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`).
 
-## MAPPA M7-B — L'ARENA DEL DUELLO: SKULLCRUSHER IL NERO (tattica BOSS · GS 14)
+## MAPPA M7-B — L'ARENA DEL DUELLO: SKULLCRUSHER IL NERO (tattica BOSS · GS 12)
 
 ```
 ════════════════════════════════════════════════════════════════════════
- CORTILE INTERNO — 36 m × 22,5 m (24 col × 15 righe · 1,5 m) · cielo aperto
- Skullcrusher scende in picchiata da circa 45 m, sopra V05. PG alla riga 16.
+ CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
+ Nord in alto, la montagna. Skullcrusher entra da V1 (~45 m) e picchia. PG dalla riga 16.
 ════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
-04    🏰🏰🚪🚪🚪🏰🏰🏗🏰🏰🚪🏰🏰🏰🗼🏰🏰🏰🏗🏰🏰🏰🏰🏰   camminamenti +4,5 m · 🏗 gru · 🗼 torre nord
-05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔔🟫🟫🗿🟫🟫🟫⚫🟫🏰   🔔 le campane · 🗿 il re antenato · ⚫ il drago, in quota
-06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   🪨 macerie: copertura
-07    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫⛲🟫🟫🟫🏰   ⚔ impronta d'atterraggio (Enorme) · ⛲ il pozzo: la cisterna sotto
-10    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
+02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
+03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
+04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
+05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
+06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
+08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
+09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
+10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰
+12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
 17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-18    🏰🏰🏰🏰🏰🏗🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏗🏰🏰🏰🏰🏰   🚪 verso il cortile esterno e la porta principale
+18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · ⚫ Skullcrusher (in quota) · ⚔ impronta d'atterraggio del drago
-(Enorme) · 🟫 cortile · 🪨 macerie (copertura) · 🏰 mura e camminamenti
-(+4,5 m, arcieri nani) · 🚪 l'arco della fucina (C-E04), la porta dell'ala (K04),
-la porta del cortile esterno (L-M18) · 🏗 gru · 🗼 torre nord · 🔔 campane ·
-🗿 statua del re antenato · ⛲ pozzo e cisterna · 🔵 PG e Re Thorek I.
+LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
+d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) ·
+🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
+⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
+del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.
 @north N
-@tipo tattica
-@mark 1 ; V05 ; Skullcrusher (quota ~45 m)
+@mark 1 ; V1 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
 @mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
-@deroga m2/vuoto ; l'arena del duello e' aperta di proposito: il drago Enorme deve poter atterrare e ripartire
+@mark 7 ; C5 ; La fucina originale, accesa da stanotte
+@mark 8 ; T8 ; Il pozzo sulla cisterna
+@mark 9 ; T4 ; Le campane della torre nord
+@mark 10 ; W18 ; La postierla
 ```
-- **Tipo / scala**: tattica BOSS, 24×15 (36 m × 22,5 m). **Skullcrusher il Nero,
-  GS 14** (D5; capostipite di Fauci di Palude). Cielo aperto.
-- **Terreno & altitudini**: il cielo sta **sopra tutto il cortile**: la quota del
-  drago si segna a parte, e chi non vola né ha gittata non lo raggiunge finché
-  non scende (Scena 11, «Chi non vola»). **Camminamenti +4,5 m** 🏰 (arcieri
-  nani, copertura e altezza); **macerie** 🪨 (copertura +4 CA) al suolo;
-  **impronta d'atterraggio** ⚔ (dove il drago Enorme si posa se scende).
-- **Le cose del cortile** (tabella della Scena 11, lotto D28 del 2026-10-08):
-  **gru** 🏗 sui camminamenti (H04, S04, F18, S18); **la fucina originale**,
-  accesa, dietro l'arco C04-E04 (mappa 1 di `ARC07-MAPPE-D28-HAMMERFIST.md`);
-  **il pozzo** ⛲ in T09, con la cisterna sotto; **la torre nord** 🗼 in O04 con
-  **le campane** 🔔 ai suoi piedi (O05). La **statua del re antenato** 🗿 in R05
-  è la stessa che nel 1372 nasconde il passaggio di fuga (MAPPA 3X di ARC-08)
-  `[PROPOSTA — needs DM confirmation]`. La porta K04 porta all'ala nella roccia,
-  L-M18 al cortile esterno.
+- **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 12** (capostipite
+  di Fauci di Palude). Cielo aperto.
+- **Terreno & altitudini**: **zona aerea** ☁️ (righe 01-03, quota; il drago vi resta:
+  serve **volo o gittata**); **camminamenti +4,5 m** 🏰 (arcieri nani, copertura e
+  altezza); **macerie** 🪨 (copertura +4 CA) al suolo; **impronta d'atterraggio** ⚔
+  (dove il drago Enorme si posa se scende).
+- **Cosa c'è nel cortile** (la tabella «IL CORTILE» della Scena 11, sulla
+  griglia dal 2026-10-08, lotto D28): la **fucina originale** a B-E05, con la
+  forgia accesa a C-D05, che è la prima forgia della fortezza (D45); davanti,
+  l'**incudine del rito** a C07 (Scena 12); il **pozzo** a T08, sopra la
+  cisterna; le **campane** della torre nord a T04; le due **gru** a B10 e W10,
+  con le corde che scendono dal camminamento; la **statua del re** a L-M05 (la
+  sola, Scena 3); la **porta principale** con la targa a L-M18, la **postierla**
+  a W18 sotto la torre est (D44); la porta che entra nella montagna a O-P04.
+  Distanze utili: dall'impronta del drago (K-M 09-11) la forgia è a ~12 m, il
+  pozzo a ~10 m, ciascuna gru a ~13 m.
+- **Nel 1372** (D46, D48): questo cortile è il nucleo del cortile interno di
+  ARC-08 (D46), ingrandito nei secoli; la statua del re è la **statua del Re
+  Antenato** di H3-1, e il tunnel di fuga dietro di lei viene scavato dopo il
+  372. La griglia del 1372 è H3-1 (`08_.../Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`).
 - **Posizioni iniziali**: PG a riga 16 (Thorik D16, Tordek G16, Artemis Q16, Hella
-  T16); **Re Thorek I** in L16. Skullcrusher sopra V05, quota ~45 m.
-- ⚠️ **Cosa è cambiato il 2026-10-08 (lotto D28)**: le tre righe «zona aerea» sopra
-  il muro nord sono state tolte, perché mettevano il cielo a nord del cortile; la
-  numerazione delle righe resta quella di prima (04-18), così le posizioni del
-  testo non cambiano. Le gru, la fucina, il pozzo, la torre e la statua sono
-  entrati dalla tabella della Scena 11.
+  T16); **Re Thorek I** dietro (riga 17). Skullcrusher a V1, quota ~45 m.
 - **Tattiche Skullcrusher (nemico — dilemma centrale)**: **NON vuole atterrare** (in
   cielo è un dio): soffio d'acido in picchiata, poi risale. A terra è vulnerabile al
   **full-attack** ma devastante. **Meccanica «la Forgia ricorda le ferite»**: ogni

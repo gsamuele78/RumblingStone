@@ -14,7 +14,7 @@
     { "type": "⛺", "line": [[7, 3], [7, 13]], "label": "Telo ovest della tenda" },
     { "type": "⛺", "line": [[18, 3], [18, 13]], "label": "Telo est della tenda" },
     { "type": "🚪", "at": [12, 3], "label": "La soglia (runa 1: niente teletrasporti)" },
-    { "type": "🟪", "at": [12, 8], "label": "Palo centrale, alto 6 m (runa 2: barriera di lame; abbatterlo: Forza CD 20)" },
+    { "type": "🟪", "at": [12, 8], "label": "Palo centrale, alto 6 m (runa 2: barriera di lame)" },
     { "type": "🪑", "at": [9, 7], "label": "Tavola con la mappa di Hammerfist" },
     { "type": "👑", "at": [12, 12], "label": "Seggio di ossa di Zog'tar" },
     { "type": "🏮", "at": [9, 10], "label": "Braciere del seggio" },
@@ -28,8 +28,7 @@
     { "type": "⛺", "center": [22, 10], "radius": 1, "label": "Tende dell'orda" },
     { "type": "⛺", "center": [22, 16], "radius": 1, "label": "Tende dell'orda" },
     { "type": "⛺", "center": [9, 17], "radius": 1, "label": "Tende dell'orda" },
-    { "type": "⛺", "center": [16, 17], "radius": 1, "label": "Tende dell'orda" },
-    { "type": "⛺", "center": [22, 4], "radius": 1, "label": "Tenda del sacerdote dell'orda, a dieci passi dal telo est" }
+    { "type": "⛺", "center": [16, 17], "radius": 1, "label": "Tende dell'orda" }
   ],
   "hazards": [
     { "type": "🔥", "at": [5, 13], "label": "Falò", "effect": "luce fioca a 3 m: Nascondersi CD +4 nei quadretti vicini" },
@@ -43,18 +42,14 @@
     { "faction": "Orda", "name": "Guardia hobgoblin", "token": "🔴", "at": [10, 11], "cr": "Guerriero 8" },
     { "faction": "Orda", "name": "Guardia hobgoblin", "token": "🔴", "at": [15, 11], "cr": "Guerriero 8" },
     { "faction": "Orda", "name": "Guardia hobgoblin", "token": "🔴", "at": [11, 4], "cr": "Guerriero 8" },
-    { "faction": "Orda", "name": "Guardia hobgoblin", "token": "🔴", "at": [13, 4], "cr": "Guerriero 8" },
-    { "faction": "Orda", "name": "Grask, l'araldo: dorme seduto fuori dalla soglia, la custodia del corno incatenata al polso", "token": "🔴", "at": [15, 2], "cr": "Combattente 1" },
-    { "faction": "Orda", "name": "Il sacerdote dell'orda, nella tenda accanto: arriva in 1d4+1 round", "token": "🟡", "at": [22, 6], "cr": "Adepto 7" }
+    { "faction": "Orda", "name": "Guardia hobgoblin", "token": "🔴", "at": [13, 4], "cr": "Guerriero 8" }
   ],
   "movements": [
     { "name": "Il corridore hobgoblin (complicazione 6 della Scena 6)", "path": [[25, 6], [20, 2], [13, 2]], "color": "#d62828" }
   ],
   "notes": [
-    "La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani; la geometria si cambia qui e si ricompila.",
+    "La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani, alta 6 m al palo centrale e 3 m ai lati; la geometria si cambia qui e si ricompila.",
     "I PG arrivano da nord, dalla fortezza. La soglia e' illuminata, il fondo no: Balvar siede dove i bracieri non arrivano (Scena 7).",
-    "Runa 3: su Balvar (silenzio a comando). Runa 4: vuota, la incide durante lo scontro.",
-    "Quote canoniche (DM, 2026-10-07): il telo e' alto 6 m al palo centrale e 3 m ai lati. Chi vola sotto il telo resta fuori dalla portata dell'ascia (3 m). Lotto D28, 2026-10-08.",
-    "Grask dorme fuori, davanti alla soglia; il sacerdote dorme nella tenda a est, a dieci passi (Scena 8). Lotto D28, 2026-10-08."
+    "Runa 3: su Balvar (silenzio a comando). Runa 4: vuota, la incide durante lo scontro."
   ]
 }

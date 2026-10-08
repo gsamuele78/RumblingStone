@@ -211,7 +211,7 @@ developer e del playtester; la misura del miglioramento.
       D28-b; e D7-D10 dalle fasi F3-F5). *(2026-10-07: decise il 2026-09-30 e
       applicate con `f7303df`; la casella era rimasta indietro. Per DEF-4 restano
       aperte D27, D39 e D40, più le marcature di F3-quinquies)*
-- [ ] **il lotto mappe D28** — *prioritario per il DM (2026-10-07)*: le stesse
+- [x] **il lotto mappe D28** *(fatto il 2026-10-08: M7-A orientata, M7-B col cortile della Scena 11, M7-C con le altezze, la sezione M7-S e le griglie M7-D, M7-E, M7-F in due stati in `Mappe/ARC07-MAPPE-HAMMERFIST-372-1372.md`; gli stati del 1372 decisi con D48 lo stesso giorno)* — *prioritario per il DM (2026-10-07)*: le stesse
       mappe, con le modifiche del tempo, servono nel **1372** come campo di
       battaglia dell'invasione di Hammerfist (ARC-08): prima per la **ritirata
       progressiva** dei difensori fino al Cuore della Montagna, poi per la
@@ -520,8 +520,8 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       della Catena), il drago arriva in circa 70 round, e se trova Zog'tar o le
       guardie in piedi entra nello scontro, EL 18-19, voluto dal DM, con l'avviso
       e l'uscita scritti
-- [ ] **subito, in una sessione nuova**: il lotto mappe D28 (STATO-E-ORDINE §0),
-      poi il giro 3 delle letture, un subagente alla volta
+- [x] il lotto mappe D28 (2026-10-08)
+- [ ] **subito**: il giro 3 delle letture su DEF-4, un subagente alla volta
 - [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
       approvata (D1)
 
@@ -757,12 +757,23 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | ~~D41~~ | F3-ter | ✅ **Decisa il 2026-10-07**: strada **B**. Il re dà il Giorno 21 le reliquie vendute a Gunnvor nel 372 e copre la differenza in gemme, fino a 10.000 mo per PG; vale anche la tacca nel legno del conto. Applicata in `ARC08-17` §2-§3 |
 | ~~D42~~ | F3-ter | ✅ **Decisa il 2026-10-07**: sì a tutto. Profili PF1e di Rethmar, Dauth e Channathgate, le casse, i loxo, la Cintura del monaco come premio del Torneo, il Tempio di Rethmar con un chierico di 13° e un diamante. Marcati `[CANONE — DM 2026-10-07, D42]` nei banchi e in `ARC08-17` |
 | ~~D43~~ | F3-quater | ✅ **Decisa il 2026-10-07** (il DM: *«1 calcola in proporzione, 2 ok»*). **(a)** In proporzione al conto della fucina le monete di Thorek I in tasca ai PG sono **zero**: la borsa al momento di pagare (10.000 in monete del 372, 6.314 in gemme, 19.603 in monete del 1372) è uguale ai conti (35.917), quindi tutto torna ai nani. **(b)** Sì: un quarto delle monete dell'hoard di Regiarix è conio elfico, **6.250 mo**, nella stessa proporzione delle reliquie di Rhest sul tesoro non magico. Applicata nei banchi §9 e in `ARC08-17` §3 |
+| ~~D44~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM sceglie la proposta). **Da dove escono i PG di notte?** La **postierla** è nel muro sud, all'angolo sud-est, sotto la torre est: esce verso il fianco est del campo, col bosco come riparo. Corregge M7-A, che la dava a nord |
+| ~~D45~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM: *«ci sono più fucine»*, poi lo schema proposto). **Le fucine di Hammerfist nel 372**: tre, una per livello. La **fucina originale** (la prima forgia) apre sul cortile: è quella che i Bracieri di Tordek riconoscono, dove si spinge il drago (Scena 11) e da cui viene l'incudine del rito (Scena 12); la **fucina di Gunnvor**, tre forge, dentro la montagna sul corridoio di cappella, alchimista e quartieri (Scena 5); la **fucina grande**, sotto le gallerie di Zeth, la più ampia. Chiude la (c) di D28 |
+| ~~D46~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM sceglie la proposta). **La fortezza del 372 rispetto a quella del 1372**: è il **nucleo**. Esistono già il cortile (M7-B, che nel 1372 diventa il cortile interno), mura più basse (+4,5 m) e le sale nella montagna; fossato, cortile esterno, torri da 20 m e bastioni vengono nei secoli dopo |
+| ~~D47~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM sceglie la proposta). **Dove sta l'armeria?** Accanto alla fucina di Gunnvor: la stanza del «mucchio buono» e delle armi per le mura. Nel 1372 è l'armeria nanica del banco di ARC-08 B4 |
+| ~~D48~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM sceglie le proposte, una per una). **(a)** Il percorso e le misure come nelle griglie; **(b)** le rune di Zeth nel 1372 sono glifi di interdizione dell'SRD legati alla razza: un'esplosione per runa su chi non è nano, 4d8, Riflessi CD 14 dimezza (incantatore di 9°, come una pergamena, Q5), Cercare e Disattivare Congegni CD 28; **(c)** i leoni di pietra sono statue vuote, un'eco dei leoni spettrali del Ghostlord in ARC-09. Era: **Gli stati del 1372 delle sale sotto la montagna vanno bene?** Nessun master li descriveva, e le griglie M7-D, M7-E e M7-F del 1372 li propongono: la ritirata del Giorno 3 dal tunnel della statua alle gallerie di Zeth, poi alla fucina grande e al Cuore; gli orchi che saccheggiano il livello −1 dal corridoio principale; la riconquista al contrario; le rune di Zeth accese (D30) e due leoni di pietra nelle gallerie; le misure delle stanze. Resta da fissare l'effetto meccanico delle rune nel 1372. Proposta: approvare le griglie come sono e decidere le rune quando ARC-08 gioca la ritirata |
 
 <!-- eco: LETTORE-PLAYTESTER 2026-10-07 -->
 - **Decise**: D27 (niente da considerare, la domanda si chiude); D39 (b), Balvar a 0 tacche se gli si parla durante lo scontro; D40 (b), il duello ai PX della tabella SRD; D41, strada B (le reliquie del 372 date dal re il Giorno 21); D42, tutti e cinque i punti (profili delle città, casse, loxo, Cintura del monaco, Tempio di Rethmar); D43, in un secondo messaggio: le monete del 372 calcolate in proporzione (zero) e il conio elfico di Rhest (sì, 6.250 mo)
 - **Aperte**: nessuna. D43, aperta e chiusa lo stesso giorno: zero monete del 372 in proporzione, 6.250 mo di conio elfico nell'hoard di Regiarix
 - **Cambiate**: nessuna rispetto alle proposte
 - **Dedotto da me**: che «calcola in proporzione» voglia dire pagare ogni conto con la borsa in proporzione a quello che c'era dentro, banco per banco, e che il risultato zero vada scritto anche se toglie la scena più forte (la scena resta per una moneta trovata dopo); che il prezzo da collezione valga per le prime dieci monete per collezionista, altrimenti 6.250 monete elfiche varrebbero 62.500 mo; che con la B valga anche la parte della proposta sulle gemme a copertura della differenza, fino a 10.000 mo per PG, e la tacca nel legno del conto; che «D42 ok» copra tutti e cinque i punti; che le «monete antiche» siano tutte quelle che il gruppo può avere (Thorek I, le pre-imperiali di `DEF-1`, quelle di Rhest e di Talar, quelle del Collezionista) e non solo quelle del 372
+
+<!-- eco: LETTORE-PLAYTESTER 2026-10-08 -->
+- **Decise**: D44 la postierla nel muro sud sotto la torre est · D45 tre fucine su tre livelli · D46 il 372 è il nucleo della fortezza del 1372 · D47 l'armeria accanto alla fucina di Gunnvor · D48 il percorso del 1372 e le misure, le rune di Zeth glifi contro chi non è nano, i leoni vuoti
+- **Aperte**: nessuna. D48 è nata e si è chiusa lo stesso giorno
+- **Cambiate**: D45 dalla proposta «la fucina di Gunnvor e quella del cortile sono la stessa sala» a «tre fucine»
+- **Dedotto da me**: che la fucina originale del cortile sia la «prima forgia» da cui viene l'incudine della cappella e del rito; che la statua di un re nel cortile del 372 (Scena 3) sia la statua del Re Antenato del 1372 (H3-1), col tunnel scavato dopo; che le gallerie di Zeth siano i «passaggi antichi» della ritirata del 1372 verso il Cuore della Montagna; per D48, che la CD delle rune venga dalla regola delle pergamene (Q5, incantatore di 9°) e non da una Saggezza di Zeth nel 372 che nessuna scheda dà
 
 ## 5 · Validazione
 
