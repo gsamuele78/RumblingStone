@@ -87,7 +87,7 @@ entro 2 quadretti da una copertura; quota del più grande spazio aperto senza.
 | Accesso di una creatura Grande (2×2) sotto l'80% del percorribile | 2 su 32 | raro, ma è il controllo che la GameMastery Guide chiede (§2.5) |
 | Tempo dell'intera misura | 1,3 s, sola libreria standard | ADR-0037 regge |
 
-🔎 **Cinque cose che la misura ha corretto, compreso me.**
+🔎 **Quello che la misura ha corretto, compreso me.**
 
 1. **Il Cuore della Montagna era la mappa modello dell'audit di luglio** (M1 =
    1,00, M2 = 0,00, §3.3) ed è la più rotta del corpus: con `⬛` letto come
@@ -370,7 +370,7 @@ senza regola. I test che congelavano la legenda sono aggiornati con i nomi dei
 simboli nuovi, e una classe di test nuova controlla verso, porte segrete e
 disegni.
 
-🔎 Due cose trovate facendolo. **Al primo giro la porta chiusa a chiave, il
+🔎 Trovato facendolo. **Al primo giro la porta chiusa a chiave, il
 baule e la botola si confondevano**: tre rettangoli marroni con una placca
 dorata. Lo ha mostrato la verifica a vista del PNG, non un test; ridisegnati
 (assi e lucchetto di lato, baule tondo con le maniglie, botola con la freccia).
