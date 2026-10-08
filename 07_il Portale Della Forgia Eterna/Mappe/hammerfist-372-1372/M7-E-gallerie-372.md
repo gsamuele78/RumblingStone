@@ -66,7 +66,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | A (iniziale) | — | com'è disegnata | — |
 | B | [trigger] | Canone 372: DEF-4 Scena 5 (gallerie strette, travi nuove, una lampada ogni dieci passi, segni a gesso, Zeth che lavora più in fondo). | [effetto] |
 | B | [trigger] | Le rune di Zeth qui sono colore: nel 372 non hanno effetto (D30). | [effetto] |
-| B | [trigger] | L'affaccio sulla fucina grande è D45: la fucina grande sta sotto, e la si vede scendendo da Zeth. Il tracciato è [PROPOSTA]. | [effetto] |
+| B | [trigger] | L'affaccio sulla fucina grande è D45: la fucina grande sta sotto, e la si vede scendendo da Zeth. | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.
 

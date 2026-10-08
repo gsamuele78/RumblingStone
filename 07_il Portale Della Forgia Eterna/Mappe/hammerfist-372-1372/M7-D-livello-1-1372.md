@@ -1,4 +1,4 @@
-# M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio) [PROPOSTA]
+# M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio)
 
 **Dimensioni**: 54 m × 34,5 m (36 colonne × 23 righe, scala 1,5 m/quadretto)  
 **Origine**: generata da `scripts/compile_map_json.py` (contratto JSON → griglia; non modificare la griglia a mano, rigenerala dal JSON)  
@@ -8,7 +8,7 @@
 ## Griglia
 
 ```
-M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio) [PROPOSTA]
+M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ
 01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -70,7 +70,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
-| B | [trigger] | [PROPOSTA — needs DM confirmation] Nessun master descrive questo livello nel 1372. La ritirata del Giorno 3 passa dal tunnel dietro la statua del cortile (H3-1, ARC-08); questo corridoio lo prendono gli orchi dal corridoio principale. | [effetto] |
+| B | [trigger] | D48 (DM, 2026-10-08). La ritirata del Giorno 3 passa dal tunnel dietro la statua del cortile (H3-1, ARC-08); questo corridoio lo prendono gli orchi dal corridoio principale. | [effetto] |
 | B | [trigger] | Riconquista: chi risale dalle gallerie trova gli orchi nella fucina e nell'armeria svuotata (le armi sono salite alle mura). L'armeria è quella del banco di ARC-08 B4. | [effetto] |
 | B | [trigger] | Le stanze sono quelle del 372 (D46: il 372 è il nucleo); in mille anni la cappella è diventata un posto di cura e la bottega un magazzino. | [effetto] |
 

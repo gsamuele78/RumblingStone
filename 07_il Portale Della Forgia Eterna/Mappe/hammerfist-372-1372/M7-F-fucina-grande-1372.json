@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "title": "M7-F/1372 — La fucina grande, livello −3 (Giorno 3 dell'assedio) [PROPOSTA]",
+ "title": "M7-F/1372 — La fucina grande, livello −3 (Giorno 3 dell'assedio)",
  "scale_m_per_square": 1.5,
  "map_size": [
   30,
@@ -356,6 +356,6 @@
   }
  ],
  "notes": [
-  "[PROPOSTA — needs DM confirmation] Nel 1372 la fucina grande è l'ultima sala prima della discesa al Cuore della Montagna: le forge sono spente da generazioni, i pilastri reggono ancora."
+  "D48 (DM, 2026-10-08): nel 1372 la fucina grande è l'ultima sala prima della discesa al Cuore della Montagna: le forge sono spente da generazioni, i pilastri reggono ancora."
  ]
 }

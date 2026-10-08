@@ -74,7 +74,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
 | B | [trigger] | Canone 372: DEF-4 Scena 5 (quartieri, cappella due porte più in là, bottega in fondo al corridoio della fucina, tre forge); D45 (tre fucine) e D47 (armeria accanto alla fucina di Gunnvor) del 2026-10-08. | [effetto] |
-| B | [trigger] | Le misure delle stanze non sono scritte nel master: sono [PROPOSTA] di questa mappa. | [effetto] |
+| B | [trigger] | Le misure delle stanze sono quelle di questa griglia, approvate con D48. | [effetto] |
 | B | [trigger] | Sotto la fucina il caldo finisce di colpo: la scala di Y20 scende alle gallerie di Zeth (M7-E). | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.

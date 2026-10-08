@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "title": "M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio) [PROPOSTA]",
+ "title": "M7-D/1372 — Il corridoio della fucina, livello −1 (Giorno 3 dell'assedio)",
  "scale_m_per_square": 1.5,
  "map_size": [
   36,
@@ -462,7 +462,7 @@
   }
  ],
  "notes": [
-  "[PROPOSTA — needs DM confirmation] Nessun master descrive questo livello nel 1372. La ritirata del Giorno 3 passa dal tunnel dietro la statua del cortile (H3-1, ARC-08); questo corridoio lo prendono gli orchi dal corridoio principale.",
+  "D48 (DM, 2026-10-08). La ritirata del Giorno 3 passa dal tunnel dietro la statua del cortile (H3-1, ARC-08); questo corridoio lo prendono gli orchi dal corridoio principale.",
   "Riconquista: chi risale dalle gallerie trova gli orchi nella fucina e nell'armeria svuotata (le armi sono salite alle mura). L'armeria è quella del banco di ARC-08 B4.",
   "Le stanze sono quelle del 372 (D46: il 372 è il nucleo); in mille anni la cappella è diventata un posto di cura e la bottega un magazzino."
  ]

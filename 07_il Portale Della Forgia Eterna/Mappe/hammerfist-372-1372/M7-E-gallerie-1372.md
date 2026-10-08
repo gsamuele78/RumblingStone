@@ -1,4 +1,4 @@
-# M7-E/1372 — I passaggi antichi, livello −2 (Giorno 3 dell'assedio) [PROPOSTA]
+# M7-E/1372 — I passaggi antichi, livello −2 (Giorno 3 dell'assedio)
 
 **Dimensioni**: 51 m × 36 m (34 colonne × 24 righe, scala 1,5 m/quadretto)  
 **Origine**: generata da `scripts/compile_map_json.py` (contratto JSON → griglia; non modificare la griglia a mano, rigenerala dal JSON)  
@@ -8,7 +8,7 @@
 ## Griglia
 
 ```
-M7-E/1372 — I passaggi antichi, livello −2 (Giorno 3 dell'assedio) [PROPOSTA]
+M7-E/1372 — I passaggi antichi, livello −2 (Giorno 3 dell'assedio)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH
 01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🪜 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -47,10 +47,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 | Elemento | Dove (coord.) | Effetto meccanico 3.5 |
 |---|---|---|
-| ⚡ Runa di Zeth, accesa | I10 | le difese del Ghostlord (D30): effetto da decidere |
-| ⚡ Runa di Zeth, accesa | W10 | le difese del Ghostlord (D30): effetto da decidere |
-| ⚡ Runa di Zeth, accesa | Q19 | le difese del Ghostlord (D30): effetto da decidere |
-| ⚡ Runa di Zeth, accesa | D16 | le difese del Ghostlord (D30): effetto da decidere |
+| ⚡ Runa di Zeth, accesa (glifo di interdizione) | I10 | esplode su chi non è nano: 4d8, Riflessi CD 14 dimezza; Cercare e Disattivare Congegni CD 28 |
+| ⚡ Runa di Zeth, accesa (glifo di interdizione) | W10 | esplode su chi non è nano: 4d8, Riflessi CD 14 dimezza; Cercare e Disattivare Congegni CD 28 |
+| ⚡ Runa di Zeth, accesa (glifo di interdizione) | Q19 | esplode su chi non è nano: 4d8, Riflessi CD 14 dimezza; Cercare e Disattivare Congegni CD 28 |
+| ⚡ Runa di Zeth, accesa (glifo di interdizione) | D16 | esplode su chi non è nano: 4d8, Riflessi CD 14 dimezza; Cercare e Disattivare Congegni CD 28 |
 | 🪨 Puntelli crollati | G20–G21 | la via delle miniere è chiusa |
 
 ### ⚔️ TATTICHE (come si comportano i nemici — round per round)
@@ -72,8 +72,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
-| B | [trigger] | [PROPOSTA — needs DM confirmation] Le gallerie di Zeth sono i passaggi antichi della ritirata del Giorno 3 (ARC-08: H3-1 → 3Y ponte sospeso → 3Z incrocio silenzioso → MAPPA 5). | [effetto] |
-| B | [trigger] | Le rune nel 1372 sono le difese del Ghostlord (D30); l'effetto meccanico non è deciso. I leoni di pietra vengono dalla promessa di Zeth nella Scena 5: «i miei leoni di pietra proteggeranno queste gallerie per sempre». | [effetto] |
+| B | [trigger] | D48 (DM, 2026-10-08): le gallerie di Zeth sono i passaggi antichi della ritirata del Giorno 3 (ARC-08: H3-1 → 3Y ponte sospeso → 3Z incrocio silenzioso → MAPPA 5). | [effetto] |
+| B | [trigger] | Le rune nel 1372 sono le difese del Ghostlord (D30): glifi di interdizione dell'SRD legati alla razza, che esplodono su chi non è nano (D48). Zeth le scrisse da incantatore di 9° (Q5): 4d8, Riflessi CD 14 come per una pergamena, un'esplosione per runa. Nella ritirata colpiscono gli inseguitori; nella riconquista anche i PG che non sono nani. | [effetto] |
+| B | [trigger] | I leoni di pietra sono la promessa di Zeth nella Scena 5 («i miei leoni di pietra proteggeranno queste gallerie per sempre»), e sono vuoti: gli spiriti sono andati con lui, e in ARC-09 sono i leoni spettrali del Ghostlord. Chi li esamina trova il segno di Zeth. | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.
 

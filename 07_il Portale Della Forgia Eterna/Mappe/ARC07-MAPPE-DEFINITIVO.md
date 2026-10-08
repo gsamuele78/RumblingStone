@@ -48,9 +48,9 @@
 | **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ |
 | **M7-C** | La tenda del comando di Zog'tar | DEF-4 Scene 7-8, contratto JSON (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.json`) | tattica | ✅ |
 | **M7-S** | Hammerfist in sezione, 372 e 1372 | lotto D28, `ARC07-MAPPE-HAMMERFIST-372-1372.md` | sezione | ✅ |
-| **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 · 🟡 1372 `[PROPOSTA]` |
-| **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30; contratto JSON | tattica | ✅ 372 · 🟡 1372 `[PROPOSTA]` |
-| **M7-F** | La fucina grande, livello −3 (372 e 1372) | D45; contratto JSON | tattica | 🟡 `[PROPOSTA]` (misure) |
+| **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 e 1372 (D48) |
+| **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30, D48; contratto JSON | tattica | ✅ 372 e 1372 |
+| **M7-F** | La fucina grande, livello −3 (372 e 1372) | D45, D48; contratto JSON | tattica | ✅ 372 e 1372 |
 | **CM-1** | Il Cuore della Montagna (1372, arrivo) | **geometria canonica ARC-08**: Atlante-Hammerfist **MAPPA 5** (⚠️ scala 3 m) + regia DEF-5 | scenica/climax 3B | ✅ |
 
 > Rese SVG storiche (ancora valide, stanze «prima visita»): `Portale-Forgia-L1`
@@ -601,7 +601,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
   a W18 sotto la torre est (D44); la porta che entra nella montagna a O-P04.
   Distanze utili: dall'impronta del drago (K-M 09-11) la forgia è a ~12 m, il
   pozzo a ~10 m, ciascuna gru a ~13 m.
-- **Nel 1372** `[PROPOSTA]`: questo cortile è il nucleo del cortile interno di
+- **Nel 1372** (D46, D48): questo cortile è il nucleo del cortile interno di
   ARC-08 (D46), ingrandito nei secoli; la statua del re è la **statua del Re
   Antenato** di H3-1, e il tunnel di fuga dietro di lei viene scavato dopo il
   372. La griglia del 1372 è H3-1 (`08_.../Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`).

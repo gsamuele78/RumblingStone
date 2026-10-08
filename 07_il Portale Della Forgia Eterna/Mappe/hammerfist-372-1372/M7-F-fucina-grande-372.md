@@ -63,7 +63,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
 | B | [trigger] | D45 (2026-10-08): la terza fucina, la più ampia, sotto le gallerie di Zeth. «In ogni regno nanico, più si scende e più le stanze sono ampie» (il DM, D28). | [effetto] |
-| B | [trigger] | Misure, pilastri e numero di forge sono [PROPOSTA]: nessun master descrive questa sala. Nel 372 non è una scena giocata: la si vede dall'affaccio delle gallerie. | [effetto] |
+| B | [trigger] | Misure, pilastri e numero di forge sono quelli di questa griglia, approvati con D48. Nel 372 non è una scena giocata: la si vede dall'affaccio delle gallerie. | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.
 
