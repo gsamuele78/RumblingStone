@@ -9,7 +9,7 @@
 > Coast per D&D 3.5 e Pathfinder 1e; di misurare prima cosa c'è e cosa va
 > migliorato o validato; poi un piano e un ADR che coprano tutti i passi.
 > **Decisione**: [ADR-0082](adr/ADR-0082-la-mappa-si-collauda-come-grafo-prima-che-come-immagine.md) (accettata il 2026-10-08, non attuata; l'estensione sulla posa dei simboli è la D8).
-> **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto. *(D28 l'ha chiuso la #225, fusa dal DM lo stesso giorno, prima del set nuovo: il passaggio delle sue mappe al set è la D12.)*
+> **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto. *(D28 l'ha chiuso la #225, fusa dal DM lo stesso giorno, prima del set nuovo: il passaggio delle sue mappe al set è la D12.)* *(La sera, dopo la #226: l'orientamento delle chiusure e gli asset di fuori, V2-quater, vanno prima di tutto, in una sessione nuova.)*
 > **Misura riproducibile**: `python3 -I plans/esperimenti/collaudo-mappe-2026-10/misura_mappe.py`, uscita del 2026-10-08 in [`misura-2026-10-08.txt`](esperimenti/collaudo-mappe-2026-10/misura-2026-10-08.txt), commit `8297670`.
 >
 > **In breve**: il repo sa disegnare una mappa in modo deterministico e
@@ -413,6 +413,26 @@ scale. Il set nuovo direbbe `🔼` o `🔽` con la `@collega` alla gemella, e
 `🟤` per la caverna se il DM lo conferma. Neanche questo è fatto: sono mappe
 decise dal DM, fuse da un'ora, e cambiarle in silenzio è proprio ciò che
 ADR-0007 vieta.
+
+### V2-quater · L'orientamento delle chiusure, e gli asset di fuori (ordine del DM, 2026-10-08, sera)
+
+Il DM, dopo la #226: *«gli oggetti tipo porte e grate o celle devono essere
+orientati nel modo giusto. C'è un algoritmo che può controllarle, o
+aggiungere nel ruolo di collaudo queste cose in maniera deterministica,
+migliorando la resa e risolvendo i problemi che trova?»*. Nello stesso
+messaggio chiede di guardare gli asset di *Battle for Wesnoth* per la legenda
+e di rivedere la sola libreria standard dove una dipendenza porta di più.
+
+🔎 Oggi `collaudo_mappe` sa che una porta sta **nel** muro (`posa/nel-muro`),
+non **come** ci sta: una porta in un muro nord-sud e una in un muro est-ovest
+hanno lo stesso glifo, e il renderer la disegna sempre nello stesso verso.
+L'asse si ricava dai vicini, che sono già nel grafo: muri a est e a ovest
+vogliono un passaggio nord-sud, e viceversa. È lo stesso dato per il
+controllo e per la resa.
+
+Il lavoro va in una **sessione nuova**, prima degli altri lotti (riga ▶ di
+STATO-E-ORDINE). Se serve, apre un piano e un ADR suoi; questo piano gli
+cede l'orientamento o lo tiene come lotto, a seconda di cosa decide il DM.
 
 ### V3 · Le correzioni del corpus
 
