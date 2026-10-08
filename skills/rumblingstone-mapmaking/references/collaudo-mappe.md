@@ -34,7 +34,9 @@ python3 scripts/collaudo_mappe.py --json OUT.json    # per un altro programma
 ```
 
 Legge la griglia con il parser del renderer e la funzione di ogni simbolo da
-`scripts/legend.json`. Le regole di movimento sono quelle dell'SRD, uguali in
+`scripts/legend.json`. Ha bisogno di `tcod` e `numpy`, che stanno in
+`requirements-dev.txt` ([ADR-0084](../../../plans/adr/ADR-0084-il-collaudo-delle-mappe-e-uno-strumento-di-sviluppo.md)):
+senza, esce con 2 e dice come installarle. Le regole di movimento sono quelle dell'SRD, uguali in
 3.5 e PF1e: diagonale 5-10-5, niente diagonale oltre l'angolo di un muro (sì
 oltre una fossa o una creatura), una creatura Grande occupa 2×2 e un'Enorme 3×3.
 
@@ -51,7 +53,10 @@ oltre una fossa o una creatura), una creatura Grande occupa 2×2 e un'Enorme 3×
 | `ingombro/grande` | A | la creatura dichiarata con `@taglia` non arriva ai PG col suo ingombro |
 | `posa/sul-pavimento` | A | un mobile che chiude l'unico varco |
 | `posa/recinto` | A | una cella di sbarre senza porta né grata |
-| `m1/copertura` · `m2/vuoto` | A | poche coperture, troppo campo aperto (soglie euristiche, non calibrate) |
+| `posa/verso-illeggibile` | E | una direttiva `@verso` che non si legge, o che punta a una cella senza chiusura |
+| `posa/asse-ambiguo` | A | una chiusura con muri e passaggi su tutti e due gli assi: si disegna est-ovest finché il DM non scrive `@verso` |
+| `posa/verso-contro-muri` | A | `@verso` dice un asse, i muri intorno l'altro: vince la direttiva, ma forse è un errore di battitura |
+| `m1/copertura` · `m2/vuoto` · `m4/esposizione` | A | poche coperture, troppo campo aperto, troppo visibile da ovunque (M4 esatta con `tcod`, su tutte le celle; soglie euristiche, non calibrate) |
 
 Gli **errori** (E) pesano nella *distanza dalla giocabilità*, la somma che il
 rapporto stampa per ogni mappa; una mappa nuova esce a zero. Gli **avvisi** (A)
@@ -68,8 +73,18 @@ renderer le ignora, quindi l'SVG non cambia.
 @collega B05 ; Mappe/ATLANTE.md#3 D12 la scala in B05 porta a D12 della mappa 3
 @taglia J07 ; Grande                  la creatura in J07 non è Media
 @vista giocatori                      questa è la versione per i giocatori
+@verso B05 ; NS                       la porta in B05 sta in un muro nord-sud
 @deroga zone/separate ; il soppalco si raggiunge solo in volo, ed è voluto
 ```
+
+**L'asse delle chiusure** non si scrive: lo danno i quattro vicini
+([ADR-0083](../../../plans/adr/ADR-0083-l-asse-delle-chiusure-si-ricava-dai-vicini.md)).
+Muri (o il bordo, o un'altra chiusura) a ovest e a est, e un passaggio a nord o
+a sud, vogliono una chiusura in un muro est-ovest, disegnata com'è; il caso
+ruotato vuole un muro nord-sud, e il renderer gira il glifo di 90°. L'export
+UVTT mette il portale lungo lo stesso muro. `@verso` serve solo dove il
+collaudo dice `posa/asse-ambiguo`. Il rapporto JSON conta gli assi di ogni
+mappa nel campo `chiusure`.
 
 Una deroga senza un motivo vero (almeno 15 caratteri) vale come assente. Una
 vista strategica o uno schema non ricevono i controlli tattici.

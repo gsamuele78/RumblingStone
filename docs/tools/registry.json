@@ -509,10 +509,13 @@
       "category": "B-maps-pipeline",
       "language": "python",
       "invocation": "python3 scripts/collaudo_mappe.py",
-      "summary": "Collauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1 e M2 come avvisi. In sola lettura.",
+      "summary": "Collauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1, M2 e M4 come avvisi; l'asse di ogni porta, grata o fila di sbarre (ADR-0083) e le direttive @verso. In sola lettura.",
       "use_case": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»",
       "stability": "beta",
-      "stdlib_only": true,
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod"
+      ],
       "external_bins": [],
       "args": [
         {
@@ -595,7 +598,9 @@
       "produces_schema": "scripts/schemas/map_findings.schema.json",
       "ci_smoke": "python scripts/collaudo_mappe.py --help",
       "tests": [
-        "scripts/tests/test_collaudo_mappe.py"
+        "scripts/tests/test_collaudo_mappe.py",
+        "scripts/tests/test_chiusure.py",
+        "scripts/tests/test_collaudo_m4.py"
       ],
       "docs": [
         "scripts/README-automation.md",
@@ -902,7 +907,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/export_uvtt.py --help",
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_chiusure.py"
+      ],
       "docs": [
         "scripts/README-automation.md"
       ]
@@ -1360,7 +1367,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/render_map_svg.py --help",
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_chiusure.py"
+      ],
       "docs": [
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/SKILL.md"

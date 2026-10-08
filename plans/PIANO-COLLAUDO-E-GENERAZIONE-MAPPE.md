@@ -1,6 +1,6 @@
 # PIANO — Il collaudo delle mappe, e un generatore che non consegna bozze ingiocabili
 
-> **Stato**: 🔵 pianificato (2026-10-08), D1-D9 e D11 decise dal DM lo stesso giorno, D10 (i glifi) aperta · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
+> **Stato**: 🟡 in corso (2026-10-08), D1-D9, D11 e D13-D16 decise dal DM lo stesso giorno, D10 (i glifi) e D12 (le mappe della #225) aperte · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
 > **Nasce da**: il documento *«Algorithmic Frameworks and Automated Evaluation
 > Architectures for Deterministic Map Generation in Tabletop Role-Playing
 > Games»*, portato dal DM il 2026-10-08 con la richiesta di verificare cosa si
@@ -9,6 +9,7 @@
 > Coast per D&D 3.5 e Pathfinder 1e; di misurare prima cosa c'è e cosa va
 > migliorato o validato; poi un piano e un ADR che coprano tutti i passi.
 > **Decisione**: [ADR-0082](adr/ADR-0082-la-mappa-si-collauda-come-grafo-prima-che-come-immagine.md) (accettata il 2026-10-08, non attuata; l'estensione sulla posa dei simboli è la D8).
+> **Decisioni di V2-quater**: [ADR-0083](adr/ADR-0083-l-asse-delle-chiusure-si-ricava-dai-vicini.md) (l'asse delle chiusure) e [ADR-0084](adr/ADR-0084-il-collaudo-delle-mappe-e-uno-strumento-di-sviluppo.md) (il collaudo usa `tcod`), accettate e attuate il 2026-10-08, sera (D13-D16).
 > **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto. *(D28 l'ha chiuso la #225, fusa dal DM lo stesso giorno, prima del set nuovo: il passaggio delle sue mappe al set è la D12.)* *(La sera, dopo la #226: l'orientamento delle chiusure e gli asset di fuori, V2-quater, vanno prima di tutto, in una sessione nuova.)*
 > **Misura riproducibile**: `python3 -I plans/esperimenti/collaudo-mappe-2026-10/misura_mappe.py`, uscita del 2026-10-08 in [`misura-2026-10-08.txt`](esperimenti/collaudo-mappe-2026-10/misura-2026-10-08.txt), commit `8297670`.
 >
@@ -434,6 +435,37 @@ Il lavoro va in una **sessione nuova**, prima degli altri lotti (riga ▶ di
 STATO-E-ORDINE). Se serve, apre un piano e un ADR suoi; questo piano gli
 cede l'orientamento o lo tiene come lotto, a seconda di cosa decide il DM.
 
+✅ **Fatto il 2026-10-08, sera, in tre lotti; resta qui come lotto** (non serviva
+un piano a parte: il perimetro è questo). La misura sta in
+[`esperimenti/orientamento-e-dipendenze-2026-10/`](esperimenti/orientamento-e-dipendenze-2026-10/RISULTATI.md),
+le decisioni sono D13-D16 (§7), gli ADR sono 0083 e 0084.
+
+**Q1 · Audit in sola lettura** `[G · fatto]`. Le 125 chiusure del corpus: 60
+in muri est-ovest, 36 in muri nord-sud che il renderer disegnava di traverso,
+2 ambigue, 27 senza muro. `export_uvtt` aveva una regola sua e girava 13
+portali su 96. Wesnoth: PNG 72×72 obliqui su esagoni, GPL o CC BY-SA senza
+crediti per immagine, nessun concetto che il corpus chieda. Sei librerie
+misurate sul corpus; vince solo `tcod`, sulla linea di vista (0,6 s contro
+70 s).
+
+**Q2 · L'asse delle chiusure** `[C · fatto]` (ADR-0083). `dmcore/chiusure.py`,
+letto dal collaudo (campo `chiusure`, `posa/asse-ambiguo`,
+`posa/verso-contro-muri`, `posa/verso-illeggibile`), dal renderer (glifo
+ruotato di 90° nei muri nord-sud) e dall'export UVTT (portale lungo il muro).
+Direttiva `@verso`, registrata come norma. 13 SVG rigenerati, master intatti.
+`test_chiusure.py`: 24 prove, fra cui rotazione e specchio su 2.000 griglie a
+seme fisso.
+
+**Q3 · `tcod` nel collaudo** `[C · fatto]` (ADR-0084). In `requirements-dev.txt`
+con numpy, obbligatoria per `collaudo_mappe.py` (esce con 2 senza),
+dichiarata nel manifest e in `binari.py`. Primo uso: M4 esatta su tutte le
+celle, avviso `m4/esposizione`; il collaudo passa da 1,3 a 2,5 s.
+`test_collaudo_m4.py`: 5 prove.
+
+Cosa resta, e dove: le 2 porte ambigue del Portale aspettano un `@verso` del
+DM (in V3, con le 27 senza muro); le scale hanno anch'esse un verso, non
+misurato; la copertura SRD, M7 e M8 restano in V5, che ora ha lo strumento.
+
 ### V3 · Le correzioni del corpus
 
 `[engine: Opus 5, mai delegato · effort: xhigh · qualità: conferma esplicita del DM mappa per mappa; i rilievi E scendono a zero o hanno una deroga scritta]` · **K**
@@ -638,6 +670,10 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 | D10 | V2-bis | **I glifi del set nuovo**: quelli della tabella di V2-bis? Proposta: sì; se un glifo non si legge bene al tavolo, si cambia lì, prima che una mappa lo usi |
 | ~~D11~~ | V11-bis | ✅ **Decisa il 2026-10-08, il DM: serve un ruolo LLM in più** che controlli che le mappe siano corrette, che gli algoritmi richiesti siano stati usati e che le parti sbagliate siano state corrette (*«it will need another llm role for checking that maps are correct»*). Diventa V11-bis: il collaudatore di mappe |
 | D12 | D28, V3 | **Le mappe della #225 passano al set nuovo?** Le cinque `🪜` diventano `🔼`/`🔽` con `@collega`, e il braciere di M7-E in M10 (e i tre gemelli) si sposta in una nicchia del muro, perché oggi chiude la galleria fra la scala e Zeth. Proposta: sì, in un lotto solo, con i sei SVG rigenerati e il collaudo a zero errori |
+| ~~D13~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **Quanto tocca la funzione dell'asse?** Proposta: una funzione, tre lettori (collaudo, renderer, export UVTT); si rigenerano gli SVG, fra cui 4 D28 della #225, master intatti |
+| ~~D14~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **I casi che i vicini non decidono?** Proposta: la direttiva `@verso <cella> ; NS\|EO`; senza, avviso e glifo come oggi |
+| ~~D15~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **Come si usa Battle for Wesnoth?** Proposta: solo l'idea delle regole di terreno, nessun file e nessun simbolo nuovo |
+| ~~D16~~ | V2-quater, V5 | ✅ **Decisa il 2026-10-08, sera, il DM: obbligatoria nel collaudo**, non come proposto. Era: **Come si tratta `tcod`?** Proposta: opzionale per V5, importata nella funzione, con il ripiego esatto e lento in libreria standard. Alternative: obbligatoria nel collaudo (scelta), nessuna dipendenza |
 
 <!-- eco: COLLAUDO-MAPPE 2026-10-08 -->
 - **Decise**: (primo messaggio) D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo. (Secondo messaggio) D8 il set dei simboli prima di D28, e D28 rifatto col set nuovo · D9 le porte segrete non compaiono nella versione per i giocatori · D11 un ruolo LLM di collaudo
@@ -645,6 +681,10 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Cambiate**: D8 dalla proposta «dopo V2, D28 con i simboli di oggi» a «prima di D28, e D28 rifatto»; quindi cambia l'ordine di D1: V2-bis, V1, il ruolo, D28, AMBIENTE
 - **Dedotto da me** (secondo messaggio): che V1 vada **prima** di D28 anche se il DM ha nominato solo i simboli, perché il ruolo di collaudo che chiede ha bisogno dello strumento per verificare le mappe di D28; che `@tipo` e `@deroga` passino da V2 a V1 per lo stesso motivo; che «underground cavern» chieda un pavimento di caverna proprio (`🟤`), che per il Cuore della Montagna sostituisce il `🟫` deciso in D2; che il nord leggibile sia la direttiva `@north` obbligatoria e non una tessera, perché una tessera nord spezzerebbe la griglia
 - **Dedotto da me** (primo messaggio): che «approved as proposed» valga anche per lo stato di ADR-0082, che passa da proposta ad accettata; che la domanda sugli «asset» parli della legenda dei simboli e non di immagini raster (le mappe del repo sono griglie di simboli e l'arte è vettoriale, regola 5); che «scaricare» nel messaggio voglia dire «scale», per salire e scendere (✅ confermato dal DM lo stesso giorno: *«staircase»*)
+- **Decise** (la sera, quattro domande in un messaggio): D13 una funzione dell'asse per collaudo, renderer ed export UVTT, con gli SVG rigenerati · D14 `@verso` per i casi dubbi · D15 Wesnoth solo come idea · D16 `tcod` obbligatoria nel collaudo
+- **Aperte** (la sera): D10 e D12 restano aperte; nessuna nuova
+- **Cambiate** (la sera): D16 dalla proposta «opzionale con ripiego» a «obbligatoria», quindi il collaudo passa al piano di sviluppo di ADR-0037 (ADR-0084) invece di restare in libreria standard con un'eccezione
+- **Dedotto da me** (la sera): che «obbligatoria nel collaudo» voglia dire usarla subito e non solo dichiararla, quindi M4 esatta anticipata da V5 come primo uso (una dipendenza senza chiamanti sarebbe solo rumore per `pip-audit`); che `numpy` vada in `requirements-dev.txt` accanto a `tcod` perché `collaudo_mappe` la importa direttamente; che gli SVG dell'archivio di Hammerfist si rigenerino come i derivati del corpus, sul precedente di ADR-0070
 
 ---
 
@@ -660,13 +700,14 @@ Fase A — Audit
 ☑ A6  editori, community e ricerca: chi verifica le mappe (§2.5-bis)
 
 Fase S — Sviluppo
-☑ V0  decisioni D1-D9 e D11 (2026-10-08) · □ D10
+☑ V0  decisioni D1-D9 e D11 (2026-10-08), D13-D16 (la sera) · □ D10 · □ D12
 ☑ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest (2026-10-08: 20 test, 38 mappe, 97 errori, 53 avvisi)
 □ V2  @tipo e @deroga; 38 griglie classificate; due norme registrate
+☑ V2-quater l'asse delle chiusure e le dipendenze misurate (2026-10-08, sera: D13-D16, ADR-0083 e ADR-0084; `dmcore/chiusure.py` per collaudo, renderer e UVTT, 36 porte e 13 portali raddrizzati, 13 SVG rigenerati; `tcod` nel collaudo, M4 esatta; Wesnoth solo come idea)
 ☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · □ D10 i glifi, da confermare al tavolo
 □ V3  correzioni del corpus, mappa per mappa col DM
 □ V4  gate a tetto in CI
-□ V5  linea di vista e copertura SRD; M4, M7, M8
+□ V5  linea di vista e copertura SRD; M7, M8 (M4 esatta fatta in V2-quater, con `tcod`)
 □ V6  agenti per taglia; raggiungibilità di obiettivi e nemici
 □ V7  grafo delle zone, anelli, aree numerate
 □ V8  M9 sulla distanza d'incontro dell'SRD

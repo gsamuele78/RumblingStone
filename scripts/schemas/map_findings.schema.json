@@ -19,6 +19,17 @@
           "tipo": {"type": "string"},
           "dimensioni": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
           "distanza_giocabilita": {"type": "integer", "minimum": 0},
+          "chiusure": {
+            "description": "Quante porte, grate e sbarre per asse (ADR-0083): EO in un muro est-ovest, NS in un muro nord-sud, ambigue, senza muro intorno, decise con @verso",
+            "type": "object",
+            "properties": {
+              "EO": {"type": "integer", "minimum": 0},
+              "NS": {"type": "integer", "minimum": 0},
+              "ambigue": {"type": "integer", "minimum": 0},
+              "senza_muro": {"type": "integer", "minimum": 0},
+              "dichiarate": {"type": "integer", "minimum": 0}
+            }
+          },
           "rilievi": {
             "type": "array",
             "items": {

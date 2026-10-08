@@ -54,7 +54,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore import legenda  # noqa: E402
+from dmcore import chiusure, legenda  # noqa: E402
 from dmcore.testo import slug  # noqa: E402
 
 
@@ -1323,6 +1323,14 @@ def render_svg(grid: dict, source_name: str) -> str:
         )
 
     # --- illustrated props and unit tokens --------------------------------------
+    # doors, grates and bars take their axis from the neighbours (ADR-0083):
+    # the glyphs are drawn for an east-west wall and turn 90° in a north-south one
+    def _at(cx_: int, ry_: int):
+        if not (0 <= ry_ < len(row_nums)) or cx_ < 0:
+            return None
+        cells_ = rows[row_nums[ry_]]
+        return cells_[cx_] if cx_ < len(cells_) else None
+    versi = chiusure.versi_dichiarati(grid.get("annotations", []) or [])
     for r, rn in enumerate(row_nums):
         cells = rows[rn]
         for c in range(n_cols):
@@ -1349,13 +1357,17 @@ def render_svg(grid: dict, source_name: str) -> str:
             elif spec and spec.get("prop"):
                 variants = VARIANTS.get(spec["prop"], [spec["prop"]])
                 prop = variants[(r * 7 + c * 13) % len(variants)]
+                ns = chiusure.e_chiusura(emoji) and chiusure.asse_da_disegnare(
+                    _at, c, r, col_label(c), rn, versi) == chiusure.NS
+                rx_, ry_ = (4.5, 9) if ns else (9, 4.5)
                 out.append(
-                    f'<ellipse cx="{cx + 1}" cy="{cy + 3}" rx="9" ry="4.5" '
+                    f'<ellipse cx="{cx + 1}" cy="{cy + 3}" rx="{rx_}" ry="{ry_}" '
                     f'fill="#241c10" opacity="0.2"/>'
                 )
+                ruota = f' transform="rotate(90 {_n(cx)} {_n(cy)})"' if ns else ""
                 out.append(
                     f'<use href="#{prop}" x="{x}" y="{y}" '
-                    f'width="{CELL}" height="{CELL}"/>'
+                    f'width="{CELL}" height="{CELL}"{ruota}/>'
                 )
             elif spec is None or spec["mode"] == "icon":
                 out.append(

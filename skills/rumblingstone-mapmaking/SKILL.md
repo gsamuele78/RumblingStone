@@ -77,7 +77,12 @@ are **generated artifacts — never hand-edit them**. CI
    `@deroga` with its reason), declares `@north`, links every staircase or
    trapdoor to its twin with `@collega`, and then goes to the **cold map
    checker** role. Doors, grates and windows sit in a wall; secret doors never
-   appear on the players' version (`@vista giocatori`). Use the symbol set of
+   appear on the players' version (`@vista giocatori`). A closure takes the
+   axis of its wall from its four neighbours (ADR-0083): the renderer turns the
+   glyph and the UVTT export turns the portal from that same answer, so you
+   never draw the direction, you only write `@verso <cell> ; NS|EO` where the
+   checker says the neighbours are ambiguous. The checker needs `tcod`
+   (`pip install -r requirements-dev.txt`, ADR-0084). Use the symbol set of
    `legend.yaml` (doors by type, bars, stairs up/down, cave floor, shallow
    water, sewer, debris, furniture) before inventing a local symbol.
    Procedure and rubric: `references/collaudo-mappe.md`.

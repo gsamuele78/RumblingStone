@@ -208,7 +208,7 @@
     },
     {
       "name": "collaudo_mappe",
-      "description": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»\n\nCollauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1 e M2 come avvisi. In sola lettura.",
+      "description": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»\n\nCollauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1, M2 e M4 come avvisi; l'asse di ogni porta, grata o fila di sbarre (ADR-0083) e le direttive @verso. In sola lettura.",
       "use_case": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»",
       "invocation": "python3 scripts/collaudo_mappe.py",
       "inputSchema": {

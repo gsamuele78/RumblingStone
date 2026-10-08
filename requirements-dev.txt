@@ -40,3 +40,13 @@ pip-audit>=2.10.1
 # servizio di rete, quindi l'AGPL non chiede niente al repo. Per questo sta
 # qui e non in requirements.txt: al DM non serve per stampare.
 pymupdf>=1.24
+
+# ADR-0084 (DM, 2026-10-08: «obbligatoria nel collaudo»). La linea di vista di
+# `collaudo_mappe.py`: M4 esatta su tutte le 43.423 celle del corpus in 0,7 s,
+# contro 75 s in libreria standard, con lo stesso risultato (Jaccard 0,9999).
+# Misura in plans/esperimenti/orientamento-e-dipendenze-2026-10/. Licenza
+# BSD-2-Clause; porta numpy (BSD-3). Sta qui e non in requirements.txt perche'
+# il collaudo gira in CI e nelle mani di chi disegna, non la sera al tavolo:
+# le mappe si disegnano, si renderizzano e si esportano senza.
+tcod>=21.2.1
+numpy>=2.2

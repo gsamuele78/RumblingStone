@@ -50,7 +50,7 @@ RADICE = Path(__file__).resolve().parent
 REPO = RADICE.parent
 sys.path.insert(0, str(RADICE))
 import render_map_svg as R  # noqa: E402
-from dmcore import legenda  # noqa: E402
+from dmcore import chiusure, legenda  # noqa: E402
 
 LEG = json.loads(legenda.DERIVATO.read_text(encoding="utf-8"))["symbols"]
 F = {s: v.get("function", {}) for s, v in LEG.items()}
@@ -69,6 +69,7 @@ PESI = {
     "posa/nel-muro": 3,
     "posa/fra-livelli": 5,
     "posa/solo-master": 10,
+    "posa/verso-illeggibile": 1,
     "raggiungibile/unita": 5,
     "raggiungibile/obiettivo": 5,
 }
@@ -78,16 +79,30 @@ CLASSE.update({
     "ingombro/grande": "A",
     "posa/sul-pavimento": "A",
     "posa/recinto": "A",
+    "posa/asse-ambiguo": "A",
+    "posa/verso-contro-muri": "A",
     "m1/copertura": "A",
     "m2/vuoto": "A",
+    "m4/esposizione": "A",
 })
 TATTICI = {"nord/mancante", "posa/nel-muro", "posa/recinto", "posa/sul-pavimento",
+           "posa/asse-ambiguo", "posa/verso-contro-muri",
            "raggiungibile/unita", "raggiungibile/obiettivo", "zone/separate",
-           "ingombro/grande", "m1/copertura", "m2/vuoto"}
+           "ingombro/grande", "m1/copertura", "m2/vuoto", "m4/esposizione"}
 OBIETTIVI = {"⭐", "🎯", "💎", "🏺", "🧰"}
 INGOMBRO = {"grande": 2, "enorme": 3}
 FUORI = "FUORI"
 MOTIVO_MINIMO = 15
+
+
+def _tcod():
+    """tcod e numpy: obbligatorie per il collaudo (ADR-0084), che gira in CI e
+    nelle mani di chi disegna, non al tavolo. Importate qui perche' chi importa
+    il modulo per il resto (i test, l'MCP) non le paghi."""
+    import numpy
+    import tcod
+    import tcod.map  # noqa: F401
+    return numpy, tcod
 
 
 def n(c):
@@ -183,6 +198,7 @@ class Collaudo:
         self.d = direttive(g["annotations"])
         self.corpus = corpus
         self.rilievi: list[dict] = []
+        self.assi: Counter = Counter()
         self.tattica = (self.d["tipo"] or "tattica") == "tattica"
 
     # --- grafo ---------------------------------------------------------------
@@ -275,6 +291,7 @@ class Collaudo:
                 self.rileva("posa/solo-master", (x, y),
                             f"«{c}» compare nella versione per i giocatori (D9): va disegnata come muro")
         self._recinti(perc, comp)
+        self._assi(self.G.g.get("annotations", []))
 
         # raggiungibilita'
         taglie = Counter(comp[c] for c in perc)
@@ -318,7 +335,51 @@ class Collaudo:
                 self.rileva("m2/vuoto", None,
                             f"M2 = {m2:.2f}: il piu' grande spazio aperto senza coperture e' il "
                             f"{m2:.0%} del percorribile (soglia euristica 0,20, non calibrata)")
+            m4 = self._esposizione(perc)
+            if m4 is not None and m4 > 0.45:
+                self.rileva("m4/esposizione", None,
+                            f"M4 = {m4:.2f}: da una cella qualunque si vede in media il {m4:.0%} "
+                            "del percorribile (soglia euristica 0,45, non calibrata)")
         return self
+
+    def _assi(self, annotazioni):
+        """L'asse di ogni chiusura (ADR-0083): lo stesso dato che il renderer
+        e l'export UVTT usano per disegnarla."""
+        G = self.G
+
+        def at(x, y):
+            c = G.at(x, y)
+            return None if c == FUORI else c
+        dichiarati = chiusure.versi_dichiarati(annotazioni)
+        for riga in chiusure.verso_illeggibile(annotazioni):
+            self.rileva("posa/verso-illeggibile", None,
+                        f"«{riga}» non si legge: @verso <cella> ; NS|EO")
+        visti = set()
+        for x, y, c in G.tutte():
+            if not chiusure.e_chiusura(c):
+                continue
+            chiave = (R.col_label(x).upper(), G.righe[y])
+            visti.add(chiave)
+            dai_muri = chiusure.asse(at, x, y)
+            if chiave in dichiarati:
+                self.assi["dichiarate"] += 1
+                if dai_muri in (chiusure.EO, chiusure.NS) and dai_muri != dichiarati[chiave]:
+                    self.rileva("posa/verso-contro-muri", (x, y),
+                                f"«{c}»: @verso dice {dichiarati[chiave]}, i muri intorno dicono "
+                                f"{dai_muri}. Vince la direttiva: e' davvero quello che vuoi?")
+                continue
+            if dai_muri == chiusure.AMBIGUO:
+                self.assi["ambigue"] += 1
+                self.rileva("posa/asse-ambiguo", (x, y),
+                            f"«{c}» ha muri e passaggi su tutti e due gli assi: si disegna est-ovest. "
+                            f"Se non va, @verso {a1(x, y, G.righe)} ; NS")
+            elif dai_muri is None:
+                self.assi["senza_muro"] += 1
+            else:
+                self.assi[dai_muri] += 1
+        for col, riga in sorted(set(dichiarati) - visti):
+            self.rileva("posa/verso-illeggibile", None,
+                        f"@verso {col}{riga:02d}: in quella cella non c'e' una porta, una grata o sbarre")
 
     def _fila(self, x, y) -> set:
         fila, coda = {(x, y)}, deque([(x, y)])
@@ -451,6 +512,28 @@ class Collaudo:
                     coda.append(q)
         return not any(self.G.at(x, y) == "🔵" for x, y, _ in self.G.tutte())
 
+    def _esposizione(self, perc) -> float | None:
+        """M4 esatta (ADR-0084): da ogni cella percorribile, la frazione del
+        percorribile che si vede, con lo shadowcasting simmetrico di tcod.
+        Nessun campionamento: tutte le celle, ogni volta."""
+        np, tcod = _tcod()
+        G = self.G
+        trasp = np.array([[not F.get(G.at(x, y), {}).get("blocks_sight") and G.at(x, y) != FUORI
+                           for x in range(G.W)] for y in range(G.H)], dtype=bool)
+        maschera = np.zeros((G.H, G.W), dtype=bool)
+        for x, y in perc:
+            maschera[y, x] = True
+        origini = [(x, y) for x, y in perc if trasp[y, x]]
+        if not origini:
+            return None
+        totale = int(maschera.sum())
+        somma = 0
+        for x, y in origini:
+            vista = tcod.map.compute_fov(trasp, (y, x), radius=0, light_walls=True,
+                                         algorithm=tcod.constants.FOV_SYMMETRIC_SHADOWCAST)
+            somma += int((vista & maschera).sum())
+        return somma / (len(origini) * totale)
+
     def _vuoto(self, aperto) -> int:
         visti, piu = set(), 0
         for c in aperto:
@@ -479,6 +562,8 @@ class Collaudo:
                 "tipo": self.d["tipo"] or "tattica (implicita)",
                 "dimensioni": [self.G.W, self.G.H],
                 "distanza_giocabilita": self.distanza(),
+                "chiusure": {k: self.assi.get(k, 0)
+                             for k in ("EO", "NS", "ambigue", "senza_muro", "dichiarate")},
                 "rilievi": self.rilievi}
 
 
@@ -498,6 +583,12 @@ def main(argv=None) -> int:
     ap.add_argument("--solo-errori", action="store_true", help="nel testo mostra solo i rilievi E")
     args = ap.parse_args(argv)
 
+    try:
+        _tcod()
+    except ImportError:
+        print("✗ collaudo_mappe ha bisogno di tcod e numpy (ADR-0084): "
+              "pip install -r requirements-dev.txt", file=sys.stderr)
+        return 2
     file = bersagli(args.files)
     mancanti = [f for f in file if not f.exists()]
     if mancanti:
@@ -528,7 +619,7 @@ def main(argv=None) -> int:
             dero = f"  (deroga: {r['deroga']})" if r["deroga"] else ""
             print(f"  {r['classe']} {r['codice']}{dove}: {r['messaggio']}{dero}")
     print(f"\ncollaudo_mappe: {len(esiti)} mappe · {errori} errori · {avvisi} avvisi"
-          " · le soglie M1/M2 sono euristiche, non calibrate")
+          " · le soglie M1, M2 e M4 sono euristiche, non calibrate")
     if args.json:
         Path(args.json).write_text(json.dumps(
             {"schema": "map_findings/1", "mappe": [e.come_dato() for e in esiti]},

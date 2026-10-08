@@ -111,8 +111,8 @@
 <use href="#pr_table" x="466" y="360" width="28" height="28"/>
 <ellipse cx="649.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_lowwall" x="634" y="360" width="28" height="28"/>
-<ellipse cx="817.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="802" y="360" width="28" height="28"/>
+<ellipse cx="817.0" cy="377.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="802" y="360" width="28" height="28" transform="rotate(90 816 374)"/>
 <ellipse cx="173.0" cy="405.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_barrel" x="158" y="388" width="28" height="28"/>
 <ellipse cx="285.0" cy="405.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -129,8 +129,8 @@
 <use href="#pr_table" x="466" y="388" width="28" height="28"/>
 <ellipse cx="649.0" cy="405.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_lowwall" x="634" y="388" width="28" height="28"/>
-<ellipse cx="817.0" cy="405.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="802" y="388" width="28" height="28"/>
+<ellipse cx="817.0" cy="405.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="802" y="388" width="28" height="28" transform="rotate(90 816 402)"/>
 <ellipse cx="285.0" cy="433.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_lowwall" x="270" y="416" width="28" height="28"/>
 <ellipse cx="313.4" cy="432.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>

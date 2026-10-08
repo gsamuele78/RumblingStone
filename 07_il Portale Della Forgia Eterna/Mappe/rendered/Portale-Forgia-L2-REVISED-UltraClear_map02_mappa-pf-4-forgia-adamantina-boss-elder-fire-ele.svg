@@ -37,12 +37,12 @@
 <path d="M74 80v700M102 80v700M130 80v700M158 80v700M214 80v700M242 80v700M270 80v700M298 80v700M354 80v700M382 80v700M410 80v700M438 80v700M494 80v700M522 80v700M550 80v700M578 80v700M634 80v700M662 80v700M690 80v700M718 80v700M774 80v700M802 80v700M830 80v700M858 80v700M914 80v700M942 80v700M970 80v700M46 108h924M46 136h924M46 164h924M46 192h924M46 248h924M46 276h924M46 304h924M46 332h924M46 388h924M46 416h924M46 444h924M46 472h924M46 528h924M46 556h924M46 584h924M46 612h924M46 668h924M46 696h924M46 724h924M46 752h924" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v700M186 80v700M326 80v700M466 80v700M606 80v700M746 80v700M886 80v700M46 80h924M46 220h924M46 360h924M46 500h924M46 640h924M46 780h924" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v700M102 80v700M130 80v700M158 80v700M214 80v700M242 80v700M270 80v700M298 80v700M354 80v700M382 80v700M410 80v700M438 80v700M494 80v700M522 80v700M550 80v700M578 80v700M634 80v700M662 80v700M690 80v700M718 80v700M774 80v700M802 80v700M830 80v700M858 80v700M914 80v700M942 80v700M970 80v700M46 108h924M46 136h924M46 164h924M46 192h924M46 248h924M46 276h924M46 304h924M46 332h924M46 388h924M46 416h924M46 444h924M46 472h924M46 528h924M46 556h924M46 584h924M46 612h924M46 668h924M46 696h924M46 724h924M46 752h924" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v700M186 80v700M326 80v700M466 80v700M606 80v700M746 80v700M886 80v700M46 80h924M46 220h924M46 360h924M46 500h924M46 640h924M46 780h924" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
-<ellipse cx="453.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="438" y="80" width="28" height="28"/>
-<ellipse cx="481.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="466" y="80" width="28" height="28"/>
-<ellipse cx="509.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="494" y="80" width="28" height="28"/>
+<ellipse cx="453.0" cy="97.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="438" y="80" width="28" height="28" transform="rotate(90 452 94)"/>
+<ellipse cx="481.0" cy="97.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="466" y="80" width="28" height="28" transform="rotate(90 480 94)"/>
+<ellipse cx="509.0" cy="97.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="494" y="80" width="28" height="28" transform="rotate(90 508 94)"/>
 <ellipse cx="285.4" cy="292.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="284.0" cy="290.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="284.0" cy="290.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>

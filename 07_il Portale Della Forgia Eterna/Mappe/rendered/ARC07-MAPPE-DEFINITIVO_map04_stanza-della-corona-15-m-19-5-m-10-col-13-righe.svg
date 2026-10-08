@@ -34,12 +34,12 @@
 <path d="M74 80v364M102 80v364M130 80v364M158 80v364M214 80v364M242 80v364M270 80v364M298 80v364M46 108h280M46 136h280M46 164h280M46 192h280M46 248h280M46 276h280M46 304h280M46 332h280M46 388h280M46 416h280M46 444h280" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v364M186 80v364M326 80v364M46 80h280M46 220h280M46 360h280" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v364M102 80v364M130 80v364M158 80v364M214 80v364M242 80v364M270 80v364M298 80v364M46 108h280M46 136h280M46 164h280M46 192h280M46 248h280M46 276h280M46 304h280M46 332h280M46 388h280M46 416h280M46 444h280" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v364M186 80v364M326 80v364M46 80h280M46 220h280M46 360h280" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
-<ellipse cx="145.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="130" y="108" width="28" height="28"/>
-<ellipse cx="173.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="158" y="108" width="28" height="28"/>
-<ellipse cx="201.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_door" x="186" y="108" width="28" height="28"/>
+<ellipse cx="145.0" cy="125.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="130" y="108" width="28" height="28" transform="rotate(90 144 122)"/>
+<ellipse cx="173.0" cy="125.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="158" y="108" width="28" height="28" transform="rotate(90 172 122)"/>
+<ellipse cx="201.0" cy="125.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
+<use href="#pr_door" x="186" y="108" width="28" height="28" transform="rotate(90 200 122)"/>
 <ellipse cx="116.0" cy="184.0" rx="7.5" ry="2.8" fill="#241c10" opacity="0.14"/>
 <text x="116.0" y="184.0" font-size="17" text-anchor="middle">🔲</text>
 <ellipse cx="228.0" cy="184.0" rx="7.5" ry="2.8" fill="#241c10" opacity="0.14"/>
