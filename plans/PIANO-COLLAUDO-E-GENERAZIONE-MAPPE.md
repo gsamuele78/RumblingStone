@@ -1,6 +1,6 @@
 # PIANO — Il collaudo delle mappe, e un generatore che non consegna bozze ingiocabili
 
-> **Stato**: 🔵 pianificato (2026-10-08), D1-D7 decise dal DM lo stesso giorno, D8-D9 aperte · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
+> **Stato**: 🔵 pianificato (2026-10-08), D1-D9 e D11 decise dal DM lo stesso giorno, D10 (i glifi) aperta · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
 > **Nasce da**: il documento *«Algorithmic Frameworks and Automated Evaluation
 > Architectures for Deterministic Map Generation in Tabletop Role-Playing
 > Games»*, portato dal DM il 2026-10-08 con la richiesta di verificare cosa si
@@ -9,7 +9,7 @@
 > Coast per D&D 3.5 e Pathfinder 1e; di misurare prima cosa c'è e cosa va
 > migliorato o validato; poi un piano e un ADR che coprano tutti i passi.
 > **Decisione**: [ADR-0082](adr/ADR-0082-la-mappa-si-collauda-come-grafo-prima-che-come-immagine.md) (accettata il 2026-10-08, non attuata; l'estensione sulla posa dei simboli è la D8).
-> **Ordine** (D1): il lotto mappe D28 di LETTORE-E-PLAYTESTER, poi V1, poi AMBIENTE A1-A8, poi V2 in avanti.
+> **Ordine** (D1, cambiato da D8 il 2026-10-08): V2-bis (i simboli nuovi), V1 (il collaudo, con `@tipo` e `@deroga` presi da V2), il ruolo del collaudatore (V11-bis), poi il lotto mappe D28 rifatto col set nuovo e collaudato, poi AMBIENTE A1-A8, poi il resto.
 > **Misura riproducibile**: `python3 -I plans/esperimenti/collaudo-mappe-2026-10/misura_mappe.py`, uscita del 2026-10-08 in [`misura-2026-10-08.txt`](esperimenti/collaudo-mappe-2026-10/misura-2026-10-08.txt), commit `8297670`.
 >
 > **In breve**: il repo sa disegnare una mappa in modo deterministico e
@@ -164,6 +164,48 @@ vista. Il formato UVTT non ha un muro di quel tipo, quindi l'export deve
 scegliere, e la scelta va scritta come deroga, come quella del bosco `🌲` in
 `legend.yaml`. Da verificare sul formato quando si fa il lotto.
 
+### §2.5-bis · Chi verifica le mappe, fuori di qui: editori, community, ricerca
+
+Il DM, il 2026-10-08: *«supponendo che gli script esistano, quali sono i
+migliori usati dalla community e dagli editori come Wizards of the Coast e
+Paizo per creare o usare gli algoritmi che servono: asset delle mappe,
+verifica della mappa, controllo del level design e della giocabilità, sia per
+il DM sia per i giocatori?»*
+
+**La risposta onesta comincia da un'assenza.** Né Wizards né Paizo
+pubblicano uno strumento automatico che verifichi una mappa. Da quello che si
+trova (forum ufficiali di Paizo, interviste a cartografi di Wizards, il blog
+*Maps, Maps, Maps*), le loro mappe nascono da uno schizzo dell'autore, passano
+dalla redazione che le controlla contro la continuità e la leggibilità,
+arrivano a un cartografo che le ridisegna a mano (Photoshop, Illustrator,
+GIMP, Campaign Cartographer), e tornano alla redazione per il confronto. La
+verifica è **editoriale e di playtest**, non algoritmica. È la stessa catena
+del repo, e questo piano le aggiunge il pezzo che a loro manca.
+
+Gli algoritmi di verifica veri stanno in tre posti:
+
+| Dove | Strumento | Cosa fa che serve qui | Licenza | Come entra |
+|---|---|---|---|---|
+| Editor di livelli | **LDtk** | ogni tessera porta un'etichetta semantica (*enum tag*: muro, acqua, porta) e regole automatiche dicono quale tessera va dove | MIT | **come schema**: è il campo `function` della legenda più il campo `posa` di V2-bis. Non come dipendenza |
+| Editor di livelli | **Tiled** (Automapping) | regole «se trovi questo, metti quello» su mappe a tessere; proprietà tipizzate per tessera; la validazione delle proprietà però va scritta a mano con gli script | GPL per l'editor | idem: lo schema delle regole di posa |
+| VTT | **Foundry**: Universal Battlemap Importer, *Levels*, *Multilevel Tokens* | muri, porte e luci importati da UVTT; piani diversi della stessa mappa; una scala `@stairs` su un piano teletrasporta alla scala gemella sull'altro | moduli della community, licenze varie | `@collega` di V2-bis è lo stesso accoppiamento, controllato **prima** di esportare. L'export UVTT resta quello di oggi |
+| Ricerca | **Sentient Sketchbook** (Liapis, Yannakakis, Togelius) | il progettista schizza la mappa; lo strumento verifica la giocabilità e misura controllo dell'area, esplorazione ed equilibrio | articoli | le metriche di esplorazione e di sicurezza delle zone entrano come avvisi in V5 e V7 |
+| Ricerca | **Expressive Range Analysis** (Smith e Whitehead, 2010) | misure globali (leniency, linearità, densità) per vedere che tipo di mappe un generatore produce | articolo | serve solo a V9, per sapere se il generatore fa sempre la stessa mappa |
+| Ricerca | **Evolutionary Dungeon Designer**, FI-2Pop, MAP-Elites | il documento portato dal DM | articoli | §2.4 |
+
+**Per il DM e per i giocatori** la differenza è la vista. Il DM vede tutto e
+deve poter giocare la mappa (raggiungibilità, coperture, tempi d'ingaggio);
+il giocatore vede la versione senza segreti, e lì il controllo è che non ci sia
+niente che non dovrebbe vedere (D9) e che la mappa si legga da sola (il nord
+dichiarato, la legenda, i simboli riconoscibili). Nessuno degli strumenti qui
+sopra fa le due cose insieme: lo farà il collaudatore di V11-bis, con lo
+strumento di V1 sotto.
+
+⚠️ Le fonti sono in gran parte di seconda mano (forum, interviste, note di
+rilascio), e quelle sui flussi di Wizards e Paizo hanno anni. Le licenze di
+LDtk e Tiled valgono per gli strumenti, che qui non si installano: se ne prende
+l'idea.
+
 ### §2.4 · Il documento portato dal DM, affermazione per affermazione
 
 | Il documento dice | Per questo repo | Esito |
@@ -252,11 +294,41 @@ Ogni lotto dichiara chi lo esegue, quanto impegno e come si sa che è finito
 
 `[engine: Opus 5 per il set e le regole, Sonnet 5 per il codice · effort: alto · qualità: ogni simbolo nuovo ha la sua arte in-house, la sua funzione, la sua regola di posa e un caso rosso e uno verde nei test; 41 SVG di oggi identici; il gate legend/single-source verde]` · **G + C**
 
-- Il set, proposto in D8: porta di legno, porta rinforzata (ferro o pietra),
-  porta chiusa a chiave, porta segreta, saracinesca, grata, finestra o
-  feritoia, sbarre, scala che sale, scala che scende, botola, pozzo o scala a
-  pioli, e gli arredi che oggi mancano (letto, baule, scaffale, altare,
-  rastrelliera già c'è). I glifi si scelgono nel lotto, con il DM.
+- Il set, deciso in D8 e allargato dal DM lo stesso giorno (nord leggibile,
+  acqua, fogne, detriti, arredi, caverne). I glifi sono la D10, proposti qui e
+  verificati contro il parser delle griglie (`⏬` e `⏫` non passano) e contro
+  il corpus (nessuno è già usato):
+
+  | Famiglia | Glifo | Cosa | Posa |
+  |---|---|---|---|
+  | chiusure | `🚪` | porta (c'è già) | nel muro |
+  | | `🔒` | porta chiusa a chiave o sbarrata | nel muro |
+  | | `❔` | porta segreta | nel muro, solo nel master |
+  | | `🥅` | saracinesca o grata | nel muro |
+  | | `🪟` | finestra o feritoia | nel muro |
+  | | `⛓` | sbarre di cella o gabbia | recinto |
+  | fra livelli | `🔼` | scala che sale | fra livelli |
+  | | `🔽` | scala che scende | fra livelli |
+  | | `🔻` | botola o pozzo | fra livelli |
+  | terreni | `🟤` | pavimento di caverna, roccia naturale | libera |
+  | | `💧` | acqua bassa, pozza | libera |
+  | | `🫧` | fogna, liquame | libera |
+  | | `🪵` | detriti, travi crollate | libera |
+  | arredi | `🗄` | armadio o scaffale | sul pavimento |
+  | | `📚` | libreria, archivio | sul pavimento |
+  | | `🧰` | baule o forziere | sul pavimento |
+  | | `⛲` | fontana o cisterna | sul pavimento |
+  | | `⚒` | incudine e forgia | sul pavimento |
+  | | `🧪` | banco dell'alchimista | sul pavimento |
+  | | `🛐` | altare | sul pavimento |
+  | | `🏗` | gru o argano | sul pavimento |
+
+  `🪜` resta «scale o rampa» senza regola di posa: sei celle di Hammerfist la
+  usano per salire ai camminamenti, e cambiarle senso adesso sarebbe toccare
+  una mappa giocata. Il nord **non è una tessera**: è la direttiva `@north`,
+  che il renderer già disegna come rosa dei venti; il collaudo la rende
+  obbligatoria nelle mappe tattiche (errore E `nord/mancante`), e le
+  annotazioni a lato possono dire «parete nord» sapendo dov'è.
 - Ogni simbolo entra in `legend.yaml` con `render`, `function` e il campo nuovo
   `posa`. Il disegno è vettoriale e fatto in casa (regola 5 della skill
   mapmaking), come gli altri prop.
@@ -365,6 +437,30 @@ Ogni lotto dichiara chi lo esegue, quanto impegno e come si sa che è finito
   e una riga nella tabella della skill; `docs/guides/GUIDA-MAPPE.md`; STEP 5 di
   `audit-mappe-workflow.md` con il collaudo prima del PNG.
 
+### V11-bis · Il collaudatore di mappe, un ruolo LLM (D11)
+
+`[engine: Opus 5 · effort: alto · qualità: la rubrica trova, su una mappa con difetti messi apposta, tutti quelli che lo strumento trova e almeno uno che lo strumento non può trovare; non vede il piano né la conversazione]` · **G**
+
+- Un ruolo come il lettore e il playtester a freddo di `rumblingstone-playtest`:
+  un agente che **non ha disegnato la mappa** la riceve con il master, il suo
+  testo d'arco e il rapporto di `collaudo_mappe.py`, e risponde a una rubrica
+  fissa in due viste.
+  - **Vista del DM**: lo strumento è stato eseguito e i rilievi E sono a zero o
+    hanno una deroga motivata? Ogni scala ha la sua gemella? Le posizioni
+    coincidono col testo della scena? Si capisce chi entra da dove e in quanti
+    round arriva al contatto?
+  - **Vista del giocatore**: la versione per i giocatori non mostra porte
+    segrete né trappole (D9); il nord è dichiarato; i simboli si leggono senza
+    la legenda locale; nessun simbolo fuori legenda.
+  - **Gli algoritmi**: per una mappa generata (V9), il seme è scritto, la bozza
+    è passata dal collaudo, le correzioni proposte da V10 sono state applicate
+    o rifiutate per scritto.
+- Lo strumento risponde a ciò che si conta; il ruolo a ciò che si giudica
+  (ADR-0067, il confine fra codice e LLM). Il ruolo **non corregge**: segnala,
+  e la correzione la fa chi ha disegnato, col DM.
+- Vive in `skills/rumblingstone-mapmaking/references/collaudo-mappe.md`,
+  citato dalla tabella della skill, e la sua norma entra nel registro (G3).
+
 ---
 
 ## §4 · Fase V — Validazione
@@ -387,8 +483,9 @@ Ogni lotto dichiara chi lo esegue, quanto impegno e come si sa che è finito
 ## §5 · Ordine e dipendenze
 
 ```
-D28 (LETTORE) ─► V1 ─► AMBIENTE A1-A8 ─► V2 ─► V2-bis ─► V3 ─► V4
-                  │                       └──────► V5 ─► V8
+V2-bis ─► V1 (+ @tipo, @deroga) ─► V11-bis ─► D28 (LETTORE, rifatto e collaudato)
+                                                 └─► AMBIENTE A1-A8 ─► V2 ─► V3 ─► V4
+                                                                        └──► V5 ─► V8
                         └─► V6 ─► V7
                                    └──► V9 ─► V10   (solo se D4 = sì)
                  V11 chiude, dopo V4 e dopo ogni lotto che aggiunge un controllo
@@ -433,14 +530,17 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 | ~~D5~~ | V6 | ✅ **Decisa il 2026-10-08, il DM: come proposto.** Era: **Come dichiara la taglia una griglia emoji?** Proposta: una direttiva `@taglia <coordinata> ; Grande`, solo dove serve; nel contratto JSON il campo `size` |
 | ~~D6~~ | V0 | ✅ **Decisa il 2026-10-08, il DM: come proposto.** Era: **Il linter di level design e `map_kind` passano a questo piano?** Oggi LEVEL-DESIGN li dà a VENDIBILITA, che non li elenca. Proposta: sì, e LEVEL-DESIGN C2 dipende da V1 e V5 |
 | ~~D7~~ | V5 | ✅ **Decisa il 2026-10-08, il DM: come proposto.** Era: **La copertura parziale di PF1e** (+2 CA, +1 Riflessi) entra nel livello neutro già ora o col profilo PF1e di VENDIBILITA 1.2? Proposta: col profilo; il collaudo distingue solo i quattro livelli neutri |
-| D8 | V2-bis | **Il corredo dei simboli e la regola di posa**: entrano i simboli di §2.3-bis (porte per tipo, porta segreta, saracinesca, grata, finestra, sbarre, scale che salgono e che scendono, botola, pozzo, arredi), ognuno con un campo `posa` che il collaudo verifica? E quando: dopo V2, come nell'ordine di D1, oppure prima di D28, perché le mappe di Hammerfist (fucina, gallerie, cappella, armeria, la sezione a livelli) sono proprio quelle con scale, porte e grate? Proposta: dopo V2; D28 si disegna con i simboli di oggi più simboli locali dichiarati, e V3 li migra. Anticiparlo costa a D28 il tempo dell'arte nuova e del lotto di test |
-| D9 | V2-bis | **Le porte segrete nella versione per i giocatori**: si disegnano come muro (il giocatore non sa che c'è) e il collaudo boccia una porta segreta che compare in una mappa per i giocatori? Proposta: sì |
+| ~~D8~~ | V2-bis | ✅ **Decisa il 2026-10-08, il DM: anticipato, e il lotto D28 si rifà col set nuovo** (*«check if there are the d28 maps and recreate d28 with new simbol set»*). Era: **Il corredo dei simboli e la regola di posa**: entrano i simboli di §2.3-bis (porte per tipo, porta segreta, saracinesca, grata, finestra, sbarre, scale che salgono e che scendono, botola, pozzo, arredi), ognuno con un campo `posa` che il collaudo verifica? E quando: dopo V2, come nell'ordine di D1, oppure prima di D28, perché le mappe di Hammerfist (fucina, gallerie, cappella, armeria, la sezione a livelli) sono proprio quelle con scale, porte e grate? Proposta: dopo V2; D28 si disegna con i simboli di oggi più simboli locali dichiarati, e V3 li migra. Anticiparlo costa a D28 il tempo dell'arte nuova e del lotto di test |
+| ~~D9~~ | V2-bis | ✅ **Decisa il 2026-10-08, il DM: sì.** Era: **Le porte segrete nella versione per i giocatori**: si disegnano come muro (il giocatore non sa che c'è) e il collaudo boccia una porta segreta che compare in una mappa per i giocatori? Proposta: sì |
+| D10 | V2-bis | **I glifi del set nuovo**: quelli della tabella di V2-bis? Proposta: sì; se un glifo non si legge bene al tavolo, si cambia lì, prima che una mappa lo usi |
+| ~~D11~~ | V11-bis | ✅ **Decisa il 2026-10-08, il DM: serve un ruolo LLM in più** che controlli che le mappe siano corrette, che gli algoritmi richiesti siano stati usati e che le parti sbagliate siano state corrette (*«it will need another llm role for checking that maps are correct»*). Diventa V11-bis: il collaudatore di mappe |
 
 <!-- eco: COLLAUDO-MAPPE 2026-10-08 -->
-- **Decise**: D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo
-- **Aperte**: D8 il corredo dei simboli con la regola di posa, e se anticiparlo a D28; D9 le porte segrete nella versione per i giocatori. Nate dalla domanda del DM nello stesso messaggio
-- **Cambiate**: nessuna, tutte come proposte
-- **Dedotto da me**: che «approved as proposed» valga anche per lo stato di ADR-0082, che passa da proposta ad accettata; che la domanda sugli «asset» parli della legenda dei simboli e non di immagini raster (le mappe del repo sono griglie di simboli e l'arte è vettoriale, regola 5); che «scaricare» nel messaggio voglia dire «scale», per salire e scendere (✅ confermato dal DM lo stesso giorno: *«staircase»*)
+- **Decise**: (primo messaggio) D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo. (Secondo messaggio) D8 il set dei simboli prima di D28, e D28 rifatto col set nuovo · D9 le porte segrete non compaiono nella versione per i giocatori · D11 un ruolo LLM di collaudo
+- **Aperte**: D10 i glifi del set nuovo, proposti in V2-bis
+- **Cambiate**: D8 dalla proposta «dopo V2, D28 con i simboli di oggi» a «prima di D28, e D28 rifatto»; quindi cambia l'ordine di D1: V2-bis, V1, il ruolo, D28, AMBIENTE
+- **Dedotto da me** (secondo messaggio): che V1 vada **prima** di D28 anche se il DM ha nominato solo i simboli, perché il ruolo di collaudo che chiede ha bisogno dello strumento per verificare le mappe di D28; che `@tipo` e `@deroga` passino da V2 a V1 per lo stesso motivo; che «underground cavern» chieda un pavimento di caverna proprio (`🟤`), che per il Cuore della Montagna sostituisce il `🟫` deciso in D2; che il nord leggibile sia la direttiva `@north` obbligatoria e non una tessera, perché una tessera nord spezzerebbe la griglia
+- **Dedotto da me** (primo messaggio): che «approved as proposed» valga anche per lo stato di ADR-0082, che passa da proposta ad accettata; che la domanda sugli «asset» parli della legenda dei simboli e non di immagini raster (le mappe del repo sono griglie di simboli e l'arte è vettoriale, regola 5); che «scaricare» nel messaggio voglia dire «scale», per salire e scendere (✅ confermato dal DM lo stesso giorno: *«staircase»*)
 
 ---
 
@@ -453,12 +553,13 @@ Fase A — Audit
 ☑ A3  Paizo, WotC, SRD e community: pratiche → controlli (§2.5)
 ☑ A4  ADR-0082 (accettata il 2026-10-08)
 ☑ A5  la legenda per porte, chiusure e scale misurata (§2.3-bis)
+☑ A6  editori, community e ricerca: chi verifica le mappe (§2.5-bis)
 
 Fase S — Sviluppo
-☑ V0  decisioni D1-D7 (2026-10-08) · □ D8-D9
+☑ V0  decisioni D1-D9 e D11 (2026-10-08) · □ D10
 □ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest
 □ V2  @tipo e @deroga; 38 griglie classificate; due norme registrate
-□ V2-bis il corredo dei simboli e la regola di posa (D8, D9)
+□ V2-bis il corredo dei simboli e la regola di posa (D8, D9 decise; D10 i glifi)
 □ V3  correzioni del corpus, mappa per mappa col DM
 □ V4  gate a tetto in CI
 □ V5  linea di vista e copertura SRD; M4, M7, M8
@@ -467,6 +568,7 @@ Fase S — Sviluppo
 □ V8  M9 sulla distanza d'incontro dell'SRD
 □ V9  generatore di bozze (se D4 = sì)
 □ V10 riparazione proposta in diff
+□ V11-bis il collaudatore di mappe, ruolo LLM (D11)
 □ V11 skill, guida, chiusura
 
 Fase V — Validazione: la tabella di §4, lotto per lotto

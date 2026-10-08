@@ -220,7 +220,11 @@ developer e del playtester; la misura del miglioramento.
       e l'altro. La sezione a livelli di Hammerfist 372 (più si
       scende, più le sale sono ampie) e le griglie da 1,5 m di fucina, gallerie,
       alchimista, cappella e armeria, coerenti con le Scene 4-5 già giocate e
-      con le varianti del 1372. Si apre con `rumblingstone-mapmaking`
+      con le varianti del 1372. Si apre con `rumblingstone-mapmaking`.
+      *(2026-10-08, D8 di [COLLAUDO-MAPPE](PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md))*:
+      si disegna col set di simboli nuovo (porte per tipo, grate, scale che
+      salgono e scendono con `@collega`, arredi) e passa da `collaudo_mappe.py`
+      e dal collaudatore di mappe prima di dirsi fatto
 - [x] la **quarta lettura cieca** di DEF-4 (2026-09-30), sul testo fuso con la
       #183: tabella qui sotto, rapporti `lettura-quarta-*`
 - [x] le letture a freddo dopo, e la tabella prima/dopo
