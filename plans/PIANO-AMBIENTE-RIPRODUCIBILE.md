@@ -1,6 +1,6 @@
 # PIANO — L'ambiente riproducibile: la macchina come la CI
 
-> **Stato**: 🔵 pianificato (2026-10-08), D1-D10 decise dal DM lo stesso giorno, D11 (gli hook) da confermare all'apertura di A4 · **Classe**: G per il contratto, C per i lotti
+> **Stato**: 🔵 pianificato (2026-10-08), D1-D11 decise dal DM lo stesso giorno · **Classe**: G per il contratto, C per i lotti
 > **Nasce da**: un brief incollato dal DM il 2026-10-08, *«Deterministic
 > Developer & TTRPG Campaign Environment Bootstrapper, CI-Parity Framework, and
 > Verification System»*, con la richiesta: *«verifica prima questo prompt e
@@ -161,7 +161,7 @@ Questo documento e ADR-0081.
 Gli hook stanno in `.githooks/` nel repo e si attivano con `core.hooksPath`,
 registrando il valore di prima. Se `core.hooksPath` punta già altrove, o ci
 sono hook non nostri in `.git/hooks/`, `setup` si ferma e lo dice. Tutti si
-saltano con `--no-verify`: la CI resta il cancello. La proposta per D11:
+saltano con `--no-verify`: la CI resta il cancello. La proposta, approvata con D11:
 
 | Hook | Cosa fa | Blocca? | Perché in locale |
 |---|---|---|---|
@@ -260,11 +260,11 @@ Un criterio vale per tutto il piano: **la CI di `main` resta verde**.
 | ~~D8~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 24.04, poi 26.04 con una PR.** **Quale Ubuntu stable?** |
 | ~~D9~~ | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: distrobox Debian 13.** **Come si installa su Bazzite, che è immutabile?** |
 | ~~D10~~ | A1 | ✅ **Decisa il 2026-10-08, risposta del DM: Chrome for Testing fissato.** **Da dove viene il Chromium uguale in CI e in locale?** La licenza passa dal gate di `rumblingstone-edizione` prima dell'adozione |
-| D11 | A4 | **Gli hook proposti in A4 vanno bene?** `pre-commit` bloccante su shellcheck, compilazione, file pesanti e token; `pre-push` con regola d'oro, verifica rapida dell'ambiente e test; `post-merge` che avvisa quando l'ambiente non combacia più. Si conferma all'apertura di A4 |
+| ~~D11~~ | A4 | ✅ **Decisa il 2026-10-08, risposta del DM: sì** (*«d11 ok»*). **Gli hook proposti in A4 vanno bene?** `pre-commit` bloccante su shellcheck, compilazione, file pesanti e token; `pre-push` con regola d'oro, verifica rapida dell'ambiente e test; `post-merge` che avvisa quando l'ambiente non combacia più. A4 li costruisce come scritti |
 
 <!-- eco: AMBIENTE 2026-10-08 -->
-- **Decise**: D1 pacchetti di sistema con conferma e registro · D2 superata da D7 · D3 lock con hash, aggiornamenti prima in CI · D4 dopo D28 · D5 Debian stable, Ubuntu stable, Bazzite · D6 `act` facoltativo · D7 Python 3.13 ovunque · D8 Ubuntu 24.04, poi 26.04 con una PR · D9 distrobox Debian 13 su Bazzite · D10 Chrome for Testing fissato
-- **Aperte**: D11 gli hook; la forma del lock (file `.in` o `.lock` a parte) si misura in A3; la licenza di Chrome for Testing e di pip-tools al gate di `edizione`
+- **Decise**: D1 pacchetti di sistema con conferma e registro · D2 superata da D7 · D3 lock con hash, aggiornamenti prima in CI · D4 dopo D28 · D5 Debian stable, Ubuntu stable, Bazzite · D6 `act` facoltativo · D7 Python 3.13 ovunque · D8 Ubuntu 24.04, poi 26.04 con una PR · D9 distrobox Debian 13 su Bazzite · D10 Chrome for Testing fissato · D11 gli hook di A4, come proposti
+- **Aperte**: la forma del lock (file `.in` o `.lock` a parte) si misura in A3; la licenza di Chrome for Testing e di pip-tools al gate di `edizione`
 - **Cambiate**: D1 dalla proposta «solo livello utente» a «sistema con registro»; D2 da «3.11 e 3.13» a «solo 3.13»; D3 dalla proposta «restano i `>=`» al lock; D6 dalla proposta «no» a «facoltativo»; shellcheck da «non bloccante finché gli avvisi non sono a zero» a bloccante subito; pdfcpu e Chromium da «decidere in A6» a «provati in CI»
 - **Dedotto da me**: che «.env» nel messaggio del DM sia il `.venv`; che «facoltativo» per `act` voglia dire modulo opzionale fissato come gli altri, non installato di default; che Bazzite stesso resti `UNKNOWN` in CI e si provi a mano (la CI prova il distrobox, non l'host); che per D1 la rimozione non usi mai `autoremove` né `purge`; che i `>=` restino come pavimento dichiarato accanto al lock; che il passaggio a 3.13 tocchi anche `dipendenze.yml`
 
