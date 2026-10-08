@@ -378,6 +378,17 @@ E **il pattern del dais `🔳` non ha posto nell'ordine di pittura** dal giorno 
 ADR-0042: si dipinge dopo i muri. Nessuna cella del repo usa `🔳`, quindi non ha
 effetti oggi; è scritto nel test e non è corretto qui.
 
+### V2-ter · Un limite del renderer trovato disegnando D28
+
+🔎 `render_map_svg.py` dà a un'icona il terreno della cella **a sinistra nella
+stessa riga** (`_resolve_bases`). Un'icona nella prima colonna di una stanza, o
+in un corridoio verticale largo uno, viene quindi disegnata **sulla roccia**:
+le brande, le rastrelliere e la prima forgia di D28 sembravano dentro il muro
+al primo rendering. Le mappe D28 sono disegnate tenendone conto; il renderer
+non è stato toccato, perché cambiare la regola cambia i 41 SVG di oggi.
+
+`[engine: Sonnet 5 · effort: medio · qualità: l'icona prende il terreno più frequente fra i quattro vicini; il delta dei 41 SVG misurato e mostrato al DM prima di rigenerarli]` · **C**, da fare quando il DM vuole
+
 ### V3 · Le correzioni del corpus
 
 `[engine: Opus 5, mai delegato · effort: xhigh · qualità: conferma esplicita del DM mappa per mappa; i rilievi E scendono a zero o hanno una deroga scritta]` · **K**

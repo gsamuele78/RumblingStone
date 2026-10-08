@@ -263,7 +263,7 @@ class Collaudo:
             if posa == "nel_muro" and (x, y) not in file_viste:
                 fila = self._fila(x, y)
                 file_viste |= fila
-                self._nel_muro(x, y, c, len(fila))
+                self._nel_muro(x, y, c, fila)
             elif posa == "fra_livelli":
                 self._fra_livelli(x, y, c)
             elif posa == "sul_pavimento" and f.get("blocks_movement"):
@@ -330,9 +330,10 @@ class Collaudo:
                     coda.append(q)
         return fila
 
-    def _nel_muro(self, x, y, c, lunghezza=1):
+    def _nel_muro(self, x, y, c, fila=frozenset()):
         G = self.G
-        quante = f" (fila di {lunghezza})" if lunghezza > 1 else ""
+        fila = fila or {(x, y)}
+        quante = f" (fila di {len(fila)})" if len(fila) > 1 else ""
 
         def capo(dx, dy):
             xx, yy = x, y
@@ -342,10 +343,14 @@ class Collaudo:
 
         oriz = murario(capo(-1, 0)) and murario(capo(1, 0))
         vert = murario(capo(0, -1)) and murario(capo(0, 1))
-        lati = [G.at(x, y - 1), G.at(x, y + 1)] if oriz else ([G.at(x - 1, y), G.at(x + 1, y)] if vert else [])
         if not (oriz or vert):
             self.rileva("posa/nel-muro", (x, y), f"«{c}»{quante} non sta fra due muri (o un muro e il bordo)")
-        elif all(murario(s) or s == FUORI for s in lati):
+            return
+
+        def lati(px, py):
+            return [G.at(px, py - 1), G.at(px, py + 1)] if oriz else [G.at(px - 1, py), G.at(px + 1, py)]
+        # una fila e' un varco solo: basta che una delle sue celle si attraversi
+        if all(all(murario(s) or s == FUORI for s in lati(px, py)) for px, py in fila):
             self.rileva("posa/nel-muro", (x, y), f"«{c}»{quante} e' murata: nessuno dei due lati e' percorribile")
 
     def _fra_livelli(self, x, y, c):

@@ -3084,7 +3084,7 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ### Le mappe a pergamena
 
-![M7-B — Il cortile del duello](Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg)
+![M7-B — Il cortile del duello](Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-22-5-m-24-col-15-righe-1-5.svg)
 
 <!-- nuova-pagina -->
 
@@ -3106,24 +3106,31 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ════════════════════════════════════════════════════════════════════════
  HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
 ════════════════════════════════════════════════════════════════════════
-   NORD ▲  ╔══════════════════════════════════════════════╗
-          ║   🏰🏰🏰  HAMMERFIST GIOVANE (mura bianche)  🏰🏰🏰 ║  ← Zona 1 (sicura)
-          ║   🏰  [Sala del Trono: Re Thorek I]  [Fucina]  🏰 ║     arrivo del portale
-          ║   🏰🏰  ═══ camminamenti ═══  BRECCIA▓▓  🏰🏰🏰🏰 ║  ← Zona 3 (mura, alba)
-          ╚════════════════▲▲▲═══════════════▲▲▲═════════════╝
-                    scale d'assedio / arieti ↑ (l'orda preme)
-   ~~~~~~~~~~~~~~~~~~~~~~~ CORTILE INTERNO (arena del duello → M7-B) ~~~~~~~~~
-          ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ← Zona 2: MARE DI TENDE
-   GP1▪   ⛺⛺⛺  ╔═══════════╗  ⛺⛺⛺   👤VATORE (Sc.9, tra le tende)  ▪GP2
-          ⛺⛺  ║ TENDA DEL  ║  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-          ⛺⛺  ║  COMANDO   ║  ⛺⛺  ⚔️ZOG'TAR + 4 guardie (Sc.8)
-          ⛺⛺  ╚═══════════╝  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-   GP3▪   ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ▪GP4
-          — — — — foresta a sud (i PG escono dalla postierla nord) — — — —  SUD ▼
+                                NORD ▲
+   ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  LA MONTAGNA  ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
+   ⛰ l'ala nella roccia: fucina, bottega, quartieri, cappella ⛰ 🗼 torre
+   ⛰ [Sala del Trono: Re Thorek I]       → Livello 0 (mappe D28)     ⛰
+   ⛰ ╔══════════ CORTILE INTERNO (M7-B, il duello all'alba) ══════════╗
+     ║  🗿 statua del re antenato      ⛲ pozzo e cisterna              ║
+     ╚═════════════════════ porta interna ═════════════════════════════╝
+ ▒ ╔══════════════════════ CORTILE ESTERNO ═══════════════════╗
+ ▒ ║ 🏰 camminamenti a 18 m · BRECCIA ▓▓ sul camminamento est ║      🌲🌲
+ ▒ ╚════════════ PORTA PRINCIPALE (Scena 3, la targa) ═══════╝      🌲 BOSCO
+ ▒ postierla: feritoia nella roccia                                   🌲 a est:
+ ▒ viva, sul fianco ovest [PROPOSTA]   ▲▲▲ scale d'assedio, arieti    🌲 il portale
+                                                                      🌲 a 500 m
+     — spianata davanti alla porta —
+     ⛺⛺⛺⛺⛺⛺⛺⛺⛺ MARE DI TENDE, largo circa 2 km ⛺⛺⛺⛺⛺⛺⛺⛺
+     GP1▪ ⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺   👤 VATORE (Scena 9)        ▪GP2
+          ⛺⛺  ║ TENDA DEL ║ ⛺⛺⛺   dalla postierla ~1 km:
+          ⛺⛺  ║ COMANDO   ║ ⛺⛺⛺   cinque blocchi da 200 m
+          ⛺⛺  ╚═══════════╝ ⛺⛺⛺   Zog'tar e 4 guardie (M7-C)
+     GP3▪ ⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺⛺⛺             ▪GP4
+             oltre il campo: le colline del drago [PROPOSTA]     SUD ▼
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · 🏰 mura/fortezza (bianche, nuove) · ▓ breccia · ⛺ tende (copertura)
-· ▪GP posti di guardia · ╔╗ tenda del comando (Zog'tar) · 👤 Vatore · ⚔️ scontro
-veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
+LEGENDA · ⛰ montagna · 🏰 mura (bianche, nuove) · ▓ breccia · ⛺ tende
+(copertura) · ▪GP posti di guardia · ╔╗ tenda del comando · 👤 Vatore ·
+🌲 bosco · ▒ roccia viva. Skullcrusher cala sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
 
@@ -3131,19 +3138,16 @@ veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
 
 ```
 ════════════════════════════════════════════════════════════════════════
- CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
- Skullcrusher entra da V1 (quota ~45 m) e picchia. PG partono dalla riga 16.
+ CORTILE INTERNO — 36 m × 22,5 m (24 col × 15 righe · 1,5 m) · cielo aperto
+ Skullcrusher scende in picchiata da circa 45 m, sopra V05. PG alla riga 16.
 ════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
-01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
-02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
-03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰   camminamenti +4,5 m, arcieri
-05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+04    🏰🏰🚪🚪🚪🏰🏰🏗🏰🏰🚪🏰🏰🏰🗼🏰🏰🏰🏗🏰🏰🏰🏰🏰   camminamenti +4,5 m · 🏗 gru · 🗼 torre nord
+05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔔🟫🟫🗿🟫🟫🟫⚫🟫🏰   🔔 le campane · 🗿 il re antenato · ⚫ il drago, in quota
+06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   🪨 macerie: copertura
 07    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
+09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫⛲🟫🟫🟫🏰   ⚔ impronta d'atterraggio (Enorme) · ⛲ il pozzo: la cisterna sotto
 10    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰
@@ -3152,17 +3156,22 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
 17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+18    🏰🏰🏰🏰🏰🏗🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏗🏰🏰🏰🏰🏰   🚪 verso il cortile esterno e la porta principale
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
-d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) ·
-🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I.
-@mark 1 ; V1 ; Skullcrusher (quota ~45 m)
+LEGENDA · ⚫ Skullcrusher (in quota) · ⚔ impronta d'atterraggio del drago
+(Enorme) · 🟫 cortile · 🪨 macerie (copertura) · 🏰 mura e camminamenti
+(+4,5 m, arcieri nani) · 🚪 l'arco della fucina (C-E04), la porta dell'ala (K04),
+la porta del cortile esterno (L-M18) · 🏗 gru · 🗼 torre nord · 🔔 campane ·
+🗿 statua del re antenato · ⛲ pozzo e cisterna · 🔵 PG e Re Thorek I.
+@north N
+@tipo tattica
+@mark 1 ; V05 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
 @mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
+@deroga m2/vuoto ; l'arena del duello e' aperta di proposito: il drago Enorme deve poter atterrare e ripartire
 ```
 
 #### MAPPA M7-C — LA TENDA DEL COMANDO (Scene 7 e 8)

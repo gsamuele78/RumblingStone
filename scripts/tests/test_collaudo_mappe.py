@@ -89,6 +89,24 @@ class TestCollaudo(unittest.TestCase):
         p = _master(self.tmp, "r.md", righe, ["@north N"])
         self.assertEqual(_codici(p).count("posa/nel-muro"), 0)
 
+    def test_una_barricata_che_chiude_meta_arco_non_mura_l_arco(self):
+        """Il falso positivo trovato sulla fucina del 1372: una fila di porte
+        e' un varco solo, e basta che una sua cella si attraversi."""
+        righe = ["🏰🏰🏰🏰🏰🏰",
+                 "🏰⬜🔵⬜⬜🏰",
+                 "🏰📦📦⬜⬜🏰",
+                 "🏰🚪🚪🚪🏰🏰"]
+        p = _master(self.tmp, "b1.md", righe, ["@north N"])
+        self.assertNotIn("posa/nel-muro", _codici(p))
+
+    def test_una_barricata_che_chiude_tutto_l_arco_lo_mura(self):
+        righe = ["🏰🏰🏰🏰🏰🏰",
+                 "🏰⬜🔵⬜⬜🏰",
+                 "🏰📦📦📦⬜🏰",
+                 "🏰🚪🚪🚪🏰🏰"]
+        p = _master(self.tmp, "b2.md", righe, ["@north N"])
+        self.assertIn("posa/nel-muro", _codici(p))
+
     def test_unita_irraggiungibile(self):
         righe = ["🏰🏰🏰🏰🏰🏰",
                  "🏰⬜🔵🏰⬜🏰",
