@@ -249,16 +249,16 @@ Un criterio vale per tutto il piano: **la CI di `main` resta verde**.
 
 | # | Lotto | Domanda |
 |---|---|---|
-| ~~D1~~ | A5c | ✅ **Risposta del DM il 2026-10-08: sì, col registro di ciò che si installa** (*«magari mettendo un registro di cosa installato così si può disinstallare nella procedura con sudo»*). **Fin dove arriva il setup automatico?** Pacchetti di sistema dopo conferma; il registro segue come Debian e Ubuntu tengono il conto (A5c) |
-| ~~D2~~ | A2 | ✅ **Risposta del DM il 2026-10-08, poi corretta: una versione sola, vedi D7.** La prima risposta era «CI su 3.11 e 3.13»; il DM l'ha cambiata lo stesso giorno |
-| ~~D3~~ | A3 | ✅ **Risposta del DM il 2026-10-08: lock con hash** (*«pip deve bloccare le versioni a meno di una correzione di sicurezza»*). La CI è lo standard: un aggiornamento entra prima in CI, poi in locale |
-| ~~D4~~ | tutti | ✅ **Risposta del DM il 2026-10-08: dopo D28.** Il piano parte dopo il lotto mappe D28; in questa sessione solo piano, ADR e tracciatura |
-| ~~D5~~ | A2, A6 | ✅ **Risposta del DM il 2026-10-08: Debian stable, Ubuntu stable, Bazzite.** **Quali piattaforme si supportano?** |
-| ~~D6~~ | A6 | ✅ **Risposta del DM il 2026-10-08: no, dopo la spiegazione** (*«cosa è act?»*, e la proposta «no» non contraddetta). **`act` per simulare la CI in locale?** Un'immagine diversa da GitHub non prova la CI |
-| ~~D7~~ | A2 | ✅ **Risposta del DM il 2026-10-08: 3.13 ovunque.** **Quale versione di Python, visto che Debian 13 ha 3.13, Ubuntu 24.04 3.12, Ubuntu 26.04 e Bazzite 3.14?** La versione di Debian stable; si sale quando sale Debian, e la regola vale per Dependabot |
-| ~~D8~~ | A2 | ✅ **Risposta del DM il 2026-10-08: 24.04, poi 26.04 con una PR.** **Quale Ubuntu stable?** |
-| ~~D9~~ | A5b | ✅ **Risposta del DM il 2026-10-08: distrobox Debian 13.** **Come si installa su Bazzite, che è immutabile?** |
-| ~~D10~~ | A1 | ✅ **Risposta del DM il 2026-10-08: Chrome for Testing fissato.** **Da dove viene il Chromium uguale in CI e in locale?** La licenza passa dal gate di `rumblingstone-edizione` prima dell'adozione |
+| ~~D1~~ | A5c | ✅ **Decisa il 2026-10-08, risposta del DM: sì, col registro di ciò che si installa** (*«magari mettendo un registro di cosa installato così si può disinstallare nella procedura con sudo»*). **Fin dove arriva il setup automatico?** Pacchetti di sistema dopo conferma; il registro segue come Debian e Ubuntu tengono il conto (A5c) |
+| ~~D2~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM, poi corretta: una versione sola, vedi D7.** La prima risposta era «CI su 3.11 e 3.13»; il DM l'ha cambiata lo stesso giorno |
+| ~~D3~~ | A3 | ✅ **Decisa il 2026-10-08, risposta del DM: lock con hash** (*«pip deve bloccare le versioni a meno di una correzione di sicurezza»*). La CI è lo standard: un aggiornamento entra prima in CI, poi in locale |
+| ~~D4~~ | tutti | ✅ **Decisa il 2026-10-08, risposta del DM: dopo D28.** Il piano parte dopo il lotto mappe D28; in questa sessione solo piano, ADR e tracciatura |
+| ~~D5~~ | A2, A6 | ✅ **Decisa il 2026-10-08, risposta del DM: Debian stable, Ubuntu stable, Bazzite.** **Quali piattaforme si supportano?** |
+| ~~D6~~ | A6 | ✅ **Decisa il 2026-10-08, risposta del DM: no, dopo la spiegazione** (*«cosa è act?»*, e la proposta «no» non contraddetta). **`act` per simulare la CI in locale?** Un'immagine diversa da GitHub non prova la CI |
+| ~~D7~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 3.13 ovunque.** **Quale versione di Python, visto che Debian 13 ha 3.13, Ubuntu 24.04 3.12, Ubuntu 26.04 e Bazzite 3.14?** La versione di Debian stable; si sale quando sale Debian, e la regola vale per Dependabot |
+| ~~D8~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 24.04, poi 26.04 con una PR.** **Quale Ubuntu stable?** |
+| ~~D9~~ | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: distrobox Debian 13.** **Come si installa su Bazzite, che è immutabile?** |
+| ~~D10~~ | A1 | ✅ **Decisa il 2026-10-08, risposta del DM: Chrome for Testing fissato.** **Da dove viene il Chromium uguale in CI e in locale?** La licenza passa dal gate di `rumblingstone-edizione` prima dell'adozione |
 | D11 | A4 | **Gli hook proposti in A4 vanno bene?** `pre-commit` bloccante su shellcheck, compilazione, file pesanti e token; `pre-push` con regola d'oro, verifica rapida dell'ambiente e test; `post-merge` che avvisa quando l'ambiente non combacia più. Si conferma all'apertura di A4 |
 
 <!-- eco: AMBIENTE 2026-10-08 -->
