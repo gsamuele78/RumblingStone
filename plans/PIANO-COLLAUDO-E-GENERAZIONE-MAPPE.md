@@ -340,6 +340,23 @@ Ogni lotto dichiara chi lo esegue, quanto impegno e come si sa che è finito
 - I simboli locali delle griglie che hanno un equivalente nuovo si migrano in
   V3, mappa per mappa.
 
+**Fatto il 2026-10-08.** 20 simboli nuovi in `legend.yaml` (84 in tutto), con
+funzione e posa; `posa`, `verso` e `solo_master` sono campi della legenda e
+`build_legend.py` li porta in `legend.json`. Il renderer ha 17 prop e 3
+pattern nuovi, aggiunti in coda: i 41 SVG committati restano identici al byte.
+`🚪` prende `posa: nel_muro`, dieci arredi di prima `sul_pavimento`; `🪜` resta
+senza regola. I test che congelavano la legenda sono aggiornati con i nomi dei
+simboli nuovi, e una classe di test nuova controlla verso, porte segrete e
+disegni.
+
+🔎 Due cose trovate facendolo. **Al primo giro la porta chiusa a chiave, il
+baule e la botola si confondevano**: tre rettangoli marroni con una placca
+dorata. Lo ha mostrato la verifica a vista del PNG, non un test; ridisegnati
+(assi e lucchetto di lato, baule tondo con le maniglie, botola con la freccia).
+E **il pattern del dais `🔳` non ha posto nell'ordine di pittura** dal giorno di
+ADR-0042: si dipinge dopo i muri. Nessuna cella del repo usa `🔳`, quindi non ha
+effetti oggi; è scritto nel test e non è corretto qui.
+
 ### V3 · Le correzioni del corpus
 
 `[engine: Opus 5, mai delegato · effort: xhigh · qualità: conferma esplicita del DM mappa per mappa; i rilievi E scendono a zero o hanno una deroga scritta]` · **K**
@@ -559,7 +576,7 @@ Fase S — Sviluppo
 ☑ V0  decisioni D1-D9 e D11 (2026-10-08) · □ D10
 □ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest
 □ V2  @tipo e @deroga; 38 griglie classificate; due norme registrate
-□ V2-bis il corredo dei simboli e la regola di posa (D8, D9 decise; D10 i glifi)
+☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · □ D10 i glifi, da confermare al tavolo
 □ V3  correzioni del corpus, mappa per mappa col DM
 □ V4  gate a tetto in CI
 □ V5  linea di vista e copertura SRD; M4, M7, M8

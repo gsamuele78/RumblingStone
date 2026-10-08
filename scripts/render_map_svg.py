@@ -102,8 +102,8 @@ DEFAULT_TERRAIN = {"mode": "fill", "fill": PAPER, "it": ""}
 HEAVY_PATS = set(legenda.pattern_pesanti())
 
 # paint order: backgrounds first, solids last (small overlaps hide seams)
-Z_ORDER = ["t_void", "t_grass", "t_veg", "t_sand", "t_earth", "t_floor", "t_lava",
-           "t_lethal", "t_deep", "t_water", "t_forest", "t_mountain",
+Z_ORDER = ["t_void", "t_grass", "t_veg", "t_sand", "t_earth", "t_cave", "t_floor", "t_lava",
+           "t_lethal", "t_deep", "t_water", "t_shallow", "t_sewer", "t_forest", "t_mountain",
            "t_struct", "t_pillar", "t_wall"]
 
 # ---------------------------------------------------------------------------
@@ -230,6 +230,29 @@ PATTERNS: dict[str, str] = {
         '<path d="M34 6l6 10h-6z" fill="#776b58"/>'
         '<circle cx="7" cy="30" r="1" fill="#776b58"/>'
         '<circle cx="16" cy="36" r="0.9" fill="#a49a87"/>'),
+    # V2-bis di PIANO-COLLAUDO-E-GENERAZIONE-MAPPE (D8, 2026-10-08): tre terreni
+    # nuovi. Si aggiungono in coda e non toccano le mappe che non li usano.
+    # 🟤 pavimento di caverna: roccia naturale, grigio-bruno, crepe irregolari.
+    "t_cave": _pattern("t_cave", 28,
+        '<rect width="28" height="28" fill="#9a8a76"/>'
+        '<path d="M2 9l5 2 3-3 6 1M15 20l4-3 6 2M4 24l3-2" '
+        'stroke="#7c6d5b" stroke-width="0.9" fill="none" stroke-linecap="round"/>'
+        '<circle cx="21" cy="7" r="1.6" fill="#8a7b68"/>'
+        '<circle cx="8" cy="17" r="1.2" fill="#ab9c88"/>'
+        '<circle cx="24" cy="25" r="0.9" fill="#ab9c88"/>'),
+    # 💧 acqua bassa o pozza: piu' chiara di 🌊, increspature corte.
+    "t_shallow": _pattern("t_shallow", 28,
+        '<rect width="28" height="28" fill="#9cc6d6"/>'
+        '<path d="M3 8q3-2 6 0M15 16q3-2 6 0M5 23q3-2 6 0" '
+        'stroke="#d3e8ef" stroke-width="1" fill="none" stroke-linecap="round"/>'
+        '<circle cx="22" cy="6" r="0.8" fill="#7fb0c4"/>'),
+    # 🫧 fogna o liquame: verde torbido con bolle.
+    "t_sewer": _pattern("t_sewer", 28,
+        '<rect width="28" height="28" fill="#6f7a4c"/>'
+        '<path d="M-2 12q5-3 10 0t10 0t10 0" stroke="#5a6339" stroke-width="1.2" fill="none"/>'
+        '<circle cx="7" cy="20" r="1.8" fill="none" stroke="#9aa66b" stroke-width="0.8"/>'
+        '<circle cx="19" cy="6" r="1.3" fill="none" stroke="#9aa66b" stroke-width="0.8"/>'
+        '<circle cx="22" cy="22" r="1" fill="none" stroke="#9aa66b" stroke-width="0.7"/>'),
 }
 
 # ---------------------------------------------------------------------------
@@ -507,6 +530,95 @@ PROPS: dict[str, str] = {
         f'<rect x="4" y="10" width="20" height="8" fill="#9c7a5a" stroke="{_PK}" stroke-width="1.2"/>'
         '<path d="M4 14h20M9 10v4M15 10v4M21 10v4M6 14v4M12 14v4M18 14v4" '
         'stroke="#6e4b3a" stroke-width="0.8"/>'),
+    # --- V2-bis (D8, 2026-10-08): chiusure, passaggi fra livelli, detriti, arredi.
+    # Disegnati in casa come gli altri (regola 5 della skill mapmaking).
+    "pr_lockdoor": _symbol("pr_lockdoor",
+        f'<rect x="5" y="9.5" width="18" height="9" rx="1.4" fill="#8a6032" stroke="{_PK}" stroke-width="1.2"/>'
+        '<path d="M9.5 9.5v9M14 9.5v9M18.5 9.5v9" stroke="#6e4b26" stroke-width="1"/>'
+        '<path d="M5 11.6h18M5 16.4h18" stroke="#3d3a36" stroke-width="1.5"/>'
+        f'<rect x="19.6" y="3.8" width="5.6" height="4.6" rx="0.7" fill="#c9a13b" stroke="{_PK}" stroke-width="0.8"/>'
+        f'<path d="M20.9 3.8v-1.2a1.5 1.5 0 0 1 3 0v1.2" stroke="{_PK}" stroke-width="0.9" fill="none"/>'
+        f'<circle cx="22.4" cy="6.1" r="0.7" fill="{_PK}"/>'),
+    "pr_secretdoor": _symbol("pr_secretdoor",
+        '<rect x="4" y="8" width="20" height="12" fill="#5d544a" stroke="#2f2415" stroke-width="1"/>'
+        '<rect x="7" y="10" width="14" height="8" fill="none" stroke="#c9b48a" stroke-width="1" '
+        'stroke-dasharray="2 1.4"/>'
+        '<path d="M16.2 11.6c-1.2-0.9-3.6-0.8-3.6 0.8 0 1.8 3.6 1.3 3.6 3.1 0 1.6-2.4 1.8-3.8 0.8" '
+        'stroke="#e8d8ae" stroke-width="1.1" fill="none" stroke-linecap="round"/>'),
+    "pr_grate": _symbol("pr_grate",
+        f'<rect x="4.5" y="8" width="19" height="12" fill="none" stroke="{_PK}" stroke-width="1.4"/>'
+        '<path d="M8 8v12M11.5 8v12M15 8v12M18.5 8v12M4.5 12h19M4.5 16h19" '
+        'stroke="#4a4540" stroke-width="1.1"/>'
+        '<path d="M8 20v1.6M11.5 20v1.6M15 20v1.6M18.5 20v1.6" stroke="#4a4540" stroke-width="1.1"/>'),
+    "pr_window": _symbol("pr_window",
+        '<rect x="4" y="10" width="20" height="8" fill="#5d544a" stroke="#2f2415" stroke-width="1"/>'
+        '<rect x="9" y="11.5" width="10" height="5" fill="#bfe0ea" stroke="#2f2415" stroke-width="0.9"/>'
+        '<path d="M14 11.5v5M9 14h10" stroke="#2f2415" stroke-width="0.8"/>'),
+    "pr_bars": _symbol("pr_bars",
+        '<path d="M4 7h20M4 21h20" stroke="#3d3a36" stroke-width="1.6"/>'
+        '<path d="M6.5 7v14M10.3 7v14M14 7v14M17.7 7v14M21.5 7v14" '
+        'stroke="#5a5651" stroke-width="1.5" stroke-linecap="round"/>'),
+    "pr_stairs_up": _symbol("pr_stairs_up",
+        f'<rect x="5" y="5" width="18" height="18" fill="#cfc4ad" stroke="{_PK}" stroke-width="1"/>'
+        '<path d="M5 9.5h18M5 14h18M5 18.5h18" stroke="#9c8f74" stroke-width="1"/>'
+        f'<path d="M14 6.5l4.5 5h-3v6h-3v-6h-3z" fill="#f4ecd6" stroke="{_PK}" stroke-width="0.9"/>'),
+    "pr_stairs_down": _symbol("pr_stairs_down",
+        f'<rect x="5" y="5" width="18" height="18" fill="#8f8470" stroke="{_PK}" stroke-width="1"/>'
+        '<path d="M5 9.5h18M5 14h18M5 18.5h18" stroke="#6b604d" stroke-width="1"/>'
+        f'<path d="M14 21.5l4.5-5h-3v-6h-3v6h-3z" fill="#3a3329" stroke="#f4ecd6" stroke-width="0.9"/>'),
+    "pr_trapdoor": _symbol("pr_trapdoor",
+        '<rect x="5" y="5" width="18" height="18" fill="#2a221a"/>'
+        f'<rect x="6.5" y="6.5" width="15" height="15" fill="#7a5a34" stroke="{_PK}" stroke-width="1"/>'
+        '<path d="M6.5 11.5h15M6.5 16.5h15" stroke="#5c4223" stroke-width="0.8"/>'
+        '<path d="M10 11l4 4.5 4-4.5" stroke="#f4ecd6" stroke-width="1.8" fill="none" '
+        'stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<circle cx="14" cy="19" r="1.3" fill="none" stroke="{_PK}" stroke-width="0.9"/>'),
+    "pr_debris": _symbol("pr_debris",
+        f'<path d="M4 9l11 3-0.6 2.2-11-3z" fill="#8a6032" stroke="{_PK}" stroke-width="0.9"/>'
+        f'<path d="M12 20l10-6 1.2 1.9-10 6z" fill="#9c7444" stroke="{_PK}" stroke-width="0.9"/>'
+        '<path d="M6 19l2-1.5M18 7l2.2 0.6M21 22l1.5 1" stroke="#5c4223" stroke-width="0.9"/>'
+        '<circle cx="9" cy="15" r="1.2" fill="#8a8071"/>'
+        '<circle cx="20" cy="10.5" r="1" fill="#8a8071"/>'),
+    "pr_cabinet": _symbol("pr_cabinet",
+        f'<rect x="6" y="5" width="16" height="18" rx="0.8" fill="#7a5530" stroke="{_PK}" stroke-width="1.2"/>'
+        '<path d="M14 5v18M6 14h16" stroke="#5c3e1f" stroke-width="1"/>'
+        f'<circle cx="12.5" cy="9.5" r="0.7" fill="{_PK}"/><circle cx="15.5" cy="9.5" r="0.7" fill="{_PK}"/>'),
+    "pr_books": _symbol("pr_books",
+        f'<rect x="4.5" y="6" width="19" height="16" fill="#6e4b26" stroke="{_PK}" stroke-width="1.1"/>'
+        '<rect x="6" y="7.5" width="2.4" height="6" fill="#8b2f2f"/><rect x="8.8" y="7.5" width="2" height="6" fill="#2f5a8b"/>'
+        '<rect x="11.2" y="7.5" width="2.6" height="6" fill="#c9a13b"/><rect x="14.2" y="7.5" width="2" height="6" fill="#3f6b3a"/>'
+        '<rect x="6" y="15" width="2" height="5.5" fill="#2f5a8b"/><rect x="8.4" y="15" width="2.6" height="5.5" fill="#8b2f2f"/>'
+        '<rect x="11.4" y="15" width="2.2" height="5.5" fill="#3f6b3a"/><rect x="14" y="15" width="2.6" height="5.5" fill="#c9a13b"/>'
+        '<path d="M4.5 14h19" stroke="#2f2415" stroke-width="1"/>'),
+    "pr_chest": _symbol("pr_chest",
+        f'<rect x="7.5" y="9" width="13" height="10" rx="2.6" fill="#7a3f22" stroke="{_PK}" stroke-width="1.2"/>'
+        '<path d="M7.5 12.5h13" stroke="#c9a13b" stroke-width="1.3"/>'
+        '<path d="M5.6 13.5h1.9M20.5 13.5h1.9" stroke="#3d3a36" stroke-width="1.6" stroke-linecap="round"/>'
+        f'<rect x="12.7" y="11.3" width="2.6" height="3.2" fill="#c9a13b" stroke="{_PK}" stroke-width="0.6"/>'),
+    "pr_fountain": _symbol("pr_fountain",
+        f'<circle cx="14" cy="14" r="10" fill="#b5ab98" stroke="{_PK}" stroke-width="1.2"/>'
+        '<circle cx="14" cy="14" r="7.5" fill="#7fb0c4"/>'
+        '<path d="M9 14q2.5-1.6 5 0t5 0" stroke="#d3e8ef" stroke-width="0.9" fill="none"/>'
+        f'<circle cx="14" cy="14" r="2" fill="#b5ab98" stroke="{_PK}" stroke-width="0.8"/>'),
+    "pr_anvil": _symbol("pr_anvil",
+        f'<path d="M5 10h15q3 0 4 2.5h-6l-1.5 2.5v3h3v2.5H8.5V18h3v-3L10 12.5H5z" fill="#4d4a46" stroke="{_PK}" stroke-width="1"/>'
+        '<path d="M6 10.8h13" stroke="#7a7570" stroke-width="0.8"/>'
+        '<circle cx="22" cy="21" r="1.6" fill="#e2762d"/>'),
+    "pr_alchemy": _symbol("pr_alchemy",
+        f'<rect x="4.5" y="9" width="19" height="10" rx="1" fill="#8a6a42" stroke="{_PK}" stroke-width="1.1"/>'
+        f'<path d="M8.5 10.5h3l-0.4 2.4 1.9 3.6h-6l1.9-3.6z" fill="#7fc49a" stroke="{_PK}" stroke-width="0.7"/>'
+        f'<circle cx="17.5" cy="14" r="2.4" fill="#c27fd8" stroke="{_PK}" stroke-width="0.7"/>'
+        f'<rect x="20.4" y="10.8" width="1.6" height="5" rx="0.6" fill="#e8b73a" stroke="{_PK}" stroke-width="0.5"/>'),
+    "pr_altar": _symbol("pr_altar",
+        f'<rect x="5" y="8" width="18" height="12" rx="0.8" fill="#bdb3a0" stroke="{_PK}" stroke-width="1.2"/>'
+        '<rect x="5" y="8" width="18" height="3" fill="#8b2f2f"/>'
+        f'<path d="M12 13h4v5h-4zM10.5 14.2h7" stroke="{_PK}" stroke-width="0.9" fill="#c9a13b"/>'),
+    "pr_crane": _symbol("pr_crane",
+        f'<path d="M7 23L12 6l5 17" stroke="#6e4b26" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
+        '<path d="M9 16h6" stroke="#6e4b26" stroke-width="1.4"/>'
+        f'<path d="M12 6l10 2.5" stroke="#6e4b26" stroke-width="1.6" stroke-linecap="round"/>'
+        f'<path d="M21 8.3v8" stroke="{_PK}" stroke-width="0.8"/>'
+        f'<path d="M19.8 16.3a1.2 1.2 0 1 0 2.4 0" stroke="{_PK}" stroke-width="1" fill="none"/>'),
 }
 
 # deterministic per-cell shape variants (breaks repetition in fields of the
