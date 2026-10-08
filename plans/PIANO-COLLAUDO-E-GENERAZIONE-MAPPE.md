@@ -268,13 +268,34 @@ Ogni lotto dichiara chi lo esegue, quanto impegno e come si sa che è finito
   `raggiungibile/obiettivo`, `raggiungibile/unita`. Della classe **A**: M1, M2,
   `zone/separate`, `ingombro/grande`.
 - Uscita testuale e `--json` contro uno schema nuovo
-  `scripts/schemas/map_findings.schema.json`: per ogni rilievo codice, classe, <!-- validate-docs: futuro -->
+  `scripts/schemas/map_findings.schema.json`: per ogni rilievo codice, classe,
   cella in coordinate A1, messaggio, deroga se c'è. In fondo la **distanza
   dalla giocabilità**, la somma pesata dei rilievi E.
 - `--report` esce sempre 0. Voce nel manifest (ADR-0012), `--help` senza
   effetti, smoke in CI. Lo script di `plans/esperimenti/` resta come prova
   della misura e non si importa.
 - Primo cliente: le griglie del lotto D28 appena fatte.
+
+**Fatto il 2026-10-08**, con `@tipo` e `@deroga` presi da V2 e le direttive
+`@collega`, `@taglia` e `@vista giocatori` di V2-bis e D9. 20 test, uno rosso e
+uno verde per controllo; passo non bloccante in CI; voce nel manifest. Sul
+corpus: **38 mappe, 97 errori, 53 avvisi, 1,4 secondi**.
+
+Il confronto con la misura di §2.3, che il criterio di qualità chiedeva:
+
+| Misura | §2.3 (script di misura) | `collaudo_mappe` | Perché |
+|---|---:|---:|---|
+| legende locali che rovesciano un universale | 7 | 7 | stessa regola |
+| griglie con più zone percorribili | 9 | 9 | stessa regola |
+| M1 sotto 0,60 · M2 sopra 0,20 | 19 · 22 | 19 · 22 | stessa regola |
+| simboli ignoti | 82 celle in 3 griglie | 7 rilievi in 3 griglie | il collaudo conta un rilievo per simbolo, non per cella |
+| porte fuori posto | 63 celle | 31 rilievi | il collaudo conta una fila di porte come un varco solo, e riconosce tutte le chiusure di V2-bis |
+| griglie con unità separate | 11 | 9 | la misura fermava la diagonale a ogni cella che blocca il movimento; il collaudo la ferma solo all'angolo di un muro, come dice l'SRD (una fossa o un barile non la fermano) |
+
+🐛 **Un difetto trovato dal test prima del commit**: la funzione che cerca la
+gemella di una scala restituiva una stringa sia per l'errore sia per il simbolo
+trovato, quindi ogni scala ben collegata risultava rotta. Il caso verde l'ha
+preso; con il solo caso rosso sarebbe passato.
 
 ### V2 · `@tipo` e `@deroga`
 
@@ -574,7 +595,7 @@ Fase A — Audit
 
 Fase S — Sviluppo
 ☑ V0  decisioni D1-D9 e D11 (2026-10-08) · □ D10
-□ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest
+☑ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest (2026-10-08: 20 test, 38 mappe, 97 errori, 53 avvisi)
 □ V2  @tipo e @deroga; 38 griglie classificate; due norme registrate
 ☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · □ D10 i glifi, da confermare al tavolo
 □ V3  correzioni del corpus, mappa per mappa col DM

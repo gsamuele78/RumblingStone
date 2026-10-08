@@ -207,6 +207,44 @@
       "deterministic": true
     },
     {
+      "name": "collaudo_mappe",
+      "description": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»\n\nCollauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1 e M2 come avvisi. In sola lettura.",
+      "use_case": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»",
+      "invocation": "python3 scripts/collaudo_mappe.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "string",
+            "description": "Master markdown da collaudare (default: il corpus della campagna)."
+          },
+          "json": {
+            "type": "string",
+            "description": "Scrive il rapporto in JSON (scripts/schemas/map_findings.schema.json)."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Esce 1 se resta un rilievo E non derogato."
+          },
+          "solo-errori": {
+            "type": "boolean",
+            "description": "Nel testo mostra solo i rilievi E."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--json>"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con rilievi",
+        "1": "rilievi E non derogati con --strict",
+        "2": "errore d'uso (file non trovato)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "compile_map_json",
       "description": "«Ho la mappa descritta in JSON: come diventa un master valido senza che io conti i quadretti a mano?»\n\nModalita' 3: compila un contratto JSON rigido in un master griglia-emoji, validando geometria e simboli e rigettando input errati.",
       "use_case": "«Ho la mappa descritta in JSON: come diventa un master valido senza che io conti i quadretti a mano?»",
