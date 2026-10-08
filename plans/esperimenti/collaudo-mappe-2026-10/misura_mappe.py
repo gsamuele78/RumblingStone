@@ -202,6 +202,33 @@ def main():
           f"{sum(1 for m in grandi if m['m1'] is not None and m['m1'] < 0.6)}) · "
           f"M2 mediana {med('m2', grandi)} (sopra 0,20: {sum(1 for m in grandi if m['m2'] is not None and m['m2'] > 0.2)}) · "
           f"Grande 2x2 sotto l'80% del percorribile: {sum(1 for m in grandi if m['grande'] is not None and m['grande'] < 0.8)}")
+    # la legenda per porte, chiusure e passaggi fra livelli (D8 del piano)
+    concetti = {
+        "porta": r"\bport[ae]\b", "porta segreta": r"segret", "saracinesca o grata": r"saracinesc|grat[ae]",
+        "sbarre o gabbia": r"sbarr|gabbi", "botola": r"botol", "scala": r"\bscal[ae]\b",
+        "salire o scendere": r"\bsal|scend|discesa", "finestra o feritoia": r"finestr|feritoi",
+    }
+    print("legenda universale, simboli per concetto: " + " · ".join(
+        f"{c} {sum(1 for v in LEG.values() if re.search(rx, v.get('label', ''), re.I))}"
+        for c, rx in concetti.items()))
+    fuori = Counter()
+    prosa = Counter()
+    rx_prosa = re.compile(r"\b(grat[ae]|sbarr\w*|gabbi[ae]|saracinesc\w*|botol[ae]|prigion\w*|porta segreta|porte segrete)\b", re.I)
+    for p in sorted(file_md):
+        try:
+            testo = p.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        griglie = R.extract_maps(testo)
+        if not griglie:
+            continue
+        prosa[p.name] += len(rx_prosa.findall(testo))
+        for g in griglie:
+            for r in g["rows"].values():
+                fuori.update(n(c) for c in r if n(c) not in F)
+    print(f"nei file con griglie: {sum(prosa.values())} menzioni di grate, gabbie, prigioni, botole o porte segrete "
+          f"in {sum(1 for v in prosa.values() if v)} file; simboli fuori legenda nelle griglie: "
+          f"{len(fuori)} tipi, {sum(fuori.values())} celle")
     if args.json:
         Path(args.json).write_text(json.dumps(tutte, ensure_ascii=False, indent=1), encoding="utf-8")
     return 0

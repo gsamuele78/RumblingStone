@@ -1,6 +1,6 @@
 # ADR-0082 — La mappa si collauda come grafo prima che come immagine
 
-- **Stato**: **proposta**, in attesa del DM (D1-D7 di [PIANO-COLLAUDO-E-GENERAZIONE-MAPPE](../PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md)); **non attuata**
+- **Stato**: **accettata** (il DM, il 2026-10-08: D1-D7 di [PIANO-COLLAUDO-E-GENERAZIONE-MAPPE](../PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) come proposte); **non attuata**. Il punto 8, la regola di posa, è **proposto** (D8)
 - **Data**: 2026-10-08
 - **Decisori**: DM (Gianfranco Samuele), agente
 - **Rapporti**: si appoggia ad [ADR-0048](ADR-0048-legenda-funzionale-fonte-unica.md) (la legenda funzionale è il solo dato che il collaudo legge); rispetta [ADR-0037](ADR-0037-stdlib-only-e-le-sue-eccezioni.md) (solo libreria standard in ciò che il DM esegue), [ADR-0039](ADR-0039-profili-regole-multisistema.md) (i numeri di gioco stanno nei profili), [ADR-0012](ADR-0012-standard-ingegneria-tool-verificabile.md) (tool a contratto), [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) (niente mappe di terzi come dato) e [ADR-0056](ADR-0056-una-norma-senza-misura-non-esiste.md) (una norma arriva con la sua misura); prende in carico il linter di level design e il discriminante `map_kind` che [PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA](../PIANO-LEVEL-DESIGN-E-INQUADRATURA-SCENICA.md) assegnava a [PIANO-VENDIBILITA](../PIANO-VENDIBILITA.md), che non li elenca fra i suoi lotti
@@ -108,6 +108,17 @@ corpus.
    casuali. L'unica idea di FI-2Pop che entra è la **distanza dalla
    giocabilità** come somma pesata dei rilievi E: il generatore scarta o
    ritenta finché è zero.
+
+8. **Proposto (D8): ogni simbolo dichiara come si posa.** La legenda dice cosa
+   fa una tessera e non dove può stare; una porta in mezzo a un prato ha la
+   stessa funzione di una porta in un muro. Un campo neutro `posa` in
+   `legend.yaml` (`nel_muro`, `recinto`, `fra_livelli`, `sul_pavimento`,
+   `solo_master`) rende la posa un dato che il collaudo verifica, come la
+   funzione. Le scale e le botole portano la loro coppia su un'altra mappa o un
+   altro livello (`@collega`), e il collaudo controlla che esista. Entra con il
+   corredo di simboli che oggi manca (misurato: una porta, una scala, nessuna
+   grata, gabbia, saracinesca, botola o porta segreta). I numeri di porte e
+   saracinesche (durezza, punti ferita, CD) stanno nel profilo, non qui.
 
 ## Alternative scartate
 
