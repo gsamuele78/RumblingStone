@@ -227,6 +227,12 @@ jobs:
         continue-on-error: true
         run: python scripts/validate_tipografia.py
 
+      # ADR-0082, PIANO-COLLAUDO-E-GENERAZIONE-MAPPE V1: il rapporto del collaudo
+      # delle mappe, in sola lettura. Non blocca: il gate a tetto e' il lotto V4.
+      - name: Collaudo delle mappe (rapporto, non bloccante)
+        continue-on-error: true
+        run: python scripts/collaudo_mappe.py --solo-errori
+
       - name: DM tool smoke tests
         run: |
           python scripts/suggest_encounter.py --help > /dev/null
@@ -240,6 +246,7 @@ jobs:
           python scripts/compile_map_json.py --help > /dev/null
           python scripts/export_uvtt.py --help > /dev/null
           python scripts/import_ultraclear.py --help > /dev/null
+          python scripts/collaudo_mappe.py --help > /dev/null
           python scripts/update_xp.py --check > /dev/null
           python scripts/hype_homebrew.py --help > /dev/null
           python scripts/dm_dossier.py --help > /dev/null

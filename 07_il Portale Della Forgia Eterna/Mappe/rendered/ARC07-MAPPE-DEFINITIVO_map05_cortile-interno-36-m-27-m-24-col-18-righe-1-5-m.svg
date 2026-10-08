@@ -12,8 +12,10 @@
 <pattern id="t_earth" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#b08d68"/><circle cx="6" cy="6" r="1.1" fill="#93714e"/><circle cx="18" cy="11" r="0.9" fill="#93714e"/><circle cx="24" cy="22" r="1.2" fill="#93714e"/><circle cx="9" cy="20" r="1" fill="#c8a87f"/><circle cx="22" cy="4" r="0.8" fill="#c8a87f"/><path d="M3 15q4-1.5 8 0" stroke="#a17d59" stroke-width="0.8" fill="none"/></pattern>
 <pattern id="t_struct" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#6b5b47"/><path d="M-2 6l8-8M-2 14l16-16M-2 22l24-24M6 30l24-24M14 30l16-16M22 30l8-8" stroke="#5a4b39" stroke-width="0.9"/><path d="M0 14.5h28" stroke="#7d6c56" stroke-width="0.8"/></pattern>
 <pattern id="t_wall" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#3f3931"/><path d="M-2 6l8-8M-2 14l16-16M-2 22l24-24M-2 30l32-32M6 30l24-24M14 30l16-16M22 30l8-8" stroke="#2b2620" stroke-width="1"/><circle cx="8" cy="18" r="1" fill="#554d42"/><circle cx="21" cy="7" r="0.9" fill="#554d42"/></pattern>
+<symbol id="pr_anvil" viewBox="0 0 28 28"><path d="M5 10h15q3 0 4 2.5h-6l-1.5 2.5v3h3v2.5H8.5V18h3v-3L10 12.5H5z" fill="#4d4a46" stroke="#2f2415" stroke-width="1"/><path d="M6 10.8h13" stroke="#7a7570" stroke-width="0.8"/><circle cx="22" cy="21" r="1.6" fill="#e2762d"/></symbol>
 <symbol id="pr_bell" viewBox="0 0 28 28"><path d="M14 5c4 0 6 3 6 7 0 3 .8 4.6 2 5.6H6c1.2-1 2-2.6 2-5.6 0-4 2-7 6-7z" fill="#c9a13b" stroke="#6e5312" stroke-width="1.1"/><circle cx="14" cy="20.4" r="1.7" fill="#6e5312"/><circle cx="14" cy="4.6" r="1.3" fill="#6e5312"/><path d="M10.5 8.5q-1.3 2-1.3 4.5" stroke="#e8cd7e" stroke-width="0.9" fill="none"/></symbol>
 <symbol id="pr_brazier" viewBox="0 0 28 28"><circle cx="14" cy="14" r="9" fill="#5a4a38" stroke="#2f2415" stroke-width="1.2"/><circle cx="14" cy="14" r="6.4" fill="#33291d"/><circle cx="14" cy="14" r="4.6" fill="#e2762d"/><circle cx="13.2" cy="13.4" r="2.8" fill="#f2a93b"/><circle cx="12.8" cy="13" r="1.4" fill="#f8d778"/></symbol>
+<symbol id="pr_crane" viewBox="0 0 28 28"><path d="M7 23L12 6l5 17" stroke="#6e4b26" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M9 16h6" stroke="#6e4b26" stroke-width="1.4"/><path d="M12 6l10 2.5" stroke="#6e4b26" stroke-width="1.6" stroke-linecap="round"/><path d="M21 8.3v8" stroke="#2f2415" stroke-width="0.8"/><path d="M19.8 16.3a1.2 1.2 0 1 0 2.4 0" stroke="#2f2415" stroke-width="1" fill="none"/></symbol>
 <symbol id="pr_door" viewBox="0 0 28 28"><rect x="5" y="9.5" width="18" height="9" rx="1.4" fill="#8a6032" stroke="#2f2415" stroke-width="1.2"/><path d="M9.5 9.5v9M14 9.5v9M18.5 9.5v9" stroke="#6e4b26" stroke-width="1"/><circle cx="7.2" cy="14" r="0.9" fill="#2f2415"/><circle cx="20.8" cy="14" r="0.9" fill="#2f2415"/></symbol>
 <symbol id="pr_rocks" viewBox="0 0 28 28"><path d="M5 16l3-5.5 5.5-1.5 3.5 4-1 5.5-7 2.5z" fill="#9b917f" stroke="#2f2415" stroke-width="1.1"/><path d="M8 10.5l5.5-1.5 1 4.5-6.5 2z" fill="#b0a692"/><path d="M16 19l2-4.5 5-1 2.5 4-3 4.5h-4.5z" fill="#8a8071" stroke="#2f2415" stroke-width="1"/><path d="M18 14.5l5-1 1.5 2.5-5.5 1z" fill="#a29885"/><circle cx="12" cy="21.5" r="1" fill="#6f6552"/><circle cx="20" cy="9" r="1.2" fill="#776b58"/></symbol>
 <symbol id="pr_rocks_b" viewBox="0 0 28 28"><path d="M11 8l5.5 1 2.5 5-2.5 5-6 .5-2.5-5z" fill="#948a77" stroke="#2f2415" stroke-width="1.1"/><path d="M11 8l5.5 1 1 3.5-6 1z" fill="#aca28e"/><path d="M6 18.5l1.5-3.5 4-.5 1.5 3-1.5 3.5h-4z" fill="#8a8071" stroke="#2f2415" stroke-width="1"/><path d="M7.5 15l4-.5 1 2-4.5 1z" fill="#a29885"/><circle cx="19.5" cy="20.5" r="1.6" fill="#8a8071" stroke="#2f2415" stroke-width="0.8"/><circle cx="6.5" cy="9.5" r="1" fill="#776b58"/></symbol>
@@ -215,24 +217,24 @@
 <use href="#pr_rocks" x="522" y="220" width="28" height="28"/>
 <ellipse cx="565.0" cy="237.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rocks_b" x="550" y="220" width="28" height="28"/>
-<ellipse cx="116.0" cy="268.0" rx="7.5" ry="2.8" fill="#241c10" opacity="0.14"/>
-<text x="116.0" y="268.0" font-size="17" text-anchor="middle">⚒</text>
+<ellipse cx="117.0" cy="265.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_anvil" x="102" y="248" width="28" height="28"/>
 <ellipse cx="341.0" cy="321.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="326" y="304" width="28" height="28"/>
 <ellipse cx="369.0" cy="321.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="354" y="304" width="28" height="28"/>
 <ellipse cx="397.0" cy="321.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="382" y="304" width="28" height="28"/>
-<ellipse cx="88.0" cy="352.0" rx="7.5" ry="2.8" fill="#241c10" opacity="0.14"/>
-<text x="88.0" y="352.0" font-size="17" text-anchor="middle">🏗</text>
+<ellipse cx="89.0" cy="349.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_crane" x="74" y="332" width="28" height="28"/>
 <ellipse cx="341.0" cy="349.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="326" y="332" width="28" height="28"/>
 <ellipse cx="369.0" cy="349.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="354" y="332" width="28" height="28"/>
 <ellipse cx="397.0" cy="349.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="382" y="332" width="28" height="28"/>
-<ellipse cx="676.0" cy="352.0" rx="7.5" ry="2.8" fill="#241c10" opacity="0.14"/>
-<text x="676.0" y="352.0" font-size="17" text-anchor="middle">🏗</text>
+<ellipse cx="677.0" cy="349.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_crane" x="662" y="332" width="28" height="28"/>
 <ellipse cx="341.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_swords" x="326" y="360" width="28" height="28"/>
 <ellipse cx="369.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -389,21 +391,21 @@
 <text x="73" y="974" font-size="11" fill="#3b2e1e">🔔 — Allarme / trappola sonora</text>
 <use href="#pr_brazier" x="46" y="983" width="18" height="18"/>
 <text x="73" y="996" font-size="11" fill="#3b2e1e">🏮 — Braciere / fonte di luce</text>
-<use href="#pr_door" x="46" y="1005" width="18" height="18"/>
-<text x="73" y="1018" font-size="11" fill="#3b2e1e">🚪 — Porta / ingresso</text>
-<use href="#pr_rocks" x="46" y="1027" width="18" height="18"/>
-<text x="73" y="1040" font-size="11" fill="#3b2e1e">🪨 — Rocce/macerie (copertura +4 CA, terreno difficile)</text>
-<use href="#pr_statue" x="46" y="1049" width="18" height="18"/>
-<text x="73" y="1062" font-size="11" fill="#3b2e1e">🗿 — Statua</text>
-<use href="#pr_tower" x="46" y="1071" width="18" height="18"/>
-<text x="73" y="1084" font-size="11" fill="#3b2e1e">🗼 — Torre / struttura alta</text>
-<use href="#pr_swords" x="46" y="1093" width="18" height="18"/>
-<text x="73" y="1106" font-size="11" fill="#3b2e1e">⚔ — Zona di scontro</text>
-<text x="46" y="1128" font-size="14">☁</text>
-<text x="73" y="1128" font-size="11" fill="#3b2e1e">☁ — zona aerea (serve volo o gittata)</text>
-<text x="46" y="1150" font-size="14">⚒</text>
-<text x="73" y="1150" font-size="11" fill="#3b2e1e">⚒ — l'incudine del rito</text>
-<text x="46" y="1172" font-size="14">🏗</text>
-<text x="73" y="1172" font-size="11" fill="#3b2e1e">🏗 — gru con le corde</text>
+<use href="#pr_crane" x="46" y="1005" width="18" height="18"/>
+<text x="73" y="1018" font-size="11" fill="#3b2e1e">🏗 — Gru o argano</text>
+<use href="#pr_anvil" x="46" y="1027" width="18" height="18"/>
+<text x="73" y="1040" font-size="11" fill="#3b2e1e">⚒ — Incudine e forgia</text>
+<use href="#pr_door" x="46" y="1049" width="18" height="18"/>
+<text x="73" y="1062" font-size="11" fill="#3b2e1e">🚪 — Porta / ingresso</text>
+<use href="#pr_rocks" x="46" y="1071" width="18" height="18"/>
+<text x="73" y="1084" font-size="11" fill="#3b2e1e">🪨 — Rocce/macerie (copertura +4 CA, terreno difficile)</text>
+<use href="#pr_statue" x="46" y="1093" width="18" height="18"/>
+<text x="73" y="1106" font-size="11" fill="#3b2e1e">🗿 — Statua</text>
+<use href="#pr_tower" x="46" y="1115" width="18" height="18"/>
+<text x="73" y="1128" font-size="11" fill="#3b2e1e">🗼 — Torre / struttura alta</text>
+<use href="#pr_swords" x="46" y="1137" width="18" height="18"/>
+<text x="73" y="1150" font-size="11" fill="#3b2e1e">⚔ — Zona di scontro</text>
+<text x="46" y="1172" font-size="14">☁</text>
+<text x="73" y="1172" font-size="11" fill="#3b2e1e">☁ — zona aerea (serve volo o gittata)</text>
 <!-- fonte: ARC07-MAPPE-DEFINITIVO.md · SVG generato da scripts/render_map_svg.py (stile pergamena) · non modificare a mano -->
 </svg>
