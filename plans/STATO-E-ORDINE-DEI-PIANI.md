@@ -356,7 +356,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D3~~ | `AMBIENTE` | A3 | ✅ **Decisa il 2026-10-08, risposta del DM: lock con hash** (*«pip deve bloccare le versioni a meno di una correzione di sicurezza»*). La CI è lo standard: un aggiornamento entra prima in CI, poi in locale |
 | ~~D4~~ | `AMBIENTE` | tutti | ✅ **Decisa il 2026-10-08, risposta del DM: dopo D28.** Il piano parte dopo il lotto mappe D28; in questa sessione solo piano, ADR e tracciatura |
 | ~~D5~~ | `AMBIENTE` | A2, A6 | ✅ **Decisa il 2026-10-08, risposta del DM: Debian stable, Ubuntu stable, Bazzite.** **Quali piattaforme si supportano?** |
-| ~~D6~~ | `AMBIENTE` | A6 | ✅ **Decisa il 2026-10-08, risposta del DM: no, dopo la spiegazione** (*«cosa è act?»*, e la proposta «no» non contraddetta). **`act` per simulare la CI in locale?** Un'immagine diversa da GitHub non prova la CI |
+| ~~D6~~ | `AMBIENTE` | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: facoltativo** (*«d6 ok facoltativo»*, dopo la spiegazione). **`act` per simulare la CI in locale?** Modulo opzionale del profilo `sviluppo`, versione e checksum nel registro come gli altri binari; il suo verde non sostituisce la CI |
 | ~~D7~~ | `AMBIENTE` | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 3.13 ovunque.** **Quale versione di Python, visto che Debian 13 ha 3.13, Ubuntu 24.04 3.12, Ubuntu 26.04 e Bazzite 3.14?** La versione di Debian stable; si sale quando sale Debian, e la regola vale per Dependabot |
 | ~~D8~~ | `AMBIENTE` | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 24.04, poi 26.04 con una PR.** **Quale Ubuntu stable?** |
 | ~~D9~~ | `AMBIENTE` | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: distrobox Debian 13.** **Come si installa su Bazzite, che è immutabile?** |

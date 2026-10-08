@@ -53,7 +53,7 @@ dichiara.
 | §33 «decision record» e §31 «architecture document» | due documenti | un ADR (0081) e questo piano |
 | §35 «codice completo, nessun segnaposto», in un colpo | consegna unica | lotti piccoli, un ramo e una PR per lotto (PRATICHE D6), regola d'oro dei piani su ognuno. «Nessun segnaposto» resta vero dentro ogni lotto |
 | §14 rollback transazionale | ripristino di ogni mutazione | vero per ciò che si possiede (`.venv`, binari in `~/.local/bin`, hook, stato). Per i pacchetti di sistema c'è un registro (D1, A5c), ma `apt` non ha un *undo*: la rimozione toglie solo ciò che mancava prima, dopo una simulazione mostrata |
-| §19 `act` | simulare GitHub Actions in locale | no (D6). `act` esegue i workflow in Docker con un'immagine diversa da quella di GitHub: un verde in locale non garantisce un verde in CI. L'equivalente utile è eseguire in locale gli stessi comandi, ed è `dm.py ambiente verifica` |
+| §19 `act` | simulare GitHub Actions in locale | **facoltativo** (D6): un modulo opzionale del profilo `sviluppo`, mai installato senza `--con act`. `act` esegue i workflow in Docker con un'immagine diversa da quella di GitHub, quindi un verde in locale è un aiuto e non una prova; il riferimento resta la CI, e l'equivalente di ogni giorno è `dm.py ambiente verifica` |
 | §25 «più sistemi operativi in CI» | matrice di OS | tre piattaforme, decise dal DM (D5): Debian stable, Ubuntu stable, Bazzite. Su Bazzite l'ambiente gira in un distrobox Debian 13 (D9) |
 | §17 Git LFS, GPG, chiavi SSH | integrazione | nessun `.gitattributes`, nessun LFS: `NOT_APPLICABLE`. Chiavi e credenziali si **leggono** (`gh auth status`) e non si toccano mai |
 | §15 dati di campagna fuori dal repo | `~/.local/share/<project>/campaign/` | sbagliato per questo repo: il canone **è** il repo, sul ramo del gruppo (ADR-0007). Fuori dal repo va solo lo stato dell'orchestratore, in `$XDG_STATE_HOME/rumblingstone/<id-del-clone>/` |
@@ -188,6 +188,7 @@ Si taglia in quattro, perché il primo pezzo è utile da solo.
 - Il piano si mostra raggruppato e si conferma una volta per gruppo; `--non-interattivo` richiede che ogni scelta opzionale sia scritta sulla riga (`--con pdfcpu`), mai un default che installa.
 - `--offline`: usa solo ciò che c'è e dice cosa manca. Non ripiega mai su una versione non fissata.
 - Un binario già presente con la versione giusta non si reinstalla e non diventa nostro.
+- `act` (D6) è un modulo opzionale del profilo `sviluppo`: si installa solo con `--con act`, e `verifica` lo prova eseguendo un workflow minimo.
 - Su Bazzite, fuori dal distrobox, `setup` crea il distrobox Debian 13 (immagine per digest) e si rilancia dentro; il sistema ospite non si tocca.
 
 **A5c · i pacchetti di sistema, col registro (D1)** `[engine: Sonnet 5 · effort: alto · qualità: in un container Debian 13 e uno Ubuntu 24.04: installa un pacchetto che mancava e uno che c'era; rimuovi toglie il primo, lascia il secondo, e lo stato finale di dpkg è quello di partenza]`
@@ -254,7 +255,7 @@ Un criterio vale per tutto il piano: **la CI di `main` resta verde**.
 | ~~D3~~ | A3 | ✅ **Decisa il 2026-10-08, risposta del DM: lock con hash** (*«pip deve bloccare le versioni a meno di una correzione di sicurezza»*). La CI è lo standard: un aggiornamento entra prima in CI, poi in locale |
 | ~~D4~~ | tutti | ✅ **Decisa il 2026-10-08, risposta del DM: dopo D28.** Il piano parte dopo il lotto mappe D28; in questa sessione solo piano, ADR e tracciatura |
 | ~~D5~~ | A2, A6 | ✅ **Decisa il 2026-10-08, risposta del DM: Debian stable, Ubuntu stable, Bazzite.** **Quali piattaforme si supportano?** |
-| ~~D6~~ | A6 | ✅ **Decisa il 2026-10-08, risposta del DM: no, dopo la spiegazione** (*«cosa è act?»*, e la proposta «no» non contraddetta). **`act` per simulare la CI in locale?** Un'immagine diversa da GitHub non prova la CI |
+| ~~D6~~ | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: facoltativo** (*«d6 ok facoltativo»*, dopo la spiegazione). **`act` per simulare la CI in locale?** Modulo opzionale del profilo `sviluppo`, versione e checksum nel registro come gli altri binari; il suo verde non sostituisce la CI |
 | ~~D7~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 3.13 ovunque.** **Quale versione di Python, visto che Debian 13 ha 3.13, Ubuntu 24.04 3.12, Ubuntu 26.04 e Bazzite 3.14?** La versione di Debian stable; si sale quando sale Debian, e la regola vale per Dependabot |
 | ~~D8~~ | A2 | ✅ **Decisa il 2026-10-08, risposta del DM: 24.04, poi 26.04 con una PR.** **Quale Ubuntu stable?** |
 | ~~D9~~ | A5b | ✅ **Decisa il 2026-10-08, risposta del DM: distrobox Debian 13.** **Come si installa su Bazzite, che è immutabile?** |
@@ -262,10 +263,10 @@ Un criterio vale per tutto il piano: **la CI di `main` resta verde**.
 | D11 | A4 | **Gli hook proposti in A4 vanno bene?** `pre-commit` bloccante su shellcheck, compilazione, file pesanti e token; `pre-push` con regola d'oro, verifica rapida dell'ambiente e test; `post-merge` che avvisa quando l'ambiente non combacia più. Si conferma all'apertura di A4 |
 
 <!-- eco: AMBIENTE 2026-10-08 -->
-- **Decise**: D1 pacchetti di sistema con conferma e registro · D2 superata da D7 · D3 lock con hash, aggiornamenti prima in CI · D4 dopo D28 · D5 Debian stable, Ubuntu stable, Bazzite · D6 niente `act` · D7 Python 3.13 ovunque · D8 Ubuntu 24.04, poi 26.04 con una PR · D9 distrobox Debian 13 su Bazzite · D10 Chrome for Testing fissato
+- **Decise**: D1 pacchetti di sistema con conferma e registro · D2 superata da D7 · D3 lock con hash, aggiornamenti prima in CI · D4 dopo D28 · D5 Debian stable, Ubuntu stable, Bazzite · D6 `act` facoltativo · D7 Python 3.13 ovunque · D8 Ubuntu 24.04, poi 26.04 con una PR · D9 distrobox Debian 13 su Bazzite · D10 Chrome for Testing fissato
 - **Aperte**: D11 gli hook; la forma del lock (file `.in` o `.lock` a parte) si misura in A3; la licenza di Chrome for Testing e di pip-tools al gate di `edizione`
-- **Cambiate**: D1 dalla proposta «solo livello utente» a «sistema con registro»; D2 da «3.11 e 3.13» a «solo 3.13»; D3 dalla proposta «restano i `>=`» al lock; shellcheck da «non bloccante finché gli avvisi non sono a zero» a bloccante subito; pdfcpu e Chromium da «decidere in A6» a «provati in CI»
-- **Dedotto da me**: che «.env» nel messaggio del DM sia il `.venv`; che D6 sia «no» perché il DM ha chiesto cosa fosse e non ha contraddetto la proposta; che Bazzite stesso resti `UNKNOWN` in CI e si provi a mano (la CI prova il distrobox, non l'host); che per D1 la rimozione non usi mai `autoremove` né `purge`; che i `>=` restino come pavimento dichiarato accanto al lock; che il passaggio a 3.13 tocchi anche `dipendenze.yml`
+- **Cambiate**: D1 dalla proposta «solo livello utente» a «sistema con registro»; D2 da «3.11 e 3.13» a «solo 3.13»; D3 dalla proposta «restano i `>=`» al lock; D6 dalla proposta «no» a «facoltativo»; shellcheck da «non bloccante finché gli avvisi non sono a zero» a bloccante subito; pdfcpu e Chromium da «decidere in A6» a «provati in CI»
+- **Dedotto da me**: che «.env» nel messaggio del DM sia il `.venv`; che «facoltativo» per `act` voglia dire modulo opzionale fissato come gli altri, non installato di default; che Bazzite stesso resti `UNKNOWN` in CI e si provi a mano (la CI prova il distrobox, non l'host); che per D1 la rimozione non usi mai `autoremove` né `purge`; che i `>=` restino come pavimento dichiarato accanto al lock; che il passaggio a 3.13 tocchi anche `dipendenze.yml`
 
 ## §9 · Ordine
 
