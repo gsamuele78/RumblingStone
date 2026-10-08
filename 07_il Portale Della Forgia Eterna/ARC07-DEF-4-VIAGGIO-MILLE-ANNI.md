@@ -768,6 +768,11 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 | messaggi | nessuno: stanotte gli ordini li porta Durin a voce |
 | guardia | sulle mura, agli ordini di **Hrodgar**, il capitano (scheda nella Scena 10) |
 
+> **Mappe M7-D, M7-E e M7-F** (Appendice D). Il livello −1 (quartieri,
+> cappella, bottega, fucina di Gunnvor e armeria), le gallerie di Zeth sotto la
+> fucina, e dall'affaccio delle gallerie la fucina grande. La sezione M7-S dice
+> come si scende.
+
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale ai TS per 12 h se
 mangiano: il +2 morale delle Benedizioni non vale sui TS, quindi i due non si
@@ -3106,24 +3111,27 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ════════════════════════════════════════════════════════════════════════
  HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
 ════════════════════════════════════════════════════════════════════════
-   NORD ▲  ╔══════════════════════════════════════════════╗
-          ║   🏰🏰🏰  HAMMERFIST GIOVANE (mura bianche)  🏰🏰🏰 ║  ← Zona 1 (sicura)
-          ║   🏰  [Sala del Trono: Re Thorek I]  [Fucina]  🏰 ║     arrivo del portale
-          ║   🏰🏰  ═══ camminamenti ═══  BRECCIA▓▓  🏰🏰🏰🏰 ║  ← Zona 3 (mura, alba)
-          ╚════════════════▲▲▲═══════════════▲▲▲═════════════╝
-                    scale d'assedio / arieti ↑ (l'orda preme)
-   ~~~~~~~~~~~~~~~~~~~~~~~ CORTILE INTERNO (arena del duello → M7-B) ~~~~~~~~~
-          ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ← Zona 2: MARE DI TENDE
-   GP1▪   ⛺⛺⛺  ╔═══════════╗  ⛺⛺⛺   👤VATORE (Sc.9, tra le tende)  ▪GP2
-          ⛺⛺  ║ TENDA DEL  ║  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-          ⛺⛺  ║  COMANDO   ║  ⛺⛺  ⚔️ZOG'TAR + 4 guardie (Sc.8)
-          ⛺⛺  ╚═══════════╝  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-   GP3▪   ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ▪GP4
-          — — — — foresta a sud (i PG escono dalla postierla nord) — — — —  SUD ▼
+                       NORD ▲  la montagna: dentro, le sale scendono (M7-S)
+   ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
+        ╔════════════════ 🔔 torre nord ═════════╗
+        ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
+        ║  CORTILE INTERNO → M7-B (il duello)     ║     mura bianche, sicura
+        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
+              ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
+                                                   ┊      🌲 ✦ portale, ~500 m
+   ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+   GP1▪ ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺ ▪GP2 ┊  ← Zona 2: MARE DI TENDE
+   ⛺⛺⛺⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺⛺⛺ ◄┘  via dei PG: fianco est, poi da nord
+   ⛺⛺⛺⛺⛺⛺ ║ TENDA DEL  ║ ⛺⛺⛺⛺⛺      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
+   ⛺⛺⛺⛺⛺⛺ ║  COMANDO   ║ ⛺⛺⛺⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺⛺⛺⛺⛺⛺ ╚═══════════╝ ⛺⛺⛺⛺⛺      👤 VATORE fra le tende (Sc. 9)
+   GP3▪ ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺ ▪GP4
+                       SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · 🏰 mura/fortezza (bianche, nuove) · ▓ breccia · ⛺ tende (copertura)
-· ▪GP posti di guardia · ╔╗ tenda del comando (Zog'tar) · 👤 Vatore · ⚔️ scontro
-veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
+LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
+▫ postierla · ⛺ tende (copertura) · ▪GP posti di guardia · ╔╗ tenda del
+comando · ┊◄ la via dei PG · 👤 Vatore · ⚔️ scontro · ✦ arrivo del portale.
+Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
 
@@ -3132,38 +3140,62 @@ veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
 ```
 ════════════════════════════════════════════════════════════════════════
  CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
- Skullcrusher entra da V1 (quota ~45 m) e picchia. PG partono dalla riga 16.
+ Nord in alto, la montagna. Skullcrusher entra da V1 (~45 m) e picchia. PG dalla riga 16.
 ════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
 02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
 03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰   camminamenti +4,5 m, arcieri
-05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-07    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
+05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
+06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
+08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
 09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
-10    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰
+12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
 17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
 d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) ·
-🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I.
+🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
+⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
+del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.
+@north N
 @mark 1 ; V1 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
 @mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
+@mark 7 ; C5 ; La fucina originale, accesa da stanotte
+@mark 8 ; T8 ; Il pozzo sulla cisterna
+@mark 9 ; T4 ; Le campane della torre nord
+@mark 10 ; W18 ; La postierla
 ```
+
+### Sotto la montagna: la Scena 5
+
+La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
+Hammerfist dall'alto in basso<!-- apparato --> (`Mappe/ARC07-MAPPE-HAMMERFIST-372-1372.md`)<!-- /apparato -->.
+
+![M7-D — Il corridoio della fucina, livello −1](Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Le gallerie di Zeth, livello −2](Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
 
 #### MAPPA M7-C — LA TENDA DEL COMANDO (Scene 7 e 8)
 

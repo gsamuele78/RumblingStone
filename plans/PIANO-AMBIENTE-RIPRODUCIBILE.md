@@ -188,6 +188,7 @@ Si taglia in quattro, perché il primo pezzo è utile da solo.
 - Il piano si mostra raggruppato e si conferma una volta per gruppo; `--non-interattivo` richiede che ogni scelta opzionale sia scritta sulla riga (`--con pdfcpu`), mai un default che installa.
 - `--offline`: usa solo ciò che c'è e dice cosa manca. Non ripiega mai su una versione non fissata.
 - Un binario già presente con la versione giusta non si reinstalla e non diventa nostro.
+- **ComfyUI** per la hero map (`scripts/comfyui-local/`, `rumblingstone-mapmaking` regola 8) è un modulo opzionale del profilo `dm`, SOLO-LOCALE. Il DM, il 2026-10-08: *non adesso*, si fa qui. Misurato quel giorno sulla macchina del DM: RTX A2000 con **4 GB** di VRAM (la guida del repo presume 8 GB: SDXL con `--lowvram` gira, lento), **11 GB** liberi in `/home` contro i ~15 GB di ComfyUI, PyTorch CUDA, un checkpoint SDXL e un ControlNet; `/srv` ha 58 GB. Su Debian gli script di Distrobox non partono così come sono. Nel repo restano solo le mappe approvate: il clone, i pesi e `rendered/hero/` sono già ignorati da git. I pesi passano dal gate di licenza (ADR-0019).
 - `act` (D6) è un modulo opzionale del profilo `sviluppo`: si installa solo con `--con act`, e `verifica` lo prova eseguendo un workflow minimo.
 - Su Bazzite, fuori dal distrobox, `setup` crea il distrobox Debian 13 (immagine per digest) e si rilancia dentro; il sistema ospite non si tocca.
 
