@@ -71,6 +71,16 @@ are **generated artifacts — never hand-edit them**. CI
    looks good. **No AI generator draws the grid**: if the table needs one, it
    is laid over from the SVG. Procedure: `references/hero-map-comfyui.md`,
    «Finché ComfyUI non è collaudato».
+9. **A map is done when it plays, not when it renders** (DM, 2026-10-08,
+   ADR-0082). Every new or redrawn tactical map passes
+   `scripts/collaudo_mappe.py` with zero E-class findings (or a written
+   `@deroga` with its reason), declares `@north`, links every staircase or
+   trapdoor to its twin with `@collega`, and then goes to the **cold map
+   checker** role. Doors, grates and windows sit in a wall; secret doors never
+   appear on the players' version (`@vista giocatori`). Use the symbol set of
+   `legend.yaml` (doors by type, bars, stairs up/down, cave floor, shallow
+   water, sewer, debris, furniture) before inventing a local symbol.
+   Procedure and rubric: `references/collaudo-mappe.md`.
 
 ## Domain → File
 
@@ -127,6 +137,7 @@ tempi».
 | **Migrare un ultra-clear esistente → bozza JSON + report conflitti** (`import_ultraclear.py`) | `references/import-ultraclear.md` |
 | Full workflow: new map, edit, render, validate, dungeon import, overland/city | `references/workflow-mappe.md` |
 | Universal legend: every terrain/unit/prop symbol with meaning | `references/legenda-universale.md` |
+| **Collaudo**: does the map play? the checker tool, the `@` directives, the cold map-checker role | `references/collaudo-mappe.md` |
 | Direzione artistica handout/splash (convenzioni + confini IP) | `references/stile-illustrazione-handout.md` |
 | Optional local "hero map" painterly pass (ComfyUI + ControlNet + MCP), and the Canva AI hero map until ComfyUI is tested | `references/hero-map-comfyui.md` |
 
@@ -142,4 +153,5 @@ python3 scripts/import_ultraclear.py ULTRACLEAR.md -o OUT.draft.json --json-repo
 python3 scripts/export_map_png.py rendered/<mappa>.svg   # hi-res PNG (print / hero input)
 python3 scripts/export_uvtt.py <file.md>           # .uvtt/.dd2vtt (Foundry/Roll20: muri+luci)
 python3 scripts/validate_maps.py                   # CI gate (run before commit)
+python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
 ```

@@ -499,6 +499,15 @@ effetti oggi; è scritto nel test e non è corretto qui.
 - Vive in `skills/rumblingstone-mapmaking/references/collaudo-mappe.md`,
   citato dalla tabella della skill, e la sua norma entra nel registro (G3).
 
+**Fatto il 2026-10-08.** La reference ha lo strumento, le direttive, i codici
+E e A, la rubrica del collaudatore in tre viste (DM, giocatore, algoritmi) con
+sette codici `M-…` e il giro completo in sei passi. La skill prende la regola
+d'oro 9 («una mappa è fatta quando si gioca»), una riga nella tabella e il
+comando. Nel registro delle norme entrano due righe 🟡: le cinque regole che lo
+strumento misura senza ancora bloccare (il tetto è V4), e il passaggio dal
+collaudatore, che nessun cancello vede ancora. La prima prova vera del ruolo
+sono le mappe di D28.
+
 ---
 
 ## §4 · Fase V — Validazione
@@ -606,7 +615,7 @@ Fase S — Sviluppo
 □ V8  M9 sulla distanza d'incontro dell'SRD
 □ V9  generatore di bozze (se D4 = sì)
 □ V10 riparazione proposta in diff
-□ V11-bis il collaudatore di mappe, ruolo LLM (D11)
+☑ V11-bis il collaudatore di mappe, ruolo LLM (2026-10-08: `collaudo-mappe.md`, regola 9 della skill, due norme registrate)
 □ V11 skill, guida, chiusura
 
 Fase V — Validazione: la tabella di §4, lotto per lotto
