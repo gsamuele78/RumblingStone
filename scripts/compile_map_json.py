@@ -343,6 +343,14 @@ def validate(spec: dict) -> tuple[int, int]:
         w = f"structures[{i}]"
         check_symbol(s.get("type"), w)
         check_placement(s, w, allow_line=True)
+        # la gemella di una scala (D12): solo su una tessera fra livelli in una cella
+        if "collega" in s:
+            voce = json.loads(_legenda.DERIVATO.read_text(encoding="utf-8"))["symbols"].get(s.get("type"), {})
+            fra = voce.get("function", {}).get("posa") == "fra_livelli"
+            if not fra or "at" not in s:
+                errors.append(f"{w}: 'collega' vale solo per una tessera fra livelli messa con 'at'.")
+            elif not isinstance(s["collega"], str) or len(s["collega"].strip()) < 3:
+                errors.append(f"{w}: 'collega' e' la gemella, «<file.md>[#N] <A1>» o «fuori mappa ; <motivo>».")
 
     for i, h in enumerate(spec.get("hazards", []) or []):
         w = f"hazards[{i}]"
@@ -526,6 +534,12 @@ def _annotation_lines(spec: dict) -> list[str]:
         lines.append(f"@north {spec['north']}")
     if spec.get("tipo"):
         lines.append(f"@tipo {spec['tipo']}" + (f" {spec['ambiente']}" if spec.get("ambiente") else ""))
+
+    # le gemelle delle tessere fra livelli (D12): il collaudo le segue
+    for obj in spec.get("structures", []) or []:
+        if obj.get("collega") and "at" in obj:
+            x, y = obj["at"]
+            lines.append(f"@collega {rms.col_label(x)}{y + 1:02d} ; {obj['collega'].strip()}")
 
     # numbered roster (one @mark per unit)
     for i, u in enumerate(spec.get("units", []) or [], 1):

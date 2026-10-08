@@ -20,7 +20,8 @@
 <symbol id="pr_rack" viewBox="0 0 28 28"><path d="M7 6v16M21 6v16" stroke="#6e4b26" stroke-width="2"/><path d="M6 9.5h16" stroke="#8a6032" stroke-width="2.2"/><path d="M11 8.5v13" stroke="#8f8574" stroke-width="1.4"/><path d="M11 5.6l1.6 3.2h-3.2z" fill="#9aa0a6" stroke="#4c5257" stroke-width="0.7"/><path d="M17 8.5v13" stroke="#8f8574" stroke-width="1.4"/><path d="M17 9c3 .4 3.6 3 2.6 4.6L17 12.4z" fill="#9aa0a6" stroke="#4c5257" stroke-width="0.7"/></symbol>
 <symbol id="pr_rocks" viewBox="0 0 28 28"><path d="M5 16l3-5.5 5.5-1.5 3.5 4-1 5.5-7 2.5z" fill="#9b917f" stroke="#2f2415" stroke-width="1.1"/><path d="M8 10.5l5.5-1.5 1 4.5-6.5 2z" fill="#b0a692"/><path d="M16 19l2-4.5 5-1 2.5 4-3 4.5h-4.5z" fill="#8a8071" stroke="#2f2415" stroke-width="1"/><path d="M18 14.5l5-1 1.5 2.5-5.5 1z" fill="#a29885"/><circle cx="12" cy="21.5" r="1" fill="#6f6552"/><circle cx="20" cy="9" r="1.2" fill="#776b58"/></symbol>
 <symbol id="pr_rocks_b" viewBox="0 0 28 28"><path d="M11 8l5.5 1 2.5 5-2.5 5-6 .5-2.5-5z" fill="#948a77" stroke="#2f2415" stroke-width="1.1"/><path d="M11 8l5.5 1 1 3.5-6 1z" fill="#aca28e"/><path d="M6 18.5l1.5-3.5 4-.5 1.5 3-1.5 3.5h-4z" fill="#8a8071" stroke="#2f2415" stroke-width="1"/><path d="M7.5 15l4-.5 1 2-4.5 1z" fill="#a29885"/><circle cx="19.5" cy="20.5" r="1.6" fill="#8a8071" stroke="#2f2415" stroke-width="0.8"/><circle cx="6.5" cy="9.5" r="1" fill="#776b58"/></symbol>
-<symbol id="pr_stairs" viewBox="0 0 28 28"><g stroke="#6f6552" stroke-width="0.6"><rect x="6" y="4.5" width="16" height="3.4" fill="#cbbfa4"/><rect x="6" y="8.4" width="16" height="3.4" fill="#b8ab8f"/><rect x="6" y="12.3" width="16" height="3.4" fill="#a4977c"/><rect x="6" y="16.2" width="16" height="3.4" fill="#8f836a"/><rect x="6" y="20.1" width="16" height="3.4" fill="#7a6f59"/></g></symbol>
+<symbol id="pr_stairs_down" viewBox="0 0 28 28"><rect x="5" y="5" width="18" height="18" fill="#8f8470" stroke="#2f2415" stroke-width="1"/><path d="M5 9.5h18M5 14h18M5 18.5h18" stroke="#6b604d" stroke-width="1"/><path d="M14 21.5l4.5-5h-3v-6h-3v6h-3z" fill="#3a3329" stroke="#f4ecd6" stroke-width="0.9"/></symbol>
+<symbol id="pr_stairs_up" viewBox="0 0 28 28"><rect x="5" y="5" width="18" height="18" fill="#cfc4ad" stroke="#2f2415" stroke-width="1"/><path d="M5 9.5h18M5 14h18M5 18.5h18" stroke="#9c8f74" stroke-width="1"/><path d="M14 6.5l4.5 5h-3v6h-3v-6h-3z" fill="#f4ecd6" stroke="#2f2415" stroke-width="0.9"/></symbol>
 <symbol id="pr_table" viewBox="0 0 28 28"><rect x="11.5" y="4.5" width="5" height="3" rx="1" fill="#6e4b26" stroke="#2f2415" stroke-width="0.8"/><rect x="11.5" y="20.5" width="5" height="3" rx="1" fill="#6e4b26" stroke="#2f2415" stroke-width="0.8"/><rect x="8" y="8.5" width="12" height="11" rx="1" fill="#8a6a42" stroke="#2f2415" stroke-width="1.1"/><path d="M10 11h8M10 14h8M10 17h8" stroke="#6e4b26" stroke-width="0.7"/></symbol>
 <symbol id="pr_urn" viewBox="0 0 28 28"><path d="M11 6h6l-.8 2.6c2.6 1.2 4 3.2 4 6 0 4.2-2.6 7-6.2 7s-6.2-2.8-6.2-7c0-2.8 1.4-4.8 4-6z" fill="#b0703f" stroke="#5c3517" stroke-width="1.1"/><path d="M11.5 8.4h5" stroke="#5c3517" stroke-width="0.8"/><path d="M8.6 11.5q-2.4.6-1.6 2.6M19.4 11.5q2.4.6 1.6 2.6" stroke="#5c3517" stroke-width="1" fill="none"/><path d="M11 11q-1.4 2.4 0 5.4" stroke="#d09a6a" stroke-width="0.9" fill="none"/></symbol>
 <radialGradient id="g_1d6fd8" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#83b0ea"/><stop offset="0.55" stop-color="#1d6fd8"/><stop offset="1" stop-color="#13488c"/></radialGradient>
@@ -108,7 +109,7 @@
 <ellipse cx="593.0" cy="461.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_fire" x="578" y="444" width="28" height="28"/>
 <ellipse cx="117.0" cy="489.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_stairs" x="102" y="472" width="28" height="28"/>
+<use href="#pr_stairs_up" x="102" y="472" width="28" height="28"/>
 <ellipse cx="453.0" cy="489.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_table" x="438" y="472" width="28" height="28"/>
 <ellipse cx="901.0" cy="489.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -198,7 +199,7 @@
 <ellipse cx="957.0" cy="601.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rack" x="942" y="584" width="28" height="28"/>
 <ellipse cx="761.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_stairs" x="746" y="612" width="28" height="28"/>
+<use href="#pr_stairs_down" x="746" y="612" width="28" height="28"/>
 <ellipse cx="481.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_brazier" x="466" y="640" width="28" height="28"/>
 <ellipse cx="593.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -334,9 +335,11 @@
 <text x="577.0" y="988" font-size="11" fill="#3b2e1e">🪓 — Rastrelliera / armi</text>
 <use href="#pr_rocks" x="550.0" y="997" width="18" height="18"/>
 <text x="577.0" y="1010" font-size="11" fill="#3b2e1e">🪨 — Rocce/macerie (copertura +4 CA, terreno difficile)</text>
-<use href="#pr_stairs" x="550.0" y="1019" width="18" height="18"/>
-<text x="577.0" y="1032" font-size="11" fill="#3b2e1e">🪜 — Scale / rampa</text>
-<use href="#pr_table" x="550.0" y="1041" width="18" height="18"/>
-<text x="577.0" y="1054" font-size="11" fill="#3b2e1e">🪑 — Tavolo e sedie</text>
+<use href="#pr_stairs_up" x="550.0" y="1019" width="18" height="18"/>
+<text x="577.0" y="1032" font-size="11" fill="#3b2e1e">🔼 — Scala che sale</text>
+<use href="#pr_stairs_down" x="550.0" y="1041" width="18" height="18"/>
+<text x="577.0" y="1054" font-size="11" fill="#3b2e1e">🔽 — Scala che scende</text>
+<use href="#pr_table" x="550.0" y="1063" width="18" height="18"/>
+<text x="577.0" y="1076" font-size="11" fill="#3b2e1e">🪑 — Tavolo e sedie</text>
 <!-- fonte: M7-D-livello-1-1372.md · SVG generato da scripts/render_map_svg.py (stile pergamena) · non modificare a mano -->
 </svg>

@@ -155,6 +155,33 @@ class TestCollaudo(unittest.TestCase):
         p = _master(self.tmp, "a.md", a, ["@north N", "@collega B02 ; b.md B02"])
         self.assertIn("posa/fra-livelli", _codici(p))
 
+    def test_la_gemella_fuori_mappa_con_il_motivo_tace(self):
+        """D12: il livello 0 di Hammerfist non ha una griglia; lo si dichiara."""
+        a = [r for r in STANZA]
+        a[1] = "🏰🔼⬜⬜⬜🏰"
+        p = _master(self.tmp, "f.md", a, ["@north N",
+                    "@collega B02 ; fuori mappa ; il livello 0 non ha una griglia tattica"])
+        self.assertNotIn("posa/fra-livelli", _codici(p))
+
+    def test_la_gemella_fuori_mappa_senza_motivo_morde(self):
+        a = [r for r in STANZA]
+        a[1] = "🏰🔼⬜⬜⬜🏰"
+        p = _master(self.tmp, "g.md", a, ["@north N", "@collega B02 ; fuori mappa ; sopra"])
+        self.assertIn("posa/fra-livelli", _codici(p))
+
+    def test_il_compilatore_scrive_la_gemella(self):
+        import compile_map_json as J
+        spec = {"title": "Prova della scala", "map_size": [6, 5],
+                "structures": [{"type": "🔽", "at": [1, 1], "collega": "sotto.md#2 C03"}]}
+        J.validate(spec)
+        self.assertIn("@collega B02 ; sotto.md#2 C03", J._annotation_lines(spec))
+
+    def test_il_compilatore_rifiuta_la_gemella_su_un_braciere(self):
+        import compile_map_json as J
+        with self.assertRaises(J.SpecError):
+            J.validate({"title": "Prova della scala", "map_size": [6, 5],
+                        "structures": [{"type": "🏮", "at": [1, 1], "collega": "sotto.md C03"}]})
+
     def test_la_porta_segreta_non_va_ai_giocatori(self):
         righe = ["🏰🏰🏰❔🏰🏰"] + STANZA[1:]
         master = _master(self.tmp, "m.md", righe, ["@north N"])

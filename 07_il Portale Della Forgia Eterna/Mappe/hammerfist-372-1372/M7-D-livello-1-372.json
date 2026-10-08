@@ -268,12 +268,13 @@
    ]
   },
   {
-   "type": "🪜",
+   "type": "🔽",
    "at": [
     25,
     19
    ],
-   "label": "Scala alle gallerie di Zeth (livello −2)"
+   "label": "Scala alle gallerie di Zeth (livello −2)",
+   "collega": "M7-E-gallerie-372.md AA02"
   },
   {
    "type": "🪓",
@@ -305,12 +306,13 @@
    ]
   },
   {
-   "type": "🪜",
+   "type": "🔼",
    "at": [
     2,
     14
    ],
-   "label": "Scala al livello 0: corridoio principale, sala del consiglio, cortile"
+   "label": "Scala al livello 0: corridoio principale, sala del consiglio, cortile",
+   "collega": "fuori mappa ; il livello 0 (sala del consiglio e corridoio principale) non ha una griglia tattica: M7-S lo mostra in sezione"
   }
  ],
  "units": [

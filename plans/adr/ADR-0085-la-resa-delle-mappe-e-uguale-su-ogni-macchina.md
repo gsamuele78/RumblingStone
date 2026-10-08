@@ -1,6 +1,6 @@
 # ADR-0085 — La resa delle mappe è uguale su ogni macchina
 
-- **Stato**: **accettata**; R1-R3 attuati il 2026-10-08, R4-R6 pianificati (il DM, il 2026-10-08, sera: D1-D5 di [PIANO-RESA-E-ASSET-DELLE-MAPPE](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md))
+- **Stato**: **accettata**; R1-R3 attuati il 2026-10-08, R4 deciso e in attesa del pacchetto dei dungeon, R5 e R6 rimandati (il DM, il 2026-10-08, sera: D1-D8 di [PIANO-RESA-E-ASSET-DELLE-MAPPE](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md))
 - **Data**: 2026-10-08
 - **Decisori**: DM (Gianfranco Samuele), agente
 - **Rapporti**: emenda la regola 5 di `rumblingstone-mapmaking` («nessun file di terzi»); segue [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) per le licenze e [ADR-0020](ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) per i font nel repo; legge la legenda di [ADR-0048](ADR-0048-legenda-funzionale-fonte-unica.md); le dipendenze di sviluppo sono quelle di [ADR-0084](ADR-0084-il-collaudo-delle-mappe-e-uno-strumento-di-sviluppo.md)

@@ -119,7 +119,8 @@
           "rect": { "type": "array", "description": "Area piena [x,y,w,h] (edifici).", "items": { "type": "integer" }, "minItems": 4, "maxItems": 4 },
           "center": { "type": "array", "description": "Centro di un disco (tende/torri rotonde).", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
           "radius": { "type": "integer", "minimum": 0, "description": "Raggio in quadretti (con center)." },
-          "label": { "type": "string", "description": "Etichetta per il companion DM (non disegnata sulla griglia)." }
+          "label": { "type": "string", "description": "Etichetta per il companion DM (non disegnata sulla griglia)." },
+          "collega": { "type": "string", "minLength": 3, "description": "Solo per una tessera fra livelli (🔼, 🔽, botola, pozzo: posa fra_livelli in legend.yaml) messa con at. La gemella: «<file.md>[#N] <A1>», dalla radice del repo o accanto a questo file; oppure «fuori mappa ; <motivo>» se il livello collegato non ha una griglia. Il compilatore la scrive come @collega <A1> ; <valore> (D12 di PIANO-COLLAUDO-E-GENERAZIONE-MAPPE)." }
         }
       }
     },

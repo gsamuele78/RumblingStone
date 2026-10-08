@@ -74,11 +74,18 @@ renderer le ignora, quindi l'SVG non cambia.
 @tipo tattica caverna                 tipo: tattica, strategica o schema;
                                       ambiente: interni, caverna, esterno o abitato
 @collega B05 ; Mappe/ATLANTE.md#3 D12 la scala in B05 porta a D12 della mappa 3
+@collega C15 ; fuori mappa ; <motivo> il livello collegato non ha una griglia
 @taglia J07 ; Grande                  la creatura in J07 non è Media
 @vista giocatori                      questa è la versione per i giocatori
 @verso B05 ; NS                       la porta in B05 sta in un muro nord-sud
 @deroga zone/separate ; il soppalco si raggiunge solo in volo, ed è voluto
 ```
+
+**La gemella in un contratto JSON** sta nel campo `collega` della struttura
+(`{"type": "🔽", "at": [25, 19], "collega": "M7-E-gallerie-372.md AA02"}`),
+e il compilatore la scrive come `@collega`: la griglia si rigenera, quindi la
+direttiva scritta a mano andrebbe persa. La cella si confronta per posizione,
+`B2` e `B02` sono la stessa.
 
 **L'asse delle chiusure** non si scrive: lo danno i quattro vicini
 ([ADR-0083](../../../plans/adr/ADR-0083-l-asse-delle-chiusure-si-ricava-dai-vicini.md)).

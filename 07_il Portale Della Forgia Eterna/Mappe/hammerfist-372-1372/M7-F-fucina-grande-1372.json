@@ -44,12 +44,13 @@
  ],
  "structures": [
   {
-   "type": "🪜",
+   "type": "🔼",
    "at": [
     14,
     1
    ],
-   "label": "Scala alle gallerie (livello −2)"
+   "label": "Scala alle gallerie (livello −2)",
+   "collega": "M7-E-gallerie-1372.md AA22"
   },
   {
    "type": "🚪",

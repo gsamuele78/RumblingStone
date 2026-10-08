@@ -1,6 +1,6 @@
 # PIANO — Il collaudo delle mappe, e un generatore che non consegna bozze ingiocabili
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D9, D11 e D13-D18 decise dal DM lo stesso giorno, D10 (i glifi), D12 (le mappe della #225) e D19 (tre classificazioni) aperte · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
+> **Stato**: 🟡 in corso (2026-10-08), D1-D19 decise dal DM lo stesso giorno, nessuna aperta · **Classe**: G per il contratto e V0, C per i lotti di codice, K per le correzioni delle mappe giocate
 > **Nasce da**: il documento *«Algorithmic Frameworks and Automated Evaluation
 > Architectures for Deterministic Map Generation in Tabletop Role-Playing
 > Games»*, portato dal DM il 2026-10-08 con la richiesta di verificare cosa si
@@ -667,16 +667,16 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 | ~~D7~~ | V5 | ✅ **Decisa il 2026-10-08, il DM: come proposto.** Era: **La copertura parziale di PF1e** (+2 CA, +1 Riflessi) entra nel livello neutro già ora o col profilo PF1e di VENDIBILITA 1.2? Proposta: col profilo; il collaudo distingue solo i quattro livelli neutri |
 | ~~D8~~ | V2-bis | ✅ **Decisa il 2026-10-08, il DM: anticipato, e il lotto D28 si rifà col set nuovo** (*«check if there are the d28 maps and recreate d28 with new simbol set»*). Era: **Il corredo dei simboli e la regola di posa**: entrano i simboli di §2.3-bis (porte per tipo, porta segreta, saracinesca, grata, finestra, sbarre, scale che salgono e che scendono, botola, pozzo, arredi), ognuno con un campo `posa` che il collaudo verifica? E quando: dopo V2, come nell'ordine di D1, oppure prima di D28, perché le mappe di Hammerfist (fucina, gallerie, cappella, armeria, la sezione a livelli) sono proprio quelle con scale, porte e grate? Proposta: dopo V2; D28 si disegna con i simboli di oggi più simboli locali dichiarati, e V3 li migra. Anticiparlo costa a D28 il tempo dell'arte nuova e del lotto di test |
 | ~~D9~~ | V2-bis | ✅ **Decisa il 2026-10-08, il DM: sì.** Era: **Le porte segrete nella versione per i giocatori**: si disegnano come muro (il giocatore non sa che c'è) e il collaudo boccia una porta segreta che compare in una mappa per i giocatori? Proposta: sì |
-| D10 | V2-bis | **I glifi del set nuovo**: quelli della tabella di V2-bis? Proposta: sì; se un glifo non si legge bene al tavolo, si cambia lì, prima che una mappa lo usi |
+| ~~D10~~ | V2-bis | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: approvati.** Era: **I glifi del set nuovo**: quelli della tabella di V2-bis? Proposta: sì; se un glifo non si legge bene al tavolo, si cambia lì, prima che una mappa lo usi |
 | ~~D11~~ | V11-bis | ✅ **Decisa il 2026-10-08, il DM: serve un ruolo LLM in più** che controlli che le mappe siano corrette, che gli algoritmi richiesti siano stati usati e che le parti sbagliate siano state corrette (*«it will need another llm role for checking that maps are correct»*). Diventa V11-bis: il collaudatore di mappe |
-| D12 | D28, V3 | **Le mappe della #225 passano al set nuovo?** Le cinque `🪜` diventano `🔼`/`🔽` con `@collega`, e il braciere di M7-E in M10 (e i tre gemelli) si sposta in una nicchia del muro, perché oggi chiude la galleria fra la scala e Zeth. Proposta: sì, in un lotto solo, con i sei SVG rigenerati e il collaudo a zero errori |
+| ~~D12~~ | D28, V3 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: sì, in un lotto solo.** Fatto lo stesso giorno: collaudo dei sei master da 1 errore e 10 avvisi a 0 errori e 2 avvisi (M4). Era: **Le mappe della #225 passano al set nuovo?** Le cinque `🪜` diventano `🔼`/`🔽` con `@collega`, e il braciere di M7-E in M10 (e i tre gemelli) si sposta in una nicchia del muro, perché oggi chiude la galleria fra la scala e Zeth. Proposta: sì, in un lotto solo, con i sei SVG rigenerati e il collaudo a zero errori |
 | ~~D13~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **Quanto tocca la funzione dell'asse?** Proposta: una funzione, tre lettori (collaudo, renderer, export UVTT); si rigenerano gli SVG, fra cui 4 D28 della #225, master intatti |
 | ~~D14~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **I casi che i vicini non decidono?** Proposta: la direttiva `@verso <cella> ; NS\|EO`; senza, avviso e glifo come oggi |
 | ~~D15~~ | V2-quater | ✅ **Decisa il 2026-10-08, sera, il DM: come proposto.** Era: **Come si usa Battle for Wesnoth?** Proposta: solo l'idea delle regole di terreno, nessun file e nessun simbolo nuovo |
 | ~~D16~~ | V2-quater, V5 | ✅ **Decisa il 2026-10-08, sera, il DM: obbligatoria nel collaudo**, non come proposto. Era: **Come si tratta `tcod`?** Proposta: opzionale per V5, importata nella funzione, con il ripiego esatto e lento in libreria standard. Alternative: obbligatoria nel collaudo (scelta), nessuna dipendenza |
 | ~~D17~~ | V2-quater, V5 | ✅ **Decisa il 2026-10-08, sera (secondo messaggio), il DM: scipy per M1 e M2**, non come proposto. Era: **Quali librerie ammettere, rimisurate sul loro compito?** Proposta: nessuna. scipy entra obbligatoria nel collaudo come tcod; fonttools solo sviluppo, per i font delle mappe (RESA-ASSET). networkx, shapely, hypothesis, resvg-py restano fuori (ADR-0084, emendamento) |
 | ~~D18~~ | V2 | ✅ **Decisa il 2026-10-08, sera (secondo messaggio), il DM: come proposto.** Era: **`@tipo` su tutte le 44 mappe?** Proposta: tipo (tattica, strategica, schema) e ambiente (interni, caverna, esterno, abitato), con l'elenco in `dmcore/legenda.py` e i campi `tipo`/`ambiente` nel contratto JSON |
-| D19 | V2, V3 | **Le tre classificazioni dubbie.** Portale L2 mappa 1 (il titolo letto è «[COLONNA K = 15m da Nord]»: tattica caverna?), M7-E nel 372 e nel 1372 (gallerie scavate: caverna o interni? è legato a `🟤` della D12). Proposta: come in `esperimenti/dipendenze-e-asset-2026-10/classificazione-mappe.tsv`, da confermare |
+| ~~D19~~ | V2, V3 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: confermate tutte e tre** (Portale L2 mappa 1 e M7-E nei due tempi: tattica caverna). Era: **Le tre classificazioni dubbie.** Portale L2 mappa 1 (il titolo letto è «[COLONNA K = 15m da Nord]»: tattica caverna?), M7-E nel 372 e nel 1372 (gallerie scavate: caverna o interni? è legato a `🟤` della D12). Proposta: come in `esperimenti/dipendenze-e-asset-2026-10/classificazione-mappe.tsv`, da confermare |
 
 <!-- eco: COLLAUDO-MAPPE 2026-10-08 -->
 - **Decise**: (primo messaggio) D1 l'ordine D28, V1, AMBIENTE A1-A8, poi V2 in avanti · D2 `⬜` per la sala, `🟫` per la caverna · D3 le classi E e A di ADR-0082 §3 · D4 sì al generatore, piccolo, dopo V6 · D5 `@taglia` nelle griglie emoji, `size` nel contratto · D6 il linter e `map_kind` passano qui, LEVEL-DESIGN C2 dipende da V1 e V5 · D7 la copertura parziale di PF1e col profilo. (Secondo messaggio) D8 il set dei simboli prima di D28, e D28 rifatto col set nuovo · D9 le porte segrete non compaiono nella versione per i giocatori · D11 un ruolo LLM di collaudo
@@ -692,6 +692,9 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Aperte** (la sera, secondo messaggio): D19 le tre classificazioni dubbie
 - **Cambiate** (la sera, secondo messaggio): D17 dalla proposta «nessuna libreria» a scipy (e fonttools solo sviluppo, che va nel piano RESA-ASSET)
 - **Dedotto da me** (la sera, secondo messaggio): che l'ambiente stia nella stessa direttiva del tipo (`@tipo tattica caverna`) invece che in una direttiva nuova; che un tipo illeggibile lasci accesi i controlli tattici; che le mappe da contratto JSON prendano la categoria dal contratto e non dalla griglia, perché la griglia si rigenera
+- **Decise** (la sera, terzo messaggio): D10 i glifi del set nuovo · D12 le mappe della #225 al set nuovo, in un lotto solo · D19 le tre classificazioni dubbie, come proposte
+- **Aperte** (la sera, terzo messaggio): nessuna
+- **Dedotto da me** (la sera, terzo messaggio): che la scala di M7-D verso il livello 0 (C15), che non ha una griglia, si dichiari con `@collega C15 ; fuori mappa ; <motivo>` invece di sospendere il controllo per tutta la mappa con `@deroga`; che la gemella si scriva nel contratto JSON, campo `collega` della struttura, perché la griglia si rigenera; che la «nicchia» sia la cella di muro a nord della lampada, e che la quinta lampada, nascosta sotto Zeth in K10, vada nella nicchia come le altre quattro
 
 ---
 
@@ -707,11 +710,11 @@ Fase A — Audit
 ☑ A6  editori, community e ricerca: chi verifica le mappe (§2.5-bis)
 
 Fase S — Sviluppo
-☑ V0  decisioni D1-D9 e D11 (2026-10-08), D13-D18 (la sera) · □ D10 · □ D12 · □ D19
+☑ V0  decisioni D1-D9 e D11 (2026-10-08), D13-D18 (la sera), D10, D12 e D19 (la sera, terzo messaggio)
 ☑ V1  collaudo_mappe.py in sola lettura, schema dei rilievi, manifest (2026-10-08: 20 test, 38 mappe, 97 errori, 53 avvisi)
 ☑ V2  @tipo con l'ambiente (D18, 2026-10-08, sera): 44 griglie su 44 classificate, 3 dubbie in D19; `tipo` e `ambiente` nel contratto JSON; norma registrata · □ @deroga resta da applicare dove serve, in V3
 ☑ V2-quater l'asse delle chiusure e le dipendenze misurate (2026-10-08, sera: D13-D16, ADR-0083 e ADR-0084; `dmcore/chiusure.py` per collaudo, renderer e UVTT, 36 porte e 13 portali raddrizzati, 13 SVG rigenerati; `tcod` nel collaudo, M4 esatta; Wesnoth solo come idea)
-☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · □ D10 i glifi, da confermare al tavolo
+☑ V2-bis il corredo dei simboli e la regola di posa (2026-10-08: 20 simboli, 17 prop e 3 pattern disegnati in casa, campo `posa`; 41 SVG identici) · ☑ D10 i glifi approvati (2026-10-08, sera)
 □ V3  correzioni del corpus, mappa per mappa col DM
 □ V4  gate a tetto in CI
 □ V5  linea di vista e copertura SRD; M7, M8 (M4 esatta fatta in V2-quater, con `tcod`)

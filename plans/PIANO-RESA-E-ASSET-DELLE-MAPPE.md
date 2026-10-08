@@ -1,6 +1,6 @@
 # PIANO — La resa e gli asset delle mappe, uguali su ogni macchina e per ogni categoria
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D5 decise dal DM lo stesso giorno, D6-D8 aperte · **Classe**: C per R1-R3, G poi C per R4-R6
+> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM lo stesso giorno; R4 aspetta il pacchetto, R5 e R6 rimandati · **Classe**: C per R1-R3, G poi C per R4-R6
 > **Nasce da**: la richiesta del DM della sera del 2026-10-08, dopo la #227:
 > *«verifica se ci sono progetti best community valuated che possono essere
 > importati andando in deroga alla std lib e che migliorano o aiutano a creare
@@ -131,15 +131,18 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D3~~ | R4 | ✅ **Decisa il 2026-10-08, sera, il DM: sì.** Era: **Un tema «dipinto» con 2-Minute Tabletop?** Proposta mia: non raccomandata (lavoro grosso, deroga alla regola 5); il DM l'ha scelta |
 | ~~D4~~ | R5 | ✅ **Decisa il 2026-10-08, sera, il DM: sì.** Era: **Un importatore Watabou per città, villaggi, edifici?** |
 | ~~D5~~ | R6 | ✅ **Decisa il 2026-10-08, sera, il DM: sì.** Era: **Azgaar FMG per le regionali?** Solo per regioni inventate |
-| D6 | R4 | **Quali pacchetti di 2-Minute Tabletop, e dove stanno?** Proposta: si comincia con un pacchetto solo, quello dei dungeon; i PNG restano sulla macchina del DM (cartella ignorata da git) e il repo tiene solo la tabella `simbolo → file` e i crediti, perché un pacchetto pesa decine di MB |
-| D7 | R5 | **Le esportazioni di Watabou da cui partire.** Servono una città, un villaggio e un edificio esportati in JSON dal DM, con il loro seme: l'importatore si scrive su file veri |
-| D8 | R6 | **Quale regione inventata con Azgaar?** Proposta: nessuna finché un arco non ne chiede una; il lotto resta pronto |
+| ~~D6~~ | R4 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: come proposto.** Era: **Quali pacchetti di 2-Minute Tabletop, e dove stanno?** Proposta: si comincia con un pacchetto solo, quello dei dungeon; i PNG restano sulla macchina del DM (cartella ignorata da git) e il repo tiene solo la tabella `simbolo → file` e i crediti, perché un pacchetto pesa decine di MB |
+| ~~D7~~ | R5 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: R5 si rimanda** finché non ci sono le esportazioni vere. Era: **Le esportazioni di Watabou da cui partire.** Servono una città, un villaggio e un edificio esportati in JSON dal DM, con il loro seme: l'importatore si scrive su file veri |
+| ~~D8~~ | R6 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: nessuna per ora**, come proposto. Era: **Quale regione inventata con Azgaar?** Proposta: nessuna finché un arco non ne chiede una; il lotto resta pronto |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
 - **Aperte**: D6 quali pacchetti e dove stanno, D7 le esportazioni di Watabou, D8 quale regione
 - **Cambiate**: D3, dove avevo sconsigliato il tema dipinto, e scipy (D17 di COLLAUDO-MAPPE), dove avevo proposto di non ammettere nessuna libreria
 - **Dedotto da me**: che i nuovi universali siano solo i concetti che hanno lo stesso significato in ogni mappa (`🔺`, `🔷`), e che `💠` resti locale; che il ripiego Noto valga per le celle e non per le emoji ripetute nelle righe di legenda, che costerebbero 3,7 MB; che il corsivo dei font si lasci fuori per il peso; che il tema dipinto sia una seconda resa per i giocatori e non sostituisca la pergamena del DM
+- **Decise** (terzo messaggio): D6 un pacchetto solo, quello dei dungeon, con i PNG fuori dal repo · D7 R5 rimandato finché non ci sono esportazioni vere · D8 nessuna regione per ora
+- **Aperte** (terzo messaggio): nessuna
+- **Dedotto da me** (terzo messaggio): che R4 non parta finché il DM non ha scaricato il pacchetto: la tabella `simbolo → file` si scrive sui nomi veri dei file, non su nomi indovinati
 
 ---
 
@@ -153,9 +156,9 @@ Fase S — Sviluppo
 ☑ R1  i font dei volumi dentro le mappe (2026-10-08: 47 SVG, +2,08 MB)
 ☑ R2  🔺 e 🔷 universali, glifi in casa (2026-10-08)
 ☑ R3  il ripiego Noto, 12 emoji locali (2026-10-08: 177 celle → 0)
-□ R4  il tema dipinto (D6)
-□ R5  città, villaggi, edifici da Watabou (D7)
-□ R6  le regionali con Azgaar (D8)
+□ R4  il tema dipinto: deciso (D6), aspetta che il DM scarichi il pacchetto dei dungeon
+□ R5  città, villaggi, edifici da Watabou: rimandato (D7), finché non ci sono le esportazioni
+□ R6  le regionali con Azgaar: nessuna regione per ora (D8)
 □ R7  i residui: in V3 di COLLAUDO-MAPPE
 
 Fase V — Validazione: la tabella di §4

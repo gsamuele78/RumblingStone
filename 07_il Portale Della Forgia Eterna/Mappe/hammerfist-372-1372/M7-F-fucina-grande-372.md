@@ -11,7 +11,7 @@
 M7-F — La fucina grande, livello −3 (notte, ≈372 DR)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🪜 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🔼 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 04 🏰 🏰 🏰 ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ 🏰 🏰 🏰
 05 🏰 🏰 🏰 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🏰 🏰 🏰
@@ -35,6 +35,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 
 @north N
 @tipo tattica interni
+@collega O02 ; M7-E-gallerie-372.md AA22
 @mark 1 ; P5 ; Fabbri al lavoro per l'alba
 ```
 

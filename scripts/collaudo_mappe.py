@@ -24,6 +24,8 @@ Direttive nella griglia (righe che iniziano con ``@``; il renderer le ignora):
                                        motivo sotto i 15 caratteri vale assente
   @collega <A1> ; <file.md>[#N] <A1>   una tessera fra livelli e la sua gemella
                                        (N = numero della mappa nel file, da 1)
+  @collega <A1> ; fuori mappa ; <motivo>  il livello collegato non ha una
+                                       griglia; motivo di almeno 15 caratteri
   @taglia <A1> ; Grande|Enorme         la creatura in quella cella non e' Media
   @vista giocatori                     la versione per i giocatori (D9)
   @north <dir>                         il nord, obbligatorio nelle tattiche
@@ -145,7 +147,8 @@ def direttive(annotazioni: list[str]) -> dict:
         elif tipo == "deroga" and parti and parti[0]:
             d["deroghe"][parti[0]] = parti[1] if len(parti) > 1 else ""
         elif tipo == "collega" and len(parti) >= 2:
-            d["collega"].append((parti[0], parti[1]))
+            # (cella, gemella, motivo): il motivo serve solo a «fuori mappa»
+            d["collega"].append((parti[0], parti[1], parti[2] if len(parti) > 2 else ""))
         elif tipo == "taglia" and len(parti) >= 2:
             d["taglia"].append((parti[0], parti[1].lower()))
         elif tipo == "vista" and resto.strip().lower().startswith("giocator"):
@@ -429,13 +432,23 @@ class Collaudo:
 
     def _fra_livelli(self, x, y, c):
         qui = a1(x, y, self.G.righe)
-        voci = [dest for orig, dest in self.d["collega"] if orig.upper() == qui]
+        # per posizione, non per stringa: «B2» e «B02» sono la stessa cella
+        voci = [(dest, motivo) for orig, dest, motivo in self.d["collega"]
+                if _cella(orig, self.G.righe) == (x, y)]
         if not voci:
             self.rileva("posa/fra-livelli", (x, y),
                         f"«{c}» non dichiara la sua gemella: manca @collega {qui} ; <file.md>[#N] <cella>")
             return
         verso = F[c].get("verso")
-        for dest in voci:
+        for dest, motivo in voci:
+            if dest.lower() == "fuori mappa":
+                # D12: il livello 0 di Hammerfist non ha una griglia. Si dichiara, con
+                # un motivo, come una deroga: senza, e' una scala che non porta a niente
+                if len(motivo) < MOTIVO_MINIMO:
+                    self.rileva("posa/fra-livelli", (x, y),
+                                f"@collega {qui} ; fuori mappa: serve il motivo "
+                                f"(almeno {MOTIVO_MINIMO} caratteri)")
+                continue
             trovata, esito = self._gemella(dest)
             if not trovata:
                 self.rileva("posa/fra-livelli", (x, y), f"@collega {qui}: {esito}")
