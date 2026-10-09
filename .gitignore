@@ -387,3 +387,7 @@ scripts/blender/texture/*/
 # quindi restano sulla macchina del DM. Si installano con `dm.py asset installa`.
 asset-esterni/*
 !asset-esterni/README.md
+
+# Le tessere delle texture CC0 delle mappe si committano (D14 di RESA-ASSET):
+# il *.webp qui sopra le escluderebbe, e il 2026-10-09 è entrato l'indice senza.
+!scripts/texture-cc0/*.webp

@@ -109,6 +109,10 @@ def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
         f = TEXTURE_CC0 / f"{tid}.webp"
         if f.exists():
             immagini[tid] = base64.b64encode(f.read_bytes()).decode("ascii")
+    if not immagini:
+        # l'indice senza tessere (il 2026-10-09 il .gitignore le escludeva):
+        # il tema non c'è, e build_texture_cc0 --check lo dice
+        return None
     return dati.get("terreni", {}), immagini
 
 

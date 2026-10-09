@@ -147,6 +147,25 @@ class TestSenzaTexture(unittest.TestCase):
         finally:
             B.USCITA, B.INDICE = vecchi
 
+    def test_le_tessere_non_sono_ignorate_da_git(self):
+        """Il 2026-10-09 un *.webp globale nel .gitignore ha fatto entrare
+        l'indice senza le tessere."""
+        import subprocess
+        r = subprocess.run(["git", "check-ignore", "-q", "scripts/texture-cc0/prova.webp"],
+                           cwd=SCRIPTS.parent, capture_output=True)
+        self.assertEqual(r.returncode, 1, "scripts/texture-cc0/*.webp è ignorato da git")
+
+    def test_un_indice_senza_tessere_vale_come_niente(self):
+        vecchio = R.TEXTURE_CC0
+        cartella = Path(tempfile.mkdtemp())
+        (cartella / "indice.json").write_text(json.dumps({"terreni": {"⬜": "x"}, "texture": {"x": {}}}),
+                                              encoding="utf-8")
+        try:
+            R.TEXTURE_CC0 = cartella
+            self.assertIsNone(R._texture_cc0())
+        finally:
+            R.TEXTURE_CC0 = vecchio
+
     def test_un_tema_sconosciuto_e_un_errore(self):
         with self.assertRaises(ValueError):
             R.render_svg(_griglia(), "p.md", "acquerello")
