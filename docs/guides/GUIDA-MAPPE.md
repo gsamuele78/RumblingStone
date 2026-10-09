@@ -466,6 +466,7 @@ git switch resa-asset-misura-della-resa
 git status                     # se hai modifiche tue, prima: git stash
 
 # 2) l'ambiente del repo (una volta): venv, dipendenze di sviluppo, Chrome per le misure
+#    Debian 13: sudo apt install python3-venv chromium   (Python è già 3.13: bpy si installa)
 python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 python3 scripts/dm.py doctor   # deve trovare un Chromium o Chrome
 .venv/bin/pip install bpy      # solo con Python 3.13; altrimenti --blender, §5.1.1
@@ -499,6 +500,7 @@ python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a
 #    --adotta stampa le righe di GENERATE: incollale nella chat
 
 # 7) il secondo parere, facoltativo (D26): i comandi sopra, «secondo parere»
+#    i pesi prima, da soli:  .venv/bin/python scripts/misura_resa_appresa.py --scarica-pesi
 
 # 8) la verifica e il commit
 python3 scripts/dm.py maps texture

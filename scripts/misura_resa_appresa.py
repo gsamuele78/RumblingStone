@@ -20,6 +20,11 @@ Una volta, sulla macchina del DM (torch solo CPU, circa 200 MB):
     .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu
     .venv/bin/pip install "piq>=0.8"
 
+I pesi (circa 700 MB, nella cache di torch) si scaricano al primo uso, oppure
+prima, da soli, con l'impronta di ogni file da incollare nella chat:
+
+    .venv/bin/python scripts/misura_resa_appresa.py --scarica-pesi
+
 Poi:
 
     .venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle
@@ -62,13 +67,23 @@ def _pesi(torch) -> dict[str, str]:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
-    ap.add_argument("celle", type=Path, help="la cartella scritta da misura_resa.py --celle")
-    ap.add_argument("-o", "--uscita", type=Path, required=True)
+    ap.add_argument("celle", type=Path, nargs="?", help="la cartella scritta da misura_resa.py --celle")
+    ap.add_argument("-o", "--uscita", type=Path)
+    ap.add_argument("--scarica-pesi", action="store_true",
+                    help="scarica soltanto i pesi delle tre metriche e ne stampa lo sha256")
     args = ap.parse_args(argv)
+    if not args.scarica_pesi and not (args.celle and args.uscita):
+        ap.error("servono la cartella delle celle e -o, oppure --scarica-pesi")
     lib = _carica()
     if lib is None:
         return 2
     torch, piq, Image = lib
+    if args.scarica_pesi:
+        piq.CLIPIQA(), piq.LPIPS(), piq.DISTS()
+        print(f"torch {torch.__version__} · piq {piq.__version__} · cache {torch.hub.get_dir()}")
+        for nome, sha in _pesi(torch).items():
+            print(f"  {sha}  {nome}")
+        return 0
     file = sorted(args.celle.glob("*.png"))
     if not file:
         print(f"✗ nessuna cella in {args.celle}", file=sys.stderr)

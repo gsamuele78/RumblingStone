@@ -39,6 +39,11 @@
 - VRAM: 8 GB stanno larghi; con **4 GB** (la RTX A2000 misurata il 2026-10-08)
   SDXL con `--lowvram` gira, lento. FLUX non ci sta.
 
+> **Container, non macchina virtuale.** Distrobox usa la GPU dell'host
+> direttamente. Una VM di virt-manager o di Vagrant vedrebbe la GPU solo con il
+> passthrough PCI (IOMMU e una seconda GPU per l'host), che su un portatile con
+> una sola scheda NVIDIA non si fa. Le VM vanno bene per le parti senza GPU.
+
 Verifica rapida sull'host:
 
 ```bash
