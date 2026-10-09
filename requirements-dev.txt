@@ -40,3 +40,25 @@ pip-audit>=2.10.1
 # servizio di rete, quindi l'AGPL non chiede niente al repo. Per questo sta
 # qui e non in requirements.txt: al DM non serve per stampare.
 pymupdf>=1.24
+
+# ADR-0084 (DM, 2026-10-08: «obbligatoria nel collaudo»). La linea di vista di
+# `collaudo_mappe.py`: M4 esatta su tutte le 43.423 celle del corpus in 0,7 s,
+# contro 75 s in libreria standard, con lo stesso risultato (Jaccard 0,9999).
+# Misura in plans/esperimenti/orientamento-e-dipendenze-2026-10/. Licenza
+# BSD-2-Clause; porta numpy (BSD-3). Sta qui e non in requirements.txt perche'
+# il collaudo gira in CI e nelle mani di chi disegna, non la sera al tavolo:
+# le mappe si disegnano, si renderizzano e si esportano senza.
+tcod>=21.2.1
+numpy>=2.2
+
+# ADR-0084, emendamento della stessa sera (DM: «scipy per M1/M2»). M1 e M2 del
+# collaudo con `scipy.ndimage`: 20 ms contro 105 sul corpus, risultato identico
+# (plans/esperimenti/dipendenze-e-asset-2026-10/). Licenza BSD-3-Clause, 34 MB.
+scipy>=1.14
+
+# ADR-0085 (DM, 2026-10-08: «fonttools, solo sviluppo»). Ricava i sottoinsiemi
+# dei font OFL dei volumi che il renderer incorpora nelle mappe
+# (`scripts/build_font_mappe.py`). Gira solo quando cambia l'insieme dei
+# caratteri: il renderer legge il risultato committato e resta stdlib. MIT.
+# Pavimento 4.60.2: pip-audit sulle minime trova CVE-2025-66034 nella 4.60.0.
+fonttools[woff]>=4.60.2

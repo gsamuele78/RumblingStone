@@ -1,6 +1,8 @@
 {
  "schema_version": "1.0",
  "title": "M7-D — Il corridoio della fucina, livello −1 (notte, ≈372 DR)",
+ "tipo": "tattica",
+ "ambiente": "interni",
  "scale_m_per_square": 1.5,
  "map_size": [
   36,
@@ -266,12 +268,13 @@
    ]
   },
   {
-   "type": "🪜",
+   "type": "🔽",
    "at": [
     25,
     19
    ],
-   "label": "Scala alle gallerie di Zeth (livello −2)"
+   "label": "Scala alle gallerie di Zeth (livello −2)",
+   "collega": "M7-E-gallerie-372.md AA02"
   },
   {
    "type": "🪓",
@@ -303,12 +306,13 @@
    ]
   },
   {
-   "type": "🪜",
+   "type": "🔼",
    "at": [
     2,
     14
    ],
-   "label": "Scala al livello 0: corridoio principale, sala del consiglio, cortile"
+   "label": "Scala al livello 0: corridoio principale, sala del consiglio, cortile",
+   "collega": "fuori mappa ; il livello 0 (sala del consiglio e corridoio principale) non ha una griglia tattica: M7-S lo mostra in sezione"
   }
  ],
  "units": [

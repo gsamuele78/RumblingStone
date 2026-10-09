@@ -95,6 +95,10 @@ corpus.
    puro sta in un centinaio di righe. ADR-0015 della PR #72 proponeva `scipy`,
    `networkx` e `tcod` per guadagnare velocità; con questi tempi il guadagno non
    paga la dipendenza.
+   *(Emendato il 2026-10-08 da [ADR-0084](ADR-0084-il-collaudo-delle-mappe-e-uno-strumento-di-sviluppo.md):
+   la frase sullo shadowcasting era una stima. Misurato, in Python puro M4 su
+   tutto il corpus costa 70 s, con `tcod` 0,6 s; il DM ha fatto entrare `tcod`
+   nel collaudo, obbligatoria. `scipy` e `networkx` restano fuori.)*
 
 6. **Il collaudo non tocca il canone.** Su una mappa già giocata il collaudo
    segnala e basta; la correzione è una decisione del DM e cambia simboli, mai

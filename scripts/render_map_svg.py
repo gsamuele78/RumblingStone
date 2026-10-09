@@ -48,13 +48,15 @@ one `<input-stem>_mapN_<slug>.svg` per map. Pure Python 3, no dependencies.
 from __future__ import annotations
 
 import argparse
+import base64
+import json
 import math
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from dmcore import legenda  # noqa: E402
+from dmcore import chiusure, legenda  # noqa: E402
 from dmcore.testo import slug  # noqa: E402
 
 
@@ -74,7 +76,133 @@ MARGIN = 46        # px around the grid for coordinates
 LEGEND_ROW_H = 22  # px per legend row
 MIN_WIDTH = 480    # px, so the legend never overflows on tiny maps
 
-FONT = "Georgia, 'Palatino Linotype', 'Times New Roman', serif"
+# I font dei volumi (ADR-0085): EB Garamond per il testo, Cinzel per tutto cio'
+# che e' in grassetto. Viaggiano dentro l'SVG, in sottoinsieme, cosi' la mappa
+# ha la stessa faccia su ogni macchina; Georgia resta come ripiego per chi
+# apre un SVG generato prima dei sottoinsiemi.
+FONT = "'EB Garamond', Georgia, 'DejaVu Serif', serif"
+FONT_MAPPE = Path(__file__).resolve().parent / "fonts" / "mappe"
+
+
+EMOJI_NOTO = Path(__file__).resolve().parent / "emoji-noto"
+
+# Il tema «texture» (R4-bis di PIANO-RESA-E-ASSET): i terreni riempiti con le
+# texture CC0 di Poly Haven (`build_texture_cc0.py`), velate del colore della
+# pergamena. Una tessera copre CELLE_PER_TESSERA quadretti per lato. Gli SVG
+# di questo tema vanno in `rendered-texture/`, accanto a `rendered/`.
+TEXTURE_CC0 = Path(__file__).resolve().parent / "texture-cc0"
+TEMI = ("pergamena", "texture")
+CELLE_PER_TESSERA = 2
+VELATURA = 0.30    # opacità del colore del terreno sopra la texture: tarata dal DM
+                   # il 2026-10-09 sulle texture vere (D16), fra 0,45 e 0,20
+CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture"}
+
+
+def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
+    """(terreni → id, id → webp in base64), o None se le texture non ci sono."""
+    indice = TEXTURE_CC0 / "indice.json"
+    if not indice.exists():
+        return None
+    dati = json.loads(indice.read_text(encoding="utf-8"))
+    immagini = {}
+    for tid in dati.get("texture", {}):
+        f = TEXTURE_CC0 / f"{tid}.webp"
+        if f.exists():
+            immagini[tid] = base64.b64encode(f.read_bytes()).decode("ascii")
+    if not immagini:
+        # l'indice senza tessere (il 2026-10-09 il .gitignore le escludeva):
+        # il tema non c'è, e build_texture_cc0 --check lo dice
+        return None
+    return dati.get("terreni", {}), immagini
+
+
+def _ambiente(annotazioni: list[str]) -> str | None:
+    """L'ambiente di `@tipo <tipo> <ambiente>` (D18), o None."""
+    for riga in annotazioni or []:
+        parole = riga.strip().split()
+        if parole and parole[0].lower() == "@tipo" and len(parole) > 2:
+            return parole[2].lower()
+    return None
+
+
+def _pattern_texture(pid: str, simbolo: str, ambiente: str | None,
+                     tex: tuple[dict, dict[str, str]] | None) -> tuple[str, str] | None:
+    """(pattern con la texture, id della texture) per un terreno, o None."""
+    if not tex:
+        return None
+    terreni, immagini = tex
+    tid = terreni.get(f"{simbolo}@{ambiente}") or terreni.get(simbolo)
+    if not tid or tid not in immagini:
+        return None
+    t = CELL * CELLE_PER_TESSERA
+    corpo = (f'<image href="data:image/webp;base64,{immagini[tid]}" width="{t}" height="{t}" '
+             f'preserveAspectRatio="none"/>'
+             f'<rect width="{t}" height="{t}" fill="{SYMBOLS[simbolo]["fill"]}" '
+             f'opacity="{VELATURA}"/>')
+    return _pattern(pid, t, corpo), tid
+
+
+def _simbolo_noto(emoji: str) -> tuple[str, str] | None:
+    """(id, <symbol>) dell'SVG Noto di un'emoji locale, o None se non c'e'.
+
+    Il ripiego di ADR-0085: un simbolo che la legenda universale non conosce si
+    disegna con l'immagine Noto (Apache-2.0, `scripts/emoji-noto/`) invece che
+    con il font di sistema. Senza il file, resta il testo, come prima.
+    """
+    codice = "_".join(f"{ord(c):x}" for c in emoji if ord(c) != 0xFE0F)
+    f = EMOJI_NOTO / f"emoji_u{codice}.svg"
+    if not codice or not f.exists():
+        return None
+    svg = f.read_text(encoding="utf-8")
+    m = re.search(r"<svg\b[^>]*>", svg)
+    vb = re.search(r'viewBox="([^"]+)"', m.group(0)) if m else None
+    if not m or not vb:
+        return None
+    corpo = svg[m.end():svg.rfind("</svg>")].replace("xlink:href=", "href=")
+    pid = f"nt_{codice}"
+    return pid, f'<symbol id="{pid}" viewBox="{vb.group(1)}">{corpo.strip()}</symbol>'
+
+
+def _corpo_titolo(testo: str, spazio: float, corpo: float = 19.0) -> tuple[float, bool]:
+    """Il corpo del titolo in Cinzel perche' entri in `spazio` px, e se serve
+    comprimerlo (`textLength`) quando neanche a 11 px ci sta.
+
+    Cinzel e' piu' largo del Georgia che c'era prima, e gia' con Georgia i
+    titoli lunghi delle mappe strette uscivano dal foglio a destra. Le
+    larghezze vengono dal font stesso (`copertura.json`, scritto da
+    build_font_mappe.py); un carattere che il sottoinsieme non ha conta 0,7 em.
+    Si stringe, non si allarga mai.
+    """
+    import json
+    f = FONT_MAPPE / "copertura.json"
+    if not f.exists():
+        return corpo, False
+    avanzi = json.loads(f.read_text(encoding="utf-8")).get("cinzel-700.woff2", {}).get("avanzi", {})
+    em = sum(avanzi.get(str(ord(c)), 0.7) for c in testo)
+    largo = em * corpo + 0.5 * len(testo)  # letter-spacing 0.5
+    if largo <= spazio:
+        return corpo, False
+    adatto = math.floor((spazio - 0.5 * len(testo)) / em * 2) / 2 if em else corpo
+    if adatto >= 11:
+        return adatto, False
+    return 11.0, True
+
+
+def _stile_font() -> str:
+    """Lo <style> con i due font incorporati, o niente se i woff2 mancano."""
+    import base64
+    voci = (("ebgaramond-400.woff2", "EB Garamond", 400), ("cinzel-700.woff2", "Cinzel", 700))
+    facce = []
+    for nome, famiglia, peso in voci:
+        f = FONT_MAPPE / nome
+        if not f.exists():
+            return ""
+        dati = base64.b64encode(f.read_bytes()).decode("ascii")
+        facce.append(f"@font-face{{font-family:'{famiglia}';font-weight:{peso};"
+                     f"src:url(data:font/woff2;base64,{dati}) format('woff2')}}")
+    return ("<style>" + "".join(facce)
+            + "text[font-weight=\"bold\"]{font-family:Cinzel,'EB Garamond',Georgia,serif}"
+            + "</style>")
 PAPER = "#efe4c9"       # parchment base
 PLATE = "#e6d9b8"       # map plate behind the grid
 INK = "#3b2e1e"         # dark ink
@@ -573,6 +701,18 @@ PROPS: dict[str, str] = {
         '<path d="M10 11l4 4.5 4-4.5" stroke="#f4ecd6" stroke-width="1.8" fill="none" '
         'stroke-linecap="round" stroke-linejoin="round"/>'
         f'<circle cx="14" cy="19" r="1.3" fill="none" stroke="{_PK}" stroke-width="0.9"/>'),
+    # --- R2 di PIANO-RESA-E-ASSET (2026-10-08): stalagmite e cristallo, dall'alto.
+    "pr_stalagmite": _symbol("pr_stalagmite",
+        f'<path d="M14 4.5l6.8 4.3 2 7.6-4.6 6.6-7.6.6-5.6-5.2 1-8z" fill="#9b917f" stroke="{_PK}" stroke-width="1.1"/>'
+        '<path d="M14 8.2l4.2 2.8 1.2 4.8-2.9 4-4.8.4-3.4-3.3.6-5z" fill="#b0a692"/>'
+        '<path d="M14 11.6l2 1.4.6 2.3-1.4 1.9-2.3.2-1.6-1.6.3-2.3z" fill="#cfc6b2"/>'
+        '<circle cx="13.6" cy="14" r="0.9" fill="#ece5d5"/>'),
+    "pr_crystal_giant": _symbol("pr_crystal_giant",
+        f'<path d="M14 3l8.5 5v12L14 25l-8.5-5V8z" fill="#7fb0c4" stroke="{_PK}" stroke-width="1.2"/>'
+        '<path d="M14 3l8.5 5L14 13 5.5 8z" fill="#bfe0ea"/>'
+        '<path d="M14 13l8.5-5v12L14 25z" fill="#5f93a8"/>'
+        '<path d="M14 13v12M5.5 8L14 13l8.5-5" stroke="#2f5a6b" stroke-width="0.8" fill="none"/>'
+        '<path d="M9 7.6l2.4 1.4" stroke="#f2fafc" stroke-width="1.1" stroke-linecap="round"/>'),
     "pr_debris": _symbol("pr_debris",
         f'<path d="M4 9l11 3-0.6 2.2-11-3z" fill="#8a6032" stroke="{_PK}" stroke-width="0.9"/>'
         f'<path d="M12 20l10-6 1.2 1.9-10 6z" fill="#9c7444" stroke="{_PK}" stroke-width="0.9"/>'
@@ -1110,7 +1250,9 @@ def _arrowhead(x1: float, y1: float, x2: float, y2: float, color: str, size: flo
             f'L{_n(p2[0])} {_n(p2[1])}Z" fill="{color}"/>')
 
 
-def render_svg(grid: dict, source_name: str) -> str:
+def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
+    if tema not in TEMI:
+        raise ValueError(f"tema: uno di {', '.join(TEMI)}")
     rows = grid["rows"]
     row_nums = sorted(rows)
     n_rows = row_nums[-1] - row_nums[0] + 1
@@ -1168,7 +1310,7 @@ def render_svg(grid: dict, source_name: str) -> str:
     )
 
     # --- defs: filters, vignette, terrain patterns, props, token gradients --
-    defs: list[str] = ["<defs>"]
+    defs: list[str] = ["<defs>", _stile_font()]
     defs.append(
         '<filter id="grain" x="0" y="0" width="100%" height="100%">'
         '<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" '
@@ -1213,14 +1355,34 @@ def render_svg(grid: dict, source_name: str) -> str:
             f'<clipPath id="clipheavy"><path d="{heavy_union_d}" '
             f'clip-rule="evenodd"/></clipPath>'
         )
+    tex = _texture_cc0() if tema == "texture" else None
+    ambiente = _ambiente(grid.get("annotations", []))
+    per_pat = {}
+    for e, spec in SYMBOLS.items():
+        if spec.get("pat"):
+            per_pat.setdefault(spec["pat"], e)
+    texture_usate = set()
     for p in used_pats:
-        defs.append(PATTERNS[p])
+        tp = _pattern_texture(p, per_pat[p], ambiente, tex) if p in per_pat else None
+        if tp:
+            defs.append(tp[0])
+            texture_usate.add(tp[1])
+        else:
+            defs.append(PATTERNS[p])
     for p in used_props:
         defs.append(PROPS[p])
+    noto = {e: _simbolo_noto(e) for e in used if e and e not in SYMBOLS}
+    noto = {e: v for e, v in noto.items() if v}
+    for e in sorted(noto):
+        defs.append(noto[e][1])
     for color in unit_colors:
         defs.append(_unit_gradient(color))
     defs.append("</defs>")
     out.extend(defs)
+    if texture_usate:
+        # CC0 non chiede il credito; lo si scrive lo stesso, e senza toccare il foglio
+        out.append(f'<desc>Texture CC0 1.0 da Poly Haven (polyhaven.com): '
+                   f'{", ".join(sorted(texture_usate))}</desc>')
 
     # --- parchment sheet, vignette, double frame ----------------------------
     out.append(f'<rect width="{width}" height="{height}" fill="{PAPER}" filter="url(#grain)"/>')
@@ -1236,9 +1398,12 @@ def render_svg(grid: dict, source_name: str) -> str:
 
     # --- header --------------------------------------------------------------
     title = _esc(grid["title"])
+    corpo, comprimi = _corpo_titolo(grid["title"], width - 2 * MARGIN)
+    stretto = (f' textLength="{_n(width - 2 * MARGIN)}" lengthAdjust="spacingAndGlyphs"'
+               if comprimi else "")
     out.append(
-        f'<text x="{MARGIN}" y="34" font-size="19" font-weight="bold" '
-        f'fill="{INK}" letter-spacing="0.5">{title}</text>'
+        f'<text x="{MARGIN}" y="34" font-size="{_n(corpo)}" font-weight="bold" '
+        f'fill="{INK}" letter-spacing="0.5"{stretto}>{title}</text>'
     )
     scale_m = grid.get("scale_m") or 1.5
     scale_txt = f"{scale_m:g}".replace(".", ",")
@@ -1323,6 +1488,14 @@ def render_svg(grid: dict, source_name: str) -> str:
         )
 
     # --- illustrated props and unit tokens --------------------------------------
+    # doors, grates and bars take their axis from the neighbours (ADR-0083):
+    # the glyphs are drawn for an east-west wall and turn 90° in a north-south one
+    def _at(cx_: int, ry_: int):
+        if not (0 <= ry_ < len(row_nums)) or cx_ < 0:
+            return None
+        cells_ = rows[row_nums[ry_]]
+        return cells_[cx_] if cx_ < len(cells_) else None
+    versi = chiusure.versi_dichiarati(grid.get("annotations", []) or [])
     for r, rn in enumerate(row_nums):
         cells = rows[rn]
         for c in range(n_cols):
@@ -1349,23 +1522,31 @@ def render_svg(grid: dict, source_name: str) -> str:
             elif spec and spec.get("prop"):
                 variants = VARIANTS.get(spec["prop"], [spec["prop"]])
                 prop = variants[(r * 7 + c * 13) % len(variants)]
+                ns = chiusure.e_chiusura(emoji) and chiusure.asse_da_disegnare(
+                    _at, c, r, col_label(c), rn, versi) == chiusure.NS
+                rx_, ry_ = (4.5, 9) if ns else (9, 4.5)
                 out.append(
-                    f'<ellipse cx="{cx + 1}" cy="{cy + 3}" rx="9" ry="4.5" '
+                    f'<ellipse cx="{cx + 1}" cy="{cy + 3}" rx="{rx_}" ry="{ry_}" '
                     f'fill="#241c10" opacity="0.2"/>'
                 )
+                ruota = f' transform="rotate(90 {_n(cx)} {_n(cy)})"' if ns else ""
                 out.append(
                     f'<use href="#{prop}" x="{x}" y="{y}" '
-                    f'width="{CELL}" height="{CELL}"/>'
+                    f'width="{CELL}" height="{CELL}"{ruota}/>'
                 )
             elif spec is None or spec["mode"] == "icon":
                 out.append(
                     f'<ellipse cx="{cx}" cy="{cy + 6}" rx="7.5" ry="2.8" '
                     f'fill="#241c10" opacity="0.14"/>'
                 )
-                out.append(
-                    f'<text x="{cx}" y="{cy + 6}" font-size="17" '
-                    f'text-anchor="middle">{emoji}</text>'
-                )
+                if emoji in noto:
+                    out.append(f'<use href="#{noto[emoji][0]}" x="{x + 5}" y="{y + 5}" '
+                               f'width="{CELL - 10}" height="{CELL - 10}"/>')
+                else:
+                    out.append(
+                        f'<text x="{cx}" y="{cy + 6}" font-size="17" '
+                        f'text-anchor="middle">{emoji}</text>'
+                    )
 
     # --- coordinates ------------------------------------------------------------
     for c in range(n_cols):
@@ -1526,6 +1707,8 @@ def render_svg(grid: dict, source_name: str) -> str:
             out.append(
                 f'<use href="#{spec["prop"]}" x="{lx}" y="{y - 13}" width="18" height="18"/>'
             )
+        elif emoji in noto:
+            out.append(f'<use href="#{noto[emoji][0]}" x="{lx + 1}" y="{y - 13}" width="17" height="17"/>')
         else:
             out.append(f'<text x="{lx}" y="{y}" font-size="14">{emoji}</text>')
         out.append(f'<text x="{lx + 27}" y="{y}" font-size="11" fill="{INK}">{emoji} — {label}</text>')
@@ -1545,13 +1728,29 @@ def render_svg(grid: dict, source_name: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("files", nargs="+", help="markdown file(s) containing emoji-grid maps")
+    ap.add_argument("files", nargs="*", help="markdown file(s) containing emoji-grid maps")
+    ap.add_argument("--tutti-i-master", action="store_true",
+                    help="ogni master che ha gia' un SVG in rendered/ (per rifare un tema intero)")
     ap.add_argument("-o", "--outdir", help="output directory (default: rendered/ next to input)")
     ap.add_argument("--map", type=int, help="render only map #N (1-based) of each file")
     ap.add_argument("--list", action="store_true", help="list maps found, render nothing")
     ap.add_argument("--strict", action="store_true",
                     help="fail if declared header dims (N col × M righe) don't match parsed cells")
+    ap.add_argument("--tema", choices=TEMI, default="pergamena",
+                    help="pergamena (default, in rendered/) o texture: terreni con le texture "
+                         "CC0 di scripts/texture-cc0/, in rendered-texture/")
     args = ap.parse_args()
+    if args.tutti_i_master:
+        radice = Path(__file__).resolve().parent.parent
+        args.files = sorted({str(p.parent.parent / f"{p.name.split('_map')[0]}.md")
+                             for p in radice.glob("**/rendered/*_map[0-9][0-9]_*.svg")
+                             if (p.parent.parent / f"{p.name.split('_map')[0]}.md").exists()})
+    if not args.files:
+        ap.error("indica i file, oppure --tutti-i-master")
+    if args.tema == "texture" and not _texture_cc0():
+        print("ERRORE: il tema texture vuole le texture CC0: python3 scripts/build_texture_cc0.py",
+              file=sys.stderr)
+        return 1
 
     total = 0
     dim_errors = 0
@@ -1582,13 +1781,13 @@ def main() -> int:
                 n_cols = max(len(c) for c in rows.values())
                 print(f"  {i:2d}. {g['title']}  ({n_cols}×{len(rows)} celle)")
             continue
-        outdir = Path(args.outdir) if args.outdir else path.parent / "rendered"
+        outdir = Path(args.outdir) if args.outdir else path.parent / CARTELLA_TEMA[args.tema]
         outdir.mkdir(parents=True, exist_ok=True)
         for i, g in enumerate(maps, 1):
             if args.map and i != args.map:
                 continue
             name = f"{path.stem}_map{i:02d}_{nome_mappa(g['title'])}.svg"
-            (outdir / name).write_text(render_svg(g, path.name), encoding="utf-8")
+            (outdir / name).write_text(render_svg(g, path.name, args.tema), encoding="utf-8")
             print(f"✓ {outdir / name}")
             total += 1
     if not args.list:

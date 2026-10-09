@@ -1,6 +1,8 @@
 {
  "schema_version": "1.0",
  "title": "M7-F/1372 — La fucina grande, livello −3 (Giorno 3 dell'assedio)",
+ "tipo": "tattica",
+ "ambiente": "interni",
  "scale_m_per_square": 1.5,
  "map_size": [
   30,
@@ -42,12 +44,13 @@
  ],
  "structures": [
   {
-   "type": "🪜",
+   "type": "🔼",
    "at": [
     14,
     1
    ],
-   "label": "Scala alle gallerie (livello −2)"
+   "label": "Scala alle gallerie (livello −2)",
+   "collega": "M7-E-gallerie-1372.md AA22"
   },
   {
    "type": "🚪",

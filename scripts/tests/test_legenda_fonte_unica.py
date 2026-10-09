@@ -177,8 +177,9 @@ class TestLaFonteEUnaSola(unittest.TestCase):
                if json.loads((ROOT / "scripts" / "legend.json")
                              .read_text(encoding="utf-8"))["symbols"][s].get("function")]
         # +20 il 2026-10-08: il corredo di V2-bis di COLLAUDO-MAPPE (D8), ogni
-        # simbolo nuovo con la sua funzione dal primo giorno
-        self.assertEqual(len(con), 77)
+        # simbolo nuovo con la sua funzione dal primo giorno; +2 la sera, 🔺 e 🔷
+        # di RESA-ASSET R2 (ADR-0085)
+        self.assertEqual(len(con), 79)
         unita = [s for s, v in legenda.simboli().items() if v["mode"] == "unit"]
         self.assertEqual(len(unita), 6)
         for u in unita:
@@ -290,6 +291,9 @@ class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
     # i simboli di allora valgono quel che valevano, e quelli nuovi entrano
     # qui con nome e cognome. Un insieme che cresce senza toccare questo test
     # resta rosso: e' il punto.
+    # E di nuovo la sera dello stesso giorno (RESA-ASSET R2, ADR-0085): 🔷, il
+    # cristallo gigante, blocca la vista ed e' quindi un muro anche in Foundry.
+    NUOVI_R2 = {"muri": {"🔷"}}
     NUOVI_V2BIS = {
         "muri": {"🗄", "📚"},
         "porte": {"🔒", "❔", "🥅"},
@@ -297,7 +301,7 @@ class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
         "piatti": {"🔒", "❔", "🔻", "🪟"},
     }
     CONGELATI = {
-        "muri": {"🏰", "⬛", "⛺", "⛰", "🟪", "🗼", "🏛", "🗿", "📦"} | {"🗄", "📚"},
+        "muri": {"🏰", "⬛", "⛺", "⛰", "🟪", "🗼", "🏛", "🗿", "📦"} | {"🗄", "📚"} | {"🔷"},
         "porte": {"🚪"} | {"🔒", "❔", "🥅"},
         "pericoli": {"🔥", "💥", "💀", "🕳", "⚡", "❄", "🕸", "🌋", "🟧", "🟥"} | {"🫧"},
         "pesanti": {"t_wall", "t_struct", "t_pillar", "t_mountain"},
@@ -320,8 +324,9 @@ class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
         non tocca, perche' sono la prova che la migrazione le ha prese tutte.
         """
         self.assertEqual(set(legenda.piatti()), self.CONGELATI["piatti"])
-        # 31 + 14 del corredo di V2-bis (2026-10-08), tutte sul modulo di griglia
-        self.assertEqual(len(legenda.altezze()), 45)
+        # 31 + 14 del corredo di V2-bis (2026-10-08) + 2 di RESA-ASSET R2 (🔺 1,5 m,
+        # 🔷 3 m), tutte sul modulo di griglia
+        self.assertEqual(len(legenda.altezze()), 47)
         self.assertEqual(len(legenda.texture()), 15)
         self.assertEqual(legenda.altezze()["🗼"], 9.0, "la torre: 6 quadretti")
         self.assertLess(legenda.altezze()["🕳"], 0, "la voragine resta uno scavo")
@@ -352,11 +357,12 @@ class TestLaMigrazioneNonHaCambiatoNiente(unittest.TestCase):
         self.assertLess(a["🧱"], a["🏰"], "il muretto e' piu' basso del muro")
         self.assertLess(a["🏰"], a["🗼"], "e la torre svetta su tutto")
 
-    def test_i_84_simboli_ci_sono_tutti(self):
+    def test_gli_86_simboli_ci_sono_tutti(self):
         """62 era il numero della spec di luglio; 🔳 e' entrato con ADR-0042, 🌫
         con RIPRESA-PR 4j-4 (2026-09-24, dal ramo della PR #42); i 20 del
-        corredo di V2-bis il 2026-10-08 (COLLAUDO-MAPPE, D8)."""
-        self.assertEqual(len(legenda.simboli()), 84)
+        corredo di V2-bis il 2026-10-08 (COLLAUDO-MAPPE, D8); 86 la sera, con 🔺 e
+        🔷 di RESA-ASSET R2 (ADR-0085)."""
+        self.assertEqual(len(legenda.simboli()), 86)
 
     def test_i_consumatori_vedono_gli_stessi_valori(self):
         import export_uvtt as eu

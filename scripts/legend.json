@@ -1455,6 +1455,41 @@
         "nameable": true,
         "posa": "sul_pavimento"
       }
+    },
+    "🔺": {
+      "label": "Stalagmite (copertura parziale)",
+      "render": {
+        "mode": "icon",
+        "prop": "pr_stalagmite",
+        "fill": "#b8ad98",
+        "altezza_m": 1.5
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": false,
+        "cover": "half",
+        "obscurement": "none",
+        "destructible": true,
+        "nameable": false,
+        "posa": "sul_pavimento"
+      }
+    },
+    "🔷": {
+      "label": "Cristallo gigante (copertura totale)",
+      "render": {
+        "mode": "icon",
+        "prop": "pr_crystal_giant",
+        "fill": "#a9d6e5",
+        "altezza_m": 3.0
+      },
+      "function": {
+        "blocks_movement": true,
+        "blocks_sight": true,
+        "cover": "total",
+        "obscurement": "none",
+        "nameable": true,
+        "posa": "sul_pavimento"
+      }
     }
   }
 }

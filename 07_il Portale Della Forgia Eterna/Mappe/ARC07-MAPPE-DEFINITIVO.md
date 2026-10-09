@@ -126,6 +126,7 @@ LEGENDA · 🔷 Cristallo Gigante (copertura totale, indistruttibile) · 🟫 ro
 frastagliata (terreno difficile) · 🕳️ punto d'emersione Xorn · ⬛ Fauci di
 Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡️ Thorik
 (F04) · 🔮 Artemis (I04) · 🥋 Tordek (G05).
+@tipo tattica caverna
 ```
 - **Tipo / scala**: tattica, 18×10, 1,5 m. Combattimento d'imboscata.
 - **Terreno & altitudini**: tutto **terreno difficile** (movimento ×2) + gravità
@@ -167,6 +168,7 @@ LEGENDA · 💠 Cristallo Vivente (canta) · 💎 Madre Cristallo (J04, alt. 5 m
 💚 crepato (riforgiabile → +2, E02 e O07) · 🔴 runa di Varis (J05; l'Anello di
 Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) ·
 ⬜ corridoio libero (riga 06, ingresso/uscita) · 🟫 suolo.
+@tipo tattica caverna
 ```
 - **Tipo / scala**: skill challenge (6 successi / 3 fallimenti) + gancio
   personale di Artemis (Seme di Varis). Non è un combat.
@@ -297,6 +299,7 @@ Artemis. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Al
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
+@tipo tattica interni
 ```
 - **Tipo / scala**: tattica BOSS, sfera Ø 60 m. **Terros l'Antico, CR 15, 345 pf**.
 - **Terreno & altitudini**: **ZERO-G** ovunque (🌫️) tranne l'**Altare** centrale
@@ -410,6 +413,7 @@ deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
 inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
+@tipo tattica interni
 ```
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   Ora **santuario sicuro** (Consacrare) — il *desecrate* di ARC-06 è dissolto.
@@ -584,6 +588,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 8 ; T8 ; Il pozzo sulla cisterna
 @mark 9 ; T4 ; Le campane della torre nord
 @mark 10 ; W18 ; La postierla
+@tipo tattica esterno
 ```
 - **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 12** (capostipite
   di Fauci di Palude). Cielo aperto.
@@ -671,6 +676,7 @@ Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura)
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
 (copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
+@tipo tattica caverna
 ```
 
 ### ⏫ EVENTO CLIMAX — L'APPARIZIONE (la sfera dorata)

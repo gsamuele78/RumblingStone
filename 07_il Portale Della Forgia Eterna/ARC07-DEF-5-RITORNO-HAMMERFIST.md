@@ -619,6 +619,7 @@ Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura)
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
 (copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
+@tipo tattica caverna
 ```
 
 ### ⏫ EVENTO CLIMAX — L'APPARIZIONE (la sfera dorata)

@@ -74,6 +74,7 @@ EQUIPAGGIAMENTO:
 - 1 Incinerator centrale (fuoco 24/7)
 - Stockpile armi/armor (loot se raid!)
 - Cibo 30 giorni (80 razioni)
+@tipo tattica esterno
 ```
 
 ### CAMPO DROW 2 (Hex D08) - Main Forward Base
@@ -400,6 +401,7 @@ DISTANZE:
 - Assassin (O35) → Hella: 22.5m (15 quadrati) - 3 rounds sneak if undetected
 
 SCALA: Ogni quadrato = 1.5m × 1.5m
+@tipo tattica esterno
 ```
 
 **Tactics Round-by-Round:**
@@ -814,6 +816,7 @@ DESPERATE LAST STAND (Round 36-40)
 
 SCALA GRID: 1 quadrato = 1,5 m × 1,5 m
 DIMENSIONI TOTALI MAPPA: 26 colonne (A-Z) × 29 righe (10-38) = 39 m × 43,5 m
+@tipo tattica esterno
 ```
 
 > ⚠️ **Griglia ridisegnata il 2026-09-04** (ADR-0043 §4). L'intestazione

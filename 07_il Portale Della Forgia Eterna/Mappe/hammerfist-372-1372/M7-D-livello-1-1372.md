@@ -24,17 +24,20 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 12 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 ⬜ ⬜ ⬜ 🧱 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
 13 🏰 🏰 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 14 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-15 🏰 ⬜ 🪜 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🪑 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 ⬜ ⬜ 🪓 ⬜ 🪓 ⬜ 🏰 🏰
+15 🏰 ⬜ 🔼 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🪑 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 ⬜ ⬜ 🪓 ⬜ 🪓 ⬜ 🏰 🏰
 16 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ 🏺 🏺 ⬜ 🏰 ⬜ ⬜ 🔴 🔴 🔴 ⬜ 🏰 🏰
 17 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪 ⬜ ⬜ 🔴 🔴 🔴 ⬜ 🏰 🏰
 18 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
 19 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 ⬜ ⬜ 🪓 ⬜ 🪓 ⬜ 🏰 🏰
-20 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪜 ⬜ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+20 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔽 ⬜ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
 21 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 22 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 23 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 @north N
+@tipo tattica interni
+@collega Z20 ; M7-E-gallerie-1372.md AA02
+@collega C15 ; fuori mappa ; il livello 0 (sala del consiglio e corridoio principale) non ha una griglia tattica: M7-S lo mostra in sezione
 @mark 1 ; S17 ; Orchi che saccheggiano la fucina (GS ½)
 @mark 2 ; AF17 ; Orchi nell'armeria vuota (GS ½)
 @mark 3 ; N12 ; Retroguardia nanica alla barricata

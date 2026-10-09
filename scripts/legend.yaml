@@ -987,3 +987,32 @@ symbols:
       destructible: true
       nameable: true
       posa: sul_pavimento
+  # ==========================================================================
+  # PIANO-RESA-E-ASSET-DELLE-MAPPE R2 (DM, 2026-10-08, sera: «nuovi universali
+  # in casa»). Due concetti che le legende locali inventavano gia', con lo stesso
+  # significato in ogni mappa che li usa: `🔺` in DEF-5 e nell'atlante ARC-07
+  # («stalagmiti, copertura parziale»), `🔷` in DEF-1 e nell'atlante («Cristallo
+  # Gigante, copertura totale»). `💠` resta locale: nel corpus vuol dire due cose
+  # diverse. I glifi sono disegnati in casa, visti dall'alto, come gli altri.
+  # ==========================================================================
+  "🔺":
+    label: "Stalagmite (copertura parziale)"
+    render: {mode: icon, prop: pr_stalagmite, fill: "#b8ad98", altezza_m: 1.5}
+    function:
+      blocks_movement: true
+      blocks_sight: false
+      cover: half
+      obscurement: none
+      destructible: true
+      nameable: false
+      posa: sul_pavimento
+  "🔷":
+    label: "Cristallo gigante (copertura totale)"
+    render: {mode: icon, prop: pr_crystal_giant, fill: "#a9d6e5", altezza_m: 3.0}
+    function:
+      blocks_movement: true
+      blocks_sight: true
+      cover: total
+      obscurement: none
+      nameable: true
+      posa: sul_pavimento
