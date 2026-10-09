@@ -191,7 +191,10 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
     quello che Hugging Face pubblica.
 
   Gli script restano **mai provati su una macchina vera**: la rete di questo
-  ambiente non raggiunge né Hugging Face né una GPU.
+  ambiente non raggiunge né Hugging Face né una GPU. *(Il 2026-10-09 il DM li
+  ha lanciati da `ambiente.py installa --con comfyui`. Il box si crea con la
+  GPU e il clone riesce, ma il passo 4 si fermava, perché distrobox non monta
+  `/srv`. Corretto; il secondo giro è in corso.)*
 - **L'adozione dopo i voti**: `build_oggetti_cc0.py --adotta [DIR]` tiene solo le
   tessere che la misura non boccia e che il DM ha preferito. Senza `DIR`
   sfoltisce le CC0, con `DIR` copia le candidate di ComfyUI e stampa le righe di

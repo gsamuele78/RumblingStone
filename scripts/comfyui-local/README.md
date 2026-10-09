@@ -78,6 +78,10 @@ Fa, nell'ordine (tutti passi standard Distrobox + ComfyUI):
    ComfyUI (indice ufficiale PyTorch), poi stampa se torch vede la GPU.
    Se stampa `False`, il driver NVIDIA non arriva nel box: fermati lì.
 
+Distrobox condivide col box la home, non il resto del disco. Se `COMFYUI_DIR`
+sta fuori dalla home (`/srv/comfyui`), lo script la monta nel box; se un box
+creato prima non la vede, lo ricrea.
+
 Prima di partire controlla lo spazio (passo 0). Con `COMFYUI_FORZA=1` procede
 lo stesso.
 

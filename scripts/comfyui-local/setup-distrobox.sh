@@ -21,8 +21,25 @@ echo "==> 0/4 installo in $DEST"
 spazio_libero "$DEST" 15 || [ "${COMFYUI_FORZA:-}" = 1 ] || {
   echo "        (oppure COMFYUI_FORZA=1 per procedere lo stesso)" >&2; exit 1; }
 
+# Distrobox condivide col box la home, non il resto del disco: una COMFYUI_DIR
+# fuori dalla home (/srv/comfyui) va montata, altrimenti dentro il box non
+# esiste. Il 2026-10-09, sulla macchina del DM, il passo 4 si fermava così.
+mkdir -p "$DEST"
+VOLUME=()
+case "$(realpath "$DEST")/" in
+  "$(realpath "$HOME")"/*) ;;
+  *) VOLUME=(--volume "$(realpath "$DEST"):$(realpath "$DEST"):rw") ;;
+esac
+
+if distrobox list --no-color 2>/dev/null | grep -qE "\|\s*$BOX\s*\|"; then
+  if ! distrobox enter "$BOX" -- test -d "$(realpath "$DEST")" 2>/dev/null; then
+    echo "==> il box '$BOX' esiste ma non vede $DEST: lo ricreo col volume"
+    distrobox rm "$BOX" --force
+  fi
+fi
+
 echo "==> 1/4 creo il box '$BOX' (Ubuntu 24.04 + driver NVIDIA dell'host)"
-distrobox create --name "$BOX" --image ubuntu:24.04 --nvidia --yes || true
+distrobox create --name "$BOX" --image ubuntu:24.04 --nvidia "${VOLUME[@]}" --yes || true
 
 echo "==> 2/4 installo git/python nel box"
 distrobox enter "$BOX" -- bash -lc '

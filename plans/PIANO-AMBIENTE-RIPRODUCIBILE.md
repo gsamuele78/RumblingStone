@@ -203,6 +203,20 @@ Si taglia in quattro, perché il primo pezzo è utile da solo.
 > quello resta ad A6. `adotta` è nuovo rispetto al piano: affida al registro ciò
 > che il DM aveva installato a mano prima che lo script esistesse.
 >
+> **La prima prova vera, sulla Debian 13 del DM, lo stesso pomeriggio.**
+> - `adotta --apt-dal 2026-10-09` ha messo nel registro 103 pacchetti
+>   installati a mano quel giorno;
+> - `installa --con blender,comfyui` ha installato Blender (16 pacchetti nel
+>   registro) e ha lasciato stare chromium, pandoc, maven e gli altri, già
+>   presenti;
+> - `doctor` è verde su ogni dipendenza, e `gate_locale.py --rapido` dà 49
+>   passi, 0 rossi, 0 avvisi;
+> - ComfyUI si è fermato: distrobox non monta `/srv`, e dentro il box
+>   `COMFYUI_DIR=/srv/comfyui` non esisteva. Corretto in `setup-distrobox.sh`,
+>   che ora monta la cartella e ricrea un box che non la vede.
+>
+> `rimuovi` non è ancora stato provato su una macchina vera.
+>
 > Il tool ha `side_effects.system` nel manifest, e così non esce dal server
 > MCP nemmeno con `--allow-write`. Mancano ancora le versioni fissate con
 > checksum (A1), il lock (A3), `aggiorna`, gli hook (A4) e Bazzite.
