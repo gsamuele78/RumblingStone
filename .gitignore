@@ -381,3 +381,9 @@ scripts/comfyui-local/ComfyUI/
 scripts/blender/texture/*/
 # Render 3D delle mappe e loro piani di scena: presentazione, non canone.
 **/rendered/blender/
+
+# Asset di terzi scaricati dal DM (R4 di PIANO-RESA-E-ASSET-DELLE-MAPPE):
+# la licenza di 2-Minute Tabletop chiede di mandare chi vuole i file al sito,
+# quindi restano sulla macchina del DM. Si installano con `dm.py asset installa`.
+asset-esterni/*
+!asset-esterni/README.md

@@ -5,9 +5,9 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**97 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**99 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
-**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 92: le cartelle di `converters/` non sono programmi e non compaiono.
+**Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 94: le cartelle di `converters/` non sono programmi e non compaiono.
 
 ## A · Session Prep (incontri · mappe · tesoro)
 
@@ -21,6 +21,7 @@
 
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
+| `asset_2mtt.py` | «Ho scaricato il pacchetto dei dungeon: come lo metto a disposizione delle mappe senza committarlo e senza uscire dalla licenza?»<br>Installa i pacchetti di 2-Minute Tabletop che il DM ha scaricato, per il tema dipinto delle mappe (R4): estrae solo immagini e licenze in asset-esterni/ (ignorata da git), rifiuta percorsi pericolosi e link, registra categoria e impronte. `controlla` boccia la tabella simbolo → file che usa un pacchetto premium o un file assente. | **azione** · --categoria · --nome | ✔ | — | — | `0` · `1` · `2` |
 | `costruisci_mappa.py` | «Che cosa gira dentro Blender quando chiedo il render di una mappa, e perché questo file non si lancia a mano?»<br>Lo script che gira DENTRO Blender: dal piano di scena costruisce i solidi, la camera e il lock di luce, e rende. Non si lancia a mano — il driver e' render_map_blender.py, dove sta tutta la logica provabile senza GPU. | **--piano** | — | — | — | `0` · `1` |
 | `build_emoji_noto.py` | «Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»<br>Il ripiego per le emoji locali delle mappe (ADR-0085): per ogni emoji che una griglia usa e la legenda universale non conosce, scarica l'SVG di Noto Emoji (Apache-2.0, commit fissato), rinomina gli id interni e lo scrive in scripts/emoji-noto/, con licenza e crediti accanto. Il renderer lo incorpora al posto del font di sistema. --check non usa la rete. | --check | ✔ | — | — | `0` · `1` |
 | `build_font_mappe.py` | «Le mappe hanno la faccia dei volumi su ogni macchina? Ho aggiunto un carattere che il sottoinsieme non ha.»<br>Ricava dai font OFL dei volumi (scripts/fonts/) i due sottoinsiemi woff2 a peso fisso che il renderer incorpora in ogni mappa: EB Garamond regolare per il testo, Cinzel grassetto per titoli ed etichette (ADR-0085). Scrive anche copertura.json, con i caratteri e le loro larghezze, che il renderer usa per stringere i titoli che non entrano. fonttools serve solo qui; il renderer resta in libreria standard. | --check | ✔ | — | — | `0` · `1` · `2` |
@@ -34,6 +35,7 @@
 | `render_map_blender.py` | «Questa mappa in volume, per una tavola o per ControlNet: come la ottengo senza che la geometria del 3D e quella dell'SVG possano divergere?»<br>La mappa in volume: risolve la geometria con lo stesso paint() che alimenta l'SVG, fonde le celle in solidi e la fa rendere a Blender in ortografica. Con --profondita produce il passo di profondità per ControlNet depth, così l'illustrazione eredita la pianta esatta. | **mappa** · --out · --vista · --profondita · --larghezza · --campioni · --luce-azimut · --luce-elevazione · --con-insidie · --blender · --piano-solo | ✔ | — | — | `0` · `1` · `2` · `130` |
 | `render_map_svg.py` | «Ho scritto la griglia a emoji nel master: come la vedono i giocatori sul tavolo?»<br>Renderizza le griglie-emoji dei master mappa in SVG stampa-quality stile 'pergamena', deterministico e senza asset esterni. | **files** · -o/--outdir · --map · --list · --strict | ✔ | — | — | `0` · `1` |
 | `validate_maps.py` | «Ho toccato un master di mappe: gli SVG committati corrispondono ancora, o ne ho lasciato indietro uno?»<br>Gate CI: coerenza fra le griglie-emoji master e gli SVG renderizzati (i master sono la fonte, gli SVG artefatti). | --repo-root · --json | ✔ | — | — | `0` · `1` |
+| `watabou_citta.py` | «Mi serve la pianta di Dauth assediata: come la rigenero uguale fra un mese?»<br>Da una scheda *.watabou.json committata (seme e parametri) ricava sempre lo stesso URL del Medieval Fantasy City Generator di Watabou, con export=svg|png|json se richiesto: la pianta di una città si rifà identica e il repo sa da dove viene (R5). | **scheda** · --export | ✔ | — | — | `0` · `1` |
 
 ## C · Post-Session Canon (XP · state.md · branch)
 

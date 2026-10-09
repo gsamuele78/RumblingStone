@@ -8589,6 +8589,182 @@
       "docs": [
         "plans/adr/ADR-0077-revisione-a-due-giri.md"
       ]
+    },
+    {
+      "id": "asset_2mtt",
+      "path": "scripts/asset_2mtt.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/asset_2mtt.py",
+      "summary": "Installa i pacchetti di 2-Minute Tabletop che il DM ha scaricato, per il tema dipinto delle mappe (R4): estrae solo immagini e licenze in asset-esterni/ (ignorata da git), rifiuta percorsi pericolosi e link, registra categoria e impronte. `controlla` boccia la tabella simbolo → file che usa un pacchetto premium o un file assente.",
+      "use_case": "«Ho scaricato il pacchetto dei dungeon: come lo metto a disposizione delle mappe senza committarlo e senza uscire dalla licenza?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "installa",
+            "stato",
+            "controlla"
+          ],
+          "repeatable": false,
+          "desc": "installa <zip> --categoria base|premium [--nome] · stato · controlla"
+        },
+        {
+          "name": "--categoria",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "base",
+            "premium"
+          ],
+          "repeatable": false,
+          "desc": "base = offerta libera, CC BY-NC · premium = a pagamento, solo al tavolo"
+        },
+        {
+          "name": "--nome",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del pacchetto (default: dal nome dello zip)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "*.zip (immagini del pacchetto)",
+          "kind": "image",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/asset-2mtt.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "asset-esterni/2mtt/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "zip rifiutato o tabella che viola licenza o pacchetti",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "scrive solo in asset-esterni/, ignorata da git"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/asset_2mtt.py controlla",
+      "tests": [
+        "scripts/tests/test_asset_2mtt.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "watabou_citta",
+      "path": "scripts/watabou_citta.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/watabou_citta.py",
+      "summary": "Da una scheda *.watabou.json committata (seme e parametri) ricava sempre lo stesso URL del Medieval Fantasy City Generator di Watabou, con export=svg|png|json se richiesto: la pianta di una città si rifà identica e il repo sa da dove viene (R5).",
+      "use_case": "«Mi serve la pianta di Dauth assediata: come la rigenero uguale fra un mese?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "scheda",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La scheda *.watabou.json."
+        },
+        {
+          "name": "--export",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "svg",
+            "png",
+            "json"
+          ],
+          "repeatable": false,
+          "desc": "Aggiunge export=…: il generatore esporta appena ha finito."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "*.watabou.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "scheda non valida"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "l'URL dipende solo dalla scheda"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/watabou_citta.py \"09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Mappe/dauth-assedio/dauth-pianta.watabou.json\"",
+      "tests": [
+        "scripts/tests/test_watabou_citta.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
+      ]
     }
   ]
 }

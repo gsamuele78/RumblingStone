@@ -279,6 +279,72 @@ python3 scripts/export_uvtt.py "<arco>/<MASTER>.md" --ext dd2vtt --ppg 140
 
 **PNG e UVTT sono artefatti locali**: non si committano (in repo resta l'SVG).
 
+### 5.1 Il tema dipinto con 2-Minute Tabletop (prova, R4)
+
+È una seconda resa della stessa mappa con tessere dipinte a mano, per i
+giocatori e per Foundry. La pergamena resta la vista del DM; il master, il
+collaudo e l'SVG non cambiano. Il DM ha deciso di provarla su una mappa sola
+prima di farne un lotto (D9 di
+[PIANO-RESA-E-ASSET](../../plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md)).
+
+**Cosa si può usare.** La licenza (pagina «General Licensing and Attribution»
+del sito, letta il 2026-10-09) divide i pacchetti in due categorie, e pagare
+non sposta un pacchetto dall'una all'altra:
+
+| Categoria | Esempi | Licenza | Uso |
+|---|---|---|---|
+| `base` | *Dungeon Map Tiles* a offerta libera, anche a 0 $ | CC BY-NC 4.0 | tavolo privato; progetti gratuiti col credito su ogni pagina in cui compare la mappa |
+| `premium` | pacchetto *Plus* da 5 $, Patron Pack, avventure, token | nessuna licenza | solo al tavolo e in video; niente che esca dal repo |
+
+L'unica eccezione commerciale dell'autore riguarda i moduli scritti in cui le
+mappe sono un supplemento (una ogni 2.000 parole circa), col credito su ogni
+pagina e, per un progetto preciso, un suo permesso scritto.
+
+**Il download lo fai tu.** Anche i pacchetti gratuiti passano dalla cassa del
+sito e i link arrivano per email: nessuno script li scarica. I file restano
+sulla tua macchina, in `asset-esterni/`, che git ignora.
+
+```bash
+# 1) scarica dal sito il pacchetto base dei dungeon (Dungeon Map Tiles, 0 $)
+# 2) installalo dichiarando la categoria
+python3 scripts/dm.py asset installa ~/Scaricati/Dungeon-Map-Tiles.zip --categoria base
+# 3) cosa c'è
+python3 scripts/dm.py asset stato
+# 4) dopo aver scritto la tabella simbolo → file in scripts/asset-2mtt.json
+python3 scripts/dm.py asset controlla
+```
+
+L'installatore estrae solo immagini e testi di licenza, e rifiuta uno zip con
+percorsi assoluti, `..` o link. `controlla` boccia la tabella se un simbolo
+punta a un pacchetto `premium` o a un file che non c'è. `dm.py doctor` dice
+quali pacchetti hai.
+
+**Cosa manca ancora.** La tabella `scripts/asset-2mtt.json` è vuota: si scrive
+sui nomi veri dei file, dopo la prima installazione. Poi viene la mappa di
+prova, che in Foundry entra come immagine di sfondo dell'export UVTT
+(`--image`), con muri, porte e luci di sempre.
+
+### 5.2 La pianta di una città con Watabou (R5)
+
+Il Medieval Fantasy City Generator di Watabou fa la pianta d'insieme di una
+città: un'immagine per il DM o per i giocatori, non una griglia tattica. Le sue
+mappe si usano liberamente, anche a scopo commerciale. Il generatore legge seme
+e parametri dall'URL, e una scheda committata li conserva, così la pianta si
+rifà identica.
+
+```bash
+# l'URL della pianta di Dauth assediata, con l'esportazione in SVG
+python3 scripts/dm.py maps citta "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Mappe/dauth-assedio/dauth-pianta.watabou.json" --export svg
+```
+
+Apri l'URL nel browser: il generatore disegna la città ed esporta l'SVG. Salvalo
+dove dice la scheda (`salva_in`). Se la città non ti piace, cambia `seed` nella
+scheda e rigenera: il seme nuovo resta scritto. Nella scheda, `perche` dice da
+quale carta dell'assedio viene ogni parametro e quali il canone non fissa.
+
+Le cinque mappe tattiche dell'assedio (carte A-E) sono griglie del repo, in
+`Mappe/dauth-assedio/`, compilate dai loro contratti JSON e collaudate.
+
 ---
 
 ## 6. La regola d'oro (e perché la CI ti ferma)

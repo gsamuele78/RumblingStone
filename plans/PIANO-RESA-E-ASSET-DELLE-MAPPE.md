@@ -1,6 +1,6 @@
 # PIANO — La resa e gli asset delle mappe, uguali su ogni macchina e per ogni categoria
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM lo stesso giorno; R4 aspetta il pacchetto, R5 e R6 rimandati · **Classe**: C per R1-R3, G poi C per R4-R6
+> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM il 2026-10-08, D9-D12 il 2026-10-09: R4 una prova su una mappa (installatore fatto, aspetta il pacchetto), R5 parte da Dauth (sei mappe dell'assedio fatte), R6 in attesa · **Classe**: C per R1-R3, G poi C per R4-R6
 > **Nasce da**: la richiesta del DM della sera del 2026-10-08, dopo la #227:
 > *«verifica se ci sono progetti best community valuated che possono essere
 > importati andando in deroga alla std lib e che migliorano o aiutano a creare
@@ -80,6 +80,14 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   sulla macchina del DM (D6). Un pacchetto pesa decine di MB di PNG.
 - Ogni asset per simbolo della legenda: una tabella `simbolo → file`, con la
   stessa regola di posa e lo stesso asse delle chiusure (ADR-0083).
+- **Fatto il 2026-10-09** (D9): `scripts/asset_2mtt.py` e `dm.py asset
+  installa|stato|controlla`. Il DM scarica lo zip, perché il sito manda i link
+  per email anche a 0 $; l'installatore estrae in `asset-esterni/`, ignorata da
+  git, e registra la categoria. La licenza (letta il 2026-10-09) divide i
+  pacchetti in `base`, a offerta libera e CC BY-NC, e `premium`, senza
+  licenza: `controlla` boccia la tabella che usa un premium. Guida:
+  `docs/guides/GUIDA-MAPPE.md` §5.1. Resta la tabella sui nomi veri dei file,
+  e la mappa di prova.
 
 ### R5 · Città, villaggi ed edifici da Watabou
 
@@ -91,6 +99,13 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - Serve qualche esportazione JSON vera di ciascuno (D7): senza, l'importatore
   si scriverebbe su un formato indovinato.
 - Le mappe importate escono con `@tipo tattica abitato` o `interni`.
+- **Fatto il 2026-10-09** (D10): le cinque carte dell'assedio di Dauth
+  (`DAY3-CITY-SIEGE`) in sei griglie da contratto JSON, in
+  `09_…/Mappe/dauth-assedio/` (il chiostro e il suo cunicolo sono due mappe
+  collegate da `@collega`), collaudate a zero errori e zero avvisi. La pianta
+  della città: la scheda `dauth-pianta.watabou.json` con seme e parametri, e
+  `dm.py maps citta`, che ne ricava l'URL (`watabou_citta.py`). La rete di
+  questo ambiente non raggiunge Watabou: l'esportazione la fa il DM.
 
 ### R6 · Le regionali con Azgaar
 
@@ -134,6 +149,10 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D6~~ | R4 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: come proposto.** Era: **Quali pacchetti di 2-Minute Tabletop, e dove stanno?** Proposta: si comincia con un pacchetto solo, quello dei dungeon; i PNG restano sulla macchina del DM (cartella ignorata da git) e il repo tiene solo la tabella `simbolo → file` e i crediti, perché un pacchetto pesa decine di MB |
 | ~~D7~~ | R5 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: R5 si rimanda** finché non ci sono le esportazioni vere. Era: **Le esportazioni di Watabou da cui partire.** Servono una città, un villaggio e un edificio esportati in JSON dal DM, con il loro seme: l'importatore si scrive su file veri |
 | ~~D8~~ | R6 | ✅ **Decisa il 2026-10-08, sera (terzo messaggio), il DM: nessuna per ora**, come proposto. Era: **Quale regione inventata con Azgaar?** Proposta: nessuna finché un arco non ne chiede una; il lotto resta pronto |
+| ~~D9~~ | R4 | ✅ **Decisa il 2026-10-09, il DM: una prova su una mappa.** Era: **R4 come procede?** Il DM aveva chiesto a cosa serve e se valeva un download automatico; la misura: il pacchetto gratuito dei dungeon ha 131 tessere e copre circa 10-15 degli 86 simboli, i link arrivano per email dopo una cassa a 0 $, la rete dell'ambiente non raggiunge Dropbox. Proposta: un installatore (`dm.py asset installa <zip>`) con guida e controllo in `doctor`, poi una sola mappa di interni nel tema dipinto, da confrontare con la pergamena |
+| ~~D10~~ | R5 | ✅ **Decisa il 2026-10-09, il DM: si parte da Dauth.** Era: **R5 come procede?** Proposta: la guida per esportare da Watabou la pianta di Dauth assediata, da usare come immagine; le cinque mappe tattiche dell'assedio (carte A-E di `DAY3-CITY-SIEGE`) col contratto JSON; l'importatore di città ed edifici solo se le esportazioni vere lo meritano. Sostituisce il «rimandato» di D7 |
+| ~~D11~~ | R6 | ✅ **Decisa il 2026-10-09, il DM: resta in attesa**, come proposto. La Cannath Vale è la Elsir Vale di *Red Hand of Doom* rinominata: è canone e non si genera. Nessun codice finché un arco non porta i PG in una regione inventata |
+| ~~D12~~ | R4 | ✅ **Risposta del DM il 2026-10-09: al tavolo usa Foundry.** Era: **Usi un VTT?** Decide il valore di R4: la resa dipinta va nell'export UVTT come immagine di sfondo |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
@@ -143,6 +162,12 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Decise** (terzo messaggio): D6 un pacchetto solo, quello dei dungeon, con i PNG fuori dal repo · D7 R5 rimandato finché non ci sono esportazioni vere · D8 nessuna regione per ora
 - **Aperte** (terzo messaggio): nessuna
 - **Dedotto da me** (terzo messaggio): che R4 non parta finché il DM non ha scaricato il pacchetto: la tabella `simbolo → file` si scrive sui nomi veri dei file, non su nomi indovinati
+
+<!-- eco: RESA-ASSET 2026-10-09 -->
+- **Decise**: D9 R4 come prova su una mappa, con l'installatore · D10 R5 a partire da Dauth · D11 R6 in attesa · D12 il DM usa Foundry
+- **Aperte**: nessuna
+- **Cambiate**: D7, da «R5 rimandato» a «R5 parte da Dauth»
+- **Dedotto da me**: che l'installatore non scarichi niente da solo, perché i link del pacchetto arrivano per email dopo la cassa e la licenza chiede di mandare chi vuole i file al sito; che le cinque mappe dell'assedio stiano in `Mappe/` dell'arco 09 e le prenda il futuro `ARC09-DEF-05` di MASTER-DEF, senza scrivere il master qui; che la pianta della città resti un'immagine esportata da Watabou e non diventi una griglia
 
 ---
 
@@ -156,9 +181,9 @@ Fase S — Sviluppo
 ☑ R1  i font dei volumi dentro le mappe (2026-10-08: 47 SVG, +2,08 MB)
 ☑ R2  🔺 e 🔷 universali, glifi in casa (2026-10-08)
 ☑ R3  il ripiego Noto, 12 emoji locali (2026-10-08: 177 celle → 0)
-□ R4  il tema dipinto: deciso (D6), aspetta che il DM scarichi il pacchetto dei dungeon
-□ R5  città, villaggi, edifici da Watabou: rimandato (D7), finché non ci sono le esportazioni
-□ R6  le regionali con Azgaar: nessuna regione per ora (D8)
+□ R4  il tema dipinto: una prova su una mappa (D9); ☑ installatore, `dm.py asset`, doctor e guida (2026-10-09) · □ la tabella simbolo → file e la mappa di prova, quando il DM ha scaricato il pacchetto base
+□ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
+□ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE
 
 Fase V — Validazione: la tabella di §4

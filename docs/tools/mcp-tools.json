@@ -154,6 +154,51 @@
       "deterministic": true
     },
     {
+      "name": "asset_2mtt",
+      "description": "«Ho scaricato il pacchetto dei dungeon: come lo metto a disposizione delle mappe senza committarlo e senza uscire dalla licenza?»\n\nInstalla i pacchetti di 2-Minute Tabletop che il DM ha scaricato, per il tema dipinto delle mappe (R4): estrae solo immagini e licenze in asset-esterni/ (ignorata da git), rifiuta percorsi pericolosi e link, registra categoria e impronte. `controlla` boccia la tabella simbolo → file che usa un pacchetto premium o un file assente.",
+      "use_case": "«Ho scaricato il pacchetto dei dungeon: come lo metto a disposizione delle mappe senza committarlo e senza uscire dalla licenza?»",
+      "invocation": "python3 scripts/asset_2mtt.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "installa <zip> --categoria base|premium [--nome] · stato · controlla",
+            "enum": [
+              "installa",
+              "stato",
+              "controlla"
+            ]
+          },
+          "categoria": {
+            "type": "string",
+            "description": "base = offerta libera, CC BY-NC · premium = a pagamento, solo al tavolo",
+            "enum": [
+              "base",
+              "premium"
+            ]
+          },
+          "nome": {
+            "type": "string",
+            "description": "Nome del pacchetto (default: dal nome dello zip)."
+          }
+        },
+        "required": [
+          "azione"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "asset-esterni/2mtt/"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "zip rifiutato o tabella che viola licenza o pacchetti",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "blender_costruisci_mappa",
       "description": "«Che cosa gira dentro Blender quando chiedo il render di una mappa, e perché questo file non si lancia a mano?»\n\nLo script che gira DENTRO Blender: dal piano di scena costruisce i solidi, la camera e il lock di luce, e rende. Non si lancia a mano — il driver e' render_map_blender.py, dove sta tutta la logica provabile senza GPU.",
       "use_case": "«Che cosa gira dentro Blender quando chiedo il render di una mappa, e perché questo file non si lancia a mano?»",
@@ -651,6 +696,42 @@
       "exit_codes": {
         "0": "coerente",
         "1": "violazioni (SVG out-of-sync o malformato)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "watabou_citta",
+      "description": "«Mi serve la pianta di Dauth assediata: come la rigenero uguale fra un mese?»\n\nDa una scheda *.watabou.json committata (seme e parametri) ricava sempre lo stesso URL del Medieval Fantasy City Generator di Watabou, con export=svg|png|json se richiesto: la pianta di una città si rifà identica e il repo sa da dove viene (R5).",
+      "use_case": "«Mi serve la pianta di Dauth assediata: come la rigenero uguale fra un mese?»",
+      "invocation": "python3 scripts/watabou_citta.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "scheda": {
+            "type": "string",
+            "description": "La scheda *.watabou.json."
+          },
+          "export": {
+            "type": "string",
+            "description": "Aggiunge export=…: il generatore esporta appena ha finito.",
+            "enum": [
+              "svg",
+              "png",
+              "json"
+            ]
+          }
+        },
+        "required": [
+          "scheda"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "scheda non valida"
       },
       "deterministic": true
     },

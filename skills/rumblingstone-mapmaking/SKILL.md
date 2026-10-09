@@ -49,7 +49,11 @@ are **generated artifacts — never hand-edit them**. CI
    only under ADR-0085: a licence that allows redistribution without imposing
    itself (CC0, CC BY, CC BY-NC, Apache-2.0, OFL, MIT — never CC BY-SA or GPL),
    with the licence and a `CREDITS.md` (author, changes) in its folder. No
-   tracing of third-party art. The map text uses the volumes' fonts, embedded
+   tracing of third-party art. 2-Minute Tabletop packs are downloaded by the DM and live
+   outside git (`asset-esterni/`, `dm.py asset installa <zip> --categoria
+   base|premium`); a **premium** pack (Plus, Patron Packs, tokens, even if
+   paid for) has no licence beyond the table and never enters anything that
+   leaves the repo — `dm.py asset controlla` fails on it (GUIDA-MAPPE §5.1). The map text uses the volumes' fonts, embedded
    (`scripts/fonts/mappe/`, `build_font_mappe.py`).
 6. **Fidelity contract** (piano RENDER-MAPPE-FEDELTÀ, 2026-07-23): side
    annotations on a grid row start after **≥3 spaces** (or a detached `│`
@@ -167,4 +171,6 @@ python3 scripts/export_map_png.py rendered/<mappa>.svg   # hi-res PNG (print / h
 python3 scripts/export_uvtt.py <file.md>           # .uvtt/.dd2vtt (Foundry/Roll20: muri+luci)
 python3 scripts/validate_maps.py                   # CI gate (run before commit)
 python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
+python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, painted theme (R4)
+python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
 ```
