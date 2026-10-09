@@ -96,6 +96,27 @@ CELLE_PER_TESSERA = 2
 VELATURA = 0.30    # opacità del colore del terreno sopra la texture: tarata dal DM
                    # il 2026-10-09 sulle texture vere (D16), fra 0,45 e 0,20
 CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture"}
+# D24 di RESA-ASSET: sulle texture i glifi perdevano contrasto (mediana 7,9 →
+# 4,5 misurata da misura_resa.py) e alcuni terreni si confondevano (⛰ e 🔳 a
+# ΔE 1,2). Nel tema texture un alone del colore della carta sta sotto ogni
+# glifo, tessera e segnalino, e un terreno può avere una velatura sua. I due
+# numeri li trova `misura_resa.py tara` e stanno in texture-cc0/taratura.json,
+# non qui: un dato per simbolo nel renderer sarebbe una legenda bis (ADR-0048).
+TARATURA = TEXTURE_CC0 / "taratura.json"
+
+
+def _taratura() -> dict:
+    if not TARATURA.exists():
+        return {}
+    return json.loads(TARATURA.read_text(encoding="utf-8"))
+
+
+def _velatura(simbolo: str) -> float:
+    return _taratura().get("velatura_per_terreno", {}).get(simbolo, VELATURA)
+
+
+def _alone() -> float:
+    return _taratura().get("alone", 0.0)
 
 
 def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
@@ -202,7 +223,7 @@ def _pattern_texture(pid: str, simbolo: str, ambiente: str | None,
     corpo = (f'<image href="data:image/webp;base64,{immagini[tid]}" width="{t}" height="{t}" '
              f'preserveAspectRatio="none"/>'
              f'<rect width="{t}" height="{t}" fill="{SYMBOLS[simbolo]["fill"]}" '
-             f'opacity="{VELATURA}"/>')
+             f'opacity="{_velatura(simbolo)}"/>')
     return _pattern(pid, t, corpo), tid
 
 
@@ -1585,6 +1606,7 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
         cells_ = rows[row_nums[ry_]]
         return cells_[cx_] if cx_ < len(cells_) else None
     versi = chiusure.versi_dichiarati(grid.get("annotations", []) or [])
+    alone = _alone() if tema == "texture" and tex else 0.0
     for r, rn in enumerate(row_nums):
         cells = rows[rn]
         for c in range(n_cols):
@@ -1594,6 +1616,9 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
             spec = SYMBOLS.get(emoji)
             x, y = ox + c * CELL, oy + r * CELL
             cx, cy = x + CELL / 2, y + CELL / 2
+            if alone and not (spec and spec["mode"] == "fill"):
+                out.append(f'<circle cx="{_n(cx)}" cy="{_n(cy)}" r="{_n(CELL * 0.46)}" '
+                           f'fill="{PAPER}" opacity="{alone}" filter="url(#softblur)"/>')
             if spec and spec["mode"] == "unit":
                 rr = CELL * 0.37
                 out.append(

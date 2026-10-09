@@ -233,6 +233,13 @@ jobs:
         continue-on-error: true
         run: python scripts/collaudo_mappe.py --solo-errori
 
+      # D23 di RESA-ASSET: la resa delle mappe si misura simbolo per simbolo e
+      # terreno per terreno, e nessuna misura peggiora oltre il 5% rispetto a
+      # scripts/scheda-resa.json senza che la scheda sia stata riscritta (e
+      # quindi passata dal DM nella PR). Rasterizza con il Chrome del runner.
+      - name: Resa delle mappe — nessuna misura peggiora (misura_resa)
+        run: python scripts/misura_resa.py --check
+
       - name: DM tool smoke tests
         run: |
           python scripts/suggest_encounter.py --help > /dev/null

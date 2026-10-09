@@ -82,10 +82,47 @@ class TestOggetti(unittest.TestCase):
         B.comando_blender = lambda _esplicito: [sys.executable, str(finto)]
         with redirect_stdout(io.StringIO()):
             self.assertEqual(B.main(["--rendi", "--prova"]), 0)
+        # D23: la misura non le boccia e il DM le ha preferite al glifo
+        self.vecchia_scheda = B.SCHEDA_RESA
+        B.SCHEDA_RESA = self.tmp / "scheda-resa.json"
+        simboli = self._indice()["simboli"]
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli},
+                            {s: {"interni": "tessera"} for s in simboli})
+
+    def _scrivi_scheda(self, candidati, preferenze):
+        B.SCHEDA_RESA.write_text(json.dumps({"candidati": candidati, "preferenze_dm": preferenze}),
+                                 encoding="utf-8")
 
     def tearDown(self):
         B.CACHE, B.USCITA, B.INDICE, R.OGGETTI_CC0 = self.vecchi
         B.comando_blender = self.vecchio_comando
+        B.SCHEDA_RESA = self.vecchia_scheda
+
+    def test_senza_il_confronto_del_dm_e_bocciata(self):
+        simboli = self._indice()["simboli"]
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, {})
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.controlla(), 1)
+        self.assertIn("confrontata alla cieca", out.getvalue())
+
+    def test_se_il_dm_preferisce_il_glifo_e_bocciata(self):
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": "tessera"} for s in simboli}
+        pref["🛏"] = {"interni": "glifo"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.controlla(), 1)
+        self.assertIn("🛏: il DM ha preferito il glifo", out.getvalue())
+
+    def test_se_la_misura_la_boccia_e_bocciata(self):
+        simboli = self._indice()["simboli"]
+        cand = {s: {"interni": "vince"} for s in simboli}
+        cand["🪨"] = {"interni": "perde", "esterno": "vince"}
+        self._scrivi_scheda(cand, {s: {"interni": "tessera"} for s in simboli})
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(B.controlla(), 1)
 
     def _indice(self):
         return json.loads(B.INDICE.read_text(encoding="utf-8"))

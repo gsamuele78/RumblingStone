@@ -666,6 +666,99 @@
       "deterministic": true
     },
     {
+      "name": "misura_resa",
+      "description": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»\n\nLa resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara il confronto alla cieca per il DM e ne registra i voti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json.",
+      "use_case": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»",
+      "invocation": "python3 scripts/misura_resa.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "glifi · candidati DIR · terreni · coppie DIR · voti voti.json · appresa B.json · tara",
+            "enum": [
+              "glifi",
+              "candidati",
+              "terreni",
+              "coppie",
+              "voti",
+              "appresa",
+              "tara"
+            ]
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Ricalcola e confronta con la scheda committata: esce 1 se una misura peggiora oltre il 5%."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive scripts/scheda-resa.json con le misure di oggi."
+          },
+          "o": {
+            "type": "string",
+            "description": "Dove scrivere il JSON, la pagina delle coppie o la taratura."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Il seme dell'ordine delle coppie."
+          },
+          "celle": {
+            "type": "string",
+            "description": "Scrive anche le celle in PNG, per misura_resa_appresa.py."
+          },
+          "registra": {
+            "type": "boolean",
+            "description": "candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "scripts/scheda-resa.json",
+        "scripts/texture-cc0/taratura.json"
+      ],
+      "exit_codes": {
+        "0": "ok (anche: nessun browser, o scheda non ancora scritta, con --check)",
+        "1": "una misura peggiorata oltre la tolleranza",
+        "2": "numpy o scikit-image assenti, o uso errato"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_resa_appresa",
+      "description": "«Le metriche apprese della community sono d'accordo con me su quale cella è migliore?»\n\nIl secondo parere della misura della resa (D26): CLIP-IQA, LPIPS e DISTS di piq (Apache-2.0) sulle celle esportate da misura_resa.py --celle. Gira sulla macchina del DM con torch e i pesi che piq scarica; registra versioni e sha256 dei pesi; non blocca niente.",
+      "use_case": "«Le metriche apprese della community sono d'accordo con me su quale cella è migliore?»",
+      "invocation": "python3 scripts/misura_resa_appresa.py <celle> -o appresa.json",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "celle": {
+            "type": "string",
+            "description": "La cartella scritta da misura_resa.py --celle."
+          },
+          "o": {
+            "type": "string",
+            "description": "Il JSON delle misure."
+          }
+        },
+        "required": [
+          "celle",
+          "o"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita>.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "cartella vuota o illeggibile",
+        "2": "torch o piq assenti"
+      },
+      "deterministic": true
+    },
+    {
       "name": "render_map_blender",
       "description": "«Questa mappa in volume, per una tavola o per ControlNet: come la ottengo senza che la geometria del 3D e quella dell'SVG possano divergere?»\n\nLa mappa in volume: risolve la geometria con lo stesso paint() che alimenta l'SVG, fonde le celle in solidi e la fa rendere a Blender in ortografica. Con --profondita produce il passo di profondità per ControlNet depth, così l'illustrazione eredita la pianta esatta.",
       "use_case": "«Questa mappa in volume, per una tavola o per ControlNet: come la ottengo senza che la geometria del 3D e quella dell'SVG possano divergere?»",

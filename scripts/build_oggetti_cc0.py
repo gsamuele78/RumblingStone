@@ -33,6 +33,7 @@ con fonte, id, licenza, MD5 dei file d'origine e sha256 della tessera.
     python3 scripts/build_oggetti_cc0.py --quaternius Z.zip # aggiunge i modelli Quaternius dallo zip
     python3 scripts/build_oggetti_cc0.py --elenca-quaternius Z.zip   # impronta, licenza, nomi dei file
     python3 scripts/build_oggetti_cc0.py --misura-stile     # luce, saturazione, dettaglio per fonte
+    python3 scripts/build_oggetti_cc0.py --da-immagini DIR --variante a -o CAND  # PNG di ComfyUI → candidati
     python3 scripts/build_oggetti_cc0.py --check            # niente rete: tessere e indice combaciano
 
 Blender: il binario `blender` nel PATH, `--blender CMD`, oppure il modulo `bpy`
@@ -143,6 +144,14 @@ QUATERNIUS: tuple[tuple[str, str], ...] = ()
 
 PAROLE_CC0 = ("cc0", "creative commons zero", "publicdomain/zero")
 
+#: Le tessere generate in locale con ComfyUI (D25) che hanno vinto il
+#: confronto: (simbolo, id dell'immagine). Vuota finché il DM non ha generato,
+#: misurato e scelto. La provenienza (modello, seme, licenza dei pesi) sta
+#: nell'indice, letta da PROVENIENZA.txt (ADR-0019 §2).
+GENERATE: tuple[tuple[str, str], ...] = ()
+PROMPT_COMFYUI = REPO / "plans" / "esperimenti" / "oggetti-cc0-2026-10" / "comfyui" / "PROMPT-OGGETTI-ZENITALI.md"
+LICENZA_GENERATA = "generata in locale, pesi ammessi da ADR-0019"
+
 
 def _rel(p: Path) -> str:
     """Il percorso come lo legge il DM: relativo al repo quando ci sta dentro."""
@@ -162,6 +171,7 @@ def tabella() -> list[tuple[str, str, str, str]]:
     """(simbolo, fonte, id, tessera) di tutti gli oggetti, Quaternius compreso."""
     righe = [(s, f, i, _tessera(f, i)) for s, f, i in OGGETTI]
     righe += [(s, "quaternius", p, _tessera("quaternius", p)) for s, p in QUATERNIUS]
+    righe += [(s, "comfyui", i, i) for s, i in GENERATE]
     return righe
 
 
@@ -463,6 +473,64 @@ def costruisci(args) -> int:
     return 0
 
 
+# --- le immagini generate con ComfyUI (D25) ------------------------------------
+
+def da_immagini(cartella: Path, variante: str, uscita: Path, Image) -> int:
+    """Le PNG di `comfyui_batch.py` (sfondo bianco) in tessere candidate: lo
+    sfondo si toglie partendo dagli angoli, l'oggetto si ritaglia e si mette
+    nella cella con la stessa impronta dei modelli (D20). L'uscita è una
+    cartella di candidati, con l'indice, per `misura_resa.py candidati` e
+    `coppie`: non entra in scripts/oggetti-cc0/ finché non vince."""
+    import re
+    import numpy as np
+    testo = PROMPT_COMFYUI.read_text(encoding="utf-8")
+    simbolo_di = dict((m.group(1), m.group(2)) for m in
+                      re.finditer(r"<!--\s*img\s+id=(\S+)[^>]*?simbolo=(\S+)\s*-->", testo))
+    prov = {}
+    pf = cartella / "PROVENIENZA.txt"
+    if pf.exists():
+        for riga in pf.read_text(encoding="utf-8").splitlines():
+            prov[riga.split(" ·", 1)[0].strip()] = riga.strip()
+    uscita.mkdir(parents=True, exist_ok=True)
+    tessere, simboli = {}, {}
+    for ident, simbolo in simbolo_di.items():
+        if not ident.endswith(f"-{variante}"):
+            continue
+        png = cartella / f"{ident}.png"
+        if not png.exists():
+            print(f"○ {ident}: immagine non generata")
+            continue
+        im = np.asarray(Image.open(png).convert("RGB"), dtype=np.float64)
+        angoli = np.concatenate([im[:8, :8].reshape(-1, 3), im[:8, -8:].reshape(-1, 3),
+                                 im[-8:, :8].reshape(-1, 3), im[-8:, -8:].reshape(-1, 3)]).mean(axis=0)
+        figura = np.sqrt(((im - angoli) ** 2).sum(axis=2)) > 30
+        if figura.sum() < 50:
+            print(f"✗ {ident}: nessuna figura sullo sfondo", file=sys.stderr)
+            continue
+        ys, xs = np.nonzero(figura)
+        rgba = np.dstack([im, figura * 255.0]).astype("uint8")
+        ritaglio = Image.fromarray(rgba, "RGBA").crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
+        lato = 2 * LATO
+        scala = LOCK["impronta"] * lato / max(ritaglio.size)
+        ritaglio = ritaglio.resize((max(1, round(ritaglio.width * scala)),
+                                    max(1, round(ritaglio.height * scala))), Image.LANCZOS)
+        tela = Image.new("RGBA", (lato, lato), (0, 0, 0, 0))
+        tela.alpha_composite(ritaglio, ((lato - ritaglio.width) // 2, (lato - ritaglio.height) // 2))
+        out = io.BytesIO()
+        tela.save(out, "PNG")
+        webp = tessera_webp(Image, out.getvalue())
+        (uscita / f"{ident}.webp").write_bytes(webp)
+        tessere[ident] = {"fonte": "ComfyUI", "id": ident, "licenza": LICENZA_GENERATA,
+                          "provenienza": prov.get(ident, ""), "verificato": bool(prov.get(ident)),
+                          "byte": len(webp), "sha256": _sha256(webp)}
+        simboli.setdefault(simbolo, []).append(ident)
+        print(f"✓ {ident} → {simbolo}: {len(webp)} byte")
+    (uscita / "indice.json").write_text(json.dumps(
+        {"lato": LATO, "qualita": QUALITA, "variante": variante, "simboli": simboli,
+         "orientabili": [], "tessere": tessere}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return 0 if tessere else 1
+
+
 # --- controlli e misure --------------------------------------------------------
 
 def controlla() -> int:
@@ -492,12 +560,16 @@ def controlla() -> int:
             errori.append(f"{k}: manca la tessera")
         elif _sha256(p.read_bytes()) != voce.get("sha256"):
             errori.append(f"{k}: la tessera non combacia con l'indice")
-        if voce.get("licenza") != "CC0 1.0":
-            errori.append(f"{k}: licenza «{voce.get('licenza')}», ammessa solo CC0 1.0")
+        if voce.get("licenza") == LICENZA_GENERATA:
+            if not voce.get("provenienza"):
+                errori.append(f"{k}: immagine generata senza la riga di PROVENIENZA (ADR-0019 §2)")
+        elif voce.get("licenza") != "CC0 1.0":
+            errori.append(f"{k}: licenza «{voce.get('licenza')}», ammesse CC0 1.0 o {LICENZA_GENERATA}")
         if voce.get("verificato") is not True:
             errori.append(f"{k}: il modello d'origine non è stato verificato contro la fonte")
         if voce.get("fonte") == "Quaternius" and voce.get("zip_sha256") != QUATERNIUS_ZIP_SHA256:
             errori.append(f"{k}: viene da uno zip Quaternius diverso da quello fissato")
+    errori += approvazioni(indice)
     for e in errori:
         print(f"✗ build_oggetti_cc0: {e}")
     if not errori:
@@ -505,6 +577,29 @@ def controlla() -> int:
         print(f"✓ build_oggetti_cc0: {n} tessere CC0 per {len(indice.get('simboli', {}))} simboli, "
               f"{sum(v['byte'] for v in indice.get('tessere', {}).values())} byte")
     return 1 if errori else 0
+
+
+SCHEDA_RESA = RADICE / "scheda-resa.json"
+
+
+def approvazioni(indice: dict) -> list[str]:
+    """D23: una tessera sostituisce un glifo solo se la misura non la boccia
+    (`misura_resa.py candidati --registra`) e il DM l'ha preferita al glifo nel
+    confronto alla cieca (`misura_resa.py voti`), in ogni ambiente provato."""
+    scheda = json.loads(SCHEDA_RESA.read_text(encoding="utf-8")) if SCHEDA_RESA.exists() else {}
+    verdetti, pref = scheda.get("candidati", {}), scheda.get("preferenze_dm", {})
+    errori = []
+    for s in indice.get("simboli", {}):
+        v, d = verdetti.get(s, {}), pref.get(s, {})
+        if not v:
+            errori.append(f"{s}: nessuna misura contro il glifo (misura_resa.py candidati DIR --registra)")
+        elif any(x == "perde" for x in v.values()):
+            errori.append(f"{s}: la misura la boccia contro il glifo ({v})")
+        if not d:
+            errori.append(f"{s}: il DM non l'ha ancora confrontata alla cieca (misura_resa.py coppie, voti)")
+        elif any(x != "tessera" for x in d.values()):
+            errori.append(f"{s}: il DM ha preferito il glifo ({d})")
+    return errori
 
 
 def misura_stile(cartella: Path | None = None) -> dict[str, dict]:
@@ -581,6 +676,10 @@ def main(argv=None) -> int:
     ap.add_argument("--quaternius", type=Path, metavar="ZIP",
                     help="lo zip Fantasy Props MegaKit [Standard]: estrae i modelli della tabella")
     ap.add_argument("--blender", help="il comando di Blender, se non è nel PATH")
+    g.add_argument("--da-immagini", type=Path, metavar="DIR",
+                   help="le PNG di comfyui_batch.py in tessere candidate (con --variante e -o)")
+    ap.add_argument("--variante", default="a", help="--da-immagini: quale dei quattro semi (a-d)")
+    ap.add_argument("-o", "--uscita", type=Path, help="--da-immagini: la cartella dei candidati")
     args = ap.parse_args(argv)
     if args.check:
         return controlla()
@@ -588,6 +687,13 @@ def main(argv=None) -> int:
         return elenca_quaternius(args.elenca_quaternius)
     if args.misura_stile:
         return stampa_stile()
+    if args.da_immagini:
+        Image = _pillow()
+        if Image is None:
+            return 2
+        if not args.uscita:
+            ap.error("--da-immagini vuole -o <cartella dei candidati>")
+        return da_immagini(args.da_immagini, args.variante, args.uscita, Image)
     return costruisci(args)
 
 

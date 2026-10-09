@@ -239,6 +239,7 @@
 - ✅ _(R0-R3, 2026-10-08 sera: i font dei volumi incorporati nelle 47 mappe, 🔺 e 🔷 universali, il ripiego Noto per le emoji locali, 177 celle a emoji di sistema → 0; ADR-0085)_
 - ✅ _(R4 l'installatore di 2-Minute Tabletop, D9 · R5 le sei griglie dell'assedio di Dauth e la scheda della pianta, D10 · R4-bis il tema texture CC0, 11 texture e 53 SVG, velatura 0,30, D13-D16: tutti nella #227, `f40ffeb`)_
 - ✅ _(R4-ter, il codice, 2026-10-09: `build_oggetti_cc0.py`, la scena Blender, il renderer con tessera o glifo, il muretto orientabile, la fiammella sul braciere, 26 test, guida §5.1.1, secondo emendamento di ADR-0085; D19-D22 decise)_
+- 🟡 _(R8 la resa misurata e R4-quinquies ComfyUI in prova, D23-D26, ADR-0086, 2026-10-09: `misura_resa.py` con il cancello in CI, il confronto alla cieca del DM, la taratura del tema texture; le tessere dal DM)_
 - ⬜ _(R4-ter dal DM: il giro di prova sui modelli veri e il confronto su M7-D e sul cortile di ARC07, poi tutti i modelli; lo zip Standard di Quaternius · R4 la tabella `simbolo → file`, se il DM scarica il pacchetto · R5 la pianta di Dauth da Watabou, i tre `[INFERRED]` delle griglie, l'importatore solo con esportazioni vere · R6 Azgaar in attesa (D11) · R7 in V3 di COLLAUDO-MAPPE)_
 
 ### PIANO-EDITOR-VISUALE-MAPPE

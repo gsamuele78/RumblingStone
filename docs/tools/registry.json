@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 102,
+  "tool_count": 104,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -1621,6 +1621,220 @@
         "scripts/README-automation.md",
         "plans/RICERCA-GENERATORI-MAPPE-QUALITA-RHOD.md"
       ]
+    },
+    {
+      "id": "misura_resa",
+      "path": "scripts/misura_resa.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/misura_resa.py --check",
+      "summary": "La resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara il confronto alla cieca per il DM e ne registra i voti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json.",
+      "use_case": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "numpy",
+        "scikit-image",
+        "scipy",
+        "Pillow"
+      ],
+      "external_bins": [
+        "chromium"
+      ],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "glifi",
+            "candidati",
+            "terreni",
+            "coppie",
+            "voti",
+            "appresa",
+            "tara"
+          ],
+          "repeatable": false,
+          "desc": "glifi · candidati DIR · terreni · coppie DIR · voti voti.json · appresa B.json · tara"
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ricalcola e confronta con la scheda committata: esce 1 se una misura peggiora oltre il 5%."
+        },
+        {
+          "name": "--aggiorna",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Riscrive scripts/scheda-resa.json con le misure di oggi."
+        },
+        {
+          "name": "-o",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dove scrivere il JSON, la pagina delle coppie o la taratura."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il seme dell'ordine delle coppie."
+        },
+        {
+          "name": "--celle",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive anche le celle in PNG, per misura_resa_appresa.py."
+        },
+        {
+          "name": "--registra",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/scheda-resa.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/scheda-resa.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/texture-cc0/taratura.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok (anche: nessun browser, o scheda non ancora scritta, con --check)",
+        "1": "una misura peggiorata oltre la tolleranza",
+        "2": "numpy o scikit-image assenti, o uso errato"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "il renderer è deterministico; la rasterizzazione dipende dalla versione di Chrome, per questo la tolleranza del 5%"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_resa.py --check",
+      "tests": [
+        "scripts/tests/test_misura_resa.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md"
+      ]
+    },
+    {
+      "id": "misura_resa_appresa",
+      "path": "scripts/misura_resa_appresa.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/misura_resa_appresa.py <celle> -o appresa.json",
+      "summary": "Il secondo parere della misura della resa (D26): CLIP-IQA, LPIPS e DISTS di piq (Apache-2.0) sulle celle esportate da misura_resa.py --celle. Gira sulla macchina del DM con torch e i pesi che piq scarica; registra versioni e sha256 dei pesi; non blocca niente.",
+      "use_case": "«Le metriche apprese della community sono d'accordo con me su quale cella è migliore?»",
+      "stability": "local-only",
+      "stdlib_only": false,
+      "external_deps": [
+        "torch",
+        "piq",
+        "Pillow"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "celle",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La cartella scritta da misura_resa.py --celle."
+        },
+        {
+          "name": "-o",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il JSON delle misure."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<celle>/*.png",
+          "kind": "png",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<uscita>.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "cartella vuota o illeggibile",
+        "2": "torch o piq assenti"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "pesi fissati dalla versione di piq; lo sha256 dei pesi usati sta nell'uscita"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "al primo uso piq scarica i pesi da GitHub"
+      },
+      "idempotent": true
     },
     {
       "id": "render_map_blender",

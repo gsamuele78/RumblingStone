@@ -61,7 +61,13 @@ are **generated artifacts — never hand-edit them**. CI
    (`build_oggetti_cc0.py`, `scripts/oggetti-cc0/`, D17-D22); the models stay
    on the DM's machine. Fire, effects, doors, windows, grates, bars, markers,
    creatures and stairs stay glyphs (`render.tessera_cc0: false` in `legend.yaml`); where no tile exists the
-   glyph stays. The parchment keeps every glyph. 2-Minute Tabletop is an optional extra for
+   glyph stays. The parchment keeps every glyph. **A substitution enters only
+   if measured and preferred** (ADR-0086, D23): `misura_resa.py` (contour
+   contrast WCAG 1.4.11, SSIM to the nearest symbol, ΔE2000 to the house
+   palette) must not get worse, and the DM must prefer it in a blind pairwise
+   test (`misura_resa.py coppie`, `voti`); `misura_resa.py --check` in CI
+   blocks any rendering measure that drops more than 5%, and `misura_resa.py
+   tara` retunes halo and per-terrain veil of the texture theme. 2-Minute Tabletop is an optional extra for
    the DM's own table: the packs live outside git (`asset-esterni/`,
    `dm.py asset installa <zip> --categoria base|premium`), and a **premium**
    pack (Plus, Patron Packs, tokens, even if paid for) has no licence beyond
@@ -184,6 +190,7 @@ python3 scripts/validate_maps.py                   # CI gate (run before commit)
 python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
 python3 scripts/dm.py asset texture && python3 scripts/dm.py maps texture   # CC0 texture theme, all maps
 .venv/bin/python scripts/build_oggetti_cc0.py --prova   # CC0 3D props for the texture theme (Blender or bpy), GUIDA-MAPPE §5.1.1
+python3 scripts/misura_resa.py --check               # the rendering did not get worse (ADR-0086), GUIDA-MAPPE §5.1.2
 python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, optional, table only
 python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
 ```

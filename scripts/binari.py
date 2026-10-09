@@ -247,6 +247,15 @@ LIBRERIE = (
         ripiego="nessuno: `collaudo_mappe.py` esce con 2, come senza tcod.",
     ),
     Libreria(
+        nome="scikit-image", modulo="skimage",
+        a_cosa_serve="la misura della resa delle mappe (`misura_resa.py`): SSIM, "
+                     "ΔE CIEDE2000, contrasto e bordo di ogni simbolo e terreno",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=True,
+        ripiego="nessuno: `misura_resa.py` esce con 2 e la CI lo installa. Le mappe "
+                "si disegnano e si renderizzano senza.",
+    ),
+    Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
         installa="  pip install -r requirements-dev.txt",
@@ -267,6 +276,7 @@ CATENE = {
     "mappe SVG": (),
     "mappe PNG": ("chromium",),
     "collaudo mappe": ("tcod", "scipy"),
+    "misura della resa": ("scikit-image", "chromium"),
     "recap in PDF": ("pandoc", "xelatex"),
     "skill per gli agenti": ("pyyaml",),
 }

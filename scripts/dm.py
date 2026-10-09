@@ -13,7 +13,8 @@ diff del DM, regioni marcate `auto:`.
 Sottocomandi (fase del Playbook tra parentesi):
     prep      (§2)   catalogo → incontri → mappa → loot per la prossima sessione
     maps      (prep) render SVG / valida le griglie emoji / URL di una città Watabou /
-                     texture: il tema con le texture CC0 per tutte le mappe
+                     texture: il tema con le texture CC0 per tutte le mappe /
+                     misura: la resa misurata, simboli e terreni (ADR-0086)
     asset     (prep) texture e oggetti CC0 del tema texture (texture, oggetti) e
                      asset di 2-Minute Tabletop per il tema dipinto: installa,
                      stato, controlla (R4 di PIANO-RESA-E-ASSET-DELLE-MAPPE)
@@ -120,6 +121,9 @@ def cmd_maps(args: argparse.Namespace, extra: list[str]) -> int:
         # il tema texture di tutte le mappe (D14 di RESA-ASSET): prima le texture CC0
         rc = run("build_texture_cc0.py", "--check") or run("build_oggetti_cc0.py", "--check")
         return rc or run("render_map_svg.py", "--tutti-i-master", "--tema", "texture")
+    if args.action == "misura":
+        # la resa misurata (ADR-0086): senza argomenti, il cancello della CI
+        return run("misura_resa.py", *(args.files or ["--check"]), *extra)
     if args.action == "citta":
         if len(args.files) != 1:
             print("[dm] uso: dm.py maps citta <scheda>.watabou.json [--export svg]")
@@ -630,6 +634,19 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
     except Exception as exc:  # doctor non deve mai crashare
         warn(f"check oggetti CC0 fallito: {exc}")
 
+    # la scheda della resa (ADR-0086): informativa; il cancello è in CI
+    try:
+        _scheda = REPO / "scripts" / "scheda-resa.json"
+        if _scheda.exists():
+            import json as _json
+            _sr = _json.loads(_scheda.read_text(encoding="utf-8"))
+            ok(f"scheda della resa: {len(_sr.get('preferenze_dm', {}))} simboli giudicati dal DM, "
+               f"{len(_sr.get('candidati', {}))} candidati misurati")
+        else:
+            print("  ○ scheda della resa assente (`dm.py maps misura --aggiorna`)")
+    except Exception as exc:  # doctor non deve mai crashare
+        warn(f"check scheda della resa fallito: {exc}")
+
     # gli asset di terzi del tema dipinto: informativi, mai un avviso (R4)
     try:
         import asset_2mtt as _a2
@@ -667,7 +684,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--refresh", action="store_true", help="rigenera il catalogo mostri")
 
     p = sub.add_parser("maps", help="render SVG / validazione griglie emoji")
-    p.add_argument("action", choices=["render", "validate", "citta", "texture"])
+    p.add_argument("action", choices=["render", "validate", "citta", "texture", "misura"])
     p.add_argument("files", nargs="*", help="file markdown con griglie (per render), "
                                             "o la scheda *.watabou.json (per citta)")
 

@@ -390,6 +390,60 @@ tessera che non combacia con l'indice, una licenza che non è CC0, un modello no
 verificato e un simbolo che deve restare glifo. Se Poly Haven cambia uno dei
 modelli fissati, lo scaricamento si ferma e lo dice.
 
+#### 5.1.2 La resa misurata: una sostituzione entra solo se migliora (ADR-0086)
+
+Una tessera nuova (da un modello CC0, da ComfyUI) o una texture prende il posto
+di un glifo o di un terreno solo se **la misura non la boccia** e **tu la
+preferisci in un confronto alla cieca** (D23). Lo strumento è
+`scripts/misura_resa.py`: posa ogni simbolo su un banco di prova reso dal
+renderer vero, nei due temi e su due terreni, e misura cella per cella.
+
+| Misura | Cosa dice | Fonte |
+|---|---|---|
+| contrasto del contorno | quanto l'oggetto si stacca da ciò che ha intorno; sotto 3:1 non si riconosce | WCAG 2.1 §1.4.11 |
+| bordo | quanto è netto il contorno | Sobel |
+| somiglianza col vicino | con quale altro simbolo si confonde, e quanto | SSIM |
+| distanza dalla tavolozza | quanto i colori escono da quelli della casa | ΔE CIEDE2000 |
+| terreni: ΔE dal vicino | se due terreni si distinguono (sotto 2,3 l'occhio non li separa) | ΔE CIEDE2000 |
+
+```bash
+# la scheda committata e il cancello della CI
+python3 scripts/misura_resa.py --check            # nessuna misura peggiorata oltre il 5%
+python3 scripts/misura_resa.py --aggiorna         # dopo un cambiamento voluto: riscrive la scheda
+
+# una cartella di tessere candidate (con indice.json) contro i glifi
+python3 scripts/misura_resa.py candidati CAND --registra
+# il confronto alla cieca: apri coppie.html, scegli, scarica voti.json
+python3 scripts/misura_resa.py coppie CAND -o /tmp/coppie.html
+python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
+
+# il tema texture si ritara da solo quando cambiano texture o renderer
+python3 scripts/misura_resa.py tara && python3 scripts/dm.py maps texture
+```
+
+Il **secondo parere** (D26) sono le metriche apprese della community: CLIP-IQA,
+LPIPS e DISTS di `piq`. Girano sulla tua macchina, perché vogliono torch e pesi
+da scaricare, e non bloccano niente: sono tarate su fotografie, non su icone da
+28 px.
+
+```bash
+.venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu
+.venv/bin/pip install "piq>=0.8"
+.venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle
+.venv/bin/python scripts/misura_resa_appresa.py /tmp/celle -o /tmp/appresa.json
+python3 scripts/misura_resa.py appresa /tmp/appresa.json
+```
+
+**ComfyUI** (D25) è una terza fonte in prova. Il banco dei prompt chiede icone a
+inchiostro e acquerello, lo stile della casa, su sfondo bianco:
+
+```bash
+python3 scripts/comfyui_batch.py --prompts plans/esperimenti/oggetti-cc0-2026-10/comfyui/PROMPT-OGGETTI-ZENITALI.md --serie tutto --out asset-esterni/oggetti-comfyui
+python3 scripts/build_oggetti_cc0.py --da-immagini asset-esterni/oggetti-comfyui --variante a -o /tmp/cand-comfyui-a
+python3 scripts/misura_resa.py candidati /tmp/cand-comfyui-a --registra
+python3 scripts/misura_resa.py coppie /tmp/cand-comfyui-a -o /tmp/coppie-comfyui.html
+```
+
 ### 5.2 Il tema dipinto con 2-Minute Tabletop (opzionale, solo per il tuo tavolo)
 
 È una seconda resa della stessa mappa con tessere dipinte a mano, per i
