@@ -214,12 +214,14 @@ LIBRERIE = (
     ),
     Libreria(
         nome="Pillow", modulo="PIL",
-        a_cosa_serve="ricomprimere le immagini grandi e generare i derivati",
+        a_cosa_serve="ricomprimere le immagini grandi, generare i derivati e le "
+                     "tessere delle texture CC0 delle mappe",
         installa="  pip install pillow",
         obbligatoria=False,
         ripiego="`build_booklet_html.py` incorpora l'immagine com'e' (file piu' "
-                "pesante, resa identica); `build_image_derivatives.py` esce "
-                "dicendo come installarla.",
+                "pesante, resa identica); `build_image_derivatives.py` e "
+                "`build_texture_cc0.py` escono dicendo come installarla. Il "
+                "renderer delle mappe legge le tessere già fatte senza Pillow.",
     ),
     # ADR-0084 (DM, 2026-10-08): il collaudo delle mappe e' uno strumento di
     # sviluppo e di CI, non della sera. M4 esatta su tutto il corpus: 75 s in

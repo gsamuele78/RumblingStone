@@ -133,6 +133,28 @@ file `.map` e nessun export di città nel repo. Aveva anche valutato 2-Minute
 Tabletop e scelto di non adottarlo, perché la pergamena procedurale bastava.
 Il DM, il 2026-10-08, riapre tutte e tre.
 
+## §7 · Le texture CC0, 2026-10-09
+
+Il DM ha chiesto una strada per mappe più ricche senza problemi di licenza.
+
+- **Licenze, lette alla fonte**: Poly Haven e ambientCG CC0 1.0; le tessere di
+  Dungeon Crawl Stone Soup «use freely, no attribution»; 2-Minute Tabletop
+  CC BY-NC per i contenuti base, nessuna licenza per i premium.
+- **Gli 11 id scelti esistono** nel catalogo di Poly Haven letto il 2026-10-09
+  (867 texture, `api.polyhaven.com/assets?t=textures`, via Firecrawl):
+  `stone_tiles_02`, `rock_wall_10`, `castle_brick_07`, `dirt_floor`,
+  `roof_slates_02`, `leafy_grass`, `forest_ground_04`, `sand_01`,
+  `rock_face_03`, `rocks_ground_02`, `monastery_stone_floor`. Il formato degli
+  URL e l'MD5 della diffusa 1k vengono da `api.polyhaven.com/files/<id>`.
+- **Peso**, con ritagli delle illustrazioni del repo al posto delle texture:
+  webp 256 px a qualità 60, mediana 14,8 KB in base64 (128 px: 4,0 KB;
+  512 px: 75,9 KB). Le 50 mappe usano 3 terreni in mediana, 6 al massimo:
+  circa +2,3 MB se il tema si committa per tutte. Due SVG di prova: 117 e
+  127 KB.
+- **Rete**: da questo ambiente Poly Haven, ambientCG, OpenGameArt, Kenney,
+  Dropbox e Watabou sono bloccati dal proxy; npm e PyPI no, ma i pacchetti
+  npm con texture sono ripubblicazioni di terzi, scartate per la provenienza.
+
 ## Cosa questa misura non dice
 
 - Se la pergamena con il font dei volumi **si legge meglio** di Georgia: lo

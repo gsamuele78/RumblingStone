@@ -319,7 +319,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 187 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**14 aperte** · 190 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -475,6 +475,9 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D10~~ | `RESA-ASSET` | R5 | ✅ **Decisa il 2026-10-09, il DM: si parte da Dauth.** Era: **R5 come procede?** Proposta: la guida per esportare da Watabou la pianta di Dauth assediata, da usare come immagine; le cinque mappe tattiche dell'assedio (carte A-E di `DAY3-CITY-SIEGE`) col contratto JSON; l'importatore di città ed edifici solo se le esportazioni vere lo meritano. Sostituisce il «rimandato» di D7 |
 | ~~D11~~ | `RESA-ASSET` | R6 | ✅ **Decisa il 2026-10-09, il DM: resta in attesa**, come proposto. La Cannath Vale è la Elsir Vale di *Red Hand of Doom* rinominata: è canone e non si genera. Nessun codice finché un arco non porta i PG in una regione inventata |
 | ~~D12~~ | `RESA-ASSET` | R4 | ✅ **Risposta del DM il 2026-10-09: al tavolo usa Foundry.** Era: **Usi un VTT?** Decide il valore di R4: la resa dipinta va nell'export UVTT come immagine di sfondo |
+| ~~D13~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: sì, CC0 principale**, come proposto. Era: **Le texture CC0 (Poly Haven, ambientCG) diventano la strada principale per mappe più ricche, e 2-Minute Tabletop un extra opzionale solo per il tavolo?** Il DM aveva chiesto una strada senza problemi di licenza; le licenze lette alla fonte: Poly Haven e ambientCG CC0 1.0 |
+| ~~D14~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: committate accanto alla pergamena**, non come proposto. Era: **Le mappe con texture dove finiscono?** Proposta: solo in locale. Scelto: un secondo SVG per ogni mappa in `rendered-texture/`, controllato da `validate_maps`; stima +2,3 MB sui 50 SVG |
+| ~~D15~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: glifi ora, IA locale dopo.** Era: **Gli oggetti di scena da dove vengono?** I glifi in casa restano sopra le texture; un lotto futuro genera oggetti zenitali con ComfyUI e pesi a licenza permissiva (ADR-0019), col gate di rifiuto di `rumblingstone-art-direction` |
 | ~~D1~~ | `TRASVERSALE-ARTEFATTI` | La **Risonanza** fra Corona e Aegis Fang dei moduli giocati (+2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*, *Eco degli Eroi*) è attiva dal P1? | **Deciso**: la stampa del 16/01, senza Eco degli Eroi |
 | ~~D2~~ | `TRASVERSALE-ARTEFATTI` | Il blocco «Sinergia con Aegis Fang» del master vale dal Rituale 1? | Chiusa dalla fonte: il PDF del giocatore del 22/10/2025 lo mette al Rituale 4 |
 | ~~D3~~ | `TRASVERSALE-ARTEFATTI` | I bonus di quando Thorik ha indossato la Corona (immunità alla paura, scurovisione 36 m, *Aura di Comando*, *Guida di Moradin*)? | **Deciso**: tutti e quattro |

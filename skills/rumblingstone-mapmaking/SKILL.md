@@ -49,12 +49,17 @@ are **generated artifacts — never hand-edit them**. CI
    only under ADR-0085: a licence that allows redistribution without imposing
    itself (CC0, CC BY, CC BY-NC, Apache-2.0, OFL, MIT — never CC BY-SA or GPL),
    with the licence and a `CREDITS.md` (author, changes) in its folder. No
-   tracing of third-party art. 2-Minute Tabletop packs are downloaded by the DM and live
-   outside git (`asset-esterni/`, `dm.py asset installa <zip> --categoria
-   base|premium`); a **premium** pack (Plus, Patron Packs, tokens, even if
-   paid for) has no licence beyond the table and never enters anything that
-   leaves the repo — `dm.py asset controlla` fails on it (GUIDA-MAPPE §5.1). The map text uses the volumes' fonts, embedded
+   tracing of third-party art. The map text uses the volumes' fonts, embedded
    (`scripts/fonts/mappe/`, `build_font_mappe.py`).
+   **Richer maps go through CC0 only** (DM, 2026-10-09, D13-D15 of
+   RESA-ASSET): the texture theme fills the terrains with Poly Haven CC0
+   textures (`build_texture_cc0.py`, `scripts/texture-cc0/`), committed in
+   `rendered-texture/` next to the parchment and checked by `validate_maps`;
+   props stay the in-house glyphs. 2-Minute Tabletop is an optional extra for
+   the DM's own table: the packs live outside git (`asset-esterni/`,
+   `dm.py asset installa <zip> --categoria base|premium`), and a **premium**
+   pack (Plus, Patron Packs, tokens, even if paid for) has no licence beyond
+   the table — `dm.py asset controlla` fails on it (GUIDA-MAPPE §5.1-§5.2).
 6. **Fidelity contract** (piano RENDER-MAPPE-FEDELTÀ, 2026-07-23): side
    annotations on a grid row start after **≥3 spaces** (or a detached `│`
    preceded by ≥2 spaces, or box-drawing) — the parser never reads them as
@@ -171,6 +176,7 @@ python3 scripts/export_map_png.py rendered/<mappa>.svg   # hi-res PNG (print / h
 python3 scripts/export_uvtt.py <file.md>           # .uvtt/.dd2vtt (Foundry/Roll20: muri+luci)
 python3 scripts/validate_maps.py                   # CI gate (run before commit)
 python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
-python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, painted theme (R4)
+python3 scripts/dm.py asset texture && python3 scripts/dm.py maps texture   # CC0 texture theme, all maps
+python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, optional, table only
 python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
 ```

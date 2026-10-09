@@ -4280,7 +4280,7 @@
         {
           "name": "files",
           "type": "path",
-          "required": true,
+          "required": false,
           "default": null,
           "choices": null,
           "repeatable": true,
@@ -4321,6 +4321,27 @@
           "choices": null,
           "repeatable": false,
           "desc": "Fallisce su anomalie non fatali."
+        },
+        {
+          "name": "--tema",
+          "type": "choice",
+          "required": false,
+          "default": "pergamena",
+          "choices": [
+            "pergamena",
+            "texture"
+          ],
+          "repeatable": false,
+          "desc": "pergamena (default, in rendered/) o texture: terreni con le texture CC0 di scripts/texture-cc0/, in rendered-texture/"
+        },
+        {
+          "name": "--tutti-i-master",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ogni master che ha già un SVG in rendered/: per rifare un tema intero."
         }
       ],
       "inputs": [
@@ -4334,6 +4355,13 @@
       "outputs": [
         {
           "path": "**/rendered/*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "**/rendered-texture/*.svg",
           "kind": "svg",
           "overwrites": true,
           "generated_header": true,
@@ -6139,6 +6167,12 @@
           "path": "**/rendered/*.svg",
           "kind": "svg",
           "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/rendered-texture/*.svg",
+          "kind": "svg",
+          "required": false,
           "schema": null
         }
       ],
@@ -8760,6 +8794,85 @@
       "ci_smoke": "python3 scripts/watabou_citta.py \"09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Mappe/dauth-assedio/dauth-pianta.watabou.json\"",
       "tests": [
         "scripts/tests/test_watabou_citta.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "build_texture_cc0",
+      "path": "scripts/build_texture_cc0.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/build_texture_cc0.py",
+      "summary": "Le texture CC0 dei terreni per il tema texture delle mappe (D13-D15 di RESA-ASSET): scarica da Poly Haven la diffusa 1k di 11 texture fissate, ne controlla l'MD5 contro l'API, la riduce a una tessera webp da 256 px e scrive scripts/texture-cc0/ con l'indice. --check non usa la rete.",
+      "use_case": "«Come do alle mappe i materiali veri, pietra, terra, roccia, senza problemi di licenza se un giorno pubblico?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "Pillow"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Niente rete: le tessere combaciano con l'indice; esce 0 se le texture non sono ancora scaricate."
+        },
+        {
+          "name": "--da-cartella",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Costruisce dai <id>_diff_1k.jpg già scaricati in questa cartella."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "https://api.polyhaven.com/files/<id>",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/texture-cc0/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok (anche: texture non ancora scaricate, con --check)",
+        "1": "MD5 o impronta che non combacia, tessera mancante",
+        "2": "Pillow assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "id e risoluzione fissati; la tessera dipende dalla versione di Pillow, l'indice ne registra l'impronta"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "solo senza --check e senza --da-cartella: api.polyhaven.com, dl.polyhaven.org"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/build_texture_cc0.py --check",
+      "tests": [
+        "scripts/tests/test_texture_cc0.py"
       ],
       "docs": [
         "docs/guides/GUIDA-MAPPE.md",

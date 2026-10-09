@@ -303,6 +303,36 @@
       "deterministic": true
     },
     {
+      "name": "build_texture_cc0",
+      "description": "«Come do alle mappe i materiali veri, pietra, terra, roccia, senza problemi di licenza se un giorno pubblico?»\n\nLe texture CC0 dei terreni per il tema texture delle mappe (D13-D15 di RESA-ASSET): scarica da Poly Haven la diffusa 1k di 11 texture fissate, ne controlla l'MD5 contro l'API, la riduce a una tessera webp da 256 px e scrive scripts/texture-cc0/ con l'indice. --check non usa la rete.",
+      "use_case": "«Come do alle mappe i materiali veri, pietra, terra, roccia, senza problemi di licenza se un giorno pubblico?»",
+      "invocation": "python3 scripts/build_texture_cc0.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Niente rete: le tessere combaciano con l'indice; esce 0 se le texture non sono ancora scaricate."
+          },
+          "da-cartella": {
+            "type": "string",
+            "description": "Costruisce dai <id>_diff_1k.jpg già scaricati in questa cartella."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "scripts/texture-cc0/"
+      ],
+      "exit_codes": {
+        "0": "ok (anche: texture non ancora scaricate, con --check)",
+        "1": "MD5 o impronta che non combacia, tessera mancante",
+        "2": "Pillow assente"
+      },
+      "deterministic": true
+    },
+    {
       "name": "collaudo_mappe",
       "description": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»\n\nCollauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1, M2 e M4 come avvisi; l'asse di ogni porta, grata o fila di sbarre (ADR-0083) e le direttive @verso. In sola lettura.",
       "use_case": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»",
@@ -654,15 +684,26 @@
           "strict": {
             "type": "boolean",
             "description": "Fallisce su anomalie non fatali."
+          },
+          "tema": {
+            "type": "string",
+            "description": "pergamena (default, in rendered/) o texture: terreni con le texture CC0 di scripts/texture-cc0/, in rendered-texture/",
+            "enum": [
+              "pergamena",
+              "texture"
+            ]
+          },
+          "tutti-i-master": {
+            "type": "boolean",
+            "description": "Ogni master che ha già un SVG in rendered/: per rifare un tema intero."
           }
         },
-        "required": [
-          "files"
-        ],
+        "required": [],
         "additionalProperties": false
       },
       "outputs": [
-        "**/rendered/*.svg"
+        "**/rendered/*.svg",
+        "**/rendered-texture/*.svg"
       ],
       "exit_codes": {
         "0": "ok",

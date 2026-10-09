@@ -114,3 +114,48 @@ dizionario Python con due chiavi uguali tiene l'ultima senza dire niente, e il
 cristallo magico di tutte le mappe aveva cambiato faccia. L'ha visto solo il
 PNG. Adesso `test_resa_mappe.py` boccia una chiave ripetuta nei dizionari del
 renderer.
+
+---
+
+## Emendamento del 2026-10-09: le mappe più ricche passano dalle texture CC0
+
+**Stato**: accettato dal DM il 2026-10-09 (D13-D15 di
+[PIANO-RESA-E-ASSET](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md)).
+
+**Contesto.** Il tema dipinto con 2-Minute Tabletop (R4) non si può
+pubblicare: i contenuti base sono CC BY-NC 4.0, i premium non hanno licenza
+fuori dal tavolo, anche se pagati (pagina «General Licensing and Attribution»,
+letta il 2026-10-09). Il DM ha chiesto una strada senza questo problema, con i
+progetti gratuiti meglio valutati dalla community.
+
+**Le licenze lette alla fonte, lo stesso giorno.**
+
+| Fonte | Licenza | Esito |
+|---|---|---|
+| Poly Haven (texture) | CC0 1.0: uso commerciale, ridistribuzione, nessun credito obbligatorio | **entra**: 11 texture, con l'MD5 che l'API dichiara |
+| ambientCG | CC0 1.0 | ammessa, non usata: Poly Haven basta e ha un'API con le impronte |
+| Dungeon Crawl Stone Soup (OpenGameArt) | «use freely, no attribution», taggata CC0 | non usata: pixel art 32×32 in tre quarti, stile diverso |
+| 2-Minute Tabletop | CC BY-NC (base), nessuna (premium) | resta un extra opzionale per il tavolo del DM |
+
+**Decisione.**
+
+1. **Il tema texture** è la seconda resa di ogni mappa: i terreni si riempiono
+   con le texture CC0, velate del colore della pergamena (0,45, da tarare), e
+   contorni, ombre e glifi restano gli stessi. Il muro sceglie roccia o
+   muratura dall'ambiente di `@tipo`. Bosco fitto, acqua, lava, fogna, vuoto,
+   zona letale e pilastri restano vettoriali.
+2. **Gli SVG del tema stanno nel repo**, in `rendered-texture/` accanto a
+   `rendered/` (D14, contro la proposta di tenerli in locale), e
+   `validate_maps` li rigenera per confronto come la pergamena, una volta che
+   le texture sono committate.
+3. **Le texture si scaricano una volta** (`build_texture_cc0.py`, Pillow) e si
+   committano in `scripts/texture-cc0/` con l'indice; il renderer resta in
+   libreria standard e legge solo i webp.
+4. **Gli oggetti di scena restano i glifi in casa**; un lotto futuro li genera
+   con l'IA locale e pesi a licenza permissiva (D15, ADR-0019).
+
+**Quello che si paga.** Stimato con illustrazioni del repo al posto delle
+texture vere: circa 15 KB per tessera, 3 terreni per mappa in mediana, quindi
+**+2,3 MB** sui 50 SVG (+40%) e circa 120 KB per tessere nel repo. Lo dirà il
+primo download vero. La rete di questo ambiente non raggiunge Poly Haven: le
+texture le scarica il DM.

@@ -1,6 +1,6 @@
 # PIANO — La resa e gli asset delle mappe, uguali su ogni macchina e per ogni categoria
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM il 2026-10-08, D9-D12 il 2026-10-09: R4 una prova su una mappa (installatore fatto, aspetta il pacchetto), R5 parte da Dauth (sei mappe dell'assedio fatte), R6 in attesa · **Classe**: C per R1-R3, G poi C per R4-R6
+> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM il 2026-10-08, D9-D15 il 2026-10-09: le texture CC0 strada principale (R4-bis, aspetta il download), R4 una prova su una mappa (installatore fatto, aspetta il pacchetto), R5 parte da Dauth (sei mappe dell'assedio fatte), R6 in attesa · **Classe**: C per R1-R3, G poi C per R4-R6
 > **Nasce da**: la richiesta del DM della sera del 2026-10-08, dopo la #227:
 > *«verifica se ci sono progetti best community valuated che possono essere
 > importati andando in deroga alla std lib e che migliorano o aiutano a creare
@@ -86,8 +86,24 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   git, e registra la categoria. La licenza (letta il 2026-10-09) divide i
   pacchetti in `base`, a offerta libera e CC BY-NC, e `premium`, senza
   licenza: `controlla` boccia la tabella che usa un premium. Guida:
-  `docs/guides/GUIDA-MAPPE.md` §5.1. Resta la tabella sui nomi veri dei file,
+  `docs/guides/GUIDA-MAPPE.md` §5.2. Resta la tabella sui nomi veri dei file,
   e la mappa di prova.
+
+### R4-bis · Il tema texture CC0 (la strada principale)
+
+`[engine: Opus · effort: medio · qualità: 11 texture CC0 con MD5 verificato; il tema texture di ogni mappa in rendered-texture/, allineato in validate_maps; colori leggibili come in pergamena]` · **C**
+
+- Decise D13-D15 il 2026-10-09: texture CC0 di Poly Haven nei terreni,
+  committate accanto alla pergamena, glifi in casa per gli oggetti.
+- **Fatto il 2026-10-09**: `build_texture_cc0.py` (scarica, verifica l'MD5
+  contro l'API, riduce a tessere webp da 256 px), il tema `texture` in
+  `render_map_svg.py` (`--tema`, `--tutti-i-master`), `validate_maps` che
+  pretende il gemello texture quando le texture ci sono, `dm.py asset texture`
+  e `dm.py maps texture`, `doctor`, guida §5.1, test con texture finte.
+- **Manca**: le texture vere. La rete di questo ambiente non raggiunge Poly
+  Haven: il DM lancia `dm.py asset texture` e `dm.py maps texture` e committa.
+  Poi si tara la velatura (0,45) sulla prima mappa vista.
+- **Dopo** (D15): gli oggetti di scena generati con l'IA locale.
 
 ### R5 · Città, villaggi ed edifici da Watabou
 
@@ -130,6 +146,7 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | R2 | `test_resa_mappe.py`: glifi diversi da `🔮` e `🪨`, nessuna chiave doppia nei dizionari del renderer |
 | R3 | `build_emoji_noto.py --check` verde in `test_resa_mappe.py`; licenza e crediti nella cartella |
 | R4 | il DM approva una mappa nel tema dipinto; il colophon porta il credito |
+| R4-bis | `build_texture_cc0.py --check` e `validate_maps` verdi con le texture vere; il DM approva una mappa nel tema texture accanto alla pergamena |
 | R5 | un'esportazione per tipo importata e collaudata a zero errori |
 | R6 | il master `.map` committato e l'SVG rigenerabile |
 
@@ -153,6 +170,9 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D10~~ | R5 | ✅ **Decisa il 2026-10-09, il DM: si parte da Dauth.** Era: **R5 come procede?** Proposta: la guida per esportare da Watabou la pianta di Dauth assediata, da usare come immagine; le cinque mappe tattiche dell'assedio (carte A-E di `DAY3-CITY-SIEGE`) col contratto JSON; l'importatore di città ed edifici solo se le esportazioni vere lo meritano. Sostituisce il «rimandato» di D7 |
 | ~~D11~~ | R6 | ✅ **Decisa il 2026-10-09, il DM: resta in attesa**, come proposto. La Cannath Vale è la Elsir Vale di *Red Hand of Doom* rinominata: è canone e non si genera. Nessun codice finché un arco non porta i PG in una regione inventata |
 | ~~D12~~ | R4 | ✅ **Risposta del DM il 2026-10-09: al tavolo usa Foundry.** Era: **Usi un VTT?** Decide il valore di R4: la resa dipinta va nell'export UVTT come immagine di sfondo |
+| ~~D13~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: sì, CC0 principale**, come proposto. Era: **Le texture CC0 (Poly Haven, ambientCG) diventano la strada principale per mappe più ricche, e 2-Minute Tabletop un extra opzionale solo per il tavolo?** Il DM aveva chiesto una strada senza problemi di licenza; le licenze lette alla fonte: Poly Haven e ambientCG CC0 1.0 |
+| ~~D14~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: committate accanto alla pergamena**, non come proposto. Era: **Le mappe con texture dove finiscono?** Proposta: solo in locale. Scelto: un secondo SVG per ogni mappa in `rendered-texture/`, controllato da `validate_maps`; stima +2,3 MB sui 50 SVG |
+| ~~D15~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: glifi ora, IA locale dopo.** Era: **Gli oggetti di scena da dove vengono?** I glifi in casa restano sopra le texture; un lotto futuro genera oggetti zenitali con ComfyUI e pesi a licenza permissiva (ADR-0019), col gate di rifiuto di `rumblingstone-art-direction` |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
@@ -168,6 +188,10 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Aperte**: nessuna
 - **Cambiate**: D7, da «R5 rimandato» a «R5 parte da Dauth»
 - **Dedotto da me**: che l'installatore non scarichi niente da solo, perché i link del pacchetto arrivano per email dopo la cassa e la licenza chiede di mandare chi vuole i file al sito; che le cinque mappe dell'assedio stiano in `Mappe/` dell'arco 09 e le prenda il futuro `ARC09-DEF-05` di MASTER-DEF, senza scrivere il master qui; che la pianta della città resti un'immagine esportata da Watabou e non diventi una griglia
+- **Decise** (secondo messaggio): D13 le texture CC0 strada principale, 2-Minute Tabletop extra opzionale · D14 il tema texture committato accanto alla pergamena · D15 glifi ora, oggetti generati con l'IA locale in un lotto futuro
+- **Aperte** (secondo messaggio): nessuna
+- **Cambiate** (secondo messaggio): D14, dove avevo proposto il tema texture solo in locale; e R4, che da strada principale diventa un extra per il tavolo
+- **Dedotto da me** (secondo messaggio): che le texture vengano da Poly Haven sola, perché ha un'API con l'MD5 di ogni file (ambientCG resta ammessa, non usata); che il bosco fitto, l'acqua, la lava e i pilastri restino vettoriali; che il muro scelga roccia o muratura dall'ambiente di `@tipo`; che il tema texture diventi obbligatorio per `validate_maps` solo dopo il commit delle texture
 
 ---
 
@@ -182,6 +206,7 @@ Fase S — Sviluppo
 ☑ R2  🔺 e 🔷 universali, glifi in casa (2026-10-08)
 ☑ R3  il ripiego Noto, 12 emoji locali (2026-10-08: 177 celle → 0)
 □ R4  il tema dipinto: una prova su una mappa (D9); ☑ installatore, `dm.py asset`, doctor e guida (2026-10-09) · □ la tabella simbolo → file e la mappa di prova, quando il DM ha scaricato il pacchetto base
+□ R4-bis il tema texture CC0 (D13-D15): ☑ script, tema, gate e guida (2026-10-09) · □ le texture scaricate dal DM e i gemelli committati · □ la velatura tarata · □ gli oggetti con l'IA locale (D15)
 □ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
 □ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE

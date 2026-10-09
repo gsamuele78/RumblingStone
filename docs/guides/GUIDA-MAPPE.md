@@ -279,11 +279,55 @@ python3 scripts/export_uvtt.py "<arco>/<MASTER>.md" --ext dd2vtt --ppg 140
 
 **PNG e UVTT sono artefatti locali**: non si committano (in repo resta l'SVG).
 
-### 5.1 Il tema dipinto con 2-Minute Tabletop (prova, R4)
+### 5.1 Il tema texture: materiali veri, licenza CC0
+
+Ogni mappa ha una seconda resa accanto alla pergamena, in `rendered-texture/`:
+stessi terreni, stessi contorni, stessi glifi, ma il pavimento è lastricato,
+il muro è roccia o muratura, la terra è terra. Le texture vengono da
+**Poly Haven**, licenza **CC0 1.0** (letta alla fonte il 2026-10-09): uso
+anche commerciale, ridistribuzione permessa, nessun credito obbligatorio.
+Stanno nel repo e possono uscirne. È la strada principale per mappe più ricche
+(D13-D15 di [PIANO-RESA-E-ASSET](../../plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md)).
+
+| Terreno | Texture | Terreno | Texture |
+|---|---|---|---|
+| ⬜ pavimento | `stone_tiles_02` | 🟩 pianura | `leafy_grass` |
+| 🏰 muro, caverna ed esterno | `rock_wall_10` | 🌿 vegetazione | `forest_ground_04` |
+| 🏰 muro, interni e abitato | `castle_brick_07` | 🟨 sabbia | `sand_01` |
+| 🟫 terra | `dirt_floor` | ⛰ creste | `rock_face_03` |
+| ⬛ edificio | `roof_slates_02` | 🟤 caverna | `rocks_ground_02` |
+| 🔳 pedana | `monastery_stone_floor` | | |
+
+Restano vettoriali il bosco fitto (dall'alto è una chioma), l'acqua, la lava,
+la fogna, il vuoto, la zona letale e i pilastri. Quale muro usare lo decide
+`@tipo`: è la categoria che ogni mappa già dichiara.
+
+```bash
+# 1) una volta: scarica le 11 texture (rete) e costruisce le tessere da 256 px
+python3 scripts/dm.py asset texture
+#    oppure, se le hai scaricate a mano (<id>_diff_1k.jpg):
+python3 scripts/build_texture_cc0.py --da-cartella ~/Scaricati/polyhaven
+# 2) il tema texture di tutte le mappe che hanno già la pergamena
+python3 scripts/dm.py maps texture
+# 3) controlla e committa scripts/texture-cc0/ e le cartelle rendered-texture/
+python3 scripts/validate_maps.py
+```
+
+Lo script confronta l'MD5 di ogni file con quello che dichiara l'API di Poly
+Haven, e l'indice (`scripts/texture-cc0/indice.json`) tiene fonte, URL e
+impronte. Dopo il primo commit delle texture, `validate_maps` pretende il
+gemello texture di ogni mappa e lo rigenera per confronto, come la pergamena.
+Per Foundry: `export_map_png.py` sull'SVG di `rendered-texture/`, poi
+`export_uvtt.py --image`.
+
+⚠️ La velatura (quanto colore della pergamena copre la texture, 0,45) è una
+soglia scelta senza aver visto le texture vere: si tara sulla prima mappa.
+
+### 5.2 Il tema dipinto con 2-Minute Tabletop (opzionale, solo per il tuo tavolo)
 
 È una seconda resa della stessa mappa con tessere dipinte a mano, per i
-giocatori e per Foundry. La pergamena resta la vista del DM; il master, il
-collaudo e l'SVG non cambiano. Il DM ha deciso di provarla su una mappa sola
+giocatori e per Foundry. Non è la strada principale (lo è §5.1): la licenza
+non permette di pubblicarla. Il DM ha deciso di provarla su una mappa sola
 prima di farne un lotto (D9 di
 [PIANO-RESA-E-ASSET](../../plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md)).
 
@@ -324,7 +368,7 @@ sui nomi veri dei file, dopo la prima installazione. Poi viene la mappa di
 prova, che in Foundry entra come immagine di sfondo dell'export UVTT
 (`--image`), con muri, porte e luci di sempre.
 
-### 5.2 La pianta di una città con Watabou (R5)
+### 5.3 La pianta di una città con Watabou (R5)
 
 Il Medieval Fantasy City Generator di Watabou fa la pianta d'insieme di una
 città: un'immagine per il DM o per i giocatori, non una griglia tattica. Le sue

@@ -48,6 +48,8 @@ one `<input-stem>_mapN_<slug>.svg` per map. Pure Python 3, no dependencies.
 from __future__ import annotations
 
 import argparse
+import base64
+import json
 import math
 import re
 import sys
@@ -83,6 +85,57 @@ FONT_MAPPE = Path(__file__).resolve().parent / "fonts" / "mappe"
 
 
 EMOJI_NOTO = Path(__file__).resolve().parent / "emoji-noto"
+
+# Il tema «texture» (R4-bis di PIANO-RESA-E-ASSET): i terreni riempiti con le
+# texture CC0 di Poly Haven (`build_texture_cc0.py`), velate del colore della
+# pergamena. Una tessera copre CELLE_PER_TESSERA quadretti per lato. Gli SVG
+# di questo tema vanno in `rendered-texture/`, accanto a `rendered/`.
+TEXTURE_CC0 = Path(__file__).resolve().parent / "texture-cc0"
+TEMI = ("pergamena", "texture")
+CELLE_PER_TESSERA = 2
+VELATURA = 0.45    # opacità del colore del terreno sopra la texture: euristica,
+                   # da tarare sulle texture vere (colori leggibili come in pergamena)
+CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture"}
+
+
+def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
+    """(terreni → id, id → webp in base64), o None se le texture non ci sono."""
+    indice = TEXTURE_CC0 / "indice.json"
+    if not indice.exists():
+        return None
+    dati = json.loads(indice.read_text(encoding="utf-8"))
+    immagini = {}
+    for tid in dati.get("texture", {}):
+        f = TEXTURE_CC0 / f"{tid}.webp"
+        if f.exists():
+            immagini[tid] = base64.b64encode(f.read_bytes()).decode("ascii")
+    return dati.get("terreni", {}), immagini
+
+
+def _ambiente(annotazioni: list[str]) -> str | None:
+    """L'ambiente di `@tipo <tipo> <ambiente>` (D18), o None."""
+    for riga in annotazioni or []:
+        parole = riga.strip().split()
+        if parole and parole[0].lower() == "@tipo" and len(parole) > 2:
+            return parole[2].lower()
+    return None
+
+
+def _pattern_texture(pid: str, simbolo: str, ambiente: str | None,
+                     tex: tuple[dict, dict[str, str]] | None) -> tuple[str, str] | None:
+    """(pattern con la texture, id della texture) per un terreno, o None."""
+    if not tex:
+        return None
+    terreni, immagini = tex
+    tid = terreni.get(f"{simbolo}@{ambiente}") or terreni.get(simbolo)
+    if not tid or tid not in immagini:
+        return None
+    t = CELL * CELLE_PER_TESSERA
+    corpo = (f'<image href="data:image/webp;base64,{immagini[tid]}" width="{t}" height="{t}" '
+             f'preserveAspectRatio="none"/>'
+             f'<rect width="{t}" height="{t}" fill="{SYMBOLS[simbolo]["fill"]}" '
+             f'opacity="{VELATURA}"/>')
+    return _pattern(pid, t, corpo), tid
 
 
 def _simbolo_noto(emoji: str) -> tuple[str, str] | None:
@@ -1193,7 +1246,9 @@ def _arrowhead(x1: float, y1: float, x2: float, y2: float, color: str, size: flo
             f'L{_n(p2[0])} {_n(p2[1])}Z" fill="{color}"/>')
 
 
-def render_svg(grid: dict, source_name: str) -> str:
+def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
+    if tema not in TEMI:
+        raise ValueError(f"tema: uno di {', '.join(TEMI)}")
     rows = grid["rows"]
     row_nums = sorted(rows)
     n_rows = row_nums[-1] - row_nums[0] + 1
@@ -1296,8 +1351,20 @@ def render_svg(grid: dict, source_name: str) -> str:
             f'<clipPath id="clipheavy"><path d="{heavy_union_d}" '
             f'clip-rule="evenodd"/></clipPath>'
         )
+    tex = _texture_cc0() if tema == "texture" else None
+    ambiente = _ambiente(grid.get("annotations", []))
+    per_pat = {}
+    for e, spec in SYMBOLS.items():
+        if spec.get("pat"):
+            per_pat.setdefault(spec["pat"], e)
+    texture_usate = set()
     for p in used_pats:
-        defs.append(PATTERNS[p])
+        tp = _pattern_texture(p, per_pat[p], ambiente, tex) if p in per_pat else None
+        if tp:
+            defs.append(tp[0])
+            texture_usate.add(tp[1])
+        else:
+            defs.append(PATTERNS[p])
     for p in used_props:
         defs.append(PROPS[p])
     noto = {e: _simbolo_noto(e) for e in used if e and e not in SYMBOLS}
@@ -1308,6 +1375,10 @@ def render_svg(grid: dict, source_name: str) -> str:
         defs.append(_unit_gradient(color))
     defs.append("</defs>")
     out.extend(defs)
+    if texture_usate:
+        # CC0 non chiede il credito; lo si scrive lo stesso, e senza toccare il foglio
+        out.append(f'<desc>Texture CC0 1.0 da Poly Haven (polyhaven.com): '
+                   f'{", ".join(sorted(texture_usate))}</desc>')
 
     # --- parchment sheet, vignette, double frame ----------------------------
     out.append(f'<rect width="{width}" height="{height}" fill="{PAPER}" filter="url(#grain)"/>')
@@ -1653,13 +1724,29 @@ def render_svg(grid: dict, source_name: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("files", nargs="+", help="markdown file(s) containing emoji-grid maps")
+    ap.add_argument("files", nargs="*", help="markdown file(s) containing emoji-grid maps")
+    ap.add_argument("--tutti-i-master", action="store_true",
+                    help="ogni master che ha gia' un SVG in rendered/ (per rifare un tema intero)")
     ap.add_argument("-o", "--outdir", help="output directory (default: rendered/ next to input)")
     ap.add_argument("--map", type=int, help="render only map #N (1-based) of each file")
     ap.add_argument("--list", action="store_true", help="list maps found, render nothing")
     ap.add_argument("--strict", action="store_true",
                     help="fail if declared header dims (N col × M righe) don't match parsed cells")
+    ap.add_argument("--tema", choices=TEMI, default="pergamena",
+                    help="pergamena (default, in rendered/) o texture: terreni con le texture "
+                         "CC0 di scripts/texture-cc0/, in rendered-texture/")
     args = ap.parse_args()
+    if args.tutti_i_master:
+        radice = Path(__file__).resolve().parent.parent
+        args.files = sorted({str(p.parent.parent / f"{p.name.split('_map')[0]}.md")
+                             for p in radice.glob("**/rendered/*_map[0-9][0-9]_*.svg")
+                             if (p.parent.parent / f"{p.name.split('_map')[0]}.md").exists()})
+    if not args.files:
+        ap.error("indica i file, oppure --tutti-i-master")
+    if args.tema == "texture" and not _texture_cc0():
+        print("ERRORE: il tema texture vuole le texture CC0: python3 scripts/build_texture_cc0.py",
+              file=sys.stderr)
+        return 1
 
     total = 0
     dim_errors = 0
@@ -1690,13 +1777,13 @@ def main() -> int:
                 n_cols = max(len(c) for c in rows.values())
                 print(f"  {i:2d}. {g['title']}  ({n_cols}×{len(rows)} celle)")
             continue
-        outdir = Path(args.outdir) if args.outdir else path.parent / "rendered"
+        outdir = Path(args.outdir) if args.outdir else path.parent / CARTELLA_TEMA[args.tema]
         outdir.mkdir(parents=True, exist_ok=True)
         for i, g in enumerate(maps, 1):
             if args.map and i != args.map:
                 continue
             name = f"{path.stem}_map{i:02d}_{nome_mappa(g['title'])}.svg"
-            (outdir / name).write_text(render_svg(g, path.name), encoding="utf-8")
+            (outdir / name).write_text(render_svg(g, path.name, args.tema), encoding="utf-8")
             print(f"✓ {outdir / name}")
             total += 1
     if not args.list:
