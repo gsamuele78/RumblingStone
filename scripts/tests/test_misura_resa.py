@@ -78,8 +78,69 @@ class TestVoti(unittest.TestCase):
     def test_il_lato_si_traduce_nella_fonte(self):
         chiave = {"0": {"simbolo": "🛏", "ambiente": "interni", "sinistra": "glifo"},
                   "1": {"simbolo": "🪨", "ambiente": "esterno", "sinistra": "tessera"}}
-        pref = M.registra_voti({"voti": {"0": "d", "1": "d"}}, chiave)
+        pref = M.registra_voti({"voti": {"0": "d", "1": "d"}}, chiave)["oggetti"]
         self.assertEqual(pref, {"🛏": {"interni": "tessera"}, "🪨": {"esterno": "glifo"}})
+
+
+@unittest.skipUnless(LIB, "numpy")
+class TestPaginaDiScelta(unittest.TestCase):
+    """La prima pagina aveva coppie identiche e nessun nome (il DM, 2026-10-09):
+    «se non so a cosa si riferiscono non posso decidere»."""
+
+    def _voce(self, simbolo, *imgs, tipo="oggetto"):
+        import numpy as np
+        opz = [{"valore": v, "etichetta": e, "img": np.full((4, 4, 3), x), "misure": f"contrasto {x}"}
+               for v, e, x in imgs]
+        return {"tipo": tipo, "simbolo": simbolo, "ambiente": "interni" if tipo == "oggetto" else None,
+                "titolo": f"{simbolo} Letto — su pavimento (interni)", "opzioni": opz}
+
+    def test_le_opzioni_identiche_si_tolgono_e_si_dice_perche(self):
+        voce = self._voce("🛏", ("glifo", "glifo", 0.2), ("tessera:Poly Haven", "Poly Haven", 0.2),
+                          ("tessera:ComfyUI", "ComfyUI", 0.7))
+        pagina, chiave, saltate = M.pagina_scelta([voce], 1)
+        self.assertEqual(sorted(chiave["voci"]["0"]["opzioni"].values()), ["glifo", "tessera:ComfyUI"])
+        self.assertIn("«Poly Haven» è identica a «glifo»", pagina)
+        self.assertEqual(saltate, [])
+
+    def test_un_riquadro_senza_due_opzioni_diverse_non_entra_e_si_elenca(self):
+        voce = self._voce("🚪", ("glifo", "glifo", 0.2), ("tessera:CC0", "CC0", 0.2))
+        pagina, chiave, saltate = M.pagina_scelta([voce], 1)
+        self.assertEqual(chiave["voci"], {})
+        self.assertIn("🚪", saltate[0])
+        self.assertIn("Non in pagina: 1", pagina)
+
+    def test_ogni_riquadro_ha_il_nome_e_le_due_risposte_in_piu(self):
+        voce = self._voce("🛏", ("glifo", "glifo", 0.2), ("tessera:ComfyUI", "ComfyUI", 0.7))
+        pagina, _, _ = M.pagina_scelta([voce], 1)
+        self.assertIn("🛏 Letto — su pavimento (interni)", pagina)
+        self.assertIn("Nessuna va bene", pagina)
+        self.assertIn("Non vedo differenze", pagina)
+
+    def test_alla_cieca_la_fonte_non_si_legge_aperta_si(self):
+        voce = self._voce("🛏", ("glifo", "glifo (com'è oggi)", 0.2), ("tessera:ComfyUI", "ComfyUI", 0.7))
+        cieca, _, _ = M.pagina_scelta([voce], 1)
+        aperta, _, _ = M.pagina_scelta([voce], 1, aperta=True)
+        self.assertNotIn("ComfyUI", cieca)
+        self.assertIn("ComfyUI", aperta)
+        self.assertIn("contrasto 0.7", aperta)
+
+    def test_i_voti_si_traducono_in_scelte_e_le_fonti_si_rivelano(self):
+        chiave = {"versione": 2, "voci": {
+            "0": {"tipo": "oggetto", "simbolo": "🛏", "ambiente": "interni", "titolo": "🛏 Letto",
+                  "opzioni": {"A": "tessera:ComfyUI", "B": "glifo"},
+                  "etichette": {"A": "ComfyUI", "B": "glifo"}},
+            "1": {"tipo": "oggetto", "simbolo": "🪑", "ambiente": "interni", "titolo": "🪑 Sedia",
+                  "opzioni": {"A": "glifo", "B": "tessera:Poly Haven"},
+                  "etichette": {"A": "glifo", "B": "Poly Haven"}},
+            "2": {"tipo": "terreno", "simbolo": "⛰", "ambiente": None, "titolo": "⛰ Creste",
+                  "opzioni": {"A": "texture:lichen_rock", "B": "texture:rock_face_03", "C": "senza"},
+                  "etichette": {"A": "lichen_rock", "B": "oggi: rock_face_03", "C": "senza"}}}}
+        esito = M.registra_voti({"voti": {"0": "A", "1": "nessuna", "2": "C"}}, chiave)
+        self.assertEqual(esito["oggetti"], {"🛏": {"interni": "tessera:ComfyUI"},
+                                            "🪑": {"interni": "nessuna"}})
+        self.assertEqual(esito["terreni"], {"⛰": "senza"})
+        self.assertIn("A = ComfyUI", esito["rivelate"][0])
+        self.assertIn("Nessuna va bene", esito["rivelate"][1])
 
 
 class TestVotiDaScaricati(unittest.TestCase):

@@ -104,7 +104,7 @@ class TestOggetti(unittest.TestCase):
         out = io.StringIO()
         with redirect_stdout(out):
             self.assertEqual(B.controlla(), 1)
-        self.assertIn("confrontata alla cieca", out.getvalue())
+        self.assertIn("non l'ha ancora confrontata", out.getvalue())
 
     def test_se_il_dm_preferisce_il_glifo_e_bocciata(self):
         simboli = self._indice()["simboli"]
@@ -161,6 +161,61 @@ class TestOggetti(unittest.TestCase):
         self.assertEqual((B.USCITA / "zenitale-letto-a.webp").read_bytes(), b"letto generato")
         self.assertNotIn("zenitale-botte-a", indice["tessere"])
         self.assertIn('("🛏", "zenitale-letto-a"),', out.getvalue())
+
+    def test_nessuna_va_bene_butta_la_tessera_e_la_dice_da_rifare(self):
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": "tessera"} for s in simboli}
+        pref["🛏"] = {"interni": "nessuna"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.main(["--adotta"]), 0)
+        self.assertNotIn("🛏", self._indice()["simboli"])
+        self.assertFalse((B.USCITA / "GothicBed_01.webp").exists())
+        self.assertIn("Da rifare, perché nessuna andava bene: 🛏", out.getvalue())
+
+    def test_non_vedo_differenze_lascia_il_glifo(self):
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": "tessera"} for s in simboli}
+        pref["🛏"] = {"interni": "uguali"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.controlla(), 1)
+        self.assertIn("non vede differenze", out.getvalue())
+
+    def test_la_scelta_di_un_altra_fonte_non_approva_questa(self):
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": f"tessera:{B.fonte_di(B.USCITA, s)}"} for s in simboli}
+        pref["🛏"] = {"interni": "tessera:ComfyUI"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.controlla(), 1)
+        self.assertIn("🛏: il DM ha preferito la tessera di un'altra fonte", out.getvalue())
+        self.assertEqual(out.getvalue().count("✗"), 1)
+
+    def test_adotta_prende_da_una_cartella_solo_cio_che_il_dm_ha_scelto_di_quella_fonte(self):
+        cand = self.tmp / "comfy"
+        cand.mkdir()
+        voce = {"fonte": "ComfyUI", "licenza": B.LICENZA_GENERATA, "provenienza": "sdxl seme 1"}
+        for k in ("zenitale-letto-a", "zenitale-statua-a"):
+            (cand / f"{k}.webp").write_bytes(k.encode())
+        (cand / "indice.json").write_text(json.dumps({
+            "simboli": {"🛏": ["zenitale-letto-a"], "🗿": ["zenitale-statua-a"]},
+            "tessere": {"zenitale-letto-a": voce, "zenitale-statua-a": voce}}), encoding="utf-8")
+        self.assertEqual(B.fonte_di(cand, "🛏"), "ComfyUI")
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": f"tessera:{B.fonte_di(B.USCITA, s)}"} for s in simboli}
+        pref["🛏"] = {"interni": "tessera:ComfyUI"}     # 🗿 resta alla tessera CC0
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(B.main(["--adotta", str(cand)]), 0)
+            self.assertEqual(B.main(["--adotta"]), 0)    # l'ordine non conta
+        indice = self._indice()
+        self.assertEqual(indice["simboli"]["🛏"], ["zenitale-letto-a"])
+        self.assertEqual(indice["simboli"]["🗿"], ["gothic_statue"])
+        self.assertNotIn("zenitale-statua-a", indice["tessere"])
 
     def _indice(self):
         return json.loads(B.INDICE.read_text(encoding="utf-8"))

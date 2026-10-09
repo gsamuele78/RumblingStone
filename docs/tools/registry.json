@@ -1628,7 +1628,7 @@
       "category": "B-maps-pipeline",
       "language": "python",
       "invocation": "python3 scripts/misura_resa.py --check",
-      "summary": "La resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara il confronto alla cieca per il DM e ne registra i voti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json; affianca mostra una mappa com'era a una revisione git e com'è sul disco, con la quota di pixel cambiati.",
+      "summary": "La resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara la pagina di scelta del DM (oggetti fra glifo e più fonti di tessere, terreni fra le texture; alla cieca o aperta, con «nessuna va bene» e «non vedo differenze», senza opzioni identiche) e ne registra i voti rivelando le fonti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json; affianca mostra una mappa com'era a una revisione git e com'è sul disco, con la quota di pixel cambiati.",
       "use_case": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»",
       "stability": "beta",
       "stdlib_only": false,
@@ -1654,10 +1654,12 @@
             "voti",
             "appresa",
             "tara",
-            "affianca"
+            "affianca",
+            "velature",
+            "terreni-scelta"
           ],
           "repeatable": false,
-          "desc": "glifi · candidati DIR · terreni · coppie DIR · voti voti.json · appresa B.json · tara · affianca MAPPA.svg -o out.png"
+          "desc": "glifi · candidati DIR · terreni · coppie DIR [--anche DIR2] · terreni-scelta DIR · voti voti.json · appresa B.json · tara · affianca MAPPA.svg -o out.png · velature MASTER.md -o out.png"
         },
         {
           "name": "--check",
@@ -1730,6 +1732,24 @@
           "choices": null,
           "repeatable": false,
           "desc": "candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check."
+        },
+        {
+          "name": "--anche",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "coppie: un'altra fonte di tessere da confrontare (ComfyUI accanto a CC0)."
+        },
+        {
+          "name": "--aperta",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "coppie, terreni-scelta: sotto ogni immagine la fonte e le misure, invece che alla cieca."
         }
       ],
       "inputs": [

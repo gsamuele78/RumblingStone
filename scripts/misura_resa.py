@@ -33,13 +33,18 @@ Le metriche apprese della community (LPIPS, DISTS, CLIP-IQA di `piq`, Apache-2.0
 vogliono pesi da scaricare: non girano qui né in CI. Si usano sulla macchina del
 DM come secondo parere, mai come cancello, perché sono tarate su fotografie e
 non su icone da 28 px. Il cancello vero è il confronto a coppie alla cieca del
-DM (`coppie`, `voti`), con la misura accanto.
+DM (`coppie`, `terreni-scelta`, `voti`), con la misura accanto. Ogni riquadro
+dice che cosa mostra; le opzioni identiche non entrano; «nessuna va bene» butta
+l'immagine per quel simbolo, «non vedo differenze» lascia ciò che costa meno.
 
     python3 scripts/misura_resa.py glifi                       # la scheda dei glifi
     python3 scripts/misura_resa.py candidati DIR               # tessere candidate contro i glifi
     python3 scripts/misura_resa.py terreni                     # pergamena contro texture
-    python3 scripts/misura_resa.py coppie DIR -o coppie.html   # il confronto alla cieca per il DM
-    python3 scripts/misura_resa.py voti voti.json              # registra le preferenze del DM
+    python3 scripts/misura_resa.py coppie DIR [--anche DIR2] -o scelta.html [--aperta]
+                                                               # la scelta del DM fra glifo e tessere
+    python3 scripts/misura_resa.py terreni-scelta DIR -o t.html [--aperta]
+                                                               # la scelta del DM fra le texture di un terreno
+    python3 scripts/misura_resa.py voti voti.json              # registra le scelte e rivela le fonti
     python3 scripts/misura_resa.py affianca MAPPA.svg -o a.png # la mappa com'era (HEAD) e com'è, affiancate
     python3 scripts/misura_resa.py velature MASTER.md -o v.png # la stessa mappa con più velature (D16)
     python3 scripts/misura_resa.py --aggiorna                  # riscrive la scheda committata
@@ -557,59 +562,266 @@ def confronta(glifi: dict, candidati: dict) -> dict:
     return out
 
 
-# --- il confronto alla cieca del DM ------------------------------------------------
+# --- la scelta del DM ---------------------------------------------------------------
+#
+# La prima pagina (2026-10-09) metteva due celle per riga, senza dire che cosa
+# fossero, e il DM ne ha trovate molte identiche: erano simboli che la legenda
+# tiene glifo (le chiusure, `tessera_cc0: false`) o senza webp, resi uguali da
+# tutte e due le parti. Scegliere fra due cose uguali non dice niente, e non
+# poter dire «nessuna» costringe a tenere una tessera cattiva. Adesso ogni
+# riquadro ha il suo nome, le opzioni identiche si tolgono e si dice perché, e
+# ci sono due risposte in più: «nessuna va bene» (l'immagine si butta per quel
+# simbolo) e «non vedo differenze» (resta quella che costa meno).
 
-PAGINA = """<!doctype html><meta charset="utf-8"><title>Confronto alla cieca</title>
-<style>body{{font-family:sans-serif;background:#efe4c9;margin:16px}}.c{{display:flex;gap:24px;
-align-items:center;margin:18px 0}}img{{width:252px;image-rendering:auto;border:1px solid #3b2e1e;cursor:pointer}}
-img.s{{outline:5px solid #2b7a3d}}</style>
-<h1>Quale si legge e sta meglio sulla mappa?</h1>
-<p>Clicca l'immagine che preferisci in ogni coppia. Non è detto quale sia il glifo.
-Alla fine scarica i voti e dalli a <code>misura_resa.py voti</code>.</p>{righe}
+PAGINA = """<!doctype html><meta charset="utf-8"><title>Scelta del DM</title>
+<style>body{{font-family:sans-serif;background:#efe4c9;color:#2a2116;margin:16px;max-width:1200px}}
+section{{border-top:2px solid #3b2e1e;margin:22px 0;padding-top:8px}}h2{{font-size:1.15em;margin:4px 0}}
+.o{{display:flex;flex-wrap:wrap;gap:18px}}figure{{margin:0}}img{{width:252px;border:1px solid #3b2e1e;cursor:pointer}}
+figcaption{{font-size:.9em;max-width:252px}}.s{{outline:5px solid #2b7a3d}}button{{margin:8px 8px 0 0;padding:6px 10px;cursor:pointer}}
+.n{{color:#6b5a40;font-size:.9em}}#conta{{position:sticky;top:0;background:#efe4c9;padding:6px 0;font-weight:bold}}</style>
+<h1>{titolo}</h1>
+<p>In ogni riquadro: <b>quale si legge e sta meglio sulla mappa?</b> Clicca l'immagine.
+Se <b>nessuna</b> va bene, dillo: quell'immagine si butta per quel simbolo e va rifatta.
+Se <b>non vedi differenze</b>, dillo: resta quella che costa meno (il glifo, o la texture di oggi).</p>
+<p class="n">{modo}</p>{saltate}
+<div id="conta"></div>{voci}
 <button onclick="salva()">Scarica voti.json</button>
-<script>const v={{}};function sc(i,l,el){{v[i]=l;document.querySelectorAll('[data-i="'+i+'"]')
-.forEach(e=>e.classList.remove('s'));el.classList.add('s')}}
-function salva(){{const b=new Blob([JSON.stringify({{seme:{seme},chiave:{chiave},voti:v}},null,1)],{{type:'application/json'}});
-const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='voti.json';a.click()}}</script>"""
+<script>const v={{}},N={n};function conta(){{document.getElementById('conta').textContent=
+'Scelte: '+Object.keys(v).length+' su '+N}}conta();
+function sc(i,o,el){{v[i]=o;document.querySelectorAll('[data-i="'+i+'"]').forEach(e=>e.classList.remove('s'));
+el.classList.add('s');conta()}}
+function salva(){{const b=new Blob([JSON.stringify({{versione:2,seme:{seme},chiave:{chiave},voti:v}},null,1)],
+{{type:'application/json'}});const a=document.createElement('a');a.href=URL.createObjectURL(b);
+a.download='voti.json';a.click()}}</script>"""
+
+LETTERE = "ABCDEFGH"
+RISPOSTE = {"nessuna": "Nessuna va bene", "uguali": "Non vedo differenze"}
 
 
-def coppie(glifi_celle: dict, cand_celle: dict, seme: int, chiave_p: Path | None = None) -> tuple[str, dict]:
-    """La pagina con le coppie in ordine e lato casuali (seme scritto), e la chiave.
-
-    La pagina scrive in `voti.json` **dove** sta la chiave, non la chiave: così
-    `voti` la ritrova anche quando il browser salva i voti in ~/Scaricati, e chi
-    guarda il sorgente della pagina non scopre quale lato è il glifo."""
+def _png_b64(cella) -> str:
     import base64
     import io
-    from PIL import Image
     import numpy as np
+    from PIL import Image
+    buf = io.BytesIO()
+    Image.fromarray((np.clip(cella, 0, 1) * 255).astype(np.uint8)).save(buf, "PNG")
+    return base64.b64encode(buf.getvalue()).decode()
+
+
+def uguali(a, b) -> bool:
+    """Due celle che a 8 bit non si distinguono: nessun pixel differisce di più di 2/255."""
+    import numpy as np
+    return a.shape == b.shape and float(np.abs(np.asarray(a) - np.asarray(b)).max()) <= 2 / 255
+
+
+def senza_doppioni(voce: dict) -> tuple[list[dict], list[str]]:
+    """Le opzioni distinte (vince la prima: il glifo, o la texture di oggi) e,
+    per ogni opzione tolta, il perché."""
+    tenute, note = [], []
+    for o in voce["opzioni"]:
+        gemella = next((t for t in tenute if uguali(t["img"], o["img"])), None)
+        if gemella is None:
+            tenute.append(o)
+        else:
+            note.append(f"«{o['etichetta']}» è identica a «{gemella['etichetta']}»")
+    return tenute, note
+
+
+def pagina_scelta(voci: list[dict], seme: int, chiave_p: Path | None = None, aperta: bool = False,
+                  titolo: str = "Quale si legge e sta meglio?") -> tuple[str, dict, list[str]]:
+    """La pagina, la chiave e l'elenco dei riquadri saltati, ognuno col perché.
+
+    `voci`: {"tipo": "oggetto" | "terreno", "simbolo", "ambiente", "titolo",
+    "opzioni": [{"valore", "etichetta", "img", "misure": str}], "nota": str}.
+    Riquadri e opzioni vanno in ordine casuale (seme scritto). Alla cieca la
+    pagina mostra solo le lettere, e le fonti si leggono dopo, quando `voti`
+    le rivela; `aperta` scrive sotto ogni immagine la fonte e le misure. La
+    pagina scrive in `voti.json` **dove** sta la chiave, non la chiave."""
     rnd = random.Random(seme)
-    chiave, righe = {}, []
-    voci = [(s, amb) for amb in cand_celle for s in cand_celle[amb]]
-    rnd.shuffle(voci)
-    for i, (s, amb) in enumerate(voci):
-        lati = [("glifo", glifi_celle[amb][s]), ("tessera", cand_celle[amb][s])]
-        rnd.shuffle(lati)
-        chiave[str(i)] = {"simbolo": s, "ambiente": amb, "sinistra": lati[0][0]}
-        imgs = []
-        for lato, (nome, cella) in zip(("s", "d"), lati):
-            buf = io.BytesIO()
-            Image.fromarray((cella * 255).astype(np.uint8)).save(buf, "PNG")
-            b64 = base64.b64encode(buf.getvalue()).decode()
-            imgs.append(f'<img data-i="{i}" onclick="sc(\'{i}\',\'{lato}\',this)" '
-                        f'src="data:image/png;base64,{b64}" alt="">')
-        righe.append(f'<div class="c"><b>{i + 1}</b>{"".join(imgs)}</div>')
-    return PAGINA.format(righe="".join(righe), seme=seme,
-                         chiave=json.dumps(str(chiave_p.resolve()) if chiave_p else "")), chiave
+    chiave, blocchi, saltate = {}, [], []
+    ordine = list(voci)
+    rnd.shuffle(ordine)
+    for voce in ordine:
+        tenute, note = senza_doppioni(voce)
+        if len(tenute) < 2:
+            saltate.append(f"{voce['titolo']}: " + ("; ".join(note) or "una sola opzione")
+                           + (f" — {voce['nota']}" if voce.get("nota") else ""))
+            continue
+        rnd.shuffle(tenute)
+        i = str(len(chiave))
+        chiave[i] = {"tipo": voce["tipo"], "simbolo": voce["simbolo"], "ambiente": voce.get("ambiente"),
+                     "titolo": voce["titolo"],
+                     "opzioni": {LETTERE[j]: o["valore"] for j, o in enumerate(tenute)},
+                     "etichette": {LETTERE[j]: o["etichetta"] for j, o in enumerate(tenute)}}
+        figure = []
+        for j, o in enumerate(tenute):
+            l = LETTERE[j]
+            sotto = f"<b>{l}</b>"
+            if aperta:
+                sotto += f" · {html.escape(o['etichetta'])}<br>{html.escape(o.get('misure', ''))}"
+            figure.append(f'<figure><img data-i="{i}" onclick="sc(\'{i}\',\'{l}\',this)" '
+                          f'src="data:image/png;base64,{_png_b64(o["img"])}" alt="{l}">'
+                          f"<figcaption>{sotto}</figcaption></figure>")
+        bottoni = "".join(f'<button data-i="{i}" onclick="sc(\'{i}\',\'{k}\',this)">{v}</button>'
+                          for k, v in RISPOSTE.items())
+        nota = "; ".join(note + ([voce["nota"]] if voce.get("nota") else []))
+        blocchi.append(f'<section><h2>{len(chiave)}. {html.escape(voce["titolo"])}</h2>'
+                       + (f'<p class="n">Tolte perché uguali: {html.escape(nota)}</p>' if note else "")
+                       + f'<div class="o">{"".join(figure)}</div>{bottoni}</section>')
+    modo = ("Pagina aperta: sotto ogni immagine la fonte e le misure."
+            if aperta else "Alla cieca: le fonti le dice `misura_resa.py voti` dopo che hai scelto.")
+    lista = ("<details><summary>Non in pagina: " + str(len(saltate)) + " riquadri senza due opzioni diverse"
+             "</summary><ul>" + "".join(f"<li>{html.escape(s)}</li>" for s in saltate)
+             + "</ul></details>") if saltate else ""
+    pagina = PAGINA.format(titolo=html.escape(titolo), modo=modo, saltate=lista, voci="".join(blocchi),
+                           n=len(chiave), seme=seme,
+                           chiave=json.dumps(str(chiave_p.resolve()) if chiave_p else ""))
+    return pagina, {"versione": 2, "seme": seme, "voci": chiave}, saltate
+
+
+def _nome(simbolo: str) -> str:
+    from dmcore import legenda
+    return legenda.simboli().get(simbolo, {}).get("it") or R.SYMBOLS.get(simbolo, {}).get("label", "")
+
+
+def _misure_testo(m: dict) -> str:
+    out = [f"contrasto {m['contrasto']}:1", f"bordo {m['bordo']}"]
+    if "delta_e_tavolozza" in m:
+        out.append(f"ΔE tavolozza {m['delta_e_tavolozza']}")
+    return " · ".join(out)
+
+
+def voci_oggetti(fonti: list[Path], browser: str, lib, tavolozza=None) -> list[dict]:
+    """Un riquadro per simbolo e ambiente: il glifo e la tessera di ogni fonte.
+    Una fonte che non ha il simbolo, o che lo rende come glifo (la legenda lo
+    tiene glifo), non entra: sarebbe una copia del glifo."""
+    import build_oggetti_cc0 as B
+    np = lib[0]
+    sim = simboli_oggetto()
+    vuoto = REPO / "nessuna-tessera"
+    gc = {a: banco(sim, "texture", a, browser, np, vuoto) for a in TERRENI_BANCO}
+    per_fonte = []
+    for d in fonti:
+        ind = json.loads((d / "indice.json").read_text(encoding="utf-8"))
+        per_fonte.append((d, ind, {a: banco(sim, "texture", a, browser, np, d) for a in TERRENI_BANCO}))
+
+    def misure(cel, s):
+        return _misure_testo(misura_cella(cel[s], cel["_fondo"][s], tavolozza, lib, cel["_figura"][s]))
+    voci = []
+    for amb in TERRENI_BANCO:
+        for s in sim:
+            opz = [{"valore": "glifo", "etichetta": "glifo (com'è oggi)", "img": gc[amb][s],
+                    "misure": misure(gc[amb], s)}]
+            note = []
+            for d, ind, cc in per_fonte:
+                if s not in ind.get("simboli", {}):
+                    continue
+                if R.resta_glifo(s):
+                    note.append(f"{B.fonte_di(d, s)}: la legenda lo tiene glifo")
+                    continue
+                if not any((d / f"{k}.webp").exists() for k in ind["simboli"][s]):
+                    note.append(f"{d.name}: l'indice lo nomina ma manca il webp")
+                    continue
+                f = B.fonte_di(d, s)
+                if any(o["valore"] == f"tessera:{f}" for o in opz):
+                    note.append(f"{d.name}: anche questa è «{f}», confrontala in un'altra pagina")
+                    continue
+                opz.append({"valore": f"tessera:{f}", "etichetta": f"{f} ({d.name})", "img": cc[amb][s],
+                            "misure": misure(cc[amb], s)})
+            if len(opz) > 1 or note:
+                voci.append({"tipo": "oggetto", "simbolo": s, "ambiente": amb,
+                             "titolo": f"{s} {_nome(s)} — su {'pavimento (interni)' if amb == 'interni' else 'erba (esterno)'}",
+                             "opzioni": opz, "nota": "; ".join(note)})
+    return voci
+
+
+def _pezza(t: str, u: str, browser: str, lib, mappa: dict, immagini: dict):
+    """Otto colonne per quattro: a sinistra il terreno t, a destra u, il vicino
+    con cui si confonde. Una texture si giudica lì, sul confine."""
+    np = lib[0]
+    # una colonna e una riga in più, fuori dal ritaglio: lì il renderer disegna la rosa dei venti
+    corpo = ["## T", "", "```", "COL →  " + " ".join(R.col_label(i) for i in range(10))]
+    corpo += [f"{i:02d}    " + t * 4 + u * 6 for i in range(1, 7)]
+    corpo += ["", "@north N", "@tipo tattica interni", "```", ""]
+    vecchio = R._texture_cc0
+    R._texture_cc0 = lambda: (mappa, immagini)
+    try:
+        img = _raster(R.render_svg(R.extract_maps("\n".join(corpo))[0], "t.md", "texture"), browser, np)
+    finally:
+        R._texture_cc0 = vecchio
+    return np.concatenate([np.concatenate([_cella(img, c, r) for c in range(8)], axis=1)
+                           for r in range(2, 6)], axis=0)
+
+
+def voci_terreni(candidati: Path, browser: str, lib) -> list[dict]:
+    """Un riquadro per ogni terreno con candidati: la texture di oggi, ogni
+    candidata e nessuna texture (la tinta della pergamena), ognuna accanto al
+    terreno con cui oggi si confonde di più, con il ΔE da quel terreno."""
+    import base64
+    color = lib[1]
+    ind = json.loads((candidati / "indice.json").read_text(encoding="utf-8"))
+    terreni_map, immagini = R._texture_cc0()
+    extra = {tid: base64.b64encode((candidati / f"{tid}.webp").read_bytes()).decode("ascii")
+             for tid in ind.get("texture", {}) if (candidati / f"{tid}.webp").exists()}
+    tutte = {**immagini, **extra}
+    terreni = sorted({k.split("@")[0] for k in terreni_map})
+    vecchio = R._texture_cc0
+
+    def media(t, mappa):
+        R._texture_cc0 = lambda: (mappa, tutte)
+        try:
+            return _media_terreno(t, "texture", browser, lib)
+        finally:
+            R._texture_cc0 = vecchio
+    medie = {t: media(t, terreni_map) for t in terreni}
+    voci = []
+    for t, ids in ind.get("candidati", {}).items():
+        if t not in terreni:
+            continue
+        dist = {u: float(color.deltaE_ciede2000(medie[t], medie[u])) for u in terreni if u != t}
+        u = min(dist, key=dist.get)
+        prove = [(f"texture:{terreni_map[t]}", f"oggi: {terreni_map[t]}", dict(terreni_map))]
+        prove += [(f"texture:{tid}", tid, {**terreni_map, t: tid}) for tid in ids if tid in extra]
+        prove.append(("senza", "senza texture: la tinta della pergamena",
+                      {k: v for k, v in terreni_map.items() if k.split("@")[0] != t}))
+        opz = []
+        for valore, etichetta, mappa in prove:
+            de = float(color.deltaE_ciede2000(media(t, mappa), medie[u]))
+            opz.append({"valore": valore, "etichetta": etichetta,
+                        "img": _pezza(t, u, browser, lib, mappa, tutte),
+                        "misure": f"ΔE da {u} {de:.2f} (sotto 2,3 l'occhio non li separa)"})
+        voci.append({"tipo": "terreno", "simbolo": t, "ambiente": None,
+                     "titolo": f"{t} {_nome(t)} (a sinistra), accanto a {u} {_nome(u)} (a destra)",
+                     "opzioni": opz})
+    return voci
 
 
 def registra_voti(voti: dict, chiave: dict) -> dict:
-    """{simbolo: {ambiente: «glifo» o «tessera»}}: chi ha preferito il DM."""
-    out = {}
-    for i, lato in voti.get("voti", {}).items():
-        k = chiave[i]
-        scelto = k["sinistra"] if lato == "s" else ("tessera" if k["sinistra"] == "glifo" else "glifo")
-        out.setdefault(k["simbolo"], {})[k["ambiente"]] = scelto
+    """{"oggetti": {simbolo: {ambiente: scelta}}, "terreni": {simbolo: scelta},
+    "rivelate": [righe]}. La scelta è «glifo», «tessera:<fonte>», «texture:<id>»,
+    «senza», «nessuna» o «uguali». Le chiavi della prima pagina (due lati, s/d)
+    valgono ancora e danno «glifo» o «tessera»."""
+    out = {"oggetti": {}, "terreni": {}, "rivelate": []}
+    if chiave.get("versione") != 2:
+        for i, lato in voti.get("voti", {}).items():
+            k = chiave[i]
+            scelto = k["sinistra"] if lato == "s" else ("tessera" if k["sinistra"] == "glifo" else "glifo")
+            out["oggetti"].setdefault(k["simbolo"], {})[k["ambiente"]] = scelto
+        return out
+    for i, scelta in voti.get("voti", {}).items():
+        k = chiave["voci"].get(i)
+        if k is None:
+            continue
+        valore = k["opzioni"].get(scelta) or (scelta if scelta in RISPOSTE else None)
+        if valore is None:
+            continue
+        if k["tipo"] == "oggetto":
+            out["oggetti"].setdefault(k["simbolo"], {})[k["ambiente"]] = valore
+        else:
+            out["terreni"][k["simbolo"]] = valore
+        rivela = " · ".join(f"{l} = {e}" for l, e in k["etichette"].items())
+        detto = RISPOSTE.get(scelta, f"{scelta} ({k['etichette'].get(scelta)})")
+        out["rivelate"].append(f"{k['titolo']}: {detto}   [{rivela}]")
     return out
 
 
@@ -736,11 +948,42 @@ def _voti(args) -> int:
         print("✗ la chiave delle coppie non si trova (cercata in "
               f"{', '.join(map(str, candidati))}): rigenera la pagina con `coppie`", file=sys.stderr)
         return 1
-    pref = registra_voti(voti, json.loads(chiave_p.read_text(encoding="utf-8")))
+    esito = registra_voti(voti, json.loads(chiave_p.read_text(encoding="utf-8")))
     scheda = json.loads(SCHEDA.read_text(encoding="utf-8")) if SCHEDA.exists() else {}
-    scheda.setdefault("preferenze_dm", {}).update(pref)
+    for s, per_amb in esito["oggetti"].items():
+        scheda.setdefault("preferenze_dm", {}).setdefault(s, {}).update(per_amb)
+    if esito["terreni"]:
+        scheda.setdefault("preferenze_terreni", {}).update(esito["terreni"])
     SCHEDA.write_text(json.dumps(scheda, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"✓ {len(pref)} simboli con la preferenza del DM in {SCHEDA.relative_to(REPO)}")
+    if esito["rivelate"]:
+        print("Che cosa c'era dietro le lettere:")
+        for r in esito["rivelate"]:
+            print(f"  {r}")
+    print(f"✓ {len(esito['oggetti'])} simboli e {len(esito['terreni'])} terreni con la scelta del DM "
+          f"in {SCHEDA.relative_to(REPO)}")
+    for t, v in esito["terreni"].items():
+        if v.startswith("texture:"):
+            print(f"  {t}: in TEXTURE di build_texture_cc0.py → (\"{t}\", \"{v.split(':', 1)[1]}\")")
+        elif v in ("senza", "nessuna"):
+            print(f"  {t}: togli la sua riga da TEXTURE (resta la tinta)"
+                  + (" e cerca altre candidate: build_texture_cc0.py --cerca …" if v == "nessuna" else ""))
+    if esito["oggetti"]:
+        print("Poi: python3 scripts/build_oggetti_cc0.py --adotta [DIR]   (per ogni fonte provata)")
+    if esito["terreni"]:
+        print("Poi: python3 scripts/build_texture_cc0.py && python3 scripts/build_texture_cc0.py --check")
+    return 0
+
+
+def _scrivi_pagina(args, voci: list[dict], titolo: str) -> int:
+    dest = args.uscita or Path("scelta.html")
+    chiave_p = dest.with_suffix(".chiave.json")
+    pagina, chiave, saltate = pagina_scelta(voci, args.seme, chiave_p, args.aperta, titolo)
+    dest.write_text(pagina, encoding="utf-8")
+    chiave_p.write_text(json.dumps(chiave, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"✓ {dest}: {len(chiave['voci'])} riquadri da scegliere, chiave in {chiave_p}")
+    for s in saltate:
+        print(f"  ○ non in pagina: {s}")
+    print(f"Apri la pagina, scegli, «Scarica voti.json», poi: python3 scripts/misura_resa.py voti <voti.json>")
     return 0
 
 
@@ -748,11 +991,15 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
     ap.add_argument("azione", nargs="?",
                     choices=["glifi", "candidati", "terreni", "coppie", "voti", "appresa", "tara",
-                             "affianca", "velature"])
+                             "affianca", "velature", "terreni-scelta"])
     ap.add_argument("percorso", nargs="?", type=Path,
                     help="candidati e coppie: la cartella con indice.json e i webp; voti: voti.json")
     ap.add_argument("-o", "--uscita", type=Path, help="dove scrivere il JSON o la pagina")
-    ap.add_argument("--seme", type=int, default=2026, help="l'ordine delle coppie (coppie)")
+    ap.add_argument("--seme", type=int, default=2026, help="coppie, terreni-scelta: l'ordine dei riquadri")
+    ap.add_argument("--anche", type=Path, action="append", default=[], metavar="DIR",
+                    help="coppie: un'altra fonte di tessere da mettere a confronto (ComfyUI accanto a CC0)")
+    ap.add_argument("--aperta", action="store_true",
+                    help="coppie, terreni-scelta: sotto ogni immagine la fonte e le misure (non alla cieca)")
     ap.add_argument("--celle", type=Path, help="glifi, candidati: scrive anche le celle in PNG per il livello B")
     ap.add_argument("--candidati", type=Path,
                     help="tara: la cartella delle texture candidate (build_texture_cc0.py --candidati)")
@@ -817,18 +1064,24 @@ def main(argv=None) -> int:
                     {s: {a: v["verdetto"] for a, v in amb.items()} for s, amb in out.items()})
                 SCHEDA.write_text(json.dumps(scheda, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         else:
-            sim = simboli_oggetto()
-            gc = {a: banco(sim, "texture", a, browser, lib[0], REPO / "nessuna-tessera") for a in TERRENI_BANCO}
-            cc = {a: banco(sim, "texture", a, browser, lib[0], args.percorso) for a in TERRENI_BANCO}
-            ind = json.loads((args.percorso / "indice.json").read_text(encoding="utf-8"))
-            cand = {a: {s: cc[a][s] for s in ind.get("simboli", {}) if s in cc[a]} for a in cc}
-            dest = args.uscita or Path("coppie.html")
-            pagina, chiave = coppie(gc, cand, args.seme, dest.with_suffix(".chiave.json"))
-            dest.write_text(pagina, encoding="utf-8")
-            dest.with_suffix(".chiave.json").write_text(json.dumps(chiave, ensure_ascii=False, indent=1),
-                                                        encoding="utf-8")
-            print(f"✓ {dest} ({len(chiave)} coppie) e la chiave in {dest.with_suffix('.chiave.json')}")
-            return 0
+            fonti = [args.percorso] + list(args.anche)
+            manca = [d for d in fonti if not (d / "indice.json").exists()]
+            if manca:
+                print(f"✗ senza indice.json: {', '.join(map(str, manca))}", file=sys.stderr)
+                return 2
+            voci = voci_oggetti(fonti, browser, lib, base)
+            return _scrivi_pagina(args, voci, "Quale si legge e sta meglio sulla mappa?")
+    elif args.azione == "terreni-scelta":
+        cand = args.percorso or args.candidati
+        if not cand or not (cand / "indice.json").exists():
+            print("✗ serve la cartella delle texture candidate (build_texture_cc0.py --candidati), "
+                  "con indice.json", file=sys.stderr)
+            return 2
+        if R._texture_cc0() is None:
+            print("✗ le texture di oggi non ci sono: python3 scripts/build_texture_cc0.py", file=sys.stderr)
+            return 1
+        return _scrivi_pagina(args, voci_terreni(cand, browser, lib),
+                              "Quale texture separa meglio i due terreni?")
     elif args.azione == "tara" and args.candidati:
         esito = scegli_texture(browser, lib, args.candidati)
         for t, e in esito.items():

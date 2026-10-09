@@ -64,8 +64,11 @@ are **generated artifacts — never hand-edit them**. CI
    glyph stays. The parchment keeps every glyph. **A substitution enters only
    if measured and preferred** (ADR-0086, D23): `misura_resa.py` (contour
    contrast WCAG 1.4.11, SSIM to the nearest symbol, ΔE2000 to the house
-   palette) must not get worse, and the DM must prefer it in a blind pairwise
-   test (`misura_resa.py coppie`, `voti`); `misura_resa.py --check` in CI
+   palette) must not get worse, and the DM must choose it on the choice page
+   (`misura_resa.py coppie [--anche DIR]` for objects, `terreni-scelta` for
+   terrain textures, then `voti`): every box is labelled, identical options are
+   dropped and said, «nessuna va bene» throws the image away for that symbol and
+   «non vedo differenze» keeps the cheaper one; `misura_resa.py --check` in CI
    blocks any rendering measure that drops more than 5%, and `misura_resa.py
    tara` retunes halo and per-terrain veil of the texture theme. 2-Minute Tabletop is an optional extra for
    the DM's own table: the packs live outside git (`asset-esterni/`,

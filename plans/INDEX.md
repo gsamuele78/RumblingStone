@@ -233,6 +233,8 @@
 - ✅ _(V2-quater, 2026-10-08 sera: `dmcore/chiusure.py` dà l'asse di porte, grate e sbarre a collaudo, renderer ed export UVTT (36 porte disegnate e 13 portali UVTT raddrizzati, 13 SVG rigenerati), `@verso` per i casi ambigui; Wesnoth solo come idea; `tcod` obbligatoria nel collaudo e M4 esatta; D13-D16, ADR-0083 e ADR-0084)_
 - ⬜ _(le 2 porte ambigue del Portale aspettano un `@verso` del DM, in V3 con le 27 porte senza muro)_
 - ✅ _(V2 `@tipo` con l'ambiente, D18, nella #227 (`69930a2`): oggi 50 mappe su 50 con la categoria)_
+- ✅ _(M7-C corretta il 2026-10-09 sui 18 rilievi del collaudatore (D29 di RESA-ASSET): 0 errori, 0 avvisi; il contratto JSON porta tattiche, evoluzione, note e taglie, e `test_master_generati.py` boccia un master generato toccato a mano)_
+- ✅ _(PF-4 e Campo Drow 1 completati il 2026-10-09 (D30): le griglie hanno le dimensioni che dichiarano; righe ricostruite `[PROPOSTA]`; D12 di RICERCA-MESTIERE chiusa)_
 - ⬜ _(V3 in avanti; il collaudo del 2026-10-09 dà 50 mappe, 90 errori, 75 avvisi. Lo stato di ogni voce, con la prova, in §8 del piano)_
 - ⬜ _(V3 tocca mappe giocate: simbolo e non posizione, conferma del DM mappa per mappa)_
 
@@ -241,6 +243,7 @@
 - ✅ _(R4 l'installatore di 2-Minute Tabletop, D9 · R5 le sei griglie dell'assedio di Dauth e la scheda della pianta, D10 · R4-bis il tema texture CC0, 11 texture e 53 SVG, velatura 0,30, D13-D16: tutti nella #227, `f40ffeb`)_
 - ✅ _(R4-ter, il codice, 2026-10-09: `build_oggetti_cc0.py`, la scena Blender, il renderer con tessera o glifo, il muretto orientabile, la fiammella sul braciere, 26 test, guida §5.1.1, secondo emendamento di ADR-0085; D19-D22 decise)_
 - 🟡 _(R8 la resa misurata e R4-quinquies ComfyUI in prova, D23-D26, ADR-0086, 2026-10-09: `misura_resa.py` con il cancello in CI, il confronto alla cieca del DM, la taratura del tema texture; ComfyUI installabile su Debian con `COMFYUI_DIR` e i pesi verificati, `--adotta` dopo i voti, la trafila da zero in GUIDA-MAPPE §5.1.2; il recupero di ciò che le sessioni avevano usato senza salvarlo (`velature`, `affianca`, `--cerca`, `gate_locale.py`, `test_blender_vero.py`; STATO §2-ter); le tessere dal DM)_
+- ✅ _(D28, 2026-10-09: la pagina di scelta del DM al posto delle coppie alla cieca: riquadri con il nome, opzioni identiche tolte, «nessuna va bene» e «non vedo differenze», più fonti a confronto (CC0 e ComfyUI), i terreni con `terreni-scelta`; i due `--check` fanno valere la scelta)_
 - ⬜ _(R4-ter dal DM: il giro di prova sui modelli veri e il confronto su M7-D e sul cortile di ARC07, poi tutti i modelli; lo zip Standard di Quaternius · R4 la tabella `simbolo → file`, se il DM scarica il pacchetto · R5 la pianta di Dauth da Watabou, i tre `[INFERRED]` delle griglie, l'importatore solo con esportazioni vere · R6 Azgaar in attesa (D11) · R7 in V3 di COLLAUDO-MAPPE)_
 
 ### PIANO-EDITOR-VISUALE-MAPPE

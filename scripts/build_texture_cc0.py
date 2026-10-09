@@ -84,6 +84,25 @@ CANDIDATI: dict[str, tuple[str, ...]] = {
     "⬛": ("clay_roof_tiles", "red_slate_roof_tiles_01", "thatch_roof_angled"),
 }
 CARTELLA_CANDIDATI = RADICE.parent / "asset-esterni" / "texture-candidate"
+SCHEDA_RESA = RADICE / "scheda-resa.json"
+
+
+def contro_le_scelte(texture=TEXTURE, scheda: Path | None = None) -> list[str]:
+    """Dove TEXTURE contraddice la scelta del DM (`misura_resa.py terreni-scelta`,
+    poi `voti`): una texture scelta che non c'è, o una texture su un terreno per
+    cui il DM ha detto «senza» o «nessuna va bene». «Non vedo differenze» lascia
+    quella di oggi, e non obbliga a niente."""
+    p = scheda or SCHEDA_RESA
+    scelte = json.loads(p.read_text(encoding="utf-8")).get("preferenze_terreni", {}) if p.exists() else {}
+    attuali = {k: v for k, v in texture if "@" not in k}
+    errori = []
+    for t, v in scelte.items():
+        if v.startswith("texture:") and attuali.get(t) != v.split(":", 1)[1]:
+            errori.append(f"{t}: il DM ha scelto {v.split(':', 1)[1]}, TEXTURE dice {attuali.get(t)}")
+        elif v in ("senza", "nessuna") and t in attuali:
+            errori.append(f"{t}: il DM ha detto «{v}», ma TEXTURE gli dà ancora {attuali[t]}"
+                          + (": togli la riga e cerca altre candidate (--cerca)" if v == "nessuna" else ""))
+    return errori
 
 
 def _ids() -> list[str]:
@@ -202,7 +221,7 @@ def controlla() -> int:
               "Il tema texture non c'è, la pergamena sì: python3 scripts/build_texture_cc0.py")
         return 0
     indice = json.loads(INDICE.read_text(encoding="utf-8"))
-    errori = []
+    errori = contro_le_scelte()
     if indice.get("terreni") != {k: i for k, i in TEXTURE}:
         errori.append("l'indice non elenca i terreni di TEXTURE: rigenera")
     for tid in _ids():

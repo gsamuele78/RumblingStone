@@ -574,7 +574,8 @@ def controlla() -> int:
             errori.append(f"{k}: il modello d'origine non è stato verificato contro la fonte")
         if voce.get("fonte") == "Quaternius" and voce.get("zip_sha256") != QUATERNIUS_ZIP_SHA256:
             errori.append(f"{k}: viene da uno zip Quaternius diverso da quello fissato")
-    errori += approvazioni(indice)
+    for s in indice.get("simboli", {}):
+        errori += approvazioni({"simboli": {s: []}}, fonte_di(USCITA, s))
     for e in errori:
         print(f"✗ build_oggetti_cc0: {e}")
     if not errori:
@@ -601,7 +602,7 @@ def adotta(cartella: Path | None = None) -> int:
     ind_s = json.loads((sorgente / "indice.json").read_text(encoding="utf-8"))
     tenuti, scartati = [], {}
     for s in ind_s.get("simboli", {}):
-        errori = approvazioni({"simboli": {s: []}})
+        errori = approvazioni({"simboli": {s: []}}, fonte_di(sorgente, s))
         (scartati.__setitem__(s, errori) if errori else tenuti.append(s))
 
     def _sue(ind, s):
@@ -638,17 +639,41 @@ def adotta(cartella: Path | None = None) -> int:
         print("\nAggiungi a GENERATE in build_oggetti_cc0.py (o incolla queste righe nella chat):")
         for s, k in nuove:
             print(f'    ("{s}", "{k}"),')
+    rifare = [s for s in da_rifare() if s in ind_s.get("simboli", {})]
+    if rifare:
+        print(f"\nDa rifare, perché nessuna andava bene: {' '.join(rifare)}. Una nuova immagine "
+              "(comfyui_batch.py --solo …) o un altro modello CC0, poi misura_resa.py coppie di nuovo.")
     print("\nPoi: python3 scripts/dm.py maps texture && python3 scripts/build_oggetti_cc0.py --check")
     return 0
 
 
-def approvazioni(indice: dict) -> list[str]:
+def fonte_di(cartella: Path, simbolo: str) -> str:
+    """La fonte di un simbolo in una cartella di tessere, come la scrive la
+    pagina di scelta e come la cerca `adotta`: quella dichiarata dalle sue
+    tessere (Poly Haven, Quaternius, ComfyUI), o il nome della cartella se non
+    la dichiarano. Non dipende dalla cartella quando c'è: una tessera ComfyUI
+    adottata in `scripts/oggetti-cc0/` resta ComfyUI."""
+    try:
+        ind = json.loads((cartella / "indice.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        ind = {}
+    fonti = {ind.get("tessere", {}).get(k, {}).get("fonte") for k in ind.get("simboli", {}).get(simbolo, [])}
+    fonti.discard(None)
+    return " + ".join(sorted(fonti)) if fonti else cartella.resolve().name
+
+
+def approvazioni(indice: dict, fonte: str | None = None) -> list[str]:
     """D23: una tessera sostituisce un glifo solo se la misura non la boccia
     (`misura_resa.py candidati --registra`) e il DM l'ha preferita al glifo nel
-    confronto alla cieca (`misura_resa.py voti`), in ogni ambiente provato."""
+    confronto (`misura_resa.py coppie`, `voti`), in ogni ambiente provato. Con
+    `fonte`, la tessera preferita dev'essere proprio di quella fonte: chi ha
+    scelto ComfyUI non ha approvato la tessera CC0 dello stesso simbolo."""
     scheda = json.loads(SCHEDA_RESA.read_text(encoding="utf-8")) if SCHEDA_RESA.exists() else {}
     verdetti, pref = scheda.get("candidati", {}), scheda.get("preferenze_dm", {})
     errori = []
+
+    def presa(x: str) -> bool:
+        return x == "tessera" or (x.startswith("tessera:") and (fonte is None or x == f"tessera:{fonte}"))
     for s in indice.get("simboli", {}):
         v, d = verdetti.get(s, {}), pref.get(s, {})
         if not v:
@@ -656,10 +681,22 @@ def approvazioni(indice: dict) -> list[str]:
         elif any(x == "perde" for x in v.values()):
             errori.append(f"{s}: la misura la boccia contro il glifo ({v})")
         if not d:
-            errori.append(f"{s}: il DM non l'ha ancora confrontata alla cieca (misura_resa.py coppie, voti)")
-        elif any(x != "tessera" for x in d.values()):
-            errori.append(f"{s}: il DM ha preferito il glifo ({d})")
+            errori.append(f"{s}: il DM non l'ha ancora confrontata (misura_resa.py coppie, voti)")
+        elif any(x == "nessuna" for x in d.values()):
+            errori.append(f"{s}: per il DM nessuna va bene ({d}): la tessera si butta; rifalla "
+                          "(comfyui_batch.py) o cercane un'altra, poi un nuovo confronto")
+        elif any(x == "uguali" for x in d.values()):
+            errori.append(f"{s}: il DM non vede differenze ({d}): resta il glifo, che costa meno")
+        elif not all(presa(x) for x in d.values()):
+            chi = "il glifo" if "glifo" in d.values() else "la tessera di un'altra fonte"
+            errori.append(f"{s}: il DM ha preferito {chi} ({d})")
     return errori
+
+
+def da_rifare() -> list[str]:
+    """I simboli per cui il DM ha detto «nessuna va bene»: si butta l'immagine e si rifà."""
+    scheda = json.loads(SCHEDA_RESA.read_text(encoding="utf-8")) if SCHEDA_RESA.exists() else {}
+    return sorted(s for s, d in scheda.get("preferenze_dm", {}).items() if "nessuna" in d.values())
 
 
 def misura_stile(cartella: Path | None = None) -> dict[str, dict]:

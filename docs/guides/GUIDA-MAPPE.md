@@ -369,17 +369,17 @@ python3 scripts/export_map_png.py '07_il Portale Della Forgia Eterna/Mappe/rende
 .venv/bin/python scripts/build_oggetti_cc0.py
 python3 scripts/dm.py maps texture
 
-# 5) prima del commit il confronto alla cieca (D23): senza i tuoi voti --check
+# 5) prima del commit la tua scelta (D23): senza i tuoi voti --check
 #    boccia ogni tessera. I passi esatti sono in §5.1.2, «Da zero, in ordine»
 python3 scripts/misura_resa.py candidati scripts/oggetti-cc0 --registra
-python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/coppie-cc0.html
+python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/scelta.html
 python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
 python3 scripts/build_oggetti_cc0.py --adotta          # tiene solo le preferite
 python3 scripts/dm.py maps texture
 
 # 6) controlli e commit: tessere, indice e i gemelli texture rigenerati
 python3 scripts/build_oggetti_cc0.py --check && python3 scripts/validate_maps.py
-git add scripts/oggetti-cc0 scripts/scheda-resa.json
+git add scripts/oggetti-cc0 scripts/scheda-resa.json scripts/texture-cc0
 git add -- '*rendered-texture/*.svg'
 git commit -m "RESA-ASSET R4-ter: le tessere degli oggetti di scena"
 ```
@@ -404,7 +404,7 @@ modelli fissati, lo scaricamento si ferma e lo dice.
 
 Una tessera nuova (da un modello CC0, da ComfyUI) o una texture prende il posto
 di un glifo o di un terreno solo se **la misura non la boccia** e **tu la
-preferisci in un confronto alla cieca** (D23). Lo strumento è
+preferisci nella pagina di scelta** (D23). Lo strumento è
 `scripts/misura_resa.py`: posa ogni simbolo su un banco di prova reso dal
 renderer vero, nei due temi e su due terreni, e misura cella per cella.
 
@@ -423,8 +423,8 @@ python3 scripts/misura_resa.py --aggiorna         # dopo un cambiamento voluto: 
 
 # una cartella di tessere candidate (con indice.json) contro i glifi
 python3 scripts/misura_resa.py candidati CAND --registra
-# il confronto alla cieca: apri coppie.html, scegli, scarica voti.json
-python3 scripts/misura_resa.py coppie CAND -o /tmp/coppie.html
+# la scelta: apri la pagina, scegli in ogni riquadro, scarica voti.json
+python3 scripts/misura_resa.py coppie CAND [--anche CAND2] -o /tmp/scelta.html [--aperta]
 python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
 
 # il tema texture si ritara da solo quando cambiano texture o renderer
@@ -438,6 +438,26 @@ python3 scripts/build_texture_cc0.py --cerca roof slate
 .venv/bin/python scripts/build_texture_cc0.py --candidati
 python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
 ```
+
+**La pagina di scelta.** Ogni riquadro dice che cosa mostra: il simbolo, il
+suo nome nella legenda e il terreno su cui è posato (per i terreni, il terreno
+a sinistra e quello con cui si confonde a destra). Le opzioni identiche non
+entrano, e la pagina dice quali ha tolto e perché: un simbolo che la legenda
+tiene glifo, o una tessera senza webp, sarebbe la copia del glifo. Oltre alle
+immagini ci sono due risposte:
+
+- **Nessuna va bene**: quell'immagine si butta per quel simbolo. `--adotta` la
+  toglie, e la elenca fra quelle da rifare (un'altra immagine di ComfyUI, un
+  altro modello CC0); per un terreno, `--check` vuole che la texture sparisca
+  da `TEXTURE` finché non se ne trova un'altra.
+- **Non vedo differenze**: resta quella che costa meno, il glifo o la texture
+  di oggi.
+
+Con `--anche` la stessa pagina mette a confronto più fonti, per esempio le
+tessere CC0 e quelle di ComfyUI accanto al glifo: è così che si vede se
+ComfyUI migliora qualcosa. Alla cieca le immagini hanno solo una lettera, e le
+fonti le rivela `voti` dopo che hai scelto; con `--aperta` la fonte e le misure
+stanno sotto ogni immagine, per quando vuoi capire e non giudicare.
 
 Il **secondo parere** (D26) sono le metriche apprese della community: CLIP-IQA,
 LPIPS e DISTS di `piq`. Girano sulla tua macchina, perché vogliono torch e pesi
@@ -459,7 +479,7 @@ inchiostro e acquerello, lo stile della casa, su sfondo bianco:
 python3 scripts/comfyui_batch.py --prompts plans/esperimenti/oggetti-cc0-2026-10/comfyui/PROMPT-OGGETTI-ZENITALI.md --serie tutto --out asset-esterni/oggetti-comfyui
 python3 scripts/build_oggetti_cc0.py --da-immagini asset-esterni/oggetti-comfyui --variante a -o /tmp/cand-comfyui-a
 python3 scripts/misura_resa.py candidati /tmp/cand-comfyui-a --registra
-python3 scripts/misura_resa.py coppie /tmp/cand-comfyui-a -o /tmp/coppie-comfyui.html
+python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 --anche /tmp/cand-comfyui-a -o /tmp/scelta.html
 ```
 
 **Da zero, in ordine.** Tutto quello che tocca a te, sulla tua macchina, dal
@@ -478,19 +498,20 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 python3 scripts/dm.py doctor   # deve trovare un Chromium o Chrome
 .venv/bin/pip install bpy      # solo con Python 3.13; altrimenti --blender, §5.1.1
 
-# 3) le texture dei terreni che si confondono (D27): scarica, misura, scegli
+# 3) le texture dei terreni che si confondono (D27): scarica, misura, scegli tu
 .venv/bin/python scripts/build_texture_cc0.py --candidati
-python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
-#    incolla l'uscita nella chat: la scelta entra in TEXTURE con una PR
+python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate   # la misura propone
+python3 scripts/misura_resa.py terreni-scelta asset-esterni/texture-candidate -o /tmp/terreni.html
+#    apri /tmp/terreni.html: per ogni terreno la texture di oggi, le candidate e
+#    «senza texture», ognuna accanto al terreno con cui si confonde; scarica voti.json
+python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
+#    voti dice che riga mettere in TEXTURE (o togliere); build_texture_cc0 --check la fa valere
 
-# 4) gli oggetti CC0: giro di prova, misura, confronto alla cieca, adozione (§5.1.1)
+# 4) gli oggetti CC0: giro di prova e misura (§5.1.1); la scelta la fai al passo 6,
+#    insieme alle icone di ComfyUI, oppure subito senza --anche se ComfyUI non c'è
 .venv/bin/python -m pytest -q scripts/tests/test_blender_vero.py   # prima: la scena gira?
 .venv/bin/python scripts/build_oggetti_cc0.py --prova
 python3 scripts/misura_resa.py candidati scripts/oggetti-cc0 --registra
-python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/coppie-cc0.html
-#    apri /tmp/coppie-cc0.html, scegli coppia per coppia, scarica voti.json
-python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
-python3 scripts/build_oggetti_cc0.py --adotta
 
 # 5) ComfyUI (D25), una volta: container, pesi, avvio. Se /home è piccolo,
 #    prima export COMFYUI_DIR=/srv/comfyui (vale per tutti e quattro gli script)
@@ -498,14 +519,17 @@ scripts/comfyui-local/setup-distrobox.sh     # Debian: prima sudo apt install di
 scripts/comfyui-local/scarica-pesi.sh        # SDXL 1.0 base, ~6,9 GB, sha256 verificato
 scripts/comfyui-local/start.sh               # in un altro terminale; resta acceso
 
-# 6) le icone generate: 32 prompt, poi la stessa trafila degli oggetti CC0
+# 6) le icone generate: 32 prompt; poi una pagina sola, glifo contro CC0 contro ComfyUI
 python3 scripts/comfyui_batch.py --prompts plans/esperimenti/oggetti-cc0-2026-10/comfyui/PROMPT-OGGETTI-ZENITALI.md --serie tutto --modello sdxl --out asset-esterni/oggetti-comfyui
 python3 scripts/build_oggetti_cc0.py --da-immagini asset-esterni/oggetti-comfyui --variante a -o /tmp/cand-comfyui-a
 python3 scripts/misura_resa.py candidati /tmp/cand-comfyui-a --registra
-python3 scripts/misura_resa.py coppie /tmp/cand-comfyui-a -o /tmp/coppie-comfyui.html
+python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 --anche /tmp/cand-comfyui-a -o /tmp/scelta.html
+#    apri /tmp/scelta.html, scegli in ogni riquadro (o «nessuna», o «non vedo differenze»)
 python3 scripts/misura_resa.py voti ~/Scaricati/voti.json     # il browser può chiamarlo «voti (1).json»
-python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a
-#    --adotta stampa le righe di GENERATE: incollale nella chat
+#    voti rivela che cosa c'era dietro ogni lettera: lì vedi se ComfyUI ha vinto
+python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a   # copia le ComfyUI scelte
+python3 scripts/build_oggetti_cc0.py --adotta                       # sfoltisce le CC0 non scelte
+#    --adotta stampa le righe di GENERATE e quelle da rifare: incollale nella chat
 
 # 7) il secondo parere, facoltativo (D26): i comandi sopra, «secondo parere»
 #    i pesi prima, da soli:  .venv/bin/python scripts/misura_resa_appresa.py --scarica-pesi
@@ -514,9 +538,9 @@ python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a
 python3 scripts/dm.py maps texture
 .venv/bin/python scripts/gate_locale.py --rapido      # i gate della CI, in locale
 python3 scripts/build_oggetti_cc0.py --check && python3 scripts/misura_resa.py --check && python3 scripts/validate_maps.py
-git add scripts/oggetti-cc0 scripts/scheda-resa.json
+git add scripts/oggetti-cc0 scripts/scheda-resa.json scripts/texture-cc0
 git add -- '*rendered-texture/*.svg'
-git commit -m "RESA-ASSET: tessere adottate dopo il confronto alla cieca"
+git commit -m "RESA-ASSET: tessere e texture adottate dopo la scelta del DM"
 git push
 ```
 
