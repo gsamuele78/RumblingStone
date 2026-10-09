@@ -50,7 +50,6 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 @zone S5-S13 ; Telo est: «il telo a sinistra» di Balvar
 @zone L14-N14 ; Telo del glifo [PROPOSTA: L14–N14]
 @zone M9-M9 ; Palo centrale, di legno
-@zone M13-N13 ; Seggio di ossa, sotto Zog'tar
 @zone P12-R13 ; Fondo buio [PROPOSTA]
 ```
 
