@@ -428,25 +428,38 @@ def tara(browser: str, lib) -> dict:
             for t in terreni:
                 medie[(t, v)] = _media_terreno(t, "texture", browser, lib)
         scelta = {t: VELATURE_PROVA[0] for t in terreni}
+        irrisolte: set = set()
+
+        def vicino(t):
+            return min(((u, de(medie[(t, scelta[t])], medie[(u, scelta[u])])) for u in terreni
+                        if u != t), key=lambda x: x[1])
         for _ in range(len(terreni) * len(VELATURE_PROVA)):
             difetti = []
             for t in terreni:
-                u, d = min(((u, de(medie[(t, scelta[t])], medie[(u, scelta[u])])) for u in terreni if u != t),
-                           key=lambda x: x[1])
-                if d < bersaglio[t] - 1e-6:
-                    difetti.append((bersaglio[t] - d, t, u))
+                u, d = vicino(t)
+                if d < bersaglio[t] - 1e-6 and frozenset((t, u)) not in irrisolte:
+                    difetti.append((bersaglio[t] - d, t, u, d))
             if not difetti:
                 break
-            _, t, u = max(difetti)
-            # sale chi dei due ha la velatura più bassa; a pari, il primo
-            chi = t if scelta[t] <= scelta[u] else u
-            i = VELATURE_PROVA.index(scelta[chi])
-            if i + 1 == len(VELATURE_PROVA):
-                chi = u if chi == t else t
+            _, t, u, d = max(difetti)
+            # si alza la velatura di uno dei due solo se la distanza cresce davvero:
+            # velare una foto senza separarla dal vicino la cancella e basta
+            mossa = None
+            for chi in sorted((t, u), key=lambda x: scelta[x]):
                 i = VELATURE_PROVA.index(scelta[chi])
                 if i + 1 == len(VELATURE_PROVA):
+                    continue
+                prova = dict(scelta)
+                prova[chi] = VELATURE_PROVA[i + 1]
+                altro = u if chi == t else t
+                nuova = de(medie[(chi, prova[chi])], medie[(altro, prova[altro])])
+                if nuova > d + 0.3:
+                    mossa = (chi, prova[chi])
                     break
-            scelta[chi] = VELATURE_PROVA[i + 1]
+            if mossa is None:
+                irrisolte.add(frozenset((t, u)))
+                continue
+            scelta[mossa[0]] = mossa[1]
         per_terreno = {t: v for t, v in scelta.items() if v != R.VELATURA}
         R._velatura = lambda s: per_terreno.get(s, R.VELATURA)
         # 2. l'alone, sopra le velature appena scelte
@@ -463,7 +476,9 @@ def tara(browser: str, lib) -> dict:
             sintesi = sint
         distanze = {t: round(min(de(medie[(t, scelta[t])], medie[(u, scelta[u])]) for u in terreni if u != t), 2)
                     for t in terreni}
+        da_cambiare = sorted("".join(sorted(c)) for c in irrisolte)
         return {"alone": alone, "velatura_per_terreno": per_terreno,
+                "texture_da_cambiare": da_cambiare,
                 "misurato": {"pergamena": rif, "texture": sintesi,
                              "delta_e_vicino": distanze,
                              "bersaglio_delta_e": {t: round(v, 2) for t, v in bersaglio.items()}},
