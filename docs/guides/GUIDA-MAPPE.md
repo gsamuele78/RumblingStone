@@ -447,7 +447,7 @@ da scaricare, e non bloccano niente: sono tarate su fotografie, non su icone da
 ```bash
 .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/bin/pip install "piq>=0.8"
-.venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle
+.venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle -o /tmp/glifi.json
 .venv/bin/python scripts/misura_resa_appresa.py /tmp/celle -o /tmp/appresa.json
 python3 scripts/misura_resa.py appresa /tmp/appresa.json
 ```

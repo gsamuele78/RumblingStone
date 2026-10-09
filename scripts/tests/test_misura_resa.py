@@ -1,9 +1,11 @@
 """La misura della resa (R8 di RESA-ASSET, D23-D26): le parti che decidono
 senza un browser, e una misura vera quando Chrome c'è."""
 
+import io
 import json
 import sys
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parents[1]
@@ -78,6 +80,36 @@ class TestVoti(unittest.TestCase):
                   "1": {"simbolo": "🪨", "ambiente": "esterno", "sinistra": "tessera"}}
         pref = M.registra_voti({"voti": {"0": "d", "1": "d"}}, chiave)
         self.assertEqual(pref, {"🛏": {"interni": "tessera"}, "🪨": {"esterno": "glifo"}})
+
+
+class TestVotiDaScaricati(unittest.TestCase):
+    """Il browser salva voti.json in ~/Scaricati, la chiave sta accanto alla pagina."""
+
+    def test_la_chiave_si_ritrova_dal_percorso_scritto_nei_voti(self):
+        import tempfile
+        pagina_dir, scaricati = Path(tempfile.mkdtemp()), Path(tempfile.mkdtemp())
+        chiave = pagina_dir / "coppie-cc0.chiave.json"
+        chiave.write_text(json.dumps({"0": {"simbolo": "🛏", "ambiente": "interni",
+                                            "sinistra": "glifo"}}), encoding="utf-8")
+        voti = scaricati / "voti.json"
+        voti.write_text(json.dumps({"seme": 1, "chiave": str(chiave), "voti": {"0": "s"}}),
+                        encoding="utf-8")
+        scheda = pagina_dir / "scheda.json"
+        vecchia, M.SCHEDA = M.SCHEDA, scheda
+        vecchio_rep, M.REPO = M.REPO, pagina_dir
+        try:
+            with redirect_stdout(io.StringIO()):
+                self.assertEqual(M.main(["voti", str(voti)]), 0)
+        finally:
+            M.SCHEDA, M.REPO = vecchia, vecchio_rep
+        self.assertEqual(json.loads(scheda.read_text(encoding="utf-8"))["preferenze_dm"],
+                         {"🛏": {"interni": "glifo"}})
+
+    def test_senza_voti_un_messaggio_e_non_un_traceback(self):
+        err = io.StringIO()
+        with redirect_stderr(err), redirect_stdout(io.StringIO()):
+            self.assertEqual(M.main(["voti", "/non/esiste/voti.json"]), 1)
+        self.assertIn("Scarica voti.json", err.getvalue())
 
 
 class TestSoloFigure(unittest.TestCase):

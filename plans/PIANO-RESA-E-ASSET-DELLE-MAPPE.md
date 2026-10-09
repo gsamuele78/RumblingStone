@@ -170,8 +170,33 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   - `gate_locale.py`: i gate della CI letti da `ci.yml` ed eseguiti in locale.
 
   L'inventario completo è in STATO-E-ORDINE §2-ter.
-- **Resta**: le texture nuove per ⛰ 🔳 ⬛ (D27, il DM scarica); il confronto
-  alla cieca dell'alone e di ogni tessera (D23); il livello B (D26).
+- **Sulla macchina del DM, il 2026-10-09 pomeriggio:**
+  - **`tara --candidati`** propone ⛰ → `lichen_rock` (ΔE dal vicino da 1,48 a
+    7,6) e 🔳 → `plank_flooring` (da 2,29 a 5,47). Per ⬛ tiene
+    `roof_slates_02`: il candidato migliore arrivava a 5,16, contro 5,53.
+    Prima di entrare in `TEXTURE` le due texture aspettano l'occhio del DM
+    (D27).
+  - **Il livello B** è girato: `--scarica-pesi` ha preso i tre file di pesi di
+    `piq` (impronte nel registro di `misura_resa_appresa`), e 244 celle sono
+    misurate in `appresa.json`. Manca `misura_resa.py appresa` che le porta
+    nella scheda.
+  - **Il giro di prova degli oggetti** si è fermato al render: `comando_blender`
+    sceglieva il Blender di Debian (4.3, compilato senza OpenImageDenoise)
+    invece del `bpy` 5.2 del `.venv`. Corretto in due modi: il modulo viene
+    prima del programma, e la scena spegne il denoise dove la build non ce l'ha,
+    dicendolo.
+  - Corretti anche `voti`, che cercava la chiave accanto a `voti.json` (in
+    `~/Scaricati`) e non accanto alla pagina, e due traceback diventati
+    messaggi (`voti` senza file, `--adotta` senza tessere).
+  - Nel codice del repo c'era un solo avviso di deprecazione: `getdata` di
+    Pillow, sostituito. I tre avvisi di `piq` (`torch.jit.load`,
+    `pretrained=` di torchvision) vengono dalla libreria: si filtrano solo
+    quelli, solo mentre le metriche si costruiscono.
+  - ComfyUI è installato, torch vede la GPU, e il checkpoint SDXL è verificato
+    (sha256 `31e35c80…`, ora nel registro dei modelli di `comfyui_batch`).
+- **Resta**: le texture nuove per ⛰ e 🔳 (D27, l'occhio del DM); il confronto
+  alla cieca dell'alone e di ogni tessera (D23); il livello B nella scheda
+  (D26); la prima immagine di ComfyUI.
 
 ### R4-quinquies · ComfyUI come terza fonte, in prova (D25)
 

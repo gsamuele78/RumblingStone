@@ -27,7 +27,7 @@ prima, da soli, con l'impronta di ogni file da incollare nella chat:
 
 Poi:
 
-    .venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle
+    .venv/bin/python scripts/misura_resa.py glifi --celle /tmp/celle -o /tmp/glifi.json
     .venv/bin/python scripts/misura_resa_appresa.py /tmp/celle -o /tmp/appresa.json
 
 e il JSON si incolla nella chat o si passa a `misura_resa.py appresa`.
@@ -56,6 +56,21 @@ def _carica():
     return torch, piq, Image
 
 
+def _metriche(piq):
+    """CLIP-IQA, LPIPS e DISTS di piq 0.8, senza i suoi avvisi di deprecazione.
+
+    Vengono da dentro piq e non da qui: `torch.jit.load` (CLIP-IQA) e
+    `pretrained=` di torchvision (la VGG16 di LPIPS e DISTS). Correggerli spetta
+    a piq; il filtro tace solo quei tre messaggi e solo mentre le metriche si
+    costruiscono, così un avviso nuovo resta visibile."""
+    import warnings
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", message=r"`torch\.jit\.load` is deprecated", category=FutureWarning)
+        warnings.filterwarnings("ignore", message=r"The parameter 'pretrained' is deprecated", category=UserWarning)
+        warnings.filterwarnings("ignore", message=r"Arguments other than a weight enum", category=UserWarning)
+        return piq.CLIPIQA(), piq.LPIPS(), piq.DISTS()
+
+
 def _pesi(torch) -> dict[str, str]:
     """sha256 dei file di pesi nella cache di torch: cosa si è usato davvero."""
     out = {}
@@ -79,7 +94,7 @@ def main(argv=None) -> int:
         return 2
     torch, piq, Image = lib
     if args.scarica_pesi:
-        piq.CLIPIQA(), piq.LPIPS(), piq.DISTS()
+        _metriche(piq)
         print(f"torch {torch.__version__} · piq {piq.__version__} · cache {torch.hub.get_dir()}")
         for nome, sha in _pesi(torch).items():
             print(f"  {sha}  {nome}")
@@ -91,10 +106,12 @@ def main(argv=None) -> int:
 
     def tensore(p: Path):
         im = Image.open(p).convert("RGB").resize((224, 224), Image.BICUBIC)
-        t = torch.tensor(list(im.getdata()), dtype=torch.float32).view(224, 224, 3) / 255.0
+        # np.asarray e non getdata(), deprecato da Pillow 12 (via in Pillow 14)
+        t = torch.from_numpy(np.asarray(im, dtype=np.float32) / 255.0)
         return t.permute(2, 0, 1).unsqueeze(0)
 
-    clip_iqa, lpips, dists = piq.CLIPIQA(), piq.LPIPS(), piq.DISTS()
+    import numpy as np
+    clip_iqa, lpips, dists = _metriche(piq)
     # nome: <tema>-<ambiente>-<codice>-<fonte>.png; il riferimento è la pergamena col glifo
     misure, riferimenti = {}, {}
     for p in file:

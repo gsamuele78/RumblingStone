@@ -569,12 +569,16 @@ Alla fine scarica i voti e dalli a <code>misura_resa.py voti</code>.</p>{righe}
 <button onclick="salva()">Scarica voti.json</button>
 <script>const v={{}};function sc(i,l,el){{v[i]=l;document.querySelectorAll('[data-i="'+i+'"]')
 .forEach(e=>e.classList.remove('s'));el.classList.add('s')}}
-function salva(){{const b=new Blob([JSON.stringify({{seme:{seme},voti:v}},null,1)],{{type:'application/json'}});
+function salva(){{const b=new Blob([JSON.stringify({{seme:{seme},chiave:{chiave},voti:v}},null,1)],{{type:'application/json'}});
 const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='voti.json';a.click()}}</script>"""
 
 
-def coppie(glifi_celle: dict, cand_celle: dict, seme: int) -> tuple[str, dict]:
-    """La pagina con le coppie in ordine e lato casuali (seme scritto), e la chiave."""
+def coppie(glifi_celle: dict, cand_celle: dict, seme: int, chiave_p: Path | None = None) -> tuple[str, dict]:
+    """La pagina con le coppie in ordine e lato casuali (seme scritto), e la chiave.
+
+    La pagina scrive in `voti.json` **dove** sta la chiave, non la chiave: così
+    `voti` la ritrova anche quando il browser salva i voti in ~/Scaricati, e chi
+    guarda il sorgente della pagina non scopre quale lato è il glifo."""
     import base64
     import io
     from PIL import Image
@@ -595,7 +599,8 @@ def coppie(glifi_celle: dict, cand_celle: dict, seme: int) -> tuple[str, dict]:
             imgs.append(f'<img data-i="{i}" onclick="sc(\'{i}\',\'{lato}\',this)" '
                         f'src="data:image/png;base64,{b64}" alt="">')
         righe.append(f'<div class="c"><b>{i + 1}</b>{"".join(imgs)}</div>')
-    return PAGINA.format(righe="".join(righe), seme=seme), chiave
+    return PAGINA.format(righe="".join(righe), seme=seme,
+                         chiave=json.dumps(str(chiave_p.resolve()) if chiave_p else "")), chiave
 
 
 def registra_voti(voti: dict, chiave: dict) -> dict:
@@ -713,6 +718,32 @@ def misura_tutto(browser: str, lib) -> dict:
             **({"livello_b": vecchia["livello_b"]} if "livello_b" in vecchia else {})}
 
 
+def _voti(args) -> int:
+    """Registra le preferenze del DM: non serve né il browser né scikit-image."""
+    if not args.percorso:
+        print("✗ serve voti.json", file=sys.stderr)
+        return 2
+    if not args.percorso.exists():
+        print(f"✗ {args.percorso} non c'è: dalla pagina delle coppie, «Scarica voti.json» "
+              "(il browser lo mette in ~/Scaricati o ~/Downloads)", file=sys.stderr)
+        return 1
+    voti = json.loads(args.percorso.read_text(encoding="utf-8"))
+    # la pagina scrive dove sta la chiave; le pagine vecchie no
+    candidati = [Path(voti["chiave"])] if voti.get("chiave") else []
+    candidati += [args.percorso.with_name("coppie.chiave.json")]
+    chiave_p = next((c for c in candidati if c.exists()), None)
+    if chiave_p is None:
+        print("✗ la chiave delle coppie non si trova (cercata in "
+              f"{', '.join(map(str, candidati))}): rigenera la pagina con `coppie`", file=sys.stderr)
+        return 1
+    pref = registra_voti(voti, json.loads(chiave_p.read_text(encoding="utf-8")))
+    scheda = json.loads(SCHEDA.read_text(encoding="utf-8")) if SCHEDA.exists() else {}
+    scheda.setdefault("preferenze_dm", {}).update(pref)
+    SCHEDA.write_text(json.dumps(scheda, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"✓ {len(pref)} simboli con la preferenza del DM in {SCHEDA.relative_to(REPO)}")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
     ap.add_argument("azione", nargs="?",
@@ -738,6 +769,8 @@ def main(argv=None) -> int:
     g.add_argument("--check", action="store_true", help="la resa non è peggiorata rispetto alla scheda")
     g.add_argument("--aggiorna", action="store_true", help="riscrive scripts/scheda-resa.json")
     args = ap.parse_args(argv)
+    if args.azione == "voti":
+        return _voti(args)
     lib = _librerie()
     if lib is None:
         return 2
@@ -789,8 +822,8 @@ def main(argv=None) -> int:
             cc = {a: banco(sim, "texture", a, browser, lib[0], args.percorso) for a in TERRENI_BANCO}
             ind = json.loads((args.percorso / "indice.json").read_text(encoding="utf-8"))
             cand = {a: {s: cc[a][s] for s in ind.get("simboli", {}) if s in cc[a]} for a in cc}
-            pagina, chiave = coppie(gc, cand, args.seme)
             dest = args.uscita or Path("coppie.html")
+            pagina, chiave = coppie(gc, cand, args.seme, dest.with_suffix(".chiave.json"))
             dest.write_text(pagina, encoding="utf-8")
             dest.with_suffix(".chiave.json").write_text(json.dumps(chiave, ensure_ascii=False, indent=1),
                                                         encoding="utf-8")
@@ -847,18 +880,6 @@ def main(argv=None) -> int:
             return 1
         tela.save(args.uscita)
         print(f"✓ {args.uscita}: {args.valori}")
-        return 0
-    elif args.azione == "voti":
-        if not args.percorso:
-            print("✗ serve voti.json", file=sys.stderr)
-            return 2
-        chiave_p = args.percorso.with_name("coppie.chiave.json")
-        voti = json.loads(args.percorso.read_text(encoding="utf-8"))
-        pref = registra_voti(voti, json.loads(chiave_p.read_text(encoding="utf-8")))
-        scheda = json.loads(SCHEDA.read_text(encoding="utf-8")) if SCHEDA.exists() else {}
-        scheda.setdefault("preferenze_dm", {}).update(pref)
-        SCHEDA.write_text(json.dumps(scheda, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-        print(f"✓ {len(pref)} simboli con la preferenza del DM in {SCHEDA.relative_to(REPO)}")
         return 0
     else:
         ap.error("indica un'azione, oppure --check o --aggiorna")

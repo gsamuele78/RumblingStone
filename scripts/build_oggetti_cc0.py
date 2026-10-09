@@ -336,13 +336,18 @@ def estrai_quaternius(zpath: Path) -> list[dict]:
 # --- Blender -----------------------------------------------------------------
 
 def comando_blender(esplicito: str | None) -> list[str] | None:
-    """Il modo di far girare la scena: `--blender`, il binario, o il modulo bpy."""
+    """Il modo di far girare la scena: `--blender`, il modulo bpy, o il binario.
+
+    Il modulo viene prima del programma: la sua versione la fissa
+    `requirements-completo.txt`, quella del programma la decide la distribuzione.
+    Il 2026-10-09, sulla macchina del DM, il Blender di Debian (4.3, senza
+    OpenImageDenoise) veniva preso al posto del bpy 5.2 del `.venv`."""
     if esplicito:
         return [*esplicito.split(), "-b", "--factory-startup", "-noaudio", "-P", str(SCENA), "--"]
-    if shutil.which("blender"):
-        return ["blender", "-b", "--factory-startup", "-noaudio", "-P", str(SCENA), "--"]
     if importlib.util.find_spec("bpy") is not None:
         return [sys.executable, str(SCENA)]
+    if shutil.which("blender"):
+        return ["blender", "-b", "--factory-startup", "-noaudio", "-P", str(SCENA), "--"]
     return None
 
 
@@ -589,6 +594,10 @@ def adotta(cartella: Path | None = None) -> int:
     esempio di `--da-immagini`) copia dentro le tessere approvate, al posto di
     quelle che il simbolo aveva."""
     sorgente = cartella or USCITA
+    if not (sorgente / "indice.json").exists():
+        print(f"✗ {sorgente} non ha indice.json: prima le tessere "
+              "(build_oggetti_cc0.py --prova, o --da-immagini)", file=sys.stderr)
+        return 1
     ind_s = json.loads((sorgente / "indice.json").read_text(encoding="utf-8"))
     tenuti, scartati = [], {}
     for s in ind_s.get("simboli", {}):

@@ -50,6 +50,15 @@ def _argomenti() -> Path:
     return Path(argv[0])
 
 
+def _ha_denoiser() -> bool:
+    """OpenImageDenoise c'è in questa build? Il Blender di Debian 13 (4.3) è
+    compilato senza, e con `use_denoising` acceso il render si ferma («Failed to
+    denoise, build has no OpenImageDenoise support»): il 2026-10-09, sulla
+    macchina del DM. Senza denoiser la tessera esce con un po' più di grana, e
+    l'indice lo scrive."""
+    return bool(getattr(bpy.app.build_options, "openimagedenoise", True))
+
+
 def _scena_vuota():
     bpy.ops.wm.read_factory_settings(use_empty=True)
     return bpy.context.scene
@@ -60,7 +69,7 @@ def _impostazioni(scena, lock: dict) -> None:
     scena.cycles.device = "CPU"
     scena.cycles.samples = int(lock["campioni"])
     scena.cycles.seed = int(lock["seme"])
-    scena.cycles.use_denoising = bool(lock.get("denoise", True))
+    scena.cycles.use_denoising = bool(lock.get("denoise", True)) and _ha_denoiser()
     scena.render.film_transparent = True
     scena.render.resolution_x = scena.render.resolution_y = int(lock["lato_render"])
     scena.render.resolution_percentage = 100
@@ -186,6 +195,8 @@ def main() -> int:
               f"lato originale {misura['lato_originale_m']} m")
     Path(lavoro["esiti"]).write_text(json.dumps(esiti, indent=1) + "\n", encoding="utf-8")
     print(f"Blender {bpy.app.version_string}")
+    if lock.get("denoise", True) and not _ha_denoiser():
+        print("○ questa build di Blender non ha OpenImageDenoise: tessere rese senza denoise")
     return 0
 
 

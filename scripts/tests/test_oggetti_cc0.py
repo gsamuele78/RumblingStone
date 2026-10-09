@@ -376,3 +376,43 @@ class TestQuaternius(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestComandoBlender(unittest.TestCase):
+    """Il modulo bpy, la cui versione fissa requirements-completo, viene prima del
+    programma della distribuzione (il 2026-10-09 il Blender di Debian, senza
+    OpenImageDenoise, veniva preso al posto del bpy del .venv)."""
+
+    def setUp(self):
+        self.vecchi = (B.importlib.util.find_spec, B.shutil.which)
+
+    def tearDown(self):
+        B.importlib.util.find_spec, B.shutil.which = self.vecchi
+
+    def test_bpy_prima_del_programma(self):
+        B.importlib.util.find_spec = lambda n: object() if n == "bpy" else None
+        B.shutil.which = lambda n: "/usr/bin/blender"
+        self.assertEqual(B.comando_blender(None), [sys.executable, str(B.SCENA)])
+
+    def test_senza_bpy_il_programma(self):
+        B.importlib.util.find_spec = lambda n: None
+        B.shutil.which = lambda n: "/usr/bin/blender"
+        self.assertEqual(B.comando_blender(None)[0], "blender")
+
+    def test_esplicito_vince_su_tutto(self):
+        self.assertEqual(B.comando_blender("flatpak run org.blender.Blender")[:3],
+                         ["flatpak", "run", "org.blender.Blender"])
+
+
+class TestAdottaSenzaTessere(unittest.TestCase):
+    def test_un_messaggio_e_non_un_traceback(self):
+        vecchi = (B.USCITA, B.INDICE)
+        B.USCITA = Path(tempfile.mkdtemp()) / "vuota"
+        B.INDICE = B.USCITA / "indice.json"
+        err = io.StringIO()
+        try:
+            with redirect_stdout(io.StringIO()), redirect_stderr(err):
+                self.assertEqual(B.main(["--adotta"]), 1)
+        finally:
+            B.USCITA, B.INDICE = vecchi
+        self.assertIn("prima le tessere", err.getvalue())
