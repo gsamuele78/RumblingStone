@@ -140,7 +140,7 @@ progetti gratuiti meglio valutati dalla community.
 **Decisione.**
 
 1. **Il tema texture** è la seconda resa di ogni mappa: i terreni si riempiono
-   con le texture CC0, velate del colore della pergamena (0,45, da tarare), e
+   con le texture CC0, velate del colore della pergamena (0,30, tarata dal DM con D16), e
    contorni, ombre e glifi restano gli stessi. Il muro sceglie roccia o
    muratura dall'ambiente di `@tipo`. Bosco fitto, acqua, lava, fogna, vuoto,
    zona letale e pilastri restano vettoriali.
@@ -154,8 +154,9 @@ progetti gratuiti meglio valutati dalla community.
 4. **Gli oggetti di scena restano i glifi in casa**; un lotto futuro li genera
    con l'IA locale e pesi a licenza permissiva (D15, ADR-0019).
 
-**Quello che si paga.** Stimato con illustrazioni del repo al posto delle
-texture vere: circa 15 KB per tessera, 3 terreni per mappa in mediana, quindi
-**+2,3 MB** sui 50 SVG (+40%) e circa 120 KB per tessere nel repo. Lo dirà il
-primo download vero. La rete di questo ambiente non raggiunge Poly Haven: le
-texture le scarica il DM.
+**Quello che si paga.** Misurato il 2026-10-09 dopo il download del DM: le 11
+tessere pesano 90 KB, e i 53 SVG del tema **7,6 MB**, contro i 6,2 MB della
+pergamena: il peso delle mappe nel repo più che raddoppia. La stima fatta prima,
++2,3 MB, contava solo le texture incorporate e non il resto di ogni SVG: era
+sbagliata per difetto. La rete dell'ambiente dell'agente non raggiunge Poly
+Haven: le texture le ha scaricate il DM.

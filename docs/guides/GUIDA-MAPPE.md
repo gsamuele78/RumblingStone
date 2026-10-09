@@ -320,8 +320,9 @@ gemello texture di ogni mappa e lo rigenera per confronto, come la pergamena.
 Per Foundry: `export_map_png.py` sull'SVG di `rendered-texture/`, poi
 `export_uvtt.py --image`.
 
-⚠️ La velatura (quanto colore della pergamena copre la texture, 0,45) è una
-soglia scelta senza aver visto le texture vere: si tara sulla prima mappa.
+La velatura, cioè quanto colore della pergamena copre la texture, è 0,30:
+l'ha scelta il DM confrontando 0,45, 0,30 e 0,20 sulle texture vere (D16).
+I 53 SVG del tema pesano 7,6 MB, contro i 6,2 MB della pergamena.
 
 ### 5.2 Il tema dipinto con 2-Minute Tabletop (opzionale, solo per il tuo tavolo)
 

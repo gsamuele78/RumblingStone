@@ -93,8 +93,8 @@ EMOJI_NOTO = Path(__file__).resolve().parent / "emoji-noto"
 TEXTURE_CC0 = Path(__file__).resolve().parent / "texture-cc0"
 TEMI = ("pergamena", "texture")
 CELLE_PER_TESSERA = 2
-VELATURA = 0.45    # opacità del colore del terreno sopra la texture: euristica,
-                   # da tarare sulle texture vere (colori leggibili come in pergamena)
+VELATURA = 0.30    # opacità del colore del terreno sopra la texture: tarata dal DM
+                   # il 2026-10-09 sulle texture vere (D16), fra 0,45 e 0,20
 CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture"}
 
 

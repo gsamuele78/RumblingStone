@@ -319,7 +319,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 190 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**14 aperte** · 191 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -478,6 +478,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D13~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: sì, CC0 principale**, come proposto. Era: **Le texture CC0 (Poly Haven, ambientCG) diventano la strada principale per mappe più ricche, e 2-Minute Tabletop un extra opzionale solo per il tavolo?** Il DM aveva chiesto una strada senza problemi di licenza; le licenze lette alla fonte: Poly Haven e ambientCG CC0 1.0 |
 | ~~D14~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: committate accanto alla pergamena**, non come proposto. Era: **Le mappe con texture dove finiscono?** Proposta: solo in locale. Scelto: un secondo SVG per ogni mappa in `rendered-texture/`, controllato da `validate_maps`; stima +2,3 MB sui 50 SVG |
 | ~~D15~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: glifi ora, IA locale dopo.** Era: **Gli oggetti di scena da dove vengono?** I glifi in casa restano sopra le texture; un lotto futuro genera oggetti zenitali con ComfyUI e pesi a licenza permissiva (ADR-0019), col gate di rifiuto di `rumblingstone-art-direction` |
+| ~~D16~~ | `RESA-ASSET` | R4-bis | ✅ **Decisa il 2026-10-09, il DM: velatura 0,30**, come proposto, dopo il confronto 0,45 / 0,30 / 0,20 sulle texture vere (M7-D per gli interni, Hammerfist L1 per l'esterno). Era: **Quale velatura per il tema texture?** A 0,45 erba e sentiero sembravano tinte piatte; a 0,20 muri e pavimenti degli interni si avvicinavano di tono |
 | ~~D1~~ | `TRASVERSALE-ARTEFATTI` | La **Risonanza** fra Corona e Aegis Fang dei moduli giocati (+2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*, *Eco degli Eroi*) è attiva dal P1? | **Deciso**: la stampa del 16/01, senza Eco degli Eroi |
 | ~~D2~~ | `TRASVERSALE-ARTEFATTI` | Il blocco «Sinergia con Aegis Fang» del master vale dal Rituale 1? | Chiusa dalla fonte: il PDF del giocatore del 22/10/2025 lo mette al Rituale 4 |
 | ~~D3~~ | `TRASVERSALE-ARTEFATTI` | I bonus di quando Thorik ha indossato la Corona (immunità alla paura, scurovisione 36 m, *Aura di Comando*, *Guida di Moradin*)? | **Deciso**: tutti e quattro |
