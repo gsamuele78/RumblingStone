@@ -152,8 +152,10 @@ OPZIONALI = (
          "  macOS          brew install maven",
          "come per `java`: senza Maven non si scarica LanguageTool e il secondo "
          "lettore non parte; nessun altro passo ne dipende."),
-    _opz("blender", "il render 3D delle mappe (`render_map_blender.py`) e il passo "
-                    "di profondita' che alimenta ControlNet",
+    _opz("blender", "il render 3D delle mappe (`render_map_blender.py`), il passo "
+                    "di profondita' che alimenta ControlNet e le tessere degli "
+                    "oggetti del tema texture (`build_oggetti_cc0.py`, che accetta "
+                    "anche il modulo `bpy`)",
          "  Debian/Ubuntu  sudo apt install blender\n"
          "  Fedora         sudo dnf install blender\n"
          "  macOS          brew install --cask blender\n"
@@ -161,7 +163,9 @@ OPZIONALI = (
          "la geometria si risolve lo stesso: `--piano-solo` scrive il piano di "
          "scena senza Blender, ed e' quello il pezzo deterministico. Senza il "
          "binario mancano solo il PNG e il passo di profondita', che sono "
-         "presentazione e non canone."),
+         "presentazione e non canone. Le tessere degli oggetti si fanno una "
+         "volta e si committano: senza Blender il tema texture le legge lo "
+         "stesso, e dove mancano restano i glifi."),
     _opz("inkscape", "i PNG delle mappe con resa SVG fedele (`--renderer inkscape`)",
          "  Debian/Ubuntu  sudo apt install inkscape\n"
          "  Fedora         sudo dnf install inkscape",

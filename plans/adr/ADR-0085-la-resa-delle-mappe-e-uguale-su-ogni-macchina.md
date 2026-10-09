@@ -1,6 +1,6 @@
 # ADR-0085 — La resa delle mappe è uguale su ogni macchina
 
-- **Stato**: **accettata**; R1-R3 attuati il 2026-10-08, R4 deciso e in attesa del pacchetto dei dungeon, R5 e R6 rimandati (il DM, il 2026-10-08, sera: D1-D8 di [PIANO-RESA-E-ASSET-DELLE-MAPPE](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md))
+- **Stato**: **accettata**; R1-R3 attuati il 2026-10-08, R4 deciso e in attesa del pacchetto dei dungeon, R5 e R6 rimandati (il DM, il 2026-10-08, sera: D1-D8 di [PIANO-RESA-E-ASSET-DELLE-MAPPE](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md)); emendata due volte il 2026-10-09: le texture CC0 (D13-D16) e gli oggetti dai modelli 3D CC0 (D17-D22)
 - **Data**: 2026-10-08
 - **Decisori**: DM (Gianfranco Samuele), agente
 - **Rapporti**: emenda la regola 5 di `rumblingstone-mapmaking` («nessun file di terzi»); segue [ADR-0005](ADR-0005-confini-ip-uso-non-commerciale.md) per le licenze e [ADR-0020](ADR-0020-edizione-da-stampa-su-un-secondo-binario.md) per i font nel repo; legge la legenda di [ADR-0048](ADR-0048-legenda-funzionale-fonte-unica.md); le dipendenze di sviluppo sono quelle di [ADR-0084](ADR-0084-il-collaudo-delle-mappe-e-uno-strumento-di-sviluppo.md)
@@ -160,3 +160,62 @@ pergamena: il peso delle mappe nel repo più che raddoppia. La stima fatta prima
 +2,3 MB, contava solo le texture incorporate e non il resto di ogni SVG: era
 sbagliata per difetto. La rete dell'ambiente dell'agente non raggiunge Poly
 Haven: le texture le ha scaricate il DM.
+
+## Emendamento del 2026-10-09, secondo: gli oggetti di scena dai modelli 3D CC0
+
+**Stato**: accettato dal DM il 2026-10-09 (D17-D22 di
+[PIANO-RESA-E-ASSET](../PIANO-RESA-E-ASSET-DELLE-MAPPE.md)). Sostituisce il
+punto 4 dell'emendamento qui sopra: l'IA locale per gli oggetti (D15) non si fa.
+
+**Contesto.** Con le texture CC0 i terreni del tema texture sono fotografie
+velate; gli oggetti sopra erano ancora glifi vettoriali, e i due registri non
+stavano insieme. Il DM ha scelto modelli 3D CC0 resi dall'alto invece di
+immagini generate (D17): un modello ha una licenza leggibile e una geometria
+che si rende sempre uguale, un'immagine generata no.
+
+**Le licenze lette alla fonte, il 2026-10-09.**
+
+| Fonte | Licenza | Esito |
+|---|---|---|
+| Poly Haven (modelli) | CC0 1.0, come le texture | **entra**: 16 modelli per 15 simboli, MD5 di ogni file verificato contro l'API |
+| Quaternius, Fantasy Props MegaKit **Standard** | CC0 1.0 (sito, itch.io, Godot Asset Store) | **entra** per i simboli che Poly Haven non ha, quando il DM ha scaricato lo zip |
+| Quaternius, versioni Pro e Source (a pagamento) | il sito dice «free to use», non «CC0»; itch.io dichiara CC0 per la pagina | **non si usa** (D17): la licenza della parte a pagamento non è scritta |
+
+**Decisione.**
+
+1. Nel tema texture un simbolo-oggetto con la sua tessera si disegna con la
+   tessera; senza tessera, con il glifo. La pergamena non cambia.
+2. Restano glifi sempre: fuoco ed effetti, chiusure (ruotano con il muro,
+   ADR-0083), segnali, creature, strutture in scala di mappa, scale e buchi,
+   affresco e gru (`RESTANO_GLIFI`, D21). Il muretto 🧱 è un oggetto con due
+   tessere, est-ovest e nord-sud, e il renderer sceglie dai vicini.
+3. I lock sono uno per tutto il set: camera ortografica zenitale, sole da
+   nord-ovest a 65°, ombra raccolta su un piano trasparente, impronta del lato
+   lungo al 76% della cella (D20; il muretto al 100%, perché i tratti si
+   toccano), trasformazione di colore «Standard».
+4. Il braciere 🏮 è un focolare di pietre con la fiammella del glifo sopra
+   (D22): il fuoco resta glifo anche lì.
+5. I modelli restano sulla macchina del DM, in `asset-esterni/oggetti-cc0/`,
+   ignorata da git (D19). Entrano nel repo le tessere webp
+   (`scripts/oggetti-cc0/`) e l'indice con fonte, id, licenza, MD5 dei file
+   d'origine e sha256 della tessera; `build_oggetti_cc0.py --check` lo
+   verifica senza rete.
+6. Blender è uno strumento di sviluppo come Pillow: serve una volta per fare le
+   tessere, binario o modulo `bpy`. Il renderer resta in libreria standard.
+
+**Quello che si paga.**
+
+- Il 72% delle celle-oggetto del corpus resta glifo (2.448 su 3.386): fuoco,
+  pendenze, fiamme e porte sono quasi tutto. Gli oggetti resi coprono il 24%
+  con Poly Haven e al massimo il 4% con Quaternius.
+- Il catalogo di Poly Haven è soprattutto moderno: per 🪑 c'è un tavolo senza
+  sedie, per 🪵 un tronco al posto delle travi, per 🧱 una fila di pietre al
+  posto di un muretto. Il giro di prova serve a vedere se bastano.
+- Fotografico e low-poly possono non stare insieme: la misura
+  (`--misura-stile`) e il confronto del DM vengono prima di estendere
+  Quaternius a tutte le mappe (D17).
+- Il peso degli SVG del tema cresce di una quantità che si misura dopo il primo
+  render vero: la forbice calcolata è 0,2-4,5 MB sui 7,6 di oggi, e nella #227
+  una stima simile era sbagliata per difetto.
+- La rete dell'ambiente dell'agente non raggiunge né Poly Haven né Quaternius:
+  scaricamento e render li fa il DM.

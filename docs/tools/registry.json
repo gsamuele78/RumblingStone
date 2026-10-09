@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 100,
+  "tool_count": 102,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -531,6 +531,63 @@
       "idempotent": true
     },
     {
+      "id": "blender/rendi_oggetti",
+      "path": "scripts/blender/rendi_oggetti.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "blender -b --factory-startup -noaudio -P scripts/blender/rendi_oggetti.py -- <lavoro.json>",
+      "summary": "Lo script che gira DENTRO Blender (o con il modulo bpy): importa ogni modello 3D CC0, lo centra nella cella con l'asse lungo est-ovest e la stessa impronta, e lo rende dall'alto con camera ortografica, sole da nord-ovest e ombra raccolta su un piano trasparente. Non si lancia a mano: il driver è build_oggetti_cc0.py.",
+      "use_case": "«Che cosa gira dentro Blender quando rendo gli oggetti di scena del tema texture, e dove stanno i lock di luce e scala?»",
+      "stability": "local-only",
+      "stdlib_only": true,
+      "external_bins": [
+        "blender"
+      ],
+      "args": [
+        {
+          "name": "lavoro",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il lavoro scritto dal driver: i lock e, per ogni tessera, il modello e il PNG d'uscita."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<lavoro>.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<uscita dichiarata nel lavoro>.png",
+          "kind": "png",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "eseguito fuori da Blender, lavoro illeggibile, modello che non si importa o render fallito"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "Cycles con seme fisso; il render dipende dalla versione di Blender, e l'indice delle tessere registra l'impronta di ciò che è uscito."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true
+    },
+    {
       "id": "build_emoji_noto",
       "path": "scripts/build_emoji_noto.py",
       "category": "B-maps-pipeline",
@@ -735,6 +792,154 @@
       ],
       "docs": [
         "plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md"
+      ]
+    },
+    {
+      "id": "build_oggetti_cc0",
+      "path": "scripts/build_oggetti_cc0.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/build_oggetti_cc0.py",
+      "summary": "Gli oggetti di scena del tema texture delle mappe (R4-ter, D17 di RESA-ASSET): scarica i glTF 1k dei modelli Poly Haven fissati, ne verifica l'MD5 contro l'API, estrae i modelli Quaternius dallo zip Standard con impronta e licenza CC0 verificate, li rende dall'alto con Blender con luce, scala e camera fisse e scrive in scripts/oggetti-cc0/ le tessere webp e l'indice. --check non usa la rete.",
+      "use_case": "«Come metto sulle mappe rocce, statue, letti e barili veri al posto dei glifi, senza problemi di licenza e con la stessa luce per tutti?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "Pillow"
+      ],
+      "external_bins": [
+        "blender"
+      ],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Niente rete: le tessere combaciano con l'indice, sono CC0 e vengono da modelli verificati; esce 0 se le tessere non sono ancora fatte."
+        },
+        {
+          "name": "--prova",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Solo i modelli del giro di prova (PILOTA), per il confronto con il DM."
+        },
+        {
+          "name": "--scarica-solo",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scarica e verifica i modelli di Poly Haven in asset-esterni/oggetti-cc0/, senza Blender."
+        },
+        {
+          "name": "--rendi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rende dai modelli già scaricati, senza rete, dopo averne riverificato l'impronta."
+        },
+        {
+          "name": "--quaternius",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Lo zip Fantasy Props MegaKit [Standard]: impronta fissata, licenza CC0 letta, modelli della tabella estratti."
+        },
+        {
+          "name": "--elenca-quaternius",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Impronta, file di licenza e modelli glTF dello zip, per scrivere la tabella sui nomi veri."
+        },
+        {
+          "name": "--misura-stile",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Luminanza, contrasto, saturazione e dettaglio di ogni tessera, con le medie per fonte."
+        },
+        {
+          "name": "--blender",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Il comando di Blender, se non è nel PATH (senza: il binario, poi il modulo bpy)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "https://api.polyhaven.com/files/<id>",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "Fantasy Props MegaKit[Standard].zip (scaricato dal DM da itch.io)",
+          "kind": "text",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "asset-esterni/oggetti-cc0/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/oggetti-cc0/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok (anche: tessere non ancora fatte, con --check)",
+        "1": "MD5 o impronta che non combacia, licenza non CC0, tessera mancante o non verificata, render fallito",
+        "2": "Pillow assente, o Blender assente quando serve rendere"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "id, lock e risoluzione fissati; la tessera dipende dalla versione di Blender e di Pillow, l'indice ne registra l'impronta e --check la verifica"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "solo senza --check, --rendi, --elenca-quaternius e --misura-stile: api.polyhaven.com, dl.polyhaven.org"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/build_oggetti_cc0.py --check",
+      "tests": [
+        "scripts/tests/test_oggetti_cc0.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     },
     {

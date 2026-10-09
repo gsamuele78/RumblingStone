@@ -324,6 +324,72 @@ La velatura, cioè quanto colore della pergamena copre la texture, è 0,30:
 l'ha scelta il DM confrontando 0,45, 0,30 e 0,20 sulle texture vere (D16).
 I 53 SVG del tema pesano 7,6 MB, contro i 6,2 MB della pergamena.
 
+#### 5.1.1 Gli oggetti di scena: modelli 3D CC0 resi dall'alto (R4-ter)
+
+Nel tema texture rocce, statue, letti, botti e muretti possono essere tessere
+rese con Blender da modelli 3D CC0, al posto dei glifi; la pergamena tiene i
+glifi. Ogni modello è reso con la stessa camera zenitale, lo stesso sole da
+nord-ovest e la stessa impronta nella cella (D20), così il set ha una luce sola.
+Restano glifi il fuoco e gli effetti, le porte, le finestre, le grate e le
+sbarre, i segnali, le creature, le scale e i buchi (D21): l'elenco sta in
+`RESTANO_GLIFI` del renderer. Il braciere è un focolare di pietre con la
+fiammella del glifo sopra (D22). Il muretto ha due tessere, est-ovest e
+nord-sud, e il renderer sceglie quella giusta dai muretti vicini.
+
+| Fonte | Licenza (letta il 2026-10-09) | Cosa dà |
+|---|---|---|
+| Poly Haven | CC0 1.0 | 16 modelli per 15 simboli, con l'MD5 di ogni file verificato contro l'API |
+| Quaternius, Fantasy Props MegaKit **Standard** | CC0 1.0 | i simboli che Poly Haven non ha, se ci sono: si scopre dallo zip |
+
+I modelli restano sulla tua macchina, in `asset-esterni/oggetti-cc0/` (D19):
+pesano 50-70 MB. Nel repo entrano solo le tessere e l'indice.
+
+```bash
+# 0) una volta: Blender come modulo nel venv del repo (bpy vuole Python 3.13)
+.venv/bin/python --version
+.venv/bin/pip install bpy
+#    se il venv non è 3.13, usa il Blender di sistema e aggiungi ai comandi sotto
+#    --blender 'flatpak run org.blender.Blender'   (o il percorso del binario)
+
+# 1) il giro di prova: scarica gli 8 modelli delle due mappe del confronto,
+#    verifica l'MD5 di ogni file, li rende (meno di un minuto su CPU)
+.venv/bin/python scripts/build_oggetti_cc0.py --prova
+
+# 2) la misura dello stile e il tema texture con le tessere
+.venv/bin/python scripts/build_oggetti_cc0.py --misura-stile
+python3 scripts/dm.py maps texture
+
+# 3) le due mappe del confronto in PNG, da guardare accanto alla versione a glifi
+python3 scripts/export_map_png.py '07_il Portale Della Forgia Eterna/Mappe/hammerfist-372-1372/rendered-texture/M7-D-livello-1-1372_map01_m7-d-1372-il-corridoio-della-fucina-livello-1-gi.svg' -o /tmp/M7-D-oggetti.png
+python3 scripts/export_map_png.py '07_il Portale Della Forgia Eterna/Mappe/rendered-texture/ARC07-MAPPE-DEFINITIVO_map05_cortile-interno-36-m-27-m-24-col-18-righe-1-5-m.svg' -o /tmp/ARC07-cortile-oggetti.png
+
+# 4) se la prova va, tutti i modelli di Poly Haven, poi di nuovo il tema
+.venv/bin/python scripts/build_oggetti_cc0.py
+python3 scripts/dm.py maps texture
+
+# 5) controlli e commit: tessere, indice e i gemelli texture rigenerati
+python3 scripts/build_oggetti_cc0.py --check && python3 scripts/validate_maps.py
+git add scripts/oggetti-cc0
+git add -- '*rendered-texture/*.svg'
+git commit -m "RESA-ASSET R4-ter: le tessere degli oggetti di scena"
+```
+
+Quaternius si aggiunge dopo, e solo con lo zip **Standard** (su itch.io a
+prezzo libero, anche 0 $; la Pro e la Source non si usano):
+
+```bash
+# a) impronta, licenza e nomi dei modelli: incolla l'uscita nella PR
+.venv/bin/python scripts/build_oggetti_cc0.py --elenca-quaternius ~/Scaricati/'Fantasy Props MegaKit[Standard].zip'
+# b) quando la tabella QUATERNIUS e l'impronta sono nello script
+.venv/bin/python scripts/build_oggetti_cc0.py --rendi --quaternius ~/Scaricati/'Fantasy Props MegaKit[Standard].zip'
+```
+
+Le tessere si fanno una volta e si committano: chi non ha Blender legge le
+tessere e basta, e dove una tessera manca resta il glifo. `--check` boccia una
+tessera che non combacia con l'indice, una licenza che non è CC0, un modello non
+verificato e un simbolo che deve restare glifo. Se Poly Haven cambia uno dei
+modelli fissati, lo scaricamento si ferma e lo dice.
+
 ### 5.2 Il tema dipinto con 2-Minute Tabletop (opzionale, solo per il tuo tavolo)
 
 È una seconda resa della stessa mappa con tessere dipinte a mano, per i

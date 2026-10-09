@@ -226,6 +226,33 @@
       "deterministic": false
     },
     {
+      "name": "blender_rendi_oggetti",
+      "description": "«Che cosa gira dentro Blender quando rendo gli oggetti di scena del tema texture, e dove stanno i lock di luce e scala?»\n\nLo script che gira DENTRO Blender (o con il modulo bpy): importa ogni modello 3D CC0, lo centra nella cella con l'asse lungo est-ovest e la stessa impronta, e lo rende dall'alto con camera ortografica, sole da nord-ovest e ombra raccolta su un piano trasparente. Non si lancia a mano: il driver è build_oggetti_cc0.py.",
+      "use_case": "«Che cosa gira dentro Blender quando rendo gli oggetti di scena del tema texture, e dove stanno i lock di luce e scala?»",
+      "invocation": "blender -b --factory-startup -noaudio -P scripts/blender/rendi_oggetti.py -- <lavoro.json>",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "lavoro": {
+            "type": "string",
+            "description": "Il lavoro scritto dal driver: i lock e, per ogni tessera, il modello e il PNG d'uscita."
+          }
+        },
+        "required": [
+          "lavoro"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita dichiarata nel lavoro>.png"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "eseguito fuori da Blender, lavoro illeggibile, modello che non si importa o render fallito"
+      },
+      "deterministic": false
+    },
+    {
       "name": "build_emoji_noto",
       "description": "«Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»\n\nIl ripiego per le emoji locali delle mappe (ADR-0085): per ogni emoji che una griglia usa e la legenda universale non conosce, scarica l'SVG di Noto Emoji (Apache-2.0, commit fissato), rinomina gli id interni e lo scrive in scripts/emoji-noto/, con licenza e crediti accanto. Il renderer lo incorpora al posto del font di sistema. --check non usa la rete.",
       "use_case": "«Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»",
@@ -301,6 +328,61 @@
         "2": "pyyaml mancante"
       },
       "deterministic": true
+    },
+    {
+      "name": "build_oggetti_cc0",
+      "description": "«Come metto sulle mappe rocce, statue, letti e barili veri al posto dei glifi, senza problemi di licenza e con la stessa luce per tutti?»\n\nGli oggetti di scena del tema texture delle mappe (R4-ter, D17 di RESA-ASSET): scarica i glTF 1k dei modelli Poly Haven fissati, ne verifica l'MD5 contro l'API, estrae i modelli Quaternius dallo zip Standard con impronta e licenza CC0 verificate, li rende dall'alto con Blender con luce, scala e camera fisse e scrive in scripts/oggetti-cc0/ le tessere webp e l'indice. --check non usa la rete.",
+      "use_case": "«Come metto sulle mappe rocce, statue, letti e barili veri al posto dei glifi, senza problemi di licenza e con la stessa luce per tutti?»",
+      "invocation": "python3 scripts/build_oggetti_cc0.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Niente rete: le tessere combaciano con l'indice, sono CC0 e vengono da modelli verificati; esce 0 se le tessere non sono ancora fatte."
+          },
+          "prova": {
+            "type": "boolean",
+            "description": "Solo i modelli del giro di prova (PILOTA), per il confronto con il DM."
+          },
+          "scarica-solo": {
+            "type": "boolean",
+            "description": "Scarica e verifica i modelli di Poly Haven in asset-esterni/oggetti-cc0/, senza Blender."
+          },
+          "rendi": {
+            "type": "boolean",
+            "description": "Rende dai modelli già scaricati, senza rete, dopo averne riverificato l'impronta."
+          },
+          "quaternius": {
+            "type": "string",
+            "description": "Lo zip Fantasy Props MegaKit [Standard]: impronta fissata, licenza CC0 letta, modelli della tabella estratti."
+          },
+          "elenca-quaternius": {
+            "type": "string",
+            "description": "Impronta, file di licenza e modelli glTF dello zip, per scrivere la tabella sui nomi veri."
+          },
+          "misura-stile": {
+            "type": "boolean",
+            "description": "Luminanza, contrasto, saturazione e dettaglio di ogni tessera, con le medie per fonte."
+          },
+          "blender": {
+            "type": "string",
+            "description": "Il comando di Blender, se non è nel PATH (senza: il binario, poi il modulo bpy)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "asset-esterni/oggetti-cc0/",
+        "scripts/oggetti-cc0/"
+      ],
+      "exit_codes": {
+        "0": "ok (anche: tessere non ancora fatte, con --check)",
+        "1": "MD5 o impronta che non combacia, licenza non CC0, tessera mancante o non verificata, render fallito",
+        "2": "Pillow assente, o Blender assente quando serve rendere"
+      },
+      "deterministic": false
     },
     {
       "name": "build_texture_cc0",

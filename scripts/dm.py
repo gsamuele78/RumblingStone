@@ -14,7 +14,8 @@ Sottocomandi (fase del Playbook tra parentesi):
     prep      (§2)   catalogo → incontri → mappa → loot per la prossima sessione
     maps      (prep) render SVG / valida le griglie emoji / URL di una città Watabou /
                      texture: il tema con le texture CC0 per tutte le mappe
-    asset     (prep) asset di 2-Minute Tabletop per il tema dipinto: installa,
+    asset     (prep) texture e oggetti CC0 del tema texture (texture, oggetti) e
+                     asset di 2-Minute Tabletop per il tema dipinto: installa,
                      stato, controlla (R4 di PIANO-RESA-E-ASSET-DELLE-MAPPE)
     post      (§4)   ledger XP → proposta diff state.md → checklist §4
     session   (§4+§7) ciclo su branch-per-gruppo (ADR-0007): end/next/status/branch
@@ -117,7 +118,7 @@ def cmd_maps(args: argparse.Namespace, extra: list[str]) -> int:
         return run("validate_maps.py", "--repo-root", str(REPO))
     if args.action == "texture":
         # il tema texture di tutte le mappe (D14 di RESA-ASSET): prima le texture CC0
-        rc = run("build_texture_cc0.py", "--check")
+        rc = run("build_texture_cc0.py", "--check") or run("build_oggetti_cc0.py", "--check")
         return rc or run("render_map_svg.py", "--tutti-i-master", "--tema", "texture")
     if args.action == "citta":
         if len(args.files) != 1:
@@ -146,6 +147,9 @@ BESTIARIO = {
 def cmd_asset(args: argparse.Namespace, extra: list[str]) -> int:
     if args.action == "texture":
         return run("build_texture_cc0.py", *extra)
+    if args.action == "oggetti":
+        # gli oggetti di scena del tema texture, dai modelli 3D CC0 (R4-ter, D17)
+        return run("build_oggetti_cc0.py", *extra)
     return run("asset_2mtt.py", args.action, *extra)
 
 
@@ -613,6 +617,19 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
     except Exception as exc:  # doctor non deve mai crashare
         warn(f"check texture CC0 fallito: {exc}")
 
+    # gli oggetti di scena del tema texture (R4-ter, D17): informativi, mai un avviso
+    try:
+        import render_map_svg as _rms
+        _ogg = _rms._oggetti_cc0()
+        if _ogg:
+            ok(f"oggetti CC0 per il tema texture ({len(_ogg[1])} tessere, "
+               f"{len(_ogg[0])} simboli; gli altri restano glifi)")
+        else:
+            print("  ○ oggetti CC0 assenti — nel tema texture gli oggetti restano glifi "
+                  "(`dm.py asset oggetti`)")
+    except Exception as exc:  # doctor non deve mai crashare
+        warn(f"check oggetti CC0 fallito: {exc}")
+
     # gli asset di terzi del tema dipinto: informativi, mai un avviso (R4)
     try:
         import asset_2mtt as _a2
@@ -656,10 +673,11 @@ def main(argv: list[str] | None = None) -> int:
 
     # add_help=False: `dm.py asset installa --help` stampa l'aiuto dello script
     p = sub.add_parser("asset", add_help=False,
-                       help="texture CC0 (texture: scarica e costruisce) e asset di "
+                       help="texture CC0 (texture: scarica e costruisce), oggetti CC0 del "
+                            "tema texture (oggetti: scarica, rende con Blender, --check) e asset di "
                             "2-Minute Tabletop (installa <zip> --categoria base|premium / "
                             "stato / controlla)")
-    p.add_argument("action", choices=["texture", "installa", "stato", "controlla"])
+    p.add_argument("action", choices=["texture", "oggetti", "installa", "stato", "controlla"])
 
     # add_help=False: `--help` non lo prende dm.py ma lo script, così
     # `dm.py bestiario creatura --help` stampa l'aiuto di genera_creatura.

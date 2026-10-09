@@ -696,6 +696,38 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Aperte** (la sera, terzo messaggio): nessuna
 - **Dedotto da me** (la sera, terzo messaggio): che la scala di M7-D verso il livello 0 (C15), che non ha una griglia, si dichiari con `@collega C15 ; fuori mappa ; <motivo>` invece di sospendere il controllo per tutta la mappa con `@deroga`; che la gemella si scriva nel contratto JSON, campo `collega` della struttura, perché la griglia si rigenera; che la «nicchia» sia la cella di muro a nord della lampada, e che la quinta lampada, nascosta sotto Zeth in K10, vada nella nicchia come le altre quattro
 
+## §8 · Lo stato di ogni voce (2026-10-09, dopo il merge della #227)
+
+Richiesto dal DM con R4-ter di RESA-ASSET: per ogni lotto e decisione, se è
+**fatto**, **superato**, **ancora da fare** o **obsoleto**, con il commit, il
+file o la decisione che lo dice. Le misure di oggi sono di `collaudo_mappe.py`
+sul corpus del 2026-10-09: **50 mappe, 90 errori, 75 avvisi** (in V1 erano 38
+mappe, 97 errori, 53 avvisi).
+
+| Voce | Stato | Prova |
+|---|---|---|
+| Fase A, A1-A6 | ✅ fatto | `a39913c`; ADR-0082 accettata in `8aeb261` |
+| V0, D1-D19 | ✅ fatto | `8aeb261`, `f90c1f2`, la sera `6e5219b` (D10, D12, D19) |
+| V1 `collaudo_mappe.py` | ✅ fatto | `fb55e9f`, #226 (`1b7ffe8`) |
+| V2 `@tipo` con l'ambiente (D18) | ✅ fatto | `69930a2`: 44 griglie su 44, oggi 50 su 50 |
+| V2 `@deroga` | ⏳ da fare dove serve, in V3 | oggi in 10 righe di 9 master (contate le righe che cominciano con `@deroga`, fuori da `plans/`, `skills/` e `docs/`) |
+| V2-bis il corredo dei simboli (D8, D10) | ✅ fatto | `5e66ad0` |
+| V2-ter il terreno sotto un'icona preso dalla cella a sinistra | ⏳ da fare quando il DM vuole | `_resolve_bases` invariato; vale anche per le tessere degli oggetti di RESA-ASSET R4-ter, che si posano sullo stesso terreno |
+| D28 col set nuovo (D12) | ✅ fatto | `5f2e284` (#225), poi `6e5219b`: 0 errori e 2 avvisi |
+| V2-quater l'asse delle chiusure, `tcod` (D13-D16) | ✅ fatto | `f6e6fa0`; ADR-0083 e ADR-0084 |
+| scipy per M1 e M2 (D17) | ✅ fatto | `69930a2` |
+| D2 `⬜` e `🟫` al posto di `⬛` come pavimento | ⏳ da fare in V3 | misurato oggi: la Stanza della Corona ha ancora 93 celle `⬛`, il Cuore della Montagna 683 |
+| V3 correzioni del corpus, col DM | ⏳ da fare | 90 errori in 50 mappe; comprende R7 di RESA-ASSET |
+| V4 gate a tetto | ⏳ da fare, dopo V3 | il collaudo in CI stampa e non blocca |
+| V5 linea di vista e copertura; M7, M8 | ⏳ da fare | M4 esatta c'è (`f6e6fa0`); M7 e M8 no |
+| V6-V8 agenti per taglia, zone e anelli, distanza d'incontro | ⏳ da fare | nessun codice |
+| V9 generatore di bozze (D4) | ⏳ da fare, dopo V6 | nessun codice |
+| V10 riparazione proposta | ⏳ da fare | nessun codice |
+| V11 skill, guida, chiusura | ⏳ da fare | `GUIDA-MAPPE.md` non ha una sezione sul collaudo, `audit-mappe-workflow.md` non ha lo STEP 5 (0 occorrenze di «collaudo» in entrambi, misurate oggi) |
+| V11-bis il collaudatore a freddo (D11) | ✅ fatto | `ba4aa1f` |
+| §4, riga «Il rendering non cambia: 41 SVG identici» | ⚰ obsoleto nel numero | oggi gli SVG sono 53 nella pergamena e 53 nel tema texture (`1bbf7bf`); il criterio vale, il conto va letto da `validate_maps` |
+| §6, rischio «la licenza dello shadowcasting non è CC0» | ⚰ obsoleto | con D16 lo shadowcasting è quello di `tcod` (BSD-2-Clause), dichiarato in ADR-0084: non si riscrive più dalla descrizione dell'algoritmo |
+
 ---
 
 ## Checklist di avanzamento

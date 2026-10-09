@@ -54,8 +54,14 @@ are **generated artifacts — never hand-edit them**. CI
    **Richer maps go through CC0 only** (DM, 2026-10-09, D13-D15 of
    RESA-ASSET): the texture theme fills the terrains with Poly Haven CC0
    textures (`build_texture_cc0.py`, `scripts/texture-cc0/`), committed in
-   `rendered-texture/` next to the parchment and checked by `validate_maps`;
-   props stay the in-house glyphs. 2-Minute Tabletop is an optional extra for
+   `rendered-texture/` next to the parchment and checked by `validate_maps`.
+   In that theme the props become webp tiles rendered top-down in Blender from
+   CC0 3D models (Poly Haven; Quaternius Fantasy Props MegaKit **Standard**
+   only), one lock of camera, sun and footprint for the whole set
+   (`build_oggetti_cc0.py`, `scripts/oggetti-cc0/`, D17-D22); the models stay
+   on the DM's machine. Fire, effects, doors, windows, grates, bars, markers,
+   creatures and stairs stay glyphs (`RESTANO_GLIFI`); where no tile exists the
+   glyph stays. The parchment keeps every glyph. 2-Minute Tabletop is an optional extra for
    the DM's own table: the packs live outside git (`asset-esterni/`,
    `dm.py asset installa <zip> --categoria base|premium`), and a **premium**
    pack (Plus, Patron Packs, tokens, even if paid for) has no licence beyond
@@ -177,6 +183,7 @@ python3 scripts/export_uvtt.py <file.md>           # .uvtt/.dd2vtt (Foundry/Roll
 python3 scripts/validate_maps.py                   # CI gate (run before commit)
 python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
 python3 scripts/dm.py asset texture && python3 scripts/dm.py maps texture   # CC0 texture theme, all maps
+.venv/bin/python scripts/build_oggetti_cc0.py --prova   # CC0 3D props for the texture theme (Blender or bpy), GUIDA-MAPPE §5.1.1
 python3 scripts/dm.py asset installa <zip> --categoria base   # 2-Minute Tabletop, optional, table only
 python3 scripts/dm.py maps citta <scheda>.watabou.json --export svg  # a Watabou city plan from a committed seed (R5)
 ```

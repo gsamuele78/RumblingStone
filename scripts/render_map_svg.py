@@ -116,6 +116,69 @@ def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
     return dati.get("terreni", {}), immagini
 
 
+# Gli oggetti di scena del tema texture (R4-ter, D17): tessere webp rese dall'alto
+# da modelli 3D CC0 (`build_oggetti_cc0.py`). Dove c'è la tessera prende il posto
+# del glifo; dove non c'è, resta il glifo. Questi restano glifi sempre: il fuoco
+# e gli effetti (non sono oggetti), i segnali (obiettivo, trappola, allarme,
+# tesoro, zona di scontro), le creature (🌳 è un treant, 🐴 le cavalcature), le
+# strutture in scala di mappa (torre, edificio, ponte), le scale e i buchi,
+# l'affresco, la gru (D21). Le chiusure (porte, finestre, grate, sbarre)
+# restano glifi perché ruotano con l'asse del muro (ADR-0083), e una tessera
+# con la luce fissa non può ruotare. Il muretto 🧱 invece è un oggetto: ha due
+# tessere, est-ovest e nord-sud, rese girando il modello (D21).
+OGGETTI_CC0 = Path(__file__).resolve().parent / "oggetti-cc0"
+RESTANO_GLIFI = frozenset("🔥💥⚡✨⭐🌀❄🕸🌋💀🎯⚔🔔💎⬇🌳🐴🗼🏛🌉🪜🔼🔽🔻🕳🖼🏗")
+
+
+def resta_glifo(simbolo: str) -> bool:
+    """Se il simbolo resta un glifo anche nel tema texture."""
+    return simbolo in RESTANO_GLIFI or chiusure.e_chiusura(simbolo)
+
+
+#: Il glifo che resta sopra la tessera, ridotto: il braciere è un focolare di
+#: pietre, e acceso lo dice la fiamma, che resta glifo come il fuoco (D22).
+SOPRA_LA_TESSERA = {"🏮": "pr_fire"}
+SUFFISSO_NS = "-ns"   # la tessera nord-sud di un oggetto orientabile (🧱, D21)
+
+
+def _oggetti_cc0() -> tuple[dict[str, list[str]], dict[str, str], set[str]] | None:
+    """(simbolo → tessere, tessera → webp in base64, tessere orientabili), o None."""
+    indice = OGGETTI_CC0 / "indice.json"
+    if not indice.exists():
+        return None
+    dati = json.loads(indice.read_text(encoding="utf-8"))
+    immagini = {}
+    for k in dati.get("tessere", {}):
+        f = OGGETTI_CC0 / f"{k}.webp"
+        if f.exists():
+            immagini[k] = base64.b64encode(f.read_bytes()).decode("ascii")
+    simboli = {s: [k for k in ks if k in immagini]
+               for s, ks in dati.get("simboli", {}).items() if not resta_glifo(s)}
+    simboli = {s: ks for s, ks in simboli.items() if ks}
+    if not simboli:
+        return None
+    orientabili = {k for k in dati.get("orientabili", [])
+                   if k in immagini and k + SUFFISSO_NS in immagini}
+    return simboli, immagini, orientabili
+
+
+def _tessera_oggetto(ogg, emoji: str, r: int, c: int, celle=None) -> str | None:
+    """La tessera di un oggetto per questa cella, con la stessa scelta delle
+    varianti. Un oggetto orientabile prende la tessera nord-sud quando ha più
+    vicini uguali sopra e sotto che a destra e a sinistra (`celle(c, r)` dà il
+    simbolo di una cella, o None fuori dalla griglia)."""
+    if not ogg or emoji not in ogg[0]:
+        return None
+    ks = ogg[0][emoji]
+    k = ks[(r * 7 + c * 13) % len(ks)]
+    if k in ogg[2] and celle is not None:
+        ew = sum(celle(c + d, r) == emoji for d in (-1, 1))
+        ns = sum(celle(c, r + d) == emoji for d in (-1, 1))
+        if ns > ew:
+            k += SUFFISSO_NS
+    return k
+
+
 def _ambiente(annotazioni: list[str]) -> str | None:
     """L'ambiente di `@tipo <tipo> <ambiente>` (D18), o None."""
     for riga in annotazioni or []:
@@ -1369,8 +1432,30 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
             texture_usate.add(tp[1])
         else:
             defs.append(PATTERNS[p])
+    ogg = _oggetti_cc0() if tema == "texture" else None
+
+    def _cella(c_: int, r_: int):
+        if not (0 <= r_ < len(row_nums)) or c_ < 0:
+            return None
+        riga_ = rows[row_nums[r_]]
+        return riga_[c_] if c_ < len(riga_) else None
+    oggetti_usati = sorted({k for r_, rn_ in enumerate(row_nums)
+                            for c_, e_ in enumerate(rows[rn_])
+                            if (k := _tessera_oggetto(ogg, e_, r_, c_, _cella))}
+                           | {ogg[0][e_][0] for e_ in used if ogg and e_ in ogg[0]})
+    # i glifi che nessuna cella disegna più, perché la tessera li sostituisce tutti
+    glifi_serviti = {v for e_ in used if (sp := SYMBOLS.get(e_)) and sp.get("prop")
+                     and not (ogg and e_ in ogg[0])
+                     for v in VARIANTS.get(sp["prop"], [sp["prop"]])}
+    glifi_serviti |= {SOPRA_LA_TESSERA[e_] for e_ in used
+                      if ogg and e_ in ogg[0] and e_ in SOPRA_LA_TESSERA}
+    used_props = sorted(set(used_props) | glifi_serviti)
     for p in used_props:
-        defs.append(PROPS[p])
+        if p in glifi_serviti:
+            defs.append(PROPS[p])
+    for k in oggetti_usati:
+        defs.append(f'<symbol id="oc_{k}" viewBox="0 0 96 96"><image '
+                    f'href="data:image/webp;base64,{ogg[1][k]}" width="96" height="96"/></symbol>')
     noto = {e: _simbolo_noto(e) for e in used if e and e not in SYMBOLS}
     noto = {e: v for e, v in noto.items() if v}
     for e in sorted(noto):
@@ -1383,6 +1468,9 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
         # CC0 non chiede il credito; lo si scrive lo stesso, e senza toccare il foglio
         out.append(f'<desc>Texture CC0 1.0 da Poly Haven (polyhaven.com): '
                    f'{", ".join(sorted(texture_usate))}</desc>')
+    if oggetti_usati:
+        out.append(f'<desc>Oggetti di scena da modelli 3D CC0 1.0 (Poly Haven, Quaternius), '
+                   f'resi dall\'alto: {", ".join(oggetti_usati)}</desc>')
 
     # --- parchment sheet, vignette, double frame ----------------------------
     out.append(f'<rect width="{width}" height="{height}" fill="{PAPER}" filter="url(#grain)"/>')
@@ -1519,6 +1607,15 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
                     f'<circle cx="{cx}" cy="{cy}" r="{rr - 2.4}" fill="none" '
                     f'stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>'
                 )
+            elif spec and spec.get("prop") and (tess := _tessera_oggetto(ogg, emoji, r, c, _cella)):
+                # la tessera porta la sua ombra: niente ellisse disegnata
+                out.append(f'<use href="#oc_{tess}" x="{x}" y="{y}" '
+                           f'width="{CELL}" height="{CELL}"/>')
+                if emoji in SOPRA_LA_TESSERA:
+                    m = CELL * 0.22
+                    out.append(f'<use href="#{SOPRA_LA_TESSERA[emoji]}" x="{_n(x + m)}" '
+                               f'y="{_n(y + m - 2)}" width="{_n(CELL - 2 * m)}" '
+                               f'height="{_n(CELL - 2 * m)}"/>')
             elif spec and spec.get("prop"):
                 variants = VARIANTS.get(spec["prop"], [spec["prop"]])
                 prop = variants[(r * 7 + c * 13) % len(variants)]
@@ -1703,6 +1800,9 @@ def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
                 f'<rect x="{lx}" y="{y - 12}" width="19" height="15" fill="url(#{spec["pat"]})" '
                 f'stroke="{INK_SOFT}" stroke-width="0.7"/>'
             )
+        elif spec and spec.get("prop") and ogg and emoji in ogg[0]:
+            out.append(f'<use href="#oc_{ogg[0][emoji][0]}" x="{lx - 1}" y="{y - 14}" '
+                       f'width="20" height="20"/>')
         elif spec and spec.get("prop"):
             out.append(
                 f'<use href="#{spec["prop"]}" x="{lx}" y="{y - 13}" width="18" height="18"/>'

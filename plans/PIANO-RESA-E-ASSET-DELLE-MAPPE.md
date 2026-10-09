@@ -1,6 +1,6 @@
 # PIANO — La resa e gli asset delle mappe, uguali su ogni macchina e per ogni categoria
 
-> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM il 2026-10-08, D9-D16 il 2026-10-09: le texture CC0 strada principale (R4-bis fatto, velatura 0,30), R4 una prova su una mappa (installatore fatto, aspetta il pacchetto), R5 parte da Dauth (sei mappe dell'assedio fatte), R6 in attesa · **Classe**: C per R1-R3, G poi C per R4-R6
+> **Stato**: 🟡 in corso (2026-10-08), D1-D8 decise dal DM il 2026-10-08, D9-D22 il 2026-10-09: le texture CC0 strada principale (R4-bis fatto, velatura 0,30), gli oggetti dai modelli 3D CC0 (R4-ter: codice fatto, tessere vere dal DM), R4 una prova su una mappa (installatore fatto, aspetta il pacchetto), R5 parte da Dauth (sei mappe dell'assedio fatte), R6 in attesa · **Classe**: C per R1-R3, G poi C per R4-R6
 > **Nasce da**: la richiesta del DM della sera del 2026-10-08, dopo la #227:
 > *«verifica se ci sono progetti best community valuated che possono essere
 > importati andando in deroga alla std lib e che migliorano o aiutano a creare
@@ -121,6 +121,24 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   rende dall'alto con luce e scala fisse, tessere webp committate; il tema
   texture le usa al posto dei glifi. Restano glifi: fuoco ed effetti, porte,
   finestre e sbarre (ruotano con l'asse del muro).
+- **Fatto il 2026-10-09, il codice** (questa PR, D18): l'audit in
+  [`esperimenti/oggetti-cc0-2026-10/`](esperimenti/oggetti-cc0-2026-10/RISULTATI.md);
+  `build_oggetti_cc0.py` (scarica i glTF 1k con l'MD5 di ogni file verificato
+  contro l'API, quattro MD5 fissati, estrae Quaternius dallo zip Standard con
+  impronta e licenza verificate, rende con Blender o con il modulo `bpy`, scrive
+  tessere webp da 96 px e l'indice); `scripts/blender/rendi_oggetti.py` con un
+  lock solo per il set; il renderer, che nel tema texture usa la tessera dove
+  c'è e il glifo dove no (`RESTANO_GLIFI`, il muretto orientabile, la fiammella
+  sopra il braciere); `dm.py asset oggetti`, `doctor`, manifest, 26 test,
+  guida §5.1.1, secondo emendamento di ADR-0085, una norma nel registro.
+- **Misurato**: dei 61 simboli-oggetto il corpus ne usa 46; delle 3.386 celle
+  che li portano, Poly Haven ne copre 800 (24%), Quaternius al più 138 (4%),
+  e il 72% resta glifo per scelta (fuoco, pendenze, fiamme, porte).
+- **Restano al DM** (la rete dell'ambiente non raggiunge né Poly Haven né
+  Quaternius, D19): il giro di prova con i modelli veri, il confronto
+  glifi/oggetti su M7-D (interni) e sul cortile interno di ARC07 (esterno), la
+  misura dello stile e del peso; poi tutti i modelli; poi lo zip Standard di
+  Quaternius, da cui si scrive la tabella sui nomi veri.
 
 ### R5 · Città, villaggi ed edifici da Watabou
 
@@ -164,6 +182,7 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | R3 | `build_emoji_noto.py --check` verde in `test_resa_mappe.py`; licenza e crediti nella cartella |
 | R4 | il DM approva una mappa nel tema dipinto; il colophon porta il credito |
 | R4-bis | `build_texture_cc0.py --check` e `validate_maps` verdi con le texture vere; il DM approva una mappa nel tema texture accanto alla pergamena |
+| R4-ter | `build_oggetti_cc0.py --check` e `validate_maps` verdi con le tessere vere; `--misura-stile` scritto in RISULTATI §4; il DM approva M7-D e il cortile di ARC07 accanto alla versione a glifi, prima di estendere; il peso degli SVG misurato |
 | R5 | un'esportazione per tipo importata e collaudata a zero errori |
 | R6 | il master `.map` committato e l'SVG rigenerabile |
 
@@ -193,6 +212,10 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D16~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: velatura 0,30**, come proposto, dopo il confronto 0,45 / 0,30 / 0,20 sulle texture vere (M7-D per gli interni, Hammerfist L1 per l'esterno). Era: **Quale velatura per il tema texture?** A 0,45 erba e sentiero sembravano tinte piatte; a 0,20 muri e pavimenti degli interni si avvicinavano di tono |
 | ~~D17~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: modelli 3D di Poly Haven e Quaternius**, non come proposto (solo Poly Haven). Era: **Gli oggetti di scena nel tema texture da dove vengono?** Modelli 3D CC0 renderizzati dall'alto con Blender in tessere webp, solo per il tema texture; Quaternius (Fantasy Props MegaKit, CC0, solo la parte gratuita) per ciò che Poly Haven non ha. Sostituisce l'IA locale di D15 |
 | ~~D18~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: in una PR nuova, dopo il merge della #227**, non come proposto (nella #227) |
+| ~~D19~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: sulla sua macchina**, come proposto. Era: **I modelli 3D (2,5-6 MB l'uno, 50-70 MB in tutto) dove stanno, e chi li rende?** Restano in `asset-esterni/oggetti-cc0/`, ignorata da git; il DM scarica e rende con `bpy` nel `.venv` o con il binario Blender; nel repo entrano solo le tessere e l'indice. Scartate: nel ramo solo per il render, nel repo per sempre |
+| ~~D20~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: impronta uguale**, come proposto. Era: **Che scala hanno gli oggetti nella cella?** Il lato lungo di ogni modello al 76% della cella, come i glifi; l'indice tiene la misura vera e il fattore. Scartata: la scala vera (1 cella = 1,5 m) |
+| ~~D21~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: sì, ma 🧱 diventa un modello**, non come proposto. Era: **Restano glifi anche segnali, creature, strutture in scala di mappa, scale e buchi, muretto, affresco e gru?** Il muretto (94 celle) è un oggetto orientabile, con due tessere rese girando il modello |
+| ~~D22~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: focolare con la fiamma glifo sopra**, come proposto. Era: **Il braciere 🏮: Poly Haven ha solo un focolare spento.** Scartate: solo il focolare, resta glifo |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
@@ -219,6 +242,46 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Aperte** (quarto messaggio): nessuna
 - **Cambiate** (quarto messaggio): D15, l'IA locale per gli oggetti, sostituita da D17; D17 aggiunge Quaternius alla proposta; D18 sposta il lotto fuori dalla #227
 - **Dedotto da me** (quarto messaggio): che Quaternius si usi solo per i simboli che Poly Haven non copre, e solo nella parte gratuita, dopo aver letto se la licenza CC0 vale anche per la parte a pagamento; che fuoco, effetti, porte, finestre e sbarre restino glifi
+- **Decise** (quinto messaggio, R4-ter): D19 i modelli sulla macchina del DM · D20 l'impronta uguale nella cella · D21 i glifi che restano, e il muretto che diventa un modello · D22 il braciere come focolare con la fiamma glifo sopra
+- **Aperte** (quinto messaggio): nessuna
+- **Cambiate** (quinto messaggio): D21, dove avevo proposto il muretto fra i glifi; quindi un lotto in più nel codice, le tessere orientabili
+- **Dedotto da me** (quinto messaggio): che Poly Haven non avendo muretti, il candidato per 🧱 sia `namaqualand_rocks_01`, una fila di pietre, da giudicare nel giro di prova; che il muretto occupi la cella intera sul lato lungo, perché due tratti vicini devono toccarsi; che la tessera nord-sud si scelga dai muretti vicini, senza una direttiva nuova; che la licenza della versione Pro di Quaternius non sia scritta abbastanza da usarla (il sito dice «free to use», non «CC0»), quindi solo la Standard, come chiedeva D17; che il confronto per il DM non si faccia sulle forme procedurali della prova della catena, che porterebbero a giudicare la resa su oggetti finti
+
+## §8 · Lo stato di ogni voce (2026-10-09, dopo il merge della #227)
+
+Richiesto dal DM con R4-ter: per ogni lotto e ogni decisione, se è **fatto**,
+**superato** da una decisione dopo, **ancora da fare** o **obsoleto**, con il
+commit, il file o la decisione che lo dice. I commit sono quelli della #227
+(merge `f40ffeb`).
+
+| Voce | Stato | Prova |
+|---|---|---|
+| R0 audit | ✅ fatto | `69930a2`; [`esperimenti/dipendenze-e-asset-2026-10/`](esperimenti/dipendenze-e-asset-2026-10/RISULTATI.md) |
+| R1 font dei volumi nelle mappe (D1) | ✅ fatto | `69930a2`; `build_font_mappe.py --check` verde |
+| R2 `🔺` `🔷` universali (D2) | ✅ fatto | `69930a2`; `test_resa_mappe.py` |
+| R3 ripiego Noto (D2) | ✅ fatto | `69930a2`; `build_emoji_noto.py --check` verde |
+| R4 installatore 2-Minute Tabletop, `dm.py asset`, doctor, guida §5.2 (D6, D9) | ✅ fatto | `b8423c1` |
+| R4 come strada per mappe più ricche (D3) | ⏭ superato da D13 | `c630264`: 2-Minute Tabletop diventa un extra per il tavolo del DM, la strada principale sono le texture CC0 |
+| R4 tabella `simbolo → file` e la mappa di prova nel tema dipinto | ⏳ da fare, solo se il DM scarica il pacchetto base | D9; la tabella si scrive sui nomi veri dei file |
+| R4 sfondo dipinto nell'export UVTT per Foundry (D12) | ⏭ superato: per Foundry lo sfondo è il PNG del tema texture | `c630264`, GUIDA-MAPPE §5.1: `export_map_png.py` sull'SVG di `rendered-texture/`, poi `export_uvtt.py --image`. Il tema dipinto resterebbe un secondo sfondo possibile, non uno che manca |
+| R4-bis tema texture CC0 (D13, D14, D16) | ✅ fatto | `260210e` codice, `476287e` `.gitignore`, `1bbf7bf` 11 tessere e 53 SVG, `32ee061` velatura 0,30 |
+| R4-bis oggetti con l'IA locale (D15) | ⏭ superato da D17 | `ef0c492`: modelli 3D CC0 al posto delle immagini generate |
+| R4-ter codice, audit, guida, ADR (D17-D22) | ✅ fatto | questa PR; [`esperimenti/oggetti-cc0-2026-10/`](esperimenti/oggetti-cc0-2026-10/RISULTATI.md) |
+| R4-ter giro di prova, confronto, misura dello stile e del peso | ⏳ da fare, il DM | GUIDA-MAPPE §5.1.1; RISULTATI §4 e §6 aspettano i numeri |
+| R4-ter tutti i modelli Poly Haven | ⏳ da fare, dopo il confronto | D17: «prima di estenderla» |
+| R4-ter Quaternius | ⏳ da fare: lo zip Standard dal DM, poi la tabella sui nomi veri | `QUATERNIUS = ()` in `build_oggetti_cc0.py` |
+| R5 le sei griglie dell'assedio di Dauth (D10) | ✅ fatto | `b8423c1`; collaudate a zero errori |
+| R5 scheda della pianta e `dm.py maps citta` | ✅ fatto | `b8423c1`; `watabou_citta.py` |
+| R5 la pianta di Dauth esportata da Watabou | ⏳ da fare, il DM | la rete dell'ambiente non raggiunge Watabou |
+| R5 importatore di città, villaggi, edifici (D4) | ⏳ da fare solo con esportazioni vere | D7, poi D10 |
+| R5 i tre `[INFERRED]` delle griglie di Dauth | ⏳ da fare, il DM | C1: barelle e giacigli come terreno ingombro che costa doppio; E: dove porta la botola in G02; E: il sabotatore con la chiave, Ladro 7, in B6. Un quarto sta nella scheda della pianta: la piazza dell'arena del Torneo |
+| R6 Azgaar per una regione inventata (D5) | ⏸ in attesa | D8, D11: nessuna regione finché un arco non la chiede |
+| R7 residui (`☁`, `🔲`, `💠`, emoji nelle righe di legenda) | ⏳ da fare in V3 di COLLAUDO-MAPPE | §3, R7 |
+| D7 «R5 rimandato» | ⏭ superato da D10 | `b8423c1` |
+
+Le voci dei documenti più vecchi che la #227 ha reso inutili stanno in
+[STATO-E-ORDINE-DEI-PIANI](STATO-E-ORDINE-DEI-PIANI.md), §2-bis: è un
+inventario che attraversa più piani, e lì si legge una volta sola.
 
 ---
 
@@ -234,7 +297,7 @@ Fase S — Sviluppo
 ☑ R3  il ripiego Noto, 12 emoji locali (2026-10-08: 177 celle → 0)
 □ R4  il tema dipinto: una prova su una mappa (D9); ☑ installatore, `dm.py asset`, doctor e guida (2026-10-09) · □ la tabella simbolo → file e la mappa di prova, quando il DM ha scaricato il pacchetto base
 □ R4-bis il tema texture CC0 (D13-D16): ☑ script, tema, gate e guida · ☑ le 11 texture scaricate dal DM e i 53 gemelli committati (7,6 MB) · ☑ la velatura tarata a 0,30 (D16) (2026-10-09) · ~~gli oggetti con l'IA locale (D15)~~, sostituita da R4-ter (D17)
-□ R4-ter gli oggetti di scena dai modelli 3D CC0 (D17), in una PR nuova dopo la #227 (D18)
+□ R4-ter gli oggetti di scena dai modelli 3D CC0 (D17-D22): ☑ audit, script, scena Blender, renderer, gate, guida e ADR (2026-10-09, PR nuova come da D18) · □ il giro di prova e il confronto del DM sui modelli veri · □ tutti i modelli Poly Haven · □ Quaternius, dallo zip Standard
 □ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
 □ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE
