@@ -157,6 +157,11 @@ def cmd_asset(args: argparse.Namespace, extra: list[str]) -> int:
     return run("asset_2mtt.py", args.action, *extra)
 
 
+def cmd_ambiente(args: argparse.Namespace, extra: list[str]) -> int:
+    # l'ambiente completo col registro e il rollback (AMBIENTE A5c-A5d, D1)
+    return run("ambiente.py", args.action, *extra)
+
+
 def cmd_bestiario(args: argparse.Namespace, extra: list[str]) -> int:
     if not args.action:
         print("[dm] uso: dm.py bestiario <azione> [flag dello script]")
@@ -710,6 +715,12 @@ def main(argv: list[str] | None = None) -> int:
                             "conformita (i flag passano allo script)")
     p.add_argument("action", nargs="?", choices=list(BESTIARIO))
 
+    p = sub.add_parser("ambiente", add_help=False,
+                       help="l'ambiente di sviluppo completo col registro: piano / installa "
+                            "[--con blender,comfyui,typst] / stato / rimuovi [--venv] / "
+                            "adotta --apt-dal DATA")
+    p.add_argument("action", choices=["piano", "installa", "stato", "rimuovi", "adotta"])
+
     p = sub.add_parser("post", help="Playbook §4: XP ledger + diff state.md proposto")
     p.add_argument("--session", help="scansiona solo questo file di sessione")
 
@@ -805,7 +816,7 @@ def main(argv: list[str] | None = None) -> int:
     return {
         "prep": cmd_prep, "maps": cmd_maps, "post": cmd_post, "recap": cmd_recap,
         "handout": cmd_handout, "hype": cmd_hype, "dossier": cmd_dossier,
-        "booklet": cmd_booklet, "prompts": cmd_prompts, "bestiario": cmd_bestiario,
+        "booklet": cmd_booklet, "prompts": cmd_prompts, "bestiario": cmd_bestiario, "ambiente": cmd_ambiente,
         "session": cmd_session, "asset": cmd_asset, "volume": cmd_volume, "corredo": cmd_corredo, "skills": cmd_skills, "doctor": cmd_doctor,
         "gruppo": cmd_gruppo,
     }[args.cmd](args, extra)

@@ -188,6 +188,24 @@ Si taglia in quattro, perché il primo pezzo è utile da solo.
 > Sono ancora da fare la verifica di versioni e checksum, il lock e la
 > scrittura dei pacchetti di sistema (A1, A3, A5c). Sulla macchina del DM,
 > quel giorno, `misura_resa.py --check` ha dato lo stesso verde della CI.
+>
+> **Poi, lo stesso giorno, A5c e una parte di A5d.** Il DM: *«manca blender,
+> comfyui e typst; prevedere anche un rollback così si può pulire il sistema»*.
+> `scripts/ambiente.py` (`dm.py ambiente`) fa `piano`, `installa
+> [--con blender,comfyui,typst]`, `stato`, `rimuovi [--venv]` e `adotta
+> --apt-dal`, come li descrive A5c:
+> - `dpkg` fotografato prima e dopo, e il registro possiede la differenza;
+> - in rimozione la simulazione si mostra prima; mai `autoremove` né `purge`;
+> - un pacchetto nostro da cui dipende altro resta.
+>
+> Il criterio di qualità di A5c è provato con un sistema finto
+> (`test_ambiente_registro.py`), non ancora in un container Debian 13 vero:
+> quello resta ad A6. `adotta` è nuovo rispetto al piano: affida al registro ciò
+> che il DM aveva installato a mano prima che lo script esistesse.
+>
+> Il tool ha `side_effects.system` nel manifest, e così non esce dal server
+> MCP nemmeno con `--allow-write`. Mancano ancora le versioni fissate con
+> checksum (A1), il lock (A3), `aggiorna`, gli hook (A4) e Bazzite.
 
 **A5a · leggere: `piano`, `verifica`, `stato`** `[engine: Sonnet 5 · effort: alto · qualità: --json deterministico (due giri, stesso output a parità di macchina), exit code documentati, test con un PATH finto per ogni stato del vocabolario]`
 - `--profilo dm|sviluppo|completo`, `--json`, `--verboso`, `--silenzioso`, `--rapido`.
@@ -298,7 +316,7 @@ appena esce, ed è già una risposta a «la mia macchina è come la CI?».
 - [ ] A4 · hook ridisegnati (D11)
 - [ ] A5a · `ambiente piano/verifica/stato`
 - [ ] A5b · `ambiente setup` a livello utente, distrobox su Bazzite
-- [ ] A5c · pacchetti di sistema col registro
+- [~] A5c · pacchetti di sistema col registro (2026-10-09: `ambiente.py`, provato con un sistema finto; manca la prova in container di A6)
 - [ ] A5d · `aggiorna` e `rimuovi`
 - [ ] A6 · la CI prova il contratto, shellcheck bloccante
 - [ ] A7 · guida e matrici generate

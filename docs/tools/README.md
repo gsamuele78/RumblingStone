@@ -5,7 +5,7 @@
 
 > Vista umana del contratto machine-readable [`registry.json`](registry.json). Fonte di verita': `scripts/tools.manifest.json`.
 
-**105 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
+**106 tool** · convenzione exit code `0=ok · 1=errore-dominio · 2=errore-uso`.
 
 **Da un client MCP** ([`mcp-tools.json`](mcp-tools.json), [ADR-0030](../../plans/adr/ADR-0030-server-mcp-sui-tool.md)): `python3 scripts/mcp_server.py` — JSON-RPC su stdio, catalogo preso da questo stesso manifest. È **read-only per difetto**: i tool marcati «Canone» qui sotto sono elencati ma non partono senza `--allow-write`, perché il canone si scrive su un branch di gruppo con l'occhio del DM sopra (ADR-0007). Le voci esposte sono 100: le cartelle di `converters/` non sono programmi e non compaiono.
 
@@ -104,6 +104,7 @@
 | Tool | Scopo | Parametri | Determ. | Canone | Git | Exit |
 |---|---|---|:--:|:--:|:--:|---|
 | `adozioni_in_attesa.py` | «Quella skill che avevamo rimandato: e' arrivato il momento di adottarla?»<br>Le adozioni di codice o skill esterni rimandate, in plans/adozioni-in-attesa.json, ognuna con una condizione misurabile; --check esce 1 quando una condizione e' attiva e la voce dice ancora «in attesa» (ADR-0076). | --check | ✔ | — | — | `0` · `1` · `2` |
+| `ambiente.py` | «Come installo tutto, e come torno indietro?»<br>L'ambiente di sviluppo completo installato col registro e tolto col rollback (AMBIENTE A5c-A5d, D1): pacchetti di sistema su Debian e Ubuntu con dpkg fotografato prima e dopo, requirements-completo.txt nel .venv, typst della CI in ~/.local/bin, ComfyUI in distrobox. Il registro possiede solo ciò che mancava; rimuovi toglie solo quello, mai autoremove né purge, e lascia un pacchetto nostro da cui dipende altro. adotta mette nel registro le installazioni apt fatte a mano da una data. | **azione** · --con · --si · --venv · --apt-dal | — | — | — | `0` · `1` · `2` |
 | `avvia_languagetool.sh` | «Voglio una verifica in più sulla grammatica di un master, senza mandare il testo a un servizio esterno: come avvio il server?»<br>Avvia un server LanguageTool 6.8 locale (solo 127.0.0.1) per il secondo lettore di `ciclo_prosa.py segnala --languagetool`; scarica i jar da Maven Central in ~/.cache la prima volta. | PORTA | ✔ | — | — | `0` · `1` |
 | `azzera_partita.py` | «Un gruppo nuovo riparte da zero: cosa si azzera, cosa resta, e la sua CI e' verde?»<br>Azzera la PARTITA per un gruppo nuovo (stato, storico, sessioni, recap) e lascia il prodotto; l'elenco e' dmcore/partita.py. Valida il nuovo state.yaml prima di scrivere e rigenera state.md (ADR-0050 §7). | --check | — | ✔ | — | `0` · `1` |
 | `campioni_kappa.py` | «Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.<br>Estrae i due campioni disgiunti (20+20, stratificati per classe, seme fisso) e calcola il kappa di Cohen fra il giudizio di un valutatore e quello della macchina. Sotto kappa 0,60 la metrica si dichiara NON affidabile e non entra in CI: e' la regola del piano, e il 2026-09-21 ha detto di no (kappa 0,0 con accordo osservato e atteso entrambi a 0,95). | --estrai · --scheda · --kappa | ✔ | — | — | `0` · `1` |

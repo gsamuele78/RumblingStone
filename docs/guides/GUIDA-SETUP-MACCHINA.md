@@ -163,26 +163,58 @@ pip install pillow    # opzionale: senza, le immagini vengono incorporate non co
 sudo apt install pandoc texlive-xetex    # solo se usi `dm.py recap --pdf`
 ```
 
-### Tutto, per chi sviluppa
+### Tutto, per chi sviluppa, e come tornare indietro
 
 Gli extra qui sopra sono opzionali per scelta: la sera di gioco non li usa, e
-la CI installa solo `requirements-dev.txt`. Chi sviluppa e vuole `dm.py doctor`
-senza righe «○» installa tutto in due comandi (Debian 13; su altre distribuzioni
-i nomi dei pacchetti sono in `scripts/binari.py`):
+la CI installa solo `requirements-dev.txt`. Chi sviluppa li installa tutti con
+`ambiente.py`, che tiene un **registro** di ciò che installa e lo toglie con
+`rimuovi` (D1 di PIANO-AMBIENTE). Va lanciato col `.venv` attivo:
 
 ```bash
-sudo apt install maven texlive-xetex webp chromium pandoc inkscape shellcheck
-.venv/bin/pip install -r requirements-completo.txt
+source .venv/bin/activate
+python scripts/ambiente.py piano --con blender,comfyui,typst     # cosa farebbe, senza toccare niente
+export COMFYUI_DIR=/srv/comfyui                                  # solo se vuoi ComfyUI
+python scripts/ambiente.py installa --con blender,comfyui,typst  # chiede conferma a ogni gruppo
+python scripts/ambiente.py stato                                 # cosa c'è nel registro
+python scripts/dm.py doctor
 ```
 
-`requirements-completo.txt` aggiunge alla dotazione di sviluppo:
-- `bpy`, cioè Blender come modulo. Pesa circa 400 MB e vuole Python 3.13.
-  Serve alle tessere degli oggetti e a `test_blender_vero.py`;
-- `torch` per CPU e `piq`, per il secondo parere della misura della resa:
-  circa 200 MB, più circa 700 MB di pesi al primo uso.
+| Modulo | Cosa installa | Peso |
+|---|---|---|
+| sempre | pacchetti di sistema che mancano: chromium, pandoc, texlive-xetex, maven, default-jre, webp, inkscape, shellcheck; nel `.venv` `requirements-completo.txt` (bpy, torch per CPU, piq) | ~1 GB |
+| `blender` | il programma Blender da apt; con `bpy` serve solo al PNG di `render_map_blender.py` | ~400 MB |
+| `comfyui` | distrobox e podman, poi `scripts/comfyui-local/setup-distrobox.sh` in `COMFYUI_DIR` e, se dici sì, il checkpoint SDXL | ~15 GB |
+| `typst` | la versione fissata dalla CI in `~/.local/bin`, solo se typst manca | 40 MB |
 
-Il programma `blender` resta fuori: con `bpy` serve solo al PNG di
-`render_map_blender.py`. Se lo vuoi, `sudo apt install blender`.
+**Il registro** sta in `~/.local/state/rumblingstone/<id del clone>/stato.json`.
+Possiede solo ciò che prima mancava: per i pacchetti di sistema fotografa
+`dpkg` prima e dopo, e tiene la differenza, dipendenze comprese. Un pacchetto
+che avevi già non diventa mai suo.
+
+**Tornare indietro:**
+
+```bash
+python scripts/ambiente.py rimuovi           # toglie solo ciò che ha installato, chiedendo
+python scripts/ambiente.py rimuovi --venv    # in più cancella tutto il .venv del repo
+```
+
+`rimuovi` ti mostra la simulazione di `apt-get remove` prima di farlo. Non
+usa mai `autoremove` né `purge`, che toglierebbero anche ciò che non è suo.
+Se da un pacchetto suo ora dipende un pacchetto installato da te, quel
+pacchetto resta, e `rimuovi` dice perché. Toglie il box e la cartella di
+ComfyUI solo se li aveva creati lui, e typst solo se il file è ancora quello
+che aveva installato.
+
+**Quello che hai installato a mano prima** non è nel registro. Per affidarglielo
+c'è `adotta`: legge `/var/log/apt/history.log` e prende le transazioni dalla
+data che gli dai, limitandosi ai pacchetti che ci sono ancora:
+
+```bash
+python scripts/ambiente.py adotta --apt-dal 2026-10-09
+```
+
+⚠️ Adotta **tutte** le installazioni apt da quella data, anche quelle che non
+c'entrano col repo. Leggi l'elenco che ti mostra prima di dire sì.
 
 ### Container
 

@@ -197,7 +197,7 @@
 ### PIANO-AMBIENTE-RIPRODUCIBILE
 - ✅ _(A0: brief corretto, audit della macchina e della CI, contratto, ADR-0081; D1-D10 decise dal DM il 2026-10-08)_
 - ⬜ _(A1-A8 dopo il lotto mappe D28, un ramo e una PR per lotto; D11 gli hook decisa)_
-- 🟡 _(2026-10-09, fuori lotto: il profilo `completo` in forma minima, `requirements-completo.txt` e la riga `apt` per Debian 13; `gate_locale.py` per i gate della CI in locale)_
+- 🟡 _(2026-10-09, fuori lotto: il profilo `completo`, `requirements-completo.txt`; `gate_locale.py` per i gate della CI in locale; A5c e parte di A5d in `ambiente.py`: installa col registro (blender, comfyui, typst), rimuovi, adotta da `history.log`)_
 
 ### PIANO-PRATICHE-DI-INGEGNERIA
 - ✅ _(D1-D5 decise dal DM il 2026-09-24: sì a tutte)_

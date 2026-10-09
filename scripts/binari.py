@@ -166,6 +166,12 @@ OPZIONALI = (
          "presentazione e non canone. Le tessere degli oggetti si fanno una "
          "volta e si committano: senza Blender il tema texture le legge lo "
          "stesso, e dove mancano restano i glifi."),
+    _opz("distrobox", "il container di ComfyUI con la GPU dell'host "
+                      "(`scripts/comfyui-local/`, `ambiente.py installa --con comfyui`)",
+         "  Debian/Ubuntu  sudo apt install distrobox podman\n"
+         "  Bazzite        c'e' gia'",
+         "niente ComfyUI in locale: le immagini restano quelle committate, e il "
+         "tema texture usa modelli CC0 o glifi."),
     _opz("inkscape", "i PNG delle mappe con resa SVG fedele (`--renderer inkscape`)",
          "  Debian/Ubuntu  sudo apt install inkscape\n"
          "  Fedora         sudo dnf install inkscape",

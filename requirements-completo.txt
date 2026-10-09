@@ -4,10 +4,10 @@
 #
 #   pip install -r requirements-completo.txt
 #
-# I binari di sistema non stanno qui: su Debian 13 sono
-#   sudo apt install maven texlive-xetex webp
-# (GUIDA-SETUP-MACCHINA §5). Il resto della dotazione è in `scripts/binari.py`,
-# che è la fonte per `doctor`.
+# I binari di sistema non stanno qui. Li installa, col registro e il rollback,
+#   python scripts/ambiente.py installa [--con blender,comfyui,typst]
+# che installa anche questo file (GUIDA-SETUP-MACCHINA §5). Il resto della
+# dotazione è in `scripts/binari.py`, che è la fonte per `doctor`.
 #
 # Perché non stanno in requirements-dev.txt: la CI non li usa (ADR-0084) e
 # pesano. bpy sono 400 MB e vogliono Python 3.13 esatto; torch per CPU circa

@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 105,
+  "tool_count": 106,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -5919,6 +5919,124 @@
       ],
       "docs": [
         "plans/adr/ADR-0076-adozione-da-awesome-llm-apps.md"
+      ]
+    },
+    {
+      "id": "ambiente",
+      "path": "scripts/ambiente.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/ambiente.py piano --con blender,comfyui,typst",
+      "summary": "L'ambiente di sviluppo completo installato col registro e tolto col rollback (AMBIENTE A5c-A5d, D1): pacchetti di sistema su Debian e Ubuntu con dpkg fotografato prima e dopo, requirements-completo.txt nel .venv, typst della CI in ~/.local/bin, ComfyUI in distrobox. Il registro possiede solo ciò che mancava; rimuovi toglie solo quello, mai autoremove né purge, e lascia un pacchetto nostro da cui dipende altro. adotta mette nel registro le installazioni apt fatte a mano da una data.",
+      "use_case": "«Come installo tutto, e come torno indietro?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "distrobox"
+      ],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "piano",
+            "installa",
+            "stato",
+            "rimuovi",
+            "adotta"
+          ],
+          "repeatable": false,
+          "desc": "piano · installa · stato · rimuovi · adotta"
+        },
+        {
+          "name": "--con",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Moduli in più: blender, comfyui, typst."
+        },
+        {
+          "name": "--si",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non chiede conferma."
+        },
+        {
+          "name": "--venv",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "rimuovi: toglie tutto il .venv del repo."
+        },
+        {
+          "name": "--apt-dal",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "adotta: le transazioni apt da questa data (AAAA-MM-GG)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "requirements-completo.txt",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "/var/log/apt/history.log",
+          "kind": "text",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "$XDG_STATE_HOME/rumblingstone/<id>/stato.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "fatto",
+        "1": "un passo fallito: il registro dice cosa c'è",
+        "2": "piattaforma o .venv non adatti"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": null,
+        "notes": "dipende da cosa c'è sulla macchina"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "system": true,
+        "notes": "installa e toglie pacchetti con sudo apt-get e dpkg-query (Debian, Ubuntu); per questo non esce come tool MCP"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/ambiente.py --help",
+      "tests": [
+        "scripts/tests/test_ambiente_registro.py"
+      ],
+      "docs": [
+        "plans/PIANO-AMBIENTE-RIPRODUCIBILE.md",
+        "docs/guides/GUIDA-SETUP-MACCHINA.md"
       ]
     },
     {

@@ -119,6 +119,13 @@ def main(argv=None) -> int:
 
     env = dict(os.environ)
     env["PATH"] = f"{Path(sys.executable).parent}{os.pathsep}{env.get('PATH', '')}"
+    # Le variabili che il runner di GitHub dà a ogni passo. Senza, un passo che
+    # scrive in "$RUNNER_TEMP/x" scrive in "/x" e fallisce per i permessi: il
+    # 2026-10-09, sulla macchina del DM, il piano di scena 3D.
+    import tempfile
+    temp = tempfile.mkdtemp(prefix="gate-locale-")
+    env.setdefault("RUNNER_TEMP", temp)
+    env.setdefault("GITHUB_WORKSPACE", str(REPO))
     env.setdefault("PYTHONIOENCODING", "utf-8")
     rossi, avvisi, fatti = [], [], 0
     assenti = mancanti(elenco)
