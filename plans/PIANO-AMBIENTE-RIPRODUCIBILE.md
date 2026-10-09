@@ -175,6 +175,20 @@ passa a un sottoinsieme dichiarato.
 ### A5 · `dm.py ambiente` ⬜
 Si taglia in quattro, perché il primo pezzo è utile da solo.
 
+> **Anticipato il 2026-10-09, fuori lotto.** Il DM, installando sulla sua
+> Debian 13: *«ci sono pacchetti richiesti che non sono installati, perché non
+> si possono includere così l'ambiente di sviluppo è completo?»*. Il profilo
+> `completo` esiste già in forma minima:
+> - `requirements-completo.txt`: `bpy`, `torch` per CPU e `piq`, sopra
+>   `requirements-dev.txt`; un test lo tiene allineato a `binari.py`;
+> - la riga `apt` per Debian 13 in GUIDA-SETUP-MACCHINA §5;
+> - `bpy` nel registro, e `doctor` che non dà più «blender assente» quando il
+>   modulo c'è.
+>
+> Sono ancora da fare la verifica di versioni e checksum, il lock e la
+> scrittura dei pacchetti di sistema (A1, A3, A5c). Sulla macchina del DM,
+> quel giorno, `misura_resa.py --check` ha dato lo stesso verde della CI.
+
 **A5a · leggere: `piano`, `verifica`, `stato`** `[engine: Sonnet 5 · effort: alto · qualità: --json deterministico (due giri, stesso output a parità di macchina), exit code documentati, test con un PATH finto per ogni stato del vocabolario]`
 - `--profilo dm|sviluppo|completo`, `--json`, `--verboso`, `--silenzioso`, `--rapido`.
 - Per ogni componente: presenza, versione contro il registro, percorso, architettura, duplicati nel PATH, prova funzionale (typst compila una pagina, pdfcpu impone due pagine, Chrome for Testing stampa un PDF di prova, il `.venv` importa i moduli, `gh auth status` senza stampare il token). I file di prova vanno nella cartella temporanea del sistema e si cancellano.

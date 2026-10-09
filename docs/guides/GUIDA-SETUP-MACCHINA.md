@@ -163,6 +163,27 @@ pip install pillow    # opzionale: senza, le immagini vengono incorporate non co
 sudo apt install pandoc texlive-xetex    # solo se usi `dm.py recap --pdf`
 ```
 
+### Tutto, per chi sviluppa
+
+Gli extra qui sopra sono opzionali per scelta: la sera di gioco non li usa, e
+la CI installa solo `requirements-dev.txt`. Chi sviluppa e vuole `dm.py doctor`
+senza righe «○» installa tutto in due comandi (Debian 13; su altre distribuzioni
+i nomi dei pacchetti sono in `scripts/binari.py`):
+
+```bash
+sudo apt install maven texlive-xetex webp chromium pandoc inkscape shellcheck
+.venv/bin/pip install -r requirements-completo.txt
+```
+
+`requirements-completo.txt` aggiunge alla dotazione di sviluppo:
+- `bpy`, cioè Blender come modulo. Pesa circa 400 MB e vuole Python 3.13.
+  Serve alle tessere degli oggetti e a `test_blender_vero.py`;
+- `torch` per CPU e `piq`, per il secondo parere della misura della resa:
+  circa 200 MB, più circa 700 MB di pesi al primo uso.
+
+Il programma `blender` resta fuori: con `bpy` serve solo al PNG di
+`render_map_blender.py`. Se lo vuoi, `sudo apt install blender`.
+
 ### Container
 
 | Cosa | Dove |

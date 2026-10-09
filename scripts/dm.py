@@ -586,9 +586,16 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
     # ferma un gate della CI ed e' quindi un problema vero.
     try:
         import binari as _binari
+        _bpy = _binari.disponibile("bpy")
         for _b, _p in (*_binari.stato(), *_binari.stato_opzionali()):
             if _p:
                 ok(f"{_b.nome} presente ({_b.a_cosa_serve})")
+            elif _b.nome == "blender" and _bpy:
+                # il modulo fa le tessere degli oggetti; il binario serve solo
+                # al render 3D delle mappe (`render_map_blender.py`)
+                print("  ○ blender assente come programma, ma c'è il modulo bpy: le "
+                      "tessere degli oggetti si fanno; manca solo il PNG di "
+                      "`render_map_blender.py`")
             else:
                 print(f"  ○ {_b.nome} assente — {_b.ripiego}")
         for _lib, _c_e in _binari.stato_librerie():

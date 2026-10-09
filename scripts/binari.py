@@ -258,7 +258,7 @@ LIBRERIE = (
     Libreria(
         nome="torch", modulo="torch",
         a_cosa_serve="il secondo parere della misura della resa (`misura_resa_appresa.py`, D26)",
-        installa="  pip install torch --index-url https://download.pytorch.org/whl/cpu",
+        installa="  pip install -r requirements-completo.txt   (torch per CPU e piq)",
         obbligatoria=False,
         ripiego="la misura della resa gira senza: il livello A e il confronto alla "
                 "cieca bastano a decidere (ADR-0086); manca solo il secondo parere.",
@@ -266,9 +266,20 @@ LIBRERIE = (
     Libreria(
         nome="piq", modulo="piq",
         a_cosa_serve="CLIP-IQA, LPIPS e DISTS per il secondo parere della misura della resa",
-        installa="  pip install \"piq>=0.8\"",
+        installa="  pip install -r requirements-completo.txt",
         obbligatoria=False,
         ripiego="come per torch: `misura_resa_appresa.py` esce con 2 e dice come installarla.",
+    ),
+    Libreria(
+        nome="bpy", modulo="bpy",
+        a_cosa_serve="Blender come modulo Python: le tessere degli oggetti del tema "
+                     "texture (`build_oggetti_cc0.py`) e `test_blender_vero.py`, senza "
+                     "il binario `blender`",
+        installa="  pip install -r requirements-completo.txt   (solo Python 3.13)",
+        obbligatoria=False,
+        ripiego="il binario `blender` fa lo stesso lavoro; senza tutti e due le "
+                "tessere degli oggetti non si rifanno, e il tema texture usa quelle "
+                "committate o i glifi.",
     ),
     Libreria(
         nome="fonttools", modulo="fontTools",
