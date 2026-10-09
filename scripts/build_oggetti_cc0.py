@@ -582,6 +582,57 @@ def controlla() -> int:
 SCHEDA_RESA = RADICE / "scheda-resa.json"
 
 
+def adotta(cartella: Path | None = None) -> int:
+    """Dopo i voti (D23): tiene in `scripts/oggetti-cc0/` solo i simboli la cui
+    tessera la misura non boccia e il DM ha preferito al glifo. Senza cartella
+    sfoltisce le tessere CC0 già rese; con una cartella di candidati (per
+    esempio di `--da-immagini`) copia dentro le tessere approvate, al posto di
+    quelle che il simbolo aveva."""
+    sorgente = cartella or USCITA
+    ind_s = json.loads((sorgente / "indice.json").read_text(encoding="utf-8"))
+    tenuti, scartati = [], {}
+    for s in ind_s.get("simboli", {}):
+        errori = approvazioni({"simboli": {s: []}})
+        (scartati.__setitem__(s, errori) if errori else tenuti.append(s))
+
+    def _sue(ind, s):
+        ks = list(ind.get("simboli", {}).get(s, []))
+        return ks + [k + SUFFISSO_NS for k in ks if k + SUFFISSO_NS in ind.get("tessere", {})]
+
+    dest = json.loads(INDICE.read_text(encoding="utf-8")) if INDICE.exists() else {
+        "lato": LATO, "qualita": QUALITA, "lock": LOCK, "opzioni": OPZIONI}
+    dest.setdefault("simboli", {}), dest.setdefault("tessere", {})
+    via = [s for s in (scartati if cartella is None else tenuti) if s in dest["simboli"]]
+    for s in via:
+        for k in _sue(dest, s):
+            dest["tessere"].pop(k, None)
+            (USCITA / f"{k}.webp").unlink(missing_ok=True)
+        del dest["simboli"][s]
+    if cartella is not None:
+        USCITA.mkdir(exist_ok=True)
+        for s in tenuti:
+            for k in _sue(ind_s, s):
+                shutil.copyfile(cartella / f"{k}.webp", USCITA / f"{k}.webp")
+                dest["tessere"][k] = ind_s["tessere"][k]
+            dest["simboli"][s] = list(ind_s["simboli"][s])
+    dest["orientabili"] = sorted(k for k in dest.get("orientabili", [])
+                                 if k in dest["tessere"] and k + SUFFISSO_NS in dest["tessere"])
+    dest["tessere"] = dict(sorted(dest["tessere"].items()))
+    INDICE.write_text(json.dumps(dest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    for s in tenuti:
+        print(f"✓ {s}: tessera adottata")
+    for s, errori in scartati.items():
+        print(f"○ {s}: resta il glifo — {errori[0]}")
+    nuove = [(s, k) for s in tenuti for k in ind_s["simboli"][s]
+             if ind_s["tessere"][k].get("fonte") == "ComfyUI"]
+    if nuove:
+        print("\nAggiungi a GENERATE in build_oggetti_cc0.py (o incolla queste righe nella chat):")
+        for s, k in nuove:
+            print(f'    ("{s}", "{k}"),')
+    print("\nPoi: python3 scripts/dm.py maps texture && python3 scripts/build_oggetti_cc0.py --check")
+    return 0
+
+
 def approvazioni(indice: dict) -> list[str]:
     """D23: una tessera sostituisce un glifo solo se la misura non la boccia
     (`misura_resa.py candidati --registra`) e il DM l'ha preferita al glifo nel
@@ -678,6 +729,9 @@ def main(argv=None) -> int:
     ap.add_argument("--blender", help="il comando di Blender, se non è nel PATH")
     g.add_argument("--da-immagini", type=Path, metavar="DIR",
                    help="le PNG di comfyui_batch.py in tessere candidate (con --variante e -o)")
+    g.add_argument("--adotta", nargs="?", const=True, type=Path, metavar="DIR",
+                   help="dopo i voti: tiene solo le tessere preferite al glifo; con DIR copia "
+                        "dentro le candidate approvate (per esempio di --da-immagini)")
     ap.add_argument("--variante", default="a", help="--da-immagini: quale dei quattro semi (a-d)")
     ap.add_argument("-o", "--uscita", type=Path, help="--da-immagini: la cartella dei candidati")
     args = ap.parse_args(argv)
@@ -687,6 +741,8 @@ def main(argv=None) -> int:
         return elenca_quaternius(args.elenca_quaternius)
     if args.misura_stile:
         return stampa_stile()
+    if args.adotta:
+        return adotta(None if args.adotta is True else args.adotta)
     if args.da_immagini:
         Image = _pillow()
         if Image is None:

@@ -164,6 +164,26 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - Il banco dei prompt (8 simboli × 4 semi, stile a inchiostro e acquerello, sfondo
   bianco) in `esperimenti/oggetti-cc0-2026-10/comfyui/`, e
   `build_oggetti_cc0.py --da-immagini` che ne fa tessere candidate.
+- **L'installazione, rivista il 2026-10-09** dopo la domanda del DM *«gli script
+  configurano ComfyUI? i passi ci sono?»*. Non del tutto: gli script di
+  `scripts/comfyui-local/` erano scritti per Bazzite, ma la macchina del DM è
+  Debian. Mettevano tutto in `/home`, dove restano 11 GB contro i ~15 che
+  servono, e i pesi andavano scaricati a mano. Adesso:
+  - `COMFYUI_DIR` sceglie il disco, e un controllo dello spazio ferma il setup
+    prima di riempirlo;
+  - se mancano Distrobox e Podman, il setup dice come installarli su Debian;
+  - alla fine stampa se torch vede la GPU;
+  - `scarica-pesi.sh` scarica SDXL 1.0 base e ne verifica lo sha256 contro
+    quello che Hugging Face pubblica.
+
+  Gli script restano **mai provati su una macchina vera**: la rete di questo
+  ambiente non raggiunge né Hugging Face né una GPU.
+- **L'adozione dopo i voti**: `build_oggetti_cc0.py --adotta [DIR]` tiene solo le
+  tessere che la misura non boccia e che il DM ha preferito. Senza `DIR`
+  sfoltisce le CC0, con `DIR` copia le candidate di ComfyUI e stampa le righe di
+  `GENERATE`. Prima mancava: `--check` (D23) bocciava le tessere perdenti e
+  nessun comando le toglieva. GUIDA-MAPPE §5.1.2 ha la trafila *«da zero, in
+  ordine»*, dal ramo al commit.
 - **Resta al DM**: la generazione sulla sua GPU; poi misura e coppie.
 
 ### R5 · Città, villaggi ed edifici da Watabou
@@ -340,7 +360,7 @@ Fase S — Sviluppo
 □ R4-bis il tema texture CC0 (D13-D16): ☑ script, tema, gate e guida · ☑ le 11 texture scaricate dal DM e i 53 gemelli committati (7,6 MB) · ☑ la velatura tarata a 0,30 (D16) (2026-10-09) · ~~gli oggetti con l'IA locale (D15)~~, sostituita da R4-ter (D17)
 □ R4-ter gli oggetti di scena dai modelli 3D CC0 (D17-D22): ☑ audit, script, scena Blender, renderer, gate, guida e ADR (2026-10-09, PR nuova come da D18) · □ il giro di prova e il confronto del DM sui modelli veri · □ tutti i modelli Poly Haven · □ Quaternius, dallo zip Standard
 □ R8  la resa misurata (D23-D27): ☑ misura, cancello in CI, confronto alla cieca, taratura, scheda (2026-10-09) · ☑ alone 0,75, glifi del tema texture alla pari della pergamena · □ texture nuove per ⛰ 🔳 ⬛ (D27, il DM) · □ il confronto alla cieca del DM · □ il livello B
-□ R4-quinquies ComfyUI in prova (D25): ☑ banco dei prompt e conversione · □ la generazione sulla GPU del DM, poi misura e coppie
+□ R4-quinquies ComfyUI in prova (D25): ☑ banco dei prompt e conversione · ☑ installazione per Debian, `COMFYUI_DIR`, `scarica-pesi.sh`, `--adotta`, trafila da zero · □ la generazione sulla GPU del DM, poi misura e coppie
 □ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
 □ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE

@@ -124,6 +124,44 @@ class TestOggetti(unittest.TestCase):
         with redirect_stdout(io.StringIO()):
             self.assertEqual(B.controlla(), 1)
 
+    def test_adotta_toglie_le_tessere_che_il_dm_non_ha_preferito(self):
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": "tessera"} for s in simboli}
+        pref["🧱"] = {"interni": "glifo"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(B.main(["--adotta"]), 0)
+            self.assertEqual(B.controlla(), 0)
+        indice = self._indice()
+        self.assertNotIn("🧱", indice["simboli"])
+        self.assertNotIn("namaqualand_rocks_01-ns", indice["tessere"])
+        self.assertEqual(indice["orientabili"], [])
+        self.assertFalse((B.USCITA / "namaqualand_rocks_01.webp").exists())
+        self.assertIn("🛏", indice["simboli"])
+
+    def test_adotta_copia_le_candidate_approvate_al_posto_delle_vecchie(self):
+        cand = self.tmp / "cand"
+        cand.mkdir()
+        (cand / "zenitale-letto-a.webp").write_bytes(b"letto generato")
+        (cand / "zenitale-botte-a.webp").write_bytes(b"botte generata")
+        voce = {"fonte": "ComfyUI", "licenza": B.LICENZA_GENERATA, "provenienza": "sdxl seme 1"}
+        (cand / "indice.json").write_text(json.dumps({
+            "simboli": {"🛏": ["zenitale-letto-a"], "🛢": ["zenitale-botte-a"]},
+            "tessere": {"zenitale-letto-a": voce, "zenitale-botte-a": voce}}), encoding="utf-8")
+        simboli = self._indice()["simboli"]
+        pref = {s: {"interni": "tessera"} for s in simboli}
+        pref["🛢"] = {"interni": "glifo"}
+        self._scrivi_scheda({s: {"interni": "vince"} for s in simboli}, pref)
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(B.main(["--adotta", str(cand)]), 0)
+        indice = self._indice()
+        self.assertEqual(indice["simboli"]["🛏"], ["zenitale-letto-a"])
+        self.assertNotIn("GothicBed_01", indice["tessere"])
+        self.assertEqual((B.USCITA / "zenitale-letto-a.webp").read_bytes(), b"letto generato")
+        self.assertNotIn("zenitale-botte-a", indice["tessere"])
+        self.assertIn('("🛏", "zenitale-letto-a"),', out.getvalue())
+
     def _indice(self):
         return json.loads(B.INDICE.read_text(encoding="utf-8"))
 

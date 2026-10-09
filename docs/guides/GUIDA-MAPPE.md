@@ -367,9 +367,17 @@ python3 scripts/export_map_png.py '07_il Portale Della Forgia Eterna/Mappe/rende
 .venv/bin/python scripts/build_oggetti_cc0.py
 python3 scripts/dm.py maps texture
 
-# 5) controlli e commit: tessere, indice e i gemelli texture rigenerati
+# 5) prima del commit il confronto alla cieca (D23): senza i tuoi voti --check
+#    boccia ogni tessera. I passi esatti sono in §5.1.2, «Da zero, in ordine»
+python3 scripts/misura_resa.py candidati scripts/oggetti-cc0 --registra
+python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/coppie-cc0.html
+python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
+python3 scripts/build_oggetti_cc0.py --adotta          # tiene solo le preferite
+python3 scripts/dm.py maps texture
+
+# 6) controlli e commit: tessere, indice e i gemelli texture rigenerati
 python3 scripts/build_oggetti_cc0.py --check && python3 scripts/validate_maps.py
-git add scripts/oggetti-cc0
+git add scripts/oggetti-cc0 scripts/scheda-resa.json
 git add -- '*rendered-texture/*.svg'
 git commit -m "RESA-ASSET R4-ter: le tessere degli oggetti di scena"
 ```
@@ -446,6 +454,66 @@ python3 scripts/build_oggetti_cc0.py --da-immagini asset-esterni/oggetti-comfyui
 python3 scripts/misura_resa.py candidati /tmp/cand-comfyui-a --registra
 python3 scripts/misura_resa.py coppie /tmp/cand-comfyui-a -o /tmp/coppie-comfyui.html
 ```
+
+**Da zero, in ordine.** Tutto quello che tocca a te, sulla tua macchina, dal
+ramo alla PR. I file scaricati vanno in `asset-esterni/` e nella cartella di
+ComfyUI, che git ignora: restano lì anche se cambi ramo.
+
+```bash
+# 1) il ramo: gli strumenti stanno qui finché le PR #229 e #230 non entrano in main
+git fetch origin resa-asset-misura-della-resa
+git switch resa-asset-misura-della-resa
+git status                     # se hai modifiche tue, prima: git stash
+
+# 2) l'ambiente del repo (una volta): venv, dipendenze di sviluppo, Chrome per le misure
+python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+python3 scripts/dm.py doctor   # deve trovare un Chromium o Chrome
+.venv/bin/pip install bpy      # solo con Python 3.13; altrimenti --blender, §5.1.1
+
+# 3) le texture dei terreni che si confondono (D27): scarica, misura, scegli
+.venv/bin/python scripts/build_texture_cc0.py --candidati
+python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
+#    incolla l'uscita nella chat: la scelta entra in TEXTURE con una PR
+
+# 4) gli oggetti CC0: giro di prova, misura, confronto alla cieca, adozione (§5.1.1)
+.venv/bin/python scripts/build_oggetti_cc0.py --prova
+python3 scripts/misura_resa.py candidati scripts/oggetti-cc0 --registra
+python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/coppie-cc0.html
+#    apri /tmp/coppie-cc0.html, scegli coppia per coppia, scarica voti.json
+python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
+python3 scripts/build_oggetti_cc0.py --adotta
+
+# 5) ComfyUI (D25), una volta: container, pesi, avvio. Se /home è piccolo,
+#    prima export COMFYUI_DIR=/srv/comfyui (vale per tutti e quattro gli script)
+scripts/comfyui-local/setup-distrobox.sh     # Debian: prima sudo apt install distrobox podman
+scripts/comfyui-local/scarica-pesi.sh        # SDXL 1.0 base, ~6,9 GB, sha256 verificato
+scripts/comfyui-local/start.sh               # in un altro terminale; resta acceso
+
+# 6) le icone generate: 32 prompt, poi la stessa trafila degli oggetti CC0
+python3 scripts/comfyui_batch.py --prompts plans/esperimenti/oggetti-cc0-2026-10/comfyui/PROMPT-OGGETTI-ZENITALI.md --serie tutto --modello sdxl --out asset-esterni/oggetti-comfyui
+python3 scripts/build_oggetti_cc0.py --da-immagini asset-esterni/oggetti-comfyui --variante a -o /tmp/cand-comfyui-a
+python3 scripts/misura_resa.py candidati /tmp/cand-comfyui-a --registra
+python3 scripts/misura_resa.py coppie /tmp/cand-comfyui-a -o /tmp/coppie-comfyui.html
+python3 scripts/misura_resa.py voti ~/Scaricati/voti.json     # il browser può chiamarlo «voti (1).json»
+python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a
+#    --adotta stampa le righe di GENERATE: incollale nella chat
+
+# 7) il secondo parere, facoltativo (D26): i comandi sopra, «secondo parere»
+
+# 8) la verifica e il commit
+python3 scripts/dm.py maps texture
+python3 scripts/build_oggetti_cc0.py --check && python3 scripts/misura_resa.py --check && python3 scripts/validate_maps.py
+git add scripts/oggetti-cc0 scripts/scheda-resa.json
+git add -- '*rendered-texture/*.svg'
+git commit -m "RESA-ASSET: tessere adottate dopo il confronto alla cieca"
+git push
+```
+
+Ci si può fermare dopo ogni passo, ma prima del passo 8 il repo non è pronto
+per un commit: le tessere nuove cambiano gli SVG texture, e `validate_maps`
+passa solo dopo `maps texture`. Il passo 5 non è mai stato provato su una
+macchina vera. Se `setup-distrobox.sh` si ferma,
+incolla l'errore nella chat.
 
 ### 5.2 Il tema dipinto con 2-Minute Tabletop (opzionale, solo per il tuo tavolo)
 
