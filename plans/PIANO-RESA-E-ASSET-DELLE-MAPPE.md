@@ -140,6 +140,32 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   misura dello stile e del peso; poi tutti i modelli; poi lo zip Standard di
   Quaternius, da cui si scrive la tabella sui nomi veri.
 
+### R8 · La resa misurata, e una sostituzione entra solo se migliora (D23-D27)
+
+`[engine: Opus · effort: alto · qualità: ogni misura del livello A almeno pari alla pergamena, o scritta come difetto noto; il cancello in CI morde; il DM approva alla cieca]` · **C + G**
+
+- Nasce dalla richiesta del DM del 2026-10-09: ogni sostituzione dev'essere
+  migliorativa e misurata con algoritmi, glifo per glifo, comprese le texture
+  della #227. [ADR-0086](adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md),
+  [esperimento](esperimenti/misura-resa-2026-10/RISULTATI.md).
+- **Fatto il 2026-10-09**: `misura_resa.py` (livello A, cancello in CI),
+  `misura_resa_appresa.py` (livello B, secondo parere), confronto alla cieca
+  (`coppie`, `voti`); `build_oggetti_cc0 --check` vuole verdetto e preferenza;
+  `tara` per alone e velature, `tara --candidati` per le texture; la scheda
+  committata (244 misure di simboli, 20 di terreni).
+- **Misurato sulla #227 e corretto**: contrasto mediano dei glifi nel tema
+  texture da 4,46 a 7,78 negli interni (pergamena 7,90), sotto 3:1 da 17 a 6;
+  il tema texture pesa 8,44 MB, +0,85 MB per l'alone.
+- **Resta**: le texture nuove per ⛰ 🔳 ⬛ (D27, il DM scarica); il confronto
+  alla cieca dell'alone e di ogni tessera (D23); il livello B (D26).
+
+### R4-quinquies · ComfyUI come terza fonte, in prova (D25)
+
+- Il banco dei prompt (8 simboli × 4 semi, stile a inchiostro e acquerello, sfondo
+  bianco) in `esperimenti/oggetti-cc0-2026-10/comfyui/`, e
+  `build_oggetti_cc0.py --da-immagini` che ne fa tessere candidate.
+- **Resta al DM**: la generazione sulla sua GPU; poi misura e coppie.
+
 ### R5 · Città, villaggi ed edifici da Watabou
 
 `[engine: Sonnet · effort: medio · qualità: un'esportazione vera per tipo, importata, collaudata a zero errori, con il seme scritto]` · **C**
@@ -220,6 +246,7 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D24~~ | R8 | ✅ **Decisa il 2026-10-09, il DM: correggo e rimisuro**, come proposto. Era: **Il tema texture della #227 misurato contro la pergamena: glifi che perdono contrasto, ⛰ e 🔳 indistinguibili, ⬛ vicino al suo vicino, il segnalino su ⬜ che sparisce.** Nel solo tema texture un alone chiaro sotto glifi e segnalini e velature per terreno, tarati da `misura_resa.py tara` finché ogni misura è almeno pari alla pergamena. Scartate: velatura più alta per tutti, lasciare com'è |
 | ~~D25~~ | R4-quinquies | ✅ **Decisa il 2026-10-09, il DM: sì, giro di prova**, come proposto. Era: **ComfyUI in locale come terza fonte di oggetti?** Sulla GPU del DM, gli otto simboli del giro di prova, SDXL (ADR-0019), quattro semi ciascuno, sfondo tolto, gate di rifiuto di art-direction; ogni tessera passa da `misura_resa.py` e dalle coppie, contro glifo e modello CC0 |
 | ~~D26~~ | R8 | ✅ **Decisa il 2026-10-09, il DM: secondo parere**, come proposto. Era: **Le metriche apprese (LPIPS, DISTS, CLIP-IQA di piq) che ruolo hanno?** Girano sulla macchina del DM con `misura_resa_appresa.py`, i pesi restano lì, il JSON entra nella scheda e non blocca; diventano cancello solo se concordano con le preferenze del DM (κ ≥ 0,6). Scartate: cancello subito, non servono |
+| ~~D27~~ | R8 | ✅ **Decisa il 2026-10-09, il DM: cambio texture, le scarica lui**, come proposto. Era: **Con l'alone a 0,75 i glifi tornano al livello della pergamena; restano ⛰/🔳 a ΔE 1,48 e ⬛/🔳 a 2,29, più ⛰/⬛ e ⛰/🟤, che la velatura non separa senza cancellare la foto.** Tre candidati CC0 per ⛰ 🔳 ⬛ (`build_texture_cc0.py --candidati`), scelti da `misura_resa.py tara --candidati`; nel frattempo alone 0,75 e velature minime committati, le quattro coppie come difetto noto. Scartate: velature alte, tinte diverse |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
@@ -251,7 +278,14 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Cambiate** (quinto messaggio): D21, dove avevo proposto il muretto fra i glifi; quindi un lotto in più nel codice, le tessere orientabili
 - **Decise** (sesto messaggio, R8 e R4-quinquies): D23 misura e preferenza del DM, con un cancello in CI · D24 il tema texture corretto e rimisurato · D25 ComfyUI come terza fonte, in prova · D26 le metriche apprese come secondo parere
 - **Aperte** (sesto messaggio): nessuna
+- **Cambiate** (sesto messaggio): nessuna; la D15 («IA locale»), superata da D17, torna come fonte in prova con D25, accanto ai modelli CC0 e non al loro posto
 - **Dedotto da me** (sesto messaggio): che il DM, dicendo che letti e detriti sembrano più belli come glifi, chiedesse una regola e non un'eccezione per due simboli, quindi la misura vale per ogni sostituzione, texture della #227 comprese; che la misura giusta di un'icona sia il contrasto del suo contorno contro ciò che le sta intorno, con la maschera della figura sola, perché la prima versione misurava il terreno sotto l'alone e dava l'alone peggiorativo; che il giro ComfyUI chieda lo stile della casa (inchiostro e acquerello) e non una fotografia, perché è lì che può battere i modelli CC0; che i pesi delle metriche apprese restino sulla macchina del DM come i modelli 3D (D19), invece di passare in chat; che una tessera generata entri con la provenienza di ADR-0019 al posto della licenza CC0
+
+<!-- eco: RESA-ASSET 2026-10-09 -->
+- **Decise** (settimo messaggio): D27 texture nuove per ⛰ 🔳 ⬛, scaricate dal DM
+- **Aperte** (settimo messaggio): nessuna; il confronto alla cieca dell'alone resta al DM, con l'immagine di M7-D mandata in chat
+- **Cambiate** (settimo messaggio): la taratura delle velature, dalla prima versione che velava fino a 0,80 alla seconda che si ferma dove la distanza non cresce
+- **Dedotto da me** (settimo messaggio): che la taratura debba alzare la velatura solo dove la distanza cresce davvero, perché la prima versione aveva portato quattro terreni a 0,80 senza separare ⛰ da 🟤; che i candidati si scelgano per tonalità diversa da quella dei vicini (legno o marmo per la pedana, tetti caldi per l'edificio), non per somiglianza col materiale di oggi
 - **Dedotto da me** (quinto messaggio): che Poly Haven non avendo muretti, il candidato per 🧱 sia `namaqualand_rocks_01`, una fila di pietre, da giudicare nel giro di prova; che il muretto occupi la cella intera sul lato lungo, perché due tratti vicini devono toccarsi; che la tessera nord-sud si scelga dai muretti vicini, senza una direttiva nuova; che la licenza della versione Pro di Quaternius non sia scritta abbastanza da usarla (il sito dice «free to use», non «CC0»), quindi solo la Standard, come chiedeva D17; che il confronto per il DM non si faccia sulle forme procedurali della prova della catena, che porterebbero a giudicare la resa su oggetti finti
 
 ## §8 · Lo stato di ogni voce (2026-10-09, dopo il merge della #227)
@@ -305,6 +339,8 @@ Fase S — Sviluppo
 □ R4  il tema dipinto: una prova su una mappa (D9); ☑ installatore, `dm.py asset`, doctor e guida (2026-10-09) · □ la tabella simbolo → file e la mappa di prova, quando il DM ha scaricato il pacchetto base
 □ R4-bis il tema texture CC0 (D13-D16): ☑ script, tema, gate e guida · ☑ le 11 texture scaricate dal DM e i 53 gemelli committati (7,6 MB) · ☑ la velatura tarata a 0,30 (D16) (2026-10-09) · ~~gli oggetti con l'IA locale (D15)~~, sostituita da R4-ter (D17)
 □ R4-ter gli oggetti di scena dai modelli 3D CC0 (D17-D22): ☑ audit, script, scena Blender, renderer, gate, guida e ADR (2026-10-09, PR nuova come da D18) · □ il giro di prova e il confronto del DM sui modelli veri · □ tutti i modelli Poly Haven · □ Quaternius, dallo zip Standard
+□ R8  la resa misurata (D23-D27): ☑ misura, cancello in CI, confronto alla cieca, taratura, scheda (2026-10-09) · ☑ alone 0,75, glifi del tema texture alla pari della pergamena · □ texture nuove per ⛰ 🔳 ⬛ (D27, il DM) · □ il confronto alla cieca del DM · □ il livello B
+□ R4-quinquies ComfyUI in prova (D25): ☑ banco dei prompt e conversione · □ la generazione sulla GPU del DM, poi misura e coppie
 □ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
 □ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE

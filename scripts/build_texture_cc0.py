@@ -64,6 +64,19 @@ TEXTURE: tuple[tuple[str, str], ...] = (
 )
 
 
+#: D27 di RESA-ASSET: ⛰ 🔳 ⬛ si confondevano nel tema texture (ΔE dal vicino
+#: 1,5-2,3, misura_resa.py) e la velatura non li separa. Questi candidati CC0
+#: di Poly Haven si scaricano con --candidati in asset-esterni/, fuori da git;
+#: `misura_resa.py tara --candidati` sceglie quello che separa di più, e solo
+#: allora entra in TEXTURE.
+CANDIDATI: dict[str, tuple[str, ...]] = {
+    "⛰": ("aerial_rocks_02", "lichen_rock", "tiger_rock"),
+    "🔳": ("medieval_wood", "plank_flooring", "marble_01"),
+    "⬛": ("clay_roof_tiles", "red_slate_roof_tiles_01", "thatch_roof_angled"),
+}
+CARTELLA_CANDIDATI = RADICE.parent / "asset-esterni" / "texture-candidate"
+
+
 def _ids() -> list[str]:
     return sorted({i for _, i in TEXTURE})
 
@@ -135,6 +148,34 @@ def costruisci(cartella: Path | None) -> int:
     return 0
 
 
+def scarica_candidati(cartella: Path | None) -> int:
+    """I candidati di CANDIDATI in tessere, con l'indice, fuori da git: la
+    stessa strada delle texture vere (MD5 contro l'API, o --da-cartella)."""
+    Image = _pillow()
+    if Image is None:
+        return 2
+    CARTELLA_CANDIDATI.mkdir(parents=True, exist_ok=True)
+    voci = {}
+    for simbolo, ids in CANDIDATI.items():
+        for tid in ids:
+            try:
+                dati, fonte = (_sorgente_cartella(cartella, tid) if cartella else _sorgente_rete(tid))
+            except (OSError, ValueError, KeyError) as e:
+                print(f"✗ {tid}: {e}", file=sys.stderr)
+                return 1
+            webp = tessera(Image, dati)
+            (CARTELLA_CANDIDATI / f"{tid}.webp").write_bytes(webp)
+            voci[tid] = {"fonte": "Poly Haven", "pagina": PAGINA.format(id=tid), **fonte,
+                         "licenza": "CC0 1.0", "per": simbolo, "byte": len(webp),
+                         "sha256": hashlib.sha256(webp).hexdigest()}
+            print(f"✓ candidato {tid} per {simbolo}: {len(webp)} byte")
+    (CARTELLA_CANDIDATI / "indice.json").write_text(json.dumps(
+        {"candidati": {k: list(v) for k, v in CANDIDATI.items()}, "texture": voci},
+        ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print("Poi: python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate")
+    return 0
+
+
 def controlla() -> int:
     if not INDICE.exists():
         print("○ build_texture_cc0: texture non ancora scaricate (scripts/texture-cc0/). "
@@ -167,7 +208,11 @@ def main(argv=None) -> int:
     g.add_argument("--check", action="store_true", help="niente rete: le tessere combaciano con l'indice")
     g.add_argument("--da-cartella", type=Path,
                    help="costruisce dai <id>_diff_1k.jpg già scaricati in questa cartella")
+    ap.add_argument("--candidati", action="store_true",
+                    help="scarica le texture candidate di CANDIDATI in asset-esterni/texture-candidate/ (D27)")
     args = ap.parse_args(argv)
+    if args.candidati:
+        return scarica_candidati(args.da_cartella)
     return controlla() if args.check else costruisci(args.da_cartella)
 
 

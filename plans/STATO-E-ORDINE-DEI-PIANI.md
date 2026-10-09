@@ -355,7 +355,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 201 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**14 aperte** · 202 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -525,6 +525,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D24~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: correggo e rimisuro**, come proposto. Era: **Il tema texture della #227 misurato contro la pergamena: glifi che perdono contrasto, ⛰ e 🔳 indistinguibili, ⬛ vicino al suo vicino, il segnalino su ⬜ che sparisce.** Nel solo tema texture un alone chiaro sotto glifi e segnalini e velature per terreno, tarati da `misura_resa.py tara` finché ogni misura è almeno pari alla pergamena. Scartate: velatura più alta per tutti, lasciare com'è |
 | ~~D25~~ | `RESA-ASSET` | R4-quinquies | ✅ **Decisa il 2026-10-09, il DM: sì, giro di prova**, come proposto. Era: **ComfyUI in locale come terza fonte di oggetti?** Sulla GPU del DM, gli otto simboli del giro di prova, SDXL (ADR-0019), quattro semi ciascuno, sfondo tolto, gate di rifiuto di art-direction; ogni tessera passa da `misura_resa.py` e dalle coppie, contro glifo e modello CC0 |
 | ~~D26~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: secondo parere**, come proposto. Era: **Le metriche apprese (LPIPS, DISTS, CLIP-IQA di piq) che ruolo hanno?** Girano sulla macchina del DM con `misura_resa_appresa.py`, i pesi restano lì, il JSON entra nella scheda e non blocca; diventano cancello solo se concordano con le preferenze del DM (κ ≥ 0,6). Scartate: cancello subito, non servono |
+| ~~D27~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: cambio texture, le scarica lui**, come proposto. Era: **Con l'alone a 0,75 i glifi tornano al livello della pergamena; restano ⛰/🔳 a ΔE 1,48 e ⬛/🔳 a 2,29, più ⛰/⬛ e ⛰/🟤, che la velatura non separa senza cancellare la foto.** Tre candidati CC0 per ⛰ 🔳 ⬛ (`build_texture_cc0.py --candidati`), scelti da `misura_resa.py tara --candidati`; nel frattempo alone 0,75 e velature minime committati, le quattro coppie come difetto noto. Scartate: velature alte, tinte diverse |
 | ~~D1~~ | `TRASVERSALE-ARTEFATTI` | La **Risonanza** fra Corona e Aegis Fang dei moduli giocati (+2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*, *Eco degli Eroi*) è attiva dal P1? | **Deciso**: la stampa del 16/01, senza Eco degli Eroi |
 | ~~D2~~ | `TRASVERSALE-ARTEFATTI` | Il blocco «Sinergia con Aegis Fang» del master vale dal Rituale 1? | Chiusa dalla fonte: il PDF del giocatore del 22/10/2025 lo mette al Rituale 4 |
 | ~~D3~~ | `TRASVERSALE-ARTEFATTI` | I bonus di quando Thorik ha indossato la Corona (immunità alla paura, scurovisione 36 m, *Aura di Comando*, *Guida di Moradin*)? | **Deciso**: tutti e quattro |

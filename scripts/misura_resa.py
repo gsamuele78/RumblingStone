@@ -403,6 +403,44 @@ def _media_terreno(t: str, tema: str, browser: str, lib):
     return color.rgb2lab(centro).reshape(-1, 3).mean(axis=0)
 
 
+def scegli_texture(browser: str, lib, candidati: Path) -> dict:
+    """D27: per ogni terreno con candidati, la texture (attuale o candidata)
+    che lo stacca di più dal terreno più vicino, alla velatura di base. Le
+    altre texture restano quelle di oggi. Restituisce {simbolo: id scelto}."""
+    import base64
+    np, color, _, _ = lib
+    ind = json.loads((candidati / "indice.json").read_text(encoding="utf-8"))
+    tex = R._texture_cc0()
+    terreni_map, immagini = tex
+    terreni = sorted({k.split("@")[0] for k in terreni_map})
+    extra = {tid: base64.b64encode((candidati / f"{tid}.webp").read_bytes()).decode("ascii")
+             for tid in ind["texture"] if (candidati / f"{tid}.webp").exists()}
+    vecchio = R._texture_cc0
+    scelta = {t: terreni_map.get(t) for t in terreni}
+
+    def media(t, tid):
+        mappa = dict(terreni_map)
+        mappa[t] = tid
+        R._texture_cc0 = lambda: (mappa, {**immagini, **extra})
+        try:
+            return _media_terreno(t, "texture", browser, lib)
+        finally:
+            R._texture_cc0 = vecchio
+    medie = {t: media(t, scelta[t]) for t in terreni}
+    esito = {}
+    for t, ids in ind.get("candidati", {}).items():
+        if t not in terreni:
+            continue
+        prove = {scelta[t]: medie[t], **{tid: media(t, tid) for tid in ids if tid in extra}}
+        distanza = {tid: min(float(color.deltaE_ciede2000(m, medie[u])) for u in terreni if u != t)
+                    for tid, m in prove.items()}
+        migliore = max(distanza, key=distanza.get)
+        esito[t] = {"attuale": scelta[t], "scelta": migliore,
+                    "delta_e": {k: round(v, 2) for k, v in distanza.items()}}
+        scelta[t], medie[t] = migliore, prove[migliore]
+    return esito
+
+
 def tara(browser: str, lib) -> dict:
     """Cerca l'alone più leggero che porta i glifi del tema texture almeno al
     livello della pergamena, e la velatura più bassa, terreno per terreno, che
@@ -621,6 +659,8 @@ def main(argv=None) -> int:
     ap.add_argument("-o", "--uscita", type=Path, help="dove scrivere il JSON o la pagina")
     ap.add_argument("--seme", type=int, default=2026, help="l'ordine delle coppie (coppie)")
     ap.add_argument("--celle", type=Path, help="glifi, candidati: scrive anche le celle in PNG per il livello B")
+    ap.add_argument("--candidati", type=Path,
+                    help="tara: la cartella delle texture candidate (build_texture_cc0.py --candidati)")
     ap.add_argument("--registra", action="store_true",
                     help="candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check")
     g = ap.add_mutually_exclusive_group()
@@ -685,6 +725,16 @@ def main(argv=None) -> int:
                                                         encoding="utf-8")
             print(f"✓ {dest} ({len(chiave)} coppie) e la chiave in {dest.with_suffix('.chiave.json')}")
             return 0
+    elif args.azione == "tara" and args.candidati:
+        esito = scegli_texture(browser, lib, args.candidati)
+        for t, e in esito.items():
+            freccia = "resta" if e["scelta"] == e["attuale"] else "→ " + e["scelta"]
+            print(f"{t}: {e['attuale']} {freccia}   ΔE dal vicino: {e['delta_e']}")
+        print("Le scelte vanno in TEXTURE di build_texture_cc0.py; poi build_texture_cc0, "
+              "misura_resa.py tara, dm.py maps texture, e il confronto col DM.")
+        if args.uscita:
+            args.uscita.write_text(json.dumps(esito, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        return 0
     elif args.azione == "tara":
         t = tara(browser, lib)
         dest = args.uscita or R.TARATURA

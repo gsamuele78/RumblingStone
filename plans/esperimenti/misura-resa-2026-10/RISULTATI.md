@@ -75,11 +75,32 @@ l'occhio non separa due colori):
 | ⬜ pavimento | 6,70 (🟨) | 10,20 (🟩) |
 | 🟫 terra | 7,29 (🟤) | 10,69 (🟨) |
 
-Il contrasto del segnalino 🔴 sul pavimento ⬜ scendeva da 1,89 a 1,07.
+Il contrasto del segnalino 🔴 sul pavimento ⬜ scendeva da 1,89 a 1,07; con
+l'alone, che sta anche sotto i segnalini, il segnalino si stacca come i glifi.
+
+**La taratura delle velature**, due giri:
+
+| Giro | Velature scelte | ⛰ | 🔳 | ⬛ | 🟤 | Esito |
+|---|---|---:|---:|---:|---:|---|
+| primo: sale finché manca il bersaglio | ⛰ 0,80 · ⬛ 0,80 · 🔳 0,70 · 🟤 0,80 | 1,31 | 5,30 | 8,63 | 1,31 | ⬛ e 🔳 si separano, ⛰/🟤 no; la foto su quattro terreni è quasi coperta |
+| **secondo: sale solo se la distanza cresce** | ⛰ 0,35 · 🔳 0,40 · 🟨 0,40 | 1,48 | 1,48 | 2,29 | 4,11 | committato; quattro coppie da cambiare: ⛰/⬛, ⛰/🔳, ⛰/🟤, ⬛/🔳 |
+
+La velatura non basta perché le texture di roccia di ⛰, 🔳 e 🟤 hanno la stessa
+tonalità: la velatura le porta verso la tinta di pergamena, che per ⛰ e 🟤 è
+già vicina (ΔE 4,1). Servono texture di tonalità diversa (D27): tre candidati
+per terreno in `build_texture_cc0.CANDIDATI`, scelti da `tara --candidati`.
+
+**Il peso**: i 53 SVG del tema texture passano da 7,59 a 8,44 MB (+0,85),
+soprattutto per l'alone, un cerchio sfumato sotto ogni oggetto.
+
+**Il cancello**: `misura_resa.py --check` misura 244 combinazioni di simbolo,
+tema e terreno e 20 di terreno e tema in circa un minuto e mezzo.
 
 ## 5 · Cosa resta al DM
 
 - Il confronto alla cieca (livello C) delle tessere vere: CC0 e ComfyUI.
 - Il livello B sulla sua macchina, come secondo parere.
 - Le coppie di terreni che la velatura non separa: servono texture diverse,
-  e scaricarle è suo (la rete dell'ambiente non raggiunge Poly Haven).
+  e scaricarle è suo (la rete dell'ambiente non raggiunge Poly Haven):
+  `build_texture_cc0.py --candidati`, poi `misura_resa.py tara --candidati
+  asset-esterni/texture-candidate`.

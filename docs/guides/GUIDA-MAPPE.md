@@ -419,6 +419,9 @@ python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
 
 # il tema texture si ritara da solo quando cambiano texture o renderer
 python3 scripts/misura_resa.py tara && python3 scripts/dm.py maps texture
+# i terreni che la velatura non separa (D27): candidati CC0 e scelta misurata
+.venv/bin/python scripts/build_texture_cc0.py --candidati
+python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
 ```
 
 Il **secondo parere** (D26) sono le metriche apprese della community: CLIP-IQA,
