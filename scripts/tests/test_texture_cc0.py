@@ -180,3 +180,23 @@ class TestSenzaTexture(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestCerca(unittest.TestCase):
+    CATALOGO = {
+        "roof_slates_02": {"name": "Roof Slates 02", "tags": ["slate"], "categories": ["roofing"],
+                           "download_count": 900},
+        "red_slate_roof_tiles_01": {"name": "Red Slate Roof Tiles", "tags": ["red"],
+                                    "categories": ["roofing", "tiles"], "download_count": 3000},
+        "rock_face_03": {"name": "Rock Face 03", "tags": ["cliff"], "categories": ["rock"],
+                         "download_count": 5000},
+    }
+
+    def test_tutte_le_parole_e_poi_i_download(self):
+        import build_texture_cc0 as T
+        trovate = T.cerca(self.CATALOGO, ["roof", "slate"])
+        self.assertEqual([t[0] for t in trovate], ["red_slate_roof_tiles_01", "roof_slates_02"])
+
+    def test_le_categorie_contano(self):
+        import build_texture_cc0 as T
+        self.assertEqual([t[0] for t in T.cerca(self.CATALOGO, ["ROCK"])], ["rock_face_03"])

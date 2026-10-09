@@ -40,6 +40,8 @@ DM (`coppie`, `voti`), con la misura accanto.
     python3 scripts/misura_resa.py terreni                     # pergamena contro texture
     python3 scripts/misura_resa.py coppie DIR -o coppie.html   # il confronto alla cieca per il DM
     python3 scripts/misura_resa.py voti voti.json              # registra le preferenze del DM
+    python3 scripts/misura_resa.py affianca MAPPA.svg -o a.png # la mappa com'era (HEAD) e com'è, affiancate
+    python3 scripts/misura_resa.py velature MASTER.md -o v.png # la stessa mappa con più velature (D16)
     python3 scripts/misura_resa.py --aggiorna                  # riscrive la scheda committata
     python3 scripts/misura_resa.py --check                     # la resa non è peggiorata
 
@@ -640,6 +642,67 @@ def regressioni(vecchia: dict, nuova: dict) -> list[str]:
     return errori
 
 
+def affianca(svg: Path, rev: str, browser: str, np, ritaglio: str | None = None):
+    """La stessa mappa com'era alla revisione `rev` e com'è sul disco, una accanto
+    all'altra: l'occhio del DM sulla mappa intera, dove le coppie mostrano una
+    cella sola. Torna l'immagine e la quota di pixel cambiati."""
+    from PIL import Image, ImageDraw, ImageFont
+    rel = svg.resolve().relative_to(REPO).as_posix()
+    r = subprocess.run(["git", "show", f"{rev}:{rel}"], cwd=REPO, capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"{rel} non esiste in {rev}: {r.stderr.strip()[-200:]}")
+    a, b = (_raster(s, browser, np) for s in (r.stdout, svg.read_text(encoding="utf-8")))
+    h, w = min(a.shape[0], b.shape[0]), min(a.shape[1], b.shape[1])
+    a, b = a[:h, :w], b[:h, :w]
+    if ritaglio:
+        x0, y0, x1, y1 = (int(v) * SCALA for v in ritaglio.split(","))
+        a, b = a[y0:y1, x0:x1], b[y0:y1, x0:x1]
+    cambiati = float((np.abs(a - b).max(axis=2) > 0.02).mean())
+    ia, ib = (Image.fromarray((x * 255).astype("uint8")) for x in (a, b))
+    margine, testa = 12 * SCALA, 14 * SCALA
+    tela = Image.new("RGB", (ia.width * 2 + margine, ia.height + testa), "white")
+    tela.paste(ia, (0, testa))
+    tela.paste(ib, (ia.width + margine, testa))
+    d = ImageDraw.Draw(tela)
+    font = ImageFont.load_default(size=10 * SCALA)
+    d.text((4, 2), f"prima ({rev})", fill="black", font=font)
+    d.text((ia.width + margine + 4, 2), "dopo (sul disco)", fill="black", font=font)
+    return tela, cambiati
+
+
+def velature(master: Path, indice: int, valori: list[float], browser: str, np,
+             ritaglio: str | None = None):
+    """La mappa `indice` (da 1) del master nel tema texture, una volta per ogni
+    velatura, in fila. È il confronto con cui il DM ha scelto 0,30 fra 0,45 e
+    0,20 (D16, #227), da rifare quando cambiano le texture o arrivano le
+    tessere degli oggetti. La velatura vale per tutti i terreni: le eccezioni
+    della taratura qui si ignorano, per vedere il valore di base."""
+    from PIL import Image, ImageDraw, ImageFont
+    griglie = R.extract_maps(master.read_text(encoding="utf-8"))
+    if not 1 <= indice <= len(griglie):
+        raise ValueError(f"{master.name} ha {len(griglie)} mappe, non {indice}")
+    originale = R._velatura
+    pannelli = []
+    try:
+        for v in valori:
+            R._velatura = lambda _s, v=v: v
+            x = _raster(R.render_svg(griglie[indice - 1], master.name, "texture"), browser, np)
+            if ritaglio:
+                x0, y0, x1, y1 = (int(c) * SCALA for c in ritaglio.split(","))
+                x = x[y0:y1, x0:x1]
+            pannelli.append((v, Image.fromarray((x * 255).astype("uint8"))))
+    finally:
+        R._velatura = originale
+    margine, testa = 12 * SCALA, 14 * SCALA
+    w, h = max(p.width for _, p in pannelli), max(p.height for _, p in pannelli)
+    tela = Image.new("RGB", (len(pannelli) * (w + margine) - margine, h + testa), "white")
+    d, font = ImageDraw.Draw(tela), ImageFont.load_default(size=10 * SCALA)
+    for i, (v, im) in enumerate(pannelli):
+        tela.paste(im, (i * (w + margine), testa))
+        d.text((i * (w + margine) + 4, 2), f"velatura {v:.2f}", fill="black", font=font)
+    return tela
+
+
 def misura_tutto(browser: str, lib) -> dict:
     vecchia = json.loads(SCHEDA.read_text(encoding="utf-8")) if SCHEDA.exists() else {}
     g = scheda_glifi(browser, lib, R.OGGETTI_CC0, vecchia.get("tavolozza"))
@@ -653,7 +716,8 @@ def misura_tutto(browser: str, lib) -> dict:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
     ap.add_argument("azione", nargs="?",
-                    choices=["glifi", "candidati", "terreni", "coppie", "voti", "appresa", "tara"])
+                    choices=["glifi", "candidati", "terreni", "coppie", "voti", "appresa", "tara",
+                             "affianca", "velature"])
     ap.add_argument("percorso", nargs="?", type=Path,
                     help="candidati e coppie: la cartella con indice.json e i webp; voti: voti.json")
     ap.add_argument("-o", "--uscita", type=Path, help="dove scrivere il JSON o la pagina")
@@ -661,6 +725,13 @@ def main(argv=None) -> int:
     ap.add_argument("--celle", type=Path, help="glifi, candidati: scrive anche le celle in PNG per il livello B")
     ap.add_argument("--candidati", type=Path,
                     help="tara: la cartella delle texture candidate (build_texture_cc0.py --candidati)")
+    ap.add_argument("--rispetto-a", default="HEAD", metavar="REV",
+                    help="affianca: la revisione git con cui confrontare la mappa (default HEAD)")
+    ap.add_argument("--ritaglio", metavar="X0,Y0,X1,Y1",
+                    help="affianca, velature: solo questo rettangolo, in pixel dell'SVG")
+    ap.add_argument("--valori", default="0.45,0.30,0.20",
+                    help="velature: le velature da confrontare, separate da virgole")
+    ap.add_argument("--mappa", type=int, default=1, help="velature: quale mappa del master (da 1)")
     ap.add_argument("--registra", action="store_true",
                     help="candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check")
     g = ap.add_mutually_exclusive_group()
@@ -751,6 +822,31 @@ def main(argv=None) -> int:
         scheda["livello_b"] = b   # secondo parere: --check non lo legge (D26)
         SCHEDA.write_text(json.dumps(scheda, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"✓ {len(b.get('misure', {}))} misure del livello B nella scheda, come secondo parere")
+        return 0
+    elif args.azione == "affianca":
+        if not args.percorso or not args.uscita:
+            print("✗ affianca vuole la mappa SVG e -o <png>", file=sys.stderr)
+            return 2
+        try:
+            tela, cambiati = affianca(args.percorso, args.rispetto_a, browser, lib[0], args.ritaglio)
+        except (RuntimeError, ValueError) as e:
+            print(f"✗ affianca: {e}", file=sys.stderr)
+            return 1
+        tela.save(args.uscita)
+        print(f"✓ {args.uscita}: {cambiati:.1%} dei pixel cambiati rispetto a {args.rispetto_a}")
+        return 0
+    elif args.azione == "velature":
+        if not args.percorso or not args.uscita:
+            print("✗ velature vuole il master .md e -o <png>", file=sys.stderr)
+            return 2
+        try:
+            tela = velature(args.percorso, args.mappa, [float(v) for v in args.valori.split(",")],
+                            browser, lib[0], args.ritaglio)
+        except ValueError as e:
+            print(f"✗ velature: {e}", file=sys.stderr)
+            return 1
+        tela.save(args.uscita)
+        print(f"✓ {args.uscita}: {args.valori}")
         return 0
     elif args.azione == "voti":
         if not args.percorso:

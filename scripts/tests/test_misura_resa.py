@@ -91,6 +91,13 @@ class TestSoloFigure(unittest.TestCase):
         self.assertNotIn("<circle", fig)
 
 
+class TestAffianca(unittest.TestCase):
+    def test_una_revisione_che_non_ha_la_mappa_e_un_errore_chiaro(self):
+        mappa = M.REPO / "scripts" / "legend.yaml"
+        with self.assertRaisesRegex(RuntimeError, "non esiste in revisione-inesistente"):
+            M.affianca(mappa, "revisione-inesistente", "browser-mai-usato", None)
+
+
 @unittest.skipUnless(LIB and M._browser(), "serve un browser e scikit-image")
 class TestMisuraVera(unittest.TestCase):
     def test_un_glifo_della_pergamena_si_stacca_dal_terreno(self):
@@ -99,6 +106,12 @@ class TestMisuraVera(unittest.TestCase):
         m = M.misura_cella(cel["🗿"], cel["_fondo"]["🗿"], None, lib, cel["_figura"]["🗿"])
         self.assertGreater(m["copertura"], 0.05)
         self.assertGreater(m["contrasto"], M.SOGLIA_WCAG)
+
+    def test_affianca_una_mappa_identica_a_head_non_cambia_pixel(self):
+        mappa = next(M.REPO.glob("**/rendered/*.svg"))
+        tela, cambiati = M.affianca(mappa, "HEAD", M._browser(), M._librerie()[0], "0,0,120,120")
+        self.assertEqual(cambiati, 0.0)
+        self.assertGreater(tela.width, tela.height)
 
 
 if __name__ == "__main__":

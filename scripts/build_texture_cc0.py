@@ -20,6 +20,14 @@ libreria standard: legge solo i webp e l'indice.
     python3 scripts/build_texture_cc0.py                  # scarica e costruisce (rete, Pillow)
     python3 scripts/build_texture_cc0.py --da-cartella D  # costruisce da jpg già scaricati in D
     python3 scripts/build_texture_cc0.py --check          # niente rete: le tessere combaciano con l'indice
+    python3 scripts/build_texture_cc0.py --cerca roof slate   # i candidati del catalogo, per download
+
+Come si sono scelte le texture. R4-bis (#227): per ogni terreno, parole chiave
+su id, tag e categorie del catalogo di Poly Haven, i primi otto per numero di
+download, poi a occhio. D27: le stesse parole, ma cercando un materiale di
+tonalità diversa da quella del terreno vicino, perché la velatura non separa due
+rocce. Da allora decide `misura_resa.py tara --candidati`, e l'occhio del DM
+sulla mappa. `--cerca` rifà il primo passo.
 
 `--check` esce 0 anche se le texture non sono ancora state scaricate (lo dice);
 esce 1 se una tessera manca o non combacia con l'indice. Exit 2 senza Pillow.
@@ -38,6 +46,7 @@ RADICE = Path(__file__).resolve().parent
 USCITA = RADICE / "texture-cc0"
 INDICE = USCITA / "indice.json"
 API = "https://api.polyhaven.com/files/{id}"
+CATALOGO = "https://api.polyhaven.com/assets?t=textures"
 PAGINA = "https://polyhaven.com/a/{id}"
 LATO = 256        # px della tessera: copre CELLE_PER_TESSERA quadretti nel renderer
 QUALITA = 60      # webp: misurato il 2026-10-09, circa 15 KB in base64 a tessera
@@ -95,6 +104,17 @@ def _scarica(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "RumblingStone build_texture_cc0"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.read()
+
+
+def cerca(catalogo: dict, parole: list[str], n: int = 8) -> list[tuple[str, int, list[str]]]:
+    """Le texture del catalogo che hanno tutte le parole in id, nome, tag o
+    categorie, dalla più scaricata: (id, download, categorie)."""
+    trovate = []
+    for tid, v in catalogo.items():
+        testo = " ".join([tid, v.get("name", ""), *v.get("tags", []), *v.get("categories", [])]).lower()
+        if all(w.lower() in testo for w in parole):
+            trovate.append((tid, int(v.get("download_count", 0)), list(v.get("categories", []))))
+    return sorted(trovate, key=lambda x: (-x[1], x[0]))[:n]
 
 
 def _sorgente_rete(tid: str) -> tuple[bytes, dict]:
@@ -208,9 +228,21 @@ def main(argv=None) -> int:
     g.add_argument("--check", action="store_true", help="niente rete: le tessere combaciano con l'indice")
     g.add_argument("--da-cartella", type=Path,
                    help="costruisce dai <id>_diff_1k.jpg già scaricati in questa cartella")
+    g.add_argument("--cerca", nargs="+", metavar="PAROLA",
+                   help="cerca nel catalogo di Poly Haven le texture con tutte le parole, dalla più scaricata")
+    ap.add_argument("-n", type=int, default=8, help="--cerca: quante texture mostrare")
     ap.add_argument("--candidati", action="store_true",
                     help="scarica le texture candidate di CANDIDATI in asset-esterni/texture-candidate/ (D27)")
     args = ap.parse_args(argv)
+    if args.cerca:
+        try:
+            catalogo = json.loads(_scarica(CATALOGO))
+        except OSError as e:
+            print(f"✗ catalogo di Poly Haven irraggiungibile: {e}", file=sys.stderr)
+            return 1
+        for tid, n, cat in cerca(catalogo, args.cerca, args.n):
+            print(f"{tid:32} {n:>8} download  {', '.join(cat)}  {PAGINA.format(id=tid)}")
+        return 0
     if args.candidati:
         return scarica_candidati(args.da_cartella)
     return controlla() if args.check else costruisci(args.da_cartella)

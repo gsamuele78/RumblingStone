@@ -245,6 +245,40 @@ D12 rende concreto).
 
 ---
 
+## 2-ter · Cosa le sessioni hanno usato per decidere senza metterlo nel repo
+
+Il DM, il 2026-10-09: *«tutto quello presente qui sarà riportato nel repo o
+rimane soltanto qui? Verificalo anche per le PR mergiate, e reimporta
+algoritmi, skill e ruoli usati e poi non inseriti né documentati»*.
+
+**Come si è misurato.**
+- I commit: `git log origin/main..refs/pull/N/head` è vuoto per la #226 e per
+  la #227, quindi nessun commit è rimasto fuori da `main`. La #228 è di
+  Dependabot, aperta.
+- Le sessioni: due agenti hanno letto i transcript di quelle due PR. Della #227
+  manca un tratto, dalle 13:15 alle 21:19 del 2026-10-08, che `list_events` non
+  restituisce; per quel tratto si sono controllati i file nel repo. Della
+  sessione di questa PR si è guardato lo scratchpad.
+- In nessuna delle tre sessioni è stata chiamata una skill con lo strumento
+  `Skill`: le skill si leggevano con `cat`. Un solo ruolo è stato lanciato, il
+  collaudatore di mappe, e fu interrotto.
+
+| Da dove | Cosa | Era | Ora |
+|---|---|---|---|
+| #227 | la griglia delle velature 0,45 / 0,30 / 0,20 su due mappe (D16) | script nello scratchpad | `misura_resa.py velature` |
+| #227 | il criterio di scelta delle texture: parole chiave sul catalogo di Poly Haven, i primi otto per download, poi a occhio | non scritto | `build_texture_cc0.py --cerca` e la sua intestazione |
+| #227 e questa | il giro di tutti i gate prima del push | una lista copiata a mano, rimasta indietro rispetto alla CI | `gate_locale.py`, che legge `ci.yml` |
+| questa | la prova di Blender vero su modelli procedurali (9 tessere in 18 s) | scratchpad | `test_blender_vero.py`, saltato dove `bpy` manca |
+| questa | il confronto affiancato prima e dopo, su M7-D | scratchpad | `misura_resa.py affianca` |
+| questa | il passaggio delle velature fra 0 e 0,75 per l'alone | scratchpad | ⚰ superato da `misura_resa.py tara` |
+| #226 | sette dettagli della rubrica del collaudatore (sola lettura, il canone, le due citazioni, 25 righe, «Verificato senza rilievi») | solo nel prompt | `collaudo-mappe.md` |
+| #226 | il collaudatore **mai eseguito fino in fondo** | la tabella di COLLAUDO diceva «fatto» | prima esecuzione vera su M7-C, il 2026-10-09: 0 rilievi dallo strumento, 18 dal collaudatore (10 🟠), Grask compreso. Rapporto in `esperimenti/collaudo-mappe-2026-10/` |
+| #226 | la griglia campione dei 20 simboli nuovi | scratchpad | `scripts/tests/fixtures/prova-simboli.md` e `test_prova_simboli.py`, che fissa anche i tre errori del collaudo |
+| #226 | gli URL delle fonti di §2.4-§2.5 | non registrati | COLLAUDO §2.5-ter. Nessuna pagina era stata letta per intero, e la *GameMastery Guide* p. 52 non è verificata |
+| #226 | Grask e il sacerdote dell'orda nella mappa M7-C | stavano nella bozza D28 ritirata (`5f2e284`) | **aperto, al DM**: DEF-4 mette Grask alla tenda, la mappa su `main` no. Il collaudatore l'ha trovato da solo, con altri 17 rilievi su M7-C |
+| #227 | la misura del peso delle tessere webp (128-512 px) e i terreni per mappa | heredoc | numeri in `dipendenze-e-asset-2026-10/RISULTATI.md`; il codice non serve più |
+| #226 | il generatore delle griglie della bozza D28 | scratchpad | ⚰ obsoleto con la bozza |
+
 ## 3 · Cosa resta da fare, per piano
 
 ### ① Ripresa PR abbandonate — F0, F1, F2 ✅; F3 e F4 in corso

@@ -667,7 +667,7 @@
     },
     {
       "name": "misura_resa",
-      "description": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»\n\nLa resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara il confronto alla cieca per il DM e ne registra i voti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json.",
+      "description": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»\n\nLa resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara il confronto alla cieca per il DM e ne registra i voti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json; affianca mostra una mappa com'era a una revisione git e com'è sul disco, con la quota di pixel cambiati.",
       "use_case": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»",
       "invocation": "python3 scripts/misura_resa.py --check",
       "inputSchema": {
@@ -675,7 +675,7 @@
         "properties": {
           "azione": {
             "type": "string",
-            "description": "glifi · candidati DIR · terreni · coppie DIR · voti voti.json · appresa B.json · tara",
+            "description": "glifi · candidati DIR · terreni · coppie DIR · voti voti.json · appresa B.json · tara · affianca MAPPA.svg -o out.png",
             "enum": [
               "glifi",
               "candidati",
@@ -683,7 +683,8 @@
               "coppie",
               "voti",
               "appresa",
-              "tara"
+              "tara",
+              "affianca"
             ]
           },
           "check": {
@@ -705,6 +706,14 @@
           "celle": {
             "type": "string",
             "description": "Scrive anche le celle in PNG, per misura_resa_appresa.py."
+          },
+          "rispetto-a": {
+            "type": "string",
+            "description": "affianca: la revisione git con cui confrontare la mappa."
+          },
+          "ritaglio": {
+            "type": "string",
+            "description": "affianca: solo il rettangolo X0,Y0,X1,Y1 in pixel dell'SVG."
           },
           "registra": {
             "type": "boolean",
@@ -2823,6 +2832,44 @@
       "exit_codes": {
         "0": "analisi stampata",
         "1": "--check: un bersaglio e' un archivio dichiarato"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "gate_locale",
+      "description": "«Prima di spingere: la CI tornerà verde?»\n\nI gate del job validate della CI eseguiti sulla macchina, letti da .github/workflows/ci.yml e non da una lista copiata: un gate nuovo in CI entra da solo. Salta, dicendolo, i passi che installano e quelli con espressioni di GitHub che qui non hanno valore; continue-on-error vale come avviso; --rapido salta i corridori dei test.",
+      "use_case": "«Prima di spingere: la CI tornerà verde?»",
+      "invocation": "python3 scripts/gate_locale.py --rapido",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rapido": {
+            "type": "boolean",
+            "description": "Salta i corridori dei test (unittest, pytest)."
+          },
+          "elenco": {
+            "type": "boolean",
+            "description": "Elenca i passi e cosa ne farebbe, senza eseguire."
+          },
+          "solo": {
+            "type": "string",
+            "description": "Esegue solo i passi il cui nome o comando contiene il testo."
+          },
+          "base": {
+            "type": "string",
+            "description": "Il ramo per i gate che confrontano."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "tutti i gate bloccanti verdi",
+        "1": "almeno un gate rosso",
+        "2": "ci.yml illeggibile"
       },
       "deterministic": true
     },

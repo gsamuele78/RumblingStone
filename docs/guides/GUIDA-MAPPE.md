@@ -348,6 +348,8 @@ pesano 50-70 MB. Nel repo entrano solo le tessere e l'indice.
 # 0) una volta: Blender come modulo nel venv del repo (bpy vuole Python 3.13)
 .venv/bin/python --version
 .venv/bin/pip install bpy
+#    la scena funziona? due modelli procedurali resi davvero, senza rete (~10 s)
+.venv/bin/python -m pytest -q scripts/tests/test_blender_vero.py
 #    se il venv non è 3.13, usa il Blender di sistema e aggiungi ai comandi sotto
 #    --blender 'flatpak run org.blender.Blender'   (o il percorso del binario)
 
@@ -427,6 +429,11 @@ python3 scripts/misura_resa.py voti ~/Scaricati/voti.json
 
 # il tema texture si ritara da solo quando cambiano texture o renderer
 python3 scripts/misura_resa.py tara && python3 scripts/dm.py maps texture
+# a occhio: la stessa mappa con più velature (come per D16), e prima/dopo un cambiamento
+python3 scripts/misura_resa.py velature '07_il Portale Della Forgia Eterna/Mappe/hammerfist-372-1372/M7-D-livello-1-1372.md' -o /tmp/velature.png
+python3 scripts/misura_resa.py affianca MAPPA.svg --rispetto-a origin/main -o /tmp/prima-dopo.png
+# cercare texture nuove nel catalogo di Poly Haven, dalla più scaricata
+python3 scripts/build_texture_cc0.py --cerca roof slate
 # i terreni che la velatura non separa (D27): candidati CC0 e scelta misurata
 .venv/bin/python scripts/build_texture_cc0.py --candidati
 python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
@@ -477,6 +484,7 @@ python3 scripts/misura_resa.py tara --candidati asset-esterni/texture-candidate
 #    incolla l'uscita nella chat: la scelta entra in TEXTURE con una PR
 
 # 4) gli oggetti CC0: giro di prova, misura, confronto alla cieca, adozione (§5.1.1)
+.venv/bin/python -m pytest -q scripts/tests/test_blender_vero.py   # prima: la scena gira?
 .venv/bin/python scripts/build_oggetti_cc0.py --prova
 python3 scripts/misura_resa.py candidati scripts/oggetti-cc0 --registra
 python3 scripts/misura_resa.py coppie scripts/oggetti-cc0 -o /tmp/coppie-cc0.html
@@ -504,6 +512,7 @@ python3 scripts/build_oggetti_cc0.py --adotta /tmp/cand-comfyui-a
 
 # 8) la verifica e il commit
 python3 scripts/dm.py maps texture
+.venv/bin/python scripts/gate_locale.py --rapido      # i gate della CI, in locale
 python3 scripts/build_oggetti_cc0.py --check && python3 scripts/misura_resa.py --check && python3 scripts/validate_maps.py
 git add scripts/oggetti-cc0 scripts/scheda-resa.json
 git add -- '*rendered-texture/*.svg'

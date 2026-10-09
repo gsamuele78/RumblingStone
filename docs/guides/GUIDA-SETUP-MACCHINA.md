@@ -177,16 +177,19 @@ sudo apt install pandoc texlive-xetex    # solo se usi `dm.py recap --pdf`
 
 ```bash
 python3 scripts/dm.py doctor                  # ✓ ovunque (i ○ opzionali vanno bene)
-python3 -m pytest scripts/tests -q            # la suite del repo
-python3 scripts/validate_skills.py            # skill ben formate
-python3 scripts/validate_maps.py              # SVG in sync coi master
-python3 scripts/validate_bestiario.py         # libreria mostri conforme
-python3 scripts/validate_modules.py           # master d'arco conformi
-python3 scripts/tools_manifest.py --check     # contratto dei tool allineato
+.venv/bin/python scripts/gate_locale.py --rapido   # i gate della CI, senza i test (~3 min)
+.venv/bin/python scripts/gate_locale.py            # tutti, test compresi
 ```
 
-Sono **gli stessi controlli della CI**: se passano qui, la tua PR non
-diventerà rossa per motivi ambientali.
+`gate_locale.py` legge i passi del job `validate` da `.github/workflows/ci.yml`
+e li esegue nell'ordine, quindi un gate aggiunto alla CI entra da solo.
+Salta i passi che installano qualcosa. Se un passo fallisce perché manca uno
+strumento che in CI viene installato (typst, per esempio), lo segna come
+avviso e dice quale. Con `--solo TESTO` esegue solo i passi che contengono
+quel testo; con `--elenco` mostra cosa farebbe senza eseguire niente.
+
+Se qui passano tutti, la PR non diventerà rossa per un gate che non hai fatto
+girare.
 
 ---
 

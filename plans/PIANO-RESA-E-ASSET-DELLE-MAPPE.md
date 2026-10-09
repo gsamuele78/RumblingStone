@@ -156,6 +156,20 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Misurato sulla #227 e corretto**: contrasto mediano dei glifi nel tema
   texture da 4,46 a 7,78 negli interni (pergamena 7,90), sotto 3:1 da 17 a 6;
   il tema texture pesa 8,44 MB, +0,85 MB per l'alone.
+- **Recuperato il 2026-10-09** (il DM: *«tutto quello presente qui sarà
+  riportato nel repo?»*). Questi strumenti erano stati usati per decidere, in
+  questa sessione e in quella della #227, ma non erano mai stati messi nel repo:
+  - `misura_resa.py velature`: la griglia delle velature con cui il DM aveva
+    scelto 0,30 (D16);
+  - `misura_resa.py affianca`: la mappa com'era a una revisione e com'è, una
+    accanto all'altra, con la quota di pixel cambiati;
+  - `build_texture_cc0.py --cerca`: il criterio di scelta delle texture
+    (parole chiave sul catalogo, poi i download), che prima non era scritto;
+  - `test_blender_vero.py`: la prova della scena con Blender vero su modelli
+    procedurali, senza rete;
+  - `gate_locale.py`: i gate della CI letti da `ci.yml` ed eseguiti in locale.
+
+  L'inventario completo è in STATO-E-ORDINE §2-ter.
 - **Resta**: le texture nuove per ⛰ 🔳 ⬛ (D27, il DM scarica); il confronto
   alla cieca dell'alone e di ogni tessera (D23); il livello B (D26).
 
