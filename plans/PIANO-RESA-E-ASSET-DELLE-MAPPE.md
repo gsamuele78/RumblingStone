@@ -106,6 +106,22 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   per i 53 SVG del tema, contro i 6,2 MB della pergamena.
 - **Dopo** (D15): gli oggetti di scena generati con l'IA locale.
 
+### R4-ter · Gli oggetti di scena del tema texture (in una PR nuova, D18)
+
+`[engine: Opus · effort: medio · qualità: ogni tessera da un modello CC0 con la sua impronta; stessa luce e scala; il DM approva una mappa]` · **C**
+
+- Misurato il 2026-10-09: 46 simboli-oggetto usati su 61; i più presenti
+  sono fuoco, rocce, fiamme e porte; i mobili sono rari (🪑 15 celle, 🛏 29).
+- Poly Haven, 521 modelli CC0: rocce, alberi, statue, barili, casse,
+  forziere, tavoli, panche, letto, librerie, vasi, candelabri. Mancano
+  incudine, fontana, trono, altare, tenda, ossa, funghi: li copre Quaternius
+  (Fantasy Props MegaKit, CC0, 60-70% gratuito; da verificare la licenza della
+  parte a pagamento prima di usarlo).
+- Script che scarica i modelli (il DM, come per le texture), Blender che li
+  rende dall'alto con luce e scala fisse, tessere webp committate; il tema
+  texture le usa al posto dei glifi. Restano glifi: fuoco ed effetti, porte,
+  finestre e sbarre (ruotano con l'asse del muro).
+
 ### R5 · Città, villaggi ed edifici da Watabou
 
 `[engine: Sonnet · effort: medio · qualità: un'esportazione vera per tipo, importata, collaudata a zero errori, con il seme scritto]` · **C**
@@ -175,6 +191,8 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 | ~~D14~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: committate accanto alla pergamena**, non come proposto. Era: **Le mappe con texture dove finiscono?** Proposta: solo in locale. Scelto: un secondo SVG per ogni mappa in `rendered-texture/`, controllato da `validate_maps`; stima +2,3 MB sui 50 SVG |
 | ~~D15~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: glifi ora, IA locale dopo.** Era: **Gli oggetti di scena da dove vengono?** I glifi in casa restano sopra le texture; un lotto futuro genera oggetti zenitali con ComfyUI e pesi a licenza permissiva (ADR-0019), col gate di rifiuto di `rumblingstone-art-direction` |
 | ~~D16~~ | R4-bis | ✅ **Decisa il 2026-10-09, il DM: velatura 0,30**, come proposto, dopo il confronto 0,45 / 0,30 / 0,20 sulle texture vere (M7-D per gli interni, Hammerfist L1 per l'esterno). Era: **Quale velatura per il tema texture?** A 0,45 erba e sentiero sembravano tinte piatte; a 0,20 muri e pavimenti degli interni si avvicinavano di tono |
+| ~~D17~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: modelli 3D di Poly Haven e Quaternius**, non come proposto (solo Poly Haven). Era: **Gli oggetti di scena nel tema texture da dove vengono?** Modelli 3D CC0 renderizzati dall'alto con Blender in tessere webp, solo per il tema texture; Quaternius (Fantasy Props MegaKit, CC0, solo la parte gratuita) per ciò che Poly Haven non ha. Sostituisce l'IA locale di D15 |
+| ~~D18~~ | R4-ter | ✅ **Decisa il 2026-10-09, il DM: in una PR nuova, dopo il merge della #227**, non come proposto (nella #227) |
 
 <!-- eco: RESA-ASSET 2026-10-08 -->
 - **Decise**: D1 i font dei volumi incorporati · D2 universali in casa e ripiego Noto · D3 il tema dipinto con 2-Minute Tabletop · D4 l'importatore Watabou · D5 Azgaar per le regionali
@@ -197,6 +215,10 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
 - **Decise** (terzo messaggio): D16 la velatura 0,30, scelta guardando le texture vere
 - **Aperte** (terzo messaggio): nessuna
 - **Dedotto da me** (terzo messaggio): che il peso vada riscritto con la misura vera: i 53 SVG del tema texture pesano 7,6 MB, contro i 6,2 MB della pergamena; la stima di +2,3 MB contava solo le texture e non il resto di ogni SVG
+- **Decise** (quarto messaggio): D17 gli oggetti di scena del tema texture dai modelli 3D CC0 di Poly Haven e Quaternius · D18 il lotto in una PR nuova dopo la #227
+- **Aperte** (quarto messaggio): nessuna
+- **Cambiate** (quarto messaggio): D15, l'IA locale per gli oggetti, sostituita da D17; D17 aggiunge Quaternius alla proposta; D18 sposta il lotto fuori dalla #227
+- **Dedotto da me** (quarto messaggio): che Quaternius si usi solo per i simboli che Poly Haven non copre, e solo nella parte gratuita, dopo aver letto se la licenza CC0 vale anche per la parte a pagamento; che fuoco, effetti, porte, finestre e sbarre restino glifi
 
 ---
 
@@ -211,7 +233,8 @@ Fase S — Sviluppo
 ☑ R2  🔺 e 🔷 universali, glifi in casa (2026-10-08)
 ☑ R3  il ripiego Noto, 12 emoji locali (2026-10-08: 177 celle → 0)
 □ R4  il tema dipinto: una prova su una mappa (D9); ☑ installatore, `dm.py asset`, doctor e guida (2026-10-09) · □ la tabella simbolo → file e la mappa di prova, quando il DM ha scaricato il pacchetto base
-□ R4-bis il tema texture CC0 (D13-D16): ☑ script, tema, gate e guida · ☑ le 11 texture scaricate dal DM e i 53 gemelli committati (7,6 MB) · ☑ la velatura tarata a 0,30 (D16) (2026-10-09) · □ gli oggetti con l'IA locale (D15)
+□ R4-bis il tema texture CC0 (D13-D16): ☑ script, tema, gate e guida · ☑ le 11 texture scaricate dal DM e i 53 gemelli committati (7,6 MB) · ☑ la velatura tarata a 0,30 (D16) (2026-10-09) · ~~gli oggetti con l'IA locale (D15)~~, sostituita da R4-ter (D17)
+□ R4-ter gli oggetti di scena dai modelli 3D CC0 (D17), in una PR nuova dopo la #227 (D18)
 □ R5  Watabou, a partire da Dauth (D10): ☑ le mappe dell'assedio, cinque carte in sei griglie collaudate a zero (2026-10-09) · ☑ la scheda e `dm.py maps citta` per la pianta · □ la pianta esportata dal DM · □ l'importatore, solo con esportazioni vere
 □ R6  le regionali con Azgaar: in attesa (D8, D11), nessun codice
 □ R7  i residui: in V3 di COLLAUDO-MAPPE
