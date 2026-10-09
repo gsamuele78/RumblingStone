@@ -127,7 +127,7 @@ def _texture_cc0() -> tuple[dict, dict[str, str]] | None:
 # con la luce fissa non può ruotare. Il muretto 🧱 invece è un oggetto: ha due
 # tessere, est-ovest e nord-sud, rese girando il modello (D21).
 OGGETTI_CC0 = Path(__file__).resolve().parent / "oggetti-cc0"
-RESTANO_GLIFI = frozenset("🔥💥⚡✨⭐🌀❄🕸🌋💀🎯⚔🔔💎⬇🌳🐴🗼🏛🌉🪜🔼🔽🔻🕳🖼🏗")
+RESTANO_GLIFI = legenda.senza_tessera_cc0()   # `render.tessera_cc0: false` in legend.yaml
 
 
 def resta_glifo(simbolo: str) -> bool:
@@ -137,7 +137,8 @@ def resta_glifo(simbolo: str) -> bool:
 
 #: Il glifo che resta sopra la tessera, ridotto: il braciere è un focolare di
 #: pietre, e acceso lo dice la fiamma, che resta glifo come il fuoco (D22).
-SOPRA_LA_TESSERA = {"🏮": "pr_fire"}
+#: Il dato sta in legend.yaml (`render.sopra_la_tessera`), come vuole ADR-0048.
+SOPRA_LA_TESSERA = legenda.sopra_la_tessera()
 SUFFISSO_NS = "-ns"   # la tessera nord-sud di un oggetto orientabile (🧱, D21)
 
 

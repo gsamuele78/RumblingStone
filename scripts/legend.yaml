@@ -35,6 +35,13 @@
 #   piatto: true resta a quota zero: un varco non e' un volume
 #   texture     cartella di texture per famiglia di superficie — NON uno slug
 #               di Poly Haven: la riempie il DM verificando la licenza
+#   tessera_cc0: false  nel tema texture resta il glifo anche quando c'e' una
+#               tessera da un modello 3D CC0 (R4-ter di RESA-ASSET, D21): fuoco
+#               ed effetti, segnali, creature, strutture in scala di mappa,
+#               scale e buchi, affresco, gru. Le chiusure (posa: nel_muro)
+#               restano glifi senza bisogno del campo: ruotano col muro.
+#   sopra_la_tessera: il glifo che resta sopra la tessera, ridotto (D22: la
+#               fiamma sul braciere, perche' il fuoco resta glifo)
 #
 # function — cosa fa nello spazio. Non cambia col sistema di regole.
 #   wall:   true  blocca vista e movimento; diventa segmento di muro in UVTT
@@ -269,7 +276,7 @@ symbols:
       nameable: true
   "🔥":
     label: "Fuoco (1d6 fuoco/round)"
-    render: {mode: icon, prop: pr_fire, fill: "#ffb4a2"}
+    render: {mode: icon, prop: pr_fire, fill: "#ffb4a2", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -281,7 +288,7 @@ symbols:
       light: {raggio_m: 7.5, colore: "ffb37a"}
   "💥":
     label: "Fiamme / esplosione"
-    render: {mode: icon, prop: pr_boom, fill: "#ffb4a2"}
+    render: {mode: icon, prop: pr_boom, fill: "#ffb4a2", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -292,7 +299,7 @@ symbols:
       hazard: {kind: fire, severity: major}
   "💀":
     label: "Fossa / trappola"
-    render: {mode: icon, prop: pr_skull, fill: "#e9ecef"}
+    render: {mode: icon, prop: pr_skull, fill: "#e9ecef", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -306,7 +313,7 @@ symbols:
   # qui non c'e', e l'uscita e' identica byte per byte.
   "🕳":
     label: "Voragine / buco"
-    render: {mode: icon, prop: pr_pit, fill: "#495057", altezza_m: -3.0}
+    render: {mode: icon, prop: pr_pit, fill: "#495057", altezza_m: -3.0, tessera_cc0: false}
     function:
       blocks_movement: true
       blocks_sight: false
@@ -334,7 +341,7 @@ symbols:
     render: {mode: unit, fill: "#9d4edd"}
   "🌳":
     label: "Treant / creatura vegetale"
-    render: {mode: icon, prop: pr_tree, fill: "#b7e4c7", altezza_m: 6.0, texture: fogliame}
+    render: {mode: icon, prop: pr_tree, fill: "#b7e4c7", altezza_m: 6.0, texture: fogliame, tessera_cc0: false}
     function:
       blocks_movement: true
       blocks_sight: true
@@ -348,7 +355,7 @@ symbols:
       nameable: true
   "⭐":
     label: "Obiettivo primario"
-    render: {mode: icon, prop: pr_star, fill: "#fff3b0", piatto: true}
+    render: {mode: icon, prop: pr_star, fill: "#fff3b0", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -376,7 +383,7 @@ symbols:
       posa: nel_muro
   "🗼":
     label: "Torre / struttura alta"
-    render: {mode: icon, prop: pr_tower, fill: "#dee2e6", altezza_m: 9.0}
+    render: {mode: icon, prop: pr_tower, fill: "#dee2e6", altezza_m: 9.0, tessera_cc0: false}
     function:
       blocks_movement: true
       blocks_sight: true
@@ -396,7 +403,7 @@ symbols:
       posa: sul_pavimento
   "🔔":
     label: "Allarme / trappola sonora"
-    render: {mode: icon, prop: pr_bell, fill: "#fff3b0"}
+    render: {mode: icon, prop: pr_bell, fill: "#fff3b0", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -406,7 +413,7 @@ symbols:
       nameable: true
   "💎":
     label: "Tesoro / oggetto magico"
-    render: {mode: icon, prop: pr_gem, fill: "#caf0f8"}
+    render: {mode: icon, prop: pr_gem, fill: "#caf0f8", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -427,7 +434,7 @@ symbols:
       posa: sul_pavimento
   "🏮":
     label: "Braciere / fonte di luce"
-    render: {mode: icon, prop: pr_brazier, fill: "#ffd166", altezza_m: 1.5}
+    render: {mode: icon, prop: pr_brazier, fill: "#ffd166", altezza_m: 1.5, sopra_la_tessera: pr_fire}
     function:
       blocks_movement: true
       blocks_sight: false
@@ -471,7 +478,7 @@ symbols:
       posa: sul_pavimento
   "🐴":
     label: "Cavalcature"
-    render: {mode: icon, prop: pr_horse, fill: "#e6ccb2"}
+    render: {mode: icon, prop: pr_horse, fill: "#e6ccb2", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -481,7 +488,7 @@ symbols:
       nameable: true
   "🕸":
     label: "Ragnatele (terreno difficile)"
-    render: {mode: icon, prop: pr_web, fill: "#dee2e6", altezza_m: 0.75}
+    render: {mode: icon, prop: pr_web, fill: "#dee2e6", altezza_m: 0.75, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -492,7 +499,7 @@ symbols:
       hazard: {kind: magic, severity: minor}
   "❄":
     label: "Ghiaccio"
-    render: {mode: icon, prop: pr_ice, fill: "#caf0f8", altezza_m: 0.0}
+    render: {mode: icon, prop: pr_ice, fill: "#caf0f8", altezza_m: 0.0, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -503,7 +510,7 @@ symbols:
       hazard: {kind: cold, severity: null}
   "⚡":
     label: "Energia / pericolo magico"
-    render: {mode: icon, prop: pr_bolt, fill: "#fff3b0"}
+    render: {mode: icon, prop: pr_bolt, fill: "#fff3b0", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -515,7 +522,7 @@ symbols:
       light: {raggio_m: 6.0, colore: "fff0a0"}
   "🌀":
     label: "Portale / vortice"
-    render: {mode: icon, prop: pr_portal, fill: "#caf0f8"}
+    render: {mode: icon, prop: pr_portal, fill: "#caf0f8", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -525,7 +532,7 @@ symbols:
       nameable: true
   "⬇":
     label: "Discesa / pendenza"
-    render: {mode: icon, prop: pr_down, fill: "#dee2e6", piatto: true}
+    render: {mode: icon, prop: pr_down, fill: "#dee2e6", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -536,7 +543,7 @@ symbols:
       nameable: false
   "🏛":
     label: "Edificio / tempio"
-    render: {mode: icon, prop: pr_temple, fill: "#dee2e6", altezza_m: 6.0, texture: pietra-chiara}
+    render: {mode: icon, prop: pr_temple, fill: "#dee2e6", altezza_m: 6.0, texture: pietra-chiara, tessera_cc0: false}
     function:
       blocks_movement: true
       blocks_sight: true
@@ -545,7 +552,7 @@ symbols:
       nameable: true
   "🌋":
     label: "Bocca vulcanica / fumarola"
-    render: {mode: icon, prop: pr_volcano, fill: "#ffb4a2"}
+    render: {mode: icon, prop: pr_volcano, fill: "#ffb4a2", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -566,7 +573,7 @@ symbols:
       nameable: true
   "🌉":
     label: "Ponte / passerella"
-    render: {mode: icon, prop: pr_bridge, fill: "#e6ccb2", altezza_m: 0.75}
+    render: {mode: icon, prop: pr_bridge, fill: "#e6ccb2", altezza_m: 0.75, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -576,7 +583,7 @@ symbols:
       nameable: true
   "🎯":
     label: "Obiettivo tattico"
-    render: {mode: icon, prop: pr_target, fill: "#fff3b0", piatto: true}
+    render: {mode: icon, prop: pr_target, fill: "#fff3b0", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -586,7 +593,7 @@ symbols:
       nameable: true
   "🖼":
     label: "Affresco / quadro"
-    render: {mode: icon, prop: pr_mural, fill: "#dee2e6", piatto: true}
+    render: {mode: icon, prop: pr_mural, fill: "#dee2e6", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -596,7 +603,7 @@ symbols:
       nameable: true
   "✨":
     label: "Effetto magico attivo"
-    render: {mode: icon, prop: pr_sparkle, fill: "#fff3b0", piatto: true}
+    render: {mode: icon, prop: pr_sparkle, fill: "#fff3b0", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -607,7 +614,7 @@ symbols:
       light: {raggio_m: 4.5, colore: "e6ccff"}
   "⚔":
     label: "Zona di scontro"
-    render: {mode: icon, prop: pr_swords, fill: "#dee2e6", piatto: true}
+    render: {mode: icon, prop: pr_swords, fill: "#dee2e6", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -639,7 +646,7 @@ symbols:
       posa: sul_pavimento
   "🪜":
     label: "Scale / rampa"
-    render: {mode: icon, prop: pr_stairs, fill: "#dee2e6"}
+    render: {mode: icon, prop: pr_stairs, fill: "#dee2e6", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -825,7 +832,7 @@ symbols:
       posa: recinto
   "🔼":
     label: "Scala che sale"
-    render: {mode: icon, prop: pr_stairs_up, fill: "#dee2e6"}
+    render: {mode: icon, prop: pr_stairs_up, fill: "#dee2e6", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -837,7 +844,7 @@ symbols:
       verso: su
   "🔽":
     label: "Scala che scende"
-    render: {mode: icon, prop: pr_stairs_down, fill: "#ced4da"}
+    render: {mode: icon, prop: pr_stairs_down, fill: "#ced4da", tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -849,7 +856,7 @@ symbols:
       verso: giu
   "🔻":
     label: "Botola o pozzo"
-    render: {mode: icon, prop: pr_trapdoor, fill: "#e6ccb2", piatto: true}
+    render: {mode: icon, prop: pr_trapdoor, fill: "#e6ccb2", piatto: true, tessera_cc0: false}
     function:
       blocks_movement: false
       blocks_sight: false
@@ -978,7 +985,7 @@ symbols:
       posa: sul_pavimento
   "🏗":
     label: "Gru o argano"
-    render: {mode: icon, prop: pr_crane, fill: "#e6ccb2", altezza_m: 3.0}
+    render: {mode: icon, prop: pr_crane, fill: "#e6ccb2", altezza_m: 3.0, tessera_cc0: false}
     function:
       blocks_movement: true
       blocks_sight: false

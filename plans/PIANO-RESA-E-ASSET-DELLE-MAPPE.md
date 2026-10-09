@@ -128,7 +128,7 @@ il renderer incorpora i due woff2 e stringe i titoli con le larghezze di
   impronta e licenza verificate, rende con Blender o con il modulo `bpy`, scrive
   tessere webp da 96 px e l'indice); `scripts/blender/rendi_oggetti.py` con un
   lock solo per il set; il renderer, che nel tema texture usa la tessera dove
-  c'è e il glifo dove no (`RESTANO_GLIFI`, il muretto orientabile, la fiammella
+  c'è e il glifo dove no (`render.tessera_cc0: false` in `legend.yaml`, il muretto orientabile, la fiammella
   sopra il braciere); `dm.py asset oggetti`, `doctor`, manifest, 26 test,
   guida §5.1.1, secondo emendamento di ADR-0085, una norma nel registro.
 - **Misurato**: dei 61 simboli-oggetto il corpus ne usa 46; delle 3.386 celle

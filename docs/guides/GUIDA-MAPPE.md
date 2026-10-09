@@ -331,8 +331,8 @@ rese con Blender da modelli 3D CC0, al posto dei glifi; la pergamena tiene i
 glifi. Ogni modello è reso con la stessa camera zenitale, lo stesso sole da
 nord-ovest e la stessa impronta nella cella (D20), così il set ha una luce sola.
 Restano glifi il fuoco e gli effetti, le porte, le finestre, le grate e le
-sbarre, i segnali, le creature, le scale e i buchi (D21): l'elenco sta in
-`RESTANO_GLIFI` del renderer. Il braciere è un focolare di pietre con la
+sbarre, i segnali, le creature, le scale e i buchi (D21): sono i simboli con
+`tessera_cc0: false` in `scripts/legend.yaml`, più le chiusure. Il braciere è un focolare di pietre con la
 fiammella del glifo sopra (D22). Il muretto ha due tessere, est-ovest e
 nord-sud, e il renderer sceglie quella giusta dai muretti vicini.
 

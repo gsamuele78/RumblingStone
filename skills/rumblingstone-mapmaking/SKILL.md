@@ -60,7 +60,7 @@ are **generated artifacts — never hand-edit them**. CI
    only), one lock of camera, sun and footprint for the whole set
    (`build_oggetti_cc0.py`, `scripts/oggetti-cc0/`, D17-D22); the models stay
    on the DM's machine. Fire, effects, doors, windows, grates, bars, markers,
-   creatures and stairs stay glyphs (`RESTANO_GLIFI`); where no tile exists the
+   creatures and stairs stay glyphs (`render.tessera_cc0: false` in `legend.yaml`); where no tile exists the
    glyph stays. The parchment keeps every glyph. 2-Minute Tabletop is an optional extra for
    the DM's own table: the packs live outside git (`asset-esterni/`,
    `dm.py asset installa <zip> --categoria base|premium`), and a **premium**

@@ -187,7 +187,7 @@ che si rende sempre uguale, un'immagine generata no.
    tessera; senza tessera, con il glifo. La pergamena non cambia.
 2. Restano glifi sempre: fuoco ed effetti, chiusure (ruotano con il muro,
    ADR-0083), segnali, creature, strutture in scala di mappa, scale e buchi,
-   affresco e gru (`RESTANO_GLIFI`, D21). Il muretto 🧱 è un oggetto con due
+   affresco e gru (`render.tessera_cc0: false` in `legend.yaml`, D21). Il muretto 🧱 è un oggetto con due
    tessere, est-ovest e nord-sud, e il renderer sceglie dai vicini.
 3. I lock sono uno per tutto il set: camera ortografica zenitale, sole da
    nord-ovest a 65°, ombra raccolta su un piano trasparente, impronta del lato
