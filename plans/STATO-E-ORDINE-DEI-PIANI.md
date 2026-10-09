@@ -355,7 +355,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 197 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**14 aperte** · 201 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -521,6 +521,10 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | ~~D20~~ | `RESA-ASSET` | R4-ter | ✅ **Decisa il 2026-10-09, il DM: impronta uguale**, come proposto. Era: **Che scala hanno gli oggetti nella cella?** Il lato lungo di ogni modello al 76% della cella, come i glifi; l'indice tiene la misura vera e il fattore. Scartata: la scala vera (1 cella = 1,5 m) |
 | ~~D21~~ | `RESA-ASSET` | R4-ter | ✅ **Decisa il 2026-10-09, il DM: sì, ma 🧱 diventa un modello**, non come proposto. Era: **Restano glifi anche segnali, creature, strutture in scala di mappa, scale e buchi, muretto, affresco e gru?** Il muretto (94 celle) è un oggetto orientabile, con due tessere rese girando il modello |
 | ~~D22~~ | `RESA-ASSET` | R4-ter | ✅ **Decisa il 2026-10-09, il DM: focolare con la fiamma glifo sopra**, come proposto. Era: **Il braciere 🏮: Poly Haven ha solo un focolare spento.** Scartate: solo il focolare, resta glifo |
+| ~~D23~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: misura e preferenza, tutte e due**, come proposto. Era: **Quando una sostituzione (tessera da modello CC0, da ComfyUI, o una texture) prende il posto di un glifo o di un terreno?** Le misure del livello A non peggiorano (contrasto del contorno ≥ 3:1 o ≥ 90% del glifo, WCAG 1.4.11; non si confonde di più col vicino, SSIM; resta nella tavolozza, ΔE2000) **e** il DM la preferisce nel confronto a coppie alla cieca; in CI un cancello blocca chi peggiora la scheda committata oltre il 5%. Scartate: solo la preferenza, solo la misura |
+| ~~D24~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: correggo e rimisuro**, come proposto. Era: **Il tema texture della #227 misurato contro la pergamena: glifi che perdono contrasto, ⛰ e 🔳 indistinguibili, ⬛ vicino al suo vicino, il segnalino su ⬜ che sparisce.** Nel solo tema texture un alone chiaro sotto glifi e segnalini e velature per terreno, tarati da `misura_resa.py tara` finché ogni misura è almeno pari alla pergamena. Scartate: velatura più alta per tutti, lasciare com'è |
+| ~~D25~~ | `RESA-ASSET` | R4-quinquies | ✅ **Decisa il 2026-10-09, il DM: sì, giro di prova**, come proposto. Era: **ComfyUI in locale come terza fonte di oggetti?** Sulla GPU del DM, gli otto simboli del giro di prova, SDXL (ADR-0019), quattro semi ciascuno, sfondo tolto, gate di rifiuto di art-direction; ogni tessera passa da `misura_resa.py` e dalle coppie, contro glifo e modello CC0 |
+| ~~D26~~ | `RESA-ASSET` | R8 | ✅ **Decisa il 2026-10-09, il DM: secondo parere**, come proposto. Era: **Le metriche apprese (LPIPS, DISTS, CLIP-IQA di piq) che ruolo hanno?** Girano sulla macchina del DM con `misura_resa_appresa.py`, i pesi restano lì, il JSON entra nella scheda e non blocca; diventano cancello solo se concordano con le preferenze del DM (κ ≥ 0,6). Scartate: cancello subito, non servono |
 | ~~D1~~ | `TRASVERSALE-ARTEFATTI` | La **Risonanza** fra Corona e Aegis Fang dei moduli giocati (+2 sacro ai TS, +1d6 sacro contro caotici o malvagi, *Richiamo Ancestrale*, *Eco degli Eroi*) è attiva dal P1? | **Deciso**: la stampa del 16/01, senza Eco degli Eroi |
 | ~~D2~~ | `TRASVERSALE-ARTEFATTI` | Il blocco «Sinergia con Aegis Fang» del master vale dal Rituale 1? | Chiusa dalla fonte: il PDF del giocatore del 22/10/2025 lo mette al Rituale 4 |
 | ~~D3~~ | `TRASVERSALE-ARTEFATTI` | I bonus di quando Thorik ha indossato la Corona (immunità alla paura, scurovisione 36 m, *Aura di Comando*, *Guida di Moradin*)? | **Deciso**: tutti e quattro |

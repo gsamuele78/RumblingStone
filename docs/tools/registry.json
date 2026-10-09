@@ -1633,7 +1633,6 @@
       "stability": "beta",
       "stdlib_only": false,
       "external_deps": [
-        "numpy",
         "scikit-image",
         "scipy",
         "Pillow"

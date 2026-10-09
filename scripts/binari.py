@@ -256,6 +256,21 @@ LIBRERIE = (
                 "si disegnano e si renderizzano senza.",
     ),
     Libreria(
+        nome="torch", modulo="torch",
+        a_cosa_serve="il secondo parere della misura della resa (`misura_resa_appresa.py`, D26)",
+        installa="  pip install torch --index-url https://download.pytorch.org/whl/cpu",
+        obbligatoria=False,
+        ripiego="la misura della resa gira senza: il livello A e il confronto alla "
+                "cieca bastano a decidere (ADR-0086); manca solo il secondo parere.",
+    ),
+    Libreria(
+        nome="piq", modulo="piq",
+        a_cosa_serve="CLIP-IQA, LPIPS e DISTS per il secondo parere della misura della resa",
+        installa="  pip install \"piq>=0.8\"",
+        obbligatoria=False,
+        ripiego="come per torch: `misura_resa_appresa.py` esce con 2 e dice come installarla.",
+    ),
+    Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
         installa="  pip install -r requirements-dev.txt",
