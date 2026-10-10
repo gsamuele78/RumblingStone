@@ -1456,6 +1456,11 @@ Sono **34**, in §4 con la proposta di ognuna. Contate per piano:
 | RIPRESA-PR | 2 | D2 (Gemini o SDXL), D11 (il perimetro dell'edizione) |
 | MESTIERE-BANCHI | 1 | D3 (si spezzano i box dei master già giocati?), che è anche la D9 di LETTORE |
 
+> ⚠️ *(2026-10-10)* Questa tabella è la fotografia del 2026-09-30 e non si
+> aggiorna: CICLO-SESSIONE (D1-D7), PIPELINE-IBRIDE (D1-D4) e MESTIERE-BANCHI
+> (D3) sono state decise il giorno stesso, e la D12 di RICERCA-MESTIERE il
+> 2026-10-09. Le aperte di oggi sono in §4, generato da `decisioni_dm.py`.
+
 E fuori da §4, perché sono marcature e non decisioni: le **44 `[INFERRED]` di
 DEF-4** e le nuove di DEF-5, e `state.md` sul ramo del gruppo (il Rubino che
 completa la Corona, i log delle serate del 25-27 settembre).
