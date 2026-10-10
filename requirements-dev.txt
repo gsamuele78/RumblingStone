@@ -69,4 +69,5 @@ fonttools[woff]>=4.60.2
 # resa delle mappe (`scripts/misura_resa.py`): SSIM, ΔE CIEDE2000, Sobel e la
 # conversione in Lab, sulle celle rasterizzate. BSD-3-Clause. Il cancello in CI
 # confronta la scheda committata; il renderer resta stdlib.
-scikit-image>=0.24
+# Pavimento 0.25 dal 2026-10-10: la prima con wheel per Python 3.13.
+scikit-image>=0.25
