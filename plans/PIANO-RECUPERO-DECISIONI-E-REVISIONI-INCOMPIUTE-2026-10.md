@@ -44,7 +44,7 @@ Regola d'apertura di ADR-0044: prima di aprire si guardano i piani vicini.
 
 | Piano vicino | Perché non basta, e il confine |
 |---|---|
-| [`PIANO-RIPRESA-PR-ABBANDONATE`](PIANO-RIPRESA-PR-ABBANDONATE.md) | Riprende quattro PR (#63, #52, #106, #99). Non guarda le PR aperte dopo il 4 settembre né le decisioni rimaste nei loro rami. **Qui non si rifà** niente di F1-F4: 4g, 4h e 4i-3 restano là |
+| [`PIANO-RIPRESA-PR-ABBANDONATE`](PIANO-RIPRESA-PR-ABBANDONATE.md) | Riprende quattro PR (#63, #52, #106, #99). Non guarda le PR aperte dopo il 4 settembre né le decisioni rimaste nei loro rami. **Qui non si rifà** niente di F1-F4: 4g, 4h e 4i-3 restano là. Per la #99 vale la proposta del thread dedicato (2026-10-10): chiuderla, 4g in due PR piccole da `main`, 4h scartato perché contrasta ADR-0007 |
 | [`PIANO-RICONCILIAZIONE-PR-APERTE`](PIANO-RICONCILIAZIONE-PR-APERTE.md) | Fermo dal 4 settembre con R6-R8 «da decidere», che nel frattempo sono stati decisi altrove (§2.3). Questo piano propone di chiuderlo, non di continuarlo |
 | [`STATO-E-ORDINE-DEI-PIANI`](STATO-E-ORDINE-DEI-PIANI.md) §0 | È la lista viva. Qui non la si duplica: si correggono le sue righe ferme (lotto L3) e si aggiunge una riga che punta a questo piano |
 | Il thread «Audit settimanale PR e decisioni» | È una routine che **segnala** ogni lunedì. Questo piano **corregge** una volta. Dopo L1-L4 la routine trova meno rumore |
@@ -79,6 +79,7 @@ decise e la risposta sta solo in un ramo.
 | Il lotto D13 (27 modifiche «sembra/pare» su undici master) | #216: approvato e applicato | §0 riga 🙋 «al DM: approvare il lotto» |
 | `RICERCA-MESTIERE#D12` (la riga `17` duplicata in `Portale-Forgia-L2`) | #230: non è una riga duplicata, è una didascalia di tre celle; le righe 19-33 sono lo specchio | aperta in §4 |
 | `RESA-ASSET#D23`-`D30` (la resa misurata, ADR della sostituzione) | #230 | non esistono |
+| `AMBIENTE#D7` (Python 3.13 ovunque, la versione di Debian stable) | decisa su `main` il 2026-10-08, **mai applicata**: la CI di `main` e quella della #230 girano ancora su 3.11 (`ci.yml` righe 26 e 422, `dipendenze.yml` righe 44 e 79) | decisa, ma il lotto A2 è ⬜. La #231, nel thread della CI rossa, porta la parte Python; A2 resta 🟡 per il job Debian 13 |
 
 Due decisioni nuove esistono **solo** nella #216 e vanno al DM con lei:
 `CODA-SECONDO-LETTORE#D2` (il campo *Etichetta regia* troncato) e `#D3` (la *d*
@@ -90,7 +91,9 @@ eufonica).
 diverse: *la memoria del lavoro è generata* e *una sostituzione nella resa entra
 solo se misurata e preferita*. Chi arriva secondo su `main` fa fallire
 `validate_docs --sorgenti`, e ogni citazione già scritta di «ADR-0086» diventa
-ambigua: è il caso dell'ADR-0049 del 12 settembre. Per questo il piano **non
+ambigua: è il caso dell'ADR-0049 del 12 settembre. Il 2026-10-10 il thread sulla #99 ha proposto un **terzo** ADR-0086
+(`/mnt/project-files/pr99/ADR-proposta-chiusura-PR-99.md`, la #99 si chiude):
+tre candidati per un numero solo, e D2 deve assegnarli tutti. Per questo il piano **non
 crea ADR numerati**: le sue decisioni stanno in §3 in forma breve.
 
 ### 2.3 · Decisioni aperte che l'aggregato non vede
@@ -203,7 +206,7 @@ chiude quando L1-L6 sono fatti, e non accumula lavoro suo.
 | # | Lotto | Domanda |
 |---|---|---|
 | **D1** | L1 | **In che ordine arrivano su `main` #216, #229 e #230?** La #216 porta D13, D17, D38 e la *Torre*, che hai già deciso; la #230 è impilata sulla #229. Tutte e tre sono bozze tue. *Proposta*: prima la #216 (più vecchia, fondibile senza conflitti, chiude tre decisioni), poi la #229 e la #230 con il loro ADR rinumerato a 0087. Nessuna si fonde senza il tuo sì |
-| **D2** | L1 | **Chi tiene il numero ADR-0086?** *Proposta*: chi arriva prima su `main` (con D1, la memoria generata della #216); l'altro diventa 0087 nel suo ramo, prima del merge, con `validate_docs --prossimo-adr` |
+| **D2** | L1 | **Chi tiene il numero ADR-0086?** Tre candidati: la memoria generata (#216), la sostituzione misurata (#230), la chiusura della #99 (proposta del thread dedicato). *Proposta*: nell'ordine di arrivo su `main`, quindi 0086 alla #216, 0087 alla #230, 0088 alla #99; ognuno si rinumera nel suo ramo prima del merge, con `validate_docs --prossimo-adr` |
 | **D3** | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Proposta*: il collaudo delle due o tre immagini si fa con la #230 installata; la #106 si chiude subito come «contenuto portato», e la D2 resta aperta in RIPRESA-PR senza tenere aperta una PR |
 | **D4** | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VENDIBILITA autorizzato», e lascia §4 |
 | **D5** | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-FEDELTA (`--strict` default); (b) in attesa con condizione: TRAVASO A6 (quando ARC-07 finisce al tavolo), INTEGRAZIONE (quando c'è Foundry al tavolo), RICERCA-MODULO-PUBBLICABILE B3, C3, D5, RICERCA-TOOL-ESTERNI R1, RICERCA-TOOL-LGM P1-P3, GENERATORE J e K; (c) restano lotti: nessuno |
