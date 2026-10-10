@@ -44,26 +44,36 @@
 <path d="M74 80v252M102 80v252M130 80v252M158 80v252M214 80v252M242 80v252M270 80v252M298 80v252M354 80v252M382 80v252M46 108h336M46 136h336M46 164h336M46 192h336M46 248h336M46 276h336M46 304h336M46 332h336" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v252M186 80v252M326 80v252M46 80h336M46 220h336" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v252M102 80v252M130 80v252M158 80v252M214 80v252M242 80v252M270 80v252M298 80v252M354 80v252M382 80v252M46 108h336M46 136h336M46 164h336M46 192h336M46 248h336M46 276h336M46 304h336M46 332h336" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v252M186 80v252M326 80v252M46 80h336M46 220h336" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
+<circle cx="200" cy="178" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="201.0" cy="181.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rocks" x="186" y="164" width="28" height="28"/>
+<circle cx="60" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="61.0" cy="237.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_stairs_up" x="46" y="220" width="28" height="28"/>
+<circle cx="144" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="145.0" cy="237.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rocks" x="130" y="220" width="28" height="28"/>
+<circle cx="284" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="285.0" cy="237.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rocks_b" x="270" y="220" width="28" height="28"/>
+<circle cx="368" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="369.0" cy="237.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_stairs_up" x="354" y="220" width="28" height="28"/>
+<circle cx="172" cy="290" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="173.0" cy="293.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_debris" x="158" y="276" width="28" height="28"/>
+<circle cx="228" cy="290" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="229.0" cy="293.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_debris" x="214" y="276" width="28" height="28"/>
+<circle cx="172" cy="318" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="173.4" cy="320.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="172.0" cy="318.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="172.0" cy="318.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="200" cy="318" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="201.4" cy="320.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="200.0" cy="318.0" r="10.36" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="200.0" cy="318.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="228" cy="318" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="229.4" cy="320.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="228.0" cy="318.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="228.0" cy="318.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>

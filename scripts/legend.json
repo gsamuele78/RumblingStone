@@ -308,7 +308,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_fire",
-        "fill": "#ffb4a2"
+        "fill": "#ffb4a2",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -332,7 +333,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_boom",
-        "fill": "#ffb4a2"
+        "fill": "#ffb4a2",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -352,7 +354,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_skull",
-        "fill": "#e9ecef"
+        "fill": "#e9ecef",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -373,7 +376,8 @@
         "mode": "icon",
         "prop": "pr_pit",
         "fill": "#495057",
-        "altezza_m": -3.0
+        "altezza_m": -3.0,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": true,
@@ -436,7 +440,8 @@
         "prop": "pr_tree",
         "fill": "#b7e4c7",
         "altezza_m": 6.0,
-        "texture": "fogliame"
+        "texture": "fogliame",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": true,
@@ -453,7 +458,8 @@
         "mode": "icon",
         "prop": "pr_star",
         "fill": "#fff3b0",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -490,7 +496,8 @@
         "mode": "icon",
         "prop": "pr_tower",
         "fill": "#dee2e6",
-        "altezza_m": 9.0
+        "altezza_m": 9.0,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": true,
@@ -523,7 +530,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_bell",
-        "fill": "#fff3b0"
+        "fill": "#fff3b0",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -539,7 +547,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_gem",
-        "fill": "#caf0f8"
+        "fill": "#caf0f8",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -573,7 +582,8 @@
         "mode": "icon",
         "prop": "pr_brazier",
         "fill": "#ffd166",
-        "altezza_m": 1.5
+        "altezza_m": 1.5,
+        "sopra_la_tessera": "pr_fire"
       },
       "function": {
         "blocks_movement": true,
@@ -647,7 +657,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_horse",
-        "fill": "#e6ccb2"
+        "fill": "#e6ccb2",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -664,7 +675,8 @@
         "mode": "icon",
         "prop": "pr_web",
         "fill": "#dee2e6",
-        "altezza_m": 0.75
+        "altezza_m": 0.75,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -685,7 +697,8 @@
         "mode": "icon",
         "prop": "pr_ice",
         "fill": "#caf0f8",
-        "altezza_m": 0.0
+        "altezza_m": 0.0,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -705,7 +718,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_bolt",
-        "fill": "#fff3b0"
+        "fill": "#fff3b0",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -729,7 +743,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_portal",
-        "fill": "#caf0f8"
+        "fill": "#caf0f8",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -746,7 +761,8 @@
         "mode": "icon",
         "prop": "pr_down",
         "fill": "#dee2e6",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -765,7 +781,8 @@
         "prop": "pr_temple",
         "fill": "#dee2e6",
         "altezza_m": 6.0,
-        "texture": "pietra-chiara"
+        "texture": "pietra-chiara",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": true,
@@ -780,7 +797,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_volcano",
-        "fill": "#ffb4a2"
+        "fill": "#ffb4a2",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -818,7 +836,8 @@
         "mode": "icon",
         "prop": "pr_bridge",
         "fill": "#e6ccb2",
-        "altezza_m": 0.75
+        "altezza_m": 0.75,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -835,7 +854,8 @@
         "mode": "icon",
         "prop": "pr_target",
         "fill": "#fff3b0",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -852,7 +872,8 @@
         "mode": "icon",
         "prop": "pr_mural",
         "fill": "#dee2e6",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -869,7 +890,8 @@
         "mode": "icon",
         "prop": "pr_sparkle",
         "fill": "#fff3b0",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -890,7 +912,8 @@
         "mode": "icon",
         "prop": "pr_swords",
         "fill": "#dee2e6",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -941,7 +964,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_stairs",
-        "fill": "#dee2e6"
+        "fill": "#dee2e6",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -1191,7 +1215,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_stairs_up",
-        "fill": "#dee2e6"
+        "fill": "#dee2e6",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -1209,7 +1234,8 @@
       "render": {
         "mode": "icon",
         "prop": "pr_stairs_down",
-        "fill": "#ced4da"
+        "fill": "#ced4da",
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -1228,7 +1254,8 @@
         "mode": "icon",
         "prop": "pr_trapdoor",
         "fill": "#e6ccb2",
-        "piatto": true
+        "piatto": true,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": false,
@@ -1444,7 +1471,8 @@
         "mode": "icon",
         "prop": "pr_crane",
         "fill": "#e6ccb2",
-        "altezza_m": 3.0
+        "altezza_m": 3.0,
+        "tessera_cc0": false
       },
       "function": {
         "blocks_movement": true,

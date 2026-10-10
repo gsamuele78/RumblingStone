@@ -247,6 +247,41 @@ STEP 1). Lo shadowcasting simmetrico di Albert Ford è dato per CC0 solo da chi
 lo ha tradotto in Rust; prima di copiarne il codice va verificata la licenza
 all'origine (`rumblingstone-edizione`), altrimenti si scrive dalla descrizione.
 
+### §2.5-ter · Le fonti, con gli URL (recuperati il 2026-10-09)
+
+La ricerca del 2026-10-08 nominava le fonti ma non registrava gli URL, quindi
+non si poteva ricontrollare. Il 2026-10-09 un agente li ha recuperati dal
+transcript della sessione della #226. **Nessuna pagina fu letta per intero**:
+le tre letture dirette (d20srd, *Movement* e *Combat modifiers*; d20pfsrd,
+*Combat*) fallirono per DNS, e ogni affermazione poggia su estratti di
+ricerca. I valori SRD di §2.4 (angoli, strizzarsi, copertura +4/+8) vengono da
+`skills/dnd-35-srd/references/combat.md`, non da una pagina letta quel giorno.
+
+⚠️ **La *GameMastery Guide* p. 52 non è verificata.** L'unico URL di Archives
+of Nethys in quella ricerca è una pagina di **PF2e**
+(`2e.aonprd.com/Rules.aspx?ID=989`), e il riassunto della ricerca diceva di non
+aver raggiunto il capitolo. La riga di §2.5 resta, ma la citazione va
+ricontrollata sul libro prima di usarla come fonte.
+
+| Fonte | URL | Cosa ha sostenuto |
+|---|---|---|
+| SRD 3.5, *Wilderness* | https://www.d20srd.org/srd/wilderness.htm | distanze d'incontro per terreno (V8) |
+| The Alexandrian, distanza d'incontro | https://thealexandrian.net/wordpress/46466/roleplaying-games/random-gm-tip-encounter-distance | idem, a sostegno |
+| Movimento e posizione (PF1e) | https://aonprd.com/Rules.aspx?ID=173 | angoli e strizzarsi (V6) |
+| Movimento (copie dell'SRD 3.5) | https://dungeons.fandom.com/wiki/SRD:Movement · https://www.rpgcrossing.com/srd/movement.html | idem |
+| Paizo, *Maps, Maps, Maps* | https://cdn.paizo.com/blog/maps-maps-maps | la catena autore → redazione → cartografo |
+| *Jaquaying the Dungeon* | https://thealexandrian.net/wordpress/13085/roleplaying-games/xandering-the-dungeon | anelli e più ingressi (V7) |
+| Dormans e *Unexplored* | https://www.boristhebrave.com/2021/04/10/dungeon-generation-in-unexplored/ | generazione ciclica (V9) |
+| Albert Ford, shadowcasting simmetrico | https://www.albertford.com/shadowcasting/ · porto in Rust: https://github.com/nsmryan/shadowcasting | V5; la licenza CC0 la dichiara il porto, non Ford |
+| Tiled, Automapping e proprietà | https://doc.mapeditor.org/en/latest/manual/automapping/ · https://doc.mapeditor.org/en/latest/manual/custom-properties/ | §2.5-bis |
+| LDtk, tag ed enum | https://deepnight.itch.io/ldtk/devlog/243249/090-biomes-tags | §2.5-bis; la licenza MIT viene da estratti, non dalla pagina della licenza |
+| Foundry, Multilevel Tokens | https://github.com/grandseiken/foundryvtt-multilevel-tokens | scale accoppiate fra piani. Per *Levels* nessun URL: i più vicini sono https://foundryvtt.com/packages/dd-import/ e https://foundryvtt.com/packages/da-level-importer |
+| Sentient Sketchbook | https://pure.itu.dk/en/publications/sentient-sketchbook-computer-assisted-game-level-authoring/ | §2.5-bis |
+| Expressive Range Analysis | https://www.pcgworkshop.com/archive/smith2010analyzing.pdf | §2.5-bis |
+| UVTT | https://help.roll20.net/hc/en-us/articles/41643201127831-Universal-Virtual-Tabletop-UVTT-Support · https://blog.dungeonscrawl.com/uvtt-export | formato e px per quadretto (§2.4) |
+| Cartografi WotC e Paizo | https://www.maproomblog.com/2015/07/robert-lazzaretti-fantasy-mapmaker/ · https://adventureaweek.com/interview-with-todd-gamble-forgotten-realms-cartographer/ | il mestiere; di Mike Schley nessuna pagina utile |
+| git, manutenzione in background (il test che perdeva la corsa) | https://git-scm.com/docs/git-maintenance · https://github.blog/open-source/git/highlights-from-git-2-54/ | `maintenance.auto false` nei test che copiano il repo |
+
 ---
 
 ## §3 · Fase S — Sviluppo, lotto per lotto
@@ -696,6 +731,38 @@ LEVEL-DESIGN C2 può partire dopo V1 e V5.
 - **Aperte** (la sera, terzo messaggio): nessuna
 - **Dedotto da me** (la sera, terzo messaggio): che la scala di M7-D verso il livello 0 (C15), che non ha una griglia, si dichiari con `@collega C15 ; fuori mappa ; <motivo>` invece di sospendere il controllo per tutta la mappa con `@deroga`; che la gemella si scriva nel contratto JSON, campo `collega` della struttura, perché la griglia si rigenera; che la «nicchia» sia la cella di muro a nord della lampada, e che la quinta lampada, nascosta sotto Zeth in K10, vada nella nicchia come le altre quattro
 
+## §8 · Lo stato di ogni voce (2026-10-09, dopo il merge della #227)
+
+Richiesto dal DM con R4-ter di RESA-ASSET: per ogni lotto e decisione, se è
+**fatto**, **superato**, **ancora da fare** o **obsoleto**, con il commit, il
+file o la decisione che lo dice. Le misure di oggi sono di `collaudo_mappe.py`
+sul corpus del 2026-10-09: **50 mappe, 90 errori, 75 avvisi** (in V1 erano 38
+mappe, 97 errori, 53 avvisi).
+
+| Voce | Stato | Prova |
+|---|---|---|
+| Fase A, A1-A6 | ✅ fatto | `a39913c`; ADR-0082 accettata in `8aeb261` |
+| V0, D1-D19 | ✅ fatto | `8aeb261`, `f90c1f2`, la sera `6e5219b` (D10, D12, D19) |
+| V1 `collaudo_mappe.py` | ✅ fatto | `fb55e9f`, #226 (`1b7ffe8`) |
+| V2 `@tipo` con l'ambiente (D18) | ✅ fatto | `69930a2`: 44 griglie su 44, oggi 50 su 50 |
+| V2 `@deroga` | ⏳ da fare dove serve, in V3 | oggi in 10 righe di 9 master (contate le righe che cominciano con `@deroga`, fuori da `plans/`, `skills/` e `docs/`) |
+| V2-bis il corredo dei simboli (D8, D10) | ✅ fatto | `5e66ad0` |
+| V2-ter il terreno sotto un'icona preso dalla cella a sinistra | ⏳ da fare quando il DM vuole | `_resolve_bases` invariato; vale anche per le tessere degli oggetti di RESA-ASSET R4-ter, che si posano sullo stesso terreno |
+| D28 col set nuovo (D12) | ✅ fatto | `5f2e284` (#225), poi `6e5219b`: 0 errori e 2 avvisi |
+| V2-quater l'asse delle chiusure, `tcod` (D13-D16) | ✅ fatto | `f6e6fa0`; ADR-0083 e ADR-0084 |
+| scipy per M1 e M2 (D17) | ✅ fatto | `69930a2` |
+| D2 `⬜` e `🟫` al posto di `⬛` come pavimento | ⏳ da fare in V3 | misurato oggi: la Stanza della Corona ha ancora 93 celle `⬛`, il Cuore della Montagna 683 |
+| V3 correzioni del corpus, col DM | ⏳ da fare | 90 errori in 50 mappe; comprende R7 di RESA-ASSET |
+| V4 gate a tetto | ⏳ da fare, dopo V3 | il collaudo in CI stampa e non blocca |
+| V5 linea di vista e copertura; M7, M8 | ⏳ da fare | M4 esatta c'è (`f6e6fa0`); M7 e M8 no |
+| V6-V8 agenti per taglia, zone e anelli, distanza d'incontro | ⏳ da fare | nessun codice |
+| V9 generatore di bozze (D4) | ⏳ da fare, dopo V6 | nessun codice |
+| V10 riparazione proposta | ⏳ da fare | nessun codice |
+| V11 skill, guida, chiusura | ⏳ da fare | `GUIDA-MAPPE.md` non ha una sezione sul collaudo, `audit-mappe-workflow.md` non ha lo STEP 5 (0 occorrenze di «collaudo» in entrambi, misurate oggi) |
+| V11-bis il collaudatore a freddo (D11) | 🟡 scritto, mai eseguito fino al 2026-10-09 | `ba4aa1f`. L'unica esecuzione, il 2026-10-08 sulla bozza D28, fu interrotta quando la bozza fu ritirata; il criterio di qualità del lotto («trova ciò che lo strumento non può trovare») non era mai stato verificato. La rubrica ha ricevuto il 2026-10-09 i sette dettagli che stavano solo in quel prompt. Prima esecuzione vera il 2026-10-09 su M7-C, alla cieca: lo strumento dava 0 errori e 0 avvisi, il collaudatore 18 rilievi (10 🟠, 8 🟡), fra cui Grask e il sacerdote mancanti. Il criterio di qualità è soddisfatto. Rapporto in `esperimenti/collaudo-mappe-2026-10/COLLAUDATORE-M7C-2026-10-09.md`. ✅ Le correzioni sono entrate lo stesso giorno (D29 di RESA-ASSET): i 18 rilievi applicati alla mappa, il master DEF-4 resta canone, 26 celle `[PROPOSTA]`. Il compilatore scriveva solo i segnaposto di TATTICHE ed EVOLUZIONE e ignorava `@taglia`; ora il contratto JSON le porta (`tattiche`, `evoluzione`, `note_dm`, `taglie`), e `test_master_generati.py` ricompila i 18 master generati e li confronta |
+| §4, riga «Il rendering non cambia: 41 SVG identici» | ⚰ obsoleto nel numero | oggi gli SVG sono 53 nella pergamena e 53 nel tema texture (`1bbf7bf`); il criterio vale, il conto va letto da `validate_maps` |
+| §6, rischio «la licenza dello shadowcasting non è CC0» | ⚰ obsoleto | con D16 lo shadowcasting è quello di `tcod` (BSD-2-Clause), dichiarato in ADR-0084: non si riscrive più dalla descrizione dell'algoritmo |
+
 ---
 
 ## Checklist di avanzamento
@@ -723,7 +790,7 @@ Fase S — Sviluppo
 □ V8  M9 sulla distanza d'incontro dell'SRD
 □ V9  generatore di bozze (se D4 = sì)
 □ V10 riparazione proposta in diff
-☑ V11-bis il collaudatore di mappe, ruolo LLM (2026-10-08: `collaudo-mappe.md`, regola 9 della skill, due norme registrate)
+☑ V11-bis il collaudatore di mappe, ruolo LLM (2026-10-08: `collaudo-mappe.md`, regola 9 della skill, due norme registrate; 2026-10-09: rubrica completata e prima esecuzione vera su M7-C, 18 rilievi)
 □ V11 skill, guida, chiusura
 
 Fase V — Validazione: la tabella di §4, lotto per lotto

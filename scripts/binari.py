@@ -155,8 +155,10 @@ OPZIONALI = (
          "  macOS          brew install maven",
          "come per `java`: senza Maven non si scarica LanguageTool e il secondo "
          "lettore non parte; nessun altro passo ne dipende."),
-    _opz("blender", "il render 3D delle mappe (`render_map_blender.py`) e il passo "
-                    "di profondita' che alimenta ControlNet",
+    _opz("blender", "il render 3D delle mappe (`render_map_blender.py`), il passo "
+                    "di profondita' che alimenta ControlNet e le tessere degli "
+                    "oggetti del tema texture (`build_oggetti_cc0.py`, che accetta "
+                    "anche il modulo `bpy`)",
          "  Debian/Ubuntu  sudo apt install blender\n"
          "  Fedora         sudo dnf install blender\n"
          "  macOS          brew install --cask blender\n"
@@ -164,7 +166,15 @@ OPZIONALI = (
          "la geometria si risolve lo stesso: `--piano-solo` scrive il piano di "
          "scena senza Blender, ed e' quello il pezzo deterministico. Senza il "
          "binario mancano solo il PNG e il passo di profondita', che sono "
-         "presentazione e non canone."),
+         "presentazione e non canone. Le tessere degli oggetti si fanno una "
+         "volta e si committano: senza Blender il tema texture le legge lo "
+         "stesso, e dove mancano restano i glifi."),
+    _opz("distrobox", "il container di ComfyUI con la GPU dell'host "
+                      "(`scripts/comfyui-local/`, `ambiente.py installa --con comfyui`)",
+         "  Debian/Ubuntu  sudo apt install distrobox podman\n"
+         "  Bazzite        c'e' gia'",
+         "niente ComfyUI in locale: le immagini restano quelle committate, e il "
+         "tema texture usa modelli CC0 o glifi."),
     _opz("inkscape", "i PNG delle mappe con resa SVG fedele (`--renderer inkscape`)",
          "  Debian/Ubuntu  sudo apt install inkscape\n"
          "  Fedora         sudo dnf install inkscape",
@@ -246,6 +256,41 @@ LIBRERIE = (
         ripiego="nessuno: `collaudo_mappe.py` esce con 2, come senza tcod.",
     ),
     Libreria(
+        nome="scikit-image", modulo="skimage",
+        a_cosa_serve="la misura della resa delle mappe (`misura_resa.py`): SSIM, "
+                     "ΔE CIEDE2000, contrasto e bordo di ogni simbolo e terreno",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=True,
+        ripiego="nessuno: `misura_resa.py` esce con 2 e la CI lo installa. Le mappe "
+                "si disegnano e si renderizzano senza.",
+    ),
+    Libreria(
+        nome="torch", modulo="torch",
+        a_cosa_serve="il secondo parere della misura della resa (`misura_resa_appresa.py`, D26)",
+        installa="  pip install -r requirements-completo.txt   (torch per CPU e piq)",
+        obbligatoria=False,
+        ripiego="la misura della resa gira senza: il livello A e il confronto alla "
+                "cieca bastano a decidere (ADR-0086); manca solo il secondo parere.",
+    ),
+    Libreria(
+        nome="piq", modulo="piq",
+        a_cosa_serve="CLIP-IQA, LPIPS e DISTS per il secondo parere della misura della resa",
+        installa="  pip install -r requirements-completo.txt",
+        obbligatoria=False,
+        ripiego="come per torch: `misura_resa_appresa.py` esce con 2 e dice come installarla.",
+    ),
+    Libreria(
+        nome="bpy", modulo="bpy",
+        a_cosa_serve="Blender come modulo Python: le tessere degli oggetti del tema "
+                     "texture (`build_oggetti_cc0.py`) e `test_blender_vero.py`, senza "
+                     "il binario `blender`",
+        installa="  pip install -r requirements-completo.txt   (solo Python 3.13)",
+        obbligatoria=False,
+        ripiego="il binario `blender` fa lo stesso lavoro; senza tutti e due le "
+                "tessere degli oggetti non si rifanno, e il tema texture usa quelle "
+                "committate o i glifi.",
+    ),
+    Libreria(
         nome="fonttools", modulo="fontTools",
         a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
         installa="  pip install -r requirements-dev.txt",
@@ -266,6 +311,7 @@ CATENE = {
     "mappe SVG": (),
     "mappe PNG": ("chromium",),
     "collaudo mappe": ("tcod", "scipy"),
+    "misura della resa": ("scikit-image", "chromium"),
     "recap in PDF": ("pandoc", "xelatex"),
     "skill per gli agenti": ("pyyaml",),
 }

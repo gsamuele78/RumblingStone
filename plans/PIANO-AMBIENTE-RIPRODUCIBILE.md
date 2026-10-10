@@ -176,6 +176,52 @@ passa a un sottoinsieme dichiarato.
 ### A5 · `dm.py ambiente` ⬜
 Si taglia in quattro, perché il primo pezzo è utile da solo.
 
+> **Anticipato il 2026-10-09, fuori lotto.** Il DM, installando sulla sua
+> Debian 13: *«ci sono pacchetti richiesti che non sono installati, perché non
+> si possono includere così l'ambiente di sviluppo è completo?»*. Il profilo
+> `completo` esiste già in forma minima:
+> - `requirements-completo.txt`: `bpy`, `torch` per CPU e `piq`, sopra
+>   `requirements-dev.txt`; un test lo tiene allineato a `binari.py`;
+> - la riga `apt` per Debian 13 in GUIDA-SETUP-MACCHINA §5;
+> - `bpy` nel registro, e `doctor` che non dà più «blender assente» quando il
+>   modulo c'è.
+>
+> Sono ancora da fare la verifica di versioni e checksum, il lock e la
+> scrittura dei pacchetti di sistema (A1, A3, A5c). Sulla macchina del DM,
+> quel giorno, `misura_resa.py --check` ha dato lo stesso verde della CI.
+>
+> **Poi, lo stesso giorno, A5c e una parte di A5d.** Il DM: *«manca blender,
+> comfyui e typst; prevedere anche un rollback così si può pulire il sistema»*.
+> `scripts/ambiente.py` (`dm.py ambiente`) fa `piano`, `installa
+> [--con blender,comfyui,typst]`, `stato`, `rimuovi [--venv]` e `adotta
+> --apt-dal`, come li descrive A5c:
+> - `dpkg` fotografato prima e dopo, e il registro possiede la differenza;
+> - in rimozione la simulazione si mostra prima; mai `autoremove` né `purge`;
+> - un pacchetto nostro da cui dipende altro resta.
+>
+> Il criterio di qualità di A5c è provato con un sistema finto
+> (`test_ambiente_registro.py`), non ancora in un container Debian 13 vero:
+> quello resta ad A6. `adotta` è nuovo rispetto al piano: affida al registro ciò
+> che il DM aveva installato a mano prima che lo script esistesse.
+>
+> **La prima prova vera, sulla Debian 13 del DM, lo stesso pomeriggio.**
+> - `adotta --apt-dal 2026-10-09` ha messo nel registro 103 pacchetti
+>   installati a mano quel giorno;
+> - `installa --con blender,comfyui` ha installato Blender (16 pacchetti nel
+>   registro) e ha lasciato stare chromium, pandoc, maven e gli altri, già
+>   presenti;
+> - `doctor` è verde su ogni dipendenza, e `gate_locale.py --rapido` dà 49
+>   passi, 0 rossi, 0 avvisi;
+> - ComfyUI si è fermato: distrobox non monta `/srv`, e dentro il box
+>   `COMFYUI_DIR=/srv/comfyui` non esisteva. Corretto in `setup-distrobox.sh`,
+>   che ora monta la cartella e ricrea un box che non la vede.
+>
+> `rimuovi` non è ancora stato provato su una macchina vera.
+>
+> Il tool ha `side_effects.system` nel manifest, e così non esce dal server
+> MCP nemmeno con `--allow-write`. Mancano ancora le versioni fissate con
+> checksum (A1), il lock (A3), `aggiorna`, gli hook (A4) e Bazzite.
+
 **A5a · leggere: `piano`, `verifica`, `stato`** `[engine: Sonnet 5 · effort: alto · qualità: --json deterministico (due giri, stesso output a parità di macchina), exit code documentati, test con un PATH finto per ogni stato del vocabolario]`
 - `--profilo dm|sviluppo|completo`, `--json`, `--verboso`, `--silenzioso`, `--rapido`.
 - Per ogni componente: presenza, versione contro il registro, percorso, architettura, duplicati nel PATH, prova funzionale (typst compila una pagina, pdfcpu impone due pagine, Chrome for Testing stampa un PDF di prova, il `.venv` importa i moduli, `gh auth status` senza stampare il token). I file di prova vanno nella cartella temporanea del sistema e si cancellano.
@@ -283,10 +329,10 @@ appena esce, ed è già una risposta a «la mia macchina è come la CI?».
 - [ ] A2 · Python 3.13 e le tre piattaforme in CI — 🟡 Python 3.13 fatto (PR #231), manca il job Debian 13
 - [ ] A3 · lock con hash e regola degli aggiornamenti
 - [ ] A4 · hook ridisegnati (D11)
-- [ ] A5a · `ambiente piano/verifica/stato`
+- [~] A5a · `ambiente piano/verifica/stato` (2026-10-09: `piano` e `stato` in `ambiente.py`; manca `verifica` con versioni e checksum, che aspetta A1)
 - [ ] A5b · `ambiente setup` a livello utente, distrobox su Bazzite
-- [ ] A5c · pacchetti di sistema col registro
-- [ ] A5d · `aggiorna` e `rimuovi`
+- [~] A5c · pacchetti di sistema col registro (2026-10-09: `ambiente.py`, provato con un sistema finto; manca la prova in container di A6)
+- [~] A5d · `aggiorna` e `rimuovi` (2026-10-09: `rimuovi [--venv]` col registro, provato con un sistema finto e mai su una macchina vera; manca `aggiorna`)
 - [ ] A6 · la CI prova il contratto, shellcheck bloccante
 - [ ] A7 · guida e matrici generate
 - [ ] A8 · rapporto finale, Bazzite a mano

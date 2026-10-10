@@ -541,6 +541,10 @@ def _annotation_lines(spec: dict) -> list[str]:
             x, y = obj["at"]
             lines.append(f"@collega {rms.col_label(x)}{y + 1:02d} ; {obj['collega'].strip()}")
 
+    # le creature non Medie, per il collaudo delle porte (ingombro/grande)
+    for tg in spec.get("taglie", []) or []:
+        lines.append(f"@taglia {_coord_label(*tg['at'])} ; {tg['taglia']}")
+
     # numbered roster (one @mark per unit)
     for i, u in enumerate(spec.get("units", []) or [], 1):
         cell = _unit_cell(u)
@@ -644,10 +648,13 @@ def emit_master(spec: dict, grid: list[list[str]]) -> str:
             where = _placement_coords(u)
             out.append(f"| {faction} | {name} | {u['token']} | {qty} | {cr} | {where} |")
         out.append("")
-    out.append("- **Disposizione iniziale**: [chi è dove e perché — vedi tabella Forze]")
-    out.append("- **Round 1-2**: [reazione al contatto]")
-    out.append("- **Round 3+**: [piano B, focus-fire, uso del terreno]")
-    out.append("- **Morale**: [soglia di ripiegamento/resa]")
+    if spec.get("tattiche"):
+        out.extend(f"- {riga}" for riga in spec["tattiche"])
+    else:
+        out.append("- **Disposizione iniziale**: [chi è dove e perché — vedi tabella Forze]")
+        out.append("- **Round 1-2**: [reazione al contatto]")
+        out.append("- **Round 3+**: [piano B, focus-fire, uso del terreno]")
+        out.append("- **Morale**: [soglia di ripiegamento/resa]")
     out.append("")
 
     out.append("### 🔄 EVOLUZIONE (come cambia la mappa — stati, non copione)")
@@ -655,11 +662,18 @@ def emit_master(spec: dict, grid: list[list[str]]) -> str:
     out.append("| Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |")
     out.append("|---|---|---|---|")
     out.append("| A (iniziale) | — | com'è disegnata | — |")
-    for note in (spec.get("notes", []) or []):
-        out.append(f"| B | [trigger] | {note} | [effetto] |")
-    if not (spec.get("notes")):
-        out.append("| B | [evento/round/allarme] | [celle che cambiano] | [nuove CD/danni/EL] |")
+    if spec.get("evoluzione"):
+        for e in spec["evoluzione"]:
+            out.append(f"| {e['stato']} | {e['trigger']} | {e['griglia']} | {e['effetto']} |")
+    else:
+        for note in (spec.get("notes", []) or []):
+            out.append(f"| B | [trigger] | {note} | [effetto] |")
+        if not (spec.get("notes")):
+            out.append("| B | [evento/round/allarme] | [celle che cambiano] | [nuove CD/danni/EL] |")
     out.append("")
+    for par in spec.get("note_dm", []) or []:
+        out.extend(f"> {riga}" if riga else ">" for riga in par.split("\n"))
+        out.append("")
     out.append("> Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle "
                "scelte dei PG, mai del copione.")
     out.append("")

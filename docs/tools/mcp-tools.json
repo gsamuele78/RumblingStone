@@ -226,6 +226,33 @@
       "deterministic": false
     },
     {
+      "name": "blender_rendi_oggetti",
+      "description": "«Che cosa gira dentro Blender quando rendo gli oggetti di scena del tema texture, e dove stanno i lock di luce e scala?»\n\nLo script che gira DENTRO Blender (o con il modulo bpy): importa ogni modello 3D CC0, lo centra nella cella con l'asse lungo est-ovest e la stessa impronta, e lo rende dall'alto con camera ortografica, sole da nord-ovest e ombra raccolta su un piano trasparente. Non si lancia a mano: il driver è build_oggetti_cc0.py.",
+      "use_case": "«Che cosa gira dentro Blender quando rendo gli oggetti di scena del tema texture, e dove stanno i lock di luce e scala?»",
+      "invocation": "blender -b --factory-startup -noaudio -P scripts/blender/rendi_oggetti.py -- <lavoro.json>",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "lavoro": {
+            "type": "string",
+            "description": "Il lavoro scritto dal driver: i lock e, per ogni tessera, il modello e il PNG d'uscita."
+          }
+        },
+        "required": [
+          "lavoro"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita dichiarata nel lavoro>.png"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "eseguito fuori da Blender, lavoro illeggibile, modello che non si importa o render fallito"
+      },
+      "deterministic": false
+    },
+    {
       "name": "build_emoji_noto",
       "description": "«Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»\n\nIl ripiego per le emoji locali delle mappe (ADR-0085): per ogni emoji che una griglia usa e la legenda universale non conosce, scarica l'SVG di Noto Emoji (Apache-2.0, commit fissato), rinomina gli id interni e lo scrive in scripts/emoji-noto/, con licenza e crediti accanto. Il renderer lo incorpora al posto del font di sistema. --check non usa la rete.",
       "use_case": "«Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»",
@@ -301,6 +328,61 @@
         "2": "pyyaml mancante"
       },
       "deterministic": true
+    },
+    {
+      "name": "build_oggetti_cc0",
+      "description": "«Come metto sulle mappe rocce, statue, letti e barili veri al posto dei glifi, senza problemi di licenza e con la stessa luce per tutti?»\n\nGli oggetti di scena del tema texture delle mappe (R4-ter, D17 di RESA-ASSET): scarica i glTF 1k dei modelli Poly Haven fissati, ne verifica l'MD5 contro l'API, estrae i modelli Quaternius dallo zip Standard con impronta e licenza CC0 verificate, li rende dall'alto con Blender con luce, scala e camera fisse e scrive in scripts/oggetti-cc0/ le tessere webp e l'indice. --check non usa la rete.",
+      "use_case": "«Come metto sulle mappe rocce, statue, letti e barili veri al posto dei glifi, senza problemi di licenza e con la stessa luce per tutti?»",
+      "invocation": "python3 scripts/build_oggetti_cc0.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Niente rete: le tessere combaciano con l'indice, sono CC0 e vengono da modelli verificati; esce 0 se le tessere non sono ancora fatte."
+          },
+          "prova": {
+            "type": "boolean",
+            "description": "Solo i modelli del giro di prova (PILOTA), per il confronto con il DM."
+          },
+          "scarica-solo": {
+            "type": "boolean",
+            "description": "Scarica e verifica i modelli di Poly Haven in asset-esterni/oggetti-cc0/, senza Blender."
+          },
+          "rendi": {
+            "type": "boolean",
+            "description": "Rende dai modelli già scaricati, senza rete, dopo averne riverificato l'impronta."
+          },
+          "quaternius": {
+            "type": "string",
+            "description": "Lo zip Fantasy Props MegaKit [Standard]: impronta fissata, licenza CC0 letta, modelli della tabella estratti."
+          },
+          "elenca-quaternius": {
+            "type": "string",
+            "description": "Impronta, file di licenza e modelli glTF dello zip, per scrivere la tabella sui nomi veri."
+          },
+          "misura-stile": {
+            "type": "boolean",
+            "description": "Luminanza, contrasto, saturazione e dettaglio di ogni tessera, con le medie per fonte."
+          },
+          "blender": {
+            "type": "string",
+            "description": "Il comando di Blender, se non è nel PATH (senza: il binario, poi il modulo bpy)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "asset-esterni/oggetti-cc0/",
+        "scripts/oggetti-cc0/"
+      ],
+      "exit_codes": {
+        "0": "ok (anche: tessere non ancora fatte, con --check)",
+        "1": "MD5 o impronta che non combacia, licenza non CC0, tessera mancante o non verificata, render fallito",
+        "2": "Pillow assente, o Blender assente quando serve rendere"
+      },
+      "deterministic": false
     },
     {
       "name": "build_texture_cc0",
@@ -580,6 +662,118 @@
       "exit_codes": {
         "0": "ok",
         "1": "errore (JSON non valido o dungeon troppo grande)"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_resa",
+      "description": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»\n\nLa resa delle mappe misurata simbolo per simbolo e terreno per terreno (R8 di RESA-ASSET, D23-D26, ADR-0086): ogni simbolo-oggetto posato su un banco di prova reso dal renderer vero, nei due temi e su due terreni, rasterizzato con Chrome; contrasto del contorno (WCAG 1.4.11), bordo, SSIM col vicino, ΔE dalla tavolozza; per i terreni ΔE dal vicino, griglia, segnalino. Confronta i candidati coi glifi, prepara la pagina di scelta del DM (oggetti fra glifo e più fonti di tessere, terreni fra le texture; alla cieca o aperta, con «nessuna va bene» e «non vedo differenze», senza opzioni identiche) e ne registra i voti rivelando le fonti, tara alone e velature del tema texture; --check boccia ogni misura peggiorata oltre il 5% rispetto a scripts/scheda-resa.json; affianca mostra una mappa com'era a una revisione git e com'è sul disco, con la quota di pixel cambiati.",
+      "use_case": "«Questa tessera, questa texture, questa modifica al renderer migliora davvero la mappa o la peggiora, e di quanto?»",
+      "invocation": "python3 scripts/misura_resa.py --check",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "glifi · candidati DIR · terreni · coppie DIR [--anche DIR2] · terreni-scelta DIR · voti voti.json · appresa B.json · tara · affianca MAPPA.svg -o out.png · velature MASTER.md -o out.png",
+            "enum": [
+              "glifi",
+              "candidati",
+              "terreni",
+              "coppie",
+              "voti",
+              "appresa",
+              "tara",
+              "affianca",
+              "velature",
+              "terreni-scelta"
+            ]
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Ricalcola e confronta con la scheda committata: esce 1 se una misura peggiora oltre il 5%."
+          },
+          "aggiorna": {
+            "type": "boolean",
+            "description": "Riscrive scripts/scheda-resa.json con le misure di oggi."
+          },
+          "o": {
+            "type": "string",
+            "description": "Dove scrivere il JSON, la pagina delle coppie o la taratura."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Il seme dell'ordine delle coppie."
+          },
+          "celle": {
+            "type": "string",
+            "description": "Scrive anche le celle in PNG, per misura_resa_appresa.py."
+          },
+          "rispetto-a": {
+            "type": "string",
+            "description": "affianca: la revisione git con cui confrontare la mappa."
+          },
+          "ritaglio": {
+            "type": "string",
+            "description": "affianca: solo il rettangolo X0,Y0,X1,Y1 in pixel dell'SVG."
+          },
+          "registra": {
+            "type": "boolean",
+            "description": "candidati: scrive i verdetti nella scheda, dove li legge build_oggetti_cc0 --check."
+          },
+          "anche": {
+            "type": "string",
+            "description": "coppie: un'altra fonte di tessere da confrontare (ComfyUI accanto a CC0)."
+          },
+          "aperta": {
+            "type": "boolean",
+            "description": "coppie, terreni-scelta: sotto ogni immagine la fonte e le misure, invece che alla cieca."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "scripts/scheda-resa.json",
+        "scripts/texture-cc0/taratura.json"
+      ],
+      "exit_codes": {
+        "0": "ok (anche: nessun browser, o scheda non ancora scritta, con --check)",
+        "1": "una misura peggiorata oltre la tolleranza",
+        "2": "numpy o scikit-image assenti, o uso errato"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_resa_appresa",
+      "description": "«Le metriche apprese della community sono d'accordo con me su quale cella è migliore?»\n\nIl secondo parere della misura della resa (D26): CLIP-IQA, LPIPS e DISTS di piq (Apache-2.0) sulle celle esportate da misura_resa.py --celle. Gira sulla macchina del DM con torch e i pesi che piq scarica; registra versioni e sha256 dei pesi; non blocca niente.",
+      "use_case": "«Le metriche apprese della community sono d'accordo con me su quale cella è migliore?»",
+      "invocation": "python3 scripts/misura_resa_appresa.py <celle> -o appresa.json",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "celle": {
+            "type": "string",
+            "description": "La cartella scritta da misura_resa.py --celle."
+          },
+          "o": {
+            "type": "string",
+            "description": "Il JSON delle misure."
+          }
+        },
+        "required": [
+          "celle",
+          "o"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<uscita>.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "cartella vuota o illeggibile",
+        "2": "torch o piq assenti"
       },
       "deterministic": true
     },
@@ -2327,9 +2521,9 @@
     },
     {
       "name": "ciclo_prosa",
-      "description": "«Cosa è cambiato rispetto all'originale, perché, e cosa resta da correggere dopo che ho approvato?»\n\nL12 (D15 e D16 del 2026-10-02, ADR-0077): dal segnalare al correggere, con una revisione a due giri come fra revisore e autore. `segnala` riusa i rilevatori registrati e aggiunge la regola «debole da solo» di Humanizer (tic minori diversi nello stesso paragrafo); `revisione` scrive il documento da approvare, con ogni modifica in CriticMarkup, numerata, motivata da una norma, e le due garanzie (nessun controllo peggiora, nessun fatto cambia); `applica` porta nell'originale solo le modifiche spuntate, mai su main, e alza la riga `revisione-testo: rN`. Il documento riporta anche la lettura prima e dopo (indice Gulpease e ritmo delle frasi); con `--auto` si applicano senza lettore le modifiche motivate che, da sole, non cambiano un fatto, non peggiorano un controllo e non peggiorano la lettura, e il documento le segna `[x] auto`. LanguageTool (LGPL) è un servizio facoltativo, mai in CI.",
+      "description": "«Cosa è cambiato rispetto all'originale, perché, e cosa resta da correggere dopo che ho approvato?»\n\nL12 (D15 e D16 del 2026-10-02, ADR-0077): dal segnalare al correggere, con una revisione a due giri come fra revisore e autore. `segnala` riusa i rilevatori registrati e aggiunge la regola «debole da solo» di Humanizer (tic minori diversi nello stesso paragrafo); `revisione` scrive il documento da approvare, con ogni modifica in CriticMarkup, numerata, motivata da una norma, e le due garanzie (nessun controllo peggiora, nessun fatto cambia); `applica` porta nell'originale solo le modifiche spuntate, mai su main, e alza la riga `revisione-testo: rN`. Il documento riporta anche la lettura prima e dopo (indice Gulpease e ritmo delle frasi); con `--auto` si applicano senza lettore le modifiche motivate che, da sole, non cambiano un fatto, non peggiorano un controllo e non peggiorano la lettura, e il documento le segna `[x] auto`. LanguageTool (LGPL) è un servizio facoltativo, mai in CI. Dal 2026-10-03 (estensione di ADR-0077) misura anche di quanto la prosa è migliorata: il documento di revisione porta il punteggio MQM e le segnalazioni norma per norma prima e dopo, con la garanzia che MQM non scenda; `lotto` prepara per ogni file il pacchetto da riscrivere e la classifica per MQM; `misura` dà il delta fra un giro di riscrittura e l'altro; `applica` scrive ogni revisione in `plans/scrittura/miglioramenti.json`, e `registro --check` è il cancello in CI. MQM richiede pyyaml: senza, il ciclo funziona e il punteggio manca.",
       "use_case": "«Cosa è cambiato rispetto all'originale, perché, e cosa resta da correggere dopo che ho approvato?»",
-      "invocation": "python3 scripts/ciclo_prosa.py {segnala FILE [--languagetool URL] | revisione ORIGINALE RISCRITTO [-o REVISIONE.md] | applica REVISIONE.md --data AAAA-MM-GG [--auto]}",
+      "invocation": "python3 scripts/ciclo_prosa.py {segnala FILE [--languagetool URL] | revisione ORIGINALE RISCRITTO [-o REVISIONE.md] | applica REVISIONE.md --data AAAA-MM-GG [--auto] | lotto FILE... -o CARTELLA | misura ORIGINALE RISCRITTO | registro [--check] | rigenera REVISIONE.md}",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -2360,6 +2554,26 @@
           "auto": {
             "type": "boolean",
             "description": "Applica anche le modifiche segnate «auto» e lo scrive nel documento di revisione."
+          },
+          "lotto_FILE...": {
+            "type": "string",
+            "description": "I pacchetti da riscrivere, uno per file, e la classifica dei file per punteggio MQM."
+          },
+          "misura_ORIGINALE_RISCRITTO": {
+            "type": "string",
+            "description": "Di quanto il riscritto migliora l'originale, norma per norma e in punti MQM; esce 1 se qualcosa peggiora."
+          },
+          "registro": {
+            "type": "string",
+            "description": "I miglioramenti applicati, uno per revisione, con il totale."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Con `registro`: il cancello, esce 1 se una revisione applicata ha peggiorato la misura."
+          },
+          "rigenera_REVISIONE.md": {
+            "type": "string",
+            "description": "Quando l'originale è cambiato dopo la revisione: le stesse modifiche riportate sul testo di oggi, e il documento riscritto con le spunte azzerate."
           }
         },
         "required": [],
@@ -2652,6 +2866,44 @@
       "deterministic": true
     },
     {
+      "name": "gate_locale",
+      "description": "«Prima di spingere: la CI tornerà verde?»\n\nI gate del job validate della CI eseguiti sulla macchina, letti da .github/workflows/ci.yml e non da una lista copiata: un gate nuovo in CI entra da solo. Salta, dicendolo, i passi che installano e quelli con espressioni di GitHub che qui non hanno valore; continue-on-error vale come avviso; --rapido salta i corridori dei test.",
+      "use_case": "«Prima di spingere: la CI tornerà verde?»",
+      "invocation": "python3 scripts/gate_locale.py --rapido",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "rapido": {
+            "type": "boolean",
+            "description": "Salta i corridori dei test (unittest, pytest)."
+          },
+          "elenco": {
+            "type": "boolean",
+            "description": "Elenca i passi e cosa ne farebbe, senza eseguire."
+          },
+          "solo": {
+            "type": "string",
+            "description": "Esegue solo i passi il cui nome o comando contiene il testo."
+          },
+          "base": {
+            "type": "string",
+            "description": "Il ramo per i gate che confrontano."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout"
+      ],
+      "exit_codes": {
+        "0": "tutti i gate bloccanti verdi",
+        "1": "almeno un gate rosso",
+        "2": "ci.yml illeggibile"
+      },
+      "deterministic": true
+    },
+    {
       "name": "gruppo_nuovo",
       "description": "«Un altro gruppo rigioca la campagna: come parto dal materiale che c'e' senza aprire un file YAML?»\n\nIl gruppo nuovo da un modulo a domande, senza YAML a mano (D19, lotto 4f-4): deriva lo stato dal prodotto di oggi, chiede gruppo, arco, PG e le righe con tracce del primo tavolo una alla volta (tieni/svuota/rivedi), valida prima di scrivere, crea il ramo campaign-group-<nome>, azzera la partita e committa.",
       "use_case": "«Un altro gruppo rigioca la campagna: come parto dal materiale che c'e' senza aprire un file YAML?»",
@@ -2846,6 +3098,31 @@
       "exit_codes": {
         "0": "stdin chiuso, uscita pulita (o --self-check senza guasti)",
         "1": "--self-check: almeno un tool non costruisce una riga valida"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "memoria",
+      "description": "«Sono in una sessione nuova: cosa aspetta il DM, da dove riparto, cosa è stato fatto, senza perdere niente di quello che le sessioni prima hanno deciso?»\n\nADR-0087: la memoria del lavoro in un posto solo. Genera MEMORIA.md nella radice leggendo le fonti che hanno già la loro casa: le decisioni aperte (decisioni_dm), la lista viva di STATO-E-ORDINE §0, le revisioni della prosa ancora da approvare, il CHANGELOG recente, il registro dei miglioramenti. Nessuna data e nessuna rete: lo stesso repo dà lo stesso file, e --check in CI lo boccia quando resta indietro.",
+      "use_case": "«Sono in una sessione nuova: cosa aspetta il DM, da dove riparto, cosa è stato fatto, senza perdere niente di quello che le sessioni prima hanno deciso?»",
+      "invocation": "python3 scripts/memoria.py [--check]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Il cancello: esce 1 se MEMORIA.md non è quella che il repo genera."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "MEMORIA.md"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "MEMORIA.md indietro rispetto al repo (con --check)"
       },
       "deterministic": true
     },

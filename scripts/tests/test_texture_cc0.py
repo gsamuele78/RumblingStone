@@ -180,3 +180,47 @@ class TestSenzaTexture(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestCerca(unittest.TestCase):
+    CATALOGO = {
+        "roof_slates_02": {"name": "Roof Slates 02", "tags": ["slate"], "categories": ["roofing"],
+                           "download_count": 900},
+        "red_slate_roof_tiles_01": {"name": "Red Slate Roof Tiles", "tags": ["red"],
+                                    "categories": ["roofing", "tiles"], "download_count": 3000},
+        "rock_face_03": {"name": "Rock Face 03", "tags": ["cliff"], "categories": ["rock"],
+                         "download_count": 5000},
+    }
+
+    def test_tutte_le_parole_e_poi_i_download(self):
+        import build_texture_cc0 as T
+        trovate = T.cerca(self.CATALOGO, ["roof", "slate"])
+        self.assertEqual([t[0] for t in trovate], ["red_slate_roof_tiles_01", "roof_slates_02"])
+
+    def test_le_categorie_contano(self):
+        import build_texture_cc0 as T
+        self.assertEqual([t[0] for t in T.cerca(self.CATALOGO, ["ROCK"])], ["rock_face_03"])
+
+
+class TestControLeScelte(unittest.TestCase):
+    """La scelta del DM sui terreni vincola TEXTURE: --check la fa valere."""
+
+    def _scheda(self, scelte):
+        p = Path(tempfile.mkdtemp()) / "scheda.json"
+        p.write_text(json.dumps({"preferenze_terreni": scelte}), encoding="utf-8")
+        return p
+
+    def test_la_texture_scelta_dev_essere_in_texture(self):
+        tex = (("⛰", "rock_face_03"), ("🔳", "plank_flooring"))
+        errori = B.contro_le_scelte(tex, self._scheda({"⛰": "texture:lichen_rock",
+                                                       "🔳": "texture:plank_flooring"}))
+        self.assertEqual(len(errori), 1)
+        self.assertIn("⛰: il DM ha scelto lichen_rock", errori[0])
+
+    def test_nessuna_va_bene_toglie_la_texture(self):
+        tex = (("⛰", "rock_face_03"),)
+        self.assertIn("cerca altre candidate", B.contro_le_scelte(tex, self._scheda({"⛰": "nessuna"}))[0])
+        self.assertEqual(B.contro_le_scelte((), self._scheda({"⛰": "nessuna", "🔳": "senza"})), [])
+
+    def test_non_vedo_differenze_non_obbliga(self):
+        self.assertEqual(B.contro_le_scelte((("⛰", "x"),), self._scheda({"⛰": "uguali"})), [])
