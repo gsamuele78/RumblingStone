@@ -144,7 +144,18 @@ modello locale senza strumenti vede solo l'estratto che gli si passa. Per S04
 (l'eco di Hella) non c'è una sezione da estrarre: il modello locale scrive senza
 il canone, e il controllo `ancore` non se ne accorge.
 
-## Decisione proposta
+## Alternative considerate
+
+| Opzione | A favore | Contro |
+|---|---|---|
+| **Una prova misurata sul banco di L11, sulla macchina del DM** (scelta) | riusa i dieci casi e i rilevatori registrati; le soglie si scrivono prima; il DM giudica alla cieca | dieci casi danno un indizio, non una prova; la Dell è lenta; il sandbox non può farla |
+| Sostituire subito il generatore con un modello locale | niente dati fuori casa, nessun costo per chiamata | 380-680 Elo sotto su EQ-Bench; senza strumenti il modello non legge `state.md`, e i critici MQM restano scoperti |
+| Adottare EQ-Bench Creative Writing così com'è | metodo pubblico, classifica aggiornata, misura anche «slop» e ripetizione | inglese, giudice della stessa famiglia del generatore attuale, prosa libera senza forma da tavolo |
+| Un editor a nodi (ComfyUI con nodi Ollama, Langflow MIT, Flowise Apache 2.0) | la catena si vede come un grafo, come per le immagini | un servizio in più, nessuna misura in più; ADR-0067 ha già il grafo (ponte, file, validatore) e il `cmp` fra due giri |
+| Fine-tuning (LoRA) subito | lo stile del repo entrerebbe nei pesi | nessun corpus di prosa approvata dal DM; si addestrerebbe sullo stile del generatore attuale |
+| Un giudice automatico al posto del DM (Prometheus 2, lo stesso modello) | ripetibile, senza la sera del DM | ADR-0036: la burstiness aveva detto il contrario del tavolo; un giudice entra solo dopo κ ≥ 0,60 col DM |
+
+## Decisione
 
 1. **Nessun modello locale sostituisce il generatore attuale.** Non c'è una
    misura che lo giustifichi, e quella esterna dice il contrario.
@@ -252,12 +263,3 @@ Una preferenza su dieci casi è un indizio.
 OSI e gira sulla Dell (32 GB di RAM, 4 GB di GPU); oppure il DM raccoglie 30 o più testi approvati al tavolo,
 e allora un LoRA ha i dati per essere provato; oppure il caso d'uso diventa
 «nessun dato fuori casa», che cambia il criterio da qualità a privacy.
-
-## Alternative scartate
-
-| Alternativa | Perché no |
-|---|---|
-| Adottare EQ-Bench così com'è | inglese, giudice di parte, prosa libera senza forma da tavolo |
-| Un editor a nodi (ComfyUI, Langflow) per la catena di testo | un servizio in più, nessuna misura in più; ADR-0067 ha già il grafo |
-| Fine-tuning subito | nessun corpus approvato; si addestrerebbe sullo stile del generatore attuale |
-| Un giudice automatico al posto del DM | ADR-0036: la burstiness aveva detto il contrario del tavolo; un giudice va prima tarato col κ |
