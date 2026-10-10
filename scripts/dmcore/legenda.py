@@ -101,6 +101,22 @@ def piatti() -> frozenset[str]:
 
 
 @lru_cache(maxsize=1)
+def senza_tessera_cc0() -> frozenset[str]:
+    """Restano glifi nel tema texture anche con una tessera da un modello 3D
+    CC0 (R4-ter di RESA-ASSET, D21). Le chiusure non serve elencarle: le
+    esclude il renderer, perché ruotano con il muro (ADR-0083)."""
+    return frozenset(s for s, v in _dati()["symbols"].items()
+                     if v["render"].get("tessera_cc0") is False)
+
+
+@lru_cache(maxsize=1)
+def sopra_la_tessera() -> dict[str, str]:
+    """Il glifo che resta sopra la tessera di un oggetto (D22: la fiamma sul braciere)."""
+    return {s: v["render"]["sopra_la_tessera"] for s, v in _dati()["symbols"].items()
+            if "sopra_la_tessera" in v["render"]}
+
+
+@lru_cache(maxsize=1)
 def texture() -> dict[str, str]:
     """Cartella di texture per famiglia di superficie.
 

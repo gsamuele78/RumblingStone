@@ -110,6 +110,10 @@ conversazione**. Riceve:
 4. il PNG della mappa (`export_map_png.py`), e la versione per i giocatori se
    c'è.
 
+Lavora **in sola lettura**: non corregge la mappa né il testo, li giudica. Il
+prompt nomina i quattro materiali con il percorso, e per il testo della scena
+le righe esatte; così il collaudatore non cerca da sé e non legge altro.
+
 ### La rubrica, in tre viste
 
 **Vista del DM**
@@ -128,10 +132,19 @@ conversazione**. Riceve:
 - Il nord è dichiarato, e le annotazioni dicono «parete nord» sapendo dov'è.
 - Ogni simbolo si capisce senza la legenda locale, e nessuno è fuori legenda.
 
+**Il canone**
+
+- Un elemento marcato `[PROPOSTA]` contraddice il canone del master o di
+  `state.md`?
+- C'è un'invenzione presentata come canone senza marca (una creatura, una
+  posizione, un tempo d'arrivo che il testo della scena non dice)?
+
 **Gli algoritmi**, per una mappa generata
 
 - Il seme è scritto, la bozza è passata dal collaudo a distanza zero, e ogni
   correzione proposta è stata applicata o rifiutata per scritto.
+- Per una mappa disegnata a mano questa vista giudica una cosa sola: se il
+  motivo di ogni deroga regge.
 
 ### I codici
 
@@ -151,10 +164,21 @@ conversazione**. Riceve:
 | # | Mappa | Cella | Codice | Cosa non va | Gravità | Prova |
 ```
 
+Al più 25 righe, dalla più grave, senza preambolo. La **prova** cita alla
+lettera, in breve, sia la griglia (la cella o la direttiva) sia il testo della
+scena: un rilievo senza le due citazioni non si può verificare.
+
 La gravità è quella delle letture a freddo: 🔴 il tavolo si ferma, 🟠 il DM
-deve inventare, 🟡 si gioca ma si capisce male. In coda, **cosa il collaudo
-non ha potuto verificare**: il divertimento, i tempi reali al tavolo, le scene
-sociali sulla mappa.
+deve inventare, 🟡 si gioca ma si capisce male. Poi una riga **«Verificato
+senza rilievi:»** con ciò che è stato controllato e regge, così un silenzio
+non si confonde con un controllo saltato. In coda, **cosa il collaudo non ha
+potuto verificare**: il divertimento, i tempi reali al tavolo, le scene sociali
+sulla mappa.
+
+> Questi dettagli (sola lettura, il canone, le due citazioni, le 25 righe, la
+> riga dei verificati) stavano nel prompt dell'unica esecuzione del ruolo, il
+> 2026-10-08 nella #226, e non qui. Quell'esecuzione fu interrotta quando la
+> bozza D28 fu ritirata: il ruolo **non ha ancora prodotto un rapporto vero**.
 
 ## Il giro completo
 

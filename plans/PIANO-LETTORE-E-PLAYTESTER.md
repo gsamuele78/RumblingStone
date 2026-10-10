@@ -108,7 +108,7 @@ Misurate su DEF-4 prima e dopo, controllando a mano ogni segnalazione (G2, G6):
 
 - [x] le due letture cieche sul DEF-4 del tavolo, e la tabella §2
 
-### F3 · DEF-4 prima della prossima sessione — 🟡 in corso
+### F3 · DEF-4 prima della prossima sessione — ✅
 
 La sessione si è fermata prima dell'infiltrazione. Si parte dalle Scene 6-9.
 
@@ -150,7 +150,7 @@ rubrica del playtester ha preso le domande del developer
 sente il rumore?») sono nate dai suoi difetti. Una calibrazione nuova si fa su
 un modulo che la rubrica non ha mai visto.
 
-### F3-bis · DEF-4 prima della prossima serata — 🟡 (2026-09-27)
+### F3-bis · DEF-4 prima della prossima serata — ✅ (2026-09-27)
 
 `[engine: Opus, sessione principale; letture a freddo in subagenti ciechi · effort: xhigh · qualità: ciclo del master passi 1-6 sulle Scene 6-13, misura prima e dopo]` — **K** dove tocca il canone, **C** per il resto
 
@@ -465,7 +465,7 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
 - [x] le misure dopo: `validate_modules`, `copertura_scene`, `componenti`,
       `domande_developer`, `validate_bestiario` verdi; box e congegni invariati
       (32 box, 22 su 23); marcature `[INFERRED]` da 51 a **2**
-- [ ] le due domande nuove: **Q4-bis** (l'incappucciato che dà i componenti a
+- [x] le due domande nuove *(applicate il 2026-10-07: l'incappucciato è Vatore)*: **Q4-bis** (l'incappucciato che dà i componenti a
       Zeth è un agente del Collezionista, oppure è **Vatore** stesso, che quella
       notte è nel campo?) e **Q29-bis** (dopo la scomparsa all'esecuzione, dove
       ricompaiono i PG: proposta, nel cortile quando il drago cala, feriti come
@@ -520,7 +520,7 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       della Catena), il drago arriva in circa 70 round, e se trova Zog'tar o le
       guardie in piedi entra nello scontro, EL 18-19, voluto dal DM, con l'avviso
       e l'uscita scritti
-- [x] il lotto mappe D28 (2026-10-08)
+- [x] il lotto mappe D28 (2026-10-08; è di F3-bis, vedi sopra)
 - [ ] **subito**: il giro 3 delle letture su DEF-4, un subagente alla volta
 - [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
       approvata (D1)

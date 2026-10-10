@@ -38,14 +38,18 @@
 <path d="M74 80v224M102 80v224M130 80v224M158 80v224M46 108h140M46 136h140M46 164h140M46 192h140M46 248h140M46 276h140M46 304h140" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v224M186 80v224M46 80h140M46 220h140" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v224M102 80v224M130 80v224M158 80v224M46 108h140M46 136h140M46 164h140M46 192h140M46 248h140M46 276h140M46 304h140" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v224M186 80v224M46 80h140M46 220h140" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
+<circle cx="116" cy="122" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="117.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_stairs_up" x="102" y="108" width="28" height="28"/>
+<circle cx="88" cy="206" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="89.4" cy="208.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="88.0" cy="206.0" r="10.36" fill="url(#g_2b9348)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="88.0" cy="206.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="144" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="145.4" cy="236.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="144.0" cy="234.0" r="10.36" fill="url(#g_2b9348)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="144.0" cy="234.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="116" cy="262" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="117.4" cy="264.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="116.0" cy="262.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="116.0" cy="262.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>

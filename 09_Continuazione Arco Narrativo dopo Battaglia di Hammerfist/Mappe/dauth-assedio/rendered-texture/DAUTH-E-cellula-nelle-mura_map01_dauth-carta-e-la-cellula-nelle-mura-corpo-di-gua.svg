@@ -40,26 +40,36 @@
 <path d="M74 80v224M102 80v224M130 80v224M158 80v224M214 80v224M242 80v224M270 80v224M46 108h224M46 136h224M46 164h224M46 192h224M46 248h224M46 276h224M46 304h224" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v224M186 80v224M46 80h224M46 220h224" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v224M102 80v224M130 80v224M158 80v224M214 80v224M242 80v224M270 80v224M46 108h224M46 136h224M46 164h224M46 192h224M46 248h224M46 276h224M46 304h224" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v224M186 80v224M46 80h224M46 220h224" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
+<circle cx="88" cy="122" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="89.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_bed" x="74" y="108" width="28" height="28"/>
+<circle cx="172" cy="122" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="173.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_stairs_up" x="158" y="108" width="28" height="28"/>
+<circle cx="228" cy="122" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="229.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_trapdoor" x="214" y="108" width="28" height="28"/>
+<circle cx="116" cy="150" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="117.0" cy="153.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_table" x="102" y="136" width="28" height="28"/>
+<circle cx="172" cy="178" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="173.0" cy="181.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_rack" x="158" y="164" width="28" height="28"/>
+<circle cx="116" cy="206" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="117.0" cy="209.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_door" x="102" y="192" width="28" height="28"/>
+<circle cx="60" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="61.0" cy="237.0" rx="4.5" ry="9" fill="#241c10" opacity="0.2"/>
 <use href="#pr_lockdoor" x="46" y="220" width="28" height="28" transform="rotate(90 60 234)"/>
+<circle cx="88" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="89.4" cy="236.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="88.0" cy="234.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="88.0" cy="234.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="116" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="117.4" cy="236.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="116.0" cy="234.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="116.0" cy="234.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="144" cy="234" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="145.4" cy="236.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="144.0" cy="234.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="144.0" cy="234.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>

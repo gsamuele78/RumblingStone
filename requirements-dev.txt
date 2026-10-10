@@ -62,3 +62,9 @@ scipy>=1.14
 # caratteri: il renderer legge il risultato committato e resta stdlib. MIT.
 # Pavimento 4.60.2: pip-audit sulle minime trova CVE-2025-66034 nella 4.60.0.
 fonttools[woff]>=4.60.2
+
+# D23-D24 di RESA-ASSET (DM, 2026-10-09: «misura + preferenza»). La misura della
+# resa delle mappe (`scripts/misura_resa.py`): SSIM, ΔE CIEDE2000, Sobel e la
+# conversione in Lab, sulle celle rasterizzate. BSD-3-Clause. Il cancello in CI
+# confronta la scheda committata; il renderer resta stdlib.
+scikit-image>=0.24

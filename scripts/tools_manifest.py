@@ -271,6 +271,11 @@ def mcp_eseguibile(t: dict, root: Path | None = None) -> bool:
     """
     if t["category"] in MCP_ESCLUSE or t["language"] not in MCP_LINGUAGGI:
         return False
+    # `system`: installa o toglie pacchetti con sudo (ambiente.py). Non esce
+    # come tool MCP nemmeno con --allow-write: la macchina non si cambia da un
+    # client, la cambia chi digita la password.
+    if t.get("side_effects", {}).get("system"):
+        return False
     return ((root or REPO) / t["path"]).is_file()
 
 
