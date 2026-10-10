@@ -45,6 +45,24 @@ nel piano e nelle note di provenienza, e nient'altro.
 
 ## 3. Lotti
 
+> 🔎 **Il CHANGELOG numera da solo, e qui non si rinumera** *(verificato il
+> 2026-10-10 su tutta la storia, 248 rami e le PR #105-#108, #115 e #215:
+> nessuna sezione è mai stata tolta)*. Tre righe del CHANGELOG portano numeri
+> che in questo piano non hanno una sezione:
+> - **«Lotto 7»** (`0d2e050c`, PR #105, 2026-08-15: lo spoiler chiuso, il kit
+>   anti-improvvisazione, i prompt, la mappa giocatore) sono i lavori [1a], [3]
+>   e [6] della lista del Lotto 6, dove compaiono come rimandi *(Lotto 7)*.
+> - **I due «Lotto 8»** sono nati su due rami paralleli dallo stesso commit: le
+>   venti immagini (`d4183120`, PR #108, ramo `xbyvzt`) e le sei schede vere
+>   (`85800574`, PR #107), che sono il Lotto 8 qui sotto. La collisione è
+>   raccontata in «Divergenza con xbyvzt».
+> - **«Lotto 9 — il dossier delle piste»** (`99cd8757`, PR #115, 2026-08-31,
+>   `10-DOSSIER-DELLE-PISTE.md`) non è mai entrato qui; il Lotto 9 di questo piano
+>   è «La tavola di fuori» (PR #215). Il dossier è chiuso: ✅ 2026-08-31.
+>
+> Il CHANGELOG è un registro storico e resta com'è. Il prossimo lotto nuovo
+> prende il **10**.
+
 ### Lotto 1 — Impianto giocabile ✅ *(chiuso 2026-08-14)*
 
 - [x] `STANDALONE-Il-Drappo-di-Tarsilia/00-HUB-E-QUICKSTART-DM.md`: hub, quickstart,
