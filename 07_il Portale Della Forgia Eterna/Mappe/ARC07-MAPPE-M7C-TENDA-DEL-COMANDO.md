@@ -41,6 +41,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 @mark 7 ; L5 ; Guardia hobgoblin (Guerriero 8)
 @mark 8 ; N5 ; Guardia hobgoblin (Guerriero 8)
 @path Il corridore hobgoblin (complicazione 6 della Scena 6) ; Z7 U3 N3 ; #d62828
+@tipo tattica esterno
 ```
 
 ### 🌍 AMBIENTE (cosa impone il terreno — regole, non prosa)
@@ -75,7 +76,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
-| B | [trigger] | La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani; la geometria si cambia qui e si ricompila. | [effetto] |
+| B | [trigger] | La tenda e' 18 m x 16,5 m, di pelle nera e ossa di nani, alta 6 m al palo centrale e 3 m ai lati; la geometria si cambia qui e si ricompila. | [effetto] |
 | B | [trigger] | I PG arrivano da nord, dalla fortezza. La soglia e' illuminata, il fondo no: Balvar siede dove i bracieri non arrivano (Scena 7). | [effetto] |
 | B | [trigger] | Runa 3: su Balvar (silenzio a comando). Runa 4: vuota, la incide durante lo scontro. | [effetto] |
 

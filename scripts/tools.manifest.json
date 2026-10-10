@@ -461,6 +461,142 @@
       ]
     },
     {
+      "id": "build_font_mappe",
+      "path": "scripts/build_font_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/build_font_mappe.py",
+      "summary": "Ricava dai font OFL dei volumi (scripts/fonts/) i due sottoinsiemi woff2 a peso fisso che il renderer incorpora in ogni mappa: EB Garamond regolare per il testo, Cinzel grassetto per titoli ed etichette (ADR-0085). Scrive anche copertura.json, con i caratteri e le loro larghezze, che il renderer usa per stringere i titoli che non entrano. fonttools serve solo qui; il renderer resta in libreria standard.",
+      "use_case": "«Le mappe hanno la faccia dei volumi su ogni macchina? Ho aggiunto un carattere che il sottoinsieme non ha.»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [
+        "fonttools"
+      ],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive: esce 1 se manca un woff2 o non combacia con copertura.json."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/fonts/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/fonts/mappe/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "sottoinsiemi mancanti o diversi (--check)",
+        "2": "fonttools mancante"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "timestamp dei font fissati: due giri danno gli stessi byte"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": ""
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/build_font_mappe.py --check",
+      "tests": [
+        "scripts/tests/test_resa_mappe.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0085-la-resa-delle-mappe-e-uguale-su-ogni-macchina.md",
+        "scripts/fonts/README.md"
+      ]
+    },
+    {
+      "id": "build_emoji_noto",
+      "path": "scripts/build_emoji_noto.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/build_emoji_noto.py",
+      "summary": "Il ripiego per le emoji locali delle mappe (ADR-0085): per ogni emoji che una griglia usa e la legenda universale non conosce, scarica l'SVG di Noto Emoji (Apache-2.0, commit fissato), rinomina gli id interni e lo scrive in scripts/emoji-noto/, con licenza e crediti accanto. Il renderer lo incorpora al posto del font di sistema. --check non usa la rete.",
+      "use_case": "«Una mappa dichiara un simbolo suo: si vede uguale su ogni macchina?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: esce 1 se un'emoji locale del corpus non ha il suo SVG."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/emoji-noto/",
+          "kind": "directory",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "emoji locale senza SVG (--check)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "commit di Noto fissato"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "solo senza --check: raw.githubusercontent.com"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/build_emoji_noto.py --check",
+      "tests": [
+        "scripts/tests/test_resa_mappe.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0085-la-resa-delle-mappe-e-uguale-su-ogni-macchina.md",
+        "scripts/emoji-noto/CREDITS.md"
+      ]
+    },
+    {
       "id": "build_legend",
       "path": "scripts/build_legend.py",
       "category": "B-maps-pipeline",
@@ -529,6 +665,112 @@
       ],
       "docs": [
         "plans/adr/ADR-0048-legenda-funzionale-fonte-unica.md"
+      ]
+    },
+    {
+      "id": "collaudo_mappe",
+      "path": "scripts/collaudo_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/collaudo_mappe.py",
+      "summary": "Collauda le griglie-emoji come grafo (ADR-0082): simboli ignoti, legende locali che rovesciano un universale, nord, porte nel muro, scale con la loro gemella, porte segrete fuori dalla vista dei giocatori, unita' e obiettivi raggiungibili con le regole di movimento SRD, ingombro dei Grandi, M1, M2 e M4 come avvisi; l'asse di ogni porta, grata o fila di sbarre (ADR-0083) e le direttive @verso. In sola lettura.",
+      "use_case": "«Questa mappa si gioca? La porta sta nel muro, la scala porta da qualche parte, l'ogre arriva ai PG?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod",
+        "scipy"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "files",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Master markdown da collaudare (default: il corpus della campagna)."
+        },
+        {
+          "name": "--json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive il rapporto in JSON (scripts/schemas/map_findings.schema.json)."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se resta un rilievo E non derogato."
+        },
+        {
+          "name": "--solo-errori",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nel testo mostra solo i rilievi E."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/map_findings.schema.json"
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con rilievi",
+        "1": "rilievi E non derogati con --strict",
+        "2": "errore d'uso (file non trovato)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso input, stesso rapporto: nessun campionamento, ordine delle celle fisso."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": "scripts/schemas/map_findings.schema.json",
+      "ci_smoke": "python scripts/collaudo_mappe.py --help",
+      "tests": [
+        "scripts/tests/test_collaudo_mappe.py",
+        "scripts/tests/test_chiusure.py",
+        "scripts/tests/test_collaudo_m4.py"
+      ],
+      "docs": [
+        "scripts/README-automation.md",
+        "skills/rumblingstone-mapmaking/SKILL.md",
+        "plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md"
       ]
     },
     {
@@ -757,7 +999,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/check_plans_discipline.py",
-      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1.",
+      "summary": "Gate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. Passa se i commit strutturali sono tutti di Dependabot (PI-3b).",
       "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -2192,7 +2434,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/export_uvtt.py --help",
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_chiusure.py"
+      ],
       "docs": [
         "scripts/README-automation.md"
       ]
@@ -4036,7 +4280,7 @@
         {
           "name": "files",
           "type": "path",
-          "required": true,
+          "required": false,
           "default": null,
           "choices": null,
           "repeatable": true,
@@ -4077,6 +4321,27 @@
           "choices": null,
           "repeatable": false,
           "desc": "Fallisce su anomalie non fatali."
+        },
+        {
+          "name": "--tema",
+          "type": "choice",
+          "required": false,
+          "default": "pergamena",
+          "choices": [
+            "pergamena",
+            "texture"
+          ],
+          "repeatable": false,
+          "desc": "pergamena (default, in rendered/) o texture: terreni con le texture CC0 di scripts/texture-cc0/, in rendered-texture/"
+        },
+        {
+          "name": "--tutti-i-master",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ogni master che ha già un SVG in rendered/: per rifare un tema intero."
         }
       ],
       "inputs": [
@@ -4090,6 +4355,13 @@
       "outputs": [
         {
           "path": "**/rendered/*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        },
+        {
+          "path": "**/rendered-texture/*.svg",
           "kind": "svg",
           "overwrites": true,
           "generated_header": true,
@@ -4114,7 +4386,10 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/render_map_svg.py --help",
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_chiusure.py",
+        "scripts/tests/test_resa_mappe.py"
+      ],
       "docs": [
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/SKILL.md"
@@ -5892,6 +6167,12 @@
           "path": "**/rendered/*.svg",
           "kind": "svg",
           "required": true,
+          "schema": null
+        },
+        {
+          "path": "**/rendered-texture/*.svg",
+          "kind": "svg",
+          "required": false,
           "schema": null
         }
       ],
@@ -8377,6 +8658,261 @@
       ],
       "docs": [
         "plans/adr/ADR-0077-revisione-a-due-giri.md"
+      ]
+    },
+    {
+      "id": "asset_2mtt",
+      "path": "scripts/asset_2mtt.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/asset_2mtt.py",
+      "summary": "Installa i pacchetti di 2-Minute Tabletop che il DM ha scaricato, per il tema dipinto delle mappe (R4): estrae solo immagini e licenze in asset-esterni/ (ignorata da git), rifiuta percorsi pericolosi e link, registra categoria e impronte. `controlla` boccia la tabella simbolo → file che usa un pacchetto premium o un file assente.",
+      "use_case": "«Ho scaricato il pacchetto dei dungeon: come lo metto a disposizione delle mappe senza committarlo e senza uscire dalla licenza?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "installa",
+            "stato",
+            "controlla"
+          ],
+          "repeatable": false,
+          "desc": "installa <zip> --categoria base|premium [--nome] · stato · controlla"
+        },
+        {
+          "name": "--categoria",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "base",
+            "premium"
+          ],
+          "repeatable": false,
+          "desc": "base = offerta libera, CC BY-NC · premium = a pagamento, solo al tavolo"
+        },
+        {
+          "name": "--nome",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del pacchetto (default: dal nome dello zip)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "*.zip (immagini del pacchetto)",
+          "kind": "image",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/asset-2mtt.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "asset-esterni/2mtt/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "zip rifiutato o tabella che viola licenza o pacchetti",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "scrive solo in asset-esterni/, ignorata da git"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/asset_2mtt.py controlla",
+      "tests": [
+        "scripts/tests/test_asset_2mtt.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "watabou_citta",
+      "path": "scripts/watabou_citta.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/watabou_citta.py",
+      "summary": "Da una scheda *.watabou.json committata (seme e parametri) ricava sempre lo stesso URL del Medieval Fantasy City Generator di Watabou, con export=svg|png|json se richiesto: la pianta di una città si rifà identica e il repo sa da dove viene (R5).",
+      "use_case": "«Mi serve la pianta di Dauth assediata: come la rigenero uguale fra un mese?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "scheda",
+          "type": "path",
+          "required": true,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La scheda *.watabou.json."
+        },
+        {
+          "name": "--export",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "svg",
+            "png",
+            "json"
+          ],
+          "repeatable": false,
+          "desc": "Aggiunge export=…: il generatore esporta appena ha finito."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "*.watabou.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "scheda non valida"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "l'URL dipende solo dalla scheda"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/watabou_citta.py \"09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Mappe/dauth-assedio/dauth-pianta.watabou.json\"",
+      "tests": [
+        "scripts/tests/test_watabou_citta.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "build_texture_cc0",
+      "path": "scripts/build_texture_cc0.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/build_texture_cc0.py",
+      "summary": "Le texture CC0 dei terreni per il tema texture delle mappe (D13-D15 di RESA-ASSET): scarica da Poly Haven la diffusa 1k di 11 texture fissate, ne controlla l'MD5 contro l'API, la riduce a una tessera webp da 256 px e scrive scripts/texture-cc0/ con l'indice. --check non usa la rete.",
+      "use_case": "«Come do alle mappe i materiali veri, pietra, terra, roccia, senza problemi di licenza se un giorno pubblico?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "Pillow"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Niente rete: le tessere combaciano con l'indice; esce 0 se le texture non sono ancora scaricate."
+        },
+        {
+          "name": "--da-cartella",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Costruisce dai <id>_diff_1k.jpg già scaricati in questa cartella."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "https://api.polyhaven.com/files/<id>",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "scripts/texture-cc0/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok (anche: texture non ancora scaricate, con --check)",
+        "1": "MD5 o impronta che non combacia, tessera mancante",
+        "2": "Pillow assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "id e risoluzione fissati; la tessera dipende dalla versione di Pillow, l'indice ne registra l'impronta"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "solo senza --check e senza --da-cartella: api.polyhaven.com, dl.polyhaven.org"
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/build_texture_cc0.py --check",
+      "tests": [
+        "scripts/tests/test_texture_cc0.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/PIANO-RESA-E-ASSET-DELLE-MAPPE.md"
       ]
     }
   ]

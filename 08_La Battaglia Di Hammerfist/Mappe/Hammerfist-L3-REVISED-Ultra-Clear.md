@@ -96,6 +96,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone AL16-AN25 ; BRECCIA EST nel muro (macerie, terreno difficile)
 @zone A16-C25 ; BRECCIA OVEST nel muro (macerie)
 @zone R34-W36 ; Incendi presso la breccia sud
+@tipo tattica esterno
 ```
 
 ### 📍 POSIZIONI PRECISE:
@@ -210,6 +211,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @mark 7 ; Q26 ; Inseguitori (prima ondata) (Orchi/Hobgoblin GS 1/2-1)
 @path Colonna nanica → uscita nord (verso 3Z) ; Q8 Q3 Q1 ; #2c8c3c
 @path Spinta inseguitori → ponte ; K26 Q20 Q13 ; #d62828
+@tipo tattica caverna
 ```
 
 ### 📍 POSIZIONI PRECISE:
@@ -315,6 +317,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Round 2: bugbear EST → Re Thorek ; Z18 U18 R18 ; #d62828
 @path Round 2: bugbear OVEST → comandanti ; I18 M18 O18 ; #d62828
 @path Round 4 (eventuale): 30 orchi inseguitori dal SUD ; P32 P27 P25 ; #8c2fb8
+@tipo tattica caverna
 ```
 
 ### 📍 POSIZIONI PRECISE:
@@ -441,6 +444,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Ondata 3: bugbear in aggiramento ovest ; AF5 Y11 Y18 ; #8c2fb8
 @path Ondata 3: bugbear in aggiramento est ; AJ5 AQ11 AQ18 ; #8c2fb8
 @zone AF26-AJ30 ; Altare di Moradin: piattaforma circolare 6 m, +3 m, pietra nera con rune d'oro
+@tipo tattica interni
 ```
 
 ### 📍 POSIZIONI PRECISE:
@@ -607,6 +611,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Rotta degli orchi verso sud ; AD47 AD65 ; #d62828
 @zone E1-BD2 ; Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)
 @zone AB30-AG32 ; Zona di atterraggio forzato di Fauci (round 18-20)
+@tipo tattica esterno
 ```
 
 ### 🦅 VISTA ALTITUDINI (battaglia aerea simultanea, 0-60 m):

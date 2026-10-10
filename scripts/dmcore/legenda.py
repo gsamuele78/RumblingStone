@@ -178,3 +178,12 @@ def luci() -> dict[str, tuple[float, str]]:
             fuori[sim] = (round(luce["raggio_m"] / METRI_PER_QUADRETTO, 6),
                           luce["colore"])
     return fuori
+
+
+# Le categorie delle mappe (V2 di PIANO-COLLAUDO-E-GENERAZIONE-MAPPE, D18 del DM
+# il 2026-10-08). Il tipo decide quali controlli riceve una mappa (ADR-0082 §4);
+# l'ambiente dice quale corredo di simboli le serve e in quale capitolo
+# dell'atlante sta. Un elenco solo: lo leggono `collaudo_mappe.py` (la direttiva
+# `@tipo`) e `compile_map_json.py` (i campi `tipo` e `ambiente` del contratto).
+TIPI_MAPPA = ("tattica", "strategica", "schema")
+AMBIENTI_MAPPA = ("interni", "caverna", "esterno", "abitato")

@@ -28,7 +28,7 @@ dichiarava otto binari mentre qui ce n'erano due.
 Ora la dichiarazione sta qui e basta: `PYTHON_MINIMO`, `TUTTI` (i binari
 accettati con un ADR, quelli che uno script pretende con `esigi()`),
 `OPZIONALI` (gli altri, che nessuno pretende e la cui assenza toglie una
-funzione senza rompere niente), `LIBRERIE` (le due dipendenze Python, ADR-0037)
+funzione senza rompere niente), `LIBRERIE` (le dipendenze Python, ADR-0037 e ADR-0084)
 e `CATENE`, che dice quale catena di lavoro ha bisogno di cosa. `dm.py doctor`
 e la guida di setup leggono da qui.
 
@@ -188,7 +188,7 @@ OPZIONALI = (
 
 
 class Libreria(NamedTuple):
-    """Una dipendenza Python. Ce ne sono due, e ADR-0037 dice perche' solo due."""
+    """Una dipendenza Python. ADR-0037 dice perche' sono poche, ADR-0084 perche' tcod."""
 
     nome: str
     modulo: str
@@ -200,7 +200,7 @@ class Libreria(NamedTuple):
     ripiego: str
 
 
-#: Le uniche due librerie non-stdlib del repo (ADR-0037). `pyyaml` e' un debito
+#: Le librerie non-stdlib degli strumenti (ADR-0037, ADR-0084). `pyyaml` e' un debito
 #: dichiarato: sta nel percorso critico della CI, che infatti la installa.
 #: `Pillow` no, ed e' il modello di come dovrebbe stare una dipendenza Python.
 LIBRERIE = (
@@ -214,12 +214,41 @@ LIBRERIE = (
     ),
     Libreria(
         nome="Pillow", modulo="PIL",
-        a_cosa_serve="ricomprimere le immagini grandi e generare i derivati",
+        a_cosa_serve="ricomprimere le immagini grandi, generare i derivati e le "
+                     "tessere delle texture CC0 delle mappe",
         installa="  pip install pillow",
         obbligatoria=False,
         ripiego="`build_booklet_html.py` incorpora l'immagine com'e' (file piu' "
-                "pesante, resa identica); `build_image_derivatives.py` esce "
-                "dicendo come installarla.",
+                "pesante, resa identica); `build_image_derivatives.py` e "
+                "`build_texture_cc0.py` escono dicendo come installarla. Il "
+                "renderer delle mappe legge le tessere già fatte senza Pillow.",
+    ),
+    # ADR-0084 (DM, 2026-10-08): il collaudo delle mappe e' uno strumento di
+    # sviluppo e di CI, non della sera. M4 esatta su tutto il corpus: 75 s in
+    # libreria standard, 0,7 s con tcod, stesso risultato.
+    Libreria(
+        nome="tcod", modulo="tcod",
+        a_cosa_serve="la linea di vista del collaudo delle mappe (M4 esatta, "
+                     "shadowcasting simmetrico); porta con se' numpy",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=True,
+        ripiego="nessuno: `collaudo_mappe.py` esce con 2 e dice come installarla. "
+                "Le mappe si disegnano, si renderizzano e si esportano senza.",
+    ),
+    Libreria(
+        nome="scipy", modulo="scipy",
+        a_cosa_serve="M1 e M2 del collaudo delle mappe (`scipy.ndimage`)",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=True,
+        ripiego="nessuno: `collaudo_mappe.py` esce con 2, come senza tcod.",
+    ),
+    Libreria(
+        nome="fonttools", modulo="fontTools",
+        a_cosa_serve="ricavare i sottoinsiemi dei font OFL che le mappe incorporano",
+        installa="  pip install -r requirements-dev.txt",
+        obbligatoria=False,
+        ripiego="il renderer usa i sottoinsiemi gia' committati; senza fonttools "
+                "non si possono solo rigenerare (`build_font_mappe.py` esce con 2).",
     ),
 )
 
@@ -233,6 +262,7 @@ CATENE = {
     "libretto imposto": ("typst", "pdfcpu"),
     "mappe SVG": (),
     "mappe PNG": ("chromium",),
+    "collaudo mappe": ("tcod", "scipy"),
     "recap in PDF": ("pandoc", "xelatex"),
     "skill per gli agenti": ("pyyaml",),
 }

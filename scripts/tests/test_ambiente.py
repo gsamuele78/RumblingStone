@@ -99,10 +99,12 @@ class TestRegistroCompleto(unittest.TestCase):
         nomi = [v.nome for v in (*binari.TUTTI, *binari.OPZIONALI, *binari.LIBRERIE)]
         self.assertEqual(len(nomi), len(set(nomi)), f"nome duplicato nel registro: {nomi}")
 
-    def test_solo_pyyaml_e_obbligatoria(self):
-        """ADR-0037: `Pillow` degrada, `pyyaml` no. Se cambia, l'ADR va riletta."""
+    def test_solo_pyyaml_tcod_e_scipy_sono_obbligatorie(self):
+        """ADR-0037: `Pillow` degrada, `pyyaml` no. ADR-0084: `tcod` nemmeno, ma
+        solo per il collaudo delle mappe, e con lei scipy. Se cambia, gli ADR
+        vanno riletti."""
         obbligatorie = {lib.nome for lib in binari.LIBRERIE if lib.obbligatoria}
-        self.assertEqual(obbligatorie, {"pyyaml"})
+        self.assertEqual(obbligatorie, {"pyyaml", "tcod", "scipy"})
 
 
 class TestCatene(unittest.TestCase):

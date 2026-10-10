@@ -141,6 +141,7 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righe = 80m × 60m
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+@tipo tattica esterno
 ```
 
 ### Riepilogo Forze Campo 1
@@ -303,6 +304,7 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 65 colonne × 53 righ
 @zone N15-BA30 ; Area tende (25 tende, ~40 drow)
 @zone W25-AG28 ; Recinto ogre
 @zone N32-AN33 ; Tenda comando, tesoro, prigioni
+@tipo tattica esterno
 ```
 
 ### Forze Campo 2

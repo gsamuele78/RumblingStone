@@ -34,7 +34,7 @@ CAMPI_RENDER = ("mode", "pat", "prop", "fill", "heavy",
 CAMPI_FUNZIONE = ("blocks_movement", "blocks_sight", "blocks_line_of_effect",
                   "deroga_uvtt", "door", "cover", "obscurement", "move_cost",
                   "climb", "swim", "prone_concealment", "destructible",
-                  "nameable", "hazard", "light")
+                  "nameable", "hazard", "light", "posa", "verso", "solo_master")
 
 
 def _carica_yaml() -> dict:
