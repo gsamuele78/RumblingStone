@@ -33,10 +33,13 @@ else
 fi
 
 echo "==> 2/3 installo Ollama nel box (script ufficiale di ollama.com)"
+echo "    Il primo ingresso nel box lo inizializza: \"host's nvidia integration\""
+echo "    può restare fermo diversi minuti. Per vederlo lavorare, da un altro"
+echo "    terminale: podman logs -f $BOX"
 distrobox enter "$BOX" -- bash -lc '
   set -e
   sudo apt-get update -qq
-  sudo apt-get install -y -qq curl ca-certificates zstd pciutils
+  sudo apt-get install -y curl ca-certificates zstd pciutils
   if ! command -v ollama >/dev/null; then
     curl -fsSL https://ollama.com/install.sh | sh
   fi
