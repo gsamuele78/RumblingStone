@@ -42,6 +42,17 @@ updates:
       time: "06:00"
       timezone: "Europe/Rome"
     open-pull-requests-limit: 3
+    # ⚠️ Il pavimento di Python è 3.11 (GUIDA-SETUP-MACCHINA, e la CI gira
+    # su 3.11). numpy 2.5 e scipy 1.18 chiedono Python >= 3.12: con il loro
+    # pavimento nel gruppo settimanale, `pip install` non trova niente e la
+    # PR è rossa per tutti i pacchetti (PR #228, 2026-10-09). Finché il
+    # pavimento resta 3.11 Dependabot non propone quei salti; gli avvisi di
+    # sicurezza arrivano comunque. Si toglie quando si passa a 3.12.
+    ignore:
+      - dependency-name: "numpy"
+        versions: [">=2.5"]
+      - dependency-name: "scipy"
+        versions: [">=1.18"]
     groups:
       pip-sicurezza:
         applies-to: security-updates
