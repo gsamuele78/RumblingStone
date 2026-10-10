@@ -520,7 +520,7 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       della Catena), il drago arriva in circa 70 round, e se trova Zog'tar o le
       guardie in piedi entra nello scontro, EL 18-19, voluto dal DM, con l'avviso
       e l'uscita scritti
-- [x] il lotto mappe D28 (2026-10-08)
+- [x] il lotto mappe D28 (2026-10-08; è di F3-bis, vedi sopra)
 - [ ] **subito**: il giro 3 delle letture su DEF-4, un subagente alla volta
 - [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
       approvata (D1)
