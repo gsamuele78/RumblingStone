@@ -328,10 +328,10 @@ appena esce, ed è già una risposta a «la mia macchina è come la CI?».
 - [ ] A2 · Python 3.13 e le tre piattaforme in CI
 - [ ] A3 · lock con hash e regola degli aggiornamenti
 - [ ] A4 · hook ridisegnati (D11)
-- [ ] A5a · `ambiente piano/verifica/stato`
+- [~] A5a · `ambiente piano/verifica/stato` (2026-10-09: `piano` e `stato` in `ambiente.py`; manca `verifica` con versioni e checksum, che aspetta A1)
 - [ ] A5b · `ambiente setup` a livello utente, distrobox su Bazzite
 - [~] A5c · pacchetti di sistema col registro (2026-10-09: `ambiente.py`, provato con un sistema finto; manca la prova in container di A6)
-- [ ] A5d · `aggiorna` e `rimuovi`
+- [~] A5d · `aggiorna` e `rimuovi` (2026-10-09: `rimuovi [--venv]` col registro, provato con un sistema finto e mai su una macchina vera; manca `aggiorna`)
 - [ ] A6 · la CI prova il contratto, shellcheck bloccante
 - [ ] A7 · guida e matrici generate
 - [ ] A8 · rapporto finale, Bazzite a mano
