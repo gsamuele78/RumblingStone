@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 18 decisioni aperte
+## Aspetta il DM: 17 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -34,7 +34,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
 | `RECUPERO` | D6 | L3 | **RICONCILIAZIONE-PR-APERTE si chiude come superato?** R3, R6, R7, R8 sono decisi o fatti altrove (§2.3). *Proposta*: sì, ✅ con il rimando a dove sta ognuno |
-| `RECUPERO` | D7 | L7 | **Quali pratiche dei due repo di riferimento si adottano qui?** Il confronto è in §7: tre mancano davvero (il modello di PR, le alternative e la condizione di revisione nel modello di ADR, il numero dell'ADR prenotato p… |
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
 
@@ -118,6 +117,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-10 | RECUPERO · REGISTRO-NORME | L7: le tre pratiche di Infra-Iam-PKI e AiAgentInfrastructure (D7, il DM: *«adot… | ✅ `plans/adr-prenotati.json` (lo `0088` alla #99) e `validate_docs`: `--prossimo-adr` salta i prenotati, `--sorgenti` rosso su un prenotato usato da altri o ar… |
 | 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · AGE… | il riallineamento dopo il merge di #229, #230 e #232 (richiesta del DM: ricontr… | 🟡 La #216 portata sul `main` nuovo: sette conflitti risolti tenendo le righe di `main` e aggiungendo le sue, `docs/tools/` rigenerato, §4 e `MEMORIA.md` rigene… |
 | 2026-10-10 | STATO-E-ORDINE | la memoria in un posto solo (ADR-0087) | ✅ Richiesta del DM: tutta la memoria in un posto, senza perdere parti o decisioni; il DM sceglie «nel repo, generata». `MEMORIA.md` in radice, generato da… |
 | 2026-10-10 | STATO-E-ORDINE · RECUPERO | il controllo prima del merge della #230 (richiesta del DM: le decisioni di ques… | ✅ `main` è fermo alla base (`f40ffeb`). Confronto delle tabelle `decisioni-dm` fra `main` e la #230: 0 decisioni perse o riaperte; aggiunte RESA D19-D30 e RECU… |
@@ -129,11 +129,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · AMBIENT… | allineamento dei piani a ciò che è stato fatto e deciso il 2026-10-09 (richiest… | 🟡 Le righe dell'INDEX dei quattro piani toccati dalla #230 dicevano ancora 0% o 5% (RICERCA-MESTIERE, AMBIENTE) o D1-D22 (RESA): ora portano D1-D30, R8 e R4-qu… |
 | 2026-10-09 | RESA-E-ASSET-DELLE-MAPPE · COLLAUDO-MAP… | D28-D30: la pagina di scelta, M7-C corretta, le griglie di PF-4 e del Campo Dro… | 🟡 Il DM: la pagina alla cieca non diceva cosa mostrava, aveva coppie identiche e non permetteva «nessuna». Causa delle coppie identiche: simboli che la legenda… |
 | 2026-10-09 | RESA-E-ASSET-DELLE-MAPPE | le fasi 1-3 sulla macchina del DM, e i difetti che hanno trovato | 🟡 ComfyUI installato, GPU vista, SDXL verificato (sha256 nel registro di `comfyui_batch`). `tara --candidati` propone ⛰ → `lichen_rock` e 🔳 → `plank_flooring`;… |
-| 2026-10-09 | AMBIENTE-RIPRODUCIBILE · RESA-E-ASSET-D… | la prima prova vera di `ambiente.py` sulla Debian 13 del DM | 🟡 `adotta` mette nel registro 103 pacchetti installati a mano quel giorno; `installa --con blender,comfyui` installa Blender (16 pacchetti) e lascia stare quel… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 18 aperte, 211 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 212 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

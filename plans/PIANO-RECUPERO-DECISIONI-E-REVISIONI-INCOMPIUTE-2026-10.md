@@ -235,14 +235,14 @@ chiude quando L1-L6 sono fatti, e non accumula lavoro suo.
 | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VENDIBILITA autorizzato», e lascia §4 |
 | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-FEDELTA (`--strict` default); (b) in attesa con condizione: TRAVASO A6 (quando ARC-07 finisce al tavolo), INTEGRAZIONE (quando c'è Foundry al tavolo), RICERCA-MODULO-PUBBLICABILE B3, C3, D5, RICERCA-TOOL-ESTERNI R1, RICERCA-TOOL-LGM P1-P3, GENERATORE J e K; (c) restano lotti: nessuno |
 | D6 | L3 | **RICONCILIAZIONE-PR-APERTE si chiude come superato?** R3, R6, R7, R8 sono decisi o fatti altrove (§2.3). *Proposta*: sì, ✅ con il rimando a dove sta ognuno |
-| D7 | L7 | **Quali pratiche dei due repo di riferimento si adottano qui?** Il confronto è in §7: tre mancano davvero (il modello di PR, le alternative e la condizione di revisione nel modello di ADR, il numero dell'ADR prenotato prima di aprire il ramo), le altre ci sono già. *Proposta*: tutte e tre, come lotto L7, ognuna registrata in `REGISTRO-NORME-EDITORIALI.md` con chi la misura (G3); nessuna riscrittura degli ADR già accettati |
+| ~~D7~~ | L7 | ✅ **Decisa il 2026-10-10, il DM: tutte e tre** (*«adotta le pratiche e mergia»*), fatte in L7. Era: **Quali pratiche dei due repo di riferimento si adottano qui?** Il confronto è in §7: tre mancano davvero (il modello di PR, le alternative e la condizione di revisione nel modello di ADR, il numero dell'ADR prenotato prima di aprire il ramo), le altre ci sono già. *Proposta*: tutte e tre, come lotto L7, ognuna registrata in `REGISTRO-NORME-EDITORIALI.md` con chi la misura (G3); nessuna riscrittura degli ADR già accettati |
 
 <!-- eco: RECUPERO 2026-10-10 -->
-- **Decise**: D1 la #229 e la #230 su `main` per prime, se verdi · D2 lo `0086` resta alla #230, la #216 passa a `0087`
-- **Aperte**: D3 (la #106), D4 (D11 di RIPRESA-PR), D5 (i ⬜ opzionali per gruppo), D6 (RICONCILIAZIONE chiusa come superata), D7 (le pratiche dei repo di riferimento, aggiunta il 2026-10-10)
+- **Decise**: D1 la #229 e la #230 su `main` per prime, se verdi · D2 lo `0086` resta alla #230, la #216 passa a `0087` · D7 le tre pratiche dei repo di riferimento, adottate tutte come proposto (dopo i merge)
+- **Aperte**: D3 (la #106), D4 (D11 di RIPRESA-PR), D5 (i ⬜ opzionali per gruppo), D6 (RICONCILIAZIONE chiusa come superata)
 - **Cambiate**: D1, dove la proposta metteva prima la #216
 - **Dedotto da me**: che la D2 segua l'ordine di arrivo anche quando l'ordine cambia, perché è la regola che la proposta stessa scriveva; e che la rinumerazione della #216 spetti al suo ramo, non a questo
-- **Rivisto il 2026-10-10, dopo i merge**: la rinumerazione della #216 l'ha fatta la PR del riallineamento, non il suo ramo, perché il DM ha chiesto di organizzare tutto senza toccare le PR degli altri; D7 aperta
+- **Rivisto il 2026-10-10, dopo i merge**: la rinumerazione della #216 l'ha fatta la PR del riallineamento, non il suo ramo, perché il DM ha chiesto di organizzare tutto senza toccare le PR degli altri; D7 decisa poche ore dopo
 
 ## 5 · I lotti
 
@@ -300,7 +300,14 @@ se la condizione non si sa scrivere: in quel caso il lotto lo dice.
 Classe **G**. Aspetta D3 e D4. La chiusura della #106 è un'azione su una PR:
 si fa solo con la tua conferma esplicita.
 
-### L7 · Le pratiche prese dai repo di riferimento `[⬜]`
+### L7 · Le pratiche prese dai repo di riferimento `[✅ 2026-10-10]`
+
+Fatto, dopo il sì del DM a D7:
+- `plans/adr-prenotati.json`, con lo `0088` della #99 come prima voce; `validate_docs --prossimo-adr` salta i numeri prenotati, e `--sorgenti` è rosso se un numero prenotato è usato da un'altra decisione o se una prenotazione arrivata non è stata tolta (tre test).
+- `ADR-0000-template.md` con *Alternative considerate* e *Da rivedere se*.
+- `.github/pull_request_template.md` con le caselle della regola d'oro, *Controlli eseguiti* («non eseguito», mai «passato»), *Come si torna indietro* e *Note oneste*.
+- Le tre norme in `REGISTRO-NORME-EDITORIALI.md` §3: la prima 🟢 (`validate_docs`), le altre due 🔴 con la ragione e la loro riga in `superficie_norme.py` (il primo ADR nuovo, lo `0089`, accende la seconda).
+
 `[engine: Sonnet 5 · effort: medio · qualità: le tre norme di D7 in REGISTRO-NORME con chi le misura; validate_norme_editoriali, validate_docs --sorgenti, check_plans_discipline verdi]`
 
 Classe **G**. Aspetta D7. Aggiunge `.github/pull_request_template.md`, le due

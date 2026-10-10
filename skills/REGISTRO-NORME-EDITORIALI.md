@@ -137,6 +137,9 @@
 | `rumblingstone-playtest` §2-bis · D26 | un master **cambiato dopo l'ultima lettura a freddo** chiede una lettura nuova, o una voce «sola forma» con la ragione; ogni rilievo 🔴/🟠 dell'ultima lettura ha uno **stato** (corretto, residuo con ragione, domanda con la decisione) | **maggiore** | 🟡 `registro_letture.py --check` (in CI) — blocca solo i master **sotto cancello**, quelli la cui ultima lettura di lettore e playtester ha l'impronta del testo letto. Il 2026-10-01 nessuno lo è: le diciotto letture fatte prima non hanno impronta ricostruibile, e il cancello è in avviso finché non arrivano letture nuove (D4) |
 | `ADR-0059` (MQM) | il **punteggio di qualità pesato**: severità 1 / 5 / **25**, soglia per classe, critico pass-fail | — è il metro, non una norma che un documento possa violare | 🟢 `punteggio_mqm.py --soglia` — 515 documenti, soglie da `specifiche-qualita.yaml` misurate con `--distribuzione`. ⚠️ Copre **4 norme su 40**: entra solo ciò che ha già un rilevatore |
 | `npc-villain-boosting` | **EL ≤ APL+4**, e oltre il tetto serve un `Boost log:` | **critico** | 🔴 non misurato — il controllo **esiste** (`validate_modules.py --tetto-el`, APL letto da `state.md`) ma **non ha superficie**: la forma `**EL**: [N]` che `AGENTS.md` prescrive ha **zero occorrenze**, e i 150 «EL N» nudi mescolano dichiarazioni e menzioni. Prerequisito: marcare gli incontri |
+| `ADR-0000-template.md` · D7 di PIANO-RECUPERO | un ADR **nuovo** porta il numero prenotato in `plans/adr-prenotati.json` prima del ramo, e la prenotazione si toglie nel commit che lo porta | **maggiore** | 🟢 `validate_docs.py --sorgenti`: rosso se un numero prenotato è usato da un'altra decisione o se una prenotazione è arrivata e non è tolta. 🔎 Nasce dal doppio `ADR-0086` di #216 e #230, il 2026-10-10 |
+| `ADR-0000-template.md` · D7 di PIANO-RECUPERO | un ADR **nuovo** ha le **alternative considerate** e la condizione **«Da rivedere se»** | **minore** | 🔴 non misurato — vale dagli ADR scritti dopo il 2026-10-10 e non ce n'è ancora uno; gli 87 già accettati non si riscrivono, e un rilevatore che li esenta per numero va scritto col primo ADR nuovo |
+| `.github/pull_request_template.md` · D7 di PIANO-RECUPERO | il corpo di una PR scrive un controllo non girato come **non eseguito**, mai «passato», e dice come si torna indietro | **minore** | 🔴 non misurato — il corpo della PR non sta nel repo, e nessuno script lo legge; il modello è il promemoria |
 | `ADR-0060` (norma WotC/Paizo) | le **sigle** di caratteristica — `For 25`, `Des 14`, 688 occorrenze | — non applicabile: le sigle sono maiuscole per costruzione | ⚪ non applicabile — sono maiuscole per costruzione, non c'è niente da controllare |
 
 ---
@@ -145,9 +148,9 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 46 |
+| 🟢 misurate | 47 |
 | 🟡 misurate in parte, con il limite scritto | 28 |
-| 🔴 **non misurate, con la ragione scritta** | 15 |
+| 🔴 **non misurate, con la ragione scritta** | 17 |
 | ⚪ non applicabili | 4 |
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se
