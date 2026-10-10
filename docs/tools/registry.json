@@ -6284,6 +6284,15 @@
           "desc": "Quali casi."
         },
         {
+          "name": "--caso",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Solo questo caso (ripetibile), es. S02 per misurare i tempi prima della corsa intera."
+        },
+        {
           "name": "--temperatura",
           "type": "float",
           "required": false,

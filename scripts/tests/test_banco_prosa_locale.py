@@ -66,6 +66,10 @@ class _Finto(http.server.BaseHTTPRequestHandler):
 
 
 class TestServizio(unittest.TestCase):
+    def test_pulisci_il_pensiero_di_gemma_anche_vuoto(self):
+        assert bl.pulisci("<|channel>thought\n<channel|>Il testo.") == "Il testo."
+        assert bl.pulisci("<|channel>thought\npenso\n<channel|>\n\nIl testo.") == "Il testo."
+
     def test_chiama_toglie_il_ragionamento(self):
         srv = http.server.HTTPServer(("127.0.0.1", 0), _Finto)
         threading.Thread(target=srv.serve_forever, daemon=True).start()

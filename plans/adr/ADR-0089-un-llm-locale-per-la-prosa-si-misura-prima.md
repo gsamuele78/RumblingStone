@@ -190,22 +190,25 @@ il canone, e il controllo `ancore` non se ne accorge.
 | I1 ✅ | il voto non regala i box | in `voto_scrittura.controlli`, i sei `box_*` falliscono se `box_presente` fallisce; rimisura di tutte le corse | fatto: nessuna corsa cambia, la spazzatura scende da 78% a 42% |
 | I2 ✅ | il ponte | `banco_prosa_locale.py` in `scripts/`, voce nel manifest con `external_bins: []`, modello dichiarato in `corsa.json` (condizione 6 di ADR-0067); CI solo su `--dry-run` e su `coppie`/`esito` con un foglio di prova | medio |
 | I3 | la norma | riga in `REGISTRO-NORME-EDITORIALI.md`: «una corsa locale si vota con il banco di L11» | piccolo |
-| I4 | la prova | sulla macchina del DM: 1 o 2 modelli × 3 ripetizioni × `--contesto pieno`, poi una ripetizione `ridotto` per vedere quanto pesano i references | tempo del DM, nessun costo di repo |
+| I4 | la prova | `scripts/llm-locale/` ✅; poi, sulla macchina del DM: 1 o 2 modelli × 3 ripetizioni × `--contesto pieno`, poi una ripetizione `ridotto` per vedere quanto pesano i references | tempo del DM, nessun costo di repo |
 
-Comandi per I4 (con `llama-server` di llama.cpp, MIT; con Ollama cambia solo l'URL, porta 11434):
+L'installazione e la prova stanno in [`scripts/llm-locale/`](../../scripts/llm-locale/README.md),
+sullo stesso schema di `comfyui-local/`: un Distrobox con la GPU dell'host,
+Ollama (MIT) dentro, niente sull'OS di Bazzite. Il DM ha chiesto di provarla
+prima sull'ASUS con Bazzite, partendo da una macchina con il solo repo, e poi
+sulla Dell.
 
 ```bash
-# sulla Dell: llama-server con gli esperti in RAM (il GGUF QAT di Google)
-llama-server -m gemma-4-26B-A4B-it-qat-q4_0.gguf -c 24576 -ngl 99 --n-cpu-moe 99 --port 8080
-for n in 1 2 3; do
-  python3 scripts/banco_prosa_locale.py corsa --url http://127.0.0.1:8080/v1 \
-      --modello gemma4-26b-a4b --etichetta gemma26moe --ripetizione $n --seme $n
-done
-python3 scripts/voto_scrittura.py --corse
-python3 scripts/banco_prosa_locale.py coppie --a B-con-1 --b L-gemma26moe-1 --seme 7 -o foglio.md
-# il DM compila foglio.md leggendo ad alta voce, poi:
-python3 scripts/banco_prosa_locale.py esito foglio.md
+scripts/llm-locale/setup-distrobox.sh     # una tantum
+scripts/llm-locale/start.sh               # terminale A, il server
+scripts/llm-locale/scarica-modello.sh     # terminale B: il modello consigliato per la macchina
+scripts/llm-locale/prova.sh               # un caso per i tempi, i dieci casi, il voto, il foglio
 ```
+
+`comune.sh` sceglie il modello da VRAM e RAM: `gemma4:e4b-it-qat` (6,1 GB)
+sull'ASUS, poi `gemma4:12b-it-qat` (7,2 GB) a mano; `gemma4:26b` sulla Dell.
+Sulla Dell resta possibile `llama-server --n-cpu-moe`, che tiene in RAM i soli
+esperti; Ollama divide per strati, e la differenza di velocità si misura lì.
 
 ### Validazione
 

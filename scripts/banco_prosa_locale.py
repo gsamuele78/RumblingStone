@@ -46,6 +46,7 @@ import math
 import os
 import random
 import re
+import shutil
 import sys
 import tempfile
 import time
@@ -56,6 +57,9 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 CASI = RADICE / "plans" / "scrittura" / "casi.json"
 CORSE = RADICE / "plans" / "scrittura" / "corse"
+# Le prove parziali (--caso) servono a misurare i tempi: non sono corse, e
+# voto_scrittura non deve vederle. Cartella fuori da git.
+PROVE = RADICE / "plans" / "scrittura" / "prove-locali"
 NS = RADICE / "skills" / "rumblingstone-narrative-style"
 PD = RADICE / "skills" / "rumblingstone-prosa-documenti"
 
@@ -170,15 +174,23 @@ def chiama(url: str, modello: str, system: str, user: str, temperatura: float,
         testo = dati["choices"][0]["message"]["content"]
     except (KeyError, IndexError, TypeError):
         raise ServizioAssente(f"{url}: risposta senza choices[0].message.content") from None
-    # I modelli «a ragionamento» serviti senza parser lasciano il blocco nel testo.
-    testo = re.sub(r"<think>.*?</think>\s*", "", testo, flags=re.S).strip()
-    return testo + "\n", dati.get("usage", {})
+    return pulisci(testo) + "\n", dati.get("usage", {})
+
+
+def pulisci(testo: str) -> str:
+    """Toglie il ragionamento che i modelli lasciano nel testo quando il server
+    non lo separa: `<think>…</think>`, e il blocco di Gemma 4, che c'è anche
+    vuoto a pensiero spento (`<|channel>thought…<channel|>`)."""
+    testo = re.sub(r"<think>.*?</think>\s*", "", testo, flags=re.S)
+    return re.sub(r"<\|channel>thought.*?<channel\|>\s*", "", testo, flags=re.S).strip()
 
 
 def cmd_corsa(a) -> int:
     casi = json.loads(CASI.read_text(encoding="utf-8"))["casi"]
     if a.insieme != "tutti":
         casi = [c for c in casi if c["insieme"] == a.insieme]
+    if a.caso:
+        casi = [c for c in casi if c["id"] in a.caso]
     if a.dry_run:
         for c in casi:
             s, u = componi(c, a.contesto, a.tetto_fonte)
@@ -189,13 +201,13 @@ def cmd_corsa(a) -> int:
         print("✗ banco_prosa_locale corsa: servono --url e --modello (o --dry-run)", file=sys.stderr)
         return 2
     nome = f"L-{a.etichetta}-{a.ripetizione}"
-    dest = CORSE / nome
+    dest = (PROVE if a.caso else CORSE) / nome
     if dest.exists():
         print(f"✗ {dest.relative_to(RADICE)} esiste già: cambia --ripetizione", file=sys.stderr)
         return 2
     # Si scrive in una cartella temporanea e si sposta alla fine: una corsa
     # interrotta non lascia mai una cartella che voto_scrittura conterebbe.
-    tmp = Path(tempfile.mkdtemp(prefix=f".{nome}-", dir=CORSE))
+    tmp = Path(tempfile.mkdtemp(prefix=f"banco-{nome}-"))
     meta = {"corsa": nome, "modello": a.modello, "url": a.url, "contesto": a.contesto,
             "temperatura": a.temperatura, "seme": a.seme, "max_token": a.max_token,
             "tetto_fonte": a.tetto_fonte, "inizio": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -219,9 +231,14 @@ def cmd_corsa(a) -> int:
         return 3
     (tmp / "corsa.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
                                     encoding="utf-8")
-    tmp.rename(dest)
-    print(f"✓ {dest.relative_to(RADICE)}: {len(casi)} casi. Ora: "
-          "python3 scripts/voto_scrittura.py --corse")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(tmp), dest)
+    tot = sum(m["secondi"] for m in meta["casi"].values())
+    print(f"✓ {dest.relative_to(RADICE)}: {len(casi)} casi in {tot:.0f} s.")
+    if a.caso:
+        print("  È una prova dei tempi: non entra nel voto. Per la corsa vera togli --caso.")
+    else:
+        print("  Ora: python3 scripts/voto_scrittura.py --corse")
     return 0
 
 
@@ -334,6 +351,7 @@ def main(argv=None) -> int:
     c.add_argument("--ripetizione", type=int, default=1)
     c.add_argument("--contesto", choices=("pieno", "ridotto", "nessuno"), default="pieno")
     c.add_argument("--insieme", choices=("tutti", "taratura", "verifica"), default="tutti")
+    c.add_argument("--caso", action="append", help="solo questo caso (ripetibile), es. S02 per la prova dei tempi")
     c.add_argument("--temperatura", type=float, default=0.7)
     c.add_argument("--seme", type=int, default=1)
     c.add_argument("--max-token", type=int, default=1500)

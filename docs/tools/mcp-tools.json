@@ -2497,6 +2497,10 @@
               "verifica"
             ]
           },
+          "caso": {
+            "type": "string",
+            "description": "Solo questo caso (ripetibile), es. S02 per misurare i tempi prima della corsa intera."
+          },
           "temperatura": {
             "type": "number",
             "description": "Temperatura di campionamento."
