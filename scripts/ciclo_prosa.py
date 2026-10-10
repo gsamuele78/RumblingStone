@@ -28,6 +28,10 @@ persona; l'approvazione la dà il DM, modifica per modifica.
         fra un giro di riscrittura e l'altro: di quanto è migliorato, norma per
         norma e in punti MQM. Esce 1 se qualcosa peggiora
 
+    python3 scripts/ciclo_prosa.py rigenera REVISIONE.md
+        quando l'originale è cambiato dopo la revisione: le stesse modifiche,
+        riportate sul testo di oggi, e il documento riscritto da approvare
+
     python3 scripts/ciclo_prosa.py registro [--check]
         i miglioramenti applicati, uno per revisione, con il totale; `--check`
         è il cancello: nessuna revisione applicata ha peggiorato il punteggio
@@ -806,6 +810,72 @@ def lotto(files: "list[Path]", uscita: Path) -> int:
     return 0
 
 
+#: Quanti caratteri di testo uguale, prima di una modifica, la ritrovano
+#: nell'originale cambiato. Pochi pescano due posti, troppi non pescano niente
+#: se l'originale è cambiato proprio lì vicino.
+CONTESTO = 25
+
+
+def rigenera_testo(rev_md: str, oggi: str) -> "tuple[str | None, str]":
+    """Le modifiche di una revisione, riportate su `oggi` (l'originale cambiato).
+
+    Ogni modifica si ritrova dal testo che la precede (CONTESTO caratteri, già
+    nella versione riscritta) più il testo che toglie: se quella stringa non
+    compare una volta sola nell'originale di oggi, non si indovina. Restituisce
+    (riscritto, "") oppure (None, il motivo).
+    Nato dal lotto D13 del 2026-10-03: DEF-4 e ARC08-01 erano cambiati dopo la
+    revisione, e `applica` giustamente rifiutava.
+    """
+    marcato = _marcato_del_documento(rev_md)
+    fatto, da, cur = [], 0, oggi
+    for m in _MARCA.finditer(marcato):
+        uguale = marcato[da:m.start()]
+        fatto.append(uguale)
+        if m.group("v") is not None:
+            vecchio, nuovo = m.group("v"), m.group("n")
+        elif m.group("a") is not None:
+            vecchio, nuovo = "", m.group("a")
+        else:
+            vecchio, nuovo = m.group("t"), ""
+        sinistra = "".join(fatto)[-CONTESTO:]
+        chiave = sinistra + vecchio
+        n = cur.count(chiave)
+        if n != 1:
+            return None, (f"la modifica «{vecchio[:40]}» → «{nuovo[:40]}» compare {n} volte "
+                          "nel testo di oggi: non si riporta da sola")
+        cur = cur.replace(chiave, sinistra + nuovo)
+        fatto.append(nuovo)
+        da = m.end()
+    return cur, ""
+
+
+def rigenera(percorso_rev: Path) -> int:
+    rev = percorso_rev.read_text(encoding="utf-8")
+    m = _TESTA.search(rev)
+    if not m:
+        print("✗ non è un file di revisione: manca la riga di testa")
+        return 2
+    originale = _assoluto(m.group("o"))
+    oggi = originale.read_text(encoding="utf-8")
+    vecchio, _ = dal_markup(_marcato_del_documento(rev))
+    if vecchio == oggi:
+        print("✓ l'originale non è cambiato: non c'è niente da rigenerare")
+        return 0
+    riscritto, motivo = rigenera_testo(rev, oggi)
+    if riscritto is None:
+        print(f"✗ {motivo}. La revisione va rifatta a mano")
+        return 1
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d) / originale.name
+        tmp.write_text(riscritto, encoding="utf-8")
+        testo, ok = revisione(originale, tmp)
+    testo = testo.replace(f'riscritto="{_nel_repo(tmp)}"', 'riscritto="nel documento"')
+    percorso_rev.write_text(testo, encoding="utf-8")
+    print(f"{'✓' if ok else '✗'} rigenerata {_rel(percorso_rev)} sul testo di oggi: "
+          "le spunte ripartono da zero, perché i numeri delle modifiche possono cambiare")
+    return 0 if ok else 1
+
+
 def _leggi_registro() -> "list[dict]":
     if not REGISTRO.exists():
         return []
@@ -987,6 +1057,8 @@ def main(argv=None) -> int:
     s5.add_argument("riscritto", type=Path)
     s6 = sub.add_parser("registro", help="i miglioramenti applicati; --check è il cancello")
     s6.add_argument("--check", action="store_true")
+    s7 = sub.add_parser("rigenera", help="la revisione riportata sull'originale cambiato")
+    s7.add_argument("revisione", type=Path)
     a = ap.parse_args(argv)
 
     if a.cmd == "lotto":
@@ -995,6 +1067,8 @@ def main(argv=None) -> int:
         return misura_cmd(a.originale, a.riscritto)
     if a.cmd == "registro":
         return registro_cmd(a.check)
+    if a.cmd == "rigenera":
+        return rigenera(a.revisione)
 
     if a.cmd == "segnala":
         testo = a.file.read_text(encoding="utf-8")

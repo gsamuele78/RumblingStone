@@ -371,3 +371,48 @@ class TestIlMiglioramento(unittest.TestCase):
         cp.lotto([pulito], uscita)
         self.assertFalse((uscita / "PACCHETTO-pulito.md").exists())
         self.assertIn("pulito.md", (uscita / "LOTTO.md").read_text(encoding="utf-8"))
+
+
+class TestRigenera(unittest.TestCase):
+    """L'originale cambia dopo la revisione: `rigenera` riporta le stesse modifiche."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        d = Path(self.tmp.name)
+        self.orig, self.risc = d / "orig.md", d / "risc.md"
+        self.prima = "Prima riga.\n\n" + BOX + "\nCD 15 per aprire.\n"
+        self.orig.write_text(self.prima, encoding="utf-8")
+        self.risc.write_text(self.prima.replace("e ti è sembrato più grande da fuori",
+                                                "e il fumo lo copre"), encoding="utf-8")
+        testo, _ = cp.revisione(self.orig, self.risc)
+        self.rev = d / "REVISIONE.md"
+        self.rev.write_text(testo, encoding="utf-8")
+        self._p = mock.patch.object(cp, "REGISTRO", d / "miglioramenti.json")
+        self._p.start()
+
+    def tearDown(self):
+        self._p.stop()
+        self.tmp.cleanup()
+
+    def test_riporta_le_modifiche_sul_testo_di_oggi(self):
+        self.orig.write_text("Una riga nuova in testa.\n" + self.prima, encoding="utf-8")
+        with mock.patch.object(cp, "_ramo", return_value="claude/prova"):
+            self.assertEqual(cp.applica(self.rev, "2026-10-10"), 1)   # rifiuta, giustamente
+            self.assertEqual(cp.rigenera(self.rev), 0)
+            rev = self.rev.read_text(encoding="utf-8")
+            self.assertIn("| [ ] | 1 |", rev)                         # le spunte ripartono
+            self.rev.write_text(rev.replace("| [ ] |", "| [x] |"), encoding="utf-8")
+            self.assertEqual(cp.applica(self.rev, "2026-10-10"), 0)
+        nuovo = self.orig.read_text(encoding="utf-8")
+        self.assertIn("Una riga nuova in testa.", nuovo)
+        self.assertIn("il fumo lo copre", nuovo)
+
+    def test_non_indovina_se_il_punto_e_ambiguo(self):
+        doppio = self.prima + "\n" + BOX
+        self.orig.write_text(doppio, encoding="utf-8")
+        self.assertEqual(cp.rigenera(self.rev), 1)
+
+    def test_originale_invariato_non_fa_niente(self):
+        prima = self.rev.read_text(encoding="utf-8")
+        self.assertEqual(cp.rigenera(self.rev), 0)
+        self.assertEqual(self.rev.read_text(encoding="utf-8"), prima)

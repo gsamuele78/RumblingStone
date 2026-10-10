@@ -96,6 +96,10 @@ jobs:
       - name: Decisioni aperte al DM — l'aggregato combacia coi piani
         run: python scripts/decisioni_dm.py --check
 
+      # ADR-0086: la memoria del lavoro è generata dal repo e non resta indietro
+      - name: La memoria è allineata (MEMORIA.md, ADR-0086)
+        run: python scripts/memoria.py --check
+
       - name: Plans discipline gate — CHANGELOG obbligatorio + promemoria ADR (ADR-0009)
         if: github.event_name == 'pull_request'
         run: python scripts/check_plans_discipline.py --base "origin/${{ github.base_ref }}"

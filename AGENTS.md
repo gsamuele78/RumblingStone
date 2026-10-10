@@ -59,6 +59,14 @@ generated artifacts of `scripts/build-skills.sh` and are gitignored.
 `.hb.md` files are generated Homebrewery layouts (`plans/adr/ADR-0003`):
 regenerate via `dm.py recap --hype` / `dm.py handout`, never edit by hand.
 
+> **Agenti e DM, per ripartire: prima [`MEMORIA.md`](MEMORIA.md).** È la
+> memoria del lavoro in una pagina (decisioni aperte, revisioni da approvare,
+> cosa è in corso, cosa è stato fatto), generata da `python3 scripts/memoria.py`
+> e tenuta allineata dalla CI ([ADR-0086](plans/adr/ADR-0086-la-memoria-del-lavoro-e-generata.md)).
+> Non si scrive a mano: si corregge la fonte che indica, poi si rigenera. E
+> niente di utile resta nello scratchpad di una sessione: prima di chiudere
+> entra nel repo.
+
 > **DMs: start with `campaign/DM-CAMPAIGN-PLAYBOOK.md`.** It contains the
 > pre/during/post-session workflow, worked examples for session files and
 > `state.md` diffs, the `§0 Campaign Status At-a-Glance` dashboard, and the
