@@ -8492,6 +8492,255 @@
       ]
     },
     {
+      "id": "banco_prosa_locale",
+      "path": "scripts/banco_prosa_locale.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/banco_prosa_locale.py {corsa --url URL --modello M [--etichetta E] [--ripetizione N] [--contesto pieno|ridotto|nessuno] [--dry-run] | coppie --a CORSA --b CORSA -o FOGLIO.md | esito FOGLIO.md [--giudice FOGLIO.md]}",
+      "summary": "ADR-0089 (I2, 2026-10-10): un modello locale sugli stessi dieci casi delle skill di scrittura. `corsa` chiama un endpoint compatibile OpenAI (llama-server, Ollama, vLLM) e scrive plans/scrittura/corse/L-<etichetta>-<n>/ con corsa.json (modello, parametri, tempi), che voto_scrittura vota come le altre corse; senza servizio esce 3 e non scrive niente (ADR-0067). `coppie` prepara un foglio alla cieca per il DM con la chiave a parte; `esito` dà la quota di preferenze con l'intervallo di Wilson e, con --giudice, il κ di Cohen e l'accordo grezzo.",
+      "use_case": "«Un modello che gira sul mio portatile scrive la prosa del tavolo abbastanza bene da usarlo, e come lo so senza fidarmi delle classifiche altrui?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "corsa",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Genera i dieci casi contro il modello locale."
+        },
+        {
+          "name": "--url",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Endpoint compatibile OpenAI, es. http://127.0.0.1:8080/v1 (o BANCO_URL)."
+        },
+        {
+          "name": "--modello",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del modello come lo chiama il server (o BANCO_MODELLO)."
+        },
+        {
+          "name": "--etichetta",
+          "type": "str",
+          "required": false,
+          "default": "locale",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome della condizione: la cartella e' L-<etichetta>-<n>."
+        },
+        {
+          "name": "--ripetizione",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero della ripetizione."
+        },
+        {
+          "name": "--contesto",
+          "type": "choice",
+          "required": false,
+          "default": "pieno",
+          "choices": [
+            "pieno",
+            "ridotto",
+            "nessuno"
+          ],
+          "repeatable": false,
+          "desc": "Quanto delle skill entra nel prompt."
+        },
+        {
+          "name": "--insieme",
+          "type": "choice",
+          "required": false,
+          "default": "tutti",
+          "choices": [
+            "tutti",
+            "taratura",
+            "verifica"
+          ],
+          "repeatable": false,
+          "desc": "Quali casi."
+        },
+        {
+          "name": "--temperatura",
+          "type": "float",
+          "required": false,
+          "default": 0.7,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Temperatura di campionamento."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seme passato al server."
+        },
+        {
+          "name": "--max-token",
+          "type": "int",
+          "required": false,
+          "default": 1500,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tetto dei token in uscita."
+        },
+        {
+          "name": "--tetto-fonte",
+          "type": "int",
+          "required": false,
+          "default": 12000,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Caratteri massimi dell'estratto del master."
+        },
+        {
+          "name": "--timeout",
+          "type": "int",
+          "required": false,
+          "default": 900,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Secondi di attesa per caso."
+        },
+        {
+          "name": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa le dimensioni dei prompt: nessuna rete, nessun file."
+        },
+        {
+          "name": "coppie",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Foglio alla cieca fra due corse, chiave a parte."
+        },
+        {
+          "name": "--a",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Corsa di riferimento, es. B-con-1."
+        },
+        {
+          "name": "--b",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Corsa sfidante, es. L-gemma26moe-1."
+        },
+        {
+          "name": "-o",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dove scrivere il foglio."
+        },
+        {
+          "name": "esito",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Legge il foglio compilato e la chiave."
+        },
+        {
+          "name": "--giudice",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Lo stesso foglio compilato da un giudice automatico."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/scrittura/casi.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "skills/rumblingstone-narrative-style/references/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/scrittura/corse/L-<etichetta>-<n>/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/scrittura/corse/L-<etichetta>-<n>/corsa.json",
+          "kind": "json",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso (manca --url/--modello, corsa gia' esistente)",
+        "3": "servizio non raggiungibile: nessun file scritto"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": "--seme",
+        "notes": "corsa dipende dal modello e dal server; coppie e' deterministico col seme; esito e --dry-run sono deterministici."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": false,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/banco_prosa_locale.py corsa --dry-run",
+      "tests": [
+        "scripts/tests/test_banco_prosa_locale.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md"
+      ]
+    },
+    {
       "id": "ciclo_prosa",
       "path": "scripts/ciclo_prosa.py",
       "category": "G-orchestration-governance",

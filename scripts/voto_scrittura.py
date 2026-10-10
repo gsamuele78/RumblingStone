@@ -143,16 +143,21 @@ def controlli(testo: str, genere: str) -> "dict[str, tuple[bool, str]]":
     p1 = mc.box_con_p1(testo)
     metr = mc.metrature_nei_box(testo)
     senza_etichetta = len(box) - _box_etichettati(testo)
+    ha_box = bool(box)
+    # I controlli sui box valgono solo se il box c'e'. Senza questa condizione
+    # un testo senza box li passava tutti e sei: due righe di spazzatura con
+    # «sembra», una parentesi e una metratura prendevano 78% in verifica, piu'
+    # di A-senza (ADR-0089, I1, 2026-10-10).
     return {
         "box_presente": (bool(box), f"{len(box)} box"),
-        "box_tetto_righe": (difetti["oltre 12 righe"] == 0, f"{difetti['oltre 12 righe']} oltre 12 righe"),
-        "box_un_nome": (difetti[">1 nome proprio"] == 0, f"{difetti['>1 nome proprio']} con piu' nomi"),
-        "box_senza_parentesi": (difetti["con parentesi"] == 0, f"{difetti['con parentesi']} con parentesi"),
-        "box_senza_sembra": (not any(SEMBRA.search(c) for c in corpi),
+        "box_tetto_righe": (ha_box and difetti["oltre 12 righe"] == 0, f"{difetti['oltre 12 righe']} oltre 12 righe"),
+        "box_un_nome": (ha_box and difetti[">1 nome proprio"] == 0, f"{difetti['>1 nome proprio']} con piu' nomi"),
+        "box_senza_parentesi": (ha_box and difetti["con parentesi"] == 0, f"{difetti['con parentesi']} con parentesi"),
+        "box_senza_sembra": (ha_box and not any(SEMBRA.search(c) for c in corpi),
                              ", ".join(sorted({m.group(0).lower() for c in corpi
                                                for m in SEMBRA.finditer(c)})) or "-"),
-        "box_p1": (not p1, ", ".join(v for v, _ in p1) or "-"),
-        "box_senza_metrature": (not metr, ", ".join(m for m, _ in metr) or "-"),
+        "box_p1": (ha_box and not p1, ", ".join(v for v, _ in p1) or "-"),
+        "box_senza_metrature": (ha_box and not metr, ", ".join(m for m, _ in metr) or "-"),
         "box_etichettato": (bool(box) and senza_etichetta == 0, f"{senza_etichetta} senza etichetta"),
         "chiude_che_fate": (any(_DECISIONE.search(c) for c in corpi), "-"),
         "hdywtdt": (bool(_HDYWTDT.search(testo)), "-"),

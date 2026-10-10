@@ -117,3 +117,16 @@ tutte le corse senza che A o B cambino di un voto:
 Le corse segnalano di nuovo le tre incoerenze di canone della tornata B, e una
 quarta: il Rubino ha tre descrizioni diverse («Cuore della Leggenda» in
 `DEF-4` e `DEF-5`, altre due altrove). Sono per il DM.
+
+## Il voto non regala più i box (ADR-0089, I1, 2026-10-10)
+
+Un testo di due righe senza box, con «sembra», una parentesi e una metratura,
+prendeva 81% in taratura e 78% in verifica: i sei controlli sui box passavano
+quando il box non c'era. Ora falliscono, e lo stesso testo prende 44% e 42%.
+Nessuna corsa di questa pagina cambia di un voto, perché in tutte il box c'era
+dove il caso lo chiedeva. Restano superati per intero, anche dalla spazzatura,
+i quattro casi che non hanno un controllo di presenza (S04, S05, S08, S10): per
+confrontare due generatori si leggono i casi di box e di dialogo.
+
+Le corse di un modello locale si scrivono con `scripts/banco_prosa_locale.py`
+in `corse/L-<modello>-<n>/` e si votano qui come le altre.
