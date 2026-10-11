@@ -207,4 +207,9 @@ un passo meccanico. Il resto il banco non lo vede, e si legge nei testi:
   esito).
 
 La soglia di ADR-0089 per «rispetta le norme» è il 90% in verifica: con il 42%
-non la passa. Se il DM lo userebbe come bozza lo dice il foglio alla cieca.
+non la passa.
+
+**Il foglio alla cieca** (DM, 2026-10-11): B-con preferita in 10 coppie su 10,
+nessun pari. Quota della sfidante 0/10, Wilson al 95% [0,00, 0,28]. La soglia
+per «il DM la usa come bozza» era 3 su 10 fra preferite e pari: anche qui no,
+e senza un caso al limite.

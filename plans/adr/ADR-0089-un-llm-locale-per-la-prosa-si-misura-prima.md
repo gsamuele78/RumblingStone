@@ -264,7 +264,13 @@ verifica. Quasi tutta la distanza viene dalla forma del box: il modello scrive
 il read-aloud in paragrafi normali. Rimesso in forma da uno script, il voto
 sarebbe 94% e 91%, ma il banco non vede la sostanza, e lì il modello decide per
 i PG e non porta le meccaniche. Per la prima domanda della validazione la
-risposta resta no. Restano il foglio alla cieca, il 12B e la Dell.
+risposta resta no.
+
+Il foglio alla cieca dà la seconda: il DM ha preferito B-con in tutte e dieci
+le coppie, nessun pari (0/10, Wilson [0,00, 0,28]; la soglia era 3). Il 4B non
+serve nemmeno come bozza. Restano aperti il 12B sull'ASUS e il 26B sulla Dell:
+se il 12B finisce sotto 3 su 10 anche lui, la domanda si chiude con un no per
+l'hardware che il DM ha oggi.
 
 ## Conseguenze
 
