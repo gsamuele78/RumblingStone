@@ -130,3 +130,32 @@ confrontare due generatori si leggono i casi di box e di dialogo.
 
 Le corse di un modello locale si scrivono con `scripts/banco_prosa_locale.py`
 in `corse/L-<modello>-<n>/` e si votano qui come le altre.
+
+## La prima corsa locale: `gemma4:e4b-it-qat` sull'ASUS (2026-10-10)
+
+Il DM l'ha fatta girare sul portatile con Bazzite (RTX 4050, 6 GB), con
+`scripts/llm-locale/prova.sh` e il contesto pieno. Una ripetizione, quindi è un
+indizio e non ancora la misura che chiede ADR-0089.
+
+| condizione | taratura | verifica |
+|---|---:|---:|
+| B-con | 96/96 (100%) | 99/99 (100%) |
+| A-senza | 86/96 (89%) | 81/99 (81%) |
+| spazzatura (I1) | 44% | 42% |
+| **L-gemma4e4bitqat-1** | **13/32 (40%)** | **20/33 (60%)** |
+
+In taratura sta sotto la spazzatura. In due casi di taratura e in uno di
+verifica non c'è il box, e quando il box manca cadono tutti gli otto controlli
+che lo riguardano: la colonna è fatta soprattutto di quello. Gli altri
+fallimenti sono parentesi ed etichetta (due ciascuno in verifica), più un
+`hdywtdt`, un calco e una forma di dialogo.
+
+I tempi reggono: da 13 a 50 secondi a caso, 330 secondi per tutti e dieci,
+circa 32 token al secondo. Il prompt arriva a ~22.000 token e il server non ne
+taglia nessuno (`truncated = 0`). Ollama mette 40 strati su 43 nella GPU, che
+ne usa circa 3 GB.
+
+La soglia di ADR-0089 per «rispetta le norme» è il 90% in verifica: questo
+modello non la passa. I testi sono restati sulla macchina del DM, quindi non si
+è ancora visto se il box mancante è assente del tutto o è scritto in una forma
+che il voto non riconosce.
