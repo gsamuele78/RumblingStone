@@ -16,6 +16,8 @@ curl -fsS "http://127.0.0.1:$PORTA/api/version" >/dev/null || {
   echo "ERRORE: il server non risponde su $PORTA. Avvia scripts/llm-locale/start.sh" >&2; exit 1; }
 
 echo "==> 1/3 un caso solo (S02, il duello), per i tempi"
+# La prova dei tempi è usa e getta (prove-locali/ è fuori da git): si rifà.
+rm -rf "plans/scrittura/prove-locali/L-$ETICHETTA-tempi-$N"
 python3 scripts/banco_prosa_locale.py corsa --url "$URL" --modello "$MODELLO" \
   --etichetta "$ETICHETTA-tempi" --ripetizione "$N" --contesto "$CONTESTO" --ctx "$CTX" --caso S02
 echo "    Il testo è in plans/scrittura/prove-locali/. Leggilo prima di andare avanti."

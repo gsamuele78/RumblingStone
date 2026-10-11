@@ -57,13 +57,15 @@ box_pronto() {
   t0=$(date +%s)
   echo "==> avvio il box '$BOX' e aspetto la sua inizializzazione (la prima volta dopo un riavvio: minuti)"
   podman start "$BOX" >/dev/null
-  for i in $(seq 1 180); do
+  for i in $(seq 1 $(( ${LLM_ATTESA:-180} / 5 ))); do
     if podman logs --since "$t0" "$BOX" 2>&1 | grep -q container_setup_done; then
       echo " pronto"; return 0
     fi
     printf '.'; sleep 5
   done
   echo
-  echo "AVVISO: dopo 15 minuti l'inizializzazione non ha detto «finito». Provo lo stesso;" >&2
+  # Sull'ASUS del DM il log non dice mai «finito», ma dopo tre minuti Ollama
+  # parte e vede la GPU (2026-10-11): si aspetta tre minuti e si prova.
+  echo "AVVISO: dopo ${LLM_ATTESA:-180} s il log del box non dice «finito». Provo lo stesso;" >&2
   echo "        per vederla: podman logs --since $t0 $BOX | tail" >&2
 }
