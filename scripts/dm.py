@@ -478,6 +478,15 @@ def cmd_session(args: argparse.Namespace, extra: list[str]) -> int:
     if args.yes:
         ses += ["--yes"]
     rc |= run("state_apply.py", *ses, "--commit", *extra)
+    if rc != 0:
+        # prima stampava «✓ … committate» anche con state_apply uscito a 2
+        print(
+            "\n[dm] ✗ session end incompleto: un passo sopra è fallito, e "
+            "niente è stato committato da lui. Controlla il messaggio, "
+            "correggi e rilancia.",
+            file=sys.stderr,
+        )
+        return rc
     print(
         "\n[dm] ✓ session end: ledger XP aggiornato, regioni marcate di "
         "state.md applicate (su conferma) e committate.\n"
