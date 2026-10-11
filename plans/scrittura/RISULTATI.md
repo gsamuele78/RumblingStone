@@ -131,31 +131,45 @@ confrontare due generatori si leggono i casi di box e di dialogo.
 Le corse di un modello locale si scrivono con `scripts/banco_prosa_locale.py`
 in `corse/L-<modello>-<n>/` e si votano qui come le altre.
 
-## La prima corsa locale: `gemma4:e4b-it-qat` sull'ASUS (2026-10-10)
+## La prima corsa locale: `gemma4:e4b-it-qat` sull'ASUS (2026-10-10), scartata
 
 Il DM l'ha fatta girare sul portatile con Bazzite (RTX 4050, 6 GB), con
-`scripts/llm-locale/prova.sh` e il contesto pieno. Una ripetizione, quindi è un
-indizio e non ancora la misura che chiede ADR-0089.
+`scripts/llm-locale/prova.sh` e il contesto pieno. Il voto è stato 40% in
+taratura e 60% in verifica. **Quei numeri non misurano il modello**, e la corsa
+è in [`scartate/`](scartate/README.md).
 
-| condizione | taratura | verifica |
-|---|---:|---:|
-| B-con | 96/96 (100%) | 99/99 (100%) |
-| A-senza | 86/96 (89%) | 81/99 (81%) |
-| spazzatura (I1) | 44% | 42% |
-| **L-gemma4e4bitqat-1** | **13/32 (40%)** | **20/33 (60%)** |
+Qui avevo scritto che il server non tagliava nessun prompt. Era falso: lo
+avevo letto in una riga del log, che riguardava il primo caso e basta. I
+`prompt_tokens` di `corsa.json` dicono altro:
 
-In taratura sta sotto la spazzatura. In due casi di taratura e in uno di
-verifica non c'è il box, e quando il box manca cadono tutti gli otto controlli
-che lo riguardano: la colonna è fatta soprattutto di quello. Gli altri
-fallimenti sono parentesi ed etichetta (due ciascuno in verifica), più un
-`hdywtdt`, un calco e una forma di dialogo.
+| caso | caratteri del prompt | token contati dal server | caratteri per token |
+|---|---:|---:|---:|
+| S01, S06, S08 | 75.000-79.000 | 21.900-23.300 | 3,4 |
+| S02, S03, S04, S07 | ~86.600 | **12.291** ciascuno | 7,0 |
+| S09 | 82.256 | 24.231 | 3,4 |
 
-I tempi reggono: da 13 a 50 secondi a caso, 330 secondi per tutti e dieci,
-circa 32 token al secondo. Il prompt arriva a ~22.000 token e il server non ne
-taglia nessuno (`truncated = 0`). Ollama mette 40 strati su 43 nella GPU, che
-ne usa circa 3 GB.
+I quattro prompt più lunghi superavano i 24.576 token di contesto, e llama.cpp
+dentro Ollama li ha tagliati a metà senza dare errore. S09 è entrato, ma ha
+lasciato 345 token alla risposta, che è uscita vuota. S07 si è fermato al
+tetto di 1.500 token a metà di una parola. Restano validi cinque casi su dieci.
 
-La soglia di ADR-0089 per «rispetta le norme» è il 90% in verifica: questo
-modello non la passa. I testi sono restati sulla macchina del DM, quindi non si
-è ancora visto se il box mancante è assente del tutto o è scritto in una forma
-che il voto non riconosce.
+Su quei cinque si vede comunque qualcosa. In S01 e S06 il modello scrive il
+read-aloud etichettato, ma in paragrafi normali e non nella citazione in
+corsivo (`> *…*`) che la norma prescrive. Rimesso nella forma giusta a mano,
+ogni box cade ancora su due o tre norme di sostanza: più di un nome proprio,
+«sembra», una decisione presa per i giocatori. In S02, che però è uno dei
+casi tagliati, il modello scrive l'esito delle azioni di tutti e cinque i PG.
+
+Dopo questa corsa, `banco_prosa_locale` controlla tre cose:
+
+- **prima di chiamare** il server, se il prompt stimato più la risposta supera
+  il contesto: in quel caso non parte (codice 4);
+- **dopo ogni caso**, se il server ha contato meno di un token ogni cinque
+  caratteri (il prompt è stato tagliato), se la risposta è vuota o si è fermata
+  al tetto;
+- se un caso è guasto, la corsa va in `prove-locali/`, fuori dal voto
+  (codice 5).
+
+Il contesto predefinito passa a 32.768 token e il tetto di risposta a 3.000.
+I tempi invece si possono già usare: da 13 a 50 secondi a caso, circa 32
+token al secondo, 40 strati su 43 nella GPU.

@@ -16,7 +16,7 @@ servizio, non il modo.
 | `LLM_DIR` | `scripts/llm-locale/dati/` (gitignorato) | dove stanno i pesi |
 | `LLM_BOX` | `llm-locale` | il nome del box |
 | `LLM_PORTA` | `11434` | la porta del server |
-| `LLM_CTX` | `24576` | il contesto: le skill di prosa mettono ~19.000 token nel prompt, e i 4.096 predefiniti di Ollama ne taglierebbero la testa senza dirlo |
+| `LLM_CTX` | `32768` | il contesto. I prompt veri arrivano a ~25.500 token più la risposta. Con 24.576 il server ne ha tagliati quattro su dieci a metà, senza errore (2026-10-10) |
 
 ## Quale modello, su quale macchina
 
@@ -91,6 +91,8 @@ possono committare sul ramo: sono la prova.
 | `ollama ps` dice `100% CPU` | la GPU non arriva nel box, o il modello non ci sta | controlla `distrobox enter llm-locale -- nvidia-smi`; prova il modello più piccolo |
 | il testo del caso ignora le norme | il contesto è stato tagliato | verifica che il server sia partito con `start.sh` (che imposta `LLM_CTX`) e non a mano |
 | `banco_prosa_locale` esce con codice 3 | il server non risponde | il terminale A è ancora acceso? |
+| esce con codice 4, «superano il contesto del server» | `LLM_CTX` troppo basso per i prompt | riavvia `start.sh` con un `LLM_CTX` più alto, o `LLM_CONTESTO=ridotto` |
+| esce con codice 5, «casi guasti» | il server ha tagliato un prompt, o una risposta è vuota o interrotta al tetto | la corsa finisce in `prove-locali/`, fuori dal voto: leggi gli avvisi in `corsa.json` e rifalla |
 
 Per togliere tutto: `scripts/llm-locale/stop.sh`, poi
 `distrobox rm llm-locale --force` e `rm -rf scripts/llm-locale/dati`.

@@ -17,14 +17,14 @@ curl -fsS "http://127.0.0.1:$PORTA/api/version" >/dev/null || {
 
 echo "==> 1/3 un caso solo (S02, il duello), per i tempi"
 python3 scripts/banco_prosa_locale.py corsa --url "$URL" --modello "$MODELLO" \
-  --etichetta "$ETICHETTA-tempi" --ripetizione "$N" --contesto "$CONTESTO" --caso S02
+  --etichetta "$ETICHETTA-tempi" --ripetizione "$N" --contesto "$CONTESTO" --ctx "$CTX" --caso S02
 echo "    Il testo è in plans/scrittura/prove-locali/. Leggilo prima di andare avanti."
 read -r -p "    Proseguo con i dieci casi? [s/N] " r
 [ "$r" = s ] || [ "$r" = S ] || exit 0
 
 echo "==> 2/3 i dieci casi"
 python3 scripts/banco_prosa_locale.py corsa --url "$URL" --modello "$MODELLO" \
-  --etichetta "$ETICHETTA" --ripetizione "$N" --contesto "$CONTESTO"
+  --etichetta "$ETICHETTA" --ripetizione "$N" --contesto "$CONTESTO" --ctx "$CTX"
 
 echo "==> 3/3 il voto e il foglio alla cieca"
 python3 scripts/voto_scrittura.py --corse

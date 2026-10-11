@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # start.sh — avvia il server Ollama nel box su http://127.0.0.1:$PORTA.
 # Ctrl-C lo ferma. Il contesto lungo (LLM_CTX) serve perché le skill di prosa
-# mettono ~19.000 token nel prompt: con i 4.096 predefiniti di Ollama il
-# modello vedrebbe solo la coda delle norme, senza dirlo.
+# mettono fino a ~25.500 token nel prompt: con meno, il server taglia il
+# prompt a metà e il modello scrive senza una parte delle norme, senza dirlo.
 set -euo pipefail
 . "$(dirname "${BASH_SOURCE[0]}")/comune.sh"
 mkdir -p "$DEST"

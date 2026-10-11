@@ -247,15 +247,15 @@ ADR-0067); l'estratto trova la sezione giusta in 8 casi su 10 (S04 non nomina
 una sezione, S05 e S10 sono documenti); `coppie` ed `esito` producono foglio,
 chiave, quota con l'intervallo di Wilson e κ.
 
-### La prima prova sull'ASUS (2026-10-10)
+### La prima prova sull'ASUS (2026-10-10), scartata
 
 Il DM ha installato tutto da zero su Bazzite e ha fatto girare
-`gemma4:e4b-it-qat`, una ripetizione con il contesto pieno. Ha ottenuto **40% in
-taratura e 60% in verifica**, contro il 100% di B-con, l'81% di A-senza e il 42%
-della spazzatura. Ogni caso ha richiesto da 13 a 50 secondi, e il prompt da
-~22.000 token è entrato intero. Per la prima domanda della validazione la
-risposta è no per questo modello. Restano da fare il foglio alla cieca, il 12B
-e la Dell. Il dettaglio è in [`RISULTATI.md`](../scrittura/RISULTATI.md).
+`gemma4:e4b-it-qat`. Il voto è uscito al 40% e al 60%, ma la corsa non vale:
+con 24.576 token di contesto il server ha tagliato a metà quattro prompt su
+dieci senza errore, un quinto ha lasciato la risposta vuota. Il banco adesso
+si ferma prima (codice 4) o mette la corsa fuori dal voto (codice 5), e il
+contesto predefinito è 32.768. Resta valido il dato sui tempi, da 13 a 50
+secondi a caso. Il dettaglio è in [`RISULTATI.md`](../scrittura/RISULTATI.md).
 
 ## Conseguenze
 

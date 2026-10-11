@@ -140,6 +140,39 @@ def componi(caso: dict, contesto: str, tetto_fonte: int) -> "tuple[str, str]":
     return system, user
 
 
+# Un token italiano di questi prompt vale ~3,4 caratteri (misura della prima
+# corsa sull'ASUS, 2026-10-10). Per il controllo prima della chiamata si stima
+# largo (3 caratteri); per riconoscere un prompt tagliato dal server si stima
+# stretto (5): sotto, il server ne ha buttato via una parte.
+CAR_PER_TOKEN_LARGO, CAR_PER_TOKEN_STRETTO = 3, 5
+
+
+def rel(p: Path) -> str:
+    try:
+        return str(p.relative_to(RADICE))
+    except ValueError:
+        return str(p)
+
+
+def stima_token(*testi: str) -> int:
+    return sum(len(t) for t in testi) // CAR_PER_TOKEN_LARGO
+
+
+def avvisi(caratteri: int, uso: dict, fine: "str | None", testo: str) -> "list[str]":
+    """Perché un caso non vale come misura. Il 2026-10-10 quattro prompt su dieci
+    hanno superato il contesto del server: llama.cpp li ha tagliati a metà
+    senza errore, e il modello ha scritto senza metà delle norme."""
+    out = []
+    pt = uso.get("prompt_tokens")
+    if isinstance(pt, int) and pt < caratteri // CAR_PER_TOKEN_STRETTO:
+        out.append(f"prompt tagliato dal server ({pt} token per {caratteri} caratteri)")
+    if fine == "length":
+        out.append("risposta interrotta al tetto di token")
+    if not testo.strip():
+        out.append("risposta vuota")
+    return out
+
+
 def impronta(*testi: str) -> str:
     h = hashlib.sha256()
     for t in testi:
@@ -150,7 +183,7 @@ def impronta(*testi: str) -> str:
 # ---------------------------------------------------------------- servizio
 
 def chiama(url: str, modello: str, system: str, user: str, temperatura: float,
-           seme: int, max_token: int, timeout: int) -> "tuple[str, dict]":
+           seme: int, max_token: int, timeout: int) -> "tuple[str, dict, str | None]":
     corpo = json.dumps({
         "model": modello,
         "messages": [{"role": "system", "content": system},
@@ -171,10 +204,11 @@ def chiama(url: str, modello: str, system: str, user: str, temperatura: float,
     except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
         raise ServizioAssente(f"{url}: {getattr(e, 'reason', e)}") from None
     try:
-        testo = dati["choices"][0]["message"]["content"]
+        testo = dati["choices"][0]["message"]["content"] or ""
+        fine = dati["choices"][0].get("finish_reason")
     except (KeyError, IndexError, TypeError):
         raise ServizioAssente(f"{url}: risposta senza choices[0].message.content") from None
-    return pulisci(testo) + "\n", dati.get("usage", {})
+    return pulisci(testo) + "\n", dati.get("usage", {}), fine
 
 
 def pulisci(testo: str) -> str:
@@ -200,28 +234,42 @@ def cmd_corsa(a) -> int:
     if not a.url or not a.modello:
         print("✗ banco_prosa_locale corsa: servono --url e --modello (o --dry-run)", file=sys.stderr)
         return 2
+    if a.ctx:
+        troppo = [(c["id"], stima_token(*componi(c, a.contesto, a.tetto_fonte)))
+                  for c in casi]
+        troppo = [(i, n) for i, n in troppo if n + a.max_token > a.ctx]
+        if troppo:
+            for i, n in troppo:
+                print(f"✗ {i}: ~{n} token di prompt + {a.max_token} di risposta superano "
+                      f"il contesto del server ({a.ctx})", file=sys.stderr)
+            print("  Il server taglierebbe il prompt senza dirlo. Alza il contesto "
+                  "(LLM_CTX, OLLAMA_CONTEXT_LENGTH) o usa --contesto ridotto.", file=sys.stderr)
+            return 4
     nome = f"L-{a.etichetta}-{a.ripetizione}"
     dest = (PROVE if a.caso else CORSE) / nome
-    if dest.exists():
-        print(f"✗ {dest.relative_to(RADICE)} esiste già: cambia --ripetizione", file=sys.stderr)
+    if dest.exists() or (PROVE / nome).exists():
+        print(f"✗ {rel(dest)} esiste già: cambia --ripetizione", file=sys.stderr)
         return 2
     # Si scrive in una cartella temporanea e si sposta alla fine: una corsa
     # interrotta non lascia mai una cartella che voto_scrittura conterebbe.
     tmp = Path(tempfile.mkdtemp(prefix=f"banco-{nome}-"))
     meta = {"corsa": nome, "modello": a.modello, "url": a.url, "contesto": a.contesto,
             "temperatura": a.temperatura, "seme": a.seme, "max_token": a.max_token,
-            "tetto_fonte": a.tetto_fonte, "inizio": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+            "tetto_fonte": a.tetto_fonte, "ctx": a.ctx or None, "inizio": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "casi": {}}
     try:
         for c in casi:
             s, u = componi(c, a.contesto, a.tetto_fonte)
             t0 = time.monotonic()
-            testo, uso = chiama(a.url, a.modello, s, u, a.temperatura, a.seme,
-                                a.max_token, a.timeout)
+            testo, uso, fine = chiama(a.url, a.modello, s, u, a.temperatura, a.seme,
+                                      a.max_token, a.timeout)
             dt = round(time.monotonic() - t0, 1)
             (tmp / f"{c['id']}.md").write_text(testo, encoding="utf-8")
-            meta["casi"][c["id"]] = {"secondi": dt, "uso": uso, "impronta_prompt": impronta(s, u)}
-            print(f"  {c['id']} {dt:>6}s  {uso.get('completion_tokens', '?')} token")
+            av = avvisi(len(s) + len(u), uso, fine, testo)
+            meta["casi"][c["id"]] = {"secondi": dt, "uso": uso, "fine": fine,
+                                     "avvisi": av, "impronta_prompt": impronta(s, u)}
+            print(f"  {c['id']} {dt:>6}s  {uso.get('completion_tokens', '?')} token"
+                  + "".join(f"  ⚠ {x}" for x in av))
     except ServizioAssente as e:
         for f in tmp.iterdir():
             f.unlink()
@@ -229,12 +277,22 @@ def cmd_corsa(a) -> int:
         print(f"✗ servizio non raggiungibile ({e}). Avvia Ollama o llama-server e riprova; "
               "nessun file scritto.", file=sys.stderr)
         return 3
+    guasti = {i: m["avvisi"] for i, m in meta["casi"].items() if m["avvisi"]}
+    if guasti and dest.parent == CORSE:
+        # Una corsa con un caso guasto misura il server, non il modello: resta
+        # da leggere, ma fuori dal voto.
+        dest = PROVE / nome
+        meta["fuori_dal_voto"] = guasti
     (tmp / "corsa.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
                                     encoding="utf-8")
     dest.parent.mkdir(parents=True, exist_ok=True)
     shutil.move(str(tmp), dest)
     tot = sum(m["secondi"] for m in meta["casi"].values())
-    print(f"✓ {dest.relative_to(RADICE)}: {len(casi)} casi in {tot:.0f} s.")
+    print(f"✓ {rel(dest)}: {len(casi)} casi in {tot:.0f} s.")
+    if guasti:
+        print(f"⚠ {len(guasti)} casi guasti ({', '.join(guasti)}): la corsa è in "
+              f"{rel(dest)}, fuori dal voto. Correggi e rifalla.")
+        return 5
     if a.caso:
         print("  È una prova dei tempi: non entra nel voto. Per la corsa vera togli --caso.")
     else:
@@ -354,7 +412,9 @@ def main(argv=None) -> int:
     c.add_argument("--caso", action="append", help="solo questo caso (ripetibile), es. S02 per la prova dei tempi")
     c.add_argument("--temperatura", type=float, default=0.7)
     c.add_argument("--seme", type=int, default=1)
-    c.add_argument("--max-token", type=int, default=1500)
+    c.add_argument("--max-token", type=int, default=3000)
+    c.add_argument("--ctx", type=int, default=int(os.environ.get("BANCO_CTX", "0")),
+                   help="il contesto del server in token: sopra, la corsa non parte")
     c.add_argument("--tetto-fonte", type=int, default=12000)
     c.add_argument("--timeout", type=int, default=900)
     c.add_argument("--dry-run", action="store_true")

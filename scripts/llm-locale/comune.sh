@@ -5,13 +5,13 @@
 #   LLM_DIR    dove stanno i modelli (default: scripts/llm-locale/dati, gitignorato)
 #   LLM_BOX    nome del box (default: llm-locale)
 #   LLM_PORTA  porta del server (default: 11434, quella di Ollama)
-#   LLM_CTX    contesto in token (default: 24576: le skill ne chiedono ~19.000)
+#   LLM_CTX    contesto in token (default: 32768: i prompt veri arrivano a ~25.500)
 BOX="${LLM_BOX:-llm-locale}"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RADICE="$(cd "$HERE/../.." && pwd)"
 DEST="${LLM_DIR:-$HERE/dati}"
 PORTA="${LLM_PORTA:-11434}"
-CTX="${LLM_CTX:-24576}"
+CTX="${LLM_CTX:-32768}"
 URL="http://127.0.0.1:$PORTA/v1"
 
 spazio_libero() {

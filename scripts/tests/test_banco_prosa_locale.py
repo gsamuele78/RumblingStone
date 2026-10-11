@@ -74,11 +74,11 @@ class TestServizio(unittest.TestCase):
         srv = http.server.HTTPServer(("127.0.0.1", 0), _Finto)
         threading.Thread(target=srv.serve_forever, daemon=True).start()
         try:
-            testo, uso = bl.chiama(f"http://127.0.0.1:{srv.server_port}/v1", "m", "s", "u",
-                                   0.7, 1, 10, 10)
+            testo, uso, fine = bl.chiama(f"http://127.0.0.1:{srv.server_port}/v1", "m", "s",
+                                         "u", 0.7, 1, 10, 10)
         finally:
             srv.shutdown()
-        assert testo == "Testo.\n" and uso == {"completion_tokens": 1}
+        assert testo == "Testo.\n" and uso == {"completion_tokens": 1} and fine is None
 
     def test_senza_servizio_esce_3_e_non_scrive(self):
         with tempfile.TemporaryDirectory() as d:
@@ -91,6 +91,54 @@ class TestServizio(unittest.TestCase):
                 bl.CORSE = vecchio
             assert rc == 3
             assert list(Path(d).iterdir()) == []
+
+
+class TestGuasti(unittest.TestCase):
+    """I numeri veri della prima corsa sull'ASUS (2026-10-10)."""
+
+    def test_prompt_tagliato_a_meta(self):
+        # S02: 86.587 caratteri, il server ne ha contati 12.291 token
+        assert bl.avvisi(86587, {"prompt_tokens": 12291}, "stop", "x")
+        # S01: 75.236 caratteri, 21.931 token: intero
+        assert not bl.avvisi(75236, {"prompt_tokens": 21931}, "stop", "x")
+
+    def test_risposta_al_tetto_o_vuota(self):
+        assert bl.avvisi(100, {}, "length", "x") == ["risposta interrotta al tetto di token"]
+        assert bl.avvisi(100, {}, "stop", "\n") == ["risposta vuota"]
+
+    def test_il_contesto_corto_ferma_la_corsa_prima(self):
+        rc = bl.main(["corsa", "--url", "http://127.0.0.1:9/v1", "--modello", "m",
+                      "--caso", "S02", "--ctx", "24576"])
+        assert rc == 4
+
+    def test_una_corsa_guasta_resta_fuori_dal_voto(self):
+        class Vuoto(_Finto):
+            def do_POST(self):
+                self.rfile.read(int(self.headers["Content-Length"]))
+                corpo = json.dumps({"choices": [{"message": {"content": ""},
+                                                 "finish_reason": "length"}]}).encode()
+                self.send_response(200)
+                self.end_headers()
+                self.wfile.write(corpo)
+        srv = http.server.HTTPServer(("127.0.0.1", 0), Vuoto)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        with tempfile.TemporaryDirectory() as d:
+            vecchie = bl.CORSE, bl.PROVE
+            bl.CORSE, bl.PROVE = Path(d) / "corse", Path(d) / "prove"
+            try:
+                rc = bl.main(["corsa", "--url", f"http://127.0.0.1:{srv.server_port}/v1",
+                              "--modello", "m", "--insieme", "verifica"])
+                assert rc == 5
+                assert not bl.CORSE.exists()
+                meta = json.loads((bl.PROVE / "L-locale-1" / "corsa.json").read_text())
+                assert set(meta["fuori_dal_voto"]) == {"S06", "S07", "S08", "S09", "S10"}
+            finally:
+                bl.CORSE, bl.PROVE = vecchie
+                srv.shutdown()
+
+    def test_i_casi_veri_stanno_in_32k(self):
+        for c in _casi():
+            assert bl.stima_token(*bl.componi(c, "pieno", 12000)) + 3000 <= 32768, c["id"]
 
 
 class TestEsito(unittest.TestCase):
