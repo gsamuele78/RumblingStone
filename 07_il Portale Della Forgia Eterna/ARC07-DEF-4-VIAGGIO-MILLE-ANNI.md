@@ -574,7 +574,7 @@ la gente smette di parlare.
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
-| **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I** (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
+| **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I**, che dà con le sue mani alla Scena 12 (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
 
 ![Re Thorek I, il re di una fortezza giovane](Immagini/ritratti/re-thorek-i.jpg)
@@ -676,8 +676,10 @@ Le mura reggono **due ore** dall'inizio dell'assalto. Il piano del re è quello
 della prova qui sopra: Zog'tar di notte, il drago all'alba.
 
 - **Gancio**: Thorgrim riecheggia nell'affresco A3 della Sala della Forgia.
-- **I doni del re** se la fiducia è piena: le pozioni di cura e il **Torque di
-  Thorek I** (§8 B).
+- **I doni del re** se la fiducia è piena: le pozioni di cura, portate dal
+  sergente. Il **Torque di Thorek I** non è fra questi: un torque non si manda
+  per mano d'altri, e il re lo dà di persona alla Scena 12, Momento 5 (§8 B)
+  `[CANONE — DM 2026-10-11]`.
 - ► **Esito**: *aiuti pieni / dimezzati*.
 
 🕯️ **Adesso metti l'orologio della notte sul tavolo** (§4): il consiglio ha già
@@ -2628,6 +2630,32 @@ non dal ritorno, e non aspetta che la Corona sia completa.
   permanente e RD 5/epico. La riga della matrice che lo dava qui era una
   mappatura vecchia, ed è stata corretta.
 
+#### Momento 5 — il torque del re `[CANONE — DM 2026-10-11]`
+
+Al consiglio i doni li ha portati il sergente. Il torque no: è l'oro che il re
+porta al collo, e un re nanico se lo toglie solo con le sue mani, davanti a
+tutti. Quella sera i PG erano forestieri con la corona di suo nonno; adesso il
+re ha visto la pietra entrare. È l'ultima cosa prima della Scena 13.
+
+> **Read-aloud (Casa di Davide lead) — il torque.** *Il re si fa avanti, e per
+> la prima volta da ieri sera non ha l'ascia in pugno. Porta le mani al collo e
+> apre il fermaglio: oro vecchio, ritorto come una corda, consumato liscio dove
+> la barba lo sfrega da cent'anni. Non chiama il sergente. Lo chiude lui attorno
+> al collo di Thorik, e il metallo è ancora caldo del re.*
+
+**RE THOREK I:** *«Ieri sera eravate forestieri con la corona di mio nonno. Un
+torque non si dà a chi arriva. Si dà a chi resta in piedi.»*
+
+✏️ *Se il duello è finito «vinto sporco» (§6), cambia solo l'ultima frase: «Si
+dà a chi è rimasto, anche quando non bastava.» Poi subito la Scena 13: il nano
+che si toglie l'elmo nella prima battuta è l'eco di questo gesto.*
+
+- **Meccanica**: §8 B, invariata.
+- **Se la Scena 12 salta** e la luce li prende prima, il re fa murare il torque
+  nell'incudine con una riga incisa, *«a chi resta in piedi»*, e i nani del 1372
+  lo tirano fuori quando riconoscono la Corona. Funziona, ma è un'eco più
+  debole del gesto.
+
 ### SCENA 13 — Il Rubino e il ritorno
 
 **In scena** — Dove: l'incudine — Chi: nessuno
@@ -2739,7 +2767,7 @@ premi di storia, come sempre.
 | Dove | Oggetto (pregenerato) | Valore |
 |---|---|---|
 | Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **pozioni di *cura ferite gravi*** dell'antica fucina, all'11° livello dell'incantatore (curano 3d8+11). Al tavolo le ha consegnate **il sergente** per ordine del re, e i giocatori le chiamano «di CFC»: curano quanto una CFC al minimo livello `[CANONE — DM 2026-10-06]` | 6.600 mo (3 × 11 × 50 l'una) |
-| Scena 4 (dono cerimoniale) | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
+| Scena 12, Momento 5 (dono del re, di persona) `[CANONE — DM 2026-10-11]` | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
 | Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
 | Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore). Il **corno da guerra di ferro nero** che chiama il drago è incatenato al polso di Grask, alla tenda: si prende solo lì (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
 | Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
