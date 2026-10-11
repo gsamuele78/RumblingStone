@@ -83,10 +83,10 @@ archi:
   stato: '**in corso**'
   march_clock: null
   pg_livello: 13 (D8)
-  note: 'Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito); **in corso: Piano della Terra (P4)**'
+  note: 'Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito), Piano della Terra (P4), **resurrezione di Hella (P3B, 2026-09-25)**; **in corso: viaggio a −1.000 (P5)**, ripreso dalla notte'
 - arco: 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni
-  tempo: preparato
-  stato: da giocare
+  tempo: in_corso
+  stato: '**in corso** — P3B giocato il 2026-09-25, P5 alla notte (3 tacche su 8)'
   march_clock: null
   pg_livello: '13'
   note: Si gioca DOPO la Terra (ARC-07 D2); raccordo D16 (Rubino) riporta i PG al 1372, Cuore della Montagna → ARC-08
@@ -171,31 +171,30 @@ archi:
 party:
 - pg: Thorik
   classe: Dwarf Fighter 13
-  oggi: Sala della Forgia Eterna, dopo il riposo (orologio Hammerfist **3g 16h**)
+  oggi: Hammerfist ≈372 DR, la notte prima dell'assalto (3 tacche su 8, nessuno ha dormito)
   preparato: Hammerfist Holds, war council chamber
-  hp: 'Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l''ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz''armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** Il costo della resurrezione è **non ancora versato**: la scena (`ARC07-DEF-3` §5) non è stata giocata. Quando la giocherà, dona il **+2 di deflessione della Corona** e resta a **−1 CA permanente** — e ogni volta che Hella userà lo **Scudo del Custode**, lui sarà **accelerato 3 round verso chi lei ha protetto**. Può anche **rifiutare**: allora Aegis Fang (Ego 14) lo **giudica** finché non rischia qualcosa di suo per lei'
+  hp: 'Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l''ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz''armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** ✅ Dono versato al rito del 2026-09-25: il **+2 di deflessione della Corona** è passato a Hella (**Scudo del Custode**), lui resta a **−1 CA permanente**, e ogni volta che Hella usa lo Scudo lui è **accelerato 3 round verso chi lei ha protetto**. ⚖️ Porta il **Debito della Radice** (E-07g), prezzo ignoto'
   stato: attivo
   filoni: Decide whether to lead defense of Rethmar personally vs. delegate
 - pg: Tordek
   classe: Dwarf Fighter 4 / Monk 9
-  oggi: Sala della Forgia Eterna, dopo il riposo
+  oggi: Hammerfist ≈372 DR, la notte prima dell'assalto
   preparato: → Torneo di Dauth
-  hp: 'Full; Bracieri Earth phase complete. ✅ **Nessun malus permanente dal rito**: il Peso del Mondo l''ha accettato **Thorik**, il portatore (correzione DM 2026-08-06 — fino a quella data il pegno era attribuito a Tordek per errore). CA senz''armatura, Riflessi, iniziativa e Raffica restano quelli di prima. ⚠️ Il costo della resurrezione è **non ancora versato**, e 🔎 **non sono più i «−500 PE»**: in v4-bis dona **Ancoraggio della Montagna** (2/g), che **lascia i Bracieri per sempre** → Hella ottiene **RD 3/adamantino**. Se rifiuta, i Bracieri **tacciono una settimana**'
+  hp: 'Full; Bracieri Earth phase complete. ✅ **Nessun malus permanente dal rito**: il Peso del Mondo l''ha accettato **Thorik**, il portatore (correzione DM 2026-08-06 — fino a quella data il pegno era attribuito a Tordek per errore). CA senz''armatura, Riflessi, iniziativa e Raffica restano quelli di prima. ✅ Dono versato al rito del 2026-09-25: l''**Ancoraggio della Montagna** ha lasciato i Bracieri per sempre → Hella ha **RD 3/adamantino**'
   stato: attivo
   filoni: Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3)
 - pg: Hella
   classe: Dream Dwarf Ranger 1 / Druid 12
-  oggi: 🔴 **morta**, corpo nella Sala, semi innestati — la resurrezione (P3B / `ARC07-DEF-3`) è **il prossimo beat da giocare**
+  oggi: ✅ **risorta** al rito del 2026-09-25 (Ibrido Treant, Collana al collo, Durik legato); Hammerfist ≈372 DR, la notte prima dell'assalto
   preparato: Hammerfist → Foresta Sacra, template Ibrido Treant attivo, PG a pieno titolo
-  hp: n/d finché non torna. Il template Ibrido Treant e i tre Doni **si assegnano al rito**, non prima
-  stato: morto
-  reversibile: true
+  hp: 'Full. Template Ibrido Treant; i **tre Doni** ricevuti tutti: Scudo del Custode (Thorik), RD 3/adamantino (Tordek), Rovo Eldritch a volontà (Artemis)'
+  stato: attivo
   filoni: Sacred Forest ritual (pass = druid circle ally at Rethmar)
 - pg: Artemis
   classe: Human Warlock 13
-  oggi: Sala della Forgia Eterna, dopo il riposo
+  oggi: Hammerfist ≈372 DR, la notte prima dell'assalto
   preparato: → Torre Invisibile (regione di Dauth)
-  hp: 'Full; Ring of Chaotic Illumination active, **Eldritch Blast 7d6**. ⚠️ Il costo del rito è **non ancora versato**: dona **1d6 di Eldritch Blast** (7d6 → **6d6**, per sempre) → Hella ottiene **il Rovo Eldritch**, a volontà. Se rifiuta, l''Anello **si spegne 24 ore**. **Fortezza Mentale** (dal Rifiuto di Lord of Sun and Shadow, Opzione C; DM 2026-09-25, D12): +2 permanente ai TS contro l''influenza divina'
+  hp: 'Full; Ring of Chaotic Illumination active. ✅ Dono versato al rito del 2026-09-25: **1d6 di Eldritch Blast** è passato a Hella (**Rovo Eldritch**), quindi **Eldritch Blast 6d6**, per sempre. **Fortezza Mentale** (dal Rifiuto di Lord of Sun and Shadow, Opzione C; DM 2026-09-25, D12): +2 permanente ai TS contro l''influenza divina'
   stato: attivo
   filoni: Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake
 artefatti:
@@ -220,18 +219,27 @@ artefatti:
   oggi: 'Active — Devastation Gauntlets (MIC) moved to **belt slot** so wrists stay free for the Bracieri; ~3/day devastation charges (+2d6). Sheet: `PG/Artefatti/Artefatti-Pg/Tordek/00_Cintura_della_Devastazione.md`. Exact values → ARC-07 B5'
   preparato: Unchanged
 - artefatto: Collana dei Semi Eterni
-  portatore: Hella (dead — resurrection pending)
-  oggi: Forged, awaiting the P3B ritual; Hella not yet resurrected
+  portatore: Hella
+  oggi: '✅ Nata al rito del 2026-09-25: i tre slot-dono sono pieni (Scudo del Custode, Pelle di Adamantio, Rovo Eldritch); ogni seme può restituire al donatore il suo potere una volta sola, quando Hella decide'
   preparato: 'Active post-resurrection: Treant summoning (limited), Avatar form (1/day). **I 3 slot-dono hanno una meccanica dal 2026-09-12** (`ARC07-DEF-3` §5, DM): ogni PG dona **un potere del proprio artefatto**, che lo lascia per sempre e **germoglia in un seme** — Thorik il **+2 di deflessione** → *Scudo del Custode*; Tordek l''**Ancoraggio** → *Pelle di Adamantio* RD 3/adamantino; Artemis **1d6 di Eldritch Blast** → *Rovo Eldritch* a volontà. 🌱 E il seme **restituisce** al donatore ciò che ha ricevuto, **una volta sola**, quando Hella decide. Slot **ancora non spesi**: il rito non è stato giocato'
 - artefatto: Cuore di Moradin
   portatore: Crown set (altar)
-  oggi: Intact — will be expended as catalyst in the P3B ritual
+  oggi: '🔥 SPESO al rito del 2026-09-25 per riportare Hella'
   preparato: 'SPENT: single-use expended to resurrect Hella'
 - artefatto: Orbe delle Otto Porte (Githyanki artifact, campaign canon)
   portatore: Tournament prize, not yet held
   oggi: Not in play
   preparato: Awaits Tournament outcome — N/A until Tordek wins
 echi:
+- id: E-07g
+  data: '2026-09-25'
+  autore: Thorik
+  fatto: 'davanti alla Custode delle Radici dice che il **Debito della Radice** lo paga lui, **senza sapere quale sia il prezzo**: un quarto ramo, fuori da A/B/C di `ARC07-DEF-3` §6'
+  tono: grigio
+  miccia: lunga (ARC-09, Cerchio Sacro)
+  payoff: '[INFERRED — needs DM confirmation] il prezzo e il momento in cui la Custode lo riscuote. Hella sa che il debito è suo e si trova a doverlo lasciare a lui'
+  stato: armato
+  tag: 🔫 armato
 - id: E-07a
   data: '2026-07-31'
   autore: Artemis

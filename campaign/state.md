@@ -12,23 +12,21 @@
 
 ---
 
-**Last updated:** 2026-05-01 (session marker — DM updates)
-**In-world date:** Flamerule, 1372 DR (piena estate — Valle di Channath; Giorno di Marcia 19 = 19 Flamerule)
+**Last updated:** 2026-09-25 (sessione 4 — resurrezione di Hella e prima notte a ≈372 DR)
+**In-world date:** Flamerule, 1372 DR per il March Clock (fermo: i PG sono a Hammerfist ≈372 DR, viaggio a −1.000)
 **Party APL:** 13 (ARC-07 D8 — livello reale già raggiunto durante l'Arco 07)
 **Sessions completed:** Arco 07 **in corso** al tavolo — giocati: Sala
 della Forgia Eterna (P1-P2), Piano del Fuoco con Topazio recuperato (P3),
-viaggio spirituale di Hella nell'Incudine del Mondo con Durik (P3B-spirito,
-registrato); **✅ Piano della Terra (P4) COMPLETATO al tavolo 2026-07-31**:
-Terros l'Antico sconfitto, **Smeraldo della Forza forgiato nella Corona**
-(rito: **Thorik ha accettato il Peso nel corpo** — −2 DES/+2 COS permanenti, il portatore paga il pegno;
-bottino dell'arco **intatto**), Seme-Mercato di Varis
-**preso ma mai toccato**; party rientrato nella Sala e **riposato lì**
-(orologio Hammerfist a **3g 16h**). **Prossimo: resurrezione di Hella (P3B).**
-Restano da giocare: resurrezione fisica di Hella (P3B), viaggio ai
-1.000 anni fa (P5), raccordo al 1372 (D16) — **poi** l'Arco 08 (Battaglia
-di Hammerfist). **Tutto ciò che questo file dice dell'Arco 08 e
-dell'Arco 09 è canone preparato (design), non ancora giocato al tavolo**
-(corretto 2026-07-02, piano ARC-08 A0 — vedi changelog).
+viaggio spirituale di Hella nell'Incudine del Mondo con Durik (P3B-spirito),
+Piano della Terra (P4, 2026-07-31), **resurrezione di Hella (P3B, 2026-09-25)**
+con **tutti e tre i Doni** e **Thorik che si prende il Debito della Radice**
+senza conoscerne il prezzo (eco E-07g). Nella stessa serata: l'arrivo a
+Hammerfist ≈372 DR, il consiglio di Re Thorek I, il giro della fortezza.
+**Prossimo: la notte a ≈372 DR dalla Scena 5** (3 tacche su 8 già segnate),
+poi l'alba, il duello con Skullcrusher e il Rubino (P5), il raccordo al 1372
+(D16) — **poi** l'Arco 08 (Battaglia di Hammerfist). **Tutto ciò che questo
+file dice dell'Arco 08 e dell'Arco 09 è canone preparato (design), non ancora
+giocato al tavolo** (corretto 2026-07-02, piano ARC-08 A0 — vedi changelog).
 
 > **DM workflow**: per la procedura di aggiornamento fine-sessione e per
 > far partire un nuovo gruppo senza perdere niente, vedi
@@ -52,8 +50,8 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
 | 04 Tomba di Belkram | ✅ | completato | — | 9 | — |
 | 05 Stanza Runica | ✅ | completato | — | 10 | — |
 | 06 Corona di Adamantio | ✅ | completato | — | 11 | — |
-| 07 Portale della Forgia Eterna | 🟡 | **in corso** | — | 13 (D8) | Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito); **in corso: Piano della Terra (P4)** |
-| 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni | ⬜ | da giocare | — | 13 | Si gioca DOPO la Terra (ARC-07 D2); raccordo D16 (Rubino) riporta i PG al 1372, Cuore della Montagna → ARC-08 |
+| 07 Portale della Forgia Eterna | 🟡 | **in corso** | — | 13 (D8) | Giocati: Forgia (P1-P2), Piano del Fuoco/Topazio (P3), viaggio spirituale Hella+Durik (P3B-spirito), Piano della Terra (P4), **resurrezione di Hella (P3B, 2026-09-25)**; **in corso: viaggio a −1.000 (P5)**, ripreso dalla notte |
+| 07 P3B Resurrezione di Hella + P5 Viaggio 1.000 anni | 🟡 | **in corso** — P3B giocato il 2026-09-25, P5 alla notte (3 tacche su 8) | — | 13 | Si gioca DOPO la Terra (ARC-07 D2); raccordo D16 (Rubino) riporta i PG al 1372, Cuore della Montagna → ARC-08 |
 | 08 Battaglia di Hammerfist | ⬜ | **pianificato — canone preparato, NON giocato** | **Day 19 (target sync)** | 13 (consolida, D9) | Esito atteso: vittoria, Cerimonia 100 Asce, Custodi Eterni (piano ARC-08 §0, E1-E8) |
 | 09 P1A Quest Hella (Cerchio Sacro) | ⬜ | **preparato in anticipo** | Day 20-30 window | 13 | Deadline Day 30 |
 | 09 P1B Cerchio Treant | ⬜ | **preparato in anticipo** | Day 22-28 | 13 | — |
@@ -90,10 +88,10 @@ Cruscotto sintetico. Aggiornato a fine sessione. Vedi sezioni successive per det
 
 | PC | Class | Stato | 🟢 Dov'è **adesso** (tavolo, ARC-07 P4 chiuso) | 🔵 Dove lo porta il canone **preparato** (post ARC-08) | HP / status **oggi** | Open personal threads |
 |---|---|---|---|---|---|---|
-| Thorik | Dwarf Fighter 13 | 🔴 attivo | Sala della Forgia Eterna, dopo il riposo (orologio Hammerfist **3g 16h**) | Hammerfist Holds, war council chamber | Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l'ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz'armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** Il costo della resurrezione è **non ancora versato**: la scena (`ARC07-DEF-3` §5) non è stata giocata. Quando la giocherà, dona il **+2 di deflessione della Corona** e resta a **−1 CA permanente** — e ogni volta che Hella userà lo **Scudo del Custode**, lui sarà **accelerato 3 round verso chi lei ha protetto**. Può anche **rifiutare**: allora Aegis Fang (Ego 14) lo **giudica** finché non rischia qualcosa di suo per lei | Decide whether to lead defense of Rethmar personally vs. delegate |
-| Tordek | Dwarf Fighter 4 / Monk 9 | 🔴 attivo | Sala della Forgia Eterna, dopo il riposo | → Torneo di Dauth | Full; Bracieri Earth phase complete. ✅ **Nessun malus permanente dal rito**: il Peso del Mondo l'ha accettato **Thorik**, il portatore (correzione DM 2026-08-06 — fino a quella data il pegno era attribuito a Tordek per errore). CA senz'armatura, Riflessi, iniziativa e Raffica restano quelli di prima. ⚠️ Il costo della resurrezione è **non ancora versato**, e 🔎 **non sono più i «−500 PE»**: in v4-bis dona **Ancoraggio della Montagna** (2/g), che **lascia i Bracieri per sempre** → Hella ottiene **RD 3/adamantino**. Se rifiuta, i Bracieri **tacciono una settimana** | Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3) |
-| Hella | Dream Dwarf Ranger 1 / Druid 12 | ⚫ morto *(reversibile)* | 🔴 **morta**, corpo nella Sala, semi innestati — la resurrezione (P3B / `ARC07-DEF-3`) è **il prossimo beat da giocare** | Hammerfist → Foresta Sacra, template Ibrido Treant attivo, PG a pieno titolo | n/d finché non torna. Il template Ibrido Treant e i tre Doni **si assegnano al rito**, non prima | Sacred Forest ritual (pass = druid circle ally at Rethmar) |
-| Artemis | Human Warlock 13 | 🔴 attivo | Sala della Forgia Eterna, dopo il riposo | → Torre Invisibile (regione di Dauth) | Full; Ring of Chaotic Illumination active, **Eldritch Blast 7d6**. ⚠️ Il costo del rito è **non ancora versato**: dona **1d6 di Eldritch Blast** (7d6 → **6d6**, per sempre) → Hella ottiene **il Rovo Eldritch**, a volontà. Se rifiuta, l'Anello **si spegne 24 ore**. **Fortezza Mentale** (dal Rifiuto di Lord of Sun and Shadow, Opzione C; DM 2026-09-25, D12): +2 permanente ai TS contro l'influenza divina | Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake |
+| Thorik | Dwarf Fighter 13 | 🔴 attivo | Hammerfist ≈372 DR, la notte prima dell'assalto (3 tacche su 8, nessuno ha dormito) | Hammerfist Holds, war council chamber | Full. **−4 DES / +2 COS / +4 CAR permanenti**, e sono tutto quel che ha pagato: −2 DES dalla Corona quando l'ha indossata, −2 DES / +2 COS / +4 CAR dal rito dello Smeraldo del 2026-07-31 (è il **portatore** ad aver accettato il Peso del Mondo). Ricalcolare CA senz'armatura, Riflessi, iniziativa. ⚠️ **Nessun −2 COS.** ✅ Dono versato al rito del 2026-09-25: il **+2 di deflessione della Corona** è passato a Hella (**Scudo del Custode**), lui resta a **−1 CA permanente**, e ogni volta che Hella usa lo Scudo lui è **accelerato 3 round verso chi lei ha protetto**. ⚖️ Porta il **Debito della Radice** (E-07g), prezzo ignoto | Decide whether to lead defense of Rethmar personally vs. delegate |
+| Tordek | Dwarf Fighter 4 / Monk 9 | 🔴 attivo | Hammerfist ≈372 DR, la notte prima dell'assalto | → Torneo di Dauth | Full; Bracieri Earth phase complete. ✅ **Nessun malus permanente dal rito**: il Peso del Mondo l'ha accettato **Thorik**, il portatore (correzione DM 2026-08-06 — fino a quella data il pegno era attribuito a Tordek per errore). CA senz'armatura, Riflessi, iniziativa e Raffica restano quelli di prima. ✅ Dono versato al rito del 2026-09-25: l'**Ancoraggio della Montagna** ha lasciato i Bracieri per sempre → Hella ha **RD 3/adamantino** | Tournament of the Eight Gates (3 days, interrupted by Githyanki Day 3) |
+| Hella | Dream Dwarf Ranger 1 / Druid 12 | 🔴 attivo | ✅ **risorta** al rito del 2026-09-25 (Ibrido Treant, Collana al collo, Durik legato); Hammerfist ≈372 DR, la notte prima dell'assalto | Hammerfist → Foresta Sacra, template Ibrido Treant attivo, PG a pieno titolo | Full. Template Ibrido Treant; i **tre Doni** ricevuti tutti: Scudo del Custode (Thorik), RD 3/adamantino (Tordek), Rovo Eldritch a volontà (Artemis) | Sacred Forest ritual (pass = druid circle ally at Rethmar) |
+| Artemis | Human Warlock 13 | 🔴 attivo | Hammerfist ≈372 DR, la notte prima dell'assalto | → Torre Invisibile (regione di Dauth) | Full; Ring of Chaotic Illumination active. ✅ Dono versato al rito del 2026-09-25: **1d6 di Eldritch Blast** è passato a Hella (**Rovo Eldritch**), quindi **Eldritch Blast 6d6**, per sempre. **Fortezza Mentale** (dal Rifiuto di Lord of Sun and Shadow, Opzione C; DM 2026-09-25, D12): +2 permanente ai TS contro l'influenza divina | Confront Zalkatar (CR 13 illithid warlock); Ring evolution at stake |
 <!-- /gen:state:party -->
 
 **Active companions:**
@@ -406,8 +404,8 @@ full mechanics.
 | Ring of Chaotic Illumination | Artemis | Reforged at Eternal Forge: full base powers | Unchanged; awaits further evolution at Invisible Tower |
 | Bracieri Gemelli di Moradin | Tordek | Fire ✅ + Earth ✅: Salto Infuocato 3/day, Fire Resist 10, DR 5/adamantine, Jump +10; Benedizione della Forgia active (4 charges/day — permanent, DM 2026-07-04); **Ancoraggio della Montagna 2/day** (immediata, nega il movimento forzato). ⭐ **NUOVO 2026-07-31 — «Diventare una Collina»** sbloccato dalla caduta di Terros: taglia Grande 1 min, 1/giorno, **prima attivazione automatica e gratuita** quando uno scontro con una creatura Enorme+ porta Tordek sotto metà pf; dopo, azione di movimento **solo in condizioni di pericolo** | Unchanged |
 | Cintura della Devastazione (custom PG, D17) | Tordek | Active — Devastation Gauntlets (MIC) moved to **belt slot** so wrists stay free for the Bracieri; ~3/day devastation charges (+2d6). Sheet: `PG/Artefatti/Artefatti-Pg/Tordek/00_Cintura_della_Devastazione.md`. Exact values → ARC-07 B5 | Unchanged |
-| Collana dei Semi Eterni | Hella (dead — resurrection pending) | Forged, awaiting the P3B ritual; Hella not yet resurrected | Active post-resurrection: Treant summoning (limited), Avatar form (1/day). **I 3 slot-dono hanno una meccanica dal 2026-09-12** (`ARC07-DEF-3` §5, DM): ogni PG dona **un potere del proprio artefatto**, che lo lascia per sempre e **germoglia in un seme** — Thorik il **+2 di deflessione** → *Scudo del Custode*; Tordek l'**Ancoraggio** → *Pelle di Adamantio* RD 3/adamantino; Artemis **1d6 di Eldritch Blast** → *Rovo Eldritch* a volontà. 🌱 E il seme **restituisce** al donatore ciò che ha ricevuto, **una volta sola**, quando Hella decide. Slot **ancora non spesi**: il rito non è stato giocato |
-| Cuore di Moradin | Crown set (altar) | Intact — will be expended as catalyst in the P3B ritual | SPENT: single-use expended to resurrect Hella |
+| Collana dei Semi Eterni | Hella | ✅ Nata al rito del 2026-09-25: i tre slot-dono sono pieni (Scudo del Custode, Pelle di Adamantio, Rovo Eldritch); ogni seme può restituire al donatore il suo potere una volta sola, quando Hella decide | Active post-resurrection: Treant summoning (limited), Avatar form (1/day). **I 3 slot-dono hanno una meccanica dal 2026-09-12** (`ARC07-DEF-3` §5, DM): ogni PG dona **un potere del proprio artefatto**, che lo lascia per sempre e **germoglia in un seme** — Thorik il **+2 di deflessione** → *Scudo del Custode*; Tordek l'**Ancoraggio** → *Pelle di Adamantio* RD 3/adamantino; Artemis **1d6 di Eldritch Blast** → *Rovo Eldritch* a volontà. 🌱 E il seme **restituisce** al donatore ciò che ha ricevuto, **una volta sola**, quando Hella decide. Slot **ancora non spesi**: il rito non è stato giocato |
+| Cuore di Moradin | Crown set (altar) | 🔥 SPESO al rito del 2026-09-25 per riportare Hella | SPENT: single-use expended to resurrect Hella |
 | Orbe delle Otto Porte (Githyanki artifact, campaign canon) | Tournament prize, not yet held | Not in play | Awaits Tournament outcome — N/A until Tordek wins |
 <!-- /gen:state:artefatti -->
 
@@ -468,6 +466,7 @@ fiction allows. Max ~12 armed — prune during prep.
 
 | ID | Origin (sess., PC, choice) | Tone | Fuse | Payoff sketch | Status |
 |----|----------------------------|------|------|---------------|--------|
+| **E-07g** | 2026-09-25 · **Thorik** · davanti alla Custode delle Radici dice che il **Debito della Radice** lo paga lui, **senza sapere quale sia il prezzo**: un quarto ramo, fuori da A/B/C di `ARC07-DEF-3` §6 | grigio | lunga (ARC-09, Cerchio Sacro) | [INFERRED — needs DM confirmation] il prezzo e il momento in cui la Custode lo riscuote. Hella sa che il debito è suo e si trova a doverlo lasciare a lui | 🔫 armato |
 | **E-07a** | 2026-07-31 · **Artemis** · prende il Seme-Mercato di Varis ma **non lo tocca**, e lo fa portare a **Tordek** | grigio | lunga (ARC-09) | Varis scopre di essere stato riconosciuto e trattato da pari: apre una **trattativa**, non una riscossione. E il giorno in cui serve un favore, la gemma è già in mano al party — sulla schiena sbagliata | 🔫 armato |
 | **E-07b** | 2026-07-31 · **Tordek** · porta nello zaino un innesto planare **senza sapere cosa sia** | grigio/inquieto | media | Il primo che tocca il Seme se ne prende il Marchio. Se è Tordek, Varis gli offre **certezze** invece che tesori — l'esca giusta per un monaco che ha perso una compagna | 🔫 armato |
 | **E-07c** | 2026-07-31 · **Thorik** · Al rito dello Smeraldo gli viene chiesto **«un pezzo di te stesso»**, e **non lo delega**: si inginocchia sotto il Peso invece di comprarne l'uscita col bottino dell'arco. −2 DES / +2 COS permanenti. | luminoso, costoso | media | **Ha pagato dove non si vede, e lo applaudono per la metà che si vede.** La DES era già la sua statistica povera — **10 di base**, e la Corona gliene aveva già tolti 2 quando se l'è messa in testa: questi altri due la portano a **6 di punteggio** (−4 in tutto), che al tavolo sono **un punto solo** di CA, Riflessi e iniziativa in più rispetto a ieri. Nessuno al tavolo lo noterà. Il +2 COS invece lo rende *più bravo* nell'unica cosa per cui lo misurano — reggere. Riemerge la prima volta che un nano di Hammerfist (o Re Thorek) lo elogia per quanto sa incassare e **lui non corregge nessuno**: l'unico che sa il prezzo è lui. Poi paga davvero quando al party viene chiesto un altro pegno e **Thorik si muove per primo**, perché adesso conosce il cambio e non si fida a lasciarlo accettare a un altro. | 🔫 armato |
