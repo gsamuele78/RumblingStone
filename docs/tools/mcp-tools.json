@@ -2452,6 +2452,119 @@
       "deterministic": false
     },
     {
+      "name": "banco_prosa_locale",
+      "description": "«Un modello che gira sul mio portatile scrive la prosa del tavolo abbastanza bene da usarlo, e come lo so senza fidarmi delle classifiche altrui?»\n\nADR-0089 (I2, 2026-10-10): un modello locale sugli stessi dieci casi delle skill di scrittura. `corsa` chiama un endpoint compatibile OpenAI (llama-server, Ollama, vLLM) e scrive plans/scrittura/corse/L-<etichetta>-<n>/ con corsa.json (modello, parametri, tempi), che voto_scrittura vota come le altre corse; senza servizio esce 3 e non scrive niente (ADR-0067). `coppie` prepara un foglio alla cieca per il DM con la chiave a parte; `esito` dà la quota di preferenze con l'intervallo di Wilson e, con --giudice, il κ di Cohen e l'accordo grezzo.",
+      "use_case": "«Un modello che gira sul mio portatile scrive la prosa del tavolo abbastanza bene da usarlo, e come lo so senza fidarmi delle classifiche altrui?»",
+      "invocation": "python3 scripts/banco_prosa_locale.py {corsa --url URL --modello M [--etichetta E] [--ripetizione N] [--contesto pieno|ridotto|nessuno] [--dry-run] | coppie --a CORSA --b CORSA -o FOGLIO.md | esito FOGLIO.md [--giudice FOGLIO.md]}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "corsa": {
+            "type": "string",
+            "description": "Genera i dieci casi contro il modello locale."
+          },
+          "url": {
+            "type": "string",
+            "description": "Endpoint compatibile OpenAI, es. http://127.0.0.1:8080/v1 (o BANCO_URL)."
+          },
+          "modello": {
+            "type": "string",
+            "description": "Nome del modello come lo chiama il server (o BANCO_MODELLO)."
+          },
+          "etichetta": {
+            "type": "string",
+            "description": "Nome della condizione: la cartella e' L-<etichetta>-<n>."
+          },
+          "ripetizione": {
+            "type": "integer",
+            "description": "Numero della ripetizione."
+          },
+          "contesto": {
+            "type": "string",
+            "description": "Quanto delle skill entra nel prompt.",
+            "enum": [
+              "pieno",
+              "ridotto",
+              "nessuno"
+            ]
+          },
+          "insieme": {
+            "type": "string",
+            "description": "Quali casi.",
+            "enum": [
+              "tutti",
+              "taratura",
+              "verifica"
+            ]
+          },
+          "caso": {
+            "type": "string",
+            "description": "Solo questo caso (ripetibile), es. S02 per misurare i tempi prima della corsa intera."
+          },
+          "temperatura": {
+            "type": "number",
+            "description": "Temperatura di campionamento."
+          },
+          "seme": {
+            "type": "integer",
+            "description": "Seme passato al server."
+          },
+          "max-token": {
+            "type": "integer",
+            "description": "Tetto dei token in uscita."
+          },
+          "tetto-fonte": {
+            "type": "integer",
+            "description": "Caratteri massimi dell'estratto del master."
+          },
+          "timeout": {
+            "type": "integer",
+            "description": "Secondi di attesa per caso."
+          },
+          "dry-run": {
+            "type": "boolean",
+            "description": "Stampa le dimensioni dei prompt: nessuna rete, nessun file."
+          },
+          "coppie": {
+            "type": "string",
+            "description": "Foglio alla cieca fra due corse, chiave a parte."
+          },
+          "a": {
+            "type": "string",
+            "description": "Corsa di riferimento, es. B-con-1."
+          },
+          "b": {
+            "type": "string",
+            "description": "Corsa sfidante, es. L-gemma26moe-1."
+          },
+          "o": {
+            "type": "string",
+            "description": "Dove scrivere il foglio."
+          },
+          "esito": {
+            "type": "string",
+            "description": "Legge il foglio compilato e la chiave."
+          },
+          "giudice": {
+            "type": "string",
+            "description": "Lo stesso foglio compilato da un giudice automatico."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "plans/scrittura/corse/L-<etichetta>-<n>/*.md",
+        "plans/scrittura/corse/L-<etichetta>-<n>/corsa.json"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso (manca --url/--modello, corsa gia' esistente)",
+        "3": "servizio non raggiungibile: nessun file scritto"
+      },
+      "deterministic": false
+    },
+    {
       "name": "campioni_kappa",
       "description": "«Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.\n\nEstrae i due campioni disgiunti (20+20, stratificati per classe, seme fisso) e calcola il kappa di Cohen fra il giudizio di un valutatore e quello della macchina. Sotto kappa 0,60 la metrica si dichiara NON affidabile e non entra in CI: e' la regola del piano, e il 2026-09-21 ha detto di no (kappa 0,0 con accordo osservato e atteso entrambi a 0,95).",
       "use_case": "«Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.",

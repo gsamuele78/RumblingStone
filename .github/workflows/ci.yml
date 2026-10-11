@@ -290,6 +290,10 @@ jobs:
           python scripts/comfyui_batch.py --lista > /dev/null
           python scripts/comfyui_batch.py --dry-run > /dev/null
           python scripts/render_map_blender.py --help > /dev/null
+          # Il ponte della prosa locale (ADR-0089): come ComfyUI, in CI solo la
+          # composizione del prompt; il modello gira sulla macchina del DM.
+          python scripts/banco_prosa_locale.py --help > /dev/null
+          python scripts/banco_prosa_locale.py corsa --dry-run > /dev/null
 
       # Tre cose che un --help non prova: che i cancelli MORDANO. Un gate che
       # esiste e non si verifica e' un gate che un giorno smette di funzionare
