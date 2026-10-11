@@ -89,6 +89,7 @@ comando alla fine.
 
 | Sintomo | Causa probabile | Rimedio |
 |---|---|---|
+| `start.sh` resta fermo su «host's nvidia integration» | `distrobox enter` segue il log del box, e su Bazzite quel log si ferma | gli script ora avviano il box con `podman start` e controllano il log a intervalli (`box_pronto` in `comune.sh`): si vedono dei puntini e poi «pronto» |
 | il setup dice che il box non vede la GPU | il box è stato creato senza `--nvidia` | `distrobox rm llm-locale --force` e rilancia il setup |
 | `ollama ps` dice `100% CPU` | la GPU non arriva nel box, o il modello non ci sta | controlla `distrobox enter llm-locale -- nvidia-smi`; prova il modello più piccolo |
 | il testo del caso ignora le norme | il contesto è stato tagliato | verifica che il server sia partito con `start.sh` (che imposta `LLM_CTX`) e non a mano |

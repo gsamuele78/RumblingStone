@@ -41,3 +41,29 @@ consiglia() {
   else echo "gemma4:e4b-it-qat"                        # 4-8 GB di GPU
   fi
 }
+
+# box_pronto: avvia il box e aspetta che la sua inizializzazione finisca, poi
+# torna. Perché non basta `distrobox enter`: a box spento, enter lo avvia e
+# segue il log (`podman logs -f`) fino a «container_setup_done». Sull'ASUS del
+# DM quel log si ferma su «host's nvidia integration» e enter resta appeso,
+# mentre una seconda sessione, a box già acceso, entra subito (2026-10-10 e
+# 2026-10-11). Qui si legge il log a intervalli invece di seguirlo; a box
+# acceso, enter non aspetta più niente.
+box_pronto() {
+  local stato t0 i
+  stato=$(podman inspect -f '{{.State.Running}}' "$BOX" 2>/dev/null || echo assente)
+  [ "$stato" = true ] && return 0
+  [ "$stato" = assente ] && { echo "ERRORE: il box '$BOX' non c'è. Lancia setup-distrobox.sh" >&2; return 1; }
+  t0=$(date +%s)
+  echo "==> avvio il box '$BOX' e aspetto la sua inizializzazione (la prima volta dopo un riavvio: minuti)"
+  podman start "$BOX" >/dev/null
+  for i in $(seq 1 180); do
+    if podman logs --since "$t0" "$BOX" 2>&1 | grep -q container_setup_done; then
+      echo " pronto"; return 0
+    fi
+    printf '.'; sleep 5
+  done
+  echo
+  echo "AVVISO: dopo 15 minuti l'inizializzazione non ha detto «finito». Provo lo stesso;" >&2
+  echo "        per vederla: podman logs --since $t0 $BOX | tail" >&2
+}
