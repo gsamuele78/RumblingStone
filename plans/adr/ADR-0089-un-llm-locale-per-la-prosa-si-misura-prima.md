@@ -257,6 +257,15 @@ si ferma prima (codice 4) o mette la corsa fuori dal voto (codice 5), e il
 contesto predefinito è 32.768. Resta valido il dato sui tempi, da 13 a 50
 secondi a caso. Il dettaglio è in [`RISULTATI.md`](../scrittura/RISULTATI.md).
 
+### La corsa valida sull'ASUS (2026-10-11)
+
+Rifatta con il contesto a 32.768: nessun caso guasto, 40% in taratura e 42% in
+verifica. Quasi tutta la distanza viene dalla forma del box: il modello scrive
+il read-aloud in paragrafi normali. Rimesso in forma da uno script, il voto
+sarebbe 94% e 91%, ma il banco non vede la sostanza, e lì il modello decide per
+i PG e non porta le meccaniche. Per la prima domanda della validazione la
+risposta resta no. Restano il foglio alla cieca, il 12B e la Dell.
+
 ## Conseguenze
 
 **Si guadagna** una risposta misurata sulla domanda, invece di un'opinione

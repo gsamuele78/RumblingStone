@@ -173,3 +173,38 @@ Dopo questa corsa, `banco_prosa_locale` controlla tre cose:
 Il contesto predefinito passa a 32.768 token e il tetto di risposta a 3.000.
 I tempi invece si possono già usare: da 13 a 50 secondi a caso, circa 32
 token al secondo, 40 strati su 43 nella GPU.
+
+## La corsa valida: `gemma4:e4b-it-qat` sull'ASUS (2026-10-11)
+
+La stessa prova, rifatta con 32.768 token di contesto e 3.000 di risposta.
+Nessun caso guasto: ogni prompt è arrivato intero (da 21.931 a 25.889 token per
+i casi di gioco) e ogni risposta si è chiusa da sola. Da 20 a 84 secondi a
+caso, 533 secondi in tutto.
+
+| condizione | taratura | verifica |
+|---|---:|---:|
+| B-con | 96/96 (100%) | 99/99 (100%) |
+| A-senza | 86/96 (89%) | 81/99 (81%) |
+| spazzatura (I1) | 44% | 42% |
+| **L-gemma4e4bitqat-1** | **13/32 (40%)** | **14/33 (42%)** |
+
+Il voto è al livello della spazzatura, e quasi tutto per una ragione sola.
+In quattro casi su sei di gioco (S01, S02, S06, S07) il modello scrive il
+read-aloud, spesso etichettato e in S02 e S07 chiuso su «Che fate?», ma in
+paragrafi normali. La citazione in corsivo (`> *…*`) che la norma prescrive non
+c'è, e senza il box cadono gli otto controlli che lo riguardano.
+
+**Una prova diagnostica**, che non è la misura: rimettendo quei paragrafi nella
+forma del box con uno script, senza toccare una parola, il voto sale a 30/32 in
+taratura e 30/33 in verifica (94% e 91%). Restano due forme di dialogo, un
+trattino e un `hdywtdt`. Quindi la forma delle norme si può recuperare dopo, con
+un passo meccanico. Il resto il banco non lo vede, e si legge nei testi:
+
+- in S02 il modello scrive azioni ed esiti dei cinque PG («Il tuo martello…
+  incontra la prima scaglia»), cioè decide per i giocatori;
+- nessun caso di combattimento porta le meccaniche che B-con mette accanto al
+  box (la CD della Presenza Terrificante, chi non tira e perché, le righe per
+  esito).
+
+La soglia di ADR-0089 per «rispetta le norme» è il 90% in verifica: con il 42%
+non la passa. Se il DM lo userebbe come bozza lo dice il foglio alla cieca.
