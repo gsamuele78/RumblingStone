@@ -81,7 +81,9 @@ prompt: `LLM_CONTESTO=ridotto scripts/llm-locale/prova.sh`.
 L'uscita di `prova.sh` (i secondi per caso e la tabella del voto), e la riga di
 `distrobox enter llm-locale -- ollama ps` mentre il modello lavora: dice quanto
 del modello sta nella GPU e quanto nella CPU. Le cartelle `corse/L-*` si
-possono committare sul ramo: sono la prova.
+committano sul ramo insieme a `plans/scrittura/voti.json`, che `prova.sh`
+riscrive: la CI controlla che i due siano allineati. `prova.sh` stampa il
+comando alla fine.
 
 ## Se qualcosa non va
 

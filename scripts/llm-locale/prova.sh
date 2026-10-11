@@ -28,8 +28,11 @@ python3 scripts/banco_prosa_locale.py corsa --url "$URL" --modello "$MODELLO" \
 
 echo "==> 3/3 il voto e il foglio alla cieca"
 python3 scripts/voto_scrittura.py --corse
+# voti.json va committato insieme alla corsa: la CI lo confronta con corse/.
+python3 scripts/voto_scrittura.py --emit
 FOGLIO="plans/scrittura/prove-locali/foglio-$ETICHETTA-$N.md"
 python3 scripts/banco_prosa_locale.py coppie --a B-con-1 --b "L-$ETICHETTA-$N" --seme "$N" -o "$FOGLIO"
 echo
 echo "Ora leggi ad alta voce $FOGLIO, scrivi 1, 2 o = dopo ogni «Preferito:», poi:"
 echo "  python3 scripts/banco_prosa_locale.py esito $FOGLIO"
+echo "Per mandarla: git add plans/scrittura/corse/L-$ETICHETTA-$N plans/scrittura/voti.json && git commit -m 'corsa L-$ETICHETTA-$N' && git push"
