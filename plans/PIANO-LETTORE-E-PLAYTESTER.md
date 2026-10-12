@@ -6,7 +6,7 @@
 > due letture a freddo fatte da un agente con una rubrica fissa
 > (`skills/rumblingstone-playtest/references/`).
 >
-> **Stato**: 🟡 F1-F3 e F7-F9 chiusi; restano F4 (allargato al ciclo del master, ADR-0075), F5 e le decisioni qui sotto · **Decisore**: DM ·
+> **Stato**: 🟡 F1-F3 e F7-F9 chiusi; F3-quinquies col giro 3 completo e il passo 7 (2026-10-12), in attesa di D49-D62 e del giro 4; restano F4 (allargato al ciclo del master, ADR-0075), F5 e le decisioni qui sotto · **Decisore**: DM ·
 > **Decisione**: [ADR-0073](adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md)
 > **Gate**: `copertura_scene.py --check` verde; su `ARC07-DEF-4` la lettura a
 > freddo ripetuta dopo F3 non trova più rilievi 🔴 nelle Scene 5-9
@@ -529,8 +529,23 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       tutti sul conto delle tacche della regia e sulle versioni veloci:
       corretti. Rapporto in `esperimenti/def4-giro3-serata/`. Manca il lettore,
       e il resto del master non è stato riletto: la casella resta aperta)*
-- [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
-      approvata (D1)
+      *(2026-10-12, giro 3 completo, PR #239: le quattro letture su tutto il
+      master, una alla volta, in `esperimenti/def4-giro3/`. Lettore 🔴 1 · 🟠 5 ·
+      🟡 35; playtester 🔴 0 · 🟠 4 · 🟡 20; developer 🔴 0 · 🟠 7 · 🟡 16; DM a
+      freddo, a scene e registrato con l'impronta, 🔴 0 · 🟠 9 · 🟡 24. Corretti
+      quelli che il testo risolve (fra gli altri: il volo dei nani in armatura a
+      12 m, il *comando superiore* di Balvar col TS a ogni turno, i giavellotti
+      di Zog'tar, le statistiche di Durik e dei Treant, la C.2 allineata alla
+      Scena 6). L'unico 🔴, le pozioni del re in due versioni, e gli 🟠 di
+      canone sono D49-D62. Tre falsi allarmi verificati e scartati: la CA 33 di
+      Skullcrusher, il GS 16 del drago Vecchio, la pozione di *neutralizza
+      veleno*. Resta aperta: dopo le decisioni serve un giro 4 di conferma, e
+      la lettura del DM è già scaduta per le correzioni fatte dopo)*
+- [x] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
+      approvata (D1) *(2026-10-12, dal diario del DM a freddo, in
+      `esperimenti/def4-giro3/passo7/`: quiz **10 su 14**, il ricordo ha la
+      missione, gli avversari e il fallimento. Un rilievo nuovo: il vincolo del
+      drago non resta a chi legge)*
 
 ### F4 · Gli altri master di ARC-07 — ⬜ · allargato il 2026-09-27 (ADR-0075)
 
