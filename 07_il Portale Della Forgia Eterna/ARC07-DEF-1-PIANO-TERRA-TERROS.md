@@ -139,7 +139,7 @@ pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
    la **Spinta** (3 m, prova di FOR CD 25, nani a terra +4) — gratis, la
    scegli tu, **una sola volta per round**. Nessun attacco di opportunità
    per nessuno.
-2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m, Rifl 22.
+2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m; chi trova una superficie entro 9 m la colpisce (Rifl 22 o 4d6 e prono), gli altri restano sospesi. Tordek resta sull'Altare.
 3. **Stalattiti** (ricarica 5-6/d6): 8d6 raggio 9 m, Rifl 22 ½ — *Artemis
    con azione preparata le disintegra (contatto CA 12)*.
 4. **Scudo di Geodi** (ricarica 1d3): +4 CA, no critici — *Tordek lo frantuma
@@ -156,8 +156,9 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
 > tossiche ambientali; PF1e sì. Se vuoi crunch più solido, usa queste (fonte
 > PF1e, ambiente planare) al posto delle improvvisazioni:
 > - **Zero-G (camera di Terros)**: chi non vola si muove solo **spingendosi da
->   una superficie** (linea retta, metà velocità) o con **Volare CD 20** per
->   manovrare; senza appigli è **in balia** (può solo derivare). Combattere
+>   una superficie** (linea retta, metà velocità); chi vola (Artemis) manovra
+>   con le regole di volo del 3.5, e nello zero-G con la sua manovrabilità
+>   piena (buona, 18 m) `[CANONE — DM 2026-10-12, D79]`; senza appigli è **in balia** (può solo derivare). Combattere
 >   fluttuando: **−4 agli attacchi in mischia** senza un punto d'appoggio.
 >   Prima esposizione: **Tempra CD 15** o **nauseato 1 round** (vertigine da
 >   caduta libera — i nani, gente di pietra, la odiano).
@@ -359,7 +360,7 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 | Attacco in mischia | −2 (armi pesanti ×2 ingombro) | nessuna penalità |
 | Prove di FOR/DES | −4 | **+2** di competenza alla FOR (aiuta) |
 | Carico | ×2 (Medio → Pesante) | +2 FOR per il calcolo (compensa) |
-| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** Volare CD 20 a fine round o precipita (Volare è l'abilità di PF1e, §0-bis: in 3.5 non esiste) |
+| Volo (Artemis, Ali d'Ombra: 18 m, manovrabilità buona) | — | regole di volo del 3.5, senza prove: la gravità doppia dimezza la velocità (9 m) e abbassa la manovrabilità a media, quindi non può restare ferma in aria e deve muoversi di almeno 4,5 m ogni round, o scende `[CANONE — DM 2026-10-12, D79]` |
 
 **Cadute in gravità aumentata.** Danno **1d10 per 3 m** (non 1d6) — versione
 "Iraconda" del RICALIBRATO; velocità terminale raggiunta prima. CD dei
@@ -552,8 +553,8 @@ Vedi **MAPPA T-1** (orizzonte) e **MAPPA T-2** (foresta).
 
 **La scena (il momento di Tordek & Thorik).** Un pilastro di cristallo gigante
 è corroso alla base: gli Xorn ne stanno **divorando le vene di mithral** — per
-loro il metallo è cibo, e il party ne porta molto. Se il pilastro cade farà da
-ponte sull'abisso di lava fredda, ma travolgerà chi è sotto. **Gli Xorn NON
+loro il metallo è cibo, e il party ne porta molto. Se il pilastro cade travolgerà
+chi è sotto `[CANONE — DM 2026-10-12, D79]`. **Gli Xorn NON
 sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 **«Fauci di Diamante»**, è vecchio, scaltro e famelico: negozia… o spezza.
 
@@ -561,7 +562,7 @@ sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 - **A — Demolizione ingegneristica (Shine Time di Tordek).** Conoscenze
   (Ingegneria/Dungeoneering) **CD 18** per l'angolo di rottura, poi colpo
   mirato (FOR o attacco) **CD 20** sul punto di stress → il pilastro crolla
-  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza) e crea un ponte sicuro.
+  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza).
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
   (Intimidire o Diplomazia **CD 18**, come la via C `[CANONE — DM 2026-10-12, D36]`) per accerchiarli in
@@ -631,8 +632,8 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   metà; se avanza in armi, tendono l'agguato.
 - **E se sorvolano, sono invisibili o silenziosi.** La percezione tremorica
   (SRD) localizza chi è a contatto col suolo, e basta. Chi si è alzato da
-  terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (che qui chiedono
-  Volare CD 20 a ogni fine round, §3) sparisce dalla loro percezione, e il
+  terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (in volo, con le regole
+  del §3) sparisce dalla loro percezione, e il
   bersaglio preferito del round 1 diventa il PG più arretrato fra quelli a
   terra. L'invisibilità e Muoversi Silenziosamente, da soli, non servono: gli
   Xorn non guardano e non ascoltano, sentono il peso.
@@ -656,8 +657,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   pilastro di mithral non sia ancora intatto: la fame lo fa restare un round
   di troppo (la sua debolezza caratteriale).
 - **Sviluppi.** Xorn fuggiti NON avvertono nessuno (non hanno padroni), ma se
-  il party ripassa di qui, li ritrova — affamati e più prudenti. Il pilastro
-  crollato (via A) crea il ponte permanente sull'abisso.
+  il party ripassa di qui, li ritrova — affamati e più prudenti.
 
 > *Calibrazione rapida: Blast di Artemis ~28/colpo automatico; Thorik colpisce
 > con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
@@ -766,7 +766,7 @@ potrà essere colto di sorpresa, niente apertura sonica al §8). Punizione vera.
 **Successo (6).** Percorso sicuro; **info sul boss** (Terros è **vulnerabile
 al sonico**); **+2 TS contro Terros** (dono della Madre). Soprattutto i
 Cristalli consegnano la **Frequenza della Confusione** (arma sonora, §8) e,
-come **Successo Critico**, il **Diapason Armonico** (frammento: **stun Terros
+come **Successo Critico** (6 successi senza nessun fallimento `[CANONE — DM 2026-10-12, D79]`), il **Diapason Armonico** (frammento: **stun Terros
 1 round, senza TS, una volta sola** — spezza il ciclo di rigenerazione).
 
 > **MADRE CRISTALLO (dopo il successo):** *«Carne-morbida… onesti. Rari.
@@ -1096,7 +1096,9 @@ tenendo la musica. Ogni prova riuscita solleva dall'oceano un blocco di pietra,
 e i blocchi fanno una scala; **Tordek salta da un detrito sopra l'oceano, a
 metà strada**, e da lì al portale. La prova è quella della Frequenza (§8):
 Intrattenere (Canto) **CD 18**, l'Anello di Artemis dà +4
-`[CANONE — DM 2026-09-30]`. Senza il Diapason (il gruppo ha saltato i Cristalli, §6) la scala non
+`[CANONE — DM 2026-09-30]`. Suonarlo per la scala **non lo consuma**: il suo uso unico è lo stordimento.
+Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
+`[CANONE — DM 2026-10-12, D79]`. Senza il Diapason (il gruppo ha saltato i Cristalli, §6) la scala non
 si alza, e restano i tre ruoli qui sopra.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — «la salita cantata».** Al tavolo
@@ -1137,7 +1139,7 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 > **THORIK** — *«Il metallo chiama il metallo.»* *Armatura, scudo, ascia: di
 > colpo pesano tonnellate, non verso il basso, ma verso le pareti. Sei
 > scagliato contro la parete nord e la Magnetite ti tiene incollato come una
-> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 28 per liberarti;
+> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 25 per liberarti;
 > finché no, non puoi muoverti). Fuori dallo scontro, costretto a
 > guardare.
 > **ARTEMIS** — *«Ciò che sfida la terra dev'essere abbattuto.»* *La gravità
@@ -1156,7 +1158,7 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
   si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
   ordinaria.
 - **Thorik**, durante il duello, si libera **del tutto** con la prova di
-  **FOR CD 28**, una volta per round. L'aiuto di Artemis dà **+2** solo se gli
+  **FOR CD 25** `[CANONE — DM 2026-10-12, D79]`, una volta per round. L'aiuto di Artemis dà **+2** solo se gli
   è adiacente, come ogni aiuto dell'SRD: prona sotto dieci volte la gravità
   non si sposta, quindi vale se la Magnetite l'ha lasciata accanto a lui. Nessuna
   scheda degli artefatti dà un aiuto a distanza `[CANONE — DM 2026-10-12, D68]`.
@@ -1366,9 +1368,8 @@ una sfera nuda:
   dall'Altare, oltre lo zero-G: è la via di fuga — raggiungibile solo in
   volo o spingendosi dalle superfici. **Non si può «stazionare a metà»**:
   nel vuoto senza appigli si è in balia (§0-bis).
-- **Due piattaforme laterali** sopraelevate (+3 m, scale di pietra): **posizioni
-  di tiro** elevate per Artemis e per chi vuole stare fuori dalla portata di
-  Terros (4,5 m).
+- Niente piattaforme laterali: la sfera è a gravità zero tranne l'Altare, e
+  Artemis tira in volo `[CANONE — DM 2026-10-12, D79]`.
 - **Altare di Smeraldo levitante** al centro: lo Smeraldo **levita +1,5 m**
   sopra l'Altare; finché Terros è vivo la piattaforma è la sua roccaforte
   (rigenera al contatto). **Alla vittoria, l'Altare scende lentamente** e lo
@@ -1382,7 +1383,7 @@ una sfera nuda:
 > generazione superata del design: **il Golem delle immagini È la Sentinella
 > di Mithral dell'Anticamera (§7b)**, non il boss del Nodo. Usa pure quelle
 > immagini per la Sentinella; per Terros usa le immagini delle caverne/nodo.
-> La scenografia ricca della MAP 6 (ponte, piattaforme, altare levitante)
+> La scenografia ricca della MAP 6 (l'altare levitante)
 > resta — è la casa di Terros. **Un solo boss, zero doppioni.**
 
 **Apertura sonica.** Se il party entra cantando la **Frequenza della
@@ -1465,8 +1466,12 @@ POTERI CON RICARICA — ognuno è la sua AZIONE del round
 A) ONDA GRAVITAZIONALE (standard; ricarica: 1 round ogni 1d4
    dopo l'uso): sceglie una direzione; la gravità della camera
    si sposta là per 1 round. Tutti "cadono" 9 m in quella
-   direzione: Riflessi CD 22 o 4d6 contundenti + proni contro
-   la superficie d'impatto.
+   direzione. Chi trova una superficie entro 9 m (l'Altare, la
+   parete) la colpisce: Riflessi CD 22 o 4d6 contundenti + prono.
+   Chi non la trova resta sospeso a 9 m, senza danni, e rientra
+   come chiunque nello zero-G (spinta da una superficie, o volo).
+   Tordek, con l'Ancoraggio dei Bracieri, resta sull'Altare
+   [CANONE — DM 2026-10-12, D79].
 B) PIOGGIA DI STALATTITI (standard; ricarica 5-6 su d6): raggio
    9 m centrato a scelta, 8d6 (contundente+perforante), Riflessi
    CD 22 dimezza.  ► CONTRO-MOMENTO (Artemis, avido di gloria):
@@ -1479,7 +1484,10 @@ C) SCUDO DI GEODI (standard; ricarica 1d3 round): solleva lastre
    ► CONTRO-MOMENTO (Tordek, "Frantuma-Scudo"): un colpo dei
    Bracieri che infligga >15 danni SONICI in un colpo manda in
    frantumi lo scudo e lascia Terros FRASTORNATO per il round di
-   Thorik.
+   Thorik. Il Frantumare dei Bracieri qui non scatta (vuole un
+   critico, e Terros ne è immune): i colpi di Tordek sono sonici
+   nel round in cui il gruppo canta la Frequenza
+   [CANONE — DM 2026-10-12, D79].
 
 CONTRO-MOMENTO (Thorik, "Radice a Terra") `[CANONE — DM 2026-07-31,
    ERRATA]`: quando Terros usa Earth Glide per sfuggire/ricaricarsi,
@@ -1537,7 +1545,7 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 > l'armatura è àncora e bandiera insieme: Aegis Fang morde il
 > bordo dell'Altare, il braccio urla, e il morso tiene. Tordek, il mondo ruota e tu
 > ruoti con lui — i Bracieri sussurrano una parola sola, «peso», e i tuoi piedi
-> trovano il muro come fosse pavimento. Artemis, tu sei l'unico per cui nulla è
+> restano piantati sull'Altare come fosse pavimento. Artemis, tu sei l'unico per cui nulla è
 > cambiato: le Ali d'Ombra non obbediscono alla terra. Da lassù restano sotto
 > di te il boss, l'Altare, i tuoi compagni aggrappati al mondo capovolto. La sua
 > testa di roccia si volta lenta verso di te, l'unico che non è caduto. Che
@@ -2433,7 +2441,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
 05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫   🥋G05 Tordek · 🕳️O05 Xorn 2
 06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 07    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla → ponte)
+08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
 09    🟫 🟫 🔷 🟫 🟫 🟫 ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   ⬛G09 = «Fauci di Diamante» (sotto il pilastro)
 10    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
         🔷 = Cristallo Gigante (copertura totale, indistruttibile)

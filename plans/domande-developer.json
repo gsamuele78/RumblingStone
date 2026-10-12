@@ -111,6 +111,13 @@
       "scena": "SCENA 3",
       "dettaglio": "scontro con un nemico in volo: niente per chi resta a terra",
       "ragione": "falso positivo: in volo c'è un PG (Artemis), non un nemico; la riga è la tattica degli hobgoblin contro chi vola"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D1",
+      "scena": "SCENA 3",
+      "dettaglio": "scontro con un nemico in volo: niente per chi resta a terra",
+      "ragione": "falso positivo: in volo c'è un PG (Artemis) che sorvola gli Xorn; gli Xorn stanno nella pietra, e chi resta a terra ha il suo bersaglio"
     }
   ]
 }

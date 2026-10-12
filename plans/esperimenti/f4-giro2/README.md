@@ -17,17 +17,17 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🔴 | l'Onda Gravitazionale nello zero-G | **domanda al DM**, D79 (a) |
-| 2 🟠 | il Diapason nella salita | **domanda al DM**, D79 (f) |
-| 3 🟠 | la Forza CD 28 di Thorik | **domanda al DM**, D79 (b): l'errore era nella proposta di D37 |
-| 4 🟠 | le piattaforme laterali | **domanda al DM**, D79 (c) |
-| 5 🟠 | l'abisso di lava fredda | **domanda al DM**, D79 (d) |
-| 6 🟠 | il Successo Critico dei Cristalli | **domanda al DM**, D79 (e) |
+| 1 🔴 | l'Onda Gravitazionale nello zero-G | D79 (a), deciso: chi non trova una superficie resta sospeso; Tordek resta sull'Altare |
+| 2 🟠 | il Diapason nella salita | D79 (f), deciso: suonarlo non lo consuma, 4 prove |
+| 3 🟠 | la Forza CD 28 di Thorik | D79 (b), deciso: CD 25 (l'errore era nella proposta di D37) |
+| 4 🟠 | le piattaforme laterali | D79 (c), deciso: tolte |
+| 5 🟠 | l'abisso di lava fredda | D79 (d), deciso: niente ponte |
+| 6 🟠 | il Successo Critico dei Cristalli | D79 (e), deciso: 6 successi senza fallimenti |
 | 7 🟠 | il *Vigore della Forgia* | spiegato in linea: il potere di cura dei Bracieri, 3 cariche al giorno |
-| 8 🟠 | i danni sonici di Tordek | **domanda al DM**, D79 (g): il Frantumare non scatta su Terros, immune ai critici |
+| 8 🟠 | i danni sonici di Tordek | D79 (g), deciso: sonici nel round della Frequenza |
 | 9 🟠 | la scena della pergamena dentro DEF-1 | una riga prima del blocco: si gioca nella notte del 372, e chi sono Brynja, Kettra e le tacche |
 | 10 🟠 | i PX che si contraddicono | le righe di §5 e §7b allineate alla tabella del §11-bis: 1.700 e 1.500 a testa |
-| 11 🟠 | Volare di PF1e | **domanda al DM**, D79 (h) |
+| 11 🟠 | Volare di PF1e | D79 (h), deciso dal DM diversamente: volo del 3.5, niente prova di Volare |
 
 I 21 🟡 aspettano il giro dopo le risposte di D79.
 
