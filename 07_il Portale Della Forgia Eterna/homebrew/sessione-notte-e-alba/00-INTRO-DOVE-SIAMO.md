@@ -34,7 +34,9 @@ del primo tiro:
   giro della fortezza, le gallerie di Zeth). Ne restano **5**. Nessuno ha
   dormito.
 - **Re Thorek I**: fiducia piena. Le pozioni del re sono arrivate per mano del
-  sergente; il torque no.
+  sergente, cinque di *volare* e quattro di *cura ferite gravi*; il torque no.
+  **Nessuna pozione d'invisibilità del re**: al campo valgono le due comprate,
+  da 3 minuti l'una.
 - **Hella**: risorta, con i tre Doni. È il suo primo scontro da risorta, e
   Durik è al suo fianco.
 - **Thorik**: porta il Debito della Radice, senza sapere quale sia il prezzo.
@@ -51,6 +53,7 @@ del primo tiro:
 | II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
 | III · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
 | IV · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
+| V · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
 | **Il volume dei giocatori** | ✉ | gli echi della serata e le dieci boccette |
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |

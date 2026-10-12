@@ -17,13 +17,14 @@
 |---|---|---|---:|---:|---|
 | **0** | Prima di cominciare | questa pagina, e il box in testa al booklet | 10 | 10 | ✉ gli echi, uno a testa · ✉ le dieci boccette |
 | **I** | Le ultime scelte nella fortezza | `DEF-4` §4 l'orologio, Scena 5 | 15 | 20 | — |
-| **II** | Il campo | `DEF-4` Scene 6-9 | 80 | 105 | — |
+| **II** | Il campo, andata e ritorno | `DEF-4` Scene 6-9 | 90 | 115 | — |
 | — | Pausa | | 10 | 15 | |
 | **III** | L'alba | `DEF-4` Scene 10 e 11 | 75 | 90 | — |
 | **Stop** | L'esito del duello | `DEF-4` Scena 11, fine | 5 | 5 | |
 
-**Totale**: circa **3 ore e 15** nella colonna «tre ore», **4 ore e 5** in
-quella intera. La differenza sta in due scelte, scritte sotto ogni atto alla
+**Totale**: circa **3 ore e 25** nella colonna «tre ore», **4 ore e 15** in
+quella intera. Il ritorno a piedi dalla tenda (cinque blocchi) è dentro
+l'Atto II. La differenza sta in due scelte, scritte sotto ogni atto alla
 voce **«Per stare nelle tre ore»**: il mare di tende a montaggio e il duello
 con la regia veloce se il tavolo è stanco. **Balvar e Zog'tar non si
 tagliano**: sono le due scene che cambiano il duello.
@@ -49,7 +50,8 @@ giocatrice di Hella.
 
 | Scheda | Perché |
 |---|---|
-| Skullcrusher, `DEF-4` Appendice A.1 | il duello, e la riga del soffio contro Durik |
+| Skullcrusher, `DEF-4` Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
+| Durik, capitolo V | +50% di danni dall'acido: il soffio lo prende in pieno |
 | Zog'tar e le quattro guardie, Appendice A.2 | la tenda, o le mura se Zog'tar è vivo all'alba |
 | Balvar, Appendice A.4 | parla prima di combattere, o durante |
 | La Forgia ricorda le ferite, capitolo IV | si segnano le ferite durante il duello, non dopo |
@@ -62,6 +64,12 @@ dell'Atto I, uno per giocatore, prima delle scelte.
 **Le dieci boccette**: se il tavolo non ha ancora il foglio di Kettra, va dato
 adesso. Le pozioni identificate sono già nel loro inventario.
 
+**Le pozioni che decidono il campo**, dal log del 25 settembre: le cinque di
+*volare* del re, e due di *invisibilità* comprate da Brynja (3 minuti l'una).
+Le quattro pozioni del re sono state di *cura ferite gravi*, non
+d'invisibilità (`DEF-4` §8 B): stasera nessuno ha l'invisibilità di 12 minuti
+che il master dà alla Scena 6. Controlla sul log cosa è stato già bevuto.
+
 ---
 
 ## §2 · Atto I — Le ultime scelte nella fortezza
@@ -69,16 +77,20 @@ adesso. Le pozioni identificate sono già nel loro inventario.
 **Apri** `DEF-4` §4, la tabella dell'orologio, e la tabella d'uscita sotto.
 
 Restano **5 tacche**. Dillo con i numeri, è la regola dell'orologio: il
-tavolo deve sapere quanto ha in mano. Il campo ne costa almeno **3** (2 per il
-mare di tende, 1 per il ritorno a piedi), quindi in fortezza ne avanzano
-**2** al massimo, prima di entrare nella zona gialla.
+tavolo deve sapere quanto ha in mano. Il campo a piedi ne costa almeno **3**
+(2 per il mare di tende, 1 per il ritorno), e 3 + 3 fa **6**: è il massimo
+per arrivare in tempo. **In fortezza non avanza niente.** Una tacca spesa qui
+porta a 7, e si rientra di corsa (−1 ai TS del primo round del duello). Due
+tacche, o una tacca e un fallimento nel campo, portano a 8: l'alba li coglie
+fuori. Il volo all'andata ne fa risparmiare una (sotto, Atto II).
 
 Le scelte che valgono una tacca stasera, dalla tabella:
 
 - Hella veglia i semi della Collana: all'alba i due Treant caricano il fianco
   dell'orda (Scena 10, un successo in più alle mura);
 - il banchetto e le benedizioni: +1 morale per 12 ore;
-- una sosta di tre ore costa **2**, e non lascia margine.
+- una sosta di tre ore costa **2**: con il campo a piedi porta a 8, cioè
+  all'alba fuori dalle mura. Va detto prima che la scelgano.
 
 ⚠️ **L'orologio corre sulle scelte, non sul tempo reale.** Un tavolo che
 discute non spende tacche.
@@ -91,8 +103,11 @@ una tacca e chiedi un sì o un no a testa.
 ## §3 · Atto II — Il campo
 
 **Scena 6, il mare di tende** (`DEF-4` Scena 6). La prova di gruppo a CD fissa
-costa **2 tacche**, più 1 per ogni fallimento. Se hanno *volare* in mano,
-c'è la variante dall'alto (+1 tacca).
+costa **2 tacche**, più 1 per ogni fallimento. Con le pozioni di *volare* c'è
+la variante dall'alto, che costa **1 tacca invece di 2**. Hella può volare da
+aquila con la forma selvatica e lasciare la sua pozione per il ritorno. Senza
+l'invisibilità del re, il primo blocco a piedi lo coprono solo le due pozioni
+comprate; dopo si tira Nascondersi CD 22.
 
 **Scena 7, la tenda del comando** (`DEF-4` Scena 7). **Balvar** è nella tenda.
 Parlargli prima di colpire costa **1 tacca**; parlargli durante lo scontro
@@ -108,15 +123,17 @@ Artemis lo sente prima di chiunque: dagli lo spotlight.
 **Gli scontri che possono capitare per strada**, tutti con la loro tattica nel
 master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
 sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
-guardie della tenda (Scena 8). Le righe marcate `[INFERRED]` sono proposte da
-confermare: se non ti vanno, cambiale prima della serata.
+guardie della tenda (Scena 8). Lo scontro con la pattuglia o con i lupi costa
+una tacca in più. Le righe marcate `[INFERRED]` sono proposte da confermare:
+se non ti vanno, cambiale prima della serata.
 
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 
 **Per stare nelle tre ore**: il mare di tende passa alla versione veloce,
-`DEF-4` Appendice C.2, la parte «Infiltrazione». Tre tiri, dieci minuti, stesse
-tacche. Zog'tar resta completo.
+`DEF-4` Appendice C.2, la parte «Infiltrazione»: tre tiri e dieci minuti,
+2 tacche più 1 per ogni tiro fallito, e il ritorno in un tiro solo. Zog'tar
+resta completo.
 
 ---
 
@@ -142,6 +159,10 @@ da tenere davanti:
   della Forgia nel momento in cui succede.
 
 Il finisher, se il drago muore, **va al giocatore** (`[HDYWTDT]`, §0-ter).
+
+Gli esiti della Scena 11 sono tre (ucciso, ferito grave, fuggito). Il quarto,
+**vinto sporco**, sta nel `DEF-4` §6, ultima riga: scatta se due PG cadono
+nello stesso round o se il gruppo si ritira.
 
 **Per stare nelle tre ore**: se il tavolo è stanco dopo Zog'tar, il duello
 passa alla regia veloce, `DEF-4` Appendice C.3, tre scambi. Le ferite si

@@ -18,4 +18,4 @@
 ---
 
 **Solo per te.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
-stesso punto in cui ce l'hai tu. Prima dell'alba vorrà sapere perché la tieni.
+stesso punto in cui ce l'hai tu, e non te l'ha detto.

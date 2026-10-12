@@ -57,7 +57,9 @@ del primo tiro:
   giro della fortezza, le gallerie di Zeth). Ne restano **5**. Nessuno ha
   dormito.
 - **Re Thorek I**: fiducia piena. Le pozioni del re sono arrivate per mano del
-  sergente; il torque no.
+  sergente, cinque di *volare* e quattro di *cura ferite gravi*; il torque no.
+  **Nessuna pozione d'invisibilità del re**: al campo valgono le due comprate,
+  da 3 minuti l'una.
 - **Hella**: risorta, con i tre Doni. È il suo primo scontro da risorta, e
   Durik è al suo fianco.
 - **Thorik**: porta il Debito della Radice, senza sapere quale sia il prezzo.
@@ -74,6 +76,7 @@ del primo tiro:
 | II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
 | III · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
 | IV · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
+| V · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
 | **Il volume dei giocatori** | ✉ | gli echi della serata e le dieci boccette |
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
@@ -111,13 +114,14 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 |---|---|---|---:|---:|---|
 | **0** | Prima di cominciare | questa pagina, e il box in testa al booklet | 10 | 10 | ✉ gli echi, uno a testa · ✉ le dieci boccette |
 | **I** | Le ultime scelte nella fortezza | cap. III §4 l'orologio, Scena 5 | 15 | 20 | — |
-| **II** | Il campo | cap. III Scene 6-9 | 80 | 105 | — |
+| **II** | Il campo, andata e ritorno | cap. III Scene 6-9 | 90 | 115 | — |
 | — | Pausa | | 10 | 15 | |
 | **III** | L'alba | cap. III Scene 10 e 11 | 75 | 90 | — |
 | **Stop** | L'esito del duello | cap. III Scena 11, fine | 5 | 5 | |
 
-**Totale**: circa **3 ore e 15** nella colonna «tre ore», **4 ore e 5** in
-quella intera. La differenza sta in due scelte, scritte sotto ogni atto alla
+**Totale**: circa **3 ore e 25** nella colonna «tre ore», **4 ore e 15** in
+quella intera. Il ritorno a piedi dalla tenda (cinque blocchi) è dentro
+l'Atto II. La differenza sta in due scelte, scritte sotto ogni atto alla
 voce **«Per stare nelle tre ore»**: il mare di tende a montaggio e il duello
 con la regia veloce se il tavolo è stanco. **Balvar e Zog'tar non si
 tagliano**: sono le due scene che cambiano il duello.
@@ -143,7 +147,8 @@ giocatrice di Hella.
 
 | Scheda | Perché |
 |---|---|
-| Skullcrusher, cap. III Appendice A.1 | il duello, e la riga del soffio contro Durik |
+| Skullcrusher, cap. III Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
+| Durik, capitolo V | +50% di danni dall'acido: il soffio lo prende in pieno |
 | Zog'tar e le quattro guardie, Appendice A.2 | la tenda, o le mura se Zog'tar è vivo all'alba |
 | Balvar, Appendice A.4 | parla prima di combattere, o durante |
 | La Forgia ricorda le ferite, capitolo IV | si segnano le ferite durante il duello, non dopo |
@@ -156,6 +161,12 @@ dell'Atto I, uno per giocatore, prima delle scelte.
 **Le dieci boccette**: se il tavolo non ha ancora il foglio di Kettra, va dato
 adesso. Le pozioni identificate sono già nel loro inventario.
 
+**Le pozioni che decidono il campo**, dal log del 25 settembre: le cinque di
+*volare* del re, e due di *invisibilità* comprate da Brynja (3 minuti l'una).
+Le quattro pozioni del re sono state di *cura ferite gravi*, non
+d'invisibilità (cap. III §8 B): stasera nessuno ha l'invisibilità di 12 minuti
+che il master dà alla Scena 6. Controlla sul log cosa è stato già bevuto.
+
 ---
 
 ## §2 · Atto I — Le ultime scelte nella fortezza
@@ -163,16 +174,20 @@ adesso. Le pozioni identificate sono già nel loro inventario.
 **Apri** cap. III §4, la tabella dell'orologio, e la tabella d'uscita sotto.
 
 Restano **5 tacche**. Dillo con i numeri, è la regola dell'orologio: il
-tavolo deve sapere quanto ha in mano. Il campo ne costa almeno **3** (2 per il
-mare di tende, 1 per il ritorno a piedi), quindi in fortezza ne avanzano
-**2** al massimo, prima di entrare nella zona gialla.
+tavolo deve sapere quanto ha in mano. Il campo a piedi ne costa almeno **3**
+(2 per il mare di tende, 1 per il ritorno), e 3 + 3 fa **6**: è il massimo
+per arrivare in tempo. **In fortezza non avanza niente.** Una tacca spesa qui
+porta a 7, e si rientra di corsa (−1 ai TS del primo round del duello). Due
+tacche, o una tacca e un fallimento nel campo, portano a 8: l'alba li coglie
+fuori. Il volo all'andata ne fa risparmiare una (sotto, Atto II).
 
 Le scelte che valgono una tacca stasera, dalla tabella:
 
 - Hella veglia i semi della Collana: all'alba i due Treant caricano il fianco
   dell'orda (Scena 10, un successo in più alle mura);
 - il banchetto e le benedizioni: +1 morale per 12 ore;
-- una sosta di tre ore costa **2**, e non lascia margine.
+- una sosta di tre ore costa **2**: con il campo a piedi porta a 8, cioè
+  all'alba fuori dalle mura. Va detto prima che la scelgano.
 
 ⚠️ **L'orologio corre sulle scelte, non sul tempo reale.** Un tavolo che
 discute non spende tacche.
@@ -185,8 +200,11 @@ una tacca e chiedi un sì o un no a testa.
 ## §3 · Atto II — Il campo
 
 **Scena 6, il mare di tende** (cap. III Scena 6). La prova di gruppo a CD fissa
-costa **2 tacche**, più 1 per ogni fallimento. Se hanno *volare* in mano,
-c'è la variante dall'alto (+1 tacca).
+costa **2 tacche**, più 1 per ogni fallimento. Con le pozioni di *volare* c'è
+la variante dall'alto, che costa **1 tacca invece di 2**. Hella può volare da
+aquila con la forma selvatica e lasciare la sua pozione per il ritorno. Senza
+l'invisibilità del re, il primo blocco a piedi lo coprono solo le due pozioni
+comprate; dopo si tira Nascondersi CD 22.
 
 **Scena 7, la tenda del comando** (cap. III Scena 7). **Balvar** è nella tenda.
 Parlargli prima di colpire costa **1 tacca**; parlargli durante lo scontro
@@ -202,15 +220,17 @@ Artemis lo sente prima di chiunque: dagli lo spotlight.
 **Gli scontri che possono capitare per strada**, tutti con la loro tattica nel
 master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
 sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
-guardie della tenda (Scena 8). Le righe marcate `[INFERRED]` sono proposte da
-confermare: se non ti vanno, cambiale prima della serata.
+guardie della tenda (Scena 8). Lo scontro con la pattuglia o con i lupi costa
+una tacca in più. Le righe marcate `[INFERRED]` sono proposte da confermare:
+se non ti vanno, cambiale prima della serata.
 
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 
 **Per stare nelle tre ore**: il mare di tende passa alla versione veloce,
-cap. III Appendice C.2, la parte «Infiltrazione». Tre tiri, dieci minuti, stesse
-tacche. Zog'tar resta completo.
+cap. III Appendice C.2, la parte «Infiltrazione»: tre tiri e dieci minuti,
+2 tacche più 1 per ogni tiro fallito, e il ritorno in un tiro solo. Zog'tar
+resta completo.
 
 ---
 
@@ -236,6 +256,10 @@ da tenere davanti:
   della Forgia nel momento in cui succede.
 
 Il finisher, se il drago muore, **va al giocatore** (`[HDYWTDT]`, §0-ter).
+
+Gli esiti della Scena 11 sono tre (ucciso, ferito grave, fuggito). Il quarto,
+**vinto sporco**, sta nel cap. III §6, ultima riga: scatta se due PG cadono
+nello stesso round o se il gruppo si ritira.
 
 **Per stare nelle tre ore**: se il tavolo è stanco dopo Zog'tar, il duello
 passa alla regia veloce, cap. III Appendice C.3, tre scambi. Le ferite si
@@ -566,7 +590,8 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > **Leggi solo questo, in quest'ordine**: §4 «L'orologio della notte» (10 min) ·
 > Scena 6 il mare di tende (15 min) · Scene 7 e 8 la tenda, con la mappa M7-C
 > e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · Scene 10 e 11, le mura
-> e il duello, con l'Appendice A.1. Ci si ferma sull'esito del duello, prima
+> e il duello, con l'Appendice A.1. Gli scontri possibili per strada
+> (pattuglia, lupi, sciamani) hanno le statistiche in Appendice A.6. Ci si ferma sull'esito del duello, prima
 > della Scena 12. Al tavolo sono circa tre ore; la
 > regia della serata, nel suo booklet, dice dove tagliare. Il resto del master
 > (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti chiedono
@@ -1199,6 +1224,12 @@ tacca è mezz'ora scarsa di gioco reale.
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** | **1** · **0** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
+| Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[INFERRED — needs DM confirmation]` | **1** |
+| Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia `[INFERRED — needs DM confirmation]` | **+1** |
+| … e una banda chiamata da uno sciamano (Scena 6) `[INFERRED — needs DM confirmation]` | **+1** |
+
+Se il gruppo si divide (metà vola, metà cammina), vale il conto del gruppo più
+lento `[INFERRED — needs DM confirmation]`.
 
 **Quando le tacche finiscono, sorge il sole.** Non è una punizione: è la Scena 10
 che comincia, con i PG dove sono in quel momento.
@@ -1207,7 +1238,13 @@ che comincia, con i PG dove sono in quel momento.
 |---|---|
 | ≤ 6 | in tempo. Si rientra, si schiera, le mura e il duello vanno come scritto. Le tacche che restano prima dell'8 si spendono con la tabella qui sopra, come nella Scena 5: tre ore di sosta (2) ci stanno, otto ore di sonno (6) no. La fucina, la cappella e la bottega sono aperte come nella Scena 5 |
 | 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
-| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio. Con 3 tacche già spese, una sola scelta lenta porta ancora qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
+| 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio. Con 3 tacche già spese e il campo a piedi (3), una scelta lenta porta al giallo (7), e una scelta lenta più un fallimento portano qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
+
+**Se l'alba arriva prima della tenda** `[INFERRED — needs DM confirmation]`. Zog'tar è vivo all'alba (riga
+della tabella «Dalla notte», Scena 10), e siccome la Scena 10 non si gioca,
+durante il duello sta sotto le mura a guardare, come nella sua tattica sulla
+breccia. Balvar resta nella tenda: la Catena si può solo spezzare. Vatore, mai
+incontrato, non si perde: il filo [VATORE/SAL] passa ad ARC-09.
 
 ⚠️ **L'orologio corre sulle SCELTE, non sul tempo reale.** Un tavolo che discute
 mezz'ora su cosa fare non spende una tacca; un tavolo che decide di andare a
@@ -1804,6 +1841,12 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 **Pozione di Invisibilità** (CL 12, 12 minuti: l'SRD dà 1 minuto per livello), e le **Benedizioni di Moradin**
 sono già addosso (+2 morale al colpire e ai danni, 12 ore).
 
+⚠️ **Al tavolo del primo gruppo le quattro pozioni del re sono state di *cura
+ferite gravi*** (§8 B,), non d'invisibilità. Lì
+nessuno ha l'invisibilità del re: chi ne ha una comprata (3 minuti) copre il
+primo blocco, poi si tira **Nascondersi CD 22**; oppure si vola. Quale delle
+due versioni resta nel master per i gruppi futuri è una decisione del DM.
+
 **Cosa sanno gli esploratori nanici, e cosa non è esatto.** Hanno guardato il
 campo dalle mura da quando è arrivato, senza mai entrarci. Durin lo dice alla
 postierla, prima di aprire, anche se nessuno glielo chiede: manda fuori quattro
@@ -1875,6 +1918,8 @@ blocchi** da 200 m.
     la tenda più vicina, per prendere tempo. Da lì il corridore parte con
     **1-2** su 1d6.
   - Non inseguono oltre il blocco: tornare in fila conta più di vincere.
+  - *Chi sente*: non gridano, ma il clangore sì. La ronda di orchi più vicina
+    arriva in **1d4+2 round**, come per i lupi qui sotto.
 
 **Come si sorveglia un campo di diecimila**. I numeri sono una proposta costruita sulle
 organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
@@ -1882,7 +1927,7 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
 
 | Chi | Quanti | Dove | Cosa sente |
 |---|---|---|---|
-| **i cavalieri dei lupi**, goblin su worg | 6 squadre da 10 in giro alla volta: 60 worg sui circa 120 del campo | l'anello **fuori** dal campo, circa 6 km di giro. Ogni squadra tiene un chilometro e ripassa dallo stesso punto ogni quarto d'ora | il worg: Ascoltare e Osservare **+6**, olfatto a **9 m** (18 m col vento a favore, 4,5 m contro), scurovisione 18 m. Il goblin in sella: +1 |
+| **i cavalieri dei lupi**, goblin su worg | 6 squadre da 10 in giro alla volta: 60 worg sui circa 120 del campo | l'anello **fuori** dal campo, circa 6 km di giro. Ogni squadra tiene un chilometro e ripassa dallo stesso punto ogni quarto d'ora | il worg: Ascoltare e Osservare **+6**, olfatto a **9 m** (18 m col vento a favore, 4,5 m contro), scurovisione 18 m. Il goblin in sella: +2 |
 | **le ronde degli orchi** | quattro orchi e un sergente di 3°, una ogni 200 m circa | dentro, fra i fuochi | Ascoltare e Osservare **+1** |
 | **gli squadroni hobgoblin** | sei in fila, uno per quartiere | dentro, verso il centro | Ascoltare e Osservare **+2**. Sono i soli che marciano al passo |
 | **le vedette goblin** | due per carro, sui carri dei viveri | dentro, ai margini dei fuochi | Ascoltare e Osservare **+2**, scurovisione 18 m. Strillano prima di pensare |
@@ -1899,11 +1944,17 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   con il morso (SRD): due lupi su un bersaglio, uno lo butta a terra e l'altro
   morde chi è prono. I goblin non scendono di sella e tirano giavellotti. **Il
   rumore di uno scontro con i lupi si sente**: è fuori dal campo, ma la ronda di
-  orchi più vicina arriva in **1d4+2 round**, come alla tenda (Scena 8). Quando
+  orchi più vicina arriva in **1d4+2 round**, come alla tenda (Scena 8), e lo
+  scontro costa una tacca in più, come la pattuglia. Quando
   metà dei worg è a terra, la squadra scappa ululando verso le altre, e il
   primo blocco dentro il campo si tira a CD +2. Contro l'invisibile il worg
-  morde dove il fiuto gli dice che c'è qualcuno: ha ancora il 50% di mancare,
-  ma non deve indovinare il quadretto (SRD, olfatto).
+  segue il fiuto: l'olfatto dà la direzione, e da adiacente il quadretto
+  (SRD). Morde con il 50% di mancare, ma non deve indovinare dove colpire.
+  Contro chi vola i goblin tirano i giavellotti (incremento 9 m) e i worg
+  girano sotto, ad aspettare l'atterraggio. **Thorik e Tordek sono nani**: la
+  stabilità dà loro +4 contro lo sbilanciare (SRD), e sono i due che i lupi
+  non buttano giù (anche Hella, se la sua scheda di nana del sogno ha la
+  stabilità).
 - **Gli sciamani.** Gli esploratori di Durin non li hanno visti, e non vuol dire
   che non ci siano: uno sciamano non esce dal campo, e di giorno dorme. Nel 3.5
   lo sciamano di una tribù è un **adepto** (classe da PNG dell'SRD). Settemila
@@ -1917,11 +1968,13 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   **5** (il falò) l'invisibilità non protegge: c'è uno sciamano che la vede.
   **Se uno sciamano li vede** `[INFERRED — needs DM confirmation]`: non
   combatte da solo. Grida il nome della sua banda, e dal blocco dopo la CD
-  sale di +2, come per le vedette. Se lo colpiscono prima che gridi (round di
-  sorpresa, o un attacco preparato), cade in silenzio: è un adepto di 5° con
+  sale di +2, come per le vedette, e si somma al +4 del corno. Se lo
+  colpiscono prima che gridi (vincendo l'iniziativa, o con un'azione
+  preparata), cade in silenzio: è un adepto di 5° con
   una ventina di pf. Se grida, la sua banda arriva in **1d4+2 round**: venti
   orchi guerrieri di 1° livello, che contro PG di 13° non sono un pericolo ma
-  un rumore, e il rumore costa una tacca.
+  un rumore, e il rumore costa una tacca (è la riga «una banda chiamata»
+  dell'orologio, §4).
 
 - **Complicazioni (tira 1d6 per blocco):**
 
@@ -1978,7 +2031,9 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
   `[Private source]`, quindi è coperta. **Durik** non vola: o resta alla
   postierla, o **Hella lo rimanda nel terzo seme** della Collana per la notte.
   La scheda della Collana dice già che all'alba è di nuovo intero: così torna
-  per il duello senza spendere cariche. Richiamarlo prima, alla tenda, costa
+  per il duello senza spendere cariche. **Hella** è druida di 12° livello: può
+  volare da aquila con la forma selvatica (SRD) e lasciare la sua pozione a chi
+  torna in volo. Richiamarlo prima, alla tenda, costa
   una carica dell'Evocazione dei Guardiani e vale un'ora. Con i due Treant
   dell'alba, che ne costano due, le cariche finiscono tutte e tre.
 - **Il ritorno**. Si torna in volo finché
@@ -2297,7 +2352,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Non se ne accorgono** | il duello va come scritto |
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa**: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
-| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello. Vale come spezzarla (riga sotto) |
+| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello `[INFERRED — needs DM confirmation]` |
 | **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
@@ -2377,9 +2432,10 @@ motivo per cui la Scena 7 viene prima.
   alla tenda in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**: sono
   «i rinforzi» di cui parla la Scena 7. Statistiche in Appendice A.6. Chi
   resta oltre il loro arrivo combatte l'orda, non più un generale.
-- **La tenda è alta 6 m al palo centrale e 3 m ai lati**. Chi vola
-  sotto il telo resta fuori dalla portata dell'ascia (3 m). Le risposte
-  dell'orda, tutte SRD:
+- **La tenda è alta 6 m al palo centrale e 3 m ai lati**. Sotto il
+  telo chi vola **non** esce dalla portata dell'ascia: Zog'tar è alto 3 m e
+  arriva a 3 m oltre, cioè fino al colmo. Ne esce solo chi sta fuori dal telo.
+  Le risposte dell'orda, tutte SRD:
   - **Zog'tar** tiene **tre giavellotti Grandi** accanto al seggio: +20 a
     distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
     palo centrale** (Forza **CD 20**, azione standard): il telo crolla, e chi è
@@ -2421,15 +2477,18 @@ motivo per cui la Scena 7 viene prima.
   - **Cosa si porta all'alba**: i pf che ha perso stanotte restano persi, e il
     duello della Scena 11 comincia **senza sorpresa**, perché li conosce.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
-  OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Le 4 guardie
-  ingaggiano i PG più esposti.
+  OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Delle quattro
+  guardie, due restano al seggio e due vanno sul PG più esposto (qui sotto).
 - **Come combattono le quattro guardie** `[INFERRED — needs DM confirmation]`.
   Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
   lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
-  tornano davanti al seggio. **Non scappano finché Zog'tar è in piedi**: lui
-  le guarda. Se cade, le due rimaste gettano le armi e corrono fuori a
-  gridare, ed è l'allarme anche se Grask dorme.
+  tornano davanti al seggio. Contro chi è invisibile colpiscono il quadretto da
+  cui viene il colpo, con il 50% di mancare. **Non scappano finché Zog'tar è
+  in piedi**: lui le guarda. Se cade, le guardie rimaste gettano le armi e
+  corrono fuori a gridare, ed è l'allarme anche se Grask dorme. Per questo un
+  Zog'tar ucciso in silenzio vuole prima le guardie a terra, o una bolla di
+  *silenzio* sulla tenda.
 - **Round 2-3**: carica il bersaglio che fa più danni, **Colpo Possente**
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
@@ -2475,7 +2534,9 @@ Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano.
 - **Riesce** → Zog'tar **arretra**, e arretrando esce dalla tenda davanti alle
   sue guardie. Perde la faccia, e con lei il campo: l'orda all'alba combatte a
   **−1 morale**, che annulla il successo in meno delle mura della Scena 10, se
-  c'era.
+  c'era. È un'azione standard. Le guardie lo seguono fuori senza combattere e
+  Grask non suona; umiliato non vuol dire «vivo all'alba»: non sale sulla
+  breccia `[INFERRED — needs DM confirmation]`.
 - ► **Esito nuovo**: *umiliato, non ucciso*. 🔴 **Ed è un problema, non un
   premio**: Zog'tar **vive**, e in ARC-08 i discendenti della sua orda, nella Mano Rossa, hanno un generale in più
   nella sua storia. Registra nell'Echo Ledger (§7).
@@ -2498,7 +2559,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   **modera** (1-2 cariche, colpi mirati) → Moradin gli concede **+1 sacro ai TS
   vs paura** in futuro. *(Nota: contro Skullcrusher la Cintura si rifiuta, Scena 11.)*
 - **ARTEMIS — pulito o spettacolare**: uccidere Zog'tar in **silenzio** (blast
-  mirato) tiene basso l'allarme; ucciderlo in modo **spettacolare** (esplosione
+  mirato) tiene basso l'allarme: se nessuno esce dalla tenda a gridare (le
+  guardie, qui sopra) e Grask non suona, alle mura non c'è il successo in meno
+  e il duello comincia senza picchiata; ucciderlo in modo **spettacolare** (esplosione
   davanti alle guardie) sparge terrore ma **fa infuriare Skullcrusher** (il
   duello della Scena 11 inizia in picchiata). È il suo bivio da predone: efficienza vs leggenda.
 - **HELLA — controllo o distruzione**: *Intralciare* fuori dalla tenda blocca i
@@ -2615,7 +2678,9 @@ Non combatte. Se lo attaccano, il primo colpo che va a segno lo ferisce (riga
 «Lo feriscono») e alla fine del suo turno il **Cronolito** lo porta via. Il
 Cronolito sposta nel tempo, non nello spazio: *àncora dimensionale* non lo
 ferma, e nemmeno una lotta. Chi lo teneva si ritrova con il suo mantello in
-mano.
+mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
+un colpo: nessun tiro salvezza, e alla fine del suo turno il Cronolito lo porta
+via `[INFERRED — needs DM confirmation]`.
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
@@ -2635,7 +2700,7 @@ L'artefatto che stringe al petto è in **Appendice B**.
 > **Il percorso dell'atto.** Dal primo ariete al ritorno. Le mura, il drago che
 > cala sul cortile, il rito all'incudine, la luce del Rubino.
 >
-> 🛑 **Dove si ferma una serata**: la prima si ferma al primo box della Scena 10,
+> 🛑 **Dove si ferma una serata**: per chi gioca l'arco da capo, la prima serata si ferma al primo box della Scena 10,
 > e il resto dell'atto è della sessione dopo. Il gruppo di oggi si è fermato
 > prima, alla Scena 5 (§4, «Dove si riprende»), e la sua serata dopo si ferma
 > sull'esito del duello, prima della Scena 12.
@@ -2722,22 +2787,29 @@ avverte (Appendice A.2).
 
 **Come combatte sulla breccia** `[INFERRED — needs DM confirmation]`. Il
 camminamento è largo quanto un tavolo da pranzo: ci si sta in uno, al massimo
-in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano.
+in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano. Lassù
+**si stringe** (SRD): −4 al colpire e −4 alla CA finché resta sul camminamento,
+ed è per questo che vuole buttare giù chi ha davanti.
 - **Round 1**: Ira, e l'Occhio di Ossidiana su chi porta la Corona. Le quattro
   guardie tengono la testa delle scale alle sue spalle: chi vuole arrivargli
   dietro deve passare da loro.
-- **Round 2 e dopo**: **Spingere Migliorato** (SRD) su chi gli sta davanti. Sul
-  camminamento non c'è dove arretrare, e un PG spinto oltre il bordo cade nel
-  cortile o fuori, fra l'orda. Il master non dà l'altezza delle mura: la
-  proposta è 9 m, cioè 3d6 di caduta (SRD). Chi cade fuori ha un round per
-  rialzarsi, e intorno ci sono scale e uncini.
+- **Round 2 e dopo**: il **Colpo Devastante** (Appendice A.2) su chi gli sta
+  davanti, perché non deve entrare nel suo spazio; **Spingere Migliorato** solo
+  se il bersaglio è già al bordo. Thorik e Tordek hanno la stabilità dei nani,
+  +4 contro la spinta (SRD). Sul camminamento non c'è dove arretrare, e un PG
+  scagliato oltre il bordo cade nel cortile o fuori, fra l'orda: le mura sono
+  alte **4,5 m** (mappa M7-B), cioè 1d6 di caduta (SRD). Fa poco male; il
+  guaio è dove si atterra. Chi cade fuori ha un round per rialzarsi, e intorno
+  ci sono scale e uncini.
 - **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
   per inseguire nessuno: la breccia è sua.
 - **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
 - **Se il drago cala mentre lui è vivo**, Zog'tar scende dalla scala e resta
   sotto le mura a guardare: vuole vedere il drago finirli. Il duello della
   Scena 11 si gioca con lui là sotto, e chi lo cerca lo trova.
-- **I PE** sono quelli della Scena 8, e non si sommano.
+- **I PE** sono quelli della Scena 8, e non si sommano. Se Zog'tar si combatte
+  solo qui, vale circa **1.950 a testa** (§8 A).
+- **Se cade qui**, il colpo finale va al giocatore (`[HDYWTDT]`, §0-ter).
 
 
 | Successi (su 4) | Cosa cambia davvero |
@@ -2990,7 +3062,7 @@ che l'incontro ha appena scelto.
 
 **In scena** — Dove: l'incudine — Chi: Thorgrim · Re Thorek I
 
-#### La scena, in tre momenti
+#### La scena, i primi tre momenti
 
 > ✏️ *Da dove viene il Rubino: **nessuno lo porta**. Appare
 > sull'incudine nel momento della vittoria, come se la Forgia l'avesse battuto da
@@ -3487,9 +3559,10 @@ standard dell'SRD: nessuna ha una scheda sua nel repo.
 | Creatura | Da dove viene | Cosa conta |
 |---|---|---|
 | **Pattuglia di 4 orchi** | complicazione 3 | Guerriero 3; passano a 6 m |
-| **Cavalieri dei lupi** | il primo e l'ultimo blocco | worg SRD (GS 2): 30 pf, CA 14, morso +7 (1d6+4) e sbilanciare, Ascoltare e Osservare +6, olfatto 9 m. Goblin in sella: combattente 1, Ascoltare e Osservare +1 |
+| **Cavalieri dei lupi** | il primo e l'ultimo blocco | worg SRD (GS 2): 30 pf, CA 14, morso +7 (1d6+4) e sbilanciare, Ascoltare e Osservare +6, olfatto 9 m. Goblin in sella: combattente 1, Ascoltare e Osservare +2 |
 | **Vedette goblin** | complicazione 4 | goblin SRD (GS 1/3): Ascoltare e Osservare +2, scurovisione 18 m |
-| **Squadrone di 6 hobgoblin** | complicazione 6 | a 24 m; manda il corridore |
+| **Squadrone di 6 hobgoblin** | complicazione 6 | a 24 m; manda il corridore. Se combatte, ha i numeri della pattuglia dei tre fallimenti, qui sotto |
+| **Ronda di orchi** | accorre alla tenda e agli scontri (Scene 6 e 8) | quattro orchi SRD (combattente 1, GS 1/2) e un sergente guerriero 3 |
 | **La pattuglia dei tre fallimenti** | skill challenge | otto hobgoblin guerrieri di 4° livello, EL 10: 30 pf, CA 15, spada lunga +6 (1d8+3/19-20), TS Temp +6 Rifl +2 Vol +0, Iniz +1, Vel 9 m, Ascoltare e Osservare −1; ogni round 1d6, con 1 uno corre alla tenda |
 | **Gli sciamani del campo** | dopo il corno | adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con *vedere invisibilità* fra quelli di 2° |
 
@@ -3553,19 +3626,23 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ### C.2 · La tenda in dieci minuti (Scene 6-8)
 
 - **Infiltrazione (3 tiri)**: Muoversi Silenz./Nascondersi/Osservare **CD 20**
-  (−2 se aiuti dimezzati). Metà successi = raggiungete la tenda non visti.
+  (−2 se aiuti dimezzati). Costa **2 tacche**, più 1 per ogni tiro fallito.
+  Metà successi = raggiungete la tenda non visti; meno della metà = la
+  pattuglia (Scena 6), oppure Zog'tar pre-allertato. Il ritorno è un tiro solo,
+  Nascondersi **CD 22**, e costa 1 tacca.
 - **Zog'tar (risoluzione veloce, GS 15)**: un **assalto coordinato** (sorpresa +
   il colpo più forte del party) lo abbatte se dichiarano tattica sensata e
-  fanno **un** tiro: il colpo più forte del gruppo contro la sua CA (**22**). Se l'infiltrazione è fallita, è sveglio: −4
+  fanno **un** tiro: il colpo più forte del gruppo contro la sua CA (**26**, 24 in Ira). Se l'infiltrazione è fallita, è sveglio: −4
   alla sorpresa, un solo scambio.
 
 ### C.3 · Il duello in tre scambi (Scena 11)
 
 > **🎚️ [FAST-PLAY] del duello** (se vuoi chiudere veloce): 3 scambi narrati a
 > prova di gruppo (un attacco contro **CA 37**, o Saltare/Equilibrio **CD 22** per chi lo affronta dalle mura), poi si sceglie l'esito tra i tre
-> sotto in base a quanti scambi i PG hanno "vinto" (0-1 = fuggito, 2 = ferito
-> grave, 3 = ucciso). Registra comunque N ferite per B4. **[COMBATTIMENTO
-> COMPLETO]** = la regia round-per-round qui sotto, su M7-B.
+> della Scena 11 in base a quanti scambi i PG hanno "vinto" (0-1 = fuggito, 2 = ferito
+> grave, 3 = ucciso). Uno scambio è vinto se metà del gruppo supera la prova.
+> Registra comunque le ferite per B4: N = scambi vinti. **[COMBATTIMENTO
+> COMPLETO]** = la regia round-per-round della Scena 11, su M7-B.
 
 <!-- nuova-pagina -->
 
@@ -3769,4 +3846,109 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 - È l'eco meccanica del legame ancestrale: l'arma che uccise il capostipite
   riconosce il discendente.
 
+
+
+\page
+
+# V · Durik, il compagno di Hella
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Durik, il guardiano di pietra
+
+
+![Durik e Hella, al risveglio](../../Immagini/tavola-durik-e-hella.jpg)
+
+> *Era il tuo cane da galoppo, ed è morto prima di te. Nel tuo viaggio fra i morti il suo ricordo è caduto nella pietra,
+> e la pietra se l'è tenuto.*
+>
+> *Quando la montagna ha ceduto lo Smeraldo, la polvere del guardiano sconfitto
+> ha preso la sua forma. Mithral intrecciato a roccia scura, come muscolo a
+> osso. Occhi di topazio. Non abbaia più: quando vuole dirti qualcosa fa un
+> click, come una pietra che si assesta in un muro a secco.*
+>
+> *A Moradin avevi risposto che doveva proteggere te. Lo fa. Si mette sempre
+> fra te e quello che ti vuole male, e non gliel'hai mai insegnato.*
+
+---
+
+## Le statistiche
+
+**Durik Riforgiato** · Bestia magica (animale potenziato, sottotipo Terra) ·
+Media · Neutrale Buono · compagno di Hella
+
+| Voce | Valore |
+|---|---|
+| **Dadi Vita** | 12d10+36 · **102 pf** ¹ |
+| **Iniziativa** | +2 |
+| **Velocità** | 12 m · scavare 3 m in terra morbida |
+| **CA** | **21** (+2 DES, +9 naturale) · contatto 12 · colto alla sprovvista 19 |
+| **Attacco base / Lotta** | +9 / +15 |
+| **Attacco** | morso **+15** mischia (**2d6+6**, 19-20/×2) |
+| **Attacco completo** | morso **+15** (2d6+6) e 2 artigli **+13** (1d4+3) |
+| **Spazio / portata** | 1,5 m / 1,5 m |
+| **Tiri salvezza** | Tempra **+11** · Riflessi **+10** · Volontà **+6** |
+| **Caratteristiche** | FOR 22 · DES 15 · COS 17 · INT 4 · SAG 14 · CAR 8 |
+
+¹ *12 DV, 12d10+36 punti ferita.*
+
+### Cosa sa fare
+
+| Capacità | Effetto |
+|---|---|
+| **Riduzione del danno 5/adamantio** (Str) | la corteccia di granito e mithral regge a tutto tranne l'adamantio |
+| **Colpi magici** (Sop) | i suoi attacchi superano la RD come armi magiche; il **morso conta come adamantio** |
+| **Percezione tellurica 18 m** (Str) | sente chi si muove a terra entro 18 m, anche al buio, anche invisibile. Non chi vola |
+| **Immunità** (Str) | charme, compulsione, paralisi, sonno, pietrificazione, veleno |
+| **Resistenza al freddo 10** (Str) | |
+| **Vulnerabilità all'acido** | l'acido gli fa **+50%**: la pietra si corrode |
+| **Fedeltà assoluta** (Str) | nessuna magia lo mette contro di te. Chi prova a charmarlo o dominarlo deve superare **Volontà CD 18** o perde l'incantesimo |
+| **Legame** (Sop) | gli dai ordini col pensiero entro **18 m**, senza parlare. Oltre, fa l'ultima cosa che gli hai chiesto, o ti protegge |
+| **Empatia della pietra** (Sop) | sente il tuo umore a qualunque distanza, e ti manda il suo: pericolo, calma, fretta. Viaggia nel Sogno della Terra, finché uno dei due ha pietra sotto i piedi |
+
+---
+
+## Come si gioca
+
+**Sta sempre con te.** Cammina al tuo fianco come un compagno normale. Non
+serve evocarlo.
+
+**Se non gli dai ordini, ti protegge.** Si mette fra te e il pericolo che
+percepisce. Chi vuole arrivarti addosso deve passare da lui o girargli
+intorno.
+
+**Il click vuol dire: sotto.** Quando Durik fa il click, qualcosa si muove a
+terra entro 18 m. Chiedi al DM dove.
+
+**Non è fatto per combattere da solo.** È uno scudo che morde. Rende bene a
+fianco di Thorik o di Tordek, per prendere un nemico ai fianchi, o quando
+afferra e tiene fermo qualcuno mentre gli altri lavorano. Mandato da solo
+contro un nemico grosso, non regge.
+
+**Se viene distrutto** torna polvere, e la polvere torna nel terzo seme della
+Collana. Con una carica dell'**Evocazione dei Guardiani** lo richiami subito,
+per un'ora. All'alba è di nuovo intero, e resta. Se l'Evocazione è spenta,
+perché hai chiamato i due Treant insieme, non puoi richiamarlo subito: torna
+all'alba.
+
+---
+
+## Come cresce
+
+Durik non cresce con i tuoi livelli. Cresce con le **Prove di Risonanza**:
+momenti in cui il legame fra voi si mette alla prova. Il DM te lo dice quando
+succede, di solito dopo.
+
+| Prove | Cosa cambia |
+|---|---|
+| **1** ✅ | 12 DV, il morso passa a 2d6+6. *È già successa: è il motivo per cui è così* |
+| 2 | RD **8**/adamantio · percezione tellurica **27 m** |
+| 3 | diventa **Grande**: +4 FOR, −2 DES, +4 armatura naturale; nuovo attacco, schianto 2d6+9 |
+| 4 | **immune all'acido**; il morso conta anche come ferro freddo |
+| 5 | immune a tutti i danni da energia; +2 SAG, e capisce le tue parole senza ambiguità |
+
+![Durik, di fronte](../../../PG/Immagini/web/DurikFront2.jpg)
 

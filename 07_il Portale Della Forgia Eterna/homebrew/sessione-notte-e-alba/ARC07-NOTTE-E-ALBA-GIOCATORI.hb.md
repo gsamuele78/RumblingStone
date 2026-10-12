@@ -44,7 +44,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 ---
 
 **Solo per te.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
-stesso punto in cui ce l'hai tu. Prima dell'alba vorrà sapere perché la tieni.
+stesso punto in cui ce l'hai tu, e non te l'ha detto.
 
 
 \page
@@ -107,19 +107,19 @@ lo sentirà prima dei tuoi occhi.
 Pagina da consegnare al giocatore indicato, in privato.
 }}
 
-# Hella — Durik guarda a est
+# Hella — Durik guarda le colline
 
 
 ---
 
 > *Tutta la notte Durik non si è sdraiato. Sta in piedi accanto a te, il muso
-> verso la feritoia che dà a est, verso le colline. Ogni tanto solleva il naso
+> verso la feritoia che dà sulle colline. Ogni tanto solleva il naso
 > e lo riabbassa. La Collana ti pesa sul petto come pesava il primo giorno, e
 > i semi sono tiepidi.*
 
 ---
 
-**Solo per te.** Durik ha sentito qualcosa oltre le colline, a est, e non gli
+**Solo per te.** Durik ha sentito qualcosa oltre le colline, e non gli
 piace. Stanotte è il tuo primo scontro da quando sei tornata: lui non si
 allontanerà da te.
 

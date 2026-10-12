@@ -522,6 +522,13 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       e l'uscita scritti
 - [x] il lotto mappe D28 (2026-10-08; è di F3-bis, vedi sopra)
 - [ ] **subito**: il giro 3 delle letture su DEF-4, un subagente alla volta
+      *(2026-10-12, parziale: developer, DM a freddo e playtester sulle parti
+      scritte per la serata dopo il 25 settembre, cioè le tattiche nuove delle
+      Scene 6, 8 e 10, il torque della Scena 12 e il corredo
+      `sessione-notte-e-alba`. Developer 🔴 5, DM 🔴 4, playtester 🔴 3, quasi
+      tutti sul conto delle tacche della regia e sulle versioni veloci:
+      corretti. Rapporto in `esperimenti/def4-giro3-serata/`. Manca il lettore,
+      e il resto del master non è stato riletto: la casella resta aperta)*
 - [ ] il passo 7: il ricordo del giorno dopo, e il quiz con la chiave già
       approvata (D1)
 
