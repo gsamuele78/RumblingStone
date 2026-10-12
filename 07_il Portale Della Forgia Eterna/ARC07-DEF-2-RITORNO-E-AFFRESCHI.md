@@ -411,6 +411,11 @@ tornare — presagio della resurrezione, non garanzia.*
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
 
+L'affresco dipinge solo il passato: il tocco, il lampo, Thorgrim che gli passa
+l'ascia. La visione del futuro che Thorik ebbe risvegliando la Corona (Fauci di
+Palude e le Cantitrici, in forma spirituale) resta sua, e la Sala non la
+mostra `[CANONE — DM 2026-10-12, D80]`.
+
 <!-- storico -->
 ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
 della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
@@ -619,8 +624,8 @@ beat esiste per far prendere. Ottimo anche come rifugio se qualcosa va storto (�
 ## §7 — LE BENEDIZIONI DI MORADIN (rinnovo all'Altare)
 
 Il party non ha pozioni: le **Benedizioni divine** le sostituiscono. Pregare
-10 minuti all'Altare del Cuore di Moradin (**Conoscenze religioni CD 12** —
-Moradin risponde sempre, i Custodi sono scelti). Durata 24 h o fino a consumo;
+10 minuti all'Altare del Cuore di Moradin basta, senza prove: Moradin risponde
+sempre, i Custodi sono scelti `[CANONE — DM 2026-10-12, D80]`. Durata 24 h o fino a consumo;
 rinnovabili 1/giorno tornando alla Sala.
 
 | Benedizione | Effetto 3.5 | Sostituisce (valore) |

@@ -35,10 +35,10 @@ I 21 🟡 aspettano il giro dopo le risposte di D79.
 | # | Rilievo | Esito |
 |---|---|---|
 | 1 🟠 | due geometrie della Stanza della Corona | il riquadro della zona allineato alla mappa S-2: 15 × 19,5 m, trono a nord, ingresso a sud |
-| 2 🟠 | la visione di A3, passato o futuro | **domanda al DM**, D80 (a) |
+| 2 🟠 | la visione di A3, passato o futuro | D80 (a), deciso: l'affresco dipinge solo il passato |
 | 3 🟠 | il sogno di Thorik e «il rito» | detto: il rito dello Smeraldo, nel Piano della Terra |
 | 4 🟠 | il sogno di Tordek e il Seme | una riga: per il gruppo di oggi il Seme è nel suo zaino, e cosa gli ha detto Artemis è canone |
-| 5 🟠 | la CD 12 delle Benedizioni | **domanda al DM**, D80 (b) |
+| 5 🟠 | la CD 12 delle Benedizioni | D80 (b), deciso: niente prova |
 | 6 🟠 | un solo bonus sacro contro A1, A3, A8 | detto: per ogni tiro vale il più alto, come nell'SRD |
 | 7 🟠 | l'iscrizione di Moradin troncata | scritta per intero nell'elenco degli handout |
 
