@@ -12,7 +12,7 @@ del master).
 | lettore (intero, a blocchi, con diario) | 1 | 5 | 15 | `def5-giro2-LETTORE.md`, `def5-giro2-LETTORE-diario.md` |
 | playtester (due percorsi: completo e luminoso; meno luminoso con il re curato e la porta) | 2 | 5 | 6 | `def5-giro2-PLAYTESTER.md` |
 | developer | 0 | 3 | 13 | `def5-giro2-DEVELOPER.md` |
-| DM a freddo (`lettura_a_scene.py`) | | | | da fare |
+| DM a freddo (`lettura_a_scene.py`, vista, preparazione a scene, giorno dopo) | 0 | 5 | 16 | `def5-giro2-DM.md`, `corsa-dm/` |
 
 ## Il triage del lettore
 
@@ -81,3 +81,32 @@ positivo (in volo c'è Artemis, non un nemico): dichiarato nel registro.
 | 14 | gli orchi scossi senza tattica | si stringono al capo, caricano chi scende, si arrendono se cade |
 | 15 | il bottino degli hobgoblin | resta nella caverna, primo pezzo del bottino dell'orda di ARC-08 |
 | 16 | Artemis non arriva alla porta | detto: solo se fa 36 m in un movimento, altrimenti li vede entrare |
+
+## Il triage del DM a freddo
+
+Verdetto del lettore: con un'ora di preparazione il DM conduce la serata, e
+l'ora la usa quasi tutta.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🟠 | stampare gli statblocchi di Re Thorek e Dana | aggiunti a «Cosa stampare», con dove stanno |
+| 2 🟠 | gli hobgoblin nei gesti della Scena 2 prima di essere presentati | una riga sotto «In scena»: alla fine del round 1 entrano 20 hobgoblin sergenti, l'aura non li tocca |
+| 3 🟠 | la cura del re solo in §6 | copiata in Scena 3: lo tiene giù l'esausto, *ristorare* lo toglie |
+| 4 🟠 | le immagini di §9 | **residuo**: le due righe sbagliate tolte, detto cosa manca; le quattro immagini sono lavoro di art-direction |
+| 5 🟠 | gli esiti di DEF-4 sparsi | un paragrafo «Prima di aprire, segna da DEF-4» nel Quickstart |
+| 6 | il capo degli orchi | nella riga «In scena» |
+| 7 | i grassetti d'apparato | **residuo**: sono l'intestazione standard dei master |
+| 8 | la prima battuta di DEF-4 Scena 13 | **residuo**: il rimando basta, il box sta nel file della serata prima |
+| 9 | la storia delle versioni, R8 | nota chiusa in apparato; R8 segnato «solo regia lunga» |
+| 10 | la durata della pulizia | «4 round, o 2 in fast-play» |
+| 11 | Dana tiene giù o guarisce il re | la cura vera è dell'ARC-08, detto |
+| 12 | la pagina di Aegis Fang | **residuo**: la regola (frasi brevi, in maiuscolo, che tutti sentono) è già scritta in linea |
+| 13 | le Cantitrici senza scheda | chieriche di 5° con *cura ferite gravi* |
+| 14 | il quarto ramo del Debito della Radice | E-07g nella riga del §7 |
+| 15 | lo Scudo del Custode di Hella | nella riga di Hella, se il dono c'è stato |
+| 16 | il torque e il re | una riga nella scheda del re `[INFERRED]` |
+| 17 | le torri senza box | **residuo**: è una contingenza, non una scena; un box si scrive se Jfs vuole giocarla |
+| 18 | Borin, Dara, Thorin, Nala | nella regia breve sono fra i dieci capi, e non parlano |
+| 19 | l'handout dentro il master | **residuo**: la copertina si stampa dal booklet; un file a parte non c'è ancora |
+| 20 | il totale PX | **residuo**: manca nel repo; sta al ramo del gruppo e al DM |
+| 21 | §1 sembra per i giocatori | titolo «per il DM» |

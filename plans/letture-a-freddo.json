@@ -62,6 +62,44 @@
           "nota": "corsa intera: vista, preparazione a scene e giorno dopo",
           "rilievi_rossi_e_arancio": 8,
           "rilievi": []
+        },
+        {
+          "ruolo": "dm",
+          "data": "2026-10-12",
+          "rapporto": "plans/esperimenti/def5-giro2/def5-giro2-DM.md",
+          "corsa": "plans/esperimenti/def5-giro2/corsa-dm/dm",
+          "impronta": "d2bd27dc10134c0f8a11c8aca3ecf5e85718618af619c0a2be5a9ca46afc89df",
+          "smesso_a": null,
+          "rilievi": [
+            {
+              "n": 1,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 2,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 3,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 4,
+              "gravita": "🟠",
+              "stato": "residuo",
+              "ragione": "corrette le righe di §9 (le due immagini non mostrano la scena); le quattro immagini mancanti sono lavoro di art-direction, fuori da questo piano"
+            },
+            {
+              "n": 5,
+              "gravita": "🟠",
+              "stato": "corretto"
+            }
+          ],
+          "nota": "corsa intera: vista, preparazione a scene e giorno dopo",
+          "rilievi_rossi_e_arancio": 5
         }
       ],
       "sola_forma": []
