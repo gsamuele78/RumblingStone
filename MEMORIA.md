@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 17 decisioni aperte
+## Aspetta il DM: 18 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -30,6 +30,7 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D77 | F4 | **DEF-5, i dettagli `[INFERRED]` del giro 2.** Già scritti nel master, marcati, da confermare o cambiare uno per uno. (a) Dei 20 hobgoblin i nani ne tengono 15 e 5 passano l'anello; i nani finiscono i loro entro il roun… |
 | `LETTORE-PLAYTESTER` | D78 | F4 | **Lo statblocco dell'hobgoblin sergente nel Bestiario** (🟡 del developer, giro 2 di DEF-5). La scheda è marcata accettata dal DM il 2026-05-05, ma col conto SRD non torna: le classi sostituiscono il DV razziale, quindi… |
 | `LETTORE-PLAYTESTER` | D79 | F4 | **DEF-1, otto buchi di regola dal lettore di conferma** (un 🔴, sette 🟠). Il modulo è già giocato: valgono per i gruppi futuri, e nessuna proposta cambia cosa è successo al tavolo. (a) 🔴 **L'Onda Gravitazionale nella sfe… |
+| `LETTORE-PLAYTESTER` | D80 | F4 | **DEF-2, due punti dal lettore di conferma** (🟠; nessun 🔴). (a) **Quale visione mostra l'affresco A3.** Il box dice che Thorik, toccata la Corona, si è trovato su un campo di battaglia accanto agli eroi del passato, con… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -132,7 +133,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 243 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 18 aperte, 243 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

@@ -181,7 +181,8 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 >   diretta) e in PF1e i bonus *sacri* di fonti diverse **non** si sommano tra
 >   loro ma **si sommano** ai morale. Usa questa distinzione per evitare lo
 >   stacking illimitato: max **un** bonus sacro attivo alla volta dagli
->   affreschi.
+>   affreschi. Quando due si sovrappongono (A1, A3, A8), per ogni tiro vale il
+>   più alto, come per due bonus dello stesso tipo nell'SRD.
 > - **"Guarigione emotiva" (A3)**: trattala come *channel positive energy*
 >   PF1e a CL 12 sul solo Thorik (una volta), non come cura infinita.
 
@@ -283,9 +284,9 @@ Zona **sicura**: nessun nemico. Vedi **MAPPA S-1**.
 ### ZONA B — La Stanza della Corona (il luogo della morte)
 **Read-aloud**: si legge in apertura della Scena 4 (§6), quando il gruppo passa il Portale P1.
 
-**Terreno (callout):** arena rettangolare 30×20 m (vedi **MAPPA S-2**); trono
-centrale su dais +1,5 m (ora vuoto: la Corona è di Thorik); 4 pilastri di
-mithral agli angoli; Portale P1 a nord. Ora è un **Santuario Sicuro**: sotto
+**Terreno (callout):** sala rettangolare di 15 × 19,5 m (vedi **MAPPA S-2**); trono
+a nord su dais +1,5 m (ora vuoto: la Corona è di Thorik); colonne, statue e
+alcove come nella mappa; si entra da sud, dal Portale P1. Ora è un **Santuario Sicuro**: sotto
 l'effetto di *Consacrare* automatico (chi vi si rifugia ha +1 ai TS contro
 paura, i non-morti −1 per colpire). Vedi §6 per le incisioni.
 
@@ -689,8 +690,8 @@ Chiudi ogni scena e passa oltre: **non spiegare nulla**.
 > ottusa dei sogni, ti gira la testa **dall'altra parte**.*
 
 È il compimento dell'immagine che la Corona gli aveva mostrato alla vigilia —
-*due mani sotto un architrave che scende*. Al rito quelle mani erano le sue, e
-non erano sole.
+*due mani sotto un architrave che scende*. Al rito dello Smeraldo, nel Piano della Terra, quelle mani
+erano le sue, e non erano sole.
 ⚠️ La presenza verde è **Hella**, e Thorik **non lo sa**: la crede Moradin, o
 non se lo chiede. **Non confermarlo fino al #3.** Se il giocatore indovina:
 *«non lo sai.»* È l'eco **E-07f**<!-- apparato --> (`state.md` §7.E)<!-- /apparato -->.
@@ -711,6 +712,9 @@ fredde.)*
 
 Al rito **non gli è stato chiesto niente**, e non ha pagato niente: il Peso era
 del portatore. La sua notte è **una scena sola**, e non parla dell'Altare.
+Per il gruppo di oggi, nello zaino di Tordek c'è il Seme di Varis, la gemma che Artemis ha preso nel
+Tempio senza toccarla a mani nude, e quello che Artemis gli ha detto, o
+taciuto, è canone (Piano della Terra, §6-bis).
 
 > *Sogni una fiera. Non una fiera nanica: banchi bassi, teli chiari, una
 > lingua che non conosci ma che capisci lo stesso, e un odore di spezie che non
@@ -853,7 +857,10 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 1. **La Tavola degli Otto Affreschi** — schema dell'ottagono (MAPPA S-1) con i
    titoli, da consegnare così i giocatori «leggono» la Sala.
 2. **Le Iscrizioni**: quella del Fuoco (A4, ora storica), quella di Moradin
-   («Il Fuoco ha purificato lo Spirito…», dal Piano della Terra) e il **simbolo di
+   (dal Piano della Terra: «Il Fuoco ha purificato lo Spirito. / Ora la Terra
+   deve testare la Resistenza. / Nella Profondità, dove la luce non tocca,
+   troverete la Verità. / Cercate l'incudine che non può essere spostata. /
+   Cercate lo Smeraldo della Forza.») e il **simbolo di
    Hella** (quercia+martello) da A8.
 3. **Benedizioni di Moradin** — carte singole (`BenedizioniDiMoradin.pdf`).
 
