@@ -888,7 +888,7 @@ l'odore di zolfo copre quello del carbone.
   si piantano più.)*<!-- /storico --> All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
   I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 90 pf, RD
   10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle
-  strutture, durano 1 ora; FOR 28, TS Temp +11, Rifl +2, Vol +7 `[INFERRED — needs DM confirmation]`) che caricano il
+  strutture, durano 1 ora; FOR 28, TS Temp +11, Rifl +2, Vol +7 `[CANONE — DM 2026-10-12, D74]`) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
@@ -1662,7 +1662,7 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
   non le dà un arrivo: gli orchi hanno tagliato tutto per i fuochi e per le
   palizzate, e nel raggio di 500 m dalla tenda non resta un albero vivo della
   sua taglia. Il bosco a est arriva fino al margine del campo, e da lì alla
-  tenda resta più di mezzo chilometro, cioè tre blocchi `[INFERRED — needs DM confirmation]`.
+  tenda resta più di mezzo chilometro, cioè tre blocchi `[CANONE — DM 2026-10-12, D74]`.
 - **La bolla alla tenda.** Se la pietra arriva a meno di 6 m dalla tenda, le
   guardie di dentro si accorgono che la loro voce è sparita. Una esce dalla
   bolla e grida: è l'allarme. La pietra si lascia **fuori**, o si entra senza.
@@ -1739,7 +1739,7 @@ e il drago arriva sull'assalto.
   su di lui prende anche la tenda: le guardie si accorgono che la voce è
   sparita, una esce a gridare, ed è un **allarme** senza corno. Costa il
   successo in meno sulle mura, e il drago non arriva, perché nessuno l'ha
-  chiamato `[INFERRED — needs DM confirmation]`.
+  chiamato `[CANONE — DM 2026-10-12, D74]`.
 - **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
   finiti. Chi riparte in volo subito è dentro le mura prima di lui: un
@@ -3140,7 +3140,7 @@ lo compra nessuno: Gunnvor non prende niente d'orchi, e il forziere del re ha
 già speso quello che aveva. Si vende nel 1372, a metà, al banco di ARC-08.
 L'armatura di Zog'tar è preda presa ai nani: Re Thorek la riconosce, e se i PG
 gliela portano la riprende in cambio della sua parola, non di monete
-`[INFERRED — needs DM confirmation]`.
+`[CANONE — DM 2026-10-12, D74]`.
 
 - **Se qualcuno ha gridato o il corno ha suonato**, le ronde arrivano in
   **1d4+2 round**, gli squadroni in **2d4+2** e il drago in 70 (Scena 8). In
