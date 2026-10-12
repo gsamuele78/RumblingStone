@@ -2597,7 +2597,7 @@ l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).
 SCENOGRAFIA (MAP 6): ingresso a NORD = 🚪 SOGLIA di mithral (si apre da sé;
 l'Altare vi era ormeggiato). Dopo il distacco: ~27 m di zero-G fra soglia e
 Altare — la via di fuga esiste, ma va attraversata in volo o a spinte.
-Niente piattaforme laterali: Artemis tira in volo (D79). ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
+Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
