@@ -94,7 +94,8 @@ attraversato il suo spirito (§8). Poi il party è di **4**, pronto per il #4.
 
 **Chi c'è.** Thorik, Tordek, Artemis (officianti); **Therysol** (veglia, testimone);
 **Moradin** (divino, manifesto per 3 secondi allo Step 6); **Hella** (morta →
-viva); e — al momento del richiamo — **la Custode delle Radici** (§6<!-- storico -->, CANONE
+viva); **Durik**, il suo cane, che non si è mai allontanato dal corpo e si fa
+avanti al risveglio (§7); e — al momento del richiamo — **la Custode delle Radici** (§6<!-- storico -->, CANONE
 DM 2026-07-23<!-- /storico -->; il ramo A/B/C si gioca).
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i sei
@@ -116,7 +117,7 @@ deve essere già fatto.
 
 | Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
-| prima di cominciare (la regia della serata, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
+| prima di cominciare (la regia della serata<!-- apparato -->, `homebrew/sessione-resurrezione-mille-anni/01-REGIA-SERATA.md`<!-- /apparato -->, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
 | all'inizio del risveglio nella Sala (regia, Atto I, punto 3) | l'**eco privato di Hella** | alla giocatrice di Hella, che legge il sogno ad alta voce | «Echi — Hella» |
 | §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
 | §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
@@ -294,7 +295,10 @@ niente, chi le tocca entra nel rito già dentro la scena.
 | **COS** grezza — restare a mani nude sul mithral | 12 | il metallo **restituisce** calore invece di prenderlo: +1 al primo tiro del rito, e la sensazione che la pietra sia d'accordo |
 | **CAR** grezza — parlare a Therysol mentre si scosta | 13 | dice a bassa voce la cosa che non ha detto in sei giorni: *«Ho contato i respiri che non faceva. Sono arrivata a undicimila e ho smesso.»* → eco |
 | **FOR** grezza — spostare l'Altare per allineare il Sud | 18 | non si muove di un dito. **Il fallimento è l'informazione**: l'Altare è ancorato alla montagna, non appoggiato |
-| **DES** grezza — posare i semi in un triangolo perfetto | 15 | +1 allo Step 4. ⚠️ **Thorik ha −2 a DES** per il prezzo delle gemme: se prova lui, è la statistica che ha venduto |
+| **DES** grezza — posare i semi in un triangolo perfetto | 15 | +1 allo Step 4. ⚠️ **Thorik ha DES −4** per il prezzo delle gemme (Corona e Smeraldo), cioè **−2 alla prova**: se prova lui, è la statistica che ha venduto |
+
+**Sul corpo di Hella**, a chi lo guarda da vicino: con Osservare CD 20 si vede la
+**ghianda annerita** stretta nel pugno (cosa diventa, §11 C).
 
 
 ---
@@ -1160,7 +1164,8 @@ rimesso dritto undici volte.»* Da lì si riparte.
 > mostra, `DEF-2`). Al risveglio Hella la pianta nel primo suolo sacro che
 > tocca (CANONE DM 2026-07-23): diventa un piccolo **àncora druidico** (+1 sacro
 > 1/giorno al Radicamento) **o** va nel 1° seme-dono vuoto della Collana — scelta
-> della giocatrice. 0 mo commerciali, peso emotivo enorme.
+> della giocatrice. Se tutti e tre hanno donato non ci sono semi vuoti, e la
+> ghianda diventa l'àncora. 0 mo commerciali, peso emotivo enorme.
 
 > **Cuore di Moradin — dopo la spesa:** non lascia loot (si dissolve), ma sulla
 > superficie dell'Altare resta un'**impronta a forma di cuore**, tiepida per

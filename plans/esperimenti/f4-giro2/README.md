@@ -9,6 +9,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 |---|---:|---:|---:|---|
 | DEF-1 lettore | 1 | 10 | 21 | `def1-LETTORE.md` |
 | DEF-2 lettore | 0 | 7 | 16 | `def2-LETTORE.md` |
+| DEF-3 lettore | 0 | 9 | 17 | `def3-LETTORE.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -41,3 +42,17 @@ I 21 🟡 aspettano il giro dopo le risposte di D79.
 | 7 🟠 | l'iscrizione di Moradin troncata | scritta per intero nell'elenco degli handout |
 
 I 16 🟡 aspettano il playtester, che leggerà il testo corretto.
+
+## Il triage del lettore di DEF-3
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🟠 | «la regia della serata» senza file | il file in apparato |
+| 2 🟠 | Durik fuori da «Chi c'è» | aggiunto: è accanto al corpo dall'inizio, si fa avanti al risveglio |
+| 3 🟠 | il malus di DES di Thorik | allineato: DES −4 al punteggio, −2 alla prova |
+| 4 🟠 | la soglia 3 su 3 e la tabella | **domanda al DM**, D81 (a) |
+| 5 🟠 | se l'ora del Cuore scade | **domanda al DM**, D81 (b) |
+| 6 🟠 | la ghianda annerita solo nel capitolo del tesoro | una riga nel §2, sul corpo; e se i semi sono tutti pieni, diventa l'àncora |
+| 7 🟠 | quanto dura il rito, e il riposo | **domanda al DM**, D81 (c) |
+| 8 🟠 | cosa compra la risposta C | **domanda al DM**, D81 (d) |
+| 9 🟠 | lo statblocco di Hella | **domanda al DM**, D81 (e): è la scheda di una PG |

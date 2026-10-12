@@ -17,6 +17,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Prova | CD |
 |---|---|---:|
+| SCENA 1 | con Osservare | 20 |
 | SCENA 3 | Invocazione (Thorik · Conoscenze religioni | 15 |
 | SCENA 3 | Canalizzazione (Tordek · Concentrazione | 20 |
 | SCENA 3 | Stabilizzazione (Artemis · Utilizzare Oggetti Magici | 18 |
