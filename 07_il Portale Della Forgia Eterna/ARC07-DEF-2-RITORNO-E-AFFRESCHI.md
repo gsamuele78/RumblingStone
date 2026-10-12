@@ -209,7 +209,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 ### ⚒️ TORDEK — il testimone (Mercer support)
 - Non è il protagonista degli affreschi, ed è giusto così: il suo ruolo qui è
   **esserci per gli altri** (regge Thorik nella catarsi senza giudicare; è lui
-  che, sfiorando la Corona, riceve il **frammento onirico** di Hella — §6).
+  che, sfiorando la Corona, riceve il **frammento onirico** di Hella — Piano della Terra, §1).
 - I **Bracieri** (ora completi, con la loro coscienza) commentano gli affreschi
   con una riga da vecchio fabbro: davanti ad A1, *«Quello sì che sapeva battere
   il ferro»*. Piccolo colore, grande personaggio.

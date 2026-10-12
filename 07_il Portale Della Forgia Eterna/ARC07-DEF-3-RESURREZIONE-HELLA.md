@@ -31,7 +31,8 @@
 > Via della Radice — tutte le prove superate); i PG **non lo sanno ancora** —
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
 > `[CANONE GIOCATO 2026-07-31]` — il registro dei riposi è in `DEF-2` §0-bis,
-> che possiede l'orologio. Il party arriva **riposato** (hanno
+> che possiede l'orologio. Il rito dura circa un'ora, e non c'è riposo prima
+> della soglia: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`. Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
@@ -841,7 +842,7 @@ malizia (Andor: la macchina non odia, esegue).
 |---|---|---|
 | **A. Accettare il pegno** (Hella o il party si impegnano a un servizio futuro verso il Sogno) | La Custode si inchina e svanisce; Hella torna con un **legame più forte** col Sogno della Terra (**Earth Dream** utilizzabile **2/giorno**). | Il Debito diventa una **quest ARC-09**: custodire un luogo del Sogno, o un servizio al Cerchio Sacro / al Ghostlord. Onorato = alleanza druidica rafforzata; ignorato → si degrada in "B". |
 | **B. Rifiutare / sfidare** (i PG cacciano la Custode, o Hella nega il debito) | La Custode **non combatte**: china il capo e si ritira. *«Come volete. Ma il vuoto si colma da sé — e la natura non è delicata.»* | Sessioni dopo, **qualcosa risale** dal Sogno per riempire il vuoto: un aggancio a un nemico ARC-09 (un non-morto della terra nel dominio del Ghostlord, o una **crepa** che la corruzione fungina di Sonjak sfrutta). Il rifiuto non è punito da un dio: è la natura che riempie i vuoti. |
-| **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio, la Collana **non perde mai** il terzo seme (Durik rigermoglia sempre). |
+| **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio il Debito è **saldato subito**: niente quest del Sogno in ARC-09, a differenza di A, e nessun vuoto che risale, a differenza di B `[CANONE — DM 2026-10-12, D81]`. |
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -1044,7 +1045,7 @@ non promette. Dice quello che sa, e non di più.
 | La scelta | Cosa costa | Cosa apre |
 |---|---|---|
 | **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il viaggio a mille anni fa (`DEF-4`) parte con una posta reale invece che con un viaggio turistico |
-| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 16h**), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
+| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 15h**, dopo il rito), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
 | **Mandare avanti uno solo** | Moradin rifiuta: *«Il varco conta quattro. Ne ha contati quattro anche mille anni fa.»* | niente — ma la battuta dice al tavolo **che di là li aspettano in quattro** |
 
 > 🎭 **Grigio politico.** Therysol non vuole che vadano. Il suo *Want* non
@@ -1085,6 +1086,8 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 > può solo fallire è una punizione. Qui **ogni esito produce una scena
 > successiva**, e la peggiore è anche la più giocabile.
 
+Con uno o nessun Dono la soglia è 3 su 3, e la riga si sceglie da quanto manca: 2 successi valgono la riga «1 su 3», 1 successo la riga «0 su 3» `[CANONE — DM 2026-10-12, D81]`.
+
 | Successi allo Step 5 | Cosa torna | Cosa apre |
 |---:|---|---|
 | **3 su 3** | Hella intera, i tre doni attecchiscono | la soglia (§8-ter) parte pulita |
@@ -1095,7 +1098,9 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 ⚠️ **Il vicolo cieco ha una porta**: se l'ora scade senza che il tavolo trovi
 niente, **Therysol** parla — e dice la cosa che ha visto in sei giorni di
 veglia, non una soluzione ma un fatto: *«Il corpo si gira verso sud. L'ho
-rimesso dritto undici volte.»* Da lì si riparte.
+rimesso dritto undici volte.»* Da lì si riparte: il rito non è perso, e il
+Cuore regge finché il tavolo lavora sul Sud. L'ora dice solo quando parla
+Therysol `[CANONE — DM 2026-10-12, D81]`.
 
 
 ---
@@ -1231,7 +1236,7 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
    Ibrido Treant (risorta) · Neutrale Buono · Media
 ============================================================
 PF: ~110 (13 DV) · CA 20 (+2 cuoio borch., +5 SAG nat. druida) · Iniz +0
-BAB/Lotta: +9/+4 · Velocità 6 m (armatura media)
+BAB/Lotta: +10/+11 · Velocità 6 m (armatura media)
 FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5) · CAR 12
 TS: Tempra alto · Riflessi medio · Volontà alto (SAG 20)
 Scurovisione 27 m (Dream Dwarf)
@@ -1256,12 +1261,12 @@ DONI DEL PARTY (§5, solo se donati — segna quelli veri dopo il rito):
   RESTITUZIONE (Collana #6): 1 volta sola per seme, immediata, Hella rende al
   donatore cio' che aveva dato per una scena intera. Poi mai piu'.
 ------------------------------------------------------------
-INCANTESIMI DRUIDA (CL 12) — slot: 6/5+1/5+1/4+1/4+1/3+1/2+1/1+1
-Preparati tipici pre-battaglia: Entangle, Faerie Fire, Produce Flame · Barkskin,
-Bull's Strength, Flaming Sphere, Heat Metal · Call Lightning, Cure Serious,
-Spike Stones, Summon Nature's Ally III · Cure Critical, Freedom of Movement,
-Ice Storm, SNA IV · Call Lightning Storm, Wall of Thorns, SNA V · Mass Cure
-Moderate, Transport via Plants, SNA VI
+INCANTESIMI DRUIDA (CL 12) — slot dal 0 al 6°: 6/5+2/5+1/4+1/4+1/3+1/2
+Preparati tipici pre-battaglia, per livello: 1° Entangle, Faerie Fire, Produce
+Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call
+Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of
+Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of
+Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI
 TALENTI: Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend
 Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
 ------------------------------------------------------------

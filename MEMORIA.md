@@ -31,7 +31,7 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D78 | F4 | **Lo statblocco dell'hobgoblin sergente nel Bestiario** (🟡 del developer, giro 2 di DEF-5). La scheda è marcata accettata dal DM il 2026-05-05, ma col conto SRD non torna: le classi sostituiscono il DV razziale, quindi… |
 | `LETTORE-PLAYTESTER` | D79 | F4 | **DEF-1, otto buchi di regola dal lettore di conferma** (un 🔴, sette 🟠). Il modulo è già giocato: valgono per i gruppi futuri, e nessuna proposta cambia cosa è successo al tavolo. (a) 🔴 **L'Onda Gravitazionale nella sfe… |
 | `LETTORE-PLAYTESTER` | D80 | F4 | **DEF-2, due punti dal lettore di conferma** (🟠; nessun 🔴). (a) **Quale visione mostra l'affresco A3.** Il box dice che Thorik, toccata la Corona, si è trovato su un campo di battaglia accanto agli eroi del passato, con… |
-| `LETTORE-PLAYTESTER` | D81 | F4 | **DEF-3, cinque punti dal lettore di conferma** (🟠; nessun 🔴). (a) **La soglia dello Step 5 con uno o nessun Dono** è 3 su 3 (D36), ma la tabella dei fallimenti conta i successi grezzi: con un Dono e 2 successi non si s… |
+| `LETTORE-PLAYTESTER` | D82 | F4 | **DEF-2, tre punti dal playtester di conferma** (🟠; nessun 🔴). (a) **Il Bane draconico di A7 contro la scheda di Aegis Fang.** A7 dà «+3d6 (invece di +2d6 vs draghi), critico ×4, +2 competenza»; la scheda dell'ascia dic… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -134,7 +134,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 19 aperte, 243 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 19 aperte, 244 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
