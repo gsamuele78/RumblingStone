@@ -663,7 +663,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 > con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
 > round, Artemis a ~2/3 pf in uscita.*
 
-**XP**: ~4.800 (Fauci di Diamante CR 11 + 2 Xorn CR 6) `verif. ✓ ERRATA/TESORO-WBL 2026-07-23`. **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
+**XP**: **1.700 a testa** (Fauci di Diamante CR 11 + 2 Xorn CR 6, tabella del §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
 ---
@@ -751,7 +751,7 @@ centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 | Conoscenze (Natura/Dungeoneering) | 18 | Dimostrare di capire l'ecosistema → +1 |
 | Intrattenere (Canto) | 22 | Cantare in armonia coi cristalli → **+2** (fallito: **−1** ai successi) |
 | Utilizzare Oggetti Magici (Corona/Anello) | 15 | Riconoscono Moradin → +1 |
-| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
+| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, il potere di cura dei Bracieri di Tordek, 3 cariche al giorno, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
 
 > **La prova del cristallo crepato è il cuore emotivo della scena** (il tuo
 > "riforgiare il cristallo"): non tagliarla. Cristalli curabili in **E02** e
@@ -850,6 +850,11 @@ marchio è attivo e, una volta, **riscuotere** (chiamare un favore, chiudere un
 mercato al momento peggiore, o "vendere" la posizione di Artemis a chi paga —
 p.es. Il Collezionista). L'esca è tarata **esattamente** sull'avidità di
 Artemis: un tesoro invisibile agli altri, un affare che pare gratis.
+
+Da qui alla fine del §6-bis c'è anche la scena dell'ora della pergamena: non
+si gioca nel Piano della Terra, ma nella notte del Viaggio a mille anni fa,
+nella fortezza del 372. Là Brynja è la sacerdotessa della cappella, Kettra
+l'alchimista della bottega, e le tacche sono quelle dell'orologio della notte.
 
 <!-- blocco: contratto-del-seme -->
 ### La reazione dell'Anello — coerente col suo carattere (Caotico Buono)
@@ -1218,7 +1223,7 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 **Bracieri Gemelli — COMPLETI (Fuoco + Terra):** RD 5/adamantio; **Pugno
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
 attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
-**XP Sentinella**: ~2.400 (CR ~11) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`. **Loot**: residuo del
+**XP Sentinella**: **1.500 a testa** (CR ~11, tabella del §11-bis). **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
 
 ---
