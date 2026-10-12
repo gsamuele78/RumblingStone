@@ -1132,7 +1132,7 @@ alcune dal 2022 del tavolo. Kettra le identifica tutte e dieci in dieci
 minuti, con il 25 che le dà il prendere 10. Una la ferma, la n. 4: su quella sa
 **cosa fa**, e sa che **c'è dell'altro**, ma per dire cosa servirebbe un 30.
 Brynja ci passa sopra *individuazione del magico* e dice la scuola di
-quell'altro. Ai giocatori si dà l'handout «Le dieci boccette» (`homebrew/volume-mille-anni/05-HANDOUT-POZIONI-DI-KETTRA.md`, anche nel volume dei giocatori della serata).
+quell'altro. Ai giocatori si dà l'handout «Le dieci boccette», che sta nel volume dei giocatori della serata<!-- apparato --> (`homebrew/volume-mille-anni/05-HANDOUT-POZIONI-DI-KETTRA.md`)<!-- /apparato -->.
 
 | # | Dove l'hanno presa | Cosa è (SRD) | Cosa nota Kettra |
 |---:|---|---|---|
