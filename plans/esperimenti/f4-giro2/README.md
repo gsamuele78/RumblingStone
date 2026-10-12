@@ -14,6 +14,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-3 playtester (tre Doni; un Dono e 2 successi; nessun Dono e ritiro) | 0 | 5 | 13 | `def3-PLAYTESTER.md` |
 | DEF-1 playtester (prevista; senza Cristalli; scelte storte) | 1 | 6 | 21 | `def1-PLAYTESTER.md` |
 | DEF-1 playtester, giro 3 dopo D84 (stessi percorsi) | 1 | 7 | 24 | `def1-PLAYTESTER-giro3.md` |
+| DEF-1 playtester, giro 4 dopo D85 (stessi percorsi) | 1 | 11 | 15 | `def1-PLAYTESTER-giro4.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -116,3 +117,12 @@ D84 regge: il rientro dopo l'Onda, il canto, l'Ancora fallita e la DES di Thorik
 | 6 🟠 | le righe PX delle scene danno solo le cifre di oggi | corrette: le due cifre in ogni riga, e la «Lettura» |
 | 7 🟠 | la Sentinella ferma dopo la caduta di Tordek | D85 (d), deciso: toccarla la risveglia, la porta resta chiusa |
 | 8 🟠 | Terros addormentato alla soglia | D85 (e), deciso: si sveglia al primo passo sull'Altare, un round di sorpresa |
+
+## Il triage del playtester di DEF-1, giro 4
+
+Il 🔴 della Sentinella **non è chiuso**: D85 (a) rendeva crepa ogni colpo dei Bracieri, ma con +12 contro CA 30 i colpi a segno sono 0,4 a round, e Tordek cade in 3-4 round. La correzione era mia e non bastava. Gli 11 🟠 sono quasi tutti nuovi, e riguardano solo i gruppi futuri: il gruppo di oggi DEF-1 l'ha già giocato. È il quarto giro, e ogni giro ne trova di nuovi in un modulo di 2.600 righe; come fermarsi lo decide il DM, D86.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🔴 | la Sentinella ancora imbattibile | **domanda al DM**, D86 (a) |
+| 2-12 🟠 | crepe con tre significati, ritentativo, Artemis e Thorik durante il duello, salita, soglia, Ancoraggio, durata di Terros, Onda, Cristalli | **domanda al DM**, D86 (b): residui per i gruppi futuri, o un altro giro di correzioni |
