@@ -48,6 +48,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | Conoscenze (Arcane) | 18 |
 | SCENA 6 | Osservare | 20 |
 | SCENA 6 | Se un tiro va storto, FOR | 20 |
+| SCENA 6 | affonda in 3 round, Nuotare | 20 |
 | SCENA 6 | balza tra i detriti fluttuanti (Saltare | 25 |
 | SCENA 6 | Intrattenere (Canto) | 18 |
 | SCENA 6 | Conoscenze (religioni) | 15 |
@@ -60,10 +61,12 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | TS Volontà | 20 |
 | SCENA 7 | TS Tempra | 22 |
 | SCENA 8 | Intrattenere Canto | 18 |
+| SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
 | SCENA 8 | FOR) | 25 |
 | SCENA 8 | caster. Move Earth lo stordisce (Tempra | 15 |
 | SCENA 8 | Riflessi | 22 |
+| SCENA 8 | e perde l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | centrato a scelta, 8d6 (contundente+perforante), Riflessi | 22 |
 | SCENA 8 | FOR) contro | 25 |
 | SCENA 8 | 2 schianti +30 e Push FOR | 25 |

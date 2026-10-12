@@ -121,7 +121,7 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
 | Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 25 `[CANONE — DM 2026-10-12, D79]` | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
-| Frequenza della Confusione — Intrattenere Canto (Anello +4) | 18 | §8 |
+| Frequenza della Confusione — Intrattenere Canto (Anello +4): all'apertura una prova per PG, ne servono 2; in combattimento azione standard, vale fino al turno successivo di chi canta `[CANONE — DM 2026-10-12, D84]` | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
 | Terros: Onda Gravitazionale / Pioggia di Stalattiti — Riflessi | 22 | §8 |
 | **«Radice a Terra»** (Thorik inchioda Terros) — prova di FOR vs **CD statica** (non contrapposta) | 25 | §8 |
@@ -139,7 +139,7 @@ pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
    la **Spinta** (3 m, prova di FOR CD 25, nani a terra +4) — gratis, la
    scegli tu, **una sola volta per round**. Nessun attacco di opportunità
    per nessuno.
-2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m; chi trova una superficie entro 9 m la colpisce (Rifl 22 o 4d6 e prono), gli altri restano sospesi. Tordek resta sull'Altare.
+2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m; chi trova una superficie entro 9 m la colpisce (Rifl 22 o 4d6 e prono), gli altri restano sospesi. Tordek resta sull'Altare. Finita l'Onda, chi è entro 9 m dall'Altare ci ricade alla fine del suo turno successivo e perde il movimento (Rifl 15 o prono); chi è più lontano deriva di 3 m a round fino alla parete `[CANONE — DM 2026-10-12, D84]`.
 3. **Stalattiti** (ricarica 5-6/d6): 8d6 raggio 9 m, Rifl 22 ½ — *Artemis
    con azione preparata le disintegra (contatto CA 12)*.
 4. **Scudo di Geodi** (ricarica 1d3): +4 CA, no critici — *Tordek lo frantuma
@@ -1082,7 +1082,9 @@ gravitazionale. L'attraversamento **non è un singolo tiro**: è uno sforzo
 combinato che valorizza ognuno (vedi **MAPPA T-4**):
 - **L'Ancora — Thorik**: pianta i piedi sul bordo (o conficca Aegis Fang) e fa
   da perno di salvataggio. Se un tiro va storto, **FOR CD 20** per fermare la
-  deriva nel vuoto invece di perdersi nel piano.
+  deriva nel vuoto. Se fallisce anche l'Ancora (o la Scalare sulla corda), chi
+  scivola cade nell'oceano di roccia: affonda in 3 round, Nuotare CD 20 come
+  al §4, e Artemis può ripescarlo col cavo `[CANONE — DM 2026-10-12, D84]`.
 - **Il Traghettatore — Artemis**: con le **Ali dell'Ombra** ignora la gravità
   invertita; vola portando un cavo di mithral agganciato a Thorik.
 - **Il Navigatore — Tordek**: balza tra i detriti fluttuanti (**Saltare CD 25**,
@@ -1386,12 +1388,19 @@ una sfera nuda:
 > resta — è la casa di Terros. **Un solo boss, zero doppioni.**
 
 **Apertura sonica.** Se il party entra cantando la **Frequenza della
-Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4; servono
-2 successi su 3) — Terros si sveglia **nauseato**: **−4 attacco/CA il round
+Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4; tira
+ognuno dei tre PG, una volta, e servono 2 successi su 3) — Terros si sveglia **nauseato**: **−4 attacco/CA il round
 1**. Vale **solo** se hanno guadagnato la Frequenza dai Cristalli (§6): se
 hanno **saltato** l'incontro non la possiedono, e se hanno fatto **fallimento
 critico** l'urlo ha già svegliato e preparato Terros. In entrambi i casi: boss
 a piena forza — la scelta al campo dei Cristalli SI SENTE qui.
+
+**Cantare durante lo scontro** `[CANONE — DM 2026-10-12, D84]`. Dopo l'apertura, la Frequenza la
+canta un PG alla volta: **azione standard**, Intrattenere (Canto) **CD 18**
+(+4 con l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
+è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto). La
+modalità sonica di Artemis è un'altra cosa: passa dall'Anello con un'azione
+veloce, e la regola è più avanti.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — stato delle armi soniche al boss.**
 > Il party **possiede la Frequenza** (skill challenge superato, §6) → il
@@ -1467,8 +1476,13 @@ A) ONDA GRAVITAZIONALE (standard; ricarica: 1 round ogni 1d4
    si sposta là per 1 round. Tutti "cadono" 9 m in quella
    direzione. Chi trova una superficie entro 9 m (l'Altare, la
    parete) la colpisce: Riflessi CD 22 o 4d6 contundenti + prono.
-   Chi non la trova resta sospeso a 9 m, senza danni, e rientra
-   come chiunque nello zero-G (spinta da una superficie, o volo).
+   Chi non la trova resta sospeso a 9 m, senza danni. Finita
+   l'Onda, la gravità dell'Altare riprende chi è entro 9 m: ci
+   ricade alla fine del suo turno successivo e perde l'azione di
+   movimento (Riflessi CD 15 o prono, senza danni). Chi è più
+   lontano deriva di 3 m a round nella direzione dell'Onda finché
+   tocca la parete, e da lì si spinge, o vola
+   [CANONE — DM 2026-10-12, D84].
    Tordek, con l'Ancoraggio dei Bracieri, resta sull'Altare
    [CANONE — DM 2026-10-12, D79].
 B) PIOGGIA DI STALATTITI (standard; ricarica 5-6 su d6): raggio
@@ -1910,7 +1924,9 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
   verde tenue** (lo spirito di Hella, telepatico e freddo) gli si stringe alle
   spalle: *«Non sei solo a portare questo peso. Mai più solo.»* La pressione si
   stabilizza. Thorik perde **permanentemente 2 DES** (le articolazioni fondono
-  con la pietra) e guadagna **permanentemente +2 COS**.
+  con la pietra) e guadagna **permanentemente +2 COS** e **+4 CAR** (chi ha
+  accettato il Peso del Mondo lo porta addosso, e gli altri lo vedono)
+  `[CANONE — DM 2026-10-12, D84]`.
 
 > **Regia (asimmetria).** Thorik **non sa** che la presenza verde è Hella; per
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non
@@ -1938,7 +1954,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 >
 > | | Effetto permanente |
 > |---|---|
-> | **THORIK** | **−2 DES** e **+2 COS**, permanenti. Le articolazioni hanno fatto lega con la pietra |
+> | **THORIK** | **−2 DES**, **+2 COS** e **+4 CAR**, permanenti `[CANONE — DM 2026-10-12, D84]`. Le articolazioni hanno fatto lega con la pietra |
 > | **Tordek** | nessun cambiamento: il malus non è mai stato suo |
 > | **Bottino** | ✅ **integro**, Cuore di Terros compreso |
 >
@@ -1949,7 +1965,8 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > schiva — ma qui l'incudine è quella che porta la Corona.
 >
 > - **Ricalcola sulla scheda di Thorik**: CA, Riflessi, iniziativa, prove di
->   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**.
+>   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**. Prove di CAR
+>   **+2** (Diplomazia, Intimidire, Raggirare).
 > - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Thorik**:
 >   è Hella, e lui **non lo sa** — l'asimmetria originale del modulo, intatta.
 >   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3. È l'eco
@@ -1979,6 +1996,9 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
   - **Malus cumulativo (se fallisce)**: 1° fallimento → **Esausto**; 2° →
     **Barcollante**; 3° → **crolla Prono e Stordito**, il fiato bloccato,
     **4d6 danni** dall'energia che lo stritola.
+  - **Durante il rito la DES di Thorik non scende sotto 1**, qualunque malus
+    si sommi (esausto, la calcificazione da Artemis): il Peso del Mondo lo
+    tiene in piedi `[CANONE — DM 2026-10-12, D84]`.
   - **Al terzo fallimento** lo Smeraldo **si incastona lo stesso**: il prezzo
     sono i malus qui sopra `[CANONE — DM 2026-10-12, D36]`.
 - **Tordek — Il Sisma Contrario.** Coi **Bracieri (Terra)** batte i pugni
@@ -2233,7 +2253,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | **Scelta di Varis** (avidità/giustizia, §6) | Varis socio-che-sa-troppo **o** nemico permanente | ARC-09 (rete Varis/Il Collezionista) | fili di Varis e del Collezionista |
 | **Avidità di Artemis** (§5/§9) | Se dà via il bottino al Rituale: rinuncia dolorosa; se lo trattiene: party sceglie il sacrificio personale di Thorik | ARC-08 (WBL) / RP continuo | Echo Ledger |
 | **Seme-Mercato di Varis** (§6-bis) | Preso → **Marchio di Varis** (localizza Artemis, riscuote una volta); Rifiutato → Varis lo rispetta come "sfuggito" | ARC-09 (Varis/Il Collezionista); eco possibile già al #4 con Vatore | §6-bis + fili di Varis e del Collezionista |
-| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
+| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS/+4 CAR **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
 | **Bracieri completi + coscienza** (§7b) | Possono **rifiutare i poteri** se Tordek tradisce gli ideali nanici | ogni scelta morale dura | scheda dei Bracieri |
 | **Thorik ha già visto Fauci in forma spirituale** (Corona/Topazio, §1) | Il "sangue Skullcrusher" che riconosce; premonizione di Hammerfist | #4 (Skullcrusher) → ARC-08 | carry-over «La Forgia ricorda le ferite» + guida della Corona |
 | **Durik prende forma** (§9) | Il seme III della Collana lo evocherà; carta emotiva a Hammerfist | #3 → ARC-08 | scheda della Collana |
@@ -2267,6 +2287,14 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | | **TOTALE MODULO (percorso completo)** | | **~11.600/PG** |
 | | *Totale se i Cristalli sono saltati* | | *~10.300/PG* |
 
+> **I PX al conto SRD, per i gruppi futuri** `[CANONE — DM 2026-10-12, D84]`. La tabella qui sopra è
+> quella data al gruppo di oggi, e per lui resta. Al conto della tabella della
+> DMG (totale dell'incontro, diviso fra i tre PG di 13°) gli incontri valgono
+> meno: Terros (GS 15) **≈ 2.600** a testa invece di 5.400, gli Xorn **≈ 875**,
+> la Sentinella (GS 11) **≈ 650**, i Cristalli (EL 11) **≈ 650**, il vuoto
+> (EL 10) **≈ 450**. I premi di storia restano. Il modulo intero vale
+> **≈ 6.700** a testa, **≈ 5.900** senza i Cristalli.
+
 > **Lettura**: al 13° servono **13.000 PX** per il 14° (da 78.000 a 91.000, SRD). Questo modulo vale
 > **~0,8 livelli**; con il Piano del Fuoco già alle spalle, i PG **maturano il
 > 14° verso Hammerfist** (D8: il 14° si consolida nell'ARC-08, non qui). Le
@@ -2293,7 +2321,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 > ⚠️ **Il Rituale può azzerare quasi tutto** (§9 Fase 1): l'**Opzione A
 > (sacrificio materiale)** richiede **40.500 mo** → si dà via **tutto** questo
 > loot **e** parte dell'equipaggiamento magico personale; l'**Opzione B
-> (sacrificio personale)** lascia il loot ma costa a Thorik **−2 DES / +2 COS**
+> (sacrificio personale)** lascia il loot ma costa a Thorik **−2 DES / +2 COS / +4 CAR**
 > permanenti. **Traccia quale via prende il party**: cambia il WBL d'ingresso a
 > Hammerfist.
 
@@ -2313,7 +2341,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | **Hella** | (Collana/Durik prendono forma, ma **si legano a lei solo al #3**) | — | Durik "abbozzato"; Collana germoglia alla resurrezione |
 
 > **Verdetto del beat (per il DM).** PX **~11.600/PG** (percorso completo; ~10.300
-> se i Cristalli sono saltati — vedi §11-bis A) verso il 14° a Hammerfist;
+> se i Cristalli sono saltati — vedi §11-bis A; per i gruppi futuri ≈ 6.700 al conto SRD) verso il 14° a Hammerfist;
 > WBL ordinario **sotto** i 110.000 mo/PG (l'arco è povero di loot ordinario,
 > ricchissimo di artefatti — il delta si colma a Hammerfist, ARC-08 B4); potere
 > effettivo **molto alto** grazie agli artefatti unici (è il motivo per cui gli

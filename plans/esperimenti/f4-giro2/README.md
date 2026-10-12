@@ -90,13 +90,13 @@ c'è. Il quiz no, per D10.
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🔴 | il rientro dopo l'Onda nello zero-G | **domanda al DM**, D84 (a): nasce da D79 (a) |
+| 1 🔴 | il rientro dopo l'Onda nello zero-G | D84 (a), deciso: entro 9 m si ricade sull'Altare, oltre si deriva fino alla parete |
 | 2 🟠 | la Quick-Reference diceva ancora CD 28 | corretta a 25: l'avevo mancata applicando D79 |
 | 3 🟠 | lo Spaccare degli Xorn su Aegis Fang | come la Sentinella: solo oggetti non-artefatto |
-| 4 🟠 | cantare la Frequenza in combattimento | **domanda al DM**, D84 (b) |
-| 5 🟠 | l'Ancora o la corda falliscono | **domanda al DM**, D84 (c) |
+| 4 🟠 | cantare la Frequenza in combattimento | D84 (b), deciso: azione standard, CD 18, un round |
+| 5 🟠 | l'Ancora o la corda falliscono | D84 (c), deciso: si cade nell'oceano di roccia |
 | 6 🟠 | il *Vigore della Forgia* | è una Benedizione di Moradin, non dei Bracieri: l'errore era della mia correzione al lettore |
-| 7 🟠 | la DES di Thorik a 0 | **domanda al DM**, D84 (d) |
+| 7 🟠 | la DES di Thorik a 0 | D84 (d), deciso: non sotto 1 durante il rito |
 | 12 | le piattaforme nella legenda di T-6 | tolte |
-| 27 | il +4 CAR di Thorik | **domanda al DM**, D84 (f) |
-| 28 | i PX e i 14.000 per il 14° | 13.000, come l'SRD; la scala dei PX è D84 (e) |
+| 27 | il +4 CAR di Thorik | D84 (f), deciso: il modulo si allinea allo stato |
+| 28 | i PX e i 14.000 per il 14° | 13.000, come l'SRD; D84 (e), deciso: oggi restano, per i gruppi futuri il conto SRD |
