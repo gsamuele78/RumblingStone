@@ -74,7 +74,8 @@
 
 > 🧭 **La serata in tre frasi.** Il portale posa i PG in un bosco a est delle
 > mura di Hammerfist, al tramonto: la fortezza è giovane e un'orda la assedia
-> sotto le ali di un drago nero. Al consiglio di guerra **Re Thorek I chiede di
+> sotto le ali di un drago nero, che combatte per l'orda solo perché un runaio
+> gli ha inciso un contratto in una scaglia. Al consiglio di guerra **Re Thorek I chiede di
 > uccidere nella notte il generale Zog'tar**, dentro il campo nemico, e di
 > affrontare **all'alba il drago Skullcrusher**. Se falliscono, la fortezza
 > regge lo stesso, perché la profezia è già incisa: la salvano gli avi, e il
@@ -1906,6 +1907,39 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 il nanico antico, Tordek arriva alla scaglia. Nessuno dei tre ce la fa da solo:
 **è esattamente la scena che mancava all'arco.**
 
+#### Che cosa muove Skullcrusher `[INFERRED — needs DM confirmation]`
+
+Il drago non ha mai perso. Cinquant'anni fa, in questa stessa valle, ha ucciso
+il re di Hammerfist, e da allora i nani per lui sono una cosa da mangiare
+quando ha fame. Per questo ha accettato il patto di Balvar: quando la fortezza
+cade, il tesoro del re è suo. A un drago un contratto piace, perché è oro
+promesso per iscritto, e la runa sulla scaglia gli è sembrata il sigillo.
+
+Il guinzaglio l'ha scoperto dopo, la prima volta che il corno ha suonato e lui
+è tornato senza volerlo. Balvar ci aveva inciso una riga che non gli aveva
+letto. Da quella notte odia la Catena più dei nani.
+
+| | |
+|---|---|
+| **Vuole** | il tesoro di Hammerfist, e uccidere un secondo re **davanti all'orda**, con diecimila bocche che poi lo raccontano |
+| **Teme** | che si veda il guinzaglio: che l'orda capisca che il suo drago torna quando lo chiamano |
+| **Ha in mano** | le ali. Senza di lui l'assalto è una scala appoggiata alla pietra, e Zog'tar lo sa |
+| **Prossimo passo** | all'alba, al corno, cala sul cortile dove sta il re |
+
+**Cosa ne fa il tavolo.** Tre leve, e nessun numero nuovo:
+
+- **Dire la Catena ad alta voce**, in comune o in goblin, dove l'orda sente. È
+  la stessa azione di movimento che serve a leggerla (Scena 11). Danni non ne fa,
+  ma dal suo turno successivo il drago va su chi l'ha detta, e ci resta. È il modo di tirarlo giù su un PG che lo regge, e chi
+  lo fa se lo prende addosso.
+- **Offrirgli di spezzarla.** Davanti all'orda rifiuta sempre, perché accettare
+  vorrebbe dire ammettere il guinzaglio, e chi l'ha offerto diventa il bersaglio
+  preferito come chi lo ha ferito di più. Lontano da quegli occhi ascolterebbe,
+  ma il master non prepara quel caso: se il tavolo ci arriva, è del DM.
+- **Farlo fuggire.** Alla prima paura (⅓ dei pf, Scena 11) non passa sopra il
+  campo: va basso, verso le paludi, per non farsi vedere. L'orda lo vede lo
+  stesso, ed è da lì che comincia a sfaldarsi (Scena 13).
+
 #### Come si combatte, se si arriva a combatterlo
 
 **Non ingaggiarlo in campo aperto**: non è un duellante, è un **preparatore**.
@@ -2396,9 +2430,16 @@ Appendice A)*
 |---|---|
 | **Aspetto** | drago nero adulto maturo, snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
+| **Teme** | che l'orda veda il guinzaglio. Chi dice la Catena ad alta voce se lo tira addosso (Scena 7, «Che cosa muove Skullcrusher») `[INFERRED — needs DM confirmation]` |
 | **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
+
+**SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
+l'ho già mangiato, qui. Ditemi come vi chiamate. Li voglio dire bene.»*
+
+**SKULLCRUSHER (basso, quando sente dire la Catena):** *«Chi te l'ha
+insegnata, quella? No. Non importa. Il tuo nome.»*
 
 ![Skullcrusher nel cortile](Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
@@ -2505,6 +2546,9 @@ cambia davvero.
   sulla scaglia è un'azione di movimento entro 9 m, e colpirla è un attacco
   contro **CA 41**: la CA piena, 37 con l'armatura magica, più 4 perché il bersaglio è piccolo; la runa è sotto la scaglia, e un attacco di contatto non la raggiunge `[CANONE — DM 2026-10-07, Q25]`: il primo colpo a segno la spezza, e il drago se ne va. Se
   Balvar è morto prima dell'alba, il drago combatte a **−2** e fugge a metà pf.
+- **La Catena detta ad alta voce** `[INFERRED — needs DM confirmation]`. Chi
+  la legge forte, dove l'orda sente, diventa il suo bersaglio dal turno dopo,
+  anche se deve scendere. Il perché è in Scena 7, «Che cosa muove Skullcrusher».
 - **Soglia: quando gli restano ~100 pf, un terzo dei 297 — la prima paura.** Per la prima volta nella sua vita,
   Skullcrusher **esita**. È il momento dei tre esiti (sotto). Al suo turno
   fugge nelle paludi, a meno che nel round prima abbia preso **almeno due

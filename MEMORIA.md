@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 31 decisioni aperte
+## Aspetta il DM: 32 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -44,6 +44,7 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D60 | F3-quinquies | **Il drago Vecchio del «party straripante»** (🟠 del DM a freddo, giro 3). La riga dovrebbe rendere il duello più duro, e invece dà meno pf e CD più basse del drago di base, che ha già il template Avanzato (297 pf, CD 28… |
 | `LETTORE-PLAYTESTER` | D61 | F3-quinquies | ***Dragondoom* di Aegis Fang contro Skullcrusher** (🟠 del DM a freddo). Per la Cintura di Tordek il master dice che rifiuta; per Aegis Fang non dice niente, e il giocatore lo chiederà. Proposta: funziona, come contro og… |
 | `LETTORE-PLAYTESTER` | D62 | F3-quinquies | **Cosa vuol dire «un tiro sul *Registro delle Perdite*»** (🟠 di lettore e DM a freddo). Q11 lo vuole, DEF-4 e `ARC08-17` lo citano, ma `ARC08-03-REGISTRO-PERDITE.md` è un foglio di caselle per unità e **non ha una tabel… |
+| `LETTORE-PLAYTESTER` | D63 | F3-quinquies | **Che cosa muove Skullcrusher** (risposta al passo 7, scritta su richiesta del DM, `[INFERRED]` in DEF-4 Scena 7 e 11). Il drago non ha mai perso; ha accettato il patto di Balvar per il tesoro del re, e ha scoperto dopo… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -69,7 +70,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
 | **Le PR aperte al 2026-10-10, dopo il merge di #229, #230 e #232, e cosa resta a ciascuna** *(rimisurate con `git merge-tree` su `e63fddd5`)*: **#216** la revisione della prosa (D13, D17, D38, la *Torre*, `MEMORIA.md`):… | [PIANO-RECUPERO](plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) §2.6 · RIPRESA-PR | DM: il merge della PR del riallineamento e della #231, poi D3-D7 di RECUPERO |
-| **Le decisioni D49-D62 di DEF-4, poi il giro 4 di conferma**; poi DEF-5. Il giro 3 completo e il passo 7 sono fatti *(2026-10-12, PR #239)*: nessun 🔴 dopo il lettore, quiz 10 su 14 dal diario | [LETTORE-E-PLAYTESTER](plans/PIANO-LETTORE-E-PLAYTESTER.md) F3-quinquies | DM, poi agente |
+| **Le decisioni D49-D63 di DEF-4, poi il giro 4 di conferma**; poi DEF-5. Il giro 3 completo e il passo 7 sono fatti *(2026-10-12, PR #239)*: nessun 🔴 dopo il lettore, quiz 10 su 14 dal diario | [LETTORE-E-PLAYTESTER](plans/PIANO-LETTORE-E-PLAYTESTER.md) F3-quinquies | DM, poi agente |
 | **Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi**, un lotto alla volta: 568 in tutto il repo, circa 400 nel contenuto | §12.1 | agente: il prossimo lotto è ARC-08 (32), poi ARC-09 (53), `campaign/` (50), `PG/` (22), il Bestiario (212) per ultimo perché è il più grande |
 | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | §8.3 | agente: una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
 | **DEF-1, 2, 3 nella forma del ciclo** *(30 settembre, sera)*: passi 1-4 fatti (scene, contratto, schede, apparati), box letti al tavolo invariati. Letture cieche: DEF-1 lettore 🔴 2, DEF-2 🔴 2 + 2, DEF-3 🔴 1 + 2, DEF-1 p… | LETTORE F4 · `esperimenti/f4-def1-def3/` | DM: D35 (il rito che va male), D36 (sei rilievi di regole), D37 (la Sentinella); D34 e D9 sono decise. Poi agente: applica e rilegge |
@@ -131,6 +132,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | LETTORE-E-PLAYTESTER | Risposta al rilievo del passo 7, chiesta dal DM: che cosa muove Skullcrusher, i… | 🟡 canone nuovo marcato `[INFERRED]`, aperto come D63 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | F3-quinquies: il giro 3 completo su `DEF-4` (lettore, playtester, developer, DM… | 🟡 nessun 🔴 dopo il lettore; corretti i rilievi che il testo risolve; D49-D62 aperte al DM; serve il giro 4 di conferma dopo le decisioni |
 | 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… | ✅ (PR #238, unita il 2026-10-12) |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… | 🟡 parziale: tre letture sulle parti nuove; mancano il lettore e il resto del master (chiuso dal giro 3 completo, `plans/esperimenti/def4-giro3/`) |
@@ -142,11 +144,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-10 | AMBIENTE-RIPRODUCIBILE · PRATICHE (PI-3… | A2 in parte · Python 3.13 in CI, nel registro e nelle guide | 🟡 La #228 di Dependabot (gruppo `pip-settimanale`) alza i pavimenti a `numpy>=2.5.3` e `scipy>=1.18.1`, che chiedono Python >= 3.12: su 3.11 pip non trova vers… |
 | 2026-10-10 | RECUPERO · REGISTRO-NORME | L7: le tre pratiche di Infra-Iam-PKI e AiAgentInfrastructure (D7, il DM: *«adot… | ✅ `plans/adr-prenotati.json` (lo `0088` alla #99) e `validate_docs`: `--prossimo-adr` salta i prenotati, `--sorgenti` rosso su un prenotato usato da altri o ar… |
 | 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · AGE… | il riallineamento dopo il merge di #229, #230 e #232 (richiesta del DM: ricontr… | 🟡 La #216 portata sul `main` nuovo: sette conflitti risolti tenendo le righe di `main` e aggiungendo le sue, `docs/tools/` rigenerato, §4 e `MEMORIA.md` rigene… |
-| 2026-10-10 | STATO-E-ORDINE | la memoria in un posto solo (ADR-0087) | ✅ Richiesta del DM: tutta la memoria in un posto, senza perdere parti o decisioni; il DM sceglie «nel repo, generata». `MEMORIA.md` in radice, generato da… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 31 aperte, 212 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 32 aperte, 212 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
