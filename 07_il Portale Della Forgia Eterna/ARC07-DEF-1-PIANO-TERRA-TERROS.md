@@ -114,11 +114,12 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Viaggio (colore/affaticamento) — Sopravvivenza/Equilibrio | 12 | §4 |
 | Xorn: demolizione pilastro — Conoscenze / colpo mirato | 18 / 20 | §5 |
 | Xorn: negoziazione — Diplomazia (Terran) | 18 | §5 |
+| Xorn: ordine tattico (via B) — Intimidire o Diplomazia (Thorik) `[CANONE — DM 2026-10-12, D36]` | 18 | §5 |
 | Cristalli: skill challenge (6 successi / 3 fallimenti) | 15–22 | §6 |
 | Seme-Mercato di Varis: analisi/estirpo — Sapienza Magica | 20 | §6-bis |
 | Tempio: salto di Tordek — Saltare (Take 10 = 26 ✓) | 25 | §7a |
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
-| Sentinella: liberarsi dalla Magnetite — FOR (Thorik) | 28 | §7b |
+| Sentinella: liberarsi dalla Magnetite — FOR (Thorik, +2 con l'aiuto di Artemis) · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 28 | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
 | Frequenza della Confusione — Intrattenere Canto (Anello +4) | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
@@ -297,7 +298,9 @@ il countdown è sceso.
 > giudicheranno. Se degni, aiuteranno. Se no… ostacoleranno.»*
 
 **Benedizione «Forza della Montagna»** (mentre il party prega, pre-partenza):
-- **Effetto**: ignora le penalità della gravità 2× (fino a 2× normale).
+- **Effetto**: riduce le penalità della gravità 2× (fino a 2× normale) a
+  quelle della colonna «Con Benedizione» della tabella del §3: −25% alla
+  velocità, −5 a Saltare e a Scalare `[CANONE — DM 2026-10-12, D36]`.
 - **Durata**: permanente finché nel Piano della Terra.
 - **Bonus**: +2 di competenza a **Forza** per le sole prove contro la gravità
   (Scalare, Saltare, trasportare carichi).
@@ -458,8 +461,8 @@ l'ambiente.
 **Read-aloud**: si legge in apertura della Scena 3 (§5), all'ingresso nella foresta.
 
 **Terreno (callout):** colonne = **copertura totale** (indistruttibili);
-terreno frastagliato = **difficile** (movimento ×2, già dimezzato dalla
-gravità: strisciate); linee di vista spezzate ogni 6-9 m (agguati facili);
+terreno frastagliato = **difficile** (movimento ×2, già ridotto dalla
+gravità, §3 `[CANONE — DM 2026-10-12, D36]`: strisciate); linee di vista spezzate ogni 6-9 m (agguati facili);
 **stalattiti d'adamantio** sul soffitto a 50 m (vedi Ambiente dinamico).
 **Cosa succede qui:** **Incontro 1 — gli Xorn** (§5), al pilastro corroso
 (MAPPA T-2, G08).
@@ -506,11 +509,15 @@ la Sentinella).
 > Il Piano della Terra **non è uno sfondo**: è un avversario che agisce da solo,
 > round dopo round. Applica questi elementi durante il viaggio **e** durante
 > l'agguato degli Xorn (§5), così l'ambiente ha una sua "tattica".
+>
+> **Nel viaggio** `[CANONE — DM 2026-10-12, D36]`, polvere e stalattiti arrivano **solo come evento del
+> d6** (il 2 e il 3 degli Eventi di viaggio), più la prova di gruppo per zona
+> della «Gestione del viaggio». Niente tiri a orologio.
 
 | Elemento | Effetto (3.5) | Uso tattico |
 |---|---|---|
-| **Stalattiti d'adamantio** (20+ dal soffitto a 50 m) | **1d4 cadono ogni 15 min** (o su innesco): 3d10 perforanti, raggio 3 m, Riflessi **CD 18** per schivare | Si possono **innescare con Spaccare/tiro mirato** per farle cadere su un nemico — leva per i PG (e per Terros che scava). |
-| **Polvere di cristallo** (nell'aria) | **Tempra CD 16 ogni 10 min o 1d3 danni COS**; cumulativa a rovescio (−1 CD per ogni TS già superato: ci si abitua al respiro) | Attrito: **premia chi cura la COS** e chi si copre il volto/*Endure Elements*. Senza guaritore (Hella morta) morde davvero. |
+| **Stalattiti d'adamantio** (20+ dal soffitto a 50 m) | **1d4 cadono** col 2 del d6 di viaggio (o su innesco): 3d10 perforanti, raggio 3 m, Riflessi **CD 18** per schivare | Si possono **innescare con Spaccare/tiro mirato** per farle cadere su un nemico — leva per i PG (e per Terros che scava). |
+| **Polvere di cristallo** (nell'aria) | **Tempra CD 16 o 1d3 danni COS** col 3 del d6 di viaggio; cumulativa a rovescio (−1 CD per ogni TS già superato: ci si abitua al respiro) | Attrito: **premia chi cura la COS** e chi si copre il volto/*Endure Elements*. Senza guaritore (Hella morta) morde davvero. |
 | **Fenditure della terra** (2, larghe 3 m) | caduta 6d6 **×1,5 in gravità pesante = 9d6**; risalita Scalare **CD 20** | Barriere tattiche: spingervi dentro un nemico, o rischiare di caderci col Push di Terros. |
 | **Geodi giganti** (cristallo, alti 3-5 m) | **copertura totale (+8 CA)**; PF 80, Durezza 8 — **distruttibili** | Copertura che si può **spaccare** per esporre chi ci si nasconde (l'Xorn élite ci si rifugia sotto il 50%, §5). |
 
@@ -557,8 +564,10 @@ sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
   sugli Xorn (**10d6**, Riflessi **CD 22** dimezza) e crea un ponte sicuro.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
-  (Intimidire/Diplomazia) per accerchiarli in un'imboscata perfetta (−2 CA
-  nemici, +2 TxC al party) **salvando** il mithral, ma combattendoli.
+  (Intimidire o Diplomazia **CD 18**, come la via C `[CANONE — DM 2026-10-12, D36]`) per accerchiarli in
+  un'imboscata perfetta (−2 CA nemici, +2 TxC al party) **salvando** il
+  mithral, ma combattendoli. Se la prova fallisce, gli Xorn non sono
+  accerchiati e si combatte senza il bonus.
 - **C — Negoziazione (e l'avidità di Artemis).** Diplomazia **CD 18** in Terran
   + tributo di metallo alternativo (~500 mo/Xorn = 1.500 mo). **Fauci di
   Diamante** accetta e dà un'informazione: *«Il Tempio schiaccia gli intrusi.
@@ -1135,6 +1144,16 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 > dalla terra. Pianti i piedi. I Bracieri (Fuoco) creano una micro-bolla di
 > stabilità attorno a te. Sei l'unico in piedi. E la Sentinella lo sa: gli
 > occhi senza volto si girano verso di te.*
+
+**La Sentinella è una prova, come Terros è un voto** `[CANONE — DM 2026-10-12, D37]`.
+- **Se Tordek cade** (0 pf o meno), la Magnetite si spegne e la Sentinella
+  torna immobile al suo posto. Thorik e Artemis sono di nuovo liberi. Il duello
+  si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
+  ordinaria.
+- **Thorik**, durante il duello, può liberarsi con la prova di **FOR CD 28**
+  grazie all'aiuto di Artemis (**+2**).
+- **Artemis**, prono, può parlare, e un suo incantesimo **senza componenti
+  somatiche** passa.
 
 **Comparse**
 
@@ -1945,6 +1964,8 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
   - **Malus cumulativo (se fallisce)**: 1° fallimento → **Esausto**; 2° →
     **Barcollante**; 3° → **crolla Prono e Stordito**, il fiato bloccato,
     **4d6 danni** dall'energia che lo stritola.
+  - **Al terzo fallimento** lo Smeraldo **si incastona lo stesso**: il prezzo
+    sono i malus qui sopra `[CANONE — DM 2026-10-12, D36]`.
 - **Tordek — Il Sisma Contrario.** Coi **Bracieri (Terra)** batte i pugni
   sull'Altare di mithral **al ritmo esatto del cuore di Thorik**, dominando un
   terremoto indotto: un'onda d'urto uguale e contraria alla gravità dello
@@ -2110,7 +2131,8 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > qualcosa che ha quattro zampe. Poi non c'è più.* → **Fase 3**.
 
 ### FASE 3 — L'Incastonatura e il Ritorno di Durik
-Se sopravvivono, lo Smeraldo — verde e pulsante come linfa — si **incastona
+Comunque sia andata la Fase 2, anche con Thorik crollato al terzo fallimento
+`[CANONE — DM 2026-10-12, D36]`, lo Smeraldo — verde e pulsante come linfa — si **incastona
 nella tempia sinistra** della Corona. Onda d'urto smeraldo: per un'ora la carne
 diventa **pietra vivente** (RD 10/adamantio gratis). Thorik, toccando la gemma,
 sente che **l'ancoraggio dello spirito di Hella si è cristallizzato: ora è

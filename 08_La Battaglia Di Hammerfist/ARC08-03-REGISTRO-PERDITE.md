@@ -35,6 +35,8 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 3.  **Note / Status:** Usa questa colonna per annotare qualsiasi effetto temporaneo che influenzi una specifica unità, come un bonus da *Preghiera*, un malus del morale, o se è ingaggiata in mischia con un PG.
 4.  **Abilità Speciali:** Sono riportate solo le parole chiave. Fai riferimento alla scheda completa dell'unità per la descrizione dettagliata se necessario.
 5.  **Eroi e PNG:** I personaggi unici (alleati e comandanti) sono in una sezione a parte, dove puoi tracciare i loro PF reali e lo stato.
+6.  **Il tiro sul Registro** `[CANONE — DM 2026-10-12, D62]`: quando il banco della rocca (`ARC08-17`) chiede «un tiro sul *Registro delle Perdite*» per un incantesimo di 4° livello o più comprato stanotte, si tolgono **1d4 PFU**, prima della battaglia, a un'unità di **Guerrieri Nanici Veterani** scelta dal DM. È la cura che manca a quell'unità all'alba.
+    ⚠️ I tiri del viaggio nel 372 (`ARC07-DEF-4`, il **dado dei caduti**) **non** arrivano qui: riguardano la fortezza di mille anni prima, e nel 1372 tornano solo come eco, senza togliere un quadratino.
 
 ---
 <div style="page-break-before:always"></div>

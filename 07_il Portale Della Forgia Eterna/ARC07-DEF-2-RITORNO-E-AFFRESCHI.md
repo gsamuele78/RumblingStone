@@ -592,7 +592,8 @@ dopo lettera, la **Cronaca dei Custodi** in rune naniche:
 sull'incisione della druida e pronuncia il suo nome (nessun tiro): la pietra è
 **calda**. Solo quello. È il segno che il legame regge, sotto il mondo.
 **Effetto:** al rito del `DEF-3`, il primo TS del ritual-master ha **+1 sacro** (la
-Stanza «partecipa» alla resurrezione). *(Pannello-Cronaca «Il Ritorno».)*
+Stanza «partecipa» alla resurrezione). Il bonus viene dal **tocco**, non dal
+dormire nella Stanza `[CANONE — DM 2026-10-12, D36]`. *(Pannello-Cronaca «Il Ritorno».)*
 
 **Perché tornare qui — e perché forse no.** La Stanza è ora un **Santuario
 Sicuro** (*Consacrare*), ed è il posto **emotivamente** giusto per il riposo
@@ -603,7 +604,7 @@ qualunque altro posto (§0-bis), la scelta è diventata un vero scambio:
 | Dove dormono | Costa | In cambio |
 |---|---|---|
 | **Sala della Forgia** | **−4 h** | niente bonus, e A7 ticchetta sotto gli occhi |
-| **Stanza della Corona** | **−12 h** | il **+1 sacro** al primo TS del ritual-master (l'interazione qui sopra) e la scena giusta |
+| **Stanza della Corona** | **−12 h** | la scena giusta. Il **+1 sacro** al primo TS del ritual-master viene dal toccare l'incisione (qui sopra), e si prende anche senza dormirci `[CANONE — DM 2026-10-12, D36]` |
 
 **Per il gruppo di oggi la scelta è già fatta**: hanno dormito nella Sala (R4,
 §0-bis). La tabella vale per un gruppo nuovo.
@@ -841,8 +842,8 @@ Ricchezza speciale (Corona 2/3, Bracieri completi) già contata nel Piano della 
 
 ## §11 — PONTE verso la resurrezione di Hella + HANDOUT & ASSET
 
-**Ponte.** Riposato il party (Sala **−4 h** o Stanza della Corona **−12 h** col
-**+1 sacro** al rito: è una scelta, §6), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
+**Ponte.** Riposato il party (Sala **−4 h** o Stanza della Corona **−12 h**: è una
+scelta, §6; il **+1 sacro** al rito viene dal toccare l'incisione `[CANONE — DM 2026-10-12, D36]`), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
 un solo atto prima di lasciare la Forgia: **riportare indietro Hella**. Il corpo
 è pronto davanti all'Altare; il Cuore di Moradin attende di essere speso; ogni
 PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella

@@ -132,14 +132,14 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 
 ## §0-bis — QUICK-REFERENCE DM (una pagina)
 
-### Il Rito, in sei passi (CD esplicite)
+### Il Rito, in sei passi (CD esplicite) `[CANONE — DM 2026-10-12, D35]`
 | Step | Chi | Prova | CD | Fallimento |
 |---|---|---|---|---|
-| 1 — Invocazione | Thorik | Conoscenze (religioni) | 15 | riprova, −2 cumulativo |
-| 2 — Canalizzazione | Tordek | Concentrazione | 20 | 2d6 non letali, riprova |
-| 3 — Stabilizzazione | Artemis | Utilizzare Oggetti Magici | 18 | corpo rifiuta, −10 min |
+| 1 — Invocazione | Thorik | Conoscenze (religioni) · senza gradi SAG −4 | 15 | riprova, −2 cumulativo · max 3 tentativi, poi riesce (§4) |
+| 2 — Canalizzazione | Tordek | Concentrazione | 20 | 2d6 non letali, riprova · max 3 tentativi, poi riesce (§4) |
+| 3 — Stabilizzazione | Artemis | Utilizzare Oggetti Magici · senza gradi CAR −4 | 18 | corpo rifiuta, riprova · max 3 tentativi, poi riesce (§4) |
 | 4 — Germinazione semi | (Moradin) | automatico | — | — |
-| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se Thorik ha rifiutato il Dono) |
+| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se i Doni versati sono uno o nessuno, §5) `[CANONE — DM 2026-10-12, D36]` · con 0 successi, §9 |
 | 6 — Fusione | (Moradin manifesto) | automatico | — | — |
 
 ### I Tre Doni — il trapianto (§5)
@@ -445,6 +445,16 @@ Il DM le legge senza inventare, e la scena non si spegne mai sul numero:
 > e chiedendo: **«Che fate?»** — anche quando la risposta giusta è «il prossimo
 > tira». Un rito in cui non si può scegliere niente è un filmato.
 
+**Se uno step fallisce, Step 1-3** `[CANONE — DM 2026-10-12, D35]`. Ogni step
+si tenta **al massimo tre volte**, e ogni tentativo costa **10 minuti**. Restano
+i costi del fallimento scritti sotto (il −2 cumulativo dello Step 1, i 2d6 non
+letali dello Step 2). Al **terzo fallimento lo step riesce lo stesso**, e il suo
+esito ❌ della tabella qui sopra resta come prezzo: il testimone dello Step 1,
+il buio sentito dello Step 2, il corpo con colore ma senza calore dello Step 3.
+Chi non ha gradi usa la **prova grezza** della caratteristica con **−4**: **SAG**
+per l'Invocazione, **CAR** per la Stabilizzazione. La Concentrazione dello
+Step 2 si tira anche senza gradi.
+
 
 **STEP 1 — Invocazione (Thorik · Conoscenze religioni CD 15).** La preghiera
 nanica antica: *«Vorrak Moradin, hragn tul-vesh! Hella
@@ -473,7 +483,7 @@ erre battuta e le vocali brevi.
 > il tuo ki lo prende come misura. L'energia della vita fluisce dal Cuore,
 > attraverso te, verso Hella. Dall'altra parte c'è una lotta: il suo spirito
 > VUOLE tornare, e la morte non molla la presa. La corda è tesa fra le due.*
-Fallimento: 2d6 non letali, riprova.
+Fallimento: 2d6 non letali, riprova (al massimo tre tentativi, sopra).
 
 **STEP 3 — Stabilizzazione (Artemis · Utilizzare Oggetti Magici CD 18).** L'Anello
 esplode in **due colori insieme** — oro (vita) e argento (transizione): la sua
@@ -1076,7 +1086,7 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | **3 su 3** | Hella intera, i tre doni attecchiscono | la soglia (§8-ter) parte pulita |
 | **2 su 3** | Hella intera, un dono **attecchisce a metà** | il PG che ha fallito lo scopre **a −1.000**, nel momento peggiore: il suo dono non risponde al primo tentativo |
 | **1 su 3** | Hella torna con **1 livello negativo** e non ricorda i nomi per 1d4 minuti | una scena vera al risveglio: **chi le dice il proprio nome per primo** conta, e Hella lo ricorderà per tutto l'arco |
-| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé |
+| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno occupa il punto vuoto del cerchio, un PG o Therysol. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3** |
 
 ⚠️ **Il vicolo cieco ha una porta**: se l'ora scade senza che il tavolo trovi
 niente, **Therysol** parla — e dice la cosa che ha visto in sei giorni di

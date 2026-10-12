@@ -36,6 +36,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 3 | Conoscenze (Ingegneria/Dungeoneering) | 18 |
 | SCENA 3 | poi colpo mirato (FOR o attacco) | 20 |
 | SCENA 3 | pilastro crolla sugli Xorn (10d6, Riflessi | 22 |
+| SCENA 3 | Azione di comando (Intimidire o Diplomazia | 18 |
 | SCENA 3 | Diplomazia | 18 |
 | SCENA 3 | Ali d'Ombra (che qui chiedono Volare | 20 |
 | SCENA 4 | Osservare | 18 |
@@ -53,6 +54,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | trabocchetti di gravità (Riflessi | 15 |
 | SCENA 6 | 1d6), rune (Arcane | 18 |
 | SCENA 7 | FOR | 28 |
+| SCENA 7 | liberarsi con la prova di FOR | 28 |
 | SCENA 7 | se colpisce, Tempra | 22 |
 | SCENA 7 | metallico non-artefatto entro 9 m, Riflessi | 22 |
 | SCENA 7 | TS Volontà | 20 |

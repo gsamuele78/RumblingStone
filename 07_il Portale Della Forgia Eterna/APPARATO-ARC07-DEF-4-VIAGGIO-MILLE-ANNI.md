@@ -49,6 +49,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | Diplomazia/Intimidire | 20 |
 | SCENA 4 | Diplomazia/Intimidire, alternativa | 16 |
 | SCENA 5 | palla di fuoco da 5d6, Riflessi | 14 |
+| SCENA 5 | dell'ala (D18, Forza | 25 |
 | SCENA 5 | stessa cera nera sulle dita (Osservare | 15 |
 | SCENA 5 | lei, Artigianato (fabbricare armi) o Valutare | 15 |
 | SCENA 5 | druido), Artemis con Usare Oggetti Magici | 23 |
@@ -85,6 +86,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | Intimidire | 22 |
 | SCENA 8 | dovrà superare Volontà | 18 |
 | SCENA 8 | è finita, quindi si tira Nascondersi | 22 |
+| SCENA 8 | un PG garantisce per lui, Diplomazia | 20 |
 | SCENA 9 | stessa cera nera sulle dita, Osservare | 15 |
 | SCENA 9 | Percepire Intenzioni o Diplomazia | 18 |
 | SCENA 9 | Rapidità di Mano | 22 |
@@ -99,8 +101,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 11 | Ascoltare | 20 |
 | SCENA 11 | se il gancio prende, Forza | 25 |
 | SCENA 11 | aiuta, +2 a testa (aiutare, Forza | 10 |
-| SCENA 11 | 25d12+125 (287 pf), soffio 16d4 | 27 |
-| SCENA 11 | Presenza | 24 |
+| SCENA 11 | 40 con armatura magica), soffio 16d4 | 29 |
+| SCENA 11 | Presenza | 26 |
 | SCENA 12 | Volontà | 20 |
 
 ## L'indice dei read-aloud, in ordine di gioco
@@ -126,6 +128,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | dentro | Salvatore lead | 7 |
 | SCENA 7 | 1 di 3, poi FERMATI | Andor lead | 5 |
 | SCENA 7 | «Quella corona la finirono con tre gemme. Tu ne hai due.»* — *un colpo | — | 4 |
+| SCENA 7 | Tre rune nane, tutte spezzate a metà dallo | Salvatore | 3 |
 | SCENA 8 | la tenda, il seggio | Salvatore lead | 6 |
 | SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 8 |
 | SCENA 10 | le mura | Salvatore lead, LotR support | 9 |
