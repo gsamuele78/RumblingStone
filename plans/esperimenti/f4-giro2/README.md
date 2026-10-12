@@ -108,11 +108,11 @@ D84 regge: il rientro dopo l'Onda, il canto, l'Ancora fallita e la DES di Thorik
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🔴 | la Sentinella: con +12 contro CA 30 le crepe (CA+5 = 35) non si fanno, e la sconfitta rigioca lo stesso duello | **domanda al DM**, D85 (a). Il gruppo di oggi l'ha già giocata e vinta: vale per i gruppi futuri |
-| 2 🟠 | la DPR di Thorik contro Terros conta il sacro dello stadio 1, e la stima non sottrae la rigenerazione | **domanda al DM**, D85 (f) |
+| 1 🔴 | la Sentinella: con +12 contro CA 30 le crepe (CA+5 = 35) non si fanno, e la sconfitta rigioca lo stesso duello | D85 (a), deciso: ogni colpo dei Bracieri è una crepa, e al secondo tentativo si riparte da dove si era. Il gruppo di oggi l'ha già giocata e vinta: vale per i gruppi futuri |
+| 2 🟠 | la DPR di Thorik contro Terros conta il sacro dello stadio 1, e la stima non sottrae la rigenerazione | D85 (f), deciso: corretta la stima, non le statistiche |
 | 3 🟠 | Volare CD 20 senza bonus | residuo: D79 (h), il DM ha scelto di lasciarla com'era |
-| 4 🟠 | la Spinta fuori dal bordo non ha la regola di rientro | **domanda al DM**, D85 (b) |
-| 5 🟠 | la caduta nell'oceano attorno al Tempio, dove la gravità è zero; Tordek senza cavo | **domanda al DM**, D85 (c): precisa D84 (c) |
+| 4 🟠 | la Spinta fuori dal bordo non ha la regola di rientro | D85 (b), deciso: vale la regola dell'Onda |
+| 5 🟠 | la caduta nell'oceano attorno al Tempio, dove la gravità è zero; Tordek senza cavo | D85 (c), deciso: si deriva senza danno, Artemis ripesca con FOR CD 15, Tordek legato al cavo |
 | 6 🟠 | le righe PX delle scene danno solo le cifre di oggi | corrette: le due cifre in ogni riga, e la «Lettura» |
-| 7 🟠 | la Sentinella ferma dopo la caduta di Tordek | **domanda al DM**, D85 (d) |
-| 8 🟠 | Terros addormentato alla soglia | **domanda al DM**, D85 (e) |
+| 7 🟠 | la Sentinella ferma dopo la caduta di Tordek | D85 (d), deciso: toccarla la risveglia, la porta resta chiusa |
+| 8 🟠 | Terros addormentato alla soglia | D85 (e), deciso: si sveglia al primo passo sull'Altare, un round di sorpresa |

@@ -49,6 +49,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | Osservare | 20 |
 | SCENA 6 | Se un tiro va storto, FOR | 20 |
 | SCENA 6 | affonda in 3 round, Nuotare | 20 |
+| SCENA 6 | intero e una prova di FOR | 15 |
 | SCENA 6 | balza tra i detriti fluttuanti (Saltare | 25 |
 | SCENA 6 | Intrattenere (Canto) | 18 |
 | SCENA 6 | Conoscenze (religioni) | 15 |
@@ -64,6 +65,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
 | SCENA 8 | FOR) | 25 |
+| SCENA 8 | e perdi l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | caster. Move Earth lo stordisce (Tempra | 15 |
 | SCENA 8 | Riflessi | 22 |
 | SCENA 8 | e perde l'azione di movimento (Riflessi | 15 |

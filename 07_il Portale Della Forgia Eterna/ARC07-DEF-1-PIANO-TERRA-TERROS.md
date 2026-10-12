@@ -1085,8 +1085,13 @@ combinato che valorizza ognuno (vedi **MAPPA T-4**):
   deriva nel vuoto. Se fallisce anche l'Ancora (o la Scalare sulla corda), chi
   scivola cade nell'oceano di roccia: affonda in 3 round, Nuotare CD 20 come
   al §4, e Artemis può ripescarlo col cavo `[CANONE — DM 2026-10-12, D84]`.
+  Attorno al Tempio la gravità è zero, quindi non si cade: si deriva piano
+  verso l'oceano, senza danno, e lo si tocca al round successivo. Artemis
+  ripesca chi è legato al cavo con un'azione di round intero e una prova di
+  FOR CD 15, prima che i 3 round dell'affondamento finiscano. Al cavo sono
+  legati Thorik e Tordek `[CANONE — DM 2026-10-12, D85]`.
 - **Il Traghettatore — Artemis**: con le **Ali dell'Ombra** ignora la gravità
-  invertita; vola portando un cavo di mithral agganciato a Thorik.
+  invertita; vola portando un cavo di mithral agganciato a Thorik e a Tordek.
 - **Il Navigatore — Tordek**: balza tra i detriti fluttuanti (**Saltare CD 25**,
   Take 10 = 26 ✓) fino al cubo e colpisce le **Rune di Attracco** esterne,
   stabilizzando l'ingresso per far attraccare Artemis e trainare Thorik.
@@ -1157,7 +1162,11 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 - **Se Tordek cade** (0 pf o meno), la Magnetite si spegne e la Sentinella
   torna immobile al suo posto. Thorik e Artemis sono di nuovo liberi. Il duello
   si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
-  ordinaria.
+  ordinaria. Al secondo tentativo la Sentinella riparte dai pf e dalle crepe a
+  cui era rimasta `[CANONE — DM 2026-10-12, D85]`.
+- **Se qualcuno tocca la Sentinella ferma**, o prova a scavalcarla, lei si
+  risveglia e la Magnetite si riaccende. La porta verso Terros resta chiusa
+  finché non la batte Tordek `[CANONE — DM 2026-10-12, D85]`.
 - **Thorik**, durante il duello, si libera **del tutto** con la prova di
   **FOR CD 25** `[CANONE — DM 2026-10-12, D79]`, una volta per round. L'aiuto di Artemis dà **+2** solo se gli
   è adiacente, come ogni aiuto dell'SRD: prona sotto dieci volte la gravità
@@ -1181,8 +1190,8 @@ DV 18d10+40 (**160 pf**) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES
 non-artefatto entro 9 m, Riflessi **CD 22** nega · Immunità da costrutto ·
 **RD 15/adamantio E contundente** (solo i pugni di Tordek coi Bracieri passano
 pieni) · **Immunità alla magia** · **Vulnerabilità alla Risonanza degli
-artefatti**: i Bracieri **ignorano la RD** e infliggono pieno; ogni critico (o
-colpo che supera la CA di 5+) crea una **crepa** — **3 crepe → guscio infranto**.
+artefatti**: i Bracieri **ignorano la RD** e infliggono pieno; **ogni colpo dei
+Bracieri che va a segno** crea una **crepa** `[CANONE — DM 2026-10-12, D85]` — **3 crepe → guscio infranto**.
 
 **Scontro in 3 fasi.** (1) *Il guscio* — la Sentinella è veloce, fluida, non
 goffa: Tordek usa mobilità/CA per sopravvivere e colpire **duro** (ogni pugno
@@ -1305,6 +1314,10 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > lucore dell'adamantio — accatastati come pagine di un libro chiuso da
 > troppo tempo. Non si muove. Non ha respiro. Occupa un terzo della
 > piattaforma. **Che fate?***
+
+**Se attaccano la collina** `[CANONE — DM 2026-10-12, D85]`. Terros si sveglia appena qualcuno mette
+piede sull'Altare. Chi agisce prima ha un round di sorpresa, ma Terros non è
+indifeso: un elementale non dorme davvero. Poi si legge il risveglio qui sotto.
 
 > **Read-aloud (il risveglio del guardiano — LotR + Salvatore).** *A prima
 > vista è una formazione della caverna: una collina di roccia
@@ -1457,12 +1470,13 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
      MA solo stando saldi — non fluttuando nello zero-G).
      Thorik sull'Altare +9 (serve 16+); nello zero-G +5 (serve 20).
      Tordek sull'Altare +6 (serve 19+); nello zero-G +2 (mai).
-   • FUORI DAL BORDO: entri nello zero-G e DERIVI. I 2d6 contro la
-     parete valgono solo se sei già a meno di 3 m da essa (di norma
-     la parete è a ~25 m). Per rientrare: volo, oppure spinta da una
-     superficie in linea retta a metà velocità (§0-bis). Thorik ha
-     Aegis Fang Returning come gancio; TORDEK NON HA NIENTE — è lui
-     il vero bersaglio della Spinta, e sono due round fuori scena.
+   • FUORI DAL BORDO: entri nello zero-G, a 3 m dall'Altare, e vale
+     la regola dell'Onda: ci ricadi alla fine del tuo turno
+     successivo e perdi l'azione di movimento (Riflessi CD 15 o
+     prono) [CANONE — DM 2026-10-12, D85]. I 2d6 contro la parete
+     valgono solo se sei già a meno di 3 m da essa (di norma la
+     parete è a ~25 m). Per Tordek, che non vola, è un turno perso:
+     è lui il vero bersaglio della Spinta.
 3) EARTH GLIDE (Ex): come azione di movimento entra nell'Altare/
    parete e riemerge (fino a 6 m) alle spalle di un caster.
    *Move Earth* lo stordisce (Tempra CD 15) e lo blocca 1 round.
@@ -1581,10 +1595,10 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 
 | PG | Danno medio/round vs CA 26 | Nota |
 |---|---|---|
-| **Thorik** (Aegis Fang +21) | ~18 dopo RD 10 | serve 5+; 1d10+7+3d6 sacro ≈ 28, −RD 10 |
+| **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra `[CANONE — DM 2026-10-12, D85]` |
 | **Tordek** (Raffica +12/+12/+7/+2) | ~12 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
 | **Artemis** (Blast +16 vs **contatto 8**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | colpo automatico; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
-| **Party** | **~65-75/round** | Terros 345 pf → **~5 round** ✓ epico, non slog |
+| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** `[CANONE — DM 2026-10-12, D85]` |
 
 | Bersaglio di Terros | Danno medio/round | Letalità |
 |---|---|---|
@@ -1611,8 +1625,8 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
   primo round **nauseato** (−4/−4), usa un **Tremore/Onda** disperato per
   disorientare. Altrimenti: si alza dall'Altare (K08-L09) e apre con **Onda
   Gravitazionale verso il soffitto** — vuole i PG **staccati dall'Altare**,
-  fluttuanti e goffi nello zero-G, dove il suo Push li sbatte contro il muro
-  curvo (2d6). Bersaglio prioritario: **chi tocca l'Altare** (Earth Mastery
+  fluttuanti e goffi nello zero-G, dove il suo Push li tiene lontani
+  dall'Altare `[CANONE — DM 2026-10-12, D85]`. Bersaglio prioritario: **chi tocca l'Altare** (Earth Mastery
   +1 su di loro).
 - **Fase di pressione (303–260 pf).** Full-attack su **Thorik** (la minaccia
   che tiene la piattaforma): 2 schianti +30 e **Push FOR CD 25** per
@@ -1657,7 +1671,7 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 | **Vogliono riposare dentro il Tempio prima del boss** | Possibile (l'Anticamera post-Sentinella è sicura), e **probabile**. Costa **−12 h** di orologio (tariffa ordinaria, `ARC07-DEF-2` §0-bis) — ma il prezzo vero **non è il timer**: è che **Terros ti arriva a risorse piene**, quindi scatta il ramo «party straripante di risorse» del riquadro *Scalare lo scontro* (**§8c-4**). Mostra l'affresco A7, non minacciare la scadenza: a 3g 08h la soglia critica è ancora lontana. |
 | **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. *La sconfitta costa tempo e orgoglio, non la campagna.* |
 
-**Durata attesa 4–6 round. XP** ~5.400/PG al gruppo di oggi, ≈ 2.600 ai gruppi futuri (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
+**Durata attesa circa 10 round** `[CANONE — DM 2026-10-12, D85]`. **XP** ~5.400/PG al gruppo di oggi, ≈ 2.600 ai gruppi futuri (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
 **Loot**: **Geode Titanico** (5.000 mo, cristalli d'adamantio) + **Cuore di
 Terros** (oggetto meraviglioso: componente da **20.000 mo**, o base per un
 *Amuleto di Armatura Naturale +5*) — l'occhio di Artemis ci si posa subito.
