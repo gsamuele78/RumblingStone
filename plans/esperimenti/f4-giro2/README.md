@@ -27,7 +27,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | 8 🟠 | i danni sonici di Tordek | D79 (g), deciso: sonici nel round della Frequenza |
 | 9 🟠 | la scena della pergamena dentro DEF-1 | una riga prima del blocco: si gioca nella notte del 372, e chi sono Brynja, Kettra e le tacche |
 | 10 🟠 | i PX che si contraddicono | le righe di §5 e §7b allineate alla tabella del §11-bis: 1.700 e 1.500 a testa |
-| 11 🟠 | Volare di PF1e | D79 (h), deciso dal DM diversamente: volo del 3.5, niente prova di Volare |
+| 11 🟠 | Volare di PF1e | D79 (h), deciso: resta com'è, con Volare CD 20 (supporto PF1e dichiarato) |
 
 I 21 🟡 aspettano il giro dopo le risposte di D79.
 

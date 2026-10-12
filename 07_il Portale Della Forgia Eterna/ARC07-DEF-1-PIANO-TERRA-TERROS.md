@@ -156,9 +156,8 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
 > tossiche ambientali; PF1e sì. Se vuoi crunch più solido, usa queste (fonte
 > PF1e, ambiente planare) al posto delle improvvisazioni:
 > - **Zero-G (camera di Terros)**: chi non vola si muove solo **spingendosi da
->   una superficie** (linea retta, metà velocità); chi vola (Artemis) manovra
->   con le regole di volo del 3.5, e nello zero-G con la sua manovrabilità
->   piena (buona, 18 m) `[CANONE — DM 2026-10-12, D79]`; senza appigli è **in balia** (può solo derivare). Combattere
+>   una superficie** (linea retta, metà velocità) o con **Volare CD 20** per
+>   manovrare; senza appigli è **in balia** (può solo derivare). Combattere
 >   fluttuando: **−4 agli attacchi in mischia** senza un punto d'appoggio.
 >   Prima esposizione: **Tempra CD 15** o **nauseato 1 round** (vertigine da
 >   caduta libera — i nani, gente di pietra, la odiano).
@@ -360,7 +359,7 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 | Attacco in mischia | −2 (armi pesanti ×2 ingombro) | nessuna penalità |
 | Prove di FOR/DES | −4 | **+2** di competenza alla FOR (aiuta) |
 | Carico | ×2 (Medio → Pesante) | +2 FOR per il calcolo (compensa) |
-| Volo (Artemis, Ali d'Ombra: 18 m, manovrabilità buona) | — | regole di volo del 3.5, senza prove: la gravità doppia dimezza la velocità (9 m) e abbassa la manovrabilità a media, quindi non può restare ferma in aria e deve muoversi di almeno 4,5 m ogni round, o scende `[CANONE — DM 2026-10-12, D79]` |
+| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** Volare CD 20 a fine round o precipita (Volare è l'abilità di PF1e, §0-bis: in 3.5 non esiste) |
 
 **Cadute in gravità aumentata.** Danno **1d10 per 3 m** (non 1d6) — versione
 "Iraconda" del RICALIBRATO; velocità terminale raggiunta prima. CD dei
@@ -632,8 +631,8 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   metà; se avanza in armi, tendono l'agguato.
 - **E se sorvolano, sono invisibili o silenziosi.** La percezione tremorica
   (SRD) localizza chi è a contatto col suolo, e basta. Chi si è alzato da
-  terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (in volo, con le regole
-  del §3) sparisce dalla loro percezione, e il
+  terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (che qui chiedono
+  Volare CD 20 a ogni fine round, §3) sparisce dalla loro percezione, e il
   bersaglio preferito del round 1 diventa il PG più arretrato fra quelli a
   terra. L'invisibilità e Muoversi Silenziosamente, da soli, non servono: gli
   Xorn non guardano e non ascoltano, sentono il peso.

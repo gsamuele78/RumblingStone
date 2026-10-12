@@ -38,6 +38,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 3 | pilastro crolla sugli Xorn (10d6, Riflessi | 22 |
 | SCENA 3 | Azione di comando (Intimidire o Diplomazia | 18 |
 | SCENA 3 | Diplomazia | 18 |
+| SCENA 3 | Ali d'Ombra (che qui chiedono Volare | 20 |
 | SCENA 4 | Osservare | 18 |
 | SCENA 5 | Sapienza Magica | 20 |
 | SCENA 5 | Volontà | 16 |
