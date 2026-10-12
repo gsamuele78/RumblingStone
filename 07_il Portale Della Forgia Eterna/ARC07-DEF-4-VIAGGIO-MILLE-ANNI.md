@@ -415,7 +415,7 @@ bianche, nessun cavaliere sul drago.)*<!-- /apparato -->
 **In scena** — Dove: il bosco — Chi: Durin · i sei veterani
 
 > **Read-aloud (Andor lead) — il bosco.** *Fra gli abeti il sentiero scende
-> verso le mura, e dal sottobosco si alzano sette elmi insieme. Sei nani in
+> verso le mura, e dal sottobosco si alzano sette elmi insieme. Sette nani in
 > armatura completa, gli scudi accostati, le asce basse. Quello davanti è più
 > vecchio degli altri e stringe l'ascia doppia così forte che le nocche sono
 > bianche. Nessuno si muove. Da lontano arriva il tonfo sordo dei tamburi
@@ -463,7 +463,7 @@ Esito identico: Durin passa da diffidente a **fedele fino alla morte**, li porta
 a cavallo al castello. *(Se attaccano la pattuglia: è un tragico
 malinteso — i nani che erano venuti a salvare li credono spie; §6 Contingenze.)*
 
-**La cavalcata.** Mezz'ora a cavallo fino alle mura, con i cavalli bassi e
+**La cavalcata.** Dieci minuti al passo fino alle mura, girando largo dal campo, con i cavalli bassi e
 robusti della pattuglia. Durin parla poco, e le cose che dice sono quelle che il
 tavolo deve sapere prima del consiglio:
 
@@ -901,8 +901,8 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   mantello o dalla stessa cera nera sulle dita (Osservare **CD 15** se l'hanno
   cercato qui). Zeth non sa chi sia.
   Le rune che traccia stanotte sui tunnel e sui camminamenti sono **colore**:
-  nel 372 non hanno effetto (scrive in fretta, e quelle d'uso le ha date ai
-  PG). Nel 1372 sono le difese del Ghostlord `[CANONE — DM 2026-09-30, D30]`.
+  nel 372 non hanno effetto (scrive in fretta, e quelle d'uso le vende ai
+  PG, qui sotto). Nel 1372 sono le difese del Ghostlord `[CANONE — DM 2026-09-30, D30]`.
 - **Le rune di Zeth, se gliele chiedono** `[CANONE — DM 2026-09-26 e 2026-09-27]`.
   Zeth sa incidere rune di tre famiglie: **d'abiurazione e di protezione**;
   **d'annullamento**, come quelle della miniera di Belkram, che spengono la
@@ -1033,7 +1033,7 @@ quelle, non ce ne sono altre.
 | Pozione di *cura ferite leggere* | 50 mo | 6 | le *gravi* ci sono, ma sono i doni del re (§8 B) |
 | Pozione di *cura ferite moderate* | 300 mo | 2 | |
 | Pozione di *volare* | 750 mo | 5 | 5° livello dell'incantatore, 5 minuti. Non si vendono: le **regala il re**, tramite il sergente, per la missione nel campo `[CANONE — DM 2026-10-06]` (il conto della fucina, più sotto) |
-| Pozione di *invisibilità* | 300 mo | 5 | 3° livello, 3 minuti. Da Brynja, come sopra |
+| Pozione di *invisibilità* | 300 mo | 5 | 3° livello, 3 minuti. Da Brynja: sono scorte della cappella |
 | Bacchetta di *cura ferite leggere*, 50 cariche | 750 mo | 2 | da Brynja, come sopra |
 | Acqua santa, la fiasca | 25 mo | 10 | temprata nella vasca della forgia |
 | Antitossina | 50 mo | 4 | |
@@ -1128,10 +1128,10 @@ cosa fa. Per sapere cosa fa un'arma o un anello serve la pergamena qui sopra.
 
 Sono le pozioni che il gruppo si portava dietro senza sapere cosa fossero,
 alcune dal 2022 del tavolo. Kettra le identifica tutte e dieci in dieci
-minuti, con il 25 che le dà il prendere 10. Due la fermano: su quelle sa
-**cosa fanno**, e sa che **c'è dell'altro**, ma per dire cosa servirebbe un 30.
+minuti, con il 25 che le dà il prendere 10. Una la ferma, la n. 4: su quella sa
+**cosa fa**, e sa che **c'è dell'altro**, ma per dire cosa servirebbe un 30.
 Brynja ci passa sopra *individuazione del magico* e dice la scuola di
-quell'altro. Ai giocatori si dà l'handout «Le dieci boccette».
+quell'altro. Ai giocatori si dà l'handout «Le dieci boccette» (`homebrew/volume-mille-anni/05-HANDOUT-POZIONI-DI-KETTRA.md`, anche nel volume dei giocatori della serata).
 
 | # | Dove l'hanno presa | Cosa è (SRD) | Cosa nota Kettra |
 |---:|---|---|---|
@@ -2993,7 +2993,7 @@ DV 22d12+154 (297 pf) · Iniz +6 · Sensi: percezione
   Ascoltare +29, Osservare +29
 Velocità: 18 m, volare 45 m (scarsa), nuotare 18 m
 CA 33 (−2 taglia, +2 DES, +23 naturale), contatto 10, impreparato 31
-  (37 con armatura magica, lanciata prima: dura 5 ore)
+  (37 con *armatura magica*, che si lancia prima del duello e dura 5 ore: al duello della Scena 11 è **già addosso**, quindi CA 37)
 RD 10/magia · RI 21 · immune acido, sonno, paralisi
 TS Temp +20, Rifl +17, Vol +19
 BAB +22 · Lotta +40
