@@ -199,6 +199,12 @@ di Tordek qui funziona. Il ritorno a piedi alle mura costa **1 tacca**.
 **Scena 9, Vatore** (cap. III Scena 9). Dieci minuti, al ritorno. L'Anello di
 Artemis lo sente prima di chiunque: dagli lo spotlight.
 
+**Gli scontri che possono capitare per strada**, tutti con la loro tattica nel
+master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
+sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
+guardie della tenda (Scena 8). Le righe marcate `[INFERRED]` sono proposte da
+confermare: se non ti vanno, cambiale prima della serata.
+
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 
@@ -213,7 +219,8 @@ tacche. Zog'tar resta completo.
 **Scena 10, le mura** (cap. III Scena 10). Il box, poi **«Che fate?»**: una via
 su tre, prova collettiva. **Prima di contare i successi**, applica la tabella
 «Dalla notte»: i Treant, il campo allertato, Zog'tar vivo o morto. Se Zog'tar è
-vivo all'alba, con 0-1 successi sale sulla breccia.
+vivo all'alba, con 0-1 successi sale sulla breccia: la sua tattica sul
+camminamento è scritta sotto la tabella «Dalla notte».
 
 Se le tacche sono 8 o più, la Scena 10 **non si gioca**: il duello comincia
 con i PG fuori dalle mura.
@@ -1854,6 +1861,21 @@ blocchi** da 200 m.
   il corridore della Via B, qui sotto. Se arriva, Zog'tar è pre-allertato.
   Dopo lo scontro si riparte dal blocco in cui si era, e lo scontro costa una
   tacca in più.
+- **Come combatte la pattuglia** `[INFERRED — needs DM confirmation]`. Sono
+  soldati, non predoni: marciano in due file da quattro e combattono in coppia,
+  due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
+  (+2, SRD). **Non gridano**: in un campo che dorme un grido sveglia il
+  generale, e il generale frusta chi l'ha svegliato. Per questo mandano un
+  corridore, ed è il tiro di 1d6 qui sopra.
+  - *Contro chi è invisibile* colpiscono il quadretto da cui è venuto il colpo,
+    con il 50% di mancare (occultamento totale, SRD). Non hanno modo di vederlo.
+  - *Contro chi vola* non hanno armi da lancio: si stringono attorno a chi è a
+    terra, e il corridore parte comunque.
+  - *Quando metà è a terra*, i quattro rimasti fanno quadrato e arretrano verso
+    la tenda più vicina, per prendere tempo. Da lì il corridore parte con
+    **1-2** su 1d6.
+  - Non inseguono oltre il blocco: tornare in fila conta più di vincere.
+
 **Come si sorveglia un campo di diecimila**. I numeri sono una proposta costruita sulle
 organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
 .
@@ -1871,6 +1893,17 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   si ferma a cercare. La CD del blocco sale di **+2**; se il blocco fallisce,
   il fallimento conta doppio verso la pattuglia. Chi vola sopra i 20 m resta
   fuori dal fiuto.
+  **Se la squadra dei lupi li trova** `[INFERRED — needs DM confirmation]`
+  (il blocco fallito col fiuto addosso, o un PG che attacca per primo): dieci
+  worg con dieci goblin in sella, EL 9, statistiche in A.6. Il worg **sbilancia**
+  con il morso (SRD): due lupi su un bersaglio, uno lo butta a terra e l'altro
+  morde chi è prono. I goblin non scendono di sella e tirano giavellotti. **Il
+  rumore di uno scontro con i lupi si sente**: è fuori dal campo, ma la ronda di
+  orchi più vicina arriva in **1d4+2 round**, come alla tenda (Scena 8). Quando
+  metà dei worg è a terra, la squadra scappa ululando verso le altre, e il
+  primo blocco dentro il campo si tira a CD +2. Contro l'invisibile il worg
+  morde dove il fiuto gli dice che c'è qualcuno: ha ancora il 50% di mancare,
+  ma non deve indovinare il quadretto (SRD, olfatto).
 - **Gli sciamani.** Gli esploratori di Durin non li hanno visti, e non vuol dire
   che non ci siano: uno sciamano non esce dal campo, e di giorno dorme. Nel 3.5
   lo sciamano di una tribù è un **adepto** (classe da PNG dell'SRD). Settemila
@@ -1882,6 +1915,13 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   sveglio lancia *vedere invisibilità* (2° livello, lista dell'adepto) e va
   verso il rumore. Al ritorno a piedi, allora, nei blocchi in cui esce il
   **5** (il falò) l'invisibilità non protegge: c'è uno sciamano che la vede.
+  **Se uno sciamano li vede** `[INFERRED — needs DM confirmation]`: non
+  combatte da solo. Grida il nome della sua banda, e dal blocco dopo la CD
+  sale di +2, come per le vedette. Se lo colpiscono prima che gridi (round di
+  sorpresa, o un attacco preparato), cade in silenzio: è un adepto di 5° con
+  una ventina di pf. Se grida, la sua banda arriva in **1d4+2 round**: venti
+  orchi guerrieri di 1° livello, che contro PG di 13° non sono un pericolo ma
+  un rumore, e il rumore costa una tacca.
 
 - **Complicazioni (tira 1d6 per blocco):**
 
@@ -2383,6 +2423,13 @@ motivo per cui la Scena 7 viene prima.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
   OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Le 4 guardie
   ingaggiano i PG più esposti.
+- **Come combattono le quattro guardie** `[INFERRED — needs DM confirmation]`.
+  Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
+  lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
+  colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
+  tornano davanti al seggio. **Non scappano finché Zog'tar è in piedi**: lui
+  le guarda. Se cade, le due rimaste gettano le armi e corrono fuori a
+  gridare, ed è l'allarme anche se Grask dorme.
 - **Round 2-3**: carica il bersaglio che fa più danni, **Colpo Possente**
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
@@ -2672,6 +2719,25 @@ scendergli addosso e prenderlo alle spalle, ma restano a tiro delle
 balestre dell'orda, e chi resta a terra lo affronta sul camminamento; **se sono invisibili**, Zog'tar non li vede arrivare e il
 primo colpo lo prende colto alla sprovvista, poi l'Occhio di Ossidiana lo
 avverte (Appendice A.2).
+
+**Come combatte sulla breccia** `[INFERRED — needs DM confirmation]`. Il
+camminamento è largo quanto un tavolo da pranzo: ci si sta in uno, al massimo
+in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano.
+- **Round 1**: Ira, e l'Occhio di Ossidiana su chi porta la Corona. Le quattro
+  guardie tengono la testa delle scale alle sue spalle: chi vuole arrivargli
+  dietro deve passare da loro.
+- **Round 2 e dopo**: **Spingere Migliorato** (SRD) su chi gli sta davanti. Sul
+  camminamento non c'è dove arretrare, e un PG spinto oltre il bordo cade nel
+  cortile o fuori, fra l'orda. Il master non dà l'altezza delle mura: la
+  proposta è 9 m, cioè 3d6 di caduta (SRD). Chi cade fuori ha un round per
+  rialzarsi, e intorno ci sono scale e uncini.
+- **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
+  per inseguire nessuno: la breccia è sua.
+- **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
+- **Se il drago cala mentre lui è vivo**, Zog'tar scende dalla scala e resta
+  sotto le mura a guardare: vuole vedere il drago finirli. Il duello della
+  Scena 11 si gioca con lui là sotto, e chi lo cerca lo trova.
+- **I PE** sono quelli della Scena 8, e non si sommano.
 
 
 | Successi (su 4) | Cosa cambia davvero |

@@ -227,6 +227,19 @@ NORME_SCOPERTE = (
         "sblocca": "un campo nel contratto «In scena» (per esempio `Per chi:`), poi un conteggio",
     },
     {
+        "chiave": "ogni_scontro_possibile_ha_la_sua_tattica",
+        "norma": "sviluppo-degli-incontri.md §8 — ogni scontro che il master rende "
+                 "possibile dice come combatte chi c'è, quando smette e chi sente",
+        "prerequisito": "gli scontri possibili sono dichiarati, non solo descritti in prosa",
+        "forma": None,
+        "dove": "uno scontro possibile sta in una complicazione, in un esito, in una riga "
+                "«se…»: per elencarli bisogna aver letto il master. Lo chiede il "
+                "playtester a freddo",
+        "rilevatore_pronto": None,
+        "sblocca": "una riga «Scontri possibili:» nel contratto «In scena», poi un "
+                   "conteggio delle tattiche per scontro",
+    },
+    {
         "chiave": "appunti_quattrocento_parole",
         "norma": "quiz-a-due-agenti.md — gli appunti del lettore stanno in 400 parole",
         "prerequisito": "gli appunti di ogni esecuzione del quiz stanno in un posto fisso del repo",

@@ -105,6 +105,12 @@ di Tordek qui funziona. Il ritorno a piedi alle mura costa **1 tacca**.
 **Scena 9, Vatore** (`DEF-4` Scena 9). Dieci minuti, al ritorno. L'Anello di
 Artemis lo sente prima di chiunque: dagli lo spotlight.
 
+**Gli scontri che possono capitare per strada**, tutti con la loro tattica nel
+master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
+sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
+guardie della tenda (Scena 8). Le righe marcate `[INFERRED]` sono proposte da
+confermare: se non ti vanno, cambiale prima della serata.
+
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 
@@ -119,7 +125,8 @@ tacche. Zog'tar resta completo.
 **Scena 10, le mura** (`DEF-4` Scena 10). Il box, poi **«Che fate?»**: una via
 su tre, prova collettiva. **Prima di contare i successi**, applica la tabella
 «Dalla notte»: i Treant, il campo allertato, Zog'tar vivo o morto. Se Zog'tar è
-vivo all'alba, con 0-1 successi sale sulla breccia.
+vivo all'alba, con 0-1 successi sale sulla breccia: la sua tattica sul
+camminamento è scritta sotto la tabella «Dalla notte».
 
 Se le tacche sono 8 o più, la Scena 10 **non si gioca**: il duello comincia
 con i PG fuori dalle mura.
