@@ -11,7 +11,7 @@ del master).
 |---|---:|---:|---:|---|
 | lettore (intero, a blocchi, con diario) | 1 | 5 | 15 | `def5-giro2-LETTORE.md`, `def5-giro2-LETTORE-diario.md` |
 | playtester (due percorsi: completo e luminoso; meno luminoso con il re curato e la porta) | 2 | 5 | 6 | `def5-giro2-PLAYTESTER.md` |
-| developer | | | | da fare |
+| developer | 0 | 3 | 13 | `def5-giro2-DEVELOPER.md` |
 | DM a freddo (`lettura_a_scene.py`) | | | | da fare |
 
 ## Il triage del lettore
@@ -60,3 +60,24 @@ del master).
 
 Il rilievo D1 che `domande_developer.py` trova adesso nella Scena 3 è un falso
 positivo (in volo c'è Artemis, non un nemico): dichiarato nel registro.
+
+## Il triage del developer
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🟠 | il gesto di Thorik senza bersaglio | il primo ordine ai novanta dall'altare: il muro di scudi si fa sul varco `[INFERRED]`; l'*Aura di Comando* solo se oggi non l'ha usata al −1000 |
+| 2 🟠 | i due Treant «con una carica» contro DEF-3 §7 | allineato a DEF-3: uno per seme carico, chiamarli insieme spegne l'Evocazione per un mese, e lo si dice alla giocatrice |
+| 3 🟠 | i quindici hobgoblin e la fine della scena | i nani li finiscono entro il round 4; la resa quando dei cinque ne restano due; l'handoff parte quando cade l'ultimo dei cinque |
+| 4 | gli orchi abbagliati | tornati a +4 e +1: la luce della caverna non è luce del giorno (correzione mia del giro, sbagliata) |
+| 5 | «berserker» e le asce | «lame» nel box; detto che sono l'orco dell'SRD |
+| 6 | lo statblocco dell'hobgoblin sergente | **domanda al DM**: il conto SRD dà CA 21, +9/+4, 1d8+4; il master copia il Bestiario, e il Bestiario va corretto prima |
+| 7 | l'immunità alla paura | tolta: l'aura è scattata prima che entrassero |
+| 8 | gli hobgoblin all'altare al round 4 | corrono, 18 m a round, senza Destrezza alla CA |
+| 9 | «*intralciare* dell'SRD» | «come *intralciare*, ma…» |
+| 10 | perché il re esausto non combatte | la ragione di regia: Dana lo tiene giù |
+| 11 | la *guarigione* di Dana | le due di stamattina, spese sulle mura |
+| 12 | il +2 del re | *Presenza Regale* +3 e *Chiamata alle Armi* +5 dallo statblocco di ARC-08; nel ramo +4 la Chiamata vale |
+| 13 | Dana GS 14 | **residuo**: lo statblocco è di ARC-08, e si corregge là |
+| 14 | gli orchi scossi senza tattica | si stringono al capo, caricano chi scende, si arrendono se cade |
+| 15 | il bottino degli hobgoblin | resta nella caverna, primo pezzo del bottino dell'orda di ARC-08 |
+| 16 | Artemis non arriva alla porta | detto: solo se fa 36 m in un movimento, altrimenti li vede entrare |
