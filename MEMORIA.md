@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 18 decisioni aperte
+## Aspetta il DM: 17 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -27,7 +27,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `LETTORE-PLAYTESTER` | D78 | F4 | **Lo statblocco dell'hobgoblin sergente nel Bestiario** (🟡 del developer, giro 2 di DEF-5). La scheda è marcata accettata dal DM il 2026-05-05, ma col conto SRD non torna: le classi sostituiscono il DV razziale, quindi… |
 | `LETTORE-PLAYTESTER` | D79 | F4 | **DEF-1, otto buchi di regola dal lettore di conferma** (un 🔴, sette 🟠). Il modulo è già giocato: valgono per i gruppi futuri, e nessuna proposta cambia cosa è successo al tavolo. (a) 🔴 **L'Onda Gravitazionale nella sfe… |
 | `LETTORE-PLAYTESTER` | D80 | F4 | **DEF-2, due punti dal lettore di conferma** (🟠; nessun 🔴). (a) **Quale visione mostra l'affresco A3.** Il box dice che Thorik, toccata la Corona, si è trovato su un campo di battaglia accanto agli eroi del passato, con… |
 | `LETTORE-PLAYTESTER` | D82 | F4 | **DEF-2, tre punti dal playtester di conferma** (🟠; nessun 🔴). (a) **Il Bane draconico di A7 contro la scheda di Aegis Fang.** A7 dà «+3d6 (invece di +2d6 vs draghi), critico ×4, +2 competenza»; la scheda dell'ascia dic… |
@@ -133,7 +132,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 18 aperte, 245 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 246 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

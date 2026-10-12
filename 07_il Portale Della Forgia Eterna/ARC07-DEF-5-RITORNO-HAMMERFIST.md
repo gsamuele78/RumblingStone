@@ -410,9 +410,9 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
     **scosso**: −2 ai tiri per colpire, ai TS e alle prove. Gli scossi si
     stringono al capo e caricano il primo che scende dall'altare; se il capo
     cade, gettano le armi `[CANONE — DM 2026-10-12, D77]`.
-  - **Gli hobgoblin sergenti** (guerriero di 5°, GS 5): 46 pf, CA 20, velocità
-    6 m (armatura completa), spada lunga perfetta +10/+5 (1d8+3/19-20), arco
-    lungo +6 (1d8/×3), Tempra +8 Riflessi +2 Volontà +2, Attacco Poderoso e
+  - **Gli hobgoblin sergenti** (guerriero di 5°, GS 5): 37 pf, CA 21, velocità
+    6 m (armatura completa), spada lunga perfetta +9 (1d8+4/19-20), arco
+    lungo +6 (1d8/×3), Tempra +6 Riflessi +2 Volontà +1, Attacco Poderoso e
     Incalzare; +1 morale agli hobgoblin entro 3 m. **Tattica**
     `[CANONE — DM 2026-10-12, D77]`: puntano il re, perché è l'ordine che hanno; contro chi vola
     alzano gli scudi e tirano con l'arco; non si ritirano, e quando dei cinque ne
