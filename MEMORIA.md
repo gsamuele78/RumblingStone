@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 19 decisioni aperte
+## Aspetta il DM: 15 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -27,11 +27,7 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `LETTORE-PLAYTESTER` | D69 | F3-quinquies | **Zog'tar catturato, il dopo** (🟠 del lettore, giro 4). Il master lo portava fino alla porta e si fermava. Scritto `[INFERRED]` in DEF-4 Scena 8: (a) il re lo fa incatenare nella cella sotto la torre nord e lo fa giusti… |
-| `LETTORE-PLAYTESTER` | D70 | F3-quinquies | **Le cinque pozioni di *neutralizza veleno*** (🟡 del lettore, giro 4). Sono nel conto della serata del 25 settembre, ma *neutralizza veleno* è di 4° e l'SRD non fa pozioni oltre il 3°, come dice lo stesso master. Propos… |
-| `LETTORE-PLAYTESTER` | D71 | F3-quinquies | **DEF-4, i dettagli `[INFERRED]` del giro 4.** (a) La dotazione dimezzata è 2 pozioni d'*invisibilità* o 2 di *volare*. (b) Le pozioni del re sono un dono e non toccano i 10.000 mo del forziere. (c) Balvar da solo all'a… |
-| `LETTORE-PLAYTESTER` | D72 | F3-quinquies | **I numeri dietro D64 (c).** (a) La penalità del ferro che sbatte: **−2** a Muoversi Silenziosamente e Nascondersi per ogni armatura portata e non indossata, sul ritorno. (b) Il buco portatile: 1,8 m per 3 m (SRD), circ… |
-| `LETTORE-PLAYTESTER` | D73 | F4 | **DEF-3: la Custode delle Radici compare anche nel rito che va male?** Non è Thorik: è la psicopompa della Scena 5 di DEF-3, quella che al tavolo del 25 settembre ha chiesto chi paga il debito, e Thorik ha detto «io». E… |
+| `LETTORE-PLAYTESTER` | D74 | F3-quinquies | **DEF-4, i dettagli `[INFERRED]` dal playtester del giro 4.** (a) Il Treant di Adamantio ha FOR 28 (dai suoi schianti, +9) e TS Temp +11, Rifl +2, Vol +7. (b) Un Treant alla tenda non costa tacche; uno che compare nella… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -119,6 +115,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il playtester a freddo su DEF-4 (🔴 0 · 🟠 6 · 🟡 17), corre… | 🟡 playtester fatto; aperta D74, resta il DM a freddo |
+| 2026-10-12 | LETTORE-E-PLAYTESTER | D69-D71 decise dal DM e applicate in DEF-4: Zog'tar catturato e il suo dopo, le… | 🟡 applicate; aperte D72-D73 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D64-D68 decise dal DM: in DEF-4 la penalità per le armature portate e la capien… | 🟡 applicate; aperte D69-D73 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il lettore a freddo su DEF-4 dopo le decisioni (🔴 0 · 🟠 5… | 🟡 lettore fatto; aperte D69-D71, restano playtester e DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · MASTER-DEF | Le decisioni del DM: D35-D37 in DEF-1, 2, 3; D49-D63 in DEF-4 (le due dotazioni… | 🟡 applicate; aperte D64-D68 sui dettagli `[INFERRED]`; serve il giro 4 di conferma su DEF-4 |
@@ -129,12 +127,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-12 | REVISIONE-ARC07 · module-standard | le tattiche degli scontri che `DEF-4` rende possibili e non spiegava, e la doma… | ✅ `DEF-4`: la pattuglia dei tre fallimenti, la squadra dei lupi, lo sciamano che vede l'invisibile, le quattro guardie della tenda, Zog'tar sulla breccia all'a… |
 | 2026-10-12 | CICLO-SESSIONE · REVISIONE-ARC07 | il corredo della serata dopo il 2026-09-25: `DEF-4` dalla Scena 5 all'esito del… | ✅ `homebrew/sessione-notte-e-alba/`: regia con colonna «tre ore» e «intera», quattro echi nuovi, le dieci boccette nel volume dei giocatori,… |
 | 2026-10-11 | REVISIONE-ARC07 | il Torque di Thorek I passa dal consiglio alla Scena 12: il re lo dà di persona… | ✅ `DEF-4`: Momento 5 della Scena 12 con box e battuta del re, Scena 4 e §8 B allineati, ripiego se la scena salta. Rigenerati i due booklet `.hb.md` che citano… |
-| 2026-10-11 | AUTOMAZIONE-STATO-SESSIONI · CICLO-SESS… | ADR-0090: la partita del primo tavolo riparte su `campaign-group-rumblingstone`… | 🟡 ADR proposta, da accettare dal DM. Provato in una copia del repo: ramo nuovo, log della serata del 2026-09-25, `state.yaml` a mano, `validate_state` e… |
-| 2026-10-11 | REVISIONE-ARC07 · STATO-E-ORDINE | canone delle dieci pozioni identificate a ≈372 DR e contratto del Seme-Mercato… | ✅ `DEF-4`: le dieci pozioni di Kettra, con la brodaglia degli sciamani e la cura con la cera nera. `DEF-1` §6-bis: il contratto del Seme in otto clausole e la… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 19 aperte, 235 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 15 aperte, 240 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
