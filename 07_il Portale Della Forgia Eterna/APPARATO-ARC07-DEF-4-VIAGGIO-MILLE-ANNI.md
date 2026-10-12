@@ -49,7 +49,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | Diplomazia/Intimidire | 20 |
 | SCENA 4 | Diplomazia/Intimidire, alternativa | 16 |
 | SCENA 5 | palla di fuoco da 5d6, Riflessi | 14 |
-| SCENA 5 | dell'ala (D18, Forza | 25 |
+| SCENA 5 | dell'ala (Scena 11, Forza | 25 |
 | SCENA 5 | stessa cera nera sulle dita (Osservare | 15 |
 | SCENA 5 | lei, Artigianato (fabbricare armi) o Valutare | 15 |
 | SCENA 5 | druido), Artemis con Usare Oggetti Magici | 23 |

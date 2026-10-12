@@ -901,7 +901,7 @@ da due parti, perché uno solo si perde:
 
 Per **questo** gruppo, che non l'ha deciso, i Treant restano dove la
 giocatrice li vuole, interi o uno per parte. Le regole della Collana sono
-quelle di `DEF-3` §7: tre evocazioni al giorno, un'ora l'una, e i semi tornano
+quelle del rito dello Smeraldo: tre evocazioni al giorno, un'ora l'una, e i semi tornano
 all'alba. Le scelte, con quello che cambiano:
 
 | Dove | Cosa cambia | Quanto costa |
@@ -909,10 +909,10 @@ all'alba. Le scelte, con quello che cambiano:
 | **Fuori dalla tenda, contro i rinforzi** (Scena 8, dopo un allarme) | la RD 10/adamantio rende un Treant quasi intoccabile per le ronde (orchi combattenti, ascia 1d12+3) e per gli squadroni (spada lunga 1d8+3). **Uno** tiene un lato: le ronde arrivano in **2d4+2** round invece di 1d4+2, gli squadroni in **3d4+2**. **Due** tengono la tenda: dentro non entra nessuno finché restano in piedi, e lo scontro resta contro il generale. Gli sciamani passano, perché la RD non ferma un incantesimo | un Treant nel campo si vede da tutto il pendio: è l'allarme, anche se il corno non ha ancora suonato. Il drago arriva al corno come sempre, in 70 round, e sui Treant soffia per primo |
 | **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il palo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD, e il **Colpo Devastante** preferisce lui, perché è grosso e gli sta davanti. La *barriera di lame* di Balvar sul palo lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
 | **Sul fianco dell'orda, all'alba** (come scritto qui sopra) | **un successo in più** sulle mura (Scena 10, Q49), solo con **tutti e due** sul fianco | i Treant non sono nel duello |
-| **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (D18, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Il drago non dice il nome a un albero (Scena 7, «Che cosa muove Skullcrusher»): li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
+| **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (Scena 11, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Il drago non dice il nome a un albero (Scena 7, «Che cosa muove Skullcrusher»): li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
 
 Un Treant chiamato di notte, alla tenda, è un seme speso prima dell'alba: per
-`DEF-3` torna all'alba, ma se di notte se ne chiamano **due insieme**
+la Collana torna all'alba, ma se di notte se ne chiamano **due insieme**
 l'Evocazione si spegne per un mese, e all'alba non c'è niente da chiamare
 `[INFERRED — needs DM confirmation: i tempi di ritorno di un seme speso di notte]`.
 I tempi d'arrivo con un Treant fuori dalla tenda e i 2d4+2 / 3d4+2 sono una
@@ -2665,7 +2665,7 @@ cambia davvero.
   Moradin, nella mente di Thorik: *«Ogni ferita che infliggi ora all'antenato,
   la mia Forgia la ricorderà quando affronterai il discendente.»*
 - ***Dragondoom* di Aegis Fang funziona** `[CANONE — DM 2026-10-12, D61]`:
-  3 volte al giorno, come contro ogni drago Grande o più (`state.md`, +1d6 per
+  3 volte al giorno, come contro ogni drago Grande o più (+1d6 per
   la taglia sopra la Media). La Catena non la blocca, e la Cintura qui sotto
   non c'entra.
 - **La Cintura di Tordek RIFIUTA di attivarsi** qui (*«il vero scontro appartiene
@@ -3027,8 +3027,8 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 
 > Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
 > party **non** arrivava al 14° in questo master: ci arrivava **dopo `DEF-5`**
-> `[CANONE — DM 2026-10-07, D40]`. Con le Scene 6-8 alla tabella (D58) il beat
-> sale di circa 1.250 a testa: se basti per il 14° prima di `DEF-5` dipende dai
+> `[CANONE — DM 2026-10-07, D40]`. Con le Scene 6-8 alla tabella il beat
+> sale di circa 1.250 a testa: se basti per il 14° prima del ritorno al 1372 dipende dai
 > PX con cui il gruppo è partito, che il master non fissa. Le parti giocate non
 > si ritoccano.
 
@@ -3274,7 +3274,7 @@ lista dello stregone `[INFERRED — needs DM confirmation: proposta *dissolvi
 magie* e *lentezza*]`. PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
 cioè **≈ 3.150 a testa**.
 
-- Boost log: 2026-10-12 — drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile (D60).
+- Boost log: 2026-10-12 — drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
@@ -3326,7 +3326,7 @@ GUARDIE (4): Hobgoblin Guerriero 8 · CA 20 · PF 60 · spadone +14 (2d6+6)
 - Boost log: 2026-09-27 — un livello di barbaro (SRD, classe associata) — GS 14 → 15 — il DM lo vuole con l'Ira Superiore e duro abbastanza da reggere più di un round. PF massimi per dado: scelta del DM.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo (+4 a tutte le caratteristiche, +2 di armatura naturale) — GS 15 → 15 (vale 16): il GS non sale perché la tenda è già a EL 17, il tetto di APL+4. Il DM lo vuole in piedi più di due round contro questi PG e questi artefatti.
 - Boost log: 2026-10-07 — livelli ridistribuiti, Barbaro 14 / Guerriero 1 (stessi 15 DV), armatura di mithral, Colpo Devastante e Spingere Migliorato al posto di Robustezza ×2, Arma Specializzata e Critico Migliorato — GS 15 → 15 — il DM vuole RD 3/— e Volontà Indomita, e un colpo che separi il gruppo invece di un danno che uccide Artemis in un colpo.
-- Boost log: 2026-10-12 — Presenza Minacciosa, capacità straordinaria fuori SRD, costruita come la presenza terrificante dei draghi (10 + ½ DV + mod. CAR = CD 21, scosso 1d4 round entro 9 m) — GS 15 → 15 — il DM la tiene perché il generale deve far paura prima di colpire (D57).
+- Boost log: 2026-10-12 — Presenza Minacciosa, capacità straordinaria fuori SRD, costruita come la presenza terrificante dei draghi (10 + ½ DV + mod. CAR = CD 21, scosso 1d4 round entro 9 m) — GS 15 → 15 — il DM la tiene perché il generale deve far paura prima di colpire.
 - I gradi nelle abilità di Zog'tar e delle guardie sono canone: DM 2026-10-07, Q30.
 <!-- /storico -->
 
