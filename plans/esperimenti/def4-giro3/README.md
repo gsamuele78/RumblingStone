@@ -9,6 +9,7 @@ e l'altra.
 |---|---:|---:|---:|---|
 | lettore (a scene e intera, con diario) | 1 | 5 | 35 | `def4-giro3-LETTORE.md`, `def4-giro3-LETTORE-diario.md` |
 | playtester | 0 | 4 | 20 | `def4-giro3-PLAYTESTER.md` |
+| developer | 0 | 7 | 16 | `def4-giro3-DEVELOPER.md` |
 
 Le letture non sono passate da `lettura_a_scene.py`, quindi non entrano in
 `letture-a-freddo.json`.
@@ -31,6 +32,15 @@ Le letture non sono passate da `lettura_a_scene.py`, quindi non entrano in
 | la tenda del generale «da non dire» che Durin indica | lettore e playtester | corretto: la prova serve solo se Durin non l'ha indicata |
 | i giavellotti di Zog'tar a +20 | playtester | corretto: +19 (BAB 15, DES +5, −1 taglia) |
 | la CA di Skullcrusher «dovrebbe essere 35» | playtester | **falso allarme**: 10 −2 taglia +2 DES (14 col template) +23 naturale (21 + 2 del template) = 33, già contato |
+| *comando superiore* di Balvar «si ripete per 13 round» | developer | corretto: il TS si ritenta ogni turno (SRD) |
+| il volo dei nani in armatura a 18 m | developer | corretto: 12 m (SRD), 1.200 m in 5 minuti; la pozione comprata copre 720 m |
+| C.2 con altre CD e un'altra soglia della pattuglia | developer | corretto: le prove della Scena 6, due tiri falliti = la pattuglia |
+| il drago Vecchio «GS 17» nella sidebar Scalare | developer | **falso allarme**: l'SRD dà GS 16 (d20srd.org, *Dragon, True*, tabella dei GS del drago nero) |
+| la Presenza Minacciosa di Zog'tar | developer | **D57** |
+| i PX delle Scene 6-8 | developer | **D58** |
+| il bottino della tenda | developer | **D59** |
+| lo sconto sull'ascia: 9.375, non 9.350 | developer | resta: è il conto pagato al tavolo |
+| i 🟡 delle schede (Balvar contatto 14, guardie, Durin), gli altri PX, le tattiche di ronde e wyvern | developer | restano aperti per il giro 4 |
 | la pozione di *neutralizza veleno* | lettore (non contato) | **falso allarme**: è di 3° per il druido, e 750 mo è il prezzo SRD |
 
 ⚠️ **Un errore mio nell'incarico del playtester**: ho scritto che Hella è

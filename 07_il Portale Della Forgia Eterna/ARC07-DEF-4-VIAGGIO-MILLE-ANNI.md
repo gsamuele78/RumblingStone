@@ -1539,8 +1539,8 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
 | | Quanto dura | Cosa vuol dire stanotte |
 |---|---|---|
-| *Volare*, pozione (5° livello) | 5 minuti | 18 m di velocità, circa 1.800 m in tutto: basta per l'andata, **non** per il ritorno |
-| *Invisibilità*, pozione comprata (3°) | 3 minuti | 1 km lo copre appena. Quelle del re durano 12 minuti |
+| *Volare*, pozione (5° livello) | 5 minuti | 18 m di velocità, **12 m** in armatura media o pesante (SRD), cioè i nani: circa 1.800 m in tutto, 1.200 per chi è in armatura. Bastano per l'andata, **non** per il ritorno |
+| *Invisibilità*, pozione comprata (3°) | 3 minuti | in volo a 18 m copre circa 1 km; in armatura (12 m) circa 720 m, e l'ultimo tratto si fa visibili. Quelle del re durano 12 minuti |
 | *Silenzio* sulla pietra | 8 minuti: la lancia Brynja all'8° livello, 1 minuto per livello come nell'SRD `[CANONE — DM 2026-09-30, D12]`. Copre l'andata e la tenda; il ritorno no | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
 - **Le tacche** `[CANONE — DM 2026-09-26]`. Il volo costa **1 tacca** invece
@@ -1987,7 +1987,7 @@ motivo per cui la Scena 7 viene prima.
   - **Balvar**, se combatte: *dissolvi magie* sul volo, e **comando superiore**
     (5° livello, uno slot che aveva libero `[CANONE — DM 2026-10-07]`): una
     parola a un bersaglio per ogni livello, tutti entro 9 m l'uno dall'altro,
-    Volontà **CD 20**, e si ripete ogni round per 13 round. L'ordine è **«Cadi»**
+    Volontà **CD 20**, e dura fino a 13 round: all'inizio di ogni suo turno dopo il primo, il bersaglio ritenta il TS sulla Volontà, e se riesce l'effetto finisce (SRD). L'ordine è **«Cadi»**
     (*«A terra!»*), uno dei cinque dell'SRD: il bersaglio cade a terra e resta
     prono un round, obbedendo al meglio che può. Chi vola **scende fino a
     terra** nel suo turno, senza danni da caduta, e si mette prono: sotto un telo
@@ -3254,10 +3254,12 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 
 ### C.2 · La tenda in dieci minuti (Scene 6-8)
 
-- **Infiltrazione (3 tiri)**: Muoversi Silenz./Nascondersi/Osservare **CD 20**
-  (−2 se aiuti dimezzati). Costa **2 tacche**, più 1 per ogni tiro fallito.
-  Metà successi = raggiungete la tenda non visti; meno della metà = la
-  pattuglia (Scena 6), oppure Zog'tar pre-allertato. Il ritorno è un tiro solo,
+- **Infiltrazione (3 tiri di gruppo invece di cinque blocchi)**: le prove e le
+  CD della Scena 6, cioè Muoversi Silenziosamente **CD 20** finché dura
+  l'invisibilità, poi Nascondersi **CD 22** (−2 se aiuti dimezzati); un tiro
+  riesce se riesce la metà del gruppo. Costa **2 tacche**, più 1 per ogni tiro
+  fallito. Tre tiri riusciti = raggiungete la tenda non visti; **due falliti** =
+  la pattuglia (Scena 6), come i tre blocchi falliti del corpo. Il ritorno è un tiro solo,
   Nascondersi **CD 22**, e costa 1 tacca.
 - **Zog'tar (risoluzione veloce, GS 15)**: un **assalto coordinato** (sorpresa +
   il colpo più forte del party) lo abbatte se dichiarano tattica sensata e

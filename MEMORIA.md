@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 25 decisioni aperte
+## Aspetta il DM: 28 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -38,6 +38,9 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D54 | F3-quinquies | **I Treant di Hella entrano nel duello?** (🟠 del playtester). Durano 1 ora (`DEF-3` A.2) e caricano il fianco dell'orda all'alba; il master non dice se sono ancora lì quando cala il drago. Proposta: no. Restano sul fian… |
 | `LETTORE-PLAYTESTER` | D55 | F3-quinquies | **Balvar recuperato e il ritorno in volo** (🟠 del playtester). Il master porta Balvar al cortile solo a piedi; il gruppo che torna in volo lo lascia al campo. Proposta: Balvar non vola; esce dal campo da solo nella conf… |
 | `LETTORE-PLAYTESTER` | D56 | F3-quinquies | **Zog'tar catturato: come si porta via?** (🟠 del playtester). Il successo in più sulle mura c'è, il trasporto no. Proposta: solo legato e privo di sensi; in volo non si porta (Grande, in mithral, oltre il carico di chiu… |
+| `LETTORE-PLAYTESTER` | D57 | F3-quinquies | **La Presenza Minacciosa di Zog'tar** (🟠 del developer, giro 3). Non è SRD, non è nei tre `Boost log:` e ha CD 22. Proposta: resta, presa sul modello della presenza terrificante dei draghi (10 + ½ DV + mod. CAR = 10 + 7… |
+| `LETTORE-PLAYTESTER` | D58 | F3-quinquies | **I PX delle Scene 6-8** (🟠 del developer). Il master dà 2.400 a testa; il developer, a tabella DMG, stima ≈ 3.650 a testa per la tenda intera (≈ 2.700 con Balvar recuperato) e trova pattuglia e lupi senza voce. D40 ha… |
+| `LETTORE-PLAYTESTER` | D59 | F3-quinquies | **Il bottino della tenda** (🟠 del developer). §8 B elenca ≈ 10.400 mo più il Sigillo; l'equipaggiamento di Zog'tar, delle guardie e (se muore) di Balvar vale, a stima del developer, ≈ 40.000-45.000 mo, cioè il tesoro di… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -140,7 +143,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 25 aperte, 212 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 28 aperte, 212 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
