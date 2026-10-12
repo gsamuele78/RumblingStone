@@ -1684,6 +1684,7 @@ deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
 inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
+@tipo tattica interni
 ```
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
   Ora **santuario sicuro** (Consacrare) — il *desecrate* di ARC-06 è dissolto.
@@ -3066,16 +3067,17 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > 🗓️ **La vostra serata** — per il gruppo che riparte dalla notte del 372.
 > **Leggi solo questo, in quest'ordine**: §4 «L'orologio della notte» (10 min) ·
 > Scena 6 il mare di tende (15 min) · Scene 7 e 8 la tenda, con la mappa M7-C
-> e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · il box d'apertura della
-> Scena 10, su cui si chiude la serata. Al tavolo sono circa due ore. Il resto
-> del master (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti
-> chiedono qualcosa.
+> e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · Scene 10 e 11, le mura
+> e il duello, con l'Appendice A.1. Ci si ferma sull'esito del duello, prima
+> della Scena 12. Al tavolo sono circa tre ore; la
+> regia della serata, nel suo booklet, dice dove tagliare. Il resto del master
+> (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti chiedono
+> qualcosa.
 > **Dove eravate**: consiglio fatto, giro della fortezza fatto (fucina,
 > alchimista, cappella, Zeth nelle gallerie), **3 tacche** sul foglio, nessuno
-> ha dormito. **Da segnare prima di cominciare**, dal registro della serata del
-> 25 settembre: il consiglio è finito con fiducia piena? ______ · pozioni di
-> invisibilità e di *volare* in mano: ______ · cosa hanno venduto a Gunnvor e al
-> forziere: ______ · le rune di Zeth comprate: ______.
+> ha dormito. La fiducia del consiglio, le pozioni in mano, cosa hanno venduto
+> e comprato stanno nel log della serata del 25 settembre, sul ramo del
+> gruppo: si leggono lì prima di cominciare.
 
 **Dove siete.** La Corona (Topazio + Smeraldo) ha aperto il portale del Tempo
 (affresco A6). I **quattro** Custodi — Hella di nuovo tra loro — precipitano
@@ -3548,7 +3550,7 @@ la gente smette di parlare.
 | **Sa** | la profezia, perché l'ha incisa lui: gli è venuta in sogno. Che suo nonno perse la Corona contro Skullcrusher |
 | **Non sa** | che la profezia parla di questi quattro, finché non vede la Corona |
 | **Non combatte** | Guerriero 16, e nessuno statblocco completo: non serve |
-| **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I** (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
+| **Eco** | la prova di fiducia qui sotto, e il **Torque di Thorek I**, che dà con le sue mani alla Scena 12 (§8). Nel 1372 i nani si scoprono il capo davanti a chi lo porta |
 | **Ritratto** | qui sotto. Ai giocatori si mostra dopo l'incontro, non prima |
 
 ![Re Thorek I, il re di una fortezza giovane](../../Immagini/ritratti/re-thorek-i.jpg)
@@ -3643,8 +3645,10 @@ Le mura reggono **due ore** dall'inizio dell'assalto. Il piano del re è quello
 della prova qui sopra: Zog'tar di notte, il drago all'alba.
 
 - **Gancio**: Thorgrim riecheggia nell'affresco A3 della Sala della Forgia.
-- **I doni del re** se la fiducia è piena: le pozioni di cura e il **Torque di
-  Thorek I** (§8 B).
+- **I doni del re** se la fiducia è piena: le pozioni di cura, portate dal
+  sergente. Il **Torque di Thorek I** non è fra questi: un torque non si manda
+  per mano d'altri, e il re lo dà di persona alla Scena 12, Momento 5 (§8 B)
+.
 - ► **Esito**: *aiuti pieni / dimezzati*.
 
 🕯️ **Adesso metti l'orologio della notte sul tavolo** (§4): il consiglio ha già
@@ -3733,6 +3737,11 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 | bottega | **Gunnvor** alla fucina, e il **pesatore** con la sua bilancia; prezzi e tetti nel banco qui sotto |
 | messaggi | nessuno: stanotte gli ordini li porta Durin a voce |
 | guardia | sulle mura, agli ordini di **Hrodgar**, il capitano (scheda nella Scena 10) |
+
+> **Mappe M7-D, M7-E e M7-F** (Appendice D). Il livello −1 (quartieri,
+> cappella, bottega, fucina di Gunnvor e armeria), le gallerie di Zeth sotto la
+> fucina, e dall'affaccio delle gallerie la fucina grande. La sezione M7-S dice
+> come si scende.
 
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale ai TS per 12 h se
@@ -4065,6 +4074,55 @@ tempo, lancia *individuazione del magico* sugli altri oggetti e dice di ognuno
 la **scuola** (Sapienza Magica 15 + livello dell'incantesimo): la scuola, non
 cosa fa. Per sapere cosa fa un'arma o un anello serve la pergamena qui sopra.
 
+##### Le dieci pozioni del gruppo
+
+Sono le pozioni che il gruppo si portava dietro senza sapere cosa fossero,
+alcune dal 2022 del tavolo. Kettra le identifica tutte e dieci in dieci
+minuti, con il 25 che le dà il prendere 10. Due la fermano: su quelle sa
+**cosa fanno**, e sa che **c'è dell'altro**, ma per dire cosa servirebbe un 30.
+Brynja ci passa sopra *individuazione del magico* e dice la scuola di
+quell'altro. Ai giocatori si dà l'handout «Le dieci boccette».
+
+| # | Dove l'hanno presa | Cosa è (SRD) | Cosa nota Kettra |
+|---:|---|---|---|
+| 1 | carro ribaltato, il goblin cavalcatore (sessione 2022-09-24) | *cura ferite leggere*, LI 1: 1d8+1 | etichetta in Comune e cera d'api, una bottega di Drellin's Ferry. Pulita |
+| 2 | stesso carro | **brodaglia degli sciamani**, vedi sotto | la riconosce subito e smette di ridere |
+| 3 | i quattro gnoll pompati (2022-11-27) | *forza del toro*, LI 3: +4 For per 3 minuti | pulita. È il motivo per cui gli gnoll erano pompati, con la *grazia del gatto* trovata insieme |
+| 4 | i minotauri (2022-11-27) | *cura ferite gravi*, LI 5: 3d8+5 | funziona, **ma c'è dell'altro**. Tappo di **cera nera**. Brynja: Divinazione. Vedi sotto |
+| 5 | stessi minotauri | *eroismo*, LI 5: +2 morale a attacchi, TS e prove di abilità per 50 minuti | pulita |
+| 6 | i nani sulla piattaforma d'osso (2024-07-05) | *cura ferite moderate*, LI 3: 2d8+3 | pulita. Stessa partita di quelle di Adrick Garthun |
+| 7 | il trono (2024-12-20) | *resistere all'energia* (fuoco), LI 3: resistenza 10 per 30 minuti | pulita. Vetro verde e spesso, tappo piombato, rune Dethek sul collo. Kettra ci passa il pollice sopra più del necessario: è il segno **della fucina del re**, la sua. Il vetro però non l'ha soffiato lei |
+| 8-9 | la stanza sotto la tomba, la chierica drow (2025-03-28) | *cura ferite moderate* ×2, LI 3 | pulite. È il kit personale della chierica, dalla sua scheda |
+| 10 | stessa stanza | *invisibilità*, LI 3: 3 minuti | pulita |
+
+**La brodaglia degli sciamani** (n. 2). Una pozione di 2° livello che gli
+adepti dell'orda fanno bere a chi sale per primo sulle scale. Su un orco, un
+mezzorco o un goblinoide fa l'effetto di *eroismo* per 10 minuti. Su chiunque
+altro non dà niente: Tempra **CD 15** o **nauseato per 1d4 round**. Kettra l'ha
+già vista sui morti sotto le mura, e lo dice. È un'informazione, non un
+tranello: chi l'ha presa da un goblin della Mano Rossa nel 1372 scopre che la
+ricetta ha mille anni, e che gli sciamani di stanotte (Scena 6) la preparano
+ancora.
+
+**La cura con la cera nera** (n. 4). Viene dal covo del Collezionista, e la
+cera è quella che **Vatore** ha sulle dita (Scena 9, Osservare CD 15). È un
+oggetto maledetto con **difetto** (tabella SRD dei difetti, 26-29: un segno di
+riconoscimento): cura come una *cura ferite gravi*, e chi la beve si porta
+addosso **un riflesso violaceo sotto la pelle del polso**, che vedono soltanto
+gli agenti della gilda del Collezionista. Vatore lo vede. Il segno se ne va con
+*rimuovi maledizione*: Brynja ha l'ultima pergamena, e se la vendono, sulle
+mura all'alba manca.
+
+> **Perché la maledizione si vede.** Per l'SRD *identificare* rivela una
+> maledizione solo con l'1% per livello dell'incantatore. Qui la prova di
+> Kettra la segnala sempre: chi identifica deve essere premiato, non
+> ingannato. Nessuna delle dieci è un'*illusione* (01-15 della tabella delle
+> maledizioni), l'unico tipo che nessuna prova potrebbe scoprire.
+
+Il **Seme-Mercato** di Varis non è fra queste: lo identifica Artemis, con la
+pergamena del re, e la scena si gioca al tavolo. La sua scheda è nel
+Piano della Terra, §6-bis, «Il contratto del Seme».
+
 **Quanto hanno potuto vendere.** I nani sono ricchi di gemme e avari, ma
 l'assedio li frena. Il conto della notte, qualunque cosa il gruppo abbia
 venduto:
@@ -4305,6 +4363,21 @@ blocchi** da 200 m.
   il corridore della Via B, qui sotto. Se arriva, Zog'tar è pre-allertato.
   Dopo lo scontro si riparte dal blocco in cui si era, e lo scontro costa una
   tacca in più.
+- **Come combatte la pattuglia** `[INFERRED — needs DM confirmation]`. Sono
+  soldati, non predoni: marciano in due file da quattro e combattono in coppia,
+  due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
+  (+2, SRD). **Non gridano**: in un campo che dorme un grido sveglia il
+  generale, e il generale frusta chi l'ha svegliato. Per questo mandano un
+  corridore, ed è il tiro di 1d6 qui sopra.
+  - *Contro chi è invisibile* colpiscono il quadretto da cui è venuto il colpo,
+    con il 50% di mancare (occultamento totale, SRD). Non hanno modo di vederlo.
+  - *Contro chi vola* non hanno armi da lancio: si stringono attorno a chi è a
+    terra, e il corridore parte comunque.
+  - *Quando metà è a terra*, i quattro rimasti fanno quadrato e arretrano verso
+    la tenda più vicina, per prendere tempo. Da lì il corridore parte con
+    **1-2** su 1d6.
+  - Non inseguono oltre il blocco: tornare in fila conta più di vincere.
+
 **Come si sorveglia un campo di diecimila**. I numeri sono una proposta costruita sulle
 organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
 .
@@ -4322,6 +4395,17 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   si ferma a cercare. La CD del blocco sale di **+2**; se il blocco fallisce,
   il fallimento conta doppio verso la pattuglia. Chi vola sopra i 20 m resta
   fuori dal fiuto.
+  **Se la squadra dei lupi li trova** `[INFERRED — needs DM confirmation]`
+  (il blocco fallito col fiuto addosso, o un PG che attacca per primo): dieci
+  worg con dieci goblin in sella, EL 9, statistiche in A.6. Il worg **sbilancia**
+  con il morso (SRD): due lupi su un bersaglio, uno lo butta a terra e l'altro
+  morde chi è prono. I goblin non scendono di sella e tirano giavellotti. **Il
+  rumore di uno scontro con i lupi si sente**: è fuori dal campo, ma la ronda di
+  orchi più vicina arriva in **1d4+2 round**, come alla tenda (Scena 8). Quando
+  metà dei worg è a terra, la squadra scappa ululando verso le altre, e il
+  primo blocco dentro il campo si tira a CD +2. Contro l'invisibile il worg
+  morde dove il fiuto gli dice che c'è qualcuno: ha ancora il 50% di mancare,
+  ma non deve indovinare il quadretto (SRD, olfatto).
 - **Gli sciamani.** Gli esploratori di Durin non li hanno visti, e non vuol dire
   che non ci siano: uno sciamano non esce dal campo, e di giorno dorme. Nel 3.5
   lo sciamano di una tribù è un **adepto** (classe da PNG dell'SRD). Settemila
@@ -4333,6 +4417,13 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   sveglio lancia *vedere invisibilità* (2° livello, lista dell'adepto) e va
   verso il rumore. Al ritorno a piedi, allora, nei blocchi in cui esce il
   **5** (il falò) l'invisibilità non protegge: c'è uno sciamano che la vede.
+  **Se uno sciamano li vede** `[INFERRED — needs DM confirmation]`: non
+  combatte da solo. Grida il nome della sua banda, e dal blocco dopo la CD
+  sale di +2, come per le vedette. Se lo colpiscono prima che gridi (round di
+  sorpresa, o un attacco preparato), cade in silenzio: è un adepto di 5° con
+  una ventina di pf. Se grida, la sua banda arriva in **1d4+2 round**: venti
+  orchi guerrieri di 1° livello, che contro PG di 13° non sono un pericolo ma
+  un rumore, e il rumore costa una tacca.
 
 - **Complicazioni (tira 1d6 per blocco):**
 
@@ -4834,6 +4925,13 @@ motivo per cui la Scena 7 viene prima.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
   OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Le 4 guardie
   ingaggiano i PG più esposti.
+- **Come combattono le quattro guardie** `[INFERRED — needs DM confirmation]`.
+  Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
+  lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
+  colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
+  tornano davanti al seggio. **Non scappano finché Zog'tar è in piedi**: lui
+  le guarda. Se cade, le due rimaste gettano le armi e corrono fuori a
+  gridare, ed è l'allarme anche se Grask dorme.
 - **Round 2-3**: carica il bersaglio che fa più danni, **Colpo Possente**
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
@@ -5041,7 +5139,8 @@ L'artefatto che stringe al petto è in **Appendice B**.
 >
 > 🛑 **Dove si ferma una serata**: la prima si ferma al primo box della Scena 10,
 > e il resto dell'atto è della sessione dopo. Il gruppo di oggi si è fermato
-> prima, alla Scena 5 (§4, «Dove si riprende»).
+> prima, alla Scena 5 (§4, «Dove si riprende»), e la sua serata dopo si ferma
+> sull'esito del duello, prima della Scena 12.
 
 | Scena | Dove | Chi entra | Prova | Al tavolo |
 |---|---|---|---|---:|
@@ -5122,6 +5221,25 @@ scendergli addosso e prenderlo alle spalle, ma restano a tiro delle
 balestre dell'orda, e chi resta a terra lo affronta sul camminamento; **se sono invisibili**, Zog'tar non li vede arrivare e il
 primo colpo lo prende colto alla sprovvista, poi l'Occhio di Ossidiana lo
 avverte (Appendice A.2).
+
+**Come combatte sulla breccia** `[INFERRED — needs DM confirmation]`. Il
+camminamento è largo quanto un tavolo da pranzo: ci si sta in uno, al massimo
+in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano.
+- **Round 1**: Ira, e l'Occhio di Ossidiana su chi porta la Corona. Le quattro
+  guardie tengono la testa delle scale alle sue spalle: chi vuole arrivargli
+  dietro deve passare da loro.
+- **Round 2 e dopo**: **Spingere Migliorato** (SRD) su chi gli sta davanti. Sul
+  camminamento non c'è dove arretrare, e un PG spinto oltre il bordo cade nel
+  cortile o fuori, fra l'orda. Il master non dà l'altezza delle mura: la
+  proposta è 9 m, cioè 3d6 di caduta (SRD). Chi cade fuori ha un round per
+  rialzarsi, e intorno ci sono scale e uncini.
+- **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
+  per inseguire nessuno: la breccia è sua.
+- **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
+- **Se il drago cala mentre lui è vivo**, Zog'tar scende dalla scala e resta
+  sotto le mura a guardare: vuole vedere il drago finirli. Il duello della
+  Scena 11 si gioca con lui là sotto, e chi lo cerca lo trova.
+- **I PE** sono quelli della Scena 8, e non si sommano.
 
 
 | Successi (su 4) | Cosa cambia davvero |
@@ -5481,6 +5599,32 @@ non dal ritorno, e non aspetta che la Corona sia completa.
   permanente e RD 5/epico. La riga della matrice che lo dava qui era una
   mappatura vecchia, ed è stata corretta.
 
+#### Momento 5 — il torque del re
+
+Al consiglio i doni li ha portati il sergente. Il torque no: è l'oro che il re
+porta al collo, e un re nanico se lo toglie solo con le sue mani, davanti a
+tutti. Quella sera i PG erano forestieri con la corona di suo nonno; adesso il
+re ha visto la pietra entrare. È l'ultima cosa prima della Scena 13.
+
+> **Read-aloud (Casa di Davide lead) — il torque.** *Il re si fa avanti, e per
+> la prima volta da ieri sera non ha l'ascia in pugno. Porta le mani al collo e
+> apre il fermaglio: oro vecchio, ritorto come una corda, consumato liscio dove
+> la barba lo sfrega da cent'anni. Non chiama il sergente. Lo chiude lui attorno
+> al collo di Thorik, e il metallo è ancora caldo del re.*
+
+**RE THOREK I:** *«Ieri sera eravate forestieri con la corona di mio nonno. Un
+torque non si dà a chi arriva. Si dà a chi resta in piedi.»*
+
+✏️ *Se il duello è finito «vinto sporco» (§6), cambia solo l'ultima frase: «Si
+dà a chi è rimasto, anche quando non bastava.» Poi subito la Scena 13: il nano
+che si toglie l'elmo nella prima battuta è l'eco di questo gesto.*
+
+- **Meccanica**: §8 B, invariata.
+- **Se la Scena 12 salta** e la luce li prende prima, il re fa murare il torque
+  nell'incudine con una riga incisa, *«a chi resta in piedi»*, e i nani del 1372
+  lo tirano fuori quando riconoscono la Corona. Funziona, ma è un'eco più
+  debole del gesto.
+
 ### SCENA 13 — Il Rubino e il ritorno
 
 **In scena** — Dove: l'incudine — Chi: nessuno
@@ -5587,7 +5731,7 @@ premi di storia, come sempre.
 | Dove | Oggetto (pregenerato) | Valore |
 |---|---|---|
 | Scena 4 (il consiglio, se fiducia piena) | **Benedizione degli Antenati**: 4 **pozioni di *cura ferite gravi*** dell'antica fucina, all'11° livello dell'incantatore (curano 3d8+11). Al tavolo le ha consegnate **il sergente** per ordine del re, e i giocatori le chiamano «di CFC»: curano quanto una CFC al minimo livello | 6.600 mo (3 × 11 × 50 l'una) |
-| Scena 4 (dono cerimoniale) | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
+| Scena 12, Momento 5 (dono del re, di persona) | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
 | Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
 | Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore). Il **corno da guerra di ferro nero** che chiama il drago è incatenato al polso di Grask, alla tenda: si prende solo lì (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
 | Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
@@ -5957,24 +6101,27 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ════════════════════════════════════════════════════════════════════════
  HAMMERFIST ≈372 DR — vista strategica (non in scala; il duello è su M7-B)
 ════════════════════════════════════════════════════════════════════════
-   NORD ▲  ╔══════════════════════════════════════════════╗
-          ║   🏰🏰🏰  HAMMERFIST GIOVANE (mura bianche)  🏰🏰🏰 ║  ← Zona 1 (sicura)
-          ║   🏰  [Sala del Trono: Re Thorek I]  [Fucina]  🏰 ║     arrivo del portale
-          ║   🏰🏰  ═══ camminamenti ═══  BRECCIA▓▓  🏰🏰🏰🏰 ║  ← Zona 3 (mura, alba)
-          ╚════════════════▲▲▲═══════════════▲▲▲═════════════╝
-                    scale d'assedio / arieti ↑ (l'orda preme)
-   ~~~~~~~~~~~~~~~~~~~~~~~ CORTILE INTERNO (arena del duello → M7-B) ~~~~~~~~~
-          ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ← Zona 2: MARE DI TENDE
-   GP1▪   ⛺⛺⛺  ╔═══════════╗  ⛺⛺⛺   👤VATORE (Sc.9, tra le tende)  ▪GP2
-          ⛺⛺  ║ TENDA DEL  ║  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-          ⛺⛺  ║  COMANDO   ║  ⛺⛺  ⚔️ZOG'TAR + 4 guardie (Sc.8)
-          ⛺⛺  ╚═══════════╝  ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺
-   GP3▪   ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺  ▪GP4
-          — — — — foresta a sud (i PG escono dalla postierla nord) — — — —  SUD ▼
+                       NORD ▲  la montagna: dentro, le sale scendono (M7-S)
+   ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
+        ╔════════════════ 🔔 torre nord ═════════╗
+        ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
+        ║  CORTILE INTERNO → M7-B (il duello)     ║     mura bianche, sicura
+        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
+              ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
+                                                   ┊      🌲 ✦ portale, ~500 m
+   ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+   GP1▪ ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺ ▪GP2 ┊  ← Zona 2: MARE DI TENDE
+   ⛺⛺⛺⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺⛺⛺ ◄┘  via dei PG: fianco est, poi da nord
+   ⛺⛺⛺⛺⛺⛺ ║ TENDA DEL  ║ ⛺⛺⛺⛺⛺      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
+   ⛺⛺⛺⛺⛺⛺ ║  COMANDO   ║ ⛺⛺⛺⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺⛺⛺⛺⛺⛺ ╚═══════════╝ ⛺⛺⛺⛺⛺      👤 VATORE fra le tende (Sc. 9)
+   GP3▪ ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺ ▪GP4
+                       SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · 🏰 mura/fortezza (bianche, nuove) · ▓ breccia · ⛺ tende (copertura)
-· ▪GP posti di guardia · ╔╗ tenda del comando (Zog'tar) · 👤 Vatore · ⚔️ scontro
-veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
+LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
+▫ postierla · ⛺ tende (copertura) · ▪GP posti di guardia · ╔╗ tenda del
+comando · ┊◄ la via dei PG · 👤 Vatore · ⚔️ scontro · ✦ arrivo del portale.
+Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
 
@@ -5983,38 +6130,63 @@ veloce · SKULLCRUSHER entra dall'alto sul cortile interno → M7-B.
 ```
 ════════════════════════════════════════════════════════════════════════
  CORTILE INTERNO — 36 m × 27 m (24 col × 18 righe · 1,5 m) · cielo aperto
- Skullcrusher entra da V1 (quota ~45 m) e picchia. PG partono dalla riga 16.
+ Nord in alto, la montagna. Skullcrusher entra da V1 (~45 m) e picchia. PG dalla riga 16.
 ════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 01    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️⚫☁️☁️   Skullcrusher in quota, circa 45 m (V1)
 02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
 03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
-04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰   camminamenti +4,5 m, arcieri
-05    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-06    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-07    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
+05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
+06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
+08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
 09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
-10    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰
+12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
 17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
 d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) ·
-🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I.
+🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
+⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
+del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.
+@north N
 @mark 1 ; V1 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
 @mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
+@mark 7 ; C5 ; La fucina originale, accesa da stanotte
+@mark 8 ; T8 ; Il pozzo sulla cisterna
+@mark 9 ; T4 ; Le campane della torre nord
+@mark 10 ; W18 ; La postierla
+@tipo tattica esterno
 ```
+
+### Sotto la montagna: la Scena 5
+
+La sezione M7-S e gli stati del 1372 delle stesse sale stanno nell'atlante di
+Hammerfist dall'alto in basso.
+
+![M7-D — Il corridoio della fucina, livello −1](../../Mappe/hammerfist-372-1372/rendered/M7-D-livello-1-372_map01_m7-d-il-corridoio-della-fucina-livello-1-notte-3.svg)
+
+<!-- nuova-pagina -->
+
+![M7-E — Le gallerie di Zeth, livello −2](../../Mappe/hammerfist-372-1372/rendered/M7-E-gallerie-372_map01_m7-e-le-gallerie-di-zeth-livello-2-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
+
+![M7-F — La fucina grande, livello −3](../../Mappe/hammerfist-372-1372/rendered/M7-F-fucina-grande-372_map01_m7-f-la-fucina-grande-livello-3-notte-372-dr.svg)
+
+<!-- nuova-pagina -->
 
 #### MAPPA M7-C — LA TENDA DEL COMANDO (Scene 7 e 8)
 

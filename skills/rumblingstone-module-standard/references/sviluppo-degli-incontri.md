@@ -10,6 +10,7 @@
 - 5 · Il boss cambia, non si allunga
 - 6 · Lo skill challenge si scrive per intero
 - 7 · Chi si diverte in questa scena
+- 8 · Ogni scontro che il master rende possibile ha la sua tattica
 <!-- /indice -->
 
 Nei colophon di Paizo e WotC il testo passa da due mani: l'editor chiede *«si
@@ -139,3 +140,28 @@ conosce: gli stand-alone e i moduli per un gruppo nuovo.
 
 > **La domanda** (stand-alone e gruppi nuovi). Fra le scene del modulo, ognuno
 > dei sette modi trova almeno **una** scena fatta per lui?
+
+## 8 · Ogni scontro che il master rende possibile ha la sua tattica
+
+Un master non lineare apre scontri che il tavolo può non giocare mai: la
+pattuglia che arriva dopo tre fallimenti, il generale che sopravvive e sale
+sulle mura, i lupi che fiutano. Se il testo li rende possibili e non dice come
+combattono, il DM li inventa al tavolo, ed è proprio lì che un master di
+qualità smette di esserlo.
+
+> **La domanda.** Per ogni scontro che il master **rende possibile**, anche solo
+> come complicazione o come esito di una scelta: il testo dice **come combatte**
+> chi c'è (chi va su chi, cosa fa contro chi vola e contro chi è invisibile),
+> **quando smette** (fugge, si arrende, fa quadrato) e **chi sente** (la §4)?
+> Le statistiche da sole non bastano: dicono quanto fa male, non cosa fa.
+
+Una riga per caso basta, e i numeri restano quelli dell'SRD e dell'appendice.
+Dove la tattica aggiunge un fatto che il canone non ha (un'altezza, un tempo
+d'arrivo), si scrive `[INFERRED — needs DM confirmation]` finché il DM non lo
+conferma.
+
+Esempio vero: il DM, preparando la seconda serata di `ARC07-DEF-4`
+(2026-10-12), ha chiesto se gli scontri, *anche quelli ipotetici*, avessero le
+tattiche. Le avevano Zog'tar, Balvar, Skullcrusher e il drago sulla tenda; non
+le avevano la pattuglia dei tre fallimenti, la squadra dei lupi, gli sciamani,
+le guardie della tenda e Zog'tar sulla breccia all'alba.

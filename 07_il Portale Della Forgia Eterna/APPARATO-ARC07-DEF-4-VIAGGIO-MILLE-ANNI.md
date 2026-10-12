@@ -56,6 +56,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | identifica una pozione con Sapienza Magica | 25 |
 | SCENA 5 | Tempra | 15 |
 | SCENA 5 | ha sulle dita (Scena 9, Osservare | 15 |
+| SCENA 6 | primo blocco, poi si tira Nascondersi | 22 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
 | SCENA 6 | sono due per quattro) tira Nascondersi | 22 |
@@ -135,6 +136,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 12 | l'incasso che si chiude | Salvatore | 4 |
 | SCENA 12 | l'ascia prende la parola | Mercer lead | 4 |
 | SCENA 12 | l'aura | LotR lead | 7 |
+| SCENA 12 | il torque | Casa di Davide lead | 5 |
 | SCENA 13 | L'orda, senza generale e senza drago a spronarla, si sfalda come sabbi | — | 4 |
 | SCENA 13 | l'incudine, 2 di 3: il canto | Salvatore | 7 |
 | SCENA 13 | l'incudine, 3 di 3: la voce | LotR lead | 6 |

@@ -117,6 +117,11 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… |  |
+| 2026-10-12 | REVISIONE-ARC07 · module-standard | le tattiche degli scontri che `DEF-4` rende possibili e non spiegava, e la doma… | ✅ `DEF-4`: la pattuglia dei tre fallimenti, la squadra dei lupi, lo sciamano che vede l'invisibile, le quattro guardie della tenda, Zog'tar sulla breccia all'a… |
+| 2026-10-12 | CICLO-SESSIONE · REVISIONE-ARC07 | il corredo della serata dopo il 2026-09-25: `DEF-4` dalla Scena 5 all'esito del… | ✅ `homebrew/sessione-notte-e-alba/`: regia con colonna «tre ore» e «intera», quattro echi nuovi, le dieci boccette nel volume dei giocatori,… |
+| 2026-10-11 | REVISIONE-ARC07 | il Torque di Thorek I passa dal consiglio alla Scena 12: il re lo dà di persona… | ✅ `DEF-4`: Momento 5 della Scena 12 con box e battuta del re, Scena 4 e §8 B allineati, ripiego se la scena salta. Rigenerati i due booklet `.hb.md` che citano… |
+| 2026-10-11 | AUTOMAZIONE-STATO-SESSIONI · CICLO-SESS… | ADR-0090: la partita del primo tavolo riparte su `campaign-group-rumblingstone`… | 🟡 ADR proposta, da accettare dal DM. Provato in una copia del repo: ramo nuovo, log della serata del 2026-09-25, `state.yaml` a mano, `validate_state` e… |
 | 2026-10-11 | REVISIONE-ARC07 · STATO-E-ORDINE | canone delle dieci pozioni identificate a ≈372 DR e contratto del Seme-Mercato… | ✅ `DEF-4`: le dieci pozioni di Kettra, con la brodaglia degli sciamani e la cura con la cera nera. `DEF-1` §6-bis: il contratto del Seme in otto clausole e la… |
 | 2026-10-10 | AMBIENTE-RIPRODUCIBILE · PRATICHE (PI-3… | A2 in parte · Python 3.13 in CI, nel registro e nelle guide | 🟡 La #228 di Dependabot (gruppo `pip-settimanale`) alza i pavimenti a `numpy>=2.5.3` e `scipy>=1.18.1`, che chiedono Python >= 3.12: su 3.11 pip non trova vers… |
 | 2026-10-10 | RECUPERO · REGISTRO-NORME | L7: le tre pratiche di Infra-Iam-PKI e AiAgentInfrastructure (D7, il DM: *«adot… | ✅ `plans/adr-prenotati.json` (lo `0088` alla #99) e `validate_docs`: `--prossimo-adr` salta i prenotati, `--sorgenti` rosso su un prenotato usato da altri o ar… |
@@ -124,11 +129,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-10 | STATO-E-ORDINE | la memoria in un posto solo (ADR-0087) | ✅ Richiesta del DM: tutta la memoria in un posto, senza perdere parti o decisioni; il DM sceglie «nel repo, generata». `MEMORIA.md` in radice, generato da… |
 | 2026-10-10 | STATO-E-ORDINE · RECUPERO | il controllo prima del merge della #230 (richiesta del DM: le decisioni di ques… | ✅ `main` è fermo alla base (`f40ffeb`). Confronto delle tabelle `decisioni-dm` fra `main` e la #230: 0 decisioni perse o riaperte; aggiunte RESA D19-D30 e RECU… |
 | 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · REV… | la #230 diventa la PR più recente e completa (richiesta del DM): il piano di re… | ✅ Merge del ramo della #232 (`PIANO-RECUPERO`), con i conflitti risolti tenendo le righe aggiornate di questa PR. D1 e D2 di RECUPERO chiuse dalla richiesta de… |
-| 2026-10-10 | RECUPERO-DECISIONI-E-REVISIONI-INCOMPIU… | Apertura: audit di rami, PR e scratchpad | 🔵 Richiesta DM: cercare decisioni perse o interrotte e parti mai arrivate su `main`. Misurati 16 rami e 108 PR contro `f40ffeb`: quattro decisioni chiuse solo… |
-| 2026-10-10 | INDEX · RICERCA-AUDIT-COMPONENTI · REVI… | i sette casi dubbi del controllo dei piani, rifatti su commit, PR e rami (richi… | ✅ Nessuno era perso per sbaglio. Il più vicino: le schede A4 dei PG esistono solo nel ramo della #99 (`fce04907`, mai su `main`), tracciate come lotto 4g di RI… |
-| 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · DRAPPO-… | le tende del Campo Drow 1 (ADR-0042) e la numerazione dei lotti del Drappo (ric… | 🟡 **Tende**: la proposta di passare il blocco ⬛ a ⛺ cella per cella è stata provata e buttata: disegnava 483 tendine e trattava da tenda anche il cortile con l… |
-| 2026-10-10 | INDEX · CICLO-SESSIONE · VENDIBILITA ·… | il controllo di tutti i piani contro le loro checklist, il CHANGELOG e le tabel… | ✅ Un controllo in sola lettura su 55 righe dell'INDEX ha trovato 17 disallineamenti; verificati sui file uno per uno e corretti. I più gravi: CICLO-SESSIONE da… |
-| 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · AMBIENT… | allineamento dei piani a ciò che è stato fatto e deciso il 2026-10-09 (richiest… | 🟡 Le righe dell'INDEX dei quattro piani toccati dalla #230 dicevano ancora 0% o 5% (RICERCA-MESTIERE, AMBIENTE) o D1-D22 (RESA): ora portano D1-D30, R8 e R4-qu… |
 
 ## Le misure che si portano dietro
 
