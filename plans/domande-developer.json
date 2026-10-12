@@ -104,6 +104,13 @@
       "scena": "Atto III — Sotto",
       "dettaglio": "luogo sorvegliato: nessuna risposta a «e se sono silenziosi?»",
       "ragione": "rilievo vero, ma l'Abbazia non si riscrive (MESTIERE-BANCHI D1): la risposta entra come nota del DM nel lotto S4 di PIANO-MASTER-DEF, con gli altri rilievi di domande_developer"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
+      "regola": "D1",
+      "scena": "SCENA 3",
+      "dettaglio": "scontro con un nemico in volo: niente per chi resta a terra",
+      "ragione": "falso positivo: in volo c'è un PG (Artemis), non un nemico; la riga è la tattica degli hobgoblin contro chi vola"
     }
   ]
 }

@@ -24,7 +24,6 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | 1d6, o nessun danno con Saltare | 15 |
 | SCENA 2 | di 6 m di raggio (Riflessi | 15 |
 | SCENA 2 | gli orchi nella caverna tirano Volontà | 25 |
-| SCENA 3 | l'aura ha | 20 |
 
 ## L'indice dei read-aloud, in ordine di gioco
 

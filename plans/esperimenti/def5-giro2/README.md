@@ -10,7 +10,7 @@ del master).
 | Lettura | 🔴 | 🟠 | 🟡 | Rapporto |
 |---|---:|---:|---:|---|
 | lettore (intero, a blocchi, con diario) | 1 | 5 | 15 | `def5-giro2-LETTORE.md`, `def5-giro2-LETTORE-diario.md` |
-| playtester | | | | da fare |
+| playtester (due percorsi: completo e luminoso; meno luminoso con il re curato e la porta) | 2 | 5 | 6 | `def5-giro2-PLAYTESTER.md` |
 | developer | | | | da fare |
 | DM a freddo (`lettura_a_scene.py`) | | | | da fare |
 
@@ -39,3 +39,24 @@ del master).
 | 19 | il portale di Dana | un arco di luce, un round `[INFERRED]` |
 | 20 | le Cantitrici fuori da «chi c'è» | in ginocchio fra i capi al centro dell'anello |
 | 21 | i 300 PX della pulizia | in tutte e due le modalità |
+
+## Il triage del playtester
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🔴 | chiudere la porta durante la pulizia | §6: i battenti sono scardinati, il varco si blocca solo con la magia; bloccato prima della fine del round 1, gli hobgoblin restano fuori; gli orchi chiusi dentro si rannicchiano e si arrendono; chi insegue trova gli hobgoblin `[INFERRED]` |
+| 2 🔴 | cosa rimette in piedi il re | il re è **esausto** per l'acido: a 8 pf parla e comanda, non combatte. *Ristorare* o *guarigione* tolgono l'esausto, e allora si rialza `[INFERRED]`. Il gruppo ha 4 pergamene di *ristorare* |
+| 3 🟠 | la CD 20 non cambia niente | tolta: nel ramo meno luminoso restano cinque orchi senza tiro, e gli hobgoblin entrano subito |
+| 4 🟠 | FUGGITO punisce la Catena spezzata | escluso: conta FUGGITO perché i PG si sono ritirati, o VINTO SPORCO |
+| 5 🟠 | gli hobgoblin non arrivano all'altare | velocità 6 m nella loro riga; varco nell'anello al round 2, ai piedi dell'altare alla fine del round 4; chi li vuole prima scende |
+| 6 🟠 | la tattica degli hobgoblin | puntano il re, arco contro chi vola, si arrendono quando ne restano tre `[INFERRED]` |
+| 7 🟠 | il tempo fra la pulizia e il portale | §6, riga nuova: una *cura ferite gravi* a testa da Dana e dalle Cantitrici; ogni 10 minuti in più una torre della Porta Ovest cade `[INFERRED]` |
+| 8 | il ramo meno luminoso, il resto della tabella | resta uguale; il re non guarisce i 2d8 in nessun ramo |
+| 9 | la durata del panico | tutta la scena, e chi fugge non torna; detto in cosa differisce dall'SRD |
+| 10 | gli orchi abbagliati | +3 e +0 nella loro riga |
+| 11 | le radici sulla porta | un round soltanto |
+| 12 | Artemis senza un gesto | volare sopra la porta e avvisare i nani |
+| 13 | da dove sono entrati gli orchi | dalle gallerie di Zeth, dietro i nani in ritirata |
+
+Il rilievo D1 che `domande_developer.py` trova adesso nella Scena 3 è un falso
+positivo (in volo c'è Artemis, non un nemico): dichiarato nel registro.
