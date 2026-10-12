@@ -662,7 +662,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 > con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
 > round, Artemis a ~2/3 pf in uscita.*
 
-**XP**: **1.700 a testa** (Fauci di Diamante CR 11 + 2 Xorn CR 6, tabella del §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
+**XP**: **1.700 a testa** al gruppo di oggi, **≈ 875** ai gruppi futuri (Fauci di Diamante CR 11 + 2 Xorn CR 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
 ---
@@ -1226,7 +1226,7 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 **Bracieri Gemelli — COMPLETI (Fuoco + Terra):** RD 5/adamantio; **Pugno
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
 attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
-**XP Sentinella**: **1.500 a testa** (CR ~11, tabella del §11-bis). **Loot**: residuo del
+**XP Sentinella**: **1.500 a testa** al gruppo di oggi, **≈ 650** ai gruppi futuri (CR ~11, §11-bis). **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
 
 ---
@@ -1657,7 +1657,7 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 | **Vogliono riposare dentro il Tempio prima del boss** | Possibile (l'Anticamera post-Sentinella è sicura), e **probabile**. Costa **−12 h** di orologio (tariffa ordinaria, `ARC07-DEF-2` §0-bis) — ma il prezzo vero **non è il timer**: è che **Terros ti arriva a risorse piene**, quindi scatta il ramo «party straripante di risorse» del riquadro *Scalare lo scontro* (**§8c-4**). Mostra l'affresco A7, non minacciare la scadenza: a 3g 08h la soglia critica è ancora lontana. |
 | **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. *La sconfitta costa tempo e orgoglio, non la campagna.* |
 
-**Durata attesa 4–6 round. XP** ~5.400/PG (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
+**Durata attesa 4–6 round. XP** ~5.400/PG al gruppo di oggi, ≈ 2.600 ai gruppi futuri (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
 **Loot**: **Geode Titanico** (5.000 mo, cristalli d'adamantio) + **Cuore di
 Terros** (oggetto meraviglioso: componente da **20.000 mo**, o base per un
 *Amuleto di Armatura Naturale +5*) — l'occhio di Artemis ci si posa subito.
@@ -2296,7 +2296,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 > **≈ 6.700** a testa, **≈ 5.900** senza i Cristalli.
 
 > **Lettura**: al 13° servono **13.000 PX** per il 14° (da 78.000 a 91.000, SRD). Questo modulo vale
-> **~0,8 livelli**; con il Piano del Fuoco già alle spalle, i PG **maturano il
+> **~0,8 livelli** (al conto SRD, per un gruppo futuro, circa mezzo livello); con il Piano del Fuoco già alle spalle, i PG **maturano il
 > 14° verso Hammerfist** (D8: il 14° si consolida nell'ARC-08, non qui). Le
 > parti già giocate non si ritoccano (ERRATA §6).
 

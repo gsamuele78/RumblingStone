@@ -13,6 +13,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-2 playtester (prevista; scelte storte di un gruppo nuovo) | 0 | 4 | 12 | `def2-PLAYTESTER.md` |
 | DEF-3 playtester (tre Doni; un Dono e 2 successi; nessun Dono e ritiro) | 0 | 5 | 13 | `def3-PLAYTESTER.md` |
 | DEF-1 playtester (prevista; senza Cristalli; scelte storte) | 1 | 6 | 21 | `def1-PLAYTESTER.md` |
+| DEF-1 playtester, giro 3 dopo D84 (stessi percorsi) | 1 | 7 | 24 | `def1-PLAYTESTER-giro3.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -100,3 +101,18 @@ c'è. Il quiz no, per D10.
 | 12 | le piattaforme nella legenda di T-6 | tolte |
 | 27 | il +4 CAR di Thorik | D84 (f), deciso: il modulo si allinea allo stato |
 | 28 | i PX e i 14.000 per il 14° | 13.000, come l'SRD; D84 (e), deciso: oggi restano, per i gruppi futuri il conto SRD |
+
+## Il triage del playtester di DEF-1, giro 3
+
+D84 regge: il rientro dopo l'Onda, il canto, l'Ancora fallita e la DES di Thorik non tornano. Il lettore a freddo ha aperto per la forma il rapporto del giro 2, e lo dichiara; i rilievi li ha verificati sul testo.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🔴 | la Sentinella: con +12 contro CA 30 le crepe (CA+5 = 35) non si fanno, e la sconfitta rigioca lo stesso duello | **domanda al DM**, D85 (a). Il gruppo di oggi l'ha già giocata e vinta: vale per i gruppi futuri |
+| 2 🟠 | la DPR di Thorik contro Terros conta il sacro dello stadio 1, e la stima non sottrae la rigenerazione | **domanda al DM**, D85 (f) |
+| 3 🟠 | Volare CD 20 senza bonus | residuo: D79 (h), il DM ha scelto di lasciarla com'era |
+| 4 🟠 | la Spinta fuori dal bordo non ha la regola di rientro | **domanda al DM**, D85 (b) |
+| 5 🟠 | la caduta nell'oceano attorno al Tempio, dove la gravità è zero; Tordek senza cavo | **domanda al DM**, D85 (c): precisa D84 (c) |
+| 6 🟠 | le righe PX delle scene danno solo le cifre di oggi | corrette: le due cifre in ogni riga, e la «Lettura» |
+| 7 🟠 | la Sentinella ferma dopo la caduta di Tordek | **domanda al DM**, D85 (d) |
+| 8 🟠 | Terros addormentato alla soglia | **domanda al DM**, D85 (e) |
