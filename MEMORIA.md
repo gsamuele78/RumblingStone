@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 17 decisioni aperte
+## Aspetta il DM: 21 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -30,6 +30,10 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D35 | F4 | **DEF-3, il rito quando va male** (i due 🔴 del playtester a freddo). **(a)** Gli Step 1-3 falliti dicono solo «riprova» (−2 cumulativo, 2d6 non letali, −10 min), senza tetto né uscita, e Conoscenze e Utilizzare Oggetti… |
 | `LETTORE-PLAYTESTER` | D36 | F4 | **I 🟠 di regole di DEF-1, DEF-2 e DEF-3 che chiedono canone**, raccolti dalle letture a freddo del 2026-09-30 (`esperimenti/f4-def1-def3/`). **(a)** DEF-1: la Benedizione «ignora le penalità» ma la tabella della gravità… |
 | `LETTORE-PLAYTESTER` | D37 | F4 | **DEF-1 Scena 7: Tordek da solo contro la Sentinella, e se cade?** (🔴 del playtester a freddo). L'anticamera immobilizza Thorik (Forza CD 28, che lui al massimo fa 27) e lascia Artemis prono e indifeso: se Tordek va a 0… |
+| `LETTORE-PLAYTESTER` | D49 | F3-quinquies | **Le pozioni del re per i gruppi futuri** (🔴 del lettore, giro 3). La Scena 4 e C.1 danno 4 pozioni d'*invisibilità* CL 12, le Benedizioni e la mappa; il banco e §8 B danno 5 *volare* e 4 *cura ferite gravi*, che è il c… |
+| `LETTORE-PLAYTESTER` | D50 | F3-quinquies | **Grask a 4 tacche esatte** (🟠 del lettore). «Sveglio fino alla 4ª tacca, addormentato dalla 5ª»: chi arriva alla tenda con 4 tacche segnate lo trova sveglio o addormentato? Proposta: **sveglio** finché la 4ª tacca è l'… |
+| `LETTORE-PLAYTESTER` | D51 | F3-quinquies | **Ucciso «in silenzio» o «spettacolare»** (🟠 del lettore). Decide se all'alba i PG perdono la prima azione. Proposta: è **spettacolare** se almeno una guardia o Grask, vivi e coscienti, vedono la morte di Zog'tar **e**… |
+| `LETTORE-PLAYTESTER` | D52 | F3-quinquies | **La lastra di Balvar** (🟠 del lettore). Il master lascia al DM cosa c'è inciso («gancio bianco per ARC-09»). Proposta: resta un gancio bianco, ma il master dà una riga da leggere se il tavolo la legge subito (tre rune… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -117,8 +121,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
-| 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… |  |
+| 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… | ✅ (PR #238, unita il 2026-10-12) |
+| 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… | 🟡 parziale: tre letture sulle parti nuove; mancano il lettore e il resto del master (chiuso dal giro 3 completo, `plans/esperimenti/def4-giro3/`) |
 | 2026-10-12 | REVISIONE-ARC07 · module-standard | le tattiche degli scontri che `DEF-4` rende possibili e non spiegava, e la doma… | ✅ `DEF-4`: la pattuglia dei tre fallimenti, la squadra dei lupi, lo sciamano che vede l'invisibile, le quattro guardie della tenda, Zog'tar sulla breccia all'a… |
 | 2026-10-12 | CICLO-SESSIONE · REVISIONE-ARC07 | il corredo della serata dopo il 2026-09-25: `DEF-4` dalla Scena 5 all'esito del… | ✅ `homebrew/sessione-notte-e-alba/`: regia con colonna «tre ore» e «intera», quattro echi nuovi, le dieci boccette nel volume dei giocatori,… |
 | 2026-10-11 | REVISIONE-ARC07 | il Torque di Thorek I passa dal consiglio alla Scena 12: il re lo dà di persona… | ✅ `DEF-4`: Momento 5 della Scena 12 con box e battuta del re, Scena 4 e §8 B allineati, ripiego se la scena salta. Rigenerati i due booklet `.hb.md` che citano… |
@@ -132,7 +136,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 212 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 21 aperte, 212 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
