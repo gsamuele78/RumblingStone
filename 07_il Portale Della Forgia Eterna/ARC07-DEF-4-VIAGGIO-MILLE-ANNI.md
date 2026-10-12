@@ -246,6 +246,10 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
   lei, perché è legato alla Collana. Contro Skullcrusher conta una riga della sua
   scheda: **vulnerabile all'acido, +50%**. Il soffio del drago è l'unica cosa in
   questo viaggio che lo corrode davvero, e la giocatrice lo sa.
+  Il resto, per il duello: Media, **102 pf**, CA **21**, RD 5/adamantio, morso
+  **+15** (2d6+6) e 2 artigli **+13** (1d4+3), Tempra +11, Riflessi +10, Volontà
+  +6. La scheda intera è quella consegnata alla giocatrice<!-- apparato -->
+  (`homebrew/sessione-resurrezione-mille-anni/08-SCHEDA-DURIK.md`)<!-- /apparato -->.
 - 🌱 **Il dono «a metà»** *(`DEF-3` §9, riga «2 su 3»)*: se al rito i successi
   dello Step 5 sono stati **due su tre**, il PG che ha fallito lo scopre **qui**,
   al primo uso: il seme che porta il suo dono **non risponde al primo

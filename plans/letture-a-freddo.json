@@ -292,6 +292,69 @@
           "nota": "primo passo, la vista di chi scorre (serata ✓ (riquadro), chi si oppone ✓); master identico a quello del commit 10127b7 da cui è stata fatta la vista",
           "rilievi_rossi_e_arancio": 0,
           "rilievi": []
+        },
+        {
+          "ruolo": "dm",
+          "data": "2026-10-12",
+          "rapporto": "plans/esperimenti/def4-giro3/def4-giro3-DM.md",
+          "corsa": "plans/esperimenti/def4-giro3/corsa-dm/dm",
+          "impronta": "547080e28f2b8bb7f7f69f8fc985388097972e4607b60f9af45924a44fea7ae9",
+          "smesso_a": null,
+          "rilievi": [
+            {
+              "n": 1,
+              "gravita": "🟠",
+              "stato": "residuo",
+              "ragione": "gli esiti del rito per questo gruppo stanno nel log del ramo campaign-group-rumblingstone (ADR-0090), non nel master, che vale per i gruppi futuri"
+            },
+            {
+              "n": 2,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D49"
+            },
+            {
+              "n": 3,
+              "gravita": "🟠",
+              "stato": "residuo",
+              "ragione": "il punto di ripresa della serata sta nel log del ramo di gruppo e nel riquadro «La vostra serata», che vi rimanda"
+            },
+            {
+              "n": 4,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D62"
+            },
+            {
+              "n": 5,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 6,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D50"
+            },
+            {
+              "n": 7,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D55"
+            },
+            {
+              "n": 9,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D60"
+            },
+            {
+              "n": 10,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "D61"
+            }
+          ]
         }
       ],
       "sola_forma": []

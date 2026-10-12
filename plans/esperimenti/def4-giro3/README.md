@@ -10,9 +10,11 @@ e l'altra.
 | lettore (a scene e intera, con diario) | 1 | 5 | 35 | `def4-giro3-LETTORE.md`, `def4-giro3-LETTORE-diario.md` |
 | playtester | 0 | 4 | 20 | `def4-giro3-PLAYTESTER.md` |
 | developer | 0 | 7 | 16 | `def4-giro3-DEVELOPER.md` |
+| DM a freddo (a scene, `lettura_a_scene.py`) | 0 | 9 | 24 | `def4-giro3-DM.md`, diario in `corsa-dm/dm/` |
 
-Le letture non sono passate da `lettura_a_scene.py`, quindi non entrano in
-`letture-a-freddo.json`.
+Lettore, playtester e developer non sono passati da `lettura_a_scene.py` e non
+entrano in `letture-a-freddo.json`; il DM a freddo sì, ed è registrato con
+l'impronta e lo stato di ogni 🟠.
 
 ## Il triage
 
@@ -27,7 +29,6 @@ Le letture non sono passate da `lettura_a_scene.py`, quindi non entrano in
 | Balvar recuperato e il ritorno in volo | playtester | **D55** |
 | Zog'tar catturato, il trasporto | playtester | **D56** |
 | cosa ha il gruppo di stasera | lettore | non è del master: sta nel log del ramo di gruppo |
-| il *Registro delle Perdite* fuori dal modulo | lettore | da portare dentro DEF-4 |
 | sette elmi e sei nani · mezz'ora per 500 m · «come sopra» · le rune date o vendute · «due» pozioni fermano Kettra · la fonte dell'handout · la CA 37 «lanciata prima» | lettore | corretti |
 | la tenda del generale «da non dire» che Durin indica | lettore e playtester | corretto: la prova serve solo se Durin non l'ha indicata |
 | i giavellotti di Zog'tar a +20 | playtester | corretto: +19 (BAB 15, DES +5, −1 taglia) |
@@ -41,6 +42,11 @@ Le letture non sono passate da `lettura_a_scene.py`, quindi non entrano in
 | il bottino della tenda | developer | **D59** |
 | lo sconto sull'ascia: 9.375, non 9.350 | developer | resta: è il conto pagato al tavolo |
 | i 🟡 delle schede (Balvar contatto 14, guardie, Durin), gli altri PX, le tattiche di ronde e wyvern | developer | restano aperti per il giro 4 |
+| gli esiti del rito e il punto di ripresa della Scena 5 | DM a freddo | non è del master: sta nel log del ramo di gruppo (`residuo` nel registro) |
+| Durik senza statistiche nel master | DM a freddo | corretto: le righe del duello dalla sua scheda, con il rimando |
+| il drago Vecchio più debole del base | DM a freddo | **D60** |
+| *Dragondoom* di Aegis Fang | DM a freddo | **D61** |
+| il *Registro delle Perdite* | lettore e DM a freddo | **D62**: il tiro non è definito in nessun file, non basta portare dentro una tabella |
 | la pozione di *neutralizza veleno* | lettore (non contato) | **falso allarme**: è di 3° per il druido, e 750 mo è il prezzo SRD |
 
 ⚠️ **Un errore mio nell'incarico del playtester**: ho scritto che Hella è
