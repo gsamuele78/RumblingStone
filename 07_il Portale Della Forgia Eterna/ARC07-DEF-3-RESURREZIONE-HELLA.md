@@ -161,11 +161,10 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 > basta da solo — i doni comprano la **qualità** del ritorno, non la vita.
 
 ### 🐾 Supporto Pathfinder 1e (dove il 3.5 è vago) — opzionale, dichiarato
-> - **Il costo della resurrezione**: il 3.5 (*raise dead*) impone un **livello
->   negativo** al risorto. Qui il Cuore di Moradin lo **assorbe** (miracolo
->   divino) — ma se vuoi il crunch PF1e, applica **1 livello negativo a Hella
->   che svanisce dopo 7 giorni** invece dei doni-di-scena, e trattalo con le
->   regole PF1e dei livelli negativi (−1 a tutto, −5 pf, sparisce senza TS).
+> - **Il costo della resurrezione**: nel 3.5 *rianimare morti* fa **perdere un
+>   livello** al risorto; in PF1e dà **due livelli negativi permanenti**, che si
+>   tolgono con *ristorare*. Qui il Cuore di Moradin **assorbe** il costo
+>   (miracolo divino), salvo la riga «1 su 3» del §9.
 >   *Default di questo master: nessun livello negativo (il Cuore paga).*
 > - **Il Debito della Radice** (§6): trattalo come un **patto/geas PF1e** non
 >   coercitivo (nessun TS, nessun danno finché non violato): è un obbligo
@@ -1020,7 +1019,7 @@ Proteggili. Proteggi il focolare.»*) — le tre del PDF (`DEF-2` §7) **+**:
 
 **In scena** — Dove: l'affresco A6 — Chi: Moradin · Therysol
 
-> Riposato e riformato il cerchio, resta l'ultima soglia dell'arco: la Corona,
+> Riformato il cerchio, senza riposo, resta l'ultima soglia dell'arco: la Corona,
 > con Topazio e Smeraldo, può aprire il **portale del Tempo** (affresco A6).
 
 > **Il difetto che questa sezione chiude.** «Poi si apre il portale» è una

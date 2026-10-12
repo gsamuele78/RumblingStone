@@ -11,6 +11,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-2 lettore | 0 | 7 | 16 | `def2-LETTORE.md` |
 | DEF-3 lettore | 0 | 9 | 17 | `def3-LETTORE.md` |
 | DEF-2 playtester (prevista; scelte storte di un gruppo nuovo) | 0 | 4 | 12 | `def2-PLAYTESTER.md` |
+| DEF-3 playtester (tre Doni; un Dono e 2 successi; nessun Dono e ritiro) | 0 | 5 | 13 | `def3-PLAYTESTER.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -70,3 +71,16 @@ nella prosa.
 | 2 🟠 | i premi sacri di Thorik valgono zero | **domanda al DM**, D82 (b) |
 | 3 🟠 | il frammento onirico di Tordek rimanda al §6 | il rimando giusto: Piano della Terra, §1 |
 | 4 🟠 | Hella senza niente se si dorme nella Stanza | **domanda al DM**, D82 (c) |
+
+## Il triage del playtester di DEF-3
+
+Nessun 🔴 né dal lettore né dal playtester: per DEF-3 la condizione del lotto
+c'è. Il quiz no, per D10.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🟠 | l'inversione dello Step 5 senza Doni | **domanda al DM**, D83 (a): nasce dalla mia applicazione di D81 (a) |
+| 2 🟠 | la Custode e lo Step 6 sotto soglia | **domanda al DM**, D83 (b) |
+| 3 🟠 | il Sud occupato prima | **domanda al DM**, D83 (c) |
+| 4 🟠 | «riposato» contro «niente riposo»; il tempo dei tentativi | «riposato» tolto dalla soglia; il resto è D83 (e) |
+| 5 🟠 | il livello negativo e il riquadro PF1e | il riquadro corretto (3.5: si perde un livello; PF1e: due livelli negativi permanenti); la natura del livello è D83 (d) |
