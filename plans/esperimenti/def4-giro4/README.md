@@ -73,3 +73,34 @@ leggeva, e ne chiudono in parte due rilievi.
 | 21 | il rimando dell'orologio alla Scena 8 | riga in Scena 8 verso §8 B |
 | 22 | la penalità al ritorno | chiusa da D64 e D72 |
 | 23 | le tacche e le ore | detto che una tacca non è un'ora → D74 p |
+
+## Il DM a freddo · 🔴 0 · 🟠 8 · 🟡 11
+
+Rapporto: [`def4-giro4-DM.md`](def4-giro4-DM.md); la corsa in `corsa-dm/dm/`.
+Letto sul testo di `3909e7e`. Le correzioni sono nel commit che porta questo
+triage.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🟠 | «La vostra serata» non entra in un'ora | tempi per ogni scena fino alla 11, e cosa si legge *solo* di ognuna: 60 minuti |
+| 2 🟠 | da dove si riparte stasera | la premessa dice le scelte rimaste della Scena 5; in §0 la prima battuta (Durin nel cortile) e le tre scelte |
+| 3 🟠 | Grask per chi torna in volo | in §0: la tacca del volo si segna alla partenza, con 3 tacche Grask è sveglio; con la veglia dei semi dorme. L'`[INFERRED]` dell'atterraggio era già chiuso da D74 h |
+| 4 🟠 | la veglia dei semi per questo gruppo | domanda → **D75** |
+| 5 🟠 | il dado dei caduti alla Scena 10 | la regola copiata nella riga «Dalla notte»: 1d4 per tipo di cura, il numero è quanti difensori con un nome muoiono, non tocca ARC-08. Il log del gruppo → **D76 d** |
+| 6 🟠 | Vatore con chi torna in volo | riga «Se tornano in volo» nella Scena 9 `[INFERRED]`: lo vedono dall'alto, scendono o lo ritrovano sulle mura |
+| 7 | il segno della pozione n. 4 e Vatore | riga «Se uno di loro porta il segno» nella Scena 9 `[INFERRED]`: CD 14 per parlargli, Sal in ARC-09 lo cerca |
+| 8 🟠 | i quindici `[INFERRED]` | chiusi da D74 sul testo che il DM non aveva ancora |
+| 9 🟠 | tre fatti del gruppo mancanti | domanda → **D76 a-c** |
+| 10 | il percorso del booklet della regia | **residuo**: un percorso di file è apparato, e il master si stampa (ADR-0070) |
+| 11 | le Benedizioni di Moradin alla Scena 4 | la parentesi (morale, al colpire e ai danni, 12 ore) anche lì |
+| 12 | quanto vale una tacca in ore | «circa un'ora a tacca, tranne la sosta e il sonno» |
+| 13 | la runa di Zeth al duello | round 1: chi ce l'ha la attiva adesso, azione standard |
+| 14 | chi sceglie il drago e la riga «ignora Hella» | la riga di scalatura dice che va scelta, e che senza vale «Chi sceglie» |
+| 15 | i ritratti che mancano per stasera | **residuo**: immagini, lavoro di `art-direction` fuori da questo piano |
+| 16 | Balvar in volo, il rimando | «(se tornano in volo: Scena 8, …)» nella riga della Scena 7 |
+| 17 | Treant e wyvern fuori da A.6 | due righe in A.6 |
+| 18 | la vista si ferma sull'apparato | **residuo**: le etichette in grassetto sono la testata standard dei master (`module-standard`); cambiarle è un lavoro di tutti i DEF |
+| 19 | la nota sul repo in §0-ter | dentro `<!-- apparato -->` |
+
+La correzione del 6 ha chiuso anche il residuo D2 della Scena 7 in
+`domande-developer.json` («e se volano?»), tolto dal registro.

@@ -28,8 +28,8 @@
 >
 > **Da dove riparte il gruppo di oggi** `[CANONE — DM 2026-09-27]`: dalla
 > notte del 372, con **3 tacche segnate** (§4, «Dove si riprende»). Consiglio e
-> giro della fortezza sono giocati; il resto della Scena 5 è ancora aperto, poi
-> il campo (Scena 6). Un gruppo nuovo parte dalla Scena 1. **Canone**: la Corona ha Topazio + Smeraldo (aprono il
+> giro della fortezza sono giocati; della Scena 5 restano solo le scelte della
+> notte (sosta, sonno, veglia dei semi), poi il campo (Scena 6). Un gruppo nuovo parte dalla Scena 1. **Canone**: la Corona ha Topazio + Smeraldo (aprono il
 > portale del Tempo); il **Rubino si accende SOLO alla vittoria antica**.
 >
 > <!-- storico -->
@@ -82,15 +82,25 @@
 > prezzo lo pagano loro.
 
 > 🗓️ **La vostra serata** — per il gruppo che riparte dalla notte del 372 `[CANONE — DM 2026-10-07, Q43]`.
-> **Leggi solo questo, in quest'ordine**: §4 «L'orologio della notte» (10 min) ·
-> Scena 6 il mare di tende (15 min) · Scene 7 e 8 la tenda, con la mappa M7-C
-> e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · Scene 10 e 11, le mura
-> e il duello, con l'Appendice A.1. Gli scontri possibili per strada
+> **Leggi solo questo, in quest'ordine, in un'ora**: §4 «L'orologio della
+> notte» (5 min) · Scena 6, solo lo skill challenge e la variante dall'alto
+> (10 min) · Scene 7 e 8, solo le schede d'entrata, le tattiche e la mappa M7-C
+> (15 min) · Scena 9, solo la tabella di Vatore (5 min) · Scena 10, solo la
+> tabella «Dalla notte» e le tre vie (5 min) · Scena 11, la scheda d'entrata,
+> il giro round per round, «Chi sceglie» e le corde, con l'Appendice A.1
+> (15 min). Il resto si apre quando serve. Gli scontri possibili per strada
 > (pattuglia, lupi, sciamani) hanno le statistiche in Appendice A.6. Ci si ferma sull'esito del duello, prima
 > della Scena 12 `[CANONE — DM 2026-10-12]`. Al tavolo sono circa tre ore; la
 > regia della serata, nel suo booklet, dice dove tagliare. Il resto del master
 > (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti chiedono
 > qualcosa.
+> **La prima battuta.** Si riapre nel cortile, dopo il giro della fortezza.
+> Durin li raggiunge con la mappa del campo arrotolata sotto il braccio e
+> chiede una cosa sola: *«Quando uscite?»*. Le scelte ancora aperte sono tre:
+> fermarsi, dormire, o uscire subito; e Hella può vegliare i semi (Scena 5).
+> Con 3 tacche segnate e il volo, quando atterrano alla tenda Grask è
+> **sveglio** (la tacca del volo si segna alla partenza). Se prima Hella veglia
+> i semi, il volo è la 5ª tacca e Grask dorme.
 > **Dove eravate**: consiglio fatto, giro della fortezza fatto (fucina,
 > alchimista, cappella, Zeth nelle gallerie), **3 tacche** sul foglio, nessuno
 > ha dormito. La fiducia del consiglio, le pozioni in mano, cosa hanno venduto
@@ -219,10 +229,12 @@ punti, e li trovi marcati nel testo:
 - `[HDYWTDT — il finisher a chi abbatte Zog'tar]` → Scena 8
 - `[HDYWTDT — il finisher a chi abbatte Skullcrusher]` → Scena 11
 
+<!-- apparato -->
 🔎 **Non è un abbellimento, ed è la quarta cosa dichiarata e mai applicata di
 questo repo**: il marcatore `[HDYWTDT]` era a **zero in tutti e nove gli
 archi**, benché la skill dica che va scritto *«at boss-death points in
 encounter content»*.
+<!-- /apparato -->
 
 ⚠️ **Come si fa senza che diventi imbarazzante**: non si dice «descrivi tu».
 Si dice **«com'è che lo fai?»**, e si aspetta. Se il giocatore non vuole,
@@ -412,7 +424,8 @@ fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
 contare dopo il consiglio, quando ne restano circa otto: le prime quattro se
 ne vanno fra l'arrivo, la porta e il consiglio `[CANONE — DM 2026-10-12, D71]`.
-Una tacca non è un'ora: è un pezzo di notte, e le cose lunghe ne costano meno
+Se il tavolo chiede l'ora: circa un'ora a tacca, tranne la sosta e il sonno.
+Una tacca non è un'ora esatta: è un pezzo di notte, e le cose lunghe ne costano meno
 di quanto durano, perché intanto il resto del campo non si muove `[CANONE — DM 2026-10-12, D74]`. Il drago è Skullcrusher e **non attacca**: aspetta
 l'alba, e i nani lo sanno. Dentro le mura le forge battono giorno e notte, e il
 rumore arriva fin qui.<!-- apparato --> *(Ambiente recuperato da
@@ -671,7 +684,7 @@ l'orda, e **affrontare Skullcrusher** all'alba.
 - **Prova di gruppo**: Diplomazia/Intimidire **CD 20** (**CD 16** se alla porta
   hanno preso il **Nome**) → **fiducia piena**: le quattro pozioni dell'antica
   fucina (*cura ferite gravi* all'11°, la *Benedizione degli Antenati* di §8 B),
-  le Benedizioni di Moradin +2/+2, la mappa accurata del campo **e la dotazione
+  le Benedizioni di Moradin +2/+2 (morale, al colpire e ai danni, 12 ore), la mappa accurata del campo **e la dotazione
   per entrare nel campo, scelta dal tavolo** (qui sotto). Fallimento: aiuti
   dimezzati, −2 alle prove della Scena 6. **Dimezzati** vuol dire: 2 pozioni
   dell'antica fucina invece di 4, metà della dotazione (2 pozioni
@@ -2000,7 +2013,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Non se ne accorgono** | il duello va come scritto |
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa** `[CANONE — DM 2026-10-07, Q25]`: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
-| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, e conta per la metà del gruppo `[CANONE — DM 2026-10-12, D74]` (Nascondersi e Muoversi Silenziosamente **−1**: nessun grado, DES +2, armatura completa di mithral −3) `[CANONE — DM 2026-10-12, D71]`, alla postierla Durin lo fa entrare se un PG garantisce per lui (Scena 8, «Se Balvar è recuperato»), e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
+| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG (se tornano in volo: Scena 8, «Se Balvar è recuperato»): nel ritorno a piedi tira con loro, e conta per la metà del gruppo `[CANONE — DM 2026-10-12, D74]` (Nascondersi e Muoversi Silenziosamente **−1**: nessun grado, DES +2, armatura completa di mithral −3) `[CANONE — DM 2026-10-12, D71]`, alla postierla Durin lo fa entrare se un PG garantisce per lui (Scena 8, «Se Balvar è recuperato»), e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
 | **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** `[CANONE — DM 2026-09-30, D14]` |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
@@ -2435,6 +2448,18 @@ mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
 un colpo: nessun tiro salvezza, e alla fine del suo turno il Cronolito lo porta
 via `[CANONE — DM 2026-10-12]`.
 
+**Se uno di loro porta il segno** (la cura con la cera nera, Scena 5). Vatore
+guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
+terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
+riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
+in ARC-09 Sal lo cerca su quel polso `[INFERRED — needs DM confirmation]`.
+
+**Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
+tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
+stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
+scena comincia da dove atterrano; se no, Vatore è sulle mura all'alba, nel
+caos, come se il tavolo avesse fretta (qui sotto) `[INFERRED — needs DM confirmation]`.
+
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
 (se qualcuno fallisce una prova di Muoversi Silenziosamente **CD 20**, la
@@ -2535,7 +2560,7 @@ un successo in più o in meno, e si applica dopo i tiri:
 | campo pre-allertato: il corridore è arrivato, o è suonato l'allarme (Scene 6 e 8) | **un successo in meno** |
 | Zog'tar umiliato davanti alle guardie (Scena 8) | annulla il successo in meno, se c'era |
 | Zog'tar catturato e portato alle mura (Scena 8) | **un successo in più** |
-| cure comprate alla cappella (Scena 5) | nessuno sulla prova: il dado dei caduti del 372 (Scena 5), che non tocca ARC-08 |
+| cure comprate alla cappella (Scena 5) | nessuno sulla prova. Si tira il **dado dei caduti**: 1d4 per ogni tipo di cura comprata (per il gruppo del 25 settembre, quattro tiri). Il numero è quanti difensori con un nome muoiono sulle mura per quella cura mancata; il DM li annota fra i caduti del 372. Non tocca ARC-08 |
 | i due Treant dell'alba caricano il fianco dell'orda (Scena 5) | **un successo in più** `[CANONE — DM 2026-10-07, Q49]` |
 | **Zog'tar è vivo all'alba** (il gruppo ha dormito, o non è arrivato alla tenda) | **un successo in meno**, e Zog'tar guida l'assalto: vedi sotto `[CANONE — DM 2026-10-07, Q41]` |
 
@@ -2708,7 +2733,9 @@ cambia davvero.
   chi fallisce è scosso). Se Zog'tar è morto in modo «spettacolare» (Scena 8), arriva **già
   in picchiata** e i PG perdono la prima azione. Apre col **Soffio acido** sul
   gruppo più fitto (Riflessi CD 28). *Non atterra: vuole restare in cielo, dove
-  si sente un dio.*
+  si sente un dio.* Chi ha la runa di Zeth (*resistere all'energia*, acido 20)
+  la attiva adesso, con un'azione standard: prima del soffio, se ha
+  l'iniziativa.
 - **Round 2-3 — il predatore aereo.** Resta in **quota**, picchia con Attacco in
   Volo e risale: un attacco solo durante il movimento, il morso o la coda, come dice l'SRD — punisce chi non ha gittata o volo. Bersaglio
   preferito: chi lo ha ferito di più (l'arroganza non perdona l'insulto).
@@ -2838,7 +2865,7 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 |---|---|
 | Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Per un gruppo di 13° è oltre il tetto: lì si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS). Vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro `[CANONE — DM 2026-10-12, D74]` |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
-| **Hella appena risorta** — vuoi proteggerla | Il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità) — dà alla giocatrice spazio per il suo primo scontro |
+| **Hella appena risorta** — vuoi proteggerla | Riga da scegliere, non di base: il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità). Senza questa scelta vale «Chi sceglie», che la mette fra i preferiti — dà alla giocatrice spazio per il suo primo scontro |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
 ### SCENA 12 — Il Rituale della Forgia Eterna
@@ -3515,6 +3542,8 @@ standard dell'SRD: nessuna ha una scheda sua nel repo.
 | **Squadrone di 6 hobgoblin** | complicazione 6 | a 24 m; manda il corridore. Se combatte, ha i numeri della pattuglia dei tre fallimenti, qui sotto |
 | **Ronda di orchi** | accorre alla tenda e agli scontri (Scene 6 e 8) | quattro orchi SRD (combattente 1, GS 1/2) e un sergente guerriero 3 |
 | **La pattuglia dei tre fallimenti** | skill challenge | otto hobgoblin guerrieri di 4° livello, EL 10: 30 pf, CA 15, spada lunga +6 (1d8+3/19-20), TS Temp +6 Rifl +2 Vol +0, Iniz +1, Vel 9 m, Ascoltare e Osservare −1 `[CANONE — DM 2026-10-07, Q15: calcolati sull'SRD, guerriero 4 con Arma Focalizzata e Specializzata, GS 4 l'uno]`; ogni round 1d6, con 1 uno corre alla tenda |
+| **Treant di Adamantio** | la Collana di Hella (Scene 5, 8, 10, 11) | Grande, 90 pf, RD 10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle strutture, FOR 28, TS Temp +11 Rifl +2 Vol +7, dura 1 ora |
+| **Wyvern** (2, scalatura per un gruppo di 13°) | scortano il drago dal round 2 (Scena 11) | SRD: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+2). Vanno su chi tiene la corda e su chi vola |
 | **Gli sciamani del campo** | dopo il corno | adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con *vedere invisibilità* fra quelli di 2° |
 
 <!-- nuova-pagina -->

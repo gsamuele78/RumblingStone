@@ -355,9 +355,68 @@
               "nota": "D61"
             }
           ]
+        },
+        {
+          "ruolo": "dm",
+          "data": "2026-10-12",
+          "rapporto": "plans/esperimenti/def4-giro4/def4-giro4-DM.md",
+          "corsa": "plans/esperimenti/def4-giro4/corsa-dm/dm",
+          "impronta": "e8687781560b1ded83803f14e4b7332e9fc676e03e5019b88a5a7172c93f8288",
+          "smesso_a": null,
+          "rilievi": [
+            {
+              "n": 1,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 2,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 3,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 4,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "quale tacca costa la veglia dei semi per il gruppo del 25/9: chiesto a Jfs"
+            },
+            {
+              "n": 5,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 6,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 8,
+              "gravita": "🟠",
+              "stato": "corretto"
+            },
+            {
+              "n": 9,
+              "gravita": "🟠",
+              "stato": "domanda",
+              "nota": "Nome della targa, pietra del silenzio, chi ha bevuto la n. 4: chiesto a Jfs; vanno nel log del ramo di gruppo"
+            }
+          ]
         }
       ],
-      "sola_forma": []
+      "sola_forma": [
+        {
+          "da": "38f3d85160b903fe5f99204eb984371a78d89b4ca5a6748a9833a7dd7199973f",
+          "a": "fc0cf94b97920831e5fc1af14617beac3be2600657a8658e0fdfe0eb240c137b",
+          "data": "2026-10-12",
+          "ragione": "D74 (2026-10-12): solo i tag [INFERRED] diventati [CANONE — DM 2026-10-12, D74] e un punto; nessuna riga di contenuto cambiata (git diff 3909e7e 21e7fc1)"
+        }
+      ]
     }
   }
 }
