@@ -382,8 +382,8 @@
             {
               "n": 4,
               "gravita": "🟠",
-              "stato": "domanda",
-              "nota": "quale tacca costa la veglia dei semi per il gruppo del 25/9: chiesto a Jfs"
+              "stato": "corretto",
+              "nota": "D75 A"
             },
             {
               "n": 5,
@@ -403,8 +403,8 @@
             {
               "n": 9,
               "gravita": "🟠",
-              "stato": "domanda",
-              "nota": "Nome della targa, pietra del silenzio, chi ha bevuto la n. 4: chiesto a Jfs; vanno nel log del ramo di gruppo"
+              "stato": "corretto",
+              "nota": "D76: non ancora giocati, il master lo dice in §0"
             }
           ]
         }

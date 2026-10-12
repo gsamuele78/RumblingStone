@@ -105,7 +105,11 @@
 > alchimista, cappella, Zeth nelle gallerie), **3 tacche** sul foglio, nessuno
 > ha dormito. La fiducia del consiglio, le pozioni in mano, cosa hanno venduto
 > e comprato stanno nel log della serata del 25 settembre, sul ramo del
-> gruppo: si leggono lì prima di cominciare.
+> gruppo: si leggono lì prima di cominciare. Le cose comprate non sono ancora
+> state date a nessuno, perché non sono ancora entrate in gioco: chi porta
+> cosa si chiede al tavolo prima della Scena 6. La cura con la cera nera
+> Kettra l'ha fermata, e finché nessuno la beve il segno non c'è. Il Nome
+> della targa serviva al consiglio, che è giocato.
 > **Due cose della Scena 5 servono stasera.** I Treant di Hella non hanno
 > ancora un posto: la tabella «I Treant: … dove possono andare» dice cosa
 > cambia fuori dalla tenda, dentro, sul fianco o al duello. E il **dado dei

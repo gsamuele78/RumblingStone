@@ -85,12 +85,12 @@ triage.
 | 1 🟠 | «La vostra serata» non entra in un'ora | tempi per ogni scena fino alla 11, e cosa si legge *solo* di ognuna: 60 minuti |
 | 2 🟠 | da dove si riparte stasera | la premessa dice le scelte rimaste della Scena 5; in §0 la prima battuta (Durin nel cortile) e le tre scelte |
 | 3 🟠 | Grask per chi torna in volo | in §0: la tacca del volo si segna alla partenza, con 3 tacche Grask è sveglio; con la veglia dei semi dorme. L'`[INFERRED]` dell'atterraggio era già chiuso da D74 h |
-| 4 🟠 | la veglia dei semi per questo gruppo | domanda → **D75** |
+| 4 🟠 | la veglia dei semi per questo gruppo | **D75** (A): la veglia costa la tacca anche a questo gruppo |
 | 5 🟠 | il dado dei caduti alla Scena 10 | la regola copiata nella riga «Dalla notte»: 1d4 per tipo di cura, il numero è quanti difensori con un nome muoiono, non tocca ARC-08. Il log del gruppo → **D76 d** |
 | 6 🟠 | Vatore con chi torna in volo | riga «Se tornano in volo» nella Scena 9 `[INFERRED]`: lo vedono dall'alto, scendono o lo ritrovano sulle mura |
 | 7 | il segno della pozione n. 4 e Vatore | riga «Se uno di loro porta il segno» nella Scena 9 `[INFERRED]`: CD 14 per parlargli, Sal in ARC-09 lo cerca |
 | 8 🟠 | i quindici `[INFERRED]` | chiusi da D74 sul testo che il DM non aveva ancora |
-| 9 🟠 | tre fatti del gruppo mancanti | domanda → **D76 a-c** |
+| 9 🟠 | tre fatti del gruppo mancanti | **D76**: non ancora giocati; §0 dice di chiederlo al tavolo prima della Scena 6, e che la n. 4 nessuno l'ha bevuta |
 | 10 | il percorso del booklet della regia | **residuo**: un percorso di file è apparato, e il master si stampa (ADR-0070) |
 | 11 | le Benedizioni di Moradin alla Scena 4 | la parentesi (morale, al colpire e ai danni, 12 ore) anche lì |
 | 12 | quanto vale una tacca in ore | «circa un'ora a tacca, tranne la sosta e il sonno» |
