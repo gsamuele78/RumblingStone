@@ -67,9 +67,8 @@ dichiara 3 🔴 e ne elenca 4: qui si contano quelli elencati.
 
 - **le pozioni d'invisibilità del re** nella Scena 4 per i gruppi futuri:
   decisione del DM;
-- le righe `[INFERRED]` nuove, da confermare: altezza e conti sono ora SRD o
-  mappa, restano i fatti di trama (alba prima della tenda, Balvar al cortile,
-  Via A, Vatore e gli incantesimi, ritorno in volo, gruppo diviso, i lupi a +1);
+- ~~le righe `[INFERRED]` nuove~~: il DM, il 2026-10-12, le ha fatte canone
+  tutte e tredici (`[CANONE — DM 2026-10-12]`);
 - 🟡 non corretti: Zog'tar catturato da trascinare per cinque blocchi; Hella
   nel duello contro un drago in quota; la «Cicatrice» con quattro nomi; mura
   sud o est fra M7-A e Scena 10; il torque al collo di Thorik senza lasciargli

@@ -117,6 +117,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… |  |
 | 2026-10-12 | REVISIONE-ARC07 · module-standard | le tattiche degli scontri che `DEF-4` rende possibili e non spiegava, e la doma… | ✅ `DEF-4`: la pattuglia dei tre fallimenti, la squadra dei lupi, lo sciamano che vede l'invisibile, le quattro guardie della tenda, Zog'tar sulla breccia all'a… |
 | 2026-10-12 | CICLO-SESSIONE · REVISIONE-ARC07 | il corredo della serata dopo il 2026-09-25: `DEF-4` dalla Scena 5 all'esito del… | ✅ `homebrew/sessione-notte-e-alba/`: regia con colonna «tre ore» e «intera», quattro echi nuovi, le dieci boccette nel volume dei giocatori,… |
@@ -128,7 +129,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · AGE… | il riallineamento dopo il merge di #229, #230 e #232 (richiesta del DM: ricontr… | 🟡 La #216 portata sul `main` nuovo: sette conflitti risolti tenendo le righe di `main` e aggiungendo le sue, `docs/tools/` rigenerato, §4 e `MEMORIA.md` rigene… |
 | 2026-10-10 | STATO-E-ORDINE | la memoria in un posto solo (ADR-0087) | ✅ Richiesta del DM: tutta la memoria in un posto, senza perdere parti o decisioni; il DM sceglie «nel repo, generata». `MEMORIA.md` in radice, generato da… |
 | 2026-10-10 | STATO-E-ORDINE · RECUPERO | il controllo prima del merge della #230 (richiesta del DM: le decisioni di ques… | ✅ `main` è fermo alla base (`f40ffeb`). Confronto delle tabelle `decisioni-dm` fra `main` e la #230: 0 decisioni perse o riaperte; aggiunte RESA D19-D30 e RECU… |
-| 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · REV… | la #230 diventa la PR più recente e completa (richiesta del DM): il piano di re… | ✅ Merge del ramo della #232 (`PIANO-RECUPERO`), con i conflitti risolti tenendo le righe aggiornate di questa PR. D1 e D2 di RECUPERO chiuse dalla richiesta de… |
 
 ## Le misure che si portano dietro
 

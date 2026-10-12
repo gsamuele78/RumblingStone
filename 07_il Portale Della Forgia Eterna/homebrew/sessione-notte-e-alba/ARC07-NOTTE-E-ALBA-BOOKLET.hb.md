@@ -32,11 +32,11 @@ ___
 Hammerfist, mille anni fa, nella notte prima dell'assalto, e si gioca fino
 all'esito del duello con il drago:
 
-1. **Le ultime scelte nella fortezza**, la coda di cap. III Scena 5: quello che
+1. **Le ultime scelte nella fortezza**, la coda di cap. IV Scena 5: quello che
    resta della notte prima di uscire.
-2. **Il campo**, cap. III Scene 6-9: il mare di tende, la tenda del comando,
+2. **Il campo**, cap. IV Scene 6-9: il mare di tende, la tenda del comando,
    Balvar, Zog'tar, Vatore al ritorno.
-3. **L'alba**, cap. III Scene 10 e 11: le mura e il duello con Skullcrusher.
+3. **L'alba**, cap. IV Scene 10 e 11: le mura e il duello con Skullcrusher.
    **Ci si ferma sull'esito del duello**, prima del rito all'incudine. Il
    Rubino, il torque del re e il ritorno sono della serata dopo.
 
@@ -46,7 +46,7 @@ all'esito del duello con il drago:
 |---|---|---|
 | **N1** | Circa **tre ore** al tavolo. La regia ha la versione da tre ore e quella intera, scena per scena | regia, §0 |
 | **N2** | Lo stop è **prima della Scena 12**: niente Rubino, niente torque. Si chiude sull'esito del duello | regia, Atto III |
-| **N3** | Il **Torque di Thorek I** non è stato consegnato al consiglio: lo dà il re di persona alla Scena 12, Momento 5. Stasera resta al collo del re | cap. III Scena 12 |
+| **N3** | Il **Torque di Thorek I** non è stato consegnato al consiglio: lo dà il re di persona alla Scena 12, Momento 5. Stasera resta al collo del re | cap. IV Scena 12 |
 | **N4** | **Durik è sempre presente**, come nella serata del 25 | scheda di Durik |
 
 **Stato al tavolo, entrando**. Il dettaglio è nel log della serata del 25
@@ -73,10 +73,11 @@ del primo tiro:
 | Capitolo | Per chi | Quando |
 |---|---|---|
 | I · Regia della serata | ⚠ DM | da leggere prima, da tenere aperto durante |
-| II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
-| III · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
-| IV · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
-| V · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
+| II · Il Seme-Mercato | ⚠ DM | all'inizio: è la prima cosa che chiederanno, insieme alle boccette |
+| III · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
+| IV · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
+| V · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
+| VI · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
 | **Il volume dei giocatori** | ✉ | gli echi della serata e le dieci boccette |
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
@@ -113,11 +114,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | Atto | Cosa | Master | Tre ore | Intera | Si consegna |
 |---|---|---|---:|---:|---|
 | **0** | Prima di cominciare | questa pagina, e il box in testa al booklet | 10 | 10 | ✉ gli echi, uno a testa · ✉ le dieci boccette |
-| **I** | Le ultime scelte nella fortezza | cap. III §4 l'orologio, Scena 5 | 15 | 20 | — |
-| **II** | Il campo, andata e ritorno | cap. III Scene 6-9 | 90 | 115 | — |
+| **I** | Le ultime scelte nella fortezza | cap. IV §4 l'orologio, Scena 5 | 15 | 20 | — |
+| **II** | Il campo, andata e ritorno | cap. IV Scene 6-9 | 90 | 115 | — |
 | — | Pausa | | 10 | 15 | |
-| **III** | L'alba | cap. III Scene 10 e 11 | 75 | 90 | — |
-| **Stop** | L'esito del duello | cap. III Scena 11, fine | 5 | 5 | |
+| **III** | L'alba | cap. IV Scene 10 e 11 | 75 | 90 | — |
+| **Stop** | L'esito del duello | cap. IV Scena 11, fine | 5 | 5 | |
 
 **Totale**: circa **3 ore e 25** nella colonna «tre ore», **4 ore e 15** in
 quella intera. Il ritorno a piedi dalla tenda (cinque blocchi) è dentro
@@ -147,11 +148,11 @@ giocatrice di Hella.
 
 | Scheda | Perché |
 |---|---|
-| Skullcrusher, cap. III Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
-| Durik, capitolo V | +50% di danni dall'acido: il soffio lo prende in pieno |
+| Skullcrusher, cap. IV Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
+| Durik, capitolo VI | +50% di danni dall'acido: il soffio lo prende in pieno |
 | Zog'tar e le quattro guardie, Appendice A.2 | la tenda, o le mura se Zog'tar è vivo all'alba |
 | Balvar, Appendice A.4 | parla prima di combattere, o durante |
-| La Forgia ricorda le ferite, capitolo IV | si segnano le ferite durante il duello, non dopo |
+| La Forgia ricorda le ferite, capitolo V | si segnano le ferite durante il duello, non dopo |
 
 **Leggi il box in testa al booklet**, poi **consegna gli echi**, uno a testa,
 piegati. Di' solo: *«Questo è quello che vi è rimasto addosso della notte.
@@ -164,14 +165,14 @@ adesso. Le pozioni identificate sono già nel loro inventario.
 **Le pozioni che decidono il campo**, dal log del 25 settembre: le cinque di
 *volare* del re, e due di *invisibilità* comprate da Brynja (3 minuti l'una).
 Le quattro pozioni del re sono state di *cura ferite gravi*, non
-d'invisibilità (cap. III §8 B): stasera nessuno ha l'invisibilità di 12 minuti
+d'invisibilità (cap. IV §8 B): stasera nessuno ha l'invisibilità di 12 minuti
 che il master dà alla Scena 6. Controlla sul log cosa è stato già bevuto.
 
 ---
 
 ## §2 · Atto I — Le ultime scelte nella fortezza
 
-**Apri** cap. III §4, la tabella dell'orologio, e la tabella d'uscita sotto.
+**Apri** cap. IV §4, la tabella dell'orologio, e la tabella d'uscita sotto.
 
 Restano **5 tacche**. Dillo con i numeri, è la regola dell'orologio: il
 tavolo deve sapere quanto ha in mano. Il campo a piedi ne costa almeno **3**
@@ -180,6 +181,14 @@ per arrivare in tempo. **In fortezza non avanza niente.** Una tacca spesa qui
 porta a 7, e si rientra di corsa (−1 ai TS del primo round del duello). Due
 tacche, o una tacca e un fallimento nel campo, portano a 8: l'alba li coglie
 fuori. Il volo all'andata ne fa risparmiare una (sotto, Atto II).
+
+**Il Seme, prima di tutto.** Insieme alle boccette, è la prima cosa che il
+tavolo chiederà: Artemis vuole sapere cos'è la gemma nello zaino di Tordek.
+La scena è il capitolo II di questo booklet, «L'ora della pergamena». Costa
+**1 tacca**, e con il conto qui sopra porta a 7: si rientra di corsa. Dillo
+prima che scelgano. La si può rimandare: al ritorno dalla tenda, con le
+tacche che restano prima dell'8 (riga «≤ 6» della tabella d'uscita), oppure
+nel 1372.
 
 Le scelte che valgono una tacca stasera, dalla tabella:
 
@@ -199,36 +208,35 @@ una tacca e chiedi un sì o un no a testa.
 
 ## §3 · Atto II — Il campo
 
-**Scena 6, il mare di tende** (cap. III Scena 6). La prova di gruppo a CD fissa
+**Scena 6, il mare di tende** (cap. IV Scena 6). La prova di gruppo a CD fissa
 costa **2 tacche**, più 1 per ogni fallimento. Con le pozioni di *volare* c'è
 la variante dall'alto, che costa **1 tacca invece di 2**. Hella può volare da
 aquila con la forma selvatica e lasciare la sua pozione per il ritorno. Senza
 l'invisibilità del re, il primo blocco a piedi lo coprono solo le due pozioni
 comprate; dopo si tira Nascondersi CD 22.
 
-**Scena 7, la tenda del comando** (cap. III Scena 7). **Balvar** è nella tenda.
+**Scena 7, la tenda del comando** (cap. IV Scena 7). **Balvar** è nella tenda.
 Parlargli prima di colpire costa **1 tacca**; parlargli durante lo scontro
 **0**. È la scena che si ricorda: se il tavolo ha poco tempo, si taglia
 altro.
 
-**Scena 8, Zog'tar** (cap. III Scena 8, mappa M7-C, Appendice A.2). La Cintura
+**Scena 8, Zog'tar** (cap. IV Scena 8, mappa M7-C, Appendice A.2). La Cintura
 di Tordek qui funziona. Il ritorno a piedi alle mura costa **1 tacca**.
 
-**Scena 9, Vatore** (cap. III Scena 9). Dieci minuti, al ritorno. L'Anello di
+**Scena 9, Vatore** (cap. IV Scena 9). Dieci minuti, al ritorno. L'Anello di
 Artemis lo sente prima di chiunque: dagli lo spotlight.
 
 **Gli scontri che possono capitare per strada**, tutti con la loro tattica nel
 master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
 sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
 guardie della tenda (Scena 8). Lo scontro con la pattuglia o con i lupi costa
-una tacca in più. Le righe marcate `[INFERRED]` sono proposte da confermare:
-se non ti vanno, cambiale prima della serata.
+una tacca in più. Le tattiche sono canone.
 
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 
 **Per stare nelle tre ore**: il mare di tende passa alla versione veloce,
-cap. III Appendice C.2, la parte «Infiltrazione»: tre tiri e dieci minuti,
+cap. IV Appendice C.2, la parte «Infiltrazione»: tre tiri e dieci minuti,
 2 tacche più 1 per ogni tiro fallito, e il ritorno in un tiro solo. Zog'tar
 resta completo.
 
@@ -236,7 +244,7 @@ resta completo.
 
 ## §4 · Atto III — L'alba
 
-**Scena 10, le mura** (cap. III Scena 10). Il box, poi **«Che fate?»**: una via
+**Scena 10, le mura** (cap. IV Scena 10). Il box, poi **«Che fate?»**: una via
 su tre, prova collettiva. **Prima di contare i successi**, applica la tabella
 «Dalla notte»: i Treant, il campo allertato, Zog'tar vivo o morto. Se Zog'tar è
 vivo all'alba, con 0-1 successi sale sulla breccia: la sua tattica sul
@@ -245,7 +253,7 @@ camminamento è scritta sotto la tabella «Dalla notte».
 Se le tacche sono 8 o più, la Scena 10 **non si gioca**: il duello comincia
 con i PG fuori dalle mura.
 
-**Scena 11, il duello** (cap. III Scena 11, mappa M7-B, Appendice A.1). Tre cose
+**Scena 11, il duello** (cap. IV Scena 11, mappa M7-B, Appendice A.1). Tre cose
 da tenere davanti:
 
 - la **Cintura di Tordek** si rifiuta contro il drago (§1 del master): dillo
@@ -258,11 +266,11 @@ da tenere davanti:
 Il finisher, se il drago muore, **va al giocatore** (`[HDYWTDT]`, §0-ter).
 
 Gli esiti della Scena 11 sono tre (ucciso, ferito grave, fuggito). Il quarto,
-**vinto sporco**, sta nel cap. III §6, ultima riga: scatta se due PG cadono
+**vinto sporco**, sta nel cap. IV §6, ultima riga: scatta se due PG cadono
 nello stesso round o se il gruppo si ritira.
 
 **Per stare nelle tre ore**: se il tavolo è stanco dopo Zog'tar, il duello
-passa alla regia veloce, cap. III Appendice C.3, tre scambi. Le ferite si
+passa alla regia veloce, cap. IV Appendice C.3, tre scambi. Le ferite si
 registrano lo stesso.
 
 ---
@@ -285,6 +293,7 @@ gruppo**.
 
 | | Cosa | Esito |
 |---|---|---|
+| ☐ | Il Seme: identificato · estirpato · tenuto · dato · firmato (e da chi); cosa ha detto Artemis a Tordek | |
 | ☐ | Scelte in fortezza: semi vegliati · banchetto · sosta | |
 | ☐ | Mare di tende: fallimenti · dall'alto o a piedi | |
 | ☐ | Balvar: ascoltato · ucciso · ignorato · «dite che c'ero»: promesso? | |
@@ -310,7 +319,233 @@ gruppo**.
 
 \page
 
-# II · La cassetta del DM: cast, pronuncia, read-aloud, suoni
+# II · Il Seme-Mercato: l'ora della pergamena
+
+{{note
+##### ⚠ SOLO DM
+Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
+}}
+
+# Il Seme-Mercato — l'ora della pergamena
+
+> **Cos'è.** La scena del Seme come la scrive «Il Piano della Terra & Terros l'Antico» §6-bis, copiata
+> qui perché stasera è la prima cosa che il tavolo chiede. La fonte resta il
+> master.
+>
+> **Quando**: Atto I della regia, prima delle scelte che costano tacche.
+> **Chi**: Artemis, con gli altri presenti; Tordek, perché il Seme è nel suo
+> zaino. **Cosa serve**: la pergamena di *identificare* del re, e la bottega
+> di Kettra.
+>
+> **Dove eravamo**. Il Seme nessuno l'ha toccato a
+> mani nude: è nello zaino di Tordek dal 31 luglio. Le dieci pozioni le
+> identificano Brynja e Kettra; la pergamena del re nessuna delle due la sa
+> usare, quindi la legge Artemis.
+
+<!-- include: 07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md#contratto-del-seme -->
+### La reazione dell'Anello — coerente col suo carattere (Caotico Buono)
+L'Anello **sussurra segreti del divino e dell'arcano** e **rispetta la scelta
+di Artemis di forgiare il proprio destino** (non lo comanda mai): non gli
+impedirà di sbagliare. Ma **odia i guinzagli** (è *Caos e Luce*, non
+sottomissione). Il DM sceglie il tono in base a come Artemis ha gestito
+finora la propria avidità nell'arco:
+
+- **A) L'Anello avverte (se finora è stato leale coi compagni).** Prima che
+  tocchi la gemma, una riga in infernale gli affiora nella mente: *«Il Caos lo
+  amo. Un guinzaglio no. Quella gemma è una mano — e non è la tua.»* Gli
+  concede la scelta, informato.
+- **B) L'Anello TACE (se l'avidità ha già vinto altre volte) — e osserva.** Il
+  Caos è curioso: vuole vedere cosa fa il suo portatore quando crede di non
+  essere guardato. Se Artemis **prende comunque** la gemma per pura cupidigia,
+  l'Anello interviene **dopo**, a modo suo:
+  - **Deride e neutralizza** — con un lampo di *Dawn's Defiance*
+    (anti-dominazione) l'Anello **spezza il controllo** di Varis sul marchio
+    (Varis non può più *comandare* Artemis) ma **lascia il debito**, e si
+    prende gioco di lui: *«Così il grande collezionista è stato…
+    collezionato. Terrò io il tuo guinzaglio, portatore. Vediamo se impari.»*
+    → il Seme diventa un **jolly caotico** dell'Anello (una carica extra
+    imprevedibile 1/arco, effetto a scelta del DM), ma Varis conserva la
+    **localizzazione** finché il marchio non è dissolto.
+  - **Vincola** (variante più dura) — l'Anello lega Artemis a un piccolo
+    **geas caotico** («paga sempre i tuoi debiti, ma mai nel modo atteso»);
+    finché non lo onora, i poteri *attivati* dell'Anello hanno un −1 di
+    circostanza. Puro colore, leva narrativa.
+
+### Meccanica sintetica (3.5)
+| Scelta di Artemis | Effetto immediato | Eco a lungo termine |
+|---|---|---|
+| **Rifiuta / distrugge la gemma** (Sapienza Magica CD 20 per estirparla pulita, o la lascia dov'è) | Varis perde l'esca; l'Anello approva (+1 morale al prossimo TS di Artemis, colore) | Varis lo segna come "sfuggito": nemico che rispetta, non pollo (→ #4/ARC-09) |
+| **Prende la gemma** | **Esca reale**: un **Frammento di Mercato** (una volta: −25% su un acquisto o +4 di circostanza a una prova commerciale/UMD) — la cupidigia è **premiata sul serio**, per un attimo | **Marchio di Varis**: Varis lo **localizza**; una volta potrà riscuotere (favore/tradimento). L'Anello può spezzare il *controllo* (Dawn's Defiance) ma **non** il debito. → grande gancio grigio per ARC-09 |
+
+> **Perché è bello (stile Andor/BG3).** Non è "una trappola cattiva": è un
+> **affare vero con un amo vero**. Artemis può vincerci (se è furbo o retto) o
+> pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
+> avanti. Registra l'esito nell'**Echo Ledger** (§11).
+
+#### ✅ CANONE GIOCATO — la terza strada: PRESO, MAI TOCCATO
+
+**Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
+pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
+punta di trapano — *«densa in un modo che le gemme non sono»*. Artemis **non
+ha rifiutato** e **non ha accettato**: l'ha recuperata **senza toccarla a
+mani nude** e l'ha fatta **mettere nello zaino di TORDEK**. Il Seme viaggia
+col party, sigillato in una sacca che non è la sua.
+
+**Cosa ha rilevato Artemis** (Vista Potenziata + Sapienza Forgiata
+dell'Anello): oggetto magico, **Trasmutazione + Ammaliamento**. Le due scuole
+raccontano da sole cos'è, per chi sa leggerle: la **Trasmutazione** è
+l'innesto che cresce e si radica; l'**Ammaliamento** è **la parte che parla**.
+Un mercante non pianta una trappola: pianta un **venditore**.
+
+**La visione del bazar (giocata).** Prima ancora del contatto, ad Artemis è
+arrivato **negli occhi della mente** il mercato di Varis: banchi, teli,
+registri, la ricchezza ordinata di un posto dove tutto ha un prezzo scritto.
+⚠️ **La visione NON è il contratto**: è la **vetrina**. L'Ammaliamento serve
+a far vedere la merce; il **Marchio si chiude solo col tocco**. Artemis ha
+guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
+quello non si dimentica.
+
+**Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
+tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
+incastonarla nell'Anello). Quindi, oggi:
+
+| | Stato |
+|---|---|
+| **Marchio di Varis** | ❌ **non attivo**. Varis **non** localizza Artemis, non ha crediti da riscuotere |
+| **Frammento di Mercato** (lo sconto/+4) | ❌ non ottenuto: il premio si paga col tocco |
+| **+1 morale del rifiuto** | ❌ non ottenuto: non ha rifiutato |
+| **Il Seme** | ✅ **posseduto**, integro, tiepido, nello **zaino di Tordek** |
+
+**Come reagisce Varis (e perché è meglio così).** Il mercante **non sa** che
+gli è successo. La sua esca non è stata né morsa né distrutta: è stata
+**presa e messa da parte**, che per un mercante è la risposta più
+inquietante di tutte — significa che il cliente ha capito il prezzo e **ha
+deciso di decidere dopo**. Il Seme resta un'offerta aperta a tempo
+indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
+**contro-mossa**: non un pollo, non uno sfuggito, ma **qualcuno che tratta**.
+Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
+debitore, riconosce quella di un collega.
+
+**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
+ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
+**appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
+planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
+renderlo pesante: basta ricordarsene.
+
+- **Se Tordek lo tocca** (curiosità, inventario, un compagno che rovista):
+  la voce di Varis arriva **a lui**, ricalibrata su un monaco nanico — non
+  offre tesori, offre **certezze** («posso dirti dove sarà tuo fratello
+  quando servirà»). Il Marchio si chiuderebbe su **Tordek**, non su Artemis.
+- **Se lo tocca Artemis più avanti**: vale la riga «Prende la gemma» della
+  tabella qui sopra, senza sconti — l'offerta non scade.
+- **Se lo distruggono** (Sapienza Magica CD 20): vale la riga «Rifiuta», ma
+  **tardi** — Varis ha già capito che è stato riconosciuto.
+
+**Semi da far germogliare (nessuna meccanica, solo memoria).** Lo zaino di
+Tordek è **appena più caldo** degli altri quando lo posa. I Bracieri, che
+hanno una coscienza e un carattere da vecchio fabbro, **non commentano** —
+e quel silenzio, per chi lo nota, dice più di un avvertimento.
+
+→ **Echo Ledger (§11): «Il Seme dorme nello zaino sbagliato».**
+
+> **Nota su Sal/Vatore (per il DM).** Questo marchio si intreccia col #4
+> (Viaggio a 1.000 anni fa), dove **Sal è presente come "Vatore"**: se Artemis
+> porta il Marchio di Varis, il DM può far riconoscere a Vatore la "firma" del
+> mercato — un filo che lega passato e presente della rete di **Varis ↔ Il
+> Collezionista** (le due reti sono collegate).
+
+### Il contratto del Seme, per intero
+
+Fino a qui il §6-bis diceva cosa **fa** il Seme, sparso in tre posti. Questa
+è la scheda completa, scritta perché Artemis lo identifica con la pergamena
+del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»). Quello che
+segue è **tutto ciò che *identificare* rivela**, e il DM lo dice a voce.
+
+**L'oggetto.** Oggetto magico, **non** artefatto e **non** oggetto maledetto:
+*identificare* funziona e rivela tutto, senza la regola dell'1% delle
+maledizioni. Aura moderata di **Trasmutazione** (l'innesto che si radica) e
+**Ammaliamento** (la parte che parla), livello dell'incantatore 9. Un cabochon
+violetto grande come l'unghia del pollice, pesante come un pugno di piombo,
+sempre tiepido.
+
+**Le clausole** (sono il contratto):
+
+1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
+   anche senza volerlo. Guanto, panno o pinza non firmano. Non c'è tiro
+   salvezza, perché il Seme non costringe: aspetta.
+2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
+   nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
+   si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
+   gli chiede. L'Anello reagisce come nel riquadro «La reazione dell'Anello».
+3. **L'anticipo.** Alla firma il debitore riceve il **Frammento di Mercato**:
+   una volta sola, −25% su un acquisto oppure +4 di circostanza a una prova di
+   contrattazione o di Usare Oggetti Magici.
+4. **Il filo.** Chi tiene l'altro capo, il creditore, sa sempre in che
+   direzione e a che distanza si trova il debitore, se è sullo stesso piano.
+5. **La voce.** Il creditore può parlare al debitore, telepaticamente, un
+   minuto al giorno. Una volta alla settimana può tentare una
+   ***suggestione*** (Volontà **CD 16**). È il «controllo» che l'Anello può
+   spezzare con *Dawn's Defiance*.
+6. **La riscossione.** Una carica sola, e **appartiene al creditore**, non a chi
+   porta il Seme. Una volta il creditore chiede il pagamento: un favore, una
+   consegna, un silenzio. Niente obbliga il debitore a pagare. Chi rifiuta
+   però diventa **insolvente**, e da quel momento il creditore è libero di
+   **vendere il filo** a chi vuole.
+7. **Il recesso prima della firma.** Estirparlo pulito o disfarlo: Sapienza
+   Magica **CD 20**. *Dissolvi magie* lo spegne per 1d4 round.
+8. **Il recesso dopo la firma.** Il contratto si chiude **pagando la
+   riscossione**. In alternativa *spezzare incantamento* o *rimuovi
+   maledizione* con prova di livello dell'incantatore **CD 20**, oppure
+   *desiderio*.
+
+**Cosa *identificare* NON dice.** Il nome del creditore, le sue intenzioni, il
+legame con il Collezionista. Mostra soltanto **la firma della bottega**, incisa
+dentro la pietra e visibile solo alla luce dell'incantesimo: una bilancia con
+un filo d'argento avvolto al giogo. La rivedranno a Rethmar, sull'insegna di
+Varis, e allora capiranno.
+
+**A ≈372 DR il creditore non c'è ancora.** Varis nascerà fra quasi mille anni.
+Il contratto è intero, il filo non porta da nessuna parte e la voce tace. Se
+qualcuno firma lì, l'anticipo arriva subito e la vena si chiude, ma filo, voce
+e riscossione **si accendono solo al ritorno nel 1372**. Quel giorno Varis
+scopre un debitore che ha firmato mille anni prima di lui, e per un mercante
+non c'è niente di più interessante.
+
+#### La scena al tavolo — l'ora della pergamena
+
+*Si gioca di persona, con il giocatore di Artemis, e gli altri presenti.*
+
+1. **Lo zaino di Tordek.** Il Seme è lì dal 31 luglio. Artemis deve chiederlo,
+   e quello che dice a Tordek, o che non gli dice, è canone (eco E-07b). Se
+   Tordek chiede «cos'è?», la risposta la sceglie il giocatore.
+2. **La pergamena.** Usare Oggetti Magici **CD 21**. Il warlock può prendere 10
+   (*Deceive Item*, `[Private source — Complete Arcane]`).
+3. **L'ora.** Un'ora con il guanto sulla gemma. Conta **1 tacca** sul foglio
+   della notte: con le 3 già segnate, una scelta lenta in più porta verso le
+   7 tacche (si arriva alle mura correndo). In alternativa la si rimanda a
+   dopo la missione nel campo. È la scelta del tavolo, e va detta prima.
+4. **Il posto.** Brynja non la vuole sull'incudine della cappella («non qui»,
+   una volta, e la seconda più piano). Kettra la lascia fare nella bottega,
+   dietro la porta foderata di piombo.
+5. **Il DM legge le clausole** 1-8 a voce, nell'ordine, poi la firma della
+   bottega. Niente sul creditore.
+6. **Dopo**, il gruppo decide: estirparlo (CD 20), tenerlo com'è, darlo a
+   qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
+   sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
+
+> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena si accartoccia
+> in cenere tiepida. Sotto il guanto la gemma non è cambiata: lo stesso peso,
+> lo stesso calore di una mano appena tolta da una tasca. Ma adesso dentro la
+> pietra c'è una scrittura, fitta e ordinata, come in un libro mastro. In
+> fondo alla pagina c'è un segno: una bilancia con un filo d'argento avvolto al
+> giogo. Per tutta l'ora hai aspettato una voce. Non è venuta. Dall'altra
+> parte del filo non c'è ancora nessuno.*
+<!-- /include -->
+
+
+\page
+
+# III · La cassetta del DM: cast, pronuncia, read-aloud, suoni
 
 {{note
 ##### ⚠ SOLO DM
@@ -352,10 +587,10 @@ prima.
 |---|---|---|---|
 | **Terros l'Antico** — guardiano del Nodo di Terra, GS 15 | che nessuno tocchi lo Smeraldo. Non odia: **custodisce** | parla **lentissimo**, come chi non ha mai avuto fretta in diecimila anni. Non alza mai la voce, nemmeno quando colpisce | «Il Piano della Terra & Terros l'Antico» §8 |
 | **La Sentinella di Mithral** — l'anticamera | verificare chi entra. Non uccide chi supera la prova | **non parla**: risponde battendo. Un colpo = no, due = passa. | «Il Piano della Terra & Terros l'Antico» §7b |
-| **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | cap. III Scena 11 |
-| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | cap. III Scena 8 |
-| **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | cap. III Scena 7 |
-| **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | cap. III Scena 9 |
+| **Skullcrusher il Nero** — il duello a −1000 | vincere davanti all'orda, perché il potere è ciò che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta | cap. IV Scena 11 |
+| **Zog'tar** — il generale dell'orda | prendere Hammerfist. Sa uccidere diecimila uomini | parla ai suoi **contando**: «due file», «tre ore», «cento» | cap. IV Scena 8 |
+| **Balvar Fuocospento** — il runaio esiliato, consigliere | incidere di nuovo, per chi glielo lascia fare | **non smette di lavorare mentre ti parla**. La punta sull'ardesia continua sotto le sue frasi | cap. IV Scena 7 |
+| **Vatore** (Sal a −1000) | la stessa cosa che vuole Sal oggi, mille anni prima | il tono del **collega**, non del nemico. Riconosce una firma, non un debito | cap. IV Scena 9 |
 
 ### Chi sta dalla vostra
 
@@ -363,9 +598,9 @@ prima.
 |---|---|---|---|
 | **Durik** — il cane di pietra di Hella, nato dalla polvere di Terros al rito dello Smeraldo | stare fra Hella e il pericolo («Protegge Hella», la risposta data a Moradin nel viaggio) | **non parla e non abbaia**: suoni di pietra, un click, uno strofinio, una faglia lontana. Il click vuol dire che qualcosa si muove sotto i piedi | «Il Piano della Terra & Terros l'Antico» §9 fase 3 · «La Resurrezione di Hella» §7 |
 | **Therysol** — veglia il corpo di Hella | che qualcuno resti col morto. Non scende: veglia | frasi **corte e complete**. Non chiede mai niente | «Il Ritorno e gli Affreschi», «La Resurrezione di Hella» |
-| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» | cap. III Scena 4 |
-| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria | cap. III Scena 2, Appendice A |
-| **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | cap. III Scena 4 |
+| **Re Thorek I** — Hammerfist ≈372 DR | reggere le mura fino all'alba | parla **al plurale** anche quando parla di sé: «la fortezza pensa» | cap. IV Scena 4 |
+| **Durin** — la pattuglia, di notte | portare a casa i suoi | ride **prima** di dire una cosa seria | cap. IV Scena 2, Appendice A |
+| **Thorgrim Barbadiferro** — l'antenato | che il martello torni in una mano che sa perché | nomina **il sangue**, mai la persona: «il sangue riconosce il sangue» | cap. IV Scena 4 |
 | **Il Custode** (ruolo, non persona) | leggere i pannelli e ricordare un fatto vero | — (è una funzione: la assume un PG) | «Il Ritorno e gli Affreschi» §3-4 |
 
 ⚠️ **Fauci** e **Skullcrusher** arrivano da prima di quest'arco e tornano dopo:
@@ -480,9 +715,9 @@ invecchia con le piattaforme (ADR-0018 «regola dei suoni»).
 | **Il Rituale dello Smeraldo** («Il Piano della Terra & Terros l'Antico» §9) | qui, e **solo qui**, un tono che cresce per tre round e si chiude di colpo sull'incastonatura |
 | **La Sala e gli Affreschi** («Il Ritorno e gli Affreschi») | eco lunga di stanza vuota. Le voci dei PG tornano indietro: falle tornare anche quando parlano piano |
 | **Il Cuore di Moradin** («La Resurrezione di Hella» §3-4) | **un battito.** Uno solo, lento, che si sente col corpo più che con l'orecchio. Smette quando Hella apre gli occhi |
-| **Hammerfist ≈372 DR, di notte** (cap. III zona 2) | diecimila tende: cuoio, ferro, e voci in una lingua che non si capisce. **Mai grida**: è un accampamento che dorme |
-| **Le mura all'alba** (cap. III scena 4) | tamburi, e sotto i tamburi **il drago che non si vede ancora** |
-| **Il duello con Skullcrusher** (cap. III §4) | il pubblico. Non i colpi: **la folla che reagisce ai colpi** |
+| **Hammerfist ≈372 DR, di notte** (cap. IV zona 2) | diecimila tende: cuoio, ferro, e voci in una lingua che non si capisce. **Mai grida**: è un accampamento che dorme |
+| **Le mura all'alba** (cap. IV scena 4) | tamburi, e sotto i tamburi **il drago che non si vede ancora** |
+| **Il duello con Skullcrusher** (cap. IV §4) | il pubblico. Non i colpi: **la folla che reagisce ai colpi** |
 | **Il ritorno e la manifestazione** («Il Ritorno a Hammerfist» §4) | silenzio pieno, poi **una voce sola** che riconosce chi è arrivato |
 
 ---
@@ -496,7 +731,7 @@ Uno per master: il picco che il DM sa in anticipo, e che non manda di fretta.
 | «Il Piano della Terra & Terros l'Antico» | **Il Distacco** — l'Altare si centra sul guardiano (§8b) | è il round in cui il tavolo capisce che la stanza combatte con loro, non contro |
 | «Il Ritorno e gli Affreschi» | **La Visione Condivisa** dei Quattro Eroi (§5) | l'unico momento dell'arco in cui i quattro vedono **la stessa cosa** |
 | «La Resurrezione di Hella» | **Hella apre gli occhi** (§7) | tre sessioni di lutto si chiudono in una riga. Non aggiungere niente dopo |
-| cap. III | **Thorgrim consegna il martello** (scena 2) | mille anni di eredità in un gesto solo |
+| cap. IV | **Thorgrim consegna il martello** (scena 2) | mille anni di eredità in un gesto solo |
 | «Il Ritorno a Hammerfist» | **La manifestazione** (§4) | la disfatta che si ribalta davanti a chi l'aveva già data per persa |
 
 ⚠️ **La regola**: un beat che non sa qual è il suo picco lo brucia correndo. Se la
@@ -525,7 +760,7 @@ serata è in ritardo, **si taglia altro** — non questo.
 
 \page
 
-# III · Il Viaggio a Mille Anni fa
+# IV · Il Viaggio a Mille Anni fa
 
 {{note
 ##### ⚠ SOLO DM
@@ -1224,12 +1459,12 @@ tacca è mezz'ora scarsa di gioco reale.
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** | **1** · **0** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
-| Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[INFERRED — needs DM confirmation]` | **1** |
-| Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia `[INFERRED — needs DM confirmation]` | **+1** |
-| … e una banda chiamata da uno sciamano (Scena 6) `[INFERRED — needs DM confirmation]` | **+1** |
+| Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) | **1** |
+| Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia | **+1** |
+| … e una banda chiamata da uno sciamano (Scena 6) | **+1** |
 
 Se il gruppo si divide (metà vola, metà cammina), vale il conto del gruppo più
-lento `[INFERRED — needs DM confirmation]`.
+lento.
 
 **Quando le tacche finiscono, sorge il sole.** Non è una punizione: è la Scena 10
 che comincia, con i PG dove sono in quel momento.
@@ -1240,7 +1475,7 @@ che comincia, con i PG dove sono in quel momento.
 | 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
 | 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio. Con 3 tacche già spese e il campo a piedi (3), una scelta lenta porta al giallo (7), e una scelta lenta più un fallimento portano qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
 
-**Se l'alba arriva prima della tenda** `[INFERRED — needs DM confirmation]`. Zog'tar è vivo all'alba (riga
+**Se l'alba arriva prima della tenda**. Zog'tar è vivo all'alba (riga
 della tabella «Dalla notte», Scena 10), e siccome la Scena 10 non si gioca,
 durante il duello sta sotto le mura a guardare, come nella sua tattica sulla
 breccia. Balvar resta nella tenda: la Catena si può solo spezzare. Vatore, mai
@@ -1655,7 +1890,9 @@ mura all'alba manca.
 > maledizioni), l'unico tipo che nessuna prova potrebbe scoprire.
 
 Il **Seme-Mercato** di Varis non è fra queste: lo identifica Artemis, con la
-pergamena del re, e la scena si gioca al tavolo. La sua scheda è nel
+pergamena del re, e la scena si gioca al tavolo. Le pozioni le riconoscono sia
+Brynja sia Kettra; la pergamena di *identificare* nessuna delle due la sa
+usare, e la legge Artemis con Usare Oggetti Magici. La sua scheda è nel
 Piano della Terra, §6-bis, «Il contratto del Seme».
 
 **Quanto hanno potuto vendere.** I nani sono ricchi di gemme e avari, ma
@@ -1904,7 +2141,7 @@ blocchi** da 200 m.
   il corridore della Via B, qui sotto. Se arriva, Zog'tar è pre-allertato.
   Dopo lo scontro si riparte dal blocco in cui si era, e lo scontro costa una
   tacca in più.
-- **Come combatte la pattuglia** `[INFERRED — needs DM confirmation]`. Sono
+- **Come combatte la pattuglia**. Sono
   soldati, non predoni: marciano in due file da quattro e combattono in coppia,
   due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
   (+2, SRD). **Non gridano**: in un campo che dorme un grido sveglia il
@@ -1938,7 +2175,7 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   si ferma a cercare. La CD del blocco sale di **+2**; se il blocco fallisce,
   il fallimento conta doppio verso la pattuglia. Chi vola sopra i 20 m resta
   fuori dal fiuto.
-  **Se la squadra dei lupi li trova** `[INFERRED — needs DM confirmation]`
+  **Se la squadra dei lupi li trova**
   (il blocco fallito col fiuto addosso, o un PG che attacca per primo): dieci
   worg con dieci goblin in sella, EL 9, statistiche in A.6. Il worg **sbilancia**
   con il morso (SRD): due lupi su un bersaglio, uno lo butta a terra e l'altro
@@ -1966,7 +2203,7 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   sveglio lancia *vedere invisibilità* (2° livello, lista dell'adepto) e va
   verso il rumore. Al ritorno a piedi, allora, nei blocchi in cui esce il
   **5** (il falò) l'invisibilità non protegge: c'è uno sciamano che la vede.
-  **Se uno sciamano li vede** `[INFERRED — needs DM confirmation]`: non
+  **Se uno sciamano li vede**: non
   combatte da solo. Grida il nome della sua banda, e dal blocco dopo la CD
   sale di +2, come per le vedette, e si somma al +4 del corno. Se lo
   colpiscono prima che gridi (vincendo l'iniziativa, o con un'azione
@@ -2352,7 +2589,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Non se ne accorgono** | il duello va come scritto |
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa**: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
-| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello `[INFERRED — needs DM confirmation]` |
+| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello |
 | **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
@@ -2479,7 +2716,7 @@ motivo per cui la Scena 7 viene prima.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
   OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Delle quattro
   guardie, due restano al seggio e due vanno sul PG più esposto (qui sotto).
-- **Come combattono le quattro guardie** `[INFERRED — needs DM confirmation]`.
+- **Come combattono le quattro guardie**.
   Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
   lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
@@ -2536,7 +2773,7 @@ Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano.
   **−1 morale**, che annulla il successo in meno delle mura della Scena 10, se
   c'era. È un'azione standard. Le guardie lo seguono fuori senza combattere e
   Grask non suona; umiliato non vuol dire «vivo all'alba»: non sale sulla
-  breccia `[INFERRED — needs DM confirmation]`.
+  breccia.
 - ► **Esito nuovo**: *umiliato, non ucciso*. 🔴 **Ed è un problema, non un
   premio**: Zog'tar **vive**, e in ARC-08 i discendenti della sua orda, nella Mano Rossa, hanno un generale in più
   nella sua storia. Registra nell'Echo Ledger (§7).
@@ -2680,7 +2917,7 @@ Cronolito sposta nel tempo, non nello spazio: *àncora dimensionale* non lo
 ferma, e nemmeno una lotta. Chi lo teneva si ritrova con il suo mantello in
 mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
 un colpo: nessun tiro salvezza, e alla fine del suo turno il Cronolito lo porta
-via `[INFERRED — needs DM confirmation]`.
+via.
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
@@ -2785,7 +3022,7 @@ balestre dell'orda, e chi resta a terra lo affronta sul camminamento; **se sono 
 primo colpo lo prende colto alla sprovvista, poi l'Occhio di Ossidiana lo
 avverte (Appendice A.2).
 
-**Come combatte sulla breccia** `[INFERRED — needs DM confirmation]`. Il
+**Come combatte sulla breccia**. Il
 camminamento è largo quanto un tavolo da pranzo: ci si sta in uno, al massimo
 in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano. Lassù
 **si stringe** (SRD): −4 al colpire e −4 alla CA finché resta sul camminamento,
@@ -3772,7 +4009,7 @@ Hammerfist dall'alto in basso.
 
 \page
 
-# IV · La Forgia ricorda le ferite
+# V · La Forgia ricorda le ferite
 
 {{note
 ##### ⚠ SOLO DM
@@ -3850,7 +4087,7 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
 
 \page
 
-# V · Durik, il compagno di Hella
+# VI · Durik, il compagno di Hella
 
 {{note
 ##### ⚠ SOLO DM

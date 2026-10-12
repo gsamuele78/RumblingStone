@@ -50,10 +50,11 @@ del primo tiro:
 | Capitolo | Per chi | Quando |
 |---|---|---|
 | I · Regia della serata | ⚠ DM | da leggere prima, da tenere aperto durante |
-| II · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
-| III · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
-| IV · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
-| V · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
+| II · Il Seme-Mercato | ⚠ DM | all'inizio: è la prima cosa che chiederanno, insieme alle boccette |
+| III · La cassetta del DM | ⚠ DM | pronuncia, suoni, indice dei read-aloud dell'arco |
+| IV · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
+| V · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
+| VI · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
 | **Il volume dei giocatori** | ✉ | gli echi della serata e le dieci boccette |
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |

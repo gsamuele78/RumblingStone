@@ -842,6 +842,7 @@ mercato al momento peggiore, o "vendere" la posizione di Artemis a chi paga —
 p.es. Il Collezionista). L'esca è tarata **esattamente** sull'avidità di
 Artemis: un tesoro invisibile agli altri, un affare che pare gratis.
 
+<!-- blocco: contratto-del-seme -->
 ### La reazione dell'Anello — coerente col suo carattere (Caotico Buono)
 L'Anello **sussurra segreti del divino e dell'arcano** e **rispetta la scelta
 di Artemis di forgiare il proprio destino** (non lo comanda mai): non gli
@@ -881,71 +882,71 @@ finora la propria avidità nell'arco:
 > pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
 > avanti. Registra l'esito nell'**Echo Ledger** (§11).
 
-> ### ✅ CANONE GIOCATO (DM 2026-07-31) — la terza strada: PRESO, MAI TOCCATO
->
-> **Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
-> pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
-> punta di trapano — *«densa in un modo che le gemme non sono»*. Artemis **non
-> ha rifiutato** e **non ha accettato**: l'ha recuperata **senza toccarla a
-> mani nude** e l'ha fatta **mettere nello zaino di TORDEK**. Il Seme viaggia
-> col party, sigillato in una sacca che non è la sua.
->
-> **Cosa ha rilevato Artemis** (Vista Potenziata + Sapienza Forgiata
-> dell'Anello): oggetto magico, **Trasmutazione + Ammaliamento**. Le due scuole
-> raccontano da sole cos'è, per chi sa leggerle: la **Trasmutazione** è
-> l'innesto che cresce e si radica; l'**Ammaliamento** è **la parte che parla**.
-> Un mercante non pianta una trappola: pianta un **venditore**.
->
-> **La visione del bazar (giocata).** Prima ancora del contatto, ad Artemis è
-> arrivato **negli occhi della mente** il mercato di Varis: banchi, teli,
-> registri, la ricchezza ordinata di un posto dove tutto ha un prezzo scritto.
-> ⚠️ **La visione NON è il contratto**: è la **vetrina**. L'Ammaliamento serve
-> a far vedere la merce; il **Marchio si chiude solo col tocco**. Artemis ha
-> guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
-> quello non si dimentica.
->
-> **Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
-> tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
-> incastonarla nell'Anello). Quindi, oggi:
->
-> | | Stato |
-> |---|---|
-> | **Marchio di Varis** | ❌ **non attivo**. Varis **non** localizza Artemis, non ha crediti da riscuotere |
-> | **Frammento di Mercato** (lo sconto/+4) | ❌ non ottenuto: il premio si paga col tocco |
-> | **+1 morale del rifiuto** | ❌ non ottenuto: non ha rifiutato |
-> | **Il Seme** | ✅ **posseduto**, integro, tiepido, nello **zaino di Tordek** |
->
-> **Come reagisce Varis (e perché è meglio così).** Il mercante **non sa** che
-> gli è successo. La sua esca non è stata né morsa né distrutta: è stata
-> **presa e messa da parte**, che per un mercante è la risposta più
-> inquietante di tutte — significa che il cliente ha capito il prezzo e **ha
-> deciso di decidere dopo**. Il Seme resta un'offerta aperta a tempo
-> indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
-> **contro-mossa**: non un pollo, non uno sfuggito, ma **qualcuno che tratta**.
-> Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
-> debitore, riconosce quella di un collega.
->
-> **Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
-> ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
-> **appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
-> planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
-> renderlo pesante: basta ricordarsene.
->
-> - **Se Tordek lo tocca** (curiosità, inventario, un compagno che rovista):
->   la voce di Varis arriva **a lui**, ricalibrata su un monaco nanico — non
->   offre tesori, offre **certezze** («posso dirti dove sarà tuo fratello
->   quando servirà»). Il Marchio si chiuderebbe su **Tordek**, non su Artemis.
-> - **Se lo tocca Artemis più avanti**: vale la riga «Prende la gemma» della
->   tabella qui sopra, senza sconti — l'offerta non scade.
-> - **Se lo distruggono** (Sapienza Magica CD 20): vale la riga «Rifiuta», ma
->   **tardi** — Varis ha già capito che è stato riconosciuto.
->
-> **Semi da far germogliare (nessuna meccanica, solo memoria).** Lo zaino di
-> Tordek è **appena più caldo** degli altri quando lo posa. I Bracieri, che
-> hanno una coscienza e un carattere da vecchio fabbro, **non commentano** —
-> e quel silenzio, per chi lo nota, dice più di un avvertimento.
->
-> → **Echo Ledger (§11): «Il Seme dorme nello zaino sbagliato».**
+#### ✅ CANONE GIOCATO (DM 2026-07-31) — la terza strada: PRESO, MAI TOCCATO
+
+**Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
+pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
+punta di trapano — *«densa in un modo che le gemme non sono»*. Artemis **non
+ha rifiutato** e **non ha accettato**: l'ha recuperata **senza toccarla a
+mani nude** e l'ha fatta **mettere nello zaino di TORDEK**. Il Seme viaggia
+col party, sigillato in una sacca che non è la sua.
+
+**Cosa ha rilevato Artemis** (Vista Potenziata + Sapienza Forgiata
+dell'Anello): oggetto magico, **Trasmutazione + Ammaliamento**. Le due scuole
+raccontano da sole cos'è, per chi sa leggerle: la **Trasmutazione** è
+l'innesto che cresce e si radica; l'**Ammaliamento** è **la parte che parla**.
+Un mercante non pianta una trappola: pianta un **venditore**.
+
+**La visione del bazar (giocata).** Prima ancora del contatto, ad Artemis è
+arrivato **negli occhi della mente** il mercato di Varis: banchi, teli,
+registri, la ricchezza ordinata di un posto dove tutto ha un prezzo scritto.
+⚠️ **La visione NON è il contratto**: è la **vetrina**. L'Ammaliamento serve
+a far vedere la merce; il **Marchio si chiude solo col tocco**. Artemis ha
+guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
+quello non si dimentica.
+
+**Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
+tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
+incastonarla nell'Anello). Quindi, oggi:
+
+| | Stato |
+|---|---|
+| **Marchio di Varis** | ❌ **non attivo**. Varis **non** localizza Artemis, non ha crediti da riscuotere |
+| **Frammento di Mercato** (lo sconto/+4) | ❌ non ottenuto: il premio si paga col tocco |
+| **+1 morale del rifiuto** | ❌ non ottenuto: non ha rifiutato |
+| **Il Seme** | ✅ **posseduto**, integro, tiepido, nello **zaino di Tordek** |
+
+**Come reagisce Varis (e perché è meglio così).** Il mercante **non sa** che
+gli è successo. La sua esca non è stata né morsa né distrutta: è stata
+**presa e messa da parte**, che per un mercante è la risposta più
+inquietante di tutte — significa che il cliente ha capito il prezzo e **ha
+deciso di decidere dopo**. Il Seme resta un'offerta aperta a tempo
+indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
+**contro-mossa**: non un pollo, non uno sfuggito, ma **qualcuno che tratta**.
+Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
+debitore, riconosce quella di un collega.
+
+**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
+ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
+**appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
+planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
+renderlo pesante: basta ricordarsene.
+
+- **Se Tordek lo tocca** (curiosità, inventario, un compagno che rovista):
+  la voce di Varis arriva **a lui**, ricalibrata su un monaco nanico — non
+  offre tesori, offre **certezze** («posso dirti dove sarà tuo fratello
+  quando servirà»). Il Marchio si chiuderebbe su **Tordek**, non su Artemis.
+- **Se lo tocca Artemis più avanti**: vale la riga «Prende la gemma» della
+  tabella qui sopra, senza sconti — l'offerta non scade.
+- **Se lo distruggono** (Sapienza Magica CD 20): vale la riga «Rifiuta», ma
+  **tardi** — Varis ha già capito che è stato riconosciuto.
+
+**Semi da far germogliare (nessuna meccanica, solo memoria).** Lo zaino di
+Tordek è **appena più caldo** degli altri quando lo posa. I Bracieri, che
+hanno una coscienza e un carattere da vecchio fabbro, **non commentano** —
+e quel silenzio, per chi lo nota, dice più di un avvertimento.
+
+→ **Echo Ledger (§11): «Il Seme dorme nello zaino sbagliato».**
 
 > **Nota su Sal/Vatore (per il DM).** Questo marchio si intreccia col #4
 > (Viaggio a 1.000 anni fa), dove **Sal è presente come "Vatore"**: se Artemis
@@ -1039,6 +1040,7 @@ non c'è niente di più interessante.
 > fondo alla pagina c'è un segno: una bilancia con un filo d'argento avvolto al
 > giogo. Per tutta l'ora hai aspettato una voce. Non è venuta. Dall'altra
 > parte del filo non c'è ancora nessuno.*
+<!-- /blocco -->
 
 ---
 
