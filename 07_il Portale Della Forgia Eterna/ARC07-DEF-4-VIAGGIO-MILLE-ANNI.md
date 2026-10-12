@@ -890,7 +890,9 @@ l'odore di zolfo copre quello del carbone.
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
-  **una carica sola** per richiamarlo.
+  **una carica sola** per richiamarlo. Chiamarli insieme all'alba non spegne
+  l'Evocazione per un mese: è l'unica eccezione che la scheda della Collana
+  concede `[CANONE — DM 2026-10-12, D65]`.
   Se al rito Hella ha trovato la **ghianda
   annerita** e non l'ha ancora piantata, «il primo suolo sacro che tocca» è
   questo: niente Treant in più, ma una quercia che fra mille anni sarà
@@ -923,11 +925,12 @@ all'alba. Le scelte, con quello che cambiano:
 
 Un Treant chiamato di notte, alla tenda, è un seme speso prima dell'alba: per
 la Collana torna all'alba, ma se di notte se ne chiamano **due insieme**
-l'Evocazione si spegne per un mese, e all'alba non c'è niente da chiamare
-`[INFERRED — needs DM confirmation: i tempi di ritorno di un seme speso di notte]`.
-I tempi d'arrivo con un Treant fuori dalla tenda e i 2d4+2 / 3d4+2 sono una
-proposta di questo master, presa dai numeri dei rinforzi della Scena 8
-`[INFERRED — needs DM confirmation]`.
+l'Evocazione si spegne per un mese, e all'alba non c'è niente da chiamare.
+La regola del mese ha una sola eccezione, scritta nella scheda della Collana:
+i due Treant chiamati **insieme all'alba** di questa notte. Le tre cariche
+sono una sola riserva per i Treant e per Durik: quello che si spende alla
+tenda manca all'alba, fino a quando i semi ricrescono
+`[CANONE — DM 2026-10-12, D65]`.
 
 > **Read-aloud (Andor lead) — le gallerie.** *Sotto la fucina il caldo finisce
 > di colpo. Le gallerie sono strette, puntellate con travi nuove che sanno
@@ -1123,8 +1126,9 @@ i difensori del 372 che muoiono sulle mura per quella cura mancata, e il DM li
 annota fra i caduti del 372 `[CANONE — DM 2026-10-07, Q11; 2026-10-12, D62]`.
 È il **dado dei caduti**, e riguarda solo la fortezza di mille anni prima: nel
 1372 non toglie niente al *Registro delle Perdite* di ARC-08. Torna soltanto
-come eco (§7), nei nomi che i PG troveranno fra i caduti dell'assedio antico
-`[INFERRED — needs DM confirmation: dove si leggono quei nomi nel 1372]`.
+come eco (§7), nei nomi che i PG troveranno fra i caduti dell'assedio antico:
+sono scritti nel pannello in più della Sala degli affreschi, lo stesso di
+Balvar (Scena 7) `[CANONE — DM 2026-10-12, D64]`.
 Gunnvor non lo dice; il chierico che lancia sì, se glielo chiedono.
 
 ##### Cosa compra, e a quanto
@@ -2045,7 +2049,7 @@ pieno, l'ultima: in quel turno non attacca e non lancia `[INFERRED — needs DM 
 
 Il senso si decide in ARC-09. Il nome è quello del nipote, la freccia no:
 cosa c'è a nord non lo sa ancora nessuno, nemmeno il master
-`[INFERRED — needs DM confirmation: il nome e la direzione sono una proposta]`.
+`[CANONE — DM 2026-10-12, D64]`.
 
 #### L'eco a 1372 (il motivo per cui vale la pena)
 
@@ -2268,8 +2272,8 @@ round **1d4+2** del duello, e da lì vale la riga «Balvar la scioglie» della
 Scena 7.
 
 Se invece i PG se lo **portano in volo**, cambia questo
-`[INFERRED — needs DM confirmation]`. La postierla e la notte in catene valgono
-anche se rientra **a piedi** con loro:
+`[CANONE — DM 2026-10-12, D66]`. La postierla e la notte in catene valgono
+anche se rientra **a piedi** con loro `[INFERRED — needs DM confirmation]`:
 
 - **Il peso.** Un nano in armatura completa di mithral fa circa 85 kg. Lo
   regge chi ha Forza 18 o più come carico medio, e col carico medio *volare*
@@ -3039,7 +3043,7 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
 | **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo, i due pezzi del capo fabbro | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[CANONE — DM 2026-10-07, Q14]` | ARC-08, a Hammerfist | registro delle conseguenze |
-| **Il dado dei caduti** (Scena 5): i difensori del 372 morti per le cure comprate dai PG | nessuna perdita nel 1372: solo i nomi, fra i caduti dell'assedio antico `[INFERRED — needs DM confirmation: dove]` | ARC-08 | registro di fine serata |
+| **Il dado dei caduti** (Scena 5): i difensori del 372 morti per le cure comprate dai PG | nessuna perdita nel 1372: solo i nomi, nel pannello in più della Sala degli affreschi `[CANONE — DM 2026-10-12, D64]` | ARC-08 | registro di fine serata |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
@@ -3088,7 +3092,7 @@ premi di storia, come sempre.
 | Scena 12, Momento 5 (dono del re, di persona) `[CANONE — DM 2026-10-11]` | **Torque di Thorek I**, sempre, anche senza fiducia piena: è il dono del re a chi porta la Corona — monile nanico antico (+1 sacro ai TS vs paura; e nel 1372 è una **reliquia storica**: i nani si scoprono il capo davanti a chi lo porta) | ~2.000 mo + valore storico |
 | Scena 9 (se derubano Vatore) | **Sigillo di Ossidiana** — artefatto minore di Shar (Manto di Notte + Furto della Notte, divora anime; contrasta l'Anello di Artemis — Appendice B) | speciale (gancio ARC-09) |
 | Scena 10 (bottino dell'orda antica, se sabotano gli arieti) | armi orchesche primitive (poco valore). Il **corno da guerra di ferro nero** che chiama il drago è incatenato al polso di Grask, alla tenda: si prende solo lì (Scena 6, variante dall'alto; 300 mo, e nel 1372 una reliquia) | ~300 mo |
-| Scena 8 (la tenda, con Zog'tar e i suoi a terra) `[CANONE — DM 2026-10-12, D59]` | **Zog'tar**: armatura completa di mithral +2 Grande (16.000: 1.500 × 2 per la taglia, 9.000 di mithral, 4.000 di +2; si vende, non si indossa) · ascia a due mani +1 Grande (2.340). **Balvar**, se è morto: armatura completa di mithral +2 Media, che a un nano va bene (14.500) · anello di protezione +2 (8.000) · martello da guerra runico +1 (2.312) · la polvere di diamante dei glifi di una sera (400) `[INFERRED — needs DM confirmation: la quantità di polvere]`. **Le quattro guardie**: armatura completa, spadone e giavellotti (≈ 1.550 l'una). L'Occhio di Ossidiana resta nell'orbita: è maledetto e non si vende | ≈ 49.750 mo di listino, ≈ 24.500 senza Balvar; alla vendita la metà (SRD). Quanto se ne porta via dipende dal campo: qui sotto |
+| Scena 8 (la tenda, con Zog'tar e i suoi a terra) `[CANONE — DM 2026-10-12, D59]` | **Zog'tar**: armatura completa di mithral +2 Grande (16.000: 1.500 × 2 per la taglia, 9.000 di mithral, 4.000 di +2; si vende, non si indossa) · ascia a due mani +1 Grande (2.340). **Balvar**, se è morto: armatura completa di mithral +2 Media, che a un nano va bene (14.500) · anello di protezione +2 (8.000) · martello da guerra runico +1 (2.312) · la polvere di diamante dei glifi di una sera (400) `[CANONE — DM 2026-10-12, D64]`. **Le quattro guardie**: armatura completa, spadone e giavellotti (≈ 1.550 l'una). L'Occhio di Ossidiana resta nell'orbita: è maledetto e non si vende | ≈ 49.750 mo di listino, ≈ 24.500 senza Balvar; alla vendita la metà (SRD). Quanto se ne porta via dipende dal campo: qui sotto |
 | Scena 11 (resti di Skullcrusher, se UCCISO) | **scaglia del Primo Nero** — trofeo: materiale per **1 oggetto ad acido** (arma/armatura +1d6 acido, o focus per incantesimi acidi; a discrezione del fabbro), e prova che la profezia è compiuta | ~1.500 mo |
 
 **Il bottino della tenda e il tempo** `[CANONE — DM 2026-10-12, D59]`. Il
@@ -3104,9 +3108,19 @@ campo nemico non dà tempo infinito, e il conto lo fa l'allarme:
   tempo di spogliare la tenda, e costa **una tacca** (§4). Il peso viaggia con
   chi lo porta: l'armatura di Zog'tar sono 25 kg di mithral, quella di Balvar
   12,5, ogni completa delle guardie 25. Chi esce carico di ferro torna con le
-  regole del carico dell'SRD, e un'armatura che sbatte non aiuta
-  Muoversi Silenziosamente `[INFERRED — needs DM confirmation: penalità al
-  ritorno lasciata al DM]`.
+  regole del carico dell'SRD **e** con la penalità del ferro che sbatte
+  `[CANONE — DM 2026-10-12, D64]`: **−2** a Muoversi Silenziosamente e a
+  Nascondersi per ogni armatura portata e non indossata, sul blocco del
+  ritorno `[INFERRED — needs DM confirmation]`.
+- **Il buco portatile**, se il gruppo ne ha uno. Non ha limite di peso, ma ha
+  un fondo: 1,8 m di diametro e 3 m di profondità (SRD), circa **7,5 m³**.
+  Quello che ci sta dentro non sbatte e non pesa. A occhio, impacchettati: una
+  completa Media circa 0,15 m³, una Grande circa 0,5, uno scudo o un'arma a
+  due mani circa 0,05 `[INFERRED — needs DM confirmation]`. La tenda intera fa circa 1,5 m³. Se il
+  buco è già pieno di quello che il gruppo ha raccolto nelle avventure di
+  prima, il DM fa il conto prima di dire sì: quello che non entra si porta a
+  mano, con la penalità qui sopra. E un telo nero steso sul pavimento della
+  tenda di un generale si vede.
 
 > ⚠️ **Cosa torna nel 1372** `[CANONE — DM 2026-09-25]`: ciò che i PG **portano
 > addosso** quando il Rubino si accende, doni del re compresi, più il Sigillo
@@ -3314,8 +3328,8 @@ in più, lo sceglie il DM `[INFERRED — needs DM confirmation: proposta Allerta
 che non cambia i numeri del combattimento]`. Fugge a ⅓ dei pf come in A.1:
 circa **112 pf**. Gli incantesimi conosciuti
 in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla
-lista dello stregone `[INFERRED — needs DM confirmation: proposta *dissolvi
-magie* e *lentezza*]`. PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
+lista dello stregone: *dissolvi magie* e *lentezza*
+`[CANONE — DM 2026-10-12, D64]`. PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
 cioè **≈ 3.150 a testa**.
 
 - Boost log: 2026-10-12 — drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.

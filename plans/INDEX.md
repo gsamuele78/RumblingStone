@@ -113,6 +113,7 @@
 ### PIANO-LETTORE-E-PLAYTESTER
 - 🟡 _(2026-10-12, le decisioni del DM: D35-D37 e D49-D63 applicate in DEF-1, 2, 3, 4, `ARC08-03` e nella scheda di Zog'tar; le due dotazioni del re, i Treant, Balvar in volo, il drago Vecchio e Avanzato, il dado dei caduti. F5 e F6 spostate in MASTER-DEF. Aperte D64-D68, i dettagli `[INFERRED]`. Prossimo: il giro 4 di conferma su DEF-4)_
 - 🟡 _(2026-10-12, giro 4 su DEF-4: il lettore a freddo trova 🔴 0 · 🟠 5 · 🟡 16, corretti nel master; aperte D69-D71. Prossimo: il playtester)_
+- 🟡 _(2026-10-12, D64-D68 decise dal DM e applicate in DEF-1, 2, 3, 4: la penalità per le armature portate e il buco portatile, le cariche della Collana, Balvar in volo, il rito con 0 successi, Thorik e la Magnetite. Aperte D69-D73)_
 - 🟡 _(2026-10-03, D38 decisa e applicata a DEF-5; D39 come la (b) del 2026-10-07)_
 - 🟡 _(2026-10-08, lotto mappe D28: M7-A orientata (D44, postierla sotto la torre est), M7-B col cortile della Scena 11 (fucina originale, incudine, pozzo, campane, gru, statua, porta e postierla), M7-C con le altezze della tenda; la sezione M7-S e le griglie M7-D, M7-E, M7-F nel 372 e nel 1372 (D45-D47). Gli stati del 1372 decisi con D48 (rune di Zeth: glifi contro chi non è nano; leoni vuoti). Prossimo: il giro 3 delle letture su DEF-4)_
 - 🟡 _(2026-10-07, F3-quinquies: DEF-4 a zero `[INFERRED]`; giro 2 delle quattro letture (playtester 🔴 0); 🟡 corretti; Zog'tar e Skullcrusher Avanzati PF1e senza alzare il GS. Il lotto mappe D28 è il prossimo lavoro, in una sessione nuova)_

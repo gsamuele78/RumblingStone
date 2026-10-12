@@ -119,7 +119,7 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Seme-Mercato di Varis: analisi/estirpo — Sapienza Magica | 20 | §6-bis |
 | Tempio: salto di Tordek — Saltare (Take 10 = 26 ✓) | 25 | §7a |
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
-| Sentinella: liberarsi dalla Magnetite — FOR (Thorik, +2 con l'aiuto di Artemis) · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 28 | §7b |
+| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 28 | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
 | Frequenza della Confusione — Intrattenere Canto (Anello +4) | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
@@ -1132,8 +1132,8 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 > **THORIK** — *«Il metallo chiama il metallo.»* *Armatura, scudo, ascia: di
 > colpo pesano tonnellate, non verso il basso, ma verso le pareti. Sei
 > scagliato contro la parete nord e la Magnetite ti tiene incollato come una
-> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 28 per liberare un
-> braccio 1 round; non puoi muoverti). Fuori dallo scontro, costretto a
+> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 28 per liberarti;
+> finché no, non puoi muoverti). Fuori dallo scontro, costretto a
 > guardare.
 > **ARTEMIS** — *«Ciò che sfida la terra dev'essere abbattuto.»* *La gravità
 > qui si concentra: non 2×, ma DIECI volte. Le ali d'ombra si frantumano.* **Prono
@@ -1150,8 +1150,11 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
   torna immobile al suo posto. Thorik e Artemis sono di nuovo liberi. Il duello
   si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
   ordinaria.
-- **Thorik**, durante il duello, può liberarsi con la prova di **FOR CD 28**
-  grazie all'aiuto di Artemis (**+2**).
+- **Thorik**, durante il duello, si libera **del tutto** con la prova di
+  **FOR CD 28**, una volta per round. L'aiuto di Artemis dà **+2** solo se gli
+  è adiacente, come ogni aiuto dell'SRD: prona sotto dieci volte la gravità
+  non si sposta, quindi vale se la Magnetite l'ha lasciata accanto a lui. Nessuna
+  scheda degli artefatti dà un aiuto a distanza `[CANONE — DM 2026-10-12, D68]`.
 - **Artemis**, prono, può parlare, e un suo incantesimo **senza componenti
   somatiche** passa.
 

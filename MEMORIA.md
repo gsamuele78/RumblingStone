@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 22 decisioni aperte
+## Aspetta il DM: 19 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -27,14 +27,11 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `LETTORE-PLAYTESTER` | D64 | F3-quinquies | **DEF-4, i dettagli lasciati `[INFERRED]` dalle decisioni del 12 ottobre.** (a) Sulla lastra di Balvar il nome è **Hald**, il nipote, e la freccia punta a **nord** (D52). (b) La polvere di diamante di Balvar vale **400… |
-| `LETTORE-PLAYTESTER` | D65 | F3-quinquies | **I Treant, i numeri nuovi** (D54). (a) Con un Treant fuori dalla tenda le ronde arrivano in 2d4+2 round e gli squadroni in 3d4+2; con due non entra nessuno. (b) Un seme speso di notte torna all'alba, come dice `DEF-3`… |
-| `LETTORE-PLAYTESTER` | D66 | F3-quinquies | **Balvar portato in volo** (D55). Il peso (circa 85 kg, carico medio per chi ha FOR 18), la postierla (Durin lo fa entrare se un PG garantisce, Diplomazia CD 20), la notte in catene nel cortile per ordine del re, e Hald… |
-| `LETTORE-PLAYTESTER` | D67 | F4 | **DEF-3, i dettagli di D35.** (a) La riga ❌ dello Step 5 nella regia dice ancora «si può ritentare, ma ogni tentativo la porta più lontano»: si allinea al §9 (un ritiro solo, a 0 successi, dopo aver occupato il Sud). (b… |
-| `LETTORE-PLAYTESTER` | D68 | F4 | **DEF-1 e DEF-2, i dettagli di D36 e D37.** (a) La Forza CD 28 di Thorik nell'anticamera adesso lo **libera del tutto**, non più un braccio per un round? (b) L'aiuto di Artemis (+2): basta la voce, o deve essere adiacen… |
 | `LETTORE-PLAYTESTER` | D69 | F3-quinquies | **Zog'tar catturato, il dopo** (🟠 del lettore, giro 4). Il master lo portava fino alla porta e si fermava. Scritto `[INFERRED]` in DEF-4 Scena 8: (a) il re lo fa incatenare nella cella sotto la torre nord e lo fa giusti… |
 | `LETTORE-PLAYTESTER` | D70 | F3-quinquies | **Le cinque pozioni di *neutralizza veleno*** (🟡 del lettore, giro 4). Sono nel conto della serata del 25 settembre, ma *neutralizza veleno* è di 4° e l'SRD non fa pozioni oltre il 3°, come dice lo stesso master. Propos… |
 | `LETTORE-PLAYTESTER` | D71 | F3-quinquies | **DEF-4, i dettagli `[INFERRED]` del giro 4.** (a) La dotazione dimezzata è 2 pozioni d'*invisibilità* o 2 di *volare*. (b) Le pozioni del re sono un dono e non toccano i 10.000 mo del forziere. (c) Balvar da solo all'a… |
+| `LETTORE-PLAYTESTER` | D72 | F3-quinquies | **I numeri dietro D64 (c).** (a) La penalità del ferro che sbatte: **−2** a Muoversi Silenziosamente e Nascondersi per ogni armatura portata e non indossata, sul ritorno. (b) Il buco portatile: 1,8 m per 3 m (SRD), circ… |
+| `LETTORE-PLAYTESTER` | D73 | F4 | **DEF-3: la Custode delle Radici compare anche nel rito che va male?** Non è Thorik: è la psicopompa della Scena 5 di DEF-3, quella che al tavolo del 25 settembre ha chiesto chi paga il debito, e Thorik ha detto «io». E… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -122,6 +119,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | LETTORE-E-PLAYTESTER | D64-D68 decise dal DM: in DEF-4 la penalità per le armature portate e la capien… | 🟡 applicate; aperte D69-D73 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il lettore a freddo su DEF-4 dopo le decisioni (🔴 0 · 🟠 5… | 🟡 lettore fatto; aperte D69-D71, restano playtester e DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · MASTER-DEF | Le decisioni del DM: D35-D37 in DEF-1, 2, 3; D49-D63 in DEF-4 (le due dotazioni… | 🟡 applicate; aperte D64-D68 sui dettagli `[INFERRED]`; serve il giro 4 di conferma su DEF-4 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | Risposta al rilievo del passo 7, chiesta dal DM: che cosa muove Skullcrusher, i… | 🟡 canone nuovo marcato `[INFERRED]`, aperto come D63 |
@@ -133,11 +131,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-11 | REVISIONE-ARC07 | il Torque di Thorek I passa dal consiglio alla Scena 12: il re lo dà di persona… | ✅ `DEF-4`: Momento 5 della Scena 12 con box e battuta del re, Scena 4 e §8 B allineati, ripiego se la scena salta. Rigenerati i due booklet `.hb.md` che citano… |
 | 2026-10-11 | AUTOMAZIONE-STATO-SESSIONI · CICLO-SESS… | ADR-0090: la partita del primo tavolo riparte su `campaign-group-rumblingstone`… | 🟡 ADR proposta, da accettare dal DM. Provato in una copia del repo: ramo nuovo, log della serata del 2026-09-25, `state.yaml` a mano, `validate_state` e… |
 | 2026-10-11 | REVISIONE-ARC07 · STATO-E-ORDINE | canone delle dieci pozioni identificate a ≈372 DR e contratto del Seme-Mercato… | ✅ `DEF-4`: le dieci pozioni di Kettra, con la brodaglia degli sciamani e la cura con la cera nera. `DEF-1` §6-bis: il contratto del Seme in otto clausole e la… |
-| 2026-10-10 | AMBIENTE-RIPRODUCIBILE · PRATICHE (PI-3… | A2 in parte · Python 3.13 in CI, nel registro e nelle guide | 🟡 La #228 di Dependabot (gruppo `pip-settimanale`) alza i pavimenti a `numpy>=2.5.3` e `scipy>=1.18.1`, che chiedono Python >= 3.12: su 3.11 pip non trova vers… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 22 aperte, 230 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 19 aperte, 235 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

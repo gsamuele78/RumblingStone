@@ -438,7 +438,7 @@ Il DM le legge senza inventare, e la scena non si spegne mai sul numero:
 | **2** | i due battiti si sovrappongono e per un istante **non si distingue quale sia di chi** | Tordek prende **2d6 non letali** e la cosa peggiore: per un secondo ha sentito il buio in cui lei era, e adesso lo sa |
 | **3** | le ferite si chiudono **al contrario**, dall'interno, e il colore torna dal petto alle dita | l'Anello sputa **un colore solo**. Il corpo si stabilizza a metà: ha colore ma non calore |
 | **4** | le radici entrano **senza sangue**, e il corpo le accetta come se le avesse sempre avute | un seme **non germoglia**. Resta un seme. Da qualche parte, più avanti, mancherà qualcosa |
-| **5** | tre voci diventano **una voce**, e la sala la restituisce più forte di come è entrata | il richiamo torna indietro **vuoto**, come una corda che non ha preso. Si può ritentare: ma ogni tentativo la porta più lontano |
+| **5** | tre voci diventano **una voce**, e la sala la restituisce più forte di come è entrata | il richiamo torna indietro **vuoto**, come una corda che non ha preso. Con **0 successi** si ritenta **una volta sola**, dopo che qualcuno ha occupato il Sud (§9) `[CANONE — DM 2026-10-12, D67]` |
 | **6** | → §7 | → §9, tabella dei modi di fallimento |
 
 > **Chiusura di round, ogni volta.** Il DM chiude lo step guardando i giocatori
@@ -1086,7 +1086,7 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | **3 su 3** | Hella intera, i tre doni attecchiscono | la soglia (§8-ter) parte pulita |
 | **2 su 3** | Hella intera, un dono **attecchisce a metà** | il PG che ha fallito lo scopre **a −1.000**, nel momento peggiore: il suo dono non risponde al primo tentativo |
 | **1 su 3** | Hella torna con **1 livello negativo** e non ricorda i nomi per 1d4 minuti | una scena vera al risveglio: **chi le dice il proprio nome per primo** conta, e Hella lo ricorderà per tutto l'arco |
-| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno occupa il punto vuoto del cerchio, un PG o Therysol. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3** |
+| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno occupa il punto vuoto del cerchio, un PG o Therysol. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3**. Se il Sud lo tiene Therysol, tirano i tre PG agli altri punti; se lo tiene un PG, tirano lui e gli altri due. Se il ritiro dà di nuovo 0, il rito riesce lo stesso e paga il prezzo della riga «1 su 3» `[CANONE — DM 2026-10-12, D67; il prezzo della riga «1 su 3»: INFERRED — needs DM confirmation]` |
 
 ⚠️ **Il vicolo cieco ha una porta**: se l'ora scade senza che il tavolo trovi
 niente, **Therysol** parla — e dice la cosa che ha visto in sei giorni di

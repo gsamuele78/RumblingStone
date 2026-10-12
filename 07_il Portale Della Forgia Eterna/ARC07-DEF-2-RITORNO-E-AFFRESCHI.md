@@ -596,10 +596,10 @@ Stanza «partecipa» alla resurrezione). Il bonus viene dal **tocco**, non dal
 dormire nella Stanza `[CANONE — DM 2026-10-12, D36]`. *(Pannello-Cronaca «Il Ritorno».)*
 
 **Perché tornare qui — e perché forse no.** La Stanza è ora un **Santuario
-Sicuro** (*Consacrare*), ed è il posto **emotivamente** giusto per il riposo
-lungo prima del rito: dormire dove Hella è morta, la sera prima di riportarla
+Sicuro** (*Consacrare*), ed è il posto **emotivamente** giusto per le otto ore
+di sonno prima del rito: dormire dove Hella è morta, la sera prima di riportarla
 indietro. Ma da quando la tariffa della Sala è **−4 h** contro le **−12 h** di
-qualunque altro posto (§0-bis), la scelta è diventata un vero scambio:
+qualunque altro posto (§0-bis), dormire lì ha un prezzo `[CANONE — DM 2026-10-12, D68]`:
 
 | Dove dormono | Costa | In cambio |
 |---|---|---|
