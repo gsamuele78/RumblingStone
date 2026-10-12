@@ -57,7 +57,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | identifica una pozione con Sapienza Magica | 25 |
 | SCENA 5 | Tempra | 15 |
 | SCENA 5 | ha sulle dita (Scena 9, Osservare | 15 |
-| SCENA 6 | primo blocco, poi si tira Nascondersi | 22 |
+| SCENA 6 | blocco lo tira già a Nascondersi | 22 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
 | SCENA 6 | sono due per quattro) tira Nascondersi | 22 |
@@ -103,6 +103,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 11 | aiuta, +2 a testa (aiutare, Forza | 10 |
 | SCENA 11 | 40 con armatura magica), soffio 16d4 | 29 |
 | SCENA 11 | Presenza | 26 |
+| SCENA 11 | m, pungiglione +10 con veleno Tempra | 17 |
 | SCENA 12 | Volontà | 20 |
 
 ## L'indice dei read-aloud, in ordine di gioco

@@ -96,6 +96,10 @@
 > ha dormito. La fiducia del consiglio, le pozioni in mano, cosa hanno venduto
 > e comprato stanno nel log della serata del 25 settembre, sul ramo del
 > gruppo: si leggono lì prima di cominciare.
+> **Due cose della Scena 5 servono stasera.** I Treant di Hella non hanno
+> ancora un posto: la tabella «I Treant: … dove possono andare» dice cosa
+> cambia fuori dalla tenda, dentro, sul fianco o al duello. E il **dado dei
+> caduti** per le cure comprate alla cappella: quattro tiri alla Scena 10.
 
 **Dove siete.** La Corona (Topazio + Smeraldo) ha aperto il portale del Tempo
 (affresco A6). I **quattro** Custodi — Hella di nuovo tra loro — precipitano
@@ -406,7 +410,8 @@ Quando la testa torna a posto, guardano dove sono.
 delle mura**, un quarto d'ora prima del buio. È autunno inoltrato: **5 °C**, il
 fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
-contare dopo il consiglio. Il drago è Skullcrusher e **non attacca**: aspetta
+contare dopo il consiglio, e le otto ore che segna sono quelle che restano: le
+prime quattro se ne vanno fra l'arrivo, la porta e il consiglio `[INFERRED — needs DM confirmation]`. Il drago è Skullcrusher e **non attacca**: aspetta
 l'alba, e i nani lo sanno. Dentro le mura le forge battono giorno e notte, e il
 rumore arriva fin qui.<!-- apparato --> *(Ambiente recuperato da
 `_ARCHIVIO/PortaleForgia-P5-DEFINITIVO-PARTE1.md`, allineato al canone: mura
@@ -667,7 +672,8 @@ l'orda, e **affrontare Skullcrusher** all'alba.
   le Benedizioni di Moradin +2/+2, la mappa accurata del campo **e la dotazione
   per entrare nel campo, scelta dal tavolo** (qui sotto). Fallimento: aiuti
   dimezzati, −2 alle prove della Scena 6. **Dimezzati** vuol dire: 2 pozioni
-  dell'antica fucina invece di 4, metà della dotazione, Benedizioni a +1/+1, e
+  dell'antica fucina invece di 4, metà della dotazione (2 pozioni
+  d'*invisibilità* o 2 di *volare*, per difetto) `[INFERRED — needs DM confirmation]`, Benedizioni a +1/+1, e
   niente mappa `[CANONE — DM 2026-10-07, Q1]`. Il −2 alle prove della Scena 6
   vale **in più**: le due cose insieme sono il prezzo del consiglio fallito.
 - **Come pensate di entrare?** `[CANONE — DM 2026-10-12, D49]`. Il re lo
@@ -675,7 +681,7 @@ l'orda, e **affrontare Skullcrusher** all'alba.
 
   | Dotazione | Cosa dà il re | Il piano che serve |
   |---|---|---|
-  | **Dal basso** | 4 pozioni d'*invisibilità* all'incantatore di 12°, **12 minuti** l'una, dal forziere del re | il mare di tende a piedi (Scena 6, lo skill challenge) |
+  | **Dal basso** | 4 pozioni d'*invisibilità* all'incantatore di 12°, **12 minuti** l'una, dal forziere del re: un dono, che non tocca i 10.000 mo con cui il forziere compra dai PG `[INFERRED — needs DM confirmation]` | il mare di tende a piedi (Scena 6, lo skill challenge) |
   | **Dall'alto** | 5 pozioni di *volare* al 5°, **5 minuti** l'una, portate dal sergente | la variante dall'alto (Scena 6) |
 
   Al tavolo del 25 settembre il gruppo ha avuto la seconda. Un gruppo di 13°
@@ -684,6 +690,11 @@ l'orda, e **affrontare Skullcrusher** all'alba.
   dall'alto, con l'invisibilità del re che copre tutta l'andata. Va bene così:
   il rischio, come dice la variante, si sposta alla tenda e sull'orologio del
   drago.
+- **Il fianco est** `[CANONE — DM 2026-10-12, D54]`. Mentre il re parla con
+  chi porta la Corona, un capitano batte il dito sul fianco est della mappa e
+  lo dice al tavolo, non al re: *«Di qua, se avessimo qualcosa che carica, li
+  prenderemmo di traverso. Non abbiamo niente che carica.»* È l'indizio per i
+  semi di Hella; il resto è in Scena 5, «I Treant».
 
 **I numeri del re** *(per il DM; sono anche nel piano di battaglia, §9)*:
 
@@ -892,12 +903,11 @@ tavolo del 25 settembre nessuno ha detto a Hella che i suoi semi potevano
 servire, e la giocatrice non l'ha deciso. Per i gruppi futuri l'indizio arriva
 da due parti, perché uno solo si perde:
 
-- **Al tavolo di guerra**, mentre il re parla con Thorik, un capitano batte il
-  dito sul fianco est della mappa e lo dice al tavolo, non al re: *«Di qua,
-  se avessimo qualcosa che carica, li prenderemmo di traverso. Non abbiamo
-  niente che carica.»*
-- **Di notte, alla Collana.** Se Hella resta ferma anche solo il tempo di una
-  sosta, i semi I e II si scaldano e si girano verso est, come aghi.
+- **Al tavolo di guerra** (Scena 4, «Il fianco est»): un capitano, al tavolo
+  e non al re, dice che di traverso sul fianco est servirebbe qualcosa che
+  carica.
+- **Di notte, alla Collana.** Se Hella resta ferma al buio anche solo un
+  minuto, i semi I e II si scaldano e si girano verso est, come aghi.
 
 Per **questo** gruppo, che non l'ha deciso, i Treant restano dove la
 giocatrice li vuole, interi o uno per parte. Le regole della Collana sono
@@ -1105,8 +1115,10 @@ quelle, non ce ne sono altre.
 | *Neutralizza veleno* · *ristorare* | 280 · 380 mo | a richiesta | *ristorare* con 100 mo di polvere di diamante inclusi. **Non** toglie il −4 alla DES di Thorik: è il prezzo del rito, non un risucchio `[CANONE — DM 2026-10-07, Q50]` |
 | *Rianimare morti* | 5.450 mo | 1 | le 5.000 di diamante incluse, e c'è un diamante solo in tutta la fortezza |
 
-⚠️ **Ogni incantesimo di 4° o 5° livello comprato stanotte è un incantesimo che
-all'alba manca sulle mura.** Per ognuno, alla Scena 10, si tira **1d4**: sono
+⚠️ **Ogni cura comprata stanotte alla cappella è una cura che all'alba manca
+sulle mura.** Alla Scena 10 si tira **1d4** per ogni **tipo**: i servizi e le
+pergamene di 4° o 5° livello, un tiro ciascuno; le bacchette di cura, un tiro
+per tutte. Se la Scena 10 non si gioca, si tira all'alba, prima del duello: sono
 i difensori del 372 che muoiono sulle mura per quella cura mancata, e il DM li
 annota fra i caduti del 372 `[CANONE — DM 2026-10-07, Q11; 2026-10-12, D62]`.
 È il **dado dei caduti**, e riguarda solo la fortezza di mille anni prima: nel
@@ -1365,7 +1377,7 @@ mercato non ce l'ha.
 ⚠️ **Quello che i PG hanno comprato manca sulle mura.** Dieci bacchette sono le
 cure della cappella per l'alba, e le pergamene di 4° livello le ha scritte
 Brynja per lo stesso motivo. Se la Scena 10 non è ancora stata giocata, si tira
-il **dado dei caduti** (Scena 5, D62) una volta per le bacchette e una per ogni tipo di
+il **dado dei caduti** (Scena 5) una volta per le bacchette e una per ogni tipo di
 pergamena di 4° comprata (*ristorare*, *cura ferite critiche*, *neutralizza
 veleno*): quattro tiri in tutto.
 
@@ -1424,8 +1436,9 @@ basso (CL 12, 12 minuti: l'SRD dà 1 minuto per livello), e le **Benedizioni di
 Moradin** sono già addosso (+2 morale al colpire e ai danni, 12 ore).
 
 Con la dotazione **dall'alto**, come al tavolo del 25 settembre, nessuno ha
-l'invisibilità del re: chi ne ha una comprata alla cappella (3 minuti) copre il
-primo blocco, poi si tira **Nascondersi CD 22**; oppure si vola, con la
+l'invisibilità del re: chi ne ha una comprata alla cappella (3 minuti) copre
+mezzo blocco, e quel blocco lo tira già a **Nascondersi CD 22** come gli altri
+(«Quanto dura l'invisibilità», qui sotto); oppure si vola, con la
 variante qui sotto `[CANONE — DM 2026-10-12, D49]`.
 
 **Cosa sanno gli esploratori nanici, e cosa non è esatto.** Hanno guardato il
@@ -1472,7 +1485,7 @@ blocchi** da 200 m.
 - **Quanto dura l'invisibilità.** Le pozioni del re durano 12 minuti. Un nano in
   armatura, a passo furtivo, fa 3 m a round: 12 minuti coprono circa **360 m**,
   i primi **due blocchi**. Dal terzo si tira Nascondersi, a meno che qualcuno
-  abbia altra invisibilità da spendere. Una pozione comprata alla fucina dura
+  abbia altra invisibilità da spendere. Una pozione comprata alla cappella dura
   3 minuti, circa 90 m: mezzo blocco. Non ne toglie uno, e il blocco in cui
   finisce si tira a Nascondersi.
 - **Cinque blocchi riusciti**: si arriva alla tenda. Un blocco fallito non fa
@@ -1587,8 +1600,9 @@ hobgoblin che sta per andare alla tenda. Fermarlo **non richiede di ucciderlo**:
 
 #### ✈️ Variante — dall'alto, invisibili e in silenzio
 
-Un tavolo che ha comprato alla fucina pozioni di *volare* e d'*invisibilità*, e
-ha una pietra che porta il *silenzio*, può passare **sopra** il campo invece che
+Un tavolo che ha la dotazione dall'alto del re (Scena 4) o che vola da sé,
+qualche pozione d'*invisibilità* della cappella e una pietra che porta il
+*silenzio*, può passare **sopra** il campo invece che
 in mezzo. È un buon piano, e il modulo lo premia: **niente prova di gruppo**.
 Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
@@ -1957,7 +1971,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Non se ne accorgono** | il duello va come scritto |
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa** `[CANONE — DM 2026-10-07, Q25]`: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
-| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
+| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro (Nascondersi e Muoversi Silenziosamente **−1**: nessun grado, DES +2, armatura completa di mithral −3) `[INFERRED — needs DM confirmation]`, alla postierla Durin lo fa entrare se un PG garantisce per lui (Scena 8, «Se Balvar è recuperato»), e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
 | **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** `[CANONE — DM 2026-09-30, D14]` |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
@@ -2022,7 +2036,8 @@ componente verbale. Dal round 3 attiva la runa del *silenzio* su di sé e usa
 solo quello che non parla: la *blade barrier* del palo, che è una runa, e il
 martello. Numeri in Appendice A.4. Se scende
 sotto **30 pf** non fugge e non implora: **finisce di incidere la lastra** e la
-lascia lì `[CANONE — DM 2026-10-12, D52]`. Se il tavolo la legge subito:
+lascia lì `[CANONE — DM 2026-10-12, D52]`. Gli costa un'azione di round
+pieno, l'ultima: in quel turno non attacca e non lancia `[INFERRED — needs DM confirmation]`. Se il tavolo la legge subito:
 
 > **Read-aloud (Salvatore).** *Tre rune nane, tutte spezzate a metà dallo
 > stesso colpo di punta. Sotto, inciso più a fondo, un nome: Hald. Poi una
@@ -2215,7 +2230,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   immediato, ma orienta come gli spiriti/Moradin la giudicheranno alla battaglia
   di Rethmar (ARC-09): bonus a controllo-campo o a danni elementali.
 - **PX Zog'tar**: sono dentro le ≈ 3.650/PG delle Scene 6-8 (§8,
-  budget PX), con le guardie, il sacerdote e Balvar. Non si sommano.
+  budget PX), con le guardie, il sacerdote e Balvar. Non si sommano. Catturato
+  o umiliato vale come ucciso: la DMG dà i PX per l'avversario sconfitto, non
+  per quello morto.
 
 - ► **Esito**: *ucciso in silenzio / spettacolare / umiliato e vivo* (Via A). Se
   **spettacolare** (esplosione, decapitazione davanti alle guardie), il terrore
@@ -2224,12 +2241,15 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   perdono la prima azione). Se l'orda è stata **pre-allertata** (corridore,
   allarme): un successo in meno sulle mura (Scena 10), e Zog'tar non è di
   sorpresa.
-- **Come si decide** `[CANONE — DM 2026-10-12, D51]`. È **spettacolare** se
-  almeno una guardia o Grask, vivi e coscienti, vedono morire Zog'tar **e** il
-  colpo si fa vedere: un incantesimo ad area, una decapitazione, o il finisher
-  che il giocatore descrive esibito (`[HDYWTDT]`). È **in silenzio** se nessuno
-  esce dalla tenda a gridare e Grask non suona. Tutto il resto è «ucciso» e
-  basta: niente picchiata e nessun successo in meno.
+- **Come si decide** `[CANONE — DM 2026-10-12, D51]`. Due domande,
+  nell'ordine. **Qualcuno esce dalla tenda a gridare, o Grask suona?** Se no,
+  è **in silenzio**: niente picchiata e nessun successo in meno. Se sì, è un
+  **allarme**, e costa il successo in meno sulle mura come il campo
+  pre-allertato; le guardie che scappano quando lui cade bastano. **Chi è
+  uscito ha visto un colpo che si fa vedere?** Un incantesimo ad area, una
+  decapitazione, il finisher che il giocatore descrive esibito
+  (`[HDYWTDT]`): allora è anche **spettacolare**, e all'alba il drago arriva
+  in picchiata. Un allarme senza spettacolo costa il successo e basta.
 
 **Il ritorno a piedi** `[CANONE — DM 2026-10-07, Q27]`. Dalla tenda alle
 mura si rigiocano i **cinque blocchi** della Scena 6, con le stesse regole.
@@ -2242,12 +2262,14 @@ metà strada.
 
 **Se Balvar è recuperato e il gruppo torna in volo** `[CANONE — DM 2026-10-12, D55]`.
 Balvar non vola. Esce dal campo da solo nella confusione dell'alba, con le sue
-rune: nessuno lo sorveglia (Scena 5), quindi non tira. Arriva nel cortile al
+rune: nessuno lo sorveglia (Scena 6), quindi non tira. Alle mura entra dalla
+postierla, che all'alba Durin tiene aperta per gli esploratori `[INFERRED — needs DM confirmation]`. Arriva nel cortile al
 round **1d4+2** del duello, e da lì vale la riga «Balvar la scioglie» della
 Scena 7.
 
 Se invece i PG se lo **portano in volo**, cambia questo
-`[INFERRED — needs DM confirmation]`:
+`[INFERRED — needs DM confirmation]`. La postierla e la notte in catene valgono
+anche se rientra **a piedi** con loro:
 
 - **Il peso.** Un nano in armatura completa di mithral fa circa 85 kg. Lo
   regge chi ha Forza 18 o più come carico medio, e col carico medio *volare*
@@ -2276,7 +2298,19 @@ niente.
 sensi. In volo non si porta: è Grande, in mithral, oltre il carico di
 chiunque nel gruppo. A piedi lo reggono due PG, e il ritorno a piedi (qui
 sopra) si tira a **−4** per tutti e due. Se si sveglia e grida, è l'allarme:
-il corno suona e la CD sale di +4.
+il corno suona e la CD sale di +4. **Quando si sveglia** (SRD): steso con
+danni letali e stabilizzato, ha il 10% l'ora, quindi sul ritorno si tira una
+volta sola, 1 su 1d10; steso con danni non letali si sveglia quando quei danni
+scendono sotto i suoi pf, e ne smaltisce 15 l'ora. Imbavagliato non grida, ma
+si dibatte: il blocco in cui si sveglia si tira a −8 invece di −4 `[INFERRED — needs DM confirmation]`.
+
+**Dopo, se arriva alle mura vivo** `[INFERRED — needs DM confirmation]`. Il re lo fa incatenare
+nella cella sotto la torre nord e non lo guarda nemmeno: lo giudicherà dopo
+la battaglia, se ci sarà un dopo. Durante il duello resta lì, e non conta.
+Se il duello va bene, Re Thorek lo fa giustiziare all'alba del giorno dopo,
+davanti all'orda che si ritira, ed è la sua risposta alla promessa di
+Zog'tar; i PG a quel punto sono già nel 1372. Che cosa resta di lui nel 1372
+è in §7.
 
 **Se va male nella tenda** `[CANONE — DM 2026-10-07, Q29]`. Zog'tar non
 uccide i PG che cadono: li vuole vivi, e li tiene incatenati nel campo fino
@@ -2467,7 +2501,7 @@ un successo in più o in meno, e si applica dopo i tiri:
 | campo pre-allertato: il corridore è arrivato, o è suonato l'allarme (Scene 6 e 8) | **un successo in meno** |
 | Zog'tar umiliato davanti alle guardie (Scena 8) | annulla il successo in meno, se c'era |
 | Zog'tar catturato e portato alle mura (Scena 8) | **un successo in più** |
-| incantesimi di 4°-5° comprati alla cappella (Scena 5) | nessuno sulla prova: il dado dei caduti del 372 (Scena 5, D62), che non tocca ARC-08 |
+| cure comprate alla cappella (Scena 5) | nessuno sulla prova: il dado dei caduti del 372 (Scena 5), che non tocca ARC-08 |
 | i due Treant dell'alba caricano il fianco dell'orda (Scena 5) | **un successo in più** `[CANONE — DM 2026-10-07, Q49]` |
 | **Zog'tar è vivo all'alba** (il gruppo ha dormito, o non è arrivato alla tenda) | **un successo in meno**, e Zog'tar guida l'assalto: vedi sotto `[CANONE — DM 2026-10-07, Q41]` |
 
@@ -2506,8 +2540,8 @@ ed è per questo che vuole buttare giù chi ha davanti.
   sotto le mura a guardare: vuole vedere il drago finirli. Il duello della
   Scena 11 si gioca con lui là sotto, e chi lo cerca lo trova.
 - **I PE** sono quelli della Scena 8, e non si sommano. Se Zog'tar si combatte
-  solo qui, con le quattro guardie, vale circa **2.600 a testa** (7.800 + 2.600,
-  §8 A, D58).
+  solo qui, con le quattro guardie, vale circa **2.600 a testa**: Zog'tar circa 7.800
+  e le guardie 2.600 in tutto, diviso quattro (§8 A).
 - **Se cade qui**, il colpo finale va al giocatore (`[HDYWTDT]`, §0-ter).
 
 
@@ -2654,6 +2688,10 @@ cambia davvero.
 - **La Catena detta ad alta voce** `[CANONE — DM 2026-10-12, D63]`. Chi
   la legge forte, dove l'orda sente, diventa il suo bersaglio dal turno dopo,
   anche se deve scendere. Il perché è in Scena 7, «Che cosa muove Skullcrusher».
+- **Chi sceglie, se più cose lo chiamano** `[INFERRED — needs DM confirmation]`. Nell'ordine: chi ha
+  detto la Catena ad alta voce; chi tiene la corda dell'ala; chi lo ha ferito di
+  più. Le balestre e le campane non sono bersagli: le fa tacere col soffio solo
+  quando nessun PG gli è a tiro.
 - **Soglia: quando gli restano ~100 pf, un terzo dei 297 — la prima paura.** Per la prima volta nella sua vita,
   Skullcrusher **esita**. È il momento dei tre esiti (sotto). Al suo turno
   fugge nelle paludi, a meno che nel round prima abbia preso **almeno due
@@ -2759,7 +2797,7 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 #### Sidebar — Scalare lo scontro (stile RHoD)
 | Situazione | Aggiustamento |
 |---|---|
-| Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Per un gruppo di 13° è oltre il tetto: lì si usano le 2 **wyvern** che scortano il drago dal round 2 |
+| Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Per un gruppo di 13° è oltre il tetto: lì si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS) |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
 | **Hella appena risorta** — vuoi proteggerla | Il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità) — dà alla giocatrice spazio per il suo primo scontro |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
@@ -2994,13 +3032,14 @@ due»), e la pietra entra solo al Rituale della Scena 12.*
 | **Aegis Fang «sente» Fauci** (gancio inverso) | +2 circostanza a Thorik vs Fauci + preavviso del soffio | ARC-08 | B4 §4 |
 | **Vatore segnato/derubato/ferito** (Scena 9) | sincronizzazione su Sal nel 1372 (sanguina / manca un asso / vi teme) | ARC-09 (Sal mercante-spia) | registro di fine serata + scheda di Sal |
 | **Seme del Ghostlord** (Scena 5, incontro con Zeth) | i PG assistono all'inizio della Lichificazione di Zeth (i componenti li porta Vatore, per il Collezionista: Q4-bis) | ARC-09 (dilemma etico di Hella su Zeth il Murato) | registro di fine serata + scheda del Ghostlord |
+| **Zog'tar catturato, o umiliato e vivo** (Scena 8) | un generale hobgoblin che sopravvive alla notte del 372: giustiziato dal re se catturato, ramingo se umiliato. Nel 1372 è un nome nelle cronache dell'assedio antico `[INFERRED — needs DM confirmation: se e dove riemerge]` | ARC-08 | registro di fine serata |
 | **Scelte-costo vs Zog'tar** (Scena 8) | Thorik affaticato / Cintura di Tordek «assaggiata» o disciplinata / tono del Rubino | ARC-08 (vs Fauci) | Scena 8 + B4 |
 | **Tono del Rubino** (esito duello) | «nessuna pietà» (UCCISO) / «dovere» (FERITO) / «vigile» (FUGGITO) → colore della Corona in ARC-08 (vedi sotto) | ARC-08 ingresso | registro delle conseguenze dell'arco |
 | **La Senzienza arriva calda o fredda** (`DEF-5` §3, dopo il Rubino) | il ramo lo ha deciso `DEF-3` §5: se Thorik ha donato il +2 di deflessione la Corona **commenta**, se ha rifiutato **informa e basta**. ⚠️ Il freddo e' **reversibile** | ARC-08 e ARC-09, ogni volta che la Corona parla | stato degli artefatti · registro delle conseguenze |
 | **Aegis Fang allo Stage 1** (Scena 12) | l'ascia ha smesso di interrogare Thorik — **oppure** lo giudica, e il giudizio finisce la prima volta che lui rischia qualcosa di suo per Hella | ARC-08, alla prima scena che riguarda Hella o nani da proteggere | scheda di Aegis Fang + stato degli artefatti |
 | **La prima frase dell'ascia, detta dal giocatore** (`[HDYWTDT]`, Scena 12) | quella frase e' canone: ottocento nani l'hanno sentita, e a Hammerfist qualcuno la **ripetera' storta** | ARC-08, arrivo al Cuore della Montagna | registro delle conseguenze |
 | **La fucina** (Scena 5): monete, oggetti venduti, l'ascia del gelo, i due pezzi del capo fabbro | monete di re non ancora nati murate nella fortezza; le cose vendute tornano come reliquie `[CANONE — DM 2026-10-07, Q14]` | ARC-08, a Hammerfist | registro delle conseguenze |
-| **Il dado dei caduti** (Scena 5, D62): i difensori del 372 morti per le cure comprate dai PG | nessuna perdita nel 1372: solo i nomi, fra i caduti dell'assedio antico `[INFERRED — needs DM confirmation: dove]` | ARC-08 | registro di fine serata |
+| **Il dado dei caduti** (Scena 5): i difensori del 372 morti per le cure comprate dai PG | nessuna perdita nel 1372: solo i nomi, fra i caduti dell'assedio antico `[INFERRED — needs DM confirmation: dove]` | ARC-08 | registro di fine serata |
 | **Cronache dei Quattro Eroi compiute** | fama crescente presso i nani → Custodi Eterni | ARC-08 E5 / Cerimonia 100 Asce | ARC-08 |
 | **Sigillo di Ossidiana** (se rubato a Vatore) | artefatto di Shar (anti-luce / furto d'ombra, divora anime) — vedi Appendice B; contrasta l'Anello di Artemis | ARC-09 | filo «[SIGILLO DI OSSIDIANA]» + scheda di Sal |
 
@@ -3035,7 +3074,8 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 ⚠️ **Il conto SRD è più basso.** La tabella dei PX della DMG dà il totale
 dell'incontro, da dividere fra i PG: Skullcrusher (GS 14) contro un gruppo di
 13° vale 5.850 in tutto, cioè circa **1.460 a testa**, e Zog'tar (GS 15) circa
-1.950. Il duello e la tenda sono al conto della tabella (D40, D58); i GS
+1.950: sconfitto, cioè ucciso, umiliato o catturato, sono gli stessi PX. Il
+duello e la tenda sono al conto della tabella; i GS
 molto sotto l'APL, come le guardie e il sacerdote, sono stimati, quindi i
 numeri portano «≈». Le scene senza scontro restano
 premi di storia, come sempre.
@@ -3254,7 +3294,7 @@ Drago Enorme (acqua) · DV 25d12+175 (337 pf) · Iniz +6
 CA 36 (−2 taglia, +2 DES, +26 nat), contatto 10, impreparato 34;
    40 con *armatura magica*
 RD 10/magia · RI 22 · immune acido, sonno, paralisi
-TS Temp +21, Rifl +16, Vol +18 · BAB +25 · Lotta +44
+TS Temp +21, Rifl +18, Vol +20 · BAB +25 · Lotta +44
 Mischia: morso +34 (2d8+11) · 2 artigli +29 (2d6+5) ·
    2 ali +29 (1d8+5) · colpo di coda +29 (2d6+16)
 Schiacciare 2d8+16, Riflessi CD 29 (solo creature Piccole o minori)
@@ -3268,7 +3308,11 @@ Talenti, abilità e il resto: come A.1
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
 template: +2 di COS ai DV per i pf, la FOR per l'attacco, ½ DV + COS per il
-soffio e lo schiacciare, ½ DV + CAR per la Presenza. Gli incantesimi conosciuti
+soffio e lo schiacciare, ½ DV + CAR per la Presenza. I talenti sono quelli di
+A.1, Riflessi Fulminei e Volontà di Ferro compresi; il nono, che il Vecchio ha
+in più, lo sceglie il DM `[INFERRED — needs DM confirmation: proposta Allerta,
+che non cambia i numeri del combattimento]`. Fugge a ⅓ dei pf come in A.1:
+circa **112 pf**. Gli incantesimi conosciuti
 in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla
 lista dello stregone `[INFERRED — needs DM confirmation: proposta *dissolvi
 magie* e *lentezza*]`. PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
