@@ -32,7 +32,7 @@
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
 > `[CANONE GIOCATO 2026-07-31]` — il registro dei riposi è in `DEF-2` §0-bis,
 > che possiede l'orologio. Il rito dura circa un'ora, e non c'è riposo prima
-> della soglia: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`. Il party arriva **riposato** (hanno
+> della soglia: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`, e di un'altra se c'è l'indagine del Sud (§9) `[CANONE — DM 2026-10-12, D83]`. Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
@@ -1086,6 +1086,17 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 > successiva**, e la peggiore è anche la più giocabile.
 
 Con uno o nessun Dono la soglia è 3 su 3, e la riga si sceglie da quanto manca: 2 successi valgono la riga «1 su 3», 1 successo la riga «0 su 3» `[CANONE — DM 2026-10-12, D81]`.
+
+Quattro regole valgono per tutte le righe `[CANONE — DM 2026-10-12, D83]`:
+- **Il ritiro riuscito paga sempre la riga «1 su 3»**: l'indagine del Sud salva
+  Hella, ma non la fa tornare meglio di chi ha tirato 2.
+- **Se Hella torna, in qualunque riga, si giocano la Custode (§6) e lo Step 6.**
+  Col richiamo a zero, dopo il ritiro.
+- **Il Sud occupato prima del primo Step 5** conta come la risposta trovata in
+  anticipo: se lo Step 5 va a zero, il ritiro parte subito, senza l'ora d'indagine.
+- **Il livello negativo** della riga «1 su 3» è quello dell'SRD: non diventa
+  mai perdita di livello, e si toglie con *ristorare* (il gruppo ne ha le
+  pergamene).
 
 | Successi allo Step 5 | Cosa torna | Cosa apre |
 |---:|---|---|

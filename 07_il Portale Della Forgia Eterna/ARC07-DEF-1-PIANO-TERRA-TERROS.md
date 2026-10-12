@@ -119,7 +119,7 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Seme-Mercato di Varis: analisi/estirpo — Sapienza Magica | 20 | §6-bis |
 | Tempio: salto di Tordek — Saltare (Take 10 = 26 ✓) | 25 | §7a |
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
-| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 28 | §7b |
+| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 25 `[CANONE — DM 2026-10-12, D79]` | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
 | Frequenza della Confusione — Intrattenere Canto (Anello +4) | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
@@ -608,8 +608,8 @@ avanzato 15 DV.* PF **180** · CA **28** (+18 nat) · **RD 10/adamantio** ·
 Morso +22 (4d8+10, ignora durezza <20) e 3 artigli +20 (1d8+5) · Scavare 6 m
 (non lascia tunnel) · Percezione tremorica 18 m · onnidirezionale (niente
 fiancheggiamento, mai colto in fallo) · Immune freddo/fuoco · TS Temp +16,
-Rifl +6, Vol +16 · **Speciale**: se morde un'arma/scudo magico fa Spaccare
-(+26); se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
+Rifl +6, Vol +16 · **Speciale**: se morde un'arma/scudo magico non-artefatto fa
+Spaccare (+26), come la Sentinella; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
 
 **Statblock — XORN standard ×2 (CR 6).** Esterno (Terra), Medio · DV 7d8+21
 (52 pf) · CA 24 (+14 nat), contatto 10 · Morso +9 (4d6+3) e 3 artigli +4
@@ -750,7 +750,7 @@ centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 | Conoscenze (Natura/Dungeoneering) | 18 | Dimostrare di capire l'ecosistema → +1 |
 | Intrattenere (Canto) | 22 | Cantare in armonia coi cristalli → **+2** (fallito: **−1** ai successi) |
 | Utilizzare Oggetti Magici (Corona/Anello) | 15 | Riconoscono Moradin → +1 |
-| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, il potere di cura dei Bracieri di Tordek, 3 cariche al giorno, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
+| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, una delle Benedizioni di Moradin che il gruppo ha dalla Sala (Scena 1): 3 cariche al giorno, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
 
 > **La prova del cristallo crepato è il cuore emotivo della scena** (il tuo
 > "riforgiare il cristallo"): non tagliarla. Cristalli curabili in **E02** e
@@ -2267,7 +2267,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | | **TOTALE MODULO (percorso completo)** | | **~11.600/PG** |
 | | *Totale se i Cristalli sono saltati* | | *~10.300/PG* |
 
-> **Lettura**: al 13° servono **14.000 PX** per il 14°. Questo modulo vale
+> **Lettura**: al 13° servono **13.000 PX** per il 14° (da 78.000 a 91.000, SRD). Questo modulo vale
 > **~0,8 livelli**; con il Piano del Fuoco già alle spalle, i PG **maturano il
 > 14° verso Hammerfist** (D8: il 14° si consolida nell'ARC-08, non qui). Le
 > parti già giocate non si ritoccano (ERRATA §6).
@@ -2569,8 +2569,7 @@ l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).
 SCENOGRAFIA (MAP 6): ingresso a NORD = 🚪 SOGLIA di mithral (si apre da sé;
 l'Altare vi era ormeggiato). Dopo il distacco: ~27 m di zero-G fra soglia e
 Altare — la via di fuga esiste, ma va attraversata in volo o a spinte.
-PIATTAFORME LATERALI 🟦 a EST e OVEST (+3 m, scale): posizioni di tiro per
-Artemis. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
+Niente piattaforme laterali: Artemis tira in volo (D79). ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════

@@ -12,6 +12,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-3 lettore | 0 | 9 | 17 | `def3-LETTORE.md` |
 | DEF-2 playtester (prevista; scelte storte di un gruppo nuovo) | 0 | 4 | 12 | `def2-PLAYTESTER.md` |
 | DEF-3 playtester (tre Doni; un Dono e 2 successi; nessun Dono e ritiro) | 0 | 5 | 13 | `def3-PLAYTESTER.md` |
+| DEF-1 playtester (prevista; senza Cristalli; scelte storte) | 1 | 6 | 21 | `def1-PLAYTESTER.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -23,7 +24,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | 4 🟠 | le piattaforme laterali | D79 (c), deciso: tolte |
 | 5 🟠 | l'abisso di lava fredda | D79 (d), deciso: niente ponte |
 | 6 🟠 | il Successo Critico dei Cristalli | D79 (e), deciso: 6 successi senza fallimenti |
-| 7 🟠 | il *Vigore della Forgia* | spiegato in linea: il potere di cura dei Bracieri, 3 cariche al giorno |
+| 7 🟠 | il *Vigore della Forgia* | spiegato in linea; il playtester ha trovato che l'avevo attribuito male (ai Bracieri): è una Benedizione di Moradin, corretto |
 | 8 🟠 | i danni sonici di Tordek | D79 (g), deciso: sonici nel round della Frequenza |
 | 9 🟠 | la scena della pergamena dentro DEF-1 | una riga prima del blocco: si gioca nella notte del 372, e chi sono Brynja, Kettra e le tacche |
 | 10 🟠 | i PX che si contraddicono | le righe di §5 e §7b allineate alla tabella del §11-bis: 1.700 e 1.500 a testa |
@@ -79,8 +80,23 @@ c'è. Il quiz no, per D10.
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🟠 | l'inversione dello Step 5 senza Doni | **domanda al DM**, D83 (a): nasce dalla mia applicazione di D81 (a) |
-| 2 🟠 | la Custode e lo Step 6 sotto soglia | **domanda al DM**, D83 (b) |
-| 3 🟠 | il Sud occupato prima | **domanda al DM**, D83 (c) |
-| 4 🟠 | «riposato» contro «niente riposo»; il tempo dei tentativi | «riposato» tolto dalla soglia; il resto è D83 (e) |
-| 5 🟠 | il livello negativo e il riquadro PF1e | il riquadro corretto (3.5: si perde un livello; PF1e: due livelli negativi permanenti); la natura del livello è D83 (d) |
+| 1 🟠 | l'inversione dello Step 5 senza Doni | D83 (a), deciso: il ritiro paga sempre la riga «1 su 3» |
+| 2 🟠 | la Custode e lo Step 6 sotto soglia | D83 (b), deciso: Custode e Step 6 in ogni riga |
+| 3 🟠 | il Sud occupato prima | D83 (c), deciso: il ritiro parte subito |
+| 4 🟠 | «riposato» contro «niente riposo»; il tempo dei tentativi | «riposato» tolto dalla soglia; il resto D83 (e), deciso: un'ora in più con l'indagine |
+| 5 🟠 | il livello negativo e il riquadro PF1e | il riquadro corretto (3.5: si perde un livello; PF1e: due livelli negativi permanenti); D83 (d), deciso: livello negativo dell'SRD, via con *ristorare* |
+
+## Il triage del playtester di DEF-1
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🔴 | il rientro dopo l'Onda nello zero-G | **domanda al DM**, D84 (a): nasce da D79 (a) |
+| 2 🟠 | la Quick-Reference diceva ancora CD 28 | corretta a 25: l'avevo mancata applicando D79 |
+| 3 🟠 | lo Spaccare degli Xorn su Aegis Fang | come la Sentinella: solo oggetti non-artefatto |
+| 4 🟠 | cantare la Frequenza in combattimento | **domanda al DM**, D84 (b) |
+| 5 🟠 | l'Ancora o la corda falliscono | **domanda al DM**, D84 (c) |
+| 6 🟠 | il *Vigore della Forgia* | è una Benedizione di Moradin, non dei Bracieri: l'errore era della mia correzione al lettore |
+| 7 🟠 | la DES di Thorik a 0 | **domanda al DM**, D84 (d) |
+| 12 | le piattaforme nella legenda di T-6 | tolte |
+| 27 | il +4 CAR di Thorik | **domanda al DM**, D84 (f) |
+| 28 | i PX e i 14.000 per il 14° | 13.000, come l'SRD; la scala dei PX è D84 (e) |
