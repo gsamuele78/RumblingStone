@@ -291,7 +291,7 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
 | Zona | Occhi | Orecchie | Pelle / naso | 🚫 Cosa NON dire |
 |---|---|---|---|---|
 | **1** Fortezza giovane | Pietra bianca, spigoli ancora vivi. **Una** statua di re, non venti | Scalpelli. Di giorno, a quest'ora, in tempo di guerra | Polvere di taglio fresco, che sa di calcare e non di fuliggine | **Che la targa è la profezia su di loro.** Lasciala leggere: è il nodo della Scena 3 |
-| **2** Mare di tende | Mille fuochi fino all'orizzonte; una tenda più alta, nera | Un russare che non si interrompe mai del tutto | Grasso bruciato, ferro, bestia | **Quale tenda è quella del generale.** Si deduce da dove *non* passano le pattuglie (Osservare CD 18) |
+| **2** Mare di tende | Mille fuochi fino all'orizzonte; una tenda più alta, nera | Un russare che non si interrompe mai del tutto | Grasso bruciato, ferro, bestia | **Quale tenda è quella del generale.** Si deduce da dove *non* passano le pattuglie (Osservare CD 18). Se Durin l'ha già indicata alla postierla (Scena 6, «La tenda nera al centro è del generale»), la prova non serve |
 | **3** Mura all'alba | Scale contro la pietra; nani spalla a spalla che non indietreggiano | Il boato di diecimila gole che diventa **una** | Fumo, sangue di nano (ferro dolce), corda bagnata degli arieti | **Che la linea terrà.** Non lo sai nemmeno tu: dipende dalla prova di gruppo |
 
 ⚠️ **Le tre righe «non dire» non sono suggerimenti di stile.** Ognuna protegge
@@ -851,8 +851,9 @@ l'odore di zolfo copre quello del carbone.
   stesura le faceva piantare «i 3 semi di treant», ma al rito di `DEF-3` §7 i
   tre semi sono entrati nella **Collana dei Semi Eterni**, e da qui in poi non
   si piantano più.)*<!-- /storico --> All'alba Hella usa l'**Evocazione dei Guardiani** sui semi
-  I e II: **due Treant di Adamantio** (statblock `DEF-3` §7: 90 pf, RD
-  10/adamantio, 2 schianti +18, danni doppi alle strutture) che caricano il
+  I e II: **due Treant di Adamantio** (statblocco in `DEF-3` Appendice A.2: Grandi, 90 pf, RD
+  10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle
+  strutture, durano 1 ora) che caricano il
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
@@ -1977,7 +1978,7 @@ motivo per cui la Scena 7 viene prima.
   telo chi vola **non** esce dalla portata dell'ascia: Zog'tar è alto 3 m e
   arriva a 3 m oltre, cioè fino al colmo. Ne esce solo chi sta fuori dal telo.
   Le risposte dell'orda, tutte SRD:
-  - **Zog'tar** tiene **tre giavellotti Grandi** accanto al seggio: +20 a
+  - **Zog'tar** tiene **tre giavellotti Grandi** accanto al seggio: +19 a
     distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
     palo centrale** (Forza **CD 20**, azione standard): il telo crolla, e chi è
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
@@ -3073,7 +3074,7 @@ FOR 30 (36 in Ira) · DES 20 · COS 24 (30 in Ira) · INT 16 · SAG 16 · CAR 18
 Ascoltare +11 · Osservare +3 · Intimidire +14   (8 gradi in Ascoltare, 10 in Intimidire, nessuno in Osservare)
 In Ira: ascia a due mani +1 +29/+24/+19 (3d6+20, 20/×3)
 Fuori dall'Ira (round di sorpresa): +26/+21/+16 (3d6+16)
-A distanza: 3 giavellotti Grandi +20 in Ira (1d8+13), incremento 9 m
+A distanza: 3 giavellotti Grandi +19 (BAB 15, DES +5, −1 taglia) (1d8+13), incremento 9 m
 Colpo Devastante (azione standard): +25 in Ira, 3d6+20;
    Riflessi con CD pari al danno, o vola via di 3 m e cade
    prono (+1d6 a lui e all'ostacolo se ne incontra uno)

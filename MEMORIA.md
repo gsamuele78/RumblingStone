@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 21 decisioni aperte
+## Aspetta il DM: 25 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -34,6 +34,10 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `LETTORE-PLAYTESTER` | D50 | F3-quinquies | **Grask a 4 tacche esatte** (🟠 del lettore). «Sveglio fino alla 4ª tacca, addormentato dalla 5ª»: chi arriva alla tenda con 4 tacche segnate lo trova sveglio o addormentato? Proposta: **sveglio** finché la 4ª tacca è l'… |
 | `LETTORE-PLAYTESTER` | D51 | F3-quinquies | **Ucciso «in silenzio» o «spettacolare»** (🟠 del lettore). Decide se all'alba i PG perdono la prima azione. Proposta: è **spettacolare** se almeno una guardia o Grask, vivi e coscienti, vedono la morte di Zog'tar **e**… |
 | `LETTORE-PLAYTESTER` | D52 | F3-quinquies | **La lastra di Balvar** (🟠 del lettore). Il master lascia al DM cosa c'è inciso («gancio bianco per ARC-09»). Proposta: resta un gancio bianco, ma il master dà una riga da leggere se il tavolo la legge subito (tre rune… |
+| `LETTORE-PLAYTESTER` | D53 | F3-quinquies | **Il prezzo delle rune d'annullamento di Zeth** (🟡 del playtester, giro 3). Q5 le prezza come una pergamena di *dissolvi magie* all'incantatore di 9°, 675 mo: è il prezzo del 3° livello (chierico, mago). Ma Zeth è un dr… |
+| `LETTORE-PLAYTESTER` | D54 | F3-quinquies | **I Treant di Hella entrano nel duello?** (🟠 del playtester). Durano 1 ora (`DEF-3` A.2) e caricano il fianco dell'orda all'alba; il master non dice se sono ancora lì quando cala il drago. Proposta: no. Restano sul fian… |
+| `LETTORE-PLAYTESTER` | D55 | F3-quinquies | **Balvar recuperato e il ritorno in volo** (🟠 del playtester). Il master porta Balvar al cortile solo a piedi; il gruppo che torna in volo lo lascia al campo. Proposta: Balvar non vola; esce dal campo da solo nella conf… |
+| `LETTORE-PLAYTESTER` | D56 | F3-quinquies | **Zog'tar catturato: come si porta via?** (🟠 del playtester). Il successo in più sulle mura c'è, il trasporto no. Proposta: solo legato e privo di sensi; in volo non si porta (Grande, in mithral, oltre il carico di chiu… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -136,7 +140,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 21 aperte, 212 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 25 aperte, 212 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
