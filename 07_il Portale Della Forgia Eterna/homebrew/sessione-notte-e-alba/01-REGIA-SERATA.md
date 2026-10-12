@@ -51,10 +51,10 @@ giocatrice di Hella.
 | Scheda | Perché |
 |---|---|
 | Skullcrusher, `DEF-4` Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
-| Durik, capitolo V | +50% di danni dall'acido: il soffio lo prende in pieno |
+| Durik, capitolo VI | +50% di danni dall'acido: il soffio lo prende in pieno |
 | Zog'tar e le quattro guardie, Appendice A.2 | la tenda, o le mura se Zog'tar è vivo all'alba |
 | Balvar, Appendice A.4 | parla prima di combattere, o durante |
-| La Forgia ricorda le ferite, capitolo IV | si segnano le ferite durante il duello, non dopo |
+| La Forgia ricorda le ferite, capitolo V | si segnano le ferite durante il duello, non dopo |
 
 **Leggi il box in testa al booklet**, poi **consegna gli echi**, uno a testa,
 piegati. Di' solo: *«Questo è quello che vi è rimasto addosso della notte.
@@ -83,6 +83,14 @@ per arrivare in tempo. **In fortezza non avanza niente.** Una tacca spesa qui
 porta a 7, e si rientra di corsa (−1 ai TS del primo round del duello). Due
 tacche, o una tacca e un fallimento nel campo, portano a 8: l'alba li coglie
 fuori. Il volo all'andata ne fa risparmiare una (sotto, Atto II).
+
+**Il Seme, prima di tutto.** Insieme alle boccette, è la prima cosa che il
+tavolo chiederà: Artemis vuole sapere cos'è la gemma nello zaino di Tordek.
+La scena è il capitolo II di questo booklet, «L'ora della pergamena». Costa
+**1 tacca**, e con il conto qui sopra porta a 7: si rientra di corsa. Dillo
+prima che scelgano. La si può rimandare: al ritorno dalla tenda, con le
+tacche che restano prima dell'8 (riga «≤ 6» della tabella d'uscita), oppure
+nel 1372.
 
 Le scelte che valgono una tacca stasera, dalla tabella:
 
@@ -124,8 +132,7 @@ Artemis lo sente prima di chiunque: dagli lo spotlight.
 master: la pattuglia dei tre fallimenti e la squadra dei lupi (Scena 6), lo
 sciamano che vede l'invisibile al ritorno (Scena 6, dopo il corno), le quattro
 guardie della tenda (Scena 8). Lo scontro con la pattuglia o con i lupi costa
-una tacca in più. Le righe marcate `[INFERRED]` sono proposte da confermare:
-se non ti vanno, cambiale prima della serata.
+una tacca in più. Le tattiche sono canone.
 
 **Quando escono dalla tenda**, conta le tacche e leggi la riga della tabella
 d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
@@ -188,6 +195,7 @@ gruppo**<!-- apparato --> (`python3 scripts/dm.py session end`, mai su `main`, A
 
 | | Cosa | Esito |
 |---|---|---|
+| ☐ | Il Seme: identificato · estirpato · tenuto · dato · firmato (e da chi); cosa ha detto Artemis a Tordek | |
 | ☐ | Scelte in fortezza: semi vegliati · banchetto · sosta | |
 | ☐ | Mare di tende: fallimenti · dall'alto o a piedi | |
 | ☐ | Balvar: ascoltato · ucciso · ignorato · «dite che c'ero»: promesso? | |

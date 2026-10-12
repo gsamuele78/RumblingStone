@@ -83,6 +83,14 @@ class TestLeInclusioni(unittest.TestCase):
         with self.assertRaises(KeyError):
             comp.riallinea(f"<!-- include: {self.rel}/f.md#n -->\n<!-- /include -->")
 
+    def test_percorso_con_spazi(self):
+        sotto = self.d / "un arco"
+        sotto.mkdir()
+        (sotto / "f.md").write_text("<!-- blocco: n -->\nuno\n<!-- /blocco -->\n", encoding="utf-8")
+        testo = f"<!-- include: {self.rel}/un arco/f.md#n -->\nvecchio\n<!-- /include -->\n"
+        self.assertEqual(comp.riallinea(testo),
+                         f"<!-- include: {self.rel}/un arco/f.md#n -->\nuno\n<!-- /include -->\n")
+
     def test_riallineare_due_volte_non_cambia_niente(self):
         (self.d / "f.md").write_text("<!-- blocco: n -->\nuno\n<!-- /blocco -->\n", encoding="utf-8")
         una = comp.riallinea(f"<!-- include: {self.rel}/f.md#n -->\n<!-- /include -->")

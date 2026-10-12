@@ -735,12 +735,12 @@ tacca è mezz'ora scarsa di gioco reale.
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** `[CANONE — DM 2026-10-07, D39]` | **1** · **0** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) `[CANONE — DM, D22]` | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
-| Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[INFERRED — needs DM confirmation]` | **1** |
-| Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia `[INFERRED — needs DM confirmation]` | **+1** |
-| … e una banda chiamata da uno sciamano (Scena 6) `[INFERRED — needs DM confirmation]` | **+1** |
+| Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[CANONE — DM 2026-10-12]` | **1** |
+| Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia `[CANONE — DM 2026-10-12]` | **+1** |
+| … e una banda chiamata da uno sciamano (Scena 6) `[CANONE — DM 2026-10-12]` | **+1** |
 
 Se il gruppo si divide (metà vola, metà cammina), vale il conto del gruppo più
-lento `[INFERRED — needs DM confirmation]`.
+lento `[CANONE — DM 2026-10-12]`.
 
 **Quando le tacche finiscono, sorge il sole.** Non è una punizione: è la Scena 10
 che comincia, con i PG dove sono in quel momento.
@@ -751,7 +751,7 @@ che comincia, con i PG dove sono in quel momento.
 | 7 | 🟡 si rientra **correndo**: nessun riposo prima del drago, −1 a tutti i TS del primo round del duello (Scena 11) |
 | 8 o più | 🔴 **l'alba vi coglie fuori dalle mura.** Non morite: attraversate un campo che si sta svegliando. Prova di gruppo Muoversi Silenziosamente **CD 20**, o Nascondersi **CD 22** per chi non è più invisibile, poi il duello (Scena 11) comincia con i PG **fuori**. La Scena 10 **non si gioca**: le mura valgono «a stento» (2-3 successi). Se la prova fallisce, il drago ha già scelto il suo bersaglio `[CANONE — DM 2026-09-30, D21]`: il duello si apre con il suo round di sorpresa, e il soffio va sul PG che ha tirato peggio `[CANONE — DM 2026-10-07, Q32]`. Con 3 tacche già spese e il campo a piedi (3), una scelta lenta porta al giallo (7), e una scelta lenta più un fallimento portano qui; il margine viene da Balvar, a cui si parla durante lo scontro senza spendere tacche |
 
-**Se l'alba arriva prima della tenda** `[INFERRED — needs DM confirmation]`. Zog'tar è vivo all'alba (riga
+**Se l'alba arriva prima della tenda** `[CANONE — DM 2026-10-12]`. Zog'tar è vivo all'alba (riga
 della tabella «Dalla notte», Scena 10), e siccome la Scena 10 non si gioca,
 durante il duello sta sotto le mura a guardare, come nella sua tattica sulla
 breccia. Balvar resta nella tenda: la Catena si può solo spezzare. Vatore, mai
@@ -1170,7 +1170,9 @@ mura all'alba manca.
 > maledizioni), l'unico tipo che nessuna prova potrebbe scoprire.
 
 Il **Seme-Mercato** di Varis non è fra queste: lo identifica Artemis, con la
-pergamena del re, e la scena si gioca al tavolo. La sua scheda è nel
+pergamena del re, e la scena si gioca al tavolo. Le pozioni le riconoscono sia
+Brynja sia Kettra; la pergamena di *identificare* nessuna delle due la sa
+usare, e la legge Artemis con Usare Oggetti Magici `[CANONE — DM 2026-10-12]`. La sua scheda è nel
 Piano della Terra, §6-bis, «Il contratto del Seme».
 
 **Quanto hanno potuto vendere.** I nani sono ricchi di gemme e avari, ma
@@ -1419,7 +1421,7 @@ blocchi** da 200 m.
   il corridore della Via B, qui sotto. Se arriva, Zog'tar è pre-allertato.
   Dopo lo scontro si riparte dal blocco in cui si era, e lo scontro costa una
   tacca in più `[CANONE — DM 2026-10-07, Q15]`.
-- **Come combatte la pattuglia** `[INFERRED — needs DM confirmation]`. Sono
+- **Come combatte la pattuglia** `[CANONE — DM 2026-10-12]`. Sono
   soldati, non predoni: marciano in due file da quattro e combattono in coppia,
   due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
   (+2, SRD). **Non gridano**: in un campo che dorme un grido sveglia il
@@ -1454,7 +1456,7 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   si ferma a cercare. La CD del blocco sale di **+2**; se il blocco fallisce,
   il fallimento conta doppio verso la pattuglia. Chi vola sopra i 20 m resta
   fuori dal fiuto.
-  **Se la squadra dei lupi li trova** `[INFERRED — needs DM confirmation]`
+  **Se la squadra dei lupi li trova** `[CANONE — DM 2026-10-12]`
   (il blocco fallito col fiuto addosso, o un PG che attacca per primo): dieci
   worg con dieci goblin in sella, EL 9, statistiche in A.6. Il worg **sbilancia**
   con il morso (SRD): due lupi su un bersaglio, uno lo butta a terra e l'altro
@@ -1482,7 +1484,7 @@ organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
   sveglio lancia *vedere invisibilità* (2° livello, lista dell'adepto) e va
   verso il rumore. Al ritorno a piedi, allora, nei blocchi in cui esce il
   **5** (il falò) l'invisibilità non protegge: c'è uno sciamano che la vede.
-  **Se uno sciamano li vede** `[INFERRED — needs DM confirmation]`: non
+  **Se uno sciamano li vede** `[CANONE — DM 2026-10-12]`: non
   combatte da solo. Grida il nome della sua banda, e dal blocco dopo la CD
   sale di +2, come per le vedette, e si somma al +4 del corno. Se lo
   colpiscono prima che gridi (vincendo l'iniziativa, o con un'azione
@@ -1891,7 +1893,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Non se ne accorgono** | il duello va come scritto |
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa** `[CANONE — DM 2026-10-07, Q25]`: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
-| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello `[INFERRED — needs DM confirmation]` |
+| **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG: nel ritorno a piedi tira con loro, alla postierla lo fa entrare Durin, e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
 | **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** `[CANONE — DM 2026-09-30, D14]` |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
@@ -2018,7 +2020,7 @@ motivo per cui la Scena 7 viene prima.
 - **Round 1** (se reagisce): **Ira Barbarica** (*«A ME, CANI! ABBATTETE LE
   OMBRE!»*) + **Occhio di Ossidiana** su Thorik (la minaccia). Delle quattro
   guardie, due restano al seggio e due vanno sul PG più esposto (qui sotto).
-- **Come combattono le quattro guardie** `[INFERRED — needs DM confirmation]`.
+- **Come combattono le quattro guardie** `[CANONE — DM 2026-10-12]`.
   Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
   lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
@@ -2075,7 +2077,7 @@ Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano.
   **−1 morale**, che annulla il successo in meno delle mura della Scena 10, se
   c'era. È un'azione standard. Le guardie lo seguono fuori senza combattere e
   Grask non suona; umiliato non vuol dire «vivo all'alba»: non sale sulla
-  breccia `[INFERRED — needs DM confirmation]`.
+  breccia `[CANONE — DM 2026-10-12]`.
 - ► **Esito nuovo**: *umiliato, non ucciso*. 🔴 **Ed è un problema, non un
   premio**: Zog'tar **vive**, e in ARC-08 i discendenti della sua orda, nella Mano Rossa, hanno un generale in più
   nella sua storia. Registra nell'Echo Ledger (§7).
@@ -2220,7 +2222,7 @@ Cronolito sposta nel tempo, non nello spazio: *àncora dimensionale* non lo
 ferma, e nemmeno una lotta. Chi lo teneva si ritrova con il suo mantello in
 mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
 un colpo: nessun tiro salvezza, e alla fine del suo turno il Cronolito lo porta
-via `[INFERRED — needs DM confirmation]`.
+via `[CANONE — DM 2026-10-12]`.
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
@@ -2338,7 +2340,7 @@ balestre dell'orda, e chi resta a terra lo affronta sul camminamento; **se sono 
 primo colpo lo prende colto alla sprovvista, poi l'Occhio di Ossidiana lo
 avverte (Appendice A.2).
 
-**Come combatte sulla breccia** `[INFERRED — needs DM confirmation]`. Il
+**Come combatte sulla breccia** `[CANONE — DM 2026-10-12]`. Il
 camminamento è largo quanto un tavolo da pranzo: ci si sta in uno, al massimo
 in due. Zog'tar è Grande e arriva a 3 m, quindi colpisce oltre il primo nano. Lassù
 **si stringe** (SRD): −4 al colpire e −4 alla CA finché resta sul camminamento,

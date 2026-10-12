@@ -26,22 +26,28 @@
       "tag": "dm"
     },
     {
-      "title": "II · La cassetta del DM: cast, pronuncia, read-aloud, suoni",
+      "title": "II · Il Seme-Mercato: l'ora della pergamena",
+      "file": "02-IL-SEME.md",
+      "tag": "dm",
+      "capolettera": false
+    },
+    {
+      "title": "III · La cassetta del DM: cast, pronuncia, read-aloud, suoni",
       "file": "../../ARC07-CASSETTA-DEL-DM.md",
       "tag": "dm"
     },
     {
-      "title": "III · Il Viaggio a Mille Anni fa",
+      "title": "IV · Il Viaggio a Mille Anni fa",
       "file": "../../ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
       "tag": "dm"
     },
     {
-      "title": "IV · La Forgia ricorda le ferite",
+      "title": "V · La Forgia ricorda le ferite",
       "file": "../../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md",
       "tag": "dm"
     },
     {
-      "title": "V · Durik, il compagno di Hella",
+      "title": "VI · Durik, il compagno di Hella",
       "file": "../sessione-resurrezione-mille-anni/08-SCHEDA-DURIK.md",
       "tag": "dm"
     }
