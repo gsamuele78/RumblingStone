@@ -117,6 +117,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-12 | CICLO-SESSIONE · REVISIONE-ARC07 | il corredo della serata dopo il 2026-09-25: `DEF-4` dalla Scena 5 all'esito del… | ✅ `homebrew/sessione-notte-e-alba/`: regia con colonna «tre ore» e «intera», quattro echi nuovi, le dieci boccette nel volume dei giocatori,… |
 | 2026-10-11 | REVISIONE-ARC07 | il Torque di Thorek I passa dal consiglio alla Scena 12: il re lo dà di persona… | ✅ `DEF-4`: Momento 5 della Scena 12 con box e battuta del re, Scena 4 e §8 B allineati, ripiego se la scena salta. Rigenerati i due booklet `.hb.md` che citano… |
 | 2026-10-11 | AUTOMAZIONE-STATO-SESSIONI · CICLO-SESS… | ADR-0090: la partita del primo tavolo riparte su `campaign-group-rumblingstone`… | 🟡 ADR proposta, da accettare dal DM. Provato in una copia del repo: ramo nuovo, log della serata del 2026-09-25, `state.yaml` a mano, `validate_state` e… |
 | 2026-10-11 | REVISIONE-ARC07 · STATO-E-ORDINE | canone delle dieci pozioni identificate a ≈372 DR e contratto del Seme-Mercato… | ✅ `DEF-4`: le dieci pozioni di Kettra, con la brodaglia degli sciamani e la cura con la cera nera. `DEF-1` §6-bis: il contratto del Seme in otto clausole e la… |
@@ -128,7 +129,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · REV… | la #230 diventa la PR più recente e completa (richiesta del DM): il piano di re… | ✅ Merge del ramo della #232 (`PIANO-RECUPERO`), con i conflitti risolti tenendo le righe aggiornate di questa PR. D1 e D2 di RECUPERO chiuse dalla richiesta de… |
 | 2026-10-10 | RECUPERO-DECISIONI-E-REVISIONI-INCOMPIU… | Apertura: audit di rami, PR e scratchpad | 🔵 Richiesta DM: cercare decisioni perse o interrotte e parti mai arrivate su `main`. Misurati 16 rami e 108 PR contro `f40ffeb`: quattro decisioni chiuse solo… |
 | 2026-10-10 | INDEX · RICERCA-AUDIT-COMPONENTI · REVI… | i sette casi dubbi del controllo dei piani, rifatti su commit, PR e rami (richi… | ✅ Nessuno era perso per sbaglio. Il più vicino: le schede A4 dei PG esistono solo nel ramo della #99 (`fce04907`, mai su `main`), tracciate come lotto 4g di RI… |
-| 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · DRAPPO-… | le tende del Campo Drow 1 (ADR-0042) e la numerazione dei lotti del Drappo (ric… | 🟡 **Tende**: la proposta di passare il blocco ⬛ a ⛺ cella per cella è stata provata e buttata: disegnava 483 tendine e trattava da tenda anche il cortile con l… |
 
 ## Le misure che si portano dietro
 

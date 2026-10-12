@@ -83,16 +83,17 @@
 > 🗓️ **La vostra serata** — per il gruppo che riparte dalla notte del 372 `[CANONE — DM 2026-10-07, Q43]`.
 > **Leggi solo questo, in quest'ordine**: §4 «L'orologio della notte» (10 min) ·
 > Scena 6 il mare di tende (15 min) · Scene 7 e 8 la tenda, con la mappa M7-C
-> e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · il box d'apertura della
-> Scena 10, su cui si chiude la serata. Al tavolo sono circa due ore. Il resto
-> del master (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti
-> chiedono qualcosa.
+> e l'Appendice A.2 (25 min) · Scena 9 Vatore (5 min) · Scene 10 e 11, le mura
+> e il duello, con l'Appendice A.1. Ci si ferma sull'esito del duello, prima
+> della Scena 12 `[CANONE — DM 2026-10-12]`. Al tavolo sono circa tre ore; la
+> regia della serata, nel suo booklet, dice dove tagliare. Il resto del master
+> (Atto I, la fortezza, il banco) è già giocato: lo apri solo se ti chiedono
+> qualcosa.
 > **Dove eravate**: consiglio fatto, giro della fortezza fatto (fucina,
 > alchimista, cappella, Zeth nelle gallerie), **3 tacche** sul foglio, nessuno
-> ha dormito. **Da segnare prima di cominciare**, dal registro della serata del
-> 25 settembre: il consiglio è finito con fiducia piena? ______ · pozioni di
-> invisibilità e di *volare* in mano: ______ · cosa hanno venduto a Gunnvor e al
-> forziere: ______ · le rune di Zeth comprate: ______.
+> ha dormito. La fiducia del consiglio, le pozioni in mano, cosa hanno venduto
+> e comprato stanno nel log della serata del 25 settembre, sul ramo del
+> gruppo: si leggono lì prima di cominciare.
 
 **Dove siete.** La Corona (Topazio + Smeraldo) ha aperto il portale del Tempo
 (affresco A6). I **quattro** Custodi — Hella di nuovo tra loro — precipitano
@@ -2160,7 +2161,8 @@ L'artefatto che stringe al petto è in **Appendice B**.
 >
 > 🛑 **Dove si ferma una serata**: la prima si ferma al primo box della Scena 10,
 > e il resto dell'atto è della sessione dopo. Il gruppo di oggi si è fermato
-> prima, alla Scena 5 (§4, «Dove si riprende»).
+> prima, alla Scena 5 (§4, «Dove si riprende»), e la sua serata dopo si ferma
+> sull'esito del duello, prima della Scena 12 `[CANONE — DM 2026-10-12]`.
 
 | Scena | Dove | Chi entra | Prova | Al tavolo |
 |---|---|---|---|---:|
