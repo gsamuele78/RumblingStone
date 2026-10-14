@@ -130,8 +130,8 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 ### Iniziativa tipo & pf da tracciare
 `Artemis +? · Tordek +? · Terros −1 · Thorik +?` — **Terros 345 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
-0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (80 = Overdrive
-3 attacchi/CA 24; 0 = petto aperto → colpo finale). **Fauci di Diamante 180
+0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
+3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 180
 pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 
 ### Il giro di Terros, in breve (3.5: UNA azione per round)
@@ -1190,16 +1190,18 @@ DV 18d10+40 (**160 pf**) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES
 non-artefatto entro 9 m, Riflessi **CD 22** nega · Immunità da costrutto ·
 **RD 15/adamantio E contundente** (solo i pugni di Tordek coi Bracieri passano
 pieni) · **Immunità alla magia** · **Vulnerabilità alla Risonanza degli
-artefatti**: i Bracieri **ignorano la RD** e infliggono pieno; **ogni colpo dei
-Bracieri che va a segno** crea una **crepa** `[CANONE — DM 2026-10-12, D85]` — **3 crepe → guscio infranto**.
+artefatti**: i Bracieri **ignorano la RD** e infliggono pieno, e i loro colpi
+sono **attacchi di contatto** (la Risonanza: CA di contatto 11). Il primo che va
+a segno in un round crea una **crepa**, al massimo una a round. **3 crepe →
+guscio infranto, ed è la vittoria** `[CANONE — DM 2026-10-14, D86]`.
 
 **Scontro in 3 fasi.** (1) *Il guscio* — la Sentinella è veloce, fluida, non
 goffa: Tordek usa mobilità/CA per sopravvivere e colpire **duro** (ogni pugno
 risuona come una campana; il mithral non si ammacca, **vibra**). (2) *La
-Risonanza* — sotto 80 pf o dopo 3 colpi buoni, il guscio si crepa (luce verde);
+Risonanza* — alla prima crepa il guscio si apre in luce verde `[CANONE — DM 2026-10-14, D86]`;
 il Golem entra in *Overdrive* (**3 attacchi/round, CA scende a 24**), voce di
 Moradin: *«Il metallo cede al calore E alla pressione: usa entrambi!»* (attiva
-i Colpi del Fuoco). (3) *Il colpo finale* — a 0 pf il petto si apre; un colpo
+i Colpi del Fuoco). (3) *Il colpo finale* — alla terza crepa (o a 0 pf) il petto si apre; un colpo
 senz'armi automatico estrae il **Geode di Smeraldo** prima che si rigeneri.
 
 **Il Risveglio (visione, stile Salvatore).** Il Geode galleggia verso Tordek,

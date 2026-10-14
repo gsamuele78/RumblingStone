@@ -124,5 +124,5 @@ Il 🔴 della Sentinella **non è chiuso**: D85 (a) rendeva crepa ogni colpo dei
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🔴 | la Sentinella ancora imbattibile | **domanda al DM**, D86 (a) |
-| 2-12 🟠 | crepe con tre significati, ritentativo, Artemis e Thorik durante il duello, salita, soglia, Ancoraggio, durata di Terros, Onda, Cristalli | **domanda al DM**, D86 (b): residui per i gruppi futuri, o un altro giro di correzioni |
+| 1 🔴 | la Sentinella ancora imbattibile | D86, deciso: colpi di contatto, una crepa a round, 3 crepe = vittoria |
+| 2-12 🟠 | crepe con tre significati, ritentativo, Artemis e Thorik durante il duello, salita, soglia, Ancoraggio, durata di Terros, Onda, Cristalli | D86, deciso: si correggono tutti. Il #2 è chiuso da D86, gli altri dieci sono **domanda al DM**, D87 |
