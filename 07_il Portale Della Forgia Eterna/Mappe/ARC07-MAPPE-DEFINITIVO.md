@@ -228,35 +228,39 @@ Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) �
                          N (parete nord)
                  🧲 🧲 🧲 🧲 🧲 🧲 🧲
               🧲 🧲 🧲 [⛓️ THORIK] 🧲 🧲 🧲      ⛓️ = Thorik immobilizzato
-            🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            (metallo incollato alla parete)
+            🧲 ⬜ ⬜ [🕸️ ARTEMIS] ⬜ ⬜ 🧲          (metallo incollato alla parete)
           🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
         🧲 ⬜ ⬜ ⬜ ⬜ 🤖 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🤖 = SENTINELLA (centro)
       W 🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲 E
         🧲 ⬜ ⬜ ⬜ ⬜ 🥋 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🥋 = TORDEK (unico in piedi)
           🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
-            🧲 ⬜ ⬜ [🕸️ ARTEMIS] ⬜ ⬜ 🧲          🕸️ = Artemis prono/indifeso
-              🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            (gravità 10×)
+            🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            🕸️ = Artemis prono, accanto a
+              🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            Thorik (gravità 10×)
                          S (porta sigillata)
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🧲 pareti di magnetite LETALI per chi porta metallo · ⬜ pavimento
 (gravità 2×, gestibile SOLO per Tordek) · 🤖 Sentinella di Mithral (160 pf) ·
-⛓️ Thorik immobilizzato alla parete · 🕸️ Artemis prono (gravità 10×).
+⛓️ Thorik immobilizzato alla parete · 🕸️ Artemis prono accanto a lui (gravità 10×).
 ```
 - **Tipo / scala**: tattica, esagono Ø 18 m. **Duello forzato** Tordek vs Sentinella.
 - **Terreno & altitudini**: pavimento a **gravità 2×** (gestibile solo da Tordek);
   le **pareti di magnetite** 🧲 *attirano il metallo* → chi porta armatura/armi
   metalliche viene **incollato** (Thorik ⛓️) o schiacciato a terra (Artemis 🕸️,
-  gravità localizzata 10×). Porta sud **sigillata** fino alla vittoria.
+  gravità localizzata 10×, accanto a Thorik). Porta sud **sigillata** fino alla
+  vittoria; se Tordek cade, la magnetite si spegne e la porta si riapre.
 - **Posizioni**: Sentinella al centro; Tordek unico libero (Bracieri = niente
   metallo che la magnetite prende — o meglio, la controlla). Thorik alla parete N,
-  Artemis prono a S.
+  Artemis prono accanto a lui, a N.
 - **Tattiche Sentinella (nemico)**: RD 15/adamantio + contundente → **solo i
-  Bracieri di Tordek** passano; a **80 pf** entra in **Overdrive** (3 attacchi/CA
-  24); a **0** il petto si apre → **colpo finale** = **Geode di Smeraldo** +
-  **risveglio pieno dei Bracieri** (Fuoco+Terra). Ignora Thorik/Artemis (immobili).
+  Bracieri di Tordek** passano, e i loro colpi sono di contatto (CA 11); il primo
+  a segno in un round apre una **crepa**. Alla **prima crepa** entra in
+  **Overdrive** (3 attacchi/CA 24); alla **terza crepa** (o a 0 pf) il petto si
+  apre → **colpo finale** = **Geode di Smeraldo** + **risveglio pieno dei
+  Bracieri** (Fuoco+Terra). Ignora Thorik e Artemis.
 - **Tattiche PG**: è **il momento di Tordek** (Shine Time). Thorik può liberarsi
-  (FOR CD 28) per aiutare; Artemis, se si spoglia del metallo, striscia fuori dalla
-  gravità localizzata. 3 crepe = guscio infranto.
+  (FOR CD 25) e da libero può solo Aiutare Tordek (+2 a CA o al tiro per colpire);
+  Artemis, prono, non si sposta: con un'azione standard aiuta Thorik (+2 alla FOR)
+  o incita Tordek (+2 al prossimo attacco). 3 crepe = vittoria.
 - **Evoluzione**: alla sconfitta la magnetite si spegne, la porta S si apre → T-6.
 - **Riferimento**: DEF-1 §7b.
 

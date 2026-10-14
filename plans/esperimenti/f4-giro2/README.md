@@ -15,6 +15,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-1 playtester (prevista; senza Cristalli; scelte storte) | 1 | 6 | 21 | `def1-PLAYTESTER.md` |
 | DEF-1 playtester, giro 3 dopo D84 (stessi percorsi) | 1 | 7 | 24 | `def1-PLAYTESTER-giro3.md` |
 | DEF-1 playtester, giro 4 dopo D85 (stessi percorsi) | 1 | 11 | 15 | `def1-PLAYTESTER-giro4.md` |
+| DEF-1 playtester, giro 5 dopo D86 e D87 (stessi percorsi) | 1 | 7 | 14 | `def1-PLAYTESTER-giro5.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -126,3 +127,18 @@ Il 🔴 della Sentinella **non è chiuso**: D85 (a) rendeva crepa ogni colpo dei
 |---|---|---|
 | 1 🔴 | la Sentinella ancora imbattibile | D86, deciso: colpi di contatto, una crepa a round, 3 crepe = vittoria |
 | 2-12 🟠 | crepe con tre significati, ritentativo, Artemis e Thorik durante il duello, salita, soglia, Ancoraggio, durata di Terros, Onda, Cristalli | D86, deciso: si correggono tutti. Il #2 è chiuso da D86, gli altri dieci sono D87, decisa il 2026-10-14: sì a tutte, applicate in DEF-1 |
+
+## Il triage del playtester di DEF-1, giro 5
+
+Il 🔴 della Sentinella imbattibile è chiuso: a raffica piena Tordek vince il 12-25% al primo tentativo e il 90% circa al secondo, perché le crepe restano; entrando curati e in difesa con Maestria vince il 70-85%. Il 🔴 nuovo è un'altra cosa: a −10 Tordek muore, e senza di lui la porta verso Terros non si apre. I 🟠 sono sette, tutti per i gruppi futuri.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 1 🔴 | Tordek può morire nel duello, e il gruppo resta bloccato | **domanda al DM**, D88 (1) |
+| 2 🟠 | il primo tentativo quasi sempre perso, senza una riga di regia | **domanda al DM**, D88 (2) |
+| 3 🟠 | la Sentinella senza tattiche | **domanda al DM**, D88 (3) |
+| 4 🟠 | quali invocazioni di Artemis passano sul golem | **domanda al DM**, D88 (4) |
+| 5 🟠 | la T-5 dell'Atlante contraddice il modulo | allineata al modulo: Overdrive alla prima crepa, FOR CD 25, Artemis accanto a Thorik |
+| 6 🟠 | il pilastro crollato sugli Xorn | **domanda al DM**, D88 (6) |
+| 7 🟠 | il +4 dell'Anello al canto, per chi | **domanda al DM**, D88 (7) |
+| 8 🟠 | la scheda completa dei Bracieri stampata per il duello | **domanda al DM**, D88 (8) |
