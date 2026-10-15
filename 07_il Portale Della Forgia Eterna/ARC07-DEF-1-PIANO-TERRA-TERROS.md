@@ -2265,7 +2265,11 @@ gravitazionale accanto all'Altare.
 
 **Poteri sbloccati dallo Smeraldo (Corona 2/3):**
 - **Volontà Adamantina** (passiva): immunità totale a *charme/compulsione* quando
-  Thorik **tocca terra/roccia nuda**.
+  Thorik **tocca terra/roccia nuda**, e +4 razziale ai TS contro gli effetti
+  mentali.
+- **Manto di Pietra e Spirito** (passivo): *Mente Vuota* permanente, **RD 5/epico
+  e male**, e *Comunione* 1/mese da un Nodo. È il potere più forte della Corona,
+  e lo sblocca questo rito.
 - **Gemma della Vera Terra** (Mag., 1/settimana): *Muro di Pietra*, guarigione
   di terreno corrotto o *Terremoto* controllato; ogni uso richiede preghiera e
   offerta (1.000 mo per Moradin).
@@ -2444,7 +2448,7 @@ contata a parte (audit WBL).
 2. **Carta «Corona 2/3»** (fine §9) — aggiorna l'handout della Corona: Topazio
    (fronte, oro-arancio) + Smeraldo (tempia sinistra, verde profondo) +
    l'incavo vuoto del Rubino che *aspetta*. I nuovi poteri (Volontà Adamantina,
-   Gemma della Vera Terra) sul retro.
+   Manto di Pietra e Spirito, Gemma della Vera Terra) sul retro.
 3. **Benedizioni di Moradin** — carte singole dal PDF (`BenedizioniDiMoradin.pdf`),
    inclusa la nuova **Forza della Montagna** (§2).
 4. *(Solo se Artemis prende il Seme-Mercato, §6-bis)* — bigliettino privato con la

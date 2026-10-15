@@ -16,6 +16,7 @@ l'altra (F4 di [LETTORE-PLAYTESTER](../../PIANO-LETTORE-E-PLAYTESTER.md)).
 | DEF-1 playtester, giro 3 dopo D84 (stessi percorsi) | 1 | 7 | 24 | `def1-PLAYTESTER-giro3.md` |
 | DEF-1 playtester, giro 4 dopo D85 (stessi percorsi) | 1 | 11 | 15 | `def1-PLAYTESTER-giro4.md` |
 | DEF-1 playtester, giro 5 dopo D86 e D87 (stessi percorsi) | 1 | 7 | 14 | `def1-PLAYTESTER-giro5.md` |
+| DEF-1 playtester, giro 6 dopo D88 (stessi percorsi) | 0 | 6 | 29 | `def1-PLAYTESTER-giro6.md` |
 
 ## Il triage del lettore di DEF-1
 
@@ -142,3 +143,18 @@ Il 🔴 della Sentinella imbattibile è chiuso: a raffica piena Tordek vince il 
 | 6 🟠 | il pilastro crollato sugli Xorn | D88 (6), decisa: applicata in DEF-1 |
 | 7 🟠 | il +4 dell'Anello al canto, per chi | D88 (7), decisa: applicata in DEF-1 |
 | 8 🟠 | la scheda completa dei Bracieri stampata per il duello | D88 (8), cambiata dal DM: lo stadio Terra si sveglia col rito dopo la Sentinella, quindi la scheda completa si stampa; si copre solo *Diventare una Collina* |
+
+## Il triage del playtester di DEF-1, giro 6
+
+Nessun 🔴: per DEF-1 la condizione del lotto c'è. Il duello con la Sentinella si vince al terzo turno di Tordek, e Tordek non ci può morire. A raffica piena cade circa una volta su due, e il secondo tentativo riparte dalle crepe. I numeri di Tordek sono stimati dalla sua scheda al 12°: quelle di Thorik e Artemis nel repo non ci sono.
+
+| # | Rilievo | Esito |
+|---|---|---|
+| 2 🟠 | l'affaticamento del viaggio si somma fino a esausto | **domanda al DM**, D89 (2) |
+| 8 🟠 | i nani ai Cristalli senza una prova da vincere | **domanda al DM**, D89 (8) |
+| 9 🟠 | la T-3 dell'Atlante descrive un'altra prova | allineata al §6 |
+| 18 🟠 | lo stordimento di Terros e il Diapason contro la Sentinella | **domanda al DM**, D89 (18) |
+| 30 🟠 | la T-6 dell'Atlante con le regole superate | rifatta dalla griglia e dalle regole del modulo, SVG rigenerati |
+| 33 🟠 | il *Manto di Pietra e Spirito* mancante al §9 | aggiunto al §9 e alla carta della Corona, come in `state.md` |
+
+I 29 🟡 restano nel report.

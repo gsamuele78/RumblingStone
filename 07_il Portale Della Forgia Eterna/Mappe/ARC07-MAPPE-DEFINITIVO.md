@@ -178,13 +178,18 @@ Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) �
 - **Posizioni notevoli**: 2 cristalli **crepati** (💚 E02, O07) → riforgiabili
   (bonus +2 alla vulnerabilità sonora di Terros). **Runa di Varis** 🔴 a J05 —
   l'Anello la capta entro 6 m (aggancio §6-bis).
-- **Prove (CD)**: Sapienza Magica / Intrattenere (canto) / Artigianato (gemme) /
-  Concentrazione, CD 15-22 (DEF-1 §6). Riforgiare un cristallo = Artigianato CD
-  20 → +2. Analizzare/estirpare il Seme di Varis = Sapienza Magica CD 20.
+- **Prove (CD)** (DEF-1 §6, a giri: ogni PG tira almeno una volta a giro, ogni
+  abilità vale una volta per PG a giro): Diplomazia CD 20 · Conoscenze (natura o
+  dungeon) CD 18 · Intrattenere (canto) CD 22 → +2, fallita −1 · Utilizzare
+  Oggetti Magici CD 15, solo con i gradi. Riforgiare un cristallo crepato =
+  Osservare CD 18 per trovarlo + 1 carica di *Vigore della Forgia* → +2.
+  Analizzare/estirpare il Seme di Varis = Sapienza Magica CD 20.
 - **Tattiche PG**: distribuire le prove sui punti forti; NON toccare i cristalli
   sani a caso (dissonanza → −2). Artemis decide sul Seme (avidità vs lealtà, §6-bis).
-- **Evoluzione**: 6 successi → il coro «benedice» il party (vulnerabilità sonora
-  di Terros armata). 3 fallimenti → dissonanza (1d6 sonico, niente bonus).
+- **Evoluzione**: 6 successi → la **Frequenza della Confusione**, la notizia che
+  Terros è vulnerabile al sonico e +2 ai TS contro di lui; 6 successi senza
+  fallimenti → anche il **Diapason Armonico**. 3 fallimenti → i Cristalli
+  urlano: **10d6 sonico a tutti, nessun TS**, e l'urlo sveglia e prepara Terros.
 - **Riferimento**: DEF-1 §6 e §6-bis.
 
 ## MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (sezione)
@@ -268,38 +273,53 @@ LEGENDA · 🧲 pareti di magnetite LETALI per chi porta metallo · ⬜ paviment
 
 ```
 ════════════════════════════════════════════════════════════════════════
- CAMERA CENTRALE — sfera Ø 60 m · ZERO-G ovunque TRANNE l'Altare (6 m)
+ CAMERA CENTRALE — sfera Ø 60 m · ZERO-G ovunque TRANNE l'ALTARE
+ ALTARE 13,5 × 9 m = 9 × 6 quadretti da 1,5 m, angoli smussati
  Vista: piano equatoriale attorno all'Altare (24 col × 16 righe · 1,5 m)
 ════════════════════════════════════════════════════════════════════════
-COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
-01    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← muro curvo: crash 2d6 se spinti (Push)
+COL → A B C D E F G H I J K L M N O P Q R S T U V W X
+01    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← muro curvo: crash 2d6 solo se sei già a <3 m
 02    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-03    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️      ZONA ZERO-G
+03    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        ZONA ZERO-G (Ø 60 m)
 04    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🔮 Artemis vola qui (Terros −4 vs aria)
 05    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-06    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟡 = bordo Altare (rune smeraldo)
-07    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩⬛⬛🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ⬛ = TERROS (init: sull'Altare)
-09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩⬛⬛🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️🟩🟩🟩🥋🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️Thorik  🥋Tordek (sull'Altare)
-11    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-12    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ALTARE Ø 6 m = gravità normale
+06    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟡 bordo di rune: ci finisci con la 1ª spinta
+07    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
+08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ⬛ TERROS (Enorme, 3×3 quadretti)
+09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
+10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
+11    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ALTARE 13,5 × 9 m (9×6 quadretti) = gravità normale
+12    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 13    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-14    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️      Earth Glide: Terros
-15    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️      entra/esce dall'Altare
+14    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        Earth Glide: Terros
+15    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️        entra/esce dall'Altare
 16    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🟩 Altare calpestabile (grav. normale) · 🟡 bordo/rune smeraldo
-⬛ Terros (Enorme, 4,5 m) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
-DILEMMA: sull'Altare = Earth Mastery +1 per Terros MA stabilità e no-Onda-in-
-aria; in zero-G = eviti Earth Mastery MA Push ti sbatte al muro (2d6) e ti
-serve volo/Equilibrio. Artemis in 🌫️ = quasi intoccabile (−4 boss) = star DPS.
-Terros NON vola: tienilo in zero-G → perde la rigenerazione e fatica.
+⬛ Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
 ────────────────────────────────────────────────────────────────────────
-SCENOGRAFIA (MAP 6): ingresso a NORD = 🌉 PONTE DI CRISTALLO (45 m; 50% crolla
-se Terros usa un colpo sismico → caduta 15 m, taglia la ritirata: non sostarci).
-PIATTAFORME LATERALI 🟦 a EST e OVEST (+3 m, scale): posizioni di tiro per
-Artemis. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
+⚙️ GEOGRAFIA DELLA SPINTA (3 m = 2 quadretti, 1/round — vedi §8 statblock)
+  ASSE LUNGO (E-O, 9 quadretti): Terros ne occupa 3, restano 3 per lato.
+    La 1ª spinta ti porta sul bordo 🟡; la 2ª ti butta nello zero-G.
+  ASSE CORTO (N-S, 6 quadretti): margine 1-2 quadretti. È l'ASSE LETALE:
+    di qui una sola spinta ti fa uscire. I giocatori lo imparano al round 2.
+  ↳ Questa asimmetria È il posizionamento: tenere il fianco corto verso
+    Terros è l'errore che paga il tank.
+────────────────────────────────────────────────────────────────────────
+DILEMMA DELL'ALTARE (ha DUE lati, non uno):
+  SULL'ALTARE  = Earth Mastery +1 per Terros contro di te,
+                 MA i due nani hanno +4 di Stabilità contro la Spinta.
+  IN ZERO-G    = eviti l'Earth Mastery, MA perdi del tutto la Stabilità
+                 (Tordek non resiste più a nessuna spinta) e ti serve volo.
+  Artemis in 🌫️ = quasi intoccabile (−4 al boss) = star DPS.
+  Terros NON vola: tienilo in zero-G → perde la rigenerazione e fatica.
+────────────────────────────────────────────────────────────────────────
+⚠️ QUESTA GRIGLIA È LO STATO DAL ROUND 2 (Altare già centrato). Al round 1
+l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).
+SCENOGRAFIA (MAP 6): ingresso a NORD = 🚪 SOGLIA di mithral (si apre da sé;
+l'Altare vi era ormeggiato). Dopo il distacco: ~27 m di zero-G fra soglia e
+Altare — la via di fuga esiste, ma va attraversata in volo o a spinte.
+Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
@@ -307,11 +327,13 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 ```
 - **Tipo / scala**: tattica BOSS, sfera Ø 60 m. **Terros l'Antico, CR 15, 345 pf**.
 - **Terreno & altitudini**: **ZERO-G** ovunque (🌫️) tranne l'**Altare** centrale
-  (Ø 6 m, gravità normale). In zero-G chi non vola si muove solo **spingendosi**
-  (linea retta, ½ mov) e combatte a **−4** senza appiglio; spinto contro il **muro
-  curvo** subisce **2d6** (crash). L'Altare è l'unico terreno «solido».
-- **Posizioni iniziali**: Terros ⬛ sull'Altare (L08-M09); Thorik 🛡️ (J10) e Tordek
-  🥋 (N10) sull'Altare; Artemis 🔮 in volo nella zona zero-G.
+  (13,5 × 9 m, gravità normale). In zero-G chi non vola si muove solo
+  **spingendosi** (linea retta, ½ mov) e combatte a **−4** senza appiglio; contro
+  il **muro curvo** subisce **2d6** solo se ci arriva da meno di 3 m. L'Altare è
+  l'unico terreno «solido».
+- **Posizioni dal round 2** (Altare già centrato): Terros ⬛ sull'Altare (K08-M10,
+  3×3); Thorik 🛡️ (J09) e Tordek 🥋 (N08) sull'Altare; Artemis 🔮 in volo nella
+  zona zero-G. Al round 1 l'Altare è ancora attraccato alla soglia nord.
 - **Tattiche Terros (nemico — soglie & giro, DEF-1 §8)**: **345 pf**; a **260** usa
   **Scudo di Geodi** (+4 CA, no critici); a **172** si ritira sull'Altare e
   **rigenera 15/round** a contatto con la pietra; a **0** si sbriciola → **Smeraldo**.
@@ -322,7 +344,8 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 - **Contro-momenti PG (add-on)**: Artemis (azione preparata) **disintegra le
   stalattiti** (contatto CA 12) ed è lo **star DPS** dall'alto (sfrutta sonico);
   Tordek **frantuma lo Scudo** con >15 danni sonici → Terros frastornato; Thorik lo
-  **inchioda** (FOR vs Lotta +40, con Aiuto+Benedizione) impedendo l'Earth Glide.
+  **inchioda** con una prova di FOR contro CD 25 statica (DEF-1 §8), impedendo
+  l'Earth Glide.
   ⚠️ Se hanno saltato i Cristalli (T-3): niente Frequenza/Diapason → Terros a piena
   forza, nessun round di nausea.
 - **Evoluzione**: a 0 pf → Rituale dello Smeraldo (§9, sinergia di tutti, emerge Durik).
