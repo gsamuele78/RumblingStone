@@ -91,7 +91,7 @@ copertina del §9.
 |---|---|
 | 90 nani + Dana | **+6 morale** att/danni/TS (annulla il −4 della disperazione, dopo due giorni d'assedio → netto **+2**); guariscono **2d8 pf**; **immuni a paura 1 ora**; +3 m velocità |
 | **Re Thorek** | l'acido **interrotto**; **stabilizzato** (non muore); riapre gli occhi. Non guarisce: resta a 8 pf ed **esausto** (l'acido): potrebbe alzarsi, a metà velocità e con −6 a Forza e Destrezza, ma Dana lo tiene giù e lui obbedisce (la cura vera di Dana arriva nell'ARC-08). Parla e comanda, non combatte `[CANONE — DM 2026-10-12, D77]` |
-| Nemici nella caverna (~30 orchi) | **Volontà CD 25** contro l'aura dell'Apparizione, come la presenza terrificante dell'SRD: ogni orco tira `[CANONE — DM 2026-10-03, D38]`. A differenza dell'SRD chi fa 20 resta scosso, e l'effetto dura tutta la scena: chi fugge non torna `[INFERRED — needs DM confirmation]`. Con Volontà −2 contro CD 25 passa solo chi fa 20, e resta **scosso** (−2 ai tiri per colpire, ai TS e alle prove); tutti gli altri sono **in panico** e fuggono dalla porta. Il DM non tira trenta TS: uno su venti resta, cioè uno o due orchi. La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
+| Nemici nella caverna (~30 orchi) | **Volontà CD 25** contro l'aura dell'Apparizione, come la presenza terrificante dell'SRD: ogni orco tira `[CANONE — DM 2026-10-03, D38]`. A differenza dell'SRD chi fa 20 resta scosso, e l'effetto dura tutta la scena: chi fugge non torna `[CANONE — DM 2026-10-15, D90]`. Con Volontà −2 contro CD 25 passa solo chi fa 20, e resta **scosso** (−2 ai tiri per colpire, ai TS e alle prove); tutti gli altri sono **in panico** e fuggono dalla porta. Il DM non tira trenta TS: uno su venti resta, cioè uno o due orchi. La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
 
 ### Lo stato dell'ARC-07 in uscita (canone — `state.md §1/§6`)
 - **Corona di Adamantio**: **3 gemme accese** (Topazio/Tempo, Smeraldo/Terra, Rubino/Leggenda). Il Rubino si è usato **una volta sola**, come motore del ritorno; speso, **resta nell'incasso** e **la Corona si completa**: +3 e Senzienza dall'arrivo (DM, DEF-4 D6; §3).
@@ -168,10 +168,9 @@ Montagna, nell'ultima resistenza della Scena 2, con il drago sulle mura.
 Il box è nella **Scena 1**.
 
 **Terreno (callout):** transizione (nessuna azione durante lo strappo); TS
-**Tempra CD 15** o **frastornati 1 round** all'arrivo: il contraccolpo del salto è
-del corpo, e si resiste con la Tempra; frastornato e non stordito, così nessuno
-lascia cadere quello che ha in mano. Prima era Volontà
-`[INFERRED — needs DM confirmation]`.
+**Volontà CD 15** o **frastornati 1 round** all'arrivo: lo strappo fra le ere
+scuote la mente, e si resiste con la Volontà; frastornato e non stordito, così
+nessuno lascia cadere quello che ha in mano `[CANONE — DM 2026-10-15, D90]`.
 
 ### ZONA 2 — Il Cuore della Montagna (la caverna sacra sotto Hammerfist, 1372)
 Il box è nella **Scena 2**.
@@ -216,7 +215,7 @@ battute della Scena 13. Qui c'è solo il filo, e nessuna azione.
 > curvo su un trono. Poi pietra. Fuoco. Il rombo di una battaglia. Siete tornati,
 > e siete tornati nel momento peggiore.*
 
-All'arrivo, **Tempra CD 15** o frastornati 1 round (§2, Zona 1).
+All'arrivo, **Volontà CD 15** o frastornati 1 round (§2, Zona 1).
 
 <!-- apparato -->
 ⚠️ *Il box di prima faceva accendere il Rubino «sulle mura, all'alba», e da
@@ -268,10 +267,10 @@ MAPPA CM-1), dove i PG arrivano al Round 8.
 > pulsa fra luce e ombra, intorno a Hella spuntano dalla pietra radici di
 > cristallo. Novanta nani rialzano la testa tutti insieme. Gli orchi no. Che fate?*
 
-I PG hanno un **round di sorpresa** (MAPPA CM-1). Chi ha fallito la Tempra
+I PG hanno un **round di sorpresa** (MAPPA CM-1). Chi ha fallito la Volontà
 della Scena 1 è frastornato e lo perde: arriva, ma non agisce ancora.
 
-**L'ordine** `[INFERRED — needs DM confirmation]`: l'aura scatta con l'apparizione, e i TS degli orchi si
+**L'ordine** `[CANONE — DM 2026-10-15, D90]`: l'aura scatta con l'apparizione, e i TS degli orchi si
 risolvono subito (§0-bis, «Effetti immediati»); poi il round di sorpresa dei PG,
 un gesto a testa; poi l'iniziativa, e si passa alla Scena 3.
 
@@ -419,7 +418,7 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
     restano due gettano le armi.
   - **I novanta nani** non si tirano: il DM li muove come tre blocchi (le tre
     file della mappa), e un blocco travolge ciò che ha davanti
-    `[INFERRED — needs DM confirmation]`.
+    `[CANONE — DM 2026-10-15, D90]`.
 
 **Comparse**
 
@@ -490,13 +489,13 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono riposare prima di combattere** | Impossibile: sono materializzati **in mezzo** all'ultima resistenza, le porte già cedute. Il riposo è dall'altra parte della battaglia (ARC-08). |
-| **Vogliono curare/salvare Re Thorek subito** | L'Apparizione ha già fermato l'acido (§4). Ha **195 pf** massimi (ARC-08). Lo tiene giù l'**esausto**, non i pf: *ristorare inferiore* lo porta ad affaticato, *ristorare* o *guarigione* lo tolgono del tutto. Quando non è più esausto si rialza, anche se è ancora a 8 pf; ogni cura in più gli alza i pf `[CANONE — DM 2026-10-12, D77]`. La *Presenza Regale* del re in piedi (+3 morale, ARC-08) **non si somma** al bonus dell'Apparizione: i bonus morali non si sommano, vale il più alto (SRD). Nel ramo «meno luminoso» (+4) la sua *Chiamata alle Armi* (+5, 3 al giorno) lo supera, e vale quella. Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Bel gesto, premialo. |
+| **Vogliono curare/salvare Re Thorek subito** | L'Apparizione ha già fermato l'acido (§4). Ha **195 pf** massimi (ARC-08). Lo tiene giù l'**esausto**, non i pf: *ristorare inferiore* lo porta ad affaticato, *ristorare* o *guarigione* lo tolgono del tutto. Quando non è più esausto si rialza, anche se è ancora a 8 pf; ogni cura in più gli alza i pf `[CANONE — DM 2026-10-12, D77]` `[CANONE — DM 2026-10-15, D90]`. La *Presenza Regale* del re in piedi (+3 morale, ARC-08) **non si somma** al bonus dell'Apparizione: i bonus morali non si sommano, vale il più alto (SRD). Nel ramo «meno luminoso» (+4) la sua *Chiamata alle Armi* (+5, 3 al giorno) lo supera, e vale quella. Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Bel gesto, premialo. |
 | **Chiedono conto del viaggio a Dana/Thorek** | Nessuno sa del viaggio temporale (è un segreto di Moradin). Dana lo legge come profezia compiuta. I PG possono rivelare o tacere: rivelare rafforza il mito (Custodi Eterni), tacere lo rende leggenda ancora più grande. |
 | **Madre Dana cade, o non può aprire il portale** | la caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche che Dana guida (chieriche di 5°, con *cura ferite gravi*), in ginocchio fra i capi al centro dell'anello (Bestiario), più lente e con la voce che trema `[INFERRED — needs DM confirmation]`. L'ARC-08 comincia uguale, con un'ombra in più |
 | **Chiudono la porta, o inseguono gli orchi nel corridoio** | I battenti di mithral sono scardinati dagli arieti e non si chiudono: il varco, 6 m, si blocca solo con la magia (*muro di pietra*, *muro di spine*) `[CANONE — DM 2026-10-12, D77]`. Se è bloccato prima della fine del round 1, gli hobgoblin restano fuori e la pulizia finisce con gli orchi rimasti; gli orchi in panico chiusi dentro si rannicchiano (SRD) e si arrendono. Chi insegue nel round 1 trova gli hobgoblin nel corridoio, a muro di scudi. Sul lato ARC-07, dopo gli hobgoblin della Scena 3, la caverna resta sgombra: la prossima ondata, i bugbear, è dell'ARC-08. Una porta murata con *muro di pietra* regge; chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[INFERRED — needs DM confirmation]` |
 | **Si fermano a curarsi dopo la pulizia** | Dana e le Cantitrici danno una *cura ferite gravi* a chi la chiede, nel minuto che serve ad aprire il portale. Fermarsi di più costa: ogni 10 minuti Fauci abbatte una torre della Porta Ovest, e l'ARC-08 comincia con una torre in meno `[CANONE — DM 2026-10-12, D77]` |
 | **Vogliono inseguire subito Fauci / saltare l'handoff** | Possono! Il portale di Dana è la via più rapida ai bastioni. Non c'è un cancello — c'è solo il ritmo: da qui in poi è ARC-08. |
-| **FALLIMENTO — e se arrivassero "troppo tardi"?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente — è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**. Il criterio: il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[INFERRED — needs DM confirmation]`. La Catena spezzata è una vittoria e non conta. Allora il bonus morale scende a +4 e la riga dei nemici cambia come dice la Scena 3 (niente TS: cinque orchi scossi e il capo restano, gli hobgoblin entrano prima); il resto della tabella del §0-bis resta uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta. |
+| **FALLIMENTO — e se arrivassero "troppo tardi"?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente — è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**. Il criterio: il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[CANONE — DM 2026-10-15, D90]`. La Catena spezzata è una vittoria e non conta. Allora il bonus morale scende a +4 e la riga dei nemici cambia come dice la Scena 3 (niente TS: cinque orchi scossi e il capo restano, gli hobgoblin entrano prima); il resto della tabella del §0-bis resta uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta. |
 
 ---
 
@@ -535,7 +534,7 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 > **Somma d'arco (ARC-07)**: Terra ~11.600 + Affreschi ~1.900 + Resurrezione
 > ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**. Con il Fuoco (P3)
 > già alle spalle, i PG hanno i PX del **14°** già all'arrivo, e il livello si prende al
-> primo riposo, cioè dopo la battaglia di Hammerfist (D8) `[INFERRED — needs DM confirmation]`. Le parti giocate non si ritoccano.
+> primo riposo, cioè dopo la battaglia di Hammerfist (D8) `[CANONE — DM 2026-10-15, D90]`. Le parti giocate non si ritoccano.
 
 ### B. Tesoro pregenerato (in uscita — handoff agli audit a valle)
 > Questo beat **non genera loot ordinario nuovo** (è un arrivo in battaglia): il

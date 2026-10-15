@@ -15,14 +15,14 @@ Chiave: [`plans/quiz/ARC07-DEF-5.json`](../../quiz/ARC07-DEF-5.json), 12 domande
 | | DEF-5 |
 |---|---:|
 | Parole degli appunti | 351 |
-| Giusta dagli appunti | 9 |
-| Giusta solo a libro aperto | 3 |
+| Giusta dagli appunti | 10 |
+| Giusta solo a libro aperto | 2 |
 | **Sbagliata anche a libro aperto** | **0** |
 
 Le risposte, domanda per domanda, sono in `PUNTEGGIO.txt` e si rigenerano con
 `quiz_lettura.py` dai due file `RISPOSTE-*.json`. Ho riletto a mano le dodici
-coppie: nessun falso positivo, **un falso negativo** (q4, sotto). Contato a
-mano, il conto vero è **10 su 12** dagli appunti.
+coppie: nessun falso positivo, **un falso negativo** (q4, sotto). Il DM ha
+allargato la chiave il 2026-10-15 e il correttore ora conta **10 su 12**.
 
 ## Cosa dicono
 
@@ -34,12 +34,12 @@ dove arrivano, chi è sull'altare, come finisce la serata, dove porta il
 portale e cosa si consegna prima. DEF-5 è corto (tre scene) e la sua ossatura
 sta nel §0-bis.
 
-**Le tre che il correttore dà per sepolte**, e cosa ne faccio:
+**Le tre che il correttore dava per sepolte**, e cosa ne faccio:
 
 | Domanda | Perché si perde | Esito |
 |---|---|---|
 | q3 · chi parla per primo | la battuta di Dana («Sono tornati.») sta in mezzo alla Scena 2, dopo gli effetti | resta: è una battuta, il DM la trova quando legge la scena |
-| q4 · cosa fa l'aura agli orchi | non si perde: gli appunti dicono «Volontà CD 25: uno o due restano scossi, gli altri fuggono», e la chiave accetta «volont» o «25» solo insieme a «panico» | falso negativo del correttore. La chiave è approvata e non la tocco da solo: allargarla a `['volont', 'fugg']` è una proposta al DM |
+| q4 · cosa fa l'aura agli orchi | non si perde: gli appunti dicono «Volontà CD 25: uno o due restano scossi, gli altri fuggono», e la chiave accetta «volont» o «25» solo insieme a «panico» | falso negativo del correttore. La chiave accetta ora anche `['volont', 'fugg']` (DM, 2026-10-15, D90) |
 | q8 · il costo dei due Treant | sta in una cella di tabella, nella riga di Hella | resta, ma ora la cella dice cos'è l'Evocazione (era il rilievo del terzo agente) |
 
 ## Le ambiguità trovate a libro aperto, e cosa ho corretto
@@ -47,7 +47,7 @@ sta nel §0-bis.
 Il terzo agente ha segnalato sette punti. Quelli che il testo risolve da sé li
 ho corretti nel modulo. Nessuno cambia il canone, ma la q7 riformula una riga
 marcata D77 («si rialza, con qualunque cura sopra gli 8 pf»): l'ho letta come
-«si rialza anche a 8 pf», ed è una lettura mia, da far confermare al DM.
+«si rialza anche a 8 pf», e il DM l'ha confermata il 2026-10-15 (D90).
 
 | Domanda | Rilievo | Esito |
 |---|---|---|
