@@ -151,7 +151,9 @@ Montagna, nell'ultima resistenza della Scena 2, con il drago sulle mura.
 
 ### ⚒️ TORDEK — il pugno che ha imparato a trattenersi (Mercer support)
 - Torna con i Bracieri completi e la disciplina della Cintura (che al −1000 si è
-  rifiutata: il vero scontro è QUI). Il suo momento è **rivedere Hella viva al
+  rifiutata contro Skullcrusher: il vero scontro è Fauci, sui bastioni, nell'ARC-08).
+  Nella Scena 3 la Cintura funziona come contro Zog'tar (`DEF-4` Scena 8): 3
+  cariche al giorno, e quelle che spende qui non le ha contro il drago. Il suo momento è **rivedere Hella viva al
   suo fianco nel presente** — non un ricordo, non uno spirito: lei.
 
 ### 🔮 ARTEMIS — il predone che ha visto il futuro del suo nemico (Andor support)
@@ -392,9 +394,9 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
 
 - **🎚️ [FAST-PLAY]**: i PG + Treant + 90 nani potenziati finiscono gli orchi
   rimasti e respingono gli hobgoblin in **2 round** (in combattimento completo
-  sono 4) (massacro, zero perdite naniche — sono troppo
+  sono 4-5) (massacro, zero perdite naniche — sono troppo
   potenziati dall'Apparizione). Narrazione, nessun tiro necessario.
-- **🎚️ [COMBATTIMENTO COMPLETO]**: gioca 4 round su CM-1 come "scontro di
+- **🎚️ [COMBATTIMENTO COMPLETO]**: gioca 4-5 round su CM-1 (finisce quando cade l'ultimo dei cinque hobgoblin che passano) come "scontro di
   apertura" a bassa posta: serve a far **provare ai giocatori la nuova potenza**
   (Corona 3 gemme, Hella viva, Bracieri completi) prima dell'ARC-08. Un round di
   gloria, non un rischio. I poteri nuovi stanno nelle pagine giocatore degli
@@ -444,8 +446,11 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
   consegne. Il silenzio, dopo il boato, è assordante — è il momento del handoff.
 - **Se i PG spendono tempo/risorse a curare Re Thorek** (invece di combattere):
   lo tiene giù l'esausto, non i pf. *Ristorare* o *guarigione* lo tolgono (il gruppo ne ha
-  pergamene), *ristorare inferiore* lo porta ad affaticato, e da affaticato si rialza già (§6). Gli orchi
-  durano un round in più, ma Re Thorek si rialza e guida i suoi nell'ARC-08
+  pergamene), *ristorare inferiore* lo porta ad affaticato, e da affaticato si rialza già (§6).
+  Tutti e due si lanciano in 3 round, anche da pergamena (SRD). *Ristorare* è da
+  chierico: la pergamena la legge Artemis con Usare Oggetti Magici (CD 27).
+  *Ristorare inferiore* è anche da druido, e Hella lo lancia o lo legge. Gli orchi
+  durano i round del lancio in più, ma Re Thorek si rialza e guida i suoi nell'ARC-08
   (*Presenza Regale*, +3 morale; §6: non si somma a quello dell'Apparizione). Scelta
   valida, premiala.
 - **Se il tavolo ha giocato male il −1000** (§6, Apparizione «meno luminosa»):
