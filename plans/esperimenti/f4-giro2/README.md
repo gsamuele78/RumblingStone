@@ -134,11 +134,11 @@ Il 🔴 della Sentinella imbattibile è chiuso: a raffica piena Tordek vince il 
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🔴 | Tordek può morire nel duello, e il gruppo resta bloccato | **domanda al DM**, D88 (1) |
-| 2 🟠 | il primo tentativo quasi sempre perso, senza una riga di regia | **domanda al DM**, D88 (2) |
-| 3 🟠 | la Sentinella senza tattiche | **domanda al DM**, D88 (3) |
-| 4 🟠 | quali invocazioni di Artemis passano sul golem | **domanda al DM**, D88 (4) |
+| 1 🔴 | Tordek può morire nel duello, e il gruppo resta bloccato | D88 (1), decisa: applicata in DEF-1 |
+| 2 🟠 | il primo tentativo quasi sempre perso, senza una riga di regia | D88 (2), decisa: applicata in DEF-1 |
+| 3 🟠 | la Sentinella senza tattiche | D88 (3), decisa: applicata in DEF-1 |
+| 4 🟠 | quali invocazioni di Artemis passano sul golem | D88 (4), decisa: applicata in DEF-1 |
 | 5 🟠 | la T-5 dell'Atlante contraddice il modulo | allineata al modulo: Overdrive alla prima crepa, FOR CD 25, Artemis accanto a Thorik |
-| 6 🟠 | il pilastro crollato sugli Xorn | **domanda al DM**, D88 (6) |
-| 7 🟠 | il +4 dell'Anello al canto, per chi | **domanda al DM**, D88 (7) |
-| 8 🟠 | la scheda completa dei Bracieri stampata per il duello | **domanda al DM**, D88 (8) |
+| 6 🟠 | il pilastro crollato sugli Xorn | D88 (6), decisa: applicata in DEF-1 |
+| 7 🟠 | il +4 dell'Anello al canto, per chi | D88 (7), decisa: applicata in DEF-1 |
+| 8 🟠 | la scheda completa dei Bracieri stampata per il duello | D88 (8), cambiata dal DM: lo stadio Terra si sveglia col rito dopo la Sentinella, quindi la scheda completa si stampa; si copre solo *Diventare una Collina* |

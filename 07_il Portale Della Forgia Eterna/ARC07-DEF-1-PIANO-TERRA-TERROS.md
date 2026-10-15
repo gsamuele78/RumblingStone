@@ -89,7 +89,9 @@ proposito**: gli artefatti unici compensano l'assenza di Hella.
 **Cosa stampare.** La **Quick-Reference §0-bis** (una pagina, tutto lo
 scontro); gli **handout del §13**; le 6 mappe (§MAPPE); gli statblock di
 **Terros** (§8), della **Sentinella di Mithral** (§7b), degli **Xorn** (§5);
-la scheda Bracieri completa di Tordek;
+la scheda Bracieri completa di Tordek: lo stadio Terra si sveglia col rito dopo
+la Sentinella (§7b), prima di Terros. A un gruppo futuro copri il §7 della
+scheda, *Diventare una Collina*, che si sblocca solo abbattendo Terros `[CANONE — DM 2026-10-15, D88]`;
 il PDF **Benedizioni di Moradin**.
 
 **L'orologio all'inizio.** Countdown di Hammerfist **3g 20h** al risveglio
@@ -119,9 +121,9 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Seme-Mercato di Varis: analisi/estirpo — Sapienza Magica | 20 | §6-bis |
 | Tempio: salto di Tordek — Saltare (Take 10 = 26 ✓) | 25 | §7a |
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
-| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]` | 25 `[CANONE — DM 2026-10-12, D79]` | §7b |
+| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) `[CANONE — DM 2026-10-12, D68]` · se Tordek cade, si ritenta dopo un riposo `[CANONE — DM 2026-10-12, D37]`, e a −1 pf o meno resta stabile `[CANONE — DM 2026-10-15, D88]` | 25 `[CANONE — DM 2026-10-12, D79]` | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
-| Frequenza della Confusione — Intrattenere Canto (Anello +4): all'apertura una prova per PG, ne servono 2; in combattimento azione standard, vale fino al turno successivo di chi canta `[CANONE — DM 2026-10-12, D84]` | 18 | §8 |
+| Frequenza della Confusione — Intrattenere Canto (Anello +4 a chi canta con Artemis): all'apertura una prova per PG, ne servono 2; in combattimento azione standard, vale fino al turno successivo di chi canta `[CANONE — DM 2026-10-12, D84]` | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
 | Terros: Onda Gravitazionale / Pioggia di Stalattiti — Riflessi | 22 | §8 |
 | **«Radice a Terra»** (Thorik inchioda Terros) — prova di FOR vs **CD statica** (non contrapposta) | 25 | §8 |
@@ -561,7 +563,9 @@ sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 - **A — Demolizione ingegneristica (Shine Time di Tordek).** Conoscenze
   (Ingegneria/Dungeoneering) **CD 18** per l'angolo di rottura, poi colpo
   mirato (FOR o attacco) **CD 20** sul punto di stress → il pilastro crolla
-  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza).
+  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza). Chi è dentro la pietra
+  prende metà danni ed esce stordito per 1 round; lo scontro si fa comunque
+  `[CANONE — DM 2026-10-15, D88]`.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
   (Intimidire o Diplomazia **CD 18**, come la via C `[CANONE — DM 2026-10-12, D36]`) per accerchiarli in
@@ -1165,7 +1169,8 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 > occhi senza volto si girano verso di te.*
 
 **La Sentinella è una prova, come Terros è un voto** `[CANONE — DM 2026-10-12, D37]`.
-- **Se Tordek cade** (0 pf o meno), la Magnetite si spegne e la Sentinella
+- **Se Tordek cade** (0 pf o meno), la Magnetite si spegne. A −1 pf o meno
+  Tordek resta stabile, e non muore nel duello `[CANONE — DM 2026-10-15, D88]`. Spenta la Magnetite, la Sentinella
   torna immobile al suo posto. Thorik e Artemis sono di nuovo liberi. Il duello
   si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
   ordinaria. Al secondo tentativo la Sentinella riparte dai pf e dalle crepe a
@@ -1186,6 +1191,9 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 - **Artemis**, prono, può parlare, e un suo incantesimo **senza componenti
   somatiche** passa. Con un'azione standard aiuta Thorik (+2 alla sua prova di
   FOR) oppure incita Tordek (+2 al suo prossimo attacco) `[CANONE — DM 2026-10-14, D87]`.
+  Dentro la Magnetite passano solo le invocazioni su sé stesso o sui compagni:
+  *Chilling Tentacles* e *Flee the Scene* lì non funzionano, perché la gravità
+  10× schiaccia anche loro `[CANONE — DM 2026-10-15, D88]`.
 - **Thorik libero** può solo Aiutare Tordek: +2 alla CA o al tiro per colpire.
   Se attacca la Sentinella, lei lo ignora, e la prova resta di Tordek `[CANONE — DM 2026-10-14, D87]`.
 
@@ -1217,6 +1225,16 @@ il Golem entra in *Overdrive* (**3 attacchi/round, CA scende a 24**), voce di
 Moradin: *«Il metallo cede al calore E alla pressione: usa entrambi!»* (attiva
 i Colpi del Fuoco). (3) *Il colpo finale* — alla terza crepa (o a 0 pf) il petto si apre; un colpo
 senz'armi automatico estrae il **Geode di Smeraldo** prima che si rigeneri.
+
+**Regia del duello** `[CANONE — DM 2026-10-15, D88]`. Il primo tentativo è il più duro: dalla
+prima crepa l'Overdrive picchia tre volte a round, e a raffica piena Tordek
+cade spesso prima della terza. Prima di aprire la porta, ricorda al gruppo che
+Tordek entrerà da solo, e lascia che lo curino. In sala, se il giocatore
+combatte sulla difensiva, con Maestria, i colpi di contatto lo fanno vincere
+comunque in tre turni, e la CA più alta lo tiene in piedi. Se cade, il secondo
+tentativo riparte dalle crepe già aperte. **Le tattiche della Sentinella**:
+Attrazione Fatale strappa l'arma o lo scudo più vicino, mai l'Anello; se
+Tordek si allontana lo insegue; Thorik e Artemis li ignora.
 
 **Il Risveglio (visione, stile Salvatore).** Il Geode galleggia verso Tordek,
 il guanto sinistro si apre come petali d'acciaio. TS **Volontà CD 20** (fallito:
@@ -1420,8 +1438,9 @@ una sfera nuda:
 > resta — è la casa di Terros. **Un solo boss, zero doppioni.**
 
 **Apertura sonica.** Se il party entra cantando la **Frequenza della
-Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4; tira
-ognuno dei tre PG, una volta, e servono 2 successi su 3) — Terros si sveglia **nauseato**: **−4 attacco/CA il round
+Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4 a
+chiunque canti con lui `[CANONE — DM 2026-10-15, D88]`; tira ognuno dei tre PG, una volta, e servono
+2 successi su 3) — Terros si sveglia **nauseato**: **−4 attacco/CA il round
 1**. Vale **solo** se hanno guadagnato la Frequenza dai Cristalli (§6): se
 hanno **saltato** l'incontro non la possiedono, e se hanno fatto **fallimento
 critico** l'urlo ha già svegliato e preparato Terros. In entrambi i casi: boss
@@ -1429,7 +1448,7 @@ a piena forza — la scelta al campo dei Cristalli SI SENTE qui.
 
 **Cantare durante lo scontro** `[CANONE — DM 2026-10-12, D84]`. Dopo l'apertura, la Frequenza la
 canta un PG alla volta: **azione standard**, Intrattenere (Canto) **CD 18**
-(+4 con l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
+(+4 se canta Artemis, che ha l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
 è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto). La
 modalità sonica di Artemis è un'altra cosa: passa dall'Anello con un'azione
 veloce, e la regola è più avanti.
