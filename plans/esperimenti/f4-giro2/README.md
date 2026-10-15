@@ -150,11 +150,13 @@ Nessun 🔴: per DEF-1 la condizione del lotto c'è. Il duello con la Sentinella
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 2 🟠 | l'affaticamento del viaggio si somma fino a esausto | **domanda al DM**, D89 (2) |
-| 8 🟠 | i nani ai Cristalli senza una prova da vincere | **domanda al DM**, D89 (8) |
+| 2 🟠 | l'affaticamento del viaggio si somma fino a esausto | D89 (2), decisa: applicata in DEF-1 |
+| 8 🟠 | i nani ai Cristalli senza una prova da vincere | D89 (8), decisa: applicata in DEF-1 |
 | 9 🟠 | la T-3 dell'Atlante descrive un'altra prova | allineata al §6 |
-| 18 🟠 | lo stordimento di Terros e il Diapason contro la Sentinella | **domanda al DM**, D89 (18) |
+| 18 🟠 | lo stordimento di Terros e il Diapason contro la Sentinella | D89 (18), decisa: applicata; il Diapason sulla Sentinella fa il *grido superiore* del canone giocato, senza stordirla |
 | 30 🟠 | la T-6 dell'Atlante con le regole superate | rifatta dalla griglia e dalle regole del modulo, SVG rigenerati |
 | 33 🟠 | il *Manto di Pietra e Spirito* mancante al §9 | aggiunto al §9 e alla carta della Corona, come in `state.md` |
 
 I 29 🟡 restano nel report.
+
+DEF-1 è chiuso il 2026-10-15, su richiesta del DM, senza un settimo giro.

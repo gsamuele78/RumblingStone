@@ -66,7 +66,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
 | SCENA 8 | FOR) | 25 |
 | SCENA 8 | e perdi l'azione di movimento (Riflessi | 15 |
-| SCENA 8 | caster. Move Earth lo stordisce (Tempra | 15 |
+| SCENA 8 | blocca 1 round, senza stordirlo (Tempra | 15 |
 | SCENA 8 | Riflessi | 22 |
 | SCENA 8 | e perde l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | Thorik resta con Riflessi | 22 |

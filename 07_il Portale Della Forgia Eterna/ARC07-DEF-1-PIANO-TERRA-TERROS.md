@@ -502,9 +502,11 @@ la Sentinella).
 
 > **Gestione del viaggio (per il DM).** Tra un incontro e l'altro chiedi
 > **una prova di gruppo** ogni zona (Sopravvivenza/Equilibrio CD 12 con la
-> Benedizione) non per bloccare, ma per **colorare la fatica**: chi fallisce
-> arriva all'incontro **affaticato** (nessun riposo tra le zone). È il piano
-> che consuma le risorse prima ancora del boss.
+> Benedizione) non per bloccare, ma per **colorare la fatica**: tira ognuno
+> per sé, e chi fallisce arriva all'incontro **affaticato**, fino alla fine di
+> quello scontro. La fatica non si somma, e una carica di *Vigore della
+> Forgia* la toglie `[CANONE — DM 2026-10-15, D89]`. È il piano che consuma le risorse prima ancora
+> del boss.
 
 ### Ambiente dinamico del piano (recuperato da TACTICAL-GRIDS MAP 5 — non tagliare)
 
@@ -749,7 +751,9 @@ centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 **Complessità: 6 successi prima di 3 fallimenti.** Tutti e 3 i PG contribuiscono.
 Si tira a giri: a ogni giro ogni PG tira almeno una volta, e ogni abilità vale
 una volta per PG a giro `[CANONE — DM 2026-10-14, D87]`. Utilizzare Oggetti Magici si usa solo con i
-gradi, come nell'SRD.
+gradi, come nell'SRD. Chi non ha un'abilità utile può Aiutare un compagno (+2)
+o passare il giro senza fallimento; e i nani hanno la loro prova, qui sotto
+`[CANONE — DM 2026-10-15, D89]`.
 
 | Abilità (chi) | CD | Effetto |
 |---|---|---|
@@ -757,6 +761,7 @@ gradi, come nell'SRD.
 | Conoscenze (Natura/Dungeoneering) | 18 | Dimostrare di capire l'ecosistema → +1 |
 | Intrattenere (Canto) | 22 | Cantare in armonia coi cristalli → **+2** (fallito: **−1** ai successi) |
 | Utilizzare Oggetti Magici (Corona/Anello) | 15 | Riconoscono Moradin → +1 |
+| Conoscenze (architettura e ingegneria) o Cercare sulla pietra (i nani) | 18 | Leggere come crescono i cristalli e dove la pietra li regge → +1 |
 | **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, una delle Benedizioni di Moradin che il gruppo ha dalla Sala (Scena 1): 3 cariche al giorno, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
 
 > **La prova del cristallo crepato è il cuore emotivo della scena** (il tuo
@@ -1266,6 +1271,11 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 > resta la spallata coordinata Pugno Frana + Bull Rush). La Frequenza,
 > invece, è conoscenza e resta utilizzabile.
 
+**Per un gruppo futuro** `[CANONE — DM 2026-10-15, D89]`. Se il gruppo suona il
+Diapason contro la Sentinella, fa quello che ha fatto al tavolo: un *grido
+superiore*, con il suo danno sonico. La Sentinella è un costrutto e non resta
+stordita, e il Diapason è speso: contro Terros non c'è più.
+
 **Bracieri Gemelli — COMPLETI (Fuoco + Terra):** RD 5/adamantio; **Pugno
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
 attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
@@ -1483,7 +1493,8 @@ FOR 31(+10) DES 8(−1) COS 25(+7) INT 10 SAG 15(+2) CAR 11
 TS: Tempra +24 · Riflessi +9 · Volontà +12
 
 DIFESE
-• RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento,
+• RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento
+  (tranne il Diapason, dono della Madre) [CANONE — DM 2026-10-15, D89],
   critici, fiancheggiamento, effetti di forma
 • DEBOLEZZA: SONICO ×1,5 (la Frequenza dei Cristalli morde;
   il Frantumare sonico di Tordek è la fonte-DPS chiave)
@@ -1517,7 +1528,8 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
      è lui il vero bersaglio della Spinta.
 3) EARTH GLIDE (Ex): come azione di movimento entra nell'Altare/
    parete e riemerge (fino a 6 m) alle spalle di un caster.
-   *Move Earth* lo stordisce (Tempra CD 15) e lo blocca 1 round.
+   *Move Earth* lo blocca 1 round, senza stordirlo (Tempra CD 15)
+   [CANONE — DM 2026-10-15, D89].
 4) ASSORBIMENTO TERRESTRE (Su, passiva): a contatto con
    Altare/pietra rigenera 15 pf/round.
 
