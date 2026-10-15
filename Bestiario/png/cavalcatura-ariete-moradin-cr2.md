@@ -23,6 +23,18 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Large animal (cavalcatura speciale da paladino), 6 HD, N. **hp 45**; **AC 18**, touch 10, flat-footed 17. Init +1; Vel 15 m. TS Temp +8, Rifl +6, Vol +3. BAB +4; Lotta +12.
-**Mischia** 2 zoccoli/testata +7 (1d6+4); morso +2 (1d4+2). Legame empatico, Eludere Migliorato, condividere TS/incantesimi (privilegi da cavalcatura di paladino). Visione crepuscolare, fiuto. Talenti: Resistenza Fisica, Armatura Naturale Migliorata, Correre.
+Large animal (cavalcatura speciale da paladino), 6 HD, N.
+
+**Iniziativa** +1 · **Sensi** Visione crepuscolare, fiuto.
+
+**Difesa** **AC 18**, touch 10, flat-footed 17 · **hp 45** · TS Temp +8, Rifl +6, Vol +3
+
+**Attacco** Vel 15 m · **Mischia** 2 zoccoli/testata +7 (1d6+4); morso +2 (1d4+2)
+
+**Statistiche** BAB +4; Lotta +12 · Talenti: Resistenza Fisica, Armatura Naturale Migliorata, Correre.
+
+**Capacità speciali** Legame empatico, Eludere Migliorato, condividere TS/incantesimi (privilegi da cavalcatura di paladino).
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte l'ariete, né da solo né montato da Rurik Gorunn.]
+
 Notes: la cavalcatura di Rurik Gorunn (`rurik-gorunn-cr10.md`, talento Celestial Mount). Il flavor «ariete» usa le statistiche del cavallo da guerra pesante dell'export.

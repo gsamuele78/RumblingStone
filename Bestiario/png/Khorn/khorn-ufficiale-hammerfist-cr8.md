@@ -23,17 +23,30 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.
 
-Medium humanoid (dwarf), Fighter 8, LG. **hp 76** (8d10+24, Cos 16); **AC 22**, touch 11, flat-footed 21 (piastre +1, scudo pesante +1, +1 Des). Init +1; Vel 6 m. TS Temp +9, Rifl +3, Vol +4 (+2 vs incantesimi; +4 schivare vs giganti). BAB +8; Lotta +11.
-**Mischia** martello da guerra +1 +14/+9 (1d8+6/x3); scudo pesante +10. **Distanza** balestra pesante +9 (1d10/19-20). Tratti nanici: scurovisione 18 m, stonecunning, +1 vs orchi/goblinoidi, stabilità.
-Talenti: Attacco Poderoso, Fendere, Arma Focalizzata e Specializzata (martello da guerra), Scudo Migliorato, Leadership (comanda le 150 lance), Iniziativa Migliorata.
+Medium humanoid (dwarf), Fighter 8, LG.
+
+**Iniziativa** +1
+
+**Difesa** **AC 22**, touch 11, flat-footed 21 (piastre +1, scudo pesante +1, +1 Des) · **hp 76** (8d10+24, Cos 16) · TS Temp +9, Rifl +3, Vol +4 (+2 vs incantesimi; +4 schivare vs giganti)
+
+**Attacco** Vel 6 m · **Mischia** martello da guerra +1 +14/+9 (1d8+6/x3); scudo pesante +10 · **Distanza** balestra pesante +9 (1d10/19-20)
+
+**Statistiche** BAB +8; Lotta +11 · Talenti: Attacco Poderoso, Fendere, Arma Focalizzata e Specializzata (martello da guerra), Scudo Migliorato, Leadership (comanda le 150 lance), Iniziativa Migliorata.
+
+**Capacità speciali** Tratti nanici: scurovisione 18 m, stonecunning, +1 vs orchi/goblinoidi, stabilità.
+
+**Tattiche**
+- *Da solo*: [DA SCRIVERE — nessun file del repo dice come combatte Khorn in un corpo a corpo, dove si mette e quando smette. Il Boost log lo dice «un comandante, non un solista».]
+- *Al comando delle lance*: combatte come formazione, non come singolo. Arco 09, Torneo di Dauth, terzo giorno (l'assedio della città), «Carta D — Le lance di Khorn»: le 150 lance sono un asset di comando che Thorik (o Tordek) manda dove servono; se la carta è ignorata si schierano da sole al comando di Khorn, con il bonus dimezzato.
+
+**Esiti (D4/D5)**: guida le 150 lance a Rethmar solo se gli hook politici ARC-09
+riescono (sigillo Maewen + lettera Thorik); altrimenti resta a Hammerfist. **PNG
+distinto** dai 4 pregen e da Grimjaw (D5): non fonderlo con nessuno di essi.
+
+Notes: dossier in `../Khorn.md`; citato in `09_.../Arco-Post-Hammerfist-HOOKS-Thorik-RethmarLetter.md`.
 
 > **Boost log (2026-07-08, L2)**: generato ex-novo (il dossier lo dichiarava privo di stats).
 > Metodo: build diretta Fighter 8 su ufficiale nanico standard, non un boost di
 > creatura stampata. Benchmark PF1e CR 8: hp ok (76 vs ~85 atteso, volutamente sotto
 > — è un comandante, non un solista), AC 22 ok, attacco +14 ok, nessun DC d'incantesimo.
 > EL entro APL+4. ✅ **Canone confermato dal DM (2026-07-12)**: CR 8 e build validati.
-
-**Esiti (D4/D5)**: guida le 150 lance a Rethmar solo se gli hook politici ARC-09
-riescono (sigillo Maewen + lettera Thorik); altrimenti resta a Hammerfist. **PNG
-distinto** dai 4 pregen e da Grimjaw (D5): non fonderlo con nessuno di essi.
-Notes: dossier in `../Khorn.md`; citato in `09_.../Arco-Post-Hammerfist-HOOKS-Thorik-RethmarLetter.md`.

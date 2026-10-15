@@ -19,14 +19,21 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «12d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus è quello scritto nella formula.
 
-**Size/Type**: Large giant | **HD**: 12d8+5d12+85 (168 HP)
-**AC**: 23 (-1 size, +8 natural, +6 +1 breastplate) | **Init**: +0 | **Speed**: 40 ft
-**Saves**: Fort +17, Ref +5, Will +6 | **BAB/Grapple**: +14/+25
+**Size/Type**: Large giant
+
+**Iniziativa** +0
+
+**Difesa** **AC**: 23 (-1 size, +8 natural, +6 +1 breastplate) · **HD**: 12d8+5d12+85 (168 HP) · **Saves**: Fort +17, Ref +5, Will +6
+
+**Attacco** **Speed**: 40 ft
 **Attack**: +2 greatclub +23 melee (2d8+12)
 **Full**: +2 greatclub +23/+18/+13 (2d8+12)
-**Abilities**: Str 24, Dex 10, Con 20, Int 10, Wis 12, Cha 10
-**Special**: Rage 2/day (+4 Str/Con, +2 Will, -2 AC, 10 rounds; fatigued afterwards), rock throwing (120 ft, 2d6+7), Rend 2d6+10 (on both claw hit — when using claws not club), Red Hand command aura (+1 morale to hobgoblin 30 ft).
+
+**Statistiche** **Abilities**: Str 24, Dex 10, Con 20, Int 10, Wis 12, Cha 10 · **BAB/Grapple**: +14/+25
 **Feats**: Power Attack, Cleave, Great Cleave, Improved Sunder, Weapon Focus (greatclub), Intimidating Rage (CW), Leadership
+
+**Capacità speciali**
+**Special**: Rage 2/day (+4 Str/Con, +2 Will, -2 AC, 10 rounds; fatigued afterwards), rock throwing (120 ft, 2d6+7), Rend 2d6+10 (on both claw hit — when using claws not club), Red Hand command aura (+1 morale to hobgoblin 30 ft).
 
 **I tre stati dell'ira** (D9, decisione del DM 2026-09-23). Lo statblocco sopra è Karruk **fuori ira**; la scheda precedente mescolava i tre stati.
 
@@ -37,5 +44,7 @@ attacchi:
 | **Affaticato**, finita l'ira | 22 · 8 · 20 | 168 | 22 | +17 · +4 · +6 | +24 | +22/+17/+12 (2d8+11) | 2d6+6 | 2d6+9 | −1 |
 
 Affaticato: niente corsa né carica fino alla fine dell'incontro (SRD, barbaro). In ira i pf salgono di +34 (Cos +2 × 17 DV) e li perde quando l'ira finisce.
+
+**Tattiche** Il solo dato del repo è nel mazzo degli eventi della battaglia finale di Rethmar (Arco 09), Carta 13 «Il duello di Karruk»: combatte d'onore finché è avvantaggiato, bara se perde; se il duello resta inconcluso, ripiega. [DA SCRIVERE — come si prepara prima dello scontro e cosa fa round per round, in ira e dopo l'ira: nessun file del repo lo dice.]
 
 **Notes**: Guida assalto Rethmar Fase 1. Con 2 Razorfiend Red + 300 hobgoblin.

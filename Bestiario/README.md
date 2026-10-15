@@ -48,7 +48,7 @@ Notes: dove/come si usa nella campagna.
 - Il **dossier** dei PNG/villain nominati segue il formato AGENTS.md
   (Role/Status/Location/Motivation/CR/Key stats/Esiti/Notes) — template:
   `campaign/templates/png-dossier-template.md`, che dal 2026-10-15 porta
-  anche la forma delle sezioni di dossier e statblocco (ADR-0091, proposta;
+  anche la forma delle sezioni di dossier e statblocco (ADR-0091;
   `validate_bestiario.py --forma` ne fa il conto).
 - Le **varianti** (es. war adept fire/ice/acid) sono file distinti solo se i
   numeri cambiano; gli export "spell/no-spell" della stessa build sono UNA

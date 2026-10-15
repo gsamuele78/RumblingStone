@@ -27,11 +27,23 @@ fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=aberration, 
 **Source**: MM Mind Flayer + Psion 2 → Arco-Post-Hammerfist-P2B-Torneo-BATTLE-STATS-VILLAIN-ICONICI
 **Status**: inferred — base template only; DM should finalize exact stats at the table.
 
-## Summary
+Medium aberration, 16d8+64.
 
-Illithid lieutenant of Xal'thor; mind blast cone 60 ft (DC 19 Will stun 3d4); extract brain grapple; PP 25, telekinesis, ego whip. Intervenes at Torneo Day 3. Source: Arco-Post-Hammerfist-P2B-Torneo-Tordek-BATTLE-STATS-e-VILLAIN-ICONICI.md.
+**Iniziativa** +2
 
-## Notes
+**Difesa** CA 22 (+2 Des, +10 naturale) · pf 136 (DV 16d8+64) · TS Temp +9, Rifl +7, Vol +11
+
+**Attacco** Vel 9 m · Mischia bastone ferrato +13 (1d6+1)
+
+**Statistiche** For 12 Des 14 Cos 18 Int 18 Sag 13 Car 12 · [DA SCRIVERE — BAB, lotta, talenti, abilità: la scheda non li ha]
+
+**Capacità speciali**
+- Esplosione mentale, cono di 18 m: Volontà CD 19 o stordito 3d4 round.
+- Estrarre il cervello con la lotta; punti potere 25; telecinesi, frusta dell'ego.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte Zarim. La sua scheda d'arco (Arco 09, Torneo, statistiche dei villain iconici, §3 «Zarim il Collezionista di Cervelli») dice solo che si usa come mini-boss prima di Xal'thor o come comandante di ondate, e interviene al Torneo, giorno 3.]
+
+Notes: Illithid lieutenant of Xal'thor; mind blast cone 60 ft (DC 19 Will stun 3d4); extract brain grapple; PP 25, telekinesis, ego whip. Intervenes at Torneo Day 3. Source: Arco-Post-Hammerfist-P2B-Torneo-Tordek-BATTLE-STATS-e-VILLAIN-ICONICI.md.
 
 - Scale HP/AC/attacks by ±10% to tune difficulty at the table.
 - Advance via HD, class levels, or templates before adding new unique powers.

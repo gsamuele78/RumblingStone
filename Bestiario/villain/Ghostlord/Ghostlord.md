@@ -17,16 +17,18 @@ voci:
 
 **Vero Nome:** Zeth (cognome perduto — si identifica solo come "Il Murato")
 **Titolo:** Ghostlord, Signore degli Spettri del Thornwaste
-**Razza/Tipo:** Mezz'Elfo (trasformato in Lich — Non Morto Medio)
-**Classe:** Druido 13 (Livello Totale 13, contato come Druido-Lich)
-**Grado di Sfida (GS):** 13 (combattimento diretto) / 14 con leoni spettrali
-**Allineamento:** Neutrale (tecnicamente — è amaro, isolato, non malvagio per natura)
-**Ruolo:** Villain/alleato del Thornwaste — possesso della filatteria = controllo dell'esito. La Red Hand lo usa come fabbrica di non morti; i PG possono liberarlo, allearlo, o distruggerlo.
-**NPC File correlato:** `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-*.md`
+**Role**: Villain/alleato del Thornwaste — possesso della filatteria = controllo dell'esito. La Red Hand lo usa come fabbrica di non morti; i PG possono liberarlo, allearlo, o distruggerlo.
+**Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; la filatteria è in mano alla Red Hand (§Nella campagna) e i rami sono in §Esiti possibili]
+**Location**: il Leone di Pietra, nel Thornwaste (il suo lair: §In combattimento, Sensi del Lair)
+**Motivation**: → §Cosa vuole («Voglio dormire.»)
+**CR**: 13 (combattimento diretto) / 14 con leoni spettrali | **Race/Class**: Mezz'Elfo (trasformato in Lich — Non Morto Medio); Druido 13 (Livello Totale 13, contato come Druido-Lich); Neutrale (tecnicamente — è amaro, isolato, non malvagio per natura)
+**Key stats**: → §In combattimento. I numeri stanno in questa scheda.
 
 ---
 
-## STORIA: IL TRADIMENTO CHE L'HA CREATO
+## Chi è
+
+### Storia: il tradimento che l'ha creato
 
 Mille anni fa (≈372 DR), Zeth era il **mastro costruttore** delle prime gallerie sotterranee di Hammerfist — un mezz'elfo che aveva legato la sua anima alla montagna per proteggere il suo popolo dall'orda di Zog'tar Deatheye, che assediava la fortezza giovane. Credeva di eseguire un rituale di *Consacrazione* a Silvanus. Fu ingannato da un chierico incappucciato di Shar, **mano del Collezionista attraverso il tempo**, che gli diede i componenti di una Lichificazione (`ARC07-DEF-4` Scena 5, «Seme del Ghostlord»: i PG sono lì quella notte).
 
@@ -34,23 +36,36 @@ Mille anni fa (≈372 DR), Zeth era il **mastro costruttore** delle prime galler
 
 Il risultato: Zeth diventò un lich senza averlo scelto, legato alla montagna che aveva giurato di proteggere. Le sue guardie — le anime dei soldati di Hammerfist morti nel corridoio del rito — sono rimaste volontariamente, ora come leoni spettrali, scegliendo di continuare a servire chi amavano.
 
-**Le rune nella Stanza Runica (Arc 05)** sono il testamento di Zeth — descrivono come fu tradito. Hella, con le sue capacità druidiche potenziante dal template Treant Hybrid, è l'unica che può leggerle correttamente (Sapienza Magica CD 15 o Sopravvivenza CD 20 "sentendo la pietra").
-
-**La domanda che solo Hella può porre:** *"Cosa vuoi, davvero?"*
-**Risposta di Zeth** (dopo Diplomazia CD 25 o dopo aver visto la trascrizione delle rune):
-> *"Voglio dormire. Ho difeso la montagna per mille anni. Voglio che qualcuno sappia che l'ho fatto senza tradire nessuno. E poi voglio non esistere più."*
-
----
-
-## DESCRIZIONE
+## Aspetto e voce
 
 Appare come un lich druidico: scheletro avvolto in resti di vesti verdi scurite dal tempo, con ramoscelli di legno fossile intrecciati alle costole come un'armatura naturale. Gli occhi sono due punti di luce verde-bluastra. Intorno a lui fluttuano sempre uno o due leoni spettrali — non come guardie del corpo aggressive, ma come cani fedeli che non hanno nessun posto dove andare.
 
 Non usa un tono da villain. Parla con la stanchezza di qualcuno che ha avuto troppe conversazioni simili in mille anni. Il cinismo non è arroganza — è solo l'accumulo di chi ha visto ogni tipo di ingannatore e sa riconoscerli al terzo paragrafo.
 
----
+### Dialogo
 
-## STATISTICHE D&D 3.5
+- *"Mille anni. Sai quanto sono mille anni per qualcuno che non può dormire? Ogni giorno uguale al precedente, ogni stagione percepita ma mai vissuta."*
+- *"Non sono un mostro. Sono un custode che ha dimenticato cosa stava custodendo."*
+- *"(se gli viene mostrata la trascrizione delle rune) Qualcuno le ha lette. Dopo mille anni, qualcuno le ha finalmente lette."* (questo è il momento in cui la sua difensività scompare)
+- *"Dite al vostro Re che Hammerfist è stata costruita sulla mia promessa. Non sulla mia maledizione."*
+- A Hella specificamente: *"Tu senti la pietra. Sai cosa dice quando vuole riposare. Allora capisci già cosa ti sto chiedendo."*
+
+## Cosa vuole
+
+**La domanda che solo Hella può porre:** *"Cosa vuoi, davvero?"*
+**Risposta di Zeth** (dopo Diplomazia CD 25 o dopo aver visto la trascrizione delle rune):
+> *"Voglio dormire. Ho difeso la montagna per mille anni. Voglio che qualcuno sappia che l'ho fatto senza tradire nessuno. E poi voglio non esistere più."*
+
+## Nella campagna
+
+**Le rune nella Stanza Runica (Arc 05)** sono il testamento di Zeth — descrivono come fu tradito. Hella, con le sue capacità druidiche potenziante dal template Treant Hybrid, è l'unica che può leggerle correttamente (Sapienza Magica CD 15 o Sopravvivenza CD 20 "sentendo la pietra").
+
+### Filatteria (Red Hand / PG)
+La filatteria di Zeth — un'urna di quercia fossile con incisioni in elvish antico — è stata rubata dalla Red Hand per costringerlo a produrre non morti. Se i PG la recuperano, hanno leva su Zeth. Se la distruggono, Zeth inizia a dissolversi lentamente (1d6 round) a meno che non la distrugga lui stesso.
+
+## In combattimento
+
+### Statistiche D&D 3.5
 
 | Caratteristica | Valore | Mod. |
 |:---|:---:|:---:|
@@ -79,9 +94,7 @@ Non usa un tono da villain. Parla con la stanchezza di qualcuno che ha avuto tro
 **Attacchi:**
 - **Tocco Paralizzante Lich** +9 in mischia (1d8 danni freddo + Paralisi; Tempra CD 19 o Paralizzato 1d4+1 round)
 
----
-
-## INCANTESIMI (Druido 13, CL 13)
+### Incantesimi (Druido 13, CL 13)
 
 | Livello | Incantesimi tipici |
 |:---:|:---|
@@ -94,41 +107,32 @@ Non usa un tono da villain. Parla con la stanchezza di qualcuno che ha avuto tro
 | 6 | *antilife shell, greater dispel magic* |
 | 7 | *creeping doom, control weather* |
 
----
+### Capacità speciali
 
-## CAPACITÀ SPECIALI
-
-### Immunità Lich (Standard)
+#### Immunità Lich (Standard)
 - Immune a mente, freddo, elettricità, polimorfismi, colpi critici, attacchi furtivi, fatica/esaurimento, effetti che richiedono Tempra valida.
 - **Aura di Paura Lich (Su):** Ogni creatura entro 18 m che guarda Zeth deve superare un TS Volontà CD 19 o essere Spaventata per 1d4 round.
 
-### Filatteria (Red Hand / PG)
-La filatteria di Zeth — un'urna di quercia fossile con incisioni in elvish antico — è stata rubata dalla Red Hand per costringerlo a produrre non morti. Se i PG la recuperano, hanno leva su Zeth. Se la distruggono, Zeth inizia a dissolversi lentamente (1d6 round) a meno che non la distrugga lui stesso.
-
-### Leoni Spettrali (2–3 guardie)
+#### Leoni Spettrali (2–3 guardie)
 *Vedere `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md` per stat complete.*
 - GS 7–8 ciascuno; Incorporei; Morso incorporeo (2d6 freddo + energia negativa); 50% miss chance vs non-magico.
 
-### Sensi del Lair
+#### Sensi del Lair
 Zeth sente tutto ciò che accade nel Leone di Pietra attraverso i suoi sensi magici — come un druido con *Commune with Nature* permanente nell'area del lair.
 
----
+### Tattiche
 
-## TATTICHE
-
-### Se Ostile (PG senza filatteria o che l'hanno insultato)
+#### Se Ostile (PG senza filatteria o che l'hanno insultato)
 - **Apertura:** *antilife shell* per tenere i combattenti melee a distanza; *wall of thorns* per bloccare avanzata.
 - **Usura:** *insect plague* + *creeping doom* per logorare l'area senza combattimento diretto.
 - **Controllo:** *call lightning* (CL 13: 3d6 per fulmine) contro bersagli lontani.
 - **Fuga:** Si teletrasporta attraverso le pareti del Leone di Pietra se ridotto sotto il 30% dei PF.
 
-### Se Negozia (PG con filatteria o approccio diplomatico)
+#### Se Negozia (PG con filatteria o approccio diplomatico)
 - Dimostra il suo potere **senza attaccare**: fa emergere un leone spettrale dal muro accanto al PG più arrogante del gruppo, lo fissa per 3 secondi, poi lo fa scomparire. Messaggio: potrebbe farlo fuori, ma non lo farà.
 - Non attacca per primo a meno di minaccia diretta alla filatteria.
 
----
-
-## ESITI POSSIBILI
+## Esiti possibili
 
 | Scelta PG | Conseguenza a Rethmar | Conseguenza per Zeth |
 |:---|:---|:---|
@@ -137,21 +141,16 @@ Zeth sente tutto ciò che accade nel Leone di Pietra attraverso i suoi sensi mag
 | **Distruzione** | Nessun rinforzo non-morto alla Notte dei Drow; nessuna minaccia futura | Zeth riposa finalmente |
 | **Fallimento / Insulto** | Ondate extra di leoni spettrali + wights + ghoul alla Battaglia Finale (+1–2 CR totale) | Zeth rimane sotto controllo Red Hand |
 
----
+## Al tavolo
 
-## DIALOGO
-
-- *"Mille anni. Sai quanto sono mille anni per qualcuno che non può dormire? Ogni giorno uguale al precedente, ogni stagione percepita ma mai vissuta."*
-- *"Non sono un mostro. Sono un custode che ha dimenticato cosa stava custodendo."*
-- *"(se gli viene mostrata la trascrizione delle rune) Qualcuno le ha lette. Dopo mille anni, qualcuno le ha finalmente lette."* (questo è il momento in cui la sua difensività scompare)
-- *"Dite al vostro Re che Hammerfist è stata costruita sulla mia promessa. Non sulla mia maledizione."*
-- A Hella specificamente: *"Tu senti la pietra. Sai cosa dice quando vuole riposare. Allora capisci già cosa ti sto chiedendo."*
-
----
-
-## NOTE PER IL MASTER
+### Note per il master
 
 - Zeth è **la scena di Hella per eccellenza**. Non è un combattimento — è un'audizione morale. Se Hella non è presente quando il party incontra Zeth, qualcosa nella scena non funzionerà.
 - I leoni spettrali che circondano Zeth sono **le anime dei soldati di Hammerfist**. Se il party lo sa (Conoscenze Storia CD 18 o trascrizione delle rune), c'è una connessione emotiva con la Battaglia di Hammerfist che hanno già vissuto.
 - La scena più potente: Thorik che cerca di fare pressione per la soluzione tattica più conveniente, e un leone che si volta verso di lui e abbassa la testa come un cane che accetta un ordine che sa essere sbagliato.
 - **Non mostrare mai Zeth come pienamente ostile nella prima scena.** Entra sempre come "una presenza" — osserva, parla, testa. La transizione verso il combattimento deve essere una scelta del party, non un'inevitabilità.
+
+## Fonti e canone
+
+- **NPC File correlato:** `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-*.md`
+- Statistiche dei leoni spettrali: `Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md` (citato in §In combattimento).

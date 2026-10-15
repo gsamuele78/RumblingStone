@@ -12,24 +12,48 @@ velocita: 9 m
 
 > ⚠ `ts` ritrascritto dalla prosa di questa scheda (sezione dei tiri salvezza) il 2026-09-23. Il blocco portava «Temp +12, Rifl +4, Vol +8», derivati da `derive_statblocks --apply-ts` il 2 settembre con una matrice di caratteristiche sua, un giorno prima che il lettore imparasse questo formato (`d859a31`).
 
-**Razza/Tipo:** Hobgoblin Mezzo-Drago Blu (Umanoide Medio)
-**Classe:** Chierico 10 / Guerriero 4 (Livello Totale 14)
-**Grado di Sfida (GS):** 15
-**Allineamento:** Legale Malvagio
-**Ruolo:** Comandante supremo dell'Orda della Mano Rossa; boss della Fase 3 della Battaglia di Rethmar
-**Fonte originale:** Red Hand of Doom (upscalato per PG livello 13–15)
+**Role**: villain — Comandante supremo dell'Orda della Mano Rossa; boss della Fase 3 della Battaglia di Rethmar
+**Status**: [DA SCRIVERE — la scheda non dice se è vivo, morto o fuggito: i rami sono in §Esiti possibili]
+**Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; compare nella Fase 0 sulle mura e combatte nella Fase 3 della Battaglia di Rethmar]
+**Motivation**: [DA SCRIVERE — nessuna riga dice cosa vuole oltre alla guerra; le sue battute sono in §Aspetto e voce]
+**CR**: 15 | **Race/Class**: Hobgoblin Mezzo-Drago Blu (Umanoide Medio); Chierico 10 / Guerriero 4 (Livello Totale 14); Legale Malvagio
+**Key stats**: → `../azarr-kul-final-cr15.md` (statblocco gemello, cartella sopra). Le statistiche scritte in questa scheda sono in §In combattimento.
 
 ---
 
-## DESCRIZIONE
+## Chi è
+
+[DA SCRIVERE — la scheda non racconta la storia di Azarr Kul. C'è il ruolo (in testa), l'aspetto e il carattere (§Aspetto e voce) e il posto che ha nella campagna (§Al tavolo, Note per il master).]
+
+## Aspetto e voce
 
 Un hobgoblin imponente con tratti draconi spiccati: pelle giallastra striata di turchese elettrico lungo le tempie, occhi verticali color ambra e due piccoli corni di drago blu che spuntano dalla fronte. La voce è un tuono basso, capace di portare ordini su un campo di battaglia. Veste armatura completa nera consumata dalle battaglie, decorata con le cinque teste di Tiamat incise in bassorilievo sul pettorale. Combatte **a terra**: **Tyrgarun**, un Drago Blu Vecchio (CR 18), non è sua cavalcatura ma il terrore dei cieli della battaglia — un incontro separato che i difensori affrontano indipendentemente da lui (D11 v2, vedi `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-RETHMAR-STRUTTURA.md` §6).
 
 Non è un fanatico urlante. È un generale. Parla poco, non negozia, non bluffa. Quando entra in una stanza, i suoi alleati si raddrizzano. Quando guarda un PG, li esamina come tattici problemi da risolvere.
 
----
+### Dialogo e personalità
 
-## STATISTICHE D&D 3.5
+Azarr Kul non fa monologhi. Le sue poche frasi sono precise come un colpo di sciabola:
+
+- *"L'Orda non è un esercito. È una legge della natura. Voi siete solo ritardo."*
+- *"Non combatto per la gloria. Combatto per la fine di Rethmar. Tutto il resto è chiacchiere."*
+- *"Tiamat non ha pietà. Né io."* (quando attiva il Soffio)
+- Se ridotto a meno del 25% PF: *"Non importa. Lei verrà lo stesso."* (riferimento all'Avatar già parzialmente invocato)
+
+## Cosa vuole
+
+[DA SCRIVERE — nessuna riga dice che cosa vuole Azarr Kul per sé, né che cosa teme. Le sue battute («Combatto per la fine di Rethmar», «Lei verrà lo stesso») sono in §Aspetto e voce.]
+
+## Nella campagna
+
+### Tyrgarun (Drago Blu Vecchio, CR 18 — incontro separato, NON cavalcatura)
+Tyrgarun non è mai stato una cavalcatura di Azarr Kul (D11 v2). È il terrore dei cieli della battaglia con la propria agenda tattica: in Fase 1 è un *hazard* di bombardamento aereo sui bastioni (imbattibile in volo a CR 18, si contrasta con contromosse — balliste, gufi Tiri Kitor, missione-esca dei PG — non con lo scontro frontale); in Fase 2-3 resta minaccia aerea a orologeria sui ritualisti; solo in Fase 4, quando il Mythal si completa, viene inchiodato a terra e diventa uccidibile — o fugge come nemesi per ARC-10. Azarr Kul combatte comunque a terra, per conto proprio, indipendentemente dall'esito dell'incontro col drago.
+
+## In combattimento
+
+Lo statblocco gemello è `../azarr-kul-final-cr15.md`. Qui sotto restano le statistiche, gli incantesimi, le capacità, l'equipaggiamento e le tattiche come li scrive questa scheda.
+
+### Statistiche D&D 3.5
 
 | Caratteristica | Valore | Mod. |
 |:---|:---:|:---:|
@@ -58,9 +82,7 @@ Non è un fanatico urlante. È un generale. Parla poco, non negozia, non bluffa.
 **Attacchi:**
 - Spadone Sacrificale +21/+16/+11 (2d6+7, 19–20/×2; +2d6 danni vs creature di allineamento Buono)
 
----
-
-## INCANTESIMI (Chierico 10, Livello Incantatore 12)
+### Incantesimi (Chierico 10, Livello Incantatore 12)
 
 **Domini:** Guerra, Tirannia, Tiamat (custom)
 
@@ -78,28 +100,21 @@ Non è un fanatico urlante. È un generale. Parla poco, non negozia, non bluffa.
 
 Con prebuffing attivo: CA ~32, Attacchi +25/+20/+15, danni 3d6+11.
 
----
+### Capacità speciali
 
-## CAPACITÀ SPECIALI
-
-### Mezzo-Drago Blu — Soffio Lineare (Su)
+#### Mezzo-Drago Blu — Soffio Lineare (Su)
 - **Effetto:** Linea di elettricità, 18 m, 6d8 danni
 - **TS:** Riflessi CD 20 per dimezzare
 - **Ricarica:** 1d4 round
 - **Tattica:** Usato all'inizio del combattimento contro il gruppo compatto, o per interrompere incantatori che si concentrano
 
-### Aura di Comando (Ex)
+#### Aura di Comando (Ex)
 Tutti gli alleati hobgoblin entro 9 m da Azarr Kul guadagnano +2 morale ai tiri per colpire e ai TS Volontà. Se Azarr Kul cade, gli hobgoblin nel raggio fanno un TS Volontà CD 18 o diventano Scossi per 2 round.
 
-### Canali Divini di Tiamat (Su)
+#### Canali Divini di Tiamat (Su)
 7 utilizzi giornalieri per *sconfiggere malvagio* (smite good), *richiamare/controllare non morti*, o effetti di dominio Tiamat personalizzati (a discrezione del DM).
 
-### Tyrgarun (Drago Blu Vecchio, CR 18 — incontro separato, NON cavalcatura)
-Tyrgarun non è mai stato una cavalcatura di Azarr Kul (D11 v2). È il terrore dei cieli della battaglia con la propria agenda tattica: in Fase 1 è un *hazard* di bombardamento aereo sui bastioni (imbattibile in volo a CR 18, si contrasta con contromosse — balliste, gufi Tiri Kitor, missione-esca dei PG — non con lo scontro frontale); in Fase 2-3 resta minaccia aerea a orologeria sui ritualisti; solo in Fase 4, quando il Mythal si completa, viene inchiodato a terra e diventa uccidibile — o fugge come nemesi per ARC-10. Azarr Kul combatte comunque a terra, per conto proprio, indipendentemente dall'esito dell'incontro col drago.
-
----
-
-## EQUIPAGGIAMENTO
+### Equipaggiamento
 
 | Oggetto | Note |
 |:---|:---|
@@ -110,43 +125,30 @@ Tyrgarun non è mai stato una cavalcatura di Azarr Kul (D11 v2). È il terrore d
 | **Amuleto di Resistenza +2** | +2 a tutti i TS |
 | **Componenti Rituali** | Sangue di Astruriel + Sigillo di Ossidiana (per invocare l'Avatar) |
 
----
+### Tattiche
 
-## TATTICHE
-
-### Fase Pre-Combattimento (Fuori Vista)
+#### Fase Pre-Combattimento (Fuori Vista)
 Azarr Kul trascorre 10 minuti a prebuffarsi mentre i luogotenenti tengono i PG occupati. Non entra mai in combattimento senza almeno *divine power*, *righteous might* e *magic vestment* attivi.
 
-### Fase 1 — Apertura
+#### Fase 1 — Apertura
 - Lancia il Soffio su qualunque gruppo compatto entro 18 m.
 - Invia le Erinni a isolare gli incantatori del party.
 - Usa *blade barrier* (o *spiritual weapon*) per creare zone negate.
 
-### Fase 2 — Mischia
+#### Fase 2 — Mischia
 - Carica il PG che rappresenta la maggiore minaccia strategica (il guaritore o il buffer).
 - Usa *hold person* su chiunque non sia immune agli effetti mentali.
 - Se il party usa Aegis Fang o la Corona di Adamantio con poteri attivi: *dispel magic* (CL 12) su di loro.
 
-### Fase 3 — Rituale dell'Avatar
+#### Fase 3 — Rituale dell'Avatar
 Quando è sotto il 50% dei PF o quando ha 3+ alleati sconfitti, avvia il Rituale di Invocazione dell'Avatar di Tiamat (vedi `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE3-*.md`). Il rituale richiede 3 round di concentrazione e il Sangue di Astruriel; interromperlo richiede che i PG lo attacchino mentre è vulnerabile.
 
-### Ultima Risorsa
+#### Ultima Risorsa
 Se ridotto sotto 20 PF e non può completare il rituale, usa *harm* sulla creatura più pericolosa del party (CD 22 Tempra, riduce a 1d4 PF) come ultimo atto di rappresaglia prima di cadere.
 
----
+## Esiti possibili
 
-## DIALOGO E PERSONALITÀ
-
-Azarr Kul non fa monologhi. Le sue poche frasi sono precise come un colpo di sciabola:
-
-- *"L'Orda non è un esercito. È una legge della natura. Voi siete solo ritardo."*
-- *"Non combatto per la gloria. Combatto per la fine di Rethmar. Tutto il resto è chiacchiere."*
-- *"Tiamat non ha pietà. Né io."* (quando attiva il Soffio)
-- Se ridotto a meno del 25% PF: *"Non importa. Lei verrà lo stesso."* (riferimento all'Avatar già parzialmente invocato)
-
----
-
-## CONSEGUENZE DELLA SCONFITTA / SOPRAVVIVENZA
+### Conseguenze della sconfitta / sopravvivenza
 
 | Esito | Conseguenza |
 |:---|:---|
@@ -155,10 +157,15 @@ Azarr Kul non fa monologhi. Le sue poche frasi sono precise come un colpo di sci
 | Fuggito (< 10 PF) | Torna a Rethmar come boss segreto post-campagna; porta l'Avatar con sé |
 | Tyrgarun ucciso/messo in fuga prima della Fase 3 | Azarr Kul perde il proprio "terrore dei cieli": TS Volontà CD 15 o Scossi per 1 round all'apparire di Azarr Kul in Fase 3 (shock della perdita, non più +2 morale da un alleato in volo) |
 
----
+## Al tavolo
 
-## NOTE PER IL MASTER
+### Note per il master
 
 - Azarr Kul NON è il villain subdolo della campagna — quello è il Collezionista. Azarr è il villain **visibile**, il volto della guerra, il bersaglio su cui il party può scaricare tutta la frustrazione accumulata.
 - Dargli spazio prima dello scontro finale: compare brevemente nella Fase 0 (Notte dei Drow) come silhouette sulle mura, con Tyrgarun che sorvola in lontananza — le due sagome non sono mai insieme (non è una cavalcatura, D11 v2), ma la loro presenza simultanea nello stesso quadro basta a costruire terrore senza consumare il boss.
 - La vera complessità non è in lui ma nel costo del fermarlo: il Mythal richiede che i PG proteggano il Circolo degli Otto mentre lui li attacca.
+
+## Fonti e canone
+
+- **Fonte originale:** Red Hand of Doom (upscalato per PG livello 13–15)
+- Statblocco gemello: `../azarr-kul-final-cr15.md`.

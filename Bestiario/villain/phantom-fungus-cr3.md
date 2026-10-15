@@ -26,6 +26,18 @@ fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/Phantom Fungus 
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium plant, 2d8+6. **hp 15**; **CA 14** (+4 naturale), Init +0. Vel 6 m. TS Temp +6, Rifl +0, Vol +0. BAB +1.
-**Mischia** morso (1d6+ danno). **Invisibilità permanente** (naturale: diventa visibile solo alla morte). Scurovisione 18 m, visione crepuscolare, tratti vegetali.
+Medium plant, 2d8+6.
+
+**Iniziativa** +0 · **Sensi** Scurovisione 18 m, visione crepuscolare
+
+**Difesa** **hp 15**; **CA 14** (+4 naturale) · TS Temp +6, Rifl +0, Vol +0 · tratti vegetali
+
+**Attacco** Vel 6 m · **Mischia** morso (1d6+ danno)
+
+**Statistiche** BAB +1
+
+**Capacità speciali** **Invisibilità permanente** (naturale: diventa visibile solo alla morte).
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte il Phantom Fungus; la scheda dà solo l'uso, le imboscate nella scala di ossa.]
+
 Notes: predatore invisibile delle caverne fungine (SRD Phantom Fungus). Ottimo per imboscate nella scala di ossa.

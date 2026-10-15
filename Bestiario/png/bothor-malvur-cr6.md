@@ -20,5 +20,16 @@ fonte: valori approssimati nella prosa d'origine (scritti con «~»)
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-Medium humanoid (dwarf), Fighter 6, allineamento non salvato (NONE). Caratteristiche attestate: For 16, Des 13, Cos 14, Int 10, Sag 12, Car 8. **Valori derivati `[INFERRED]`**: hp ~51 (6d10+12); AC ~19 (piastre + Des cap); TS Temp +7, Rifl +3, Vol +3; BAB +6; ascia da battaglia +11/+6 (1d8+4/x3). Scurovisione, tratti nanici.
+Medium humanoid (dwarf), Fighter 6, allineamento non salvato (NONE). **Valori derivati `[INFERRED]`**: tutti quelli di Difesa, Attacco, Statistiche e Capacità speciali, tranne le caratteristiche, che sono attestate.
+
+**Difesa** AC ~19 (piastre + Des cap) · hp ~51 (6d10+12) · TS Temp +7, Rifl +3, Vol +3
+
+**Attacco** ascia da battaglia +11/+6 (1d8+4/x3)
+
+**Statistiche** Caratteristiche attestate: For 16, Des 13, Cos 14, Int 10, Sag 12, Car 8 · BAB +6
+
+**Capacità speciali** Scurovisione, tratti nanici.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combattono Bothor e Melvur: la scheda non è mai stata collocata in un arco.]
+
 Notes: coppia di guerrieri nominati (Bothor e Melvur) dell'arco Underdark; il DM confermi ruolo e derivati.

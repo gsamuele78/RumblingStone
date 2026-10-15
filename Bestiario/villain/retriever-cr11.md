@@ -25,6 +25,18 @@ voci:
 fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/00_cr11_…Demon __ d20srd.org.htm`). Correggeva anche il BAB, trascritto +10 invece di +7
 ```
 
-Huge construct (extraplanar), 10d10+80. **hp 135**; **CA 21** (-2 taglia, +3 Des, +10 naturale), contatto 11, colto alla sprovvista 18; **RD 15/-** (costrutto), guarigione rapida 5; scurovisione 18 m. Init +3; Vel 15 m. TS Temp +3, Rifl +6, Vol +3. BAB +7; Lotta +25. For 31, Des 17, Cos -, Int -, Sag 11, Car 1.
-**Mischia** 4 zampe +15 (2d6+10, afferrare migliorato) e morso +10 (1d8+5); **Raggio degli occhi** (fuoco/freddo/elettricità/*rendere lento*, 1/round, danno alto), *find the path* verso il bersaglio designato, immune a incantesimi di ammaliamento/schema. Talenti: Fendere, Multiattacco, Attacco Poderoso.
+Huge construct (extraplanar), 10d10+80.
+
+**Iniziativa** +3 · **Sensi** scurovisione 18 m
+
+**Difesa** **CA 21** (-2 taglia, +3 Des, +10 naturale), contatto 11, colto alla sprovvista 18 · **hp 135** · TS Temp +3, Rifl +6, Vol +3 · **RD 15/-** (costrutto), guarigione rapida 5; immune a incantesimi di ammaliamento/schema
+
+**Attacco** Vel 15 m · **Mischia** 4 zampe +15 (2d6+10, afferrare migliorato) e morso +10 (1d8+5) · **Raggio degli occhi** (fuoco/freddo/elettricità/*rendere lento*, 1/round, danno alto)
+
+**Statistiche** For 31, Des 17, Cos -, Int -, Sag 11, Car 1 · BAB +7; Lotta +25 · **Talenti** Fendere, Multiattacco, Attacco Poderoso
+
+**Capacità speciali** *find the path* verso il bersaglio designato.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte il Retriever; la scheda dice solo che è mandato a recuperare Aegis Fang.]
+
 Notes: costrutto-demone ordinato dai chierici di Abbathor per **recuperare Aegis Fang** (gancio di trama). Unico → `villain/`.

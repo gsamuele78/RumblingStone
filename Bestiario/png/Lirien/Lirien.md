@@ -1,6 +1,5 @@
 # Lirien Amaranti — «Il Giullare Spezzato»
 
-
 ```statblocco
 gs: 4
 ca: 16
@@ -27,11 +26,11 @@ ts: Temp +2, Rifl +9, Vol +1
 **Nota conversione 3.5**: al tavolo 3.5 leggere Scout-Ladro ≈ Ladro con Attacco Furtivo +2d6, Enforcer ≈ Intimidire demoralizzante gratuito sul danno nonletale, Satira ≈ *inspire* invertita (−1 nemici). Nessuna meccanica nuova: tutto ciò che fa è già coperto da Intimidire/Raggirare/Furtivo SRD.
 **Token**: — (da assegnare; il trucco da Pierrot — lacrime nere colate, sorriso rosso asimmetrico — è il segno distintivo)
 
-Boost log: (vuoto)
-
 ---
 
-## 1. Chi è (adattamento Faerûn 1372 DR del background del giocatore)
+## Chi è
+
+### 1. Chi è (adattamento Faerûn 1372 DR del background del giocatore)
 
 Orfano mezzelfo cresciuto invisibile nei vicoli — nell'adattamento FR non
 Magnimar ma **Rethmar stessa** (canone): il ritorno da profugo è quindi
@@ -63,13 +62,23 @@ suoni), il *Guanto del Suggeritore* (+2 Rapidità di Mano/Disattivare
 Congegni), la *Fiala del Sangue d'Ottobre* (l'ultima vittima del Maestro —
 quando la stringe, la Satira diventa gelida).
 
----
+## Aspetto e voce
 
-## 2. I tre intrecci proposti (con PNG già a catalogo)
+[DA SCRIVERE — la scheda non dice com'è né come parla. C'è solo il trucco da Pierrot (campo **Token**, in testa) e il suo senso (§1).]
+
+## Cosa vuole
+
+Il *Want* è nel campo **Motivation**, in testa.
+
+[DA SCRIVERE — cosa teme: la scheda non lo dice.]
+
+## Nella campagna
+
+### 2. I tre intrecci proposti (con PNG già a catalogo)
 
 > Tre agganci minimi come da piano §4. Tutti a esiti aperti (D13).
 
-### 2.1 Il Maestro e la rete delle statue (Varis → Sal → Il Collezionista)
+#### 2.1 Il Maestro e la rete delle statue (Varis → Sal → Il Collezionista)
 
 Il Maestro non è sparito *(canone — DM 2026-07-20)*: artisti che
 trasformano il dolore in «opere» trovano sempre un mercato, e il mercato in
@@ -86,7 +95,7 @@ borseggio: **chi gli crede?** Perché la verità emerga serve che i PG lo
 prendano sul serio — la rivelazione resta in mano loro (guardia di
 protagonismo, §4).
 
-### 2.2 Tempestas — due mezzelfi, due maschere
+#### 2.2 Tempestas — due mezzelfi, due maschere
 
 Il **Maestro Tempestas** (`Bestiario/png/Tempestas/Tempestas.md`) è tutto
 ciò che Lirien detesta fingere di detestare: mezzelfo, bardo, *di corte*
@@ -99,7 +108,7 @@ sue reti non sentono — le voci del quartiere basso, la sala di Kellin.
 sabotaggio comico · o il canale che salva la vita a Tempestas quando i
 sicari drow lo cercano (thread [HOOKS ↔ TEMPESTAS], state.md §7).
 
-### 2.3 Il borseggio sbagliato (gli infiltratori dell'onda profughi)
+#### 2.3 Il borseggio sbagliato (gli infiltratori dell'onda profughi)
 
 Fra i profughi camminano **3-5 infiltrati** della Mano Rossa (state.md
 §2.5). Lirien, per abitudine e per fame, borseggia — e nella borsa
@@ -111,9 +120,7 @@ torna ai proprietari con il suo nome attaccato; (c) i PG non gli danno
 retta → la Fase 0 si complica esattamente come da tabella §2.5. In ogni
 ramo, lo scompiglio lo crea lui — **risolverlo tocca ai PG**.
 
----
-
-## 3. Meccanica «scompiglio» (come usarlo al tavolo)
+### 3. Meccanica «scompiglio» (come usarlo al tavolo)
 
 Lirien è un **generatore di complicazioni a bassa frequenza**, non un
 motore di trama. Uso consigliato: al massimo **una comparsa per sessione**,
@@ -132,20 +139,17 @@ clock dei villain o piani della Mano Rossa oltre ciò che un profugo sente
 per strada (§3 di state.md comanda); non combatte volentieri (GS 4 in un
 mondo di GS 13); se minacciato fugge — con stile, ma fugge.
 
----
+## In combattimento
 
-## 4. Guardia di protagonismo PG (obbligatoria)
+Non ha uno statblocco a parte: i numeri sono nel blocco e nel campo **Key stats** in testa, con la **Nota conversione 3.5**.
 
-Test della skill narrativa applicato: Lirien **apre porte, non le
-attraversa**. Riconosce le statue ma non può smascherare la rete; trova
-l'oggetto drow ma non può fermare la Fase 0; punge Halveth ma non può farlo
-cadere. Ogni suo filo termina in una scelta dei PG. Se in gioco inizia a
-risolvere ciò che spetta ai PG, il DM lo «spegne»: quella sera il Giullare
-non si presenta al Ponte Nuovo.
+**Tattiche**: la scheda dice solo che non combatte volentieri e che, se minacciato, fugge (§3, *Limiti duri*). [DA SCRIVERE — nessun file del repo dice come combatte quando non può scappare.]
 
----
+## Esiti possibili
 
-## 5. Promozione a PG (opzione futura)
+I rami aperti dei tre intrecci sono in §2.2 (*Esiti aperti*) e §2.3 (*Triangolo di rischio*).
+
+### 5. Promozione a PG (opzione futura)
 
 La scheda del giocatore è pensata per il gioco (build liv. 3→16, PF1e,
 revisione talenti inclusa). Se un giorno Lirien entra in un **branch di
@@ -154,7 +158,20 @@ sua «vita da PNG» pregressa: tutto ciò che il DM ha canonizzato qui è il
 suo passato giocabile. In quel caso il PNG esce di scena (stesso
 personaggio, non due copie).
 
-## Righe applicate a `state.md` (canonizzazione 2026-07-20)
+## Al tavolo
+
+### 4. Guardia di protagonismo PG (obbligatoria)
+
+Test della skill narrativa applicato: Lirien **apre porte, non le
+attraversa**. Riconosce le statue ma non può smascherare la rete; trova
+l'oggetto drow ma non può fermare la Fase 0; punge Halveth ma non può farlo
+cadere. Ogni suo filo termina in una scelta dei PG. Se in gioco inizia a
+risolvere ciò che spetta ai PG, il DM lo «spegne»: quella sera il Giullare
+non si presenta al Ponte Nuovo.
+
+## Fonti e canone
+
+### Righe applicate a `state.md` (canonizzazione 2026-07-20)
 
 > Applicate (vedi `state.md` §8, riga 2026-07-20):
 >
@@ -166,3 +183,5 @@ personaggio, non due copie).
 >   sa ciò che si dice al Ponte Nuovo».
 > - **§7 (thread)**: «[LIRIEN] Il Giullare Spezzato ha visto qualcosa nelle
 >   statue — i PG gli daranno retta prima che lo faccia qualcun altro?»
+
+Boost log: (vuoto)

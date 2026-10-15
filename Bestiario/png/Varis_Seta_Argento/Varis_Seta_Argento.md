@@ -1,7 +1,6 @@
 # MAESTRO VARIS "SETA-ARGENTO"
 ## *Il Broker Inconsapevole — Mercante Planare, Intermediario del Collezionista a Rethmar*
 
-
 ```statblocco
 gs: 6
 ca: 14
@@ -18,10 +17,16 @@ velocita: 9 m
 **Allineamento:** Neutrale (vira verso Neutrale Malvagio per convenienza)
 **Ruolo:** Mercante-intermediario urbano di Rethmar; anello di congiunzione tra Salvatore "Sal" (fornitore) e i nobili acquirenti di statue. Potenziale alleato di Artemis se manipolato correttamente.
 **Connessione con Artemis:** Ha già condotto 3 transazioni con Artemis (vedi `campaign/state.md`)
+**Status**: [DA SCRIVERE — la scheda non dice se oggi è vivo]
+**Location**: Rethmar (§Chi è); la scheda non dice dove sia il negozio.
+**Motivation**: uscire dalla rete senza venire ucciso (§Cosa vuole).
+**Key stats**: nessuno statblocco a parte; i numeri sono nel blocco qui sopra e in §In combattimento.
 
 ---
 
-## NOTA: VARIS ≠ SAL — DISTINZIONE CRITICA
+## Chi è
+
+### NOTA: VARIS ≠ SAL — DISTINZIONE CRITICA
 
 | Aspetto | Maestro Varis "Seta-Argento" | Salvatore "Sal" della Luna d'Argento |
 |:---|:---|:---|
@@ -34,9 +39,9 @@ velocita: 9 m
 
 Varis **riceve** le statue da intermediari di Sal; **vende** ai nobili come "arte nanica d'epoca Hammerfist". La catena è: **Sal cattura → intermediario → Varis → nobili di Rethmar → Il Collezionista attiva a Fase 4**. I PG che trovano questa catena ottengono la chiave di tutta la rete.
 
----
+## Aspetto e voce
 
-## DESCRIZIONE
+### DESCRIZIONE
 
 Un uomo sulla cinquantina con una voce costruita per la trattativa: bassa, controllata, mai affrettata. Veste sete grigie e argento — sobrio ma inconfondibilmente costoso. L'anello di Mind Shielding all'anulare sinistro è l'unico ornamento vistoso, e lo porta perché sa che qualcuno cerca di leggergli i pensieri di tanto in tanto.
 
@@ -44,9 +49,35 @@ Non mente mai direttamente. Usa omissioni e ridefinizioni con la naturalezza di 
 
 Tratta Artemis come un pari intellettuale — abbastanza da essere onesto sul bordo della disonestà. Questo è sia il suo pregio che la sua vulnerabilità.
 
----
+## Cosa vuole
 
-## STATISTICHE D&D 3.5
+È in trappola nella rete da cui trae profitto — esattamente come i suoi acquirenti. Il Collezionista è troppo pericoloso per essere denunciato. Uscire dalla rete senza protezione significa diventare il prossimo "articolo" del catalogo.
+
+**La sua vera agenda:** Trovare un modo per uscire dalla rete senza venire ucciso. I PG potrebbero essere quella via d'uscita — ma dovrà pagare un prezzo, e loro dovranno capire che ha più valore come informatore che come prigioniero.
+
+## Nella campagna
+
+### COME USARLO IN GIOCO
+
+#### Per il Party (Investigazione)
+Se i PG seguono la catena investigativa:
+1. Stat del carro di Sal → confronto con "sculture" dei nobili → stessa fattura
+2. Registri di Varis → date e percorsi di fornitura coincidono con le rotte di Sal
+3. Interrogatorio di Varis (Intimidire CD 18 o Diplomazia CD 22) → rivela il nome dell'intermediario di Sal → catena risalita al Collezionista
+
+## Con i PG
+
+### Per Artemis (Il Senior Developer)
+Varis è già il fornitore del *Mantello dei Tiri Salvezza*. Ha già 3 transazioni con Artemis (see `state.md`). Se Artemis scopre la rete delle statue, Varis potrebbe:
+1. Negare → Artemis fa Percepire Intenzioni CD 22 → fallisce (Varis è straordinariamente bravo)
+2. Rivelare il primo strato ("alcune statue potrebbero non essere quello che sembrano")
+3. Offrire l'accordo: *"Voi mi proteggete durante la Notte dei Drow, io vi do l'intera lista dei clienti — inclusi i nomi dei drow che hanno incaricato il Collezionista. Tutti e 40+ i siti in Faerûn."*
+
+## In combattimento
+
+- Non farlo combattere mai direttamente. Se minacciato fisicamente: apre una porta sul retro che sapeva sarebbe servita, e scompare nella rete di cunicoli sotto Rethmar che conosce da anni.
+
+### STATISTICHE D&D 3.5
 
 | Caratteristica | Valore | Mod. |
 |:---|:---:|:---:|
@@ -71,9 +102,7 @@ Tratta Artemis come un pari intellettuale — abbastanza da essere onesto sul bo
 
 **BAB:** +5 | Attacchi: Pugnale nascosto +7 (1d4, 19–20/×2) — usato solo in extremis
 
----
-
-## ABILITÀ PRINCIPALI
+### ABILITÀ PRINCIPALI
 
 | Abilità | Totale | Note |
 |:---|:---:|:---|
@@ -86,9 +115,7 @@ Tratta Artemis come un pari intellettuale — abbastanza da essere onesto sul bo
 | **Scassinare** | **+8** | 6 gradi +2 Des |
 | **Muoversi Silenziosamente** | **+8** | 6 gradi +2 Des |
 
----
-
-## EQUIPAGGIAMENTO
+### EQUIPAGGIAMENTO
 
 | Oggetto | Note |
 |:---|:---|
@@ -97,31 +124,7 @@ Tratta Artemis come un pari intellettuale — abbastanza da essere onesto sul bo
 | **Borsa Contenente** | Campioni commerciali, registri cifrati, lettera con sigillo del Collezionista (mai aperta — la tiene come assicurazione sulla vita) |
 | **Sigillo di Autenticità** | Strumento magico per marcare le "sculture" come arte autentica d'epoca (falsificazione CR 22) |
 
----
-
-## SEGRETO: COSA SA VARIS
-
-**Varis sa.** O meglio, ha smesso di non sapere circa tre mesi fa, quando una statua in un magazzino si è mossa impercettibilmente mentre lui stava facendo l'inventario. Non ha detto niente. Ha chiuso la porta, ha registrato la statua come "venuta", e ha continuato.
-
-È in trappola nella rete da cui trae profitto — esattamente come i suoi acquirenti. Il Collezionista è troppo pericoloso per essere denunciato. Uscire dalla rete senza protezione significa diventare il prossimo "articolo" del catalogo.
-
-**La sua vera agenda:** Trovare un modo per uscire dalla rete senza venire ucciso. I PG potrebbero essere quella via d'uscita — ma dovrà pagare un prezzo, e loro dovranno capire che ha più valore come informatore che come prigioniero.
-
----
-
-## COME USARLO IN GIOCO
-
-### Per Artemis (Il Senior Developer)
-Varis è già il fornitore del *Mantello dei Tiri Salvezza*. Ha già 3 transazioni con Artemis (see `state.md`). Se Artemis scopre la rete delle statue, Varis potrebbe:
-1. Negare → Artemis fa Percepire Intenzioni CD 22 → fallisce (Varis è straordinariamente bravo)
-2. Rivelare il primo strato ("alcune statue potrebbero non essere quello che sembrano")
-3. Offrire l'accordo: *"Voi mi proteggete durante la Notte dei Drow, io vi do l'intera lista dei clienti — inclusi i nomi dei drow che hanno incaricato il Collezionista. Tutti e 40+ i siti in Faerûn."*
-
-### Per il Party (Investigazione)
-Se i PG seguono la catena investigativa:
-1. Stat del carro di Sal → confronto con "sculture" dei nobili → stessa fattura
-2. Registri di Varis → date e percorsi di fornitura coincidono con le rotte di Sal
-3. Interrogatorio di Varis (Intimidire CD 18 o Diplomazia CD 22) → rivela il nome dell'intermediario di Sal → catena risalita al Collezionista
+## Esiti possibili
 
 ### Il Triangolo di Rischio
 ```
@@ -133,20 +136,27 @@ Se i PG seguono la catena investigativa:
     Il Collezionista fugge                 ma sopravvive
 ```
 
----
+## Al tavolo
 
-## DIALOGO
+### DIALOGO
 
 - *"Non mi troverete mai a mentire, Tesoro. Solo a... selezionare la verità pertinente."*
 - *"L'arte ha sempre avuto una componente umana. La domanda è quanto letteralmente la si voglia interpretare."*
 - *"(con voce ancora più bassa del solito) Avete idea di cosa succede alle persone che fanno troppe domande al mio fornitore? Io sì. Ecco perché non faccio troppe domande."*
 - Se il party gli offre protezione: *"Cosa vi costa proteggere un commerciante anziano? Niente. Cosa vi costa non farlo? Ogni indirizzo, ogni nome, ogni transazione degli ultimi due anni. Fate i vostri calcoli."*
 
----
-
-## NOTE PER IL MASTER
+### NOTE PER IL MASTER
 
 - Varis funziona meglio come **NPC di confine morale** per Artemis. Non è un villain puro — è qualcuno che ha fatto scelte sbagliate per ragioni comprensibili e ora è intrappolato.
 - Il suo utilizzo ottimale è nella **Fase investigativa pre-Rethmar**: è il link vivente tra Sal (deserto) e il Collezionista (Rethmar). Se i PG lo usano bene, arrivano alla Fase 4 sapendo esattamente cosa succederà con le statue.
-- Non farlo combattere mai direttamente. Se minacciato fisicamente: apre una porta sul retro che sapeva sarebbe servita, e scompare nella rete di cunicoli sotto Rethmar che conosce da anni.
 - Ha dati su **40+ statue in Faerûn**. Questa informazione è la sua assicurazione sulla vita. La custodisce in una posizione sconosciuta (non nel suo negozio). Rivelarne l'esistenza è già un passo verso la libertà — o la morte.
+
+## Segreti del DM
+
+### SEGRETO: COSA SA VARIS
+
+**Varis sa.** O meglio, ha smesso di non sapere circa tre mesi fa, quando una statua in un magazzino si è mossa impercettibilmente mentre lui stava facendo l'inventario. Non ha detto niente. Ha chiuso la porta, ha registrato la statua come "venuta", e ha continuato.
+
+## Fonti e canone
+
+[DA SCRIVERE — la scheda non registra decisioni del DM né da dove viene. Lo nominano anche `Bestiario/png/Lirien/Lirien.md` (§2.1), i master dell'Arco 07 e i file del Palio nell'Arco 09.]

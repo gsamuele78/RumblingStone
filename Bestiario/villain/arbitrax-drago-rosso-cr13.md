@@ -20,6 +20,18 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Huge dragon (fire), 19 HD, LE. **hp 228**; **AC 32**, touch 8, flat-footed 32. Init +4; Vel 12 m, Volare 45 m (scarsa). TS Temp +16, Rifl +11, Vol +13. BAB +19; Lotta +37.
-**Mischia** morso +27 (2d8+10); 2 artigli +22 (2d6+5); 2 ali +22 (1d8+5); coda +22 (2d6+5); schiacciare +22 (2d8+5). **Soffio** cono di fuoco 15 m, **10d10** (Rifl CD 24 dimezza). **Presenza Terrificante** (Vol CD ~24). Blindsense, scurovisione/vista crepuscolare, immunità fuoco, vulnerabilità freddo, RD e RI da drago young adult, *locate object*, incantesimi da stregone (liv. basso). Talenti: Colpo Poderoso Volante, Attacco in Volata, Spinta/Iniziativa Migliorata, Attacco Poderoso, Ghermire, Wingover.
+Huge dragon (fire), 19 HD, LE.
+
+**Iniziativa** +4 · **Sensi** Blindsense, scurovisione/vista crepuscolare
+
+**Difesa** **AC 32**, touch 8, flat-footed 32 · **hp 228** · TS Temp +16, Rifl +11, Vol +13 · immunità fuoco, vulnerabilità freddo, RD e RI da drago young adult
+
+**Attacco** Vel 12 m, Volare 45 m (scarsa) · **Mischia** morso +27 (2d8+10); 2 artigli +22 (2d6+5); 2 ali +22 (1d8+5); coda +22 (2d6+5); schiacciare +22 (2d8+5) · **Soffio** cono di fuoco 15 m, **10d10** (Rifl CD 24 dimezza) · *locate object*, incantesimi da stregone (liv. basso)
+
+**Statistiche** BAB +19; Lotta +37 · **Talenti** Colpo Poderoso Volante, Attacco in Volata, Spinta/Iniziativa Migliorata, Attacco Poderoso, Ghermire, Wingover
+
+**Capacità speciali** **Presenza Terrificante** (Vol CD ~24).
+
+**Tattiche** Solo la posizione: come drago guardiano dell'altare campale (lì si chiama Abithriax) si libra a 6-9 m sopra l'anello medio, e i PG possono isolarlo per 2-3 round. Sta nell'arco 09, Battaglia finale fase 2 (i ritualisti), «Anello medio – Guardiani draconici» e §8.1. [DA SCRIVERE — nessun file del repo dice come combatte Arbitrax round per round né quando smette.]
+
 Notes: il drago rosso dell'avanguardia (ruolo di Abithriax nel RHoD originale). Statblock d'arco correlati: Fauci di Palude (ARC-08).

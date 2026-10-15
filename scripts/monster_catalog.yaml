@@ -1048,7 +1048,7 @@ monsters:
     name: "SONJAK — MATRONA CLERICALE DEL SOTTOSUOLO"
     cr: 13.0
     faction: drow-sonjak
-    role: caster-divine
+    role: villain
     environment: underdark
     source_file: "Bestiario/villain/Sonjak/Sonjak.md"
   - id: xilthra-vel-ssin-boss-dei-campi-drow-1c27c0
@@ -1195,7 +1195,7 @@ monsters:
     name: "ARCANO ZETH IL MURATO — IL GHOSTLORD"
     cr: 13.0
     faction: ghostlord-undead
-    role: caster-divine
+    role: villain
     environment: forest
     source_file: "Bestiario/villain/Ghostlord/Ghostlord.md"
   - id: ghostlord-lich-druidico-5abfc3
@@ -2013,7 +2013,7 @@ monsters:
     name: "AZARR KUL — ALTO WYRMLORD DI TIAMAT"
     cr: 15.0
     faction: red-hand
-    role: boss
+    role: villain
     environment: any
     source_file: "Bestiario/villain/Azarr_Kul/Azarr_Kul/Azarr_Kul.md"
   - id: azarr-kul-final-cr15-592c05

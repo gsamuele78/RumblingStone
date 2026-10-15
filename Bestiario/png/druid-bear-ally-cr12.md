@@ -28,6 +28,22 @@ fonte: trascritto dalla fonte d'arco `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-S
 
 > [INFERRED — needs DM confirmation] **D7, deciso dal DM il 2026-09-23: si usa la fonte d'arco**, con due gruppi di statistiche distinti. La fonte scrive Druido 10 / Barbaro 2, `12d8+48` (pf ~102) e, in forma d'orso bruno, For 27 e CA 20; la scheda scriveva Druido 12, pf 120, CA 19, e mescolava le due forme. Dal SRD: l'orso bruno (For 27, Des 13, Cos 19) dà il `+48` della fonte su 12 DV; il Barbaro tira d12, quindi i dadi sono `10d8+2d12`. BAB +9 (Druido 10 +7, Barbaro 2 +2); TS in forma d'orso Temp +14 (+10 base, Cos +4), Rifl +4 (+3, Des +1), Vol +11 (+7, Sag +4). Artigli +16 = BAB +9, For +8, Grande −1. Gli incantesimi passano da 12° a 10° livello, e il 6° livello sparisce. Il valore vecchio: pf 120, `12d8`, Temp +9, artigli +20.
 
+**Iniziativa** +1
+
+**Difesa** CA 20 (in forma d'orso bruno, valore della fonte d'arco) · pf 102 (10d8+2d12+48) · TS Temp +14, Rifl +4, Vol +11
+
+**Attacco** Vel 15 m (12 m dell'orso bruno, +3 m movimento veloce da barbaro) · **Mischia** 2 artigli +16 (1d8+8) e morso +11 (2d6+4) · **Incantesimi** da druido di 10° livello (SAG +4), in forma lancia solo con Incantesimi Naturali; al giorno 6/6/5/5/4/2, CD 10 + livello + 4 (massimo CD 19 al 5°)
+
+**Statistiche** For 27, Des 13, Cos 19, Int 8, Sag 18, Car 10 (forma d'orso bruno) · BAB +9; Lotta +21
+
+**Capacità speciali**
+- **Afferrare migliorato** (orso bruno): lotta +21.
+- **Ira 1/giorno** (Barbaro 2): +4 For e Cos, +2 Volontà, −2 CA; schivare prodigioso.
+
+**Tattiche**
+- *Durante il combattimento*: la scheda non ne ha. Arco 09, Battaglia finale. «Stat blocchi epici» §6: prima linea brutale contro giganti, troll e bestie da guerra. Fase 4 («Circolo, Mythal e statue», §7, ruolo degli alleati): i druidi-orsi pattugliano l'anello più esterno abbattendo giganti e bestie residue, e possono comparire una volta in scena per salvare un incantatore in extremis, lanciandosi a intercettare un colpo mortale.
+- *Morale*: [DA SCRIVERE — nessun file del repo dice quando smette di combattere.]
+
 ## Forma umana (Druido 10 / Barbaro 2)
 
 Statistiche distinte da quelle del blocco, che è la forma d'orso in cui combatte.
@@ -46,13 +62,10 @@ Statistiche distinte da quelle del blocco, che è la forma d'orso in cui combatt
 **Source**: AP RHoD + Druido 10 / Barbaro 2 in forma d'orso bruno → STATBLOCCHI-EPICI §6
 **Status**: inferred — base template only; DM should finalize exact stats at the table.
 
-## Summary
-
-Bear-druid ally: brown bear form (HP 102, AC 20, 2 claws +16/bite +11, improved grab); rage 1/day. Human form stats listed separately. Source: Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md §6.
-
-## Notes
-
+Taratura al tavolo:
 - Scale HP/AC/attacks by ±10% to tune difficulty at the table.
 - Advance via HD, class levels, or templates before adding new unique powers.
 - For upscaled variants, apply the Advanced Creature template (MM p.294) or class levels preserving CR math.
 - AP canon names preserved; mechanics derived from SRD/MM/FRCS only.
+
+Notes: Bear-druid ally: brown bear form (HP 102, AC 20, 2 claws +16/bite +11, improved grab); rage 1/day. Human form stats listed separately. Source: Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md §6.

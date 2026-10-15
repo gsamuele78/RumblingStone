@@ -19,6 +19,18 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.
 
-Large undead, 11d12. **hp 71**; **AC 20** (-1 taglia, +11 naturale), touch 9, flat-footed 20. Init +0; Vel Volare 15 m (media). TS Temp +3, Rifl +3, Vol +9. BAB +5; Lotta +9. For 10, Des 10, Cos -, Sag 15, Car 17.
-**Mischia** morso +4 (2d4). **Raggi degli occhi** +4 tocco a distanza (10 occhi come beholder vivo, ma 1d4+1 tipicamente spenti). **Cono di antimagia** 170 ft dall'occhio centrale (come *antimagic field* LI 13; sopprime anche i propri raggi). Visione a 360°, +2 resistenza allo scacciare, tratti dei non morti. Skill: Cercare +4, Osservare +6.
+Large undead, 11d12.
+
+**Iniziativa** +0 · **Sensi** Visione a 360° · Skill: Cercare +4, Osservare +6.
+
+**Difesa** **hp 71**; **AC 20** (-1 taglia, +11 naturale), touch 9, flat-footed 20 · TS Temp +3, Rifl +3, Vol +9 · +2 resistenza allo scacciare, tratti dei non morti
+
+**Attacco** Vel Volare 15 m (media) · **Mischia** morso +4 (2d4) · **Raggi degli occhi** +4 tocco a distanza (10 occhi come beholder vivo, ma 1d4+1 tipicamente spenti)
+
+**Statistiche** For 10, Des 10, Cos -, Sag 15, Car 17 · BAB +5; Lotta +9
+
+**Capacità speciali** **Cono di antimagia** 170 ft dall'occhio centrale (come *antimagic field* LI 13; sopprime anche i propri raggi).
+
+**Tattiche** *Prima del combattimento*: la posizione nel tempio (nascosto nell'ombra vicino a un pilastro del lato destro, a circa 9 m d'altezza, coi tre wraith nei pilastri e il warlock drow in fondo) sta nell'arco 03, la Cittadella, «Il Guardiano», nella nota sul tempio nanico. [DA SCRIVERE — nessun file del repo dice come combatte round per round né quando smette.]
+
 Notes: il difensore non-morto del tempio (FRCS Death Tyrant). Unico → `villain/`.

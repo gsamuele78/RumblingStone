@@ -20,6 +20,18 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium humanoid (elf/human), Druid 9, NG. **hp 57** (9 HD); **AC 19**, touch 12, flat-footed 17. Init +2; Vel 6 m. TS Temp +8, Rifl +5, Vol +10 (+2 vs morte/risucchi; immune ai veleni). BAB +6; Lotta +7.
-**Mischia** scimitarra +1 +8/+3 (1d6+2/18-20); **Distanza** fionda perfetta +9/+4. Incantesimi da Druid 9 (tipici: *calm animals, dominate animal, greater magic fang, plant growth, standing wave*); **Forma Selvatica**, compagno animale, passo/andatura nel bosco, empatia. Visione crepuscolare. Ascoltare/Osservare +16. Talenti: Initiate of Nature, Anima Forte, Seguire Tracce.
+Medium humanoid (elf/human), Druid 9, NG.
+
+**Iniziativa** +2 · **Sensi** Visione crepuscolare. Ascoltare/Osservare +16.
+
+**Difesa** **AC 19**, touch 12, flat-footed 17 · **hp 57** (9 HD) · TS Temp +8, Rifl +5, Vol +10 (+2 vs morte/risucchi; immune ai veleni)
+
+**Attacco** Vel 6 m · **Mischia** scimitarra +1 +8/+3 (1d6+2/18-20) · **Distanza** fionda perfetta +9/+4 · Incantesimi da Druid 9 (tipici: *calm animals, dominate animal, greater magic fang, plant growth, standing wave*)
+
+**Statistiche** BAB +6; Lotta +7 · Talenti: Initiate of Nature, Anima Forte, Seguire Tracce.
+
+**Capacità speciali** **Forma Selvatica**, compagno animale, passo/andatura nel bosco, empatia.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte Avarthel. I moduli lo citano solo come druido del Cerchio e come fonte di incantesimi al banco (arco 09, «Banchi e mercati»).]
+
 Notes: druido del Cerchio (area Witchwood/Hella); alleato → `png/`.

@@ -23,7 +23,19 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. **hp 67** (11 HD); **AC 19**, touch 12, flat-footed 17. Init +6; Vel 9 m. TS Temp +6, Rifl +9, Vol +9. BAB +6; Lotta +9.
-**Mischia** morning star perfetta +10/+5 (1d6+3). Incantesimi da Sorcerer 8 (Car 16; tipici: *mage armor, shield, magic missile, detect thoughts, glitterdust*). Famiglio; Borsa Conservante I. Scurovisione 18 m. Talenti: Iniziativa Migliorata, Volontà/Riflessi, Persuasivo, Sudden Enlarge.
+Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE.
+
+**Iniziativa** +6 · **Sensi** Scurovisione 18 m.
+
+**Difesa** **AC 19**, touch 12, flat-footed 17 · **hp 67** (11 HD) · TS Temp +6, Rifl +9, Vol +9
+
+**Attacco** Vel 9 m · **Mischia** morning star perfetta +10/+5 (1d6+3) · Incantesimi da Sorcerer 8 (Car 16; tipici: *mage armor, shield, magic missile, detect thoughts, glitterdust*).
+
+**Statistiche** BAB +6; Lotta +9 · **Talenti** Iniziativa Migliorata, Volontà/Riflessi, Persuasivo, Sudden Enlarge · **Equipaggiamento** Borsa Conservante I.
+
+**Capacità speciali** Famiglio.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte Koth; l'arco 09 lo nomina solo come Wyrmlord con un Razorfiend assegnato e base a Vraath.]
+
 **Variante draconica** (`bugbear_draconic_koth.pcg`): stesso build con template Draconic Creature (Car 16) `[INFERRED — solo .pcg]`.
 Notes: il Wyrmlord Koth della campagna (RHoD: Koth alla Fortezza di Vraath). Unico, quindi in `villain/`.

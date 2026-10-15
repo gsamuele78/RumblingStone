@@ -21,7 +21,20 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium outsider (native), Hobgoblin mezzo-immondo Dragon Shaman 5 (totem blu, culto di Tiamat), LE. **hp 47** (5 HD), **RD 5/magico**, **RI 15**; **AC 21**, touch 13, flat-footed 18. Init +3; Vel 9 m, Volare 9 m (maldestra). TS Temp +7, Rifl +4, Vol +3; resistenza 10 ad acido/freddo/elettricità/fuoco. BAB +3; Lotta +8.
-**Mischia** morning star +1 +10 (1d6+6); scudo +4; oppure artigli +8/+8 (1d4+5) e morso +3 (1d6+2). **Soffio** 2d6 elettricità (Rifl dimezza, 1d4 round di ricarica). **Colpire il Bene** 1/giorno (+HD danni). Aura Draconica; SLA innate da mezzo-immondo. Scurovisione. Talenti: Diving Charge, Skill Focus (Sapienza Magica), Arma Focalizzata (morning star).
+Medium outsider (native), Hobgoblin mezzo-immondo Dragon Shaman 5 (totem blu, culto di Tiamat), LE.
+
+**Iniziativa** +3 · **Sensi** Scurovisione.
+
+**Difesa** **AC 21**, touch 13, flat-footed 18 · **hp 47** (5 HD) · TS Temp +7, Rifl +4, Vol +3 · **RD 5/magico**, **RI 15**; resistenza 10 ad acido/freddo/elettricità/fuoco
+
+**Attacco** Vel 9 m, Volare 9 m (maldestra) · **Mischia** morning star +1 +10 (1d6+6); scudo +4; oppure artigli +8/+8 (1d4+5) e morso +3 (1d6+2) · **Soffio** 2d6 elettricità (Rifl dimezza, 1d4 round di ricarica) · **Colpire il Bene** 1/giorno (+HD danni)
+
+**Statistiche** BAB +3; Lotta +8 · **Talenti** Diving Charge, Skill Focus (Sapienza Magica), Arma Focalizzata (morning star)
+
+**Capacità speciali** Aura Draconica; SLA innate da mezzo-immondo.
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte Draxoksus; la scheda dice solo che è lo sciamano dell'incontro RHoD della campagna.]
+
 **Stadio 2 — Dragon Shaman 6 (CR 8)**: hp 56, AC 22, RI 16, soffio 3d6, Touch of Vitality, Carica Devastante; artigli +7/+7 (1d4+3), morning star +1 +9 (1d8+4).
+
 Notes: lo sciamano dell'incontro RHoD della campagna; unico → `villain/`.

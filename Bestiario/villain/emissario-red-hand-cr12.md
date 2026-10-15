@@ -32,11 +32,19 @@ fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=humanoid, ta
 **Source**: AP RHoD hobgoblin envoy + Cleric 9 (Tiamat) — ghostlord negotiations
 **Status**: inferred — base template only; DM should finalize exact stats at the table.
 
-## Summary
+Elite hobgoblin diplomat-priest, sent to turn/blackmail Ghostlord.
 
-Elite hobgoblin diplomat-priest, sent to turn/blackmail Ghostlord. Full cleric spellcasting L9 (Tiamat domain: Destruction, Evil). Carries Mark of Tiamat (+2 vs undead). Source: Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md §3.
+**Difesa** CA 20 (+0 Des, +10 armatura) · pf 49 (9d8) · TS Temp +7, Rifl +3, Vol +9
 
-## Notes
+**Attacco** Vel 9 m · **Mischia** spada lunga +7 (1d8+1) · Full cleric spellcasting L9 (Tiamat domain: Destruction, Evil).
+
+**Statistiche** For 13, Des 10, Cos 12, Int 8, Sag 17, Car 14 · [DA SCRIVERE — BAB, Lotta, talenti e abilità non sono scritti da nessuna parte; il resto è nel blocco qui sopra]
+
+**Capacità speciali** Carries Mark of Tiamat (+2 vs undead).
+
+**Tattiche** [DA SCRIVERE — nessun file del repo dice come combatte l'emissario. L'arco 09 gli dà solo un ruolo: «ultimo ostacolo prima del Ghostlord» (statblocchi del Ghostlord, §3), una scena con 4-6 hobgoblin nell'event deck della battaglia finale (Carta 11) e un incontro con scorta che «offre resa/minaccia» negli incontri di viaggio del Cannath Vale.]
+
+Notes: Source: Arco-Post-Hammerfist-P3-Ghostlord-LICH-ALLEANZA-STATBLOCCHI.md §3.
 
 - Scale HP/AC/attacks by ±10% to tune difficulty at the table.
 - Advance via HD, class levels, or templates before adding new unique powers.

@@ -14,18 +14,49 @@ velocita: 9 m
 
 **Nome nel Passato:** Vatore (il "Ladro d'Ombra" di Hammerfist, -1000 DR)
 **Nome nel Presente:** Salvatore "Sal" della Luna d'Argento
-**Razza/Tipo:** Umano (origine incerta — semi-planare sospetto)
-**Classe:** Bardo 8 / Accordo Sublime 1 / Spia 5 (Livello Totale 14)
-**Grado di Sfida (GS):** 14
-**Allineamento:** Neutrale Malvagio (schermato come Legale Buono)
+**Role**: villain — Spia Planare, Ricettatore Temporale
+**Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi]
+**Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; la prima apparizione è su una strada del deserto dello Shaar/Cannath (§Al tavolo)]
+**Motivation**: [DA SCRIVERE — vedi §Cosa vuole]
+**CR**: 14 | **Race/Class**: Umano (origine incerta — semi-planare sospetto); Bardo 8 / Accordo Sublime 1 / Spia 5 (Livello Totale 14); Neutrale Malvagio (schermato come Legale Buono)
 **Era d'Origine:** -1000 DR (Epoca di Hammerfist)
 **Datori di Lavoro:** Il Collezionista (Rakshasa) + Matrona Sajak (Drow, sottosuolo Cannath). *Per il DM:* è **Sonjak** (`Bestiario/villain/Sonjak/Sonjak.md`); Sal non conosce quel nome
+**Key stats**: → §In combattimento. I numeri stanno in questa scheda.
 
 ---
 
-## DESCRIZIONE
+## Chi è
 
-### Aspetto nel Presente (Sal)
+### Il Sigillo di Ossidiana — l'artefatto che lo ha reso Sal `[CANONE — DM 2026-07-23]`
+
+> Cross-source: scheda completa in `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice B; thread `campaign/state.md §7 [SIGILLO DI OSSIDIANA]`.
+
+Ciò che Vatore ha rubato al −1000 e con cui è diventato **Sal**. Sigillo di
+**ossidiana nera** allineato a **Shar** (Signora della Notte — perdita,
+oscurità, segreti; più pertinente di Mask perché il prezzo è la **perdita di
+anime**, non solo il furto).
+
+- **Manto di Notte Assoluta** (passivo): entro 9 m sopprime gli incantesimi di
+  luce di livello ≤2; *daylight*+ richiede prova di livello incantatore CD 20.
+- **Furto della Notte** (1/g): un'azione furtiva come invisibile e silenzioso
+  per 1 round (non in piena luce naturale).
+- **Il prezzo — divora anime**: ogni uso costa **1 livello negativo** a una
+  creatura senziente toccata nelle ultime 24 h (o un'anima intrappolata); **se
+  non disponibile, consuma il portatore** (livello negativo permanente dopo
+  24 h). Vatore lo usa sugli altri, poi su sé stesso: la sua **avidità e sete di
+  potere** lo accecano al conto — è così che diventa Sal.
+- **Contrasto con l'Anello di Artemis** (scintilla di Lathander, nemesi di
+  Shar): se lo impugna Artemis, i due artefatti si annullano — i poteri di
+  luce/alba dell'Anello diventano instabili/non disponibili e il Sigillo è
+  soppresso. Bivio **Notte vs Alba** per l'ARC-09.
+- **Gancio**: se i PG lo rubano a Vatore e lo riportano nel presente (Cronolito),
+  Sal si presenta **senza il suo asso** e la sincronizzazione si complica.
+
+## Aspetto e voce
+
+### Descrizione
+
+#### Aspetto nel Presente (Sal)
 
 Un uomo sulla quarantina dall'aria impeccabile. Capelli neri lucidissimi pettinati con cura, zigomi alti, sorriso smagliante sempre presente. Veste una **giacca blu elettrico a doppio petto con spalline d'oro**, pantaloni neri attillati e **stivali d'oro** lucidati a specchio. Una **mantellina corta coordinata** cade sulle spalle come un mantello da palcoscenico. Al dito porta quello che sembra un **anello di diamante** (in realtà il Cronolito di ossidiana trasfigurato da illusione). Attorno a lui fluttuano costantemente petali di rosa e scintille magiche di prestidigitazione.
 
@@ -33,15 +64,57 @@ Porta sempre una **brocca d'oro invisibile** che galleggia nell'aria accanto a s
 
 Parla con accento da Calimshan del sud, alternando "Tesoro" e "Guagliò" come appellativi universali. Profuma di rose e spezie esotiche.
 
-### Aspetto nel Passato (Vatore, -1000 DR)
+#### Aspetto nel Passato (Vatore, -1000 DR)
 
 Stesso volto, ma irriconoscibile nel portamento. Abiti semplici: vesti di seta grigia drow, cappuccio abbassato, sguardo freddo e calcolatore. Parla in monosillabi. Nessun sorriso. Nessun ornamento. Solo un anonimo ladro d'ombra al lavoro.
 
 *Se i PG lo riconoscono come "l'uomo che era a Hammerfist", Sal ride e risponde che era il suo bisnonno — "un tipo poco alla moda, trasandato, niente a che fare con la mia classe, capisce?"*
 
----
+### Personalità e roleplay
 
-## STATISTICHE D&D 3.5
+#### Sal (nel Presente)
+
+Esuberante, lusinghiero, inarrestabile. Entra in scena cantando una ballata sui PG — sa già chi sono (il Collezionista lo ha informato). Chiama tutti "Tesoro" o "Guagliò". Si offende visibilmente se qualcuno non assaggia il suo vino. Tocca le spalle, stringe le mani con calore eccessivo, si avvicina troppo nello spazio personale. Ogni movimento è studiato per spezzare la concentrazione.
+
+**Frasi chiave:**
+- *"Guagliò, se avessi voluto uccidervi, vi avrei venduto vestiti fuori moda. Non queste delizie!"*
+- *"Amore, sei così teso che vedi demoni anche sotto i miei bottoni d'oro. Rilassati, per favore."*
+- *"Il mio sangue! Avete sporcato la seta di Sigil! Sarete le mie prossime statue di fango!"* (se ferito)
+- *"Siete stati dei facchini eccellenti. Portare questi artefatti fin qui... il Collezionista vi farà un piedistallo d'oro!"* (tradimento finale)
+
+#### Vatore (nel Passato, -1000 DR)
+
+Freddo. Parla il meno possibile. Osserva i PG con un terrore reverenziale mal mascherato. Ha appena visto quattro individui respingere un'orda intera da soli — questo lo ossessiona. Nel passato ha appena rubato il Sigillo di Ossidiana e sta pianificando la fuga nel futuro.
+
+## Cosa vuole
+
+[DA SCRIVERE — la scheda non dice che cosa vuole Sal per sé, né che cosa teme. Ci sono i suoi datori di lavoro (in testa), la sete di potere che il Sigillo gli ha dato (§Chi è) e il suo terrore del sangue (§In combattimento).]
+
+## Nella campagna
+
+### Il carro: la galleria ambulante
+
+Il carro di Sal è un normalissimo carro mercantile con tende di seta blu e insegna "**Luna d'Argento — Arte Planare e Rarità**". All'interno:
+
+- **3–6 Statue Vive**: creature pietrificate (un nano di Hammerfist, un ogre drow, uno gnomo mercante di Sigil). Sono presentate come "sculture naniche di straordinario realismo d'epoca Hammerfist". Sono vive, coscienti, terrorizzate.
+- **Scaffali di prodotti**: i prodotti trappola (vedi sopra) + gemme vere di valore medio, pergamene illeggibili, bigiotteria planare.
+- **Spazio Extradimensionale** (nascosto sotto il pavimento): 2 Drow Assassini in standby, armati. Entrano in scena solo se Sal usa il segnale (tossisce tre volte).
+
+## Rapporti
+
+### Collegamento con Maestro Varis "Seta-Argento"
+
+Sal e Varis lavorano per la stessa organizzazione ma **non si conoscono di persona**: Sal consegna le statue a intermediari, Varis le vende ai nobili di Rethmar. Se i PG dovessero confrontare le due figure, noterebbero che:
+
+- Le "sculture" nelle case dei nobili di Rethmar hanno la stessa fattura di quelle nel carro di Sal.
+- Varis usa esattamente la stessa formula di vendita ("arte nanica d'epoca Hammerfist").
+- Confrontando le date di acquisto con le rotte di Sal, si può ricostruire la catena di fornitura.
+
+Questo crea una **traccia investigativa** che collega i due NPC e porta al Collezionista senza che nessuno dei due sia il capo.
+
+## In combattimento
+
+### Statistiche D&D 3.5
 
 | Caratteristica | Valore | Mod. |
 |:---|:---:|:---:|
@@ -66,9 +139,7 @@ Stesso volto, ma irriconoscibile nel portamento. Abiti semplici: vesti di seta g
 - **Volontà:** +11 (+8 Base Bardo, +1 Sag, +2 Talento)
   *(Eccezione: TS Volontà CD 14 per evitare lo stato Scosso se subisce anche solo 1 PF di danno — vedi **Odio per il Sangue**)*
 
----
-
-## ABILITÀ PRINCIPALI
+### Abilità principali
 
 | Abilità | Totale | Note |
 |:---|:---:|:---|
@@ -84,11 +155,9 @@ Stesso volto, ma irriconoscibile nel portamento. Abiti semplici: vesti di seta g
 | Conoscenze (Piani) | **+16** | +3 Int, 13 gradi |
 | Conoscenze (Storia) | **+18** | +3 Int, 13 gradi, +2 bonus temporale |
 
----
+### Capacità speciali
 
-## CAPACITÀ SPECIALI
-
-### Il Cronolito Divora-Anime (Artefatto Minore)
+#### Il Cronolito Divora-Anime (Artefatto Minore)
 
 Il vero fulcro di tutto. Appare come un **anello di diamante** grazie a un'illusione permanente (CL 20), ma è un medaglione di ossidiana nera con un nucleo di cristallo rosso sangue pulsante.
 
@@ -99,7 +168,7 @@ Il vero fulcro di tutto. Appare come un **anello di diamante** grazie a un'illus
 - **Carburante:** Anime di creature pietrificate nel carro. Sal le chiama le sue "Statue Vive" e le trasporta come "opere d'arte nanica". Le creature sono vive ma pietrificate, coscienti della prigionia.
 - **Deviazione +2:** L'ossidiana del Cronolito trasmette un bonus di deviazione +2 alla CA (incluso nelle statistiche sopra).
 
-### Aura di Non-Esistenza
+#### Aura di Non-Esistenza
 
 L'anello-Cronolito annulla l'aura magica di tutti gli oggetti di Sal entro 1,5 m.
 - *Individuazione del Magico* non rileva nulla di insolito.
@@ -107,27 +176,27 @@ L'anello-Cronolito annulla l'aura magica di tutti gli oggetti di Sal entro 1,5 m
 - *Lettura del Pensiero* fallisce automaticamente (effetto Vuoto Mentale incorporato).
 - *Visione del Vero* vede solo un umano con "una lieve aura di Divinazione" — la scusa del cronometro da tasca.
 
-### Mente Schermata
+#### Mente Schermata
 
 Immune a tutti gli effetti di lettura del pensiero, individuazione dell'allineamento e effetti di charme/dominio che richiedono contatto visivo prolungato (oltre 1 round di concentrazione ininterrotta).
 
-### Nascondersi in Piena Vista (Ex) — Capacità di Classe Spia
+#### Nascondersi in Piena Vista (Ex) — Capacità di Classe Spia
 
 Può nascondersi in qualsiasi ambiente con almeno 1 m² di ombra o folla entro 3 m, anche se osservato. Questa è una capacità **Ex** (non magica): *Vedere l'Invisibilità* e simili effetti non la contrastano.
 
-### Scambio Benigno (Az. Veloce)
+#### Scambio Benigno (Az. Veloce)
 
 1/round, se sta per ricevere un colpo che lo porterebbe sotto 0 PF, può scambiarsi di posto con un alleato entro 9 m (Drow, ogre, soldato). Il colpo colpisce l'alleato invece di lui. L'alleato non ha diritto a TS.
 
-### Fluttuazione Temporale (Cronolito, 1/giorno)
+#### Fluttuazione Temporale (Cronolito, 1/giorno)
 
 Se messo alle strette in combattimento, può attivare il Cronolito come azione veloce. Per 3 round, i PG hanno il **50% di probabilità di mancarlo** perché colpiscono la sua "immagine temporale" di 1000 anni fa. Funziona come *Immagine Specchio* ma con probabilità fissa.
 
-### Odio per il Sangue
+#### Odio per il Sangue
 
 Ogni volta che Sal subisce danni (anche 1 solo PF), deve superare un **TS Volontà CD 14** o diventare **Scosso** per 1 round. Se diventa Scosso, perde il conteggio delle sue esibizioni di bardatura e grida qualcosa sull'affronto alla sua bellezza. Il DM può usarlo come segnale di rottura del personaggio.
 
-### Bardatura (Bardo 8)
+#### Bardatura (Bardo 8)
 
 - *Ispirazione al Coraggio* +2
 - *Ispirazione alla Competenza* +2
@@ -135,7 +204,7 @@ Ogni volta che Sal subisce danni (anche 1 solo PF), deve superare un **TS Volont
 - *Controcanto*
 - 4 usi di bardatura per giorno
 
-### Incantesimi Conosciuti (CL 9 — Bardo 8 + Accordo Sublime 1)
+#### Incantesimi Conosciuti (CL 9 — Bardo 8 + Accordo Sublime 1)
 
 Sal preferisce non combattere con la magia in modo evidente. Usa incantesimi come strumento sociale e di fuga.
 
@@ -149,9 +218,7 @@ Sal preferisce non combattere con la magia in modo evidente. Usa incantesimi com
 
 **Livello 4 (2/giorno):** *Confusione (CD 20), Porta Dimensionale, Dominio di Mostri (CD 20)*
 
----
-
-## EQUIPAGGIAMENTO
+### Equipaggiamento
 
 | Oggetto | Note |
 |:---|:---|
@@ -165,97 +232,43 @@ Sal preferisce non combattere con la magia in modo evidente. Usa incantesimi com
 | **Bacchetta di Charme su Persone** (22 cariche) | Per emergenze. |
 | **Borsa Contenente** | Brocca d'oro (invisibile — *Oggetto Invisibile* permanente), vino esotico, campioni di prodotto. |
 
----
+### Tattiche
 
-## IL CARRO: LA GALLERIA AMBULANTE
+Sal non combatte se può evitarlo. La sequenza di ritiro round per round sta nel master della Parte 2C (`09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2C-Salvatore-Mercante-TESTO.md`, §Gestione del confronto, «Se i PG lo sfidano prima di Rethmar»). Vatore, nel −1000, non combatte: la regola è in `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Scena 9.
 
-Il carro di Sal è un normalissimo carro mercantile con tende di seta blu e insegna "**Luna d'Argento — Arte Planare e Rarità**". All'interno:
-
-- **3–6 Statue Vive**: creature pietrificate (un nano di Hammerfist, un ogre drow, uno gnomo mercante di Sigil). Sono presentate come "sculture naniche di straordinario realismo d'epoca Hammerfist". Sono vive, coscienti, terrorizzate.
-- **Scaffali di prodotti**: i prodotti trappola (vedi sopra) + gemme vere di valore medio, pergamene illeggibili, bigiotteria planare.
-- **Spazio Extradimensionale** (nascosto sotto il pavimento): 2 Drow Assassini in standby, armati. Entrano in scena solo se Sal usa il segnale (tossisce tre volte).
-
----
-
-## COLLEGAMENTO CON MAESTRO VARIS "SETA-ARGENTO"
-
-Sal e Varis lavorano per la stessa organizzazione ma **non si conoscono di persona**: Sal consegna le statue a intermediari, Varis le vende ai nobili di Rethmar. Se i PG dovessero confrontare le due figure, noterebbero che:
-
-- Le "sculture" nelle case dei nobili di Rethmar hanno la stessa fattura di quelle nel carro di Sal.
-- Varis usa esattamente la stessa formula di vendita ("arte nanica d'epoca Hammerfist").
-- Confrontando le date di acquisto con le rotte di Sal, si può ricostruire la catena di fornitura.
-
-Questo crea una **traccia investigativa** che collega i due NPC e porta al Collezionista senza che nessuno dei due sia il capo.
-
----
-
-## PERSONALITÀ E ROLEPLAY
-
-### Sal (nel Presente)
-
-Esuberante, lusinghiero, inarrestabile. Entra in scena cantando una ballata sui PG — sa già chi sono (il Collezionista lo ha informato). Chiama tutti "Tesoro" o "Guagliò". Si offende visibilmente se qualcuno non assaggia il suo vino. Tocca le spalle, stringe le mani con calore eccessivo, si avvicina troppo nello spazio personale. Ogni movimento è studiato per spezzare la concentrazione.
-
-**Frasi chiave:**
-- *"Guagliò, se avessi voluto uccidervi, vi avrei venduto vestiti fuori moda. Non queste delizie!"*
-- *"Amore, sei così teso che vedi demoni anche sotto i miei bottoni d'oro. Rilassati, per favore."*
-- *"Il mio sangue! Avete sporcato la seta di Sigil! Sarete le mie prossime statue di fango!"* (se ferito)
-- *"Siete stati dei facchini eccellenti. Portare questi artefatti fin qui... il Collezionista vi farà un piedistallo d'oro!"* (tradimento finale)
-
-### Vatore (nel Passato, -1000 DR)
-
-Freddo. Parla il meno possibile. Osserva i PG con un terrore reverenziale mal mascherato. Ha appena visto quattro individui respingere un'orda intera da soli — questo lo ossessiona. Nel passato ha appena rubato il Sigillo di Ossidiana e sta pianificando la fuga nel futuro.
-
----
-
-## NOTE PER IL MASTER
-
-### L'Introduzione (Prima Apparizione)
-
-Sal non aspetta che i PG vengano da lui. **Appare quando i PG sono stanchi** dopo un combattimento o un viaggio, su una strada del deserto dello Shaar/Cannath. Il carro è fermo, circondato da petali di rosa e musica. Sal sta già cantando una ballata che celebra le gesta dei PG — nome per nome, gesta per gesta, persino dettagli che solo chi era presente a Hammerfist potrebbe conoscere. Se interpellato su come li conosca, risponde: *"Il vento del deserto porta tante storie, Tesoro. E io sono un eccellente ascoltatore."*
-
-### La Brocca Invisibile (Test Immediato)
-
-Appena i PG si siedono (se si siedono), Sal afferra la brocca d'oro invisibile nel vuoto e versa il vino in modo teatrale. Osserva chi segue la brocca con gli occhi: quei PG hanno *Vedere l'Invisibilità* o capacità di percezione superiore attiva. Sal li profila mentalmente come minacce primarie.
-
-### Il Test della Doppia Aura (Per Artemis)
-
-Se Artemis usa capacità di individuazione su Sal, trova solo un'aura di *Aura Magica di Nystul* (Trasmutazione benefica) attiva sullo stivale destro. Se Artemis è soddisfatto e smette, Sal sorride. Se Artemis insiste e tira molto bene (Sapienza Magica CD 28), trova il "secondo strato" — un'altra aura di Divinazione sull'anello. Niente di più. La maledizione temporale reale è "scritta" nel passato e non esiste ancora nel presente.
-
-### Il Gaslighting Magico
-
-Ogni volta che un PG cerca di smascherarlo con la magia, Sal ride. Non si innervosisce — **deride con affetto**. "Amore, stai sprecando i tuoi doni su di me. Hai visto qualcosa di malvagio? Benissimo — allora il tuo talento ti servirà per i veri mostri là fuori." Questo tono scioglie l'atmosfera e rende socialmente costoso per il PG insistere davanti agli altri.
-
-### Il Paradosso della Cicatrice
-
-Se i PG viaggiano nel tempo (usando il Topazio della Corona di Adamantio o altro mezzo) e feriscono Vatore nel -1000 DR, nel 1372 DR Sal sente improvvisamente dolore nello stesso punto e inizia a sanguinare. Usa *Prestidigitazione* per coprire la macchia mentre continua a sorridere nervosamente. Questo è uno degli unici momenti in cui la maschera vacilla.
-
-### Odio per il Sangue (In Combattimento)
+#### Odio per il Sangue (In Combattimento)
 
 Se i PG scelgono di combatterlo, il primo punto di danno che riceve è la svolta. Sal grida, perde la compostezza per 1 round, e i PG vedono per un istante il freddo terrore che si cela sotto la performance. Poi si riscatta con il Cronolito o con la Fluttuazione Temporale.
 
----
+## Esiti possibili
 
-## Il Sigillo di Ossidiana — l'artefatto che lo ha reso Sal `[CANONE — DM 2026-07-23]`
+[DA SCRIVERE — la scheda non ha una sezione di esiti. I rami esistono altrove: il master della Parte 2C (§Gestione del confronto, §Conseguenze per Rethmar) e `ARC07-DEF-4` Scena 9 per Vatore; il paradosso della cicatrice è in §Al tavolo.]
 
-> Cross-source: scheda completa in `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Appendice B; thread `campaign/state.md §7 [SIGILLO DI OSSIDIANA]`.
+## Al tavolo
 
-Ciò che Vatore ha rubato al −1000 e con cui è diventato **Sal**. Sigillo di
-**ossidiana nera** allineato a **Shar** (Signora della Notte — perdita,
-oscurità, segreti; più pertinente di Mask perché il prezzo è la **perdita di
-anime**, non solo il furto).
+### Note per il master
 
-- **Manto di Notte Assoluta** (passivo): entro 9 m sopprime gli incantesimi di
-  luce di livello ≤2; *daylight*+ richiede prova di livello incantatore CD 20.
-- **Furto della Notte** (1/g): un'azione furtiva come invisibile e silenzioso
-  per 1 round (non in piena luce naturale).
-- **Il prezzo — divora anime**: ogni uso costa **1 livello negativo** a una
-  creatura senziente toccata nelle ultime 24 h (o un'anima intrappolata); **se
-  non disponibile, consuma il portatore** (livello negativo permanente dopo
-  24 h). Vatore lo usa sugli altri, poi su sé stesso: la sua **avidità e sete di
-  potere** lo accecano al conto — è così che diventa Sal.
-- **Contrasto con l'Anello di Artemis** (scintilla di Lathander, nemesi di
-  Shar): se lo impugna Artemis, i due artefatti si annullano — i poteri di
-  luce/alba dell'Anello diventano instabili/non disponibili e il Sigillo è
-  soppresso. Bivio **Notte vs Alba** per l'ARC-09.
-- **Gancio**: se i PG lo rubano a Vatore e lo riportano nel presente (Cronolito),
-  Sal si presenta **senza il suo asso** e la sincronizzazione si complica.
+#### L'Introduzione (Prima Apparizione)
+
+Sal non aspetta che i PG vengano da lui. **Appare quando i PG sono stanchi** dopo un combattimento o un viaggio, su una strada del deserto dello Shaar/Cannath. Il carro è fermo, circondato da petali di rosa e musica. Sal sta già cantando una ballata che celebra le gesta dei PG — nome per nome, gesta per gesta, persino dettagli che solo chi era presente a Hammerfist potrebbe conoscere. Se interpellato su come li conosca, risponde: *"Il vento del deserto porta tante storie, Tesoro. E io sono un eccellente ascoltatore."*
+
+#### La Brocca Invisibile (Test Immediato)
+
+Appena i PG si siedono (se si siedono), Sal afferra la brocca d'oro invisibile nel vuoto e versa il vino in modo teatrale. Osserva chi segue la brocca con gli occhi: quei PG hanno *Vedere l'Invisibilità* o capacità di percezione superiore attiva. Sal li profila mentalmente come minacce primarie.
+
+#### Il Test della Doppia Aura (Per Artemis)
+
+Se Artemis usa capacità di individuazione su Sal, trova solo un'aura di *Aura Magica di Nystul* (Trasmutazione benefica) attiva sullo stivale destro. Se Artemis è soddisfatto e smette, Sal sorride. Se Artemis insiste e tira molto bene (Sapienza Magica CD 28), trova il "secondo strato" — un'altra aura di Divinazione sull'anello. Niente di più. La maledizione temporale reale è "scritta" nel passato e non esiste ancora nel presente.
+
+#### Il Gaslighting Magico
+
+Ogni volta che un PG cerca di smascherarlo con la magia, Sal ride. Non si innervosisce — **deride con affetto**. "Amore, stai sprecando i tuoi doni su di me. Hai visto qualcosa di malvagio? Benissimo — allora il tuo talento ti servirà per i veri mostri là fuori." Questo tono scioglie l'atmosfera e rende socialmente costoso per il PG insistere davanti agli altri.
+
+#### Il Paradosso della Cicatrice
+
+Se i PG viaggiano nel tempo (usando il Topazio della Corona di Adamantio o altro mezzo) e feriscono Vatore nel -1000 DR, nel 1372 DR Sal sente improvvisamente dolore nello stesso punto e inizia a sanguinare. Usa *Prestidigitazione* per coprire la macchia mentre continua a sorridere nervosamente. Questo è uno degli unici momenti in cui la maschera vacilla.
+
+## Fonti e canone
+
+- Sigillo di Ossidiana: canone del DM, con la fonte completa in `ARC07-DEF-4` Appendice B (§Chi è).
+- Dove compare: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2C-Salvatore-Mercante-TESTO.md` (Parte 2C), `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` (Scena 9, Vatore).

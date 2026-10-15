@@ -31,13 +31,26 @@ fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=humanoid, ta
 **Source**: AP RHoD + Druid 14 → STATBLOCCHI-EPICI §5
 **Status**: inferred — base template only; DM should finalize exact stats at the table.
 
-## Summary
+**Iniziativa** +1
 
-Arch-druid ally; wild shape Huge elemental 2×/day; spell DC 22; summon nature's ally VII-IX; anima del bosco (treant summons). Source: Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md §5.
+**Difesa** CA 19 (+1 Des, +8 armatura) · pf 77 (14d8) · TS Temp +10, Rifl +5, Vol +13
 
-## Notes
+**Attacco** Vel 9 m · **Mischia** bastone ferrato +9 (1d6-1) · **Incantesimi** da druido di 14° livello (SAG +4), al giorno 6/5/5/4/4/3/3/2, CD 10 + livello + 4 (massimo CD 21 al 7°; la sintesi qui sotto dice CD 22, e la nota ⚠ nel blocco spiega da dove viene il punto in più)
 
+**Statistiche** For 8, Des 13, Cos 12, Int 14, Sag 18, Car 10
+
+**Capacità speciali**
+- **Forma selvatica**: elementale Enorme 2/giorno.
+- **Alleato naturale evocato VII-IX; anima del bosco** (evoca treant).
+
+**Tattiche**
+- *Durante il combattimento*: la scheda non ne ha. Arco 09, Battaglia finale, «Stat blocchi epici» §5: i suoi incantesimi chiave servono a tenere lontane le ondate di volanti, spegnere i fuochi di drago e rallentare l'avanzata dell'Orda; nel rituale aiuta a legare il Mythal alla città. Le regole del rituale sono nella Fase 4 della stessa battaglia («Circolo, Mythal e statue», §3): ogni round spende un'azione standard per tenere la concentrazione, e se è colpito o costretto a muoversi fa una prova di Concentrazione CD 25 o perde il contributo di quel round.
+- *Morale*: [DA SCRIVERE — nessun file del repo dice quando smette di combattere.]
+
+Taratura al tavolo:
 - Scale HP/AC/attacks by ±10% to tune difficulty at the table.
 - Advance via HD, class levels, or templates before adding new unique powers.
 - For upscaled variants, apply the Advanced Creature template (MM p.294) or class levels preserving CR math.
 - AP canon names preserved; mechanics derived from SRD/MM/FRCS only.
+
+Notes: Arch-druid ally; wild shape Huge elemental 2×/day; spell DC 22; summon nature's ally VII-IX; anima del bosco (treant summons). Source: Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md §5.

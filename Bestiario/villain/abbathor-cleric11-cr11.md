@@ -21,6 +21,18 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE. **hp 75-84** (11 HD); **AC 23**, touch 10, flat-footed 23 (piastre +2, scudo). Init +0; Vel 6 m. TS Temp +10, Rifl +4, Vol +12. BAB +8; Lotta +10. For 14, Sag 16, Car 14.
-**Mischia** morning star +1 +11/+6 (1d8+3); scudo +1 +6 (1d4+2). **Intimorire non morti**; **Colpire i Giganti**; Earthen Spell Power. Incantesimi da Cleric 11 (CD 13+liv; spontanee inflict): tipici *divine power, freedom of movement, flame strike, slay living, harm, animate dead, dispel magic, spiritual weapon, silence*. Aura del Male. Scurovisione 18 m.
+Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
+
+**Iniziativa** +0 · **Sensi** Scurovisione 18 m.
+
+**Difesa** **AC 23**, touch 10, flat-footed 23 (piastre +2, scudo) · **hp 75-84** (11 HD) · TS Temp +10, Rifl +4, Vol +12
+
+**Attacco** Vel 6 m · **Mischia** morning star +1 +11/+6 (1d8+3); scudo +1 +6 (1d4+2) · Incantesimi da Cleric 11 (CD 13+liv; spontanee inflict): tipici *divine power, freedom of movement, flame strike, slay living, harm, animate dead, dispel magic, spiritual weapon, silence*.
+
+**Statistiche** For 14, Sag 16, Car 14 · BAB +8; Lotta +10
+
+**Capacità speciali** **Intimorire non morti**; **Colpire i Giganti**; Earthen Spell Power. Aura del Male.
+
+**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove il chierico è «the evil cleric»): *Prima del combattimento* in «Initial Setup», *Durante il combattimento* in «Combat Tactics», l'escalation quando il gruppo prende il sopravvento in «Mid-Combat Adjustments». Il *Morale* non è scritto.
+
 Notes: il boss dell'incontro epico del ponte/scala di ossa (il testo `Epic_fight_dwarf_duergar.txt` lo mette con 2 antipaladini CR 10 + 3 mago/ladro CR 8 + trappola liv. 9). Unico → `villain/`.

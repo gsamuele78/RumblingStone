@@ -23,6 +23,18 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
 
-Medium humanoid (dwarf), Rogue 1 / ex-Paladin 6 / Blackguard 2, LE. **hp 68** (9 HD); **AC 22**, touch 10, flat-footed 22 (piastre complete). Init +0; Vel 6 m. TS Temp +12, Rifl +6, Vol +5. BAB +8; Lotta +11.
-**Mischia** spada lunga +1 +12/+7 (1d8+4/19-20); scudo +1 +7. **Colpire il Bene** (1/giorno, +liv classe danni), **Furtivo**, Imposizione delle Mani, Dark Blessing (Car ai TS), uso del veleno, aura del male. Talenti: Fendere, Frantumare Migliorato, Attacco Poderoso.
+Medium humanoid (dwarf), Rogue 1 / ex-Paladin 6 / Blackguard 2, LE.
+
+**Iniziativa** +0
+
+**Difesa** **AC 22**, touch 10, flat-footed 22 (piastre complete) · **hp 68** (9 HD) · TS Temp +12, Rifl +6, Vol +5
+
+**Attacco** Vel 6 m · **Mischia** spada lunga +1 +12/+7 (1d8+4/19-20); scudo +1 +7 · **Colpire il Bene** (1/giorno, +liv classe danni), **Furtivo**
+
+**Statistiche** BAB +8; Lotta +11 · **Talenti** Fendere, Frantumare Migliorato, Attacco Poderoso
+
+**Capacità speciali** Imposizione delle Mani, Dark Blessing (Car ai TS), uso del veleno, aura del male.
+
+**Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove gli antipaladini sono Blackguard 10): *Prima del combattimento* in «Initial Setup», *Durante il combattimento* in «Combat Tactics», *Morale* in «Mid-Combat Adjustments».
+
 Notes: le guardie d'onore antipaladine del culto (versione base CR 9; il testo epico usa Blackguard 10 = CR 10). Unico ruolo → `villain/`.
