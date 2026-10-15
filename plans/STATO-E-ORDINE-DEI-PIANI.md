@@ -400,7 +400,7 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 259 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**16 aperte** · 259 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
@@ -412,6 +412,8 @@ riuscita non si sa descrivere è un lotto tagliato male.
 | **D6** | `BOX-LUOGO` | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | **D2** | `CODA-SECONDO-LETTORE` | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`?); a mano solo se non c'è |
 | **D3** | `CODA-SECONDO-LETTORE` | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
+| **D4** | `MASTER-DEF` | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| **D5** | `MASTER-DEF` | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 | **D3** | `RECUPERO` | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Proposta*: il collaudo delle due o tre immagini si fa con la #230 installata; la #106 si chiude subito come «contenuto portato», e la D2 resta aperta in RIPRESA-PR senza tenere aperta una PR |
 | **D4** | `RECUPERO` | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VENDIBILITA autorizzato», e lascia §4 |
 | **D5** | `RECUPERO` | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-FEDELTA (`--strict` default); (b) in attesa con condizione: TRAVASO A6 (quando ARC-07 finisce al tavolo), INTEGRAZIONE (quando c'è Foundry al tavolo), RICERCA-MODULO-PUBBLICABILE B3, C3, D5, RICERCA-TOOL-ESTERNI R1, RICERCA-TOOL-LGM P1-P3, GENERATORE J e K; (c) restano lotti: nessuno |

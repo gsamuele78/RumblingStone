@@ -6,7 +6,7 @@
 > Tarsilia, l'Abbazia della Rotta Sicura). L'ordine l'ha dato il DM il
 > 2026-09-25: *«poi i DEF di ARC-08, poi ARC-09 e tutti gli stand-alone»*.
 >
-> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; prima di A3 va chiuso F4 di PIANO-LETTORE (ARC-07 al ciclo completo) · **Decisore**: DM ·
+> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; F4 di PIANO-LETTORE chiuso il 2026-10-15; A3 letto il 2026-10-15, con D4 e D5 aperte al DM · **Decisore**: DM ·
 > **Standard**: [`rumblingstone-module-standard`](../skills/rumblingstone-module-standard/SKILL.md)
 > **Gate**: ogni master fa i **sette passi del ciclo completo** di
 > `rumblingstone-module-standard` (scene `### SCENA`, contratto «In scena»,
@@ -285,6 +285,35 @@ duellanti: colonne 16-20 nella prima, 18-22 nella seconda. Solo la seconda è
 centrata sulla griglia 40×40, e in DEF-04 si tiene quella. Nessuna delle due è
 una griglia (`MAPPE-CENSIMENTO`, nota 8).
 
+## A3 · Il canone di ARC-08 contro il tavolo — 🟡 letto il 2026-10-15, aspetta D4 e D5
+
+Una lettura in sola lettura, fatta da un agente, dei file vivi di ARC-08 contro il ramo di gruppo
+(`state.md`, log delle sessioni 3 e 4), i master di ARC-07 e le reference
+di coerenza. Il risultato, punto per punto con file e riga, è in
+[`esperimenti/a3-arc08/A3-canone-arc08.md`](esperimenti/a3-arc08/A3-canone-arc08.md).
+
+ARC-08 è scritto come se DEF-5 non esistesse. **43 punti**: 24 contraddizioni
+con il canone giocato o deciso, 10 esiti dati per giocati che non lo sono, 9
+dubbi per il DM. I più pesanti:
+
+- manca la Fase 0 che DEF-5 fissa (il Cuore, poi Fauci ai bastioni, poi il
+  consiglio di guerra); al suo posto c'è mezza giornata di battaglia con i
+  pregen (D4);
+- gli effetti dell'arrivo non sono quelli di DEF-5: CD e danni
+  dell'Apparizione, Dana che cura il re, le Cantitrici di 12° invece che di 5°;
+- «mai il 14°» (`ARC08-10:51`) contro D90 (`DEF-5:546`), e quindi l'audit
+  del tesoro di `ARC08-13` va ricalcolato;
+- 50.000 mo e un feudo promessi ancora in `ARC08-01:2974` e `:3264`, contro
+  D41 e D42.
+
+Ho ricontrollato a mano questi tre riferimenti. La lettura non ha coperto i due file
+`ERRATA-ARC08-*`, che potrebbero già correggere alcuni punti, né le schede del
+Bestiario. Il master S1a li legge prima di scrivere.
+
+Ha trovato anche un errore nel ramo di gruppo: `state.md` dà ancora per «non
+contratti» i due debiti del rito. Lo correggo con una patch solo dopo che il DM
+avrà confermato che il rito è stato giocato.
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte
@@ -337,6 +366,8 @@ Per ogni master, prima di chiudere il lotto:
 | ~~D1~~ | A1 | ✅ **Decisa il 2026-09-27.** ARC-08: **quattro master**; ARC-09: **uno per beat**, circa dodici. Le fonti hanno spostato il taglio di ARC-08 rispetto alla proposta (il passaggio pregen → PG cade a metà della Sessione 3, non fra due master): la tabella in «A1» taglia per sessione, e attende l'OK |
 | ~~D2~~ | S1-S2 | ✅ **Decisa il 2026-09-27: rifinire.** I master nascono completi di read-aloud, battute, contingenze e vie non combattive. Chiude anche la D2 di MESTIERE-BANCHI: confluiscono qui S5 e S6. S4 resta là perché riguarda ARC-07 (vedi §1) |
 | ~~D3~~ | S4 | ✅ **Decisa il 2026-09-27: sì, solo forma.** Il contratto «In scena» e i rilievi di `domande_developer` come note del DM; nessuna riga di prosa cambiata, coerente con la D1 di MESTIERE-BANCHI |
+| D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 
 ## Come si riparte in una chat nuova
 
@@ -344,6 +375,5 @@ Per ogni master, prima di chiudere il lotto:
 2. leggere questo piano e `plans/STATO-E-ORDINE-DEI-PIANI.md` §4 (le decisioni
    aperte al DM);
 3. D1-D3 sono decise, la tabella A1 è approvata e A2 è misurato
-   (2026-09-27). Prima di A3 va chiuso **F4 di PIANO-LETTORE** (ARC-07 al
-   ciclo del master, DEF-5 per primo). **F6-a** (il cancello che vede un master
+   (2026-09-27). F4 di PIANO-LETTORE è chiuso (2026-10-15) e A3 è letto: si riparte da D4 e D5, poi S1a. **F6-a** (il cancello che vede un master
    senza scene), che serviva prima di S1, è ✅ dal 2026-09-27. Vedi §1-bis.
