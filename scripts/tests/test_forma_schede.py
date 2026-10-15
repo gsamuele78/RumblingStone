@@ -94,6 +94,12 @@ class TestForma(unittest.TestCase):
         f = V.forma(self.scrivi("Tizio.md", testo))
         self.assertEqual((f["tipo"], f["mancano"]), ("breve", []))
 
+    def test_i_dossier_di_gruppo_restano_fuori(self):
+        # decisione del DM del 2026-10-15: restano come sono, non si contano
+        for nome in V.DOSSIER_DI_GRUPPO:
+            with self.subTest(nome=nome):
+                self.assertIsNone(V.forma(self.scrivi(nome, "# Gruppo\n## Altro\nx\n")))
+
     def test_le_schede_di_prova_restano_nella_forma(self):
         for rel in (
             "Bestiario/png/Lorana/Lorana/Lorana.md",

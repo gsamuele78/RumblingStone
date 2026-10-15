@@ -117,6 +117,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
 | 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | una forma sola per le schede dei PNG e dei villain, sul modello di *Red Hand of… | 🟡 [ADR-0091](plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md), proposta. Misurato prima: 113 file in `png/` e `villain/`, da 10 a 280 righe, cinque forme… |
 | 2026-10-14 | REVISIONE-ARC07 | la scheda di Balvar nel Bestiario dava *dimensional anchor* sulla soglia della… | ✅ La riga delle rune nella scheda ora è quella del master; l'impronta delle creature è rigenerata per la sola lunghezza del testo di Balvar (3173 → 3261), ness… |
 | 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
@@ -128,7 +129,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-11 | REVISIONE-ARC07 · STATO-E-ORDINE | canone delle dieci pozioni identificate a ≈372 DR e contratto del Seme-Mercato… | ✅ `DEF-4`: le dieci pozioni di Kettra, con la brodaglia degli sciamani e la cura con la cera nera. `DEF-1` §6-bis: il contratto del Seme in otto clausole e la… |
 | 2026-10-10 | AMBIENTE-RIPRODUCIBILE · PRATICHE (PI-3… | A2 in parte · Python 3.13 in CI, nel registro e nelle guide | 🟡 La #228 di Dependabot (gruppo `pip-settimanale`) alza i pavimenti a `numpy>=2.5.3` e `scipy>=1.18.1`, che chiedono Python >= 3.12: su 3.11 pip non trova vers… |
 | 2026-10-10 | RECUPERO · REGISTRO-NORME | L7: le tre pratiche di Infra-Iam-PKI e AiAgentInfrastructure (D7, il DM: *«adot… | ✅ `plans/adr-prenotati.json` (lo `0088` alla #99) e `validate_docs`: `--prossimo-adr` salta i prenotati, `--sorgenti` rosso su un prenotato usato da altri o ar… |
-| 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · AGE… | il riallineamento dopo il merge di #229, #230 e #232 (richiesta del DM: ricontr… | 🟡 La #216 portata sul `main` nuovo: sette conflitti risolti tenendo le righe di `main` e aggiungendo le sue, `docs/tools/` rigenerato, §4 e `MEMORIA.md` rigene… |
 
 ## Le misure che si portano dietro
 

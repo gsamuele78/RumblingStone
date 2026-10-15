@@ -28,7 +28,7 @@ Con `--forma` (ADR-0091, rapporto non bloccante) conta, per i PNG e i villain
 nominati, le sezioni obbligatorie che mancano e quelle fuori ordine: le cinque
 etichette dello statblocco (Difesa, Attacco, Statistiche, Capacità speciali,
 Tattiche) e le sezioni `##` del dossier. Un dossier senza sezioni è un dossier
-breve e passa; un `POINTER` verso un master d'arco non si conta.
+breve e passa; un `POINTER` verso un master d'arco e i cinque dossier di gruppo non si contano.
 
 Uso: python3 scripts/validate_bestiario.py [--rules] [--forma] [--help]
 Exit 0 = struttura ok (gli avvisi --rules NON fanno fallire); exit 1 = violazioni.
@@ -255,6 +255,14 @@ FORMA_DOSSIER = [
 ]
 
 
+#: ADR-0091 §3: i dossier di gruppo restano come sono (decisione del DM del
+#: 2026-10-15) e la forma non li conta.
+DOSSIER_DI_GRUPPO = {
+    "Consiglio_Rethmar.md", "Profughi_Guado_di_Drellin.md",
+    "Secondo_Anello_Rethmar.md", "Witchwood_e_Tiri_Kitor.md", "Zhentarim_Dauth.md",
+}
+
+
 def _fuori_ordine(trovate: list[str], ordine: list[str]) -> list[str]:
     """Le sezioni che compaiono prima di una che dovrebbe precederle."""
     pos = [ordine.index(t) for t in trovate]
@@ -263,6 +271,8 @@ def _fuori_ordine(trovate: list[str], ordine: list[str]) -> list[str]:
 
 def forma(path: Path) -> dict | None:
     """Il conto di forma di UNA scheda nominata (ADR-0091), o None se non si conta."""
+    if path.name in DOSSIER_DI_GRUPPO:
+        return None
     text = path.read_text(encoding="utf-8", errors="replace")
     testa = "\n".join(text.splitlines()[:8])
     if is_statblock(path):

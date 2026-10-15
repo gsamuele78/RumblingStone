@@ -1,6 +1,6 @@
 # ADR-0091 — La scheda di un PNG o di un villain ha una forma sola
 
-**Stato**: proposta (da accettare dal DM)
+**Stato**: accettata *(il DM, 2026-10-15: «sì ad entrambi; dopo controlla che la parte di tattiche, se prevista, ci sia»: conversione di tutte le schede; poi: «no, i dossier di gruppo come sono adesso»)*
 **Data**: 2026-10-15
 **Decisione-fonte**: domanda del DM del 2026-10-15, nel progetto sulle PR ferme: *«perché tutte le schede dei PNG e villain sono tutte diverse, non si possono uniformare nello stile e contenuti come ad esempio quelle presenti in RHoD o Rise of the Runelords PF1e?»*
 **Rapporti**: completa [ADR-0021](ADR-0021-statblocchi-machine-readable.md) (i numeri sono un blocco), che dice *dove* stanno i numeri e non come si legge il resto; rispetta L-D3 di `PIANO-REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN` (gli statblocchi d'arco restano nel loro arco)
@@ -118,8 +118,8 @@ ha tutte quelle obbligatorie.
 
 - I **dossier di gruppo** (il Consiglio di Rethmar, i Profughi del Guado, il
   Secondo Anello, Witchwood e Tiri Kitor, la Zhentarim di Dauth) non sono un
-  PNG: si convertono solo quando il DM decide se diventano una scheda breve
-  per membro.
+  PNG e restano come sono (decisione del DM del 2026-10-15). `--forma` non li
+  conta.
 - I `POINTER` verso un master d'arco restano come sono (L-D3).
 - `Bestiario/mostri/` non cambia: le creature generiche hanno già la forma del
   catalogo, e questa decisione riguarda chi ha un nome.
@@ -146,9 +146,10 @@ conversione di massa.
   **Ushgar** (villain: dossier e statblocco riordinati, nessun numero toccato),
   **Balvar** (statblocco senza dossier). Sono la prova che la forma regge su
   tre casi diversi.
-- La conversione degli altri dossier lunghi (altri 19 sopra le 100 righe) è lavoro
-  di riordino, una scheda per commit; gli statblocchi a paragrafo unico sono
-  la parte meccanica. Parte solo col via del DM.
+- Col via del DM, la conversione ha riordinato tutte le altre schede nella
+  stessa PR, spostando il testo senza riscriverlo: 37 statblocchi su 37 e
+  24 dossier su 24 nella forma. I conti che non tornano sono elencati nella
+  PR e non corretti.
 - Le sezioni vuote diventano visibili. Lorana non ha tattiche né esiti scritti
   da nessuna parte: oggi non si vede, dopo sì. È il costo voluto.
 - Si paga un secondo file da aprire per i PNG maggiori, che RHoD non ha.
