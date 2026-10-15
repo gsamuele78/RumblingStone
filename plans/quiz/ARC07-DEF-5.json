@@ -1,7 +1,7 @@
 {
-  "_leggimi": "Chiave del quiz a due agenti per ARC07-DEF-5 (skills/rumblingstone-playtest/references/quiz-a-due-agenti.md). Ogni alternativa è una lista di radici: la risposta è giusta se le contiene tutte. Le domande chiedono i fatti che servono al tavolo, non i numeri che il DM cerca sulla pagina. È canone: la approva il DM. Le domande evitano i dettagli ancora aperti in D77.",
+  "_leggimi": "Chiave del quiz a due agenti per ARC07-DEF-5 (skills/rumblingstone-playtest/references/quiz-a-due-agenti.md). Ogni alternativa è una lista di radici: la risposta è giusta se le contiene tutte. Le domande chiedono i fatti che servono al tavolo, non i numeri che il DM cerca sulla pagina. È canone: la approva il DM. Le domande evitano i dettagli ancora aperti in D77. Approvata dal DM il 2026-10-15.",
   "modulo": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
-  "stato": "bozza",
+  "stato": "approvata",
   "domande": [
     {
       "id": "q1",
