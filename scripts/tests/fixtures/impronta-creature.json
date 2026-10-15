@@ -8986,7 +8986,7 @@
      "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 5) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "Des 12 **letta da ca-dettaglio** — il vincolo batte l'array",
      "Des 12 **ricavata dall'iniziativa** — il vincolo batte l'array",
-     "Cos 14 **ricavata da pf 46 su 6 DV** — il vincolo batte l'array",
+     "Cos 14 **ricavata da pf 37 su 5 DV** — il vincolo batte l'array",
      "For 14 **ricavata da BAB e lotta** — il vincolo batte l'array"
     ]
    ],
@@ -9001,21 +9001,21 @@
      ],
      "Rifl": [
       2,
-      "2..4",
+      2,
       0
      ],
      "Temp": [
-      8,
-      "6..8",
+      6,
+      6,
       0
      ],
      "Vol": [
-      2,
-      "1..3",
+      1,
+      1,
       0
      ],
      "attacco": [
-      10,
+      9,
       9,
       0
      ],
@@ -9030,11 +9030,11 @@
       0
      ],
      "pf": [
-      46,
-      "18-70",
+      37,
+      "15-60",
       0
      ],
-     "pf_media": 44
+     "pf_media": 37
     },
     "file": "Bestiario/mostri/hobgoblin-sergente-cr5.md",
     "provenienza": "copiate",
@@ -9046,15 +9046,6 @@
    "letture": {
     "composizione": [
      [
-      {
-       "bab": 0.75,
-       "buoni": [
-        "temp"
-       ],
-       "dado": 8,
-       "n": 1,
-       "nome": "humanoid"
-      },
       {
        "bab": 1.0,
        "buoni": [
@@ -9069,10 +9060,6 @@
     ],
     "dadi_di_pf": [
      [
-      1,
-      8
-     ],
-     [
       5,
       10
      ]
@@ -9080,15 +9067,11 @@
     "dadi_vita": [
      [
       [
-       1,
-       8
-      ],
-      [
        5,
        10
       ]
      ],
-     12,
+     10,
      "formula scritta"
     ],
     "dalla_fonte": null,
@@ -9103,35 +9086,35 @@
      },
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
-    "dv_totali": 6,
+    "dv_totali": 5,
     "iniziativa_ambigua": null,
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 1480,
+    "senza_note": 1544,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
-      4,
-      "ricavata da Temp +8 (base +4)"
+      2,
+      "ricavata da Temp +6 (base +4)"
      ],
      "Des": [
       1,
       "ricavata da Rifl +2 (base +1)"
      ],
      "Sag": [
-      1,
-      "ricavata da Vol +2 (base +1)"
+      0,
+      "ricavata da Vol +1 (base +1)"
      ]
     },
     "vincoli": {
      "cos_da_pf": [
       14,
-      "ricavata da pf 46 su 6 DV"
+      "ricavata da pf 37 su 5 DV"
      ],
      "des_da_iniziativa": [
       12,
@@ -9152,16 +9135,16 @@
     "bonus": "è quello scritto nella formula",
     "dadi": "dalla formula che la scheda scrive",
     "fascia": [
-     18,
-     70
+     15,
+     60
     ],
     "file": "Bestiario/mostri/hobgoblin-sergente-cr5.md",
     "legale": true,
-    "media": 44,
+    "media": 37,
     "motivo": null,
-    "nuovo": "1d8+5d10+12",
-    "pf": 46,
-    "vecchio": "1d8+5d10+12"
+    "nuovo": "5d10+10",
+    "pf": 37,
+    "vecchio": "5d10+10"
    },
    "scheda": {
     "attributi": {
@@ -9176,15 +9159,6 @@
     "composizione_nota": true,
     "gruppi": [
      {
-      "bab": 0.75,
-      "buoni": [
-       "temp"
-      ],
-      "dado": 8,
-      "n": 1,
-      "nome": "humanoid"
-     },
-     {
       "bab": 1.0,
       "buoni": [
        "temp"
@@ -9196,14 +9170,14 @@
     ],
     "gs": 5.0,
     "lotta": 7,
-    "mischia": "spada lunga perfetta +10/+5 (1d8+3/19-20)",
-    "pf": 46,
+    "mischia": "spada lunga perfetta +9 (1d8+4/19-20)",
+    "pf": 37,
     "provenienza": "copiate",
     "tipo": "Medium humanoid (goblinoid)",
     "ts": [
-     8,
+     6,
      2,
-     2
+     1
     ]
    }
   },

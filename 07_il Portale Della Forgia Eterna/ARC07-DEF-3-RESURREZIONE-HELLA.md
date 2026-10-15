@@ -31,7 +31,8 @@
 > Via della Radice — tutte le prove superate); i PG **non lo sanno ancora** —
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
 > `[CANONE GIOCATO 2026-07-31]` — il registro dei riposi è in `DEF-2` §0-bis,
-> che possiede l'orologio. Il party arriva **riposato** (hanno
+> che possiede l'orologio. Il rito dura circa un'ora, e non c'è riposo prima
+> della soglia: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`, e di un'altra se c'è l'indagine del Sud (§9) `[CANONE — DM 2026-10-12, D83]`. Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
@@ -94,7 +95,8 @@ attraversato il suo spirito (§8). Poi il party è di **4**, pronto per il #4.
 
 **Chi c'è.** Thorik, Tordek, Artemis (officianti); **Therysol** (veglia, testimone);
 **Moradin** (divino, manifesto per 3 secondi allo Step 6); **Hella** (morta →
-viva); e — al momento del richiamo — **la Custode delle Radici** (§6<!-- storico -->, CANONE
+viva); **Durik**, il suo cane, che non si è mai allontanato dal corpo e si fa
+avanti al risveglio (§7); e — al momento del richiamo — **la Custode delle Radici** (§6<!-- storico -->, CANONE
 DM 2026-07-23<!-- /storico -->; il ramo A/B/C si gioca).
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i sei
@@ -116,7 +118,7 @@ deve essere già fatto.
 
 | Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
-| prima di cominciare (la regia della serata, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
+| prima di cominciare (la regia della serata<!-- apparato -->, `homebrew/sessione-resurrezione-mille-anni/01-REGIA-SERATA.md`<!-- /apparato -->, Atto 0) | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
 | all'inizio del risveglio nella Sala (regia, Atto I, punto 3) | l'**eco privato di Hella** | alla giocatrice di Hella, che legge il sogno ad alta voce | «Echi — Hella» |
 | §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
 | §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
@@ -132,14 +134,14 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 
 ## §0-bis — QUICK-REFERENCE DM (una pagina)
 
-### Il Rito, in sei passi (CD esplicite)
+### Il Rito, in sei passi (CD esplicite) `[CANONE — DM 2026-10-12, D35]`
 | Step | Chi | Prova | CD | Fallimento |
 |---|---|---|---|---|
-| 1 — Invocazione | Thorik | Conoscenze (religioni) | 15 | riprova, −2 cumulativo |
-| 2 — Canalizzazione | Tordek | Concentrazione | 20 | 2d6 non letali, riprova |
-| 3 — Stabilizzazione | Artemis | Utilizzare Oggetti Magici | 18 | corpo rifiuta, −10 min |
+| 1 — Invocazione | Thorik | Conoscenze (religioni) · senza gradi SAG −4 | 15 | riprova, −2 cumulativo · max 3 tentativi, poi riesce (§4) |
+| 2 — Canalizzazione | Tordek | Concentrazione | 20 | 2d6 non letali, riprova · max 3 tentativi, poi riesce (§4) |
+| 3 — Stabilizzazione | Artemis | Utilizzare Oggetti Magici · senza gradi CAR −4 | 18 | corpo rifiuta, riprova · max 3 tentativi, poi riesce (§4) |
 | 4 — Germinazione semi | (Moradin) | automatico | — | — |
-| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se Thorik ha rifiutato il Dono) |
+| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se i Doni versati sono uno o nessuno, §5) `[CANONE — DM 2026-10-12, D36]` · con 0 successi, §9 |
 | 6 — Fusione | (Moradin manifesto) | automatico | — | — |
 
 ### I Tre Doni — il trapianto (§5)
@@ -159,11 +161,10 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 > basta da solo — i doni comprano la **qualità** del ritorno, non la vita.
 
 ### 🐾 Supporto Pathfinder 1e (dove il 3.5 è vago) — opzionale, dichiarato
-> - **Il costo della resurrezione**: il 3.5 (*raise dead*) impone un **livello
->   negativo** al risorto. Qui il Cuore di Moradin lo **assorbe** (miracolo
->   divino) — ma se vuoi il crunch PF1e, applica **1 livello negativo a Hella
->   che svanisce dopo 7 giorni** invece dei doni-di-scena, e trattalo con le
->   regole PF1e dei livelli negativi (−1 a tutto, −5 pf, sparisce senza TS).
+> - **Il costo della resurrezione**: nel 3.5 *rianimare morti* fa **perdere un
+>   livello** al risorto; in PF1e dà **due livelli negativi permanenti**, che si
+>   tolgono con *ristorare*. Qui il Cuore di Moradin **assorbe** il costo
+>   (miracolo divino), salvo la riga «1 su 3» del §9.
 >   *Default di questo master: nessun livello negativo (il Cuore paga).*
 > - **Il Debito della Radice** (§6): trattalo come un **patto/geas PF1e** non
 >   coercitivo (nessun TS, nessun danno finché non violato): è un obbligo
@@ -294,7 +295,10 @@ niente, chi le tocca entra nel rito già dentro la scena.
 | **COS** grezza — restare a mani nude sul mithral | 12 | il metallo **restituisce** calore invece di prenderlo: +1 al primo tiro del rito, e la sensazione che la pietra sia d'accordo |
 | **CAR** grezza — parlare a Therysol mentre si scosta | 13 | dice a bassa voce la cosa che non ha detto in sei giorni: *«Ho contato i respiri che non faceva. Sono arrivata a undicimila e ho smesso.»* → eco |
 | **FOR** grezza — spostare l'Altare per allineare il Sud | 18 | non si muove di un dito. **Il fallimento è l'informazione**: l'Altare è ancorato alla montagna, non appoggiato |
-| **DES** grezza — posare i semi in un triangolo perfetto | 15 | +1 allo Step 4. ⚠️ **Thorik ha −2 a DES** per il prezzo delle gemme: se prova lui, è la statistica che ha venduto |
+| **DES** grezza — posare i semi in un triangolo perfetto | 15 | +1 allo Step 4. ⚠️ **Thorik ha DES −4** per il prezzo delle gemme (Corona e Smeraldo), cioè **−2 alla prova**: se prova lui, è la statistica che ha venduto |
+
+**Sul corpo di Hella**, a chi lo guarda da vicino: con Osservare CD 20 si vede la
+**ghianda annerita** stretta nel pugno (cosa diventa, §11 C).
 
 
 ---
@@ -438,12 +442,22 @@ Il DM le legge senza inventare, e la scena non si spegne mai sul numero:
 | **2** | i due battiti si sovrappongono e per un istante **non si distingue quale sia di chi** | Tordek prende **2d6 non letali** e la cosa peggiore: per un secondo ha sentito il buio in cui lei era, e adesso lo sa |
 | **3** | le ferite si chiudono **al contrario**, dall'interno, e il colore torna dal petto alle dita | l'Anello sputa **un colore solo**. Il corpo si stabilizza a metà: ha colore ma non calore |
 | **4** | le radici entrano **senza sangue**, e il corpo le accetta come se le avesse sempre avute | un seme **non germoglia**. Resta un seme. Da qualche parte, più avanti, mancherà qualcosa |
-| **5** | tre voci diventano **una voce**, e la sala la restituisce più forte di come è entrata | il richiamo torna indietro **vuoto**, come una corda che non ha preso. Si può ritentare: ma ogni tentativo la porta più lontano |
+| **5** | tre voci diventano **una voce**, e la sala la restituisce più forte di come è entrata | il richiamo torna indietro **vuoto**, come una corda che non ha preso. Con **0 successi** si ritenta **una volta sola**, dopo che qualcuno ha occupato il Sud (§9) `[CANONE — DM 2026-10-12, D67]` |
 | **6** | → §7 | → §9, tabella dei modi di fallimento |
 
 > **Chiusura di round, ogni volta.** Il DM chiude lo step guardando i giocatori
 > e chiedendo: **«Che fate?»** — anche quando la risposta giusta è «il prossimo
 > tira». Un rito in cui non si può scegliere niente è un filmato.
+
+**Se uno step fallisce, Step 1-3** `[CANONE — DM 2026-10-12, D35]`. Ogni step
+si tenta **al massimo tre volte**, e ogni tentativo costa **10 minuti**. Restano
+i costi del fallimento scritti sotto (il −2 cumulativo dello Step 1, i 2d6 non
+letali dello Step 2). Al **terzo fallimento lo step riesce lo stesso**, e il suo
+esito ❌ della tabella qui sopra resta come prezzo: il testimone dello Step 1,
+il buio sentito dello Step 2, il corpo con colore ma senza calore dello Step 3.
+Chi non ha gradi usa la **prova grezza** della caratteristica con **−4**: **SAG**
+per l'Invocazione, **CAR** per la Stabilizzazione. La Concentrazione dello
+Step 2 si tira anche senza gradi.
 
 
 **STEP 1 — Invocazione (Thorik · Conoscenze religioni CD 15).** La preghiera
@@ -473,7 +487,7 @@ erre battuta e le vocali brevi.
 > il tuo ki lo prende come misura. L'energia della vita fluisce dal Cuore,
 > attraverso te, verso Hella. Dall'altra parte c'è una lotta: il suo spirito
 > VUOLE tornare, e la morte non molla la presa. La corda è tesa fra le due.*
-Fallimento: 2d6 non letali, riprova.
+Fallimento: 2d6 non letali, riprova (al massimo tre tentativi, sopra).
 
 **STEP 3 — Stabilizzazione (Artemis · Utilizzare Oggetti Magici CD 18).** L'Anello
 esplode in **due colori insieme** — oro (vita) e argento (transizione): la sua
@@ -827,7 +841,7 @@ malizia (Andor: la macchina non odia, esegue).
 |---|---|---|
 | **A. Accettare il pegno** (Hella o il party si impegnano a un servizio futuro verso il Sogno) | La Custode si inchina e svanisce; Hella torna con un **legame più forte** col Sogno della Terra (**Earth Dream** utilizzabile **2/giorno**). | Il Debito diventa una **quest ARC-09**: custodire un luogo del Sogno, o un servizio al Cerchio Sacro / al Ghostlord. Onorato = alleanza druidica rafforzata; ignorato → si degrada in "B". |
 | **B. Rifiutare / sfidare** (i PG cacciano la Custode, o Hella nega il debito) | La Custode **non combatte**: china il capo e si ritira. *«Come volete. Ma il vuoto si colma da sé — e la natura non è delicata.»* | Sessioni dopo, **qualcosa risale** dal Sogno per riempire il vuoto: un aggancio a un nemico ARC-09 (un non-morto della terra nel dominio del Ghostlord, o una **crepa** che la corruzione fungina di Sonjak sfrutta). Il rifiuto non è punito da un dio: è la natura che riempie i vuoti. |
-| **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio, la Collana **non perde mai** il terzo seme (Durik rigermoglia sempre). |
+| **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio il Debito è **saldato subito**: niente quest del Sogno in ARC-09, a differenza di A, e nessun vuoto che risale, a differenza di B `[CANONE — DM 2026-10-12, D81]`. |
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -1005,7 +1019,7 @@ Proteggili. Proteggi il focolare.»*) — le tre del PDF (`DEF-2` §7) **+**:
 
 **In scena** — Dove: l'affresco A6 — Chi: Moradin · Therysol
 
-> Riposato e riformato il cerchio, resta l'ultima soglia dell'arco: la Corona,
+> Riformato il cerchio, senza riposo, resta l'ultima soglia dell'arco: la Corona,
 > con Topazio e Smeraldo, può aprire il **portale del Tempo** (affresco A6).
 
 > **Il difetto che questa sezione chiude.** «Poi si apre il portale» è una
@@ -1030,7 +1044,7 @@ non promette. Dice quello che sa, e non di più.
 | La scelta | Cosa costa | Cosa apre |
 |---|---|---|
 | **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il viaggio a mille anni fa (`DEF-4`) parte con una posta reale invece che con un viaggio turistico |
-| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 16h**), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
+| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 15h**, dopo il rito), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
 | **Mandare avanti uno solo** | Moradin rifiuta: *«Il varco conta quattro. Ne ha contati quattro anche mille anni fa.»* | niente — ma la battuta dice al tavolo **che di là li aspettano in quattro** |
 
 > 🎭 **Grigio politico.** Therysol non vuole che vadano. Il suo *Want* non
@@ -1071,17 +1085,32 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 > può solo fallire è una punizione. Qui **ogni esito produce una scena
 > successiva**, e la peggiore è anche la più giocabile.
 
+Con uno o nessun Dono la soglia è 3 su 3, e la riga si sceglie da quanto manca: 2 successi valgono la riga «1 su 3», 1 successo la riga «0 su 3» `[CANONE — DM 2026-10-12, D81]`.
+
+Quattro regole valgono per tutte le righe `[CANONE — DM 2026-10-12, D83]`:
+- **Il ritiro riuscito paga sempre la riga «1 su 3»**: l'indagine del Sud salva
+  Hella, ma non la fa tornare meglio di chi ha tirato 2.
+- **Se Hella torna, in qualunque riga, si giocano la Custode (§6) e lo Step 6.**
+  Col richiamo a zero, dopo il ritiro.
+- **Il Sud occupato prima del primo Step 5** conta come la risposta trovata in
+  anticipo: se lo Step 5 va a zero, il ritiro parte subito, senza l'ora d'indagine.
+- **Il livello negativo** della riga «1 su 3» è quello dell'SRD: non diventa
+  mai perdita di livello, e si toglie con *ristorare* (il gruppo ne ha le
+  pergamene).
+
 | Successi allo Step 5 | Cosa torna | Cosa apre |
 |---:|---|---|
 | **3 su 3** | Hella intera, i tre doni attecchiscono | la soglia (§8-ter) parte pulita |
 | **2 su 3** | Hella intera, un dono **attecchisce a metà** | il PG che ha fallito lo scopre **a −1.000**, nel momento peggiore: il suo dono non risponde al primo tentativo |
 | **1 su 3** | Hella torna con **1 livello negativo** e non ricorda i nomi per 1d4 minuti | una scena vera al risveglio: **chi le dice il proprio nome per primo** conta, e Hella lo ricorderà per tutto l'arco |
-| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé |
+| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme non germogliato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno occupa il punto vuoto del cerchio, un PG o Therysol. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3**. Se il Sud lo tiene Therysol, tirano i tre PG agli altri punti; se lo tiene un PG, tirano lui e gli altri due. Se il ritiro dà di nuovo 0, il rito riesce lo stesso e paga il prezzo della riga «1 su 3» `[CANONE — DM 2026-10-12, D67, D72]`. La **Custode delle Radici** entra lo stesso, una volta sola, dopo il ritiro riuscito, come nel rito che va bene (§6) `[CANONE — DM 2026-10-12, D73]` |
 
 ⚠️ **Il vicolo cieco ha una porta**: se l'ora scade senza che il tavolo trovi
 niente, **Therysol** parla — e dice la cosa che ha visto in sei giorni di
 veglia, non una soluzione ma un fatto: *«Il corpo si gira verso sud. L'ho
-rimesso dritto undici volte.»* Da lì si riparte.
+rimesso dritto undici volte.»* Da lì si riparte: il rito non è perso, e il
+Cuore regge finché il tavolo lavora sul Sud. L'ora dice solo quando parla
+Therysol `[CANONE — DM 2026-10-12, D81]`.
 
 
 ---
@@ -1150,7 +1179,8 @@ rimesso dritto undici volte.»* Da lì si riparte.
 > mostra, `DEF-2`). Al risveglio Hella la pianta nel primo suolo sacro che
 > tocca (CANONE DM 2026-07-23): diventa un piccolo **àncora druidico** (+1 sacro
 > 1/giorno al Radicamento) **o** va nel 1° seme-dono vuoto della Collana — scelta
-> della giocatrice. 0 mo commerciali, peso emotivo enorme.
+> della giocatrice. Se tutti e tre hanno donato non ci sono semi vuoti, e la
+> ghianda diventa l'àncora. 0 mo commerciali, peso emotivo enorme.
 
 > **Cuore di Moradin — dopo la spesa:** non lascia loot (si dissolve), ma sulla
 > superficie dell'Altare resta un'**impronta a forma di cuore**, tiepida per
@@ -1216,7 +1246,7 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
    Ibrido Treant (risorta) · Neutrale Buono · Media
 ============================================================
 PF: ~110 (13 DV) · CA 20 (+2 cuoio borch., +5 SAG nat. druida) · Iniz +0
-BAB/Lotta: +9/+4 · Velocità 6 m (armatura media)
+BAB/Lotta: +10/+11 · Velocità 6 m (armatura media)
 FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5) · CAR 12
 TS: Tempra alto · Riflessi medio · Volontà alto (SAG 20)
 Scurovisione 27 m (Dream Dwarf)
@@ -1241,12 +1271,12 @@ DONI DEL PARTY (§5, solo se donati — segna quelli veri dopo il rito):
   RESTITUZIONE (Collana #6): 1 volta sola per seme, immediata, Hella rende al
   donatore cio' che aveva dato per una scena intera. Poi mai piu'.
 ------------------------------------------------------------
-INCANTESIMI DRUIDA (CL 12) — slot: 6/5+1/5+1/4+1/4+1/3+1/2+1/1+1
-Preparati tipici pre-battaglia: Entangle, Faerie Fire, Produce Flame · Barkskin,
-Bull's Strength, Flaming Sphere, Heat Metal · Call Lightning, Cure Serious,
-Spike Stones, Summon Nature's Ally III · Cure Critical, Freedom of Movement,
-Ice Storm, SNA IV · Call Lightning Storm, Wall of Thorns, SNA V · Mass Cure
-Moderate, Transport via Plants, SNA VI
+INCANTESIMI DRUIDA (CL 12) — slot dal 0 al 6°: 6/5+2/5+1/4+1/4+1/3+1/2
+Preparati tipici pre-battaglia, per livello: 1° Entangle, Faerie Fire, Produce
+Flame · 2° Barkskin, Bull's Strength, Flaming Sphere, Heat Metal · 3° Call
+Lightning, Cure Moderate, SNA III · 4° Cure Serious, Spike Stones, Freedom of
+Movement, Ice Storm, SNA IV · 5° Cure Critical, Call Lightning Storm, Wall of
+Thorns, SNA V · 6° Mass Cure Light, Transport via Plants, SNA VI
 TALENTI: Augment Summoning, Spell Focus (Conjuration), Natural Spell, Extend
 Spell, Combat Casting, Extra Wild Shape, Power of Nature (SNA +2 CL, custom)
 ------------------------------------------------------------
