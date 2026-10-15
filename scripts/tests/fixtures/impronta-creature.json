@@ -16444,6 +16444,259 @@
     ]
    }
   },
+  "Bestiario/png/Lorana/capitana-lorana-cr7.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 14,
+     "Cos": 14,
+     "Des": 14,
+     "For": 16,
+     "Int": 13,
+     "Sag": 15
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 16,
+     "Cos": 14,
+     "Des": 14,
+     "For": 16,
+     "Int": 7,
+     "Sag": 12
+    },
+    [
+     "array elite del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Des +1, Int −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 7 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 14 **ricavata da pf 62 su 8 DV** — il vincolo batte l'array",
+     "For 16 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      7,
+      7,
+      0
+     ],
+     "Rifl": [
+      4,
+      4,
+      0
+     ],
+     "Temp": [
+      7,
+      7,
+      0
+     ],
+     "Vol": [
+      9,
+      9,
+      0
+     ],
+     "attacco": [
+      11,
+      11,
+      0
+     ],
+     "iniziativa": [
+      2,
+      2,
+      0
+     ],
+     "lotta": [
+      10,
+      10,
+      0
+     ],
+     "pf": [
+      62,
+      "24-88",
+      0
+     ],
+     "pf_media": 56
+    },
+    "file": "Bestiario/png/Lorana/capitana-lorana-cr7.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 10,
+       "n": 6,
+       "nome": "Guerriero"
+      },
+      {
+       "bab": 0.75,
+       "buoni": [
+        "vol"
+       ],
+       "dado": 6,
+       "n": 2,
+       "nome": "Esperto"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      6,
+      10
+     ],
+     [
+      2,
+      6
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       6,
+       10
+      ],
+      [
+       2,
+       6
+      ]
+     ],
+     16,
+     "formula scritta"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 14,
+      "Cos": 14,
+      "Des": 14,
+      "For": 16,
+      "Int": 13,
+      "Sag": 15
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 8,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 2469,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "Vol": 2
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      2,
+      "ricavata da Temp +7 (base +5)"
+     ],
+     "Des": [
+      2,
+      "ricavata da Rifl +4 (base +2)"
+     ],
+     "Sag": [
+      2,
+      "ricavata da Vol +9 (base +7)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      14,
+      "ricavata da pf 62 su 8 DV"
+     ],
+     "des_da_iniziativa": [
+      14,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      14,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      16,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "è quello scritto nella formula",
+    "dadi": "dalla formula che la scheda scrive",
+    "fascia": [
+     24,
+     88
+    ],
+    "file": "Bestiario/png/Lorana/capitana-lorana-cr7.md",
+    "legale": true,
+    "media": 56,
+    "motivo": null,
+    "nuovo": "6d10+2d6+16",
+    "pf": 62,
+    "vecchio": "6d10+2d6+16"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 14,
+     "Cos": 14,
+     "Des": 14,
+     "For": 16,
+     "Int": 13,
+     "Sag": 15
+    },
+    "bab": 7,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 10,
+      "n": 6,
+      "nome": "Guerriero"
+     },
+     {
+      "bab": 0.75,
+      "buoni": [
+       "vol"
+      ],
+      "dado": 6,
+      "n": 2,
+      "nome": "Esperto"
+     }
+    ],
+    "gs": 7.0,
+    "lotta": 10,
+    "mischia": "spada lunga +11/+6 (1d8+4/19-20)",
+    "pf": 62,
+    "provenienza": "a mano",
+    "tipo": "Medium humanoid (human), Guerriero 6 / Esperto 2, LG",
+    "ts": [
+     7,
+     4,
+     9
+    ]
+   }
+  },
   "Bestiario/png/arci-druido-circolo-cr14.md": {
    "controlla": [],
    "genera": [
@@ -20177,7 +20430,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4483,
+    "senza_note": 4666,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -21730,6 +21983,7 @@
      "un avanzamento ogni 4 livelli, contati sul GS 13 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "modificatori razziali SRD: dwarf Cos +2 Car -2",
      "Des 14 **derivata dalla CA di contatto** — il vincolo batte l'array",
+     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
      "For 12 **ricavata da BAB e lotta** — il vincolo batte l'array"
     ]
    ],
@@ -21748,6 +22002,7 @@
      "un avanzamento ogni 4 livelli, contati sul GS 13 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
      "modificatori razziali SRD: dwarf Cos +2 Car -2",
      "Des 14 **derivata dalla CA di contatto** — il vincolo batte l'array",
+     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
      "For 12 **ricavata da BAB e lotta** — il vincolo batte l'array"
     ]
    ],
@@ -21799,15 +22054,12 @@
     "dalla_fonte": null,
     "dalla_scheda": null,
     "dv_totali": 13,
-    "iniziativa_ambigua": [
-     -2,
-     2
-    ],
+    "iniziativa_ambigua": null,
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 3261,
+    "senza_note": 4066,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -21815,7 +22067,10 @@
     "tetti_dai_ts": {},
     "vincoli": {
      "cos_da_pf": null,
-     "des_da_iniziativa": null,
+     "des_da_iniziativa": [
+      14,
+      "ricavata dall'iniziativa"
+     ],
      "des_vincolata": [
       14,
       "derivata dalla CA di contatto"
@@ -36419,15 +36674,25 @@
     "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
    ]
   },
-  "Bestiario/png/Lorana/capitana-lorana-cr7.md": {
-   "blocco": null,
+  "Bestiario/png/Lorana/Lorana/Lorana.md": {
+   "blocco": "```statblocco\ngs: 7\nca: 13\npf: 56\nts: Temp +7, Rifl +3, Vol +6\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13 · pf: 6d10 + 2d6 media 40.0 + Cos +2×8 = 56 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +7, Rifl +3, Vol +6 · CA: 10 + taglia +0 + Des +1 + armatura +2 = 13 · collaudo GS 7 [PF1e Tab. 1–1]: atteso CA 20, pf 85 → -7 CA, -29 pf ⚠ FUORI BERSAGLIO per GS 7: la tabella attende CA 20 e pf 85 (-7 / -29)\n```",
    "conti": [
     "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
     "pf: 6d10 + 2d6 media 40.0 + Cos +2×8 = 56",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +7, Rifl +3, Vol +6"
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +7, Rifl +3, Vol +6",
+    "CA: 10 + taglia +0 + Des +1 + armatura +2 = 13",
+    "collaudo GS 7 [PF1e Tab. 1–1]: atteso CA 20, pf 85 → -7 CA, -29 pf ⚠ FUORI BERSAGLIO per GS 7: la tabella attende CA 20 e pf 85 (-7 / -29)"
+   ],
+   "derivati": [
+    "ca",
+    "pf",
+    "ts"
    ],
    "lettura": {
-    "armatura": null,
+    "armatura": [
+     2,
+     6
+    ],
     "base_ts": {
      "rifl": 2,
      "temp": 5,
@@ -36448,14 +36713,13 @@
     "elite": true,
     "gs": 7,
     "manca": [],
-    "nome": "capitana-lorana-cr7",
+    "nome": "Lorana",
     "scudo": 0,
     "taglia": "medium",
     "tipo": null
    },
-   "manca": [
-    "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
-   ]
+   "manca": [],
+   "scrivibile": false
   },
   "Bestiario/png/Nala_Cantapietre.md": {
    "blocco": null,
@@ -37412,13 +37676,13 @@
    ]
   },
   "Bestiario/villain/Ushgar_Occhio_Reso/Ushgar_Occhio_Reso.md": {
-   "blocco": "```statblocco\ngs: 13\nca: 16\npf: 112\nts: Temp +10, Rifl +5, Vol +5\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13 · pf: 13d12 media 84.5 + Cos +2×14 = 112 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +5, Vol +5 · CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) + scudo +2 = 16 · collaudo GS 13 [PF1e Tab. 1–1]: atteso CA 28, pf 180 → -12 CA, -68 pf ⚠ FUORI BERSAGLIO per GS 13: la tabella attende CA 28 e pf 180 (-12 / -68)\n```",
+   "blocco": "```statblocco\ngs: 13\nca: 14\npf: 112\nts: Temp +10, Rifl +5, Vol +5\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13 · pf: 13d12 media 84.5 + Cos +2×14 = 112 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +5, Vol +5 · CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) = 14 · collaudo GS 13 [PF1e Tab. 1–1]: atteso CA 28, pf 180 → -14 CA, -68 pf ⚠ FUORI BERSAGLIO per GS 13: la tabella attende CA 28 e pf 180 (-14 / -68)\n```",
    "conti": [
     "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13",
     "pf: 13d12 media 84.5 + Cos +2×14 = 112",
     "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +5, Vol +5",
-    "CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) + scudo +2 = 16",
-    "collaudo GS 13 [PF1e Tab. 1–1]: atteso CA 28, pf 180 → -12 CA, -68 pf ⚠ FUORI BERSAGLIO per GS 13: la tabella attende CA 28 e pf 180 (-12 / -68)"
+    "CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) = 14",
+    "collaudo GS 13 [PF1e Tab. 1–1]: atteso CA 28, pf 180 → -14 CA, -68 pf ⚠ FUORI BERSAGLIO per GS 13: la tabella attende CA 28 e pf 180 (-14 / -68)"
    ],
    "derivati": [],
    "lettura": {
@@ -37440,7 +37704,7 @@
     "gs": 13,
     "manca": [],
     "nome": "Ushgar_Occhio_Reso",
-    "scudo": 2,
+    "scudo": 0,
     "taglia": "enorme",
     "tipo": null
    },
@@ -37892,9 +38156,9 @@
    "decisioni_aperte": 0,
    "del_generatore": 0,
    "spiegati_da_template": 0,
-   "statblocchi": 108,
-   "tornano": 102,
-   "verificabili": 107
+   "statblocchi": 109,
+   "tornano": 103,
+   "verificabili": 108
   },
   "genera_attributi_controlla": [],
   "genera_attributi_proponi": [
