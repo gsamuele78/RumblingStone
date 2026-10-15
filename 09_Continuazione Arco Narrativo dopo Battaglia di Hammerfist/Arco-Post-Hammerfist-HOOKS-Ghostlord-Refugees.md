@@ -106,7 +106,7 @@ Il party informa Ren che Talar è caduta. Ren prende il colpo. *"Allora dove and
 - **Encounter potenziali sulla strada:** il DM può aggiungere 1 attacco di non-morti vaganti durante la scorta (EL 8: 1 wight + 4 ghoul + 6 zombie).
 
 **Eco:**
-- Se il party scorta i profughi a una città sicura: **+1 reputazione regionale** ("i Custodi Eterni hanno salvato i 30 di Loccatella"). A Rethmar Phase 1, Lorana riceve questo gruppo nel suo settore di rifugiati → +30 alla "Riserva dei Rifugiati" (vedi `Bestiario/png/Lorana/Lorana/Lorana.md` §LA RISERVA DEI RIFUGIATI). +Joran, l'ex-druido, può essere reclutato (Druid 5 di vecchia data) — un piccolo CR 5 alleato spirituale.
+- Se il party scorta i profughi a una città sicura: **+1 reputazione regionale** ("i Custodi Eterni hanno salvato i 30 di Loccatella"). A Rethmar Phase 1, Lorana riceve questo gruppo nel suo settore di rifugiati → +30 alla "Riserva dei Rifugiati" (vedi `Bestiario/png/Lorana/Lorana/Lorana.md` §Nella campagna, «La Riserva dei Rifugiati»). +Joran, l'ex-druido, può essere reclutato (Druid 5 di vecchia data) — un piccolo CR 5 alleato spirituale.
 
 ### 4.2 GRAY-B — *Indagare la fonte (entrare nel Thornwaste)*
 

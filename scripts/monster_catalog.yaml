@@ -2065,8 +2065,8 @@ monsters:
     role: melee-defender
     environment: urban
     source_file: "Bestiario/mostri/rethmar-city-guard-cr2.md"
-  - id: capitana-lorana-f7f49b
-    name: "Capitana Lorana"
+  - id: capitana-lorana-la-sopravvissuta-umana-guerriero-6-esperto-2-f7f49b
+    name: "Capitana Lorana — la sopravvissuta (umana, Guerriero 6 / Esperto 2)"
     cr: 7.0
     faction: rethmar-defender
     role: ally-fighter-leader

@@ -18,19 +18,23 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-Medium humanoid (orc), CE. **DV 13d12**. **hp 140**. **CA 21** (+7 giaco di maglia +2, +2 Des, +1 anello, +1 armatura naturale), contatto 13, colto alla sprovvista 19. Iniziativa +6. Vel 12 m (movimento veloce).
-**TS** Temp +14, Rifl +8, Vol +8 (mantello di resistenza +2 incluso). **BAB/Lotta** +13/+19.
-**Mischia** ascia bipenne +1 **+20/+15/+10** (1d12+10/×3).
-**Car** For 22, Des 14, Cos 18, Int 6, Sag 10, Car 6.
-**Qualità speciali** Scurovisione 18 m, **sensibilità alla luce**, **RD 2/—**, ira furente 4/giorno, schivare prodigioso migliorato, intuizione delle trappole +4, movimento veloce.
-**Talenti** Attacco Poderoso, Robustezza, Volontà di Ferro, Iniziativa Migliorata, **Combattere alla Cieca**.
-**Equipaggiamento** ascia bipenne +1, giaco di maglia +2, anello di protezione +1, amuleto dell'armatura naturale +1, mantello di resistenza +2, stivali degli scatti e dei salti, 2 pozioni di *cura ferite critiche*.
+**Iniziativa** +6 · **Sensi** scurovisione 18 m; Osservare e Cercare −2 (Occhio Reso)
 
+**Difesa** CA 21 (+7 giaco di maglia +2, +2 Des, +1 anello, +1 armatura naturale), contatto 13, colto alla sprovvista 19 · **pf 140** (DV 13d12) · **TS** Temp +14, Rifl +8, Vol +8 (mantello di resistenza +2 incluso) · **RD 2/—**; schivare prodigioso migliorato, intuizione delle trappole +4 · **Debolezza** sensibilità alla luce
+
+**Attacco** Vel 12 m (movimento veloce) · **Mischia** ascia bipenne +1 **+20/+15/+10** (1d12+10/×3) · **Attacchi speciali** ira furente 4/giorno
+
+**Statistiche** For 22, Des 14, Cos 18, Int 6, Sag 10, Car 6 · **BAB/Lotta** +13/+19 · **Talenti** Attacco Poderoso, Robustezza, Volontà di Ferro, Iniziativa Migliorata, **Combattere alla Cieca** · **Qualità speciali** movimento veloce · **Equipaggiamento** ascia bipenne +1, giaco di maglia +2, anello di protezione +1, amuleto dell'armatura naturale +1, mantello di resistenza +2, stivali degli scatti e dei salti, 2 pozioni di *cura ferite critiche*
+
+**Capacità speciali**
 - **Ira furente (4/giorno, 11 round)**: For 28, Cos 24 → **hp 179**, ascia **+23/+18/+13 (1d12+14)**, **CA 19**, Temp +17, Vol +11.
 - **Occhio Reso**: si è cavato l'occhio destro da solo, davanti ai suoi, come offerta a Gruumsh. **−2 a Osservare e Cercare** in permanenza — e **Combattere alla Cieca**, che è il modo in cui ha imparato a non pagarlo. Buio, fumo, *oscurità* drow, invisibilità: perde metà dei malus che chiunque altro subirebbe.
 - **Sensibilità alla luce**: abbagliato in piena luce solare (−1 ai tiri per colpire). Combatte all'alba e al crepuscolo per scelta, mai a mezzogiorno.
 
-**Tattiche**: entra **già in ira**, punta l'incantatore e non cambia bersaglio. Con gli stivali copre 24 m in una carica e arriva addosso al round 1 — è tutto il suo piano, e contro un gruppo abituato ad avere un round di preparazione funziona una volta. Con Attacco Poderoso a −5 fa **1d12+24** a colpo contro le CA che riesce a bucare. Se scende sotto ~40 pf beve, se scende di nuovo **non fugge**: Gruumsh non contempla la ritirata, e questo è un dato tattico, non di colore.
+**Tattiche**
+- *Prima del combattimento*: entra **già in ira**.
+- *Durante il combattimento*: punta l'incantatore e non cambia bersaglio. Con gli stivali copre 24 m in una carica e arriva addosso al round 1 — è tutto il suo piano, e contro un gruppo abituato ad avere un round di preparazione funziona una volta. Con Attacco Poderoso a −5 fa **1d12+24** a colpo contro le CA che riesce a bucare.
+- *Morale*: se scende sotto ~40 pf beve, se scende di nuovo **non fugge**: Gruumsh non contempla la ritirata, e questo è un dato tattico, non di colore.
 
 **Benchmark PF T1-1 (GS 13: CA 28, 180 pf, att. +21, danno 61, CD 21)**: attacco **+23** ✓ (sopra), danno con attacco completo in ira **≈61** ✓ (esatto), **CA 21 → 19 in ira** ✗ (molto sotto), **pf 140 → 179 in ira** ≈ (sotto/in scala). Traduzione onesta: **colpisce come un GS 13 e sopravvive come un GS 11**. Contro CA ~30 e quattro PG di livello 13 dura **2-3 round**. Va usato **con corpi intorno** (`chierico-gruumsh-cr11.md` dietro, `bruto-deforme-sottosuolo-cr11.md` a fianco) o come **secondo tempo** di uno scontro già cominciato, mai come boss solitario di fine arco.
 
