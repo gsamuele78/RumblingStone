@@ -72,10 +72,10 @@ nella prosa.
 
 | # | Rilievo | Esito |
 |---|---|---|
-| 1 🟠 | il Bane draconico di A7 | **domanda al DM**, D82 (a) |
-| 2 🟠 | i premi sacri di Thorik valgono zero | **domanda al DM**, D82 (b) |
+| 1 🟠 | il Bane draconico di A7 | D82 (a), decisa: +1d6 oltre il *Dragondoom*, per i gruppi futuri |
+| 2 🟠 | i premi sacri di Thorik valgono zero | D82 (b), decisa: per Thorik diventano bonus morale |
 | 3 🟠 | il frammento onirico di Tordek rimanda al §6 | il rimando giusto: Piano della Terra, §1 |
-| 4 🟠 | Hella senza niente se si dorme nella Stanza | **domanda al DM**, D82 (c) |
+| 4 🟠 | Hella senza niente se si dorme nella Stanza | D82 (c), decisa: il sogno di Hella resta |
 
 ## Il triage del playtester di DEF-3
 

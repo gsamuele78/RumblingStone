@@ -182,7 +182,10 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 >   loro ma **si sommano** ai morale. Usa questa distinzione per evitare lo
 >   stacking illimitato: max **un** bonus sacro attivo alla volta dagli
 >   affreschi. Quando due si sovrappongono (A1, A3, A8), per ogni tiro vale il
->   più alto, come per due bonus dello stesso tipo nell'SRD.
+>   più alto, come per due bonus dello stesso tipo nell'SRD. Per Thorik, che ha
+>   già +2 sacro a tutti i TS dalla Risonanza della Corona con Aegis Fang, i
+>   premi di A1, A3 e A8 diventano bonus **morale** dello stesso valore, e si
+>   sommano al sacro `[CANONE — DM 2026-10-15, D82]`.
 > - **"Guarigione emotiva" (A3)**: trattala come *channel positive energy*
 >   PF1e a CL 12 sul solo Thorik (una volta), non come cura infinita.
 
@@ -496,8 +499,10 @@ beat: il registro completo dei riposi e la progressione dell'affresco stanno in
   sangue riconosce il sangue. Quando lo incontrerai, io sentirò. Canterò il
   canto di morte dei draghi. E lui tremerà.»*
   - **Effetto — Bane Draconico specifico (permanente, solo vs Fauci di Palude):**
-    +2 competenza all'attacco, **+3d6** danni (invece di +2d6 vs draghi), critico
-    ×4, e **1/incontro (azione gratuita)** infliggere *Scosso* a Fauci 1d4 round
+    **+1d6** danni oltre il *Dragondoom* dell'ascia `[CANONE — DM 2026-10-15, D82]`
+    (vale per i gruppi futuri: il gruppo di oggi tiene quello che ha avuto al
+    tavolo), e
+    **1/incontro (azione gratuita)** infliggere *Scosso* a Fauci 1d4 round
     (Volontà CD 22 nega; se fallisce, ha il flashback ancestrale della morte del
     capostipite). *Questo prepara meccanicamente il boss di Hammerfist (ARC-08),
     e si intreccia col carry-over «La Forgia ricorda le ferite» del #4.*
@@ -677,7 +682,8 @@ pannello nuovo.** Cioè, adesso: la vittoria contro Terros è appena entrata
 nella parete. Non è ripetibile a comando — se dormono di nuovo senza aver
 compiuto nulla, la Sala tace, e quel silenzio è a sua volta un'informazione.
 Se dormono nella **Stanza della Corona** (−12 h, §6) il sogno non c'è: senza lo
-sconto non ci sono ore rubate `[CANONE — DM 2026-09-30]`.
+sconto non ci sono ore rubate `[CANONE — DM 2026-09-30]`. Resta solo il sogno di
+Hella, perché è lei a sognare, non la Sala `[CANONE — DM 2026-10-15, D82]`.
 
 **Niente tiri. Niente CD. Nessun effetto meccanico.** È regia pura: quattro
 scene brevi, una per giocatore, giocate **una alla volta e in privato se
