@@ -6,7 +6,7 @@
 > due letture a freddo fatte da un agente con una rubrica fissa
 > (`skills/rumblingstone-playtest/references/`).
 >
-> **Stato**: 🟡 F1-F3 e F7-F9 chiusi; F3-quinquies col giro 3 completo e il passo 7 (2026-10-12), decisioni D35-D37 e D49-D63 applicate (2026-10-12), giro 4 col lettore fatto e corretto (2026-10-12), giro 4 completo (lettore, playtester e DM a freddo, 2026-10-12); D64-D74 decise e applicate (2026-10-12), D75-D76 decise; resta F4 (allargato al ciclo del master, ADR-0075); F5 e F6 spostate in PIANO-MASTER-DEF (DM 2026-10-12) · **Decisore**: DM ·
+> **Stato**: ✅ **COMPLETO (2026-10-15)**. F1-F4 e F7-F9 chiusi; F4 chiuso il 2026-10-15 con DEF-1, 2, 3 e 5 senza 🔴 e il quiz di DEF-5; F5 e F6 spostate in PIANO-MASTER-DEF (DM 2026-10-12) · **Decisore**: DM ·
 > **Decisione**: [ADR-0073](adr/ADR-0073-chi-e-dove-sta-scritto-nella-scena.md)
 > **Gate**: `copertura_scene.py --check` verde; su `ARC07-DEF-4` la lettura a
 > freddo ripetuta dopo F3 non trova più rilievi 🔴 nelle Scene 5-9
@@ -361,7 +361,7 @@ luoghi, se hanno senso di esistere»*.
       bancone
 - [x] D43 decisa e applicata: zero monete di Thorek I in proporzione al conto, 6.250 mo di conio elfico nell'hoard di Regiarix, il prezzo da collezione solo sulle prime dieci monete
 
-### F3-quinquies · DEF-4 da chiudere: le marcature `[INFERRED]` — 🟡 (2026-10-07)
+### F3-quinquies · DEF-4 da chiudere: le marcature `[INFERRED]` — ✅ (2026-10-12)
 
 `[engine: Opus, sessione principale · effort: alto · qualità: zero marcature senza risposta del DM, poi il giro delle quattro letture]` — **K**: ogni riga tocca il canone
 
@@ -470,8 +470,9 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       notte è nel campo?) e **Q29-bis** (dopo la scomparsa all'esecuzione, dove
       ricompaiono i PG: proposta, nel cortile quando il drago cala, feriti come
       sono, e il duello si gioca su M7-B)
-- [~] il giro delle quattro letture a freddo su DEF-4 (passo 6 del ciclo), con la
-      lettura del DM a freddo che rientra nel registro con l'impronta.
+- [x] il giro delle quattro letture a freddo su DEF-4 (passo 6 del ciclo), con la
+      lettura del DM a freddo che rientra nel registro con l'impronta. Superato
+      dal giro 3 completo e dal giro 4 di conferma, qui sotto.
       *(2026-10-07: rapporti in `esperimenti/def4-giro2/`. Lettore 🔴 1 · 🟠 12 ·
       🟡 48: il 🔴 è il caso di Zog'tar vivo all'alba, che è canone; corretti
       subito i 🟠 che il testo risolve (la CA della scaglia, 41; la soglia di fuga
@@ -565,7 +566,7 @@ Le decisioni ancora aperte per DEF-4 restano nella tabella in fondo: **D27**
       Il DM a freddo: 🔴 0 · 🟠 8 · 🟡 11, corretti o portati al DM come
       D75-D76; tre 🟡 restano residui con la ragione)*
 
-### F4 · Gli altri master di ARC-07 — ⬜ · allargato il 2026-09-27 (ADR-0075)
+### F4 · Gli altri master di ARC-07 — ✅ (2026-10-15) · allargato il 2026-09-27 (ADR-0075)
 
 `[engine: Opus, sessione principale · effort: xhigh · qualità: i sette passi del ciclo del master, per ogni DEF]` — **K** per DEF-5 (si gioca subito), **C** per gli altri
 
@@ -604,7 +605,7 @@ PIANO-MASTER-DEF**, perché ARC-08 comincia dove finisce DEF-5.
       Resta il **passo 7** (il quiz, D10): fatto il 2026-10-15
       (`esperimenti/quiz-def5/`), 10 su 12 dagli appunti, nessun buco a libro
       aperto; le marcature `[INFERRED]` sono D90 (decisa) e D91
-- [~] **DEF-1, DEF-2, DEF-3 nella forma, passi 1-4 (2026-09-30).** Scene
+- [x] **DEF-1, DEF-2, DEF-3 nella forma, passi 1-4 (2026-09-30).** Scene
       `### SCENA` (10, 5 e 8), contratto «In scena», Comparse, schede
       d'entrata di Fauci di Diamante, la Madre Cristallo, Varis e Terros
       (solo da testo e Bestiario), apparati generati, i tre profili in
@@ -626,6 +627,9 @@ PIANO-MASTER-DEF**, perché ARC-08 comincia dove finisce DEF-5.
       `esperimenti/f4-giro2/`: l'ultimo senza 🔴 (🟠 6, 🟡 29). I 🟠 sono
       corretti, con D84-D89; i 🟡 restano nei report. Il DM ha chiesto di
       chiuderlo così, senza un settimo giro.
+- [x] **DEF-5 chiuso (2026-10-15).** Il quiz (passo 7), D90-D92 decise e
+      applicate, nessuna marcatura `[INFERRED]`; il playtester di conferma
+      (giro 3) senza 🔴, tre 🟠 chiusi nel testo e tre con D92.
 - [x] **Le decisioni del DM del 2026-09-30, applicate.** D7, D12, D14-D17,
       D19, D21, D23, D25, D29-D33 in DEF-4 e DEF-5 (più il registro dell'orologio
       di DEF-2 e l'handout delle Cronache), D34 in DEF-1 Scena 6. Brynja resta
@@ -634,7 +638,7 @@ PIANO-MASTER-DEF**, perché ARC-08 comincia dove finisce DEF-5.
       quiz non si fa sulle conversioni di sola forma, il cancello del registro
       delle letture è L4 di [PIANO-AGENT-SKILLS-ESTERNE](PIANO-AGENT-SKILLS-ESTERNE.md), fatto il 2026-10-01: `plans/letture-a-freddo.json` e `registro_letture.py --check` in CI, in avviso finché un master non ha le letture con impronta, poi bloccante. **D9, passo 5**: il DM ha confermato «spezzali»;
       DEF-1 e DEF-2 hanno zero box oltre 12 righe, nessuna parola cambiata
-- [~] **Il giro delle quattro letture su DEF-4 e DEF-5, e la procedura (2026-09-30).**
+- [x] **Il giro delle quattro letture su DEF-4 e DEF-5, e la procedura (2026-09-30).**
       Su richiesta del DM: lettore, playtester, developer e un **DM a freddo**
       (rubrica nuova, `rumblingstone-playtest/references/dm-a-freddo.md`: legge
       scena per scena senza guardare avanti, e il giorno dopo scrive cosa
@@ -653,12 +657,19 @@ PIANO-MASTER-DEF**, perché ARC-08 comincia dove finisce DEF-5.
       tabella SRD sono D40, le mappe M7-B e M7-C sono il lotto D28. **Resta da
       fare il giro 2**, dopo D39 e il lotto mappe: finché quelli sono aperti, i
       due 🔴 tornerebbero identici
-- [ ] DEF-1 (Varis), DEF-2, DEF-3: i residui dichiarati, prima che un gruppo
+- [x] DEF-1 (Varis), DEF-2, DEF-3: i residui dichiarati, prima che un gruppo
       nuovo li riprenda. Sono **già giocati** (`copertura-scene.json`): si
       convertono nella forma (titoli `### SCENA`, contratto, componenti, box al
       metro) e non in cosa succede, che per questo gruppo è già canone
-- [ ] per ognuno, alla fine: lettore e playtester a freddo senza 🔴, quiz con la
+- [x] per ognuno, alla fine: lettore e playtester a freddo senza 🔴, quiz con la
       chiave approvata dal DM, e la riga tolta da `plans/copertura-scene.json`
+      *(2026-10-15: DEF-1 al giro 6 del playtester, DEF-2 e DEF-3 al giro 2
+      (`esperimenti/f4-giro2/`), DEF-5 al giro 3 (`esperimenti/def5-giro3/`):
+      nessun 🔴. Il quiz solo su DEF-5 (D10: DEF-1, 2, 3 sono conversioni di
+      sola forma), 10 su 12 dagli appunti (`esperimenti/quiz-def5/`). In
+      `copertura-scene.json` i profili restano, perché sono il contratto che il
+      cancello controlla; i cinque residui di DEF-1 e DEF-5 sono voci di
+      artefatti e di Moradin che parlano, dichiarate con la ragione)*
 - [x] **DEF-5 è la prova cieca di `P-ABITATO`** (ADR-0075, «La prova contro il
       tavolo»), **riuscita** il 2026-09-30: il playtester, senza la tabella, ha
       trovato da solo il buco (#13): dopo la pulizia i PG sono in una fortezza
@@ -756,8 +767,10 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 - [x] DEF-4 Scena 11, cosa fa chi non vola nei round in quota (playtester
       #42): chiuso il 2026-09-27 col sì del DM, tre vie SRD e le balestre delle
       mura `[INFERRED]`
-- [ ] F4: la Tempra di DEF-5 · F5: l'invisibilità al corpo di guardia
-      dell'Abbazia, Riflessi e Volontà nell'Abbazia e nel Drappo
+- [x] F4: la Tempra di DEF-5. Il DM ha scelto la Volontà (D90); il residuo
+      «nessun TS su Tempra» è dichiarato con la ragione
+- [ ] F5: l'invisibilità al corpo di guardia dell'Abbazia, Riflessi e Volontà
+      nell'Abbazia e nel Drappo ➡️ con F5, in PIANO-MASTER-DEF
 
 ## Decisioni aperte al DM
 
@@ -845,7 +858,7 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | ~~D89~~ | F4 | ✅ **Decisa il 2026-10-15**: «applica tutte le soluzioni consigliate e chiudi». Applicate in DEF-1 la (2), la (8) e la (18). Della (18) ho cambiato una parte per coerenza col canone giocato: il Diapason contro la Sentinella non è «senza effetto», fa il *grido superiore* che ha fatto al tavolo il 2026-07-24, ma non la stordisce. DEF-1 è chiuso. Era: **DEF-1, il giro 6 del playtester** (nessun 🔴, sei 🟠, tutti per i gruppi futuri). Tre li ho chiusi io senza decisione: la T-3 e la T-6 dell'Atlante allineate al modulo, e il *Manto di Pietra e Spirito* aggiunto al §9 e alla carta della Corona, perché è già canone in `state.md`. Restano tre. (2) **L'affaticamento del viaggio si somma fino a esausto**: proposta, ognuno tira per sé; chi fallisce è affaticato fino al prossimo scontro, non si somma, e una carica di *Vigore della Forgia* lo toglie. (8) **I nani ai Cristalli non hanno una prova che possano vincere**: proposta, chi non ha un'abilità utile può Aiutare un compagno (+2) o passare il giro senza fallimento, più una prova per i nani: Conoscenze (architettura e ingegneria) o Cercare sulla pietra, CD 18, +1. (18) **Lo stordimento di Terros**: proposta, nello statblock «immune allo stordimento, tranne il Diapason»; *Move Earth* lo blocca 1 round senza stordirlo; il Diapason non ha effetto sulla Sentinella, che è un costrutto |
 | ~~D90~~ | F4 | ✅ **Decisa il 2026-10-15**: «solo la 1 da cambiare, TS sulla Volontà; le restanti vanno bene, adottale». Applicata in DEF-5: all'arrivo **Volontà CD 15** o frastornati 1 round; le altre sette sono canone, e la chiave del quiz accetta la q4 (10 su 12 dagli appunti). Era: **DEF-5, le marcature `[INFERRED]` prima di giocarlo** (il quiz è fatto, 0 buchi). Sei regole scritte da me, da confermare o cambiare: (1) **la Tempra all'arrivo**: Tempra CD 15 o frastornati 1 round (era Volontà); (2) **l'aura sugli orchi**: chi fa 20 resta scosso, e l'effetto dura tutta la scena, chi fugge non torna; (3) **l'ordine**: l'aura scatta con l'apparizione e i TS si risolvono subito, poi il round di sorpresa dei PG, poi l'iniziativa; (4) **i novanta nani** non si tirano: tre blocchi, e un blocco travolge ciò che ha davanti; (5) **il ramo «meno luminoso»** scatta se il duello di DEF-4 è finito FUGGITO o VINTO SPORCO, e la Catena spezzata non conta; (6) **il 14° livello** si prende al primo riposo, dopo la battaglia di Hammerfist. Più due cose del quiz: (7) la riga D77 del §6 letta come «si rialza quando non è più esausto, anche a 8 pf»; (8) la chiave del quiz che accetta anche «Volontà… fuggono» per la q4 |
 | ~~D91~~ | F4 | ✅ **Decisa il 2026-10-15**: sì a tutte. Applicata in DEF-5: nessuna marcatura `[INFERRED]` resta nel modulo. Era: **DEF-5, le sei marcature `[INFERRED]` che la scheda di D90 non elencava** (le avevo saltate io). (1) **l'Aura della Forgia**: l'alba è quella del 1372, il salto non ne consuma la durata; (2) **«Fuggi!» sul capo degli orchi**: se il capo è uno dei rimasti lo manda via, e l'altro scosso scappa con lui; (3) **il capo degli orchi**: orco dell'SRD con un elmo nanico, 8 pf invece di 5; (4) **Artemis sopra la porta**: se ci arriva nel round di sorpresa vede gli hobgoblin un round prima, e i nani avvisati vincono il primo scambio del muro di scudi; (5) **le Cantitrici della Pietra**: se Dana cade apre il portale una di loro, chierica di 5°, più lenta e con la voce che trema; (6) **la porta murata**: con *muro di pietra* regge, e chi insegue trova il corridoio vuoto fino alla prima svolta |
-| D92 | F4 | **DEF-5, giro 3 del playtester** (nessun 🔴, sei 🟠). Tre li ho chiusi io nel testo: la durata dello scontro (4-5 round), il tempo di lancio di *ristorare* e chi lo legge, la Cintura di Tordek (il suo scontro è Fauci). Restano tre. (a) **l'ordine di Thorik e il preavviso di Artemis sul muro di scudi**: proposta, con l'ordine nel round di sorpresa passano tre hobgoblin invece di cinque; con anche il preavviso di Artemis, due; (b) **Dana e le Cantitrici, cosa hanno ancora**: proposta, hanno speso tutto sulle mura tranne il *muro di pietra* di Dana, che lancia se un PG le chiede di chiudere il varco; niente *ristorare*; (c) **gli hobgoblin all'altare, e se il re muore**: proposta, l'altare si scala con Scalare CD 15 (un round); il re non muore in DEF-5: il colpo che lo porterebbe sotto 0 lo prende Dana, che gli si getta sopra |
+| ~~D92~~ | F4 | ✅ **Decisa il 2026-10-15**: sì a tutte. Applicate in DEF-5 Scena 2, Scena 3 e §6. F4 è chiuso. Era: **DEF-5, giro 3 del playtester** (nessun 🔴, sei 🟠). Tre li ho chiusi io nel testo: la durata dello scontro (4-5 round), il tempo di lancio di *ristorare* e chi lo legge, la Cintura di Tordek (il suo scontro è Fauci). Restano tre. (a) **l'ordine di Thorik e il preavviso di Artemis sul muro di scudi**: proposta, con l'ordine nel round di sorpresa passano tre hobgoblin invece di cinque; con anche il preavviso di Artemis, due; (b) **Dana e le Cantitrici, cosa hanno ancora**: proposta, hanno speso tutto sulle mura tranne il *muro di pietra* di Dana, che lancia se un PG le chiede di chiudere il varco; niente *ristorare*; (c) **gli hobgoblin all'altare, e se il re muore**: proposta, l'altare si scala con Scalare CD 15 (un round); il re non muore in DEF-5: il colpo che lo porterebbe sotto 0 lo prende Dana, che gli si getta sopra |
 | ~~D38~~ | F4 | ✅ **Decisa il 2026-10-03**: la proposta. La Fase 0 dell'ARC-08 si gioca dopo il drago ai bastioni (prima il Cuore, poi Fauci, poi il consiglio di guerra), e l'aura dell'Apparizione è la presenza terrificante dell'SRD: ogni orco tira, chi fallisce è in panico, chi fa 20 è scosso. Applicata a `DEF-5` §0-bis, Scena 2, Scena 3 e CM-1. Era: **DEF-5: quando si gioca la Fase 0 dell'ARC-08?** (🔴 del playtester e del developer a freddo, 30 settembre). DEF-5 fa arrivare i PG nel Cuore della Montagna nell'ultima resistenza, col drago sulle mura e il riposo impossibile; la tabella dei rami prometteva una Fase 0 (consiglio di guerra, preparativi) prima della battaglia. Dopo D31 «sopra la prima ondata è già passata» le due cose non stanno insieme. Proposta: la Fase 0 si gioca **dopo** il drago ai bastioni: prima il Cuore, poi Fauci, poi il consiglio di guerra per le ondate che restano. E l'aura dell'Apparizione segue l'SRD della presenza terrificante: ogni orco tira, chi fallisce (quasi tutti, con Volontà −2 contro CD 25) è in panico, chi fa 20 è scosso; la Scena 3 si gioca con i pochi che restano e con i nemici che arrivano dopo (CM-1) |
 | ~~D39~~ | F4 | ✅ **Decisa il 2026-10-07**: (b): parlare con Balvar **durante** lo scontro nella tenda non costa tacche; prima di colpire costa ancora 1. Applicata nell'orologio della notte di DEF-4. Era: **L'orologio di DEF-4 non ha margine.** Con le 3 tacche già spese dal gruppo di oggi, parlare con Balvar (1) o fallire un solo blocco del campo porta a 8 tacche: l'alba fuori dalle mura, e la Scena 10 non si gioca. Lo dicono sia il playtester sia il developer del giro 1. Proposta: **(a)** la soglia 🔴 passa a 9 tacche; **(b)** parlare con Balvar costa 0 se lo si fa durante lo scontro nella tenda; **(c)** si lascia così: l'alba fuori è l'esito più probabile, ed è voluto |
 | ~~D40~~ | F4 | ✅ **Decisa il 2026-10-07**: (b): il duello al conto SRD, 1.460 PX a testa; il totale del beat scende a ~6.360, e il 14° arriva dopo DEF-5. Applicata in DEF-4 §8; DEF-5 §8 va rifatto con questa cifra. Era: **I PX del beat sono circa tre volte la tabella SRD** (Skullcrusher: 5.400 a testa scritti, ~1.460 da tabella). Il 14° livello di DEF-5 poggia su quella cifra. Proposta: **(a)** si tiene la cifra come premio di storia, detto apertamente; **(b)** si scende al conto SRD, e il 14° arriva dopo DEF-5 |
@@ -859,7 +872,7 @@ manuali, così può misurare e segnare il problema, se esiste nell'avventura»*.
 | ~~D48~~ | F3-bis, D28 | ✅ **Decisa il 2026-10-08** (il DM sceglie le proposte, una per una). **(a)** Il percorso e le misure come nelle griglie; **(b)** le rune di Zeth nel 1372 sono glifi di interdizione dell'SRD legati alla razza: un'esplosione per runa su chi non è nano, 4d8, Riflessi CD 14 dimezza (incantatore di 9°, come una pergamena, Q5), Cercare e Disattivare Congegni CD 28; **(c)** i leoni di pietra sono statue vuote, un'eco dei leoni spettrali del Ghostlord in ARC-09. Era: **Gli stati del 1372 delle sale sotto la montagna vanno bene?** Nessun master li descriveva, e le griglie M7-D, M7-E e M7-F del 1372 li propongono: la ritirata del Giorno 3 dal tunnel della statua alle gallerie di Zeth, poi alla fucina grande e al Cuore; gli orchi che saccheggiano il livello −1 dal corridoio principale; la riconquista al contrario; le rune di Zeth accese (D30) e due leoni di pietra nelle gallerie; le misure delle stanze. Resta da fissare l'effetto meccanico delle rune nel 1372. Proposta: approvare le griglie come sono e decidere le rune quando ARC-08 gioca la ritirata |
 
 <!-- eco: LETTORE-PLAYTESTER 2026-10-15 -->
-- **Decise**: D88 sì tranne la (8), cambiata dal DM (DEF-1) · D89 tutte, e DEF-1 chiuso (DEF-1) · D82 sì a tutte (DEF-2) · la chiave del quiz di DEF-5 approvata · D90 sì tranne la (1), cambiata dal DM (DEF-5) · D91 sì a tutte (DEF-5)
+- **Decise**: D88 sì tranne la (8), cambiata dal DM (DEF-1) · D89 tutte, e DEF-1 chiuso (DEF-1) · D82 sì a tutte (DEF-2) · la chiave del quiz di DEF-5 approvata · D90 sì tranne la (1), cambiata dal DM (DEF-5) · D91 sì a tutte (DEF-5) · D92 sì a tutte, e DEF-5 e F4 chiusi (DEF-5)
 - **Aperte**: nessuna
 - **Cambiate**: D88 (8) da «si stampa solo lo stadio Fuoco» a «la scheda completa si stampa, si copre solo *Diventare una Collina*»: lo stadio Terra si sveglia col rito dopo la Sentinella. D90 (1) da «Tempra CD 15» a «Volontà CD 15» all'arrivo. D89 (18) da «il Diapason non ha effetto sulla Sentinella» a «fa il *grido superiore*, non la stordisce», per il canone giocato il 2026-07-24
 - **Dedotto da me**: per D82, che la (a) valga solo per i gruppi futuri, perché il gruppo di oggi ha già giocato DEF-2; per D88 e D89, la regia del duello senza i numeri di Tordek, che il playtester ha stimato su una scheda al 12°; la prova dei nani ai Cristalli vale +1, come le altre prove da CD 18

@@ -278,7 +278,9 @@ un gesto a testa; poi l'iniziativa, e si passa alla Scena 3.
 
 **Le distanze** (MAPPA CM-1, quadretti da 3 m): i PG compaiono sull'altare, alto
 3 m; la porta è a **36 m**, oltre l'anello dei novanta nani. Nel round di
-sorpresa chi combatte in mischia non ci arriva.
+sorpresa chi combatte in mischia non ci arriva. L'altare si scala con
+Scalare CD 15, in un round. Il re non muore in DEF-5: il colpo che lo
+porterebbe sotto 0 lo prende Dana, che gli si getta sopra `[CANONE — DM 2026-10-15, D92]`.
 
 **Se il tavolo ha giocato male il −1000** (§6), leggi prima la riga «meno
 luminosa» delle contingenze: cambia gli effetti qui sotto.
@@ -389,7 +391,9 @@ quelli entrati con le porte, e quasi tutti stanno già scappando.
 mappa CM-1): **20 hobgoblin sergenti**, alla fine del round 1 della pulizia.
 L'aura è scattata prima che entrassero, e non li tocca: fanno muro di scudi
 alla porta. I tre blocchi di nani ne tengono quindici; cinque passano
-l'anello (Round 2-4, qui sotto) `[CANONE — DM 2026-10-12, D77]`. Dopo di loro non arriva più
+l'anello (Round 2-4, qui sotto) `[CANONE — DM 2026-10-12, D77]`. Se Thorik ha dato l'ordine nel round di
+sorpresa ne passano tre; se anche Artemis li ha visti dalla porta e ha dato
+il preavviso, due `[CANONE — DM 2026-10-15, D92]`. Dopo di loro non arriva più
 nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
 
 - **🎚️ [FAST-PLAY]**: i PG + Treant + 90 nani potenziati finiscono gli orchi
@@ -482,7 +486,9 @@ caverna: sono il primo pezzo del bottino dell'orda che l'ARC-08 conta (§8 B).
 per giocatore, e la tavola dell'Affresco A8 (§9), una per il tavolo. Il portale è un arco di luce dorata che Dana
 apre sulla parete con una preghiera di un round; dall'altra parte entrano il
 vento e il fumo dei bastioni `[CANONE — DM 2026-10-12, D77]`. Se qualcuno chiede perché Dana non cura il re: le due *guarigioni* di
-stamattina le ha spese sulle mura `[CANONE — DM 2026-10-12, D77]`.
+stamattina le ha spese sulle mura `[CANONE — DM 2026-10-12, D77]`. Lei e le Cantitrici hanno speso
+tutto sulle mura, niente *ristorare*; a Dana resta solo un *muro di pietra*,
+che lancia se un PG le chiede di chiudere il varco `[CANONE — DM 2026-10-15, D92]`.
 
 → **Dana apre il portale. Fine dell'ARC-07. Inizia l'ARC-08** (la Battaglia di
 Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.

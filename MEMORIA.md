@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 15 decisioni aperte
+## Aspetta il DM: 14 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -27,7 +27,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `LETTORE-PLAYTESTER` | D92 | F4 | **DEF-5, giro 3 del playtester** (nessun 🔴, sei 🟠). Tre li ho chiusi io nel testo: la durata dello scontro (4-5 round), il tempo di lancio di *ristorare* e chi lo legge, la Cintura di Tordek (il suo scontro è Fauci). Re… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -115,6 +114,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4 di conferma su DEF-4 | ✅ lettore, playtester e DM a freddo, nessun 🔴; rilievi corretti nel master o portati al DM (D64-D76), tutte decise |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D74 decisa dal DM, sì a tutto: i sedici dettagli del playtester diventano canon… | 🟡 nessuna decisione aperta; resta il DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il playtester a freddo su DEF-4 (🔴 0 · 🟠 6 · 🟡 17), corre… | 🟡 playtester fatto; aperta D74, resta il DM a freddo |
@@ -126,11 +126,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | F3-quinquies: il giro 3 completo su `DEF-4` (lettore, playtester, developer, DM… | 🟡 nessun 🔴 dopo il lettore; corretti i rilievi che il testo risolve; D49-D62 aperte al DM; serve il giro 4 di conferma dopo le decisioni |
 | 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… | ✅ (PR #238, unita il 2026-10-12) |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… | 🟡 parziale: tre letture sulle parti nuove; mancano il lettore e il resto del master (chiuso dal giro 3 completo, `plans/esperimenti/def4-giro3/`) |
-| 2026-10-12 | REVISIONE-ARC07 · module-standard | le tattiche degli scontri che `DEF-4` rende possibili e non spiegava, e la doma… | ✅ `DEF-4`: la pattuglia dei tre fallimenti, la squadra dei lupi, lo sciamano che vede l'invisibile, le quattro guardie della tenda, Zog'tar sulla breccia all'a… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 15 aperte, 258 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 14 aperte, 259 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
