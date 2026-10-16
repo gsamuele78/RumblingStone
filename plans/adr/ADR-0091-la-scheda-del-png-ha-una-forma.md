@@ -132,6 +132,33 @@ lotto che carica `rumblingstone-narrative-style`. Un numero che non torna si
 segnala con `[INFERRED — needs DM confirmation]` accanto, e resta quello che
 era.
 
+### 4-bis. Quando le versioni non concordano (DM, 2026-10-16)
+
+Il §4 vale per il riordino. Dopo, il DM ha chiesto di correggere: *«usa ed
+adatta la versione più terrificante delle stats, in linea con il PNG e il
+villain […] lascia sempre quelle più potenti in ogni caso e fixa tutti i
+problemi»*. Per le schede nominate valgono quindi quattro regole, che per
+questo lotto allargano il §2 di ADR-0065 (lì si corregge un numero solo quando
+è l'unico che non torna).
+
+1. **Vince la versione più forte che resta il personaggio.** Si confronta la
+   build intera, non il massimo campo per campo. Una versione dichiarata MASTER,
+   ERRATA o decisione del DM batte una non dichiarata. Si scarta la versione
+   più forte solo quando rompe il ruolo: un luogotenente non supera il suo
+   comandante, e un mostro generato che non è la creatura dell'arco resta fuori.
+2. **Un conto sbagliato si corregge senza togliere potere.** Se il valore giusto
+   è più basso, lo si riporta in alto con un mezzo legale: una caratteristica,
+   un talento o un oggetto coerente col personaggio, marcato `[INFERRED]`.
+   Quando non c'è un mezzo legale, si accetta il valore più basso e la scheda
+   ne scrive il motivo.
+3. **Il materiale non SRD si segnala.** Accanto alla classe si scrive
+   `[Private source — <libro>]`. Un prerequisito mancato resta, con una nota ⚠.
+   Si scrive anche, in una riga, se un archetipo PF1e del PRD fa la stessa cosa
+   o la stravolge.
+4. **Il vecchio non si cancella.** I numeri superati vanno in un blocco
+   `<!-- storico -->` della scheda, e il cambio di GS in `Boost log:`. Se il GS
+   cambia, cambia anche il nome del file.
+
 ### 5. La misura
 
 `python3 scripts/validate_bestiario.py --forma` conta, per ogni dossier e
