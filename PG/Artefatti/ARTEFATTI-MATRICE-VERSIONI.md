@@ -47,7 +47,7 @@
 | corona | 1 · Topazio | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma.html` | `00-La Corona di Adamantio-ogetto&Prove/01_Corona_1_Gemma_DM.html` | `corona · S1 · r6 · 2026-09-25` | ✅ passato |
 | corona | 2 · Smeraldo | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/02_Corona_2_Gemme_DM.html` | `corona · S2 · r6 · 2026-09-25` | ▶ oggi |
 | corona | 3 · Rubino | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme.html` | `00-La Corona di Adamantio-ogetto&Prove/03_Corona_3_Gemme_DM.html` | `corona · S3 · r7 · 2026-09-28` | ⬜ al Rituale 4, intera dopo l'uso del Rubino |
-| aegis | 0 · pre-risveglio | `Aegis Fang/00_Aegis_Fang_Stadio0.html` | `Aegis Fang/00_Aegis_Fang_Stadio0_DM.html` | `aegis · S0 · r7 · 2026-09-25` | ▶ oggi |
+| aegis | 0 · pre-risveglio | `Aegis Fang/00_Aegis_Fang_Stadio0.html` | `Aegis Fang/00_Aegis_Fang_Stadio0_DM.html` | `aegis · S0 · r8 · 2026-10-15` | ▶ oggi |
 | aegis | 1 · risveglio pieno | `Aegis Fang/01_Aegis_Fang_Stadio1.html` | `Aegis Fang/01_Aegis_Fang_Stadio1_DM.html` | `aegis · S1 · r4 · 2026-09-25` | ⬜ al Rituale 4 |
 | anello | 0 · l'anello del caos | `ringOfChaoticIllumination/01_Anello_S0_Originale.html` | `ringOfChaoticIllumination/01_Anello_S0_Originale_DM.html` | `anello · S0 · r5 · 2026-09-25` | ✅ passato |
 | anello | 1 · le due divinità | — | `ringOfChaoticIllumination/02_Anello_S1_Due_Divinita_DM.html` | `anello · S1 · r4 · 2026-09-25` | scritto, mai dato al giocatore (D11) |

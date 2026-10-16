@@ -181,7 +181,11 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 >   diretta) e in PF1e i bonus *sacri* di fonti diverse **non** si sommano tra
 >   loro ma **si sommano** ai morale. Usa questa distinzione per evitare lo
 >   stacking illimitato: max **un** bonus sacro attivo alla volta dagli
->   affreschi.
+>   affreschi. Quando due si sovrappongono (A1, A3, A8), per ogni tiro vale il
+>   più alto, come per due bonus dello stesso tipo nell'SRD. Per Thorik, che ha
+>   già +2 sacro a tutti i TS dalla Risonanza della Corona con Aegis Fang, i
+>   premi di A1, A3 e A8 diventano bonus **morale** dello stesso valore, e si
+>   sommano al sacro `[CANONE — DM 2026-10-15, D82]`.
 > - **"Guarigione emotiva" (A3)**: trattala come *channel positive energy*
 >   PF1e a CL 12 sul solo Thorik (una volta), non come cura infinita.
 
@@ -208,7 +212,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 ### ⚒️ TORDEK — il testimone (Mercer support)
 - Non è il protagonista degli affreschi, ed è giusto così: il suo ruolo qui è
   **esserci per gli altri** (regge Thorik nella catarsi senza giudicare; è lui
-  che, sfiorando la Corona, riceve il **frammento onirico** di Hella — §6).
+  che, sfiorando la Corona, riceve il **frammento onirico** di Hella — Piano della Terra, §1).
 - I **Bracieri** (ora completi, con la loro coscienza) commentano gli affreschi
   con una riga da vecchio fabbro: davanti ad A1, *«Quello sì che sapeva battere
   il ferro»*. Piccolo colore, grande personaggio.
@@ -283,9 +287,9 @@ Zona **sicura**: nessun nemico. Vedi **MAPPA S-1**.
 ### ZONA B — La Stanza della Corona (il luogo della morte)
 **Read-aloud**: si legge in apertura della Scena 4 (§6), quando il gruppo passa il Portale P1.
 
-**Terreno (callout):** arena rettangolare 30×20 m (vedi **MAPPA S-2**); trono
-centrale su dais +1,5 m (ora vuoto: la Corona è di Thorik); 4 pilastri di
-mithral agli angoli; Portale P1 a nord. Ora è un **Santuario Sicuro**: sotto
+**Terreno (callout):** sala rettangolare di 15 × 19,5 m (vedi **MAPPA S-2**); trono
+a nord su dais +1,5 m (ora vuoto: la Corona è di Thorik); colonne, statue e
+alcove come nella mappa; si entra da sud, dal Portale P1. Ora è un **Santuario Sicuro**: sotto
 l'effetto di *Consacrare* automatico (chi vi si rifugia ha +1 ai TS contro
 paura, i non-morti −1 per colpire). Vedi §6 per le incisioni.
 
@@ -410,6 +414,11 @@ tornare — presagio della resurrezione, non garanzia.*
 > ferma esattamente dove comincia il presente. Come se la Sala avesse aspettato
 > te per finire di dipingerlo.*
 
+L'affresco dipinge solo il passato: il tocco, il lampo, Thorgrim che gli passa
+l'ascia. La visione del futuro che Thorik ebbe risvegliando la Corona (Fauci di
+Palude e le Cantitrici, in forma spirituale) resta sua, e la Sala non la
+mostra `[CANONE — DM 2026-10-12, D80]`.
+
 <!-- storico -->
 ✏️ *Allineato il 2026-09-24 su decisione del DM: il box diceva «portatore
 della Corona otto secoli fa, il Frostcleaver in pugno». Frostcleaver è di Re
@@ -490,8 +499,10 @@ beat: il registro completo dei riposi e la progressione dell'affresco stanno in
   sangue riconosce il sangue. Quando lo incontrerai, io sentirò. Canterò il
   canto di morte dei draghi. E lui tremerà.»*
   - **Effetto — Bane Draconico specifico (permanente, solo vs Fauci di Palude):**
-    +2 competenza all'attacco, **+3d6** danni (invece di +2d6 vs draghi), critico
-    ×4, e **1/incontro (azione gratuita)** infliggere *Scosso* a Fauci 1d4 round
+    **+1d6** danni oltre il *Dragondoom* dell'ascia `[CANONE — DM 2026-10-15, D82]`
+    (vale per i gruppi futuri: il gruppo di oggi tiene quello che ha avuto al
+    tavolo), e
+    **1/incontro (azione gratuita)** infliggere *Scosso* a Fauci 1d4 round
     (Volontà CD 22 nega; se fallisce, ha il flashback ancestrale della morte del
     capostipite). *Questo prepara meccanicamente il boss di Hammerfist (ARC-08),
     e si intreccia col carry-over «La Forgia ricorda le ferite» del #4.*
@@ -592,18 +603,19 @@ dopo lettera, la **Cronaca dei Custodi** in rune naniche:
 sull'incisione della druida e pronuncia il suo nome (nessun tiro): la pietra è
 **calda**. Solo quello. È il segno che il legame regge, sotto il mondo.
 **Effetto:** al rito del `DEF-3`, il primo TS del ritual-master ha **+1 sacro** (la
-Stanza «partecipa» alla resurrezione). *(Pannello-Cronaca «Il Ritorno».)*
+Stanza «partecipa» alla resurrezione). Il bonus viene dal **tocco**, non dal
+dormire nella Stanza `[CANONE — DM 2026-10-12, D36]`. *(Pannello-Cronaca «Il Ritorno».)*
 
 **Perché tornare qui — e perché forse no.** La Stanza è ora un **Santuario
-Sicuro** (*Consacrare*), ed è il posto **emotivamente** giusto per il riposo
-lungo prima del rito: dormire dove Hella è morta, la sera prima di riportarla
+Sicuro** (*Consacrare*), ed è il posto **emotivamente** giusto per le otto ore
+di sonno prima del rito: dormire dove Hella è morta, la sera prima di riportarla
 indietro. Ma da quando la tariffa della Sala è **−4 h** contro le **−12 h** di
-qualunque altro posto (§0-bis), la scelta è diventata un vero scambio:
+qualunque altro posto (§0-bis), dormire lì ha un prezzo `[CANONE — DM 2026-10-12, D68]`:
 
 | Dove dormono | Costa | In cambio |
 |---|---|---|
 | **Sala della Forgia** | **−4 h** | niente bonus, e A7 ticchetta sotto gli occhi |
-| **Stanza della Corona** | **−12 h** | il **+1 sacro** al primo TS del ritual-master (l'interazione qui sopra) e la scena giusta |
+| **Stanza della Corona** | **−12 h** | la scena giusta. Il **+1 sacro** al primo TS del ritual-master viene dal toccare l'incisione (qui sopra), e si prende anche senza dormirci `[CANONE — DM 2026-10-12, D36]` |
 
 **Per il gruppo di oggi la scelta è già fatta**: hanno dormito nella Sala (R4,
 §0-bis). La tabella vale per un gruppo nuovo.
@@ -617,8 +629,8 @@ beat esiste per far prendere. Ottimo anche come rifugio se qualcosa va storto (�
 ## §7 — LE BENEDIZIONI DI MORADIN (rinnovo all'Altare)
 
 Il party non ha pozioni: le **Benedizioni divine** le sostituiscono. Pregare
-10 minuti all'Altare del Cuore di Moradin (**Conoscenze religioni CD 12** —
-Moradin risponde sempre, i Custodi sono scelti). Durata 24 h o fino a consumo;
+10 minuti all'Altare del Cuore di Moradin basta, senza prove: Moradin risponde
+sempre, i Custodi sono scelti `[CANONE — DM 2026-10-12, D80]`. Durata 24 h o fino a consumo;
 rinnovabili 1/giorno tornando alla Sala.
 
 | Benedizione | Effetto 3.5 | Sostituisce (valore) |
@@ -670,7 +682,8 @@ pannello nuovo.** Cioè, adesso: la vittoria contro Terros è appena entrata
 nella parete. Non è ripetibile a comando — se dormono di nuovo senza aver
 compiuto nulla, la Sala tace, e quel silenzio è a sua volta un'informazione.
 Se dormono nella **Stanza della Corona** (−12 h, §6) il sogno non c'è: senza lo
-sconto non ci sono ore rubate `[CANONE — DM 2026-09-30]`.
+sconto non ci sono ore rubate `[CANONE — DM 2026-09-30]`. Resta solo il sogno di
+Hella, perché è lei a sognare, non la Sala `[CANONE — DM 2026-10-15, D82]`.
 
 **Niente tiri. Niente CD. Nessun effetto meccanico.** È regia pura: quattro
 scene brevi, una per giocatore, giocate **una alla volta e in privato se
@@ -688,8 +701,8 @@ Chiudi ogni scena e passa oltre: **non spiegare nulla**.
 > ottusa dei sogni, ti gira la testa **dall'altra parte**.*
 
 È il compimento dell'immagine che la Corona gli aveva mostrato alla vigilia —
-*due mani sotto un architrave che scende*. Al rito quelle mani erano le sue, e
-non erano sole.
+*due mani sotto un architrave che scende*. Al rito dello Smeraldo, nel Piano della Terra, quelle mani
+erano le sue, e non erano sole.
 ⚠️ La presenza verde è **Hella**, e Thorik **non lo sa**: la crede Moradin, o
 non se lo chiede. **Non confermarlo fino al #3.** Se il giocatore indovina:
 *«non lo sai.»* È l'eco **E-07f**<!-- apparato --> (`state.md` §7.E)<!-- /apparato -->.
@@ -710,6 +723,9 @@ fredde.)*
 
 Al rito **non gli è stato chiesto niente**, e non ha pagato niente: il Peso era
 del portatore. La sua notte è **una scena sola**, e non parla dell'Altare.
+Per il gruppo di oggi, nello zaino di Tordek c'è il Seme di Varis, la gemma che Artemis ha preso nel
+Tempio senza toccarla a mani nude, e quello che Artemis gli ha detto, o
+taciuto, è canone (Piano della Terra, §6-bis).
 
 > *Sogni una fiera. Non una fiera nanica: banchi bassi, teli chiari, una
 > lingua che non conosci ma che capisci lo stesso, e un odore di spezie che non
@@ -841,8 +857,8 @@ Ricchezza speciale (Corona 2/3, Bracieri completi) già contata nel Piano della 
 
 ## §11 — PONTE verso la resurrezione di Hella + HANDOUT & ASSET
 
-**Ponte.** Riposato il party (Sala **−4 h** o Stanza della Corona **−12 h** col
-**+1 sacro** al rito: è una scelta, §6), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
+**Ponte.** Riposato il party (Sala **−4 h** o Stanza della Corona **−12 h**: è una
+scelta, §6; il **+1 sacro** al rito viene dal toccare l'incisione `[CANONE — DM 2026-10-12, D36]`), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
 un solo atto prima di lasciare la Forgia: **riportare indietro Hella**. Il corpo
 è pronto davanti all'Altare; il Cuore di Moradin attende di essere speso; ogni
 PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
@@ -852,7 +868,10 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 1. **La Tavola degli Otto Affreschi** — schema dell'ottagono (MAPPA S-1) con i
    titoli, da consegnare così i giocatori «leggono» la Sala.
 2. **Le Iscrizioni**: quella del Fuoco (A4, ora storica), quella di Moradin
-   («Il Fuoco ha purificato lo Spirito…», dal Piano della Terra) e il **simbolo di
+   (dal Piano della Terra: «Il Fuoco ha purificato lo Spirito. / Ora la Terra
+   deve testare la Resistenza. / Nella Profondità, dove la luce non tocca,
+   troverete la Verità. / Cercate l'incudine che non può essere spostata. /
+   Cercate lo Smeraldo della Forza.») e il **simbolo di
    Hella** (quercia+martello) da A8.
 3. **Benedizioni di Moradin** — carte singole (`BenedizioniDiMoradin.pdf`).
 

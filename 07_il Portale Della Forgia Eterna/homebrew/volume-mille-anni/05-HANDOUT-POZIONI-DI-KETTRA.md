@@ -4,7 +4,7 @@
 > *Per tutto il tavolo, dopo la visita alla bottega e alla cappella. Le
 > pozioni le identifica **Kettra, l'alchimista del re**, nella sua bottega in
 > fondo al corridoio della fucina. **Sorella Brynja, la chierica di Moradin
-> che tiene la cappella**, passa la mano sulle due che fermano Kettra. La
+> che tiene la cappella**, passa la mano sulla sola che ferma Kettra. La
 > gemma nello zaino di Tordek non è qui: quella si gioca al tavolo.*
 <!-- /consegna -->
 

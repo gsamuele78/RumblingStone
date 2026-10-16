@@ -306,12 +306,16 @@ della 5ª edizione trovati in A2 si correggono nel master che li contiene.
 È già vicino allo standard. Il lotto porta il contratto «In scena» (F5 di
 PIANO-LETTORE) e i quattro rilievi aperti di `domande_developer` (Riflessi e
 Volontà sull'intero modulo). **Non** diventa un `ARC*-DEF-*`: resta uno
-stand-alone ADR-0017.
+stand-alone ADR-0017. Da PIANO-LETTORE arrivano anche le **sette sezioni senza box**, fra cui la
+rivelazione del Drappo di Lino Rasca (Giorno 3 §8), e il foglio del cast come
+fonte delle schede (F5 di quel piano, spostata qui dal DM il 2026-10-12).
 
 **S4 · L'Abbazia** `[engine: Opus · effort: medio · qualità: validate_standalone + ciclo del master, passi 1, 2 e 4 come note]` — confermato dal DM (D3, 2026-09-27). Salta i passi 3 e 5-7: la prosa non cambia, e quei passi misurano la prosa
 Solo forma: il contratto «In scena», e i rilievi di `domande_developer`
 (l'invisibilità al corpo di guardia, Riflessi e Volontà), come note del DM e non
-come prosa riscritta.
+come prosa riscritta. Da F5 di PIANO-LETTORE (spostata qui il 2026-10-12) arriva una domanda per
+il DM: l'Atto II e le stanze in stile *keyed* vogliono un box a stanza? Con
+D3 («solo forma») la risposta di partenza è no.
 
 ## FASE 3 — Testing / validazione
 

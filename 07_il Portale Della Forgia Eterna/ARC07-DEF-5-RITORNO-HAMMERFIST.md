@@ -64,12 +64,19 @@ consegne**: Re Thorek indica in alto (Fauci di Palude devasta le mura), Madre
 Dana apre il portale verso i bastioni → **inizia l'ARC-08**.
 
 **Chi c'è.** I 4 PG (leggenda viva, Corona a 3 gemme); **Re Thorek** (a 8 pf,
-cosciente ma incapace di combattere, e il soffio del drago lo sta finendo); **Madre Superiora Dana** (chierica); **90 guerrieri nanici** allo
+cosciente ma a occhi chiusi, incapace di combattere; l'acido del soffio del drago, preso sulle mura prima della ritirata, lo sta finendo); **Madre Superiora Dana** (chierica); **90 guerrieri nanici** allo
 stremo; orchi che sfondano le porte. *(I generali dell'orda e Fauci di Palude
 sono dell'ARC-08 — qui solo l'ombra e la minaccia.)*
 
 **Cosa stampare.** La **Quick-Reference §0-bis** (effetti dell'apparizione +
-stato d'arco); la mappa **CM-1**; l'handout **«Lo Stato dei Custodi»** (§9).
+stato d'arco); la mappa **CM-1**; l'handout **«Lo Stato dei Custodi»** (§9);
+gli statblocchi di **Re Thorek** e di **Madre Dana**, dalla Guida DM
+dell'ARC-08 (PNG Alleati).
+
+**Prima di aprire, segna da DEF-4.** Come è finito il duello (e le ferite
+lasciate al drago); cosa è successo con Vatore; il tono del Rubino; se Re
+Thorek I ha dato il torque a Thorik. Servono al §0-bis, al §6, al §7 e alla
+copertina del §9.
 
 **Dove porta.** → **ARC-08: La Battaglia di Hammerfist** (continua in
 `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM della battaglia). L'ARC-07 è
@@ -82,27 +89,30 @@ stato d'arco); la mappa **CM-1**; l'handout **«Lo Stato dei Custodi»** (§9).
 ### Effetti immediati dell'Apparizione (§4, automatici, no TS per gli alleati)
 | Beneficiari | Effetto |
 |---|---|
-| 90 nani + Dana + Re | **+6 morale** att/danni/TS (annulla il −4 → netto **+2**); guariscono **2d8 pf**; **immuni a paura 1 ora**; +3 m velocità |
-| **Re Thorek** | soffio/veleno **interrotto**; **stabilizzato** (non muore); riapre gli occhi |
-| Nemici nella caverna (~30 orchi) | **Volontà CD 25** contro l'aura dell'Apparizione, come la presenza terrificante dell'SRD: ogni orco tira `[CANONE — DM 2026-10-03, D38]`. Con Volontà −2 contro CD 25 passa solo chi fa 20, e resta **scosso** (−2 ai tiri per colpire, ai TS e alle prove); tutti gli altri sono **in panico** e fuggono dalla porta. Il DM non tira trenta TS: uno su venti resta, cioè uno o due orchi. La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
+| 90 nani + Dana | **+6 morale** att/danni/TS (annulla il −4 della disperazione, dopo due giorni d'assedio → netto **+2**); guariscono **2d8 pf**; **immuni a paura 1 ora**; +3 m velocità |
+| **Re Thorek** | l'acido **interrotto**; **stabilizzato** (non muore); riapre gli occhi. Non guarisce: resta a 8 pf ed **esausto** (l'acido): potrebbe alzarsi, a metà velocità e con −6 a Forza e Destrezza, ma Dana lo tiene giù e lui obbedisce (la cura vera di Dana arriva nell'ARC-08). Parla e comanda, non combatte `[CANONE — DM 2026-10-12, D77]` |
+| Nemici nella caverna (~30 orchi) | **Volontà CD 25** contro l'aura dell'Apparizione, come la presenza terrificante dell'SRD: ogni orco tira `[CANONE — DM 2026-10-03, D38]`. A differenza dell'SRD chi fa 20 resta scosso, e l'effetto dura tutta la scena: chi fugge non torna `[CANONE — DM 2026-10-15, D90]`. Con Volontà −2 contro CD 25 passa solo chi fa 20, e resta **scosso** (−2 ai tiri per colpire, ai TS e alle prove); tutti gli altri sono **in panico** e fuggono dalla porta. Il DM non tira trenta TS: uno su venti resta, cioè uno o due orchi. La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
 
 ### Lo stato dell'ARC-07 in uscita (canone — `state.md §1/§6`)
 - **Corona di Adamantio**: **3 gemme accese** (Topazio/Tempo, Smeraldo/Terra, Rubino/Leggenda). Il Rubino si è usato **una volta sola**, come motore del ritorno; speso, **resta nell'incasso** e **la Corona si completa**: +3 e Senzienza dall'arrivo (DM, DEF-4 D6; §3).
 - **Cuore di Moradin**: **SPESO** (resurrezione).
-- **L'Aura della Forgia** (`DEF-4` Scena 12): attiva fino all'alba del giorno dopo, quindi i PG arrivano con *Possenza Divina* e *Protezione dal Male* ancora addosso `[CANONE — DM 2026-09-30, D17]`. L'alba è quella del 1372: il salto non ne consuma la durata `[INFERRED — needs DM confirmation]`.
+- **L'Aura della Forgia** (`DEF-4` Scena 12): attiva fino all'alba del giorno dopo, quindi i PG arrivano con *Possenza Divina* e *Protezione dal Male* ancora addosso `[CANONE — DM 2026-09-30, D17]`. L'alba è quella del 1372: il salto non ne consuma la durata `[CANONE — DM 2026-10-15, D91]`.
 - **Thorik**: **−4 DES / +2 COS / +4 CAR** permanenti; la Corona gli dà **+3** di deviazione alla CA, **+2** se al rito di Hella ha donato la deflessione (`DEF-3` §5): lo stesso punto, contato una volta. **Hella**: viva (Ibrido Treant, Collana, Durik). **Bracieri** completi. **Ring** riforgiato.
-- **Carry-over B4** verso Fauci: registrato al `DEF-4` (esito Skullcrusher + N ferite).
-- **Countdown**: siete arrivati al **Giorno 3** (≈ March Clock Day 18-19): il **sync** con l'ARC-08. Valore preciso in consegna, secondo il registro dei riposi (`ARC07-DEF-2` §0-bis): **≈ 3g 03h** se hanno dormito prima di Terros, **≈ 3g 15h** se no. Il viaggio a −1.000 **non consuma orologio**. Il Rubino li deposita **sempre** nel Cuore della Montagna (§3): l'arrivo è fisso, e l'orologio decide cosa è successo sopra `[CANONE — DM 2026-09-30, D31]`.
+- **Carry-over B4** verso Fauci, cioè quello che il duello del −1000 lascia al drago di oggi: registrato al `DEF-4` (esito Skullcrusher + N ferite).
+- **Countdown**: siete arrivati al **Giorno 3** (≈ il giorno 18-19 del conto della marcia dell'Orda): il **sync** con l'ARC-08. Valore preciso in consegna, secondo il registro dei riposi (`ARC07-DEF-2` §0-bis): **≈ 3g 03h** se hanno dormito prima di Terros, **≈ 3g 15h** se no. Il viaggio a −1.000 **non consuma orologio**. Il Rubino li deposita **sempre** nel Cuore della Montagna (§3): l'arrivo è fisso, e l'orologio decide cosa è successo sopra `[CANONE — DM 2026-09-30, D31]`.
 
 ### In che stato consegni il party all'ARC-08 (per ramo)
 
 Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
+Il numero è quanto resta del conto alla rovescia dell'assedio: più è alto,
+meno l'assedio è andato avanti. In tutti i rami i PG arrivano nel Cuore della
+Montagna, nell'ultima resistenza della Scena 2, con il drago sulle mura.
 
 | Orologio in consegna | Cosa trovano arrivando | Effetto sull'ARC-08 |
 |---|---|---|
-| **≈ 3g 15h** (nessun riposo prima di Terros: è il ramo del gruppo di oggi) | la **prima ondata è già passata** `[CANONE — DM 2026-09-30, D31]`. Sotto, nel Cuore della Montagna, è l'ultima resistenza della Scena 2, e sopra il drago è sulle mura | la **Fase 0** dell'ARC-08 si gioca **dopo** il drago ai bastioni `[CANONE — DM 2026-10-03, D38]`: prima il Cuore della Montagna, poi Fauci, poi il consiglio di guerra per le ondate che restano |
+| **≈ 3g 15h** (nessun riposo prima di Terros: è il ramo del gruppo di oggi) | la **prima ondata è appena passata** `[CANONE — DM 2026-09-30, D31]`: sulle mura i nani tengono ancora, ma una colonna d'orchi è scesa dalle gallerie di Zeth dietro i nani in ritirata, fino alle porte del Cuore `[CANONE — DM 2026-10-12, D77]` | la **Fase 0** dell'ARC-08 si gioca **dopo** il drago ai bastioni `[CANONE — DM 2026-10-03, D38]`: prima il Cuore della Montagna, poi Fauci, poi il consiglio di guerra per le ondate che restano |
 | **≈ 3g 03h** (riposo prima di Terros — ramo probabile) | la **prima ondata è già passata**: una torre in posizione a est, i primi caduti sui camminamenti, il fumo che piega col vento | **Fase 0 accorciata**: un solo giro di preparativi invece di due. I nani hanno già dei feriti da curare, e il consiglio di guerra si tiene **in piedi**, non seduti |
-| **sotto 2 giorni** (solo con altri due riposi ordinari — improbabile) | **breccia aperta**, combattimento dentro le mura | pannello velato su A8 e **Fase 0 dura** (`ARC07-DEF-2` §8) |
+| **sotto 2 giorni** (solo con altri due riposi ordinari — improbabile) | **breccia aperta**, combattimento dentro le mura sopra la caverna | il pannello velato dell'Affresco A8 e **Fase 0 dura** (`ARC07-DEF-2` §8) |
 
 > ⚠️ **Nessuno dei due rami probabili è una punizione.** La differenza è di
 > **tono e di respiro**, non di vittoria: chi ha dormito arriva riposato in un
@@ -120,7 +130,7 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
 
 ---
 
-## §1 — HIGHLIGHT ASIMMETRICI PER PG (cosa riportate a casa)
+## §1 — HIGHLIGHT ASIMMETRICI PER PG (per il DM: cosa riporta a casa ciascuno)
 
 ### 🛡️ THORIK — la profezia chiusa (Casa di Davide lead)
 - Torna con la **Corona completa** (3 gemme) e con la certezza, incisa nelle
@@ -141,7 +151,9 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
 
 ### ⚒️ TORDEK — il pugno che ha imparato a trattenersi (Mercer support)
 - Torna con i Bracieri completi e la disciplina della Cintura (che al −1000 si è
-  rifiutata: il vero scontro è QUI). Il suo momento è **rivedere Hella viva al
+  rifiutata contro Skullcrusher: il vero scontro è Fauci, sui bastioni, nell'ARC-08).
+  Nella Scena 3 la Cintura funziona come contro Zog'tar (`DEF-4` Scena 8): 3
+  cariche al giorno, e quelle che spende qui non le ha contro il drago. Il suo momento è **rivedere Hella viva al
   suo fianco nel presente** — non un ricordo, non uno spirito: lei.
 
 ### 🔮 ARTEMIS — il predone che ha visto il futuro del suo nemico (Andor support)
@@ -158,10 +170,9 @@ Il ramo cambia **come si apre** la Battaglia di Hammerfist, non se si vince.
 Il box è nella **Scena 1**.
 
 **Terreno (callout):** transizione (nessuna azione durante lo strappo); TS
-**Tempra CD 15** o **frastornati 1 round** all'arrivo: il contraccolpo del salto è
-del corpo, e si resiste con la Tempra; frastornato e non stordito, così nessuno
-lascia cadere quello che ha in mano. Prima era Volontà
-`[INFERRED — needs DM confirmation]`.
+**Volontà CD 15** o **frastornati 1 round** all'arrivo: lo strappo fra le ere
+scuote la mente, e si resiste con la Volontà; frastornato e non stordito, così
+nessuno lascia cadere quello che ha in mano `[CANONE — DM 2026-10-15, D90]`.
 
 ### ZONA 2 — Il Cuore della Montagna (la caverna sacra sotto Hammerfist, 1372)
 Il box è nella **Scena 2**.
@@ -206,12 +217,14 @@ battute della Scena 13. Qui c'è solo il filo, e nessuna azione.
 > curvo su un trono. Poi pietra. Fuoco. Il rombo di una battaglia. Siete tornati,
 > e siete tornati nel momento peggiore.*
 
-All'arrivo, **Tempra CD 15** o frastornati 1 round (§2, Zona 1).
+All'arrivo, **Volontà CD 15** o frastornati 1 round (§2, Zona 1).
 
+<!-- apparato -->
 ⚠️ *Il box di prima faceva accendere il Rubino «sulle mura, all'alba», e da
 «nero come ossidiana». Dopo la D6 il Rubino compare sull'incudine alla vittoria e
 si accende nel cortile: l'accensione, il canto e la voce di Moradin sono tornati
 in `DEF-4`, Scena 13, dove succedono.*
+<!-- /apparato -->
 
 ---
 
@@ -222,7 +235,10 @@ in `DEF-4`, Scena 13, dove succedono.*
 
 ### SCENA 2 — L'apparizione
 
-**In scena** — Dove: la caverna — Chi: Re Thorek · Madre Superiora Dana · i novanta nani · gli orchi
+**In scena** — Dove: la caverna — Chi: Re Thorek · Madre Superiora Dana · i novanta nani · gli orchi e il loro capo
+
+Alla fine del round 1 della Scena 3 entrano **20 hobgoblin sergenti**: l'aura
+non li tocca (Scena 3, «Chi arriva dopo»).
 
 **Stasera si gioca la regia breve**, quella dell'ARC-07: i PG arrivano quando le
 porte cedono, e la scena finisce con la Scena 3. La regia lunga è dell'ARC-08.
@@ -236,7 +252,7 @@ MAPPA CM-1), dove i PG arrivano al Round 8.
 > caverna più sacra della fortezza, e oggi è un mattatoio. Al
 > centro un altare di basalto, intorno dieci statue di re con gli occhi di rubino.
 > Novanta nani, di trecento, fanno un anello intorno all'altare, e la prima fila
-> guarda le porte di mithral che gemono sotto gli arieti. Ai piedi dell'altare è steso un re, la barba
+> guarda le porte di mithral che gemono sotto gli arieti. Sull'altare è steso un re, la barba
 > impastata di sangue e di acido, il respiro un sibilo. Una sacerdotessa anziana
 > prega su di lui con le mani che tremano. Le rune sulle porte si spengono una
 > alla volta. È il terzo giorno, ed è l'ora in cui la fortezza doveva cadere.*
@@ -253,16 +269,18 @@ MAPPA CM-1), dove i PG arrivano al Round 8.
 > pulsa fra luce e ombra, intorno a Hella spuntano dalla pietra radici di
 > cristallo. Novanta nani rialzano la testa tutti insieme. Gli orchi no. Che fate?*
 
-I PG hanno un **round di sorpresa** (MAPPA CM-1). Chi ha fallito la Tempra
+I PG hanno un **round di sorpresa** (MAPPA CM-1). Chi ha fallito la Volontà
 della Scena 1 è frastornato e lo perde: arriva, ma non agisce ancora.
 
-**L'ordine** `[INFERRED — needs DM confirmation]`: l'aura scatta con l'apparizione, e i TS degli orchi si
+**L'ordine** `[CANONE — DM 2026-10-15, D90]`: l'aura scatta con l'apparizione, e i TS degli orchi si
 risolvono subito (§0-bis, «Effetti immediati»); poi il round di sorpresa dei PG,
 un gesto a testa; poi l'iniziativa, e si passa alla Scena 3.
 
 **Le distanze** (MAPPA CM-1, quadretti da 3 m): i PG compaiono sull'altare, alto
 3 m; la porta è a **36 m**, oltre l'anello dei novanta nani. Nel round di
-sorpresa chi combatte in mischia non ci arriva.
+sorpresa chi combatte in mischia non ci arriva. L'altare si scala con
+Scalare CD 15, in un round. Il re non muore in DEF-5: il colpo che lo
+porterebbe sotto 0 lo prende Dana, che gli si getta sopra `[CANONE — DM 2026-10-15, D92]`.
 
 **Se il tavolo ha giocato male il −1000** (§6), leggi prima la riga «meno
 luminosa» delle contingenze: cambia gli effetti qui sotto.
@@ -272,15 +290,15 @@ può scegliere. Sono proposte, e ogni scelta si ricorda (§7):
 
 | PG | Cosa ha a portata di mano |
 |---|---|
-| **Thorik** | la Corona si è appena completata: la sua *Aura di Comando* (1/giorno, *comando* CD 15, dalla pagina della Corona) colpisce **una** creatura, come l'incantesimo dell'SRD, a gittata vicina: il capo degli orchi, alla porta a 36 m, è fuori portata finché non passa l'anello. Sul capo degli orchi, quando è a tiro, «Fuggi!», vuol dire che il terzo rimasto non ha più nessuno che lo tenga, e scappa anche lui `[INFERRED — needs DM confirmation]` |
-| **Tordek** | il re è a tre metri, e gli orchi stanno arrivando: prenderlo, o scendere dall'altare e mettersi fra il re e l'anello. Scendere è un salto di 3 m: 1d6, o nessun danno con Saltare CD 15 (SRD) |
-| **Artemis** | vede tutta la caverna dall'altare: chi scappa, chi resta, e il capo degli orchi che ha smesso di urlare. Il capo è l'orco più grosso, con un elmo nanico preso sulle mura; ha le statistiche dell'orco dell'SRD (Scena 3) e 8 pf invece di 5 `[INFERRED — needs DM confirmation]`. Se cade, i suoi scappano |
-| **Hella** | le radici che le crescono intorno sono sue: può chiuderle intorno al re (copertura totale per un round) o lanciarle verso la porta, dove fanno da *intralciare* dell'SRD su un'area di 6 m di raggio (Riflessi CD 15) `[INFERRED — needs DM confirmation]`. I due Treant di Adamantio si chiamano con la Collana: statistiche in `DEF-3` Appendice A.2 |
+| **Thorik** | dall'altare, il primo ordine da portatore della Corona: ai novanta. Se lo dà nel round di sorpresa, i tre blocchi avanzano nel round 1 e il muro di scudi si fa sul varco, prima che entrino gli hobgoblin `[CANONE — DM 2026-10-12, D77]`. Più tardi, se oggi non l'ha già usata al −1000, la sua *Aura di Comando* (1/giorno, *comando* CD 15, dalla pagina della Corona) colpisce **una** creatura, come l'incantesimo dell'SRD, a gittata vicina (16,5 m al 13°): il capo degli orchi, alla porta a 36 m, è fuori portata finché non passa l'anello. Se il capo è uno degli orchi rimasti, «Fuggi!» lo manda via, e l'altro scosso, senza più nessuno che lo tenga, scappa con lui `[CANONE — DM 2026-10-15, D91]` |
+| **Tordek** | il re è lì sull'altare, a un passo, e gli orchi stanno arrivando: coprirlo col suo corpo, o scendere dall'altare e mettersi fra l'altare e l'anello. Scendere è un salto di 3 m: 1d6, o nessun danno con Saltare CD 15 (SRD) |
+| **Artemis** | vede tutta la caverna dall'altare: chi scappa, chi resta, e il capo degli orchi che ha smesso di urlare. Il capo è l'orco più grosso, con un elmo nanico preso sulle mura; ha le statistiche dell'orco dell'SRD (Scena 3) e 8 pf invece di 5 `[CANONE — DM 2026-10-15, D91]`. Tira contro l'aura come gli altri: se fallisce scappa per primo, se fa 20 è uno dei due che restano, e se cade l'altro scappa. Il gesto di Artemis: volare sopra la porta. Se ci arriva nel round di sorpresa (36 m in un solo movimento) vede nel corridoio la fila di scudi un round prima che entri, e i nani avvisati vincono il primo scambio del muro di scudi; se no, li vede entrare nel round 1 `[CANONE — DM 2026-10-15, D91]` |
+| **Hella** | le radici che le crescono intorno sono sue: può chiuderle intorno al re (copertura totale per un round) o lanciarle verso la porta, dove fanno come *intralciare*, ma su un'area di 6 m di raggio (Riflessi CD 15) per un round soltanto, come la copertura sul re `[CANONE — DM 2026-10-12, D77]`. Se al rito Thorik ha donato la deflessione, lei ha lo **Scudo del Custode** (1/giorno, immediata: prende dimezzato il danno di un alleato entro 9 m) e Thorik è accelerato 3 round verso chi lei ha protetto. I Treant di Adamantio si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Chiamarli tutti e due insieme spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba), e va detto alla giocatrice prima che scelga; se al −1000 li ha già chiamati insieme, è spenta (Grande, 90 pf, CA 24, 2 schianti +18, 2d8+9; il resto in `DEF-3` Appendice A.2) |
 
 
 **Effetti immediati** (§0-bis): gli orchi nella caverna tirano **Volontà CD 25**
 contro l'aura (chi fallisce in panico, quasi tutti; chi fa 20 scosso); +6 morale ai 90 nani (annulla la disperazione),
-Re Thorek stabilizzato (il veleno interrotto), panico tra i nemici. Re Thorek
+Re Thorek stabilizzato (l'acido interrotto), panico tra i nemici. Re Thorek
 riapre gli occhi: *«Tu… portatore… degno. Finalmente… campioni veri.»*
 
 **Comparse**
@@ -289,18 +307,19 @@ riapre gli occhi: *«Tu… portatore… degno. Finalmente… campioni veri.»*
 |---|---|---|
 | i novanta nani | tre file intorno all'altare, a trenta metri: sessanta guerrieri con gli scudi, venti balestrieri, dieci capi al centro. Hanno fatto due giorni di assedio e si vede nelle braccia | fino all'apparizione non parlano, contano. Dopo gridano tutti insieme una parola sola, il nome della fortezza |
 | gli orchi | berserker entrati con le porte, sporchi di fumo e di sangue nanico. Trovano davanti una luce che non capiscono | urlano per farsi coraggio. Quando la luce li colpisce smettono, e chi scappa scappa senza voltarsi |
+| il capo degli orchi | il più grosso, con un elmo nanico preso sulle mura. Vuole uscire vivo e tenersi l'elmo | urla ordini in orchesco finché ha qualcuno a cui darli, poi niente |
 
 **Scheda d'entrata — Re Thorek Hammerfist, il re che doveva morire oggi** *(statistiche: `ARC08-01-GUIDA-DM`, PNG Alleati)*
 
 | | |
 |---|---|
-| **Aspetto** | barba grigia intrecciata di fili d'oro, occhi azzurri. Oggi è steso ai piedi dell'altare, a **8 pf**, l'armatura mangiata dall'acido del drago |
+| **Aspetto** | barba grigia intrecciata di fili d'oro, occhi azzurri. Oggi è steso sull'altare, a **8 pf**, l'armatura mangiata dall'acido del drago |
 | **Vuole** | che la fortezza regga. Subito dopo, sapere chi porta la Corona |
 | **Suona** | a fiato corto, per frasi spezzate: *«Tu… portatore… degno.»* In piedi comanda senza alzare la voce |
 | **Sa** | che il drago devasta ancora le mura sopra di loro, e che se il drago non cade la battaglia è persa comunque (Scena 3) |
 | **Non sa** | niente del viaggio. Nessuno qui ne sa niente (§6) |
 | **Non combatte** | stabilizzato ma a 8 pf. Guerriero 15 / Nobile 2, GS 16: lo statblocco è in ARC-08 |
-| **Eco** | la sua stirpe discende dal Re Thorek I che i PG hanno appena lasciato giovane (`DEF-4` Scena 4) |
+| **Eco** | la sua stirpe discende dal Re Thorek I che i PG hanno appena lasciato giovane (`DEF-4` Scena 4). Se Thorik porta il torque di Thorek I, il re lo vede prima del viso, e ci resta con gli occhi `[CANONE — DM 2026-10-12, D77]` |
 
 ⚠️ A voce **Thorek** e **Thorik** si confondono: di' sempre **«Re Thorek»**.
 
@@ -323,7 +342,7 @@ riapre gli occhi: *«Tu… portatore… degno. Finalmente… campioni veri.»*
 
 #### La Corona si completa, dopo l'uso `[CANONE — DM, D6]`
 
-Il Rubino è arrivato sull'incudine del 372 da solo, alla vittoria, e la Corona
+Il Rubino è arrivato sull'incudine del 372 (il −1000) da solo, alla vittoria, e la Corona
 l'ha preso; ma finché non era speso era soltanto il motore del viaggio, e la
 Corona restava a +2 e muta (`DEF-4` Scena 12). Il viaggio lo spende: quel fuoco
 non torna. La pietra però resta nell'incasso, e **da quel momento la Corona è
@@ -338,7 +357,7 @@ intera**.
 
 | Al rito di DEF-3, Thorik… | La Senzienza arriva | E la prima cosa che dice |
 |---|---|---|
-| **ha donato** il +2 di deflessione | **sveglia**, e con qualcosa da dire su di lui | *«Tre volte hai pagato tu. La terza non te l'ho chiesta io.»* |
+| **ha donato** il +2 di deflessione | **sveglia**, e con qualcosa da dire su di lui: una voce bassa, quasi divertita, che parla a Thorik come a un apprendista che ha appena fatto una cosa giusta | *«Tre volte hai pagato tu. La terza non te l'ho chiesta io.»* |
 | **ha rifiutato** | **fredda**: i poteri sì, il tono no | una voce corretta e senza calore, che dà informazioni e non commenti. ⚠️ **Reversibile**: si scalda in ARC-09, quando lui rischia qualcosa di suo |
 
 > 🎭 **Grigio politico.** La Corona **non è dalla parte di Thorik**. Il suo *Want*
@@ -368,10 +387,20 @@ restano uno o due orchi scossi. Lo scontro lo fanno i nemici che arrivano
 dopo, dalla tabella delle ondate di CM-1; i ~30 della riga qui sopra sono
 quelli entrati con le porte, e quasi tutti stanno già scappando.
 
-- **🎚️ [FAST-PLAY]**: i PG + Treant + 90 nani potenziati travolgono gli orchi
-  disorganizzati in **2 round** (massacro, zero perdite naniche — sono troppo
+**Chi arriva dopo** (la riga 3-5 della tabella delle ondate, in fondo alla
+mappa CM-1): **20 hobgoblin sergenti**, alla fine del round 1 della pulizia.
+L'aura è scattata prima che entrassero, e non li tocca: fanno muro di scudi
+alla porta. I tre blocchi di nani ne tengono quindici; cinque passano
+l'anello (Round 2-4, qui sotto) `[CANONE — DM 2026-10-12, D77]`. Se Thorik ha dato l'ordine nel round di
+sorpresa ne passano tre; se anche Artemis li ha visti dalla porta e ha dato
+il preavviso, due `[CANONE — DM 2026-10-15, D92]`. Dopo di loro non arriva più
+nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
+
+- **🎚️ [FAST-PLAY]**: i PG + Treant + 90 nani potenziati finiscono gli orchi
+  rimasti e respingono gli hobgoblin in **2 round** (in combattimento completo
+  sono 4-5) (massacro, zero perdite naniche — sono troppo
   potenziati dall'Apparizione). Narrazione, nessun tiro necessario.
-- **🎚️ [COMBATTIMENTO COMPLETO]**: gioca 2-3 round su CM-1 come "scontro di
+- **🎚️ [COMBATTIMENTO COMPLETO]**: gioca 4-5 round su CM-1 (finisce quando cade l'ultimo dei cinque hobgoblin che passano) come "scontro di
   apertura" a bassa posta: serve a far **provare ai giocatori la nuova potenza**
   (Corona 3 gemme, Hella viva, Bracieri completi) prima dell'ARC-08. Un round di
   gloria, non un rischio. I poteri nuovi stanno nelle pagine giocatore degli
@@ -379,12 +408,23 @@ quelli entrati con le porte, e quasi tutti stanno già scappando.
   Collana), non qui.
   - **Gli orchi** sono l'orco dell'SRD, guerriero di 1°, GS ½: 5 pf, CA 13
     (contatto 10, colto alla sprovvista 13), falchion +4 in mischia
-    (2d4+4/18-20) o giavellotto +1 a distanza (1d6+3), Tempra +3 Riflessi +0
+    (2d4+4/18-20) o giavellotto +1 a distanza (1d6+3); la luce della caverna
+    non è luce del giorno, e non li abbaglia. «Berserker» è il nome che dà
+    loro l'orda: sono l'orco dell'SRD, non il barbaro del Bestiario, Tempra +3 Riflessi +0
     Volontà −2, scurovisione 18 m, sensibili alla luce. Chi è rimasto è
-    **scosso**: −2 ai tiri per colpire, ai TS e alle prove.
+    **scosso**: −2 ai tiri per colpire, ai TS e alle prove. Gli scossi si
+    stringono al capo e caricano il primo che scende dall'altare; se il capo
+    cade, gettano le armi `[CANONE — DM 2026-10-12, D77]`.
+  - **Gli hobgoblin sergenti** (guerriero di 5°, GS 5): 37 pf, CA 21, velocità
+    6 m (armatura completa), spada lunga perfetta +9 (1d8+4/19-20), arco
+    lungo +6 (1d8/×3), Tempra +6 Riflessi +2 Volontà +1, Attacco Poderoso e
+    Incalzare; +1 morale agli hobgoblin entro 3 m. **Tattica**
+    `[CANONE — DM 2026-10-12, D77]`: puntano il re, perché è l'ordine che hanno; contro chi vola
+    alzano gli scudi e tirano con l'arco; non si ritirano, e quando dei cinque ne
+    restano due gettano le armi.
   - **I novanta nani** non si tirano: il DM li muove come tre blocchi (le tre
     file della mappa), e un blocco travolge ciò che ha davanti
-    `[INFERRED — needs DM confirmation]`.
+    `[CANONE — DM 2026-10-15, D90]`.
 
 **Comparse**
 
@@ -392,25 +432,37 @@ quelli entrati con le porte, e quasi tutti stanno già scappando.
 |---|---|---|
 | Aegis Fang | l'ascia di Thorik, sveglia dal rito del −1000. Qui sente il sangue di Skullcrusher nel drago sopra la montagna | canta, non parla: frasi brevi e in maiuscolo, che tutti nella caverna sentono (pagina dell'artefatto) |
 
-> **Read-aloud (Salvatore) — la caverna, il primo round.** *Gli orchi entrati con le porte
-> non sanno più se avanzare. Metà si volta verso l'uscita, l'altra metà si stringe
-> in cerchio con le asce alte. Che fate?*
+> **Read-aloud (Salvatore) — la caverna, il primo round.** *Gli orchi scappano
+> verso la porta, e ne restano due, con le lame alte e le gambe che tremano.
+> Dietro i fuggiaschi, nel varco, compare uno scudo, poi un altro: una fila che
+> non scappa e non urla, e avanza al passo. Che fate?*
 
 **Sviluppi (come evolve la scena):**
 - **Round 1 (pulizia):** gli orchi in panico (§0-bis) si sparpagliano; i nani
   potenziati e i Treant di Hella li incalzano verso le porte. Chi resta è
-  circondato.
-- **Round 2:** l'ultimo orco cade o fugge nel corridoio nord. La caverna è
-  sgombra. Il silenzio, dopo il boato, è assordante — è il momento del handoff.
+  circondato. Alla fine del round entrano gli hobgoblin.
+- **Round 2-4:** i nani tengono il muro di scudi. Nel round 2 cinque hobgoblin
+  aprono un varco nell'anello, a 30 m dall'altare; corrono (18 m a round in
+  armatura pesante, senza la Destrezza alla CA) e sono ai piedi dell'altare
+  alla fine del round 4. Chi li vuole prima scende e va al
+  varco. I quindici alla porta li finiscono i nani entro il round 4. Quando
+  cade l'ultimo dei cinque, la caverna è sgombra e parte il passaggio di
+  consegne. Il silenzio, dopo il boato, è assordante — è il momento del handoff.
 - **Se i PG spendono tempo/risorse a curare Re Thorek** (invece di combattere):
-  gli orchi durano un round in più, ma Re Thorek si rialza e guida i suoi nell'ARC-08
-  (§6: il suo bonus morale non si somma a quello dell'Apparizione). Scelta
+  lo tiene giù l'esausto, non i pf. *Ristorare* o *guarigione* lo tolgono (il gruppo ne ha
+  pergamene), *ristorare inferiore* lo porta ad affaticato, e da affaticato si rialza già (§6).
+  Tutti e due si lanciano in 3 round, anche da pergamena (SRD). *Ristorare* è da
+  chierico: la pergamena la legge Artemis con Usare Oggetti Magici (CD 27).
+  *Ristorare inferiore* è anche da druido, e Hella lo lancia o lo legge. Gli orchi
+  durano i round del lancio in più, ma Re Thorek si rialza e guida i suoi nell'ARC-08
+  (*Presenza Regale*, +3 morale; §6: non si somma a quello dell'Apparizione). Scelta
   valida, premiala.
 - **Se il tavolo ha giocato male il −1000** (§6, Apparizione «meno luminosa»):
-  gli orchi NON vanno in panico completo; la pulizia diventa uno scontro vero di
-  3-4 round (usa i CR 1/2 a piena scheda) prima del handoff.
+  non si tira contro l'aura: restano **cinque orchi scossi** e il capo, e gli
+  hobgoblin entrano già alla fine del round di sorpresa. La pulizia diventa
+  uno scontro vero di 3-4 round prima del handoff `[CANONE — DM 2026-10-12, D77]`.
 
-> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultimo orco sparisce nel
+> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultimo nemico sparisce nel
 > corridoio nord, e il rumore se ne va con lui. Restano il fumo dei bracieri, il
 > respiro dei feriti, e novanta nani che guardano voi e non sanno cosa dire. Poi
 > il re, da terra, alza un braccio verso il soffitto.*
@@ -427,9 +479,16 @@ l'ascia lo sente.)*
 > **AEGIS FANG (canta):** *«Sangue Skullcrusher chiama! Fauci ci SENTE! Verrà. E
 > finiremo ciò che abbiamo cominciato mille anni fa.»*
 
-**Prima del portale**: i PX (§8) e l'handout «Lo Stato dei Custodi» (§9), uno
-per giocatore. Se qualcuno chiede perché Dana non cura il re: la *guarigione* l'ha
-spesa nei due giorni d'assedio `[INFERRED — needs DM confirmation]`.
+**Il bottino.** Armature, spade e archi degli hobgoblin caduti restano nella
+caverna: sono il primo pezzo del bottino dell'orda che l'ARC-08 conta (§8 B).
+
+**Prima del portale**: i PX (§8), l'handout «Lo Stato dei Custodi» (§9), uno
+per giocatore, e la tavola dell'Affresco A8 (§9), una per il tavolo. Il portale è un arco di luce dorata che Dana
+apre sulla parete con una preghiera di un round; dall'altra parte entrano il
+vento e il fumo dei bastioni `[CANONE — DM 2026-10-12, D77]`. Se qualcuno chiede perché Dana non cura il re: le due *guarigioni* di
+stamattina le ha spese sulle mura `[CANONE — DM 2026-10-12, D77]`. Lei e le Cantitrici hanno speso
+tutto sulle mura, niente *ristorare*; a Dana resta solo un *muro di pietra*,
+che lancia se un PG le chiede di chiudere il varco `[CANONE — DM 2026-10-15, D92]`.
 
 → **Dana apre il portale. Fine dell'ARC-07. Inizia l'ARC-08** (la Battaglia di
 Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
@@ -441,12 +500,13 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono riposare prima di combattere** | Impossibile: sono materializzati **in mezzo** all'ultima resistenza, le porte già cedute. Il riposo è dall'altra parte della battaglia (ARC-08). |
-| **Vogliono curare/salvare Re Thorek subito** | L'Apparizione ha già fermato l'acido (§4). Ha **195 pf** massimi (ARC-08): una *guarigione* lo rimette in piedi. Il **+2 morale** del re in piedi **non si somma** al bonus dell'Apparizione (+6, o +4 nel ramo «meno luminoso»): i bonus morali non si sommano, vale il più alto (SRD). Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Bel gesto, premialo. |
+| **Vogliono curare/salvare Re Thorek subito** | L'Apparizione ha già fermato l'acido (§4). Ha **195 pf** massimi (ARC-08). Lo tiene giù l'**esausto**, non i pf: *ristorare inferiore* lo porta ad affaticato, *ristorare* o *guarigione* lo tolgono del tutto. Quando non è più esausto si rialza, anche se è ancora a 8 pf; ogni cura in più gli alza i pf `[CANONE — DM 2026-10-12, D77]` `[CANONE — DM 2026-10-15, D90]`. La *Presenza Regale* del re in piedi (+3 morale, ARC-08) **non si somma** al bonus dell'Apparizione: i bonus morali non si sommano, vale il più alto (SRD). Nel ramo «meno luminoso» (+4) la sua *Chiamata alle Armi* (+5, 3 al giorno) lo supera, e vale quella. Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Bel gesto, premialo. |
 | **Chiedono conto del viaggio a Dana/Thorek** | Nessuno sa del viaggio temporale (è un segreto di Moradin). Dana lo legge come profezia compiuta. I PG possono rivelare o tacere: rivelare rafforza il mito (Custodi Eterni), tacere lo rende leggenda ancora più grande. |
-| **Madre Dana cade, o non può aprire il portale** | la caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche che Dana guida (Bestiario), più lente e con la voce che trema `[INFERRED — needs DM confirmation]`. L'ARC-08 comincia uguale, con un'ombra in più |
-| **Chiudono la porta, o inseguono gli orchi nel corridoio** | Sul lato ARC-07 la caverna resta sgombra: la prossima ondata è dell'ARC-08. Una porta murata con *muro di pietra* regge; chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[INFERRED — needs DM confirmation]` |
+| **Madre Dana cade, o non può aprire il portale** | la caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche che Dana guida (chieriche di 5°, con *cura ferite gravi*), in ginocchio fra i capi al centro dell'anello (Bestiario), più lente e con la voce che trema `[CANONE — DM 2026-10-15, D91]`. L'ARC-08 comincia uguale, con un'ombra in più |
+| **Chiudono la porta, o inseguono gli orchi nel corridoio** | I battenti di mithral sono scardinati dagli arieti e non si chiudono: il varco, 6 m, si blocca solo con la magia (*muro di pietra*, *muro di spine*) `[CANONE — DM 2026-10-12, D77]`. Se è bloccato prima della fine del round 1, gli hobgoblin restano fuori e la pulizia finisce con gli orchi rimasti; gli orchi in panico chiusi dentro si rannicchiano (SRD) e si arrendono. Chi insegue nel round 1 trova gli hobgoblin nel corridoio, a muro di scudi. Sul lato ARC-07, dopo gli hobgoblin della Scena 3, la caverna resta sgombra: la prossima ondata, i bugbear, è dell'ARC-08. Una porta murata con *muro di pietra* regge; chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[CANONE — DM 2026-10-15, D91]` |
+| **Si fermano a curarsi dopo la pulizia** | Dana e le Cantitrici danno una *cura ferite gravi* a chi la chiede, nel minuto che serve ad aprire il portale. Fermarsi di più costa: ogni 10 minuti Fauci abbatte una torre della Porta Ovest, e l'ARC-08 comincia con una torre in meno `[CANONE — DM 2026-10-12, D77]` |
 | **Vogliono inseguire subito Fauci / saltare l'handoff** | Possono! Il portale di Dana è la via più rapida ai bastioni. Non c'è un cancello — c'è solo il ritmo: da qui in poi è ARC-08. |
-| **FALLIMENTO — e se arrivassero "troppo tardi"?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente — è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**. Il criterio: il duello di `DEF-4` è finito **FUGGITO** o **VINTO SPORCO** `[INFERRED — needs DM confirmation]`. Allora il bonus morale scende a +4, Re Thorek resta a 8 pf, cosciente ma a terra, e l'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta. |
+| **FALLIMENTO — e se arrivassero "troppo tardi"?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente — è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**. Il criterio: il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[CANONE — DM 2026-10-15, D90]`. La Catena spezzata è una vittoria e non conta. Allora il bonus morale scende a +4 e la riga dei nemici cambia come dice la Scena 3 (niente TS: cinque orchi scossi e il capo restano, gli hobgoblin entrano prima); il resto della tabella del §0-bis resta uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta. |
 
 ---
 
@@ -461,7 +521,7 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 |---|---|---|
 | **Carry-over B4** (Skullcrusher→Fauci, `DEF-4`) | esito duello + N ferite registrati | ARC-08 (statblock Fauci) |
 | **Aegis Fang «sente» Fauci** (#2 A7 / `DEF-4`) | +2 circostanza a Thorik vs Fauci + preavviso soffio | ARC-08 |
-| **Debito della Radice** (`DEF-3` §6) | pegno al Sogno della Terra (A/B/C) | ARC-09 (Cerchio Sacro/Ghostlord) |
+| **Debito della Radice** (`DEF-3` §6) | pegno al Sogno della Terra (A/B/C, o il quarto ramo: Thorik ha preso il debito su di sé, eco E-07g) | ARC-09 (Cerchio Sacro/Ghostlord) |
 | **Seme del Ghostlord** (`DEF-4` §1-bis) | Zeth avviato alla lichificazione (mano del Collezionista) | ARC-09 (dilemma di Hella) |
 | **Vatore/Sal** (`DEF-4` §5) | sincronizzazione (se segnato/derubato/ferito) | ARC-09 (Sal) |
 | **Seme-Mercato di Varis** (`DEF-1` §6-bis) | Marchio di Varis / rispetto | ARC-09 |
@@ -478,14 +538,14 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | Voce | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
 |---|---|
 | Ritorno + Manifestazione (chiusura d'arco, premio maggiore) | 1.000 |
-| Pulizia della caverna (opzionale) | 300 |
+| Pulizia della caverna (opzionale; in tutte e due le modalità) | 300 |
 | **PREMIO DI COMPLETAMENTO ARCO-07** (il viaggio-leggenda concluso) | **2.000** |
 | **TOTALE beat** | **~3.300/PG** |
 
 > **Somma d'arco (ARC-07)**: Terra ~11.600 + Affreschi ~1.900 + Resurrezione
 > ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**. Con il Fuoco (P3)
 > già alle spalle, i PG hanno i PX del **14°** già all'arrivo, e il livello si prende al
-> primo riposo, cioè dopo la battaglia di Hammerfist (D8) `[INFERRED — needs DM confirmation]`. Le parti giocate non si ritoccano.
+> primo riposo, cioè dopo la battaglia di Hammerfist (D8) `[CANONE — DM 2026-10-15, D90]`. Le parti giocate non si ritoccano.
 
 ### B. Tesoro pregenerato (in uscita — handoff agli audit a valle)
 > Questo beat **non genera loot ordinario nuovo** (è un arrivo in battaglia): il
@@ -541,10 +601,10 @@ avete fatto nel passato presenterà il conto.*
    completa, che l'ARC-08 porterà al 100%.
 
 ### Immagini (atlante C1 — momenti d'uso)
-| Momento | Immagine |
-|---|---|
-| L'apparizione / la Corona a 3 gemme | `PortaleDellaForgiaEterna.webp` |
-| Il Cuore della Montagna / l'altare | `ilCuoreDiMoradin.png` |
+Nessuna immagine del repo mostra ancora questa scena: `ilCuoreDiMoradin.png` è
+l'artefatto, non la caverna, e `PortaleDellaForgiaEterna.webp` non è una
+tavola. Mancano la caverna con l'altare, la sfera, la Corona a tre gemme, Re
+Thorek e Madre Dana.
 
 ### Musica
 - **`Musica/LaCanzoneDellePietre.mp3`** — all'**Apparizione** (§4): il tema
@@ -607,7 +667,7 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 16    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │ (P-Q 13-14 · Ø 6 m,
 17    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  +3 m, basalto+rune oro)
 18    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │ ⚫ RE THOREK (8 pf)
-19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8!)
+19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8, solo regia lunga)
 20    🪨⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛🪨  │
 21    🪨⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
 22    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
@@ -660,18 +720,19 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   (Terremoto ecc.): 4d6 contundenti, raggio 3 m, **Riflessi CD 18** annulla.
 - **Posizioni**: **90 nani** in anello a 30 m (fila esterna 60 guerrieri con
   scudi, mediana 20 balestrieri, interna 10 capi + **Re Thorek** ⚫ sull'altare,
-  critico a 8 pf, stabilizzato, cosciente ma incapace di combattere); **10
+  critico a 8 pf, l'acido che lo consuma finché l'Apparizione non lo ferma, cosciente a occhi chiusi, incapace di combattere); **10
   statue** 🗿 sul cerchio a 20 m (Q07·U09·W12·W16·U19·Q21·M19·K16·K12·M09);
   nemici dalla **porta nord** P-Q01.
 - **Le ondate (Incontro 3B — se giocato per intero, lato ARC-08)**:
   | Round | Ondata | Note tattiche |
   |---|---|---|
   | 1-2 | **30 Orchi berserker** | carica sconsiderata porta→altare |
-  | 3-5 | **20 Hobgoblin sergenti** | muro di scudi, **immuni a paura**, tengono impegnati i nani |
+  | 3-5 | **20 Hobgoblin sergenti** | muro di scudi, **immuni a paura**, tengono impegnati i nani (nella regia breve entrano dopo l'aura, che quindi non li tocca comunque) |
   | 6-8 | **15 Bugbear assassini** | Nascondersi +12, puntano i capi e Re Thorek — **interrotti dall'Apparizione** |
   | 9-10 | **Grimjaw + 10 Orog** (se vivo) | vede il ribaltone: ritirata strategica O sfida personale a Thorik; se già morto → capitano minore, auto-ritirata |
 - **⏱️ Timing dell'Apparizione (due regie valide)**: giocando il **3B completo**
-  (lato ARC-08, coi PNG giocabili Borin/Dara/Thorin/Nala) i PG appaiono al
+  (lato ARC-08, coi PNG giocabili Borin/Dara/Thorin/Nala; nella regia breve
+  sono fra i dieci capi al centro, e non parlano) i PG appaiono al
   **Round 8**, nel mezzo dell'ondata 3; giocando **solo il lato ARC-07**
   (DEF-5 §4, arrivo compresso) appaiono nell'istante in cui le porte cedono.
   Stessa scena, stesso altare: cambia solo quanto assedio si gioca prima.
