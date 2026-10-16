@@ -29,6 +29,11 @@ file è il registro.
 
 ## 1. Cavaliere Hobgoblin di Fauci di Palude — Guerriero 8°/Guardia Nera 2° (GS 10)
 
+> ⚠️ **Superata.** La scheda ora è Guerriero 6°/Guardia Nera 4° (GS 10): BAB +10,
+> CA 23, Punire il Bene 1/giorno +4, Aura di Disperazione (che al 3° livello di
+> Guardia Nera torna legale) e Attacco Furtivo +1d6. I numeri qui sotto sono
+> quelli della versione precedente.
+
 **Errore 1 — Punire il Bene (Smite Good)**
 - *Era*: "2/giorno … +10 (livello) ai danni".
 - *3.5 SRD (Guardia Nera/Blackguard, DMG)*: Smite Good è **1/giorno** al
@@ -52,6 +57,10 @@ Tempra +10 coerente con Guerriero 8/GN 2 + Cos.
 
 ## 2. Fauci di Palude — Black Adult avanzato (GS 15)
 
+> ⚠️ **Superata nei numeri.** La scheda ora si legge come drago nero adulto
+> maturo avanzato a 25 DV: CA 29 (+21 naturale), 337 pf, linea di 30 m,
+> Multiattacco. La house-rule del cono resta come scritta qui.
+
 **House-rule flaggata — Soffio a Cono**
 - *Era*: "Soffio a Cono (Str) 1/giorno … cono di 18m".
 - *3.5 SRD*: i draghi neri hanno **solo il soffio in linea** (linea di
@@ -73,6 +82,12 @@ valori in `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`).
 ---
 
 ## 3. I 4 pregen "Eroi di Hammerfist" — verificati, stampabili
+
+> ⚠️ **Superata nei numeri.** Le quattro schede sono state ricontate:
+> Borin CA 25 e +21/+16/+11; Dara CA 21, 102 pf e +19/+14/+9; Thorin 114 pf,
+> martello +14, Scacciare 10/giorno e slot da chierico di 12°; Nala CA 20, 90
+> pf e stocco 15-20. Le note di verifica degli statblock completi stanno in
+> ARC08-01, sotto ciascuna scheda.
 
 Schede in formato giocatore (quick-reference) in
 `ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §3. Verificate per l'uso al

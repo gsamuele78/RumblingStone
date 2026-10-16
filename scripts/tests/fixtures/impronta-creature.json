@@ -37098,7 +37098,7 @@
    "blocco": null,
    "conti": [
     "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13",
-    "pf: 12d8 media 54.0 + Cos +2×12 = 78",
+    "pf: 12d8 media 54.0 + Cos +2×13 = 80",
     "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +5, Vol +9"
    ],
    "lettura": {
@@ -37114,13 +37114,13 @@
       12
      ]
     ],
-    "dado": null,
-    "dv": null,
+    "dado": 8,
+    "dv": 1,
     "elite": true,
     "gs": 14,
     "manca": [],
     "nome": "Dana_Forgiapietra",
-    "scudo": 0,
+    "scudo": 2,
     "taglia": "medium",
     "tipo": null
    },
@@ -37129,14 +37129,22 @@
    ]
   },
   "Bestiario/png/Dara_Occhiolesto.md": {
-   "blocco": null,
+   "blocco": "```statblocco\ngs: 12\nca: 14\npf: 96\nts: Temp +9, Rifl +7, Vol +3\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 5 da DV/4 → For 18, Cos 16, Des 13 · pf: 8d8 media 36.0 + Cos +3×20 = 96 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +9, Rifl +7, Vol +3 · CA: 10 + taglia +0 + Des +1 + armatura +3 = 14 · collaudo GS 12 [PF1e Tab. 1–1]: atteso CA 27, pf 160 → -13 CA, -64 pf ⚠ FUORI BERSAGLIO per GS 12: la tabella attende CA 27 e pf 160 (-13 / -64)\n```",
    "conti": [
-    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
-    "pf: 8d8 media 36.0 + Cos +2×8 = 52",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +8, Rifl +7, Vol +3"
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 5 da DV/4 → For 18, Cos 16, Des 13",
+    "pf: 8d8 media 36.0 + Cos +3×20 = 96",
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +9, Rifl +7, Vol +3",
+    "CA: 10 + taglia +0 + Des +1 + armatura +3 = 14",
+    "collaudo GS 12 [PF1e Tab. 1–1]: atteso CA 27, pf 160 → -13 CA, -64 pf ⚠ FUORI BERSAGLIO per GS 12: la tabella attende CA 27 e pf 160 (-13 / -64)"
+   ],
+   "derivati": [
+    "ts"
    ],
    "lettura": {
-    "armatura": null,
+    "armatura": [
+     3,
+     5
+    ],
     "base_ts": {
      "rifl": 6,
      "temp": 6,
@@ -37148,8 +37156,8 @@
       8
      ]
     ],
-    "dado": null,
-    "dv": null,
+    "dado": 8,
+    "dv": 12,
     "elite": true,
     "gs": 12,
     "manca": [],
@@ -37158,9 +37166,8 @@
     "taglia": "medium",
     "tipo": null
    },
-   "manca": [
-    "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
-   ]
+   "manca": [],
+   "scrivibile": true
   },
   "Bestiario/png/Khorn/Khorn.md": {
    "blocco": null,
@@ -37246,9 +37253,9 @@
   "Bestiario/png/Nala_Cantapietre.md": {
    "blocco": null,
    "conti": [
-    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
-    "pf: 8d6 media 28.0 + Cos +2×8 = 44",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +4, Rifl +7, Vol +7"
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 5 da DV/4 → For 18, Cos 16, Des 13",
+    "pf: 8d6 media 28.0 + Cos +3×20 = 88",
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +5, Rifl +7, Vol +7"
    ],
    "lettura": {
     "armatura": null,
@@ -37263,8 +37270,8 @@
       8
      ]
     ],
-    "dado": null,
-    "dv": null,
+    "dado": 6,
+    "dv": 12,
     "elite": true,
     "gs": 12,
     "manca": [],
@@ -37278,11 +37285,16 @@
    ]
   },
   "Bestiario/png/Orion_Pelleorsa.md": {
-   "blocco": null,
+   "blocco": "```statblocco\ngs: 14\nca: 12\npf: 91\nts: Temp +11, Rifl +5, Vol +10\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13 · pf: 14d8 media 63.0 + Cos +2×14 = 91 · TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +11, Rifl +5, Vol +10 · CA: 10 + taglia -1 + Des +1 + naturale +2 (grande) = 12 · collaudo GS 14 [PF1e Tab. 1–1]: atteso CA 29, pf 200 → -17 CA, -109 pf ⚠ FUORI BERSAGLIO per GS 14: la tabella attende CA 29 e pf 200 (-17 / -109)\n```",
    "conti": [
     "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13",
     "pf: 14d8 media 63.0 + Cos +2×14 = 91",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +11, Rifl +5, Vol +10"
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +11, Rifl +5, Vol +10",
+    "CA: 10 + taglia -1 + Des +1 + naturale +2 (grande) = 12",
+    "collaudo GS 14 [PF1e Tab. 1–1]: atteso CA 29, pf 200 → -17 CA, -109 pf ⚠ FUORI BERSAGLIO per GS 14: la tabella attende CA 29 e pf 200 (-17 / -109)"
+   ],
+   "derivati": [
+    "ts"
    ],
    "lettura": {
     "armatura": null,
@@ -37304,12 +37316,11 @@
     "manca": [],
     "nome": "Orion_Pelleorsa",
     "scudo": 0,
-    "taglia": "medium",
-    "tipo": "dragon"
+    "taglia": "grande",
+    "tipo": "animal"
    },
-   "manca": [
-    "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
-   ]
+   "manca": [],
+   "scrivibile": true
   },
   "Bestiario/png/Re_Thorek_Hammerfist.md": {
    "blocco": null,
@@ -37337,7 +37348,7 @@
     "gs": 16,
     "manca": [],
     "nome": "Re_Thorek_Hammerfist",
-    "scudo": 0,
+    "scudo": 2,
     "taglia": "medium",
     "tipo": null
    },
@@ -37346,25 +37357,37 @@
    ]
   },
   "Bestiario/png/Signore_Ventolesto.md": {
-   "blocco": null,
-   "conti": [],
+   "blocco": "```statblocco\ngs: 8\nca: 12\npf: 75\nts: Temp +9, Rifl +4, Vol +4\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13 · pf: 10d10 media 55.0 + Cos +2×10 = 75 · TS: tipo «giant», TS buoni ('temp',) → Temp +9, Rifl +4, Vol +4 · CA: 10 + taglia -1 + Des +1 + naturale +2 (grande) = 12 · collaudo GS 8 [PF1e Tab. 1–1]: atteso CA 21, pf 100 → -9 CA, -25 pf ⚠ FUORI BERSAGLIO per GS 8: la tabella attende CA 21 e pf 100 (-9 / -25)\n```",
+   "conti": [
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
+    "pf: 10d10 media 55.0 + Cos +2×10 = 75",
+    "TS: tipo «giant», TS buoni ('temp',) → Temp +9, Rifl +4, Vol +4",
+    "CA: 10 + taglia -1 + Des +1 + naturale +2 (grande) = 12",
+    "collaudo GS 8 [PF1e Tab. 1–1]: atteso CA 21, pf 100 → -9 CA, -25 pf ⚠ FUORI BERSAGLIO per GS 8: la tabella attende CA 21 e pf 100 (-9 / -25)"
+   ],
+   "derivati": [
+    "ts"
+   ],
    "lettura": {
     "armatura": null,
-    "base_ts": {},
+    "base_ts": {
+     "rifl": 3,
+     "temp": 7,
+     "vol": 3
+    },
     "classi": [],
-    "dado": null,
-    "dv": null,
+    "dado": 10,
+    "dv": 10,
     "elite": true,
     "gs": 8,
     "manca": [],
     "nome": "Signore_Ventolesto",
     "scudo": 0,
-    "taglia": "medium",
+    "taglia": "grande",
     "tipo": "giant"
    },
-   "manca": [
-    "DV o livelli di classe"
-   ]
+   "manca": [],
+   "scrivibile": true
   },
   "Bestiario/png/Therysol/therysol-tiefling-mezzodrago-cr9.md": {
    "blocco": null,
@@ -37403,9 +37426,9 @@
   "Bestiario/png/Thorin_Runaforte.md": {
    "blocco": null,
    "conti": [
-    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
-    "pf: 9d8 media 40.5 + Cos +2×9 = 58",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +8, Rifl +4, Vol +7"
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 5 da DV/4 → For 18, Cos 16, Des 13",
+    "pf: 9d8 media 40.5 + Cos +3×21 = 103",
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +9, Rifl +4, Vol +7"
    ],
    "lettura": {
     "armatura": null,
@@ -37420,8 +37443,8 @@
       9
      ]
     ],
-    "dado": null,
-    "dv": null,
+    "dado": 8,
+    "dv": 12,
     "elite": true,
     "gs": 12,
     "manca": [],
@@ -38001,31 +38024,43 @@
    "scrivibile": false
   },
   "Bestiario/villain/Fauci_di_Palude.md": {
-   "blocco": null,
-   "conti": [],
+   "blocco": "```statblocco\ngs: 15\nca: 16\npf: 237\nts: Temp +17, Rifl +15, Vol +15\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 6 da DV/4 → For 18, Cos 17, Des 13 · pf: 25d12 media 162.5 + Cos +3×25 = 237 · TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +17, Rifl +15, Vol +15 · CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) + scudo +2 = 16 · collaudo GS 15 [PF1e Tab. 1–1]: atteso CA 30, pf 220 → -14 CA, +17 pf ⚠ FUORI BERSAGLIO per GS 15: la tabella attende CA 30 e pf 220 (-14 / +17)\n```",
+   "conti": [
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 6 da DV/4 → For 18, Cos 17, Des 13",
+    "pf: 25d12 media 162.5 + Cos +3×25 = 237",
+    "TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +17, Rifl +15, Vol +15",
+    "CA: 10 + taglia -2 + Des +1 + naturale +5 (enorme) + scudo +2 = 16",
+    "collaudo GS 15 [PF1e Tab. 1–1]: atteso CA 30, pf 220 → -14 CA, +17 pf ⚠ FUORI BERSAGLIO per GS 15: la tabella attende CA 30 e pf 220 (-14 / +17)"
+   ],
+   "derivati": [
+    "ts"
+   ],
    "lettura": {
     "armatura": null,
-    "base_ts": {},
+    "base_ts": {
+     "rifl": 14,
+     "temp": 14,
+     "vol": 14
+    },
     "classi": [],
-    "dado": null,
-    "dv": null,
+    "dado": 12,
+    "dv": 25,
     "elite": true,
     "gs": 15,
     "manca": [],
     "nome": "Fauci_di_Palude",
-    "scudo": 0,
+    "scudo": 2,
     "taglia": "enorme",
     "tipo": "dragon"
    },
-   "manca": [
-    "DV o livelli di classe"
-   ]
+   "manca": [],
+   "scrivibile": true
   },
   "Bestiario/villain/Generale_Grimjaw.md": {
    "blocco": null,
    "conti": [
     "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 2 da DV/4 → For 16, Cos 15, Des 13",
-    "pf: 10d10 media 55.0 + Cos +2×10 = 75",
+    "pf: 10d10 media 55.0 + Cos +2×11 = 77",
     "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +9, Rifl +4, Vol +4"
    ],
    "lettura": {
@@ -38041,8 +38076,8 @@
       10
      ]
     ],
-    "dado": null,
-    "dv": null,
+    "dado": 10,
+    "dv": 1,
     "elite": true,
     "gs": 14,
     "manca": [],
@@ -38094,17 +38129,30 @@
    ]
   },
   "Bestiario/villain/Gorthak_il_Trifronte.md": {
-   "blocco": null,
-   "conti": [],
+   "blocco": "```statblocco\ngs: 12\nca: 16\npf: 97\nts: Temp +11, Rifl +10, Vol +10\nfonte: derivato-SRD — caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13 · pf: 15d8 media 67.5 + Cos +2×15 = 97 · TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +11, Rifl +10, Vol +10 · CA: 10 + taglia +0 + Des +1 + armatura +5 = 16 · collaudo GS 12 [PF1e Tab. 1–1]: atteso CA 27, pf 160 → -11 CA, -63 pf ⚠ FUORI BERSAGLIO per GS 12: la tabella attende CA 27 e pf 160 (-11 / -63)\n```",
+   "conti": [
+    "caratteristiche: matrice elite (15, 14, 13, 12, 10, 8) + 3 da DV/4 → For 17, Cos 15, Des 13",
+    "pf: 15d8 media 67.5 + Cos +2×15 = 97",
+    "TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +11, Rifl +10, Vol +10",
+    "CA: 10 + taglia +0 + Des +1 + armatura +5 = 16",
+    "collaudo GS 12 [PF1e Tab. 1–1]: atteso CA 27, pf 160 → -11 CA, -63 pf ⚠ FUORI BERSAGLIO per GS 12: la tabella attende CA 27 e pf 160 (-11 / -63)"
+   ],
+   "derivati": [
+    "ts"
+   ],
    "lettura": {
     "armatura": [
      5,
      3
     ],
-    "base_ts": {},
+    "base_ts": {
+     "rifl": 9,
+     "temp": 9,
+     "vol": 9
+    },
     "classi": [],
-    "dado": null,
-    "dv": null,
+    "dado": 8,
+    "dv": 15,
     "elite": true,
     "gs": 12,
     "manca": [],
@@ -38113,9 +38161,8 @@
     "taglia": "medium",
     "tipo": "dragon"
    },
-   "manca": [
-    "DV o livelli di classe"
-   ]
+   "manca": [],
+   "scrivibile": true
   },
   "Bestiario/villain/Il_Collezionista_Rakshasa/il-collezionista-rakshasa-cr18.md": {
    "blocco": null,
