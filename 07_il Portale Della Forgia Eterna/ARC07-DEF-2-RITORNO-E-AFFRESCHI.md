@@ -951,7 +951,7 @@ A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
 ### MAPPA S-2 — LA STANZA DELLA CORONA DI ADAMANTIO (santuario in purificazione)
 
 > **Geometria CANONICA** (invariata dall'incontro giocato di ARC-06):
-> quella della Stanza della Corona in ARC-06<!-- apparato --> (`06_Stanza-corona-di-adamantio/CoronaDiAdamantio/Tactics_and_maps.md`)<!-- /apparato --> — stessi
+> quella della Stanza della Corona in ARC-06<!-- apparato --> (`06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Tactics_and_maps.md`)<!-- /apparato --> — stessi
 > posizionamenti di trono, muro, colonne, statue, alcove, macerie e ingresso.
 > Qui è mostrata nello **stato ARC-07** (santuario in purificazione).
 
