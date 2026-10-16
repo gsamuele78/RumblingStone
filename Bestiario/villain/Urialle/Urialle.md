@@ -54,6 +54,12 @@ Corona **fallì** e Urialle stessa fu **uccisa** dai PG.
 
 Statblock e tattiche sono storici, nel modulo dell'Arco 06: `06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Urialle.pdf`, e in `Tactics_and_maps.md` della stessa cartella, «Complete Tactics: The Lolth's Will Unleashed», Phase 3 «The Architect's Wrath» (round 1, difesa del portale, mobilità con *greater teleport*). Il *desecrate* permanente che potenzia la sala è in `Belkram.md`, stessa cartella.
 
+> ⚠ **Classi e fonti**: «sacerdotessa» è il ruolo, non la classe. Le tattiche dell'arco la correggono in **Stregone 6 / Cavaliere Mistico 1** (SRD, tutti e due), e lo statblocco le dà gli incantesimi da stregone di 6° livello; i livelli da Anima Prescelta li ha persi col template, come dice lo statblocco di Belkram. Prerequisiti del Cavaliere Mistico: incantesimi arcani di 3° livello (lo stregone 6 li ha) e competenza nelle armi da guerra (un esterno le ha tutte). La **spada a due lame** che impugna è un'arma esotica: le serve un talento che lo statblocco non scrive.
+> - **Yochlol** `[Private source — non SRD, Monsters of Faerûn / Fiend Folio, da verificare]` e **mezzo-illithid** `[Private source — non SRD]`.
+> - I 18 DV dello statblocco dell'arco non sono scomposti fra yochlol e classi: da verificare col DM prima di riusarla. Urialle è morta e lo statblocco è storico: si lascia com'è.
+> - PF1e: lo Stregone con qualche livello da *Magus* si avvicina; la yochlol e il mezzo-illithid non hanno un equivalente OGL.
+> [INFERRED — needs DM confirmation] Verifica scritta da un agente sui numeri dello statblocco dell'arco.
+
 ## Esiti possibili
 
 ### Stato di canone (D13)

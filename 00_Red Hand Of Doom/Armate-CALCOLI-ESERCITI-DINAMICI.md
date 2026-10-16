@@ -150,7 +150,7 @@ Approssimato a **~10.000** come target narrativo.
 | Xal'thor (Illithid Commander) | 14 | ×1 | `Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md` (pointer) | Torneo Dauth P2B Day 3 (fixed) |
 | Saarvith | 11 | ×1 | `09_.../P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md` | Rhest P2 (PG deviabile) |
 | Zalkatar | 13 | ×1 | `09_.../P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` | Torre Invisibile P2A (PG deviabile) |
-| Wyrmlord Karruk | 10 | ×1 | `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr10.md` | Rethmar Fase 1 assault leader |
+| Wyrmlord Karruk | 13 | ×1 | `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr13.md` | Rethmar Fase 1 assault leader |
 | Ondata Giganti — mass wave | 15 (EL) | ×2 ondate | `Bestiario/mostri/ondata-giganti-fanteria-cr15.md` | Rethmar Fase 1 (prima ondata) + Fase 3 (rinforzo) — assorbe gli 80 Hill Giant §2.1 + ogre/ettin supporto |
 | Azarr Kul (finale) | 15 | ×1 | `09_.../P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` | Rethmar Fase 3 (arrivo Day 40+2) |
 | Avatar di Tiamat (climax) | 17 | ×1 | `Bestiario/villain/Avatar_Tiamat/avatar-tiamat-cr17.md` | **Conditional**: evocato solo se Ritual Clock ≥18 (Fase 3-4 climax) |

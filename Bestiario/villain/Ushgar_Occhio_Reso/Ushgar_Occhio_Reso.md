@@ -16,7 +16,7 @@
 **Location**: campo degli ausiliari, sempre sottovento e fuori dalla palizzata
 **Motivation**: gli orchi della Mano Rossa marciano in prima ondata e non ereditano niente. Ushgar vuole uscire da questa guerra con una terra e un atto scritto che lo dica. Chi glielo firma gli interessa meno di quanto dovrebbe.
 **CR**: 13 | **Race/Class**: Orco, Barbaro 13
-**Key stats**: `ushgar-occhio-reso-cr13.md` — hp 140 (179 in ira furente), CA 21, ascia bipenne +23/+18/+13 (1d12+14), RD 2/—, Combattere alla Cieca
+**Key stats**: `ushgar-occhio-reso-cr13.md` — hp 140 (179 in ira furente), CA 21, ascia bipenne +23/+18/+13 (1d12+14), RD 3/—, Combattere alla Cieca
 **Token**: — (nessuno assegnato)
 
 ---
@@ -96,7 +96,7 @@ Non prova a essere Ghaurush. Non vola, non taglia il campo, non tratta con elega
 
 Contro questo gruppo funziona per due ragioni:
 
-1. **Sceglie l'incantatore e ci arriva.** 24 metri in carica, poi tre attacchi da 1d12+14. Hella e Artemis hanno la CA per sopravvivergli un round, non due. Il muro di scudi va rifatto in fretta, e mentre lo rifanno il chierico di Gruumsh dietro di lui lavora.
+1. **Sceglie l'incantatore e ci arriva.** 30 metri in carica, poi tre attacchi da 1d12+14. Hella e Artemis hanno la CA per sopravvivergli un round, non due. Il muro di scudi va rifatto in fretta, e mentre lo rifanno il chierico di Gruumsh dietro di lui lavora.
 2. **Il buio non lo ferma.** Combattere alla Cieca, un occhio solo e trent'anni di gallerie: l'*oscurità* drow, il fumo, l'invisibilità di Artemis gli tolgono molto meno di quanto tolgano a chiunque altro nel suo campo.
 
 La contropartita, dichiarata nello statblock: CA 19 in ira. Lo si colpisce quasi sempre. Dura due o tre round, e sono i due o tre round in cui il resto dell'incontro fa danno.

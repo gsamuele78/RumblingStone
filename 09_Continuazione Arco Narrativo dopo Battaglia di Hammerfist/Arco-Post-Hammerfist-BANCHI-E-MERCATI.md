@@ -139,7 +139,7 @@ Che cosa avete portato alla foresta, oltre agli stivali?»*
   fino al **5° livello** (druido 9, scheda `avarthel-druido-cr9`). Saraah tiene
   tutto per il rito, ed è stanca: Saggezza −2 da sei mesi (`Lythiel.md`). Dopo
   il rito Saraah lancia fino al **7° livello** (druida 14, scheda
-  `arci-druido-circolo-cr14` `[INFERRED — needs DM confirmation]`).
+  `arci-druido-circolo-cr17` `[INFERRED — needs DM confirmation]`).
 
 ##### Cosa danno, e quanto vale
 

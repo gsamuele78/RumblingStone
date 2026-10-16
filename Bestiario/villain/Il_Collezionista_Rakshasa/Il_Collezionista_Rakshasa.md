@@ -7,29 +7,28 @@
 
 ```statblocco
 gs: 18
-tipo: Medium outsider, 18d4
-ca: 22
-ca-dettaglio: (+1 Des, +11 armatura)
-pf: 63
-pf-dado: 18d4
-ts: Temp +7, Rifl +7, Vol +11
-velocita: 9 m
-iniziativa: +1
-attributi: Car 19 Int 14 Des 13 Cos 12 Sag 10 For 8
+tipo: Medium outsider (native, evil, lawful), rakshasa / Stregone 11 (18 DV), LM
+ca: 25
+ca-dettaglio: (+2 Des, +9 naturale, +4 *armatura magica* sempre attiva), contatto 12, colto alla sprovvista 23
+pf: 113
+pf-dado: 7d8+11d4+54
+ts: Temp +11, Rifl +10, Vol +13
+velocita: 12 m
+iniziativa: +2
+sensi: scurovisione 18 m
+attributi: For 12 Des 14 Cos 16 Int 14 Sag 13 Car 20
 attacchi:
-  - Mischia bastone ferrato +8 (1d6-1)
+  - Mischia 2 artigli +13 (1d4+1) e morso +8 (1d6)
 voci:
-  - Incantatore di livello 18 (stregone, CAR +4)
-  - Incantesimi al giorno: 6/6/6/6/6/6/6/6/5/3
+  - Incantatore di livello 18 (stregone: 7 dall'innato del rakshasa + 11 livelli di classe, CAR +5)
+  - Incantesimi al giorno: 6/8/7/7/7/7/6/6/5/3
   - Incantesimi conosciuti: 9/5/5/4/4/4/3/3/2/1
-  - CD degli incantesimi: 10 + livello + +4 (massimo: 9° livello, CD 23)
-  - ⚠ incantatore spontaneo: prende ogni livello d'incantesimo due livelli dopo un preparato — per stare sulla stessa CD servono ~2 livelli in più
-  - Preparati — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: catena di dissolvimenti, disintegrazione, occhio arcano superiore · 7°: dito della morte, inversione della gravità, prigione · 8°: campo antimagia, labirinto, urlo doloroso · 9°: arresto del tempo, desiderio limitato, sfera di annichilimento
+  - CD degli incantesimi: 15 + livello (9° livello: CD 24)
+  - Conosciuti — 1°: armatura magica, riduzione dei nemici, scudo, sonno · 2°: immagine speculare, invisibilità, raggio di indebolimento, risata incontenibile di Tasha · 3°: dissolvi magie, lentezza, vento vorticoso, volare · 4°: confusione, muro di fuoco, porta dimensionale, terreno illusorio · 5°: dominare persone, muro di forza, nube mortale, telecinesi · 6°: contingenza, dissolvi magie superiore, disintegrazione · 7°: dito della morte, gabbia di forza, desiderio limitato · 8°: labirinto, urlo superiore · 9°: arresto del tempo
   - ⚠ **Non è inteso per lo scontro fisico.** La scheda dichiara GS 17-19 e dice che il villain non combatte mai in campo aperto: questi numeri servono se i PG lo mettono all'angolo, non a progettare un incontro
-  - Rakshasa Ak'chazar avanzato: RD 15/bene e perforante, cambiare forma, individuazione del pensiero a volontà
-  - ⚠ Il blocco conta i soli livelli di classe. I 7 DV razziali da esterno del rakshasa e la RD non ci sono dentro: vanno aggiunti prima di usarlo come boss (e non è previsto che lo sia)
+  - Rakshasa (SRD): RD 15/bene e perforante, RI 27, cambiare forma, individuazione del pensiero a volontà
   - Amuleto dell'Eclissi Planare: vuoto mentale e anti-individuazione continui a LI 20 — nemmeno la visione del vero lo smaschera
-fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=outsider, taglia=medium, ruolo=controllore, classe=('stregone', 18), elite=True, gs=18); derivati: ca, pf, ts. ADR-0034 — proposta da rileggere al tavolo
+fonte: rakshasa (SRD 3.5) 7 DV + Stregone 11, rifatto a mano: vedi Boost log in fondo
 ```
 
 **Vero Nome:** Ignoto (Sussurrato come "Avaritia" nei Piani Inferiori)
@@ -60,7 +59,7 @@ fonte: derivato-SRD 3.5 dai parametri dichiarati dalla scheda (tipo=outsider, ta
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; la fuga dalla Tana dei Minotauri è nel riquadro qui sopra]
 **Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; il riquadro qui sopra lo porta nel Piano del Fuoco, alla forgia dei salamandri]
 **Motivation**: → §Cosa vuole (Gli obiettivi)
-**CR**: 17-19 (Mai inteso per scontro fisico diretto, è un villain di manipolazione) | **Race/Class**: Rakshasa Ak'chazar (Avanzato, Esterno Malvagio) Extra-Planare / Signore del Commercio; Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
+**CR**: 18 (17-19 nella prima stesura; mai inteso per scontro fisico diretto, è un villain di manipolazione) | **Race/Class**: Rakshasa Ak'chazar [Private source — Monster Manual II, INFERRED: la variante non è nel repo; la build usa il rakshasa SRD] (Avanzato, Esterno Malvagio) Extra-Planare, Stregone 11 / Signore del Commercio; Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
 **Key stats**: → §In combattimento e il blocco qui sopra. `il-collezionista-rakshasa-cr18.md` rimanda a questa scheda.
 
 ---
@@ -121,7 +120,7 @@ Non combatte: «Non cercherà mai di uccidere i PG in combattimento aperto» (§
 
 ### Tattiche del master (come giocarlo)
 
-* **Mai attaccare.** Se attaccato, Varis sorride, attiva una contingenza (*Parola del Ritiro* o *Porta Dimensionale*) e svanisce, dicendo: *"Il mercato libero si è chiuso in anticipo oggi, signori. I tassi di interesse sul vostro orgoglio saranno letali."*
+* **Mai attaccare.** Se attaccato, Varis sorride, attiva una contingenza (*contingenza* con dentro *porta dimensionale*: *parola del ritiro* è un incantesimo da chierico, e uno stregone non lo conosce) e svanisce, dicendo: *"Il mercato libero si è chiuso in anticipo oggi, signori. I tassi di interesse sul vostro orgoglio saranno letali."*
 
 ### Immunità al True Seeing e Detect Magic
 
@@ -140,3 +139,14 @@ Il Collezionista indossa l'**Amuleto dell'Eclissi Planare** (Artefatto Minore):
 - La correzione del DM su Varis e la fuga dalla Tana dei Minotauri sono nel riquadro in testa; la scheda è della prima stesura (aprile 2026).
 - L'intermediario umano: `Bestiario/png/Varis_Seta_Argento/Varis_Seta_Argento.md`.
 - `il-collezionista-rakshasa-cr18.md` è un rimando a questa scheda.
+
+Benchmark: PF T1-1 riga 18: CA 25 (−8), pf 113 (−187), att +13 (−15), CD 24 (−1). Per somma il GS sarebbe 21 (rakshasa GS 10 + 11 livelli di stregone, classe associata); sulle difese ne vale 13-14, sulle CD 17. Resta 18 per gli incantesimi di 8° e 9°, *contingenza* e l'amuleto, che sono quello che lo rende imprendibile.
+
+Boost log: DV razziali aggiunti (rakshasa SRD 7 DV + Stregone 11, l'innato del rakshasa sommato alla classe come incantatore di 18°) — GS 18 → 18 — il blocco contava solo 18 livelli da stregone e nessun DV razziale.
+
+<!-- storico -->
+- era: «Medium outsider, 18d4», pf 63, CA 22 (+1 Des, +11 armatura), tiri salvezza +7 / +7 / +11, iniziativa +1, dal generatore di statblocchi (ADR-0034)
+- era: attributi Car 19 Int 14 Des 13 Cos 12 Sag 10 For 8; bastone ferrato +8 (1d6−1)
+- era: incantesimi al giorno 6/6/6/6/6/6/6/6/5/3, CD massima 23; *campo antimagia* fra gli incantesimi di 8°, *desiderio limitato* e *sfera di annichilimento* fra quelli di 9°
+- era: fuga con *parola del ritiro*
+<!-- /storico -->

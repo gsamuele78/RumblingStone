@@ -49,6 +49,13 @@ ravvide**: morì redento, libero.
 
 Lo statblock e le tattiche sono storici, nel modulo dell'Arco 06: `06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Belkram.md` («Finalized Belkram Stats with *Desecrate* Buffs» e «Belkram's Tactical Profile: The Mad Guardian») e `Tactics_and_maps.md`, stessa cartella («Complete Tactics: The Lolth's Will Unleashed», Phase 1).
 
+> ⚠ **Classi e fonti dello statblocco dell'arco** (nano Curst Anima Prescelta 7 / Guerriero 6, GS 13):
+> - **Anima Prescelta** (*Favored Soul*) `[Private source — Complete Divine]`; **Guerriero**: SRD.
+> - **Curst** è un archetipo non SRD `[Private source — libro da verificare]`; *Corrupted Frenzy* e i **danni vili** `[Private source — Book of Vile Darkness, da verificare]`.
+> - **BAB**: l'arco scrive +13, ma Anima Prescelta 7 (+5) e Guerriero 6 (+6) fanno **+11**; il maglio e la Lotta salgono di 2 per lo stesso errore. Belkram è morto e lo statblocco è storico: si lascia com'è nell'arco, e chi lo riusa parte da +11 più un talento o un oggetto che rimetta il +2.
+> - PF1e: l'Oracolo (o l'Inquisitore) con il Guerriero si avvicina; il Curst e la frenesia corrotta non hanno un equivalente OGL, e toglierli stravolge il «guardiano folle».
+> [INFERRED — needs DM confirmation] Verifica scritta da un agente sui numeri dello statblocco dell'arco.
+
 ## Esiti possibili
 
 ### Stato di canone (D13)

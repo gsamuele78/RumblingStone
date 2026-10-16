@@ -26,7 +26,7 @@
         *   🦉 Signore Ventolesto (Gufo Gigante Celestiale Alpha)
         *   🌟 Ranger Elfici sui Gufi
         *   🐻 Orion Pelleorsa (Druido Umano)
-        *   🎶 Maestro Tempestas (Mezzelfo Bardo/Arcimago)
+        *   🎶 Maestro Tempestas (Mezzelfo Bardo/Cantore delle tempeste)
     *   **PNG Giocabili per le Prime Sessioni**
         *   Come Gestire i Personaggi Temporanei
         *   ⚔️ Borin Ferropugno (Nano Guerriero/Campione Nanico)
@@ -440,26 +440,30 @@ SIMBOLI TATTICI:
 
 <div style="page-break-before:always"></div>
 
-#### **🎶 MAESTRO TEMPESTAS (Mezzelfo Bardo 12°/Arcimago 2°, GS 14)**
+#### **🎶 MAESTRO TEMPESTAS (Mezzelfo Bardo 12°/Cantore delle tempeste 2°, GS 14)**
 **Descrizione da Leggere:**
 > *"Maestro Tempestas è un mezzelfo dalle origini misteriose, i cui occhi cambiano colore con le condizioni atmosferiche: grigi durante la calma, blu elettrico durante le tempeste. La sua lira magica è intagliata dal corno di un drago blu antico, e ogni nota che suona richiama i venti e i fulmini a danzare secondo la sua volontà."*
 
-**Iniziativa:** +3; 
+**NB Umanoide Medio (Elfo)**
+**Iniziativa:** +7; 
 **Sensi:** Visione Crepuscolare; Ascoltare +18, Osservare +15
-**CA:** 18 (+4 armatura, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 15
-**PF:** 84 (14 DV)
-**TS:** Tempra +7, Riflessi +12, Volontà +13
+**CA:** 20 (+6 giaco di maglia +2, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 17
+**PF:** 91 (14d6+42)
+**TS:** Tempra +7, Riflessi +13, Volontà +13
 **Velocità:** 9m
-**Attacco Base:** +9; 
-**Lotta:** +10
-**Attacco:** *Spada Lunga Tonante +1* +11 in mischia (1d8+2 più 1d8 sonoro)
-**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +3, 12/giorno), Conoscenze Bardiche, Arcimago (Maestria degli Elementi Elettrico/Sonoro).
-**Incantesimi da Bardo Conosciuti (CL 12°; 3/4/4/3/2 per giorno):**
-*   4° (CD 19): *Urlo Superiore*, *Dominare Persone*, *Porta Dimensionale*, *Libertà di Movimento*
-*   3° (CD 18): *Fulmine*, *Velocità*, *Dissolvi Magie*, *Suggestione*, *Paura*
-*   2° (CD 17): *Esplosione Sonora*, *Frantumare*, *Splendore dell'Aquila*, *Immagine Speculare*, *Invisibilità*, *Silenzio*
-*   1° (CD 16): *Onda di Tuono* (custom), *Cura Ferite Leggere*, *Charme su Persone*, *Caduta Morbida*, *Unto*, *Suono Fantasma*
-*   0°: *Luce*, *Mano Magica*, *Messaggio*, *Aprire/Chiudere*, *Prestidigitazione*, *Suono Fantasma*
+**Attacco Base:** +10; 
+**Lotta:** +11
+**Attacco:** *Spada corta +1* +12/+7 in mischia (1d6+2/19-20)
+**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 12/giorno), Conoscenze Bardiche, Cantata della Tempesta Tonante (1/incontro, Riflessi CD 23), *Suggestione di massa* 1/giorno (CD 21), Arcane Supreme (Maestria del Controincantesimo, Potere Magico +1).
+**Incantesimi da Bardo Conosciuti (incantatore di 14° livello; 4/5/5/4/4/2 al giorno):**
+*   5° (CD 21): *Passo nelle Ombre*, *Cura Ferite Leggere di Massa*, *Suggestione di Massa*
+*   4° (CD 20): *Urlo*, *Dominare Persone*, *Porta Dimensionale*, *Invisibilità Superiore*
+*   3° (CD 19): *Fulmine*, *Velocità*, *Dissolvi Magie*, *Confusione*
+*   2° (CD 18): *Esplosione Sonora*, *Polvere Luccicante*, *Eroismo*, *Invisibilità*
+*   1° (CD 17): *Cura Ferite Leggere*, *Charme su Persone*, *Risata Incontenibile*, *Sonno*
+*   0°: *Individuazione del Magico*, *Lettura del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Aprire/Chiudere*
+
+> I numeri di Tempestas vengono dalla sua scheda nel Bestiario, che è la fonte. Il dettaglio dei privilegi, e le note sul Cantore delle tempeste (*Frostburn*, fuori dall'SRD), stanno lì.
 
 ---
 

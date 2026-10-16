@@ -3,8 +3,8 @@
 **Status**: alive pre-battaglia; esito condizionale al campo
 **Location**: avanguardia della Mano Rossa
 **Motivation**: sfondare con la forza bruta; Wyrmlord scelto da Azarr Kul per la marcia.
-**CR**: 10 | **Race/Class**: Gigante delle Colline, Barbaro — vedi statblock
-**Key stats**: → `wyrmlord-karruk-cr10.md` (ACCEPTED DM-canon 2026-05-05, upscale RHoD Karruk).
+**CR**: 13 | **Race/Class**: Gigante delle Colline (13 DV), Barbaro 5 — vedi statblock
+**Key stats**: → `wyrmlord-karruk-cr13.md` (ACCEPTED DM-canon 2026-05-05, upscale RHoD Karruk).
 
 ---
 
@@ -16,7 +16,7 @@ Un gigante delle colline barbaro, comandante da campo dell'avanguardia, il Wyrml
 
 ## Aspetto e voce
 
-[DA SCRIVERE — nessun file del repo lo descrive in modo coerente con lo statblocco: la Carta 13 del mazzo degli eventi della battaglia finale lo legge come «un hobgoblin enorme in armatura di scaglie rosse» con un'ascia, mentre `wyrmlord-karruk-cr10.md` è un gigante delle colline col randello pesante.]
+Un gigante delle colline in corazza di scaglie rosse, col randello pesante (statblocco e Carta 13 del mazzo degli eventi della battaglia finale, ora allineati: la carta lo diceva «hobgoblin enorme» con un'ascia). [DA SCRIVERE — la voce e i gesti: nessun file del repo li descrive.]
 
 ## Cosa vuole
 
@@ -27,11 +27,11 @@ Sfondare con la forza bruta (campo **Motivation**).
 ## Nella campagna
 
 Cavalca/coordina un
-**Razorfiend «Blackspawn Alfa» CR 13** (`Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md`).
+**Razorfiend «Blackspawn Alfa» CR 13** (`Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md`), nella variante rossa (fuoco): lo spawn Enorme lo porta in sella. I 2 razorfiend rossi GS 9 (`razorfiend-red-cr9.md`) sono la truppa del suo assalto, non la sua cavalcatura.
 
 ## In combattimento
 
-I numeri, i tre stati dell'ira e le tattiche sono in `wyrmlord-karruk-cr10.md`. Nel duello sulle mura combatte d'onore finché è avvantaggiato e bara se perde: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-EVENT-DECK.md`, Carta 13 «Il duello di Karruk».
+I numeri, i tre stati dell'ira e le tattiche sono in `wyrmlord-karruk-cr13.md`. Nel duello sulle mura combatte d'onore finché è avvantaggiato e bara se perde: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-EVENT-DECK.md`, Carta 13 «Il duello di Karruk».
 
 ## Esiti possibili
 

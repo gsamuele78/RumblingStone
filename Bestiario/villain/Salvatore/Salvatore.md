@@ -4,7 +4,7 @@
 
 ```statblocco
 gs: 14
-ca: 20
+ca: 22
 pf: 79
 ts: Temp +8, Rifl +13, Vol +11
 velocita: 9 m
@@ -18,7 +18,7 @@ velocita: 9 m
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi]
 **Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; la prima apparizione è su una strada del deserto dello Shaar/Cannath (§Al tavolo)]
 **Motivation**: [DA SCRIVERE — vedi §Cosa vuole]
-**CR**: 14 | **Race/Class**: Umano (origine incerta — semi-planare sospetto); Bardo 8 / Accordo Sublime 1 / Spia 5 (Livello Totale 14); Neutrale Malvagio (schermato come Legale Buono)
+**CR**: 14 | **Race/Class**: Umano (origine incerta — semi-planare sospetto); Bardo 8 (SRD) / Accordo Sublime 1 [Private source — Complete Arcane] / Spia 5 [Private source — fonte non identificata nel repo] (Livello Totale 14); Neutrale Malvagio (schermato come Legale Buono)
 **Era d'Origine:** -1000 DR (Epoca di Hammerfist)
 **Datori di Lavoro:** Il Collezionista (Rakshasa) + Matrona Sajak (Drow, sottosuolo Cannath). *Per il DM:* è **Sonjak** (`Bestiario/villain/Sonjak/Sonjak.md`); Sal non conosce quel nome
 **Key stats**: → §In combattimento. I numeri stanno in questa scheda.
@@ -129,9 +129,9 @@ Questo crea una **traccia investigativa** che collega i due NPC e porta al Colle
 **Iniziativa:** +8 (+4 Des, +4 Talento)
 **Velocità:** 9 m
 
-**Classe Armatura:** 20
-*(10 + 4 Des + 4 Armatura [Giaco di Mithral +2] + 2 Deviazione [Cronolito])*
-*Contatto: 16 / Colto alla sprovvista: 16 (Sangue Freddo)*
+**Classe Armatura:** 22
+*(10 + 4 Des + 6 Armatura [Giaco di Mithral +2: +4 del giaco, +2 di potenziamento] + 2 Deviazione [Cronolito])*
+*Contatto: 16 / Colto alla sprovvista: 18 (Sangue Freddo)*
 
 **Tiri Salvezza:**
 - **Tempra:** +8 (+4 Base Bardo/Spia, +2 Cos, +2 Talento)
@@ -139,17 +139,19 @@ Questo crea una **traccia investigativa** che collega i due NPC e porta al Colle
 - **Volontà:** +11 (+8 Base Bardo, +1 Sag, +2 Talento)
   *(Eccezione: TS Volontà CD 14 per evitare lo stato Scosso se subisce anche solo 1 PF di danno — vedi **Odio per il Sangue**)*
 
+> ⚠ Classi non SRD. L'Accordo Sublime chiede, fra l'altro, 13 gradi in Esibirsi: un personaggio li ha solo dal 10° livello, quindi va preso dopo i cinque livelli da Spia, non subito dopo il Bardo 8. I TS base di Spia non si verificano senza la sua tabella: restano quelli della scheda [INFERRED — needs DM confirmation]. PF1e: per la Spia, il ladro con l'archetipo Spia (*Advanced Player's Guide*) — si avvicina: menzogna, travestimento e veleno, senza magia; per l'Accordo Sublime nessun archetipo del bardo PF1e dà incantesimi oltre il 6° — stravolge, e la scheda tiene la classe 3.5.
+
 ### Abilità principali
 
 | Abilità | Totale | Note |
 |:---|:---:|:---|
-| Raggirare | **+27** | +6 Car, 13 gradi, +2 sinergia, +2 razziale Spia |
-| Diplomazia | **+22** | Sinergia Raggirare attiva |
-| Sapienza Magica | **+20** | +3 Int, 13 gradi, +4 sinergia |
+| Raggirare | **+27** | +6 Car, 17 gradi, +2 sinergia, +2 di classe (Spia) |
+| Diplomazia | **+22** | +6 Car, 14 gradi, +2 sinergia Raggirare |
+| Sapienza Magica | **+20** | +3 Int, 13 gradi, +4 sinergia (Conoscenze arcane e Utilizzare Oggetti Magici) |
 | Nascondersi | **+21** | +4 Des, 13 gradi, +4 competenza Spia |
-| Muoversi Silenziosamente | **+19** | +4 Des, 13 gradi |
-| Percepire Intenzioni | **+15** | +1 Sag, 13 gradi |
-| Esibirsi (Canto) | **+22** | +6 Car, 13 gradi |
+| Muoversi Silenziosamente | **+19** | +4 Des, 15 gradi |
+| Percepire Intenzioni | **+15** | +1 Sag, 14 gradi |
+| Esibirsi (Canto) | **+22** | +6 Car, 16 gradi |
 | Valutare | **+16** | +3 Int, 13 gradi |
 | Conoscenze (Arcane) | **+16** | +3 Int, 13 gradi |
 | Conoscenze (Piani) | **+16** | +3 Int, 13 gradi |
@@ -202,11 +204,13 @@ Ogni volta che Sal subisce danni (anche 1 solo PF), deve superare un **TS Volont
 - *Ispirazione alla Competenza* +2
 - *Suggestione* (come incantesimo, CD TS 20)
 - *Controcanto*
-- 4 usi di bardatura per giorno
+- 8 usi di bardatura per giorno (uno per livello da bardo, SRD)
 
 #### Incantesimi Conosciuti (CL 9 — Bardo 8 + Accordo Sublime 1)
 
 Sal preferisce non combattere con la magia in modo evidente. Usa incantesimi come strumento sociale e di fuga.
+
+> ⚠ Un Bardo 8 da solo conosce 6/4/4/3 incantesimi, ne lancia 3/5/5/2 con Car 22 e arriva al 3° livello. Gli incantesimi e gli slot in più della lista (il 4° livello, *Suggestione di Massa*, *Dominio di Mostri*) li danno l'Accordo Sublime e la Spia, che non sono SRD: tenuti come li scrive la scheda [INFERRED — needs DM confirmation]. Alcuni stanno a un livello diverso da quello del bardo SRD (*Grazia del Gatto* è del 2°, *Aura Magica di Nystul* del 1°, *Confusione* del 3°, *Porta Dimensionale* del 4°): le CD sono quelle della scheda.
 
 **Livello 0 (3/giorno):** *Prestidigitazione, Individuazione del Magico, Ammaliare Animali, Luci, Nota Dissonante*
 
@@ -272,3 +276,13 @@ Se i PG viaggiano nel tempo (usando il Topazio della Corona di Adamantio o altro
 
 - Sigillo di Ossidiana: canone del DM, con la fonte completa in `ARC07-DEF-4` Appendice B (§Chi è).
 - Dove compare: `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2C-Salvatore-Mercante-TESTO.md` (Parte 2C), `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` (Scena 9, Vatore).
+
+Benchmark: PF T1-1 riga 14: CA 22 (−7), pf 79 (−121), att — (non combatte), CD 20 (−2). Sotto su tutto per scelta: Sal non combatte, fugge.
+
+Boost log: correzione dei conti 3.5 — GS 14 → 14 — CA col giaco +2 contato per intero, usi di bardatura e gradi delle abilità riallineati ai totali; nessun numero sceso.
+
+<!-- storico -->
+- era: CA 20 (il giaco di mithral +2 contato +4), colto alla sprovvista 16
+- era: 4 usi di bardatura al giorno (un Bardo 8 ne ha 8)
+- era: gradi a 13 per tutte le abilità, con totali che non tornavano (Raggirare, Diplomazia, Muoversi Silenziosamente, Percepire Intenzioni, Esibirsi)
+<!-- /storico -->

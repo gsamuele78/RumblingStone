@@ -24,6 +24,7 @@ ts: Temp +2, Rifl +9, Vol +1
 **CR**: 4 (build liv. 5) — volutamente NON scalato all'APL 13: è un civile straordinario, non una minaccia; per renderlo rilevante in combattimento passare da `skills/npc-villain-boosting/` | **Race/Class**: mezzelfo, Ladro (Scout) 4 / Bardo (di Corte) 1 — progressione futura del giocatore: → Bardo 8 / Arcane Trickster 4 (liv. 16)
 **Key stats** *(trascritte dalla scheda PF1e v2 del giocatore, blocco liv. 5)*: PF 33; CA 16 (tatto 13); Iniziativa +7; TS +2/+9/+1; Pugnale perfetto +7 (1d4−1, 19-20/×2); Frusta perfetta +6 (1d3−1 nonletale, portata 10 ft, Trip/Disarm, CMB +7 con Agile Maneuvers); Furtivo +2d6 (Skirmisher: attiva con movimento 10+ ft); Intimidire +12/+14; Satira Bardica −1 (nemici entro 9 m); talenti: Arma Focalizzata (pugnale), Arma Accurata, Enforcer, EWP frusta; incantesimi da bardo 1° (CD 14): *Risata Incontenibile*, *Unto*; trucchetti: *Suono Fantasma*, *Prestidigitazione*, *Ninnananna*, *Messaggio*.
 **Nota conversione 3.5**: al tavolo 3.5 leggere Scout-Ladro ≈ Ladro con Attacco Furtivo +2d6, Enforcer ≈ Intimidire demoralizzante gratuito sul danno nonletale, Satira ≈ *inspire* invertita (−1 nemici). Nessuna meccanica nuova: tutto ciò che fa è già coperto da Intimidire/Raggirare/Furtivo SRD.
+> ⚠ Controllo dei conti PF1e (nessun numero toccato: la build è del giocatore). Senza i punteggi di caratteristica nel file i conti si chiudono solo in parte. TS +2/+9/+1 tornano con le basi di Ladro 4 e Bardo 1 (+1/+6/+3) se Des dà +3 e Sag −2. Ma con Des +3 il pugnale perfetto fa +8 (BAB +3, Des +3, Arma Focalizzata +1, perfetto +1), non +7, e la frusta perfetta +7, non +6; i due attacchi tornano con Des +2 e un tratto da +1 ai Riflessi. Iniziativa +7 e BMC +7 «con Agile Maneuvers» presuppongono Iniziativa Migliorata (o un tratto) e Manovre Agili, che fra i talenti non ci sono; Competenza nelle Armi Esotiche (frusta) è un doppione, perché il bardo PF1e sa già usare la frusta. Da chiarire col giocatore `[INFERRED — needs DM confirmation]`.
 **Token**: — (da assegnare; il trucco da Pierrot — lacrime nere colate, sorriso rosso asimmetrico — è il segno distintivo)
 
 ---
@@ -143,7 +144,12 @@ mondo di GS 13); se minacciato fugge — con stile, ma fugge.
 
 Non ha uno statblocco a parte: i numeri sono nel blocco e nel campo **Key stats** in testa, con la **Nota conversione 3.5**.
 
-**Tattiche**: la scheda dice solo che non combatte volentieri e che, se minacciato, fugge (§3, *Limiti duri*). [DA SCRIVERE — nessun file del repo dice come combatte quando non può scappare.]
+**Tattiche**: la scheda dice che non combatte volentieri e che, se minacciato, fugge (§3, *Limiti duri*). Quando non può scappare:
+- *Prima del combattimento*: non lo cerca mai. Se lo vede arrivare, mette fra sé e i nemici una folla, un vicolo o un mucchio di casse, e lancia *unto* sul passaggio.
+- *Durante il combattimento*: round 1, la **Satira** (−1 ai nemici entro 9 m) e una battuta che li fa arrabbiare con lui invece che con chi protegge. Poi tiene la distanza con la frusta, a 3 m: sbilancia o disarma chi si avvicina, e quando ha mosso di almeno 3 m colpisce col pugnale chi è a terra (attacco furtivo +2d6, da Scout). *Risata incontenibile* (CD 14) sul nemico più grosso, appena ne ha bisogno. Ogni danno non letale della frusta lo usa per demoralizzare (Enforcer).
+- *Morale*: appena si apre un'uscita, la prende. Sotto metà pf, o se resta solo, si arrende con un inchino e una battuta, e prova a comprarsi la vita con quello che ha visto (§2.3). Per i bambini del mulino non scappa.
+
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 ## Esiti possibili
 

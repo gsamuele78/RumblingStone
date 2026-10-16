@@ -3,10 +3,10 @@
 
 
 ```statblocco
-gs: 15
-ca: 28
-pf: 119
-ts: Temp +13, Rifl +7, Vol +13
+gs: 17
+ca: 31
+pf: 156
+ts: Temp +19, Rifl +8, Vol +17
 velocita: 9 m
 ```
 
@@ -16,8 +16,8 @@ velocita: 9 m
 **Status**: [DA SCRIVERE — la scheda non dice se è vivo, morto o fuggito: i rami sono in §Esiti possibili]
 **Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; compare nella Fase 0 sulle mura e combatte nella Fase 3 della Battaglia di Rethmar]
 **Motivation**: [DA SCRIVERE — nessuna riga dice cosa vuole oltre alla guerra; le sue battute sono in §Aspetto e voce]
-**CR**: 15 | **Race/Class**: Hobgoblin Mezzo-Drago Blu (Umanoide Medio); Chierico 10 / Guerriero 4 (Livello Totale 14); Legale Malvagio
-**Key stats**: → `../azarr-kul-final-cr15.md` (statblocco gemello, cartella sopra). Le statistiche scritte in questa scheda sono in §In combattimento.
+**CR**: 17 (versione B5) | **Race/Class**: Hobgoblin Mezzo-Drago Blu (drago Medio, umanoide aumentato); Chierico 12 / Guerriero 4 (16 DV, versione B5); Legale Malvagio
+**Key stats**: → `../azarr-kul-final-cr17.md` (statblocco gemello, cartella sopra: numeri, talenti, incantesimi, equipaggiamento e tattiche). Il riassunto è in §In combattimento.
 
 ---
 
@@ -51,78 +51,34 @@ Tyrgarun non è mai stato una cavalcatura di Azarr Kul (D11 v2). È il terrore d
 
 ## In combattimento
 
-Lo statblocco gemello è `../azarr-kul-final-cr15.md`. Qui sotto restano le statistiche, gli incantesimi, le capacità, l'equipaggiamento e le tattiche come li scrive questa scheda.
+Lo statblocco gemello è `../azarr-kul-final-cr17.md`, ed è la fonte dei numeri: la versione B5 (Chierico 12 / Guerriero 4) di `ERRATA-PARTE2-3-35-Verification.md` §1, coi conti rifatti sull'SRD.
 
-### Statistiche D&D 3.5
-
-| Caratteristica | Valore | Mod. |
-|:---|:---:|:---:|
-| **Forza** | 20 | +5 |
-| **Destrezza** | 12 | +1 |
-| **Costituzione** | 18 | +4 |
-| **Intelligenza** | 12 | +1 |
-| **Saggezza** | 18 | +4 |
-| **Carisma** | 16 | +3 |
-
-**Punti Ferita:** 119 (14 DV: 10d8+4d10+56)
-**Iniziativa:** +1
-**Velocità:** 9 m
-
-**Classe Armatura:** 28
-*(10 +9 Armatura Completa +2, +3 Scudo, +1 Des, +3 Naturale [eredità draconica], +2 Deflessione)*
-*Contatto: 14 / Colto alla sprovvista: 27*
-
-**Tiri Salvezza:**
-- **Tempra:** +13 (+9 Base Chier/Guerr, +4 Cos)
-- **Riflessi:** +7 (+4 Base, +1 Des, +2 resistenza)
-- **Volontà:** +13 (+9 Base, +4 Sag)
-
-**BAB/Grapple:** +13 / +18
-
-**Attacchi:**
-- Spadone Sacrificale +21/+16/+11 (2d6+7, 19–20/×2; +2d6 danni vs creature di allineamento Buono)
-
-### Incantesimi (Chierico 10, Livello Incantatore 12)
-
-**Domini:** Guerra, Tirannia, Tiamat (custom)
-
-| Livello | Slot | Incantesimi tipici |
-|:---:|:---:|:---|
-| 0 | 4 | *detect magic, guidance, resistance, inflict minor wounds* |
-| 1 | 5+1 | *divine favor, shield of faith, command, doom, cure light wounds (dom.)* |
-| 2 | 5+1 | *bull's strength, hold person, spiritual weapon, silence* |
-| 3 | 4+1 | *dispel magic, magic vestment, prayer, bestow curse* |
-| 4 | 4+1 | *divine power, freedom of movement, unholy blight, divine power (dom.)* |
-| 5 | 3+1 | *flame strike (cromatica — danno misto fuoco/acido), righteous might* |
-| 6 | 2+1 | *blade barrier, harm, greater dispel magic* |
-
-**Preparazione prebattaglia standard:** *magic vestment* (sul +2 scudo → +5), *shield of faith* (+4 deflessione), *righteous might* (Taglia Grande), *divine power* (+6 attacco/danno, BAB pieno da Chierico).
-
-Con prebuffing attivo: CA ~32, Attacchi +25/+20/+15, danni 3d6+11.
+In breve, per chi prepara la scena: **CA 31** (36 col pre-buff, taglia Grande), **156 pf** (186 col pre-buff), TS Temp +19, Rifl +8, Vol +17; spadone sacrilego +2 a +21/+16/+11 (2d6+11, +2d6 contro i buoni), che col pre-buff diventa +28/+23/+18/+13 (3d6+19). Incantesimi da chierico di 12° livello a livello incantatore 14, CD 16 + livello (*barriera di lame* e *ferire* CD 22). Soffio a linea di 18 m, 6d8 elettricità, Riflessi CD 23. Immune a elettricità, sonno e paralisi.
 
 ### Capacità speciali
 
 #### Mezzo-Drago Blu — Soffio Lineare (Su)
 - **Effetto:** Linea di elettricità, 18 m, 6d8 danni
-- **TS:** Riflessi CD 20 per dimezzare
-- **Ricarica:** 1d4 round
+- **TS:** Riflessi CD 23 per dimezzare
+- **Ricarica:** 1/giorno per l'SRD; 1d4 round come dono di Tiamat `[INFERRED — needs DM confirmation]`
 - **Tattica:** Usato all'inizio del combattimento contro il gruppo compatto, o per interrompere incantatori che si concentrano
 
 #### Aura di Comando (Ex)
 Tutti gli alleati hobgoblin entro 9 m da Azarr Kul guadagnano +2 morale ai tiri per colpire e ai TS Volontà. Se Azarr Kul cade, gli hobgoblin nel raggio fanno un TS Volontà CD 18 o diventano Scossi per 2 round.
 
 #### Canali Divini di Tiamat (Su)
-7 utilizzi giornalieri per *sconfiggere malvagio* (smite good), *richiamare/controllare non morti*, o effetti di dominio Tiamat personalizzati (a discrezione del DM).
+10 utilizzi giornalieri di intimorire o comandare non morti (con Scacciare Extra); un uso può diventare Potere Divino, +3 ai danni per un round.
 
 ### Equipaggiamento
 
 | Oggetto | Note |
 |:---|:---|
 | **Armatura Completa +2** | Nera, incisa con le cinque teste di Tiamat |
-| **Scudo Grande +2** | Usato prima del prebuffing; rimosso quando attiva *righteous might* |
-| **Spadone Sacrificale +2** | *Sacro malvagio* (evil) — +2d6 vs Buono; arma del sacrificio rituale |
+| **Scudo Pesante +2 animato** | Gli fluttua accanto e lascia libere le due mani per lo spadone `[INFERRED]` |
+| **Spadone Sacrilego +2** | +2d6 vs Buono; arma del sacrificio rituale |
 | **Anello di Protezione +2** | Contribuisce alla CA deflessione |
-| **Amuleto di Resistenza +2** | +2 a tutti i TS |
+| **Mantello della Resistenza +2** | +2 a tutti i TS (la scheda scriveva «amuleto») |
+| **Due pietre di ioun** | Rombo rosa (Cos +2) e sfera blu incandescente (Sag +2) `[INFERRED]` |
 | **Componenti Rituali** | Sangue di Astruriel + Sigillo di Ossidiana (per invocare l'Avatar) |
 
 ### Tattiche
@@ -138,13 +94,13 @@ Azarr Kul trascorre 10 minuti a prebuffarsi mentre i luogotenenti tengono i PG o
 #### Fase 2 — Mischia
 - Carica il PG che rappresenta la maggiore minaccia strategica (il guaritore o il buffer).
 - Usa *hold person* su chiunque non sia immune agli effetti mentali.
-- Se il party usa Aegis Fang o la Corona di Adamantio con poteri attivi: *dispel magic* (CL 12) su di loro.
+- Se il party usa Aegis Fang o la Corona di Adamantio con poteri attivi: *dispel magic* (LI 14) su di loro.
 
 #### Fase 3 — Rituale dell'Avatar
 Quando è sotto il 50% dei PF o quando ha 3+ alleati sconfitti, avvia il Rituale di Invocazione dell'Avatar di Tiamat (vedi `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE3-*.md`). Il rituale richiede 3 round di concentrazione e il Sangue di Astruriel; interromperlo richiede che i PG lo attacchino mentre è vulnerabile.
 
 #### Ultima Risorsa
-Se ridotto sotto 20 PF e non può completare il rituale, usa *harm* sulla creatura più pericolosa del party (CD 22 Tempra, riduce a 1d4 PF) come ultimo atto di rappresaglia prima di cadere.
+Se ridotto sotto 20 PF e non può completare il rituale, usa *harm* sulla creatura più pericolosa del party (CD 22 Volontà dimezza; toglie 10 pf per livello incantatore fino a lasciarne 1) come ultimo atto di rappresaglia prima di cadere.
 
 ## Esiti possibili
 
@@ -168,4 +124,9 @@ Se ridotto sotto 20 PF e non può completare il rituale, usa *harm* sulla creatu
 ## Fonti e canone
 
 - **Fonte originale:** Red Hand of Doom (upscalato per PG livello 13–15)
-- Statblocco gemello: `../azarr-kul-final-cr15.md`.
+- Statblocco gemello: `../azarr-kul-final-cr17.md`.
+
+> <!-- storico -->
+> era: Chierico 10 / Guerriero 4, pf 119 (10d8+4d10+56), CA 28, TS Temp +13, Rifl +7, Vol +13, Sag 18, soffio CD 20, scritti in questa scheda prima che la versione B5 diventasse quella giocata.
+> era: tre domini (Guerra, Tirannia, «Tiamat») e slot da chierico 10 con livello incantatore 12; prebuff «CA ~32, +25/+20/+15, 3d6+11»; «Amuleto di Resistenza +2»; 7 usi dei Canali divini; *harm* descritto con TS sulla Tempra.
+> <!-- /storico -->

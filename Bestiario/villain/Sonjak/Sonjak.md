@@ -5,10 +5,10 @@
 
 
 ```statblocco
-gs: 13
+gs: 14
 ca: 22
 pf: 91
-ts: Temp +10, Rifl +8, Vol +14
+ts: Temp +11, Rifl +9, Vol +14
 velocita: 9 m
 ```
 
@@ -17,7 +17,9 @@ velocita: 9 m
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi]
 **Location**: [DA SCRIVERE — la scheda dice che comanda i campi drow sotto la Cannath Vale e ha un campo base nel Sottosuolo, non dove si trova adesso]
 **Motivation**: → §Cosa vuole (Obiettivo Primario, Secondario e Nascosto)
-**CR**: 13 | **Race/Class**: Drow (Elfo del Sottosuolo — Umanoide Medio); Chierico 10 / Prestige (Matrona Drow, equivalente a Guerra Sacra) 3 (Livello Totale 13); Legale Malvagio
+**CR**: 14 (drow con 13 livelli di classe: livello +1) | **Race/Class**: Drow (Elfo del Sottosuolo — Umanoide Medio); Chierico 13 di Lolth (SRD; i tre livelli di «Matrona Drow, equivalente a Guerra Sacra» non sono una classe pubblicata e la scheda li conta già come livelli da chierico negli incantesimi); Legale Malvagio
+
+> ⚠ Prerequisito: un chierico sta entro un passo dall'allineamento del suo dio, e Lolth è Caotica Malvagia: una Legale Malvagia non può esserne chierica. Tenuta così, perché è nella scheda; la correzione più leggera è Neutrale Malvagia. Quattro domini (Male, Magia, Ragno, Oscurità) contro i due del chierico SRD: tenuti tutti e quattro come scelta del DM; Ragno e Oscurità sono domini dei Reami [Private source — Forgotten Realms Campaign Setting]. PF1e: chierico con l'archetipo Separatista (APG) — non serve: dà un dominio fuori lista, non due in più.
 **Countdown Clock:** 4/8 (vedi `campaign/state.md`)
 **Key stats**: → §In combattimento. I numeri stanno in questa scheda.
 
@@ -105,7 +107,7 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 | **Saggezza** | 20 | +5 |
 | **Carisma** | 18 | +4 |
 
-**Punti Ferita:** 91 (13 DV: 13d8+26)
+**Punti Ferita:** 91 (13 DV: 13d8+26, il primo al massimo, +3 Robustezza [INFERRED — needs DM confirmation])
 **Iniziativa:** +4
 **Velocità:** 9 m
 
@@ -114,14 +116,16 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 *Contatto: 16 / Colto alla sprovvista: 18*
 
 **Tiri Salvezza:**
-- **Tempra:** +10 (+8 Base, +2 Cos)
-- **Riflessi:** +8 (+4 Base, +4 Des)
-- **Volontà:** +14 (+9 Base, +5 Sag)
+- **Tempra:** +11 (+8 Base, +2 Cos, +1 resistenza)
+- **Riflessi:** +9 (+4 Base, +4 Des, +1 resistenza)
+- **Volontà:** +14 (+8 Base, +5 Sag, +1 resistenza; +2 razziale contro incantesimi e capacità magiche)
+
+*Mantello della resistenza +1* [INFERRED — needs DM confirmation]: la base del chierico 13 è +8 sulla Volontà, non +9, e il mantello tiene il +14 della scheda.
 
 **BAB/Grapple:** +9 / +11
 
 **Attacchi:**
-- Mazzafrusto drow +2 (sacra malvagia) +13/+8 (1d6+4; +2d6 vs Buono)
+- Mazzafrusto pesante +2 sacrilego +13/+8 (1d10+4; +2d6 vs Buono) — la scheda dava 1d6, sotto il dado di qualunque mazzafrusto
 - O: Tocco sacrilego +11 (1d6+5 danni negativi; CD Tempra 22 o *sickened* 1 round)
 
 ### Capacità drow
@@ -129,7 +133,7 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 - **Scurovisione:** 36 m
 - **Cecità alla Luce Solare:** In piena luce solare, -1 ai tiri per colpire e TS Percezione
 - **Immunità al Sonno:** Immune agli effetti di sonno magico
-- **RI:** 25 (eredità drow potenziata da livelli di classe)
+- **RI:** 25 (SRD: 11 + 13 livelli = 24, +1 dall'eredità di Matrona che la scheda dichiara [INFERRED — needs DM confirmation])
 - **Resistenza:** +2 razziale ai TS vs incantesimi e capacità magiche
 
 #### Poteri Magici Innati (1/giorno, CL uguale al livello totale)
@@ -141,19 +145,26 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 
 **Domini:** Malvagio, Magia, Ragno (Spider), Oscurità
 
+Chierico 13 con Sag 20: CD 15 + livello dell'incantesimo.
+
 | Livello | Slot | Incantesimi tipici |
 |:---:|:---:|:---|
-| 0 | 4 | *detect magic, read magic, guidance, inflict minor wounds* |
-| 1 | 5+1 | *protection from good, divine favor, obscuring mist, bane, command* |
-| 2 | 5+1 | *hold person, silence, darkness, web, desecrate* |
-| 3 | 4+1 | *prayer, dispel magic, bestow curse, blindness/deafness, contagion* |
-| 4 | 4+1 | *freedom of movement, unholy blight, poison, divine power* |
-| 5 | 3+1 | *flame strike (acido), insect plague, slay living, true seeing* |
-| 6 | 2+1 | *harm, blade barrier, greater dispel magic* |
+| 0 | 6 | *detect magic, read magic, guidance, inflict minor wounds* |
+| 1 | 7+1 | *protection from good, divine favor, obscuring mist, bane, command* |
+| 2 | 6+1 | *hold person, silence, darkness, web, desecrate* |
+| 3 | 5+1 | *prayer, dispel magic, bestow curse, blindness/deafness, contagion* |
+| 4 | 5+1 | *freedom of movement, unholy blight, poison, divine power* |
+| 5 | 4+1 | *flame strike (acido), insect plague, slay living, true seeing* |
+| 6 | 2+1 | *harm, blade barrier, greater dispel magic, word of recall* |
+| 7 | 1+1 | *blasphemy* (nessun TS), *destruction* (Tempra CD 22) |
 
 ### Tattica in combattimento
 
 Sonjak non combatte mai in prima linea se può evitarlo. Si posiziona dietro due guardie d'elite e usa incantesimi di area e controllo.
+
+**Prima del combattimento:** se avvertita, *libertà di movimento* e *visione del vero* su di sé, *potere divino* all'ultimo round; tiene sempre preparata *parola del richiamo*.
+
+**Round di apertura, se i PG sono raggruppati:** *blasfemia* (7°): nessun TS, solo la RI, e i PG non malvagi di livello pari al suo LI (13) restano frastornati per 1 round; poi la sequenza qui sotto.
 
 **Round 1:** *silence* sulla posizione dell'incantatore principale del party; *true seeing* su se stessa se sospetta invisibilità.
 
@@ -163,7 +174,7 @@ Sonjak non combatte mai in prima linea se può evitarlo. Si posiziona dietro due
 
 **Tattica Anti-Artemis:** Lancia *dispel magic* (CL 13) sul Ring of Chaotic Illumination alla prima opportunità. Se fallisce, usa *silence* sull'area dove Artemis si trova.
 
-**Fuga:** Se ridotta sotto il 25% dei PF, usa *dimension door* verso il suo campo base nel Sottosuolo. Lascia sempre una guardie d'elite a rallentare il party.
+**Fuga:** Se ridotta sotto il 25% dei PF, usa *parola del richiamo* (chierico 6°: *dimension door* non è nella lista del chierico) verso il suo campo base nel Sottosuolo. Lascia sempre una guardie d'elite a rallentare il party.
 
 ## Esiti possibili
 
@@ -182,3 +193,15 @@ Sonjak non combatte mai in prima linea se può evitarlo. Si posiziona dietro due
 
 Schede post-mortem: `Bestiario/villain/Belkram/Belkram.md`, `Bestiario/villain/Urialle/Urialle.md`.
 Log dell'evento: `campaign/sessions/RETROATTIVI-ARC07-INFERRED.md` (R0).
+
+Benchmark: PF T1-1 riga 14: CA 22 (−7), pf 91 (−109), att +13 (−10), CD 22 al 7° livello (=). In linea sulle CD, sotto sulla tenuta; la tengono in piedi le due guardie e la *parola del richiamo*.
+
+Boost log: correzione dei conti 3.5 (drow Chierico 13) — GS 13 → 14 — i drow hanno GS pari al livello +1; incantesimi del 7° livello e slot rifatti; Volontà, pf e RI tenuti con un mantello, un talento e l'eredità di Matrona.
+
+<!-- storico -->
+- era: Chierico 10 / «Matrona Drow» 3, GS 13
+- era: Vol +14 con «+9 Base» (la base è +8); pf 91 senza conto (13d8+26 dà 84, 88 col primo dado al massimo)
+- era: mazzafrusto 1d6+4
+- era: slot 4/5+1/5+1/4+1/4+1/3+1/2+1, niente 7° livello
+- era: fuga con *dimension door*
+<!-- /storico -->

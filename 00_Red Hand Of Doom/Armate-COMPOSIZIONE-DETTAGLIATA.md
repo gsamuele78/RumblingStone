@@ -162,7 +162,7 @@ Varianti colore Tiamat. Base template + delta per colore.
 | Koth (Signore dei Dragoni) | 9 | `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/signore dei Dragoni Koth.htm` | Vraath Keep / field commander |
 | Saarvith | 11 | `09_…/Arco-Post-Hammerfist-P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md` | Rhest boss |
 | Zalkatar | 13 | `09_…/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` | Torre Invisibile boss |
-| Karruk | 10 | [ACCEPTED] `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr10.md` | Rethmar Fase 1 assault leader |
+| Karruk | 13 | [ACCEPTED] `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr13.md` | Rethmar Fase 1 assault leader |
 | Ulwai Stormcaller (Bard) | 8 | Base: `Lómyn redTongue bard 8.pcg` | Variante nominata |
 
 ---
@@ -340,7 +340,7 @@ Tutti marcati `[ACCEPTED — DM-canon 2026-05-05]`; fonte AP RHoD + SRD/MM/FRCS.
 | Zarim (Illithid luogotenente) | 12 | `Bestiario/villain/Zarim/zarim-illithid-luogotenente-cr12.md` | 09 P2B Torneo |
 | Xal'thor (Illithid Commander) | 14 | `Bestiario/villain/Xal_thor/xal-thor-illithid-commander-cr14.md` | 09 P2B Day 3 |
 | Ondata Giganti — mass wave | 15 | `Bestiario/mostri/ondata-giganti-fanteria-cr15.md` | 09 Fase 1-3 |
-| Azarr Kul (finale) | 15 | `Bestiario/villain/Azarr_Kul/azarr-kul-final-cr15.md` | 09 Fase 3 |
+| Azarr Kul (finale) | 17 | `Bestiario/villain/Azarr_Kul/azarr-kul-final-cr17.md` | 09 Fase 3 |
 | Avatar di Tiamat | 17 | `Bestiario/villain/Avatar_Tiamat/avatar-tiamat-cr17.md` | 09 Fase 3 climax |
 
 ### 16b. Ghostlord Branch (Undead Aberration)
@@ -356,10 +356,10 @@ Tutti marcati `[ACCEPTED — DM-canon 2026-05-05]`; fonte AP RHoD + SRD/MM/FRCS.
 | Capitana Lorana | 7 | `Bestiario/png/Lorana/capitana-lorana-cr7.md` | Rethmar ally, milizia |
 | Therysol (tiefling mezzo-drago) | 9 | `Bestiario/png/Therysol/therysol-tiefling-mezzodrago-cr9.md` | Rakshasa hunter ally |
 | Githyanki Knight Elite | 10 | `Bestiario/mostri/githyanki-knight-elite-cr10.md` | Rethmar wave |
-| Dauth Commander (mercenari nani) | 11 | `Bestiario/png/dauth-commander-mercenari-nani-cr11.md` | Rethmar ally |
+| Dauth Commander (mercenari nani) | 12 | `Bestiario/png/dauth-commander-mercenari-nani-cr12.md` | Rethmar ally |
 | Druid-Bear Ally (wildshape tank) | 12 | `Bestiario/png/druid-bear-ally-cr12.md` | Cerchio Sacro |
-| Arci-Druido Circolo | 14 | `Bestiario/png/arci-druido-circolo-cr14.md` | Cerchio Sacro boss |
-| Arcimago Circolo degli Otto | 14 | `Bestiario/png/arcimago-circolo-otto-cr14.md` | Starsong/Circle ally |
+| Arci-Druido Circolo | 17 | `Bestiario/png/arci-druido-circolo-cr17.md` | Cerchio Sacro boss |
+| Arcimago Circolo degli Otto | 17 | `Bestiario/png/arcimago-circolo-otto-cr17.md` | Starsong/Circle ally |
 
 ### 16d. Villain Politici / Shadow Masters
 

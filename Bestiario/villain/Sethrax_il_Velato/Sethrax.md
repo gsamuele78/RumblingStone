@@ -5,9 +5,9 @@
 ```statblocco
 gs: 12
 ca: 22
-ca-dettaglio: (10 base, +5 Des “simulato”, +3 Sag, +1 Dodge, +4 bonus monaco, +1 Mental Barrier passivo)
-pf: 70
-ts: Temp +5, Rifl +5, Vol +11
+ca-dettaglio: (10 base, +1 Des, +3 armatura [tuta psicoadattiva], +4 naturale, +4 deviazione [scudo psionico passivo]), contatto 15, colto alla sprovvista 21
+pf: 74
+ts: Temp +5, Rifl +6, Vol +15
 velocita: 9 m
 ```
 
@@ -17,7 +17,7 @@ velocita: 9 m
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; i rami del Torneo sono in §Esiti possibili]
 **Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; la missione lo porta al Torneo di Dauth]
 **Motivation**: → §Cosa vuole (l’obiettivo reale: il “seme di Porta”)
-**CR**: 12 | **Race/Class**: Illithid (Mind Flayer — Aberrazione Medio); Psion 5 (Telepath) — DV totali 8d8 + 5d4 + 26 → CR 12; Legale Malvagio (servizio metodico, non zelo)
+**CR**: 12 | **Race/Class**: Illithid (Mind Flayer — Aberrazione Medio) [Private source — Monster Manual]; Psion 5 (Telepath; SRD 3.5, psionici) — DV totali 8d8 + 5d4 + 26 → GS 13 per somma (8 + 5), tenuto a 12 per il ruolo; Legale Malvagio (servizio metodico, non zelo)
 **Identità di copertura:** *Kethran “Mano di Pietra”* — monaco errante umano, presunto Monk 11.
 **Patrono:** **Zalkatar**, Illithid Warlock Drow della **Torre Invisibile** (vedi `Arco-Post-Hammerfist-P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md`).
 **Countdown Clock:** Sincronizzato con il Torneo (eventi automatici Giorni 1–3). Esito finale impatta il clock di Zalkatar (P2A).
@@ -73,7 +73,7 @@ Sethrax non è venuto per vincere. La sua missione è restare **vicino all’Orb
 
 ## Nella campagna
 
-- Sethrax è progettato come **scena tattica + indizio**, non come boss definitivo. CR 12 (sotto Xal’thor CR 14, sotto Zalkatar CR 13) = vince per copertura, non per potenza.
+- Sethrax è progettato come **scena tattica + indizio**, non come boss definitivo. GS 12 (sotto Xal’thor e Zalkatar, entrambi GS 14) = vince per copertura, non per potenza.
 - Il **valore narrativo principale** di Sethrax è far convergere il Torneo di Tordek (P2B) e la Torre Invisibile di Artemis (P2A) in un’unica cospirazione planare. Senza di lui i due archi corrono paralleli; con lui si toccano.
 - Se i PG lo smascherano nel Giorno 2: premia con XP narrativa (1500 XP) per investigazione anche se non scontro.
 - Se Artemis non è al Torneo: assicurati che riceva la notizia entro 24h via messaggero / lettera / sogno (vedi `PARTE3` epilogo cross-arco).
@@ -99,9 +99,9 @@ Sethrax non è venuto per vincere. La sua missione è restare **vicino all’Orb
 | **Costituzione** | 14 | +2 |
 | **Intelligenza** | 20 | +5 |
 | **Saggezza** | 17 | +3 |
-| **Carisma** | 15 | +2 |
+| **Carisma** | 17 | +3 |
 
-**Punti Ferita:** 70 (8d8 base Illithid + 5d4 Psion 5 + 26 Cos)
+**Punti Ferita:** 74 (8d8 base Illithid + 5d4 Psion 5 + 26 Cos)
 **Iniziativa:** +5 (+1 Des, +4 Improved Initiative)
 **Velocità:** 9 m
 
@@ -110,13 +110,13 @@ Sethrax non è venuto per vincere. La sua missione è restare **vicino all’Orb
 *Touch 15 / Flat-footed 21*
 
 **Tiri Salvezza:**
-- **Tempra:** +5 (+3 Base, +2 Cos)
-- **Riflessi:** +5 (+4 Base, +1 Des)
-- **Volontà:** +11 (+8 Base, +3 Sag)
+- **Tempra:** +5 (+3 Base: illithid +2, Psion +1; +2 Cos)
+- **Riflessi:** +6 (+3 Base: illithid +2, Psion +1; +1 Des, +2 Riflessi Fulminei)
+- **Volontà:** +15 (+10 Base: illithid +6, Psion +4; +3 Sag, +2 Volontà di Ferro)
 
-**RI:** 21
+**RI:** 25 (razziale dell'illithid)
 
-**BAB/Grapple:** +7 / +8
+**BAB/Grapple:** +8 / +9
 
 **Attacchi (forma reale):**
 - 4 Tentacoli +9 (1d4+1 ciascuno; se 4 colpiscono lo stesso bersaglio → grapple → estrazione cervello al round successivo, TS Tempra CD 18 o morte istantanea)
@@ -127,7 +127,7 @@ Sethrax non è venuto per vincere. La sua missione è restare **vicino all’Orb
 ### CAPACITÀ SPECIALI
 
 #### Mind Blast (Su)
-Cono 18 m. Storditi 1d4 round. TS Volontà CD 17. Ricarica 1d4 round.
+Cono 18 m. Storditi 3d4 round. TS Volontà CD 17 (10 + 4 per gli 8 DV razziali + 3 Car). Ricarica 1d4 round.
 **Mai usato sotto copertura.** Solo dopo lo smascheramento.
 
 #### Detect Thoughts (Su, sempre attivo entro 18 m)
@@ -144,26 +144,28 @@ Manifestazione gratuita, mantenuta da Sethrax come stato persistente.
 #### Slave Psionico — “l’Allievo”
 Lo accompagna sempre come traduttore/voce. È un monaco umano (Adept 1, PF 6, AC 12) con cervello già parzialmente cerebromorfizzato. Parla con voce piatta, non sbatte mai gli occhi, sanguina dal naso sotto pressione (Diplomazia / Raggirare CD 25 → fugge balbettando, indizio chiave per i PG).
 
-#### Poteri Psionici (CL 5, PP 33)
+#### Poteri Psionici (CL 5, PP 37 — 25 da Psion 5, 12 da Int 20)
 
-- *Charm Monster* (Vol CD 17), 3/giorno — usato in arena travestito come “Stunning Fist tecnico”.
-- *Suggestion* (Vol CD 16), 3/giorno.
+- *Charm Monster* (Vol CD 17), a volontà come l'illithid del *Monster Manual* — usato in arena travestito come “Stunning Fist tecnico”.
+- *Suggestion* (Vol CD 16), a volontà.
 - *Mental Barrier* (azione immediata, +4 CA per 1 round), 3/giorno.
 - *Psionic Dimension Door*, 3/giorno — fuga rapida.
 - *Psionic Plane Shift*, 1/giorno — fuga di emergenza verso la **Torre Invisibile**. Richiede 1 round di canalizzazione (vulnerabile a counterspell / readied attack).
 - *Concealing Amorpha*, *Force Screen* — utility difensive.
 
+> ⚠ Prerequisito: un Psion 5 manifesta poteri fino al 3° livello; *Psionic Dimension Door* è del 4°, e lo manifesta un Psion 7. Tenuto, perché è nella scheda. PF1e: Psichico (*Occult Adventures*, OGL) — si avvicina: incantatore mentale spontaneo con *porta dimensionale* al 4° livello, ma senza punti potere.
+
 #### Talenti
-Improved Initiative, Combat Casting, Psicocrafter, Inner Strength, Iron Will.
+Improved Initiative, Combat Casting, Psicocrafter, Inner Strength, Iron Will. *Psicocrafter* non ha un equivalente riconoscibile fra i talenti psionici SRD [INFERRED — needs DM confirmation]; 13 DV e i due talenti bonus del Psion danno sette talenti: il sesto è Riflessi Fulminei, il settimo resta da scegliere [INFERRED — needs DM confirmation]. Car 17 viene da un *mantello del carisma +2*, nascosto sotto la veste monastica [INFERRED — needs DM confirmation]: tiene le CD della versione di prima.
 
 #### Abilità chiave
-Bluff +12, Camuffare +14 (+22 con *Disguise Self* psionico attivo), Conoscenze (arcane, planari, dungeoneering) +18, Diplomazia +12, Percezione +14, Psicocrafting +18.
+Bluff +12, Camuffare +14 (+22 con *Disguise Self* psionico attivo), Conoscenze (arcane, planari, dungeoneering) +18, Diplomazia +12, Ascoltare e Osservare +14, Psicocrafting +18.
 
 ### STATBLOCCO “KETHRAN MANO DI PIETRA” (PUBBLICO, FALSO)
 
 Quando combatte come finalista mascherato, dichiara questi numeri all’arbitro per credibilità:
 
-- PF: 70
+- PF: 74
 - CA: 24 (10 base, +5 Des “simulato”, +3 Sag, +1 Dodge, +4 bonus monaco, +1 Mental Barrier passivo)
 - BAB +8/+3
 - Unarmed +13/+8 (1d10+3) — i tentacoli incappucciati colpiscono come pugni
@@ -210,3 +212,16 @@ Se libero di canalizzare: continua. PF residui sul piedistallo lo lasciano vulne
 
 - **File correlati:** `09_Continuazione.../Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE2-Giorno2-Semifinali.md`, `…-PARTE3-Giorno3-Finale-e-Invasione.md`, `…-STATBLOCCHI-COMPLETO.md` voce **10**, `…-OTTO-PORTE-e-ORBE.md` §2.1.1, `Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md` (fazione rivale).
 - Il riquadro in testa dichiara questo file fonte autoritativa per i trigger di smascheramento, i limiti dei poteri psionici e la tabella degli esiti.
+
+Benchmark: PF T1-1 riga 12: CA 22 (−5), pf 74 (−86), att +9 (−12), CD 17 (−4). Sotto su tutto, come vuole il ruolo: è un agente che vince per copertura e scappa, non un boss.
+
+Boost log: correzione dei conti 3.5 sulla build della scheda (illithid 8 DV + Psion 5) — GS 12 → 12 — pf, TS, BAB e punti potere rifatti sulle progressioni; RI, esplosione mentale e poteri razziali portati a quelli dell'illithid del *Monster Manual*; Car 17 (mantello) e Riflessi Fulminei tengono CD e Riflessi della versione di prima.
+
+<!-- storico -->
+- era: `ca-dettaglio` del blocco con la CA finta di Kethran (somma 24) accanto a `ca` 22, la vera
+- era: pf 70 (la formula 8d8 + 5d4 + 26 dà 74)
+- era: TS Temp +5, Rifl +5, Vol +11 (Volontà di Ferro elencata e non contata)
+- era: Car 15; Rifl +5
+- era: RI 21; BAB/Lotta +7/+8; esplosione mentale CD 17, storditi 1d4 round
+- era: PP 33; *charme sui mostri* CD 17 e *suggestione* CD 16, 3/giorno
+<!-- /storico -->

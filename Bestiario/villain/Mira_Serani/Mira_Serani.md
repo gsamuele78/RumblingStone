@@ -18,7 +18,7 @@ smascherarla con un solo sguardo.
 Stregone 6 — statblock: `mira-serani-aranea-cr8.md` in questa cartella.
 Per il **ritorno ad APL 13** → ramo boost in §In combattimento (CR 11 skirmisher / CR 13-14 boss).
 **Key stats**: → `mira-serani-aranea-cr8.md`. Sintesi: mutaforma (bimba Piccola / adolescente
-Media), incantatrice-controllore, veleno, fuga via *invisibilità*/mutare forma, CD chiave 14-16.
+Media), incantatrice-controllore, veleno, fuga via *invisibilità superiore*/*porta dimensionale*/mutare forma, LI 9, CD chiave 14-17.
 **Token**: — (da assegnare)
 
 ---
@@ -107,7 +107,7 @@ Lo statblock canon (`mira-serani-aranea-cr8.md`) è la sua forma da PG 8-9.
 Se ricompare contro il party **attuale (APL 13)**, boost via
 `skills/npc-villain-boosting/`:
 - **Skirmisher CR ~11** (resta una spia che fugge): Aranea Stregone 9
-  (→ 4° livello incantesimi, *invisibilità superiore*, *porta dimensionale*).
+  (LI 12 con l'innato dell'aranea → 6° livello incantesimi; *invisibilità superiore* e *porta dimensionale* li ha già al GS 8).
 - **Boss CR 13-14** (smette di fuggire, climax): + template
   **Metà-Immondo/Advanced** e/o +2 DV, *volo*/*forma eterea*, con 2 guardie
   ragno e terreno di ragnatele → EL da climax su APL 13.

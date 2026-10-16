@@ -4,10 +4,18 @@
 
 ```statblocco
 gs: 8
+tipo: Medium humanoid (elf), Ranger 8, CB
 ca: 19
+ca-dettaglio: contatto 14, colto alla sprovvista 15 (+5 cuoio borchiato +2, +4 Des); 21 con pelle coriacea
 pf: 60
-ts: Temp +7, Rifl +10, Vol +6
+pf-dado: 8d8+24
+ts: Temp +10, Rifl +11, Vol +6
+attributi: For 14 Des 18 Cos 17 Int 14 Sag 16 Car 12
 velocita: 9 m a piedi
+iniziativa: +8
+attacchi:
+  - Distanza arco lungo composito +1 (For 14) +13/+8 (1d8+3/19-20/×3)
+  - Mischia spada corta +10/+5 (1d6+2/19-20)
 ```
 
 **Razza/Tipo:** Elfa dei Boschi (Umanoide Medio, elfo)
@@ -26,7 +34,7 @@ velocita: 9 m a piedi
 ## Chi è
 
 ### Connessione druidica residua
-Lythiel ha **2 livelli druidici falliti** (background canonico): cominciò il percorso druidico nel Cerchio del Sacred Forest a 200 anni, fu chiamata alla guerra prima del rito di iniziazione. **Sa lanciare 0 incantesimi** ma riconosce **immediatamente l'aura druidica di Hella** (Sapienza Naturale CD 12, automatico per Lythiel). Questo è il motivo per cui può consegnare a Hella la **Ghianda del Cerchio** (vedi sotto) — come elfa-non-druida non potrebbe, ma il Cerchio l'ha autorizzata di passaggio.
+Lythiel ha **2 livelli druidici falliti** (background canonico): cominciò il percorso druidico nel Cerchio del Sacred Forest a 200 anni, fu chiamata alla guerra prima del rito di iniziazione. **Non lancia incantesimi da druida** (quelli da ranger sì, pochi: §In combattimento) ma riconosce **immediatamente l'aura druidica di Hella** (Sapienza Naturale CD 12, automatico per Lythiel). Questo è il motivo per cui può consegnare a Hella la **Ghianda del Cerchio** (vedi sotto) — come elfa-non-druida non potrebbe, ma il Cerchio l'ha autorizzata di passaggio.
 
 ## Aspetto e voce
 
@@ -117,6 +125,10 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - **Sceglie sempre come bersaglio i caster nemici** (i druidi corrotti, i caster Drow Pyromancer se presenti). Conosce il loro pattern.
 - Se Hella è ferita gravemente, le consegna **una pozione Cure Serious Wounds** prima di combattere.
 - **Non parla durante il combattimento**, eccetto comandi rapidi a Inathiel.
+- *Prima del combattimento*: se ha un minuto, *pelle coriacea* su di sé e *resistere all'energia* contro il fuoco dei piromanti. Tira dalla sella, a più di 9 m dal bersaglio, e il primo colpo è Tiro Multiplo sull'incantatore.
+- *Morale*: sotto 20 pf, o se Inathiel scende sotto metà dei suoi, si alza in quota fuori tiro e torna solo per Hella. Non si arrende ai drow.
+
+> [INFERRED — needs DM confirmation] Le righe *Prima del combattimento* e *Morale* sono scritte da un agente sui poteri della scheda.
 
 ### STATISTICHE D&D 3.5
 
@@ -124,42 +136,48 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 |:---|:---:|:---:|
 | **Forza** | 14 | +2 |
 | **Destrezza** | 18 | +4 |
-| **Costituzione** | 13 | +1 |
+| **Costituzione** | 17 | +3 |
 | **Intelligenza** | 14 | +2 |
 | **Saggezza** | 16 | +3 |
 | **Carisma** | 12 | +1 |
 
-**Punti Ferita:** 60 (8d8 + 8 Cos + 8 Toughness implicit)
-**Iniziativa:** +5 (+4 Des, +1 Improved Initiative-equivalent via talento)
+**Punti Ferita:** 60 (8d8 + 24 Cos; Cos 17 con l'*amuleto della salute +4*, dono del Cerchio `[INFERRED — needs DM confirmation]`)
+**Iniziativa:** +8 (+4 Des, +4 Iniziativa Migliorata)
 **Velocità:** 9 m a piedi; 24 m volo (sul gufo)
+**Sensi:** visione crepuscolare
 
-**Classe Armatura:** 19 (10 base, +4 Des, +5 Studded Leather +2)
-*Touch 14 / Flat-footed 15*
+**Classe Armatura:** 19 (10 base, +4 Des, +5 cuoio borchiato +2); 21 con *pelle coriacea*
+*Contatto 14 / Colto alla sprovvista 15*
 
-**Tiri Salvezza:** Tempra +7, Riflessi +10, Volontà +6 (+2 vs incantamento)
+**Tiri Salvezza:** Tempra +10, Riflessi +11, Volontà +6 (+2 contro ammaliamento, immune al *sonno* magico; +1 a tutti dal *mantello della resistenza +1* `[INFERRED — needs DM confirmation]`)
 
-**BAB/Grapple:** +8 / +10
+**BAB/Lotta:** +8 / +10
 
 **Attacchi:**
-- Arco lungo composito +1 +13/+8 (1d8+3, x3) — *Manyshot* permette 2 frecce su singolo attacco a partire da BAB +6
-- Spada corta secondaria +10 (1d6+2)
-- Combinazione di tiro: 2 frecce per attacco (Manyshot) + 1 freccia avvelenata speciale (5 al giorno)
+- Arco lungo composito +1 (For 14) +13/+8 (1d8+3, 19–20/×3); con Tiro Rapido +11/+11/+6; con Tiro Multiplo, azione standard, 2 frecce a +9 (1d8+3 ciascuna)
+- Spada corta +10/+5 (1d6+2, 19–20/×2)
+- 1 freccia avvelenata speciale (5 al giorno)
 
 ### CAPACITÀ DI CLASSE
 
 #### Ranger 8 (focus Aberrazioni / secondario Giganti)
 - **Nemico Prescelto: Aberrazioni +4**, Giganti +2
-- **Cammino Senza Tracce** (Ex)
-- **Resistente** (Ex, +2 ai TS Tempra contro elementi naturali)
-- **Senza Sentiero** (Ex, può muoversi alla velocità normale in terreno naturale difficile)
-- **Compagno Animale (Inathiel)** — CR 5 Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1))
-- **Stile di Combattimento (Tiro)** — con bonus Manyshot, Tiro Rapido, Tiro Multiplo
+- **Empatia Selvatica**, **Seguire Tracce**, **Inseguitore Rapido** (Ex, segue le tracce a velocità normale senza penalità)
+- **Andatura nel Bosco** (Ex, si muove alla velocità normale nel sottobosco naturale)
+- **Cammino Senza Tracce** (Ex) — non è un privilegio del ranger SRD, è del druido: la scheda glielo dà per gli anni nel Cerchio `[INFERRED — needs DM confirmation]`
+- **Stile di Combattimento (Tiro)**, poi **Stile Migliorato**: Tiro Rapido e Tiro Multiplo come talenti bonus
+- **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Sono una scelta di questa revisione, sulla lista del ranger `[INFERRED — needs DM confirmation]`
+- **Inathiel** — Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1)), la sua cavalcatura
+
+> ⚠ Prerequisito: il gufo gigante è una **bestia magica**, non un animale, e non è nella lista dei compagni animali dell'SRD; in più è celestiale. Come compagno animale del ranger non si può prendere. La scheda lo tiene così com'è: va letto come una cavalcatura legata, come i gufi del Signore Ventolesto, non come un privilegio di classe `[INFERRED — needs DM confirmation]`. PF1e: il compagno animale del ranger PF1e non ammette bestie magiche nemmeno lì; il talento *Leadership* lo prenderebbe come gregario, ma stravolge (il gufo diventerebbe un PNG che sale di livello).
 
 #### Talenti
-Tiro Rapido, Tiro Multiplo, Manyshot, Endurance, Track, Improved Critical (longbow), Skill Focus (Conoscenze Natura).
+Seguire Tracce, Tiro Rapido, Resistenza Fisica, Tiro Multiplo (bonus di classe); Critico Migliorato (arco lungo), Abilità Focalizzata (Conoscenze natura), Iniziativa Migliorata `[INFERRED — needs DM confirmation]`.
 
 #### Abilità chiave
-Conoscenze (Natura) +13, Sopravvivenza +14, Cavalcare (con Inathiel) +15, Percepire +14, Ascoltare +14, Concentrazione +9, Move Silently +12, Hide +12.
+Conoscenze (Natura) +13, Sopravvivenza +14, Cavalcare (con Inathiel) +15, Osservare +14, Ascoltare +14, Concentrazione +9, Muoversi Silenziosamente +12, Nascondersi +12.
+
+Benchmark: PF T1-1 riga 8: CA 19 (21 con *pelle coriacea*) vs 21 / pf 60 vs 100 (sotto) / atk +13 vs +15 (2 sotto) / danni con Tiro Rapido circa 22 vs 35 / TS buoni +10 e +11 vs +11. Arciera da seconda linea: colpisce quasi come il suo GS, non lo regge.
 
 ## Esiti possibili
 
@@ -202,3 +220,17 @@ Conoscenze (Natura) +13, Sopravvivenza +14, Cavalcare (con Inathiel) +15, Percep
 - **Hooks integration master**: `Arco-Post-Hammerfist-HOOKS-INTEGRATION-MASTER.md`
 - **Hella hook scene**: `Arco-Post-Hammerfist-HOOKS-Hella-SacredForest.md`
 - **Druid Circle / Saraah**: contesto in `campaign/state.md` §3 (Druid Circle row)
+
+### Conti corretti
+
+Boost log: correzione dei conti (SRD) — GS 8 → 8 — talento libero assegnato a Iniziativa Migliorata, incantesimi da ranger scritti; pf 60 e Volontà +6 tenuti con un amuleto della salute +4 e un mantello della resistenza +1 (INFERRED).
+
+<!-- storico -->
+> Valori superati, campo per campo (dalla scheda prima della revisione del 2026-10-16):
+> - era: pf 60 («8d8 + 8 Cos + 8» di un talento implicito: quel talento dà 3 pf, e non era fra quelli elencati) → ora 60 (8d8+24), con Cos 17 dall'amuleto
+> - era: iniziativa +5 («+1 Improved Initiative-equivalent») → ora +8: il posto libero fra i talenti è diventato Iniziativa Migliorata, perché la sua tattica è colpire per prima gli incantatori
+> - era: Cos 13, Tempra +7, Riflessi +10, Volontà +6 (che non tornava: base +2, Sag +3) → ora Cos 17, Tempra +10, Riflessi +11, Volontà +6, con amuleto e mantello
+> - era: arco 1d8+3 ×3 → ora 19–20/×3, per il Critico Migliorato che la scheda già elencava
+> - era: «Sa lanciare 0 incantesimi»; un ranger di 8° ne lancia (2/1 con Sag 16) → ora incantesimi da ranger, e la frase parla di quelli da druida
+> - era: «Resistente (+2 Tempra contro elementi naturali)», che non è un privilegio del ranger → ora Resistenza Fisica, il talento bonus che dà; «Tiro Multiplo» e «Manyshot» elencati come due talenti, che sono lo stesso
+<!-- /storico -->

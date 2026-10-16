@@ -10,7 +10,7 @@
 **Location**: retrovie dell'orda, dove ci sono acqua corrente e roccia — non dorme mai in tenda
 **Motivation**: Azarr Kul gli ha promesso le gallerie alte di Hammerfist e le miniere che ci stanno sotto. Ghaurush non serve Tiamat; **incassa**. Quando la valle sarà sua, i primi a pagargli il pedaggio saranno gli hobgoblin che oggi lo chiamano alleato.
 **CR**: 16 (variante *Advanced* CR 17) | **Race/Class**: Ogre magi, Stregone 8
-**Key stats**: vedi `ghaurush-cenerevento-cr16.md` — hp 107, CA 21 (25 con *scudo*), volo a volontà, **rigenerazione 5**, *pelle di pietra* (RD 10/adamantio), muro di fuoco dal bastone, cono di freddo CD 21
+**Key stats**: vedi `ghaurush-cenerevento-cr16.md` — hp 107, CA 22 (26 con *scudo*), volo a volontà, **rigenerazione 5**, *pelle di pietra* (RD 10/adamantio), muro di fuoco dal bastone, cono di freddo CD 21
 **Token**: — (nessuno assegnato; `Bestiario/tokens/da-catalogare/` da verificare)
 
 ---
@@ -91,7 +91,7 @@ Le due cose che il tavolo si ricorderà:
 ## Esiti possibili
 
 - **Ucciso** — l'orda perde il suo unico comandante che sa contare. −1 CS alla Fase 1 di Rethmar, e le due lettere su Sonjak restano addosso al cadavere: se i PG perquisiscono, aprono il ramo «Sonjak tradisce la Mano Rossa».
-- **Fuggito** (forma gassosa / metamorfosi, sotto il 25% dei pf — **esito di default**) — riappare a Rethmar Fase 1, e stavolta ha visto lavorare i PG: nel secondo incontro apre con *dissolvi magie* sull'anello di Artemis e piazza il muro di fuoco sulla Collana.
+- **Fuggito** (forma gassosa / metamorfosi, sotto il 25% dei pf — **esito di default**) — riappare a Rethmar Fase 1, e stavolta ha visto lavorare i PG: nel secondo incontro apre con *muro di forza* per dividere il gruppo, e tiene *dissolvi magie* per l'anello di Artemis se lei lo scavalca in volo; il muro di fuoco arriva dopo, sul secondo asse (scheda del secondo incontro, §Tattiche).
 - **Accordo rispettato** — nessun agguato nelle gallerie alte. Ghaurush **mantiene la parola**: è quello che rende difficile odiarlo, ed è il punto.
 - **Accordo tradito dai PG** — al secondo incontro non tratta e non parla. Chiama Thorik per nome.
 

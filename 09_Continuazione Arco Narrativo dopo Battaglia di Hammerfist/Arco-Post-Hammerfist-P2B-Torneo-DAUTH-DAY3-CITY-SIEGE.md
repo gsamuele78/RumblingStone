@@ -60,7 +60,7 @@ state.md §2). Il "terrore del cielo" qui è un semplice **Razorfiend**.
 
 | Elemento | Statblock (riuso) | Fonte / condizione |
 |---|---|---|
-| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr11.md` | Guarnigione cittadina |
+| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr12.md` | Guarnigione cittadina |
 | Difensori nani | `.../dauth-dwarf-defender-cr6.md` | Guarnigione |
 | **300 mercenari nani** | (astratti) | **Solo se Tordek vince/ha vinto** (D10) — a Dauth sono già ingaggiati per l'evento |
 | **150 lance di Re Thorek** | (astratte) | **Solo se il sigillo + messaggero** sono partiti in tempo — vedi `...SUBQUEST-Thorik.md` |

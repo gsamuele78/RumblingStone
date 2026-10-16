@@ -1,7 +1,7 @@
 # ZALKATAR — Illithid Warlock della Torre Invisibile, «il Padrone delle Menti» [NON-CREATURA] [RIMANDO]  — dossier di fazione
 ## *Il biologo da torre, e il compratore di schiavi che ARC-04 non aveva mai nominato*
 
-**Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` — **GS 13**, 14d4+70, CA 24. Questo file è un **dossier di fazione**: non porta statistiche e non è una creatura.
+**Key stats**: → `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` — **GS 14**, illithid 8 DV [Private source — Monster Manual] + Warlock 6 [Private source — Complete Arcane], 130 pf, CA 24, RI 25, CD 24. Questo file è un **dossier di fazione**: non porta statistiche e non è una creatura.
 
 **Role**: patrono del conclave illithid della **Torre Invisibile**; boss finale dell'arco di **Artemis** (P2A); mandante di **Sethrax il Velato** al Torneo di Dauth.
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; i rami del finale sono in §Esiti possibili]
@@ -59,7 +59,7 @@ di Hella. Il collegamento **non è noto ai PG** (come il legame raid→Sonjak,
 
 I numeri stanno nello statblocco d'arco (Key stats, in testa).
 
-**Statblocco**: `…P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` (GS 13). La regia
+**Statblocco**: `…P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` (GS 14). La regia
 dello scontro e le quattro opzioni narrative stanno in
 `…P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md`.
 

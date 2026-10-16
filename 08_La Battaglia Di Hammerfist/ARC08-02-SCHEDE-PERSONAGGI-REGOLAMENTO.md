@@ -27,7 +27,7 @@
     *   Signore Ventolesto (Gufo Celestiale Alpha)
     *   Capitano Lunapiena (Leader Ranger Elfico)
     *   Orion Pelleorsa (Druido Umano)
-    *   Maestro Tempestas (Bardo/Arcimago)
+    *   Maestro Tempestas (Bardo/Cantore delle tempeste)
 
 3.  **Schede dei PNG Giocabili (Eroi di Hammerfist)**
     *   Borin Ferropugno (Guerriero/Campione Nanico)
@@ -386,28 +386,30 @@
 <div style="page-break-before:always"></div>
 
 ### **MAESTRO TEMPESTAS**
-*Mezzelfo Bardo 12°/Arcimago 2°, GS 14*
-**CN Umanoide Medio (Elfo)**
-**Iniziativa:** +3; **Sensi:** Visione Crepuscolare; Ascoltare +18, Osservare +15
+*Mezzelfo Bardo 12°/Cantore delle tempeste 2°, GS 14*
+**NB Umanoide Medio (Elfo)**
+**Iniziativa:** +7; **Sensi:** Visione Crepuscolare; Ascoltare +18, Osservare +15
 
-**CA:** 18 (+4 armatura, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 15
-**PF:** 84 (14 DV)
-**TS:** Tempra +7, Riflessi +12, Volontà +13
+**CA:** 20 (+6 giaco di maglia +2, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 17
+**PF:** 91 (14d6+42)
+**TS:** Tempra +7, Riflessi +13, Volontà +13
 
 **Velocità:** 9m
-**Attacco Base:** +9; **Lotta:** +10
-**Attacco:** *Spada Lunga Tonante +1* +11 in mischia (1d8+2 più 1d8 sonoro)
+**Attacco Base:** +10; **Lotta:** +11
+**Attacco:** *Spada corta +1* +12/+7 in mischia (1d6+2/19-20)
 
 **Qualità Speciali:**
-*   **Musica Bardica (12/giorno):** *Ispirare Coraggio* (+3 a colpire e danni), *Suggestione*, *Canto di Libertà*.
-*   **Maestria degli Elementi (Elettricità/Suono):** Può convertire i danni di un incantesimo in elettrici o sonori. Supera le resistenze all'energia.
-*   **Incantesimi da Bardo Conosciuti (CL 12°):**
-    *   *4° (CD 19):* *Urlo Superiore*, *Dominare Persone*, *Porta Dimensionale*.
-    *   *3° (CD 18):* *Fulmine*, *Velocità*, *Dissolvi Magie*.
-    *   *2° (CD 17):* *Esplosione Sonora*, *Frantumare*, *Invisibilità*.
-    *   *1° (CD 16):* *Onda di Tuono* (custom), *Cura Ferite Leggeri*.
+*   **Musica Bardica (12/giorno):** *Ispirare Coraggio* (+2 a colpire e danni), *Suggestione* (CD 22), *Canto di Libertà*.
+*   **Cantata della Tempesta Tonante (1/incontro):** alleati entro 18 m +2 morale ad attacchi, danni e TS per 10 round; ostili entro 18 m 2d6 elettrici a inizio turno per 3 round (Riflessi CD 23 dimezza; +1d6 a chi porta armatura di metallo).
+*   **Arcane Supreme:** Maestria del Controincantesimo, Potere Magico +1.
+*   **Incantesimi da Bardo Conosciuti (incantatore di 14° livello):**
+    *   *5° (CD 21):* *Passo nelle Ombre*, *Cura Ferite Leggere di Massa*, *Suggestione di Massa*.
+    *   *4° (CD 20):* *Urlo*, *Dominare Persone*, *Porta Dimensionale*, *Invisibilità Superiore*.
+    *   *3° (CD 19):* *Fulmine*, *Velocità*, *Dissolvi Magie*, *Confusione*.
+    *   *2° (CD 18):* *Esplosione Sonora*, *Polvere Luccicante*, *Eroismo*, *Invisibilità*.
+    *   *1° (CD 17):* *Cura Ferite Leggere*, *Charme su Persone*, *Risata Incontenibile*, *Sonno*.
 
-**Tattiche:** Maestro Tempestas è un cannone di vetro magico. Rimane in aria, usando la sua musica per potenziare gli alleati e scatenando incantesimi devastanti sui nemici. Il suo incantesimo *Velocità* lanciato sui ranger elfici o sui PG è un punto di svolta. Contro Fauci di Palude, usa la Maestria degli Elementi per trasformare i suoi incantesimi in elettricità, sfruttando la vulnerabilità del drago.
+**Tattiche:** Maestro Tempestas è un cannone di vetro magico. Rimane in aria, usando la sua musica per potenziare gli alleati e scatenando incantesimi devastanti sui nemici. Il suo incantesimo *Velocità* lanciato sui ranger elfici o sui PG è un punto di svolta. Contro Fauci di Palude apre con la Cantata della Tempesta Tonante e poi usa *fulmine* ed *esplosione sonora*: il drago nero è immune all'acido, non all'elettricità né al suono.
 
 ---
 <div style="page-break-before:always"></div>

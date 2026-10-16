@@ -5,17 +5,17 @@
 
 
 ```statblocco
-gs: 6
+gs: 7
 ca: 13
-pf: 36
-ts: Temp +3, Rifl +3, Vol +9
+pf: 43
+ts: Temp +3, Rifl +3, Vol +13
 ```
 
 **Role**: Villain Politico — finanziatore della Mano Rossa tramite prestiti "patriottici d'emergenza"; proprietario di documenti compromettenti su metà delle famiglie nobili di Rethmar
 **Status**: [DA SCRIVERE — la scheda non dice se è vivo e libero oggi; i rami sono in §Esiti possibili]
 **Location**: [DA SCRIVERE — la scheda nomina il suo palazzo e il caveau privato (§Nella campagna), non dice dove si trova adesso]
 **Motivation**: → §Cosa vuole (Obiettivo Attuale, Clock 2/8)
-**CR**: 6 (in combattimento) / **GS effettivo 14+ in contesto politico** | **Race/Class**: Umano (Nobile di Elsir / Cannath Vale); Esperto 4 / Aristocratico 4 (Livello Totale 8); Legale Neutrale (vira verso Legale Malvagio per convenienza)
+**CR**: 7 (in combattimento: 8 livelli di classi da PNG, GS = livello −1) / **GS effettivo 14+ in contesto politico** | **Race/Class**: Umano (Nobile di Elsir / Cannath Vale); Esperto 4 / Aristocratico 4 (SRD; Livello Totale 8); Legale Neutrale (vira verso Legale Malvagio per convenienza)
 **Countdown Clock:** 2/8 (vedi `campaign/state.md`)
 **Key stats**: → §In combattimento. I numeri stanno in questa scheda; `../conte-valerius-cr14-political.md` rimanda qui.
 
@@ -87,24 +87,24 @@ Valerius non si sconfigge in combattimento (§Nella campagna) e non ha mai imbra
 | **Saggezza** | 16 | +3 |
 | **Carisma** | 18 | +4 |
 
-**Punti Ferita:** 36 (8 DV: 4d6+4d8+8)
+**Punti Ferita:** 43 (8 DV: 4d8+4d6+8, il primo DV d'aristocratico al massimo)
 **Classe Armatura:** 13 (10, +1 Des, +2 Gilet nascosto equivalente)
 
 **Tiri Salvezza:**
-- **Tempra:** +3
-- **Riflessi:** +3
-- **Volontà:** +9 (+3 Sag, +4 Fer. Volontà, +2 talenti)
+- **Tempra:** +3 (+2 Base, +1 Cos)
+- **Riflessi:** +3 (+2 Base, +1 Des)
+- **Volontà:** +13 (+8 Base: Esperto +4, Aristocratico +4; +3 Sag, +2 Volontà di Ferro)
 
 **Abilità Primarie:**
 
 | Abilità | Totale | Note |
 |:---|:---:|:---|
-| Diplomatia | **+17** | 8 gradi +4 Car +3 sinergia +2 razziale |
-| Raggirare | **+15** | 8 gradi +4 Car +3 sinergia |
-| Conoscenze (Legge) | **+15** | 8 gradi +4 Int +3 misc |
+| Diplomatia | **+17** | 11 gradi +4 Car +2 sinergia (Raggirare) |
+| Raggirare | **+15** | 11 gradi +4 Car |
+| Conoscenze (Legge) | **+15** | 11 gradi +4 Int (si gioca come Conoscenze (nobiltà e regalità)) |
 | Conoscenze (Locali) | **+12** | 8 gradi +4 Int |
 | Percepire Intenzioni | **+11** | 8 gradi +3 Sag |
-| Raccogliere Informazioni | **+14** | 8 gradi +4 Car +2 misc |
+| Raccogliere Informazioni | **+14** | 8 gradi +4 Car +2 sinergia (Conoscenze locali) |
 
 ### Difese speciali
 
@@ -137,3 +137,13 @@ I tre percorsi che lo sconfiggono sono in §Nella campagna. Quel che costa ferma
 ## Fonti e canone
 
 [DA SCRIVERE — la scheda non dice da quale materiale nasce, né porta decisioni del DM con la data. Il file `../conte-valerius-cr14-political.md` è un rimando a questa scheda.]
+
+Benchmark: PF T1-1 riga 7: CA 13 (−7), pf 43 (−42), CD — . Non regge il combattimento, ed è il punto: il suo GS 14 sta nella rete politica.
+
+Boost log: correzione dei conti 3.5 (Esperto 4 / Aristocratico 4) — GS 6 → 7 — un PNG con sole classi da PNG ha GS pari al livello −1; pf, Volontà e gradi riallineati, nessun numero sceso.
+
+<!-- storico -->
+- era: GS 6 in combattimento; pf 36 (la formula dà 40, 43 col primo dado al massimo)
+- era: Vol +9 con «+4 Fer. Volontà» al posto della base +8
+- era: Diplomazia con «+2 razziale» su un umano, gradi a 8 con totali che non tornavano
+<!-- /storico -->

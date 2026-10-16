@@ -36,7 +36,7 @@ Uscirne: un esilio tranquillo in superficie, comprato con le prove dei traffici 
 
 ## Nella campagna
 
-- Da tenere **sotto** Sonjak (CS 13) sempre: è la seconda, e il suo valore narrativo è mostrare quanto è profonda la compagnia della Matrona.
+- Da tenere **sotto** Sonjak (GS 14) sempre: è la seconda, e il suo valore narrativo è mostrare quanto è profonda la compagnia della Matrona.
 - Collocazioni consigliate: campi drow (ARC-09 P3 Sabotaggio), **Notte dei Drow** Fase 0, oppure come regista invisibile di un'infiltrazione fra i profughi (`state.md` §2.5).
 
 ### Cosa i PG hanno già visto (aggancio pulito, senza retcon)
