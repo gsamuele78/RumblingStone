@@ -49,8 +49,8 @@ lettura narrativa, le immagini e i prompt, questo file è la fonte.
 | 15 | MAPPA 4 Battaglia Finale Aerea e Terrestre | a✅ b✅ c✅ (DEPRECATED) | Lotto-3 ✅ (DEPRECATED) | `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 4 REVISED (60×68 + vista altitudini) | **questo file** (narrativo) + L3-REVISED (griglia) |
 
 **File deprecati da questa matrice** (banner DEPRECATED aggiunto, D12 — puntano tutti qui):
-`ARC08-90-DEPRECATO-battle-stats-maps.md` (a), `ARC08-91-DEPRECATO-atlante-visivo-v2.md` (b),
-`ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` (c),
+`_ARCHIVIO/ARC08-90-DEPRECATO-battle-stats-maps.md` (a), `_ARCHIVIO/ARC08-91-DEPRECATO-atlante-visivo-v2.md` (b),
+`_ARCHIVIO/ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` (c),
 `Mappe/_ARCHIVIO/Hammerfist-Lotto-1-Ricognizione.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md`.
 
 **File NON deprecati** (master tattici, lotto MAPPE-UC 2026-07-23 — copertura griglia COMPLETA):

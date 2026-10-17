@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 14 decisioni aperte
+## Aspetta il DM: 17 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -27,6 +27,9 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
+| `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
+| `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -114,6 +117,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-16 | MASTER-DEF | le versioni di ARC-08 censite sezione per sezione e mappa per mappa; i sei file… | 🟡 D6 aperta al DM |
+| 2026-10-15 | MASTER-DEF | A3, il canone di ARC-08 contro il tavolo: lettura in sola lettura dei file vivi… | 🟡 43 punti; D4 e D5 aperte al DM |
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
 | 2026-10-14 | REVISIONE-ARC07 | la scheda di Balvar nel Bestiario dava *dimensional anchor* sulla soglia della… | ✅ La riga delle rune nella scheda ora è quella del master; l'impronta delle creature è rigenerata per la sola lunghezza del testo di Balvar (3173 → 3261), ness… |
 | 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
@@ -124,12 +129,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D69-D71 decise dal DM e applicate in DEF-4: Zog'tar catturato e il suo dopo, le… | 🟡 applicate; aperte D72-D73 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D64-D68 decise dal DM: in DEF-4 la penalità per le armature portate e la capien… | 🟡 applicate; aperte D69-D73 |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il lettore a freddo su DEF-4 dopo le decisioni (🔴 0 · 🟠 5… | 🟡 lettore fatto; aperte D69-D71, restano playtester e DM a freddo |
-| 2026-10-12 | LETTORE-E-PLAYTESTER · MASTER-DEF | Le decisioni del DM: D35-D37 in DEF-1, 2, 3; D49-D63 in DEF-4 (le due dotazioni… | 🟡 applicate; aperte D64-D68 sui dettagli `[INFERRED]`; serve il giro 4 di conferma su DEF-4 |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | Risposta al rilievo del passo 7, chiesta dal DM: che cosa muove Skullcrusher, i… | 🟡 canone nuovo marcato `[INFERRED]`, aperto come D63 |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 259 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 259 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

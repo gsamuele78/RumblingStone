@@ -54,8 +54,8 @@
 | `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` | Ground Battle 120m×200m (30×71) | Sì | Sì | nessuno | ok |
 | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` | Diagrammi ASCII box-drawing (▓, ║, no griglia numerata a celle) | Parziale (in prosa) | **No** | n/a (è l'atlante-indice) | **KO — nota 3** |
 | `ARC08-14-ATLANTE-IMMAGINI.md` | — (catalogo immagini, non è un master mappa) | — | No | — | n/a |
-| `ARC08-91-DEPRECATO-atlante-visivo-v2.md` ⚠️ DEPRECATED | Diagrammi ASCII box-drawing pre-Ultra-Clear | No | **No** | n/a (superato da L1-L3 Ultra-Clear) | **KO — nota 4** |
-| `ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` ⚠️ DEPRECATED | Diagrammi ASCII box-drawing pre-Ultra-Clear | No | **No** | n/a (superato da L1-L3 Ultra-Clear) | **KO — nota 4** |
+| `_ARCHIVIO/ARC08-91-DEPRECATO-atlante-visivo-v2.md` ⚠️ DEPRECATED | Diagrammi ASCII box-drawing pre-Ultra-Clear | No | **No** | n/a (superato da L1-L3 Ultra-Clear) | **KO — nota 4** |
+| `_ARCHIVIO/ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` ⚠️ DEPRECATED | Diagrammi ASCII box-drawing pre-Ultra-Clear | No | **No** | n/a (superato da L1-L3 Ultra-Clear) | **KO — nota 4** |
 
 ## Arco 09 — Continuazione dopo Hammerfist
 
