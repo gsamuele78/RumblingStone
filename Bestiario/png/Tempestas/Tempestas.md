@@ -297,8 +297,7 @@ Benchmark: PF T1-1 riga 14: CA 20 vs 29 (9 sotto) / pf 91 vs 200 (molto sotto) /
 - La sua **erosione mentale** è un tema lento. Non farne uno scherzo. Una scena in cui non riconosce un PG è una **scena di lutto**, non comica.
 - La camicia con gli emblemi di Rethmar è **un personaggio in sé**. Se i PG la sporcano di sangue, Tempestas la cambia in silenzio. Se i PG la difendono dal fuoco, lui sussurra un grazie privato.
 - Il suo equilibrio è delicato: deve essere **utile abbastanza da volerlo richiamare**, ma **non così potente da risolvere la trama**. Bilancia con tempi (Shadow Walk impreciso) e disponibilità (1 incontro per arco, max).
-- **Età reale**: 247 anni mezzelfo (giovane per gli elfi, vecchio per gli umani). I PG non lo immaginano.
-  > ⚠ Due età diverse nella stessa scheda: §Aspetto e voce dice «sui 70 anni (sembra 30)». Per un mezzelfo 3.5 la vecchiaia venerabile è a 125 anni e il massimo è 185: 247 anni non è possibile, 70 sì (mezza età). Da scegliere al DM; questa revisione non cambia nessuna delle due righe `[INFERRED — needs DM confirmation]`.
+- **Età reale**: sui 70 anni, mezza età per un mezzelfo; ne dimostra 30, e i PG non lo immaginano (decisione del DM: mezzelfo, quindi 70).
 
 ## Fonti e canone
 
@@ -336,4 +335,5 @@ Boost log: correzione dei conti e cambio di classe di prestigio (Arcimago 2 → 
 > - era: *passo nelle ombre* fra gli incantesimi di 4°; incantesimi conosciuti 6/5/5/5/4 → ora *passo nelle ombre* al 5°, conosciuti 6/4/4/4/4/3; tolti *identificare*, *suggestione* e *lingua ammaliatrice*, che superavano il numero
 > - era: classe Arcimago 2; «Potere Magico +1 a danno e CD» → ora Cantore delle tempeste 2; Potere Magico alza il livello dell'incantatore, non le CD
 > - era nell'arco 08: CA 18, pf 84, TS +7/+12/+13, iniziativa +3, CN, musica 12/giorno con Ispirare Coraggio +3, spada lunga tonante +1 «+1d8 sonoro» a ogni colpo (l'arma tonante lo aggiunge solo sul critico), Maestria degli Elementi, incantesimi conosciuti oltre il numero del bardo e *onda di tuono*, che non esiste nell'SRD
+Età: era «247 anni mezzelfo» in Note per il DM, impossibile per un mezzelfo 3.5 (massimo 185); il DM ha scelto 70 il 2026-10-17.
 <!-- /storico -->

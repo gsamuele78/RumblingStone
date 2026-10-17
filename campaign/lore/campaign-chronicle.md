@@ -327,7 +327,7 @@ The party descends through a chain of connected underground locations:
 |---|---|---|
 | **Red Hand Army** | 900 (7:1 numerical advantage) | Fauci di Palude (Black Dragon CR 15), Generale Grimjaw (Orog Fighter 10/Warlord 3, CR 14), Gorthak il Trifronte (3-Headed Ettin, CR 12) |
 | **Hammerfist Dwarves** | 300 | Re Thorek Hammerfist (Fighter 15/Noble 2, CR 16), Madre Superiora Dana Forgiapietra (Cleric 12/Divine Singer 3, CR 14) |
-| **External Allies** | ~20 | Signore Ventolesto (Celestial Giant Owl, CR 8), 12 Ranger Elfici su Gufi (CR 8 each), Orion Pelleorsa (Druid 14, CR 14), Maestro Tempestas (Bard 12/Archmage 2, CR 14) |
+| **External Allies** | ~20 | Signore Ventolesto (Celestial Giant Owl, CR 8), 12 Ranger Elfici su Gufi (CR 8 each), Orion Pelleorsa (Druid 14, CR 14), Maestro Tempestas (Bard 12/Stormsinger 2, CR 14) |
 
 **Red Hand Structure:** 4 assault lines — 1st Wave (450 hobgoblin/orc infantry), 2nd Wave (233 heavy infantry + sergeants), 3rd Line (45 giants/artiglieria + mages), 4th Line (66 command/reserve), Aerial (Fauci di Palude + rider), Flanks (50 Worg Riders)
 
@@ -340,7 +340,7 @@ The party descends through a chain of connected underground locations:
 
 - **Session 2 — Tre Giorni di Sangue e Ferro:**
   - **Day 1:** Assault on outer walls — Hobgoblin waves + Gorthak charges gate
-  - **Day 2:** La Breccia nella Roccia — Commander duels, protect the Cantitrici della Pietra (5 Cleric 8/Bard 4 singers, CR 11 each — group ability "Coro della Montagna": Earthquake/Mass Cure/Greater Shout)
+  - **Day 2:** La Breccia nella Roccia — Commander duels, protect the Cantitrici della Pietra (5 Cleric 8/Bard 4 singers, CR 12 each — group ability "Coro della Montagna": Earthquake/Mass Cure/Greater Shout)
   - **Day 3:** Il Soffio della Disperazione — Fauci di Palude dragon attack (acid breath + acid cone variant), desperate retreat into mountain depths
 
 - **Session 3 — Dalle Profondità della Terra:**

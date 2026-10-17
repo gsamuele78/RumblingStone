@@ -173,7 +173,7 @@ Dana e Thorin, come PNG con nome, lanciano oltre quel tetto.
 |---|---|
 | **Valore base** | **250 mo** |
 | **Limite d'acquisto** | **1.250 mo** per oggetto al capo armaiolo; il forziere del re fino a **5.000 mo** `[CANONE — DM 2026-10-07, D42]` |
-| **Incantesimi a pagamento** | fino al **6° livello**, da Dana (chierica 12) |
+| **Incantesimi a pagamento** | fino all'**8° livello**, da Dana (chierica 12 / cantante divina 3, livello dell'incantatore 15) |
 | **La cassa** | il forziere ha **20.000 mo in gemme** oltre la gratitudine, e paga solo in gemme `[CANONE — DM 2026-10-07, D42]` |
 
 ##### Cosa vende
@@ -200,7 +200,8 @@ più le componenti), come nel kit §2.
 | *Neutralizza veleno* · *ristorare* | Thorin | 280 · 380 mo | *ristorare* con 100 mo di polvere di diamante |
 | *Rimuovi maledizione* · *spezzare incantamento* | Dana | 150 · 450 mo | serve per gli oggetti maledetti dei banchi di ARC-09 |
 | *Rianimare morti* | Thorin | 5.450 mo | i diamanti della rocca vanno prima ai caduti nani, e *rianimare morti* vale fino a 9 giorni dalla morte per un chierico di 9°: per i PG ne resta **uno** `[INFERRED — needs DM confirmation]` |
-| *Guarigione* · *dissolvi magie superiore* | Dana | 660 · 660 mo | 6° livello, il tetto della rocca |
+| *Guarigione* · *dissolvi magie superiore* | Dana | 660 · 660 mo | |
+| *Resurrezione* · *rigenerazione* | Dana | 10.910 · 910 mo | 7° livello. La *resurrezione* vuole un diamante da 10.000 mo, e quelli della rocca vanno ai caduti nani: la paga chi porta il diamante `[INFERRED — needs DM confirmation]` |
 | Identificare un oggetto | Nala | 110 mo | un'ora e una perla da 100 mo per oggetto. Nala ha quattro incantesimi di 1° al giorno per *identificare* `[INFERRED — needs DM confirmation]` |
 | Identificare una pozione | nessuno | — | serve Sapienza Magica **CD 25**, e nessuna scheda della rocca la dichiara così alta. Le pozioni si fanno identificare a Dauth |
 

@@ -7,4 +7,4 @@
 **Key stats**: → `tyrgarun-blue-old-cr18.md` (ACCEPTED DM-canon 2026-07-02, D11 v2).
 **Esiti possibili**: come hazard aereo logora l'esercito; portato a terra diventa boss
 affrontabile (Fase 4). L'esito dipende dalle contromisure antiaeree dei PG/alleati.
-**Notes**: distinto dagli altri draghi (Arbitrax rosso, Ozyrrandion blu).
+**Notes**: distinto dagli altri draghi (Arbitrax rosso, Ozyrrandion verde).
