@@ -17,7 +17,6 @@ attacchi:
   - Distanza roccia +7 (2d6+7, gittata 36 m)
 ```
 
-> [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «4d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus da Cos 15 e Robustezza.
 
 > [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Riflessi +1 → **+2**: gigante 4 DV (+1) + Barbaro 6 (+2) + Des 8 (−1). La Des 8 è confermata da tre numeri della scheda: «−1 Des» nella CA, contatto 8, iniziativa −1. L'ira non tocca la Destrezza, quindi anche in ira è +2.
 

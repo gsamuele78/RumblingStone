@@ -692,7 +692,7 @@
      ]
     },
     "file": "Bestiario/mostri/centaur-chieftain-cr7.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -744,7 +744,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 739,
     "sestine_citate": [],
     "taglia": -1,
@@ -809,7 +809,7 @@
     "lotta": 19,
     "mischia": "",
     "pf": 80,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      12,
@@ -1070,7 +1070,7 @@
      "pf_media": 45
     },
     "file": "Bestiario/mostri/cerchio-druid7-cr7.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -1115,7 +1115,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 803,
     "sestine_citate": [],
     "taglia": 0,
@@ -1191,7 +1191,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 49,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      7,
@@ -4474,7 +4474,7 @@
      "pf_media": 34
     },
     "file": "Bestiario/mostri/duergar-mago-ladro8-cr7.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -4543,7 +4543,7 @@
     },
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 1587,
     "sestine_citate": [
      [
@@ -4626,7 +4626,7 @@
    },
    "pf_dado_corretto": null,
    "pf_dado_corretto_forzato": {
-    "bonus": "ricavato dalla Tempra +4 (la Cos di questa scheda è generata)",
+    "bonus": "da Cos 14",
     "dadi": "dalle classi del `tipo` coi dadi SRD",
     "fascia": [
      21,
@@ -4675,7 +4675,7 @@
     "lotta": 4,
     "mischia": "spada corta +1 +7 (1d6+1/19-20)",
     "pf": 37,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "Medium humanoid (dwarf, duergar), Rogue 3 / Wizard 4",
     "ts": [
      4,
@@ -4768,7 +4768,7 @@
      "pf_media": 13
     },
     "file": "Bestiario/mostri/duergar-mago3-cr4.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -4819,7 +4819,7 @@
     },
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 1418,
     "sestine_citate": [
      [
@@ -4887,7 +4887,7 @@
    },
    "pf_dado_corretto": null,
    "pf_dado_corretto_forzato": {
-    "bonus": "ricavato dalla Tempra +3 (la Cos di questa scheda è generata)",
+    "bonus": "da Cos 14",
     "dadi": "dalle classi del `tipo` coi dadi SRD",
     "fascia": [
      9,
@@ -4927,7 +4927,7 @@
     "lotta": 0,
     "mischia": "",
     "pf": 16,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "Medium humanoid (dwarf, duergar), Wizard 3 (necromanzia; abiurazione proibita), LE",
     "ts": [
      3,
@@ -5999,7 +5999,7 @@
      ]
     },
     "file": "Bestiario/mostri/gnoll-chieftain-cr10.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -6051,7 +6051,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 811,
     "sestine_citate": [],
     "taglia": 0,
@@ -6116,7 +6116,7 @@
     "lotta": 14,
     "mischia": "",
     "pf": 88,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      11,
@@ -12952,7 +12952,7 @@
      "pf_media": 115
     },
     "file": "Bestiario/mostri/razorfiend-blue-cr9.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -13001,7 +13001,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 951,
     "sestine_citate": [],
     "taglia": -1,
@@ -13078,7 +13078,7 @@
     "lotta": 20,
     "mischia": "",
     "pf": 115,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "Large dragon (electricity)",
     "ts": [
      12,
@@ -13157,7 +13157,7 @@
      "pf_media": 115
     },
     "file": "Bestiario/mostri/razorfiend-green-cr9.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -13206,7 +13206,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 817,
     "sestine_citate": [],
     "taglia": -1,
@@ -13280,7 +13280,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 115,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "Large dragon (acid)",
     "ts": [
      12,
@@ -13583,7 +13583,7 @@
      "pf_media": 94
     },
     "file": "Bestiario/mostri/razorfiend-white-cr8.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -13632,7 +13632,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 826,
     "sestine_citate": [],
     "taglia": -1,
@@ -13706,7 +13706,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 94,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "Large dragon (cold)",
     "ts": [
      10,
@@ -13783,7 +13783,7 @@
      "pf_media": 15
     },
     "file": "Bestiario/mostri/rethmar-city-guard-cr2.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -13827,7 +13827,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 671,
     "sestine_citate": [],
     "taglia": 0,
@@ -13902,7 +13902,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 17,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      5,
@@ -13979,7 +13979,7 @@
      "pf_media": 5
     },
     "file": "Bestiario/mostri/rethmar-militia-cr05.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -14023,7 +14023,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 604,
     "sestine_citate": [],
     "taglia": 0,
@@ -14098,7 +14098,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 5,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      3,
@@ -14386,7 +14386,7 @@
      "pf_media": 97
     },
     "file": "Bestiario/mostri/teschio-nero-commander-cr10.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -14447,7 +14447,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 865,
     "sestine_citate": [],
     "taglia": 0,
@@ -14533,7 +14533,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 95,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      13,
@@ -14784,7 +14784,7 @@
     "decisione": null,
     "esito": {},
     "file": "Bestiario/mostri/thayan-knight-cr8.md",
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "scarti": {},
     "template": null,
     "template_dichiarati": [],
@@ -14826,7 +14826,7 @@
     "numeri_della_fonte": {},
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "senza_note": 819,
     "sestine_citate": [],
     "taglia": 0,
@@ -14875,7 +14875,7 @@
     "lotta": null,
     "mischia": "",
     "pf": 60,
-    "provenienza": "generate",
+    "provenienza": "a mano",
     "tipo": "",
     "ts": [
      8,
@@ -38805,21 +38805,6 @@
     "scritta": "attributi: For 31 Des 13 Cos 23 Int 10 Sag 12 Car 11"
    },
    {
-    "file": "Bestiario/mostri/centaur-chieftain-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Int −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 7) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
-     "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 18 **ricavata da pf 80 su 10 DV** — il vincolo batte l'array",
-     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 20 Des 14 Cos 18 Int 7 Sag 12 Car 11",
-    "scritta": "attributi: For 20 Des 14 Cos 18 Int 7 Sag 12 Car 11"
-   },
-   {
     "file": "Bestiario/mostri/centaur-ranger4-corrupted-cr5.md",
     "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 16 ricavata da pf 60 su 8 DV, ma la scheda scrive 18: si tiene la scheda, da verificare.",
     "note": [
@@ -38828,19 +38813,6 @@
     ],
     "riga": "attributi: For 18 Des 14 Cos 18 Int 8 Sag 13 Car 11",
     "scritta": "attributi: For 18 Des 14 Cos 18 Int 8 Sag 13 Car 11"
-   },
-   {
-    "file": "Bestiario/mostri/cerchio-druid7-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Int −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 7) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 14 **ricavata da pf 49 su 7 DV** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 14 Des 14 Cos 14 Int 7 Sag 18 Car 13",
-    "scritta": "attributi: For 14 Des 14 Cos 14 Int 7 Sag 18 Car 13"
    },
    {
     "file": "Bestiario/mostri/chierico-gruumsh-cr11.md",
@@ -38974,38 +38946,6 @@
     "scritta": "attributi: For 12 Des 15 Cos 15 Int 14 Sag 10 Car 4"
    },
    {
-    "file": "Bestiario/mostri/duergar-mago-ladro8-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (PNG con classe)",
-     "variazione a seme fisso: Car +1, For −1",
-     "un avanzamento ogni 4 livelli, contati sul GS 7 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "modificatori razziali SRD: duergar Cos +2 Car -4",
-     "Des 16 **derivata dalla CA di contatto** — il vincolo batte l'array",
-     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
-     "Cos 14 **ricavata da pf 37 su 7 DV** — il vincolo batte l'array",
-     "For 10 **ricavata da BAB e lotta** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 10 Des 14 Cos 14 Int 16 Sag 10 Car 9",
-    "scritta": "attributi: For 10 Des 14 Cos 14 Int 16 Sag 10 Car 9"
-   },
-   {
-    "file": "Bestiario/mostri/duergar-mago3-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (PNG con classe)",
-     "variazione a seme fisso: For +1, Cos −1",
-     "un avanzamento ogni 4 livelli, contati sul GS 4 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "modificatori razziali SRD: duergar Cos +2 Car -4",
-     "Des 14 **derivata dalla CA di contatto** — il vincolo batte l'array",
-     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
-     "Cos 14 **ricavata da pf 16 su 3 DV** — il vincolo batte l'array",
-     "For 8 **ricavata da BAB e lotta** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 8 Des 14 Cos 14 Int 16 Sag 10 Car 8",
-    "scritta": "attributi: For 8 Des 14 Cos 14 Int 16 Sag 10 Car 8"
-   },
-   {
     "file": "Bestiario/mostri/flind-cr3.md",
     "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
@@ -39031,20 +38971,6 @@
     ],
     "riga": "attributi: For 14 Des 13 Cos 12 Int 14 Sag 13 Car 12",
     "scritta": "attributi: For 14 Des 13 Cos 12 Int 14 Sag 13 Car 12"
-   },
-   {
-    "file": "Bestiario/mostri/gnoll-chieftain-cr10.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Int −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 10) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "Des 12 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 16 **ricavata da pf 88 su 10 DV** — il vincolo batte l'array",
-     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 20 Des 12 Cos 16 Int 7 Sag 12 Car 11",
-    "scritta": "attributi: For 20 Des 12 Cos 16 Int 7 Sag 12 Car 11"
    },
    {
     "file": "Bestiario/mostri/gnoll-cleric-yeenoghu-cr7.md",
@@ -39299,35 +39225,6 @@
     "scritta": "attributi: For 30 Des 10 Cos 24 Int 8 Sag 13 Car 12"
    },
    {
-    "file": "Bestiario/mostri/razorfiend-blue-cr9.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Sag −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 9) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
-     "Cos 20 **ricavata da pf 115 su 10 DV** — il vincolo batte l'array",
-     "For 22 **ricavata da BAB e lotta** — il vincolo batte l'array",
-     "Des 13 **ricavata dall'iniziativa +5**, con Iniziativa Migliorata supposta: la scheda non elenca i talenti, e dei due valori possibili si tiene il più vicino all'array"
-    ],
-    "riga": "attributi: For 22 Des 13 Cos 20 Int 10 Sag 11 Car 9",
-    "scritta": "attributi: For 22 Des 13 Cos 20 Int 10 Sag 11 Car 9"
-   },
-   {
-    "file": "Bestiario/mostri/razorfiend-green-cr9.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: For +1, Cos −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 9) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
-     "Cos 20 **ricavata da pf 115 su 10 DV** — il vincolo batte l'array",
-     "Des 13 **ricavata dall'iniziativa +5**, con Iniziativa Migliorata supposta: la scheda non elenca i talenti, e dei due valori possibili si tiene il più vicino all'array"
-    ],
-    "riga": "attributi: For 21 Des 13 Cos 20 Int 10 Sag 16 Car 8",
-    "scritta": "attributi: For 21 Des 13 Cos 20 Int 10 Sag 16 Car 8"
-   },
-   {
     "file": "Bestiario/mostri/razorfiend-red-cr9.md",
     "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
@@ -39335,46 +39232,6 @@
     ],
     "riga": "attributi: For 22 Des 12 Cos 20 Int 8 Sag 13 Car 12",
     "scritta": "attributi: For 22 Des 12 Cos 20 Int 8 Sag 13 Car 12"
-   },
-   {
-    "file": "Bestiario/mostri/razorfiend-white-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Int −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 8) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
-     "Cos 18 **ricavata da pf 94 su 9 DV** — il vincolo batte l'array",
-     "Des 11 **ricavata dall'iniziativa +4**, con Iniziativa Migliorata supposta: la scheda non elenca i talenti, e dei due valori possibili si tiene il più vicino all'array"
-    ],
-    "riga": "attributi: For 24 Des 11 Cos 18 Int 7 Sag 12 Car 11",
-    "scritta": "attributi: For 24 Des 11 Cos 18 Int 7 Sag 12 Car 11"
-   },
-   {
-    "file": "Bestiario/mostri/rethmar-city-guard-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Int +1, Sag −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 2) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "Des 12 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 14 **ricavata da pf 17 su 2 DV** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 14 Des 12 Cos 14 Int 9 Sag 11 Car 10",
-    "scritta": "attributi: For 14 Des 12 Cos 14 Int 9 Sag 11 Car 10"
-   },
-   {
-    "file": "Bestiario/mostri/rethmar-militia-cr05.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Car +1, Des −1",
-     "Des 12 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 12 **ricavata da pf 5 su 1 DV** — il vincolo batte l'array",
-     "Sag 10 **ricavata da Vol +0 (base +0)** — il tetto del TS batte l'array"
-    ],
-    "riga": "attributi: For 14 Des 12 Cos 12 Int 8 Sag 10 Car 11",
-    "scritta": "attributi: For 14 Des 12 Cos 12 Int 8 Sag 10 Car 11"
    },
    {
     "file": "Bestiario/mostri/skeletal-dire-lion-cr6.md",
@@ -39386,20 +39243,6 @@
     "scritta": "attributi: For 25 Des 15 Cos — Int — Sag 10 Car 10"
    },
    {
-    "file": "Bestiario/mostri/teschio-nero-commander-cr10.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Sag +1, Int −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 10) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "Des 12 **letta da ca-dettaglio** — il vincolo batte l'array",
-     "Cos 18 **ricavata da pf 95 su 10 DV** — il vincolo batte l'array",
-     "Sag 11 **ricavata da Vol +4 (base +4)** — il tetto del TS batte l'array"
-    ],
-    "riga": "attributi: For 20 Des 12 Cos 18 Int 7 Sag 11 Car 10",
-    "scritta": "attributi: For 20 Des 12 Cos 18 Int 7 Sag 11 Car 10"
-   },
-   {
     "file": "Bestiario/mostri/thayan-heavy-infantry-cr3.md",
     "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
@@ -39407,18 +39250,6 @@
     ],
     "riga": "attributi: For 15 Des 12 Cos 14 Int 10 Sag 10 Car 10",
     "scritta": "attributi: For 15 Des 12 Cos 14 Int 10 Sag 10 Car 10"
-   },
-   {
-    "file": "Bestiario/mostri/thayan-knight-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.",
-    "note": [
-     "array elite del Manuale del DM (creatura)",
-     "variazione a seme fisso: Int +1, Car −1",
-     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 8) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
-     "Cos 14 **ricavata da pf 60 su 8 DV** — il vincolo batte l'array"
-    ],
-    "riga": "attributi: For 19 Des 15 Cos 14 Int 9 Sag 12 Car 9",
-    "scritta": "attributi: For 19 Des 15 Cos 14 Int 9 Sag 12 Car 9"
    },
    {
     "file": "Bestiario/mostri/thayan-red-wizard7-cr9.md",
