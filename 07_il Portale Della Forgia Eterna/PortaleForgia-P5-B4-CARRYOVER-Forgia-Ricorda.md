@@ -4,7 +4,7 @@
 > **Stato (B4)**: ⭐ deliverable cross-arc più importante dell'arco. Traduce
 > l'**esito del duello con Skullcrusher** (P5 fast-play, Scena 5) in un
 > **effetto quantificato** sullo statblock di **Fauci di Palude** nell'ARC-08
-> (GS 15, 312 PF)<!-- apparato -->, `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`.
+> (GS 15, 337 PF)<!-- apparato -->, `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`.
 > Chiude il task **ARC-08 A12**<!-- /apparato -->.
 >
 > **Fonte narrativa**: Moradin, P5-DEFINITIVO-PARTE2 r.290 — *«Ogni ferita che
@@ -31,9 +31,9 @@ Dalla **Scena 5** del duello si registrano due dati:
 
 ## 2. TABELLA ESITO → EFFETTO SU FAUCI DI PALUDE (1372)
 
-| Esito del duello | Effetto sullo statblock di Fauci (GS 15, 312 PF) | Razionale |
+| Esito del duello | Effetto sullo statblock di Fauci (GS 15, 337 PF) | Razionale |
 |---|---|---|
-| **UCCISO** (Skullcrusher a 0 pf) | **Cicatrice ancestrale attiva**: Fauci entra in campo con **−10% PF** (312 → **281 PF**) e **Presenza Terrificante CD 25 → 23** contro i **portatori degli artefatti** (Thorik/Corona, Tordek/Bracieri+Cintura, Hella/Collana, Artemis/Ring). | La stirpe porta la ferita mortale del capostipite: il sangue "ricorda" di poter cadere. |
+| **UCCISO** (Skullcrusher a 0 pf) | **Cicatrice ancestrale attiva**: Fauci entra in campo con **−10% PF** (337 → **303 PF**<!-- storico -->; prima della verifica dei conti del 2026-10-16 i pf erano 312 e il valore 281<!-- /storico -->) e **Presenza Terrificante CD 25 → 23** contro i **portatori degli artefatti** (Thorik/Corona, Tordek/Bracieri+Cintura, Hella/Collana, Artemis/Ring). | La stirpe porta la ferita mortale del capostipite: il sangue "ricorda" di poter cadere. |
 | **FERITO GRAVE** (fugge sotto ⅓ pf) | **−1 uso del soffio**: il primo **Soffio a Cono** (1/giorno) è **indisponibile**; il soffio in linea parte comunque ma la **prima** volta a −2 alla CD (27 invece di 29). Nessuna riduzione di PF. | La ferita non è letale ma "storpia" l'arma migliore del sangue. |
 | **FUGGITO** (Skullcrusher si allontana quasi illeso) | Fauci **vi ha visti e riconosciuti**: **+2 iniziativa** e nessuna sorpresa contro di voi (sa chi siete) **MA morale fragile** — **fugge sotto i 75 PF** invece di 50 (soglia di ritirata alzata di 25). | Il drago è forte ma il sangue teme già i "quattro del futuro": più cauto, meno disposto a morire. |
 

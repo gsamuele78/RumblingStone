@@ -26,7 +26,7 @@
         *   🦉 Signore Ventolesto (Gufo Gigante Celestiale Alpha)
         *   🌟 Ranger Elfici sui Gufi
         *   🐻 Orion Pelleorsa (Druido Umano)
-        *   🎶 Maestro Tempestas (Mezzelfo Bardo/Arcimago)
+        *   🎶 Maestro Tempestas (Mezzelfo Bardo/Cantore delle tempeste)
     *   **PNG Giocabili per le Prime Sessioni**
         *   Come Gestire i Personaggi Temporanei
         *   ⚔️ Borin Ferropugno (Nano Guerriero/Campione Nanico)
@@ -156,29 +156,44 @@ SIMBOLI TATTICI:
 **Caratteristiche:** For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16
 **Iniziativa:** +4; 
 **Sensi:** Vista Cieca 18m, Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
-**CA:** 28 (-2 taglia, +20 naturale), contatto 8, colto alla sprovvista 28
-**PF:** 312 (25d12+175)
-**TS:** Tempra +21, Riflessi +15, Volontà +19
+**CA:** 29 (-2 taglia, +21 naturale), contatto 8, colto alla sprovvista 29 (37 con *Armatura Magica* e *Scudo*)
+**PF:** 337 (25d12+175)
+**TS:** Tempra +21, Riflessi +16, Volontà +19
 **Immunità:** Acido, Paralisi, Sonno; **RD:** 10/magia; **RI:** 21
 **Velocità:** 18m, Nuotare 18m, Volare 45m (scarsa)
 **Attacco Base:** +25; 
 **Lotta:** +43
 **Attacco:** Morso +35 in mischia (2d8+10/19-20)
-**Attacco Completo:** Morso +35 (2d8+10/19-20), 2 artigli +30 (2d6+5), 2 ali +30 (1d8+5), colpo di coda +30 (2d6+15)
+**Attacco Completo:** Morso +35 (2d8+10/19-20), 2 artigli +33 (2d6+5), 2 ali +33 (1d8+5), colpo di coda +33 (2d6+15)
 **Spazio/Portata:** 4,5m/3m (4,5m con morso)
 **Attacchi Speciali:**
-*   **Soffio (Sop):** Linea di 24m di acido, una volta ogni 1d4 round. Danni 14d4 acido, TS Riflessi CD 29 per dimezzare.
+*   **Soffio (Sop):** Linea di 30 m di acido, una volta ogni 1d4 round. Danni 14d4 acido, TS Riflessi CD 29 per dimezzare.
 *   **Soffio a Cono (Str):** 1/giorno, Fauci di Palude può spendere un'azione di round completo per concentrare il suo potere acido. Nel round successivo, come azione standard, può emettere il suo soffio in un cono di 18 metri invece che in una linea. I danni e la CD del Tiro Salvezza rimangono invariati. Narrativamente, l'azione di round completo viene spesa mentre sale in quota per preparare la picchiata.
-*   **Presenza terrificante (Str):** Raggio 90m, creature con meno di 25 DV devono superare un TS Volontà CD 25 o essere spaventate (4d6 round) o scosse (se hanno più di 4 DV).
+*   **Presenza terrificante (Str):** Raggio 90m, creature con meno di 25 DV devono superare un TS Volontà CD 25 o essere in preda al panico (4d6 round) se hanno 4 DV o meno, scosse (4d6 round) se ne hanno di più.
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, **solo se** all'alba del −1000 (carry-over B4, registrato nel DEF-4) Aegis Fang ha ucciso Skullcrusher; altrimenti non c'è [INFERRED — needs DM confirmation].
 *   **Corrompere Acqua (Mag):** A volontà, 30m raggio, ristagna acqua.
+*   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Lancia come uno Stregone di 7° livello.
-    *   **Incantesimi Conosciuti (6/7/7/6/4 per giorno, CL 7°):**
-        *   3° (CD 16+liv): *Dissolvi Magie*, *Nube Maleodorante*, *Volare*
-        *   2° (CD 15+liv): *Freccia Acida*, *Immagine Speculare*, *Invisibilità*, *Oscurità*
-        *   1° (CD 14+liv): *Armatura Magica*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*, *Colpo Accurato*
-        *   0° (CD 13+liv): *Frastornare*, * Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro.
-**Tattiche:** Inizia con *Armatura Magica* e *Scudo* attivi. Usa il soffio e il controllo del campo (*Nube Maleodorante*) dalle alte quote. Atterra solo se costretto o per finire bersagli importanti.
+    *   **Incantesimi Conosciuti (6/8/8/6 al giorno, LI 7°):**
+        *   3° (CD 16): *Dissolvi Magie*, *Nube Maleodorante*
+        *   2° (CD 15): *Freccia Acida*, *Immagine Speculare*, *Invisibilità*
+        *   1° (CD 14): *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
+        *   0° (CD 13): *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
+**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire [gli ultimi tre INFERRED].
+**Tattiche:** Inizia con *Armatura Magica* e *Scudo* attivi. Usa il soffio e il controllo del campo (*Nube Maleodorante*) dalle alte quote; con Volteggiare resta sospeso sopra le mura e soffia senza atterrare, con Ghermire afferra un nano isolato e lo lascia cadere. Atterra solo se costretto o per finire bersagli importanti, Thorik prima di tutti. Fugge sotto i 50 PF (ramo D10).
+
+> **Verifica 3.5 (versione più forte, lotto delle schede PNG)**: 25 DV di
+> drago nero sono un **adulto maturo avanzato** (SRD: 22 DV, avanzamento
+> 25-26 DV). Da qui l'armatura naturale +21 (era +20), la linea del soffio
+> di 30 m (taglia Enorme), RI 21 e RD 10/magia. I pf tornano coi dadi:
+> 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
+> Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
+> dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher
+> [INFERRED — needs DM confirmation]. 25 DV danno 9 talenti: i tre che
+> mancavano sono [INFERRED]. *Oscurità* è una capacità magica dell'età, non
+> un incantesimo conosciuto; *Volare* esce dagli incantesimi (un drago vola
+> già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
+> CORREZIONE del boss nell'arco 07 [INFERRED].
 
 **Tattiche in Combattimento:**
 - **Round 1-2:** Sorvolo e soffio sulle concentrazioni nemiche
@@ -187,51 +202,90 @@ SIMBOLI TATTICI:
 
 <div style="page-break-before:always"></div>
 
-#### **CAVALIERE HOBGOBLIN DI FAUCI DI PALUDE (Fighter 8°/Blackguard 2°, GS 10)**
-*LM Umanoide Medio (Gobblinoide)*
-**Caratteristiche:** For 18, Des 13, Cos 16, Int 12, Sag 10, Car 14
-**Iniziativa:** +1; 
-**Sensi:** Scurovisione 18m; Ascoltare +3, Osservare +3
-**CA:** 22 (+1 Des, +8 armatura, +2 scudo, +1 deflessione), contatto 12, colto alla sprovvista 21
-**PF:** 95 (10 DV; 8d10+2d10+30)
-**TS:** Tempra +10, Riflessi +4, Volontà +4
-**Velocità:** 6m (in armatura)
-**Attacco Base:** +9; 
-**Lotta:** +13
-**Attacco:** *Lancia da cavaliere+1* +15 in mischia (1d8+6/x3) o *Spada bastarda+1* +14 (1d10+6/19-20)
-**Attacco Completo:** *Lancia da cavaliere+1* +15/+10 in mischia (1d8+6/x3)
+#### **CAVALIERE HOBGOBLIN DI FAUCI DI PALUDE (Guerriero 6°/Guardia Nera 4°, GS 10)**
+*LM Umanoide Medio (Goblinoide)*
+**Iniziativa:** +1; **Sensi:** Scurovisione 18m; Ascoltare +4, Osservare +4
+
+**CA:** 23 (+1 Des, +9 armatura, +2 scudo, +1 deflessione), contatto 12, colto alla sprovvista 22
+**PF:** 95 (10d10+40)
+**TS:** Tempra +15, Riflessi +6, Volontà +6
+
+**Velocità:** 6m (in armatura completa)
+**Attacco Base:** +10; **Lotta:** +14
+**Attacco:** *Lancia da cavaliere +1* +16 in mischia (1d8+7/x3; in carica in sella danni tripli) o *Spada bastarda +1* a due mani +15 (1d10+7/19-20)
+**Attacco Completo:** *Lancia da cavaliere +1* +16/+11 in mischia (1d8+7/x3)
+
+**Caratteristiche:** For 18, Des 13, Cos 18, Int 12, Sag 12, Car 14
+
 **Attacchi Speciali:**
-*   **Punire il Bene (Sop):** 2/giorno. Bonus di +2 (Car) al tiro per colpire e +10 (livello) ai danni contro un bersaglio buono.
-*   **Aura di Disperazione (Sop):** Nemici entro 3m subiscono una penalità di -2 a tutti i tiri salvezza.
+*   **Punire il Bene (Sop):** 1/giorno. +2 (Car) al tiro per colpire e +4 (livello di Guardia Nera) ai danni contro un bersaglio buono.
+*   **Aura di Disperazione (Sop):** i nemici entro 3 m subiscono −2 a tutti i tiri salvezza.
+*   **Attacco Furtivo +1d6:** contro bersagli colti alla sprovvista o fiancheggiati.
+*   **Comandare Non Morti (Sop):** come un chierico di 2° livello, 5/giorno.
 *   **Comando Tattico (Str):** Fornisce +2 morale agli attacchi degli alleati hobgoblin entro 9m.
 
-**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*.
+**Qualità Speciali:** Aura del male, Individuazione del bene, Uso dei veleni, Benedizione oscura (il Car ai TS, già contato).
+**Incantesimi da Guardia Nera (LI 4°; 2 di 1° al giorno, CD 12):** *Incutere Paura*, *Infliggi Ferite Leggere*.
+
+**Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) [INFERRED — needs DM confirmation: la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera].
+
+**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* [INFERRED: è la fonte di Cos 18 e dei 95 pf].
+
+> **Verifica 3.5 (versione più forte)**: Guerriero 6/Guardia Nera 4 rende
+> legali l'Aura di Disperazione della prima stesura (arriva al 3° livello di
+> Guardia Nera) e l'attacco furtivo che l'errata B5 dava a un Guardia Nera di
+> 2° (arriva al 4°). Un 5/5 avrebbe anche Punire il Bene 2/giorno, ma la
+> Guardia Nera chiede BAB +6 per entrare, e un Guerriero 5 non ce l'ha. Il
+> +10 ai danni della prima stesura non ha una via legale: il bonus è il
+> livello di Guardia Nera. BAB, TS, CA e attacchi sono ricontati sull'SRD
+> (la Benedizione oscura somma il Car ai TS).
+
+**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine.
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 <div style="page-break-before:always"></div>
 
-#### **⚔️ GENERALE GRIMJAW (Orog Guerriero 10°/Signore della Guerra 3°, GS 14)**
+#### **⚔️ GENERALE GRIMJAW (Orog Guerriero 10°/Signore della Guerra 3°, GS 14)** — orog e Signore della Guerra [Private source — vedi nota]
 **Descrizione da Leggere:**
 > *"Al centro della formazione hobgoblin cavalca un orog dalle cicatrici profonde. Generale Grimjaw porta i segni di cento battaglie: un occhio coperto da una benda nera, tre dita mozzate della mano sinistra, e una terribile cicatrice che va dall'orecchio al mento. La sua armatura nera riflette le fiamme dell'inferno, e la sua voce tuona ordini che trasformano una massa caotica in una macchina da guerra perfetta."*
 
 *LM Umanoide Mostruoso Medio (Orco)*
 **Caratteristiche:** For 22, Des 13, Cos 26, Int 14, Sag 13, Car 16
-**Iniziativa:** +1; 
+**Iniziativa:** +5; 
 **Sensi:** Scurovisione 18m; Ascoltare +13, Osservare +13
-**CA:** 25 (+1 Des, +9 armatura, +3 scudo, +1 schivare, +1 naturale), contatto 12, colto alla sprovvista 24
-**PF:** 178 (13 DV; 13d10+108)
-**TS:** Tempra +16, Riflessi +8, Volontà +10
+**CA:** 26 (+1 Des, +10 armatura, +3 scudo, +1 schivare, +1 naturale), contatto 12, colto alla sprovvista 24
+**PF:** 178 (13 DV; 13d10+107)
+**TS:** Tempra +18, Riflessi +8, Volontà +10
 **Velocità:** 6m (in armatura)
 **Attacco Base:** +13; 
 **Lotta:** +19
-**Attacco:** *Spada Bastarda Demoniaca +1* +22 in mischia (1d10+8/17-20 più 1d6 fuoco su critico)
-**Attacco Completo:** *Spada Bastarda Demoniaca +1* +22/+17/+12 in mischia (1d10+8/17-20 più 1d6 fuoco su critico)
+**Attacco:** *Spada Bastarda Demoniaca +1* +22 in mischia (1d10+9/17-20 più 1d6 fuoco su critico)
+**Attacco Completo:** *Spada Bastarda Demoniaca +1* +22/+17/+12 in mischia (1d10+9/17-20 più 1d6 fuoco su critico)
+**Distanza:** *Arco Composito Lungo Poderoso +1 (+6 For)* +15/+10/+5 (1d8+7/x3)
 **Attacchi Speciali:**
 *   **Furia Comandante (Str):** 1/giorno per 8 round, ottiene +4 For, +4 Cos. Gli alleati entro 6m ottengono +2 morale agli attacchi e ai danni.
-*   **Presenza Intimidatoria (Str):** Nemici entro 9m subiscono -2 ai tiri per colpire. TS Volontà CD 16 nega.
+*   **Presenza Intimidatoria (Str):** Nemici entro 9m subiscono -2 ai tiri per colpire. TS Volontà CD 19 nega.
 *   **Tattico Superiore (Str):** Come azione gratuita, può fornire +2 bonus a un tipo di tiro (attacco, danno, TS) a tutti gli alleati entro 18m per 1 round.
 
-**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare.
-**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*.
+**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare, Arma Focalizzata Superiore (Spada Bastarda), Competenza nelle Armi Esotiche (Spada Bastarda), Robustezza, Incalzare Potenziato, Iniziativa Migliorata [gli ultimi cinque INFERRED].
+**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi* [questi due INFERRED].
+
+**Tattiche:** Grimjaw è un comandante, non un combattente solitario. Rimane sempre protetto dalle sue Guardie Nere Orog. Usa Tattico Superiore ogni round per potenziare le sue truppe. Attiva la Furia Comandante solo quando la battaglia raggiunge il suo culmine o viene ingaggiato personalmente. La sua morte causa un crollo del morale di -3 a tutto l'esercito. *Morale*: non combatte fino alla morte. Sotto i 60 pf beve una pozione e ripiega dietro le Guardie Nere; sotto i 30 pf, o se cade Fauci, suona la ritirata e torna al campo. Resta solo se Thorik lo ha sfidato davanti all'esercito: lì l'arroganza è più forte della prudenza.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Fonti e verifica 3.5**: l'**orog** non è nell'SRD
+> [Private source — Monsters of Faerûn]; il **Signore della Guerra** non è
+> una classe SRD [Private source — non identificata: la Furia Comandante
+> ricorda il *Warchief* di Complete Warrior; INFERRED]. I suoi privilegi sono
+> quelli della scheda, marcati [INFERRED]. PF1e: il **Cavaliere** (APG,
+> ordine del Drago) si avvicina, perché dà bonus agli alleati vicini e tiene
+> il guerriero in prima linea; il *Battle Herald* farebbe di più il
+> comandante ma stravolge il combattente. Conti ricontati: la *Armatura
+> Completa +2* vale +10 (era +9), Tempra non può stare sotto +18 (Gue 10 +7,
+> classe di prestigio almeno +1, Cos +8, mantello +2), il danno a una mano
+> con Arma Specializzata è +9, la CD della Presenza è 10 + ½ livello + Car.
+> 13 livelli danno 11 talenti: i cinque aggiunti sono [INFERRED], e
+> Robustezza spiega i 178 pf (13d10+104 = 175, +3).
 
 <div style="page-break-before:always"></div>
 
@@ -240,29 +294,43 @@ SIMBOLI TATTICI:
 > *"Dal centro dell'orda avanza un orrore a tre teste. Gorthak il Trifronte torreggia anche sui giganti più alti. Le sue tre teste discutono costantemente tra loro in linguaggio gigante: la sinistra ruggisce di furia cieca, quella centrale ghigna tatticamente, la destra scruta ogni pericolo. La sua armatura è stata forgiata da dieci diverse corazze saldate insieme da fabbri orchi."*
 
 *CM Gigante Grande*
-**Caratteristiche:** For 29, Des 15, Cos 27, Int 10, Sag 14, Car 11
+**Caratteristiche:** For 29, Des 15, Cos 28, Int 10, Sag 14, Car 11
 **Iniziativa:** +6; 
-**Sensi:** Visione Crepuscolare; Ascoltare +12, Osservare +12
-**CA:** 22 (-1 taglia, +2 Des, +8 naturale, +3 armatura), contatto 11, colto alla sprovvista 20
-**PF:** 195 (15d8+120)
-**TS:** Tempra +17, Riflessi +7, Volontà +8
+**Sensi:** Scurovisione 18m, Visione Crepuscolare; Ascoltare +12, Osservare +12
+**CA:** 25 (-1 taglia, +2 Des, +8 naturale, +6 armatura), contatto 11, colto alla sprovvista 23
+**PF:** 202 (15d8+135)
+**TS:** Tempra +18, Riflessi +7, Volontà +9
 **Velocità:** 9m (in armatura)
 **Attacco Base:** +11; 
 **Lotta:** +24
-**Attacco:** *Randello Enorme +1* +20 in mischia (2d6+9)
-**Attacco Completo:** 3 *Randelli Enormi +1* +20/+15/+10 in mischia (2d6+9)
+**Attacco:** *Randello Enorme +1* +21 in mischia (2d6+10)
+**Attacco Completo:** *Randello Enorme +1* +21/+16/+11 in mischia (2d6+10) e *Randello Enorme +1* +21/+16/+11 in mischia (2d6+5)
+**Distanza:** giavellotto grande +12/+7/+2 (1d8+9)
 **Spazio/Portata:** 3m/3m
 **Attacchi Speciali:**
-*   **Visione Superiore (Str):** Le tre teste gli conferiscono un bonus razziale di +4 a Osservare e Ascervare. Non può essere attaccato ai fianchi.
+*   **Combattere con Due Armi Superiore (Str):** ogni testa guida un braccio: nessuna penalità ai tiri per colpire e ai danni con due armi (ettin SRD); il secondo braccio somma metà For ai danni.
+*   **Visione Superiore (Str):** Le tre teste gli conferiscono un bonus razziale di +4 a Osservare e Ascoltare. Non può essere attaccato ai fianchi.
 *   **Testa Destra (Vigile):** Fornisce il talento Iniziativa Migliorata (+4 Iniziativa).
 
-**Talenti:** Allerta, Iniziativa Migliorata, Multiattacco, Attacco Poderoso, Incalzare.
-**Equipaggiamento:** Corazza di Piastre Mastrolavorate Grandi +1*, 3 *Randelli Enormi Mastrolavorate +1, 6 Giavellotti Grandi
+**Talenti:** Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro.
+**Equipaggiamento:** *Corazza di Piastre Grande +1*, 3 *Randelli Enormi +1* (due in pugno, uno di riserva), 6 Giavellotti Grandi
 
 **Tattiche Speciali:**
 - **Testa Sinistra (Brutale):** Sempre attacca per prima, +2 danni
 - **Testa Centrale (Strategica):** Comanda le altre, fornisce bonus tattici
 - **Testa Destra (Vigile):** Non può essere colpita di sorpresa, +4 Iniziativa
+- **Furia:** sotto i 101 PF (metà) la testa sinistra prende il sopravvento: +4 For, -2 CA, combatte fino alla morte
+- **Morale:** prima di quella soglia, se Fauci è fuggito o abbattuto e l'orda è in rotta, la testa centrale può offrire la resa (al finale la scelta è dei PG); dopo, nessuna resa
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: ettin dell'SRD avanzato a 15 DV
+> (il massimo della taglia Grande). L'ettin SRD combatte con un'arma per mano
+> senza penalità, perché ogni testa guida un braccio: due randelli a pieno
+> BAB, non tre attacchi con uno solo. La *corazza di piastre +1* vale +6 alla
+> CA (era +3). I pf tornano coi dadi con Cos 28 (15d8+135 = 202), un punto
+> in più dagli aumenti di caratteristica dei DV avanzati [INFERRED]; prima
+> 15d8+120 dava 187, non 195. Multiattacco esce (non serve a chi usa armi):
+> entrano Spezzare Migliorato e Volontà di Ferro [INFERRED].
 
 ---
 
@@ -278,20 +346,31 @@ SIMBOLI TATTICI:
 **Caratteristiche:** For 20, Des 13, Cos 22, Int 14, Sag 16, Car 18
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +16, Osservare +16
-**CA:** 26 (+1 Des, +10 armatura, +3 scudo, +2 deflessione), contatto 13, colto alla sprovvista 25
-**PF:** 195 (17 DV; 15d10+2d8+102)
-**TS:** Tempra +16, Riflessi +8, Volontà +12 (+2 vs veleni, +4 vs magie)
+**CA:** 30 (+1 Des, +12 armatura, +5 scudo, +2 deflessione), contatto 13, colto alla sprovvista 29
+**PF:** 196 (17 DV; 15d10+2d8+105)
+**TS:** Tempra +17, Riflessi +8, Volontà +13 (+2 vs veleni, +4 vs magie)
 **Velocità:** 6m
 **Attacco Base:** +16; 
 **Lotta:** +21
-**Attacco:** *Martello da Guerra degli Antenati +3* +26 in mischia (1d8+12/x3)
-**Attacco Completo:** *Martello da Guerra degli Antenati +3* +26/+21/+16/+11 in mischia (1d8+12/x3)
+**Attacco:** *Martello da Guerra degli Antenati +3* +26 in mischia (1d8+12/19-20/x3)
+**Attacco Completo:** *Martello da Guerra degli Antenati +3* +26/+21/+16/+11 in mischia (1d8+12/19-20/x3)
 **Attacchi Speciali:**
 *   **Presenza Regale (Str):** Alleati nanici entro 18m ottengono +3 morale a tiri per colpire e danni.
 *   **Chiamata alle Armi (Str):** 3/giorno, come azione standard, tutti i nani entro 60m ottengono un bonus morale di +5 ai tiri per colpire e ai TS contro paura per 5 round.
 
-**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro.
-**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*).
+**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato [gli ultimi sette INFERRED: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti].
+**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi [INFERRED]), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* [INFERRED: è la fonte della deflessione].
+
+**Tattiche:** *Prima del combattimento*: resta al centro della linea, dove la Presenza Regale (18 m) copre più nani possibile; se vede arrivare l'assalto, spende la prima Chiamata alle Armi sul primo urto. *Durante il combattimento*: round 1 Chiamata alle Armi (+5 ai nani entro 60 m); poi attacco completo sul nemico più grosso a portata, con Attacco Poderoso contro i giganti e senza contro i bersagli corazzati; usa *Comando* della Corona («In ginocchio!») su chi minaccia un ferito, e tiene la seconda e la terza Chiamata per quando una breccia cede o il drago passa basso. *Morale*: non lascia il campo finché un nano è in piedi; sotto i 50 pf lo trascinano via le Guardie Reali o Borin, ed è l'unico modo in cui ripiega.
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: «Nobile» si legge come la classe PNG
+> **Aristocratico** dell'SRD [INFERRED]. Conti ricontati sugli oggetti della
+> scheda: *Armatura Completa +4* vale +12 e *Scudo Pesante +3* vale +5 (erano
+> +10 e +3), quindi CA 30. +26 e 1d8+12 chiedono Arma Focalizzata e Arma
+> Specializzata Superiori, che un guerriero di 15° ha. TS: Tempra +17 con
+> Tempra Possente, Volontà +13 (Gue +5, Ari +3, Sag +3, Volontà di Ferro). I
+> pf tornano coi dadi con Robustezza: 15d10+2d8+105 = 196 (prima 195).
 
 <div style="page-break-before:always"></div>
 
@@ -300,66 +379,102 @@ SIMBOLI TATTICI:
 > *"Madre Superiora Dana è anziana anche per gli standard nanici, ma la sua fede in Moradin arde come il fuoco della forgia divina. Le sue rughe raccontano storie di saggezza, e la sua voce può tanto sussurrare preghiere quanto tuonare benedizioni di guerra. Attorno al suo martello danzano scintille dorate, segno della benedizione del Forgiatore."*
 
 *LB Umanoide Medio (Nano)*
-**Caratteristiche:** For 16, Des 12, Cos 20, Int 15, Sag 22, Car 16
+**Caratteristiche:** For 18, Des 12, Cos 20, Int 15, Sag 22, Car 18 (For e Car con gli oggetti)
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +21, Osservare +21
-**CA:** 24 (+1 Des, +8 armatura, +2 scudo, +3 deflessione), contatto 14, colto alla sprovvista 23
+**CA:** 29 (+1 Des, +11 armatura, +4 scudo, +3 deflessione), contatto 14, colto alla sprovvista 28
 **PF:** 142 (15d8+75)
 **TS:** Tempra +14, Riflessi +8, Volontà +18
 **Velocità:** 6m
 **Attacco Base:** +11; 
-**Lotta:** +14
-**Attacco:** *Martello da Guerra Sacro +2* +15 in mischia (1d8+6)
+**Lotta:** +15
+**Attacco:** *Martello da Guerra Sacro +2* +18 in mischia (1d8+6/x3, +2d6 contro i malvagi)
 **Attacchi Speciali:**
-*   **Scacciare Non Morti (Sop):** 9/giorno (bonus +6 al tiro).
+*   **Scacciare Non Morti (Sop):** 11/giorno (bonus +6 al tiro).
 *   **Canto di Battaglia (Sop):** 1/giorno, come azione standard. Tutti gli alleati entro 18m ottengono +2 morale ad attacchi, danni e TS per 10 round.
 *   **Incantesimi:** Lancia come un Chierico di 15° livello. **Domini:** Guerra, Terra.
-    *   **Incantesimi Preparati (CL 15°; 6/7/7/7/6/5/4/3/2):**
-        *   8° (CD 24): *Tempesta di Fuoco*, *Aura Sacra*
-        *   7° (CD 23): *Dettame*, *Rigenerazione*, *Parola Sacra*
-        *   6° (CD 22): *Guarigione* (x2), *Ferire*, *Parola del Ritiro*, *Banchetto degli Eroi*
-        *   5° (CD 21): *Colpo Infuocato* (x2), *Cura Ferite Leggere di Massa*, *Potere della Giustizia*, *Muro di Pietra*
-        *   4° (CD 20): *Cura Ferite Critiche* (x2), *Potere Divino*, *Libertà di Movimento*, *Immunità agli Incantesimi*
-        *   3° (CD 19): *Cura Ferite Gravi* (x3), *Dissolvi Magie* (x2), *Preghiera*
-        *   2° (CD 18): *Cura Ferite Moderate* (x4), *Forza del Toro* (x2), *Arma Spirituale*
-        *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino* (x2)
+    *   **Incantesimi Preparati (LI 15°; 6/7+1/7+1/6+1/5+1/5+1/4+1/2+1/1+1; D = slot di dominio):**
+        *   8° (CD 24): *Aura Sacra*, *Parola del Potere Stordire* (D)
+        *   7° (CD 23): *Parola Sacra*, *Rigenerazione*, *Terremoto* (D)
+        *   6° (CD 22): *Guarigione* (x2), *Ferire*, *Banchetto degli Eroi*, *Lama di Barriera* (D)
+        *   5° (CD 21): *Colpo Infuocato* (x2, uno D), *Cura Ferite Leggere di Massa* (x2), *Potere della Giustizia*, *Muro di Pietra*
+        *   4° (CD 20): *Cura Ferite Critiche* (x2), *Potere Divino* (D), *Libertà di Movimento*, *Immunità agli Incantesimi*, *Interdizione alla Morte*
+        *   3° (CD 19): *Cura Ferite Gravi* (x3), *Dissolvi Magie* (x2), *Preghiera*, *Veste Magica* (D)
+        *   2° (CD 18): *Cura Ferite Moderate* (x4), *Forza del Toro* (x2), *Resistenza all'Energia*, *Arma Spirituale* (D)
+        *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
         *   0°: *Cura Ferite Minori* (x3), *Luce*, *Purificare Cibo e Bevande*, *Resistenza*
 
-**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*.
+**Talenti:** Scacciare Extra [INFERRED; gli altri talenti non sono scritti].
+**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2* [questi due INFERRED].
 
 **Capacità Speciali:**
-- **Scacciare Non Morti:** 9/giorno (+6 bonus)
+- **Scacciare Non Morti:** 11/giorno (+6 bonus)
 - **Canto di Battaglia:** Tutti gli alleati entro 18m ottengono +2 attacchi/danni/TS per 10 round
 - **Benedizione della Forgia:** Può benedire fino a 50 armi simultaneamente
+
+**Tattiche:** *Prima del combattimento*: al mattino prepara *Banchetto degli Eroi* per gli ufficiali e consacra le armi (Benedizione della Forgia); prima di un assalto lancia *Aura Sacra* su sé e sulle Cantitrici vicine, e *Libertà di Movimento* su Re Thorek. *Durante il combattimento*: round 1 Canto di Battaglia (+2 a tutti gli alleati entro 18 m per 10 round); poi tiene in piedi i comandanti, con *Guarigione* sul re e *Cura Ferite Leggere di Massa* dopo ogni soffio; *Muro di Pietra* chiude una breccia, *Terremoto* lontano dalle mura spezza una carica. Scaccia i non morti se ne compaiono. Combatte col martello solo se un nemico le arriva addosso, e allora prima *Potere della Giustizia* e *Potere Divino*. *Morale*: non abbandona il re né il tempio; sotto i 40 pf si ritira dietro le Cantitrici, si cura e torna.
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+
+> **Fonti e verifica 3.5**: la **Cantante Divina** non è una classe SRD
+> [Private source — classe non identificata nel repo]: i suoi privilegi sono
+> quelli della scheda. La progressione d'incantatore piena (Chierico 12° /
+> Cantante Divina 3°, LI 15°) è `[CANONE — DM 2026-10-17]`, come in
+> `ARC08-17-BANCO-HAMMERFIST-1372.md`; il Canto di Battaglia resta [INFERRED]. PF1e: nessun archetipo del PRD fa «chierico che canta»
+> senza perdere progressione; lo *Skald* (Advanced Class Guide) si avvicina
+> nel canto ma stravolge il chierico, e resta da preferire la classe 3.5.
+> Conti ricontati: *Armatura Completa +3* vale +11 e *Scudo Pesante +2* +4
+> (erano +8 e +2), quindi CA 29; il dominio della Guerra dà Arma Focalizzata
+> nel martello da guerra, l'arma di Moradin; +18 e 1d8+6 chiedono For 18,
+> dai guanti [INFERRED]. Scacciare: 3 + Car +4 + 4 di Scacciare Extra = 11
+> al giorno, prova +6. Incantesimi: con Sag 22 gli slot sono quelli scritti,
+> e ogni livello ha uno slot di dominio (D).
 
 
 <div style="page-break-before:always"></div>
 
-#### **🎵 LE CANTITRICI DELLA PIETRA (5 Nane Chierico 8°/Bardo 4°, GS 11 ciascuna)**
+#### **🎵 LE CANTITRICI DELLA PIETRA (5 Nane Chierico 8°/Bardo 4°, GS 12 ciascuna)**
 **Descrizione da Leggere:**
 > *"Cinque nane si fanno avanti, le loro voci già armonizzate in un canto basso e potente. Sono le Cantitrici della Pietra, sacerdotesse-barde che uniscono la magia divina di Moradin alla tradizione musicale nanica. I loro canti fanno tremare le montagne e possono spezzare il ferro nemico o riforgiare il coraggio alleato."*
 
 *Leader: Melodia Echopietra*
 **CA:** 20, 
-**PF:** 98, 
-**TS:** Temp +12, Rifl +8, Vol +15
-**Attacco:** *Martello da Guerra Sonoro +1* +10/+5 (1d8+3 + 1d6 sonoro)
-**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 8/giorno), Scacciare Non Morti 5/giorno.
+**PF:** 98 (8d8+4d6+48), 
+**TS:** Temp +13, Rifl +8, Vol +16
+**Attacco Base:** +9
+**Attacco:** *Martello da Guerra Sonoro +1* +12/+7 (1d8+3/x3 + 1d6 sonoro)
+**Caratteristiche:** For 14, Des 10, Cos 18, Int 10, Sag 18, Car 18 [INFERRED]
+**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 8/giorno), Scacciare Non Morti 7/giorno (+6).
 **Incantesimi da Bardo (CL 4°; 3/4/2 per giorno):**
-*   2° (CD 16): *Frantumare*, *Lancia Sonora*, *Suggestione*
-*   1° (CD 15): *Benedizione*, *Cura Ferite Leggere*, *Scudo della Fede*, *Charme su Persone*
+*   2° (CD 16): *Frantumare*, *Suggestione*
+*   1° (CD 15): *Charme su Persone*, *Cura Ferite Leggere*, *Rimuovere Paura*
 *   0°: *Individuazione del Magico*, *Luce*, *Mano Magica*, *Suono Fantasma*, *Messaggio*, *Resistenza*
-**Incantesimi da Chierico (CL 8°; 6/5/4/4/3 per giorno; Domini: Guarigione, Nani):**
-*   4° (CD 18): *Potere Divino*, *Cura Ferite Critiche*
-*   3° (CD 17): *Preghiera*, *Dissolvi Magie*, *Veste Magica*, *Cerchio Magico Contro il Male*
-*   2° (CD 16): *Aiuto*, *Silenzio*, *Ristorare Inferiore*, *Forza del Toro*, *Consacrare*
-*   1° (CD 15): *Benedizione*, *Comando*, *Favore Divino*, *Scudo Entropico*, *Protezione dal Male*
+**Incantesimi da Chierico (LI 8°; 6/5+1/5+1/4+1/3+1 al giorno; D = dominio; Domini: Guarigione, Nani):**
+*   4° (CD 18): *Potere Divino*, *Cura Ferite Critiche* (D), *Libertà di Movimento*, *Interdizione alla Morte*
+*   3° (CD 17): *Preghiera*, *Dissolvi Magie*, *Veste Magica*, *Cerchio Magico Contro il Male*, *Cura Ferite Gravi* (D)
+*   2° (CD 16): *Aiuto*, *Silenzio*, *Ristorare Inferiore*, *Forza del Toro*, *Consacrare*, *Cura Ferite Moderate* (D)
+*   1° (CD 15): *Benedizione*, *Comando*, *Favore Divino*, *Scudo Entropico*, *Protezione dal Male*, *Cura Ferite Leggere* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
 **Capacità di Gruppo "Coro della Montagna" (1/giorno ciascuno):**
 *   *Terremoto* (come l'incantesimo, solo su pietra/roccia, CD 22)
 *   *Cura Ferite Gravi di Massa* (come l'incantesimo, CL 15°)
 *   *Urlo Superiore* (come l'incantesimo, 10d6 danni sonori, CD 20)
 *   *Forza del Toro di Massa* (come l'incantesimo)
+
+**Tattiche:** Le Cantitrici sono il cuore spirituale e morale della difesa: la priorità è tenere attivo *Ispirare Coraggio*; il Coro della Montagna serve nei momenti più critici (*Terremoto* su arieti e brecce, *Cura Ferite Gravi di Massa* dopo il soffio del drago). *Morale*: non lasciano le mura finché Dana resta in piedi; se una Cantitrice cade, le altre la trascinano via e cantano da più lontano, ma il Coro (tre voci) si perde quando ne restano due.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: dodici livelli di classi da PG
+> fanno GS 12, non 11. BAB +9 (Chierico 8 +6, Bardo 4 +3). Caratteristiche
+> ricavate dai numeri della scheda: Cos 18 dai 98 pf, Sag 18 dalle CD da
+> chierico, Car 18 dalle CD da bardo [INFERRED]; TS con un *Mantello della
+> Resistenza +2* [INFERRED]. Un bardo di 4° ha 4 usi di musica e Ispirare
+> Coraggio +1: gli 8 usi e il +2 della scheda restano con due talenti non SRD,
+> Musica Extra [Private source — Complete Adventurer] e *Song of the Heart*
+> [Private source — talento non SRD, libro da verificare; INFERRED].
+> *Lancia Sonora* non è SRD ed esce; *Benedizione* e *Scudo della Fede* non
+> sono incantesimi da bardo (restano tra quelli da chierico). Il dominio
+> Nanico è del Forgotten Realms [Private source — FRCS]. Il Coro della
+> Montagna è una capacità di gruppo della campagna, non SRD.
 
 <div style="page-break-before:always"></div>
 
@@ -373,22 +488,42 @@ SIMBOLI TATTICI:
 **Iniziativa:** +3; 
 **Sensi:** Visione Crepuscolare, Scurovisione 18m; Ascoltare +16, Osservare +20
 **CA:** 20 (-1 taglia, +3 Des, +6 naturale, +2 deflessione), contatto 14, colto alla sprovvista 17
-**PF:** 95 (10d8+50)
-**TS:** Tempra +12, Riflessi +10, Volontà +9
-**RD:** 5/magia; **RI:** 18; **Resistenze:** Acido 10, Freddo 10, Elettricità 10
+**PF:** 105 (10d10+50)
+**TS:** Tempra +12, Riflessi +10, Volontà +8 (+10 contro i malvagi)
+**RD:** 5/magia; **RI:** 15; **Resistenze:** Acido 10, Freddo 10, Elettricità 10
 **Velocità:** 3m, Volare 24m (media)
-**Attacco:** 2 artigli +12 in mischia (1d8+6)
-**Attacco Completo:** 2 artigli +12 (1d8+6) e morso +7 (1d8+3)
+**Attacco Base:** +10; **Lotta:** +20
+**Attacco:** 2 artigli +15 in mischia (1d8+6)
+**Attacco Completo:** 2 artigli +15 (1d8+6) e morso +10 (1d8+3)
 **Attacchi Speciali:**
 *   **Punire il Male (Sop):** 1/giorno, bonus di +2 (Car) al tiro per colpire e +10 (DV) ai danni contro una creatura malvagia.
 *   **Protezione Celestiale:** Aura di protezione dal male 3m
 *   **Volo Silenzioso:** Non può essere udito in volo (Muoversi Silenziosamente +20)
 
+**Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro [INFERRED].
+
+**Tattiche:** Cacciatore aereo d'élite, lavora in sincronia col suo cavaliere. In duello usa Attacco in Volo per colpire e allontanarsi; contro Fauci di Palude attiva Punire il Male al primo attacco. *Morale*: è l'alfa del branco e non abbandona un gufo né un cavaliere in volo; sotto i 30 pf sale oltre la tempesta di Tempestas e torna solo quando Fauci è a terra.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: gufo gigante dell'SRD avanzato a
+> 10 DV con il modello celestiale. Una bestia magica ha BAB pari ai DV (+10,
+> era +7) e dadi vita d10: 10d10+50 = 105 pf (era 10d8, 95). La RI del modello
+> celestiale 3.5 è DV + 5 = 15: il 18 della scheda non ha una via legale e
+> scende (PF1e darebbe GS + 5 = 13). La Volontà vale +8 (base +3, Sag +3,
+> Volontà di Ferro): il +9 non si raggiunge, ma l'Aura Celestiale dà +2
+> contro i malvagi, cioè contro tutto l'esercito della Mano Rossa. Volo 24 m
+> (SRD: 21 m) resta, da alfa del branco [INFERRED]. Talenti (4 a 10 DV)
+> [INFERRED].
+> ⚠ Prerequisito: a 10 DV un gufo gigante cade nella fascia Enorme
+> dell'avanzamento SRD (9-12 DV). Resta Grande perché è una cavalcatura. PF1e:
+> il modello semplice *Gigante* lo farebbe Enorme (+1 GS): si avvicina, ma
+> non è applicato.
+
 <div style="page-break-before:always"></div>
 
 #### **🌟 RANGER ELFICI SUI GUFI (12 Ranger di 8° liv., GS 8 ciascuno)**
 **Leader: CAPITANO LUNAPIENA**
-- Ranger 10°, porta un Corno del Valhalla d'Argento
+- Ranger 10°, porta un Corno del Valhalla di Bronzo
 - Frecce Speciali aggiuntive: 3 Frecce della Morte dei Draghi
 
 > **D13 (piano ARC-08 A11)**: questa compagnia è **indipendente**,
@@ -398,21 +533,26 @@ SIMBOLI TATTICI:
 > la battaglia; NON si somma ai difensori di Rethmar in ARC-09.
 
 *Elfo dei Boschi Ranger 8°*
-**Caratteristiche:** For 14, Des 18, Cos 16, Int 12, Sag 14, Car 8
+**Caratteristiche:** For 14, Des 18, Cos 18, Int 12, Sag 14, Car 8
 **Iniziativa:** +4; 
 **Sensi:** Visione Crepuscolare; Ascoltare +12, Osservare +12
-**CA:** 18 (+4 armatura, +3 Des, +1 schivare), contatto 14, colto alla sprovvista 14
+**CA:** 19 (+4 armatura, +4 Des, +1 schivare), contatto 15, colto alla sprovvista 14
 **PF:** 68 (8d8+32)
-**TS:** Tempra +9, Riflessi +10, Volontà +4
+**TS:** Tempra +10, Riflessi +10, Volontà +4
 **Velocità:** 9m
 **Attacco Base:** +8; **Lotta:** +10
-**Attacco:** *Arco Lungo Composito Potente (+2) +1* +14 a distanza (1d8+3/x3)
-**Attacco Completo:** *Arco Lungo Composito Potente (+2) +1* +14/+9 a distanza (1d8+3/x3)
+**Attacco:** *Arco Lungo Composito Potente (+2) +2* +14 a distanza (1d8+4/x3; +15 e +1 ai danni entro 9 m)
+**Attacco Completo:** *Arco Lungo Composito Potente (+2) +2* +14/+9 a distanza (1d8+4/x3), o con Tiro Rapido +12/+12/+7
 **Capacità Speciali:** Stile di Combattimento (Tiro Rapido, Tiro Multiplo), Nemico Prescelto (Giganti +4, Draghi +2), Compagno Animale (Gufo Gigante), Passare Senza Tracce.
 **Incantesimi da Ranger (CL 4°; 2/1 per giorno):**
 *   2° (CD 14): *Pelle Coriacea*
 *   1° (CD 13): *Passo Veloce*, *Resistenza all'Energia*
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo.
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare [INFERRED: la CA conta il bonus di schivare].
+**Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+
+> **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m [INFERRED].
+> ⚠ Prerequisito: Tiro in Corsa chiede Schivare e Mobilità, e un ranger di 8° ha tre talenti a scelta, non quattro. Resta, come la scheda lo dà. PF1e: nessun archetipo serve, è un talento in più.
 
 <div style="page-break-before:always"></div>
 
@@ -423,43 +563,66 @@ SIMBOLI TATTICI:
 **Iniziativa:** +3; 
 **Sensi:** Ascoltare +18, Osservare +18
 **CA:** 16 (forma umana), 22 (forma orso)
-**PF:** 98 (14d8+35)
-**TS:** Tempra +11, Riflessi +7, Volontà +13
+**PF:** 108 (14d8+45); 150 in forma d'orso con *Resistenza dell'Orso*
+**TS:** Tempra +14, Riflessi +7, Volontà +16
+**Caratteristiche:** For 10, Des 16, Cos 16, Int 10, Sag 24, Car 12 (Sag con *Periapto della Saggezza +4* [INFERRED]); Orso Crudele: For 31, Des 13, Cos 23 con *Resistenza dell'Orso*
+**Talenti:** Incantesimi Naturali, Robustezza, Incantesimi Estesi, Allerta, Combattere in Sella, Tempra Possente [INFERRED]
 **Velocità:** 9m
-**Attacco Base:** +10; **Lotta:** +10
-**Attacchi Speciali:** Forma Selvatica 5/giorno (animale Enorme), Compagno Animale, Andatura nel Bosco, Passare Senza Tracce, Immunità ai Veleni.
-**Incantesimi da Druido (CL 14°; 6/7/6/6/5/4/3/2 per giorno):**
-*   7° (CD 21): *Controllare Tempo*, *Tempesta di Vendetta*
-*   6° (CD 20): *Crescita Animale di Massa*, *Muro di Pietra*, *Guarigione*
-*   5° (CD 19): *Pelle di Pietra*, *Chiamare Tempesta di Fulmini*, *Muro di Spine*, *Comunione con la Natura*
-*   4° (CD 18): *Dissolvi Magie*, *Respingere Parassiti*, *Libertà di Movimento*, *Tempesta di Ghiaccio*
-*   3° (CD 17): *Chiamare Fulmini*, *Neutralizzare Veleno*, *Protezione dall'Energia*, *Fondersi nella Pietra*
-*   2° (CD 16): *Pelle Coriacea*, *Forza del Toro*, *Ristorare Inferiore*, *Sfera Infuocata*, *Ammorbidire Terra e Pietra*
-*   1° (CD 15): *Intralciare*, *Zanna Magica*, *Passo Veloce*, *Produrre Fiamma*, *Shillelagh*
+**Attacco Base:** +10; **Lotta:** +10 (umano) / +24 (orso)
+**Attacchi (Orso Crudele):** 2 artigli +19 (2d4+10) e morso +14 (2d8+5); Afferrare Migliorato
+**Attacchi Speciali:** Forma Selvatica 5/giorno (animale fino a Grande), Compagno Animale, Andatura nel Bosco, Passare Senza Tracce, Immunità ai Veleni.
+**Incantesimi da Druido (CL 14°; 6/7/7/7/5/5/4/3 per giorno, con Sag 24):**
+*   7° (CD 24): *Controllare Tempo*, *Guarigione*, *Tempesta di Fuoco*
+*   6° (CD 23): *Pelle di Pietra*, *Muro di Pietra*, *Dissolvi Magie Superiore*
+*   5° (CD 22): *Chiamare Tempesta di Fulmini*, *Muro di Spine*, *Comunione con la Natura*, *Crescita Animale*, *Muro di Fuoco*
+*   4° (CD 21): *Dissolvi Magie*, *Respingere Parassiti*, *Libertà di Movimento*, *Tempesta di Ghiaccio*
+*   3° (CD 20): *Chiamare Fulmini*, *Neutralizzare Veleno*, *Protezione dall'Energia*, *Fondersi nella Pietra*, *Zanna Magica Superiore*
+*   2° (CD 19): *Pelle Coriacea*, *Forza del Toro*, *Resistenza dell'Orso*, *Ristorare Inferiore*, *Sfera Infuocata*, *Ammorbidire Terra e Pietra*
+*   1° (CD 18): *Intralciare*, *Zanna Magica*, *Passo Veloce*, *Produrre Fiamma*, *Shillelagh*
 *   0°: *Creare Acqua*, *Individuazione del Magico*, *Guida*, *Luce*, *Riparare*, *Resistenza*
+
+**Tattiche:** *Prima del combattimento*: lancia *Pelle Coriacea*, *Resistenza dell'Orso* e *Zanna Magica Superiore* (estesi), poi prende la forma dell'Orso Crudele: gli incantesimi restano attivi nella forma.
+*Durante il combattimento*: *Muro di Spine* per dividere le forze nemiche, poi la mischia contro giganti e Gorthak, e il salto sulla schiena di Fauci di Palude. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano a metà caduta e si cura con *Guarigione*; non abbandona la battaglia finché un gufo vola.
+> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: Druido 14 dell'SRD. I pf tornano con
+> Cos 16 e Robustezza (14d8+45 = 108); in forma d'orso, con *Resistenza
+> dell'Orso* (Cos 23), salgono a 150, il numero che l'incontro usa. L'Orso
+> Crudele dell'SRD dà artigli 2d4+10 e morso 2d8+5, con Afferrare Migliorato.
+> Gli incantesimi stanno ora al loro livello da druido; *Tempesta di
+> Vendetta* è di 9°, fuori portata per un 14°, ed è sostituita da *Tempesta
+> di Fuoco*. CD 10 + livello + 7.
+> ⚠ Prerequisito: la Forma Selvatica in un animale Enorme arriva al 15°
+> livello; al 14° Orion arriva al Grande, e l'Orso Crudele è Grande. Resta
+> l'Orso Crudele. PF1e: Forma Selvatica dà la taglia Enorme già all'8°
+> (*beast shape III*), ma non si applica.
 
 <div style="page-break-before:always"></div>
 
-#### **🎶 MAESTRO TEMPESTAS (Mezzelfo Bardo 12°/Arcimago 2°, GS 14)**
+#### **🎶 MAESTRO TEMPESTAS (Mezzelfo Bardo 12°/Cantore delle tempeste 2°, GS 14)**
 **Descrizione da Leggere:**
 > *"Maestro Tempestas è un mezzelfo dalle origini misteriose, i cui occhi cambiano colore con le condizioni atmosferiche: grigi durante la calma, blu elettrico durante le tempeste. La sua lira magica è intagliata dal corno di un drago blu antico, e ogni nota che suona richiama i venti e i fulmini a danzare secondo la sua volontà."*
 
-**Iniziativa:** +3; 
+**NB Umanoide Medio (Elfo)**
+**Iniziativa:** +7; 
 **Sensi:** Visione Crepuscolare; Ascoltare +18, Osservare +15
-**CA:** 18 (+4 armatura, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 15
-**PF:** 84 (14 DV)
-**TS:** Tempra +7, Riflessi +12, Volontà +13
+**CA:** 20 (+6 giaco di maglia +2, +3 Des, +1 deflessione), contatto 14, colto alla sprovvista 17
+**PF:** 91 (14d6+42)
+**TS:** Tempra +7, Riflessi +13, Volontà +13
 **Velocità:** 9m
-**Attacco Base:** +9; 
-**Lotta:** +10
-**Attacco:** *Spada Lunga Tonante +1* +11 in mischia (1d8+2 più 1d8 sonoro)
-**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +3, 12/giorno), Conoscenze Bardiche, Arcimago (Maestria degli Elementi Elettrico/Sonoro).
-**Incantesimi da Bardo Conosciuti (CL 12°; 3/4/4/3/2 per giorno):**
-*   4° (CD 19): *Urlo Superiore*, *Dominare Persone*, *Porta Dimensionale*, *Libertà di Movimento*
-*   3° (CD 18): *Fulmine*, *Velocità*, *Dissolvi Magie*, *Suggestione*, *Paura*
-*   2° (CD 17): *Esplosione Sonora*, *Frantumare*, *Splendore dell'Aquila*, *Immagine Speculare*, *Invisibilità*, *Silenzio*
-*   1° (CD 16): *Onda di Tuono* (custom), *Cura Ferite Leggere*, *Charme su Persone*, *Caduta Morbida*, *Unto*, *Suono Fantasma*
-*   0°: *Luce*, *Mano Magica*, *Messaggio*, *Aprire/Chiudere*, *Prestidigitazione*, *Suono Fantasma*
+**Attacco Base:** +10; 
+**Lotta:** +11
+**Attacco:** *Spada corta +1* +12/+7 in mischia (1d6+2/19-20)
+**Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 12/giorno), Conoscenze Bardiche, Cantata della Tempesta Tonante (1/incontro, Riflessi CD 23), *Suggestione di massa* 1/giorno (CD 21), Arcane Supreme (Maestria del Controincantesimo, Potere Magico +1).
+**Incantesimi da Bardo Conosciuti (incantatore di 14° livello; 4/5/5/4/4/2 al giorno):**
+*   5° (CD 21): *Passo nelle Ombre*, *Cura Ferite Leggere di Massa*, *Suggestione di Massa*
+*   4° (CD 20): *Urlo*, *Dominare Persone*, *Porta Dimensionale*, *Invisibilità Superiore*
+*   3° (CD 19): *Fulmine*, *Velocità*, *Dissolvi Magie*, *Confusione*
+*   2° (CD 18): *Esplosione Sonora*, *Polvere Luccicante*, *Eroismo*, *Invisibilità*
+*   1° (CD 17): *Cura Ferite Leggere*, *Charme su Persone*, *Risata Incontenibile*, *Sonno*
+*   0°: *Individuazione del Magico*, *Lettura del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Aprire/Chiudere*
+
+> I numeri di Tempestas vengono dalla sua scheda nel Bestiario, che è la fonte. Il dettaglio dei privilegi, e le note sul Cantore delle tempeste (*Frostburn*, fuori dall'SRD), stanno lì.
 
 ---
 
@@ -492,22 +655,32 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +2, Osservare +2
-**CA:** 24 (+1 Des, +10 armatura, +3 scudo), contatto 11, colto alla sprovvista 23
-**PF:** 142 (13d10+65)
+**CA:** 25 (+1 Des, +10 armatura, +3 scudo, +1 schivare), contatto 12, colto alla sprovvista 23
+**PF:** 142 (10d10+3d12+68)
 **TS:** Tempra +13, Riflessi +6, Volontà +8
 **Velocità:** 6m
 **Attacco Base:** +13; 
 **Lotta:** +18
-**Attacco:** *Martello da Guerra degli Avi +2* +20 in mischia (1d8+9/x3)
-**Attacco Completo:** *Martello da Guerra degli Avi +2* +20/+15/+10 in mischia (1d8+9/x3)
+**Attacco:** *Martello da Guerra degli Avi +2* +21 in mischia (1d8+9/x3)
+**Attacco Completo:** *Martello da Guerra degli Avi +2* +21/+16/+11 in mischia (1d8+9/x3)
 **Abilità Speciali:** Postura Difensiva (+4 For/Cos, +2 TS Vol, 3/giorno), Colpo Devastante (+4d6 danni, 3/giorno), Presenza Comandante (+2 morale alleati entro 9m).
-**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro.
+**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento [INFERRED: gli ultimi tre].
 **Equipaggiamento:** *Armatura Completa Nanica +2*, *Scudo Pesante Runico +1*, *Martello da Guerra degli Avi +2* (Ritornante), 3 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche di Combattimento:**
 - **Aprire:** Carica devastante contro l'élite nemica
 - **Sostenere:** Rimanere al centro della formazione dando comandi
 - **Emergenza:** Sacrificarsi per salvare Re Thorek o i civili
+- *Morale*: non arretra mentre il Re è in campo; sotto i 40 pf entra in Postura Difensiva e tiene la posizione.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: il Campione Nanico si legge come il
+> Difensore Nanico dell'SRD (dado vita d12, chiede Schivare, Resistenza Fisica e
+> Robustezza) [INFERRED]: 10d10+3d12+68 dà i 142 pf. Schivare entra nella CA
+> (25). Arma Focalizzata porta il martello a +21. Colpo Devastante, Presenza
+> Comandante e la Postura 3/giorno al 3° livello sono della classe della
+> campagna, non dell'SRD [Private source — classe della campagna]. PF1e:
+> Difensore Inamovibile (*stalwart defender*), non si applica.
 
 **Momenti Eroici Consigliati:**
 - Duello personale contro Gorthak il Trifronte
@@ -523,22 +696,34 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 **Iniziativa:** +4; 
 **Sensi:** Scurovisione 18m; Ascoltare +18, Osservare +18
-**CA:** 20 (+4 armatura, +4 Des, +1 schivare, +1 naturale), contatto 15, colto alla sprovvista 16
-**PF:** 98 (12d8+36)
-**TS:** Tempra +11, Riflessi +14, Volontà +9
+**CA:** 21 (+5 armatura, +4 Des, +1 schivare, +1 naturale), contatto 15, colto alla sprovvista 16
+**PF:** 102 (12d8+48)
+**TS:** Tempra +12, Riflessi +14, Volontà +9
 **Velocità:** 9m
 **Attacco Base:** +11; 
 **Lotta:** +14
-**Attacco:** *Arco Lungo Composito Potente (+3) +3* +18 a distanza (1d8+6/x3)
-**Attacco Completo:** *Arco Lungo Composito +3* +18/+13/+8 a distanza (1d8+6/x3) o *Asce Gemelle +2* +15/+10 (1d6+5)
+**Attacco:** *Arco Lungo Composito Potente (+3) +3* +19 a distanza (1d8+6/x3)
+**Attacco Completo:** *Arco Lungo Composito +3* +19/+14/+9 a distanza (1d8+6/x3), o *Asce Gemelle +2* +16/+11 (1d6+5) con una, +14/+9 (1d6+5) e +14 (1d6+3) con due
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito).
+**Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 [INFERRED: Cos 18 per i pf]
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare [INFERRED: la CA conta il bonus di schivare].
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
 
 **Tattiche di Combattimento:**
 - **Posizionamento:** Cerca sempre terreno sopraelevato
 - **Priorità:** Elimina prima i comandanti, poi i maghi, poi le minacce maggiori
 - **Mobilità:** Usa guerriglia e hit-and-run quando possibile
+- *Morale*: sotto i 30 pf lascia la posizione per la successiva e continua a tirare; non si arrende agli orchi.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: l'armatura di cuoio borchiato +2 vale
+> +5 (CA 21). 12d8+36 non arriva a 98: Cos 18 dà 102. Bonus d'attacco con
+> l'arco +11 BAB, +4 Des, +3 arco, +1 Arma Focalizzata = +19.
+> ⚠ Prerequisito: Tiro in Corsa chiede anche Mobilità, che non c'è, e i talenti
+> sono uno in più di quelli di un 12° livello. Il terzo nemico prescelto e i
+> bonus +6/+4/+2 vengono dall'Esploratrice dei Picchi, classe non dell'SRD
+> [Private source — classe della campagna]. Restano come la scheda li dà.
+> PF1e: Viandante dell'Orizzonte (*horizon walker*), non si applica.
 
 **Momenti Eroici Consigliati:**
 - Duello di tiro contro i preti hobgoblin draconici
@@ -555,28 +740,41 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +5, Osservare +5
 **CA:** 22 (+1 Des, +8 armatura, +3 scudo), contatto 11, colto alla sprovvista 21
-**PF:** 108 (12d8+48)
-**TS:** Tempra +12, Riflessi +7, Volontà +16
+**PF:** 114 (12d8+60)
+**TS:** Tempra +13, Riflessi +7, Volontà +16
+**Caratteristiche:** For 16, Des 12, Cos 20, Int 12, Sag 22, Car 16 [INFERRED: For e Cos, Cos con *Amuleto della Salute +2*]
 **Velocità:** 6m
 **Attacco Base:** +8; 
 **Lotta:** +11
-**Attacco:** *Martello da Guerra Sacro +2* +12 in mischia (1d8+5)
-**Abilità Speciali:** Scacciare Non Morti 7/giorno (+5 bonus), Rune di Potere 3/giorno (+1 bonus potenziamento per 1 ora), Benedizione di Massa (+1 morale alleati entro 18m per 10 min), Controllo Pietra.
-**Incantesimi da Chierico (CL 12°; 6/6/5/5/4/3/2 per giorno; Domini Guerra e Terra):**
-*   6° (CD 21): *Guarigione*, *Ferire*
-*   5° (CD 20): *Colpo Infuocato*, *Cura Ferite Leggere di Massa*, *Potere della Giustizia*
-*   4° (CD 19): *Cura Ferite Critiche* (x2), *Potere Divino*, *Immunità agli Incantesimi*
-*   3° (CD 18): *Cura Ferite Gravi* (x2), *Preghiera*, *Dissolvi Magie*, *Scolpire Pietra*
-*   2° (CD 17): *Cura Ferite Moderate* (x3), *Forza del Toro* (x2), *Arma Spirituale*
-*   1° (CD 16): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*
+**Attacco:** *Martello da Guerra Sacro +2* +14 in mischia (1d8+5)
+**Abilità Speciali:** Scacciare Non Morti 10/giorno (+5 bonus), Rune di Potere 3/giorno (+1 bonus potenziamento per 1 ora), Benedizione di Massa (+1 morale alleati entro 18m per 10 min), Controllo Pietra.
+**Incantesimi da Chierico (CL 12°; 6/7+1/7+1/6+1/5+1/4+1/3+1 per giorno, con Sag 22; Domini Guerra e Terra):**
+*   6° (CD 22): *Guarigione*, *Ferire*, *Barriera di Lame*, *Pelle di Pietra* (D)
+*   5° (CD 21): *Cura Ferite Leggere di Massa*, *Potere della Giustizia*, *Rianimare Morti*, *Comunione*, *Colpo Infuocato* (D)
+*   4° (CD 20): *Cura Ferite Critiche* (x2), *Immunità agli Incantesimi*, *Libertà di Movimento*, *Neutralizzare Veleno*, *Potere Divino* (D)
+*   3° (CD 19): *Cura Ferite Gravi* (x2), *Preghiera*, *Dissolvi Magie*, *Rimuovere Maledizione*, *Protezione dall'Energia*, *Scolpire Pietra* (D)
+*   2° (CD 18): *Cura Ferite Moderate* (x3), *Forza del Toro* (x2), *Resistenza dell'Orso*, *Silenzio*, *Arma Spirituale* (D)
+*   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
-**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene.
+**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra [INFERRED]; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
 **Equipaggiamento:** *Armatura a Bande +2*, *Scudo Pesante Runico +1* (RI 15), *Martello da Guerra Sacro +2*, *Simbolo Sacro di Mithral*.
 
 **Tattiche di Combattimento:**
 - **Supporto:** Mantiene buff attivi su più alleati possibile
 - **Guarigione:** Priorità assoluta a mantenere in vita i leader
 - **Controllo Campo:** Usa magia della terra per modificare il terreno di battaglia
+- *Morale*: resta finché c'è un ferito da curare; sotto i 30 pf lancia *Guarigione* su di sé e torna dietro la linea.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: incantesimi al giorno da chierico di
+> 12° con Sag 22, più uno di dominio per livello; CD 16 + livello. Gli
+> incantesimi di dominio sono quelli di Guerra e Terra dell'SRD. 12d8+48 non
+> arriva a 108: Cos 20 dà 114. Il martello: BAB +8, For +3, +2 arma, +1 Arma
+> Focalizzata = +14. Scacciare 10/giorno con Scacciare Extra.
+> ⚠ Prerequisito: il Sacerdote delle Rune si legge come il Runecaster
+> [Private source — Forgotten Realms Campaign Setting], che chiede il talento
+> Incidere Rune, assente. Resta. PF1e: nessuna classe di prestigio
+> equivalente; sarebbe un chierico con il talento *Inscribe Magical Tattoo*.
 
 **Momenti Eroici Consigliati:**
 - Salvare Re Thorek dal soffio del drago con Heal
@@ -592,26 +790,38 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 **Iniziativa:** +4; 
 **Sensi:** Scurovisione 18m; Ascoltare +15, Osservare +15
-**CA:** 18 (+3 armatura, +4 Des, +1 naturale), contatto 14, colto alla sprovvista 14
-**PF:** 84 (12d6+36)
-**TS:** Tempra +7, Riflessi +13, Volontà +11
+**CA:** 20 (+4 armatura, +4 Des, +1 naturale, +1 schivare), contatto 15, colto alla sprovvista 15
+**PF:** 90 (12d6+48)
+**TS:** Tempra +8, Riflessi +13, Volontà +11
 **Velocità:** 9m
 **Attacco Base:** +8; 
 **Lotta:** +10
-**Attacco:** *Stocco Affilato +1* +13 in mischia (1d6+3/18-20)
-**Abilità Speciali:** Musica Bardica 8/giorno (Ispirare Coraggio +2, Suggestione, etc.), Canto di Guerra Nanico (+3 morale agli attacchi), Attacco Furtivo +3d6, Abilità da Spia (Camuffare, Raggirare, Nascondere Oggetti).
-**Incantesimi da Bardo Conosciuti (CL 8°; 3/4/3/1 per giorno):**
+**Attacco:** *Stocco Affilato +1* +13 in mischia (1d6+3/15-20)
+**Abilità Speciali:** Musica Bardica 8/giorno (Ispirare Coraggio +2, Suggestione, etc.), Canto di Guerra Nanico (+1 morale ai nani oltre Ispirare Coraggio: +3 agli attacchi), Attacco Furtivo +3d6, Abilità da Spia (Camuffare, Raggirare, Nascondere Oggetti).
+**Incantesimi da Bardo Conosciuti (CL 8°; 3/4/4/2 per giorno, con Car 18):**
 *   3° (CD 17): *Velocità*, *Suggestione*, *Dissolvi Magie*
 *   2° (CD 16): *Invisibilità*, *Immagine Speculare*, *Silenzio*, *Frantumare*
-*   1° (CD 15): *Charme su Persone*, *Caduta Morbida*, *Immagine Silenziosa*, *Cura Ferite Leggere*, *Sonno*
+*   1° (CD 15): *Charme su Persone*, *Caduta Morbida*, *Immagine Silenziosa*, *Cura Ferite Leggere*
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
-**Talenti:** Schivare, Mobilità, Competenza nelle Armi Esotiche (Stocco), Volontà di Ferro.
+**Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 [INFERRED: Cos 18 per i pf]
+**Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo [INFERRED: Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già].
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
 
 **Tattiche di Combattimento:**
 - **Inizio Battaglia:** Buff alleati con Inspire Courage e Haste
 - **Durante Scontri:** Flanking per Sneak Attack, priorità ai maghi nemici
 - **Situazioni Speciali:** Infiltrazione, sabotaggio, intelligence
+- *Morale*: sotto i 30 pf beve una pozione di invisibilità e si sposta; la canzone non si interrompe finché può cantare.
+> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+
+> **Verifica 3.5 (versione più forte)**: lo stocco affilato ha critico 15-20.
+> Un bardo sa già usare lo stocco: il talento passa ad Arma Accurata, che
+> spiega il +13 (BAB +8, Des +4, +1 arma). Bardo 8° con Car 18: 3/4/4/2 al
+> giorno, e quattro incantesimi di 1° conosciuti (*Sonno* esce). 12d6+36
+> non arriva a 84: Cos 18 dà 90. CA 20 con Schivare.
+> La Spia Maestra è il Master Spy [Private source — Complete Adventurer];
+> l'Attacco Furtivo +3d6 resta come la scheda lo dà. PF1e: Agente di
+> Corte (*court bard*) o il ladro *spy*, non si applica.
 
 **Momenti Eroici Consigliati:**
 - Infiltrarsi nelle linee nemiche per sabotaggio
@@ -665,7 +875,7 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 *(Statistiche e tattiche complete per ogni tipo di unità)*
 
 *   **Comandanti:** Re Thorek Hammerfist (GS 16), Madre Superiora Dana (GS 14).
-*   **Élite:** Nani d'Élite (GS 4, **Tattica:** difendono il cancello e i punti strategici), Cantitrici della Pietra (GS 11, **Tattica:** usano i loro canti di massa nei momenti critici).
+*   **Élite:** Nani d'Élite (GS 4, **Tattica:** difendono il cancello e i punti strategici), Cantitrici della Pietra (GS 12, **Tattica:** usano i loro canti di massa nei momenti critici).
 *   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 4, **Tattica:** formano muri di scudi impenetrabili sulle mura).
 *   **Fanteria a Distanza:** Balestrieri Nanici (GS 3, **Tattica:** si concentrano sui comandanti e sulle unità speciali nemiche).
 *   **Supporto Tecnico:** Ingegneri da Guerra (GS 3, **Tattica:** operano le baliste e riparano le fortificazioni danneggiate).
@@ -1677,7 +1887,7 @@ SOFFIO DRACONICO - AREA EFFETTO (Round 3)
 **Meccaniche dell'Attacco:**
 - **Area:** Cono di acido 18mt centrato su Re Thorek
 - **Danni:** 14d4 acido (media 35 danni)
-- **Tiro Salvezza:** Riflessi CD 25 per dimezzare
+- **Tiro Salvezza:** Riflessi CD 29 per dimezzare
 - **Bersagli nell'Area:** Re Thorek + Borin + 15 Guardie Reali
 
 **EFFETTI SPECIALI:**
@@ -1690,7 +1900,7 @@ SOFFIO DRACONICO - AREA EFFETTO (Round 3)
 
 **BORIN FERROPUGNO - "Il Sacrificio del Comandante"**
 - **Opzione A:** Interporsi tra drago e Re Thorek
-  - Subisce il soffio al posto del Re (TS Tempra CD 25, 14d4 acido)
+  - Subisce il soffio al posto del Re (TS Riflessi CD 29, 14d4 acido)
   - Re Thorek subisce solo danni dimezzati da splash
   - Borin ottiene +4 TS per atto eroico
 
@@ -2596,11 +2806,11 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 **AZIONI AEREE:**
 - **Signore Ventolesto:** Dive attack su ali del drago (+4 att, 2d8+10)
 - **Gufi Supporto:** Flanking attack, artigli coordinati
-- **Orion Orso:** Grapple check per rimanere attaccato (Lotta +20)
+- **Orion Orso:** Grapple check per rimanere attaccato (Lotta +24)
 - **Fauci di Palude:** Barrel roll per liberarsi dell'orso (Acrobazia aerea)
 
 **Combattimento Orso vs Drago:**
-- **Orion (Forma Orso Gigante):** CA 22, PF 150, Attacchi +18/+18/+13
+- **Orion (Forma Orso Gigante):** CA 22, PF 150, Attacchi +19/+19/+14
 - **Aggrappato al Drago:** Entrambi subiscono -2 alla CA, -4 ai tiri per colpire
 - **Lacerazione:** Se entrambi gli artigli colpiscono, 2d8+15 danni aggiuntivi
 - **Afferrare Migliorato:** Il drago non può liberarsi facilmente (CD 25 Lotta)
@@ -2708,7 +2918,7 @@ STRAFING RUNS - ATTACCHI DALL'ALTO (Round 6-8)
 - **3 Gufi:** Supporto aereo per l'assalto nanico
 
 **CAPITANO LUNAPIENA (Leader dei Ranger):**
-- **Corno del Valhalla:** Evoca 2d4+2 berserker celestiali per 1 ora
+- **Corno del Valhalla:** Evoca 2d4 barbari di 4° livello per 1 ora
 - **Frecce Speciali:** 3 Frecce della Morte dei Draghi (vs cavaliere hobgoblin)
 - **Comando Tattico:** +2 attacchi a tutti i ranger quando comanda
 
@@ -3019,7 +3229,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 
 ### **ESERCITO NANICO DI HAMMERFIST (300 unità)**
 *   **Comandanti:** Re Thorek Hammerfist (GS 16), Madre Superiora Dana (GS 14)
-*   **Élite:** Nani d'Élite (GS 4), Cantitrici della Pietra (GS 11)
+*   **Élite:** Nani d'Élite (GS 4), Cantitrici della Pietra (GS 12)
 *   **Fanteria Pesante:** Guerrieri Nanici Veterani (GS 4)
 *   **Fanteria a Distanza:** Balestrieri Nanici (GS 3)
 *   **Supporto Tecnico:** Ingegneri da Guerra (GS 3)
@@ -3310,7 +3520,7 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 **Scheda 1: BORIN FERROPUGNO, Il Martello di Hammerfist (Guerriero/Campione Nanico)**
 *   **Ruolo:** Leader in prima linea, tank, ispiratore.
-*   **Statistiche Chiave:** PF 142, CA 24, Attacco Martello +20/+15/+10 (1d8+9/x3)
+*   **Statistiche Chiave:** PF 142, CA 25, Attacco Martello +21/+16/+11 (1d8+9/x3)
 *   **Abilità Principali:**
     *   **Colpo Devastante (3/giorno):** Aggiungi +4d6 danni a un attacco.
     *   **Postura Difensiva (3/giorno):** Ottieni +4 For/Cos e +2 TS Volontà per 3 round.
@@ -3319,7 +3529,7 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 **Scheda 2: DARA OCCHIOLESTO, L'Occhio delle Montagne (Ranger/Esploratrice)**
 *   **Ruolo:** Cecchino, scout, cacciatrice di élite.
-*   **Statistiche Chiave:** PF 98, CA 20, Attacco Arco +18/+13/+8 (1d8+6/x3)
+*   **Statistiche Chiave:** PF 102, CA 21, Attacco Arco +19/+14/+9 (1d8+6/x3)
 *   **Abilità Principali:**
     *   **Nemico Prescelto:** +6 danni contro Orchi, +4 contro Giganti.
     *   **Munizioni Speciali:** Usa le frecce anatema/ricercanti contro i bersagli giusti.
@@ -3328,7 +3538,7 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 **Scheda 3: THORIN RUNAFORTE, La Voce di Moradin (Chierico/Sacerdote delle Rune)**
 *   **Ruolo:** Guaritore, supporto divino, controllo del campo di battaglia.
-*   **Statistiche Chiave:** PF 108, CA 22, Incantesimi (CL 12°)
+*   **Statistiche Chiave:** PF 114, CA 22, Incantesimi (CL 12°)
 *   **Abilità Principali:**
     *   **Guarigione:** Hai potenti incantesimi di cura (*Guarigione*, *Cura Ferite di Massa*). Usali per salvare i leader.
     *   **Incantesimi di Battaglia:** *Potere Divino* e *Preghiera* sono i tuoi migliori amici. *Colpo Infuocato* per i gruppi.
@@ -3337,7 +3547,7 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 **Scheda 4: NALA CANTAPIETRE, La Lama Nascosta (Bardo/Spia)**
 *   **Ruolo:** Infiltratrice, sabotatrice, supporto tattico e morale.
-*   **Statistiche Chiave:** PF 84, CA 18, Attacco Furtivo +3d6
+*   **Statistiche Chiave:** PF 90, CA 20, Attacco Furtivo +3d6
 *   **Abilità Principali:**
     *   **Musica Bardica (8/giorno):** *Ispirare Coraggio* (+2) è fondamentale. Tienilo sempre attivo.
     *   **Incantesimi:** *Velocità* è l'incantesimo più potente del tuo arsenale. *Invisibilità* e *Silenzio* per le operazioni segrete.
@@ -3347,7 +3557,7 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 #### **PER IL DM (Schede Rapide dei Boss)**
 
 **Scheda Boss 1: FAUCI DI PALUDE (Drago Nero)**
-*   **GS 15 - PF 312 - CA 28**
+*   **GS 15 - PF 337 - CA 29**
 *   **Immunità:** Acido, Sonno, Paralisi. **RD 10/magia, RI 21.**
 *   **Attacchi Principali:** Morso +35 (2d8+10), Soffio (14d4 acido, CD 29, 1/1d4 round)
 *   **Tattiche Chiave:**
@@ -3356,8 +3566,8 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
     *   **Fine Scontro:** Atterra solo se ferito (<100 PF) o per finire un PG isolato. Non combatte fino alla morte, fugge sotto i 50 PF.
 
 **Scheda Boss 2: GENERALE GRIMJAW (Orog Comandante)**
-*   **GS 14 - PF 178 - CA 25**
-*   **Attacchi Principali:** Spada Bastarda +22/+17/+12 (1d10+8)
+*   **GS 14 - PF 178 - CA 26**
+*   **Attacchi Principali:** Spada Bastarda +22/+17/+12 (1d10+9)
 *   **Tattiche Chiave:**
     *   **Sempre Protetto:** Non si espone mai. Circondato dalle sue 4 Guardie Nere Orog.
     *   **Buff:** Usa **Tattico Superiore** ogni round.
@@ -3365,13 +3575,13 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
     *   **Fuga:** Usa pozioni e oggetti magici per sopravvivere. La sua morte causa un crollo del morale nemico (-3).
 
 **Scheda Boss 3: GORTHAK IL TRIFRONTE (Ettin a 3 Teste)**
-*   **GS 12 - PF 195 - CA 22**
-*   **Attacchi Principali:** 3 Randelli +20/+15/+10 (2d6+9)
+*   **GS 12 - PF 202 - CA 25**
+*   **Attacchi Principali:** 2 Randelli +21/+16/+11 (2d6+10) e +21/+16/+11 (2d6+5)
 *   **Tattiche Chiave:**
     *   **Sempre in Mischia:** È un ariete vivente. Cerca sempre lo scontro fisico.
-    *   **Attacchi Multipli:** Può attaccare fino a 3 bersagli diversi o concentrarsi su uno solo.
+    *   **Attacchi Multipli:** Fino a 6 attacchi per round, su bersagli diversi o tutti su uno.
     *   **Mai Sorpreso:** La testa destra lo rende immune agli attacchi ai fianchi.
-    *   **Furia:** Sotto 50% PF (97 PF), si infuria guadagnando +4 For e -2 CA.
+    *   **Furia:** Sotto 50% PF (101 PF), si infuria guadagnando +4 For e -2 CA.
 
 ---
 
@@ -3390,11 +3600,11 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 | STATISTICA | VALORE | DETTAGLI |
 | :--- | :--- | :--- |
 | **PF** | **142** | |
-| **CA** | **24** | (Arm. Completa +2, Scudo Pesante +1, Des +1) |
+| **CA** | **25** | (Arm. Completa +2, Scudo Pesante +1, Des +1, Schivare +1) |
 | **Velocità** | 6m | |
 | **TS** | Temp **+13**, Rifl **+6**, Vol **+8** | |
 | **Attacco Base** | +13 | |
-| **Attacco Melee**| **+20/+15/+10** | *Martello da Guerra degli Avi +2* (1d8+9, critico x3) |
+| **Attacco Melee**| **+21/+16/+11** | *Martello da Guerra degli Avi +2* (1d8+9, critico x3) |
 | **For** 20, **Des** 13, **Cos** 20 | | |
 
 **ABILITÀ PRINCIPALI:**
@@ -3414,14 +3624,14 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 | STATISTICA | VALORE | DETTAGLI |
 | :--- | :--- | :--- |
-| **PF** | **98** | |
-| **CA** | **20** | (Cuoio Borchiato +2, Des +4, Schivare +1, Naturale +1) |
+| **PF** | **102** | |
+| **CA** | **21** | (Cuoio Borchiato +2, Des +4, Schivare +1, Naturale +1) |
 | **Velocità** | 9m | Ignori terreno difficile in montagna |
-| **TS** | Temp **+11**, Rifl **+14**, Vol **+9** | |
+| **TS** | Temp **+12**, Rifl **+14**, Vol **+9** | |
 | **Attacco Base** | +11 | |
-| **Attacco a Distanza**| **+18/+13/+8** | *Arco Lungo Composito +3* (1d8+6, critico x3) |
-| **Attacco Melee** | +15/+10 | *Asce Gemelle +2* (1d6+5) |
-| **For** 16, **Des** 18, **Cos** 16 | | |
+| **Attacco a Distanza**| **+19/+14/+9** | *Arco Lungo Composito +3* (1d8+6, critico x3) |
+| **Attacco Melee** | +16/+11, o +14/+9 e +14 con due asce | *Asce Gemelle +2* (1d6+5; la seconda 1d6+3) |
+| **For** 16, **Des** 18, **Cos** 18 | | |
 
 **ABILITÀ PRINCIPALI:**
 *   **Nemico Prescelto:** Ottieni bonus ai tiri per colpire e ai danni contro: **Orchi (+6)**, **Giganti (+4)**, **Draghi (+2)**.
@@ -3442,16 +3652,16 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 | STATISTICA | VALORE | DETTAGLI |
 | :--- | :--- | :--- |
-| **PF** | **108** | |
+| **PF** | **114** | |
 | **CA** | **22** | (Armatura a Bande +2, Scudo Pesante +1, Des +1) |
 | **Velocità** | 6m | |
-| **TS** | Temp **+12**, Rifl **+7**, Vol **+16** | |
+| **TS** | Temp **+13**, Rifl **+7**, Vol **+16** | |
 | **Attacco Base** | +8 | |
-| **Attacco Melee** | **+12** | *Martello da Guerra Sacro +2* (1d8+5) |
-| **Sag** 22, **Car** 16 | | |
+| **Attacco Melee** | **+14** | *Martello da Guerra Sacro +2* (1d8+5) |
+| **For** 16, **Cos** 20, **Sag** 22, **Car** 16 | | |
 
 **ABILITÀ PRINCIPALI:**
-*   **Scacciare Non Morti (7/giorno):** Bonus di +5 al tiro.
+*   **Scacciare Non Morti (10/giorno):** Bonus di +5 al tiro.
 *   **Rune di Potere (3/giorno):** Come azione di round completo, puoi incidere una runa su un'arma. L'arma ottiene un **bonus di potenziamento di +1** per 1 ora (non cumulabile con bonus esistenti).
 *   **Incantesimi Chiave:**
     *   **Guarigione:** *Guarigione*, *Cura Ferite Critiche* (x2), *Cura Ferite Gravi* (x2), *Cura Ferite Moderate* (x3).
@@ -3470,14 +3680,14 @@ XP per il dettaglio — rimando a piano ARC-08 B5.*
 
 | STATISTICA | VALORE | DETTAGLI |
 | :--- | :--- | :--- |
-| **PF** | **84** | |
-| **CA** | **18** | (Armatura di Cuoio +2, Des +4, Naturale +1) |
+| **PF** | **90** | |
+| **CA** | **20** | (Armatura di Cuoio +2, Des +4, Naturale +1, Schivare +1) |
 | **Velocità** | 9m | |
-| **TS** | Temp **+7**, Rifl **+13**, Vol **+11** | |
+| **TS** | Temp **+8**, Rifl **+13**, Vol **+11** | |
 | **Attacco Base** | +8 | |
-| **Attacco Melee** | **+13** | *Stocco Affilato +1* (1d6+3, critico 18-20/x2) |
+| **Attacco Melee** | **+13** | *Stocco Affilato +1* (1d6+3, critico 15-20/x2) |
 | **Attacco Furtivo** | **+3d6** | Danno extra contro bersagli colti alla sprovvista o fiancheggiati. |
-| **Des** 18, **Car** 18 | | |
+| **Des** 18, **Cos** 18, **Car** 18 | | |
 
 **ABILITÀ PRINCIPALI:**
 *   **Musica Bardica (8/giorno):**

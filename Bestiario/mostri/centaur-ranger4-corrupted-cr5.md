@@ -13,7 +13,6 @@ ts: Temp +9, Rifl +7, Vol +4
 attributi: For 18 Des 14 Cos 18 Int 8 Sag 13 Car 11
 ```
 
-> [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «4d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus è quello scritto nella formula.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 16 ricavata da pf 60 su 8 DV, ma la scheda scrive 18: si tiene la scheda, da verificare.
 

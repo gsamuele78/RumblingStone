@@ -1,7 +1,7 @@
 # Parte 2B — SUB-QUEST DI HELLA · IL BOSCHETTO MORENTE
 
 > **Versione**: v1 (2026-07-02) — file creato in **Lotto B (generativo)** per sciogliere
-> il riferimento `[INFERRED — sub-quest da scrivere in Lotto B]` di
+> il rimando «sub-quest da scrivere in Lotto B» di
 > `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §5.
 > **Beat sorgente (canone)**: `Arco-Post-Hammerfist-HOOKS-Hella-SacredForest.md` §2.5.2
 > (Visione 2 — la spora sotto la Quercia; Mother of Fungi legata a **Sonjak**),
@@ -276,7 +276,7 @@ saprà che hai capito.»*
 
 Una volta sola: quando un alleato sta per scendere a 0 pf per un attacco, Hella può
 scagliarla (azione immediata) e l'attacco va a vuoto. La freccia si disfa in foglie.
-`[INFERRED — oggetto di trama, non SRD; confermato dal DM il 2026-09-24]`
+`[CANONE — DM 2026-09-24]` (oggetto di trama, non SRD)
 
 ---
 

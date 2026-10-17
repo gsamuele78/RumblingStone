@@ -1,7 +1,7 @@
 # Armate — Calcoli Eserciti Dinamici (v2 — 2026-05-05)
 
 > **🛡️ Canonizzazione 2026-05-05**: il DM ha **accettato** tutte le
-> derivazioni `[INFERRED]` delle unità (file in `Bestiario/`)
+> derivazioni delle unità (file in `Bestiario/`)
 > e tutti i puntatori NPC a `PNG/`. I conteggi §2.x e §2.6 sono canone
 > di campagna; le unità sono valide per encounter/mass-combat
 > immediato. Flag globale: `[ACCEPTED — DM-canon 2026-05-05]`.
@@ -66,7 +66,7 @@
 |---|---|---|---|
 | **Abithriax** (Red adult) | Skull Gorge guardian → Rethmar Fase 1 | AP canon | Vivo |
 | **Regiarix** (Black young adult) | Rhest/Saarvith, P2 Arco-09 | AP canon | **A rischio PG** (P2-RHEST-FASE4) |
-| **Ozyrrandion** (Blue adult) | Torre Invisibile / Wyrmlord Tower | AP canon | **A rischio PG** (P2A-Torre-Zalkatar) |
+| **Ozyrrandion** (Green adult, CR 14) | Torre Invisibile / Wyrmlord Tower | AP canon | **A rischio PG** (P2A-Torre-Zalkatar) |
 | **Tyrgarun** (Black adult, hell-themed reserve) | Riserva aerea Rethmar | AP upscaled | Vivo |
 | **Fauci di Palude** (Black adult) | Vanguard Hammerfist | Canon campagna | **Ramo condizionale D10, non deciso** (default: fugge <50 PF, assente da Rethmar; alternativa: ucciso ad Hammerfist) |
 
@@ -150,7 +150,7 @@ Approssimato a **~10.000** come target narrativo.
 | Xal'thor (Illithid Commander) | 14 | ×1 | `Bestiario/villain/Xal_thor/Xal_thor/Xal_thor.md` (pointer) | Torneo Dauth P2B Day 3 (fixed) |
 | Saarvith | 11 | ×1 | `09_.../P2-RHEST-ENCOUNTER-SAARVITH-REGIARIX-STATBLOCCHI.md` | Rhest P2 (PG deviabile) |
 | Zalkatar | 13 | ×1 | `09_.../P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` | Torre Invisibile P2A (PG deviabile) |
-| Wyrmlord Karruk | 10 | ×1 | `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr10.md` | Rethmar Fase 1 assault leader |
+| Wyrmlord Karruk | 13 | ×1 | `Bestiario/villain/Wyrmlord_Karruk/wyrmlord-karruk-cr13.md` | Rethmar Fase 1 assault leader |
 | Ondata Giganti — mass wave | 15 (EL) | ×2 ondate | `Bestiario/mostri/ondata-giganti-fanteria-cr15.md` | Rethmar Fase 1 (prima ondata) + Fase 3 (rinforzo) — assorbe gli 80 Hill Giant §2.1 + ogre/ettin supporto |
 | Azarr Kul (finale) | 15 | ×1 | `09_.../P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` | Rethmar Fase 3 (arrivo Day 40+2) |
 | Avatar di Tiamat (climax) | 17 | ×1 | `Bestiario/villain/Avatar_Tiamat/avatar-tiamat-cr17.md` | **Conditional**: evocato solo se Ritual Clock ≥18 (Fase 3-4 climax) |

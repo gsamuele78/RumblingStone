@@ -823,13 +823,13 @@ Momento ICONICO campagna: Fauci di Palude dragon dive attack vs Re Thorek sui ba
 - **Targets:** Re Thorek + 10 Guardie + Borin + Thorin (13 totali)
 - **Risultato Probabile:** 
   - Guardie (PF 42 media): 6-8 KO instant (Failed save = death)
-  - Re Thorek (PF 195): Survives (Resistenza + items), heavily wounded
+  - Re Thorek (PF 196): Survives (Resistenza + items), heavily wounded
   - Borin (PG): Tough call (Depends save)
   - Thorin (pregen, non ancora PG in questa scena — D6/D2): Likely survive (Chierico AC alto)
 
 **Controffensive Possibili:**
 - **Dara (Torre Ovest):** Crossbow Heavy +1 attack (Extreme range -6, +19 final = +13)
-  - Se hit: 1d10+3 danni (Insignificant vs drago PF 312 MA morale boost)
+  - Se hit: 1d10+3 danni (Insignificant vs drago PF 337 MA morale boost)
 - **Nala (Nascosta):** Ready action *Suggestione* quando drago vicino (Demoralize attempt)
 - **Baliste Torri:** Crew reload (Next round ready)
 - **Madre Dana:** Cast *Mass Cure Serious Wounds* (8d8+25 healing distributed, salvage survivors)

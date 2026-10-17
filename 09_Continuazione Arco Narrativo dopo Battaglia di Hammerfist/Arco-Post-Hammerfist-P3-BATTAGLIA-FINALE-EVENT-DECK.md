@@ -65,7 +65,7 @@ qualcosa di esistente, è un errore da correggere.**
 | 10 | I Leoni del Ghostlord | **S2** | `ghost-lion-spettrale-cr8`; Ghostlord-TESTO (3 rami, D7) | Hella |
 | 11 | La Difesa del Tempio-Ospedale | **S1** | archetipo Brindol (cappella); eco Fase 0 | Hella |
 | 12 | L'Altare Campale (Ritualisti) | **S2** | FASE2-RITUALISTI §8; Sethrax/Orbe, Zalkatar wildcard; statue Sal→Varis | Tordek/Artemis |
-| 13 | Il Duello di Karruk | **S1** | archetipo Brindol (duello Wyrmlord); `wyrmlord-karruk-cr10` | Tordek/Thorik |
+| 13 | Il Duello di Karruk | **S1** | archetipo Brindol (duello Wyrmlord); `wyrmlord-karruk-cr13` | Tordek/Thorik |
 | 14 | Il Falso Segnale | **S3** | *(buco di ritmo — finta/diversivo che forza una scelta)* | Artemis/party |
 
 **Mix**: S1 = 6 (2,7,8,9,11,13) · S2 = 6 (1,4,5,6,10,12) · S3 = 2 (3,14) — coerente
@@ -214,7 +214,7 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 - **Trigger**: il **drago blu Old Tyrgarun** (CR 18) plana sui bastioni con passate di soffio. **Questa carta È il set-piece C1.d** (STRUTTURA §9.4): si gioca come **hazard con contromosse**, non come scontro frontale.
 - **Read-aloud**: *Il cielo si oscura di una sola ala. Tyrgarun scende in picchiata e il suo soffio corre lungo il bastione come un fiume di fulmini: torri di guardia diventano cenere. Poi risale, intoccabile, e i suoi occhi cercano chi tra voi maneggia la magia.*
 - **Mappa**: tratto di bastione **20×5** (1,5 m/q) + cielo (quote: camminamento / volo basso / volo alto); balliste (2-4, riusabili dai PG: colpo 4d6) come contromosse; copertura sotto le merlature.
-- **Nemici**: Tyrgarun **profilo aereo** (`tyrgarun-blue-old-cr18.md`; soffio linea 30 m 20d8 elettr., Ref CD 29). **Non si abbatte** — si **nega** con le 4 contromosse di STRUTTURA §9.4 (balliste, gufi Tiri-Kitor, missione-esca, Fulcro Arcano di Artemis).
+- **Nemici**: Tyrgarun **profilo aereo** (`tyrgarun-blue-old-cr18.md`; soffio linea 30 m 20d8 elettr., Ref CD 32). **Non si abbatte** — si **nega** con le 4 contromosse di STRUTTURA §9.4 (balliste, gufi Tiri-Kitor, missione-esca, Fulcro Arcano di Artemis).
 - **Posta**: negare le passate a un settore; è la prova di Rethmar della grammatica anti-drago (già assaggiata a Dauth col Razorfiend, DAY3-CITY-SIEGE Carta B).
 - **Esiti**: **Vittoria** (passate negate ripetutamente) → +1 Fronte; Tyrgarun ripiega a ricaricare. **Parziale** (contromosse a intermittenza) → +0, balliste perse. **Sconfitta** (2+ passate a segno) → −2 Fronte, un settore cede (breccia → Carta 7/9).
 - **Se ignorata**: Tyrgarun brucia le difese aeree → −2 Fronte; le altre carte aeree diventano più dure. **Fase 4**: quando il Mythal lo inchioda (§7 STRUTTURA), il DM può aprire una **coda** di questa carta col profilo a terra (CR ~16-17).
@@ -267,10 +267,10 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 ---
 
 ## CARTA 13 — IL DUELLO DI KARRUK  ·  [S1]  ·  *spotlight: Tordek / Thorik*  ·  Fase 1-3 / Day 42
-- **Trigger**: il **Wyrmlord Karruk** (CR 10) sfida pubblicamente un campione dei difensori sulle mura — un rituale di guerra hobgoblin per spezzare il morale.
-- **Read-aloud**: *Un corno grave, tre volte. Sui gradini della breccia, un hobgoblin enorme in armatura di scaglie rosse pianta l'ascia nella pietra e ruggisce, nella lingua comune: "Il vostro migliore contro di me! O guardate i vostri morire senza onore!" Tutta la mura trattiene il fiato.*
+- **Trigger**: il **Wyrmlord Karruk** (CR 13) sfida pubblicamente un campione dei difensori sulle mura — un rituale di guerra dell'Orda per spezzare il morale.
+- **Read-aloud**: *Un corno grave, tre volte. Sui gradini della breccia, un gigante in armatura di scaglie rosse pianta il randello nella pietra e ruggisce, nella lingua comune: "Il vostro migliore contro di me! O guardate i vostri morire senza onore!" Tutta la mura trattiene il fiato.*
 - **Mappa**: sommità di un bastione/breccia **10×10** (1,5 m/q); arena improvvisata delimitata dai soldati (i due eserciti guardano — nessuno interviene finché dura il duello); dislivelli, bordo (caduta).
-- **Nemici (EL 12-14)**: `wyrmlord-karruk-cr10.md` + 1 Razorfiend di scorta (se il duello degenera). Tattica: Karruk combatte d'onore finché è avvantaggiato, bara se perde.
+- **Nemici (EL 12-14)**: `wyrmlord-karruk-cr13.md` + 1 Razorfiend di scorta (se il duello degenera). Tattica: Karruk combatte d'onore finché è avvantaggiato, bara se perde.
 - **Posta**: **ruolo Campione** (§9.2): se un PG vince il duello, l'ondata di quel settore perde 1 grado di CD e +1 Fronte; rifiutare/perdere = −1 Fronte e morale nemico su.
 - **Esiti**: **Vittoria** (Karruk battuto in duello) → +2 Fronte, ondata Ovest indebolita. **Parziale** (duello inconcluso, Karruk ripiega) → +0. **Sconfitta** (campione PG cade) → −2 Fronte, +1 CR Fase 1 di quel settore.
 - **Se ignorata**: nessun campione accetta → il morale difensori cala (−1 Fronte); Karruk guida di persona la prossima breccia (Carta 7 +1 CR).

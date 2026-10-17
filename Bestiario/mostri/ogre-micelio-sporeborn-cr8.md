@@ -16,7 +16,6 @@ attacchi:
   - Mischia randello enorme +13 (2d8+10) o 2 slam +13 (1d8+7)
 ```
 
-> [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «4d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus da Cos 17 e Robustezza.
 
 > [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta +18 → **+22**: BAB 7 + For 25 (+7) + Grande (+4) + **Lottare Migliorato** (+4), talento che la scheda elenca e la lotta non contava. La For 25 è confermata dall'attacco +13 e dal danno 2d8+10.
 

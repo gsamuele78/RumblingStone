@@ -15,7 +15,6 @@ attributi: For 15 Des 11 Cos 14 Int 8 Sag 11 Car 8
 
 > [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +2 → **+3**: gnoll 2 DV (+1) più Warrior 2 (+2). Lotta +5 e ascia +5 lo presupponevano già.
 
-> [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «2d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus è quello scritto nella formula.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

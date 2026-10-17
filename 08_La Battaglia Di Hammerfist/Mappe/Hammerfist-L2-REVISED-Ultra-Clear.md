@@ -359,7 +359,7 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
 | B — Cancello distrutto | −40 PF/giorno per ariete+bombardamento (120→0 in 3 giorni) | Cancello (col 58-61, righe 72-73) a 0 PF | Giorno 3: breccia di 6 m, nemici entrano nel cortile esterno |
 | C — Breccia Muro Est | −120 PF concentrazione giganti/catapulte (240→120, metà Giorno 2) | breccia di 8 m nel Muro Est (col 85-90, riga 68) | secondo punto d'ingresso; Bastione G2 compromesso |
 | D — Torre Est crollata | −80 PF bombardamento continuo (160→80, metà Giorno 2) | cima della Torre Est collassa | perse 2 baliste + 10 balestrieri; copertura ridotta del 50% |
-| E — Giorno 3, critico | esito combinato di B+C+D | Nala si sposta a esplorare il tunnel segreto (col 58, riga 70); Thorin raggiunge Re Thorek (col 60, riga 34) per tenerlo in vita | evacuazione verso il Cuore della Montagna imminente `[INFERRED — needs DM confirmation: dettagli evacuazione fuori da questo file]` |
+| E — Giorno 3, critico | esito combinato di B+C+D | Nala si sposta a esplorare il tunnel segreto (col 58, riga 70); Thorin raggiunge Re Thorek (col 60, riga 34) per tenerlo in vita | evacuazione verso il Cuore della Montagna imminente (i dettagli dell'evacuazione: `Hammerfist-L3-REVISED-Ultra-Clear.md`, MAPPA H3-1) |
 
 > Gli stati sono esiti aperti (D13): il trigger è dei dadi e delle scelte
 > dei PG (quanto riescono a rallentare i danni strutturali), mai del
@@ -543,7 +543,7 @@ Le tre rotte tratteggiate sulla griglia sopra SONO la MAPPA 3 della guida. Fasi 
 - 150 orchi caricano 80→0 m (2 round) con scale improvvisate — carne da cannone
 - 500 hobgoblin seguono in formazione; ariete di Gorthak sul Cancello: **3d10+20/round**
 - Worg Riders (rotte viola): aggirano i fianchi cercando sortite/brecce — se trovano un varco, disastro nel cortile
-- Fauci di Palude: sorvoli a 45 m (fuori gittata baliste), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 24 m, 14d4)
+- Fauci di Palude: sorvoli a 45 m (fuori gittata baliste), Presenza Terrificante CD 25, soffio 1/1d4 round (linea 30 m, 14d4)
 - **Risultato atteso:** Cancello a 40 PF (critico), 20% breccia Muro Est, 30-40 nani KO, 50+ orchi e 30+ hobgoblin KO
 
 **FASE 3 — PRESSIONE CONTINUA (round 11-15 + notte):**
@@ -659,7 +659,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Effetti collaterali:** armature 1d4 danni permanenti CA; armi metalliche 25% corrose; quadretti colpiti = terreno difficile (acido residuo, 10 min)
 
 ### 📍 OPZIONI DIFENSIVE PNG (dalla guida, con coordinate):
-- **BORIN (S09, nel cono)** — A: si interpone (subisce lui il soffio, Tempra CD 25; il Re prende solo splash; +4 TS per l'atto eroico) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
+- **BORIN (S09, nel cono)** — A: si interpone (subisce lui il soffio, Riflessi CD 29; il Re prende solo splash; +4 TS per l'atto eroico) · B: spinge via il Re (For CD 25; entrambi +2 TS; 1d6 da caduta) · C: AdO col martello sulla picchiata (−4; se colpisce, Concentrazione o soffio perso)
 - **DARA (Torre Ovest, ~70 m FUORI MAPPA a ovest)** — il Tiro Impossibile: round 2 mira (+1), round 3 tiro in picchiata CD 25; freccia *Slaying Dragons*: Tempra CD 20 o morte, altrimenti 6d6+1
 - **THORIN (AC09, fuori dal cono)** — *Heal* preparato su Thorek · *Spell Immunity: Acido* round 1 · *Mass Cure Critical* round 4 · Invocazione a Moradin (Car CD 22: +4 sacro ai TS di tutti / fallita: −2)
 - **NALA (W14, nascosta al tunnel)** — round 1 *Immagine Silenziosa* (drago illusorio sul fianco: Volontà CD 17 o −2 att) · round 2 *Frantumare* sulla sella del cavaliere · round 3 Ispirare Coraggio +2

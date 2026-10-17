@@ -32,7 +32,7 @@ I PG raggiungono il sanctum di Zalkatar, un illithid warlock/psionico che ha cor
 
 **Fase 3 – Swarm/Caos (sotto 25% pf)**
 
-- Zalkatar evoca un *swarm* di pseudopodi caotici e attiva un “collasso planare” (TS Volontà CD 20 o *confusion*).  
+- Zalkatar evoca un *swarm* di pseudopodi caotici e attiva un “collasso planare” (TS Volontà CD 24 o *confusion*; la CD è quella dello statblocco).  
 - Fine possibile con distruzione, imprigionamento o fuga. [file:46]
 
 ---

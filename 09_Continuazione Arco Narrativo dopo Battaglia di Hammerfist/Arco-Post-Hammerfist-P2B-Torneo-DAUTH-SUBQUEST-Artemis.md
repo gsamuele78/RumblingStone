@@ -1,7 +1,7 @@
 # Parte 2B — SUB-QUEST DI ARTEMIS · BERIAH E IL CULTO DELLA MASCHERA
 
 > **Versione**: v1 (2026-07-02) — file creato in **Lotto B (generativo)** per sciogliere
-> il riferimento `[INFERRED — sub-quest da scrivere in Lotto B]` di
+> il rimando «sub-quest da scrivere in Lotto B» di
 > `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §5.
 > **Beat sorgente (canone)**: `Arco-Post-Hammerfist-HOOKS-Artemis-TorreInvisibile.md`
 > §3.4 (Sogno della Doppia Maschera), §4.3 (via C — Dauth), §6 (tabella echi).

@@ -62,7 +62,7 @@ assume all'ingresso (`09_.../TESORO-WBL-AUDIT.md` §1.2).
 | Fonte | Dove | Cosa (sintesi) | Valore (mo eq., party di 4) |
 |---|---|---|---|
 | **Gratitudine di Re Thorek** | Cerimonia / tesoreria reale | Gemme e metalli preziosi delle sale naniche (la "ricompensa materiale" della Guida DM) | **~120.000** (≈30k/PG) |
-| **Armeria di Hammerfist** | Fucine della cittadella | Accesso a 1 oggetto magico "su misura" per PG creato dai mastri fabbri superstiti (arma/armatura +1/+2 o utility) — `[INFERRED — DMG standard, il DM sceglie con il giocatore]` | **~40.000** (≈10k/PG) |
+| **Armeria di Hammerfist** | Fucine della cittadella | Accesso a 1 oggetto magico "su misura" per PG creato dai mastri fabbri superstiti (arma/armatura +1/+2 o utility) — come e quando arriva lo fissa la strada B di `ARC08-17-BANCO-HAMMERFIST-1372.md` `[CANONE — DM 2026-10-07, D41]` | **~40.000** (≈10k/PG) |
 | **Bottino dell'avanguardia** | Campo della Mano Rossa dopo la rotta | Equipaggiamento recuperabile dai caduti (armi/armature di massa, poco liquidabile ma vendibile in blocco) | **~20.000** |
 | **Equipaggiamento dei comandanti** | Corpi/resa di Grimjaw, Gorthak, Cavaliere Hobgoblin (se uccisi) | Oggetti magici dai comandanti nemici: *Anello di Protezione +1*, lancia/spada +1, armatura completa +1 (dal Cavaliere Hobgoblin, `ARC08-02` §1) — condizionale a chi cade | **~15.000** `[condizionale ai rami]` |
 | **Plot item — runa dei Custodi Eterni** | Cerimonia (Atto 3) | Simbolo fisico, **non** oggetto commerciabile → **0 mo** (valore narrativo; quantificazione meccanica in C2, non ancora scritta) | **0 (plot)** |

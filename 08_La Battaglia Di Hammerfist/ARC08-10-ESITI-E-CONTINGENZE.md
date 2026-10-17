@@ -234,7 +234,7 @@ maturati e si applicano al finale.
 | Evento a Hammerfist | Eco | Quando riemerge | File che lo gestisce |
 |---|---|---|---|
 | **Fauci di Palude fugge ferito** (ramo default D10) | Nemesi draconica: il drago torna per vendetta contro Thorik/la Corona | Rethmar (carta S2 all'EVENT-DECK, §6.3) o ARC-10 | `ARC08-10` §4; EVENT-DECK ARC-09 (S2, §6.3) |
-| **Uovo di Fauci** (eco gemella, ARC-07 C3) | Un secondo drago nero cresce nell'ombra — semina per ARC-10 | ARC-10 `[INFERRED]` | ARC-07 C3 (fonte); da agganciare alla stessa carta S2 |
+| **Uovo di Fauci** (eco gemella, ARC-07 C3) | Un secondo drago nero cresce nell'ombra — semina per ARC-10 | ARC-10, qualunque sia l'esito ARC-08 (`07_…/ARC07-CONSEGUENZE-ECHI.md`, Echo ledger) | ARC-07 C3 (fonte); da agganciare alla stessa carta S2 |
 | **Fauci ucciso** (ramo alternativo D10) | −1 drago a Rethmar; nessuna nemesi (ma l'uovo resta) | Day 42 Rethmar | `campaign/state.md` §2.3 |
 | **Runa dei Custodi Eterni** (Cerimonia Atto 3) | Status sociale presso i nani del Vale (§6.2) | Ogni interazione coi nani in ARC-09/10 | `Cerimonia-delle-100-Asce.md` §2; questa §6.2 |
 | **150 lance di Re Thorek** (D4) | Rinforzo condizionale a Rethmar | Day 42, se gli hook politici riescono | `state.md` §2.5; `Bestiario/png/Khorn/Khorn.md`; HOOKS-Thorik |
