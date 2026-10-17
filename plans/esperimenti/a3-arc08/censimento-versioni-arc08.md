@@ -239,7 +239,7 @@ Si aggiungono queste:
 | # | Domanda | Consigliata |
 |---|---|---|
 | D1 | 2B, TS del soffio: Riflessi o Tempra? | **Riflessi** (SRD; enc:527 è un errore) |
-| D2 | Fauci, PF all'inizio del finale: 180 (01), 220 (enc), 232 (L3) o 312 meno il carry-over B4? | **Carry-over** |
+| D2 | Fauci, PF all'inizio del finale: 180 (01), 220 (enc), 232 (L3) o il massimo della scheda meno il carry-over B4? | **Carry-over**, contato dal massimo della scheda di Fauci, che dipende dal suo statblock (337 pf sulla PR #241, 2026-10-17), non da un numero scritto qui |
 | D3 | Bonus della carica: +15 o +23? | **Ricalcolare** (ricostruirlo per tipo di bonus, che in 3.5 non si sommano fra uguali) |
 | D4 | Cancello: 120 PF (mappe) o 800 PF (02)? | **120** (L2, COMPLETE, Lotto-2 e i tre master tattici sono d'accordo) |
 | D5 | Prompt del 92: migrarli? | **Sì** (in `campaign/ai-media-prompts/09_ARC08…`) |
