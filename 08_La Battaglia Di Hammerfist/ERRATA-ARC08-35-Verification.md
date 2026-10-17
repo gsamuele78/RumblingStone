@@ -17,7 +17,7 @@
 |---|---|
 | Cavaliere Hobgoblin (Guerriero 8/Guardia Nera 2) | ⚠️ **2 errori corretti in place** |
 | Fauci di Palude (Black adult avanzato, GS 15) | ⚠️ **1 house-rule flaggata in place** (soffio a cono) |
-| 4 pregen "Eroi di Hammerfist" | ✅ **Verificati, pronti da stampare** (tolleranze [INFERRED] minori) |
+| 4 pregen "Eroi di Hammerfist" | ✅ **Verificati, pronti da stampare** (ricontati: §3, «Superata nei numeri») |
 | Sistema di combattimento di massa (AU/DU/PFU/Morale) | ✅ **Compatibile 3.5** (nessun 5e-ismo) |
 | Gear di Tordek (D17) | ✅ Coerente (Bracieri ai polsi + Cintura della Devastazione) |
 

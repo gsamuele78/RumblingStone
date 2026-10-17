@@ -15,7 +15,7 @@ attacchi:
   - Mischia randello pesante +2 +23/+18/+13 (2d8+12)
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: su decisione del DM (D9) lo statblocco è ora **fuori ira**, con i tre stati in tabella. La scheda mescolava i numeri: caratteristiche, Volontà +8, squartare e roccia erano in ira; pf, CA e il bonus di `pf-dado` fuori. Tempra +18, lotta +28, attacco +24 e danno 2d8+13 non tornavano con nessuno dei due stati. E il BAB passa da +16 a **+14**: gigante 12 DV (+9) più Barbaro 5 (+5), come dicono i tre attacchi iterativi (con +16 sarebbero quattro).
+> [CANONE — DM 2026-09-23, D9] correzione 3.5 da `scripts/conformita_statblocchi.py`: su decisione del DM (D9) lo statblocco è ora **fuori ira**, con i tre stati in tabella. La scheda mescolava i numeri: caratteristiche, Volontà +8, squartare e roccia erano in ira; pf, CA e il bonus di `pf-dado` fuori. Tempra +18, lotta +28, attacco +24 e danno 2d8+13 non tornavano con nessuno dei due stati. E il BAB passa da +16 a **+14**: gigante 12 DV (+9) più Barbaro 5 (+5), come dicono i tre attacchi iterativi (con +16 sarebbero quattro).
 
 > [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «12d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus è quello scritto nella formula.
 

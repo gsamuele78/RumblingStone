@@ -1,4 +1,4 @@
-# Balvar Fuocospento, il Consigliere dell'Orda (CR 13) [INFERRED — creato 2026-07-31 su richiesta DM]
+# Balvar Fuocospento, il Consigliere dell'Orda (CR 13)
 **Faction**: orda-antica-372dr | **Role**: caster-divine-boss | **Environment**: mountain | **CR**: 13 | **Source**: creato per `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` (assedio di Hammerfist ≈372 DR) — richiesta DM «un incantatore memorabile e antico che possa rivaleggiare coi Rumbling Stone» | **Status**: inferred-dm-request
 
 

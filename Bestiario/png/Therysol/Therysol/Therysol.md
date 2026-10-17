@@ -124,7 +124,7 @@ Therysol non prega più per i suoi incantesimi. Il cristallo nel suo petto agisc
 **Incantesimi Conosciuti & Slot:**
 *   **Livello 0 (3/giorno):** *Creare Acqua* (condensa l'aria), *Individuazione del Magico*, *Lettura del Magico*, *Guida* (la voce del fratello).
 *   **Livello 1 (3/giorno, 5 con le perle):** *Cura Ferite Leggere* (cauterizzazione fredda), *Benedizione*, *Comando* (voce draconica), *Foschia Occultante* (vapore gelido).
-*   **Livello 2 (2/giorno, 4 con le perle):** *Aiuto*, *Cura Ferite Moderate*, *Ristorazione Inferiore* (non è della lista dell'Acolita SRD: la scheda lo dà come dono del cristallo `[INFERRED — needs DM confirmation]`).
+*   **Livello 2 (2/giorno, 4 con le perle):** *Aiuto*, *Cura Ferite Moderate*, *Ristorazione Inferiore* (non è della lista dell'Acolita SRD: la scheda lo dà come dono del cristallo; è nella lista originale della scheda, canone con la conversione di §Fonti e canone).
 
 #### **2. Egida del Fuoco Inverso (Capacità Soprannaturale Unica)**
 Questa è l'abilità che si è manifestata durante la sua trasformazione ("Awakening").
@@ -193,7 +193,7 @@ La scheda è stata costruita convertendo la classe **Acolita (Adept)** in un inc
 
 Nessun modulo d'arco porta un secondo statblocco di Therysol: questa scheda (con la sua copia HTML nella stessa cartella, che dice gli stessi numeri) è l'unica versione.
 
-> ⚠ Regola della scheda: l'Acolita (Adept) dell'SRD è un incantatore **divino a preparazione** basato sulla **Saggezza**. Questa scheda la converte in un incantatore spontaneo basato sul Carisma, come uno stregone (§Fonti e canone). È una regola della casa, non dell'SRD `[INFERRED — needs DM confirmation]`. PF1e: l'Adept del PF1e è lo stesso incantatore a Saggezza; la cosa più vicina è lo stregone con la stirpe draconica (bianca), che però stravolge, perché cambia la lista da divina ad arcana.
+> ⚠ Regola della scheda: l'Acolita (Adept) dell'SRD è un incantatore **divino a preparazione** basato sulla **Saggezza**. Questa scheda la converte in un incantatore spontaneo basato sul Carisma, come uno stregone (§Fonti e canone). È una regola della casa, non dell'SRD, e canone della scheda: `therysol-tiefling-mezzodrago-cr9.md` la dichiara «Classe canon». PF1e: l'Adept del PF1e è lo stesso incantatore a Saggezza; la cosa più vicina è lo stregone con la stirpe draconica (bianca), che però stravolge, perché cambia la lista da divina ad arcana.
 
 Benchmark: PF T1-1 riga 9: CA 20 vs 23 / pf 44 vs 115 (molto sotto) / atk +9 vs +17 / CD 16 del soffio vs 18 / TS buono +11 vs +12. Supporto fragile, e la scheda lo dice (§In combattimento, *Agile ma Fragile*).
 

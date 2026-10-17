@@ -359,7 +359,7 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
 | B — Cancello distrutto | −40 PF/giorno per ariete+bombardamento (120→0 in 3 giorni) | Cancello (col 58-61, righe 72-73) a 0 PF | Giorno 3: breccia di 6 m, nemici entrano nel cortile esterno |
 | C — Breccia Muro Est | −120 PF concentrazione giganti/catapulte (240→120, metà Giorno 2) | breccia di 8 m nel Muro Est (col 85-90, riga 68) | secondo punto d'ingresso; Bastione G2 compromesso |
 | D — Torre Est crollata | −80 PF bombardamento continuo (160→80, metà Giorno 2) | cima della Torre Est collassa | perse 2 baliste + 10 balestrieri; copertura ridotta del 50% |
-| E — Giorno 3, critico | esito combinato di B+C+D | Nala si sposta a esplorare il tunnel segreto (col 58, riga 70); Thorin raggiunge Re Thorek (col 60, riga 34) per tenerlo in vita | evacuazione verso il Cuore della Montagna imminente `[INFERRED — needs DM confirmation: dettagli evacuazione fuori da questo file]` |
+| E — Giorno 3, critico | esito combinato di B+C+D | Nala si sposta a esplorare il tunnel segreto (col 58, riga 70); Thorin raggiunge Re Thorek (col 60, riga 34) per tenerlo in vita | evacuazione verso il Cuore della Montagna imminente (i dettagli dell'evacuazione: `Hammerfist-L3-REVISED-Ultra-Clear.md`, MAPPA H3-1) |
 
 > Gli stati sono esiti aperti (D13): il trigger è dei dadi e delle scelte
 > dei PG (quanto riescono a rallentare i danni strutturali), mai del

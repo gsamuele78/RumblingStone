@@ -1,7 +1,7 @@
 # Armate — Composizione Dettagliata (RHoD Army Atlas)
 
 > **🛡️ Canonizzazione 2026-05-05**: il DM ha **accettato** tutte le
-> derivazioni precedentemente marcate `[INFERRED]` (unità in
+> derivazioni delle unità prima non confermate (unità in
 > `Bestiario/`) e tutti i puntatori a `PNG/` come canone di
 > campagna. Flag `[INFERRED]` → `[ACCEPTED — DM-canon 2026-05-05]`.
 > Le unità restano valide per encounter building e mass combat; i

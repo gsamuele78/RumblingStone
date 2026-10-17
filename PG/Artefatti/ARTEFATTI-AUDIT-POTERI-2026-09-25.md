@@ -173,7 +173,7 @@ moduli giocati tengono separate:
 | File | Verdetto |
 |---|---|
 | `Aegis Fang.docx` / `.pdf` | fonte originale dello Stadio 0; **coincide** col master |
-| `00_Aegis_Fang-MASTER-DM.md` | ⭐ master, corretto. Un `[INFERRED]` si risolve dalla sua fonte (sotto) |
+| `00_Aegis_Fang-MASTER-DM.md` | ⭐ master, corretto. Il punto aperto dello Stadio 1 si risolve dalla sua fonte (sotto) |
 | `00_Aegis_Fang-SCHEDA-GIOCATORE-STATO-ATTUALE.md` | corretto (Doni v4-bis) |
 | `00_Aegis_Fang_Stadio0.html` / `_DM.html` | **definitive dopo questo audit**; prima portavano ancora il *Filo dell'Ascia* (Doni v1) e non avevano sinergie né la reazione dell'ascia al Dono |
 | `05_Aegis_Fang_Final_Awakening.html` | lo Stadio 1, fonte |
@@ -185,7 +185,7 @@ moduli giocati tengono separate:
 | *Filo dell'Ascia* | pagine HTML | **superato** (2026-09-12) |
 | Reazione al Dono di Thorik | `DEF-3` §5, master, scheda md; HTML: assente | aggiunta |
 | Bane contro Fauci (A7) | `DEF-2` §4; si gioca **stasera**, Atto I | casella nella pagina DM, non nella pagina giocatore (è una scoperta) |
-| Stadio 1: aura dei comandanti | master: `[INFERRED — effetto non quantificato]` | **risolto dalla fonte**: `05_…Final_Awakening.html` dice *telepatia coi nani entro 90 m* e *nani vicini immuni alla paura* (aura di 18 m nel calcolo del valore) |
+| Stadio 1: aura dei comandanti | master: effetto non quantificato (ora scritto nel master, Stadio 1) | **risolto dalla fonte**: `05_…Final_Awakening.html` dice *telepatia coi nani entro 90 m* e *nani vicini immuni alla paura* (aura di 18 m nel calcolo del valore) |
 | Stadio 1: quando | `.docx`/master: apoteosi all'Assedio + Corona senziente; `state.md`: vittoria dell'Assedio; `DEF-4` Scena 12: una scena | coincidono: tutto al Rituale 4 |
 
 ---
@@ -287,7 +287,7 @@ Doni sono già caselle. **Definitive, nessuna modifica.**
 | `00_SCHEDA-GIOCATORE-STATO-ATTUALE.md` (Corona) | nota 3-ter dei Doni v1 corretta; rimando alle pagine |
 | `LaCorona_di_Adamantio-DM.md` | banner con i quattro punti superati |
 | `00_Aegis_Fang_Stadio0{,_DM}.html` | Dono v4-bis, sinergie, Stadio 1 e A7 lato DM |
-| `00_Aegis_Fang-MASTER-DM.md` | `[INFERRED]` dello Stadio 1 risolto dalla fonte |
+| `00_Aegis_Fang-MASTER-DM.md` | punto aperto dello Stadio 1 risolto dalla fonte |
 | `00_Ring_Riforgiato{,_DM}.html` | Dono, note di crisi e dei moduli giocati lato DM |
 | `05_Bracieri_…Completa.html`, `00_Cintura_della_Devastazione.md` | Benedizione permanente; Dono nella pagina |
 | `ARTEFATTI-MATRICE-VERSIONI.md` | una riga «versione definitiva» per artefatto |

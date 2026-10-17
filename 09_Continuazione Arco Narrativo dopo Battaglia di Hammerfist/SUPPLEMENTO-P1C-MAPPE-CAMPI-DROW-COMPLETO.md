@@ -248,7 +248,7 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righ
   > dimensioni **disegnate**: **65 colonne × 53 righe** (≈98 m × 80 m).
   > La vecchia dichiarazione «80 × 53 / 120 m» era imprecisa nella sorgente;
   > tutte le strutture annotate stanno entro le 65 colonne. Titolo e testo
-  > allineati, SVG rigenerato. Confini esatti delle celle = `[INFERRED]`
+  > allineati, SVG rigenerato. Confini esatti delle celle: ricavati, nella griglia confermata,
   > dalla sorgente (fatto salvo il posizionamento testuale delle strutture).
 
 ### Mappa Tattica Completa

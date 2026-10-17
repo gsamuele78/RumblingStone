@@ -72,7 +72,7 @@ lì e tornate dopo l'ondata.»*
 
 *Il capo armaiolo è una comparsa senza nome. L'ascia con la brina è quella che
 `ARC07-DEF-4` dice nel panno sul banco di Gunnvor: c'è solo se nel 372 i PG non
-l'hanno comprata `[INFERRED — needs DM confirmation]`.*
+l'hanno comprata: lo dice il log della serata del 372, sul ramo del gruppo.*
 
 **Dati per il DM (non da leggere)**
 

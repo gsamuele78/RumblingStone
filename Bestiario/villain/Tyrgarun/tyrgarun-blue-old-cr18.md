@@ -22,7 +22,7 @@ voci:
 fonte: corpo del drago blu molto vecchio dell'SRD 3.5 (30 DV) con Cos 25 e soffio 20d8 della scheda; conti rifatti sull'SRD
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D2, deciso dal DM il 2026-09-23: lotta +46 → +49**: BAB +30 + Enorme (+8) + For 33 (+11). La For 33 la confermano il morso +38 (2d8+11), gli artigli e le ali (+5, metà For), la coda e lo stritolamento (+16, For e mezzo): la lotta era il solo numero che non tornava.
+> [CANONE — DM 2026-09-23, D2] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D2, deciso dal DM il 2026-09-23: lotta +46 → +49**: BAB +30 + Enorme (+8) + For 33 (+11). La For 33 la confermano il morso +38 (2d8+11), gli artigli e le ali (+5, metà For), la coda e lo stritolamento (+16, For e mezzo): la lotta era il solo numero che non tornava.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

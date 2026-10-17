@@ -417,8 +417,9 @@ SIMBOLI TATTICI:
 
 > **Fonti e verifica 3.5**: la **Cantante Divina** non è una classe SRD
 > [Private source — classe non identificata nel repo]: i suoi privilegi sono
-> quelli della scheda (Canto di Battaglia, progressione d'incantatore piena),
-> marcati [INFERRED]. PF1e: nessun archetipo del PRD fa «chierico che canta»
+> quelli della scheda. La progressione d'incantatore piena (Chierico 12° /
+> Cantante Divina 3°, LI 15°) è `[CANONE — DM 2026-10-17]`, come in
+> `ARC08-17-BANCO-HAMMERFIST-1372.md`; il Canto di Battaglia resta [INFERRED]. PF1e: nessun archetipo del PRD fa «chierico che canta»
 > senza perdere progressione; lo *Skald* (Advanced Class Guide) si avvicina
 > nel canto ma stravolge il chierico, e resta da preferire la classe 3.5.
 > Conti ricontati: *Armatura Completa +3* vale +11 e *Scudo Pesante +2* +4

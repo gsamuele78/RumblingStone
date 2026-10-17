@@ -20,6 +20,8 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.
 
+> L'avviso qui sopra lo rigenera `scripts/genera_attributi.py`, che non conta la deflessione: la CA della scheda torna con Des 10 (contatto 12 = 10 −1 taglia +3 deflessione).
+
 > **Versione di ritorno.** Statblock del primo incontro:
 > `ghaurush-cenerevento-cr16.md` (GS 16; variante *Advanced* GS 17). Questa è
 > Ghaurush **dopo** aver visto lavorare i PG una volta — e non è più

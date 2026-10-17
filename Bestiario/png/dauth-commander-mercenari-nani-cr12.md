@@ -25,7 +25,7 @@ fonte: arco 09, Battaglia finale, «Stat blocchi epici» §7 (Guerriero 12, DM-c
 ```
 
 **Source**: AP + Guerriero 12 (nano) → STATBLOCCHI-EPICI §7
-**Status**: accepted — Durgan Tozzefort, canonizzato dal DM 2026-07-12 (era `[INFERRED]`); numeri del modulo d'arco con conti rifatti.
+**Status**: accepted — Durgan Tozzefort, canonizzato dal DM 2026-07-12 (`campaign/state-changelog.md`); numeri del modulo d'arco con conti rifatti.
 
 Medium humanoid (dwarf), **Guerriero 12**.
 

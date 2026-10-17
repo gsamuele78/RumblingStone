@@ -106,7 +106,12 @@ fuoco**. (Dettaglio completo nel file-risultati.)
 
 ---
 
-## LOG R4 — ARC-07 P4: Piano della Terra (IN CORSO) `[INFERRED]`
+## LOG R4 — ARC-07 P4: Piano della Terra
+
+> **Nota (2026-10-17)**: il P4 è stato giocato. Rituale Legacy 3 il 31 luglio,
+> resurrezione di Hella (P3B) il 25 settembre: lo dicono il ramo di gruppo
+> `campaign-group-rumblingstone` (`campaign/state.md`, Corona di Adamantio) e
+> `campaign/sessions/2026-09-25_session-4.md`. Il log sotto resta com'era.
 
 **In-world**: ARC-07 Parte 4 · **Livello**: 13° · **Composizione**: 3 PG (D15)
 
@@ -118,7 +123,7 @@ inviato del Collezionista** incontrato. Stato: **in corso** (G3) — l'esito del
 boss e lo Smeraldo sono il punto a cui è arrivato il tavolo.
 
 ### Key decisions / XP / Loot
-- `[INFERRED]` — punto di gioco corrente; da riprendere con P3B (resurrezione) → P5.
+- Punto di gioco al momento della ricostruzione; ripreso con P3B (resurrezione) → P5, vedi la nota in testa a questo log.
 
 ### Next hooks
 - **P3B**: rituale di resurrezione di Hella (doni del viaggio R3).

@@ -18,7 +18,7 @@ attacchi:
 
 > [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «3d6», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus da Cos 12.
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Stocco +5 e balestra a mano +9 tornano già con +5.
+> [CANONE — DM 2026-09-23, D4] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D4, deciso dal DM il 2026-09-23: BAB +5**, cioè Ladro 3 (+2), Mago 5 (+2), Trickster Arcano 2 (+1). Lotta +3 → **+4** (For 8, −1). Stocco +5 e balestra a mano +9 tornano già con +5.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

@@ -26,7 +26,7 @@ voci:
 fonte: trascritto dalla fonte d'arco (pf alla media dei dadi, CA spiegata dall'armatura selvatica) `Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-STATBLOCCHI-EPICI.md` §6 (D7, DM 2026-09-23); forma d'orso bruno dal SRD
 ```
 
-> [INFERRED — needs DM confirmation] **D7, deciso dal DM il 2026-09-23: si usa la fonte d'arco**, con due gruppi di statistiche distinti. La fonte scrive Druido 10 / Barbaro 2, `12d8+48` (pf ~102) e, in forma d'orso bruno, For 27 e CA 20; la scheda scriveva Druido 12, pf 120, CA 19, e mescolava le due forme. Dal SRD: l'orso bruno (For 27, Des 13, Cos 19) dà il `+48` della fonte su 12 DV; il Barbaro tira d12, quindi i dadi sono `10d8+2d12`. BAB +9 (Druido 10 +7, Barbaro 2 +2); TS in forma d'orso Temp +14 (+10 base, Cos +4), Rifl +4 (+3, Des +1), Vol +11 (+7, Sag +4). Artigli +16 = BAB +9, For +8, Grande −1. Gli incantesimi passano da 12° a 10° livello, e il 6° livello sparisce. Il valore vecchio: pf 120, `12d8`, Temp +9, artigli +20.
+> [CANONE — DM 2026-09-23, D7] **D7, deciso dal DM il 2026-09-23: si usa la fonte d'arco**, con due gruppi di statistiche distinti. La fonte scrive Druido 10 / Barbaro 2, `12d8+48` (pf ~102) e, in forma d'orso bruno, For 27 e CA 20; la scheda scriveva Druido 12, pf 120, CA 19, e mescolava le due forme. Dal SRD: l'orso bruno (For 27, Des 13, Cos 19) dà il `+48` della fonte su 12 DV; il Barbaro tira d12, quindi i dadi sono `10d8+2d12`. BAB +9 (Druido 10 +7, Barbaro 2 +2); TS in forma d'orso Temp +14 (+10 base, Cos +4), Rifl +4 (+3, Des +1), Vol +11 (+7, Sag +4). Artigli +16 = BAB +9, For +8, Grande −1. Gli incantesimi passano da 12° a 10° livello, e il 6° livello sparisce. Il valore vecchio: pf 120, `12d8`, Temp +9, artigli +20.
 
 **Iniziativa** +1
 

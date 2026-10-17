@@ -12,7 +12,7 @@ ts: Temp +8, Rifl +3, Vol +9
 attributi: For 18 Des 12 Cos 14 Int 10 Sag 17 Car 12
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: su decisione del DM (D8) For 17 → **18**: la lotta +10 (BAB +6) e l'attacco del mazzafrusto +1 presupponevano già mod For +4, e il danno 1d8+5 torna.
+> [CANONE — DM 2026-09-23, D8] correzione 3.5 da `scripts/conformita_statblocchi.py`: su decisione del DM (D8) For 17 → **18**: la lotta +10 (BAB +6) e l'attacco del mazzafrusto +1 presupponevano già mod For +4, e il danno 1d8+5 torna.
 
 > [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «2d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus è quello scritto nella formula.
 

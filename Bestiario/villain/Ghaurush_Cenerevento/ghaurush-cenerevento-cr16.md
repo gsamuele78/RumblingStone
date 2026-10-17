@@ -16,13 +16,15 @@ attacchi:
   - Mischia spadone Large +11/+6 (3d6+7)
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: variante «Cenere Piena», CA 23 → **25** (29 con *scudo*): il template Advanced dà +2 di armatura naturale **e** +4 Des, cioè altri +2 alla CA. La regola rapida PF1e dice lo stesso: +4 alla CA.
+> Correzione 3.5 da `scripts/conformita_statblocchi.py`, superata dalla nota qui sotto: variante «Cenere Piena», CA 23 → **25** (29 con *scudo*): il template Advanced dà +2 di armatura naturale **e** +4 Des, cioè altri +2 alla CA. La regola rapida PF1e dice lo stesso: +4 alla CA.
 
 > Con l'armatura naturale +5 dell'ogre mage SRD (la scheda contava +4) la variante sale a CA 26, 30 con *scudo*.
 
 > [INFERRED — needs DM confirmation] `pf-dado` corretto da `scripts/conformita_statblocchi.py`: era «5d8», una parte sola dei dadi vita. I dadi vengono dalla formula che la scheda scrive, il bonus da Cos 21.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 14 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.
+
+> L'avviso qui sopra lo rigenera `scripts/genera_attributi.py`, che non conta la deflessione: la CA della scheda torna con Des 10 (contatto 11 = 10 −1 taglia +2 deflessione).
 
 Large giant (ogre magi), LE.
 

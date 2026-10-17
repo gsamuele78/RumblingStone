@@ -1,7 +1,7 @@
 # Armate — Calcoli Eserciti Dinamici (v2 — 2026-05-05)
 
 > **🛡️ Canonizzazione 2026-05-05**: il DM ha **accettato** tutte le
-> derivazioni `[INFERRED]` delle unità (file in `Bestiario/`)
+> derivazioni delle unità (file in `Bestiario/`)
 > e tutti i puntatori NPC a `PNG/`. I conteggi §2.x e §2.6 sono canone
 > di campagna; le unità sono valide per encounter/mass-combat
 > immediato. Flag globale: `[ACCEPTED — DM-canon 2026-05-05]`.
