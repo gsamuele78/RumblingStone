@@ -11,7 +11,7 @@
 - Carry-over dall'antenato Skullcrusher: la tabella ARC-07 B4 (consegnata, DM 2026-07-03) modifica i numeri di partenza secondo l'esito del duello P5 — mappa in `08_.../ARC08-10-ESITI-E-CONTINGENZE.md` §4.1; valori in `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`.
 **Notes**: adattamento RHoD (drago d'avanguardia upscalato). Il "Soffio a Cono" è house-rule (ERRATA §2). Rami e contabilità in `ARC08-10-ESITI-E-CONTINGENZE.md` §4.
 
-Boost log: correzione dei conti sull'SRD (drago nero adulto maturo avanzato a 25 DV) — GS 15 → 15 — armatura naturale +21, Multiattacco, linea di 30 m, Odio della stirpe contro Thorik [INFERRED], tre talenti mancanti; i pf salgono a 337.
+Boost log: correzione dei conti sull'SRD (drago nero adulto maturo avanzato a 25 DV) — GS 15 → 15 — armatura naturale +21, Multiattacco, linea di 30 m, Odio della stirpe contro Thorik, solo se al −1000 Aegis Fang ha ucciso Skullcrusher [INFERRED], tre talenti mancanti; i pf salgono a 337.
 Benchmark: PF T1-1 riga 15: CA 29 vs 30 (1 sotto; 37 con *Armatura Magica* e *Scudo*) / pf 337 vs 220 (sopra) / atk +35 vs +24 (sopra) / CD soffio 29 vs 23 (sopra) / TS buono +21 vs +18 (sopra).
 <!-- storico -->
 Prima della correzione (2026-10-16): CA 28 (+20 naturale), PF 312 (25d12+175), Riflessi +15, artigli/ali/coda +30, soffio in linea di 24 m. La seconda copia (CORREZIONE-Boss-Fauci, ARC-07) e il carry-over B4 portavano gli stessi 312 pf.

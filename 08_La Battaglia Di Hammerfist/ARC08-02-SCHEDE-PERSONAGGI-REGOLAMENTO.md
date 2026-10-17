@@ -91,7 +91,7 @@
 *   **Soffio (Sop):** Linea di 30 m di acido, 1/1d4 round. Danno 14d4 acido, TS Riflessi CD 29 dimezza.
 *   **Soffio a Cono (Str):** 1/giorno, può spendere un'azione di round completo per preparare un soffio a cono di 18m. ⚠️ *Errata B5 — HOUSE-RULE*: i draghi neri SRD hanno **solo il soffio in linea**; il cono non è 3.5 standard. Mantenuto come house-rule per la scena della picchiata (Sessione 2); se il DM preferisce l'aderenza SRD, rimuovere e usare solo il soffio in linea.
 *   **Presenza Terrificante (Str):** Raggio 90m, creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
-*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang che uccise Skullcrusher [INFERRED — needs DM confirmation].
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, **solo se** all'alba del −1000 (carry-over B4, registrato nel DEF-4) Aegis Fang ha ucciso Skullcrusher; altrimenti non c'è [INFERRED — needs DM confirmation].
 *   **Corrompere Acqua (Mag):** A volontà.
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Come Stregone di 7° liv. (LI 7°; 6/8/8/6 al giorno).
