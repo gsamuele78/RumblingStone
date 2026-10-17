@@ -437,8 +437,10 @@ dalla scheda, o che manca un potere presente, è un buco. Regole usate (SRD,
   n usi al giorno = diviso (5 ÷ n); un incantesimo continuo che dura 24 ore = metà;
 - **LI minimo** dell'incantesimo, non il 20° dell'artefatto: è come la SRD prezza gli oggetti comuni;
 - **somma semplice**: è un **limite inferiore**. La SRD alza il prezzo quando un oggetto
-  ha più poteri diversi, ma il fattore che ricordo (×1,5 sul minore) e quello della
-  skill `items.md` (×2) non coincidono `[INFERRED — da verificare sul testo SRD]`;
+  ha più poteri diversi: il costo del potere minore si moltiplica per 1,5 (SRD,
+  *Creating Magic Items*, tabella dei prezzi stimati, «Multiply lower item cost
+  by 1.5»; confermato dal DM il 2026-10-17). Un oggetto che occupa uno spazio del
+  corpo, come la Corona, paga +50% su ogni potere in più;
 - **fuori tabella**: i poteri che la SRD non sa contare (1/settimana, 1/mese,
   viaggi nel tempo, RD speciali). Si elencano, non si inventano.
 

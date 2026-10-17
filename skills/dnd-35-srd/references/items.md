@@ -57,8 +57,8 @@ Verified vs SRD Table: Estimating Magic Item Gold Piece Values:
 | Use-activated or continuous | spell level × caster level × 2,000 gp |
 
 Modifiers: n charges/day → divide by (5 ÷ n); no space limitation ×2;
-uncustomary slot ×1.5; multiple different abilities: ×2 the lesser ability
-costs; charged (50) version of unlimited item = ½ price. Ability bonus
+uncustomary slot ×1.5; multiple different abilities: ×1.5 the lower item
+cost; charged (50) version of unlimited item = ½ price. Ability bonus
 (enhancement) = bonus² × 1,000 gp; AC/natural/deflection = bonus² × 2,000;
 resistance saves = bonus² × 1,000; competence skill = bonus² × 100;
 SR = 10,000 gp per point over SR 12 (min SR 13). (0-level spells count as ½.)
