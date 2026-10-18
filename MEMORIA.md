@@ -124,7 +124,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-14 | REVISIONE-ARC07 | la scheda di Balvar nel Bestiario dava *dimensional anchor* sulla soglia della… | ✅ La riga delle rune nella scheda ora è quella del master; l'impronta delle creature è rigenerata per la sola lunghezza del testo di Balvar (3173 → 3261), ness… |
 | 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
 | 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… |  |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4 di conferma su DEF-4 | ✅ lettore, playtester e DM a freddo, nessun 🔴; rilievi corretti nel master o portati al DM (D64-D76), tutte decise |
 
 ## Le misure che si portano dietro
 
