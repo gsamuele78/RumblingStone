@@ -22,11 +22,11 @@
 **Status**: viva, Starsong Hill — compare nel TESTO d'arco (§93)
 **Location**: Starsong Hill (Tiri Kitor), fra le paludi di Rhest
 **Motivation**: proteggere la tribù (~500 anime) e i luoghi sacri; **decide se e quanto** la sua gente marci con Rethmar.
-**CR**: non fissato (leader; per lo scontro/alleanza usa gli statblock d'arco) | **Race/Class**: elfa (druida/bardo) `[Private — RHoD]`
+**CR**: nessuno, non combatte `[CANONE — DM 2026-10-18]` (se si arriva allo scontro con la tribù, si usano Killiar e i cacciatori Tiri Kitor degli statblocchi d'arco) | **Race/Class**: elfa (druida/bardo) `[Private — RHoD]`
 **Key stats**: puntatore → statblock d'arco in `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-Starsong-Hill-ALLEANZA-ELFI-STATBLOCCHI.md`.
 **Esiti possibili**:
 - È **il perno del P3-Starsong**: se i PG la convincono, invia **1/5 della tribù come forza da guerra** (+120: 100 ranger + 20 gufi giganti, difensori §2.4). Se falliscono, i Tiri Kitor restano a difendere solo i propri boschi.
-- La sua fiducia si guadagna aiutando la tribù (la Quest della Creatura, STATBLOCCHI §4) — non con la retorica.
+- La sua fiducia si guadagna aiutando la tribù (la Quest della Creatura: l'idra di Lerna a 12 teste, STATBLOCCHI §4) — non con la retorica.
 **Notes**: aggancio: alleanza elfi (§2.4), gancio di Hella (druidessa, `[HOOKS ↔ HELLA]`), quest d'arco. Cantatrice → possibile eco tematica con **Trellara** (§4).
 
 Boost log: (vuoto)
@@ -56,7 +56,7 @@ Boost log: (vuoto)
 **Status**: vivo, Starsong Hill
 **Location**: Starsong Hill
 **Motivation**: tenere i Tiri Kitor **fuori** dalla guerra dei "corti" (umani/nani): ha già visto la tribù pagare per alleanze altrui.
-**CR**: non fissato | **Race/Class**: elfo anziano (druido/consigliere) `[Private — RHoD]`
+**CR**: nessuno, non combatte `[CANONE — DM 2026-10-18]` | **Race/Class**: elfo anziano (druido/consigliere) `[Private — RHoD]`
 **Key stats**: non combattente di linea; il suo peso è politico dentro il cerchio.
 **Esiti possibili**:
 - È **l'ostacolo interno** all'alleanza: la scena con Sellyria non è un sì automatico: Illian argomenta il no. I PG devono rispondergli (con fatti, non promesse) o conquistarne il rispetto tramite la Quest della tribù.
@@ -73,7 +73,7 @@ Boost log: (vuoto)
 **Status**: viva, Starsong Hill — porta un lutto recente (le perdite dei Tiri Kitor contro le avanguardie della Mano Rossa)
 **Location**: Starsong Hill
 **Motivation**: dare un nome e un canto ai caduti della tribù prima che la guerra li cancelli.
-**CR**: non fissato | **Race/Class**: elfa barda `[Private — RHoD / adattamento]`
+**CR**: nessuno, non combatte `[CANONE — DM 2026-10-18]` | **Race/Class**: elfa barda `[Private — RHoD / adattamento]`
 **Key stats**: incantatrice/bardo di supporto; la sua arma è il canto che tiene su il morale.
 **Esiti possibili**:
 - **Specchio elfico di Lirien** (`png/Lirien/`, §2.2 Tempestas): due musici, due lutti — se i fili si toccano (Rethmar), scena tematica potente.

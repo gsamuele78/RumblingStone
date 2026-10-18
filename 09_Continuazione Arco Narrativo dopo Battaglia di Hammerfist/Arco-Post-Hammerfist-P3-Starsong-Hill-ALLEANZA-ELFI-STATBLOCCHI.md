@@ -43,21 +43,27 @@ Uso: leader pattuglia, non pensato per essere ucciso, ma per mostrare competenza
 
 ---
 
-## 4. Creatura della Quest (esempi CR 13)
+## 4. Creatura della Quest — l'Idra di Lerna `[CANONE — DM 2026-10-18]`
 
-### Opzione A – Idra a 8 teste avanzata (CR 11–12)
+**Idra di Lerna a 12 teste, GS 13** (SRD 3.5, voce *Hydra*, variante di
+Lerna; nessun avanzamento). Lo statblocco è quello dell'SRD e non si
+ricopia qui: si apre la voce e si usa la riga delle 12 teste.
 
-Per arrivare a CR 13, puoi:
+- **Perché fa paura**: ogni testa tagliata ne fa ricrescere due, finché
+  fuoco o acido non cauterizzano il moncone (regola della variante di Lerna,
+  SRD). Il gruppo che mena senza pensare la fa diventare più grande.
+- **Dove**: le paludi di Rhest sotto Starsong Hill. In acqua l'idra nuota e i
+  PG in armatura no: il terreno è metà dello scontro.
+- **EL 13** contro APL 13: alla pari, sotto il tetto di APL+4.
+- **PF1e**: l'idra del *Bestiary* ha le teste che ricrescono in tutte le
+  sue versioni (non verificato sul testo); qui vale la 3.5, che ha la
+  variante di Lerna nell'SRD.
 
-- Idra 8 teste avanzata (DV aumentati, pf ~130).  
-- - ambiente pericoloso (palude + acqua).  
-
-Oppure:
-
-### Opzione B – Giovane Drago Verde Avanzato (CR 12) + supporto
-
-- Giovane drago verde (CR 9) avanzato di qualche DV → CR 11.  
-- - 2 Crocodile Huge (CR 4 ciascuno) → scontro complessivo CR ~13.
+<!-- storico -->
+Prima del 2026-10-18 qui c'erano due bozze a GS 13: un'idra a 8 teste
+avanzata in palude, oppure un drago verde giovane avanzato a GS 11 con due
+coccodrilli Enormi. Il DM ha scelto l'idra di Lerna a 12 teste.
+<!-- /storico -->
 
 ---
 

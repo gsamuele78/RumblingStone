@@ -268,8 +268,8 @@ HEAT ZONES (Overlay):
 > diceva la nota «Pattern simmetrico»; a sud la porta non si ripete, perché il
 > canone ne nomina una sola. Le quattro passerelle delle POSIZIONI ora sono
 > disegnate: nord-sud sulle colonne P-Q (righe 09-23), est-ovest sulla riga 17.
-> **[PROPOSTA — needs DM confirmation]**: è una ricostruzione dalla geometria
-> dichiarata, non un disegno d'autore.
+> [CANONE — DM 2026-10-18]: è una ricostruzione dalla geometria dichiarata, non un disegno
+> d'autore, e vale così al tavolo.
 >
 > 🔎 **D12 non era una riga duplicata.** Il secondo «17» aveva **3 celle**: era
 > la didascalia delle passerelle est e ovest, scritta con il numero davanti. Ora
@@ -320,7 +320,7 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                   └──┘ PASSERELLA NORD (Q08-Q16, 2m wide, mithral, towards altare)
       │                                           🔴 ELDER FIRE ELEMENTAL (Col P, Riga 17 center!)
 
---- METÀ SUD (Righe 19-33): specchio delle righe 15-01 attorno alla riga 17 [PROPOSTA — needs DM confirmation] ---
+--- METÀ SUD (Righe 19-33): specchio delle righe 15-01 attorno alla riga 17, ricostruita [CANONE — DM 2026-10-18] ---
 19    │ ⬛ 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🟦 🟦 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⬛
 20    │ ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🟦 🟦 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⬛
 21    │ ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🟦 🟦 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⬛
