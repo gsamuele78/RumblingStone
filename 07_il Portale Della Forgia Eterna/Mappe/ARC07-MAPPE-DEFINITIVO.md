@@ -37,7 +37,7 @@
 |---|---|---|---|---|
 | **T-1** | Piano della Terra: orizzonte & percorso | DEF-1 §4 | strategica | ✅ |
 | **T-2** | Foresta di Cristalli: agguato Xorn | DEF-1 §5 | tattica combat | ✅ |
-| **T-3** | Campo dei Cristalli Viventi (skill + Varis) | DEF-1 §6/§6-bis | tattica/skill | ✅ |
+| **T-3** | Campo dei Cristalli Viventi (skill challenge) | DEF-1 §6 | tattica/skill | ✅ |
 | **T-4** | Tempio di Mithral: salto gravitazionale | DEF-1 §7a | sezione/co-op | ✅ |
 | **T-5** | Anticamera della Magnetite: la Sentinella | DEF-1 §7b | tattica combat | ✅ |
 | **T-6** | Camera dell'Altare: **TERROS L'ANTICO** | DEF-1 §8 | tattica BOSS | ✅ |
@@ -78,8 +78,8 @@
    ┌──────────┐    ╱╲  FORESTA        ▓▓▓ CAMPO        ~~~~~ OCEANO   ┌────┐
    │  ◎ ◎ ◎   │═══╱  ╲ CRISTALLI    ▓ 💠 ▓ CRISTALLI  ~~ DI ~~ ROCCIA│ ▣▣ │
    │ piattaf. │ p  │XX│ GIGANTI      ▓💎▓  VIVENTI     ~~ (grigia) ~~ │ ▣▣ │
-   │ cristallo│ o  │  │ (30-60 m)    ▓ 💠 ▓ (Skill+    ~~ (grigia) ~~ │TEMPIO
-   │  ◎ ◎ ◎   │ n  ╲  ╱ [XORN×3:      ▓▓▓   Varis)      50 m sopra ▲  │MITHRAL
+   │ cristallo│ o  │  │ (30-60 m)    ▓ 💠 ▓ (skill     ~~~~~~~~~~~~~~~ │TEMPIO
+   │  ◎ ◎ ◎   │ n  ╲  ╱ [XORN×3:      ▓▓▓  challenge)   50 m sopra ▲  │MITHRAL
    └──────────┘ t   ╲╱   Fauci di                        l'oceano    │ 100m³
                 i         Diamante]  ← Aegis Fang VIBRA verso il Tempio →└────┘
    ◎ = cristalli luminescenti · ponti = pietra galleggiante · XX = pilastro
@@ -96,7 +96,8 @@
   **Tempio-cubo** a **50 m di quota**. **Gravità 2× ovunque** tranne dentro il
   Tempio (gravità propria) e sull'Altare di Terros (T-6).
 - **Posizioni**: i PG partono da OVEST (piattaforma ◎). La **bussola** è Aegis
-  Fang, che vibra verso il Tempio (EST). Varis: la sua runa è al Campo (T-3).
+  Fang, che vibra verso il Tempio (EST). Il Seme-Mercato di Varis non è sul
+  percorso aperto: è nel Tempio, dopo la Sentinella (DEF-1 §6-bis).
 - **Tattiche PG**: viaggiare a passo ridotto (gravità), non sprecare voli lunghi
   (Artemis stanca le Ali). Il percorso è lineare: nessuna scorciatoia sicura.
 - **Ambiente dinamico**: il portale del Tempio **ruota 1 giro/ora** — la faccia
@@ -147,7 +148,7 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
   demolizione = crolli, ordine = tregua, negoziato = Diplomazia (Terran) CD 18.
 - **Riferimento**: DEF-1 §5.
 
-## MAPPA T-3 — CAMPO DEI CRISTALLI VIVENTI + SEME DI VARIS (skill challenge)
+## MAPPA T-3 — CAMPO DEI CRISTALLI VIVENTI (skill challenge)
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -159,38 +160,41 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
 02    🟫 🟫 💠 🟫 💚 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
 03    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
 04    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 💎 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
-05    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🔴 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
+05    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
 06 →  🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪
 07    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💚 🟫 💠 🟫 🟫
 08    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 💠 Cristallo Vivente (canta) · 💎 Madre Cristallo (J04, alt. 5 m) ·
-💚 crepato (riforgiabile → +2, E02 e O07) · 🔴 runa di Varis (J05; l'Anello di
-Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) ·
+💚 crepato (riforgiabile → +2, E02 e O07) · 🌫️ vuoto/gravità laterale
+(non attraversare) ·
 ⬜ corridoio libero (riga 06, ingresso/uscita) · 🟫 suolo.
 @tipo tattica caverna
 ```
-- **Tipo / scala**: skill challenge (6 successi / 3 fallimenti) + gancio
-  personale di Artemis (Seme di Varis). Non è un combat.
+- **Tipo / scala**: skill challenge (6 successi / 3 fallimenti). Non è un
+  combat. Il gancio personale di Artemis (Seme-Mercato di Varis) non è qui: si
+  gioca nel Tempio, dopo la Sentinella (DEF-1 §6-bis).
 - **Terreno & altitudini**: campo di cristalli cantanti; la **Madre Cristallo**
   (💎 J04) è a **5 m di quota**; riga 06 è il **corridoio sicuro**; sopra riga 01
   è **vuoto laterale** (🌫️, gravità a 90° — non attraversare).
 - **Posizioni notevoli**: 2 cristalli **crepati** (💚 E02, O07) → riforgiabili
-  (bonus +2 alla vulnerabilità sonora di Terros). **Runa di Varis** 🔴 a J05 —
-  l'Anello la capta entro 6 m (aggancio §6-bis).
+  (bonus +2 alla vulnerabilità sonora di Terros). La runa di Varis in J05
+  delle stesure vecchie non si gioca (canone del §6): J05 è un Cristallo
+  Vivente come gli altri.
 - **Prove (CD)** (DEF-1 §6, a giri: ogni PG tira almeno una volta a giro, ogni
   abilità vale una volta per PG a giro): Diplomazia CD 20 · Conoscenze (natura o
   dungeon) CD 18 · Intrattenere (canto) CD 22 → +2, fallita −1 · Utilizzare
-  Oggetti Magici CD 15, solo con i gradi. Riforgiare un cristallo crepato =
-  Osservare CD 18 per trovarlo + 1 carica di *Vigore della Forgia* → +2.
-  Analizzare/estirpare il Seme di Varis = Sapienza Magica CD 20.
+  Oggetti Magici CD 15, solo con i gradi · per i nani, Conoscenze (architettura
+  e ingegneria) o Cercare sulla pietra CD 18 → +1. Riforgiare un cristallo
+  crepato = Osservare CD 18 per trovarlo + 1 carica di *Vigore della Forgia* →
+  +2; è la prova del giro di quel PG, e se fallisce conta un fallimento.
 - **Tattiche PG**: distribuire le prove sui punti forti; NON toccare i cristalli
-  sani a caso (dissonanza → −2). Artemis decide sul Seme (avidità vs lealtà, §6-bis).
+  sani a caso: staccarne o romperne uno conta un fallimento.
 - **Evoluzione**: 6 successi → la **Frequenza della Confusione**, la notizia che
   Terros è vulnerabile al sonico e +2 ai TS contro di lui; 6 successi senza
   fallimenti → anche il **Diapason Armonico**. 3 fallimenti → i Cristalli
   urlano: **10d6 sonico a tutti, nessun TS**, e l'urlo sveglia e prepara Terros.
-- **Riferimento**: DEF-1 §6 e §6-bis.
+- **Riferimento**: DEF-1 §6 (il Seme di Varis è al §6-bis, nel Tempio).
 
 ## MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (sezione)
 
@@ -205,10 +209,12 @@ Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) �
              ▲ gravità  │ 2) a ~20 m la gravità del Tempio CATTURA Tordek
              │ del      │    → "cade" verso il portale (Inception)
    50 m      │ Tempio   │ 1) TORDEK salta (Saltare CD 25, Take 10 = 26 ✓)
-             │          │      [dopo aver colpito le Rune di Attracco]
+             │          │      [le Rune di Attracco si colpiscono all'arrivo]
    ~~~~~~~~~~┴~~~~~~~~~~~┴~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    ~~~~~~~~~~ OCEANO DI ROCCIA (grigia, liquida-ma-cede) ~~~~~~~~~~~~~~~~
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Ruoli: Thorik = ANCORA (FOR CD 20) · Artemis = TRAGHETTATORE (vola col cavo)
+          Tordek = NAVIGATORE (Saltare CD 25 + Rune di Attracco)
 ════════════════════════════════════════════════════════════════════════
 ```
 - **Tipo / scala**: sezione verticale co-op (puzzle di gravità), non combat.
@@ -217,10 +223,18 @@ Artemis la capta ≤6 m) · 🌫️ vuoto/gravità laterale (non attraversare) �
   Oceano di Roccia (semiliquido, cede — chi cade affonda lento, non muore subito).
 - **Ruoli/posizioni**: **Tordek** = navigatore (Saltare CD 25 + Rune di Attracco);
   **Thorik** = ancora (FOR CD 20 tiene il cavo); **Artemis** = traghettatore (vola
-  col cavo). A ~20 m la gravità del Tempio cattura chi salta → "cade" verso il portale.
+  col cavo). A ~20 m la gravità del Tempio cattura chi salta → "cade" verso il
+  portale, e all'arrivo Tordek colpisce le Rune di Attracco. Il Tempio è a
+  **40 m** dalla riva e il portale **50 m** sopra l'oceano (D34): una è la
+  distanza, l'altra l'altezza. Thorik sale per ultimo, e dal Tempio gli fa da
+  Ancora Tordek (D87).
 - **Tattiche PG**: sincronizzare — Tordek salta e aggancia, Thorik ancora, Artemis
-  porta la corda agli altri (Scalare CD 15). Fallire il salto = caduta nell'Oceano
-  (recuperabile, costa tempo).
+  porta la corda agli altri (Scalare CD 15). Chi scivola deriva piano verso
+  l'oceano e ci affonda in 3 round; Artemis ripesca chi è legato al cavo (round
+  intero, FOR CD 15). Se non ce la fa, l'oceano lo risputa sulla riva dopo 1d4
+  round, a 0 pf e stabile, e il riposo costa −12 h (D84-D85). La Frequenza o il
+  Diapason alzano una scala di blocchi (Intrattenere CD 18, 4 prove riuscite):
+  con la sola Frequenza arriva a metà strada (DEF-1 §7a).
 - **Evoluzione**: il portale ruota (T-1) → tempismo. Entrati, si va a T-5 (Sentinella).
 - **Riferimento**: DEF-1 §7a.
 
@@ -375,29 +389,36 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
    CHIUSO   │                ║   MORADIN    ║                    │ →«Forza
             │                ║  🔥 Forgia   ║                    │ Sostenuta»
             │                ╚══════════════╝                    │ (si chiude)
-            │                                                    │
+            │        † corpo di Hella · Therysol · Durik         │
             │                 🔲 col.adam. (sud)                 │
       [ A6 ]╲                                                    ╱[ A7 ]
-   «Tempo»   ╲   († corpo di Hella — vegliato da Therysol)      ╱ «Hammerfist»
-   (→80%,    ╲                                                 ╱  LIVE ⏳3g18h
+   «Tempo»   ╲                                                  ╱ «Hammerfist»
+   (→80%,    ╲                                                 ╱  LIVE ⏳3g20h
    portale)   └───────────[ A8 «Ritorno Trionfale» ]──────────┘  +Aegis Bane
                           SUD  ▲   (vuoto → 60%)
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 (1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn ·
-† corpo di Hella (davanti ad A8) · [P1] portale sempre aperto.
+† corpo di Hella accanto all'Altare, vegliato da Therysol (davanti ad A8 solo
+per la manifestazione) · Durik fra il corpo e il pericolo · [P1] portale
+sempre aperto.
 ```
 - **Tipo / scala**: hub scenico (Cronaca Vivente), ottagono Ø 40 m. Zona **sicura**.
 - **Terreno & altitudini**: pavimento piano; **Altare** centrale rialzato con la
   **Forgia Eterna**; 8 affreschi 8×5 m alle pareti (vetro indistruttibile); soffitto
-  15 m. Distanze: spawn→Altare 6 m; Altare→parete 15 m.
-- **Posizioni notevoli**: † **corpo di Hella** davanti ad **A8** (per la
-  manifestazione, aggancio a R-1/DEF-3). Therysol veglia. **Cuore di Moradin**
+  15 m. Distanze: spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal
+  centro; Ø 40 m).
+- **Posizioni notevoli**: † **corpo di Hella** accanto all'**Altare**, dove
+  Therysol lo veglia da giorni (DEF-2 §2); il corpo si gira verso sud. I PG lo
+  portano davanti ad **A8** solo per la manifestazione (DEF-2 §4), poi torna
+  all'Altare per il rito (R-1/DEF-3). **Durik**, mosso dalla giocatrice di
+  Hella, non ha una casella fissa: sta sempre fra il corpo e ciò che sente come
+  pericolo, e se lo si allontana torna indietro. **Cuore di Moradin**
   sull'Altare (usato in DEF-3).
 - **Ambiente dinamico (la Sala HA REGISTRATO la Terra — mostralo)**: **A4** (Fuoco)
   chiuso · **A5** (Terra) si chiude → «Forza Sostenuta» · **A2** al 80% (la 4ª
   figura, Hella, prende contorno) · **A6** (Tempo) 80%, il portale pulsa · **A8**
-  60% · **A7** (Hammerfist) LIVE ⏳~3g18h + Aegis Fang Bane vs Fauci.
+  60% · **A7** (Hammerfist) LIVE ⏳~3g20h all'arrivo + Aegis Fang Bane vs Fauci.
 - **Tattiche/uso PG**: è a Thorik (Corona) che gli affreschi «reagiscono» (A3
   Moradin gira la testa). Un solo sacro attivo per volta (Benedizione della
   Cronaca, no stacking).
@@ -452,8 +473,8 @@ inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
   trono **D-F13** (durezza 8, 360 pf/3 m, Spezzare CD 35) → ora vi si incide la
   **Cronaca** («La Seconda Gemma», la sagoma-druida che si riempie, DEF-2 §6);
   **portale drow E13** dietro il muro, **sigillato e inerte**; Dipinti
-  Invisibili **J11-J12**; ingresso **D-F02** (sud). Reliquia nascosta sotto il
-  trono (Osservare CD 22, DEF-2 §10).
+  Invisibili **J11-J12** (porta chiusa, DEF-2 §4-bis); ingresso **D-F02**
+  (sud). Reliquia nascosta sotto il dais del trono (Cercare CD 22, DEF-2 §10).
 - **Memoria del luogo (regia)**: qui sedeva Belkram (✝️ E11) col worg, qui
   cadde **Hella** (ARC-06). I muschi e le ragnatele drow **seccano** sulle
   macerie e nelle alcove (la purificazione avanza a vista, sessione dopo
@@ -479,17 +500,14 @@ inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
                         🛡️ THORIK
                     (Corona + Aegis Fang)
                    Conoscenze relig. CD 15
-                           │
-         🔮 ARTEMIS ───────┼─────── 🥋 TORDEK
-         (Ring, UMD 18)    │        (ki, Concentr. 20)
-      OVEST                │                        EST
-                   ╔═══════╪═══════╗
-                   ║   🟡 ALTARE   ║   🟡 = Cuore di Moradin
-                   ║  († Hella,   ║        (posato sul cuore di Hella)
-                   ║   3 semi:    ║   † = corpo di Hella (supino)
-                   ║  🌰 fronte   ║   🌰 = seme (mano sx / mano dx / fronte)
-                   ║ 🌰 sx  dx 🌰 ║        → triangolo inscritto nel cerchio
-                   ╚═══════╪═══════╝
+                           │ 3 m
+                   ╔═══════╧═══════╗
+   🔮 ARTEMIS      ║   🟡 ALTARE   ║      🥋 TORDEK
+   (Ring, UMD 18)  ║  († Hella,    ║   (ki, Concentr. 20)
+   OVEST ── 3 m ───╢   3 semi:     ╟─── 3 m ── EST
+                   ║  🌰 fronte    ║
+                   ║ 🌰 sx  dx 🌰  ║
+                   ╚═══════╤═══════╝
                            │
                     (SUD = VUOTO)
                   ← da qui fluisce l'energia →
@@ -497,14 +515,18 @@ inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
                     ✦ LA CUSTODE DELLE RADICI (§6)
                           SUD  ▲
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin · † corpo di Hella · 🌰 3 semi
-(triangolo) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O) · SUD vuoto
-(energia + soglia della Custode).
+LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin (posato sul cuore di Hella) ·
+† corpo di Hella (supino) · 🌰 3 semi (mano sx / mano dx / fronte: triangolo
+inscritto nel cerchio) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O), tutti
+a 3 m dal centro: con il SUD vuoto (energia + soglia della Custode) fanno una
+croce. Therysol veglia ai margini (testimone, non officiante).
 ```
 - **Tipo / scala**: rituale scenico (cerchio Ø 6 m nella Sala S-1). Zona **sacra e
   sicura** — ma la posta è emotiva/spirituale, non combat.
-- **Terreno & posizioni**: 3 officianti ai vertici N/E/O di un triangolo inscritto;
-  i **3 semi** (🌰 fronte + 2 mani) sul corpo di Hella; il **Cuore di Moradin** 🟡
+- **Terreno & posizioni**: 3 officianti a N, E e O, a 3 m dal centro
+  dell'Altare (Tordek e Artemis alla sua altezza, come Thorik a nord): con il
+  Sud vuoto fanno una croce. I **3 semi** (🌰 fronte + 2 mani) sul corpo di
+  Hella formano un triangolo inscritto nel cerchio dei tre officianti; il **Cuore di Moradin** 🟡
   sull'Altare. **SUD lasciato VUOTO**: da lì fluisce l'energia e, allo Step 5,
   **appare la Custode delle Radici** (psicopompo, §6). Therysol testimone ai margini.
 - **Ruoli/prove**: Thorik = Conoscenze (religioni) CD 15; Tordek = Concentrazione
@@ -686,7 +708,7 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 16    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │ (P-Q 13-14 · Ø 6 m,
 17    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  +3 m, basalto+rune oro)
 18    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │ ⚫ RE THOREK (8 pf)
-19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8!)
+19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8 · breve: porte)
 20    🪨⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛🪨  │
 21    🪨⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
 22    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
@@ -699,7 +721,9 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 LEGENDA · ⬛ pavimento di caverna · 🪨 pareti · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
-🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera ·
+🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
+sfera compare in tutte e due le regie: al Round 8 nella lunga, quando le porte
+cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
 (copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
@@ -719,7 +743,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
                     ✨ oro·verde ✨      (Topazio+Smeraldo+Rubino)
                       ✨·rosso✨
                            │
-                           ▼  ROUND 8: ESPLOSIONE DI LUCE (non violenta)
+                           ▼  ROUND 8 (breve: le porte cedono): ESPLOSIONE DI LUCE
                       💥💥💥💥💥
                            │
                            ▼
@@ -731,7 +755,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 ```
 
 - **Tipo / scala**: santuario + epic reveal (Incontro **3B**, il CLIMAX della
-  Sessione 3 dell'ARC-08 — lato ARC-07 = DEF-5 §3-§4). **3 m/quadretto**.
+  Sessione 3 dell'ARC-08; lato ARC-07 = DEF-5 Scene 1-2). **3 m/quadretto**.
 - **Terreno & altitudini**: altare **+3 m** (P-Q 13-14, basalto nero, rune
   d'oro); piattaforme laterali **+1,5 m** (B-C13 ovest, c-d13 est — posizioni
   sopraelevate per tiratori, stalagmiti 🔺 = copertura parziale); soffitto
@@ -739,31 +763,34 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   (Terremoto ecc.): 4d6 contundenti, raggio 3 m, **Riflessi CD 18** annulla.
 - **Posizioni**: **90 nani** in anello a 30 m (fila esterna 60 guerrieri con
   scudi, mediana 20 balestrieri, interna 10 capi + **Re Thorek** ⚫ sull'altare,
-  critico a 8 pf, stabilizzato, cosciente ma incapace di combattere); **10
+  critico a 8 pf, l'acido che lo consuma finché l'Apparizione non lo ferma,
+  cosciente a occhi chiusi, incapace di combattere; Madre Dana in ginocchio su
+  di lui); **10
   statue** 🗿 sul cerchio a 20 m (Q07·U09·W12·W16·U19·Q21·M19·K16·K12·M09);
   nemici dalla **porta nord** P-Q01.
 - **Le ondate (Incontro 3B — se giocato per intero, lato ARC-08)**:
   | Round | Ondata | Note tattiche |
   |---|---|---|
   | 1-2 | **30 Orchi berserker** | carica sconsiderata porta→altare |
-  | 3-5 | **20 Hobgoblin sergenti** | muro di scudi, **immuni a paura**, tengono impegnati i nani |
+  | 3-5 | **20 Hobgoblin sergenti** | muro di scudi, **immuni a paura**, tengono impegnati i nani (nella regia breve entrano dopo l'aura, che quindi non li tocca comunque) |
   | 6-8 | **15 Bugbear assassini** | Nascondersi +12, puntano i capi e Re Thorek — **interrotti dall'Apparizione** |
   | 9-10 | **Grimjaw + 10 Orog** (se vivo) | vede il ribaltone: ritirata strategica O sfida personale a Thorik; se già morto → capitano minore, auto-ritirata |
 - **⏱️ Timing dell'Apparizione (due regie valide)**: giocando il **3B completo**
-  (lato ARC-08, coi PNG giocabili Borin/Dara/Thorin/Nala) i PG appaiono al
+  (lato ARC-08, coi PNG giocabili Borin/Dara/Thorin/Nala; nella regia breve
+  sono fra i dieci capi al centro, e non parlano) i PG appaiono al
   **Round 8**, nel mezzo dell'ondata 3; giocando **solo il lato ARC-07**
-  (DEF-5 §4, arrivo compresso) appaiono nell'istante in cui le porte cedono.
+  (DEF-5 Scena 2, arrivo compresso) appaiono nell'istante in cui le porte cedono.
   Stessa scena, stesso altare: cambia solo quanto assedio si gioca prima.
 - **Effetti immediati dell'Apparizione**: nani **+6 morale** (da −4 a +2),
-  guariscono **2d8 pf**, **immuni a paura 1 h**; nemici **Volontà CD 25** o
-  scossi 1d6 round (la maggioranza fallisce; ~⅔ della prima ondata in panico);
+  guariscono **2d8 pf**, **immuni a paura 1 h**; nemici **Volontà CD 25**: chi
+  fallisce è in panico e fugge, chi fa 20 è scosso (D38);
   Re Thorek apre gli occhi (riconosce Thorik: la Corona risuona); gli **occhi di
   rubino delle 10 statue si ACCENDONO** (benedizione ancestrale); i PG hanno un
   **round di sorpresa**.
-- **Transizione**: da PNG giocabili → veri PG. Poi pulizia (DEF-5 §5, doppia
+- **Transizione**: da PNG giocabili → veri PG. Poi pulizia (DEF-5 Scena 3, doppia
   modalità) → portale di Dana → bastioni (ARC-08, `ARC08-11-PONTE-ARRIVO.md`).
 - **Riferimento**: geometria/ondate = Atlante-08 **MAPPA 5**; regia lato ARC-07
-  = DEF-5 §3-§5; cucitura = ARC08-11.
+  = DEF-5 Scene 1-3; cucitura = ARC08-11.
 
 ---
 
