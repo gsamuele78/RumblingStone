@@ -112,6 +112,19 @@ class TestForma(unittest.TestCase):
                 f = V.forma(REPO / rel)
                 self.assertEqual((f["mancano"], f["fuori_ordine"]), ([], []))
 
+    def test_con_json_il_rapporto_e_json(self):
+        # chi chiede --forma --json deve poter leggere l'uscita con un parser JSON
+        import contextlib
+        import io
+        import json
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = V.main(["--forma", "--json"])
+        self.assertEqual(rc, 0)
+        report = json.loads(buf.getvalue())
+        self.assertEqual(report["rapporto"], "forma")
+        self.assertEqual(set(report["conti"]), {"statblocco", "dossier", "breve"})
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -296,7 +296,7 @@ def forma(path: Path) -> dict | None:
             "fuori_ordine": _fuori_ordine(trovate, nomi)}
 
 
-def rapporto_forma() -> int:
+def rapporto_forma(come_json: bool = False) -> int:
     """Stampa il conto di forma di png/ e villain/. Non blocca: ritorna 0."""
     conti = {"statblocco": [0, 0], "dossier": [0, 0], "breve": [0, 0]}
     difetti = []
@@ -312,6 +312,17 @@ def rapporto_forma() -> int:
                 difetti.append((path.relative_to(ROOT), f))
             else:
                 conti[f["tipo"]][0] += 1
+    if come_json:
+        report = {
+            "tool": "validate_bestiario",
+            "rapporto": "forma",
+            "conti": {tipo: {"in_forma": ok, "totale": tot}
+                      for tipo, (ok, tot) in conti.items()},
+            "difetti": [{"file": str(rel), "mancano": f["mancano"],
+                         "fuori_ordine": f["fuori_ordine"]} for rel, f in difetti],
+        }
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        return 0
     for tipo, (ok, tot) in conti.items():
         print(f"  {tipo:<11} {ok:>3} su {tot:>3} nella forma di ADR-0091")
     for rel, f in difetti:
@@ -337,7 +348,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
     do_rules = args.rules
     if args.forma:
-        return rapporto_forma()
+        return rapporto_forma(args.json)
 
     # 1. struttura + legacy
     if not BEST.is_dir():
