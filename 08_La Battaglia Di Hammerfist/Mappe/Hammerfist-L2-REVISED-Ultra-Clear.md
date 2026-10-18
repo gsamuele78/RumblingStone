@@ -676,7 +676,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### ⚔️ TATTICHE (Fauci di Palude)
 - **Round precedente:** salita a 60 m · **questo round:** picchiata a 30 m e soffio sul comando · **round dopo:** risalita, o atterraggio forzato sui bastioni se ha già subito >50 danni dai PG
 - Il cavaliere hobgoblin dà +2 agli attacchi del drago e può lanciare incantesimi; il drago ignora la truppa: bersaglio = leadership nanica
-- **Morale:** Fauci si ritira a quota di sicurezza se scende sotto ~255 PF in questa scena, cioè dopo circa 80 danni sui 337 (non rischia la vita per l'assedio; DM 2026-10-18)
+- **Morale:** Fauci si ritira a quota di sicurezza se scende sotto ~230 PF in questa scena, cioè dopo circa 107 danni sui 337: resta sulle mura più a lungo e fa più male ai difensori (DM 2026-10-18, la versione più forte)
 
 ### 🔄 EVOLUZIONE
 | Stato | Trigger | Cosa cambia | Effetto |

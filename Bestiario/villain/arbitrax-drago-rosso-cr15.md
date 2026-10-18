@@ -39,7 +39,7 @@ Huge dragon (fire), 19 HD, LE.
 
 **Capacità speciali** **Presenza Terrificante** (Str): 45 m, creature con meno di 19 DV, Vol CD 24 (10 + ½ DV + Car) o scosse per 4d6 round (panico sotto i 5 DV). **Schiacciare** (Str): atterrando su creature Piccole o più piccole, Rifl CD 25 o bloccate. **Ghermire** e **Colpo Possente**: afferra con morso o artigli e scaglia via (Colpo Possente: 3 m e prono).
 
-> ⚠ La CA 32 della fonte PCGen supera di 6 l'SRD del rosso giovane adulto (26, +18 naturale): +6 di armatura naturale che nessun oggetto spiega `[INFERRED — needs DM confirmation]`. Si tiene, perché è il numero più alto e la fonte lo scrive.
+> ⚠ **Non SRD** (DM 2026-10-18, vince la versione più forte): la CA 32 della fonte PCGen supera di 6 l'SRD del rosso giovane adulto (26, +18 naturale). I +6 di armatura naturale sono un tratto suo, scaglie più spesse di quelle della sua età, e non un oggetto: il collo, l'unico posto per un amuleto dell'armatura naturale, porta già l'amuleto della salute +2 che tiene Cos 23, i 237 pf e la CD 25 del soffio.
 
 **Tattiche**
 - *Prima del combattimento*: come drago guardiano dell'altare campale (lì si chiama Abithriax) si libra a 6-9 m sopra l'anello medio dei ritualisti, nell'arco 09, Battaglia finale fase 2, «Anello medio – Guardiani draconici» e §8.1. Prima che i PG arrivino si lancia *scudo* e *grazia del gatto*.

@@ -541,11 +541,11 @@ SIMBOLI TATTICI:
 **Incantesimi da Ranger (CL 4°; 2/1 per giorno):**
 *   2° (CD 14): *Pelle Coriacea*
 *   1° (CD 13): *Passo Veloce*, *Resistenza all'Energia*
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro Rapido, Tiro Multiplo, Schivare (la CA conta il bonus di schivare).
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare, Mobilità (la CA conta il bonus di schivare).
 **Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
 
 > **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m [INFERRED].
-> Tiro in Corsa è tolto (DM 2026-10-18): chiedeva Mobilità, e un ranger di 8° ha tre talenti a scelta, non quattro. Ora i tre sono Tiro Ravvicinato, Tiro Preciso e Schivare; Resistenza Fisica, Tiro Rapido e Tiro Multiplo vengono dalla classe.
+> ⚠ **Non SRD** (DM 2026-10-18, vince la versione più forte): un ranger di 8° ha tre talenti a scelta (Resistenza Fisica, Tiro Rapido e Tiro Multiplo vengono dalla classe), qui ne ha cinque. Tiro in Corsa resta, e Mobilità è aggiunta perché è il suo prerequisito SRD: i ranger tirano e si spostano nello stesso round, e contro gli attacchi di opportunità hanno CA +4. PF1e: il ranger dell'8° ha sei talenti (quattro di livello e due di stile di combattimento), quindi la lista ne supera il conto di uno solo.
 
 <div style="page-break-before:always"></div>
 
@@ -656,7 +656,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco:** *Martello da Guerra degli Avi +2* +21 in mischia (1d8+9/x3)
 **Attacco Completo:** *Martello da Guerra degli Avi +2* +21/+16/+11 in mischia (1d8+9/x3)
 **Abilità Speciali:** Postura Difensiva (+4 For/Cos, +2 TS Vol, 3/giorno), Colpo Devastante (+4d6 danni, 3/giorno), Presenza Comandante (+2 morale alleati entro 9m).
-**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento (gli ultimi tre).
+**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento (gli ultimi tre aggiunti dal lotto, confermati dal DM il 2026-10-18).
 **Equipaggiamento:** *Armatura Completa Nanica +2*, *Scudo Pesante Runico +1*, *Martello da Guerra degli Avi +2* (Ritornante), 3 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche di Combattimento:**
@@ -697,7 +697,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco Completo:** *Arco Lungo Composito +3* +19/+14/+9 a distanza (1d8+6/x3), o *Asce Gemelle +2* +16/+11 (1d6+5) con una, +14/+9 (1d6+5) e +14 (1d6+3) con due
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 [INFERRED: Cos 18 per i pf]
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare (la CA conta il bonus di schivare).
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
 
 **Tattiche di Combattimento:**
@@ -709,8 +709,9 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 > **Verifica 3.5 (versione più forte)**: l'armatura di cuoio borchiato +2 vale
 > +5 (CA 21). 12d8+36 non arriva a 98: Cos 18 dà 102. Bonus d'attacco con
 > l'arco +11 BAB, +4 Des, +3 arco, +1 Arma Focalizzata = +19.
-> Tiro in Corsa è tolto (DM 2026-10-18): chiedeva Mobilità, che non c'è, e i
-> talenti erano uno in più di quelli di un 12° livello. Il terzo nemico prescelto e i
+> ⚠ **Non SRD** (DM 2026-10-18, vince la versione più forte): Tiro in Corsa resta,
+> con Mobilità aggiunta come suo prerequisito SRD, e i talenti sono due in più di quelli di un 12° livello 3.5.
+> PF1e: il ranger del 12° ha nove talenti (sei di livello e tre di stile), e i suoi sette ci stanno: in PF1e la scheda è legale. Il terzo nemico prescelto e i
 > bonus +6/+4/+2 vengono dall'Esploratrice dei Picchi, classe non dell'SRD
 > [Private source — classe della campagna]. Restano come la scheda li dà.
 > PF1e: Viandante dell'Orizzonte (*horizon walker*), non si applica.

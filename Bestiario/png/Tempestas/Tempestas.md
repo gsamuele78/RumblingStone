@@ -228,8 +228,8 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 
 ### CAPACITÀ SPECIALI
 
-#### Musica bardica (12/giorno)
-Un uso per livello da bardo. **Ispirare Coraggio** (Sop): +2 morale ai TS contro charme e paura e +2 morale ai tiri per colpire e ai danni con le armi, per tutti gli alleati che lo sentono, finché suona e per 5 round dopo. Ha anche controcanto, affascinare, ispirare competenza, suggestione (CD 22), ispirare grandezza e canzone della libertà. I livelli da Cantore delle tempeste non si contano: 12 usi e Ispirare Coraggio +2 (DM 2026-10-18, il conto che si verifica sull'SRD).
+#### Musica bardica (14/giorno)
+Un uso per livello da bardo e da Cantore. **Ispirare Coraggio** (Sop): +3 morale ai TS contro charme e paura e +3 morale ai tiri per colpire e ai danni con le armi, per tutti gli alleati che lo sentono, finché suona e per 5 round dopo. Ha anche controcanto, affascinare, ispirare competenza, suggestione (CD 22), ispirare grandezza e canzone della libertà. ⚠ **Non verificato sull'SRD** (DM 2026-10-18, vince la versione più forte): i livelli da Cantore delle tempeste si sommano a quelli da bardo per la musica `[Private source — Frostburn]`, come scriveva l'arco 08, e danno 14 usi e Ispirare Coraggio +3, che nell'SRD arriva al 14° da bardo. Col solo conto SRD sarebbero 12 usi e +2.
 
 #### Cantata della Tempesta Tonante (Sop) — *firma personale*
 1/incontro, azione di round completo. Tempestas suona un canto fra le note: tutti gli alleati entro 18 m ottengono **+2 morale ad attacchi/danni/TS** per 10 round. Inoltre, tutte le creature ostili entro 18 m subiscono **2d6 danni elettrici** all'inizio del proprio turno per i primi 3 round (Riflessi CD 23 per metà: 10 + metà dei DV + Car; **bersagli con armatura metallica subiscono 1d6 extra**). È la firma personale di Tempestas, non un privilegio della classe: un altro Cantore delle tempeste non la ha (DM 2026-10-18).
@@ -329,7 +329,7 @@ Boost log: correzione dei conti e cambio di classe di prestigio (Arcimago 2 → 
 > - era: Cos 14, Tempra +6 → ora Cos 16, Tempra +7
 > - era: TS Temp +6, Rifl +12, Vol +12 → ora +6/+13/+13 (Riflessi Fulminei e i +3 di Volontà dei due livelli di prestigio non erano contati)
 > - era: BAB +9, Lotta +10, spada corta +11/+6 → ora BAB +10, Lotta +11, spada corta +12/+7
-> - era: Ispirare Coraggio 6/giorno → ora musica bardica 12/giorno
+> - era: Ispirare Coraggio 6/giorno → ora musica bardica 14/giorno (12 da bardo + 2 da Cantore, DM 2026-10-18)
 > - era: Cantata Riflessi CD 22, *suggestione di massa* CD 22 → ora CD 23 (formula della capacità soprannaturale) e CD 21 (incantesimo di 5°)
 > - era: *passo nelle ombre* fra gli incantesimi di 4°; incantesimi conosciuti 6/5/5/5/4 → ora *passo nelle ombre* al 5°, conosciuti 6/4/4/4/4/3; tolti *identificare*, *suggestione* e *lingua ammaliatrice*, che superavano il numero
 > - era: classe Arcimago 2; «Potere Magico +1 a danno e CD» → ora Cantore delle tempeste 2; Potere Magico alza il livello dell'incantatore, non le CD
