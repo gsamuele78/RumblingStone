@@ -29,7 +29,9 @@ al party; il corpo di Hella viene recuperato.
 ### Key decisions
 - Il party sceglie di **portare il corpo di Hella** alla Sala della Forgia
   Eterna anziché tentare una resurrezione immediata (impossibile lì).
-- Belkram muore redento senza lasciare niente al party (DM 2026-10-18).
+- Belkram muore redento. Le sue ultime parole sono «sono in pace», e fa un
+  cenno a Thorik: lo riconosce degno degli avi e portatore della Corona (DM
+  2026-10-18).
 
 ### XP / Loot
 - EL 17 su party 13°: bilanciato dagli artefatti (villans.md r.1).

@@ -40,8 +40,9 @@ ravvide**: morì redento, libero.
 - La sua morte redenta è un contrappunto alla morte di Hella nello stesso raid.
 
 ### Next hooks
-- Belkram muore redento senza lasciare niente al party (DM 2026-10-18): il
-  gancio sulla Corona passa dall'eco qui sotto.
+- In punto di morte Belkram dice «sono in pace» e fa un cenno a Thorik: lo
+  riconosce degno degli avi e portatore della Corona (DM 2026-10-18). È il
+  passaggio della Corona da un portatore all'altro, e l'eco qui sotto lo riprende.
 - Eco possibile: un portatore redento la cui storia i nani di Hammerfist
   ricordano (aggancio alle Cronache / Cerimonia delle 100 Asce, ARC-08).
 
