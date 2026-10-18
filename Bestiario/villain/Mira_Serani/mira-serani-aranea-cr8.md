@@ -22,7 +22,7 @@ voci:
   - Talenti: Arma Accurata, Ferrea Volontà, Iniziativa Migliorata, Incantare
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +8 → **+9**: aranea 3 DV (+1) + Stregone 6 (+5) + Sag 13 (+1) + **Ferrea Volontà** (+2). La scheda nominava il talento accanto al numero che non lo contava.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +8 → **+9**: aranea 3 DV (+1) + Stregone 6 (+5) + Sag 13 (+1) + **Ferrea Volontà** (+2). La scheda nominava il talento accanto al numero che non lo contava.
 
 > [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +6 → **+7**: aranea 3 DV (bestia magica, Tempra buona +3) + Stregone 6 (+2) + Cos 14 (+2).
 

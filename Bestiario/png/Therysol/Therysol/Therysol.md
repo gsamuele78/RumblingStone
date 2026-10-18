@@ -150,7 +150,7 @@ Questa è l'abilità che si è manifestata durante la sua trasformazione ("Awake
 
 | Abilità | Totale | Gradi | Car | Note |
 | :--- | :---: | :---: | :---: | :--- |
-| **Valutare** | **+13** (+15 con la lente) | 11 | +2 | Esperta di gemme e merci drow; lente d'ingrandimento +2 sugli oggetti piccoli o minuti come le gemme `[INFERRED — needs DM confirmation]` |
+| **Valutare** | **+13** (+15 con la lente) | 11 | +2 | Esperta di gemme e merci drow; lente d'ingrandimento +2 sugli oggetti piccoli o minuti come le gemme |
 | **Raggirare** | **+16** | 10 | +4 | +2 Razziale incluso |
 | **Diplomazia** | **+15** | 9 | +4 | +2 Sinergia (Raggirare) |
 | **Percepire Intenzioni** | **+12** | 11 | +1 | Per evitare truffe |
@@ -171,8 +171,8 @@ Poiché non indossa armature, Therysol si affida a gingilli magici recuperati du
 
 *   **Talismano del Gelo Perenne (Amuleto Armatura Naturale +1):** Un frammento di ghiaccio che non si scioglie mai, fuso visivamente con le scaglie del collo.
 *   **Anello del Patto (Anello di Deviazione +1):** Un semplice anello d'argento drow.
-*   **Mantello del Carisma +4** `[INFERRED — needs DM confirmation]`: la scheda scriveva «+3 potenziamento» al Carisma senza dire da dove; un bonus di potenziamento a una caratteristica viene da un oggetto, e il più piccolo che tiene il suo Carisma a +4 è questo. Va scelto dal DM (il mantello, o un altro oggetto della stessa forza).
-*   **Quattro perle del potere** (due di 1° livello, due di 2°) `[INFERRED — needs DM confirmation]`: ognuna le rende uno slot già usato, una volta al giorno. Tengono i 5 incantesimi di 1° e i 4 di 2° che la scheda le dava, che la tabella dell'Acolita da sola non arriva a dare.
+*   **Mantello del Carisma +4**: la scheda scriveva «+3 potenziamento» al Carisma senza dire da dove; un bonus di potenziamento a una caratteristica viene da un oggetto, e il più piccolo che tiene il suo Carisma a +4 è questo. Confermato dal DM il 2026-10-18.
+*   **Quattro perle del potere** (due di 1° livello, due di 2°): ognuna le rende uno slot già usato, una volta al giorno. Tengono i 5 incantesimi di 1° e i 4 di 2° che la scheda le dava, che la tabella dell'Acolita da sola non arriva a dare.
 *   **Lente d'ingrandimento** `[INFERRED — needs DM confirmation]`: la mercante di gemme la porta al collo.
 *   **Balestra Leggera Perfetta:** Legno scuro, intarsiata in madreperla (Danno 1d8).
 *   **Vestiario:** Tunica di seta di ragno grigia e viola (stile sottosuolo), strappata sulla spalla destra per far spazio alle scaglie e alle escrescenze cristalline.

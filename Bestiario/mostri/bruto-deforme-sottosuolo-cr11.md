@@ -17,7 +17,7 @@ attacchi:
   - Distanza lancio di massi +11 (3d8+15, incremento di gittata 55 m)
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta +30 → **+34**: BAB 12 + For 31 (+10) + Enorme (+8) + **Lottare Migliorato** (+4), talento che la scheda elenca e la lotta non contava. La For 31 è confermata dall'attacco +20.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta +30 → **+34**: BAB 12 + For 31 (+10) + Enorme (+8) + **Lottare Migliorato** (+4), talento che la scheda elenca e la lotta non contava. La For 31 è confermata dall'attacco +20.
 
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.

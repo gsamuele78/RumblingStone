@@ -120,7 +120,7 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 - **Riflessi:** +9 (+4 Base, +4 Des, +1 resistenza)
 - **Volontà:** +14 (+8 Base, +5 Sag, +1 resistenza; +2 razziale contro incantesimi e capacità magiche)
 
-*Mantello della resistenza +1* [INFERRED — needs DM confirmation]: la base del chierico 13 è +8 sulla Volontà, non +9, e il mantello tiene il +14 della scheda.
+*Mantello della resistenza +1*: la base del chierico 13 è +8 sulla Volontà, non +9, e il mantello tiene il +14 della scheda.
 
 **BAB/Grapple:** +9 / +11
 

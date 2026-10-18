@@ -159,18 +159,18 @@ Maewen è una **messaggera, non un'avventuriera**. Combatte solo se attaccata o 
 **Velocità:** 18 m (movimento veloce del monaco)
 **Sensi:** visione crepuscolare
 
-**Classe Armatura:** 19 (10 base, +3 Des, +3 Sag, +1 monaco, +2 deviazione dall'*anello di protezione +2* `[INFERRED — needs DM confirmation]`)
+**Classe Armatura:** 19 (10 base, +3 Des, +3 Sag, +1 monaco, +2 deviazione dall'*anello di protezione +2*)
 *Contatto 19 / Colta alla sprovvista 16*
 
 **Tiri Salvezza:** Tempra +11, Riflessi +9, Volontà +14 (+2 contro ammaliamento per Mente Lucida, +2 per il sangue elfico; immune al *sonno* magico)
 *Base: monaco 9 +6/+6/+6, chierico 2 +3/+0/+3; Volontà di Ferro +2.*
 
-**RI:** 21, dal *mantello della resistenza agli incantesimi* `[INFERRED — needs DM confirmation]`. Il monaco la ottiene solo al 13° livello: il mantello è il dono della Confraternita alla sua corriera, che viaggia sola.
+**RI:** nessuna. Il monaco la ottiene con l'Anima Diamantina al 13° livello, e Maewen è monaca del 9° (DM 2026-10-18).
 
 **BAB/Lotta:** +7 / +9
 
 **Attacchi:**
-- Colpo senz'armi +10/+5 (1d10+3); raffica di colpi +10/+10/+5 (1d10+3 ciascuno; al 9° la raffica non ha penalità); il +1 viene dall'*amuleto dei pugni possenti +1* `[INFERRED — needs DM confirmation]`
+- Colpo senz'armi +10/+5 (1d10+3); raffica di colpi +10/+10/+5 (1d10+3 ciascuno; al 9° la raffica non ha penalità); il +1 viene dall'*amuleto dei pugni possenti +1*
 - Bastone da viaggio +9/+4 (1d6+3 a due mani); può usarlo nella raffica
 
 ### CAPACITÀ DI CLASSE
@@ -238,7 +238,7 @@ Benchmark: PF T1-1 riga 11: CA 19 vs 25 (6 sotto) / pf 71 vs 145 (molto sotto) /
 
 ### Conti corretti
 
-Boost log: correzione dei conti (SRD) — GS 10 → 11 — GS uguale al livello del personaggio; pf, TS, velocità, CD del Pugno Stordente e raffica alzati dove l'SRD li dà più alti; CA 19, RI e attacco tenuti con tre oggetti (INFERRED).
+Boost log: correzione dei conti (SRD) — GS 10 → 11 — GS uguale al livello del personaggio; pf, TS, velocità, CD del Pugno Stordente e raffica alzati dove l'SRD li dà più alti; CA 19 e attacco tenuti con due oggetti, l'anello di protezione +2 e l'amuleto dei pugni possenti +1; RI tolta, perché al suo livello l'SRD non la dà (DM 2026-10-18).
 
 <!-- storico -->
 > Valori superati, campo per campo (dalla scheda prima della revisione del 2026-10-16):
@@ -250,7 +250,7 @@ Boost log: correzione dei conti (SRD) — GS 10 → 11 — GS uguale al livello 
 > - era: colpo senz'armi +10/+5 (1d10+2), raffica +8/+8/+3 → ora +10/+5 (1d10+3) e raffica +10/+10/+5, con l'amuleto dei pugni possenti +1
 > - era: velocità 15 m → ora 18 m; Caduta Lenta 9 m → ora 12 m
 > - era: Pugno Stordente CD 16 → ora 18
-> - era: RI 19 come privilegio del monaco, che al 9° non ce l'ha → ora RI 21 dal mantello
+> - era: RI 19 come privilegio del monaco, che al 9° non ce l'ha → ora nessuna RI (il mantello della resistenza agli incantesimi, proposto il 2026-10-16, costa 90.000 mo ed è stato tolto dal DM il 2026-10-18)
 > - era: cinque talenti scelti (con Abilità Focalizzata in Diplomazia) e Schivare contato in CA → ora quattro: Abilità Focalizzata è uscita, perché l'11° livello ne dà quattro
 > - era: «Endurance» fra gli incantesimi da chierico (è un talento) e «High Jump» fra i privilegi del monaco, che nel 3.5 non c'è → tolti; aggiunti Eludere Migliorato e Purezza del Corpo
 <!-- /storico -->

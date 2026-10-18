@@ -97,7 +97,7 @@ Varis è già il fornitore del *Mantello dei Tiri Salvezza*. Ha già 3 transazio
 | **Saggezza** | 14 | +2 |
 | **Carisma** | 18 | +4 |
 
-**Punti Ferita:** 44 (8 DV: 4d6+4d6+16; Cos 14 con l'*amuleto della salute +2* `[INFERRED — needs DM confirmation]`)
+**Punti Ferita:** 44 (8 DV: 4d6+4d6+16; Cos 14 con l'*amuleto della salute +2*)
 **Iniziativa:** +2
 **Velocità:** 9 m
 
@@ -113,7 +113,7 @@ Varis è già il fornitore del *Mantello dei Tiri Salvezza*. Ha già 3 transazio
 
 **Capacità di classe (Ladro 4):** attacco furtivo +2d6, eludere, scoprire trappole, percepire trappole +1, schivare prodigioso.
 
-**Talenti:** Persuasivo, Riflessi Fulminei, Negoziatore, Volontà di Ferro `[INFERRED — needs DM confirmation]`. La scheda non ne elencava nessuno, e un umano di 8° livello ne ha quattro: Persuasivo spiega il +2 a Raggirare, Riflessi Fulminei i Riflessi +9 che la scheda già scriveva, e gli altri due vengono dal personaggio (un mediatore che non si lascia leggere).
+**Talenti:** Persuasivo, Riflessi Fulminei, Negoziatore, Volontà di Ferro La scheda non ne elencava nessuno, e un umano di 8° livello ne ha quattro: Persuasivo spiega il +2 a Raggirare, Riflessi Fulminei i Riflessi +9 che la scheda già scriveva, e gli altri due vengono dal personaggio (un mediatore che non si lascia leggere).
 
 ### ABILITÀ PRINCIPALI
 

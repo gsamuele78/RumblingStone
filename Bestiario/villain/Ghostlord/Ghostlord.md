@@ -93,7 +93,7 @@ La filatteria di Zeth — un'urna di quercia fossile con incisioni in elvish ant
 
 **Riduzione del danno:** 15/contundente e magia (lich) · **Resistenza allo scacciare:** +4
 
-**Talenti e oggetti aggiunti** [INFERRED — needs DM confirmation]: Riflessi Fulminei (uno dei cinque talenti che la scheda non sceglie), *anello di protezione +4*, *mantello del carisma +2* (Car 17). Tengono i Riflessi, la CA alta della vecchia forbice e le CD 19 delle capacità da lich.
+**Talenti e oggetti aggiunti**: Riflessi Fulminei (uno dei cinque talenti che la scheda non sceglie), *anello di protezione +4*, *mantello del carisma +2* (Car 17). Tengono i Riflessi, la CA alta della vecchia forbice e le CD 19 delle capacità da lich.
 
 **BAB/Grapple:** +9 / +9
 

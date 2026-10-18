@@ -23,7 +23,7 @@ voci:
   - Talenti: Diving Charge, Powerful Charge, Arma Focalizzata (morning star)
 ```
 
-> [INFERRED — needs DM confirmation] **Versione scelta**: lo **stadio 2**, Dragon Shaman 6 (GS 8), più forte dello stadio 1 (Dragon Shaman 5, GS 7): 56 pf, CA 22, RI 16, soffio 3d6, *tocco di vitalità*. I numeri del blocco sono quelli con la *pozione di forza del toro* già bevuta (For 20), come li dava l'export dello stadio 1: tutti e due gli stadi la portano, e così nessun attacco scende sotto quelli di prima. Senza pozione: For 16, morning star +9 (1d8+4), artigli +7 (1d4+3), morso +2 (1d6+1), Lotta +7. **pf 56**: primo dado al massimo, gli altri alla media.
+> **Versione scelta**: lo **stadio 2**, Dragon Shaman 6 (GS 8), più forte dello stadio 1 (Dragon Shaman 5, GS 7): 56 pf, CA 22, RI 16, soffio 3d6, *tocco di vitalità*. I numeri del blocco sono quelli con la *pozione di forza del toro* già bevuta (For 20), come li dava l'export dello stadio 1: tutti e due gli stadi la portano, e così nessun attacco scende sotto quelli di prima. Senza pozione: For 16, morning star +9 (1d8+4), artigli +7 (1d4+3), morso +2 (1d6+1), Lotta +7. **pf 56**: primo dado al massimo, gli altri alla media.
 
 > [INFERRED — needs DM confirmation] **GS 8**: hobgoblin con 6 livelli da PG (6) e mezzo-immondo (+2).
 

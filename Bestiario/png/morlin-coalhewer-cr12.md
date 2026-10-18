@@ -22,9 +22,9 @@ voci:
   - Incantesimi: chierico 6, LI 6, 5/4+1/3+1/3+1, CD 14 + livello
 ```
 
-> [INFERRED — needs DM confirmation] **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 che l'export elenca fra gli oggetti (10 −1 +1). For 16 e Sag 19 vengono dai guanti della potenza dell'orco e dal periapto della saggezza +2.
+> **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 che l'export elenca fra gli oggetti (10 −1 +1). For 16 e Sag 19 vengono dai guanti della potenza dell'orco e dal periapto della saggezza +2.
 
-> [INFERRED — needs DM confirmation] **Il quinto talento.** Dodici DV danno cinque talenti (1°, 3°, 6°, 9°, 12°), e l'export ne sceglie quattro; gli altri che stampa sono gratuiti (competenza nelle armature pesanti dal chierico, nel martello dalla sostituzione razziale, Abilità Focalizzata dal dominio). Il quinto è **Attacco Poderoso**, per un fabbro che combatte col martello.
+> **Il quinto talento.** Dodici DV danno cinque talenti (1°, 3°, 6°, 9°, 12°), e l'export ne sceglie quattro; gli altri che stampa sono gratuiti (competenza nelle armature pesanti dal chierico, nel martello dalla sostituzione razziale, Abilità Focalizzata dal dominio). Il quinto è **Attacco Poderoso**, per un fabbro che combatte col martello.
 
 **Iniziativa** −1 · **Sensi** scurovisione 18 m; Ascoltare +9, Osservare +9 · **Aura** di bene e di legge (travolgente)
 

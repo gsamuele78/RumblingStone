@@ -34,7 +34,7 @@ fonte: trascritto dalla fonte d'arco (pf alla media dei dadi, CA spiegata dall'a
 
 **Attacco** Vel 15 m (12 m dell'orso bruno, +3 m movimento veloce da barbaro) · **Mischia** 2 artigli +16 (1d8+8) e morso +11 (2d6+4) · **Incantesimi** da druido di 10° livello (SAG +4), in forma lancia solo con Incantesimi Naturali; al giorno 6/5+1/5/4+1/4/2 (con le due perle del potere), CD 14 + livello (massimo CD 19 al 5°)
 
-**Statistiche** For 27, Des 13, Cos 19, Int 8, Sag 18, Car 10 (forma d'orso bruno) · BAB +9; Lotta +21 · **Talenti** Incantesimi Naturali e altri quattro che la scheda non elenca · **Equipaggiamento** armatura di pelle +2 *selvatica*, perla del potere (1°), perla del potere (3°) `[INFERRED — needs DM confirmation: l'armatura selvatica spiega la CA 20 della fonte in forma d'orso, le perle tengono gli slot che la scheda scriveva]`
+**Statistiche** For 27, Des 13, Cos 19, Int 8, Sag 18, Car 10 (forma d'orso bruno) · BAB +9; Lotta +21 · **Talenti** Incantesimi Naturali e altri quattro che la scheda non elenca · **Equipaggiamento** armatura di pelle +2 *selvatica*, perla del potere (1°), perla del potere (3°) (l'armatura selvatica spiega la CA 20 della fonte in forma d'orso, le perle tengono gli slot che la scheda scriveva)
 
 **Capacità speciali**
 - **Afferrare migliorato** (orso bruno): lotta +21.

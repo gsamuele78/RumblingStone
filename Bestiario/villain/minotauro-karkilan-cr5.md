@@ -25,7 +25,7 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD, senza far scendere nessun numero**:
+> **Conti rifatti sul SRD, senza far scendere nessun numero**:
 > - **CA 18**: −1 taglia, +5 naturale del minotauro SRD, +4 giaco di maglia, Des 10. L'export dava 16 (contatto 7), cioè la CA in ira.
 > - **Vol +7**: col solo Barbaro 1 il conto dà +5 (minotauro +5, Sag 10). L'export scriveva *Powerful Charge* fra i talenti, ma la Carica Devastante è una capacità razziale del minotauro, non un talento: al suo posto **Volontà di Ferro**, che riporta la Volontà a +7 come la scheda la dava.
 > - **Incornata**: con la grande ascia è un attacco secondario (−5, metà For): +7 (1d8+3). Il +12 (1d8+6) resta quando incorna da sola, e in carica sale a +14 (4d6+9).

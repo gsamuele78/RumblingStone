@@ -20,7 +20,7 @@ voci:
   - Incantesimi: bardo 8, LI 8, 3/4/4/2 al giorno, CD 14 + livello (ammaliamento 15 + livello)
 ```
 
-> [INFERRED — needs DM confirmation] **Avanzato al bardo 8 che il salvataggio voleva essere.** Il .pcg si chiama «bard 8», l'elenco «Armate — composizione dettagliata» dell'arco 00 lo cita come «Lómyn RedTongue (Bard 8), GS 8», e il denaro del salvataggio è di **9.400 mo**, esattamente la dotazione di un PNG di 8° livello della tabella del Manuale del DM. La build salvata però si ferma al 4° livello, senza talenti scelti, senza incantesimi oltre ai trucchetti e con il denaro non speso. Dal .pcg vengono razza, allineamento, divinità (Mask), linguaggi, caratteristiche e la spada lunga perfetta; dal 5° all'8° livello, talenti, incantesimi conosciuti, abilità e acquisti sono scelti da un agente con la regola SRD del bardo.
+> **Avanzato al bardo 8 che il salvataggio voleva essere.** Il .pcg si chiama «bard 8», l'elenco «Armate — composizione dettagliata» dell'arco 00 lo cita come «Lómyn RedTongue (Bard 8), GS 8», e il denaro del salvataggio è di **9.400 mo**, esattamente la dotazione di un PNG di 8° livello della tabella del Manuale del DM. La build salvata però si ferma al 4° livello, senza talenti scelti, senza incantesimi oltre ai trucchetti e con il denaro non speso. Dal .pcg vengono razza, allineamento, divinità (Mask), linguaggi, caratteristiche e la spada lunga perfetta; dal 5° all'8° livello, talenti, incantesimi conosciuti, abilità e acquisti sono scelti da un agente con la regola SRD del bardo.
 
 **Iniziativa** +5 · **Sensi** visione crepuscolare; Ascoltare +5
 

@@ -25,9 +25,9 @@ voci:
   - Talenti: Attacco Poderoso, Fendere, Specializzazione nello Scudo (pesante), Ottimizzazione dell'Armatura Pesante, Iniziativa Migliorata, Arma Focalizzata e Specializzazione in un'Arma (ascia da guerra nanica)
 ```
 
-> [INFERRED — needs DM confirmation] **I numeri ora vengono dal .pcg, non dalla prosa.** Il salvataggio PCGen ha tutto quello che la scheda di prima segnava con «~»: i pf tirati livello per livello (10+6+5+6+5+4), l'equipaggiamento indossato e i talenti. Le caratteristiche del .pcg sono **prima della razza**: il nano aggiunge Cos +2 e toglie Car −2, e i guanti della potenza dell'orco portano la For da 16 a 20. L'ascia è un'**ascia da guerra nanica** +1, non un'ascia da battaglia.
+> **I numeri ora vengono dal .pcg, non dalla prosa.** Il salvataggio PCGen ha tutto quello che la scheda di prima segnava con «~»: i pf tirati livello per livello (10+6+5+6+5+4), l'equipaggiamento indossato e i talenti. Le caratteristiche del .pcg sono **prima della razza**: il nano aggiunge Cos +2 e toglie Car −2, e i guanti della potenza dell'orco portano la For da 16 a 20. L'ascia è un'**ascia da guerra nanica** +1, non un'ascia da battaglia.
 
-> [INFERRED — needs DM confirmation] **Il settimo talento.** Un guerriero 6 nano ne ha sette (3 di livello, 4 bonus) e il .pcg ne salva sei: il settimo è **Fendere**, che segue Attacco Poderoso ed è il talento di chi combatte in coppia in un cunicolo.
+> **Il settimo talento.** Un guerriero 6 nano ne ha sette (3 di livello, 4 bonus) e il .pcg ne salva sei: il settimo è **Fendere**, che segue Attacco Poderoso ed è il talento di chi combatte in coppia in un cunicolo.
 
 **Iniziativa** +5 · **Sensi** scurovisione 18 m
 

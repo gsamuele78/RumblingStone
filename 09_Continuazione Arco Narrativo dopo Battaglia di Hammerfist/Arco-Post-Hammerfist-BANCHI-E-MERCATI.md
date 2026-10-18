@@ -174,7 +174,7 @@ Che cosa avete portato alla foresta, oltre agli stivali?»*
 incantesimo da druido. Con *individuazione del magico* un anziano dice la
 **scuola** di un oggetto (Sapienza Magica 15 + livello dell'incantesimo). Dopo
 il rito Saraah identifica le **pozioni**: ha Sapienza Magica +17 e prende 10
-`[INFERRED — needs DM confirmation]`, quindi ci riesce sempre, una al minuto.
+, quindi ci riesce sempre, una al minuto.
 
 ##### Cosa prendono in cambio
 
@@ -387,7 +387,7 @@ aspettare.»*
   maledizione; **analizzare dweomer** la scopre sempre (SRD). Zalkatar vende anche
   la pergamena di *analizzare dweomer*: la mette sul tavolo per ultima.
 - **Accorgersi dell'inganno**: Percepire Intenzioni contro il Raggirare di
-  Zalkatar, che ha **+18** `[INFERRED — needs DM confirmation]`. Riuscire non dice
+  Zalkatar, che ha **+18** (Car 24 dal tomo, DM 2026-10-18). Riuscire non dice
   quale oggetto è maledetto: dice che Zalkatar guarda due foglietti più degli altri.
 
 | Cosa dice il foglietto | Prezzo sul foglietto | Quante | Cosa è davvero |
@@ -612,7 +612,7 @@ della biblioteca di **Pyriel** (`state.md` §4). *Identificare* a 110 mo, un'ora
 per oggetto. Oppure gratis, in cambio di un favore: il suo *inviare* verso
 Silverymoon è bloccato da qualcosa sugli Wyrmbones, e lui vuole sapere cosa. Le
 pozioni le identifica in un minuto l'una, con Sapienza Magica +16 e il 10 preso
-`[INFERRED — needs DM confirmation]`. *Analizzare dweomer* lo lancia Pyriel, 660
+ *Analizzare dweomer* lo lancia Pyriel, 660
 mo, e solo se Hella o Artemis gli fanno una domanda onesta (la scheda del
 Consiglio, «Come sbloccarlo»).
 
@@ -678,7 +678,7 @@ del Collezionista in città (§8).
 | Cosa | Prezzo | Quante | Nota per il DM |
 |---|---:|---:|---|
 | Mantello di resistenza +1 · +2 · +3 | 1.000 · 4.000 · 9.000 mo | 1 · 1 · 1 | è la fornitura di Artemis (`state.md` §5). Se Artemis non ha pagato il suo debito del trimestre, Varis non glieli vende, e agli altri li vende a ×1,5 |
-| Anello di schermo mentale | 8.000 mo | 1 | il gemello di quello che porta lui `[INFERRED — needs DM confirmation]` |
+| Anello di schermo mentale | 8.000 mo | 1 | il gemello di quello che porta lui |
 | «Arte nanica d'epoca Hammerfist» | 6.000 mo l'una | 2 | 🔴 **statue vive** (scheda di Varis). Comprarne una per liberarla è una via: costa il prezzo, più *spezzare incantamento* al Tempio. Varis se ne accorge, e da quel momento sa che i PG sanno |
 
 **Cosa compra.** Le reliquie del Sottosuolo, a **prezzo pieno** fino a
@@ -737,7 +737,7 @@ lettera o credito presso la contrada?»*
 
 **Fino al valore base (12.000 mo)**: tutto quello che sta nell'SRD 3.5, con il
 75% di probabilità per oggetto e per giorno. Se il tiro va male, la gilda lo fa
-arrivare in **1d4 giorni** `[INFERRED — needs DM confirmation]`. Le pozioni, le
+arrivare in **1d4 giorni** Le pozioni, le
 bacchette e le pergamene fino al 4° livello ci sono sempre.
 
 **Oltre il valore base, questa settimana ci sono soltanto questi:**
@@ -779,7 +779,7 @@ pezzo di drago (più sotto).
 | Cosa portano i PG | Chi la prende | A quanto | Nota |
 |---|---|---|---|
 | Oggetti magici, armi, armature | la Piuma d'Oro o il Bastione | **metà**, fino a **85.000 mo** per oggetto | qui si vende l'hoard di Regiarix |
-| Gemme e oggetti d'arte | la Piuma d'Oro | **prezzo pieno** | in una città di banche le gemme sono moneta `[INFERRED — needs DM confirmation]` |
+| Gemme e oggetti d'arte | la Piuma d'Oro | **prezzo pieno** | in una città di banche le gemme sono moneta |
 | Parti di drago (squame, sangue, denti) | le Guglie | **prezzo pieno** di quello che un alchimista ne farebbe, e le due frecce del massacro | servono al quasi-mythal |
 | Merce che scotta: insegne della Mano Rossa, oggetti drow, una statua | il Bruco | **un terzo** | senza domande |
 
@@ -863,7 +863,7 @@ La sua bottega è al §6. Qui conta un'altra cosa: Varis vuole uscire dalla rete
 non sa come (scheda, «Segreto»). Un PG che, dopo aver comprato da lui, gli fa
 capire di sapere delle statue, trova un venditore che offre **merce gratis in
 cambio di protezione**: il registro delle consegne di Sal e un mantello di
-resistenza +2 per parlare `[INFERRED — needs DM confirmation]`.
+resistenza +2 per parlare.
 
 ### Il Collezionista *(per assurdo)*
 
@@ -889,7 +889,7 @@ dettagli li scriviamo dopo.»*
 | Cosa offre | Il prezzo vero |
 |---|---|
 | **Compra tutto a prezzo pieno**, non a metà, e **senza limite d'acquisto**: è l'unico acquirente del vale che si prende l'hoard di Regiarix intero | paga in gemme e monete con un *marchio arcano* invisibile sopra. *Individuazione del magico* lo trova. La sua gilda segue le monete, e sa dove sono i PG ogni volta che le spendono |
-| **Vende tutto quello che c'è nell'SRD**, fino a 100.000 mo, al prezzo di listino, in **1d4 giorni** `[INFERRED — needs DM confirmation]` | ogni consegna arriva con un servitore della gilda che guarda dove la mettono |
+| **Vende tutto quello che c'è nell'SRD**, fino a 100.000 mo, al prezzo di listino, in **1d4 giorni** | ogni consegna arriva con un servitore della gilda che guarda dove la mettono |
 | ***Desiderio limitato***, che ha fra i suoi incantesimi (scheda) | un artefatto dei PG, o un'anima. Non accetta altro |
 | Informazioni vere su Sonjak, sui Wyrmlord, sui drow sotto Rethmar | **una clausola**, a scelta sua (più sotto) |
 

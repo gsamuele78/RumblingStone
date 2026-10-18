@@ -78,7 +78,7 @@ l'hanno comprata: lo dice il log della serata del 372, sul ramo del gruppo.*
 
 | Cosa si può avere | Da chi | A quanto | Il costo vero |
 |---|---|---|---|
-| Riparare un'arma o un'armatura | la fucina | **10%** del prezzo dell'oggetto (convenzione del tavolo, kit §2) | un'ora fra un'ondata e l'altra, non una giornata: la fucina lascia indietro le punte di freccia `[INFERRED — needs DM confirmation]` |
+| Riparare un'arma o un'armatura | la fucina | **10%** del prezzo dell'oggetto (convenzione del tavolo, kit §2) | un'ora fra un'ondata e l'altra, non una giornata: la fucina lascia indietro le punte di freccia |
 | *Ristorare inferiore*, *rimuovi paralisi*, *neutralizza veleno* | i chierici di Dana | 60 · 60 · 280 mo | uno slot che manca alla sala dei feriti |
 | *Ristorare*, *spezzare incantamento*, *rianimare morti* | Dana o Thorin | 380 · 450 · 5.450 mo | **un tiro sul *Registro delle Perdite*** (`ARC08-03-REGISTRO-PERDITE.md`) per ogni incantesimo di 4° livello o più, come nella fucina di Gunnvor |
 | Pozioni, bacchette, pergamene | nessuno | — | quello che c'è sta già nelle mani dei difensori |
@@ -202,7 +202,7 @@ più le componenti), come nel kit §2.
 | *Rianimare morti* | Thorin | 5.450 mo | i diamanti della rocca vanno prima ai caduti nani, e *rianimare morti* vale fino a 9 giorni dalla morte per un chierico di 9°: per i PG ne resta **uno** `[INFERRED — needs DM confirmation]` |
 | *Guarigione* · *dissolvi magie superiore* | Dana | 660 · 660 mo | |
 | *Resurrezione* · *rigenerazione* | Dana | 10.910 · 910 mo | 7° livello. La *resurrezione* vuole un diamante da 10.000 mo, e quelli della rocca vanno ai caduti nani: la paga chi porta il diamante `[INFERRED — needs DM confirmation]` |
-| Identificare un oggetto | Nala | 110 mo | un'ora e una perla da 100 mo per oggetto. Nala ha quattro incantesimi di 1° al giorno per *identificare* `[INFERRED — needs DM confirmation]` |
+| Identificare un oggetto | Nala | 110 mo | un'ora e una perla da 100 mo per oggetto. Nala ha quattro incantesimi di 1° al giorno e conosce *identificare* (DM 2026-10-18) |
 | Identificare una pozione | nessuno | — | serve Sapienza Magica **CD 25**, e nessuna scheda della rocca la dichiara così alta. Le pozioni si fanno identificare a Dauth |
 
 ##### Cosa compra, e a quanto

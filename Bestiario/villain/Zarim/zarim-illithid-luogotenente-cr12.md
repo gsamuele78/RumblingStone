@@ -40,7 +40,7 @@ Medium aberration, illithid 8 DV / Psion 4, Legale Malvagio.
 
 > ⚠ Prerequisito: un Psion 4 manifesta poteri fino al 2° livello; la *telecinesi* della scheda è un potere più alto. Tenuta, perché è nella scheda; si può leggere come un uso della *mano lontana* potenziata. PF1e: Psichico (*Occult Adventures*, OGL) — si avvicina: incantatore mentale con *telecinesi* al 5°, ma lavora a incantesimi spontanei e non a punti potere.
 
-**Statistiche** For 12 Des 14 Cos 14 Int 18 Sag 16 Car 16 · BAB +8; Lotta +9 · **Talenti** Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (B), Abilità Focalizzata (esplosione mentale), Robustezza, Tempra Possente [INFERRED — needs DM confirmation: sono i tre talenti che la scheda non sceglieva, presi per tenere CD, pf e Tempra della versione di prima] · **Abilità** [DA SCRIVERE — la scheda non le ha] · **Linguaggi** Sottocomune, Comune; telepatia · **Equipaggiamento** *mantello della resistenza +2* [INFERRED — needs DM confirmation]
+**Statistiche** For 12 Des 14 Cos 14 Int 18 Sag 16 Car 16 · BAB +8; Lotta +9 · **Talenti** Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (B), Abilità Focalizzata (esplosione mentale), Robustezza, Tempra Possente (sono i tre talenti che la scheda non sceglieva, presi per tenere CD, pf e Tempra della versione di prima) · **Abilità** [DA SCRIVERE — la scheda non le ha] · **Linguaggi** Sottocomune, Comune; telepatia · **Equipaggiamento** *mantello della resistenza +2*
 
 **Capacità speciali**
 - **Esplosione mentale** (Mag): cono di 18 m, a volontà; Volontà CD 19 (10 + 4 per gli 8 DV razziali + 3 Car + 2 Abilità Focalizzata) o stordito 3d4 round.

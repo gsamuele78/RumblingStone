@@ -106,9 +106,9 @@ Xal'thor **non è l'unico Illithid presente al Torneo di Dauth**. Un secondo con
 
 **BAB/Grapple:** +9 / +11
 
-**Talenti:** Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (dell'illithid), Riflessi Fulminei, Attacco Naturale Migliorato (tentacolo), Arma Focalizzata (tentacolo), più un talento non scelto [INFERRED — needs DM confirmation: i tre talenti nuovi tengono Riflessi, attacco e danno della scheda d'arco del Torneo]
+**Talenti:** Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (dell'illithid), Riflessi Fulminei, Attacco Naturale Migliorato (tentacolo), Arma Focalizzata (tentacolo), più un talento non scelto (i tre talenti nuovi tengono Riflessi, attacco e danno della scheda d'arco del Torneo)
 
-**Equipaggiamento:** Tuta Psicoadattiva, *amuleto della salute +2*, *guanti della forza dell'ogre +2*, *mantello della resistenza +2* [INFERRED — needs DM confirmation: aggiunti per non scendere sotto pf, Tempra e danno della versione di prima]
+**Equipaggiamento:** Tuta Psicoadattiva, *amuleto della salute +2*, *guanti della forza dell'ogre +2*, *mantello della resistenza +2* (aggiunti per non scendere sotto pf, Tempra e danno della versione di prima)
 
 **Attacchi:**
 - 4 Tentacoli +12 (1d6+2 ciascuno, Arma Accurata, Arma Focalizzata, Attacco Naturale Migliorato; se tutti e 4 colpiscono lo stesso bersaglio → Tentacolo Avvolgente → Estrazione Cervello possibile)

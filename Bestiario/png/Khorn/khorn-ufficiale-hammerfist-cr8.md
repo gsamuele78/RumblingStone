@@ -21,9 +21,9 @@ voci:
   - Talenti: Attacco Poderoso, Fendere, Arma Focalizzata, Arma Focalizzata Superiore e Specializzazione in un'Arma (martello da guerra), Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata
 ```
 
-> [INFERRED — needs DM confirmation] **Caratteristiche riscritte a mano.** Quelle generate davano Des 4: torna con l'iniziativa +1 (−3, +4 del talento), ma non con il contatto 11 né col «+1 Des» che la scheda scrive nella CA, perché un nano con Des 4 ha contatto 7. Si tengono i numeri canonizzati dal DM e si cercano le caratteristiche che li fanno tornare: **Des 12** (contatto 11, Rifl +3, iniziativa +5 con il talento), **Cos 16** (Tempra +9; i pf 76 sono un tiro sopra la media di 8d10+24, che è 68, e si tengono), **Sag 14** (Vol +4); **Car 15** resta quella generata (Autorità).
+> **Caratteristiche riscritte a mano.** Quelle generate davano Des 4: torna con l'iniziativa +1 (−3, +4 del talento), ma non con il contatto 11 né col «+1 Des» che la scheda scrive nella CA, perché un nano con Des 4 ha contatto 7. Si tengono i numeri canonizzati dal DM e si cercano le caratteristiche che li fanno tornare: **Des 12** (contatto 11, Rifl +3, iniziativa +5 con il talento), **Cos 16** (Tempra +9; i pf 76 sono un tiro sopra la media di 8d10+24, che è 68, e si tengono), **Sag 14** (Vol +4); **Car 15** resta quella generata (Autorità).
 
-> [INFERRED — needs DM confirmation] **Il martello +14 torna con l'ottavo talento.** Un guerriero 8 nano ha 8 talenti (3 di livello, 5 bonus) e la scheda ne elencava 7. BAB +8, For +3, Arma Focalizzata +1, martello +1 fanno +13: l'ottavo talento è **Arma Focalizzata Superiore** (martello da guerra), che il guerriero prende proprio all'8° livello e che porta l'attacco al +14 canonizzato.
+> **Il martello +14 torna con l'ottavo talento.** Un guerriero 8 nano ha 8 talenti (3 di livello, 5 bonus) e la scheda ne elencava 7. BAB +8, For +3, Arma Focalizzata +1, martello +1 fanno +13: l'ottavo talento è **Arma Focalizzata Superiore** (martello da guerra), che il guerriero prende proprio all'8° livello e che porta l'attacco al +14 canonizzato.
 
 **Iniziativa** +5 · **Sensi** scurovisione 18 m; Ascoltare +2, Osservare +2
 

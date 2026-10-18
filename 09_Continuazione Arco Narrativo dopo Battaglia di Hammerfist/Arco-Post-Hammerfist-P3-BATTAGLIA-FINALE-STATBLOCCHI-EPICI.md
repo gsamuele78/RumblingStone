@@ -36,7 +36,7 @@ Basato su Azarr Kul di Red Hand of Doom, potenziato per lo scontro finale.[web:5
 
 ### Incantesimi (Chierico 12, domini Guerra + Tirannia)
 
-- Livello incantatore 14 (con oggetti, `[INFERRED]`). Al giorno 6/7+1/6+1/5+1/4+1/4+1/3+1, CD 16 + livello.
+- Livello incantatore 14: +1 da una *pietra di ioun prisma arancione* (SRD) e +1 dal favore di Tiamat (non SRD); DM 2026-10-18. Al giorno 6/7+1/6+1/5+1/4+1/4+1/3+1, CD 16 + livello.
 - Esempio preparazione:
   - 0: *detect magic, guidance, resistance, inflict minor wounds*.
   - 1: *divine favor, shield of faith, command, doom, bless*.

@@ -140,7 +140,7 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 | **Saggezza** | 16 | +3 |
 | **Carisma** | 12 | +1 |
 
-**Punti Ferita:** 60 (8d8 + 24 Cos; Cos 17 con l'*amuleto della salute +4*, dono del Cerchio `[INFERRED — needs DM confirmation]`)
+**Punti Ferita:** 60 (8d8 + 24 Cos; Cos 17 con l'*amuleto della salute +4*, dono del Cerchio)
 **Iniziativa:** +8 (+4 Des, +4 Iniziativa Migliorata)
 **Velocità:** 9 m a piedi; 24 m volo (sul gufo)
 **Sensi:** visione crepuscolare
@@ -148,7 +148,7 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 **Classe Armatura:** 19 (10 base, +4 Des, +5 cuoio borchiato +2); 21 con *pelle coriacea*
 *Contatto 14 / Colto alla sprovvista 15*
 
-**Tiri Salvezza:** Tempra +10, Riflessi +11, Volontà +6 (+2 contro ammaliamento, immune al *sonno* magico; +1 a tutti dal *mantello della resistenza +1* `[INFERRED — needs DM confirmation]`)
+**Tiri Salvezza:** Tempra +10, Riflessi +11, Volontà +6 (+2 contro ammaliamento, immune al *sonno* magico; +1 a tutti dal *mantello della resistenza +1*)
 
 **BAB/Lotta:** +8 / +10
 
@@ -168,10 +168,10 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Confermati dal DM il 2026-10-18: il testo del 2026-05-04 («sa lanciare 0 incantesimi») è superato
 - **Inathiel** — Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1)), la sua cavalcatura
 
-> ⚠ Prerequisito: il gufo gigante è una **bestia magica**, non un animale, e non è nella lista dei compagni animali dell'SRD; in più è celestiale. Come compagno animale del ranger non si può prendere. La scheda lo tiene così com'è: va letto come una cavalcatura legata, come i gufi del Signore Ventolesto, non come un privilegio di classe `[INFERRED — needs DM confirmation]`. PF1e: il compagno animale del ranger PF1e non ammette bestie magiche nemmeno lì; il talento *Leadership* lo prenderebbe come gregario, ma stravolge (il gufo diventerebbe un PNG che sale di livello).
+> ⚠ Prerequisito: il gufo gigante è una **bestia magica**, non un animale, e non è nella lista dei compagni animali dell'SRD; in più è celestiale. Come compagno animale del ranger non si può prendere. La scheda lo tiene così com'è: va letto come una cavalcatura legata, come i gufi del Signore Ventolesto, non come un privilegio di classe PF1e: il compagno animale del ranger PF1e non ammette bestie magiche nemmeno lì; il talento *Leadership* lo prenderebbe come gregario, ma stravolge (il gufo diventerebbe un PNG che sale di livello).
 
 #### Talenti
-Seguire Tracce, Tiro Rapido, Resistenza Fisica, Tiro Multiplo (bonus di classe); Critico Migliorato (arco lungo), Abilità Focalizzata (Conoscenze natura), Iniziativa Migliorata `[INFERRED — needs DM confirmation]`.
+Seguire Tracce, Tiro Rapido, Resistenza Fisica, Tiro Multiplo (bonus di classe); Critico Migliorato (arco lungo), Abilità Focalizzata (Conoscenze natura), Iniziativa Migliorata.
 
 #### Abilità chiave
 Conoscenze (Natura) +13, Sopravvivenza +14, Cavalcare (con Inathiel) +15, Osservare +14, Ascoltare +14, Concentrazione +9, Muoversi Silenziosamente +12, Nascondersi +12.

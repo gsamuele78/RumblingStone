@@ -25,7 +25,7 @@ fonte: PCGen export della scheda; Cos e Car con gli oggetti che la stessa fonte 
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-> [INFERRED — needs DM confirmation] Cos e Car corrette a mano dopo la trascrizione: la Cos 21 della fonte non conta l'amuleto della salute +2 che la stessa fonte elenca (Cos 23), e la Car 20 viene da un mantello del Carisma +6 aggiunto qui per tenere la CD ~24 della presenza terrificante che la scheda scriveva.
+> Cos e Car corrette a mano dopo la trascrizione: la Cos 21 della fonte non conta l'amuleto della salute +2 che la stessa fonte elenca (Cos 23), e la Car 20 viene da un mantello del Carisma +6 aggiunto qui per tenere la CD ~24 della presenza terrificante che la scheda scriveva.
 
 Huge dragon (fire), 19 HD, LE.
 

@@ -156,7 +156,7 @@ Lo accompagna sempre come traduttore/voce. È un monaco umano (Adept 1, PF 6, AC
 > ⚠ Prerequisito: un Psion 5 manifesta poteri fino al 3° livello; *Psionic Dimension Door* è del 4°, e lo manifesta un Psion 7. Tenuto, perché è nella scheda. PF1e: Psichico (*Occult Adventures*, OGL) — si avvicina: incantatore mentale spontaneo con *porta dimensionale* al 4° livello, ma senza punti potere.
 
 #### Talenti
-Improved Initiative, Combat Casting, Psicocrafter, Inner Strength, Iron Will. *Psicocrafter* non ha un equivalente riconoscibile fra i talenti psionici SRD [INFERRED — needs DM confirmation]; 13 DV e i due talenti bonus del Psion danno sette talenti: il sesto è Riflessi Fulminei, il settimo resta da scegliere [INFERRED — needs DM confirmation]. Car 17 viene da un *mantello del carisma +2*, nascosto sotto la veste monastica [INFERRED — needs DM confirmation]: tiene le CD della versione di prima.
+Improved Initiative, Combat Casting, Combat Manifestation, Inner Strength, Iron Will, Lightning Reflexes, Psionic Endowment: 13 DV e i due talenti bonus del Psion danno sette talenti. *Combat Manifestation* prende il posto di «Psicocrafter», che fra i talenti psionici SRD non c'è, e gli tiene la canalizzazione sul piedistallo quando lo minacciano; *Psionic Endowment* è il settimo, e dà +1 alla CD di *Charm Monster* e *Suggestion* quando spende la concentrazione psionica (DM 2026-10-18). Car 17 viene da un *mantello del carisma +2*, nascosto sotto la veste monastica: tiene le CD della versione di prima.
 
 #### Abilità chiave
 Bluff +12, Camuffare +14 (+22 con *Disguise Self* psionico attivo), Conoscenze (arcane, planari, dungeoneering) +18, Diplomazia +12, Ascoltare e Osservare +14, Psicocrafting +18.

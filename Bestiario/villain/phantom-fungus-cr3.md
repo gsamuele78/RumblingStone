@@ -13,7 +13,7 @@ ts: Temp +6, Rifl +0, Vol +0
 attributi: For 14 Des 10 Cos 16 Int 2 Sag 11 Car 9
 velocita: 6 m
 iniziativa: +0
-sensi: visione crepuscolare, scurovisione 18 m (non SRD)
+sensi: visione crepuscolare
 attacchi:
   - Mischia morso +3 (1d6+3)
 voci:
@@ -25,11 +25,11 @@ fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/Phantom Fungus 
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD**: l'invisibilità è *invisibilità superiore* costante (LI 12°), che non cade quando attacca e **non** si dissolve con *epurare invisibilità*; dopo la morte resta invisibile per un minuto. Il morso è +3 (1d6+3): BAB +1, For +2, e una volta e mezza la For perché è il suo unico attacco naturale. Mancavano il talento **Allerta** e le abilità. La **scurovisione** non è nel SRD (i tratti vegetali danno la visione crepuscolare): si tiene perché la scheda la portava e in una caverna è quello che lo rende un predatore, ma va confermata.
+> **Conti rifatti sul SRD**: l'invisibilità è *invisibilità superiore* costante (LI 12°), che non cade quando attacca e **non** si dissolve con *epurare invisibilità*; dopo la morte resta invisibile per un minuto. Il morso è +3 (1d6+3): BAB +1, For +2, e una volta e mezza la For perché è il suo unico attacco naturale. Mancavano il talento **Allerta** e le abilità. La **scurovisione** della scheda è tolta (DM 2026-10-18): non è nel SRD, e i tratti vegetali danno la visione crepuscolare.
 
 Medium plant, 2d8+6. Fungo ambulante del SRD, sempre neutrale.
 
-**Iniziativa** +0 · **Sensi** visione crepuscolare, scurovisione 18 m `[INFERRED — non SRD]`; Ascoltare +4, Osservare +4
+**Iniziativa** +0 · **Sensi** visione crepuscolare; Ascoltare +4, Osservare +4
 
 **Difesa** **CA 14** (+4 naturale), contatto 10, colto alla sprovvista 14 · **pf 15** (2 DV) · TS Temp +6, Rifl +0, Vol +0 · **invisibilità superiore** costante: chi lo attacca ha il 50% di mancarlo e non sa in che quadretto sia · tratti vegetali: immune a effetti di influenza mentale, veleno, sonno, paralisi, stordimento e metamorfosi; niente colpi critici
 
@@ -53,7 +53,7 @@ Medium plant, 2d8+6. Fungo ambulante del SRD, sempre neutrale.
 
 Notes: predatore invisibile delle caverne fungine (SRD Phantom Fungus). Ottimo per imboscate nella scala di ossa.
 
-Boost log: correzione sul SRD — GS 3 → 3 — invisibilità superiore costante, morso con la For e mezza, Allerta e abilità che mancavano; la scurovisione della scheda resta, marcata.
+Boost log: correzione sul SRD — GS 3 → 3 — invisibilità superiore costante, morso con la For e mezza, Allerta e abilità che mancavano; la scurovisione della scheda tolta dal DM il 2026-10-18.
 
 <!-- storico -->
 era: correzione di `scripts/conformita_statblocchi.py`, iniziativa da −1 a +0 (Des 10, nessun talento d'iniziativa; il SRD scrive *Initiative +0*).

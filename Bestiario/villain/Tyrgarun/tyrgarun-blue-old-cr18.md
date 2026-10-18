@@ -54,7 +54,7 @@ gioca come **pericolo ambientale con contromosse quantificate** (vedi STRUTTURA
 **Breath weapon (soffio)**: **linea 30 m, 20d8 elettricità**, Ref **CD 32** dimezza (10 + ½ DV + Cos), 1/1d4 round — *usato dall'alto sui bastioni come hazard di bombardamento*
 
 **Statistiche** **Abilities**: For 33, Des 10, Cos 25, Int 18, Sag 19, Car 18 · **BAB/Grapple**: +30/+49
-**Feats**: Flyby Attack, Hover, Wingover, Multiattack, Power Attack, Cleave, Improved Initiative, Snatch, Wingstorm `[Private source — Draconomicon]`, Riflessi Fulminei, Volontà di Ferro — undici, quanti ne dànno 30 DV; gli ultimi due `[INFERRED — needs DM confirmation]` spiegano il Ref +19 della scheda e portano Will a +23
+**Feats**: Flyby Attack, Hover, Wingover, Multiattack, Power Attack, Cleave, Improved Initiative, Snatch, Wingstorm `[Private source — Draconomicon]`, Riflessi Fulminei, Volontà di Ferro — undici, quanti ne dànno 30 DV; gli ultimi due spiegano il Ref +19 della scheda e portano Will a +23
 **Skills**: Spot +37, Listen +37, Nascondersi -4 (Huge), Raggirare +25, Concentrazione +30
 **Incantesimi** da stregone di 11° livello (Car +4), al giorno 6/7/7/7/6/3, CD 14 + livello `[INFERRED — needs DM confirmation]`, la scheda non li elencava; conosciuti — 0: *individuazione del magico*, *mano magica*, *prestidigitazione*, *lettura del magico*, *suono fantasma*, *messaggio*, *resistenza*, *luce*, *frastornare*; 1°: *scudo*, *dardo incantato*, *colpo accurato*, *allarme*, *ritirata rapida*; 2°: *vedere invisibilità*, *immagine speculare*, *raffica di vento*, *resistere all'energia*, *invisibilità*; 3°: *dissolvi magie*, *velocità*, *fulmine*, *protezione dall'energia*; 4°: *invisibilità superiore*, *pelle di pietra*, *porta dimensionale*; 5°: *muro di forza*, *telecinesi*
 

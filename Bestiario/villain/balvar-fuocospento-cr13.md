@@ -23,7 +23,7 @@ voci:
 
 > [INFERRED — needs DM confirmation] **Abilità**: il DM ha approvato i gradi di Percepire Intenzioni che la Scena 7 usa. Sono 80 punti: chierico 9 a (2 + INT 3) per livello, quadruplo al 1°, più il Runecaster 4 allo stesso ritmo (il ritmo del Runecaster è del FRCS, `[Private source]`). Percepire Intenzioni non è di classe per un chierico d'Inganno: 8 gradi fuori classe (16 punti) + SAG 5 = **+13**. Gli altri 64 punti: 16 gradi ciascuno in Concentrazione (+COS 3), Sapienza Magica, Conoscenze (storia) e Artigianato (incidere rune), tutti a +INT 3. Ascoltare e Osservare senza gradi: la sola SAG.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti, senza far scendere nessun numero**:
+> **Conti rifatti, senza far scendere nessun numero**:
 > - **pf 101** (13d8+39): il primo dado al massimo e gli altri alla media, come per gli altri PNG con le classi. I 96 di prima stavano nella fascia, ma sotto la media. Il dado vita del Runecaster è un d8 (FRCS).
 > - **CA di contatto 14**: l'anello di protezione è una deviazione, e la deviazione vale anche al contatto (10 + DES 2 + anello 2). La CA piena resta 24 con l'armatura completa di mithral +2.
 > - **BAB +9**: chierico 9 (+6) e Runecaster 4 (+3, la progressione media del FRCS). Il martello sale a +11/+6 e la Lotta a +10.

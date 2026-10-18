@@ -13,15 +13,15 @@ Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md
 - BAB/Grapple: +10 / +10.  
 - Attacco: tentacolo +13 (1d4+1 più afferrare; Arma Accurata).  
 - Attacco completo: 4 tentacoli +13 (1d4+1 + afferrare).  
-- TS: Temp +12, Rif +12, Vol +17 (+2 vs psionici); basi illithid +2/+2/+6 e Warlock +2/+2/+5, *mantello della resistenza +3* e Riflessi Fulminei `[INFERRED — needs DM confirmation]`.  
-- Talenti: Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (dell'illithid), Riflessi Fulminei, Abilità Focalizzata (*slow*) `[INFERRED — needs DM confirmation: gli ultimi due tengono Riflessi e CD di *slow* della versione di prima]`.  
+- TS: Temp +12, Rif +12, Vol +17 (+2 vs psionici); basi illithid +2/+2/+6 e Warlock +2/+2/+5, *mantello della resistenza +3* e Riflessi Fulminei.  
+- Talenti: Incantare in Combattimento, Iniziativa Migliorata, Arma Accurata (dell'illithid), Riflessi Fulminei, Abilità Focalizzata (*slow*) (gli ultimi due tengono Riflessi e CD di *slow* della versione di prima).  
 - RI: 25 (razziale dell'illithid; non si somma ad altre). [file:46]
 
 > ⚠ Prerequisito: nessuno; il Warlock non ne ha. Classe non SRD. PF1e: Cinetista (*Occult Adventures*, OGL) — si avvicina: una raffica a volontà senza slot come la *deflagrazione mistica*; stravolge però la fonte del potere (un elemento invece di un patto), e per questo la scheda tiene il Warlock.
 
 ### Caratteristiche
 
-For 10, Des 16, Cos 20, Int 20, Sag 16, Car 24 (20 + 4 intrinseco da un *tomo dell'autorità e dell'influenza +4*, letto nella biblioteca della Torre `[INFERRED — needs DM confirmation]`).  
+For 10, Des 16, Cos 20, Int 20, Sag 16, Car 24 (20 + 4 intrinseco da un *tomo dell'autorità e dell'influenza +4*, letto nella biblioteca della Torre; DM 2026-10-18).  
 
 ### Qualità speciali
 

@@ -20,11 +20,11 @@ voci:
   - Incantesimi da chierico 11 (CD 14 + livello), intimorire non morti 5/giorno
 ```
 
-> [INFERRED — needs DM confirmation] **Versione scelta**: quella dell'incontro epico della scala di ossa (For 16, Cos 16, Int 12, Car 14, 84 pf, CA 24, Iniziativa Migliorata e Incantesimi Rapidi), più forte dell'export PCGen (For 14, Cos 14, 75 pf, CA 23, nessun talento d'iniziativa) e scritta per questo scontro. **pf 86**: primo dado al massimo e gli altri alla media (8 + 10 × 4,5 + 33).
+> **Versione scelta**: quella dell'incontro epico della scala di ossa (For 16, Cos 16, Int 12, Car 14, 84 pf, CA 24, Iniziativa Migliorata e Incantesimi Rapidi), più forte dell'export PCGen (For 14, Cos 14, 75 pf, CA 23, nessun talento d'iniziativa) e scritta per questo scontro. **pf 86**: primo dado al massimo e gli altri alla media (8 + 10 × 4,5 + 33).
 
-> [INFERRED — needs DM confirmation] **Mantello della resistenza +2** invece del +1 del testo: col +1 i TS tornano Rifl +4 e Vol +12, sotto i +5 e +13 che il testo scrive; col +2 tornano tutti e due, e la Tempra sale a +12.
+> **Mantello della resistenza +2** invece del +1 del testo: col +1 i TS tornano Rifl +4 e Vol +12, sotto i +5 e +13 che il testo scrive; col +2 tornano tutti e due, e la Tempra sale a +12.
 
-> [INFERRED — needs DM confirmation] **Talenti**: il testo ne elenca sei, ma un chierico di 11° livello ne ha quattro (1°, 3°, 6°, 9°). Restano i quattro che contano al tavolo (sei a 11 DV non hanno una strada legale: servirebbero altri sei livelli); *Incantesimi Inarrestabili Superiore* e *Scrivere Pergamene* passano allo storico. Gli slot del testo erano sotto il conto SRD al 1°-4°: qui sono pieni, e i quattro incantesimi aggiunti sono marcati.
+> **Talenti**: il testo ne elenca sei, ma un chierico di 11° livello ne ha quattro (1°, 3°, 6°, 9°). Restano i quattro che contano al tavolo (sei a 11 DV non hanno una strada legale: servirebbero altri sei livelli); *Incantesimi Inarrestabili Superiore* e *Scrivere Pergamene* passano allo storico. Gli slot del testo erano sotto il conto SRD al 1°-4°: qui sono pieni, e i quattro incantesimi aggiunti sono marcati.
 
 Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 

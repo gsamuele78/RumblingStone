@@ -42,7 +42,7 @@ Medium humanoid (goblinoid), hobgoblin Chierico 12, Legale Malvagio. Diplomatico
 - 1° (6+1): *benedizione*, *cura ferite leggere*, *santuario*, *scudo della fede*, *nascondersi ai non morti*, *favore divino*; dominio: *protezione dal bene*
 - 0 (6): *individuazione del magico*, *guida*, *resistenza*, *lettura del magico*, *infliggi ferite minori*, *luce*
 
-**Statistiche** For 13 Des 10 Cos 12 Int 8 Sag 18 Car 14 · BAB +9; Lotta +10 · **Talenti** Incantare in Combattimento, Robustezza [INFERRED — needs DM confirmation: tiene i pf nella fascia 70-80 della vecchia proposta d'arco], più tre talenti che la scheda non sceglie · **Abilità** [DA SCRIVERE — non sono scritte da nessuna parte; Diplomazia e Intimidire sono quelle del ruolo] · **Linguaggi** Comune, Goblin · **Equipaggiamento** armatura completa +2, mazza pesante, simbolo sacro di Tiamat, *stivali della falcata e del balzo* [INFERRED — needs DM confirmation]; il resto del budget di un PNG eroico di 12° livello (fra le righe 11 e 13 della tabella PF1e: 16.350-27.000 mo) [DA SCRIVERE]
+**Statistiche** For 13 Des 10 Cos 12 Int 8 Sag 18 Car 14 · BAB +9; Lotta +10 · **Talenti** Incantare in Combattimento, Robustezza (tiene i pf nella fascia 70-80 della vecchia proposta d'arco), più tre talenti che la scheda non sceglie · **Abilità** [DA SCRIVERE — non sono scritte da nessuna parte; Diplomazia e Intimidire sono quelle del ruolo] · **Linguaggi** Comune, Goblin · **Equipaggiamento** armatura completa +2, mazza pesante, simbolo sacro di Tiamat, *stivali della falcata e del balzo*; il resto del budget di un PNG eroico di 12° livello (fra le righe 11 e 13 della tabella PF1e: 16.350-27.000 mo) [DA SCRIVERE]
 
 **Capacità speciali**
 - **Marchio di Tiamat** (Sop): +2 ai TS e alle prove contro i non morti.

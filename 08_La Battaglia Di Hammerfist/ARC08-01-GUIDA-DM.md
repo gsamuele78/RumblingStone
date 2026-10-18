@@ -189,8 +189,8 @@ SIMBOLI TATTICI:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
 > Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
 > dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher
-> [INFERRED — needs DM confirmation]. 25 DV danno 9 talenti: i tre che
-> mancavano sono [INFERRED]. *Oscurità* è una capacità magica dell'età, non
+> 25 DV danno 9 talenti: i tre che
+> mancavano sono Volteggiare, Ghermire e Riflessi Fulminei. *Oscurità* è una capacità magica dell'età, non
 > un incantesimo conosciuto; *Volare* esce dagli incantesimi (un drago vola
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
 > CORREZIONE del boss nell'arco 07 [INFERRED].
@@ -227,9 +227,9 @@ SIMBOLI TATTICI:
 **Qualità Speciali:** Aura del male, Individuazione del bene, Uso dei veleni, Benedizione oscura (il Car ai TS, già contato).
 **Incantesimi da Guardia Nera (LI 4°; 2 di 1° al giorno, CD 12):** *Incutere Paura*, *Infliggi Ferite Leggere*.
 
-**Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) [INFERRED — needs DM confirmation: la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera].
+**Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) (la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera).
 
-**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* [INFERRED: è la fonte di Cos 18 e dei 95 pf].
+**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* (è la fonte di Cos 18 e dei 95 pf).
 
 > **Verifica 3.5 (versione più forte)**: Guerriero 6/Guardia Nera 4 rende
 > legali l'Aura di Disperazione della prima stesura (arriva al 3° livello di
@@ -282,7 +282,7 @@ SIMBOLI TATTICI:
 > Completa +2* vale +10 (era +9), Tempra non può stare sotto +18 (Gue 10 +7,
 > classe di prestigio almeno +1, Cos +8, mantello +2), il danno a una mano
 > con Arma Specializzata è +9, la CD della Presenza è 10 + ½ livello + Car.
-> 13 livelli danno 11 talenti: i cinque aggiunti sono [INFERRED], e
+> 13 livelli danno 11 talenti: i cinque aggiunti sono gli ultimi della lista, e
 > Robustezza spiega i 178 pf (13d10+104 = 175, +3).
 
 <div style="page-break-before:always"></div>
@@ -356,12 +356,12 @@ SIMBOLI TATTICI:
 *   **Chiamata alle Armi (Str):** 3/giorno, come azione standard, tutti i nani entro 60m ottengono un bonus morale di +5 ai tiri per colpire e ai TS contro paura per 5 round.
 
 **Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato [gli ultimi sette INFERRED: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti].
-**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi [INFERRED]), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* [INFERRED: è la fonte della deflessione].
+**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* (è la fonte della deflessione).
 
 **Tattiche:** *Prima del combattimento*: resta al centro della linea, dove la Presenza Regale (18 m) copre più nani possibile; se vede arrivare l'assalto, spende la prima Chiamata alle Armi sul primo urto. *Durante il combattimento*: round 1 Chiamata alle Armi (+5 ai nani entro 60 m); poi attacco completo sul nemico più grosso a portata, con Attacco Poderoso contro i giganti e senza contro i bersagli corazzati; usa *Comando* della Corona («In ginocchio!») su chi minaccia un ferito, e tiene la seconda e la terza Chiamata per quando una breccia cede o il drago passa basso. *Morale*: non lascia il campo finché un nano è in piedi; sotto i 50 pf lo trascinano via le Guardie Reali o Borin, ed è l'unico modo in cui ripiega.
 
 > **Verifica 3.5 (versione più forte)**: «Nobile» si legge come la classe PNG
-> **Aristocratico** dell'SRD [INFERRED]. Conti ricontati sugli oggetti della
+> **Aristocratico** dell'SRD. Conti ricontati sugli oggetti della
 > scheda: *Armatura Completa +4* vale +12 e *Scudo Pesante +3* vale +5 (erano
 > +10 e +3), quindi CA 30. +26 e 1d8+12 chiedono Arma Focalizzata e Arma
 > Specializzata Superiori, che un guerriero di 15° ha. TS: Tempra +17 con
@@ -400,7 +400,7 @@ SIMBOLI TATTICI:
         *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
         *   0°: *Cura Ferite Minori* (x3), *Luce*, *Purificare Cibo e Bevande*, *Resistenza*
 
-**Talenti:** Scacciare Extra [INFERRED; gli altri talenti non sono scritti].
+**Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
 **Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2* [questi due INFERRED].
 
 **Capacità Speciali:**
@@ -421,7 +421,7 @@ SIMBOLI TATTICI:
 > Conti ricontati: *Armatura Completa +3* vale +11 e *Scudo Pesante +2* +4
 > (erano +8 e +2), quindi CA 29; il dominio della Guerra dà Arma Focalizzata
 > nel martello da guerra, l'arma di Moradin; +18 e 1d8+6 chiedono For 18,
-> dai guanti [INFERRED]. Scacciare: 3 + Car +4 + 4 di Scacciare Extra = 11
+> dai guanti. Scacciare: 3 + Car +4 + 4 di Scacciare Extra = 11
 > al giorno, prova +6. Incantesimi: con Sag 22 gli slot sono quelli scritti,
 > e ogni livello ha uno slot di dominio (D).
 
@@ -462,7 +462,7 @@ SIMBOLI TATTICI:
 > fanno GS 12, non 11. BAB +9 (Chierico 8 +6, Bardo 4 +3). Caratteristiche
 > ricavate dai numeri della scheda: Cos 18 dai 98 pf, Sag 18 dalle CD da
 > chierico, Car 18 dalle CD da bardo [INFERRED]; TS con un *Mantello della
-> Resistenza +2* [INFERRED]. Un bardo di 4° ha 4 usi di musica e Ispirare
+> Resistenza +2*. Un bardo di 4° ha 4 usi di musica e Ispirare
 > Coraggio +1: gli 8 usi e il +2 della scheda restano con due talenti non SRD,
 > Musica Extra [Private source — Complete Adventurer] e *Song of the Heart*
 > [Private source — talento non SRD, libro da verificare; INFERRED].
@@ -495,7 +495,7 @@ SIMBOLI TATTICI:
 *   **Protezione Celestiale:** Aura di protezione dal male 3m
 *   **Volo Silenzioso:** Non può essere udito in volo (Muoversi Silenziosamente +20)
 
-**Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro [INFERRED].
+**Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro.
 
 **Tattiche:** Cacciatore aereo d'élite, lavora in sincronia col suo cavaliere. In duello usa Attacco in Volo per colpire e allontanarsi; contro Fauci di Palude attiva Punire il Male al primo attacco. *Morale*: è l'alfa del branco e non abbandona un gufo né un cavaliere in volo; sotto i 30 pf sale oltre la tempesta di Tempestas e torna solo quando Fauci è a terra.
 
@@ -506,7 +506,7 @@ SIMBOLI TATTICI:
 > scende (PF1e darebbe GS + 5 = 13). La Volontà vale +8 (base +3, Sag +3,
 > Volontà di Ferro): il +9 non si raggiunge, ma l'Aura Celestiale dà +2
 > contro i malvagi, cioè contro tutto l'esercito della Mano Rossa. Volo 24 m
-> (SRD: 21 m) resta, da alfa del branco [INFERRED]. Talenti (4 a 10 DV)
+> (SRD: 21 m) resta, da alfa del branco. Talenti (4 a 10 DV)
 > [INFERRED].
 > ⚠ Prerequisito: a 10 DV un gufo gigante cade nella fascia Enorme
 > dell'avanzamento SRD (9-12 DV). Resta Grande perché è una cavalcatura. PF1e:
@@ -541,11 +541,11 @@ SIMBOLI TATTICI:
 **Incantesimi da Ranger (CL 4°; 2/1 per giorno):**
 *   2° (CD 14): *Pelle Coriacea*
 *   1° (CD 13): *Passo Veloce*, *Resistenza all'Energia*
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare [INFERRED: la CA conta il bonus di schivare].
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro Rapido, Tiro Multiplo, Schivare (la CA conta il bonus di schivare).
 **Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
 
 > **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m [INFERRED].
-> ⚠ Prerequisito: Tiro in Corsa chiede Schivare e Mobilità, e un ranger di 8° ha tre talenti a scelta, non quattro. Resta, come la scheda lo dà. PF1e: nessun archetipo serve, è un talento in più.
+> Tiro in Corsa è tolto (DM 2026-10-18): chiedeva Mobilità, e un ranger di 8° ha tre talenti a scelta, non quattro. Ora i tre sono Tiro Ravvicinato, Tiro Preciso e Schivare; Resistenza Fisica, Tiro Rapido e Tiro Multiplo vengono dalla classe.
 
 <div style="page-break-before:always"></div>
 
@@ -558,8 +558,8 @@ SIMBOLI TATTICI:
 **CA:** 16 (forma umana), 22 (forma orso)
 **PF:** 108 (14d8+45); 150 in forma d'orso con *Resistenza dell'Orso*
 **TS:** Tempra +14, Riflessi +7, Volontà +16
-**Caratteristiche:** For 10, Des 16, Cos 16, Int 10, Sag 24, Car 12 (Sag con *Periapto della Saggezza +4* [INFERRED]); Orso Crudele: For 31, Des 13, Cos 23 con *Resistenza dell'Orso*
-**Talenti:** Incantesimi Naturali, Robustezza, Incantesimi Estesi, Allerta, Combattere in Sella, Tempra Possente [INFERRED]
+**Caratteristiche:** For 10, Des 16, Cos 16, Int 10, Sag 24, Car 12 (Sag con *Periapto della Saggezza +4*); Orso Crudele: For 31, Des 13, Cos 23 con *Resistenza dell'Orso*
+**Talenti:** Incantesimi Naturali, Robustezza, Incantesimi Estesi, Allerta, Combattere in Sella, Tempra Possente
 **Velocità:** 9m
 **Attacco Base:** +10; **Lotta:** +10 (umano) / +24 (orso)
 **Attacchi (Orso Crudele):** 2 artigli +19 (2d4+10) e morso +14 (2d8+5); Afferrare Migliorato
@@ -656,7 +656,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco:** *Martello da Guerra degli Avi +2* +21 in mischia (1d8+9/x3)
 **Attacco Completo:** *Martello da Guerra degli Avi +2* +21/+16/+11 in mischia (1d8+9/x3)
 **Abilità Speciali:** Postura Difensiva (+4 For/Cos, +2 TS Vol, 3/giorno), Colpo Devastante (+4d6 danni, 3/giorno), Presenza Comandante (+2 morale alleati entro 9m).
-**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento [INFERRED: gli ultimi tre].
+**Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento (gli ultimi tre).
 **Equipaggiamento:** *Armatura Completa Nanica +2*, *Scudo Pesante Runico +1*, *Martello da Guerra degli Avi +2* (Ritornante), 3 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche di Combattimento:**
@@ -697,7 +697,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco Completo:** *Arco Lungo Composito +3* +19/+14/+9 a distanza (1d8+6/x3), o *Asce Gemelle +2* +16/+11 (1d6+5) con una, +14/+9 (1d6+5) e +14 (1d6+3) con due
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 [INFERRED: Cos 18 per i pf]
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare [INFERRED: la CA conta il bonus di schivare].
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare (la CA conta il bonus di schivare).
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
 
 **Tattiche di Combattimento:**
@@ -709,8 +709,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 > **Verifica 3.5 (versione più forte)**: l'armatura di cuoio borchiato +2 vale
 > +5 (CA 21). 12d8+36 non arriva a 98: Cos 18 dà 102. Bonus d'attacco con
 > l'arco +11 BAB, +4 Des, +3 arco, +1 Arma Focalizzata = +19.
-> ⚠ Prerequisito: Tiro in Corsa chiede anche Mobilità, che non c'è, e i talenti
-> sono uno in più di quelli di un 12° livello. Il terzo nemico prescelto e i
+> Tiro in Corsa è tolto (DM 2026-10-18): chiedeva Mobilità, che non c'è, e i
+> talenti erano uno in più di quelli di un 12° livello. Il terzo nemico prescelto e i
 > bonus +6/+4/+2 vengono dall'Esploratrice dei Picchi, classe non dell'SRD
 > [Private source — classe della campagna]. Restano come la scheda li dà.
 > PF1e: Viandante dell'Orizzonte (*horizon walker*), non si applica.
@@ -732,7 +732,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **CA:** 22 (+1 Des, +8 armatura, +3 scudo), contatto 11, colto alla sprovvista 21
 **PF:** 114 (12d8+60)
 **TS:** Tempra +13, Riflessi +7, Volontà +16
-**Caratteristiche:** For 16, Des 12, Cos 20, Int 12, Sag 22, Car 16 [INFERRED: For e Cos, Cos con *Amuleto della Salute +2*]
+**Caratteristiche:** For 16, Des 12, Cos 20, Int 12, Sag 22, Car 16 (For e Cos, Cos con *Amuleto della Salute +2*)
 **Velocità:** 6m
 **Attacco Base:** +8; 
 **Lotta:** +11
@@ -746,7 +746,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   2° (CD 18): *Cura Ferite Moderate* (x3), *Forza del Toro* (x2), *Resistenza dell'Orso*, *Silenzio*, *Arma Spirituale* (D)
 *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
-**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra [INFERRED]; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
+**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
 **Equipaggiamento:** *Armatura a Bande +2*, *Scudo Pesante Runico +1* (RI 15), *Martello da Guerra Sacro +2*, *Simbolo Sacro di Mithral*.
 
 **Tattiche di Combattimento:**
@@ -790,10 +790,10 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Incantesimi da Bardo Conosciuti (CL 8°; 3/4/4/2 per giorno, con Car 18):**
 *   3° (CD 17): *Velocità*, *Suggestione*, *Dissolvi Magie*
 *   2° (CD 16): *Invisibilità*, *Immagine Speculare*, *Silenzio*, *Frantumare*
-*   1° (CD 15): *Charme su Persone*, *Caduta Morbida*, *Immagine Silenziosa*, *Cura Ferite Leggere*
+*   1° (CD 15): *Charme su Persone*, *Identificare*, *Immagine Silenziosa*, *Cura Ferite Leggere*
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
 **Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 [INFERRED: Cos 18 per i pf]
-**Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo [INFERRED: Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già].
+**Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
 
 **Tattiche di Combattimento:**

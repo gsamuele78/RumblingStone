@@ -39,7 +39,7 @@ Huge dragon (air), 22 HD, LE. Drago verde adulto SRD avanzato; incantesimi da st
 
 **Statistiche** For 27, Des 10, Cos 23, Int 16, Sag 17, Car 16 · BAB +22; Lotta +38 · **Talenti** Attacco in Volata, Fluttuare, Multiattacco, Multiattacco Migliorato `[Private source — Draconomicon]`, Armatura Naturale Migliorata, Iniziativa Migliorata, Attacco Poderoso, Virata · **Abilità** Ascoltare +28, Cercare +28, Concentrazione +31, Conoscenze (arcane) +28, Diplomazia +32, Intimidire +30, Osservare +28, Percepire Intenzioni +28, Raggirare +28 · **Equipaggiamento** amuleto della salute +2, bracciali dell'armatura +3, pozione di *cura ferite gravi* · **Linguaggi** draconico, comune, goblin, sottocomune
 
-> [INFERRED — needs DM confirmation] Le tre scelte nuove dell'adulto non vengono da una fonte: i talenti Iniziativa Migliorata, Attacco Poderoso e Virata; gli incantesimi conosciuti oltre a *charme su persone* e ai trucchetti dell'export; i tre linguaggi oltre al draconico (il comune per i PG, il goblin per l'Orda, il sottocomune per Zalkatar). *Armatura magica* dell'export esce: con i bracciali +3 aggiungeva un punto solo.
+> Le tre scelte nuove dell'adulto non vengono da una fonte: i talenti Iniziativa Migliorata, Attacco Poderoso e Virata; gli incantesimi conosciuti oltre a *charme su persone* e ai trucchetti dell'export; i tre linguaggi oltre al draconico (il comune per i PG, il goblin per l'Orda, il sottocomune per Zalkatar). *Armatura magica* dell'export esce: con i bracciali +3 aggiungeva un punto solo.
 
 **Capacità speciali**
 - **Presenza terrificante** (Str): quando attacca, carica o sorvola, chi è entro 54 m e ha meno di 22 DV fa un TS Volontà CD 24 o resta scosso per 4d6 round (in preda al panico sotto i 5 DV). Chi supera il TS è immune per 24 ore.

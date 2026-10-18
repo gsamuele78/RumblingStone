@@ -47,7 +47,7 @@ Large giant (ogre magi), LE.
 
 **Statistiche** For 21, Des 10, Cos 23, Int 14, Sag 14, Car 24 (20 base + *mantello del carisma +4*) · **BAB/Lotta** +8/**+17** · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Incantesimi in Combattimento, Incantesimo Esteso, Incantesimi Focalizzati (Invocazione), **Incantesimi Focalizzati Superiori (Invocazione)** · **Qualità speciali** tratti dei giganti
 
-**Equipaggiamento** (tabella PNG livello 18): *amuleto di salute +6*, *mantello del carisma +4*, giaco di maglia +3 (Large), *anello di protezione +3*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di *teletrasporto*, spadone Large perfetto [INFERRED — needs DM confirmation: tiene il +13 della scheda, che con BAB +8 e For 21 tornerebbe +12]. Il **registro rilegato in pelle di worg** è ancora addosso a lui, e vale più del resto (vedi dossier).
+**Equipaggiamento** (tabella PNG livello 18): *amuleto di salute +6*, *mantello del carisma +4*, giaco di maglia +3 (Large), *anello di protezione +3*, **bastone del fuoco** (*mani brucianti*, *palla di fuoco*, **muro di fuoco** — 10 cariche), 2 pergamene di *teletrasporto*, spadone Large perfetto (tiene il +13 della scheda, che con BAB +8 e For 21 tornerebbe +12). Il **registro rilegato in pelle di worg** è ancora addosso a lui, e vale più del resto (vedi dossier).
 
 **Capacità speciali**
 

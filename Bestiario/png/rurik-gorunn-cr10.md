@@ -22,7 +22,7 @@ voci:
   - Incantesimi: paladino 8, LI 4, 2/1, CD 12 + livello
 ```
 
-> [INFERRED — needs DM confirmation] **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 dell'export (10 −1 +1).
+> **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 dell'export (10 −1 +1).
 
 > [INFERRED — needs DM confirmation] **I dadi vita.** I pf dell'export sono 80, tirati livello per livello (10+6+5+6+5+6+5+6 da paladino, 5+6 da Martello di Moradin, +2 di Cos a livello): il d10 da paladino è SRD, quello della classe di prestigio è letto dai tiri dell'export, nessuno sopra 10. Da qui `pf-dado` 10d10+20.
 

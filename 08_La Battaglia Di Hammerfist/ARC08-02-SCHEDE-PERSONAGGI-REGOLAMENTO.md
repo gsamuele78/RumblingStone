@@ -468,8 +468,8 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Incantesimi da Ranger (CL 5°):** *Pelle Coriacea*, *Resistenza all'Energia*, *Passo Veloce*.
 *   **Corno del Valhalla di Bronzo:** 1/settimana, evoca 2d4 guerrieri barbari di 4° livello che combattono per lui per 1 ora.
 
-**Talenti:** Tiro Ravvicinato, Tiro Preciso, Arma Focalizzata (arco lungo composito), Robustezza; da ranger: Seguire Tracce, Resistenza Fisica, Tiro Rapido, Tiro Multiplo [INFERRED].
-**Equipaggiamento:** *Arco Lungo Composito Potente (+2) +2*, *Bracciali dell'Arciere Superiori* [INFERRED], *Corno del Valhalla di Bronzo*, 3 *Frecce della Morte dei Draghi*.
+**Talenti:** Tiro Ravvicinato, Tiro Preciso, Arma Focalizzata (arco lungo composito), Robustezza; da ranger: Seguire Tracce, Resistenza Fisica, Tiro Rapido, Tiro Multiplo.
+**Equipaggiamento:** *Arco Lungo Composito Potente (+2) +2*, *Bracciali dell'Arciere Superiori*, *Corno del Valhalla di Bronzo*, 3 *Frecce della Morte dei Draghi*.
 *   **Frecce della Morte dei Draghi (3):** Se una di queste frecce colpisce un drago, quest'ultimo deve superare un TS su Tempra CD 20 o morire.
 
 **Tattiche:** Il Capitano Lunapiena è un leader e un cacciatore di mostri. Userà il Corno del Valhalla per creare un diversivo a terra. In aria, si concentra esclusivamente su Fauci di Palude, usando le sue Frecce della Morte dei Draghi per tentare di porre fine rapidamente allo scontro. *Morale*: sotto i 30 pf porta il gufo fuori portata e continua a tirare; non lascia il cielo finché il drago vola.

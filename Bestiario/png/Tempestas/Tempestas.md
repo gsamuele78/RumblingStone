@@ -204,7 +204,7 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 | **Saggezza** | 14 | +2 |
 | **Carisma** | 22 | +6 |
 
-**Punti Ferita:** 91 (14 DV: 12d6 da bardo + 2d6 da Cantore delle tempeste + 42 Cos; Cos 16 con l'*amuleto della salute +2* `[INFERRED — needs DM confirmation]`)
+**Punti Ferita:** 91 (14 DV: 12d6 da bardo + 2d6 da Cantore delle tempeste + 42 Cos; Cos 16 con l'*amuleto della salute +2*)
 **Iniziativa:** +7 (+3 Des, +4 Iniziativa Migliorata)
 **Velocità:** 9 m
 **Sensi:** visione crepuscolare
@@ -245,7 +245,7 @@ Il Cantore delle tempeste avanza gli incantesimi del bardo a ogni livello `[INFE
 - Liv 3: *Confusione, Dissolvi magie, Velocità, Fulmine* (non è della lista del bardo SRD: la scheda lo dà come incantesimo della tempesta del Cantore `[INFERRED — needs DM confirmation]`)
 - Liv 4: *Porta dimensionale, Invisibilità superiore, Urlo, Dominare persone*
 - Liv 5: *Passo nelle ombre, Cura ferite leggere di massa, Suggestione di massa*
-- Fuori dal numero dei conosciuti, portati come oggetti perché la scheda li aveva fra i suoi incantesimi: *bacchetta di suggestione* (CD 13), *pergamene di identificare* e *di lingua ammaliatrice* `[INFERRED — needs DM confirmation]`. I conosciuti in tutto restano 25, come prima.
+- Fuori dal numero dei conosciuti, portati come oggetti perché la scheda li aveva fra i suoi incantesimi: *bacchetta di suggestione* (CD 13), *pergamene di identificare* e *di lingua ammaliatrice* I conosciuti in tutto restano 25, come prima.
 
 #### Arcane Supreme conservate (dall'Arcimago 2)
 - **Maestria del Controincantesimo** — può preparare un controincantesimo come azione veloce 1/giorno.

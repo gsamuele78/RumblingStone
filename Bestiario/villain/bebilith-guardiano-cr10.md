@@ -26,7 +26,7 @@ fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/00_cr10_…_SRD
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-> [INFERRED — needs DM confirmation] **Lotta +33**: il SRD stampa +29 (BAB 12 + For 9 + taglia 8), ma il bebilith ha Lottare Migliorato, che dà +4 alle prove di lotta. Si tiene il numero più alto, che il talento della scheda giustifica.
+> **Lotta +33**: il SRD stampa +29 (BAB 12 + For 9 + taglia 8), ma il bebilith ha Lottare Migliorato, che dà +4 alle prove di lotta. Si tiene il numero più alto, che il talento della scheda giustifica.
 
 Huge outsider (chaotic, evil, extraplanar), 12d8+96.
 
