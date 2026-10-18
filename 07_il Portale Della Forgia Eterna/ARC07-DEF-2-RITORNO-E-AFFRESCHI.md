@@ -525,7 +525,7 @@ beat: il registro completo dei riposi e la progressione dell'affresco stanno in
   - **Il gruppo di oggi** ha avuto al tavolo, nella serata del 25 settembre, una versione più
     forte, e tiene quella: contro Fauci di Palude **+2 al tiro per colpire,
     +3d6 ai danni, critico ×4**, più lo *Scosso* qui sopra; contro gli altri
-    draghi vale il *Dragondoom* (`campaign-artifacts.md`, DM 2026-10-15).
+    draghi vale il *Dragondoom*.<!-- apparato --> (`campaign-artifacts.md`, DM 2026-10-15)<!-- /apparato -->
 - **Sviluppi.** Ogni riposo qui fa avanzare il timer: descrivi il cambiamento
   (una torre nuova, una breccia). Se i PG «sprecano» il countdown → §8.
 
@@ -660,8 +660,7 @@ rinnovabili 1/giorno tornando alla Sala.
 |---|---|---|
 | **Pelle di Pietra** | passiva, 24 h: resistenza al fuoco 10 e al freddo 5 | *Resist Energy* (1.000 mo) |
 | **Cuore Incrollabile** | passiva, 24 h: immunità al caldo e al freddo ambientali non letali, +2 ai TS su Tempra contro gli effetti ambientali | *Endure Elements* (~500 mo) |
-| **Vigore della Forgia** | 3 cariche **per PG**, che tornano dopo ogni sonno di otto ore, come le capacità al giorno dopo un sonno (§7-bis). Per il Piano della Terra lo
-dice anche `DEF-1` (D87); qui la regola vale per ogni sonno, ovunque. Azione standard: cura 3d8+5 a sé (o a un cristallo, `DEF-1` §6); a contatto, 2d8+2 a un alleato | pozioni di cura |
+| **Vigore della Forgia** | 3 cariche **per PG**, che tornano dopo ogni sonno di otto ore, come le capacità al giorno dopo un sonno (§7-bis). Per il Piano della Terra lo dice anche `DEF-1`<!-- apparato --> (D87)<!-- /apparato -->; qui la regola vale per ogni sonno, ovunque. Azione standard: cura 3d8+5 a sé (o a un cristallo, `DEF-1` §6); a contatto, 2d8+2 a un alleato | pozioni di cura |
 | **Forza della Montagna** *(solo nel Piano della Terra)* | ignora la gravità 2×, +2 FOR vs gravità | — (specifica dell'arco) |
 
 > Le carte sono il PDF `BenedizioniDiMoradin.pdf` (§11): tre benedizioni, e ogni PG le ha tutte e tre.
