@@ -145,7 +145,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > qualcosa.
 > **La prima battuta.** Si riapre nel cortile, dopo il giro della fortezza.
 > Durin li raggiunge con la mappa del campo arrotolata sotto il braccio e
-> chiede una cosa sola: *«Quando uscite?»*. Le scelte ancora aperte sono tre:
+> chiede una cosa sola: *«Quando uscite?»*. Prima si chiudono gli acquisti
+> rimasti aperti al banco (*silenzio*, la pietra di Brynja, *identificare*),
+> senza tacche in più (Scena 5). Le scelte ancora aperte sono tre:
 > fermarsi, dormire, o uscire subito; e Hella può vegliare i semi (Scena 5).
 > Con 3 tacche segnate e il volo, quando atterrano alla tenda Grask è
 > **sveglio** (la tacca del volo si segna alla partenza). Se prima Hella veglia
@@ -216,6 +218,12 @@ Cuore della Montagna, Giorno 3 dell'assedio del 1372).
 | 6 — il campo | una prova di gruppo per blocco, cinque blocchi: Muoversi Silenziosamente, poi Nascondersi quando l'invisibilità finisce | 20 · 22; con gli aiuti dimezzati, −2 alle prove (la CD non cambia) |
 | 9 — Vatore | Percepire Intenzioni o Diplomazia · Rapidità di Mano (a seconda dell'approccio) | 18 · 22 |
 | 10 — le mura | Forza / Diplomazia-Guarire / Disattivare (scelta collettiva) | 18 / 18 / 20 |
+
+### Le Benedizioni della Sala, a mille anni fa
+Pelle di Pietra, Cuore Incrollabile e *Vigore della Forgia* durano 24 ore
+vissute dalla preghiera all'Altare, e a −1000 non si rinnovano. Allo scadere
+si spengono, e con loro le cariche di *Vigore* rimaste. Da lì le cure sono
+quelle del re e del banco della fucina (Scena 5).
 
 ### Il giro di Skullcrusher (boss, Scena 11) — 3.5, niente 5e
 - **Soffio acido** in **linea** di 30 m, 14d4, Riflessi CD 28 ½, **ricarica 1/1d4 round**.
@@ -717,11 +725,11 @@ l'orda, e **affrontare Skullcrusher** all'alba.
 - **Prova di gruppo**: Diplomazia/Intimidire **CD 20** (**CD 16** se alla porta
   hanno preso il **Nome**) → **fiducia piena**: le quattro pozioni dell'antica
   fucina (*cura ferite gravi* all'11°, la *Benedizione degli Antenati* di §8 B),
-  le Benedizioni di Moradin +2/+2 (morale, al colpire e ai danni, 12 ore), la mappa accurata del campo **e la dotazione
+  la benedizione dei chierici di Hammerfist, +2/+2 (morale, al colpire e ai danni, 12 ore; non è una delle Benedizioni della Sala, Scena 5), la mappa accurata del campo **e la dotazione
   per entrare nel campo, scelta dal tavolo** (qui sotto). Fallimento: aiuti
   dimezzati, −2 alle prove della Scena 6. **Dimezzati** vuol dire: 2 pozioni
   dell'antica fucina invece di 4, metà della dotazione (2 pozioni
-  d'*invisibilità* o 2 di *volare*, per difetto), Benedizioni a +1/+1, e
+  d'*invisibilità* o 2 di *volare*, per difetto), la benedizione dei chierici di Hammerfist a +1/+1, e
   niente mappa. Il −2 alle prove della Scena 6
   vale **in più**: le due cose insieme sono il prezzo del consiglio fallito.
 - **Come pensate di entrare?**. Il re lo
@@ -872,7 +880,7 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 
 **I quartieri ospiti.** Durin li accompagna, e da qui all'uscita decidono
 loro: ogni cosa costa tacche. Nei quartieri ci sono il banchetto (+1 morale ai TS per 12 h se
-mangiano: il +2 morale delle Benedizioni non vale sui TS, quindi i due non si
+mangiano: il +2 morale della benedizione dei chierici di Hammerfist non vale sui TS, quindi i due non si
 sommano sullo stesso tiro), fabbri che affilano le armi, chierici che benedicono.
 
 > **Read-aloud (LotR lead) — i quartieri ospiti.** *Una sala bassa, scavata e
@@ -1051,6 +1059,17 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   giorno, toglie l'affaticamento e rende 1 pf per livello, la guarigione
   naturale dell'SRD: non i pf pieni. Il momentum spinge alla sosta. ⚠️ La guarigione del passaggio (Scena 1) li ha già rimessi in
   piedi: il riposo serve solo a chi ha speso qualcosa da allora.
+- **Le Benedizioni della Sala, e le cure**. Le
+  Benedizioni della Sala della Forgia (Pelle di Pietra, Cuore Incrollabile,
+  *Vigore della Forgia*) durano **24 ore vissute** dalla preghiera all'Altare,
+  e si rinnovano una volta ogni 24 ore vissute tornando alla Sala. A mille anni
+  fa non si rinnovano: allo scadere si spengono, e con loro le cariche di
+  *Vigore* rimaste. Finché sono attive, le cariche di *Vigore della Forgia*
+  tornano a ogni sonno di otto ore. Il viaggio, dal tramonto al duello, sta di solito dentro le 24 ore; se
+  sconfina in un secondo giorno, da lì il gruppo ha solo le cure del re (le
+  pozioni dell'antica fucina) e quelle comprate al banco della fucina. La
+  benedizione dei chierici di Hammerfist (+2/+2, 12 ore, Scena 4) è un'altra
+  cosa, e dura le sue 12 ore.
 
 ![Mastro Costruttore Zeth, il seme del Ghostlord](../../Immagini/ritratti/zeth-mastro-costruttore.jpg)
 
@@ -1422,7 +1441,10 @@ L'ascia e lo scudo **non sono stati fatti stanotte**: erano già nella forgia,
 pezzi rari che il capo fabbro teneva da parte. Tornano nel 1372 con i PG, che li
 portano addosso, e là sono **reliquie** (§7).
 
-**Le richieste rimaste aperte**, con la risposta del banco:
+**Le richieste rimaste aperte**, con la risposta del banco. Si chiudono
+all'inizio della serata, dentro la tacca della fucina già segnata: chi le
+compra le paga, e non spende una tacca in più.
+L'ora per identificare il Seme-Mercato resta a parte, e costa la sua tacca.
 
 | Richiesta | Risposta |
 |---|---|
@@ -1496,8 +1518,8 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 **Prima di uscire**, se la fiducia al consiglio è stata piena: ognuno beve la
 **Pozione di Invisibilità** del re, se il tavolo ha scelto la dotazione dal
-basso (CL 12, 12 minuti: l'SRD dà 1 minuto per livello), e le **Benedizioni di
-Moradin** sono già addosso (+2 morale al colpire e ai danni, 12 ore).
+basso (CL 12, 12 minuti: l'SRD dà 1 minuto per livello), e la **benedizione
+dei chierici di Hammerfist** è già addosso (+2 morale al colpire e ai danni, 12 ore).
 
 Con la dotazione **dall'alto**, come al tavolo del 25 settembre, nessuno ha
 l'invisibilità del re: chi ne ha una comprata alla cappella (3 minuti) copre
@@ -1548,8 +1570,11 @@ blocchi** da 200 m.
   riesce almeno la metà del gruppo.
 - **Quanto dura l'invisibilità.** Le pozioni del re durano 12 minuti. Un nano in
   armatura, a passo furtivo, fa 3 m a round: 12 minuti coprono circa **360 m**,
-  i primi **due blocchi**. Dal terzo si tira Nascondersi, a meno che qualcuno
-  abbia altra invisibilità da spendere. Una pozione comprata alla cappella dura
+  cioè il primo blocco intero e quasi tutto il secondo. Il secondo, quindi, si
+  tira già a Nascondersi, come vuole la regola del blocco in cui finisce
+, a meno che qualcuno abbia altra invisibilità da
+  spendere. I minuti corrono anche sui blocchi ritentati: un blocco fallito
+  consuma la sua parte d'invisibilità come uno riuscito. Una pozione comprata alla cappella dura
   3 minuti, circa 90 m: mezzo blocco. Non ne toglie uno, e il blocco in cui
   finisce si tira a Nascondersi.
 - **Cinque blocchi riusciti**: si arriva alla tenda. Un blocco fallito non fa
@@ -1767,8 +1792,12 @@ usa due cose diverse, e tutte e due si possono fare:
   il 13° livello (CD 24). Ma sono **scritti**, come tutte le sue rune: chi li vede e
   legge il nanico antico sa che sono legati ai nani.
 - **Balvar non vuole che scattino.** Il boato sveglia Zog'tar e rovina la
-  trattativa della Scena 7. Se Balvar legge i PG con il Fuori-Posto prima che
-  arrivino alla soglia, dice in nanico antico, piano, attraverso la pelle
+  trattativa della Scena 7. Quando i PG arrivano, il Fuori-Posto è già
+  attivo: Balvar ha speso un uso della sera
+  aspettando gli esploratori, come nelle due incursioni che ha già fermato.
+  Funziona come *individuazione del magico* (SRD): un cono di 18 m, con la
+  concentrazione, per 13 minuti, e il telo non lo ferma. Chi entra nei 18 m è
+  letto, invisibile o no, e allora Balvar dice in nanico antico, piano, attraverso la pelle
   della tenda: *«Non la soglia. Il telo a sinistra.»* È il telo del fianco
   sinistro per chi arriva da nord, cioè il fianco est, non quello sopra il
   seggio che porta il glifo. Il consiglio non gli
@@ -1812,6 +1841,11 @@ e il drago arriva sull'assalto.
   una volta e se ne va **sulle colline**, come ogni notte, e torna solo al corno
   successivo. All'alba il duello si fa lo stesso, ma **senza sorpresa**: il drago
   parte già in quota e conosce il loro odore.
+- **Se suonano loro il corno rubato**, la Catena
+  tira il drago verso il corno, dovunque sia. Arriva dopo 70 round, sa chi lo
+  ha chiamato, e va prima su chi tiene il corno, come su chi dice la Catena ad
+  alta voce. Si può usare per portarlo lontano dal campo o dentro una
+  trappola: il drago ci viene, e viene furioso.
 - **Se rubano o rompono il corno**, all'alba nessuno chiama il drago. Arriva
   tardi, a metà mattina e da solo, furioso: le mura hanno un'ora di respiro, e
   il duello comincia con il drago già in collera. Il corno è **scritto**, quindi
@@ -1855,8 +1889,8 @@ La soglia è illuminata, il fondo no.
 |---|---|---|
 | le quattro guardie | hobgoblin in armatura nera laccata, tutti uguali di proposito. Vogliono che Zog'tar non li veda mai esitare, perché l'ultimo che ha esitato è sul seggio, fra i teschi | non parlano: al generale rispondono battendo l'asta per terra, una volta sì, due no |
 
-**Se arrivano visibili.** A piedi l'invisibilità del re finisce al secondo
-blocco, quindi il caso più probabile è che arrivino **nascosti**, non
+**Se arrivano visibili.** A piedi l'invisibilità del re finisce dentro il
+secondo blocco, quindi il caso più probabile è che arrivino **nascosti**, non
 invisibili. Vale tutto quello che segue, con tre differenze:
 
 - la runa della soglia non ha niente da rivelare: chi entra da lì con un nano
@@ -2168,7 +2202,17 @@ motivo per cui la Scena 7 viene prima.
 - **Chi accorre al grido**. Le ronde di orchi più vicine arrivano
   alla tenda in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**: sono
   «i rinforzi» di cui parla la Scena 7. Statistiche in Appendice A.6. Chi
-  resta oltre il loro arrivo combatte l'orda, non più un generale.
+  resta oltre il loro arrivo combatte l'orda, non più un generale. Le ondate
+  non finiscono: dalla prima ronda ne arriva
+  un'altra ogni round, e dal primo squadrone un altro ogni due round, finché i
+  PG restano nel campo. Finché Zog'tar è in piedi non entrano nella tenda,
+  perché il generale non vuole aiuto davanti alle sue guardie: fanno quadrato
+  fuori, attorno al telo, e aspettano chi esce. Chi esce a piedi li trova
+  tutti; contro chi vola tirano le lance, e contro chi è invisibile colpiscono
+  il quadretto da cui viene il rumore, con il 50% di mancare. Quando Zog'tar
+  cade, o scappa, entrano. Smettono solo quando i PG sono fuori dal campo.
+  Lo scontro col generale resta a EL 17; i rinforzi sono sopra il tetto per
+  scelta, come il drago sulla tenda.
 - **La tenda è alta 6 m al palo centrale e 3 m ai lati**. Sotto il
   telo chi vola **non** esce dalla portata dell'ascia: Zog'tar è alto 3 m e
   arriva a 3 m oltre, cioè fino al colmo. Ne esce solo chi sta fuori dal telo.
@@ -2272,8 +2316,8 @@ nella Scena 6):
 **Via A — l'Occhio contro il suo padrone** *(Artemis, Hella, chi ha visto la runa)*.
 L'**Occhio di Ossidiana** è un artefatto **maledetto** e Zog'tar lo sa a metà:
 il prezzo è che la luce divina lo brucia. Chi lo capisce — Sapienza Magica
-**CD 20**, oppure **gratis** se hanno addosso le Benedizioni di Moradin
-(fiducia piena al consiglio, Scena 4) e le vedono reagire — può **mostrargliela invece di colpirlo**:
+**CD 20**, oppure **gratis** se hanno addosso la benedizione dei chierici di
+Hammerfist (fiducia piena al consiglio, Scena 4) e le vedono reagire — può **mostrargliela invece di colpirlo**:
 Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano.
 - **Riesce** → Zog'tar **arretra**, e arretrando esce dalla tenda davanti alle
   sue guardie. Perde la faccia, e con lei il campo: l'orda all'alba combatte a
@@ -2297,7 +2341,8 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   battaglia (peserà su Skullcrusher). *Scelta: potenza ora vs freschezza al drago.*
 - **THORIK — finire o interrogare Zog'tar**: colpo finale spettacolare → il
   Rubino registra «nessuna pietà» (tono §7); interrogarlo → «saggezza pragmatica».
-- **TORDEK — Cintura della Devastazione**: 3 cariche/giorno (+2d6/+3d6/+4d6). Se
+- **TORDEK — Cintura della Devastazione**: 4 cariche al giorno, +2d6 ciascuna,
+  come dice la sua scheda. Se
   le brucia tutte per l'overkill, la Cintura lo «assaggia»: contro **Fauci nel
   1372** dovrà superare **Volontà CD 18** per non cedere all'aggressività. Se
   **modera** (1-2 cariche, colpi mirati) → Moradin gli concede **+1 sacro ai TS
@@ -2632,7 +2677,7 @@ ed è per questo che vuole buttare giù chi ha davanti.
 |---|---|
 | 4 | le mura reggono pulite; il duello parte con i PG schierati e **Re Thorek in piedi dietro di loro** |
 | 2-3 | reggono a stento. Il duello parte normale |
-| 1 | i nani perdono il camminamento est: il duello si combatte **con Re Thorek a 8 pf alle spalle**. Pressione emotiva, **nessun malus meccanico** — il re non è una barra della vita |
+| 1 | i nani perdono il camminamento est: il duello si combatte **con Re Thorek a 8 pf alle spalle**, e il drago lo punta quando nessun PG lo chiama (Scena 11, «Il re») |
 | 0 | 🔴 **la breccia cede.** Il duello si combatte **in mezzo ai feriti** portati giù dalle mura: M7-B con 6 quadretti di terreno difficile e **due nani a terra** che Hella può scegliere di raggiungere invece di combattere. Nessun malus: una **scelta in più**, e più dura |
 
 ⚠️ **La riga a zero successi è il punto di questa tabella.** Il modo più veloce
@@ -2767,6 +2812,15 @@ cambia davvero.
   druida appena tornata dalla morte o chi porta la Corona, e lo nomina in modo
   che lo sentano tutti. Le balestre e le campane non sono bersagli: le fa
   tacere col soffio solo quando nessun PG gli è a tiro.
+- **Il re**. Re Thorek sta nel cortile alle spalle
+  dei PG. Se in un round nessun PG ha chiamato il drago (la Catena detta, la
+  corda, le ferite, il nome dato), Skullcrusher va su di lui: è il secondo re
+  che vuole mangiare davanti all'orda. Chi sta sulla linea del soffio o
+  accanto al re prende il colpo al posto suo. ⚠ Non SRD: in 3.5 non c'è
+  un'azione per prendere un colpo al posto di un altro; qui basta essere lì.
+  Il re non muore, perché alla Scena 12 è vivo: un colpo che lo porterebbe
+  sotto 0 pf lo lascia a terra, stabile, e il Rubino lo ricorda come il giorno
+  in cui il re è caduto.
 - **Soglia: quando gli restano ~100 pf, un terzo dei 297 — la prima paura.** Per la prima volta nella sua vita,
   Skullcrusher **esita**. È il momento dei tre esiti (sotto). Al suo turno
   fugge nelle paludi, a meno che nel round prima abbia preso **almeno due

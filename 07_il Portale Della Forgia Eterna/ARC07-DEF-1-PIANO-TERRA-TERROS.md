@@ -145,10 +145,10 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 | Rituale F2: Thorik Tempra/FOR (**16** se Tordek riesce) · Tordek TxC/Conc. · Artemis UMD/TxC | 26 · 25 · 25 | §9 |
 
 ### Iniziativa tipo & pf da tracciare
-`Artemis +? · Tordek +? · Terros −1 · Thorik +?` · Xorn +0 · Sentinella +2 — **Terros 345 pf**
+`Artemis +? · Tordek +? · Terros −1 · Thorik +?` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
 0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
-3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 180
+3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
 pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 
 ### Il giro di Terros, in breve (3.5: UNA azione per round)
@@ -158,7 +158,8 @@ pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
    per nessuno.
 2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m; chi trova una superficie entro 9 m la colpisce (Rifl 22 o 4d6 e prono), gli altri restano sospesi. Tordek resta sull'Altare, e chi vola non si sposta. Finita l'Onda, chi è entro 9 m dall'Altare ci ricade alla fine del suo turno successivo e perde il movimento (Rifl 15 o prono); chi è più lontano deriva di 3 m a round fino alla parete `[CANONE — DM 2026-10-12, D84]`.
 3. **Stalattiti** (ricarica 5-6/d6): 8d6 raggio 9 m, Rifl 22 ½ — *Artemis
-   con azione preparata le disintegra (contatto CA 12)*.
+   con azione preparata abbatte il masso sopra un compagno a scelta, che non
+   prende danni; gli altri tirano Riflessi 22. Il masso ha CA di contatto 12* `[CANONE — DM 2026-10-18]`.
 4. **Scudo di Geodi** (ricarica 1d3): +4 CA, no critici — *Tordek lo frantuma
    con >15 danni sonici in un colpo → Terros frastornato*.
 5. **Earth Glide** (movimento): entra/esce dall'Altare — *Thorik lo inchioda
@@ -393,7 +394,7 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 | Attacco in mischia | −2 (armi pesanti ×2 ingombro) | nessuna penalità |
 | Prove di FOR/DES | −4 | **+2** di competenza alla FOR (aiuta) |
 | Carico | ×2 (Medio → Pesante) | +2 FOR per il calcolo (compensa) |
-| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** Volare CD 20 a fine round o precipita (Volare è l'abilità di PF1e, §0-bis: in 3.5 non esiste) |
+| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** superare una prova di Destrezza CD 20 a fine round, o precipita `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: il 3.5 non ha una prova per il volo in gravità doppia; quando manca l'abilità l'SRD chiede la caratteristica, e la CD è del modulo. Nella camera di Terros, in gravità zero, la prova non si tira |
 
 **Cadute in gravità aumentata.** Danno **1d10 per 3 m** (non 1d6) — versione
 "Iraconda" del RICALIBRATO; velocità terminale raggiunta prima. CD dei
@@ -628,7 +629,7 @@ sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 | **Vuole** | il mithral del pilastro, che per lui è cibo. E il metallo che il gruppo porta addosso |
 | **Suona** | parla Terran. Vecchio, scaltro e famelico: negozia, o spezza |
 | **Sa** | che il Tempio schiaccia gli intrusi, e che i Cristalli Viventi aiutano chi li aiuta. Lo dice solo se il tributo è pagato (via C) |
-| **Combatte** | élite, GS 11. Sotto i 90 pf si chiude dentro un geode gigante, sotto i 40 fugge nella pietra, a meno che il pilastro sia ancora intatto: la fame lo tiene lì un round di troppo |
+| **Combatte** | élite, GS 12. Sotto i 90 pf si chiude dentro un geode gigante, sotto i 40 fugge nella pietra, a meno che il pilastro sia ancora intatto: la fame lo tiene lì un round di troppo |
 
 **Comparse**
 
@@ -649,13 +650,21 @@ geode gigante (Ambiente dinamico, §4: PF 80, Durezza 8) e lo usa come corazza
 copertura normale (+4) e non la copertura totale della tabella del §4. Le colonne della foresta sono indistruttibili:
 il rifugio è sempre un geode.
 
-**Statblock — XORN «FAUCI DI DIAMANTE» (élite, CR 11).** *Xorn Anziano
-avanzato 15 DV.* PF **180** · CA **28** (+18 nat) · **RD 10/adamantio** ·
-Morso +22 (4d8+10, ignora durezza <20) e 3 artigli +20 (1d8+5) · Scavare 6 m
-(non lascia tunnel) · Percezione tremorica 18 m · onnidirezionale (niente
-fiancheggiamento, mai colto in fallo) · Immune freddo/fuoco · TS Temp +16,
-Rifl +6, Vol +16 · **Speciale**: se morde un'arma/scudo magico non-artefatto fa
-Spaccare (+26); Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
+**Statblock — XORN «FAUCI DI DIAMANTE» (élite, GS 12)** `[CANONE — DM 2026-10-18]`. *Xorn Anziano dell'SRD avanzato da 15 a 21 DV, sempre Grande.*
+Esterno (Terra, Extraplanare), Grande · DV 21d8+87 (**181 pf**: 21 × 4,5 = 94,5, più COS +4 × 21 = 84, più Robustezza 3) · Iniz +0 ·
+Vel 6 m, Scavare 6 m (non lascia tunnel) · **CA 28** (−1 taglia, +19 nat), contatto 9, colto 28 · BAB/Lotta +21/+33 (21, FOR +8, taglia +4) ·
+Morso +29 mischia (4d8+8: BAB 21, FOR +8, taglia −1, Arma Focalizzata +1) · Full-attack: morso +29 (4d8+8) e 3 artigli +26 (1d6+4; secondari, −2 con Multiattacco) ·
+Spazio 3 m, portata 1,5 m · Visione a 360° (niente fiancheggiamento, mai colto in fallo) · **RD 10/contundente** · Scurovisione 18 m · Earth Glide ·
+Immune freddo e fuoco · Resistenza all'elettricità 10 · Percezione tremorica 18 m · TS Temp +16, Rifl +12, Vol +12 (buoni da esterno a 21 DV: +12) ·
+FOR 27, DES 10, COS 19, INT 10, SAG 11, CAR 10 (+2 alla FOR dai DV 16 e 20) · Talenti: Attacco Poderoso, Incalzare, Spinta Migliorata, Colpo Possente, Multiattacco,
+Robustezza, Spaccare Migliorato, Arma Focalizzata (morso) · Abilità: Ascoltare +24, Osservare +24, Cercare +24 ·
+**Speciale**: se morde un'arma o uno scudo magico che non è un artefatto, fa Spaccare (prova contrapposta, morso +33 con Spaccare Migliorato) e il morso ignora la durezza
+sotto 20; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
+⚠ Non SRD: la RD dell'SRD è 5/contundente, l'armatura naturale è +16, e lo Spaccare che ignora la durezza e cura è del modulo.
+Contro questa RD i pugni di Tordek passano interi, e l'ascia di Thorik, che è tagliente, no.
+**Boost log** `[CANONE — DM 2026-10-18]`: avanzamento SRD di 6 DV (esterno: +1 GS ogni 2 DV, quindi +3), armatura naturale +3, RD da 5 a 10/contundente, Spaccare che cura. GS 8, poi 12. Serve un capo che regga 4-5 round contro tre PG di 13°.
+**Benchmark** (tabella PF1e dei mostri per GS): CA 28 e 181 pf come la riga 13; attacco +29, sopra la riga 16; danno pieno medio ~48, come la riga 10-11; TS +16/+12 come la riga 13. Il GS che i numeri valgono è **12**.
+L'incontro, con i due Xorn comuni (GS 6), è **EL 13**: sotto il tetto di APL + 4 (APL effettivo 12, quindi 16).
 
 **Statblock — XORN standard ×2 (CR 6).** Esterno (Terra), Medio · DV 7d8+21
 (52 pf) · CA 24 (+14 nat), contatto 10 · Morso +9 (4d6+3) e 3 artigli +4
@@ -678,7 +687,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 - **E se sorvolano, sono invisibili o silenziosi.** La percezione tremorica
   (SRD) localizza chi è a contatto col suolo, e basta. Chi si è alzato da
   terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (che qui chiedono
-  Volare CD 20 a ogni fine round, §3) sparisce dalla loro percezione, e il
+  una prova di Destrezza CD 20 a ogni fine round, §3) sparisce dalla loro percezione, e il
   bersaglio preferito del round 1 diventa il PG più arretrato fra quelli a
   terra. L'invisibilità e Muoversi Silenziosamente, da soli, non servono: gli
   Xorn non guardano e non ascoltano, sentono il peso.
@@ -705,11 +714,12 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   il party ripassa di qui, li ritrova — affamati e più prudenti. Combattono
   come al round 1 e scavano via a metà dei loro pf.
 
-> *Calibrazione rapida: Blast di Artemis ~28/colpo, manca solo con l'1 naturale; Thorik colpisce
-> con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
-> round, Artemis a ~2/3 pf in uscita.*
+> *Calibrazione rapida: Blast di Artemis ~28/colpo, manca solo con l'1 naturale.
+> La Raffica di Tordek è contundente e passa la RD di tutti e tre. Thorik
+> colpisce Fauci col 7+, ma la RD 10 gli lascia poco: il suo lavoro è la via B e
+> reggere lo Spaccare. Scontro atteso 4-5 round, Artemis a ~2/3 pf in uscita.*
 
-**XP**: **1.700 a testa** al gruppo di oggi, **≈ 875** ai gruppi futuri (Fauci di Diamante CR 11 + 2 Xorn CR 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
+**XP**: **1.700 a testa** al gruppo di oggi, **≈ 1.200** ai gruppi futuri (Fauci di Diamante GS 12 + 2 Xorn GS 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
 ---
@@ -892,13 +902,13 @@ Tempio — dove passano cose preziose, prima o poi passa un compratore. È un
 
 | | |
 |---|---|
-| **Aspetto** | non c'è: è a Rethmar. Arriva come voce, col tocco della gemma. Nel Bestiario è un uomo sulla cinquantina, in sete grigie e argento |
+| **Aspetto** | non c'è: è a Rethmar. Arriva come voce a ogni tocco della gemma, anche col guanto o col panno; firma solo la pelle nuda `[CANONE — DM 2026-10-18]`. Nel Bestiario è un uomo sulla cinquantina, in sete grigie e argento |
 | **Vuole** | un socio che gli sia debitore: il Seme è un Marchio di Credito, e l'esca è tagliata sull'avidità di Artemis |
 | **Suona** | mielato, telepatico. Non mente mai direttamente: usa omissioni, e tratta Artemis da pari |
 | **Sa** | che Artemis ha già fatto tre affari con lui (Bestiario). Del Collezionista non conosce la vera natura |
 | **Combatte** | no: in questa scena non c'è |
 
-> **VARIS (telepatico, mielato — la voce arriva col tocco della gemma):**
+> **VARIS (telepatico, mielato — la voce arriva a ogni tocco della gemma):**
 > *«Bravo. Solo tu potevi vederla. Consideralo un pegno di fiducia tra futuri
 > soci: prendila, incastonala nell'Anello, e hai lo sconto a vita e la mia
 > Falla come tuo magazzino personale. Il grande collezionista non lascerà mai
@@ -981,8 +991,9 @@ guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
 quello non si dimentica.
 
 **Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
-tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
-incastonarla nell'Anello). Quindi, oggi:
+tocco a pelle nuda**: la voce arriva a ogni tocco, anche col guanto o col
+panno, ma firma solo la pelle `[CANONE — DM 2026-10-18]`, e Varis chiede di incastonarla
+nell'Anello. Quindi, oggi:
 
 | | Stato |
 |---|---|
@@ -1046,7 +1057,9 @@ sempre tiepido.
 **Le clausole** (sono il contratto):
 
 1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
-   anche senza volerlo. Guanto, panno o pinza non firmano. Non c'è tiro
+   anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
+   arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
+   `[CANONE — DM 2026-10-18]`. Non c'è tiro
    salvezza, perché il Seme non costringe: aspetta.
 2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
    nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
@@ -1168,15 +1181,17 @@ MAPPA T-4 mostra il ramo dei tre ruoli: Tordek salta, a 20 m la gravità del
 Tempio lo cattura, all'arrivo colpisce le Rune di Attracco, e poi gli altri
 salgono la corda. La nota della mappa «[dopo aver colpito le Rune di Attracco]»
 vale per la cattura, non per il salto: le rune si colpiscono all'arrivo, e
-vince questo testo. La strada non c'è: la si crea suonando il **Diapason** e
-tenendo la musica. Ogni prova riuscita solleva dall'oceano un blocco di pietra,
+vince questo testo. La strada non c'è: la si crea cantando la **Frequenza** o
+suonando il **Diapason**, e tenendo la musica `[CANONE — DM 2026-10-18]`. Con la sola Frequenza la
+scala arriva a metà strada e il resto si fa coi tre ruoli; col Diapason arriva
+fino al portale. Chi ha saltato i Cristalli non ha né l'una né l'altro, e
+attraversa coi tre ruoli. Ogni prova riuscita solleva dall'oceano un blocco di pietra,
 e i blocchi fanno una scala; **Tordek salta da un detrito sopra l'oceano, a
 metà strada**, e da lì al portale. La prova è quella della Frequenza (§8):
 Intrattenere (Canto) **CD 18**, l'Anello di Artemis dà +4
 `[CANONE — DM 2026-09-30]`. Suonarlo per la scala **non lo consuma**: il suo uso unico è lo stordimento.
 Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
-`[CANONE — DM 2026-10-12, D79]`. Senza il Diapason (il gruppo ha saltato i Cristalli, §6) la scala non
-si alza, e restano i tre ruoli qui sopra.
+`[CANONE — DM 2026-10-12, D79]`.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — «la salita cantata».** Al tavolo
 > l'attraversamento è stato risolto in variante: il party ha **cantato la
@@ -1641,8 +1656,10 @@ B) PIOGGIA DI STALATTITI (standard; ricarica 5-6 su d6): raggio
    CD 22 dimezza.  ► CONTRO-MOMENTO (Artemis, avido di gloria):
    con un'AZIONE PREPARATA "quando Terros scaglia le stalattiti",
    Eldritch Blast (contatto a distanza vs CA di contatto 12 dei
-   massi) per disintegrarle a mezz'aria e annullare i danni ai
-   compagni. Un blast per masso principale.
+   massi) per disintegrare a mezz'aria il masso sopra UN compagno a
+   scelta di Artemis: quel compagno non prende danni, gli altri
+   tirano Riflessi CD 22 come sempre. Un'azione preparata è un
+   attacco solo, quindi un blast salva un compagno `[CANONE — DM 2026-10-18]`.
 C) SCUDO DI GEODI (standard; ricarica 1d3 round): solleva lastre
    di diamante, +4 CA e nega i critici per 1d3 round.
    ► CONTRO-MOMENTO (Tordek, "Frantuma-Scudo"): un colpo dei
@@ -2454,7 +2471,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | § | Incontro / prova | GS / tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
 |---|---|---|---|
 | §4 | Ambiente dinamico superato (polvere, stalattiti, fenditure — se attraversato senza scorciatoie) | premio di storia | 300 |
-| §5 | Xorn: «Fauci di Diamante» (CR 11) + 2 Xorn (CR 6) — **qualunque via** (combattuta, demolita o negoziata) | EL ~13 | 1.700 |
+| §5 | Xorn: «Fauci di Diamante» (GS 12) + 2 Xorn (GS 6) — **qualunque via** (combattuta, demolita o negoziata) | EL ~13 | 1.700 |
 | §6 | Skill Challenge dei Cristalli Viventi (solo se affrontato) — successo pieno | EL 11 (sfida) | 900 |
 | §6 | Bonus Successo Critico (Diapason ottenuto) | premio | +200 |
 | §6-bis | Seme-Mercato: scelta consapevole (qualunque esito, se la scena è stata giocata) | premio di storia | 200 |
@@ -2468,10 +2485,10 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 > **I PX al conto SRD, per i gruppi futuri** `[CANONE — DM 2026-10-12, D84]`. La tabella qui sopra è
 > quella data al gruppo di oggi, e per lui resta. Al conto della tabella della
 > DMG (totale dell'incontro, diviso fra i tre PG di 13°) gli incontri valgono
-> meno: Terros (GS 15) **≈ 2.600** a testa invece di 5.400, gli Xorn **≈ 875**,
+> meno: Terros (GS 15) **≈ 2.600** a testa invece di 5.400, gli Xorn **≈ 1.200** `[CANONE — DM 2026-10-18]`,
 > la Sentinella (GS 11) **≈ 650**, i Cristalli (EL 11) **≈ 650**, il vuoto
 > (EL 10) **≈ 450**. I premi di storia restano. Il modulo intero vale
-> **≈ 6.700** a testa, **≈ 5.900** senza i Cristalli.
+> **≈ 7.000** a testa, **≈ 6.200** senza i Cristalli.
 
 > **Lettura**: al 13° servono **13.000 PX** per il 14° (da 78.000 a 91.000, SRD). Questo modulo vale
 > **~0,8 livelli** (al conto SRD, per un gruppo futuro, circa mezzo livello); con il Piano del Fuoco già alle spalle, i PG **maturano il
@@ -2519,7 +2536,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | **Hella** | (Collana/Durik prendono forma, ma **si legano a lei solo al #3**) | — | Durik "abbozzato"; Collana germoglia alla resurrezione |
 
 > **Verdetto del beat (per il DM).** PX **~11.600/PG** (percorso completo; ~10.300
-> se i Cristalli sono saltati — vedi §11-bis A; per i gruppi futuri ≈ 6.700 al conto SRD) verso il 14° a Hammerfist;
+> se i Cristalli sono saltati — vedi §11-bis A; per i gruppi futuri ≈ 7.000 al conto SRD) verso il 14° a Hammerfist;
 > WBL ordinario **sotto** i 110.000 mo/PG (l'arco è povero di loot ordinario,
 > ricchissimo di artefatti — il delta si colma a Hammerfist, ARC-08 B4); potere
 > effettivo **molto alto** grazie agli artefatti unici (è il motivo per cui gli
@@ -2538,6 +2555,11 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 > di Est si è chiuso come una porta; quello del Tempo brucia nitido; e nella
 > nebbia della parete di Nord-Ovest, la quarta figura ha ora un contorno. La
 > Corona di Thorik pesa di una gemma in più.*
+
+**Da dove si esce** `[CANONE — DM 2026-10-18]`. Finito il rito, sopra l'Altare si apre un portale
+dorato, come quello che nel Piano del Fuoco si apriva sopra la piattaforma alla
+vittoria, e porta nella Sala. Il ritorno a piedi, i 2 km di Oceano di Roccia
+all'indietro, resta una scelta: chi lo fa ritrova gli Xorn sopravvissuti (§5).
 
 Countdown Hammerfist: **~3g 20h**, o **~3g 08h** se hanno dormito prima di
 Terros (registro completo: `ARC07-DEF-2` §0-bis). Il party è esausto: Moradin

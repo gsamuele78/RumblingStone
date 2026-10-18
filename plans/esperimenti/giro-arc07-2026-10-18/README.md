@@ -67,10 +67,26 @@ Dopo la correzione e la verifica:
 
 Il risultato: **nessun 🔴 o 🟠 resta aperto senza un esito**. La verifica non
 ha trovato nessun nuovo 🔴. Ha trovato due nuovi 🟠, l'arco degli hobgoblin in
-DEF-5 e uno in DEF-4, ed entrambi sono chiusi. Quello che resta sono le 29
-decisioni del DM in [`DECISIONI-DM.md`](DECISIONI-DM.md). Su queste i master
-dicono ancora la versione di prima. Il master torna «senza rilievi aperti»
-solo quando il DM le ha decise.
+DEF-5 e uno in DEF-4, ed entrambi sono chiusi. Restavano le 29
+decisioni del DM in [`DECISIONI-DM.md`](DECISIONI-DM.md).
+
+## Le decisioni del DM
+
+Il DM ha scelto «Tutte»: valgono le 29 raccomandate, e per i tre fatti che
+solo lui sa vale il ripiego scritto nella decisione (Hella con SAG 20 e scudo
+leggero; Varis si sente col guanto e si firma solo a pelle nuda; Therysol
+resta com'è, perché DEF-2 e DEF-3 raccontano il passato e `state.md` il
+presente). Ogni decisione è nel master con `[CANONE — DM 2026-10-18]`, e la
+divergenza dall'SRD è dichiarata dove c'è. Nei cinque DEF non resta nessun
+`[INFERRED]`.
+
+Le decisioni toccano anche altri file, aggiornati nello stesso lotto: la voce
+di Fauci di Diamante (GS 11 → 12, con `Boost log:`), una voce nuova per il
+Treant di Adamantio, la scheda di Hella risorta, la Collana, la Cintura della
+Devastazione (4 cariche al giorno, +2d6), `campaign-party.md`, gli handout di
+ARC-07, la guida DM di ARC-08 per i pf di Dana e la mappa M7-C. `state.md`
+non si tocca su `main`: la riga della Cintura è in una patch per il ramo di
+gruppo, che applica il DM.
 
 ## Cosa misura `misura_craft`
 

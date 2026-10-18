@@ -134,7 +134,7 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
   (indistruttibili). Il pilastro corroso 💠 (G08) può essere fatto **crollare**
   (→ ponte o area bloccata).
 - **Posizioni iniziali**: Thorik F04, Artemis I04, Tordek G05. **Xorn 1** emerge
-  a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 180 pf) attende a
+  a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 181 pf `[CANONE — DM 2026-10-18]`) attende a
   G09 (⬛), sotto il pilastro.
 - **Tattiche Xorn (nemico, round-per-round)**: Earth Glide → **emergono, colpo
   pieno (3 artigli + morso), riaffondano** con **azione preparata** — NON restano

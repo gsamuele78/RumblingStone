@@ -117,7 +117,7 @@ Montagna, nell'ultima resistenza della Scena 2, con il drago sulle mura.
 |---|---|---|
 | **≈ 3g 15h** (nessun riposo prima di Terros: è il ramo del gruppo di oggi) | la **prima ondata è appena passata** `[CANONE — DM 2026-09-30, D31]`: sulle mura i nani tengono ancora, ma una colonna d'orchi è scesa dalle gallerie di Zeth dietro i nani in ritirata, fino alle porte del Cuore `[CANONE — DM 2026-10-12, D77]` | la **Fase 0** dell'ARC-08 si gioca **dopo** il drago ai bastioni `[CANONE — DM 2026-10-03, D38]`: prima il Cuore della Montagna, poi Fauci, poi il consiglio di guerra per le ondate che restano |
 | **≈ 3g 03h** (riposo prima di Terros — ramo probabile) | la **prima ondata è già passata**: una torre in posizione a est, i primi caduti sui camminamenti, il fumo che piega col vento | **Fase 0 accorciata**: un solo giro di preparativi invece di due. I nani hanno già dei feriti da curare, e il consiglio di guerra si tiene **in piedi**, non seduti |
-| **sotto 2 giorni** (solo con altri due riposi ordinari — improbabile) | **breccia aperta**, combattimento dentro le mura sopra la caverna | il pannello velato dell'Affresco A8 e **Fase 0 dura** (`ARC07-DEF-2` §8) |
+| **sotto 2 giorni** (solo con altri due riposi ordinari, improbabile; o se dormono nella caverna dopo la pulizia, §6) | **breccia aperta**, combattimento dentro le mura sopra la caverna | il pannello velato dell'Affresco A8 e **Fase 0 dura** (`ARC07-DEF-2` §8) |
 
 > ⚠️ **Nessuno dei due rami probabili è una punizione.** La differenza è di
 > **tono e di respiro**, non di vittoria: chi ha dormito arriva riposato in un
@@ -157,10 +157,10 @@ Montagna, nell'ultima resistenza della Scena 2, con il drago sulle mura.
 ### ⚒️ TORDEK — il pugno che ha imparato a trattenersi (Mercer support)
 - Torna con i Bracieri completi e la disciplina della Cintura (che al −1000 si è
   rifiutata contro Skullcrusher: il vero scontro è Fauci, sui bastioni, nell'ARC-08).
-  Nella Scena 3 la Cintura funziona come contro Zog'tar (`DEF-4` Scena 8): 3
+  Nella Scena 3 la Cintura funziona come contro Zog'tar (`DEF-4` Scena 8): 4
   cariche al giorno, e quelle che spende qui non le ha contro il drago. Prima
   di un colpo in mischia Tordek spende una carica, con un'azione gratuita, e il
-  colpo fa **+2d6** danni (`state.md` §6, scheda della Cintura). Il suo momento è **rivedere Hella viva al
+  colpo fa **+2d6** danni; le cariche tornano all'alba `[CANONE — DM 2026-10-18]`. Il suo momento è **rivedere Hella viva al
   suo fianco nel presente** — non un ricordo, non uno spirito: lei.
 
 ### 🔮 ARTEMIS — il predone che ha visto il futuro del suo nemico (Andor support)
@@ -289,7 +289,7 @@ un gesto a testa; poi l'iniziativa, e si passa alla Scena 3.
 3 m; la porta è a **36 m**, oltre l'anello dei novanta nani. Nel round di
 sorpresa chi combatte in mischia non ci arriva. L'altare si scala con
 Scalare CD 15, in un round. Il re non muore in DEF-5: il colpo che lo
-porterebbe sotto 0 lo prende Dana, che gli si getta sopra `[CANONE — DM 2026-10-15, D92]`.
+porterebbe sotto 0 lo prende Dana, che gli si getta sopra `[CANONE — DM 2026-10-15, D92]`. Dana ha 20 pf più i 2d8 dell'Apparizione, e la abbattono cinque o sei frecce, o due critici `[CANONE — DM 2026-10-18]`: allora vale la riga «Madre Dana cade» del §6.
 
 **Se il tavolo ha giocato male il −1000** (§6), leggi prima la riga «meno
 luminosa» delle contingenze: cambia gli effetti qui sotto.
@@ -302,7 +302,7 @@ può scegliere. Sono proposte, e ogni scelta si ricorda (§7):
 | **Thorik** | dall'altare, il primo ordine da portatore della Corona: ai novanta. Se lo dà nel round di sorpresa, i tre blocchi avanzano nel round 1 e il muro di scudi si fa sul varco, prima che entrino gli hobgoblin `[CANONE — DM 2026-10-12, D77]`. Più tardi, se oggi non l'ha già usata al −1000, la sua *Aura di Comando* (1/giorno, *comando* CD 15, dalla pagina della Corona) colpisce **una** creatura, come l'incantesimo dell'SRD, a gittata vicina (16,5 m al 13°): il capo degli orchi, alla porta a 36 m, è fuori portata finché non passa l'anello. Se il capo è uno degli orchi rimasti, «Fuggi!» lo manda via, e l'altro scosso, senza più nessuno che lo tenga, scappa con lui `[CANONE — DM 2026-10-15, D91]` |
 | **Tordek** | il re è lì sull'altare, a un passo, e gli orchi stanno arrivando: coprirlo col suo corpo, che dà al re copertura morbida, +4 alla CA contro gli attacchi a distanza (SRD), o scendere dall'altare e mettersi fra l'altare e l'anello. Scendere è un salto di 3 m: 1d6, o nessun danno con Saltare CD 15 (SRD) |
 | **Artemis** | vede tutta la caverna dall'altare: chi scappa, chi resta, e il capo degli orchi che ha smesso di urlare. Il capo è l'orco più grosso, con un elmo nanico preso sulle mura; ha le statistiche dell'orco dell'SRD (Scena 3) e 8 pf invece di 5 `[CANONE — DM 2026-10-15, D91]`. Tira contro l'aura come gli altri: se fallisce scappa per primo, se fa 20 è uno dei due che restano, e se cade l'altro scappa. Il gesto di Artemis: volare sopra la porta. Le Ali d'Ombra danno 18 m di volo (pagina dell'Anello), e la porta è a 36 m: fa 18 m nel round di sorpresa e 18 nel round 1, con l'azione di movimento. Arriva prima della fine del round 1, quando la fila di scudi è ancora nel corridoio, e grida il preavviso, che è un'azione gratuita come ogni parlare (SRD), così le resta anche l'azione standard: i nani avvisati vincono il primo scambio del muro di scudi. Se nel round 1 fa altro, li vede entrare e il preavviso non c'è `[CANONE — DM 2026-10-15, D91]`. Il *Passo d'Ombra* qui non serve: vuole penombra, e la caverna è in luce piena |
-| **Hella** | le radici che le crescono intorno sono sue: può chiuderle intorno al re (copertura totale per un round) o lanciarle verso la porta, dove fanno come *intralciare*, ma su un'area di 6 m di raggio (Riflessi CD 15) per un round soltanto, come la copertura sul re `[CANONE — DM 2026-10-12, D77]`. Lanciate alla porta nel round di sorpresa prendono gli orchi in fuga, non gli hobgoblin, che entrano dopo: chi resta intralciato non può fuggire, si rannicchia come ogni creatura in panico messa all'angolo (SRD) e si arrende. Se al rito Thorik ha donato la deflessione, lei ha lo **Scudo del Custode** (1/giorno, immediata: prende dimezzato il danno di un alleato entro 9 m) e Thorik è accelerato 3 round verso chi lei ha protetto. I Treant di Adamantio si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Chiamarli tutti e due insieme spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba), e va detto alla giocatrice prima che scelga; se al −1000 li ha già chiamati insieme di notte, è spenta, mentre chiamarli insieme all'alba non la spegne (`DEF-4`, D65). Il Treant di Adamantio: Grande, 90 pf, CA 24, RD 10/adamantio, velocità 9 m, 2 schianti +18 (2d8+9), dura 1 ora (`DEF-3` Appendice A.2, D74). **Durik** arriva con lei, perché è legato alla Collana (`DEF-4`): Medio, 102 pf, CA 21, velocità 12 m, morso +15 (2d6+6), sta accanto a Hella e va dove lei lo manda; se il drago l'ha distrutto nel duello e non è stato richiamato, torna all'alba |
+| **Hella** | le radici che le crescono intorno sono sue: può chiuderle intorno al re (copertura totale per un round) o lanciarle verso la porta, dove fanno come *intralciare*, ma su un'area di 6 m di raggio (Riflessi CD 15) per un round soltanto, come la copertura sul re `[CANONE — DM 2026-10-12, D77]`. Lanciate alla porta nel round di sorpresa prendono gli orchi in fuga, non gli hobgoblin, che entrano dopo: chi resta intralciato non può fuggire, si rannicchia come ogni creatura in panico messa all'angolo (SRD) e si arrende. Se al rito Thorik ha donato la deflessione, lei ha lo **Scudo del Custode** (1/giorno, immediata: prende dimezzato il danno di un alleato entro 9 m) e Thorik è accelerato 3 round verso chi lei ha protetto. I Treant di Adamantio si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Chiamarli tutti e due insieme spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba), e va detto alla giocatrice prima che scelga; se al −1000 li ha già chiamati insieme di notte, è spenta, mentre chiamarli insieme all'alba non la spegne (`DEF-4`). Il Treant di Adamantio: Grande, 90 pf, CA 24, RD 10/adamantio, velocità 9 m, 2 schianti +18 (2d8+9), dura 1 ora (`DEF-3` Appendice A.2). **Durik** arriva con lei, perché è legato alla Collana (`DEF-4`): Medio, 102 pf, CA 21, velocità 12 m, morso +15 (2d6+6), sta accanto a Hella e va dove lei lo manda; se il drago l'ha distrutto nel duello e non è stato richiamato, torna all'alba |
 
 
 **Effetti immediati** (§0-bis): gli orchi nella caverna tirano **Volontà CD 25**
@@ -341,7 +341,7 @@ riapre gli occhi: *«Tu… portatore… degno. Finalmente… campioni veri.»*
 | **Suona** | sussurra le preghiere e tuona le benedizioni. Legge tutto come profezia: *«Sono tornati»* |
 | **Sa** | aprire un portale ai bastioni della Porta Ovest (Scena 3) |
 | **Non sa** | del viaggio: lo legge come una profezia compiuta (§6) |
-| **Combatte** | Chierica 12 di Moradin / Cantante Divina 3, GS 14: CA 29, 142 pf massimi; lo statblocco è in ARC-08, non qui. Degli incantesimi del giorno le resta solo un *muro di pietra* (Scena 3) |
+| **Combatte** | Chierica 12 di Moradin / Cantante Divina 3, GS 14: CA 29, 142 pf massimi, ma arriva allo stremo: **20 pf**, più i 2d8 che le dà l'Apparizione `[CANONE — DM 2026-10-18]`; lo statblocco è in ARC-08, non qui. Degli incantesimi del giorno le resta solo un *muro di pietra* (Scena 3) |
 
 > **Perché conta (nota di regia).** Non è un deus ex machina: è **eucatastrofe
 > seminata** — la speranza arriva al momento più nero *perché* i PG hanno pagato
@@ -402,7 +402,7 @@ L'aura è scattata prima che entrassero, e non li tocca: fanno muro di scudi
 alla porta. I tre blocchi di nani ne tengono quindici; cinque passano
 l'anello (Round 2-4, qui sotto) `[CANONE — DM 2026-10-12, D77]`. Se Thorik ha dato l'ordine nel round di
 sorpresa ne passano tre; se anche Artemis li ha visti dalla porta e ha dato
-il preavviso, due `[CANONE — DM 2026-10-15, D92]`. Dopo di loro non arriva più
+il preavviso, due `[CANONE — DM 2026-10-15, D92]`; nel ramo «meno luminoso» ne passano cinque comunque `[CANONE — DM 2026-10-18]`. Dopo di loro non arriva più
 nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
 
 - **🎚️ [FAST-PLAY]**: i PG + Treant + 90 nani potenziati finiscono gli orchi
@@ -433,7 +433,7 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
     lungo +6 (1d8/×3), Tempra +6 Riflessi +2 Volontà +1, Attacco Poderoso e
     Incalzare, Arma Focalizzata e Specializzazione nell'Arma (spada lunga),
     Riflessi in Combattimento; +1 morale agli hobgoblin entro 3 m, il comando del
-    sergente (`Bestiario/mostri/hobgoblin-sergente-cr5.md`, D78). **Tattica**
+    sergente (scheda del Bestiario). **Tattica**
     `[CANONE — DM 2026-10-12, D77]`: puntano il re, perché è l'ordine che hanno; contro chi vola
     tirano con l'arco. Con lo scudo pesante al braccio l'arco lungo non si usa
     (SRD), quindi chi non ha un nemico in mischia passa all'arco in un round
@@ -491,7 +491,10 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
   Il calendario degli hobgoblin anticipa tutto di un round: il varco
   nell'anello nel round 1, ai piedi dell'altare alla fine del round 3. Nel box
   del primo round, al posto di «ne restano due», di' «ne restano cinque,
-  stretti intorno al più grosso».
+  stretti intorno al più grosso». L'ordine di Thorik e il preavviso di Artemis
+  arrivano tardi, perché gli hobgoblin sono già dentro: l'anello ne lascia
+  passare cinque, qualunque cosa facciano `[CANONE — DM 2026-10-18]`. Passano all'arco nel round 4 e
+  tirano al re dal round 5: qui Dana è davvero in pericolo.
 
 > **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultima spada cade sulla
 > pietra, e il rumore se ne va con lei. Restano il fumo dei bracieri, il
@@ -537,9 +540,9 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 | **Vogliono riposare prima di combattere** | Impossibile: sono materializzati **in mezzo** all'ultima resistenza, le porte già cedute. Il riposo è dall'altra parte della battaglia (ARC-08). |
 | **Vogliono curare/salvare Re Thorek subito** | L'Apparizione ha già fermato l'acido (§4). Ha **195 pf** massimi (ARC-08). Lo tiene giù l'**esausto**, non i pf: *ristorare inferiore* lo porta ad affaticato, *ristorare* o *guarigione* lo tolgono del tutto. Quando non è più esausto si rialza, anche se è ancora a 8 pf; ogni cura in più gli alza i pf `[CANONE — DM 2026-10-12, D77]` `[CANONE — DM 2026-10-15, D90]`. La *Presenza Regale* del re in piedi (+3 morale, ARC-08) **non si somma** al bonus dell'Apparizione: i bonus morali non si sommano, vale il più alto (SRD). Nel ramo «meno luminoso» (+4) la sua *Chiamata alle Armi* (+5, 3 al giorno) lo supera, e vale quella. Il premio è un altro: all'ARC-08 il re arriva in piedi e guida i suoi. Bel gesto, premialo. |
 | **Chiedono conto del viaggio a Dana/Thorek** | Nessuno sa del viaggio temporale (è un segreto di Moradin). Dana lo legge come profezia compiuta. I PG possono rivelare o tacere: rivelare rafforza il mito (Custodi Eterni), tacere lo rende leggenda ancora più grande. |
-| **Madre Dana cade, o non può aprire il portale** | la caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche-barde che Dana guida (chierica 8 / barda 4, GS 12; i loro incantesimi sono spesi sulle mura come quelli di Dana, Scena 3), in ginocchio fra i capi al centro dell'anello (Bestiario), più lente e con la voce che trema `[CANONE — DM 2026-10-15, D91]`. L'ARC-08 comincia uguale, con un'ombra in più |
+| **Madre Dana cade, o non può aprire il portale** | la caverna ha un solo ingresso, e fuori c'è l'orda. Il portale lo apre allora una delle **Cantitrici della Pietra**, le chieriche-barde che Dana guida (chierica 8 / barda 4, GS 12; i loro incantesimi sono spesi sulle mura come quelli di Dana, Scena 3), in ginocchio fra i capi al centro dell'anello (Bestiario), più lente e con la voce che trema `[CANONE — DM 2026-10-15, D91]`. Dana a terra perde 1 pf a round finché un nano non la stabilizza con Guarire CD 15 (SRD), e il primo che ci prova è uno dei capi: cade, non muore `[CANONE — DM 2026-10-18]`. L'ARC-08 comincia uguale, con un'ombra in più |
 | **Chiudono la porta, o inseguono gli orchi nel corridoio** | I battenti di mithral sono scardinati dagli arieti e non si chiudono: il varco, 6 m, si blocca solo con la magia (*muro di pietra*, *muro di spine*) `[CANONE — DM 2026-10-12, D77]`. Se è bloccato prima della fine del round 1, gli hobgoblin restano fuori e la pulizia finisce con gli orchi rimasti; gli orchi in panico chiusi dentro si rannicchiano (SRD) e si arrendono. Chi insegue nel round 1 trova gli hobgoblin nel corridoio, a muro di scudi: la prima fila lo attacca, le altre gli passano accanto senza fermarsi, perché l'ordine è il re, ed entrano alla fine del round come sempre. Quanti passano l'anello resta il conto della Scena 3. Gli orchi in panico chiusi fra lui e gli scudi si rannicchiano (SRD) e si arrendono. Sul lato ARC-07, dopo gli hobgoblin della Scena 3, la caverna resta sgombra: la prossima ondata, i bugbear, è dell'ARC-08. Una porta murata con *muro di pietra* regge; chi insegue trova il corridoio vuoto fino alla prima svolta, e sente l'orda sopra di sé `[CANONE — DM 2026-10-15, D91]` |
-| **Si fermano a curarsi dopo la pulizia** | Dana e le Cantitrici hanno speso tutto sulle mura (Scena 3, D92): l'unica cura che resta è il *muro di pietra* di Dana convertito, se non l'ha già lanciato. Le cure sono quelle del gruppo, nel round che serve ad aprire il portale. Fermarsi di più costa: ogni 10 minuti Fauci abbatte una torre della Porta Ovest, e l'ARC-08 comincia con una torre in meno `[CANONE — DM 2026-10-12, D77]` |
+| **Si fermano a curarsi dopo la pulizia** | Dana e le Cantitrici hanno speso tutto sulle mura (Scena 3): l'unica cura che resta è il *muro di pietra* di Dana convertito, se non l'ha già lanciato. Le cure sono quelle del gruppo, nel round che serve ad aprire il portale. Fermarsi di più costa: ogni 10 minuti Fauci abbatte una torre della Porta Ovest, e l'ARC-08 comincia con una torre in meno `[CANONE — DM 2026-10-12, D77]`. Dopo sei torri, cioè un'ora, la Porta Ovest cade: dormire nella caverna si può, ma l'ARC-08 si apre sulla riga «breccia aperta» del §0-bis, e quel sonno è il primo riposo, quindi il livello si prende lì (§8) `[CANONE — DM 2026-10-18]` |
 | **Vogliono inseguire subito Fauci / saltare l'handoff** | Possono! Il portale di Dana è la via più rapida ai bastioni. Non c'è un cancello — c'è solo il ritmo: da qui in poi è ARC-08. |
 | **FALLIMENTO — e se arrivassero "troppo tardi"?** | Non possono: il Rubino li deposita **esattamente** all'istante giusto (il tempo è auto-consistente — è già accaduto così). Se il tavolo ha giocato malissimo il −1000, l'Apparizione è **meno luminosa**. Il criterio: il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[CANONE — DM 2026-10-15, D90]`. La Catena spezzata è una vittoria e non conta. Allora il bonus morale scende a +4 e la riga dei nemici cambia come dice la Scena 3 (niente TS: cinque orchi scossi e il capo restano, gli hobgoblin entrano prima); il resto della tabella del §0-bis resta uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili. Mai un game-over: un ingresso più duro, non una sconfitta. |
 
@@ -580,7 +583,7 @@ Hammerfist): continua in `08_.../ARC08-11-PONTE-ARRIVO.md` e nella Guida DM.
 > **Somma d'arco (ARC-07)**: Terra ~11.600 + Affreschi ~1.900 + Resurrezione
 > ~1.900 + Viaggio ~7.600 + Ritorno ~3.300 = **~26.300/PG**. Con il Fuoco (P3)
 > già alle spalle, i PG hanno i PX del **14°** già all'arrivo, e il livello si prende al
-> primo riposo, cioè dopo la battaglia di Hammerfist (D8) `[CANONE — DM 2026-10-15, D90]`. Le parti giocate non si ritoccano.
+> primo riposo, cioè dopo la battaglia di Hammerfist `[CANONE — DM 2026-10-15, D90]`. Se dormono nel Cuore della Montagna, quello è il primo riposo e il livello si prende lì, al prezzo della breccia (§6) `[CANONE — DM 2026-10-18]`. Le parti giocate non si ritoccano.
 
 ### B. Tesoro pregenerato (in uscita — handoff agli audit a valle)
 > Questo beat **non genera loot ordinario nuovo** (è un arrivo in battaglia): il

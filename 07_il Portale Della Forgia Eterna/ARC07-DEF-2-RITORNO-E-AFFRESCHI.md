@@ -96,7 +96,7 @@ Sala costa solo **−4 h** (tariffa divina, §0-bis) e porta con sé il sogno de
 |---|---|---|
 | A1 — Benedizione dell'Osservatore (meditare 1 min) | auto | §4 |
 | A2 — Visione Condivisa (TS Volontà, 2 successi su 3) | 18 | §5 |
-| A3 — Catarsi di Thorik (TS Volontà; il **fallimento è il dono**) | 17 | §4 |
+| A3 — Catarsi di Thorik (TS Volontà; il **fallimento è il dono**, e Thorik può rinunciare al tiro) | 17 | §4 |
 | A6 — Artemis legge il Tempo (Conoscenze Arcane / Sapienza Magica) | 18 | §4 |
 | A7 — Aegis Fang «sente» Fauci (appoggiare l'ascia alla cornice) | auto | §4 |
 | A8 — la manifestazione di Hella (posare il corpo davanti) | auto | §4 |
@@ -249,6 +249,12 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
   premuta sul vetro dall'interno, un simbolo lasciato (**Quercia e Martello
   intrecciati**), poi il nulla. È speranza, non conversazione. *(Nessuna
   battuta lucida: coerente con l'asimmetria — frammento onirico canonizzato.)*
+- **La giocatrice di Hella muove Durik** dalla Scena 1 alla Scena 4 `[CANONE — DM 2026-10-18]`.
+  Decide dove va il cane, a chi si avvicina e quando fa il suo click di roccia;
+  non lo fa parlare né combattere, e non gli fa sapere niente che Durik non
+  senta da sé. Durik resta sempre fra il corpo e ciò che sente come pericolo:
+  se lei vuole allontanarlo dal corpo, il cane torna indietro. Nella Scena 5 la
+  giocatrice riceve il sogno di Hella.
 
 ---
 
@@ -263,7 +269,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 | Chi | Com'è | Come parla |
 |---|---|---|
 | Therysol | una tiefling mezzodrago: veglia il corpo di Hella accanto all'Altare da giorni, e ora è presente (§0). Non vuole vegliare un altro corpo: ha perso il fratello nel Piano del Fuoco. La scheda intera è in `DEF-3` §2 | in silenzio, e quando parla usa frasi corte, non chiede mai niente e di Hella parla al presente. Sa di aver contato i respiri che il corpo non faceva, e che il corpo si gira verso sud: l'ha rimesso dritto più volte. Non sa niente di dove sia lo spirito. Se spostano il corpo non lo impedisce, cammina accanto. Se le chiedono di risvegliare Hella, spiega che serve il Cuore di Moradin e il dono di ognuno (§8) |
-| Durik | il cane di Hella, riforgiato nel Piano della Terra: mithral intrecciato a pietra scura, occhi di topazio. Gira attorno al corpo e si mette sempre fra il corpo e ciò che sente come pericolo (`DEF-1` §9) | non abbaia: fa un click di roccia. Non risponde ai PG, non è ancora di Hella: si lega a lei al rito (`DEF-3` §7) |
+| Durik | il cane di Hella, riforgiato nel Piano della Terra: mithral intrecciato a pietra scura, occhi di topazio. Gira attorno al corpo e si mette sempre fra il corpo e ciò che sente come pericolo (`DEF-1` §9) | non abbaia: fa un click di roccia. Non risponde ai PG, non è ancora di Hella: si lega a lei al rito (`DEF-3` §7). Lo muove la giocatrice di Hella (§1) `[CANONE — DM 2026-10-18]` |
 
 La scena è l'arrivo nella Sala (Zona A). La Stanza della Corona (Zona B) ha la
 sua scena, la 4 (§6).
@@ -387,7 +393,7 @@ artefatti nascono — un Aegis Fang primordiale, altri martelli senza nome.*
   compagna caduta. Non deludere Hammerfist. Completa il destino.»* Poi sorride
   e torna a battere.
 - **Effetto — Benedizione dell'Osservatore.** Chi medita 1 min: **+1 sacro a
-  tutti i TS per 24 h** (Thorik +2). Rinnovabile 1/giorno. È la Benedizione della Cronaca
+  tutti i TS per 24 h** (Thorik +2). Si rinnova una volta ogni 24 ore vissute `[CANONE — DM 2026-10-18]`. È la Benedizione della Cronaca
   di A1, «La Fede», e prende il posto del +1 a un tiro del §3: davanti ad A1 non
   si prendono tutte e due.
 - **Sviluppi.** A1 non cambia mai — è l'ancora. Ma se Thorik gli parla dopo aver
@@ -446,6 +452,10 @@ di **Aegis Fang**, e il viaggio è a mille anni fa.*
   non è debolezza. È forza. Riconoscere il dolore e continuare: questo è
   coraggio.»* → **guarigione 3d8+13 pf** + **+2 sacro Volontà 24 h**.
   *Successo:* resta composto, commosso; guarigione minore 2d8+13.
+  *Rinuncia:* se il giocatore dichiara che Thorik si lascia andare, non tira, e
+  vale come fallimento: la catarsi è una scelta sua `[CANONE — DM 2026-10-18]`.
+  ⚠ Non SRD: l'SRD lascia rinunciare al tiro salvezza solo contro un
+  incantesimo, e qui la regola vale per un effetto divino che non lo è.
 - **Sviluppi.** Dopo la resurrezione, A3 **aggiunge una scena**: Hella viva che
   posa una mano sulla spalla di Thorik. Chiude il cerchio del lutto.
 
@@ -653,14 +663,17 @@ beat esiste per far prendere.
 
 Il party non ha pozioni: le **Benedizioni divine** le sostituiscono. Pregare
 10 minuti all'Altare del Cuore di Moradin basta, senza prove: Moradin risponde
-sempre, i Custodi sono scelti `[CANONE — DM 2026-10-12, D80]`. Durata 24 h o fino a consumo;
-rinnovabili 1/giorno tornando alla Sala.
+sempre, i Custodi sono scelti `[CANONE — DM 2026-10-12, D80]`. Durano **24 ore vissute** dai PG, contate dalla preghiera, o fino a consumo, e si
+rinnovano tornando alla Sala, una volta ogni 24 ore vissute: due sonni nella Sala
+a poche ore l'uno dall'altro non rinnovano niente `[CANONE — DM 2026-10-18]`. Lontano dalla Sala, e a
+−1000 nel viaggio del `DEF-4`, si spengono allo scadere delle 24 ore, e da lì il
+gruppo ha solo le cure che trova.
 
 | Benedizione | Effetto 3.5 | Sostituisce (valore) |
 |---|---|---|
 | **Pelle di Pietra** | passiva, 24 h: resistenza al fuoco 10 e al freddo 5 | *Resist Energy* (1.000 mo) |
 | **Cuore Incrollabile** | passiva, 24 h: immunità al caldo e al freddo ambientali non letali, +2 ai TS su Tempra contro gli effetti ambientali | *Endure Elements* (~500 mo) |
-| **Vigore della Forgia** | 3 cariche **per PG**, che tornano dopo ogni sonno di otto ore, come le capacità al giorno dopo un sonno (§7-bis). Per il Piano della Terra lo dice anche `DEF-1`<!-- apparato --> (D87)<!-- /apparato -->; qui la regola vale per ogni sonno, ovunque. Azione standard: cura 3d8+5 a sé (o a un cristallo, `DEF-1` §6); a contatto, 2d8+2 a un alleato | pozioni di cura |
+| **Vigore della Forgia** | 3 cariche **per PG**, che tornano dopo ogni sonno di otto ore, come le capacità al giorno dopo un sonno (§7-bis). Per il Piano della Terra lo dice anche `DEF-1`<!-- apparato --> (D87)<!-- /apparato -->; qui la regola vale per ogni sonno, ovunque, finché la Benedizione è attiva. Quando la Benedizione si spegne, le cariche rimaste si spengono con lei. Azione standard: cura 3d8+5 a sé (o a un cristallo, `DEF-1` §6); a contatto, 2d8+2 a un alleato | pozioni di cura |
 | **Forza della Montagna** *(solo nel Piano della Terra)* | ignora la gravità 2×, +2 FOR vs gravità | — (specifica dell'arco) |
 
 > Le carte sono il PDF `BenedizioniDiMoradin.pdf` (§11): tre benedizioni, e ogni PG le ha tutte e tre.
@@ -830,6 +843,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 | **Attaccano/danneggiano un affresco** | Il vetro è indistruttibile. Ma A1 **smette di girare la testa** a Thorik finché non c'è un atto di contrizione (una preghiera sincera, o un gesto verso Hella). La Cronaca registra anche gli affronti. |
 | **Vogliono riposare all'infinito nella Sala** | A7 **ticchetta**: mostra il countdown scendere, le mura di Hammerfist cedere. Ogni riposo extra **nella Sala** = **−4 h** (tariffa divina), **fuori** dalla Sala = **−12 h**, e in entrambi i casi un cambiamento visibile sull'affresco. Non c'è un cancello, c'è un **prezzo**. |
 | **Saltano del tutto gli affreschi** (fretta verso il rito) | Legittimo: nessun affresco è obbligatorio. Perdono le Benedizioni della Cronaca, il Bane di Aegis Fang vs Fauci (A7) e la catarsi di Thorik (A3). La resurrezione del #3 resta possibile, ma **più fredda**: nessuno ha visto la promessa. |
+| **Cercano un'altra via**: *rianimare morti*, *resurrezione*, una pergamena, un tempio nel Sottosuolo o in superficie | Non funziona, e il motivo sta nell'SRD: l'incantesimo riporta in vita solo un'anima libera di tornare, e lo spirito di Hella è trattenuto nel Sogno della Terra, il Debito della Radice del `DEF-3` §6. Nessuna via ordinaria lo strappa di lì: lo fa solo il rito col Cuore di Moradin `[CANONE — DM 2026-10-18]`. Se escono a cercare lo stesso, ogni sonno fuori dalla Sala costa **−12 h** all'orologio, e un chierico che lancia l'incantesimo sul corpo sente che l'anima non risponde. |
 | **Chiedono a Therysol di risvegliare Hella subito** | Therysol non può (non è quello il rito): spiega che serve il Cuore di Moradin e i sacrifici del party (`DEF-3`). Ma la sua veglia è **canone vivo**: raccontala (una tiefling mezzodrago che monta la guardia a una druida morta, in silenzio, da giorni). |
 | **FALLIMENTO — sprecano l'orologio** (riposi ripetuti, indugio) | Nessun «game over»: ma se il countdown A7 scende sotto **2 giorni** prima del rito, la Cronaca incide un **pannello velato** su A8 (un'ombra sul finale trionfale) e il DM apre l'ARC-08 con Hammerfist **già in breccia** (Fase 0 più dura). Il costo delle scelte si paga anche in tempo, e il tempo si perde in silenzio, come in Andor. |
 

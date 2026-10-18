@@ -31,8 +31,7 @@
 > Via della Radice — tutte le prove superate); i PG **non lo sanno ancora** —
 > lo scopriranno qui, dalla sua voce (§8). Countdown Hammerfist: **~3g 16h**
 > `[CANONE GIOCATO 2026-07-31]` — il registro dei riposi è in `DEF-2` §0-bis,
-> che possiede l'orologio. Il rito dura circa un'ora, e non c'è riposo prima
-> della soglia: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`, e di un'altra se c'è l'indagine del Sud (§9) `[CANONE — DM 2026-10-12, D83]`. Il party arriva **riposato** (hanno
+> che possiede l'orologio. Il rito dura circa un'ora: l'orologio scende di un'ora, a **~3g 15h** `[CANONE — DM 2026-10-12, D81]`, e di un'altra se c'è l'indagine del Sud (§9) `[CANONE — DM 2026-10-12, D83]`. Da lì il tempo si conta tutto `[CANONE — DM 2026-10-18]`: **10 minuti** per ogni tentativo fallito degli Step 1-3, **un'ora** per la prima ora dopo il rito (§8-bis). Senza tentativi falliti né indagine, alla soglia segna **3g 14h**. La scaletta non prevede riposo prima della soglia; se il gruppo lo chiede, si dorme e costa otto ore (§9). Il party arriva **riposato** (hanno
 > dormito nella Sala) e col sogno di `DEF-2` §7-bis addosso: Hella, dall'altro
 > lato, **ha già sentito Thorik dire il suo nome nel sonno**.
 >
@@ -217,7 +216,13 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 
 ### 🌙 HELLA — il ritorno (da qui, PG a pieno titolo)
 - Fino al risveglio: **nessuna coscienza** (solo le sensazioni del viaggio,
-  ormai concluse). Al risveglio: **torna con i doni PIENI vinti da sola**
+  ormai concluse).
+- 🐾 **Fino al risveglio la giocatrice di Hella gioca Durik** `[CANONE — DM 2026-10-18]`, dalla
+  Scena 1. Durik non parla e non abbaia: gira attorno al corpo, si sdraia ai
+  piedi dell'Altare, fa il click quando qualcosa si muove sotto i piedi, e il DM
+  le dice che cosa sente entro 18 m. Non sa niente che Durik non sappia, e non
+  entra nel cerchio del rito. Al §7, quando appoggia la testa sul petto di
+  Hella, la giocatrice torna a giocare lei. Al risveglio: **torna con i doni PIENI vinti da sola**
   (§INTEGRAZIONE, sotto) + i Doni del party. È **Dream Dwarf Ranger 1 / Druida
   12**, Ibrido Treant.
 - **Il Racconto delle Prove** (§8) è il suo grande momento-spotlight: racconta
@@ -225,10 +230,10 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   giocatrice la scena.
 
 **INTEGRAZIONE — i doni PIENI del viaggio (canone giocato, sovrascrivono i base):**
-Resist. Freddo **15** + Rigenerazione 1 (terra); **Marchio della Veritade**
+Resist. Freddo **15** + guarigione rapida 1 (terra) `[CANONE — DM 2026-10-18]`; **Marchio della Veritade**
 (+4 Diplomazia coi nani di Moradin; 1/g verità→Volontà CD 17 o scosso); **Radice
 Silenziosa** (+2 Percepire Intenzioni; 1/g empatia); **Radici del Mondo**
-(rigenerazione su suolo sacro/druidico; 1/g Radicamento 5 round, +1 morale TS
+(la guarigione rapida vale anche su suolo sacro/druidico; 1/g Radicamento 5 round, +1 morale TS
 alleati entro 9 m); **costo**: Vulnerabilità al fuoco (+50%). Bonus fissi:
 Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 *Divination* CL 12), Scurovisione 27 m.
@@ -663,7 +668,7 @@ afferrano, quel bottone **non c'è più**.
 
 🌱 **Hella riceve — Pelle di Adamantio: RD 3/adamantino.**
 🔎 **Non si somma a niente**, ed è verificato: l'Ibrido Treant le dà Resistenza
-al Freddo 15, Rigenerazione e Radicamento, **nessuna riduzione del danno**; e la
+al Freddo 15, guarigione rapida e Radicamento, **nessuna riduzione del danno**; e la
 **Via della Guardia** — l'unica strada del Viaggio che le avrebbe dato RD 2/− —
 **non è quella che ha scelto**. Questa è la **sua unica RD**.
 
@@ -874,9 +879,16 @@ malizia (Andor: la macchina non odia, esegue).
 
 | Risposta | Cosa comporta subito | Eco a lungo termine |
 |---|---|---|
-| **A. Accettare il pegno** (Hella o il party si impegnano a un servizio futuro verso il Sogno) | La Custode si inchina e svanisce; Hella torna con un **legame più forte** col Sogno della Terra (**Earth Dream** utilizzabile **2/giorno**). | Il Debito diventa una **quest ARC-09**: custodire un luogo del Sogno, o un servizio al Cerchio Sacro / al Ghostlord. Onorato = alleanza druidica rafforzata; ignorato → si degrada in "B". |
-| **B. Rifiutare / sfidare** (i PG cacciano la Custode, o Hella nega il debito) | La Custode **non combatte**: china il capo e si ritira. *«Come volete. Ma il vuoto si colma da sé — e la natura non è delicata.»* | Sessioni dopo, **qualcosa risale** dal Sogno per riempire il vuoto: un aggancio a un nemico ARC-09 (un non-morto della terra nel dominio del Ghostlord, o una **crepa** che la corruzione fungina di Sonjak sfrutta). Il rifiuto non è punito da un dio: è la natura che riempie i vuoti. |
+| **A. Accettare il pegno** (Hella, dalla soglia, si impegna a un servizio futuro verso il Sogno) | La Custode si inchina e svanisce; Hella torna con un **legame più forte** col Sogno della Terra (**Earth Dream** utilizzabile **2/giorno**). | Il Debito diventa una **quest ARC-09**: custodire un luogo del Sogno, o un servizio al Cerchio Sacro / al Ghostlord. Onorato = alleanza druidica rafforzata; ignorato → si degrada in "B". |
+| **B. Rifiutare / sfidare** (Hella, dalla soglia, nega il debito; o i PG cacciano la Custode, o nessuno risponde) | La Custode **non combatte**: china il capo e si ritira. *«Come volete. Ma il vuoto si colma da sé — e la natura non è delicata.»* | Sessioni dopo, **qualcosa risale** dal Sogno per riempire il vuoto: un aggancio a un nemico ARC-09 (un non-morto della terra nel dominio del Ghostlord, o una **crepa** che la corruzione fungina di Sonjak sfrutta). Il rifiuto non è punito da un dio: è la natura che riempie i vuoti. |
 | **C. Offrire Durik** (il collaterale vivente) | Durik — riforgiato **dal** Sogno della Terra — è già «metà di là». Offrirlo come **pegno vivente**: resta il **ponte** tra Hella e il Sogno. Il Debito è saldato con qualcosa che si ama. | Durik non è del tutto «suo»: **1 volta per sessione** può rispondere al Sogno prima che a Hella (il DM lo muove per un round secondo il Sogno — gancio RP doloroso, mai letale). In cambio il Debito è **saldato subito**: niente quest del Sogno in ARC-09, a differenza di A, e nessun vuoto che risale, a differenza di B `[CANONE — DM 2026-10-12, D81]`. |
+
+**Chi risponde** `[CANONE — DM 2026-10-18]`. L'ultima parola è di Hella. Il gruppo può parlare
+prima, e lo spirito sulla soglia lo sente; poi la giocatrice dice **una frase
+sola**, dalla soglia, e quella frase sceglie A, B o C. Se il gruppo propone
+Durik, la sua frase può solo accettare o rifiutare, e al §8 Hella ricorda chi
+l'ha proposto. Se nemmeno lei risponde, la Custode prende il silenzio per un
+rifiuto: vale B.
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -956,8 +968,8 @@ suo fianco. Se viene distrutto, lo richiama il **terzo seme** della Collana.
 fondono in un **torc vivente** di legno e metallo (la giocatrice la trova nel
 foglio *Hella, tornata*):
 - **Saggezza della Terra** (+4 SAG), **Corteccia del Guardiano** (+3 CA naturale);
-- **Avatar della Radice** (1/g: Ibrido Treant/Nano Enorme 10 round — +8 FOR,
-  portata, schianti);
+- **Avatar della Radice** (1/g: Ibrido Treant/Nano Enorme 10 round, +8 FOR,
+  portata 4,5 m, due schianti da Treant; profilo completo in Appendice A.3);
 - **Evocazione dei Guardiani** (3/g, un seme per volta): i semi I e II
   evocano ciascuno un **Treant di Adamantio** per 1 ora (statblocco in
   Appendice A), quindi al massimo due Treant. Il seme III richiama **Durik**
@@ -1064,7 +1076,7 @@ che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 
 **In scena** — Dove: l'affresco A6 — Chi: Moradin · Therysol
 
-> Riformato il cerchio, senza riposo, resta l'ultima soglia dell'arco: la Corona,
+> Riformato il cerchio, resta l'ultima soglia dell'arco: la Corona,
 > con Topazio e Smeraldo, può aprire il **portale del Tempo** (affresco A6).
 
 > **Il difetto che questa sezione chiude.** «Poi si apre il portale» è una
@@ -1089,7 +1101,7 @@ non promette. Dice quello che sa, e non di più.
 | La scelta | Cosa costa | Cosa apre |
 |---|---|---|
 | **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il viaggio a mille anni fa (`DEF-4`) parte con una posta reale invece che con un viaggio turistico |
-| **Cercare prima un'alternativa** | l'orologio di Hammerfist scorre (**3g 15h**, dopo il rito), e i PG lo sanno | una sessione in più, e un arrivo a Hammerfist con meno tempo |
+| **Riposare e prepararsi prima** | otto ore di sonno: l'orologio di Hammerfist scende di otto ore oltre a quello che segna adesso (il conto è nel §0), e i PG lo sanno `[CANONE — DM 2026-10-18]` | incantesimi e capacità al giorno recuperati, e un arrivo a Hammerfist con meno tempo |
 | **Mandare avanti uno solo** | Moradin rifiuta: *«Il varco conta quattro. Ne ha contati quattro anche mille anni fa.»* | niente — ma la battuta dice al tavolo **che di là li aspettano in quattro** |
 
 > 🎭 **Grigio politico.** Therysol non vuole che vadano. Il suo *Want* non
@@ -1116,8 +1128,9 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono resuscitarla PRIMA (Parte 2, appena ritrovata)** | Impossibile: i semi di treant e il viaggio dello spirito non sono ancora avvenuti. Moradin: *«Non ancora. Deve prima attraversare la Terra dentro di sé.»* |
-| **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, l'orologio di Hammerfist scorre e Hella resta morta: è una scelta, con un costo (Tordek devastato, nessun 4° PG al `DEF-4`). |
+| **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, Hella resta morta e **il varco non si apre**: conta quattro, e non apre per meno `[CANONE — DM 2026-10-18]`. Il rito si può fare quando vogliono, ma ogni ora che passa scende dall'orologio di Hammerfist, e Tordek la passa accanto al corpo. |
 | **Chiedono a Moradin di resuscitarla senza costi** | *«La magia non basta. Serve la vita. Io do il Cuore; voi date il resto — o lei torna monca di ciò che potevate donarle.»* (rifiuto totale, §5). |
+| **Vogliono dormire prima della soglia** | Si dorme `[CANONE — DM 2026-10-18]`. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
 | **Provano a incastonare il Cuore nella Corona** (è un rubino, e l'incasso è vuoto) | Non entra: il Cuore è grande come un pugno, l'incasso come un'unghia, e non è una gemma della Corona. Se insistono, Moradin: *«Quello è un cuore, non una pietra. Si spende, non si porta.»* Non dire altro sull'incasso (§2-bis) |
 | **Attaccano/scacciano la Custode delle Radici** (§6) | Non combatte: si ritira (ramo B). Nessun scontro — ma il vuoto si colmerà da sé, peggio. |
 | **Un PG vuole sacrificare la PROPRIA vita** (oltre il richiesto) | Moradin **rifiuta**: *«Non chiedo una morte per una vita. Chiedo un dono, non un baratto di anime. Rimetti via quel coraggio: ti servirà domani.»* (evita il martirio gratuito). |
@@ -1212,10 +1225,10 @@ Therysol `[CANONE — DM 2026-10-12, D81]`.
 
 | Oggetto (corredo di Hella, restituito) | Valore |
 |---|---|
-| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido) | ~4.000 mo |
+| **Cuoio borchiato +2** (ora venato di corteccia, adattato all'Ibrido; le borchie sono nodi di legno di ferro, non metallo `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: il druido SRD non porta il cuoio borchiato, che ha borchie di metallo) | ~4.000 mo |
 | **Mantello della Resistenza +2** | ~4.000 mo |
 | **Periapto di Saggezza +2** (⚠️ **non si somma** al +4 della Collana: due bonus di potenziamento alla stessa caratteristica non si sommano, vale il più alto; resta utile se la Collana è soppressa o perduta) | ~4.000 mo |
-| **Scudo di legno +1** | ~1.000 mo |
+| **Scudo leggero di legno +1** | ~1.000 mo |
 | **Scimitarra +1** | ~2.300 mo |
 | **Bacchetta di Cura Ferite Moderate** (25 cariche; da chierico, 2° livello, LI 3: SRD 750 × 2 × 3 = 4.500 mo a 50 cariche) | ~2.250 mo |
 | **LORDO restituito** | **~17.550 mo** |
@@ -1294,23 +1307,26 @@ ramo del rifiuto, risveglio, Collana, Treant) · `...-RICALIBRATO-alternative.md
    HELLA OAKENSHIELD — Dream Dwarf · Ranger 1 / Druida 12
    Ibrido Treant (risorta) · Neutrale Buono · Media
 ============================================================
-PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2, +2 scudo leggero di legno +1,
-  +3 naturale della Collana) · contatto 10 · colta alla sprovvista 20 · Iniz +0
+PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo
+  leggero di legno +1, +3 naturale della Collana) [CANONE — DM 2026-10-18] · contatto 10 · colta alla sprovvista 20 · Iniz +0
 BAB/Lotta: +10/+11 · Velocità 6 m (nana: l'armatura non la riduce)
-FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5) · CAR 12
+FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5), con il +4 della Collana
+  [CANONE — DM 2026-10-18] · CAR 12
 TS: Tempra alto · Riflessi medio · Volontà alto (SAG 20)
 Scurovisione 27 m (Dream Dwarf)
 ------------------------------------------------------------
 CAPACITÀ IBRIDO TREANT (dal viaggio + rito)
 • Doppio tipo Umanoide(Nano)/Vegetale · VULNERABILITÀ AL FUOCO ×1,5
-• Resistenza al Freddo 15 · Rigenerazione 1 pf/round (a contatto terra/pietra;
-  non se ha preso fuoco il round prima)
+• Resistenza al Freddo 15 · Guarigione rapida 1 (a contatto con terra o pietra;
+  sospesa nel round dopo un danno da fuoco) [CANONE — DM 2026-10-18]. È la
+  guarigione rapida SRD: Hella muore come chiunque altro
 • Empatia Vegetale +4 · Fotosintesi (1/g: 2d8 pf a 1h di sole)
 • Radicamento (1/g, 5 round: immune a spinta/travolgere/sbilanciare; immobile)
 • Marchio della Veritade (Prova I): +4 Diplomazia coi nani di Moradin; 1/g
   verità→Volontà CD 17 o scosso
 • Radice Silenziosa (Prova II): +2 Percepire Intenzioni; 1/g empatia immediata
-• Radici del Mondo (Prova III): rigenera su suolo sacro/druidico; 1/g
+• Radici del Mondo (Prova III): guarigione rapida 1 anche su suolo sacro o
+  druidico; 1/g
   Radicamento corale (+1 morale TS agli alleati entro 9 m, 5 round, lei immobile)
 DONI DEL PARTY (§5, solo se donati — segna quelli veri dopo il rito):
   [ ] Scudo del Custode (Thorik) - 1/g immediata, prende il danno di un alleato
@@ -1338,7 +1354,8 @@ COMPAGNO — DURIK RIFORGIATO (12 DV, 102 pf) · CA 21 (contatto 12, sprovvisto 
   Scheda completa: il foglio "Durik, il guardiano di pietra".
 Sempre presente; il 3° seme della Collana lo richiama se è distrutto. (Il rinoceronte visto in gioco è la FORMA
 SELVATICA di Hella, non un compagno.)
-EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2, Scudo di Legno +1,
+EQUIP (recuperato dal corpo, §11 C): Cuoio Borchiato +2 a borchie vegetali,
+Scudo leggero di Legno +1,
 Scimitarra +1, Periapto di Saggezza +2 (non si somma alla Collana: vale il +4), Mantello della Resistenza +2, Bacchetta
 di Cura Ferite Moderate (25 cariche).
 ARTEFATTO: Collana dei Semi Eterni (§7).
@@ -1353,14 +1370,105 @@ deciso il 2026-09-25: vale la scheda della giocatrice, e il §11 C è allineato.
 
 ### A.2 · Treant di Adamantio, evocato dalla Collana (§7)
 
-**Statblock — TREANT DI ADAMANTIO (evocato).** Costrutto/Vegetale, Grande · PF 90
-(RD 10/adamantio) · CA 24 (−1 taglia, +15 nat) · Vel 9 m · 2 schianti +18 (2d8+9)
-· **Siegebreaker** (danni ×2 a oggetti/strutture, ignora Durezza <20) · i colpi
-contano come adamantio · dura **1 ora**, al massimo due, uno per seme. Con
-Tordek donatore entro 9 m, resistenza al fuoco 10; con Artemis donatrice entro
-9 m, quando Artemis usa *Luce di Lathander* (il potere 1/giorno dell'Anello), i
-Treant hanno Rigenerazione 1 per tutta la durata. *«Corteccia di ferro freddo, foglie di mithral affilato,
-un cuore di energia terrestre.»*
+Il Treant dell'SRD 3.5, tenuto **Grande** come nel canone, con i numeri del
+canone dove sono più alti `[CANONE — DM 2026-10-18]`. *«Corteccia di ferro freddo, foglie di
+mithral affilato, un cuore di energia terrestre.»*
+
+```
+============================================================
+   TREANT DI ADAMANTIO (evocato dalla Collana) · GS ~10
+   Vegetale Grande · Neutrale Buono
+============================================================
+DV 10d8+50 · PF 90 (fissi, dal canone) · Iniz +0 · Vel 9 m
+CA 24 (-1 taglia, +15 naturale) · contatto 9 · colto alla sprovvista 24
+BAB/Lotta: +7/+20 (+7 BAB, +4 taglia, +9 FOR)
+Attacco: schianto +18 mischia (2d8+9)
+Attacco completo: 2 schianti +18 mischia (2d8+9)
+Spazio/portata: 3 m / 3 m
+Attacchi speciali: Travolgere 2d8+13 (Riflessi CD 24 dimezza);
+  danni doppi a oggetti e strutture, ignora Durezza sotto 20
+Qualità speciali: RD 10/adamantio · i colpi contano come adamantio ·
+  visione crepuscolare · tratti dei vegetali · VULNERABILITÀ AL FUOCO
+TS: Tempra +12 · Riflessi +3 · Volontà +8
+FOR 29 · DES 10 · COS 21 · INT 12 · SAG 16 · CAR 12
+Abilità: Ascoltare +8 · Osservare +8 · Percepire Intenzioni +8
+Talenti: Attacco Poderoso, Arma Focalizzata (schianto), Spezzare
+  Migliorato, Volontà di Ferro
+Durata: 1 ora, al massimo due Treant, uno per seme (§7)
+Legami: Tordek donatore entro 9 m, resistenza al fuoco 10.
+  Artemis donatrice entro 9 m, quando usa Luce di Lathander (il potere
+  1/giorno dell'Anello): Rigenerazione 1 per tutta la durata.
+============================================================
+```
+
+**I conti.** Base: il Treant SRD (Vegetale Enorme, 7 DV, FOR 29, DES 8,
+COS 21, INT 12, SAG 16, CAR 12, Ascoltare/Osservare/Percepire Intenzioni +8,
+Attacco Poderoso, Spezzare Migliorato, Volontà di Ferro). Avanzato a **10 DV**
+(SRD, *Avanzamento*: il Treant avanza per DV), che porta il quarto talento,
+Arma Focalizzata. Tenuto Grande: DES 10, come vuole la tabella SRD dei cambi
+di taglia, e taglia −1. DV 10d8 più COS +5 per dado danno 95 di media: vale il
+90 del canone. TS da vegetale con 10 DV: Tempra 7 + 5 = **+12**, Riflessi 3 + 0
+= **+3**, Volontà 3 + 3 + 2 (Volontà di Ferro) = **+8**. Lotta 7 + 4 + 9 = **+20**.
+CA 10 − 1 + 0 + 15 = **24**. Travolgere (SRD): danno dello schianto più 1,5 × FOR
+= 2d8+13, CD 10 + ½ DV + FOR = 10 + 5 + 9 = **24**.
+
+⚠ **Non SRD**, e vale il canone: FOR 29, armatura naturale +15 e RD 10/adamantio
+restano quelle del canone anche da Grande (l'SRD, scendendo di taglia, darebbe
+FOR 21 e +10); lo schianto fa **2d8** invece dell'1d8 di una creatura Grande; e
+il colpire è **+18** invece del +16 dei conti (+7 BAB, +9 FOR, −1 taglia, +1
+Arma Focalizzata): i due punti in più sono i colpi d'adamantio. Il Treant non
+anima gli alberi, come invece fa quello dell'SRD.
+
+**Tattica.** Obbedisce a Hella, che gli dà ordini a voce o col gesto. Senza
+ordini si mette fra lei e il nemico più vicino, e colpisce chi le arriva entro
+3 m. Contro chi vola fuori portata non può niente: si pianta accanto a Hella e
+la copre. Se c'è una porta, un muro o una macchina d'assedio, ci va contro
+prima che contro le persone. Non fugge e non si arrende: allo scadere dell'ora,
+o a 0 pf, torna seme.
+
+<!-- apparato -->
+Boost log: 2026-10-18 — Treant SRD (GS 8) avanzato a 10 DV e tenuto Grande coi numeri del canone — GS 8 → ~10 — alleato evocato da Hella: il tetto EL ≤ APL+4 riguarda i nemici e non si applica; il benchmark PF1e per GS 10 (pf ~125, CA ~24, colpire +18) lo colloca sotto la media per pf e in linea per CA e colpire.
+<!-- /apparato -->
+
+### A.3 · L'Avatar della Radice (§7)
+
+Hella diventa un Ibrido Treant/Nano **Enorme** per 10 round, 1 volta al
+giorno, con un'azione standard. Prende gli schianti e la portata del Treant
+SRD, più il +8 FOR del canone `[CANONE — DM 2026-10-18]`.
+
+```
+============================================================
+   HELLA, AVATAR DELLA RADICE · Ibrido Treant/Nano Enorme
+============================================================
+PF: quelli di Hella · CA 21 (-2 taglia, +13 naturale) · contatto 8 ·
+  colta alla sprovvista 21 · Vel 9 m
+BAB/Lotta: +10/+23 (+10 BAB, +8 taglia, +5 FOR)
+Attacco: schianto +13 mischia (2d6+5)
+Attacco completo: 2 schianti +13 mischia (2d6+5)
+Spazio/portata: 4,5 m / 4,5 m
+Attacchi speciali: Travolgere 2d6+7 (Riflessi CD 21 dimezza);
+  danni doppi a oggetti e strutture
+FOR 20 (12 + 8) · le altre caratteristiche restano quelle di Hella
+Restano: vulnerabilità al fuoco, guarigione rapida, i Doni del party
+Equipaggiamento: si fonde nella forma e smette di funzionare, come nella
+  forma selvatica; la Collana continua a funzionare
+Incantesimi: con Incantesimi Naturali, come nella forma selvatica
+============================================================
+```
+
+**I conti.** Schianti, portata e armatura naturale +13 vengono dal Treant SRD;
+quell'armatura naturale non si somma al +3 della Collana, e vale la più alta.
+Colpire 10 + 5 − 2 = **+13**, Lotta 10 + 8 + 5 = **+23**, CA 10 − 2 + 0 + 13 =
+**21**. Travolgere (SRD): 2d6 + 1,5 × 5 = 2d6+7, CD 10 + 6 (½ di 13 DV) + 5 =
+**21**. La velocità è quella del Treant SRD, 9 m.
+
+⚠ **Non SRD**: la taglia sale di due categorie con il solo +8 FOR del canone
+(l'SRD ne darebbe +16 e cambierebbe COS e DES), e Incantesimi Naturali vale
+qui anche se l'Avatar non è forma selvatica.
+
+<!-- apparato -->
+Boost log: 2026-10-18 — forma d'Avatar costruita sul Treant SRD — nessun cambio di GS di Hella (PG) — potere della Collana, il tetto EL non si applica.
+<!-- /apparato -->
 
 <!-- nuova-pagina -->
 
