@@ -134,7 +134,7 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
   (indistruttibili). Il pilastro corroso 💠 (G08) può essere fatto **crollare**
   (→ ponte o area bloccata).
 - **Posizioni iniziali**: Thorik F04, Artemis I04, Tordek G05. **Xorn 1** emerge
-  a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 180 pf) attende a
+  a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 181 pf `[CANONE — DM 2026-10-18]`) attende a
   G09 (⬛), sotto il pilastro.
 - **Tattiche Xorn (nemico, round-per-round)**: Earth Glide → **emergono, colpo
   pieno (3 artigli + morso), riaffondano** con **azione preparata** — NON restano
@@ -337,7 +337,7 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 - **Tattiche Terros (nemico — soglie & giro, DEF-1 §8)**: **345 pf**; a **260** usa
   **Scudo di Geodi** (+4 CA, no critici); a **172** si ritira sull'Altare e
   **rigenera 15/round** a contatto con la pietra; a **0** si sbriciola → **Smeraldo**.
-  Giro (3.5, 1 azione/round): full-attack 2 schianti +30 (2d10+10 + Push FOR 25) ·
+  Giro (3.5, 1 azione/round): full-attack 2 schianti +33 (2d10+12 + Push FOR 25) ·
   **Onda Gravitazionale** (ricarica 1d4: tutti "cadono" 9 m, Rifl 22) · **Stalattiti**
   (ricarica 5-6: 8d6 raggio 9 m) · **Earth Glide** dentro/fuori l'Altare. **−4 vs
   chi vola**; **sonico ×1,5**.

@@ -38,7 +38,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 3 | pilastro crolla sugli Xorn (10d6, Riflessi | 22 |
 | SCENA 3 | Azione di comando (Intimidire o Diplomazia | 18 |
 | SCENA 3 | Diplomazia | 18 |
-| SCENA 3 | Ali d'Ombra (che qui chiedono Volare | 20 |
+| SCENA 3 | qui chiedono una prova di Destrezza | 20 |
 | SCENA 4 | Osservare | 18 |
 | SCENA 5 | Sapienza Magica | 20 |
 | SCENA 5 | Volontà | 16 |
@@ -61,6 +61,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | metallico non-artefatto entro 9 m, Riflessi | 22 |
 | SCENA 7 | TS Volontà | 20 |
 | SCENA 7 | TS Tempra | 22 |
+| SCENA 7 | Riflessi | 19 |
+| SCENA 7 | chi è adiacente al bersaglio, Equilibrio | 15 |
+| SCENA 7 | chi è a terra, Riflessi | 18 |
 | SCENA 8 | Intrattenere Canto | 18 |
 | SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
@@ -71,9 +74,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | e perde l'azione di movimento (Riflessi | 15 |
 | SCENA 8 | Thorik resta con Riflessi | 22 |
 | SCENA 8 | centrato a scelta, 8d6 (contundente+perforante), Riflessi | 22 |
+| SCENA 8 | prende danni, gli altri tirano Riflessi | 22 |
 | SCENA 8 | FOR) contro | 25 |
 | SCENA 8 | Prima di leggerlo, Thorik tira Riflessi | 22 |
-| SCENA 8 | 2 schianti +30 e Push FOR | 25 |
+| SCENA 8 | 2 schianti +33 e Push FOR | 25 |
 | SCENA 8 | prova di FOR contro | 25 |
 | SCENA 8 | come repulsion, TS Vol | 20 |
 | SCENA 8 | Nuotare | 20 |
@@ -97,7 +101,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | le piattaforme, l'orizzonte | — | 7 |
 | SCENA 2 | le piattaforme | — | 8 |
 | SCENA 3 | la foresta | — | 8 |
-| SCENA 3 | Calibrazione rapida: Blast di Artemis ~28/colpo automatico; Thorik col | — | 3 |
+| SCENA 3 | Calibrazione rapida: Blast di Artemis ~28/colpo, manca solo con l'1 na | — | 4 |
 | SCENA 4 | il giardino dei cristalli | — | 8 |
 | SCENA 5 | (Posizione precedente — la riva dell'Oceano di Roccia, §7a — superata: | — | 2 |
 | SCENA 5 | il corridoio, 1 di 3 | Salvatore, solo per Artemis | 4 |
