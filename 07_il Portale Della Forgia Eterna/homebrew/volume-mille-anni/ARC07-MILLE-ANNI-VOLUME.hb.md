@@ -1690,6 +1690,22 @@ hobgoblin che sta per andare alla tenda. Fermarlo **non richiede di ucciderlo**:
   calcagna* · *con il campo pre-allertato* (corridore, allarme: un successo in meno
   nella prova delle mura della Scena 10, e Zog'tar sveglio).
 
+**Con un gruppo diverso: la riga di scala**. La
+scena è stata giocata da quattro PG di 13° (APL 13), e per loro resta com'è.
+La riga serve a un gruppo diverso: le statistiche sono quelle dell'Appendice
+A.6, cambia quanti sono.
+
+- **Con tre PG** (APL 12), o se in un gruppo di quattro manca un PG: la
+  pattuglia dei tre fallimenti marcia in due file da tre, sei hobgoblin invece
+  di otto, EL 9. Combatte in coppia come sempre, una coppia su ogni PG. Ogni
+  blocco dello skill challenge riesce con due successi su tre.
+- **Con cinque PG** (APL 13, come con quattro): la pattuglia marcia in due file
+  da sei, dodici hobgoblin, EL 11, sotto il tetto di 17. Cinque coppie vanno
+  una per PG, la sesta chiude la fila. Ogni blocco riesce con tre successi su
+  cinque.
+- **La squadra dei lupi resta di dieci** in tutti e tre i casi: è il giro del
+  campo, e non dipende da quanti escono dalla postierla.
+
 #### ✈️ Variante — dall'alto, invisibili e in silenzio
 
 Un tavolo che ha la dotazione dall'alto del re (Scena 4) o che vola da sé,
@@ -2157,6 +2173,38 @@ Il senso si decide in ARC-09. Il nome è quello del nipote, la freccia no:
 cosa c'è a nord non lo sa ancora nessuno, nemmeno il master
 .
 
+#### Se lo divinano: la natura di Balvar
+
+Al 13° il gruppo può lanciare *divinazione*, *comunione*, *individuazione dei
+pensieri* e *zona di verità*. Nessuno di questi incantesimi rompe la scena:
+ogni risposta porta dove la scena porta comunque, solo un passo prima, e chi ha
+lanciato arriva alla trattativa sapendo una cosa in più. Una riga per ciò che
+Balvar nasconde.
+
+- **Che cos'è.** *Individuazione del male* lo mostra malvagio: è un chierico di
+  Abbathor, neutrale malvagio. Non cambia niente, perché Balvar non finge di
+  essere un'altra cosa. Lavora per l'orda e lo si vede.
+- **Che sa chi sono.** *Divinazione* o *comunione* confermano che sa che i PG
+  non sono di questo secolo, ma non di quale, e che l'ha capito dalla Corona.
+  Saperlo prima toglie al tavolo la sorpresa del terzo box, non la trattativa.
+- **Il nipote.** *Individuazione dei pensieri* deve vincere la sua Volontà
+  (+17), e con un incantesimo di 2° livello ci riesce di rado. Se ci riesce,
+  il pensiero in superficie è quello che sta incidendo sull'ardesia: un nome,
+  Hald, e una data di nascita. Vale come l'Osservare CD 20 sulla lastra e apre
+  la stessa porta: chi gli parla del ragazzo per primo non lo trova chiuso.
+- **La Catena.** *Comunione* o *divinazione* sul drago rispondono che è legato
+  da una runa, e che l'ha incisa Balvar. Vale come aver letto la gemella sul
+  corno: i PG sanno che all'alba devono cercarla sulla scaglia sternale.
+- **Il patto con Zog'tar.** In una *zona di verità*, se fallisce il TS sulla
+  Volontà, Balvar non può mentire, e alla domanda giusta dice il suo prezzo:
+  che la fortezza cada in fretta e che chi si arrende non venga toccato.
+  Zog'tar non lo sa. Il nipote invece non lo nomina nemmeno lì, perché la zona
+  impedisce di mentire, non obbliga a parlare.
+- **Il suo nome.** *Leggende e tradizioni* non trova niente: la Cronaca non
+  ha il suo nome, e non l'avrà finché qualcuno non lo pronuncia. È il prezzo
+  che chiede ai PG, e chi ha lanciato l'incantesimo lo capisce prima degli
+  altri.
+
 #### L'eco a 1372 (il motivo per cui vale la pena)
 
 Balvar è morto da mille anni comunque vada. Ma:
@@ -2378,6 +2426,25 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   decapitazione, il finisher che il giocatore descrive esibito
   (`[HDYWTDT]`), un Treant che compare nella tenda: allora è anche **spettacolare**, e all'alba il drago arriva
   in picchiata. Un allarme senza spettacolo costa il successo e basta.
+
+**Con un gruppo diverso: la riga di scala**. La
+tenda è stata giocata da quattro PG di 13°, ed è a EL 17, il tetto esatto per
+APL 13. La riga serve a un gruppo diverso: i numeri restano quelli delle
+Appendici A.2 e A.4, cambia chi c'è nella tenda.
+
+- **Con tre PG** (APL 12, tetto 16), o se in un gruppo di quattro manca un PG:
+  davanti al seggio ci sono due guardie, non quattro. Le altre due sono fuori,
+  al giro delle tende con la ronda, e tornano solo con i rinforzi. Il
+  sacerdote dell'orda non si sveglia al primo grido: arriva al corno, insieme
+  alle ronde. Zog'tar, Balvar e le due guardie fanno EL 16; senza Balvar,
+  EL 15. Le due guardie restano davanti al seggio e non vanno su chi lancia.
+- **Con cinque PG** (APL 13, tetto 17): le guardie sono sei. Le due in più sono
+  quelle del turno dopo, sedute dietro il seggio, e si alzano al primo grido.
+  Due restano davanti a Zog'tar, le altre quattro vanno in coppia su chi lancia
+  incantesimi e su chi colpisce da lontano. Con Balvar e il sacerdote la tenda
+  resta a EL 17; senza Balvar, EL 16.
+- **I rinforzi, il corno e il drago** non cambiano: sono sopra il tetto per
+  scelta, con qualunque gruppo.
 
 **Il ritorno a piedi**. Dalla tenda alle
 mura si rigiocano i **cinque blocchi** della Scena 6, con le stesse regole.
@@ -2685,6 +2752,23 @@ di insegnare a un tavolo che indagare e rischiare non conviene è punire il
 fallimento con meno gioco. Qui a zero successi **si gioca di più**, non di meno.
 
 - ► **Esito**: *mura tenute saldamente / a stento / breccia ceduta*.
+
+**Con un gruppo diverso: la riga di scala**. Le mura
+sono state giocate da quattro PG di 13°, e la tabella conta i successi su
+quattro. La riga serve a un gruppo diverso. Quello che arriva dalla notte, un
+successo in più o in meno, si applica allo stesso modo.
+
+- **Con tre PG** (APL 12, tetto 16), o se in un gruppo di quattro manca un PG:
+  i successi si contano su tre. Tre valgono la riga del 4, due quella del 2-3,
+  uno e zero restano le loro righe. Se Zog'tar sale sulla breccia (con 0-1
+  successi), porta due guardie e non quattro: le altre due restano in fondo
+  alla scala a tenerla. Zog'tar e due guardie fanno EL 15.
+- **Con cinque PG** (APL 13, tetto 17): i successi si contano su cinque.
+  Cinque valgono la riga del 4, tre o quattro quella del 2-3, uno o due la riga
+  dell'1, zero la breccia che cede. Zog'tar sale sulla breccia con 0-2
+  successi, e porta le guardie della tenda, che con cinque PG sono diventate
+  sei, tutte alla testa delle scale alle sue spalle.
+  È la versione più forte, a EL 16, sotto il tetto.
 
 ### SCENA 11 — Il duello con Skullcrusher
 

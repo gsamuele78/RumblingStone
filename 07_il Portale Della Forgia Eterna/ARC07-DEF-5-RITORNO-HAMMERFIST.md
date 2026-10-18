@@ -493,8 +493,12 @@ nessuno: l'ondata seguente, i bugbear, è dell'ARC-08.
   del primo round, al posto di «ne restano due», di' «ne restano cinque,
   stretti intorno al più grosso». L'ordine di Thorik e il preavviso di Artemis
   arrivano tardi, perché gli hobgoblin sono già dentro: l'anello ne lascia
-  passare cinque, qualunque cosa facciano `[CANONE — DM 2026-10-18]`. Passano all'arco nel round 4 e
-  tirano al re dal round 5: qui Dana è davvero in pericolo.
+  passare cinque, qualunque cosa facciano `[CANONE — DM 2026-10-18]`. Qui i due in coda non
+  arrivano all'altare: nel round 3 si fermano a distanza di tiro, lasciano la
+  spada e passano il round a sfilare lo scudo e a estrarre l'arco (due azioni
+  di movimento, SRD), e tirano al re dal round 4; gli altri tre passano
+  all'arco nel round 4 e tirano dal round 5. Il primo tiro arriva dentro i
+  3-4 round dello scontro: qui Dana è davvero in pericolo `[CANONE — DM 2026-10-18]`.
 
 > **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultima spada cade sulla
 > pietra, e il rumore se ne va con lei. Restano il fumo dei bracieri, il

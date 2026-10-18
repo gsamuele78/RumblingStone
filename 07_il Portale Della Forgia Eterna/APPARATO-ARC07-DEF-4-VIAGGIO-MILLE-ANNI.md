@@ -81,6 +81,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | Conoscenze storia | 22 |
 | SCENA 7 | 13d6, Riflessi | 21 |
 | SCENA 7 | round 1 e slay living (Tempra | 20 |
+| SCENA 7 | Vale come l'Osservare | 20 |
 | SCENA 8 | Forza | 20 |
 | SCENA 8 | terra, intralciato, finché non supera Riflessi | 15 |
 | SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |

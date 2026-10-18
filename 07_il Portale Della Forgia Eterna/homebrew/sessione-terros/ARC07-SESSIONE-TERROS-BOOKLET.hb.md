@@ -1298,6 +1298,21 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 > colpisce Fauci col 7+, ma la RD 10 gli lascia poco: il suo lavoro è la via B e
 > reggere lo Spaccare. Scontro atteso 4-5 round, Artemis a ~2/3 pf in uscita.*
 
+**Con un gruppo diverso: la riga di scala**. Il
+gruppo che ha giocato questa scena era di tre PG di 13° (APL effettivo 12), e
+per lui la scena resta com'è. La riga serve a un gruppo diverso: le statistiche
+sono quelle qui sopra, cambia quanti Xorn ci sono e quando emerge il capo.
+
+- **Con tre PG**, o se in un gruppo di quattro manca un PG: lo scontro com'è
+  scritto, Fauci di Diamante e due Xorn comuni, EL 13.
+- **Con quattro PG** (APL 13): un terzo Xorn comune pattuglia sotto il
+  sentiero con gli altri due, e al round 1 emerge sotto il PG rimasto più
+  indietro. L'EL resta 13.
+- **Con cinque PG** (APL 13, perché la correzione per il numero scatta solo
+  da sei PG): quattro Xorn comuni, e Fauci di Diamante non aspetta il round 2.
+  Emerge già al round 1 sotto il PG che porta più metallo, come fa con Thorik.
+  È la versione più forte, ed è a EL 13, sotto il tetto di 17.
+
 **XP**: **1.700 a testa** al gruppo di oggi, **≈ 1.200** ai gruppi futuri (Fauci di Diamante GS 12 + 2 Xorn GS 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
