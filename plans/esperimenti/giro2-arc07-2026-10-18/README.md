@@ -206,16 +206,27 @@ lezione agli altri box.
 
 | | Dopo la varianza | Dopo le scelte del DM |
 |---|---:|---:|
-| Box | 128 | 122 |
-| Parole, mediana (IQR) | 54 (34-69) | 60 (44-82) |
-| Box oltre 100 parole | 0 | 17 |
+| Box | 128 | 120 |
+| Parole, mediana (IQR) | 54 (34-69) | 61 (45-82) |
+| Box oltre 100 parole | 0 | 18 |
 | Box oltre 12 righe, con parentesi | 0, 0 | 0, 0 |
-| Box con più di un nome (il metro conta anche i nomi noti) | 1 | 24 |
+| Box con più di un nome (il metro conta anche i nomi noti) | 1 | 23 |
 | Tag di canone, `[HDYWTDT]`, `[INFERRED]`, «Che fate?» | 476, 19, 5, 26 | uguali |
+
+La misura dei box impoveriti della PR #246 (`ciclo_prosa.box_impoveriti`,
+contro la versione di prima del rifacimento) ne trovava 26 su main; dopo le
+scelte del DM ne restano 11, e una correzione mirata li porta a 2. I due sono
+falsi positivi: la parola sensoriale c'è ancora, ma sta nella battuta del PNG
+che ora è fuori dal box.
+
+Il ritorno dei nomi noti è una lettura della norma (§2-ter della #246: il tetto
+di un nome proprio vale per i nomi nuovi), non un voto del DM. Il cieco su
+questo è diviso: Moradin in perifrasi perde nella coppia 5, ma il drago senza
+nome vince nella 6 e «la druida» al posto di Hella nella 10.
 
 I box sopra le 100 parole tornano perché sono i lunghi che il DM ha preferito,
 sempre entro le 12 righe. L'indicatore «più di un nome» sale perché
-`misura_craft` conta i nomi distinti, non quelli nuovi: i ventiquattro sono
+`misura_craft` conta i nomi distinti, non quelli nuovi: i ventitré sono
 quasi tutti nomi che il tavolo conosce. Per sapere se la passata sugli altri box
 si legge meglio serve un altro cieco, su un campione nuovo.
 

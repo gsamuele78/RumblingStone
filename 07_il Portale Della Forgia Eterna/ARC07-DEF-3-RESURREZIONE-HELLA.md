@@ -489,11 +489,11 @@ tre. Non alza mai il tono, e la Corona si scalda sulla fronte di Thorik.
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
 > mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
 > Una camera si schiude come un fiore di metallo, un petalo dopo l'altro.
-> Dentro, sospeso nella luce, c'è un rubino sanguigno grande come un pugno,
-> trasparente, con la forma di un cuore nanico: le quattro camere, i vasi
-> visibili. Pulsa sessanta volte al minuto, il ritmo di un cuore a riposo, e da
-> vicino è caldo. Una cosa così si spende una
-> volta sola.*
+> Dentro, sospeso nella luce dorata, c'è un cristallo di rubino sanguigno
+> grande come un pugno, trasparente, con la forma di un cuore nanico: le
+> quattro camere, i vasi visibili. Pulsa sessanta volte al minuto, il ritmo di
+> un cuore a riposo, e da vicino arriva il calore. La sua luce non promette un
+> secondo battito: una cosa così si spende una volta sola.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 

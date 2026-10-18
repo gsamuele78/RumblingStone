@@ -995,13 +995,14 @@ sue, con le sue cariche; i dati sono quelli di «Il Ritorno e gli Affreschi» §
 > «Il Ritorno e gli Affreschi». Qui conta l'apertura della Terra.)
 
 > **Read-aloud (Salvatore lead, LotR support) — l'affresco A5 e la Corona.** *Un rombo basso
-> sale dal pavimento ed entra nelle ossa; le colonne vibrano in risonanza.
-> L'Affresco Est, pietra grigia e inerte, si sgretola senza cadere, e la
-> pietra dipinta si fa pietra vera. Arriva l'odore di terra umida, di caverne
-> profonde, il sentore metallico dei minerali preziosi. Una gravità pesante
-> tira verso l'affresco. Le rune della Corona di Thorik passano dall'arancione
-> del Fuoco al verde di uno smeraldo profondo. Aegis Fang batte a terra da
-> sola: tump, tump, come un passo pesante che scende una scala senza fondo.*
+> sale dal pavimento ed entra nelle ossa; le colonne tremano, non di paura, di
+> risonanza. L'Affresco Est, pietra grigia e inerte, si sgretola senza cadere,
+> e la pietra dipinta si fa pietra vera. Arriva l'odore di terra umida, di
+> caverne profonde, il sentore metallico dei minerali preziosi. Una gravità
+> pesante tira verso l'affresco. Le rune della Corona di Thorik cambiano
+> colore, dall'arancione del Fuoco al verde di uno smeraldo profondo. Aegis
+> Fang batte a terra da sola: tump, tump, come un passo pesante che scende una
+> scala senza fondo.*
 
 > **Iscrizione che affiora (il messaggio di Moradin):**
 > *«Il Fuoco ha purificato lo Spirito.*
@@ -1125,9 +1126,9 @@ il Tempio. Nessuna prova di Sopravvivenza necessaria.
 #### ZONA 1 — Le Piattaforme di Cristallo (0–300 m)
 > **Read-aloud (Salvatore lead) — le piattaforme.** *Il primo passo fuori dal
 > portale è come camminare sul dorso di una bestia addormentata. Le
-> piattaforme grigio-verdi si susseguono nel buio, unite da ponti di pietra che
-> galleggiano senza fune né pilastro. Sotto, sopra, intorno: nulla, solo
-> cristalli lontani come stelle affogate. Ogni ponte oscilla appena sotto il
+> piattaforme di cristallo grigio-verde si susseguono nel buio, unite da ponti
+> di pietra che galleggiano senza fune né pilastro. Sotto, sopra, intorno:
+> nulla, solo cristalli lontani che brillano come stelle affogate. Ogni ponte oscilla appena sotto il
 > peso raddoppiato, e il cristallo, sotto gli stivali, risponde: un suono
 > basso, breve, come una campana che prova la voce. Il piano sa che siete
 > arrivati.*
@@ -1927,8 +1928,8 @@ negata.
 
 **Una riga di storia profonda**, da leggere se i PG toccano il muro del Tempio.
 
-> **Read-aloud (LotR lead) — il muro.** *Sotto le dita il mithral vibra
-> appena, come un'incudine che ricorda l'ultimo colpo.*
+> **Read-aloud (LotR lead) — il muro.** *Sotto le dita il mithral non è
+> freddo: vibra appena, come un'incudine che ricorda l'ultimo colpo.*
 
 Con Conoscenze (religioni) CD 15 chi ha toccato il muro sa il resto, e il DM
 lo dice così:
@@ -2224,8 +2225,8 @@ risveglio qui sotto.
 > **Read-aloud (LotR lead, Salvatore support) — il risveglio del guardiano.** *Poi la collina respira. Una fenditura si apre lungo la parete di roccia, e
 > la parete è una palpebra: due occhi di cristallo grezzo si accendono di una
 > luce minerale, fredda, senza odio e senza pietà, come guarderebbe una
-> montagna. Terros si erge, e ogni suo movimento è il boato di una faglia che
-> si assesta, basso, che arriva ai denti prima che alle orecchie. La gravità
+> montagna. Terros si erge, e ogni suo movimento è il suono di una faglia che
+> si assesta, un boato basso che arriva ai denti prima che alle orecchie. La gravità
 > della sala si piega verso di lui, come verso il padrone. Aegis Fang, nella
 > mano di Thorik, si fa fredda e tace di colpo: davanti all'Incudine del Mondo
 > anche una voce antica abbassa il capo.*
@@ -2504,22 +2505,18 @@ R4+: alterna i turni dentro l'Altare, le riemersioni con uno
 ```
 
 Prima di leggerlo, Thorik tira Riflessi CD 22: se fallisce, la sua riga si
-salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
+salta e Thorik cade con gli altri. Il box è un giro solo, una frase per PG.
 
-> **Read-aloud (Salvatore lead, Mercer support) — il primo scambio, Thorik.** *Terros non carica: si lascia cadere in avanti, e la camera intera cade con lui:
+> **Read-aloud (Salvatore lead, Mercer support) — il primo scambio.** *Terros non carica: si lascia cadere in avanti, e la camera intera cade con lui:
 > l'Onda strappa l'Altare da sotto i piedi come una tovaglia. Thorik,
 > l'armatura è àncora e bandiera insieme: Aegis Fang morde il bordo dell'Altare
 > con un suono di ferro, il braccio urla, e il morso tiene e vibra fino alla
-> spalla.*
-
-> **Read-aloud (Salvatore lead) — il primo scambio, Tordek.** *Tordek, il
-> mondo ruota e tu con lui. I Bracieri sussurrano una parola sola, «peso», e i
-> piedi restano piantati sull'Altare come su un pavimento.*
-
-> **Read-aloud (Salvatore lead) — il primo scambio, Artemis.** *Artemis, per
-> te nulla è cambiato: le ali d'ombra non obbediscono alla terra. Sotto di te
-> restano Terros, l'Altare, i compagni aggrappati a un mondo capovolto.
-> La testa di roccia si volta lentamente verso l'unico che non è caduto. Che fate?*
+> spalla. Tordek, il mondo ruota e tu con lui: i Bracieri sussurrano una parola
+> sola, «peso», e i piedi restano piantati sull'Altare come su un pavimento.
+> Artemis, per te nulla è cambiato: le ali d'ombra non obbediscono alla terra.
+> Sotto di te restano Terros, l'Altare, i compagni aggrappati a un mondo
+> capovolto. La testa di roccia si volta lentamente verso l'unico che non è
+> caduto. Che fate?*
 
 **Sinergie dei PG ("Shine Time").**
 - **Tordek — lo Scassa-Scudi**: RD 5/adamantio per reggere gli schianti; il
@@ -3155,15 +3152,15 @@ gravitazionale accanto all'Altare.
 
 > **Read-aloud (Salvatore lead, Casa di Davide support) — l'Altare, Durik prende forma.** *L'onda verde
 > percuote la camera con un tuono basso, e nel vortice la polvere di Terros si
-> mescola ai cristalli viventi: quelli che una polvere più antica, sparsa nel
-> Sogno della Terra da mani che amavano, ha già trovato e riempito. La materia
-> prende forma, guidata da qualcosa che preme sul mondo dei vivi prima del suo
-> tempo. Fauci enormi, zampe massicce da cane da galoppo, un dorso dove il
-> mithral si intreccia alla pietra scura come muscolo a osso. Gli occhi si
-> aprono: topazio. Non abbaia: fa un click di roccia, lo strofinio di una
-> faglia lontana. E prima ancora di guardare i vivi, si mette fra il corpo che
-> non c'è e il pericolo che non c'è più. Protegge qualcuno. Anche adesso. Anche
-> qui.*
+> mescola ai frammenti di cristallo vivente: quelli che una polvere più antica,
+> sparsa nel Sogno della Terra da mani che amavano, ha già trovato e riempito.
+> La materia prende forma, guidata da qualcosa che preme sul mondo dei vivi
+> prima del suo tempo. Fauci enormi, zampe massicce da cane da galoppo, un
+> dorso dove il mithral si intreccia alla pietra scura come muscolo a osso. Gli
+> occhi si aprono: topazio. Non abbaia. Il suono che fa è un click di roccia,
+> lo strofinio di una faglia lontana. E prima ancora di guardare i vivi, si
+> mette fra il corpo che non c'è e il pericolo che non c'è più. Protegge
+> qualcuno. Anche adesso. Anche qui.*
 
 > Comportamento canonico — risposta di Hella alla domanda di Moradin,
 > «Protegge Hella»: Durik **si muove sempre tra Hella e la fonte di pericolo

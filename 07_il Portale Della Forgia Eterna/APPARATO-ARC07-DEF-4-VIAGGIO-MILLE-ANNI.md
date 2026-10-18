@@ -145,7 +145,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 9 | l'anello | Andor lead | 2 |
 | SCENA 10 | le mura | Salvatore lead, LotR support | 9 |
 | SCENA 10 | il camminamento | Salvatore lead | 7 |
-| SCENA 11 | il cortile | Salvatore lead | 10 |
+| SCENA 11 | il cortile | Salvatore lead | 11 |
 | SCENA 11 | la visione, solo per Thorik | Mercer lead | 3 |
 | SCENA 11 | la runa sotto la scaglia | Salvatore lead | 4 |
 | SCENA 12 | l'incudine, e l'incasso che si chiude | LotR lead | 9 |

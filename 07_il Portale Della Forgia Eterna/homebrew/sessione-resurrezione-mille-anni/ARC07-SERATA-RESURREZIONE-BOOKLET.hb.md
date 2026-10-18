@@ -2479,11 +2479,11 @@ tre. Non alza mai il tono, e la Corona si scalda sulla fronte di Thorik.
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
 > mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
 > Una camera si schiude come un fiore di metallo, un petalo dopo l'altro.
-> Dentro, sospeso nella luce, c'è un rubino sanguigno grande come un pugno,
-> trasparente, con la forma di un cuore nanico: le quattro camere, i vasi
-> visibili. Pulsa sessanta volte al minuto, il ritmo di un cuore a riposo, e da
-> vicino è caldo. Una cosa così si spende una
-> volta sola.*
+> Dentro, sospeso nella luce dorata, c'è un cristallo di rubino sanguigno
+> grande come un pugno, trasparente, con la forma di un cuore nanico: le
+> quattro camere, i vasi visibili. Pulsa sessanta volte al minuto, il ritmo di
+> un cuore a riposo, e da vicino arriva il calore. La sua luce non promette un
+> secondo battito: una cosa così si spende una volta sola.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 
@@ -4707,7 +4707,7 @@ che decide cosa ne esce.
 > una vanga, la spada del padre. Una nana con le braccia bruciate fino al gomito
 > guarda ogni lama di taglio contro la brace e la mette in uno di due mucchi,
 > senza dire quale sia il buono. Sul banco dietro di lei, poco: qualche fiasca
-> cerata, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
+> chiusa con la cera, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
 > tocca. Vi vede entrare, e non smette di lavorare. Alza il mento verso
 > quello che avete addosso, e aspetta.*
 
@@ -6497,9 +6497,10 @@ della tabella del cortile qui sotto non ci sono; le corde sì, quelle degli arie
 rovesciati, con la stessa prova.
 
 > **Read-aloud (Salvatore lead) — il cortile.** *Prima arriva il freddo: passa
-> un'ombra, e l'aria del cortile perde dieci gradi in un respiro. Poi il rumore,
-> un risucchio come quello del mare che si tira indietro, e le braci della
-> forgia si piegano tutte nella stessa direzione. Un nano vicino a voi lascia
+> un'ombra, e l'aria del cortile perde dieci gradi in un respiro, e la pelle
+> lo sa prima di voi. Poi il rumore, un risucchio come quello del mare che si
+> tira indietro, e le braci della forgia si piegano tutte nella stessa
+> direzione. Un nano vicino a voi lascia
 > cadere lo scudo e non si china a raccoglierlo.*
 >
 > *Dove passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua

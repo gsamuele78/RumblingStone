@@ -102,7 +102,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
 | SCENA 1 | la Sala | LotR lead, Salvatore support | 5 |
-| SCENA 1 | l'affresco A5 e la Corona | Salvatore lead, LotR support | 8 |
+| SCENA 1 | l'affresco A5 e la Corona | Salvatore lead, LotR support | 9 |
 | SCENA 1 | «Il Fuoco ha purificato lo Spirito. | — | 5 |
 | SCENA 1 | l'attraversamento | Salvatore lead | 6 |
 | SCENA 2 | le piattaforme, l'orizzonte | LotR lead | 7 |
@@ -124,9 +124,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | la soglia, 2 di 2 | Salvatore lead, LotR support | 9 |
 | SCENA 8 | il risveglio del guardiano | LotR lead, Salvatore support | 8 |
 | SCENA 8 | il distacco, l'Altare | Salvatore lead | 10 |
-| SCENA 8 | il primo scambio, Thorik | Salvatore lead, Mercer support | 5 |
-| SCENA 8 | il primo scambio, Tordek | Salvatore lead | 3 |
-| SCENA 8 | il primo scambio, Artemis | Salvatore lead | 4 |
+| SCENA 8 | il primo scambio | Salvatore lead, Mercer support | 10 |
 | SCENA 9 | apertura del round 1 | Salvatore lead | 5 |
 | SCENA 9 | chiusura del round 1 | Salvatore lead | 4 |
 | SCENA 9 | apertura del round 2 | Salvatore lead | 5 |
