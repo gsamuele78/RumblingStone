@@ -1,5 +1,5 @@
-# Bothor / Melvur, guerrieri dell'Underdark [INFERRED — needs DM confirmation]
-**Faction**: unknown | **Role**: melee-heavy | **Environment**: underdark | **CR**: 6 | **Source**: PCGen save `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/00-underdark-grr6-Bothor-Malvur.pcg` (solo .pcg: «grr6» = guerriero 6) | **Status**: inferred
+# Bothor / Melvur, guerrieri dell'Underdark
+**Faction**: unknown | **Role**: melee-heavy | **Environment**: underdark | **CR**: 6 | **Source**: PCGen save `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/00-underdark-grr6-Bothor-Malvur.pcg` (solo .pcg: «grr6» = guerriero 6) | **Status**: accepted
 > ⚠️ **`underdark` era una fazione, ma è un ambiente.** Questa scheda è una
 > trascrizione PCGen del modulo RHoD **mai collocata in un arco** di questa
 > campagna: l'alleanza non è stabilita, e dichiararne una sarebbe inventarla.
@@ -35,7 +35,7 @@ voci:
 
 **Attacco** Vel 6 m (non rallentato dall'armatura) · **Mischia** ascia da guerra nanica +1 +13/+8 (1d10+8/x3); con Attacco Poderoso a −3, +10/+5 (1d10+11) · **Distanza** balestra leggera perfetta +8 (1d8/19-20) · **Attacchi speciali** Fendere; +1 ai tiri per colpire contro orchi e goblinoidi
 
-**Statistiche** For 20, Des 13, Cos 16, Int 10, Sag 12, Car 6 · BAB +6; Lotta +11 · **Talenti** Attacco Poderoso, Fendere [INFERRED — needs DM confirmation], Specializzazione nello Scudo (pesante) [Private source — Player's Handbook II], Ottimizzazione dell'Armatura Pesante [Private source — Player's Handbook II], Iniziativa Migliorata, Arma Focalizzata (ascia da guerra nanica), Specializzazione in un'Arma (ascia da guerra nanica) · **Abilità** Saltare +6, Scalare +3 · **Linguaggi** Comune, Nanico · **Equipaggiamento** (per ciascuno dei due) armatura completa +1, scudo pesante di metallo, ascia da guerra nanica +1, guanti della potenza dell'orco, mantello della resistenza +1, balestra leggera perfetta e 20 quadrelli, 2 pozioni di *cura ferite moderate*, 1 pozione di *resistenza dell'orso*, 2.763 mo
+**Statistiche** For 20, Des 13, Cos 16, Int 10, Sag 12, Car 6 · BAB +6; Lotta +11 · **Talenti** Attacco Poderoso, Fendere, Specializzazione nello Scudo (pesante) [Private source — Player's Handbook II], Ottimizzazione dell'Armatura Pesante [Private source — Player's Handbook II], Iniziativa Migliorata, Arma Focalizzata (ascia da guerra nanica), Specializzazione in un'Arma (ascia da guerra nanica) · **Abilità** Saltare +6, Scalare +3 · **Linguaggi** Comune, Nanico · **Equipaggiamento** (per ciascuno dei due) armatura completa +1, scudo pesante di metallo, ascia da guerra nanica +1, guanti della potenza dell'orco, mantello della resistenza +1, balestra leggera perfetta e 20 quadrelli, 2 pozioni di *cura ferite moderate*, 1 pozione di *resistenza dell'orso*, 2.763 mo
 
 **Capacità speciali** Tratti nanici (nano delle colline): scurovisione 18 m, esperto minatore, stabilità, +1 contro orchi e goblinoidi, +4 schivare contro i giganti, +2 ai TS contro veleni, incantesimi e capacità magiche.
 

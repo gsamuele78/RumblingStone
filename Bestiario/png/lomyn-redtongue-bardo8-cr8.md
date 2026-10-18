@@ -1,5 +1,5 @@
-# Lómyn RedTongue, bardo mezzelfo [INFERRED — needs DM confirmation]
-**Faction**: unknown | **Role**: caster-arcane | **Environment**: urban | **CR**: 8 | **Source**: PCGen save `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Lómyn redTongue bard 8.pcg` (solo .pcg, nessun export: build di 4° livello mai finita, coi fondi di un PNG di 8°) | **Status**: inferred
+# Lómyn RedTongue, bardo mezzelfo
+**Faction**: unknown | **Role**: caster-arcane | **Environment**: urban | **CR**: 8 | **Source**: PCGen save `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/Lómyn redTongue bard 8.pcg` (solo .pcg, nessun export: build di 4° livello mai finita, coi fondi di un PNG di 8°) | **Status**: accepted
 
 
 ```statblocco

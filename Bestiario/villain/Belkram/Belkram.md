@@ -40,8 +40,8 @@ ravvide**: morì redento, libero.
 - La sua morte redenta è un contrappunto alla morte di Hella nello stesso raid.
 
 ### Next hooks
-- `[INFERRED]` Belkram, redento, ha lasciato/detto qualcosa al party in punto
-  di morte? (da chiedere al DM — potenziale gancio emotivo/lore sulla Corona.)
+- Belkram muore redento senza lasciare niente al party (DM 2026-10-18): il
+  gancio sulla Corona passa dall'eco qui sotto.
 - Eco possibile: un portatore redento la cui storia i nani di Hammerfist
   ricordano (aggancio alle Cronache / Cerimonia delle 100 Asce, ARC-08).
 
