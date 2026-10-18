@@ -21,11 +21,11 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Scena | Prova | CD |
 |---|---|---:|
 | SCENA 1 | All'arrivo, Volontà | 15 |
-| SCENA 2 | L'altare si scala con Scalare | 15 |
-| SCENA 2 | sua Aura di Comando (1/giorno, comando | 15 |
-| SCENA 2 | 1d6, o nessun danno con Saltare | 15 |
+| SCENA 2 | si sale con Scalare | 15 |
+| SCENA 2 | niente con Saltare o Acrobazia | 15 |
+| SCENA 2 | 1/giorno, comando | 15 |
+| SCENA 2 | nessun danno con Saltare o Acrobazia | 15 |
 | SCENA 2 | di 6 m di raggio (Riflessi | 15 |
-| SCENA 2 | gli orchi nella caverna tirano Volontà | 25 |
 | SCENA 3 | −8 di penalità d'armatura lo Scalare | 15 |
 | SCENA 3 | legge Artemis con Usare Oggetti Magici | 27 |
 
@@ -33,10 +33,12 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
-| SCENA 1 | lo strappo, il filo | Salvatore | 7 |
-| SCENA 2 | la caverna, il mattatoio | LotR lead | 8 |
-| SCENA 2 | la caverna, 1 di 2: le porte | Salvatore | 5 |
-| SCENA 2 | la caverna, 2 di 2: voi | Mercer lead | 5 |
-| SCENA 2 | la corona intera | Salvatore | 5 |
-| SCENA 3 | la caverna, il primo round | Salvatore | 4 |
-| SCENA 3 | la caverna, il silenzio | Andor lead | 4 |
+| SCENA 1 | lo strappo, il filo | Salvatore lead | 7 |
+| SCENA 2 | la caverna, sotto la luce | LotR lead | 5 |
+| SCENA 2 | la caverna, l'ultima resistenza | Andor lead | 8 |
+| SCENA 2 | la caverna, sono tornati | Salvatore lead | 3 |
+| SCENA 2 | la caverna, voi | Mercer lead | 6 |
+| SCENA 2 | la corona intera | Salvatore lead | 5 |
+| SCENA 3 | la caverna, il primo round | Salvatore lead | 5 |
+| SCENA 3 | la caverna, il silenzio | Andor lead | 3 |
+| SCENA 3 | la caverna, il portale | LotR lead | 5 |

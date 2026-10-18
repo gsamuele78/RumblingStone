@@ -29,20 +29,28 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
-| SCENA 1 | la Sala | LotR lead + Salvatore | 9 |
-| SCENA 2 | gli affreschi, A1, 1 di 2 | LotR lead, deep time | 7 |
-| SCENA 2 | Quando siete partiti, | Casa di Davide — l'anointing dipinto | 11 |
-| SCENA 2 | Questo affresco mostra | Salvatore — la memoria che sanguina | 11 |
-| SCENA 2 | L'affresco di Est, che era una finestra di gravità e | — | 5 |
-| SCENA 2 | 1 di 2 | Andor lead — il tempo incerto | 10 |
-| SCENA 2 | Quando posate il corpo di Hella davanti alla tela, la luce | — | 7 |
-| SCENA 3 | l'affresco A2, la visione | — | 8 |
-| SCENA 4 | la Stanza della Corona | Salvatore + Casa di Davide | 10 |
-| SCENA 4 | la Stanza della Corona, l'incisione | — | 6 |
-| SCENA 5 | la Sala, l'addormentarsi (Salvatore + LotR) | — | 8 |
-| SCENA 5 | Sogni di essere ancora inginocchiato sull'Altare, e il peso c'è ancora | — | 7 |
-| SCENA 5 | Sogni una fiera. Non una fiera nanica: banchi bassi, teli chiari, una | — | 11 |
-| SCENA 5 | Il bazar te lo ricordi ancora: i teli chiari, i registri, tutto quel | — | 4 |
-| SCENA 5 | Sai anche, con la stessa certezza, che **qualcuno l'ha già aperta prim | — | 4 |
-| SCENA 5 | Non stai sognando: tu non dormi più. Ma per la prima volta da quando s | — | 11 |
-| SCENA 5 | Vi svegliate insieme, e nessuno dice niente per un | LotR | 5 |
+| SCENA 1 | la Sala, l'arrivo | LotR lead, Salvatore support | 8 |
+| SCENA 2 | gli affreschi, A1 «L'Alba del Mondo» | LotR lead, Casa di Davide support | 9 |
+| SCENA 2 | gli affreschi, A2, 1 di 2 | Casa di Davide lead, LotR support | 6 |
+| SCENA 2 | gli affreschi, A2, 2 di 2 | Casa di Davide lead, LotR support | 4 |
+| SCENA 2 | gli affreschi, A3, 1 di 3 | Salvatore lead, Casa di Davide support | 5 |
+| SCENA 2 | gli affreschi, A3, 2 di 3 | Salvatore lead, Casa di Davide support | 4 |
+| SCENA 2 | gli affreschi, A3, 3 di 3 | Salvatore lead, Casa di Davide support | 3 |
+| SCENA 2 | gli affreschi, A5, la Terra che si chiude | LotR lead, Mercer support | 6 |
+| SCENA 2 | gli affreschi, A6 «Il Viaggio Attraverso il Tempo», 1 di 2 | Andor lead, LotR support | 9 |
+| SCENA 2 | gli affreschi, A6, 2 di 2, dopo tre battiti | Andor lead, LotR support | 5 |
+| SCENA 2 | gli affreschi, A8, la manifestazione | Casa di Davide lead, Salvatore support | 8 |
+| SCENA 3 | l'affresco A2, la visione | Casa di Davide lead, LotR support | 8 |
+| SCENA 4 | la Stanza della Corona, l'ingresso | Salvatore lead, Casa di Davide support | 6 |
+| SCENA 4 | la Stanza della Corona, la parete dietro il trono | Salvatore lead, Casa di Davide support | 3 |
+| SCENA 4 | la Stanza della Corona, l'incisione, per chi porta la corona | Salvatore lead, Casa di Davide support | 6 |
+| SCENA 5 | la Sala, l'addormentarsi | Salvatore lead, LotR support | 6 |
+| SCENA 5 | la Sala, il sogno di Thorik | Salvatore lead | 6 |
+| SCENA 5 | la Sala, il sogno di Tordek, 1 di 2 | Andor lead, Salvatore support | 5 |
+| SCENA 5 | la Sala, il sogno di Tordek, 2 di 2 | Andor lead, Salvatore support | 5 |
+| SCENA 5 | la Sala, il sogno di Artemis, 1 di 2 | Andor lead, BG3 support | 5 |
+| SCENA 5 | la Sala, il sogno di Artemis, 2 di 2, quando ha riconosciuto la porta | Andor lead, BG3 support | 6 |
+| SCENA 5 | la Sala, il sogno di Artemis, senza il bazar | Andor lead | 1 |
+| SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 1 di 2 | Casa di Davide lead, LotR support | 6 |
+| SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 2 di 2 | Casa di Davide lead, LotR support | 5 |
+| SCENA 5 | la Sala, il risveglio | LotR lead | 5 |
