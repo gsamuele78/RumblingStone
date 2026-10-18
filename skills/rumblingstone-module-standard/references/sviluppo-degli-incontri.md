@@ -11,6 +11,14 @@
 - 6 · Lo skill challenge si scrive per intero
 - 7 · Chi si diverte in questa scena
 - 8 · Ogni scontro che il master rende possibile ha la sua tattica
+- 9 · Il segreto e la divinazione, dal 9° livello
+- 10 · Ogni scontro ha la sua riga di scala
+- 11 · Il mostro che nessun altro sostituisce
+- 12 · Il pericolo che qualcuno usa
+- 13 · L'incontro che resta uno
+- 14 · Il rinforzo che i PG vedono arrivare
+- 15 · Niente dossi al 13°
+- 16 · Il PG fuori gioco per un tiro salvezza
 <!-- /indice -->
 
 Nei colophon di Paizo e WotC il testo passa da due mani: l'editor chiede *«si
@@ -24,15 +32,24 @@ uno: il verdetto su ciascun punto, con le fonti e gli errori trovati, è in
 `plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`. Qui resta solo quello che ha
 superato il controllo, riscritto per la 3.5.
 
+Le §9-§16 vengono da un secondo giro, il 2026-10-18: le avventure della
+community 3.5 e PF1e (Pathfinder Society, i giudici di RPG Superstar, Necromancer
+e Frog God, Raging Swan, l'Alexandrian, il Gruppo Chimera), messe accanto ai
+nostri master. Sono le domande che lì si fanno e qui no, quasi tutte sull'alto
+livello. Le fonti e ciò che è stato scartato:
+`plans/RICERCA-AVVENTURE-COMMUNITY-2026-10.md`; la decisione:
+[ADR-0092](../../../plans/adr/ADR-0092-le-domande-dell-alto-livello.md).
+
 Si applica a ogni master nuovo o riscritto, **dopo** la checklist del
 `SKILL.md` e **prima** della lettura a freddo (`rumblingstone-playtest` §2-bis).
 
 **Chi le misura.** `python3 scripts/domande_developer.py` guarda la forma del
-testo per le domande 1-6 e dice in quale scena la risposta manca; `--check`
+testo per le domande 1-6, 9, 10, 15 e 16 e dice in quale scena la risposta
+manca; `--check`
 gira in CI, e un rilievo che non è un difetto si dichiara con la ragione in
 `plans/domande-developer.json`. È un indicatore: vede che la parola c'è («se
-volano», «l'allarme arriva in 2 round»), non che la risposta regga. La 7 non la
-misura nessuno. Calibrazione: `plans/esperimenti/domande-developer-def4/`.
+volano», «l'allarme arriva in 2 round»), non che la risposta regga. La 7, la 8 e le
+11-14 non le misura nessuno: per rispondere bisogna aver simulato lo scontro. Calibrazione: `plans/esperimenti/domande-developer-def4/`.
 
 ## 1 · La lente dei Tier: chi resta senza niente da fare
 
@@ -165,3 +182,111 @@ Esempio vero: il DM, preparando la seconda serata di `ARC07-DEF-4`
 tattiche. Le avevano Zog'tar, Balvar, Skullcrusher e il drago sulla tenda; non
 le avevano la pattuglia dei tre fallimenti, la squadra dei lupi, gli sciamani,
 le guardie della tenda e Zog'tar sulla breccia all'alba.
+
+## 9 · Il segreto e la divinazione, dal 9° livello
+
+Sotto l'11° livello un modulo può nascondere un'informazione; sopra, i PG la
+ottengono quando vogliono (Ryan Dancey, giudice di RPG Superstar 2011). Al 13°
+il gruppo ha *divinazione*, *comunione*, *leggende e tradizioni*, *scrutare*,
+*localizza creatura*. Un'indagine o un colpo di scena che regge solo sul segreto
+cade alla prima lancia.
+
+> **La domanda.** Per ogni segreto del master: **quale incantesimo lo rompe**,
+> **cosa ottiene chi lo lancia**, e **come prosegue il modulo** se lo rompono?
+
+La risposta giusta non è la schermatura, che toglie una capacità ai giocatori e
+li punisce per averla usata. È il modulo che cambia strada e premia chi ha
+lanciato: un nome in più, una scena saltata, un nemico che se ne accorge. Si
+scrive in un blocco **«Se lo divinano»**, uno per master, una riga per segreto.
+Vale anche per i testimoni: il TS Volontà di chi si interroga, e cosa succede
+con *charme*, *zona di verità*, *individuazione dei pensieri*, *parlare con i
+morti* (`rumblingstone-indagine` per la forma del nodo).
+
+È la §2 applicata ai segreti invece che ai luoghi.
+
+## 10 · Ogni scontro ha la sua riga di scala
+
+La sidebar «Scalare lo scontro» della checklist è per il boss. Pathfinder
+Society ne mette una a **ogni** combattimento, in una frase, e la lega alla
+storia. Per un gruppo fisso di quattro serve soprattutto quando un PG manca: è
+già successo, con Hella morta fino alla resurrezione di DEF-3.
+
+> **La domanda.** Lo scontro dice cosa cambia **con tre PG** e **con cinque**?
+
+Non «togli un hobgoblin», ma chi manca e dove si sposta l'altro: *«con tre PG
+manca il sergente, rimasto al corno: l'allarme parte un round prima»*. I numeri
+restano quelli dell'appendice; la riga dice solo chi c'è. Un modulo che scala
+in un indice maestro (l'Abbazia) lo dichiara nel profilo e non ripete la riga.
+
+## 11 · Il mostro che nessun altro sostituisce
+
+Il giudice developer di RPG Superstar, e prima di lui un concorrente: *se
+cambiassi questo mostro con un altro dello stesso GS, l'incontro funzionerebbe
+ancora?*
+
+> **La domanda.** Il nemico fa **qualcosa che un altro dello stesso GS non
+> farebbe**? Se no, è un segnaposto, e il GS si spende meglio altrove.
+
+Vale doppio per il villain. Quello che piace di più non se ne va dopo aver
+parlato: la critica più netta del 2016 è stata la strega che sparisce a metà
+scontro, che sarebbe stata il villain giusto.
+
+## 12 · Il pericolo che qualcuno usa
+
+*«Perché non c'è niente che spinga i PG nel magma?»* (Steven T. Helt, RPG
+Superstar 2016).
+
+> **La domanda.** Ogni pericolo della mappa (lava, precipizio, corrente, fuoco)
+> ha **almeno un nemico che ci spinge dentro i PG**, e i PG possono usarlo
+> contro i nemici?
+
+Un pericolo che nessuno usa è scenografia, e allora va nel box, non nelle
+tattiche.
+
+## 13 · L'incontro che resta uno
+
+> **La domanda.** Nell'ordine in cui il tavolo probabilmente lo gioca, lo
+> scontro **resta uno**, o diventa due di seguito, ognuno più debole?
+
+Succede quando i nemici sono in due stanze, o quando la trappola scatta solo
+dopo. Lo scontro diviso costa due volte il tempo e la metà della tensione: o si
+uniscono (i secondi arrivano al round 2, e lo si scrive) o si dichiarano due
+incontri con il loro EL.
+
+## 14 · Il rinforzo che i PG vedono arrivare
+
+*«Il DM sa che arrivano i rinforzi, i PG no»*, quindi non c'è urgenza (Owen
+K.C. Stephens). La §4 dice chi sente e in quanti round arriva; questa dice se
+**il tavolo** lo sa.
+
+> **La domanda.** Se arrivano rinforzi, i PG hanno **un segno che li avverte**
+> prima che arrivino: un corno, dei passi, una porta che sbatte, un conto alla
+> rovescia?
+
+## 15 · Niente dossi al 13°
+
+Un gruppo di nemici di GS basso, dal 9° livello in su, sparisce con un
+incantesimo ad area. Paizo li chiama *speed bumps*, dossi: costano spazio e
+tempo e non tolgono risorse.
+
+> **La domanda.** Se lo scontro ha **sei o più nemici contati**, il testo dice
+> cosa li tiene in vita (copertura, dispersione, ondate, un capo che li
+> raduna)? Oppure diventa **un boss e un luogotenente**?
+
+Un'orda che serve a dare l'allarme o a coprire una fuga può morire in un round:
+allora lo si scrive, e il rilievo si chiude con la ragione.
+
+## 16 · Il PG fuori gioco per un tiro salvezza
+
+*Dominare*, *paralizzare*, *pietrificare*, *blocca persone*, *confusione*:
+effetti che con un TS fallito tolgono un giocatore dal tavolo per molti round.
+Sono legali e fanno paura, ed è giusto che ci siano. Il problema è il giocatore
+che guarda.
+
+> **La domanda.** Per ogni effetto «salva o sei fuori» negli scontri: come ne
+> esce il PG (**un nuovo TS**, un alleato che lo libera, la durata), e **cosa fa
+> il giocatore** nel frattempo (un PG dominato lo muove lui, con gli ordini del
+> nemico)?
+
+Stordito e frastornato durano di norma un round, e non contano. La versione più
+forte dell'effetto resta: la domanda chiede la via d'uscita, non lo toglie.

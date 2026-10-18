@@ -240,6 +240,28 @@ NORME_SCOPERTE = (
                    "conteggio delle tattiche per scontro",
     },
     {
+        "chiave": "lo_scontro_simulato",
+        "norma": "sviluppo-degli-incontri.md §11-§14 — il mostro insostituibile, il pericolo "
+                 "che qualcuno usa, l'incontro che resta uno, il rinforzo che i PG vedono",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "come per la §8, la risposta si vede solo simulando lo scontro nell'ordine "
+                "probabile: lo legge il developer a freddo (ADR-0092)",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "statistiche_base",
+        "norma": "ADR-0092 — lo statblocco di un PNG che si prepara porta la riga "
+                 "«Statistiche base», e Prima del combattimento dice avvisato e sorpreso",
+        "prerequisito": "un lotto che porta la riga sugli statblocchi che la vogliono",
+        "forma": None,
+        "dove": "11 statblocchi su 37 la vogliono e non ce l'hanno (PIANO-AVVENTURE-COMMUNITY "
+                "§3): un controllo oggi fallirebbe su schede che nessuno sta toccando",
+        "rilevatore_pronto": None,
+        "sblocca": "il primo lotto che porta la riga: allora un conto in validate_bestiario --forma",
+    },
+    {
         "chiave": "appunti_quattrocento_parole",
         "norma": "quiz-a-due-agenti.md — gli appunti del lettore stanno in 400 parole",
         "prerequisito": "gli appunti di ogni esecuzione del quiz stanno in un posto fisso del repo",

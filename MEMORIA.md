@@ -112,6 +112,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
 | 2026-10-18 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le `[PROPOSTA]` di gioco diventano canone: tenda di Zog'tar (M7C), metà sud del… | ✅ zero `[PROPOSTA]` aperte nel contenuto |
 | 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
@@ -123,11 +124,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4 di conferma su DEF-4 | ✅ lettore, playtester e DM a freddo, nessun 🔴; rilievi corretti nel master o portati al DM (D64-D76), tutte decise |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D74 decisa dal DM, sì a tutto: i sedici dettagli del playtester diventano canon… | 🟡 nessuna decisione aperta; resta il DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il playtester a freddo su DEF-4 (🔴 0 · 🟠 6 · 🟡 17), corre… | 🟡 playtester fatto; aperta D74, resta il DM a freddo |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | D69-D71 decise dal DM e applicate in DEF-4: Zog'tar catturato e il suo dopo, le… | 🟡 applicate; aperte D72-D73 |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 259 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 14 aperte, 262 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

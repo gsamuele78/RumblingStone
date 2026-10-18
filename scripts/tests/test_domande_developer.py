@@ -136,3 +136,66 @@ class TestIlRepo(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestD9IlSegretoELaDivinazione(unittest.TestCase):
+
+    SEGRETI = ("### SCENA 1 — La locanda\n\nIl segreto di Varis è nel registro.\n\n"
+               "### SCENA 2 — Il tempio\n\n#### Nodo d'indizio — la lapide\n")
+
+    def test_al_tredicesimo_senza_blocco_scatta(self):
+        self.assertIn(("D9", "—"), regole(self.SEGRETI))
+
+    def test_il_blocco_in_forma_fissa_tace(self):
+        testo = self.SEGRETI + "\n**Se lo divinano** — *comunione* dice il nome del mandante.\n"
+        self.assertNotIn(("D9", "—"), regole(testo))
+
+    def test_sotto_il_nono_livello_tace(self):
+        self.assertNotIn(("D9", "—"), regole(self.SEGRETI, {"apl": 5}))
+
+    def test_un_segreto_solo_non_basta(self):
+        testo = "### SCENA 1 — La locanda\n\nIl segreto di Varis è nel registro.\n"
+        self.assertNotIn(("D9", "—"), regole(testo))
+
+
+class TestD10LaRigaDiScala(unittest.TestCase):
+
+    SCONTRO = "### SCENA 1 — Le mura\n\nZog'tar e quattro guardie, EL 14.\n"
+
+    def test_scontro_senza_scala_scatta(self):
+        self.assertIn(("D10", "SCENA 1"), regole(self.SCONTRO))
+
+    def test_con_la_riga_tace(self):
+        testo = self.SCONTRO + "Con tre PG manca il sergente, che resta al corno.\n"
+        self.assertNotIn(("D10", "SCENA 1"), regole(testo))
+
+
+class TestD15LOrdaDiGsBasso(unittest.TestCase):
+
+    ORDA = "### SCENA 1 — Il guado\n\nDodici hobgoblin guerrieri, EL 12.\n"
+
+    def test_orda_senza_risposta_scatta(self):
+        self.assertIn(("D15", "SCENA 1"), regole(self.ORDA))
+
+    def test_le_ondate_tacciono(self):
+        testo = self.ORDA + "Arrivano in tre ondate di quattro, a 30 m l'una dall'altra.\n"
+        self.assertNotIn(("D15", "SCENA 1"), regole(testo))
+
+    def test_sotto_il_nono_livello_tace(self):
+        self.assertNotIn(("D15", "SCENA 1"), regole(self.ORDA, {"apl": 4}))
+
+
+class TestD16IlPgFuoriGioco(unittest.TestCase):
+
+    STREGA = "### SCENA 1 — La torre\n\nLa strega, GS 13, lancia *dominare persone* sul guerriero.\n"
+
+    def test_senza_uscita_scatta(self):
+        self.assertIn(("D16", "SCENA 1"), regole(self.STREGA))
+
+    def test_il_nuovo_ts_tace(self):
+        testo = self.STREGA + "Ogni ordine contrario alla sua natura concede un nuovo TS.\n"
+        self.assertNotIn(("D16", "SCENA 1"), regole(testo))
+
+    def test_stordito_non_conta(self):
+        testo = "### SCENA 1 — La torre\n\nIl gigante, GS 13: chi è colpito resta stordito.\n"
+        self.assertNotIn(("D16", "SCENA 1"), regole(testo))

@@ -17,9 +17,20 @@ sulla forma del testo, e dice **dove** il problema c'è.
 | D5 | il boss ha una soglia in cui cambia (§5) | scena del boss |
 | D6 | lo skill challenge è scritto per intero (§6) | scena dello skill challenge |
 | D6-5E | abilità 5e con una CD o un bonus (§6) | il modulo intero |
+| D9 | i segreti reggono a una divinazione? (§9) | il modulo intero, dal 9° livello |
+| D10 | ogni scontro ha la sua riga di scala (§10) | scena di scontro |
+| D15 | un'orda di GS basso non è un dosso (§15) | scena di scontro, dal 9° livello |
+| D16 | chi è fuori gioco per un TS sa cosa fa (§16) | scena di scontro |
 
 La §7 (i sette modi di stare al tavolo di Robin Laws) **non** si misura: è un
-giudizio su chi si diverte, e lo chiede il playtester a freddo.
+giudizio su chi si diverte, e lo chiede il playtester a freddo. Lo stesso vale
+per la §8 e per le §11-§14 (il mostro insostituibile, il pericolo che qualcuno
+usa, l'incontro che si spezza, il rinforzo che i PG vedono arrivare): per
+rispondere bisogna aver simulato lo scontro.
+
+Le §9-§16 vengono dalla ricerca sulle avventure della community
+(`plans/RICERCA-AVVENTURE-COMMUNITY-2026-10.md`, ADR-0092). Il livello del
+gruppo sta nel profilo (`apl`); dove manca vale quello della campagna.
 
 ⚠️ **Sono indicatori, non sentenze.** Lo script vede la forma, non il
 senso: «vola» nel testo non dice che il nemico *resta* in quota, e un luogo
@@ -108,6 +119,33 @@ ABILITA_ESTRANEE = {"3.5": ("Atletica", "Intuizione", "Percezione", "Furtività"
 def _abilita_estranee(sistema: str) -> "re.Pattern":
     nomi = "|".join(ABILITA_ESTRANEE.get(sistema, ABILITA_ESTRANEE["3.5"]))
     return re.compile(rf"\b({nomi})\s*\**\s*(?:\(|CD\b|\+\d)")
+#: D9 · un master con dei segreti, dal 9° livello: i PG divinano. La risposta
+#: è un blocco in forma fissa, «Se lo divinano», non una parola sparsa: alla
+#: prima prova «segreto» e «indizio» per scena davano 2 rilievi veri su 7 (la
+#: targa di DEF-4 Scena 3 è un indizio da leggere, non un segreto da difendere).
+SEGRETI = re.compile(r"(?i)nodo d'indizio|\bsegret[oi]\b")
+SE_LO_DIVINANO = re.compile(r"(?i)se (?:lo|la|li|le) divinano|la magia contro (?:i segreti|l'indagine)")
+APL_CAMPAGNA = 13
+APL_DIVINAZIONE = 9
+#: D10 · la riga di scala, nella scena dello scontro (PFS, «Scaling Encounter»).
+SCALA = re.compile(r"(?i)scalar\w*|con (?:tre|cinque|sei|3|5|6) PG|se (?:manca|è assente|cade) un PG|"
+                   r"PG assent\w+|party (?:più forte|più debole|straripante)|per (?:tre|cinque) PG|"
+                   r"tavolo da (?:tre|cinque)|un PG in (?:meno|più)")
+#: D15 · un gruppo contato di sei o più nemici: al 9° livello un incantesimo
+#: ad area lo cancella, e il testo deve dire cosa lo tiene in vita.
+ORDA = re.compile(r"(?i)\b(?:[6-9]|[1-9]\d+|sei|sette|otto|nove|dieci|dodici|quindici|venti|trenta|"
+                  r"quaranta|cinquanta|cento)\s+(?:hobgoblin|goblin|orchi|orch[ei]|gnoll|coboldi|bugbear|"
+                  r"guerrieri|soldati|nani|scheletri|zombi|non morti|ratti|lupi|worg|sgherri|predoni|"
+                  r"banditi|cultisti|mercenari|elementali|guardie|fanti|arcieri|lancieri|razziatori|veterani)\b")
+REGGE = re.compile(r"(?i)\bad area\b|\bondat\w+|dispers\w+|sparpagl\w+|\bcopertura\b|a gruppi|"
+                   r"formazione|palla di fuoco|\bdoss[oi]\b")
+#: D16 · salva o sei fuori. Stordito e frastornato durano di norma un round, e
+#: non contano.
+FUORI_GIOCO = re.compile(r"(?i)\bdominat\w*|\bdominare\b|paralizz\w+|pietrific\w+|blocca (?:persone|mostri)|"
+                         r"\bcharme\b|confusion\w+|incapacitat\w+")
+USCITA = re.compile(r"(?i)il giocatore|chi è (?:dominat|paralizzat|pietrificat|confus)\w*|nuovo TS|"
+                    r"un altro TS|ogni round[^.\n]{0,30}TS|libertà di movimento|rimuovi paralisi|"
+                    r"liberarl\w|spezza(?:re)? (?:il|lo) (?:charme|dominio)")
 TS = {"Tempra": re.compile(r"\bTempra\b\s*\**\s*(?:CD\s*)?\**\s*\d+"),
       "Riflessi": re.compile(r"\bRiflessi\b\s*\**\s*(?:CD\s*)?\**\s*\d+"),
       "Volontà": re.compile(r"\bVolontà\b\s*\**\s*(?:CD\s*)?\**\s*\d+")}
@@ -134,6 +172,7 @@ def analizza(testo: str, profilo: "dict | None" = None,
     testo = cs.pulisci(testo)
     scene = cs.scene(testo, profilo.get("scena", cs.SCENA_DEF), profilo.get("escludi"))
     boss = _scene_boss(testo, scene)
+    apl = profilo.get("apl", APL_CAMPAGNA)
     fuori: "list[tuple[str, str, str]]" = []
 
     for titolo, corpo in scene:
@@ -152,6 +191,15 @@ def analizza(testo: str, profilo: "dict | None" = None,
             fuori.append(("D1", k, "scontro con un nemico in volo: niente per chi resta a terra"))
         if k in boss and not SOGLIA.search(corpo):
             fuori.append(("D5", k, "boss senza una soglia (pf, round, evento) in cui cambia"))
+        if SCONTRO.search(corpo):
+            if not SCALA.search(corpo):
+                fuori.append(("D10", k, "scontro senza la riga di scala (tre o cinque PG, un PG assente)"))
+            if apl >= APL_DIVINAZIONE and ORDA.search(corpo) and not REGGE.search(corpo):
+                fuori.append(("D15", k, f"«{ORDA.search(corpo).group(0)}»: niente dice cosa li tiene in vita "
+                              "contro un incantesimo ad area"))
+            if FUORI_GIOCO.search(corpo) and not USCITA.search(corpo):
+                fuori.append(("D16", k, f"«{FUORI_GIOCO.search(corpo).group(0)}»: non dice cosa fa il "
+                              "giocatore del PG fuori gioco, né come ne esce"))
         if SKILL_CHALLENGE.search(corpo):
             mancano = [nome for nome, rx in (("quanti successi", SC_QUANTI), ("chi tira", SC_CHI),
                                               ("cosa vale un successo", SC_SUCCESSO),
@@ -172,6 +220,13 @@ def analizza(testo: str, profilo: "dict | None" = None,
     for m in _abilita_estranee(sistema).finditer(testo):
         riga = testo.count("\n", 0, m.start()) + 1
         fuori.append(("D6-5E", f"r.{riga}", f"abilità «{m.group(1)}»: in {sistema} non esiste"))
+
+    # D9 · due scene con un segreto bastano a fare del master un master con segreti.
+    if apl >= APL_DIVINAZIONE and not SE_LO_DIVINANO.search(testo):
+        con_segreti = [cs.chiave_scena(t) for t, c in scene if SEGRETI.search(c)]
+        if len(con_segreti) >= 2:
+            fuori.append(("D9", "—", "segreti in " + ", ".join(con_segreti[:4])
+                          + ": manca il blocco «Se lo divinano»"))
 
     if con_ts:
         fuori += ts_mancanti(testo, profilo)
