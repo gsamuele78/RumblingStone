@@ -13,6 +13,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | i novanta nani | SCENA 2 | — | fino all'apparizione non parlano, contano. Dopo gridano tutti insieme una parola sola, il nome della fortezza |
 | gli orchi | SCENA 2 | — | urlano per farsi coraggio. Quando la luce li colpisce smettono, e chi scappa scappa senza voltarsi |
 | il capo degli orchi | SCENA 2 | — | urla ordini in orchesco finché ha qualcuno a cui darli, poi niente |
+| gli hobgoblin sergenti | SCENA 3 | — | non urlano. Gli ordini li dà un fischietto, e a ogni fischio la fila cambia forma |
 | Aegis Fang | SCENA 3 | — | canta, non parla: frasi brevi e in maiuscolo, che tutti nella caverna sentono (pagina dell'artefatto) |
 
 ## L'inserto delle CD
@@ -25,6 +26,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | 1d6, o nessun danno con Saltare | 15 |
 | SCENA 2 | di 6 m di raggio (Riflessi | 15 |
 | SCENA 2 | gli orchi nella caverna tirano Volontà | 25 |
+| SCENA 3 | −8 di penalità d'armatura lo Scalare | 15 |
 | SCENA 3 | legge Artemis con Usare Oggetti Magici | 27 |
 
 ## L'indice dei read-aloud, in ordine di gioco

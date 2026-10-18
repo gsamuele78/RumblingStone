@@ -79,8 +79,9 @@ guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
 quello non si dimentica.
 
 **Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
-tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
-incastonarla nell'Anello). Quindi, oggi:
+tocco a pelle nuda**: la voce arriva a ogni tocco, anche col guanto o col
+panno, ma firma solo la pelle `[CANONE — DM 2026-10-18]`, e Varis chiede di incastonarla
+nell'Anello. Quindi, oggi:
 
 | | Stato |
 |---|---|
@@ -144,7 +145,9 @@ sempre tiepido.
 **Le clausole** (sono il contratto):
 
 1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
-   anche senza volerlo. Guanto, panno o pinza non firmano. Non c'è tiro
+   anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
+   arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
+   `[CANONE — DM 2026-10-18]`. Non c'è tiro
    salvezza, perché il Seme non costringe: aspetta.
 2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
    nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci

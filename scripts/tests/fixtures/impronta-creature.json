@@ -37901,7 +37901,28 @@
     "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
    ]
   },
-  "Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr11.md": {
+  "Bestiario/mostri/treant-di-adamantio-cr10.md": {
+   "blocco": null,
+   "conti": [],
+   "lettura": {
+    "armatura": null,
+    "base_ts": {},
+    "classi": [],
+    "dado": 8,
+    "dv": 2,
+    "elite": false,
+    "gs": 10,
+    "manca": [],
+    "nome": "treant-di-adamantio-cr10",
+    "scudo": 0,
+    "taglia": "grande",
+    "tipo": null
+   },
+   "manca": [
+    "tipo di creatura (senza, dado dei DV e TS buoni sono una scelta)"
+   ]
+  },
+  "Bestiario/mostri/xorn-anziano-fauci-di-diamante-cr12.md": {
    "blocco": null,
    "conti": [],
    "lettura": {
@@ -37911,11 +37932,11 @@
     "dado": null,
     "dv": null,
     "elite": false,
-    "gs": 11,
+    "gs": 12,
     "manca": [],
-    "nome": "xorn-anziano-fauci-di-diamante-cr11",
+    "nome": "xorn-anziano-fauci-di-diamante-cr12",
     "scudo": 0,
-    "taglia": "medium",
+    "taglia": "grande",
     "tipo": "elemental"
    },
    "manca": [
