@@ -77,7 +77,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | prende danni, gli altri tirano Riflessi | 22 |
 | SCENA 8 | FOR) contro | 25 |
 | SCENA 8 | Prima di leggerlo, Thorik tira Riflessi | 22 |
-| SCENA 8 | 2 schianti +30 e Push FOR | 25 |
+| SCENA 8 | 2 schianti +33 e Push FOR | 25 |
 | SCENA 8 | prova di FOR contro | 25 |
 | SCENA 8 | come repulsion, TS Vol | 20 |
 | SCENA 8 | Nuotare | 20 |

@@ -3490,8 +3490,9 @@ Mischia: morso +34 (2d8+11) · 2 artigli +29 (2d6+5) ·
    2 ali +29 (1d8+5) · colpo di coda +29 (2d6+16)
 Schiacciare 2d8+16, Riflessi CD 29 (solo creature Piccole o minori)
 Soffio ACIDO: linea di 30 m, 16d4, Riflessi CD 29 ½
-Presenza Terrificante: raggio 63 m, Volontà CD 26 (meno di 25 DV)
-Capacità magiche: come A.1, più *crescita vegetale* 1/giorno
+Presenza Terrificante: raggio 72 m, Volontà CD 26 (meno di 25 DV)
+Capacità magiche: come A.1, ma *oscurità* con raggio 24 m,
+   più *crescita vegetale* 1/giorno
 Incantesimi da stregone, incantatore di 7°: 6/7/7/5 al giorno
 FOR 33 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
 Talenti, abilità e il resto: come A.1
@@ -3576,7 +3577,7 @@ Incantesimi (3/4/3; CD 12 + livello):
 ### A.3 · Durin Rocciadura (Scena 2)
 
 Nano Guerriero 6 · PF 52 · CA 22 (arm. completa +1, scudo) · BAB/Lotta +6/+10 ·
-Ascia Doppia +1 +9 (per lato, 1d8+5, 19-20/×3) · TS Temp +8, Rifl +2, Vol +3 ·
+Ascia Doppia +1 +9 (per lato, 1d8+5, 19-20/×3) · TS Temp +8, Rifl +2, Vol +4 ·
 FOR 18, COS 16, SAG 14. **Onesto e leale fino alla morte** una volta convinto;
 antenato di Othrek (Hammerfist 1372).
 
@@ -3636,7 +3637,7 @@ standard dell'SRD: nessuna ha una scheda sua nel repo.
 | **Ronda di orchi** | accorre alla tenda e agli scontri (Scene 6 e 8) | quattro orchi SRD (combattente 1, GS 1/2) e un sergente guerriero 3 |
 | **La pattuglia dei tre fallimenti** | skill challenge | otto hobgoblin guerrieri di 4° livello, EL 10: 30 pf, CA 15, spada lunga +6 (1d8+3/19-20), TS Temp +6 Rifl +2 Vol +0, Iniz +1, Vel 9 m, Ascoltare e Osservare −1; ogni round 1d6, con 1 uno corre alla tenda |
 | **Treant di Adamantio** | la Collana di Hella (Scene 5, 8, 10, 11) | Grande, 90 pf, RD 10/adamantio, CA 24, Vel 9 m, 2 schianti +18 (2d8+9), danni doppi alle strutture, FOR 28, TS Temp +11 Rifl +2 Vol +7, dura 1 ora |
-| **Wyvern** (2, scalatura per un gruppo di 13°) | scortano il drago dal round 2 (Scena 11) | SRD: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+2). Vanno su chi tiene la corda e su chi vola |
+| **Wyvern** (2, scalatura per un gruppo di 13°) | scortano il drago dal round 2 (Scena 11) | SRD: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 (1d6+4 e veleno, Tempra CD 17, 2d6 COS), morso +8 (2d8+4). Vanno su chi tiene la corda e su chi vola |
 | **Gli sciamani del campo** | dopo il corno | adepti orchi di 5° livello (GS 4), circa quindici: incantesimi 3/2/1, con *vedere invisibilità* fra quelli di 2° |
 
 <!-- nuova-pagina -->

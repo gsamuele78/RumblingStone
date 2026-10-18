@@ -105,11 +105,21 @@ Sono indicatori e non voti.
 
 ## Cosa questo giro non ha potuto verificare
 
-- **I numeri SRD non sono stati confrontati con d20srd.org.** Il proxy rifiuta
-  il sito e i crediti di Firecrawl sono finiti. Lettori e correttori hanno
-  rifatto i conti dalle tabelle SRD che conoscono, e lo scrivono nei loro
-  rapporti. Prima della stampa vanno confrontati con le pagine vere, a
-  partire dal rilievo #1 del developer di DEF-4.
+- **I numeri SRD sono stati confrontati dopo il giro, su mirror dell'SRD 3.5.**
+  d20srd.org resta bloccato dal proxy, e Firecrawl non ha crediti. Hanno
+  risposto il D&D Wiki, birthright.net e rpgcrossing.com, che riportano il
+  testo SRD 3.5. Il rapporto è [`VERIFICA-SRD.md`](VERIFICA-SRD.md), con
+  l'URL di ogni pagina: circa 40 voci confermate, compreso il rilievo #1 del
+  developer di DEF-4, e 9 discrepanze, tutte corrette. Gli attacchi degli
+  Xorn comuni sono passati a quelli SRD. Fauci ha la portata di 3 m e
+  l'ottavo talento. Terros sale al livello dell'Elementale anziano dell'SRD:
+  FOR 34, 9 m, schianto +33 (2d10+12), Lotta +42. Al Vecchio Skullcrusher
+  sono stati corretti i raggi della Presenza e dell'*oscurità*. Il morso
+  della viverna e la Volontà di Durin tornano col conto. Una cosa resta al
+  DM: Terros ha Robustezza, quindi i pf darebbero 348 e non 345. Il numero
+  non è cambiato, perché sposta le soglie 260 e 172 in più file, e lo
+  scontro è già stato giocato. Restano non verificati la tabella PX, i
+  servizi d'incantesimo, i tratti del tipo Elementale e il materiale non SRD.
 - **`registro_letture.py` non registra queste letture.** Vuole una corsa di
   `lettura_a_scene.py` con `stato.json`, mentre queste letture sono state
   fatte sul master intero. In più sono state fatte prima della correzione.

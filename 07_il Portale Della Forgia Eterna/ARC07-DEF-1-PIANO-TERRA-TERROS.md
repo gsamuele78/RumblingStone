@@ -152,7 +152,7 @@ completo stanno in `ARC07-DEF-2` §0-bis.
 pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 
 ### Il giro di Terros, in breve (3.5: UNA azione per round)
-1. **Full-attack** 2 schianti +30 (2d10+10). **UNO** dei colpi a segno porta
+1. **Full-attack** 2 schianti +33 (2d10+12). **UNO** dei colpi a segno porta
    la **Spinta** (3 m, prova di FOR CD 25, nani a terra +4) — gratis, la
    scegli tu, **una sola volta per round**. Nessun attacco di opportunità
    per nessuno.
@@ -654,23 +654,24 @@ il rifugio è sempre un geode.
 Esterno (Terra, Extraplanare), Grande · DV 21d8+87 (**181 pf**: 21 × 4,5 = 94,5, più COS +4 × 21 = 84, più Robustezza 3) · Iniz +0 ·
 Vel 6 m, Scavare 6 m (non lascia tunnel) · **CA 28** (−1 taglia, +19 nat), contatto 9, colto 28 · BAB/Lotta +21/+33 (21, FOR +8, taglia +4) ·
 Morso +29 mischia (4d8+8: BAB 21, FOR +8, taglia −1, Arma Focalizzata +1) · Full-attack: morso +29 (4d8+8) e 3 artigli +26 (1d6+4; secondari, −2 con Multiattacco) ·
-Spazio 3 m, portata 1,5 m · Visione a 360° (niente fiancheggiamento, mai colto in fallo) · **RD 10/contundente** · Scurovisione 18 m · Earth Glide ·
-Immune freddo e fuoco · Resistenza all'elettricità 10 · Percezione tremorica 18 m · TS Temp +16, Rifl +12, Vol +12 (buoni da esterno a 21 DV: +12) ·
-FOR 27, DES 10, COS 19, INT 10, SAG 11, CAR 10 (+2 alla FOR dai DV 16 e 20) · Talenti: Attacco Poderoso, Incalzare, Spinta Migliorata, Colpo Possente, Multiattacco,
-Robustezza, Spaccare Migliorato, Arma Focalizzata (morso) · Abilità: Ascoltare +24, Osservare +24, Cercare +24 ·
+Spazio 3 m, portata 3 m · Visione a 360° (niente fiancheggiamento) · **RD 10/contundente** · Scurovisione 18 m · Earth Glide ·
+Immune freddo e fuoco · Resistenza all'elettricità 10 · Percezione tremorica 18 m · TS Temp +16, Rifl +12, Vol +14 (buoni da esterno a 21 DV: +12; Volontà di Ferro +2) ·
+FOR 27, DES 10, COS 19, INT 10, SAG 11, CAR 10 (+2 alla FOR dai DV 16 e 20) · Talenti (8 per 21 DV, più Incalzare bonus come nell'SRD): Attacco Poderoso, Incalzare (bonus), Spinta Migliorata, Colpo Possente, Multiattacco,
+Robustezza, Spaccare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · Abilità: Ascoltare +24, Osservare +24, Cercare +24 ·
 **Speciale**: se morde un'arma o uno scudo magico che non è un artefatto, fa Spaccare (prova contrapposta, morso +33 con Spaccare Migliorato) e il morso ignora la durezza
 sotto 20; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
 ⚠ Non SRD: la RD dell'SRD è 5/contundente, l'armatura naturale è +16, e lo Spaccare che ignora la durezza e cura è del modulo.
 Contro questa RD i pugni di Tordek passano interi, e l'ascia di Thorik, che è tagliente, no.
 **Boost log** `[CANONE — DM 2026-10-18]`: avanzamento SRD di 6 DV (esterno: +1 GS ogni 2 DV, quindi +3), armatura naturale +3, RD da 5 a 10/contundente, Spaccare che cura. GS 8, poi 12. Serve un capo che regga 4-5 round contro tre PG di 13°.
-**Benchmark** (tabella PF1e dei mostri per GS): CA 28 e 181 pf come la riga 13; attacco +29, sopra la riga 16; danno pieno medio ~48, come la riga 10-11; TS +16/+12 come la riga 13. Il GS che i numeri valgono è **12**.
+**Benchmark** (tabella PF1e dei mostri per GS): CA 28 e 181 pf come la riga 13; attacco +29, sopra la riga 16; danno pieno medio ~48, come la riga 10-11; TS +16/+12, Volontà +14: la riga 13. Il GS che i numeri valgono è **12**.
 L'incontro, con i due Xorn comuni (GS 6), è **EL 13**: sotto il tetto di APL + 4 (APL effettivo 12, quindi 16).
 
 **Statblock — XORN standard ×2 (CR 6).** Esterno (Terra), Medio · DV 7d8+21
-(52 pf) · CA 24 (+14 nat), contatto 10 · Morso +9 (4d6+3) e 3 artigli +4
+(52 pf) · CA 24 (+14 nat), contatto 10 · Morso +10 (4d6+3) e 3 artigli +8
 (1d4+1) · **RD 5/contundente** · Immune freddo/fuoco, Resist. elettr. 10 ·
 Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 +5, Vol +5 · FOR 17, DES 10, COS 17. *Sotto 15 pf scavano via.*
+⚠ Non SRD `[CANONE — DM 2026-10-18]`: lo Xorn medio dell'SRD ha COS 15, 48 pf (7d8+17) e Tempra +7. COS 17, 52 pf e Tempra +8 sono un potenziamento del modulo.
 
 ### Tattiche degli Xorn — regia round per round (stile RHoD, agganciata a MAPPA T-2)
 
@@ -696,7 +697,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   metallico di anelli). Fauci di Diamante NON emerge: aspetta di sentire dove
   si pianta il "peso grosso" (Thorik).
 - **Round 2 — il morso al ferro.** Fauci di Diamante emerge **sotto Thorik**
-  (morso +22 ignora durezza <20; **Spaccare +26** su scudo/arma — se spezza,
+  (morso +29 ignora durezza <20; **Spaccare +33** su scudo/arma — se spezza,
   **cura 30 pf** e i suoi occhi si accendono di fame). I due standard mordono
   e si **rituffano** (mai 2 round di fila in superficie): il party DEVE
   preparare le azioni sulle emersioni.
@@ -1581,22 +1582,27 @@ veloce, e la regola è in 8c-1.
 ```
 ============================================================
    TERROS L'ANTICO — L'Incudine del Mondo (CR 15)
-   Elementale della Terra Avanzato (30 DV), Enorme
+   Elementale della Terra Anziano avanzato (30 DV), Enorme
 ============================================================
 Tipo: Elementale (Terra, Extraplanare) · All. Neutrale
 PF: 345  (30d8+210)
 Iniziativa: −1 (DES 8)
-Velocità: 6 m; Earth Glide 6 m (attraverso pietra).
+Velocità: 9 m; Earth Glide 9 m (attraverso pietra).
           NON vola: in zero-G si spinge dalle superfici
           (azione di movimento, Equilibrio CD 10).
-CA: 26 (−2 taglia, +18 naturale) · contatto 8 · colto 26
-BAB/Lotta: +22 / +40
-Attacchi: Schianto +30 mischia (2d10+10, 19-20/×2)
-Full-attack: 2 schianti +30/+30 (2d10+10)
-       Lancio di roccia (18 m): +19 (2d8+10)
+CA: 26 (−2 taglia, −1 DES, +19 naturale) · contatto 7 · colto 26
+BAB/Lotta: +22 / +42
+Attacchi: Schianto +33 mischia (2d10+12, 19-20/×2)
+Full-attack: 2 schianti +33/+33 (2d10+12)
+       Lancio di roccia (18 m): +19 (2d8+12)
 Portata: 4,5 m
-FOR 31(+10) DES 8(−1) COS 25(+7) INT 10 SAG 15(+2) CAR 11
-TS: Tempra +24 · Riflessi +9 · Volontà +12
+FOR 34(+12) DES 8(−1) COS 25(+7) INT 10 SAG 15(+2) CAR 11
+TS: Tempra +24 · Riflessi +9 · Volontà +14
+⚠ Non SRD [CANONE — DM 2026-10-18]: l'anziano dell'SRD ha armatura
+  naturale +15, COS 21 e SAG 11; qui +19, COS 25 e SAG 15. La FOR
+  34 è quella dell'SRD (33, più 1 punto ai 28 DV). Lancio di
+  roccia, immunità all'acido e agli effetti di forma, debolezza
+  al sonico e i poteri con ricarica sono del modulo.
 
 DIFESE
 • RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento
@@ -1633,7 +1639,7 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
      parete è a ~25 m). Per Tordek, che non vola, è un turno perso:
      è lui il vero bersaglio della Spinta.
 3) EARTH GLIDE (Ex): come azione di movimento entra nell'Altare/
-   parete e riemerge (fino a 6 m) alle spalle di un caster.
+   parete e riemerge (fino a 9 m) alle spalle di un caster.
    *Move Earth* lo blocca 1 round, senza stordirlo (Tempra CD 15)
    [CANONE — DM 2026-10-15, D89].
    L'Altare, mithral consacrato, conta come pietra anche per
@@ -1692,7 +1698,7 @@ CONTRO-MOMENTO (Thorik, "Radice a Terra") `[CANONE — DM 2026-07-31,
    È la barriera inamovibile del party — ed è la risposta all'arrocco
    dei 172 pf ora che il Diapason è speso.
    ► ERRATA: la vecchia stesura chiedeva una prova CONTRAPPOSTA vs
-     Lotta +40. Era ingiocabile (Thorik massimo 27 contro minimo 41:
+     Lotta +42. Era ingiocabile (Thorik massimo 27 contro minimo 43:
      nessuna combinazione di dadi vince). Si risolve invece con una
      PROVA DI FORZA (d20 + mod. FOR) contro CD 25 STATICA — stessa
      soglia della Spinta, stessa famiglia di manovra.
@@ -1765,7 +1771,7 @@ Fang si salta e Thorik cade con gli altri.
 - **Artemis — l'Artigliere/predone**: con le Ali d'Ombra resta fuori dalla
   mischia e **immune all'Onda Gravitazionale se in volo controllato**; i suoi
   Blast intercettano le stalattiti (contro-momento B) e macinano pf a contatto
-  (vs contatto 8: manca solo con l'1 naturale; in modalità sonica ×1,5). **Star DPS.**
+  (vs contatto 7: manca solo con l'1 naturale; in modalità sonica ×1,5). **Star DPS.**
 - **Thorik — l'Ancora**: prende il controllo del terreno inchiodando Terros in
   superficie (contro-momento "Radice a Terra"), assorbendo gli schianti dietro
   Aegis Fang + Corona.
@@ -1776,12 +1782,12 @@ Fang si salta e Thorik cade con gli altri.
 |---|---|---|
 | **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra `[CANONE — DM 2026-10-12, D85]` |
 | **Tordek** (Raffica +12/+12/+7/+2) | ~12 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
-| **Artemis** (Blast +16 vs **contatto 8**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | manca solo con l'1 naturale; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
+| **Artemis** (Blast +16 vs **contatto 7**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | manca solo con l'1 naturale; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
 | **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** `[CANONE — DM 2026-10-12, D85]` |
 
 | Bersaglio di Terros | Danno medio/round | Letalità |
 |---|---|---|
-| **Thorik** (CA ~28) | 2 schianti ≈ 42 + Push | ~3,5 round per abbatterlo — gestibile dietro lo scudo |
+| **Thorik** (CA ~28) | 2 schianti ≈ 46 + Push | ~3 round per abbatterlo — gestibile dietro lo scudo |
 | **Tordek** (CA ~27) | simile, ma il Push lo sbatte in zero-G | **pericoloso senza cure**: deve muoversi, non tankare |
 | **Artemis** (in volo) | quasi mai colpito (−4 vs aria) | minacciato solo da Stalattiti e Lancio di roccia |
 
@@ -1789,7 +1795,7 @@ Fang si salta e Thorik cade con gli altri.
 
 > | Situazione al tavolo | Aggiustamento |
 > |---|---|
-> | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (390 pf, attacchi +32, CD +1) e lo Scudo di Geodi parte **già attivo**; oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dall'Altare al round 3. Non volano: combattono sull'Altare, uno per nano, e non inseguono nello zero-G. Quando Terros cade tornano nella pietra |
+> | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (391 pf, attacchi +36, CD +1) e lo Scudo di Geodi parte **già attivo**; oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dall'Altare al round 3. Non volano: combattono sull'Altare, uno per nano, e non inseguono nello zero-G. Quando Terros cade tornano nella pietra |
 > | Party **logorato** (niente Frequenza, molte risorse spese, qualcuno sotto metà pf) | Terros usa l'Onda Gravitazionale **una sola volta**; la Rigenerazione scende a 10/round; NON insegue chi resta in zero-G ai margini |
 > | **Therysol scende** (deroga a D15 decisa al tavolo) | Conta come mezzo PG (supporto a distanza): riporta Terros al profilo pieno e togli il Diapason, che è monouso |
 > | Un PG scende a **−1 pf o meno** sull'Altare | la gravità del Nodo lo espelle subito sulla riva dell'Oceano di Roccia, stabile `[CANONE — DM 2026-10-14, D87]`. Terros passa al bersaglio in piedi: il voto è custodire lo Smeraldo, non uccidere i caduti. L'espulso non rientra nello scontro: dalla riva si torna solo rifacendo il salto del §7a, che dura più dello scontro. Il rito del §9 lo aspetta: lo Smeraldo resta sopra l'Altare finché non ci sono tutti e tre, e chi è rimasto torna a prenderlo rifacendo il §7a, con la Sentinella già battuta. Se l'espulso è Thorik, il rito aspetta lui, perché la Corona è legata al portatore. Il ritorno non muove l'orologio, se non riposano |
@@ -1808,7 +1814,7 @@ Fang si salta e Thorik cade con gli altri.
   dall'Altare `[CANONE — DM 2026-10-12, D85]`. Bersaglio prioritario: **chi tocca l'Altare** (Earth Mastery
   +1 su di loro).
 - **Fase di pressione (303–260 pf).** Full-attack su **Thorik** (la minaccia
-  che tiene la piattaforma): 2 schianti +30 e **Push FOR CD 25** per
+  che tiene la piattaforma): 2 schianti +33 e **Push FOR CD 25** per
   scaraventarlo fuori dal bordo 🟡 — un tank che fluttua non è più un tank.
   *(Concedi il momento Aegis Fang: la lancia Returning come gancio per
   rientrare — azione di movimento, puro colore Salvatore.)* Contro Artemis in
@@ -1868,7 +1874,7 @@ Terros** (oggetto meraviglioso: componente da **20.000 mo**, o base per un
 #### 8c-1. Artemis — il Blast, e i tentacoli neri
 
 **Cosa arriva.** Eldritch Blast **7d6** + 1d6 fuoco + 1d6 freddo (*Dual Flame
-Blessing*), tocco a distanza **contro CA di contatto 8**. Con *Eldritch Spear*
+Blessing*), tocco a distanza **contro CA di contatto 7**. Con *Eldritch Spear*
 la gittata è **75 m**: dentro una sfera di 60 m, **Artemis colpisce da
 ovunque a ovunque**. Con *Quicken Spell-Like Ability* (**3/giorno**) ne tira
 **due** in un round.
@@ -1876,7 +1882,7 @@ ovunque a ovunque**. Con *Quicken Spell-Like Ability* (**3/giorno**) ne tira
 | Fatto | Cosa comporta per te |
 |---|---|
 | È un'**abilità magica**, non un'arma | **la RD 10/— non la ferma**. Non toglierne 10: è l'unico danno del party che entra pieno |
-| Colpisce vs **contatto 8** | colpisce con tutto tranne l'1 naturale, che nell'SRD manca sempre |
+| Colpisce vs **contatto 7** | colpisce con tutto tranne l'1 naturale, che nell'SRD manca sempre |
 | ~**33** a colpo · ~**63** nel round quickened | è lo **star DPS designato**, previsto dal design |
 
 **«Modalità sonica» — la regola che mancava.** Le tabelle DPR citavano un
@@ -1911,7 +1917,7 @@ sono **immuni a ogni danno**. Durata 1 round per livello.
 
 | Interazione | Verdetto per il DM |
 |---|---|
-| Presa **+21** vs **Lotta +40** di Terros | **inutile**: anche col 20 naturale fa 41 contro un minimo di 41, e la parità va al modificatore più alto (8c-2b). Non è una tattica |
+| Presa **+21** vs **Lotta +42** di Terros | **inutile**: anche col 20 naturale fa 41 contro un minimo di 43 (8c-2b). Non è una tattica |
 | **2d6 freddo/round** | **funziona e non si può parare**: niente TS, niente tiro per colpire, ed è energia → **la RD non la ferma**. ~7/round |
 | Contro la **rigenerazione 15/round** | è qui il valore vero: la rigenerazione effettiva **scende da 15 a 8** finché Terros è nel campo |
 | **Earth Glide** | **la tua risposta**: Terros sprofonda nell'Altare, è *dentro* la pietra, fuori dall'area, e riemerge dove vuole. Il campo non lo segue nel sasso |
@@ -1921,7 +1927,7 @@ sono **immuni a ogni danno**. Durata 1 round per livello.
 ⚠️ **Il campo colpisce anche il party, e tu non devi avvisarli.** Presa +21
 contro Thorik (~+18) e Tordek: agguantati spesso, e **agguantato** significa
 niente attacco completo, niente muro di scudi, −2 DES alla CA — mentre
-incassa due schianti da 2d10+10. **Un campo di tentacoli sull'Altare fa
+incassa due schianti da 2d10+12. **Un campo di tentacoli sull'Altare fa
 saltare anche il rito del §9**: il rito comincia solo quando il campo si
 spegne, dopo 13 round. Se Artemis lo cala sui compagni, lascia che
 succeda: è una sua scelta, ed è il tipo di errore che si ricorda.
@@ -1973,17 +1979,17 @@ muro non è un divieto del DM, è aritmetica sulla scheda.
 | | Lotta |
 |---|---|
 | **Tordek** (Guerriero 4/Monaco 9 → BAB +10, FOR 14, taglia +0) | **+12** · con *Lotta Migliorata* **+16** |
-| **Terros** | **+40** |
+| **Terros** | **+42** |
 
-- Tordek massimo **36**. Terros minimo **41**. **Non esiste tiro in cui vince.**
+- Tordek massimo **36**. Terros minimo **43**. **Non esiste tiro in cui vince.**
 - **Ingrandito** (Grande: FOR 16, taglia +4) → **+21**: massimo 41 contro
-  minimo 41, e **le parità vanno al modificatore più alto**. **Ancora
+  minimo 43. **Ancora
   impossibile.** Servirebbe la taglia Mastodontica.
 
 > **⚠️ TERROS NON INIZIA MAI UNA LOTTA. Decisione di design, applicala.**
-> Rovesciati, i numeri sono automatici: tocco +30 contro CA di contatto ~20,
-> poi +40 contro +16. Tordek agguantato non ha uscite, e Terros gli
-> infliggerebbe **2d10+10 a ogni prova**, senza dover colpire. Sarebbe un
+> Rovesciati, i numeri sono automatici: tocco +32 contro CA di contatto ~20,
+> poi +42 contro +16. Tordek agguantato non ha uscite, e Terros gli
+> infliggerebbe **2d10+12 a ogni prova**, senza dover colpire. Sarebbe un
 > bottone che uccide un PG in due round e chiude male la serata.
 > **E non è nemmeno in personaggio:** il suo strumento è la **Spinta**, che
 > *allontana*. Lottare *avvicina*, ed è l'opposto del voto (liberare l'Altare).
@@ -1993,10 +1999,10 @@ muro non è un divieto del DM, è aritmetica sulla scheda.
 > notato.»* Un round di terrore, non una condanna.
 
 **E la spallata coordinata dei 172 pf?** Spinta = prova di Forza
-contrapposta; Terros difende con **+18** (FOR +10, Enorme +8 — *Spinta
+contrapposta; Terros difende con **+20** (FOR +12, Enorme +8 — *Spinta
 Migliorata* è un bonus di chi **inizia**, quindi in difesa non se lo somma:
 non lasciartelo contestare al tavolo). Tordek in carica con Aiuto arriva a
-**+6** → **vince il 7%**. Resta come colore, ma **non è più la risposta
+**+6** → **vince il 4%**. Resta come colore, ma **non è più la risposta
 all'arrocco: la risposta è «Radice a Terra»** (§8 statblock), che è stata
 riportata a CD 25 statica proprio per questo.
 
@@ -2018,9 +2024,9 @@ Neutrale, e la sua RD è 10/—.**
 |---|---|
 | Immunità a **paura e charme** | ❌ **inerte**: Terros non ha un solo effetto di paura o mentale |
 | **+4 sacro ai TS** | ✅✅ **l'unico motivo per cui vale**: Riflessi 22 (Onda, Stalattiti). Non vale sulla Spinta, che è una prova di Forza e non un TS |
-| **+2 CA sacro** | ⚠️ quasi cosmetico: attacca a **+30**, colpisce comunque |
+| **+2 CA sacro** | ⚠️ quasi cosmetico: attacca a **+33**, colpisce comunque |
 | I colpi **superano la RD come Buono/Legale** | ❌ **inerte**: la RD è **10/—**, non la supera nulla. **È la clausola su cui conteranno: chiariscila prima che brucino la carta per questo** |
-| **Aura di Timore** (Vol CD 20, 18 m) | ✅ gli elementali **non** sono immuni al mentale: Terros ha Vol +12 → **fallisce il 35%** e resta **Scosso** (−2 anche alla Lotta contrapposta) |
+| **Aura di Timore** (Vol CD 20, 18 m) | ✅ gli elementali **non** sono immuni al mentale: Terros ha Vol +14 → **fallisce il 25%** e resta **Scosso** (−2 anche alla Lotta contrapposta) |
 
 > **Sintesi da tenere a mente mentre arbitri: contro Terros la Trinità è uno
 > scudo di tiri salvezza, non un potenziamento del danno.** Se al tavolo se la
@@ -2041,7 +2047,7 @@ Oscura, Firestorm, i 3 Quicken di Artemis. I poteri di Mask e di Lathander
 qui non ci sono (§1). Arrivano a **risorse piene**, cosa che le tabelle DPR non assumono.
 
 **Allora usa il ramo già previsto dal riquadro *Scalare lo scontro*:** Terros
-**avanzato a 34 DV** (390 pf, attacchi +32, CD +1) e **Scudo di Geodi già
+**avanzato a 34 DV** (391 pf, attacchi +36, CD +1) e **Scudo di Geodi già
 attivo all'ingresso**. Non è una punizione per aver riposato: è ciò che tiene
 lo scontro sui ~12 round invece che sui ~10 `[CANONE — DM 2026-10-14, D87]`. E ti regala l'immagine giusta —
 **riposando hanno dato tempo anche a lui**: quando la soglia si apre, il
