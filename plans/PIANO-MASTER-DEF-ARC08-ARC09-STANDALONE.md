@@ -341,6 +341,34 @@ Un file va in archivio solo se nessuna sua parte è la migliore.
   [`esperimenti/a3-arc08/statblocchi-arc08-per-schede.md`](esperimenti/a3-arc08/statblocchi-arc08-per-schede.md),
   per il lavoro sulle schede (PR #241).
 
+## A4 · Lo standard del giro, dai giri su ARC-07 — 🟡 2026-10-18, norme scritte, aspetta D7 e D8
+
+Il DM, il 2026-10-18: *«controlla cosa hanno aggiunto ai vari giri nei thread
+che non è ancora diventato standard e che vale la pena aggiungere, non solo le
+mappe»*. L'audit, in sola lettura sui due giri di ARC-07, sulla cartella
+condivisa e sulle PR #246 e #251, è
+[`esperimenti/a3-arc08/AUDIT-GIRI-STANDARD-2026-10-18.md`](esperimenti/a3-arc08/AUDIT-GIRI-STANDARD-2026-10-18.md):
+58 pratiche, nove lacune.
+
+Fatto in questo lotto, con [ADR-0094](adr/ADR-0094-il-giro-ha-correzione-verifica-e-seconda-passata.md) (proposta):
+
+- [x] «Il giro» di `rumblingstone-module-standard` passa da cinque a otto passi:
+  correzione con quattro esiti, verifica di un agente nuovo, seconda passata;
+  il canone dal ramo di gruppo; le mappe corrette in ogni copia; le decisioni
+  del giro nella tabella del piano (B1, B4, B5, B6 dell'audit)
+- [x] `rumblingstone-playtest` §7-bis, la forma di `FIX.md` e `VERIFICA.md`
+- [x] `sviluppo-degli-incontri.md` §17 (quattro domande) e il codice dei rilievi (B3)
+- [x] `campaign-coherence.md`, il ramo di gruppo; `collaudo-mappe.md`, il primo
+  rapporto vero e le due copie; `RULES-VERIFICATION.md`, i mirror e il criterio (B2, testo)
+- [x] cinque righe 🔴 nel registro delle norme e in `superficie_norme.py`
+
+Resta, se il DM dice sì a D7:
+
+- [ ] `conformita_statblocchi.py` legge anche gli statblocchi dei master (B2)
+- [ ] `registro_letture.py` registra le letture sul master intero e il developer (B7)
+
+Le lacune B8 e B9 sono delle PR #251 e #246 e sono state girate ai loro thread.
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte
@@ -396,6 +424,8 @@ Per ogni master, prima di chiudere il lotto:
 | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
+| D7 | A4 | Rendere standard le sette pratiche dei giri prima del giro su ARC-08 (prima le sette · solo il giro · solo le regole di lettura)? Le norme sono già scritte in questo ramo; il sì porta anche i due script, B2 e B7 dell'audit. Consigliata: prima le sette |
+| D8 | A4 | Per i numeri: la copia locale dell'SRD 3.5 (OGL, nella cartella condivisa, fuori dal repo) o solo i mirror in rete? E i lettori del giro uno alla volta, come ha chiesto il DM, o in parallelo, come dice la skill? Consigliata: copia locale e uno alla volta, e la skill si allinea |
 
 ## Come si riparte in una chat nuova
 

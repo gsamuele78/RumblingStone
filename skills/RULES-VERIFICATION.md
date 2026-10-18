@@ -40,6 +40,26 @@ kept outside the repo):
 | `scripts/update_xp.py` | XP formula 500·N·(N−1) | none — thresholds correct |
 | `scripts/suggest_encounter.py` | DMG ch.3 EL doubling rule (see below) | none — 2·log₂ Σ2^(CR/2) reproduces "double creatures = EL +2" |
 
+## Numbers in the arc masters (`ARC*-DEF-*`)
+
+The masters carry their own statblocks and rulings, and the readers of a
+round (`rumblingstone-module-standard`, «Il giro») check them against the SRD.
+d20srd.org is blocked by the session proxy. These mirrors of the 3.5 SRD
+answered on 2026-10-18: `dungeons.fandom.com/wiki/SRD:*`,
+`birthright.net/wiki/index.php/*` (section «D20 SRD (3.5)»),
+`www.rpgcrossing.com/srd/*.html`; for PF1e, `legacy.aonprd.com`.
+
+**When a number is a discrepancy.** Only in two cases: the master attributes
+it to the SRD and the SRD says otherwise, or the arithmetic is wrong against
+verified rules. Choices marked `⚠ Non SRD`, `[CANONE — DM …]` or carrying a
+`Boost log` are declared choices, not discrepancies.
+
+Each round writes its report as a table (item · master file:line · URL · result).
+The first one: `plans/esperimenti/giro-arc07-2026-10-18/VERIFICA-SRD.md`
+(about 40 items confirmed, 9 discrepancies, all fixed). Six of the nine were
+arithmetic (AC, saves, attack bonus) that `conformita_statblocchi.py` would
+have caught had it read the masters.
+
 ## Not directly verifiable (and how each is handled)
 
 | Item | Why | Handling |
