@@ -45,8 +45,8 @@
 > breccia è aperta e l'ARC-08 parte in Fase 0 dura (`DEF-2` §0-bis e §8).
 >
 > **Come arrivano.** Riposati, perché hanno dormito nella Sala, e col sogno di
-> `DEF-2` §7-bis addosso: Hella, dall'altro lato, **ha già sentito Thorik dire
-> il suo nome nel sonno**.
+> `DEF-2` §7-bis addosso: Hella, dall'altro lato, **ha già sentito Tordek dire
+> il suo nome nel sonno**<!-- storico --> `[CANONE GIOCATO 2026-09-25]`: la voce del foglio 06 di Hella<!-- /storico -->.
 >
 > <!-- storico -->
 > 🧭 **Riordinato il 2026-09-25, su richiesta del DM.** Il corpo si legge in
@@ -1015,6 +1015,13 @@ Cuore sul suo petto; nessuno la vede. Se un PG si offre («lo porto io»), la
 Custode non lo guarda: il debito è della radice, e la radice è di Hella.
 L'offerta resta detta e lo spirito la sente, ma la frase che sceglie resta a
 Hella. Al §8 lei ricorda chi si è offerto.
+<!-- storico -->
+Al tavolo del 2026-09-25 è andata così, ed è canone di quel gruppo
+`[CANONE GIOCATO 2026-09-25]`: Thorik ha detto che il prezzo lo paga lui,
+senza sapere quale sia, e la Custode ha preso nota del suo nome. È un quarto
+ramo, fuori da A, B e C: il debito lo porta Thorik, e il prezzo è ancora da
+decidere (eco E-07g).
+<!-- /storico -->
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -1174,7 +1181,9 @@ Hella: *«Hai portato peso per me senza saperlo, e io il tuo. Anche da morta. Si
   *«Avete dato lui. Lo capisco. Ma una parte di me non ve lo perdonerà mai del
   tutto — e una parte vi ringrazierà per sempre.»*). Se un PG si è offerto di
   portarlo (§6), Hella lo guarda: *«Ti sei offerto. Non era tuo da portare, e lo
-  sapevi.»*
+  sapevi.»*<!-- storico --> Con Thorik che il debito se l'è già preso, come al tavolo del
+  2026-09-25 `[CANONE GIOCATO 2026-09-25]`, il suo «lo pago io, non voi» apre una
+  discussione fra loro due e non chiude la scena.<!-- /storico -->
 
 **Sviluppi.** Questo racconto **incide** l'affresco A3 (`DEF-2`): dopo il rito,
 A3 aggiunge la scena di Hella viva che posa una mano sulla spalla di Thorik. Il
@@ -1385,6 +1394,9 @@ sul tavolo nelle scene di prima: qui li ritrova.
 | Il Debito della Radice affrontato (§6, qualunque risposta) | roleplay grigio | 400 |
 | Il Racconto delle Prove (§8) | roleplay/spotlight | 300 |
 | **TOTALE beat** | | **~1.900/PG** |
+
+> I PX del beat li prende anche Hella, tutti, come gli altri tre: è morta fino allo
+> Step 6, ma risponde alla Custode e fa il racconto<!-- storico --> `[CANONE GIOCATO 2026-09-25]`: al tavolo sono andati a tutti e quattro<!-- /storico -->.
 
 > Interludio come il ritorno nella Sala (`DEF-2`): piccolo in PX, enorme in campagna. Somma alla
 > Terra (~11.600) e all'Affreschi (~1.900) → il 14° matura a Hammerfist.

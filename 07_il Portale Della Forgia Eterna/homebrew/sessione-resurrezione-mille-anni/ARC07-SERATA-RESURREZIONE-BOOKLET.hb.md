@@ -2053,7 +2053,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > breccia è aperta e l'ARC-08 parte in Fase 0 dura (cap. III §0-bis e §8).
 >
 > **Come arrivano.** Riposati, perché hanno dormito nella Sala, e col sogno di
-> cap. III §7-bis addosso: Hella, dall'altro lato, **ha già sentito Thorik dire
+> cap. III §7-bis addosso: Hella, dall'altro lato, **ha già sentito Tordek dire
 > il suo nome nel sonno**.
 >
 
@@ -3363,6 +3363,9 @@ sul tavolo nelle scene di prima: qui li ritrova.
 | Il Debito della Radice affrontato (§6, qualunque risposta) | roleplay grigio | 400 |
 | Il Racconto delle Prove (§8) | roleplay/spotlight | 300 |
 | **TOTALE beat** | | **~1.900/PG** |
+
+> I PX del beat li prende anche Hella, tutti, come gli altri tre: è morta fino allo
+> Step 6, ma risponde alla Custode e fa il racconto.
 
 > Interludio come il ritorno nella Sala (cap. III): piccolo in PX, enorme in campagna. Somma alla
 > Terra (~11.600) e all'Affreschi (~1.900) → il 14° matura a Hammerfist.
