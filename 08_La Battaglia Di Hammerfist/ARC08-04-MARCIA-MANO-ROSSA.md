@@ -26,8 +26,7 @@ corpo principale della Mano Rossa.
   (state.md §2.1) — dopodiché la colonna di Fauci prende una rotta
   indipendente verso nord, più diretta attraverso le montagne, mentre
   il grosso dell'orda segue la rotta ufficiale AP verso l'Elsir Vale.
-  `[INFERRED — needs DM confirmation: giorno esatto di distacco;
-  ipotesi di lavoro finché B6 non fissa la cronologia definitiva]`
+  Il distacco è al Day 1 (cronologia di `ARC08-12`, canone del DM 2026-10-18).
 - **Perché un distaccamento separato**: Hammerfist Holds è un
   avamposto nanico strategicamente rilevante (fucine, mercenari,
   passaggi montani) ma non necessario alla marcia su Rethmar — Azarr

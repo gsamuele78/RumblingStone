@@ -213,7 +213,7 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righ
 - **Senza allarme**: i PG ingaggiano 5-6 drow alla volta (gestibile);
   bottino intatto (2.500 mo + mappe tattiche dell'orda + intel sugli altri
   2 campi).
-- **Morale** `[INFERRED — needs DM confirmation]`: morti entrambi i
+- **Morale**: morti entrambi i
   Commander, i superstiti sotto il 25% ripiegano verso il Campo 2 (Hex D08)
   portando l'allarme.
 
@@ -223,8 +223,8 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righ
 |---|---|---|---|
 | A — Notte, routine | — | pattuglie in loop riga 06; 2/3 delle forze nelle tende | sorpresa possibile, ingaggi 5-6 alla volta |
 | B — Allarme | tripwire o pattuglia dà l'allarme (campana 🔔) | tutti fuori dalle tende in 2 round; formazione al centro campo | EL 12 pieno, niente sorpresa |
-| C — Campo in fiamme | i PG incendiano scorte/fuochi tattici (💥 righe 20-23) | il fuoco si propaga 1 quadretto/round nelle celle adiacenti alle fiamme `[INFERRED]` | 1d6 fuoco/round per cella; fumo: occultamento 20% entro 3 m |
-| D — Rotta | entrambi i Commander morti + superstiti <25% `[INFERRED]` | i drow superstiti fuggono verso NE (Campo 2) | se ne scappa anche uno solo: Campo 2 in allerta permanente |
+| C — Campo in fiamme | i PG incendiano scorte/fuochi tattici (💥 righe 20-23) | il fuoco si propaga 1 quadretto/round nelle celle adiacenti alle fiamme | 1d6 fuoco/round per cella; fumo: occultamento 20% entro 3 m |
+| D — Rotta | entrambi i Commander morti + superstiti <25% | i drow superstiti fuggono verso NE (Campo 2) | se ne scappa anche uno solo: Campo 2 in allerta permanente |
 
 > Gli stati sono esiti aperti (D13): il trigger è dei dadi e delle scelte
 > dei PG, mai del copione.
@@ -248,7 +248,7 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 53 colonne × 40 righ
   > dimensioni **disegnate**: **65 colonne × 53 righe** (≈98 m × 80 m).
   > La vecchia dichiarazione «80 × 53 / 120 m» era imprecisa nella sorgente;
   > tutte le strutture annotate stanno entro le 65 colonne. Titolo e testo
-  > allineati, SVG rigenerato. Confini esatti delle celle = `[INFERRED]`
+  > allineati, SVG rigenerato. Confini esatti delle celle: ricavati, nella griglia confermata,
   > dalla sorgente (fatto salvo il posizionamento testuale delle strutture).
 
 ### Mappa Tattica Completa
@@ -374,14 +374,14 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 65 colonne × 53 righ
   + distrazione) → uccidere il Wyrmlord (decapitazione del comando) →
   sabotare gli ogre (avvelenare il cibo, liberare i prigionieri vicino al
   recinto = caos).
-- **Se scoperti** `[INFERRED — needs DM confirmation]`: stesso schema del
+- **Se scoperti**: stesso schema del
   Campo 1 — tutte le forze in allerta entro 2 round, Wyrmlord assume il
   comando centrale, arcieri della torretta forniscono fuoco di copertura a
   36 m; **EL 14 pieno** (molto pericoloso, party dovrebbe evitare
   l'ingaggio totale).
-- **Morale** `[INFERRED — needs DM confirmation]`: Wyrmlord morto → nessuna
-  coordinazione tattica nel settore; superstiti sotto una soglia si
-  ritirano (nessun campo di ripiegamento noto a nord — Campo 2 è il più
+- **Morale** (canone del DM 2026-10-18): Wyrmlord morto → nessuna
+  coordinazione tattica nel settore; i superstiti si ritirano solo
+  sotto un quarto delle forze iniziali (nessun campo di ripiegamento noto a nord — Campo 2 è il più
   avanzato dei tre).
 
 **Conseguenze del sabotaggio riuscito** (dal file originale):
@@ -390,15 +390,16 @@ SCALA GRID: 1 quadrato = 1.5m × 1.5m | DIMENSIONI TOTALI: 65 colonne × 53 righ
 - Intel: piani completi dell'orda (mappe nella tenda del Wyrmlord).
 - Prigionieri salvati: +reputazione a Brindol.
 
-### 🔄 EVOLUZIONE (companion T5b) `[INFERRED — needs DM confirmation:
-nessuno stato esplicito nel file originale, modellato sullo schema del
-Campo 1]`
+### 🔄 EVOLUZIONE (companion T5b)
+
+Nessuno stato esplicito nel file originale: modellato sullo schema del
+Campo 1 e confermato dal DM il 2026-10-18.
 
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A — Notte, routine | — | guardie ai cancelli/torretta, ogre al recinto, grosso delle forze nelle tende | sorpresa possibile con approccio ovest/est |
 | B — Allarme | una guardia/torretta nota i PG (Osservare CD, vedi torretta) | Wyrmlord assume il comando, arcieri torretta aprono il fuoco a distanza | EL 14 pieno, niente sorpresa |
-| C — Prigionieri liberati | i PG raggiungono le gabbie (AL-AN32) e le rompono (CD 28) | i civili liberati creano distrazione/caos nella zona | −2 alla Percezione collettiva dei drow nel round successivo `[INFERRED]` |
+| C — Prigionieri liberati | i PG raggiungono le gabbie (AL-AN32) e le rompono (CD 28) | i civili liberati creano distrazione/caos nella zona | −2 a Osservare e Ascoltare dei drow nel round successivo |
 | D — Wyrmlord morto | il Wyrmlord (O32) viene ucciso | i superstiti perdono coordinazione | nessun comando centrale; il campo non può più organizzare una difesa coordinata |
 
 ---

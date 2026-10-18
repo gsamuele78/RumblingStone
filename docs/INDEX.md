@@ -144,6 +144,7 @@ Il **perché** delle scelte strutturali. Indice completo in [`plans/adr/`](../pl
 | [ADR-0086](../plans/adr/ADR-0086-una-sostituzione-nella-resa-entra-solo-se-misurata-e-preferita.md) | **Una sostituzione nella resa delle mappe entra solo se misurata e preferita** (*accettata*, D23-D26): misura deterministica in CI (contrasto del contorno WCAG 1.4.11, SSIM col vicino, ΔE2000), confronto alla cieca del DM, metriche apprese come secondo parere; il tema texture tarato da `misura_resa.py tara` |
 | [ADR-0087](../plans/adr/ADR-0087-la-memoria-del-lavoro-e-generata.md) | **La memoria del lavoro è un file generato** (*accettata*): `MEMORIA.md` in radice raccoglie decisioni aperte, revisioni da approvare, lista viva e CHANGELOG recente dalle loro fonti; si corregge la fonte, si rigenera, la CI la tiene allineata |
 | [ADR-0090](../plans/adr/ADR-0090-la-partita-riparte-su-un-ramo-di-gruppo-nuovo.md) | **La partita del primo tavolo riparte su un ramo di gruppo nuovo** (*proposta*): il ramo vecchio non ha più storia in comune con `main`, quindi `campaign-group-rumblingstone` si crea da `main` e la serata del 2026-09-25 si registra lì |
+| [ADR-0091](../plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md) | **La scheda di un PNG o di un villain ha una forma sola** (*accettata*): i numeri in `nome-crN.md` con Difesa, Attacco, Statistiche, Capacità speciali e Tattiche nell'ordine delle AP PF1e; la persona in `Nome.md` con sezioni fisse; il rimando va dal dossier allo statblocco. Misura: `validate_bestiario.py --forma` |
 
 ## 5. Archivio piani
 

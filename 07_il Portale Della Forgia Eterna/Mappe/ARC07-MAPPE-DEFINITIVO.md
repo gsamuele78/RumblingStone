@@ -42,7 +42,7 @@
 | **T-5** | Anticamera della Magnetite: la Sentinella | DEF-1 §7b | tattica combat | ✅ |
 | **T-6** | Camera dell'Altare: **TERROS L'ANTICO** | DEF-1 §8 | tattica BOSS | ✅ |
 | **S-1** | Sala della Forgia Eterna (8 affreschi) | DEF-2 | hub/scenica | ✅ |
-| **S-2** | Stanza della Corona (purificata) | **geometria canonica ARC-06**: `06_.../CoronaDiAdamantio/Tactics_and_maps.md` + stato DEF-2 | hub/scenica | ✅ |
+| **S-2** | Stanza della Corona (purificata) | **geometria canonica ARC-06**: `06_.../StanzaCoronaDiAdamantio/Tactics_and_maps.md` + stato DEF-2 | hub/scenica | ✅ |
 | **R-1** | Il Cerchio del Rito (resurrezione) | DEF-3 | rituale/scenica | ✅ |
 | **M7-A** | Hammerfist ≈372 DR (fortezza & orda) | DEF-4 | strategica | ✅ |
 | **M7-B** | L'Arena del Duello: **SKULLCRUSHER** | DEF-4 | tattica BOSS | ✅ |
@@ -406,7 +406,7 @@ LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 ## MAPPA S-2 — LA STANZA DELLA CORONA DI ADAMANTIO (santuario in purificazione)
 
 > **Geometria CANONICA** (invariata dall'incontro giocato di ARC-06):
-> `06_Stanza-corona-di-adamantio/CoronaDiAdamantio/Tactics_and_maps.md` — stessi
+> `06_Stanza-corona-di-adamantio/StanzaCoronaDiAdamantio/Tactics_and_maps.md` — stessi
 > posizionamenti di trono, muro, colonne, statue, alcove, macerie e ingresso.
 > Qui è mostrata nello **stato ARC-07** (santuario in purificazione, DEF-2).
 

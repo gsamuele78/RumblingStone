@@ -374,7 +374,7 @@ def riepilogo(giudizi: "list[dict]") -> dict:
 # ---------------------------------------------------------------------------
 #: La marca delle righe `pf-dado` riscritte da qui: specifica, come quella di
 #: genera_attributi, perche' un secondo giro deve riconoscerle.
-MARCA_PF = "> [INFERRED — needs DM confirmation] `pf-dado` "
+MARCA_PF = "> [GENERATO] `pf-dado` "
 AFFIDABILI = ("trascritte", "copiate", "a mano")
 
 

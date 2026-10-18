@@ -397,8 +397,8 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 - **Se scoppia combattimento** (intrusione/imboscata a scelta del DM): i PG
   materializzano sull'Altare (+3 m, quota e luce intensa a loro favore); gli
   **8 pilastri** offrono copertura; la stanza è ampia e illuminata (poche
-  ombre → furtività difficile per gli assalitori). `[INFERRED — nessun
-  incontro scritto per questa sala: eventuale scontro è a discrezione del DM]`
+  ombre → furtività difficile per gli assalitori). Nessun incontro è
+  scritto per questa sala: lo scontro lo apre il DM, se vuole.
 
 ### 🔄 EVOLUZIONE (companion T5b — stato dei portali per rituale)
 

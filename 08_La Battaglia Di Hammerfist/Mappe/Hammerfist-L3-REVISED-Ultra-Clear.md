@@ -238,8 +238,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### ⚔️ TATTICHE
 - **Inseguitori:** caricano il ponte in colonna per 2; i più feroci provano la **Spinta** su Borin per buttarlo di sotto (contrapposta; ricordare il +4 di stabilità nanica)
 - **Borin:** Difesa Totale quando è a <50% PF; ogni round guadagnato = più colonna al sicuro
-- **Contromossa nanica:** Bull Rush sugli inseguitori a bordo ponte → Riflessi CD 18 o baratro; Thorin può *Pietra Sagomata* per rompere il bordo sud del ponte quando l'ultimo nano è passato `[INFERRED — needs DM confirmation]`
-- **Morale:** gli orchi smettono di caricare il ponte dopo ~10 caduti nel baratro e aspettano i bugbear (aggancio a MAPPA 3Z) `[INFERRED]`
+- **Contromossa nanica:** Bull Rush sugli inseguitori a bordo ponte → Riflessi CD 18 o baratro; Thorin può *Pietra Sagomata* per rompere il bordo sud del ponte quando l'ultimo nano è passato
+- **Morale:** gli orchi smettono di caricare il ponte dopo ~10 caduti nel baratro e aspettano i bugbear (aggancio a MAPPA 3Z)
 
 ### 🔄 EVOLUZIONE
 | Stato | Trigger | Cosa cambia | Effetto |
@@ -619,8 +619,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 |---|---|---|
 | 60 m | **Maestro Tempestas** (LI 20) | *Controllo del Tempo* + *Tempesta di Fulmini*: 10d6 elettrici auto-mirati su Fauci 1/round; venti 80 km/h (Equilibrio CD 15 a terra); pioggia −2 tiro a distanza; +2 morale alleati |
 | 30-45 m | **Fauci di Palude** (PF 232/312) | picchiate su Thorik (vendetta di sangue — ERRORE tattico: ignora i gufi) |
-| 30-50 m | **Signore Ventolesto + 12 Ranger Elfici** su gufi | 6 alti (distrazione) + 6 bassi (intercetto); archi compositi +15, 1d8+6 +2d6 *Bane* draghi; Ventolesto Punire il Male +10 |
-| variabile | **Orion Pelleorsa** | SALTA sul dorso del drago → Forma Selvatica Orso Crudele, Lotta +18/+20, 800 kg che forzano la discesa |
+| 30-50 m | **Signore Ventolesto + 12 Ranger Elfici** su gufi | 6 alti (distrazione) + 6 bassi (intercetto); archi compositi +16, 1d8+6 +2d6 *Bane* draghi; Ventolesto Punire il Male +10 |
+| variabile | **Orion Pelleorsa** | SALTA sul dorso del drago → Forma Selvatica Orso Crudele, Lotta +24, 800 kg che forzano la discesa |
 | 15 m | **Artemis** (Ali d'Ombra) | Deflagrazione Occulta 7d6 (75 m) sulle ALI → manovrabilità del drago −4 |
 
 ### ⚔️ FASI (round per round):

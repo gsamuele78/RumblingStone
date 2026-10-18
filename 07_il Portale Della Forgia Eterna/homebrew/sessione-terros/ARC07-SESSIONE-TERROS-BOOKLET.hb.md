@@ -597,6 +597,7 @@ l'orologio) e «Il Ritorno a Hammerfist».
 Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 }}
 
+<!-- revisione-testo: r1 · 2026-10-03 -->
 # ARC-07 · DEFINITIVO #1 — IL PIANO DELLA TERRA & TERROS L'ANTICO
 ## Il Portale della Forgia Eterna — Seconda Gemma (Smeraldo della Forza)
 
@@ -604,7 +605,10 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > **Il Piano della Terra e Terros l'Antico**: la seconda gemma, lo Smeraldo
 > della Forza.
 >
-> **Stato al tavolo**: 🟡 **IN CORSO** (è la parte che state giocando).
+> **Stato al tavolo**: ✅ **GIOCATO** dal gruppo di oggi, fino al rito dello
+> Smeraldo compreso (luglio 2026): cosa è successo lo dicono i blocchi
+> «✅ CANONE GIOCATO» di ogni scena. Un **gruppo nuovo** parte dalla
+> Scena 1, e per lui quei blocchi non valgono: le scelte sono aperte.
 > **Ordine di gioco**: Terra (questo) → Resurrezione di Hella («La Resurrezione di Hella») →
 > Viaggio a 1.000 anni fa («Il Viaggio a 1.000 Anni fa») → Ritorno a Hammerfist («Il Ritorno a Hammerfist»).
 > **Canone a monte**: il viaggio dello spirito di Hella è **concluso e
@@ -665,8 +669,14 @@ proposito**: gli artefatti unici compensano l'assenza di Hella.
 **Cosa stampare.** La **Quick-Reference §0-bis** (una pagina, tutto lo
 scontro); gli **handout del §13**; le 6 mappe (§MAPPE); gli statblock di
 **Terros** (§8), della **Sentinella di Mithral** (§7b), degli **Xorn** (§5);
-la scheda Bracieri completa di Tordek;
+la scheda Bracieri completa di Tordek: lo stadio Terra si sveglia col rito dopo
+la Sentinella (§7b), prima di Terros. A un gruppo futuro copri il §7 della
+scheda, *Diventare una Collina*, che si sblocca solo abbattendo Terros;
 il PDF **Benedizioni di Moradin**.
+
+**L'orologio all'inizio.** Countdown di Hammerfist **3g 20h** al risveglio
+nella Sala («Il Ritorno e gli Affreschi» §0-bis, riposo R2). Il viaggio nel Piano non lo muove:
+lo muovono solo i riposi (§8c-4).
 
 **Come finisce.** Smeraldo forgiato nella Corona con la **volontà e i poteri
 combinati di tutti e tre** (§9) → gli affreschi della Sala **e** della Stanza
@@ -686,13 +696,14 @@ completo stanno in «Il Ritorno e gli Affreschi» §0-bis.
 | Viaggio (colore/affaticamento) — Sopravvivenza/Equilibrio | 12 | §4 |
 | Xorn: demolizione pilastro — Conoscenze / colpo mirato | 18 / 20 | §5 |
 | Xorn: negoziazione — Diplomazia (Terran) | 18 | §5 |
+| Xorn: ordine tattico (via B) — Intimidire o Diplomazia (Thorik) | 18 | §5 |
 | Cristalli: skill challenge (6 successi / 3 fallimenti) | 15–22 | §6 |
 | Seme-Mercato di Varis: analisi/estirpo — Sapienza Magica | 20 | §6-bis |
 | Tempio: salto di Tordek — Saltare (Take 10 = 26 ✓) | 25 | §7a |
 | Tempio: corda — Scalare; Ancora Thorik — FOR | 15; 20 | §7a |
-| Sentinella: liberarsi dalla Magnetite — FOR (Thorik) | 28 | §7b |
+| Sentinella: liberarsi dalla Magnetite — FOR (Thorik; si libera del tutto; +2 se Artemis gli è adiacente e lo aiuta) · se Tordek cade, si ritenta dopo un riposo, e a −1 pf o meno resta stabile | 25 | §7b |
 | Risveglio Bracieri — Volontà / Tempra | 20 / 22 | §7b |
-| Frequenza della Confusione — Intrattenere Canto (Anello +4) | 18 | §8 |
+| Frequenza della Confusione — Intrattenere Canto (Anello +4 a chi canta con Artemis): all'apertura una prova per PG, ne servono 2; in combattimento azione standard, vale fino al turno successivo di chi canta | 18 | §8 |
 | Terros: **Spinta** — prova di FOR nega (**+4 ai nani a terra**; **1/round**, sceglie Terros) | 25 | §8 |
 | Terros: Onda Gravitazionale / Pioggia di Stalattiti — Riflessi | 22 | §8 |
 | **«Radice a Terra»** (Thorik inchioda Terros) — prova di FOR vs **CD statica** (non contrapposta) | 25 | §8 |
@@ -701,8 +712,8 @@ completo stanno in «Il Ritorno e gli Affreschi» §0-bis.
 ### Iniziativa tipo & pf da tracciare
 `Artemis +? · Tordek +? · Terros −1 · Thorik +?` — **Terros 345 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
-0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (80 = Overdrive
-3 attacchi/CA 24; 0 = petto aperto → colpo finale). **Fauci di Diamante 180
+0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
+3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 180
 pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 
 ### Il giro di Terros, in breve (3.5: UNA azione per round)
@@ -710,13 +721,14 @@ pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
    la **Spinta** (3 m, prova di FOR CD 25, nani a terra +4) — gratis, la
    scegli tu, **una sola volta per round**. Nessun attacco di opportunità
    per nessuno.
-2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m, Rifl 22.
+2. **Onda Gravitazionale** (poi ricarica 1d4): tutti "cadono" 9 m; chi trova una superficie entro 9 m la colpisce (Rifl 22 o 4d6 e prono), gli altri restano sospesi. Tordek resta sull'Altare. Finita l'Onda, chi è entro 9 m dall'Altare ci ricade alla fine del suo turno successivo e perde il movimento (Rifl 15 o prono); chi è più lontano deriva di 3 m a round fino alla parete.
 3. **Stalattiti** (ricarica 5-6/d6): 8d6 raggio 9 m, Rifl 22 ½ — *Artemis
    con azione preparata le disintegra (contatto CA 12)*.
 4. **Scudo di Geodi** (ricarica 1d3): +4 CA, no critici — *Tordek lo frantuma
    con >15 danni sonici in un colpo → Terros frastornato*.
 5. **Earth Glide** (movimento): entra/esce dall'Altare — *Thorik lo inchioda
-   con FOR contrapposta vs Lotta +40 (con Aiuto+Benedizione)*.
+   con «Radice a Terra»: prova di FOR contro **CD 25 statica** (errata nello
+   statblocco, §8)*.
 Rigenera **15/round** a contatto con pietra. Sonico **×1,5**. −4 vs volanti.
 ⚠️ **Se il party ha SALTATO i Cristalli (§6)**: niente Frequenza, niente
 Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
@@ -790,8 +802,9 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
 > aggiunto a valle. **In questo master non compaiono** (né qui, né come
 > «Occhio di Lathander» nello scontro con Terros). Il beat di Artemis nasce
 > dal suo tratto vero: è **avidissimo di tesori.**
-- L'**Anello** vibra sotto la Madre Cristallo: capta una **runa parassita** di
-  **Varis "Seta-Argento"** (§6). Varis gli offre un **affare da predone** —
+- L'**Anello** capta un'esca di **Varis "Seta-Argento"**: il **Seme-Mercato**
+  nel Tempio (§6-bis, Scena 5). La runa alla Madre Cristallo delle stesure
+  vecchie **non si gioca** (canone del §6). Varis gli offre un **affare da predone** —
   sconto a vita sul Mantello dei Tiri Salvezza e un canale per **piazzare il
   bottino del Sottosuolo**. È il suo bivio grigio (stile Andor): **avidità vs
   lealtà**, nessuna scelta pulita.
@@ -834,18 +847,29 @@ Diapason, niente +2 TS → Terros a piena forza, nessun round di nausea.
 
 ## §2 — INGRESSO E BENEDIZIONE (Gravità 2× «Iraconda»)
 
-**Nella Sala della Forgia Eterna, dopo il riposo lungo.** Il corpo di Hella
+### SCENA 1 — Il risveglio nella Sala, e l'affresco che si apre
+
+**In scena** — Dove: la Sala · l'affresco A5 — Chi: Moradin · Therysol
+
+**Comparse**
+
+| Chi | Com'è | Come parla |
+|---|---|---|
+| Moradin | non si vede: parla attraverso la Corona e Aegis Fang, dopo la preghiera all'Altare | non con le orecchie, con le ossa. Chiama i PG «figli» |
+| Therysol | una tiefling mezzodrago: veglia il corpo di Hella accanto all'Altare da giorni. Non scende nel Piano (§0) | in silenzio: monta la guardia («Il Ritorno e gli Affreschi» §8) |
+
+**Nella Sala della Forgia Eterna, dopo la notte di sonno.** Il corpo di Hella
 riposa accanto all'Altare del Cuore di Moradin, vegliato da Therysol; la luce
 verde sotto la pelle pulsa piano — lo spirito è ancora legato, ancora in
 attesa. Al risveglio, controllate l'**Affresco A7** (Battaglia di Hammerfist):
 il countdown è sceso.
 
-> **Read-aloud (LotR + Salvatore).** *Otto ore di sonno vero, il primo da
+> **Read-aloud (LotR + Salvatore) — la Sala.** *Otto ore di sonno vero, il primo da
 > giorni. La Sala non è cambiata di un riflesso: è la costanza di un'incudine
 > in un mondo che frana. Pregate dieci minuti all'Altare e le Benedizioni si
 > riaccendono come brace ravvivata. Poi Moradin parla — non con le orecchie,
 > ma con le ossa.*
->
+
 > **MORADIN (attraverso Corona/Aegis):** *«Figli. Il Piano della Terra non vi
 > odierà col calore, come il Fuoco. Vi opprimerà col PESO. È portare una
 > montagna sulle spalle. Ma ho preparato: la vostra Pelle di Pietra diventerà
@@ -855,7 +879,9 @@ il countdown è sceso.
 > giudicheranno. Se degni, aiuteranno. Se no… ostacoleranno.»*
 
 **Benedizione «Forza della Montagna»** (mentre il party prega, pre-partenza):
-- **Effetto**: ignora le penalità della gravità 2× (fino a 2× normale).
+- **Effetto**: riduce le penalità della gravità 2× (fino a 2× normale) a
+  quelle della colonna «Con Benedizione» della tabella del §3: −25% alla
+  velocità, −5 a Saltare e a Scalare.
 - **Durata**: permanente finché nel Piano della Terra.
 - **Bonus**: +2 di competenza a **Forza** per le sole prove contro la gravità
   (Scalare, Saltare, trasportare carichi).
@@ -868,7 +894,7 @@ il countdown è sceso.
 > registra le vostre gesta: quella è la **Cronaca Vivente**, dettaglio nel
 > «Il Ritorno e gli Affreschi». Qui conta l'apertura della Terra.)
 
-> **Read-aloud (Salvatore + LotR).** *Un rombo basso, profondo. Non viene dai
+> **Read-aloud (Salvatore + LotR) — l'affresco A5.** *Un rombo basso, profondo. Non viene dai
 > muri: viene dalle OSSA. Le colonne tremano — non di paura, di risonanza.
 > L'Affresco Est, finora grigia pietra inerte, comincia a SGRETOLARSI: ma non
 > cade a pezzi. La pietra dipinta diventa VERA pietra. Vi arriva l'odore —
@@ -914,7 +940,7 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 | Attacco in mischia | −2 (armi pesanti ×2 ingombro) | nessuna penalità |
 | Prove di FOR/DES | −4 | **+2** di competenza alla FOR (aiuta) |
 | Carico | ×2 (Medio → Pesante) | +2 FOR per il calcolo (compensa) |
-| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** Volare CD 20 a fine round o precipita |
+| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** Volare CD 20 a fine round o precipita (Volare è l'abilità di PF1e, §0-bis: in 3.5 non esiste) |
 
 **Cadute in gravità aumentata.** Danno **1d10 per 3 m** (non 1d6) — versione
 "Iraconda" del RICALIBRATO; velocità terminale raggiunta prima. CD dei
@@ -926,6 +952,15 @@ pesante, i passi che affondano. Le distanze del §4 sono lunghe **apposta**.
 ---
 
 ## §4 — IL VIAGGIO VERSO IL TEMPIO (~2,5 ore, movimento rallentato)
+
+### SCENA 2 — Le piattaforme di cristallo
+
+**In scena** — Dove: le piattaforme — Chi: nessuno
+
+La scena copre l'arrivo e la Zona 1. Le zone dopo hanno la loro scena: la
+foresta è la Scena 3 (§5), il giardino dei cristalli la Scena 4 (§6),
+l'oceano di roccia la Scena 6 (§7a). Il box d'ingresso di ogni zona si legge
+là; qui sotto l'Atlante tiene il terreno e cosa succede.
 
 **Piattaforma d'arrivo**: cristallo opaco grigio-verde, durissimo (Aegis Fang
 non lo scalfisce), 12 m di diametro, sospesa nel buio punteggiato di cristalli
@@ -958,7 +993,7 @@ lontani.
   - **«magia elementale».** I PG sentono **ozono**. La categoria sta nello
     statblock, non nel naso di chi cammina (ADR-0014 §2, il mostro spiegato).
 
-> **Read-aloud (orizzonte).** *Davanti, nella direzione che indica Aegis Fang:
+> **Read-aloud — le piattaforme, l'orizzonte.** *Davanti, nella direzione che indica Aegis Fang:
 > a portata di mano, piattaforme di cristallo unite da ponti di pietra
 > galleggiante. Più in là, una FORESTA di cristalli alti come torri, trenta,
 > sessanta metri, che brillano di luce interna. Oltre ancora, un OCEANO di
@@ -985,7 +1020,7 @@ il Tempio. Nessuna prova di Sopravvivenza necessaria.
 > diventa sempre più ostile man mano che ci si avvicina al Tempio.
 
 #### ZONA 1 — Le Piattaforme di Cristallo (0–300 m)
-> **Read-aloud.** *Il primo passo fuori dal portale è come camminare sul dorso
+> **Read-aloud — le piattaforme.** *Il primo passo fuori dal portale è come camminare sul dorso
 > di una bestia addormentata. Le piattaforme di cristallo grigio-verde si
 > susseguono nel buio, unite da ponti di pietra che galleggiano senza fune né
 > pilastro — trattenuti da una volontà che non è la vostra. Sotto, sopra,
@@ -1004,31 +1039,17 @@ calibra la sua vibrazione-bussola. Nessun incontro: lascia respirare
 l'ambiente.
 
 #### ZONA 2 — La Foresta dei Cristalli Giganti (300 m–1 km)
-> **Read-aloud.** *Poi le piattaforme finiscono, e comincia la foresta. Nessun
-> albero è mai cresciuto così: colonne di cristallo alte trenta, sessanta
-> metri, spesse come torri di guardia, che salgono nel buio finché la vista si
-> arrende. Dentro ognuna, una luce lenta pulsa e migra, come sangue luminoso in
-> vene di vetro. I vostri passi rimbalzano tra le colonne in echi che tornano
-> sbagliati — più lenti, più gravi, come se la foresta li masticasse prima di
-> restituirli. E in alto, dove le colonne si perdono, qualcosa scricchiola:
-> il peso di ere che si assestano. Qui non siete cacciatori. Qui siete piccoli.*
+**Read-aloud**: si legge in apertura della Scena 3 (§5), all'ingresso nella foresta.
 
 **Terreno (callout):** colonne = **copertura totale** (indistruttibili);
-terreno frastagliato = **difficile** (movimento ×2, già dimezzato dalla
-gravità: strisciate); linee di vista spezzate ogni 6-9 m (agguati facili);
+terreno frastagliato = **difficile** (movimento ×2, già ridotto dalla
+gravità, §3: strisciate); linee di vista spezzate ogni 6-9 m (agguati facili);
 **stalattiti d'adamantio** sul soffitto a 50 m (vedi Ambiente dinamico).
 **Cosa succede qui:** **Incontro 1 — gli Xorn** (§5), al pilastro corroso
 (MAPPA T-2, G08).
 
 #### ZONA 3 — Il Campo dei Cristalli Viventi (1–1,5 km)
-> **Read-aloud.** *La foresta si apre di colpo, e il buio si accende. Davanti a
-> voi, un giardino: migliaia di cristalli non più alti di un nano, cresciuti in
-> triangoli, esagoni, cerchi concentrici — la geometria di una mente, non del
-> caso. E si MUOVONO: si inclinano verso di voi come girasoli verso un sole che
-> non c'è, e cantano. Non è metafora: ogni cristallo tiene una nota, e le
-> migliaia di note insieme formano un accordo così vasto che arriva allo
-> sterno prima che alle orecchie. Al centro del giardino, alta come tre nani,
-> una madre di luce: sfaccettature a migliaia, e dietro ognuna, un pensiero.*
+**Read-aloud**: si legge nella Scena 4 (§6), all'uscita dalla foresta, anche se il gruppo non si ferma.
 
 **Terreno (callout):** corridoio libero centrale (riga 06 della MAPPA T-3);
 i cristalli NON bloccano il movimento ma **rompersi addosso a uno** (carica,
@@ -1037,16 +1058,7 @@ caduta) = 1d6 perforante e **−1 successo** allo skill challenge se in corso.
 la zona si può **aggirare** da sud (+30 min).
 
 #### ZONA 4 — L'Oceano di Roccia e il Tempio (1,5–2 km)
-> **Read-aloud.** *L'ultima riva non è una riva: è il punto dove il suolo
-> smette di fingere di essere solido. Davanti a voi, fino all'orizzonte che non
-> esiste, si stende un oceano di roccia grigia — onde lente come pensieri di
-> montagna, creste che impiegano un'ora a rompersi, correnti di granito
-> liquido che scorrono senza suono. Toccarlo è come toccare il fianco di un
-> toro: cede, e sotto c'è il muscolo. E là, sospeso a cinquanta metri sopra
-> le onde, RUOTA il Tempio: un cubo d'argento di cento metri di lato, perfetto
-> come un dado lanciato da un dio e mai atterrato. Aegis Fang, nella mano di
-> Thorik, vibra così forte che il braccio duole. Siete arrivati. Manca solo
-> l'impossibile: attraversare il vuoto.*
+**Read-aloud**: si legge in apertura della Scena 6 (§7a), sulla riva.
 
 **Terreno (callout):** l'oceano **non è lava** — chi ci finisce dentro affonda
 lentamente (3 round; Nuotare CD 20 faticoso; sommerso = soffocamento + 2d6
@@ -1069,20 +1081,26 @@ la Sentinella).
 
 > **Gestione del viaggio (per il DM).** Tra un incontro e l'altro chiedi
 > **una prova di gruppo** ogni zona (Sopravvivenza/Equilibrio CD 12 con la
-> Benedizione) non per bloccare, ma per **colorare la fatica**: chi fallisce
-> arriva all'incontro **affaticato** (nessun riposo tra le zone). È il piano
-> che consuma le risorse prima ancora del boss.
+> Benedizione) non per bloccare, ma per **colorare la fatica**: tira ognuno
+> per sé, e chi fallisce arriva all'incontro **affaticato**, fino alla fine di
+> quello scontro. La fatica non si somma, e una carica di *Vigore della
+> Forgia* la toglie. È il piano che consuma le risorse prima ancora
+> del boss.
 
 ### Ambiente dinamico del piano (recuperato da TACTICAL-GRIDS MAP 5 — non tagliare)
 
 > Il Piano della Terra **non è uno sfondo**: è un avversario che agisce da solo,
 > round dopo round. Applica questi elementi durante il viaggio **e** durante
 > l'agguato degli Xorn (§5), così l'ambiente ha una sua "tattica".
+>
+> **Nel viaggio**, polvere e stalattiti arrivano **solo come evento del
+> d6** (il 2 e il 3 degli Eventi di viaggio), più la prova di gruppo per zona
+> della «Gestione del viaggio». Niente tiri a orologio.
 
 | Elemento | Effetto (3.5) | Uso tattico |
 |---|---|---|
-| **Stalattiti d'adamantio** (20+ dal soffitto a 50 m) | **1d4 cadono ogni 15 min** (o su innesco): 3d10 perforanti, raggio 3 m, Riflessi **CD 18** per schivare | Si possono **innescare con Spaccare/tiro mirato** per farle cadere su un nemico — leva per i PG (e per Terros che scava). |
-| **Polvere di cristallo** (nell'aria) | **Tempra CD 16 ogni 10 min o 1d3 danni COS**; cumulativa a rovescio (−1 CD per ogni TS già superato: ci si abitua al respiro) | Attrito: **premia chi cura la COS** e chi si copre il volto/*Endure Elements*. Senza guaritore (Hella morta) morde davvero. |
+| **Stalattiti d'adamantio** (20+ dal soffitto a 50 m) | **1d4 cadono** col 2 del d6 di viaggio (o su innesco): 3d10 perforanti, raggio 3 m, Riflessi **CD 18** per schivare | Si possono **innescare con Spaccare/tiro mirato** per farle cadere su un nemico — leva per i PG (e per Terros che scava). |
+| **Polvere di cristallo** (nell'aria) | **Tempra CD 16 o 1d3 danni COS** col 3 del d6 di viaggio; cumulativa a rovescio (−1 CD per ogni TS già superato: ci si abitua al respiro) | Attrito: **premia chi cura la COS** e chi si copre il volto/*Endure Elements*. Senza guaritore (Hella morta) morde davvero. |
 | **Fenditure della terra** (2, larghe 3 m) | caduta 6d6 **×1,5 in gravità pesante = 9d6**; risalita Scalare **CD 20** | Barriere tattiche: spingervi dentro un nemico, o rischiare di caderci col Push di Terros. |
 | **Geodi giganti** (cristallo, alti 3-5 m) | **copertura totale (+8 CA)**; PF 80, Durezza 8 — **distruttibili** | Copertura che si può **spaccare** per esporre chi ci si nasconde (l'Xorn élite ci si rifugia sotto il 50%, §5). |
 
@@ -1096,6 +1114,19 @@ Vedi **MAPPA T-1** (orizzonte) e **MAPPA T-2** (foresta).
 
 ## §5 — INCONTRO 1: GLI XORN DELLA FORESTA (grigio, ma DURO)
 
+### SCENA 3 — La foresta, e gli Xorn al pilastro
+
+**In scena** — Dove: la foresta — Chi: Fauci di Diamante · gli Xorn
+
+> **Read-aloud — la foresta.** *Poi le piattaforme finiscono, e comincia la foresta. Nessun
+> albero è mai cresciuto così: colonne di cristallo alte trenta, sessanta
+> metri, spesse come torri di guardia, che salgono nel buio finché la vista si
+> arrende. Dentro ognuna, una luce lenta pulsa e migra, come sangue luminoso in
+> vene di vetro. I vostri passi rimbalzano tra le colonne in echi che tornano
+> sbagliati — più lenti, più gravi, come se la foresta li masticasse prima di
+> restituirli. E in alto, dove le colonne si perdono, qualcosa scricchiola:
+> il peso di ere che si assestano. Qui non siete cacciatori. Qui siete piccoli.*
+
 > **Percorso.** Per raggiungere il Campo dei Cristalli Viventi bisogna
 > **attraversare la Foresta di Cristalli Giganti**: colonne prismatiche alte
 > 30–60 m che spezzano le linee di vista (copertura totale, indistruttibili),
@@ -1104,8 +1135,8 @@ Vedi **MAPPA T-1** (orizzonte) e **MAPPA T-2** (foresta).
 
 **La scena (il momento di Tordek & Thorik).** Un pilastro di cristallo gigante
 è corroso alla base: gli Xorn ne stanno **divorando le vene di mithral** — per
-loro il metallo è cibo, e il party ne porta molto. Se il pilastro cade farà da
-ponte sull'abisso di lava fredda, ma travolgerà chi è sotto. **Gli Xorn NON
+loro il metallo è cibo, e il party ne porta molto. Se il pilastro cade travolgerà
+chi è sotto. **Gli Xorn NON
 sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 **«Fauci di Diamante»**, è vecchio, scaltro e famelico: negozia… o spezza.
 
@@ -1113,17 +1144,37 @@ sono malvagi: sono affamati** (INT 10, parlano Terran). Ma il loro capo,
 - **A — Demolizione ingegneristica (Shine Time di Tordek).** Conoscenze
   (Ingegneria/Dungeoneering) **CD 18** per l'angolo di rottura, poi colpo
   mirato (FOR o attacco) **CD 20** sul punto di stress → il pilastro crolla
-  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza) e crea un ponte sicuro.
+  sugli Xorn (**10d6**, Riflessi **CD 22** dimezza). Chi è dentro la pietra
+  prende metà danni ed esce stordito per 1 round; lo scontro si fa comunque
+.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
-  (Intimidire/Diplomazia) per accerchiarli in un'imboscata perfetta (−2 CA
-  nemici, +2 TxC al party) **salvando** il mithral, ma combattendoli.
+  (Intimidire o Diplomazia **CD 18**, come la via C) per accerchiarli in
+  un'imboscata perfetta (−2 CA nemici, +2 TxC al party) **salvando** il
+  mithral, ma combattendoli. Se la prova fallisce, gli Xorn non sono
+  accerchiati e si combatte senza il bonus.
 - **C — Negoziazione (e l'avidità di Artemis).** Diplomazia **CD 18** in Terran
   + tributo di metallo alternativo (~500 mo/Xorn = 1.500 mo). **Fauci di
   Diamante** accetta e dà un'informazione: *«Il Tempio schiaccia gli intrusi.
   Ma i Cristalli Viventi… se aiuti loro, aiutano te. Trova la Madre Cristallo.
   Lei è saggia.»* — *Nota:* Artemis può opporsi al tributo (non vuol dare via
   bottino): tensione interna, ottima RP.
+
+**Scheda d'entrata — Fauci di Diamante, il capo degli Xorn** *(statistiche: qui sotto, «Se si combatte»)*
+
+| | |
+|---|---|
+| **Aspetto** | uno Xorn anziano e avanzato, più vecchio e più grosso dei due che lo seguono. Quando il suo morso spezza del metallo, gli occhi gli si accendono di fame |
+| **Vuole** | il mithral del pilastro, che per lui è cibo. E il metallo che il gruppo porta addosso |
+| **Suona** | parla Terran. Vecchio, scaltro e famelico: negozia, o spezza |
+| **Sa** | che il Tempio schiaccia gli intrusi, e che i Cristalli Viventi aiutano chi li aiuta. Lo dice solo se il tributo è pagato (via C) |
+| **Combatte** | élite, GS 11. Sotto i 90 pf si chiude dentro un geode gigante, sotto i 40 fugge nella pietra, a meno che il pilastro sia ancora intatto: la fame lo tiene lì un round di troppo |
+
+**Comparse**
+
+| Chi | Com'è | Come parla |
+|---|---|---|
+| gli Xorn | due Xorn comuni, Medi, che pattugliano sotto il sentiero dentro la pietra. Affamati, non malvagi (INT 10) | parlano Terran, come il capo. Sotto i 15 pf scavano via: la fame non vale la morte |
 
 ### Se si combatte — e sarà DURO (EL ~13-14)
 
@@ -1133,15 +1184,17 @@ totale). I PG devono **preparare azioni** (readied) per colpirli
 all'emersione. Fauci di Diamante punta **Thorik** e tenta di **spezzargli
 l'armatura** (Spaccare, morso che ignora la durezza); gli altri due puntano
 Artemis. Sotto il 50% dei pf, Fauci di Diamante si ritira **dentro** un
-cristallo gigante e lo usa come corazza (+4 CA), colpendo da dentro.
+geode gigante (Ambiente dinamico, §4: PF 80, Durezza 8) e lo usa come corazza
+(+4 CA), colpendo da dentro. Le colonne della foresta sono indistruttibili:
+il rifugio è sempre un geode.
 
 **Statblock — XORN «FAUCI DI DIAMANTE» (élite, CR 11).** *Xorn Anziano
 avanzato 15 DV.* PF **180** · CA **28** (+18 nat) · **RD 10/adamantio** ·
 Morso +22 (4d8+10, ignora durezza <20) e 3 artigli +20 (1d8+5) · Scavare 6 m
 (non lascia tunnel) · Percezione tremorica 18 m · onnidirezionale (niente
 fiancheggiamento, mai colto in fallo) · Immune freddo/fuoco · TS Temp +16,
-Rifl +6, Vol +16 · **Speciale**: se morde un'arma/scudo magico fa Spaccare
-(+26); se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
+Rifl +6, Vol +16 · **Speciale**: se morde un'arma/scudo magico non-artefatto fa
+Spaccare (+26), come la Sentinella; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
 
 **Statblock — XORN standard ×2 (CR 6).** Esterno (Terra), Medio · DV 7d8+21
 (52 pf) · CA 24 (+14 nat), contatto 10 · Morso +9 (4d6+3) e 3 artigli +4
@@ -1161,6 +1214,13 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   tremorica 18 m**: sentono il party dai passi appesantiti dalla gravità ben
   prima di vederlo. Se il party si ferma a parlamentare (via C), emergono a
   metà; se avanza in armi, tendono l'agguato.
+- **E se sorvolano, sono invisibili o silenziosi.** La percezione tremorica
+  (SRD) localizza chi è a contatto col suolo, e basta. Chi si è alzato da
+  terra, finché non la ritocca, non lo sentono: Artemis con le Ali d'Ombra (che qui chiedono
+  Volare CD 20 a ogni fine round, §3) sparisce dalla loro percezione, e il
+  bersaglio preferito del round 1 diventa il PG più arretrato fra quelli a
+  terra. L'invisibilità e Muoversi Silenziosamente, da soli, non servono: gli
+  Xorn non guardano e non ascoltano, sentono il peso.
 - **Round 1 — l'agguato.** I due standard emergono **sotto/dietro** i PG più
   arretrati (bersaglio preferito: **Artemis**, il più leggero e il più
   metallico di anelli). Fauci di Diamante NON emerge: aspetta di sentire dove
@@ -1175,25 +1235,39 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   alle spalle. Se un PG resta isolato oltre una colonna (copertura totale che
   taglia le linee di vista), è LUI il prossimo bersaglio.
 - **Soglie e morale.** Standard sotto **15 pf**: scavano via (fame ≠ morte).
-  Fauci di Diamante sotto **90 pf**: si ritira **dentro** un cristallo gigante
-  (+4 CA) e combatte da lì — stanarlo = spaccare il cristallo (PF 80, Durezza
+  Fauci di Diamante sotto **90 pf**: si ritira **dentro** un geode gigante
+  (+4 CA) e combatte da lì — stanarlo = spaccare il geode (PF 80, Durezza
   8) o danni sonici. Sotto **40 pf** fugge in Earth Glide… **a meno che** il
   pilastro di mithral non sia ancora intatto: la fame lo fa restare un round
   di troppo (la sua debolezza caratteriale).
 - **Sviluppi.** Xorn fuggiti NON avvertono nessuno (non hanno padroni), ma se
-  il party ripassa di qui, li ritrova — affamati e più prudenti. Il pilastro
-  crollato (via A) crea il ponte permanente sull'abisso.
+  il party ripassa di qui, li ritrova — affamati e più prudenti.
 
 > *Calibrazione rapida: Blast di Artemis ~28/colpo automatico; Thorik colpisce
 > con 5+; la Raffica di Tordek aggira la RD 5/contundente. Scontro atteso 4-5
 > round, Artemis a ~2/3 pf in uscita.*
 
-**XP**: ~4.800 (Fauci di Diamante CR 11 + 2 Xorn CR 6). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
+**XP**: **1.700 a testa** al gruppo di oggi, **≈ 875** ai gruppi futuri (Fauci di Diamante CR 11 + 2 Xorn CR 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
 crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
 
 ---
 
 ## §6 — INCONTRO 2 (OPZIONALE): I CRISTALLI VIVENTI — Skill Challenge
+
+### SCENA 4 — Il giardino che canta
+
+**In scena** — Dove: il giardino dei cristalli — Chi: la Madre Cristallo · i Cristalli Viventi
+
+All'uscita dalla foresta, anche se il gruppo non ha intenzione di fermarsi:
+
+> **Read-aloud — il giardino dei cristalli.** *La foresta si apre di colpo, e il buio si accende. Davanti a
+> voi, un giardino: migliaia di cristalli non più alti di un nano, cresciuti in
+> triangoli, esagoni, cerchi concentrici — la geometria di una mente, non del
+> caso. E si MUOVONO: si inclinano verso di voi come girasoli verso un sole che
+> non c'è, e cantano. Non è metafora: ogni cristallo tiene una nota, e le
+> migliaia di note insieme formano un accordo così vasto che arriva allo
+> sterno prima che alle orecchie. Al centro del giardino, alta come tre nani,
+> una madre di luce: sfaccettature a migliaia, e dietro ognuna, un pensiero.*
 
 > **Correzione (coerenza).** I file-fonte facevano "consigliare Hella dal regno
 > degli spiriti" **attivamente**. **Errato**: Hella è morta e dà solo **echi**.
@@ -1232,12 +1306,33 @@ piccoli (1–3 m) cresciuti in **pattern geometrici perfetti**, che si inclinano
 verso di voi come girasoli e **cantano** un accordo impossibile. Sono vivi. Al
 centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 
+**Scheda d'entrata — la Madre Cristallo, il pensiero del giardino** *(nessuno statblocco: non combatte)*
+
+| | |
+|---|---|
+| **Aspetto** | un cristallo alto cinque metri al centro del giardino, sfaccettature a migliaia: dietro ognuna un pensiero |
+| **Vuole** | che il giardino resti intero. Chi passa oltre può passare; chi si ferma ad ascoltare viene giudicato |
+| **Suona** | telepatia, senza voce. Chiama i PG «carne-morbida», e parla per frasi corte |
+| **Sa** | che Terros è vulnerabile al suono; e che lo spirito della druida morta ha sfiorato il giardino. Lo riferisce senza capirlo, come un presagio |
+| **Combatte** | no. Se lo skill challenge fallisce, il giardino urla (qui sotto, «Fallimento Critico») |
+
+**Comparse**
+
+| Chi | Com'è | Come parla |
+|---|---|---|
+| i Cristalli Viventi | migliaia di cristalli alti da uno a tre metri, cresciuti in triangoli, esagoni e cerchi. Si inclinano verso chi passa come girasoli | cantano: ognuno tiene una nota. Al passaggio di chi non si ferma cantano più piano |
+
 > **MADRE CRISTALLO (telepatia):** *«Intrusi carne-morbida. Perché disturbate
 > il nostro giardino? Passate oltre, se volete: il canto non vi tratterrà. Ma
 > chi si ferma ad ascoltare… viene ascoltato.»*
 
 ### Skill Challenge — Guadagnare la fiducia dei Cristalli
 **Complessità: 6 successi prima di 3 fallimenti.** Tutti e 3 i PG contribuiscono.
+Si tira a giri: a ogni giro ogni PG tira almeno una volta, e ogni abilità vale
+una volta per PG a giro. Utilizzare Oggetti Magici si usa solo con i
+gradi, come nell'SRD. Chi non ha un'abilità utile può Aiutare un compagno (+2)
+o passare il giro senza fallimento; e i nani hanno la loro prova, qui sotto
+.
 
 | Abilità (chi) | CD | Effetto |
 |---|---|---|
@@ -1245,7 +1340,8 @@ centro, alto 5 m, la **MADRE CRISTALLO**. Vedi **MAPPA T-3**.
 | Conoscenze (Natura/Dungeoneering) | 18 | Dimostrare di capire l'ecosistema → +1 |
 | Intrattenere (Canto) | 22 | Cantare in armonia coi cristalli → **+2** (fallito: **−1** ai successi) |
 | Utilizzare Oggetti Magici (Corona/Anello) | 15 | Riconoscono Moradin → +1 |
-| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, 3d8+10) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
+| Conoscenze (architettura e ingegneria) o Cercare sulla pietra (i nani) | 18 | Leggere come crescono i cristalli e dove la pietra li regge → +1 |
+| **Riforgiare un cristallo crepato** (Osservare CD 18 per trovarlo + 1 carica di **Vigore della Forgia**, una delle Benedizioni di Moradin che il gruppo ha dalla Sala (Scena 1): 3 cariche al giorno, 3d8+5) | auto | Moradin benedice l'atto: le crepe guariscono → **+2** e Madre Cristallo commossa |
 
 > **La prova del cristallo crepato è il cuore emotivo della scena** (il tuo
 > "riforgiare il cristallo"): non tagliarla. Cristalli curabili in **E02** e
@@ -1260,7 +1356,7 @@ potrà essere colto di sorpresa, niente apertura sonica al §8). Punizione vera.
 **Successo (6).** Percorso sicuro; **info sul boss** (Terros è **vulnerabile
 al sonico**); **+2 TS contro Terros** (dono della Madre). Soprattutto i
 Cristalli consegnano la **Frequenza della Confusione** (arma sonora, §8) e,
-come **Successo Critico**, il **Diapason Armonico** (frammento: **stun Terros
+come **Successo Critico** (6 successi senza nessun fallimento), il **Diapason Armonico** (frammento: **stun Terros
 1 round, senza TS, una volta sola** — spezza il ciclo di rigenerazione).
 
 > **MADRE CRISTALLO (dopo il successo):** *«Carne-morbida… onesti. Rari.
@@ -1272,6 +1368,13 @@ come **Successo Critico**, il **Diapason Armonico** (frammento: **stun Terros
 ---
 
 ## §6-bis — IL SEME-MERCATO DI VARIS (quest personale di Artemis, NEL TEMPIO)
+
+### SCENA 5 — Il Seme-Mercato (si gioca dopo la Scena 7)
+
+**In scena** — Dove: il corridoio — Chi: Varis
+
+La scena sta qui perché è nata come seguito del §6; al tavolo si gioca **dopo
+la Sentinella** (Scena 7), sul corridoio che scende verso Terros.
 
 > **Dove e quando.** **Dentro il Tempio di Mithral,
 > DOPO la Sentinella** (§7b), lungo il corridoio che scende verso la camera
@@ -1291,18 +1394,18 @@ come **Successo Critico**, il **Diapason Armonico** (frammento: **stun Terros
 > per secoli era rimasto sepolto nel muro. *Nessuno l'ha portato qui a mano:
 > è il mercato che cresce dove passa la ricchezza.*
 
-> **Read-aloud (solo per Artemis — Salvatore).** *Il corridoio riprende a
+> **Read-aloud (Salvatore, solo per Artemis) — il corridoio, 1 di 3.** *Il corridoio riprende a
 > scendere, e i tuoi compagni sono già avanti: il nano coi guanti nuovi
 > cammina come se il pavimento gli dovesse dei soldi. Tu resti mezzo passo
 > indietro — e l'Anello ti morde il dito. Quel morso lì.*
->
-> *Nella parete, dove il duello ha aperto una crepa nel mithral, qualcosa
+
+> **Read-aloud — il corridoio, 2 di 3.** *Nella parete, dove il duello ha aperto una crepa nel mithral, qualcosa
 > cattura la luce in un modo che il metallo non fa: un **cabochon violetto**,
 > grande come l'unghia del pollice, incastonato nella pietra come una zecca
 > nel cuoio. È **caldo**. In un piano dove tutto è freddo educato, quella
 > cosa è tiepida come una mano appena tolta da una tasca.*
->
-> *E tu sai leggere i tagli delle gemme come altri leggono le insegne delle
+
+> **Read-aloud — il corridoio, 3 di 3.** *E tu sai leggere i tagli delle gemme come altri leggono le insegne delle
 > locande: quello non l'ha fatto la terra. Quello è stato **tagliato**, da
 > mani civili, in un posto dove esistono i banchi e i registri. Qualcuno
 > l'ha lasciata qui. Non per qualcuno: per **qualcuno come te**.*
@@ -1313,6 +1416,16 @@ l'Anello)** gli dice che è un **innesto planare**: un'esca-esploratore del
 mercato di Varis "Seta-Argento", piantata lungo la linea di forza che porta al
 Tempio — dove passano cose preziose, prima o poi passa un compratore. È un
 **Seme-Mercato**.
+
+**Scheda d'entrata — Varis «Seta-Argento», la voce nella gemma** *(statistiche: la sua scheda nel Bestiario)*
+
+| | |
+|---|---|
+| **Aspetto** | non c'è: è a Rethmar. Arriva come voce, col tocco della gemma. Nel Bestiario è un uomo sulla cinquantina, in sete grigie e argento |
+| **Vuole** | un socio che gli sia debitore: il Seme è un Marchio di Credito, e l'esca è tagliata sull'avidità di Artemis |
+| **Suona** | mielato, telepatico. Non mente mai direttamente: usa omissioni, e tratta Artemis da pari |
+| **Sa** | che Artemis ha già fatto tre affari con lui (Bestiario). Del Collezionista non conosce la vera natura |
+| **Combatte** | no: in questa scena non c'è |
 
 > **VARIS (telepatico, mielato — la voce arriva col tocco della gemma):**
 > *«Bravo. Solo tu potevi vederla. Consideralo un pegno di fiducia tra futuri
@@ -1328,6 +1441,12 @@ mercato al momento peggiore, o "vendere" la posizione di Artemis a chi paga —
 p.es. Il Collezionista). L'esca è tarata **esattamente** sull'avidità di
 Artemis: un tesoro invisibile agli altri, un affare che pare gratis.
 
+Da qui alla fine del §6-bis c'è anche la scena dell'ora della pergamena: non
+si gioca nel Piano della Terra, ma nella notte del Viaggio a mille anni fa,
+nella fortezza del 372. Là Brynja è la sacerdotessa della cappella, Kettra
+l'alchimista della bottega, e le tacche sono quelle dell'orologio della notte.
+
+<!-- blocco: contratto-del-seme -->
 ### La reazione dell'Anello — coerente col suo carattere (Caotico Buono)
 L'Anello **sussurra segreti del divino e dell'arcano** e **rispetta la scelta
 di Artemis di forgiare il proprio destino** (non lo comanda mai): non gli
@@ -1367,71 +1486,71 @@ finora la propria avidità nell'arco:
 > pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
 > avanti. Registra l'esito nell'**Echo Ledger** (§11).
 
-> ### ✅ CANONE GIOCATO — la terza strada: PRESO, MAI TOCCATO
->
-> **Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
-> pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
-> punta di trapano — *«densa in un modo che le gemme non sono»*. Artemis **non
-> ha rifiutato** e **non ha accettato**: l'ha recuperata **senza toccarla a
-> mani nude** e l'ha fatta **mettere nello zaino di TORDEK**. Il Seme viaggia
-> col party, sigillato in una sacca che non è la sua.
->
-> **Cosa ha rilevato Artemis** (Vista Potenziata + Sapienza Forgiata
-> dell'Anello): oggetto magico, **Trasmutazione + Ammaliamento**. Le due scuole
-> raccontano da sole cos'è, per chi sa leggerle: la **Trasmutazione** è
-> l'innesto che cresce e si radica; l'**Ammaliamento** è **la parte che parla**.
-> Un mercante non pianta una trappola: pianta un **venditore**.
->
-> **La visione del bazar (giocata).** Prima ancora del contatto, ad Artemis è
-> arrivato **negli occhi della mente** il mercato di Varis: banchi, teli,
-> registri, la ricchezza ordinata di un posto dove tutto ha un prezzo scritto.
-> ⚠️ **La visione NON è il contratto**: è la **vetrina**. L'Ammaliamento serve
-> a far vedere la merce; il **Marchio si chiude solo col tocco**. Artemis ha
-> guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
-> quello non si dimentica.
->
-> **Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
-> tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
-> incastonarla nell'Anello). Quindi, oggi:
->
-> | | Stato |
-> |---|---|
-> | **Marchio di Varis** | ❌ **non attivo**. Varis **non** localizza Artemis, non ha crediti da riscuotere |
-> | **Frammento di Mercato** (lo sconto/+4) | ❌ non ottenuto: il premio si paga col tocco |
-> | **+1 morale del rifiuto** | ❌ non ottenuto: non ha rifiutato |
-> | **Il Seme** | ✅ **posseduto**, integro, tiepido, nello **zaino di Tordek** |
->
-> **Come reagisce Varis (e perché è meglio così).** Il mercante **non sa** che
-> gli è successo. La sua esca non è stata né morsa né distrutta: è stata
-> **presa e messa da parte**, che per un mercante è la risposta più
-> inquietante di tutte — significa che il cliente ha capito il prezzo e **ha
-> deciso di decidere dopo**. Il Seme resta un'offerta aperta a tempo
-> indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
-> **contro-mossa**: non un pollo, non uno sfuggito, ma **qualcuno che tratta**.
-> *(Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
-> debitore, riconosce quella di un collega.)*
->
-> **Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
-> ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
-> **appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
-> planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
-> renderlo pesante: basta ricordarsene.
->
-> - **Se Tordek lo tocca** (curiosità, inventario, un compagno che rovista):
->   la voce di Varis arriva **a lui**, ricalibrata su un monaco nanico — non
->   offre tesori, offre **certezze** («posso dirti dove sarà tuo fratello
->   quando servirà»). Il Marchio si chiuderebbe su **Tordek**, non su Artemis.
-> - **Se lo tocca Artemis più avanti**: vale la riga «Prende la gemma» della
->   tabella qui sopra, senza sconti — l'offerta non scade.
-> - **Se lo distruggono** (Sapienza Magica CD 20): vale la riga «Rifiuta», ma
->   **tardi** — Varis ha già capito che è stato riconosciuto.
->
-> **Semi da far germogliare (nessuna meccanica, solo memoria).** Lo zaino di
-> Tordek è **appena più caldo** degli altri quando lo posa. I Bracieri, che
-> hanno una coscienza e un carattere da vecchio fabbro, **non commentano** —
-> e quel silenzio, per chi lo nota, dice più di un avvertimento.
->
-> → **Echo Ledger (§11): «Il Seme dorme nello zaino sbagliato».**
+#### ✅ CANONE GIOCATO — la terza strada: PRESO, MAI TOCCATO
+
+**Cos'è successo davvero.** La gemma **è caduta da sola** dalla parete e,
+pesantissima per la sua taglia, si è **conficcata nel pavimento** come una
+punta di trapano — *«densa in un modo che le gemme non sono»*. Artemis **non
+ha rifiutato** e **non ha accettato**: l'ha recuperata **senza toccarla a
+mani nude** e l'ha fatta **mettere nello zaino di TORDEK**. Il Seme viaggia
+col party, sigillato in una sacca che non è la sua.
+
+**Cosa ha rilevato Artemis** (Vista Potenziata + Sapienza Forgiata
+dell'Anello): oggetto magico, **Trasmutazione + Ammaliamento**. Le due scuole
+raccontano da sole cos'è, per chi sa leggerle: la **Trasmutazione** è
+l'innesto che cresce e si radica; l'**Ammaliamento** è **la parte che parla**.
+Un mercante non pianta una trappola: pianta un **venditore**.
+
+**La visione del bazar (giocata).** Prima ancora del contatto, ad Artemis è
+arrivato **negli occhi della mente** il mercato di Varis: banchi, teli,
+registri, la ricchezza ordinata di un posto dove tutto ha un prezzo scritto.
+⚠️ **La visione NON è il contratto**: è la **vetrina**. L'Ammaliamento serve
+a far vedere la merce; il **Marchio si chiude solo col tocco**. Artemis ha
+guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
+quello non si dimentica.
+
+**Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
+tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
+incastonarla nell'Anello). Quindi, oggi:
+
+| | Stato |
+|---|---|
+| **Marchio di Varis** | ❌ **non attivo**. Varis **non** localizza Artemis, non ha crediti da riscuotere |
+| **Frammento di Mercato** (lo sconto/+4) | ❌ non ottenuto: il premio si paga col tocco |
+| **+1 morale del rifiuto** | ❌ non ottenuto: non ha rifiutato |
+| **Il Seme** | ✅ **posseduto**, integro, tiepido, nello **zaino di Tordek** |
+
+**Come reagisce Varis (e perché è meglio così).** Il mercante **non sa** che
+gli è successo. La sua esca non è stata né morsa né distrutta: è stata
+**presa e messa da parte**, che per un mercante è la risposta più
+inquietante di tutte — significa che il cliente ha capito il prezzo e **ha
+deciso di decidere dopo**. Il Seme resta un'offerta aperta a tempo
+indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
+**contro-mossa**: non un pollo, non uno sfuggito, ma **qualcuno che tratta**.
+Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
+debitore, riconosce quella di un collega.
+
+**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
+ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
+**appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
+planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
+renderlo pesante: basta ricordarsene.
+
+- **Se Tordek lo tocca** (curiosità, inventario, un compagno che rovista):
+  la voce di Varis arriva **a lui**, ricalibrata su un monaco nanico — non
+  offre tesori, offre **certezze** («posso dirti dove sarà tuo fratello
+  quando servirà»). Il Marchio si chiuderebbe su **Tordek**, non su Artemis.
+- **Se lo tocca Artemis più avanti**: vale la riga «Prende la gemma» della
+  tabella qui sopra, senza sconti — l'offerta non scade.
+- **Se lo distruggono** (Sapienza Magica CD 20): vale la riga «Rifiuta», ma
+  **tardi** — Varis ha già capito che è stato riconosciuto.
+
+**Semi da far germogliare (nessuna meccanica, solo memoria).** Lo zaino di
+Tordek è **appena più caldo** degli altri quando lo posa. I Bracieri, che
+hanno una coscienza e un carattere da vecchio fabbro, **non commentano** —
+e quel silenzio, per chi lo nota, dice più di un avvertimento.
+
+→ **Echo Ledger (§11): «Il Seme dorme nello zaino sbagliato».**
 
 > **Nota su Sal/Vatore (per il DM).** Questo marchio si intreccia col #4
 > (Viaggio a 1.000 anni fa), dove **Sal è presente come "Vatore"**: se Artemis
@@ -1439,9 +1558,112 @@ finora la propria avidità nell'arco:
 > mercato — un filo che lega passato e presente della rete di **Varis ↔ Il
 > Collezionista** (le due reti sono collegate).
 
+### Il contratto del Seme, per intero
+
+Fino a qui il §6-bis diceva cosa **fa** il Seme, sparso in tre posti. Questa
+è la scheda completa, scritta perché Artemis lo identifica con la pergamena
+del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»). Quello che
+segue è **tutto ciò che *identificare* rivela**, e il DM lo dice a voce.
+
+**L'oggetto.** Oggetto magico, **non** artefatto e **non** oggetto maledetto:
+*identificare* funziona e rivela tutto, senza la regola dell'1% delle
+maledizioni. Aura moderata di **Trasmutazione** (l'innesto che si radica) e
+**Ammaliamento** (la parte che parla), livello dell'incantatore 9. Un cabochon
+violetto grande come l'unghia del pollice, pesante come un pugno di piombo,
+sempre tiepido.
+
+**Le clausole** (sono il contratto):
+
+1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
+   anche senza volerlo. Guanto, panno o pinza non firmano. Non c'è tiro
+   salvezza, perché il Seme non costringe: aspetta.
+2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
+   nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
+   si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
+   gli chiede. L'Anello reagisce come nel riquadro «La reazione dell'Anello».
+3. **L'anticipo.** Alla firma il debitore riceve il **Frammento di Mercato**:
+   una volta sola, −25% su un acquisto oppure +4 di circostanza a una prova di
+   contrattazione o di Usare Oggetti Magici.
+4. **Il filo.** Chi tiene l'altro capo, il creditore, sa sempre in che
+   direzione e a che distanza si trova il debitore, se è sullo stesso piano.
+5. **La voce.** Il creditore può parlare al debitore, telepaticamente, un
+   minuto al giorno. Una volta alla settimana può tentare una
+   ***suggestione*** (Volontà **CD 16**). È il «controllo» che l'Anello può
+   spezzare con *Dawn's Defiance*.
+6. **La riscossione.** Una carica sola, e **appartiene al creditore**, non a chi
+   porta il Seme. Una volta il creditore chiede il pagamento: un favore, una
+   consegna, un silenzio. Niente obbliga il debitore a pagare. Chi rifiuta
+   però diventa **insolvente**, e da quel momento il creditore è libero di
+   **vendere il filo** a chi vuole.
+7. **Il recesso prima della firma.** Estirparlo pulito o disfarlo: Sapienza
+   Magica **CD 20**. *Dissolvi magie* lo spegne per 1d4 round.
+8. **Il recesso dopo la firma.** Il contratto si chiude **pagando la
+   riscossione**. In alternativa *spezzare incantamento* o *rimuovi
+   maledizione* con prova di livello dell'incantatore **CD 20**, oppure
+   *desiderio*.
+
+**Cosa *identificare* NON dice.** Il nome del creditore, le sue intenzioni, il
+legame con il Collezionista. Mostra soltanto **la firma della bottega**, incisa
+dentro la pietra e visibile solo alla luce dell'incantesimo: una bilancia con
+un filo d'argento avvolto al giogo. La rivedranno a Rethmar, sull'insegna di
+Varis, e allora capiranno.
+
+**A ≈372 DR il creditore non c'è ancora.** Varis nascerà fra quasi mille anni.
+Il contratto è intero, il filo non porta da nessuna parte e la voce tace. Se
+qualcuno firma lì, l'anticipo arriva subito e la vena si chiude, ma filo, voce
+e riscossione **si accendono solo al ritorno nel 1372**. Quel giorno Varis
+scopre un debitore che ha firmato mille anni prima di lui, e per un mercante
+non c'è niente di più interessante.
+
+#### La scena al tavolo — l'ora della pergamena
+
+*Si gioca di persona, con il giocatore di Artemis, e gli altri presenti.*
+
+1. **Lo zaino di Tordek.** Il Seme è lì dal 31 luglio. Artemis deve chiederlo,
+   e quello che dice a Tordek, o che non gli dice, è canone (eco E-07b). Se
+   Tordek chiede «cos'è?», la risposta la sceglie il giocatore.
+2. **La pergamena.** Usare Oggetti Magici **CD 21**. Il warlock può prendere 10
+   (*Deceive Item*, `[Private source — Complete Arcane]`).
+3. **L'ora.** Un'ora con il guanto sulla gemma. Conta **1 tacca** sul foglio
+   della notte: con le 3 già segnate, una scelta lenta in più porta verso le
+   7 tacche (si arriva alle mura correndo). In alternativa la si rimanda a
+   dopo la missione nel campo. È la scelta del tavolo, e va detta prima.
+4. **Il posto.** Brynja non la vuole sull'incudine della cappella («non qui»,
+   una volta, e la seconda più piano). Kettra la lascia fare nella bottega,
+   dietro la porta foderata di piombo.
+5. **Il DM legge le clausole** 1-8 a voce, nell'ordine, poi la firma della
+   bottega. Niente sul creditore.
+6. **Dopo**, il gruppo decide: estirparlo (CD 20), tenerlo com'è, darlo a
+   qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
+   sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
+
+> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena si accartoccia
+> in cenere tiepida. Sotto il guanto la gemma non è cambiata: lo stesso peso,
+> lo stesso calore di una mano appena tolta da una tasca. Ma adesso dentro la
+> pietra c'è una scrittura, fitta e ordinata, come in un libro mastro. In
+> fondo alla pagina c'è un segno: una bilancia con un filo d'argento avvolto al
+> giogo. Per tutta l'ora hai aspettato una voce. Non è venuta. Dall'altra
+> parte del filo non c'è ancora nessuno.*
+<!-- /blocco -->
+
 ---
 
 ## §7 — IL TEMPIO DI MITHRAL: PUZZLE GRAVITAZIONALE + SENTINELLA
+
+### SCENA 6 — L'oceano di roccia, e il salto verso il Tempio
+
+**In scena** — Dove: l'oceano di roccia — Chi: nessuno
+
+> **Read-aloud — l'oceano di roccia.** *L'ultima riva non è una riva: è il punto dove il suolo
+> smette di fingere di essere solido. Davanti a voi, fino all'orizzonte che non
+> esiste, si stende un oceano di roccia grigia — onde lente come pensieri di
+> montagna, creste che impiegano un'ora a rompersi, correnti di granito
+> liquido che scorrono senza suono. Toccarlo è come toccare il fianco di un
+> toro: cede, e sotto c'è il muscolo. E là, sospeso a cinquanta metri sopra
+> le onde, RUOTA il Tempio: un cubo d'argento di cento metri di lato, perfetto
+> come un dado lanciato da un dio e mai atterrato. Aegis Fang, nella mano di
+> Thorik, vibra così forte che il braccio duole. Siete arrivati. Manca solo
+> l'impossibile: attraversare il vuoto.*
 
 ### 7a. Raggiungere il Tempio (co-op: Ancora, Traghettatore, Navigatore)
 Il portale è **sotto** il cubo, 50 m sopra l'oceano di roccia; il Tempio ha
@@ -1451,12 +1673,33 @@ gravitazionale. L'attraversamento **non è un singolo tiro**: è uno sforzo
 combinato che valorizza ognuno (vedi **MAPPA T-4**):
 - **L'Ancora — Thorik**: pianta i piedi sul bordo (o conficca Aegis Fang) e fa
   da perno di salvataggio. Se un tiro va storto, **FOR CD 20** per fermare la
-  deriva nel vuoto invece di perdersi nel piano.
+  deriva nel vuoto. Se fallisce anche l'Ancora (o la Scalare sulla corda), chi
+  scivola cade nell'oceano di roccia: affonda in 3 round, Nuotare CD 20 come
+  al §4, e Artemis può ripescarlo col cavo.
+  Attorno al Tempio la gravità è zero, quindi non si cade: si deriva piano
+  verso l'oceano, senza danno, e lo si tocca al round successivo. Artemis
+  ripesca chi è legato al cavo con un'azione di round intero e una prova di
+  FOR CD 15, prima che i 3 round dell'affondamento finiscano. Al cavo sono
+  legati Thorik e Tordek. Se Artemis non ce
+  la fa entro i 3 round, l'oceano risputa il sommerso sulla riva dopo 1d4
+  round, a 0 pf e stabile, e il riposo che gli serve costa −12 h. Thorik sale
+  per ultimo, e dal Tempio gli fa da Ancora Tordek.
 - **Il Traghettatore — Artemis**: con le **Ali dell'Ombra** ignora la gravità
-  invertita; vola portando un cavo di mithral agganciato a Thorik.
+  invertita; vola portando un cavo di mithral agganciato a Thorik e a Tordek.
 - **Il Navigatore — Tordek**: balza tra i detriti fluttuanti (**Saltare CD 25**,
   Take 10 = 26 ✓) fino al cubo e colpisce le **Rune di Attracco** esterne,
   stabilizzando l'ingresso per far attraccare Artemis e trainare Thorik.
+
+**Da dove si salta, e quanto è lontano**. Il
+Tempio è a **40 m**. La strada non c'è: la si crea suonando il **Diapason** e
+tenendo la musica. Ogni prova riuscita solleva dall'oceano un blocco di pietra,
+e i blocchi fanno una scala; **Tordek salta da un detrito sopra l'oceano, a
+metà strada**, e da lì al portale. La prova è quella della Frequenza (§8):
+Intrattenere (Canto) **CD 18**, l'Anello di Artemis dà +4
+. Suonarlo per la scala **non lo consuma**: il suo uso unico è lo stordimento.
+Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
+. Senza il Diapason (il gruppo ha saltato i Cristalli, §6) la scala non
+si alza, e restano i tre ruoli qui sopra.
 
 > **✅ CANONE GIOCATO — «la salita cantata».** Al tavolo
 > l'attraversamento è stato risolto in variante: il party ha **cantato la
@@ -1481,6 +1724,10 @@ gravità **ruota di 90°** (incubo alla Escher). Aegis Fang vibra verso il
 centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 (Arcane CD 18 o 2d6 forza).
 
+### SCENA 7 — L'anticamera della Magnetite
+
+**In scena** — Dove: l'anticamera — Chi: la Sentinella · i Bracieri · Moradin
+
 ### 7b. ⚒️ ANTICAMERA DELLA MAGNETITE — La Sentinella (risveglio pieno dei Bracieri)
 
 > **Il beat di Tordek.** Stanza esagonale (18 m), pareti di **Magnetite
@@ -1488,22 +1735,58 @@ centro. Hazard opzionali: trabocchetti di gravità (Riflessi CD 15, 1d6), rune
 > un tonfo; un **ronzio** acuto riempie l'aria, le vene viola pulsano — e la
 > stanza **divide gli intrusi per natura**. Vedi **MAPPA T-5**.
 
-> **Read-aloud (isolamento).**
+> **Read-aloud — l'anticamera, l'isolamento.**
 > **THORIK** — *«Il metallo chiama il metallo.»* *Armatura, scudo, ascia: di
 > colpo pesano tonnellate, non verso il basso, ma verso le pareti. Sei
 > scagliato contro la parete nord e la Magnetite ti tiene incollato come una
-> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 28 per liberare un
-> braccio 1 round; non puoi muoverti). Fuori dallo scontro, costretto a
+> mosca sulla carta moschicida.* **Immobilizzato** (FOR CD 25 per liberarti;
+> finché no, non puoi muoverti). Fuori dallo scontro, costretto a
 > guardare.
 > **ARTEMIS** — *«Ciò che sfida la terra dev'essere abbattuto.»* *La gravità
-> qui si concentra: non 2×, ma DIECI volte. Le ali d'ombra si frantumano.* **Prono
-> e indifeso**, a malapena sollevi la testa; la magia richiede gesti che pesano
+> qui si concentra: non 2×, ma DIECI volte. Le ali d'ombra si frantumano.* **Prono**,
+> a malapena sollevi la testa; la magia richiede gesti che pesano
 > troppo.
 > **TORDEK** — *Senti la pressione, eccome. Ma le ossa sono temprate dal Vigore
 > della Montagna, non porti metallo che ti tradisca, non cerchi di volare via
 > dalla terra. Pianti i piedi. I Bracieri (Fuoco) creano una micro-bolla di
 > stabilità attorno a te. Sei l'unico in piedi. E la Sentinella lo sa: gli
 > occhi senza volto si girano verso di te.*
+
+**La Sentinella è una prova, come Terros è un voto**.
+- **Se Tordek cade** (0 pf o meno), la Magnetite si spegne. A −1 pf o meno
+  Tordek resta stabile, e non muore nel duello. Spenta la Magnetite, la Sentinella
+  torna immobile al suo posto. Thorik e Artemis sono di nuovo liberi. Il duello
+  si ritenta dopo un riposo: **−12 h** al countdown di Hammerfist, la tariffa
+  ordinaria. Al secondo tentativo la Sentinella riparte dai pf e dalle crepe a
+  cui era rimasta. Tordek ritenta coi pf che
+  il riposo gli rende (senza guaritore, uno per livello: 13) più le cariche di
+  *Vigore della Forgia*, che nel Piano tornano dopo ogni riposo; le Benedizioni
+  di Moradin durano finché il gruppo resta nel Piano. Caduto Tordek, la porta
+  dell'anticamera si riapre. Ogni riposo, anche questo, vale −12 h, e il ramo
+  «hanno dormito» di 8c-4 scatta una volta sola.
+- **Se qualcuno tocca la Sentinella ferma**, o prova a scavalcarla, lei si
+  risveglia e la Magnetite si riaccende. La porta verso Terros resta chiusa
+  finché non la batte Tordek.
+- **Thorik**, durante il duello, si libera **del tutto** con la prova di
+  **FOR CD 25**, una volta per round. L'aiuto di Artemis dà **+2** solo se gli
+  è adiacente, come ogni aiuto dell'SRD: prona sotto dieci volte la gravità
+  non si sposta, e la Magnetite la lascia accanto a lui (MAPPA T-5). Nessuna
+  scheda degli artefatti dà un aiuto a distanza.
+- **Artemis**, prono, può parlare, e un suo incantesimo **senza componenti
+  somatiche** passa. Con un'azione standard aiuta Thorik (+2 alla sua prova di
+  FOR) oppure incita Tordek (+2 al suo prossimo attacco).
+  Dentro la Magnetite passano solo le invocazioni su sé stesso o sui compagni:
+  *Chilling Tentacles* e *Flee the Scene* lì non funzionano, perché la gravità
+  10× schiaccia anche loro.
+- **Thorik libero** può solo Aiutare Tordek: +2 alla CA o al tiro per colpire.
+  Se attacca la Sentinella, lei lo ignora, e la prova resta di Tordek.
+
+**Comparse**
+
+| Chi | Com'è | Come parla |
+|---|---|---|
+| la Sentinella | un golem di mithral, Grande, veloce e fluido, non goffo. Occhi senza volto che si girano verso l'unico in piedi | non parla. Ogni pugno che riceve risuona come una campana; il mithral non si ammacca, vibra |
+| i Bracieri | i guanti di Tordek, con una coscienza da vecchio fabbro | in nanico, dentro la mente di Tordek, per frasi corte. Parlano al completamento, e poi di rado |
 
 **Statblock — SENTINELLA SILENZIOSA (Golem di Mithral).** Costrutto, Grande ·
 DV 18d10+40 (**160 pf**) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES,
@@ -1513,17 +1796,29 @@ DV 18d10+40 (**160 pf**) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES
 non-artefatto entro 9 m, Riflessi **CD 22** nega · Immunità da costrutto ·
 **RD 15/adamantio E contundente** (solo i pugni di Tordek coi Bracieri passano
 pieni) · **Immunità alla magia** · **Vulnerabilità alla Risonanza degli
-artefatti**: i Bracieri **ignorano la RD** e infliggono pieno; ogni critico (o
-colpo che supera la CA di 5+) crea una **crepa** — **3 crepe → guscio infranto**.
+artefatti**: i Bracieri **ignorano la RD** e infliggono pieno, e i loro colpi
+sono **attacchi di contatto** (la Risonanza: CA di contatto 11). Il primo che va
+a segno in un round crea una **crepa**, al massimo una a round. **3 crepe →
+guscio infranto, ed è la vittoria**.
 
 **Scontro in 3 fasi.** (1) *Il guscio* — la Sentinella è veloce, fluida, non
 goffa: Tordek usa mobilità/CA per sopravvivere e colpire **duro** (ogni pugno
 risuona come una campana; il mithral non si ammacca, **vibra**). (2) *La
-Risonanza* — sotto 80 pf o dopo 3 colpi buoni, il guscio si crepa (luce verde);
+Risonanza* — alla prima crepa il guscio si apre in luce verde;
 il Golem entra in *Overdrive* (**3 attacchi/round, CA scende a 24**), voce di
 Moradin: *«Il metallo cede al calore E alla pressione: usa entrambi!»* (attiva
-i Colpi del Fuoco). (3) *Il colpo finale* — a 0 pf il petto si apre; un colpo
+i Colpi del Fuoco). (3) *Il colpo finale* — alla terza crepa (o a 0 pf) il petto si apre; un colpo
 senz'armi automatico estrae il **Geode di Smeraldo** prima che si rigeneri.
+
+**Regia del duello**. Il primo tentativo è il più duro: dalla
+prima crepa l'Overdrive picchia tre volte a round, e a raffica piena Tordek
+cade spesso prima della terza. Prima di aprire la porta, ricorda al gruppo che
+Tordek entrerà da solo, e lascia che lo curino. In sala, se il giocatore
+combatte sulla difensiva, con Maestria, i colpi di contatto lo fanno vincere
+comunque in tre turni, e la CA più alta lo tiene in piedi. Se cade, il secondo
+tentativo riparte dalle crepe già aperte. **Le tattiche della Sentinella**:
+Attrazione Fatale strappa l'arma o lo scudo più vicino, mai l'Anello; se
+Tordek si allontana lo insegue; Thorik e Artemis li ignora.
 
 **Il Risveglio (visione, stile Salvatore).** Il Geode galleggia verso Tordek,
 il guanto sinistro si apre come petali d'acciaio. TS **Volontà CD 20** (fallito:
@@ -1555,15 +1850,34 @@ Al risveglio i guanti sono striati d'argento e smeraldo; unisci i pugni —
 > resta la spallata coordinata Pugno Frana + Bull Rush). La Frequenza,
 > invece, è conoscenza e resta utilizzabile.
 
+**Per un gruppo futuro**. Se il gruppo suona il
+Diapason contro la Sentinella, fa quello che ha fatto al tavolo: un *grido
+superiore*, con il suo danno sonico. La Sentinella è un costrutto e non resta
+stordita, e il Diapason è speso: contro Terros non c'è più.
+
 **Bracieri Gemelli — COMPLETI (Fuoco + Terra):** RD 5/adamantio; **Pugno
 Frana** (atterra i giganti); **Tremore del Forgiatore**; + i poteri Fuoco già
 attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
-**XP Sentinella**: ~2.400 (CR ~11). **Loot**: residuo del
+**XP Sentinella**: **1.500 a testa** al gruppo di oggi, **≈ 650** ai gruppi futuri (CR ~11, §11-bis). **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
 
 ---
 
 ## §8 — BOSS: TERROS L'ANTICO (CR 15 · «Hard Mode» voluto) — economia d'azione 3.5
+
+### SCENA 8 — Terros l'Antico
+
+**In scena** — Dove: la soglia · l'Altare — Chi: Terros
+
+**Scheda d'entrata — Terros l'Antico, l'Incudine del Mondo** *(statistiche: qui sotto, dopo 8b)*
+
+| | |
+|---|---|
+| **Aspetto** | una collina di roccia a strati (basalto, granito, marmo, una vena d'adamantio) alta dieci metri, addormentata in fondo all'Altare. Quando si sveglia, una fenditura si apre come una palpebra su due occhi di cristallo grezzo |
+| **Vuole** | custodire lo Smeraldo. È un voto vecchio quanto il piano, e non lo odia nessuno: lo esegue |
+| **Suona** | parla Terran (INT 10) e ascolta **una** frase. Poi dice il suo voto: «la Forza non si dona: si dimostra» |
+| **Sa** | quello che sa la pietra: chi la tocca, e dove (percezione tremorica, 18 m). Se il gruppo ha curato i Cristalli, il suo ultimo suono sarà di assenso, non d'odio |
+| **Combatte** | GS 15, fino alla morte: non fugge mai, non insegue fuori dalla camera, non inizia mai una lotta (8c-2b). Ignora chi è a terra |
 
 > **UN SOLO PROFILO.** I file-fonte avevano due boss in conflitto (Elementale
 > Anziano **CR 13** / Terros **CR 15**) **e** usavano "azioni del covo a
@@ -1597,7 +1911,7 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > è l'Altare stesso a fare da approdo. Il rischio «ritirata tagliata» resta,
 > in forma migliore — vedi il distacco qui sotto.
 
-> **Read-aloud — I SEI SECONDI DELLA SOGLIA (LotR + Salvatore).** *La soglia
+> **Read-aloud — I SEI SECONDI DELLA SOGLIA (LotR + Salvatore), 1 di 3.** *La soglia
 > si apre come una pupilla, e il mondo si apre con lei.*
 >
 > *Siete dentro una **bolla**. Una sfera di cristallo grande come la piazza
@@ -1606,8 +1920,8 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > passano lentissime le sagome dei geodi giganti, come pesci troppo grandi
 > intorno a una lanterna. L'aria qui dentro è **pulita** — la prima aria
 > pulita da ore. Le narici se ne accorgono prima della testa.*
->
-> *Sotto gli stivali avete una lastra d'argento vivo, larga quanto la sala
+
+> **Read-aloud — la soglia, 2 di 3.** *Davanti agli stivali avete una lastra d'argento vivo, larga quanto la sala
 > comune di una locanda, incisa di rune verdi che pulsano piano. Oltre il
 > suo bordo non c'è un pavimento: c'è **niente**. Non un burrone — niente.
 > Il vostro «sotto» finisce dove finisce la lastra.*
@@ -1615,12 +1929,19 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > *Sopra il centro della lastra, a un'altezza da spallate, pende una **luce
 > verde** senza catena e senza sostegno: una gemma grande come un pugno di
 > nano che gira lentissima su sé stessa e vi tinge le mani del suo colore.*
->
-> *E all'altro capo della lastra c'è una **collina**. Roccia a strati —
+
+> **Read-aloud — la soglia, 3 di 3.** *E all'altro capo della lastra c'è una **collina**. Roccia a strati —
 > basalto, granito, marmo, e una vena scura che a occhio esperto ha il
 > lucore dell'adamantio — accatastati come pagine di un libro chiuso da
 > troppo tempo. Non si muove. Non ha respiro. Occupa un terzo della
 > piattaforma. **Che fate?***
+
+**Se attaccano la collina**. I tre box si leggono con
+il gruppo ancora sulla soglia. Terros si sveglia appena qualcuno mette piede
+sull'Altare o lo attacca dalla soglia, e chi lo fa per primo ha il round di
+sorpresa. Terros non è indifeso: un elementale non dorme davvero. Agisce dal
+round 1, e l'Altare si stacca all'inizio del round 1. Poi si legge il
+risveglio qui sotto.
 
 > **Read-aloud (il risveglio del guardiano — LotR + Salvatore).** *A prima
 > vista è una formazione della caverna: una collina di roccia
@@ -1637,7 +1958,7 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 
 ### 8b. IL DISTACCO — l'Altare si centra sul guardiano
 
-**Cosa succede.** Nel **round del risveglio** (round 1), l'Altare **molla
+**Cosa succede.** All'inizio del **round del risveglio** (round 1), l'Altare **molla
 l'ormeggio** e scivola fino al **centro esatto della sfera**, come se il
 piano stesso ricentrasse il proprio peso attorno a chi lo custodisce. Non è
 un attacco e non è un potere di Terros: è **il piano che si riassesta**.
@@ -1658,17 +1979,17 @@ in linea retta a metà velocità — §0-bis). **La ritirata non viene tagliata
 da una trappola: se la tagliano da soli**, ed è molto più bello. Da qui in
 poi vale la **MAPPA T-6**.
 
-> **Read-aloud — IL DISTACCO (Salvatore).** *Non è la collina a muoversi per
+> **Read-aloud — IL DISTACCO, l'Altare (Salvatore), 1 di 2.** *Non è la collina a muoversi per
 > prima: è il **bordo**. Con un suono di ghiaccio che si stacca da un tetto,
 > la lastra si scolla dalla soglia — e la soglia comincia ad allontanarsi.
 > Piano. Con la calma con cui una chiatta lascia il molo mentre tu sei ancora
 > mezzo sul molo e mezzo sulla chiatta.*
->
-> *Le rune verdi sotto i vostri stivali si accendono tutte insieme, e per un
+
+> **Read-aloud — l'Altare, 2 di 2.** *Le rune verdi sotto i vostri stivali si accendono tutte insieme, e per un
 > istante avete la sensazione insopportabile che il mondo abbia deciso **dove
 > deve stare il suo centro** — e che il centro sia il posto dove state voi.
 > L'Altare si ferma. È esattamente in mezzo alla bolla, sospeso in un nulla
-> che da qui pare più grande di prima.*
+> più largo di prima.*
 >
 > *La porta da cui siete entrati è adesso un cerchio di luce lontano, di là
 > da un vuoto senza appigli. E la collina si sta ancora alzando.*
@@ -1685,9 +2006,8 @@ una sfera nuda:
   dall'Altare, oltre lo zero-G: è la via di fuga — raggiungibile solo in
   volo o spingendosi dalle superfici. **Non si può «stazionare a metà»**:
   nel vuoto senza appigli si è in balia (§0-bis).
-- **Due piattaforme laterali** sopraelevate (+3 m, scale di pietra): **posizioni
-  di tiro** elevate per Artemis e per chi vuole stare fuori dalla portata di
-  Terros (4,5 m).
+- Niente piattaforme laterali: la sfera è a gravità zero tranne l'Altare, e
+  Artemis tira in volo.
 - **Altare di Smeraldo levitante** al centro: lo Smeraldo **levita +1,5 m**
   sopra l'Altare; finché Terros è vivo la piattaforma è la sua roccaforte
   (rigenera al contatto). **Alla vittoria, l'Altare scende lentamente** e lo
@@ -1701,16 +2021,24 @@ una sfera nuda:
 > generazione superata del design: **il Golem delle immagini È la Sentinella
 > di Mithral dell'Anticamera (§7b)**, non il boss del Nodo. Usa pure quelle
 > immagini per la Sentinella; per Terros usa le immagini delle caverne/nodo.
-> La scenografia ricca della MAP 6 (ponte, piattaforme, altare levitante)
+> La scenografia ricca della MAP 6 (l'altare levitante)
 > resta — è la casa di Terros. **Un solo boss, zero doppioni.**
 
 **Apertura sonica.** Se il party entra cantando la **Frequenza della
-Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4; servono
+Confusione** (Intrattenere Canto **CD 18**, l'Anello di Artemis dà +4 a
+chiunque canti con lui; tira ognuno dei tre PG, una volta, e servono
 2 successi su 3) — Terros si sveglia **nauseato**: **−4 attacco/CA il round
 1**. Vale **solo** se hanno guadagnato la Frequenza dai Cristalli (§6): se
 hanno **saltato** l'incontro non la possiedono, e se hanno fatto **fallimento
 critico** l'urlo ha già svegliato e preparato Terros. In entrambi i casi: boss
 a piena forza — la scelta al campo dei Cristalli SI SENTE qui.
+
+**Cantare durante lo scontro**. Dopo l'apertura, la Frequenza la
+canta un PG alla volta: **azione standard**, Intrattenere (Canto) **CD 18**
+(+4 se canta Artemis, che ha l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
+è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto). La
+modalità sonica di Artemis è un'altra cosa: passa dall'Anello con un'azione
+veloce, e la regola è più avanti.
 
 > **✅ CANONE GIOCATO — stato delle armi soniche al boss.**
 > Il party **possiede la Frequenza** (skill challenge superato, §6) → il
@@ -1742,7 +2070,8 @@ FOR 31(+10) DES 8(−1) COS 25(+7) INT 10 SAG 15(+2) CAR 11
 TS: Tempra +24 · Riflessi +9 · Volontà +12
 
 DIFESE
-• RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento,
+• RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento
+  (tranne il Diapason, dono della Madre),
   critici, fiancheggiamento, effetti di forma
 • DEBOLEZZA: SONICO ×1,5 (la Frequenza dei Cristalli morde;
   il Frantumare sonico di Tordek è la fonte-DPS chiave)
@@ -1767,15 +2096,17 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
      MA solo stando saldi — non fluttuando nello zero-G).
      Thorik sull'Altare +9 (serve 16+); nello zero-G +5 (serve 20).
      Tordek sull'Altare +6 (serve 19+); nello zero-G +2 (mai).
-   • FUORI DAL BORDO: entri nello zero-G e DERIVI. I 2d6 contro la
-     parete valgono solo se sei già a meno di 3 m da essa (di norma
-     la parete è a ~25 m). Per rientrare: volo, oppure spinta da una
-     superficie in linea retta a metà velocità (§0-bis). Thorik ha
-     Aegis Fang Returning come gancio; TORDEK NON HA NIENTE — è lui
-     il vero bersaglio della Spinta, e sono due round fuori scena.
+   • FUORI DAL BORDO: entri nello zero-G, a 3 m dall'Altare, e vale
+     la regola dell'Onda: ci ricadi alla fine del tuo turno
+     successivo e perdi l'azione di movimento (Riflessi CD 15 o
+     prono). I 2d6 contro la parete
+     valgono solo se sei già a meno di 3 m da essa (di norma la
+     parete è a ~25 m). Per Tordek, che non vola, è un turno perso:
+     è lui il vero bersaglio della Spinta.
 3) EARTH GLIDE (Ex): come azione di movimento entra nell'Altare/
    parete e riemerge (fino a 6 m) alle spalle di un caster.
-   *Move Earth* lo stordisce (Tempra CD 15) e lo blocca 1 round.
+   *Move Earth* lo blocca 1 round, senza stordirlo (Tempra CD 15)
+.
 4) ASSORBIMENTO TERRESTRE (Su, passiva): a contatto con
    Altare/pietra rigenera 15 pf/round.
 
@@ -1784,8 +2115,20 @@ POTERI CON RICARICA — ognuno è la sua AZIONE del round
 A) ONDA GRAVITAZIONALE (standard; ricarica: 1 round ogni 1d4
    dopo l'uso): sceglie una direzione; la gravità della camera
    si sposta là per 1 round. Tutti "cadono" 9 m in quella
-   direzione: Riflessi CD 22 o 4d6 contundenti + proni contro
-   la superficie d'impatto.
+   direzione. Chi trova una superficie entro 9 m (l'Altare, la
+   parete) la colpisce: Riflessi CD 22 o 4d6 contundenti + prono.
+   Chi non la trova resta sospeso a 9 m, senza danni. Finita
+   l'Onda, la gravità dell'Altare riprende chi è entro 9 m: ci
+   ricade alla fine del suo turno successivo e perde l'azione di
+   movimento (Riflessi CD 15 o prono, senza danni). Chi è più
+   lontano deriva di 3 m a round nella direzione dell'Onda finché
+   tocca la parete, e da lì si spinge, o vola
+.
+   Tordek, con l'Ancoraggio dei Bracieri, resta sull'Altare
+, e non spende un uso. Thorik
+   resta con Riflessi CD 22, conficcando Aegis Fang nel bordo.
+   Terros non è spostato dalla sua Onda
+.
 B) PIOGGIA DI STALATTITI (standard; ricarica 5-6 su d6): raggio
    9 m centrato a scelta, 8d6 (contundente+perforante), Riflessi
    CD 22 dimezza.  ► CONTRO-MOMENTO (Artemis, avido di gloria):
@@ -1798,7 +2141,10 @@ C) SCUDO DI GEODI (standard; ricarica 1d3 round): solleva lastre
    ► CONTRO-MOMENTO (Tordek, "Frantuma-Scudo"): un colpo dei
    Bracieri che infligga >15 danni SONICI in un colpo manda in
    frantumi lo scudo e lascia Terros FRASTORNATO per il round di
-   Thorik.
+   Thorik. Il Frantumare dei Bracieri qui non scatta (vuole un
+   critico, e Terros ne è immune): i colpi di Tordek sono sonici
+   nel round in cui il gruppo canta la Frequenza
+.
 
 CONTRO-MOMENTO (Thorik, "Radice a Terra") `[CANONE — DM 2026-07-31,
    ERRATA]`: quando Terros usa Earth Glide per sfuggire/ricaricarsi,
@@ -1850,13 +2196,16 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 ============================================================
 ```
 
+Prima di leggerlo, Thorik tira Riflessi CD 22: se fallisce, la frase di Aegis
+Fang si salta e Thorik cade con gli altri.
+
 > **Read-aloud — il primo scambio (coreografia, Salvatore).** *Terros non
 > carica: si LASCIA CADERE in avanti, e la camera intera cade con lui — l'Onda
 > Gravitazionale vi strappa l'Altare da sotto i piedi come una tovaglia. Thorik,
 > l'armatura è àncora e bandiera insieme: Aegis Fang morde il
 > bordo dell'Altare, il braccio urla, e il morso tiene. Tordek, il mondo ruota e tu
 > ruoti con lui — i Bracieri sussurrano una parola sola, «peso», e i tuoi piedi
-> trovano il muro come fosse pavimento. Artemis, tu sei l'unico per cui nulla è
+> restano piantati sull'Altare come fosse pavimento. Artemis, tu sei l'unico per cui nulla è
 > cambiato: le Ali d'Ombra non obbediscono alla terra. Da lassù restano sotto
 > di te il boss, l'Altare, i tuoi compagni aggrappati al mondo capovolto. La sua
 > testa di roccia si volta lenta verso di te, l'unico che non è caduto. Che
@@ -1879,10 +2228,10 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 
 | PG | Danno medio/round vs CA 26 | Nota |
 |---|---|---|
-| **Thorik** (Aegis Fang +21) | ~18 dopo RD 10 | serve 5+; 1d10+7+3d6 sacro ≈ 28, −RD 10 |
+| **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra |
 | **Tordek** (Raffica +12/+12/+7/+2) | ~12 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
 | **Artemis** (Blast +16 vs **contatto 8**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | colpo automatico; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
-| **Party** | **~65-75/round** | Terros 345 pf → **~5 round** ✓ epico, non slog |
+| **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** |
 
 | Bersaglio di Terros | Danno medio/round | Letalità |
 |---|---|---|
@@ -1897,7 +2246,7 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 > | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (390 pf, attacchi +32, CD +1) e lo Scudo di Geodi parte **già attivo**; oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dal pavimento al round 3 |
 > | Party **logorato** (niente Frequenza, molte risorse spese, qualcuno sotto metà pf) | Terros usa l'Onda Gravitazionale **una sola volta**; la Rigenerazione scende a 10/round; NON insegue chi resta in zero-G ai margini |
 > | **Therysol scende** (deroga a D15 decisa al tavolo) | Conta come mezzo PG (supporto a distanza): riporta Terros al profilo pieno e togli 1 uso al Diapason |
-> | Un PG viene **abbattuto** durante lo scontro | Terros lo IGNORA (il voto è custodire lo Smeraldo, non uccidere i caduti): passa al bersaglio in piedi — finestra drammatica per stabilizzarlo |
+> | Un PG scende a **−1 pf o meno** sull'Altare | la gravità del Nodo lo espelle subito sulla riva dell'Oceano di Roccia, stabile. Terros passa al bersaglio in piedi: il voto è custodire lo Smeraldo, non uccidere i caduti |
 
 ### Tattiche di Terros — regia round per round (stile RHoD, agganciata a MAPPA T-6)
 
@@ -1909,8 +2258,8 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
   primo round **nauseato** (−4/−4), usa un **Tremore/Onda** disperato per
   disorientare. Altrimenti: si alza dall'Altare (K08-L09) e apre con **Onda
   Gravitazionale verso il soffitto** — vuole i PG **staccati dall'Altare**,
-  fluttuanti e goffi nello zero-G, dove il suo Push li sbatte contro il muro
-  curvo (2d6). Bersaglio prioritario: **chi tocca l'Altare** (Earth Mastery
+  fluttuanti e goffi nello zero-G, dove il suo Push li tiene lontani
+  dall'Altare. Bersaglio prioritario: **chi tocca l'Altare** (Earth Mastery
   +1 su di loro).
 - **Fase di pressione (303–260 pf).** Full-attack su **Thorik** (la minaccia
   che tiene la piattaforma): 2 schianti +30 e **Push FOR CD 25** per
@@ -1927,8 +2276,8 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
   sparisce nella pietra (rigenera 15 al contatto) e **riemerge alle spalle del
   bersaglio più fragile a portata** (di solito chi si è appena posato per
   tirare). Le **azioni preparate** del party sono la risposta corretta — e
-  **"Radice a Terra" di Thorik** (FOR contrapposta vs Lotta +40) può
-  inchiodarlo fuori dalla pietra.
+  **"Radice a Terra" di Thorik** (prova di FOR contro CD 25 statica,
+  errata nello statblocco) può inchiodarlo fuori dalla pietra.
 - **Soglia 172 pf (50%) — l'arrocco.** Si ritira SULL'Altare e combatte in
   difesa totale alternata a schianti: rigenera 15/round e costringe i PG a
   venire da lui, dentro l'Earth Mastery. È il momento del **Diapason
@@ -1951,11 +2300,11 @@ R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
 | **Provano a prendere lo Smeraldo senza uccidere Terros** (volo/Mano Impetuosa/furto) | Lo Smeraldo levita dentro il **campo dell'Altare**: chi non ha superato il guardiano riceve **respinta** (come *repulsion*, TS Vol CD 20) + Terros si teletrasporta-in-Glide sotto il ladro. Il rito (§9) richiede comunque il guardiano caduto o il duello onorato. |
 | **Fuggono a metà scontro** | Terros NON insegue oltre la camera (è vincolato all'Altare). Ma la Forgia registra: al ritorno lo trovano **guarito del tutto** e lo Scudo di Geodi parte già attivo. Il countdown di Hammerfist, intanto, è sceso. |
 | **Distruggono/danneggiano l'Altare** | Impossibile scalfirlo (mithral consacrato, Durezza 20, autoriparante) — ma il TENTATIVO è sacrilegio: Terros entra in **furia** (+2 att/danni, −2 CA) e i Bracieri di Tordek **si raffreddano** di disapprovazione (nessun malus meccanico: solo il gelo del vecchio fabbro nella mente). |
-| **Qualcuno precipita nell'oceano di roccia (fuori dal Tempio)** | Non è lava: è **roccia semi-liquida**. Affonda lentamente (3 round per sommersione): Nuotare CD 20 (faticoso) o corda dei compagni; sommerso = soffocamento + 2d6 schiacciamento/round. Drammatico, non istantaneamente letale. |
+| **Qualcuno precipita nell'oceano di roccia (fuori dal Tempio)** | Non è lava: è **roccia semi-liquida**. Affonda lentamente (3 round per sommersione): Nuotare CD 20 (faticoso) o corda dei compagni; sommerso = soffocamento + 2d6 schiacciamento/round. Drammatico, non istantaneamente letale. Se nessuno lo tira fuori, l'oceano lo risputa sulla riva dopo 1d4 round, a 0 pf e stabile, e il riposo costa −12 h. |
 | **Vogliono riposare dentro il Tempio prima del boss** | Possibile (l'Anticamera post-Sentinella è sicura), e **probabile**. Costa **−12 h** di orologio (tariffa ordinaria, «Il Ritorno e gli Affreschi» §0-bis) — ma il prezzo vero **non è il timer**: è che **Terros ti arriva a risorse piene**, quindi scatta il ramo «party straripante di risorse» del riquadro *Scalare lo scontro* (**§8c-4**). Mostra l'affresco A7, non minacciare la scadenza: a 3g 08h la soglia critica è ancora lontana. |
 | **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. *La sconfitta costa tempo e orgoglio, non la campagna.* |
 
-**Durata attesa 4–6 round. XP** ~5.400/PG (CR 15, 3 PG).
+**Durata attesa circa 10 round**. **XP** ~5.400/PG al gruppo di oggi, ≈ 2.600 ai gruppi futuri (CR 15, 3 PG).
 **Loot**: **Geode Titanico** (5.000 mo, cristalli d'adamantio) + **Cuore di
 Terros** (oggetto meraviglioso: componente da **20.000 mo**, o base per un
 *Amuleto di Armatura Naturale +5*) — l'occhio di Artemis ci si posa subito.
@@ -2139,7 +2488,7 @@ Artemis. Arrivano a **risorse piene**, cosa che le tabelle DPR non assumono.
 **Allora usa il ramo già previsto dal riquadro *Scalare lo scontro*:** Terros
 **avanzato a 34 DV** (390 pf, attacchi +32, CD +1) e **Scudo di Geodi già
 attivo all'ingresso**. Non è una punizione per aver riposato: è ciò che tiene
-lo scontro sui 4-6 round invece che su 3. E ti regala l'immagine giusta —
+lo scontro sui ~12 round invece che sui ~10. E ti regala l'immagine giusta —
 **riposando hanno dato tempo anche a lui**: quando la soglia si apre, il
 guardiano è **già in piedi, già schermato, già in attesa**. Il prezzo del
 sonno lo vedono in faccia prima che sull'affresco.
@@ -2186,6 +2535,16 @@ arriva a risorse piene. Mostra l'affresco, non minacciare l'orologio.
 
 ## §9 — IL RITUALE DELLO SMERALDO: «L'Incudine del Mondo» (volontà + poteri di TUTTI)
 
+### SCENA 9 — Il rituale dello Smeraldo
+
+**In scena** — Dove: l'Altare — Chi: Moradin · Durik
+
+**Comparse**
+
+| Chi | Com'è | Come parla |
+|---|---|---|
+| Durik | prende forma solo nella Fase 3: fauci enormi, zampe da cane da galoppo, mithral intrecciato a pietra scura, occhi di topazio. È il compagno di Hella, riforgiato | non abbaia: fa un click di roccia, lo strofinio di una faglia lontana. Si mette sempre fra Hella e il pericolo |
+
 > Sconfitto Terros, si sbriciola e dal torace, tenuto a galla dal magnetismo
 > sul centro dell'Altare, emerge un nucleo di luce verde così denso da
 > **piegare la gravità**: lo **Smeraldo della Forza**. Il rituale segue le
@@ -2212,7 +2571,9 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
   verde tenue** (lo spirito di Hella, telepatico e freddo) gli si stringe alle
   spalle: *«Non sei solo a portare questo peso. Mai più solo.»* La pressione si
   stabilizza. Thorik perde **permanentemente 2 DES** (le articolazioni fondono
-  con la pietra) e guadagna **permanentemente +2 COS**.
+  con la pietra) e guadagna **permanentemente +2 COS** e **+4 CAR** (chi ha
+  accettato il Peso del Mondo lo porta addosso, e gli altri lo vedono)
+.
 
 > **Regia (asimmetria).** Thorik **non sa** che la presenza verde è Hella; per
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non
@@ -2231,7 +2592,7 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 >
 > | | Effetto permanente |
 > |---|---|
-> | **THORIK** | **−2 DES** e **+2 COS**, permanenti. Le articolazioni hanno fatto lega con la pietra |
+> | **THORIK** | **−2 DES**, **+2 COS** e **+4 CAR**, permanenti. Le articolazioni hanno fatto lega con la pietra |
 > | **Tordek** | nessun cambiamento: il malus non è mai stato suo |
 > | **Bottino** | ✅ **integro**, Cuore di Terros compreso |
 >
@@ -2242,7 +2603,8 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > schiva — ma qui l'incudine è quella che porta la Corona.
 >
 > - **Ricalcola sulla scheda di Thorik**: CA, Riflessi, iniziativa, prove di
->   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**.
+>   DES — tutti **−1**. Pf massimi **+1/DV** e Tempra **+1**. Prove di CAR
+>   **+2** (Diplomazia, Intimidire, Raggirare).
 > - **La presenza verde** (§9 Fase 1) si è stretta alle spalle di **Thorik**:
 >   è Hella, e lui **non lo sa** — l'asimmetria originale del modulo, intatta.
 >   Per la giocatrice di Hella è un eco. Non spiegarlo fino al #3. È l'eco
@@ -2272,6 +2634,11 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
   - **Malus cumulativo (se fallisce)**: 1° fallimento → **Esausto**; 2° →
     **Barcollante**; 3° → **crolla Prono e Stordito**, il fiato bloccato,
     **4d6 danni** dall'energia che lo stritola.
+  - **Durante il rito la DES di Thorik non scende sotto 1**, qualunque malus
+    si sommi (esausto, la calcificazione da Artemis): il Peso del Mondo lo
+    tiene in piedi.
+  - **Al terzo fallimento** lo Smeraldo **si incastona lo stesso**: il prezzo
+    sono i malus qui sopra.
 - **Tordek — Il Sisma Contrario.** Coi **Bracieri (Terra)** batte i pugni
   sull'Altare di mithral **al ritmo esatto del cuore di Thorik**, dominando un
   terremoto indotto: un'onda d'urto uguale e contraria alla gravità dello
@@ -2437,7 +2804,8 @@ L'Altare porta la gravità a livelli intollerabili. Thorik si inginocchia.
 > qualcosa che ha quattro zampe. Poi non c'è più.* → **Fase 3**.
 
 ### FASE 3 — L'Incastonatura e il Ritorno di Durik
-Se sopravvivono, lo Smeraldo — verde e pulsante come linfa — si **incastona
+Comunque sia andata la Fase 2, anche con Thorik crollato al terzo fallimento
+, lo Smeraldo — verde e pulsante come linfa — si **incastona
 nella tempia sinistra** della Corona. Onda d'urto smeraldo: per un'ora la carne
 diventa **pietra vivente** (RD 10/adamantio gratis). Thorik, toccando la gemma,
 sente che **l'ancoraggio dello spirito di Hella si è cristallizzato: ora è
@@ -2445,7 +2813,7 @@ impossibile perderla.** E la Forgia dà una **vibrazione di assestamento**: la
 polvere di Terros e i cristalli strappati collassano in un vortice
 gravitazionale accanto all'Altare.
 
-> **Read-aloud (Salvatore — dal canone v2 §6).** *L'onda verde percuote la
+> **Read-aloud (Salvatore) — l'Altare, Durik prende forma.** *L'onda verde percuote la
 > camera sferica, e nel vortice non c'è solo la polvere di Terros: ci sono i
 > frammenti di cristallo vivente — quelli che una polvere più antica, dispersa
 > nel Sogno della Terra da mani che amavano, ha già trovato e riempito. La
@@ -2457,11 +2825,11 @@ gravitazionale accanto all'Altare.
 > una faglia lontana. E la prima cosa che fa, prima ancora di guardarvi, è
 > mettersi tra il corpo che non c'è e il pericolo che non c'è più. Protegge
 > qualcuno. Anche adesso. Anche qui.*
->
-> *(Comportamento canonico — risposta di Hella alla domanda di Moradin,
+
+> Comportamento canonico — risposta di Hella alla domanda di Moradin,
 > «Protegge Hella»: Durik **si muove sempre tra Hella e la fonte di pericolo
 > percepita**. Finché lei non torna, orbita il suo corpo nella Sala; i PG lo
-> vedranno chiaramente al #3.)*
+> vedranno chiaramente al #3.
 
 > **CORREZIONE DI CANONE (importante).** I file-fonte lo chiamavano «Cane da
 > Guerra **COSTRUTTO/animato**». **Errato**, e lo stato della campagna lo segna
@@ -2476,7 +2844,11 @@ gravitazionale accanto all'Altare.
 
 **Poteri sbloccati dallo Smeraldo (Corona 2/3):**
 - **Volontà Adamantina** (passiva): immunità totale a *charme/compulsione* quando
-  Thorik **tocca terra/roccia nuda**.
+  Thorik **tocca terra/roccia nuda**, e +4 razziale ai TS contro gli effetti
+  mentali.
+- **Manto di Pietra e Spirito** (passivo): *Mente Vuota* permanente, **RD 5/epico
+  e male**, e *Comunione* 1/mese da un Nodo. È il potere più forte della Corona,
+  e lo sblocca questo rito.
 - **Gemma della Vera Terra** (Mag., 1/settimana): *Muro di Pietra*, guarigione
   di terreno corrotto o *Terremoto* controllato; ogni uso richiede preghiera e
   offerta (1.000 mo per Moradin).
@@ -2522,7 +2894,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 | **Scelta di Varis** (avidità/giustizia, §6) | Varis socio-che-sa-troppo **o** nemico permanente | ARC-09 (rete Varis/Il Collezionista) | fili di Varis e del Collezionista |
 | **Avidità di Artemis** (§5/§9) | Se dà via il bottino al Rituale: rinuncia dolorosa; se lo trattiene: party sceglie il sacrificio personale di Thorik | ARC-08 (WBL) / RP continuo | Echo Ledger |
 | **Seme-Mercato di Varis** (§6-bis) | Preso → **Marchio di Varis** (localizza Artemis, riscuote una volta); Rifiutato → Varis lo rispetta come "sfuggito" | ARC-09 (Varis/Il Collezionista); eco possibile già al #4 con Vatore | §6-bis + fili di Varis e del Collezionista |
-| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
+| **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS/+4 CAR **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
 | **Bracieri completi + coscienza** (§7b) | Possono **rifiutare i poteri** se Tordek tradisce gli ideali nanici | ogni scelta morale dura | scheda dei Bracieri |
 | **Thorik ha già visto Fauci in forma spirituale** (Corona/Topazio, §1) | Il "sangue Skullcrusher" che riconosce; premonizione di Hammerfist | #4 (Skullcrusher) → ARC-08 | carry-over «La Forgia ricorda le ferite» + guida della Corona |
 | **Durik prende forma** (§9) | Il seme III della Collana lo evocherà; carta emotiva a Hammerfist | #3 → ARC-08 | scheda della Collana |
@@ -2553,8 +2925,16 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 | | **TOTALE MODULO (percorso completo)** | | **~11.600/PG** |
 | | *Totale se i Cristalli sono saltati* | | *~10.300/PG* |
 
-> **Lettura**: al 13° servono **14.000 PX** per il 14°. Questo modulo vale
-> **~0,8 livelli**; con il Piano del Fuoco già alle spalle, i PG **maturano il
+> **I PX al conto SRD, per i gruppi futuri**. La tabella qui sopra è
+> quella data al gruppo di oggi, e per lui resta. Al conto della tabella della
+> DMG (totale dell'incontro, diviso fra i tre PG di 13°) gli incontri valgono
+> meno: Terros (GS 15) **≈ 2.600** a testa invece di 5.400, gli Xorn **≈ 875**,
+> la Sentinella (GS 11) **≈ 650**, i Cristalli (EL 11) **≈ 650**, il vuoto
+> (EL 10) **≈ 450**. I premi di storia restano. Il modulo intero vale
+> **≈ 6.700** a testa, **≈ 5.900** senza i Cristalli.
+
+> **Lettura**: al 13° servono **13.000 PX** per il 14° (da 78.000 a 91.000, SRD). Questo modulo vale
+> **~0,8 livelli** (al conto SRD, per un gruppo futuro, circa mezzo livello); con il Piano del Fuoco già alle spalle, i PG **maturano il
 > 14° verso Hammerfist** (D8: il 14° si consolida nell'ARC-08, non qui). Le
 > parti già giocate non si ritoccano (ERRATA §6).
 
@@ -2579,7 +2959,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 > ⚠️ **Il Rituale può azzerare quasi tutto** (§9 Fase 1): l'**Opzione A
 > (sacrificio materiale)** richiede **40.500 mo** → si dà via **tutto** questo
 > loot **e** parte dell'equipaggiamento magico personale; l'**Opzione B
-> (sacrificio personale)** lascia il loot ma costa a Thorik **−2 DES / +2 COS**
+> (sacrificio personale)** lascia il loot ma costa a Thorik **−2 DES / +2 COS / +4 CAR**
 > permanenti. **Traccia quale via prende il party**: cambia il WBL d'ingresso a
 > Hammerfist.
 
@@ -2599,7 +2979,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 | **Hella** | (Collana/Durik prendono forma, ma **si legano a lei solo al #3**) | — | Durik "abbozzato"; Collana germoglia alla resurrezione |
 
 > **Verdetto del beat (per il DM).** PX **~11.600/PG** (percorso completo; ~10.300
-> se i Cristalli sono saltati — vedi §11-bis A) verso il 14° a Hammerfist;
+> se i Cristalli sono saltati — vedi §11-bis A; per i gruppi futuri ≈ 6.700 al conto SRD) verso il 14° a Hammerfist;
 > WBL ordinario **sotto** i 110.000 mo/PG (l'arco è povero di loot ordinario,
 > ricchissimo di artefatti — il delta si colma a Hammerfist, ARC-08 B4); potere
 > effettivo **molto alto** grazie agli artefatti unici (è il motivo per cui gli
@@ -2609,7 +2989,11 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 
 ## §12 — RITORNO ALLA SALA (ponte al «Il Ritorno e gli Affreschi»)
 
-> **Read-aloud.** *Dall'altra parte del portale, la Sala della Forgia: la stessa
+### SCENA 10 — Il ritorno alla Sala
+
+**In scena** — Dove: la Sala — Chi: nessuno
+
+> **Read-aloud — la Sala.** *Dall'altra parte del portale, la Sala della Forgia: la stessa
 > luce dorata immutabile — ma qualcosa È mutato. L'affresco
 > di Est si è chiuso come una porta; quello del Tempo brucia nitido; e nella
 > nebbia della parete di Nord-Ovest, la quarta figura ha ora un contorno. La
@@ -2617,7 +3001,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → «Il Ritorno e gli A
 
 Countdown Hammerfist: **~3g 20h**, o **~3g 08h** se hanno dormito prima di
 Terros (registro completo: «Il Ritorno e gli Affreschi» §0-bis). Il party è esausto: Moradin
-consiglia un riposo lungo — **nella Sala costa solo −4 h**, e loro non sanno
+consiglia di dormire otto ore — **nella Sala costano solo −4 h**, e loro non sanno
 perché. **Poi**: gli affreschi e la Stanza della
 Corona («Il Ritorno e gli Affreschi»), quindi la **resurrezione di Hella** («La Resurrezione di Hella»).
 
@@ -2640,7 +3024,7 @@ contata a parte (audit WBL).
 2. **Carta «Corona 2/3»** (fine §9) — aggiorna l'handout della Corona: Topazio
    (fronte, oro-arancio) + Smeraldo (tempia sinistra, verde profondo) +
    l'incavo vuoto del Rubino che *aspetta*. I nuovi poteri (Volontà Adamantina,
-   Gemma della Vera Terra) sul retro.
+   Manto di Pietra e Spirito, Gemma della Vera Terra) sul retro.
 3. **Benedizioni di Moradin** — carte singole dal PDF (`BenedizioniDiMoradin.pdf`),
    inclusa la nuova **Forza della Montagna** (§2).
 4. *(Solo se Artemis prende il Seme-Mercato, §6-bis)* — bigliettino privato con la
@@ -2708,7 +3092,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
 05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫   🥋G05 Tordek · 🕳️O05 Xorn 2
 06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 07    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla → ponte)
+08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
 09    🟫 🟫 🔷 🟫 🟫 🟫 ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   ⬛G09 = «Fauci di Diamante» (sotto il pilastro)
 10    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
         🔷 = Cristallo Gigante (copertura totale, indistruttibile)
@@ -2716,6 +3100,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
         ⬛ = Fauci di Diamante (élite) · 💠 = base corrosa del pilastro
         Gli Xorn NON restano 2 round in superficie: Earth Glide → readied action!
 ════════════════════════════════════════════════════════════════════════
+@tipo tattica caverna
 ```
 
 ### MAPPA T-3 — CAMPO DEI CRISTALLI VIVENTI (skill challenge, §6)
@@ -2737,6 +3122,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
       💠 Cristallo Vivente (canta) · 💎 Madre Cristallo · 💚 crepato (riforgia!)
       🔴 runa di Varis · 🌫️ vuoto/gravità laterale (non attraversare) · ⬜ suolo
 ════════════════════════════════════════════════════════════════════════
+@tipo tattica caverna
 ```
 
 ### MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (§7a)
@@ -2770,14 +3156,14 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
                          N (parete nord)
                  🧲 🧲 🧲 🧲 🧲 🧲 🧲
               🧲 🧲 🧲 [⛓️ THORIK] 🧲 🧲 🧲      ⛓️ = Thorik immobilizzato
-            🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            (metallo incollato alla parete)
+            🧲 ⬜ ⬜ [🕸️ ARTEMIS] ⬜ ⬜ 🧲          (metallo incollato alla parete)
           🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
         🧲 ⬜ ⬜ ⬜ ⬜ 🤖 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🤖 = SENTINELLA (centro)
       W 🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲 E
         🧲 ⬜ ⬜ ⬜ ⬜ 🥋 ⬜ ⬜ ⬜ ⬜ ⬜ 🧲          🥋 = TORDEK (unico in piedi)
           🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲
-            🧲 ⬜ ⬜ [🕸️ ARTEMIS] ⬜ ⬜ 🧲          🕸️ = Artemis prono/indifeso
-              🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            (gravità 10×)
+            🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            🕸️ = Artemis prono, accanto a
+              🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            Thorik (gravità 10×)
                          S (porta sigillata)
   ⬜ = pavimento (gravità 2×, gestibile SOLO per Tordek) · 🧲 pareti LETALI
   per chi porta metallo. Duello: TORDEK vs SENTINELLA (RD 15/adam.+contund. →
@@ -2835,11 +3221,11 @@ l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).
 SCENOGRAFIA (MAP 6): ingresso a NORD = 🚪 SOGLIA di mithral (si apre da sé;
 l'Altare vi era ormeggiato). Dopo il distacco: ~27 m di zero-G fra soglia e
 Altare — la via di fuga esiste, ma va attraversata in volo o a spinte.
-PIATTAFORME LATERALI 🟦 a EST e OVEST (+3 m, scale): posizioni di tiro per
-Artemis. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
+Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smeraldo 💚 LEVITA sopra; alla VITTORIA l'Altare
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
+@tipo tattica interni
 ```
 
 

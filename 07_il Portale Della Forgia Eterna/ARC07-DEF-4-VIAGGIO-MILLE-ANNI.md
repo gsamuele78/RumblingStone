@@ -2456,13 +2456,13 @@ via `[CANONE — DM 2026-10-12]`.
 guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
 terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
 riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
-in ARC-09 Sal lo cerca su quel polso `[INFERRED — needs DM confirmation]`.
+in ARC-09 Sal lo cerca su quel polso.
 
 **Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
 scena comincia da dove atterrano; se no, Vatore è sulle mura all'alba, nel
-caos, come se il tavolo avesse fretta (qui sotto) `[INFERRED — needs DM confirmation]`.
+caos, come se il tavolo avesse fretta (qui sotto).
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
@@ -3492,21 +3492,23 @@ antenato di Othrek (Hammerfist 1372).
 gs: 13
 tipo: Medium humanoid (dwarf), Chierico 9 di Abbathor / Runecaster 4, NE
 ca: 24
-ca-dettaglio: contatto 12, colto 22 (mithral +2, anello +2, DES +2)
-pf: 96
+ca-dettaglio: contatto 14, colto 22 (armatura completa di mithral +2, anello di protezione +2, DES +2)
+pf: 101
+pf-dado: 13d8+39
 ts: Temp +13, Rifl +8, Vol +17
 attributi: For 12 Des 14 Cos 16 Int 16 Sag 20 Car 14
 velocita: 6 m
 iniziativa: +2
 sensi: scurovisione 18 m; Ascoltare +5, Osservare +5
 attacchi:
-  - Mischia martello da guerra runico +1 +10/+5 (1d8+2)
+  - Mischia martello da guerra runico +1 +11/+6 (1d8+2)
 voci:
+  - Talenti: Incidere Rune, Volontà di Ferro, Riflessi Fulminei, Incantare in Combattimento, Scrivere Pergamene
   - Abilità: Percepire Intenzioni +13, Concentrazione +19, Sapienza Magica +19, Conoscenze (storia) +19, Artigianato (incidere rune) +19
 ```
 <!-- /include -->
 
-**13 DV** · BAB +8, Lotta +9 · scurovisione 18 m, immune alla paura. **Leggere il
+**13 DV** · BAB +9, Lotta +10 · scurovisione 18 m, immune alla paura. **Leggere il
 Fuori-Posto** (Su, 3/giorno): come *individuazione del magico*, ma sulle
 anomalie del tempo; percepisce chi non appartiene a questo secolo.
 

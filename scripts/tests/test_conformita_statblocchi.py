@@ -259,7 +259,14 @@ class TestIlGiroCircolare(unittest.TestCase):
     """
 
     def test_la_tempra_viene_prima_della_media(self):
-        s = LC.leggi(ROOT / "Bestiario/png/Khorn/khorn-ufficiale-hammerfist-cr8.md")
+        # i numeri di Khorn com'erano quando il difetto e' stato trovato, con le
+        # caratteristiche generate: dal 2026-10-16 la scheda vera le ha scritte a
+        # mano, e la ricostruzione legge la Cos invece della Tempra.
+        s = scheda("gs: 8\ntipo: Medium humanoid (dwarf), Fighter 8, LG\npf: 76\n"
+                   "pf-dado: 1d8+6\nts: Temp +9, Rifl +3, Vol +4\n"
+                   "attributi: For 16 Des 4 Cos 16 Int 9 Sag 11 Car 15\n"
+                   "attacchi:\n  - Mischia martello da guerra +1 +14/+9 (1d8+6/x3)")
+        s.provenienza = "generate"
         c = C.pf_dado_corretto(s, forza=True)
         self.assertEqual(c["nuovo"], "8d10+24")
         self.assertIn("dalla Tempra +9", c["bonus"])

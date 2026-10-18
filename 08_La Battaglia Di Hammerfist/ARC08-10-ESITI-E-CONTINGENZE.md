@@ -76,7 +76,7 @@ annientata/dispersa.
 (tiri di dado sfavorevoli nel finale, obiettivi del flashback mancati —
 vedi §5 bonus non maturati).
 
-**Soglia proposta** `[INFERRED — needs DM confirmation]`: **meno di 50
+**Soglia** (canone del DM 2026-10-18): **meno di 50
 superstiti** invece di 90, e/o **Re Thorek muore** nel finale (a 8 pf
 nell'Incontro 3B, un tiro fallito lo porta a 0).
 
@@ -85,7 +85,7 @@ nell'Incontro 3B, un tiro fallito lo porta a 0).
 | Elemento | Variante vittoria costosa |
 |---|---|
 | Superstiti nani | <50 (invece di 90) → Hammerfist può presidiare ma non proiettare forza |
-| Re Thorek | **Morto** `[INFERRED]` → la Cerimonia delle 100 Asce è officiata da **Madre Superiora Dana** (o da Thorin Runaforte pregen se Dana è caduta, D14); il riconoscimento dei Custodi Eterni avviene comunque, per volontà testamentaria del re |
+| Re Thorek | **Morto** → la Cerimonia delle 100 Asce è officiata da **Madre Superiora Dana** (o da Thorin Runaforte pregen se Dana è caduta, D14); il riconoscimento dei Custodi Eterni avviene comunque, per volontà testamentaria del re |
 | 150 lance di Re Thorek | Il flusso politico (D4) si **complica**: senza il re, l'erede/consiglio nanico è più esitante → hook ARC-09 con CD Diplomazia +2 |
 | Cerimonia | Tono più cupo; il Giuramento delle 90 diventa "Giuramento dei <50"; la runa dei Custodi ha peso funebre doppio |
 | Perdite orda | Invariate (−900, D11): l'orda perde comunque l'avanguardia |
@@ -118,14 +118,13 @@ i Rumbling Stones arrivano troppo tardi o vengono sopraffatti).
   nemiche → l'orda ottiene una fortezza nel North Wall, controllo dei
   passaggi montani, e le fucine naniche.
 
-**Delta sui tracker (scenario caduta)** `[INFERRED — needs DM: numeri
-da confermare se il DM apre questo ramo]`:
+**Delta sui tracker (scenario caduta)** (canone del DM 2026-10-18):
 
 | Tracker | Default (vittoria) | Caduta |
 |---|---|---|
 | Perdite orda Day 19 | −900 | **~−300** (l'avanguardia vince, subisce solo perdite d'assalto) → l'orda avanza su Rethmar con ~600 unità in più rispetto al default |
 | Custodi Eterni / Cerimonia | Sì | **No** (Re Thorek morto o in fuga; la Cerimonia non avviene o è un lutto in esilio) |
-| Lythiel → Ghianda a Hella | Alla Cerimonia (E7) | **Rilocare**: Lythiel consegna la Ghianda durante l'evacuazione o più avanti nel Vale `[INFERRED]` |
+| Lythiel → Ghianda a Hella | Alla Cerimonia (E7) | **Rilocare**: Lythiel consegna la Ghianda durante l'evacuazione o più avanti nel Vale |
 | 150 lance | Condizionale (D4) | **Perse** (Hammerfist non esiste più come alleato) |
 | ARMATE-SYNC ARC-09 | Baseline | Orda a Rethmar **+600 circa**; morale nanico del Vale a picco |
 
@@ -234,7 +233,7 @@ maturati e si applicano al finale.
 | Evento a Hammerfist | Eco | Quando riemerge | File che lo gestisce |
 |---|---|---|---|
 | **Fauci di Palude fugge ferito** (ramo default D10) | Nemesi draconica: il drago torna per vendetta contro Thorik/la Corona | Rethmar (carta S2 all'EVENT-DECK, §6.3) o ARC-10 | `ARC08-10` §4; EVENT-DECK ARC-09 (S2, §6.3) |
-| **Uovo di Fauci** (eco gemella, ARC-07 C3) | Un secondo drago nero cresce nell'ombra — semina per ARC-10 | ARC-10 `[INFERRED]` | ARC-07 C3 (fonte); da agganciare alla stessa carta S2 |
+| **Uovo di Fauci** (eco gemella, ARC-07 C3) | Un secondo drago nero cresce nell'ombra — semina per ARC-10 | ARC-10, qualunque sia l'esito ARC-08 (`07_…/ARC07-CONSEGUENZE-ECHI.md`, Echo ledger) | ARC-07 C3 (fonte); da agganciare alla stessa carta S2 |
 | **Fauci ucciso** (ramo alternativo D10) | −1 drago a Rethmar; nessuna nemesi (ma l'uovo resta) | Day 42 Rethmar | `campaign/state.md` §2.3 |
 | **Runa dei Custodi Eterni** (Cerimonia Atto 3) | Status sociale presso i nani del Vale (§6.2) | Ogni interazione coi nani in ARC-09/10 | `Cerimonia-delle-100-Asce.md` §2; questa §6.2 |
 | **150 lance di Re Thorek** (D4) | Rinforzo condizionale a Rethmar | Day 42, se gli hook politici riescono | `state.md` §2.5; `Bestiario/png/Khorn/Khorn.md`; HOOKS-Thorik |
@@ -254,7 +253,7 @@ ARC-09/10).
 La runa di pietra che Re Thorek consegna ai 4 PG (Cerimonia Atto 3;
 5 cm, al collo) non era mai stata quantificata meccanicamente.
 
-**Proposta** `[INFERRED — needs DM confirmation]`:
+**Effetto** (canone del DM 2026-10-18):
 - **+2 di circostanza a Diplomazia** con i nani del Vale (e con chi
   riconosce il titolo di Custode Eterno) mentre la runa è portata a
   vista.
@@ -290,7 +289,7 @@ di campagna) da aggiungere a
 | Esito | Superstiti | Re Thorek | Perdite orda | Custodi/Cerimonia | 150 lance | ARC-09 |
 |---|---|---|---|---|---|---|
 | **Vittoria piena** (default) | 90 | Vivo (8 pf) | −900 | Sì | Condizionale (D4) | Baseline E1-E8 |
-| **Vittoria costosa** | <50 | Morto `[INFERRED]` | −900 | Sì (officiata da Dana) | Complicate (+CD) | Hook Thorik cambiano tono |
+| **Vittoria costosa** | <50 | Morto | −900 | Sì (officiata da Dana) | Complicate (+CD) | Hook Thorik cambiano tono |
 | **Caduta** | Sparsi | Morto/in fuga | ~−300 | No | Perse | Orda +600 a Rethmar; rinegoziare |
 
 Il ramo di Fauci (§4) e i bonus del flashback (§5) si applicano

@@ -2796,8 +2796,8 @@ Le sei pregenerate ci stanno dentro: **il Drappo non è un modulo che arricchisc
 È il punto del modulo: qui **la ricchezza non è il premio**. Il premio è un rione che
 esiste ancora, un cavallo, e sei persone che nel rione hanno un nome. Se il DM
 prosegue con questi PG, li consegna **al 4° livello, con l'equipaggiamento di
-partenza** — `[INFERRED: nessuna riga del modulo assegna oggetti magici ai PG, e i
-premi sono tutti di contrada]`.
+partenza**: nessuna riga del modulo assegna oggetti magici ai PG, e i
+premi sono tutti di contrada.
 
 ⚠️ **Se invece il gruppo ha venduto la ricevuta** (300 mo) **e tenuto per sé il
 montepremi**, sono ~800 mo divisi in sei: **poco più di 130 a testa**. Non cambia il

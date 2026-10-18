@@ -138,8 +138,8 @@ e Channathgate dista **1,5 giorni**. Il calendario che tiene insieme tutto:
 > - **Day 29-30**: *"I casali del Channath centrale bruciano; i razziatori worg colpiscono i convogli."*
 > - **Day 30-31**: *"L'orda converge sul Crocevia del Channath — sarà lì entro due giorni."* (canone: Day 33)
 > - **Colore**: *"Dicono che a Witchcross i druidi preparino una resistenza disperata."* (cade ~Day 35)
-> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **blu**
-> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è nero e in riserva**
+> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **verde**
+> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è blu e in riserva**
 > fino alla Fase 3 — nessuno dei due bombarda granai durante il Palio.
 
 ### 3.2 Impatto sui Clock dei Villain
