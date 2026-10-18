@@ -187,3 +187,35 @@ restano molto sotto il corpus, sotto 1‰ contro 5,6‰ e 1,7‰: dove una frase
 voleva sono tornati, ma non se ne sono aggiunti per fare numero. Gli indicatori
 `>4 frasi` e `>500 car` risalgono, da 13 a 30 e da 0 a 14, perché i box lunghi
 li superano per costruzione; non sono tetti.
+
+### Le scelte del DM, applicate
+
+Il DM ha chiesto di applicare le sue scelte dove le ha fatte, e la stessa
+lezione agli altri box.
+
+- **Le otto coppie vinte dalla vecchia** tornano parola per parola. Dove un box
+  supera un tetto, un commento lo marca come scelta del DM.
+- **Le otto vinte dalla nuova** restano com'erano.
+- **Gli altri box rifatti**, uno per uno contro la versione di partenza: sono
+  tornati i dettagli sensoriali e i nomi già noti al tavolo (Moradin, Thorik,
+  la Corona, Aegis Fang, il Cuore di Moradin, Hammerfist) al posto delle
+  perifrasi. I monologhi spezzati in battute con incisi in corsivo sono di
+  nuovo un discorso solo. Restano i tagli che funzionavano: niente maiuscole
+  di enfasi, niente date, niente parentesi. Sono stati toccati circa settanta
+  box su centoventi.
+
+| | Dopo la varianza | Dopo le scelte del DM |
+|---|---:|---:|
+| Box | 128 | 122 |
+| Parole, mediana (IQR) | 54 (34-69) | 60 (44-82) |
+| Box oltre 100 parole | 0 | 17 |
+| Box oltre 12 righe, con parentesi | 0, 0 | 0, 0 |
+| Box con più di un nome (il metro conta anche i nomi noti) | 1 | 24 |
+| Tag di canone, `[HDYWTDT]`, `[INFERRED]`, «Che fate?» | 476, 19, 5, 26 | uguali |
+
+I box sopra le 100 parole tornano perché sono i lunghi che il DM ha preferito,
+sempre entro le 12 righe. L'indicatore «più di un nome» sale perché
+`misura_craft` conta i nomi distinti, non quelli nuovi: i ventiquattro sono
+quasi tutti nomi che il tavolo conosce. Per sapere se la passata sugli altri box
+si legge meglio serve un altro cieco, su un campione nuovo.
+

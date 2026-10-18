@@ -777,8 +777,8 @@ consacrato del Cuore della Montagna, e la preghiera lo chiede
 > **Read-aloud (LotR lead) — la caverna, il portale.** *Dana prega per il tempo
 > di un respiro, e sulla parete si apre un arco di luce dorata. Dall'altra parte
 > entrano il vento e il fumo dei bastioni, con un odore di pietra bruciata.
-> Lassù, attraverso la roccia, arriva un boato lungo, poi un altro, e l'ascia ha
-> smesso di cantare: ascolta. Che fate?*
+> Lassù, attraverso la roccia, arriva un boato lungo, poi un altro, e Aegis Fang
+> ha smesso di cantare: ascolta. Che fate?*
 
 → **Dana apre il portale. Fine dell'ARC-07. Inizia l'ARC-08** (la Battaglia di
 Hammerfist), che continua nel ponte d'arrivo dell'ARC-08<!-- apparato --> (`08_.../ARC08-11-PONTE-ARRIVO.md`)<!-- /apparato -->
