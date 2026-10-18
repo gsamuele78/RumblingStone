@@ -110,7 +110,7 @@ Piazza quasi circolare 30×30 al centro di Rethmar.*
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto meccanico |
 |---|---|---|---|
 | A — Rito in corso | i caster attivano il Mythal | statue = copertura totale; minacce a rotazione sui caster | i PG difendono gli 8 punti |
-| B — Caster perso | un caster del Circolo cade | posizione scoperta | il Mythal **rallenta/vacilla** (protezione ridotta) `[INFERRED — soglia esatta al DM]` |
+| B — Caster perso | un caster del Circolo cade | posizione scoperta | il Mythal **vacilla**: per ogni caster caduto una statua in meno si anima nello stato C, e con tre caduti il Mythal non si completa (canone del DM 2026-10-18) |
 | C — Mythal completo | gli 8 reggono fino alla fine | **le 4 statue si animano in Golem colossali** | escono a spazzare macchine/giganti/draghi residui (o 1-2 restano a scudo) → svolta della battaglia |
 
 > Esiti aperti (D13): completare il Mythal dipende da quanti caster i PG

@@ -16,15 +16,22 @@
     "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md": {
       "sistema": "pf1e",
       "modulo": "drappo",
-      "perche": "modulo PF1e in tre file (AGENTS.md): Percezione e Furtivita' esistono, e i TS si contano sull'insieme"
+      "perche": "modulo PF1e in tre file (AGENTS.md): Percezione e Furtivita' esistono, e i TS si contano sull'insieme; PG dal 1° al 4° livello (00-HUB, pietre miliari): D9 e D15 non si applicano",
+      "apl": 3
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md": {
       "sistema": "pf1e",
-      "modulo": "drappo"
+      "modulo": "drappo",
+      "apl": 3
     },
     "STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md": {
       "sistema": "pf1e",
-      "modulo": "drappo"
+      "modulo": "drappo",
+      "apl": 3
+    },
+    "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md": {
+      "apl": 7,
+      "perche": "4 PG di 7° (PX indicativi dell'Atto I): sotto il 9° D9 e D15 non si applicano"
     }
   },
   "residui": [
@@ -118,6 +125,41 @@
       "scena": "—",
       "dettaglio": "nessun effetto chiede un TS su Tempra",
       "ragione": "scelta del DM (D90, 2026-10-15): lo strappo fra le ere si resiste con la Volontà. DEF-5 ha tre scene e un solo scontro breve, contro orchi in fuga: un TS su Tempra non ha un posto naturale"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D15",
+      "scena": "SCENA 6",
+      "dettaglio": "«otto hobgoblin»: niente dice cosa li tiene in vita contro un incantesimo ad area",
+      "ragione": "falso positivo: lo scontro non va vinto («Non serve vincerla, serve che nessuno…»), conta l'allarme; un incantesimo ad area che li cancella è un esito previsto"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D10",
+      "scena": "SCENA 7",
+      "dettaglio": "scontro senza la riga di scala (tre o cinque PG, un PG assente)",
+      "ragione": "falso positivo: «senza round di sorpresa» rimanda alla Scena 8, dove lo scontro si gioca"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md",
+      "regola": "D10",
+      "scena": "§6 · Sera — la rissa alla fontana",
+      "dettaglio": "scontro senza la riga di scala (tre o cinque PG, un PG assente)",
+      "ragione": "vero e minore: la rissa alla fontana non ha la riga di scala; il Drappo non è un master ARC e si chiude quando lo tocca S3 di PIANO-MASTER-DEF"
+    },
+    {
+      "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",
+      "regola": "D10",
+      "scena": "Atto III — Sotto",
+      "dettaglio": "scontro senza la riga di scala (tre o cinque PG, un PG assente)",
+      "ragione": "falso positivo: l'Abbazia scala nell'indice maestro (cinque fasce di livello, quattro durate), non scena per scena"
+    },
+    {
+      "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",
+      "regola": "D10",
+      "scena": "Atto IV — La Notte della Consegna",
+      "dettaglio": "scontro senza la riga di scala (tre o cinque PG, un PG assente)",
+      "ragione": "falso positivo: come l'Atto III, la riscalatura sta nell'indice maestro"
     }
   ]
 }

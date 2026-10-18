@@ -6957,7 +6957,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/domande_developer.py [--check] [--file X.md] [--json]",
-      "summary": "Le domande del developer di sviluppo-degli-incontri.md (dai due manuali del DM) misurate sulla forma del testo: D1 nemico in volo e chi resta a terra, D2 volo e invisibilità nei luoghi sorvegliati, D3 Tempra/Riflessi/Volontà, D4 chi sente il rumore, D5 la soglia del boss, D6 lo skill challenge scritto per intero, D6-5E abilità estranee al sistema. Indicatori: profili e residui con la ragione in plans/domande-developer.json.",
+      "summary": "Le domande del developer di sviluppo-degli-incontri.md (dai due manuali del DM) misurate sulla forma del testo: D1 nemico in volo e chi resta a terra, D2 volo e invisibilità nei luoghi sorvegliati, D3 Tempra/Riflessi/Volontà, D4 chi sente il rumore, D5 la soglia del boss, D6 lo skill challenge scritto per intero, D6-5E abilità estranee al sistema; dal 2026-10-18 (ADR-0092) D9 i segreti contro la divinazione, D10 la riga di scala per scontro, D15 le orde di GS basso, D16 il PG fuori gioco per un TS. Indicatori: profili e residui con la ragione in plans/domande-developer.json.",
       "use_case": "«Se i PG volano, si rendono invisibili o fanno rumore, il modulo lo dice, o dovrò inventarlo al tavolo?»",
       "stability": "beta",
       "stdlib_only": true,

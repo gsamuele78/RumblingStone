@@ -357,7 +357,7 @@ Se Borin sceglie di sfidare l'Ettin direttamente:
 - **Posizione:** Sul cancello principale
 - **Condizioni:** Terreno instabile (CD 12 Equilibrio), macerie ovunque
 - **Tattiche Gorthak:** 
-  - Testa Sinistra: Full Attack brutale (+20/+15/+10, 2d6+9)
+  - Testa Sinistra: Full Attack brutale (+21/+16/+11 e +21/+16/+11, 2d6+10 e 2d6+5)
   - Testa Centrale: Comandi tattici (+2 att agli orchi vicini)  
   - Testa Destra: Avvisa di attacchi ai fianchi (No Sorpresa mai)
 - **Vittoria:** Morale nemico -3, orchi fuggono in panico
@@ -524,7 +524,7 @@ SOFFIO DRACONICO - AREA EFFETTO (Round 3)
 
 **BORIN FERROPUGNO - "Il Sacrificio del Comandante"**
 - **Opzione A:** Interporsi tra drago e Re Thorek
-  - Subisce il soffio al posto del Re (TS Tempra CD 25, 14d4 acido)
+  - Subisce il soffio al posto del Re (TS Riflessi CD 29, 14d4 acido)
   - Re Thorek subisce solo danni dimezzati da splash
   - Borin ottiene +4 TS per atto eroico
 
@@ -571,7 +571,7 @@ SOFFIO DRACONICO - AREA EFFETTO (Round 3)
 **Risoluzione dell'Attacco:**
 - **Area:** Cono 60ft centrato su Re Thorek
 - **Danni:** 14d4 acido (media 35 danni)
-- **Tiro Salvezza:** Tempra CD 25 per dimezzare
+- **Tiro Salvezza:** Riflessi CD 29 per dimezzare
 - **Bersagli nell'Area:** Re Thorek + Borin + 15 Guardie Reali
 
 **EFFETTI SPECIALI:**
@@ -1030,12 +1030,12 @@ VALLE DELL'AVVISTAMENTO (120m x 80m)
 - **Cavaliere:** Fornisce spell support e comando tattico
 
 **SIGNORE VENTOLESTO + 2 GUFI SUPPORTO:**
-- **PF:** 95 ciascuno, attacchi coordinati +4
+- **PF:** 105 Ventolesto, 95 ciascuno i due gufi; attacchi coordinati +4
 - **Tattiche:** Hit and run, attacchi in picchiata
 - **Obiettivo:** Disturbare volo del drago per permettere all'orso di attaccare
 
 **ORION PELLEORSA (FORMA ORSO GIGANTE):**
-- **PF:** 150, CA 22, attacchi +18/+18/+13
+- **PF:** 150, CA 22, attacchi +19/+19/+14
 - **Tattica:** Aggrappato al drago, lacerazione continua
 - **Condizione:** Deve rimanere attaccato per massimizzare danni
 
@@ -1067,7 +1067,7 @@ BATTAGLIA AEREA (Altitudine 30-60m)
 **AZIONI AEREE:**
 - **Signore Ventolesto:** Dive attack su ali del drago (+4 att, 2d8+10)
 - **Gufi Supporto:** Flanking attack, artigli coordinati
-- **Orion Orso:** Grapple check per rimanere attaccato (Lotta +20)
+- **Orion Orso:** Grapple check per rimanere attaccato (Lotta +24)
 - **Fauci di Palude:** Barrel roll per liberarsi dell'orso (Acrobazia aerea)
 
 **AZIONI RUMBLING STONES DA TERRA:**
@@ -1383,12 +1383,11 @@ CERIMONIA DELLE ASCE - TRAMONTO
 - **Bonus per il finale** (da quantificare in B1): posizioni difensive tenute, Re Thorek stabilizzato
 
 ### **SESSIONE 3b — Rumbling Stones (da qui i PG reali giocano, D6/E6):**
-- **TOTALE:** 2.600 XP (650 per PG) `[INFERRED — proposta dosata, da
-  verificare al tavolo contro la XP reale bancata dal party a inizio
-  Arco 08]`
+- **TOTALE:** 2.600 XP (650 per PG) (proposta dosata: il DM la
+  ritocca al tavolo contro la XP reale del gruppo a inizio Arco 08)
 
 ### **SESSIONE 4 (Rumbling Stones — Battaglia Finale + Bonus Narrativo):**
-- **TOTALE:** 4.600 XP (1.150 per PG) `[INFERRED — stessa riserva]`
+- **TOTALE:** 4.600 XP (1.150 per PG) (stessa riserva)
 
 ### **GRAN TOTALE PX REALE (solo Rumbling Stones):** 7.200 XP (1.800 per PG)
 *Party APL 13 in ingresso (ARC-07 D8) → resta saldamente 13° a fine

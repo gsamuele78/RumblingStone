@@ -60,7 +60,7 @@ state.md §2). Il "terrore del cielo" qui è un semplice **Razorfiend**.
 
 | Elemento | Statblock (riuso) | Fonte / condizione |
 |---|---|---|
-| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr11.md` | Guarnigione cittadina |
+| Comandante nanico di Dauth | `.../dauth-commander-mercenari-nani-cr12.md` | Guarnigione cittadina |
 | Difensori nani | `.../dauth-dwarf-defender-cr6.md` | Guarnigione |
 | **300 mercenari nani** | (astratti) | **Solo se Tordek vince/ha vinto** (D10) — a Dauth sono già ingaggiati per l'evento |
 | **150 lance di Re Thorek** | (astratte) | **Solo se il sigillo + messaggero** sono partiti in tempo — vedi `...SUBQUEST-Thorik.md` |
@@ -230,7 +230,7 @@ esito ai dadi, mai predeterminato.
 - **Mappa**: corpo di guardia + poterna **8×8** (1,5 m/q); corridoi ciechi, botola.
 - **Griglia**: `Mappe/dauth-assedio/DAUTH-E-cellula-nelle-mura.md`, collaudata e con l'SVG in `rendered/`.
 - **Nemici (EL ~12)**: `deathlock-cr8.md` **o** `drow-fighter3-cr4.md` ×2 + 1 sabotatore
-  (Ladro 7 [INFERRED]) con la chiave. Tattica: furtività, veleno, fuga se scoperti.
+  (Ladro 7) con la chiave. Tattica: furtività, veleno, fuga se scoperti.
 - **Posta**: se la poterna si apre, la cavalleria gnoll dilaga nel quartiere ovest.
 - **Esiti**:
   - **Vittoria**: poterna salva, sabotatori catturati (intel su Sonjak/Vanguard) →

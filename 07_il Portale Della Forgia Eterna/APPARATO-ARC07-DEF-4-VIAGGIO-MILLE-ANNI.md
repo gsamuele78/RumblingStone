@@ -32,6 +32,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Hrodgar, il capitano delle mura | SCENA 10 | — | dà gli ordini con una parola sola |
 | Hald, il nipote di Balvar | SCENA 10 | — | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
 | **Skullcrusher il Nero** | SCENA 11 | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta |
+| Aegis Fang | SCENA 11 | — | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
 
 ## L'inserto delle CD
 
@@ -57,6 +58,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | identifica una pozione con Sapienza Magica | 25 |
 | SCENA 5 | Tempra | 15 |
 | SCENA 5 | ha sulle dita (Scena 9, Osservare | 15 |
+| SCENA 5 | con una suggestione a settimana (Volontà | 16 |
+| SCENA 5 | firma si estirpa con Sapienza Magica | 20 |
 | SCENA 6 | blocco lo tira già a Nascondersi | 22 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
@@ -65,18 +68,21 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | DES grezza | 14 |
 | SCENA 6 | Raggirare | 16 |
 | SCENA 6 | FOR grezza | 16 |
+| SCENA 6 | una mano sulla bocca (FOR grezza | 16 |
 | SCENA 6 | scoppio sonoro, 5d8, Riflessi | 18 |
 | SCENA 6 | Cercare | 28 |
 | SCENA 6 | toglierli con Disattivare Congegni | 28 |
 | SCENA 6 | dissolvi magie contro il 13° livello | 24 |
 | SCENA 6 | piedi della Scena 8 a Nascondersi | 26 |
 | SCENA 6 | nanico antico o Sapienza Magica | 22 |
+| SCENA 7 | ai nani, 5d8 sonori con Riflessi | 18 |
 | SCENA 7 | cosa sta incidendo sull'ardesia (Osservare | 20 |
 | SCENA 7 | Diplomazia | 18 |
 | SCENA 7 | Sapienza Magica | 24 |
 | SCENA 7 | Conoscenze storia | 22 |
 | SCENA 7 | 13d6, Riflessi | 21 |
 | SCENA 7 | round 1 e slay living (Tempra | 20 |
+| SCENA 7 | Vale come l'Osservare | 20 |
 | SCENA 8 | Forza | 20 |
 | SCENA 8 | terra, intralciato, finché non supera Riflessi | 15 |
 | SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |
@@ -96,6 +102,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 10 | Diplomazia o Guarire | 18 |
 | SCENA 10 | Disattivare o Artigianato | 20 |
 | SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
+| SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
 | SCENA 11 | sul gruppo più fitto (Riflessi | 28 |
 | SCENA 11 | prova di Forza | 25 |
 | SCENA 11 | Forza | 10 |
@@ -111,37 +118,40 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
-| SCENA 1 | il passaggio | LotR lead | 9 |
+| SCENA 1 | il passaggio | LotR lead | 8 |
 | SCENA 1 | la fortezza, da lontano | LotR lead | 5 |
 | SCENA 2 | il bosco | Andor lead | 6 |
-| SCENA 3 | la porta, deep time al contrario | LotR lead | 6 |
+| SCENA 3 | la porta, deep time al contrario | LotR lead | 7 |
 | SCENA 3 | la targa | Casa di Davide lead | 4 |
-| SCENA 4 | la sala del consiglio, il re | Casa di Davide lead | 7 |
-| SCENA 4 | Il vecchio sulla panca | Mercer lead, Casa di Davide support | 11 |
-| SCENA 5 | i quartieri ospiti | LotR lead | 6 |
+| SCENA 4 | la sala del consiglio, il re | Casa di Davide lead | 8 |
+| SCENA 4 | il vecchio sulla panca | Mercer lead, Casa di Davide support | 4 |
+| SCENA 4 | le due prese | Mercer lead | 3 |
+| SCENA 5 | i quartieri ospiti | LotR lead | 7 |
 | SCENA 5 | la cappella | Casa di Davide lead | 6 |
 | SCENA 5 | la bottega | Andor lead | 5 |
 | SCENA 5 | le gallerie | Andor lead | 6 |
-| SCENA 5 | la fucina | Salvatore lead, Andor support | 9 |
-| SCENA 6 | la postierla | Andor lead | 7 |
-| SCENA 6 | il campo | Salvatore lead | 6 |
+| SCENA 5 | la fucina e il banco | Salvatore lead, Andor support | 9 |
+| SCENA 6 | la postierla | Andor lead | 5 |
+| SCENA 6 | il campo | Salvatore lead | 7 |
 | SCENA 6 | il volo | Salvatore lead | 5 |
 | SCENA 7 | la tenda | Andor lead | 3 |
-| SCENA 7 | dentro | Salvatore lead | 7 |
-| SCENA 7 | 1 di 3, poi FERMATI | Andor lead | 5 |
-| SCENA 7 | «Quella corona la finirono con tre gemme. Tu ne hai due.»* — *un colpo | — | 4 |
+| SCENA 7 | dentro | Salvatore lead | 6 |
+| SCENA 7 | il primo incontro, 1 di 3, poi FERMATI | Andor lead | 5 |
+| SCENA 7 | 2 di 3, dopo che qualcuno ha reagito | Andor lead | 3 |
+| SCENA 7 | 3 di 3, solo quando il silenzio diventa scomodo | Andor lead | 3 |
 | SCENA 7 | Tre rune nane, tutte spezzate a metà dallo | Salvatore | 3 |
-| SCENA 8 | la tenda, il seggio | Salvatore lead | 6 |
-| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 8 |
-| SCENA 10 | le mura | Salvatore lead, LotR support | 9 |
-| SCENA 10 | Il camminamento è largo quanto un tavolo da | Salvatore lead | 7 |
-| SCENA 11 | il cortile | Salvatore lead | 11 |
-| SCENA 11 | «SANGUE ANTICO. ARTEFICE DI LACRIME.»* — *e per un istante la Corona t | — | 3 |
-| SCENA 12 | l'incudine | LotR lead | 6 |
-| SCENA 12 | l'incasso che si chiude | Salvatore | 4 |
-| SCENA 12 | l'ascia prende la parola | Mercer lead | 4 |
-| SCENA 12 | l'aura | LotR lead | 7 |
+| SCENA 8 | la tenda, il seggio | Salvatore lead | 5 |
+| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 5 |
+| SCENA 9 | l'anello | Andor lead | 2 |
+| SCENA 10 | le mura | Salvatore lead, LotR support | 8 |
+| SCENA 10 | il camminamento | Salvatore lead | 8 |
+| SCENA 11 | il cortile | Salvatore lead | 10 |
+| SCENA 11 | la visione, solo per Thorik | Mercer lead | 3 |
+| SCENA 11 | la runa sotto la scaglia | Salvatore lead | 4 |
+| SCENA 12 | l'incudine, e l'incasso che si chiude | LotR lead | 9 |
+| SCENA 12 | l'ascia prende la parola | Mercer lead | 3 |
+| SCENA 12 | l'aura | LotR lead | 6 |
 | SCENA 12 | il torque | Casa di Davide lead | 5 |
-| SCENA 13 | L'orda, senza generale e senza drago a spronarla, si sfalda come sabbi | — | 4 |
+| SCENA 13 | l'incudine, 1 di 3: la profezia compiuta | Casa di Davide lead | 5 |
 | SCENA 13 | l'incudine, 2 di 3: il canto | Salvatore | 7 |
-| SCENA 13 | l'incudine, 3 di 3: la voce | LotR lead | 6 |
+| SCENA 13 | l'incudine, 3 di 3: la voce | LotR lead | 5 |

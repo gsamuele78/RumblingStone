@@ -34,7 +34,7 @@
 > di comandanti, pyromancer e pattuglie sono quelle del SUPPLEMENTO, con le sue
 > didascalie. **Si modifica là**, e si ricopia qui.
 >
-> **[PROPOSTA — needs DM confirmation]** sulle 15 righe ricostruite (07, 09, 11,
+> [CANONE — DM 2026-10-18] sulle 15 righe ricostruite, che valgono così al tavolo (07, 09, 11,
 > 13, 14, 16, 17, 19, 23, 28, 31, 32, 34, 36, 37): ognuna ripete la riga disegnata
 > sopra, senza figure, fuoco e casse. Le righe disegnate più corte di 53 celle
 > sono state allungate con radura 🟩 prima della foresta est.

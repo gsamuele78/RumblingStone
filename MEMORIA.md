@@ -37,16 +37,14 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
 
-### Revisioni della prosa da approvare: 4
+### Revisioni della prosa da approvare: 2
 
 Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py applica` può ancora applicare. Ogni cartella ha un `LEGGIMI.md` con i passaggi interi.
 
 | Documento | Originale | Modifiche | Spuntate |
 |---|---|---:|---:|
 | [`REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md) | `08_La Battaglia Di Hammerfist/ARC08-11-PONTE-ARRIVO.md` | 3 | 0 |
-| [`REVISIONE-ARC08-15-HANDOUTS-GIOCATORE-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-ARC08-15-HANDOUTS-GIOCATORE-r1.md) | `08_La Battaglia Di Hammerfist/ARC08-15-HANDOUTS-GIOCATORE.md` | 2 | 0 |
 | [`REVISIONE-Cerimonia-delle-100-Asce-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-Cerimonia-delle-100-Asce-r1.md) | `08_La Battaglia Di Hammerfist/Cerimonia-delle-100-Asce.md` | 5 | 0 |
-| [`REVISIONE-hammerfist_encounters-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-hammerfist_encounters-r1.md) | `08_La Battaglia Di Hammerfist/hammerfist_encounters-La Battaglia-di-Hammerfist-Guida-agli-Scontri-final.md` | 3 | 0 |
 
 ## ▶ In corso: da qui si riparte: 7
 
@@ -117,22 +115,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
+| 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
+| 2026-10-18 | TRASVERSALE | Creature della Mano Rossa ispirate alla WE di RHoD (ARC-09) | 🟡 proposta: abishai azzurro, Spezzamente, lucertola del tuono, Furia della Mano in `Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`, versione più fort… |
+| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
+| 2026-10-18 | MASTER-DEF | nuovo giro sui cinque master di ARC-07: developer, playtester e DM a freddo su… | 🟡 [`esperimenti/giro-arc07-2026-10-18/`](plans/esperimenti/giro-arc07-2026-10-18/README.md): 15 letture, 120 🔴+🟠 sui master di partenza, nessuno resta aperto s… |
+| 2026-10-18 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le `[PROPOSTA]` di gioco diventano canone: tenda di Zog'tar (M7C), metà sud del… | ✅ zero `[PROPOSTA]` aperte nel contenuto |
 | 2026-10-16 | MASTER-DEF | le versioni di ARC-08 censite sezione per sezione e mappa per mappa; i sei file… | 🟡 D6 aperta al DM |
+| 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 | 2026-10-15 | MASTER-DEF | A3, il canone di ARC-08 contro il tavolo: lettura in sola lettura dei file vivi… | 🟡 43 punti; D4 e D5 aperte al DM |
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
-| 2026-10-14 | REVISIONE-ARC07 | la scheda di Balvar nel Bestiario dava *dimensional anchor* sulla soglia della… | ✅ La riga delle rune nella scheda ora è quella del master; l'impronta delle creature è rigenerata per la sola lunghezza del testo di Balvar (3173 → 3261), ness… |
-| 2026-10-12 | REVISIONE-ARC07 · CICLO-SESSIONE | le tredici righe… |  |
-| 2026-10-12 | LETTORE-E-PLAYTESTER · REVISIONE-ARC07 | giro 3 parziale su `DEF-4` (developer, DM a freddo, playtester) sulle parti del… |  |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4 di conferma su DEF-4 | ✅ lettore, playtester e DM a freddo, nessun 🔴; rilievi corretti nel master o portati al DM (D64-D76), tutte decise |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | D74 decisa dal DM, sì a tutto: i sedici dettagli del playtester diventano canon… | 🟡 nessuna decisione aperta; resta il DM a freddo |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il playtester a freddo su DEF-4 (🔴 0 · 🟠 6 · 🟡 17), corre… | 🟡 playtester fatto; aperta D74, resta il DM a freddo |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | D69-D71 decise dal DM e applicate in DEF-4: Zog'tar catturato e il suo dopo, le… | 🟡 applicate; aperte D72-D73 |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | D64-D68 decise dal DM: in DEF-4 la penalità per le armature portate e la capien… | 🟡 applicate; aperte D69-D73 |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il lettore a freddo su DEF-4 dopo le decisioni (🔴 0 · 🟠 5… | 🟡 lettore fatto; aperte D69-D71, restano playtester e DM a freddo |
+| 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
+| 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | una forma sola per le schede dei PNG e dei villain, sul modello di *Red Hand of… | 🟡 [ADR-0091](plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md), proposta. Misurato prima: 113 file in `png/` e `villain/`, da 10 a 280 righe, cinque forme… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 259 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 262 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

@@ -108,7 +108,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | **The Gilded Horn** | **L'Unicorno** | Sune/Milil | Aldric Thornwall | Arpa della Tempesta Bardica |
 | **The Tidal Crest** | **L'Onda** | Valkur/Selûne | Gonfaloniere + Gilda dei Barcaioli | La Marea Montante |
 | **The Sovereign Ring** | **Il Campo** (piazza neutrale) | — | nessuna fazione | il Palio stesso |
-| **"The Seat"** (mappa) | il palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
+| **"The Seat"** (mappa) | il **Palazzo dei Nove**, palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
 
 ---
 
@@ -175,17 +175,13 @@ Guado**, pista del Palio — cap. IX §4.)*
 
 ---
 
-## §Palazzo — "The Seat" (il palazzo-fortezza del governo)
+## §Palazzo — il Palazzo dei Nove ("The Seat")
 
-Sulla pianta è marcato **"The Seat"**. Il DM ha raccolto quattro nomi
-cerimoniali possibili `[PROPOSTA — needs DM choice]`:
+Sulla pianta è marcato **"The Seat"**. Il nome è **Palazzo dei Nove**
+(*The High Seat of the Nine*): le nove parti in
+tregua, cioè le otto contrade e il Campo, siedono sotto lo stesso tetto e
+nessuna si fida delle altre.
 
-| Nome italiano | Nome FR (EN) | Atmosfera |
-|---|---|---|
-| Palazzo dei Nove | **The High Seat of the Nine** | politica, intrighi, tregua fra le 9 parti (8 contrade + il Campo) |
-| Palazzo dei Gonfaloni | **The Palace of the Eight Banners** | gli stendardi delle 8 contrade sulla facciata; equilibrio precario |
-| Palazzo della Torre | **The Sovereign Spire** | la guglia magica (aggancio al Quasi-Mythal del Drago) |
-| Rocca del Duca | **The Grand Ducal Hold of the Ring** | tono militare, legge ferrea, affaccio sul Sovereign Ring |
 
 ---
 
@@ -994,6 +990,7 @@ pioggia/fango.
 Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 }}
 
+<!-- revisione-testo: r1 · 2026-10-03 -->
 # Parte 2D — Le 8 Prove d'Ammissione (scena per scena)
 
 > Allegato di cap. X (§2) e cap. VI (§2.1).
@@ -1091,8 +1088,8 @@ Ferrante può diventare la voce che a Rethmar **tiene Jarmaath sulla difesa**.
 
 **Read-aloud**
 > *Voll vi consegna una cassa che pesa troppo per il suo volume. — "Non chiedete cosa c'è
-> dentro. Chiedete solo: da che porta entra?" Sorride. La cassa, per un istante, sembra…
-> respirare.*
+> dentro. Chiedete solo: da che porta entra?" Sorride. La cassa, per un istante, si gonfia
+> e si sgonfia.*
 
 **Beat 1 — La via (piano)**: i PG scelgono l'approccio — fogna (Furtività), corruzione
 (Raggirare/oro), diversivo (un PG crea caos altrove). Ogni piano ha la sua DC.
@@ -2347,8 +2344,8 @@ e Channathgate dista **1,5 giorni**. Il calendario che tiene insieme tutto:
 > - **Day 29-30**: *"I casali del Channath centrale bruciano; i razziatori worg colpiscono i convogli."*
 > - **Day 30-31**: *"L'orda converge sul Crocevia del Channath — sarà lì entro due giorni."* (canone: Day 33)
 > - **Colore**: *"Dicono che a Witchcross i druidi preparino una resistenza disperata."* (cade ~Day 35)
-> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **blu**
-> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è nero e in riserva**
+> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **verde**
+> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è blu e in riserva**
 > fino alla Fase 3 — nessuno dei due bombarda granai durante il Palio.
 
 ### 3.2 Impatto sui Clock dei Villain

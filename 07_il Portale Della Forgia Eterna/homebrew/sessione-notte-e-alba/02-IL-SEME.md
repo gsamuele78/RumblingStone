@@ -79,8 +79,9 @@ guardato la vetrina e non è entrato — ma adesso **sa cosa c'è dentro**, e
 quello non si dimentica.
 
 **Stato meccanico — il Marchio NON è attivo.** Il vincolo si chiude **col
-tocco** (*«la voce arriva col tocco della gemma»*, e Varis chiede di
-incastonarla nell'Anello). Quindi, oggi:
+tocco a pelle nuda**: la voce arriva a ogni tocco, anche col guanto o col
+panno, ma firma solo la pelle `[CANONE — DM 2026-10-18]`, e Varis chiede di incastonarla
+nell'Anello. Quindi, oggi:
 
 | | Stato |
 |---|---|
@@ -144,7 +145,9 @@ sempre tiepido.
 **Le clausole** (sono il contratto):
 
 1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
-   anche senza volerlo. Guanto, panno o pinza non firmano. Non c'è tiro
+   anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
+   arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
+   `[CANONE — DM 2026-10-18]`. Non c'è tiro
    salvezza, perché il Seme non costringe: aspetta.
 2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
    nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
@@ -206,11 +209,10 @@ non c'è niente di più interessante.
    qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
    sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
 
-> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena si accartoccia
-> in cenere tiepida. Sotto il guanto la gemma non è cambiata: lo stesso peso,
-> lo stesso calore di una mano appena tolta da una tasca. Ma adesso dentro la
-> pietra c'è una scrittura, fitta e ordinata, come in un libro mastro. In
-> fondo alla pagina c'è un segno: una bilancia con un filo d'argento avvolto al
-> giogo. Per tutta l'ora hai aspettato una voce. Non è venuta. Dall'altra
-> parte del filo non c'è ancora nessuno.*
+> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
+> si accartoccia in cenere tiepida. Sotto il guanto la gemma ha lo stesso peso
+> e lo stesso calore di una mano appena tolta da una tasca, ma dentro la pietra
+> c'è una scrittura fitta e ordinata, da libro mastro. In fondo alla
+> pagina, una bilancia con un filo d'argento avvolto al giogo. Per tutta l'ora
+> hai aspettato una voce, e dall'altra parte del filo non c'è ancora nessuno.*
 <!-- /include -->

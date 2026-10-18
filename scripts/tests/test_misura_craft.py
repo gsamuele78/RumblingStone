@@ -246,6 +246,11 @@ class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
         regia, che è il caso esatto che ADR-0014 §1 nomina. Ogni volta il
         cancello è diventato rosso, che era il suo scopo, e ogni volta è stato
         aggiornato a mano. Tre su nove archi: la strada è ancora lunga.
+
+        ✅ **Il quarto, il 2026-10-18.** La riscrittura di stile di DEF-5 ha
+        dato alla Scena 3 una «Regia dei round» (§5, la pulizia del Cuore
+        della Montagna: un round per riga, ramo luminoso, ramo meno luminoso,
+        i nani). Quattro documenti su cinque in ARC-07; manca DEF-2.
         """
         con = []
         for nome in MC.BERSAGLI:
@@ -254,7 +259,8 @@ class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
                 con.append(nome)
         self.assertEqual(sorted(con), ["DEF-1 Piano della Terra",
                                        "DEF-3 Resurrezione Hella",
-                                       "DEF-4 Viaggio 1.000 anni"],
+                                       "DEF-4 Viaggio 1.000 anni",
+                                       "DEF-5 Ritorno Hammerfist"],
                          "la regia di round e' comparsa altrove (bene!) oppure "
                          "e' sparita da uno dei due (male): aggiornare di proposito")
 
@@ -355,17 +361,34 @@ class TestIDueCongegniDiMercer(unittest.TestCase):
         DEF-4 li ha portati per primo (riscrittura del 2026-09-18), DEF-3 il
         giorno dopo — il `[HDYWTDT]` allo Step 5 del rito, dove il richiamo
         riesce e la voce finale la sceglie il giocatore invece del DM. Quando
-        arriveranno altrove, questo cancello va aggiornato **di proposito**."""
-        for congegno in ("[HDYWTDT] il finisher al giocatore",
-                         "assorbi e rilancia (yes-and with teeth)"):
+        arriveranno altrove, questo cancello va aggiornato **di proposito**.
+
+        ✅ **Aggiornato di proposito il 2026-10-18**, dopo la riscrittura di
+        stile dei cinque master di ARC-07, e da qui i due congegni hanno due
+        attese diverse. Il `[HDYWTDT]` arriva in DEF-1 (alla terza crepa del
+        duello di Tordek e al colpo che porta Terros a 0) e in DEF-5 (l'ultimo
+        hobgoblin della pulizia, Scena 3); DEF-2 non ha un boss da finire e
+        resta fuori. Lo *yes-and with teeth* arriva in DEF-1 (§7a, la strada
+        che il tavolo inventa per l'oceano), in DEF-2 (il gesto per la
+        Cronaca, inciso su A8 e col suo prezzo) e in DEF-5 (§0-ter, tre
+        invenzioni assorbite, ognuna con la sua complicazione)."""
+        attesi = {
+            "[HDYWTDT] il finisher al giocatore": [
+                "DEF-1 Piano della Terra", "DEF-3 Resurrezione Hella",
+                "DEF-4 Viaggio 1.000 anni", "DEF-5 Ritorno Hammerfist"],
+            "assorbi e rilancia (yes-and with teeth)": [
+                "DEF-1 Piano della Terra", "DEF-2 Ritorno e affreschi",
+                "DEF-3 Resurrezione Hella", "DEF-4 Viaggio 1.000 anni",
+                "DEF-5 Ritorno Hammerfist"],
+        }
+        for congegno in attesi:
             con = []
             for nome in MC.BERSAGLI:
                 testo, _, _ = MC.carica(MC.BERSAGLI[nome])
                 if conta(congegno, testo):
                     con.append(nome)
             with self.subTest(congegno=congegno):
-                self.assertEqual(sorted(con), ["DEF-3 Resurrezione Hella",
-                                               "DEF-4 Viaggio 1.000 anni"])
+                self.assertEqual(sorted(con), attesi[congegno])
 
 
 class TestIBersagliNonSiCampionanoInSilenzio(unittest.TestCase):

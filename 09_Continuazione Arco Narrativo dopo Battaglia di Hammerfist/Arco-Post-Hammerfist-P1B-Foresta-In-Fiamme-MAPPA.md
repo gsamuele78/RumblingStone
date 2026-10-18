@@ -62,10 +62,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Elemento | Dove (coord.) | Effetto meccanico 3.5 |
 |---|---|---|
 | 🔥 Fronte del rogo (i drow bruciano la radura) | W8–Z17 | 2d6 fuoco entro 3 m; occultamento fumo 20%; Tempra CD 15 o nauseato |
-| 🔥 Fuoco (1d6 fuoco/round) | U9 | [INFERRED — needs DM confirmation] |
-| 🔥 Fuoco (1d6 fuoco/round) | U16 | [INFERRED — needs DM confirmation] |
-| 🔥 Fuoco (1d6 fuoco/round) | Y13 | [INFERRED — needs DM confirmation] |
-| 🟫 Foresta già bruciata (terreno difficile, 1d4 fuoco residuo) | AA7–AG18 | [INFERRED — needs DM confirmation] |
+| 🔥 Fuoco (1d6 fuoco/round) | U9 | canone del DM 2026-10-18 |
+| 🔥 Fuoco (1d6 fuoco/round) | U16 | canone del DM 2026-10-18 |
+| 🔥 Fuoco (1d6 fuoco/round) | Y13 | canone del DM 2026-10-18 |
+| 🟫 Foresta già bruciata (terreno difficile, 1d4 fuoco residuo) | AA7–AG18 | canone del DM 2026-10-18 |
 
 ### ⚔️ TATTICHE (come si comportano i nemici — round per round)
 

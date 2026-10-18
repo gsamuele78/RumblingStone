@@ -5,10 +5,6 @@
     "come": "python3 scripts/validate_booklets.py --stampa, con PyMuPDF"
   },
   "volumi": {
-    "07_il Portale Della Forgia Eterna/homebrew/volume-mille-anni/ARC07-MILLE-ANNI-VOLUME.manifest.json": {
-      "tetto": 2,
-      "perche": "l'[INFERRED] di Balvar sul pf-dado tolto da conformita_statblocchi.py: è una decisione aperta al DM, e si chiude col lotto del Bestiario delle marcature (STATO-E-ORDINE §12.1)"
-    },
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
       "tetto": 26,
       "perche": "3 sono l'attribuzione di licenza delle icone (CREDITS.md), che deve restare stampata; 1 è il rimando al gate d'uscita IP nel colophon; il resto (le «patch a state.md», la procedura di rigenerazione degli stemmi, i rimandi a schede del Bestiario) chiede un giudizio dentro il modulo: lotto successivo di CICLO-SESSIONE 2g"

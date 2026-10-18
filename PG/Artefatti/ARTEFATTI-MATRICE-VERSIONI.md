@@ -105,7 +105,7 @@ Cartella `Artefatti-Pg/00-La Corona di Adamantio-ogetto&Prove/`:
 |---|---|---|
 | `000_Guida_Dm_ogetto_prove_rituali_sfide.md` (37 KB) | prove/rituali/sfide in dettaglio | *annesso DM* (citato dal MASTER) |
 | `000_Corona_adamantio_ogetto.md` | scheda-oggetto sintetica | 📸 **ASSORBITO nel MASTER** (T6b: banner in testa; il master prevale, es. sul prereq BAB) |
-| `00_corona_di_adamantio_completa_italiano.md` | generazione precedente in italiano | 📸 snapshot `[INFERRED]` |
+| `00_corona_di_adamantio_completa_italiano.md` | generazione precedente in italiano | 📸 snapshot |
 | `00_corona_adamantio_in_inglese.txt`, `00_corona_adamantio_in_inglese&rituali.txt` | generazioni in inglese | 📸 snapshot |
 | `00_corona_di_adamantio_i_rituali_descrizioni_interventi_divini.md` | descrizioni rituali/interventi divini | *annesso DM* |
 | `00_corona_di_adamantio_momento_risveglio_1_prova_scheda_giocatore.md` | scena risveglio + 1ª prova | *annesso* (materiale scena) |
@@ -124,7 +124,7 @@ Cartella `Artefatti-Pg/00-La Corona di Adamantio-ogetto&Prove/`:
 |---|---|---|---|
 | Base | indossare da degno | Stone's Awareness; +2 CA deflessione | ✅ |
 | Rituale 1 — Forge's Defense | visione della battaglia | legame + visioni | ✅ |
-| Rituale 2 — Trial of the Deep Hall | tempio profano Underdark | Moradin's Insight (True Seeing 1/giorno; +4 Artigianato-fabbro) | ✅ giocato `[INFERRED: verificare che il giocatore lo stia usando]` |
+| Rituale 2 — Trial of the Deep Hall | tempio profano Underdark | Moradin's Insight (True Seeing 1/giorno; +4 Artigianato-fabbro) | ✅ giocato |
 | Gemma TOPAZIO (Tempo Immutabile) | rituale Piano del Fuoco (P3) | viaggio temporale 1/mese (costo: invecchia 1d10 anni) | ✅ **unica gemma accesa OGGI** (D8/D16) |
 | Rituale 3 — Anvil of the World + Gemma SMERALDO | Piano della Terra (P4, IN CORSO) | Adamantine Will; Muro di Pietra / Terremoto controllato 1/settimana (1.000 mo) | 🟡 in palio |
 | Gemma RUBINO (Dwarven Might) + Rituale 4 — Siege of the Eternal Forge | vittoria nella battaglia antica (P5) | ***Aura della Forgia Eterna*** 1/settimana — *Possenza Divina* e *Protezione dal Male* ai quattro; *Possenza Divina*, *Protezione dal Male*, *Benedizione* e uno *Scolpire Pietra* a ogni nano entro 30 m; **+4 morale** ad attacchi e TS per i nani in vista; nemici **Volontà CD 20** o **scossi** 1 minuto. La prima volta dura **fino all'alba**. Più **Corona +3**, **Senzienza**, e **il Rubino si consuma nel ritorno al 1372** (D16). ⚠️ **Il Mantle of Stone and Spirit NON è di questo rituale**: è del **Rituale 3** — vedi r.145 e la scheda giocatore r.35 (correzione DM 2026-09-20: la regola è che decide la scheda che il giocatore ha letto) | ⬜ da giocare — Rubino poi SPESO |
@@ -245,7 +245,7 @@ canone e i poteri da scrivere in ARC-09.
 ## 6. SINERGIE (party)
 
 **⭐ MASTER**: `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md` (creato in T4 —
-versionato, con sezione "sinergie future Collana/Hella" [PROPOSTA]).
+versionato, con sezione "sinergie future Collana/Hella", canone dal 2026-09-25).
 `Artefatti-Pg/Sinergie_Artefatti_QuickReference.html` e
 `07_.../SinergieArteFattiQuickReference.pdf` = 📸 export da rigenerare dal
 master a ogni cambio (data-versione in testa).
