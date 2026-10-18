@@ -42,7 +42,6 @@ voci:
   - *Morale*: è un comandante, non un solista, e lo sa. Sotto i 25 pf passa il comando al più anziano dei suoi e si fa coprire, ma non lascia il varco finché le lance lo tengono. Se il varco cade, si ritira con l'ultima fila e mai prima: è lui l'ufficiale che il Torneo di Dauth può restituire «ferito gravemente», non morto.
 - *Al comando delle lance*: combatte come formazione, non come singolo. Arco 09, Torneo di Dauth, terzo giorno (l'assedio della città), «Carta D — Le lance di Khorn»: le 150 lance sono un asset di comando che Thorik (o Tordek) manda dove servono; se la carta è ignorata si schierano da sole al comando di Khorn, con il bonus dimezzato.
 
-> [INFERRED — needs DM confirmation] Tattiche «da solo» scritte da un agente sui poteri della scheda.
 
 **Esiti (D4/D5)**: guida le 150 lance a Rethmar solo se gli hook politici ARC-09
 riescono (sigillo Maewen + lettera Thorik); altrimenti resta a Hammerfist. **PNG

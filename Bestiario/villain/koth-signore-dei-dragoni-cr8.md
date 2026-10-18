@@ -55,7 +55,6 @@ Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. Tutto SRD tr
   - **Round 2**: *volare*, e si porta in alto, fuori dalla portata dei guerrieri.
   - **Round 3 e seguenti**: dall'alto e invisibile, *fulmine* lungo la linea che prende più PG, *cecità/sordità* sul guerriero più pericoloso, *raggio di indebolimento* su chi colpisce più forte, *sfera infuocata* per spingere gli incantatori fuori dalla copertura. Se un PG vede l'invisibile, *Sudden Enlarge* non serve a niente: cambia bersaglio e usa *dardo incantato*. La pergamena di *polvere luccicante* è per i PG invisibili.
 - *Morale*: sotto 25 pf vola via, invisibile, verso il resto dell'orda. Se non può fuggire (bloccato, senza *volare*), sotto 15 pf **si arrende** e prova a trattare: Koth è il più debole dei Wyrmlord e lo sa, e vale più vivo che morto per quello che sa di Vraath.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Variante draconica** (`bugbear_draconic_koth.pcg`): stesso build con template Draconic Creature `[Private source — Races of the Dragon]` e livelli di sostituzione Dragonblood `[Private source — Races of the Dragon]` (Car 16) `[INFERRED — solo .pcg]`. Più forte, ma senza un export coi numeri: si tiene come variante.
 

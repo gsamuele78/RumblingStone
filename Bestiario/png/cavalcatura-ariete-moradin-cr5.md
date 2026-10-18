@@ -39,7 +39,6 @@ voci:
 - *Durante il combattimento*: con Rurik in sella carica in linea retta sul nemico più grosso, e il martello di Rurik colpisce con il +2 della carica. Dopo la carica resta fermo accanto al bersaglio per dargli gli zoccoli. Se Rurik smonta per tenere un varco, l'ariete combatte da solo: zoccoli e morso sullo stesso nemico, e il punire il male lo spende sul primo nemico malvagio che arriva a contatto, di solito un goblinoide o un drago della Mano Rossa. Il soffio di un drago non lo spaventa: con eludere migliorato e Riflessi +7 spesso non prende danno.
 - *Morale*: non fugge finché Rurik è in piedi. Sotto i 15 pf Rurik lo congeda prima che muoia: il giorno dopo torna intero, mentre morto starebbe fuori per un mese.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 5 (CA 18, pf 55, att +10, danno 20, CD 15): CA 21 (+3), pf 60 (+5), att +10 (uguale), danno con l'attacco completo ≈21 (uguale). È un GS 5 pieno: il cavallo da guerra pesante (GS 2), +1 per i 4 DV da animale, +2 per il template celestiale a 8 DV.
 

@@ -49,7 +49,6 @@ Huge outsider (lawful, evil, extraplanar), 20d10+120. La Regina Cromatica è leg
 - *Durante il combattimento*: round 1, piomba a 9 m dal gruppo più compatto e soffia il fuoco a cono sui PG raggruppati; l'aura scatta all'arrivo. Round 2, attacco completo sul PG che minaccia Azarr Kul o che sta più vicino al Circolo. Round 3, soffio a linea (elettricità o acido) dove allinea due bersagli, meglio se uno è un incantatore del Circolo. Da lì tiene un ritmo leggibile, due round di mischia e uno di soffio con la testa che ha pronta, come chiede la Fase 3. Contro chi non vola usa Attacco in Volo: morde e risale fuori portata. Contro un PG invisibile soffia a linea dove lo ha sentito (Ascoltare +28). Quando un focus cade, ruggisce col colore che ha perso e cambia testa.
 - *Morale*: sotto 115 pf scatta la Sotto-fase C. Se il Mythal si ancora non può più fuggire e combatte fino alla distruzione; se il Mythal non si chiude e scende sotto 50 pf, si ritira nel vortice urlando maledizioni, e lo scontro finisce con lei respinta.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 Benchmark: PF T1-1 riga 17: CA 34 sopra (+2) / pf 230 sotto (−40) / attacco +28 sopra (+1) / danno medio pieno 75 sotto (90; il soffio fa 54 ad area) / CD 26-29 sopra / TS buono +20 in linea (20).
 

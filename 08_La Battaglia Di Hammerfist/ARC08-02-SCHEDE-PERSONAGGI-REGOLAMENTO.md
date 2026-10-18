@@ -473,7 +473,6 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Frecce della Morte dei Draghi (3):** Se una di queste frecce colpisce un drago, quest'ultimo deve superare un TS su Tempra CD 20 o morire.
 
 **Tattiche:** Il Capitano Lunapiena è un leader e un cacciatore di mostri. Userà il Corno del Valhalla per creare un diversivo a terra. In aria, si concentra esclusivamente su Fauci di Palude, usando le sue Frecce della Morte dei Draghi per tentare di porre fine rapidamente allo scontro. *Morale*: sotto i 30 pf porta il gufo fuori portata e continua a tirare; non lascia il cielo finché il drago vola.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: Ranger 10 dell'SRD. Tiro Rapido dà
 > −2 a ogni tiro: il +17/+17/+12 della scheda (BAB +10, Des +4, arco +2, Arma

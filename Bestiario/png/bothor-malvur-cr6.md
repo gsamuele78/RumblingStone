@@ -44,7 +44,6 @@ voci:
 - *Durante il combattimento*: al primo round, se il nemico è lontano, tirano con la balestra; poi avanzano insieme verso lo stesso bersaglio per prenderlo ai fianchi (+2 al colpire) e non lo lasciano finché non cade, poi Fendere sul vicino. Attacco Poderoso a −3 contro chi non porta armatura pesante. La CA 24 è la loro difesa, e la usano: non si muovono più di una casella per round, così fanno l'attacco completo. Non inseguono chi vola o è invisibile: tornano spalla a spalla e aspettano che scenda.
 - *Morale*: sotto i 20 pf bevono una *cura ferite moderate*. Se uno dei due cade, l'altro lo trascina via se può e si ritira lungo il cunicolo; due nani del Sottosuolo che sopravvivono a una sconfitta ricordano la faccia di chi li ha battuti. Si arrendono soltanto se gli si offre di andarsene con le armi.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 6 (CA 19, pf 70, att +12, danno 25, CD 16): CA 24 (+5), pf 54 (−16), att +13 (+1), danno con l'attacco completo ≈27 (in linea). In due sono un incontro da EL 8.
 

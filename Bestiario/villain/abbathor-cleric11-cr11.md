@@ -51,7 +51,6 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 
 **Tattiche** Le dà l'incontro epico della scala di ossa, nell'arco 02 (il testo dell'incontro coi duergar di Abbathor, «Tactical Overview», dove il chierico è «the evil cleric»): *Prima del combattimento* in «Initial Setup» (*benedizione*, *scudo della fede* e *protezione dal bene* su di sé e sugli alleati), *Durante il combattimento* in «Combat Tactics» (*blocca persone*, *scagliare maledizione* e *comando superiore* da pergamena, cure agli alleati), l'escalation quando il gruppo prende il sopravvento in «Mid-Combat Adjustments» (*ferire* e *colpo infuocato*). Incantesimi Rapidi gli dà un secondo incantesimo per round: *favore divino* o *scudo della fede* rapidi in uno slot di 5°.
 - *Morale*: sotto i 30 pf beve una pozione di *cura ferite gravi* e arretra dietro gli antipaladini; se cadono i due antipaladini e lui è sotto metà pf, legge la pergamena di *comando superiore* («fuggite») e ripiega verso l'Underdark. Abbathor premia chi conserva il proprio tesoro, non chi muore per un ponte.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda (la soglia del Morale; il resto viene dal testo dell'incontro).
 
 **Benchmark** PF T1-1 riga 11 (CA 25, pf 145, att. +19, danno medio 50, CD 20): CA 25 ✓ · pf 86 ✗ sotto · att. +12 ✗ (è un incantatore) · CD 20 al 6° ✓, 19 al 5° ≈. Un GS 11 da incantatore: regge con i due antipaladini davanti.
 

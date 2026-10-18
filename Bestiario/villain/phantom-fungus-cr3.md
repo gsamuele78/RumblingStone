@@ -48,7 +48,6 @@ Medium plant, 2d8+6. Fungo ambulante del SRD, sempre neutrale.
   - **Round 2 e seguenti**: continua a mordere lo stesso finché cade, poi si sposta. Si muove di 6 m soltanto: non scappa da chi lo ha individuato, ma cambia quadretto perché non sappiano dove colpire. Non insegue oltre la caverna.
   - Contro *polvere luccicante*, farina, sangue o qualunque cosa lo renda visibile: smette di attaccare e si ritira, perché senza l'invisibilità è solo un fungo da 15 pf.
 - *Morale*: sotto 6 pf si ritira nel buio. Due funghi insieme si dividono la fila: uno davanti, uno dietro.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark** PF T1-1 riga 3 (CA 15, pf 30, att. +6, danno medio 13): CA 14 ≈ · pf 15 ✗ · att. +3 ✗ (+5 da invisibile) · danno 6,5 ✗. Il GS 3 viene dall'invisibilità, non dai numeri: contro un gruppo che sa vedere l'invisibile vale un GS 1.
 

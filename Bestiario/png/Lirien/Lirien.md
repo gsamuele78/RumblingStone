@@ -149,7 +149,6 @@ Non ha uno statblocco a parte: i numeri sono nel blocco e nel campo **Key stats*
 - *Durante il combattimento*: round 1, la **Satira** (−1 ai nemici entro 9 m) e una battuta che li fa arrabbiare con lui invece che con chi protegge. Poi tiene la distanza con la frusta, a 3 m: sbilancia o disarma chi si avvicina, e quando ha mosso di almeno 3 m colpisce col pugnale chi è a terra (attacco furtivo +2d6, da Scout). *Risata incontenibile* (CD 14) sul nemico più grosso, appena ne ha bisogno. Ogni danno non letale della frusta lo usa per demoralizzare (Enforcer).
 - *Morale*: appena si apre un'uscita, la prende. Sotto metà pf, o se resta solo, si arrende con un inchino e una battuta, e prova a comprarsi la vita con quello che ha visto (§2.3). Per i bambini del mulino non scappa.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 ## Esiti possibili
 

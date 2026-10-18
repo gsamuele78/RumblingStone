@@ -49,7 +49,6 @@ voci:
 - *Durante il combattimento*: al primo round *arma spirituale* sull'incantatore nemico, che lo tiene impegnato senza bisogno di Morlin. Poi avanza col martello: contro un gigante usa punire i giganti (+17, 1d8+13), contro un goblinoide il +1 razziale. *Blocca persone* sul guerriero umanoide più pericoloso, *luce incandescente* sui non morti, *dissolvi magie* su un nemico pieno di protezioni. Lancia sulla difensiva senza paura (Concentrazione +22). Contro chi vola tira con la balestra, o beve *volare* se il bersaglio è un incantatore.
 - *Morale*: sotto i 30 pf beve *cura ferite gravi* e si ritira di un passo verso la forgia, dove ci sono armi da dare a chi combatte. Non lascia i feriti a terra: li cura spontaneamente anche a costo degli slot d'attacco. Si arrende solo a un altro nano che giura su Moradin.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 12 (CA 27, pf 160, att +21, danno 55, CD 21): CA 23 (−4), pf 93 (−67), att +14 (−7), CD primaria 17 (−4). I numeri sono da GS 8-9, perché sei livelli su dodici sono da PNG; il GS 12 è quello dell'export e si tiene, ma come avversario va contato più basso. Il suo valore per la campagna è la forgia, non la mischia.
 

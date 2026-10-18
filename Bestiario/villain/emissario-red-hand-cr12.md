@@ -57,7 +57,6 @@ Medium humanoid (goblinoid), hobgoblin Chierico 12, Legale Malvagio. Diplomatico
 
 *Morale* — È un diplomatico, non un fanatico. Sotto i 25 pf, o se la scorta cade, si arrende e offre quello che sa sui piani di Azarr Kul in cambio della vita; se il Ghostlord è già alleato dei PG, prova invece a fuggire con *santuario*.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 Benchmark: PF T1-1 riga 12: CA 20 (−7), pf 72 (−88), att +10 (−11), CD 20 (−1). In linea sulle CD, sotto sulla tenuta: vale da solo intorno al GS 10, e il GS 12 lo completano la scorta e la posizione.
 

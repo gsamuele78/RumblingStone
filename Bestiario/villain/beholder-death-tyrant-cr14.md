@@ -56,7 +56,6 @@ Large undead (augmented aberration), death tyrant mezzo-illithid avanzato, 16d12
   - **Round 4 e seguenti**: scende sui PG storditi, li afferra coi tentacoli e prova a estrarre il cervello, mentre i raggi rimasti tengono lontani gli altri.
   - Contro chi vola: *lentezza* e *sonno*. Contro chi si rende invisibile: niente, non ha modo di vederlo, e attacca chi vede.
 - *Morale*: nessuno. È un non morto senza mente col suo ordine: combatte finché non viene distrutto, e non insegue oltre la soglia del tempio.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda e sulla tattica in quattro passi della scheda dell'arco.
 
 **Benchmark** PF T1-1 riga 14 (CA 29, pf 200, att. +23, danno medio 65, CD 22): CA 22 ✗ · pf 104 ✗ molto sotto · att. +11 ✗ · CD 21 ≈ (1 sotto). Difesa e attacco da GS 9-10: il GS lo pagano otto effetti salva-o-muori a CD 21, lo stordimento di gruppo e l'estrazione. È swingy: o li ferma al round 1, o cade al round 3.
 

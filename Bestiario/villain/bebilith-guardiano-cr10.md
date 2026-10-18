@@ -50,7 +50,6 @@ Huge outsider (chaotic, evil, extraplanar), 12d8+96.
   - **Round 2 e seguenti**: attacco completo sempre sulla stessa preda, morso e due artigli. Ogni volta che entrambi gli artigli colpiscono, l'armatura si squarcia: contro Thorik e Tordek è il pericolo vero, perché li spoglia. Fendere sul secondo bersaglio se il primo cade.
   - Usa le ragnatele che restano su chi prova a soccorrere la preda.
 - *Morale*: sotto 50 pf morde un'ultima volta chi è più vicino e se ne va con lo spostamento planare, lasciando che il veleno lavori. Il SRD lo dice di tutti i bebilith: quando gli avversari sono troppi, mordono e si ritirano.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark** PF T1-1 riga 10 (CA 24, pf 130, att. +18, danno medio 45, CD 19): CA 22 ✗ sotto · pf 150 ✓ sopra · att. +19 ✓ · danno completo ≈ 30 più veleno e armatura ✗ sotto · CD 24 ✓ sopra. Un GS 10 onesto: vale per quello che rompe, non per quello che toglie in pf.
 

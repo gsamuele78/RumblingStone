@@ -50,7 +50,6 @@ Medium outsider (native), hobgoblin mezzo-immondo Dragon Shaman 6 `[Private sour
   - **Round 2**: *empietà* sui PG buoni raggruppati, poi la carica in picchiata dall'alto (Diving Charge e Powerful Charge), con colpire il bene su chi porta un simbolo sacro.
   - **Round 3 e seguenti**: mischia con morning star e morso accanto agli hobgoblin, soffio di nuovo appena si ricarica; *tocco di vitalità* sul sergente o su sé stesso.
 - *Morale*: sotto 15 pf lancia *oscurità* su di sé e vola via verso il resto dell'orda. Non si arrende: chi serve Tiamat e perde davanti ai suoi viene ucciso dai suoi.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 > ⚠ Classe non SRD: il Dragon Shaman è del *Player's Handbook II*. PF1e: nessuna classe base fa la stessa cosa. Il **Bloodrager** con la stirpe draconica (ACG, OGL) ha soffio, resistenza e ali, ma è un guerriero d'ira e perde l'aura di supporto: stravolge. Lo **Stregone** con la stirpe draconica tiene il drago e perde la mischia: stravolge anche lui. Si tiene la classe del PHB II.
 

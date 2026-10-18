@@ -52,7 +52,6 @@ Large monstrous humanoid, 7 HD (Minotauro 6 / Barbarian 1), CE. Tutto SRD.
   - **Round 2 e seguenti**: attacco completo con la grande ascia e Attacco Poderoso a −4 sullo stesso bersaglio, finché cade; poi il più vicino. In un corridoio usa la portata di 3 m per colpire chi gli si avvicina.
   - Contro chi vola o resta fuori portata: giavellotti; se gli manca il bersaglio per due round beve la pozione di *volare*.
 - *Morale*: in ira combatte fino alla morte. Finita l'ira, affaticato e sotto 20 pf, beve *cura ferite gravi* e si ritira verso Koth; se Koth è caduto o fuggito, combatte fino alla fine, nei corridoi che conosce meglio di chiunque.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark** PF T1-1 riga 5 (CA 18, pf 55, att. +10, danno medio 20, CD 15): CA 18 ✓ · pf 67 ✓ · att. +13 ✓ · danno completo ≈ 24, ≈ 50 in carica ✓. È un GS 5 pieno; contro APL 13 è un colpo di colore o la guardia del corpo di Koth.
 

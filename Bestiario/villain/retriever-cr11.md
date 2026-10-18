@@ -56,7 +56,6 @@ Huge construct (extraplanar), 10d10+80. Demone-costrutto del SRD (*Demon, Retrie
   - **Round 3**: se tiene il portatore in bocca, lo stringe e si ritira di 15 m per round, verso dove l'hanno chiamato; raggio di **freddo** su chi lo insegue. Se non lo tiene, artigli sul portatore, raggio di **elettricità** sull'incantatore.
   - **Round 4 e seguenti**: ricomincia dalla pietrificazione. La guarigione rapida gli dà tempo: non si ferma a finire chi cade.
 - *Morale*: nessuno. È un costrutto e combatte finché è distrutto o finché ha l'arma, poi torna dai chierici di Abbathor. Se il portatore lascia cadere Aegis Fang, il retriever raccoglie l'arma e se ne va, e gli altri smettono di esistere per lui.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark** PF T1-1 riga 11 (CA 25, pf 145, att. +19, danno medio 50, CD 20): CA 21 ✗ · pf 135 ≈ · att. +15 ✗ · danno completo ≈ 70 col raggio ✓ · CD 18 ✗. Ha la tenuta di un GS 11 grazie alla guarigione rapida e alla pietrificazione, non ai numeri.
 

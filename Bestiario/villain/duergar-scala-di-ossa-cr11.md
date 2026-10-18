@@ -23,7 +23,6 @@ Set d'incontro (piattaforma di ossa e tendini, Underdark). Statblock nel sorgent
   - **Round 2**: Daxavalt e Kerg caricano lo stesso PG e lo prendono di fianco, ognuno con tutte e due le estremità dell'urgrosh (Fendere e Incalzare su chi cade). Adrick esce dall'invisibilità alle spalle di un incantatore: attacco furtivo, poi *ingrandire persone*.
   - **Round 3 e seguenti**: Adrick lavora sui fianchi aperti dai due guerrieri, Zenith tiene la strettoia; se un PG vola o si rende invisibile per aggirarlo, Zenith usa la *sfera dell'invisibile* e chiama il bersaglio agli altri.
 - *Morale*: Daxavalt e Kerg combattono finché Zenith tiene. Se Zenith cade, o se uno dei due scende sotto 15 pf, ripiegano giù per la scala verso il chierico. Adrick fugge invisibile appena scende sotto metà pf: è un mercenario, e la piattaforma non è sua. Zenith non molla la posizione: muore lì.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 Notes: raccolta di statblock nominati per lo scontro della «scala di ossa». Tenuti insieme perché sono un unico incontro; unici → `villain/` via cross-link se servono singolarmente.
 

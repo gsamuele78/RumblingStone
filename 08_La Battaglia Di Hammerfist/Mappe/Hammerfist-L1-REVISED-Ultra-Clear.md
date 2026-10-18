@@ -315,7 +315,7 @@ Round 81-100: Col 24, Row 28 (loop restart)
 - **Avvicinamento furtivo**: i PG muovono da riga 37 in Nascondersi CD 20; Dara scala la torre col **timing sulle pattuglie** (iniziare quando entrambe le guardie sono sul lato opposto).
 - **Osservazione dalla cima** (Dara, +18 m): *Osservare* a soglie — CD 20 conta ~900 unità, CD 25 identifica Grimjaw/Gorthak/Drago, CD 30 layout e punti deboli.
 - **Se combattimento (Opzione B)**: sorpresa se tutti Nascondersi CD 25; **uccidere per primo il Sergente** per impedire il corno d'allarme. ⚠ **Corno suonato → 50 orchi di rinforzo in 10 round**: la soglia di fallimento della missione furtiva.
-- **Morale**: gli hobgoblin danno l'allarme e resistono se il Sergente vive; senza comando (Sergente morto) sono disorganizzati `[INFERRED]`.
+- **Morale**: gli hobgoblin danno l'allarme e resistono se il Sergente vive; senza comando (Sergente morto) sono disorganizzati.
 
 ### 🔄 EVOLUZIONE (companion T5b, consolidato dalle 4 fasi)
 
@@ -516,7 +516,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 - **Routine:** loop K50↔K95 in 5 minuti; Worg 3 (capo) resta 1 quadretto dietro i fiancheggiatori.
 - **Se un PG è avvistato:** i 3 caricano il bersaglio più vicino; il capo suona il **corno al round 2** se lo scontro non è finito.
 - **Corno suonato → 50+ orchi di rinforzo in ~5 minuti** (50 round): è la soglia di fallimento della missione.
-- **Eliminazione silenziosa:** uccidere PRIMA Worg 3 (corno); i worg senza cavaliere fuggono con morale <50% `[INFERRED]`.
+- **Eliminazione silenziosa:** uccidere PRIMA Worg 3 (corno); i worg senza cavaliere fuggono con morale <50%.
 
 ### 🔄 EVOLUZIONE
 

@@ -49,7 +49,6 @@ Medium humanoid, **Mago 17** (specialista evocatore). La razza la scheda non la 
 - *Durante il combattimento*: tiene la concentrazione finché il Circolo regge. Esce dal rituale solo per una minaccia che ucciderebbe il cerchio: un *muro di forza* fra il drago e i caster, un *disintegrazione* rapido sul nemico che è già nel cerchio, una *gabbia di forza* sul gith teletrasportato dentro. Contro un invisibile, *vedere invisibilità* rapido e *dardo incantato*. Lascia il campo ai PG: non spreca incantesimi sulle masse.
 - *Morale*: sotto 30 pf la contingenza lo teletrasporta via. Se il rituale è al sesto round riuscito resta, anche a pochi pf, e lo dice ai PG.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda e sulle regole del rituale della Fase 4.
 
 Benchmark: PF T1-1 riga 17: CA 19-23 sotto (32) / pf 76 sotto (270) / CD 26-28 sopra (24) / TS buono +12 sotto (20). Per l'SRD un mago di 17° livello vale GS 17 (il modulo lo diceva 14); difesa e pf sono quelli di un incantatore da proteggere, le CD da GS 17-18.
 

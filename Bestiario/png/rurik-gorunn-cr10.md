@@ -46,7 +46,6 @@ voci:
 - *Durante il combattimento*: al primo round, se il nemico è lontano, lancia il martello (+11, torna da solo) sul bersaglio malvagio più vicino, oppure carica in sella all'ariete. Contro goblinoidi attiva Goblinkiller con un'azione di movimento e passa all'attacco: con *anatema* il martello fa +2 al colpire e 2d6 in più. Il punire il male lo spende sul capo nemico, non sui gregari. Resta a contatto con i suoi: l'aura di coraggio vale solo entro 3 m. Contro i non morti scaccia prima di colpire. Contro chi vola lancia il martello a ogni round, o beve *volare*.
 - *Morale*: è un paladino, non fugge da un male che minaccia innocenti. Sotto i 25 pf usa l'imposizione delle mani su se stesso (16 pf) e poi la *cura ferite gravi*, senza lasciare la linea. Si ritira soltanto se gli innocenti sono già al sicuro, e per ultimo.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 10 (CA 24, pf 130, att +18, danno 45, CD 19): CA 22 (−2), pf 80 (−50), att +14 (−4), danno con l'attacco completo ≈23, ≈31 col punire (sotto). Con l'ariete (GS 5) intorno l'incontro sale a EL 10-11.
 

@@ -207,7 +207,7 @@ Trigger ⇒ modifica al totale orda a Rethmar:
 | **Il Collezionista interviene** | +300 cultisti Rakshasa |
 | PG vincono a Rhest (Regiarix + Saarvith) | −200 unità, −1 drago, −2 Razorfiend |
 | PG vincono Torre (Zalkatar + Ozyrrandion) | −150 unità, −1 drago, −1 Razorfiend |
-| PG catalizzano Loxo/Centaur revolt | −480 unità + disruption logistica −100 |
+| PG catalizzano Loxo/Centaur revolt | −150 unità (i centauri lasciano il campo; DM 2026-10-18) + disruption logistica −100 |
 | PG sabotano rifornimenti Cannath Vale | −300 attrition |
 
 ---

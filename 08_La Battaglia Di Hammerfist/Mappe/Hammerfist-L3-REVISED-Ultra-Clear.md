@@ -238,8 +238,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### ⚔️ TATTICHE
 - **Inseguitori:** caricano il ponte in colonna per 2; i più feroci provano la **Spinta** su Borin per buttarlo di sotto (contrapposta; ricordare il +4 di stabilità nanica)
 - **Borin:** Difesa Totale quando è a <50% PF; ogni round guadagnato = più colonna al sicuro
-- **Contromossa nanica:** Bull Rush sugli inseguitori a bordo ponte → Riflessi CD 18 o baratro; Thorin può *Pietra Sagomata* per rompere il bordo sud del ponte quando l'ultimo nano è passato `[INFERRED — needs DM confirmation]`
-- **Morale:** gli orchi smettono di caricare il ponte dopo ~10 caduti nel baratro e aspettano i bugbear (aggancio a MAPPA 3Z) `[INFERRED]`
+- **Contromossa nanica:** Bull Rush sugli inseguitori a bordo ponte → Riflessi CD 18 o baratro; Thorin può *Pietra Sagomata* per rompere il bordo sud del ponte quando l'ultimo nano è passato
+- **Morale:** gli orchi smettono di caricare il ponte dopo ~10 caduti nel baratro e aspettano i bugbear (aggancio a MAPPA 3Z)
 
 ### 🔄 EVOLUZIONE
 | Stato | Trigger | Cosa cambia | Effetto |

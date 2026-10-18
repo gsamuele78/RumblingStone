@@ -51,7 +51,6 @@ voci:
 - *Durante il combattimento*: al primo round *richiamo del fulmine* sul nemico più corazzato, e poi un fulmine a round finché dura (9 round). Al secondo *ragnatela di rovi* o *raffreddare il metallo* su chi porta armatura di metallo, per fermare la mischia prima che arrivi; contro un incantatore, *colpo infuocato*. Se il nemico arriva a contatto e il suo compagno animale non lo ferma, prende **forma selvatica** di orso bruno (SRD; con il suo BAB: artigli +13, 1d8+8, e morso +8, 2d6+4, con afferrare migliorato; Cos 19, quindi 84 pf finché resta orso) e tiene a bada chi minaccia gli alberi del Cerchio. Contro gli animali e le piante che il nemico porta con sé usa l'Iniziato della Natura: li comanda, invece di ucciderli.
 - *Morale*: sotto i 25 pf torna druido, beve e si ritira fra gli alberi con *passo senza tracce*, dove nessuno lo segue. Combatte fino alla fine soltanto se il nemico brucia la foresta sacra.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 9 (CA 23, pf 115, att +17, danno 40, CD 18): CA 19 (−4), pf 57 (−58), att +8 (+13 in forma d'orso), CD primaria 19 (+1). Lancia come un GS 9 e si difende come un GS 5: è un alleato di supporto, non un bersaglio da mettere in prima fila.
 

@@ -41,7 +41,6 @@ voci:
 - *Durante il combattimento*: al primo round, se i suoi sono più di due, *ispirare coraggio*; se è solo, *invisibilità* e si sposta. Al secondo *confusione* sul gruppo più compatto, o *blocca persone* sul guerriero che gli corre incontro. Contro chi è invisibile, *polvere luccicante*. *Suggestione* (con la musica, CD 18) la tiene per il PG che sembra comandare: «Lascia andare il cantore, non è lui che vuoi». *Velocità* la lancia sui suoi, mai su se stesso. Non tocca la spada se non è messo all'angolo.
 - *Morale*: a metà dei pf (18) se ne va: *invisibilità*, *ritirata rapida* e un'altra faccia al primo angolo. Se lo prendono, si arrende subito e offre di vendere chi l'ha pagato, con i nomi. Mente su metà di quello che dice, e Raggirare +15 regge contro quasi tutti.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 8 (CA 21, pf 100, att +15, danno 35, CD 18): CA 16 (−5), pf 36 (−64), att +7 (−8), CD primaria 18 (uguale). Vale il suo GS solo se combatte con le parole e con gli altri: da solo e scoperto cade in un round.
 

@@ -39,7 +39,6 @@ voci:
 - *Durante il combattimento*: al primo round tira su chi corre verso i civili, non su chi è più pericoloso, e le frecce incendiarie le tiene per i carri nemici e per le iene. Quando il nemico arriva a contatto posa l'arco e si pianta in un varco largo una casella, fra i carri, una porta o una breccia: con Riflessi in Combattimento fa fino a tre attacchi d'opportunità per round, e chi la aggira per arrivare ai rifugiati li paga tutti. Attacco Poderoso lo usa solo contro gli avversari poco corazzati. Ai suoi ordina di chiudere i fianchi, mai di attaccare: lasciano il varco solo per raccogliere un ferito. Abbandona la posizione per una sola ragione, un incantatore che bersaglia i civili: allora lo carica e il varco passa ai suoi. Non insegue chi vola o è invisibile; fa coprire la gente e chiama i PG per nome.
 - *Morale*: non arretra finché qualcuno che non sa combattere è dietro di lei. Sotto i 20 pf arretra di un passo per round verso l'ultimo carro, sempre fra il nemico e la gente. Se il nemico prende un civile in ostaggio abbassa la spada: è la sola resa che conosce. Se l'ultimo carro è al sicuro, o se tutti quelli dietro di lei sono già morti, combatte fino alla fine.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 7 (CA 20, pf 85, att +13, danno 30, CD 17): CA 18 (−2), pf 62 (−23), att +11 (−2), danno con l'attacco completo ≈19 (sotto). È un'alleata da varco e da comando, non una solista: il suo GS lo fanno i 30 seguaci e la posizione.
 

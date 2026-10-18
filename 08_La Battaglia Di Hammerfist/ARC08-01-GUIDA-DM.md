@@ -241,7 +241,6 @@ SIMBOLI TATTICI:
 > (la Benedizione oscura somma il Car ai TS).
 
 **Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 <div style="page-break-before:always"></div>
 
@@ -271,7 +270,6 @@ SIMBOLI TATTICI:
 **Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi* [questi due INFERRED].
 
 **Tattiche:** Grimjaw è un comandante, non un combattente solitario. Rimane sempre protetto dalle sue Guardie Nere Orog. Usa Tattico Superiore ogni round per potenziare le sue truppe. Attiva la Furia Comandante solo quando la battaglia raggiunge il suo culmine o viene ingaggiato personalmente. La sua morte causa un crollo del morale di -3 a tutto l'esercito. *Morale*: non combatte fino alla morte. Sotto i 60 pf beve una pozione e ripiega dietro le Guardie Nere; sotto i 30 pf, o se cade Fauci, suona la ritirata e torna al campo. Resta solo se Thorik lo ha sfidato davanti all'esercito: lì l'arroganza è più forte della prudenza.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Fonti e verifica 3.5**: l'**orog** non è nell'SRD
 > [Private source — Monsters of Faerûn]; il **Signore della Guerra** non è
@@ -321,7 +319,6 @@ SIMBOLI TATTICI:
 - **Testa Destra (Vigile):** Non può essere colpita di sorpresa, +4 Iniziativa
 - **Furia:** sotto i 101 PF (metà) la testa sinistra prende il sopravvento: +4 For, -2 CA, combatte fino alla morte
 - **Morale:** prima di quella soglia, se Fauci è fuggito o abbattuto e l'orda è in rotta, la testa centrale può offrire la resa (al finale la scelta è dei PG); dopo, nessuna resa
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: ettin dell'SRD avanzato a 15 DV
 > (il massimo della taglia Grande). L'ettin SRD combatte con un'arma per mano
@@ -362,7 +359,6 @@ SIMBOLI TATTICI:
 **Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi [INFERRED]), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* [INFERRED: è la fonte della deflessione].
 
 **Tattiche:** *Prima del combattimento*: resta al centro della linea, dove la Presenza Regale (18 m) copre più nani possibile; se vede arrivare l'assalto, spende la prima Chiamata alle Armi sul primo urto. *Durante il combattimento*: round 1 Chiamata alle Armi (+5 ai nani entro 60 m); poi attacco completo sul nemico più grosso a portata, con Attacco Poderoso contro i giganti e senza contro i bersagli corazzati; usa *Comando* della Corona («In ginocchio!») su chi minaccia un ferito, e tiene la seconda e la terza Chiamata per quando una breccia cede o il drago passa basso. *Morale*: non lascia il campo finché un nano è in piedi; sotto i 50 pf lo trascinano via le Guardie Reali o Borin, ed è l'unico modo in cui ripiega.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: «Nobile» si legge come la classe PNG
 > **Aristocratico** dell'SRD [INFERRED]. Conti ricontati sugli oggetti della
@@ -461,7 +457,6 @@ SIMBOLI TATTICI:
 *   *Forza del Toro di Massa* (come l'incantesimo)
 
 **Tattiche:** Le Cantitrici sono il cuore spirituale e morale della difesa: la priorità è tenere attivo *Ispirare Coraggio*; il Coro della Montagna serve nei momenti più critici (*Terremoto* su arieti e brecce, *Cura Ferite Gravi di Massa* dopo il soffio del drago). *Morale*: non lasciano le mura finché Dana resta in piedi; se una Cantitrice cade, le altre la trascinano via e cantano da più lontano, ma il Coro (tre voci) si perde quando ne restano due.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: dodici livelli di classi da PG
 > fanno GS 12, non 11. BAB +9 (Chierico 8 +6, Bardo 4 +3). Caratteristiche
@@ -503,7 +498,6 @@ SIMBOLI TATTICI:
 **Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro [INFERRED].
 
 **Tattiche:** Cacciatore aereo d'élite, lavora in sincronia col suo cavaliere. In duello usa Attacco in Volo per colpire e allontanarsi; contro Fauci di Palude attiva Punire il Male al primo attacco. *Morale*: è l'alfa del branco e non abbandona un gufo né un cavaliere in volo; sotto i 30 pf sale oltre la tempesta di Tempestas e torna solo quando Fauci è a terra.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: gufo gigante dell'SRD avanzato a
 > 10 DV con il modello celestiale. Una bestia magica ha BAB pari ai DV (+10,
@@ -549,7 +543,6 @@ SIMBOLI TATTICI:
 *   1° (CD 13): *Passo Veloce*, *Resistenza all'Energia*
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare [INFERRED: la CA conta il bonus di schivare].
 **Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m [INFERRED].
 > ⚠ Prerequisito: Tiro in Corsa chiede Schivare e Mobilità, e un ranger di 8° ha tre talenti a scelta, non quattro. Resta, come la scheda lo dà. PF1e: nessun archetipo serve, è un talento in più.
@@ -583,7 +576,6 @@ SIMBOLI TATTICI:
 
 **Tattiche:** *Prima del combattimento*: lancia *Pelle Coriacea*, *Resistenza dell'Orso* e *Zanna Magica Superiore* (estesi), poi prende la forma dell'Orso Crudele: gli incantesimi restano attivi nella forma.
 *Durante il combattimento*: *Muro di Spine* per dividere le forze nemiche, poi la mischia contro giganti e Gorthak, e il salto sulla schiena di Fauci di Palude. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano a metà caduta e si cura con *Guarigione*; non abbandona la battaglia finché un gufo vola.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: Druido 14 dell'SRD. I pf tornano con
 > Cos 16 e Robustezza (14d8+45 = 108); in forma d'orso, con *Resistenza
@@ -672,7 +664,6 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 - **Sostenere:** Rimanere al centro della formazione dando comandi
 - **Emergenza:** Sacrificarsi per salvare Re Thorek o i civili
 - *Morale*: non arretra mentre il Re è in campo; sotto i 40 pf entra in Postura Difensiva e tiene la posizione.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: il Campione Nanico si legge come il
 > Difensore Nanico dell'SRD (dado vita d12, chiede Schivare, Resistenza Fisica e
@@ -714,7 +705,6 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 - **Priorità:** Elimina prima i comandanti, poi i maghi, poi le minacce maggiori
 - **Mobilità:** Usa guerriglia e hit-and-run quando possibile
 - *Morale*: sotto i 30 pf lascia la posizione per la successiva e continua a tirare; non si arrende agli orchi.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: l'armatura di cuoio borchiato +2 vale
 > +5 (CA 21). 12d8+36 non arriva a 98: Cos 18 dà 102. Bonus d'attacco con
@@ -764,7 +754,6 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 - **Guarigione:** Priorità assoluta a mantenere in vita i leader
 - **Controllo Campo:** Usa magia della terra per modificare il terreno di battaglia
 - *Morale*: resta finché c'è un ferito da curare; sotto i 30 pf lancia *Guarigione* su di sé e torna dietro la linea.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: incantesimi al giorno da chierico di
 > 12° con Sag 22, più uno di dominio per livello; CD 16 + livello. Gli
@@ -812,7 +801,6 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 - **Durante Scontri:** Flanking per Sneak Attack, priorità ai maghi nemici
 - **Situazioni Speciali:** Infiltrazione, sabotaggio, intelligence
 - *Morale*: sotto i 30 pf beve una pozione di invisibilità e si sposta; la canzone non si interrompe finché può cantare.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: lo stocco affilato ha critico 15-20.
 > Un bardo sa già usare lo stocco: il talento passa ad Arma Accurata, che

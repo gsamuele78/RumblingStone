@@ -80,7 +80,6 @@ salvarsi. Il suo odio per il fuoco e la sua vendetta puntano allo stesso posto.
 *   **Agile ma Fragile:** Con 44 PF a livello 8, non può reggere uno scontro prolungato in prima linea. Usa la sua alta CA (20) e mobilità per entrare in posizione, scaricare il soffio o attivare l'Egida per proteggere i "tank" del gruppo, e poi ritirarsi usando la balestra o incantesimi di supporto.
 *   **Morale:** sotto 15 PF si ritira dietro il compagno più robusto e passa a *cura ferite* e balestra; contro un servitore del Collezionista non fugge e combatte finché ha il soffio o un incantesimo da lanciare.
 
-> [INFERRED — needs DM confirmation] La riga *Morale* è scritta da un agente sui poteri della scheda.
 
 ### **Punteggi di Caratteristica**
 

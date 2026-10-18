@@ -51,7 +51,6 @@ Medium humanoid, **Druido 17**. La razza la scheda non la dice.
 - *Durante il combattimento*: resta nel cerchio. Usa i round fuori dal rituale solo per tre cose, come dice il modulo: *controllare i venti* contro le ondate di volanti, l'acqua e il vento sui fuochi di drago, *muro di spine* o *muro di pietra* sulla strada dell'Orda. Contro un nemico già nel cerchio un *evoca alleato naturale* rapido gli mette davanti una bestia; contro un volante, *muro di vento*. Non prende mai forma selvatica durante il rituale: le servono le mani e la voce.
 - *Morale*: sotto 40 pf esce dal cerchio, prende forma d'elementale dell'aria e si mette in salvo fuori portata; torna se il Circolo resta sotto i sei membri. Davanti all'Avatar non arretra finché il rituale ha bisogno di lei.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda e sulle regole del rituale della Fase 4.
 
 Benchmark: PF T1-1 riga 17: CA 19-24 sotto (32) / pf 110 sotto (270) / CD 26 sopra (24) / TS buono +17 sotto (20). Per l'SRD una druida di 17° livello vale GS 17 (il modulo la diceva 14); i numeri bassi sono quelli di un'incantatrice che si protegge con gli incantesimi.
 

@@ -46,7 +46,6 @@ Medium humanoid (dwarf), **Guerriero 12**.
 - *Durante il combattimento*: round 1, avanza di un passo e colpisce il nemico più grosso a portata: contro i giganti ha +4 alla CA e lo sa, e li cerca. Attacco Poderoso pieno (−5) sui bersagli con CA sotto 25; con Incalzare e Incalzare Potenziato apre un varco fra gli hobgoblin, +1 a colpirli. Contro un incantatore usa Spezzare Migliorato sul bastone o sulla bacchetta. Non insegue chi scappa: tiene la linea, perché è la linea che conta.
 - *Morale*: sotto 40 pf si fa tirare indietro dai suoi e beve una pozione, poi torna. Non si arrende alla Mano Rossa; se la piazza cade ordina la ritirata ordinata verso Hammerfist e resta per ultimo.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda e sul ruolo dei 300 nella Fase 4.
 
 - *Con i suoi 300*: arco 09, Battaglia finale. «Stat blocchi epici» §7: i 300 nani non hanno statistiche individuali, sono un blocco di fanteria che assorbe parte delle ondate e stabilizza i fronti. Fase 4 («Circolo, Mythal e statue», §7, ruolo degli alleati): tengono le masse di fanteria lontane dalle strade che portano alla piazza, e in termini meccanici riducono le ondate di base, così i PG vedono solo gli strike team d'élite.
 

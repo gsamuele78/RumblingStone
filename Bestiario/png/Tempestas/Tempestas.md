@@ -186,7 +186,6 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 - *Durante il combattimento*: round 1, la **Cantata della Tempesta Tonante**, perché colpisce tutti gli ostili entro 18 m e dà agli alleati +2 a colpire, danni e TS; se i nemici sono uno o due, *dominare persone* sul più forte (CD 20) o *urlo* (CD 20) se sono in fila. Round 2, *confusione* (CD 19) sul gruppo o *polvere luccicante* (CD 18) se c'è un invisibile; contro un incantatore tiene pronto il **controincantesimo**. Round 3 e oltre, *fulmine* e *esplosione sonora* finché la Cantata dura, e *porta dimensionale* appena qualcuno gli arriva in mischia: con CA 20 e 91 pf non regge un guerriero. La spada corta la sguaina solo se non ha più incantesimi.
 - *Morale*: sotto 45 pf, o quando l'*invisibilità superiore* viene dissolta, se ne va con *passo nelle ombre* o *porta dimensionale*, portando con sé chi tocca. Non combatte fino alla morte per nessuno; per i PG resta un round in più, ma solo per il debito della città di Lorana.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 ### VULNERABILITÀ (DM-tracked)
 

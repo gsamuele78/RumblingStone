@@ -46,7 +46,6 @@ Huge dragon (fire), 19 HD, LE.
 - *Durante il combattimento*: round 1, soffio di fuoco sul gruppo più compatto che entra nell'anello, e la presenza terrificante scatta al primo attacco. Round 2, Attacco in Volo: scende, morde il PG più esposto e risale fuori portata, o lo ghermisce e lo porta in alto. Round 3, se il soffio è pronto lo ripete; altrimenti Colpo Possente sul PG che sta colpendo un focus, per scagliarlo fuori dal cerchio. Contro gli incantatori usa *dardo incantato* dall'alto. Non atterra se non per schiacciare cultisti e PG Piccoli; se i PG lo isolano con un muro di forza, combatte da terra con l'attacco completo. Contro un PG invisibile, vista cieca a 18 m.
 - *Morale*: sotto 80 pf abbandona l'altare e vola via verso le linee dell'Orda, ruggendo la ritirata: ha un tesoro da difendere e non muore per un rito. Se il Mythal è attivo e lo inchioda a terra, combatte fino alla morte.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 Benchmark: PF T1-1 riga 15: CA 32 sopra (30) / pf 237 sopra (220) / attacco +27 sopra (+24) / danno pieno ~84 sopra (70) / CD 25 sopra (23) / TS buono +17 sotto (18). È il GS che `state.md` e i calcoli degli eserciti danno ad Abithriax («Red adult», GS 15).
 

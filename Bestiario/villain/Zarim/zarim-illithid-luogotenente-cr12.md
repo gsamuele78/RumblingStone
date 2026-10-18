@@ -56,7 +56,6 @@ Medium aberration, illithid 8 DV / Psion 4, Legale Malvagio.
 
 *Morale* — Sotto i 25 pf, o se Xal'thor cade, *porta dimensionale* fino alle ondate e poi *spostamento planare*. Combatte fino alla morte solo se Xal'thor è in pericolo entro 9 m e il nucleo psionico è ancora intatto.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 Benchmark: PF T1-1 riga 12: CA 23 (−4), pf 73 (−87), att +10 (−11), CD 19 (−2). Sotto su tutto: il GS lo pagano l'esplosione mentale a volontà, il charme e la RI 25, non la tenuta. Va in campo con le ondate di Xal'thor, mai da solo.
 

@@ -41,7 +41,6 @@ voci:
 - *Durante il combattimento*: tira per primo (+7 d'iniziativa) sul nemico colto alla sprovvista più vicino, entro 9 m, per avere l'attacco furtivo: con Tiro Rapido sono tre frecce, e finché il bersaglio resta colto alla sprovvista prendono tutte i +2d6. Contro giganti e goblinoidi aggiunge il nemico prescelto, e sceglie quelli se può. Dopo il primo round arretra di una casella al riparo e tira con l'attacco completo; se un nemico arriva a contatto non resta in mischia: fa un passo indietro e tira, o si ritira di 9 m per tornare a tirare. Contro chi vola è il solo del gruppo che non cambia niente, e lo sa.
 - *Morale*: sotto i 20 pf sparisce nella palude: conosce sentieri che nessuno segue (Sopravvivenza +10, Nascondersi +16). Torna quando il nemico se n'è andato, e non chiede scusa. Combatte fino alla fine solo se il nemico è un gigante che ha ucciso qualcuno dei suoi.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 **Benchmark**: PF T1-1 riga 8 (CA 21, pf 100, att +15, danno 35, CD 18): CA 17 (−4), pf 53 (−47), att +12 (−3), danno con Tiro Rapido ≈17, fino a ≈37 al primo round col furtivo (sotto, poi sopra per un round). È una guida e un tiratore di supporto, non un GS 8 da mettere in mischia.
 

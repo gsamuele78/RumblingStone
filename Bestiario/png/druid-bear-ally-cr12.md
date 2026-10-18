@@ -47,7 +47,6 @@ fonte: trascritto dalla fonte d'arco (pf alla media dei dadi, CA spiegata dall'a
 - *Durante il combattimento* (round per round): round 1, carica il gigante o la bestia più grossa a portata ed entra in ira; round 2 e seguenti, attacco completo e afferrare migliorato su chi è della sua taglia o più piccolo, per tenerlo lontano dal cerchio. Se un incantatore del Circolo è in pericolo, lascia la presa e si mette in mezzo (è il salvataggio che la Fase 4 concede una volta). Finita l'ira, si cura con *bacca curativa* e *cura ferite leggere* lanciati in forma.
 - *Morale*: sotto 30 pf esce dalla mischia a quattro zampe (15 m di movimento) e torna in forma umana dietro la linea dei nani per curarsi; non abbandona il Circolo finché il rituale è in corso, e davanti all'Avatar combatte fino alla fine.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
 
 ## Forma umana (Druido 10 / Barbaro 2)
 
