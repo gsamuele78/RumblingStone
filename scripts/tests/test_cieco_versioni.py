@@ -61,9 +61,32 @@ class TestAppaia(unittest.TestCase):
         voce = {"titolo": "S3", "testo": "L'ultimo nemico sparisce. " + LUNGO}
         dopo = [{"titolo": "S1", "testo": "Altro testo del tutto diverso."},
                 {"titolo": "S3", "testo": "L'ultima spada cade. " + LUNGO}]
-        i, r = CV.appaia(voce, dopo)
+        i, r, _ = CV.appaia(voce, dopo)
         self.assertEqual(i, 1)
         self.assertGreater(r, 0.8)
+
+    def test_box_spezzato_in_battute_si_ricompone(self):
+        # Le coppie 3 e 12 del primo voto: il box nuovo era diventato una riga
+        # di box e tre battute fuori dai box, che `box_read_aloud` non vede.
+        vecchio = ("> *Lei si volta verso Thorik, e c'è qualcosa nei suoi occhi. "
+                   "«Ricordi la mano fredda, la luce verde?» Thorik ricorda. "
+                   "«Ero io. Siamo pari, tu e io, e non lo eravamo mai stati.»*")
+        nuovo = ("## S7\n\n> *Lei si volta verso Thorik. C'è qualcosa nei suoi occhi.*\n\n"
+                 "Le battute qui sotto sono l'attacco.\n\n"
+                 "Hella: *«Ricordi la mano fredda, la luce verde?»*\n\n"
+                 "*Thorik ricorda.*\n\n"
+                 "Hella: *«Ero io. Siamo pari, tu e io, e non lo eravamo mai stati.»*\n\n"
+                 "## S8\n\n> *Altro box, del tutto diverso, sotto un'altra scena.*\n")
+        voce = {"titolo": "S7", "testo": CV.box_con_titolo("## S7\n\n" + vecchio)[0]["testo"]}
+        solo_box = CV.box_con_titolo(nuovo)
+        con_battute = CV.box_con_titolo(nuovo, battute=True)
+        self.assertEqual(len(solo_box), 2)
+        _, r_prima, _ = CV.appaia(voce, solo_box)
+        i, r, testo = CV.appaia(voce, con_battute)
+        self.assertIn("Siamo pari", testo)
+        self.assertNotIn("Altro box", testo)
+        self.assertNotIn("attacco", testo)
+        self.assertGreater(r, r_prima + 0.2)
 
 
 class TestEsito(unittest.TestCase):
@@ -94,8 +117,24 @@ class TestEsito(unittest.TestCase):
         chiave = self._chiave(3)
         chiave["coppie"][0]["stato"] = "identica"
         r = CV.esito(chiave, "1 A\n2 B\n3 A")
-        self.assertEqual(r["votate"], 2)
-        self.assertTrue(r["verdetto"].startswith("incompleto"))
+        self.assertEqual((r["votate"], r["votabili"]), (2, 2))
+        self.assertFalse(r["verdetto"].startswith("incompleto"))
+
+    def test_la_soglia_si_riproporziona(self):
+        # Il primo voto: 4 coppie identiche, 16 votabili, soglia 12.
+        chiave = self._chiave()
+        for c in chiave["coppie"][:4]:
+            c["stato"] = "identica"
+        self.assertEqual(CV.soglia_per(16), 12)
+        voti = [f"{c['n']} {c['nuova']}" if c["n"] <= 16 else
+                f"{c['n']} {'B' if c['nuova'] == 'A' else 'A'}" for c in chiave["coppie"][4:]]
+        r = CV.esito(chiave, "\n".join(voti))
+        self.assertEqual((r["nuova"], r["votabili"], r["soglia"]), (12, 16, 12))
+        self.assertTrue(r["verdetto"].startswith("meglio"))
+
+    def test_voti_mancanti_sono_incompleti(self):
+        r = CV.esito(self._chiave(), "1 A")
+        self.assertTrue(r["verdetto"].startswith("incompleto: 1 coppie votate su 20"))
 
     def test_wilson_noto(self):
         basso, alto = CV.wilson(14, 20)

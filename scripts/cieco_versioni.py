@@ -17,7 +17,8 @@ Tre passi, in quest'ordine, e il primo si fa **prima** di riscrivere:
 
 Il criterio di `esito` è quello scritto prima del rifacimento di ARC-07
 (`PROSA-DETERMINISTICA-2026-10-18` §6): la nuova versione deve essere
-preferita in **almeno 14 coppie su 20**. Con 20 coppie, 14 dà un intervallo di
+preferita in **almeno 14 coppie su 20**; le coppie identiche non si votano, e
+con meno coppie votabili la soglia si riproporziona per eccesso (12 su 16). Con 20 coppie, 14 dà un intervallo di
 Wilson al 95% che parte sopra 0,48: basta per dire «meglio», non «molto
 meglio». Il pari conta come non vinto.
 
@@ -25,7 +26,8 @@ meglio». Il pari conta come non vinto.
 cambiare posto, nome di sezione o essere spezzato in due. `coppie` sceglie,
 nello stesso file, il box più simile (difflib, senza `autojunk`: con il
 default due box quasi uguali di 300 caratteri davano 0,08), e preferisce quello sotto la
-stessa intestazione; dice la somiglianza di ogni coppia, e segna le coppie
+stessa intestazione; se il box è stato spezzato in battute, prova anche a
+unire fino a otto battute consecutive sotto la stessa intestazione. Dice la somiglianza di ogni coppia, e segna le coppie
 dubbie (sotto 0,2) e quelle identiche, che non si votano.
 
 Uso:
@@ -56,9 +58,14 @@ import misura_craft as mc  # noqa: E402
 PAROLE_MINIME = 25
 #: Sotto questa somiglianza la coppia è dubbia: forse non è lo stesso box.
 SOMIGLIANZA_DUBBIA = 0.2
-#: Il criterio scritto prima del rifacimento di ARC-07.
+#: Il criterio scritto prima del rifacimento di ARC-07: 14 su 20. Con meno
+#: coppie votabili (le identiche non si votano) la soglia si riproporziona,
+#: per eccesso: 12 su 16, come nel primo voto del 2026-10-18.
 VITTORIE_RICHIESTE = 14
 COPPIE_ATTESE = 20
+#: Una riscrittura può spezzare un box in battute: si prova anche a unire fino
+#: a tante battute consecutive sotto la stessa intestazione.
+BATTUTE_UNIBILI = 8
 
 _TITOLO = re.compile(r"^#{1,6}\s+(.*\S)")
 
@@ -76,8 +83,35 @@ def testo_a(ref: str, percorso: str) -> str:
                           check=True, capture_output=True, text=True).stdout
 
 
-def box_con_titolo(testo: str) -> "list[dict]":
-    """I box di `box_read_aloud`, ognuno con l'intestazione sotto cui sta."""
+#: Una battuta fuori dai box: `Hella: *«…»*`, `> **VARIS (telepatico):** *«…»*`,
+#: o l'inciso in corsivo fra due battute. `box_read_aloud` non le prende, e non
+#: deve (non sono box); ma quando una riscrittura spezza un box in battute, il
+#: box vecchio va confrontato con le battute rimesse insieme.
+_BATTUTA = re.compile(r"^(?:>\s*)?(?:\*\*)?[A-ZÀ-Ù][^:\n]{0,40}:(?:\*\*)?\s*[*_]«")
+_INCISO = re.compile(r"^[*_][^*_\s].*[*_]$")
+
+
+def _battute(righe: "list[str]") -> "list[tuple[int, list[str]]]":
+    """Le battute e gli incisi, come paragrafi, con la riga d'inizio."""
+    uscita, i = [], 0
+    while i < len(righe):
+        if _BATTUTA.match(righe[i]) or _INCISO.match(righe[i]):
+            j = i + 1
+            while j < len(righe) and righe[j].strip() and not _TITOLO.match(righe[j]):
+                j += 1
+            uscita.append((i, righe[i:j]))
+            i = j
+        else:
+            i += 1
+    return uscita
+
+
+def box_con_titolo(testo: str, battute: bool = False) -> "list[dict]":
+    """I box di `box_read_aloud`, ognuno con l'intestazione sotto cui sta.
+
+    Con `battute`, anche le battute e gli incisi fuori dai box, nell'ordine del
+    file: serve solo dal lato della versione nuova, per ricomporre un box
+    spezzato."""
     righe = testo.splitlines()
     titoli, corrente = {}, ""
     for i, r in enumerate(righe):
@@ -85,7 +119,7 @@ def box_con_titolo(testo: str) -> "list[dict]":
         if m:
             corrente = m.group(1)
         titoli[i] = corrente
-    uscita, cursore = [], 0
+    uscita, cursore, inizi = [], 0, []
     for b in mc.box_read_aloud(testo):
         # La riga d'inizio del box: la prima occorrenza dopo il box precedente.
         try:
@@ -93,6 +127,12 @@ def box_con_titolo(testo: str) -> "list[dict]":
         except ValueError:
             inizio = cursore
         cursore = inizio + len(b)
+        inizi.append((inizio, b))
+    if battute:
+        dentro = {i for inizio, b in inizi for i in range(inizio, inizio + len(b))}
+        inizi += [(i, b) for i, b in _battute(righe) if i not in dentro]
+        inizi.sort(key=lambda x: x[0])
+    for inizio, b in inizi:
         corpo = mc.corpo_del_box(b)
         uscita.append({"titolo": titoli.get(inizio, ""), "testo": corpo,
                        "parole": len(corpo.split())})
@@ -113,16 +153,31 @@ def campione(ref: str, files: "list[str]", per_file: int, seme: int) -> dict:
             "parole_minime": PAROLE_MINIME, "voci": voci}
 
 
-def appaia(voce: dict, dopo: "list[dict]") -> "tuple[int, float]":
-    """L'indice del box più simile nella versione dopo, e la somiglianza."""
+def _candidati(dopo: "list[dict]") -> "list[tuple[int, dict]]":
+    """Ogni box, e ogni fila di box consecutivi sotto la stessa intestazione."""
+    uscita = []
+    for i, b in enumerate(dopo):
+        uscita.append((i, b))
+        testi = [b["testo"]]
+        for j in range(i + 1, min(i + BATTUTE_UNIBILI, len(dopo))):
+            if dopo[j]["titolo"] != b["titolo"]:
+                break
+            testi.append(dopo[j]["testo"])
+            uscita.append((i, {"titolo": b["titolo"], "testo": "\n\n".join(testi)}))
+    return uscita
+
+
+def appaia(voce: dict, dopo: "list[dict]") -> "tuple[int, float, str]":
+    """L'indice del primo box più simile nella versione dopo, la somiglianza e
+    il testo, che può essere più battute consecutive unite."""
     if not dopo:
-        return -1, 0.0
+        return -1, 0.0, ""
     def punteggio(b):
         r = difflib.SequenceMatcher(None, voce["testo"], b["testo"],
                                     autojunk=False).ratio()
         return r + (0.1 if b["titolo"] == voce["titolo"] else 0.0), r
-    migliore = max(range(len(dopo)), key=lambda i: punteggio(dopo[i])[0])
-    return migliore, punteggio(dopo[migliore])[1]
+    i, b = max(_candidati(dopo), key=lambda c: punteggio(c[1])[0])
+    return i, punteggio(b)[1], b["testo"]
 
 
 def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
@@ -136,12 +191,12 @@ def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
     for voce in camp["voci"]:
         if voce["file"] not in cache:
             try:
-                cache[voce["file"]] = box_con_titolo(testo_a(ref_dopo, voce["file"]))
+                cache[voce["file"]] = box_con_titolo(testo_a(ref_dopo, voce["file"]),
+                                                     battute=True)
             except subprocess.CalledProcessError:
                 cache[voce["file"]] = []
         dopo = cache[voce["file"]]
-        i, somiglianza = appaia(voce, dopo)
-        nuovo = dopo[i]["testo"] if i >= 0 else ""
+        _, somiglianza, nuovo = appaia(voce, dopo)
         stato = ("identica" if nuovo == voce["testo"] else
                  "dubbia" if somiglianza < SOMIGLIANZA_DUBBIA else "valida")
         n += 1
@@ -166,6 +221,11 @@ def wilson(k: int, n: int, z: float = 1.96) -> "tuple[float, float]":
     return max(0.0, centro - margine), min(1.0, centro + margine)
 
 
+def soglia_per(votabili: int) -> int:
+    """Le vittorie richieste su `votabili` coppie, in proporzione a 14 su 20."""
+    return math.ceil(VITTORIE_RICHIESTE * votabili / COPPIE_ATTESE)
+
+
 _VOTO = re.compile(r"^\s*(\d+)\s*[:.)-]?\s*([AaBb=])\s*$")
 
 
@@ -187,14 +247,17 @@ def esito(chiave: dict, voti_testo: str) -> dict:
         else:
             vecchia += 1
     n = nuova + vecchia + pari
+    votabili = sum(1 for c in chiave["coppie"] if c["stato"] != "identica")
+    soglia = soglia_per(votabili)
     basso, alto = wilson(nuova, n)
-    if n < COPPIE_ATTESE:
-        verdetto = f"incompleto: {n} coppie votate su {COPPIE_ATTESE}"
-    elif nuova >= VITTORIE_RICHIESTE:
+    if n < votabili:
+        verdetto = f"incompleto: {n} coppie votate su {votabili}"
+    elif nuova >= soglia:
         verdetto = "meglio: la nuova versione vince in modo dimostrabile"
     else:
         verdetto = "non dimostrato: la nuova versione non vince abbastanza coppie"
     return {"nuova": nuova, "vecchia": vecchia, "pari": pari, "votate": n,
+            "votabili": votabili, "soglia": soglia,
             "wilson_95": [round(basso, 3), round(alto, 3)], "verdetto": verdetto}
 
 
@@ -236,7 +299,7 @@ def main(argv: "list[str] | None" = None) -> int:
         chiave = json.loads(Path(a.chiave).read_text(encoding="utf-8"))
         r = esito(chiave, Path(a.voti).read_text(encoding="utf-8"))
         print(f"nuova {r['nuova']} · vecchia {r['vecchia']} · pari {r['pari']} "
-              f"su {r['votate']} · Wilson 95% {r['wilson_95']}")
+              f"su {r['votate']} (soglia {r['soglia']} su {r['votabili']}) · Wilson 95% {r['wilson_95']}")
         print(r["verdetto"])
     return 0
 

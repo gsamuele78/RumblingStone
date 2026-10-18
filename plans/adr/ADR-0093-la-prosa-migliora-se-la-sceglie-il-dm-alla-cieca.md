@@ -81,7 +81,7 @@ nessuna norma cresca.
   più 1,2‰), ARC-08 ci sta dentro. Il ciclo di prosa li ha tolti più di quanto
   faccia uno scrittore italiano: può essere pulizia o appiattimento, e lo dice
   solo il cieco. Il rifacimento non deve rincorrere la fascia né allontanarsene.
-- **Il primo voto, 2026-10-18**: sul rifacimento della #249 il DM sceglie la nuova in 8 coppie su 16 (quattro identiche), mentre MQM e soglie dei box migliorano tutti. Il criterio ha fatto quello per cui c'è: ha detto «non meglio» dove i numeri dicevano «meglio» ([ESITO](../esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). `esito` ha il criterio fisso a 20 coppie; con meno coppie votabili la soglia si riproporziona a mano (12 su 16).
+- **Il primo voto, 2026-10-18**: sul rifacimento della #249 il DM sceglie la nuova in 8 coppie su 16 (quattro identiche), mentre MQM e soglie dei box migliorano tutti. Il criterio ha fatto quello per cui c'è: ha detto «non meglio» dove i numeri dicevano «meglio» ([ESITO](../esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). Lo stesso giorno `esito` impara a togliere le coppie identiche e a riproporzionare la soglia (12 su 16), e `coppie` a ricomporre un box spezzato in battute.
 - Il campione non distingue i box di luogo da quelli d'evento, perché i box non
   dichiarano il tipo (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D3). Lo dice, e non lo
   simula.
