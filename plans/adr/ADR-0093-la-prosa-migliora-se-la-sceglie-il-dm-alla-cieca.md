@@ -62,7 +62,19 @@ nessuna norma cresca.
 3. **Il campione di ARC-07 è congelato ora**, in
    `plans/esperimenti/prosa-cieco/campione-ARC07-DEF.json`: venti box, quattro
    per DEF, seme 20261018, presi da `main` prima di ogni riscrittura.
-4. **Due candidati scartati, con la misura.** Il pronome soggetto tonico (la
+4. **Dopo il primo voto, la misura decide e il cieco fa il resto** (il DM,
+   2026-10-18 sera: «voglio la misura aggiornata, e quando non misura un reale
+   miglioramento si usa la scelta alla cieca»). `coppie` applica a ogni coppia
+   le due regole del voto (`read-aloud-adulti.md` §2-ter): meno dettagli
+   sensoriali perde, un monologo spezzato in tre pezzi o più perde. Al DM
+   vanno solo le coppie indecise, più quattro già decise come controllo;
+   `esito` conta le decise come voti e, se il DM smentisce più di un
+   controllo, dice che la misura è caduta e si rifà il cieco intero. Sulle
+   sedici coppie del primo voto la misura ne decide 13 e ne sbaglia una (A1,
+   dove la nuova ha più dettagli e il DM ha scelto la vecchia): è misurata sui
+   dati da cui è nata, e i controlli servono a vedere se regge fuori.
+   `ciclo_prosa misura` la usa come cancello: un box impoverito è un peggioramento.
+5. **Due candidati scartati, con la misura.** Il pronome soggetto tonico (la
    norma pro-drop di `italiano-nativo.md` §1) dà 3 colpi in tutti i box, e
    sono tutti e tre cambi di soggetto legittimi: precisione 0 su 3. La
    spiegazione dopo il gesto («come a dire», «segno che») fa zero ovunque. La
@@ -86,7 +98,8 @@ nessuna norma cresca.
   dichiarano il tipo (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D3). Lo dice, e non lo
   simula.
 
-**Da rivedere se**: il κ fra un giudice automatico e il DM, misurato su almeno
+**Da rivedere se**: i controlli smentiscono la misura in due giri di fila
+(allora le due regole tornano ipotesi e decide di nuovo solo il cieco). E se: il κ fra un giudice automatico e il DM, misurato su almeno
 venti coppie, supera 0,6. Allora il giudice può fare il primo giro e il DM
 solo i casi dubbi. Oppure: il DM preferisce alla cieca la versione con meno
 gerundi in coda e meno avverbi in almeno 14 coppie su 20, e allora i due

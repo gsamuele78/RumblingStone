@@ -67,6 +67,12 @@ COPPIE_ATTESE = 20
 #: a tante battute consecutive sotto la stessa intestazione.
 BATTUTE_UNIBILI = 8
 
+#: Le coppie già decise dalla misura che si fanno votare lo stesso, a caso e
+#: senza dirlo: sono il controllo che la misura regge. Se il DM ne contraddice
+#: più di una su quattro, la misura non decide più e si torna al cieco intero.
+CONTROLLI = 4
+CONTROLLI_TOLLERATI = 1
+
 _TITOLO = re.compile(r"^#{1,6}\s+(.*\S)")
 
 #: Un box con un numero di regola dentro è una nota per il DM scritta in
@@ -180,6 +186,29 @@ def appaia(voce: dict, dopo: "list[dict]") -> "tuple[int, float, str]":
     return i, punteggio(b)[1], b["testo"]
 
 
+def verdetto_misurato(vecchio: str, nuovo: str) -> "tuple[str, str]":
+    """Quale versione sceglierebbe il DM, secondo le due regole del primo voto
+    cieco (2026-10-18, ADR-0093), e perché. «indecisa» va al cieco.
+
+    1. Un box spezzato in battute perde: nelle due coppie in cui la
+       riscrittura divideva un monologo, il DM ha scelto la vecchia.
+    2. Chi ha più dettagli sensoriali vince: dove la riscrittura ne toglieva
+       il DM ha scelto la vecchia cinque volte su cinque.
+    A pari dettagli la misura non sa dire nulla: lo dice il DM.
+    """
+    # Tre pezzi almeno: battuta, inciso, battuta. Due pezzi sono spesso un box
+    # e il suo vicino che l'appaiamento ha unito (coppie 8 e 18 del primo voto).
+    pezzi = nuovo.count("\n\n") + 1
+    if pezzi >= 3 and "\n\n" not in vecchio and "«" in vecchio:
+        return "vecchia", f"spezzato in {pezzi} battute"
+    d = mc.dettagli_sensoriali(nuovo) - mc.dettagli_sensoriali(vecchio)
+    if d < 0:
+        return "vecchia", f"{-d} dettagli sensoriali in meno"
+    if d > 0:
+        return "nuova", f"{d} dettagli sensoriali in più"
+    return "indecisa", "stessi dettagli sensoriali"
+
+
 def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
     rng = random.Random(seme)
     cache: dict = {}
@@ -187,7 +216,7 @@ def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
               "Leggi ad alta voce **A** e poi **B**. Scrivi nel file dei voti una "
               "riga per coppia, `N A`, `N B` o `N =`. Non aprire la chiave.", ""]
     chiave = {"campione_ref": camp["ref"], "dopo": ref_dopo, "seme": seme, "coppie": []}
-    n = 0
+    n, testi = 0, {}
     for voce in camp["voci"]:
         if voce["file"] not in cache:
             try:
@@ -201,13 +230,24 @@ def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
                  "dubbia" if somiglianza < SOMIGLIANZA_DUBBIA else "valida")
         n += 1
         nuova_e_a = rng.random() < 0.5
+        misura, perche = verdetto_misurato(voce["testo"], nuovo)
         chiave["coppie"].append({"n": n, "file": voce["file"], "titolo": voce["titolo"],
                                  "nuova": "A" if nuova_e_a else "B",
-                                 "somiglianza": round(somiglianza, 3), "stato": stato})
-        if stato == "identica":
+                                 "somiglianza": round(somiglianza, 3), "stato": stato,
+                                 "misura": misura, "perche": perche, "controllo": False})
+        testi[n] = (nuovo, voce)
+    # Al cieco vanno le indecise, più CONTROLLI coppie già decise, scelte a caso.
+    decise = [c for c in chiave["coppie"]
+              if c["stato"] != "identica" and c["misura"] != "indecisa"]
+    for c in rng.sample(decise, min(CONTROLLI, len(decise))):
+        c["controllo"] = True
+    for c in chiave["coppie"]:
+        if c["stato"] == "identica" or (c["misura"] != "indecisa" and not c["controllo"]):
             continue
-        a, b = (nuovo, voce["testo"]) if nuova_e_a else (voce["testo"], nuovo)
-        scheda += [f"## Coppia {n}", "", f"*{Path(voce['file']).name} · {voce['titolo']}*",
+        nuovo, voce = testi[c["n"]]
+        a, b = (nuovo, voce["testo"]) if c["nuova"] == "A" else (voce["testo"], nuovo)
+        a, b = (x.replace("\n\n", "\n>\n> ") for x in (a, b))
+        scheda += [f"## Coppia {c['n']}", "", f"*{Path(voce['file']).name} · {voce['titolo']}*",
                    "", "**A**", "", f"> {a}", "", "**B**", "", f"> {b}", ""]
     return "\n".join(scheda), chiave
 
@@ -235,11 +275,24 @@ def esito(chiave: dict, voti_testo: str) -> dict:
         m = _VOTO.match(r)
         if m:
             voti[int(m.group(1))] = m.group(2).upper()
-    nuova = vecchia = pari = 0
+    nuova = vecchia = pari = misurate = 0
+    controlli = contraddetti = 0
     for c in chiave["coppie"]:
-        if c["stato"] == "identica" or c["n"] not in voti:
+        if c["stato"] == "identica":
             continue
-        v = voti[c["n"]]
+        misura = c.get("misura", "indecisa")
+        if c["n"] in voti:
+            v = voti[c["n"]]
+            if c.get("controllo"):
+                controlli += 1
+                scelta = "=" if v == "=" else ("nuova" if v == c["nuova"] else "vecchia")
+                contraddetti += scelta != misura
+        elif misura != "indecisa" and not c.get("controllo"):
+            # Decisa dalla misura: conta come il voto che la misura prevede.
+            misurate += 1
+            v = c["nuova"] if misura == "nuova" else ("B" if c["nuova"] == "A" else "A")
+        else:
+            continue
         if v == "=":
             pari += 1
         elif v == c["nuova"]:
@@ -250,14 +303,18 @@ def esito(chiave: dict, voti_testo: str) -> dict:
     votabili = sum(1 for c in chiave["coppie"] if c["stato"] != "identica")
     soglia = soglia_per(votabili)
     basso, alto = wilson(nuova, n)
-    if n < votabili:
-        verdetto = f"incompleto: {n} coppie votate su {votabili}"
+    if controlli and contraddetti > CONTROLLI_TOLLERATI:
+        verdetto = (f"misura smentita: il DM contraddice {contraddetti} controlli su "
+                    f"{controlli}; si rifà il cieco su tutte le coppie")
+    elif n < votabili:
+        verdetto = f"incompleto: {n} coppie decise su {votabili}"
     elif nuova >= soglia:
         verdetto = "meglio: la nuova versione vince in modo dimostrabile"
     else:
         verdetto = "non dimostrato: la nuova versione non vince abbastanza coppie"
     return {"nuova": nuova, "vecchia": vecchia, "pari": pari, "votate": n,
-            "votabili": votabili, "soglia": soglia,
+            "votabili": votabili, "soglia": soglia, "misurate": misurate,
+            "controlli": [controlli - contraddetti, controlli],
             "wilson_95": [round(basso, 3), round(alto, 3)], "verdetto": verdetto}
 
 
@@ -295,9 +352,15 @@ def main(argv: "list[str] | None" = None) -> int:
         stati = [c["stato"] for c in chiave["coppie"]]
         print(f"{stati.count('valida')} coppie valide, {stati.count('dubbia')} dubbie, "
               f"{stati.count('identica')} identiche (non si votano)")
+        al_cieco = [c for c in chiave["coppie"] if c["stato"] != "identica"
+                    and (c["misura"] == "indecisa" or c["controllo"])]
+        print(f"{len(al_cieco)} al cieco del DM ({sum(c['controllo'] for c in al_cieco)} "
+              f"di controllo), le altre le decide la misura")
     else:
         chiave = json.loads(Path(a.chiave).read_text(encoding="utf-8"))
         r = esito(chiave, Path(a.voti).read_text(encoding="utf-8"))
+        print(f"decise dalla misura {r['misurate']} · controlli confermati "
+              f"{r['controlli'][0]} su {r['controlli'][1]}")
         print(f"nuova {r['nuova']} · vecchia {r['vecchia']} · pari {r['pari']} "
               f"su {r['votate']} (soglia {r['soglia']} su {r['votabili']}) · Wilson 95% {r['wilson_95']}")
         print(r["verdetto"])

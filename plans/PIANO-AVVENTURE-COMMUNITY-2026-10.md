@@ -50,6 +50,7 @@ note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
 - [x] la fotografia di partenza e il campione di ARC-07 in `plans/esperimenti/prosa-cieco/`
 - [x] il corpus di riferimento misurato sui PDF gratuiti (PR #250, [note-prosa-corpus.md](esperimenti/avventure-community/note-prosa-corpus.md)); gerundi e avverbi in `--stile` si leggono contro la sua fascia italiana, non contro una soglia
 - [x] **il dopo**: le stesse misure sul rifacimento di ARC-07 (#249) migliorano tutte, ma il DM sceglie alla cieca la nuova in 8 coppie su 16: miglioramento non dimostrato ([ESITO-ARC07-2026-10-18](esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). Le sette versioni vecchie preferite e le due ipotesi (non tagliare il dettaglio sensoriale, non spezzare i monologhi) passate al thread del rifacimento, che tiene i file
+- [x] **la misura aggiornata dai voti** (richiesta del DM, la sera): le due regole in `read-aloud-adulti.md` §2-ter, applicate da `cieco_versioni.py coppie` (al cieco solo le indecise e quattro di controllo) e da `ciclo_prosa misura` come cancello; sulle sedici coppie decide 13 e ne sbaglia una; 26 box impoveriti in ARC-07, passati al thread del rifacimento
 
 ## 2 · La calibrazione del lotto 1
 

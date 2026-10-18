@@ -131,6 +131,29 @@ spiegazione.
 frasi** e oltre i **500 caratteri**. Sono indicatori, non soglie: il tetto del
 repo resta quello delle righe, finché il DM non decide (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D1).
 
+## 2-ter. Riscrivere un box che c'è: si taglia il superfluo, non ciò che si sente
+
+Il primo confronto cieco del DM (2026-10-18, [ADR-0093](../../../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md),
+`plans/esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md`) ha messo una
+riscrittura di ARC-07 contro l'originale: 8 a 8. I numeri del repo erano
+migliorati tutti; il DM no. E le sue scelte avevano due regole.
+
+1. **Una riscrittura non toglie dettagli sensoriali.** Luce, colore, suono,
+   caldo e freddo, il corpo che sente: dove la versione nuova ne aveva meno,
+   il DM ha scelto la vecchia cinque volte su cinque. Si tagliano le
+   maiuscole d'enfasi, le date, i nomi in più e le spiegazioni: lì la nuova
+   ha vinto.
+2. **Un monologo resta un blocco.** Spezzarlo in battute con un inciso in
+   corsivo fra l'una e l'altra ha perso tutte e due le volte. Il gesto
+   dentro il monologo si scrive dentro il monologo.
+
+⚙️ `python3 scripts/cieco_versioni.py coppie` applica le due regole a ogni
+coppia di versioni e manda al cieco solo quelle che non decide, più quattro
+di controllo; `misura_craft --stile` conta i dettagli sensoriali per file
+(colonna `sens.`). Le due regole vengono da sedici coppie e da un lessico
+scritto dopo averle viste: se il DM smentisce più di un controllo su quattro,
+`esito` lo dice e si torna al cieco intero.
+
 ---
 
 ## 3. Cosa premia questo pubblico

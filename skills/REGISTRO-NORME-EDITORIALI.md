@@ -42,6 +42,8 @@
 | `read-aloud-adulti.md` | box di combattimento chiude su **«Che fate?»** | **maggiore** | 🟢 congegno `chiusura su decision point` |
 | `read-aloud-adulti.md` §2-bis | il box di luogo sta in **poche frasi** (*Dungeon*) | **minore** | 🟡 `misura_craft --box`, colonna `>4 frasi` — **indicatore senza peso**: 61 box su 104 nei master DEF di ARC-07, uno su 11 nell'Abbazia. Accanto, la colonna `>500 car` misura la proposta del 2026-10-01, che **non è** una norma finché il DM non decide (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D1) |
 | `read-aloud-adulti.md` §2-bis | il box di luogo **non descrive le creature** (*Dungeon*): entrano con la scheda d'entrata o con un box loro | **minore** | 🔴 non misurato — i box non dichiarano il loro tipo (di luogo, d'ingresso, di round), e senza quel dato il registro dei 322 nomi pesca **315 box su 501**, quasi tutti dei, PG e artefatti nominati a ragione. È una convenzione che manca, non un codice (`superficie_norme.py`) |
+| `read-aloud-adulti.md` §2-ter | una riscrittura **non toglie dettagli sensoriali** a un box che c'è (il voto cieco del DM, 2026-10-18) | **minore** | 🟡 `cieco_versioni.py coppie` (`verdetto_misurato`) fra due versioni dello stesso box, e `misura_craft --stile`, colonna `sens.`. Sulle sedici coppie del primo voto decide 13 e sbaglia 1; il lessico è scritto dopo i voti, e le quattro coppie di controllo di ogni giro dicono se regge |
+| `read-aloud-adulti.md` §2-ter | un **monologo resta un blocco**: non si spezza in battute con incisi fra l'una e l'altra | **minore** | 🟡 `cieco_versioni.py coppie` (`verdetto_misurato`): una versione nuova di tre pezzi o più contro un monologo intero perde. Due casi su due nel primo voto |
 | `read-aloud-adulti.md` §2-bis | l'**ordine** del box di luogo: spazio e luce, cosa lo occupa, per ultima la cosa strana | — è una forma consigliata, non un divieto: un box che apre sulla cosa strana può essere la scelta giusta | ⚪ non applicabile |
 | `editorial-standards.md` | `**Read-aloud (pilastro lead).**` etichettato | **maggiore** | 🟢 congegno `regia etichettata **Read-aloud (X)**` |
 | `editorial-standards.md` | `**NOME (registro/tono):** *«battuta»*` | **maggiore** | 🟢 congegno `dialogo nella forma dichiarata` |
@@ -155,7 +157,7 @@
 | | Norme registrate |
 |---|---:|
 | 🟢 misurate | 47 |
-| 🟡 misurate in parte, con il limite scritto | 30 |
+| 🟡 misurate in parte, con il limite scritto | 32 |
 | 🔴 **non misurate, con la ragione scritta** | 21 |
 | ⚪ non applicabili | 4 |
 

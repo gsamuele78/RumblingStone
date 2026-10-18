@@ -89,6 +89,32 @@ class TestAppaia(unittest.TestCase):
         self.assertGreater(r, r_prima + 0.2)
 
 
+class TestVerdettoMisurato(unittest.TestCase):
+    def test_meno_dettagli_sensoriali_perde(self):
+        vecchio = "Il buio preme contro il vetro, e l'aria sa di fumo e di neve."
+        nuovo = "Il buio preme contro la parete."
+        self.assertEqual(CV.verdetto_misurato(vecchio, nuovo)[0], "vecchia")
+        self.assertEqual(CV.verdetto_misurato(nuovo, vecchio)[0], "nuova")
+
+    def test_tagliare_maiuscole_e_date_non_decide(self):
+        vecchio = "Nella prima — Anno −1000 — HAMMERFIST è giovane, e la luce è fredda."
+        nuovo = "Nella prima, mille anni fa, Hammerfist è giovane, e la luce è fredda."
+        self.assertEqual(CV.verdetto_misurato(vecchio, nuovo)[0], "indecisa")
+
+    def test_monologo_spezzato_perde(self):
+        vecchio = "«Bravo. Solo tu potevi vederla. Prendila, e il resto è tuo… vero?»"
+        nuovo = "«Bravo. Solo tu potevi vederla.»\n\nLa gemma si scalda.\n\n«Il resto è tuo… vero?»"
+        v, perche = CV.verdetto_misurato(vecchio, nuovo)
+        self.assertEqual(v, "vecchia")
+        self.assertIn("battute", perche)
+
+    def test_due_pezzi_non_bastano(self):
+        # Coppie 8 e 18 del primo voto: un box e il suo vicino, non un monologo.
+        vecchio = "«Bravo. Solo tu potevi vederla.» E la luce si spegne."
+        nuovo = "«Bravo. Solo tu potevi vederla.»\n\nE la luce si spegne."
+        self.assertNotIn("battute", CV.verdetto_misurato(vecchio, nuovo)[1])
+
+
 class TestEsito(unittest.TestCase):
     def _chiave(self, n=20):
         return {"coppie": [{"n": i, "nuova": "A" if i % 2 else "B", "stato": "valida"}
@@ -132,9 +158,29 @@ class TestEsito(unittest.TestCase):
         self.assertEqual((r["nuova"], r["votabili"], r["soglia"]), (12, 16, 12))
         self.assertTrue(r["verdetto"].startswith("meglio"))
 
+    def test_la_misura_decide_dove_il_dm_non_vota(self):
+        chiave = self._chiave(4)
+        for c, m in zip(chiave["coppie"], ["nuova", "nuova", "nuova", "indecisa"]):
+            c["misura"], c["controllo"] = m, False
+        nuova_4 = chiave["coppie"][3]["nuova"]
+        r = CV.esito(chiave, f"4 {nuova_4}")
+        self.assertEqual((r["misurate"], r["nuova"], r["votate"]), (3, 4, 4))
+        self.assertTrue(r["verdetto"].startswith("meglio"))
+
+    def test_due_controlli_smentiti_e_la_misura_cade(self):
+        chiave = self._chiave(4)
+        for c in chiave["coppie"]:
+            c["misura"], c["controllo"] = "nuova", True
+        voti = "\n".join(f"{c['n']} {'B' if c['nuova'] == 'A' else 'A'}"
+                         for c in chiave["coppie"][:2])
+        voti += "\n" + "\n".join(f"{c['n']} {c['nuova']}" for c in chiave["coppie"][2:])
+        r = CV.esito(chiave, voti)
+        self.assertEqual(r["controlli"], [2, 4])
+        self.assertTrue(r["verdetto"].startswith("misura smentita"))
+
     def test_voti_mancanti_sono_incompleti(self):
         r = CV.esito(self._chiave(), "1 A")
-        self.assertTrue(r["verdetto"].startswith("incompleto: 1 coppie votate su 20"))
+        self.assertTrue(r["verdetto"].startswith("incompleto: 1 coppie decise su 20"))
 
     def test_wilson_noto(self):
         basso, alto = CV.wilson(14, 20)

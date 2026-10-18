@@ -551,6 +551,28 @@ def battute_png(testo: str) -> "list[int]":
     return [_parole(m.group(1)) for m in _BATTUTA.finditer(testo)]
 
 
+#: I dettagli che si vedono, si sentono, si toccano o si annusano: luce e
+#: colore, suono e silenzio, caldo, freddo e corpo, aria e materia. È il segnale
+#: del primo voto cieco del DM (2026-10-18, ADR-0093): nelle cinque coppie in
+#: cui la riscrittura ne toglieva, il DM ha scelto la vecchia cinque volte su
+#: cinque. ⚠️ Il lessico è scritto **dopo** aver visto quei voti: sulle sedici
+#: coppie spiega 12 delle 14 che decide, e va provato sulle coppie di controllo
+#: del giro successivo prima di fidarsene di più.
+_SENSORIALE = re.compile(
+    r"\b(?:luc\w*|buio|fiamm\w*|fuoc\w*|fumo|brill\w*|ard\w*|accend\w*|spegn\w*"
+    r"|ombr\w*|vetr\w*|cristall\w*|or[oi]|verd\w*|ross\w*|ner[aoie]|dorat\w*"
+    r"|argent\w*|color\w*|cer[ao]|cant\w*|not[ae]|suon\w*|rombo|rimbomb\w*|tonf\w*"
+    r"|tamburi|sibil\w*|grid\w*|urla\w*|gem\w*|silenzi\w*|respir\w*|voce|rumore"
+    r"|accordo|fredd\w*|cald\w*|tiepid\w*|calore|pelle|dito|mani?|nocche|sterno"
+    r"|cranio|ossa|narici|aria|odor\w*|neve|sangue|acido|polvere|pietra|nebbia"
+    r"|pulsa\w*|trem\w*|scald\w*)\b", re.I)
+
+
+def dettagli_sensoriali(corpo: str) -> int:
+    """Quante parole di percezione ha un testo (indicatore, senza peso)."""
+    return len(_SENSORIALE.findall(corpo))
+
+
 def stile_dei_box(testo: str) -> "dict[str, float]":
     """I due indicatori sui box, più la lunghezza delle battute.
 
@@ -561,11 +583,13 @@ def stile_dei_box(testo: str) -> "dict[str, float]":
     parole = sum(_parole(c) for c in box)
     ger = sum(len(gerundi_in_coda(c)) for c in box)
     men = sum(len(avverbi_mente(c)) for c in box)
+    sens = sum(dettagli_sensoriali(c) for c in box)
     batt = battute_png(testo)
     per_mille = (lambda n: 1000 * n / parole) if parole else (lambda n: 0.0)
     return {"box": len(box), "parole": parole,
             "gerundio in coda": ger, "gerundio ‰": per_mille(ger),
             "-mente": men, "-mente ‰": per_mille(men),
+            "sensoriali": sens, "sensoriali ‰": per_mille(sens),
             "battute": len(batt),
             f"battute >{BATTUTA_LUNGA}": sum(1 for n in batt if n > BATTUTA_LUNGA),
             f"battute >{BATTUTA_TROPPO_LUNGA}": sum(1 for n in batt if n > BATTUTA_TROPPO_LUNGA)}
@@ -1015,7 +1039,7 @@ def main() -> int:
         print("\n\nSTILE DEI BOX — indicatori senza peso (ADR-0093)\n")
         print(f"{'bersaglio':30} {'box':>5} {'parole':>7} {'ger.coda':>9} "
               f"{'‰':>5} {'-mente':>7} {'‰':>5} "
-              f"{'battute':>8} {'>25':>4} {'>40':>4}")
+              f"{'sens.':>6} {'‰':>5} {'battute':>8} {'>25':>4} {'>40':>4}")
         for nome, modelli in BERSAGLI.items():
             testo, _, _ = carica(modelli)
             d = stile_dei_box(testo)
@@ -1024,13 +1048,16 @@ def main() -> int:
             print(f"{nome:30} {d['box']:>5} {d['parole']:>7} "
                   f"{d['gerundio in coda']:>9} {d['gerundio ‰']:>5.1f} "
                   f"{d['-mente']:>7} {d['-mente ‰']:>5.1f} "
+                  f"{d['sensoriali']:>6} {d['sensoriali ‰']:>5.1f} "
                   f"{d['battute']:>8} {d[f'battute >{BATTUTA_LUNGA}']:>4} "
                   f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}   {fascia}")
         print("\n   ‰ = ogni 1.000 parole di box. Le due frecce finali sono gerundio e")
         print(f"   -mente contro la fascia umana italiana ({FASCIA_GERUNDIO[0]}-{FASCIA_GERUNDIO[1]}‰ e")
         print(f"   {FASCIA_MENTE[0]}-{FASCIA_MENTE[1]}‰, Gruppo Chimera): ↓ sotto, ↑ sopra, · dentro,")
         print(f"   – meno di {PAROLE_PER_LA_FASCIA} parole. Nessuna colonna e' una norma: decide il")
-        print("   confronto cieco (`cieco_versioni.py`), non il numero.")
+        print("   confronto (`cieco_versioni.py coppie`): la misura fra due versioni dello")
+        print("   stesso box, e il cieco del DM dove la misura non decide. «sens.» sono le")
+        print("   parole di percezione: un box che ne perde, per il DM, peggiora.")
         print()
 
     if args.metrature:
