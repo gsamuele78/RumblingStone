@@ -57,6 +57,7 @@ For 10, Des 16, Cos 20, Int 20, Sag 16, Car 24 (20 + 4 intrinseco da un *tomo de
 
 ### Tattiche: prima del combattimento e morale
 
+- *Con Ozyrrandion*: il drago verde aspetta invisibile sotto la volta (DM 2026-10-18, EL 16). Zalkatar parla per primo e lascia al drago la *suggestione* su chi tratta; quando i PG salgono una rampa, il drago li stacca dal gruppo e Zalkatar usa *Extract Brain* sul PG rimasto solo.
 - *Prima del combattimento*: la Torre lo avverte quando i PG superano il Livello 4. Aspetta sulla piattaforma, con *black tentacles* già sulle rampe e *dimension door* tenuta per il primo PG che sale.  
 - *Morale*: sotto il 10% dei pf, se ha *greater teleport*, fugge (vedi «Fuga Zalkatar» qui sotto). Se il *teletrasporto* è speso o bloccato, tratta: offre le informazioni sulla Red Hand in cambio della vita, come nell'opzione di negoziazione del finale.
 

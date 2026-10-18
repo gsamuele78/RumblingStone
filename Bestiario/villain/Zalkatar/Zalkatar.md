@@ -63,7 +63,7 @@ I numeri stanno nello statblocco d'arco (Key stats, in testa).
 dello scontro e le quattro opzioni narrative stanno in
 `…P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md`.
 
-**Tattiche**: le fasi dello scontro e le opzioni tattiche stanno in `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` (§Fasi di combattimento, §Opzioni tattiche/narrative) e in `…P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md` (§2, Tre fasi dello scontro). La fuga sotto il 10% dei pf è in §Opzioni tattiche/narrative.
+**Tattiche**: le fasi dello scontro e le opzioni tattiche stanno in `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P2A-Torre-PARTE4-STATBLOCCHI-Zalkatar.md` (§Fasi di combattimento, §Opzioni tattiche/narrative) e in `…P2A-Torre-PARTE4-FINALE-Boss-Zalkatar.md` (§2, Tre fasi dello scontro). La fuga sotto il 10% dei pf è in §Opzioni tattiche/narrative. Nel sanctum c'è anche **Ozyrrandion**, drago verde adulto GS 14, in patto con lui: lo scontro è EL 16 (DM 2026-10-18; `Bestiario/villain/ozyrrandion-drago-verde-cr14.md`).
 
 ## Esiti possibili
 

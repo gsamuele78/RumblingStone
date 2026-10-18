@@ -48,14 +48,14 @@ Huge dragon (air), 22 HD, LE. Drago verde adulto SRD avanzato; incantesimi da st
 - **Virata**: una volta per round, in volo, gira fino a 180° gratis.
 
 **Tattiche**
-- *Prima del combattimento*: fa la guardia alla Torre Invisibile da fuori, sopra il pianoro di accesso, in alto e fuori tiro. Coi sensi acuti e la percezione cieca vede arrivare i PG prima che loro trovino l'ingresso. Un drago verde prima parla: si posa a distanza, li interroga, mente con calma, e prova *suggestione* sul PG che parla per il gruppo («il vero ingresso è oltre la scarpata», «tornate quando la Torre vi chiamerà»). Se la trattativa va male si lancia *scudo* (CA 35), *immagine speculare* e *invisibilità*, e risale.
+- *Prima del combattimento*: aspetta nel sanctum di Zalkatar (Livello 5 della Torre Invisibile), invisibile e sospeso sotto la volta sopra il braccio nord, coi cristalli di memoria fra sé e l'ingresso. Coi sensi acuti e la percezione cieca sente i PG salire dal Livello 4. Lascia parlare Zalkatar: mentre i PG trattano, prova *suggestione* sul PG che parla per il gruppo («posa l'arma, è un patto onesto»). Prima di farsi vedere si lancia *scudo* (CA 35) e *immagine speculare*.
 - *Durante il combattimento*:
-  - **Round 1**: dall'invisibilità, picchiata e soffio sul gruppo raccolto sul pianoro; la presenza terrificante scatta con l'attacco. Poi risale.
-  - **Round 2-3**: Attacco in Volata sul PG più isolato (morso con Attacco Poderoso, poi via), e Virata per tornare indietro senza dare le spalle. Soffio ogni volta che si ricarica, mai fermo vicino ai guerrieri.
-  - **Round 4 e seguenti**: se i PG non volano, fluttua sopra di loro per l'attacco completo dentro la nube di polvere; se volano, li tira lontano dal pianoro e dai loro compagni.
+  - **Round 1**: dall'invisibilità, picchiata e soffio sul gruppo raccolto all'imbocco del braccio sud, dove i PG entrano; la presenza terrificante scatta con l'attacco. Poi risale sotto la volta.
+  - **Round 2-3**: Attacco in Volata sul PG che sale una rampa verso Zalkatar (morso con Attacco Poderoso, poi via), e Virata per tornare indietro senza dare le spalle. Soffio ogni volta che si ricarica, mai fermo vicino ai guerrieri.
+  - **Round 4 e seguenti**: se i PG non volano, fluttua sopra di loro per l'attacco completo e li spinge verso la vasca acida del braccio sud o il portale del braccio est; se volano, li tira lontano dalla piattaforma, dove Zalkatar li vuole soli per *Extract Brain*.
   - Contro l'incantatore che lo rende visibile o lo inchioda: *charme su persone* o *suggestione* sul guerriero più vicino a lui, perché lo protegga.
-- *Morale*: sotto 90 pf si rende invisibile, beve la pozione e se ne va verso l'Orda. Con Zalkatar ha un patto, non un debito, e non muore per la Torre. Se fugge, i PG lo ritrovano nella seconda ondata della battaglia finale di Rethmar, accanto a Tyrgarun.
-> Il posto è il pianoro di accesso alla Torre Invisibile (DM 2026-10-18): i moduli della Torre non mettevano il drago in nessuna stanza.
+- *Morale*: sotto 90 pf si rende invisibile, beve la pozione e se ne va verso l'Orda per il portale del braccio est. Con Zalkatar ha un patto, non un debito: se Zalkatar cade, fugge o tratta coi PG, il drago se ne va subito. Se fugge, i PG lo ritrovano nella seconda ondata della battaglia finale di Rethmar, accanto a Tyrgarun.
+> Il posto è il sanctum di Zalkatar, accanto a lui (DM 2026-10-18): Zalkatar GS 14 più Ozyrrandion GS 14 fanno un solo scontro a **EL 16**, APL 13 + 3, sotto il tetto di 17. Perché un drago Enorme voli nel sanctum la volta è alta almeno 15 m, decisione che va con la scelta.
 
 Benchmark: PF T1-1 riga 14: CA 31 sopra (29) / pf 275 sopra (200) / attacco +28 sopra (+23) / danno pieno ~75 sopra (65) / CD soffio 27 sopra (22) / TS buono +19 sopra (17). Sopra la riga in tutto, come i draghi SRD dello stesso GS: è il GS 14 che le Armate gli danno, alla pari di Zalkatar e non sopra di lui. In coppia con Zalkatar l'incontro è EL 16, sotto il tetto di 17.
 
