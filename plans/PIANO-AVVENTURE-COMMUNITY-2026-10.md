@@ -72,7 +72,7 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 | # | Lotto | Domanda |
 |---|---|---|
 | ~~D1~~ | 1 | ✅ **Decisa il 2026-10-18** (il DM: *«sì sono d'accordo»*): la riga «Statistiche base» entra negli undici statblocchi della §3 quando un master li usa, a cominciare da quelli di ARC-08. Niente lotto a sé |
-| ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18**: nei cinque master di ARC-07 già giocati le righe di scala **non** si aggiungono; si aggiungono solo se il master serve a un gruppo nuovo (`dm.py gruppo nuovo`) |
+| ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18, poi cambiata lo stesso giorno** (il DM sulla card: *«Sì, nella #245»*): le quattro righe di scala che mancano nei master di ARC-07 (DEF-1 Scena 3, DEF-4 Scene 6, 8 e 10) **si aggiungono**, nel giro della PR #245 che quei file li sta già toccando. Sono aggiunte, non riscritture. Era: non aggiungerle, salvo per un gruppo nuovo |
 | ~~D3~~ | 2 | ✅ **Decisa il 2026-10-18**: il lotto 2 si apre **insieme** a S1 di MASTER-DEF (ARC-08), perché il roster serve alle ondate |
 
 <!-- eco: AVVENTURE-COMMUNITY 2026-10-18 -->
@@ -81,6 +81,7 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 - **Cambiate**: nessuna, tutte e tre come proposte
 - **Dedotto da me**: che il «sì sono d'accordo» valga per tutte e tre le proposte del piano, anche se il messaggio a cui rispondeva nominava per esteso solo la D1
 - **Confermato dal DM il 2026-10-18**: *«sì grazie procedi con tutte e tre»*, la deduzione era giusta
+- **Cambiata il 2026-10-18, dopo il merge della #244**: D2. Il DM ha visto le regole sui master di ARC-07 e ha scelto di aggiungere le quattro righe di scala nella #245; il blocco «Se lo divinano» di DEF-4 l'ho passato a quel thread come incluso, ma la scelta sulla card riguardava le righe
 
 ## 4 · Come si riparte in una chat nuova
 
