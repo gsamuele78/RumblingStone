@@ -36,7 +36,7 @@ di ARC-08.
 Il resto della §3.2 della ricerca. Si apre dopo aver visto se i lotti 1 e 2
 trovano difetti veri.
 
-### Lotto 4 · La prosa, e come si misura se migliora 🟡 (2026-10-18)
+### Lotto 4 · La prosa, e come si misura se migliora ✅ (2026-10-18)
 
 Aperto su richiesta del DM, per il rifacimento dei DEF di ARC-07: metodi presi
 dalla rete che si possono misurare e applicare. Decisione in
@@ -49,7 +49,7 @@ note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
 - [x] due candidati scartati con la misura (pronome soggetto, spiegazione dopo il gesto); la norma pro-drop nel registro come 🔴
 - [x] la fotografia di partenza e il campione di ARC-07 in `plans/esperimenti/prosa-cieco/`
 - [x] il corpus di riferimento misurato sui PDF gratuiti (PR #250, [note-prosa-corpus.md](esperimenti/avventure-community/note-prosa-corpus.md)); gerundi e avverbi in `--stile` si leggono contro la sua fascia italiana, non contro una soglia
-- [ ] **il dopo**: le stesse misure sul rifacimento di ARC-07, e i venti voti del DM
+- [x] **il dopo**: le stesse misure sul rifacimento di ARC-07 (#249) migliorano tutte, ma il DM sceglie alla cieca la nuova in 8 coppie su 16: miglioramento non dimostrato ([ESITO-ARC07-2026-10-18](esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). Le sette versioni vecchie preferite e le due ipotesi (non tagliare il dettaglio sensoriale, non spezzare i monologhi) passate al thread del rifacimento, che tiene i file
 
 ## 2 · La calibrazione del lotto 1
 
