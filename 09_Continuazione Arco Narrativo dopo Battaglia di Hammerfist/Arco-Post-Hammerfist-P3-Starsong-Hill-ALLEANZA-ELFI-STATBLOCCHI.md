@@ -43,7 +43,9 @@ Uso: leader pattuglia, non pensato per essere ucciso, ma per mostrare competenza
 
 ---
 
-## 4. Creatura della Quest — la Piroidra a 12 teste `[CANONE — DM 2026-10-18]`
+## 4. Piroidra a 12 teste (CR 13)
+
+La creatura della Quest `[CANONE — DM 2026-10-18]`.
 
 **Piroidra a 12 teste, GS 13** (SRD 3.5, voce *Hydra*, colonna delle 12
 teste, riga «pyro-»). Lo statblocco è quello dell'SRD e non si ricopia
