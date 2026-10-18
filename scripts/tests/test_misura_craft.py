@@ -474,3 +474,15 @@ class TestStileDeiBox(unittest.TestCase):
         self.assertEqual(d["box"], 1)
         self.assertEqual(d["gerundio in coda"], 1)
         self.assertEqual(d["-mente"], 1)
+
+
+class TestFasciaUmana(unittest.TestCase):
+    """ADR-0093: fuori fascia in basso è un indizio come in alto."""
+
+    def test_sotto_dentro_sopra(self):
+        self.assertEqual(MC.rispetto_alla_fascia(0.5, MC.FASCIA_MENTE, 2000), "↓")
+        self.assertEqual(MC.rispetto_alla_fascia(5.5, MC.FASCIA_MENTE, 2000), "·")
+        self.assertEqual(MC.rispetto_alla_fascia(20.0, MC.FASCIA_MENTE, 2000), "↑")
+
+    def test_campione_piccolo_non_si_giudica(self):
+        self.assertEqual(MC.rispetto_alla_fascia(0.0, MC.FASCIA_MENTE, 400), "–")

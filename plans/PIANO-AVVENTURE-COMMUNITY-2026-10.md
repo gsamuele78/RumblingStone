@@ -48,6 +48,7 @@ note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
 - [x] `misura_craft --stile`: gerundio in coda, avverbi in -mente, battute dei PNG lunghe, con i falsi positivi contati a mano
 - [x] due candidati scartati con la misura (pronome soggetto, spiegazione dopo il gesto); la norma pro-drop nel registro come 🔴
 - [x] la fotografia di partenza e il campione di ARC-07 in `plans/esperimenti/prosa-cieco/`
+- [x] il corpus di riferimento misurato sui PDF gratuiti (PR #250, [note-prosa-corpus.md](esperimenti/avventure-community/note-prosa-corpus.md)); gerundi e avverbi in `--stile` si leggono contro la sua fascia italiana, non contro una soglia
 - [ ] **il dopo**: le stesse misure sul rifacimento di ARC-07, e i venti voti del DM
 
 ## 2 · La calibrazione del lotto 1

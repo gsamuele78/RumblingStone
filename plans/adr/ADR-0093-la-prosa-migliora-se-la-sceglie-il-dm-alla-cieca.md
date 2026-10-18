@@ -54,8 +54,11 @@ nessuna norma cresca.
    e applica il criterio. Le coppie identiche non si votano, e il pari non
    vince.
 2. **`misura_craft --stile`** conta tre indicatori senza peso: il gerundio in
-   coda, gli avverbi in -mente (allarme sopra 5‰) e le battute dei PNG oltre
-   25 e oltre 40 parole. Non entrano nel MQM e non sono un cancello.
+   coda, gli avverbi in -mente e le battute dei PNG oltre 25 e oltre 40
+   parole. Gerundi e avverbi si leggono contro la **fascia umana italiana**
+   (dieci titoli del Gruppo Chimera: 1,0-3,1‰ e 3,8-13,4‰), sotto come sopra;
+   la prima stesura usava un allarme a 5‰ da Blatt, che cadeva sulla mediana
+   umana. Non entrano nel MQM e non sono un cancello.
 3. **Il campione di ARC-07 è congelato ora**, in
    `plans/esperimenti/prosa-cieco/campione-ARC07-DEF.json`: venti box, quattro
    per DEF, seme 20261018, presi da `main` prima di ogni riscrittura.
@@ -74,6 +77,10 @@ nessuna norma cresca.
 - Il campione è preso prima della #245. La #245 cambia **uno** dei venti box
   (somiglianza 0,90); gli altri diciannove sono identici. Il campione resta
   valido anche dopo la sua fusione.
+- I DEF di ARC-07 stanno **sotto** la fascia umana su gerundi e avverbi (0 e al
+  più 1,2‰), ARC-08 ci sta dentro. Il ciclo di prosa li ha tolti più di quanto
+  faccia uno scrittore italiano: può essere pulizia o appiattimento, e lo dice
+  solo il cieco. Il rifacimento non deve rincorrere la fascia né allontanarsene.
 - Il campione non distingue i box di luogo da quelli d'evento, perché i box non
   dichiarano il tipo (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D3). Lo dice, e non lo
   simula.

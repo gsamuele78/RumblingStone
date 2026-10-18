@@ -462,9 +462,9 @@ def difetti_dei_box(testo: str) -> "dict[str, int]":
 #     parole di box, 9 veri su 9) dai DEF di ARC-07 (0).
 #   * **avverbi in -mente** — Browne e King li danno come il segno dello
 #     scrittore che spiega; Blatt (2017) trova una correlazione con il giudizio
-#     sui romanzi inglesi sotto le 50 ogni 10.000 parole. È una correlazione su
-#     un corpus inglese: la soglia è un allarme, non una norma. ARC-08 5,8‰,
-#     i DEF di ARC-07 da 0 a 1,2‰.
+#     sui romanzi inglesi sotto le 50 ogni 10.000 parole. Il riferimento
+#     umano italiano (Gruppo Chimera) sta fra 3,8 e 13,4‰: ARC-08 5,8‰ ci sta
+#     dentro, i DEF di ARC-07 (da 0 a 1,2‰) ne stanno sotto.
 #   * **battute lunghe** — le battute dei PNG nella forma prescritta, oltre 25
 #     e oltre 40 parole (la regola d'industria dei dialoghi di gioco).
 #
@@ -501,8 +501,26 @@ _GERUNDIO_IN_CODA = re.compile(rf",\s+({_GERUNDIO})\b[^.!?;:,\n]{{0,80}}[.!?]", 
 
 _AVVERBIO_MENTE = re.compile(r"\b([a-zàèéìòù]{3,}mente)\b", re.I)
 
-#: L'allarme degli avverbi: 50 ogni 10.000 parole (Blatt), cioè 5 ogni 1.000.
-ALLARME_MENTE_PER_MILLE = 5.0
+#: Le fasce del riferimento umano italiano, ogni 1.000 parole di box: dieci
+#: titoli del Gruppo Chimera misurati con questi stessi rilevatori il 2026-10-18
+#: (`plans/esperimenti/avventure-community/note-prosa-corpus.md` §5). Prima
+#: c'era un allarme a 5‰ preso da Blatt, su romanzi inglesi: cadeva sulla
+#: mediana umana italiana (5,5‰), e 7 titoli su 10 lo superavano. Fuori fascia,
+#: in basso come in alto, è un indizio da guardare, non un difetto.
+FASCIA_MENTE = (3.8, 13.4)
+FASCIA_GERUNDIO = (1.0, 3.1)
+#: Sotto queste parole di box un avverbio sposta il tasso di oltre il 2‰: la
+#: fascia non si giudica.
+PAROLE_PER_LA_FASCIA = 1000
+
+
+def rispetto_alla_fascia(per_mille: float, fascia: "tuple[float, float]",
+                         parole: int) -> str:
+    """«↓» sotto la fascia, «↑» sopra, «·» dentro, «–» se il campione è troppo piccolo."""
+    if parole < PAROLE_PER_LA_FASCIA:
+        return "–"
+    basso, alto = fascia
+    return "↓" if per_mille < basso else "↑" if per_mille > alto else "·"
 
 #: Le battute dei PNG nella forma di `editorial-standards.md` §2. La parola
 #: d'ordine dell'industria è circa 25 parole per battuta e non oltre 40
@@ -1001,16 +1019,18 @@ def main() -> int:
         for nome, modelli in BERSAGLI.items():
             testo, _, _ = carica(modelli)
             d = stile_dei_box(testo)
-            allarme = " 🟡" if d["-mente ‰"] > ALLARME_MENTE_PER_MILLE else ""
+            fascia = (rispetto_alla_fascia(d["gerundio ‰"], FASCIA_GERUNDIO, d["parole"])
+                      + rispetto_alla_fascia(d["-mente ‰"], FASCIA_MENTE, d["parole"]))
             print(f"{nome:30} {d['box']:>5} {d['parole']:>7} "
                   f"{d['gerundio in coda']:>9} {d['gerundio ‰']:>5.1f} "
                   f"{d['-mente']:>7} {d['-mente ‰']:>5.1f} "
                   f"{d['battute']:>8} {d[f'battute >{BATTUTA_LUNGA}']:>4} "
-                  f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}{allarme}")
-        print("\n   ‰ = ogni 1.000 parole di box. 🟡 = avverbi oltre 5‰ (Blatt, 50 su")
-        print("   10.000). Nessuna colonna e' una norma: il bersaglio e' la banda dei")
-        print("   box gia' passati dal ciclo di prosa, e decide il confronto cieco")
-        print("   (`cieco_versioni.py`), non il numero.")
+                  f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}   {fascia}")
+        print("\n   ‰ = ogni 1.000 parole di box. Le due frecce finali sono gerundio e")
+        print(f"   -mente contro la fascia umana italiana ({FASCIA_GERUNDIO[0]}-{FASCIA_GERUNDIO[1]}‰ e")
+        print(f"   {FASCIA_MENTE[0]}-{FASCIA_MENTE[1]}‰, Gruppo Chimera): ↓ sotto, ↑ sopra, · dentro,")
+        print(f"   – meno di {PAROLE_PER_LA_FASCIA} parole. Nessuna colonna e' una norma: decide il")
+        print("   confronto cieco (`cieco_versioni.py`), non il numero.")
         print()
 
     if args.metrature:
