@@ -20,7 +20,7 @@ attacchi:
 > correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta +30 → **+34**: BAB 12 + For 31 (+10) + Enorme (+8) + **Lottare Migliorato** (+4), talento che la scheda elenca e la lotta non contava. La For 31 è confermata dall'attacco +20.
 
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 Huge giant (earth), CE. **DV 14d8 + 2d12**. **hp 172**. **CA 26** (−2 taglia, +1 Des, +14 naturale, +3 pelle), contatto 9, colto alla sprovvista 25. Iniziativa +1. Vel **15 m** (movimento veloce). Spazio/portata **4,5 m / 4,5 m**.
 **TS** Temp +18, Rifl +5, Vol +7. **BAB/Lotta** +12/**+34**.

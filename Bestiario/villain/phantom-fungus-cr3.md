@@ -23,7 +23,7 @@ voci:
 fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/Phantom Fungus d20srd.org.html`)
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > **Conti rifatti sul SRD**: l'invisibilità è *invisibilità superiore* costante (LI 12°), che non cade quando attacca e **non** si dissolve con *epurare invisibilità*; dopo la morte resta invisibile per un minuto. Il morso è +3 (1d6+3): BAB +1, For +2, e una volta e mezza la For perché è il suo unico attacco naturale. Mancavano il talento **Allerta** e le abilità. ⚠ **Non SRD**: la **scurovisione** 18 m (i tratti vegetali SRD danno solo la visione crepuscolare). Resta (DM 2026-10-18, vince la versione più forte): in una caverna è quello che lo rende un predatore.
 

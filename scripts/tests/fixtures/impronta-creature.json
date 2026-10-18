@@ -1,7 +1,7 @@
 {
  "apply_ts": {
   "bestia-prova-cr5.md": {
-   "con_attributi": "# Bestia di Prova\n**Faction**: wild | **Role**: brute | **Environment**: any | **CR**: 5\n\n\n```statblocco\ngs: 5\ntipo: Large magical beast, 6d10, N\nca: 16\nca-dettaglio: (-1 size, +1 Des, +6 natural)\npf: 51\nts: Temp +9, Rifl +6, Vol +3\nvelocita: 12 m\nattributi: For 25 Des 12 Cos 19 Int 9 Sag 12 Car 10\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array elite del Manuale del DM (creatura)) · TS: base +5/+5/+2 + Cos/Des/Sag → Temp +9, Rifl +6, Vol +3\n```\n\n> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nLarge magical beast, 6d10, N. **hp 51**; **AC 16** (-1 size, +1 Des, +6 natural), touch 10. Vel 12 m.\n**Mischia** morso +9 (2d6+6).\n",
+   "con_attributi": "# Bestia di Prova\n**Faction**: wild | **Role**: brute | **Environment**: any | **CR**: 5\n\n\n```statblocco\ngs: 5\ntipo: Large magical beast, 6d10, N\nca: 16\nca-dettaglio: (-1 size, +1 Des, +6 natural)\npf: 51\nts: Temp +9, Rifl +6, Vol +3\nvelocita: 12 m\nattributi: For 25 Des 12 Cos 19 Int 9 Sag 12 Car 10\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array elite del Manuale del DM (creatura)) · TS: base +5/+5/+2 + Cos/Des/Sag → Temp +9, Rifl +6, Vol +3\n```\n\n> [GENERATO] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nLarge magical beast, 6d10, N. **hp 51**; **AC 16** (-1 size, +1 Des, +6 natural), touch 10. Vel 12 m.\n**Mischia** morso +9 (2d6+6).\n",
    "conti": [
     "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 1 da DV/4 → For 14, Cos 12, Des 11",
     "pf: 6d10 media 33.0 + Cos +1×6 = 39",
@@ -12,7 +12,7 @@
    "manca": []
   },
   "esploratore-prova-cr4.md": {
-   "con_attributi": "# Esploratore di Prova\n**Faction**: red-hand | **Role**: skirmisher | **Environment**: any | **CR**: 4\n\n\n```statblocco\ngs: 4\ntipo: Small humanoid (goblin), Rogue 4, NE\nca: 17\nca-dettaglio: (+1 size, +3 Des, +3 studded leather)\npf: 18\nts: Temp +2, Rifl +7, Vol +1\nvelocita: 9 m\nattributi: For 10 Des 16 Cos 12 Int 9 Sag 10 Car 5\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array standard del Manuale del DM (PNG con classe)) · TS: base +1/+4/+1 + Cos/Des/Sag → Temp +2, Rifl +7, Vol +1\n```\n\n> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nSmall humanoid (goblin), Rogue 4, NE. **hp 18**; **AC 17** (+1 size, +3 Des, +3 studded leather), touch 14. Vel 9 m.\n**Mischia** spada corta +5 (1d4).\n",
+   "con_attributi": "# Esploratore di Prova\n**Faction**: red-hand | **Role**: skirmisher | **Environment**: any | **CR**: 4\n\n\n```statblocco\ngs: 4\ntipo: Small humanoid (goblin), Rogue 4, NE\nca: 17\nca-dettaglio: (+1 size, +3 Des, +3 studded leather)\npf: 18\nts: Temp +2, Rifl +7, Vol +1\nvelocita: 9 m\nattributi: For 10 Des 16 Cos 12 Int 9 Sag 10 Car 5\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array standard del Manuale del DM (PNG con classe)) · TS: base +1/+4/+1 + Cos/Des/Sag → Temp +2, Rifl +7, Vol +1\n```\n\n> [GENERATO] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nSmall humanoid (goblin), Rogue 4, NE. **hp 18**; **AC 17** (+1 size, +3 Des, +3 studded leather), touch 14. Vel 9 m.\n**Mischia** spada corta +5 (1d4).\n",
    "conti": [
     "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 1 da DV/4 → For 14, Cos 12, Des 11",
     "pf: 4d6 media 14.0 + Cos +1×5 = 19",
@@ -23,7 +23,7 @@
    "manca": []
   },
   "sergente-prova-cr3.md": {
-   "con_attributi": "# Sergente di Prova\n**Faction**: red-hand | **Role**: melee-heavy | **Environment**: any | **CR**: 3\n\n\n```statblocco\ngs: 3\ntipo: Medium humanoid (hobgoblin), Fighter 3, LE\nca: 17\nca-dettaglio: (+1 Des, +4 giaco di maglia, +2 scudo pesante)\npf: 28\nts: Temp +5, Rifl +2, Vol +0\nvelocita: 9 m\nattributi: For 13 Des 12 Cos 14 Int 9 Sag 9 Car 9\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array standard del Manuale del DM (PNG con classe)) · TS: base +3/+1/+1 + Cos/Des/Sag → Temp +5, Rifl +2, Vol +0\n```\n\n> [INFERRED — needs DM confirmation] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nMedium humanoid (hobgoblin), Fighter 3, LE. **hp 28**; **AC 17** (+1 Des, +4 giaco di maglia, +2 scudo pesante), touch 11, flat-footed 16. Vel 9 m.\n**Mischia** spada lunga +6 (1d8+3).\n",
+   "con_attributi": "# Sergente di Prova\n**Faction**: red-hand | **Role**: melee-heavy | **Environment**: any | **CR**: 3\n\n\n```statblocco\ngs: 3\ntipo: Medium humanoid (hobgoblin), Fighter 3, LE\nca: 17\nca-dettaglio: (+1 Des, +4 giaco di maglia, +2 scudo pesante)\npf: 28\nts: Temp +5, Rifl +2, Vol +0\nvelocita: 9 m\nattributi: For 13 Des 12 Cos 14 Int 9 Sag 9 Car 9\nfonte: derivati dalle tabelle: ts, attributi (il resto è letto dalla prosa) — caratteristiche da `genera_attributi` (array standard del Manuale del DM (PNG con classe)) · TS: base +3/+1/+1 + Cos/Des/Sag → Temp +5, Rifl +2, Vol +0\n```\n\n> [GENERATO] `attributi` generati da `scripts/genera_attributi.py`: array del Manuale del DM con taglia e razza SRD, vincolati da CA e pf dove il file li dichiara. Confermali o correggili.\n\nMedium humanoid (hobgoblin), Fighter 3, LE. **hp 28**; **AC 17** (+1 Des, +4 giaco di maglia, +2 scudo pesante), touch 11, flat-footed 16. Vel 9 m.\n**Mischia** spada lunga +6 (1d8+3).\n",
    "conti": [
     "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 1 da DV/4 → For 14, Cos 12, Des 11",
     "pf: 3d10 media 16.5 + Cos +1×4 = 20",
@@ -38760,7 +38760,7 @@
   "genera_attributi_proponi": [
    {
     "file": "Bestiario/mostri/blue-psion-cr1.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38769,7 +38769,7 @@
    },
    {
     "file": "Bestiario/mostri/bone-naga-cr10.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38778,7 +38778,7 @@
    },
    {
     "file": "Bestiario/mostri/bruto-deforme-sottosuolo-cr11.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38787,7 +38787,7 @@
    },
    {
     "file": "Bestiario/mostri/centaur-ranger4-corrupted-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 16 ricavata da pf 60 su 8 DV, ma la scheda scrive 18: si tiene la scheda, da verificare.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 16 ricavata da pf 60 su 8 DV, ma la scheda scrive 18: si tiene la scheda, da verificare.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa",
      "⚠ Cos 16 ricavata da pf 60 su 8 DV, ma la scheda scrive 18: si tiene la scheda, da verificare."
@@ -38797,7 +38797,7 @@
    },
    {
     "file": "Bestiario/mostri/chierico-gruumsh-cr11.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38806,7 +38806,7 @@
    },
    {
     "file": "Bestiario/mostri/cultista-rakshasa-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38815,7 +38815,7 @@
    },
    {
     "file": "Bestiario/mostri/dauth-dwarf-defender-cr6.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38824,7 +38824,7 @@
    },
    {
     "file": "Bestiario/mostri/deathlock-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38833,7 +38833,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-assassina-lolth-cr10.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 12 ricavata da pf 40 su 9 DV, ma la scheda scrive 10: si tiene la scheda, da verificare.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 12 ricavata da pf 40 su 9 DV, ma la scheda scrive 10: si tiene la scheda, da verificare.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa",
      "⚠ Cos 12 ricavata da pf 40 su 9 DV, ma la scheda scrive 10: si tiene la scheda, da verificare."
@@ -38843,7 +38843,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-fighter3-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 14 ricavata da pf 22 su 3 DV, ma la scheda scrive 12: si tiene la scheda, da verificare.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Cos 14 ricavata da pf 22 su 3 DV, ma la scheda scrive 12: si tiene la scheda, da verificare.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa",
      "⚠ Cos 14 ricavata da pf 22 su 3 DV, ma la scheda scrive 12: si tiene la scheda, da verificare."
@@ -38853,7 +38853,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-noble-guard-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38862,7 +38862,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-priestess9-cr11.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38871,7 +38871,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-trickster-arcano-cr11.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38880,7 +38880,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-warrior-cr1.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38889,7 +38889,7 @@
    },
    {
     "file": "Bestiario/mostri/drow-wizard7-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38898,7 +38898,7 @@
    },
    {
     "file": "Bestiario/mostri/duergar-chierico3-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ la CA di contatto suggerisce Des 10, la fonte dice 8: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ la CA di contatto suggerisce Des 10, la fonte dice 8: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
     "note": [
      "trascritta dalla fonte `Duergar_Chierico_3liv_4cr.html`",
      "⚠ la CA di contatto suggerisce Des 10, la fonte dice 8: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare."
@@ -38908,7 +38908,7 @@
    },
    {
     "file": "Bestiario/mostri/duergar-guerriero2-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ la CA di contatto suggerisce Des 10, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ la CA di contatto suggerisce Des 10, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
     "note": [
      "trascritta dalla fonte `Duergar_guerriero_2liv_3cr.html`",
      "⚠ la CA di contatto suggerisce Des 10, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare."
@@ -38918,7 +38918,7 @@
    },
    {
     "file": "Bestiario/mostri/duergar-ladro1-cr1.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ i pf suggeriscono Cos 12, la fonte dice 15: con 1 DV il conto dipende da media o massimo, si tiene la fonte.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ i pf suggeriscono Cos 12, la fonte dice 15: con 1 DV il conto dipende da media o massimo, si tiene la fonte.",
     "note": [
      "trascritta dalla fonte `Duergar_ladro_1liv_2cr.html`",
      "⚠ i pf suggeriscono Cos 12, la fonte dice 15: con 1 DV il conto dipende da media o massimo, si tiene la fonte."
@@ -38928,7 +38928,7 @@
    },
    {
     "file": "Bestiario/mostri/flind-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38937,7 +38937,7 @@
    },
    {
     "file": "Bestiario/mostri/githyanki-captain-gish-cr12.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38946,7 +38946,7 @@
    },
    {
     "file": "Bestiario/mostri/githyanki-warrior3-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38955,7 +38955,7 @@
    },
    {
     "file": "Bestiario/mostri/gnoll-cleric-yeenoghu-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38964,7 +38964,7 @@
    },
    {
     "file": "Bestiario/mostri/gnoll-ranger4-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38973,7 +38973,7 @@
    },
    {
     "file": "Bestiario/mostri/gnoll-warrior2-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38982,7 +38982,7 @@
    },
    {
     "file": "Bestiario/mostri/goblin-warrior1-cr05.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -38991,7 +38991,7 @@
    },
    {
     "file": "Bestiario/mostri/goblin-worg-raider-ftr5-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `goblin worg raider cr5.htm`"
     ],
@@ -39000,7 +39000,7 @@
    },
    {
     "file": "Bestiario/mostri/hell-hound-mezzoimmondo-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `Hell Hound 4cr .htm`"
     ],
@@ -39009,7 +39009,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-bladebearer-ftr6-cr6.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `hobgoblin bladebearer 6 liv.htm`"
     ],
@@ -39018,7 +39018,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-doom-hand-cleric5-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `hobgoblin doom hand cleric 5 liv.htm`"
     ],
@@ -39027,7 +39027,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-portalame-ftr7-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `hobgoblin-portalame cr7.htm`"
     ],
@@ -39036,7 +39036,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ Sag al più 7 ricavata da Vol +1 (base +3), ma 9 viene da un dato più forte: si tiene, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ Sag al più 7 ricavata da Vol +1 (base +3), ma 9 viene da un dato più forte: si tiene, da verificare.",
     "note": [
      "trascritta dalla fonte `hobgoblin regular 3 liv.htm`",
      "⚠ Sag al più 7 ricavata da Vol +1 (base +3), ma 9 viene da un dato più forte: si tiene, da verificare."
@@ -39046,7 +39046,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-regular-warrior4-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `hobgoblin regular 4 liv.pcg`"
     ],
@@ -39055,7 +39055,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-sergente-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39064,7 +39064,7 @@
    },
    {
     "file": "Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `hobgoblin veterans 6 liv.htm`"
     ],
@@ -39073,7 +39073,7 @@
    },
    {
     "file": "Bestiario/mostri/kulkorzhul-war-adept-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ la CA di contatto suggerisce Des 18, la fonte dice 16: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ la CA di contatto suggerisce Des 18, la fonte dice 16: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
     "note": [
      "trascritta dalla fonte `KulkorZhul war Adept cr8_no spell.htm`",
      "⚠ la CA di contatto suggerisce Des 18, la fonte dice 16: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare."
@@ -39083,7 +39083,7 @@
    },
    {
     "file": "Bestiario/mostri/loxo-shaman6-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39092,7 +39092,7 @@
    },
    {
     "file": "Bestiario/mostri/loxo-warrior3-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39101,7 +39101,7 @@
    },
    {
     "file": "Bestiario/mostri/monaco-pugno-del-destino-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `monaco pugno del destino cr7.htm`"
     ],
@@ -39110,7 +39110,7 @@
    },
    {
     "file": "Bestiario/mostri/myconid-elite-guard-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ For 24 ricavata da BAB e lotta: la fonte dice 20, lo statblocco è stato adattato e vince lo statblocco",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ For 24 ricavata da BAB e lotta: la fonte dice 20, lo statblocco è stato adattato e vince lo statblocco",
     "note": [
      "trascritta da `Fight_fungi_colony-formatted.txt`, sotto l'intestazione che porta il suo nome",
      "⚠ For 24 ricavata da BAB e lotta: la fonte dice 20, lo statblocco è stato adattato e vince lo statblocco"
@@ -39120,7 +39120,7 @@
    },
    {
     "file": "Bestiario/mostri/myconid-guard-cr4.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ Cos 18 ricavata da pf 68 su 8 DV: la fonte dice 16, lo statblocco è stato adattato e vince lo statblocco ⚠ For 22 ricavata da BAB e lotta: la fonte dice 18, lo statblocco è stato adattato e vince lo statblocco",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ Cos 18 ricavata da pf 68 su 8 DV: la fonte dice 16, lo statblocco è stato adattato e vince lo statblocco ⚠ For 22 ricavata da BAB e lotta: la fonte dice 18, lo statblocco è stato adattato e vince lo statblocco",
     "note": [
      "trascritta da `Fight_fungi_colony-formatted.txt`, sotto l'intestazione che porta il suo nome",
      "⚠ Cos 18 ricavata da pf 68 su 8 DV: la fonte dice 16, lo statblocco è stato adattato e vince lo statblocco",
@@ -39131,7 +39131,7 @@
    },
    {
     "file": "Bestiario/mostri/myconid-sovereign-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ Cos al più 17 ricavata da Temp +14 (base +11), ma 18 viene da un dato più forte: si tiene, da verificare. ⚠ Sag al più 15 ricavata da Vol +8 (base +6), ma 16 viene da un dato più forte: si tiene, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ Cos al più 17 ricavata da Temp +14 (base +11), ma 18 viene da un dato più forte: si tiene, da verificare. ⚠ Sag al più 15 ricavata da Vol +8 (base +6), ma 16 viene da un dato più forte: si tiene, da verificare.",
     "note": [
      "trascritta da `Fight_fungi_colony-formatted.txt`, sotto l'intestazione che porta il suo nome",
      "⚠ Cos al più 17 ricavata da Temp +14 (base +11), ma 18 viene da un dato più forte: si tiene, da verificare.",
@@ -39142,7 +39142,7 @@
    },
    {
     "file": "Bestiario/mostri/myconid-worker-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ Cos 18 ricavata da pf 34 su 4 DV: la fonte dice 14, lo statblocco è stato adattato e vince lo statblocco",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ Cos 18 ricavata da pf 34 su 4 DV: la fonte dice 14, lo statblocco è stato adattato e vince lo statblocco",
     "note": [
      "trascritta da `Fight_fungi_colony-formatted.txt`, sotto l'intestazione che porta il suo nome",
      "⚠ Cos 18 ricavata da pf 34 su 4 DV: la fonte dice 14, lo statblocco è stato adattato e vince lo statblocco"
@@ -39152,7 +39152,7 @@
    },
    {
     "file": "Bestiario/mostri/ogre-frantumapietra-barbaro6-cr9.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39161,7 +39161,7 @@
    },
    {
     "file": "Bestiario/mostri/ogre-micelio-sporeborn-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39170,7 +39170,7 @@
    },
    {
     "file": "Bestiario/mostri/ogre-skullcrusher-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `Ogre, Skullcrusher cr5.html`"
     ],
@@ -39179,7 +39179,7 @@
    },
    {
     "file": "Bestiario/mostri/orco-berserk-barbaro2-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ la CA di contatto suggerisce Des 8, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. ⚠ la CA di contatto suggerisce Des 8, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare.",
     "note": [
      "trascritta dalla fonte `orco berserk 2liv .htm`",
      "⚠ la CA di contatto suggerisce Des 8, la fonte dice 13: si tiene la fonte, la differenza può essere deviazione o schivata, da verificare."
@@ -39189,7 +39189,7 @@
    },
    {
     "file": "Bestiario/mostri/orco-regular-warrior4-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39198,7 +39198,7 @@
    },
    {
     "file": "Bestiario/mostri/razorfiend-blackspawn-alfa-cr13.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39207,7 +39207,7 @@
    },
    {
     "file": "Bestiario/mostri/razorfiend-red-cr9.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39216,7 +39216,7 @@
    },
    {
     "file": "Bestiario/mostri/skeletal-dire-lion-cr6.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39225,7 +39225,7 @@
    },
    {
     "file": "Bestiario/mostri/thayan-heavy-infantry-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39234,7 +39234,7 @@
    },
    {
     "file": "Bestiario/mostri/thayan-red-wizard7-cr9.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39243,7 +39243,7 @@
    },
    {
     "file": "Bestiario/mostri/underdark-cleric-ainin-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `Underdark cleric cr5 Ainin.htm`"
     ],
@@ -39252,7 +39252,7 @@
    },
    {
     "file": "Bestiario/mostri/underdark-dovil-runecaster-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `Underdark dovil runecaster deep diviner cr7.htm`"
     ],
@@ -39261,7 +39261,7 @@
    },
    {
     "file": "Bestiario/mostri/warpriest-tiamat-cr7.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39270,7 +39270,7 @@
    },
    {
     "file": "Bestiario/mostri/worg-cavalcatura-cr2.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.",
+    "marca": "> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.",
     "note": [
      "trascritta dalla fonte `Worg.htm`"
     ],
@@ -39279,7 +39279,7 @@
    },
    {
     "file": "Bestiario/villain/arbitrax-drago-rosso-cr15.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39288,7 +39288,7 @@
    },
    {
     "file": "Bestiario/villain/bebilith-guardiano-cr10.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39297,7 +39297,7 @@
    },
    {
     "file": "Bestiario/villain/koth-signore-dei-dragoni-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39306,7 +39306,7 @@
    },
    {
     "file": "Bestiario/villain/minotauro-karkilan-cr5.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39315,7 +39315,7 @@
    },
    {
     "file": "Bestiario/villain/phantom-fungus-cr3.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39324,7 +39324,7 @@
    },
    {
     "file": "Bestiario/villain/Ghaurush_Cenerevento/ghaurush-cenerevento-cr16.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 14 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 14 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa",
      "⚠ Des 14 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare."
@@ -39334,7 +39334,7 @@
    },
    {
     "file": "Bestiario/villain/Ghaurush_Cenerevento/ghaurush-cenerevento-secondo-incontro-cr18.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa",
      "⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare."
@@ -39344,7 +39344,7 @@
    },
    {
     "file": "Bestiario/villain/Mira_Serani/mira-serani-aranea-cr8.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39353,7 +39353,7 @@
    },
    {
     "file": "Bestiario/villain/Tyrgarun/tyrgarun-blue-old-cr18.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39362,7 +39362,7 @@
    },
    {
     "file": "Bestiario/villain/Ushgar_Occhio_Reso/ushgar-occhio-reso-cr13.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],
@@ -39371,7 +39371,7 @@
    },
    {
     "file": "Bestiario/villain/Zin_thara_Vel_Ryn/zin-thara-vel-ryn-cr12.md",
-    "marca": "> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
+    "marca": "> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.",
     "note": [
      "letta dalla riga delle caratteristiche della scheda stessa"
     ],

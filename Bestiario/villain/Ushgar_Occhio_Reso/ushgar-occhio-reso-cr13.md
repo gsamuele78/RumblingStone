@@ -16,7 +16,7 @@ attacchi:
   - Mischia ascia bipenne +1 +20/+15/+10 (1d12+10/×3)
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 **Iniziativa** +6 · **Sensi** scurovisione 18 m; Osservare e Cercare −2 (Occhio Reso)
 

@@ -23,7 +23,7 @@ voci:
   - Ira 1/giorno (7 round)
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > **Conti rifatti sul SRD, senza far scendere nessun numero**:
 > - **CA 18**: −1 taglia, +5 naturale del minotauro SRD, +4 giaco di maglia, Des 10. L'export dava 16 (contatto 7), cioè la CA in ira.

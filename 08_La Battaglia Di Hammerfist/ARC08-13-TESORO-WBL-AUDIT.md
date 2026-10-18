@@ -32,8 +32,8 @@ assume all'ingresso (`09_.../TESORO-WBL-AUDIT.md` §1.2).
 
 ## 2. Ricchezza d'ingresso e delta da erogare
 
-- **Ingresso ARC-08** `[INFERRED — dipende da quanto bancato negli archi
-  01-07]`: verosimilmente **sotto** il WBL del 13° (il party ha scalato
+- **Ingresso ARC-08** (dipende da quanto bancato negli archi
+  01-07): verosimilmente **sotto** il WBL del 13° (il party ha scalato
   l'Underdark e la Forgia guadagnando livelli senza necessariamente
   riempire il WBL a ogni gradino). Ipotesi di lavoro: **~60.000-80.000
   mo/PG**.

@@ -926,8 +926,8 @@ Cortile Interno ridotto inferno fumante. Pozze acido verde corrosivo steam ovunq
 
 ### MAPPA 3Y: IL PONTE SOSPESO
 **Griglia ultra-clear:** `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 3Y REVISED (33×27, 1,5 m)
-**Immagine:** [157b] `hammerfist-3y.png` — **reale (C3)**: `immagini/09.webp` (Borin al ponte) — `[INFERRED — numero immagine non
-ancora assegnato, migrato da 00_ATLANTE VISIVO...-complete.md — A8]`
+**Immagine:** [157b] `hammerfist-3y.png` — **reale (C3)**: `immagini/09.webp` (Borin al ponte) — migrato da 00_ATLANTE VISIVO...-complete.md (A8); il numero
+[157b] resta senza immagine propria
 
 **Tipo:** Retroguardia / difesa a strozzatura
 **Scala:** 1 quadrato = 1,5 metri

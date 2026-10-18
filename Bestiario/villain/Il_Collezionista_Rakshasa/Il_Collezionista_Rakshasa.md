@@ -59,7 +59,7 @@ fonte: rakshasa (SRD 3.5) 7 DV + Stregone 11, rifatto a mano: vedi Boost log in 
 **Status**: [DA SCRIVERE — la scheda non dice in che stato è oggi; la fuga dalla Tana dei Minotauri è nel riquadro qui sopra]
 **Location**: [DA SCRIVERE — la scheda non dice dove si trova adesso; il riquadro qui sopra lo porta nel Piano del Fuoco, alla forgia dei salamandri]
 **Motivation**: → §Cosa vuole (Gli obiettivi)
-**CR**: 18 (17-19 nella prima stesura; mai inteso per scontro fisico diretto, è un villain di manipolazione) | **Race/Class**: Rakshasa Ak'chazar [Private source — Monster Manual II, INFERRED: la variante non è nel repo; la build usa il rakshasa SRD] (Avanzato, Esterno Malvagio) Extra-Planare, Stregone 11 / Signore del Commercio; Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
+**CR**: 18 (17-19 nella prima stesura; mai inteso per scontro fisico diretto, è un villain di manipolazione) | **Race/Class**: Rakshasa Ak'chazar [Private source — Monster Manual II, non verificato: la variante non è nel repo e la build usa il rakshasa SRD] (Avanzato, Esterno Malvagio) Extra-Planare, Stregone 11 / Signore del Commercio; Legale Malvagio (Tendenzialmente Neutrale Malvagio per affari)
 **Key stats**: → §In combattimento e il blocco qui sopra. `il-collezionista-rakshasa-cr18.md` rimanda a questa scheda.
 
 ---

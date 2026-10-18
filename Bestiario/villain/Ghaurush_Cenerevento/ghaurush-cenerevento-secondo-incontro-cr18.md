@@ -17,7 +17,7 @@ attacchi:
 ```
 
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`. ⚠ Des 16 derivata dalla CA di contatto, ma la scheda scrive 10: si tiene la scheda, da verificare.
 
 > L'avviso qui sopra lo rigenera `scripts/genera_attributi.py`, che non conta la deflessione: la CA della scheda torna con Des 10 (contatto 12 = 10 −1 taglia +3 deflessione).
 

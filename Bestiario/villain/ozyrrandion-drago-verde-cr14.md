@@ -67,7 +67,7 @@ Boost log: età SRD (da giovane ad adulto) e avanzamento in DV — GS 8 → 14 �
 era (2026-10-17, prima del lotto): drago verde giovane, Large dragon (air), 14 DV, GS 8, dall'export A di PCGen con le correzioni SRD.
 era: pf 147 (14d12+56), CA 26 (-1 taglia, +13 naturale, +1 Armatura Naturale Migliorata, +3 bracciali), contatto 9.
 era: TS Temp +13, Rifl +9, Vol +11; iniziativa +0; BAB +14, Lotta +24.
-era: For 23 Des 10 Cos 19 Int 14 Sag 15 Car 16, con cintura della forza del gigante +4 e mantello del carisma +2, tutte e due INFERRED.
+era: For 23 Des 10 Cos 19 Int 14 Sag 15 Car 16, con cintura della forza del gigante +4 e mantello del carisma +2, tutte e due supposte.
 era: morso +19 (2d6+6); 2 artigli +19 (1d8+3); 2 ali +19 (1d6+3); coda +19 (1d8+9).
 era: soffio cono di 12 m, 8d6 acido, Rifl CD 21; incantesimi da stregone LI 1°, 5/4 al giorno: *charme su persone, armatura magica*.
 era: talenti Attacco in Volata, Fluttuare, Multiattacco, Multiattacco Migliorato, Armatura Naturale Migliorata (5).

@@ -24,7 +24,7 @@ voci:
 fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/00_cr10_…_SRD_Bebilith - D&D Wiki.htm`); la scheda diceva «CA da SRD» e il numero è 22, non uno dei valori che si ricordano a memoria
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > **Lotta +33**: il SRD stampa +29 (BAB 12 + For 9 + taglia 8), ma il bebilith ha Lottare Migliorato, che dà +4 alle prove di lotta. Si tiene il numero più alto, che il talento della scheda giustifica.
 

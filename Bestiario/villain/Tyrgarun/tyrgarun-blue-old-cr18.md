@@ -24,7 +24,7 @@ fonte: corpo del drago blu molto vecchio dell'SRD 3.5 (30 DV) con Cos 25 e soffi
 
 > [CANONE — DM 2026-09-23, D2] correzione 3.5 da `scripts/conformita_statblocchi.py`: **D2, deciso dal DM il 2026-09-23: lotta +46 → +49**: BAB +30 + Enorme (+8) + For 33 (+11). La For 33 la confermano il morso +38 (2d8+11), gli artigli e le ali (+5, metà For), la coda e lo stritolamento (+16, For e mezzo): la lotta era il solo numero che non tornava.
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > **Nota rinomina (2026-07-02, D11 v2 / A7)**: file precedentemente
 > `tyrgarun-black-adult-cr13.md` (black adult, riserva). Corretto a **blue Old

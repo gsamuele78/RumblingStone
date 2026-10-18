@@ -76,7 +76,7 @@ annientata/dispersa.
 (tiri di dado sfavorevoli nel finale, obiettivi del flashback mancati —
 vedi §5 bonus non maturati).
 
-**Soglia proposta** `[INFERRED — needs DM confirmation]`: **meno di 50
+**Soglia** (canone del DM 2026-10-18): **meno di 50
 superstiti** invece di 90, e/o **Re Thorek muore** nel finale (a 8 pf
 nell'Incontro 3B, un tiro fallito lo porta a 0).
 
@@ -85,7 +85,7 @@ nell'Incontro 3B, un tiro fallito lo porta a 0).
 | Elemento | Variante vittoria costosa |
 |---|---|
 | Superstiti nani | <50 (invece di 90) → Hammerfist può presidiare ma non proiettare forza |
-| Re Thorek | **Morto** `[INFERRED]` → la Cerimonia delle 100 Asce è officiata da **Madre Superiora Dana** (o da Thorin Runaforte pregen se Dana è caduta, D14); il riconoscimento dei Custodi Eterni avviene comunque, per volontà testamentaria del re |
+| Re Thorek | **Morto** → la Cerimonia delle 100 Asce è officiata da **Madre Superiora Dana** (o da Thorin Runaforte pregen se Dana è caduta, D14); il riconoscimento dei Custodi Eterni avviene comunque, per volontà testamentaria del re |
 | 150 lance di Re Thorek | Il flusso politico (D4) si **complica**: senza il re, l'erede/consiglio nanico è più esitante → hook ARC-09 con CD Diplomazia +2 |
 | Cerimonia | Tono più cupo; il Giuramento delle 90 diventa "Giuramento dei <50"; la runa dei Custodi ha peso funebre doppio |
 | Perdite orda | Invariate (−900, D11): l'orda perde comunque l'avanguardia |
@@ -118,8 +118,7 @@ i Rumbling Stones arrivano troppo tardi o vengono sopraffatti).
   nemiche → l'orda ottiene una fortezza nel North Wall, controllo dei
   passaggi montani, e le fucine naniche.
 
-**Delta sui tracker (scenario caduta)** `[INFERRED — needs DM: numeri
-da confermare se il DM apre questo ramo]`:
+**Delta sui tracker (scenario caduta)** (canone del DM 2026-10-18):
 
 | Tracker | Default (vittoria) | Caduta |
 |---|---|---|
@@ -254,7 +253,7 @@ ARC-09/10).
 La runa di pietra che Re Thorek consegna ai 4 PG (Cerimonia Atto 3;
 5 cm, al collo) non era mai stata quantificata meccanicamente.
 
-**Proposta** `[INFERRED — needs DM confirmation]`:
+**Effetto** (canone del DM 2026-10-18):
 - **+2 di circostanza a Diplomazia** con i nani del Vale (e con chi
   riconosce il titolo di Custode Eterno) mentre la runa è portata a
   vista.

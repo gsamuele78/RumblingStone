@@ -21,7 +21,7 @@ voci:
   - Incantesimi da stregone 8 (6/7/7/6/3, CD 13 + livello)
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > **Conti rifatti sul SRD**: **pf 70**, primo dado al massimo e gli altri alla media (i 67 dell'export stanno nella fascia, ma sotto). La morning star di taglia Media fa **1d8**, non 1d6. La CA 19 conta *armatura magica*, che Koth tiene sempre attiva (CA 15 senza). Gli incantesimi conosciuti di grado 0 sono otto e l'export ne elenca sei: i due mancanti sono aggiunti.
 

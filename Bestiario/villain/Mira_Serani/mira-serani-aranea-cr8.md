@@ -26,7 +26,7 @@ voci:
 
 > correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +6 → **+7**: aranea 3 DV (bestia magica, Tempra buona +3) + Stregone 6 (+2) + Cos 14 (+2).
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > ✅ **Canon (DM 2026-07-20)**: statblock calibrato per **PG di livello 8-9**,
 > coerente col ruolo AP di **spia mutaforma senza scrupoli** della Mano Rossa

@@ -20,7 +20,7 @@ voci:
 ```
 
 
-> [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili.
+> [GENERATO] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`.
 
 Medium outsider (evil, extraplanar, fire, lawful, dragonblood), 4 HD, LE. **hp 26**; **AC 17**, touch 11, flat-footed 16. Init +5; Vel 12 m. TS Temp +6, Rifl +5, Vol +4. BAB +4; Lotta +6.
 **Mischia** morso +6 (1d8+3 + **Morso Infuocato**). **Soffio** (fuoco; Clinging Breath: +1 round di danno). Scurovisione 18 m, visione crepuscolare. Vulnerabilità al freddo. Talenti: Clinging Breath, Iniziativa Migliorata, Seguire Tracce.

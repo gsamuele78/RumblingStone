@@ -93,8 +93,8 @@
 > Custode Eterno**: uno dei quattro che tornarono quando le porte si
 > spezzavano.*
 
-**Effetto (regola)** `[INFERRED — il DM può emendare, vedi
-`ARC08-10-ESITI-E-CONTINGENZE.md` §6.2]`:
+**Effetto (regola)** (canone del DM 2026-10-18, vedi
+`ARC08-10-ESITI-E-CONTINGENZE.md` §6.2):
 - **+2 di circostanza a Diplomazia** con i nani del Vale (e con chi
   riconosce il titolo) mentre la runa è portata a vista.
 - **Ospitalità a Hammerfist**: vitto, alloggio, accesso all'armeria e

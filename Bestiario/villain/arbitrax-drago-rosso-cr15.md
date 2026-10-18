@@ -23,7 +23,7 @@ voci:
 fonte: PCGen export della scheda; Cos e Car con gli oggetti che la stessa fonte elenca (amuleto della salute +2) e un mantello del Carisma +6; danni di coda e schiacciare a 1,5 × For come da SRD
 ```
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 > Cos e Car corrette a mano dopo la trascrizione: la Cos 21 della fonte non conta l'amuleto della salute +2 che la stessa fonte elenca (Cos 23), e la Car 20 viene da un mantello del Carisma +6 aggiunto qui per tenere la CD ~24 della presenza terrificante che la scheda scriveva.
 

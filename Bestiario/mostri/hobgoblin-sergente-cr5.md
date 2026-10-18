@@ -19,7 +19,7 @@ attacchi:
 > **Ricalcolata al conto SRD il 2026-10-12 (D78).** Le classi sostituiscono il dado vita razziale dell'hobgoblin, quindi è un guerriero di 5° e basta: 5d10+10, CA 21 (la completa dà +8), un solo attacco a BAB +5 (+9, 1d8+4 con Specializzazione), Tempra +6 Riflessi +2 Volontà +1. *Leadership* chiede il 6° livello: al suo posto *Riflessi in Combattimento*, e il +1 morale resta come comando del sergente.
 
 
-> [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
+> [GENERATO] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
 **Size/Type**: Medium humanoid (goblinoid) | **HD**: 5d10+10 (37 HP)
 **AC**: 21 (+8 full plate, +2 heavy shield, +1 Dex) | **Init**: +1 | **Speed**: 20 ft (armored)
