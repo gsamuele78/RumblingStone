@@ -43,26 +43,34 @@ Uso: leader pattuglia, non pensato per essere ucciso, ma per mostrare competenza
 
 ---
 
-## 4. Creatura della Quest — l'Idra di Lerna `[CANONE — DM 2026-10-18]`
+## 4. Creatura della Quest — la Piroidra a 12 teste `[CANONE — DM 2026-10-18]`
 
-**Idra di Lerna a 12 teste, GS 13** (SRD 3.5, voce *Hydra*, variante di
-Lerna; nessun avanzamento). Lo statblocco è quello dell'SRD e non si
-ricopia qui: si apre la voce e si usa la riga delle 12 teste.
+**Piroidra a 12 teste, GS 13** (SRD 3.5, voce *Hydra*, colonna delle 12
+teste, riga «pyro-»). Lo statblocco è quello dell'SRD e non si ricopia
+qui. Le idre dell'SRD non avanzano per DV, e la piroidra arriva a GS 13
+senza ritocchi.
 
-- **Perché fa paura**: ogni testa tagliata ne fa ricrescere due, finché
-  fuoco o acido non cauterizzano il moncone (regola della variante di Lerna,
-  SRD). Il gruppo che mena senza pensare la fa diventare più grande.
+- **Perché fa paura**: ogni testa tagliata ne fa ricrescere due in 1d4 round,
+  come per tutte le idre dell'SRD. Il gruppo sa che il moncone si chiude col
+  fuoco, ma con la piroidra non funziona: è immune al fuoco, e servono **5
+  danni da freddo** sul moncone, con un attacco di contatto. Ogni testa soffia
+  un getto di fuoco da **3d6**, tutte insieme, ogni 1d4 round (Riflessi
+  dimezza). La palude intorno brucia come il Witchwood.
 - **Dove**: le paludi di Rhest sotto Starsong Hill. In acqua l'idra nuota e i
   PG in armatura no: il terreno è metà dello scontro.
 - **EL 13** contro APL 13: alla pari, sotto il tetto di APL+4.
-- **PF1e**: l'idra del *Bestiary* ha le teste che ricrescono in tutte le
-  sue versioni (non verificato sul testo); qui vale la 3.5, che ha la
-  variante di Lerna nell'SRD.
+- **Divergenza dall'SRD**: l'SRD mette la piroidra nelle paludi calde; qui sta
+  in una palude temperata, perché è arrivata con la Mano Rossa che incendia
+  il bosco.
+- **PF1e**: l'idra del *Bestiary* fa ricrescere le teste anche lì (non
+  verificato sul testo); qui vale la 3.5.
 
 <!-- storico -->
 Prima del 2026-10-18 qui c'erano due bozze a GS 13: un'idra a 8 teste
 avanzata in palude, oppure un drago verde giovane avanzato a GS 11 con due
-coccodrilli Enormi. Il DM ha scelto l'idra di Lerna a 12 teste.
+coccodrilli Enormi. Il DM ha scelto un'«idra di Lerna a 12 teste», ma
+quella variante non è nell'SRD 3.5: l'idra a 12 teste è GS 11, e a GS 13 ci
+sono la piroidra e la criodra. Il DM ha scelto la piroidra.
 <!-- /storico -->
 
 ---

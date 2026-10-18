@@ -26,7 +26,7 @@
 **Key stats**: puntatore → statblock d'arco in `09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P3-Starsong-Hill-ALLEANZA-ELFI-STATBLOCCHI.md`.
 **Esiti possibili**:
 - È **il perno del P3-Starsong**: se i PG la convincono, invia **1/5 della tribù come forza da guerra** (+120: 100 ranger + 20 gufi giganti, difensori §2.4). Se falliscono, i Tiri Kitor restano a difendere solo i propri boschi.
-- La sua fiducia si guadagna aiutando la tribù (la Quest della Creatura: l'idra di Lerna a 12 teste, STATBLOCCHI §4) — non con la retorica.
+- La sua fiducia si guadagna aiutando la tribù (la Quest della Creatura: la piroidra a 12 teste, STATBLOCCHI §4) — non con la retorica.
 **Notes**: aggancio: alleanza elfi (§2.4), gancio di Hella (druidessa, `[HOOKS ↔ HELLA]`), quest d'arco. Cantatrice → possibile eco tematica con **Trellara** (§4).
 
 Boost log: (vuoto)
