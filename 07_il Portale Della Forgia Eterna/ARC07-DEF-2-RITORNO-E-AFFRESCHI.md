@@ -470,19 +470,18 @@ ogni riposo anche se nessuno lo guarda.
 
 ### A1 — «L'Alba del Mondo» (NORD · statico)
 
-> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo».** *Il primo affresco
-> mostra un'era in cui il mondo era caos. Al centro il dio dei nani, muscoli
-> di granito, barba intrecciata d'oro e di mithral, la creazione accesa
-> negli occhi. Davanti, un'incudine grande quanto una montagna rimbomba a
-> ogni colpo; nella sinistra il martello, nella destra una corona appena
-> nata che brilla come una stella. Intorno ribolle il caos: fiamme, fulmini,
-> pietra liquida, ombre antiche. Lui resta calmo, guarda la corona con amore
-> paterno e lavora per figli che ancora non esistono. Quella sulla fronte di
-> Thorik è la stessa, e diecimila anni non l'hanno cambiata.*
+<!-- scelta del DM: versione vincitrice del voto cieco, eccezione al tetto voluta -->
+> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo».** *Il primo affresco mostra un'era in cui il mondo era ancora caos. Al centro,
+> alto dieci metri, MORADIN: muscoli di granito, barba intrecciata d'oro,
+> mithral e adamantio, e negli occhi le fiamme della creazione. Davanti a lui
+> un'incudine titanica, grande quanto una montagna. Nella sinistra, Frostforge
+> — il martello leggendario, testa di adamantio stellare, manico di ferro
+> grezzo. Nella destra, la CORONA DI ADAMANTIO in fase di nascita, che brilla
+> come una stella appena accesa.*
 
 **Dati per il DM (non da leggere).** La figura è Moradin; il martello è
 Frostforge, testa di adamantio stellare e manico di ferro grezzo; la corona è
-la Corona di Adamantio. Se un giocatore chiede i nomi, dalli.
+la Corona di Adamantio. Il box li nomina già.
 
 *Dettagli nascosti (Osservare CD 20): altre divinità osservano — Corellon per
 gli elfi, Garl per gli gnomi, Gruumsh con invidia orchesca; nella fucina, altri

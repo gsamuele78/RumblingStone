@@ -109,7 +109,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | le piattaforme | Salvatore lead | 6 |
 | SCENA 3 | la foresta | LotR lead, Salvatore support | 6 |
 | SCENA 3 | il pilastro corroso | Salvatore lead, Mercer support | 5 |
-| SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 6 |
+| SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 8 |
 | SCENA 5 | il corridoio, 1 di 2 | Salvatore lead, solo per Artemis | 3 |
 | SCENA 5 | il corridoio, 2 di 2 | Salvatore lead, Andor support | 9 |
 | SCENA 5 | per Artemis, alla fine dell'ora | Andor lead | 6 |
@@ -120,7 +120,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | l'anticamera | Salvatore lead, per Artemis | 3 |
 | SCENA 7 | l'anticamera | Salvatore lead, per Tordek | 5 |
 | SCENA 7 | la visione | LotR lead, Salvatore support, per Tordek | 10 |
-| SCENA 8 | i sei secondi della soglia, 1 di 2 | LotR lead, Salvatore support | 5 |
+| SCENA 8 | i sei secondi della soglia, 1 di 2 | LotR lead, Salvatore support | 7 |
 | SCENA 8 | la soglia, 2 di 2 | Salvatore lead, LotR support | 9 |
 | SCENA 8 | il risveglio del guardiano, 1 di 2 | LotR lead, Salvatore support | 5 |
 | SCENA 8 | il risveglio del guardiano, 2 di 2 | Salvatore lead | 3 |

@@ -3348,12 +3348,12 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 > vicino alla forgia si toglie l'elmo e non sa perché.*
 
 > **Read-aloud (Salvatore) — l'incudine, 2 di 3: il canto.** *Poi la pietra
-> prende fuoco, un fuoco rosso e oro che non brucia e canta una nota sola,
-> lunga, che vi risuona nel cranio. Davanti agli occhi di Thorik passano dei
-> lampi: il generale che cade nella
-> tenda, due alberi in marcia che travolgono una fila di nemici, il momento in
-> cui ognuno di voi ha scelto. La pietra li tiene tutti, come si tiene una cosa
-> che servirà.*
+> prende fuoco. È un fuoco rosso e oro che non brucia: canta, una nota sola,
+> lunga, che vi risuona nel cranio. Thorik sente nelle ossa una forza che non
+> è sua, e davanti agli occhi gli passano dei lampi: il generale che cade
+> nella tenda, due alberi in marcia che travolgono una fila di nemici, il
+> momento in cui ognuno di voi ha scelto. La pietra li tiene tutti, uno per
+> uno, come si tiene una cosa che servirà.*
 
 > **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce che
 > risuona come una campana, una volta sola: «Ben fatto, figli miei, avete salvato

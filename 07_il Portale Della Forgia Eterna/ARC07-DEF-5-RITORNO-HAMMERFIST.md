@@ -716,9 +716,10 @@ passano cinque, senza Artemis non c'è il preavviso, senza Hella niente radici
 né Treant. **Con cinque PG** passano l'anello sei hobgoblin invece di cinque, e
 l'ordine e il preavviso ne tolgono gli stessi.
 
-> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultima spada cade sulla
-> pietra. Restano il fumo dei bracieri, il respiro dei feriti, novanta nani
-> che vi guardano senza parole. Il re alza il braccio al soffitto.*
+> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultimo nemico
+> sparisce nel corridoio nord, e il rumore se ne va con lui. Restano il fumo
+> dei bracieri, il respiro dei feriti, e novanta nani che guardano voi e non
+> sanno cosa dire. Poi il re, da terra, alza un braccio verso il soffitto.*
 
 #### Il passaggio di consegne
 

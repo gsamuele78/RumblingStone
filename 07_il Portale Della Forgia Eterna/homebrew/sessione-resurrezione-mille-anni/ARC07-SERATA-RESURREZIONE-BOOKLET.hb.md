@@ -1204,19 +1204,18 @@ ogni riposo anche se nessuno lo guarda.
 
 ### A1 — «L'Alba del Mondo» (NORD · statico)
 
-> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo».** *Il primo affresco
-> mostra un'era in cui il mondo era caos. Al centro il dio dei nani, muscoli
-> di granito, barba intrecciata d'oro e di mithral, la creazione accesa
-> negli occhi. Davanti, un'incudine grande quanto una montagna rimbomba a
-> ogni colpo; nella sinistra il martello, nella destra una corona appena
-> nata che brilla come una stella. Intorno ribolle il caos: fiamme, fulmini,
-> pietra liquida, ombre antiche. Lui resta calmo, guarda la corona con amore
-> paterno e lavora per figli che ancora non esistono. Quella sulla fronte di
-> Thorik è la stessa, e diecimila anni non l'hanno cambiata.*
+<!-- scelta del DM: versione vincitrice del voto cieco, eccezione al tetto voluta -->
+> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo».** *Il primo affresco mostra un'era in cui il mondo era ancora caos. Al centro,
+> alto dieci metri, MORADIN: muscoli di granito, barba intrecciata d'oro,
+> mithral e adamantio, e negli occhi le fiamme della creazione. Davanti a lui
+> un'incudine titanica, grande quanto una montagna. Nella sinistra, Frostforge
+> — il martello leggendario, testa di adamantio stellare, manico di ferro
+> grezzo. Nella destra, la CORONA DI ADAMANTIO in fase di nascita, che brilla
+> come una stella appena accesa.*
 
 **Dati per il DM (non da leggere).** La figura è Moradin; il martello è
 Frostforge, testa di adamantio stellare e manico di ferro grezzo; la corona è
-la Corona di Adamantio. Se un giocatore chiede i nomi, dalli.
+la Corona di Adamantio. Il box li nomina già.
 
 *Dettagli nascosti (Osservare CD 20): altre divinità osservano — Corellon per
 gli elfi, Garl per gli gnomi, Gruumsh con invidia orchesca; nella fucina, altri
@@ -2341,12 +2340,16 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > Il beat vive in un solo luogo — l'Altare al centro della Sala — ma è il luogo
 > più sacro dell'arco. Trattalo come un tempio, non come una stanza.
 
-> **Read-aloud (LotR lead) — l'Altare.** *La sala si è fatta silenziosa in un
-> altro modo, come chi trattiene il fiato. Al centro l'altare arde di una
-> fiamma dorata che non consuma. Sulla pietra di mithral c'è il corpo di Hella,
-> le mani incrociate sul petto, la pelle color cera. Tre semi le stanno
-> addosso, uno per mano e uno sulla fronte, e pulsano piano. Chi vegliava si
-> scosta, e non sa dove mettere le mani. Che fate?*
+> **Read-aloud (LotR lead) — l'Altare.** *La Sala della Forgia si è fatta
+> silenziosa in un modo nuovo. Non il silenzio del vuoto: il silenzio di una
+> sala che trattiene il fiato. Gli otto affreschi guardano dalle pareti —
+> Moradin che forgia, i Quattro Eroi che prendono contorno, Hammerfist che
+> brucia nel suo riquadro. Al centro, l'Altare arde di una fiamma dorata che
+> non consuma. E lì, sulla pietra di mithral, giace il corpo di Hella: le mani
+> incrociate sul petto, la pelle color cera, i tre semi di treant posati, uno
+> su ciascuna mano e uno sulla fronte, che pulsano piano come se già
+> sapessero. Therysol si scosta dalla veglia. Per la prima volta in giorni non
+> ha più bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
 cap. III; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
@@ -3143,22 +3146,17 @@ Quando è pronta a parlare, Hella racconta le **tre prove** dell'Incudine del Mo
 **Le rivelazioni incrociate (i momenti forti):**
 - **Thorik scopre** che la presenza verde che gli alleviò il peso al Piano della
   Terra («Il Piano della Terra & Terros l'Antico» §9) **era lei**: *ha già portato peso per lui, dall'aldilà.*
-> **Read-aloud (Casa di Davide lead) — la Sala, il debito che si scioglie.** *Lei si
-> volta verso Thorik. Negli occhi ambra, alla luce dell'altare, c'è qualcosa che lui non sa ancora
-> leggere.*
+> **Read-aloud (Casa di Davide lead) — la Sala, il debito che si scioglie.** *Hella si volta verso Thorik, e c'è qualcosa nei suoi occhi ambra che lui
+> non sa ancora leggere. «Quando eri nel Piano della Terra, sotto la montagna
+> che ti schiacciava le spalle — ti sei sentito una mano fredda, una luce
+> verde, che ti alleggeriva il peso. Ricordi?» Thorik ricorda: l'aveva
+> scambiata per una benedizione senza nome. «Ero io, Thorik. Non potevo fare
+> altro, da dove ero, che starti vicina. Hai portato peso per me senza
+> saperlo, e io ho portato il tuo. Anche da morta. Siamo pari, tu e io — e non
+> lo eravamo mai stati.»*
 
 Le battute qui sotto sono l'attacco, per la giocatrice che le vuole; se ha
 parole sue, valgono le sue.
-
-Hella, piano: *«Nel Piano della Terra, sotto la montagna che ti schiacciava le spalle. Una mano fredda, una luce verde, che ti alleggeriva il peso. Ricordi?»*
-
-*Thorik ricorda: l'aveva presa per una benedizione senza nome.*
-
-Hella: *«Ero io. Da dove ero, potevo solo starti vicina.»*
-
-*Un mezzo sorriso, il primo.*
-
-Hella: *«Hai portato peso per me senza saperlo, e io il tuo. Anche da morta. Siamo pari, tu e io, e non lo eravamo mai stati.»*
 
 - **Durik**: Hella capisce che l'Impronta caduta nel Sogno (Prova II) è tornata a
   riempirsi — *è* Durik. *«Non l'ho perso davvero. È andato dove serviva.»*
@@ -6941,12 +6939,12 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 > vicino alla forgia si toglie l'elmo e non sa perché.*
 
 > **Read-aloud (Salvatore) — l'incudine, 2 di 3: il canto.** *Poi la pietra
-> prende fuoco, un fuoco rosso e oro che non brucia e canta una nota sola,
-> lunga, che vi risuona nel cranio. Davanti agli occhi di Thorik passano dei
-> lampi: il generale che cade nella
-> tenda, due alberi in marcia che travolgono una fila di nemici, il momento in
-> cui ognuno di voi ha scelto. La pietra li tiene tutti, come si tiene una cosa
-> che servirà.*
+> prende fuoco. È un fuoco rosso e oro che non brucia: canta, una nota sola,
+> lunga, che vi risuona nel cranio. Thorik sente nelle ossa una forza che non
+> è sua, e davanti agli occhi gli passano dei lampi: il generale che cade
+> nella tenda, due alberi in marcia che travolgono una fila di nemici, il
+> momento in cui ognuno di voi ha scelto. La pietra li tiene tutti, uno per
+> uno, come si tiene una cosa che servirà.*
 
 > **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce che
 > risuona come una campana, una volta sola: «Ben fatto, figli miei, avete salvato

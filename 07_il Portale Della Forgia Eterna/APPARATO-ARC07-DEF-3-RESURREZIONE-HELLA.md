@@ -28,7 +28,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
-| SCENA 1 | l'Altare | LotR lead | 6 |
+| SCENA 1 | l'Altare | LotR lead | 10 |
 | SCENA 2 | l'Altare, il reliquiario | Salvatore lead | 7 |
 | SCENA 3 | il cerchio, lo Step 2 | Mercer lead | 5 |
 | SCENA 3 | lo Step 3 | Andor support | 4 |
@@ -43,6 +43,6 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | il ritorno | Salvatore lead | 6 |
 | SCENA 6 | le prime parole, con la voce rauca | Mercer lead | 5 |
 | SCENA 6 | il ritorno del fedele | Salvatore lead | 7 |
-| SCENA 7 | la Sala, il debito che si scioglie | Casa di Davide lead | 3 |
+| SCENA 7 | la Sala, il debito che si scioglie | Casa di Davide lead | 8 |
 | SCENA 8 | l'affresco A6 | Andor lead, la tensione che non alza la voce | 5 |
 | SCENA 8 | la chiusura | Andor lead | 3 |

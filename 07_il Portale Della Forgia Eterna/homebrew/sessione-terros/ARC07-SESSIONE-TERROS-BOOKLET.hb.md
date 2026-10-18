@@ -1430,12 +1430,15 @@ non crolla, cioè con le vie B e C; 2 geodi d'ametista (400 mo l'uno) e un grana
 
 All'uscita dalla foresta, anche se il gruppo non ha intenzione di fermarsi:
 
-> **Read-aloud (BG3 lead, Salvatore support) — il giardino dei cristalli.** *La
-> foresta si apre di colpo e il buio si accende. Un giardino: migliaia di
-> cristalli non più alti di un nano, cresciuti in triangoli, esagoni e cerchi,
-> la geometria di una mente. Si inclinano verso di voi come girasoli, e cantano:
-> un suono così vasto che arriva allo sterno prima che alle orecchie. Al
-> centro veglia una madre di luce, alta come tre nani.*
+<!-- scelta del DM: versione vincitrice del voto cieco, eccezione al tetto voluta -->
+> **Read-aloud (BG3 lead, Salvatore support) — il giardino dei cristalli.** *La foresta si apre di colpo, e il buio si accende. Davanti a voi, un
+> giardino: migliaia di cristalli non più alti di un nano, cresciuti in
+> triangoli, esagoni, cerchi concentrici — la geometria di una mente, non del
+> caso. E si MUOVONO: si inclinano verso di voi come girasoli verso un sole
+> che non c'è, e cantano. Non è metafora: ogni cristallo tiene una nota, e le
+> migliaia di note insieme formano un accordo così vasto che arriva allo
+> sterno prima che alle orecchie. Al centro del giardino, alta come tre nani,
+> una madre di luce: sfaccettature a migliaia, e dietro ognuna, un pensiero.*
 
 > **Correzione (coerenza).** I file-fonte facevano "consigliare Hella dal regno
 > degli spiriti" **attivamente**. **Errato**: Hella è morta e dà solo **echi**.
@@ -1616,13 +1619,10 @@ Tempio — dove passano cose preziose, prima o poi passa un compratore. È un
 La voce di Varis arriva a ogni tocco della gemma, anche col guanto.
 
 > **VARIS (telepatico, mielato):** *«Bravo. Solo tu potevi vederla.
-> Consideralo un pegno di fiducia tra futuri soci.»*
-
-*La gemma si scalda sotto il dito, come un polso.*
-
-> **VARIS:** *«Incastonala nell'Anello: sconto a vita, e la mia Falla per
-> magazzino. Il grande collezionista non lascia tesori in un piano
-> dimenticato… vero?»*
+> Consideralo un pegno di fiducia tra futuri soci: prendila, incastonala
+> nell'Anello, e hai lo sconto a vita e la mia Falla come tuo magazzino
+> personale. Il grande collezionista non lascerà mai un tesoro simile nella
+> pietra di un piano dimenticato… vero?»*
 
 **La verità (DM).** Non è un dono: è un **guinzaglio**. Il Seme-Mercato è un
 **Marchio di Credito** planare. Chi lo accetta si lega alla Falla di Varis
@@ -2198,11 +2198,13 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > è l'Altare stesso a fare da approdo. Il rischio «ritirata tagliata» resta,
 > in forma migliore — vedi il distacco qui sotto.
 
-> **Read-aloud (LotR lead, Salvatore support) — i sei secondi della soglia, 1 di 2.** *La soglia si apre come una pupilla. Oltre, una bolla: una sfera di cristallo
-> grande come la piazza di un mercato, e fuori il buio preme contro il vetro.
-> In quel buio passano lentissime le sagome dei geodi giganti, pesci troppo
-> grandi intorno a una lanterna. L'aria qui dentro è pulita, la prima da ore,
-> e le narici se ne accorgono prima della testa.*
+> **Read-aloud (LotR lead, Salvatore support) — i sei secondi della soglia, 1 di 2.** *La soglia si apre come una pupilla, e il mondo si apre con lei. Siete
+> dentro una bolla. Una sfera di cristallo grande come la piazza di un
+> mercato, e la sua parete è l'unica cosa che vi separa dal Piano della Terra:
+> fuori, il buio preme contro il vetro, e dentro quel buio passano lentissime
+> le sagome dei geodi giganti, come pesci troppo grandi intorno a una
+> lanterna. L'aria qui dentro è pulita — la prima aria pulita da ore. Le
+> narici se ne accorgono prima della testa.*
 
 > **Read-aloud (Salvatore lead, LotR support) — la soglia, 2 di 2.** *Davanti
 > agli stivali, una lastra d'argento vivo larga quanto la sala comune di una

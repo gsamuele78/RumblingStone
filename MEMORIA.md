@@ -112,6 +112,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | MASTER-DEF | scelte del DM dal voto cieco applicate ai master di ARC-07: le otto versioni ve… | ✅ coppie 2, 3, 4, 5, 9, 12, 16, 20 rimesse parola per parola, con un commento «scelta del DM» dove superano un tetto; apparati e booklet rigenerati |
 | 2026-10-18 | MASTER-DEF | esito del voto cieco del DM sul rifacimento dei cinque master di ARC-07: 8 a 8… | 📝 esito, scheda, chiave e voti in `plans/esperimenti/giro2-arc07-2026-10-18/misure/CIECO-*`; analisi delle coppie perse nel README del giro |
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
 | 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
@@ -123,7 +124,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
 | 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
 | 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | una forma sola per le schede dei PNG e dei villain, sul modello di *Red Hand of… | 🟡 [ADR-0091](plans/adr/ADR-0091-la-scheda-del-png-ha-una-forma.md), proposta. Misurato prima: 113 file in `png/` e `villain/`, da 10 a 280 righe, cinque forme… |
-| 2026-10-14 | REVISIONE-ARC07 | la scheda di Balvar nel Bestiario dava *dimensional anchor* sulla soglia della… | ✅ La riga delle rune nella scheda ora è quella del master; l'impronta delle creature è rigenerata per la sola lunghezza del testo di Balvar (3173 → 3261), ness… |
 
 ## Le misure che si portano dietro
 

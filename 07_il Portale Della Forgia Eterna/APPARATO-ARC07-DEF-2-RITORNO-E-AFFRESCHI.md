@@ -30,7 +30,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
 | SCENA 1 | la Sala, l'arrivo | LotR lead, Salvatore support | 8 |
-| SCENA 2 | gli affreschi, A1 «L'Alba del Mondo» | LotR lead, Casa di Davide support | 9 |
+| SCENA 2 | gli affreschi, A1 «L'Alba del Mondo» | LotR lead, Casa di Davide support | 7 |
 | SCENA 2 | gli affreschi, A2, 1 di 2 | Casa di Davide lead, LotR support | 6 |
 | SCENA 2 | gli affreschi, A2, 2 di 2 | Casa di Davide lead, LotR support | 4 |
 | SCENA 2 | gli affreschi, A3, 1 di 3 | Salvatore lead, Casa di Davide support | 5 |
