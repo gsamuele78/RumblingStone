@@ -35,6 +35,237 @@
   }
  },
  "bestiario": {
+  "Bestiario/mostri/abishai-azzurro-mano-cr11.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 18,
+     "Cos": 22,
+     "Des": 18,
+     "For": 20,
+     "Int": 14,
+     "Sag": 16
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 7,
+     "Cos": 22,
+     "Des": 18,
+     "For": 20,
+     "Int": 10,
+     "Sag": 13
+    },
+    [
+     "array elite del Manuale del DM (creatura)",
+     "variazione a seme fisso: Sag +1, Car −1",
+     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 11) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "Des 18 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 18 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 22 **ricavata da pf 147 su 14 DV** — il vincolo batte l'array",
+     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      14,
+      14,
+      0
+     ],
+     "Rifl": [
+      13,
+      13,
+      0
+     ],
+     "Temp": [
+      15,
+      15,
+      0
+     ],
+     "Vol": [
+      12,
+      12,
+      0
+     ],
+     "attacco": [
+      20,
+      20,
+      0
+     ],
+     "iniziativa": [
+      8,
+      8,
+      0
+     ],
+     "lotta": [
+      19,
+      19,
+      0
+     ],
+     "pf": [
+      147,
+      "98-196",
+      0
+     ],
+     "pf_media": 147
+    },
+    "file": "Bestiario/mostri/abishai-azzurro-mano-cr11.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp",
+        "rifl",
+        "vol"
+       ],
+       "dado": 8,
+       "n": 14,
+       "nome": "outsider"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      14,
+      8
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       14,
+       8
+      ]
+     ],
+     84,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 18,
+      "Cos": 22,
+      "Des": 18,
+      "For": 20,
+      "Int": 14,
+      "Sag": 16
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 14,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 4686,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      6,
+      "ricavata da Temp +15 (base +9)"
+     ],
+     "Des": [
+      4,
+      "ricavata da Rifl +13 (base +9)"
+     ],
+     "Sag": [
+      3,
+      "ricavata da Vol +12 (base +9)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      22,
+      "ricavata da pf 147 su 14 DV"
+     ],
+     "des_da_iniziativa": [
+      18,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      18,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      20,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 22",
+    "dadi": "dalle classi del `tipo` coi dadi SRD e dai DV razziali dichiarati",
+    "fascia": [
+     98,
+     196
+    ],
+    "file": "Bestiario/mostri/abishai-azzurro-mano-cr11.md",
+    "legale": true,
+    "media": 147,
+    "motivo": null,
+    "nuovo": "14d8+84",
+    "pf": 147,
+    "vecchio": "14d8+84"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 18,
+     "Cos": 22,
+     "Des": 18,
+     "For": 20,
+     "Int": 14,
+     "Sag": 16
+    },
+    "bab": 14,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp",
+       "rifl",
+       "vol"
+      ],
+      "dado": 8,
+      "n": 14,
+      "nome": "outsider"
+     }
+    ],
+    "gs": 11.0,
+    "lotta": 19,
+    "mischia": "coda +20 (1d8+5 + 2d6 elettricità)",
+    "pf": 147,
+    "provenienza": "a mano",
+    "tipo": "Medium outsider (baatezu, evil, extraplanar, lawful), 14 DV, LE",
+    "ts": [
+     15,
+     13,
+     12
+    ]
+   }
+  },
   "Bestiario/mostri/blue-psion-cr1.md": {
    "controlla": [],
    "genera": [
@@ -5147,6 +5378,237 @@
     ]
    }
   },
+  "Bestiario/mostri/furia-della-mano-cr10.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 8,
+     "Cos": 18,
+     "Des": 15,
+     "For": 21,
+     "Int": 10,
+     "Sag": 12
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 10,
+     "Cos": 18,
+     "Des": 14,
+     "For": 20,
+     "Int": 8,
+     "Sag": 10
+    },
+    [
+     "array standard del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Car +1, Des −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 10 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: hobgoblin Des +2 Cos +2",
+     "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 18 **ricavata da pf 105 su 10 DV** — il vincolo batte l'array",
+     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      10,
+      10,
+      0
+     ],
+     "Rifl": [
+      7,
+      7,
+      0
+     ],
+     "Temp": [
+      13,
+      13,
+      0
+     ],
+     "Vol": [
+      6,
+      6,
+      0
+     ],
+     "attacco": [
+      17,
+      17,
+      0
+     ],
+     "iniziativa": [
+      6,
+      6,
+      0
+     ],
+     "lotta": [
+      15,
+      15,
+      0
+     ],
+     "pf": [
+      105,
+      "50-160",
+      0
+     ],
+     "pf_media": 105
+    },
+    "file": "Bestiario/mostri/furia-della-mano-cr10.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 12,
+       "n": 10,
+       "nome": "barbaro"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      10,
+      12
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       10,
+       12
+      ]
+     ],
+     40,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 8,
+      "Cos": 18,
+      "Des": 15,
+      "For": 21,
+      "Int": 10,
+      "Sag": 12
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 10,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 3961,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "Rifl": 2,
+     "Temp": 2,
+     "Vol": 2,
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      4,
+      "ricavata da Temp +13 (base +9)"
+     ],
+     "Des": [
+      2,
+      "ricavata da Rifl +7 (base +5)"
+     ],
+     "Sag": [
+      1,
+      "ricavata da Vol +6 (base +5)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      18,
+      "ricavata da pf 105 su 10 DV"
+     ],
+     "des_da_iniziativa": [
+      14,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      14,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      20,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 18",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     50,
+     160
+    ],
+    "file": "Bestiario/mostri/furia-della-mano-cr10.md",
+    "legale": true,
+    "media": 105,
+    "motivo": null,
+    "nuovo": "10d12+40",
+    "pf": 105,
+    "vecchio": "10d12+40"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 8,
+     "Cos": 18,
+     "Des": 15,
+     "For": 21,
+     "Int": 10,
+     "Sag": 12
+    },
+    "bab": 10,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 12,
+      "n": 10,
+      "nome": "barbaro"
+     }
+    ],
+    "gs": 10.0,
+    "lotta": 15,
+    "mischia": "ascia bipenne +1 +17/+12 (1d12+8/x3)",
+    "pf": 105,
+    "provenienza": "a mano",
+    "tipo": "Medium humanoid (goblinoid), hobgoblin barbaro 10, CE",
+    "ts": [
+     13,
+     7,
+     6
+    ]
+   }
+  },
   "Bestiario/mostri/ghost-lion-spettrale-cr8.md": {
    "controlla": [],
    "genera": [
@@ -10104,6 +10566,234 @@
     ]
    }
   },
+  "Bestiario/mostri/lucertola-del-tuono-cr10.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 8,
+     "Cos": 21,
+     "Des": 10,
+     "For": 26,
+     "Int": 6,
+     "Sag": 12
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 10,
+     "Cos": 20,
+     "Des": 10,
+     "For": 26,
+     "Int": 8,
+     "Sag": 13
+    },
+    [
+     "array elite del Manuale del DM (creatura)",
+     "variazione a seme fisso: Sag +1, Des −1",
+     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 10) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
+     "Des 10 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 20 **ricavata da pf 138 su 12 DV** — il vincolo batte l'array",
+     "For 26 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      12,
+      12,
+      0
+     ],
+     "Rifl": [
+      8,
+      8,
+      0
+     ],
+     "Temp": [
+      13,
+      13,
+      0
+     ],
+     "Vol": [
+      9,
+      9,
+      0
+     ],
+     "attacco": [
+      20,
+      20,
+      0
+     ],
+     "iniziativa": [
+      4,
+      4,
+      0
+     ],
+     "lotta": [
+      24,
+      24,
+      0
+     ],
+     "pf": [
+      138,
+      "72-204",
+      0
+     ],
+     "pf_media": 138
+    },
+    "file": "Bestiario/mostri/lucertola-del-tuono-cr10.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp",
+        "rifl",
+        "vol"
+       ],
+       "dado": 12,
+       "n": 12,
+       "nome": "dragon"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      12,
+      12
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       12,
+       12
+      ]
+     ],
+     60,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 8,
+      "Cos": 21,
+      "Des": 10,
+      "For": 26,
+      "Int": 6,
+      "Sag": 12
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 12,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 3467,
+    "sestine_citate": [],
+    "taglia": -1,
+    "talenti": {
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      5,
+      "ricavata da Temp +13 (base +8)"
+     ],
+     "Des": [
+      0,
+      "ricavata da Rifl +8 (base +8)"
+     ],
+     "Sag": [
+      1,
+      "ricavata da Vol +9 (base +8)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      20,
+      "ricavata da pf 138 su 12 DV"
+     ],
+     "des_da_iniziativa": [
+      10,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": null,
+     "for_da_lotta": [
+      26,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 21",
+    "dadi": "dalle classi del `tipo` coi dadi SRD e dai DV razziali dichiarati",
+    "fascia": [
+     72,
+     204
+    ],
+    "file": "Bestiario/mostri/lucertola-del-tuono-cr10.md",
+    "legale": true,
+    "media": 138,
+    "motivo": null,
+    "nuovo": "12d12+60",
+    "pf": 138,
+    "vecchio": "12d12+60"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 8,
+     "Cos": 21,
+     "Des": 10,
+     "For": 26,
+     "Int": 6,
+     "Sag": 12
+    },
+    "bab": 12,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp",
+       "rifl",
+       "vol"
+      ],
+      "dado": 12,
+      "n": 12,
+      "nome": "dragon"
+     }
+    ],
+    "gs": 10.0,
+    "lotta": 24,
+    "mischia": "morso +20 (2d6+8 + 1d6 elettricità)",
+    "pf": 138,
+    "provenienza": "a mano",
+    "tipo": "Large dragon (earth), 12 DV, LE",
+    "ts": [
+     13,
+     8,
+     9
+    ]
+   }
+  },
   "Bestiario/mostri/monaco-pugno-del-destino-cr7.md": {
    "controlla": [],
    "genera": [
@@ -14316,6 +15006,237 @@
      5,
      7,
      10
+    ]
+   }
+  },
+  "Bestiario/mostri/spezzamente-kulkor-zhul-cr12.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 10,
+     "Cos": 16,
+     "Des": 15,
+     "For": 8,
+     "Int": 22,
+     "Sag": 12
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 10,
+     "Cos": 16,
+     "Des": 14,
+     "For": 8,
+     "Int": 8,
+     "Sag": 10
+    },
+    [
+     "array standard del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Car +1, Des −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 12 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: hobgoblin Des +2 Cos +2",
+     "Des 14 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 14 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 16 **ricavata da pf 66 su 12 DV** — il vincolo batte l'array",
+     "For 8 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      6,
+      6,
+      0
+     ],
+     "Rifl": [
+      9,
+      9,
+      0
+     ],
+     "Temp": [
+      10,
+      10,
+      0
+     ],
+     "Vol": [
+      14,
+      14,
+      0
+     ],
+     "attacco": [
+      5,
+      5,
+      0
+     ],
+     "iniziativa": [
+      6,
+      6,
+      0
+     ],
+     "lotta": [
+      5,
+      5,
+      0
+     ],
+     "pf": [
+      66,
+      "48-84",
+      0
+     ],
+     "pf_media": 66
+    },
+    "file": "Bestiario/mostri/spezzamente-kulkor-zhul-cr12.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 0.5,
+       "buoni": [
+        "vol"
+       ],
+       "dado": 4,
+       "n": 12,
+       "nome": "mago"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      12,
+      4
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       12,
+       4
+      ]
+     ],
+     36,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 10,
+      "Cos": 16,
+      "Des": 15,
+      "For": 8,
+      "Int": 22,
+      "Sag": 12
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 12,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 4974,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "Rifl": 3,
+     "Temp": 3,
+     "Vol": 5,
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      3,
+      "ricavata da Temp +10 (base +7)"
+     ],
+     "Des": [
+      2,
+      "ricavata da Rifl +9 (base +7)"
+     ],
+     "Sag": [
+      1,
+      "ricavata da Vol +14 (base +13)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      16,
+      "ricavata da pf 66 su 12 DV"
+     ],
+     "des_da_iniziativa": [
+      14,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      14,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      8,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 16",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     48,
+     84
+    ],
+    "file": "Bestiario/mostri/spezzamente-kulkor-zhul-cr12.md",
+    "legale": true,
+    "media": 66,
+    "motivo": null,
+    "nuovo": "12d4+36",
+    "pf": 66,
+    "vecchio": "12d4+36"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 10,
+     "Cos": 16,
+     "Des": 15,
+     "For": 8,
+     "Int": 22,
+     "Sag": 12
+    },
+    "bab": 6,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 0.5,
+      "buoni": [
+       "vol"
+      ],
+      "dado": 4,
+      "n": 12,
+      "nome": "mago"
+     }
+    ],
+    "gs": 12.0,
+    "lotta": 5,
+    "mischia": "bastone ferrato +5 (1d6-1)",
+    "pf": 66,
+    "provenienza": "a mano",
+    "tipo": "Medium humanoid (goblinoid), hobgoblin mago 12, LE",
+    "ts": [
+     10,
+     9,
+     14
     ]
    }
   },
@@ -38773,9 +39694,9 @@
    "decisioni_aperte": 0,
    "del_generatore": 0,
    "spiegati_da_template": 0,
-   "statblocchi": 109,
-   "tornano": 104,
-   "verificabili": 108
+   "statblocchi": 113,
+   "tornano": 108,
+   "verificabili": 112
   },
   "genera_attributi_controlla": [],
   "genera_attributi_proponi": [
