@@ -400,10 +400,13 @@ riuscita non si sa descrivere è un lotto tagliato male.
 
 <!-- auto:begin key=decisioni-dm -->
 
-**14 aperte** · 259 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
+**17 aperte** · 259 chiuse — generato da `scripts/decisioni_dm.py --emit`, non si scrive a mano.
 
 | # | Piano | Ambito | Domanda |
 |---|---|---|---|
+| **D1** | `AVVENTURE-COMMUNITY` | 1 | Gli undici statblocchi della §3 prendono la riga «Statistiche base» in un lotto a sé, o solo quando un master li usa? Proposta: quando un master li usa, a cominciare da quelli di ARC-08 |
+| **D2** | `AVVENTURE-COMMUNITY` | 1 | Nei cinque master di ARC-07 già giocati si aggiungono le righe di scala dei cinque scontri veri (§2)? Proposta: no, salvo per un gruppo nuovo (`dm.py gruppo nuovo`) |
+| **D3** | `AVVENTURE-COMMUNITY` | 2 | Il lotto 2 si apre insieme a S1 di MASTER-DEF (ARC-08), o dopo? Proposta: insieme, perché il roster serve alle ondate |
 | **D1** | `BOX-LUOGO` | B3 | **Il tetto del box di luogo: righe, frasi o caratteri?** Oggi la norma è ≤ 12 righe; *Dungeon* conta le frasi; i 300-500 caratteri non hanno fonte. Proposta: si tiene ≤ 12 righe come norma pesata; **≤ 4 frasi** diventa norma **minore** per il solo box di luogo, pesata quando i box dichiarano il tipo (D3), perché oggi colpirebbe anche le aperture di scena da 8-12 righe, che sono legittime; i caratteri restano un indicatore |
 | **D2** | `BOX-LUOGO` | B0 | **Le dimensioni nella prima frase del box** («camera quadrata di quaranta piedi»), come nel modello del 2026-10-01, o il paragone di ADR-0014 con le misure nei Dati per il DM? Proposta: resta ADR-0014. Dal modello esterno si prende la struttura (le caratteristiche della stanza fuori dal box), non le misure nella voce |
 | **D3** | `BOX-LUOGO` | B2 | **Ogni box dichiara il suo tipo?** Per esempio `**Read-aloud (luogo · Salvatore lead).**`, con i tipi luogo, ingresso, round, rivelazione, chiusura. Sblocca la norma «niente creature nel box di luogo» e le soglie per tipo della tabella del §2 di `read-aloud-adulti.md`, che oggi nessuno può misurare. Proposta: sì, sui master nuovi (S1-S4 di PIANO-MASTER-DEF), scritto da chi scrive il box e controllato da `componenti.py`; non sui DEF già giocati |

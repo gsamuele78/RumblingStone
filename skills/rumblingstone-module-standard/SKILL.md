@@ -245,7 +245,12 @@ Sono sette, e ognuna viene da un difetto vero: chi resta senza niente da fare
 salvezza, chi sente il rumore, il boss che cambia invece di allungarsi, lo
 skill challenge scritto per intero, e chi si diverte in ogni scena. Da dove
 vengono, e cosa è stato scartato:
-`plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`.
+`plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`. Dalla §9 alla §16 le domande
+dell'alto livello, prese dalle avventure della community
+(`plans/RICERCA-AVVENTURE-COMMUNITY-2026-10.md`, ADR-0092): il segreto che regge
+a una divinazione, la riga di scala per ogni scontro, il mostro insostituibile,
+il pericolo che qualcuno usa, l'incontro che resta uno, il rinforzo che i PG
+vedono arrivare, niente orde di GS basso al 13°, il PG fuori gioco per un TS.
 
 ### Il ciclo completo: quando un master si chiama DEF
 

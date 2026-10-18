@@ -13,12 +13,15 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 14 decisioni aperte
+## Aspetta il DM: 17 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
 | Piano | # | Ambito | Domanda |
 |---|---|---|---|
+| `AVVENTURE-COMMUNITY` | D1 | 1 | Gli undici statblocchi della §3 prendono la riga «Statistiche base» in un lotto a sé, o solo quando un master li usa? Proposta: quando un master li usa, a cominciare da quelli di ARC-08 |
+| `AVVENTURE-COMMUNITY` | D2 | 1 | Nei cinque master di ARC-07 già giocati si aggiungono le righe di scala dei cinque scontri veri (§2)? Proposta: no, salvo per un gruppo nuovo (`dm.py gruppo nuovo`) |
+| `AVVENTURE-COMMUNITY` | D3 | 2 | Il lotto 2 si apre insieme a S1 di MASTER-DEF (ARC-08), o dopo? Proposta: insieme, perché il roster serve alle ondate |
 | `BOX-LUOGO` | D1 | B3 | **Il tetto del box di luogo: righe, frasi o caratteri?** Oggi la norma è ≤ 12 righe; *Dungeon* conta le frasi; i 300-500 caratteri non hanno fonte. Proposta: si tiene ≤ 12 righe come norma pesata; **≤ 4 frasi** diventa… |
 | `BOX-LUOGO` | D2 | B0 | **Le dimensioni nella prima frase del box** («camera quadrata di quaranta piedi»), come nel modello del 2026-10-01, o il paragone di ADR-0014 con le misure nei Dati per il DM? Proposta: resta ADR-0014. Dal modello ester… |
 | `BOX-LUOGO` | D3 | B2 | **Ogni box dichiara il suo tipo?** Per esempio `**Read-aloud (luogo · Salvatore lead).**`, con i tipi luogo, ingresso, round, rivelazione, chiusura. Sblocca la norma «niente creature nel box di luogo» e le soglie per ti… |
@@ -112,6 +115,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
 | 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
 | 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
@@ -123,11 +127,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D74 decisa dal DM, sì a tutto: i sedici dettagli del playtester diventano canon… | 🟡 nessuna decisione aperta; resta il DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | F3-quinquies, giro 4: il playtester a freddo su DEF-4 (🔴 0 · 🟠 6 · 🟡 17), corre… | 🟡 playtester fatto; aperta D74, resta il DM a freddo |
 | 2026-10-12 | LETTORE-E-PLAYTESTER | D69-D71 decise dal DM e applicate in DEF-4: Zog'tar catturato e il suo dopo, le… | 🟡 applicate; aperte D72-D73 |
-| 2026-10-12 | LETTORE-E-PLAYTESTER | D64-D68 decise dal DM: in DEF-4 la penalità per le armature portate e la capien… | 🟡 applicate; aperte D69-D73 |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 259 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 259 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
