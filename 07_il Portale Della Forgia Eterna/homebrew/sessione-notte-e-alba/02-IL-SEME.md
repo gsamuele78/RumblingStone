@@ -209,11 +209,10 @@ non c'è niente di più interessante.
    qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
    sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
 
-> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena si accartoccia
-> in cenere tiepida. Sotto il guanto la gemma non è cambiata: lo stesso peso,
-> lo stesso calore di una mano appena tolta da una tasca. Ma adesso dentro la
-> pietra c'è una scrittura, fitta e ordinata, come in un libro mastro. In
-> fondo alla pagina c'è un segno: una bilancia con un filo d'argento avvolto al
-> giogo. Per tutta l'ora hai aspettato una voce. Non è venuta. Dall'altra
-> parte del filo non c'è ancora nessuno.*
+> **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
+> si accartoccia in cenere tiepida. Sotto il guanto la gemma ha lo stesso peso
+> e lo stesso calore di una mano appena tolta da una tasca, ma dentro la pietra
+> c'è una scrittura fitta e ordinata, da libro mastro. In fondo alla
+> pagina, una bilancia con un filo d'argento avvolto al giogo. Per tutta l'ora
+> hai aspettato una voce, e dall'altra parte del filo non c'è ancora nessuno.*
 <!-- /include -->
