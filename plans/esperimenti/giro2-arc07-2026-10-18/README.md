@@ -129,8 +129,34 @@ Due cose da sapere prima di votare:
   tutte le battute che sostituiscono il box vecchio. Il difetto è
   dell'appaiamento di `cieco_versioni.py`, ed è annotato per la #246.
 
-La scheda e la chiave non stanno in questa cartella, perché la chiave non si
-apre prima dei voti. Entrano qui con l'esito.
+### L'esito: pari, il miglioramento non è dimostrato
+
+Il DM ha votato le sedici coppie la sera stessa, dopo l'unione della PR #249.
+La nuova versione ne vince **8**, la vecchia **8**, nessun pari. L'intervallo di
+Wilson al 95% sulla quota della nuova è [0,28; 0,72]: contiene la metà, quindi
+il voto non distingue le due versioni. La soglia era 12 su 16.
+
+| Vince la vecchia | Vince la nuova |
+|---|---|
+| 2 · 3 · 4 · 5 · 9 · 12 · 16 · 20 | 6 · 7 · 8 · 10 · 11 · 13 · 17 · 18 |
+
+Le misure del rifacimento restano vere: i box rispettano i tetti. Il cieco dice
+che rispettarli non è bastato perché si leggano meglio. Le coppie perse hanno
+due difetti in comune.
+
+- **Dove la riscrittura ha tagliato il dettaglio che faceva l'immagine.** Nella
+  2 il giardino perde «e dietro ognuna, un pensiero» e i cristalli che tengono
+  ciascuno una nota. Nella 5 l'affresco perde Moradin, Frostforge e la Corona
+  per nome: il tetto di un nome proprio nuovo per box li ha trasformati in «il
+  dio dei nani», «il martello», «una corona». Sono nomi che i giocatori
+  conoscono da archi interi, e non sono nuovi.
+- **Dove un box è stato spezzato in battute** (3, 12). Lette di fila, le
+  battute suonano meno di un box unico.
+
+Vince la nuova dove la vecchia era lunga senza essere precisa: le battute dei
+PNG (7, 8), i doni (10, 11), le scene di DEF-5 (17, 18).
+
+La scheda, la chiave, i voti e l'esito sono in `misure/CIECO-*`.
 
 ## La varianza delle lunghezze, dal corpus
 
