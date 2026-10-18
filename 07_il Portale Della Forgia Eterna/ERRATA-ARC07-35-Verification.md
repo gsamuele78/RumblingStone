@@ -57,10 +57,11 @@
   **Touch/Flat-footed/BAB/Lotta**; evita i termini 5e (max poteri speciali
   "puliti", niente "lair actions"). PF/RD/attacco possono restare alti se è
   ciò che serve per non chiudere in 2 round.
-- **Unico nodo da decidere (DM)**: l'**Aura di Pietrificazione** (drenaggio DES
-  = *save-or-die* **senza guaritore**, Hella morta nel P4). Il DM sceglie:
-  **tenerla letale** (coerente col power-up voluto) oppure renderla **non
-  permanente** (debuff forte ma recuperabile). Dettaglio in `_ARCHIVIO/Terros.md` §3/§5.
+- **Nodo chiuso (2026-10-18)**: l'**Aura di Pietrificazione** (drenaggio DES
+  = *save-or-die* **senza guaritore**) è stata giocata **letale**: Hella è
+  morta nel P4, ed è canone. Il master vivo `ARC07-DEF-1` §7 non la riporta più,
+  quindi per i gruppi futuri vale lo statblocco del master. La versione vecchia
+  resta in `_ARCHIVIO/Terros.md` §3/§5.
 
 ### 2.3 Skullcrusher il Nero (P5, duello) — GS 12
 - Statblock giocabile nel `_ARCHIVIO/PortaleForgia-P5-FASTPLAY.md`: Drago Nero Adulto
