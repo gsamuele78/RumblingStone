@@ -487,10 +487,12 @@ tre. Non alza mai il tono.
 **MORADIN:** *«È un frammento della mia essenza, diventato pietra. Si usa per le emergenze supreme. Riportare una druida dalla morte si qualifica.»*
 
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
-> mithral si apre, e un istante fa non c'erano cuciture. Una camera si schiude
-> come un fiore di metallo. Dentro, sospeso nella luce, c'è un rubino grande
-> come un pugno, con la forma di un cuore nanico e le sue quattro camere.
-> Pulsa sessanta volte al minuto, e da vicino è caldo. Una cosa così si spende una volta sola.*
+> mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
+> Una camera si schiude come un fiore di metallo, un petalo dopo l'altro.
+> Dentro, sospeso nella luce, c'è un rubino grande come un pugno, con la forma
+> di un cuore nanico e le sue quattro camere. Pulsa sessanta volte al minuto,
+> regolare come chi dorme, e da vicino è caldo. Una cosa così si spende una
+> volta sola.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 
@@ -806,8 +808,8 @@ al Freddo 15, guarigione rapida e Radicamento, **nessuna riduzione del danno**; 
 ### DONO 3 — ARTEMIS: «La Scintilla» → **Il Rovo Eldritch**
 
 > **Read-aloud (Andor lead) — il terzo Dono.** *Artemis apre la mano sopra il
-> cuore fermo e lascia andare una scheggia della propria fiamma, un pezzo di
-> quello che è. L'anello, per la prima volta da quando lo porta, non commenta.*
+> cuore fermo e lascia andare una scheggia della sua fiamma. L'anello, per la
+> prima volta, non commenta.*
 
 **Cosa dona.** **1d6 di Eldritch Blast, per sempre**: da **7d6** a **6d6**.
 
@@ -976,7 +978,8 @@ momento entra la Custode: §6.
 
 **La manifestazione (allo Step 5, quando lo spirito attraversa la soglia).**
 > **Read-aloud (GoT lead) — la Sala, la soglia fra i mondi.** *Lo spirito varca la
-> soglia, e la luce dorata dell'altare vacilla. Al sud del cerchio, dove non
+> soglia, e la luce dorata dell'altare vacilla come la fiamma di una lucerna
+> quando qualcuno apre la porta. Al sud del cerchio, dove non
 > stava nessuno, adesso c'è qualcuno. Ha la forma di una donna di radici e di
 > pietra, alta come Therysol, e gli occhi sono due nodi di legno antico. Non ha
 > fretta. È come la montagna: c'è, e aspetta. Quando parla, la voce è il rumore
@@ -1069,9 +1072,8 @@ gruppo, non qui.
 
 **STEP 6 — La Fusione (Moradin manifesto, 3 secondi).**
 > **Read-aloud (Casa di Davide lead) — l'Altare, lo Step 6.** *La luce esplode
-> dall'altare. Per tre secondi, sopra il corpo, c'è la forma di Moradin,
-> traslucida, più alta di chiunque nella sala. Questa volta la voce passa
-> dall'aria, e la sala trema.*
+> dall'altare. Per tre secondi, sopra il corpo, c'è Moradin: traslucido, più
+> alto di chiunque. Stavolta la voce passa dall'aria, e la sala trema.*
 
 **MORADIN (voce vera, l'unica volta):** *«Hella Oakenshield. Druida antica. Ti richiamo per il servizio reso, per il sacrificio compiuto, per l'amicizia che vi lega.»*
 

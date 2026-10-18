@@ -35,10 +35,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 |---|---|---|---:|
 | SCENA 1 | lo strappo, il filo | Salvatore lead | 7 |
 | SCENA 2 | la caverna, sotto la luce | LotR lead | 5 |
-| SCENA 2 | la caverna, l'ultima resistenza | Andor lead | 6 |
-| SCENA 2 | la caverna, le porte | Salvatore lead | 5 |
+| SCENA 2 | la caverna, l'ultima resistenza | Andor lead | 8 |
+| SCENA 2 | la caverna, sono tornati | Salvatore lead | 3 |
 | SCENA 2 | la caverna, voi | Mercer lead | 6 |
 | SCENA 2 | la corona intera | Salvatore lead | 5 |
 | SCENA 3 | la caverna, il primo round | Salvatore lead | 5 |
-| SCENA 3 | la caverna, il silenzio | Andor lead | 4 |
+| SCENA 3 | la caverna, il silenzio | Andor lead | 3 |
 | SCENA 3 | la caverna, il portale | LotR lead | 5 |

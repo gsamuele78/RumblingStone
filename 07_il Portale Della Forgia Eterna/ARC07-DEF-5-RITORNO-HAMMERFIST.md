@@ -412,7 +412,7 @@ loro luce mette in fuga gli orchi.
 
 > 🧭 **L'arrivo in 30 secondi.**
 > 1. Ramo luminoso o «meno luminoso»? (§0-bis, «I due rami»). Cambia la morale e chi resta.
-> 2. Leggi i quattro box in fila: **la caverna** · **l'ultima resistenza** · **le porte** · **voi**. Nel terzo Dana dice *«Sono tornati»*; il quarto chiude su «Che fate?».
+> 2. Leggi i quattro box in fila: **la caverna** · **l'ultima resistenza** · **sono tornati** · **voi**. Nel terzo Dana dice *«Sono tornati»*; il quarto chiude su «Che fate?».
 > 3. L'aura scatta con l'apparizione, e i TS degli orchi si risolvono subito: restano **due orchi scossi**, il capo forse fra loro.
 > 4. Re Thorek riapre gli occhi: *«Tu… portatore… degno. Finalmente… campioni veri.»*
 > 5. **Round di sorpresa**: un gesto a testa (tabella qui sotto). Chi ha fallito la Volontà della Scena 1 lo perde.
@@ -442,15 +442,15 @@ loro luce mette in fuga gli orchi.
 > **Read-aloud (Andor lead) — la caverna, l'ultima resistenza.** *Oggi la
 > caverna è un mattatoio: novanta nani, di trecento, fanno un anello intorno
 > all'altare, e la prima fila guarda le porte. Sull'altare è steso un re, la
-> barba impastata di sangue e di acido, il respiro un sibilo. Una sacerdotessa
-> anziana prega su di lui, e le mani le tremano. È il terzo giorno, ed è l'ora
-> in cui la fortezza doveva cadere.*
+> barba impastata di sangue e d'acido, il respiro un sibilo. Una sacerdotessa
+> anziana prega su di lui, e le mani le tremano. È il terzo giorno, l'ora in cui
+> la fortezza doveva cadere. Le porte di mithral cedono con un colpo solo, e gli
+> orchi entrano urlando. In quell'istante, sopra l'altare, la luce: oro, verde e
+> rosso che girano in una sfera di metallo fuso che pulsa come un cuore.*
 
-> **Read-aloud (Salvatore lead) — la caverna, le porte.** *Le porte di mithral
-> cedono con un colpo solo, e gli orchi entrano urlando. In quell'istante, sopra
-> l'altare, la luce: oro, verde e rosso che girano insieme in una sfera di
-> metallo fuso che pulsa come un cuore. Nani e orchi si fermano nello stesso
-> respiro, e nel silenzio la sacerdotessa alza la testa e dice, piano: «Sono tornati.»*
+> **Read-aloud (Salvatore lead) — la caverna, sono tornati.** *Nani e orchi si
+> fermano nello stesso respiro. Nel silenzio la sacerdotessa alza la testa, e
+> dice piano: «Sono tornati.»*
 
 > **Read-aloud (Mercer lead) — la caverna, voi.** *La sfera si apre, e i vostri
 > piedi toccano la pietra dell'altare. Sulla fronte di Thorik brillano tre
@@ -717,9 +717,8 @@ né Treant. **Con cinque PG** passano l'anello sei hobgoblin invece di cinque, e
 l'ordine e il preavviso ne tolgono gli stessi.
 
 > **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultima spada cade sulla
-> pietra, e il rumore se ne va con lei. Restano il fumo dei bracieri, il
-> respiro dei feriti, e novanta nani che guardano voi e non sanno cosa dire. Poi
-> il re, steso sull'altare, alza un braccio verso il soffitto.*
+> pietra. Restano il fumo dei bracieri, il respiro dei feriti, novanta nani
+> che vi guardano senza parole. Il re alza il braccio al soffitto.*
 
 #### Il passaggio di consegne
 

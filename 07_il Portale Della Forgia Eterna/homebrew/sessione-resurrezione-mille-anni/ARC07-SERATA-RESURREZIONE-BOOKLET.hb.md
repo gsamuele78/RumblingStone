@@ -861,7 +861,7 @@ Moradin**; le mappe **S-1** e **S-2**.
 
 | ✉ | Handout (§11) | Si consegna | Dove nel testo |
 |---|---|---|---|
-| **H1** | La Tavola degli Otto Affreschi | dopo il primo box della Sala | §2, Zona A |
+| **H1** | La Tavola degli Otto Affreschi | dopo il box dell'arrivo nella Sala | §2, Zona A |
 | **H2** | Le Iscrizioni (Fuoco e Moradin) | quando guardano A4, o chiedono cosa diceva la Sala | §4, A4 |
 | **H3** | Il simbolo di Hella, quercia e martello | alla fine della manifestazione di A8 | §4, A8 |
 | **H4** | Le carte delle Benedizioni | dopo la preghiera all'Altare | §7 |
@@ -966,10 +966,9 @@ posto in cui i PG vedono il prezzo di ciò che hanno appena scelto.
 | **sotto 2g** | **breccia aperta**, combattimento *dentro* le mura → scatta il §8: pannello velato su A8 e ARC-08 in Fase 0 dura |
 
 > **Read-aloud (Andor lead) — l'affresco A7, ogni volta che il timer scende.** *I numeri nanici nell'angolo
-> dell'affresco cambiano senza rumore, senza un rintocco, e la volta prima
-> erano altri. Nella pietra dipinta qualcosa si è mosso mentre nessuno
-> guardava: una torre più vicina nel fumo, un tratto di camminamento rimasto
-> vuoto. La battaglia non aspetta nessuno.*
+> dell'affresco sono cambiati, senza un rintocco. Nel fumo una torre è più
+> vicina, un tratto di camminamento è rimasto vuoto. La battaglia non
+> aspetta nessuno.*
 
 ### La Cronaca, in tre righe
 Ogni gesta compiuta **incide un pannello** negli affreschi della Sala **e**
@@ -1102,18 +1101,14 @@ sua scena, la 4 (§6).
 
 ### ZONA A — La Sala della Forgia Eterna (l'ottagono divino)
 
-> **Read-aloud (LotR lead, Salvatore support) — la Sala, l'arrivo.** *Il portale vi posa
-> sul pavimento di adamantio tiepido, e la Sala vi accoglie come una madre
-> accoglie i figli tornati dalla guerra: senza una parola, con la sua luce
-> dorata di sempre. Intorno, otto pareti e otto affreschi grandi come porte
-> di titani. Al centro l'Altare, dove la Forgia arde di un fuoco che non
-> consuma.*
-
-> **Read-aloud (LotR lead, Salvatore support) — la Sala, ciò che è cambiato.** *Dopo il peso del
-> Piano della Terra l'aria ha odore di ozono e di pietra pulita, e per un
-> istante il mondo non frana. Ma nel silenzio le pareti non sono più quelle
-> di prima. La Sala ha guardato ciò che avete fatto, e lo ha scritto. Che
-> fate?*
+> **Read-aloud (LotR lead, Salvatore support) — la Sala, l'arrivo.** *Il portale vi
+> posa sul pavimento di adamantio tiepido, e la Sala vi accoglie come una
+> madre i figli tornati dalla guerra: senza una parola, con la luce dorata
+> di sempre. Intorno, otto pareti e otto affreschi grandi come porte di
+> titani; al centro l'Altare, dove la Forgia arde di un fuoco che non
+> consuma. Dopo il peso del Piano della Terra l'aria sa di ozono e di pietra
+> pulita, e per un istante il mondo non frana. Ma le pareti sono cambiate:
+> la Sala ha guardato ciò che avete fatto, e lo ha scritto. Che fate?*
 
 ✉ **Si consegna qui: H1**, la Tavola degli Otto Affreschi.
 
@@ -1209,19 +1204,15 @@ ogni riposo anche se nessuno lo guarda.
 
 ### A1 — «L'Alba del Mondo» (NORD · statico)
 
-> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo», 1 di 2.** *Il primo affresco mostra
-> un'era in cui il mondo era ancora caos. Al centro il dio dei nani, muscoli
+> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1 «L'Alba del Mondo».** *Il primo affresco
+> mostra un'era in cui il mondo era caos. Al centro il dio dei nani, muscoli
 > di granito, barba intrecciata d'oro e di mithral, la creazione accesa
-> negli occhi. Davanti a lui un'incudine grande quanto una montagna, che
-> rimbomba a ogni colpo; nella sinistra il martello leggendario, nella
-> destra una corona appena nata che brilla come una stella.*
-
-> **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1, 2 di 2.** *Intorno ribolle il caos
-> primordiale: fiamme, fulmini che spaccano la realtà con un tuono, pietra
-> liquida, ombre antiche. Lui resta calmo e guarda la corona con amore
-> paterno. Lavora per proteggere figli che ancora non esistono.
-> Quella sulla fronte di Thorik è la stessa, e diecimila anni non
-> l'hanno cambiata.*
+> negli occhi. Davanti, un'incudine grande quanto una montagna rimbomba a
+> ogni colpo; nella sinistra il martello, nella destra una corona appena
+> nata che brilla come una stella. Intorno ribolle il caos: fiamme, fulmini,
+> pietra liquida, ombre antiche. Lui resta calmo, guarda la corona con amore
+> paterno e lavora per figli che ancora non esistono. Quella sulla fronte di
+> Thorik è la stessa, e diecimila anni non l'hanno cambiata.*
 
 **Dati per il DM (non da leggere).** La figura è Moradin; il martello è
 Frostforge, testa di adamantio stellare e manico di ferro grezzo; la corona è
@@ -1257,11 +1248,10 @@ artefatti nascono — un Aegis Fang primordiale, altri martelli senza nome.*
 > canta; un nano più snello, le mani avvolte di ki dorato; un umano con un
 > anello che pulsa e scaglia raggi viola.*
 
-> **Read-aloud (Casa di Davide lead, LotR support) — gli affreschi, A2, 2 di 2.** *La quarta figura, che
-> fino a ieri non c'era, comincia ad avere un contorno: una druida cinta di
-> luce verde, tre treant attorno a lei come guardie. È Hella. La parete la
-> disegna mentre voi la riportate indietro, un colpo di scalpello alla
-> volta, e ogni colpo risuona piano. Che fate?*
+> **Read-aloud (Casa di Davide lead, LotR support) — gli affreschi, A2, 2 di 2.** *La quarta figura,
+> ieri assente, prende contorno: una druida cinta di luce verde fra tre
+> treant. È Hella. La parete la disegna a scalpello, mentre la riportate
+> indietro.*
 
 **Progressione** (80% dopo la Terra): riconoscete l'equipaggiamento esatto, lo
 sfondo cristallino. *La quarta figura si «riempie» perché Hella sta per
@@ -1279,16 +1269,14 @@ tornare — presagio della resurrezione, non garanzia.*
 > rumore del campo di battaglia dove hai combattuto fianco a fianco con gli
 > eroi che ti hanno preceduto.*
 
-> **Read-aloud (Salvatore lead, Casa di Davide support) — gli affreschi, A3, 2 di 3.** *Uno di loro è
-> Thorgrim Barbadiferro, che mille anni fa portò la tua stessa ascia. Nel
-> frastuono senza suono dell'affresco la bocca del vecchio nano dalla barba
-> grigia forma due frasi che conosci a memoria: portala bene, fratello, ora
-> è tua.*
+> **Read-aloud (Salvatore lead, Casa di Davide support) — gli affreschi, A3, 2 di 3.** *Fra loro, Thorgrim
+> Barbadiferro: mille anni fa portò la tua ascia. Barba grigia, la bocca
+> muta forma due frasi che conosci a memoria: portala bene, fratello, ora è
+> tua.*
 
-> **Read-aloud (Salvatore lead, Casa di Davide support) — gli affreschi, A3, 3 di 3.** *All'alba la luce dorata
-> inonda il campo, e la corona si è fusa alla fronte, calda come pelle,
-> parte di chi la porta. L'affresco si ferma dove comincia il presente, come
-> se la Sala avesse aspettato te per finire di dipingerlo.*
+> **Read-aloud (Salvatore lead, Casa di Davide support) — gli affreschi, A3, 3 di 3.** *All'alba la luce
+> dorata inonda il campo, e la corona è fusa alla fronte, calda come pelle.
+> L'affresco si ferma dove comincia il presente. Aspettava te per finire.*
 
 L'affresco dipinge solo il passato: il tocco, il lampo, Thorgrim che gli passa
 l'ascia. La visione del futuro che Thorik ebbe risvegliando la Corona (Fauci di
@@ -1346,24 +1334,21 @@ pannello-conseguenza del Piano della Terra.
 
 ### A6 — «Il Viaggio Attraverso il Tempo» (SUD-OVEST · temporale → 80%)
 
-> **Read-aloud (Andor lead, LotR support) — gli affreschi, A6 «Il Viaggio Attraverso il Tempo», 1 di 3.** *Questo affresco fa male
-> a guardarlo a lungo. Mostra due scene sovrapposte, come una doppia
+> **Read-aloud (Andor lead, LotR support) — gli affreschi, A6 «Il Viaggio Attraverso il Tempo», 1 di 2.** *Questo affresco fa
+> male a guardarlo a lungo: due scene sovrapposte, come una doppia
 > esposizione che l'occhio rifiuta di separare. Nella prima, mille anni fa,
-> Hammerfist è giovane, le mura appena erette e ancora lucide; i nani
-> respingono un'orda di orchetti che grida, e un drago nero giovane si tuffa
-> sulle fortificazioni.*
+> Hammerfist è giovane, le mura appena erette; i nani respingono un'orda di
+> orchetti, e un drago nero giovane si tuffa sulle fortificazioni. Nella
+> seconda è adesso: la stessa fortezza assediata, le mura segnate dal fumo,
+> un'orda sterminata. Sopra gira un drago enorme dalle ali nere, dello
+> stesso sangue del primo e con mille anni in più. Le due scene si alternano
+> ogni tre battiti, e nessuno di voi sa dire quale sia quella vera.*
 
-> **Read-aloud (Andor lead, LotR support) — gli affreschi, A6, 2 di 3.** *Nella seconda è adesso:
-> la stessa fortezza assediata, le mura segnate dal fumo, un'orda sterminata
-> schierata sotto. Sopra gira un drago enorme dalle ali nere, dello stesso
-> sangue del primo e con mille anni in più. Le due scene si alternano ogni
-> tre battiti, e nessuno di voi sa dire quale sia quella vera.*
-
-> **Read-aloud (Andor lead, LotR support) — gli affreschi, A6, 3 di 3, dopo tre battiti.** *Dopo la Terra qualcosa
-> è cambiato. Le immagini si mettono a fuoco, e al centro della doppia
-> esposizione pulsa un portale dorato: una porta sul passato. La corona
-> sulla fronte di Thorik, con due gemme accese, risponde al suo battito e si
-> scalda. Che fate?*
+> **Read-aloud (Andor lead, LotR support) — gli affreschi, A6, 2 di 2, dopo tre battiti.** *Dopo la Terra
+> le immagini si mettono a fuoco, e al centro della doppia esposizione pulsa
+> un portale dorato: una porta sul passato. La corona sulla fronte di
+> Thorik, con due gemme accese, risponde al suo battito e si scalda. Che
+> fate?*
 
 **Dati per il DM (non da leggere).** La prima scena è l'**Anno −1000**, la
 seconda l'**Anno 1372**. L'orda di oggi è l'esercito della Mano Rossa, e il
@@ -1426,18 +1411,16 @@ La tela un tempo vergine ora è al **60%**: i quattro (Hella compresa, viva) e
 Hammerfist sullo sfondo, i festeggiamenti abbozzati. È il finale che i PG stanno
 dipingendo con le loro scelte.
 - **Interazione (posare il corpo di Hella davanti — manifestazione muta).**
-  Leggi i due box solo dopo che il corpo è davanti alla tela.
+  Leggi il box solo dopo che il corpo è davanti alla tela.
 
-> **Read-aloud (Casa di Davide lead, Salvatore support) — gli affreschi, A8, la manifestazione, 1 di 2.** *Il corpo è davanti
-> alla tela, e la luce verde della sua anima druidica esce dalle ossa e
-> tocca il vetro nel silenzio. Per dieci battiti del cuore Hella appare
-> nell'affresco, semitrasparente, serena, bellissima.*
-
-> **Read-aloud (Casa di Davide lead, Salvatore support) — gli affreschi, A8, la manifestazione, 2 di 2.** *Non parla. Preme una
-> mano contro il vetro freddo dall'interno, come chi saluta attraverso una
-> finestra ghiacciata, e dove tocca lascia un segno inciso, una quercia e un
-> martello intrecciati che brillano. Poi svanisce. È una promessa, e dice
-> soltanto: tornerò.*
+> **Read-aloud (Casa di Davide lead, Salvatore support) — gli affreschi, A8, la manifestazione.** *Il corpo è
+> davanti alla tela, e la luce verde della sua anima druidica esce dalle
+> ossa e tocca il vetro nel silenzio. Per dieci battiti del cuore Hella
+> appare nell'affresco, semitrasparente, serena, bellissima. Non parla.
+> Preme una mano contro il vetro freddo dall'interno, come chi saluta
+> attraverso una finestra ghiacciata, e dove tocca lascia un segno inciso,
+> una quercia e un martello intrecciati che brillano. Poi svanisce. È una
+> promessa, e dice soltanto: tornerò.*
 
 ✉ **Si consegna qui: H3**, il simbolo di Hella.
 - **Effetto.** Nessun dialogo (asimmetria). **+1 sacro a tutti i TS per 1 ora**
@@ -1513,16 +1496,14 @@ aprono: chi li esamina li trova muti, e restano muti per tutto l'arco
 con **≥2 successi** la visione si apre per tutti. Il corpo di Hella davanti ad
 A2 è un gesto che il rito non pretende: bastano i tre tiri.
 
-> **Read-aloud (Casa di Davide lead, LotR support) — l'affresco A2, la visione, 1 di 2.** *Per dieci battiti l'affresco
+> **Read-aloud (Casa di Davide lead, LotR support) — l'affresco A2, la visione.** *Per dieci battiti l'affresco
 > esplode di chiarezza su un futuro possibile, non promesso. Le mura sono
 > salve e le bandiere naniche al vento. Voi quattro siete davanti al re, e
 > lei è viva, la mano nella mano di chi porta la corona; accanto, uno spiega
-> ali d'ombra, l'altro medita avvolto nel ki.*
-
-> **Read-aloud (Casa di Davide lead, LotR support) — l'affresco A2, la visione, 2 di 2.** *Sotto il balcone mille
-> nani gridano fino a far tremare la pietra: «Eroi! Salvatori!» Poi la
-> visione svanisce. Resta, più a fondo di qualsiasi affresco, una cosa sola:
-> è possibile, e dipende da voi.*
+> ali d'ombra, l'altro medita avvolto nel ki. Sotto il balcone mille nani
+> gridano fino a far tremare la pietra: «Eroi! Salvatori!» Poi la visione
+> svanisce. Resta, più a fondo di qualsiasi affresco, una cosa sola: è
+> possibile, e dipende da voi.*
 
 **Dati per il DM (non da leggere).** La fortezza salva è Hammerfist; il re è
 Re Thorek; la mano nella mano è quella di Hella in quella di Thorik; le ali
@@ -1556,10 +1537,9 @@ d'ombra sono di Artemis, il ki di Tordek.
 > che brilla, e sull'arco la runa del Fuoco arde di un arancione fermo, come
 > un faro.*
 
-> **Read-aloud (Salvatore lead, Casa di Davide support) — la Stanza della Corona, la parete dietro il trono.** *La luce che scende
-> dal passaggio vi ha riconquistato una testa di ponte. Sulla parete dietro
-> il trono, dove il sangue si è asciugato, nel silenzio la pietra si incide
-> da sola, lettera dopo lettera. Che fate?*
+> **Read-aloud (Salvatore lead, Casa di Davide support) — la Stanza della Corona, la parete dietro il trono.** *La luce del
+> passaggio vi ha riconquistato una testa di ponte. Dietro il trono, dove il
+> sangue si è asciugato, la pietra si incide da sola, lettera dopo lettera.*
 
 **Dati per il DM (non da leggere).** L'aura che si ritira è quella del
 santuario corrotto di Karrn il Senza-Volto; la luce sacra viene dal Portale P1.
@@ -2495,10 +2475,12 @@ tre. Non alza mai il tono.
 **MORADIN:** *«È un frammento della mia essenza, diventato pietra. Si usa per le emergenze supreme. Riportare una druida dalla morte si qualifica.»*
 
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
-> mithral si apre, e un istante fa non c'erano cuciture. Una camera si schiude
-> come un fiore di metallo. Dentro, sospeso nella luce, c'è un rubino grande
-> come un pugno, con la forma di un cuore nanico e le sue quattro camere.
-> Pulsa sessanta volte al minuto, e da vicino è caldo. Una cosa così si spende una volta sola.*
+> mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
+> Una camera si schiude come un fiore di metallo, un petalo dopo l'altro.
+> Dentro, sospeso nella luce, c'è un rubino grande come un pugno, con la forma
+> di un cuore nanico e le sue quattro camere. Pulsa sessanta volte al minuto,
+> regolare come chi dorme, e da vicino è caldo. Una cosa così si spende una
+> volta sola.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 
@@ -2798,8 +2780,8 @@ al Freddo 15, guarigione rapida e Radicamento, **nessuna riduzione del danno**; 
 ### DONO 3 — ARTEMIS: «La Scintilla» → **Il Rovo Eldritch**
 
 > **Read-aloud (Andor lead) — il terzo Dono.** *Artemis apre la mano sopra il
-> cuore fermo e lascia andare una scheggia della propria fiamma, un pezzo di
-> quello che è. L'anello, per la prima volta da quando lo porta, non commenta.*
+> cuore fermo e lascia andare una scheggia della sua fiamma. L'anello, per la
+> prima volta, non commenta.*
 
 **Cosa dona.** **1d6 di Eldritch Blast, per sempre**: da **7d6** a **6d6**.
 
@@ -2968,7 +2950,8 @@ momento entra la Custode: §6.
 
 **La manifestazione (allo Step 5, quando lo spirito attraversa la soglia).**
 > **Read-aloud (GoT lead) — la Sala, la soglia fra i mondi.** *Lo spirito varca la
-> soglia, e la luce dorata dell'altare vacilla. Al sud del cerchio, dove non
+> soglia, e la luce dorata dell'altare vacilla come la fiamma di una lucerna
+> quando qualcuno apre la porta. Al sud del cerchio, dove non
 > stava nessuno, adesso c'è qualcuno. Ha la forma di una donna di radici e di
 > pietra, alta come Therysol, e gli occhi sono due nodi di legno antico. Non ha
 > fretta. È come la montagna: c'è, e aspetta. Quando parla, la voce è il rumore
@@ -3050,9 +3033,8 @@ Hella. Al §8 lei ricorda chi si è offerto.
 
 **STEP 6 — La Fusione (Moradin manifesto, 3 secondi).**
 > **Read-aloud (Casa di Davide lead) — l'Altare, lo Step 6.** *La luce esplode
-> dall'altare. Per tre secondi, sopra il corpo, c'è la forma di Moradin,
-> traslucida, più alta di chiunque nella sala. Questa volta la voce passa
-> dall'aria, e la sala trema.*
+> dall'altare. Per tre secondi, sopra il corpo, c'è Moradin: traslucido, più
+> alto di chiunque. Stavolta la voce passa dall'aria, e la sala trema.*
 
 **MORADIN (voce vera, l'unica volta):** *«Hella Oakenshield. Druida antica. Ti richiamo per il servizio reso, per il sacrificio compiuto, per l'amicizia che vi lega.»*
 
@@ -4095,7 +4077,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante i colori si
 > rovesciano, e vi passano davanti vite di nani, nate e invecchiate in
-> meno di un respiro. Poi torna il peso, e con il peso il freddo.*
+> meno di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite
+> non ci sono più.*
 >
 > *Siete in un bosco di alberi vecchi, con radici grosse come un uomo sdraiato,
 > e l'aria sa di foglie marce e di fumo lontano. Uno di voi ha le ginocchia
@@ -4157,9 +4140,9 @@ rumore arriva fin qui.
 
 **In scena** — Dove: il bosco — Chi: Durin · i sei veterani
 
-> **Read-aloud (Andor lead) — il bosco.** *Fra gli abeti il sentiero scende
-> verso le mura, e dal sottobosco si alzano sette elmi: sette nani in
-> armatura completa, gli scudi accostati, le asce basse. Quello davanti è più
+> **Read-aloud (Andor lead) — il bosco.** *Fra gli abeti sale una nebbia bassa,
+> e il sentiero scende verso le mura. Dal sottobosco si alzano sette elmi:
+> sette nani in armatura completa, gli scudi accostati, le asce basse. Quello davanti è più
 > vecchio degli altri e stringe l'ascia così forte che ha le nocche bianche, e
 > da lontano arriva il tonfo sordo dei tamburi dell'orda. Poi il vecchio grida,
 > e la voce gli scappa in alto: «Fermi, chi siete?» Che fate?*
@@ -4236,7 +4219,8 @@ toccano nessuno. Prima di entrare c'è la targa.
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
 > reincisi. Questa Hammerfist non ha ancora storia. Le mura sono bianche di
 > pietra appena tagliata, gli spigoli ancora vivi, e nel cortile c'è la statua
-> di un re, una sola. Accanto al battente è appesa una targa di bronzo lucida
+> di un re, una sola. Dietro le mura le forge battono giorno e notte.
+> Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova, e sotto, sul selciato, qualcosa luccica.*
 
 
@@ -4295,12 +4279,14 @@ all'assedio: i bambini e i vecchi scendono verso le miniere con un fagotto
 ciascuno, le forge delle stanze laterali non si fermano, e dove passano i PG
 la gente smette di parlare.
 
-> **Read-aloud (Casa di Davide lead) — la sala del consiglio, il re.** *La sala è lunga quanto una
+> **Read-aloud (Casa di Davide lead) — la sala del consiglio, il re.** *Lungo il corridoio
+> i bambini e i vecchi scendono verso le miniere con un fagotto ciascuno, e al
+> vostro passaggio la gente smette di parlare. La sala è lunga quanto una
 > strada, e i pilastri sono ancora bianchi. In fondo, su un seggio di pietra
 > fredda senza cuscino, c'è un nano vecchissimo, con una grande ascia al
 > ginocchio e sulla lama un disegno di brina che non si scioglie. Si alza piano,
-> come si carica un carro, e guarda solo la fronte di chi
-> porta la corona. Sulla panca accanto, un altro vecchio resta seduto.*
+> come si carica un carro, e guarda solo la fronte di chi porta la corona.
+> Sulla panca accanto, un altro vecchio resta seduto.*
 
 **Scheda d'entrata — Re Thorek I, il re di una fortezza giovane**
 
@@ -4558,6 +4544,7 @@ sommano sullo stesso tiro), fabbri che affilano le armi, chierici che benedicono
 > scavata nella roccia: il soffitto porta ancora i colpi dello scalpello, dritti e
 > fitti come le righe di un registro. Sei brande di legno nuovo lungo il muro,
 > e su ognuna una coperta piegata in quattro da qualcuno che aveva fretta.
+> Nel soffitto c'è una crepa chiusa col piombo, e sotto non ci dorme nessuno.
 > Dalla porta aperta entra il rumore della fortezza che non dorme: martelli,
 > passi, un bambino che piange e poi smette.*
 
@@ -4751,18 +4738,15 @@ Si arriva qui se i PG vogliono comprare, vendere o barattare. La fortezza
 non ha un mercato: ha una fucina che lavora per l'alba, e una maestra armaiola
 che decide cosa ne esce.
 
-> **Read-aloud (Salvatore lead, Andor support) — la fucina.** *La fucina è
-> l'unico posto della fortezza dove nessuno parla sottovoce. Nel caldo di tre
-> forge accese aspettano file di ragazzi con quello che hanno trovato: un
-> piccone, una vanga, la spada del padre. Una nana con le braccia bruciate fino
-> al gomito prende ogni lama, la guarda di taglio contro la brace e la mette in
-> uno di due mucchi, senza dire quale sia quello buono.*
-
-> **Read-aloud (Andor lead) — il banco.** *Sul banco dietro di lei c'è poco:
-> qualche fiasca chiusa con la cera, un mazzo di frecce, un'ascia avvolta in un
-> panno grigio che nessuno tocca. La nana non smette di lavorare nel caldo della
-> brace. Alza il mento verso
-> quello che avete addosso, e aspetta.*
+> **Read-aloud (Salvatore lead, Andor support) — la fucina e il banco.** *La
+> fucina è l'unico posto della fortezza dove nessuno parla sottovoce. Davanti a
+> tre forge aspettano file di ragazzi con quello che hanno trovato: un piccone,
+> una vanga, la spada del padre. Una nana con le braccia bruciate fino al gomito
+> guarda ogni lama di taglio contro la brace e la mette in uno di due mucchi,
+> senza dire quale sia il buono. Sul banco dietro di lei, poco: qualche fiasca
+> cerata, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
+> tocca. Senza smettere di lavorare alza il mento verso quello che avete
+> addosso, e aspetta.*
 
 **GUNNVOR (asciutta, senza alzare gli occhi):** *«Stanotte non vendo. Scambio.
 Quello che serve sulle mura lo pago bene, e lo pago in braccia.»*
@@ -5231,7 +5215,8 @@ un equivoco che gli conviene.
 > diecimila nemici dormono attorno a mille fuochi, e il campo si stende fino
 > all'orizzonte come un mare in cui ogni onda è una gola che russa. L'aria sa
 > di grasso bruciato, di ferro e di bestia, e da qualche parte, al centro, c'è
-> la tenda del generale. Un passo falso, e il mare si sveglia tutto insieme.
+> la tenda del generale. Fra i fuochi passano le ronde, e lontano ulula un
+> lupo. Un passo falso, e il mare si sveglia tutto insieme.
 > Che fate?*
 
 
@@ -5557,15 +5542,15 @@ e il drago arriva sull'assalto.
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · Balvar · le quattro guardie
 
-> **Read-aloud (Andor lead) — la tenda.** *Al centro del campo c'è una tenda
-> più alta delle altre, di pelle nera, con ossa appese ai tiranti che battono
-> piano nel vento. Le pattuglie qui non passano. Dentro si ride.*
+> **Read-aloud (Andor lead) — la tenda.** *Al centro del campo, una tenda più
+> alta delle altre, di pelle nera, con ossa ai tiranti che battono nel vento.
+> Le pattuglie qui non passano. Dentro si ride.*
 
 > **Read-aloud (Salvatore lead) — dentro.** *Fa caldo, e c'è puzza di sangue
 > secco e di carne cruda. Sulla tavola, una mappa di Hammerfist piena di
 > croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, un
-> mezzo-ogre con una pietra nera al posto dell'occhio destro racconta
-> alle guardie come impalerà il re sul bastione più alto, e ride da solo.
+> mezzo-ogre grande quanto una porta di stalla, con una pietra nera al posto
+> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie come impalerà il re sul bastione più alto, e ride da solo.
 > Quattro hobgoblin in armatura nera ascoltano, le mani sulle armi.*
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
@@ -5718,13 +5703,12 @@ funziona solo se non l'hanno ancora minacciato.
 > diecimila tende e un drago.*
 
 > **Read-aloud (Andor lead) — 2 di 3, dopo che qualcuno ha reagito.** *Alza la
-> testa e vi guarda uno per uno, con calma. Quando arriva alla gemma sulla
-> fronte del vostro capo si ferma un istante di troppo. Poi torna a incidere, e
-> non chiama la guardia.*
+> testa e vi guarda lentamente, uno per uno. Sulla gemma del vostro capo si
+> ferma un istante di troppo. Poi torna a incidere. Non chiama la guardia.*
 
 > **Read-aloud (Andor lead) — 3 di 3, solo quando il silenzio diventa scomodo.** *Il vecchio parla piano, da artigiano, senza fretta: «Quella
 > corona la finirono con tre gemme. Tu ne hai due.» Un colpo di punta
-> sull'ardesia. «Quindi non è oggi.» Che fate?*
+> sull'ardesia. «Quindi non è oggi.»*
 
 
 #### Perché è con l'orda, e perché Zog'tar si fida
@@ -5933,10 +5917,9 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
-> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
-> dal seggio, e i teschi inchiodati sbattono fra loro come nacchere. Non grida
-> subito. Prima gira la testa, e la pietra nera dove dovrebbe esserci l'occhio
-> si ferma sul punto più vicino. Poi l'ascia lascia la spalla.*
+> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza,
+> e i teschi sbattono come nacchere. Non grida subito. La pietra nera si ferma
+> sul più vicino. Poi l'ascia lascia la spalla.*
 >
 > **Che fate?**
 
@@ -6824,12 +6807,15 @@ che l'incontro ha appena scelto.
 > Thorek guardano come tutti gli altri. Se il tavolo chiede «chi l'ha messo lì?»,
 > la risposta vera è «nessuno», e il silenzio del cortile la conferma.*
 
-> **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
-> un'incudine, con il piano segnato da mille anni di martelli, in mezzo a un
-> cortile pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un
-> attimo fa non c'era niente, adesso c'è una pietra rossa grande come una noce,
-> ancora calda di fuoco. I nani più vicini fanno un passo indietro, e nessuno
-> spiega niente. Tutti guardano la corona.*
+> **Read-aloud (LotR lead) — l'incudine, e l'incasso che si chiude.** *L'altare
+> è un'incudine, il piano segnato da mille anni di martelli, in un cortile
+> pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un attimo fa
+> non c'era niente, c'è una pietra rossa grande come una noce, calda di
+> fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
+> Tutti guardano la corona, e l'incasso vuoto si riempie. La pietra nuova non
+> si mescola alla luce delle altre due: batte da sola, come un secondo cuore, e
+> tira verso un punto che nessuno nel cortile vede. Sulla fronte il metallo si
+> scalda, e non si raffredda.*
 
 **Momento 1 — la pietra entra.** Il Rubino trova il suo incasso, quello che per
 tutto l'arco non rifletteva la luce. Non serve un tiro: **la Corona lo prende da
@@ -6838,12 +6824,6 @@ ancora**: il Rubino si usa **una volta sola**, e quella volta
 è il viaggio di casa. Finché non è speso resta un motore acceso nell'incasso, e
 la Corona resta a **+2**, muta come prima. Si completa **dopo l'uso**: il +3 e la
 Senzienza sono in «Il Ritorno a Hammerfist» §3, all'arrivo.
-
-> **Read-aloud (Salvatore) — l'incasso che si chiude.** *Il vuoto sulla corona
-> si riempie. La pietra nuova non si mescola alla luce delle altre due: batte da sola, come
-> un secondo cuore, e tira verso un punto che nessuno nel cortile vede. Il metallo
-> diventa caldo sulla fronte, e non si raffredda.*
-
 
 **Momento 2 — la Corona tace.** Se Thorik le parla, non risponde, e non è
 freddezza: non è ancora intera. Se il tavolo insiste, basta una riga del DM:
@@ -6854,10 +6834,9 @@ finito di bruciare.
 **Momento 3 — Aegis Fang si sveglia**. È una scena, non una riga di scheda: l'ascia resta com'è finché l'Assedio non
 è vinto, e poi si risveglia del tutto. L'Assedio è questo, ed è appena stato vinto.
 
-> **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia diventa
-> calda nella mano di Thorik, e non è il calore della forgia. È la prima volta in tre
-> anni che si fa sentire senza essere interrogata. Nel cortile nessuno se ne
-> accorge, perché nessuno sta guardando le armi.*
+> **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
+> nella mano di Thorik, e non è la forgia. Per la prima volta in tre anni parla
+> da sola. Nel cortile nessuno guarda le armi.*
 
 - **AEGIS FANG (Ego 14, servo del popolo nanico prima che del portatore):**
   *«Ho visto. Non chiedo più.»* — se al rito di cap. IV Thorik **ha donato**.
@@ -6965,14 +6944,12 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 > prende fuoco, un fuoco rosso e oro che non brucia e canta una nota sola,
 > lunga, che vi risuona nel cranio. Davanti agli occhi di Thorik passano dei
 > lampi: il generale che cade nella
-
 > tenda, due alberi in marcia che travolgono una fila di nemici, il momento in
 > cui ognuno di voi ha scelto. La pietra li tiene tutti, come si tiene una cosa
 > che servirà.*
 
 > **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce che
 > risuona come una campana, una volta sola: «Ben fatto, figli miei, avete salvato
-
 > la fortezza come doveva accadere.» Nessuno ha visto muoversi una bocca:
 > l'avete sentita nei denti. Poi la luce comincia a tirare e vi porta via, verso
 > casa, verso una fortezza che brucia mille anni più in là.*

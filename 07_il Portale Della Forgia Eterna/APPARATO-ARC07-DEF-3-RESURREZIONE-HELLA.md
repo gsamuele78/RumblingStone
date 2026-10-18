@@ -29,7 +29,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
 | SCENA 1 | l'Altare | LotR lead | 6 |
-| SCENA 2 | l'Altare, il reliquiario | Salvatore lead | 5 |
+| SCENA 2 | l'Altare, il reliquiario | Salvatore lead | 7 |
 | SCENA 3 | il cerchio, lo Step 2 | Mercer lead | 5 |
 | SCENA 3 | lo Step 3 | Andor support | 4 |
 | SCENA 4 | il cerchio, battuta 1 di 4 | Casa di Davide lead | 4 |
@@ -38,8 +38,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | il primo Dono | Casa di Davide lead | 4 |
 | SCENA 4 | il secondo Dono | Mercer lead | 4 |
 | SCENA 4 | il terzo Dono | Andor lead | 3 |
-| SCENA 5 | la Sala, la soglia fra i mondi | GoT lead | 6 |
-| SCENA 6 | l'Altare, lo Step 6 | Casa di Davide lead | 4 |
+| SCENA 5 | la Sala, la soglia fra i mondi | GoT lead | 7 |
+| SCENA 6 | l'Altare, lo Step 6 | Casa di Davide lead | 3 |
 | SCENA 6 | il ritorno | Salvatore lead | 6 |
 | SCENA 6 | le prime parole, con la voce rauca | Mercer lead | 5 |
 | SCENA 6 | il ritorno del fedele | Salvatore lead | 7 |

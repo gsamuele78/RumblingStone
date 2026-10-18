@@ -131,3 +131,33 @@ Due cose da sapere prima di votare:
 
 La scheda e la chiave non stanno in questa cartella, perché la chiave non si
 apre prima dei voti. Entrano qui con l'esito.
+
+## La varianza delle lunghezze, dal corpus
+
+Dopo il giro, il corpus di 1.762 box scritti da persone (PR #250: Gruppo
+Chimera in italiano, Paizo in inglese) ha trovato un difetto che le norme non
+misuravano. I box rifatti erano **troppo regolari**: il 90% stava fra 30 e 70
+parole, contro il 47% dei box umani, e mancavano quasi del tutto quelli
+corti. Il DM ha approvato di adottare le misure del corpus.
+
+Un passaggio per master ha variato le lunghezze secondo la funzione della
+scena. Ha accorciato i box d'urto, di reazione e di passaggio. Ha unito in un
+box lungo, fino a 100 parole e sempre entro le 12 righe, le battute
+consecutive sullo stesso luogo. Il contenuto e i tetti non sono cambiati.
+
+| | Corpus italiano | Prima della varianza | Dopo |
+|---|---:|---:|---:|
+| Box | 1.644 | 142 | 128 |
+| Parole, primo quartile | 26 | 41,5 | 34 |
+| Parole, mediana | 41 | 51 | 54 |
+| Parole, terzo quartile | 64 | 62 | 69 |
+| Box fra 30 e 70 parole | 47% | 88% | 54% |
+| Chiusure su una domanda | 7% | 21% | 21% |
+
+Le chiusure su domanda restano sopra il corpus perché ADR-0014 le vuole su
+ogni box che apre un combattimento o una scelta: i passaggi ne hanno tolte
+solo dove il box era pura descrizione. Avverbi in -mente e gerundi in coda
+restano molto sotto il corpus, sotto 1‰ contro 5,6‰ e 1,7‰: dove una frase li
+voleva sono tornati, ma non se ne sono aggiunti per fare numero. Gli indicatori
+`>4 frasi` e `>500 car` risalgono, da 13 a 30 e da 0 a 14, perché i box lunghi
+li superano per costruzione; non sono tetti.

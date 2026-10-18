@@ -442,7 +442,8 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 > **Read-aloud (LotR lead) — il passaggio.** *Per un istante i colori si
 > rovesciano, e vi passano davanti vite di nani, nate e invecchiate in
-> meno di un respiro. Poi torna il peso, e con il peso il freddo.*
+> meno di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite
+> non ci sono più.*
 >
 > *Siete in un bosco di alberi vecchi, con radici grosse come un uomo sdraiato,
 > e l'aria sa di foglie marce e di fumo lontano. Uno di voi ha le ginocchia
@@ -504,9 +505,9 @@ rumore arriva fin qui.
 
 **In scena** — Dove: il bosco — Chi: Durin · i sei veterani
 
-> **Read-aloud (Andor lead) — il bosco.** *Fra gli abeti il sentiero scende
-> verso le mura, e dal sottobosco si alzano sette elmi: sette nani in
-> armatura completa, gli scudi accostati, le asce basse. Quello davanti è più
+> **Read-aloud (Andor lead) — il bosco.** *Fra gli abeti sale una nebbia bassa,
+> e il sentiero scende verso le mura. Dal sottobosco si alzano sette elmi:
+> sette nani in armatura completa, gli scudi accostati, le asce basse. Quello davanti è più
 > vecchio degli altri e stringe l'ascia così forte che ha le nocche bianche, e
 > da lontano arriva il tonfo sordo dei tamburi dell'orda. Poi il vecchio grida,
 > e la voce gli scappa in alto: «Fermi, chi siete?» Che fate?*
@@ -583,7 +584,8 @@ toccano nessuno. Prima di entrare c'è la targa.
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
 > reincisi. Questa Hammerfist non ha ancora storia. Le mura sono bianche di
 > pietra appena tagliata, gli spigoli ancora vivi, e nel cortile c'è la statua
-> di un re, una sola. Accanto al battente è appesa una targa di bronzo lucida
+> di un re, una sola. Dietro le mura le forge battono giorno e notte.
+> Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova, e sotto, sul selciato, qualcosa luccica.*
 
 
@@ -642,12 +644,14 @@ all'assedio: i bambini e i vecchi scendono verso le miniere con un fagotto
 ciascuno, le forge delle stanze laterali non si fermano, e dove passano i PG
 la gente smette di parlare.
 
-> **Read-aloud (Casa di Davide lead) — la sala del consiglio, il re.** *La sala è lunga quanto una
+> **Read-aloud (Casa di Davide lead) — la sala del consiglio, il re.** *Lungo il corridoio
+> i bambini e i vecchi scendono verso le miniere con un fagotto ciascuno, e al
+> vostro passaggio la gente smette di parlare. La sala è lunga quanto una
 > strada, e i pilastri sono ancora bianchi. In fondo, su un seggio di pietra
 > fredda senza cuscino, c'è un nano vecchissimo, con una grande ascia al
 > ginocchio e sulla lama un disegno di brina che non si scioglie. Si alza piano,
-> come si carica un carro, e guarda solo la fronte di chi
-> porta la corona. Sulla panca accanto, un altro vecchio resta seduto.*
+> come si carica un carro, e guarda solo la fronte di chi porta la corona.
+> Sulla panca accanto, un altro vecchio resta seduto.*
 
 **Scheda d'entrata — Re Thorek I, il re di una fortezza giovane**
 
@@ -905,6 +909,7 @@ sommano sullo stesso tiro), fabbri che affilano le armi, chierici che benedicono
 > scavata nella roccia: il soffitto porta ancora i colpi dello scalpello, dritti e
 > fitti come le righe di un registro. Sei brande di legno nuovo lungo il muro,
 > e su ognuna una coperta piegata in quattro da qualcuno che aveva fretta.
+> Nel soffitto c'è una crepa chiusa col piombo, e sotto non ci dorme nessuno.
 > Dalla porta aperta entra il rumore della fortezza che non dorme: martelli,
 > passi, un bambino che piange e poi smette.*
 
@@ -1098,18 +1103,15 @@ Si arriva qui se i PG vogliono comprare, vendere o barattare. La fortezza
 non ha un mercato: ha una fucina che lavora per l'alba, e una maestra armaiola
 che decide cosa ne esce.
 
-> **Read-aloud (Salvatore lead, Andor support) — la fucina.** *La fucina è
-> l'unico posto della fortezza dove nessuno parla sottovoce. Nel caldo di tre
-> forge accese aspettano file di ragazzi con quello che hanno trovato: un
-> piccone, una vanga, la spada del padre. Una nana con le braccia bruciate fino
-> al gomito prende ogni lama, la guarda di taglio contro la brace e la mette in
-> uno di due mucchi, senza dire quale sia quello buono.*
-
-> **Read-aloud (Andor lead) — il banco.** *Sul banco dietro di lei c'è poco:
-> qualche fiasca chiusa con la cera, un mazzo di frecce, un'ascia avvolta in un
-> panno grigio che nessuno tocca. La nana non smette di lavorare nel caldo della
-> brace. Alza il mento verso
-> quello che avete addosso, e aspetta.*
+> **Read-aloud (Salvatore lead, Andor support) — la fucina e il banco.** *La
+> fucina è l'unico posto della fortezza dove nessuno parla sottovoce. Davanti a
+> tre forge aspettano file di ragazzi con quello che hanno trovato: un piccone,
+> una vanga, la spada del padre. Una nana con le braccia bruciate fino al gomito
+> guarda ogni lama di taglio contro la brace e la mette in uno di due mucchi,
+> senza dire quale sia il buono. Sul banco dietro di lei, poco: qualche fiasca
+> cerata, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
+> tocca. Senza smettere di lavorare alza il mento verso quello che avete
+> addosso, e aspetta.*
 
 **GUNNVOR (asciutta, senza alzare gli occhi):** *«Stanotte non vendo. Scambio.
 Quello che serve sulle mura lo pago bene, e lo pago in braccia.»*
@@ -1578,7 +1580,8 @@ un equivoco che gli conviene.
 > diecimila nemici dormono attorno a mille fuochi, e il campo si stende fino
 > all'orizzonte come un mare in cui ogni onda è una gola che russa. L'aria sa
 > di grasso bruciato, di ferro e di bestia, e da qualche parte, al centro, c'è
-> la tenda del generale. Un passo falso, e il mare si sveglia tutto insieme.
+> la tenda del generale. Fra i fuochi passano le ronde, e lontano ulula un
+> lupo. Un passo falso, e il mare si sveglia tutto insieme.
 > Che fate?*
 
 
@@ -1904,15 +1907,15 @@ e il drago arriva sull'assalto.
 
 **In scena** — Dove: la tenda — Chi: Zog'tar · Balvar · le quattro guardie
 
-> **Read-aloud (Andor lead) — la tenda.** *Al centro del campo c'è una tenda
-> più alta delle altre, di pelle nera, con ossa appese ai tiranti che battono
-> piano nel vento. Le pattuglie qui non passano. Dentro si ride.*
+> **Read-aloud (Andor lead) — la tenda.** *Al centro del campo, una tenda più
+> alta delle altre, di pelle nera, con ossa ai tiranti che battono nel vento.
+> Le pattuglie qui non passano. Dentro si ride.*
 
 > **Read-aloud (Salvatore lead) — dentro.** *Fa caldo, e c'è puzza di sangue
 > secco e di carne cruda. Sulla tavola, una mappa di Hammerfist piena di
 > croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, un
-> mezzo-ogre con una pietra nera al posto dell'occhio destro racconta
-> alle guardie come impalerà il re sul bastione più alto, e ride da solo.
+> mezzo-ogre grande quanto una porta di stalla, con una pietra nera al posto
+> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie come impalerà il re sul bastione più alto, e ride da solo.
 > Quattro hobgoblin in armatura nera ascoltano, le mani sulle armi.*
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
@@ -2065,13 +2068,12 @@ funziona solo se non l'hanno ancora minacciato.
 > diecimila tende e un drago.*
 
 > **Read-aloud (Andor lead) — 2 di 3, dopo che qualcuno ha reagito.** *Alza la
-> testa e vi guarda uno per uno, con calma. Quando arriva alla gemma sulla
-> fronte del vostro capo si ferma un istante di troppo. Poi torna a incidere, e
-> non chiama la guardia.*
+> testa e vi guarda lentamente, uno per uno. Sulla gemma del vostro capo si
+> ferma un istante di troppo. Poi torna a incidere. Non chiama la guardia.*
 
 > **Read-aloud (Andor lead) — 3 di 3, solo quando il silenzio diventa scomodo.** *Il vecchio parla piano, da artigiano, senza fretta: «Quella
 > corona la finirono con tre gemme. Tu ne hai due.» Un colpo di punta
-> sull'ardesia. «Quindi non è oggi.» Che fate?*
+> sull'ardesia. «Quindi non è oggi.»*
 
 
 #### Perché è con l'orda, e perché Zog'tar si fida
@@ -2280,10 +2282,9 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
-> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
-> dal seggio, e i teschi inchiodati sbattono fra loro come nacchere. Non grida
-> subito. Prima gira la testa, e la pietra nera dove dovrebbe esserci l'occhio
-> si ferma sul punto più vicino. Poi l'ascia lascia la spalla.*
+> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza,
+> e i teschi sbattono come nacchere. Non grida subito. La pietra nera si ferma
+> sul più vicino. Poi l'ascia lascia la spalla.*
 >
 > **Che fate?**
 
@@ -3171,12 +3172,15 @@ che l'incontro ha appena scelto.
 > Thorek guardano come tutti gli altri. Se il tavolo chiede «chi l'ha messo lì?»,
 > la risposta vera è «nessuno», e il silenzio del cortile la conferma.*
 
-> **Read-aloud (LotR lead) — l'incudine.** *Quello che chiamano altare è
-> un'incudine, con il piano segnato da mille anni di martelli, in mezzo a un
-> cortile pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un
-> attimo fa non c'era niente, adesso c'è una pietra rossa grande come una noce,
-> ancora calda di fuoco. I nani più vicini fanno un passo indietro, e nessuno
-> spiega niente. Tutti guardano la corona.*
+> **Read-aloud (LotR lead) — l'incudine, e l'incasso che si chiude.** *L'altare
+> è un'incudine, il piano segnato da mille anni di martelli, in un cortile
+> pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un attimo fa
+> non c'era niente, c'è una pietra rossa grande come una noce, calda di
+> fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
+> Tutti guardano la corona, e l'incasso vuoto si riempie. La pietra nuova non
+> si mescola alla luce delle altre due: batte da sola, come un secondo cuore, e
+> tira verso un punto che nessuno nel cortile vede. Sulla fronte il metallo si
+> scalda, e non si raffredda.*
 
 **Momento 1 — la pietra entra.** Il Rubino trova il suo incasso, quello che per
 tutto l'arco non rifletteva la luce. Non serve un tiro: **la Corona lo prende da
@@ -3185,12 +3189,6 @@ ancora**: il Rubino si usa **una volta sola**, e quella volta
 è il viaggio di casa. Finché non è speso resta un motore acceso nell'incasso, e
 la Corona resta a **+2**, muta come prima. Si completa **dopo l'uso**: il +3 e la
 Senzienza sono in «Il Ritorno a Hammerfist» §3, all'arrivo.
-
-> **Read-aloud (Salvatore) — l'incasso che si chiude.** *Il vuoto sulla corona
-> si riempie. La pietra nuova non si mescola alla luce delle altre due: batte da sola, come
-> un secondo cuore, e tira verso un punto che nessuno nel cortile vede. Il metallo
-> diventa caldo sulla fronte, e non si raffredda.*
-
 
 **Momento 2 — la Corona tace.** Se Thorik le parla, non risponde, e non è
 freddezza: non è ancora intera. Se il tavolo insiste, basta una riga del DM:
@@ -3201,10 +3199,9 @@ finito di bruciare.
 **Momento 3 — Aegis Fang si sveglia**. È una scena, non una riga di scheda: l'ascia resta com'è finché l'Assedio non
 è vinto, e poi si risveglia del tutto. L'Assedio è questo, ed è appena stato vinto.
 
-> **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia diventa
-> calda nella mano di Thorik, e non è il calore della forgia. È la prima volta in tre
-> anni che si fa sentire senza essere interrogata. Nel cortile nessuno se ne
-> accorge, perché nessuno sta guardando le armi.*
+> **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
+> nella mano di Thorik, e non è la forgia. Per la prima volta in tre anni parla
+> da sola. Nel cortile nessuno guarda le armi.*
 
 - **AEGIS FANG (Ego 14, servo del popolo nanico prima che del portatore):**
   *«Ho visto. Non chiedo più.»* — se al rito di «La Resurrezione di Hella» Thorik **ha donato**.
@@ -3312,14 +3309,12 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 > prende fuoco, un fuoco rosso e oro che non brucia e canta una nota sola,
 > lunga, che vi risuona nel cranio. Davanti agli occhi di Thorik passano dei
 > lampi: il generale che cade nella
-
 > tenda, due alberi in marcia che travolgono una fila di nemici, il momento in
 > cui ognuno di voi ha scelto. La pietra li tiene tutti, come si tiene una cosa
 > che servirà.*
 
 > **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce che
 > risuona come una campana, una volta sola: «Ben fatto, figli miei, avete salvato
-
 > la fortezza come doveva accadere.» Nessuno ha visto muoversi una bocca:
 > l'avete sentita nei denti. Poi la luce comincia a tirare e vi porta via, verso
 > casa, verso una fortezza che brucia mille anni più in là.*

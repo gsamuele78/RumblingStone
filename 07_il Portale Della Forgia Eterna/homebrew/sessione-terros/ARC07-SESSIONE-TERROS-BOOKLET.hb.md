@@ -999,16 +999,14 @@ sue, con le sue cariche; i dati sono quelli di «Il Ritorno e gli Affreschi» §
 > registra le vostre gesta: quella è la **Cronaca Vivente**, dettaglio nel
 > «Il Ritorno e gli Affreschi». Qui conta l'apertura della Terra.)
 
-> **Read-aloud (Salvatore lead, LotR support) — l'affresco A5.** *Un rombo
-> basso sale dal pavimento ed entra nelle ossa; le colonne vibrano in
-> risonanza. L'Affresco Est, pietra grigia e inerte, si sgretola senza cadere,
-> e la pietra dipinta si fa pietra vera. Arriva odore di terra umida, di
-> caverne, di minerale. Una gravità pesante tira verso il muro.*
-
-> **Read-aloud (Salvatore lead) — la Corona.** *Sulla fronte del portatore le
-> rune del diadema passano dall'arancione del Fuoco alla luce di uno smeraldo
-> profondo. Aegis Fang batte a terra da sola: tump, tump, il suono di un passo
-> pesante che scende una scala senza fondo.*
+> **Read-aloud (Salvatore lead, LotR support) — l'affresco A5 e la Corona.** *Un rombo basso
+> sale dal pavimento ed entra nelle ossa; le colonne vibrano in risonanza.
+> L'Affresco Est, pietra grigia e inerte, si sgretola senza cadere, e la
+> pietra dipinta si fa pietra vera. Arriva odore di terra umida, di caverne,
+> di minerale. Una gravità pesante tira verso il muro. Sulla fronte del
+> portatore le rune del diadema passano dall'arancione del Fuoco alla luce di
+> uno smeraldo profondo. Aegis Fang batte a terra da sola: tump, tump, il
+> suono di un passo pesante che scende una scala senza fondo.*
 
 > **Iscrizione che affiora (il messaggio di Moradin):**
 > *«Il Fuoco ha purificato lo Spirito.*
@@ -1584,21 +1582,19 @@ la Sentinella** (Scena 7), sul corridoio che scende verso Terros.
 > per secoli era rimasto sepolto nel muro. *Nessuno l'ha portato qui a mano:
 > è il mercato che cresce dove passa la ricchezza.*
 
-> **Read-aloud (Salvatore lead, solo per Artemis) — il corridoio, 1 di 3.** *Il corridoio riprende a
-> scendere nel silenzio, e i compagni si rimettono in marcia: il nano coi
-> guanti nuovi cammina come se il pavimento gli dovesse dei soldi. Allora
-> l'Anello, freddo, ti morde il dito. Quel morso lì.*
+> **Read-aloud (Salvatore lead, solo per Artemis) — il corridoio, 1 di 2.** *Il corridoio riprende
+> a scendere. Il nano coi guanti nuovi cammina come se il pavimento gli
+> dovesse dei soldi. Poi l'Anello, freddo, ti morde il dito. Quel morso lì.*
 
-> **Read-aloud (Salvatore lead) — il corridoio, 2 di 3.** *Nella parete, dove il duello ha aperto una crepa nel mithral, qualcosa
-> cattura la luce in un modo che il metallo non fa: un **cabochon violetto**,
-> grande come l'unghia del pollice, incastonato nella pietra come una zecca
-> nel cuoio. È **caldo**. In un piano dove tutto è freddo educato, quella
-> cosa è tiepida come una mano appena tolta da una tasca.*
-
-> **Read-aloud (Andor lead) — il corridoio, 3 di 3.** *E tu sai leggere i
-> tagli delle gemme come altri leggono le insegne delle locande. Quel taglio
-> l'hanno fatto mani civili, in un posto dove esistono i banchi e i registri.
-> Qualcuno l'ha lasciata qui per un passante preciso: uno come te. Che fai?*
+> **Read-aloud (Salvatore lead, Andor support) — il corridoio, 2 di 2.** *Nella crepa che
+> il duello ha aperto nel mithral, qualcosa cattura la luce in un modo che il
+> metallo non fa: un **cabochon violetto**, grande come l'unghia del pollice,
+> incastonato come una zecca nel cuoio. È **caldo**. In un piano dove tutto è
+> freddo educato, quella cosa è tiepida come una mano appena tolta da una
+> tasca. Tu sai leggere i tagli delle gemme come altri leggono le insegne
+> delle locande. Quel taglio l'hanno fatto mani civili, in un posto dove
+> esistono i banchi e i registri. Qualcuno l'ha lasciata qui per un passante
+> preciso: uno come te. Che fai?*
 
 **Cosa vede Artemis (e solo lui).** La **Vista Potenziata** e la **Sapienza
 Forgiata** dell'Anello gliela rivelano; **Sapienza Magica (CD 20, gratis via
@@ -1851,16 +1847,15 @@ non c'è niente di più interessante.
 
 **In scena** — Dove: l'oceano di roccia — Chi: nessuno
 
-> **Read-aloud (LotR lead) — l'oceano di roccia.** *Qui il suolo smette di
-> fingere di essere solido. Fino a un orizzonte che non esiste si stende un
-> oceano di roccia grigia: onde lente come pensieri di montagna, creste che
-> impiegano un'ora a rompersi, correnti di granito liquido senza suono.
-> Toccarlo è come toccare il fianco di un toro: cede, e sotto c'è il muscolo.*
-
-> **Read-aloud (Salvatore lead) — il cubo sospeso.** *Sopra le onde, sospeso
-> nel vuoto, ruota il cubo d'argento, perfetto come un dado lanciato da un dio
-> e mai atterrato. Aegis Fang vibra così forte che il braccio duole. Fra la
-> riva e la porta del cubo c'è soltanto aria. Che fate?*
+> **Read-aloud (LotR lead, Salvatore support) — l'oceano di roccia e il cubo sospeso.** *Qui il suolo
+> smette di fingere di essere solido. Fino a un orizzonte che non esiste si
+> stende un oceano di roccia grigia: onde lente come pensieri di montagna,
+> creste che impiegano un'ora a rompersi, correnti di granito liquido senza
+> suono. Toccarlo è come toccare il fianco di un toro: cede, e sotto c'è il
+> muscolo. Sopra le onde, sospeso nel vuoto, ruota il cubo d'argento, perfetto
+> come un dado lanciato da un dio e mai atterrato. Aegis Fang vibra così forte
+> che il braccio duole. Fra la riva e la porta del cubo c'è soltanto aria.
+> Che fate?*
 
 ### 7a. Raggiungere il Tempio (co-op: Ancora, Traghettatore, Navigatore)
 Il portale è **sotto** il cubo, 50 m sopra l'oceano di roccia; il Tempio ha
@@ -1974,9 +1969,8 @@ La stanza divide gli intrusi in tre: un box per ciascuno, letto al suo
 giocatore, poi la meccanica.
 
 > **Read-aloud (Salvatore lead, per Thorik) — l'anticamera.** *«Il metallo
-> chiama il metallo.» Nel ronzio della stanza armatura, scudo e ascia pesano
-> di colpo tonnellate, e tirano verso le pareti. La parete nord, nera e venata
-> di viola, ti strappa via e ti tiene incollato come una mosca sulla carta.*
+> chiama il metallo.» Armatura, scudo e ascia pesano di colpo tonnellate. La
+> parete nord, nera e venata di viola, ti incolla come una mosca sulla carta.*
 
 **Thorik è immobilizzato**: FOR CD 25 per liberarsi; finché non riesce non si
 muove, ed è fuori dallo scontro, costretto a guardare.
@@ -2088,19 +2082,16 @@ si allontana lo insegue; Thorik e Artemis li ignora.
 **Il Risveglio (visione, stile Salvatore).** Il Geode galleggia verso Tordek,
 il guanto sinistro si apre come petali d'acciaio. TS **Volontà CD 20** (fallito:
 stordito 1 minuto dopo la visione). La visione si legge al solo giocatore di
-Tordek, in due battute.
+Tordek, tutta in un box.
 
-> **Read-aloud (Salvatore lead, per Tordek) — la visione, 1 di 2.** *La
-> stanza svanisce. Sei sepolto vivo nella roccia, nel buio, la terra fredda
-> nei polmoni, un panico più vecchio di te. Poi una voce tettonica ti
-> attraversa lo scheletro: «Il fuoco brucia in fretta e muore. La roccia
-> attende. La roccia sostiene. La roccia vince perché non ha fretta.»*
-
-> **Read-aloud (LotR lead, per Tordek) — la visione, 2 di 2.** *Ere
-> geologiche in pochi battiti: montagne che nascono dallo scontro dei
-> continenti, magma che si fa granito. Un nano solitario, grande come una
+> **Read-aloud (LotR lead, Salvatore support, per Tordek) — la visione.** *La
+> stanza svanisce. Sepolto vivo nella roccia, la terra fredda nei polmoni. Poi
+> una voce tettonica, nello scheletro: «Il fuoco brucia in fretta e
+> muore. La roccia attende. La roccia sostiene. La roccia vince perché non ha
+> fretta.» Ere geologiche in pochi battiti: montagne che nascono dallo scontro
+> dei continenti, magma che si fa granito. Un nano, grande come una
 > catena montuosa, batte sull'incudine del mondo: ogni colpo apre una valle,
-> ogni scintilla un filone di mithral. E la voce: «Hai il fuoco, figlio. Ma il
+> ogni scintilla un filone di mithral. La voce: «Hai il fuoco, figlio. Ma il
 > fuoco senza controllo è distruzione. Serve il peso per dare forma,
 > l'incudine per dare scopo.»*
 
@@ -2207,26 +2198,23 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 > è l'Altare stesso a fare da approdo. Il rischio «ritirata tagliata» resta,
 > in forma migliore — vedi il distacco qui sotto.
 
-> **Read-aloud (LotR lead, Salvatore support) — i sei secondi della soglia, 1 di 3.** *La soglia si apre come una pupilla. Oltre, una bolla: una sfera di cristallo
+> **Read-aloud (LotR lead, Salvatore support) — i sei secondi della soglia, 1 di 2.** *La soglia si apre come una pupilla. Oltre, una bolla: una sfera di cristallo
 > grande come la piazza di un mercato, e fuori il buio preme contro il vetro.
 > In quel buio passano lentissime le sagome dei geodi giganti, pesci troppo
 > grandi intorno a una lanterna. L'aria qui dentro è pulita, la prima da ore,
 > e le narici se ne accorgono prima della testa.*
 
-> **Read-aloud (Salvatore lead) — la soglia, 2 di 3.** *Davanti agli stivali,
-> una lastra d'argento vivo larga quanto la sala comune di una locanda, incisa
-> di rune verdi che pulsano piano. Oltre il bordo il «sotto» finisce, e
-> comincia il vuoto. Sopra il centro della lastra pende una luce verde senza
+> **Read-aloud (Salvatore lead, LotR support) — la soglia, 2 di 2.** *Davanti
+> agli stivali, una lastra d'argento vivo larga quanto la sala comune di una
+> locanda, incisa di rune verdi che pulsano piano. Oltre il bordo il «sotto»
+> finisce, e comincia il vuoto. Sopra il centro pende una luce verde senza
 > catena: una gemma grande come un pugno di nano, che gira lentissima e tinge
-> le mani del suo colore.*
+> le mani del suo colore. All'altro capo, una collina. Roccia a strati,
+> basalto, granito, marmo e una vena scura dal lucore d'adamantio, accatastati
+> come pagine di un libro chiuso da troppo tempo. Non si muove, non respira, e
+> occupa un terzo della piattaforma. Che fate?*
 
-> **Read-aloud (LotR lead) — la soglia, 3 di 3.** *All'altro capo della lastra
-> c'è una collina. Roccia a strati, basalto, granito, marmo e una vena scura
-> dal lucore d'adamantio, accatastati come pagine di un libro chiuso da troppo
-> tempo. Non si muove, non respira, e occupa un terzo della piattaforma.
-> Che fate?*
-
-**Se attaccano la collina**. I tre box si leggono con
+**Se attaccano la collina**. I due box si leggono con
 il gruppo ancora sulla soglia. Terros si sveglia appena qualcuno mette piede
 sull'Altare o lo attacca dalla soglia, e il gruppo ha il round di sorpresa:
 nell'SRD agisce ogni PG pronto, con un'azione standard o di movimento a testa. Terros non è indifeso: un elementale non dorme davvero. Agisce dal
@@ -2240,10 +2228,8 @@ risveglio qui sotto.
 > denti prima che alle orecchie.*
 
 > **Read-aloud (Salvatore lead) — il risveglio del guardiano, 2 di 2.** *La
-> gravità della sala si inclina verso di lui con uno scricchiolio lungo, come
-> verso il suo padrone. Nella mano del portatore Aegis Fang si fa fredda e tace
-> di colpo: davanti all'Incudine del Mondo
-> anche una voce antica abbassa il capo.*
+> gravità si piega verso di lui, come verso il padrone. Aegis Fang si fa fredda
+> e tace: davanti all'Incudine del Mondo anche una voce antica abbassa il capo.*
 
 ### 8b. IL DISTACCO — l'Altare si centra sul guardiano
 
@@ -2268,16 +2254,14 @@ in linea retta a metà velocità — §0-bis). **La ritirata non viene tagliata
 da una trappola: se la tagliano da soli**, ed è molto più bello. Da qui in
 poi vale la **MAPPA T-6**.
 
-> **Read-aloud (Salvatore lead) — il distacco, l'Altare, 1 di 2.** *Prima
-> della collina si muove il bordo. Con un suono di ghiaccio che si stacca da un
+> **Read-aloud (Salvatore lead) — il distacco, l'Altare.** *Prima della
+> collina si muove il bordo. Con un suono di ghiaccio che si stacca da un
 > tetto, la lastra si scolla dalla soglia, e la soglia comincia ad
-> allontanarsi: piano, con la calma di una chiatta che lascia il molo.*
-
-> **Read-aloud (Salvatore lead) — l'Altare, 2 di 2.** *Le rune verdi della
-> lastra si accendono tutte insieme: il mondo ha deciso dove deve stare il suo
-> centro. L'Altare si ferma proprio in mezzo alla bolla, sospeso in un
-> nulla più largo di prima. La porta d'ingresso è un cerchio di luce lontano,
-> di là da un vuoto senza appigli, e la collina si alza ancora.
+> allontanarsi: piano, con la calma di una chiatta che lascia il molo. Le rune
+> verdi della lastra si accendono tutte insieme: il mondo ha deciso dove deve
+> stare il suo centro. L'Altare si ferma proprio in mezzo alla bolla, sospeso
+> in un nulla più largo di prima. La porta d'ingresso è un cerchio di luce
+> lontano, di là da un vuoto senza appigli, e la collina si alza ancora.
 > Che fate?*
 
 **Scenografia della Camera (recuperata da TACTICAL-GRIDS MAP 6).** L'arena non è
@@ -2529,13 +2513,13 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 > spalla.*
 
 > **Read-aloud (Salvatore lead) — il primo scambio, Tordek.** *Tordek, il
-> mondo ruota e tu ruoti con lui. I guanti sussurrano una parola sola, «peso»,
-> e i tuoi piedi restano piantati sull'Altare come su un pavimento.*
+> mondo ruota e tu con lui. I guanti sussurrano una parola sola, «peso», e i
+> piedi restano piantati sull'Altare come su un pavimento.*
 
 > **Read-aloud (Salvatore lead) — il primo scambio, Artemis.** *Artemis, per
 > te nulla è cambiato: le ali d'ombra non obbediscono alla terra. Sotto di te
 > restano il guardiano, l'Altare, i compagni aggrappati a un mondo capovolto.
-> La testa di roccia si volta lenta verso l'unico che non è caduto. Che fate?*
+> La testa di roccia si volta lentamente verso l'unico che non è caduto. Che fate?*
 
 **Sinergie dei PG ("Shine Time").**
 - **Tordek — lo Scassa-Scudi**: RD 5/adamantio per reggere gli schianti; il
@@ -3073,9 +3057,8 @@ non lo accetta: è legata a Thorik.
     quello del metallo bagnato — e ti resta addosso per giorni.*
 
 > **Read-aloud (Salvatore lead) — chiusura del round 1.** *La gemma è entrata
-> di un'unghia nel castone della Corona. Un'unghia. Dalla lastra sale un ronzio
-> basso, e la polvere alzata dal rito non ricade: resta ferma a mezz'aria, in
-> attesa.*
+> di un'unghia nel castone della Corona. Un'unghia. Dalla lastra sale un
+> ronzio basso, e la polvere del rito resta ferma a mezz'aria.*
 
 #### ROUND 2 — «La resistenza»
 
@@ -3113,10 +3096,9 @@ non lo accetta: è legata a Thorik.
     apre in due attorno a voi come una tenda.*
   - **Fallimento** → *Passa. **(Malus.)** E Thorik incassa anche la tua parte.*
 
-> **Read-aloud (Salvatore lead) — chiusura del round 2.** *Metà. La gemma è
-> dentro a metà, e sul diadema la pietra d'oro della fronte e quella verde della
-> tempia si guardano. La polvere sospesa gira più veloce. Fuori, oltre
-> la parete di cristallo, il buio del Piano si è avvicinato a guardare.*
+> **Read-aloud (Salvatore lead) — chiusura del round 2.** *Metà. Sul diadema
+> la pietra d'oro della fronte e quella verde della tempia si guardano. La
+> polvere gira più veloce. Fuori, il buio del Piano è venuto a guardare.*
 
 #### ROUND 3 — «L'assestamento»
 
@@ -3169,18 +3151,17 @@ impossibile perderla.** E la Forgia dà una **vibrazione di assestamento**: la
 polvere di Terros e i cristalli strappati collassano in un vortice
 gravitazionale accanto all'Altare.
 
-> **Read-aloud (Salvatore lead) — l'Altare, Durik prende forma, 1 di 3.** *L'onda verde percuote la camera con un tuono basso, e nel vortice la
-> polvere tiepida del guardiano si mescola ai frammenti di cristallo vivente: quelli che una polvere più antica,
-> sparsa nel Sogno della Terra da mani che amavano, ha già trovato e riempito.
-> La materia inanime prende forma, guidata da qualcosa che preme sul mondo dei
-> vivi prima del suo tempo.*
+> **Read-aloud (Salvatore lead, LotR support) — l'Altare, Durik prende forma, 1 di 2.** *L'onda verde
+> percuote la camera con un tuono basso, e nel vortice la polvere tiepida del
+> guardiano si mescola ai cristalli viventi: quelli che una
+> polvere più antica, sparsa nel Sogno della Terra da mani che amavano, ha già
+> trovato e riempito. La materia prende forma, guidata da qualcosa che preme
+> sul mondo dei vivi prima del suo tempo. Mascelle enormi, zampe da cane da
+> galoppo, un dorso dove il mithral si intreccia alla pietra scura come
+> muscolo a osso. Gli occhi si aprono: topazio. Non abbaia: fa un
+> click di roccia, lo strofinio di una faglia lontana.*
 
-> **Read-aloud (LotR lead) — Durik prende forma, 2 di 3.** *Mascelle enormi,
-> zampe da cane da galoppo, un dorso dove il mithral si intreccia alla pietra
-> scura come muscolo a osso. Gli occhi si aprono, e sono di topazio. Non abbaia:
-> il suono che fa è un click di roccia, lo strofinio di una faglia lontana.*
-
-> **Read-aloud (Casa di Davide lead) — Durik prende forma, 3 di 3.** *Prima
+> **Read-aloud (Casa di Davide lead) — Durik prende forma, 2 di 2.** *Prima
 > ancora di guardare i vivi, si mette fra il corpo che non c'è e il pericolo
 > che non c'è più. Protegge qualcuno, anche adesso, anche qui.*
 
