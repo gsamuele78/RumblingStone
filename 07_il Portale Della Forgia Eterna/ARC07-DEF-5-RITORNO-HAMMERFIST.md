@@ -987,7 +987,7 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 16    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │ (P-Q 13-14 · Ø 6 m,
 17    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  +3 m, basalto+rune oro)
 18    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │ ⚫ RE THOREK (8 pf)
-19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8, solo regia lunga)
+19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8 · breve: porte)
 20    🪨⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛🪨  │
 21    🪨⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
 22    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
@@ -1000,17 +1000,15 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
 LEGENDA · ⬛ pavimento di caverna · 🪨 pareti · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
-🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera ·
+🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
+sfera compare in tutte e due le regie: al Round 8 nella lunga, quando le porte
+cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
 (copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @tipo tattica caverna
 ```
 
-> ⚠️ **Come leggere CM-1 stasera.** La griglia è disegnata per la regia lunga
-> dell'ARC-08. Nella regia breve la sfera ✨ compare lo stesso, nell'istante in
-> cui le porte cedono: «R8, solo regia lunga» vale per il round, non per la
-> sfera. I PG non sono segnati sulla griglia: compaiono sull'altare, P-Q 13-14.
 > Il varco che gli hobgoblin aprono nell'anello è sul lato nord, fra la porta e
 > l'altare (riga 04). Dove sono tutti: Scena 2, «Dove sono tutti».
 
@@ -1027,7 +1025,7 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
                     ✨ oro·verde ✨      (Topazio+Smeraldo+Rubino)
                       ✨·rosso✨
                            │
-                           ▼  ROUND 8: ESPLOSIONE DI LUCE (non violenta)
+                           ▼  ROUND 8 (breve: le porte cedono): ESPLOSIONE DI LUCE
                       💥💥💥💥💥
                            │
                            ▼

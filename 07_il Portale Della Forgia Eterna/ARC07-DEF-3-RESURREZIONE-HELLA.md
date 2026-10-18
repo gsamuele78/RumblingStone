@@ -1633,17 +1633,14 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
                         🛡️ THORIK
                     (Corona + Aegis Fang)
                    Conoscenze relig. CD 15
-                           │
-         🔮 ARTEMIS ───────┼─────── 🥋 TORDEK
-         (Ring, UMD 18)    │        (ki, Concentr. 20)
-      OVEST                │                        EST
-                   ╔═══════╪═══════╗
-                   ║   🟡 ALTARE   ║   🟡 = Cuore di Moradin
-                   ║  († Hella,   ║        (posato sul cuore di Hella)
-                   ║   3 semi:    ║   † = corpo di Hella (supino)
-                   ║  🌰 fronte   ║   🌰 = seme (mano sx / mano dx / fronte)
-                   ║ 🌰 sx  dx 🌰 ║        → triangolo inscritto nel cerchio
-                   ╚═══════╪═══════╝
+                           │ 3 m
+                   ╔═══════╧═══════╗
+   🔮 ARTEMIS      ║   🟡 ALTARE   ║      🥋 TORDEK
+   (Ring, UMD 18)  ║  († Hella,    ║   (ki, Concentr. 20)
+   OVEST ── 3 m ───╢   3 semi:     ╟─── 3 m ── EST
+                   ║  🌰 fronte    ║
+                   ║ 🌰 sx  dx 🌰  ║
+                   ╚═══════╤═══════╝
                            │
                     (SUD = VUOTO)
                   ← da qui fluisce l'energia →
@@ -1651,17 +1648,14 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
                     ✦ LA CUSTODE DELLE RADICI (§6)
                           SUD  ▲
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin · † corpo di Hella · 🌰 3 semi
-(triangolo) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O) · SUD vuoto
-(energia + soglia della Custode). Chi officia NON può fare altro durante gli
-step. Therysol veglia ai margini (testimone, non officiante).
+LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin (posato sul cuore di Hella) ·
+† corpo di Hella (supino) · 🌰 3 semi (mano sx / mano dx / fronte: triangolo
+inscritto nel cerchio) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O), tutti
+a 3 m dal centro: con il SUD vuoto (energia + soglia della Custode) fanno una
+croce. Chi officia NON può fare altro durante gli step. Therysol veglia ai
+margini (testimone, non officiante).
 DISPOSIZIONE SACRA: 3 semi (triangolo) inscritti nel cerchio dei 3 officianti.
 ════════════════════════════════════════════════════════════════════════
 ```
-
-⚠️ **Come si legge la griglia.** Tordek e Artemis sono disegnati sopra
-l'Altare per far stare le etichette. Al tavolo stanno a est e a ovest, alla
-sua altezza, a tre metri dal centro come Thorik: i tre punti e il Sud vuoto
-fanno una croce.
 
 <!-- /pagina -->

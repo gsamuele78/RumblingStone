@@ -1870,9 +1870,7 @@ Tempio è a **40 m** dalla riva, e il suo portale sta **50 m** sopra l'oceano:
 le due misure non si contraddicono, una è la distanza e l'altra l'altezza. La
 MAPPA T-4 mostra il ramo dei tre ruoli: Tordek salta, a 20 m la gravità del
 Tempio lo cattura, all'arrivo colpisce le Rune di Attracco, e poi gli altri
-salgono la corda. Le rune si colpiscono all'arrivo, e la MAPPA T-4 qui sotto
-lo scrive così; l'Atlante delle mappe porta ancora la nota vecchia «[dopo aver
-colpito le Rune di Attracco]», e vince questo testo. La strada non c'è: la si crea cantando la **Frequenza** o
+salgono la corda. La strada non c'è: la si crea cantando la **Frequenza** o
 suonando il **Diapason**, e tenendo la musica. Con la sola Frequenza la
 scala arriva a metà strada e il resto si fa coi tre ruoli; col Diapason arriva
 fino al portale. Chi ha saltato i Cristalli non ha né l'una né l'altro, e
@@ -3349,9 +3347,7 @@ contata a parte (audit WBL).
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
 > Definitivo**. Le griglie qui sotto sono
-> identiche, salvo due correzioni di canone fatte qui e non ancora là (la runa
-> di Varis tolta da T-1 e T-3, la nota delle Rune di Attracco in T-4); là hanno
-> gli add-on DM. **I booklet includono l'Atlante.**
+> identiche; là hanno gli add-on DM. **I booklet includono l'Atlante.**
 
 ### MAPPA T-1 — PIANO DELLA TERRA: orizzonte & percorso (schematica)
 
@@ -3423,8 +3419,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
 ```
 
 La runa di Varis in J05 delle stesure vecchie non si gioca (canone del §6): in
-questa griglia J05 è un Cristallo Vivente come gli altri. L'Atlante delle mappe
-la porta ancora, finché non viene corretto.
+questa griglia J05 è un Cristallo Vivente come gli altri.
 
 ### MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (§7a)
 

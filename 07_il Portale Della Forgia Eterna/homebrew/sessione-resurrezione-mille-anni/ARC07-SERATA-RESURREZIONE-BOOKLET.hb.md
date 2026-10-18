@@ -1069,10 +1069,7 @@ sua scena, la 4 (§6).
 15 m; muri basalto+oro (Durezza 20); 4 colonne sacre (1 mithral a nord, 3
 adamantio); Altare centrale 2×2 m con la Forgia Eterna; **Portale P1** a nord
 (sempre aperto, verso la Stanza della Corona). Pavimento perfetto (corsa ×4
-possibile). Zona **sicura**: nessun nemico. Vedi **MAPPA S-1**. ⚠️ La mappa S-1
-mette il corpo di Hella (†) fra A6 e A8, la scheda di Therysol lo dice accanto
-all'Altare: decidi prima della sessione dove lo trovano. Durik non è segnato
-sulla mappa: sta dove lo porta la sua giocatrice.
+possibile). Zona **sicura**: nessun nemico. Vedi **MAPPA S-1**.
 
 **Cosa cambia dopo la Terra (stato degli affreschi all'arrivo):**
 - **A4 (Fuoco)**: chiuso e statico da tempo (vulcano spento, dominio).
@@ -1873,18 +1870,20 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
    CHIUSO   │                ║   MORADIN    ║                    │ →«Forza
             │                ║  🔥 Forgia   ║                    │ Sostenuta»
             │                ╚══════════════╝                    │ (si chiude)
-            │                                                    │
+            │        † corpo di Hella · Therysol · Durik         │
             │                 🔲 col.adam. (sud)                 │
       [ A6 ]╲                                                    ╱[ A7 ]
-   «Tempo»   ╲   († corpo di Hella — vegliato da Therysol)      ╱ «Hammerfist»
+   «Tempo»   ╲                                                  ╱ «Hammerfist»
    (→80%,    ╲                                                 ╱  LIVE ⏳3g20h
    portale)   └───────────[ A8 «Ritorno Trionfale» ]──────────┘  +Aegis Bane
                           SUD  ▲   (vuoto → 60%)
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 (1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn
-· † corpo di Hella (davanti ad A8 per la manifestazione) · [P1] portale
-sempre aperto. Distanze: spawn→Altare 6 m; Altare→parete 15 m; Ø 40 m.
+· † corpo di Hella accanto all'Altare, lato sud `[INFERRED — needs DM confirmation]`,
+vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik
+fra il corpo e il pericolo · [P1] portale sempre aperto. Distanze:
+spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal centro); Ø 40 m.
 STATO DOPO LA TERRA: A4 chiuso · A5 si chiude («Forza Sostenuta») · A2 80%
 (4ª figura = Hella prende contorno) · A6 80% (portale del Tempo pulsa) ·
 A8 60% · A7 ⏳~3g20h. La Sala HA REGISTRATO la vittoria: mostralo.
@@ -3531,17 +3530,14 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
                         🛡️ THORIK
                     (Corona + Aegis Fang)
                    Conoscenze relig. CD 15
-                           │
-         🔮 ARTEMIS ───────┼─────── 🥋 TORDEK
-         (Ring, UMD 18)    │        (ki, Concentr. 20)
-      OVEST                │                        EST
-                   ╔═══════╪═══════╗
-                   ║   🟡 ALTARE   ║   🟡 = Cuore di Moradin
-                   ║  († Hella,   ║        (posato sul cuore di Hella)
-                   ║   3 semi:    ║   † = corpo di Hella (supino)
-                   ║  🌰 fronte   ║   🌰 = seme (mano sx / mano dx / fronte)
-                   ║ 🌰 sx  dx 🌰 ║        → triangolo inscritto nel cerchio
-                   ╚═══════╪═══════╝
+                           │ 3 m
+                   ╔═══════╧═══════╗
+   🔮 ARTEMIS      ║   🟡 ALTARE   ║      🥋 TORDEK
+   (Ring, UMD 18)  ║  († Hella,    ║   (ki, Concentr. 20)
+   OVEST ── 3 m ───╢   3 semi:     ╟─── 3 m ── EST
+                   ║  🌰 fronte    ║
+                   ║ 🌰 sx  dx 🌰  ║
+                   ╚═══════╤═══════╝
                            │
                     (SUD = VUOTO)
                   ← da qui fluisce l'energia →
@@ -3549,18 +3545,15 @@ attorno all'Altare: Thorik a nord, Tordek a est, Artemis a ovest, il Sud vuoto.
                     ✦ LA CUSTODE DELLE RADICI (§6)
                           SUD  ▲
 ────────────────────────────────────────────────────────────────────────
-LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin · † corpo di Hella · 🌰 3 semi
-(triangolo) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O) · SUD vuoto
-(energia + soglia della Custode). Chi officia NON può fare altro durante gli
-step. Therysol veglia ai margini (testimone, non officiante).
+LEGENDA · 🟡 Altare 2×2 m + Cuore di Moradin (posato sul cuore di Hella) ·
+† corpo di Hella (supino) · 🌰 3 semi (mano sx / mano dx / fronte: triangolo
+inscritto nel cerchio) · 🛡️ Thorik (N) · 🥋 Tordek (E) · 🔮 Artemis (O), tutti
+a 3 m dal centro: con il SUD vuoto (energia + soglia della Custode) fanno una
+croce. Chi officia NON può fare altro durante gli step. Therysol veglia ai
+margini (testimone, non officiante).
 DISPOSIZIONE SACRA: 3 semi (triangolo) inscritti nel cerchio dei 3 officianti.
 ════════════════════════════════════════════════════════════════════════
 ```
-
-⚠️ **Come si legge la griglia.** Tordek e Artemis sono disegnati sopra
-l'Altare per far stare le etichette. Al tavolo stanno a est e a ovest, alla
-sua altezza, a tre metri dal centro come Thorik: i tre punti e il Sud vuoto
-fanno una croce.
 
 <!-- /pagina -->
 

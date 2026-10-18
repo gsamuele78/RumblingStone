@@ -399,8 +399,8 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 (1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn ·
-† corpo di Hella accanto all'Altare, vegliato da Therysol (davanti ad A8 solo
-per la manifestazione) · Durik fra il corpo e il pericolo · [P1] portale
+† corpo di Hella accanto all'Altare, lato sud `[INFERRED — needs DM confirmation]`,
+vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik fra il corpo e il pericolo · [P1] portale
 sempre aperto.
 ```
 - **Tipo / scala**: hub scenico (Cronaca Vivente), ottagono Ø 40 m. Zona **sicura**.
