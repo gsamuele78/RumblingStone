@@ -57,6 +57,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | identifica una pozione con Sapienza Magica | 25 |
 | SCENA 5 | Tempra | 15 |
 | SCENA 5 | ha sulle dita (Scena 9, Osservare | 15 |
+| SCENA 5 | con una suggestione a settimana (Volontà | 16 |
+| SCENA 5 | firma si estirpa con Sapienza Magica | 20 |
 | SCENA 6 | blocco lo tira già a Nascondersi | 22 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
@@ -65,12 +67,14 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | DES grezza | 14 |
 | SCENA 6 | Raggirare | 16 |
 | SCENA 6 | FOR grezza | 16 |
+| SCENA 6 | una mano sulla bocca (FOR grezza | 16 |
 | SCENA 6 | scoppio sonoro, 5d8, Riflessi | 18 |
 | SCENA 6 | Cercare | 28 |
 | SCENA 6 | toglierli con Disattivare Congegni | 28 |
 | SCENA 6 | dissolvi magie contro il 13° livello | 24 |
 | SCENA 6 | piedi della Scena 8 a Nascondersi | 26 |
 | SCENA 6 | nanico antico o Sapienza Magica | 22 |
+| SCENA 7 | ai nani, 5d8 sonori con Riflessi | 18 |
 | SCENA 7 | cosa sta incidendo sull'ardesia (Osservare | 20 |
 | SCENA 7 | Diplomazia | 18 |
 | SCENA 7 | Sapienza Magica | 24 |

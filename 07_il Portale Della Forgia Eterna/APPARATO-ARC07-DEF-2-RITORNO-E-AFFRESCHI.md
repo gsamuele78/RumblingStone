@@ -8,7 +8,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Chi | Dove si incontra | Vuole | Come parla |
 |---|---|---|---|
-| Therysol | SCENA 1 | — | in silenzio. Se le chiedono di risvegliare Hella, spiega che serve il Cuore di Moradin e il dono di ognuno (§8) |
+| Therysol | SCENA 1 | — | in silenzio, e quando parla usa frasi corte, non chiede mai niente e di Hella parla al presente. Sa di aver contato i respiri che il corpo non faceva, e che il corpo si gira verso sud: l'ha rimesso dritto più volte. Non sa niente di dove sia lo spirito. Se spostano il corpo non lo impedisce, cammina accanto. Se le chiedono di risvegliare Hella, spiega che serve il Cuore di Moradin e il dono di ognuno (§8) |
+| Durik | SCENA 1 | — | non abbaia: fa un click di roccia. Non risponde ai PG, non è ancora di Hella: si lega a lei al rito (`DEF-3` §7) |
 | Moradin | SCENA 2 | — | una frase sola, per Thorik, poi sorride e torna a battere (A1). In A3 parla dopo il pianto |
 | Aegis Fang | SCENA 2 | — | vibra e parla, ed è un evento rarissimo: nomina Skullcrusher e Thorgrim (A7) |
 | Hella | SCENA 2 | — | non parla. Preme una mano sul vetro dall'interno e lascia inciso il suo simbolo |

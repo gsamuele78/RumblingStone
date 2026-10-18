@@ -61,6 +61,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | metallico non-artefatto entro 9 m, Riflessi | 22 |
 | SCENA 7 | TS Volontà | 20 |
 | SCENA 7 | TS Tempra | 22 |
+| SCENA 7 | Riflessi | 19 |
+| SCENA 7 | chi è adiacente al bersaglio, Equilibrio | 15 |
+| SCENA 7 | chi è a terra, Riflessi | 18 |
 | SCENA 8 | Intrattenere Canto | 18 |
 | SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
@@ -97,7 +100,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | le piattaforme, l'orizzonte | — | 7 |
 | SCENA 2 | le piattaforme | — | 8 |
 | SCENA 3 | la foresta | — | 8 |
-| SCENA 3 | Calibrazione rapida: Blast di Artemis ~28/colpo automatico; Thorik col | — | 3 |
+| SCENA 3 | Calibrazione rapida: Blast di Artemis ~28/colpo, manca solo con l'1 na | — | 3 |
 | SCENA 4 | il giardino dei cristalli | — | 8 |
 | SCENA 5 | (Posizione precedente — la riva dell'Oceano di Roccia, §7a — superata: | — | 2 |
 | SCENA 5 | il corridoio, 1 di 3 | Salvatore, solo per Artemis | 4 |
