@@ -6,6 +6,7 @@
 - 1. La cosa che cambia tutto: **si ascolta, non si legge**
 - 2. Lunghezza: la finestra reale è più corta di quanto sembri
 - 2-bis. Il box di luogo: poche frasi, un ordine, niente creature
+- 2-ter. Riscrivere un box che c'è: si taglia il superfluo, non ciò che si sente
 - 3. Cosa premia questo pubblico
 - 4. Cosa li fa staccare (e sono tutti errori di genere, non di lingua)
 - 5. Il registro alto senza il ridicolo
