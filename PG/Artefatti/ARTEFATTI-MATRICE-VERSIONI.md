@@ -245,7 +245,7 @@ canone e i poteri da scrivere in ARC-09.
 ## 6. SINERGIE (party)
 
 **⭐ MASTER**: `PG/Artefatti/SINERGIE-ARTEFATTI-MASTER.md` (creato in T4 —
-versionato, con sezione "sinergie future Collana/Hella" [PROPOSTA]).
+versionato, con sezione "sinergie future Collana/Hella", canone dal 2026-09-25).
 `Artefatti-Pg/Sinergie_Artefatti_QuickReference.html` e
 `07_.../SinergieArteFattiQuickReference.pdf` = 📸 export da rigenerare dal
 master a ogni cambio (data-versione in testa).

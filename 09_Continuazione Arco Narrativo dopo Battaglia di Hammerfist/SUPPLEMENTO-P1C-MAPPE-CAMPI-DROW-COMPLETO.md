@@ -48,7 +48,7 @@
 ### Mappa Tattica Completa
 
 > ✅ **Completata il 2026-10-09** a 53 × 40: prima aveva 25 righe su 40, larghe
-> 50-53 celle. **[PROPOSTA — needs DM confirmation]** sulle 15 righe ricostruite
+> 50-53 celle. [CANONE — DM 2026-10-18] sulle 15 righe ricostruite, che valgono così al tavolo
 > (07, 09, 11, 13, 14, 16, 17, 19, 23, 28, 31, 32, 34, 36, 37): ognuna ripete la
 > riga disegnata sopra, senza figure, fuoco e casse, così l'incineratore resta
 > sulle righe 20-22 dove è disegnato. Le righe corte sono state allungate con
@@ -60,10 +60,10 @@
 > figure dentro risultavano irraggiungibili. Ora il blocco è terra battuta 🟫 e
 > le tende sono posate come le descrive il testo: 3×3, con la Tenda 1 in I10-K12
 > e i vicoli sulle colonne L, P, T, X, AB, dove stanno le figure della riga 12.
-> **[PROPOSTA — needs DM confirmation]**: con le figure dove sono disegnate e
-> l'area I-AF, righe 08-20, ne entrano **13 su 15** senza chiudere nessuno dentro
-> e senza toccare il fuoco (2d6 entro 3 m). Per le altre due bisogna spostare
-> una figura o allargare l'area.
+> [CANONE — DM 2026-10-18]: con le figure dove sono disegnate e l'area I-AF, righe 08-20, ne
+> entrano **13 su 15** senza chiudere nessuno dentro e senza toccare il fuoco
+> (2d6 entro 3 m). Le altre due sono tende di scorta oltre la colonna AF, fuori
+> pianta: nessuna figura dorme lì.
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════

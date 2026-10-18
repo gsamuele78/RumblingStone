@@ -2956,7 +2956,7 @@ di scheda)*<!-- /storico -->. È una scena, non una riga di scheda: l'ascia rest
 > **Chiusura.** Due pietre accese e una che aspetta, un'ascia che ha appena parlato, e un cortile
 > che non sa ancora di essere una leggenda. **«Che fate?»**
 
-#### ⚠️ Due cose per il DM, e una da decidere
+#### ⚠️ Due cose per il DM
 
 - **Il Rubino si usa una volta sola, e la Corona si completa dopo l'uso**
   `[CANONE — DM, D6]` (`DEF-5` §3). Come **motore del viaggio** riporta i PG al

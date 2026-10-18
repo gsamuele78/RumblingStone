@@ -3614,7 +3614,7 @@ finito di bruciare.
 > **Chiusura.** Due pietre accese e una che aspetta, un'ascia che ha appena parlato, e un cortile
 > che non sa ancora di essere una leggenda. **«Che fate?»**
 
-#### ⚠️ Due cose per il DM, e una da decidere
+#### ⚠️ Due cose per il DM
 
 - **Il Rubino si usa una volta sola, e la Corona si completa dopo l'uso**
  («Il Ritorno a Hammerfist» §3). Come **motore del viaggio** riporta i PG al

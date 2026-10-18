@@ -108,7 +108,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | **The Gilded Horn** | **L'Unicorno** | Sune/Milil | Aldric Thornwall | Arpa della Tempesta Bardica |
 | **The Tidal Crest** | **L'Onda** | Valkur/Selûne | Gonfaloniere + Gilda dei Barcaioli | La Marea Montante |
 | **The Sovereign Ring** | **Il Campo** (piazza neutrale) | — | nessuna fazione | il Palio stesso |
-| **"The Seat"** (mappa) | il palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
+| **"The Seat"** (mappa) | il **Palazzo dei Nove**, palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
 
 ---
 
@@ -175,17 +175,13 @@ Guado**, pista del Palio — cap. IX §4.)*
 
 ---
 
-## §Palazzo — "The Seat" (il palazzo-fortezza del governo)
+## §Palazzo — il Palazzo dei Nove ("The Seat")
 
-Sulla pianta è marcato **"The Seat"**. Il DM ha raccolto quattro nomi
-cerimoniali possibili `[PROPOSTA — needs DM choice]`:
+Sulla pianta è marcato **"The Seat"**. Il nome è **Palazzo dei Nove**
+(*The High Seat of the Nine*): le nove parti in
+tregua, cioè le otto contrade e il Campo, siedono sotto lo stesso tetto e
+nessuna si fida delle altre.
 
-| Nome italiano | Nome FR (EN) | Atmosfera |
-|---|---|---|
-| Palazzo dei Nove | **The High Seat of the Nine** | politica, intrighi, tregua fra le 9 parti (8 contrade + il Campo) |
-| Palazzo dei Gonfaloni | **The Palace of the Eight Banners** | gli stendardi delle 8 contrade sulla facciata; equilibrio precario |
-| Palazzo della Torre | **The Sovereign Spire** | la guglia magica (aggancio al Quasi-Mythal del Drago) |
-| Rocca del Duca | **The Grand Ducal Hold of the Ring** | tono militare, legge ferrea, affaccio sul Sovereign Ring |
 
 ---
 
