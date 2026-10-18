@@ -1922,27 +1922,27 @@ monsters:
     environment: forest
     source_file: "Bestiario/mostri/razorfiend-green-cr9.md"
     notes: "2 supporto Azarr Kul avatar (Rethmar Fase 3). Letali in foresta."
-  - id: furia-della-mano-96b1cd
-    name: "Furia della Mano"
+  - id: furia-della-mano-chi-grida-il-nome-dei-suoi-morti-hobgoblin-barbaro-10-c281d5
+    name: "Furia della Mano — chi grida il nome dei suoi morti (hobgoblin, barbaro 10)"
     cr: 10.0
     faction: red-hand
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md"
-  - id: lucertola-del-tuono-a8ed84
-    name: "Lucertola del tuono"
+    role: brute
+    environment: any
+    source_file: "Bestiario/mostri/furia-della-mano-cr10.md"
+  - id: lucertola-del-tuono-progenie-azzurra-di-tiamat-drago-dcc8c9
+    name: "Lucertola del tuono — progenie azzurra di Tiamat (drago)"
     cr: 10.0
     faction: red-hand
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md"
-  - id: abishai-azzurro-della-mano-d25014
-    name: "Abishai azzurro della Mano"
+    role: brute
+    environment: desert
+    source_file: "Bestiario/mostri/lucertola-del-tuono-cr10.md"
+  - id: abishai-azzurro-della-mano-il-cane-da-guardia-di-tiamat-esterno-baatezu-2ef662
+    name: "Abishai azzurro della Mano — il cane da guardia di Tiamat (esterno, baatezu)"
     cr: 11.0
     faction: red-hand
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md"
+    role: elite-skirmisher
+    environment: any
+    source_file: "Bestiario/mostri/abishai-azzurro-mano-cr11.md"
   - id: bruto-deforme-del-sottosuolo-gigante-di-pietra-deforme-barbaro-2-b83335
     name: "Bruto Deforme del Sottosuolo (Gigante di Pietra deforme, Barbaro 2)"
     cr: 11.0
@@ -1979,13 +1979,13 @@ monsters:
     environment: aerial
     source_file: "Bestiario/villain/Gorthak_il_Trifronte.md"
     notes: "adattamento RHoD (unità pesante upscalata). Non confondere con il \"Fauci di Diamante\" (Xorn di ARC-07 P4), nome simile ma creatura diversa."
-  - id: spezzamente-del-kulkor-zhul-a7ac24
-    name: "Spezzamente del Kulkor Zhul"
+  - id: spezzamente-del-kulkor-zhul-la-voce-che-fa-voltare-le-spade-hobgoblin-mago-ammal-f331fd
+    name: "Spezzamente del Kulkor Zhul — la voce che fa voltare le spade (hobgoblin, mago ammaliatore 12)"
     cr: 12.0
     faction: red-hand
-    role: generalist
-    environment: mountain
-    source_file: "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md"
+    role: controller
+    environment: any
+    source_file: "Bestiario/mostri/spezzamente-kulkor-zhul-cr12.md"
   - id: emissario-red-hand-cr12-diplomatico-sacerdote-hobgoblin-chierico-12-di-tiamat-ba4075
     name: "emissario-red-hand-cr12 — diplomatico-sacerdote hobgoblin (Chierico 12 di Tiamat)"
     cr: 12.0
