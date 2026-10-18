@@ -1,6 +1,6 @@
 # PIANO — Cosa portiamo dalle avventure della community
 
-**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md)
+**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md) · D1-D3 decise dal DM il 2026-10-18, nessuna aperta
 
 Il DM ha chiesto di confrontare i master DEF, il developer e il playtester con
 le migliori avventure della community 3.5 e PF1e, in Italia e fuori, e di
@@ -65,15 +65,15 @@ Gli undici: Lirien, Tempestas, l'arcidruido del circolo, Avarthel, Morlin
 Coalhewer, Azarr Kul, Arbitrax, Draxoksus, l'emissario della Mano Rossa, Koth,
 Ozyrrandion. Il conto si rifà con il comando della §5.
 
-## Decisioni aperte al DM
+## Decisioni del DM
 
 <!-- decisioni-dm: AVVENTURE-COMMUNITY -->
 
 | # | Lotto | Domanda |
 |---|---|---|
-| D1 | 1 | Gli undici statblocchi della §3 prendono la riga «Statistiche base» in un lotto a sé, o solo quando un master li usa? Proposta: quando un master li usa, a cominciare da quelli di ARC-08 |
-| D2 | 1 | Nei cinque master di ARC-07 già giocati si aggiungono le righe di scala dei cinque scontri veri (§2)? Proposta: no, salvo per un gruppo nuovo (`dm.py gruppo nuovo`) |
-| D3 | 2 | Il lotto 2 si apre insieme a S1 di MASTER-DEF (ARC-08), o dopo? Proposta: insieme, perché il roster serve alle ondate |
+| ~~D1~~ | 1 | ✅ **Decisa il 2026-10-18** (il DM: *«sì sono d'accordo»*): la riga «Statistiche base» entra negli undici statblocchi della §3 quando un master li usa, a cominciare da quelli di ARC-08. Niente lotto a sé |
+| ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18**: nei cinque master di ARC-07 già giocati le righe di scala **non** si aggiungono; si aggiungono solo se il master serve a un gruppo nuovo (`dm.py gruppo nuovo`) |
+| ~~D3~~ | 2 | ✅ **Decisa il 2026-10-18**: il lotto 2 si apre **insieme** a S1 di MASTER-DEF (ARC-08), perché il roster serve alle ondate |
 
 ## 4 · Come si riparte in una chat nuova
 
