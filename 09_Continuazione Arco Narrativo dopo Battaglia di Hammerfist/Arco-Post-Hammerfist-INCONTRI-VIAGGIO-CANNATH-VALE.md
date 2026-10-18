@@ -174,6 +174,22 @@
 - **Intel di viaggio**: gli incontri 🕊 con esploratori/dispacci possono concedere il
   bonus "intel → −1 CR a una fase" già canonico a Rhest (`...P2-RHEST-CONSEGUENZE-ESITI.md`).
 
+### 5.1 Varianti della fase avanzata con le creature della Mano Rossa
+
+Tre voci Day 31-42 hanno un'alternativa con le creature di
+`Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`. Le fasce d% non
+cambiano: il DM sceglie, per voce, quale versione usare.
+
+| Zona e voce | Al posto di | Variante | EL |
+|---|---|---|---|
+| 2.2, 28-42 | colonna di fanteria | 3 Furie della Mano (§4) dietro 6 fanti regolari | 13 |
+| 2.2, 73-86 | Razorfiend in caccia | 3 lucertole del tuono (§3) sotto la sabbia della pista | 13 |
+| 4.2, 65-80 | distaccamento con l'emissario | Spezzamente del Kulkor Zhul (§2) e i suoi non-morti | 13 |
+
+⚠️ Queste creature sono ricostruite su regole SRD 3.5, ma l'idea viene da un
+supplemento privato (la web enhancement di *Red Hand of Doom*). Escono quindi
+dalla regola «solo 3.5 SRD/MM» di questa tabella: usarle è una scelta del DM.
+
 ---
 
 ## 6. Checklist di sessione (DM)
@@ -189,7 +205,7 @@
 ## 7. Cross-link
 
 - **Incontri lunghi riusati:** `Arco-Post-Hammerfist-P3-MISSIONI-BREVI-CR12-TESTO.md` (MB-1…6) · `...-STATBLOCCHI-FUNGHI-GITH-DROW.md`
-- **Statblock unità:** `Bestiario/`
+- **Statblock unità:** `Bestiario/` · varianti della §5.1: `Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`
 - **Profughi (zona bosco/Thornwaste):** `Arco-Post-Hammerfist-HOOKS-Ghostlord-Refugees.md`
 - **Sal mercante (deserto/Vale):** `Arco-Post-Hammerfist-P2C-Salvatore-Mercante-TESTO.md`
 - **Cisterne/spore drow (Vale/bosco):** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-SUBQUEST-Hella.md`
