@@ -499,6 +499,14 @@ class TestStileDeiBox(unittest.TestCase):
         self.assertEqual(d["-mente"], 1)
 
 
+class TestLunghezzeCheVariano(unittest.TestCase):
+    def test_quota_dei_box_fra_30_e_70_parole(self):
+        corto = " ".join(["pietra"] * 10)
+        medio = " ".join(["pietra"] * 50)
+        testo = "\n\n".join(f"> *{x}.*" for x in (corto, medio, medio, medio))
+        self.assertEqual(MC.stile_dei_box(testo)["30-70 %"], 75.0)
+
+
 class TestFasciaUmana(unittest.TestCase):
     """ADR-0093: fuori fascia in basso è un indizio come in alto."""
 

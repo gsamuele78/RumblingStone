@@ -508,6 +508,11 @@ _AVVERBIO_MENTE = re.compile(r"\b([a-zàèéìòù]{3,}mente)\b", re.I)
 #: mediana umana italiana (5,5‰), e 7 titoli su 10 lo superavano. Fuori fascia,
 #: in basso come in alto, è un indizio da guardare, non un difetto.
 FASCIA_MENTE = (3.8, 13.4)
+#: La lunghezza tipica di un box, e quanti box umani ci stanno: 46% nel Gruppo
+#: Chimera, 52% in Paizo (note-prosa-corpus.md §2). Sopra REGOLARITA_ALTA la
+#: varianza è sotto ogni autore misurato: un indicatore, non un tetto.
+LUNGHEZZA_TIPICA = (30, 70)
+REGOLARITA_ALTA = 70
 FASCIA_GERUNDIO = (1.0, 3.1)
 #: Sotto queste parole di box un avverbio sposta il tasso di oltre il 2‰: la
 #: fascia non si giudica.
@@ -590,6 +595,8 @@ def stile_dei_box(testo: str) -> "dict[str, float]":
             "gerundio in coda": ger, "gerundio ‰": per_mille(ger),
             "-mente": men, "-mente ‰": per_mille(men),
             "sensoriali": sens, "sensoriali ‰": per_mille(sens),
+            "30-70 %": (100 * sum(1 for c in box if LUNGHEZZA_TIPICA[0] <= _parole(c) <= LUNGHEZZA_TIPICA[1])
+                        / len(box)) if box else 0.0,
             "battute": len(batt),
             f"battute >{BATTUTA_LUNGA}": sum(1 for n in batt if n > BATTUTA_LUNGA),
             f"battute >{BATTUTA_TROPPO_LUNGA}": sum(1 for n in batt if n > BATTUTA_TROPPO_LUNGA)}
@@ -1023,14 +1030,16 @@ def main() -> int:
         print("🔴 Nessuna di queste soglie e' sotto cancello: `validate_modules`")
         print("   conta le occorrenze della PAROLA «read-aloud» e si ferma a 5.\n")
         print(f"{'bersaglio':30} {'box':>5} {'>12 righe':>10} "
-              f"{'parentesi':>10} {'>1 nome':>8} {'>4 frasi':>9} {'>500 car':>9}")
+              f"{'parentesi':>10} {'>1 nome*':>8} {'>4 frasi':>9} {'>500 car':>9}")
         for nome, modelli in BERSAGLI.items():
             testo, _, _ = carica(modelli)
             d = difetti_dei_box(testo)
             print(f"{nome:30} {d['box']:>5} {d['oltre 12 righe']:>10} "
                   f"{d['con parentesi']:>10} {d['>1 nome proprio']:>8} "
                   f"{d['oltre 4 frasi']:>9} {d['oltre 500 caratteri']:>9}")
-        print("\n   >4 frasi e >500 car sono INDICATORI, non soglie del repo: la")
+        print("\n   * >1 nome conta i nomi DISTINTI, non quelli nuovi: un nome che il tavolo")
+        print("   conosce non si cambia in perifrasi per stare sotto (read-aloud-adulti §2-ter).")
+        print("   >4 frasi e >500 car sono INDICATORI, non soglie del repo: la")
         print("   prima viene da *Dungeon* («poche frasi»), la seconda dalla proposta")
         print("   del 2026-10-01. Decide il DM (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D1).")
         print()
@@ -1039,7 +1048,7 @@ def main() -> int:
         print("\n\nSTILE DEI BOX — indicatori senza peso (ADR-0093)\n")
         print(f"{'bersaglio':30} {'box':>5} {'parole':>7} {'ger.coda':>9} "
               f"{'‰':>5} {'-mente':>7} {'‰':>5} "
-              f"{'sens.':>6} {'‰':>5} {'battute':>8} {'>25':>4} {'>40':>4}")
+              f"{'sens.':>6} {'‰':>5} {'30-70':>6} {'battute':>8} {'>25':>4} {'>40':>4}")
         for nome, modelli in BERSAGLI.items():
             testo, _, _ = carica(modelli)
             d = stile_dei_box(testo)
@@ -1049,6 +1058,7 @@ def main() -> int:
                   f"{d['gerundio in coda']:>9} {d['gerundio ‰']:>5.1f} "
                   f"{d['-mente']:>7} {d['-mente ‰']:>5.1f} "
                   f"{d['sensoriali']:>6} {d['sensoriali ‰']:>5.1f} "
+                  f"{d['30-70 %']:>5.0f}{'!' if d['30-70 %'] > REGOLARITA_ALTA else ' '} "
                   f"{d['battute']:>8} {d[f'battute >{BATTUTA_LUNGA}']:>4} "
                   f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}   {fascia}")
         print("\n   ‰ = ogni 1.000 parole di box. Le due frecce finali sono gerundio e")
@@ -1057,7 +1067,8 @@ def main() -> int:
         print(f"   – meno di {PAROLE_PER_LA_FASCIA} parole. Nessuna colonna e' una norma: decide il")
         print("   confronto (`cieco_versioni.py coppie`): la misura fra due versioni dello")
         print("   stesso box, e il cieco del DM dove la misura non decide. «sens.» sono le")
-        print("   parole di percezione: un box che ne perde, per il DM, peggiora.")
+        print("   parole di percezione: un box che ne perde, per il DM, peggiora. «30-70» è la")
+        print(f"   quota dei box fra 30 e 70 parole (umani 46-52%); «!» oltre il {REGOLARITA_ALTA}%.")
         print()
 
     if args.metrature:

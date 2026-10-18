@@ -87,6 +87,18 @@ sbagliato. Non è il tuo respiro: è la frase.
 non ti interrompono, smettono di ascoltare e tu non te ne accorgi. Se un box
 supera le 12 righe: o è due box, o metà è ridondante.
 
+**Le lunghezze variano.** La tabella sopra è già una varietà: un box d'urto da
+due righe accanto a un'apertura da dieci. Un autore umano alterna così; un
+master riscritto per stare sotto i tetti tende a fare tutti i box uguali. Nel
+corpus di riferimento (`plans/esperimenti/avventure-community/note-prosa-corpus.md`
+§2) il 46-52% dei box sta fra 30 e 70 parole; il rifacimento di ARC-07 della
+#249 ci metteva il 90%, e il DM ha chiesto di riportarlo verso il corpus.
+
+⚙️ `misura_craft --stile`, colonna `30-70`: la quota dei box fra 30 e 70
+parole. È un indicatore e non un tetto (ADR-0036 non vuole soglie assolute
+sulla prosa di gioco): sopra il 70% i box sono più regolari di qualunque
+autore misurato, e vale la pena guardarli.
+
 ---
 
 ## 2-bis. Il box di luogo: poche frasi, un ordine, niente creature
@@ -151,7 +163,15 @@ migliorati tutti; il DM no. E le sue scelte avevano due regole.
 ⚙️ `python3 scripts/cieco_versioni.py coppie` applica le due regole a ogni
 coppia di versioni e manda al cieco solo quelle che non decide, più quattro
 di controllo; `misura_craft --stile` conta i dettagli sensoriali per file
-(colonna `sens.`). Le due regole vengono da sedici coppie e da un lessico
+(colonna `sens.`). ⚠️ Il tetto di un nome proprio **nuovo** per box (§1) non chiede di togliere i
+nomi che il tavolo conosce: `misura_craft --box` conta i nomi **distinti**,
+perché non sa quali siano nuovi, e un nome noto cambiato in perifrasi per
+stare sotto quella colonna insegue l'indicatore, non la norma. Il voto non ne
+fa una terza regola: Moradin diventato «il dio dei nani» ha perso (coppia 5),
+ma Fauci di Palude diventato «un drago enorme dalle ali nere» e Hella
+diventata «la druida» hanno vinto (6 e 10).
+
+Le due regole vengono da sedici coppie e da un lessico
 scritto dopo averle viste: se il DM smentisce più di un controllo su quattro,
 `esito` lo dice e si torna al cieco intero.
 
