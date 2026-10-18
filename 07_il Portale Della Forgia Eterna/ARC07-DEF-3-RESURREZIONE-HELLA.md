@@ -40,7 +40,8 @@
 > Step 1-3, **un'ora** per la prima ora dopo il rito (§8-bis). Senza tentativi
 > falliti né indagine, alla soglia segna **3g 14h**. La scaletta non prevede
 > riposo prima della soglia; se il gruppo lo chiede, si dorme e costa otto ore
-> (§9). L'orologio conta quanto manca alla breccia di Hammerfist, e i PG lo
+> (§9): dopo il rito la Sala conta il sonno per intero
+> `[CANONE — DM 2026-10-18, G2-01]`. L'orologio conta quanto manca alla breccia di Hammerfist, e i PG lo
 > leggono sull'affresco A7, che cambia a ogni riposo. Sotto i **2 giorni** la
 > breccia è aperta e l'ARC-08 parte in Fase 0 dura (`DEF-2` §0-bis e §8).
 >
@@ -163,17 +164,24 @@ combatte e non se ne va senza una risposta.
 prove di Hella nel corpo nuovo del §8-bis. Non si tagliano mai i Doni (§5), la
 Custode (§6) e il racconto (§8): sono la serata.
 
-**Se manca un giocatore, o ce n'è uno in più.** `[INFERRED — needs DM confirmation]`
-Se manca il giocatore di un officiante, il PG è nel cerchio lo stesso e il DM
-tira per lui il suo step e la sua Volontà. Il Dono, però, non lo decide il DM:
-il seme resta dormiente, e il giocatore lo potrà colmare quando torna, col
-riempimento del §5. Con un quinto PG al tavolo, i punti del cerchio restano tre,
-come i semi: il quinto può tenere il Sud, con la regola del Sud occupato (§9).
+**Se manca un giocatore, o ce n'è uno in più.** `[CANONE — DM 2026-10-18, G2-07]`
+Se manca il giocatore di un officiante, il PG è nel cerchio lo stesso, e il suo
+step e la sua Volontà li tira un giocatore presente. Le scelte di canone
+restano del giocatore assente: il Dono, il finisher, una risposta alla Custode.
+Se servono, gliele si chiede prima della serata. Se non ha risposto, il Dono non
+lo decide nessuno al suo posto: il seme resta dormiente, e il giocatore lo potrà
+colmare quando torna, col riempimento del §5. Con un quinto PG al tavolo, i
+punti del cerchio restano tre, come i semi: il quinto non officia, e può tenere
+il Sud con la regola del Sud occupato (§9) `[CANONE — DM 2026-10-18, G2-20]`.
+
+**Se manca la giocatrice di Hella**, la serata si rinvia: è la sua. Se il
+tavolo non può aspettare, il DM le chiede prima quale delle tre risposte del §6
+sceglie, e con quale frase `[CANONE — DM 2026-10-18, G2-11]`.
 
 ### Se lo divinano
 
 Una riga per segreto: con che cosa si rompe, che cosa ottiene chi lancia, e come
-va avanti il modulo. `[INFERRED — needs DM confirmation]`
+va avanti il modulo. `[CANONE — DM 2026-10-18, G2-18]`
 
 | Segreto | Lo rompe | Chi lancia ottiene | Il modulo va avanti così |
 |---|---|---|---|
@@ -181,6 +189,9 @@ va avanti il modulo. `[INFERRED — needs DM confirmation]`
 | la risposta del rito che fallisce è il Sud (§9) | *divinazione*, durante l'ora; *augurio* su «occupiamo il Sud» risponde solo «bene» | *«Guardate dove nessuno sta.»* | vale come il Sud trovato: qualcuno lo occupa e lo Step 5 si ritira |
 | il Rubino è di là, a mille anni fa (§8-ter) | *divinazione* | *«La terza pietra è dove il varco porta.»* | niente cambia: Moradin lo dice lo stesso alla soglia |
 | chi è la Custode delle Radici (§6) | *individuazione del male*, *comunione* | non è malvagia, e non è una creatura da combattere: è l'ordine del Sogno della Terra | le tre risposte del §6 restano tutte aperte |
+| che cosa c'è nell'Altare (§2) | *individuazione del magico* | una presenza divina, forte, e nessun nome | niente cambia |
+| la forma dei Doni (§5) | *divinazione*, prima del sì | niente sulla forma: un Dono si conosce solo dopo il sì di chi dona | il §5 resta uguale |
+| che cosa sa Hella (§8) | *parlare con i morti* sul corpo | quello che Hella sapeva alla morte, fino alla Stanza: l'incantesimo dell'SRD legge il corpo, non l'anima, e del Sogno della Terra non sa niente | il racconto del §8 resta di Hella |
 
 
 ### ✉ Cosa si consegna, e quando
@@ -227,8 +238,14 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
 | 2 — Canalizzazione | Tordek | Concentrazione | 20 | 2d6 non letali, riprova · max 3 tentativi, poi riesce (§4) |
 | 3 — Stabilizzazione | Artemis | Utilizzare Oggetti Magici · senza gradi CAR −4 | 18 | corpo rifiuta, riprova · max 3 tentativi, poi riesce (§4) |
 | 4 — Germinazione semi | (Moradin) | automatico | — | — |
-| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se i Doni versati sono uno o nessuno, §5) `[CANONE — DM 2026-10-12, D36]` · sotto la soglia vale una riga del §9 (la tabella in fondo al §5), anche con un successo solo |
+| 5 — Richiamo dello spirito | **tutti e 3** | Volontà | 18 | ≥2 successi su 3 (3 su 3 se i Doni versati sono uno o nessuno, §5) `[CANONE — DM 2026-10-12, D36]` · sotto la soglia vale una riga del §9 (la tabella in fondo al §5), anche con un successo solo · +1 senza tipo a chi ha toccato l'incisione della Stanza, `DEF-2` §6 `[CANONE — DM 2026-10-18, G2-05]` |
 | 6 — Fusione | (Moradin manifesto) | automatico | — | — |
+
+**Niente 10 e niente aiuti** `[CANONE — DM 2026-10-18, G2-21]`. Sulle prove
+degli Step 1-3 e sulla Volontà dello Step 5 non si prende 10 e non si aiuta:
+il rito è una distrazione, e ogni officiante tira da solo. Valgono gli
+incantesimi lanciati prima del rito. ⚠ Non SRD solo in parte: l'SRD lascia al
+DM decidere che cosa distrae.
 
 ### I Tre Doni — il trapianto (§5)
 | PG | Dona, **per sempre** | 🌱 Hella riceve |
@@ -910,6 +927,10 @@ la scena, è sua: le parole possono essere le sue.
   3** se i Doni versati sono **uno o nessuno**. Gli esiti, riuscita e
   fallimento, sono nella tabella di regia del §4; i modi di fallimento, uno per
   numero di successi, nel §9.
+- Chi ha toccato l'incisione della druida nella Stanza della Corona (`DEF-2`
+  §6) ha **+1** a questa Volontà. Il +1 non ha tipo, e si somma a tutto, anche
+  al +1 sacro di A1 `[CANONE — DM 2026-10-18, G2-05]`. ⚠ Non SRD: un dono
+  divino senza tipo è raro, e qui è un'eccezione voluta.
 
 **Lo Step 5 in una tabella** `[CANONE — DM 2026-10-12, D36, D67, D72, D81, D83]`.
 Si legge la riga dei Doni versati, poi la colonna dei successi: la cella è la
@@ -1020,7 +1041,10 @@ Al tavolo del 2026-09-25 è andata così, ed è canone di quel gruppo
 `[CANONE GIOCATO 2026-09-25]`: Thorik ha detto che il prezzo lo paga lui,
 senza sapere quale sia, e la Custode ha preso nota del suo nome. È un quarto
 ramo, fuori da A, B e C: il debito lo porta Thorik, e il prezzo è ancora da
-decidere (eco E-07g).
+decidere (eco E-07g). Il quarto ramo è canone di quel gruppo, non un'opzione
+per gli altri: per un gruppo nuovo vale «Chi risponde», qui sopra
+`[CANONE — DM 2026-10-18, G2-58]`. Il prezzo di Thorik si registra sul ramo di
+gruppo, non qui.
 <!-- /storico -->
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
@@ -1194,8 +1218,12 @@ cerchio del lutto si chiude.
 
 ## §8-bis — LA PRIMA ORA DOPO IL RITO
 
+Hella torna come con *resurrezione* dell'SRD: pf pieni, e gli incantesimi e
+gli usi del giorno che aveva preparato prima di morire. Le prove di quest'ora
+spendono slot e usi veri `[CANONE — DM 2026-10-18, G2-12]`.
+
 Hella cammina, prova il corpo nuovo (*«la pietra mi parla: antica, forte,
-protettiva»*), prega, prepara gli incantesimi. Prova *Produce Flame*: la fiamma
+protettiva»*), prega, ripassa gli incantesimi che aveva preparato. Prova *Produce Flame*: la fiamma
 verde-oro funziona **ma la sente ostile** (vulnerabilità). Evoca un orso: appare
 mezzo-corteccia, cambiato dalla sua nuova affinità.
 
@@ -1212,9 +1240,13 @@ TS su Tempra contro gli effetti ambientali; **Vigore della Forgia**, 3 cariche
 che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 2d8+2 a contatto a un alleato) **+**:
 - **Mantello della Fiamma** (Resist Fuoco **20**) — **cruciale**: mitiga la sua
-  vulnerabilità per una battaglia (falla valere prima degli scontri di `DEF-4`).
-- **Benedizione di Moradin Incarnato** (1/battaglia): +2 sacro att/danni, +4 vs
-  paura/charme, **1 ri-tiro**.
+  vulnerabilità per 24 ore vissute dalla preghiera, come le altre, e non si somma
+  alla Pelle di Pietra: vale la più alta `[CANONE — DM 2026-10-18, G2-06]`.
+  Conta se è ancora accesa agli scontri di `DEF-4`.
+- **Benedizione di Moradin Incarnato**: +2 sacro att/danni, +4 vs paura/charme,
+  **1 ri-tiro**; attiva per 24 ore vissute dalla preghiera, come le altre
+  `[CANONE — DM 2026-10-18, G2-06]`. Quante volte si accende, con che azione e
+  per quanto dura ogni volta `[INFERRED — needs DM confirmation]`.
 
 > **Momento privato Hella + Tordek** (5 min di RP, lasciar improvvisare): la
 > gratitudine, la paura della morte perduta, le promesse di un dopo. È il
@@ -1260,6 +1292,7 @@ non promette. Dice quello che sa, e non di più.
 |---|---|---|
 | **Attraversare adesso** | il ritorno non è garantito dal lato di qua: si torna **solo** trovando il Rubino a −1.000 | il viaggio a mille anni fa (`DEF-4`) parte con una posta reale invece che con un viaggio turistico |
 | **Riposare e prepararsi prima** | otto ore di sonno: l'orologio di Hammerfist scende di otto ore oltre a quello che segna adesso (il conto è nel §0), e i PG lo sanno `[CANONE — DM 2026-10-18]` | incantesimi e capacità al giorno recuperati, e un arrivo a Hammerfist con meno tempo |
+| **Uscire per un'altra via** | non c'è: finché il ciclo non è compiuto, dalla Forgia si esce solo dai portali dei Piani e da quello del Tempo `[CANONE — DM 2026-10-18, G2-04]` | niente: la Sala non ha altre porte |
 | **Mandare avanti uno solo** | Moradin rifiuta: *«Il varco conta quattro. Ne ha contati quattro anche mille anni fa.»* | niente — ma la battuta dice al tavolo **che di là li aspettano in quattro** |
 
 > 🎭 **Grigio politico.** Therysol non vuole che vadano. Il suo *Want* non
@@ -1295,12 +1328,12 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | **Vogliono resuscitarla PRIMA (Parte 2, appena ritrovata)** | Impossibile: i semi di treant e il viaggio dello spirito non sono ancora avvenuti. Moradin: *«Non ancora. Deve prima attraversare la Terra dentro di sé.»* |
 | **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, Hella resta morta e **il varco non si apre**: conta quattro, e non apre per meno `[CANONE — DM 2026-10-18]`. Il rito si può fare quando vogliono, ma ogni ora che passa scende dall'orologio di Hammerfist, e Tordek la passa accanto al corpo. |
 | **Chiedono a Moradin di resuscitarla senza costi** | *«La magia non basta. Serve la vita. Io do il Cuore; voi date il resto — o lei torna monca di ciò che potevate donarle.»* (rifiuto totale, §5). |
-| **Vogliono dormire prima della soglia** | Prima del rito vale la tariffa della Sala di `DEF-2` §0-bis, che possiede l'orologio. Prima della soglia si dorme `[CANONE — DM 2026-10-18]`. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
+| **Vogliono dormire prima della soglia** | Prima del rito vale la tariffa della Sala di `DEF-2` §0-bis, che possiede l'orologio; dopo il rito la Sala conta il sonno per intero `[CANONE — DM 2026-10-18, G2-01]`. Prima della soglia si dorme `[CANONE — DM 2026-10-18]`. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
 | **Provano a incastonare il Cuore nella Corona** (è un rubino, e l'incasso è vuoto) | Non entra: il Cuore è grande come un pugno, l'incasso come un'unghia, e non è una gemma della Corona. Se insistono, Moradin: *«Quello è un cuore, non una pietra. Si spende, non si porta.»* Non dire altro sull'incasso (§2-bis) |
 | **Attaccano/scacciano la Custode delle Radici** (§6) | Non combatte: si ritira (ramo B). Nessun scontro — ma il vuoto si colmerà da sé, peggio. |
 | **Un PG vuole sacrificare la PROPRIA vita** (oltre il richiesto) | Moradin **rifiuta**: *«Non chiedo una morte per una vita. Chiedo un dono, non un baratto di anime. Rimetti via quel coraggio: ti servirà domani.»* (evita il martirio gratuito). |
-| **Se i PG chiedono a Therysol del corpo, prima del rito** | Risponde, perché lo sa e nessuno gliel'aveva chiesto: *«Si gira verso sud. L'ho rimesso dritto undici volte.»* Se qualcuno occupa il Sud prima dello Step 5, vale la regola del Sud occupato, sotto. `[INFERRED — needs DM confirmation]` |
-| **Esaminano o toccano il Cuore prima di posarlo** | Scalda la mano e batte sotto le dita, sessanta al minuto. Nient'altro: è la reliquia di un dio, e non si lascia studiare. Moradin: *«Si spende, non si porta.»* `[INFERRED — needs DM confirmation]` |
+| **Se i PG chiedono a Therysol del corpo, prima del rito** | Risponde, perché lo sa e nessuno gliel'aveva chiesto: *«Si gira verso sud. L'ho rimesso dritto undici volte.»* Se qualcuno occupa il Sud prima dello Step 5, vale la regola del Sud occupato, sotto. Il Sud lo può tenere solo chi non officia: Therysol, Durik o un quinto PG `[CANONE — DM 2026-10-18, G2-20]`. |
+| **Esaminano o toccano il Cuore prima di posarlo** | Scalda la mano e batte sotto le dita, sessanta al minuto. Nient'altro: è la reliquia di un dio, e non si lascia studiare. Moradin: *«Si spende, non si porta.»* `[CANONE — DM 2026-10-18, G2-22]` |
 | **FALLIMENTO — lo Step 5 va male** (meno di 2 successi; **3 successi su 3** se i doni versati sono **uno o nessuno**) | Il rito non finisce in un «game over»: cosa succede dipende da **quanti** successi ci sono stati, ed è la tabella qui sotto.<!-- storico --> *(Prima questa riga dava un esito solo, il livello negativo, e la tabella sotto ne dava quattro: vale la tabella.)*<!-- /storico --> |
 
 ---
@@ -1330,9 +1363,9 @@ Quattro regole valgono per tutte le righe `[CANONE — DM 2026-10-12, D83]`:
 | Successi allo Step 5 | Cosa torna | Cosa apre |
 |---:|---|---|
 | **3 su 3** | Hella intera, i tre doni attecchiscono | la soglia (§8-ter) parte pulita |
-| **2 su 3** | Hella intera, un dono **attecchisce a metà** | il PG che ha fallito lo scopre **a −1.000**, nel momento peggiore: il suo dono non risponde al primo tentativo |
+| **2 su 3** | Hella intera, un dono **attecchisce a metà** | il PG che ha fallito lo scopre **a −1.000**, nel momento peggiore: il primo uso del suo dono non funziona, e si consuma. Se chi ha fallito aveva rifiutato, attecchisce a metà il dono di un altro `[CANONE — DM 2026-10-18, G2-19]`. ⚠ Non SRD |
 | **1 su 3** | Hella torna con **1 livello negativo** e non ricorda i nomi per 1d4 minuti | una scena vera al risveglio: **chi le dice il proprio nome per primo** conta, e Hella lo ricorderà per tutto l'arco |
-| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme dormiente, se qualcuno ha rifiutato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno occupa il punto vuoto del cerchio, un PG o Therysol. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3**. Se il Sud lo tiene Therysol, tirano i tre PG agli altri punti; se lo tiene un PG, tirano lui e gli altri due. Se il ritiro dà di nuovo 0, il rito riesce lo stesso e paga il prezzo della riga «1 su 3» `[CANONE — DM 2026-10-12, D67, D72]`. La **Custode delle Radici** entra lo stesso, una volta sola, dopo il ritiro riuscito, come nel rito che va bene (§6) `[CANONE — DM 2026-10-12, D73]` |
+| **0 su 3** | Hella **non torna adesso** | 🔎 **Questo non è un game over.** Il Cuore regge per **un'ora**, e Moradin lo dice: *«Il canale è aperto. Non è lei a non voler tornare.»* La sala diventa un'indagine di un'ora — cosa manca al cerchio? Il Sud vuoto. Il seme dormiente, se qualcuno ha rifiutato. La gemma mancante. La risposta esiste ed è nei §2, §2-bis e §6, e il tavolo la ricompone da sé. **La risposta è il Sud** `[CANONE — DM 2026-10-12, D35]`: qualcuno che non officia occupa il punto vuoto del cerchio: Therysol, Durik o un quinto PG `[CANONE — DM 2026-10-18, G2-20]`. Fatto questo, lo Step 5 **si ritira una volta**, e servono **2 successi su 3**. Tirano i tre officianti, agli altri punti. Se il ritiro dà di nuovo 0, il rito riesce lo stesso e paga il prezzo della riga «1 su 3» `[CANONE — DM 2026-10-12, D67, D72]`. La **Custode delle Radici** entra lo stesso, una volta sola, dopo il ritiro riuscito, come nel rito che va bene (§6) `[CANONE — DM 2026-10-12, D73]` |
 
 ⚠️ **Il vicolo cieco ha una porta**: se l'ora scade senza che il tavolo trovi
 niente, **Therysol** parla — e dice la cosa che ha visto in sei giorni di
@@ -1357,8 +1390,8 @@ sul tavolo nelle scene di prima: qui li ritrova.
   Corona resta fredda. Il tavolo ha escluso una pista, e ha speso tempo.
 - **Il seme dormiente**, se qualcuno ha rifiutato: Moradin risponde *«Quello
   che non hai dato lo darai più avanti. Non è questo che manca.»* Il dono non
-  si recupera adesso: il seme resta chiuso, col riempimento del §5.
-  `[INFERRED — needs DM confirmation]`
+  si recupera adesso: il seme resta chiuso fino ad ARC-09, col riempimento del §5.
+  `[CANONE — DM 2026-10-18, G2-23]`
 - **Nessuna idea**: allo scadere dell'ora parla Therysol, come sopra.
 
 

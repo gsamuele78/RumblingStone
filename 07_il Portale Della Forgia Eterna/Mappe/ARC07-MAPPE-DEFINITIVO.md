@@ -403,7 +403,7 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 (1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn ·
-† corpo di Hella accanto all'Altare, lato sud `[INFERRED — needs DM confirmation]`,
+† corpo di Hella accanto all'Altare, lato sud `[CANONE — DM 2026-10-18, G2-09]`,
 vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik fra il corpo e il pericolo · [P1] portale
 sempre aperto.
 ```
@@ -412,8 +412,8 @@ sempre aperto.
   **Forgia Eterna**; 8 affreschi 8×5 m alle pareti (vetro indistruttibile); soffitto
   15 m. Distanze: spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal
   centro; Ø 40 m).
-- **Posizioni notevoli**: † **corpo di Hella** accanto all'**Altare**, dove
-  Therysol lo veglia da giorni (DEF-2 §2); il corpo si gira verso sud. I PG lo
+- **Posizioni notevoli**: † **corpo di Hella** accanto all'**Altare**, sul lato
+  sud, dove Therysol lo veglia da giorni (DEF-2 §2); il corpo si gira verso sud. I PG lo
   portano davanti ad **A8** solo per la manifestazione (DEF-2 §4), poi torna
   all'Altare per il rito (R-1/DEF-3). **Durik**, mosso dalla giocatrice di
   Hella, non ha una casella fissa: sta sempre fra il corpo e ciò che sente come
@@ -729,7 +729,9 @@ Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura)
 sfera compare in tutte e due le regie: al Round 8 nella lunga, quando le porte
 cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 🟨 piattaforme laterali Est/Ovest (+1,5 m, 6×3 m — tiratori) · 🔺 stalagmiti
-(copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
+(copertura parziale) · 🔴 ondata nemica, alla porta. I due orchi scossi che
+restano dopo l'aura non sono segnati: sono già dentro l'anello, fra i nani e
+l'altare (DEF-5 Scena 2). Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @tipo tattica caverna
 ```

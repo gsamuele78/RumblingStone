@@ -102,6 +102,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 10 | Diplomazia o Guarire | 18 |
 | SCENA 10 | Disattivare o Artigianato | 20 |
 | SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
+| SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
 | SCENA 11 | sul gruppo più fitto (Riflessi | 28 |
 | SCENA 11 | prova di Forza | 25 |
 | SCENA 11 | Forza | 10 |

@@ -169,7 +169,7 @@ Le scene in ordine di gioco: la 5 si gioca dopo la 7.
 - **Artemis tiene la distanza.** Terros centra le Stalattiti su di lui un
   round su due (8c-1): la scena non si spegne.
 
-**Se lo divinano** `[INFERRED — needs DM confirmation]`. Una riga per segreto:
+**Se lo divinano** `[CANONE — DM 2026-10-18, G2-18]`. Una riga per segreto:
 è quello che una divinazione dice, se i PG la tentano. Le risposte sono del
 modulo, non giocate.
 
@@ -398,7 +398,8 @@ com'è.
 - **Effetto**: riduce le penalità della gravità 2× (fino a 2× normale) a
   quelle della colonna «Con Benedizione» della tabella del §3: −25% alla
   velocità, −5 a Saltare e a Scalare `[CANONE — DM 2026-10-12, D36]`.
-- **Durata**: permanente finché nel Piano della Terra.
+- **Durata**: 24 ore vissute dalla preghiera, come le altre Benedizioni, e solo
+  nel Piano della Terra `[CANONE — DM 2026-10-18, G2-06]`.
 - **Bonus**: +2 di competenza a **Forza** per le sole prove contro la gravità
   (Scalare, Saltare, trasportare carichi).
 - **Aspetto**: pelle grigio-pietra, vene che brillano d'argento.
@@ -681,7 +682,11 @@ a parlare, gli Xorn emergono a metà e parla Fauci di Diamante (via C).
   mirato (FOR o attacco) **CD 20** sul punto di stress → il pilastro crolla
   sugli Xorn (**10d6**, Riflessi **CD 22** dimezza). Chi è dentro la pietra
   prende metà danni ed esce stordito per 1 round; lo scontro si fa comunque
-  `[CANONE — DM 2026-10-15, D88]`.
+  `[CANONE — DM 2026-10-15, D88]`. Il pilastro cade dove sceglie chi ha letto
+  l'angolo di rottura; se la Conoscenze è fallita, la direzione si tira col d8,
+  e i PG sulla traiettoria tirano i Riflessi anche loro
+  `[CANONE — DM 2026-10-18, G2-43]`. L'area è una striscia larga 3 m e lunga
+  30 m dalla base G08 `[INFERRED — needs DM confirmation]`.
   *Costo:* perdi il mithral (loot che Artemis brama).
 - **B — Ordine tattico (Shine Time di Thorik).** Azione di comando
   (Intimidire o Diplomazia **CD 18**, come la via C `[CANONE — DM 2026-10-12, D36]`) per accerchiarli in
@@ -1283,9 +1288,8 @@ Il portale è **sotto** il cubo, 50 m sopra l'oceano di roccia; il Tempio ha
 **gravità propria** e intorno c'è **gravità zero** con detriti fluttuanti.
 Conoscenze (Arcane) **CD 18** o Osservare **CD 20** per capire il campo
 gravitazionale. Chi riesce vede da sé i tre ruoli qui sotto e il punto, a metà
-strada, dove la gravità del Tempio cattura; chi fallisce li scopre per
-tentativi, e la vibrazione di Aegis Fang glieli suggerisce
-`[INFERRED — needs DM confirmation]`. L'attraversamento **non è un singolo tiro**: è uno sforzo
+strada, dove la gravità del Tempio cattura; chi fallisce li scopre per tentativi, senza aiuti: Aegis Fang vibra, ma la
+strada non la indica `[CANONE — DM 2026-10-18, G2-46]`. L'attraversamento **non è un singolo tiro**: è uno sforzo
 combinato che valorizza ognuno (vedi **MAPPA T-4**):
 - **L'Ancora — Thorik**: pianta i piedi sul bordo (o conficca Aegis Fang) e fa
   da perno di salvataggio. Se un tiro va storto, **FOR CD 20** per fermare la
@@ -1307,6 +1311,10 @@ combinato che valorizza ognuno (vedi **MAPPA T-4**):
 - **Il Navigatore — Tordek**: balza tra i detriti fluttuanti (**Saltare CD 25**,
   Take 10 = 26 ✓) fino al cubo e colpisce le **Rune di Attracco** esterne,
   stabilizzando l'ingresso per far attraccare Artemis e trainare Thorik.
+  I 20 m di gravità zero fino alla cattura sono **una spinta sola**: un tiro di
+  Saltare dà la direzione, e Tordek arriva in linea retta; se fallisce, entra
+  l'Ancora `[CANONE — DM 2026-10-18, G2-40]`. ⚠ Non SRD: i tratti planari
+  dell'SRD danno la gravità assente, non una regola di movimento.
 
 **Da dove si salta, e quanto è lontano** `[CANONE — DM 2026-09-30, D34]`. Il
 Tempio è a **40 m** dalla riva, e il suo portale sta **50 m** sopra l'oceano:
@@ -1325,7 +1333,10 @@ Intrattenere (Canto) **CD 18**, l'Anello di Artemis dà +4
 Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
 `[CANONE — DM 2026-10-12, D79]`. Le quattro fanno la scala intera, che con la
 sola Frequenza arriva a metà strada e col Diapason al portale. Canta un PG alla
-volta, con un'azione standard, come nel §8.
+volta, con un'azione standard, come nel §8. Ogni prova prende un round. Al
+terzo fallimento la scala crolla, e chi sta sui blocchi cade nell'oceano di
+roccia dalla quota a cui è arrivato, con la regola delle cadute del §3
+`[CANONE — DM 2026-10-18, G2-44]`.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — «la salita cantata».** Al tavolo
 > l'attraversamento è stato risolto in variante: il party ha **cantato la
@@ -1412,7 +1423,8 @@ muove, ed è fuori dallo scontro, costretto a guardare.
   cui era rimasta `[CANONE — DM 2026-10-12, D85]`. Tordek ritenta coi pf che
   il riposo gli rende (senza guaritore, uno per livello: 13) più le cariche di
   *Vigore della Forgia*, che nel Piano tornano dopo ogni riposo; le Benedizioni
-  di Moradin durano finché il gruppo resta nel Piano. Caduto Tordek, la porta
+  di Moradin durano 24 ore vissute dalla preghiera, e scadute non si rinnovano
+  fino alla Sala `[CANONE — DM 2026-10-18, G2-06]`. Caduto Tordek, la porta
   dell'anticamera si riapre. Ogni riposo, anche questo, vale −12 h, e il ramo
   «hanno dormito» di 8c-4 scatta una volta sola `[CANONE — DM 2026-10-14, D87]`.
 - **Se qualcuno tocca la Sentinella ferma**, o prova a scavalcarla, lei si
@@ -1476,8 +1488,9 @@ racconto non tira dadi.
 
 **Scalare lo scontro: il PG del duello, non il gruppo.** Il duello è di un PG
 solo, quindi la scala segue lui. Con un PG del duello **più debole** di
-Tordek (livello 12 o meno, o CA sotto 26), l'Overdrive dà due attacchi a
-round invece di tre `[INFERRED — needs DM confirmation]`. Con un PG **più
+Tordek (livello 12 o meno, o CA sotto 26), l'Overdrive dà comunque tre
+attacchi a round `[CANONE — DM 2026-10-18, G2-47]`: la rete è il secondo
+tentativo, che riparte dalle crepe aperte. Con un PG **più
 forte** la Sentinella resta com'è: la prova è aprire il guscio, e le tre
 crepe non dipendono dai pf. Un **PG abbattuto** fuori dal duello non cambia
 niente, perché la Sentinella ignora tutti tranne il PG del duello.
@@ -1735,7 +1748,9 @@ a piena forza — la scelta al campo dei Cristalli SI SENTE qui.
 **Cantare durante lo scontro** `[CANONE — DM 2026-10-12, D84]`. Dopo l'apertura, la Frequenza la
 canta un PG alla volta: **azione standard**, Intrattenere (Canto) **CD 18**
 (+4 se canta Artemis, che ha l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
-è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto). La
+è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto):
+diventano sonici il danno senz'armi e i 4d6 del Pugno Frana, e il fuoco dei
+Bracieri resta fuoco `[CANONE — DM 2026-10-18, G2-41]`. La
 modalità sonica di Artemis è un'altra cosa: passa dall'Anello con un'azione
 veloce, non rende sonici i pugni di Tordek, e la regola è in 8c-1.
 
@@ -1977,7 +1992,7 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 
 > | Situazione al tavolo | Aggiustamento |
 > |---|---|
-> | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (391 pf, attacchi +36, CD +1) e lo Scudo di Geodi parte **già attivo**. Il +1 vale per le CD dei poteri a ricarica, Onda e Stalattiti; la Spinta e la Radice a Terra restano a 25, perché sono soglie di FOR `[INFERRED — needs DM confirmation]`. Oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dall'Altare al round 3. Il segno, un round prima: le rune dell'Altare si spengono in due punti e lì la pietra si gonfia come una bolla `[INFERRED — needs DM confirmation]`. Non volano: combattono sull'Altare, uno per nano, e non inseguono nello zero-G. Quando Terros cade tornano nella pietra |
+> | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (391 pf, attacchi +36, CD +1) e lo Scudo di Geodi parte **già attivo**. Il +1 vale per le CD dei poteri a ricarica, Onda e Stalattiti, e per la Spinta, che sale a 26; la Radice a Terra resta a 25, perché è la risposta di Thorik all'arrocco `[CANONE — DM 2026-10-18, G2-48]`. Oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dall'Altare al round 3. Il segno, un round prima: le rune dell'Altare si spengono in due punti e lì la pietra si gonfia come una bolla `[CANONE — DM 2026-10-18, G2-48]`. Non volano: combattono sull'Altare, uno per nano, e non inseguono nello zero-G. Quando Terros cade tornano nella pietra |
 > | Party **logorato** (niente Frequenza, molte risorse spese, qualcuno sotto metà pf) | Terros usa l'Onda Gravitazionale **una sola volta**; la guarigione scende a 10/round; NON insegue chi resta in zero-G ai margini |
 > | **Quattro o cinque PG** (gruppo nuovo) | con quattro PG, il profilo a **34 DV** della prima riga; con cinque, i 34 DV e i **due Elementali della Terra Grandi** al round 3, col loro segno. Il rito del §9 e il salto del §7a hanno la loro riga per il quarto PG |
 > | **Therysol scende** (deroga a D15 decisa al tavolo) | Conta come mezzo PG (supporto a distanza): riporta Terros al profilo pieno e togli il Diapason, che è monouso |
@@ -2036,13 +2051,13 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 
 | Mossa imprevista | Risposta del modulo |
 |---|---|
-| **Parlano con Terros invece di combattere** | Terros è INT 10 e parla Terran: ascolta **una** frase. Ma è un **guardiano con un voto** («la Forza non si dona: si dimostra») — non cede lo Smeraldo, MAI. Può concedere un **duello formale** (campione singolo, niente aiuti: onore nanico — EL folle, sconsigliato ma leggendario) o rispetto post-combattimento: se i PG hanno curato i Cristalli, il suo ultimo suono è di **assenso**, non d'odio. |
+| **Parlano con Terros invece di combattere** | Terros è INT 10 e parla Terran: ascolta **una** frase. Ma è un **guardiano con un voto** («la Forza non si dona: si dimostra») — non cede lo Smeraldo, MAI. Può concedere un **duello formale** (campione singolo, niente aiuti: onore nanico — EL folle, sconsigliato ma leggendario), che si combatte **fino all'arrocco**: Terros ha il profilo pieno, e quando scende a 172 pf la Forza è dimostrata, si inginocchia e assiste vivo al rito; il campione che cade è espulso come nella riga della sconfitta `[CANONE — DM 2026-10-18, G2-42]`. Oppure concede rispetto post-combattimento: se i PG hanno curato i Cristalli, il suo ultimo suono è di **assenso**, non d'odio. |
 | **Provano a prendere lo Smeraldo senza uccidere Terros** (volo/Mano Impetuosa/furto) | Lo Smeraldo levita dentro il **campo dell'Altare**: chi non ha superato il guardiano riceve **respinta** (come *repulsion*, TS Vol CD 20) + Terros, se il ladro è entro 6 m dall'Altare, ci entra in Earth Glide e riemerge sotto di lui. Il rito (§9) richiede comunque il guardiano caduto o il duello onorato. |
 | **Fuggono a metà scontro** | Terros NON insegue oltre la camera (è vincolato all'Altare). Ma la Forgia registra: al ritorno lo trovano **guarito del tutto** e lo Scudo di Geodi parte già attivo. Il countdown di Hammerfist scende solo se riposano prima di tornare: −12 h a riposo. |
 | **Distruggono/danneggiano l'Altare** | Impossibile scalfirlo (mithral consacrato, Durezza 20, autoriparante) — ma il TENTATIVO è sacrilegio: Terros entra in **furia** (+2 att/danni, −2 CA) e i Bracieri di Tordek **si raffreddano** di disapprovazione (nessun malus meccanico: solo il gelo del vecchio fabbro nella mente). |
 | **Qualcuno precipita nell'oceano di roccia (fuori dal Tempio)** | Non è lava: è **roccia semi-liquida**. Affonda lentamente (3 round per sommersione): Nuotare CD 20 (faticoso) o corda dei compagni; sommerso = soffocamento + 2d6 schiacciamento/round. Drammatico, non istantaneamente letale. Se nessuno lo tira fuori, l'oceano lo risputa sulla riva dopo 1d4 round, a 0 pf e stabile, e il riposo costa −12 h `[CANONE — DM 2026-10-14, D87]`. |
 | **Vogliono riposare dentro il Tempio prima del boss** | Possibile (l'Anticamera post-Sentinella è sicura), e **probabile**. Costa **−12 h** di orologio (tariffa ordinaria, `ARC07-DEF-2` §0-bis) — ma il prezzo vero **non è il timer**: è che **Terros ti arriva a risorse piene**, quindi scatta il ramo «party straripante di risorse» del riquadro *Scalare lo scontro* (**§8c-4**). Al ritorno nella Sala mostra l'affresco A7, e non minacciare la scadenza: a 3g 08h la soglia critica è ancora lontana. |
-| **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e nemmeno il *Vigore della Forgia*, che toglie solo la fatica del viaggio del §4 `[INFERRED — needs DM confirmation]`, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. Si torna rifacendo il salto del §7a e il corridoio, e la Sentinella resta battuta. *La sconfitta costa tempo e orgoglio, non la campagna.* |
+| **I PG CADONO (sconfitta contro Terros)** | Niente TPK gratuito: il voto di Terros è **custodire**, non massacrare. I caduti vengono **espulsi** — la gravità del Nodo li sputa fuori e si risvegliano sulla riva dell'Oceano di Roccia, interi ma **segnati**: 1 livello di affaticamento che nessun riposo qui rimuove, e nemmeno il *Vigore della Forgia*, che toglie solo la fatica del viaggio del §4 `[CANONE — DM 2026-10-18, G2-49]`, e il countdown di Hammerfist è sceso di **−12 ore** (tariffa ordinaria). Nella Sala, l'affresco A5 mostra ora un **pannello velato** (la Forgia registra anche le sconfitte). Possono ritentare: Terros li aspetta, guarito. Si torna rifacendo il salto del §7a e il corridoio, e la Sentinella resta battuta. *La sconfitta costa tempo e orgoglio, non la campagna.* |
 
 **Durata attesa circa 10 round** `[CANONE — DM 2026-10-12, D85]`. **XP** ~5.400/PG al gruppo di oggi, ≈ 2.600 ai gruppi futuri (CR 15, 3 PG) `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]`.
 **Loot**: **Geode Titanico** (5.000 mo, cristalli d'adamantio) + **Cuore di
@@ -2325,6 +2340,10 @@ non lo accetta: è legata a Thorik.
   con la pietra) e guadagna **permanentemente +2 COS** e **+4 CAR** (chi ha
   accettato il Peso del Mondo lo porta addosso, e gli altri lo vedono)
   `[CANONE — DM 2026-10-12, D84]`.
+- **Se Thorik rifiuta e nessuno paga**: il rito non parte. Dopo un riposo,
+  −12 h all'orologio, Moradin ripete la domanda davanti a tutti; al secondo
+  rifiuto la Corona prende il Peso da sola, col prezzo dell'Opzione B
+  `[CANONE — DM 2026-10-18, G2-45]`.
 
 > **Regia (asimmetria).** Thorik **non sa** che la presenza verde è Hella; per
 > la giocatrice di Hella è uno dei suoi echi (§1). **Non spiegarlo finché non

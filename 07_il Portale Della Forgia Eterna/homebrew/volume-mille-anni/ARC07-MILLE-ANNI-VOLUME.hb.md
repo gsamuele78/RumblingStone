@@ -1462,7 +1462,8 @@ fatte lei.
 | **Totale** | | | | **47.967** |
 
 Il saldo a carico del gruppo è di circa **19.600 mo**. Se lo pagano in monete
-del 1372, il pesatore ne trattiene una su dieci, e ne servono circa **21.800**.
+del 1372, il pesatore ne trattiene una su dieci, e ne servono circa **21.800**
+.
 
 L'ascia e lo scudo **non sono stati fatti stanotte**: erano già nella forgia,
 pezzi rari che il capo fabbro teneva da parte. Tornano nel 1372 con i PG, che li
@@ -1862,7 +1863,7 @@ e il drago arriva sull'assalto.
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2, e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare. Sveglio o no, da N15 è fuori dal telo: non vede dentro la tenda e non sente chi parla sottovoce, sente i gridi | non parla: soffia |
+| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Il suo stato si fissa quando i PG atterrano alla tenda: se poi la trattativa con Balvar porta la 5ª tacca, Grask resta com'era all'arrivo. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2, e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare. Sveglio o no, da N15 è fuori dal telo: non vede dentro la tenda e non sente chi parla sottovoce, sente i gridi | non parla: soffia |
 | la pattuglia di quattro orchi | quattro orchi con le lance in spalla e una torcia sola, che tengono bassa per non abbagliarsi | litigano in orchesco su chi ha rubato il rancio |
 | i cavalieri dei lupi | goblin piccoli e magri, legati alla sella con una cinghia. I worg sono grigi, col collare di cuoio chiodato, e annusano il vento prima di camminare | il worg non ringhia finché non è sicuro. Poi non smette, e il goblin ride |
 | le vedette goblin | due per carro, seduti sui sacchi di farina, avvolti nella stessa coperta | si danno di gomito a ogni rumore, e il secondo strilla sempre prima del primo |
@@ -1963,7 +1964,9 @@ che scatta se la varca un nano e non fa rumore. Il telo sopra il seggio
 porta un *glifo di interdizione* legato ai nani, 5d8 sonori con Riflessi
 CD 18, e il boato è l'allarme. Il telo est, a sinistra per chi arriva da
 nord, non ha niente. Grask è fuori, a due quadretti dal seggio: sveglio
-finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª.
+finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª. Lo stato si
+fissa all'atterraggio, e la tacca della trattativa non lo cambia
+.
 
 | Come entrano | Cosa succede |
 |---|---|
@@ -2199,7 +2202,11 @@ incantesimi: se qualcuno prova a teletrasportarsi fuori, la lancia.
 
 **Tattica**: *righteous might* al round 1 e *slay living* (Tempra CD 20) sul
 più fragile al round 2, **prima** del silenzio, perché tutti e due hanno la
-componente verbale. Dal round 3 attiva la runa del *silenzio* su di sé e usa
+componente verbale. Chi fallisce il TS contro *slay living* muore davvero,
+come nell'SRD: la cattura del Q29 vale per chi cade a 0 pf, non per chi muore.
+Si torna con *rianimare morti* alla cappella, che ha l'unico diamante della
+fortezza (5.450 mo, Scena 5), o con *reincarnazione*, se Hella l'ha preparata
+. Dal round 3 attiva la runa del *silenzio* su di sé e usa
 solo quello che non parla: la *blade barrier* del palo, che è una runa, e il
 martello. Se nella tenda qualcuno vola, al round 1 lancia *comando superiore*
 al posto di *righteous might*, e al round 2 *slay living* come sopra, oppure
@@ -2465,7 +2472,8 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
   dilaga MA **Skullcrusher interviene furioso**: non subito, perché di notte è
   sulle colline, ma all'alba il duello inizia col drago già in picchiata: ha un
   round di sorpresa (SRD), e i PG sono colti alla sprovvista fino al loro
-  primo turno. Se l'orda è stata **pre-allertata** (corridore,
+  primo turno. Vale anche se di notte il drago li ha già visti, e un'altra riga
+  direbbe «senza sorpresa»: vince la picchiata. Se l'orda è stata **pre-allertata** (corridore,
   allarme): un successo in meno sulle mura (Scena 10), e Zog'tar non è di
   sorpresa.
 - **Come si decide**. Due domande,
@@ -2644,7 +2652,11 @@ con un **terrore reverenziale mal mascherato**.
 
 **Vatore non ha statistiche, ed è voluto**.
 Non combatte. Se lo attaccano, il primo colpo che va a segno lo ferisce (riga
-«Lo feriscono») e alla fine del suo turno il **Cronolito** lo porta via. Il
+«Lo feriscono») e alla fine del suo turno il **Cronolito** lo porta via. Il suo
+urlo è un allarme: il campo è pre-allertato, e alle mura c'è un successo in
+meno (Scena 10). La CA contro cui si tira
+quel colpo, e in quanti round arriva la ronda
+`[INFERRED — needs DM confirmation]`. Il
 Cronolito sposta nel tempo, non nello spazio: *àncora dimensionale* non lo
 ferma, e nemmeno una lotta. Chi lo teneva si ritrova con il suo mantello in
 mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
@@ -2671,6 +2683,20 @@ ferma fra due tende, si guarda alle spalle e stringe un fagotto. L'Anello di
 Artemis diventa gelido lo stesso. Se lo lasciano passare, vale la riga «Lo
 ignorano» della tabella; se si mostrano, il box comincia da *«Tra due tende, un
 uomo»* e Vatore dice la sua frase dopo averli visti.
+
+#### Se lo divinano: Vatore, il Sigillo, Zeth
+
+Una riga per segreto. Ognuna dà una mezza verità, e nessuna rompe il segreto
+lungo: Vatore non sa che diventerà Sal, e nessun incantesimo lo legge in lui.
+
+- **Che cosa pensa Vatore.** *Individuazione dei pensieri* legge «il Cronolito»,
+  «la gilda», «non devono vedermi». Mai «Sal».
+- **Che cos'è il Sigillo.** *Leggende e tradizioni* dà Shar e il prezzo delle
+  anime (Appendice B).
+- **I componenti di Zeth.** *Individuazione del magico* mostra necromanzia
+  sotto la consacrazione (Scena 5).
+- **Chi c'è dietro Zeth.** Se gli chiedono di Zeth e del suo padrone, Vatore
+  risponde con la sua gilda, e non nomina il Collezionista.
 
 L'artefatto che stringe al petto è in **Appendice B**.
 
@@ -2799,7 +2825,7 @@ ed è per questo che vuole buttare giù chi ha davanti.
 |---|---|
 | 4 | le mura reggono pulite; il duello parte con i PG schierati e **Re Thorek in piedi dietro di loro** |
 | 2-3 | reggono a stento. Il duello parte normale |
-| 1 | i nani perdono il camminamento est: il duello si combatte **con Re Thorek a 8 pf alle spalle**, e il drago lo punta quando nessun PG lo chiama (Scena 11, «Il re») |
+| 1 | i nani perdono il camminamento est: il duello si combatte **con Re Thorek a 8 pf alle spalle**, e il drago lo punta quando nessun PG lo chiama (Scena 11, «Il re»), e a 8 pf basta un colpo a metterlo a terra |
 | 0 | 🔴 **la breccia cede.** Il duello si combatte **in mezzo ai feriti** portati giù dalle mura: M7-B con 6 quadretti di terreno difficile e **due nani a terra** che Hella può scegliere di raggiungere invece di combattere. Nessun malus: una **scelta in più**, e più dura |
 
 ⚠️ **La riga a zero successi è il punto di questa tabella.** Il modo più veloce
@@ -2934,7 +2960,10 @@ cambia davvero.
   chi fallisce è scosso; Thorik non tira, perché la *mente vuota* della
   Corona lo rende immune agli effetti di paura, Scena 8). Se Zog'tar è morto in modo «spettacolare» (Scena 8), arriva **già
   in picchiata**: ha un round di sorpresa (SRD), e i PG sono colti alla
-  sprovvista fino al loro primo turno. Apre col **Soffio acido** sul
+  sprovvista fino al loro primo turno. La picchiata vince anche sul «senza
+  sorpresa» del drago che li ha già visti di notte; agisce nel round di
+  sorpresa chi supera Ascoltare CD 20, e con le campane suonate vale la loro
+  riga nella tabella delle difese. Apre col **Soffio acido** sul
   gruppo più fitto (Riflessi CD 28). *Non atterra: vuole restare in cielo, dove
   si sente un dio.* Chi ha la runa di Zeth (*resistere all'energia*, acido 20)
   la attiva adesso, con un'azione standard: prima del soffio, se ha
@@ -2987,9 +3016,10 @@ cambia davvero.
   che vuole mangiare davanti all'orda. Chi sta sulla linea del soffio o
   accanto al re prende il colpo al posto suo. ⚠ Non SRD: in 3.5 non c'è
   un'azione per prendere un colpo al posto di un altro; qui basta essere lì.
-  Il re non muore, perché alla Scena 12 è vivo: un colpo che lo porterebbe
-  sotto 0 pf lo lascia a terra, stabile, e il Rubino lo ricorda come il giorno
-  in cui il re è caduto.
+  Il re non muore, perché alla Scena 12 è vivo. Non si tira per colpirlo: due
+  colpi del drago lo mettono a terra, stabile, e uno solo se è già a 8 pf
+  (Scena 10). Il Rubino lo ricorda come il
+  giorno in cui il re è caduto.
 - **Soglia: quando gli restano ~100 pf, un terzo dei 297 — la prima paura.** Per la prima volta nella sua vita,
   Skullcrusher **esita**. È il momento dei tre esiti (sotto). Al suo turno
   fugge nelle paludi, a meno che nel round prima abbia preso **almeno due
@@ -3099,7 +3129,7 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 #### Sidebar — Scalare lo scontro (stile RHoD)
 | Situazione | Aggiustamento |
 |---|---|
-| Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis. Per un gruppo di 13° sarebbe il tetto esatto, APL+4, e il DM lo tiene per il gruppo di 14°: con un gruppo di 13° si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS). Vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro |
+| Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis. Per un gruppo di 13° sarebbe il tetto esatto, APL+4, e il DM lo tiene per il gruppo di 14°: con un gruppo di 13° si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS). Vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro. Un gruppo di 13° con la fiducia piena del consiglio, tutti gli artefatti e il banco della fucina speso conta come straripante: le wyvern ci sono |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
 | **Hella appena risorta** — vuoi proteggerla | Riga da scegliere, non di base: il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità). Senza questa scelta vale «Chi sceglie», che la mette fra i preferiti — dà alla giocatrice spazio per il suo primo scontro |
 | **Tre PG** (APL 12, tetto 16), o un gruppo di quattro a cui manca qualcuno | lo stesso drago di A.1, che resta sotto il tetto. Nella regia si salta la riga di chi manca; se manca Hella, manca anche Durik. Alle corde la terza mano la dà un nano, che il soffio prende come nella riga dei nani del cortile |
@@ -3314,7 +3344,7 @@ si inginocchia. Il resto non si tocca.*
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono cambiare il passato** (salvare qualcuno destinato a morire, avvisare i nani di eventi futuri) | Timeline auto-consistente: ci **provano**, ma «va sempre come doveva». Il nano che vogliono salvare muore comunque, in un altro modo. Non è fato crudele: è che **è già successo**. Ottimo pathos, zero paradossi. |
-| **Cercano tesori/conoscenze da riportare nel futuro** | Possono. Torna ciò che **portano addosso** quando il Rubino si accende, anche se l'hanno comprato alla fucina (Scena 5); le conoscenze tornano con chi le sa. Resta qui ciò che consumano, vendono o lasciano, e ritorna come reliquia (§7). Il **Sigillo di Ossidiana** rubato a Vatore (Appendice B) torna come il resto, e con lui il Cronolito che lo lega a Vatore: è il gancio ARC-09. |
+| **Cercano tesori/conoscenze da riportare nel futuro** | Possono. Torna ciò che **portano addosso** quando il Rubino si accende, anche se l'hanno comprato alla fucina (Scena 5); le conoscenze tornano con chi le sa. Vale per tutto, pozioni, pergamene, bacchette e rune comprese, per la stessa ragione dell'ascia e dello scudo. Resta qui ciò che consumano, vendono o lasciano, e ritorna come reliquia (§7). Il **Sigillo di Ossidiana** rubato a Vatore (Appendice B) torna come il resto, e con lui il Cronolito che lo lega a Vatore: è il gancio ARC-09. |
 | **Attaccano la pattuglia di Durin** (Scena 2) | Durin è un Guerriero 6 con sei veterani: contro PG di 13° livello non regge un round, e lo sa. Alla prima ferita grave getta l'ascia e grida *«Se siete dei nostri, dimostratelo!»*. I PG arrivano alla porta lo stesso, con Durin ferito, e al consiglio (Scena 4) la CD della prova sale di **+4**. Se Durin muore, un veterano senza nome prende il suo posto, e il DM annota Durin fra i caduti del 372 |
 | **Vogliono reclutare Thorgrim / portarlo nel futuro** | Impossibile (non è «loro»): Thorgrim resta, e la sua eco è l'affresco A3 della Sala della Forgia. Commovente: si separano da un fratello che è già polvere da mille anni. |
 | **Vogliono attaccare il drago di notte, sulle colline** | Si può. Le colline sono a qualche chilometro, e il drago vede al buio e sente chi è invisibile entro 18 m. Di notte non combatte per l'orda: combatte due round per orgoglio, poi vola via, perché la Catena lo lega al campo e non alle colline. Il danno che ha preso **resta** all'alba, ma il duello comincia **senza sorpresa**: li conosce. Costa **2 tacche**, e la Scena 7 resta da fare |
@@ -3714,7 +3744,9 @@ uno slot. Qui: la soglia, il palo centrale, sé stesso, e la Catena (Scena 7).
 
 ### A.5 · Re Thorek I e Thorgrim Barbadiferro (Scena 4)
 
-Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo;
+Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo; come
+bersaglio del drago vale la soglia a colpi della Scena 11, «Il re»
+;
 Thorgrim è un vecchio, vivo e fragile, che non combatte. Se il tavolo li porta in combattimento, è una
 scelta del DM e va segnata come.
 
@@ -3759,6 +3791,12 @@ standard dell'SRD: nessuna ha una scheda sua nel repo.
 > che diventa **permanente** dopo 24 h se non redento (*restoration*). È il
 > meccanismo che trasforma **Vatore in Sal**: lo usa sugli altri, poi su sé
 > stesso, e la **sete di potere lo acceca** al conto che sta accumulando.
+
+**Se lo rubano stanotte, è sempre acceso**.
+Un'ora dopo che è in mano a un PG, il DM sceglie chi paga: la creatura toccata
+per ultima, compagni e Durik compresi. Il Sigillo non si spegne: anche nel buco
+portatile conta come portatore chi ce l'ha messo. Resta soppresso solo in mano
+ad Artemis, come dice l'aggancio qui sotto.
 
 > **⚔️ AGGANCIO — l'Anello di Artemis (Lathander vs Shar).** L'Anello Riforgiato
 > di Artemis porta una **scintilla di Lathander** (dio dell'**Alba**, nemesi

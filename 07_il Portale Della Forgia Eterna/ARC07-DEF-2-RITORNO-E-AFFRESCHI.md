@@ -20,8 +20,9 @@
 >
 > **Rifacimento 2026-10-18** (stile e struttura): box spezzati in battute,
 > «In trenta secondi» e consegne in §0, rete degli indizi in §4-bis. Canone,
-> numeri e tag `[CANONE — DM …]` invariati; le aggiunte nuove sono marcate
-> `[INFERRED — needs DM confirmation]`.
+> numeri e tag `[CANONE — DM …]` invariati; le aggiunte nuove erano marcate
+> da confermare, e le hanno chiuse le decisioni del giro 2
+> (G2-09, G2-18, G2-50…G2-55): ora portano `[CANONE — DM 2026-10-18, G2-NN]`.
 <!-- /apparato -->
 
 > **Il capitolo della Sala e della sua memoria.** Qui vive il sistema **«La
@@ -85,7 +86,7 @@
 | **Se fanno l'inatteso** | §8, una riga per mossa. Se interrogano la Sala con la magia: §4-bis, «Se lo divinano» |
 | **Quanto dura** | circa due ore: Scena 1 dieci minuti, Scena 2 tre quarti d'ora, Scena 3 un quarto d'ora, Scena 4 venti minuti, Scena 5 mezz'ora. Se dopo un'ora e mezza non siete al sonno, comincia a tagliare |
 | **Se hai un'ora per prepararti** | leggi §0, §0-bis, A1, A3, A7, A8 e la Scena 5; il resto si legge al tavolo, quando i PG ci arrivano |
-| **Se manca tempo** | taglia in quest'ordine: A4, A5, la lettura di Artemis su A6, la Stanza. Non tagliare A7 (l'orologio), A3 (la catarsi) né il sogno di Hella `[INFERRED — needs DM confirmation]` |
+| **Se manca tempo** | taglia in quest'ordine: A4, A5, la lettura di Artemis su A6, la Stanza. Non tagliare A7 (l'orologio), A3 (la catarsi), A8 (la manifestazione di Hella, che consegna H3 e la Ghianda) né il sogno di Hella `[CANONE — DM 2026-10-18, G2-51]` |
 
 Tutto il beat si gioca **senza combattere**: nessun nemico entra nella Sala.
 
@@ -174,6 +175,14 @@ qui sotto). I giocatori **non lo sanno e non devono saperlo**: non annunciare
 mai lo sconto. Se qualcuno chiede perché il timer è sceso meno del previsto, la
 risposta è dentro il mondo — *«Moradin non conta le ore come le contano gli
 uomini»* — non è una concessione del DM.
+
+**Lo sconto vale solo per il sonno.** Le ore da svegli costano per intero,
+nella Sala come fuori: un pomeriggio davanti agli affreschi è un pomeriggio
+del mondo di sopra, come l'ora del rito `[CANONE — DM 2026-10-18, G2-16]`.
+**E vale solo prima del rito.** Dopo il rito la Sala conta per intero anche
+il sonno: otto ore di sonno costano otto ore, come scrive `DEF-3` §9
+`[CANONE — DM 2026-10-18, G2-01]`. Il registro qui sotto è giocato, e non
+cambia.
 
 #### Il registro dei riposi (giocato + previsto)
 
@@ -325,7 +334,7 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| Therysol | una tiefling mezzodrago: veglia il corpo di Hella accanto all'Altare da giorni, e ora è presente (§0). **Want**, che non riguarda i PG: non vegliare un altro corpo. Ha perso il fratello nel Piano del Fuoco. La scheda intera è in `DEF-3` §2 | in silenzio, e quando parla usa frasi corte, non chiede mai niente e di Hella parla al presente. Sa di aver contato i respiri che il corpo non faceva, e che il corpo si gira verso sud: l'ha rimesso dritto più volte. Non sa niente di dove sia lo spirito. Se spostano il corpo non lo impedisce, cammina accanto. Se le chiedono di risvegliare Hella, spiega che serve il Cuore di Moradin e il dono di ognuno (§8) |
+| Therysol | una tiefling mezzodrago: veglia il corpo di Hella accanto all'Altare, sul lato sud `[CANONE — DM 2026-10-18, G2-09]`, da giorni, e ora è presente (§0). **Want**, che non riguarda i PG: non vegliare un altro corpo. Ha perso il fratello nel Piano del Fuoco. La scheda intera è in `DEF-3` §2 | in silenzio, e quando parla usa frasi corte, non chiede mai niente e di Hella parla al presente. Sa di aver contato i respiri che il corpo non faceva, e che il corpo si gira verso sud: l'ha rimesso dritto più volte. Non sa niente di dove sia lo spirito. Se spostano il corpo non lo impedisce, cammina accanto. Se le chiedono di risvegliare Hella, spiega che serve il Cuore di Moradin e il dono di ognuno (§8) |
 | Durik | il cane di Hella, riforgiato nel Piano della Terra: mithral intrecciato a pietra scura, occhi di topazio. Gira attorno al corpo e si mette sempre fra il corpo e ciò che sente come pericolo (`DEF-1` §9) | non abbaia: fa un click di roccia. Non risponde ai PG, non è ancora di Hella: si lega a lei al rito (`DEF-3` §7). Lo muove la giocatrice di Hella (§1) `[CANONE — DM 2026-10-18]` |
 
 Se qualcuno le chiede del corpo, Therysol dice quello che sa e niente di più:
@@ -350,7 +359,7 @@ a chi glielo chiede risponde che non è il suo rito.
 | **comando** | nessuno: Moradin parla dagli affreschi e all'Altare, ma non dà ordini |
 | **culto** | l'Altare del Cuore di Moradin: la preghiera rinnova le Benedizioni (§7) |
 | **rimedi** | le Benedizioni e il Vigore della Forgia (§7); le cure di Therysol, qui sopra |
-| **bottega** | nessuno: non c'è un fabbro, e niente da comprare né da vendere |
+| **bottega** | nessuno: non c'è un fabbro, e niente da comprare né da vendere. La Forgia Eterna arde solo per i riti: un'arma messa sul suo fuoco senza un rito torna intatta e fredda `[CANONE — DM 2026-10-18, G2-17]` |
 | **messaggi** | nessuno: A7 mostra Hammerfist, ma nessuno nella Sala porta una voce fin là |
 | **guardia** | Durik, fra il corpo e il pericolo; Therysol, che veglia |
 
@@ -578,8 +587,8 @@ di **Aegis Fang**, e il viaggio è a mille anni fa.*
 - **Regia — il pianto lo racconta il giocatore.** Prima del tiro chiedi:
   *«Che cosa rivedi per primo?»* L'**invenzione del giocatore** entra nel
   canone, e ha i denti: la parete la dipinge, e da quel momento chiunque passi
-  davanti ad A3 la vede. Il ricordo più intimo di Thorik diventa pubblico
-  `[INFERRED — needs DM confirmation]`.
+  davanti ad A3 la vede, chiunque sia. Il ricordo più intimo di Thorik diventa
+  pubblico `[CANONE — DM 2026-10-18, G2-52]`.
 - **Sviluppi.** Dopo la resurrezione, A3 **aggiunge una scena**: Hella viva che
   posa una mano sulla spalla di Thorik. Chiude il cerchio del lutto.
 
@@ -649,7 +658,7 @@ state.md §6, `campaign-artifacts.md`.<!-- /apparato -->
   saprà con gli altri al `DEF-3`, quando la Corona apre il varco.
 - **Se provano ad attraversarlo.** Il vetro resta vetro, e la Corona si
   scalda appena. Sotto la mano il portale dorato pulsa quattro volte, e il
-  quarto battito è più debole degli altri `[INFERRED — needs DM confirmation]`:
+  quarto battito è più debole degli altri `[CANONE — DM 2026-10-18, G2-55]`:
   è la porta fisica del nodo N3 (§4-bis).
 - **Sviluppi.** Alla vittoria del `DEF-4`, A6 va al 100% e il Rubino si accende: la
   scena si unifica in una sola linea temporale — la profezia compiuta.
@@ -720,7 +729,7 @@ dipingendo con le loro scelte.
 > nodo d'indizio ha tre strati: il **Fatto** si dà gratis a chi guarda, la
 > **Lettura** vuole una prova, il **Nome** arriva incrociando due Letture o
 > da chi lo sa già. Ogni nodo ha almeno tre porte, e una è fisica. Le CD nuove
-> di questa sezione sono `[INFERRED — needs DM confirmation]`; quelle già
+> di questa sezione sono canone `[CANONE — DM 2026-10-18, G2-50]`; quelle già
 > scritte in §4 restano quelle.
 
 | Nodo | Fatto (gratis) | Lettura (prova) | Nome | Cosa NON dire |
@@ -728,7 +737,7 @@ dipingendo con le loro scelte.
 | **N1 · Dove va il corpo** | Therysol: il corpo si gira verso sud (§2) | Conoscenze (religioni) CD 15: i corpi dei fedeli si volgono a ciò che li chiama | A8, «Il Ritorno Trionfale», a sud (H1 lo mostra) | che la manifestazione riporti Hella: è un saluto, non il rito |
 | **N2 · La sagoma che si riempie** | A2: la quarta figura prende contorno | Conoscenze (religioni) CD 15 sulla Cronaca: mostra il possibile, mai il garantito (§3) | incrociando A2 e l'incisione della Stanza: la Forgia ricorda Hella viva prima che lo sia | che il rito riuscirà |
 | **N3 · Il varco conta quattro** | A6: il portale dorato pulsa e la Corona risponde | Sapienza Magica CD 18 (§4): porta al passato | provando ad attraversarlo: non si apre finché i Custodi non sono quattro `[CANONE — DM 2026-09-30]` | che il Rubino lo apra: non lo apre |
-| **N4 · Lo stesso sangue** | A6: il drago giovane e il drago di oggi | Conoscenze (storia) CD 20: Hammerfist resse un assedio di drago mille anni fa | Aegis Fang lo dice ad A7: Skullcrusher il Nero, capostipite di Fauci | niente: qui la verità è tutta dicibile |
+| **N4 · Lo stesso sangue** | A6: il drago giovane e il drago di oggi | Sapienza Magica CD 20 sull'aura di A6, che Artemis può tirare: Hammerfist resse un assedio di drago mille anni fa `[CANONE — DM 2026-10-18, G2-50]` | Aegis Fang lo dice ad A7: Skullcrusher il Nero, capostipite di Fauci | niente: qui la verità è tutta dicibile |
 | **N5 · Le mani fredde** | il sogno di Thorik (§7-bis) | nessuna prova la apre in questo beat | arriva solo al #3 (`DEF-3`) | **di chi sono le mani**. Se il giocatore indovina: *«non lo sai.»* È l'eco E-07f |
 | **N6 · Il tempo che manca** | al risveglio A7 è sceso meno del previsto | nessuna: è un residuo | *«Moradin non conta le ore come le contano gli uomini»* | lo sconto di −4 h, mai |
 
@@ -750,12 +759,12 @@ dipinto e il vero al 100% di A8 (§5, Sviluppi).
 
 **Porta chiusa: i Dipinti Invisibili (J11-J12 sulla S-2).** Restano come in
 ARC-06, e nessun file del repo dice che cosa siano. In questo beat non si
-aprono: chi li esamina li trova muti. Decidi tu se e quando aprirli
-`[INFERRED — needs DM confirmation]`.
+aprono: chi li esamina li trova muti, e restano muti per tutto l'arco
+`[CANONE — DM 2026-10-18, G2-53]`.
 
 ### Se lo divinano
 
-| Se usano… | Che cosa ottengono `[INFERRED — needs DM confirmation]` |
+| Se usano… | Che cosa ottengono `[CANONE — DM 2026-10-18, G2-18]` |
 |---|---|
 | *parlare con i morti* sul corpo di Hella | l'incantesimo SRD legge la memoria del corpo, non l'anima: il corpo sa ciò che Hella sapeva da viva, fino alla Stanza. Di dove sia lo spirito non sa niente |
 | *comunione* o *divinazione* rivolta a Moradin | risposte nella voce della Cronaca. Sul rito: *«Dipende da voi.»* Sulle mani fredde: *«Nessuno regge da solo.»* Sul tempo: *comunione* risponde «sì» a «abbiamo tempo?», perché l'SRD le concede sì, no o una frase di cinque parole; *divinazione* dà la frase di N6 |
@@ -853,8 +862,10 @@ dopo lettera, la **Cronaca dei Custodi** in rune naniche:
 **Interazione (opzionale, molto intima).** Se un PG posa una mano
 sull'incisione della druida e pronuncia il suo nome (nessun tiro): la pietra è
 **calda**. Solo quello. È il segno che il legame regge, sotto il mondo.
-**Effetto:** al rito del `DEF-3`, il primo TS del ritual-master ha **+1 sacro** (la
-Stanza «partecipa» alla resurrezione). Il bonus viene dal **tocco**, non dal
+**Effetto:** al rito del `DEF-3`, chi ha toccato l'incisione ha **+1** al TS di
+Volontà dello Step 5 (la Stanza «partecipa» alla resurrezione). Il +1 non ha
+tipo e si somma a tutto, anche al +1 sacro di A1 `[CANONE — DM 2026-10-18, G2-05]`.
+⚠ Non SRD: un dono divino senza tipo è raro, e qui è un'eccezione voluta. Il bonus viene dal **tocco**, non dal
 dormire nella Stanza `[CANONE — DM 2026-10-12, D36]`. *(Pannello-Cronaca «Il Ritorno».)*
 
 **Perché tornare qui — e perché forse no.** La Stanza è ora un **Santuario
@@ -866,7 +877,7 @@ qualunque altro posto (§0-bis), dormire lì ha un prezzo `[CANONE — DM 2026-1
 | Dove dormono | Costa | In cambio |
 |---|---|---|
 | **Sala della Forgia** | **−4 h** | niente bonus, e A7 ticchetta sotto gli occhi |
-| **Stanza della Corona** | **−12 h** | la scena giusta. Il **+1 sacro** al primo TS del ritual-master viene dal toccare l'incisione (qui sopra), e si prende anche senza dormirci `[CANONE — DM 2026-10-12, D36]` |
+| **Stanza della Corona** | **−12 h** | la scena giusta. Il **+1** al TS dello Step 5 viene dal toccare l'incisione (qui sopra), e si prende anche senza dormirci `[CANONE — DM 2026-10-12, D36]` `[CANONE — DM 2026-10-18, G2-05]` |
 
 **Per il gruppo di oggi la scelta è già fatta**: hanno dormito nella Sala (R4,
 §0-bis). La tabella vale per un gruppo nuovo.
@@ -886,7 +897,9 @@ sempre, i Custodi sono scelti `[CANONE — DM 2026-10-12, D80]`. Durano **24 ore
 rinnovano tornando alla Sala, una volta ogni 24 ore vissute: due sonni nella Sala
 a poche ore l'uno dall'altro non rinnovano niente `[CANONE — DM 2026-10-18]`. Lontano dalla Sala, e a
 −1000 nel viaggio del `DEF-4`, si spengono allo scadere delle 24 ore, e da lì il
-gruppo ha solo le cure che trova.
+gruppo ha solo le cure che trova. All'arrivo dalla Terra sono scadute: il Piano
+è stato un giorno intero di marcia e di scontri, e la preghiera all'Altare le
+rinnova `[CANONE — DM 2026-10-18, G2-06]`.
 
 | Benedizione | Effetto 3.5 | Sostituisce (valore) |
 |---|---|---|
@@ -1073,12 +1086,13 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 | Mossa | Risposta del modulo |
 |---|---|
 | **Vogliono staccare le cornici d'oro** (5.000 mo l'una) | Impossibile: irremovibili (Durezza 20, e la Sala è sacra). Provarci **offende** — Moradin non concede Benedizioni per 24 h a chi ci ha provato. Un Custode che ruba alla Forgia non è più un Custode, per un giorno. |
+| **Vogliono lavorare il metallo alla Forgia Eterna** (riparare, migliorare un'arma) | La Forgia arde per Moradin, e solo nei riti. Chi ci mette un'arma senza un rito la ritira intatta e fredda `[CANONE — DM 2026-10-18, G2-17]`. Se il giocatore insiste, il gesto vale per la Cronaca (la riga del gesto, qui sotto). |
 | **Attaccano/danneggiano un affresco** | Il vetro è indistruttibile. Ma A1 **smette di girare la testa** a Thorik finché non c'è un atto di contrizione (una preghiera sincera, o un gesto verso Hella). La Cronaca registra anche gli affronti. |
 | **Vogliono riposare all'infinito nella Sala** | A7 **ticchetta**: mostra il countdown scendere, le mura di Hammerfist cedere. Ogni riposo extra **nella Sala** = **−4 h** (tariffa divina), **fuori** dalla Sala = **−12 h**, e in entrambi i casi un cambiamento visibile sull'affresco. Non c'è un cancello, c'è un **prezzo**. |
 | **Saltano del tutto gli affreschi** (fretta verso il rito) | Legittimo: nessun affresco è obbligatorio. Perdono le Benedizioni della Cronaca, il Bane di Aegis Fang vs Fauci (A7) e la catarsi di Thorik (A3). La resurrezione del #3 resta possibile, ma **più fredda**: nessuno ha visto la promessa. |
-| **Cercano un'altra via**: *rianimare morti*, *resurrezione*, una pergamena, un tempio nel Sottosuolo o in superficie | Non funziona, e il motivo sta nell'SRD: l'incantesimo riporta in vita solo un'anima libera di tornare, e lo spirito di Hella è trattenuto nel Sogno della Terra, il Debito della Radice del `DEF-3` §6. Nessuna via ordinaria lo strappa di lì: lo fa solo il rito col Cuore di Moradin `[CANONE — DM 2026-10-18]`. Se escono a cercare lo stesso, ogni sonno fuori dalla Sala costa **−12 h** all'orologio, e un chierico che lancia l'incantesimo sul corpo sente che l'anima non risponde. |
+| **Cercano un'altra via**: *rianimare morti*, *resurrezione*, una pergamena, un tempio nel Sottosuolo o in superficie | Non funziona, e il motivo sta nell'SRD: l'incantesimo riporta in vita solo un'anima libera di tornare, e lo spirito di Hella è trattenuto nel Sogno della Terra, il Debito della Radice del `DEF-3` §6. Nessuna via ordinaria lo strappa di lì: lo fa solo il rito col Cuore di Moradin `[CANONE — DM 2026-10-18]`. E fuori non si va: finché il ciclo non è compiuto, dalla Forgia si esce solo dai portali dei Piani e da quello del Tempo. La Stanza della Corona non porta fuori, e il portale drow resta sigillato `[CANONE — DM 2026-10-18, G2-04]`. Un chierico del gruppo che lancia l'incantesimo sul corpo, qui, sente che l'anima non risponde. |
 | **Chiedono a Therysol di risvegliare Hella subito** | Therysol non può (non è quello il rito): spiega che serve il Cuore di Moradin e i sacrifici del party (`DEF-3`). Ma la sua veglia è **canone vivo**: raccontala (una tiefling mezzodrago che monta la guardia a una druida morta, in silenzio, da giorni). |
-| **Inventano un gesto per la Cronaca**: incidere un nome, lasciare un'offerta, giurare davanti a una parete | **Yes-and con i denti.** Il gesto entra nel canone: la Sala lo incide su A8 la notte stessa, e lo mostri al risveglio. Il prezzo è che resta: se era un giuramento e lo rompono, vale la regola di A1, e Moradin non gira più la testa (§4, Sviluppi) `[INFERRED — needs DM confirmation]` |
+| **Inventano un gesto per la Cronaca**: incidere un nome, lasciare un'offerta, giurare davanti a una parete | **Yes-and con i denti.** Il gesto entra nel canone: la Sala lo incide su A8 la notte stessa, e lo mostri al risveglio. Il prezzo è che resta: se era un giuramento e lo rompono, vale la regola di A1, e Moradin non gira più la testa (§4, Sviluppi). E il pannello di A8 che porta il giuramento si vela, come per l'orologio sprecato (l'ultima riga qui sotto) `[CANONE — DM 2026-10-18, G2-54]` |
 | **FALLIMENTO — sprecano l'orologio** (riposi ripetuti, indugio) | Nessun «game over»: ma se il countdown A7 scende sotto **2 giorni** prima del rito, la Cronaca incide un **pannello velato** su A8 (un'ombra sul finale trionfale) e il DM apre l'ARC-08 con Hammerfist **già in breccia** (Fase 0 più dura). Il costo delle scelte si paga anche in tempo, e il tempo si perde in silenzio, come in Andor. |
 
 **Modi di fallimento dell'indagine (§4-bis).** Se nessuno guarda A2, la rete
@@ -1137,7 +1151,7 @@ Ricchezza speciale (Corona 2/3, Bracieri completi) già contata nel Piano della 
 ## §11 — PONTE verso la resurrezione di Hella + HANDOUT & ASSET
 
 **Ponte.** Riposato il party (Sala **−4 h** o Stanza della Corona **−12 h**: è una
-scelta, §6; il **+1 sacro** al rito viene dal toccare l'incisione `[CANONE — DM 2026-10-12, D36]`), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
+scelta, §6; il **+1** al rito viene dal toccare l'incisione `[CANONE — DM 2026-10-12, D36]` `[CANONE — DM 2026-10-18, G2-05]`), rinnovate le Benedizioni, viste le pareti riempirsi della propria storia — resta
 un solo atto prima di lasciare la Forgia: **riportare indietro Hella**. Il corpo
 è pronto davanti all'Altare; il Cuore di Moradin attende di essere speso; ogni
 PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
@@ -1228,7 +1242,7 @@ sistema «La Forgia Ricorda» promosso qui dal `DEF-1` §10.
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · A1-A8 affreschi 8×5 m (vetro indistruttibile) · 🔲 colonne sacre
 (1 mithral N, 3 adamantio) · ╔╗ Altare 2×2 m + Forgia Eterna · (*) spawn
-· † corpo di Hella accanto all'Altare, lato sud `[INFERRED — needs DM confirmation]`,
+· † corpo di Hella accanto all'Altare, lato sud `[CANONE — DM 2026-10-18, G2-09]`,
 vegliato da Therysol (davanti ad A8 solo per la manifestazione) · Durik
 fra il corpo e il pericolo · [P1] portale sempre aperto. Distanze:
 spawn→Altare 6 m; bordo dell'Altare→parete ≈19 m (20 m dal centro); Ø 40 m.
