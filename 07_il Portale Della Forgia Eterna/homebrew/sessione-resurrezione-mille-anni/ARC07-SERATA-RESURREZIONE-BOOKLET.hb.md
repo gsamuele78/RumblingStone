@@ -764,8 +764,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Forgia Ricorda»**: gli otto affreschi, le Benedizioni, la Stanza della Corona.
 > Non è un dungeon di combattimento: vive di atmosfera, scelte e conseguenze.
 >
-> **Stato al tavolo**: ✅ **GIOCATO** dal gruppo di oggi: hanno dormito nella
-> Sala (R4, §0-bis) e hanno fatto il rito. Un **gruppo nuovo** trova aperte le
+> **Stato al tavolo**: ✅ **GIOCATO** dal gruppo di oggi fino al sonno: hanno
+> dormito nella Sala (R4, §0-bis). La resurrezione (cap. IV) è il prossimo
+> beat e non è ancora giocata. Un **gruppo nuovo** trova aperte le
 > scelte che qui sono scritte come giocate (dove dormire, cosa guardare).
 >
 > **Quando si gioca**: **al ritorno dal Piano della Terra**, **prima** della
@@ -801,6 +802,13 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ## §0 — QUICKSTART DM
 
+> 🧭 **La serata in tre frasi.** Stasera non combatte nessuno: i tre Custodi
+> tornano dal Piano della Terra nella Sala, trovano la loro vittoria incisa
+> sulle pareti, guardano gli affreschi, forse aprono la Visione di A2 e
+> scendono nella Stanza della Corona. L'unico avversario è l'**orologio di
+> A7**, che scende a ogni sonno. Poi dormono, ognuno fa il suo sogno, e il
+> corpo di Hella è pronto per la resurrezione del cap. IV.
+
 ### In trenta secondi
 
 | Domanda | Risposta |
@@ -810,6 +818,8 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | **Chi si oppone** | Nessuno in carne. L'avversario è l'**orologio di A7**: ogni sonno lo fa scendere |
 | **Cosa decidono i PG** | quali affreschi guardare, se tentare la Visione (§5), se scendere nella Stanza (§6), dove dormire, quando chiudere e andare al rito |
 | **Se fanno l'inatteso** | §8, una riga per mossa. Se interrogano la Sala con la magia: §4-bis, «Se lo divinano» |
+| **Quanto dura** | circa due ore: Scena 1 dieci minuti, Scena 2 tre quarti d'ora, Scena 3 un quarto d'ora, Scena 4 venti minuti, Scena 5 mezz'ora. Se dopo un'ora e mezza non siete al sonno, comincia a tagliare |
+| **Se hai un'ora per prepararti** | leggi §0, §0-bis, A1, A3, A7, A8 e la Scena 5; il resto si legge al tavolo, quando i PG ci arrivano |
 | **Se manca tempo** | taglia in quest'ordine: A4, A5, la lettura di Artemis su A6, la Stanza. Non tagliare A7 (l'orologio), A3 (la catarsi) né il sogno di Hella `[INFERRED — needs DM confirmation]` |
 
 Tutto il beat si gioca **senza combattere**: nessun nemico entra nella Sala.
@@ -830,6 +840,18 @@ capitolo in cui la campagna si guarda allo specchio.
 **Chi c'è.** Thorik, Tordek, Artemis (vivi); **Therysol** (veglia il corpo, ora
 presente); **Durik**, il cane di Hella riforgiato, che gira attorno al corpo e non
 è ancora legato a lei; **Hella** morta (spirito in viaggio — solo echi). Nessun nemico.
+
+**Con che cosa arrivano dal «Il Piano della Terra & Terros l'Antico».**
+
+| Fatto | Gruppo di oggi | Gruppo nuovo |
+|---|---|---|
+| Hanno dormito nel Piano della Terra? | no: A7 segna **3g 20h** | se sì, **3g 08h** (§0-bis) |
+| Il Seme di Varis | nello zaino di Tordek, mai toccato; il Marchio non è attivo («Il Piano della Terra & Terros l'Antico» §6-bis) | come l'hanno lasciato; senza Seme, il sogno di Tordek si ferma alla fiera (§7-bis) |
+| La visione del bazar di Varis | Artemis l'ha avuta («Il Piano della Terra & Terros l'Antico» §6-bis) | se non l'ha avuta, vale la variante del suo sogno (§7-bis) |
+| Che cosa Artemis ha detto a Tordek del Seme | è canone, ma non è scritto: chiedilo ai due giocatori prima di cominciare | lo stesso |
+| La luce verde alle spalle di Thorik, al rito dello Smeraldo (eco E-07f) | l'ha avuta, e la crede di Moradin (§7-bis) | se il rito del «Il Piano della Terra & Terros l'Antico» §9 non l'ha data, il sogno delle mani fredde resta lo stesso: le mani sono di Hella comunque |
+| Il Bane di Aegis Fang contro Fauci | la versione forte del 25 settembre (§4, A7) | lo ricevono stasera, davanti ad A7 |
+| pf e cariche di Vigore della Forgia | come a fine Terros. Il sonno di stasera dà la guarigione naturale e ricarica il Vigore, se la Benedizione è attiva (§7, §7-bis) | lo stesso |
 
 **Cosa stampare.** La **Quick-Reference §0-bis**; gli **handout §11** (le
 iscrizioni degli affreschi, la tavola degli Otto); il PDF **Benedizioni di
@@ -862,7 +884,7 @@ Sala costa solo **−4 h** (tariffa divina, §0-bis) e porta con sé il sogno de
 | A1 — Benedizione dell'Osservatore (meditare 1 min) | auto | §4 |
 | A2 — Visione Condivisa (TS Volontà, 2 successi su 3) | 18 | §5 |
 | A3 — Catarsi di Thorik (TS Volontà; il **fallimento è il dono**, e Thorik può rinunciare al tiro) | 17 | §4 |
-| A6 — Artemis legge il Tempo (Conoscenze Arcane / Sapienza Magica) | 18 | §4 |
+| A6 — Artemis legge il Tempo (Sapienza Magica) | 18 | §4 |
 | A7 — Aegis Fang «sente» Fauci (appoggiare l'ascia alla cornice) | auto | §4 |
 | A8 — la manifestazione di Hella (posare il corpo davanti) | auto | §4 |
 | Benedizioni all'Altare (pregare 10 min, nessuna prova) | auto | §7 |
@@ -923,7 +945,8 @@ numeri non sostengono; mostra l'affresco e lascia che sia lui a parlare.
 #### Cosa mostra A7, valore per valore
 
 L'affresco cambia quando cambiano le ore del mondo di sopra, cioè a ogni
-riposo: mostra la riga più vicina al valore dell'orologio. **Mostralo ogni volta**: è l'unico
+riposo: mostra l'ultima riga che l'orologio ha raggiunto, e la breccia solo
+sotto i due giorni. **Mostralo ogni volta**: è l'unico
 posto in cui i PG vedono il prezzo di ciò che hanno appena scelto.
 
 | Orologio | Cosa si vede sull'affresco |
@@ -1011,8 +1034,9 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
   risuonano (conseguenza canonica del Marchio).
 
 ### 🌙 HELLA — la promessa dipinta (solo manifestazione, mai dialogo)
-- Hella non ha coscienza di ciò che accade: il suo spirito è nell'Incudine del
-  Mondo. Ma **il suo corpo** è nella Sala, e la Forgia lo tiene: se i PG lo
+- Hella non ha coscienza di ciò che accade: il suo spirito ha attraversato
+  l'Incudine del Mondo e ora è trattenuto nel Sogno della Terra, dalle radici
+  del suo Voto (§8, cap. IV §6). Ma **il suo corpo** è nella Sala, e la Forgia lo tiene: se i PG lo
   posano davanti ad **A8** (§4), lei **si manifesta senza parole** — una mano
   premuta sul vetro dall'interno, un simbolo lasciato (**Quercia e Martello
   intrecciati**), poi il nulla. È speranza, non conversazione. *(Nessuna
@@ -1044,6 +1068,26 @@ Se qualcuno le chiede del corpo, Therysol dice quello che sa e niente di più:
 **Therysol (piano, senza alzarsi):** *«L'ho rimessa dritta. Si gira ancora verso sud.»*
 
 È il primo indizio della rete (§4-bis, N1): a sud c'è A8.
+
+**Cosa sa fare Therysol** (Esperto 2 / Acolita 6).
+Lancia spontaneamente tre incantesimi di 1° livello e due di 2° al giorno,
+cinque e quattro con le perle, scelti fra *cura ferite leggere*,
+*benedizione*, *cura ferite moderate*, *aiuto* e *ristorazione inferiore*.
+Se gliele chiedono, cura. Le sue divinazioni sono *individuazione del
+magico* e *guida*: sugli affreschi vale la riga di «Se lo divinano», e di
+dove sia lo spirito non sa niente. Non ha incantesimi che riportano in vita:
+a chi glielo chiede risponde che non è il suo rito.
+
+**Chi si trova qui**
+
+| Chi | Nella Sala |
+|---|---|
+| **comando** | nessuno: Moradin parla dagli affreschi e all'Altare, ma non dà ordini |
+| **culto** | l'Altare del Cuore di Moradin: la preghiera rinnova le Benedizioni (§7) |
+| **rimedi** | le Benedizioni e il Vigore della Forgia (§7); le cure di Therysol, qui sopra |
+| **bottega** | nessuno: non c'è un fabbro, e niente da comprare né da vendere |
+| **messaggi** | nessuno: A7 mostra Hammerfist, ma nessuno nella Sala porta una voce fin là |
+| **guardia** | Durik, fra il corpo e il pericolo; Therysol, che veglia |
 
 La scena è l'arrivo nella Sala (Zona A). La Stanza della Corona (Zona B) ha la
 sua scena, la 4 (§6).
@@ -1115,7 +1159,9 @@ Forza Sostenuta di A5 → una prova di FOR o un TS Tempra; A1 «La Fede» ha un
 effetto suo, scritto nel §4). Massimo **un** bonus della Cronaca attivo alla volta, e quello di A1 dura 24 h:
 chi ha meditato davanti ad A1 non prende il +1 di A5 o di un altro pannello
 finché A1 è attivo (PF1e:
-i sacri non si sommano tra loro). In più, un Custode può **«leggere» un pannello
+i sacri non si sommano tra loro). Il tetto vale per le meditazioni: i doni di
+A3 e di A8 si prendono lo stesso, e per ogni tiro vale il sacro più alto (box
+PF1e del §0-bis). In più, un Custode può **«leggere» un pannello
 completato** (Sapienza/Conoscenze CD 15) per rammentare un **fatto vero** già
 vissuto — aiuto-memoria diegetico su gesta/nemici passati, **mai** divinazione
 sul futuro.
@@ -1165,8 +1211,8 @@ ogni riposo anche se nessuno lo guarda.
 > **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1, 2 di 2.** *Intorno ribolle il caos
 > primordiale: fiamme, fulmini che spaccano la realtà con un tuono, pietra
 > liquida, ombre antiche. Lui resta calmo e guarda la corona con amore
-> paterno. Lavora per proteggere i figli nanici che ancora non esistono,
-> cioè voi. Quella sulla fronte di Thorik è la stessa, e diecimila anni non
+> paterno. Lavora per proteggere figli che ancora non esistono.
+> Quella sulla fronte di Thorik è la stessa, e diecimila anni non
 > l'hanno cambiata.*
 
 **Dati per il DM (non da leggere).** La figura è Moradin; il martello è
@@ -1330,7 +1376,9 @@ Cuore della Montagna → «Il Ritorno a Hammerfist»).
   fallisce, Artemis vede la doppia esposizione e basta: niente di male, e lo
   saprà con gli altri al cap. IV, quando la Corona apre il varco.
 - **Se provano ad attraversarlo.** Il vetro resta vetro, e la Corona si
-  scalda appena: è la porta fisica del nodo N2 (§4-bis).
+  scalda appena. Sotto la mano il portale dorato pulsa quattro volte, e il
+  quarto battito è più debole degli altri `[INFERRED — needs DM confirmation]`:
+  è la porta fisica del nodo N3 (§4-bis).
 - **Sviluppi.** Alla vittoria del cap. V, A6 va al 100% e il Rubino si accende: la
   scena si unifica in una sola linea temporale — la profezia compiuta.
 
@@ -1438,7 +1486,8 @@ aprono: chi li esamina li trova muti. Decidi tu se e quando aprirli
 | Se usano… | Che cosa ottengono `[INFERRED — needs DM confirmation]` |
 |---|---|
 | *parlare con i morti* sul corpo di Hella | l'incantesimo SRD legge la memoria del corpo, non l'anima: il corpo sa ciò che Hella sapeva da viva, fino alla Stanza. Di dove sia lo spirito non sa niente |
-| *comunione* o *divinazione* rivolta a Moradin | risposte nella voce della Cronaca. Sul rito: *«Dipende da voi.»* Sulle mani fredde: *«Nessuno regge da solo.»* Sul tempo: la frase di N6 |
+| *comunione* o *divinazione* rivolta a Moradin | risposte nella voce della Cronaca. Sul rito: *«Dipende da voi.»* Sulle mani fredde: *«Nessuno regge da solo.»* Sul tempo: *comunione* risponde «sì» a «abbiamo tempo?», perché l'SRD le concede sì, no o una frase di cinque parole; *divinazione* dà la frase di N6 |
+| *comunione* o *divinazione* su dove sia lo spirito di Hella | il Sogno della Terra, trattenuto dalle radici del suo Voto (§8, cap. IV §6). *Comunione* risponde «no» a «è libero di tornare?»; *divinazione* dà *«La terra la tiene per il voto.»* Nessuna delle due dice come strapparla di lì: lo dice il rito del cap. IV |
 | *leggende e tradizioni* sulla Corona o su Aegis Fang | ciò che dicono A3 e A7, niente di più: Thorgrim, Skullcrusher, il sangue del drago |
 | *individuazione del magico* sugli affreschi | aure divine troppo forti per essere lette una per una. Nessuna informazione sul futuro |
 
@@ -1476,7 +1525,8 @@ d'ombra sono di Artemis, il ki di Tordek.
   ha mostrato la posta in gioco, non un finale garantito).
 - **Esito — fallimento (meno di 2 successi):** la visione resta sfocata, dolorosa —
   vedete Hella ma non riuscite a metterla a fuoco. Nessun malus: solo il peso
-  di un futuro che non si lascia afferrare. Ritentabile dopo la resurrezione
+  di un futuro che non si lascia afferrare. Stasera non si ritenta.
+  Ritentabile dopo la resurrezione
   (allora è automatico).
 - **Sviluppi (BG3-eco).** Ciò che i PG **vedono** qui torna al 100% di A8: se il
   finale reale diverge dalla visione (un PG cade, Hella non torna), la
@@ -1549,9 +1599,10 @@ qualunque altro posto (§0-bis), dormire lì ha un prezzo:
 **Per il gruppo di oggi la scelta è già fatta**: hanno dormito nella Sala (R4,
 §0-bis). La tabella vale per un gruppo nuovo.
 
-**Non suggerire tu la Sala.** Se scelgono la Stanza pagando otto ore in più per
-un +1 e per il senso della cosa, quella è esattamente la decisione che questo
-beat esiste per far prendere.
+**Non suggerire tu la Sala.** Se scelgono la Stanza pagando otto ore in più
+per il senso della cosa, e lasciando i sogni della Sala per il solo sogno di
+Hella (§7-bis), quella è esattamente la decisione che questo beat esiste per
+far prendere. Il +1 non è in gioco: si prende col tocco, ovunque dormano.
 
 ---
 
@@ -1574,6 +1625,7 @@ gruppo ha solo le cure che trova.
 
 > Le carte sono il PDF `BenedizioniDiMoradin.pdf` (§11): tre benedizioni, e ogni PG le ha tutte e tre.
 > Forza della Montagna vale solo nel Piano della Terra e non ha una carta.
+> Se il PDF non c'è, le tre carte si scrivono dalla tabella qui sopra.
 
 ✉ **Si consegna qui: H4**, le carte delle Benedizioni, a preghiera finita.
 
@@ -1693,6 +1745,12 @@ fermati lì.
 > della mano, il legno è consumato da un pollice che ci si è appoggiato
 > molte volte.*
 
+Il bazar è la vetrina di Varis, che Artemis ha visto prima di estrarre il Seme
+(«Il Piano della Terra & Terros l'Antico» §6-bis, giocata). Se un Artemis nuovo non l'ha vista, al posto del
+primo box leggi una riga sola:
+
+> **Read-aloud (Andor lead) — la Sala, il sogno di Artemis, senza il bazar.** *Sogni l'affresco del Tempo, e non è più un affresco: è una porta.*
+
 Il gancio è **Vatore** (cap. V). Non nominarlo. Se Artemis chiede di chi è il
 pollice: nel sogno lo sapeva, sveglio non se lo ricorda. E se chiede se il
 bazar c'entra — *sì, ma non sai come*.
@@ -1735,7 +1793,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 
 | Mossa | Risposta del modulo |
 |---|---|
-| **Vogliono staccare le cornici d'oro** (5.000 mo l'una) | Impossibile: irremovibili (Durezza 20, e la Sala è sacra). Provarci **offende** — Moradin non concede Benedizioni per 24 h. Un Custode che ruba alla Forgia non è più un Custode, per un giorno. |
+| **Vogliono staccare le cornici d'oro** (5.000 mo l'una) | Impossibile: irremovibili (Durezza 20, e la Sala è sacra). Provarci **offende** — Moradin non concede Benedizioni per 24 h a chi ci ha provato. Un Custode che ruba alla Forgia non è più un Custode, per un giorno. |
 | **Attaccano/danneggiano un affresco** | Il vetro è indistruttibile. Ma A1 **smette di girare la testa** a Thorik finché non c'è un atto di contrizione (una preghiera sincera, o un gesto verso Hella). La Cronaca registra anche gli affronti. |
 | **Vogliono riposare all'infinito nella Sala** | A7 **ticchetta**: mostra il countdown scendere, le mura di Hammerfist cedere. Ogni riposo extra **nella Sala** = **−4 h** (tariffa divina), **fuori** dalla Sala = **−12 h**, e in entrambi i casi un cambiamento visibile sull'affresco. Non c'è un cancello, c'è un **prezzo**. |
 | **Saltano del tutto gli affreschi** (fretta verso il rito) | Legittimo: nessun affresco è obbligatorio. Perdono le Benedizioni della Cronaca, il Bane di Aegis Fang vs Fauci (A7) e la catarsi di Thorik (A3). La resurrezione del #3 resta possibile, ma **più fredda**: nessuno ha visto la promessa. |
@@ -1808,7 +1866,10 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 
 ### Handout giocatore
 1. **H1 · La Tavola degli Otto Affreschi** — schema dell'ottagono (MAPPA S-1) con i
-   titoli, da consegnare così i giocatori «leggono» la Sala.
+   titoli, da consegnare così i giocatori «leggono» la Sala. La S-1 è del DM:
+   per H1 si tengono solo l'ottagono, gli otto titoli, i punti cardinali,
+   l'Altare e il Portale P1. Restano fuori percentuali, timer, Bane, nomi dei
+   PG e il corpo.
 2. **H2 · Le Iscrizioni**: quella del Fuoco (A4, ora storica: «Il Fuoco purifica la
    memoria. / Il Fuoco forgia la volontà. / Il Fuoco risveglia il tempo. /
    Portatore della Corona, se cerchi il Cuore della Montagna, / attraversa e
@@ -1987,7 +2048,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Step 1-3, **un'ora** per la prima ora dopo il rito (§8-bis). Senza tentativi
 > falliti né indagine, alla soglia segna **3g 14h**. La scaletta non prevede
 > riposo prima della soglia; se il gruppo lo chiede, si dorme e costa otto ore
-> (§9).
+> (§9). L'orologio conta quanto manca alla breccia di Hammerfist, e i PG lo
+> leggono sull'affresco A7, che cambia a ogni riposo. Sotto i **2 giorni** la
+> breccia è aperta e l'ARC-08 parte in Fase 0 dura (cap. III §0-bis e §8).
 >
 > **Come arrivano.** Riposati, perché hanno dormito nella Sala, e col sogno di
 > cap. III §7-bis addosso: Hella, dall'altro lato, **ha già sentito Thorik dire
@@ -2024,6 +2087,14 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ## §0 — QUICKSTART DM
 
+> 🧭 **La serata in tre frasi.** Stasera non combatte nessuno: i tre Custodi
+> riportano in vita Hella con un rito in sei step all'Altare del Cuore di
+> Moradin, e ciascuno sceglie se donarle un potere del proprio artefatto. Si
+> oppongono la morte, l'**orologio di A7** e **la Custode delle Radici**, che
+> non combatte e vuole che qualcuno porti il debito. Prima di cominciare si
+> danno **gli echi privati** del volume *Il Cuore e la Porta*, e la serata
+> finisce davanti al portale del Tempo.
+
 **Dove siete.** Nella **Sala della Forgia Eterna**, davanti all'Altare del Cuore
 di Moradin. La Corona porta due gemme; gli affreschi hanno registrato la vittoria
 della Terra (cap. III); il corpo di Hella riposa, vegliato da Therysol. Resta
@@ -2046,8 +2117,13 @@ avanti al risveglio (§7); e — al momento del richiamo — **la Custode delle 
 **Quanto dura.** Al tavolo, circa **novanta minuti** dal §2 al §8-bis, e un
 quarto d'ora per la soglia del §8-ter, dopo una pausa.
 
-**Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i fogli
-per i giocatori, nella tabella qui sotto; le mappe dell'**Appendice B**
+**Se hai un'ora per prepararti**, leggi il §0, il §0-bis, la tabella dello
+Step 5 in fondo al §5 e il §9: sono le pagine che servono quando un tiro va
+male. Il resto si legge al tavolo, in avanti.
+
+**Cosa stampare.** Il volume dei giocatori *Il Cuore e la Porta*, con i fogli
+della tabella qui sotto: **gli echi privati si danno prima di cominciare**. Poi
+la **Quick-Reference §0-bis** (rito + sacrifici); le mappe dell'**Appendice B**
 (la Sala a pergamena e il cerchio R-1); la scheda completa di Hella
 (**Appendice A**); il PDF Benedizioni.
 
@@ -2097,7 +2173,7 @@ va avanti il modulo. `[INFERRED — needs DM confirmation]`
 | Segreto | Lo rompe | Chi lancia ottiene | Il modulo va avanti così |
 |---|---|---|---|
 | la presenza verde del Piano della Terra era Hella (§8) | *divinazione*, *comunione* | una frase sola: *«Una radice ti ha tenuto in piedi.»* Nessun nome | il §8 resta uguale, e la rivelazione di Hella diventa una conferma invece di una sorpresa |
-| la risposta del rito che fallisce è il Sud (§9) | *augurio*, *divinazione*, durante l'ora | *«Guardate dove nessuno sta.»* | vale come il Sud trovato: qualcuno lo occupa e lo Step 5 si ritira |
+| la risposta del rito che fallisce è il Sud (§9) | *divinazione*, durante l'ora; *augurio* su «occupiamo il Sud» risponde solo «bene» | *«Guardate dove nessuno sta.»* | vale come il Sud trovato: qualcuno lo occupa e lo Step 5 si ritira |
 | il Rubino è di là, a mille anni fa (§8-ter) | *divinazione* | *«La terza pietra è dove il varco porta.»* | niente cambia: Moradin lo dice lo stesso alla soglia |
 | chi è la Custode delle Radici (§6) | *individuazione del male*, *comunione* | non è malvagia, e non è una creatura da combattere: è l'ordine del Sogno della Terra | le tre risposte del §6 restano tutte aperte |
 
@@ -2111,12 +2187,25 @@ deve essere già fatto.
 | Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
 | prima di cominciare la serata, piegati | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
-| quando il gruppo si sveglia nella Sala dopo il riposo (cap. III §7-bis), prima del rito: non è il risveglio di Hella del §7 | l'**eco privato di Hella** | alla giocatrice di Hella, che legge il sogno ad alta voce | «Echi — Hella» |
+| quando il gruppo si sveglia nella Sala dopo il riposo (cap. III §7-bis), prima del rito: non è il risveglio di Hella del §7 | l'**eco privato di Hella** | alla giocatrice di Hella, che legge ad alta voce la prima metà, «Mentre gli altri dormono», senza la riga «Solo per te», che resta sua; la seconda è il suo promemoria per il §8 | «Echi — Hella» |
 | §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
 | §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
 | §5, **dopo il sì** di chi dona | **la carta del Dono** | solo a chi ha donato | «La carta del Dono», una per chi dona |
 | §7, dopo il box di Durik | **Hella, tornata** e **Durik** | alla giocatrice di Hella | «Hella, tornata» · «Durik, il guardiano di pietra» |
 | §8-ter, mentre la Corona apre il varco | **Le Cronache dei Quattro Eroi** | a tutti | «Le Cronache dei Quattro Eroi» |
+
+**Che cosa dicono i fogli, per il DM.** Sono nel volume dei giocatori; qui una
+riga ciascuno, per sapere a che cosa reagirà il tavolo.
+
+| Foglio | Che cosa dice |
+|---|---|
+| eco di Thorik | due mani piccole e fredde reggevano il Peso con lui; la riga privata gli promette che stanotte saprà di chi erano |
+| eco di Tordek | una fiera straniera e un uomo che cataloga il suo zaino; la riga privata gli dice che nello zaino c'è una cosa messa da Artemis |
+| eco di Artemis | l'affresco del Tempo è una porta socchiusa che qualcuno ha già usato; la riga privata gli dice di cercare chi si muove come lui |
+| eco di Hella | prima metà: tre respiri, Durik che aspetta, la voce di un nano che dice il suo nome. Seconda metà: le tre prove, e le sue mani sotto quelle di Thorik |
+| la preghiera | il nanico e quattro strofe in italiano; la terza chiude su *«Quello che manca, chiedilo adesso, e lo paghiamo»*, che è la porta dei Doni |
+| le carte del Dono | che cosa germoglia in Hella, una carta per chi ha donato (§5) |
+| le Cronache | Thorgrim Barbadiferro racconta i Quattro Eroi che salvarono Hammerfist dal drago nero e poi svanirono; Moradin, nella mente di Thorik: *«Siete voi.»* |
 
 ⚠️ **Il prezzo dei Doni si dice, la carta no.** Moradin dice a voce cosa costa
 (§5); la carta, con quello che germoglia in Hella, arriva dopo il sì. Se la
@@ -2200,13 +2289,15 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   esattamente la cosa che regala.
 - 🌱 Al tavolo la nota da far cadere una volta sola: Hella ha **vulnerabilità al
   fuoco ×1,5**, prezzo della Via della Radice, e adesso **porta il fuoco**.
-- Se porta il **Marchio di Varis** («Il Piano della Terra & Terros l'Antico» §6-bis): l'Anello, durante la
+- Se porta il **Marchio di Varis** («Il Piano della Terra & Terros l'Antico» §6-bis; al tavolo non lo porta,
+  perché il Seme è nello zaino di Tordek e nessuno l'ha toccato): l'Anello, durante la
   stabilizzazione (Step 3), «pizzica» — il caos vitale e il marchio del mercato
   risuonano. Gancio muto, conseguenza canonica del Marchio.
 
 ### 🌙 HELLA — il ritorno (da qui, PG a pieno titolo)
 - Fino al risveglio: **nessuna coscienza** (solo le sensazioni del viaggio,
-  ormai concluse).
+  ormai concluse), tranne la soglia del §6: lì, per una frase sola, la
+  giocatrice lascia Durik e parla da Hella.
 - 🐾 **Fino al risveglio la giocatrice di Hella gioca Durik**, dalla
   Scena 1. Durik non parla e non abbaia: gira attorno al corpo, si sdraia ai
   piedi dell'Altare, fa il click quando qualcosa si muove sotto i piedi, e il DM
@@ -2248,7 +2339,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > scosta, e non sa dove mettere le mani. Che fate?*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-cap. III); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+cap. III; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -2293,6 +2384,11 @@ niente, chi le tocca entra nel rito già dentro la scena.
 
 **Sul corpo di Hella**, a chi lo guarda da vicino: con Osservare CD 20 si vede la
 **ghianda annerita** stretta nel pugno (cosa diventa, §11 C).
+
+**Se la giocatrice usa la percezione di Durik sull'Altare**, il DM le dice il
+vero: sotto i piedi qualcosa batte, sessanta al minuto, e non si sposta. Non
+le dice dove né che cosa sia: è il ritmo che dà anche la porta di SAG, più la
+fermezza, e il §3 resta la rivelazione di *che cosa* batte, e dentro che cosa.
 
 
 ---
@@ -2423,7 +2519,7 @@ salta davanti agli altri tre.
 | 2 | *Il battito rallenta, e chiede a qualcuno di seguirlo.* |
 | 3 | *La pelle di Hella ha ancora il colore della cera.* |
 | 4 | *I semi smettono di pulsare. Stanno decidendo.* |
-| 5 | *Il Sud del cerchio è vuoto, e qualcosa lo sta guardando da lì.* |
+| 5 | *Il Sud del cerchio è vuoto, e qualcosa lo sta guardando da lì.* Se il Sud è già tenuto: *Dietro chi tiene il Sud l'aria si fa fredda, e qualcosa guarda da lì.* |
 | 6 | *La sala prende fiato al posto vostro.* |
 
 **Esito, in due righe già scritte.** Una per la riuscita, una per il fallimento.
@@ -2844,6 +2940,10 @@ momento entra la Custode: §6.
 > fretta. È come la montagna: c'è, e aspetta. Quando parla, la voce è il rumore
 > di una faglia che si assesta.*
 
+Se qualcuno tiene già il Sud (§9), la seconda frase del box diventa: *Alle
+spalle di chi tiene il Sud, dove un attimo fa c'era solo aria, adesso c'è
+qualcuno.*
+
 **LA CUSTODE DELLE RADICI (senza guardare nessuno):** *«Una radice strappata lascia un vuoto. Il vuoto va colmato: è legge.»*
 
 *Guarda il corpo sull'altare, non chi le sta davanti.*
@@ -2887,6 +2987,12 @@ sola**, dalla soglia, e quella frase sceglie A, B o C. Se il gruppo propone
 Durik, la sua frase può solo accettare o rifiutare, e al §8 Hella ricorda chi
 l'ha proposto. Se nemmeno lei risponde, la Custode prende il silenzio per un
 rifiuto: vale B.
+
+La frase si sente nella Sala con la voce di Hella, bassa, come se venisse dal
+Cuore sul suo petto; nessuno la vede. Se un PG si offre («lo porto io»), la
+Custode non lo guarda: il debito è della radice, e la radice è di Hella.
+L'offerta resta detta e lo spirito la sente, ma la frase che sceglie resta a
+Hella. Al §8 lei ricorda chi si è offerto.
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -2962,7 +3068,7 @@ Hella sono della sua giocatrice: il box le dà l'attacco, non la scena.
 | **Suona** | **non parla, non abbaia.** Suoni di pietra: un click, uno strofinio, il rumore lontano di una faglia |
 | **Sa** | dove si muove qualcosa sotto i piedi, entro 18 metri |
 | **Eco che porta** | la lastra del ricordo caduta nella Prova II del viaggio, l'Impronta nel terzo seme. E la zampa col topazio sul margine dell'affresco A5 |
-| **Eco che arma** | la prima Prova di Risonanza della serata (se combatte con Hella contro Zog'tar). Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: la scheda della Collana la chiede con un read-aloud |
+| **Eco che arma** | il primo scontro accanto a Hella, contro Zog'tar in cap. V. Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: la scheda della Collana la chiede con un read-aloud |
 
 Da questo momento Durik è il suo **compagno animale** a pieno titolo, sempre al
 suo fianco. Se viene distrutto, lo richiama il **terzo seme** della Collana.
@@ -2990,7 +3096,7 @@ Lo statblocco del **Treant di Adamantio** è in **Appendice A**.
 **✉ Si consegna qui, alla giocatrice di Hella**: **Hella, tornata** (le righe da
 aggiungere alla sua scheda, che per il resto resta la sua), **Durik** nel
 momento in cui appoggia la testa sul petto di Hella. Il suo **eco privato**
-ce l'ha già dall'Atto I: la seconda metà, «Quello che hai attraversato», le
+ce l'ha già dal risveglio del gruppo (tabella del §0): la seconda metà, «Quello che hai attraversato», le
 serve adesso, per il racconto del §8.
 Le caselle dei Doni sul foglio di Hella le segni tu, dopo il rito. La scheda
 completa per il DM è in Appendice A.
@@ -3044,7 +3150,9 @@ Hella: *«Hai portato peso per me senza saperlo, e io il tuo. Anche da morta. Si
   Voto della Radice è la ragione del debito. Il suo commento cambia la scena:
   *«Il prezzo… lo pago io, non voi. La radice è mia.»* (o, se hanno offerto Durik:
   *«Avete dato lui. Lo capisco. Ma una parte di me non ve lo perdonerà mai del
-  tutto — e una parte vi ringrazierà per sempre.»*).
+  tutto — e una parte vi ringrazierà per sempre.»*). Se un PG si è offerto di
+  portarlo (§6), Hella lo guarda: *«Ti sei offerto. Non era tuo da portare, e lo
+  sapevi.»*
 
 **Sviluppi.** Questo racconto **incide** l'affresco A3 (cap. III): dopo il rito,
 A3 aggiunge la scena di Hella viva che posa una mano sulla spalla di Thorik. Il
@@ -3073,7 +3181,7 @@ TS su Tempra contro gli effetti ambientali; **Vigore della Forgia**, 3 cariche
 che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 2d8+2 a contatto a un alleato) **+**:
 - **Mantello della Fiamma** (Resist Fuoco **20**) — **cruciale**: mitiga la sua
-  vulnerabilità per una battaglia (falla valere prima di Skullcrusher/Fauci).
+  vulnerabilità per una battaglia (falla valere prima degli scontri di cap. V).
 - **Benedizione di Moradin Incarnato** (1/battaglia): +2 sacro att/danni, +4 vs
   paura/charme, **1 ri-tiro**.
 
@@ -3156,7 +3264,7 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | **Vogliono resuscitarla PRIMA (Parte 2, appena ritrovata)** | Impossibile: i semi di treant e il viaggio dello spirito non sono ancora avvenuti. Moradin: *«Non ancora. Deve prima attraversare la Terra dentro di sé.»* |
 | **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, Hella resta morta e **il varco non si apre**: conta quattro, e non apre per meno. Il rito si può fare quando vogliono, ma ogni ora che passa scende dall'orologio di Hammerfist, e Tordek la passa accanto al corpo. |
 | **Chiedono a Moradin di resuscitarla senza costi** | *«La magia non basta. Serve la vita. Io do il Cuore; voi date il resto — o lei torna monca di ciò che potevate donarle.»* (rifiuto totale, §5). |
-| **Vogliono dormire prima della soglia** | Si dorme. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
+| **Vogliono dormire prima della soglia** | Prima del rito vale la tariffa della Sala di cap. III §0-bis, che possiede l'orologio. Prima della soglia si dorme. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
 | **Provano a incastonare il Cuore nella Corona** (è un rubino, e l'incasso è vuoto) | Non entra: il Cuore è grande come un pugno, l'incasso come un'unghia, e non è una gemma della Corona. Se insistono, Moradin: *«Quello è un cuore, non una pietra. Si spende, non si porta.»* Non dire altro sull'incasso (§2-bis) |
 | **Attaccano/scacciano la Custode delle Radici** (§6) | Non combatte: si ritira (ramo B). Nessun scontro — ma il vuoto si colmerà da sé, peggio. |
 | **Un PG vuole sacrificare la PROPRIA vita** (oltre il richiesto) | Moradin **rifiuta**: *«Non chiedo una morte per una vita. Chiedo un dono, non un baratto di anime. Rimetti via quel coraggio: ti servirà domani.»* (evita il martirio gratuito). |
@@ -3181,6 +3289,8 @@ Quattro regole valgono per tutte le righe:
   Col richiamo a zero, dopo il ritiro.
 - **Il Sud occupato prima del primo Step 5** conta come la risposta trovata in
   anticipo: se lo Step 5 va a zero, il ritiro parte subito, senza l'ora d'indagine.
+  Se il richiamo riesce, non cambia niente. Allo Step 5 tirano sempre i tre
+  officianti; chi tiene il Sud non tira allo Step 5.
 - **Il livello negativo** della riga «1 su 3» segue l'SRD tranne in una cosa,
   che è regola di questo rito: dopo 24 ore non chiede il TS su Tempra e non
   diventa mai perdita di livello. Si toglie con *ristorare* (il gruppo ne ha le
@@ -3294,7 +3404,8 @@ sul tavolo nelle scene di prima: qui li ritrova.
 > superficie dell'Altare resta un'**impronta a forma di cuore**, tiepida per
 > sempre: la Sala ricorda anche questo (pannello-Cronaca, cap. III).
 
-Le Benedizioni si rinnovano all'Altare (cap. III §7). Nessun altro loot
+Le Benedizioni si rinnovano all'Altare (cap. III §7), pregando dieci minuti,
+una volta ogni 24 ore vissute. Nessun altro loot
 ordinario (è un rito).
 
 
@@ -3351,7 +3462,8 @@ PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo
 BAB/Lotta: +10/+11 · Velocità 6 m (nana: l'armatura non la riduce)
 FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5), con il +4 della Collana
  · CAR 12
-TS: Tempra alto · Riflessi medio · Volontà alto (SAG 20)
+TS: Tempra +16 · Riflessi +8 · Volontà +15 (base Ranger 1 + Druida 12
+  +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD)
 Scurovisione 27 m (Dream Dwarf)
 ------------------------------------------------------------
 CAPACITÀ IBRIDO TREANT (dal viaggio + rito)
@@ -3446,9 +3558,9 @@ di taglia, e taglia −1. DV 10d8 più COS +5 per dado danno 95 di media: vale i
 CA 10 − 1 + 0 + 15 = **24**. Travolgere (SRD): danno dello schianto più 1,5 × FOR
 = 2d8+13, CD 10 + ½ DV + FOR = 10 + 5 + 9 = **24**.
 
-⚠ **Non SRD**, e vale il canone: FOR 29, armatura naturale +15 e RD 10/adamantio
-restano quelle del canone anche da Grande (l'SRD, scendendo di taglia, darebbe
-FOR 21 e +10); lo schianto fa **2d8** invece dell'1d8 di una creatura Grande; e
+⚠ **Non SRD**, e vale il canone: FOR 29, COS 21, armatura naturale +15 e RD
+10/adamantio restano quelle del canone anche da Grande (l'SRD, scendendo di
+taglia, darebbe FOR 21, COS 17 e +10); lo schianto fa **2d8** invece dell'1d8 di una creatura Grande; e
 il colpire è **+18** invece del +16 dei conti (+7 BAB, +9 FOR, −1 taglia, +1
 Arma Focalizzata): i due punti in più sono i colpi d'adamantio. Il Treant non
 anima gli alberi, come invece fa quello dell'SRD.
@@ -3622,7 +3734,12 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > regge lo stesso, perché la profezia è già incisa: la salvano gli avi, e il
 > prezzo lo pagano loro.
 > Il gruppo di oggi non parte dal tramonto: riprende dalla notte, con 3 tacche
-> segnate, e la sua serata è il riquadro qui sotto.
+> segnate sul foglio: si apre con Durin nel cortile, *«Quando uscite?»*, poi
+> gli acquisti al banco e la scelta fra fermarsi, dormire o uscire; chi vola
+> subito atterra alla tenda con Grask sveglio, tratta con Balvar o colpisce
+> Zog'tar, e la serata si ferma sull'esito del duello all'alba. Prima di
+> cominciare leggi il riquadro qui sotto: la lista di lettura da un'ora e
+> dieci, il dado dei caduti e i Treant di Hella.
 
 > 🗓️ **La vostra serata** — per il gruppo che riparte dalla notte del 372.
 > **Leggi solo questo, in quest'ordine, in un'ora e dieci minuti**: §4 «L'orologio della
@@ -3630,8 +3747,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > variante dall'alto, le rune di Balvar alla tenda, Grask e «Come torna il
 > drago» (15 min) · Scene 7 e 8, le schede d'entrata, «Da dove entrano», la
 > Catena, le tattiche, il ritorno a piedi o in volo con Balvar o Zog'tar, la
-> mappa M7-C e le Appendici A.2 e A.4 (25 min) · Scena 9, solo la tabella di Vatore (5 min) · Scena 10, solo la
-> tabella «Dalla notte» e le tre vie (5 min) · Scena 11, la scheda d'entrata,
+> mappa M7-C, le Appendici A.2 e A.4 e, in §8 B, «Il bottino della tenda e il
+> tempo» (25 min) · Scena 9, solo la tabella di Vatore (5 min) · Scena 10, solo la
+> tabella «Dalla notte», le tre vie e la tabella dei successi (5 min) · Scena 11, la scheda d'entrata,
 > il giro round per round, «Chi sceglie» e le corde, con l'Appendice A.1
 > (15 min). Il resto si apre quando serve. Gli scontri possibili per strada
 > (pattuglia, lupi, sciamani) hanno le statistiche in Appendice A.6. Ci si ferma sull'esito del duello, prima
@@ -3693,7 +3811,8 @@ nella sua scena; le statistiche sono in **Appendice A**.
 
 **Cosa stampare.** La Quick-Reference (§0-bis); il **piano di battaglia** di Re
 Thorek, da dare al consiglio (Scena 4, handout in §9); l'**Appendice A**; le
-**mappe** dell'Appendice D; la tabella **B4** (§7; il testo intero è il capitolo «La Forgia ricorda» del volume del DM). Le **Cronache dei Quattro
+**mappe** dell'Appendice D, con la griglia di M7-C per la tenda; la scheda del
+**Seme-Mercato** (Scena 5, «Le dieci pozioni del gruppo»); la tabella **B4** (§7; il testo intero è il capitolo «La Forgia ricorda» del volume del DM). Le **Cronache dei Quattro
 Eroi** i giocatori le hanno già in mano: si consegnano alla soglia, prima di
 partire (cap. IV §8-ter).
 
@@ -3719,7 +3838,12 @@ Cuore della Montagna, Giorno 3 dell'assedio del 1372).
 Pelle di Pietra, Cuore Incrollabile e *Vigore della Forgia* durano 24 ore
 vissute dalla preghiera all'Altare, e a −1000 non si rinnovano. Allo scadere
 si spengono, e con loro le cariche di *Vigore* rimaste. Da lì le cure sono
-quelle del re e del banco della fucina (Scena 5).
+quelle del re e del banco della fucina (Scena 5). Finché sono attive, ogni
+sonno di otto ore ricarica il *Vigore*, anche a mille anni fa. Finché durano danno questo
+ (cap. III §7): Pelle di Pietra, resistenza al fuoco 10 e al freddo 5; Cuore
+Incrollabile, immunità al caldo e al freddo ambientali non letali e +2 ai TS su Tempra
+contro gli effetti ambientali; *Vigore della Forgia*, 3 cariche per PG, che
+con un'azione standard curano 3d8+5 a sé o 2d8+2 a un alleato toccato.
 
 ### Il giro di Skullcrusher (boss, Scena 11) — 3.5, niente 5e
 - **Soffio acido** in **linea** di 30 m, 14d4, Riflessi CD 28 ½, **ricarica 1/1d4 round**.
@@ -4328,6 +4452,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) | **1** |
 | Uno scontro con la squadra dei lupi (Scena 6), come la pattuglia | **+1** |
 | … e una banda chiamata da uno sciamano (Scena 6) | **+1** |
+| Attaccare il drago di notte, sulle colline (§6) | **2** |
 
 Se il gruppo si divide (metà vola, metà cammina), vale il conto del gruppo più
 lento.
@@ -4753,7 +4878,7 @@ sono quelle che la cappella ha già.
 
 | Pergamena | Prezzo | Quante | Da chi, e perché |
 |---|---:|---:|---|
-| *Silenzio* (chierico 2°, incantatore di 3°) | 150 mo | 2 | Brynja. Dura 3 minuti (1 minuto per livello, SRD): copre l'ultimo tratto del volo e l'ingresso nella tenda, non il volo intero. La legge un chierico o un bardo; Hella no (non è sulla lista del druido), Artemis con Usare Oggetti Magici CD 23 |
+| *Silenzio* (chierico 2°, incantatore di 3°) | 150 mo | 2 | Brynja. Dura 3 minuti (1 minuto per livello, SRD): copre l'ultimo tratto del volo e l'atterraggio, non il volo intero. Alla tenda vale la regola della pietra: a meno di 6 m la bolla è l'allarme, quindi chi l'ha letta la congeda prima, perché per l'SRD *silenzio* lo congeda chi l'ha lanciato, cioè chi ha letto la pergamena, e non chi porta la bolla (Scena 6, «La bolla alla tenda»). La legge un chierico o un bardo; Hella no (non è sulla lista del druido), Artemis con Usare Oggetti Magici CD 23 |
 | *Rimuovi paralisi* (chierico 2°, incantatore di 3°) | 150 mo | 3 | Brynja. Sono quelle che tiene per le mura |
 | *Rimuovi maledizione* (chierico 3°, incantatore di 5°) | 375 mo | 1 | Brynja, l'ultima. Se la compra un PG, all'alba sulle mura non ce n'è |
 | *Identificare* (mago 1°, incantatore di 1°) | 125 mo | 1 | dal forziere del re, presa anni fa a un mercante. Nessuno in fortezza la sa lanciare: Moradin non dà il dominio della Magia, e Zeth è un druido. Si lancia in un'ora e brucia una perla da 100 mo, già nel prezzo. Artemis la legge con Usare Oggetti Magici CD 21 |
@@ -5091,7 +5216,9 @@ blocchi** da 200 m.
 - **Cinque blocchi riusciti**: si arriva alla tenda. Un blocco fallito non fa
   avanzare: si ritenta lo stesso tratto. **Tre blocchi falliti** prima dei
   cinque: **la pattuglia**. Ogni blocco fallito costa anche una
-  tacca, come dice l'orologio.
+  tacca, come dice l'orologio. Dopo la pattuglia il conto riparte da zero:
+  altri tre blocchi falliti ne portano una seconda, con la sua tacca. Il
+  ritorno a piedi ha un conto suo, che parte da zero all'uscita dalla tenda.
 - **La pattuglia**: otto hobgoblin guerrieri
   di 4° livello, EL 10. Non serve vincerla, serve che nessuno scappi. A ogni
   round di scontro si tira 1d6: con 1 un hobgoblin corre verso la tenda, ed è
@@ -5237,7 +5364,7 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 |---|---|---|
 | *Volare*, pozione (5° livello) | 5 minuti | 18 m di velocità, **12 m** in armatura media o pesante (SRD), cioè i nani: circa 1.800 m in tutto, 1.200 per chi è in armatura. Bastano per l'andata, **non** per il ritorno |
 | *Invisibilità*, pozione comprata (3°) | 3 minuti | in volo a 18 m copre circa 1 km; in armatura (12 m) circa 720 m, e l'ultimo tratto si fa visibili. Quelle del re durano 12 minuti |
-| *Silenzio* sulla pietra | 8 minuti: la lancia Brynja all'8° livello, 1 minuto per livello come nell'SRD. Copre l'andata e la tenda; il ritorno no | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
+| *Silenzio* sulla pietra | 8 minuti: la lancia Brynja all'8° livello, 1 minuto per livello come nell'SRD. Copre l'andata e l'atterraggio; alla tenda resta fuori, a più di 6 m (qui sotto, «La bolla alla tenda»); il ritorno no | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
 - **Le tacche**. Il volo costa **1 tacca** invece
   delle 2 dello skill challenge.
@@ -5264,7 +5391,9 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
   fiutano a 9 m, il drago è sulle colline. Il rischio è **l'atterraggio**:
   le pattuglie non passano dalla tenda del generale, quindi atterrare non si
   tira; ma se Grask è sveglio, chi scende visibile tira Nascondersi contro il
-  suo Osservare, e chi scende invisibile Muoversi Silenziosamente contro il
+  suo Osservare, e può tirarlo solo se atterra dietro una tenda vicina, che
+  gli toglie la linea di vista: Grask è un hobgoblin e vede al buio, come le
+  guardie (Scena 7). Chi scende invisibile Muoversi Silenziosamente contro il
   suo Ascoltare. Se Grask li scopre non
   grida, perché non parla: va al corno, ed è l'allarme della tenda, con il
   corno che suona entro **1d4 round** come al primo grido di Zog'tar. In quei
@@ -5287,7 +5416,7 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | **Il campo** | niente. Dorme, e non guarda in alto |
 | **Balvar** | li vede comunque, invisibili o no, e **non dà l'allarme**: tratta, come nella Scena 7. Le sue difese sono le rune alla tenda, qui sotto. Ha *epurare invisibilità*, ma lo usa solo se il combattimento lo tocca |
 | **Zog'tar e le guardie** | come nella Scena 8. Se sopravvive al primo round, la prima cosa che grida è il nome dell'araldo |
-| **L'araldo col corno** | dorme fuori dalla tenda, dalla parte del campo. All'allarme suona il corno entro **1d4 round** |
+| **L'araldo col corno** | sta fuori dalla tenda, dalla parte del campo, sveglio fino alla 4ª tacca e addormentato dalla 5ª (Grask, qui sotto). All'allarme suona il corno entro **1d4 round** |
 | **Skullcrusher** | dalle colline al campo ci mette **circa 7 minuti** dal primo suono del corno. Vede al buio e sente chi è invisibile entro 18 m |
 
 **Le rune di Balvar alla tenda**. Balvar
@@ -5341,7 +5470,7 @@ e il drago arriva sull'assalto.
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2, e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare | non parla: soffia |
+| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2, e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare. Sveglio o no, da N15 è fuori dal telo: non vede dentro la tenda e non sente chi parla sottovoce, sente i gridi | non parla: soffia |
 | la pattuglia di quattro orchi | quattro orchi con le lance in spalla e una torcia sola, che tengono bassa per non abbagliarsi | litigano in orchesco su chi ha rubato il rancio |
 | i cavalieri dei lupi | goblin piccoli e magri, legati alla sella con una cinghia. I worg sono grigi, col collare di cuoio chiodato, e annusano il vento prima di camminare | il worg non ringhia finché non è sicuro. Poi non smette, e il goblin ride |
 | le vedette goblin | due per carro, seduti sui sacchi di farina, avvolti nella stessa coperta | si danno di gomito a ogni rumore, e il secondo strilla sempre prima del primo |
@@ -5352,7 +5481,7 @@ e il drago arriva sull'assalto.
   sveglia e suona **entro 1d4 round**. Non suona se i PG se ne sono occupati
   prima: dorme seduto fuori, e lo si lega, lo si addormenta o gli si ruba il
   corno. Oppure se il *silenzio* copre lui o il corno: un corno che non fa
-  suono non chiama nessuno. Ma Grask dorme a tre metri dal seggio, e una bolla
+  suono non chiama nessuno. Ma Grask sta a tre metri dal seggio, e una bolla
   su di lui prende anche la tenda: le guardie si accorgono che la voce è
   sparita, una esce a gridare, ed è un **allarme** senza corno. Costa il
   successo in meno sulle mura, e il drago non arriva, perché nessuno l'ha
@@ -5423,7 +5552,13 @@ invisibili. Vale tutto quello che segue, con tre differenze:
   la fa scattare, ma resta com'era;
 - le guardie dentro la tenda si evitano con **Nascondersi** contro il loro
   **Osservare** (Appendice A.2): una prova entrando, un'altra se qualcuno si
-  muove. Il fondo è buio e dà occultamento, la soglia è illuminata e non ne dà;
+  muove. Il buio del fondo non nasconde nessuno: le guardie, hobgoblin, e
+  Balvar, nano, vedono al buio fino a 18 m, e la tenda sta tutta in quel
+  raggio. Per l'SRD l'oscurità non dà occultamento contro la scurovisione, e
+  Nascondersi senza copertura né occultamento non si tenta. La copertura c'è
+  in tre punti: il palo a M9, la tavola della mappa a J8, lo schienale del
+  seggio. Chi entra senza invisibilità e senza arrivare dietro uno di questi
+  è visto;
 - se una guardia li vede, si passa alla **Scena 8** senza round di sorpresa.
 
 Balvar li legge comunque. Finché gli parlano sottovoce in nanico antico nessuno
@@ -5447,7 +5582,7 @@ finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª.
 **Come va la scena, in ordine.** Nella tenda ci sono due persone che contano, e
 **parla prima quella che non dovrebbe**. Zog'tar è sul seggio con le sue
 guardie; **Balvar** è nell'angolo in fondo, dove i bracieri non arrivano. I PG
-sono invisibili, o nascosti nel buio del fondo, ma Balvar li **legge**: il suo *Leggere il Fuori-Posto*
+sono invisibili, o nascosti dietro il palo o la tavola, ma Balvar li **legge**: il suo *Leggere il Fuori-Posto*
 percepisce chi non appartiene a questo secolo. Parla in **nanico antico**, a
 voce bassa, e nessuno nella tenda capisce: Zog'tar crede che borbotti sulle sue
 rune, come fa sempre. Fra i PG, i nani lo capiscono **a fatica**: tutto il senso,
@@ -5797,7 +5932,9 @@ motivo per cui la Scena 7 viene prima.
     parola a un bersaglio per ogni livello, tutti entro 9 m l'uno dall'altro,
     Volontà **CD 20**, e dura fino a 13 round: all'inizio di ogni suo turno dopo il primo, il bersaglio ritenta il TS sulla Volontà, e se riesce l'effetto finisce (SRD). L'ordine è **«Cadi»**
     (*«A terra!»*), uno dei cinque dell'SRD: il bersaglio cade a terra e resta
-    prono un round, obbedendo al meglio che può. Chi vola **scende fino a
+    prono un round, obbedendo al meglio che può. Finché non riesce il TS
+    obbedisce di nuovo a ogni suo turno: da prono agisce, attacca con le
+    penalità del prono e lancia, ma non si rialza (SRD, *comando*). Chi vola **scende fino a
     terra** nel suo turno, senza danni da caduta, e si mette prono: sotto un telo
     alto 6 m ci arriva sempre. Se fosse troppo in alto per toccare terra in un
     turno, l'incantesimo fallisce (SRD). Thorik è immune
@@ -5934,8 +6071,9 @@ giusta» e il tavolo la cerca invece di giocare. Due che costano in modi diversi
 - ► **Esito**: *ucciso in silenzio / spettacolare / umiliato e vivo* (Via A). Se
   **spettacolare** (esplosione, decapitazione davanti alle guardie), il terrore
   dilaga MA **Skullcrusher interviene furioso**: non subito, perché di notte è
-  sulle colline, ma all'alba il duello inizia col drago già in picchiata (i PG
-  perdono la prima azione). Se l'orda è stata **pre-allertata** (corridore,
+  sulle colline, ma all'alba il duello inizia col drago già in picchiata: ha un
+  round di sorpresa (SRD), e i PG sono colti alla sprovvista fino al loro
+  primo turno. Se l'orda è stata **pre-allertata** (corridore,
   allarme): un successo in meno sulle mura (Scena 10), e Zog'tar non è di
   sorpresa.
 - **Come si decide**. Due domande,
@@ -6303,7 +6441,7 @@ successo in più o in meno, si applica allo stesso modo.
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| Aegis Fang | il martello di Thorik, che qui riconosce il sangue degli avi | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
+| Aegis Fang | l'ascia di Thorik, che qui riconosce il sangue degli avi | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
 
 **Scheda d'entrata — Skullcrusher il Nero, il capostipite** *(statistiche:
 Appendice A)*
@@ -6403,7 +6541,8 @@ cambia davvero.
 - **Round 1 — la Presenza.** Cala dall'alto (Presenza Terrificante CD 25:
   chi fallisce è scosso; Thorik non tira, perché la *mente vuota* della
   Corona lo rende immune agli effetti di paura, Scena 8). Se Zog'tar è morto in modo «spettacolare» (Scena 8), arriva **già
-  in picchiata** e i PG perdono la prima azione. Apre col **Soffio acido** sul
+  in picchiata**: ha un round di sorpresa (SRD), e i PG sono colti alla
+  sprovvista fino al loro primo turno. Apre col **Soffio acido** sul
   gruppo più fitto (Riflessi CD 28). *Non atterra: vuole restare in cielo, dove
   si sente un dio.* Chi ha la runa di Zeth (*resistere all'energia*, acido 20)
   la attiva adesso, con un'azione standard: prima del soffio, se ha
@@ -6414,6 +6553,10 @@ cambia davvero.
   *Momento Artemis*: in volo (Ali d'Ombra) è l'unico che lo raggiunge alla pari.
   *Momento Aegis Fang*: Thorik la **scaglia** — se colpisce in volo, incide la
   **Cicatrice a forma di martello** su un'ala (§7: −2 alla Volare di Fauci nel 1372).
+  È un'ascia da guerra nanica +2 *da ritorno*: scagliata, è
+  un'arma da mischia lanciata, −4 al tiro e incremento 3 m, e torna in mano a
+  Thorik prima del suo turno successivo (SRD, *da ritorno*). «Colpisce in
+  volo» vuol dire un tiro a distanza a segno mentre il drago è in quota.
 - **La Catena, in ogni round.** Se i PG sanno della runa (Scena 7), leggerla
   sulla scaglia è un'azione di movimento entro 9 m, e colpirla è un attacco
   contro **CA 41**: la CA piena, 37 con l'armatura magica, più 4 perché il bersaglio è piccolo; la runa è sotto la scaglia, e un attacco di contatto non la raggiunge: il primo colpo a segno la spezza, e il drago se ne va. Se
@@ -6437,11 +6580,18 @@ cambia davvero.
   chi tiene la corda dell'ala; chi lo ha ferito di più. A parità decide
   l'arroganza: sceglie quello la cui caduta fa più orrore agli altri, la
   druida appena tornata dalla morte o chi porta la Corona, e lo nomina in modo
-  che lo sentano tutti. Le balestre e le campane non sono bersagli: le fa
-  tacere col soffio solo quando nessun PG gli è a tiro.
+  che lo sentano tutti.
+  **Quando valgono le altre righe.** Questo ordine viene prima di tutte, con
+  tre eccezioni. Il soffio d'apertura del round 1 va sul gruppo più fitto,
+  perché nessuno ha ancora un nome. I nani chiamati dal tavolo prendono
+  l'attacco pieno nel round in cui arrivano, come dice la tabella del
+  cortile, e dal round dopo l'ordine torna questo. Chi tira con le balestre o
+  suona le campane lo chiama solo nei round in cui nessun PG lo chiama: in
+  quei round le fa tacere col soffio, e viene prima del re.
 - **Il re**. Re Thorek sta nel cortile alle spalle
   dei PG. Se in un round nessun PG ha chiamato il drago (la Catena detta, la
-  corda, le ferite, il nome dato), Skullcrusher va su di lui: è il secondo re
+  corda, le ferite, il nome dato) e nessuno ha tirato con le balestre o
+  suonato le campane, Skullcrusher va su di lui: è il secondo re
   che vuole mangiare davanti all'orda. Chi sta sulla linea del soffio o
   accanto al re prende il colpo al posto suo. ⚠ Non SRD: in 3.5 non c'è
   un'azione per prendere un colpo al posto di un altro; qui basta essere lì.
@@ -6506,7 +6656,11 @@ che non volo?»*. La risposta non è «aspetti». Tre cose, tutte SRD:
   il drago picchia sotto i 9 m»*, cioè ogni volta che scende a mordere qualcuno
   nel cortile. I ruoli:
   - **chi lancia il gancio** (sul camminamento, accanto alla gru): attacco di
-    contatto a distanza, incremento 3 m, contro la CA di contatto del drago (**10**);
+    contatto a distanza, incremento 3 m, contro la CA di contatto del drago (**10**).
+    È un'arma da lancio, quindi arriva a cinque incrementi, 15 m, con −2 al
+    tiro per ogni incremento intero di distanza (SRD, gittata): dalle gru in
+    B10 e W10 il gancio prende il drago quando picchia entro 15 m da una
+    delle due, contando anche la quota;
   - **chi tira** (a terra, alla corda): se il gancio prende, **Forza CD 25**
     subito, nella stessa azione preparata; chi tira insieme aiuta, +2 a testa
     (aiutare, Forza CD 10);
@@ -6556,6 +6710,8 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 | Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 29, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis. Per un gruppo di 13° sarebbe il tetto esatto, APL+4, e il DM lo tiene per il gruppo di 14°: con un gruppo di 13° si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS). Vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
 | **Hella appena risorta** — vuoi proteggerla | Riga da scegliere, non di base: il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità). Senza questa scelta vale «Chi sceglie», che la mette fra i preferiti — dà alla giocatrice spazio per il suo primo scontro |
+| **Tre PG** (APL 12, tetto 16), o un gruppo di quattro a cui manca qualcuno | lo stesso drago di A.1, che resta sotto il tetto. Nella regia si salta la riga di chi manca; se manca Hella, manca anche Durik. Alle corde la terza mano la dà un nano, che il soffio prende come nella riga dei nani del cortile |
+| **Cinque PG** (APL 13, tetto 17) | lo stesso drago, più le 2 **wyvern** della prima riga dal round 2, con la stessa tattica |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
 ### SCENA 12 — Il Rituale della Forgia Eterna
@@ -7002,8 +7158,10 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
 
-- **I PG invisibili non gli sfuggono da vicino.** La percezione cieca vede
-  tutto entro 18 m, e *vedere invisibilità* dura 50 minuti: se lo lancia al
+- **I PG invisibili non gli sfuggono da vicino.** La percezione cieca
+  localizza tutto entro 18 m: sa in che quadretto è un PG invisibile, che
+  però conserva l'occultamento totale, 50% di mancare (SRD, *percezione
+  cieca*). *Vedere invisibilità* dura 50 minuti: se lo lancia al
   primo allarme, i PG invisibili sono visibili per tutto il duello. Di notte
   sulle colline non l'ha lanciato, perché non si aspetta nessuno.
 - **Il soffio fa più male**: 14d4 (in media 35) invece di 12d4. La runa di Zeth
@@ -7395,7 +7553,7 @@ centrale, con la runa della barriera di lame, è a M9. Zog'tar siede sul
 seggio a M12–N13, con il braciere del seggio a J11; le quattro guardie gli
 stanno davanti, a K12, L10, O10 e P11. Balvar è sullo sgabello a P13, nel
 fondo buio P12–R13. Il telo est, «il telo a sinistra», va da S5 a S13; il
-telo del glifo è quello sopra il seggio, L14–N14. Grask dorme fuori, a N15,
+telo del glifo è quello sopra il seggio, L14–N14. Grask è seduto fuori, a N15,
 due quadretti dietro il seggio, e il sacerdote è nella tenda accanto, a W11.
 
 <!-- /pagina -->

@@ -62,7 +62,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | 🔥 Falò | V14 | chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD. Il telo ferma la luce: dentro la tenda non arriva |
 | 🏮 Braciere della soglia | O6 | luce (non SRD: l'SRD non ha bracieri, il raggio sta fra la torcia e la lampada comune perché il fondo buio resti buio): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio. La soglia (M4–N4) è in luce intensa e non dà occultamento (Scena 7) |
 | 🏮 Braciere del seggio | J11 | luce (non SRD, come il braciere della soglia): intensa entro 4,5 m, fioca fino a 7,5 m, oltre è buio |
-| 🟫 Fondo buio | P12–R13 | dove i bracieri non arrivano: dà occultamento (Scena 7). Contro le guardie si tira Nascondersi contro il loro Osservare (+1, Appendice A.2): una prova entrando, un'altra se qualcuno si muove. Le celle P12–R13 sono quelle fuori dai raggi dei bracieri. |
+| 🟫 Fondo buio | P12–R13 | dove i bracieri non arrivano. Non dà occultamento contro le guardie hobgoblin né contro Balvar: tutti vedono al buio fino a 18 m, e per l'SRD l'oscurità non nasconde da chi ha scurovisione (Scena 7). Ci si nasconde solo dietro una copertura: il palo a M9, la tavola a J8, lo schienale del seggio. Lì si tira Nascondersi contro il loro Osservare (+1, Appendice A.2): una prova entrando, un'altra se qualcuno si muove. Le celle P12–R13 sono quelle fuori dai raggi dei bracieri. |
 
 ### ⚔️ TATTICHE (come si comportano i nemici — round per round)
 

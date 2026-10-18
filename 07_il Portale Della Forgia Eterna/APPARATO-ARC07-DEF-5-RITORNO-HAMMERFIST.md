@@ -22,9 +22,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 |---|---|---:|
 | SCENA 1 | All'arrivo, Volontà | 15 |
 | SCENA 2 | si sale con Scalare | 15 |
-| SCENA 2 | salto (1d6, o niente con Saltare | 15 |
+| SCENA 2 | niente con Saltare o Acrobazia | 15 |
 | SCENA 2 | 1/giorno, comando | 15 |
-| SCENA 2 | 1d6, o nessun danno con Saltare | 15 |
+| SCENA 2 | nessun danno con Saltare o Acrobazia | 15 |
 | SCENA 2 | di 6 m di raggio (Riflessi | 15 |
 | SCENA 3 | −8 di penalità d'armatura lo Scalare | 15 |
 | SCENA 3 | legge Artemis con Usare Oggetti Magici | 27 |

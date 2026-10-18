@@ -34,6 +34,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | 3d10 perforanti, raggio 3 m, Riflessi | 18 |
 | SCENA 2 | risalita Scalare | 20 |
 | SCENA 3 | Conoscenze (Ingegneria/Dungeoneering) | 18 |
+| SCENA 3 | per l'angolo di rottura (oltre la | 10 |
+| SCENA 3 | i nani possono tirare invece Cercare | 18 |
 | SCENA 3 | poi colpo mirato (FOR o attacco) | 20 |
 | SCENA 3 | pilastro crolla sugli Xorn (10d6, Riflessi | 22 |
 | SCENA 3 | Azione di comando (Intimidire o Diplomazia | 18 |
@@ -50,6 +52,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | Se un tiro va storto, FOR | 20 |
 | SCENA 6 | affonda in 3 round, Nuotare | 20 |
 | SCENA 6 | intero e una prova di FOR | 15 |
+| SCENA 6 | come Thorik, con la stessa Scalare | 15 |
 | SCENA 6 | balza tra i detriti fluttuanti (Saltare | 25 |
 | SCENA 6 | Intrattenere (Canto) | 18 |
 | SCENA 6 | Con Conoscenze (religioni) | 15 |
@@ -63,6 +66,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | Riflessi | 19 |
 | SCENA 7 | chi è adiacente al bersaglio, Equilibrio | 15 |
 | SCENA 7 | chi è a terra, Riflessi | 18 |
+| SCENA 7 | Tempra | 18 |
+| SCENA 7 | 2d6 fuoco agli adiacenti, Riflessi | 18 |
+| SCENA 7 | critico confermato, frantumare a LI 13 | 16 |
 | SCENA 8 | Intrattenere Canto | 18 |
 | SCENA 8 | azione standard, Intrattenere (Canto) | 18 |
 | SCENA 8 | dalle superfici (azione di movimento, Equilibrio | 10 |
@@ -89,6 +95,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 9 | quel round | 26 |
 | SCENA 9 | Utilizzare Oggetti Magici (Anello) | 25 |
 | SCENA 9 | ppure Eldritch Blast (contatto a distanza) | 25 |
+| SCENA 9 | ppure Eldritch Blast (contatto a distanza), alternativa | 10 |
 
 ## L'indice dei read-aloud, in ordine di gioco
 

@@ -137,11 +137,14 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
 - **Posizioni iniziali**: Thorik F04, Artemis I04, Tordek G05. **Xorn 1** emerge
   a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 181 pf `[CANONE — DM 2026-10-18]`) attende a
   G09 (⬛), sotto il pilastro.
-- **Tattiche Xorn (nemico, round-per-round)**: Earth Glide → **emergono, colpo
-  pieno (3 artigli + morso), riaffondano** con **azione preparata** — NON restano
-  2 round in superficie (colpiscili solo quando sono fuori). Fauci di Diamante a
+- **Tattiche Xorn (nemico, round-per-round)**: Earth Glide come nell'SRD.
+  Emergono e mordono, e restano in superficie fino al loro turno successivo:
+  per riaffondare nello stesso turno servirebbe Attacco Rapido. Al turno dopo
+  fanno l'attacco completo (morso e 3 artigli) o riaffondano e riemergono
+  accanto a un altro con un morso solo (master DEF-1 §5). Fauci di Diamante a
   90 pf **si rifugia nel cristallo** (+4 CA) e tende un altro agguato.
-- **Tattiche PG**: bersagliare gli Xorn *nel round in cui emergono* (readied);
+- **Tattiche PG**: colpire gli Xorn rimasti in superficie, e preparare azioni
+  contro le riemersioni;
   usare i cristalli come copertura contro il caster; far crollare 💠 per
   intrappolare la Fauci. Artemis in volo evita il terreno difficile.
 - **Evoluzione**: se i PG demoliscono/negoziano (3 vie, §5), lo scontro cambia:
@@ -257,7 +260,7 @@ LEGENDA · 💠 Cristallo Vivente (canta) · 💎 Madre Cristallo (J04, alt. 5 m
               🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            Thorik (gravità 10×)
                          S (porta sigillata)
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · 🧲 pareti di magnetite LETALI per chi porta metallo · ⬜ pavimento
+LEGENDA · 🧲 pareti di magnetite che incollano chi porta metallo · ⬜ pavimento
 (gravità 2×, gestibile SOLO per Tordek) · 🤖 Sentinella di Mithral (160 pf) ·
 ⛓️ Thorik immobilizzato alla parete · 🕸️ Artemis prono accanto a lui (gravità 10×).
 ```
@@ -326,7 +329,8 @@ DILEMMA DELL'ALTARE (ha DUE lati, non uno):
   IN ZERO-G    = eviti l'Earth Mastery, MA perdi del tutto la Stabilità
                  (Tordek non resiste più a nessuna spinta) e ti serve volo.
   Artemis in 🌫️ = quasi intoccabile (−4 al boss) = star DPS.
-  Terros NON vola: tienilo in zero-G → perde la rigenerazione e fatica.
+  Terros NON vola: nello zero-G non guarisce, ma il gruppo non ha come
+  spingercelo (l'Onda non lo sposta, la spallata non è legale, DEF-1 8c-2b).
 ────────────────────────────────────────────────────────────────────────
 ⚠️ QUESTA GRIGLIA È LO STATO DAL ROUND 2 (Altare già centrato). Al round 1
 l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).

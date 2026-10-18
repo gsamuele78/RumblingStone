@@ -71,7 +71,12 @@ Eterna per recuperare le tre gemme della Corona di Adamantio e riportare in
 vita **Hella Oakenshield**, morta nella Stanza della Corona (ARC-06). Il
 **Topazio del Tempo** è già stato forgiato nel Piano del Fuoco. Ora si scende
 nel **Piano Elementale della Terra** per lo **Smeraldo della Forza** — e non
-sarà una passeggiata: la fisica stessa del piano è un nemico.
+sarà una passeggiata: la fisica stessa del piano è un nemico. Lo Smeraldo lo
+custodisce **Terros l'Antico**, che non odia nessuno ed esegue un voto: la
+Forza non si dona, si dimostra. Lungo la strada gli Xorn di Fauci di Diamante
+vogliono il mithral, e una gemma di **Varis**, un mercante di Rethmar, tenta
+Artemis con un affare. Al tavolo servono anche la scheda dei Bracieri di
+Tordek e l'orologio di Hammerfist, che parte da **3g 20h**.
 
 **Chi scende (composizione reale, D8/D15).**
 
@@ -99,9 +104,12 @@ Scena 1, e i poteri Terra dei Bracieri nella Scena 7).
 due serate: il 24 luglio fino alla Sentinella compresa, il 31 il Seme, Terros e
 il rito. Il punto naturale di stacco è l'anticamera dopo il duello, e staccare
 la serata non vuol dire che i PG riposino. Con un'ora sola, leggi per intero
-§0, §0-bis e le Scene 7, 8 e 9; delle Scene 1-6 bastano i box e le CD della
-Quick-Reference. In preparazione si salta il §6-bis dall'ora della pergamena in
-giù, che si gioca nel `DEF-4`, il §8c, che si consulta durante lo scontro, e i
+§0 e §0-bis. Della Scena 7 leggi la Sentinella fino alla regia del duello;
+della Scena 8 lo statblocco e le Tattiche; della Scena 9 la Fase 1 e il
+riquadro «Il giro del round in quattro battute». Delle Scene 1-6 bastano le CD
+della Quick-Reference: i box si leggono al tavolo, dal file. Le Contingenze e
+il §8c si consultano durante lo scontro. In preparazione si salta anche il
+§6-bis dall'ora della pergamena in giù, che si gioca nel `DEF-4`, e i
 §10-§11-bis, che servono dopo.
 
 **Un gruppo nuovo non eredita il canone giocato.** I blocchi «✅ CANONE GIOCATO»
@@ -199,7 +207,7 @@ modulo, non giocate.
 | Rituale F2: Thorik Tempra/FOR (**16** se Tordek riesce) · Tordek TxC/Conc. · Artemis UMD/TxC | 26 · 25 · 25 | §9 |
 
 ### Iniziativa tipo & pf da tracciare
-`Artemis +? · Tordek +? · Terros −1 · Thorik +?` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
+`Artemis, Tordek, Thorik: dalla scheda · Terros −1` · Xorn e Fauci di Diamante +0 · Sentinella +2 — **Terros 345 pf**
 (soglie: 260 = usa Scudo di Geodi; 172 = difesa sull'Altare/rigenera;
 0 = si sbriciola, emerge lo Smeraldo). **Sentinella 160 pf** (1ª crepa = Overdrive
 3 attacchi/CA 24; 3ª crepa o 0 pf = petto aperto → colpo finale). **Fauci di Diamante 181
@@ -219,7 +227,7 @@ pf** (90 = si rifugia nel cristallo +4 CA). Xorn 52 pf (15 = scava via).
 5. **Earth Glide** (movimento): entra/esce dall'Altare — *Thorik lo inchioda
    con «Radice a Terra»: prova di FOR contro **CD 25 statica** (errata nello
    statblocco, §8)*.
-Rigenera **15/round** a contatto con pietra. Sonico **×1,5**. −4 vs volanti.
+Guarisce **15 pf/round** a contatto con pietra (guarigione rapida, non la rigenerazione dell'SRD: il danno resta letale). Sonico **×1,5**. −4 vs volanti.
 ⚠️ **Se il party ha SALTATO i Cristalli (§6)**: niente Frequenza, niente
 Diapason, niente +2 TS → Terros a piena forza, nessun round intontito.
 ⚠️ **Diapason**: c'è solo per un gruppo che l'ha preso e non l'ha ancora
@@ -451,13 +459,13 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 
 | Attività | **Senza** Benedizione (ipotetico) | **Con** Benedizione «Forza della Montagna» |
 |---|---|---|
-| Movimento | −50% velocità (9 m → 4,5 m) | −25% velocità (9 m → ~7 m) |
+| Movimento | −50% velocità (9 m → 4,5 m) | −25% velocità, arrotondata per difetto al quadretto: da 9 m a 6 m, e i 6 m dei nani a 4,5 m |
 | Saltare | −10 | −5 |
 | Scalare | −10 (quasi impossibile) | −5 (difficile ma possibile) |
 | Attacco in mischia | −2 (armi pesanti ×2 ingombro) | nessuna penalità |
 | Prove di FOR/DES | −4 | **+2** di competenza alla FOR (aiuta) |
 | Carico | ×2 (Medio → Pesante) | +2 FOR per il calcolo (compensa) |
-| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** superare una prova di Destrezza CD 20 a fine round, o precipita `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: il 3.5 non ha una prova per il volo in gravità doppia; quando manca l'abilità l'SRD chiede la caratteristica, e la CD è del modulo. Nella camera di Terros, in gravità zero, la prova non si tira |
+| Volo (Artemis, Ali d'Ombra) | — | deve atterrare ogni round **oppure** superare una prova di Destrezza CD 20 a fine round, o precipita dalla quota a cui vola, col danno da caduta qui sotto `[CANONE — DM 2026-10-18]`. ⚠ Non SRD: il 3.5 non ha una prova per il volo in gravità doppia; quando manca l'abilità l'SRD chiede la caratteristica, e la CD è del modulo. Nella camera di Terros, in gravità zero, la prova non si tira |
 
 **Cadute in gravità aumentata.** Danno **1d10 per 3 m** (non 1d6) — versione
 "Iraconda" del RICALIBRATO; velocità terminale raggiunta prima. CD dei
@@ -570,7 +578,7 @@ gravità, §3 `[CANONE — DM 2026-10-12, D36]`: strisciate); linee di vista spe
 
 **Terreno (callout):** corridoio libero centrale (riga 06 della MAPPA T-3);
 i cristalli NON bloccano il movimento ma **rompersi addosso a uno** (carica,
-caduta) = 1d6 perforante e **−1 successo** allo skill challenge se in corso.
+caduta) = 1d6 perforante e **un fallimento** allo skill challenge, come al §6.
 **Cosa succede qui:** **Incontro 2 (OPZIONALE) — i Cristalli Viventi** (§6);
 la zona si può **aggirare** da sud (+30 min).
 
@@ -618,7 +626,7 @@ la Sentinella).
 |---|---|---|
 | **Stalattiti d'adamantio** (20+ dal soffitto a 50 m) | **1d4 cadono** col 2 del d6 di viaggio (o su innesco): 3d10 perforanti, raggio 3 m, Riflessi **CD 18** per schivare | Si possono **innescare con Spaccare/tiro mirato** per farle cadere su un nemico — leva per i PG (e per Terros che scava). |
 | **Polvere di cristallo** (nell'aria) | **Tempra CD 16 o 1d3 danni COS** col 3 del d6 di viaggio; cumulativa a rovescio (−1 CD per ogni TS già superato: ci si abitua al respiro) | Attrito: **premia chi cura la COS** e chi si copre il volto (filtro +4, §0-bis; *Endure Elements* non serve). Senza guaritore (Hella morta) morde davvero. |
-| **Fenditure della terra** (2, larghe 3 m) | caduta 6d6 **×1,5 in gravità pesante = 9d6**; risalita Scalare **CD 20** | Barriere tattiche: spingervi dentro un nemico, o rischiare di caderci col Push di Terros. |
+| **Fenditure della terra** (2, larghe 3 m, profonde 18 m) | caduta **6d10**, 1d10 ogni 3 m come al §3; risalita Scalare **CD 20** | Barriere tattiche: spingervi dentro un nemico, o finirci spinti da Fauci di Diamante, che ha Spinta Migliorata. |
 | **Geodi giganti** (cristallo, alti 3-5 m) | **copertura totale (+8 CA)**; PF 80, Durezza 8 — **distruttibili** | Copertura che si può **spaccare** per esporre chi ci si nasconde (l'Xorn élite ci si rifugia sotto il 50%, §5). |
 
 > **Illuminazione**: buio quasi totale (serve scurovisione); i geodi danno solo
@@ -667,7 +675,9 @@ a parlare, gli Xorn emergono a metà e parla Fauci di Diamante (via C).
 
 **Tre vie (agency, nessuna "giusta"):**
 - **A — Demolizione ingegneristica (Shine Time di Tordek).** Conoscenze
-  (Ingegneria/Dungeoneering) **CD 18** per l'angolo di rottura, poi colpo
+  (Ingegneria/Dungeoneering) **CD 18** per l'angolo di rottura (oltre la CD
+  10 serve avere gradi; i nani possono tirare invece Cercare CD 18 sulla
+  pietra, come al §6), poi colpo
   mirato (FOR o attacco) **CD 20** sul punto di stress → il pilastro crolla
   sugli Xorn (**10d6**, Riflessi **CD 22** dimezza). Chi è dentro la pietra
   prende metà danni ed esce stordito per 1 round; lo scontro si fa comunque
@@ -721,10 +731,14 @@ round 2 se si combatte. Parla Terran; a chi non lo capisce arriva il tono.
 
 ### Se si combatte — e sarà DURO (EL ~13-14)
 
-**Tattiche.** Gli Xorn usano **Earth Glide**: non restano mai in superficie
-due round di fila — emergono, colpiscono, si rituffano nella pietra (copertura
-totale). I PG devono **preparare azioni** (readied) per colpirli
-all'emersione. Fauci di Diamante punta **Thorik** e tenta di **spezzargli
+**Tattiche.** Gli Xorn usano **Earth Glide** come nell'SRD: aspettano sotto la
+pietra ed emergono quando un nemico è a portata. Emergere è movimento e il
+morso è l'azione standard, quindi lo Xorn che emerge e morde finisce il turno
+in superficie: per tornare sotto nello stesso turno servirebbe *Attacco
+Rapido*, che nessuno dei tre ha. Al turno dopo, se il bersaglio è ancora lì,
+fa l'**attacco completo** (morso e tre artigli); se no, si rituffa, scivola
+sotto la pietra e riemerge accanto a un altro con un morso solo. Le **azioni
+preparate** dei PG servono contro le riemersioni. Fauci di Diamante punta **Thorik** e tenta di **spezzargli
 lo scudo o l'arma** (Spaccare, morso che ignora la durezza; Aegis Fang non si spezza); gli altri due puntano
 Artemis. Sotto il 50% dei pf, Fauci di Diamante si ritira **dentro** un
 geode gigante (Ambiente dinamico, §4: PF 80, Durezza 8) e lo usa come corazza
@@ -740,7 +754,7 @@ Spazio 3 m, portata 3 m · Visione a 360° (niente fiancheggiamento) · **RD 10/
 Immune freddo e fuoco · Resistenza all'elettricità 10 · Percezione tremorica 18 m · TS Temp +16, Rifl +12, Vol +14 (buoni da esterno a 21 DV: +12; Volontà di Ferro +2) ·
 FOR 27, DES 10, COS 19, INT 10, SAG 11, CAR 10 (+2 alla FOR dai DV 16 e 20) · Talenti (8 per 21 DV, più Incalzare bonus come nell'SRD): Attacco Poderoso, Incalzare (bonus), Spinta Migliorata, Colpo Possente, Multiattacco,
 Robustezza, Spaccare Migliorato, Arma Focalizzata (morso), Volontà di Ferro · Abilità: Ascoltare +24, Osservare +24, Cercare +24 ·
-**Speciale**: se morde un'arma o uno scudo magico che non è un artefatto, fa Spaccare (prova contrapposta, morso +33 con Spaccare Migliorato) e il morso ignora la durezza
+**Speciale**: se morde un'arma o uno scudo magico che non è un artefatto, fa Spaccare (prova contrapposta, morso +37: +4 di Spaccare Migliorato e +4 perché è Grande contro un'arma Media, SRD *Spezzare*) e il morso ignora la durezza
 sotto 20; Aegis Fang non si spezza; se riesce, l'oggetto è distrutto **e lo Xorn cura 30 pf**.
 ⚠ Non SRD: la RD dell'SRD è 5/contundente, l'armatura naturale è +16, e lo Spaccare che ignora la durezza e cura è del modulo.
 Contro questa RD i pugni di Tordek passano interi, e l'ascia di Thorik, che è tagliente, no.
@@ -776,13 +790,16 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   Xorn non guardano e non ascoltano, sentono il peso.
 - **Round 1 — l'agguato.** I due standard emergono **sotto/dietro** i PG più
   arretrati (bersaglio preferito: **Artemis**, il più leggero e il più
-  metallico di anelli). Fauci di Diamante NON emerge: aspetta di sentire dove
+  metallico di anelli). Le 🕳️ G02 e O05 sono dove pattugliano: mentre il
+  party si avvicina si portano sotto il bersaglio, e al round 1 emergono già
+  accanto a lui. Se il party non li ha sentiti, è un round di sorpresa, in
+  cui emergere è la loro sola azione; il morso arriva col round normale. Fauci di Diamante NON emerge: aspetta di sentire dove
   si pianta il "peso grosso" (Thorik).
 - **Round 2 — il morso al ferro.** Fauci di Diamante emerge **sotto Thorik**
-  (morso +29 ignora durezza <20; **Spaccare +33** su scudo/arma — se spezza,
-  **cura 30 pf** e i suoi occhi si accendono di fame). I due standard mordono
-  e si **rituffano** (mai 2 round di fila in superficie): il party DEVE
-  preparare le azioni sulle emersioni.
+  (morso +29 ignora durezza <20; **Spaccare +37** su scudo/arma — se spezza,
+  **cura 30 pf** e i suoi occhi si accendono di fame). I due standard, già in
+  superficie dal round 1, fanno l'attacco completo su chi hanno accanto; se
+  il bersaglio si è spostato, si rituffano e riemergono accanto a un altro.
 - **Round 3+ — logoramento.** Emersioni alternate dai punti 🕳️; Fauci di
   Diamante ruota attorno a Thorik per tenere il pilastro (la sua dispensa)
   alle spalle. Se un PG resta isolato oltre una colonna (copertura totale che
@@ -797,7 +814,8 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
   il party ripassa di qui, li ritrova — affamati e più prudenti. Combattono
   come al round 1 e scavano via a metà dei loro pf.
 
-> **Calibrazione rapida.** Blast di Artemis ~28/colpo, manca solo con l'1 naturale.
+> **Calibrazione rapida.** Blast di Artemis ~25/colpo: il d6 di fuoco e quello
+> di freddo non contano, perché gli Xorn ne sono immuni. Manca solo con l'1 naturale.
 > La Raffica di Tordek è contundente e passa la RD di tutti e tre. Thorik
 > colpisce Fauci col 7+, ma la RD 10 gli lascia poco: il suo lavoro è la via B e
 > reggere lo Spaccare. Scontro atteso 4-5 round, Artemis a ~2/3 pf in uscita.
@@ -817,8 +835,8 @@ sono quelle qui sopra, cambia quanti Xorn ci sono e quando emerge il capo.
   Emerge già al round 1 sotto il PG che porta più metallo, come fa con Thorik.
   È la versione più forte, ed è a EL 13, sotto il tetto di 17.
 
-**XP**: **1.700 a testa** al gruppo di oggi, **≈ 1.200** ai gruppi futuri (Fauci di Diamante GS 12 + 2 Xorn GS 6, §11-bis). **Loot** (se uccisi): vene di **mithral grezzo** (~2.000 mo, se non
-crollate col pilastro) + 2 geodi d'ametista (400 mo l'uno).
+**XP**: **1.700 a testa** al gruppo di oggi, **≈ 1.200** ai gruppi futuri (Fauci di Diamante GS 12 + 2 Xorn GS 6, §11-bis). **Loot**: vene di **mithral grezzo** (~2.000 mo) se il pilastro
+non crolla, cioè con le vie B e C; 2 geodi d'ametista (400 mo l'uno) e un granato stellato dagli Xorn uccisi (§11-bis B).
 
 ---
 
@@ -908,6 +926,8 @@ o passare il giro senza fallimento; e i nani hanno la loro prova, qui sotto
 fallimenti, Diplomazia compresa; il canto fallito, in più, toglie un successo.
 Riforgiare un cristallo è la prova del giro di quel PG: tira Osservare, e se
 fallisce conta un fallimento. Ogni cristallo crepato si riforgia una volta.
+Con quattro o cinque PG la soglia resta 6 successi prima di 3 fallimenti: chi
+non ha una prova sicura aiuta o passa il giro, che non costa niente.
 
 Se qualcuno stacca o rompe un cristallo vivo, conta un fallimento, e se è il
 terzo il giardino urla. Se lo skill challenge non è cominciato, comincia lì,
@@ -1270,7 +1290,7 @@ combinato che valorizza ognuno (vedi **MAPPA T-4**):
 - **L'Ancora — Thorik**: pianta i piedi sul bordo (o conficca Aegis Fang) e fa
   da perno di salvataggio. Se un tiro va storto, **FOR CD 20** per fermare la
   deriva nel vuoto. Se fallisce anche l'Ancora (o la Scalare sulla corda), chi
-  scivola cade nell'oceano di roccia: affonda in 3 round, Nuotare CD 20 come
+  scivola finisce nell'oceano di roccia: affonda in 3 round, Nuotare CD 20 come
   al §4, e Artemis può ripescarlo col cavo `[CANONE — DM 2026-10-12, D84]`.
   Attorno al Tempio la gravità è zero, quindi non si cade: si deriva piano
   verso l'oceano, senza danno, e lo si tocca al round successivo. Artemis
@@ -1280,6 +1300,8 @@ combinato che valorizza ognuno (vedi **MAPPA T-4**):
   la fa entro i 3 round, l'oceano risputa il sommerso sulla riva dopo 1d4
   round, a 0 pf e stabile, e il riposo che gli serve costa −12 h. Thorik sale
   per ultimo, e dal Tempio gli fa da Ancora Tordek `[CANONE — DM 2026-10-14, D87]`.
+  Con un quarto o un quinto PG, gli altri sono legati al cavo e salgono la
+  corda come Thorik, con la stessa Scalare CD 15, prima di lui.
 - **Il Traghettatore — Artemis**: con le **Ali dell'Ombra** ignora la gravità
   invertita; vola portando un cavo di mithral agganciato a Thorik e a Tordek.
 - **Il Navigatore — Tordek**: balza tra i detriti fluttuanti (**Saltare CD 25**,
@@ -1301,7 +1323,9 @@ metà strada**, e da lì al portale. La prova è quella della Frequenza (§8):
 Intrattenere (Canto) **CD 18**, l'Anello di Artemis dà +4
 `[CANONE — DM 2026-09-30]`. Suonarlo per la scala **non lo consuma**: il suo uso unico è lo stordimento.
 Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
-`[CANONE — DM 2026-10-12, D79]`.
+`[CANONE — DM 2026-10-12, D79]`. Le quattro fanno la scala intera, che con la
+sola Frequenza arriva a metà strada e col Diapason al portale. Canta un PG alla
+volta, con un'azione standard, come nel §8.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — «la salita cantata».** Al tavolo
 > l'attraversamento è stato risolto in variante: il party ha **cantato la
@@ -1315,8 +1339,8 @@ Servono **4 prove riuscite**, e una fallita fa ricadere l'ultimo blocco
 **Yes-and con i denti: quando il tavolo inventa una strada.** La salita
 cantata è il modello. Il tavolo ha avuto un'idea che il modulo non aveva, il
 DM l'ha presa, e l'idea è entrata nel canone con un prezzo: i blocchi crollano
-a metà, e il resto si fa coi ruoli. Se un gruppo inventa un'altra via (la
-lancia di Thorik come rampino, un detrito cavalcato, un incantesimo che il
+a metà, e il resto si fa coi ruoli. Se un gruppo inventa un'altra via
+(l'ascia di Thorik come rampino, un detrito cavalcato, un incantesimo che il
 modulo non prevede), funziona, e costa qualcosa che si vede: una prova in più,
 un blocco che cade, un compagno che resta indietro sul cavo. Mai gratis, mai
 negata.
@@ -1423,8 +1447,9 @@ muove, ed è fuori dallo scontro, costretto a guardare.
 | i Bracieri | i guanti di Tordek, con una coscienza da vecchio fabbro | in nanico, dentro la mente di Tordek, per frasi corte. Parlano al completamento, e poi di rado |
 
 **Statblock — SENTINELLA SILENZIOSA (Golem di Mithral).** Costrutto, Grande ·
-DV 18d10+40 (**160 pf**) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES,
-+19 nat), contatto 11, colto 28 · 2 schianti +20 (2d10+8 **+1d6 elettrico**) ·
+DV 18 (**160 pf**; con 18d10 e i +30 di un costrutto Grande la media SRD sarebbe 129, i 160 sono del modulo) · Iniz +2 · Vel 9 m · **CA 30** (−1 taglia, +2 DES,
++19 nat), contatto 11, colto 28 · BAB/Lotta +13/+25 · 2 schianti +20 (2d10+8 **+1d6 elettrico**) ·
+FOR 27, DES 14, COS —, INT —, SAG 11, CAR 1 · TS Temp +6, Rifl +8, Vol +6 (costrutto: BAB ai tre quarti dei DV, tre TS scarsi, SRD *Costrutto*) ·
 **Pugno Voltaico**: se colpisce, Tempra **CD 22** o **barcollante** 1 round ·
 **Attrazione Fatale** (azione veloce): strappa un oggetto metallico
 non-artefatto entro 9 m, Riflessi **CD 22** nega · Immunità da costrutto ·
@@ -1464,8 +1489,9 @@ Tordek entrerà da solo, e lascia che lo curino. In sala, se il giocatore
 combatte sulla difensiva, con Maestria, i colpi di contatto lo fanno vincere
 comunque in tre turni, e la CA più alta lo tiene in piedi. Se cade, il secondo
 tentativo riparte dalle crepe già aperte. **Le tattiche della Sentinella**:
-Attrazione Fatale strappa l'arma o lo scudo più vicino, mai l'Anello; se
-Tordek si allontana lo insegue; Thorik e Artemis li ignora.
+Attrazione Fatale strappa a Tordek l'oggetto di metallo più vicino che non
+sia un artefatto, mai l'Anello; se Tordek non ne porta, non la usa. Se Tordek
+si allontana lo insegue; Thorik e Artemis li ignora.
 
 **Il Risveglio (visione, stile Salvatore).** Il Geode galleggia verso Tordek,
 il guanto sinistro si apre come petali d'acciaio. TS **Volontà CD 20** (fallito:
@@ -1503,7 +1529,7 @@ assestano.
 > frammento ha scatenato un **Grido Superiore** (*greater shout*) contro il
 > golem. Uso **consumato** — il Diapason era monouso: **contro Terros (§8)
 > non è più disponibile** (niente stun anti-arrocco alla soglia del 50%;
-> resta la spallata coordinata Pugno Frana + Bull Rush). La Frequenza,
+> resta «Radice a Terra» di Thorik, 8c-2b). La Frequenza,
 > invece, è conoscenza e resta utilizzabile.
 
 **Per un gruppo futuro** `[CANONE — DM 2026-10-15, D89]`. Se il gruppo suona il
@@ -1523,6 +1549,18 @@ attivi. *(Scheda piena: la scheda dei Bracieri di Tordek.)*
 | Pugno Frana | 3 al giorno, azione standard | colpo normale più 4d6 contundenti, che ignorano la RD da durezza. Riflessi CD 19 o prono; chi è adiacente al bersaglio, Equilibrio CD 15 o prono |
 | Tremore del Forgiatore | 1 al giorno, azione standard | raggio 6 m attorno a Tordek: chi è a terra, Riflessi CD 18 o prono e 2d6 contundenti |
 | Ancoraggio della Montagna | 2 al giorno, azione immediata | ignora il movimento forzato, +4 al TS contro l'effetto (8c-2) |
+
+I poteri Fuoco, già attivi prima del duello, nella forma del riepilogo della
+scheda dei Bracieri:
+
+| Potere Fuoco | Uso | Effetto |
+|---|---|---|
+| Pugni di Magma | 3 al giorno, azione veloce | per 1 round, il bonus di Saggezza come danni da fuoco su ogni colpo senz'armi; Tempra CD 18 o infermo 1 round |
+| Colpi del Fuoco | 3 al giorno, azione standard | colpo normale più 4d6 fuoco; Tempra CD 18 o spinto di 1,5 m; 2d6 fuoco agli adiacenti, Riflessi CD 18 dimezza |
+| Salto Fiammeggiante | 3 al giorno, azione di movimento | salto potenziato; all'atterraggio 2d6 fuoco in 3 m di raggio, Riflessi dimezza |
+| Cariche di Devastazione | 3 al giorno, 4 con la Benedizione della Forgia | su un critico confermato in mischia: +2d6, +3d6 o +4d6 da forza con 1, 2 o 3 cariche |
+| Frantumare | 1 al giorno, azione gratuita | dopo un critico confermato, *frantumare* a LI 13, CD 16, sul bersaglio |
+| Martello di Fuoco e Pietra | 1 a round, azione gratuita | su un critico, Colpi del Fuoco o Pugno Frana senza spendere usi |
 
 **XP Sentinella**: **1.500 a testa** al gruppo di oggi, **≈ 650** ai gruppi futuri (CR ~11, §11-bis). **Loot**: residuo del
 golem (~5.000 mo di frammenti di mithral).
@@ -1600,8 +1638,8 @@ gravità normale, con Terros dormiente all'altro capo della piattaforma.
 
 **Se attaccano la collina** `[CANONE — DM 2026-10-12, D85]`. I tre box si leggono con
 il gruppo ancora sulla soglia. Terros si sveglia appena qualcuno mette piede
-sull'Altare o lo attacca dalla soglia, e chi lo fa per primo ha il round di
-sorpresa. Terros non è indifeso: un elementale non dorme davvero. Agisce dal
+sull'Altare o lo attacca dalla soglia, e il gruppo ha il round di sorpresa:
+nell'SRD agisce ogni PG pronto, con un'azione standard o di movimento a testa. Terros non è indifeso: un elementale non dorme davvero. Agisce dal
 round 1, e l'Altare si stacca all'inizio del round 1 `[CANONE — DM 2026-10-14, D87]`. Poi si legge il
 risveglio qui sotto.
 
@@ -1699,15 +1737,15 @@ canta un PG alla volta: **azione standard**, Intrattenere (Canto) **CD 18**
 (+4 se canta Artemis, che ha l'Anello). Se riesce, vale fino all'inizio del suo turno successivo, ed
 è il round in cui i colpi di Tordek sono sonici (Scudo di Geodi, qui sotto). La
 modalità sonica di Artemis è un'altra cosa: passa dall'Anello con un'azione
-veloce, e la regola è in 8c-1.
+veloce, non rende sonici i pugni di Tordek, e la regola è in 8c-1.
 
 > **✅ CANONE GIOCATO (DM 2026-07-24) — stato delle armi soniche al boss.**
 > Il party **possiede la Frequenza** (skill challenge superato, §6) → il
 > **malus round 1 si attiva con la SOLA Frequenza**: il Diapason non serve
 > per questo (è — era — l'arma separata anti-arrocco: stun 1 round senza TS,
 > spezza-rigenerazione). Il **Diapason è stato SPESO** sulla Sentinella
-> (§7b) → alla soglia dei 172 pf niente stun: restano la **spallata
-> coordinata** (Pugno Frana + Bull Rush) e «Radice a Terra» di Thorik.
+> (§7b) → alla soglia dei 172 pf niente stun: resta «Radice a Terra» di
+> Thorik (la spallata non è legale contro un Enorme, 8c-2b).
 > Il **+2 ai TS contro Terros** (dono della Madre, §6) resta attivo.
 
 ```
@@ -1716,7 +1754,8 @@ veloce, e la regola è in 8c-1.
    Elementale della Terra Anziano avanzato (30 DV), Enorme
 ============================================================
 Tipo: Elementale (Terra, Extraplanare) · All. Neutrale
-PF: 345  (30d8+210)
+PF: 345  (30d8+210; Robustezza, fra i talenti, porterebbe
+          a 348: il modulo tiene 345, e le soglie sono su quello)
 Iniziativa: −1 (DES 8)
 Velocità: 9 m; Earth Glide 9 m (attraverso pietra).
           NON vola: in zero-G si spinge dalle superfici
@@ -1733,7 +1772,8 @@ TS: Tempra +24 · Riflessi +9 · Volontà +14
   naturale +15, COS 21 e SAG 11; qui +19, COS 25 e SAG 15. La FOR
   34 è quella dell'SRD (33, più 1 punto ai 28 DV). Lancio di
   roccia, immunità all'acido e agli effetti di forma, debolezza
-  al sonico e i poteri con ricarica sono del modulo.
+  al sonico, percezione tremorica e poteri con ricarica sono
+  del modulo.
 
 DIFESE
 • RD 10/— · Immune acido, veleno, sonno, paralisi, stordimento
@@ -1770,7 +1810,8 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
      parete è a ~25 m). Per Tordek, che non vola, è un turno perso:
      è lui il vero bersaglio della Spinta.
 3) EARTH GLIDE (Ex): come azione di movimento entra nell'Altare/
-   parete e riemerge (fino a 9 m) alle spalle di un caster.
+   parete; riemerge (fino a 9 m) al turno dopo, accanto a un
+   bersaglio a terra, e colpisce con uno schianto solo.
    *Move Earth* lo blocca 1 round, senza stordirlo (Tempra CD 15)
    [CANONE — DM 2026-10-15, D89].
    L'Altare, mithral consacrato, conta come pietra anche per
@@ -1779,7 +1820,9 @@ QUALITÀ / ATTACCHI SPECIALI (tutti 3.5, nel turno di Terros)
    dall'SRD, dove l'Earth Glide non attraversa il metallo: qui
    vale la versione più forte del guardiano.
 4) ASSORBIMENTO TERRESTRE (Su, passiva): a contatto con
-   Altare/pietra rigenera 15 pf/round.
+   Altare/pietra rigenera 15 pf/round. È una guarigione
+   rapida, non la Rigenerazione dell'SRD: il danno resta
+   letale e Terros muore a 0 pf.
 
 POTERI CON RICARICA — ognuno è la sua AZIONE del round
 (sostituisce il full-attack quando lo usa; NON è gratuito)
@@ -1825,7 +1868,7 @@ C) SCUDO DI GEODI (standard; ricarica 1d3 round): solleva lastre
 CONTRO-MOMENTO (Thorik, "Radice a Terra") `[CANONE — DM 2026-07-31,
    ERRATA]`: quando Terros usa Earth Glide per sfuggire/ricaricarsi,
    Thorik conficca Aegis Fang nelle crepe e lo inchioda in superficie
-   per 1 round (NIENTE RIGENERAZIONE), attirando su di sé gli schianti.
+   per 1 round (NIENTE GUARIGIONE), attirando su di sé gli schianti.
    È la barriera inamovibile del party — ed è la risposta all'arrocco
    dei 172 pf ora che il Diapason è speso.
    ► ERRATA: la vecchia stesura chiedeva una prova CONTRAPPOSTA vs
@@ -1840,7 +1883,7 @@ CONTRO-MOMENTO (Thorik, "Radice a Terra") `[CANONE — DM 2026-07-31,
      | AZIONE PREPARATA "quando Terros riemerge" invece di    | +4 |
      |   inseguirlo (indizio di Aegis Fang: «non era stato    |    |
      |   lui a raggiungerlo»)                                 |    |
-     | LANCIA PIANTATA e peso addosso, invece che impugnata   | +4 |
+     | ASCIA PIANTATA e peso addosso, invece che impugnata    | +4 |
      |   (indizio della Corona: due mani sotto un architrave) |    |
      | Aiuto in azione (Tordek o Artemis)                     | +2 |
      Con entrambi gli indizi colti: +15 → SERVE 10+ (55%).
@@ -1868,12 +1911,17 @@ R1: Onda Gravitazionale verso il soffitto per staccare il party
     dall'Altare. È la sua azione del round: niente altro.
     Se nessuno è sull'Altare, al posto dell'Onda: Lancio di
     roccia su Artemis, o carica su Thorik se è a portata.
-R2: Earth Glide nell'Altare → riemerge dietro un caster; se
-    tocca l'Altare, rigenera 15. I PG con azione preparata lo
-    puniscono all'emersione.
+R2: Earth Glide nell'Altare: un'azione di movimento per entrarci,
+    e per un turno è dentro la pietra, fuori portata, e guarisce
+    15. Al turno dopo riemerge (movimento) accanto al PG a terra
+    più fragile, di solito chi è atterrato per tirare, e lo
+    colpisce con UNO schianto. Ogni riemersione dall'Altare è il
+    momento delle azioni preparate e di «Radice a Terra».
 R3: se i PG sono dispersi → Stalattiti sul gruppo più fitto;
     se compatti sull'Altare → Scudo di Geodi + full-attack.
-R4+: alterna Earth Glide mordi-e-fuggi, Onda e Scudo. Sotto il
+R4+: alterna i turni dentro l'Altare, le riemersioni con uno
+    schianto, l'Onda e lo Scudo: in 3.5 non entra, colpisce ed
+    esce nello stesso turno (servirebbe Attacco Rapido). Sotto il
     50% combatte in difesa sull'Altare (rigenera) e costringe i
     PG ad avvicinarsi. NON fugge mai: guardiano fino alla morte.
 ============================================================
@@ -1915,7 +1963,7 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 | PG | Danno medio/round vs CA 26 | Nota |
 |---|---|---|
 | **Thorik** (Aegis Fang +21) | ~3 dopo RD 10 | serve 5+; 1d10+7 ≈ 12, −RD 10. Il sacro arriva allo stadio 1 di Aegis Fang: il suo contributo vero è la Radice a Terra `[CANONE — DM 2026-10-12, D85]` |
-| **Tordek** (Raffica +12/+12/+7/+2) | ~12 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
+| **Tordek** (Raffica +12/+12/+7: BAB +10 con monaco 9 e guerriero 4, SRD *Monaco*) | ~11 dopo RD 10 | la RD morde il monaco; i danni **sonici** (×1,5) e il Pugno Frana sono il suo vero contributo |
 | **Artemis** (Blast +16 vs **contatto 7**) | ~33; **~49 in modalità sonica**; **~63** nel round quickened | manca solo con l'1 naturale; la RD **non** si applica (abilità magica); **star DPS designato** — regole della modalità sonica in **§8c-1** |
 | **Party** | **~50/round**, ~35 netti con la rigenerazione | Terros 345 pf → **~10 round** `[CANONE — DM 2026-10-12, D85]` |
 
@@ -1930,7 +1978,8 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 > | Situazione al tavolo | Aggiustamento |
 > |---|---|
 > | Party arriva **già al 14°** o straripante di risorse | Terros **avanzato a 34 DV** (391 pf, attacchi +36, CD +1) e lo Scudo di Geodi parte **già attivo**. Il +1 vale per le CD dei poteri a ricarica, Onda e Stalattiti; la Spinta e la Radice a Terra restano a 25, perché sono soglie di FOR `[INFERRED — needs DM confirmation]`. Oppure aggiungi 2 Elementali della Terra Grandi (CR 5) che emergono dall'Altare al round 3. Il segno, un round prima: le rune dell'Altare si spengono in due punti e lì la pietra si gonfia come una bolla `[INFERRED — needs DM confirmation]`. Non volano: combattono sull'Altare, uno per nano, e non inseguono nello zero-G. Quando Terros cade tornano nella pietra |
-> | Party **logorato** (niente Frequenza, molte risorse spese, qualcuno sotto metà pf) | Terros usa l'Onda Gravitazionale **una sola volta**; la Rigenerazione scende a 10/round; NON insegue chi resta in zero-G ai margini |
+> | Party **logorato** (niente Frequenza, molte risorse spese, qualcuno sotto metà pf) | Terros usa l'Onda Gravitazionale **una sola volta**; la guarigione scende a 10/round; NON insegue chi resta in zero-G ai margini |
+> | **Quattro o cinque PG** (gruppo nuovo) | con quattro PG, il profilo a **34 DV** della prima riga; con cinque, i 34 DV e i **due Elementali della Terra Grandi** al round 3, col loro segno. Il rito del §9 e il salto del §7a hanno la loro riga per il quarto PG |
 > | **Therysol scende** (deroga a D15 decisa al tavolo) | Conta come mezzo PG (supporto a distanza): riporta Terros al profilo pieno e togli il Diapason, che è monouso |
 > | Un PG scende a **−1 pf o meno** sull'Altare | la gravità del Nodo lo espelle subito sulla riva dell'Oceano di Roccia, stabile `[CANONE — DM 2026-10-14, D87]`. Terros passa al bersaglio in piedi: il voto è custodire lo Smeraldo, non uccidere i caduti. L'espulso non rientra nello scontro: dalla riva si torna solo rifacendo il salto del §7a, che dura più dello scontro. Il rito del §9 lo aspetta: lo Smeraldo resta sopra l'Altare finché non ci sono tutti e tre, e chi è rimasto torna a prenderlo rifacendo il §7a, con la Sentinella già battuta. Se l'espulso è Thorik, il rito aspetta lui, perché la Corona è legata al portatore. Il ritorno non muove l'orologio, se non riposano |
 
@@ -1940,7 +1989,7 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 > vecchio quanto il piano**. Combatte come una frana: lento, inevitabile,
 > paziente. Non ha fretta — la roccia vince perché non ha fretta.
 
-- **Apertura (346–303 pf).** Se il party è entrato cantando la Frequenza:
+- **Apertura (345–303 pf).** Se il party è entrato cantando la Frequenza:
   primo round **intontito dal canto** (−4/−4), usa comunque l'**Onda** per
   disorientare. Altrimenti: si alza dall'Altare (K08-L09) e apre con **Onda
   Gravitazionale verso il soffitto** — vuole i PG **staccati dall'Altare**,
@@ -1950,7 +1999,7 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
 - **Fase di pressione (303–260 pf).** Full-attack su **Thorik** (la minaccia
   che tiene la piattaforma): 2 schianti +33 e **Push FOR CD 25** per
   scaraventarlo fuori dal bordo 🟡 — un tank che fluttua non è più un tank.
-  *(Concedi il momento Aegis Fang: la lancia Returning come gancio per
+  *(Concedi il momento Aegis Fang: l'ascia Returning lanciata come gancio per
   rientrare — azione di movimento, puro colore Salvatore.)* Contro Artemis in
   volo NON spreca schianti (−4): usa il **Lancio di roccia** (+19) nei round
   in cui non ha di meglio.
@@ -1959,16 +2008,16 @@ salta e Thorik cade con gli altri. I tre box sono un giro solo, un PG per box.
   le lastre di diamante. *Contromossa firmata: il Frantuma-Scudo di Tordek
   (>15 sonici in un colpo) lo lascia frastornato per il round di Thorik.*
 - **Il trucco della frana (qualsiasi momento).** **Earth Glide** nell'Altare:
-  sparisce nella pietra (rigenera 15 al contatto) e **riemerge alle spalle del
-  bersaglio più fragile a portata** (di solito chi si è appena posato per
-  tirare). Le **azioni preparate** del party sono la risposta corretta — e
+  sparisce nella pietra (rigenera 15 al contatto), ci passa un turno fuori
+  portata, e al turno dopo **riemerge accanto al bersaglio più fragile a
+  portata** (di solito chi si è appena posato per tirare) con uno schianto solo. Le **azioni preparate** del party sono la risposta corretta — e
   **"Radice a Terra" di Thorik** (prova di FOR contro CD 25 statica,
   errata nello statblocco) può inchiodarlo fuori dalla pietra.
 - **Soglia 172 pf (50%) — l'arrocco.** Si ritira SULL'Altare e combatte in
   difesa totale alternata a schianti: rigenera 15/round e costringe i PG a
   venire da lui, dentro l'Earth Mastery. È il momento del **Diapason
-  Armonico** (stun 1 round, cade in zero-G, niente rigenerazione) o della
-  spallata coordinata (Pugno Frana + Bull Rush) per staccarlo dalla pietra.
+  Armonico** (stun 1 round, cade in zero-G, niente rigenerazione) o di
+  «Radice a Terra» di Thorik, che lo tiene fuori dalla pietra.
 - **Ultimi 60 pf — il crollo.** Niente ritirata, niente pietà chiesta: un
   guardiano muore in piedi. Un'Onda ogni volta che la ricarica lo permette, schianti più lenti, e
   quando cade — cade come cade una montagna: **prima il silenzio, poi il
@@ -2095,7 +2144,7 @@ scatenante»* (`05_Bracieri_Gemelli_Scheda_PG_Completa.md` §5).
 risultato — azione immediata, quindi il giocatore può bruciarlo a colpo già
 descritto. Conseguenze pratiche:
 
-- Tordek è il bersaglio designato della Spinta (niente volo, niente lancia
+- Tordek è il bersaglio designato della Spinta (niente volo, niente ascia
   Returning) **ma ha due «no» in tasca**. Se lo spingi al round 1, probabilmente
   ne consuma uno subito: **quello è il momento in cui il combattimento diventa
   una gara di risorse**, ed è giusto così.
@@ -2137,12 +2186,10 @@ muro non è un divieto del DM, è aritmetica sulla scheda.
 > braccio, e per un istante capisci cosa significa che una montagna ti abbia
 > notato.»* Un round di terrore, non una condanna.
 
-**E la spallata coordinata dei 172 pf?** Spinta = prova di Forza
-contrapposta; Terros difende con **+20** (FOR +12, Enorme +8 — *Spinta
-Migliorata* è un bonus di chi **inizia**, quindi in difesa non se lo somma:
-non lasciartelo contestare al tavolo). Tordek in carica con Aiuto arriva a
-**+6** → **vince il 4%**. Resta come colore, ma **non è più la risposta
-all'arrocco: la risposta è «Radice a Terra»** (§8 statblock), che è stata
+**E la spallata coordinata dei 172 pf?** Non è legale. Nell'SRD (*Spingere*)
+si spinge solo chi è al massimo di una taglia più grande, e Terros è Enorme
+contro un Tordek Medio. Se un giocatore la chiede, diglielo prima del tiro.
+**La risposta all'arrocco è «Radice a Terra»** (§8 statblock), che è stata
 riportata a CD 25 statica proprio per questo.
 
 #### 8c-3. Le sinergie degli artefatti — cosa cambia e cosa no
@@ -2372,6 +2419,10 @@ non lo accetta: è legata a Thorik.
   - **Malus (se fallisce)**: la pressione non è deviata → Artemis **cade prono,
     2d6 danni da forza**, e Thorik viene investito dai residui (**1d4 danni DES
     temporanei** da calcificazione).
+
+> **Con un quarto o un quinto PG.** Ogni round aiuta Tordek o Artemis con
+> un'azione standard (Aiutare, SRD: CD 10, +2 alla loro prova). La tenuta di
+> Thorik resta sua. Se l'aiuto fallisce non costa niente.
 
 > **Al tavolo**: gioca i 3 round come un **crescendo** — batti tu stesso il
 > ritmo sul tavolo. Se Tordek riesce, Thorik regge; se Artemis riesce, nessuno
@@ -2612,7 +2663,6 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 
 | Evento (qui) | Eco | Quando riemerge | Dove si gestisce |
 |---|---|---|---|
-| **Scelta di Varis** (avidità/giustizia, §6) | Varis socio-che-sa-troppo **o** nemico permanente | ARC-09 (rete Varis/Il Collezionista) | fili di Varis e del Collezionista |
 | **Avidità di Artemis** (§5/§9) | Se dà via il bottino al Rituale: rinuncia dolorosa; se lo trattiene: party sceglie il sacrificio personale di Thorik | ARC-08 (WBL) / RP continuo | Echo Ledger |
 | **Seme-Mercato di Varis** (§6-bis) | Preso → **Marchio di Varis** (localizza Artemis, riscuote una volta); Rifiutato → Varis lo rispetta come "sfuggito" | ARC-09 (Varis/Il Collezionista); eco possibile già al #4 con Vatore | §6-bis + fili di Varis e del Collezionista |
 | **Scelta-costo di Thorik** (§9 Fase 1) | Materiale → party povero a Hammerfist; Personale → −2 DES/+2 COS/+4 CAR **permanenti** | ARC-08 ingresso / sempre | stato del party e degli artefatti |
@@ -2647,7 +2697,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | §8 | **TERROS L'ANTICO (CR 15 "Hard", power-up voluto D8)** | EL 15+ | **5.400** (range 4.800–6.000) |
 | §9 | Rituale dello Smeraldo completato (3 fasi, premio di storia maggiore) | premio | 800 |
 | | **TOTALE MODULO (percorso completo)** | | **~11.600/PG** |
-| | *Totale se i Cristalli sono saltati* | | *~10.300/PG* |
+| | *Totale se i Cristalli sono saltati* | | *~10.500/PG* |
 
 > **I PX al conto SRD, per i gruppi futuri** `[CANONE — DM 2026-10-12, D84]`. La tabella qui sopra è
 > quella data al gruppo di oggi, e per lui resta. Al conto della tabella della
@@ -2702,7 +2752,7 @@ futuro). *Lista completa degli 8 affreschi e del gancio → `DEF-2`.*
 | **Artemis** | **Ring of Chaotic Illumination** (Reforged) | **163.400 mo** (unico) | invariato; +eventuale **Frammento di Mercato** se prende il Seme (§6-bis) |
 | **Hella** | (Collana/Durik prendono forma, ma **si legano a lei solo al #3**) | — | Durik "abbozzato"; Collana germoglia alla resurrezione |
 
-> **Verdetto del beat (per il DM).** PX **~11.600/PG** (percorso completo; ~10.300
+> **Verdetto del beat (per il DM).** PX **~11.600/PG** (percorso completo; ~10.500
 > se i Cristalli sono saltati — vedi §11-bis A; per i gruppi futuri ≈ 7.000 al conto SRD) verso il 14° a Hammerfist;
 > WBL ordinario **sotto** i 110.000 mo/PG (l'arco è povero di loot ordinario,
 > ricchissimo di artefatti — il delta si colma a Hammerfist, ARC-08 B4); potere
@@ -2734,7 +2784,7 @@ consiglia di dormire otto ore — **nella Sala costano solo −4 h**, e loro non
 perché. **Poi**: gli affreschi e la Stanza della
 Corona (`DEF-2`), quindi la **resurrezione di Hella** (`DEF-3`).
 
-**Tesori ordinari della parte**: mithral grezzo + geodi (~5.200 mo) + Geode
+**Tesori ordinari della parte**: mithral grezzo + geodi (~3.100 mo) + Geode
 Titanico (5.000) + Cuore di Terros (20.000, spesso sacrificato al Rituale) +
 residuo golem (5.000). **XP** per incontro come sopra `[totale e ripartizione
 → ERRATA per APL 12/D15]`. Ricchezza speciale (Smeraldo, Bracieri completi)
@@ -2841,7 +2891,7 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
         🔷 = Cristallo Gigante (copertura totale, indistruttibile)
         🟫 = roccia frastagliata (difficile) · 🕳️ = punto d'emersione Xorn
         ⬛ = Fauci di Diamante (élite) · 💠 = base corrosa del pilastro
-        Gli Xorn NON restano 2 round in superficie: Earth Glide → readied action!
+        Chi emerge e morde resta in superficie fino al suo turno: Earth Glide (§5)
 ════════════════════════════════════════════════════════════════════════
 @tipo tattica caverna
 ```
@@ -2911,8 +2961,8 @@ questa griglia J05 è un Cristallo Vivente come gli altri.
             🧲 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧲            🕸️ = Artemis prono, accanto a
               🧲 🧲 🧲 🚪 🚪 🧲 🧲 🧲            Thorik (gravità 10×)
                          S (porta sigillata)
-  ⬜ = pavimento (gravità 2×, gestibile SOLO per Tordek) · 🧲 pareti LETALI
-  per chi porta metallo. Duello: TORDEK vs SENTINELLA (RD 15/adam.+contund. →
+  ⬜ = pavimento (gravità 2×, gestibile SOLO per Tordek) · 🧲 pareti che
+  incollano chi porta metallo. Duello: TORDEK vs SENTINELLA (RD 15/adam.+contund. →
   solo i Bracieri passano; 3 crepe = guscio infranto → Geode di Smeraldo).
 ════════════════════════════════════════════════════════════════════════
 ```
@@ -2960,7 +3010,8 @@ DILEMMA DELL'ALTARE (ha DUE lati, non uno):
   IN ZERO-G    = eviti l'Earth Mastery, MA perdi del tutto la Stabilità
                  (Tordek non resiste più a nessuna spinta) e ti serve volo.
   Artemis in 🌫️ = quasi intoccabile (−4 al boss) = star DPS.
-  Terros NON vola: tienilo in zero-G → perde la rigenerazione e fatica.
+  Terros NON vola: nello zero-G non guarisce, ma il gruppo non ha come
+  spingercelo (l'Onda non lo sposta, la spallata non è legale, 8c-2b).
 ────────────────────────────────────────────────────────────────────────
 ⚠️ QUESTA GRIGLIA È LO STATO DAL ROUND 2 (Altare già centrato). Al round 1
 l'Altare è ATTRACCATO alla soglia nord e si stacca col risveglio (§8a-8b).

@@ -40,7 +40,9 @@
 > Step 1-3, **un'ora** per la prima ora dopo il rito (§8-bis). Senza tentativi
 > falliti né indagine, alla soglia segna **3g 14h**. La scaletta non prevede
 > riposo prima della soglia; se il gruppo lo chiede, si dorme e costa otto ore
-> (§9).
+> (§9). L'orologio conta quanto manca alla breccia di Hammerfist, e i PG lo
+> leggono sull'affresco A7, che cambia a ogni riposo. Sotto i **2 giorni** la
+> breccia è aperta e l'ARC-08 parte in Fase 0 dura (`DEF-2` §0-bis e §8).
 >
 > **Come arrivano.** Riposati, perché hanno dormito nella Sala, e col sogno di
 > `DEF-2` §7-bis addosso: Hella, dall'altro lato, **ha già sentito Thorik dire
@@ -89,6 +91,14 @@
 
 ## §0 — QUICKSTART DM
 
+> 🧭 **La serata in tre frasi.** Stasera non combatte nessuno: i tre Custodi
+> riportano in vita Hella con un rito in sei step all'Altare del Cuore di
+> Moradin, e ciascuno sceglie se donarle un potere del proprio artefatto. Si
+> oppongono la morte, l'**orologio di A7** e **la Custode delle Radici**, che
+> non combatte e vuole che qualcuno porti il debito. Prima di cominciare si
+> danno **gli echi privati** del volume *Il Cuore e la Porta*, e la serata
+> finisce davanti al portale del Tempo.
+
 **Dove siete.** Nella **Sala della Forgia Eterna**, davanti all'Altare del Cuore
 di Moradin. La Corona porta due gemme; gli affreschi hanno registrato la vittoria
 della Terra (`DEF-2`); il corpo di Hella riposa, vegliato da Therysol. Resta
@@ -112,8 +122,13 @@ DM 2026-07-23<!-- /storico -->; il ramo A/B/C si gioca).
 **Quanto dura.** Al tavolo, circa **novanta minuti** dal §2 al §8-bis, e un
 quarto d'ora per la soglia del §8-ter, dopo una pausa.
 
-**Cosa stampare.** La **Quick-Reference §0-bis** (rito + sacrifici); i fogli
-per i giocatori, nella tabella qui sotto; le mappe dell'**Appendice B**
+**Se hai un'ora per prepararti**, leggi il §0, il §0-bis, la tabella dello
+Step 5 in fondo al §5 e il §9: sono le pagine che servono quando un tiro va
+male. Il resto si legge al tavolo, in avanti.
+
+**Cosa stampare.** Il volume dei giocatori *Il Cuore e la Porta*, con i fogli
+della tabella qui sotto: **gli echi privati si danno prima di cominciare**. Poi
+la **Quick-Reference §0-bis** (rito + sacrifici); le mappe dell'**Appendice B**
 (la Sala a pergamena e il cerchio R-1); la scheda completa di Hella
 (**Appendice A**); il PDF Benedizioni.
 
@@ -163,7 +178,7 @@ va avanti il modulo. `[INFERRED — needs DM confirmation]`
 | Segreto | Lo rompe | Chi lancia ottiene | Il modulo va avanti così |
 |---|---|---|---|
 | la presenza verde del Piano della Terra era Hella (§8) | *divinazione*, *comunione* | una frase sola: *«Una radice ti ha tenuto in piedi.»* Nessun nome | il §8 resta uguale, e la rivelazione di Hella diventa una conferma invece di una sorpresa |
-| la risposta del rito che fallisce è il Sud (§9) | *augurio*, *divinazione*, durante l'ora | *«Guardate dove nessuno sta.»* | vale come il Sud trovato: qualcuno lo occupa e lo Step 5 si ritira |
+| la risposta del rito che fallisce è il Sud (§9) | *divinazione*, durante l'ora; *augurio* su «occupiamo il Sud» risponde solo «bene» | *«Guardate dove nessuno sta.»* | vale come il Sud trovato: qualcuno lo occupa e lo Step 5 si ritira |
 | il Rubino è di là, a mille anni fa (§8-ter) | *divinazione* | *«La terza pietra è dove il varco porta.»* | niente cambia: Moradin lo dice lo stesso alla soglia |
 | chi è la Custode delle Radici (§6) | *individuazione del male*, *comunione* | non è malvagia, e non è una creatura da combattere: è l'ordine del Sogno della Terra | le tre risposte del §6 restano tutte aperte |
 
@@ -177,12 +192,25 @@ deve essere già fatto.
 | Quando | Cosa | A chi | Nel volume dei giocatori |
 |---|---|---|---|
 | prima di cominciare la serata, piegati<!-- apparato --> (regia, `homebrew/sessione-resurrezione-mille-anni/01-REGIA-SERATA.md`, Atto 0)<!-- /apparato --> | gli **echi privati** | Thorik, Tordek, Artemis, uno a testa | «Echi», una pagina per PG |
-| quando il gruppo si sveglia nella Sala dopo il riposo (`DEF-2` §7-bis), prima del rito: non è il risveglio di Hella del §7 | l'**eco privato di Hella** | alla giocatrice di Hella, che legge il sogno ad alta voce | «Echi — Hella» |
+| quando il gruppo si sveglia nella Sala dopo il riposo (`DEF-2` §7-bis), prima del rito: non è il risveglio di Hella del §7 | l'**eco privato di Hella** | alla giocatrice di Hella, che legge ad alta voce la prima metà, «Mentre gli altri dormono», senza la riga «Solo per te», che resta sua; la seconda è il suo promemoria per il §8 | «Echi — Hella» |
 | §3, subito dopo il box del reliquiario | **Il Cuore di Moradin**, l'immagine | a tutti | «Il Cuore di Moradin» |
 | §4, Step 1 | **la preghiera della resurrezione** | al giocatore di Thorik | «La preghiera della resurrezione» |
 | §5, **dopo il sì** di chi dona | **la carta del Dono** | solo a chi ha donato | «La carta del Dono», una per chi dona |
 | §7, dopo il box di Durik | **Hella, tornata** e **Durik** | alla giocatrice di Hella | «Hella, tornata» · «Durik, il guardiano di pietra» |
 | §8-ter, mentre la Corona apre il varco | **Le Cronache dei Quattro Eroi** | a tutti | «Le Cronache dei Quattro Eroi» |
+
+**Che cosa dicono i fogli, per il DM.** Sono nel volume dei giocatori; qui una
+riga ciascuno, per sapere a che cosa reagirà il tavolo.
+
+| Foglio | Che cosa dice |
+|---|---|
+| eco di Thorik | due mani piccole e fredde reggevano il Peso con lui; la riga privata gli promette che stanotte saprà di chi erano |
+| eco di Tordek | una fiera straniera e un uomo che cataloga il suo zaino; la riga privata gli dice che nello zaino c'è una cosa messa da Artemis |
+| eco di Artemis | l'affresco del Tempo è una porta socchiusa che qualcuno ha già usato; la riga privata gli dice di cercare chi si muove come lui |
+| eco di Hella | prima metà: tre respiri, Durik che aspetta, la voce di un nano che dice il suo nome. Seconda metà: le tre prove, e le sue mani sotto quelle di Thorik |
+| la preghiera | il nanico e quattro strofe in italiano; la terza chiude su *«Quello che manca, chiedilo adesso, e lo paghiamo»*, che è la porta dei Doni |
+| le carte del Dono | che cosa germoglia in Hella, una carta per chi ha donato (§5) |
+| le Cronache | Thorgrim Barbadiferro racconta i Quattro Eroi che salvarono Hammerfist dal drago nero e poi svanirono; Moradin, nella mente di Thorik: *«Siete voi.»* |
 
 ⚠️ **Il prezzo dei Doni si dice, la carta no.** Moradin dice a voce cosa costa
 (§5); la carta, con quello che germoglia in Hella, arriva dopo il sì. Se la
@@ -266,13 +294,15 @@ carta arrivasse prima, il tavolo farebbe i conti invece di scegliere.
   esattamente la cosa che regala.
 - 🌱 Al tavolo la nota da far cadere una volta sola: Hella ha **vulnerabilità al
   fuoco ×1,5**, prezzo della Via della Radice, e adesso **porta il fuoco**.
-- Se porta il **Marchio di Varis** (`DEF-1` §6-bis): l'Anello, durante la
+- Se porta il **Marchio di Varis** (`DEF-1` §6-bis; al tavolo non lo porta,
+  perché il Seme è nello zaino di Tordek e nessuno l'ha toccato): l'Anello, durante la
   stabilizzazione (Step 3), «pizzica» — il caos vitale e il marchio del mercato
   risuonano. Gancio muto, conseguenza canonica del Marchio<!-- storico --> (DM 2026-07-23)<!-- /storico -->.
 
 ### 🌙 HELLA — il ritorno (da qui, PG a pieno titolo)
 - Fino al risveglio: **nessuna coscienza** (solo le sensazioni del viaggio,
-  ormai concluse).
+  ormai concluse), tranne la soglia del §6: lì, per una frase sola, la
+  giocatrice lascia Durik e parla da Hella.
 - 🐾 **Fino al risveglio la giocatrice di Hella gioca Durik** `[CANONE — DM 2026-10-18]`, dalla
   Scena 1. Durik non parla e non abbaia: gira attorno al corpo, si sdraia ai
   piedi dell'Altare, fa il click quando qualcosa si muove sotto i piedi, e il DM
@@ -314,7 +344,7 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > scosta, e non sa dove mettere le mani. Che fate?*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
-`DEF-2`); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
+`DEF-2`; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
 Tordek a Est, Artemis a Ovest, il Sud lasciato **vuoto** (da lì fluisce
 l'energia). I tre semi sul corpo formano un **triangolo** inscritto nel cerchio
 dei tre officianti. Vedi le mappe dell'**Appendice B**. Zona **sacra e sicura** — ma non
@@ -359,6 +389,11 @@ niente, chi le tocca entra nel rito già dentro la scena.
 
 **Sul corpo di Hella**, a chi lo guarda da vicino: con Osservare CD 20 si vede la
 **ghianda annerita** stretta nel pugno (cosa diventa, §11 C).
+
+**Se la giocatrice usa la percezione di Durik sull'Altare**, il DM le dice il
+vero: sotto i piedi qualcosa batte, sessanta al minuto, e non si sposta. Non
+le dice dove né che cosa sia: è il ritmo che dà anche la porta di SAG, più la
+fermezza, e il §3 resta la rivelazione di *che cosa* batte, e dentro che cosa.
 
 
 ---
@@ -490,7 +525,7 @@ salta davanti agli altri tre.
 | 2 | *Il battito rallenta, e chiede a qualcuno di seguirlo.* |
 | 3 | *La pelle di Hella ha ancora il colore della cera.* |
 | 4 | *I semi smettono di pulsare. Stanno decidendo.* |
-| 5 | *Il Sud del cerchio è vuoto, e qualcosa lo sta guardando da lì.* |
+| 5 | *Il Sud del cerchio è vuoto, e qualcosa lo sta guardando da lì.* Se il Sud è già tenuto: *Dietro chi tiene il Sud l'aria si fa fredda, e qualcosa guarda da lì.* |
 | 6 | *La sala prende fiato al posto vostro.* |
 
 **Esito, in due righe già scritte.** Una per la riuscita, una per il fallimento.
@@ -926,6 +961,10 @@ momento entra la Custode: §6.
 > fretta. È come la montagna: c'è, e aspetta. Quando parla, la voce è il rumore
 > di una faglia che si assesta.*
 
+Se qualcuno tiene già il Sud (§9), la seconda frase del box diventa: *Alle
+spalle di chi tiene il Sud, dove un attimo fa c'era solo aria, adesso c'è
+qualcuno.*
+
 **LA CUSTODE DELLE RADICI (senza guardare nessuno):** *«Una radice strappata lascia un vuoto. Il vuoto va colmato: è legge.»*
 
 *Guarda il corpo sull'altare, non chi le sta davanti.*
@@ -970,6 +1009,12 @@ sola**, dalla soglia, e quella frase sceglie A, B o C. Se il gruppo propone
 Durik, la sua frase può solo accettare o rifiutare, e al §8 Hella ricorda chi
 l'ha proposto. Se nemmeno lei risponde, la Custode prende il silenzio per un
 rifiuto: vale B.
+
+La frase si sente nella Sala con la voce di Hella, bassa, come se venisse dal
+Cuore sul suo petto; nessuno la vede. Se un PG si offre («lo porto io»), la
+Custode non lo guarda: il debito è della radice, e la radice è di Hella.
+L'offerta resta detta e lo spirito la sente, ma la frase che sceglie resta a
+Hella. Al §8 lei ricorda chi si è offerto.
 
 > **Registrazione (obbligatoria).** Segna la scelta nel registro di fine serata
 > (il filo «[DEBITO DELLA RADICE]») e nell'Echo Ledger (§10). È un filo
@@ -1045,7 +1090,7 @@ Hella sono della sua giocatrice: il box le dà l'attacco, non la scena.
 | **Suona** | **non parla, non abbaia.** Suoni di pietra: un click, uno strofinio, il rumore lontano di una faglia |
 | **Sa** | dove si muove qualcosa sotto i piedi, entro 18 metri |
 | **Eco che porta** | la lastra del ricordo caduta nella Prova II del viaggio, l'Impronta nel terzo seme. E la zampa col topazio sul margine dell'affresco A5 |
-| **Eco che arma** | la prima Prova di Risonanza della serata (se combatte con Hella contro Zog'tar). Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: la scheda della Collana la chiede con un read-aloud<!-- apparato --> (`01_Collana` cap. 3)<!-- /apparato --> |
+| **Eco che arma** | il primo scontro accanto a Hella, contro Zog'tar in `DEF-4`. Il giorno in cui viene distrutto per la prima volta, e torna polvere nel seme, è una scena: la scheda della Collana la chiede con un read-aloud<!-- apparato --> (`01_Collana` cap. 3)<!-- /apparato --> |
 
 Da questo momento Durik è il suo **compagno animale** a pieno titolo, sempre al
 suo fianco. Se viene distrutto, lo richiama il **terzo seme** della Collana.
@@ -1073,7 +1118,7 @@ Lo statblocco del **Treant di Adamantio** è in **Appendice A**.
 **✉ Si consegna qui, alla giocatrice di Hella**: **Hella, tornata** (le righe da
 aggiungere alla sua scheda, che per il resto resta la sua), **Durik** nel
 momento in cui appoggia la testa sul petto di Hella. Il suo **eco privato**
-ce l'ha già dall'Atto I: la seconda metà, «Quello che hai attraversato», le
+ce l'ha già dal risveglio del gruppo (tabella del §0): la seconda metà, «Quello che hai attraversato», le
 serve adesso, per il racconto del §8.
 Le caselle dei Doni sul foglio di Hella le segni tu, dopo il rito. La scheda
 completa per il DM è in Appendice A.
@@ -1127,7 +1172,9 @@ Hella: *«Hai portato peso per me senza saperlo, e io il tuo. Anche da morta. Si
   Voto della Radice è la ragione del debito. Il suo commento cambia la scena:
   *«Il prezzo… lo pago io, non voi. La radice è mia.»* (o, se hanno offerto Durik:
   *«Avete dato lui. Lo capisco. Ma una parte di me non ve lo perdonerà mai del
-  tutto — e una parte vi ringrazierà per sempre.»*).
+  tutto — e una parte vi ringrazierà per sempre.»*). Se un PG si è offerto di
+  portarlo (§6), Hella lo guarda: *«Ti sei offerto. Non era tuo da portare, e lo
+  sapevi.»*
 
 **Sviluppi.** Questo racconto **incide** l'affresco A3 (`DEF-2`): dopo il rito,
 A3 aggiunge la scena di Hella viva che posa una mano sulla spalla di Thorik. Il
@@ -1156,7 +1203,7 @@ TS su Tempra contro gli effetti ambientali; **Vigore della Forgia**, 3 cariche
 che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 2d8+2 a contatto a un alleato) **+**:
 - **Mantello della Fiamma** (Resist Fuoco **20**) — **cruciale**: mitiga la sua
-  vulnerabilità per una battaglia (falla valere prima di Skullcrusher/Fauci).
+  vulnerabilità per una battaglia (falla valere prima degli scontri di `DEF-4`).
 - **Benedizione di Moradin Incarnato** (1/battaglia): +2 sacro att/danni, +4 vs
   paura/charme, **1 ri-tiro**.
 
@@ -1239,7 +1286,7 @@ apre il varco. È il momento in cui i giocatori scoprono di essere la profezia.
 | **Vogliono resuscitarla PRIMA (Parte 2, appena ritrovata)** | Impossibile: i semi di treant e il viaggio dello spirito non sono ancora avvenuti. Moradin: *«Non ancora. Deve prima attraversare la Terra dentro di sé.»* |
 | **Non vogliono spendere il Cuore** (temono la perdita) | Legittimo, ma è l'unico modo. Moradin non forza. Se rimandano, Hella resta morta e **il varco non si apre**: conta quattro, e non apre per meno `[CANONE — DM 2026-10-18]`. Il rito si può fare quando vogliono, ma ogni ora che passa scende dall'orologio di Hammerfist, e Tordek la passa accanto al corpo. |
 | **Chiedono a Moradin di resuscitarla senza costi** | *«La magia non basta. Serve la vita. Io do il Cuore; voi date il resto — o lei torna monca di ciò che potevate donarle.»* (rifiuto totale, §5). |
-| **Vogliono dormire prima della soglia** | Si dorme `[CANONE — DM 2026-10-18]`. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
+| **Vogliono dormire prima della soglia** | Prima del rito vale la tariffa della Sala di `DEF-2` §0-bis, che possiede l'orologio. Prima della soglia si dorme `[CANONE — DM 2026-10-18]`. Otto ore di sonno: l'orologio di Hammerfist scende di otto ore, e si recuperano incantesimi, capacità al giorno e 1 pf per livello (SRD). L'Anello di Artemis, se si è spento al rifiuto, resta spento fino alle 24 ore. |
 | **Provano a incastonare il Cuore nella Corona** (è un rubino, e l'incasso è vuoto) | Non entra: il Cuore è grande come un pugno, l'incasso come un'unghia, e non è una gemma della Corona. Se insistono, Moradin: *«Quello è un cuore, non una pietra. Si spende, non si porta.»* Non dire altro sull'incasso (§2-bis) |
 | **Attaccano/scacciano la Custode delle Radici** (§6) | Non combatte: si ritira (ramo B). Nessun scontro — ma il vuoto si colmerà da sé, peggio. |
 | **Un PG vuole sacrificare la PROPRIA vita** (oltre il richiesto) | Moradin **rifiuta**: *«Non chiedo una morte per una vita. Chiedo un dono, non un baratto di anime. Rimetti via quel coraggio: ti servirà domani.»* (evita il martirio gratuito). |
@@ -1264,6 +1311,8 @@ Quattro regole valgono per tutte le righe `[CANONE — DM 2026-10-12, D83]`:
   Col richiamo a zero, dopo il ritiro.
 - **Il Sud occupato prima del primo Step 5** conta come la risposta trovata in
   anticipo: se lo Step 5 va a zero, il ritiro parte subito, senza l'ora d'indagine.
+  Se il richiamo riesce, non cambia niente. Allo Step 5 tirano sempre i tre
+  officianti; chi tiene il Sud non tira allo Step 5.
 - **Il livello negativo** della riga «1 su 3» segue l'SRD tranne in una cosa,
   che è regola di questo rito: dopo 24 ore non chiede il TS su Tempra e non
   diventa mai perdita di livello. Si toglie con *ristorare* (il gruppo ne ha le
@@ -1377,7 +1426,8 @@ sul tavolo nelle scene di prima: qui li ritrova.
 > superficie dell'Altare resta un'**impronta a forma di cuore**, tiepida per
 > sempre: la Sala ricorda anche questo (pannello-Cronaca, `DEF-2`).
 
-Le Benedizioni si rinnovano all'Altare (`DEF-2` §7). Nessun altro loot
+Le Benedizioni si rinnovano all'Altare (`DEF-2` §7), pregando dieci minuti,
+una volta ogni 24 ore vissute. Nessun altro loot
 ordinario (è un rito).
 
 
@@ -1443,7 +1493,8 @@ PF: ~110 (13 DV) · CA 20 (+5 cuoio borchiato +2 a borchie vegetali, +2 scudo
 BAB/Lotta: +10/+11 · Velocità 6 m (nana: l'armatura non la riduce)
 FOR 12 · DES 10 · COS 18 · INT 13 · SAG 20(+5), con il +4 della Collana
   [CANONE — DM 2026-10-18] · CAR 12
-TS: Tempra alto · Riflessi medio · Volontà alto (SAG 20)
+TS: Tempra +16 · Riflessi +8 · Volontà +15 (base Ranger 1 + Druida 12
+  +10/+6/+8, COS +4, SAG +5, Mantello della Resistenza +2; tabelle SRD)
 Scurovisione 27 m (Dream Dwarf)
 ------------------------------------------------------------
 CAPACITÀ IBRIDO TREANT (dal viaggio + rito)
@@ -1543,9 +1594,9 @@ di taglia, e taglia −1. DV 10d8 più COS +5 per dado danno 95 di media: vale i
 CA 10 − 1 + 0 + 15 = **24**. Travolgere (SRD): danno dello schianto più 1,5 × FOR
 = 2d8+13, CD 10 + ½ DV + FOR = 10 + 5 + 9 = **24**.
 
-⚠ **Non SRD**, e vale il canone: FOR 29, armatura naturale +15 e RD 10/adamantio
-restano quelle del canone anche da Grande (l'SRD, scendendo di taglia, darebbe
-FOR 21 e +10); lo schianto fa **2d8** invece dell'1d8 di una creatura Grande; e
+⚠ **Non SRD**, e vale il canone: FOR 29, COS 21, armatura naturale +15 e RD
+10/adamantio restano quelle del canone anche da Grande (l'SRD, scendendo di
+taglia, darebbe FOR 21, COS 17 e +10); lo schianto fa **2d8** invece dell'1d8 di una creatura Grande; e
 il colpire è **+18** invece del +16 dei conti (+7 BAB, +9 FOR, −1 taglia, +1
 Arma Focalizzata): i due punti in più sono i colpi d'adamantio. Il Treant non
 anima gli alberi, come invece fa quello dell'SRD.

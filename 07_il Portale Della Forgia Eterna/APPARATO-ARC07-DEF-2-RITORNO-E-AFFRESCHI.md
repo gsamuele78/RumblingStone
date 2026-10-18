@@ -55,6 +55,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | la Sala, il sogno di Tordek, 2 di 2 | Andor lead, Salvatore support | 5 |
 | SCENA 5 | la Sala, il sogno di Artemis, 1 di 2 | Andor lead, BG3 support | 5 |
 | SCENA 5 | la Sala, il sogno di Artemis, 2 di 2, quando ha riconosciuto la porta | Andor lead, BG3 support | 6 |
+| SCENA 5 | la Sala, il sogno di Artemis, senza il bazar | Andor lead | 1 |
 | SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 1 di 2 | Casa di Davide lead, LotR support | 6 |
 | SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 2 di 2 | Casa di Davide lead, LotR support | 5 |
 | SCENA 5 | la Sala, il risveglio | LotR lead | 5 |

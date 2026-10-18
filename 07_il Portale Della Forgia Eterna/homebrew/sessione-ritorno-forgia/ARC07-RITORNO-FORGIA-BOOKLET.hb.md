@@ -255,8 +255,9 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Forgia Ricorda»**: gli otto affreschi, le Benedizioni, la Stanza della Corona.
 > Non è un dungeon di combattimento: vive di atmosfera, scelte e conseguenze.
 >
-> **Stato al tavolo**: ✅ **GIOCATO** dal gruppo di oggi: hanno dormito nella
-> Sala (R4, §0-bis) e hanno fatto il rito. Un **gruppo nuovo** trova aperte le
+> **Stato al tavolo**: ✅ **GIOCATO** dal gruppo di oggi fino al sonno: hanno
+> dormito nella Sala (R4, §0-bis). La resurrezione («La Resurrezione di Hella») è il prossimo
+> beat e non è ancora giocata. Un **gruppo nuovo** trova aperte le
 > scelte che qui sono scritte come giocate (dove dormire, cosa guardare).
 >
 > **Quando si gioca**: **al ritorno dal Piano della Terra**, **prima** della
@@ -292,6 +293,13 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 ## §0 — QUICKSTART DM
 
+> 🧭 **La serata in tre frasi.** Stasera non combatte nessuno: i tre Custodi
+> tornano dal Piano della Terra nella Sala, trovano la loro vittoria incisa
+> sulle pareti, guardano gli affreschi, forse aprono la Visione di A2 e
+> scendono nella Stanza della Corona. L'unico avversario è l'**orologio di
+> A7**, che scende a ogni sonno. Poi dormono, ognuno fa il suo sogno, e il
+> corpo di Hella è pronto per la resurrezione del «La Resurrezione di Hella».
+
 ### In trenta secondi
 
 | Domanda | Risposta |
@@ -301,6 +309,8 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | **Chi si oppone** | Nessuno in carne. L'avversario è l'**orologio di A7**: ogni sonno lo fa scendere |
 | **Cosa decidono i PG** | quali affreschi guardare, se tentare la Visione (§5), se scendere nella Stanza (§6), dove dormire, quando chiudere e andare al rito |
 | **Se fanno l'inatteso** | §8, una riga per mossa. Se interrogano la Sala con la magia: §4-bis, «Se lo divinano» |
+| **Quanto dura** | circa due ore: Scena 1 dieci minuti, Scena 2 tre quarti d'ora, Scena 3 un quarto d'ora, Scena 4 venti minuti, Scena 5 mezz'ora. Se dopo un'ora e mezza non siete al sonno, comincia a tagliare |
+| **Se hai un'ora per prepararti** | leggi §0, §0-bis, A1, A3, A7, A8 e la Scena 5; il resto si legge al tavolo, quando i PG ci arrivano |
 | **Se manca tempo** | taglia in quest'ordine: A4, A5, la lettura di Artemis su A6, la Stanza. Non tagliare A7 (l'orologio), A3 (la catarsi) né il sogno di Hella `[INFERRED — needs DM confirmation]` |
 
 Tutto il beat si gioca **senza combattere**: nessun nemico entra nella Sala.
@@ -321,6 +331,18 @@ capitolo in cui la campagna si guarda allo specchio.
 **Chi c'è.** Thorik, Tordek, Artemis (vivi); **Therysol** (veglia il corpo, ora
 presente); **Durik**, il cane di Hella riforgiato, che gira attorno al corpo e non
 è ancora legato a lei; **Hella** morta (spirito in viaggio — solo echi). Nessun nemico.
+
+**Con che cosa arrivano dal «Il Piano della Terra & Terros l'Antico».**
+
+| Fatto | Gruppo di oggi | Gruppo nuovo |
+|---|---|---|
+| Hanno dormito nel Piano della Terra? | no: A7 segna **3g 20h** | se sì, **3g 08h** (§0-bis) |
+| Il Seme di Varis | nello zaino di Tordek, mai toccato; il Marchio non è attivo («Il Piano della Terra & Terros l'Antico» §6-bis) | come l'hanno lasciato; senza Seme, il sogno di Tordek si ferma alla fiera (§7-bis) |
+| La visione del bazar di Varis | Artemis l'ha avuta («Il Piano della Terra & Terros l'Antico» §6-bis) | se non l'ha avuta, vale la variante del suo sogno (§7-bis) |
+| Che cosa Artemis ha detto a Tordek del Seme | è canone, ma non è scritto: chiedilo ai due giocatori prima di cominciare | lo stesso |
+| La luce verde alle spalle di Thorik, al rito dello Smeraldo (eco E-07f) | l'ha avuta, e la crede di Moradin (§7-bis) | se il rito del «Il Piano della Terra & Terros l'Antico» §9 non l'ha data, il sogno delle mani fredde resta lo stesso: le mani sono di Hella comunque |
+| Il Bane di Aegis Fang contro Fauci | la versione forte del 25 settembre (§4, A7) | lo ricevono stasera, davanti ad A7 |
+| pf e cariche di Vigore della Forgia | come a fine Terros. Il sonno di stasera dà la guarigione naturale e ricarica il Vigore, se la Benedizione è attiva (§7, §7-bis) | lo stesso |
 
 **Cosa stampare.** La **Quick-Reference §0-bis**; gli **handout §11** (le
 iscrizioni degli affreschi, la tavola degli Otto); il PDF **Benedizioni di
@@ -353,7 +375,7 @@ Sala costa solo **−4 h** (tariffa divina, §0-bis) e porta con sé il sogno de
 | A1 — Benedizione dell'Osservatore (meditare 1 min) | auto | §4 |
 | A2 — Visione Condivisa (TS Volontà, 2 successi su 3) | 18 | §5 |
 | A3 — Catarsi di Thorik (TS Volontà; il **fallimento è il dono**, e Thorik può rinunciare al tiro) | 17 | §4 |
-| A6 — Artemis legge il Tempo (Conoscenze Arcane / Sapienza Magica) | 18 | §4 |
+| A6 — Artemis legge il Tempo (Sapienza Magica) | 18 | §4 |
 | A7 — Aegis Fang «sente» Fauci (appoggiare l'ascia alla cornice) | auto | §4 |
 | A8 — la manifestazione di Hella (posare il corpo davanti) | auto | §4 |
 | Benedizioni all'Altare (pregare 10 min, nessuna prova) | auto | §7 |
@@ -414,7 +436,8 @@ numeri non sostengono; mostra l'affresco e lascia che sia lui a parlare.
 #### Cosa mostra A7, valore per valore
 
 L'affresco cambia quando cambiano le ore del mondo di sopra, cioè a ogni
-riposo: mostra la riga più vicina al valore dell'orologio. **Mostralo ogni volta**: è l'unico
+riposo: mostra l'ultima riga che l'orologio ha raggiunto, e la breccia solo
+sotto i due giorni. **Mostralo ogni volta**: è l'unico
 posto in cui i PG vedono il prezzo di ciò che hanno appena scelto.
 
 | Orologio | Cosa si vede sull'affresco |
@@ -502,8 +525,9 @@ davanti a un pannello completato = **Benedizione della Cronaca** (§3).
   risuonano (conseguenza canonica del Marchio).
 
 ### 🌙 HELLA — la promessa dipinta (solo manifestazione, mai dialogo)
-- Hella non ha coscienza di ciò che accade: il suo spirito è nell'Incudine del
-  Mondo. Ma **il suo corpo** è nella Sala, e la Forgia lo tiene: se i PG lo
+- Hella non ha coscienza di ciò che accade: il suo spirito ha attraversato
+  l'Incudine del Mondo e ora è trattenuto nel Sogno della Terra, dalle radici
+  del suo Voto (§8, «La Resurrezione di Hella» §6). Ma **il suo corpo** è nella Sala, e la Forgia lo tiene: se i PG lo
   posano davanti ad **A8** (§4), lei **si manifesta senza parole** — una mano
   premuta sul vetro dall'interno, un simbolo lasciato (**Quercia e Martello
   intrecciati**), poi il nulla. È speranza, non conversazione. *(Nessuna
@@ -535,6 +559,26 @@ Se qualcuno le chiede del corpo, Therysol dice quello che sa e niente di più:
 **Therysol (piano, senza alzarsi):** *«L'ho rimessa dritta. Si gira ancora verso sud.»*
 
 È il primo indizio della rete (§4-bis, N1): a sud c'è A8.
+
+**Cosa sa fare Therysol** (Esperto 2 / Acolita 6).
+Lancia spontaneamente tre incantesimi di 1° livello e due di 2° al giorno,
+cinque e quattro con le perle, scelti fra *cura ferite leggere*,
+*benedizione*, *cura ferite moderate*, *aiuto* e *ristorazione inferiore*.
+Se gliele chiedono, cura. Le sue divinazioni sono *individuazione del
+magico* e *guida*: sugli affreschi vale la riga di «Se lo divinano», e di
+dove sia lo spirito non sa niente. Non ha incantesimi che riportano in vita:
+a chi glielo chiede risponde che non è il suo rito.
+
+**Chi si trova qui**
+
+| Chi | Nella Sala |
+|---|---|
+| **comando** | nessuno: Moradin parla dagli affreschi e all'Altare, ma non dà ordini |
+| **culto** | l'Altare del Cuore di Moradin: la preghiera rinnova le Benedizioni (§7) |
+| **rimedi** | le Benedizioni e il Vigore della Forgia (§7); le cure di Therysol, qui sopra |
+| **bottega** | nessuno: non c'è un fabbro, e niente da comprare né da vendere |
+| **messaggi** | nessuno: A7 mostra Hammerfist, ma nessuno nella Sala porta una voce fin là |
+| **guardia** | Durik, fra il corpo e il pericolo; Therysol, che veglia |
 
 La scena è l'arrivo nella Sala (Zona A). La Stanza della Corona (Zona B) ha la
 sua scena, la 4 (§6).
@@ -606,7 +650,9 @@ Forza Sostenuta di A5 → una prova di FOR o un TS Tempra; A1 «La Fede» ha un
 effetto suo, scritto nel §4). Massimo **un** bonus della Cronaca attivo alla volta, e quello di A1 dura 24 h:
 chi ha meditato davanti ad A1 non prende il +1 di A5 o di un altro pannello
 finché A1 è attivo (PF1e:
-i sacri non si sommano tra loro). In più, un Custode può **«leggere» un pannello
+i sacri non si sommano tra loro). Il tetto vale per le meditazioni: i doni di
+A3 e di A8 si prendono lo stesso, e per ogni tiro vale il sacro più alto (box
+PF1e del §0-bis). In più, un Custode può **«leggere» un pannello
 completato** (Sapienza/Conoscenze CD 15) per rammentare un **fatto vero** già
 vissuto — aiuto-memoria diegetico su gesta/nemici passati, **mai** divinazione
 sul futuro.
@@ -656,8 +702,8 @@ ogni riposo anche se nessuno lo guarda.
 > **Read-aloud (LotR lead, Casa di Davide support) — gli affreschi, A1, 2 di 2.** *Intorno ribolle il caos
 > primordiale: fiamme, fulmini che spaccano la realtà con un tuono, pietra
 > liquida, ombre antiche. Lui resta calmo e guarda la corona con amore
-> paterno. Lavora per proteggere i figli nanici che ancora non esistono,
-> cioè voi. Quella sulla fronte di Thorik è la stessa, e diecimila anni non
+> paterno. Lavora per proteggere figli che ancora non esistono.
+> Quella sulla fronte di Thorik è la stessa, e diecimila anni non
 > l'hanno cambiata.*
 
 **Dati per il DM (non da leggere).** La figura è Moradin; il martello è
@@ -821,7 +867,9 @@ Cuore della Montagna → «Il Ritorno a Hammerfist»).
   fallisce, Artemis vede la doppia esposizione e basta: niente di male, e lo
   saprà con gli altri al «La Resurrezione di Hella», quando la Corona apre il varco.
 - **Se provano ad attraversarlo.** Il vetro resta vetro, e la Corona si
-  scalda appena: è la porta fisica del nodo N2 (§4-bis).
+  scalda appena. Sotto la mano il portale dorato pulsa quattro volte, e il
+  quarto battito è più debole degli altri `[INFERRED — needs DM confirmation]`:
+  è la porta fisica del nodo N3 (§4-bis).
 - **Sviluppi.** Alla vittoria del «Il Viaggio a 1.000 Anni fa», A6 va al 100% e il Rubino si accende: la
   scena si unifica in una sola linea temporale — la profezia compiuta.
 
@@ -929,7 +977,8 @@ aprono: chi li esamina li trova muti. Decidi tu se e quando aprirli
 | Se usano… | Che cosa ottengono `[INFERRED — needs DM confirmation]` |
 |---|---|
 | *parlare con i morti* sul corpo di Hella | l'incantesimo SRD legge la memoria del corpo, non l'anima: il corpo sa ciò che Hella sapeva da viva, fino alla Stanza. Di dove sia lo spirito non sa niente |
-| *comunione* o *divinazione* rivolta a Moradin | risposte nella voce della Cronaca. Sul rito: *«Dipende da voi.»* Sulle mani fredde: *«Nessuno regge da solo.»* Sul tempo: la frase di N6 |
+| *comunione* o *divinazione* rivolta a Moradin | risposte nella voce della Cronaca. Sul rito: *«Dipende da voi.»* Sulle mani fredde: *«Nessuno regge da solo.»* Sul tempo: *comunione* risponde «sì» a «abbiamo tempo?», perché l'SRD le concede sì, no o una frase di cinque parole; *divinazione* dà la frase di N6 |
+| *comunione* o *divinazione* su dove sia lo spirito di Hella | il Sogno della Terra, trattenuto dalle radici del suo Voto (§8, «La Resurrezione di Hella» §6). *Comunione* risponde «no» a «è libero di tornare?»; *divinazione* dà *«La terra la tiene per il voto.»* Nessuna delle due dice come strapparla di lì: lo dice il rito del «La Resurrezione di Hella» |
 | *leggende e tradizioni* sulla Corona o su Aegis Fang | ciò che dicono A3 e A7, niente di più: Thorgrim, Skullcrusher, il sangue del drago |
 | *individuazione del magico* sugli affreschi | aure divine troppo forti per essere lette una per una. Nessuna informazione sul futuro |
 
@@ -967,7 +1016,8 @@ d'ombra sono di Artemis, il ki di Tordek.
   ha mostrato la posta in gioco, non un finale garantito).
 - **Esito — fallimento (meno di 2 successi):** la visione resta sfocata, dolorosa —
   vedete Hella ma non riuscite a metterla a fuoco. Nessun malus: solo il peso
-  di un futuro che non si lascia afferrare. Ritentabile dopo la resurrezione
+  di un futuro che non si lascia afferrare. Stasera non si ritenta.
+  Ritentabile dopo la resurrezione
   (allora è automatico).
 - **Sviluppi (BG3-eco).** Ciò che i PG **vedono** qui torna al 100% di A8: se il
   finale reale diverge dalla visione (un PG cade, Hella non torna), la
@@ -1040,9 +1090,10 @@ qualunque altro posto (§0-bis), dormire lì ha un prezzo:
 **Per il gruppo di oggi la scelta è già fatta**: hanno dormito nella Sala (R4,
 §0-bis). La tabella vale per un gruppo nuovo.
 
-**Non suggerire tu la Sala.** Se scelgono la Stanza pagando otto ore in più per
-un +1 e per il senso della cosa, quella è esattamente la decisione che questo
-beat esiste per far prendere.
+**Non suggerire tu la Sala.** Se scelgono la Stanza pagando otto ore in più
+per il senso della cosa, e lasciando i sogni della Sala per il solo sogno di
+Hella (§7-bis), quella è esattamente la decisione che questo beat esiste per
+far prendere. Il +1 non è in gioco: si prende col tocco, ovunque dormano.
 
 ---
 
@@ -1065,6 +1116,7 @@ gruppo ha solo le cure che trova.
 
 > Le carte sono il PDF `BenedizioniDiMoradin.pdf` (§11): tre benedizioni, e ogni PG le ha tutte e tre.
 > Forza della Montagna vale solo nel Piano della Terra e non ha una carta.
+> Se il PDF non c'è, le tre carte si scrivono dalla tabella qui sopra.
 
 ✉ **Si consegna qui: H4**, le carte delle Benedizioni, a preghiera finita.
 
@@ -1184,6 +1236,12 @@ fermati lì.
 > della mano, il legno è consumato da un pollice che ci si è appoggiato
 > molte volte.*
 
+Il bazar è la vetrina di Varis, che Artemis ha visto prima di estrarre il Seme
+(«Il Piano della Terra & Terros l'Antico» §6-bis, giocata). Se un Artemis nuovo non l'ha vista, al posto del
+primo box leggi una riga sola:
+
+> **Read-aloud (Andor lead) — la Sala, il sogno di Artemis, senza il bazar.** *Sogni l'affresco del Tempo, e non è più un affresco: è una porta.*
+
 Il gancio è **Vatore** («Il Viaggio a 1.000 Anni fa»). Non nominarlo. Se Artemis chiede di chi è il
 pollice: nel sogno lo sapeva, sveglio non se lo ricorda. E se chiede se il
 bazar c'entra — *sì, ma non sai come*.
@@ -1226,7 +1284,7 @@ che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:
 
 | Mossa | Risposta del modulo |
 |---|---|
-| **Vogliono staccare le cornici d'oro** (5.000 mo l'una) | Impossibile: irremovibili (Durezza 20, e la Sala è sacra). Provarci **offende** — Moradin non concede Benedizioni per 24 h. Un Custode che ruba alla Forgia non è più un Custode, per un giorno. |
+| **Vogliono staccare le cornici d'oro** (5.000 mo l'una) | Impossibile: irremovibili (Durezza 20, e la Sala è sacra). Provarci **offende** — Moradin non concede Benedizioni per 24 h a chi ci ha provato. Un Custode che ruba alla Forgia non è più un Custode, per un giorno. |
 | **Attaccano/danneggiano un affresco** | Il vetro è indistruttibile. Ma A1 **smette di girare la testa** a Thorik finché non c'è un atto di contrizione (una preghiera sincera, o un gesto verso Hella). La Cronaca registra anche gli affronti. |
 | **Vogliono riposare all'infinito nella Sala** | A7 **ticchetta**: mostra il countdown scendere, le mura di Hammerfist cedere. Ogni riposo extra **nella Sala** = **−4 h** (tariffa divina), **fuori** dalla Sala = **−12 h**, e in entrambi i casi un cambiamento visibile sull'affresco. Non c'è un cancello, c'è un **prezzo**. |
 | **Saltano del tutto gli affreschi** (fretta verso il rito) | Legittimo: nessun affresco è obbligatorio. Perdono le Benedizioni della Cronaca, il Bane di Aegis Fang vs Fauci (A7) e la catarsi di Thorik (A3). La resurrezione del #3 resta possibile, ma **più fredda**: nessuno ha visto la promessa. |
@@ -1299,7 +1357,10 @@ PG dovrà **volerlo e donare qualcosa**. → **la Resurrezione di Hella
 
 ### Handout giocatore
 1. **H1 · La Tavola degli Otto Affreschi** — schema dell'ottagono (MAPPA S-1) con i
-   titoli, da consegnare così i giocatori «leggono» la Sala.
+   titoli, da consegnare così i giocatori «leggono» la Sala. La S-1 è del DM:
+   per H1 si tengono solo l'ottagono, gli otto titoli, i punti cardinali,
+   l'Altare e il Portale P1. Restano fuori percentuali, timer, Bane, nomi dei
+   PG e il corpo.
 2. **H2 · Le Iscrizioni**: quella del Fuoco (A4, ora storica: «Il Fuoco purifica la
    memoria. / Il Fuoco forgia la volontà. / Il Fuoco risveglia il tempo. /
    Portatore della Corona, se cerchi il Cuore della Montagna, / attraversa e
