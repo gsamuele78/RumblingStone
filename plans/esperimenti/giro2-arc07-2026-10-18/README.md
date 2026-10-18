@@ -152,9 +152,9 @@ consecutive sullo stesso luogo. Il contenuto e i tetti non sono cambiati.
 | Parole, mediana | 41 | 51 | 54 |
 | Parole, terzo quartile | 64 | 62 | 69 |
 | Box fra 30 e 70 parole | 47% | 88% | 54% |
-| Chiusure su una domanda | 7% | 21% | 21% |
+| Chiusure su una domanda (corpus: il suo rilevatore; ARC-07: `misura_craft`, chiusura su «Che fate?») | 6,5% | 30 su 142 | 27 su 128 |
 
-Le chiusure su domanda restano sopra il corpus perché ADR-0014 le vuole su
+Le chiusure su domanda restano sopra il corpus, intorno al 21%, perché ADR-0014 le vuole su
 ogni box che apre un combattimento o una scelta: i passaggi ne hanno tolte
 solo dove il box era pura descrizione. Avverbi in -mente e gerundi in coda
 restano molto sotto il corpus, sotto 1‰ contro 5,6‰ e 1,7‰: dove una frase li
