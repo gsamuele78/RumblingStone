@@ -80,6 +80,7 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 - **Aperte**: nessuna
 - **Cambiate**: nessuna, tutte e tre come proposte
 - **Dedotto da me**: che il «sì sono d'accordo» valga per tutte e tre le proposte del piano, anche se il messaggio a cui rispondeva nominava per esteso solo la D1
+- **Confermato dal DM il 2026-10-18**: *«sì grazie procedi con tutte e tre»*, la deduzione era giusta
 
 ## 4 · Come si riparte in una chat nuova
 
