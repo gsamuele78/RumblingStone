@@ -139,7 +139,7 @@ Questo crea una **traccia investigativa** che collega i due NPC e porta al Colle
 - **Volontà:** +11 (+8 Base Bardo, +1 Sag, +2 Talento)
   *(Eccezione: TS Volontà CD 14 per evitare lo stato Scosso se subisce anche solo 1 PF di danno — vedi **Odio per il Sangue**)*
 
-> ⚠ Classi non SRD. L'Accordo Sublime chiede, fra l'altro, 13 gradi in Esibirsi: un personaggio li ha solo dal 10° livello, quindi va preso dopo i cinque livelli da Spia, non subito dopo il Bardo 8. I TS base di Spia non si verificano senza la sua tabella: restano quelli della scheda [INFERRED — needs DM confirmation]. PF1e: per la Spia, il ladro con l'archetipo Spia (*Advanced Player's Guide*) — si avvicina: menzogna, travestimento e veleno, senza magia; per l'Accordo Sublime nessun archetipo del bardo PF1e dà incantesimi oltre il 6° — stravolge, e la scheda tiene la classe 3.5.
+> ⚠ Classi non SRD. L'Accordo Sublime chiede, fra l'altro, 13 gradi in Esibirsi: un personaggio li ha solo dal 10° livello, quindi va preso dopo i cinque livelli da Spia, non subito dopo il Bardo 8. I TS base di Spia non si verificano senza la sua tabella: restano quelli della scheda. PF1e: per la Spia, il ladro con l'archetipo Spia (*Advanced Player's Guide*) — si avvicina: menzogna, travestimento e veleno, senza magia; per l'Accordo Sublime nessun archetipo del bardo PF1e dà incantesimi oltre il 6° — stravolge, e la scheda tiene la classe 3.5.
 
 ### Abilità principali
 
@@ -210,7 +210,7 @@ Ogni volta che Sal subisce danni (anche 1 solo PF), deve superare un **TS Volont
 
 Sal preferisce non combattere con la magia in modo evidente. Usa incantesimi come strumento sociale e di fuga.
 
-> ⚠ Un Bardo 8 da solo conosce 6/4/4/3 incantesimi, ne lancia 3/5/5/2 con Car 22 e arriva al 3° livello. Gli incantesimi e gli slot in più della lista (il 4° livello, *Suggestione di Massa*, *Dominio di Mostri*) li danno l'Accordo Sublime e la Spia, che non sono SRD: tenuti come li scrive la scheda [INFERRED — needs DM confirmation]. Alcuni stanno a un livello diverso da quello del bardo SRD (*Grazia del Gatto* è del 2°, *Aura Magica di Nystul* del 1°, *Confusione* del 3°, *Porta Dimensionale* del 4°): le CD sono quelle della scheda.
+> ⚠ Un Bardo 8 da solo conosce 6/4/4/3 incantesimi, ne lancia 3/5/5/2 con Car 22 e arriva al 3° livello. Gli incantesimi e gli slot in più della lista (il 4° livello, *Suggestione di Massa*, *Dominio di Mostri*) li danno l'Accordo Sublime e la Spia, che non sono SRD: tenuti come li scrive la scheda. Alcuni stanno a un livello diverso da quello del bardo SRD (*Grazia del Gatto* è del 2°, *Aura Magica di Nystul* del 1°, *Confusione* del 3°, *Porta Dimensionale* del 4°): le CD sono quelle della scheda.
 
 **Livello 0 (3/giorno):** *Prestidigitazione, Individuazione del Magico, Ammaliare Animali, Luci, Nota Dissonante*
 

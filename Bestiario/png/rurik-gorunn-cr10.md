@@ -24,7 +24,7 @@ voci:
 
 > **Caratteristiche trascritte a mano dall'export PCGen** (le stesse che `genera_attributi.py` aveva copiato). La CA di contatto 10 con Des 8 non è un errore: è l'anello di protezione +1 dell'export (10 −1 +1).
 
-> [INFERRED — needs DM confirmation] **I dadi vita.** I pf dell'export sono 80, tirati livello per livello (10+6+5+6+5+6+5+6 da paladino, 5+6 da Martello di Moradin, +2 di Cos a livello): il d10 da paladino è SRD, quello della classe di prestigio è letto dai tiri dell'export, nessuno sopra 10. Da qui `pf-dado` 10d10+20.
+> **I dadi vita** (non verificato sul libro). I pf dell'export sono 80, tirati livello per livello (10+6+5+6+5+6+5+6 da paladino, 5+6 da Martello di Moradin, +2 di Cos a livello): il d10 da paladino è SRD, quello della classe di prestigio è letto dai tiri dell'export, nessuno sopra 10. Da qui `pf-dado` 10d10+20.
 
 **Iniziativa** −1 · **Sensi** scurovisione 18 m; *individuazione del male* a volontà; Ascoltare +2, Osservare +2 · **Aura** di coraggio (3 m)
 
@@ -37,7 +37,7 @@ voci:
 **Capacità speciali**
 - **Paladino 8** (SRD): aura di bene, *individuazione del male*, punire il male 2/giorno, grazia divina, imposizione delle mani (16 pf al giorno), aura di coraggio, salute divina, scacciare non morti, *rimuovi malattie* 1/settimana, cavalcatura speciale (l'ariete celestiale, scheda gemella nella stessa cartella).
 - **Martello di Moradin 2** [Private source — Player's Guide to Faerûn, variante del Martello di Moradin]: aura di coraggio; **lancio del martello** (Str: il martello da guerra è un'arma da lancio con incremento 6 m, senza penalità); **Goblinkiller** (Sop: 1/giorno, con un'azione di movimento, il martello diventa *anatema dei goblinoidi* per un numero di round pari al mod Car, 2 round); **ritorno del martello** (Sop: il martello lanciato torna come un'arma *di ritorno*).
-- **Divine Armor** [Private source — Player's Handbook II]: spende un uso di scacciare non morti per una protezione divina sull'armatura. Il testo non è nel repo. [INFERRED — needs DM confirmation]
+- **Divine Armor** [Private source — Player's Handbook II]: spende un uso di scacciare non morti per una protezione divina sull'armatura. Il testo non è nel repo (non verificato).
 
 > ⚠ Prerequisito: il Martello di Moradin chiede la regione **Spina del Mondo**; l'export dà a Rurik le **Smoking Mountains**. Gli altri requisiti tornano (BAB +7, Artigianato fabbro d'armi 10 gradi, Volontà di Ferro, Arma Focalizzata martello, incantesimi divini di 2°, patrono Moradin). Si tiene la classe. PF1e: nessuna classe o archetipo del PRD fa lancio-e-ritorno del martello con l'aura del paladino; l'arma *di ritorno* più il talento Lancio Rapido sul paladino base si avvicinano nel combattimento ma perdono Goblinkiller e l'aura, quindi stravolge poco e dà meno. Basta ignorare la regione.
 

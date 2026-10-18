@@ -47,7 +47,7 @@ Corona **fallì** e Urialle stessa fu **uccisa** dai PG.
 - È la mano materiale della morte di Hella; Sonjak ne è la mandante.
 
 ### Next hooks
-- Rappresaglia drow per il fallimento del raid? `[INFERRED]` (gancio verso il
+- Rappresaglia drow per il fallimento del raid, guidata da Zin'thara Vel'Ryn (gancio verso il
   fronte Sonjak/Collezionista degli archi 08-09).
 
 ## In combattimento
@@ -58,14 +58,13 @@ Statblock e tattiche sono storici, nel modulo dell'Arco 06: `06_Stanza-corona-di
 > - **Yochlol** `[Private source — non SRD, Monsters of Faerûn / Fiend Folio, da verificare]` e **mezzo-illithid** `[Private source — non SRD]`.
 > - I 18 DV dello statblocco dell'arco non sono scomposti fra yochlol e classi: da verificare col DM prima di riusarla. Urialle è morta e lo statblocco è storico: si lascia com'è.
 > - PF1e: lo Stregone con qualche livello da *Magus* si avvicina; la yochlol e il mezzo-illithid non hanno un equivalente OGL.
-> [INFERRED — needs DM confirmation] Verifica scritta da un agente sui numeri dello statblocco dell'arco.
+> Verifica scritta da un agente sui numeri dello statblocco dell'arco.
 
 ## Esiti possibili
 
 ### Stato di canone (D13)
 - **MORTA** — stato finale post-ARC-06, non torna.
-- Il suo *desecrate* permanente decade con la sua morte / la bonifica del sito
-  `[INFERRED — verify col DM]`.
+- Il suo *desecrate* permanente decade con la sua morte / la bonifica del sito.
 
 ## Fonti e canone
 

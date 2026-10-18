@@ -54,7 +54,7 @@ qualcosa di esistente, è un errore da correggere.**
 | # | Carta | Sorgente | Materiale/file riusato (mai doppiato) | Spotlight |
 |---|---|---|---|---|
 | 1 | Le Cripte del Tempio | **S2** | FASE0-NOTTE-DEI-DROW-TESTO/MAPPA; Halveth (Consiglio_Rethmar §2) | Thorik |
-| 2 | Il Cecchino nella Notte | **S1** | archetipo Brindol (assassino); `deathlock-cr8` / assassino [INFERRED] | Artemis |
+| 2 | Il Cecchino nella Notte | **S1** | archetipo Brindol (assassino); `deathlock-cr8` / assassino | Artemis |
 | 3 | La Marea alle Porte | **S3** | *(buco di ritmo Day 41 — crisi civile, non coperta da S1/S2)* | Hella |
 | 4 | L'Olio di Sabotaggio di Sal | **S2** | clock Sal (state.md §3); `Bestiario/villain/Salvatore/Salvatore.md` | Tordek |
 | 5 | Il Tradimento di Halveth | **S2** | Consiglio_Rethmar §2 (Halveth); state.md §7 | Thorik |
@@ -144,7 +144,7 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 - **Trigger**: durante il caos della Notte dei Drow, un assassino punta a un **comandante** (Lady Kaal, Brenna Sorvane o Lorana). **Eco Halveth**: se al potere, ha "aperto la porta" all'assassino.
 - **Read-aloud**: *Un balenio di balestra dal tetto del municipio. Il primo dardo manca Lady Kaal di un palmo e si conficca nella trave. Il secondo è già incoccato. Chi protegge i comandanti stanotte, li tiene vivi per la battaglia di domani.*
 - **Mappa**: tetti e vicoli del quartiere nobile, **8×12** (1,5 m/q); dislivelli (Scalare CD 15), comignoli = copertura, corda tesa per la fuga.
-- **Nemici (EL 13)**: 1 assassino (Ladro 7/Assassino 3 [INFERRED — needs DM confirmation]) + 2 `drow-fighter3-cr4` o `deathlock-cr8` di scorta. Tattica: colpo furtivo, veleno (CD 16), fuga sui tetti.
+- **Nemici (EL 13)**: 1 assassino (Ladro 7/Assassino 3) + 2 `drow-fighter3-cr4` o `deathlock-cr8` di scorta. Tattica: colpo furtivo, veleno (CD 16), fuga sui tetti.
 - **Posta**: la vita di un comandante = un pilastro del morale e del Consiglio.
 - **Esiti**: **Vittoria** (assassino catturato/ucciso, bersaglio salvo) → +1 Fronte, +intel su Halveth/Sonjak. **Parziale** (bersaglio salvo, assassino fugge) → +0. **Sconfitta** (comandante ferito grave/ucciso) → −2 Fronte, −2 Morale Cittadino (d12 evento §9.3-3).
 - **Se ignorata**: il comandante bersaglio cade → −2 Fronte; se è Brenna, la milizia perde coordinamento (Consiglio_Rethmar §4).

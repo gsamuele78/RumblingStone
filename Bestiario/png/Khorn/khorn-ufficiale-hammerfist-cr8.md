@@ -31,7 +31,7 @@ voci:
 
 **Attacco** Vel 6 m (non rallentato dall'armatura) · **Mischia** martello da guerra +1 +14/+9 (1d8+6/x3); con Attacco Poderoso a −3, +11/+6 (1d8+9) · colpo di scudo pesante +11 (1d4+3), senza perdere lo scudo alla CA · **Distanza** balestra pesante +9 (1d10/19-20) · **Attacchi speciali** Fendere; +1 ai tiri per colpire contro orchi e goblinoidi
 
-**Statistiche** For 16, Des 12, Cos 16, Int 10, Sag 14, Car 15 · BAB +8; Lotta +11 · **Talenti** Attacco Poderoso, Fendere, Arma Focalizzata (martello da guerra), Arma Focalizzata Superiore (martello da guerra) [INFERRED — needs DM confirmation], Specializzazione in un'Arma (martello da guerra), Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +1, balestra pesante e 10 quadrelli
+**Statistiche** For 16, Des 12, Cos 16, Int 10, Sag 14, Car 15 · BAB +8; Lotta +11 · **Talenti** Attacco Poderoso, Fendere, Arma Focalizzata (martello da guerra), Arma Focalizzata Superiore (martello da guerra), Specializzazione in un'Arma (martello da guerra), Scudo Migliorato, Autorità (comanda le 150 lance), Iniziativa Migliorata · **Equipaggiamento** armatura completa +1, scudo pesante di metallo +1, martello da guerra +1, balestra pesante e 10 quadrelli
 
 **Capacità speciali** Tratti nanici: scurovisione 18 m, esperto minatore, +1 contro orchi e goblinoidi, +4 schivare contro i giganti, stabilità, +2 ai TS contro veleni, incantesimi e capacità magiche.
 

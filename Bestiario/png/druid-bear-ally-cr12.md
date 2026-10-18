@@ -61,7 +61,7 @@ Statistiche distinte da quelle del blocco, che è la forma d'orso in cui combatt
 | BAB / lotta | +9 / +11 |
 | Mischia | mazzafrusto pesante +11/+6 (1d10+2) |
 | Velocità | 12 m (9 m, +3 m movimento veloce) |
-| CA | 16 (+5 armatura di pelle +2 selvatica, +1 Des) `[INFERRED]` |
+| CA | 16 (+5 armatura di pelle +2 selvatica, +1 Des) |
 
 **Source**: AP RHoD + Druido 10 / Barbaro 2 in forma d'orso bruno → STATBLOCCHI-EPICI §6
 **Status**: inferred — base template only; DM should finalize exact stats at the table.

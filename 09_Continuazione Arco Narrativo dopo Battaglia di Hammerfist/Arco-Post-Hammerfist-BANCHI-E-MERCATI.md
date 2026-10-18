@@ -15,7 +15,7 @@
 > **Stato**: i profili delle città, le casse, i loxo, la Cintura del monaco e il
 > Tempio di Rethmar sono canone dal 2026-10-07 (D42, `[CANONE — DM 2026-10-07, D42]`).
 > Prezzi e regole vengono dall'SRD 3.5; quello che resta senza un file citato
-> porta ancora `[INFERRED — needs DM confirmation]`.
+> è confermato dal DM (2026-10-18).
 > **Dove si dorme**: [`Arco-Post-Hammerfist-LOCANDE.md`](Arco-Post-Hammerfist-LOCANDE.md).
 
 ---
@@ -79,7 +79,7 @@ elenca.
 
 | § | Banco | Dove, quando | Valore base | Limite d'acquisto | Incantesimi | La cassa | Chi identifica |
 |---|---|---|---:|---:|---|---|---|
-| 1 | il Cerchio | Foresta Sacra, Giorni 24-30 | baratto | baratto | 5°, poi 7° dopo il rito | ~5.000 mo in rimedi e doni | nessuno, gli oggetti; le pozioni Saraah, dopo il rito |
+| 1 | il Cerchio | Foresta Sacra, Giorni 24-30 | baratto | baratto | 5°, poi 9° dopo il rito | ~5.000 mo in rimedi e doni | nessuno, gli oggetti; le pozioni Saraah, dopo il rito |
 | 2 | Dauth, la fiera | Giorni 28-32 | 5.600 | 37.500 | 7° | 60.000 mo fra tutti i banchi | la speziala (pozioni), gli Zhentarim (oggetti) |
 | 2 | Dauth, dopo l'invasione | dal Giorno 33 | 2.200 | 12.500 | 7° | 15.000 mo | come sopra |
 | 3 | il banco di Zalkatar | Torre Invisibile, Livello 5, solo se si tratta | il suo laboratorio | non compra | — | — | lui, e mente |
@@ -113,7 +113,7 @@ attraverso di lei.
 | Ruolo | Chi, e dove |
 |---|---|
 | comando | **Saraah dei Faggi-grigi**, l'arcidruidessa, al centro del Cerchio |
-| culto | i **quattro druidi anziani**, ai punti cardinali; **Avarthel** è il più giovane dei quattro `[INFERRED — needs DM confirmation]` |
+| culto | i **quattro druidi anziani**, ai punti cardinali; **Avarthel** è il più giovane dei quattro |
 | rimedi | gli anziani, nella radura bassa dove si seccano le erbe |
 | bottega | nessuna: si baratta con gli anziani |
 | messaggi | **Lythiel** e il suo gufo |
@@ -138,8 +138,8 @@ Che cosa avete portato alla foresta, oltre agli stivali?»*
 - **Prima e dopo il rito.** Prima del rito di Hella lanciano solo gli anziani,
   fino al **5° livello** (druido 9, scheda `avarthel-druido-cr9`). Saraah tiene
   tutto per il rito, ed è stanca: Saggezza −2 da sei mesi (`Lythiel.md`). Dopo
-  il rito Saraah lancia fino al **7° livello** (druida 14, scheda
-  `arci-druido-circolo-cr17` `[INFERRED — needs DM confirmation]`).
+  il rito Saraah lancia fino al **9° livello** (druida 17, scheda
+  `arci-druido-circolo-cr17`).
 
 ##### Cosa danno, e quanto vale
 
@@ -182,7 +182,7 @@ Il Cerchio tiene un conto in natura. Il DM converte così:
 
 | Cosa portano i PG | Vale | Perché |
 |---|---:|---|
-| Un giorno di lavoro su un bosco bruciato, per PG | 100 mo `[INFERRED — needs DM confirmation]` | piantare, scavare canali, spegnere i ceppi che covano |
+| Un giorno di lavoro su un bosco bruciato, per PG | 100 mo | piantare, scavare canali, spegnere i ceppi che covano |
 | Un congegno drow distrutto davanti al Cerchio (la spora-madre, le fiasche dei piromanti) | 1.000 mo | è il debito che la foresta sente di più |
 | Erbe, semi, componenti naturali | **prezzo pieno** | sono la loro moneta |
 | Monete | **metà** del valore | non le usano: le portano ai profughi, e le spende qualcun altro |
@@ -202,7 +202,7 @@ dura la tabella qui sopra.
 
 **Eco.** Ogni giorno di lavoro sul bosco bruciato lascia un segno nella foresta:
 alla battaglia di Rethmar le querce piantate dai PG sono abbastanza alte da
-nascondere un uomo `[INFERRED — needs DM confirmation]`, e un druido del Cerchio
+nascondere un uomo, e un druido del Cerchio
 lo fa notare.
 
 ---
@@ -297,14 +297,13 @@ Torneo finisce dopodomani, e dopodomani non ne ho più.»*
 | Cintura del monaco | 13.000 mo | 1 | **non si vende**. È il premio del Torneo, accanto alla borsa del campione `[CANONE — DM 2026-10-07, D42]`: i premi oggi sono in `...DAUTH-CONSEGUENZE-ECHI-LUNGO-PERIODO.md`, e la cintura lì non c'è |
 
 **Identificare.** La speziala identifica le pozioni: Sapienza Magica +15 e
-prende 10 `[INFERRED — needs DM confirmation]`, una al minuto, gratis se si
+prende 10, una al minuto, gratis se si
 compra da lei e 5 mo l'una altrimenti. Gli oggetti li identifica la Rete Nera,
 più sotto, e il prezzo vero è che dopo lo sa.
 
 ##### La Confraternita · i servizi
 
-Chierici di Ilmater, fino al **7° livello** (il priore è un chierico di 13°
-`[INFERRED — needs DM confirmation]`).
+Chierici di Ilmater, fino al **7° livello** (il priore è un chierico di 13°).
 
 | Servizio | Prezzo | Nota |
 |---|---:|---|
@@ -327,7 +326,7 @@ manca ai feriti dell'invasione. Il priore lo dice prima di lanciare.
 | **Da dove viene** | l'affiliazione: la Confraternita è di Ilmater, che porta il dolore degli altri |
 | **Cosa fa** | **metà prezzo** sui servizi di cura per chi soffre senza averlo scelto. Chi si è ferito in arena paga il prezzo intero |
 | **Come si vede** | prima di lanciare, il chierico chiede: *«Te la sei cercata?»*, e aspetta |
-| **Che via lascia** | dire il vero (il chierico ha Percepire Intenzioni +12 `[INFERRED — needs DM confirmation]`), oppure portare un profugo ferito al posto proprio: per lui il servizio è a metà, e il PG lo paga |
+| **Che via lascia** | dire il vero (il chierico ha Percepire Intenzioni +12), oppure portare un profugo ferito al posto proprio: per lui il servizio è a metà, e il PG lo paga |
 
 ##### La Rete Nera · il mercato nero di fuori dal mondo
 
@@ -441,9 +440,9 @@ sabotata. In più, qui chi sbaglia diventa merce.
 **Come si entra.** Tre modi, e il banco esiste solo con uno dei tre:
 
 1. **Come fornitori del Collezionista.** Raggirare contro Percepire Intenzioni
-   della quartiermastra, **+14** `[INFERRED — needs DM confirmation]`. Se chiedono
+   della quartiermastra, **+14**. Se chiedono
    di Sonjak, contro il suo, **+13**: Saggezza 20 e 8 gradi, perché per un
-   chierico è un'abilità fuori classe `[INFERRED — needs DM confirmation]`.
+   chierico è un'abilità fuori classe.
 2. **Con le parole di Sal.** Sal chiama Sonjak «Matrona Sajak» nei suoi codici
    (scheda di Sonjak). Chi ha catturato Sal, o ha letto i suoi registri, e usa
    quel nome, entra da cliente: il primo Raggirare riesce da sé.
@@ -501,7 +500,7 @@ ditemi cosa portate.»*
 |---|---|---|
 | Oggetti magici, armi, armature | **un terzo** del prezzo SRD, fino a **5.000 mo** per oggetto | paga in gemme e in monete di Talar |
 | Cibo, vino, sale di superficie | **prezzo pieno** | il campo mangia funghi da due mesi |
-| Notizie di Rethmar, della Corona, di Sal | non le paga in oro: le paga con **la libertà di uno schiavo** del recinto, un loxo o un centauro | 🔴 un'informazione vera su Rethmar data qui arriva alla Mano Rossa. Il DM toglie un vantaggio dei PG nella Fase 0 di Rethmar `[INFERRED — needs DM confirmation]` |
+| Notizie di Rethmar, della Corona, di Sal | non le paga in oro: le paga con **la libertà di uno schiavo** del recinto, un loxo o un centauro | 🔴 un'informazione vera su Rethmar data qui arriva alla Mano Rossa. Il DM toglie un vantaggio dei PG nella Fase 0 di Rethmar |
 | Prigionieri | **100 mo** a testa | finiscono sul carro di Sal. Chi vende un prigioniero mette un anello nella catena del Collezionista, e il DM avanza di uno il filo del Collezionista |
 
 **La cassa**: **15.000 mo** in gemme e monete di Talar, in tutto `[CANONE — DM 2026-10-07, D42]`.
@@ -539,8 +538,8 @@ pali, e le stesse premesse dei campi drow: si fa solo se nessuno se ne accorge.
 > spalle. Vicino ai pali, nella polvere, qualcuno ha disegnato col dito un
 > cerchio con un punto in mezzo, e non l'ha cancellato.*
 
-*Il cerchio con il punto è il segno dello sciamano per «qui si parla»
-`[INFERRED — needs DM confirmation]`.*
+*Il cerchio con il punto è il segno dello sciamano per «qui si parla».
+*
 
 **LO SCIAMANO LOXO (piano, nella lingua dello Shaar, poi in comune stentato):**
 *«Voi siete fuori. Noi siamo dentro. Chi è fuori porta. Chi è dentro sa.»*
@@ -568,7 +567,7 @@ dei drow. Chi offre una di quelle cose perde la loro fiducia per sempre.
 **La rivolta.** Ogni arma passata ai pali li avvicina alla rivolta che
 `ARMATE-SYNC` §2 prevede (−150 all'Orda, o i centauri via dal campo). Il DM la fa
 scattare quando il gruppo ha dato loro **un modo di combattere** e **una notte per
-farlo**, non prima `[INFERRED — needs DM confirmation]`.
+farlo**, non prima.
 
 **Eco.** Chi ha portato da fuori, ed è tornato a prenderli, ritrova i centauri a
 Rethmar come cavalleria. Chi ha promesso e non è tornato li ritrova nella Fase 1,
@@ -807,7 +806,7 @@ c'è lo **sconto del 30%** e un **credito di 5.000 mo**, come dice il canone
 
 **Eco.** Le lettere di cambio della Piuma d'Oro sono onorate a Rethmar e a
 Dauth. Se Channathgate decide di non mandare le sue truppe a Rethmar, le lettere
-valgono a Rethmar la metà `[INFERRED — needs DM confirmation]`, e il banchiere lo
+valgono a Rethmar la metà, e il banchiere lo
 dice con la stessa cortesia di prima.
 
 ---
@@ -838,7 +837,7 @@ regalo.»*
 | Pergamene illeggibili | 50 mo l'una | 4 | carta vecchia e inchiostro planare, nessuna magia |
 | Bigiotteria planare | 10-100 mo | a piacere | souvenir veri, senza magia |
 
-*I prezzi sono una proposta `[INFERRED — needs DM confirmation]`: la scena di Sal
+*I prezzi sono una proposta: la scena di Sal
 ne è priva. Non contano molto. Sal regala i campioni a chi non compra (scena di
 Sal, «Non comprano nulla»).*
 
@@ -946,8 +945,8 @@ mo l'una per un collezionista**, il doppio da Varis. Una moneta antica, quindi,
 - **Accorgersene.** Chi maneggia monete per mestiere (un cambiavalute, un
   pesatore, un locandiere che conta l'incasso) si accorge **sempre** che una
   moneta non è del vale. Riconoscere il conio chiede **Conoscenze (storia) CD
-  20**, o **Valutare CD 20**; un nano davanti al conio di Thorek I ha CD 15
-  `[INFERRED — needs DM confirmation]`. Sulle monete di Thorek I, chi riconosce il
+  20**, o **Valutare CD 20**; un nano davanti al conio di Thorek I ha CD 15.
+ Sulle monete di Thorek I, chi riconosce il
   conio vede anche che sono nuove, ed è lì che comincia la domanda.
 - **Farle passare.** Mescolarle alle altre e sperare: **Raggirare contro
   Percepire Intenzioni** di chi conta, come col pesatore del 372. Riesce una volta
@@ -1000,7 +999,7 @@ libbre. A peso valgono 6.250 mo. Da collezione, le prime dieci per collezionista
 
 | Luogo | Chi se ne accorge | Cosa fa | Cosa sa, e cosa dice | La conseguenza |
 |---|---|---|---|---|
-| **Hammerfist 1372** | il tesoriere del re, al primo conto | non le spende: le porta al re | riconosce la faccia di Thorek I, il re fondatore, scolpita sopra il trono `[INFERRED — needs DM confirmation]` | `ARC08-17` §3: è un'eco della fucina, e la più forte |
+| **Hammerfist 1372** | il tesoriere del re, al primo conto | non le spende: le porta al re | riconosce la faccia di Thorek I, il re fondatore, scolpita sopra il trono | `ARC08-17` §3: è un'eco della fucina, e la più forte |
 | **Il Cerchio** | nessuno: il Cerchio non conta | le prende a metà, come tutte | Saraah, davanti alla foglia elfica di Rhest, sa che è corredo di morti | rifiuto delle monete elfiche, e l'atteggiamento verso chi le porta scende di un passo |
 | **Dauth** | la speziala, o chiunque al Mercato Basso | le pesa, una su dieci | i nani di Dauth riconoscono Thorek I. In un giorno il Mercato Basso dice che *«sono tornati i quattro eroi»* delle Cronache, quelli della targa di Hammerfist (`DEF-4`, D33 di LETTORE: *quattro eroi dal fuoco e dalla pietra*) | la folla del Torneo guarda Tordek in un altro modo: il DM lo usa come una carta, una volta. La **Rete Nera** compra le monete a quindici volte il metallo, e vende la notizia a chi paga: il Collezionista la sa in **1d4 giorni** |
 | **La Torre** | Zalkatar, subito: sono il suo campo di studio | le vuole | una moneta mai consumata, coniata mille anni fa: per lui è una prova che i PG hanno viaggiato nel tempo | le paga con un oggetto onesto del suo tavolo, a scelta del PG. Da quel momento Zalkatar sa del viaggio, e `state.md` §4 prende una riga nuova |

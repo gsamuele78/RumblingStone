@@ -13,7 +13,7 @@ ts: Temp +5, Rifl +2, Vol +2
 attributi: For 17 Des 12 Cos 14 Int 10 Sag 12 Car 9
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +1 → **+2**: umanoide 3 DV (almeno +1) + Sag 12 (+1).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +1 → **+2**: umanoide 3 DV (almeno +1) + Sag 12 (+1).
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

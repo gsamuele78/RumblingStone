@@ -7545,7 +7545,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1489,
+    "senza_note": 1521,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Hell Hound 4cr .htm",
@@ -8794,7 +8794,7 @@
    "genera_senza_fonte": [
     {
      "Car": 9,
-     "Cos": 14,
+     "Cos": 12,
      "Des": 13,
      "For": 13,
      "Int": 9,
@@ -8803,7 +8803,8 @@
     [
      "array standard del Manuale del DM (PNG con classe)",
      "variazione a seme fisso: Int +1, Sag −1",
-     "modificatori razziali SRD: hobgoblin Des +2 Cos +2"
+     "modificatori razziali SRD: hobgoblin Des +2 Cos +2",
+     "Cos 12 **ricavata da Temp +7 (base +6)** — il tetto del TS batte l'array"
     ]
    ],
    "giudica": {
@@ -8822,7 +8823,7 @@
      ],
      "Temp": [
       7,
-      5,
+      7,
       0
      ],
      "Vol": [
@@ -8879,7 +8880,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 919,
+    "senza_note": 932,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/hobgoblin regular 4 liv.pcg",
@@ -8896,12 +8897,14 @@
      ]
     ],
     "taglia": 0,
-    "talenti": {},
+    "talenti": {
+     "Temp": 2
+    },
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
-      3,
-      "ricavata da Temp +7 (base +4)"
+      1,
+      "ricavata da Temp +7 (base +6)"
      ],
      "Des": [
       1,
@@ -10756,7 +10759,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1114,
+    "senza_note": 1077,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Fight_fungi_colony-formatted.txt",
@@ -11063,7 +11066,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1448,
+    "senza_note": 1411,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Fight_fungi_colony-formatted.txt",
@@ -11358,7 +11361,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "trascritte",
-    "senza_note": 1040,
+    "senza_note": 1027,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Fight_fungi_colony-formatted.txt",
@@ -12593,7 +12596,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 872,
+    "senza_note": 890,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/orc_regular.pcg",
@@ -16327,7 +16330,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5575,
+    "senza_note": 5540,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -16571,7 +16574,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5872,
+    "senza_note": 5802,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -16805,7 +16808,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 6051,
+    "senza_note": 6000,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -17027,7 +17030,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5581,
+    "senza_note": 5530,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -17272,7 +17275,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 6754,
+    "senza_note": 6694,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/druido Avarthel cr9.htm",
@@ -18269,7 +18272,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5873,
+    "senza_note": 5860,
     "sestine_citate": [],
     "taglia": -1,
     "talenti": {},
@@ -18945,18 +18948,18 @@
     "decisione": null,
     "esito": {
      "BAB": [
-      8,
-      8,
+      9,
+      9,
       0
      ],
      "Rifl": [
-      3,
-      3,
+      5,
+      5,
       0
      ],
      "Temp": [
-      10,
-      10,
+      13,
+      13,
       0
      ],
      "Vol": [
@@ -18965,8 +18968,8 @@
       0
      ],
      "attacco": [
-      14,
-      14,
+      15,
+      15,
       0
      ],
      "iniziativa": [
@@ -18975,16 +18978,16 @@
       0
      ],
      "lotta": [
-      11,
-      11,
+      12,
+      12,
       0
      ],
      "pf": [
       93,
-      "48-120",
+      "48-132",
       0
      ],
-     "pf_media": 84
+     "pf_media": 90
     },
     "file": "Bestiario/png/morlin-coalhewer-cr12.md",
     "provenienza": "a mano",
@@ -19003,40 +19006,23 @@
         "vol"
        ],
        "dado": 8,
-       "n": 6,
+       "n": 12,
        "nome": "Cleric"
-      },
-      {
-       "bab": 0.75,
-       "buoni": [
-        "vol"
-       ],
-       "dado": 6,
-       "n": 6,
-       "nome": "Expert"
       }
      ],
      true
     ],
     "dadi_di_pf": [
      [
-      6,
+      12,
       8
-     ],
-     [
-      6,
-      6
      ]
     ],
     "dadi_vita": [
      [
       [
-       6,
+       12,
        8
-      ],
-      [
-       6,
-       6
       ]
      ],
      36,
@@ -19078,7 +19064,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 6449,
+    "senza_note": 7731,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/nano Morlin Coalhewer cr12.htm",
@@ -19095,16 +19081,20 @@
      ]
     ],
     "taglia": 0,
-    "talenti": {},
+    "talenti": {
+     "Rifl": 2,
+     "Temp": 2,
+     "Vol": 2
+    },
     "template_dichiarati": [],
     "tetti_dai_ts": {
      "Cos": [
       3,
-      "ricavata da Temp +10 (base +7)"
+      "ricavata da Temp +13 (base +10)"
      ],
      "Des": [
       -1,
-      "ricavata da Rifl +3 (base +4)"
+      "ricavata da Rifl +5 (base +6)"
      ],
      "Sag": [
       4,
@@ -19136,15 +19126,15 @@
     "dadi": "dalla formula che la scheda scrive",
     "fascia": [
      48,
-     120
+     132
     ],
     "file": "Bestiario/png/morlin-coalhewer-cr12.md",
     "legale": true,
-    "media": 84,
+    "media": 90,
     "motivo": null,
-    "nuovo": "6d8+6d6+36",
+    "nuovo": "12d8+36",
     "pf": 93,
-    "vecchio": "6d8+6d6+36"
+    "vecchio": "12d8+36"
    },
    "scheda": {
     "attributi": {
@@ -19155,7 +19145,7 @@
      "Int": 10,
      "Sag": 19
     },
-    "bab": 8,
+    "bab": 9,
     "composizione_nota": true,
     "gruppi": [
      {
@@ -19165,28 +19155,19 @@
        "vol"
       ],
       "dado": 8,
-      "n": 6,
+      "n": 12,
       "nome": "Cleric"
-     },
-     {
-      "bab": 0.75,
-      "buoni": [
-       "vol"
-      ],
-      "dado": 6,
-      "n": 6,
-      "nome": "Expert"
      }
     ],
     "gs": 12.0,
-    "lotta": 11,
-    "mischia": "martello da guerra +2 +14/+9 (1d8+7/x3)",
+    "lotta": 12,
+    "mischia": "martello da guerra +2 +15/+10 (1d8+7/x3)",
     "pf": 93,
     "provenienza": "a mano",
-    "tipo": "Medium humanoid (dwarf, Shield Dwarf), Cleric 6 / Expert 6, LG",
+    "tipo": "Medium humanoid (dwarf, Shield Dwarf), Cleric 12, LG",
     "ts": [
-     10,
-     3,
+     13,
+     5,
      14
     ]
    }
@@ -19321,7 +19302,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5636,
+    "senza_note": 5618,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Rurik Gorunn martello di moradin 10 liv.htm",
@@ -19511,7 +19492,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5632,
+    "senza_note": 5626,
     "sestine_citate": [],
     "taglia": -2,
     "talenti": {
@@ -19741,7 +19722,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 8030,
+    "senza_note": 7969,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -20411,7 +20392,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4359,
+    "senza_note": 4340,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -20635,7 +20616,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 6327,
+    "senza_note": 6282,
     "sestine_citate": [],
     "taglia": -2,
     "talenti": {
@@ -21104,7 +21085,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5227,
+    "senza_note": 5190,
     "sestine_citate": [],
     "taglia": -1,
     "talenti": {},
@@ -21303,7 +21284,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 6168,
+    "senza_note": 6133,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -21727,7 +21708,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5284,
+    "senza_note": 5245,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt",
@@ -22008,7 +21989,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5951,
+    "senza_note": 5886,
     "sestine_citate": [
      [
       "pregen-pcgen/00_scaladossa-abbattor-funghi/Epic_fight_dwarf_duergar.txt",
@@ -22313,7 +22294,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 5015,
+    "senza_note": 4978,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Arbitrax Drago Rosso.htm",
@@ -22529,7 +22510,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5113,
+    "senza_note": 5088,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -23164,7 +23145,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5490,
+    "senza_note": 5477,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Draxoksus hobgoblin shamano draconico mezzo-immondo cr7.htm",
@@ -23378,7 +23359,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 6152,
+    "senza_note": 6117,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {},
@@ -23640,7 +23621,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4885,
+    "senza_note": 4846,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/signore dei Dragoni Koth.htm",
@@ -23893,7 +23874,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "copiate",
-    "senza_note": 4248,
+    "senza_note": 4235,
     "sestine_citate": [
      [
       "pregen-pcgen/png_La_mano_rossa_del_destino/Minotaur karkilan cr5.htm",
@@ -39584,7 +39565,7 @@
       },
       {
        "Car": 9,
-       "Cos": 14,
+       "Cos": 12,
        "Des": 13,
        "For": 13,
        "Int": 9,
@@ -39823,11 +39804,11 @@
     "entro_1_mod": 0.88,
     "file": 22,
     "insieme": "fonti",
-    "mae": 1.27,
-    "mae_mod": 0.56,
+    "mae": 1.25,
+    "mae_mod": 0.55,
     "per_caratteristica": {
      "Car": 1.5,
-     "Cos": 0.91,
+     "Cos": 0.82,
      "Des": 0.45,
      "For": 1.36,
      "Int": 2.0,

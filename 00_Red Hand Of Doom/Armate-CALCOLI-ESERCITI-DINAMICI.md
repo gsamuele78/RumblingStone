@@ -285,7 +285,7 @@ principale inizia al **Giorno 42**.
   history. Le calcolazioni v1 assumevano scaling di livello 8 per i PG;
   **v2 assume APL 13 post-Hammerfist**.
 - L'ODS (`Armate-AGGIORNATO.ods`) richiede rebuild separato (non
-  gestito in questo commit — [INFERRED — needs DM: rebuild ODS
-  manuale o script a parte]).
+  gestito in questo commit: rebuild ODS
+  manuale o script a parte).
 - La refugee flow table in v1 è integrata qui (§5.1) e in
   `Armate-SINCRONIZZAZIONE-CAMPAGNA.md` con waypoint AP corretti.

@@ -12,7 +12,7 @@ ts: Temp +9, Rifl +5, Vol +6
 attributi: For 17 Des 14 Cos 14 Int 16 Sag 13 Car 12
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +10/+5 → **+9/+4**, e lo spadone scende di 1 con lui: Guerriero 8 (+8) più Mago 3 (+1).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +10/+5 → **+9/+4**, e lo spadone scende di 1 con lui: Guerriero 8 (+8) più Mago 3 (+1).
 
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.

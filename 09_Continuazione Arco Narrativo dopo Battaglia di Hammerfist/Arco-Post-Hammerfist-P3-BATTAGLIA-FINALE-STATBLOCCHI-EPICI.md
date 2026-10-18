@@ -25,13 +25,13 @@ Basato su Azarr Kul di Red Hand of Doom, potenziato per lo scontro finale.[web:5
 - Taglia/Tipo: Medio drago (umanoide aumentato, goblinoide: hobgoblin mezzodrago blu), LM.
 - DV: **Chierico 12 / Guerriero 4 (12d8+4d10+80, pf 156)**.
 - Iniziativa: +1.
-- Velocità: 9 m (armatura completa 6 m, +3 m dagli stivali del passo e del salto `[INFERRED]`).
+- Velocità: 9 m (armatura completa 6 m, +3 m dagli stivali del passo e del salto).
 - CA: 31 (+10 armatura completa +2, +4 scudo pesante animato +2, +1 Des, +4 naturale, +2 deflessione); contatto 13; colto alla sprovvista 30. *(Pre-buff completo — veste magica ×2, scudo della fede, forza del giusto: taglia Grande, CA 36, contatto 14, colto 35.)*
 - BAB/Grapple: +13 / +18 *(+16 / +30 sotto* potere divino *e* forza del giusto*)*.
 - Attacco:
   - Spadone sacrilego +2 +21/+16/+11 (2d6+11, crit. 19–20/x2; +2d6 vs buoni). *(Pre-buff, Grande: +28/+23/+18/+13, 3d6+19.)*
 - TS: Temp +19, Rif +8, Vol +17.
-- Caratteristiche: For 20, Des 12, Cos 20, Int 12, Sag 22, Car 16 (Cos e Sag con due pietre di ioun `[INFERRED]`).
+- Caratteristiche: For 20, Des 12, Cos 20, Int 12, Sag 22, Car 16 (Cos e Sag con due pietre di ioun).
 - **Buff pre-cast + 2 effetti a innesco:** vedi `ERRATA-PARTE2-3-35-Verification.md` §1 (con durate a CL 14; con Incantesimi Estesi *forza del giusto* e *potere divino* durano 28 round).
 
 ### Incantesimi (Chierico 12, domini Guerra + Tirannia)
@@ -45,11 +45,11 @@ Basato su Azarr Kul di Red Hand of Doom, potenziato per lo scontro finale.[web:5
   - 4: *divine power, freedom of movement, unholy blight* (CD 20), *air walk*.
   - 5: *flame strike (versione cromatica)* (CD 21), *righteous might, slay living* (CD 21).
   - 6: *blade barrier, harm* (CD 22).
-- Due pergamene (LI 15, `[INFERRED]`): *blasphemy*, *fire storm*.
+- Due pergamene (LI 15): *blasphemy*, *fire storm*.
 
 ### Capacità speciali
 
-- Mezzodrago blu: soffio linea 18 m di elettricità 6d8, Riflessi CD 23 per metà; 1/giorno per l'SRD, ogni 1d4 round come dono di Tiamat `[INFERRED]`. Immune a elettricità, sonno e paralisi.
+- Mezzodrago blu: soffio linea 18 m di elettricità 6d8, Riflessi CD 23 per metà; 1/giorno per l'SRD, ogni 1d4 round come dono di Tiamat (non SRD, canone del DM 2026-10-18). Immune a elettricità, sonno e paralisi.
 - Aura di Comando: alleati hobgoblin entro 9 m ottengono +2 morale a tiri per colpire e TS Volontà.
 - Canali divini di Tiamat: intimorire non morti 10/giorno (Scacciare Extra), spendibili anche per Potere Divino (+3 ai danni per 1 round).
 
@@ -121,7 +121,7 @@ Usane 2–4 come guardia del rituale o scorta di Azarr Kul.
 
 PNG da proteggere, non da combattere, ma con potere sensato se interviene.
 
-- Classe: Mago 17 (specialista evocatore; scuole proibite ammaliamento e illusione `[INFERRED]`).
+- Classe: Mago 17 (specialista evocatore; scuole proibite ammaliamento e illusione).
 - DV: 17d4+34 (pf 76).
 - Iniziativa: +3.
 - CA: 23 (10 +4 bracciali dell'armatura, +3 Des, +2 anello di protezione, +4 *shield*); contatto 15; colto alla sprovvista 20. Senza *shield*: 19.

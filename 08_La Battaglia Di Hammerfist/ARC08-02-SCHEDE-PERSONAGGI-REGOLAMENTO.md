@@ -91,7 +91,7 @@
 *   **Soffio (Sop):** Linea di 30 m di acido, 1/1d4 round. Danno 14d4 acido, TS Riflessi CD 29 dimezza.
 *   **Soffio a Cono (Str):** 1/giorno, può spendere un'azione di round completo per preparare un soffio a cono di 18m. ⚠️ *Errata B5 — HOUSE-RULE*: i draghi neri SRD hanno **solo il soffio in linea**; il cono non è 3.5 standard. Mantenuto come house-rule per la scena della picchiata (Sessione 2); se il DM preferisce l'aderenza SRD, rimuovere e usare solo il soffio in linea.
 *   **Presenza Terrificante (Str):** Raggio 90m, creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
-*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, **solo se** all'alba del −1000 (carry-over B4, registrato nel DEF-4) Aegis Fang ha ucciso Skullcrusher; altrimenti non c'è [INFERRED — needs DM confirmation].
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18).
 *   **Corrompere Acqua (Mag):** A volontà.
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Come Stregone di 7° liv. (LI 7°; 6/8/8/6 al giorno).
@@ -100,7 +100,7 @@
     *   *1° (CD 14):* *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
     *   *0° (CD 13):* *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
 
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire [gli ultimi tre INFERRED].
+**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
 
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG)**: 25 DV di
 > drago nero sono un **adulto maturo avanzato** (SRD: 22 DV, avanzamento
@@ -108,12 +108,12 @@
 > di 30 m (taglia Enorme), RI 21 e RD 10/magia. I pf tornano coi dadi:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
 > Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
-> dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher
-> [INFERRED — needs DM confirmation]. 25 DV danno 9 talenti: i tre che
-> mancavano sono [INFERRED]. *Oscurità* è una capacità magica dell'età, non
+> dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher.
+> 25 DV danno 9 talenti: i tre che
+> mancavano sono confermati dal DM (2026-10-18). *Oscurità* è una capacità magica dell'età, non
 > un incantesimo conosciuto; *Volare* esce dagli incantesimi (un drago vola
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
-> CORREZIONE del boss nell'arco 07 [INFERRED].
+> CORREZIONE del boss nell'arco 07.
 
 **Tattiche:** Inizia con *Armatura Magica* e *Scudo*. Usa il Soffio e incantesimi di controllo (*Nube Maleodorante*) dall'alto. Con Volteggiare resta sospeso sopra le mura e soffia senza atterrare; con Ghermire afferra un nano isolato e lo lascia cadere dall'alto. Atterra solo se gravemente ferito (<100 PF) o per finire un bersaglio importante, Thorik prima di tutti. Fugge sotto i 50 PF.
 
@@ -162,9 +162,9 @@
 **Qualità Speciali:** Aura del male, Individuazione del bene, Uso dei veleni, Benedizione oscura (il Car ai TS, già contato).
 **Incantesimi da Guardia Nera (LI 4°; 2 di 1° al giorno, CD 12):** *Incutere Paura*, *Infliggi Ferite Leggere*.
 
-**Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) [INFERRED — needs DM confirmation: la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera].
+**Talenti:** Attacco Poderoso, Incalzare, Spezzare Migliorato, Combattere in Sella, Attacco in Sella, Carica Devastante, Arma Focalizzata (lancia da cavaliere), Arma Specializzata (lancia da cavaliere) (la scheda non li elencava; i primi tre sono i requisiti della Guardia Nera).
 
-**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* [INFERRED: è la fonte di Cos 18 e dei 95 pf].
+**Equipaggiamento:** *Armatura Completa +1*, *Scudo Leggero in Acciaio +1*, *Lancia da Cavaliere +1*, *Spada Bastarda +1*, *Anello di Protezione +1*, *Amuleto della Salute +2* (è la fonte di Cos 18 e dei 95 pf).
 
 > **Verifica 3.5 (versione più forte)**: Guerriero 6/Guardia Nera 4 rende
 > legali l'Aura di Disperazione della prima stesura (arriva al 3° livello di
@@ -176,7 +176,7 @@
 > (la Benedizione oscura somma il Car ai TS).
 
 **Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Tattiche scritte da un agente sui poteri della scheda.
 
 <!-- storico -->
 Cavaliere hobgoblin, numeri superati il 2026-10-16 (lotto delle schede PNG):
@@ -211,25 +211,25 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Presenza Intimidatoria (Str):** Nemici entro 9m subiscono -2 ai tiri per colpire (TS Volontà CD 19 nega).
 *   **Tattico Superiore (Str):** Azione gratuita, fornisce +2 bonus a un tipo di tiro (attacco, danno, TS) a tutti gli alleati entro 18m per 1 round.
 
-**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare, Arma Focalizzata Superiore (Spada Bastarda), Competenza nelle Armi Esotiche (Spada Bastarda), Robustezza, Incalzare Potenziato, Iniziativa Migliorata [gli ultimi cinque INFERRED].
-**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi* [questi due INFERRED].
+**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare, Arma Focalizzata Superiore (Spada Bastarda), Competenza nelle Armi Esotiche (Spada Bastarda), Robustezza, Incalzare Potenziato, Iniziativa Migliorata (gli ultimi cinque confermati dal DM, 2026-10-18).
+**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi*.
 
 > **Fonti e verifica 3.5**: l'**orog** non è nell'SRD
 > [Private source — Monsters of Faerûn]; il **Signore della Guerra** non è
 > una classe SRD [Private source — non identificata: la Furia Comandante
-> ricorda il *Warchief* di Complete Warrior; INFERRED]. I suoi privilegi sono
-> quelli della scheda, marcati [INFERRED]. PF1e: il **Cavaliere** (APG,
+> ricorda il *Warchief* di Complete Warrior]. I suoi privilegi sono
+> quelli della scheda, confermati dal DM il 2026-10-18. PF1e: il **Cavaliere** (APG,
 > ordine del Drago) si avvicina, perché dà bonus agli alleati vicini e tiene
 > il guerriero in prima linea; il *Battle Herald* farebbe di più il
 > comandante ma stravolge il combattente. Conti ricontati: la *Armatura
 > Completa +2* vale +10 (era +9), Tempra non può stare sotto +18 (Gue 10 +7,
 > classe di prestigio almeno +1, Cos +8, mantello +2), il danno a una mano
 > con Arma Specializzata è +9, la CD della Presenza è 10 + ½ livello + Car.
-> 13 livelli danno 11 talenti: i cinque aggiunti sono [INFERRED], e
+> 13 livelli danno 11 talenti: i cinque aggiunti sono confermati dal DM (2026-10-18), e
 > Robustezza spiega i 178 pf (13d10+104 = 175, +3).
 
 **Tattiche:** Grimjaw è un comandante, non un combattente solitario. Rimane sempre protetto dalle sue Guardie Nere Orog. Usa Tattico Superiore ogni round per potenziare le sue truppe. Attiva la Furia Comandante solo quando la battaglia raggiunge il suo culmine o viene ingaggiato personalmente. La sua morte causa un crollo del morale di -3 a tutto l'esercito. *Morale*: non combatte fino alla morte. Sotto i 60 pf beve una pozione e ripiega dietro le Guardie Nere; sotto i 30 pf, o se cade Fauci, suona la ritirata e torna al campo. Resta solo se Thorik lo ha sfidato davanti all'esercito: lì l'arroganza è più forte della prudenza.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+> Morale scritto da un agente sui poteri della scheda.
 
 ---
 <div style="page-break-before:always"></div>
@@ -268,12 +268,12 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 > senza penalità, perché ogni testa guida un braccio: due randelli a pieno
 > BAB, non tre attacchi con uno solo. La *corazza di piastre +1* vale +6 alla
 > CA (era +3). I pf tornano coi dadi con Cos 28 (15d8+135 = 202), un punto
-> in più dagli aumenti di caratteristica dei DV avanzati [INFERRED]; prima
+> in più dagli aumenti di caratteristica dei DV avanzati; prima
 > 15d8+120 dava 187, non 195. Multiattacco esce (non serve a chi usa armi):
-> entrano Spezzare Migliorato e Volontà di Ferro [INFERRED].
+> entrano Spezzare Migliorato e Volontà di Ferro.
 
 **Tattiche:** Gorthak è un ariete vivente. Cerca sempre lo scontro fisico, puntando il cancello o i nemici più grandi e corazzati. Usa i suoi tre attacchi per colpire bersagli multipli o per devastare un singolo avversario. Sotto i 101 PF (metà), la testa sinistra prende il sopravvento, facendolo combattere con Furia (+4 For, -2 CA) fino alla morte. *Morale*: prima di quella soglia, se Fauci è fuggito o abbattuto e l'orda è in rotta, la testa centrale può offrire la resa (al finale la scelta è dei PG); dopo, nessuna resa.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+> Morale scritto da un agente sui poteri della scheda.
 
 ---
 <div style="page-break-before:always"></div>
@@ -301,14 +301,14 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Presenza Regale (Str):** Alleati nanici entro 18m ottengono +3 morale a tiri per colpire e danni.
 *   **Chiamata alle Armi (Str):** 3/giorno, come azione standard, tutti i nani entro 60m ottengono un bonus morale di +5 ai tiri per colpire e ai TS contro paura per 5 round.
 
-**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato [gli ultimi sette INFERRED: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti].
-**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi [INFERRED]), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* [INFERRED: è la fonte della deflessione].
+**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato (gli ultimi sette confermati dal DM, 2026-10-18: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti).
+**Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* (è la fonte della deflessione).
 
 **Tattiche:** *Prima del combattimento*: resta al centro della linea, dove la Presenza Regale (18 m) copre più nani possibile; se vede arrivare l'assalto, spende la prima Chiamata alle Armi sul primo urto. *Durante il combattimento*: round 1 Chiamata alle Armi (+5 ai nani entro 60 m); poi attacco completo sul nemico più grosso a portata, con Attacco Poderoso contro i giganti e senza contro i bersagli corazzati; usa *Comando* della Corona («In ginocchio!») su chi minaccia un ferito, e tiene la seconda e la terza Chiamata per quando una breccia cede o il drago passa basso. *Morale*: non lascia il campo finché un nano è in piedi; sotto i 50 pf lo trascinano via le Guardie Reali o Borin, ed è l'unico modo in cui ripiega.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: «Nobile» si legge come la classe PNG
-> **Aristocratico** dell'SRD [INFERRED]. Conti ricontati sugli oggetti della
+> **Aristocratico** dell'SRD. Conti ricontati sugli oggetti della
 > scheda: *Armatura Completa +4* vale +12 e *Scudo Pesante +3* vale +5 (erano
 > +10 e +3), quindi CA 30. +26 e 1d8+12 chiedono Arma Focalizzata e Arma
 > Specializzata Superiori, che un guerriero di 15° ha. TS: Tempra +17 con
@@ -339,22 +339,22 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Incantesimi:** Lancia come un Chierico di 15° livello. **Domini:** Guerra, Terra.
     *   **Incantesimi Preparati (LI 15°):** *Aura Sacra*, *Parola del Potere Stordire* (D), *Terremoto* (D), *Guarigione* (x2), *Lama di Barriera* (D), *Colpo Infuocato* (D), *Potere Divino* (D), *Muro di Pietra*, *Preghiera*, ecc. (elenco completo nella Guida DM).
 
-**Talenti:** Scacciare Extra [INFERRED; gli altri talenti non sono scritti].
-**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2* [questi due INFERRED].
+**Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
+**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2*.
 
 **Tattiche:** *Prima del combattimento*: al mattino prepara *Banchetto degli Eroi* per gli ufficiali e consacra le armi (Benedizione della Forgia); prima di un assalto lancia *Aura Sacra* su sé e sulle Cantitrici vicine, e *Libertà di Movimento* su Re Thorek. *Durante il combattimento*: round 1 Canto di Battaglia (+2 a tutti gli alleati entro 18 m per 10 round); poi tiene in piedi i comandanti, con *Guarigione* sul re e *Cura Ferite Leggere di Massa* dopo ogni soffio; *Muro di Pietra* chiude una breccia, *Terremoto* lontano dalle mura spezza una carica. Scaccia i non morti se ne compaiono. Combatte col martello solo se un nemico le arriva addosso, e allora prima *Potere della Giustizia* e *Potere Divino*. *Morale*: non abbandona il re né il tempio; sotto i 40 pf si ritira dietro le Cantitrici, si cura e torna.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Tattiche scritte da un agente sui poteri della scheda.
 
 > **Fonti e verifica 3.5**: la **Cantante Divina** non è una classe SRD
 > [Private source — classe non identificata nel repo]: i suoi privilegi sono
 > quelli della scheda (Canto di Battaglia, progressione d'incantatore piena),
-> marcati [INFERRED]. PF1e: nessun archetipo del PRD fa «chierico che canta»
+> confermati dal DM (2026-10-18). PF1e: nessun archetipo del PRD fa «chierico che canta»
 > senza perdere progressione; lo *Skald* (Advanced Class Guide) si avvicina
 > nel canto ma stravolge il chierico, e resta da preferire la classe 3.5.
 > Conti ricontati: *Armatura Completa +3* vale +11 e *Scudo Pesante +2* +4
 > (erano +8 e +2), quindi CA 29; il dominio della Guerra dà Arma Focalizzata
 > nel martello da guerra, l'arma di Moradin; +18 e 1d8+6 chiedono For 18,
-> dai guanti [INFERRED]. Scacciare: 3 + Car +4 + 4 di Scacciare Extra = 11
+> dai guanti. Scacciare: 3 + Car +4 + 4 di Scacciare Extra = 11
 > al giorno, prova +6. Incantesimi: con Sag 22 gli slot sono quelli scritti,
 > e ogni livello ha uno slot di dominio (D).
 
@@ -370,7 +370,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 **CA:** 20 | **PF:** 98 (8d8+4d6+48) | **TS:** Temp +13, Rifl +8, Vol +16
 **Attacco Base:** +9
 **Attacco:** *Martello da Guerra Sonoro +1* +12/+7 (1d8+3/x3 + 1d6 sonoro)
-**Caratteristiche:** For 14, Des 10, Cos 18, Int 10, Sag 18, Car 18 [INFERRED]
+**Caratteristiche:** For 14, Des 10, Cos 18, Int 10, Sag 18, Car 18
 
 **Capacità Rilevanti:**
 *   **Musica Bardica (8/giorno):** *Ispirare Coraggio* (+2 a colpire e danni per tutti gli alleati che le sentono).
@@ -386,16 +386,16 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Forza del Toro di Massa:** Come l'incantesimo.
 
 **Tattiche:** Le Cantitrici sono il cuore spirituale e morale della difesa. Devono essere protette a tutti i costi. La loro priorità è mantenere attivo *Ispirare Coraggio*. Usano il "Coro della Montagna" solo nei momenti più critici: *Terremoto* per distruggere arieti o bloccare una breccia, e *Cura Ferite Gravi di Massa* dopo un attacco devastante come il soffio del drago. *Morale*: non lasciano le mura finché Dana resta in piedi; se una Cantitrice cade, le altre la trascinano via e cantano da più lontano, ma il Coro (tre voci) si perde quando ne restano due.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+> Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: dodici livelli di classi da PG
 > fanno GS 12, non 11. BAB +9 (Chierico 8 +6, Bardo 4 +3). Caratteristiche
 > ricavate dai numeri della scheda: Cos 18 dai 98 pf, Sag 18 dalle CD da
-> chierico, Car 18 dalle CD da bardo [INFERRED]; TS con un *Mantello della
-> Resistenza +2* [INFERRED]. Un bardo di 4° ha 4 usi di musica e Ispirare
+> chierico, Car 18 dalle CD da bardo; TS con un *Mantello della
+> Resistenza +2*. Un bardo di 4° ha 4 usi di musica e Ispirare
 > Coraggio +1: gli 8 usi e il +2 della scheda restano con due talenti non SRD,
 > Musica Extra [Private source — Complete Adventurer] e *Song of the Heart*
-> [Private source — talento non SRD, libro da verificare; INFERRED].
+> [Private source — talento non SRD, non verificato].
 > *Lancia Sonora* non è SRD ed esce; *Benedizione* e *Scudo della Fede* non
 > sono incantesimi da bardo (restano tra quelli da chierico). Il dominio
 > Nanico è del Forgotten Realms [Private source — FRCS]. Il Coro della
@@ -425,10 +425,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 *   **Aura Celestiale:** Conferisce a sé stesso e al suo cavaliere un'aura equivalente a *Protezione dal Male* (bonus +2 deflessione alla CA, +2 resistenza ai TS).
 *   **Volo Silenzioso:** Bonus di +20 alle prove di Muoversi Silenziosamente quando è in volo.
 
-**Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro [INFERRED].
+**Talenti:** Allerta, Attacco in Volo, Attacco Naturale Migliorato (artigli), Volontà di Ferro.
 
 **Tattiche:** Signore Ventolesto è un cacciatore aereo d'élite. Lavora in perfetta sincronia con il suo cavaliere. In un duello aereo, usa Attacco in Volo per colpire e allontanarsi. Contro Fauci di Palude, attiverà Punire il Male al primo attacco per massimizzare i danni. *Morale*: è l'alfa del branco e non abbandona un gufo né un cavaliere in volo; sotto i 30 pf sale oltre la tempesta di Tempestas e torna solo quando Fauci è a terra.
-> [INFERRED — needs DM confirmation] Morale scritto da un agente sui poteri della scheda.
+> Morale scritto da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: gufo gigante dell'SRD avanzato a
 > 10 DV con il modello celestiale. Una bestia magica ha BAB pari ai DV (+10,
@@ -437,8 +437,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 > scende (PF1e darebbe GS + 5 = 13). La Volontà vale +8 (base +3, Sag +3,
 > Volontà di Ferro): il +9 non si raggiunge, ma l'Aura Celestiale dà +2
 > contro i malvagi, cioè contro tutto l'esercito della Mano Rossa. Volo 24 m
-> (SRD: 21 m) resta, da alfa del branco [INFERRED]. Talenti (4 a 10 DV)
-> [INFERRED].
+> (SRD: 21 m) resta, da alfa del branco. Talenti (4 a 10 DV).
 > ⚠ Prerequisito: a 10 DV un gufo gigante cade nella fascia Enorme
 > dell'avanzamento SRD (9-12 DV). Resta Grande perché è una cavalcatura. PF1e:
 > il modello semplice *Gigante* lo farebbe Enorme (+1 GS): si avvicina, ma
@@ -477,11 +476,11 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 > **Verifica 3.5 (versione più forte)**: Ranger 10 dell'SRD. Tiro Rapido dà
 > −2 a ogni tiro: il +17/+17/+12 della scheda (BAB +10, Des +4, arco +2, Arma
 > Focalizzata +1, −2) torna con i *Bracciali dell'Arciere Superiori* (+2 di
-> competenza) [INFERRED]. I pf chiedono Robustezza (10d8+40 = 85, +3). Il
+> competenza). I pf chiedono Robustezza (10d8+40 = 85, +3). Il
 > corno d'argento dell'SRD chiama 2d4+2 barbari di 2° livello: i barbari di
 > 4° della scheda sono quelli del corno di **bronzo** (2d4, chiede la
 > competenza in tutte le armi da guerra, che un ranger ha), più forte nel
-> complesso. Talenti [INFERRED].
+> complesso. Talenti confermati dal DM (2026-10-18).
 
 > **Chi sono i suoi Ranger Elfici — D13 (piano ARC-08 A11)**: la
 > compagnia di Lunapiena è **indipendente**, dell'Elsir Vale (né Tiri
@@ -504,8 +503,8 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 **CA:** 16 (forma umana), 22 (forma Orso Crudele: −1 taglia, +1 Des, +5 naturale, +5 *Pelle Coriacea*, +2 deflessione)
 **PF:** 108 (14d8+45); 150 in forma d'orso con *Resistenza dell'Orso*
 **TS:** Tempra +14, Riflessi +7, Volontà +16
-**Caratteristiche:** For 10, Des 16, Cos 16, Int 10, Sag 24, Car 12 (Sag con *Periapto della Saggezza +4* [INFERRED]); Orso Crudele: For 31, Des 13, Cos 23 con *Resistenza dell'Orso*
-**Talenti:** Incantesimi Naturali, Robustezza, Incantesimi Estesi, Allerta, Combattere in Sella, Tempra Possente [INFERRED]
+**Caratteristiche:** For 10, Des 16, Cos 16, Int 10, Sag 24, Car 12 (Sag con *Periapto della Saggezza +4*); Orso Crudele: For 31, Des 13, Cos 23 con *Resistenza dell'Orso*
+**Talenti:** Incantesimi Naturali, Robustezza, Incantesimi Estesi, Allerta, Combattere in Sella, Tempra Possente
 
 **Velocità:** 9m
 **Attacco Base:** +10; **Lotta:** +10 (Umano) / +24 (Orso)
@@ -522,7 +521,7 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 
 **Tattiche:** *Prima del combattimento*: lancia *Pelle Coriacea*, *Resistenza dell'Orso* e *Zanna Magica Superiore* (estesi), poi prende la forma dell'Orso Crudele: gli incantesimi restano attivi nella forma.
 *Durante il combattimento*: Orion è una forza della natura. Inizia il combattimento lanciando un incantesimo di controllo del campo di battaglia come *Muro di Spine* per dividere le forze nemiche. Successivamente, si trasforma in Orso Crudele e si lancia nella mischia contro i bersagli più resistenti come i giganti o Gorthak. La sua mossa più audace è saltare su Fauci di Palude per ingaggiarlo in un combattimento corpo a corpo sulla sua schiena. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano a metà caduta e si cura con *Guarigione*; non abbandona la battaglia finché un gufo vola.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: Druido 14 dell'SRD. I pf tornano con
 > Cos 16 e Robustezza (14d8+45 = 108); in forma d'orso, con *Resistenza

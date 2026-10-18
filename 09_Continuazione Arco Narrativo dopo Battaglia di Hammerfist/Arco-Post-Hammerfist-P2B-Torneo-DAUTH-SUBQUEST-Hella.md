@@ -40,7 +40,7 @@
 ## 1. La posta in gioco
 
 Fuori dalle mura ovest di Dauth c'è il **Boschetto di Nonna Faggia**
-`[INFERRED — toponimo di servizio]`, un piccolo bosco sacro che la città usa da
+ (toponimo di servizio), un piccolo bosco sacro che la città usa da
 generazioni come luogo di preghiera e come **filtro naturale delle cisterne** (le
 radici puliscono l'acqua che scende ai pozzi urbani). Da qualche giorno il boschetto
 **muore fuori stagione**: foglie annerite, un tappeto di funghi luminescenti che
@@ -70,7 +70,7 @@ per le aberrazioni sulla strada del Ghostlord.
 **Trigger** (uno qualsiasi):
 - Hella, entrando/uscendo da Dauth, **sente** il boschetto (Sapienza Naturale CD 12,
   automatica per lei): *questo bosco sta morendo e non di sete*.
-- Un'**erborista cittadina**, **Madre Ondil** `[INFERRED]`, ferma Hella (la
+- Un'**erborista cittadina**, **Madre Ondil**, ferma Hella (la
   riconosce druida): le cisterne sanno di marcio da tre giorni, e nessuno osa entrare
   nel boschetto perché *"chi entra torna con la tosse nera"*.
 - Se **Joran** ("Bastone-di-Serpente", l'ex-druido di `HOOKS-Ghostlord-Refugees`)
@@ -138,7 +138,7 @@ due chiazze di funghi luminescenti danno *concealment* (20% di occultamento); un
 rivolo taglia la radura (se purificato in Atto 2, acqua sicura da bere/attraversare).
 
 **Nemici (EL 13):**
-- **Yssaria del Velo di Muffa** `[INFERRED — luogotenente drow di Sonjak]` — **Drow
+- **Yssaria del Velo di Muffa** (luogotenente drow di Sonjak) — **Drow
   Chierica 10** (domini Morte/Vegetale), la **guardiana del nodo**: CA 22, pf 68,
   incantesimi da Chr 10 (*mantello della morte*, *spezza-incantesimi*, *comando
   superiore*, *evocazione mostri V* → funghi violacei), *tenebra perpetua* razziale,
@@ -147,7 +147,7 @@ rivolo taglia la radura (se purificato in Atto 2, acqua sicura da bere/attravers
 - **2 Drow Guerrieri** (Guerriero 6): CA 20, pf 45 cad., balestra a mano avvelenata
   (TS Tempra CD 13, 1d2 Des iniziale / incoscienza secondaria — veleno drow SRD),
   spada corta +2. **EL ~9 combinato.**
-- **Cumulo Sporìgeno** `[INFERRED — Shambling Mound (SRD, plant) con innesto fungino]`
+- **Cumulo Sporìgeno** (Shambling Mound (SRD, plant) con innesto fungino)
   — germogliato dalle radici, **si desta al round 2**: CA 20, pf 90, 2 schianti
   +12 (2d6+5), *migliora* assorbendo elettricità, immune a veleno/spore. **EL ~8.**
 - **1 Shrieker** (SRD) come allarme (se non zittito in Atto 2).
@@ -254,8 +254,8 @@ catturarli qui vale anche come agguato sventato.
 ### Il cucciolo (Day 31, slot libero, opzionale)
 
 Ai margini del boschetto Hella sente (Sopravvivenza **CD 16**) un **giovane
-rinoceronte** ferito, fuggito verso sud davanti alla Vanguard `[INFERRED —
-*Rinoceronte* SRD, esemplare giovane]`. Tre **ogre** (SRD, EL 6) lo braccano per
+rinoceronte** ferito, fuggito verso sud davanti alla Vanguard (*Rinoceronte*
+SRD, esemplare giovane). Tre **ogre** (SRD, EL 6) lo braccano per
 portarlo come carne al campo della Mano Rossa.
 
 Si gioca calma e triste: il cucciolo non capisce, e Hella deve calmarlo con
@@ -302,8 +302,8 @@ Se Hella **ha affrontato la Spora-Madre** (purificando **o** bruciando), acquisi
 - **Strada del Ghostlord** (`HOOKS-Ghostlord-Refugees` §5.2): gli scontri con
   non-morti **aberranti/fungini** diventano più tattici — Hella sa dove colpire:
   **+2 competenza ai danni** del party contro creature con innesto fungino e
-  **individua il "cuore"** (nodo/spora) da distruggere 1/scontro `[INFERRED — bonus
-  di servizio, allineato al testo "Hella sa cosa cercare per disinnescare"]`.
+  **individua il "cuore"** (nodo/spora) da distruggere 1/scontro (canone del DM 2026-10-18, allineato al
+  testo "Hella sa cosa cercare per disinnescare").
 
 ### 4.2 Aggancio all'assedio di Dauth (Day 3)
 - **Boschetto salvato (purifica/brucia)**: le cisterne di Dauth **reggono** durante

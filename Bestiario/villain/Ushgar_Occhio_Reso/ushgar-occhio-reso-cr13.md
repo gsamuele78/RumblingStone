@@ -50,7 +50,7 @@ Notes: comanda una parte dei **1.800 ausiliari orcheschi** della Mano Rossa (`ca
 
 Boost log: creato a GS 13 come personaggio classato (SRD *Orc* + Barbaro 13, classe da PG ⇒ GS = livello). Nessun template applicato. Benchmark PF T1-1 GS 13 dichiarato sopra: sopra su attacco/danno, sotto su CA/pf — mitigazione per composizione dell'incontro, non per ritocco dei numeri.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD**: la scheda scriveva «giaco di maglia +2» ma contava +7 all'armatura, che è la **cotta di maglia** +2 (armatura media, Des massima +2: il movimento veloce vale ancora). Si tiene la CA 21 e cambia il nome dell'armatura. Gli stivali degli scatti e dei salti danno +3 m alla velocità: 15 m, 30 m in carica. Il Barbaro 13 ha **RD 3/—** (2/— è del 10°), e l'ira furente dura 3 + mod Cos in ira (24 → +7) = **10 round**, non 11. `pf-dado` con la Cos e Robustezza: 13d12 + 52 + 3.
+> **Conti rifatti sul SRD**: la scheda scriveva «giaco di maglia +2» ma contava +7 all'armatura, che è la **cotta di maglia** +2 (armatura media, Des massima +2: il movimento veloce vale ancora). Si tiene la CA 21 e cambia il nome dell'armatura. Gli stivali degli scatti e dei salti danno +3 m alla velocità: 15 m, 30 m in carica. Il Barbaro 13 ha **RD 3/—** (2/— è del 10°), e l'ira furente dura 3 + mod Cos in ira (24 → +7) = **10 round**, non 11. `pf-dado` con la Cos e Robustezza: 13d12 + 52 + 3.
 
 Boost log: correzione dei conti sul SRD — GS 13 → 13 — RD 3/— al 13°, velocità 15 m con gli stivali che la scheda già portava, ira di 10 round; la CA 21 resta, con la cotta di maglia al posto del giaco.
 

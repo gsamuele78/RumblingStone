@@ -509,7 +509,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 | Sentiero 🟫 | colonne I-L, tutta la lunghezza | percorso naturale: veloce ma esposto |
 | Rocce 🪨 (1-7) | tabella sopra | copertura +4/+8 CA; +4 a Nascondersi |
 | Strozzatura | righe 10-14 (est) | passaggio obbligato largo ~9 m |
-| Crepuscolo | tutta la mappa | luce fioca: occultamento 20% oltre 18 m `[INFERRED]` |
+| Crepuscolo | tutta la mappa | luce fioca: occultamento 20% oltre 18 m |
 
 ### ⚔️ TATTICHE (pattuglia Worg)
 

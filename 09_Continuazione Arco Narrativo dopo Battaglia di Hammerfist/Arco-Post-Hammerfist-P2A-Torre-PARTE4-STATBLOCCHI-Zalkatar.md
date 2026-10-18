@@ -31,7 +31,7 @@ For 10, Des 16, Cos 20, Int 20, Sag 16, Car 24 (20 + 4 intrinseco da un *tomo de
 - **Mind Blast**: cono 18 m, 5d6 danni psionici, TS Volontà CD 24 o stordito 1 round + confuso 1d4 round (CD 10 + metà dei 14 DV + 7 Car).  
 - **Psychic Vampire**: tocco, 3d6 danni psionici (guarigione pari per Zalkatar), TS Volontà CD 24 per metà.  
 - **Resistenze**: RD 15/magia, resistenza fuoco 20, resistenza elettricità 20. [file:46]
-- **Warlock 6**: *deflagrazione mistica* 3d6 (contatto a distanza, a volontà) e suppliche che la scheda non nomina: gli incantesimi a volontà qui sotto ne fanno le veci `[INFERRED — needs DM confirmation]`.
+- **Warlock 6**: *deflagrazione mistica* 3d6 (contatto a distanza, a volontà) e suppliche che la scheda non nomina: gli incantesimi a volontà qui sotto ne fanno le veci.
 
 ### Incantesimi / Potere Psionico (Warlock-style)
 
@@ -61,7 +61,7 @@ For 10, Des 16, Cos 20, Int 20, Sag 16, Car 24 (20 + 4 intrinseco da un *tomo de
 - *Prima del combattimento*: la Torre lo avverte quando i PG superano il Livello 4. Aspetta sulla piattaforma, con *black tentacles* già sulle rampe e *dimension door* tenuta per il primo PG che sale.  
 - *Morale*: sotto il 10% dei pf, se ha *greater teleport*, fugge (vedi «Fuga Zalkatar» qui sotto). Se il *teletrasporto* è speso o bloccato, tratta: offre le informazioni sulla Red Hand in cambio della vita, come nell'opzione di negoziazione del finale.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Tattiche scritte da un agente sui poteri della scheda.
 
 Benchmark: PF T1-1 riga 14: CA 24 (−5), pf 130 (−70), att +13 (−10), CD 24 (+2). Sopra sulle CD, sotto su difesa e attacco; la RI 25, la RD e le resistenze tengono il GS.
 

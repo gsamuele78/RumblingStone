@@ -13,7 +13,7 @@ velocita: 30 ft
 iniziativa: +2
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta −4 → **−5**: BAB +0, For 8 (−1), Piccola (−4). La For 8 è confermata dall'attacco (morning star +0) e dal danno (1d6−1).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta −4 → **−5**: BAB +0, For 8 (−1), Piccola (−4). La For 8 è confermata dall'attacco (morning star +0) e dal danno (1d6−1).
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

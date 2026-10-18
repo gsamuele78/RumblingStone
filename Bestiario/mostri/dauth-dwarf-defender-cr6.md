@@ -12,7 +12,7 @@ ts: Temp +8, Rifl +3, Vol +3
 attributi: For 16 Des 12 Cos 16 Int 10 Sag 12 Car 8
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +2 → **+3**: Guerriero 6 (+2) + Sag 12 (+1).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +2 → **+3**: Guerriero 6 (+2) + Sag 12 (+1).
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

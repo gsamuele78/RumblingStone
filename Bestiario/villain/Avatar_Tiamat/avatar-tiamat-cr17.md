@@ -25,7 +25,7 @@ fonte: arco 09, Battaglia finale, «Stat blocchi epici» §2 (verificato in ERRA
 ```
 
 **Source**: AP RHoD Avatar Tiamat (ridotto per questo arco) per STATBLOCCHI-EPICI §2
-**Status**: accepted — numeri del modulo d'arco, conti rifatti; talenti e abilità `[INFERRED — needs DM confirmation]`.
+**Status**: accepted — numeri del modulo d'arco, conti rifatti; talenti e abilità confermati dal DM (2026-10-18).
 
 Huge outsider (lawful, evil, extraplanar), 20d10+120. La Regina Cromatica è legale malvagia nel canone dei Reami: il modulo la scriveva «caotica», e il Mythal la colpisce come extraplanare.
 

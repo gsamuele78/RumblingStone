@@ -66,7 +66,7 @@ assume all'ingresso (`09_.../TESORO-WBL-AUDIT.md` §1.2).
 | **Bottino dell'avanguardia** | Campo della Mano Rossa dopo la rotta | Equipaggiamento recuperabile dai caduti (armi/armature di massa, poco liquidabile ma vendibile in blocco) | **~20.000** |
 | **Equipaggiamento dei comandanti** | Corpi/resa di Grimjaw, Gorthak, Cavaliere Hobgoblin (se uccisi) | Oggetti magici dai comandanti nemici: *Anello di Protezione +1*, lancia/spada +1, armatura completa +1 (dal Cavaliere Hobgoblin, `ARC08-02` §1) — condizionale a chi cade | **~15.000** `[condizionale ai rami]` |
 | **Plot item — runa dei Custodi Eterni** | Cerimonia (Atto 3) | Simbolo fisico, **non** oggetto commerciabile → **0 mo** (valore narrativo; quantificazione meccanica in C2, non ancora scritta) | **0 (plot)** |
-| **Tesoro di Fauci di Palude** | Solo se il drago è **ucciso** (ramo D10) e il covo raggiunto | Hoard draconico parziale — `[INFERRED, condizionale]`: la maggior parte del hoard è futura (l'uovo/nemesi ARC-10 se fugge) | **~30.000** solo nel ramo "ucciso" |
+| **Tesoro di Fauci di Palude** | Solo se il drago è **ucciso** (ramo D10) e il covo raggiunto | Hoard draconico parziale, solo nel ramo «ucciso»: la maggior parte del hoard è futura (l'uovo/nemesi ARC-10 se fugge) | **~30.000** solo nel ramo "ucciso" |
 
 **Totale base (rami default, Fauci fugge)**: ~195.000 mo eq. per il
 party → ~49k/PG. Sommato all'ingresso ipotizzato (~60-80k/PG) →

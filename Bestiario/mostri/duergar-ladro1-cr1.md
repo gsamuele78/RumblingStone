@@ -19,7 +19,7 @@ voci:
   - Talenti: Schivare, Iniziativa Migliorata
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +1 → **+0** e lotta +2 → **+1**: un Ladro di 1° ha BAB +0 (¾ di 1, per difetto); l'attacco +2 dello stocco lo presupponeva già.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +1 → **+0** e lotta +2 → **+1**: un Ladro di 1° ha BAB +0 (¾ di 1, per difetto); l'attacco +2 dello stocco lo presupponeva già.
 
 > [INFERRED — needs DM confirmation] `attributi` trascritti dalla fonte citata in `Bestiario/pregen-pcgen/` da `scripts/genera_attributi.py`. Confermali o correggili. ⚠ i pf suggeriscono Cos 12, la fonte dice 15: con 1 DV il conto dipende da media o massimo, si tiene la fonte.
 

@@ -39,7 +39,7 @@ Large monstrous humanoid, 7 HD (Minotauro 6 / Barbarian 1), CE. Tutto SRD.
 
 **Attacco** Vel 12 m · Spazio 3 m, portata 3 m · **Mischia** grande ascia +1 a due mani +13/+8 (3d6+10/x3) e incornata +7 (1d8+3); oppure incornata +12 (1d8+6) · **Carica Devastante** (Str): in carica, incornata +14 (4d6+9) · **Distanza** giavellotto +6/+1 (1d8+6) · **Ira** 1/giorno (7 round: For 27, Cos 23, Vol +9, CA 16, +14 pf → 81; grande ascia +15/+10, 3d6+13; incornata +9, 1d8+4)
 
-**Statistiche** For 23, Des 10, Cos 19, Int 7, Sag 10, Car 8 · BAB +7; Lotta +17 · **Talenti** Tempra Possente, Attacco Poderoso, Volontà di Ferro `[INFERRED]` · **Abilità** Intimidire +3, Saltare +8 · **Equipaggiamento** grande ascia +1 (Grande), giaco di maglia (Grande), giavellotti e asce da lancio (Grandi), pozione di *volare*, pozione di *cura ferite gravi*, pozione di *cura ferite leggere*
+**Statistiche** For 23, Des 10, Cos 19, Int 7, Sag 10, Car 8 · BAB +7; Lotta +17 · **Talenti** Tempra Possente, Attacco Poderoso, Volontà di Ferro · **Abilità** Intimidire +3, Saltare +8 · **Equipaggiamento** grande ascia +1 (Grande), giaco di maglia (Grande), giavellotti e asce da lancio (Grandi), pozione di *volare*, pozione di *cura ferite gravi*, pozione di *cura ferite leggere*
 
 **Capacità speciali**
 - **Astuzia naturale** (Str): immune a *labirinto*, non si perde mai, segue le tracce, non è mai colto alla sprovvista.

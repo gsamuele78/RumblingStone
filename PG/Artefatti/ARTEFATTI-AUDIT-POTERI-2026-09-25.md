@@ -52,7 +52,7 @@ col master markdown, che ne è la conversione; Aegis e Anello *Reforged*
 coincidono coi loro master. Quello che i PDF aggiungono è in §1.5 e §3.
 
 ⚠️ **Non letti**: i log delle sessioni vere, che nel repo non ci sono: `campaign/sessions/` ha una sessione di maggio e i log
-retroattivi `[INFERRED]`. Dove il tavolo ha deciso a voce e nessuno l'ha
+retroattivi, ricostruiti e non verbali. Dove il tavolo ha deciso a voce e nessuno l'ha
 scritto, questo audit non lo può sapere.
 
 ---

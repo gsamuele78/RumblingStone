@@ -19,7 +19,7 @@ attacchi:
 
 > correzione 3.5 da `scripts/conformita_statblocchi.py`: lotta +18 → **+22**: BAB 7 + For 25 (+7) + Grande (+4) + **Lottare Migliorato** (+4), talento che la scheda elenca e la lotta non contava. La For 25 è confermata dall'attacco +13 e dal danno 2d8+10.
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +10 → **+11**: gigante 4 DV (+4) + Barbaro 4 (+4) + Cos 17 (+3). Il +10 era la Cos 15 **prima dell'innesto**; pf 68, `pf-dado` +27 e la CD 17 dello Sbuffo contano già la Cos 17.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +10 → **+11**: gigante 4 DV (+4) + Barbaro 4 (+4) + Cos 17 (+3). Il +10 era la Cos 15 **prima dell'innesto**; pf 68, `pf-dado` +27 e la CD 17 dello Sbuffo contano già la Cos 17.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

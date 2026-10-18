@@ -10,8 +10,8 @@
 - *Vittoria costosa* — morto: la Cerimonia è officiata da Madre Dana; il flusso delle 150 lance (D4) si complica (`ARC08-10-...` §2).
 **Notes**: distinto da **Thorik** (PG guerriero) e **Thorin** Runaforte (pregen chierico), D2. È già in `campaign/state.md` §4 (NPC knowledge) come colui che ha nominato i Custodi Eterni.
 
-Boost log: correzione dei conti — GS 16 → 16 — armatura e scudo con le rune (CA 30), anello di protezione +2 e sette talenti che il livello dà [INFERRED], critico 19-20/x3, pf 196.
-Benchmark: PF T1-1 riga 16: CA 30 vs 31 (1 sotto) / pf 196 vs 240 (sotto) / atk +26 vs +26 (pari) / TS buono +17 vs +19 (sotto). Il Nobile si legge come l'Aristocratico [INFERRED].
+Boost log: correzione dei conti — GS 16 → 16 — armatura e scudo con le rune (CA 30), anello di protezione +2 e sette talenti che il livello dà, critico 19-20/x3, pf 196.
+Benchmark: PF T1-1 riga 16: CA 30 vs 31 (1 sotto) / pf 196 vs 240 (sotto) / atk +26 vs +26 (pari) / TS buono +17 vs +19 (sotto). Il Nobile si legge come l'Aristocratico.
 <!-- storico -->
 Prima della correzione (2026-10-16): CA 26 (+10 armatura, +3 scudo), PF 195 (17 DV), Tempra +16, Volontà +12, critico x3.
 <!-- /storico -->

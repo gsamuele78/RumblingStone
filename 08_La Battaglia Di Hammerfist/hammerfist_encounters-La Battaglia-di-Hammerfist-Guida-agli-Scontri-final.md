@@ -1383,12 +1383,11 @@ CERIMONIA DELLE ASCE - TRAMONTO
 - **Bonus per il finale** (da quantificare in B1): posizioni difensive tenute, Re Thorek stabilizzato
 
 ### **SESSIONE 3b — Rumbling Stones (da qui i PG reali giocano, D6/E6):**
-- **TOTALE:** 2.600 XP (650 per PG) `[INFERRED — proposta dosata, da
-  verificare al tavolo contro la XP reale bancata dal party a inizio
-  Arco 08]`
+- **TOTALE:** 2.600 XP (650 per PG) (proposta dosata: il DM la
+  ritocca al tavolo contro la XP reale del gruppo a inizio Arco 08)
 
 ### **SESSIONE 4 (Rumbling Stones — Battaglia Finale + Bonus Narrativo):**
-- **TOTALE:** 4.600 XP (1.150 per PG) `[INFERRED — stessa riserva]`
+- **TOTALE:** 4.600 XP (1.150 per PG) (stessa riserva)
 
 ### **GRAN TOTALE PX REALE (solo Rumbling Stones):** 7.200 XP (1.800 per PG)
 *Party APL 13 in ingresso (ARC-07 D8) → resta saldamente 13° a fine

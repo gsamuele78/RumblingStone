@@ -163,7 +163,7 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - **Nemico Prescelto: Aberrazioni +4**, Giganti +2
 - **Empatia Selvatica**, **Seguire Tracce**, **Inseguitore Rapido** (Ex, segue le tracce a velocità normale senza penalità)
 - **Andatura nel Bosco** (Ex, si muove alla velocità normale nel sottobosco naturale)
-- **Cammino Senza Tracce** (Ex) — non è un privilegio del ranger SRD, è del druido: la scheda glielo dà per gli anni nel Cerchio `[INFERRED — needs DM confirmation]`
+- **Cammino Senza Tracce** (Ex) — non è un privilegio del ranger SRD, è del druido: la scheda glielo dà per gli anni nel Cerchio
 - **Stile di Combattimento (Tiro)**, poi **Stile Migliorato**: Tiro Rapido e Tiro Multiplo come talenti bonus
 - **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Confermati dal DM il 2026-10-18: il testo del 2026-05-04 («sa lanciare 0 incantesimi») è superato
 - **Inathiel** — Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1)), la sua cavalcatura
@@ -222,7 +222,7 @@ Benchmark: PF T1-1 riga 8: CA 19 (21 con *pelle coriacea*) vs 21 / pf 60 vs 100 
 
 ### Conti corretti
 
-Boost log: correzione dei conti (SRD) — GS 8 → 8 — talento libero assegnato a Iniziativa Migliorata, incantesimi da ranger scritti; pf 60 e Volontà +6 tenuti con un amuleto della salute +4 e un mantello della resistenza +1 (INFERRED).
+Boost log: correzione dei conti (SRD) — GS 8 → 8 — talento libero assegnato a Iniziativa Migliorata, incantesimi da ranger scritti; pf 60 e Volontà +6 tenuti con un amuleto della salute +4 e un mantello della resistenza +1.
 
 <!-- storico -->
 > Valori superati, campo per campo (dalla scheda prima della revisione del 2026-10-16):

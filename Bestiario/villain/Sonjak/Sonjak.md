@@ -107,7 +107,7 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 | **Saggezza** | 20 | +5 |
 | **Carisma** | 18 | +4 |
 
-**Punti Ferita:** 91 (13 DV: 13d8+26, il primo al massimo, +3 Robustezza [INFERRED — needs DM confirmation])
+**Punti Ferita:** 91 (13 DV: 13d8+26, il primo al massimo, +3 Robustezza)
 **Iniziativa:** +4
 **Velocità:** 9 m
 
@@ -133,7 +133,7 @@ dominato e maledetto dai drow (morte negata) — come strumento corrotto.
 - **Scurovisione:** 36 m
 - **Cecità alla Luce Solare:** In piena luce solare, -1 ai tiri per colpire e TS Percezione
 - **Immunità al Sonno:** Immune agli effetti di sonno magico
-- **RI:** 25 (SRD: 11 + 13 livelli = 24, +1 dall'eredità di Matrona che la scheda dichiara [INFERRED — needs DM confirmation])
+- **RI:** 25 (SRD: 11 + 13 livelli = 24, +1 dall'eredità di Matrona che la scheda dichiara)
 - **Resistenza:** +2 razziale ai TS vs incantesimi e capacità magiche
 
 #### Poteri Magici Innati (1/giorno, CL uguale al livello totale)

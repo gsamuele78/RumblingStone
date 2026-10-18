@@ -24,7 +24,7 @@ voci:
 fonte: SRD — letto dal file citato dalla scheda (`pregen-pcgen/00_cr11_…Demon __ d20srd.org.htm`). Correggeva anche il BAB, trascritto +10 invece di +7
 ```
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD** (le due fonti citate, d20srd e D&D Wiki, dicono la stessa cosa): il quarto raggio è la **pietrificazione** (Temp CD 18, permanente), non *rendere lento*; i raggi arrivano a 30 m e ognuno torna ogni 4 round; *afferrare migliorato* parte dal **morso**, non dalle zampe, ed è così che «riporta» le cose. Tutti gli altri numeri tornano: artigli +15 = BAB +7 −2 taglia +10 For; morso +10 secondario; Lotta +25 = +7 +8 taglia +10 For.
+> **Conti rifatti sul SRD** (le due fonti citate, d20srd e D&D Wiki, dicono la stessa cosa): il quarto raggio è la **pietrificazione** (Temp CD 18, permanente), non *rendere lento*; i raggi arrivano a 30 m e ognuno torna ogni 4 round; *afferrare migliorato* parte dal **morso**, non dalle zampe, ed è così che «riporta» le cose. Tutti gli altri numeri tornano: artigli +15 = BAB +7 −2 taglia +10 For; morso +10 secondario; Lotta +25 = +7 +8 taglia +10 For.
 
 > ⚠ **RD 15/—**: nessuna delle due fonti la dà, e il retriever SRD non ne ha. Si tiene perché la scheda la portava e il DM vuole la versione più forte, ma è un numero senza fonte: da confermare o togliere.
 

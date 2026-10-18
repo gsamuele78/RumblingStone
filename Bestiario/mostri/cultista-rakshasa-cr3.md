@@ -13,7 +13,7 @@ ts: Temp +3, Rifl +6, Vol +2
 attributi: For 12 Des 16 Cos 14 Int 13 Sag 10 Car 14
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +2 → **+3**: Ladro 3 (+1) + Cos 14 (+2). La Cos 14 è confermata da `3d6+6`.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +2 → **+3**: Ladro 3 (+1) + Cos 14 (+2). La Cos 14 è confermata da `3d6+6`.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

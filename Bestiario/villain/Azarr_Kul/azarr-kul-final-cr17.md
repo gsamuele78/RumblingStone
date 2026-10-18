@@ -27,7 +27,7 @@ fonte: ERRATA-PARTE2-3-35-Verification §1 (versione B5) e arco 09, «Stat blocc
 ```
 
 **Source**: AP RHoD Azarr Kul → versione B5 (Chierico 12 / Guerriero 4) di ERRATA-PARTE2-3 §1 e STATBLOCCHI-EPICI §1
-**Status**: accepted — versione B5 con conti rifatti; quello che la scheda aggiunge è marcato `[INFERRED — needs DM confirmation]`.
+**Status**: accepted — versione B5 con conti rifatti; quello che la scheda aggiunge è confermato dal DM (2026-10-18).
 
 Medium dragon (augmented humanoid, goblinoid): hobgoblin mezzodrago blu, **Chierico 12 / Guerriero 4**, legale malvagio.
 
@@ -44,11 +44,11 @@ Medium dragon (augmented humanoid, goblinoid): hobgoblin mezzodrago blu, **Chier
 **Statistiche** For 20 Des 12 Cos 20 Int 12 Sag 22 Car 16 · BAB +13; Lotta +18 · **Talenti** Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata (spadone), Arma Specializzata (spadone), Incantare in Combattimento, Incantesimi Estesi, Scacciare Extra, Potere Divino `[Private source — Complete Warrior]` — nove: sei di livello e tre bonus da guerriero; la scheda non li elencava · **Abilità** Concentrazione +24, Conoscenze (religioni) +16, Sapienza Magica +11, Intimidire +10 · **Linguaggi** Comune, Goblin, Draconico, Infernale · **Equipaggiamento** armatura completa +2 nera incisa con le cinque teste, scudo pesante +2 *animato* (animato, perché lo spadone vuole due mani), spadone sacrilego +2, anello di protezione +2, mantello della resistenza +2 (il dossier scrive «amuleto»), rombo rosa e sfera blu incandescente e prisma arancione (pietre di ioun, Cos +2, Sag +2 e +1 al livello incantatore), stivali del passo e del salto (tengono i 9 m in armatura completa), componenti rituali (Sangue di Astruriel, Sigillo di Ossidiana)
 
 **Capacità speciali**
-- **Soffio del mezzodrago (Sop)**: linea di 18 m, 6d8 elettricità, Riflessi CD 23 (10 + ½ DV + Cos). L'SRD lo dà 1 volta al giorno; la scheda lo ricarica in 1d4 round come dono di Tiamat `[INFERRED — needs DM confirmation]`. PF1e: il mezzodrago di PF1e lo usa 1/giorno; la versione con ricarica si avvicina all'arma a soffio del drago vero, è più forte e non stravolge.
+- **Soffio del mezzodrago (Sop)**: linea di 18 m, 6d8 elettricità, Riflessi CD 23 (10 + ½ DV + Cos). L'SRD lo dà 1 volta al giorno; la scheda lo ricarica in 1d4 round come dono di Tiamat (non SRD, canone del DM 2026-10-18). PF1e: il mezzodrago di PF1e lo usa 1/giorno; la versione con ricarica si avvicina all'arma a soffio del drago vero, è più forte e non stravolge.
 - **Pre-buff (veste magica ×2, scudo della fede, forza del giusto, potere divino)**: taglia Grande, portata 3 m; For 30, Cos 22; CA 36 (contatto 14, colto 35); pf 186 (156 + 16 da Cos + 14 temporanei); BAB +16, Lotta +30; spadone +28/+23/+18/+13 (3d6+19); Temp +20; RD 6/bene. Con Incantesimi Estesi *forza del giusto* e *potere divino* durano 28 round.
 - **Canali divini di Tiamat (Sop)**: intimorire o comandare non morti 10 volte al giorno (3 + Car + 4 di Scacciare Extra). Un uso, azione gratuita, diventa Potere Divino: +3 ai danni in mischia per 1 round.
 - **Aura di Comando (Str)**: gli hobgoblin alleati entro 9 m hanno +2 morale ai tiri per colpire e ai TS sulla Volontà; se cade, quelli nel raggio fanno un TS sulla Volontà CD 18 o restano scossi per 2 round (non SRD, canone del DM 2026-10-18). PF1e: si avvicina agli ordini del cavaliere e all'aura del maresciallo, senza stravolgere.
-- **Due contingenze** `[INFERRED — Craft Contingent Spell, Private source — Complete Arcane, o pergamene, a discrezione del DM]`: *guarigione* su di sé quando scende sotto 40 pf (una volta per scontro); sotto 15 pf, *parola del ritorno* verso il Fane **oppure** un secondo *potere divino*. Il DM sceglie quale delle due prima della scena.
+- **Due contingenze** `[Private source — Complete Arcane: Craft Contingent Spell]`: *guarigione* su di sé quando scende sotto 40 pf (una volta per scontro); sotto 15 pf, *parola del ritorno* verso il Fane **oppure** un secondo *potere divino*. Il DM sceglie quale delle due prima della scena.
 - **Mezzodrago blu**: immunità a elettricità, sonno e paralisi; scurovisione 18 m, visione crepuscolare.
 
 **Tattiche**

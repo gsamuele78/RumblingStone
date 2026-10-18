@@ -10,7 +10,7 @@
 - Parte a nord dopo la battaglia (D14); può tornare.
 **Notes**: adattamento originale. Non affiliato al Sacred Forest né ai Tiri Kitor.
 
-Boost log: correzione dei conti sull'SRD — GS 14 → 14 — Sag 24 con periapto [INFERRED], incantesimi al livello giusto (*Tempesta di Fuoco* al posto di *Tempesta di Vendetta*, che è di 9°), Orso Crudele con *Resistenza dell'Orso*: 108 pf, 150 in forma d'orso, Lotta +24.
+Boost log: correzione dei conti sull'SRD — GS 14 → 14 — Sag 24 con periapto, incantesimi al livello giusto (*Tempesta di Fuoco* al posto di *Tempesta di Vendetta*, che è di 9°), Orso Crudele con *Resistenza dell'Orso*: 108 pf, 150 in forma d'orso, Lotta +24.
 Benchmark: PF T1-1 riga 14: CA 22 vs 29 in forma d'orso (sotto) / pf 150 vs 200 (sotto) / atk +19 vs +23 (sotto) / CD di 7° 24 vs 22 (sopra) / TS buono +16 vs +17 (1 sotto). ⚠ La Forma Selvatica Enorme arriva al 15°: resta l'Orso Crudele, che è Grande.
 <!-- storico -->
 Prima della correzione (2026-10-16): PF 98 (14d8+35), Tempra +11, Volontà +13, artigli 1d8+9, morso 2d8+4, *Tempesta di Vendetta* e *Crescita Animale di Massa* fra gli incantesimi; Lotta +20 e +18/+18/+13 nella battaglia aerea.

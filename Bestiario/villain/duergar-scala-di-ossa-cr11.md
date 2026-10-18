@@ -28,7 +28,7 @@ Notes: raccolta di statblock nominati per lo scontro della «scala di ossa». Te
 
 **Benchmark ed EL** (PF T1-1 riga 11, il GS di Adrick, il più alto dei quattro: CA 25, pf 145, att. +19, CD 20): insieme valgono **EL 13** (11 + 10 + 6 + 6). Contro APL 13 è uno scontro standard, che diventa duro se si somma all'incontro epico del chierico di Abbathor sulla stessa piattaforma.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD, senza far scendere nessun numero**: Zenith scriveva 88 pf, sotto la media dei suoi dadi (7d10 + 3d12 + 33 = 91); col primo dado al massimo sono **95**, 115 in posizione difensiva. Il suo schivare prodigioso tiene la CA piena colto alla sprovvista: **24**, non 23. Il «+12 contro il veleno» di Daxavalt e Kerg non torna col +2 del nano (darebbe +10) e resta com'è: da verificare col DM. Adrick ha le capacità del duergar, quindi è immune al veleno (il suo «+11 contro il veleno» non serve più).
+> **Conti rifatti sul SRD, senza far scendere nessun numero**: Zenith scriveva 88 pf, sotto la media dei suoi dadi (7d10 + 3d12 + 33 = 91); col primo dado al massimo sono **95**, 115 in posizione difensiva. Il suo schivare prodigioso tiene la CA piena colto alla sprovvista: **24**, non 23. Il «+12 contro il veleno» di Daxavalt e Kerg non torna col +2 del nano (darebbe +10) e resta com'è: da verificare col DM. Adrick ha le capacità del duergar, quindi è immune al veleno (il suo «+11 contro il veleno» non serve più).
 
 Boost log: correzione sul sorgente — GS 11 → 11 — classi e nomi completati, pf e CA colto alla sprovvista di Zenith rifatti verso l'alto, tattiche del set scritte.
 

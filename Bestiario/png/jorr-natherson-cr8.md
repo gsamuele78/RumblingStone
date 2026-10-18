@@ -24,7 +24,7 @@ voci:
   - Nemici prescelti: giganti +4, goblinoidi +2
 ```
 
-> [INFERRED — needs DM confirmation] **Si adotta lo stadio 2 (Ranger 5 / Ladro 3, GS 8).** È la build più recente delle due salvate in PCGen, l'elenco «Armate — composizione dettagliata» dell'arco 00 la cita come «Jorr Natherson (Ranger 8), GS 8», e il registro dei PX dell'arco Underdark lo mette all'8° livello come quinto personaggio del gruppo. Le caratteristiche sono quelle dell'export dello stadio 2 (Sag 13: l'aumento dell'8° livello).
+> **Si adotta lo stadio 2 (Ranger 5 / Ladro 3, GS 8).** È la build più recente delle due salvate in PCGen, l'elenco «Armate — composizione dettagliata» dell'arco 00 la cita come «Jorr Natherson (Ranger 8), GS 8», e il registro dei PX dell'arco Underdark lo mette all'8° livello come quinto personaggio del gruppo. Le caratteristiche sono quelle dell'export dello stadio 2 (Sag 13: l'aumento dell'8° livello).
 
 **Iniziativa** +7 · **Sensi** Ascoltare +12, Osservare +8 (+4 contro i giganti, +2 contro i goblinoidi)
 

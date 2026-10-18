@@ -106,16 +106,16 @@ Guerriera di mestiere, senza trucchi: spada lunga e scudo, arco quando serve. I 
 
 Non combatte per vincere: combatte per tenere un passaggio. Prima sposta la gente, poi si mette nel punto dove il nemico deve passare per arrivarci, e da lì non si muove. Tira con l'arco finché può, e quando il nemico arriva a contatto diventa un tappo: ogni passo che qualcuno fa per aggirarla verso i carri lo paga. «I suoi», i trenta della vecchia guarnigione, le chiudono i fianchi e non attaccano mai per primi. Lascia il varco per una sola ragione, chi lancia incantesimi sui civili. Non si arrende per salvarsi, ma abbassa la spada se il nemico ha in mano un civile.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda: il round per round e le soglie stanno nello statblocco.
+> Tattiche confermate dal DM il 2026-10-18: il round per round e le soglie stanno nello statblocco.
 
 ## Esiti possibili
 
-> [INFERRED — needs DM confirmation] Rami raccolti da un agente dai file che già li scrivono (qui sopra e l'event deck della battaglia finale dell'arco 09); le conseguenze segnate *da confermare* non stanno in nessun file.
+> Rami raccolti dai file che già li scrivono (qui sopra e l'event deck della battaglia finale dell'arco 09); la conseguenza della sua morte è canone del DM dal 2026-10-18.
 
 - **La Riserva mobilitata** (Diplomazia CD 18 col sostegno dell'incontro precedente, CD 22 senza): +150 fanteria civile con morale 7. Il prezzo lo paga Lorana, e il modo in cui i PG gliel'hanno chiesto resta: se l'hanno guardata in faccia prima, li segue; se hanno chiesto dopo, obbedisce e smette di dare il contesto, come fa con chi la tratta da fonte di dati.
 - **La Riserva lasciata nell'ultima linea**: Lorana resta un'alleata piena, e i rifugiati sono l'ultima difesa del quartiere sud-est, non la prima.
 - **Il Convoglio** (carta 6, Giorno 41): salvo → +150 riserva e Lorana entra nella catena di comando; danneggiato → +75; disperso → Lorana ferita e rifugiati in fuga; ignorato → arriva lo stesso, con metà dei carri, ed è amareggiata.
-- **La Notte dei Drow**: è uno dei tre comandanti che l'assassino può puntare. Se muore, la Riserva perde la sola persona di cui si fida, e la mobilitazione non si può più chiedere a nessuno *(da confermare)*.
+- **La Notte dei Drow**: è uno dei tre comandanti che l'assassino può puntare. Se muore, la Riserva perde la sola persona di cui si fida, e la mobilitazione non si può più chiedere a nessuno.
 - **Il voto a Consiglio**: in stallo 3-3 decide lei, e vota per la difesa (Consiglio di Rethmar, meccanismi di voto).
 - **L'Aranea smascherata**: quando i due fili si toccano, Lorana la riconosce a vista e senza tiro. La colpa cambia nome, da scelta a omicidio, ed è la scena di Shine Time con Hella. Se i fili non si toccano mai, Lorana resta con la colpa che crede sua.
 

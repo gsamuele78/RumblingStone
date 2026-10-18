@@ -213,7 +213,7 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 *Contatto 14 / Colto alla sprovvista 17*
 
 **Tiri Salvezza:** Tempra +7, Riflessi +13, Volontà +13 (+2 contro ammaliamento, immune al *sonno* magico, per il sangue elfico)
-*Base: bardo 12 Temp +4, Rifl +8, Vol +8; Cantore delle tempeste 2 Vol +3 `[INFERRED — needs DM confirmation]`; Riflessi Fulminei +2.*
+*Base: bardo 12 Temp +4, Rifl +8, Vol +8; Cantore delle tempeste 2 Vol +3 `[Private source — Frostburn, non verificato]`; Riflessi Fulminei +2.*
 
 **RI:** —
 
@@ -223,7 +223,7 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 - Spada corta +1 +12/+7 (1d6+2, 19–20/×2)
 - Lira della Tempesta come bastone (raro): +11/+6 (1d6+1)
 
-> ⚠ Prerequisito: l'**Arcimago** chiede incantesimi arcani di 7° livello, Sapienza Magica e Conoscenze (arcane) 15 gradi, Abilità Focalizzata (Sapienza Magica) e Incantesimi Focalizzati in due scuole. Un bardo non lancia oltre il 6°: la classe non si può prendere mai. Al suo posto c'è il **Cantore delle tempeste** di *Frostburn*, la classe di prestigio dei bardi che portano la tempesta nella musica. I suoi privilegi non sono nel repo: dove la scheda non li dice, i numeri sono quelli che aveva l'Arcimago (DV, BAB, TS, avanzamento degli incantesimi) e sono marcati `[INFERRED — needs DM confirmation]`. Le due Arcane Supreme che aveva restano (sotto), per non togliergli potere.
+> ⚠ Prerequisito: l'**Arcimago** chiede incantesimi arcani di 7° livello, Sapienza Magica e Conoscenze (arcane) 15 gradi, Abilità Focalizzata (Sapienza Magica) e Incantesimi Focalizzati in due scuole. Un bardo non lancia oltre il 6°: la classe non si può prendere mai. Al suo posto c'è il **Cantore delle tempeste** di *Frostburn*, la classe di prestigio dei bardi che portano la tempesta nella musica. I suoi privilegi non sono nel repo: dove la scheda non li dice, i numeri sono quelli che aveva l'Arcimago (DV, BAB, TS, avanzamento degli incantesimi) `[Private source — Frostburn, non verificato]`. Le due Arcane Supreme che aveva restano (sotto), per non togliergli potere.
 > PF1e: archetipo *Thundercaller* del bardo (Advanced Player's Guide) — si avvicina a metà: fa della musica un tuono che ferisce e assorda, che è il lato «suono» della classe, ma non ha vento né fulmine e si paga con poteri del bardo base invece che con due livelli di prestigio. Non stravolge l'intento, non lo copre tutto.
 
 ### CAPACITÀ SPECIALI
@@ -238,11 +238,11 @@ Un uso per livello da bardo e da Cantore. **Ispirare Coraggio** (Sop): +3 morale
 1/giorno, come *suggestione di massa* (incantatore di 14° livello). CD 21 Volontà.
 
 #### Incantesimi Conosciuti (bardo, incantatore di 14° livello, CD = 16+liv)
-Il Cantore delle tempeste avanza gli incantesimi del bardo a ogni livello `[INFERRED — needs DM confirmation]`, quindi conosce e lancia come un bardo di 14°: **al giorno 4/5/5/4/4/2** (Carisma 22 compreso), **conosciuti 6/4/4/4/4/3**.
+Il Cantore delle tempeste avanza gli incantesimi del bardo a ogni livello `[Private source — Frostburn, non verificato]`, quindi conosce e lancia come un bardo di 14°: **al giorno 4/5/5/4/4/2** (Carisma 22 compreso), **conosciuti 6/4/4/4/4/3**.
 - Liv 0: *Individuazione del magico, Lettura del magico, Luce, Mano magica, Prestidigitazione, Aprire/Chiudere*
 - Liv 1: *Cura ferite leggere, Charme su persone, Risata incontenibile, Sonno*
 - Liv 2: *Polvere luccicante, Eroismo, Invisibilità, Esplosione sonora*
-- Liv 3: *Confusione, Dissolvi magie, Velocità, Fulmine* (non è della lista del bardo SRD: la scheda lo dà come incantesimo della tempesta del Cantore `[INFERRED — needs DM confirmation]`)
+- Liv 3: *Confusione, Dissolvi magie, Velocità, Fulmine* (non è della lista del bardo SRD: la scheda lo dà come incantesimo della tempesta del Cantore `[Private source — Frostburn, non verificato]`)
 - Liv 4: *Porta dimensionale, Invisibilità superiore, Urlo, Dominare persone*
 - Liv 5: *Passo nelle ombre, Cura ferite leggere di massa, Suggestione di massa*
 - Fuori dal numero dei conosciuti, portati come oggetti perché la scheda li aveva fra i suoi incantesimi: *bacchetta di suggestione* (CD 13), *pergamene di identificare* e *di lingua ammaliatrice* I conosciuti in tutto restano 25, come prima.
@@ -251,7 +251,7 @@ Il Cantore delle tempeste avanza gli incantesimi del bardo a ogni livello `[INFE
 - **Maestria del Controincantesimo** — può preparare un controincantesimo come azione veloce 1/giorno.
 - **Potere Magico +1** — +1 al livello dell'incantatore per le variabili che ne dipendono (danni, durata, gittata) e per le prove di livello dell'incantatore. Non alza le CD.
 
-Non sono privilegi del Cantore delle tempeste: restano perché la scheda le aveva, e il DM decide se tenerle o sostituirle con quelli veri della classe `[INFERRED — needs DM confirmation]`.
+Non sono privilegi del Cantore delle tempeste: restano perché la scheda le aveva e si sommano ai privilegi veri della classe, che sono più deboli (canone del DM 2026-10-18).
 
 #### Talenti
 Iniziativa Migliorata, Incantare in Combattimento, Negoziatore (+2 Diplomazia/Percepire Intenzioni), Riflessi Fulminei, Abilità Focalizzata (Conoscenze locali). Cinque, quanti ne dà un personaggio di 14° livello.
@@ -311,14 +311,14 @@ Benchmark: PF T1-1 riga 14: CA 20 vs 29 (9 sotto) / pf 91 vs 200 (molto sotto) /
 
 ### Classi e regole fuori dall'SRD
 
-- **Cantore delle tempeste** (*Stormsinger*) `[Private source — Frostburn]`: scelto al posto dell'Arcimago, che un bardo non può prendere (§In combattimento, il riquadro del prerequisito). I suoi privilegi non sono nel repo e la scheda li tiene come `[INFERRED — needs DM confirmation]`.
+- **Cantore delle tempeste** (*Stormsinger*) `[Private source — Frostburn]`: scelto al posto dell'Arcimago, che un bardo non può prendere (§In combattimento, il riquadro del prerequisito). I suoi privilegi non sono nel repo e la scheda li tiene come li dava l'Arcimago `[Private source — Frostburn, non verificato]`.
 - **Il Signore delle Tempeste di *Faiths and Pantheons*** (*Stormlord*) `[Private source — Faiths and Pantheons]` è stato considerato per primo, perché è la classe di prestigio forgottiana delle tempeste. Non regge: chiede di essere incantatore **divino** e servo di **Talos**, il dio caotico malvagio delle tempeste. Tempestas è un bardo, quindi arcano, neutrale buono, e lavora per il Consiglio di Rethmar; per prenderla dovrebbe cambiare classe, dio e allineamento.
 - **PF1e**: l'archetipo *Thundercaller* del bardo (Advanced Player's Guide) si avvicina a metà (§In combattimento). Segnalato, non applicato.
 - **Allineamento**: la scheda dell'arco 08 lo dava caotico neutrale; qui resta neutrale buono, come lo registrano la scheda e lo stato della campagna, e l'arco ora dice lo stesso.
 
 ### Versioni dei numeri
 
-Le due schede dell'arco 08 (la guida del DM e l'appendice di gioco) portavano un secondo statblocco: CA 18, 84 pf, TS +7/+12/+13, iniziativa +3, caotico neutrale, spada lunga tonante +1, musica 12/giorno, Maestria degli Elementi. Vince questa scheda, corretta: ha più CA e iniziativa, la Cantata, la *suggestione di massa*, gli incantesimi di 5° e due Arcane Supreme, e i suoi numeri tornano con l'SRD. Gli 84 pf dell'arco non tornano con 14 DV e Cos 14 (la media è 77), e la sua Tempra +7 non ha una fonte. I numeri dell'arco sono stati allineati a questi. Per non scendere sotto nessun numero della scheda vecchia, Tempestas porta un *amuleto della salute +2* (Cos 16, 91 pf, Tempra +7) `[INFERRED — needs DM confirmation]`.
+Le due schede dell'arco 08 (la guida del DM e l'appendice di gioco) portavano un secondo statblocco: CA 18, 84 pf, TS +7/+12/+13, iniziativa +3, caotico neutrale, spada lunga tonante +1, musica 12/giorno, Maestria degli Elementi. Vince questa scheda, corretta: ha più CA e iniziativa, la Cantata, la *suggestione di massa*, gli incantesimi di 5° e due Arcane Supreme, e i suoi numeri tornano con l'SRD. Gli 84 pf dell'arco non tornano con 14 DV e Cos 14 (la media è 77), e la sua Tempra +7 non ha una fonte. I numeri dell'arco sono stati allineati a questi. Per non scendere sotto nessun numero della scheda vecchia, Tempestas porta un *amuleto della salute +2* (Cos 16, 91 pf, Tempra +7) (canone del DM 2026-10-18).
 
 Boost log: correzione dei conti e cambio di classe di prestigio (Arcimago 2 → Cantore delle tempeste 2) — GS 14 → 14 — i numeri ora tornano con l'SRD, nessun potere tolto.
 

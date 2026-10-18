@@ -24,11 +24,11 @@ voci:
   - Solo azioni singole
 ```
 
-> [INFERRED — needs DM confirmation] **Versione scelta**: il *beholder zombie mezzo-illithid* dell'arco 03 (la Cittadella, «Il Guardiano»: la scheda e il read-aloud che lo descrive coi tentacoli da mind flayer), più forte del death tyrant del FRCS da cui nasce: esplosione mentale, quattro tentacoli che estraggono il cervello, RI 26, RD 5/tagliente, volo buono. È anche la creatura che il read-aloud mostra ai giocatori. Il cono di antimagia del death tyrant non c'è: l'occhio centrale, in questa versione, è quello dell'esplosione mentale.
+> **Versione scelta**: il *beholder zombie mezzo-illithid* dell'arco 03 (la Cittadella, «Il Guardiano»: la scheda e il read-aloud che lo descrive coi tentacoli da mind flayer), più forte del death tyrant del FRCS da cui nasce: esplosione mentale, quattro tentacoli che estraggono il cervello, RI 26, RD 5/tagliente, volo buono. È anche la creatura che il read-aloud mostra ai giocatori. Il cono di antimagia del death tyrant non c'è: l'occhio centrale, in questa versione, è quello dell'esplosione mentale.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti, senza far scendere i numeri della scheda dell'arco**: un non morto ha BAB pari a metà dei DV, e a 11 DV i +11 dei tentacoli, il +7 dei raggi e la Lotta +16 della scheda non tornano (darebbero +8, +4, +13). Tornano tutti, esatti, a **16 DV**, il massimo della taglia Grande nella riga d'avanzamento del death tyrant (12-16 DV): BAB +8, 104 pf. Le caratteristiche mentali sono quelle del death tyrant del FRCS (Sag 15, Car 17): la scheda dell'arco le abbassava «per il template zombie», che nel SRD non tocca Sag e Car. Con loro la Volontà torna sopra il +9 della scheda (+12) e le CD salgono a 21. Gli `attributi` sono questi, non più generati.
+> **Conti rifatti, senza far scendere i numeri della scheda dell'arco**: un non morto ha BAB pari a metà dei DV, e a 11 DV i +11 dei tentacoli, il +7 dei raggi e la Lotta +16 della scheda non tornano (darebbero +8, +4, +13). Tornano tutti, esatti, a **16 DV**, il massimo della taglia Grande nella riga d'avanzamento del death tyrant (12-16 DV): BAB +8, 104 pf. Le caratteristiche mentali sono quelle del death tyrant del FRCS (Sag 15, Car 17): la scheda dell'arco le abbassava «per il template zombie», che nel SRD non tocca Sag e Car. Con loro la Volontà torna sopra il +9 della scheda (+12) e le CD salgono a 21. Gli `attributi` sono questi, non più generati.
 
-> [INFERRED — needs DM confirmation] **GS 14**: con 5 DV in più un non morto prende +1 GS (uno ogni 4 DV).
+> **GS 14**: con 5 DV in più un non morto prende +1 GS (uno ogni 4 DV).
 
 Large undead (augmented aberration), death tyrant mezzo-illithid avanzato, 16d12. Death tyrant `[Private source — Forgotten Realms Campaign Setting]`; template mezzo-illithid `[Private source — non SRD, libro d'origine da verificare]`; RD e azioni singole dallo zombie SRD.
 

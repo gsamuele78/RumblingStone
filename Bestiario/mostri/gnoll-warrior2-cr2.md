@@ -13,7 +13,7 @@ ts: Temp +6, Rifl +0, Vol +0
 attributi: For 15 Des 11 Cos 14 Int 8 Sag 11 Car 8
 ```
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +2 → **+3**: gnoll 2 DV (+1) più Warrior 2 (+2). Lotta +5 e ascia +5 lo presupponevano già.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: BAB +2 → **+3**: gnoll 2 DV (+1) più Warrior 2 (+2). Lotta +5 e ascia +5 lo presupponevano già.
 
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.

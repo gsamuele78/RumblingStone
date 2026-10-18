@@ -23,9 +23,9 @@ voci:
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
-> [INFERRED — needs DM confirmation] **Conti rifatti sul SRD**: **pf 70**, primo dado al massimo e gli altri alla media (i 67 dell'export stanno nella fascia, ma sotto). La morning star di taglia Media fa **1d8**, non 1d6. La CA 19 conta *armatura magica*, che Koth tiene sempre attiva (CA 15 senza). Gli incantesimi conosciuti di grado 0 sono otto e l'export ne elenca sei: i due mancanti sono marcati.
+> **Conti rifatti sul SRD**: **pf 70**, primo dado al massimo e gli altri alla media (i 67 dell'export stanno nella fascia, ma sotto). La morning star di taglia Media fa **1d8**, non 1d6. La CA 19 conta *armatura magica*, che Koth tiene sempre attiva (CA 15 senza). Gli incantesimi conosciuti di grado 0 sono otto e l'export ne elenca sei: i due mancanti sono aggiunti.
 
-> [INFERRED — needs DM confirmation] **GS 8**: un bugbear (GS 2) con 8 livelli da stregone è un GS 8: lo stregone non è associato al bugbear, quindi vale ½ per livello fino a 3 livelli (pari ai DV del bugbear) e 1 per livello dopo (2 + 1,5 + 5 = 8,5). Il GS 6 di prima era quello del Koth stampato in RHoD, che è stregone 6.
+> **GS 8**: un bugbear (GS 2) con 8 livelli da stregone è un GS 8: lo stregone non è associato al bugbear, quindi vale ½ per livello fino a 3 livelli (pari ai DV del bugbear) e 1 per livello dopo (2 + 1,5 + 5 = 8,5). Il GS 6 di prima era quello del Koth stampato in RHoD, che è stregone 6.
 
 > ⚠ Talenti: a 11 DV ne spettano quattro, l'export ne dà cinque (più la competenza negli scudi, che è del bugbear). Si tengono tutti e cinque, come chiede il DM; il quinto diventa legale con un livello in più da stregone. *Sudden Enlarge* `[Private source — Complete Arcane]`.
 
@@ -40,7 +40,7 @@ Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. Tutto SRD tr
 - 3° (2) — *volare, fulmine*
 - 2° (3) — *cecità/sordità, individuazione dei pensieri, sfera infuocata*
 - 1° (5) — *charme su persone, armatura magica, dardo incantato, raggio di indebolimento, scudo*
-- 0 (8) — *spruzzo acido, suono fantasma, mano magica, messaggio, apri/chiudi, lettura del magico, individuazione del magico* `[INFERRED]`, *raggio di gelo* `[INFERRED]`
+- 0 (8) — *spruzzo acido, suono fantasma, mano magica, messaggio, apri/chiudi, lettura del magico, individuazione del magico*, *raggio di gelo*
 
 **Statistiche** For 16, Des 15, Cos 16, Int 8, Sag 10, Car 17 · BAB +6; Lotta +9 · **Talenti** Iniziativa Migliorata, Volontà di Ferro, Riflessi Fulminei, Persuasivo, Sudden Enlarge · **Abilità** Raggirare +9, Concentrazione +7, Intimidire +5, Muoversi Silenziosamente +6 · **Equipaggiamento** morning star perfetta, mantello del carisma +2, borsa conservante (tipo I), 2 elisir della verità, pozione di *cura ferite moderate*, pergamena di *polvere luccicante*, pergamena di *cavalcatura*, un corindone nero
 
@@ -56,7 +56,7 @@ Medium humanoid (goblinoid), Bugbear (Humanoid 3) / Sorcerer 8, LE. Tutto SRD tr
   - **Round 3 e seguenti**: dall'alto e invisibile, *fulmine* lungo la linea che prende più PG, *cecità/sordità* sul guerriero più pericoloso, *raggio di indebolimento* su chi colpisce più forte, *sfera infuocata* per spingere gli incantatori fuori dalla copertura. Se un PG vede l'invisibile, *Sudden Enlarge* non serve a niente: cambia bersaglio e usa *dardo incantato*. La pergamena di *polvere luccicante* è per i PG invisibili.
 - *Morale*: sotto 25 pf vola via, invisibile, verso il resto dell'orda. Se non può fuggire (bloccato, senza *volare*), sotto 15 pf **si arrende** e prova a trattare: Koth è il più debole dei Wyrmlord e lo sa, e vale più vivo che morto per quello che sa di Vraath.
 
-**Variante draconica** (`bugbear_draconic_koth.pcg`): stesso build con template Draconic Creature `[Private source — Races of the Dragon]` e livelli di sostituzione Dragonblood `[Private source — Races of the Dragon]` (Car 16) `[INFERRED — solo .pcg]`. Più forte, ma senza un export coi numeri: si tiene come variante.
+**Variante draconica** (`bugbear_draconic_koth.pcg`): stesso build con template Draconic Creature `[Private source — Races of the Dragon]` e livelli di sostituzione Dragonblood `[Private source — Races of the Dragon]` (Car 16) (solo .pcg). Più forte, ma senza un export coi numeri: si tiene come variante.
 
 **Benchmark** PF T1-1 riga 8 (CA 21, pf 100, att. +15, danno medio 35, CD 18): CA 19 (23 con *scudo*) ≈ · pf 70 ✗ · att. +10 ✗ (è un incantatore) · CD 17 al 4° ≈ (1 sotto). Pericoloso finché resta invisibile e in volo.
 

@@ -125,7 +125,7 @@ da confermare se il DM apre questo ramo]`:
 |---|---|---|
 | Perdite orda Day 19 | −900 | **~−300** (l'avanguardia vince, subisce solo perdite d'assalto) → l'orda avanza su Rethmar con ~600 unità in più rispetto al default |
 | Custodi Eterni / Cerimonia | Sì | **No** (Re Thorek morto o in fuga; la Cerimonia non avviene o è un lutto in esilio) |
-| Lythiel → Ghianda a Hella | Alla Cerimonia (E7) | **Rilocare**: Lythiel consegna la Ghianda durante l'evacuazione o più avanti nel Vale `[INFERRED]` |
+| Lythiel → Ghianda a Hella | Alla Cerimonia (E7) | **Rilocare**: Lythiel consegna la Ghianda durante l'evacuazione o più avanti nel Vale |
 | 150 lance | Condizionale (D4) | **Perse** (Hammerfist non esiste più come alleato) |
 | ARMATE-SYNC ARC-09 | Baseline | Orda a Rethmar **+600 circa**; morale nanico del Vale a picco |
 
@@ -290,7 +290,7 @@ di campagna) da aggiungere a
 | Esito | Superstiti | Re Thorek | Perdite orda | Custodi/Cerimonia | 150 lance | ARC-09 |
 |---|---|---|---|---|---|---|
 | **Vittoria piena** (default) | 90 | Vivo (8 pf) | −900 | Sì | Condizionale (D4) | Baseline E1-E8 |
-| **Vittoria costosa** | <50 | Morto `[INFERRED]` | −900 | Sì (officiata da Dana) | Complicate (+CD) | Hook Thorik cambiano tono |
+| **Vittoria costosa** | <50 | Morto | −900 | Sì (officiata da Dana) | Complicate (+CD) | Hook Thorik cambiano tono |
 | **Caduta** | Sparsi | Morto/in fuga | ~−300 | No | Perse | Orda +600 a Rethmar; rinegoziare |
 
 Il ramo di Fauci (§4) e i bonus del flashback (§5) si applicano

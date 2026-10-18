@@ -116,8 +116,7 @@ lista di buff pre-cast con **durate esplicite** e **2 effetti a innesco**. CR sa
 | *prayer* | +1 alleati / −1 nemici entro 12 m | 12 round |
 | *shield of faith* | +2 deflessione (già in CA sopra) | 140 min |
 
-**2 effetti a innesco (Contingent/oggetti) `[INFERRED — via Craft Contingent Spell
-o pergamene sacerdotali, a discrezione DM]`:**
+**2 effetti a innesco (Contingent/oggetti) `[Private source — Complete Arcane: Craft Contingent Spell]`, o pergamene sacerdotali:**
 1. *Heal* automatico su di sé quando scende sotto **40 pf** (1/scontro).
 2. *Word of recall* / *plane shift* al Fane quando scende sotto **15 pf** (fuga per
    ARC-10) **oppure** *divine power* ri-innescato (se il DM vuole il combattimento

@@ -173,7 +173,7 @@ Poiché non indossa armature, Therysol si affida a gingilli magici recuperati du
 *   **Anello del Patto (Anello di Deviazione +1):** Un semplice anello d'argento drow.
 *   **Mantello del Carisma +4**: la scheda scriveva «+3 potenziamento» al Carisma senza dire da dove; un bonus di potenziamento a una caratteristica viene da un oggetto, e il più piccolo che tiene il suo Carisma a +4 è questo. Confermato dal DM il 2026-10-18.
 *   **Quattro perle del potere** (due di 1° livello, due di 2°): ognuna le rende uno slot già usato, una volta al giorno. Tengono i 5 incantesimi di 1° e i 4 di 2° che la scheda le dava, che la tabella dell'Acolita da sola non arriva a dare.
-*   **Lente d'ingrandimento** `[INFERRED — needs DM confirmation]`: la mercante di gemme la porta al collo.
+*   **Lente d'ingrandimento**: la mercante di gemme la porta al collo.
 *   **Balestra Leggera Perfetta:** Legno scuro, intarsiata in madreperla (Danno 1d8).
 *   **Vestiario:** Tunica di seta di ragno grigia e viola (stile sottosuolo), strappata sulla spalla destra per far spazio alle scaglie e alle escrescenze cristalline.
 *   **Diario di Theron:** Un piccolo libro bruciacchiato con le note commerciali e schizzi del fratello.
@@ -196,7 +196,7 @@ Nessun modulo d'arco porta un secondo statblocco di Therysol: questa scheda (con
 
 Benchmark: PF T1-1 riga 9: CA 20 vs 23 / pf 44 vs 115 (molto sotto) / atk +9 vs +17 / CD 16 del soffio vs 18 / TS buono +11 vs +12. Supporto fragile, e la scheda lo dice (§In combattimento, *Agile ma Fragile*).
 
-Boost log: correzione dei conti (SRD) — GS 9 → 9 — incantesimi al giorno, gradi di Valutare e tipo corretti; il Carisma ha ora un oggetto che lo spiega; slot e Valutare tenuti con quattro perle del potere e una lente (INFERRED).
+Boost log: correzione dei conti (SRD) — GS 9 → 9 — incantesimi al giorno, gradi di Valutare e tipo corretti; il Carisma ha ora un oggetto che lo spiega; slot e Valutare tenuti con quattro perle del potere e una lente.
 
 <!-- storico -->
 > Valori superati, campo per campo (dalla scheda prima della revisione del 2026-10-16):

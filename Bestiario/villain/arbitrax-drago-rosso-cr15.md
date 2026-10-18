@@ -20,7 +20,7 @@ voci:
   - Soffio: cono di fuoco 15 m, 10d10, Rifl CD 25; presenza terrificante 45 m, Vol CD 24
   - RI 19; RD 5/magia; immune al fuoco, al sonno e alla paralisi; vulnerabile al freddo (l'anello resiste 10)
   - Incantesimi da stregone di 5° livello, al giorno 6/8/5, CD 15 + livello; localizzare oggetti 5/giorno
-fonte: PCGen export della scheda; Cos e Car con gli oggetti che la stessa fonte elenca (amuleto della salute +2) e un mantello del Carisma +6 [INFERRED]; danni di coda e schiacciare a 1,5 × For come da SRD
+fonte: PCGen export della scheda; Cos e Car con gli oggetti che la stessa fonte elenca (amuleto della salute +2) e un mantello del Carisma +6; danni di coda e schiacciare a 1,5 × For come da SRD
 ```
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
@@ -35,7 +35,7 @@ Huge dragon (fire), 19 HD, LE.
 
 **Attacco** Vel 12 m, Volare 45 m (scarsa) · **Mischia** morso +27 (2d8+10); 2 artigli +22 (2d6+5); 2 ali +22 (1d8+5); coda +22 (2d6+15); schiacciare (2d8+15, Rifl CD 25 o bloccato) · **Spazio** 4,5 m; **portata** 3 m (4,5 m col morso) · **Soffio** cono di fuoco 15 m, **10d10** (Rifl CD 25 dimezza) · **Incantesimi** da stregone di 5° livello (al giorno 6/8/5, CD 15 + livello; conosciuti — 0: *luci danzanti*, *individuazione del magico*, *guida*, *mano magica*, *prestidigitazione*, *lettura del magico*; 1°: *allarme*, *favore divino*, *dardo incantato*, *scudo*; 2°: *grazia del gatto*, *cura ferite moderate*) · **Capacità magiche** *localizzare oggetti* 5/giorno
 
-**Statistiche** For 31 Des 10 Cos 23 Int 14 Sag 15 Car 20 · BAB +19; Lotta +37 · **Talenti** Colpo Possente, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virata · **Abilità** Ascoltare +24, Osservare +24, Cercare +24, Concentrazione +28, Intimidire +29, Raggirare +15, Valutare +10, Conoscenze (arcane) +12, Conoscenze (religioni) +10 · **Equipaggiamento** amuleto della salute +2, anello minore di resistenza al freddo, mantello del Carisma +6 `[INFERRED — needs DM confirmation]`
+**Statistiche** For 31 Des 10 Cos 23 Int 14 Sag 15 Car 20 · BAB +19; Lotta +37 · **Talenti** Colpo Possente, Attacco in Volo, Spingere Migliorato, Iniziativa Migliorata, Attacco Poderoso, Ghermire, Virata · **Abilità** Ascoltare +24, Osservare +24, Cercare +24, Concentrazione +28, Intimidire +29, Raggirare +15, Valutare +10, Conoscenze (arcane) +12, Conoscenze (religioni) +10 · **Equipaggiamento** amuleto della salute +2, anello minore di resistenza al freddo, mantello del Carisma +6
 
 **Capacità speciali** **Presenza Terrificante** (Str): 45 m, creature con meno di 19 DV, Vol CD 24 (10 + ½ DV + Car) o scosse per 4d6 round (panico sotto i 5 DV). **Schiacciare** (Str): atterrando su creature Piccole o più piccole, Rifl CD 25 o bloccate. **Ghermire** e **Colpo Possente**: afferra con morso o artigli e scaglia via (Colpo Possente: 3 m e prono).
 

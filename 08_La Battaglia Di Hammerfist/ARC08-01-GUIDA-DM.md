@@ -170,7 +170,7 @@ SIMBOLI TATTICI:
 *   **Soffio (Sop):** Linea di 30 m di acido, una volta ogni 1d4 round. Danni 14d4 acido, TS Riflessi CD 29 per dimezzare.
 *   **Soffio a Cono (Str):** 1/giorno, Fauci di Palude può spendere un'azione di round completo per concentrare il suo potere acido. Nel round successivo, come azione standard, può emettere il suo soffio in un cono di 18 metri invece che in una linea. I danni e la CD del Tiro Salvezza rimangono invariati. Narrativamente, l'azione di round completo viene spesa mentre sale in quota per preparare la picchiata.
 *   **Presenza terrificante (Str):** Raggio 90m, creature con meno di 25 DV devono superare un TS Volontà CD 25 o essere in preda al panico (4d6 round) se hanno 4 DV o meno, scosse (4d6 round) se ne hanno di più.
-*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, **solo se** all'alba del −1000 (carry-over B4, registrato nel DEF-4) Aegis Fang ha ucciso Skullcrusher; altrimenti non c'è [INFERRED — needs DM confirmation].
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18).
 *   **Corrompere Acqua (Mag):** A volontà, 30m raggio, ristagna acqua.
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Lancia come uno Stregone di 7° livello.
@@ -179,7 +179,7 @@ SIMBOLI TATTICI:
         *   2° (CD 15): *Freccia Acida*, *Immagine Speculare*, *Invisibilità*
         *   1° (CD 14): *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
         *   0° (CD 13): *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire [gli ultimi tre INFERRED].
+**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
 **Tattiche:** Inizia con *Armatura Magica* e *Scudo* attivi. Usa il soffio e il controllo del campo (*Nube Maleodorante*) dalle alte quote; con Volteggiare resta sospeso sopra le mura e soffia senza atterrare, con Ghermire afferra un nano isolato e lo lascia cadere. Atterra solo se costretto o per finire bersagli importanti, Thorik prima di tutti. Fugge sotto i 50 PF (ramo D10).
 
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG)**: 25 DV di
@@ -193,7 +193,7 @@ SIMBOLI TATTICI:
 > mancavano sono Volteggiare, Ghermire e Riflessi Fulminei. *Oscurità* è una capacità magica dell'età, non
 > un incantesimo conosciuto; *Volare* esce dagli incantesimi (un drago vola
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
-> CORREZIONE del boss nell'arco 07 [INFERRED].
+> CORREZIONE del boss nell'arco 07.
 
 **Tattiche in Combattimento:**
 - **Round 1-2:** Sorvolo e soffio sulle concentrazioni nemiche
@@ -266,16 +266,16 @@ SIMBOLI TATTICI:
 *   **Presenza Intimidatoria (Str):** Nemici entro 9m subiscono -2 ai tiri per colpire. TS Volontà CD 19 nega.
 *   **Tattico Superiore (Str):** Come azione gratuita, può fornire +2 bonus a un tipo di tiro (attacco, danno, TS) a tutti gli alleati entro 18m per 1 round.
 
-**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare, Arma Focalizzata Superiore (Spada Bastarda), Competenza nelle Armi Esotiche (Spada Bastarda), Robustezza, Incalzare Potenziato, Iniziativa Migliorata [gli ultimi cinque INFERRED].
-**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi* [questi due INFERRED].
+**Talenti:** Arma Focalizzata (Spada Bastarda), Arma Specializzata (Spada Bastarda), Critico Migliorato (Spada Bastarda), Schivare, Attacco Poderoso, Incalzare, Arma Focalizzata Superiore (Spada Bastarda), Competenza nelle Armi Esotiche (Spada Bastarda), Robustezza, Incalzare Potenziato, Iniziativa Migliorata (gli ultimi cinque confermati dal DM, 2026-10-18).
+**Equipaggiamento:** *Armatura Completa Demoniaca +2* (Resistenza al Fuoco 10), *Scudo Pesante in Acciaio +1 con Spuntoni*, *Spada Bastarda Demoniaca +1*, *Mantello della Resistenza +2*, *Arco Composito Lungo Poderoso +1 (+6 For)*, *Amuleto dell'Armatura Naturale +1* e 2 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche:** Grimjaw è un comandante, non un combattente solitario. Rimane sempre protetto dalle sue Guardie Nere Orog. Usa Tattico Superiore ogni round per potenziare le sue truppe. Attiva la Furia Comandante solo quando la battaglia raggiunge il suo culmine o viene ingaggiato personalmente. La sua morte causa un crollo del morale di -3 a tutto l'esercito. *Morale*: non combatte fino alla morte. Sotto i 60 pf beve una pozione e ripiega dietro le Guardie Nere; sotto i 30 pf, o se cade Fauci, suona la ritirata e torna al campo. Resta solo se Thorik lo ha sfidato davanti all'esercito: lì l'arroganza è più forte della prudenza.
 
 > **Fonti e verifica 3.5**: l'**orog** non è nell'SRD
 > [Private source — Monsters of Faerûn]; il **Signore della Guerra** non è
 > una classe SRD [Private source — non identificata: la Furia Comandante
-> ricorda il *Warchief* di Complete Warrior; INFERRED]. I suoi privilegi sono
-> quelli della scheda, marcati [INFERRED]. PF1e: il **Cavaliere** (APG,
+> ricorda il *Warchief* di Complete Warrior]. I suoi privilegi sono
+> quelli della scheda, confermati dal DM il 2026-10-18. PF1e: il **Cavaliere** (APG,
 > ordine del Drago) si avvicina, perché dà bonus agli alleati vicini e tiene
 > il guerriero in prima linea; il *Battle Herald* farebbe di più il
 > comandante ma stravolge il combattente. Conti ricontati: la *Armatura
@@ -325,9 +325,9 @@ SIMBOLI TATTICI:
 > senza penalità, perché ogni testa guida un braccio: due randelli a pieno
 > BAB, non tre attacchi con uno solo. La *corazza di piastre +1* vale +6 alla
 > CA (era +3). I pf tornano coi dadi con Cos 28 (15d8+135 = 202), un punto
-> in più dagli aumenti di caratteristica dei DV avanzati [INFERRED]; prima
+> in più dagli aumenti di caratteristica dei DV avanzati; prima
 > 15d8+120 dava 187, non 195. Multiattacco esce (non serve a chi usa armi):
-> entrano Spezzare Migliorato e Volontà di Ferro [INFERRED].
+> entrano Spezzare Migliorato e Volontà di Ferro.
 
 ---
 
@@ -355,7 +355,7 @@ SIMBOLI TATTICI:
 *   **Presenza Regale (Str):** Alleati nanici entro 18m ottengono +3 morale a tiri per colpire e danni.
 *   **Chiamata alle Armi (Str):** 3/giorno, come azione standard, tutti i nani entro 60m ottengono un bonus morale di +5 ai tiri per colpire e ai TS contro paura per 5 round.
 
-**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato [gli ultimi sette INFERRED: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti].
+**Talenti:** Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Attacco Poderoso, Incalzare, Incalzare Potenziato, Robustezza, Volontà di Ferro, Arma Focalizzata Superiore (Martello da Guerra), Arma Specializzata Superiore (Martello da Guerra), Critico Migliorato (Martello da Guerra), Tempra Possente, Riflessi Fulminei, Autorità, Spezzare Migliorato (gli ultimi sette confermati dal DM, 2026-10-18: 15 livelli di guerriero e 2 di aristocratico danno 14 talenti).
 **Equipaggiamento:** *Corona dei Re Hammerfist* (+4 Car, *Comando* 3/giorno), *Armatura Completa Ancestrale +4*, *Scudo Pesante Runico +3* (RI 19; le rune danno +2 ai TS contro incantesimi), *Martello da Guerra degli Antenati +3* (*Ritornante*, *Annientatore*), *Anello di Protezione +2* (è la fonte della deflessione).
 
 **Tattiche:** *Prima del combattimento*: resta al centro della linea, dove la Presenza Regale (18 m) copre più nani possibile; se vede arrivare l'assalto, spende la prima Chiamata alle Armi sul primo urto. *Durante il combattimento*: round 1 Chiamata alle Armi (+5 ai nani entro 60 m); poi attacco completo sul nemico più grosso a portata, con Attacco Poderoso contro i giganti e senza contro i bersagli corazzati; usa *Comando* della Corona («In ginocchio!») su chi minaccia un ferito, e tiene la seconda e la terza Chiamata per quando una breccia cede o il drago passa basso. *Morale*: non lascia il campo finché un nano è in piedi; sotto i 50 pf lo trascinano via le Guardie Reali o Borin, ed è l'unico modo in cui ripiega.
@@ -401,7 +401,7 @@ SIMBOLI TATTICI:
         *   0°: *Cura Ferite Minori* (x3), *Luce*, *Purificare Cibo e Bevande*, *Resistenza*
 
 **Talenti:** Scacciare Extra (gli altri talenti non sono scritti).
-**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2* [questi due INFERRED].
+**Equipaggiamento:** *Armatura Completa +3*, *Scudo Pesante +2*, *Anello di Protezione +3*, *Martello da Guerra Sacro +2*, *Guanti della Forza dell'Orco +2* e *Mantello del Carisma +2*.
 
 **Capacità Speciali:**
 - **Scacciare Non Morti:** 11/giorno (+6 bonus)
@@ -415,7 +415,7 @@ SIMBOLI TATTICI:
 > [Private source — classe non identificata nel repo]: i suoi privilegi sono
 > quelli della scheda. La progressione d'incantatore piena (Chierico 12° /
 > Cantante Divina 3°, LI 15°) è `[CANONE — DM 2026-10-17]`, come in
-> `ARC08-17-BANCO-HAMMERFIST-1372.md`; il Canto di Battaglia resta [INFERRED]. PF1e: nessun archetipo del PRD fa «chierico che canta»
+> `ARC08-17-BANCO-HAMMERFIST-1372.md`; il Canto di Battaglia resta, confermato dal DM (2026-10-18). PF1e: nessun archetipo del PRD fa «chierico che canta»
 > senza perdere progressione; lo *Skald* (Advanced Class Guide) si avvicina
 > nel canto ma stravolge il chierico, e resta da preferire la classe 3.5.
 > Conti ricontati: *Armatura Completa +3* vale +11 e *Scudo Pesante +2* +4
@@ -438,7 +438,7 @@ SIMBOLI TATTICI:
 **TS:** Temp +13, Rifl +8, Vol +16
 **Attacco Base:** +9
 **Attacco:** *Martello da Guerra Sonoro +1* +12/+7 (1d8+3/x3 + 1d6 sonoro)
-**Caratteristiche:** For 14, Des 10, Cos 18, Int 10, Sag 18, Car 18 [INFERRED]
+**Caratteristiche:** For 14, Des 10, Cos 18, Int 10, Sag 18, Car 18
 **Capacità Speciali:** Musica Bardica (Ispirare Coraggio +2, 8/giorno), Scacciare Non Morti 7/giorno (+6).
 **Incantesimi da Bardo (CL 4°; 3/4/2 per giorno):**
 *   2° (CD 16): *Frantumare*, *Suggestione*
@@ -461,11 +461,11 @@ SIMBOLI TATTICI:
 > **Verifica 3.5 (versione più forte)**: dodici livelli di classi da PG
 > fanno GS 12, non 11. BAB +9 (Chierico 8 +6, Bardo 4 +3). Caratteristiche
 > ricavate dai numeri della scheda: Cos 18 dai 98 pf, Sag 18 dalle CD da
-> chierico, Car 18 dalle CD da bardo [INFERRED]; TS con un *Mantello della
+> chierico, Car 18 dalle CD da bardo; TS con un *Mantello della
 > Resistenza +2*. Un bardo di 4° ha 4 usi di musica e Ispirare
 > Coraggio +1: gli 8 usi e il +2 della scheda restano con due talenti non SRD,
 > Musica Extra [Private source — Complete Adventurer] e *Song of the Heart*
-> [Private source — talento non SRD, libro da verificare; INFERRED].
+> [Private source — talento non SRD, non verificato].
 > *Lancia Sonora* non è SRD ed esce; *Benedizione* e *Scudo della Fede* non
 > sono incantesimi da bardo (restano tra quelli da chierico). Il dominio
 > Nanico è del Forgotten Realms [Private source — FRCS]. Il Coro della
@@ -506,8 +506,7 @@ SIMBOLI TATTICI:
 > scende (PF1e darebbe GS + 5 = 13). La Volontà vale +8 (base +3, Sag +3,
 > Volontà di Ferro): il +9 non si raggiunge, ma l'Aura Celestiale dà +2
 > contro i malvagi, cioè contro tutto l'esercito della Mano Rossa. Volo 24 m
-> (SRD: 21 m) resta, da alfa del branco. Talenti (4 a 10 DV)
-> [INFERRED].
+> (SRD: 21 m) resta, da alfa del branco. Talenti (4 a 10 DV).
 > ⚠ Prerequisito: a 10 DV un gufo gigante cade nella fascia Enorme
 > dell'avanzamento SRD (9-12 DV). Resta Grande perché è una cavalcatura. PF1e:
 > il modello semplice *Gigante* lo farebbe Enorme (+1 GS): si avvicina, ma
@@ -544,7 +543,7 @@ SIMBOLI TATTICI:
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Tiro Rapido, Tiro Multiplo, Schivare, Mobilità (la CA conta il bonus di schivare).
 **Tattiche:** in volo sui gufi, sei alti a distrarre e sei bassi a intercettare; contro il drago tirano con le frecce anatema (+2d6) e Nemico Prescelto. *Morale*: un ranger sotto i 20 pf porta il gufo fuori portata; la compagnia ripiega solo all'ordine di Lunapiena.
 
-> **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m [INFERRED].
+> **Verifica 3.5**: Des 18 vale +4 (la CA contava +3); i 68 pf (8d8+32) chiedono Cos 18, non 16; l'arco passa a +2 perché il +14 valga oltre i 9 m.
 > ⚠ **Non SRD** (DM 2026-10-18, vince la versione più forte): un ranger di 8° ha tre talenti a scelta (Resistenza Fisica, Tiro Rapido e Tiro Multiplo vengono dalla classe), qui ne ha cinque. Tiro in Corsa resta, e Mobilità è aggiunta perché è il suo prerequisito SRD: i ranger tirano e si spostano nello stesso round, e contro gli attacchi di opportunità hanno CA +4. PF1e: il ranger dell'8° ha sei talenti (quattro di livello e due di stile di combattimento), quindi la lista ne supera il conto di uno solo.
 
 <div style="page-break-before:always"></div>
@@ -667,7 +666,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 > **Verifica 3.5 (versione più forte)**: il Campione Nanico si legge come il
 > Difensore Nanico dell'SRD (dado vita d12, chiede Schivare, Resistenza Fisica e
-> Robustezza) [INFERRED]: 10d10+3d12+68 dà i 142 pf. Schivare entra nella CA
+> Robustezza): 10d10+3d12+68 dà i 142 pf. Schivare entra nella CA
 > (25). Arma Focalizzata porta il martello a +21. Colpo Devastante, Presenza
 > Comandante e la Postura 3/giorno al 3° livello sono della classe della
 > campagna, non dell'SRD [Private source — classe della campagna]. PF1e:
@@ -696,7 +695,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco:** *Arco Lungo Composito Potente (+3) +3* +19 a distanza (1d8+6/x3)
 **Attacco Completo:** *Arco Lungo Composito +3* +19/+14/+9 a distanza (1d8+6/x3), o *Asce Gemelle +2* +16/+11 (1d6+5) con una, +14/+9 (1d6+5) e +14 (1d6+3) con due
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
-**Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 [INFERRED: Cos 18 per i pf]
+**Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 (Cos 18 per i pf)
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
 **Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
 
@@ -747,7 +746,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   2° (CD 18): *Cura Ferite Moderate* (x3), *Forza del Toro* (x2), *Resistenza dell'Orso*, *Silenzio*, *Arma Spirituale* (D)
 *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
-**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
+**Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra, Incidere Rune [Private source — Forgotten Realms Campaign Setting]; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
 **Equipaggiamento:** *Armatura a Bande +2*, *Scudo Pesante Runico +1* (RI 15), *Martello da Guerra Sacro +2*, *Simbolo Sacro di Mithral*.
 
 **Tattiche di Combattimento:**
@@ -763,7 +762,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 > Focalizzata = +14. Scacciare 10/giorno con Scacciare Extra.
 > ⚠ Prerequisito: il Sacerdote delle Rune si legge come il Runecaster
 > [Private source — Forgotten Realms Campaign Setting], che chiede il talento
-> Incidere Rune, assente. Resta. PF1e: nessuna classe di prestigio
+> Incidere Rune: è aggiunto ai talenti, uno in più di quelli di un 12°
+> livello (⚠ **Non SRD**, DM 2026-10-18, vince la versione più forte). PF1e: nessuna classe di prestigio
 > equivalente; sarebbe un chierico con il talento *Inscribe Magical Tattoo*.
 
 **Momenti Eroici Consigliati:**
@@ -793,7 +793,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   2° (CD 16): *Invisibilità*, *Immagine Speculare*, *Silenzio*, *Frantumare*
 *   1° (CD 15): *Charme su Persone*, *Identificare*, *Immagine Silenziosa*, *Cura Ferite Leggere*
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
-**Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 [INFERRED: Cos 18 per i pf]
+**Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 (Cos 18 per i pf)
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
 
@@ -3447,11 +3447,11 @@ Il morale è un valore da -5 a +5 che si applica ai tiri per colpire e ai tiri s
 ### **SESSIONE 3a — Ultima Resistenza (pregen):** 0 PX ai Rumbling Stones (D9) — bonus per il finale in B1
 
 ### **SESSIONE 3b — Rumbling Stones:**
-- **TOTALE:** 2.600 XP (650 per PG) `[INFERRED — proposta dosata, da
-  verificare al tavolo contro la XP reale bancata dal party]`
+- **TOTALE:** 2.600 XP (650 per PG) (proposta dosata: il DM la
+  ritocca al tavolo contro la XP reale del gruppo)
 
 ### **SESSIONE 4 (Rumbling Stones):**
-- **TOTALE:** 4.600 XP (1.150 per PG) `[INFERRED — stessa riserva]`
+- **TOTALE:** 4.600 XP (1.150 per PG), con la stessa riserva
 
 ### **GRAN TOTALE PX REALE (solo Rumbling Stones):** 7.200 XP (1.800 per PG)
 *Party APL 13 in ingresso (ARC-07 D8) → resta 13° a fine arco (D9:

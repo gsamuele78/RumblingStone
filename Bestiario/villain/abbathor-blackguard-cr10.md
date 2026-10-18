@@ -22,7 +22,7 @@ voci:
 
 > **Versione scelta**: quella dell'incontro epico della scala di ossa (Blackguard 10, GS 10, 98 pf, CA 25), più forte dell'export PCGen (Ladro 1 / ex-Paladino 6 / Blackguard 2, 68 pf, CA 22) e scritta per questo scontro. Il testo lo fa umano; qui resta **nano**, come la fazione e il culto di Abbathor, e alla sua serie (For 18 Des 12 Cos 14 Int 10 Sag 12 Car 16) si applicano i modificatori del nano (Cos +2, Car −2). Con Cos 16 torna anche il «10d10+30» del testo, che con Cos 14 non tornava. Sag e Car salgono con due oggetti (nota qui sotto).
 
-> [INFERRED — needs DM confirmation] **pf 98**: quelli del testo, tirati e dentro la fascia legale di 10d10+30 (40-130); la media sarebbe 85. Si tengono perché sono i più alti.
+> **pf 98**: quelli del testo, tirati e dentro la fascia legale di 10d10+30 (40-130); la media sarebbe 85. Si tengono perché sono i più alti.
 
 > **Oggetti aggiunti per non far scendere nessun numero del testo**: resa nana, la sua Car scende a 14, e con Sag 12 le CD degli incantesimi sarebbero 11 + livello invece delle 13 + livello del testo. Un *periapto della saggezza* +4 (Sag 16) riporta le CD a 13 + livello e dà gli slot bonus; un *mantello del carisma* +2 (Car 16) riporta l'imposizione delle mani a 30 pf e la benedizione oscura a +3. Tutti e due sono oggetti che un campione di culto porta.
 
@@ -34,7 +34,7 @@ Medium humanoid (dwarf), Blackguard 10, LE.
 
 **Difesa** **CA 26**, contatto 11, colto alla sprovvista 25 (armatura completa +2, scudo pesante d'acciaio +2, +1 Des, +1 naturale) · **pf 98** (10 DV) · TS Temp +14, Rifl +8, Vol +10 (benedizione oscura +3 e mantello +1 inclusi; +2 contro veleni, incantesimi e capacità magiche) · aura del male
 
-**Attacco** Vel 6 m · **Mischia** spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni) · **Colpire il bene** 3/giorno (+3 al tiro, +10 ai danni) · **Attacco furtivo** +3d6 · **Aura di disperazione** (i nemici entro 3 m hanno −2 ai TS) · **Incantesimi da Blackguard** (LI 10°; CD 13 + livello): 1° (3) — *arma corrotta, infliggi ferite leggere, causare paura*; 2° (3) — *forza del toro, infliggi ferite moderate, frantumare* `[INFERRED]`; 3° (3) — *contagio, infliggi ferite gravi, oscurità profonda* `[INFERRED]`; 4° (1) — *veleno* `[INFERRED]`
+**Attacco** Vel 6 m · **Mischia** spada lunga sacrilega +1 +16/+11 (1d8+5/19-20 più 2d6 sacrilego contro i buoni) · **Colpire il bene** 3/giorno (+3 al tiro, +10 ai danni) · **Attacco furtivo** +3d6 · **Aura di disperazione** (i nemici entro 3 m hanno −2 ai TS) · **Incantesimi da Blackguard** (LI 10°; CD 13 + livello): 1° (3) — *arma corrotta, infliggi ferite leggere, causare paura*; 2° (3) — *forza del toro, infliggi ferite moderate, frantumare*; 3° (3) — *contagio, infliggi ferite gravi, oscurità profonda*; 4° (1) — *veleno*
 
 **Statistiche** For 18, Des 12, Cos 16, Int 10, Sag 16, Car 16 · BAB +10; Lotta +14 · **Talenti** Fendere, Spezzare Migliorato, Attacco Poderoso, Arma Focalizzata (spada lunga) · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, spada lunga sacrilega +1, mantello della resistenza +1, amuleto dell'armatura naturale +1, periapto della saggezza +4, mantello del carisma +2, 2 pozioni di *cura ferite moderate*, 2 pozioni di *forza del toro*
 

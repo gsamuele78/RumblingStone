@@ -34,7 +34,7 @@ attacchi:
 
 **Capacità speciali**
 **Special**: Rage 2/day (+4 Str/Con, +2 Will, -2 AC, 10 rounds; fatigued afterwards), rock throwing (36 m, 2d6+7), afferrare rocce, schivare prodigioso migliorato, percepire trappole +1, Red Hand command aura (+1 morale to hobgoblin 30 ft; non SRD, canone del DM 2026-10-18).
-- **Squartare (Str)**: se colpisce con tutti e due gli schianti, 2d6+10. Un gigante delle colline non ha artigli: la scheda lo dava «con gli artigli»; si tiene sugli schianti come capacità speciale aggiunta (SRD, *Improving Monsters*: attacco speciale minore, +1 GS) `[INFERRED — needs DM confirmation]`. PF1e: *rend* è una regola universale dei mostri che vuole due attacchi naturali, e gli schianti lo sono — si avvicina, non stravolge.
+- **Squartare (Str)**: se colpisce con tutti e due gli schianti, 2d6+10. Un gigante delle colline non ha artigli: la scheda lo dava «con gli artigli»; si tiene sugli schianti come capacità speciale aggiunta (SRD, *Improving Monsters*: attacco speciale minore, +1 GS). PF1e: *rend* è una regola universale dei mostri che vuole due attacchi naturali, e gli schianti lo sono — si avvicina, non stravolge.
 - **Ira intimidatoria** `[Private source — Complete Warrior]`: entrando in ira, un nemico che lo vede è scosso finché l'ira dura (Volontà nega). PF1e: il potere d'ira *intimidating glare* fa la stessa cosa con Intimidire — si avvicina.
 > ⚠ Prerequisito: sette talenti chiedono 18 DV; la scheda ne contava 17. Il gigante passa da 12 a 13 DV razziali (dentro l'avanzamento SRD del gigante delle colline, 13-18 DV Grande; +1 DV non cambia il GS) e tiene così anche Comandare.
 

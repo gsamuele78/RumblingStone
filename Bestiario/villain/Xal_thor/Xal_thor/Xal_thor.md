@@ -128,7 +128,7 @@ Xal'thor **non è l'unico Illithid presente al Torneo di Dauth**. Un secondo con
 - *Levitate* — si pone fuori portata di melee
 - *Plane Shift* — fuga di emergenza
 - *Suggestion* (Vol CD 16) — direziona un bersaglio verso un'azione specifica
-- *Telekinesis* (3/giorno, non è un potere dell'illithid base) — controlla l'ambiente dell'arena [INFERRED — needs DM confirmation]
+- *Telekinesis* (3/giorno, non è un potere dell'illithid base) — controlla l'ambiente dell'arena
 
 #### Poteri Psion 6 (Punti Psiconici: 53 — 35 da Psion 6, 18 da Int 22)
 Tratta come incantesimi Psion del livello appropriato. Poteri chiave:

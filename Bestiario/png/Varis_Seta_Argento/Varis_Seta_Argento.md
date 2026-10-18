@@ -109,7 +109,7 @@ Varis è già il fornitore del *Mantello dei Tiri Salvezza*. Ha già 3 transazio
 - **Riflessi:** +9 (+5 Base: ladro 4 +4, esperto 4 +1; +2 Des, +2 Riflessi Fulminei)
 - **Volontà:** +9 (+5 Base: ladro 4 +1, esperto 4 +4; +2 Sag, +2 Volontà di Ferro)
 
-**BAB:** +6 | **Lotta:** +6 | Attacchi: Pugnale nascosto +1 +7/+2 in mischia o +9 lanciato (1d4+1, 19–20/×2) — usato solo in extremis; il +1 del pugnale è `[INFERRED — needs DM confirmation]`
+**BAB:** +6 | **Lotta:** +6 | Attacchi: Pugnale nascosto +1 +7/+2 in mischia o +9 lanciato (1d4+1, 19–20/×2) — usato solo in extremis
 
 **Capacità di classe (Ladro 4):** attacco furtivo +2d6, eludere, scoprire trappole, percepire trappole +1, schivare prodigioso.
 
@@ -178,7 +178,7 @@ Nessun modulo d'arco porta un secondo statblocco di Varis: questa scheda è l'un
 
 Benchmark: PF T1-1 riga 6: CA 16 vs 19 / pf 44 vs 70 (sotto) / atk +7 vs +12 / TS buoni +9 vs +9. Non combatte (§In combattimento): il GS 6 è quello di Ladro 4 / Esperto 4, e i numeri lo dicono.
 
-Boost log: correzione dei conti (SRD) — GS 6 → 6 — CA e Volontà salgono, quattro talenti scritti dove la scheda non ne aveva; pf 44 e attacco +7 tenuti con un amuleto della salute +2 e un pugnale +1 (INFERRED).
+Boost log: correzione dei conti (SRD) — GS 6 → 6 — CA e Volontà salgono, quattro talenti scritti dove la scheda non ne aveva; pf 44 e attacco +7 tenuti con un amuleto della salute +2 e un pugnale +1.
 
 <!-- storico -->
 > Valori superati, campo per campo (dalla scheda prima della revisione del 2026-10-16):

@@ -2456,13 +2456,13 @@ via `[CANONE — DM 2026-10-12]`.
 guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
 terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
 riga «Gli parlano» riesce con **CD 14**. Il segno resta il suo ricordo di loro:
-in ARC-09 Sal lo cerca su quel polso `[INFERRED — needs DM confirmation]`.
+in ARC-09 Sal lo cerca su quel polso.
 
 **Se tornano in volo.** Sopra i 20 m nessuno ha motivo di scendere fra le
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
 scena comincia da dove atterrano; se no, Vatore è sulle mura all'alba, nel
-caos, come se il tavolo avesse fretta (qui sotto) `[INFERRED — needs DM confirmation]`.
+caos, come se il tavolo avesse fretta (qui sotto).
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore

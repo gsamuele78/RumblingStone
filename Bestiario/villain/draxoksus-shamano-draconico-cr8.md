@@ -25,7 +25,7 @@ voci:
 
 > **Versione scelta**: lo **stadio 2**, Dragon Shaman 6 (GS 8), più forte dello stadio 1 (Dragon Shaman 5, GS 7): 56 pf, CA 22, RI 16, soffio 3d6, *tocco di vitalità*. I numeri del blocco sono quelli con la *pozione di forza del toro* già bevuta (For 20), come li dava l'export dello stadio 1: tutti e due gli stadi la portano, e così nessun attacco scende sotto quelli di prima. Senza pozione: For 16, morning star +9 (1d8+4), artigli +7 (1d4+3), morso +2 (1d6+1), Lotta +7. **pf 56**: primo dado al massimo, gli altri alla media.
 
-> [INFERRED — needs DM confirmation] **GS 8**: hobgoblin con 6 livelli da PG (6) e mezzo-immondo (+2).
+> **GS 8**: hobgoblin con 6 livelli da PG (6) e mezzo-immondo (+2).
 
 Medium outsider (native), hobgoblin mezzo-immondo Dragon Shaman 6 `[Private source — Player's Handbook II]` (totem blu, culto di Tiamat), LE. Mezzo-immondo, hobgoblin: SRD.
 
@@ -38,7 +38,7 @@ Medium outsider (native), hobgoblin mezzo-immondo Dragon Shaman 6 `[Private sour
 **Statistiche** For 20 (16 senza pozione), Des 16, Cos 16, Int 13, Sag 8, Car 15 · BAB +4; Lotta +9 · **Talenti** Diving Charge `[Private source — non SRD]`, Powerful Charge `[Private source — non SRD]`, Arma Focalizzata (morning star); Abilità Focalizzata (Sapienza Magica) di classe · **Abilità** Raggirare +7, Intimidire +8, Sapienza Magica +9, Muoversi Silenziosamente +5 · **Equipaggiamento** morning star +1, giaco di maglia +1, scudo pesante di metallo +1, pozione di *scudo della fede* +2, pozione di *cura ferite moderate*, pozione di *forza del toro*, gemme
 
 **Capacità speciali**
-- **Aura draconica** (Sop, azione veloce): +2 a sé e agli alleati entro 9 m; una sola aura attiva per volta. Qui la tiene sulla potenza (ai danni in mischia) `[INFERRED]`.
+- **Aura draconica** (Sop, azione veloce): +2 a sé e agli alleati entro 9 m; una sola aura attiva per volta. Qui la tiene sulla potenza (ai danni in mischia).
 - **Tocco di vitalità** (Sop, 6°): cura fino a 24 pf al giorno col tocco (2 × livello × mod Car).
 - **Risolutezza draconica** (Str): immune a sonno, paralisi e presenza terrificante dei draghi.
 - **Ali da mezzo-immondo**: vola alla sua velocità sul terreno, manovrabilità media.

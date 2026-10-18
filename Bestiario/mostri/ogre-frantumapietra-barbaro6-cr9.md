@@ -18,7 +18,7 @@ attacchi:
 ```
 
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Riflessi +1 → **+2**: gigante 4 DV (+1) + Barbaro 6 (+2) + Des 8 (−1). La Des 8 è confermata da tre numeri della scheda: «−1 Des» nella CA, contatto 8, iniziativa −1. L'ira non tocca la Destrezza, quindi anche in ira è +2.
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Riflessi +1 → **+2**: gigante 4 DV (+1) + Barbaro 6 (+2) + Des 8 (−1). La Des 8 è confermata da tre numeri della scheda: «−1 Des» nella CA, contatto 8, iniziativa −1. L'ira non tocca la Destrezza, quindi anche in ira è +2.
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 

@@ -60,7 +60,7 @@ In breve, per chi prepara la scena: **CA 31** (36 col pre-buff, taglia Grande), 
 #### Mezzo-Drago Blu — Soffio Lineare (Su)
 - **Effetto:** Linea di elettricità, 18 m, 6d8 danni
 - **TS:** Riflessi CD 23 per dimezzare
-- **Ricarica:** 1/giorno per l'SRD; 1d4 round come dono di Tiamat `[INFERRED — needs DM confirmation]`
+- **Ricarica:** 1/giorno per l'SRD; 1d4 round come dono di Tiamat (non SRD, canone del DM 2026-10-18)
 - **Tattica:** Usato all'inizio del combattimento contro il gruppo compatto, o per interrompere incantatori che si concentrano
 
 #### Aura di Comando (Ex)
@@ -74,11 +74,11 @@ Tutti gli alleati hobgoblin entro 9 m da Azarr Kul guadagnano +2 morale ai tiri 
 | Oggetto | Note |
 |:---|:---|
 | **Armatura Completa +2** | Nera, incisa con le cinque teste di Tiamat |
-| **Scudo Pesante +2 animato** | Gli fluttua accanto e lascia libere le due mani per lo spadone `[INFERRED]` |
+| **Scudo Pesante +2 animato** | Gli fluttua accanto e lascia libere le due mani per lo spadone |
 | **Spadone Sacrilego +2** | +2d6 vs Buono; arma del sacrificio rituale |
 | **Anello di Protezione +2** | Contribuisce alla CA deflessione |
 | **Mantello della Resistenza +2** | +2 a tutti i TS (la scheda scriveva «amuleto») |
-| **Due pietre di ioun** | Rombo rosa (Cos +2) e sfera blu incandescente (Sag +2) `[INFERRED]` |
+| **Due pietre di ioun** | Rombo rosa (Cos +2) e sfera blu incandescente (Sag +2) |
 | **Componenti Rituali** | Sangue di Astruriel + Sigillo di Ossidiana (per invocare l'Avatar) |
 
 ### Tattiche

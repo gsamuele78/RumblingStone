@@ -24,7 +24,7 @@ voci:
 
 > correzione 3.5 da `scripts/conformita_statblocchi.py`: Volontà +8 → **+9**: aranea 3 DV (+1) + Stregone 6 (+5) + Sag 13 (+1) + **Ferrea Volontà** (+2). La scheda nominava il talento accanto al numero che non lo contava.
 
-> [INFERRED — needs DM confirmation] correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +6 → **+7**: aranea 3 DV (bestia magica, Tempra buona +3) + Stregone 6 (+2) + Cos 14 (+2).
+> correzione 3.5 da `scripts/conformita_statblocchi.py`: Tempra +6 → **+7**: aranea 3 DV (bestia magica, Tempra buona +3) + Stregone 6 (+2) + Cos 14 (+2).
 
 > [INFERRED — needs DM confirmation] `attributi` copiati dalla riga delle caratteristiche di questa stessa scheda da `scripts/genera_attributi.py`.
 
@@ -49,7 +49,7 @@ Rifl +7, Vol +9** (Ferrea Volontà).
 
 **Attacco** Vel 15 m, scalare 7,5 m (forma vera) · **Mischia** morso +8 (Arma Accurata) (1d6 + veleno).
 
-**Incantesimi noti** (Stregone 6 sommato all'innato dell'aranea, che lancia come uno stregone di 3° livello: **LI 9**, conosciuti e al giorno da stregone 9 [INFERRED — needs DM confirmation: era la scelta lasciata al DM fra LI 6 e LI 9, presa sulla lettura più forte]; al giorno 6/7/7/7/4 con Car 16):
+**Incantesimi noti** (Stregone 6 sommato all'innato dell'aranea, che lancia come uno stregone di 3° livello: **LI 9**, conosciuti e al giorno da stregone 9 (era la scelta lasciata al DM fra LI 6 e LI 9: vince la più forte, canone del DM 2026-10-18); al giorno 6/7/7/7/4 con Car 16):
 - **4° (CD 17)**: *invisibilità superiore*, *porta dimensionale*
 - **3° (CD 16)**: *suggestione*, *dissolvi magie*, *sfera di invisibilità*
 - **2° (CD 15)**: *immagine speculare*, *invisibilità*, *polvere scintillante*, *ragnatela*

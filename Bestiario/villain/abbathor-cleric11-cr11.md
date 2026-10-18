@@ -35,13 +35,13 @@ Medium humanoid (dwarf), Cleric 11 di Abbathor (domini Inganno/Male), LE.
 **Attacco** Vel 6 m · **Mischia** morning star +1 +12/+7 (1d8+4) · **Incantesimi da chierico** (LI 11°, 12° per quelli del Male; CD 14 + livello; D = dominio):
 - 6° (1+D) — *ferire*; *fuorviare* (D)
 - 5° (2+D) — *colpo infuocato, uccidere i vivi*; *visione del vero* (D)
-- 4° (4+D) — *potere divino, libertà di movimento, infondere capacità magiche, interdizione alla morte* `[INFERRED]`; *veleno* (D)
-- 3° (5+D) — *dissolvi magie, epurare invisibilità, cerchio magico contro il bene, scagliare maledizione, preghiera* `[INFERRED]`; *animare morti* (D)
-- 2° (6+D) — *blocca persone, silenzio, forza del toro, resistere all'energia, arma spirituale, profanare* `[INFERRED]`; *celare allineamento* (D)
-- 1° (6+D) — *scudo della fede, favore divino, comando, protezione dal bene, benedizione, causare paura* `[INFERRED]`; *camuffare sé stesso* (D)
+- 4° (4+D) — *potere divino, libertà di movimento, infondere capacità magiche, interdizione alla morte*; *veleno* (D)
+- 3° (5+D) — *dissolvi magie, epurare invisibilità, cerchio magico contro il bene, scagliare maledizione, preghiera*; *animare morti* (D)
+- 2° (6+D) — *blocca persone, silenzio, forza del toro, resistere all'energia, arma spirituale, profanare*; *celare allineamento* (D)
+- 1° (6+D) — *scudo della fede, favore divino, comando, protezione dal bene, benedizione, causare paura*; *camuffare sé stesso* (D)
 - 0 (6) — *individuazione del magico, lettura del magico, resistenza, guida, luce, creare acqua*
 
-**Statistiche** For 16, Des 10, Cos 16, Int 12, Sag 18, Car 14 · BAB +8; Lotta +11 · **Talenti** Iniziativa Migliorata, Incantesimi Rapidi, Incantare in Combattimento, Incantesimi Inarrestabili · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, morning star +1, mantello della resistenza +2 `[INFERRED]`, amuleto dell'armatura naturale +1, bacchetta di *cura ferite moderate* (50 cariche), 2 pozioni di *cura ferite gravi*, pergamena di *ferire*, pergamena di *comando superiore*
+**Statistiche** For 16, Des 10, Cos 16, Int 12, Sag 18, Car 14 · BAB +8; Lotta +11 · **Talenti** Iniziativa Migliorata, Incantesimi Rapidi, Incantare in Combattimento, Incantesimi Inarrestabili · **Equipaggiamento** armatura completa +2, scudo pesante d'acciaio +2, morning star +1, mantello della resistenza +2, amuleto dell'armatura naturale +1, bacchetta di *cura ferite moderate* (50 cariche), 2 pozioni di *cura ferite gravi*, pergamena di *ferire*, pergamena di *comando superiore*
 
 **Capacità speciali**
 - **Intimorire non morti** (Sop): 5 volte al giorno (3 + Car), come chierico di 11° livello.

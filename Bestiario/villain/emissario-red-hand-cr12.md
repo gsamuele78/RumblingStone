@@ -33,7 +33,7 @@ Medium humanoid (goblinoid), hobgoblin Chierico 12, Legale Malvagio. Diplomatico
 
 **Difesa** CA 20 (+10 armatura completa +2), contatto 10, colto alla sprovvista 20 · pf 72 (DV 12d8+15, Robustezza inclusa) · TS Temp +9, Rifl +4, Vol +12
 
-**Attacco** Vel 9 m (6 m in armatura completa, riportata a 9 m dagli *stivali della falcata e del balzo* [INFERRED — needs DM confirmation]) · **Mischia** mazza pesante +10/+5 (1d8+1) · **Attacchi speciali** colpo distruttivo 1/giorno (dominio della Distruzione: +4 al tiro per colpire, +12 ai danni), intimorire non morti 5/giorno (livello effettivo 12) · **Incantesimi da chierico** (LI 12, CD 14 + livello; 1 slot di dominio per livello):
+**Attacco** Vel 9 m (6 m in armatura completa, riportata a 9 m dagli *stivali della falcata e del balzo*) · **Mischia** mazza pesante +10/+5 (1d8+1) · **Attacchi speciali** colpo distruttivo 1/giorno (dominio della Distruzione: +4 al tiro per colpire, +12 ai danni), intimorire non morti 5/giorno (livello effettivo 12) · **Incantesimi da chierico** (LI 12, CD 14 + livello; 1 slot di dominio per livello):
 - 6° (2+1): *barriera di lame* (CD 20), *dissolvi magie superiore*; dominio: *ferire* (CD 20)
 - 5° (3+1): *colpo infuocato* (CD 19), *cura ferite leggere di massa*, *spezzare incantamento*; dominio: *dissolvi il bene*
 - 4° (4+1): *libertà di movimento*, *potere divino*, *interdizione alla morte*, *veleno* (CD 18); dominio: *infliggi ferite critiche*

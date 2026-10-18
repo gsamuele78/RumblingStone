@@ -10,7 +10,7 @@
 - Può essere ucciso già in Sessione 2-3 (bonus "comandanti logorati", `ARC08-10-...` §5.2): in tal caso assente/sostituito al finale.
 **Notes**: adattamento RHoD (Wyrmlord-like upscalato). Distinto da Khorn (nanico) e dagli altri comandanti.
 
-Boost log: correzione dei conti — GS 14 → 14 — armatura +10, cinque talenti che i bonus già usavano [INFERRED], Tempra +18 e danno 1d10+9; aggiunto il Morale.
+Boost log: correzione dei conti — GS 14 → 14 — armatura +10, cinque talenti che i bonus già usavano, Tempra +18 e danno 1d10+9; aggiunto il Morale.
 Benchmark: PF T1-1 riga 14: CA 26 vs 29 (3 sotto) / pf 178 vs 200 (sotto) / atk +22 vs +23 (1 sotto) / CD presenza 19 vs 22 (sotto) / TS buono +18 vs +17 (sopra). È un comandante: il GS viene dai livelli di classe.
 <!-- storico -->
 Prima della correzione (2026-10-16): CA 25 (+9 armatura), Tempra +16, danno 1d10+8, PF 178 (13 DV; 13d10+108 in ARC08-01).

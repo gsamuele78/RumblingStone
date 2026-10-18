@@ -20,7 +20,7 @@ voci:
   - Qualità: celestiale (scurovisione 18 m, punire il male 1/giorno, RD 5/magia, resistenza ad acido, freddo ed elettricità 10, RI 13)
 ```
 
-> [INFERRED — needs DM confirmation] **Avanzato alla cavalcatura di un paladino di 8° livello.** L'export PCGen costruisce l'ariete a 6 DV, Int 6, armatura naturale +4: è la riga della tabella SRD per i paladini dal 5° al 7°. Rurik è Paladino 8, e la riga dall'8° al 10° dà **+4 DV** (8 in tutto), **+6** all'armatura naturale, **For +2**, **Int 7** e velocità migliorata (+3 m). Le caratteristiche vengono dal cavallo da guerra pesante SRD con queste modifiche (For 18 → 20); i pf sono la media degli 8 dadi.
+> **Avanzato alla cavalcatura di un paladino di 8° livello.** L'export PCGen costruisce l'ariete a 6 DV, Int 6, armatura naturale +4: è la riga della tabella SRD per i paladini dal 5° al 7°. Rurik è Paladino 8, e la riga dall'8° al 10° dà **+4 DV** (8 in tutto), **+6** all'armatura naturale, **For +2**, **Int 7** e velocità migliorata (+3 m). Le caratteristiche vengono dal cavallo da guerra pesante SRD con queste modifiche (For 18 → 20); i pf sono la media degli 8 dadi.
 
 > **Il template celestiale viene dal talento di Rurik** (DM 2026-10-18). *Celestial Mount* [Private source — Book of Exalted Deeds] rende la cavalcatura una creatura celestiale; qui si applica il template celestiale dell'SRD 3.5 (8 DV: RD 5/magia, resistenze 10, RI 13, punire il male 1/giorno con +8 danni, GS +2). Il testo del talento non è nel repo.
 

@@ -95,7 +95,7 @@ tavolo (D6: i giocatori le usano direttamente):
 
 | Pregen | Classe | GS | Note di verifica |
 |---|---|---|---|
-| **Borin Ferropugno** | Guerriero 10/Campione Nanico 3 | 13 | BAB +13, attacco +20/+15/+10 col Martello +2 coerente (Str 20). Colpo Devastante e Postura Difensiva = rese semplificate di talenti/abilità Dwarven Defender-like `[INFERRED]`, ok per quick-ref |
+| **Borin Ferropugno** | Guerriero 10/Campione Nanico 3 | 13 | BAB +13, attacco +20/+15/+10 col Martello +2 coerente (Str 20). Colpo Devastante e Postura Difensiva = rese semplificate di talenti/abilità Dwarven Defender-like, ok per quick-ref |
 | **Dara Occhiolesto** | Ranger 8/Esploratrice dei Picchi 4 | 12 | Nemico Prescelto Orchi +6/Giganti +4/Draghi +2 coerente con progressione Ranger; Tiro Rapido/Multiplo ok |
 | **Thorin Runaforte** | Chierico 9/Sacerdote delle Rune 3 | 12 | Domini Guerra/Terra, Scacciare 7/giorno, incantesimi di guarigione coerenti col livello effettivo di incantatore |
 | **Nala Cantapietre** | Bardo 8/Spia Maestra 4 | 12 | Ispirare Coraggio +2, Attacco Furtivo +3d6, *Velocità* al 3° liv coerenti |
