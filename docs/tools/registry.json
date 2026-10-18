@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 107,
+  "tool_count": 108,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -6523,6 +6523,81 @@
       ]
     },
     {
+      "id": "cieco_versioni",
+      "path": "scripts/cieco_versioni.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/cieco_versioni.py {campione|coppie|esito} ...",
+      "summary": "Il confronto cieco fra due versioni degli stessi box read-aloud (ADR-0093): campione congela con un seme i box da confrontare prima di riscrivere; coppie appaia i box nella versione nuova (difflib, stessa intestazione), li mette in ordine casuale e scrive la scheda per il DM con la chiave a parte; esito scioglie la chiave e applica il criterio dei 14 su 20, con l'intervallo di Wilson.",
+      "use_case": "«Il master rifatto è scritto meglio di prima, o ha solo meno difetti?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "campione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sceglie e congela i box: --ref, --seme, --per-file, --uscita, FILE..."
+        },
+        {
+          "name": "coppie",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scheda e chiave: --campione, --dopo, --seme, --scheda, --chiave."
+        },
+        {
+          "name": "esito",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scioglie la chiave: --chiave, --voti."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/prosa-cieco/campione-ARC07-DEF.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "Campione e ordine delle coppie dipendono solo dal seme; la versione si legge con git show."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/cieco_versioni.py --help",
+      "tests": [
+        "scripts/tests/test_cieco_versioni.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
+        "plans/esperimenti/prosa-cieco/FOTOGRAFIA-ARC07-2026-10-18.md"
+      ]
+    },
+    {
       "id": "componenti",
       "path": "scripts/componenti.py",
       "category": "G-orchestration-governance",
@@ -7912,6 +7987,15 @@
           "desc": "I box senza un «c'e'» presentativo ne' una dislocazione a sinistra (italiano-nativo.md §8). INDIZIO che sovrastima: la dislocazione e' rilevata a meta', quindi questa norma NON pesa nel punteggio.",
           "choices": null,
           "repeatable": false
+        },
+        {
+          "name": "--stile",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gerundio in coda, avverbi in -mente, battute lunghe dei PNG: indicatori senza peso (ADR-0093)."
         }
       ],
       "inputs": [

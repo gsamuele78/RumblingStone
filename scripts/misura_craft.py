@@ -446,6 +446,114 @@ def difetti_dei_box(testo: str) -> "dict[str, int]":
 
 
 # ─────────────────────────────────────────────────────────────────────────
+# STILE — tre indicatori di forma che il repo non contava (ADR-0093)
+#
+# Vengono dal secondo giro di ricerca del 2026-10-18 (PIANO-AVVENTURE-COMMUNITY,
+# lotto 4). Ognuno ha una fonte che dice **perché** conta, e una misura sui box
+# di oggi che dice **se separa** qualcosa. Nessuno pesa nel punteggio: sono
+# indicatori, come `>4 frasi` e `>500 car`, finché il cieco del DM non dice che
+# correggerli migliora il testo. Il bersaglio non è lo zero: è la banda dei
+# box già passati dal ciclo di prosa (ADR-0077).
+#
+#   * **gerundio in coda** — virgola, gerundio, fine della frase. I modelli
+#     istruiti usano le participiali da 2 a 5 volte più degli umani, ed è lo
+#     scarto più largo di tutti (Reinhart e altri, PNAS 2025); in italiano la
+#     forma è il gerundio appeso. Il 2026-10-18 separa ARC-08 (9 su 5.164
+#     parole di box, 9 veri su 9) dai DEF di ARC-07 (0).
+#   * **avverbi in -mente** — Browne e King li danno come il segno dello
+#     scrittore che spiega; Blatt (2017) trova una correlazione con il giudizio
+#     sui romanzi inglesi sotto le 50 ogni 10.000 parole. È una correlazione su
+#     un corpus inglese: la soglia è un allarme, non una norma. ARC-08 5,8‰,
+#     i DEF di ARC-07 da 0 a 1,2‰.
+#   * **battute lunghe** — le battute dei PNG nella forma prescritta, oltre 25
+#     e oltre 40 parole (la regola d'industria dei dialoghi di gioco).
+#
+# 🔴 **Due candidati provati e scartati, con la misura.** Il *pronome soggetto
+# tonico* (la norma pro-drop di `italiano-nativo.md` §1) dà 3 colpi in tutti i
+# box, e sono tutti e tre cambi di soggetto legittimi («Appoggia la testa sul
+# petto di Hella […]. Lei alza una mano»): precisione 0 su 3. Senza sapere chi
+# era il soggetto prima, una regex non distingue l'enfasi dal calco. La
+# *spiegazione dopo il gesto* («come a dire», «segno che») fa zero ovunque: non
+# separa niente. Contare male in negativo è peggio che non contare.
+#
+# ⚠️ I falsi positivi del gerundio sono parole in -ando/-endo che gerundi non
+# sono: le escludiamo per nome, e la lista è il limite dichiarato.
+# ─────────────────────────────────────────────────────────────────────────
+
+#: Parole in -ando/-endo che non sono gerundi.
+NON_GERUNDI = frozenset({
+    "quando", "comando", "secondo", "tremendo", "orrendo", "stupendo",
+    "reverendo", "nefando", "venerando", "dividendo", "orlando", "fernando",
+})
+
+#: Parole in -mente che non sono avverbi.
+NON_AVVERBI = frozenset({
+    "mente", "demente", "clemente", "inclemente", "veemente", "semente",
+    "fremente", "frementi", "dormente", "sementi", "menti",
+})
+
+_GERUNDIO = r"[a-zàèéìòù]{2,}(?:ando|endo)(?:l[oaie]|gli|ne|si|ci|vi|mi|ti)?"
+
+#: Virgola, gerundio, al più 80 caratteri senza un'altra virgola, poi la fine.
+#: La virgola esclusa toglie l'inciso («, raffreddandosi, prese la forma»),
+#: che è italiano normale: i due falsi positivi del primo giro erano incisi.
+_GERUNDIO_IN_CODA = re.compile(rf",\s+({_GERUNDIO})\b[^.!?;:,\n]{{0,80}}[.!?]", re.I)
+
+_AVVERBIO_MENTE = re.compile(r"\b([a-zàèéìòù]{3,}mente)\b", re.I)
+
+#: L'allarme degli avverbi: 50 ogni 10.000 parole (Blatt), cioè 5 ogni 1.000.
+ALLARME_MENTE_PER_MILLE = 5.0
+
+#: Le battute dei PNG nella forma di `editorial-standards.md` §2. La parola
+#: d'ordine dell'industria è circa 25 parole per battuta e non oltre 40
+#: (BioWare, citata dalla Neverwinter Vault); sono indicatori.
+BATTUTA_LUNGA = 25
+BATTUTA_TROPPO_LUNGA = 40
+_BATTUTA = re.compile(
+    r"\*\*[A-ZÀ-Ù][^*\n]{1,40}(?:\([^)\n]{2,30}\))?\s*:?\*\*\s*\*?«(.+?)»", re.S)
+
+
+def _parole(testo: str) -> int:
+    return len(re.findall(r"[A-Za-zÀ-ÿ']+", testo))
+
+
+def gerundi_in_coda(corpo: str) -> "list[str]":
+    """I gerundi appesi in fondo a una frase, esclusi quelli che non lo sono."""
+    return [m.group(1) for m in _GERUNDIO_IN_CODA.finditer(corpo)
+            if m.group(1).lower() not in NON_GERUNDI]
+
+
+def avverbi_mente(corpo: str) -> "list[str]":
+    return [m.group(1) for m in _AVVERBIO_MENTE.finditer(corpo)
+            if m.group(1).lower() not in NON_AVVERBI]
+
+
+def battute_png(testo: str) -> "list[int]":
+    """Le parole di ogni battuta scritta nella forma prescritta, ovunque nel file."""
+    return [_parole(m.group(1)) for m in _BATTUTA.finditer(testo)]
+
+
+def stile_dei_box(testo: str) -> "dict[str, float]":
+    """I due indicatori sui box, più la lunghezza delle battute.
+
+    Il denominatore è lo stesso di `--box`: `box_read_aloud`. Le battute si
+    contano nel file intero, perché la forma prescritta vive anche fuori dai box.
+    """
+    box = [corpo_del_box(b) for b in box_read_aloud(testo)]
+    parole = sum(_parole(c) for c in box)
+    ger = sum(len(gerundi_in_coda(c)) for c in box)
+    men = sum(len(avverbi_mente(c)) for c in box)
+    batt = battute_png(testo)
+    per_mille = (lambda n: 1000 * n / parole) if parole else (lambda n: 0.0)
+    return {"box": len(box), "parole": parole,
+            "gerundio in coda": ger, "gerundio ‰": per_mille(ger),
+            "-mente": men, "-mente ‰": per_mille(men),
+            "battute": len(batt),
+            f"battute >{BATTUTA_LUNGA}": sum(1 for n in batt if n > BATTUTA_LUNGA),
+            f"battute >{BATTUTA_TROPPO_LUNGA}": sum(1 for n in batt if n > BATTUTA_TROPPO_LUNGA)}
+
+
+# ─────────────────────────────────────────────────────────────────────────
 # P1 — il read-aloud che presuppone un'azione o un senso del giocatore
 #
 # La norma viene dalle linee guida di *Dungeon* (Paizo) e dice due cose:
@@ -791,6 +899,9 @@ def main() -> int:
     ap.add_argument("--costrutto-italiano", action="store_true",
                     help="i box senza «c'e'» presentativo ne' dislocazione a "
                          "sinistra (italiano-nativo.md §8) — INDIZIO, sovrastima")
+    ap.add_argument("--stile", action="store_true",
+                    help="gerundio in coda, avverbi in -mente, battute lunghe "
+                         "dei PNG (ADR-0093)")
     ap.add_argument("--discriminante", action="store_true",
                     help="quante coppie di bersagli ogni congegno separa: "
                          "un congegno che non ne separa nessuna e' rumore")
@@ -880,6 +991,26 @@ def main() -> int:
         print("\n   >4 frasi e >500 car sono INDICATORI, non soglie del repo: la")
         print("   prima viene da *Dungeon* («poche frasi»), la seconda dalla proposta")
         print("   del 2026-10-01. Decide il DM (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D1).")
+        print()
+
+    if args.stile:
+        print("\n\nSTILE DEI BOX — indicatori senza peso (ADR-0093)\n")
+        print(f"{'bersaglio':30} {'box':>5} {'parole':>7} {'ger.coda':>9} "
+              f"{'‰':>5} {'-mente':>7} {'‰':>5} "
+              f"{'battute':>8} {'>25':>4} {'>40':>4}")
+        for nome, modelli in BERSAGLI.items():
+            testo, _, _ = carica(modelli)
+            d = stile_dei_box(testo)
+            allarme = " 🟡" if d["-mente ‰"] > ALLARME_MENTE_PER_MILLE else ""
+            print(f"{nome:30} {d['box']:>5} {d['parole']:>7} "
+                  f"{d['gerundio in coda']:>9} {d['gerundio ‰']:>5.1f} "
+                  f"{d['-mente']:>7} {d['-mente ‰']:>5.1f} "
+                  f"{d['battute']:>8} {d[f'battute >{BATTUTA_LUNGA}']:>4} "
+                  f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}{allarme}")
+        print("\n   ‰ = ogni 1.000 parole di box. 🟡 = avverbi oltre 5‰ (Blatt, 50 su")
+        print("   10.000). Nessuna colonna e' una norma: il bersaglio e' la banda dei")
+        print("   box gia' passati dal ciclo di prosa, e decide il confronto cieco")
+        print("   (`cieco_versioni.py`), non il numero.")
         print()
 
     if args.metrature:

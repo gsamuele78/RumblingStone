@@ -438,3 +438,39 @@ class TestIndicatoriDungeon(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestStileDeiBox(unittest.TestCase):
+    """ADR-0093: tre indicatori, e i casi che li fanno sbagliare."""
+
+    def test_gerundio_appeso_in_fondo_alla_frase(self):
+        self.assertEqual(MC.gerundi_in_coda(
+            "Il drago scende sul campo, formando una tempesta di fuoco."), ["formando"])
+
+    def test_l_inciso_fra_due_virgole_non_e_coda(self):
+        # Il falso positivo del primo giro: italiano normale.
+        self.assertEqual(MC.gerundi_in_coda(
+            "Il metallo, raffreddandosi, prese la forma di un cubo."), [])
+
+    def test_quando_e_secondo_non_sono_gerundi(self):
+        self.assertEqual(MC.gerundi_in_coda("Lo vedi, quando il sole cala."), [])
+        self.assertEqual(MC.gerundi_in_coda("Arriva un messo, secondo il patto."), [])
+
+    def test_avverbi_in_mente_e_le_parole_che_non_lo_sono(self):
+        self.assertEqual(MC.avverbi_mente("Cammina lentamente, la mente altrove."),
+                         ["lentamente"])
+        self.assertEqual(MC.avverbi_mente("Un vento inclemente, una semente."), [])
+
+    def test_battute_nella_forma_prescritta(self):
+        testo = ("**BALVAR (piano):** *«Sta' buono.»*\n\n"
+                 "**DURIN:** *«" + " ".join(["parola"] * 30) + "»*\n")
+        self.assertEqual(MC.battute_png(testo), [2, 30])
+
+    def test_stile_dei_box_conta_solo_dentro_i_box(self):
+        testo = ("Fuori dal box, correndo veloce.\n\n"
+                 "> *Il drago scende sul campo, formando una tempesta. "
+                 "Lentamente, il fumo sale.*\n")
+        d = MC.stile_dei_box(testo)
+        self.assertEqual(d["box"], 1)
+        self.assertEqual(d["gerundio in coda"], 1)
+        self.assertEqual(d["-mente"], 1)

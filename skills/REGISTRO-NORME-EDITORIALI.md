@@ -56,6 +56,7 @@
 | `pc-protagonism.md` | **nessun PG oltre il 40%** delle scene marcate; **≥1 scena** a testa | **maggiore** | 🟡 `misura_craft --spotlight` — indicatore: conta le **menzioni del nome**, non le scene marcate, che il repo non marca |
 | `consequence-echoes.md` | **≥1 eco armato** quando la finzione lo consente; **≥2** alla convergenza | **maggiore** | 🟡 congegno `eco / conseguenze a distanza` conta le **menzioni**, non gli echi armati e pagati |
 | `passate-redazionali.md` | **massimo una chiusa a effetto** per documento; massimo un tricolon | **minore** · `antitesi_ripetuta` | 🟢 `validate_prosa.py --documenti` (lotto D di PROSA-CHE-NON-SEMBRI-GENERATA) |
+| `italiano-nativo.md` §1 | l'italiano è **pro-drop**: niente pronome soggetto esplicito («Lui si voltò. Lui non disse niente.») se non per enfasi | **minore** | 🔴 non misurato — provato il 2026-10-18 (ADR-0093): il pronome tonico in posizione di soggetto dà **3 colpi** in tutti i box, e sono tutti e tre cambi di soggetto legittimi («Appoggia la testa sul petto di Hella […]. Lei alza una mano»). Precisione **0 su 3**: per distinguere l'enfasi dal calco serve sapere chi era il soggetto prima, e una regex non lo sa |
 | `italiano-nativo.md` §8 | almeno una **dislocazione a sinistra** o un **c'è presentativo** | **minore** | 🟡 `misura_craft --costrutto-italiano` — **281 box su 477 (59%)**, e il numero dice che è una **sovrastima**, non un difetto. Il «c'è» presentativo si riconosce con certezza; la **dislocazione a sinistra** («Il libro, l'ho letto») vuole sapere che *libro* è l'oggetto di *letto*, e una regex non lo sa: il pattern prende i casi col clitico dopo la virgola e perde gli altri. 🔴 **Misura e non pesa, apposta**: una norma *positiva* rilevata a metà produce penalità **false** su chi la rispetta in un modo che il pattern non vede. Contare male in negativo è peggio che non contare |
 | `italiano-nativo.md` §9 | i **tic dell'IA**: antitesi «non X: è Y», tricolon, chiuse a effetto | **minore** · `calco_dall_inglese` | 🟢 `validate_prosa.py` |
 | `italiano-nativo.md` §9.2 | il **trattino lungo come respiro**: sopra il 3% delle parole di un read-aloud è un tic | **minore** · `trattino_come_respiro` | 🟢 `validate_prosa.py` — 🐛 **misurata da settembre e mai registrata**, trovata dal cancello dei pesi il 2026-09-21: il controllo di copertura guardava che ogni *file* normativo fosse elencato, non che ogni *misura* avesse la sua riga |
@@ -155,7 +156,7 @@
 |---|---:|
 | 🟢 misurate | 47 |
 | 🟡 misurate in parte, con il limite scritto | 30 |
-| 🔴 **non misurate, con la ragione scritta** | 20 |
+| 🔴 **non misurate, con la ragione scritta** | 21 |
 | ⚪ non applicabili | 4 |
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se

@@ -1,6 +1,6 @@
 # PIANO — Cosa portiamo dalle avventure della community
 
-**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md) · D1-D3 decise dal DM il 2026-10-18, nessuna aperta
+**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md), [ADR-0093](adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) · D1-D3 decise dal DM il 2026-10-18, nessuna aperta
 
 Il DM ha chiesto di confrontare i master DEF, il developer e il playtester con
 le migliori avventure della community 3.5 e PF1e, in Italia e fuori, e di
@@ -35,6 +35,20 @@ di ARC-08.
 
 Il resto della §3.2 della ricerca. Si apre dopo aver visto se i lotti 1 e 2
 trovano difetti veri.
+
+### Lotto 4 · La prosa, e come si misura se migliora 🟡 (2026-10-18)
+
+Aperto su richiesta del DM, per il rifacimento dei DEF di ARC-07: metodi presi
+dalla rete che si possono misurare e applicare. Decisione in
+[ADR-0093](adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md),
+note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
+
+- [x] FASE 1: la lunghezza dei box aveva già un indicatore (`>500 car`, D1 di PIANO-BOX-DI-LUOGO); la fonte dScryb (30-70 parole) si aggiunge a quella decisione, non fa un rilevatore nuovo
+- [x] `cieco_versioni.py`: campione congelato con un seme, coppie in ordine casuale con la chiave a parte, esito con il criterio dei 14 su 20
+- [x] `misura_craft --stile`: gerundio in coda, avverbi in -mente, battute dei PNG lunghe, con i falsi positivi contati a mano
+- [x] due candidati scartati con la misura (pronome soggetto, spiegazione dopo il gesto); la norma pro-drop nel registro come 🔴
+- [x] la fotografia di partenza e il campione di ARC-07 in `plans/esperimenti/prosa-cieco/`
+- [ ] **il dopo**: le stesse misure sul rifacimento di ARC-07, e i venti voti del DM
 
 ## 2 · La calibrazione del lotto 1
 
@@ -94,6 +108,8 @@ con le fonti, sono in `plans/esperimenti/avventure-community/`.
 python3 scripts/domande_developer.py            # il rapporto, con i rilievi D9, D10, D15, D16
 python3 scripts/domande_developer.py --check    # il cancello
 python3 -m pytest -q scripts/tests/test_domande_developer.py
+python3 scripts/misura_craft.py --stile          # lotto 4, gli indicatori di stile
+python3 -m pytest -q scripts/tests/test_cieco_versioni.py
 ```
 
 Il conto della §3 è un grep su `Bestiario/` (la preparazione dentro *Prima del
