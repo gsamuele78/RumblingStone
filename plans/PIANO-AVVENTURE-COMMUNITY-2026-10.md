@@ -75,6 +75,12 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 | ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18**: nei cinque master di ARC-07 già giocati le righe di scala **non** si aggiungono; si aggiungono solo se il master serve a un gruppo nuovo (`dm.py gruppo nuovo`) |
 | ~~D3~~ | 2 | ✅ **Decisa il 2026-10-18**: il lotto 2 si apre **insieme** a S1 di MASTER-DEF (ARC-08), perché il roster serve alle ondate |
 
+<!-- eco: AVVENTURE-COMMUNITY 2026-10-18 -->
+- **Decise**: D1 la riga «Statistiche base» quando un master usa lo statblocco · D2 niente righe di scala nei master di ARC-07 già giocati, salvo per un gruppo nuovo · D3 il lotto 2 insieme a S1 di MASTER-DEF
+- **Aperte**: nessuna
+- **Cambiate**: nessuna, tutte e tre come proposte
+- **Dedotto da me**: che il «sì sono d'accordo» valga per tutte e tre le proposte del piano, anche se il messaggio a cui rispondeva nominava per esteso solo la D1
+
 ## 4 · Come si riparte in una chat nuova
 
 Leggere la ricerca §3 e §5, poi questo piano §2. Le note delle quattro ricerche,
