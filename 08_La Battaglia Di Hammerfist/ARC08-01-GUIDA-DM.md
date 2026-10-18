@@ -409,7 +409,7 @@ SIMBOLI TATTICI:
 - **Benedizione della Forgia:** Può benedire fino a 50 armi simultaneamente
 
 **Tattiche:** *Prima del combattimento*: al mattino prepara *Banchetto degli Eroi* per gli ufficiali e consacra le armi (Benedizione della Forgia); prima di un assalto lancia *Aura Sacra* su sé e sulle Cantitrici vicine, e *Libertà di Movimento* su Re Thorek. *Durante il combattimento*: round 1 Canto di Battaglia (+2 a tutti gli alleati entro 18 m per 10 round); poi tiene in piedi i comandanti, con *Guarigione* sul re e *Cura Ferite Leggere di Massa* dopo ogni soffio; *Muro di Pietra* chiude una breccia, *Terremoto* lontano dalle mura spezza una carica. Scaccia i non morti se ne compaiono. Combatte col martello solo se un nemico le arriva addosso, e allora prima *Potere della Giustizia* e *Potere Divino*. *Morale*: non abbandona il re né il tempio; sotto i 40 pf si ritira dietro le Cantitrici, si cura e torna.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda.
+> Vale per Dana riposata, cioè il mattino della battaglia o un'altra giornata d'assedio (DM 2026-10-18). Quando arrivano i PG ha già speso quasi tutto sulle mura: le resta un solo *Muro di Pietra* (DEF-5 r.488-491, D92).
 
 > **Fonti e verifica 3.5**: la **Cantante Divina** non è una classe SRD
 > [Private source — classe non identificata nel repo]: i suoi privilegi sono

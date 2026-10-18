@@ -33,7 +33,7 @@ attacchi:
 **Feats**: Power Attack, Cleave, Great Cleave, Improved Sunder, Weapon Focus (greatclub), Intimidating Rage `[Private source — Complete Warrior]`, Leadership — sette, quanti ne danno 18 DV
 
 **Capacità speciali**
-**Special**: Rage 2/day (+4 Str/Con, +2 Will, -2 AC, 10 rounds; fatigued afterwards), rock throwing (36 m, 2d6+7), afferrare rocce, schivare prodigioso migliorato, percepire trappole +1, Red Hand command aura (+1 morale to hobgoblin 30 ft) `[INFERRED — non SRD]`.
+**Special**: Rage 2/day (+4 Str/Con, +2 Will, -2 AC, 10 rounds; fatigued afterwards), rock throwing (36 m, 2d6+7), afferrare rocce, schivare prodigioso migliorato, percepire trappole +1, Red Hand command aura (+1 morale to hobgoblin 30 ft; non SRD, canone del DM 2026-10-18).
 - **Squartare (Str)**: se colpisce con tutti e due gli schianti, 2d6+10. Un gigante delle colline non ha artigli: la scheda lo dava «con gli artigli»; si tiene sugli schianti come capacità speciale aggiunta (SRD, *Improving Monsters*: attacco speciale minore, +1 GS) `[INFERRED — needs DM confirmation]`. PF1e: *rend* è una regola universale dei mostri che vuole due attacchi naturali, e gli schianti lo sono — si avvicina, non stravolge.
 - **Ira intimidatoria** `[Private source — Complete Warrior]`: entrando in ira, un nemico che lo vede è scosso finché l'ira dura (Volontà nega). PF1e: il potere d'ira *intimidating glare* fa la stessa cosa con Intimidire — si avvicina.
 > ⚠ Prerequisito: sette talenti chiedono 18 DV; la scheda ne contava 17. Il gigante passa da 12 a 13 DV razziali (dentro l'avanzamento SRD del gigante delle colline, 13-18 DV Grande; +1 DV non cambia il GS) e tiene così anche Comandare.
@@ -53,7 +53,6 @@ Affaticato: niente corsa né carica fino alla fine dell'incontro (SRD, barbaro).
 - *Durante il combattimento*: round 1, attacco completo col randello e Attacco Poderoso a −5 se il campione ha CA sotto 25; contro un PG che brandisce Aegis Fang o un'arma magica tenta Spezzare Migliorato. Round 2, quando è ferito, entra in ira (217 pf, randello +25/+20/+15, 2d8+15) e chiunque lo veda deve resistere all'ira intimidatoria. Round 3 e seguenti, Incalzare e Incalzare Potenziato sui soldati che il campione si porta dietro. Contro chi vola o resta a distanza scaglia rocce (+13, 2d6+7). Combatte d'onore finché è in vantaggio; se perde, **bara**: sotto metà dei pf fischia al razorfiend Alfa che lo segue, e la scorta entra nel duello.
 - *Morale*: sotto 60 pf, o quando l'ira finisce e lui è affaticato, ripiega verso le sue linee in sella al razorfiend (12 m, scavare): il duello resta «inconcluso» e il settore non cambia di grado. Se è circondato e non può fuggire, combatte fino alla morte; non si arrende a un nano.
 
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda e sulla Carta 13.
 
 Benchmark: PF T1-1 riga 13: CA 23 sotto (28) / pf 181 in linea (180; 217 in ira) / attacco +23 sopra (+22) / danno pieno ~58 sotto (60) / TS buono +17 sopra (16). Per l'SRD gigante delle colline (GS 7) + 5 livelli di barbaro associati + squartare = GS 13; la Carta 13 mette lo scontro a EL 12-14.
 

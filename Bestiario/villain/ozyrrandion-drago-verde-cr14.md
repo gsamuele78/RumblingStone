@@ -55,7 +55,7 @@ Huge dragon (air), 22 HD, LE. Drago verde adulto SRD avanzato; incantesimi da st
   - **Round 4 e seguenti**: se i PG non volano, fluttua sopra di loro per l'attacco completo dentro la nube di polvere; se volano, li tira lontano dal pianoro e dai loro compagni.
   - Contro l'incantatore che lo rende visibile o lo inchioda: *charme su persone* o *suggestione* sul guerriero più vicino a lui, perché lo protegga.
 - *Morale*: sotto 90 pf si rende invisibile, beve la pozione e se ne va verso l'Orda. Con Zalkatar ha un patto, non un debito, e non muore per la Torre. Se fugge, i PG lo ritrovano nella seconda ondata della battaglia finale di Rethmar, accanto a Tyrgarun.
-> [INFERRED — needs DM confirmation] Tattiche scritte da un agente sui poteri della scheda. I moduli della Torre Invisibile non mettono il drago in nessuna stanza: il pianoro di accesso è il posto scelto qui.
+> Il posto è il pianoro di accesso alla Torre Invisibile (DM 2026-10-18): i moduli della Torre non mettevano il drago in nessuna stanza.
 
 Benchmark: PF T1-1 riga 14: CA 31 sopra (29) / pf 275 sopra (200) / attacco +28 sopra (+23) / danno pieno ~75 sopra (65) / CD soffio 27 sopra (22) / TS buono +19 sopra (17). Sopra la riga in tutto, come i draghi SRD dello stesso GS: è il GS 14 che le Armate gli danno, alla pari di Zalkatar e non sopra di lui. In coppia con Zalkatar l'incontro è EL 16, sotto il tetto di 17.
 

@@ -229,10 +229,10 @@ Tempestas, prima di partire (mattina del Giorno 22), lascia ai PG una piccola fi
 ### CAPACITÀ SPECIALI
 
 #### Musica bardica (12/giorno)
-Un uso per livello da bardo. **Ispirare Coraggio** (Sop): +2 morale ai TS contro charme e paura e +2 morale ai tiri per colpire e ai danni con le armi, per tutti gli alleati che lo sentono, finché suona e per 5 round dopo. Ha anche controcanto, affascinare, ispirare competenza, suggestione (CD 22), ispirare grandezza e canzone della libertà. Se il DM stabilisce che i livelli da Cantore delle tempeste si sommano a quelli da bardo per la musica, gli usi salgono a 14 e Ispirare Coraggio a +3 `[INFERRED — needs DM confirmation]`.
+Un uso per livello da bardo. **Ispirare Coraggio** (Sop): +2 morale ai TS contro charme e paura e +2 morale ai tiri per colpire e ai danni con le armi, per tutti gli alleati che lo sentono, finché suona e per 5 round dopo. Ha anche controcanto, affascinare, ispirare competenza, suggestione (CD 22), ispirare grandezza e canzone della libertà. I livelli da Cantore delle tempeste non si contano: 12 usi e Ispirare Coraggio +2 (DM 2026-10-18, il conto che si verifica sull'SRD).
 
 #### Cantata della Tempesta Tonante (Sop) — *firma personale*
-1/incontro, azione di round completo. Tempestas suona un canto fra le note: tutti gli alleati entro 18 m ottengono **+2 morale ad attacchi/danni/TS** per 10 round. Inoltre, tutte le creature ostili entro 18 m subiscono **2d6 danni elettrici** all'inizio del proprio turno per i primi 3 round (Riflessi CD 23 per metà: 10 + metà dei DV + Car; **bersagli con armatura metallica subiscono 1d6 extra**). È il privilegio che la scheda dà al Cantore delle tempeste `[INFERRED — needs DM confirmation]`.
+1/incontro, azione di round completo. Tempestas suona un canto fra le note: tutti gli alleati entro 18 m ottengono **+2 morale ad attacchi/danni/TS** per 10 round. Inoltre, tutte le creature ostili entro 18 m subiscono **2d6 danni elettrici** all'inizio del proprio turno per i primi 3 round (Riflessi CD 23 per metà: 10 + metà dei DV + Car; **bersagli con armatura metallica subiscono 1d6 extra**). È la firma personale di Tempestas, non un privilegio della classe: un altro Cantore delle tempeste non la ha (DM 2026-10-18).
 
 #### Suggestione di Massa (Mag)
 1/giorno, come *suggestione di massa* (incantatore di 14° livello). CD 21 Volontà.

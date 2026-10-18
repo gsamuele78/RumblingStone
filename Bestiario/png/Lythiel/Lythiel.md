@@ -128,7 +128,6 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - *Prima del combattimento*: se ha un minuto, *pelle coriacea* su di sé e *resistere all'energia* contro il fuoco dei piromanti. Tira dalla sella, a più di 9 m dal bersaglio, e il primo colpo è Tiro Multiplo sull'incantatore.
 - *Morale*: sotto 20 pf, o se Inathiel scende sotto metà dei suoi, si alza in quota fuori tiro e torna solo per Hella. Non si arrende ai drow.
 
-> [INFERRED — needs DM confirmation] Le righe *Prima del combattimento* e *Morale* sono scritte da un agente sui poteri della scheda.
 
 ### STATISTICHE D&D 3.5
 
@@ -166,7 +165,7 @@ Niente subito. Solo: *"Quando vedi Saraah, dille che ho mantenuto la promessa. L
 - **Andatura nel Bosco** (Ex, si muove alla velocità normale nel sottobosco naturale)
 - **Cammino Senza Tracce** (Ex) — non è un privilegio del ranger SRD, è del druido: la scheda glielo dà per gli anni nel Cerchio `[INFERRED — needs DM confirmation]`
 - **Stile di Combattimento (Tiro)**, poi **Stile Migliorato**: Tiro Rapido e Tiro Multiplo come talenti bonus
-- **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Sono una scelta di questa revisione, sulla lista del ranger `[INFERRED — needs DM confirmation]`
+- **Incantesimi da ranger** (incantatore di 4° livello, CD 13+liv; 2/1 al giorno con Saggezza 16): di solito *resistere all'energia* e *passo veloce* al 1°, *pelle coriacea* al 2° (+2 di armatura naturale per 40 minuti). Confermati dal DM il 2026-10-18: il testo del 2026-05-04 («sa lanciare 0 incantesimi») è superato
 - **Inathiel** — Gufo Gigante Celestiale (PF 35, CA 17, Volo 24m, attacchi: artigli +8/+8 (1d6+3), morso +6 (1d8+1)), la sua cavalcatura
 
 > ⚠ Prerequisito: il gufo gigante è una **bestia magica**, non un animale, e non è nella lista dei compagni animali dell'SRD; in più è celestiale. Come compagno animale del ranger non si può prendere. La scheda lo tiene così com'è: va letto come una cavalcatura legata, come i gufi del Signore Ventolesto, non come un privilegio di classe `[INFERRED — needs DM confirmation]`. PF1e: il compagno animale del ranger PF1e non ammette bestie magiche nemmeno lì; il talento *Leadership* lo prenderebbe come gregario, ma stravolge (il gufo diventerebbe un PNG che sale di livello).

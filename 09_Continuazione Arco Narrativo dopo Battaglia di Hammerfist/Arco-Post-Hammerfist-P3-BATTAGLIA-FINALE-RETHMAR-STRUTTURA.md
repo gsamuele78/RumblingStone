@@ -270,7 +270,7 @@ quantificato, mai un wargame:
 | Ruolo | PG tipico | Effetto meccanico |
 |---|---|---|
 | **Comandante** | Thorik / Tordek | +2 al check di Morale di **un** settore per l'ondata corrente (Thorik, Custode Eterno con titolo di Re Thorek, dà +3) |
-| **Campione** | Tordek / Thorik | Duello pubblico contro un capo nemico (Wyrmlord Karruk CR 10, capitano hobgoblin CR 8): se vinto, l'ondata di quel settore perde 1 grado di CD (pesante→leggera) e +1 Fronte |
+| **Campione** | Tordek / Thorik | Duello pubblico contro un capo nemico (Wyrmlord Karruk CR 13, capitano hobgoblin CR 8): se vinto, l'ondata di quel settore perde 1 grado di CD (pesante→leggera) e +1 Fronte |
 | **Fulcro Arcano** | Artemis | Sbarramento arcano/utility: **nega una passata di soffio** di Tyrgarun o di un Razorfiend a un settore (vedi §9.4), o dissolve un focus/evocazione |
 | **Salvatore** | Hella | Triage/evacuazione di massa: annulla per una campana il malus di un settore civile in crisi (ospedale, rifugiati) e stabilizza il Morale Cittadino |
 

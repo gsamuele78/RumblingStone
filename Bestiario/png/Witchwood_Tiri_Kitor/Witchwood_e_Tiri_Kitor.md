@@ -69,7 +69,7 @@ Boost log: (vuoto)
 
 ## 4. Trellara Nightshadow — la Barda in Lutto
 
-**Role**: ally (memoria e morale della tribù) `[INFERRED — needs DM confirmation]`
+**Role**: ally (memoria e morale della tribù; DM 2026-10-18)
 **Status**: viva, Starsong Hill — porta un lutto recente (le perdite dei Tiri Kitor contro le avanguardie della Mano Rossa) `[INFERRED]`
 **Location**: Starsong Hill
 **Motivation**: dare un nome e un canto ai caduti della tribù prima che la guerra li cancelli.
