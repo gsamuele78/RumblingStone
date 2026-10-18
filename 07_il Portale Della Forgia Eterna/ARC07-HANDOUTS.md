@@ -72,10 +72,12 @@
 |---|---|
 | Pelle di Pietra | passiva, 24 h: resistenza al fuoco 10 e al freddo 5 |
 | Cuore Incrollabile | passiva, 24 h: immunità al caldo e al freddo ambientali non letali, +2 ai TS su Tempra contro gli effetti ambientali |
-| Vigore della Forgia | 3 cariche al giorno, tornano all'alba: 3d8+5 a sé (azione standard), 2d8+2 a un alleato a contatto |
+| Vigore della Forgia | 3 cariche, che tornano a ogni sonno di otto ore finché la Benedizione è attiva (24 ore vissute dalla preghiera all'Altare) `[CANONE — DM 2026-10-18]`: 3d8+5 a sé (azione standard), 2d8+2 a un alleato a contatto |
 
-> Si rinnovano pregando 10 minuti all'Altare del Cuore di Moradin, una volta al
-> giorno. Vale il PDF, per decisione del DM del 2026-09-25.
+> Si rinnovano pregando 10 minuti all'Altare del Cuore di Moradin, una volta
+> ogni 24 ore vissute: due sonni ravvicinati non rinnovano niente, e lontano
+> dalla Sala si spengono alla scadenza `[CANONE — DM 2026-10-18]`. Vale il PDF,
+> per decisione del DM del 2026-09-25.
 
 ---
 

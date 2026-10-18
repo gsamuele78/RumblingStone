@@ -115,6 +115,13 @@ Versione “ridotta” dell’Aspect of Tiamat (senza tutte le teste full power)
 
 Usane 2–4 come guardia del rituale o scorta di Azarr Kul.
 
+### Abishai azzurri della Mano
+
+GS 11. Lo statblocco completo è in `Bestiario/mostri/abishai-azzurro-mano-cr11.md`
+(14 DV, 147 pf, CA 25, rigenerazione 7, *catena di fulmini*). Due abishai valgono
+EL 13, quattro EL 15. Si mescolano alle erinni: le erinni tengono la mischia
+attorno al cerchio, gli abishai colpiscono dall'alto e rigenerano.
+
 ---
 
 ## 4. Esempio Arcimago del Circolo degli Otto (CR 17)
