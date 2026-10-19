@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 17 decisioni aperte
+## Aspetta il DM: 29 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -30,6 +30,18 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
 | `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
+| `MASTER-DEF` | D9 | giro | Fauci di Palude: la versione F (si schianta ai round 18-20 e duella coi PG, Thorik in punta), quella di A e B (fugge al round 5 e lo combattono i PNG) o un ibrido (fugge sotto i 50 pf, salvo che i PG lo inseguano in vol… |
+| `MASTER-DEF` | D10 | giro | Le schede che mancano (bugbear, guardie orog di Grimjaw, gufi giganti): aggiungerle a `Bestiario/mostri/` dall'SRD, o sostituirle con schede che esistono? Consigliata: aggiungerle dall'SRD (giro del 2026-10-19,… |
+| `MASTER-DEF` | D11 | giro | Quando arriva Grimjaw nel 3B: al round 12 con un corno al round 11, ai round 9-10 insieme ai PG, o ai round 14-15? Consigliata: round 12 col corno all'11 (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
+| `MASTER-DEF` | D12 | giro | Re Thorek morente: Guarigione CD 25 a ogni round finché nessuno lo cura per magia, e tre fallimenti lo uccidono, oppure la morte per scelta del DM? E Dana, 20 pf e un muro o metà delle risorse? Consigliata: il tiro (gir… |
+| `MASTER-DEF` | D13 | giro | Dalla caverna ai bastioni: mezza giornata senza riposo lungo (il default scritto), oppure un riposo di 8 ore e gli scontri della Sessione 4 alzati? Si aggiunge l'elenco delle unità nemiche ancora in campo, che il Regist… |
+| `MASTER-DEF` | D14 | giro | La tempesta della 4A: Orion lancia *controllare il tempo* prima della battaglia, con una deroga dichiarata per gli arcieri alleati; solo vento violento; o la tempesta piena dell'SRD, senza attacchi a distanza? Consiglia… |
+| `MASTER-DEF` | D15 | giro | Il cavaliere di Fauci: tre cose che sa e un blocco «Se lo divinano», scritti dopo D9, oppure muore o tace? Consigliata: scriverli (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
+| `MASTER-DEF` | D16 | giro | Lythiel cavalca coi gufi e riconosce Hella in Sessione 4, come dice lo stato del gruppo, oppure il riconoscimento slitta alla Cerimonia? Consigliata: lo stato del gruppo (giro del 2026-10-19,… |
+| `MASTER-DEF` | D17 | giro | I 210 caduti: 118 + 92, coi 9 di Drellin's Ferry nominati nel Giuramento ma non contati, e i superstiti dal Registro PFU; oppure il numero sale a 219? Consigliata: 210 (giro del 2026-10-19,… |
+| `MASTER-DEF` | D18 | giro | La serata: il 3B e la Sessione 4 insieme e la Cerimonia la serata dopo (il default scritto), oppure solo il 3B? Consigliata: il default (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
+| `MASTER-DEF` | D19 | giro | EL e PE del 3B e della 4A: l'Appendice C (2.600 e 4.600 PE al gruppo) togliendo l'EL 17 dichiarato, o l'EL 17 con lo scontro reso davvero tale? Poi le righe di scala. Consigliata: l'Appendice C (giro del 2026-10-19,… |
+| `MASTER-DEF` | D20 | giro | Il box dell'Atto 2 della Cerimonia: due figure venute da fuori e non insieme, come dicono le note per il DM dello stesso file, oppure le tre figure coordinate del box originale? Consigliata: due (giro del 2026-10-19,… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -37,14 +49,11 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
 
-### Revisioni della prosa da approvare: 2
+### Revisioni della prosa da approvare: 0
 
 Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py applica` può ancora applicare. Ogni cartella ha un `LEGGIMI.md` con i passaggi interi.
 
-| Documento | Originale | Modifiche | Spuntate |
-|---|---|---:|---:|
-| [`REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md) | `08_La Battaglia Di Hammerfist/ARC08-11-PONTE-ARRIVO.md` | 3 | 0 |
-| [`REVISIONE-Cerimonia-delle-100-Asce-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-Cerimonia-delle-100-Asce-r1.md) | `08_La Battaglia Di Hammerfist/Cerimonia-delle-100-Asce.md` | 5 | 0 |
+Nessuna.
 
 ## ▶ In corso: da qui si riparte: 7
 
@@ -115,6 +124,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0094 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
 | 2026-10-18 | MASTER-DEF | A4, D7 e D8 decise dal DM (prima le sette pratiche; SRD locale e lettori uno al… | 🟢 A4 fatto; ARC-08 a zero conti sbagliati, nove trovati sulla versione di prima della #241 |
 | 2026-10-18 | MASTER-DEF | A4, lo standard del giro: audit dei giri su ARC-07 contro le norme del repo (ri… | 🟡 [ADR-0094](plans/adr/ADR-0094-il-giro-ha-correzione-verifica-e-seconda-passata.md) proposta, 58 pratiche e nove lacune in… |
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
@@ -126,11 +136,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-16 | MASTER-DEF | le versioni di ARC-08 censite sezione per sezione e mappa per mappa; i sei file… | 🟡 D6 aperta al DM |
 | 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 | 2026-10-15 | MASTER-DEF | A3, il canone di ARC-08 contro il tavolo: lettura in sola lettura dei file vivi… | 🟡 43 punti; D4 e D5 aperte al DM |
-| 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 264 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 29 aperte, 264 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

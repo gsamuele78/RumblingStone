@@ -1066,10 +1066,10 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 - **Elevazione:** +3m sopra pavimento caverna
 - **Materiale:** Pietra nera basaltica, rune oro Nanico incise
 - **Funzione Narrativa:** **PUNTO APPARIZIONE RUMBLING STONES!**
-  - Round 8 combattimento: Sfera dorata tricolore materializza 3m sopra altare
+  - Round 9-10 combattimento (guida, Incontro 3C; i giocatori prendono i PG al round 11): Sfera dorata tricolore materializza 3m sopra altare
   - Luce esplosione: Oro (Topazio) + Verde (Smeraldo) + Rosso (Rubino)
   - 4 Silhouette eroi emergono: Thorik, Tordek, Artemis, Hella
-  - Effetto: Benedizione istantanea 90 nani (+6 morale, 2d8 HP heal, immune fear 1h)
+  - Effetto: Benedizione istantanea 90 nani (cura 2d8 pf a tutti `[CANONE — DM 2026-10-18]`, immuni alla paura 1 ora; il morale lo dà l'Aura della Forgia Eterna di Thorik, +4 entro 30 m, se la usa: niente «+6 morale»)
 
 **10 STATUE RE ANCESTRALI:**
 - **Posizioni:** Circle 20m raggio attorno altare (Equidistanti)
@@ -1119,7 +1119,7 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 
 **Ondata 1 (Round 1-2): 30 ORCHI BERSERKER**
 - Charge tunnel → altare (Reckless)
-- **Effetto Apparizione PG (Round 1 finale):** 20/30 shaken (TS Will CD 25 failed)
+- **Effetto Apparizione PG (round 9-10, su chi è ancora in campo):** TS Volontà CD 20 o spaventati per 10 round (guida, «Effetti dell'Apparizione»)
   - Shaken: -2 all rolls (Morale broken)
   - Panico: 5 flee back tunnel
 
@@ -1131,7 +1131,7 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 **Ondata 3 (Round 6-8): 15 BUGBEAR ASSASSINI**
 - Stealth approach (Nascondersi +12)
 - Target: Leaders + Re Thorek (Assassination attempts)
-- **Interrupted:** PG apparizione Round 8 = Surprise reversed!
+- **Interrupted:** PG apparizione round 9-10 = Surprise reversed!
 
 **Ondata Finale (Round 9-10): GRIMJAW + 10 OROG**
 - **Se Grimjaw vede situazione (PG arrived, morale swing):** 
@@ -1139,14 +1139,14 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
   - Option B: Personal challenge Thorik (Arrogance)
 - **Se Grimjaw morto già Sessione 2:** Sostituisci Capitano Hobgoblin minore (Auto-retreat)
 
-**EVENTO CLIMAX (Round 8):**
+**EVENTO CLIMAX (Round 9-10):**
 
 **Narrativa Leggere:**
 > "Il cerchio nanico si stringe sempre più attorno all'altare. Re Thorek, gravemente ferito, bisbiglia preghiere a Moradin con voce spezzata. I nemici premono da ogni lato, e la speranza svanisce. Ma proprio quando tutto sembra perduto, l'altare di pietra nera inizia a brillare. Le rune dorate esplodono in luce accecante. Gli occhi di rubino delle dieci statue si accendono come stelle. E sopra l'altare, una sfera di luce tricolore - oro, verde e rosso - materializza dal nulla. La sfera pulsa una volta, due volte, poi esplode in un'esplosione non violenta di luce pura. Quando la luce si dissolve, quattro figure eroiche stanno sull'altare, armi in mano, potere divino emanante. I Rumbling Stones sono arrivati."
 
 **Effetti Meccanici Immediati:**
-- **Nani:** +6 morale (da -4 a +2), 2d8 HP heal tutti, immune fear 1h
-- **Nemici:** TS Will CD 25 O shaken 1d6 round (Majority fail)
+- **Nani:** cura 2d8 pf a tutti `[CANONE — DM 2026-10-18]`, immuni alla paura 1 ora; +4 di morale entro 30 m solo con l'Aura della Forgia Eterna di Thorik
+- **Nemici:** TS Volontà CD 20 o spaventati per 10 round (guida, «Effetti dell'Apparizione»)
 - **PG:** Full HP, tutti buff attivi, surprise round vs nemici
 
 **Transizione:** Da PNG giocabili (Borin/Dara/Thorin/Nala) → Veri PG (Thorik/Tordek/Artemis/Hella)
@@ -1263,13 +1263,14 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
 
 **Tempesta Magica Controllata:**
 - **Maestro Tempestas:** Altitude 60m, conducts storm
-  - *Control Weather* + *Call Lightning Storm* combo
-  - Fulmini: 10d6 electrical, 1/round auto-target Fauci
+  - Chi lancia la tempesta è una decisione aperta del DM: la scheda di Tempestas (`ARC08-02` §2) non ha *controllare il tempo* né *tempesta di fulmini*
+  - Fulmini: *invocare il fulmine* fa 3d6, 3d10 in tempesta (SRD); quanti e di chi lo decide il DM
+  - Meteo SRD: vento violento −4 a distanza e Tempra CD 15 per i Piccoli; con la pioggia è una *tempesta*, e gli attacchi a distanza con armi diventano impossibili (decisione aperta del DM)
   - Nubi nere: Oscurano drago visibility (-4 Osservare)
 
 **Fauci di Palude (Desperate):**
 - **Altitude:** Variable 30-45m (Evading gufi)
-- **Condition:** Wounded (-80 HP già, 232 rimanenti)
+- **Condition:** Ferito, 232/337 pf (i pf di partenza sono una decisione aperta del DM; il carry-over del P5 li cambia, `ARC08-10` §4.1)
   - Frecce ranger elfiche bleeding
   - Lightning burns scaglie
 - **Tattiche:** Aggressive suicide (Vendetta Bloodline vs Thorik overwhelms tactics)
@@ -1284,22 +1285,22 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   - Composite Longbow +2: +15 att, 1d8+6 damage
   - Frecce Bane (Dragons): +2d6 additional
   - **Orion Pelleorsa (Druido):** SALTA SCHIENA DRAGO!
-    - Grapple check (+18) vs Fauci
-    - **Wild Shape: Dire Bear** forma (For 31)
-    - Riding drago forced downward (Peso 800kg!)
+    - **Wild Shape: Dire Bear** forma (For 31), presa il round prima: salto, forma e presa non stanno in un round solo (SRD)
+    - Lotta **contrapposta** (SRD): +24 dell'orso crudele contro +43 di Fauci, che se ne libera quasi sempre
+    - Il peso da solo non forza la discesa: perché Fauci cade è una decisione aperta del DM
 
 **ARTEMIS BLACKROCK (Solo Aereo PG):**
 - **Altitude:** 30m (Below melee swarm)
-- **Tattiche:** Eldritch Blast spam (7d6, 250ft range)
+- **Tattiche:** Deflagrazione occulta (6d6, 18 m) [Private source — Complete Arcane]
   - Target: Fauci wings (Maneuverability penalty)
   - Ali Ombra: Superior maneuverability (Turn instant)
 
 **CONVERGENZA CLIMAX:**
 
 **Round 18-20: DRAGO ATTERRAGGIO FORZATO**
-- Orion sulla schiena (Grapple prevents full flight)
-- Lightning strike (10d6) ala destra
-- Artemis Eldritch Blast (7d6) ala sinistra
+- Orion sulla schiena, solo nei round in cui vince la lotta contrapposta
+- Un fulmine ala destra (danni: decisione aperta del DM, vedi tempesta)
+- Artemis Deflagrazione occulta (6d6) ala sinistra
 - **Result:** Crash landing 60m davanti Thorik!
 
 **Round 21-23: DUELLO FINALE THORIK vs FAUCI**
@@ -1312,7 +1313,7 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   valori in `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`.
 - **Support:** Tordek joins (Flurry Blows), Artemis continues blast
 - **Fauci Desperate:** Full Attack Thorik (Morso+Artigli+Ali+Coda)
-- **Thorik Heroic:** Aegis-Fang throw (Crit 19-20/×3) + *Smite Evil*
+- **Thorik Heroic:** Aegis Fang (+2 Ritornante *Dragondoom*) + castigo *Dragondoom*, 3/giorno, +2d6 contro un drago Enorme (stato del ramo di gruppo, D14; il guerriero non ha *punire il male*)
 
 > **Esito — ramo condizionale, non un fatto compiuto (D10, piano
 > ARC-08 A1)**: quando Fauci scende **sotto i 50 PF** il **default**

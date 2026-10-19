@@ -28,7 +28,7 @@
 <rect x="5" y="5" width="1762" height="2577" fill="none" stroke="#3b2e1e" stroke-width="0.8" opacity="0.8"/>
 <rect x="9" y="9" width="1754" height="2569" fill="none" stroke="#3b2e1e" stroke-width="2" opacity="0.85"/>
 <text x="46" y="34" font-size="19" font-weight="bold" fill="#3b2e1e" letter-spacing="0.5">MAPPA 4 REVISED: Battaglia Finale Terrestre (carica in discesa)</text>
-<text x="46" y="51" font-size="11" font-style="italic" fill="#7a6a50">60×68 quadretti · scala 1,5 m/quadretto</text>
+<text x="46" y="51" font-size="11" font-style="italic" fill="#7a6a50">60×68 quadretti · scala 3 m/quadretto</text>
 <rect x="41" y="75" width="1690" height="1914" fill="#e6d9b8" stroke="#3b2e1e" stroke-width="1.6"/>
 <g clip-path="url(#clipgrid)">
 <path d="M46 95.19L49.81 85.99L51.99 83.81L61.19 80L142.81 80L152.01 83.81L154.19 85.99L158 95.19L158 120.81L161.81 130.01L163.99 132.19L173.19 136L1598.81 136L1608.01 132.19L1610.19 130.01L1614 120.81L1614 95.19L1617.81 85.99L1619.99 83.81L1629.19 80L1710.81 80L1720.01 83.81L1722.19 85.99L1726 95.19L1726 1800.81L1722.19 1810.01L1720.01 1812.19L1710.81 1816L61.19 1816L51.99 1812.19L49.81 1810.01L46 1800.81ZM341.19 164L331.99 167.81L329.81 169.99L326 179.19L326 204.81L329.81 214.01L331.99 216.19L341.19 220L1430.81 220L1440.01 216.19L1442.19 214.01L1446 204.81L1446 179.19L1442.19 169.99L1440.01 167.81L1430.81 164Z" fill="url(#t_grass)" fill-rule="evenodd" stroke="url(#t_grass)" stroke-width="2.4" stroke-linejoin="round"/>
@@ -1236,7 +1236,7 @@
 <rect x="102" y="2003" width="28" height="7" fill="#3b2e1e" stroke="#3b2e1e" stroke-width="1"/>
 <rect x="130" y="2003" width="28" height="7" fill="#efe4c9" stroke="#3b2e1e" stroke-width="1"/>
 <rect x="158" y="2003" width="28" height="7" fill="#3b2e1e" stroke="#3b2e1e" stroke-width="1"/>
-<text x="196" y="2011" font-size="11" fill="#3b2e1e">7,5 m (5 quadretti)</text>
+<text x="196" y="2011" font-size="11" fill="#3b2e1e">15 m (5 quadretti)</text>
 <text x="46" y="2038" font-size="12" font-weight="bold" fill="#3b2e1e" letter-spacing="2">INDICAZIONI</text>
 <path d="M142 2034H1726" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <circle cx="54" cy="2051" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
@@ -1280,7 +1280,7 @@
 <text x="68" y="2235" font-size="11" fill="#3b2e1e">AE55 — Giganti, Ettin ed elite residui (ancora formidabili)</text>
 <circle cx="54" cy="2246" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="2249.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">14</text>
-<text x="68" y="2250" font-size="11" fill="#3b2e1e">G16 — FAUCI DI PALUDE (in volo, 30-45 m) (PF 232/312)</text>
+<text x="68" y="2250" font-size="11" fill="#3b2e1e">G16 — FAUCI DI PALUDE (in volo, 30-45 m) (PF 232/337)</text>
 <line x1="46" y1="2261" x2="62" y2="2261" stroke="#1d6fd8" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 2261L59.67 2263.5L59.67 2258.5Z" fill="#1d6fd8"/>
 <text x="70" y="2265" font-size="11" fill="#3b2e1e">Carica centrale del cuneo (Thorik in punta): AD11 → AD37</text>

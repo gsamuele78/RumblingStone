@@ -72,7 +72,7 @@
 > (valori **approvati dal DM 2026-07-03**). Se il gruppo NON ha giocato il P5,
 > usa lo statblock qui sotto invariato.
 **NM Drago Enorme (Acqua)**
-**Iniziativa:** +4; **Sensi:** Vista Cieca 18m, Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
+**Iniziativa:** +4; **Sensi:** Percezione cieca 18 m (SRD: chi Fauci non vede resta occultato del tutto, anche se ne sa il quadretto), Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
 
 **CA:** 29 (-2 taglia, +21 naturale), contatto 8, colto alla sprovvista 29 (37 con *Armatura Magica* e *Scudo*)
 **PF:** 337 (25d12+175)
@@ -81,8 +81,8 @@
 
 **Velocità:** 18m, Nuotare 18m, Volare 45m (scarsa)
 **Attacco Base:** +25; **Lotta:** +43
-**Attacco:** Morso +35 in mischia (2d8+10/19-20)
-**Attacco Completo:** Morso +35 (2d8+10/19-20), 2 artigli +33 (2d6+5), 2 ali +33 (1d8+5), colpo di coda +33 (2d6+15)
+**Attacco:** Morso +33 in mischia (2d8+10/19-20)
+**Attacco Completo:** Morso +33 (2d8+10/19-20), 2 artigli +31 (2d6+5), 2 ali +31 (1d8+5), colpo di coda +31 (2d6+15)
 **Spazio/Portata:** 4,5m/3m (4,5m con morso)
 
 **Caratteristiche:** For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16
@@ -90,9 +90,9 @@
 **Attacchi Speciali:**
 *   **Soffio (Sop):** Linea di 30 m di acido, 1/1d4 round. Danno 14d4 acido, TS Riflessi CD 29 dimezza.
 *   **Soffio a Cono (Str):** 1/giorno, può spendere un'azione di round completo per preparare un soffio a cono di 18m. ⚠️ *Errata B5 — HOUSE-RULE*: i draghi neri SRD hanno **solo il soffio in linea**; il cono non è 3.5 standard. Mantenuto come house-rule per la scena della picchiata (Sessione 2); se il DM preferisce l'aderenza SRD, rimuovere e usare solo il soffio in linea.
-*   **Presenza Terrificante (Str):** Raggio 90m, creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
+*   **Presenza Terrificante (Str):** Raggio 90m (potenziamento: l'SRD dà 9 m per categoria d'età, 63 m all'adulto maturo), creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
 *   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18).
-*   **Corrompere Acqua (Mag):** A volontà.
+*   **Corrompere Acqua (Mag):** A volontà (potenziamento: l'SRD dice 1/giorno).
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Come Stregone di 7° liv. (LI 7°; 6/8/8/6 al giorno).
     *   *3° (CD 16):* *Dissolvi Magie*, *Nube Maleodorante*
@@ -102,10 +102,17 @@
 
 **Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
 
-> **Verifica 3.5 (versione più forte, lotto delle schede PNG)**: 25 DV di
-> drago nero sono un **adulto maturo avanzato** (SRD: 22 DV, avanzamento
-> 25-26 DV). Da qui l'armatura naturale +21 (era +20), la linea del soffio
-> di 30 m (taglia Enorme), RI 21 e RD 10/magia. I pf tornano coi dadi:
+> **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
+> di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
+> portato a 25 DV. ⚠️ L'SRD fa avanzare l'adulto maturo a 23-24 DV, e 25 DV
+> sono i dadi dell'età **Vecchio** (25d12+125, naturale +24, RI 22, soffio
+> 16d4): qui si tengono i dadi del Vecchio con le capacità dell'adulto maturo,
+> ed è un potenziamento dichiarato. L'armatura naturale +21, la linea del soffio
+> di 30 m (taglia Enorme), RI 21 e RD 10/magia sono quelli dell'adulto maturo
+> SRD. Gli attacchi tornano col BAB: +25, For +10, taglia −2 fanno morso +33 e
+> secondari +31 con Multiattacco (la prima stesura diceva +35/+33). I draghi
+> hanno **percezione cieca**, non vista cieca. Presenza terrificante a 90 m e
+> *corrompere acqua* a volontà sono potenziamenti, segnati sulla riga. I pf tornano coi dadi:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
 > Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
 > dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher.
@@ -115,7 +122,7 @@
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
 > CORREZIONE del boss nell'arco 07.
 
-**Tattiche:** Inizia con *Armatura Magica* e *Scudo*. Usa il Soffio e incantesimi di controllo (*Nube Maleodorante*) dall'alto. Con Volteggiare resta sospeso sopra le mura e soffia senza atterrare; con Ghermire afferra un nano isolato e lo lascia cadere dall'alto. Atterra solo se gravemente ferito (<100 PF) o per finire un bersaglio importante, Thorik prima di tutti. Fugge sotto i 50 PF.
+**Tattiche:** Inizia con *Armatura Magica* e *Scudo*. Usa il Soffio e incantesimi di controllo (*Nube Maleodorante*) dall'alto. Con Volteggiare resta sospeso sopra le mura e soffia senza atterrare; con Ghermire afferra un nano isolato e lo lascia cadere dall'alto. Atterra solo se gravemente ferito (<100 PF) o per finire un bersaglio importante, Thorik prima di tutti. Fugge sotto i 50 PF. Thorik, col *Mind Blank* permanente della Corona, non subisce la Presenza terrificante: è un effetto di paura che influenza la mente (SRD *Mind Blank*).
 
 > **Esito della battaglia — ramo condizionale (D10, non un fatto compiuto)**:
 > **default** = sotto i 50 PF fugge gravemente ferito verso le montagne
@@ -487,8 +494,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 > Kitor né Sacred Forest); **resta di presidio a Hammerfist** dopo la
 > battaglia e **NON si somma** ai difensori di Rethmar in ARC-09
 > ARMATE-SYNC. È un comando elfico **distinto** dalla Capitana Lythiel
-> Alar-Wen (Sacred Forest), che compare solo nella sessione finale e
-> alla Cerimonia delle 100 Asce (E7) — Lythiel resta l'unico canale col
+> Alar-Wen (Sacred Forest), che compare nella Sessione 4, dove riconosce
+> Hella (canone del ramo di gruppo, `campaign/state.md`: «Direct
+> recognition during Hammerfist Battle Sessione 4»), e alla Cerimonia
+> delle 100 Asce (E7) — Lythiel resta l'unico canale col
 > Sacred Forest. Le due presenze non si sono mai incrociate in scena:
 > nessun doppio conteggio, nessuna fusione dei due comandi.
 
@@ -517,10 +526,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
     *   **Incantesimi d'Attacco:** *Controllare Tempo*, *Tempesta di Fuoco*, *Chiamare Tempesta di Fulmini*, *Tempesta di Ghiaccio*.
     *   **Incantesimi di Controllo:** *Muro di Pietra*, *Muro di Spine*, *Intralciare*.
     *   **Incantesimi di Supporto:** *Pelle di Pietra*, *Guarigione*, *Crescita Animale*, *Resistenza dell'Orso*.
-*   **Incantesimi (CL 14°; 6/7/7/7/5/5/4/3 al giorno, CD 17 + livello).**
+*   **Incantesimi (CL 14°; 6/7/7/6/5/4/4/3 al giorno, CD 17 + livello).**
 
 **Tattiche:** *Prima del combattimento*: lancia *Pelle Coriacea*, *Resistenza dell'Orso* e *Zanna Magica Superiore* (estesi), poi prende la forma dell'Orso Crudele: gli incantesimi restano attivi nella forma.
-*Durante il combattimento*: Orion è una forza della natura. Inizia il combattimento lanciando un incantesimo di controllo del campo di battaglia come *Muro di Spine* per dividere le forze nemiche. Successivamente, si trasforma in Orso Crudele e si lancia nella mischia contro i bersagli più resistenti come i giganti o Gorthak. La sua mossa più audace è saltare su Fauci di Palude per ingaggiarlo in un combattimento corpo a corpo sulla sua schiena. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano a metà caduta e si cura con *Guarigione*; non abbandona la battaglia finché un gufo vola.
+*Durante il combattimento*: Orion è una forza della natura. Inizia il combattimento lanciando un incantesimo di controllo del campo di battaglia come *Muro di Spine* per dividere le forze nemiche. Successivamente, si trasforma in Orso Crudele e si lancia nella mischia contro i bersagli più resistenti come i giganti o Gorthak. La sua mossa più audace è saltare su Fauci di Palude per ingaggiarlo in un combattimento corpo a corpo sulla sua schiena. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano quando tocca terra e il round dopo si cura con *Guarigione* (una caduta non lascia due azioni standard: SRD); non abbandona la battaglia finché un gufo vola.
 > Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: Druido 14 dell'SRD. I pf tornano con

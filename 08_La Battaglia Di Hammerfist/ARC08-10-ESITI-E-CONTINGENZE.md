@@ -43,7 +43,7 @@ annientata/dispersa.
 | Voce | Valore | Fonte |
 |---|---|---|
 | Nani difensori iniziali | 300 | E8; Guida DM |
-| Nani caduti | **210** (118 a Hammerfist + 92 nei mesi precedenti + 9 a Drellin's Ferry) | E2; Cerimonia §1.1 |
+| Nani caduti | **210** (118 a Hammerfist + 92 nei mesi precedenti + 9 a Drellin's Ferry) `[INFERRED — needs DM confirmation: 118 + 92 + 9 fa 219]` | E2; Cerimonia §1.1 |
 | Nani superstiti | **90**, guidati da Re Thorek | E2 |
 | Orda avanguardia in campo | 900 | E8 |
 | Perdite orda | **−900 effettivi** (~500 morti + ~400 dispersi in rotta, non si ricongiungono) | D11; state.md §2.2 |
@@ -143,7 +143,7 @@ d'esito sopra.
 | Ramo | Trigger | Effetto |
 |---|---|---|
 | **Default — fugge** | Fauci scende sotto i **50 pf** e nessuno lo blocca attivamente (soglia di ritirata **alzata** se nel P5 Skullcrusher fuggì — valore in §4.1/tabella B4) | Decolla gravemente ferito verso le montagne meridionali; rimosso dall'assedio ma **vivo**; può tornare come nemesi (hook ARC-10; carta S2 proposta all'EVENT-DECK di Rethmar — vedi §6.3). Nessun cambio ai totali orda |
-| **Alternativo — ucciso** | I PG lo bloccano (grapple Orion + attacchi continui) e lo portano a 0 pf | Morto; **−1 drago** nel pool di Rethmar (`state.md` §2.3 Conditional Additives) |
+| **Alternativo — ucciso** | I PG lo portano a 0 pf prima che fugga: lo inseguono in volo, o lo tengono a terra. La presa di Orion da sola non basta, perché la lotta è contrapposta e Fauci ha +43 (SRD) | Morto; **−1 drago** nel pool di Rethmar (`state.md` §2.3 Conditional Additives) |
 
 ### 4.1 Carry-over dall'eredità di Skullcrusher (A12, [CROSS-ARC con ARC-07])
 
@@ -220,6 +220,19 @@ maturati e si applicano al finale.
   PX da APL 13 dosati a parte (`ARC08-01-GUIDA-DM.md` Appendice C /
   `hammerfist_encounters-...-final.md` §RIASSUNTO XP).
 
+
+### 5.5 Se il flashback coi pregen non è stato giocato `[INFERRED — needs DM confirmation]`
+
+Sul ramo di gruppo l'Arco 08 non è giocato, né le sessioni coi pregen né il P5
+(`campaign/state.md` §0). Finché il DM non decide se giocarli, il finale parte
+da qui:
+
+- **Re Thorek stabilizzato**: riga «pieno», cioè il default E6. Re Thorek è a 8 pf per la riscossa.
+- **Tutte le altre righe** di §5.1-§5.3: «parziale».
+- **Comandanti logorati**: Grimjaw e Gorthak sono vivi; Grimjaw è quello logorato (−20% pf iniziali).
+- **Cantitrici**: metà, un solo uso di cura.
+- **P5 non giocato**: statblock di Fauci invariato (§4.1).
+
 ---
 
 ## 6. Conseguenze a lungo periodo (C2)
@@ -259,7 +272,9 @@ La runa di pietra che Re Thorek consegna ai 4 PG (Cerimonia Atto 3;
   vista.
 - **Ospitalità a Hammerfist**: vitto, alloggio, accesso all'armeria
   della cittadella e alle fucine (aggancio al tesoro `ARC08-13` §3) a
-  costo nullo.
+  costo nullo. Il tetto dell'armeria è quello del banco: oggetti
+  perfetti e consumabili già in magazzino, niente magia su misura
+  (`ARC08-17` §2-§3) `[INFERRED — needs DM confirmation]`.
 - **Riconoscimento** da PNG nanici in ARC-09 (es. Maewen riconosce
   Tordek "dalla runa di Custode Eterno" — già canonico in `state.md`
   §4): la runa è il segno visibile.

@@ -358,10 +358,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ## MAPPA 5 REVISED: IL CUORE DELLA MONTAGNA - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map04_mappa-5-revised-il-cuore-della-montagna-ultima-r.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 100m × 80m (67 colonne × 53 righe, 1,5 m/quadretto; soffitto a 40 m)
-**Incontro:** Incontri 3A/3B — ultima resistenza a ondate + APPARIZIONE DEI RUMBLING STONES (round 8)
+**Incontro:** Incontri 3A/3B — ultima resistenza a ondate + APPARIZIONE DEI RUMBLING STONES (round 9-10, come la guida)
 **Quando si usa:** Sessione 3 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 3; la "MAPPA 3A: Caverna Sacra" e la "MAPPA 3B: La Svolta" della guida sono gli stati A e F di questa griglia)
 
-### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, unico ingresso dalla porta di mithral a nord. Le ondate entrano dal tunnel; al round 8 la Sfera dorata esplode sopra l'altare.
+### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, unico ingresso dalla porta di mithral a nord. Le ondate entrano dal tunnel; al round 9-10 la Sfera dorata esplode sopra l'altare.
 
 ### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (67×53)
 
@@ -373,7 +373,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 04 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 05 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🚪 🚪 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-06 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+06 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 07 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 08 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 09 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -393,11 +393,11 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 23 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 24 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 25 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-26 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-27 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🔵 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ✨ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🔵 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-28 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🔮 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-29 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬛ ⚫ 🔵 ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-30 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ 🔵 ⬛ ⬛ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+26 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+27 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🔵 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ✨ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🔵 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+28 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔮 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+29 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⚫ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+30 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 31 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 32 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 33 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -449,8 +449,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ### 📍 POSIZIONI PRECISE:
 - **Altare di Moradin:** piattaforma 6 m, +3 m — AF26-AJ30; punto di manifestazione ✨ AH27 (3 m sopra l'altare)
-- **Re Thorek ⚫ AH29** (8 PF, avvelenamento da acido attivo: Guarigione CD 25 stabilizza, *Neutralizza Veleno* CD 22 ferma il deterioramento; *Heal* cura i PF ma NON l'acido)
-- **Madre Dana AG30** (metà incantesimi: *Heal* su Thorek round 1, *Consacrazione* round 2) · **Cantitrici AJ30-AL30** (se sopravvissute)
+- **Re Thorek ⚫ AH29** (8 PF, avvelenamento da acido attivo: Guarigione CD 25 stabilizza, *Neutralizza Veleno* CD 22 ferma il deterioramento; ⚠️ per l'SRD *guarigione* fa finire la condizione di avvelenato, e «l'acido che *guarigione* non cura» è una regola della casa da confermare `[INFERRED — needs DM confirmation]`)
+- **Madre Dana AG30** (metà incantesimi; quando arrivano i PG ha 20 pf e un solo *Muro di Pietra*, scheda nella guida: la *guarigione* del round 1 di questa riga è il ramo «Dana riposata», e allora Re Thorek non è a 8 pf: decisione del DM del 2026-10-18, guida § Incontro 3B, «Vale per Dana riposata, cioè il mattino della battaglia») · **Cantitrici AJ30-AL30** (se sopravvissute)
 - **Borin AF29** (difesa altare) · **Thorin AI29** (accanto all'altare: +2 LI sacro) · **Dara BA27** (terrazzo EST +1,5 m) · **Nala O27** (terrazzo OVEST)
 - **Anello difensivo:** 60 guerrieri (4 blocchi N/S/E/O) + 20 balestrieri (2 blocchi) + nucleo leader
 - **Porta di Mithral 🚪 AE05-AJ05** (unico ingresso, ward collassati) — tunnel di 10 m alle spalle
@@ -461,12 +461,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 |---|---|---|---|
 | 1 | 3-4 | 30 Orchi Berserker (furia +4 For, −2 CA) | carica cieca sull'anello — imbuto alla porta |
 | 2 | 5-6 | 20 Hobgoblin + Sergente (immuni paura) | muro di scudi, fiancheggiamento coordinato (+2), sergente +1 att entro 6 m |
-| 3 | 7-8 | 15 Bugbear Assassini (furtivo +3d6, Nascondersi +8) | aggiramento sui fianchi (rotte viola), bersaglio Re Thorek — INTERROTTI dal round 8 |
+| 3 | 7-8 | 15 Bugbear Assassini (furtivo +3d6, Nascondersi +8) | aggiramento sui fianchi (rotte viola), bersaglio Re Thorek — INTERROTTI dall'Apparizione (round 9-10) |
 | Finale | 9-10 | Grimjaw + 10 Orog (se vivo; altrimenti capitano hobgoblin → auto-ritirata) | sfida personale o ritirata strategica |
 
-### ✨ ROUND 8 — L'APPARIZIONE (climax):
+### ✨ ROUND 9-10 — L'APPARIZIONE (climax):
 - La Sfera dorata tricolore si manifesta 3 m sopra l'altare (✨ AH27), pulsa 3 volte, ESPLODE: **Thorik, Tordek, Artemis, Hella** emergono — transizione PNG pregen → veri PG (giocatori al controllo dal round 11)
-- **Alleati:** +6 morale (da −4 a +2), cura 2d4+4 a tutti (guida; l'atlante dice 2d8 — usare la guida), immunità alla paura 1h, *Rimuovi Paura* automatico
+- **Alleati:** +6 morale (da −4 a +2), cura 2d8 a tutti (`[CANONE — DM 2026-10-18]`, scheda di Dana nella guida), immunità alla paura 1h, *Rimuovi Paura* automatico
 - **Nemici:** TS Volontà CD 20 o **spaventati** 10 round (guida; l'atlante usa CD 25/scossi — usare la guida); hobgoblin −2 per 5 round; Grimjaw TS CD 18 o perde 1 round
 - **Area:** *Consacrazione* permanente + luce dorata (*Luce del Giorno*); le armi naniche contano come magiche +1; occhi di rubino delle 10 statue accesi
 
@@ -482,11 +482,11 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### 🔄 EVOLUZIONE
 | Stato | Trigger | Cosa cambia | Effetto |
 |---|---|---|---|
-| A — Barricata ("MAPPA 3A" guida) | — | com'è disegnata | prove mediche sul Re (round 1-2) |
+| A — Barricata ("MAPPA 3A" guida) | — | com'è disegnata; l'altare (AF26-AJ30) è una piattaforma su cui si sale, e solo 🔮 AH28 blocca il passo | prove mediche sul Re (round 1-2) |
 | B | round 3-4 | Ondata 1 dentro | mischia all'anello nord |
 | C | round 5-6 | Ondata 2 | pressione disciplinata |
 | D | round 7-8 | Ondata 3 sui fianchi | assassini verso l'altare |
-| E — APPARIZIONE | round 8 | ✨ sopra l'altare; buff/malus del climax | inversione totale del momentum |
+| E — APPARIZIONE | round 9-10 | ✨ sopra l'altare; buff/malus del climax | inversione totale del momentum |
 | F — La Svolta ("MAPPA 3B" guida) | round 9-11+ | nemici terrorizzati rifluiscono verso la porta; Grimjaw ultima sfida al tunnel | controffensiva guidata dai PG (Incontro 3C/3D) |
 
 ---
@@ -498,17 +498,17 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
 | +15 m | Base della fortezza / cancello riconquistato (righe 01-03 della MAPPA 4) | punto di partenza della carica |
-| +15 → 0 m | Pendio 15% su 120 m orizzontali | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3), **+2 danni** in carica, +2 morale di circostanza; nemici in mentalità di ritirata **−2 CA** |
+| +15 → 0 m | Pendio 15% su 120 m orizzontali | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
 | 0 m | Fondovalle: resti Mano Rossa (~400) | morale −6 dopo il Cuore della Montagna |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |
 
-**Preparazione (read-aloud e discorso di Re Thorek):** guida § Sessione 4 — "FRATELLI! Oggi non moriamo — oggi VINCIAMO!" (+4 morale finale, cumulativo).
+**Preparazione (read-aloud e discorso di Re Thorek):** guida § Sessione 4 — "FRATELLI! Oggi non moriamo — oggi VINCIAMO!" (+4 morale; non si somma ad altri bonus morali, vale il più alto: SRD).
 
 ---
 
 ## MAPPA 4 REVISED: BATTAGLIA FINALE TERRESTRE + AEREA - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map05_mappa-4-revised-battaglia-finale-terrestre-caric.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 180m × 204m (60 colonne × 68 righe) — **scala in deroga 3 m/quadretto (A4)**
+**Dimensioni:** 180m × 204m (60 colonne × 68 righe · 3 m/quadretto) — **scala in deroga 3 m/quadretto (A4)**
   ⚠️ Regia della carica finale ("MAPPA 4A/4B" della guida): per il duello col drago a terra passare a scala tattica sul punto di crash. Non mischiare quadretti di scale diverse.
 **Incontro:** Incontri 4A + 4B — carica del cuneo + Fauci di Palude + Gorthak
 **Quando si usa:** Sessione 4, round 1-23 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 4)
@@ -519,6 +519,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ```
 MAPPA 4 REVISED: Battaglia Finale Terrestre (carica in discesa)
+DIMENSIONI: 60 colonne × 68 righe · 3 m/quadretto
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH
 01 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
 02 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
@@ -603,7 +604,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @mark 11 ; AE48 ; Orchi in rotta (GS 1/2, panico)
 @mark 12 ; AE52 ; Maghi/Chierici residui (supporto flebile)
 @mark 13 ; AE55 ; Giganti, Ettin ed elite residui (ancora formidabili)
-@mark 14 ; G16 ; FAUCI DI PALUDE (in volo, 30-45 m) (PF 232/312)
+@mark 14 ; G16 ; FAUCI DI PALUDE (in volo, 30-45 m) (PF 232/337)
 @path Carica centrale del cuneo (Thorik in punta) ; AD11 AD37 ; #1d6fd8
 @path Ala sinistra (Tordek + 30) ; Y9 Y37 ; #1d6fd8
 @path Ala destra (Hella + 2 Treant + 30) ; AI9 AI37 ; #1d6fd8
@@ -617,30 +618,30 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### 🦅 VISTA ALTITUDINI (battaglia aerea simultanea, 0-60 m):
 | Quota | Chi | Azioni chiave |
 |---|---|---|
-| 60 m | **Maestro Tempestas** (LI 20) | *Controllo del Tempo* + *Tempesta di Fulmini*: 10d6 elettrici auto-mirati su Fauci 1/round; venti 80 km/h (Equilibrio CD 15 a terra); pioggia −2 tiro a distanza; +2 morale alleati |
-| 30-45 m | **Fauci di Palude** (PF 232/312) | picchiate su Thorik (vendetta di sangue — ERRORE tattico: ignora i gufi) |
+| 60 m | **Maestro Tempestas** (LI 20) `[INFERRED — needs DM confirmation: la scheda di ARC08-02 §2 è bardo 12°/cantore delle tempeste 2°, senza *controllare tempo*, che per l'SRD non dirige i fulmini]` | *Controllo del Tempo* + *Tempesta di Fulmini*: 10d6 elettrici auto-mirati su Fauci 1/round; venti 80 km/h (vento violento: Tempra CD 15 solo per le creature Piccole, SRD); pioggia −4 al tiro a distanza (SRD; con il vento è una *tempesta*, che rende impossibili gli attacchi a distanza con armi: decisione aperta); +2 morale alleati |
+| 30-45 m | **Fauci di Palude** (PF 232/337; pf di partenza: decisione aperta del DM) | picchiate su Thorik (vendetta di sangue — ERRORE tattico: ignora i gufi) |
 | 30-50 m | **Signore Ventolesto + 12 Ranger Elfici** su gufi | 6 alti (distrazione) + 6 bassi (intercetto); archi compositi +16, 1d8+6 +2d6 *Bane* draghi; Ventolesto Punire il Male +10 |
-| variabile | **Orion Pelleorsa** | SALTA sul dorso del drago → Forma Selvatica Orso Crudele, Lotta +24, 800 kg che forzano la discesa |
-| 15 m | **Artemis** (Ali d'Ombra) | Deflagrazione Occulta 7d6 (75 m) sulle ALI → manovrabilità del drago −4 |
+| variabile | **Orion Pelleorsa** | SALTA sul dorso del drago (movimento) già in Forma Selvatica Orso Crudele, presa il round prima (azione standard): salto, forma e presa non stanno in un round solo (SRD, guida § Orion). Lotta +24 contro +43: la lotta è contrapposta (SRD) e Fauci se ne libera quasi sempre, quindi il peso da solo non forza la discesa |
+| 15 m | **Artemis** (Ali d'Ombra) | Deflagrazione Occulta 6d6 (18 m) sulle ALI → manovrabilità del drago −4 |
 
 ### ⚔️ FASI (round per round):
 1. **1-5 Posizionamento:** carica avanza (45 m/round in discesa), drago in quota
 2. **6-10 Convergenza:** contatto con la prima linea hobgoblin (rotte blu → linea ⚔ riga 37); Thorik ingaggia Gorthak
 3. **11-17 Ingaggio aereo:** gufi+fulmini+Artemis logorano Fauci; Orion salta (round 3 della sequenza aerea)
 4. **18-20 Atterraggio forzato:** Fauci precipita nella zona ⚡ (righe 30-32), 60 m davanti a Thorik; tremore: Equilibrio CD 15 entro 9 m
-5. **21-23 Duello finale:** Thorik + Tordek + Artemis convergono; Fauci Attacco Completo disperato (7 attacchi)
+5. **21-23 Duello finale:** Thorik + Tordek + Artemis convergono; Fauci Attacco Completo disperato (6 attacchi: morso, 2 artigli, 2 ali, coda; sospeso in volo niente ali, SRD)
 
 > **ESITO DRAGO — ramo condizionale, NON un fatto compiuto (D10):** sotto i **50 PF** il default è che Fauci **tenta la fuga** (rompe la lotta di Orion, decollo disperato verso sud — gravemente ferito ma vivo, hook nemesi). È **ucciso** solo se i PG lo bloccano attivamente oltre quel punto (Tordek/Artemis lo tengono a terra mentre Thorik chiude con Aegis-Fang). Si decide al tavolo. In ENTRAMBI i rami: l'orda vede il drago fuori gioco → **rotta completa** dei ~400 superstiti.
 > **Gancio Aegis Fang (A12, se P5 giocato):** Thorik +2 di circostanza contro Fauci + preavviso del primo soffio — mappa in `../ARC08-10-ESITI-E-CONTINGENZE.md` §4.1.
 
 ### 📍 IL CAMPO DELLA VITTORIA ("MAPPA 4B" della guida — stato finale di questa griglia):
-Tempesta che si dissolve, gufi che atterrano presso il cancello, 850+ nemici caduti sul pendio e nel fondovalle, **210 asce piantate** nel Campo della Memoria (cerimonia: `../Cerimonia-delle-100-Asce.md`, conteggi: `../ARC08-03-REGISTRO-PERDITE.md`). Gorthak: resa o morte (scelta dei PG).
+Tempesta che si dissolve, gufi che atterrano presso il cancello, ~500 nemici caduti sul pendio e nel fondovalle e ~400 in rotta (D11), **210 asce piantate** nel Campo della Memoria: è la sepoltura di guerra al tramonto, un altro rito dalla Cerimonia delle 100 Asce del Giorno 21 (`../Cerimonia-delle-100-Asce.md`; conteggi: `../ARC08-03-REGISTRO-PERDITE.md`). Gorthak: resa o morte (scelta dei PG).
 
 ### 🌍 AMBIENTE
 | Elemento | Dove | Effetto |
 |---|---|---|
 | Pendio 15% | righe 14-36 | vantaggi di carica (vedi MAPPA 4X REVISED sopra) |
-| Tempesta di Tempestas | tutto il campo | venti (Equilibrio CD 15), pioggia (−2 distanza, +2 Nascondersi), fulmini mirati |
+| Tempesta di Tempestas | tutto il campo | venti (Tempra CD 15 solo per le creature Piccole), pioggia (−4 distanza, +2 Nascondersi), fulmini mirati; con vento e pioggia insieme è una *tempesta* SRD (decisione aperta) |
 | Zona crash ⚡ | AB30-AG32 | dal round 18: drago a terra, tremore CD 15 entro 9 m |
 | Colline sud ⛰ | righe 63-68 | rotta di fuga: chi la raggiunge esce dalla battaglia |
 
@@ -648,9 +649,9 @@ Tempesta che si dissolve, gufi che atterrano presso il cancello, 850+ nemici cad
 | Stato | Trigger | Cosa cambia | Effetto |
 |---|---|---|---|
 | A — Pre-carica ("4X") | — | com'è disegnata | discorso del Re (+4 morale) |
-| B — Urto | round 3-6 | cuneo sulla linea ⚔ | +2 danni carica; prima linea cede |
+| B — Urto | round 3-6 | cuneo sulla linea ⚔ | carica +2 al tiro (SRD); prima linea cede |
 | C — Crash | round 18-20 | Fauci nella zona ⚡ | duello finale |
-| D — Rotta | drago fuori gioco / Gorthak caduto | 400 superstiti in fuga verso sud | inseguire (100% perdite nemiche) o lasciar fuggire (80% scappa) |
+| D — Rotta | drago fuori gioco / Gorthak caduto | 400 superstiti in fuga verso sud | inseguire (100% perdite nemiche) o lasciar fuggire (80% scappa); in tutti e due i casi l'orda perde i 900 dell'avanguardia (D11) |
 | E — Vittoria ("4B") | fine round 23 | campo della memoria | epilogo agrodolce (guida § La Vittoria Agrodolce) |
 
 ---
