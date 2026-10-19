@@ -129,8 +129,34 @@ Due cose da sapere prima di votare:
   tutte le battute che sostituiscono il box vecchio. Il difetto è
   dell'appaiamento di `cieco_versioni.py`, ed è annotato per la #246.
 
-La scheda e la chiave non stanno in questa cartella, perché la chiave non si
-apre prima dei voti. Entrano qui con l'esito.
+### L'esito: pari, il miglioramento non è dimostrato
+
+Il DM ha votato le sedici coppie la sera stessa, dopo l'unione della PR #249.
+La nuova versione ne vince **8**, la vecchia **8**, nessun pari. L'intervallo di
+Wilson al 95% sulla quota della nuova è [0,28; 0,72]: contiene la metà, quindi
+il voto non distingue le due versioni. La soglia era 12 su 16.
+
+| Vince la vecchia | Vince la nuova |
+|---|---|
+| 2 · 3 · 4 · 5 · 9 · 12 · 16 · 20 | 6 · 7 · 8 · 10 · 11 · 13 · 17 · 18 |
+
+Le misure del rifacimento restano vere: i box rispettano i tetti. Il cieco dice
+che rispettarli non è bastato perché si leggano meglio. Le coppie perse hanno
+due difetti in comune.
+
+- **Dove la riscrittura ha tagliato il dettaglio che faceva l'immagine.** Nella
+  2 il giardino perde «e dietro ognuna, un pensiero» e i cristalli che tengono
+  ciascuno una nota. Nella 5 l'affresco perde Moradin, Frostforge e la Corona
+  per nome: il tetto di un nome proprio nuovo per box li ha trasformati in «il
+  dio dei nani», «il martello», «una corona». Sono nomi che i giocatori
+  conoscono da archi interi, e non sono nuovi.
+- **Dove un box è stato spezzato in battute** (3, 12). Lette di fila, le
+  battute suonano meno di un box unico.
+
+Vince la nuova dove la vecchia era lunga senza essere precisa: le battute dei
+PNG (7, 8), i doni (10, 11), le scene di DEF-5 (17, 18).
+
+La scheda, la chiave, i voti e l'esito sono in `misure/CIECO-*`.
 
 ## La varianza delle lunghezze, dal corpus
 
@@ -161,3 +187,46 @@ restano molto sotto il corpus, sotto 1‰ contro 5,6‰ e 1,7‰: dove una frase
 voleva sono tornati, ma non se ne sono aggiunti per fare numero. Gli indicatori
 `>4 frasi` e `>500 car` risalgono, da 13 a 30 e da 0 a 14, perché i box lunghi
 li superano per costruzione; non sono tetti.
+
+### Le scelte del DM, applicate
+
+Il DM ha chiesto di applicare le sue scelte dove le ha fatte, e la stessa
+lezione agli altri box.
+
+- **Le otto coppie vinte dalla vecchia** tornano parola per parola. Dove un box
+  supera un tetto, un commento lo marca come scelta del DM.
+- **Le otto vinte dalla nuova** restano com'erano.
+- **Gli altri box rifatti**, uno per uno contro la versione di partenza: sono
+  tornati i dettagli sensoriali e i nomi già noti al tavolo (Moradin, Thorik,
+  la Corona, Aegis Fang, il Cuore di Moradin, Hammerfist) al posto delle
+  perifrasi. I monologhi spezzati in battute con incisi in corsivo sono di
+  nuovo un discorso solo. Restano i tagli che funzionavano: niente maiuscole
+  di enfasi, niente date, niente parentesi. Sono stati toccati circa settanta
+  box su centoventi.
+
+| | Dopo la varianza | Dopo le scelte del DM |
+|---|---:|---:|
+| Box | 128 | 120 |
+| Parole, mediana (IQR) | 54 (34-69) | 61 (45-82) |
+| Box oltre 100 parole | 0 | 18 |
+| Box oltre 12 righe, con parentesi | 0, 0 | 0, 0 |
+| Box con più di un nome (il metro conta anche i nomi noti) | 1 | 23 |
+| Tag di canone, `[HDYWTDT]`, `[INFERRED]`, «Che fate?» | 476, 19, 5, 26 | uguali |
+
+La misura dei box impoveriti della PR #246 (`ciclo_prosa.box_impoveriti`,
+contro la versione di prima del rifacimento) ne trovava 26 su main; dopo le
+scelte del DM ne restano 11, e una correzione mirata li porta a 2. I due sono
+falsi positivi: la parola sensoriale c'è ancora, ma sta nella battuta del PNG
+che ora è fuori dal box.
+
+Il ritorno dei nomi noti è una lettura della norma (§2-ter della #246: il tetto
+di un nome proprio vale per i nomi nuovi), non un voto del DM. Il cieco su
+questo è diviso: Moradin in perifrasi perde nella coppia 5, ma il drago senza
+nome vince nella 6 e «la druida» al posto di Hella nella 10.
+
+I box sopra le 100 parole tornano perché sono i lunghi che il DM ha preferito,
+sempre entro le 12 righe. L'indicatore «più di un nome» sale perché
+`misura_craft` conta i nomi distinti, non quelli nuovi: i ventitré sono
+quasi tutti nomi che il tavolo conosce. Per sapere se la passata sugli altri box
+si legge meglio serve un altro cieco, su un campione nuovo.
+
