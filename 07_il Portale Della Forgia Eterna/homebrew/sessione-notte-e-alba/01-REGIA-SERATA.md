@@ -70,9 +70,9 @@ Forgia ricorda (capitolo V) si apre durante il duello.
 
 **Sul tavolo**: il foglio dell'orologio della notte con **3 tacche** segnate e
 5 vuote, in vista; la mappa M7-C coperta; la scheda di Durik vicino alla
-giocatrice di Hella. Nel volume dei giocatori di stasera non c'è: o lei ha
-ancora la sua copia della sessione del 25, o le passi il capitolo VI del tuo
-volume. La lavagna del banco di Gunnvor (`DEF-4` §9) non serve: le richieste
+giocatrice di Hella. Nel volume dei giocatori di stasera non c'è: lei usa la
+sua copia della sessione del 25 `[CANONE — DM 2026-10-19, giro 4 n. 26]`, e se non l'ha più le passi il
+capitolo VI del tuo volume. La lavagna del banco di Gunnvor (`DEF-4` §9) non serve: le richieste
 aperte si chiudono a voce al passo 0 dell'Atto I.
 
 **Le schede che contano stasera**, da tenere a portata:
@@ -95,6 +95,10 @@ voce, uno per giocatore, prima delle scelte: **solo il riquadro**. Dillo così:
 riquadro e sulla riga privata, ma dillo tu: chi legge ad alta voce di solito
 legge tutto.
 
+Prima di consegnare l'eco di Thorik, chiedi al giocatore se alla Scena 4 ha
+porto l'ascia a Thorgrim: la riga privata lo dà per avvenuto, e il registro
+della sessione 4 non lo dice `[CANONE — DM 2026-10-19, giro 4 n. 18]`.
+
 **Le dieci boccette**: se il tavolo non ha ancora il foglio di Kettra, va dato
 adesso. Le pozioni identificate sono già nel loro inventario.
 
@@ -109,11 +113,11 @@ registrato: lo si chiede al tavolo al passo 0 dell'Atto I.
 | Rune di *resistere all'energia*, acido 20 | 2, di Zeth: 70 minuti dall'attivazione, azione standard | si attivano al corno dell'alba o dopo: il drago arriva 70 round dopo il corno, e la runa dura 70 minuti. Uscendo dalla postierla, invece, all'alba sono scadute |
 | Cure in pozione e bacchetta | 4 «di CFC» del re e la quinta comprata (3d8+11); 3 di *cura ferite gravi*; 10 bacchette di *cura ferite leggere*; 5 pozioni di *neutralizza veleno* | il veleno delle wyvern è Tempra CD 17 (A.6) |
 | Pergamene | 4 *ristorare*, 3 *cura ferite critiche*, 5 *cura ferite gravi*, 3 *neutralizza veleno* | nel gruppo non c'è un chierico. *Ristorare* è della lista del chierico e del paladino, non del druido: la legge Artemis, Usare Oggetti Magici CD 27 (20 + livello dell'incantatore, 7°: lo stesso conto del *silenzio* a CD 23 in `DEF-4` Scena 5). Le cure e *neutralizza veleno* le legge Hella se sono sulla lista del druido (il mirror SRD del repo non la riporta intera: da verificare), altrimenti Artemis, CD 25 per le *gravi* e 27 per le altre |
-| Le Benedizioni della Sala | Pelle di Pietra (resistenza al fuoco 10, al freddo 5), Cuore Incrollabile, *Vigore della Forgia*: 3 cariche a PG, 3d8+5 | durano 24 ore vissute dalla preghiera all'Altare (`DEF-4` §0-bis). Quando il gruppo ha pregato l'ultima volta non è scritto: decidilo prima di cominciare, perché all'alba potrebbero essere spente |
+| Le Benedizioni della Sala | Pelle di Pietra (resistenza al fuoco 10, al freddo 5), Cuore Incrollabile, *Vigore della Forgia*: 3 cariche a PG, 3d8+5 | durano 24 ore vissute dalla preghiera all'Altare (`DEF-4` §0-bis). Quando il gruppo ha pregato l'ultima volta lo chiedi al tavolo prima dell'Atto I: se ha pregato all'ingresso nella Sala, di solito all'alba ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]` |
 | I Doni di Hella | *Scudo del Custode* (1 al giorno, azione immediata: prende su di sé, dimezzato, il danno di un alleato entro 9 m); RD 3/adamantino; *Rovo Eldritch* a volontà, 2d6 a 18 m. Guarigione rapida 1 su terra o pietra, sospesa nel round dopo un danno da fuoco `[CANONE — DM 2026-10-18]` | lo Scudo vale contro il soffio, su Durik o sul re. La RD ferma i colpi, non l'acido. Ogni volta che Hella usa lo Scudo, Thorik è accelerato per 3 round verso chi lei ha protetto (l'Eco del Custode) |
 | Artemis | *eldritch blast* a **6d6**: un dado è andato a Hella, al rito | — |
-| Tordek | contro il drago la Cintura rifiuta. I Bracieri no: Castigo del Drago (+2 al potenziamento e +2d6 contro i draghi), Salto Fiammeggiante 3 al giorno, e la Collina, che la prima volta scatta da sola quando una creatura Enorme lo porta sotto metà pf (scheda dei Bracieri) | Skullcrusher è Enorme: la prima Collina può arrivare stasera, senza preavviso |
-| Aegis Fang | *Dragondoom* vale contro Skullcrusher (`DEF-4` Scena 11). Il Bane contro Fauci (+2, +3d6, critico ×4, Scosso 1 volta a incontro CD 22) è per Fauci nel 1372 | se valga anche contro il capostipite lo decidi tu, prima del duello |
+| Tordek | contro il drago la Cintura rifiuta. I Bracieri no `[CANONE — DM 2026-10-19, giro 4 n. 5]`: Castigo del Drago (+2 al potenziamento e +2d6 contro i draghi), Salto Fiammeggiante 3 al giorno, e la Collina, che la prima volta scatta da sola quando una creatura Enorme lo porta sotto metà pf (scheda dei Bracieri) | Skullcrusher è Enorme: la prima Collina può arrivare stasera, senza preavviso |
+| Aegis Fang | *Dragondoom* vale contro Skullcrusher (`DEF-4` Scena 11). Il Bane contro Fauci (+2, +3d6, critico ×4, Scosso 1 volta a incontro CD 22) è per Fauci nel 1372 | contro il capostipite il Bane **non vale** `[CANONE — DM 2026-10-19, giro 4 n. 4]` |
 | Thorik | porta il Debito della Radice: stasera non si incassa (eco E-07g). Il **Torque** è ancora al collo del re: lo dà lui alla Scena 12, fuori da stasera | — |
 | Il dado dei caduti | quattro tiri di 1d4 alla Scena 10: le bacchette, *ristorare*, *cura ferite critiche*, *neutralizza veleno* | i nomi vanno fra i caduti del 372 |
 
@@ -263,7 +267,10 @@ cose da tenere davanti:
   del gruppo;
 - **le wyvern**: dal round 2, due wyvern (sidebar di scala, statistiche in
   A.6) vanno su chi tiene la corda e su chi vola. Fuggono quando il drago fugge
-  o muore;
+  o muore. Il duello resta EL 14, e vale 1.625 PX a testa `[CANONE — DM 2026-10-19, giro 4 n. 16]`;
+- **Ghermire e Fluttuare**: il drago li usa. Morde in picchiata, ghermisce,
+  risale, e al turno dopo fermo a 15 m lascia cadere la preda o soffia sugli
+  altri tenendola in bocca, e lei non ha il TS (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19, giro 4 n. 6]`;
 - **Aegis Fang** scaglia la Cicatrice Ancestrale: segna la ferita nella tabella
   della Forgia nel momento in cui succede.
 

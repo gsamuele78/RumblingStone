@@ -1,7 +1,7 @@
 {
   "brand": "RUMBLING STONE · ARC-07 · IL PORTALE DELLA FORGIA ETERNA",
   "title": "Le Voci della Notte",
-  "subtitle": "Le pagine da consegnare: gli echi della notte, le dieci boccette",
+  "subtitle": "Le pagine da consegnare: gli echi della notte, il contratto del Seme, le dieci boccette",
   "banner": "HANDOUT GIOCATORI",
   "meta": "Da stampare e tagliare. Ogni pagina si consegna quando lo dice la regia del DM",
   "header": "Le pagine ✉ della serata. Il DM le consegna una alla volta.",
@@ -37,6 +37,11 @@
     {
       "title": "✉ Echi — Hella",
       "file": "06-ECHI-HELLA.md",
+      "tag": "player"
+    },
+    {
+      "title": "✉ Il contratto del Seme",
+      "file": "07-HANDOUT-CONTRATTO-DEL-SEME.md",
       "tag": "player"
     },
     {

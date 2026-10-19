@@ -30,7 +30,7 @@ duplicare qui.**
 | **Hella** | Viva, template **Ibrido Treant** attivo; porta la **Collana dei Semi Eterni** con **Durik nel terzo seme** (compagno maschile) |
 | **Thorik** | **−2 CON permanente** (sacrificato per la resurrezione, MAI ripristinato) |
 | **Cuore di Moradin** | **Speso** (catalizzatore della resurrezione — uso singolo bruciato) |
-| **Corona di Adamantio** | **3 gemme accese**: Topazio (Tempo), Smeraldo (Terra), Rubino (Cuore della Leggenda) |
+| **Corona di Adamantio** | **3 gemme accese**: Topazio (Tempo), Smeraldo (Terra), Rubino (la Possanza Nanica) |
 | **Party** | APL **13** (D8), tutti gli artefatti nello stato di `state.md` §6 |
 
 ---

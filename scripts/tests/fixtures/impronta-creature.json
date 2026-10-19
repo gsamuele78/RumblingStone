@@ -39536,7 +39536,7 @@
     "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
    ]
   },
-  "Bestiario/villain/skullcrusher-il-nero-cr12.md": {
+  "Bestiario/villain/skullcrusher-il-nero-cr14.md": {
    "blocco": null,
    "conti": [
     "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 3 da DV/4 → For 15, Cos 13, Des 11",
@@ -39559,9 +39559,9 @@
     "dado": null,
     "dv": null,
     "elite": false,
-    "gs": 12,
+    "gs": 14,
     "manca": [],
-    "nome": "skullcrusher-il-nero-cr12",
+    "nome": "skullcrusher-il-nero-cr14",
     "scudo": 0,
     "taglia": "medium",
     "tipo": "dragon"

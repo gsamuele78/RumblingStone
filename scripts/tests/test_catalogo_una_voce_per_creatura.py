@@ -192,10 +192,10 @@ class TestIlPoolNonSiRestringe(unittest.TestCase):
 class TestLeDecisioniDiCanoneDel17Settembre(unittest.TestCase):
     """Due numeri discordi, decisi dal DM e scritti dove si leggono."""
 
-    def test_skullcrusher_il_nero_vale_dodici(self):
+    def test_skullcrusher_il_nero_vale_quattordici(self):
         m = [x for x in CATALOGO if "Skullcrusher il Nero" in x["name"]]
         self.assertEqual(len(m), 1)
-        self.assertEqual(m[0]["cr"], 12.0)
+        self.assertEqual(m[0]["cr"], 14.0)  # DEF-4 A.1, Q37; file rinominato il 2026-10-19
         archivio = (ROOT / "07_il Portale Della Forgia Eterna" / "_ARCHIVIO"
                     / "PortaleForgia-P6-INTEGRAZIONE-Completa.md").read_text(encoding="utf-8")
         self.assertNotIn("Skullcrusher il Nero** (Adult Black Dragon CR 11)", archivio,
@@ -204,7 +204,7 @@ class TestLeDecisioniDiCanoneDel17Settembre(unittest.TestCase):
         # 🔎 E la voce non cita piu' l'archivio: i numeri (PF 240, CA 27) sono
         # nel master vivo, e il FASTPLAY che citava non ha **nessuna** marca.
         voce = (ROOT / "Bestiario" / "villain"
-                / "skullcrusher-il-nero-cr12.md").read_text(encoding="utf-8")
+                / "skullcrusher-il-nero-cr14.md").read_text(encoding="utf-8")
         self.assertNotIn("_ARCHIVIO", voce.split("## Notes")[0],
                          "la testa della voce torna a puntare a un archivio")
         self.assertIn("ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md", voce)

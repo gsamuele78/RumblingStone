@@ -141,16 +141,16 @@ che sono anche la seconda metà dell'handout del §9.
 
 | Scena | Quanto dura | Il segnale per passare oltre | Se il segnale non arriva |
 |---|---|---|---|
-| 1 · Lo strappo | 2-3 minuti | tutti hanno tirato la Volontà | si passa lo stesso: non c'è niente da fare nel filo |
+| 1 · Lo strappo | 2-3 minuti | tutti hanno tirato la Volontà, tranne Thorik che ne è immune | si passa lo stesso: non c'è niente da fare nel filo |
 | 2 · L'apparizione | 10-15 minuti | ognuno ha fatto il suo gesto, o ha detto che aspetta | gli hobgoblin entrano alla fine del round 1, e la scena è già la 3 |
 | 3 · La pulizia | 5 minuti in fast-play, 30-40 in combattimento completo | l'ultimo hobgoblin passato cade o getta le armi | con meno di 45 minuti di serata, fast-play; a 40 minuti di scontro, un blocco di nani travolge chi resta |
 | 3 · Il passaggio | 10 minuti | PX e handout consegnati | Re Thorek indica in alto e lo dice lui: «SOPRA.» |
 
 **Se lo divinano** `[CANONE — DM 2026-10-18, G2-18]`. Una riga per segreto. Thorik
 ha *comunione* una volta al mese dalla Corona, ma solo in un Nodo Terrestre
-(pagina giocatore della Corona): se il Cuore della Montagna lo sia, non è scritto
-`[INFERRED — needs DM confirmation]`. Le risposte
-`[INFERRED — needs DM confirmation]`:
+(pagina giocatore della Corona), e il Cuore della Montagna lo è: è la caverna
+sacra sotto la fortezza, consacrata a Moradin `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 8]`. Le risposte
+`[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 8]`:
 
 | Segreto | Lo rompe | Chi lancia ottiene | Il modulo va avanti così |
 |---|---|---|---|
@@ -174,11 +174,11 @@ Prima di leggere la Scena 2, guarda come è finito il duello di `DEF-4`.
 
 | | **Ramo luminoso** (di norma) | **Ramo «meno luminoso»** |
 |---|---|---|
-| **Quando** | sempre, tranne il caso a destra | il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[CANONE — DM 2026-10-15, D90]`. La Catena spezzata è una vittoria e non conta. FUGGITO perché non sono riusciti a intaccarlo: ramo «meno luminoso», come chi ha giocato male il −1000 (§6) `[INFERRED — needs DM confirmation]` |
+| **Quando** | sempre, tranne il caso a destra | il duello di `DEF-4` è finito **FUGGITO** perché i PG si sono ritirati, o **VINTO SPORCO** `[CANONE — DM 2026-10-15, D90]`. La Catena spezzata è una vittoria e non conta. FUGGITO perché non sono riusciti a intaccarlo: ramo «meno luminoso», come chi ha giocato male il −1000 (§6) `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 3]` |
 | **Morale dei nani** | +6 (netto +2) | +4 |
 | **Gli orchi** | Volontà CD 25 contro l'aura: ne restano **due scossi**, il capo forse fra loro | niente TS: l'aura mette in fuga tutti tranne **cinque orchi e il capo**, che restano scossi |
 | **Gli hobgoblin entrano** | alla fine del round 1 | alla fine del round di sorpresa |
-| **Quanti passano l'anello** | 5; **3** con l'ordine di Thorik nel round di sorpresa; **2** con anche il preavviso di Artemis. Ordine dato nel round 1, prima che entrino: **4**; preavviso senza ordine: **4**; ordine nel round 1 più preavviso: **3** `[INFERRED — needs DM confirmation]` | **5**, qualunque cosa facciano Thorik e Artemis `[CANONE — DM 2026-10-18]` |
+| **Quanti passano l'anello** | 5; **3** con l'ordine di Thorik nel round di sorpresa; **2** con anche il preavviso di Artemis. Ordine dato nel round 1, prima che entrino: **4**; preavviso senza ordine: **4**; ordine nel round 1 più preavviso: **3** `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 1]` | **5**, qualunque cosa facciano Thorik e Artemis `[CANONE — DM 2026-10-18]` |
 | **Il box del primo round** | «ne restano due» | «ne restano cinque, stretti intorno al più grosso» |
 | **Lo scontro** | 4-5 round, una prova di forza | 3-4 round, uno scontro vero `[CANONE — DM 2026-10-12, D77]`; Dana è davvero in pericolo |
 | **Il resto** | | uguale, Re Thorek compreso. L'ARC-08 comincia con i nani più fragili |
@@ -223,7 +223,7 @@ del duello). **VINTO SPORCO**: il drago l'hanno ricacciato gli avi, non i PG
 | | Il DM non tira trenta TS: uno su venti resta, e restano **due orchi**. Il capo tira il suo a parte: se fa 20 è uno dei due (Scena 2). La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
 
 ### Lo stato dell'ARC-07 in uscita
-- **Corona di Adamantio**: **3 gemme accese** (Topazio, il Tempo Immutabile; Smeraldo, la Vera Terra; Rubino, la Possanza Nanica: i nomi della pagina giocatore). Il Rubino si è usato **una volta sola**, come motore del ritorno; speso, **resta nell'incasso** e **la Corona si completa**: +3 e Senzienza dall'arrivo (Scena 2) `[CANONE — DM, D6]`.
+- **Corona di Adamantio**: **3 gemme accese** (Topazio, il Tempo Immutabile; Smeraldo, la Vera Terra; Rubino, la Possanza Nanica: i nomi della pagina giocatore `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 7]`). Il Rubino si è usato **una volta sola**, come motore del ritorno; speso, **resta nell'incasso** e **la Corona si completa**: +3 e Senzienza dall'arrivo (Scena 2) `[CANONE — DM, D6]`.
 - **Cuore di Moradin**: **SPESO** (resurrezione).
 - **L'Aura della Forgia** (`DEF-4` Scena 12): attiva fino all'alba del giorno dopo, quindi i PG arrivano con *Possenza Divina* e *Protezione dal Male* ancora addosso `[CANONE — DM 2026-09-30, D17]`. L'alba è quella del 1372: il salto non ne consuma la durata `[CANONE — DM 2026-10-15, D91]`. *Protezione dal Male* dà +2 di deviazione alla CA, come la Corona: i bonus di deviazione non si sommano e vale il più alto (SRD), quindi Thorik non conta mai +5.
 - **Thorik**: **−4 DES / +2 COS / +4 CAR** permanenti; la Corona gli dà **+3** di deviazione alla CA, **+2** se al rito di Hella ha donato la deflessione (`DEF-3` §5): lo stesso punto, contato una volta. **Hella**: viva (Ibrido Treant, Collana, Durik). **Bracieri** completi. **Ring** riforgiato.
@@ -393,9 +393,10 @@ battute della Scena 13. Qui c'è solo il filo, e nessuna azione.
 
 All'arrivo, **Volontà CD 15** o frastornati 1 round (§2, Zona 1). Chi la
 fallisce arriva con gli altri, ma resta frastornato mentre gli altri fanno il
-loro primo gesto (Scena 2). Thorik ha *Mente Vuota* dalla Corona, immune agli
-effetti mentali: se lo strappo lo sia, il testo non lo dice. Fino a decisione
-tira anche lui `[INFERRED — needs DM confirmation]`.
+loro primo gesto (Scena 2). Thorik non tira: la *Mente Vuota* della Corona lo
+rende immune agli effetti mentali, e la pagina a tre gemme che il giocatore ha
+in mano lo dice. Il suo primo ordine da portatore della Corona arriva sempre
+col primo gesto della Scena 2, nel giro dei gesti `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 2]`.
 
 **Che cosa torna con loro.** Tutto quello che portano addosso, comprato al
 banco della fucina compreso: pozioni, pergamene, bacchette, rune, come l'ascia
@@ -485,6 +486,10 @@ PG arrivano al Round 8.
 Dana, che gli si getta sopra `[CANONE — DM 2026-10-15, D92]`. Dana ha 20 pf più i
 2d8 dell'Apparizione, e la abbattono cinque o sei frecce, o due critici
 `[CANONE — DM 2026-10-18]`: allora vale la riga «Madre Dana cade» del §6.
+Caduta Dana, il colpo che ucciderebbe il re lo prende il primo dei dieci capi
+che sale sull'altare, e gli hobgoblin passano a tirare a chi è sull'altare.
+Nel ramo luminoso succede di rado, perché i tiri al re cominciano al round 6
+`[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 6]`.
 
 #### Il round di sorpresa, un gesto a testa
 
@@ -502,7 +507,7 @@ si ricorda (§7). Le statistiche di Treant e Durik sono in Appendice A.
 | **Hella** · radici intorno al re | le radici che le crescono intorno sono sue: chiuse sul re, copertura totale per un round `[CANONE — DM 2026-10-12, D77]` | |
 | **Hella** · radici verso la porta | fanno come *intralciare*, ma su un'area di 6 m di raggio (Riflessi CD 15), per un round soltanto `[CANONE — DM 2026-10-12, D77]`. Nel round di sorpresa prendono gli orchi in fuga, non gli hobgoblin, che entrano dopo | chi resta intralciato non può fuggire: si rannicchia come ogni creatura in panico messa all'angolo (SRD) e si arrende |
 | **Hella** · lo *Scudo del Custode* | solo se al rito Thorik ha donato la deflessione: 1/giorno, immediata, prende dimezzato il danno di un alleato entro 9 m, e Thorik è accelerato 3 round verso chi lei ha protetto | |
-| **Hella** · i Treant di Adamantio | si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Durano 1 ora (`DEF-3` Appendice A.2; qui Appendice A.3) | chiamarli **tutti e due insieme** spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba): va detto alla giocatrice prima che scelga. Se al −1000 li ha già chiamati insieme di notte, è spenta; chiamarli insieme all'alba non la spegne (`DEF-4`). L'alba del 1372 non è ancora arrivata: i semi spesi al −1000 sono ancora spesi. I Treant chiamati all'alba del 372, se la loro ora non è finita, restano al −1000, e quelli nuovi compaiono ai piedi dell'altare, dentro l'anello `[INFERRED — needs DM confirmation]` |
+| **Hella** · i Treant di Adamantio | si chiamano con la Collana, uno per seme ancora carico (i semi tornano all'alba): un'azione standard, e arrivano alla fine del round. Durano 1 ora (`DEF-3` Appendice A.2; qui Appendice A.3) | chiamarli **tutti e due insieme** spegne per un mese l'Evocazione dei Guardiani, il potere della Collana che li chiama (niente Treant, e Durik torna solo all'alba): va detto alla giocatrice prima che scelga. Se al −1000 li ha già chiamati insieme di notte, è spenta; chiamarli insieme all'alba non la spegne (`DEF-4`). L'alba del 1372 non è ancora arrivata: i semi spesi al −1000 sono ancora spesi. I Treant chiamati all'alba del 372, se la loro ora non è finita, restano al −1000 e svaniscono a fine durata; il seme resta speso fino all'alba del 1372 (D91). Quelli chiamati qui compaiono ai piedi dell'altare, dentro l'anello `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 4]` |
 | **Hella** · Durik | arriva con lei, perché è legato alla Collana (`DEF-4`): sta accanto a Hella e va dove lei lo manda (Appendice A.4) | se il drago l'ha distrutto nel duello, Hella lo richiama col seme III, se è carico e l'Evocazione non è spenta: torna subito, per un'ora (`DEF-3` §7). Altrimenti torna all'alba |
 
 **Le radici di Hella si usano una volta per scena** `[CANONE — DM 2026-10-18, G2-33]`,
@@ -916,7 +921,10 @@ bastioni dopo mezza giornata di battaglia sotterranea, e il ponte d'arrivo
 racconta l'arrivo nel Cuore della Montagna, cioè la Scena 2, con uno stato del
 gruppo superato. Finché il raccordo non è scritto, il DM apre la Sessione 4
 della Guida (l'Incontro 4A, la battaglia aerea contro Fauci) dall'uscita del portale, subito, e con
-lo stato del §0-bis `[INFERRED — needs DM confirmation]`.
+lo stato del §0-bis `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 5]`. Il raccordo va scritto, e il ponte d'arrivo
+dell'ARC-08 va portato allo stato in uscita: −4 DES / +2 COS / +4 CAR, i tre
+Doni, Durik sempre presente, il Cuore di Moradin che non aggancia gli spiriti
+(D32).
 
 ### Handout giocatore
 1. **«Lo Stato dei Custodi»**, da consegnare a chiusura d'arco, uno per

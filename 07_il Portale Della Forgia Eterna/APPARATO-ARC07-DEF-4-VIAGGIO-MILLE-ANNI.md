@@ -108,14 +108,15 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 10 | Disattivare o Artigianato | 20 |
 | SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
 | SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
-| SCENA 11 | sul gruppo più fitto (Riflessi | 28 |
-| SCENA 11 | PG, ognuna tira a parte Volontà | 25 |
+| SCENA 11 | sul gruppo più fitto (Riflessi | 30 |
+| SCENA 11 | Ognuna tira a parte Volontà | 25 |
+| SCENA 11 | un incantesimo nella nube serve Concentrazione | 21 |
 | SCENA 11 | prova di Forza | 25 |
 | SCENA 11 | Forza | 10 |
 | SCENA 11 | Ascoltare | 20 |
 | SCENA 11 | se il gancio prende, Forza | 25 |
 | SCENA 11 | aiuta, +2 a testa (aiutare, Forza | 10 |
-| SCENA 11 | 40 con armatura magica), soffio 16d4 | 29 |
+| SCENA 11 | 40 con armatura magica), soffio 16d4 | 31 |
 | SCENA 11 | Presenza | 26 |
 | SCENA 11 | m, pungiglione +10 con veleno Tempra | 17 |
 | SCENA 12 | Volontà | 20 |

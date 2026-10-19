@@ -16,8 +16,9 @@
 > Seme porta a 6, ancora in tempo; all'atterraggio Grask dorme (regia §2). Al
 > passo 5 non leggere le otto clausole di fila, che sono tre volte il tetto di
 > un box: di' a voce il riassunto «In breve» di `DEF-4` Scena 5, «Le dieci
-> pozioni del gruppo», poi leggi il box finale. Se il tavolo vuole una
-> clausola parola per parola, la leggi quando la chiede.
+> pozioni del gruppo», poi leggi il box finale. Dopo il box consegni al
+> tavolo il ✉ «Il contratto del Seme», nel volume dei giocatori: ha le otto
+> clausole e la firma della bottega, e niente sul creditore.
 >
 > **Dove eravamo** `[CANONE — DM 2026-10-12]`. Il Seme nessuno l'ha toccato a
 > mani nude: è nello zaino di Tordek dal 31 luglio. Le dieci pozioni le
