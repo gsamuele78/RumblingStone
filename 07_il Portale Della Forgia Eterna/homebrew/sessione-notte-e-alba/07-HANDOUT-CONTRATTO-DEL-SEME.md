@@ -9,7 +9,8 @@
 
 ---
 
-**Per tutto il tavolo**: si legge insieme e si passa di mano.
+**Per tutto il tavolo**: si legge insieme, si passa di mano, e ognuno la
+rilegge quando vuole.
 
 **Le clausole** (sono il contratto):
 

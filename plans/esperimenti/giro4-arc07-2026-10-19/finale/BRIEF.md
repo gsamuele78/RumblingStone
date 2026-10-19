@@ -1,6 +1,6 @@
 # Giro 4, lettura finale di ARC-07 — a freddo sui booklet definitivi di stasera
 
-Repo: /home/claude/RumblingStone (ramo claude/project-thread-ep4auu = main). Stasera il DM
+Repo: la radice del repo (ramo claude/project-thread-ep4auu = main). Stasera il DM
 gioca la notte a Hammerfist ≈372 DR **dalla Scena 5 di DEF-4** fino all'esito del duello con
 Skullcrusher, con il booklet `07_il Portale Della Forgia Eterna/homebrew/sessione-notte-e-alba/`
 (leggi il generato `ARC07-NOTTE-E-ALBA-BOOKLET.hb.md`, che è quello che va in stampa; manifest ARC07-NOTTE-E-ALBA-BOOKLET.manifest.json: regia, Seme, cassetta del DM, DEF-4,

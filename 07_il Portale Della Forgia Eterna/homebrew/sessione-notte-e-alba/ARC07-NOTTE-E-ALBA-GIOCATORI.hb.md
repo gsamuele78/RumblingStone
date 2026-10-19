@@ -146,8 +146,8 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-**Per tutto il tavolo.** Questa pagina non è privata: si legge insieme e si
-passa di mano.
+**Per tutto il tavolo**: si legge insieme, si passa di mano, e ognuno la
+rilegge quando vuole.
 
 **Le clausole** (sono il contratto):
 
@@ -196,8 +196,8 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-**Per tutto il tavolo.** Questa pagina non è privata: si legge insieme e
-si passa di mano.
+**Per tutto il tavolo**: si legge insieme, si passa di mano, e ognuno la
+rilegge quando vuole.
 
 > *Kettra stende un panno sul banco, sposta la
 > cassa di sabbia con il piede e mette in fila le vostre dieci boccette come

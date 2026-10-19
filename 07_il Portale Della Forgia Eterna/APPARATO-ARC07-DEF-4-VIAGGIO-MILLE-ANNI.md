@@ -101,11 +101,13 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 9 | stessa cera nera sulle dita, Osservare | 15 |
 | SCENA 9 | Percepire Intenzioni o Diplomazia | 18 |
 | SCENA 9 | Rapidità di Mano | 22 |
+| SCENA 9 | prova di Destrezza e non supera | 10 |
 | SCENA 9 | la riga «Gli parlano» riesce con | 14 |
 | SCENA 9 | fallisce una prova di Muoversi Silenziosamente | 20 |
 | SCENA 10 | Forza | 18 |
 | SCENA 10 | Diplomazia o Guarire | 18 |
 | SCENA 10 | Disattivare o Artigianato | 20 |
+| SCENA 11 | danno massiccio, Tempra | 15 |
 | SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
 | SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
 | SCENA 11 | sul gruppo più fitto (Riflessi | 30 |
