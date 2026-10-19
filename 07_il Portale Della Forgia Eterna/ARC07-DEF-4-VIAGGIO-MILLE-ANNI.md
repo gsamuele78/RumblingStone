@@ -3865,13 +3865,16 @@ Il vero climax resta Fauci nel 1372: qui si semina.
   l'invisibilità di Artemis non lo salva. Lo lancia a metà della passata, con
   Attacco in Volo, e il morso arriva alla passata dopo (Scena 11).
 
-### A.1-bis · Skullcrusher Vecchio, per il party straripante `[CANONE — DM 2026-10-12, D60]`
+### A.1-bis · Skullcrusher Vecchio, il drago di stasera `[CANONE — DM 2026-10-12, D60]`
 
 La riga di prima usava il drago **Vecchio** dell'SRD senza template, e ne veniva
 fuori un drago **più debole** di quello di base (287 pf e CD 27/24 contro 297 e
 28/25). Questo è il Vecchio dell'SRD (d20srd.org, *Dragon, True*) con lo stesso
-template Avanzato di A.1. Si usa solo con un gruppo di 14°: per uno di 13°,
-GS 17 sarebbe il tetto esatto di APL+4, e il DM ha scelto le wyvern.
+template Avanzato di A.1. Si usa con il gruppo di stasera, insieme alle 2
+wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
+`[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`. Con un
+gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
+11, «Quale drago si usa, e quando»).
 
 ```
 SKULLCRUSHER VECCHIO (GS 17: Vecchio GS 16, +1 Avanzato)
@@ -3888,8 +3891,10 @@ Presenza Terrificante: raggio 72 m, Volontà CD 26 (meno di 25 DV)
 Capacità magiche: come A.1, ma *oscurità* con raggio 24 m,
    più *crescita vegetale* 1/giorno
 Incantesimi da stregone, incantatore di 7°: 6/7/7/5 al giorno
+   (lentezza CD 17)
 FOR 33 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
-Talenti, abilità e il resto: come A.1
+Talenti: quelli di A.1 (Virata, non Ghermire), più Allerta
+Abilità e il resto: come A.1
 ```
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
@@ -3904,6 +3909,7 @@ PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
 cioè **≈ 3.150 a testa**.
 
 - Boost log:<!-- storico --> 2026-10-12 —<!-- /storico --> drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
