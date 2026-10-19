@@ -853,6 +853,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** `[CANONE — DM 2026-10-07, D39]` | **1** · **0** |
 | Spogliare la tenda delle armature (Scena 8, solo se nessuno ha dato l'allarme) `[CANONE — DM 2026-10-12, D59]` | **1** |
+| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) `[INFERRED — needs DM confirmation]` | **1** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) `[CANONE — DM, D22]` | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
 | Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[CANONE — DM 2026-10-12]` | **1** |
@@ -2443,7 +2444,11 @@ motivo per cui la Scena 7 viene prima.
   guardie, due restano al seggio e due vanno sul PG più esposto (qui sotto).
 - **Come combattono le quattro guardie** `[CANONE — DM 2026-10-12]`.
   Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
-  lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
+  lasciano fiancheggiare, e non attaccano. **Lo coprono**, con *Aiutare un
+  altro* (SRD): un'azione standard, un attacco contro CA 10, e se riesce
+  Zog'tar ha +2 alla CA contro il prossimo attacco di quell'avversario.
+  Ognuna copre il generale da un PG diverso, di solito Thorik e Tordek, e
+  deve stargli accanto. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
   tornano davanti al seggio. Contro chi è invisibile colpiscono il quadretto da
   cui viene il colpo, con il 50% di mancare. **Finché Zog'tar è in piedi non
@@ -2471,12 +2476,20 @@ motivo per cui la Scena 7 viene prima.
   l'Ira comincia al suo primo turno. Balvar parla lo stesso, se i PG ci
   arrivano: lui non ha fretta.
 - **Il sacerdote dell'orda** `[CANONE — DM 2026-10-07, Q26: nel 372 l'orda non è la Mano Rossa]`. Dorme nella
-  tenda accanto, a dieci passi. Al primo grido o al corno arriva dopo **1d4+1
-  round**, con *vedere invisibilità* già addosso se ha sentito il corno. Dalla
-  soglia lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
+  tenda, su una stuoia dietro il seggio, a L13 `[INFERRED — needs DM confirmation: prima dormiva nella tenda accanto]`.
+  Si alza al primo grido e agisce dal **round 1**, con *vedere invisibilità*
+  già addosso se ha sentito il corno. Da dietro il seggio lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
   poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del
   generale. È un adepto: con Balvar, Zog'tar e le guardie la tenda arriva a EL
   17, il tetto. Statistiche in A.2.
+- **Se Balvar sta con i PG, entrano le guardie del turno dopo** `[INFERRED — needs DM confirmation]`.
+  Vale se è recuperato prima dello scontro, o se passa con i PG alla fine
+  del round 1 («sta con chi sta vincendo», Scena 7). Sono due, con i numeri
+  delle altre quattro (A.2), e dormono nella tenda accanto: al round 2
+  entrano dal telo del seggio e vanno su chi lancia incantesimi. Sei
+  guardie, Zog'tar e il sacerdote fanno **EL 16**, un punto sotto il tetto.
+  Con cinque PG sono già nella tenda (la riga di scala, più sotto), e non
+  se ne aggiungono altre.
 
 **Comparse**
 
@@ -2486,6 +2499,13 @@ motivo per cui la Scena 7 viene prima.
 - **Il bottino e il tempo**: le armature della tenda, quanto pesano, quando
   si possono togliere e dove stanno nel buco portatile sono in §8 B, «Il
   bottino della tenda e il tempo».
+- **Curarsi prima di ripartire** `[INFERRED — needs DM confirmation]`. Le
+  bacchette di cura funzionano anche nella tenda, ma la tenda è circondata
+  dalle ronde, e ogni carica è il round di chi la usa. Se il gruppo, in tutto,
+  spende **più di 20 cariche** di bacchetta prima di ripartire dalla tenda,
+  segna **una tacca** sull'orologio della notte. Il gruppo sceglie: rientrare
+  ferito e curarsi alle mura, o perdere la tacca. In tutti e due i casi
+  all'alba si vede che è stato nella tenda.
 - **Sviluppi.** Zog'tar **esce dalla storia in questa scena**: morto, oppure
   umiliato e cacciato dal suo stesso campo (Via A, qui sotto). Il COME conta
   (► Esito, in fondo alla scena). `[HDYWTDT — il finisher a chi lo abbatte: «com'è che
@@ -3607,26 +3627,30 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 | Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
 |---|---|---|
 | Scene 1-4: l'arrivo, Durin, la targa, il consiglio | storia/social | 600 |
-| Scene 6-8: la tenda intera, Zog'tar (GS 15), Balvar (GS 13), le quattro guardie (GS 8) e il sacerdote (GS 6) `[CANONE — DM 2026-10-12, D58]` | combattimento | **≈ 3.650** (≈ 14.600 in tutto); **≈ 2.700** se Balvar è recuperato |
+| Scene 6-8: la tenda intera, Zog'tar (GS 15), Balvar (GS 13), le quattro guardie (GS 8) e il sacerdote (GS 6) `[CANONE — DM 2026-10-12, D58]` | combattimento | **≈ 3.650** (≈ 14.600 in tutto); **≈ 3.000** se Balvar è recuperato, con le due guardie del turno dopo |
 | Scena 6: la pattuglia dei tre fallimenti (EL 10), se si combatte | combattimento | ≈ 350 (≈ 1.400 in tutto) |
 | Scena 6: la squadra dei lupi (EL 9), se si combatte | combattimento | ≈ 250 (≈ 975 in tutto) |
 | Scena 10: le mura | montaggio/eroico | 600 |
 | Scena 9: Vatore (scena grigia, qualunque esito) | roleplay grigio | 500 |
-| **Scena 11: Skullcrusher (GS 14)** | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
-| Scena 11: le 2 wyvern (GS 6), se ci sono | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4); il duello sale a **1.625** a testa. EL 14, invariato `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
+| **Scena 11: Skullcrusher Vecchio (GS 17), stasera** `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]` | boss | **3.900** (tabella DMG: 15.600 per un gruppo di 13°, diviso per 4) |
+| Scena 11: Skullcrusher Adulto (GS 14), se si usa A.1 | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
+| Scena 11: le 2 wyvern (GS 6) | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4). Il duello vale **≈ 4.060** a testa col Vecchio, EL 17; **1.625** con l'Adulto, EL 14 `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
 | Scene 12-13: il Rituale e il Rubino | premio di storia maggiore | 800 |
-| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~7.610/PG**; **~7.775/PG** con le wyvern, che a questo gruppo toccano (duello a 1.625) |
+| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~10.210/PG** col Vecchio e le wyvern, stasera (duello a ≈ 4.060); **~7.775/PG** con l'Adulto e le wyvern (duello a 1.625); **~7.610/PG** con l'Adulto da solo |
 
 > Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
 > party **non** arrivava al 14° in questo master: ci arrivava **dopo `DEF-5`** `[CANONE — DM 2026-10-07, D40]`.
 > Con le Scene 6-8 alla tabella il beat
 > sale di circa 1.250 a testa: se basti per il 14° prima del ritorno al 1372 dipende dai
 > PX con cui il gruppo è partito, che il master non fissa. Le parti giocate non
-> si ritoccano.
+> si ritoccano. Col Vecchio il duello vale circa 2.435 a testa più dell'Adulto
+> con le wyvern: il 14° può arrivare qui e non dopo `DEF-5`, e allora la riga
+> qui sopra non vale più `[INFERRED — needs DM confirmation: dipende dai PX di partenza]`.
 
 ⚠️ **Il conto SRD è più basso.** La tabella dei PX della DMG dà il totale
 dell'incontro, da dividere fra i PG: Skullcrusher (GS 14) contro un gruppo di
-13° vale 5.850 in tutto, cioè circa **1.460 a testa**, e Zog'tar (GS 15) circa
+13° vale 5.850 in tutto, cioè circa **1.460 a testa**; il Vecchio (GS 17)
+15.600, circa **3.900 a testa**; e Zog'tar (GS 15) circa
 1.950: sconfitto, cioè ucciso, umiliato o catturato, sono gli stessi PX. Il
 duello e la tenda sono al conto della tabella; i GS
 molto sotto l'APL, come le guardie e il sacerdote, sono stimati, quindi i
@@ -3905,8 +3929,9 @@ in più, è Allerta, che non cambia i numeri del combattimento `[CANONE — DM 2
 circa **112 pf**. Gli incantesimi conosciuti
 in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla
 lista dello stregone: *dissolvi magie* e *lentezza* `[CANONE — DM 2026-10-12, D64]`.
-PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
-cioè **≈ 3.150 a testa**.
+PX alla tabella DMG: circa 15.600 per un gruppo di 13°, cioè **≈ 3.900 a
+testa**, e 12.600 per un gruppo di 14°, cioè **≈ 3.150 a testa**. Le wyvern
+si sommano a parte (§8 A).
 
 - Boost log:<!-- storico --> 2026-10-12 —<!-- /storico --> drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
 - Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`.
@@ -4289,6 +4314,8 @@ seggio a M12–N13, con il braciere del seggio a J11; le quattro guardie gli
 stanno davanti, a K12, L10, O10 e P11. Balvar è sullo sgabello a P13, nel
 fondo buio P12–R13. Il telo est, «il telo a sinistra», va da S5 a S13; il
 telo del glifo è quello sopra il seggio, L14–N14. Grask è seduto fuori, a N15,
-due quadretti dietro il seggio, e il sacerdote è nella tenda accanto, a W11.
+due quadretti dietro il seggio, e il sacerdote dorme dietro il seggio, a L13.
+La griglia stampata lo mette ancora nella tenda accanto, a W11: si aggiorna
+quando il DM conferma `[INFERRED — needs DM confirmation]`.
 
 <!-- /pagina -->
