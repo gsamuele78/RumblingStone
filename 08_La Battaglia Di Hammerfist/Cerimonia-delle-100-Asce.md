@@ -20,7 +20,7 @@ Cerimonia-delle-100-Asce.md
 - Le asce sono **dipinte di rosso** alla base (sangue rituale, mescolato con cera nera) e **dorate alla lama** (simbolo del valore).
 - Re Thorek pronuncia il **nome di ognuno dei 210 caduti** — nani anziani fanno la cantillazione tradizionale ("ricordato, ricordato, ricordato"). Ci vogliono **3 ore** nel mondo.
 - Al termine, ogni famiglia caduta riceve **una runa di memoria** (oggetto cerimoniale, non magico).
-- Il rito si chiude con **il Giuramento delle 90** — i sopravvissuti pronunciano collettivamente: *"Per i centodiciotto. Per i novantadue. Per i nove di Drellin's Ferry. Camminiamo."* (210 = 118 a Hammerfist + 92 nei mesi precedenti + 9 a Drellin's Ferry caduti accanto a Thorik in Arco 00. `[INFERRED — needs DM confirmation: 118 + 92 + 9 fa 219]`)
+- Il rito si chiude con **il Giuramento delle 90** — i sopravvissuti pronunciano collettivamente: *"Per i centodiciotto. Per i novantadue. Per i nove di Drellin's Ferry. Camminiamo."* Il conto dei caduti è 210 = 118 a Hammerfist + 92 nei mesi precedenti. I nove di Drellin's Ferry, caduti accanto a Thorik nell'Arco 00, si nominano nel Giuramento ma non si contano `[CANONE — DM 2026-10-19, D17]`.
 
 ### 1.2 Cosa accade durante la cerimonia (3 ore nel mondo; al tavolo 20-30 minuti, vedi le note per il DM in fondo)
 
@@ -56,7 +56,9 @@ Cerimonia-delle-100-Asce.md
 
 ## 3. Atto 2 (compressed) — Gli arrivi esterni
 
-> Mentre Re Thorek pronuncia i nomi, **due figure venute da fuori** entrano nella Sala. Si fermano discrete sul fondo, in piedi, ad ascoltare. Re Thorek le nota senza interrompersi. Non sono venute insieme: ognuna ha la sua ragione (vedi le note per il DM in fondo).
+> Mentre Re Thorek pronuncia i nomi, due figure venute da fuori entrano nella Sala. Si fermano sul fondo, in piedi, ad ascoltare. Re Thorek le nota senza interrompersi. Non sono venute insieme.
+
+Ognuna ha la sua ragione: le note per il DM in fondo, §9. Due figure, non coordinate `[CANONE — DM 2026-10-19, D20]`.
 
 ### 3.1 Maestro Tempestas (Rethmar)
 
@@ -71,7 +73,7 @@ Cerimonia-delle-100-Asce.md
 
 ### 3.2 Capitana Lythiel Alar-Wen (Sacred Forest, Cerchio della Quercia Vecchia)
 
-- È a Hammerfist dalla Sessione 4, e in battaglia riconosce Hella: è canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4; canonized 2026-05-04»). Arriva come inviata del Sacred Forest, non come una dei ranger di Lunapiena (D13, `ARC08-02` §2). Resta dopo la battaglia per la cerimonia.
+- È a Hammerfist dalla Sessione 4: cavalca coi gufi giganti, e in battaglia riconosce Hella `[CANONE — DM 2026-10-19, D16]` (la battuta è nell'Incontro 4A di `ARC08-01-GUIDA-DM.md`): è canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4; canonized 2026-05-04»). Arriva come inviata del Sacred Forest, non come una dei ranger di Lunapiena (D13, `ARC08-02` §2). Resta dopo la battaglia per la cerimonia.
 - È venuta **per ordine dell'Arcidruidessa Saraah** (sua maestra) per:
   1. **Onorare i caduti** di Hammerfist (i druidi del Sacred Forest considerano la Sala di Pietra Antica un **luogo sacro di natura interrotta** — meritano di onorarlo).
   2. **Consegnare formalmente la Ghianda del Cerchio a Hella** durante o dopo la cerimonia (vedi `Bestiario/png/Lythiel/Lythiel.md`).

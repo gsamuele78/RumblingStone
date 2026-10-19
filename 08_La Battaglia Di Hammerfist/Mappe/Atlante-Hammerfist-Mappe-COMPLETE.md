@@ -994,13 +994,13 @@ Tunnel principale apre caverna più ampia piena stalagmiti proiettano ombre lung
 - **Nord-Ovest:** Tunnel imboscata 3 (Hobgoblin Sergente + 6 Guerrieri)
 
 **IMBOSCATA BUGBEAR (Est + Ovest):**
-- **8 Bugbear Assassini Totali:** Rogue 5/Assassin 2, CR 7 ciascuno
+- **8 Bugbear Assassini Totali:** Rogue 5/Assassin 2, CR 9 ciascuno (scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`: per l'SRD i livelli di classe si sommano al GS 2 della razza) `[CANONE — DM 2026-10-19, D10]`
 - **Tattiche:**
   - Nascondersi in Ombra: Bonus +12 (Darkness tunnel + racial)
   - Osservare CD 25 per notarli PRIMA che attacchino
   - Target: Isolated creatures O Re Thorek (High-value)
   - Death Attack: CD 16 Fort O paralysis 1d6+2 round
-  - Sneak Attack: +5d6 damage FIRST strike
+  - Sneak Attack: +4d6 damage FIRST strike (3d6 rogue + 1d6 assassin, SRD)
 - **Trigger:** Attaccano quando nani al centro (Maximum targets vulnerable)
 
 **IMBOSCATA HOBGOBLIN (Nord-Ovest):**
@@ -1089,7 +1089,7 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 
 **RE THOREK XIII:**
 - **Condizione:** Critical (8 HP rimanenti, -187 HP persi)
-  - Stabilized (Thorin *Cure* spells)
+  - Avvelenato: una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per magia; al terzo fallimento muore. *Neutralizzare veleno* o *guarigione* (SRD) fermano le prove, le *cure ferite* no `[CANONE — DM 2026-10-19, D12]`
   - Conscious but weak (Can speak, cannot fight)
   - Position: Center altare (Surrounded protectors)
 - **Momento Drammatico:** Quando PG appear, Thorek occhi aprono
@@ -1117,23 +1117,24 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 
 **ONDATE NEMICHE (Incontro 3B):**
 
-**Ondata 1 (Round 1-2): 30 ORCHI BERSERKER**
+**Ondata 1 (Round 3-4, come la guida): 30 ORCHI BERSERKER**
 - Charge tunnel → altare (Reckless)
 - **Effetto Apparizione PG (round 9-10, su chi è ancora in campo):** TS Volontà CD 20 o spaventati per 10 round (guida, «Effetti dell'Apparizione»)
   - Shaken: -2 all rolls (Morale broken)
   - Panico: 5 flee back tunnel
 
-**Ondata 2 (Round 3-5): 20 HOBGOBLIN SERGENTI**
+**Ondata 2 (Round 5-6, come la guida): 20 HOBGOBLIN SERGENTI**
 - Disciplinati, advance formazioni shield wall
 - **Immune fear** (Trained veterans)
 - Focus: Tenere nani engaged mentre ondata 3 arrives
 
-**Ondata 3 (Round 6-8): 15 BUGBEAR ASSASSINI**
-- Stealth approach (Nascondersi +12)
+**Ondata 3 (Round 7-8, come la guida): 15 BUGBEAR ASSASSINI**
+- Stealth approach (Nascondersi +17; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`, GS 9) `[CANONE — DM 2026-10-19, D10]`
 - Target: Leaders + Re Thorek (Assassination attempts)
 - **Interrupted:** PG apparizione round 9-10 = Surprise reversed!
 
-**Ondata Finale (Round 9-10): GRIMJAW + 10 OROG**
+**Ondata Finale (corno al round 11, ingresso al round 12): GRIMJAW + 10 OROG** `[CANONE — DM 2026-10-19, D11]`
+- Arriva quando i PG sono già in campo: entra dalla porta di mithral e punta l'altare (MAPPA 5 REVISED, stato F, ⚫ AH1 e la rotta nera). Guardie: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`
 - **Se Grimjaw vede situazione (PG arrived, morale swing):** 
   - Option A: Retreat strategic (Live fight another day)
   - Option B: Personal challenge Thorik (Arrogance)
@@ -1179,7 +1180,7 @@ Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfi
 - **Distanza:** 120 metri horizontal
 - **Pendenza:** Costante downhill nani favor
 - **Terreno:** Open valley, alcuni macerie edifici esterni
-- **Weather:** Nubi temporale gathering (Maestro Tempestas arrival imminent)
+- **Weather:** Nubi temporale gathering: la tempesta di Orion (*controllare tempo*), con la musica di Maestro Tempestas `[CANONE — DM 2026-10-19, D14]`
 
 **EST (Valle):**
 - **Esercito Mano Rossa:** Livello 0m valley floor
@@ -1189,11 +1190,11 @@ Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfi
   - 200 Fanteria orchesca (Shaken, ready rout)
   - 80 Giganti/Ettin/lite (Ancora formidabili)
   - 20 Maghi/Chierici (Support flebile)
-- **Leadership:** Grimjaw absent (Morto O retreat), Gorthak present (Ultimo boss standing)
+- **Leadership:** Grimjaw morto nel 3B, oppure in campo con le guardie rimaste se nel 3B ha suonato la ritirata (`ARC08-02` §1, *Morale*); Gorthak present (Ultimo boss standing). Il dettaglio delle unità, con la fonte di ogni numero: guida § Sessione 4, «Chi è ancora in campo» `[CANONE — DM 2026-10-19, D13]`
 
 **Schieramento Nanico:**
 - **90 Guerrieri Veterani:** Formazione cuneo (Wedge charge optimal)
-- **Re Thorek XIII:** Rear position (Healed 100 HP via Dana, still weak)
+- **Re Thorek XIII:** Rear position (curato dai chierici di Dana nella mezza giornata fra la caverna e i bastioni, ~100 pf, still weak) `[CANONE — DM 2026-10-19, D13]`
 - **Madre Dana + Cantitrici:** Support rear (Buff spells, healing ready)
 - **4 PG (Rumbling Stones):** **TIP OF SPEAR** (Leading charge!)
   - Thorik: Punto cuneo, Corona blazing, Aegis-Fang ready
@@ -1225,7 +1226,7 @@ This map shows MOMENT BEFORE. Next map (4 Unified) shows DURING charge + aerial 
 **Tipo:** Epic cinematic dual-front  
 **Scala:** Strategic overview  
   ⚠️ **Vista strategica — NON è una griglia di combattimento.**
-**Timing:** Climax Sessione 4, Round 11-23
+**Timing:** Climax Sessione 4, Round 1-23 (la linea del tempo è quella della guida, § Incontro 4A `[CANONE — DM 2026-10-19, D9]`: cuneo ai round 1-5, urto al 6, logoramento 11-17, picchiata 18-20, duello 21-23)
 
 **Descrizione Scenario:**
 Vista cinematografica captures TWO simultaneous battles integrated:
@@ -1262,15 +1263,15 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
 **BATTAGLIA AEREA (Sky):**
 
 **Tempesta Magica Controllata:**
-- **Maestro Tempestas:** Altitude 60m, conducts storm
-  - Chi lancia la tempesta è una decisione aperta del DM: la scheda di Tempestas (`ARC08-02` §2) non ha *controllare il tempo* né *tempesta di fulmini*
-  - Fulmini: *invocare il fulmine* fa 3d6, 3d10 in tempesta (SRD); quanti e di chi lo decide il DM
-  - Meteo SRD: vento violento −4 a distanza e Tempra CD 15 per i Piccoli; con la pioggia è una *tempesta*, e gli attacchi a distanza con armi diventano impossibili (decisione aperta del DM)
+- **Maestro Tempestas:** Altitude 60m, conducts the music, not the storm `[CANONE — DM 2026-10-19, D14]`
+  - La tempesta la lancia **Orion** con *controllare tempo* prima della battaglia (druido 14°, SRD: 8d12 ore, raggio 3 miglia; dirige il vento, non i fulmini)
+  - Fulmini: la **Cantata della Tempesta Tonante** di Tempestas (2d6 per 3 round entro 18 m, Riflessi CD 23, `ARC08-02` §2) e *chiamare fulmini* di Orion (3d10 a fulmine in tempesta, Riflessi CD 20, SRD)
+  - Meteo SRD: vento violento −4 a distanza e Tempra CD 15 per i Piccoli; con la pioggia è una *tempesta*, e gli attacchi a distanza con armi diventano impossibili. **Deroga dichiarata dall'SRD**: l'occhio della tempesta sopra i bastioni, da dove gli arcieri alleati tirano senza i malus
   - Nubi nere: Oscurano drago visibility (-4 Osservare)
 
 **Fauci di Palude (Desperate):**
 - **Altitude:** Variable 30-45m (Evading gufi)
-- **Condition:** Ferito, 232/337 pf (i pf di partenza sono una decisione aperta del DM; il carry-over del P5 li cambia, `ARC08-10` §4.1)
+- **Condition:** 337 pf se il P5 non è stato giocato; altrimenti 337 meno il carry-over di `ARC08-10` §4.1 `[CANONE — DM 2026-10-19, D9]`
   - Frecce ranger elfiche bleeding
   - Lightning burns scaglie
 - **Tattiche:** Aggressive suicide (Vendetta Bloodline vs Thorik overwhelms tactics)
@@ -1287,7 +1288,7 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   - **Orion Pelleorsa (Druido):** SALTA SCHIENA DRAGO!
     - **Wild Shape: Dire Bear** forma (For 31), presa il round prima: salto, forma e presa non stanno in un round solo (SRD)
     - Lotta **contrapposta** (SRD): +24 dell'orso crudele contro +43 di Fauci, che se ne libera quasi sempre
-    - Il peso da solo non forza la discesa: perché Fauci cade è una decisione aperta del DM
+    - Il peso da solo non forza la discesa: Fauci scende **per scelta**, come dice la sua scheda (atterra sotto i 100 pf o per finire Thorik) `[CANONE — DM 2026-10-19, D9]`
 
 **ARTEMIS BLACKROCK (Solo Aereo PG):**
 - **Altitude:** 30m (Below melee swarm)
@@ -1297,11 +1298,12 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
 
 **CONVERGENZA CLIMAX:**
 
-**Round 18-20: DRAGO ATTERRAGGIO FORZATO**
-- Orion sulla schiena, solo nei round in cui vince la lotta contrapposta
-- Un fulmine ala destra (danni: decisione aperta del DM, vedi tempesta)
+**Round 18-20: LA PICCHIATA SU THORIK** `[CANONE — DM 2026-10-19, D9]`
+- Fauci scende per scelta: sotto i 100 pf, o per finire Thorik (scheda, `ARC08-02` §1; Odio della stirpe +4). Picchiata in volo con Attacco in Volo
+- Orion sulla schiena, solo nei round in cui vince la lotta contrapposta; un fulmine di *chiamare fulmini* (3d10) su un'ala
 - Artemis Deflagrazione occulta (6d6) ala sinistra
-- **Result:** Crash landing 60m davanti Thorik!
+- **Result:** atterra nella zona ⚡ (AB30-AG32 della MAPPA 4 REVISED), alle spalle della punta, a circa 30 m da Thorik; i PG convergono in 2 round
+- **Se i PG volano** con le pozioni: Fauci combatte in aria e non fugge (Volteggiare, Ghermire, soffio in linea; guida § Incontro 4A, «ROUND 18-23»)
 
 **Round 21-23: DUELLO FINALE THORIK vs FAUCI**
 - **Ground melee:** Thorik vs Drago (Epic confronto)

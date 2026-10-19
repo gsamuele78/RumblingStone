@@ -204,8 +204,8 @@ SIMBOLI TATTICI:
 
 **Tattiche in Combattimento:**
 - **Round 1-2:** Sorvolo e soffio sulle concentrazioni nemiche
-- **Round 3-5:** Combattimento aereo contro i gufi
-- **Round 6+:** Atterraggio forzato e mischia brutale
+- **Round 3-17 (Sessione 4):** combattimento aereo contro i gufi, logoramento
+- **Round 18-20 (Sessione 4):** picchiata su Thorik, poi il duello a terra ai round 21-23 (Incontro 4A) `[CANONE — DM 2026-10-19, D9]`
 
 <div style="page-break-before:always"></div>
 
@@ -247,7 +247,7 @@ SIMBOLI TATTICI:
 > livello di Guardia Nera. BAB, TS, CA e attacchi sono ricontati sull'SRD
 > (la Benedizione oscura somma il Car ai TS).
 
-**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine.
+**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine. Che cosa sa, se lo prendono vivo, e il blocco «Se lo divinano»: `ARC08-10-ESITI-E-CONTINGENZE.md` §4.2 `[CANONE — DM 2026-10-19, D15]`.
 
 <div style="page-break-before:always"></div>
 
@@ -2054,10 +2054,10 @@ I PG possono scegliere:
 
 **FORZE NEMICHE:**
 
-**8 Bugbear Assassini (Ladro 5°/Assassino 2°, GS 7 ciascuno):**
-- **Nascondersi +12** (oscurità dei tunnel + bonus razziale): serve **Osservare CD 25** per individuarli PRIMA che colpiscano
+**8 Bugbear Assassini (Ladro 5°/Assassino 2°, GS 9 ciascuno; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)** `[CANONE — DM 2026-10-19, D10]`:
+- **Nascondersi +17** (scheda; nell'oscurità dei tunnel): serve **Osservare CD 25** per individuarli PRIMA che colpiscano
 - **Attacco Mortale:** hanno studiato i bersagli dall'ombra durante l'avvicinamento — al primo colpo, Tempra CD 16 o paralisi per 1d6+2 round
-- **Attacco Furtivo +5d6** contro bersagli impreparati
+- **Attacco Furtivo +4d6** contro bersagli impreparati (3d6 da ladro + 1d6 da assassino, SRD)
 - **4 nel tunnel Est** → bersaglio prioritario: **Re Thorek** (tentativo di assassinio)
 - **4 nel tunnel Ovest** → bersagli secondari: comandanti e portatori
 - **Ritirata:** se scoperti prima del colpo o se ne cadono più di 4, svaniscono di nuovo nei tunnel (nuova prova di Nascondersi)
@@ -2078,7 +2078,7 @@ I 7 hobgoblin caricano urlando dal tunnel nord-ovest. L'anello esterno nanico si
 **Leggere:**
 > *"Mentre gli scudi nanici si serrano contro la carica degli hobgoblin, le ombre alle vostre spalle si muovono. Otto sagome massicce sgusciano fuori dai tunnel a est e a ovest, silenziose come il buio da cui provengono, le lame annerite già puntate alla gola del vostro Re."*
 
-Gli 8 bugbear emergono simultaneamente da Est e Ovest: 4 puntano Re Thorek, 4 i comandanti. Attacco Mortale (Tempra CD 16 o paralisi) e Attacco Furtivo +5d6 su chiunque sia impreparato — a meno che una prova di **Osservare CD 25 al Round 1** non abbia rivelato l'imboscata in tempo per preparare un'azione.
+Gli 8 bugbear emergono simultaneamente da Est e Ovest: 4 puntano Re Thorek, 4 i comandanti. Attacco Mortale (Tempra CD 16 o paralisi) e Attacco Furtivo +4d6 su chiunque sia impreparato — a meno che una prova di **Osservare CD 25 al Round 1** non abbia rivelato l'imboscata in tempo per preparare un'azione.
 
 #### **ROUND 3-5: LA MISCHIA NEL CERCHIO**
 I bugbear continuano con attacchi furtivi in mischia; gli hobgoblin impegnano l'anello esterno. I nani sono confusi e combattono su più fronti: **servono gli ordini dei PG** (azione gratuita di comando, o Nala con Ispirare Coraggio) per evitare che la formazione si sgretoli.
@@ -2177,9 +2177,8 @@ I 90 nani superstiti si barricano nella Caverna Sacra. I PG devono affrontare on
 > *"I nani superstiti formano un cerchio disperato attorno all'altare dove Re Thorek è stato deposto. Madre Superiora Dana e i chierici superstiti sussurrano preghiere frenetiche mentre le loro mani brillano di luce divina, tentando disperatamente di curare le ferite che l'acido draconico ha inflitto. 'Moradin, Forgiatore di Anime,' prega Dana con voce spezzata, 'non lasciarci ora nell'ora più buia!' Ma le ferite sono troppo gravi, l'acido troppo corrosivo. Il respiro del Re si fa sempre più debole."*
 
 **Prove Mediche/Divine:**
-- **Guarigione CD 25:** Stabilizzare temporaneamente il Re
-- **Incantesimo *guarigione*:** per l'SRD cura 10 pf per livello e fa finire la condizione di avvelenato; se il veleno dell'acido di Fauci vi resiste è una decisione aperta del DM (D4) `[INFERRED — needs DM confirmation]`
-- **Neutralize Poison CD 22:** Necessario per fermare il deterioramento
+- **Guarigione CD 25, a ogni round** `[CANONE — DM 2026-10-19, D12]`: pronto soccorso, azione standard (SRD). Si tira a ogni round finché nessuno cura il Re per magia. **Al terzo fallimento, anche non consecutivo, Re Thorek muore**, e la battaglia passa alla vittoria costosa (`ARC08-10-ESITI-E-CONTINGENZE.md` §2). Un round in cui nessuno tenta la prova conta come fallito, e il conto parte dal primo round giocato nel Cuore della Montagna: il round 1 coi pregen, o il round 11 se il flashback non è stato giocato (`ARC08-10` §5.5) `[INFERRED — needs DM confirmation: queste due letture]`
+- **La cura, per l'SRD** `[CANONE — DM 2026-10-19, D12]`: *neutralizzare veleno* (Drd 3, Chr 4, Brd 4, Rgr 3) o *guarigione* fanno finire l'avvelenamento, e da quel momento le prove si fermano; *guarigione* rende anche 10 pf per livello. Le *cure ferite* restituiscono pf ma non fermano le prove. Fra i pregen ce l'ha Thorin Runaforte (*guarigione*, `ARC08-02` §3): se la lancia al round 1, il Re è salvo e la tensione passa alle ondate. Fra i PG, Hella. Dana non può: ha speso quasi tutto sulle mura (sotto, «Madre Superiora Dana»)
 
 #### **INCONTRO 3B: L'Assalto Finale**
 **Leggere:**
@@ -2195,7 +2194,7 @@ I 90 nani superstiti si barricano nella Caverna Sacra. I PG devono affrontare on
 - **50 Orchi Berserker** (prima ondata)
 - **30 Hobgoblin Elite** (seconda ondata)  
 - **20 Bugbear Assassini** (terza ondata)
-- **Generale Grimjaw + 10 Guardie** (se ancora vivo)
+- **Generale Grimjaw + 10 Guardie** (se ancora vivo): un corno nel tunnel al round 11, l'ingresso al round 12 `[CANONE — DM 2026-10-19, D11]`. Schede: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (le guardie) e `ARC08-02` §1 (Grimjaw)
 
 
 
@@ -2238,14 +2237,14 @@ IL CUORE DELLA MONTAGNA - CAVERNA SACRA (100m x 80m)
 **SOPRAVVISSUTI NANICI:**
 - **Re Thorek:** 8 PF rimanenti, avvelenamento da acido continuativo
 - **90 Nani Veterani:** Moralmente distrutti (-4 a tutti i tiri)
-- **Madre Superiora Dana:** Magicamente esausta (metà incantesimi)
+- **Madre Superiora Dana:** 20 pf e un solo *Muro di Pietra*: il resto l'ha speso sulle mura (`[CANONE — DM 2026-10-18]`, scheda di Dana più sopra; confermato dal D12 `[CANONE — DM 2026-10-19, D12]`)
 - **PNG Giocabili:** Variabili in base ai sopravvissuti delle sessioni precedenti
 
 **NEMICI IN ARRIVO:**
 - **Ondata 1:** 30 Orchi Berserker (Round 3-4)
 - **Ondata 2:** 20 Hobgoblin + Sergente (Round 5-6)  
-- **Ondata 3:** 15 Bugbear Assassini (Round 7-8)
-- **Ondata Finale:** Grimjaw + 10 Élite (Round 9-10, se vivo)
+- **Ondata 3:** 15 Bugbear Assassini (Round 7-8; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)
+- **Ondata Finale:** Grimjaw + 10 Guardie Nere, se vivo: corno al round 11, ingresso al round 12, quando i PG sono già in campo `[CANONE — DM 2026-10-19, D11]`
 
 ### **ROUND PER ROUND - LA RESISTENZA DISPERATA:**
 
@@ -2263,8 +2262,8 @@ IL CUORE DELLA MONTAGNA - CAVERNA SACRA (100m x 80m)
 - **Morale:** Ancora -2 nonostante le cure (situazione disperata)
 
 **MADRE SUPERIORA DANA:**
-- **Round 1:** Heal su Re Thorek (risana completamente)
-- **Round 2:** Consacration sulla caverna (danni +1 vs nemici malvagi)
+- **Round 1-2:** tiene il Re in vita con le mani, non con la magia: è lei a tentare la prova di Guarigione CD 25 (sopra, «Prove Mediche»). Il suo unico *Muro di Pietra* lo tiene per la porta di mithral, quando cede l'anello nord
+- Niente *guarigione* né *consacrare* in questo 3B: li ha spesi sulle mura `[CANONE — DM 2026-10-18]`, confermato dal D12 `[CANONE — DM 2026-10-19, D12]`
 
 #### **ROUND 3-4: PRIMA ONDATA - BERSERKER ORCHI**
 
@@ -2355,9 +2354,9 @@ TERZA ONDATA - INFILTRAZIONE (Round 7-8)
 ▓        TARGET PRIMARIO          ▓
 ```
 
-**CAPACITÀ BUGBEAR:**
-- **Sneak Attack:** +3d6 danni se attaccano di sorpresa
-- **Stealth Master:** +8 Nascondersi, +6 Muoversi Silenziosamente
+**CAPACITÀ BUGBEAR** (scheda: `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`, GS 9, CA 20, pf 58, morning star +11, 1d8+3) `[CANONE — DM 2026-10-19, D10]`:
+- **Attacco furtivo:** +4d6 se il bersaglio è colto alla sprovvista o fiancheggiato; **attacco mortale** (Tempra CD 16) solo dopo 3 round di studio, quindi al massimo uno per bugbear in questa ondata
+- **Furtività:** Nascondersi +17, Muoversi Silenziosamente +21; nella luce piena della caverna servono copertura o stalagmiti
 - **Target Priority:** Puntano direttamente Re Thorek
 
 **CONTROMISURE PNG:**
@@ -2430,7 +2429,7 @@ Nel momento più buio, i veri PG emergono. La loro apparizione terrorizza i nemi
 2. **TERRORE NEMICO:**
    - Tutti gli orchi devono superare TS Volontà CD 20 o essere *spaventati* per 10 round
    - Gli hobgoblin subiscono -2 a tutti i tiri per 5 round
-   - Grimjaw deve superare TS CD 18 o perdere 1 round per lo shock
+   - Grimjaw non è ancora nella caverna: quando entra, al round 12, la luce lo investe, e deve superare TS CD 18 o perdere 1 round per lo shock `[CANONE — DM 2026-10-19, D11]`
 
 3. **BENEDIZIONE DIVINA:**
    - La caverna si riempie di luce dorata (effetto *Daylight* permanente)
@@ -2508,16 +2507,21 @@ Ogni PG può scegliere un'azione speciale:
 <div style="page-break-before:always"></div>
 
 ## **INCONTRO 3B: I RUMBLING STONES ENTRANO IN AZIONE**
-*Livello di Sfida: 17 (dichiarato, da riconteggiare sui nemici che i PG affrontano davvero `[INFERRED — needs DM confirmation]`) · PE: Appendice C della guida, 2.600 al gruppo (650 a testa)*
+*PE: Appendice C della guida, 2.600 al gruppo (650 a testa). È una rotta, e i PE sono quelli di una rotta: nessun EL dichiarato `[CANONE — DM 2026-10-19, D19]`*
+
+> **Scalare lo scontro** `[CANONE — DM 2026-10-19, D19]` *(i PE restano quelli dell'Appendice C; la riga dice solo chi c'è)*
+> - **Con 3 PG**: Grimjaw entra con cinque guardie invece di dieci; le altre cinque restano nel tunnel a coprire i bugbear in fuga, e il corno del round 11 è l'unico segnale.
+> - **Con 5 PG**: Grimjaw entra con tutte e dieci le guardie, e il sergente hobgoblin della seconda ondata, se è vivo, raduna i suoi quindici in ritirata e li riporta dentro al round 12.
+> - **Stasera**: il gruppo è di 4 PG di 13° (`campaign/state.md` del ramo di gruppo). Non vale nessuna delle due righe: si gioca com'è scritto.
 
 ### **OBIETTIVO:**
 I giocatori prendono controllo dei loro veri PG (Rumbling Stones) e ribaltano immediatamente la situazione, trasformando una sconfitta certa in contrattacco vittorioso.
 
-> **📎 Regia, prima di sedersi** `[INFERRED — needs DM confirmation]` *(giro di letture del 2026-10-19)*
-> - **La serata**: Incontro 3B e Sessione 4 fino al campo della vittoria. La Cerimonia delle 100 Asce (`Cerimonia-delle-100-Asce.md`) è un'altra serata.
+> **📎 Regia, prima di sedersi** *(giro di letture del 2026-10-19)*
+> - **La serata** `[CANONE — DM 2026-10-19, D18]`: Incontro 3B e Sessione 4 insieme, fino al campo della vittoria. La Cerimonia delle 100 Asce (`Cerimonia-delle-100-Asce.md`) è la serata dopo.
 > - **In un'ora si legge**: il ponte d'arrivo (`ARC08-11-PONTE-ARRIVO.md`), `ARC08-10-ESITI-E-CONTINGENZE.md` §4-§5, la MAPPA 5 e la MAPPA 4 di `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`, le schede di `ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §1. Da questo file, i box.
 > - **Se il flashback coi pregen e il P5 non sono stati giocati**: `ARC08-10-ESITI-E-CONTINGENZE.md` §5.5.
-> - **I numeri dei nemici, uno contro uno**: orchi berserker = `Bestiario/mostri/orco-berserk-barbaro2-cr2.md` (GS 2, CA 13, pf 27, grande ascia +9, 1d12+9; in ira For e Cos +4, CA −2); hobgoblin = `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (GS 2, CA 19, pf 23, spada lunga +6, 1d8+1); il loro sergente = `Bestiario/mostri/hobgoblin-sergente-cr5.md` (GS 5, CA 21, pf 37, spada lunga +9, 1d8+4). Le guardie orog di Grimjaw esistono come unità di massa (`ARC08-02` §5, «OROG GUARDIE NERE»: PFU 13, DU 19, AU +12, 1d12+7, immuni alla paura finché Grimjaw vive), non uno contro uno. I bugbear non hanno una scheda né nel Bestiario né in `ARC08-02`: decisione aperta del DM.
+> - **I numeri dei nemici, uno contro uno**: orchi berserker = `Bestiario/mostri/orco-berserk-barbaro2-cr2.md` (GS 2, CA 13, pf 27, grande ascia +9, 1d12+9; in ira For e Cos +4, CA −2); hobgoblin = `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md` (GS 2, CA 19, pf 23, spada lunga +6, 1d8+1); il loro sergente = `Bestiario/mostri/hobgoblin-sergente-cr5.md` (GS 5, CA 21, pf 37, spada lunga +9, 1d8+4). Le guardie orog di Grimjaw = `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10; immuni alla paura finché Grimjaw vive) e, come unità di massa, `ARC08-02` §5, «OROG GUARDIE NERE» (PFU 13, DU 19, AU +12, 1d12+7). I bugbear = `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` (GS 9, CA 20, pf 58, morning star +11, 1d8+3, furtivo +4d6). I gufi dei ranger, nella Sessione 4 = `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` (GS 6, CA 16, pf 52, 2 artigli +11, 1d6+4) `[CANONE — DM 2026-10-19, D10]`.
 
 ### **MAPPA: LA TRASFORMAZIONE**
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 5 REVISED, stato F (controffensiva)
@@ -2573,7 +2577,11 @@ DOPO L'APPARIZIONE - NUOVE FORZE (Round 11-15)
 - **Oscurità:** dentro la *luce del giorno* permanente dell'Apparizione si annulla dove le due aree si toccano (SRD *Daylight*). Artemis è umano: se la scheda non ha *Vista del Diavolo*, nel buio che crea non vede.
 - **Movimento:** vola con le Ali d'Ombra (18 m).
 
+**Alla fine del round 11, un corno** `[CANONE — DM 2026-10-19, D11]`: dal tunnel nord, oltre la porta di mithral, suona il corno di guerra di Grimjaw. È il segnale per il tavolo: il generale arriva al round dopo.
+
 ### **ROUND 12-13: LA CONTROFFENSIVA**
+
+**Al round 12 Grimjaw entra dalla porta** con le guardie (MAPPA 5, stato F, ⚫ AH1 e la rotta nera fino all'anello nord), e la rotta degli altri gli scorre accanto. Il duello è sotto, «L'ARRIVO DI GRIMJAW».
 
 **NEMICI RIMANENTI:** 
 - 12 Bugbear terrorizzati (tentano fuga)
@@ -2611,11 +2619,11 @@ CONTRATTACCO COORDINATO (Round 12-13)
 - **Hella:** *muro di pietra* sulla porta di mithral, l'unico varco (MAPPA 5), per tagliare la fuga; gli animali evocati a finire
 - **Artemis:** Deflagrazione occulta 6d6 sui fuggitivi; ad area solo con l'invocazione di forma che la sua scheda abbia
 
-### **ROUND 14-15: L'ARRIVO DI GRIMJAW**
+### **ROUND 12-15: L'ARRIVO DI GRIMJAW** *(corno al round 11, ingresso al round 12)*
 
 **SE GRIMJAW È SOPRAVVISSUTO** *(se il flashback coi pregen non è stato giocato: sì, logorato, `ARC08-10-ESITI-E-CONTINGENZE.md` §5.5)*:
 ```
-RESA DEI CONTI FINALE (Round 14-15)
+RESA DEI CONTI FINALE (Round 12-15)
 
          🔴 GENERALE GRIMJAW 🔴
            (ULTIMO ATTACCO)
@@ -2662,7 +2670,23 @@ RESA DEI CONTI FINALE (Round 14-15)
 ### **INTRODUZIONE SESSIONE 4:**
 > *"Dopo mezza giornata di battaglia sotterranea, voi e i nani superstiti emergete finalmente all'aria aperta sui bastioni esterni di Hammerfist. Lo spettacolo che vi accoglie è al tempo stesso terrificante e magnifico. Davanti a voi, i resti dell'esercito della Mano Rossa - ancora oltre 400 creature - sono disposti in formazioni difensive, ma qualcosa di straordinario sta accadendo nel cielo sopra di loro. Nubi nere si addensano con velocità innaturale, formando una tempesta che si muove contro il vento."*
 
-> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[INFERRED — needs DM confirmation]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: per la H3-1 il tunnel nord porta lontano da Hammerfist. È una decisione aperta del DM (D5). Le unità nemiche ancora in campo sono quelle del Registro (`ARC08-03-REGISTRO-PERDITE.md`) a fine Sessione 3.
+> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[CANONE — DM 2026-10-19, D13]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek, se è uscito vivo dal 3B, lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: per la H3-1 il tunnel nord porta lontano da Hammerfist, e la strada resta da scegliere al DM.
+>
+> **Chi è ancora in campo all'inizio della Sessione 4** `[CANONE — DM 2026-10-19, D13]` *(circa 400, ricavati dai file: la fonte è accanto a ogni numero; il Registro `ARC08-03` è un foglio da riempire al tavolo, e se la Sessione 3 è andata diversamente vale il Registro)*
+>
+> | Unità | Quanti | Da dove viene il numero |
+> |---|---|---|
+> | Hobgoblin | ~100, fra cui i 50 «élite» della 4D | Atlante, MAPPA 4X («100 Hobgoblin veterani»); i 50 della 4D sono cinque unità «HOBGOBLIN GUERRIERI (Warrior 3)» di `ARC08-02` §5 |
+> | Fanteria orchesca | ~200 | Atlante, MAPPA 4X («200 Fanteria orchesca»). ⚠ Le strafing più sotto dicono 300, e il Registro ne schiera 15 unità da 8 PFU (120) all'inizio della battaglia: i tre numeri non tornano, vale l'Atlante |
+> | Giganti delle colline | 8 | Registro (8 unità) e strafing («8 rimanenti») |
+> | Ettin | 2, più Gorthak | Registro (2 unità); Gorthak in `ARC08-02` §1 |
+> | Capitani su worg | 4, coi loro worg | strafing («4 rimanenti»); quante unità di worg riders restano, il Registro non lo dice `[INFERRED — needs DM confirmation]` |
+> | Altre «élite» | ~70 | l'Atlante dà 80 fra «giganti, ettin ed élite»: tolti i 10 qui sopra ne restano 70 senza nome. Proposta: le unità di worg riders dei 4 capitani (40) e 30 sergenti hobgoblin `[INFERRED — needs DM confirmation]` |
+> | Incantatori | ~20 | Atlante («20 Maghi/Chierici»): i 15 Doom Hand warpriests delle strafing e 5 war adepts `[INFERRED — needs DM confirmation: i 5]` |
+> | Grimjaw e le guardie orog | 0, o quelli usciti vivi dal 3B | Grimjaw è in campo solo se nel 3B ha suonato la ritirata (scheda in `ARC08-02` §1, *Morale*), con le guardie rimaste |
+> | Fauci di Palude e il cavaliere | 1 + 1 | `ARC08-02` §1; pf di partenza qui sotto, «FAUCI DI PALUDE» |
+>
+> Della rotta del 3B arrivano al campo solo quelli usciti dalla porta di mithral prima che si chiudesse: sono già contati nei ~400.
 
 ### 🌩️ **L'Arrivo della Tempesta CELESTIALE**
 
@@ -2671,10 +2695,12 @@ RESA DEI CONTI FINALE (Round 14-15)
 > *"Dal nulla, il vento si alza con forza soprannaturale. Le nubi si rincorrono nel cielo formando spirali e vortici impossibili, mentre lampi di luce argentea illuminano l'oscurità crescente. Non è una tempesta naturale - c'è troppa intelligenza in quei movimenti, troppa precisione in quei fulmini che colpiscono esattamente dove si concentrano maggiormente i nemici. E poi la melodia: fiera e furiosa, echeggia tra i tuoni come la voce degli dei in collera."*
 
 **Effetti Meteorologici:**
+- **Chi la lancia** `[CANONE — DM 2026-10-19, D14]`: Orion Pelleorsa, druido di 14° (scheda più sopra, *Controllare Tempo* fra gli incantesimi di 7°), prima della battaglia. Per l'SRD sono 10 minuti di lancio e altri 10 perché il tempo cambi; da druido dura 8d12 ore e copre un raggio di 3 miglia, circa 4,8 km. In Flamerule è estate: pioggia torrenziale, e il vento lo dirige lui per direzione e forza
 - **Venti a 80 km/h:** vento violento (SRD): TS Tempra CD 15 solo per le creature Piccole o minori, i nani Medi non sono frenati
-- **Fulmini Mirati:** 6d6 danni elettrici ai nemici ogni round
-- **Pioggia Torrenziale:** visibilità dimezzata, −4 agli attacchi a distanza (SRD). ⚠️ Vento violento più pioggia, per l'SRD, è una *tempesta*: gli attacchi a distanza con armi diventano impossibili. Chi lancia la tempesta, e se gli archi tirano, è una decisione aperta del DM
-- **Melodia del Bardo:** Tutti gli alleati ottengono bonus +2 morale
+- **I fulmini** `[CANONE — DM 2026-10-19, D14]`: *controllare tempo* non li dirige (SRD). Vengono da due fonti: la **Cantata della Tempesta Tonante** di Tempestas (1 per incontro: ostili entro 18 m, 2d6 elettrici a inizio turno per 3 round, Riflessi CD 23 dimezza; `ARC08-02` §2) e *chiamare fulmini* di Orion (3d10 a fulmine nella tempesta, un fulmine per round con un'azione standard, al massimo 10; Riflessi CD 20 dimezza; SRD). Il round in cui Orion è sul dorso del drago non chiama fulmini
+- **Pioggia Torrenziale:** visibilità dimezzata, −4 agli attacchi a distanza (SRD). Con il vento violento è una *tempesta*: gli attacchi a distanza con armi diventano impossibili (SRD), anche per gli arcieri della Mano Rossa
+- **L'occhio della tempesta, sopra i bastioni** — **deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]`: l'SRD non dà a *controllare tempo* un occhio; qui Orion lo tiene aperto sopra i bastioni, dove non piove e il vento cala. Chi tira dall'occhio, i balestrieri nanici sui bastioni e i ranger quando ci rientrano coi gufi, tira senza i malus della tempesta. Fuori dall'occhio vale l'SRD
+- **Melodia del Bardo:** è la Cantata di Tempestas: +2 di morale agli alleati entro 18 m, per 10 round (`ARC08-02` §2)
 
 #### **INCONTRO 4B: L'Arrivo dei Gufi**
 **Il Momento Cinematico - Leggere con Enfasi:**
@@ -2687,7 +2713,19 @@ RESA DEI CONTI FINALE (Round 14-15)
 <div style="page-break-before:always"></div>
 
 ## **INCONTRO 4A: LA BATTAGLIA AEREA SUPREMA**
-*Livello di Sfida: 20 (dichiarato: sopra il tetto EL ≤ APL+4, da riconteggiare su ciò che i PG affrontano `[INFERRED — needs DM confirmation]`) · PE: Appendice C della guida, 4.600 al gruppo per la Sessione 4 (1.150 a testa)*
+*PE: Appendice C della guida, 4.600 al gruppo per la Sessione 4 (1.150 a testa). Nessun EL dichiarato: i PE sono quelli dell'appendice `[CANONE — DM 2026-10-19, D19]`*
+
+> **Scalare lo scontro** `[CANONE — DM 2026-10-19, D19]` *(i PE restano quelli dell'Appendice C; la riga dice solo chi c'è)*
+> - **Con 3 PG**: il cavaliere non è in sella. È a terra, con Gorthak, a tenere insieme la prima linea; Fauci scende ai round 18-20 da solo, e il duello resta quello dei round 21-23.
+> - **Con 5 PG**: il cavaliere resta in sella per tutto il duello, e i due ettin del Registro stanno accanto a Gorthak invece che nelle retrovie.
+> - **Stasera**: il gruppo è di 4 PG di 13° (`campaign/state.md` del ramo di gruppo). Non vale nessuna delle due righe: si gioca com'è scritto.
+
+> **La linea del tempo della Sessione 4** `[CANONE — DM 2026-10-19, D9]` *(vale per questa guida, per la «Guida agli Scontri», per la MAPPA 4 di `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` e per l'Atlante)*
+> - **Round 1-3**: sui bastioni il discorso del Re (round 1) e il cuneo si forma; in aria l'apertura dei gufi (round 1-2), Orion salta al round 3, il cavaliere può cadere ai round 3-4.
+> - **Round 4-5**: il cuneo scende il pendio; la Cantata di Tempestas e i fulmini di Orion.
+> - **Round 6**: l'urto sulla linea ⚔ della riga 37. Strafing dei gufi ai round 6-8; fino al round 10 la convergenza, e Thorik ingaggia Gorthak.
+> - **Round 11-17**: logoramento, in aria e a terra. Fauci non fugge.
+> - **Round 18-20**: la picchiata di Fauci su Thorik. **Round 21-23**: il duello. A fine round 23, la vittoria.
 
 ### **OBIETTIVO:**
 I Rumbling Stones guidano l'assalto finale fuori dalle caverne, coordinando con gli alleati aerei (gufi giganti + druido orso + bardo tempeste) per sconfiggere definitivamente l'esercito della Mano Rossa.
@@ -2744,11 +2782,7 @@ VALLE DELL'AVVISTAMENTO (120m x 80m)
 
 ### **CONDIZIONI METEOROLOGICHE STRAORDINARIE:**
 
-**TEMPESTA CONTROLLATA DI MAESTRO TEMPESTAS:**
-- **Venti:** 80 km/h, vento violento (SRD): TS Tempra CD 15 solo per le creature Piccole o minori
-- **Fulmini Mirati:** 6d6 elettrici ogni round su bersagli nemici
-- **Pioggia Torrenziale:** −4 attacchi a distanza (SRD), +2 Nascondersi; con il vento violento è una *tempesta*, e l'SRD vi rende impossibili gli attacchi a distanza con armi: decisione aperta del DM
-- **Effetto Sonoro:** Musica epica, +2 morale a tutti gli alleati
+**LA TEMPESTA DI ORION, CON LA MUSICA DI TEMPESTAS** `[CANONE — DM 2026-10-19, D14]`: le regole sono quelle dell'«Arrivo della Tempesta», più sopra. In breve: vento violento (Tempra CD 15 solo per i Piccoli), pioggia (−4 a distanza, +2 Nascondersi), insieme una *tempesta* SRD in cui gli attacchi a distanza con armi sono impossibili, salvo dall'occhio sopra i bastioni (deroga dichiarata); i fulmini sono la Cantata di Tempestas e *chiamare fulmini* di Orion.
 
 
 <div style="page-break-before:always"></div>
@@ -2787,8 +2821,8 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 **Meccaniche del Combattimento Aereo:**
 
 **FAUCI DI PALUDE (Drago Indebolito):**
-- **PF Attuali:** 180/337 (ferito dalle battaglie precedenti; i pf di partenza sono una decisione aperta del DM, e il carry-over del P5 li cambia: `ARC08-10` §4.1)
-- **Tattiche:** Più cauto, usa più magia che attacchi fisici
+- **PF di partenza** `[CANONE — DM 2026-10-19, D9]`: 337 meno il carry-over di `ARC08-10` §4.1 (303 se nel P5 Skullcrusher fu ucciso); **337 se il P5 non è stato giocato** (statblock invariato)
+- **Tattiche** (scheda in `ARC08-02` §1): resta in quota col soffio e *nube maleodorante*, con Volteggiare e Ghermire. Atterra solo sotto i 100 pf o per finire Thorik, che odia (+4 al colpire e ai danni contro di lui, sempre). Fugge sotto i 50 pf
 - **Cavaliere Hobgoblin:** Fornisce bonus +2 agli attacchi, può lanciare incantesimi
 
 **SIGNORE VENTOLESTO + 2 GUFI:**
@@ -2800,6 +2834,10 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 
 **FASE 1 - Apertura (Round 1-2):**
 > *"Il primo scontro è spettacolare. Fauci di Palude sprigiona il suo soffio acido, ma i gufi celestiali lo evitano con grazia soprannaturale, e il veleno scivola sulle loro piume come pioggia su una tegola. Signore Ventolesto affonda gli artigli nel fianco sinistro del drago, strappando scaglie grandi come scudi, mentre i suoi compagni attaccano le ali per limitarne la manovrabilità."*
+
+**L'INVIATA DELLA FORESTA (Round 1-2)** `[CANONE — DM 2026-10-19, D16]`: Lythiel Alar-Wen (`Bestiario/png/Lythiel/Lythiel.md`) cavalca coi gufi, ma non è dei ranger di Lunapiena: è l'inviata della Foresta Sacra. In Sessione 4 riconosce Hella, canone del ramo di gruppo (`campaign/state.md`, tabella dei PNG: «Direct recognition during Hammerfist Battle Sessione 4»). La Ghianda la consegna dopo, alla Cerimonia (`Cerimonia-delle-100-Asce.md` §3.2). Il suo gufo, Inathiel (`Lythiel.md`), si gioca con `Bestiario/mostri/gufo-gigante-celestiale-cr6.md` `[INFERRED — needs DM confirmation]`. La sua scheda dice che atterra vicino a Hella: il box la fa posare sul bastione.
+
+> **Read-aloud (Casa di Davide lead) — l'inviata.** *Un gufo più piccolo degli altri si stacca dalla formazione e si posa sul bastione, a tre passi da Hella. La cavaliera è un'elfa con una treccia fradicia sulla spalla e l'arco in pugno, senza freccia: guarda Hella a lungo, come si guarda un volto che qualcuno ti ha descritto, e dice soltanto «Sei tu». Che fate?*
 
 **FASE 2 - Il Druido Salta (Round 3):**
 > *"In un momento di pura follia eroica, Orion Pelleorsa si alza in piedi sul dorso del gufo. Per un istante rimane sospeso nel vuoto, alto trenta metri dal suolo, poi si getta nel vuoto con un grido che è parte preghiera e parte sfida. Mentre cade, il suo corpo si trasforma: braccia che si allungano, pelliccia nera che spunta, artigli che crescono. Atterra sulla schiena di Fauci di Palude non più come uomo, ma come un orso nero gigantesco dalle zanne affilate come rasoi."*
@@ -2821,11 +2859,11 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 **FASE 3 - Il Bardo Scatena la Tempesta (Round 4-5):**
 > *"Maestro Tempestas alza la sua Lira delle Tempeste al cielo. 'ASCOLTATE LA CANZONE DELLA VENDETTA!' grida, e la melodia che esce dal suo strumento è così potente da far vibrare l'aria stessa. Ogni nota libera un fulmine guidato che trova il suo bersaglio con precisione soprannaturale. Il cielo risponde al suo richiamo: fulmini si scagliano in cascata sui nemici sottostanti mentre il vento si trasforma in lame taglienti che lacerano le ali nemiche."*
 
-**Effetti della "Sinfonia della Tempesta"** `[INFERRED — needs DM confirmation: la scheda di Tempestas in ARC08-02 §2 non ha questa Sinfonia, ha la Cantata della Tempesta Tonante, 2d6 per 3 round]`:
-- **Fulmini Multipli:** 8d6 danni elettrici per round su bersaglio primario (Fauci di Palude)
-- **Catena di Fulmini:** 6d6 danni a tutti i nemici entro 30ft dal drago
-- **Controllo Vento:** Il drago subisce -4 alle manovre di volo
-- **Ispirazione:** Tutti gli alleati ottengono +4 morale per 10 round
+**Cosa fa davvero la «canzone della vendetta»** `[CANONE — DM 2026-10-19, D14]`: il box è quello che il tavolo vede; i numeri sono questi.
+- **Cantata della Tempesta Tonante** (Tempestas, 1 per incontro, `ARC08-02` §2): ostili entro 18 m, 2d6 elettrici a inizio turno per 3 round, Riflessi CD 23 dimezza, +1d6 a chi porta armatura di metallo; alleati entro 18 m +2 di morale ad attacchi, danni e TS per 10 round. Fauci non è immune all'elettricità
+- **Chiamare fulmini** (Orion, SRD): 3d10 a fulmine nella tempesta, un fulmine per round con un'azione standard, al massimo 10; Riflessi CD 20 dimezza, RI sì. Il round in cui Orion è in lotta sul dorso del drago non chiama fulmini
+- **Il vento**: lo dirige Orion con *controllare tempo*, per direzione e forza (SRD); contro il drago resta il vento violento, senza malus alle manovre oltre a quelli dell'SRD
+- Dopo la Cantata, Tempestas lancia *fulmine* ed *esplosione sonora* (scheda); *velocità* sui ranger o sui PG è la sua mossa migliore
 
 
 **AZIONI RUMBLING STONES DA TERRA:**
@@ -2862,20 +2900,38 @@ SE IL CAVALIERE CADE (dal round 3)
 - **Hella:** *caduta morbida* non è nella lista del druido (SRD: Brd 1, Mag/Str 1); per prenderlo vivo serve una pergamena o una forma selvatica che voli e lo afferri
 - **Artemis:** lasciarlo cadere. Da 45 m sono 15d6 (media 52): coi suoi 95 pf il cavaliere arriva a terra vivo e ferito
 
-#### **ROUND 5: LA FUGA DEL DRAGO**
+#### **ROUND 18-23: LA PICCHIATA E IL DUELLO** `[CANONE — DM 2026-10-19, D9]`
 
-**FAUCI DI PALUDE SEVERAMENTE FERITO:**
-- **PF Rimanenti:** <50 (meno di 25%)
-- **Condizione:** Sanguinante, ala sinistra danneggiata
-- **Decisione:** Fuga tattica verso sud
+Fauci resta in aria e logora fino al round 17, e scende quando lo decide lui.
+
+**Perché scende (legale in 3.5):** lo dice la sua scheda (`ARC08-02` §1, *Tattiche*): atterra solo se è gravemente ferito, sotto i 100 pf, o per finire un bersaglio importante, Thorik prima di tutti. L'Odio della stirpe (+4 contro Thorik, sempre) è la ragione per cui lo fa. È una picchiata, cioè una carica in volo (+2 al colpire, SRD), e con Attacco in Volo. La presa di Orion da sola non lo porta giù: +24 contro +43 (SRD). Con i tiri nella media succede ai **round 18-20**; se scende sotto i 100 pf prima, la picchiata viene prima.
+
+**Dove:** nella zona ⚡ della MAPPA 4 (AB30-AG32), alle spalle della punta, fra le ultime file del cuneo, a circa 30 m da Thorik, che a quel punto è sulla linea ⚔ o contro Gorthak. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round; il duello è ai **round 21-23**.
+
+> **Read-aloud (Salvatore lead) — la picchiata.** *Il drago smette di girare sopra il campo, chiude le ali e scende dritto, e la pioggia gli scivola addosso come su una lama oliata. Non guarda i gufi: guarda la punta del cuneo, l'elmo con la corona. Che fate?*
+
+**Se i PG volano** (lo zaino ha 5 pozioni di *volare*: 18 m, 12 m in armatura media o pesante, manovrabilità buona, 5 minuti a LI 5, SRD) — **Fauci combatte in aria, non fugge**:
+- **Volteggiare** (SRD): resta sospeso e fa l'attacco completo senza le ali, morso +33 (2d8+10), 2 artigli +31 (2d6+5), coda +31 (2d6+15); contro Thorik +4 al colpire e ai danni. Oppure soffia.
+- **Il soffio in linea** (30 m, 14d4, Riflessi CD 29) sui PG in volo che si allineano.
+- **Ghermire** (SRD): sul morso o su un artiglio inizia la lotta (+43); poi lascia cadere la preda (azione gratuita) o la scaglia (azione standard: 1d6×3 m, 1d6 ogni 3 m, o il danno da caduta se è più alto). Chi tiene in bocca non ha il TS contro il soffio.
+- **Attacco in Volo** per staccarsi dal più lento: vola a 45 m, un PG in armatura pesante a 12 m.
+- **Il cavaliere** carica in sella e copre il fianco del drago.
+- **Thorik** non subisce la Presenza terrificante: il *Mind Blank* della Corona la blocca (scheda di Fauci).
+- Sotto i 100 pf scende comunque; **sotto i 50 tenta la fuga** (`ARC08-10` §4), e i PG in volo possono inseguirlo.
+
+**Il duello (round 21-23):** Fauci a terra fa l'attacco completo intero, sei attacchi con le ali. Sotto i 50 pf, il default è che rompa il contatto e decolli verso sud; è **ucciso** solo se i PG lo bloccano oltre quel punto. Si decide al tavolo, e i due rami sono in `ARC08-10` §4. In tutti e due l'orda vede il drago fuori gioco, ed è la rotta.
+
+**Che cosa sa il cavaliere, e se lo divinano:** `ARC08-10` §4.2.
+
+##### Se Fauci fugge (sotto i 50 pf)
 
 **ULTIMO SOFFIO DI RABBIA:**
 > *"Fauci di Palude, realizzando che la battaglia è perduta, si volta verso il campo dove stanno avanzando i nani. Con un ultimo atto di pura malvagità, sprigiona il suo soffio acido non per uccidere, ma per distruggere simbolicamente la vittoria nemica. L'acido si riversa sui vessilli della Mano Rossa caduti, dissolvendoli in fumo corrosivo: 'La Mano Rossa tornerà!' ruggisce mentre si allontana verso le montagne meridionali."*
 
 **Opzioni per i PG:**
-1. **Inseguire il Drago** (combattimento aereo finale)
-2. **Lasciarlo Fuggire** (possibile ritorno in future avventure)
-3. **Attacco Finale a Distanza** (ultimo colpo eroico)
+1. **Inseguire il Drago** in volo, con le pozioni: è il ramo «ucciso» di `ARC08-10` §4
+2. **Lasciarlo Fuggire**: è il ramo default, e il drago può tornare (`ARC08-10` §4 e §6.3)
+3. **Attacco Finale a Distanza**: nella tempesta gli archi non tirano (SRD), salvo dall'occhio sopra i bastioni
 
 
 
@@ -2909,7 +2965,7 @@ STRAFING RUNS - ATTACCHI DALL'ALTO (Round 6-8)
            🏹 🏹 🏹
 
 🟡🟡 FANTERIA ORCHESCA 🟡🟡
-    (300 TERRORIZZATI)
+    (~200 TERRORIZZATI)
      TENTATIVI DI FUGA
 ```
 
@@ -2979,7 +3035,7 @@ STRAFING RUNS - ATTACCHI DALL'ALTO (Round 6-8)
 
 **FORMAZIONE DELLA CARICA EPICA:**
 ```
-CARICA NANICA DEVASTANTE (Round 11-15)
+CARICA NANICA DEVASTANTE (Round 4-10)
            VISTA DALL'ALTO
 
          🏰 HAMMERFIST 🏰
@@ -3130,7 +3186,7 @@ CAMPO DOPO LA VITTORIA
 #### **IL CONTEGGIO FINALE**
 **PERDITE NEMICHE:**
 - **~500 morti e ~400 dispersi in rotta**, che non si ricongiungono: l'orda perde comunque i 900 dell'avanguardia (canone D11, `ARC08-10` §1). Se i PG inseguono i fuggiaschi, cambiano i morti, non il totale
-- **Fauci di Palude:** fuggito gravemente ferito (ramo default D10), o ucciso se i PG lo hanno abbattuto prima
+- **Fauci di Palude:** ucciso nel duello dei round 21-23, o fuggito gravemente ferito sotto i 50 pf se i PG non lo hanno bloccato (`ARC08-10` §4) `[CANONE — DM 2026-10-19, D9]`
 
 **PERDITE ALLEATE:**
 - **210 Nani Caduti** su 300 difensori originali
@@ -3472,9 +3528,9 @@ Il morale è un valore da -5 a +5 che si applica ai tiri per colpire e ai tiri s
 *Party APL 13 in ingresso (ARC-07 D8) → resta 13° a fine arco (D9:
 "Hammerfist consolida il 13°"); il grosso dell'esperienza matura
 nelle quest personali di ARC-09. **Nessun passaggio 13°→15°.**
-Nota di verifica EL (finale dichiarato EL 20 su APL 13, precedente
-ARC-06 EL 17): vedi `hammerfist_encounters-...-final.md` §RIASSUNTO
-XP per il dettaglio — rimando a piano ARC-08 B5.*
+Il 3B e la 4A non hanno un EL dichiarato: valgono i PE di questa
+appendice, e le righe di scala per 3 e 5 PG stanno in testa ai due
+incontri `[CANONE — DM 2026-10-19, D19]`.*
 *   **Ricompense Materiali Finali:** circa 30.000 mo in gemme per PG (`ARC08-13` §3), titoli nobiliari di "Thane di Hammerfist", fortezza personale, e le reliquie del 372 al posto dell'oggetto magico dei fabbri (`ARC08-17` §2, strada B, D41).
 
 

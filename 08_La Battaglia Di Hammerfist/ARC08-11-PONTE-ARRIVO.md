@@ -63,13 +63,19 @@ P6-INTEGRAZIONE-Completa.md` r.621-753)**:
   `ARC08-12-CRONOLOGIA-MARCH-CLOCK.md`), **round 9-10** dell'ultima resistenza
   (guida, Incontro 3C); i giocatori prendono i loro PG al round 11.
 - **90 guerrieri nanici** superstiti, morale −4.
-- **Re Thorek** a **8 pf**, avvelenato dal soffio del drago, morente;
-  Madre Dana tenta di guarirlo.
+- **Re Thorek** a **8 pf**, avvelenato dal soffio del drago, morente:
+  una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per
+  magia, e al terzo fallimento muore `[CANONE — DM 2026-10-19, D12]`.
+  Madre Dana lo tiene in vita con le mani: le restano 20 pf e un solo
+  *Muro di Pietra* `[CANONE — DM 2026-10-18]`.
 - Le **porte di mithral** cedono sotto l'assalto orchesco.
 - Quando gli orchi sfondano l'ultima barricata (round 9-10), **luce divina** esplode
   sull'altare: le rune dorate, gli occhi di rubino delle statue, e la
   sfera tricolore (Topazio oro + Smeraldo verde + Rubino rosso) sopra
   l'altare. Da lì emergono i quattro.
+- **Grimjaw** non è ancora nella caverna: alla fine del round 11 il suo
+  corno suona nel tunnel nord, e al round 12 entra dalla porta di mithral
+  con le guardie (MAPPA 5, stato F) `[CANONE — DM 2026-10-19, D11]`.
 
 > **Read-aloud (raccordo, DM)** — cuce il salto all'Incontro 3B; il
 > testo pieno della manifestazione è in P6:

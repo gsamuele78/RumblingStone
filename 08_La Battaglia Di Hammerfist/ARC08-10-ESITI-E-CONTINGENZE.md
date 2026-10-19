@@ -43,8 +43,8 @@ annientata/dispersa.
 | Voce | Valore | Fonte |
 |---|---|---|
 | Nani difensori iniziali | 300 | E8; Guida DM |
-| Nani caduti | **210** (118 a Hammerfist + 92 nei mesi precedenti + 9 a Drellin's Ferry) `[INFERRED — needs DM confirmation: 118 + 92 + 9 fa 219]` | E2; Cerimonia §1.1 |
-| Nani superstiti | **90**, guidati da Re Thorek | E2 |
+| Nani caduti | **210** = 118 a Hammerfist + 92 nei mesi precedenti. I 9 di Drellin's Ferry si nominano nel Giuramento ma non si contano `[CANONE — DM 2026-10-19, D17]` | E2; Cerimonia §1.1 |
+| Nani superstiti | **90**, guidati da Re Thorek. Al tavolo si contano dal Registro: la somma dei PFU rimasti alle unità naniche di `ARC08-03`, un nano per PFU (`ARC08-02` §4) `[CANONE — DM 2026-10-19, D17]` | E2 |
 | Orda avanguardia in campo | 900 | E8 |
 | Perdite orda | **−900 effettivi** (~500 morti + ~400 dispersi in rotta, non si ricongiungono) | D11; state.md §2.2 |
 | Fine battaglia | **Day 19** del March Clock (= caduta di Terrelton, sync ARC-09) | E3 |
@@ -77,8 +77,11 @@ annientata/dispersa.
 vedi §5 bonus non maturati).
 
 **Soglia** (canone del DM 2026-10-18): **meno di 50
-superstiti** invece di 90, e/o **Re Thorek muore** nel finale (a 8 pf
-nell'Incontro 3B, un tiro fallito lo porta a 0).
+superstiti** invece di 90, contati dal Registro PFU delle unità naniche
+(`ARC08-03`) `[CANONE — DM 2026-10-19, D17]`, e/o **Re Thorek muore** nel
+finale: a 8 pf nell'Incontro 3B, tira Guarigione CD 25 a ogni round finché
+nessuno lo cura per magia, e **al terzo fallimento muore**
+(`ARC08-01-GUIDA-DM.md`, «Prove Mediche») `[CANONE — DM 2026-10-19, D12]`.
 
 **Varianti da applicare**:
 
@@ -167,6 +170,46 @@ qualitativa (nessun valore duplicato, per non divergere).
 §1 **invariato** (nessun carry-over). L'applicazione va fatta **prima
 della battaglia** leggendo la tabella B4.
 
+**Pf di partenza nella Sessione 4** `[CANONE — DM 2026-10-19, D9]`: 337
+meno il carry-over qui sopra; **337 se il P5 non è stato giocato**, come dice il paragrafo qui sopra.
+Il duello coi PG è ai round 21-23, dopo la picchiata dei round 18-20
+(`ARC08-01-GUIDA-DM.md`, Incontro 4A): i due rami della tabella di §4 sono
+i due esiti possibili di quel duello.
+
+### 4.2 Che cosa sa il cavaliere, e se lo divinano `[CANONE — DM 2026-10-19, D15]`
+
+Il cavaliere di Fauci (Guerriero 6 / Guardia Nera 4, scheda in `ARC08-02`
+§1 e `ARC08-01`) resta in sella finché Fauci vola, e sotto i 30 pf,
+disarcionato e col drago lontano, combatte fino alla morte. Lo si
+interroga solo se lo prendono vivo: incosciente, legato, o con un
+incantesimo. È una Guardia Nera e non parla per paura: servono *charme*,
+*dominare* o *zona di verità*, e il suo TS Volontà è +6 (scheda).
+
+**Tre cose che sa:**
+
+1. **Dove va Fauci se fugge**: verso le montagne meridionali (§4; `ARC08-02`
+   §1, *Esito della battaglia*). Il punto preciso della tana i file non lo
+   danno `[INFERRED — needs DM confirmation]`.
+2. **A cosa serviva l'avanguardia**: tenere chiusi i nani a nord mentre
+   l'Orda prende Terrelton, lo stesso Day 19, e poi scende verso Rethmar
+   (`09_…/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`, Day 19).
+   Che il cavaliere conosca il piano oltre Terrelton è una deduzione
+   `[INFERRED — needs DM confirmation]`.
+3. **Perché Fauci vuole Thorik**: è della stirpe di Skullcrusher e odia
+   chi porta le armi dei nani (`ARC08-02` §1, Odio della stirpe;
+   `Bestiario/villain/Fauci_di_Palude.md`). Dell'uovo di Fauci (ARC-07 C3)
+   il cavaliere non sa niente: è un'eco per ARC-10, e resta coperta
+   `[INFERRED — needs DM confirmation]`.
+
+**Se lo divinano** *(una riga per segreto: chi lo rompe, cosa ottiene, come
+prosegue il modulo; `skills/rumblingstone-module-standard/references/sviluppo-degli-incontri.md` §9)*
+
+| Segreto | Chi lo rompe | Cosa ottiene | Come prosegue |
+|---|---|---|---|
+| **Fauci in fuga, dov'è** | Lo *scrutare* di Hella (SRD): Fauci tira Volontà +19 contro la CD della sua scheda. L'hanno visto da vicino (nessun modificatore di conoscenza); con una **scaglia** strappata in battaglia il TS ha −10 (parte del corpo, SRD) | Lo vede ferito e a terra, nelle montagne meridionali; il posto i file non lo descrivono `[INFERRED — needs DM confirmation]` | La carta S2 (§6.3) si può anticipare: i PG lo cacciano prima di Rethmar, e se lo uccidono vale il ramo «ucciso» di §4 (−1 drago a Rethmar) `[INFERRED — needs DM confirmation]` |
+| **Tornerà?** | La **Corona** di Thorik: *comunione* una volta al mese da un Nodo (`campaign/state.md` del ramo di gruppo, Corona di Adamantio) | Moradin risponde sì o no, una domanda per livello dell'incantatore (SRD); il livello della comunione della Corona i file non lo danno `[INFERRED — needs DM confirmation]` | Se chiedono del ritorno, la risposta segue la carta S2 (§6.3): se il DM la tiene nel mazzo, è «sì» `[INFERRED — needs DM confirmation]`. Il modulo non cambia; il tavolo sa che il conto è aperto |
+| **Che cosa sa il cavaliere** | *Zona di verità*, *charme*, *dominare*, *parlare con i morti* se è caduto | Le tre cose qui sopra; con *parlare con i morti* risponde col TS Volontà +6 (SRD) | Nessuna scena nuova: le tre risposte agganciano §4 e §6.3 |
+
 ---
 
 ## 5. TABELLA DI CONVERSIONE D9 — flashback pregen → bonus al finale
@@ -231,7 +274,7 @@ da qui:
 - **Tutte le altre righe** di §5.1-§5.3: «parziale».
 - **Comandanti logorati**: Grimjaw e Gorthak sono vivi; Grimjaw è quello logorato (−20% pf iniziali).
 - **Cantitrici**: metà, un solo uso di cura.
-- **P5 non giocato**: statblock di Fauci invariato (§4.1).
+- **P5 non giocato**: statblock di Fauci invariato, e in Sessione 4 Fauci parte da 337 pf (§4.1) `[CANONE — DM 2026-10-19, D9]`.
 
 ---
 

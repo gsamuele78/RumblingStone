@@ -375,7 +375,7 @@ Resta, dopo il sì del DM a D7:
 
 Le lacune B8 e B9 sono delle PR #251 e #246 e sono state girate ai loro thread.
 
-### Il giro su ARC-08, dal 3B alla Cerimonia — 🟡 2026-10-19, aspetta D9-D20
+### Il giro su ARC-08, dal 3B alla Cerimonia — ✅ 2026-10-19, D9-D20 decise e applicate
 
 Il primo giro con lo standard di A4: developer, playtester, DM a freddo e
 collaudatore delle mappe, uno alla volta, poi correzione, verifica e seconda
@@ -385,6 +385,18 @@ passata. Rapporti e conti in
 1 respinto, 1 residuo; la verifica ha trovato 15 parziali, 0 aperti, 2 🟠 nuovi,
 chiusi nella seconda passata insieme all'Atlante. Restano le dodici decisioni
 D9-D20 e due residui. Le parti dei pregen (Sessioni 1-3A) aspettano D4.
+
+Il DM ha scelto le dodici consigliate lo stesso giorno, e sono applicate ai
+file d'arco e al Bestiario (tre schede nuove: bugbear assassino GS 9, gufo
+gigante celestiale GS 6, guardia nera orog GS 7). Cosa è cambiato file per
+file è in
+[`APPLICAZIONE-D9-D20.md`](esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md).
+
+<!-- eco: MASTER-DEF 2026-10-19 -->
+- **Decise**, tutte come consigliate: D9, Fauci nella versione con la picchiata e il duello; D10, le schede mancanti dall'SRD; D11, Grimjaw al round 12 col corno all'11; D12, il tiro di Guarigione per Re Thorek; D13, mezza giornata senza riposo fino ai bastioni, con l'elenco delle unità nemiche; D14, Orion e la deroga per gli arcieri; D15, il cavaliere e «Se lo divinano»; D16, Lythiel in Sessione 4; D17, 210 caduti; D18, la serata; D19, i PE dell'Appendice C con le righe di scala; D20, due figure nell'Atto 2.
+- **Aperte**: D4, D5, D6; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario, che dice ancora un'altra cosa.
+- **Cambiate**: i pf di Fauci senza il P5. La carta diceva 232, ma era un numero sbagliato mio: 232 era nella vecchia mappa un drago già ferito di 80 pf, e `ARC08-10` §4.1 dice che senza il P5 lo statblocco resta invariato. Ora sono 337, il valore più forte e quello della regola.
+- **Dedotto da me**: Fauci scende per scelta, sotto i 100 pf o per finire Thorik (Odio della stirpe), perché la presa di Orion da sola non lo tiene; Dana a 20 pf con un solo *muro di pietra*, perché il canone del 2026-10-18 batte la versione F; un round senza prova di Guarigione conta come fallito.
 
 ## FASE 2 — Sviluppo / attuazione
 
@@ -443,18 +455,18 @@ Per ogni master, prima di chiudere il lotto:
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
 | ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0094) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
 | ~~D8~~ | A4 | ✅ **Decisa il 2026-10-18: SRD locale, uno alla volta.** I numeri si verificano sulla copia markdown dell'SRD 3.5 (OGL, fuori dal repo), coi mirror come ripiego; i lettori del giro leggono uno alla volta, e «Il giro» di `module-standard` lo dice |
-| D9 | giro | Fauci di Palude: la versione F (si schianta ai round 18-20 e duella coi PG, Thorik in punta), quella di A e B (fugge al round 5 e lo combattono i PNG) o un ibrido (fugge sotto i 50 pf, salvo che i PG lo inseguano in volo)? I pf di partenza sono 337 meno il carry-over, 232 se il duello con Skullcrusher non è stato giocato. Consigliata: F, l'unica in cui i PG affrontano il boss (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D10 | giro | Le schede che mancano (bugbear, guardie orog di Grimjaw, gufi giganti): aggiungerle a `Bestiario/mostri/` dall'SRD, o sostituirle con schede che esistono? Consigliata: aggiungerle dall'SRD (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D11 | giro | Quando arriva Grimjaw nel 3B: al round 12 con un corno al round 11, ai round 9-10 insieme ai PG, o ai round 14-15? Consigliata: round 12 col corno all'11 (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D12 | giro | Re Thorek morente: Guarigione CD 25 a ogni round finché nessuno lo cura per magia, e tre fallimenti lo uccidono, oppure la morte per scelta del DM? E Dana, 20 pf e un muro o metà delle risorse? Consigliata: il tiro (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D13 | giro | Dalla caverna ai bastioni: mezza giornata senza riposo lungo (il default scritto), oppure un riposo di 8 ore e gli scontri della Sessione 4 alzati? Si aggiunge l'elenco delle unità nemiche ancora in campo, che il Registro vuoto non dà. Consigliata: il default (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D14 | giro | La tempesta della 4A: Orion lancia *controllare il tempo* prima della battaglia, con una deroga dichiarata per gli arcieri alleati; solo vento violento; o la tempesta piena dell'SRD, senza attacchi a distanza? Consigliata: Orion e la deroga (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D15 | giro | Il cavaliere di Fauci: tre cose che sa e un blocco «Se lo divinano», scritti dopo D9, oppure muore o tace? Consigliata: scriverli (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D16 | giro | Lythiel cavalca coi gufi e riconosce Hella in Sessione 4, come dice lo stato del gruppo, oppure il riconoscimento slitta alla Cerimonia? Consigliata: lo stato del gruppo (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D17 | giro | I 210 caduti: 118 + 92, coi 9 di Drellin's Ferry nominati nel Giuramento ma non contati, e i superstiti dal Registro PFU; oppure il numero sale a 219? Consigliata: 210 (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D18 | giro | La serata: il 3B e la Sessione 4 insieme e la Cerimonia la serata dopo (il default scritto), oppure solo il 3B? Consigliata: il default (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D19 | giro | EL e PE del 3B e della 4A: l'Appendice C (2.600 e 4.600 PE al gruppo) togliendo l'EL 17 dichiarato, o l'EL 17 con lo scontro reso davvero tale? Poi le righe di scala. Consigliata: l'Appendice C (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
-| D20 | giro | Il box dell'Atto 2 della Cerimonia: due figure venute da fuori e non insieme, come dicono le note per il DM dello stesso file, oppure le tre figure coordinate del box originale? Consigliata: due (giro del 2026-10-19, `esperimenti/giro-arc08-2026-10-19/FIX.md`) |
+| ~~D9~~ | giro | ✅ **Decisa il 2026-10-19: F, l'unica in cui i PG affrontano il boss.** Fauci di Palude: la versione F (si schianta ai round 18-20 e duella coi PG, Thorik in punta), quella di A e B (fugge al round 5 e lo combattono i PNG) o un ibrido (fugge sotto i 50 pf, salvo che i PG lo inseguano in volo)? I pf di partenza sono 337 meno il carry-over (337 se il P5 non è stato giocato: la carta diceva 232 per errore, vedi l'eco del 2026-10-19). Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D10~~ | giro | ✅ **Decisa il 2026-10-19: aggiungerle dall'SRD.** Le schede che mancano (bugbear, guardie orog di Grimjaw, gufi giganti): aggiungerle a `Bestiario/mostri/` dall'SRD, o sostituirle con schede che esistono? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D11~~ | giro | ✅ **Decisa il 2026-10-19: round 12 col corno all'11.** Quando arriva Grimjaw nel 3B: al round 12 con un corno al round 11, ai round 9-10 insieme ai PG, o ai round 14-15? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D12~~ | giro | ✅ **Decisa il 2026-10-19: il tiro.** Re Thorek morente: Guarigione CD 25 a ogni round finché nessuno lo cura per magia, e tre fallimenti lo uccidono, oppure la morte per scelta del DM? E Dana, 20 pf e un muro o metà delle risorse? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D13~~ | giro | ✅ **Decisa il 2026-10-19: il default.** Dalla caverna ai bastioni: mezza giornata senza riposo lungo (il default scritto), oppure un riposo di 8 ore e gli scontri della Sessione 4 alzati? Si aggiunge l'elenco delle unità nemiche ancora in campo, che il Registro vuoto non dà. Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D14~~ | giro | ✅ **Decisa il 2026-10-19: Orion e la deroga.** La tempesta della 4A: Orion lancia *controllare il tempo* prima della battaglia, con una deroga dichiarata per gli arcieri alleati; solo vento violento; o la tempesta piena dell'SRD, senza attacchi a distanza? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D15~~ | giro | ✅ **Decisa il 2026-10-19: scriverli.** Il cavaliere di Fauci: tre cose che sa e un blocco «Se lo divinano», scritti dopo D9, oppure muore o tace? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D16~~ | giro | ✅ **Decisa il 2026-10-19: lo stato del gruppo.** Lythiel cavalca coi gufi e riconosce Hella in Sessione 4, come dice lo stato del gruppo, oppure il riconoscimento slitta alla Cerimonia? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D17~~ | giro | ✅ **Decisa il 2026-10-19: 210.** I 210 caduti: 118 + 92, coi 9 di Drellin's Ferry nominati nel Giuramento ma non contati, e i superstiti dal Registro PFU; oppure il numero sale a 219? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D18~~ | giro | ✅ **Decisa il 2026-10-19: il default.** La serata: il 3B e la Sessione 4 insieme e la Cerimonia la serata dopo (il default scritto), oppure solo il 3B? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D19~~ | giro | ✅ **Decisa il 2026-10-19: l'Appendice C.** EL e PE del 3B e della 4A: l'Appendice C (2.600 e 4.600 PE al gruppo) togliendo l'EL 17 dichiarato, o l'EL 17 con lo scontro reso davvero tale? Poi le righe di scala. Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D20~~ | giro | ✅ **Decisa il 2026-10-19: due.** Il box dell'Atto 2 della Cerimonia: due figure venute da fuori e non insieme, come dicono le note per il DM dello stesso file, oppure le tre figure coordinate del box originale? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 
 ## Come si riparte in una chat nuova
 
