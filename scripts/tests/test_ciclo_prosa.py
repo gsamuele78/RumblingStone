@@ -457,3 +457,26 @@ class TestConfronta(unittest.TestCase):
         with mock.patch("builtins.print") as stampa:
             self.assertEqual(cp.confronta_cmd("HEAD", [f]), 0)
         self.assertIn("1 file su 1", stampa.call_args_list[-1].args[0])
+
+
+class TestConfrontaNumeriAggiunti(unittest.TestCase):
+    def test_un_numero_solo_aggiunto_non_peggiora(self):
+        with tempfile.TemporaryDirectory(dir=cp.RADICE) as d:
+            f = Path(d) / "x.md"
+            prima, dopo = "Il muro regge.\n", "Il muro regge (Scalare CD 25).\n"
+            with mock.patch("subprocess.run") as run:
+                run.return_value = mock.Mock(returncode=0, stdout=prima)
+                f.write_text(dopo, encoding="utf-8")
+                with mock.patch("builtins.print") as stampa:
+                    esito = cp.confronta_cmd("HEAD", [f])
+            self.assertEqual(esito, 0, stampa.call_args_list)
+            self.assertIn("solo aggiunti", stampa.call_args_list[0].args[0])
+
+    def test_un_numero_cambiato_peggiora(self):
+        with tempfile.TemporaryDirectory(dir=cp.RADICE) as d:
+            f = Path(d) / "x.md"
+            with mock.patch("subprocess.run") as run:
+                run.return_value = mock.Mock(returncode=0, stdout="Scalare CD 20.\n")
+                f.write_text("Scalare CD 25.\n", encoding="utf-8")
+                with mock.patch("builtins.print"):
+                    self.assertEqual(cp.confronta_cmd("HEAD", [f]), 1)

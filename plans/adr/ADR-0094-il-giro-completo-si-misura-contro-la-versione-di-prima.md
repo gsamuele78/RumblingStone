@@ -55,6 +55,12 @@ handout insieme, contro la versione di partenza.
   fonti del corredo: `confronta` li accetta per percorso, `misura_craft` no,
   perché la cartella `homebrew` resta esclusa dai bersagli.
 
+- **Il primo giro (giro 4 di ARC-07, PR #254, 2026-10-19)** non ha trovato
+  peggioramenti di prosa, e ha segnato ✗ anche i numeri e i nomi **aggiunti**
+  per il DM. `confronta` adesso tiene a parte i fatti solo aggiunti («solo
+  aggiunti», non peggiora) da quelli tolti o cambiati (✗). `ciclo_prosa misura`,
+  il cancello del singolo file, resta severo.
+
 **Da rivedere se**: il giro di stasera trova un difetto che nessuna delle misure
 del passo 8 aveva visto, o se `confronta` blocca un giro per un cambio di fatti
 voluto dal DM (in quel caso serve un modo di dichiararlo).

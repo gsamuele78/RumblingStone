@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5, dopo il giro 4 di ARC-07 | 🟡 `ciclo_prosa confronta` separa i fatti solo aggiunti (un numero o un nome scritto per il DM) dai fatti tolti o cambiati: i primi si segnalano senza far peggi… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
 | 2026-10-19 | MASTER-DEF | giro 3 dei cinque master di ARC-07 con le norme della #246: 34 box su 120 riscr… | 🟡 [`esperimenti/giro3-arc07-2026-10-19/`](plans/esperimenti/giro3-arc07-2026-10-19/README.md): segnalazioni 37 → 13, dettagli sensoriali 509 → 526, impoveriti… |
 | 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5 (il giro completo misurato) e ADR-0093 accettata | 🟡 `ciclo_prosa.py confronta --rif` confronta ogni file di un giro (master e handout) con la sua versione di partenza ed esce 1 se uno peggiora; gli handout di… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, il dopo (voto cieco sul rifacimento di ARC-07) | ✅ MQM da 97,53-99,87 a 99,91-100, `>4 frasi` e `>500 car` quasi a zero, ma il DM sceglie la nuova in 8 coppie su 16 (Wilson 0,28-0,72): non dimostrato. Vince l… |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4 (la prosa, e come si misura se migliora) | 🟡 ADR-0093: la prosa è migliorata solo se il DM la sceglie alla cieca in 14 coppie su 20; `cieco_versioni.py` (campione, coppie, esito); `misura_craft --stile`… |
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
-| 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
 
 ## Le misure che si portano dietro
 

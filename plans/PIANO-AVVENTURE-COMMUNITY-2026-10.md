@@ -62,6 +62,7 @@ uniformi»; qui c'è lo strumento e la regola.
 
 - [x] `ciclo_prosa.py confronta --rif`: ogni file del giro contro la sua versione di partenza, master e handout in una tabella, esce 1 se uno peggiora
 - [x] gli handout di ARC-07, ARC-08 e ARC-09 bersagli di `misura_craft`
+- [x] il primo giro sotto la regola (giro 4 di ARC-07, PR #254): nessun peggioramento di prosa; i numeri aggiunti per il DM ora sono «solo aggiunti» e non ✗
 - [ ] **la regola** ([ADR-0094](adr/ADR-0094-il-giro-completo-si-misura-contro-la-versione-di-prima.md), proposta): `ciclo_prosa.py confronta --rif` su master e handout, gli handout come bersagli di `misura_craft`; si chiude quando il giro di DEF-4 e DEF-5 della serata del 2026-10-19 dice se regge
 
 ## 2 · La calibrazione del lotto 1
