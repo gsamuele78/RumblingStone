@@ -255,8 +255,10 @@ Benedizioni ci sono ancora.
   Con Attacco in Volo attraversa il cortile e a metà della passata soffia, o
   morde, o grida il nome di un PG (*colpo accurato*); con *Virata* torna
   indietro sulla stessa linea. Il PG nominato lo morde al round dopo, a +54
-  (+50), e l'occultamento non lo salva. Fra un turno e l'altro sta a circa
-  15 m (Scena 11, «La passata, il nome, la prima paura»).
+  (+50), e l'occultamento non lo salva. Il nome non lo chiede: lo ha sentito
+  di notte attraverso il corno, o usa un epiteto.
+  Fra un turno e l'altro sta a circa 15 m (Scena 11, «La passata, il nome,
+  la prima paura»).
 - ***Fluttuare*** **una volta sola**, a ⅓ dei pf: è la prima paura.
   ***Oscurità*** **una volta sola**, per coprire la fuga verso le paludi.
 - **Dal round 2, due wyvern** (Appendice A.6) su chi tiene la corda e su chi
@@ -1028,7 +1030,7 @@ all'alba. Le scelte, con quello che cambiano:
 | **Fuori dalla tenda, contro i rinforzi** (Scena 8, dopo un allarme) | la RD 10/adamantio rende un Treant quasi intoccabile per le ronde (orchi combattenti, falchion 2d4+4, Appendice A.6) e per gli squadroni (spada lunga 1d8+3). **Uno** tiene un lato: le ronde arrivano in **2d4+2** round invece di 1d4+2, gli squadroni in **3d4+2**. **Due** tengono la tenda: dentro non entra nessuno finché restano in piedi, e lo scontro resta contro il generale. Gli sciamani passano, perché la RD non ferma un incantesimo | un Treant nel campo si vede da tutto il pendio: è l'allarme, anche se il corno non ha ancora suonato. **Due** chiamati insieme di notte spengono l'Evocazione per un mese. Il drago arriva al corno come sempre, in 70 round, e sui Treant soffia per primo |
 | **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il palo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD. Il **Colpo Devastante** su di lui non funziona, perché l'SRD lo vuole contro un avversario più piccolo e il Treant è Grande come Zog'tar: il generale lo colpisce con l'Attacco Poderoso e tiene il Colpo Devastante per i PG. La *barriera di lame* di Balvar sul palo lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
 | **Sul fianco dell'orda, all'alba** (come scritto qui sopra) | **un successo in più** sulle mura (Scena 10, Q49), solo con **tutti e due** sul fianco | i Treant non sono nel duello |
-| **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (Scena 11, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Il drago non dice il nome a un albero (Scena 7, «Che cosa muove Skullcrusher»): li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
+| **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (Scena 11, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Un albero non ha un nome da gridare (Scena 11, «Chi sceglie»): il drago li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
 
 Un Treant chiamato di notte, alla tenda, è un seme speso prima dell'alba: per
 la Collana torna all'alba, ma se di notte se ne chiamano **due insieme**
@@ -1908,6 +1910,13 @@ e Skullcrusher deve tornare. Di notte il drago va sulle colline perché odia la
 Catena, e si allontana quanto la runa glielo lascia fare. All'alba l'araldo suona
 e il drago arriva sull'assalto.
 
+**Quello che si dice qui lo sente il drago**.
+Dalla gemella sul corno, Skullcrusher ascolta: quello che si dice vicino a
+Grask gli arriva sulle colline come un sussurro, e all'alba sa i nomi che i
+PG si sono detti alla tenda (Scena 7, «Che cosa muove Skullcrusher»). Fuori
+dal telo sente anche chi parla sottovoce; da dentro la tenda, come Grask,
+solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
+
 **Comparse**
 
 | Chi | Com'è | Come parla |
@@ -2026,6 +2035,8 @@ CD 18, e il boato è l'allarme. Il telo est, a sinistra per chi arriva da
 nord, non ha niente. Grask è fuori, a due quadretti dal seggio: sveglio
 finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª. Lo stato si
 fissa all'atterraggio, e la tacca della trattativa non lo cambia.
+Accanto a lui c'è il corno, e quello che si dice lì lo sente il drago (Scena 6,
+«Quello che si dice qui lo sente il drago»).
 
 | Come entrano | Cosa succede |
 |---|---|
@@ -2214,6 +2225,21 @@ promesso per iscritto, e la runa sulla scaglia gli è sembrata il sigillo.
 Il guinzaglio l'ha scoperto dopo, la prima volta che il corno ha suonato e lui
 è tornato senza volerlo. Balvar ci aveva inciso una riga che non gli aveva
 letto. Da quella notte odia la Catena più dei nani.
+Se non l'ha letta da sé è per arroganza: un drago che non ha mai perso non
+cerca la riga piccola. Il resto del patto però regge, e il tesoro del re gli
+è ancora dovuto.
+
+**Il corno gli porta le voci**. Odiando la Catena,
+l'ha studiata per liberarsene. Spezzarla non ci riesce, ma ha scoperto che la
+runa sulla scaglia è gemella di quella incisa sul corno di Grask, e ha
+imparato ad ascoltarci dentro: quello che si dice vicino al corno gli arriva
+come un sussurro, anche sulle colline. Di notte il corno sta fuori dalla
+tenda di Zog'tar, nella custodia incatenata al polso di Grask (Scena 6), e
+così all'alba il drago sa i nomi che i PG si sono detti vicino alla tenda.
+Chi non ha sentito nominare lo chiama per quello che vede: *la morta
+tornata*, *il nano con la Corona*. A *colpo accurato* basta una parola, e la
+passata col nome resta com'è (Scena 11, «La passata, il nome, la prima
+paura»). I nomi non li chiede: un PG sano di mente non glieli darebbe.
 
 | | |
 |---|---|
@@ -2222,7 +2248,7 @@ letto. Da quella notte odia la Catena più dei nani.
 | **Ha in mano** | le ali. Senza di lui l'assalto è una scala appoggiata alla pietra, e Zog'tar lo sa |
 | **Prossimo passo** | all'alba, al corno, cala sul cortile dove sta il re |
 
-**Cosa ne fa il tavolo.** Tre leve, e nessun numero nuovo:
+**Cosa ne fa il tavolo.** Quattro leve, e nessun numero nuovo:
 
 - **Dire la Catena ad alta voce**, in comune o in goblin, dove l'orda sente. È
   la stessa azione di movimento che serve a leggerla (Scena 11). Danni non ne fa,
@@ -2232,6 +2258,14 @@ letto. Da quella notte odia la Catena più dei nani.
   vorrebbe dire ammettere il guinzaglio, e chi l'ha offerto diventa il bersaglio
   preferito come chi lo ha ferito di più. Lontano da quegli occhi ascolterebbe,
   ma il master non prepara quel caso: se il tavolo ci arriva, è del DM.
+- **Parlare al corno apposta**. Balvar recuperato
+  lo sa o lo intuisce, perché le due rune le ha incise lui, e lo dice se gli
+  chiedono come fa il drago a sapere le cose; oppure il tavolo ci arriva da
+  sé, dalla battuta d'apertura del duello. Allora vicino al corno si può
+  mentire di proposito: un nome scambiato fra due PG, un piano detto ad alta
+  voce per non farlo, una trappola. Il drago agisce su quello che ha sentito,
+  e grida il nome che crede giusto. Quando la passata gli mostra l'inganno è
+  un'altra cosa che l'orda ha visto.
 - **Farlo fuggire.** Alla prima paura (⅓ dei pf, Scena 11) non passa sopra il
   campo: va basso, verso le paludi, sotto la sua *oscurità*, per non farsi
   vedere. È l'unica volta che la usa nel duello. L'orda lo vede lo
@@ -2974,15 +3008,22 @@ Appendice A)*
 | **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
 | **Teme** | che l'orda veda il guinzaglio. Chi dice la Catena ad alta voce se lo tira addosso (Scena 7, «Che cosa muove Skullcrusher») |
-| **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo |
+| **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo. Non lo chiede: lo sa dal corno, o mette un epiteto al suo posto (Scena 7, «Che cosa muove Skullcrusher»). Per il resto provoca e commenta, e se il tavolo ci sta ci si parla |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
 
 **SKULLCRUSHER (lento, divertito, forte perché lo sentano le mura):** *«Un re
-l'ho già mangiato, qui. Ditemi come vi chiamate. Li voglio dire bene.»*
+l'ho già mangiato, qui. Thorik. I tuoi amici lo dicono troppo forte, il tuo
+nome, quando credono che il campo dorma.»*
+
+Thorik è un esempio: il drago dice il primo nome che ha sentito alla tenda.
+Se non ne ha sentito nessuno, la battuta cambia:
+
+**SKULLCRUSHER (lento, divertito):** *«Un re l'ho già mangiato, qui. Voi, i
+nomi ve li siete tenuti. Non importa: comincio dal nano con la Corona.»*
 
 **SKULLCRUSHER (basso, quando sente dire la Catena):** *«Chi te l'ha
-insegnata, quella? No. Non importa. Il tuo nome.»*
+insegnata, quella? No. Non importa. Tocca a te.»*
 
 ![Skullcrusher nel cortile](../../Immagini/web/tavola-skullcrusher-nel-cortile.jpg)
 
@@ -3113,7 +3154,10 @@ cambia davvero.
     standard: +20 di intuizione al prossimo tiro per colpire, entro la fine
     del round dopo, e niente probabilità di mancare per occultamento. La
     componente verbale è il nome: lo grida a metà della passata, forte perché
-    lo sentano le mura, e al round dopo morde quel PG a +54 (+50). Il tavolo
+    lo sentano le mura, e al round dopo morde quel PG a +54 (+50). Il nome
+    non lo chiede: è quello sentito di notte attraverso il corno, oppure un
+    epiteto preso da quello che vede, *la morta tornata*, e basta una parola
+    (Scena 7, «Che cosa muove Skullcrusher»). Il tavolo
     sente il nome un round prima: chi è nominato sa che sarà colpito, e gli
     altri sanno su chi preparare la corda. Oltre all'*armatura magica* ha sei
     slot di 1°. ⚠ Non SRD: l'incantesimo vuole anche un fuoco, un piccolo
@@ -3162,8 +3206,9 @@ cambia davvero.
   la legge forte, dove l'orda sente, diventa il suo bersaglio dal turno dopo,
   anche se deve scendere. Il perché è in Scena 7, «Che cosa muove Skullcrusher».
 - **Chi sceglie, se più cose lo chiamano**. Colpisce
-  solo chi ha un nome, e il nome lo dice prima, forte, ogni volta: se non lo
-  sa lo chiede, e chi glielo dà ha già scelto di essere il prossimo. Fra
+  solo chi prima ha nominato, forte, ogni volta. Il nome non lo
+  chiede: o l'ha sentito al corno, o mette al suo posto un epiteto preso da
+  quello che vede, che vale lo stesso. Fra
   quelli che lo chiamano, nell'ordine: chi ha detto la Catena ad alta voce;
   chi tiene la corda dell'ala; chi lo ha ferito di più. A parità decide
   l'arroganza: sceglie quello la cui caduta fa più orrore agli altri, la
@@ -3171,7 +3216,7 @@ cambia davvero.
   che lo sentano tutti.
   **Quando valgono le altre righe.** Questo ordine viene prima di tutte, con
   tre eccezioni. Il soffio d'apertura del round 1 va sul gruppo più fitto,
-  perché nessuno ha ancora un nome. I nani chiamati dal tavolo prendono
+  perché non ha ancora nominato nessuno. I nani chiamati dal tavolo prendono
   l'attacco pieno nel round in cui arrivano, come dice la tabella del
   cortile, e dal round dopo l'ordine torna questo. Chi tira con le balestre o
   suona le campane lo chiama solo nei round in cui nessun PG lo chiama: in
@@ -3179,7 +3224,7 @@ cambia davvero.
   prima del re. Il soffio lo tiene per i PG.
 - **Il re**. Re Thorek sta nel cortile alle spalle
   dei PG. Se in un round nessun PG ha chiamato il drago (la Catena detta, la
-  corda, le ferite, il nome dato) e nessuno ha tirato con le balestre o
+  corda, le ferite) e nessuno ha tirato con le balestre o
   suonato le campane, Skullcrusher va su di lui: è il secondo re
   che vuole mangiare davanti all'orda. Chi sta sulla linea del soffio o
   accanto al re prende il colpo al posto suo. ⚠ Non SRD: in 3.5 non c'è
@@ -3804,7 +3849,9 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 - **Il nome** (*colpo accurato*): +20 al prossimo attacco entro il round
   dopo, e l'occultamento non conta. Il morso sul PG nominato è a +50, e
   l'invisibilità di Artemis non lo salva. Lo lancia a metà della passata, con
-  Attacco in Volo, e il morso arriva alla passata dopo (Scena 11).
+  Attacco in Volo, e il morso arriva alla passata dopo (Scena 11). Il nome
+  non lo chiede: è quello sentito di notte attraverso il corno, o un epiteto
+  (Scena 7).
 
 ### A.1-bis · Skullcrusher Vecchio, il drago di stasera
 

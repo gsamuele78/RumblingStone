@@ -188,6 +188,12 @@ addormentato dalla 5ª.
 
 Qui una tacca spesa in fortezza **aiuta** alla tenda, e il tavolo non lo sa.
 
+E sveglio o no, Grask ha il corno al polso: **quello che si dice lì vicino lo
+sente il drago**. All'alba Skullcrusher grida i nomi che i PG si sono detti
+alla tenda, e non li chiede mai (`DEF-4` Scena 6 e Scena 7, «Che cosa muove
+Skullcrusher») `[CANONE — DM 2026-10-19]`. Segna quali nomi sono stati detti
+fuori dal telo.
+
 **2 · Il Seme.** Insieme alle boccette, è la prima cosa che il tavolo
 chiederà: Artemis vuole sapere cos'è la gemma nello zaino di Tordek. La scena
 è il capitolo II di questo booklet, «L'ora della pergamena», e vuole la
@@ -275,8 +281,9 @@ tabella «Dalla notte».
 Se le tacche sono 8 o più, la Scena 10 **non si gioca**: il dado dei caduti si
 tira all'alba, prima del duello, e il duello comincia con i PG fuori dalle mura.
 
-**Scena 11, il duello** (`DEF-4` Scena 11, mappa M7-B, Appendice A.1). Cinque
-cose da tenere davanti:
+**Scena 11, il duello** (`DEF-4` Scena 11, mappa M7-B, Appendice A.1-bis: stasera il drago è il **Vecchio**; l'Adulto di A.1 resta per un gruppo più debole) `[CANONE — DM 2026-10-19]`. La
+prima battuta del drago usa uno dei nomi che hai segnato alla tenda; se non ne
+hai, un epiteto. Poi cinque cose da tenere davanti:
 
 - la **Cintura di Tordek** si rifiuta contro il drago (§1 del master): dillo
   al primo tentativo, in una riga, e non spiegarlo. I Bracieri invece valgono;
@@ -285,10 +292,12 @@ cose da tenere davanti:
   del gruppo;
 - **le wyvern**: dal round 2, due wyvern (sidebar di scala, statistiche in
   A.6) vanno su chi tiene la corda e su chi vola. Fuggono quando il drago fugge
-  o muore. Il duello resta EL 14, e vale 1.625 PX a testa `[CANONE — DM 2026-10-19, giro 4 n. 16]`;
-- **Ghermire e Fluttuare**: il drago li usa. Morde in picchiata, ghermisce,
-  risale, e al turno dopo fermo a 15 m lascia cadere la preda o, se il soffio
-  è tornato, soffia sugli altri tenendola in bocca, e lei non ha il TS (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19, giro 4 n. 6]`;
+  o muore. Il duello è EL 17, il tetto, e vale circa 4.060 PX a testa (`DEF-4` §8) `[CANONE — DM 2026-10-19]`;
+- **la passata e il nome**: il drago non si ferma in aria. Attraversa il
+  cortile con Attacco in Volo e Virata, e a metà passata soffia o grida un
+  nome; al turno dopo morde chi ha nominato. Non ghermisce nessuno: la presa
+  in bocca è di Fauci, nel 1372. Si ferma in aria una volta sola, a ⅓ dei pf,
+  ed è la prima paura (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19]`;
 - **Aegis Fang** scaglia la Cicatrice Ancestrale: segna la ferita nella tabella
   della Forgia nel momento in cui succede.
 
