@@ -467,8 +467,8 @@ loro luce mette in fuga gli orchi.
 > fermano nello stesso respiro. Nel silenzio la sacerdotessa alza la testa, e
 > dice piano: «Sono tornati.»*
 
-> **Read-aloud (Mercer lead) — la caverna, voi.** *La sfera si apre, e i piedi
-> toccano la pietra dell'altare. Sulla fronte di Thorik brillano tre
+> **Read-aloud (Mercer lead) — la caverna, voi.** *La sfera si apre, e i vostri
+> piedi toccano la pietra dell'altare. Sulla fronte di Thorik brillano tre
 > gemme e l'ascia canta una nota di guerra che risuona nella pietra; i pugni di
 > Tordek ardono, l'anello di Artemis pulsa fra luce e ombra, intorno a Hella
 > spuntano dalla pietra radici di cristallo. Novanta nani rialzano la testa
@@ -573,8 +573,8 @@ intera**.
 
 > **Read-aloud (Salvatore lead) — la corona intera.** *La pietra nuova ha smesso di
 > battere da sola. Per la prima volta da quando Thorik l'ha in testa, l'oro torna
-> indietro da tutte e tre le pietre, e la luce che ne esce ha un colore che nessuna
-> delle tre, da sola, aveva. Il metallo gli si raffredda contro la
+> indietro da tutte e tre le pietre, e la luce che ne esce non è di nessuna delle
+> tre: è di quello che adesso sono insieme. Il metallo gli si raffredda contro la
 > fronte, e resta caldo come una mano.*
 
 ---

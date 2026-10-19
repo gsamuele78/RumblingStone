@@ -111,7 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata, sullo stato del ramo di gruppo: sei… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
+| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
 | 2026-10-19 | MASTER-DEF | giro 3 dei cinque master di ARC-07 con le norme della #246: 34 box su 120 riscr… | 🟡 [`esperimenti/giro3-arc07-2026-10-19/`](plans/esperimenti/giro3-arc07-2026-10-19/README.md): segnalazioni 37 → 13, dettagli sensoriali 509 → 526, impoveriti… |
 | 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5 (il giro completo misurato) e ADR-0093 accettata | 🟡 `ciclo_prosa.py confronta --rif` confronta ogni file di un giro (master e handout) con la sua versione di partenza ed esce 1 se uno peggiora; gli handout di… |
 | 2026-10-18 | MASTER-DEF | box impoveriti dei master di ARC-07 corretti con la misura della PR #246 (… | ✅ da 26 su main a 2, entrambi falsi positivi (la parola sensoriale è nella battuta fuori dal box); attesa di §6 a 530 box |

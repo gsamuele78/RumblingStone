@@ -441,8 +441,8 @@ fronte, guida. Aegis Fang canta: *«Seconda gemma. Seconda prova. Avanti.»*
 > denso e freddo, poi il peso arriva tutto insieme, uno zaino di pietre posato
 > senza preavviso. Le ginocchia cedono un istante, respirare costa fatica,
 > l'aria è sciroppo. Poi la Benedizione morde: la pelle indurisce, le ossa si
-> fanno compatte come ghisa. Il peso resta. Mai comodo, ma si porta, come si
-> porta un carico legato bene. Così si cammina, nell'Incudine del Mondo.*
+> fanno dense, il peso resta. Mai comodo. Sopportabile. Benvenuti nell'Incudine
+> del Mondo.*
 
 ---
 
