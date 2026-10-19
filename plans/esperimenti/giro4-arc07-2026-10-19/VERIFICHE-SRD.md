@@ -39,3 +39,19 @@ mirror dello stesso testo.
 - I **PX delle wyvern** (n. 16) vengono dalla tabella della DMG, che non è
   nell'SRD: 325 l'una per un gruppo di 13°, con lo stesso conto che dà 5.850
   al drago e 650 a ogni guardia di Zog'tar.
+
+## Lettura finale del 2026-10-19, prima della stampa
+
+Le verifiche chieste dai rilievi della lettura finale (`finale/`). d20srd.org
+e rpgcrossing.com non rispondevano da qui; il mirror che ha risposto è
+dungeons.fandom.com.
+
+| Cosa | Fonte | Esito |
+|---|---|---|
+| Lista del druido: cure e *neutralizza veleno* | https://dungeons.fandom.com/wiki/SRD:Druid_Spell_List | *cura ferite leggere* 1°, *cura ferite moderate* 3°, *neutralizza veleno* 3°, *cura ferite gravi* 4°, *cura ferite critiche* 5°. *Ristorare inferiore* 2°; *ristorare* pieno non c'è. Hella, druida di 12°, legge senza tiro le pergamene di cure e di *neutralizza veleno*; *ristorare* resta ad Artemis con Usare Oggetti Magici CD 27. Scritto nella regia §1, riga «Pergamene» |
+| Lista del chierico | https://dungeons.fandom.com/wiki/SRD:Cleric_Spell_List | la pagina non si è aperta. Non serve alla risposta: nel gruppo non c'è un chierico |
+| Rapidità di Mano senza gradi | https://dungeons.fandom.com/wiki/SRD:Sleight_of_Hand_Skill | «Trained only»; senza addestramento è una prova di Destrezza e non riesce sopra CD 10, tranne per nascondere un oggetto addosso. La CD 22 della Scena 9 vuole i gradi. Le classi dei PG (guerriero; guerriero/monaco; ranger/druido; warlock) sono in `stato-del-gruppo/state-ramo-di-gruppo.md`; la scheda di Tordek al 12° (`PG/Artefatti/Artefatti-Pg/Tordek/`) non ha gradi. Le pagine delle classi su fandom non si sono aperte: le liste delle abilità di classe non le ho rilette |
+| Presa migliorata, i round dopo | https://d20resources.com/modern.d20.srd/special.abilities/improved.grab.php | «each successful grapple check it makes during successive rounds automatically deals the damage»; −20 con una parte sola, e allora non è in lotta. Con *Ghermire* il danno automatico in più vale solo da tre taglie in giù: contro un PG Medio resta la regola della presa migliorata. Scritto nella Scena 11 |
+| Forma alternativa (la forma selvatica) | https://dungeons.fandom.com/wiki/SRD:Alternate_Form | «The creature retains the type and subtype of its original form». Hella in forma d'aquila resta una nana per la runa della soglia (Scena 6), proposta marcata `[INFERRED]`. Che la forma selvatica funzioni come la forma alternativa lo dice la pagina del druido, che non si è aperta |
+| Attacco Poderoso | mirror `skills/dnd-35-srd/references/combat.md` | fino al BAB, a due mani il doppio ai danni: Zog'tar, BAB +15, fa al massimo −15/+30, come A.2 |
+| Danno massiccio | mirror `combat.md`; `campaign/lore/house-rules.md` | regola SRD (50 danni, Tempra CD 15); le regole della casa la tengono attiva e non aggiungono altro |

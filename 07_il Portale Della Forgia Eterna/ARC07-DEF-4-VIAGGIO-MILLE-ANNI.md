@@ -1075,7 +1075,9 @@ gallerie sotto la fucina; cercarlo costa una tacca)*
   ogni soffio. Se la attivano uscendo dalla postierla, all'alba è scaduta. Si
   attiva al corno dell'alba o dopo: il drago arriva 70 round dopo il corno,
   e la runa dura 70 minuti. Prezzo di pergamena SRD, 350 mo. Per
-  **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido.
+  **Durik** vale di più: la sua scheda gli dà +50% di danni dall'acido. La
+  attiva chi la porta, toccando il bersaglio, perché *resistere all'energia*
+  è a contatto (SRD): su Durik la mette Hella `[INFERRED — needs DM confirmation]`.
 - **Fermarsi o dormire — scelta.** In 3.5 ci sono solo le otto ore di sonno
   e il tempo che passa. **Tre ore di sosta** (2
   tacche) non ridanno incantesimi, perché l'SRD li restituisce solo dopo otto
@@ -1853,7 +1855,10 @@ usa due cose diverse, e tutte e due si possono fare:
 - **Sono legati ai nani.** L'SRD permette di legare un glifo a una razza, e la
   runa scatta alla condizione che Balvar scrive: «un nano varca la soglia». Lo
   fa perché è dai nani che si difende. Un invisibile li fa scattare
-  come un visibile. Chi nel gruppo non è nano passa senza niente.
+  come un visibile. Chi nel gruppo non è nano passa senza niente. Hella in
+  forma selvatica resta una nana per la runa: la forma selvatica funziona
+  come la forma alternativa dell'SRD, che conserva tipo e sottotipo. Da
+  aquila la fa scattare come da nana `[INFERRED — needs DM confirmation]`.
 - **Il silenzio spegne i glifi, non la soglia.** Dentro la bolla della pietra
   nessuno subisce danni sonori e il boato non esce. *Epurare* invece non fa
   rumore, e il silenzio non lo ferma: chi varca la soglia invisibile si ritrova
@@ -2193,7 +2198,7 @@ e lo odia. Questo aggancia direttamente il duello (Scena 11):
 | **Individuano la runa** (Sapienza Magica **CD 24**, o Conoscenze storia CD 22 per riconoscere il nanico antico — **è scritta, quindi si legge**) | sanno dove colpire. **Quando**: di notte il drago è sulle colline, quindi la runa si vede all'alba, nel duello, con un'azione di movimento entro 9 m. Nella tenda si legge la **gemella** sul corno (Scena 6), che dice dove sta l'altra; e Balvar, se è recuperato, lo dice lui |
 | **Colpiscono la scaglia** | **regola della casa** `[CANONE — DM 2026-10-07, Q25]`: il 3.5 non ha colpi mirati. Si attacca la CA del drago **+4**, perché il bersaglio è piccolo, e il primo colpo che va a segno **spezza la Catena** |
 | **Balvar la scioglie** (solo se è recuperato) | può farlo, e lo sa, ma **solo toccando la scaglia**: cioè nel cortile, durante il duello `[CANONE — DM 2026-09-30, D23]`. Vale come spezzarla (riga sotto). Per arrivarci torna con i PG (se tornano in volo: Scena 8, «Se Balvar è recuperato»): nel ritorno a piedi tira con loro, e conta per la metà del gruppo `[CANONE — DM 2026-10-12, D74]` (Nascondersi e Muoversi Silenziosamente **−1**: nessun grado, DES +2, armatura completa di mithral −3) `[CANONE — DM 2026-10-12, D71]`, alla postierla Durin lo fa entrare se un PG garantisce per lui (Scena 8, «Se Balvar è recuperato»), e nel cortile resta ai margini fino al duello `[CANONE — DM 2026-10-12]` |
-| **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** `[CANONE — DM 2026-09-30, D14]` |
+| **Spezzano la Catena** | Skullcrusher **smette di combattere per l'orda**. Non diventa alleato — è un drago nero — ma se ne va, e l'assalto alle mura perde le ali. Vale **FERITO GRAVE** se il drago aveva già perso almeno un terzo dei pf, altrimenti **FUGGITO** `[CANONE — DM 2026-09-30, D14]`. È una soglia diversa da quella della fuga della Scena 11, che arriva a un terzo dei pf **rimasti**: la Catena spezzata accorcia la strada |
 | **Uccidono Balvar prima dell'alba** | la runa resta (è incisa, non sostenuta), **ma** senza chi la rinnova si indebolisce: Skullcrusher parte con **−2 a tutto** e fugge a **metà** pf invece che a ⅓ |
 
 ⚠️ **È qui che il gruppo diventa un gruppo.** Artemis vede l'aura, Thorik legge
@@ -3241,6 +3246,8 @@ che non volo?»*. La risposta non è «aspetti». Per Tordek, prima di tutto:
   Collina, che la prima volta scatta da sola quando uno scontro con una
   creatura Enorme lo porta sotto metà pf (scheda dei Bracieri in
   `PG/Artefatti/Artefatti-Pg/Tordek/`). Skullcrusher è Enorme.
+  L'Ancoraggio della Montagna non c'è più: al rito è diventato il Dono di
+  Hella (log del 25), quindi *Ghermire* porta via Tordek come chiunque.
 
 Per tutti, tre cose SRD:
 
@@ -4205,6 +4212,10 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
 ```
+
+Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
+sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li
+prende tutti. Il re è alle loro spalle, a L17.
 
 ### Sotto la montagna: la Scena 5
 

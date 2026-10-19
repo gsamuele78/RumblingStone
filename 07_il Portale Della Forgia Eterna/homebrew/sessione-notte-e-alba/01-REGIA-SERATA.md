@@ -102,12 +102,11 @@ della sessione 4 non lo dice `[CANONE — DM 2026-10-19, giro 4 n. 18]`.
 
 Tre cose da fissare prima di cominciare, perché il testo non le decide:
 
-- **il Seme, capitolo II**: il tono dell'Anello (A o B) lo scegli adesso
-  `[CANONE — DM 2026-10-19, giro 4 n. 20]`; i Bracieri, se Tordek li
-  interroga, rispondono con una frase sola e mai sul Seme
-  `[CANONE — DM 2026-10-19, giro 4 n. 19]`. Il capitolo II, che copia
-  `DEF-1`, dice ancora «non commentano» e «in base a come Artemis ha gestito»:
-  valgono queste due righe;
+- **il Seme, capitolo II**: il tono dell'Anello (A o B) lo scegli adesso `[CANONE — DM 2026-10-19, giro 4 n. 20]`;
+  i Bracieri, se Tordek li interroga, rispondono con una frase sola e mai
+  sul Seme `[CANONE — DM 2026-10-19, giro 4 n. 19]`. Il testo copiato nel
+  capitolo II dice ancora «non commentano» e «in base a come Artemis ha
+  gestito»: valgono queste due righe;
 - **il dono a metà di Hella** (cap. IV §1): dipende dai successi dello Step 5
   del rito, e il log del 25 dice solo che i tre Doni sono stati dati tutti.
   Fissa adesso se sono stati tre su tre o due su tre;
