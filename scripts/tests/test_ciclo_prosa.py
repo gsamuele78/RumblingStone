@@ -442,3 +442,18 @@ class TestDettagliNellaBattutaAccanto(unittest.TestCase):
         senza = self.DOPO.split("\n\n", 2)
         senza = senza[0] + "\n\n" + senza[2]
         self.assertEqual(len(cp.box_impoveriti(self.PRIMA, senza)), 1)
+
+
+class TestConfronta(unittest.TestCase):
+    def test_un_file_senza_versione_di_prima_non_si_confronta(self):
+        with tempfile.TemporaryDirectory(dir=cp.RADICE) as d:
+            f = Path(d) / "nuovo.md"
+            f.write_text("> *Un box nuovo.*\n", encoding="utf-8")
+            with mock.patch("builtins.print"):
+                self.assertEqual(cp.confronta_cmd("HEAD", [f]), 0)
+
+    def test_un_file_uguale_non_peggiora(self):
+        f = cp.RADICE / "07_il Portale Della Forgia Eterna" / "ARC07-HANDOUTS.md"
+        with mock.patch("builtins.print") as stampa:
+            self.assertEqual(cp.confronta_cmd("HEAD", [f]), 0)
+        self.assertIn("1 file su 1", stampa.call_args_list[-1].args[0])

@@ -1,6 +1,6 @@
 # ADR-0093 — La prosa è migliorata se il DM la sceglie alla cieca; i numeri dicono solo dove guardare
 
-**Stato**: proposta
+**Stato**: accettata (dal DM il 2026-10-19)
 **Data**: 2026-10-18
 **Decisione-fonte**: richiesta del DM del 2026-10-18 («cerchi metodi per migliorare la prosa in rete […] che possono essere misurati ed applicati nel repo […] con una verifica misurabile di miglioramento»), lotto 4 di [PIANO-AVVENTURE-COMMUNITY](../PIANO-AVVENTURE-COMMUNITY-2026-10.md)
 

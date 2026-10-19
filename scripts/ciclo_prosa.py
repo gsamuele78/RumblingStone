@@ -776,6 +776,41 @@ def misura_cmd(originale: Path, riscritto: Path) -> int:
     return 1 if male or fatti_cambiati else 0
 
 
+def confronta_cmd(rif: str, files: "list[Path]") -> int:
+    """Il giro intero contro una versione del repo: ogni file (master, handout,
+    fascicolo) com'era a `rif` contro com'è adesso, in una tabella sola.
+
+    Serve al «giro completo» di un arco (ADR-0094): la stessa misura per i
+    master e per gli handout dei giocatori, e un file che peggiora fa uscire 1.
+    """
+    import subprocess
+    righe = ["| file | segnalazioni | MQM | dettagli sensoriali | box impoveriti | esito |",
+             "|---|---:|---:|---:|---:|---|"]
+    import misura_craft as mc
+    male_tot = 0
+    for f in files:
+        rel = f.resolve().relative_to(RADICE).as_posix() if f.resolve().is_relative_to(RADICE) else str(f)
+        r = subprocess.run(["git", "show", f"{rif}:{rel}"], cwd=RADICE,
+                           capture_output=True, text=True)
+        dopo = f.read_text(encoding="utf-8")
+        if r.returncode != 0:
+            righe.append(f"| {rel} | nuovo | | | | non confrontabile |")
+            continue
+        prima = r.stdout
+        mig = miglioramento(prima, dopo, f)
+        sens = [sum(mc.dettagli_sensoriali(mc.corpo_del_box(b)) for b in mc.box_read_aloud(x))
+                for x in (prima, dopo)]
+        male = peggiora(mig) + confronta_fatti(prima, dopo)
+        male_tot += bool(male)
+        a, b = mig["segnalazioni"]
+        q = f"{mig['mqm'][0]} → {mig['mqm'][1]}" if mig["mqm"] else "—"
+        righe.append(f"| {rel} | {a} → {b} | {q} | {sens[0]} → {sens[1]} | "
+                     f"{len(mig['impoveriti'])} | {'✗ ' + '; '.join(male) if male else '✓'} |")
+    print("\n".join(righe))
+    print(f"{'✓' if not male_tot else '✗'} {len(files) - male_tot} file su {len(files)} senza peggioramenti contro {rif}")
+    return 1 if male_tot else 0
+
+
 def _estratto(righe: "list[str]", s: Segnalazione) -> str:
     testo = " ".join(r.strip() for r in righe[s.riga - 1:s.fine])
     testo = " ".join(testo.split())
@@ -1100,6 +1135,9 @@ def main(argv=None) -> int:
     s5.add_argument("riscritto", type=Path)
     s6 = sub.add_parser("registro", help="i miglioramenti applicati; --check è il cancello")
     s6.add_argument("--check", action="store_true")
+    s8 = sub.add_parser("confronta", help="ogni file contro una versione del repo, master e handout insieme")
+    s8.add_argument("--rif", required=True, help="il commit o il ramo di prima (es. origin/main)")
+    s8.add_argument("file", type=Path, nargs="+")
     s7 = sub.add_parser("rigenera", help="la revisione riportata sull'originale cambiato")
     s7.add_argument("revisione", type=Path)
     a = ap.parse_args(argv)
@@ -1110,6 +1148,8 @@ def main(argv=None) -> int:
         return misura_cmd(a.originale, a.riscritto)
     if a.cmd == "registro":
         return registro_cmd(a.check)
+    if a.cmd == "confronta":
+        return confronta_cmd(a.rif, a.file)
     if a.cmd == "rigenera":
         return rigenera(a.revisione)
 
