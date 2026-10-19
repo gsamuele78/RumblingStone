@@ -31,7 +31,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | **Vatore** | SCENA 9 | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri | il tono del collega, non del nemico. Monosillabi. Terrore reverenziale mal nascosto |
 | Hrodgar, il capitano delle mura | SCENA 10 | — | dà gli ordini con una parola sola |
 | Hald, il nipote di Balvar | SCENA 10 | — | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
-| **Skullcrusher il Nero** | SCENA 11 | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta |
+| **Skullcrusher il Nero** | SCENA 11 | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo |
 | Aegis Fang | SCENA 11 | — | non canta: urla dentro il cranio di chi lo impugna, a frasi brevi in maiuscolo; la sua voce è nella sua pagina fra gli artefatti dei PG |
 
 ## L'inserto delle CD
@@ -92,7 +92,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |
 | SCENA 8 | comando «Cadi!» (Volontà | 13 |
 | SCENA 8 | il bersaglio tira Tempra | 15 |
-| SCENA 8 | Dalla soglia lancia comando («Cadi!», Volontà | 13 |
+| SCENA 8 | Lancia comando («Cadi!», Volontà | 13 |
 | SCENA 8 | Sapienza Magica | 20 |
 | SCENA 8 | Intimidire | 22 |
 | SCENA 8 | dovrà superare Volontà | 18 |
@@ -108,9 +108,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 10 | Diplomazia o Guarire | 18 |
 | SCENA 10 | Disattivare o Artigianato | 20 |
 | SCENA 11 | danno massiccio, Tempra | 15 |
-| SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
+| SCENA 11 | Cala dall'alto (Presenza Terrificante | 26 |
 | SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
-| SCENA 11 | sul gruppo più fitto (Riflessi | 30 |
+| SCENA 11 | sul gruppo più fitto (Riflessi | 31 |
 | SCENA 11 | Ognuna tira a parte Volontà | 25 |
 | SCENA 11 | un incantesimo nella nube serve Concentrazione | 21 |
 | SCENA 11 | prova di Forza | 25 |

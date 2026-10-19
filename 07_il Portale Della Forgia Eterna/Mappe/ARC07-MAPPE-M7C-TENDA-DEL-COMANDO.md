@@ -20,9 +20,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🪑 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 09 🟩 🟩 🟩 ⛺ 🟩 🟩 🦴 ⛺ 🟫 🟫 🟫 🟫 🟪 🟫 🟫 🟫 🟫 🟫 ⛺ 🦴 🟩 🟩 🟩 🟩 🟩 🟩
 10 🟩 🟩 ⛺ ⛺ ⛺ 🟩 🟩 ⛺ 🟫 🟫 🟫 🔴 🟫 🟫 🔴 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩
-11 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟫 🏮 🟫 🟫 🟫 🟫 🟫 🔴 🟫 🟫 ⛺ 🟩 🟩 🟩 🟡 ⛺ ⛺ 🟩
+11 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟫 🏮 🟫 🟫 🟫 🟫 🟫 🔴 🟫 🟫 ⛺ 🟩 🟩 🟩 ⛺ ⛺ ⛺ 🟩
 12 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🔴 🟫 ⚫ ⚫ 🟫 🟫 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩
-13 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟫 ⚫ ⚫ 🟫 🟡 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+13 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟫 🟫 🟫 🟡 ⚫ ⚫ 🟫 🟡 🟫 🟫 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 14 🟩 🟩 🟩 🟩 🟩 🔥 🟩 ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ ⛺ 🟩 🟩 🔥 🟩 🟩 🟩 🟩
 15 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 16 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
@@ -42,9 +42,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 @mark 6 ; O10 ; Guardia hobgoblin, in ascolto davanti al seggio (Guerriero 8)
 @mark 7 ; P11 ; Guardia hobgoblin, in ascolto davanti al seggio (Guerriero 8)
 @mark 8 ; N15 ; Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª (Combattente 1)
-@mark 9 ; W11 ; Il sacerdote dell'orda, che dorme nella tenda accanto: arriva in 1d4+1 round (GS 6, adepto 7)
+@mark 9 ; L13 ; Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido (GS 6, adepto 7)
 @path Il corridore hobgoblin (complicazione 6 della Scena 6) ; Z7 U3 N3 ; #d62828
-@path Il sacerdote, dalla sua tenda alla soglia (1d4+1 round) ; W11 T4 P3 ; #7b2cbf
+@path Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2 ; W11 S15 N14 ; #7b2cbf
 @path Le ronde di orchi più vicine (1d4+2 round) ; A12 G12 ; #e85d04
 @path Gli squadroni hobgoblin (2d4+2 round) ; M20 M16 ; #9d0208
 @zone S5-S13 ; Telo est: «il telo a sinistra» di Balvar
@@ -78,13 +78,13 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 | Orda | Guardia hobgoblin, in ascolto davanti al seggio | 🔴 | 1 | Guerriero 8 | O10 |
 | Orda | Guardia hobgoblin, in ascolto davanti al seggio | 🔴 | 1 | Guerriero 8 | P11 |
 | Orda | Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª | 🔴 | 1 | Combattente 1 | N15 |
-| Orda | Il sacerdote dell'orda, che dorme nella tenda accanto: arriva in 1d4+1 round | 🟡 | 1 | GS 6, adepto 7 | W11 |
+| Orda | Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido | 🟡 | 1 | GS 6, adepto 7 | L13 |
 
-- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (M12–N13) e racconta alle guardie come impalerà il re; le quattro guardie stanno davanti al seggio e ascoltano. Balvar è sullo sgabello nel fondo buio, a tre passi dal generale, e incide. Grask è seduto fuori, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme nella sua tenda. Se è **pre-allertato**, vedi lo stato B qui sotto.
+- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (M12–N13) e racconta alle guardie come impalerà il re; le quattro guardie stanno davanti al seggio e ascoltano. Balvar è sullo sgabello nel fondo buio, a tre passi dal generale, e incide. Grask è seduto fuori, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio; le due guardie del turno dopo dormono nella tenda accanto. Se è **pre-allertato**, vedi lo stato B qui sotto.
 - **Da dove si entra** (Scene 6 e 7): dalla **soglia** (M4–N4), e con un nano fra loro scatta la runa (stato C); dal **telo est** (S5–S13), «il telo a sinistra» che Balvar consiglia, e si resta invisibili senza runa né glifo; dal **telo sopra il seggio** (L14–N14), che porta il glifo (stato D). Chi taglia la tenda altrove resta invisibile, ma il taglio fa rumore: le guardie tirano Ascoltare contro il suo Muoversi Silenziosamente.
 - **Round di sorpresa** (Scena 8): chi nessuno ha visto né sentito ha un'azione standard o di movimento. Parlare con Balvar in nanico antico, sottovoce, non conta come parlare ad alta voce. Zog'tar non perde la Destrezza alla CA (Schivare Prodigioso Migliorato) e fuori dall'Ira ha 283 pf.
 - **Round 1** (Scena 8): Ira Barbarica (*«A ME, CANI! ABBATTETE LE OMBRE!»*) e Occhio di Ossidiana su Thorik; delle quattro guardie, due restano davanti al seggio e due vanno in coppia su chi lancia incantesimi o colpisce da lontano. Al primo grido Grask suona il corno entro **1d4 round**, se nessuno se n'è occupato prima (Scena 6).
-- **Round 2-3** (Scena 8): carica chi fa più danni, Attacco Poderoso −5/+10 se ha colpito bene. Contro chi ha armatura leggera o niente usa il Colpo Devastante e lo scaglia contro il palo o fuori dal telo. Il sacerdote arriva **1d4+1 round** dopo il primo grido o il corno: dalla soglia lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar, poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del generale.
+- **Round 2-3** (Scena 8): carica chi fa più danni, Attacco Poderoso −5/+10 se ha colpito bene. Contro chi ha armatura leggera o niente usa il Colpo Devastante e lo scaglia contro il palo o fuori dal telo. Il sacerdote si alza al primo grido e agisce dal round 1: da dietro il seggio lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar, poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del generale.
 - **Balvar** (Scena 7): recuperato, non combatte e al primo round dice dov'è la runa della Catena; con la trattativa aperta guarda il primo round e poi sta con chi vince; minacciato o attaccato, *righteous might* al round 1, *slay living* (Tempra CD 20) al round 2, dal round 3 la runa del *silenzio* su di sé, la barriera di lame del palo e il martello.
 - **Chi vola sotto il telo** (6 m al palo, 3 m ai lati; Scena 8): resta **nella** portata dell'ascia: Zog'tar è alto 3 m e arriva 3 m oltre, fino al colmo. Ne esce solo chi sta fuori dal telo. Zog'tar tira i tre giavellotti Grandi (+19, 1d8+13 in Ira `[CANONE — DM 2026-10-18]`) e, se il volo dura, abbatte il palo (stato F); le guardie tirano giavellotti (+9, 1d6+4); Balvar, se combatte, *dissolvi magie* e *comando superiore* «Cadi» (Volontà CD 20); il sacerdote *comando*.
 - **Rinforzi** (Scena 8): le ronde di orchi più vicine arrivano in **1d4+2 round**, gli squadroni hobgoblin in **2d4+2**, poi un'altra ronda ogni round e un altro squadrone ogni due. Finché Zog'tar è in piedi non entrano: fanno quadrato fuori dal telo e aspettano chi esce; quando lui cade, entrano. Le frecce dei bordi sono una proposta: la tenda sta al centro del campo, e arrivano da ogni lato.

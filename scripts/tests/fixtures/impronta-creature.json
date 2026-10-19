@@ -39540,24 +39540,19 @@
    "blocco": null,
    "conti": [
     "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 3 da DV/4 → For 15, Cos 13, Des 11",
-    "pf: 14d12 media 91.0 + Cos +1×14 = 105",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +4, Vol +4"
+    "pf: 14d4 media 35.0 + Cos +1×14 = 49",
+    "TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +10, Rifl +9, Vol +9"
    ],
    "lettura": {
     "armatura": null,
     "base_ts": {
-     "rifl": 4,
+     "rifl": 9,
      "temp": 9,
-     "vol": 4
+     "vol": 9
     },
-    "classi": [
-     [
-      "barbaro",
-      14
-     ]
-    ],
-    "dado": null,
-    "dv": null,
+    "classi": [],
+    "dado": 4,
+    "dv": 14,
     "elite": false,
     "gs": 14,
     "manca": [],

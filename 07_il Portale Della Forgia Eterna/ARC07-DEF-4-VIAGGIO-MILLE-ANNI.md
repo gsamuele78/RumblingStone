@@ -99,8 +99,8 @@
 > mappa M7-C, le Appendici A.2 e A.4 e, in §8 B, «Il bottino della tenda e il
 > tempo» (25 min) · Scena 9, solo la tabella di Vatore (5 min) · Scena 10, solo la
 > tabella «Dalla notte», le tre vie e la tabella dei successi (5 min) · Scena 11, la scheda d'entrata,
-> il giro round per round, «Chi sceglie» e le corde, con l'Appendice A.1
-> (15 min). Il resto si apre quando serve. Gli scontri possibili per strada
+> il giro round per round, «Chi sceglie» e le corde, con l'Appendice A.1-bis,
+> il Vecchio che si usa stasera, e le wyvern di A.6 (15 min). Il resto si apre quando serve. Gli scontri possibili per strada
 > (pattuglia, lupi, sciamani) hanno le statistiche in Appendice A.6. Ci si ferma sull'esito del duello, prima
 > della Scena 12 `[CANONE — DM 2026-10-12]`. Al tavolo sono circa tre ore; la
 > regia della serata, nel suo booklet, dice dove tagliare. Il resto del master
@@ -198,22 +198,31 @@ dell'Atto I. Se ha pregato all'ingresso nella Sala, di solito all'alba le
 Benedizioni ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]`.
 
 ### Il giro di Skullcrusher (boss, Scena 11) — 3.5, niente 5e
-- **Soffio acido** in **linea** di 30 m, 14d4, Riflessi CD 30 ½, **ricarica 1/1d4 round**;
+- **Quale drago.** Con il gruppo di stasera si usa il **Vecchio** (Appendice
+  A.1-bis) con le 2 wyvern: EL 17, il tetto esatto di APL+4 `[CANONE — DM 2026-10-19]`.
+  L'**Adulto** (Appendice A.1) resta per un gruppo di 13° più debole, per tre
+  PG, o se il DM non conferma il Vecchio. Qui sotto, fra parentesi, i suoi numeri.
+- **Soffio acido** in **linea** di 30 m, 16d4 (14d4), Riflessi CD 31 (30) ½, **ricarica 1/1d4 round**;
   se lo vuole **aderente**, chi ne prende danno ne riprende metà al round dopo, e la ricarica sale di 1 round (Appendice A.1).
-- **Full-attack** (se a terra/quota bassa): morso +30, 2 artigli +25, 2 ali +25,
-  coda +25.
-- **Volo**: resta in quota, picchia e risale (Attacco in Volo) — punisce chi non
-  ha gittata/volo. Fra un turno e l'altro sta a circa 15 m.
-- ***Ghermire*** e ***Fluttuare***: li usa tutti e due. Morde in picchiata,
-  ghermisce e risale; da fermo a 15 m lascia cadere la preda o soffia sugli
-  altri, e chi è in bocca non ha il TS (Scena 11, «Ghermire e Fluttuare, come
-  li usa»).
+- **Full-attack** (se a terra/quota bassa): morso +34 (+30), 2 artigli +29
+  (+25), 2 ali +29 (+25), coda +29 (+25).
+- **La passata e il nome.** Non si ferma mai in aria, finché non ha paura.
+  Con Attacco in Volo attraversa il cortile e a metà della passata soffia, o
+  morde, o grida il nome di un PG (*colpo accurato*); con *Virata* torna
+  indietro sulla stessa linea. Il PG nominato lo morde al round dopo, a +54
+  (+50), e l'occultamento non lo salva. Fra un turno e l'altro sta a circa
+  15 m (Scena 11, «La passata, il nome, la prima paura»).
+- ***Fluttuare*** **una volta sola**, a ⅓ dei pf: è la prima paura.
+  ***Oscurità*** **una volta sola**, per coprire la fuga verso le paludi.
 - **Dal round 2, due wyvern** (Appendice A.6) su chi tiene la corda e su chi
-  vola. Fuggono quando il drago fugge o muore. Il duello resta EL 14.
-- **La Catena**: la runa sotto la scaglia si colpisce contro **CA 41**, e il
+  vola. Fuggono quando il drago fugge o muore. Il duello è EL 17 col Vecchio,
+  EL 14 con l'Adulto.
+- **La Catena**: la runa sotto la scaglia si colpisce contro **CA 44** (41), e il
   primo colpo a segno la spezza: il drago se ne va (Scena 11).
 - **Aegis Fang**: il Bane contro Fauci qui **non vale**; la *Dragondoom* sì.
-- **Presenza Terrificante** CD 25 all'ingresso (Volontà o scossi), raggio 63 m.
+- **Presenza Terrificante** CD 26 (25) all'ingresso (Volontà o scossi), raggio 72 m (63).
+- **Le campane e le balestre**: chi le usa prende la coda in passata, e il
+  soffio resta per i PG.
 - **Danno massiccio** (regola SRD, attiva nelle regole della casa): un
   colpo o un soffio da 50 danni o più, Tempra CD 15 o si muore.
 - **«La Forgia ricorda»**: CONTA i colpi a segno (ferite ancestrali, N≤3) e
@@ -844,6 +853,7 @@ tacca è mezz'ora scarsa di gioco reale.
 | Ogni **fallimento** nello skill challenge | **+1** |
 | Parlare con Balvar prima dello scontro (Scena 7) · parlargli **durante** lo scontro nella tenda costa **0** `[CANONE — DM 2026-10-07, D39]` | **1** · **0** |
 | Spogliare la tenda delle armature (Scena 8, solo se nessuno ha dato l'allarme) `[CANONE — DM 2026-10-12, D59]` | **1** |
+| Curarsi nella tenda con più di 20 cariche di bacchetta, prima di ripartire (Scena 8) `[INFERRED — needs DM confirmation]` | **1** |
 | Tornare a piedi dalla tenda alle mura (Scena 8) `[CANONE — DM, D22]` | **1** |
 | … e ogni blocco **fallito** del ritorno | **+1** |
 | Tornare in volo dalla tenda alle mura, al posto del ritorno a piedi (serve un secondo *volare*) `[CANONE — DM 2026-10-12]` | **1** |
@@ -2235,7 +2245,8 @@ letto. Da quella notte odia la Catena più dei nani.
   preferito come chi lo ha ferito di più. Lontano da quegli occhi ascolterebbe,
   ma il master non prepara quel caso: se il tavolo ci arriva, è del DM.
 - **Farlo fuggire.** Alla prima paura (⅓ dei pf, Scena 11) non passa sopra il
-  campo: va basso, verso le paludi, per non farsi vedere. L'orda lo vede lo
+  campo: va basso, verso le paludi, sotto la sua *oscurità*, per non farsi
+  vedere. È l'unica volta che la usa nel duello. L'orda lo vede lo
   stesso, ed è da lì che comincia a sfaldarsi (Scena 13).
 
 #### Come si combatte, se si arriva a combatterlo
@@ -2433,7 +2444,11 @@ motivo per cui la Scena 7 viene prima.
   guardie, due restano al seggio e due vanno sul PG più esposto (qui sotto).
 - **Come combattono le quattro guardie** `[CANONE — DM 2026-10-12]`.
   Due davanti al seggio, sempre, fra Zog'tar e chi lo minaccia: non lo
-  lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
+  lasciano fiancheggiare, e non attaccano. **Lo coprono**, con *Aiutare un
+  altro* (SRD): un'azione standard, un attacco contro CA 10, e se riesce
+  Zog'tar ha +2 alla CA contro il prossimo attacco di quell'avversario.
+  Ognuna copre il generale da un PG diverso, di solito Thorik e Tordek, e
+  deve stargli accanto. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
   tornano davanti al seggio. Contro chi è invisibile colpiscono il quadretto da
   cui viene il colpo, con il 50% di mancare. **Finché Zog'tar è in piedi non
@@ -2461,12 +2476,20 @@ motivo per cui la Scena 7 viene prima.
   l'Ira comincia al suo primo turno. Balvar parla lo stesso, se i PG ci
   arrivano: lui non ha fretta.
 - **Il sacerdote dell'orda** `[CANONE — DM 2026-10-07, Q26: nel 372 l'orda non è la Mano Rossa]`. Dorme nella
-  tenda accanto, a dieci passi. Al primo grido o al corno arriva dopo **1d4+1
-  round**, con *vedere invisibilità* già addosso se ha sentito il corno. Dalla
-  soglia lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
+  tenda, su una stuoia dietro il seggio, a L13 `[CANONE — DM 2026-10-19]`.
+  Si alza al primo grido e agisce dal **round 1**, con *vedere invisibilità*
+  già addosso se ha sentito il corno. Lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
   poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del
   generale. È un adepto: con Balvar, Zog'tar e le guardie la tenda arriva a EL
   17, il tetto. Statistiche in A.2.
+- **Se Balvar sta con i PG, entrano le guardie del turno dopo** `[CANONE — DM 2026-10-19]`.
+  Vale se è recuperato prima dello scontro, o se passa con i PG alla fine
+  del round 1 («sta con chi sta vincendo», Scena 7). Sono due, con i numeri
+  delle altre quattro (A.2), e dormono nella tenda accanto: al round 2
+  entrano dal telo del seggio e vanno su chi lancia incantesimi. Sei
+  guardie, Zog'tar e il sacerdote fanno **EL 16**, un punto sotto il tetto.
+  Con cinque PG sono già nella tenda (la riga di scala, più sotto), e non
+  se ne aggiungono altre.
 
 **Comparse**
 
@@ -2476,6 +2499,13 @@ motivo per cui la Scena 7 viene prima.
 - **Il bottino e il tempo**: le armature della tenda, quanto pesano, quando
   si possono togliere e dove stanno nel buco portatile sono in §8 B, «Il
   bottino della tenda e il tempo».
+- **Curarsi prima di ripartire** `[INFERRED — needs DM confirmation]`. Le
+  bacchette di cura funzionano anche nella tenda, ma la tenda è circondata
+  dalle ronde, e ogni carica è il round di chi la usa. Se il gruppo, in tutto,
+  spende **più di 20 cariche** di bacchetta prima di ripartire dalla tenda,
+  segna **una tacca** sull'orologio della notte. Il gruppo sceglie: rientrare
+  ferito e curarsi alle mura, o perdere la tacca. In tutti e due i casi
+  all'alba si vede che è stato nella tenda.
 - **Sviluppi.** Zog'tar **esce dalla storia in questa scena**: morto, oppure
   umiliato e cacciato dal suo stesso campo (Via A, qui sotto). Il COME conta
   (► Esito, in fondo alla scena). `[HDYWTDT — il finisher a chi lo abbatte: «com'è che
@@ -2967,10 +2997,10 @@ Appendice A)*
 
 | | |
 |---|---|
-| **Aspetto** | drago nero adulto maturo, snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
+| **Aspetto** | drago nero vecchio (adulto maturo, se si usa l'Appendice A.1), snello e arrogante: collo lungo, cranio stretto e cornuto, scaglie nere opache con un riflesso verde d'olio. L'acido gli cola dalle fauci chiuse |
 | **Vuole** | vincere **davanti all'orda**, perché per lui il potere è quello che gli altri hanno visto |
 | **Teme** | che l'orda veda il guinzaglio. Chi dice la Catena ad alta voce se lo tira addosso (Scena 7, «Che cosa muove Skullcrusher») `[CANONE — DM 2026-10-12, D63]` |
-| **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta |
+| **Suona** | dice **il nome** dell'avversario prima di colpire, ogni volta. Il nome è l'incantesimo, *colpo accurato*: il morso arriva al round dopo |
 | **Eco** | la tabella B4 (§7): ogni ferita che gli fate, la Forgia la ricorderà contro **Fauci di Palude** nel 1372 |
 | **Ritratto** | la tavola qui sotto. Solo per il DM fino al duello |
 
@@ -2985,6 +3015,15 @@ insegnata, quella? No. Non importa. Il tuo nome.»*
 > **Mappa M7-B.** Il drago entra dall'alto (quota ~45 m) e picchia sul cortile
 > interno. È il capostipite della stirpe di **Fauci di Palude**: ogni ferita che
 > gli infliggete qui, la Forgia la ricorderà mille anni dopo (§7, carry-over B4).
+
+**Quale drago si usa, e quando** `[CANONE — DM 2026-10-19]`.
+Stasera il **Vecchio** dell'Appendice A.1-bis, con le 2 wyvern dell'Appendice
+A.6 dal round 2: EL 17, il tetto esatto di APL+4 per un gruppo di 13°, e lo
+stesso per un gruppo di 14° o per cinque PG. L'**Adulto** dell'Appendice A.1,
+con le stesse wyvern, è l'alternativa: per un gruppo di 13° logorato o senza
+tutti gli artefatti, per tre PG, e per il DM che non conferma il Vecchio. Le
+tattiche qui sotto valgono per tutti e due; dove i numeri cambiano, il primo
+è del Vecchio e il secondo dell'Adulto.
 
 **Se il duello comincia fuori dalle mura** (arieti sabotati, alba colta fuori
 dal campo) `[CANONE — DM 2026-10-07, Q32]`.
@@ -3074,7 +3113,7 @@ cambia davvero.
 > arroganza**: non ha mai perso, non sa ancora aver paura. È questo che i PG gli
 > insegnano — ed è questo che il suo sangue ricorderà.
 
-- **Round 1 — la Presenza.** Cala dall'alto (Presenza Terrificante CD 25:
+- **Round 1 — la Presenza.** Cala dall'alto (Presenza Terrificante CD 26 o 25:
   chi fallisce è scosso; Thorik non tira, perché la *mente vuota* della
   Corona lo rende immune agli effetti di paura, Scena 8). Se Zog'tar è morto in modo «spettacolare» (Scena 8), arriva **già
   in picchiata**: ha un round di sorpresa (SRD), e i PG sono colti alla
@@ -3082,39 +3121,47 @@ cambia davvero.
   sorpresa» del drago che li ha già visti di notte; agisce nel round di
   sorpresa chi supera Ascoltare CD 20, e con le campane suonate vale la loro
   riga nella tabella delle difese `[CANONE — DM 2026-10-18, G2-24]`. Apre col **Soffio acido** sul
-  gruppo più fitto (Riflessi CD 30), **aderente**: l'acido resta addosso e al round dopo morde ancora (Appendice A.1). *Non atterra, perché vuole restare in cielo, dove
+  gruppo più fitto (Riflessi CD 31 o 30), **aderente**: l'acido resta addosso e al round dopo morde ancora (Appendice A.1). *Non atterra, perché vuole restare in cielo, dove
   si sente un dio.* Chi ha la runa di Zeth (*resistere all'energia*, acido 20)
   e non l'ha attivata al corno dell'alba (Scena 5) la attiva adesso, con
   un'azione standard: prima del soffio, se ha l'iniziativa.
-- **Round 2-3 — il predatore aereo.** Resta in **quota**, picchia con Attacco in
-  Volo e risale: un attacco solo durante il movimento, il morso o la coda, come dice l'SRD — punisce chi non ha gittata o volo. Bersaglio
-  preferito: chi lo ha ferito di più (l'arroganza non perdona l'insulto).
-  Fra un turno e l'altro resta a circa 15 m sopra il cortile: Aegis Fang
+- **Round 2-3 — la passata.** Non si ferma. Ogni turno attraversa il
+  cortile con Attacco in Volo, e a metà del movimento fa una cosa sola: il
+  soffio, se è tornato, lungo la linea più lunga che trova; il morso su chi
+  ha nominato il turno prima; oppure il nome di un altro. Poi va oltre e
+  risale. Punisce chi non ha gittata o volo. Bersaglio: «Chi sceglie», qui
+  sotto. Fra un turno e l'altro resta a circa 15 m sopra il cortile: Aegis Fang
   scagliata, cinque incrementi da 3 m, ci arriva al limite, e il blast di
-  Artemis sempre `[CANONE — DM 2026-10-19, giro 4 n. 6]`. Ci resta fermo
-  grazie a *Fluttuare*, e la picchiata serve a *Ghermire*: i due talenti
-  sono qui sotto, con le regole dell'SRD. *Corrompere l'acqua* sulle
+  Artemis sempre `[CANONE — DM 2026-10-19, giro 4 n. 6]`. *Corrompere l'acqua* sulle
   pozioni `[CANONE — DM 2026-10-19, giro 4 n. 7]`: un uso prende le pozioni
   di un solo PG, perché l'SRD guasta 10 piedi cubi, poco più di un quarto di
   metro cubo, entro il raggio della Presenza. Ognuna tira a parte Volontà
   CD 25, e quelle nel buco portatile non le tocca.
-- **Ghermire e Fluttuare, come li usa** `[CANONE — DM 2026-10-19, giro 4 n. 6]`.
-  Li usa tutti e due, ed è la parte del duello che fa paura.
-  - ***Ghermire*** (SRD, *Snatch*). Quando colpisce col morso o con un
-    artiglio comincia una lotta come con la presa migliorata: azione gratuita,
-    nessun attacco di opportunità, prova di lotta **+40**. Se tiene la preda
-    solo con la bocca, la prova è a −20 ma lui non è in lotta, e continua a
-    combattere. **Contro un PG Medio vale una regola sola**: nei round dopo
-    tira la lotta con la sola bocca (+20), e ogni prova che vince fa il danno
-    del morso, 2d8+10 (SRD, presa migliorata). Altro danno non c'è: quello
-    automatico di *Ghermire* vale da tre taglie in giù, e il PG Medio è due
-    taglie sotto un drago Enorme. Chi è nella sua
-    bocca **non ha il TS sui Riflessi contro il soffio**. La lascia cadere
-    con un'azione gratuita, o la scaglia con un'azione standard: vola per
-    1d6 × 3 m e prende 1d6 danni ogni 3 m; se la scaglia in volo, la preda
-    prende quel danno o il danno da caduta (1d6 ogni 3 m), il più alto. Con
-    la presa migliorata può anche portarsela via volando, se ne regge il peso.
-  - ***Fluttuare*** (SRD, *Hover*). Con un'azione di movimento si ferma in
+- **La passata, il nome, la prima paura** `[CANONE — DM 2026-10-19]`.
+  Il drago giovane combatte in movimento e davanti a un pubblico: non si
+  ferma mai finché non ha paura, e prima di colpire dice chi colpirà.
+  - ***Attacco in Volo*** (SRD, *Flyby Attack*). In volo fa un'azione di
+    movimento e un'azione standard in un punto qualsiasi del movimento. Il
+    soffio è un'azione standard: lo usa a metà della passata e continua a
+    volare. Il morso in passata è un attacco solo.
+  - ***Virata*** (SRD, *Wingover*). Una volta per round, con un'azione
+    gratuita, gira fino a 180° nonostante la manovrabilità scarsa. La virata
+    costa 3 m di volo, e nel round in cui vira non sale: resta in quota o
+    scende. È il talento che gli fa girare un drago Enorme dentro un cortile
+    di 36 m: entra, soffia, e torna indietro sulla stessa linea quando il
+    gruppo pensava di averlo alle spalle. 🔎 Il testo è quello dell'SRD letto
+    su una trascrizione: va riscontrato su d20srd.org.
+  - ***Colpo accurato*** (SRD, *true strike*, stregone di 1°). Azione
+    standard: +20 di intuizione al prossimo tiro per colpire, entro la fine
+    del round dopo, e niente probabilità di mancare per occultamento. La
+    componente verbale è il nome: lo grida a metà della passata, forte perché
+    lo sentano le mura, e al round dopo morde quel PG a +54 (+50). Il tavolo
+    sente il nome un round prima: chi è nominato sa che sarà colpito, e gli
+    altri sanno su chi preparare la corda. Oltre all'*armatura magica* ha sei
+    slot di 1°. ⚠ Non SRD: l'incantesimo vuole anche un fuoco, un piccolo
+    bersaglio di legno, e il drago non lo porta `[INFERRED — needs DM confirmation: il nome gridato vale da fuoco]`.
+  - ***Fluttuare*** (SRD, *Hover*), **una volta sola**: alla prima paura, a
+    ⅓ dei pf (la soglia qui sotto). Con un'azione di movimento si ferma in
     aria, e da fermo si sposta in ogni direzione, anche in verticale, a metà
     velocità, nonostante la manovrabilità scarsa. Se comincia il turno fermo
     in aria può fare un'azione di round completo: niente attacchi d'ala, ma
@@ -3124,17 +3171,15 @@ cambia davvero.
     4,5-6 m ha occultamento (20%), chi è a 7,5 m o più occultamento totale
     (50%), e per lanciare un incantesimo nella nube serve Concentrazione
     **CD 21**. La nube spegne le fiamme piccole non magiche.
-  - **La sequenza.** In picchiata, con Attacco in Volo, morde il bersaglio
-    di «Chi sceglie», qui sotto; se colpisce lo ghermisce e risale con lui
-    nello stesso movimento. Al turno dopo si ferma a 15 m e sceglie: lo lascia
-    cadere (5d6 di caduta), oppure, se il gruppo sotto è fitto e il soffio è
-    tornato, lo tiene in bocca e soffia sugli altri, e la preda prende il
-    soffio senza TS. Scende sotto i 6 m solo per l'attacco completo contro chi
-    lo ha inchiodato con le corde: in quel round è a terra e non fluttua,
-    quindi la nube non c'è. La nube viene dopo, quando torna a fluttuare basso
-    per ritirarsi. Chi è in bocca può liberarsi con una
-    prova di lotta o di Artista della Fuga contro il suo +20, che è il +40
-    con il −20 della presa a una parte sola.
+  - ***Oscurità*** **una volta sola**, alla fuga. Finché l'orda guarda vuole
+    essere visto, e non la usa. Quando scappa verso le paludi se la porta
+    dietro: è la vergogna, e non deve vederla nessuno.
+  - **La sequenza.** Al round 1 il soffio d'apertura. Poi una passata a
+    round: il nome di un PG, il morso su chi ha nominato, o il soffio quando
+    torna. Scende sotto i 6 m solo per l'attacco completo contro chi lo ha
+    inchiodato con le corde: in quel round è a terra e non fluttua, quindi la
+    nube non c'è. Si ferma in aria una volta sola, alla prima paura, e lì la
+    nube c'è.
   *Momento Artemis*: in volo (Ali d'Ombra) è l'unico che lo raggiunge alla pari.
   *Momento Aegis Fang*: Thorik la **scaglia** — se colpisce in volo, incide la
   **Cicatrice a forma di martello** su un'ala (§7: −2 alla Volare di Fauci nel 1372).
@@ -3144,7 +3189,7 @@ cambia davvero.
   volo» vuol dire un tiro a distanza a segno mentre il drago è in quota.
 - **La Catena, in ogni round.** Se i PG sanno della runa (Scena 7), leggerla
   sulla scaglia è un'azione di movimento entro 9 m, e colpirla è un attacco
-  contro **CA 41**: la CA piena, 37 con l'armatura magica, più 4 perché il bersaglio è piccolo; la runa è sotto la scaglia, e un attacco di contatto non la raggiunge `[CANONE — DM 2026-10-07, Q25]`: il primo colpo a segno la spezza, e il drago se ne va. Se
+  contro **CA 44** col Vecchio e **41** con l'Adulto: la CA con l'armatura magica, 40 o 37, più 4 perché il bersaglio è piccolo; la runa è sotto la scaglia, e un attacco di contatto non la raggiunge `[CANONE — DM 2026-10-07, Q25]`: il primo colpo a segno la spezza, e il drago se ne va. Se
   Balvar è morto prima dell'alba, il drago combatte a **−2** e fugge a metà pf.
 
 **Quando qualcuno la legge**, la prima volta:
@@ -3172,7 +3217,8 @@ cambia davvero.
   l'attacco pieno nel round in cui arrivano, come dice la tabella del
   cortile, e dal round dopo l'ordine torna questo. Chi tira con le balestre o
   suona le campane lo chiama solo nei round in cui nessun PG lo chiama: in
-  quei round le fa tacere col soffio, e viene prima del re.
+  quei round le fa tacere con la coda, in passata (2d6+16 o 2d6+15), e viene
+  prima del re. Il soffio lo tiene per i PG.
 - **Il re** `[CANONE — DM 2026-10-18]`. Re Thorek sta nel cortile alle spalle
   dei PG. Se in un round nessun PG ha chiamato il drago (la Catena detta, la
   corda, le ferite, il nome dato) e nessuno ha tirato con le balestre o
@@ -3188,10 +3234,11 @@ cambia davvero.
   colpi del drago lo mettono a terra, stabile, e uno solo se è già a 8 pf
   (Scena 10) `[CANONE — DM 2026-10-18, G2-08]`. Il Rubino lo ricorda come il
   giorno in cui il re è caduto.
-- **Soglia: quando gli restano ~100 pf, un terzo dei 297 — la prima paura.** Per la prima volta nella sua vita,
-  Skullcrusher **esita**. È il momento dei tre esiti (sotto). Al suo turno
-  fugge nelle paludi, a meno che nel round prima abbia preso **almeno due
-  colpi**: allora resta un round ancora, e lì si può uccidere (le soglie, D14,
+- **Soglia: quando gli resta un terzo dei pf, ~112 col Vecchio e ~100 con l'Adulto — la prima paura.** Per la prima volta nella sua vita,
+  Skullcrusher **esita**, e **si ferma in aria** (*Fluttuare*): è l'unica
+  volta nel duello. È il momento dei tre esiti (sotto). Al suo turno
+  fugge nelle paludi sotto la sua *oscurità*, a meno che nel round prima abbia preso **almeno due
+  colpi**: allora resta fermo lì un round ancora, e lì si può uccidere (le soglie,
   più sotto). *«Qualcosa in lui — nel
   sangue — capisce che questi quattro non sarebbero dovuti esistere.»*
 - **«La Forgia ricorda» (meccanica cardine).** **CONTA i colpi a segno** su
@@ -3247,7 +3294,7 @@ che non volo?»*. La risposta non è «aspetti». Per Tordek, prima di tutto:
   creatura Enorme lo porta sotto metà pf (scheda dei Bracieri in
   `PG/Artefatti/Artefatti-Pg/Tordek/`). Skullcrusher è Enorme.
   L'Ancoraggio della Montagna non c'è più: al rito è diventato il Dono di
-  Hella (log del 25), quindi *Ghermire* porta via Tordek come chiunque.
+  Hella (log del 25).
 
 Per tutti, tre cose SRD:
 
@@ -3300,7 +3347,7 @@ aspetta. È il momento più grosso della campagna finora: non riempirlo tu.]`
 
 1. **UCCISO** (0 pf): impresa immensa, la profezia in pieno. → Fauci nel 1372
    parte con **−10% PF** e Presenza ridotta contro i portatori (B4).
-2. **FERITO GRAVE** (fugge quando gli restano ~100 pf, un terzo dei 297): esito «medio», il più probabile. →
+2. **FERITO GRAVE** (fugge quando gli resta un terzo dei pf, ~112 su 337 o ~100 su 297): esito «medio», il più probabile. →
    Fauci perde **un uso del soffio** (B4).
 3. **FUGGITO** (i PG scelgono la sopravvivenza / non lo intaccano): quasi illeso,
    ma **vi ha visti e riconosciuti**. → Fauci **+2 iniziativa** ma morale
@@ -3313,12 +3360,13 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 #### Sidebar — Scalare lo scontro (stile RHoD)
 | Situazione | Aggiustamento |
 |---|---|
-| Party **straripante** (4 PG L14, tutti gli artefatti, aiuti pieni al consiglio) | Skullcrusher **Vecchio e Avanzato** (GS 17, EL = APL+3 per un gruppo di 14°, sotto il tetto): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 31, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Per un gruppo di 13° sarebbe il tetto esatto, APL+4, e il DM lo tiene per il gruppo di 14°: con un gruppo di 13° si usano le 2 **wyvern** che scortano il drago dal round 2 (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS, morso +8 2d8+4; Appendice A.6). Vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro `[CANONE — DM 2026-10-12, D74]`. Un gruppo di 13° con la fiducia piena del consiglio, tutti gli artefatti e il banco della fucina speso conta come straripante: le wyvern ci sono `[CANONE — DM 2026-10-18, G2-15]` |
+| Il gruppo di stasera, e ogni party **straripante** (4 PG di 13° con la fiducia piena del consiglio, tutti gli artefatti e il banco della fucina speso, o 4 PG di 14°) | Skullcrusher **Vecchio e Avanzato** (GS 17): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 31, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Con lui, dal round 2, le 2 **wyvern** (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS, morso +8 2d8+4; Appendice A.6). Per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4; per uno di 14°, APL+3 `[CANONE — DM 2026-10-19]`. Le wyvern vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro `[CANONE — DM 2026-10-12, D74]`. Il gruppo di 13° straripante ha le wyvern `[CANONE — DM 2026-10-18, G2-15]` |
+| Un gruppo di 13° che non è straripante, o il DM non conferma il Vecchio | l'**Adulto** dell'Appendice A.1, con le 2 wyvern: EL 14 sulla carta, 15 al tavolo |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
 | **Hella appena risorta** — vuoi proteggerla | Riga da scegliere, non di base: il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità). Senza questa scelta vale «Chi sceglie», che la mette fra i preferiti — dà alla giocatrice spazio per il suo primo scontro |
 | **Tre PG** (APL 12, tetto 16), o un gruppo di quattro a cui manca qualcuno | lo stesso drago di A.1, che resta sotto il tetto. Nella regia si salta la riga di chi manca; se manca Hella, manca anche Durik. Alle corde la terza mano la dà un nano, che il soffio prende come nella riga dei nani del cortile |
-| **Cinque PG** (APL 13, tetto 17) | lo stesso drago, più le 2 **wyvern** della prima riga dal round 2, con la stessa tattica |
-| **Con le wyvern**, quanto vale `[CANONE — DM 2026-10-19, giro 4 n. 16]` | due GS 6 fanno EL 8, sei punti sotto il drago, e aggiungono meno di mezzo punto: il duello resta **EL 14** sulla carta, 15 al tavolo. PX: 6.500 in tutto per un gruppo di 13°, cioè **1.625 a testa** con quattro PG e **1.300** con cinque (§8 A) |
+| **Cinque PG** (APL 13, tetto 17) | il Vecchio della prima riga con le 2 **wyvern** dal round 2, con la stessa tattica: EL 17, il tetto |
+| **Con le wyvern**, quanto vale `[CANONE — DM 2026-10-19, giro 4 n. 16]` | due GS 6 fanno EL 8, molti punti sotto il drago, e aggiungono meno di mezzo punto. Col Vecchio il duello è **EL 17**; PX per un gruppo di 13°: 16.250 in tutto, cioè **≈ 4.060 a testa** con quattro PG e **3.250** con cinque. Con l'Adulto resta **EL 14** sulla carta, 15 al tavolo: 6.500 in tutto, **1.625 a testa** con quattro PG e **1.300** con cinque (§8 A) |
 | Un PG **abbattuto** | Skullcrusher lo ignora (caccia chi è in piedi e lo minaccia): finestra per stabilizzarlo |
 
 ### SCENA 12 — Il Rituale della Forgia Eterna
@@ -3579,26 +3627,30 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 | Scena | Tipo | PX/PG `[verif. ✓ ERRATA/TESORO-WBL 2026-07-23]` |
 |---|---|---|
 | Scene 1-4: l'arrivo, Durin, la targa, il consiglio | storia/social | 600 |
-| Scene 6-8: la tenda intera, Zog'tar (GS 15), Balvar (GS 13), le quattro guardie (GS 8) e il sacerdote (GS 6) `[CANONE — DM 2026-10-12, D58]` | combattimento | **≈ 3.650** (≈ 14.600 in tutto); **≈ 2.700** se Balvar è recuperato |
+| Scene 6-8: la tenda intera, Zog'tar (GS 15), Balvar (GS 13), le quattro guardie (GS 8) e il sacerdote (GS 6) `[CANONE — DM 2026-10-12, D58]` | combattimento | **≈ 3.650** (≈ 14.600 in tutto); **≈ 3.000** se Balvar è recuperato, con le due guardie del turno dopo |
 | Scena 6: la pattuglia dei tre fallimenti (EL 10), se si combatte | combattimento | ≈ 350 (≈ 1.400 in tutto) |
 | Scena 6: la squadra dei lupi (EL 9), se si combatte | combattimento | ≈ 250 (≈ 975 in tutto) |
 | Scena 10: le mura | montaggio/eroico | 600 |
 | Scena 9: Vatore (scena grigia, qualunque esito) | roleplay grigio | 500 |
-| **Scena 11: Skullcrusher (GS 14)** | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
-| Scena 11: le 2 wyvern (GS 6), se ci sono | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4); il duello sale a **1.625** a testa. EL 14, invariato `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
+| **Scena 11: Skullcrusher Vecchio (GS 17), stasera** `[CANONE — DM 2026-10-19]` | boss | **3.900** (tabella DMG: 15.600 per un gruppo di 13°, diviso per 4) |
+| Scena 11: Skullcrusher Adulto (GS 14), se si usa A.1 | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
+| Scena 11: le 2 wyvern (GS 6) | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4). Il duello vale **≈ 4.060** a testa col Vecchio, EL 17; **1.625** con l'Adulto, EL 14 `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
 | Scene 12-13: il Rituale e il Rubino | premio di storia maggiore | 800 |
-| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~7.610/PG**; **~7.775/PG** con le wyvern, che a questo gruppo toccano (duello a 1.625) |
+| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~10.210/PG** col Vecchio e le wyvern, stasera (duello a ≈ 4.060); **~7.775/PG** con l'Adulto e le wyvern (duello a 1.625); **~7.610/PG** con l'Adulto da solo |
 
 > Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
 > party **non** arrivava al 14° in questo master: ci arrivava **dopo `DEF-5`** `[CANONE — DM 2026-10-07, D40]`.
 > Con le Scene 6-8 alla tabella il beat
 > sale di circa 1.250 a testa: se basti per il 14° prima del ritorno al 1372 dipende dai
 > PX con cui il gruppo è partito, che il master non fissa. Le parti giocate non
-> si ritoccano.
+> si ritoccano. Col Vecchio il duello vale circa 2.435 a testa più dell'Adulto
+> con le wyvern: il 14° può arrivare qui e non dopo `DEF-5`, e allora la riga
+> qui sopra non vale più `[INFERRED — needs DM confirmation: dipende dai PX di partenza]`.
 
 ⚠️ **Il conto SRD è più basso.** La tabella dei PX della DMG dà il totale
 dell'incontro, da dividere fra i PG: Skullcrusher (GS 14) contro un gruppo di
-13° vale 5.850 in tutto, cioè circa **1.460 a testa**, e Zog'tar (GS 15) circa
+13° vale 5.850 in tutto, cioè circa **1.460 a testa**; il Vecchio (GS 17)
+15.600, circa **3.900 a testa**; e Zog'tar (GS 15) circa
 1.950: sconfitto, cioè ucciso, umiliato o catturato, sono gli stessi PX. Il
 duello e la tenda sono al conto della tabella; i GS
 molto sotto l'APL, come le guardie e il sacerdote, sono stimati, quindi i
@@ -3787,8 +3839,8 @@ Incantesimi da stregone (incantatore di 5°; CD 14 + livello):
   2° (5/giorno) vedere invisibilità, immagine speculare
 FOR 31 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
 Talenti: Attacco in Volo, Capacità Focalizzata (soffio),
-  Fluttuare, Ghermire, Iniziativa Migliorata, Riflessi
-  Fulminei, Soffio Aderente, Volontà di Ferro
+  Fluttuare, Iniziativa Migliorata, Riflessi Fulminei,
+  Soffio Aderente, Virata, Volontà di Ferro
 Abilità: Ascoltare +29, Cercare +29, Concentrazione +32,
   Intimidire +29, Muoversi Silenziosamente +27,
   Nascondersi +19, Osservare +29, Sapienza Magica +29,
@@ -3805,6 +3857,7 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo — GS 14 → 14 (vale 15) — il DM lo vuole più forte senza salire di EL.
 <!-- /storico -->
 - Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[INFERRED — needs DM confirmation sulla CD per toglierselo]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[CANONE — DM 2026-10-19]`.
 
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
@@ -3831,14 +3884,21 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 - ***Corrompere l'acqua*** può rovinare le pozioni in tasca a un PG (TS
   dell'oggetto sulla Volontà del portatore). Lo usa al primo turno libero dal
   soffio, se vede qualcuno bere (Scena 11, round 2-3).
+- **Il nome** (*colpo accurato*): +20 al prossimo attacco entro il round
+  dopo, e l'occultamento non conta. Il morso sul PG nominato è a +50, e
+  l'invisibilità di Artemis non lo salva. Lo lancia a metà della passata, con
+  Attacco in Volo, e il morso arriva alla passata dopo (Scena 11).
 
-### A.1-bis · Skullcrusher Vecchio, per il party straripante `[CANONE — DM 2026-10-12, D60]`
+### A.1-bis · Skullcrusher Vecchio, il drago di stasera `[CANONE — DM 2026-10-12, D60]`
 
 La riga di prima usava il drago **Vecchio** dell'SRD senza template, e ne veniva
 fuori un drago **più debole** di quello di base (287 pf e CD 27/24 contro 297 e
 28/25). Questo è il Vecchio dell'SRD (d20srd.org, *Dragon, True*) con lo stesso
-template Avanzato di A.1. Si usa solo con un gruppo di 14°: per uno di 13°,
-GS 17 sarebbe il tetto esatto di APL+4, e il DM ha scelto le wyvern.
+template Avanzato di A.1. Si usa con il gruppo di stasera, insieme alle 2
+wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
+`[CANONE — DM 2026-10-19]`. Con un
+gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
+11, «Quale drago si usa, e quando»).
 
 ```
 SKULLCRUSHER VECCHIO (GS 17: Vecchio GS 16, +1 Avanzato)
@@ -3855,8 +3915,10 @@ Presenza Terrificante: raggio 72 m, Volontà CD 26 (meno di 25 DV)
 Capacità magiche: come A.1, ma *oscurità* con raggio 24 m,
    più *crescita vegetale* 1/giorno
 Incantesimi da stregone, incantatore di 7°: 6/7/7/5 al giorno
+   (lentezza CD 17)
 FOR 33 · DES 14 · COS 25 · INT 18 · SAG 19 · CAR 18
-Talenti, abilità e il resto: come A.1
+Talenti: quelli di A.1 (Virata, non Ghermire), più Allerta
+Abilità e il resto: come A.1
 ```
 
 I tiri salvezza, i bonus d'attacco e le CD sono quelli dell'SRD rifatti con il
@@ -3867,10 +3929,12 @@ in più, è Allerta, che non cambia i numeri del combattimento `[CANONE — DM 2
 circa **112 pf**. Gli incantesimi conosciuti
 in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla
 lista dello stregone: *dissolvi magie* e *lentezza* `[CANONE — DM 2026-10-12, D64]`.
-PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
-cioè **≈ 3.150 a testa**.
+PX alla tabella DMG: circa 15.600 per un gruppo di 13°, cioè **≈ 3.900 a
+testa**, e 12.600 per un gruppo di 14°, cioè **≈ 3.150 a testa**. Le wyvern
+si sommano a parte (§8 A).
 
 - Boost log:<!-- storico --> 2026-10-12 —<!-- /storico --> drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[CANONE — DM 2026-10-19]`.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
@@ -4102,7 +4166,7 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ### C.3 · Il duello in tre scambi (Scena 11)
 
 > **🎚️ [FAST-PLAY] del duello** (se vuoi chiudere veloce): 3 scambi narrati a
-> prova di gruppo (un attacco contro **CA 37**, o Saltare/Equilibrio **CD 22** per chi lo affronta dalle mura), poi si sceglie l'esito tra i tre
+> prova di gruppo (un attacco contro **CA 40**, 37 con l'Adulto, o Saltare/Equilibrio **CD 22** per chi lo affronta dalle mura), poi si sceglie l'esito tra i tre
 > della Scena 11 in base a quanti scambi i PG hanno «vinto» (0-1 = fuggito, 2 = ferito
 > grave, 3 = ucciso). Uno scambio è vinto se metà del gruppo supera la prova.
 > Registra comunque le ferite per B4: N = scambi vinti. **[COMBATTIMENTO
@@ -4250,6 +4314,7 @@ seggio a M12–N13, con il braciere del seggio a J11; le quattro guardie gli
 stanno davanti, a K12, L10, O10 e P11. Balvar è sullo sgabello a P13, nel
 fondo buio P12–R13. Il telo est, «il telo a sinistra», va da S5 a S13; il
 telo del glifo è quello sopra il seggio, L14–N14. Grask è seduto fuori, a N15,
-due quadretti dietro il seggio, e il sacerdote è nella tenda accanto, a W11.
+due quadretti dietro il seggio, e il sacerdote dorme sulla sua stuoia, a L13.
+Nella tenda accanto, a W11, dormono le due guardie del turno dopo.
 
 <!-- /pagina -->
