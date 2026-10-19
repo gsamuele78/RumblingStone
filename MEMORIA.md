@@ -111,6 +111,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | MASTER-DEF | box impoveriti dei master di ARC-07 corretti con la misura della PR #246 (… | ✅ da 26 su main a 2, entrambi falsi positivi (la parola sensoriale è nella battuta fuori dal box); attesa di §6 a 530 box |
+| 2026-10-18 | MASTER-DEF | la lezione del voto cieco applicata agli altri box dei master di ARC-07: dettag… | ✅ circa 70 box su 120, box da 128 a 122, tag di canone invariati; attesa di §6 a 532; apparati e booklet rigenerati |
+| 2026-10-18 | MASTER-DEF | scelte del DM dal voto cieco applicate ai master di ARC-07: le otto versioni ve… | ✅ coppie 2, 3, 4, 5, 9, 12, 16, 20 rimesse parola per parola, con un commento «scelta del DM» dove superano un tetto; apparati e booklet rigenerati |
+| 2026-10-18 | MASTER-DEF | esito del voto cieco del DM sul rifacimento dei cinque master di ARC-07: 8 a 8… | 📝 esito, scheda, chiave e voti in `plans/esperimenti/giro2-arc07-2026-10-18/misure/CIECO-*`; analisi delle coppie perse nel README del giro |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, la misura aggiornata dai voti | ✅ due norme nuove in `read-aloud-adulti.md` §2-ter (una riscrittura non toglie dettagli sensoriali; un monologo resta un blocco), registrate 🟡;… |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, il dopo (voto cieco sul rifacimento di ARC-07) | ✅ MQM da 97,53-99,87 a 99,91-100, `>4 frasi` e `>500 car` quasi a zero, ma il DM sceglie la nuova in 8 coppie su 16 (Wilson 0,28-0,72): non dimostrato. Vince l… |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4 (la prosa, e come si misura se migliora) | 🟡 ADR-0093: la prosa è migliorata solo se il DM la sceglie alla cieca in 14 coppie su 20; `cieco_versioni.py` (campione, coppie, esito); `misura_craft --stile`… |
@@ -119,10 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa ispirate alla WE di RHoD (ARC-09) | 🟡 proposta: abishai azzurro, Spezzamente, lucertola del tuono, Furia della Mano in `Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`, versione più fort… |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
 | 2026-10-18 | MASTER-DEF | nuovo giro sui cinque master di ARC-07: developer, playtester e DM a freddo su… | 🟡 [`esperimenti/giro-arc07-2026-10-18/`](plans/esperimenti/giro-arc07-2026-10-18/README.md): 15 letture, 120 🔴+🟠 sui master di partenza, nessuno resta aperto s… |
-| 2026-10-18 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le `[PROPOSTA]` di gioco diventano canone: tenda di Zog'tar (M7C), metà sud del… | ✅ zero `[PROPOSTA]` aperte nel contenuto |
-| 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
-| 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
-| 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
 
 ## Le misure che si portano dietro
 

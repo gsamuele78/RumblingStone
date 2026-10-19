@@ -102,38 +102,34 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | Scena | Luogo o momento | Pilastro | Righe |
 |---|---|---|---:|
 | SCENA 1 | la Sala | LotR lead, Salvatore support | 5 |
-| SCENA 1 | l'affresco A5 e la Corona | Salvatore lead, LotR support | 8 |
+| SCENA 1 | l'affresco A5 e la Corona | Salvatore lead, LotR support | 9 |
 | SCENA 1 | «Il Fuoco ha purificato lo Spirito. | — | 5 |
-| SCENA 1 | l'attraversamento | Salvatore lead | 5 |
-| SCENA 2 | le piattaforme, l'orizzonte | LotR lead | 5 |
-| SCENA 2 | le piattaforme | Salvatore lead | 6 |
-| SCENA 3 | la foresta | LotR lead, Salvatore support | 6 |
+| SCENA 1 | l'attraversamento | Salvatore lead | 6 |
+| SCENA 2 | le piattaforme, l'orizzonte | LotR lead | 7 |
+| SCENA 2 | le piattaforme | Salvatore lead | 8 |
+| SCENA 3 | la foresta | LotR lead, Salvatore support | 8 |
 | SCENA 3 | il pilastro corroso | Salvatore lead, Mercer support | 5 |
-| SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 6 |
-| SCENA 5 | il corridoio, 1 di 2 | Salvatore lead, solo per Artemis | 3 |
+| SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 8 |
+| SCENA 5 | il corridoio, 1 di 2 | Salvatore lead, solo per Artemis | 4 |
 | SCENA 5 | il corridoio, 2 di 2 | Salvatore lead, Andor support | 9 |
 | SCENA 5 | per Artemis, alla fine dell'ora | Andor lead | 6 |
 | SCENA 6 | l'oceano di roccia e il cubo sospeso | LotR lead, Salvatore support | 9 |
 | SCENA 6 | il muro | LotR lead | 2 |
 | SCENA 6 | la Scoria Santa | LotR lead | 5 |
-| SCENA 7 | l'anticamera | Salvatore lead, per Thorik | 3 |
-| SCENA 7 | l'anticamera | Salvatore lead, per Artemis | 3 |
+| SCENA 7 | l'anticamera | Salvatore lead, per Thorik | 5 |
+| SCENA 7 | l'anticamera | Salvatore lead, per Artemis | 4 |
 | SCENA 7 | l'anticamera | Salvatore lead, per Tordek | 5 |
 | SCENA 7 | la visione | LotR lead, Salvatore support, per Tordek | 10 |
-| SCENA 8 | i sei secondi della soglia, 1 di 2 | LotR lead, Salvatore support | 5 |
+| SCENA 8 | i sei secondi della soglia, 1 di 2 | LotR lead, Salvatore support | 7 |
 | SCENA 8 | la soglia, 2 di 2 | Salvatore lead, LotR support | 9 |
-| SCENA 8 | il risveglio del guardiano, 1 di 2 | LotR lead, Salvatore support | 5 |
-| SCENA 8 | il risveglio del guardiano, 2 di 2 | Salvatore lead | 3 |
-| SCENA 8 | il distacco, l'Altare | Salvatore lead | 9 |
-| SCENA 8 | il primo scambio, Thorik | Salvatore lead, Mercer support | 5 |
-| SCENA 8 | il primo scambio, Tordek | Salvatore lead | 3 |
-| SCENA 8 | il primo scambio, Artemis | Salvatore lead | 4 |
+| SCENA 8 | il risveglio del guardiano | LotR lead, Salvatore support | 8 |
+| SCENA 8 | il distacco, l'Altare | Salvatore lead | 10 |
+| SCENA 8 | il primo scambio | Salvatore lead, Mercer support | 10 |
 | SCENA 9 | apertura del round 1 | Salvatore lead | 5 |
-| SCENA 9 | chiusura del round 1 | Salvatore lead | 3 |
+| SCENA 9 | chiusura del round 1 | Salvatore lead | 4 |
 | SCENA 9 | apertura del round 2 | Salvatore lead | 5 |
-| SCENA 9 | chiusura del round 2 | Salvatore lead | 3 |
+| SCENA 9 | chiusura del round 2 | Salvatore lead | 4 |
 | SCENA 9 | apertura del round 3 | LotR lead, Salvatore support | 5 |
 | SCENA 9 | chiusura, l'assestamento | LotR lead | 6 |
-| SCENA 9 | l'Altare, Durik prende forma, 1 di 2 | Salvatore lead, LotR support | 9 |
-| SCENA 9 | Durik prende forma, 2 di 2 | Casa di Davide lead | 3 |
+| SCENA 9 | l'Altare, Durik prende forma | Salvatore lead, Casa di Davide support | 11 |
 | SCENA 10 | la Sala | LotR lead | 5 |

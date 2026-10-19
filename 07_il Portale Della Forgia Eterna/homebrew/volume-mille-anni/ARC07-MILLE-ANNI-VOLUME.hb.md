@@ -440,14 +440,15 @@ dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
 
 ![Il portale del Tempo](../../Immagini/tavola-portale-del-tempo.jpg)
 
-> **Read-aloud (LotR lead) — il passaggio.** *Per un istante i colori si
-> rovesciano, e vi passano davanti vite di nani, nate e invecchiate in
-> meno di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite
-> non ci sono più.*
+> **Read-aloud (LotR lead) — il passaggio.** *Per un istante lunghissimo i
+> colori si rovesciano, e vi passano davanti vite intere di nani: nascono,
+> battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna
+> il peso, e con il peso il freddo. Le ferite non ci sono più.*
 >
-> *Siete in un bosco di alberi vecchi, con radici grosse come un uomo sdraiato,
-> e l'aria sa di foglie marce e di fumo lontano. Uno di voi ha le ginocchia
-> bagnate e non si ricorda di essere caduto.*
+> *Siete in piedi in un bosco. Gli alberi sono vecchi, le radici grosse come un
+> uomo sdraiato, e l'aria sa di foglie marce e di fumo lontano. Il sole è già
+> dietro il crinale. Uno di voi ha le ginocchia bagnate e non si ricorda di
+> essere caduto.*
 
 - ⚕️ **GUARIGIONE DEL PASSAGGIO (all'arrivo, automatica)**: attraversare mille anni **rimette in ordine il corpo**. I quattro
   arrivano a **pf pieni**, senza livelli di affaticamento, con danni da
@@ -648,9 +649,10 @@ la gente smette di parlare.
 > i bambini e i vecchi scendono verso le miniere con un fagotto ciascuno, e al
 > vostro passaggio la gente smette di parlare. La sala è lunga quanto una
 > strada, e i pilastri sono ancora bianchi. In fondo, su un seggio di pietra
-> fredda senza cuscino, c'è un nano vecchissimo, con una grande ascia al
-> ginocchio e sulla lama un disegno di brina che non si scioglie. Si alza piano,
-> come si carica un carro, e guarda solo la fronte di chi porta la corona.
+> fredda senza cuscino, c'è un nano vecchissimo in armatura, con una grande
+> ascia appoggiata al ginocchio: sulla lama c'è un disegno di brina che non si
+> scioglie. Si alza piano, un pezzo alla volta, come si carica un carro, e
+> guarda solo la fronte di chi porta la corona.
 > Sulla panca accanto, un altro vecchio resta seduto.*
 
 **Scheda d'entrata — Re Thorek I, il re di una fortezza giovane**
@@ -699,9 +701,10 @@ e i futuri.»*
 **Thorgrim.** Mentre il re recita, il vecchio sulla panca guarda l'ascia di
 Thorik, e quando il re tace parla lui.
 
-> **Read-aloud (Mercer lead, Casa di Davide support) — il vecchio sulla panca.** *Il vecchio sulla panca tiene le mani aperte verso la luce, i palmi in su, e
-> ha il callo nello stesso punto in cui ce l'ha Thorik. Guarda la corona per il
-> tempo di tre respiri. Poi gli occhi gli si riempiono, e lui non se ne accorge,
+> **Read-aloud (Mercer lead, Casa di Davide support) — il vecchio sulla panca.** *Il vecchio sulla panca
+> non si è mosso. Tiene le mani aperte verso la luce, i palmi in su, e sono mani
+> che hanno tenuto la stessa ascia di Thorik: si vede dal callo, nello stesso
+> punto. Guarda la corona sulla fronte di Thorik per il tempo di tre respiri. Poi gli occhi gli si riempiono, e lui non se ne accorge,
 > perché sta già parlando.*
 
 **THORGRIM (voce che non trema, occhi che sì):** *«Mio nonno ha perso la
@@ -909,7 +912,8 @@ sommano sullo stesso tiro), fabbri che affilano le armi, chierici che benedicono
 > scavata nella roccia: il soffitto porta ancora i colpi dello scalpello, dritti e
 > fitti come le righe di un registro. Sei brande di legno nuovo lungo il muro,
 > e su ognuna una coperta piegata in quattro da qualcuno che aveva fretta.
-> Nel soffitto c'è una crepa chiusa col piombo, e sotto non ci dorme nessuno.
+> In fondo un focolare che tira male. Nel soffitto c'è una crepa chiusa col
+> piombo, e sotto non ci dorme nessuno.
 > Dalla porta aperta entra il rumore della fortezza che non dorme: martelli,
 > passi, un bambino che piange e poi smette.*
 
@@ -1105,13 +1109,13 @@ che decide cosa ne esce.
 
 > **Read-aloud (Salvatore lead, Andor support) — la fucina e il banco.** *La
 > fucina è l'unico posto della fortezza dove nessuno parla sottovoce. Davanti a
-> tre forge aspettano file di ragazzi con quello che hanno trovato: un piccone,
+> tre forge accese aspettano file di ragazzi con quello che hanno trovato: un piccone,
 > una vanga, la spada del padre. Una nana con le braccia bruciate fino al gomito
 > guarda ogni lama di taglio contro la brace e la mette in uno di due mucchi,
 > senza dire quale sia il buono. Sul banco dietro di lei, poco: qualche fiasca
-> cerata, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
-> tocca. Senza smettere di lavorare alza il mento verso quello che avete
-> addosso, e aspetta.*
+> chiusa con la cera, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
+> tocca. Vi vede entrare, e non smette di lavorare. Alza il mento verso
+> quello che avete addosso, e aspetta.*
 
 **GUNNVOR (asciutta, senza alzare gli occhi):** *«Stanotte non vendo. Scambio.
 Quello che serve sulle mura lo pago bene, e lo pago in braccia.»*
@@ -1577,7 +1581,8 @@ prigioniero» trova Balvar lo stesso, e la trattativa della Scena 7 comincia con
 un equivoco che gli conviene.
 
 > **Read-aloud (Salvatore lead) — il campo.** *Fuori dalle mura il buio è vivo:
-> diecimila nemici dormono attorno a mille fuochi, e il campo si stende fino
+> diecimila fra orchetti, hobgoblin e cose peggiori dormono attorno a mille
+> fuochi, e il campo si stende fino
 > all'orizzonte come un mare in cui ogni onda è una gola che russa. L'aria sa
 > di grasso bruciato, di ferro e di bestia, e da qualche parte, al centro, c'è
 > la tenda del generale. Fra i fuochi passano le ronde, e lontano ulula un
@@ -1912,10 +1917,11 @@ e il drago arriva sull'assalto.
 > Le pattuglie qui non passano. Dentro si ride.*
 
 > **Read-aloud (Salvatore lead) — dentro.** *Fa caldo, e c'è puzza di sangue
-> secco e di carne cruda. Sulla tavola, una mappa di Hammerfist piena di
+> secco e di carne mezza cruda. Sulla tavola, una mappa di Hammerfist piena di
 > croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, un
 > mezzo-ogre grande quanto una porta di stalla, con una pietra nera al posto
-> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie come impalerà il re sul bastione più alto, e ride da solo.
+> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie
+> come impalerà il re sul bastione più alto, e ride da solo.
 > Quattro hobgoblin in armatura nera ascoltano, le mani sulle armi.*
 
 **Scheda d'entrata — Zog'tar Deatheye, il generale** *(statistiche: Appendice A)*
@@ -2282,9 +2288,10 @@ Balvar è morto da mille anni comunque vada. Ma:
 
 *La scheda d'entrata di Zog'tar è nella Scena 7, dove i PG lo vedono per la prima volta.*
 
-> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza,
-> e i teschi sbattono come nacchere. Non grida subito. La pietra nera si ferma
-> sul più vicino. Poi l'ascia lascia la spalla.*
+> **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
+> dal seggio, e i teschi inchiodati sbattono fra loro come nacchere. Non grida
+> subito. Prima gira la testa, e la pietra nera dove dovrebbe esserci l'occhio
+> si ferma sul più vicino di voi. Poi l'ascia lascia la spalla.*
 >
 > **Che fate?**
 
@@ -2620,9 +2627,10 @@ con un **terrore reverenziale mal mascherato**.
 
 > **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda, vestito di ombre cucite bene,
 > con qualcosa avvolto in un panno stretto al petto. Vi guarda con il terrore di
-> chi ha appena visto un mito camminare, e non attacca, e non scappa. Sussurra,
-> più a sé stesso che a voi: «Eravate davvero in quattro», e poi torna il
-> sorriso freddo, con un passo indietro verso l'ombra. Che fate?*
+> chi ha appena visto un mito camminare. Non attacca. Non scappa nemmeno,
+> subito. Vi fissa come si fissa una cosa che non dovrebbe esistere, e sussurra,
+> più a sé stesso che a voi: «…quattro. Eravate davvero in quattro.» Poi torna la
+> maschera, un sorriso freddo, un passo indietro verso l'ombra. Che fate?*
 
 
 **A parte, al giocatore di Artemis**, subito dopo:
@@ -2730,8 +2738,9 @@ dell'orologio, §4). Se Hella ha vegliato i semi, i **due Treant di Adamantio**
 caricano il fianco dell'orda mentre il primo ariete arriva (Scena 5).
 
 > **Read-aloud (Salvatore lead, LotR support) — le mura.** *Il primo ariete
-> arriva alle mura nel buio prima del sole, e il legno prende la pietra con un rimbombo che
-> arriva allo sterno prima che alle orecchie. Un nano accanto a voi si sputa
+> arriva alle mura che il sole non è ancora sopra il crinale, e il legno prende
+> la pietra con un rimbombo che arriva allo sterno prima che alle orecchie. Il
+> camminamento vi si muove sotto i piedi di un dito. Un nano accanto a voi si sputa
 > nelle mani e riprende l'ascia senza dire niente; quello dopo di lui ha la
 > barba incastrata nella cinghia dell'elmo, e non ha il tempo di liberarla. In
 > basso, le scale salgono.*
@@ -2750,9 +2759,8 @@ Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 > **Read-aloud (Salvatore lead) — il camminamento.** *Il camminamento è largo
 > quanto un tavolo da pranzo e lungo quanto la fortezza, e sotto l'orda non
 > urla più: ha smesso quando ha cominciato a salire, e il silenzio che ha
-> lasciato è peggio. Un
-> uncino morde la pietra a tre passi da voi, poi un altro, poi sei insieme. Il
-> capitano delle mura guarda voi, non i suoi.*
+> lasciato è peggio. Un uncino morde la pietra a tre passi da voi, poi un
+> altro, poi sei insieme. Il capitano delle mura guarda voi, non i suoi.*
 >
 > **Che fate?**
 
@@ -2895,12 +2903,13 @@ della tabella del cortile qui sotto non ci sono; le corde sì, quelle degli arie
 rovesciati, con la stessa prova.
 
 > **Read-aloud (Salvatore lead) — il cortile.** *Prima arriva il freddo: passa
-> un'ombra, e l'aria del cortile perde dieci gradi in un respiro. Poi il rumore,
-> un risucchio come quello del mare che si tira indietro, e le braci della
-> forgia si piegano tutte nella stessa direzione. Un nano vicino a voi lascia
-> cadere lo scudo e non lo raccoglie.*
+> un'ombra, e l'aria del cortile perde dieci gradi in un respiro, e la pelle
+> lo sa prima di voi. Poi il rumore, un risucchio come quello del mare che si
+> tira indietro, e le braci della forgia si piegano tutte nella stessa
+> direzione. Un nano vicino a voi lascia
+> cadere lo scudo e non si china a raccoglierlo.*
 >
-> *L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
+> *Dove passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
 > nella neve.*
 >
 > **Che fate?**
@@ -2912,7 +2921,7 @@ a lui soltanto.
 DI LACRIME.»*
 
 > **Read-aloud (Mercer lead) — la visione, solo per Thorik.** *Per un istante
-> la corona ti mostra due immagini sovrapposte: questo drago adesso, e un altro
+> la Corona ti mostra due immagini sovrapposte: questo drago adesso, e un altro
 > drago sopra mura che bruciano, mura che non hai mai visto.*
 
 
@@ -3173,14 +3182,14 @@ che l'incontro ha appena scelto.
 > la risposta vera è «nessuno», e il silenzio del cortile la conferma.*
 
 > **Read-aloud (LotR lead) — l'incudine, e l'incasso che si chiude.** *L'altare
-> è un'incudine, il piano segnato da mille anni di martelli, in un cortile
-> pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un attimo fa
-> non c'era niente, c'è una pietra rossa grande come una noce, calda di
-> fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
+> è un'incudine, e si vede: il piano è segnato da mille anni di martelli, in un
+> cortile pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un
+> attimo fa non c'era niente, adesso c'è una pietra rossa grande come una noce,
+> ancora calda come appena uscita dal fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
 > Tutti guardano la corona, e l'incasso vuoto si riempie. La pietra nuova non
 > si mescola alla luce delle altre due: batte da sola, come un secondo cuore, e
-> tira verso un punto che nessuno nel cortile vede. Sulla fronte il metallo si
-> scalda, e non si raffredda.*
+> tira verso un punto che nessuno nel cortile vede. Il metallo si scalda
+> contro la fronte, e non si raffredda.*
 
 **Momento 1 — la pietra entra.** Il Rubino trova il suo incasso, quello che per
 tutto l'arco non rifletteva la luce. Non serve un tiro: **la Corona lo prende da
@@ -3200,8 +3209,9 @@ finito di bruciare.
 è vinto, e poi si risveglia del tutto. L'Assedio è questo, ed è appena stato vinto.
 
 > **Read-aloud (Mercer lead) — l'ascia prende la parola.** *L'ascia si scalda
-> nella mano di Thorik, e non è la forgia. Per la prima volta in tre anni parla
-> da sola. Nel cortile nessuno guarda le armi.*
+> nella mano di Thorik, e non è il calore della forgia. Per la prima volta in tre
+> anni si fa sentire senza che nessuno l'abbia interrogata. Nel cortile nessuno
+> guarda le armi.*
 
 - **AEGIS FANG (Ego 14, servo del popolo nanico prima che del portatore):**
   *«Ho visto. Non chiedo più.»* — se al rito di «La Resurrezione di Hella» Thorik **ha donato**.
@@ -3245,11 +3255,12 @@ che la Corona sa fare da quando ha preso la terza pietra: l'Aura viene dal rito,
 non dal ritorno, e non aspetta che la Corona sia completa.
 
 > **Read-aloud (LotR lead) — l'aura.** *Il vecchio accanto all'incudine alza la
-> testa e guarda la luce dietro Thorik. Intorno, i feriti smettono di essere feriti:
+> testa e guarda la luce dietro Thorik. In tutto il cortile i feriti smettono di essere feriti:
 > un fabbro con una gamba sola si tira su contro il muro, il muro gli si apre
 > sotto la mano come argilla, e lui ci infila la gamba e resta in piedi.
-> Ottocento nani guardano un nano con una corona, e
-> capiscono di essere dentro una storia che verrà raccontata.*
+> Nessuno grida. Ottocento nani guardano un nano con una corona, e capiscono,
+> tutti insieme e senza parlare, di essere dentro una storia che verrà
+> raccontata.*
 
 ⚠️ **Tre cose per il DM, e la prima è di bilancio.**
 
@@ -3300,22 +3311,22 @@ che si toglie l'elmo nella prima battuta è l'eco di questo gesto.*
 L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 
 > **Read-aloud (Casa di Davide lead) — l'incudine, 1 di 3: la profezia compiuta.** *L'orda,
-> senza generale e senza drago a spronarla, si sfalda come sabbia, e la
-> fortezza regge. Sulla fronte di Thorik la pietra nuova, che all'incudine la
+> senza generale e senza drago a spronarla, si sfalda come sabbia, e
+> Hammerfist regge. Sulla fronte di Thorik il Rubino, che all'incudine la
 > luce l'ha presa, adesso la dà: calda come sangue, e non si abbassa. Un nano
 > vicino alla forgia si toglie l'elmo e non sa perché.*
 
 > **Read-aloud (Salvatore) — l'incudine, 2 di 3: il canto.** *Poi la pietra
-> prende fuoco, un fuoco rosso e oro che non brucia e canta una nota sola,
-> lunga, che vi risuona nel cranio. Davanti agli occhi di Thorik passano dei
-> lampi: il generale che cade nella
-> tenda, due alberi in marcia che travolgono una fila di nemici, il momento in
-> cui ognuno di voi ha scelto. La pietra li tiene tutti, come si tiene una cosa
-> che servirà.*
+> prende fuoco. È un fuoco rosso e oro che non brucia: canta, una nota sola,
+> lunga, che vi risuona nel cranio. Thorik sente nelle ossa una forza che non
+> è sua, e davanti agli occhi gli passano dei lampi: il generale che cade
+> nella tenda, due alberi in marcia che travolgono una fila di nemici, il
+> momento in cui ognuno di voi ha scelto. La pietra li tiene tutti, uno per
+> uno, come si tiene una cosa che servirà.*
 
-> **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce che
-> risuona come una campana, una volta sola: «Ben fatto, figli miei, avete salvato
-> la fortezza come doveva accadere.» Nessuno ha visto muoversi una bocca:
+> **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce, come
+> una campana che batte una volta sola: «Ben fatto, figli miei. Avete salvato
+> la fortezza come doveva accadere. Avete chiuso il cerchio.» Nessuno ha visto muoversi una bocca:
 > l'avete sentita nei denti. Poi la luce comincia a tirare e vi porta via, verso
 > casa, verso una fortezza che brucia mille anni più in là.*
 

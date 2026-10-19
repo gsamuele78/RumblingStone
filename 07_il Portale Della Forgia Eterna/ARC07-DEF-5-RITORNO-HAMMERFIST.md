@@ -716,9 +716,10 @@ passano cinque, senza Artemis non c'è il preavviso, senza Hella niente radici
 né Treant. **Con cinque PG** passano l'anello sei hobgoblin invece di cinque, e
 l'ordine e il preavviso ne tolgono gli stessi.
 
-> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultima spada cade sulla
-> pietra. Restano il fumo dei bracieri, il respiro dei feriti, novanta nani
-> che vi guardano senza parole. Il re alza il braccio al soffitto.*
+> **Read-aloud (Andor lead) — la caverna, il silenzio.** *L'ultimo nemico
+> sparisce nel corridoio nord, e il rumore se ne va con lui. Restano il fumo
+> dei bracieri, il respiro dei feriti, e novanta nani che guardano voi e non
+> sanno cosa dire. Poi il re, da terra, alza un braccio verso il soffitto.*
 
 #### Il passaggio di consegne
 
@@ -776,8 +777,8 @@ consacrato del Cuore della Montagna, e la preghiera lo chiede
 > **Read-aloud (LotR lead) — la caverna, il portale.** *Dana prega per il tempo
 > di un respiro, e sulla parete si apre un arco di luce dorata. Dall'altra parte
 > entrano il vento e il fumo dei bastioni, con un odore di pietra bruciata.
-> Lassù, attraverso la roccia, arriva un boato lungo, poi un altro, e l'ascia ha
-> smesso di cantare: ascolta. Che fate?*
+> Lassù, attraverso la roccia, arriva un boato lungo, poi un altro, e Aegis Fang
+> ha smesso di cantare: ascolta. Che fate?*
 
 → **Dana apre il portale. Fine dell'ARC-07. Inizia l'ARC-08** (la Battaglia di
 Hammerfist), che continua nel ponte d'arrivo dell'ARC-08<!-- apparato --> (`08_.../ARC08-11-PONTE-ARRIVO.md`)<!-- /apparato -->
