@@ -4,12 +4,12 @@
 
 <!-- apparato -->
 > ⭐ **MASTER DEFINITIVO — beat HUB rituale (il cuore emotivo dell'arco).**
-> È la scena per cui esiste l'intero ARC-07 (G0). Non è un combattimento: è
-> un **rito corale**, tre sacrifici che sono scelte, un risveglio, e un
+> È la scena per cui esiste l'intero ARC-07 (G0), e nessuno combatte: c'è un
+> **rito corale**, tre sacrifici che sono scelte, un risveglio, e un
 > **prezzo che il mondo esige** (il filo grigio). Le sezioni solo-combattimento
 > non si applicano; tutto il resto dello standard AP sì.
 > **Sostituisce e fonde**: `_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`
-> (master eletto B2 — rito, sacrifici, ramo del rifiuto, risveglio, Collana,
+> (master eletto B2: rito, sacrifici, ramo del rifiuto, risveglio, Collana,
 > Treant), i risultati canonici del viaggio dello spirito
 > (`...IL-VIAGGIO-NELL'INCUDINE-DEL-MONDO-risultati.md`, D12) e la scheda
 > `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md`.
@@ -484,7 +484,7 @@ della soglia, §8-ter**. Qui è un difetto che si nota, non una promessa che si 
 La voce arriva dalla Corona e dall'ascia insieme, dentro la testa di tutti e
 tre. Non alza mai il tono, e la Corona si scalda sulla fronte di Thorik.
 
-**MORADIN (dalla Corona, lento):** *«L'Altare è un reliquiario. Dentro, da millenni, riposa il Cuore di Moradin: un frammento della mia essenza, diventato pietra. Si usa per le emergenze supreme. Riportare una druida dalla morte… si qualifica.»*
+**MORADIN (dalla Corona, lento):** *«L'Altare è un reliquiario. Dentro, da millenni, riposa il Cuore di Moradin: un frammento della mia essenza, diventato pietra. Non lo si tocca per poco. Riportare una druida dalla morte… non è poco.»*
 
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
 > mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
@@ -492,8 +492,8 @@ tre. Non alza mai il tono, e la Corona si scalda sulla fronte di Thorik.
 > Dentro, sospeso nella luce dorata, c'è un cristallo di rubino sanguigno
 > grande come un pugno, trasparente, con la forma di un cuore nanico: le
 > quattro camere, i vasi visibili. Pulsa sessanta volte al minuto, il ritmo di
-> un cuore a riposo, e da vicino arriva il calore. La sua luce non promette un
-> secondo battito: una cosa così si spende una volta sola.*
+> un cuore a riposo, e a ogni battito il rosso si schiarisce. A chinarsi, il
+> calore arriva in faccia asciutto, come dalla bocca di un forno appena aperto.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 
@@ -785,8 +785,8 @@ al Freddo 15, guarigione rapida e Radicamento, **nessuna riduzione del danno**; 
 ### DONO 3 — ARTEMIS: «La Scintilla» → **Il Rovo Eldritch**
 
 > **Read-aloud (Andor lead) — il terzo Dono.** *Artemis apre la mano sopra il
-> cuore fermo e lascia andare una scheggia della sua fiamma, un pezzo di quello che è.
-> L'Anello, per la prima volta da quando lo porta, non commenta.*
+> cuore fermo e lascia andare una scheggia della sua fiamma. L'Anello, per la
+> prima volta da quando lo porta, non commenta.*
 
 **Cosa dona.** **1d6 di Eldritch Blast, per sempre**: da **7d6** a **6d6**.
 
@@ -1065,7 +1065,7 @@ i doni del viaggio (§1) e i Doni del party (§5).
 > **Read-aloud (Mercer lead) — le prime parole, con la voce rauca.** *«Io…
 > dove… respirare è difficile.» Gli occhi ambra cercano, e si fermano su
 > Tordek. «Tordek? Sei vero, o sto ancora sognando? Ero sotto terra. Buio.
-> Freddo. Ma sentivo te. La tua voce. Chiamavi. E sono tornata.» Si porta una mano al petto,
+> Freddo. Ma sentivo te. La voce era la tua. Chiamavi. E sono tornata.» Si porta una mano al petto,
 > sente il battito sotto le dita, e la voce le si spezza. «Viva? Come?»*
 
 Se allo Step 5 il giocatore di Tordek ha detto la sua frase (§5, `[HDYWTDT]`),
@@ -1239,8 +1239,8 @@ che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 > **Read-aloud (Andor lead, la tensione che non alza la voce) — l'affresco A6.** *L'affresco
 > A6 non è cambiato in mille anni, ma adesso ha tre punti di luce e due sono
 > accesi. Il terzo resta un cerchio inciso e vuoto, alto sulla parete, alla
-> stessa altezza dell'incasso scoperto sulla Corona. Nel silenzio nessuno lo ha
-> fatto notare. Quel cerchio, lo hanno visto tutti.*
+> stessa altezza dell'incasso scoperto sulla Corona. Nel silenzio nessuno lo
+> nomina, e la luce degli altri due si ferma sul bordo.*
 
 **Il fatto da mettere sul tavolo, con parole da DM e non da manuale**: Moradin
 non promette. Dice quello che sa, e non di più.

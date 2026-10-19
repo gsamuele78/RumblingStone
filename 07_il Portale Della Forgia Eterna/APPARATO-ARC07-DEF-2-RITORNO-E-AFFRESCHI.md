@@ -39,14 +39,14 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 2 | gli affreschi, A6, 2 di 2, dopo tre battiti | Andor lead, LotR support | 5 |
 | SCENA 2 | gli affreschi, A8, la manifestazione | Casa di Davide lead, Salvatore support | 8 |
 | SCENA 3 | l'affresco A2, la visione | Casa di Davide lead, LotR support | 8 |
-| SCENA 4 | la Stanza della Corona, l'ingresso | Salvatore lead, Casa di Davide support | 10 |
+| SCENA 4 | la Stanza della Corona, l'ingresso | Salvatore lead, Casa di Davide support | 9 |
 | SCENA 4 | la Stanza della Corona, l'incisione, per Thorik | Salvatore lead, Casa di Davide support | 6 |
 | SCENA 5 | la Sala, l'addormentarsi | Salvatore lead, LotR support | 7 |
 | SCENA 5 | la Sala, il sogno di Thorik | Salvatore lead | 6 |
-| SCENA 5 | la Sala, il sogno di Tordek | Andor lead, Salvatore support | 9 |
+| SCENA 5 | la Sala, il sogno di Tordek | Andor lead, Salvatore support | 10 |
 | SCENA 5 | la Sala, il sogno di Artemis, 1 di 2 | Andor lead, BG3 support | 5 |
 | SCENA 5 | la Sala, il sogno di Artemis, 2 di 2, quando ha riconosciuto la porta | Andor lead, BG3 support | 6 |
 | SCENA 5 | la Sala, il sogno di Artemis, senza il bazar | Andor lead | 1 |
 | SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 1 di 2 | Casa di Davide lead, LotR support | 6 |
 | SCENA 5 | la Sala, il sogno di Hella, dall'altra parte, 2 di 2 | Casa di Davide lead, LotR support | 4 |
-| SCENA 5 | la Sala, il risveglio | LotR lead | 5 |
+| SCENA 5 | la Sala, il risveglio | LotR lead | 4 |
