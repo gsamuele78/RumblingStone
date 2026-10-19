@@ -4,7 +4,7 @@ Il DM gioca **stasera** da DEF-4 Scena 5 e vuole i booklet aggiornati dopo un
 giro di developer, playtester e DM a freddo, con mappe, PNG, villain e
 tattiche allineati. I rilievi sono già scritti: tu li correggi.
 
-Lavori **direttamente nel repo** (`/home/claude/RumblingStone`, ramo
+Lavori **direttamente nel repo** (la radice del repo, ramo
 `claude/project-thread-ep4auu`). Niente git, niente commit, niente push:
 li fa chi ti ha avviato. Non tocchi il ramo `campaign-group-rumblingstone`,
 `campaign/state.md`, i `.hb.md`/`.html` generati, né i file dell'altro master.
@@ -51,7 +51,6 @@ regole che si contraddicono, rimandi sbagliati). In questo ordine:
 - Il cancello, dalla radice del repo (copia prima l'originale in scratchpad per confronto
   non serve: la base è il commit 8a6b1e1):
   ```
-  git show 8a6b1e1:"<file>" > /tmp/claude-0/-home-claude-RumblingStone/79a9acb3-76c6-52e3-a364-fd7ce3bdc425/scratchpad/base.md   # solo se ti serve leggerla
   python3 plans/esperimenti/giro4-arc07-2026-10-19/cancello.py "<file>" "<file>"
   ```
   Deve dire `✓ passa`. Un «fatto cambiato» in un box è ammesso solo se è la correzione di un

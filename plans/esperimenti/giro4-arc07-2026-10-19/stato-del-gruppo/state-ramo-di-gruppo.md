@@ -30,7 +30,7 @@ giocato al tavolo** (corretto 2026-07-02, piano ARC-08 A0 — vedi changelog).
 
 > **DM workflow**: per la procedura di aggiornamento fine-sessione e per
 > far partire un nuovo gruppo senza perdere niente, vedi
-> [`campaign/DM-CAMPAIGN-PLAYBOOK.md`](DM-CAMPAIGN-PLAYBOOK.md).
+> [`campaign/DM-CAMPAIGN-PLAYBOOK.md`](../../../../campaign/DM-CAMPAIGN-PLAYBOOK.md).
 
 ---
 
@@ -492,7 +492,7 @@ Format and rules: `skills/rumblingstone-narrative-style/references/pc-protagonis
 
 ## 8. Changelog (append-only)
 
-> 📍 **Lo storico vive in [`state-changelog.md`](state-changelog.md)**, scorporato
+> 📍 **Lo storico vive in [`state-changelog.md`](../../../../campaign/state-changelog.md)**, scorporato
 > il 2026-09-16 (lotto 4d-2): erano **1.179 righe, il 71%** di questo file.
 >
 > Ci scrive `scripts/state_apply.py`. Qui non si aggiunge niente a mano: una
