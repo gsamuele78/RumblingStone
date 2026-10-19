@@ -199,7 +199,7 @@ Benedizioni ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]`.
 
 ### Il giro di Skullcrusher (boss, Scena 11) — 3.5, niente 5e
 - **Quale drago.** Con il gruppo di stasera si usa il **Vecchio** (Appendice
-  A.1-bis) con le 2 wyvern: EL 17, il tetto esatto di APL+4 `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`.
+  A.1-bis) con le 2 wyvern: EL 17, il tetto esatto di APL+4 `[CANONE — DM 2026-10-19]`.
   L'**Adulto** (Appendice A.1) resta per un gruppo di 13° più debole, per tre
   PG, o se il DM non conferma il Vecchio. Qui sotto, fra parentesi, i suoi numeri.
 - **Soffio acido** in **linea** di 30 m, 16d4 (14d4), Riflessi CD 31 (30) ½, **ricarica 1/1d4 round**;
@@ -2476,13 +2476,13 @@ motivo per cui la Scena 7 viene prima.
   l'Ira comincia al suo primo turno. Balvar parla lo stesso, se i PG ci
   arrivano: lui non ha fretta.
 - **Il sacerdote dell'orda** `[CANONE — DM 2026-10-07, Q26: nel 372 l'orda non è la Mano Rossa]`. Dorme nella
-  tenda, su una stuoia dietro il seggio, a L13 `[INFERRED — needs DM confirmation: prima dormiva nella tenda accanto]`.
+  tenda, su una stuoia dietro il seggio, a L13 `[CANONE — DM 2026-10-19]`.
   Si alza al primo grido e agisce dal **round 1**, con *vedere invisibilità*
-  già addosso se ha sentito il corno. Da dietro il seggio lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
+  già addosso se ha sentito il corno. Lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
   poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del
   generale. È un adepto: con Balvar, Zog'tar e le guardie la tenda arriva a EL
   17, il tetto. Statistiche in A.2.
-- **Se Balvar sta con i PG, entrano le guardie del turno dopo** `[INFERRED — needs DM confirmation]`.
+- **Se Balvar sta con i PG, entrano le guardie del turno dopo** `[CANONE — DM 2026-10-19]`.
   Vale se è recuperato prima dello scontro, o se passa con i PG alla fine
   del round 1 («sta con chi sta vincendo», Scena 7). Sono due, con i numeri
   delle altre quattro (A.2), e dormono nella tenda accanto: al round 2
@@ -3016,7 +3016,7 @@ insegnata, quella? No. Non importa. Il tuo nome.»*
 > interno. È il capostipite della stirpe di **Fauci di Palude**: ogni ferita che
 > gli infliggete qui, la Forgia la ricorderà mille anni dopo (§7, carry-over B4).
 
-**Quale drago si usa, e quando** `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`.
+**Quale drago si usa, e quando** `[CANONE — DM 2026-10-19]`.
 Stasera il **Vecchio** dell'Appendice A.1-bis, con le 2 wyvern dell'Appendice
 A.6 dal round 2: EL 17, il tetto esatto di APL+4 per un gruppo di 13°, e lo
 stesso per un gruppo di 14° o per cinque PG. L'**Adulto** dell'Appendice A.1,
@@ -3137,7 +3137,7 @@ cambia davvero.
   di un solo PG, perché l'SRD guasta 10 piedi cubi, poco più di un quarto di
   metro cubo, entro il raggio della Presenza. Ognuna tira a parte Volontà
   CD 25, e quelle nel buco portatile non le tocca.
-- **La passata, il nome, la prima paura** `[INFERRED — needs DM confirmation: Ghermire passa a Fauci di Palude, Virata torna al suo posto]`.
+- **La passata, il nome, la prima paura** `[CANONE — DM 2026-10-19]`.
   Il drago giovane combatte in movimento e davanti a un pubblico: non si
   ferma mai finché non ha paura, e prima di colpire dice chi colpirà.
   - ***Attacco in Volo*** (SRD, *Flyby Attack*). In volo fa un'azione di
@@ -3360,7 +3360,7 @@ morto e il drago fugge a **metà** pf, l'esito è **FERITO GRAVE**.
 #### Sidebar — Scalare lo scontro (stile RHoD)
 | Situazione | Aggiustamento |
 |---|---|
-| Il gruppo di stasera, e ogni party **straripante** (4 PG di 13° con la fiducia piena del consiglio, tutti gli artefatti e il banco della fucina speso, o 4 PG di 14°) | Skullcrusher **Vecchio e Avanzato** (GS 17): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 31, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Con lui, dal round 2, le 2 **wyvern** (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS, morso +8 2d8+4; Appendice A.6). Per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4; per uno di 14°, APL+3 `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`. Le wyvern vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro `[CANONE — DM 2026-10-12, D74]`. Il gruppo di 13° straripante ha le wyvern `[CANONE — DM 2026-10-18, G2-15]` |
+| Il gruppo di stasera, e ogni party **straripante** (4 PG di 13° con la fiducia piena del consiglio, tutti gli artefatti e il banco della fucina speso, o 4 PG di 14°) | Skullcrusher **Vecchio e Avanzato** (GS 17): **337 pf**, CA 36 (40 con *armatura magica*), soffio 16d4 CD 31, Presenza CD 26, morso +34; statistiche in Appendice A.1-bis `[CANONE — DM 2026-10-12, D60]`. Con lui, dal round 2, le 2 **wyvern** (SRD, *Wyvern*: GS 6, 59 pf, CA 18, volare 18 m, pungiglione +10 con veleno Tempra CD 17, 2d6 COS, morso +8 2d8+4; Appendice A.6). Per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4; per uno di 14°, APL+3 `[CANONE — DM 2026-10-19]`. Le wyvern vanno su chi tiene la corda dell'ala e su chi vola; quando il drago fugge o muore, fuggono anche loro `[CANONE — DM 2026-10-12, D74]`. Il gruppo di 13° straripante ha le wyvern `[CANONE — DM 2026-10-18, G2-15]` |
 | Un gruppo di 13° che non è straripante, o il DM non conferma il Vecchio | l'**Adulto** dell'Appendice A.1, con le 2 wyvern: EL 14 sulla carta, 15 al tavolo |
 | Party **logorato** (il campo e le mura andati male, risorse spese, Hella ancora fragile) | Skullcrusher NON usa il soffio 2 volte di fila; quando gli restano ~100 pf **fugge subito**, senza il round in più (esito FERITO GRAVE garantito) |
 | **Hella appena risorta** — vuoi proteggerla | Riga da scegliere, non di base: il drago la ignora finché non lo ferisce (predatore: va per la minaccia, non per la novità). Senza questa scelta vale «Chi sceglie», che la mette fra i preferiti — dà alla giocatrice spazio per il suo primo scontro |
@@ -3632,7 +3632,7 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 | Scena 6: la squadra dei lupi (EL 9), se si combatte | combattimento | ≈ 250 (≈ 975 in tutto) |
 | Scena 10: le mura | montaggio/eroico | 600 |
 | Scena 9: Vatore (scena grigia, qualunque esito) | roleplay grigio | 500 |
-| **Scena 11: Skullcrusher Vecchio (GS 17), stasera** `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]` | boss | **3.900** (tabella DMG: 15.600 per un gruppo di 13°, diviso per 4) |
+| **Scena 11: Skullcrusher Vecchio (GS 17), stasera** `[CANONE — DM 2026-10-19]` | boss | **3.900** (tabella DMG: 15.600 per un gruppo di 13°, diviso per 4) |
 | Scena 11: Skullcrusher Adulto (GS 14), se si usa A.1 | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
 | Scena 11: le 2 wyvern (GS 6) | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4). Il duello vale **≈ 4.060** a testa col Vecchio, EL 17; **1.625** con l'Adulto, EL 14 `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
 | Scene 12-13: il Rituale e il Rubino | premio di storia maggiore | 800 |
@@ -3857,7 +3857,7 @@ Il vero climax resta Fauci nel 1372: qui si semina.
 - Boost log: 2026-10-07 — template Avanzato PF1e, completo — GS 14 → 14 (vale 15) — il DM lo vuole più forte senza salire di EL.
 <!-- /storico -->
 - Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> due talenti cambiati, scelti fra le versioni più forti (regola del DM: prima il 3.5 completo, poi PF1e, poi SRD) — GS 14 → 14 (vale 15), EL invariato — il DM vuole la versione più terrificante. *Virata* → **Capacità Focalizzata (soffio)** (SRD, *Ability Focus*: +2 alla CD, soffio CD 28 → 30). *Attacco Poderoso* → **Soffio Aderente** (*Clinging Breath*) `[Private source — Draconomicon (WotC 2003), p. 67]`: talento di metasoffio, **fuori dall'SRD**; si sceglie a ogni soffio, e quando lo usa la ricarica sale di 1 round. Diverge dall'SRD solo qui: il resto del blocco è il drago nero adulto maturo dell'SRD con il template Avanzato. Restano *Ghermire*, *Fluttuare* e *Attacco in Volo*, che la Scena 11 usa, e *Riflessi Fulminei* e *Volontà di Ferro*, che reggono i TS<!-- storico --> (D71)<!-- /storico -->. Il telaio è stato riverificato sulla tabella SRD (*Black Dragon*, adulto maturo: 22 DV, FOR 27, COS 21, CA 29, soffio 14d4 CD 26, Presenza CD 23, RI 21, LI 5) e il template rifatto: i numeri del blocco tornano tutti. Il grado d'età sopra (Vecchio, GS 16) resta al gruppo di 14° per D60. 🔎 Il testo del talento viene da una trascrizione secondaria del Draconomicon `[INFERRED — needs DM confirmation sulla CD per toglierselo]`.
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello non deve sembrare la copia di quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[INFERRED — needs DM confirmation: decisione in attesa]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> un talento cambiato: *Ghermire* → **Virata** (SRD, *Wingover*) — GS 14 → 14 (vale 15), EL invariato — la presa in bocca è la firma di Fauci di Palude contro Thorik, e il duello del 372 non deve ripetere quello del 1372. Skullcrusher combatte in passata e dice il nome prima di colpire, con *colpo accurato*, che aveva già. Il drago è meno letale sul singolo PG: niente picco della presa, il soffio in bocca e la caduta. Vale anche per il Vecchio, che ha i talenti di questo blocco `[CANONE — DM 2026-10-19]`.
 
 
 **Cosa cambia al tavolo, rispetto ai numeri di prima**
@@ -3896,7 +3896,7 @@ fuori un drago **più debole** di quello di base (287 pf e CD 27/24 contro 297 e
 28/25). Questo è il Vecchio dell'SRD (d20srd.org, *Dragon, True*) con lo stesso
 template Avanzato di A.1. Si usa con il gruppo di stasera, insieme alle 2
 wyvern di A.6: per un gruppo di 13° fanno EL 17, il tetto esatto di APL+4
-`[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`. Con un
+`[CANONE — DM 2026-10-19]`. Con un
 gruppo di 14° è APL+3. L'Adulto di A.1 resta per i gruppi più deboli (Scena
 11, «Quale drago si usa, e quando»).
 
@@ -3934,7 +3934,7 @@ testa**, e 12.600 per un gruppo di 14°, cioè **≈ 3.150 a testa**. Le wyvern
 si sommano a parte (§8 A).
 
 - Boost log:<!-- storico --> 2026-10-12 —<!-- /storico --> drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
-- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[INFERRED — needs DM confirmation: D60 esteso al gruppo di 13°]`.
+- Boost log:<!-- storico --> 2026-10-19 —<!-- /storico --> usato anche con il gruppo di 13°, con le 2 wyvern, e *Ghermire* → **Virata** come in A.1 — GS 17 → 17; EL 17 = APL+4, il tetto esatto — la simulazione del duello lo dà come l'unica versione che regge contro tutti e tre i modi di giocarlo senza una morte probabile, purché senza la presa in bocca `[CANONE — DM 2026-10-19]`.
 
 ### A.2 · Zog'tar Deatheye e le sue quattro guardie (Scena 8)
 
@@ -4314,8 +4314,7 @@ seggio a M12–N13, con il braciere del seggio a J11; le quattro guardie gli
 stanno davanti, a K12, L10, O10 e P11. Balvar è sullo sgabello a P13, nel
 fondo buio P12–R13. Il telo est, «il telo a sinistra», va da S5 a S13; il
 telo del glifo è quello sopra il seggio, L14–N14. Grask è seduto fuori, a N15,
-due quadretti dietro il seggio, e il sacerdote dorme dietro il seggio, a L13.
-La griglia stampata lo mette ancora nella tenda accanto, a W11: si aggiorna
-quando il DM conferma `[INFERRED — needs DM confirmation]`.
+due quadretti dietro il seggio, e il sacerdote dorme sulla sua stuoia, a L13.
+Nella tenda accanto, a W11, dormono le due guardie del turno dopo.
 
 <!-- /pagina -->

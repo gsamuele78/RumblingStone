@@ -110,6 +110,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-19 | REVISIONE-ARC07 | Skullcrusher e Zog'tar messi alla prova con tutti gli artefatti del gruppo: sim… | 🟡 restano… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro finale di developer, playtester e DM a freddo su `DEF-4`, `DEF-5` e i book… | 🟡 aperte al DM le domande 28-33 di `DECISIONI-DM.md`; nessun file peggiora sulla prosa (l'unico ✗ è l'Attacco Poderoso pieno corretto su M7-C) |
 | 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5, dopo il giro 4 di ARC-07 | 🟡 `ciclo_prosa confronta` separa i fatti solo aggiunti (un numero o un nome scritto per il DM) dai fatti tolti o cambiati: i primi si segnalano senza far peggi… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
@@ -121,7 +122,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-18 | MASTER-DEF | esito del voto cieco del DM sul rifacimento dei cinque master di ARC-07: 8 a 8… | 📝 esito, scheda, chiave e voti in `plans/esperimenti/giro2-arc07-2026-10-18/misure/CIECO-*`; analisi delle coppie perse nel README del giro |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, la misura aggiornata dai voti | ✅ due norme nuove in `read-aloud-adulti.md` §2-ter (una riscrittura non toglie dettagli sensoriali; un monologo resta un blocco), registrate 🟡;… |
 | 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, il dopo (voto cieco sul rifacimento di ARC-07) | ✅ MQM da 97,53-99,87 a 99,91-100, `>4 frasi` e `>500 car` quasi a zero, ma il DM sceglie la nuova in 8 coppie su 16 (Wilson 0,28-0,72): non dimostrato. Vince l… |
-| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4 (la prosa, e come si misura se migliora) | 🟡 ADR-0093: la prosa è migliorata solo se il DM la sceglie alla cieca in 14 coppie su 20; `cieco_versioni.py` (campione, coppie, esito); `misura_craft --stile`… |
 
 ## Le misure che si portano dietro
 

@@ -156,9 +156,8 @@
 <circle cx="480.0" cy="374.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="565.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tent" x="550" y="360" width="28" height="28"/>
-<ellipse cx="677.4" cy="376.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="676.0" cy="374.0" r="10.36" fill="url(#g_f4b400)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="676.0" cy="374.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="677.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tent" x="662" y="360" width="28" height="28"/>
 <ellipse cx="705.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tent" x="690" y="360" width="28" height="28"/>
 <ellipse cx="733.0" cy="377.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -180,6 +179,9 @@
 <use href="#pr_tent" x="690" y="388" width="28" height="28"/>
 <ellipse cx="257.0" cy="433.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tent" x="242" y="416" width="28" height="28"/>
+<ellipse cx="369.4" cy="432.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="368.0" cy="430.0" r="10.36" fill="url(#g_f4b400)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="368.0" cy="430.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="397.4" cy="432.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="396.0" cy="430.0" r="10.36" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="396.0" cy="430.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
@@ -320,10 +322,10 @@
 <path d="M760 262L620 150L424 150" fill="none" stroke="#d62828" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="760" cy="262" r="3.4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
 <path d="M424 150L430.06 146.5L430.06 153.5Z" fill="#d62828"/>
-<path d="M676 374L592 178L480 150" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M676 374L592 178L480 150" fill="none" stroke="#7b2cbf" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M676 374L564 486L424 458" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M676 374L564 486L424 458" fill="none" stroke="#7b2cbf" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="676" cy="374" r="3.4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
-<path d="M480 150L486.73 148.07L485.03 154.87Z" fill="#7b2cbf"/>
+<path d="M424 458L430.63 455.76L429.26 462.62Z" fill="#7b2cbf"/>
 <path d="M60 402L228 402" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M60 402L228 402" fill="none" stroke="#e85d04" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="60" cy="402" r="3.4" fill="#e85d04" stroke="#ffffff" stroke-width="1"/>
@@ -348,8 +350,8 @@
 <text x="488.4" y="369" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">7</text>
 <circle cx="432.4" cy="477.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
 <text x="432.4" y="481" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">8</text>
-<circle cx="684.4" cy="365.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
-<text x="684.4" y="369" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">9</text>
+<circle cx="376.4" cy="421.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
+<text x="376.4" y="425" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">9</text>
 <g transform="translate(752,102) rotate(0)"><circle r="20" fill="#efe4c9" fill-opacity="0.82" stroke="#3b2e1e" stroke-width="1"/><path d="M0 -15L2.4 -2.4L15 0L2.4 2.4L0 15L-2.4 2.4L-15 0L-2.4 -2.4Z" fill="#7a6a50" opacity="0.5"/><path d="M0 -15L3.6 0L0 -3.3L-3.6 0Z" fill="#3b2e1e"/><text x="0" y="-21" font-size="11" font-weight="bold" text-anchor="middle" fill="#3b2e1e">N</text></g>
 <rect x="46" y="659" width="28" height="7" fill="#3b2e1e" stroke="#3b2e1e" stroke-width="1"/>
 <rect x="74" y="659" width="28" height="7" fill="#efe4c9" stroke="#3b2e1e" stroke-width="1"/>
@@ -385,13 +387,13 @@
 <text x="68" y="816" font-size="11" fill="#3b2e1e">N15 — Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso</text>
 <circle cx="54" cy="827" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="830.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">9</text>
-<text x="68" y="831" font-size="11" fill="#3b2e1e">W11 — Il sacerdote dell'orda, che dorme nella tenda accanto: arriva in 1d4+1 round (GS 6, adepto 7)</text>
+<text x="68" y="831" font-size="11" fill="#3b2e1e">L13 — Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido (GS 6, adepto 7)</text>
 <line x1="46" y1="842" x2="62" y2="842" stroke="#d62828" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 842L59.67 844.5L59.67 839.5Z" fill="#d62828"/>
 <text x="70" y="846" font-size="11" fill="#3b2e1e">Il corridore hobgoblin (complicazione 6 della Scena 6): Z7 → U3 → N3</text>
 <line x1="46" y1="857" x2="62" y2="857" stroke="#7b2cbf" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 857L59.67 859.5L59.67 854.5Z" fill="#7b2cbf"/>
-<text x="70" y="861" font-size="11" fill="#3b2e1e">Il sacerdote, dalla sua tenda alla soglia (1d4+1 round): W11 → T4 → P3</text>
+<text x="70" y="861" font-size="11" fill="#3b2e1e">Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2: W11 → S15 → N14</text>
 <line x1="46" y1="872" x2="62" y2="872" stroke="#e85d04" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 872L59.67 874.5L59.67 869.5Z" fill="#e85d04"/>
 <text x="70" y="876" font-size="11" fill="#3b2e1e">Le ronde di orchi più vicine (1d4+2 round): A12 → G12</text>
