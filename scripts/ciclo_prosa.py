@@ -671,6 +671,47 @@ def mqm(testo: str, percorso: Path) -> "dict | None":
     return e
 
 
+def _dettagli_nella_battuta_accanto(vecchio: str, nuovo: str, nuovi: list) -> bool:
+    """Le parole sensoriali uscite dal box ma finite nella battuta appena prima
+    o appena dopo: non è un impoverimento (#251, DEF-4 Scena 11, dove il grido
+    di Aegis Fang è passato dal box alla sua battuta)."""
+    import cieco_versioni as cv
+    testi = [n["testo"] for n in nuovi]
+    if nuovo not in testi:
+        return False
+    i = testi.index(nuovo)
+    unito = "\n\n".join(testi[max(0, i - 1):i + 2])
+    return cv.verdetto_misurato(vecchio, unito)[0] != "vecchia" \
+        or mc_dettagli(unito) >= mc_dettagli(vecchio)
+
+
+def mc_dettagli(testo: str) -> int:
+    import misura_craft as mc
+    return mc.dettagli_sensoriali(testo)
+
+
+def box_impoveriti(prima: str, dopo: str) -> "list[str]":
+    """I box che la riscrittura ha peggiorato secondo il voto cieco del DM
+    (`read-aloud-adulti.md` §2-ter, ADR-0093): meno dettagli sensoriali, o un
+    monologo spezzato in battute. Ogni box di prima si appaia al suo in dopo."""
+    import cieco_versioni as cv
+    nuovi = cv.box_con_titolo(dopo, battute=True)
+    uscita = []
+    for b in cv.box_con_titolo(prima):
+        if b["parole"] < cv.PAROLE_MINIME:
+            continue
+        _, somiglianza, nuovo = cv.appaia(b, nuovi)
+        if nuovo == b["testo"] or somiglianza < cv.SOMIGLIANZA_DUBBIA:
+            continue
+        verdetto, perche = cv.verdetto_misurato(b["testo"], nuovo)
+        if verdetto == "vecchia" and "sensoriali" in perche \
+                and _dettagli_nella_battuta_accanto(b["testo"], nuovo, nuovi):
+            continue
+        if verdetto == "vecchia":
+            uscita.append(f"{b['titolo'] or '(senza titolo)'}: {perche}")
+    return uscita
+
+
 def miglioramento(prima: str, dopo: str, percorso: Path) -> dict:
     """Di quanto la riscrittura ha migliorato il testo, misurato.
 
@@ -690,6 +731,7 @@ def miglioramento(prima: str, dopo: str, percorso: Path) -> dict:
         "penalita": [q0["penalita"], q1["penalita"]] if q0 and q1 else None,
         "gulpease": [l0["gulpease"], l1["gulpease"]],
         "ritmo": [l0["ritmo"], l1["ritmo"]],
+        "impoveriti": box_impoveriti(prima, dopo),
     }
 
 
@@ -698,6 +740,7 @@ def peggiora(mig: dict) -> "list[str]":
     fuori = [f"{n} {a} → {b}" for n, (a, b) in mig["norme"].items() if b > a]
     if mig["mqm"] and mig["mqm"][1] < mig["mqm"][0]:
         fuori.append(f"MQM {mig['mqm'][0]} → {mig['mqm'][1]}")
+    fuori += [f"box impoverito, {x}" for x in mig.get("impoveriti", [])]
     return fuori
 
 

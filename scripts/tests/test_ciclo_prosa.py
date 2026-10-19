@@ -416,3 +416,29 @@ class TestRigenera(unittest.TestCase):
         prima = self.rev.read_text(encoding="utf-8")
         self.assertEqual(cp.rigenera(self.rev), 0)
         self.assertEqual(self.rev.read_text(encoding="utf-8"), prima)
+
+
+class TestDettagliNellaBattutaAccanto(unittest.TestCase):
+    """DEF-4 Scena 11 nella #251: il grido di Aegis Fang esce dal box e diventa
+    la battuta prima del box. Le parole ci sono ancora."""
+
+    PRIMA = ("## Scena 11\n\n"
+             "> 🎚️ **Se e solo se Thorik tiene Aegis Fang in mano** — *un secondo box, corto,\n"
+             "> e a lui soltanto*: **AEGIS FANG (non canta: urla, dentro il cranio):**\n"
+             "> *«SANGUE ANTICO. ARTEFICE DI LACRIME.»* — *e per un istante la Corona ti\n"
+             "> mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra\n"
+             "> mura che bruciano, che non hai mai visto.*\n")
+    DOPO = ("## Scena 11\n\n"
+            "**AEGIS FANG (non canta: urla, dentro il cranio):** *«SANGUE ANTICO. ARTEFICE\n"
+            "DI LACRIME.»*\n\n"
+            "> **Read-aloud (Mercer lead) — la visione, solo per Thorik.** *Per un istante\n"
+            "> la Corona ti mostra due immagini sovrapposte: questo drago adesso, e un altro\n"
+            "> drago sopra mura che bruciano, mura che non hai mai visto.*\n")
+
+    def test_il_grido_passato_alla_battuta_non_impoverisce(self):
+        self.assertEqual(cp.box_impoveriti(self.PRIMA, self.DOPO), [])
+
+    def test_senza_la_battuta_il_box_e_impoverito(self):
+        senza = self.DOPO.split("\n\n", 2)
+        senza = senza[0] + "\n\n" + senza[2]
+        self.assertEqual(len(cp.box_impoveriti(self.PRIMA, senza)), 1)

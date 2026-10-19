@@ -2590,6 +2590,36 @@
       "deterministic": true
     },
     {
+      "name": "cieco_versioni",
+      "description": "«Il master rifatto è scritto meglio di prima, o ha solo meno difetti?»\n\nIl confronto cieco fra due versioni degli stessi box read-aloud (ADR-0093): campione congela con un seme i box da confrontare prima di riscrivere; coppie appaia i box nella versione nuova (difflib, stessa intestazione), li mette in ordine casuale e scrive la scheda per il DM con la chiave a parte; esito scioglie la chiave e applica il criterio dei 14 su 20, con l'intervallo di Wilson.",
+      "use_case": "«Il master rifatto è scritto meglio di prima, o ha solo meno difetti?»",
+      "invocation": "python3 scripts/cieco_versioni.py {campione|coppie|esito} ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "campione": {
+            "type": "string",
+            "description": "Sceglie e congela i box: --ref, --seme, --per-file, --uscita, FILE..."
+          },
+          "coppie": {
+            "type": "string",
+            "description": "Scheda e chiave: --campione, --dopo, --seme, --scheda, --chiave."
+          },
+          "esito": {
+            "type": "string",
+            "description": "Scioglie la chiave: --chiave, --voti."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "deterministic": true
+    },
+    {
       "name": "componenti",
       "description": "«Mi dai il foglio del cast e tutte le CD di questo modulo su un foglio, con i numeri di Balvar uguali a quelli del Bestiario?»\n\nIl master DEF letto come componenti tipizzati (ADR-0074): scena, contratto In scena, box read-aloud, scheda d'entrata, comparse, battute, prove con CD. Ne ricava l'indice, genera l'apparato d'uso APPARATO-<master>.md (foglio del cast, inserto delle CD, indice dei read-aloud) e tiene allineate le copie sincronizzate fra <!-- include: fonte#blocco --> e <!-- /include --> (#statblocco prende il recinto della scheda del Bestiario).",
       "use_case": "«Mi dai il foglio del cast e tutte le CD di questo modulo su un foglio, con i numeri di Balvar uguali a quelli del Bestiario?»",
@@ -3169,6 +3199,10 @@
           "costrutto-italiano": {
             "type": "boolean",
             "description": "I box senza un «c'e'» presentativo ne' una dislocazione a sinistra (italiano-nativo.md §8). INDIZIO che sovrastima: la dislocazione e' rilevata a meta', quindi questa norma NON pesa nel punteggio."
+          },
+          "stile": {
+            "type": "boolean",
+            "description": "Gerundio in coda, avverbi in -mente, battute lunghe dei PNG: indicatori senza peso (ADR-0093)."
           }
         },
         "required": [],

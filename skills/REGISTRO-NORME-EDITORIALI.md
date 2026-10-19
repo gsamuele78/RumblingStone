@@ -42,6 +42,9 @@
 | `read-aloud-adulti.md` | box di combattimento chiude su **«Che fate?»** | **maggiore** | 🟢 congegno `chiusura su decision point` |
 | `read-aloud-adulti.md` §2-bis | il box di luogo sta in **poche frasi** (*Dungeon*) | **minore** | 🟡 `misura_craft --box`, colonna `>4 frasi` — **indicatore senza peso**: 61 box su 104 nei master DEF di ARC-07, uno su 11 nell'Abbazia. Accanto, la colonna `>500 car` misura la proposta del 2026-10-01, che **non è** una norma finché il DM non decide (PIANO-BOX-DI-LUOGO-E-AREA-CHIAVE, D1) |
 | `read-aloud-adulti.md` §2-bis | il box di luogo **non descrive le creature** (*Dungeon*): entrano con la scheda d'entrata o con un box loro | **minore** | 🔴 non misurato — i box non dichiarano il loro tipo (di luogo, d'ingresso, di round), e senza quel dato il registro dei 322 nomi pesca **315 box su 501**, quasi tutti dei, PG e artefatti nominati a ragione. È una convenzione che manca, non un codice (`superficie_norme.py`) |
+| `read-aloud-adulti.md` §2 | **le lunghezze dei box variano**: brevi e lunghi alternati come negli autori umani (il DM ha chiesto di adottare le misure del corpus, 2026-10-18) | **minore** | 🟡 `misura_craft --stile`, colonna `30-70`: la quota dei box fra 30 e 70 parole contro il 46-52% del corpus, con «!» oltre il 70%. Indicatore e non tetto (ADR-0036): dice che i box sono troppo uguali, non quale allungare |
+| `read-aloud-adulti.md` §2-ter | una riscrittura **non toglie dettagli sensoriali** a un box che c'è (il voto cieco del DM, 2026-10-18) | **minore** | 🟡 `cieco_versioni.py coppie` (`verdetto_misurato`) fra due versioni dello stesso box, e `misura_craft --stile`, colonna `sens.`. Sulle sedici coppie del primo voto decide 13 e sbaglia 1; il lessico è scritto dopo i voti, e le quattro coppie di controllo di ogni giro dicono se regge |
+| `read-aloud-adulti.md` §2-ter | un **monologo resta un blocco**: non si spezza in battute con incisi fra l'una e l'altra | **minore** | 🟡 `cieco_versioni.py coppie` (`verdetto_misurato`): una versione nuova di tre pezzi o più contro un monologo intero perde. Due casi su due nel primo voto |
 | `read-aloud-adulti.md` §2-bis | l'**ordine** del box di luogo: spazio e luce, cosa lo occupa, per ultima la cosa strana | — è una forma consigliata, non un divieto: un box che apre sulla cosa strana può essere la scelta giusta | ⚪ non applicabile |
 | `editorial-standards.md` | `**Read-aloud (pilastro lead).**` etichettato | **maggiore** | 🟢 congegno `regia etichettata **Read-aloud (X)**` |
 | `editorial-standards.md` | `**NOME (registro/tono):** *«battuta»*` | **maggiore** | 🟢 congegno `dialogo nella forma dichiarata` |
@@ -56,6 +59,7 @@
 | `pc-protagonism.md` | **nessun PG oltre il 40%** delle scene marcate; **≥1 scena** a testa | **maggiore** | 🟡 `misura_craft --spotlight` — indicatore: conta le **menzioni del nome**, non le scene marcate, che il repo non marca |
 | `consequence-echoes.md` | **≥1 eco armato** quando la finzione lo consente; **≥2** alla convergenza | **maggiore** | 🟡 congegno `eco / conseguenze a distanza` conta le **menzioni**, non gli echi armati e pagati |
 | `passate-redazionali.md` | **massimo una chiusa a effetto** per documento; massimo un tricolon | **minore** · `antitesi_ripetuta` | 🟢 `validate_prosa.py --documenti` (lotto D di PROSA-CHE-NON-SEMBRI-GENERATA) |
+| `italiano-nativo.md` §1 | l'italiano è **pro-drop**: niente pronome soggetto esplicito («Lui si voltò. Lui non disse niente.») se non per enfasi | **minore** | 🔴 non misurato — provato il 2026-10-18 (ADR-0093): il pronome tonico in posizione di soggetto dà **3 colpi** in tutti i box, e sono tutti e tre cambi di soggetto legittimi («Appoggia la testa sul petto di Hella […]. Lei alza una mano»). Precisione **0 su 3**: per distinguere l'enfasi dal calco serve sapere chi era il soggetto prima, e una regex non lo sa |
 | `italiano-nativo.md` §8 | almeno una **dislocazione a sinistra** o un **c'è presentativo** | **minore** | 🟡 `misura_craft --costrutto-italiano` — **281 box su 477 (59%)**, e il numero dice che è una **sovrastima**, non un difetto. Il «c'è» presentativo si riconosce con certezza; la **dislocazione a sinistra** («Il libro, l'ho letto») vuole sapere che *libro* è l'oggetto di *letto*, e una regex non lo sa: il pattern prende i casi col clitico dopo la virgola e perde gli altri. 🔴 **Misura e non pesa, apposta**: una norma *positiva* rilevata a metà produce penalità **false** su chi la rispetta in un modo che il pattern non vede. Contare male in negativo è peggio che non contare |
 | `italiano-nativo.md` §9 | i **tic dell'IA**: antitesi «non X: è Y», tricolon, chiuse a effetto | **minore** · `calco_dall_inglese` | 🟢 `validate_prosa.py` |
 | `italiano-nativo.md` §9.2 | il **trattino lungo come respiro**: sopra il 3% delle parole di un read-aloud è un tic | **minore** · `trattino_come_respiro` | 🟢 `validate_prosa.py` — 🐛 **misurata da settembre e mai registrata**, trovata dal cancello dei pesi il 2026-09-21: il controllo di copertura guardava che ogni *file* normativo fosse elencato, non che ogni *misura* avesse la sua riga |
@@ -154,8 +158,8 @@
 | | Norme registrate |
 |---|---:|
 | 🟢 misurate | 47 |
-| 🟡 misurate in parte, con il limite scritto | 30 |
-| 🔴 **non misurate, con la ragione scritta** | 20 |
+| 🟡 misurate in parte, con il limite scritto | 33 |
+| 🔴 **non misurate, con la ragione scritta** | 21 |
 | ⚪ non applicabili | 4 |
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se
