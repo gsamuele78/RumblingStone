@@ -13,6 +13,8 @@
 
 **Il capostipite della stirpe di Fauci di Palude**, mille anni prima della campagna. Aegis Fang ricorda il drago caduto sotto i suoi colpi, e non dice in quali mani `[CANONE — DM 2026-10-19, giro 4 n. 25]`. I PG lo affrontano nel viaggio a ~372 DR, e la Corona mostra le due immagini sovrapposte — questo drago adesso, e Fauci di Palude sopra una Hammerfist che brucia.
 
+Nel duello grida il nome del PG che sta per mordere, e non lo chiede: lo ha sentito di notte attraverso il corno di Grask, gemello della runa sulla sua scaglia, o al suo posto usa un epiteto `[CANONE — DM 2026-10-19]`. Il perché nel file d'arco, Scena 7, «Che cosa muove Skullcrusher».
+
 
 Questa voce esiste perché `build_monster_catalog.py` e `suggest_encounter.py` scansionano `Bestiario/` per popolare il pool degli incontri: senza, una creatura con statistiche scritte non è raggiungibile da nessuno strumento. Ogni modifica va fatta nel file d'arco.
 
