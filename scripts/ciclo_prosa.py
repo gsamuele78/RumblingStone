@@ -800,12 +800,17 @@ def confronta_cmd(rif: str, files: "list[Path]") -> int:
         mig = miglioramento(prima, dopo, f)
         sens = [sum(mc.dettagli_sensoriali(mc.corpo_del_box(b)) for b in mc.box_read_aloud(x))
                 for x in (prima, dopo)]
-        male = peggiora(mig) + confronta_fatti(prima, dopo)
+        # Un numero solo aggiunto (una CD scritta per il DM) non è un fatto
+        # cambiato: lo segnala, ma non fa peggiorare il file (giro 4 di ARC-07).
+        fatti_c = confronta_fatti(prima, dopo)
+        tolti = [x for x in fatti_c if ": tolti -," not in x]
+        aggiunti = [x for x in fatti_c if ": tolti -," in x]
+        male = peggiora(mig) + tolti
         male_tot += bool(male)
         a, b = mig["segnalazioni"]
         q = f"{mig['mqm'][0]} → {mig['mqm'][1]}" if mig["mqm"] else "—"
         righe.append(f"| {rel} | {a} → {b} | {q} | {sens[0]} → {sens[1]} | "
-                     f"{len(mig['impoveriti'])} | {'✗ ' + '; '.join(male) if male else '✓'} |")
+                     f"{len(mig['impoveriti'])} | {'✗ ' + '; '.join(male) if male else '✓'}{' · solo aggiunti: ' + '; '.join(aggiunti) if aggiunti else ''} |")
     print("\n".join(righe))
     print(f"{'✓' if not male_tot else '✗'} {len(files) - male_tot} file su {len(files)} senza peggioramenti contro {rif}")
     return 1 if male_tot else 0
