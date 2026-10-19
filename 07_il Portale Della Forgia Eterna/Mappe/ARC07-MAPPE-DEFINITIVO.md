@@ -621,8 +621,8 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
-17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
+17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   Re Thorek I, alle spalle dei PG
 18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
@@ -634,7 +634,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 1 ; V1 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
-@mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
+@mark 4 ; L17 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
 @mark 7 ; C5 ; La fucina originale, accesa da stanotte
@@ -670,8 +670,10 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
   Antenato** di H3-1, e il tunnel di fuga dietro di lei viene scavato dopo il
   372. La griglia del 1372 è H3-1 (`08_.../Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`).
 - **Posizioni iniziali**: PG a riga 16 (Thorik D16, Tordek G16, Artemis Q16, Hella
-  T16, con Durik accanto a U16); **Re Thorek I** in mezzo a loro, a L16, alle
-  spalle della prima fila. Skullcrusher a V1, quota ~45 m: il soffio è una linea
+  T16, con Durik accanto a U16); **Re Thorek I** alle loro spalle, a L17.
+  Sono le posizioni di riferimento: le sceglie il tavolo, e se non le sceglie
+  sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li prende tutti.
+  Skullcrusher a V1, quota ~45 m: il soffio è una linea
   di 30 m, quindi al round 1 prima scende entro 30 m dai PG (movimento), poi
   soffia (azione standard). Le 2 wyvern di scorta (W2, X2) entrano dal round 2
   (Scena 11, sidebar di scala). I Treant dell'alba, se uno viene richiamato,

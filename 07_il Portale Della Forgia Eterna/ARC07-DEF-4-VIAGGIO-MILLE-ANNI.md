@@ -203,9 +203,18 @@ Benedizioni ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]`.
 - **Full-attack** (se a terra/quota bassa): morso +30, 2 artigli +25, 2 ali +25,
   coda +25.
 - **Volo**: resta in quota, picchia e risale (Attacco in Volo) — punisce chi non
-  ha gittata/volo.
+  ha gittata/volo. Fra un turno e l'altro sta a circa 15 m.
+- ***Ghermire*** e ***Fluttuare***: li usa tutti e due. Morde in picchiata,
+  ghermisce e risale; da fermo a 15 m lascia cadere la preda o soffia sugli
+  altri, e chi è in bocca non ha il TS (Scena 11, «Ghermire e Fluttuare, come
+  li usa»).
+- **Dal round 2, due wyvern** (Appendice A.6) su chi tiene la corda e su chi
+  vola. Fuggono quando il drago fugge o muore. Il duello resta EL 14.
+- **La Catena**: la runa sotto la scaglia si colpisce contro **CA 41**, e il
+  primo colpo a segno la spezza: il drago se ne va (Scena 11).
+- **Aegis Fang**: il Bane contro Fauci qui **non vale**; la *Dragondoom* sì.
 - **Presenza Terrificante** CD 25 all'ingresso (Volontà o scossi), raggio 63 m.
-- **Danno massiccio** (regola della casa): un
+- **Danno massiccio** (regola SRD, attiva nelle regole della casa): un
   colpo o un soffio da 50 danni o più, Tempra CD 15 o si muore.
 - **«La Forgia ricorda»**: CONTA i colpi a segno (ferite ancestrali, N≤3) e
   l'esito → tabella B4 (§7). La Cintura di Tordek **rifiuta** di attivarsi qui.
@@ -303,8 +312,7 @@ descrivi tu in una riga e vai avanti: è un regalo, non un compito.
   scheda: **vulnerabile all'acido, +50%**. Il soffio del drago è l'unica cosa in
   questo viaggio che lo corrode davvero, e la giocatrice lo sa. Se Durik ha
   la runa di Zeth, prima si aumenta il danno del 50% e poi si tolgono i 20
-  della resistenza: l'SRD non dà l'ordine, e vale quello che gli fa più male
-  `[CANONE — DM 2026-10-19, giro 4 n. 23]`.
+  della resistenza: l'SRD non dà l'ordine, e vale quello che gli fa più male `[CANONE — DM 2026-10-19, giro 4 n. 23]`.
   Il resto, per il duello: Media, **102 pf**, CA **21**, RD 5/adamantio, morso
   **+15** (2d6+6) e 2 artigli **+13** (1d4+3), Tempra +11, Riflessi +10, Volontà
   +6. La scheda intera è quella consegnata alla giocatrice<!-- apparato -->
@@ -782,8 +790,7 @@ della prova qui sopra: Zog'tar di notte, il drago all'alba.
 - **Gancio**: Thorgrim riecheggia nell'affresco A3 della Sala della Forgia.
 - **I doni del re** se la fiducia è piena: le pozioni di cura, portate dal
   sergente. Il **Torque di Thorek I** non è fra questi: un torque non si manda
-  per mano d'altri, e il re lo dà di persona alla Scena 12, Momento 5 (§8 B)
-  `[CANONE — DM 2026-10-11]`.
+  per mano d'altri, e il re lo dà di persona alla Scena 12, Momento 5 (§8 B) `[CANONE — DM 2026-10-11]`.
 - ► **Esito**: *aiuti pieni / dimezzati*.
 
 🕯️ **Adesso metti l'orologio della notte sul tavolo** (§4): il consiglio ha già
@@ -952,7 +959,7 @@ l'odore di zolfo copre quello del carbone.
 | **Aspetto** | nana di mezza età senza sopracciglia, bruciate da anni. Un grembiule pieno di buchi rotondi, ognuno di una goccia diversa |
 | **Vuole** | finire le fiasche per le mura prima dell'alba. Ogni fiasca che vende è una fiasca in meno sulle scale |
 | **Suona** | ride quando qualcosa sta quasi per andare storto, e solo allora |
-| **Vende** | il fuoco dell'alchimista è finito, è tutto alle mura. Ha **tre bombe di fuoco** sue `[CANONE — DM 2026-10-07, Q3]`, e poi più niente: una fiasca da lanciare che fa una *palla di fuoco* da 5d6, Riflessi CD 14, raggio 6 m `[CANONE — DM 2026-10-19, giro 4 n. 15: si lancia come un'arma a spargimento dell'SRD, incremento 3 m, mirando a un'intersezione]`, a 750 mo, prezzata come una pozione di 3° livello al 5° dell'incantatore |
+| **Vende** | il fuoco dell'alchimista è finito, è tutto alle mura. Ha **tre bombe di fuoco** sue `[CANONE — DM 2026-10-07, Q3]`, e poi più niente: una fiasca da lanciare che fa una *palla di fuoco* da 5d6, Riflessi CD 14, raggio 6 m, a 750 mo, prezzata come una pozione di 3° livello al 5° dell'incantatore. Si lancia come un'arma a spargimento dell'SRD, incremento 3 m, mirando a un'intersezione `[CANONE — DM 2026-10-19, giro 4 n. 15]` |
 | **Eco** | le bombe sono una sua invenzione, e nel 1372 nessuno sa più farle così |
 
 - **HELLA — i Treant dell'alba.**<!-- storico --> *(Allineato al rito il 2026-09-24: la prima
@@ -965,7 +972,7 @@ l'odore di zolfo copre quello del carbone.
   fianco dell'orda. Costa **due** delle tre cariche del giorno, e la tacca della
   notte resta **una**: vegliare i semi che si aprono. È il beat di potere della
   druida risorta, e ha un prezzo: se Durik viene distrutto nel duello, resta
-  **una carica sola** per richiamarlo. Chiamarli insieme all'alba non spegne
+  **una carica sola** per richiamarlo, e torna per un'ora. Chiamarli insieme all'alba non spegne
   l'Evocazione per un mese: è l'unica eccezione che la scheda della Collana
   concede `[CANONE — DM 2026-10-12, D65]`.
   Se al rito Hella ha trovato la **ghianda
@@ -1005,8 +1012,8 @@ La regola del mese ha una sola eccezione, scritta nella scheda della Collana:
 i due Treant chiamati **insieme all'alba** di questa notte. Le tre cariche
 sono una sola riserva per i Treant e per Durik fino all'alba: quello che si
 spende alla tenda manca per il resto della notte, e all'alba i semi tornano
-tutti e tre, come dice la scheda della Collana in `DEF-3` §7
-`[CANONE — DM 2026-10-12, D65]`. Un Treant solo, chiamato alla tenda, non
+tutti e tre, come dice la scheda della Collana in `DEF-3` §7 `[CANONE — DM 2026-10-12, D65]`.
+Un Treant solo, chiamato alla tenda, non
 toglie quindi niente ai due dell'alba.
 
 > **Read-aloud (Andor lead) — le gallerie.** *Sotto la fucina il caldo finisce
@@ -1140,8 +1147,7 @@ tenetevelo: non ho tempo di pesarlo.»* **Che fate?**
   dell'SRD): allora apre il banco. Con la **fiducia piena** del consiglio parte
   già *amichevole* e la prova non serve. Se un PG porta **in vista** roba d'orchi (armi, insegne, pelli
   dipinte), parte *ostile*: sa delle tende là fuori. Una mano rossa dipinta,
-  presa nel 1372, a lei non dice niente: nel 372 la Mano Rossa non esiste
-  `[CANONE — DM 2026-10-07, Q26]`.
+  presa nel 1372, a lei non dice niente: nel 372 la Mano Rossa non esiste `[CANONE — DM 2026-10-07, Q26]`.
 - **Chi aiuta a smistare.** Un PG che si mette al banco con lei, **Artigianato
   (fabbricare armi) o Valutare CD 15**, le fa guadagnare un'ora, e lei lo ricambia con lo sconto del mestiere: **−10%**
   sul prezzo SRD delle armi e armature che il gruppo compra da lei. Il premio di
@@ -1177,8 +1183,8 @@ monete fanno mezzo chilo, come sempre; il pesatore della fucina le mette sulla
 bilancia e ne trattiene **una su dieci** per il disturbo `[CANONE — DM 2026-10-07,
 Q10]`. Sopra c'è la faccia di un re che nessuno conosce, e un nano la
 morde. Un PG che vuole farle passare per buone senza discussioni: **Raggirare
-contro Percepire Intenzioni** del pesatore, un esperto con **+8**
-`[CANONE — DM 2026-10-07, Q10]`. Se fallisce, qualcuno comincia a
+contro Percepire Intenzioni** del pesatore, un esperto con **+8** `[CANONE — DM 2026-10-07, Q10]`.
+Se fallisce, qualcuno comincia a
 chiedersi da quale regno vengano quattro stranieri che pagano in oro mai visto.
 
 **Comparse**
@@ -1370,8 +1376,8 @@ venduto:
   magiche per le guardie) lo paga il **forziere del re**, fino a **10.000 mo**
   in tutto, con le regole della tabella qui sopra;
 - il resto (gioielli, oggetti d'arte, magia che non combatte) lo compra il
-  pesatore **a metà prezzo, in gemme**, fino a **15.000 mo** in tutto
-  `[CANONE — DM 2026-10-07, Q8]`: le gemme i nani le hanno, le monete no;
+  pesatore **a metà prezzo, in gemme**, fino a **15.000 mo** in tutto `[CANONE — DM 2026-10-07, Q8]`:
+  le gemme i nani le hanno, le monete no;
 - nessun oggetto oltre il **limite d'acquisto di 2.500 mo**, da nessuno dei
   due, salvo le armi e le armature naniche d'adamantio, che il forziere del re
   compra anche oltre (tabella qui sotto).
@@ -1511,8 +1517,7 @@ bonus equivalente, 8.330 mo), finita ieri per la guardia del re, e sulla lama
 ha lo stesso disegno di brina dell'ascia di Re Thorek. È del re: la vende solo
 lui, e solo con la fiducia piena. Se la prendono i PG, una
 guardia reale fa l'alba con un'ascia comune, e alla Scena 10 è lei il nano con
-un nome che muore sulle mura. Nel 1372 nessun fabbro sa fare quel disegno
-`[CANONE — DM 2026-10-07, Q13]`.
+un nome che muore sulle mura. Nel 1372 nessun fabbro sa fare quel disegno `[CANONE — DM 2026-10-07, Q13]`.
 
 **Quello che nel 372 non esiste ancora.** Il DM non deve sapere quando è nato
 un incantesimo o un oggetto. La timeline è **auto-consistente** (§6): quello che
@@ -1613,8 +1618,8 @@ blocchi** da 200 m.
 - **Quanto dura l'invisibilità.** Le pozioni del re durano 12 minuti. Un nano in
   armatura, a passo furtivo, fa 3 m a round: 12 minuti coprono circa **360 m**,
   cioè il primo blocco intero e quasi tutto il secondo. Il secondo, quindi, si
-  tira già a Nascondersi, come vuole la regola del blocco in cui finisce
-  `[CANONE — DM 2026-10-18]`, a meno che qualcuno abbia altra invisibilità da
+  tira già a Nascondersi, come vuole la regola del blocco in cui finisce `[CANONE — DM 2026-10-18]`,
+  a meno che qualcuno abbia altra invisibilità da
   spendere. I minuti corrono anche sui blocchi ritentati: un blocco fallito
   consuma la sua parte d'invisibilità come uno riuscito. Una pozione comprata alla cappella dura
   3 minuti, circa 90 m: mezzo blocco. Non ne toglie uno, e il blocco in cui
@@ -1653,8 +1658,7 @@ blocchi** da 200 m.
 
 **Come si sorveglia un campo di diecimila** `[CANONE — DM 2026-09-27: i lupi
 girano fuori, dentro niente lupi]`. I numeri sono una proposta costruita sulle
-organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg)
-`[CANONE — DM 2026-10-07, Q16]`.
+organizzazioni dell'SRD (una tribù goblin ha da 10 a 24 worg) `[CANONE — DM 2026-10-07, Q16]`.
 
 | Chi | Quanti | Dove | Cosa sente |
 |---|---|---|---|
@@ -1783,10 +1787,11 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
   per il duello senza spendere cariche. **Hella** è druida di 12° livello: può
   volare da aquila con la forma selvatica (SRD) e lasciare la sua pozione a chi
   torna in volo. Richiamarlo prima, alla tenda, costa
-  una carica dell'Evocazione dei Guardiani; richiamato, resta con Hella come
-  sempre `[CANONE — DM 2026-10-12, D74]`. È una carica della notte: all'alba
+  una carica dell'Evocazione dei Guardiani; richiamato dal seme, e non distrutto,
+  resta con Hella come sempre `[CANONE — DM 2026-10-12, D74]`. È una carica della notte: all'alba
   i semi tornano tutti e tre (Scena 5), e dopo i due Treant dell'alba ne
-  resta una per richiamarlo nel duello.
+  resta una: se Durik è distrutto nel duello, lo riporta subito, per un'ora
+  (scheda della Collana, `DEF-3` §7).
 - **Il ritorno** `[CANONE — DM 2026-09-26]`. Si torna in volo finché
   bastano le pozioni e le pergamene prese nelle avventure di prima. Quando
   finiscono, o si scende e si va a piedi, o **Artemis porta** chi resta a terra,
@@ -1897,14 +1902,13 @@ e il drago arriva sull'assalto.
   successo in meno sulle mura, e il drago non arriva, perché nessuno l'ha
   chiamato `[CANONE — DM 2026-10-12, D74]`. Vale anche per la bolla di
   Balvar: se combatte con Zog'tar e accende il suo *silenzio* (P13, raggio
-  6 m), Grask a N15 ci sta dentro, e il corno suonato lì non chiama il drago
-  `[CANONE — DM 2026-10-19, giro 4 n. 13]`.
+  6 m), Grask a N15 ci sta dentro, e il corno suonato lì non chiama il drago `[CANONE — DM 2026-10-19, giro 4 n. 13]`.
 - **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
   finiti. Chi riparte in volo subito è dentro le mura prima di lui: un
   chilometro in armatura, a 12 m col doppio movimento, sono circa 42 round, e
-  il drago ne mette 70
-  `[CANONE — DM 2026-10-12, D74]`. Gira sul campo e li cerca: si gioca il ritorno a piedi della Scena 8 a
+  il drago ne mette 70 `[CANONE — DM 2026-10-12, D74]`.
+  Gira sul campo e li cerca: si gioca il ritorno a piedi della Scena 8 a
   Nascondersi **CD 26** (22, più 4 per il corno), e al primo blocco fallito li
   trova; chi gli passa entro 18 m lo sente anche invisibile. Se li trova, soffia
   una volta e se ne va **sulle colline**, come ogni notte, e torna solo al corno
@@ -1994,8 +1998,7 @@ porta un *glifo di interdizione* legato ai nani, 5d8 sonori con Riflessi
 CD 18, e il boato è l'allarme. Il telo est, a sinistra per chi arriva da
 nord, non ha niente. Grask è fuori, a due quadretti dal seggio: sveglio
 finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª. Lo stato si
-fissa all'atterraggio, e la tacca della trattativa non lo cambia
-`[CANONE — DM 2026-10-18, G2-29]`.
+fissa all'atterraggio, e la tacca della trattativa non lo cambia `[CANONE — DM 2026-10-18, G2-29]`.
 
 | Come entrano | Cosa succede |
 |---|---|
@@ -2086,7 +2089,7 @@ sui corsari — il banco l'aveva già capito.)*<!-- /apparato -->
 | Com'è andata con lui | Nella Scena 8 |
 |---|---|
 | **Recuperato**: il nipote, o il patto *«dite che c'ero»* accettato | non combatte. Resta sullo sgabello e incide. Il suo bersaglio diventa il drago: al primo round dice ai PG dov'è la runa della Catena e come si spezza, e la riga «Individuano la runa» qui sotto è già fatta |
-| **Trattativa aperta**, nessuno l'ha minacciato | il primo round guarda. Dal secondo sta con chi sta vincendo. `[CANONE — DM 2026-10-19, giro 4 n. 8]`: vince chi ha tolto più di metà dei pf all'altra parte, e Zog'tar se nessuno ci è riuscito. Con i PG non combatte il generale in faccia: *dissolvi magie* sui suoi, e la *barriera di lame* fra le guardie e il gruppo |
+| **Trattativa aperta**, nessuno l'ha minacciato | il primo round guarda. Dal secondo sta con chi sta vincendo `[CANONE — DM 2026-10-19, giro 4 n. 8]`: vince chi ha tolto più di metà dei pf all'altra parte, e Zog'tar se nessuno ci è riuscito. Con i PG non combatte il generale in faccia: *dissolvi magie* sui suoi, e la *barriera di lame* fra le guardie e il gruppo |
 | **Minacciato, o attaccato** | combatte con Zog'tar: vedi «Come si combatte» più sotto |
 
 **Quanto pesa lo scontro.** Zog'tar (GS 15), Balvar (GS 13), le quattro
@@ -2257,8 +2260,8 @@ più fragile al round 2, **prima** del silenzio, perché tutti e due hanno la
 componente verbale. Chi fallisce il TS contro *slay living* muore davvero,
 come nell'SRD: la cattura del Q29 vale per chi cade a 0 pf, non per chi muore.
 Si torna con *rianimare morti* alla cappella, che ha l'unico diamante della
-fortezza (5.450 mo, Scena 5), o con *reincarnazione*, se Hella l'ha preparata
-`[CANONE — DM 2026-10-18, G2-25]`. Dal round 3 attiva la runa del *silenzio* su di sé e usa
+fortezza (5.450 mo, Scena 5), o con *reincarnazione*, se Hella l'ha preparata `[CANONE — DM 2026-10-18, G2-25]`.
+Dal round 3 attiva la runa del *silenzio* su di sé e usa
 solo quello che non parla: la *blade barrier* del palo, che è una runa, e il
 martello. Se nella tenda qualcuno vola, al round 1 lancia *comando superiore*
 al posto di *righteous might*, e al round 2 *slay living* come sopra, oppure
@@ -2277,8 +2280,7 @@ non alza la testa dalla lastra]`. Se il tavolo la legge subito:
 > freccia, verso nord.*
 
 Il senso si decide in ARC-09. Il nome è quello del nipote, la freccia no:
-cosa c'è a nord non lo sa ancora nessuno, nemmeno il master
-`[CANONE — DM 2026-10-12, D64]`.
+cosa c'è a nord non lo sa ancora nessuno, nemmeno il master `[CANONE — DM 2026-10-12, D64]`.
 
 #### Se lo divinano: la natura di Balvar `[CANONE — DM 2026-10-18]`
 
@@ -2389,7 +2391,7 @@ motivo per cui la Scena 7 viene prima.
     obbedisce di nuovo a ogni suo turno: da prono agisce, attacca con le
     penalità del prono e lancia, ma non si rialza (SRD, *comando*). Chi vola **scende fino a
     terra** nel suo turno, senza danni da caduta, e si mette prono
-    (l'SRD non parla di chi vola: è una scelta del DM, `[CANONE — DM 2026-10-19, giro 4 n. 24]`): sotto un telo
+    (l'SRD non parla di chi vola: è una scelta del DM `[CANONE — DM 2026-10-19, giro 4 n. 24]`): sotto un telo
     alto 6 m ci arriva sempre. Se fosse troppo in alto per toccare terra in un
     turno, l'incantesimo fallisce (SRD). Thorik è immune
     (Mente Vuota della Corona), e per la stessa ragione lo è alla Presenza
@@ -2434,20 +2436,20 @@ motivo per cui la Scena 7 viene prima.
   corrono fuori a gridare, ed è l'allarme anche se Grask dorme. Per questo un
   Zog'tar ucciso in silenzio vuole prima le guardie a terra, o una bolla di
   *silenzio* sulla tenda.
-- **Round 2-3**: carica il bersaglio che fa più danni, **Colpo Possente**
+- **Round 2-3**: carica il bersaglio che fa più danni, **Attacco Poderoso**
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
   normale) non alza l'Attacco Poderoso: usa il **Colpo Devastante** e lo
   scaglia lontano, contro il palo o fuori dal telo. Un nano scagliato contro
-  il telo del seggio (L14-N14) fa scattare il glifo legato ai nani
-  `[CANONE — DM 2026-10-19, giro 4 n. 14]`, e il boato è un allarme. Separa il gruppo e lascia
+  il telo del seggio (L14-N14) fa scattare il glifo legato ai nani `[CANONE — DM 2026-10-19, giro 4 n. 14]`,
+  e il boato è un allarme. Separa il gruppo e lascia
   vivo il bersaglio. Se Artemis lo martella, si gira su di lui.
-- **Danno massiccio** (regola della casa). Con
-  il Colpo Possente pieno o un critico l'ascia supera spesso i 50 danni: il
+- **Danno massiccio** (regola SRD, attiva nelle regole della casa). Con
+  l'Attacco Poderoso pieno o un critico l'ascia supera spesso i 50 danni: il
   bersaglio tira Tempra CD 15 o muore. La cattura del Q29 vale per chi cade a
   0 pf, non per chi fallisce questo TS.
 - **Soglia 30% pf**: combatte disperato, cerca di **portare un PG con sé** nella
-  morte (un ultimo Colpo Possente pieno −10/+20).
+  morte (un ultimo Attacco Poderoso pieno, −15/+30, Appendice A.2).
 - **Se è pre-allertato** (il corridore è arrivato, o c'è stato un allarme):
   è in piedi con l'ascia in mano, le quattro guardie davanti al seggio, e Grask
   è sveglio fuori dalla tenda col corno pronto. Niente round di sorpresa, e
@@ -2484,8 +2486,7 @@ L'**Occhio di Ossidiana** è un artefatto **maledetto** e Zog'tar lo sa a metà:
 il prezzo è che la luce divina lo brucia. Chi lo capisce — Sapienza Magica
 **CD 20**, oppure **gratis** se hanno addosso la benedizione dei chierici di
 Hammerfist (fiducia piena al consiglio, Scena 4) e le vedono reagire — può **mostrargliela invece di colpirlo**:
-Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano
-`[regola della casa: nell'SRD Intimidire si tira contro il livello del bersaglio]`.
+Intimidire **CD 22** con la Corona scoperta o la Luce di Lathander in mano `[regola della casa: nell'SRD Intimidire si tira contro il livello del bersaglio]`.
 Non è un tiro salvezza, quindi la Volontà Indomita di Zog'tar non entra.
 - **Riesce** → Zog'tar **arretra**, e arretrando esce dalla tenda davanti alle
   sue guardie. Perde la faccia, e con lei il campo: l'orda all'alba combatte a
@@ -2588,8 +2589,8 @@ postierla, che all'alba Durin tiene aperta per gli esploratori `[CANONE — DM 2
 round **1d4+2** del duello, e da lì vale la riga «Balvar la scioglie» della
 Scena 7.
 
-Se invece i PG se lo **portano in volo**, cambia questo
-`[CANONE — DM 2026-10-12, D66]`. La postierla e la notte in catene valgono
+Se invece i PG se lo **portano in volo**, cambia questo `[CANONE — DM 2026-10-12, D66]`.
+La postierla e la notte in catene valgono
 anche se rientra **a piedi** con loro `[CANONE — DM 2026-10-12, D71]`:
 
 - **Il peso.** Un nano in armatura completa di mithral fa circa 85 kg. Lo
@@ -2706,7 +2707,7 @@ con un **terrore reverenziale mal mascherato**.
 |---|---|---|---|
 | **Lo ignorano / lo lasciano andare** | — | Vatore svanisce nell'ombra col Sigillo. | Sal esiste «intatto» in ARC-09 — nessun vantaggio, ma nessun sospetto reciproco. |
 | **Gli parlano** (Percepire Intenzioni o Diplomazia CD 18; se fallisce, vale la riga di sopra: se ne va) | 18 | Vatore, terrorizzato, lascia sfuggire un frammento: *«Voi non morite. L'ho letto. Nelle cronache che non sono ancora scritte.»* Poi fugge. | In ARC-09 Sal **esita** un istante di fronte a loro (li ha già temuti mille anni fa): +2 dei PG a Percepire Intenzioni e Diplomazia contro Sal la prima volta. |
-| **Lo derubano** (Rapidità di Mano CD 22) | 22 | Gli sfilano il **Sigillo di Ossidiana** (o parte del bottino). Se la prova fallisce, se ne accorge: niente ferita, ma il **Cronolito** lo porta via come nella riga «Lo feriscono», e il Sigillo va con lui | In ARC-09 Sal si presenta **senza** un asso che avrebbe avuto (il DM toglie a Sal un oggetto/piano — es. l'Olio di Sabotaggio parte scarico). |
+| **Lo derubano** (Rapidità di Mano CD 22, solo con i gradi: «Chi può derubarlo», qui sotto) | 22 | Gli sfilano il **Sigillo di Ossidiana** (o parte del bottino). Se la prova fallisce, se ne accorge: niente ferita, ma il **Cronolito** lo porta via come nella riga «Lo feriscono», e il Sigillo va con lui | In ARC-09 Sal si presenta **senza** un asso che avrebbe avuto (il DM toglie a Sal un oggetto/piano — es. l'Olio di Sabotaggio parte scarico). |
 | **Lo feriscono** (attacco riuscito) | — | Vatore urla, sanguina, attiva il **Cronolito** e sparisce nel tempo. | **Sincronizzazione**: nel 1372 **Sal sanguina nello stesso punto**, all'improvviso, davanti a chi lo osserva (la maschera vacilla) — i PG lo **riconoscono** come «l'uomo del passato» se collegano i punti. |
 | **Cercano di ucciderlo** | scontro breve | Non muore qui (il Cronolito lo salva a 1 pf: *deve* sopravvivere per esistere nel 1372 — paradosso auto-consistente). | Sal in ARC-09 porta una **cicatrice antica** e un odio personale: sa che loro ci hanno provato. Nemico più cattivo, ma più fragile emotivamente. |
 
@@ -2735,6 +2736,15 @@ mano. Un incantesimo ostile senza danno (*charme*, *blocca persone*) vale come
 un colpo: nessun tiro salvezza, e alla fine del suo turno il Cronolito lo porta
 via `[CANONE — DM 2026-10-12]`.
 
+**Chi può derubarlo.** Rapidità di Mano si usa solo con i gradi: senza, la
+prova è una prova di Destrezza e non supera CD 10 (SRD, *Sleight of Hand*).
+Nessuna classe del gruppo la ha come abilità di classe, e la scheda di Tordek
+al 12° non ha gradi: chiedi al tavolo, prima della scena, se qualcuno li ha
+comprati. Per chi non li ha, il fagotto si strappa di mano: lo afferra chi
+gli mette le mani addosso, Vatore attiva il Cronolito come quando lo tengono,
+e chi stringeva il fagotto se lo ritrova in mano. Vale la riga «Lo derubano»
+riuscita, e Vatore sa chi è stato `[INFERRED — needs DM confirmation]`.
+
 **Se uno di loro porta il segno** (la cura con la cera nera, Scena 5). Vatore
 guarda quel polso prima di quel volto. Per lui quel PG è della gilda, e il
 terrore diventa complicità: parla a lui per primo, a voce bassa, e con lui la
@@ -2745,9 +2755,8 @@ in ARC-09 Sal lo cerca su quel polso.
 tende. Lo vedono dall'alto, un incappucciato che si ferma fra due tende e
 stringe un fagotto, e l'Anello di Artemis diventa gelido. Se scendono, la
 scena comincia da dove atterrano; se no, Vatore è sulle mura all'alba, nel
-caos, come se il tavolo avesse fretta (qui sotto).
-`[CANONE — DM 2026-10-19, giro 4 n. 11]`: compare dopo il primo box della Scena
-10, e lì il suo urlo non costa successi, perché l'assalto è già cominciato.
+caos della Scena 10: compare dopo il primo box, e lì il suo urlo non costa
+successi, perché l'assalto è già cominciato `[CANONE — DM 2026-10-19, giro 4 n. 11]`.
 
 **Se passano invisibili.** Vatore non li vede: nessuno dei suoi sensi li
 coglie, e il Sigillo non glieli mostra. Li **sente**, se fanno rumore
@@ -3038,7 +3047,7 @@ l'iniziativa parla per primo, ma la descrizione segue sempre questo ordine)*:
 | 2 | **TORDEK** — colpisce | il pugno prende l'ala dove l'osso è sottile: un suono secco, e la picchiata si sbilancia | il drago si alza di un metro e il colpo passa sotto. Tordek finisce in avanti e per un momento **non vede dov'è** |
 | 3 | **ARTEMIS** — sceglie il bersaglio | il blast arriva **all'occhio**, e per un round il drago tiene la testa girata di tre quarti | l'ombra si apre troppo presto. Il drago la vede arrivare e **ricorda da dove è partita** |
 | 4 | **HELLA** — cambia il campo | le radici salgono dal cortile e chiudono una via di fuga: il drago **deve** restare | la pietra non risponde — qui la terra è giovane e non la conosce. Hella sente l'assenza, e le costa |
-| 4-bis | **DURIK** — si mette in mezzo | il drago deve scavalcarlo per arrivare a Hella, e scavalcarlo gli costa il turno di picchiata | il soffio lo prende in pieno: la pietra **fuma**, e l'acido gli fa il 50% in più. Durik non arretra |
+| 4-bis | **DURIK** — si mette in mezzo | il drago deve scavalcarlo per arrivare a Hella, e scavalcarlo gli costa il turno di picchiata | il soffio lo prende in pieno: la pietra **fuma**, e l'acido gli fa il 50% in più. Durik non arretra. Senza runa il soffio gli fa in media più di 50 danni: danno massiccio, Tempra CD 15 (lui +11) o torna polvere, e la carica rimasta dopo i Treant dell'alba lo riporta per un'ora (Scena 5) |
 
 **Chiusura di round — l'avanzamento visibile.** Una riga che dica cosa è
 **cambiato**, non quanti pf restano: la prima scaglia che manca, il fiato che si
@@ -3090,9 +3099,11 @@ cambia davvero.
     artiglio comincia una lotta come con la presa migliorata: azione gratuita,
     nessun attacco di opportunità, prova di lotta **+40**. Se tiene la preda
     solo con la bocca, la prova è a −20 ma lui non è in lotta, e continua a
-    combattere. A ogni prova di lotta vinta nei round dopo la preda riprende
-    il danno del morso. Il danno automatico di *Ghermire* vale solo contro chi
-    è tre taglie più piccolo, quindi non contro i PG Medi. Chi è nella sua
+    combattere. **Contro un PG Medio vale una regola sola**: nei round dopo
+    tira la lotta con la sola bocca (+20), e ogni prova che vince fa il danno
+    del morso, 2d8+10 (SRD, presa migliorata). Altro danno non c'è: quello
+    automatico di *Ghermire* vale da tre taglie in giù, e il PG Medio è due
+    taglie sotto un drago Enorme. Chi è nella sua
     bocca **non ha il TS sui Riflessi contro il soffio**. La lascia cadere
     con un'azione gratuita, o la scaglia con un'azione standard: vola per
     1d6 × 3 m e prende 1d6 danni ogni 3 m; se la scaglia in volo, la preda
@@ -3108,13 +3119,15 @@ cambia davvero.
     4,5-6 m ha occultamento (20%), chi è a 7,5 m o più occultamento totale
     (50%), e per lanciare un incantesimo nella nube serve Concentrazione
     **CD 21**. La nube spegne le fiamme piccole non magiche.
-  - **La sequenza.** In picchiata, con Attacco in Volo, morde chi lo ha
-    ferito di più; se colpisce lo ghermisce e risale con lui nello stesso
-    movimento. Al turno dopo si ferma a 15 m e sceglie: lo lascia cadere
-    (5d6 di caduta), oppure, se il gruppo sotto è fitto, lo tiene in bocca e
-    soffia sugli altri, e la preda prende il soffio senza TS. Scende sotto i
-    6 m solo per l'attacco completo contro chi lo ha inchiodato con le corde,
-    e la nube copre la sua ritirata. Chi è in bocca può liberarsi con una
+  - **La sequenza.** In picchiata, con Attacco in Volo, morde il bersaglio
+    di «Chi sceglie», qui sotto; se colpisce lo ghermisce e risale con lui
+    nello stesso movimento. Al turno dopo si ferma a 15 m e sceglie: lo lascia
+    cadere (5d6 di caduta), oppure, se il gruppo sotto è fitto e il soffio è
+    tornato, lo tiene in bocca e soffia sugli altri, e la preda prende il
+    soffio senza TS. Scende sotto i 6 m solo per l'attacco completo contro chi
+    lo ha inchiodato con le corde: in quel round è a terra e non fluttua,
+    quindi la nube non c'è. La nube viene dopo, quando torna a fluttuare basso
+    per ritirarsi. Chi è in bocca può liberarsi con una
     prova di lotta o di Artista della Fuga contro il suo +20, che è il +40
     con il −20 della presa a una parte sola.
   *Momento Artemis*: in volo (Ali d'Ombra) è l'unico che lo raggiunge alla pari.
@@ -3567,11 +3580,11 @@ della Corona `[CANONE — DM 2026-09-30, D16]`.
 | **Scena 11: Skullcrusher (GS 14)** | boss | **1.460** (tabella DMG: 5.850 per un gruppo di 13°, diviso per 4) `[CANONE — DM 2026-10-07, D40]` |
 | Scena 11: le 2 wyvern (GS 6), se ci sono | combattimento | **≈ 160** (tabella DMG: 325 l'una per un gruppo di 13°, 650 in tutto, diviso per 4); il duello sale a **1.625** a testa. EL 14, invariato `[CANONE — DM 2026-10-19, giro 4 n. 16]` |
 | Scene 12-13: il Rituale e il Rubino | premio di storia maggiore | 800 |
-| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~7.610/PG** |
+| **TOTALE beat** (la tenda intera, senza pattuglia né lupi) | | **~7.610/PG**; **~7.775/PG** con le wyvern, che a questo gruppo toccano (duello a 1.625) |
 
 > Sommato a Terra (~11.600) + Affreschi (~1.900) + Resurrezione (~1.900), il
-> party **non** arrivava al 14° in questo master: ci arrivava **dopo `DEF-5`**
-> `[CANONE — DM 2026-10-07, D40]`. Con le Scene 6-8 alla tabella il beat
+> party **non** arrivava al 14° in questo master: ci arrivava **dopo `DEF-5`** `[CANONE — DM 2026-10-07, D40]`.
+> Con le Scene 6-8 alla tabella il beat
 > sale di circa 1.250 a testa: se basti per il 14° prima del ritorno al 1372 dipende dai
 > PX con cui il gruppo è partito, che il master non fissa. Le parti giocate non
 > si ritoccano.
@@ -3601,8 +3614,7 @@ campo nemico non dà tempo infinito, e il conto lo fa l'allarme. Stanotte non
 lo compra nessuno: Gunnvor non prende niente d'orchi, e il forziere del re ha
 già speso quello che aveva. Si vende nel 1372, a metà, al banco di ARC-08.
 L'armatura di Zog'tar è preda presa ai nani: Re Thorek la riconosce, e se i PG
-gliela portano la riprende in cambio della sua parola, non di monete
-`[CANONE — DM 2026-10-12, D74]`.
+gliela portano la riprende in cambio della sua parola, non di monete `[CANONE — DM 2026-10-12, D74]`.
 
 - **Se qualcuno ha gridato o il corno ha suonato**, le ronde arrivano in
   **1d4+2 round**, gli squadroni in **2d4+2** e il drago in 70 (Scena 8). In
@@ -3614,8 +3626,8 @@ gliela portano la riprende in cambio della sua parola, non di monete
   tempo di spogliare la tenda, e costa **una tacca** (§4). Il peso viaggia con
   chi lo porta: l'armatura di Zog'tar sono 25 kg di mithral, quella di Balvar
   12,5, ogni completa delle guardie 25. Chi esce carico di ferro torna con le
-  regole del carico dell'SRD **e** con la penalità del ferro che sbatte
-  `[CANONE — DM 2026-10-12, D64]`: **−2** a Muoversi Silenziosamente e a
+  regole del carico dell'SRD **e** con la penalità del ferro che sbatte `[CANONE — DM 2026-10-12, D64]`:
+  **−2** a Muoversi Silenziosamente e a
   Nascondersi per ogni armatura portata e non indossata, sul blocco del
   ritorno `[CANONE — DM 2026-10-12, D72]`.
 - **Il buco portatile**, se il gruppo ne ha uno. Limite di peso non ne ha, ma ha
@@ -3719,13 +3731,12 @@ resta vivo (Vatore/Sal).
 
 ### A.1 · Skullcrusher il Nero (Scena 11)
 
-`[CANONE — DM 2026-09-27]`: un **drago nero adulto maturo** dell'SRD, con la
+Skullcrusher è un **drago nero adulto maturo** dell'SRD `[CANONE — DM 2026-09-27]`, con la
 resistenza agli incantesimi e la lista degli incantesimi. I numeri sono quelli
 della tabella del drago nero (d20srd.org, *Dragon, True*); talenti, abilità e
 incantesimi conosciuti sono quelli dell'SRD. Sopra c'è il template **Avanzato**
 di PF1e, nella versione completa (+4 a tutte le caratteristiche, +2 di armatura
-naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14
-`[CANONE — DM 2026-10-07, Q37]`.
+naturale), **senza alzare il GS**: vale come un GS 15 e si conta come 14 `[CANONE — DM 2026-10-07, Q37]`.
 
 ```
 ============================================================
@@ -3811,8 +3822,8 @@ Il vero climax resta Fauci nel 1372: qui si semina.
   invocazioni di Artemis la subiscono come gli incantesimi.
 - **RD 10/magia**: le armi dei PG sono magiche; le balestre delle mura, no.
 - ***Corrompere l'acqua*** può rovinare le pozioni in tasca a un PG (TS
-  dell'oggetto sulla Volontà del portatore). Lo usa al primo round se vede
-  qualcuno bere.
+  dell'oggetto sulla Volontà del portatore). Lo usa al primo turno libero dal
+  soffio, se vede qualcuno bere (Scena 11, round 2-3).
 
 ### A.1-bis · Skullcrusher Vecchio, per il party straripante `[CANONE — DM 2026-10-12, D60]`
 
@@ -3848,8 +3859,8 @@ A.1, Riflessi Fulminei e Volontà di Ferro compresi; il nono, che il Vecchio ha
 in più, è Allerta, che non cambia i numeri del combattimento `[CANONE — DM 2026-10-12, D71]`. Fugge a ⅓ dei pf come in A.1:
 circa **112 pf**. Gli incantesimi conosciuti
 in più rispetto all'adulto maturo (due di 3° livello) li sceglie il DM dalla
-lista dello stregone: *dissolvi magie* e *lentezza*
-`[CANONE — DM 2026-10-12, D64]`. PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
+lista dello stregone: *dissolvi magie* e *lentezza* `[CANONE — DM 2026-10-12, D64]`.
+PX alla tabella DMG: circa 12.600 per un gruppo di 14°,
 cioè **≈ 3.150 a testa**.
 
 - Boost log: 2026-10-12 — drago nero **Vecchio** dell'SRD invece dell'adulto maturo, con il template Avanzato PF1e completo — GS 16 → 17 — solo per il party straripante di 14°, dove EL 17 = APL+3; il DM vuole che la riga renda il duello più duro, non più facile.
@@ -3979,10 +3990,9 @@ non sono nel blocco, e `test_copertura_scene.py` li confronta a parte.
 ### A.5 · Re Thorek I e Thorgrim Barbadiferro (Scena 4)
 
 Non combattono. Re Thorek I è un Guerriero 16 senza statblocco completo; come
-bersaglio del drago vale la soglia a colpi della Scena 11, «Il re»
-`[CANONE — DM 2026-10-18, G2-08]`;
+bersaglio del drago vale la soglia a colpi della Scena 11, «Il re» `[CANONE — DM 2026-10-18, G2-08]`;
 Thorgrim è un vecchio, vivo e fragile, che non combatte. Se il tavolo li porta in combattimento, è una
-scelta del DM e va segnata come `[CANONE — DM 2026-10-07, Q38]`.
+scelta del DM, e va segnata nel registro della serata `[CANONE — DM 2026-10-07, Q38]`.
 
 ### A.6 · Le creature del campo (Scena 6)
 
@@ -4170,8 +4180,8 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
 15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG e Re Thorek I
-17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
+17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   Re Thorek I, alle spalle dei PG
 18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
@@ -4183,7 +4193,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 1 ; V1 ; Skullcrusher (quota ~45 m)
 @mark 2 ; D16 ; Thorik
 @mark 3 ; G16 ; Tordek
-@mark 4 ; L16 ; Re Thorek I (8 pf se la Scena 10 è andata male)
+@mark 4 ; L17 ; Re Thorek I (8 pf se la Scena 10 è andata male)
 @mark 5 ; Q16 ; Artemis
 @mark 6 ; T16 ; Hella, con Durik accanto
 @mark 7 ; C5 ; La fucina originale, accesa da stanotte

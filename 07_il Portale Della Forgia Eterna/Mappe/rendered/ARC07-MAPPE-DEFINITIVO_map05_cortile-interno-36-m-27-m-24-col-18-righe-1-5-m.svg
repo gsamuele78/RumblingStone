@@ -264,15 +264,15 @@
 <ellipse cx="229.4" cy="516.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="228.0" cy="514.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="228.0" cy="514.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
-<ellipse cx="369.4" cy="516.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="368.0" cy="514.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="368.0" cy="514.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="509.4" cy="516.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="508.0" cy="514.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="508.0" cy="514.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="593.4" cy="516.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="592.0" cy="514.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="592.0" cy="514.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<ellipse cx="369.4" cy="544.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="368.0" cy="542.0" r="10.36" fill="url(#g_1d6fd8)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="368.0" cy="542.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <ellipse cx="369.0" cy="573.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_door" x="354" y="556" width="28" height="28"/>
 <ellipse cx="397.0" cy="573.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -329,8 +329,8 @@
 <text x="152.4" y="509" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
 <circle cx="236.4" cy="505.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
 <text x="236.4" y="509" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
-<circle cx="376.4" cy="505.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
-<text x="376.4" y="509" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
+<circle cx="376.4" cy="533.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
+<text x="376.4" y="537" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
 <circle cx="516.4" cy="505.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
 <text x="516.4" y="509" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
 <circle cx="600.4" cy="505.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
@@ -369,7 +369,7 @@
 <text x="68" y="685" font-size="11" fill="#3b2e1e">G16 — Tordek</text>
 <circle cx="54" cy="696" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="699.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
-<text x="68" y="700" font-size="11" fill="#3b2e1e">L16 — Re Thorek I (8 pf se la Scena 10 è andata male)</text>
+<text x="68" y="700" font-size="11" fill="#3b2e1e">L17 — Re Thorek I (8 pf se la Scena 10 è andata male)</text>
 <circle cx="54" cy="711" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="714.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
 <text x="68" y="715" font-size="11" fill="#3b2e1e">Q16 — Artemis</text>

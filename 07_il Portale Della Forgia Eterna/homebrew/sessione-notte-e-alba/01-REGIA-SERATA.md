@@ -22,7 +22,7 @@
 | Atto | Cosa | Master | Tre ore | Intera | Si consegna |
 |---|---|---|---:|---:|---|
 | **0** | Prima di cominciare | questa pagina, e il box in testa al booklet | 10 | 10 | ✉ gli echi, uno a testa · ✉ le dieci boccette |
-| **I** | Le ultime scelte nella fortezza | questa regia §2, poi `DEF-4` §4 l'orologio e Scena 5 | 15 | 20 | — |
+| **I** | Le ultime scelte nella fortezza | questa regia §2, poi `DEF-4` §4 l'orologio e Scena 5 | 15 | 20 | ✉ il contratto del Seme, solo dopo il box dell'ora della pergamena (cap. II); se il Seme si rinvia, resta nel volume |
 | **II** | Il campo, andata e ritorno | `DEF-4` Scene 6-9 | 90 | 115 | — |
 | — | Pausa | | 10 | 15 | |
 | **III** | L'alba | `DEF-4` Scene 10 e 11 | 75 | 90 | — |
@@ -33,8 +33,8 @@ quella intera. Il ritorno dalla tenda è dentro l'Atto II. La differenza sta in
 due scelte, scritte sotto ogni atto alla voce **«Per stare nelle tre ore»**: il
 mare di tende a montaggio e il duello con la regia veloce se il tavolo è
 stanco. Per stare davvero nelle tre ore si tolgono altri 25 minuti, in
-quest'ordine: il Seme rinviato al 1372 (dieci minuti), poi il duello con la
-regia veloce dal primo round invece che dal terzo. **Balvar e Zog'tar non si
+quest'ordine: il Seme rinviato al 1372 (dieci minuti), poi il duello in tre
+scambi, `DEF-4` Appendice C.3, al posto della Scena 11. **Balvar e Zog'tar non si
 tagliano**: sono le due scene che cambiano il duello.
 
 **Le immagini e la musica**, nell'ordine in cui servono:
@@ -59,7 +59,8 @@ vola, quindi lo skill challenge a piedi si apre solo se scendono.
 |---:|---|
 | 10 | questa regia, per intero |
 | 5 | `DEF-4` §4, l'orologio e la tabella d'uscita |
-| 8 | `DEF-4` Scena 6: la variante dall'alto, le rune di Balvar alla tenda, Grask, «Come torna il drago» |
+| 3 | `DEF-4` Scena 5: la tabella «I Treant: come lo viene a sapere Hella, e dove possono andare», e la riga dei Treant in A.6 |
+| 5 | `DEF-4` Scena 6: la variante dall'alto, le rune di Balvar alla tenda, Grask, «Come torna il drago» |
 | 20 | `DEF-4` Scene 7 e 8: le schede d'entrata, «Da dove entrano», «Cosa fa quando comincia lo scontro», la Catena, le tattiche di Zog'tar, «Come si decide», la mappa M7-C, le Appendici A.2 e A.4 |
 | 3 | `DEF-4` Scena 9: la tabella di Vatore e «Se tornano in volo» |
 | 5 | `DEF-4` Scena 10: la tabella «Dalla notte», le tre vie, la tabella dei successi |
@@ -81,7 +82,7 @@ aperte si chiudono a voce al passo 0 dell'Atto I.
 |---|---|
 | Skullcrusher, `DEF-4` Appendice A.1 | il duello. Il soffio contro Durik è nella Scena 11, riga 4-bis |
 | Le due wyvern, `DEF-4` Appendice A.6 | questo gruppo conta come straripante: ci sono, dal round 2 del duello |
-| Durik, capitolo VI | +50% di danni dall'acido: il soffio lo prende in pieno |
+| Durik, capitolo VI | +50% di danni dall'acido: il soffio lo prende in pieno. Con la runa prima il +50%, poi −20 (cap. IV §1, Hella). Senza runa il soffio gli fa in media più di 50: Tempra CD 15 o torna polvere, e la carica rimasta dopo i Treant dell'alba lo riporta per un'ora (Scena 11, riga 4-bis) |
 | Zog'tar e le quattro guardie, Appendice A.2 | la tenda, o le mura se Zog'tar è vivo all'alba |
 | Balvar, Appendice A.4 | parla prima di combattere, o durante |
 | La Forgia ricorda le ferite, capitolo V | si segnano le ferite durante il duello, non dopo |
@@ -99,6 +100,21 @@ Prima di consegnare l'eco di Thorik, chiedi al giocatore se alla Scena 4 ha
 porto l'ascia a Thorgrim: la riga privata lo dà per avvenuto, e il registro
 della sessione 4 non lo dice `[CANONE — DM 2026-10-19, giro 4 n. 18]`.
 
+Tre cose da fissare prima di cominciare, perché il testo non le decide:
+
+- **il Seme, capitolo II**: il tono dell'Anello (A o B) lo scegli adesso
+  `[CANONE — DM 2026-10-19, giro 4 n. 20]`; i Bracieri, se Tordek li
+  interroga, rispondono con una frase sola e mai sul Seme
+  `[CANONE — DM 2026-10-19, giro 4 n. 19]`. Il capitolo II, che copia
+  `DEF-1`, dice ancora «non commentano» e «in base a come Artemis ha gestito»:
+  valgono queste due righe;
+- **il dono a metà di Hella** (cap. IV §1): dipende dai successi dello Step 5
+  del rito, e il log del 25 dice solo che i tre Doni sono stati dati tutti.
+  Fissa adesso se sono stati tre su tre o due su tre;
+- **lo Smeraldo della Corona**, 1 a settimana: il passaggio nel tempo ricarica
+  solo gli usi giornalieri (`DEF-4` Scena 1). Il registro non dice quando
+  Thorik l'ha usato l'ultima volta: chiedilo al giocatore.
+
 **Le dieci boccette**: se il tavolo non ha ancora il foglio di Kettra, va dato
 adesso. Le pozioni identificate sono già nel loro inventario.
 
@@ -112,11 +128,12 @@ registrato: lo si chiede al tavolo al passo 0 dell'Atto I.
 | *Velocità* | 3 pozioni di Kettra, 5 round | il round di sorpresa alla tenda, o il duello |
 | Rune di *resistere all'energia*, acido 20 | 2, di Zeth: 70 minuti dall'attivazione, azione standard | si attivano al corno dell'alba o dopo: il drago arriva 70 round dopo il corno, e la runa dura 70 minuti. Uscendo dalla postierla, invece, all'alba sono scadute |
 | Cure in pozione e bacchetta | 4 «di CFC» del re e la quinta comprata (3d8+11); 3 di *cura ferite gravi*; 10 bacchette di *cura ferite leggere*; 5 pozioni di *neutralizza veleno* | il veleno delle wyvern è Tempra CD 17 (A.6) |
-| Pergamene | 4 *ristorare*, 3 *cura ferite critiche*, 5 *cura ferite gravi*, 3 *neutralizza veleno* | nel gruppo non c'è un chierico. *Ristorare* è della lista del chierico e del paladino, non del druido: la legge Artemis, Usare Oggetti Magici CD 27 (20 + livello dell'incantatore, 7°: lo stesso conto del *silenzio* a CD 23 in `DEF-4` Scena 5). Le cure e *neutralizza veleno* le legge Hella se sono sulla lista del druido (il mirror SRD del repo non la riporta intera: da verificare), altrimenti Artemis, CD 25 per le *gravi* e 27 per le altre |
+| Pergamene | 4 *ristorare*, 3 *cura ferite critiche*, 5 *cura ferite gravi*, 3 *neutralizza veleno* | nel gruppo non c'è un chierico. *Ristorare* è della lista del chierico e del paladino, non del druido: la legge Artemis, Usare Oggetti Magici CD 27 (20 + livello dell'incantatore, 7°: lo stesso conto del *silenzio* a CD 23 in `DEF-4` Scena 5). Le cure e *neutralizza veleno* le legge **Hella** senza tiro: sono sulla lista del druido dell'SRD, *neutralizza veleno* al 3°, *cura ferite gravi* al 4°, *cura ferite critiche* al 5°, e lei è druida di 12° |
 | Le Benedizioni della Sala | Pelle di Pietra (resistenza al fuoco 10, al freddo 5), Cuore Incrollabile, *Vigore della Forgia*: 3 cariche a PG, 3d8+5 | durano 24 ore vissute dalla preghiera all'Altare (`DEF-4` §0-bis). Quando il gruppo ha pregato l'ultima volta lo chiedi al tavolo prima dell'Atto I: se ha pregato all'ingresso nella Sala, di solito all'alba ci sono ancora `[CANONE — DM 2026-10-19, giro 4 n. 3]` |
+| La benedizione dei chierici | +2 morale al colpire e ai danni, 12 ore dal consiglio: viene con la fiducia piena (`DEF-4` Scena 4) | copre la notte e il duello. Rende **gratis** la Sapienza Magica della Via A contro Zog'tar (Scena 8). Non vale sui TS |
 | I Doni di Hella | *Scudo del Custode* (1 al giorno, azione immediata: prende su di sé, dimezzato, il danno di un alleato entro 9 m); RD 3/adamantino; *Rovo Eldritch* a volontà, 2d6 a 18 m. Guarigione rapida 1 su terra o pietra, sospesa nel round dopo un danno da fuoco `[CANONE — DM 2026-10-18]` | lo Scudo vale contro il soffio, su Durik o sul re. La RD ferma i colpi, non l'acido. Ogni volta che Hella usa lo Scudo, Thorik è accelerato per 3 round verso chi lei ha protetto (l'Eco del Custode) |
 | Artemis | *eldritch blast* a **6d6**: un dado è andato a Hella, al rito | — |
-| Tordek | contro il drago la Cintura rifiuta. I Bracieri no `[CANONE — DM 2026-10-19, giro 4 n. 5]`: Castigo del Drago (+2 al potenziamento e +2d6 contro i draghi), Salto Fiammeggiante 3 al giorno, e la Collina, che la prima volta scatta da sola quando una creatura Enorme lo porta sotto metà pf (scheda dei Bracieri) | Skullcrusher è Enorme: la prima Collina può arrivare stasera, senza preavviso |
+| Tordek | l'Ancoraggio della Montagna non ce l'ha più: è il Dono passato a Hella al rito (log del 25). Contro il drago la Cintura rifiuta. I Bracieri no `[CANONE — DM 2026-10-19, giro 4 n. 5]`: Castigo del Drago (+2 al potenziamento e +2d6 contro i draghi), Salto Fiammeggiante 3 al giorno, e la Collina, che la prima volta scatta da sola quando una creatura Enorme lo porta sotto metà pf (scheda dei Bracieri) | Skullcrusher è Enorme: la prima Collina può arrivare stasera, senza preavviso |
 | Aegis Fang | *Dragondoom* vale contro Skullcrusher (`DEF-4` Scena 11). Il Bane contro Fauci (+2, +3d6, critico ×4, Scosso 1 volta a incontro CD 22) è per Fauci nel 1372 | contro il capostipite il Bane **non vale** `[CANONE — DM 2026-10-19, giro 4 n. 4]` |
 | Thorik | porta il Debito della Radice: stasera non si incassa (eco E-07g). Il **Torque** è ancora al collo del re: lo dà lui alla Scena 12, fuori da stasera | — |
 | Il dado dei caduti | quattro tiri di 1d4 alla Scena 10: le bacchette, *ristorare*, *cura ferite critiche*, *neutralizza veleno* | i nomi vanno fra i caduti del 372 |
@@ -131,7 +148,9 @@ arrotolata sotto il braccio, e chiede una cosa sola: *«Quando uscite?»*
 
 **0 · Le richieste aperte, e chi porta cosa** (due minuti). Chiudi la tabella
 «Le richieste rimaste aperte» di `DEF-4` Scena 5. Si pagano in monete del
-1372, dentro la tacca della fucina già segnata, quindi non costano tacche:
+1372, dentro la tacca della fucina già segnata, quindi non costano tacche. Il
+conto del 25 è stato pagato senza la trattenuta del pesatore (D43); per
+quello di stasera vale lo stesso `[INFERRED — needs DM confirmation]`:
 
 - *silenzio*: 2 pergamene a 150 mo, oppure la pietra di Brynja a 160, che dura
   8 minuti e copre il volo e l'atterraggio;
@@ -214,8 +233,8 @@ tavola, lo schienale del seggio) è visto. È la scena che si ricorda: se il
 tavolo ha poco tempo, si taglia altro.
 
 **Scena 8, Zog'tar** (`DEF-4` Scena 8, mappa M7-C, Appendice A.2). La Cintura
-di Tordek qui funziona. Il danno massiccio è attivo, per regola della casa:
-50 danni in un colpo, e il bersaglio tira Tempra CD 15 o muore. Il ritorno a
+di Tordek qui funziona. Il danno massiccio è attivo: regola SRD, tenuta dalle
+regole della casa. 50 danni in un colpo, e il bersaglio tira Tempra CD 15 o muore. Il ritorno a
 piedi alle mura costa **1 tacca**, quello in volo anche.
 
 **Scena 9, Vatore** (`DEF-4` Scena 9). Dieci minuti, al ritorno. L'Anello di
@@ -257,7 +276,7 @@ tabella «Dalla notte».
 Se le tacche sono 8 o più, la Scena 10 **non si gioca**: il dado dei caduti si
 tira all'alba, prima del duello, e il duello comincia con i PG fuori dalle mura.
 
-**Scena 11, il duello** (`DEF-4` Scena 11, mappa M7-B, Appendice A.1). Quattro
+**Scena 11, il duello** (`DEF-4` Scena 11, mappa M7-B, Appendice A.1). Cinque
 cose da tenere davanti:
 
 - la **Cintura di Tordek** si rifiuta contro il drago (§1 del master): dillo
@@ -269,8 +288,8 @@ cose da tenere davanti:
   A.6) vanno su chi tiene la corda e su chi vola. Fuggono quando il drago fugge
   o muore. Il duello resta EL 14, e vale 1.625 PX a testa `[CANONE — DM 2026-10-19, giro 4 n. 16]`;
 - **Ghermire e Fluttuare**: il drago li usa. Morde in picchiata, ghermisce,
-  risale, e al turno dopo fermo a 15 m lascia cadere la preda o soffia sugli
-  altri tenendola in bocca, e lei non ha il TS (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19, giro 4 n. 6]`;
+  risale, e al turno dopo fermo a 15 m lascia cadere la preda o, se il soffio
+  è tornato, soffia sugli altri tenendola in bocca, e lei non ha il TS (`DEF-4` Scena 11) `[CANONE — DM 2026-10-19, giro 4 n. 6]`;
 - **Aegis Fang** scaglia la Cicatrice Ancestrale: segna la ferita nella tabella
   della Forgia nel momento in cui succede.
 

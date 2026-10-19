@@ -9,8 +9,7 @@
 
 ---
 
-**Per tutto il tavolo.** Questa pagina non è privata: si legge insieme e
-si passa di mano.
+**Per tutto il tavolo**: si legge insieme e si passa di mano.
 
 > *Kettra stende un panno sul banco, sposta la
 > cassa di sabbia con il piede e mette in fila le vostre dieci boccette come

@@ -18,7 +18,17 @@
 > un box: di' a voce il riassunto «In breve» di `DEF-4` Scena 5, «Le dieci
 > pozioni del gruppo», poi leggi il box finale. Dopo il box consegni al
 > tavolo il ✉ «Il contratto del Seme», nel volume dei giocatori: ha le otto
-> clausole e la firma della bottega, e niente sul creditore.
+> clausole e la firma della bottega, e niente sul creditore. Prima di quel
+> box la pagina resta nel volume.
+>
+> **Se Tordek lo tocca stasera.** Vale il paragrafo «A ≈372 DR il creditore
+> non c'è ancora», e non la riga «Se Tordek lo tocca», che è scritta per il
+> 1372: nessuna voce, nemmeno per lui. Col guanto non succede niente; a pelle
+> nuda firma, l'anticipo arriva subito, e filo, voce e riscossione si
+> accendono al ritorno nel 1372.
+>
+> **I rimandi del testo copiato.** «Echo Ledger (§11)» è, in questo booklet,
+> il cap. IV §7; «il #4» è il cap. IV, e Vatore è alla sua Scena 9.
 >
 > **Dove eravamo** `[CANONE — DM 2026-10-12]`. Il Seme nessuno l'ha toccato a
 > mani nude: è nello zaino di Tordek dal 31 luglio. Le dieci pozioni le

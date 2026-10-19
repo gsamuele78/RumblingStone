@@ -9,8 +9,7 @@
 
 ---
 
-**Per tutto il tavolo.** Questa pagina non è privata: si legge insieme e si
-passa di mano.
+**Per tutto il tavolo**: si legge insieme e si passa di mano.
 
 **Le clausole** (sono il contratto):
 
