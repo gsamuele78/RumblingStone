@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 19 decisioni aperte
+## Aspetta il DM: 17 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -30,8 +30,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
 | `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
-| `MASTER-DEF` | D7 | A4 | Rendere standard le sette pratiche dei giri prima del giro su ARC-08 (prima le sette · solo il giro · solo le regole di lettura)? Le norme sono già scritte in questo ramo; il sì porta anche i due script, B2 e B7 dell'au… |
-| `MASTER-DEF` | D8 | A4 | Per i numeri: la copia locale dell'SRD 3.5 (OGL, nella cartella condivisa, fuori dal repo) o solo i mirror in rete? E i lettori del giro uno alla volta, come ha chiesto il DM, o in parallelo, come dice la skill? Consigl… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -117,6 +115,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-18 | MASTER-DEF | A4, D7 e D8 decise dal DM (prima le sette pratiche; SRD locale e lettori uno al… | 🟢 A4 fatto; ARC-08 a zero conti sbagliati, nove trovati sulla versione di prima della #241 |
 | 2026-10-18 | MASTER-DEF | A4, lo standard del giro: audit dei giri su ARC-07 contro le norme del repo (ri… | 🟡 [ADR-0094](plans/adr/ADR-0094-il-giro-ha-correzione-verifica-e-seconda-passata.md) proposta, 58 pratiche e nove lacune in… |
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
 | 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
@@ -128,11 +127,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 | 2026-10-15 | MASTER-DEF | A3, il canone di ARC-08 contro il tavolo: lettura in sola lettura dei file vivi… | 🟡 43 punti; D4 e D5 aperte al DM |
 | 2026-10-15 | LETTORE-E-PLAYTESTER | F4, gli altri master di ARC-07: DEF-1 al giro 6 del playtester, D82 in DEF-2, i… | ✅ DEF-1, 2, 3 e 5 senza 🔴, DEF-5 a zero `[INFERRED]`, quiz 10 su 12 — **PIANO COMPLETO** (F5 e F6 in PIANO-MASTER-DEF) |
-| 2026-10-15 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | conversione di tutte le schede alla forma di ADR-0091, che passa ad **accettata… | 🟢 56 file spostati di sezione senza riscrivere: blocchi `statblocco` identici, nessun numero cambiato. `--forma`: **37 su 37** statblocchi, **24 su 24** dossie… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 19 aperte, 262 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 17 aperte, 264 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

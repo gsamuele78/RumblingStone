@@ -283,13 +283,17 @@ giri, da 2 🔴 a 0 al playtester), scritta perché valga per ogni DEF.
 
 1. **Una copia a freddo**: il master senza i blocchi `storico` e `apparato`,
    che non vanno in stampa, in una cartella con le quattro rubriche e nient'altro.
-2. **Quattro agenti nuovi, uno per rubrica**, in parallelo. Ognuno legge solo
+2. **Quattro agenti nuovi, uno per rubrica**, uno alla volta (il DM, D8 di
+   MASTER-DEF, 2026-10-18: un giro più lento costa meno di quattro agenti
+   che si pestano). Ognuno legge solo
    la sua rubrica e il modulo. Il DM a freddo legge scena per scena senza
    guardare avanti, e il giorno dopo scrive cosa ricorda prima di riaprire.
 3. **Il triage di chi orchestra**, rilievo per rilievo, in quest'ordine:
    - **il testo lo risolve già** (due regole per la stessa cosa, un numero
      diverso in due punti): si corregge sul posto, e la versione che vince è
-     quella che il master dichiara canone;
+     quella che il master dichiara canone. Prima di leggere, `python3
+     scripts/conformita_statblocchi.py --master <file>` fa i conti degli
+     statblocchi scritti nel master;
    - **manca prosa** (un luogo senza box, un PNG senza scheda, una cosa da dire
      a voce che non c'è, un handout promesso e non scritto): la domanda 2 di
      `ORCHESTRAZIONE.md` risponde da sé, il giocatore la sentirà, quindi si
@@ -331,7 +335,8 @@ giri, da 2 🔴 a 0 al playtester), scritta perché valga per ogni DEF.
    letture ha un 🔴. I 🟠 rimasti hanno ognuno una riga: corretto, residuo con
    la ragione, o decisione del DM.
 8. **L'archivio**: i rapporti di ogni giro in `plans/esperimenti/<master>-giro-N/`,
-   i conteggi nel piano. È la storia da cui si vede se il master migliora. Le
+   i conteggi nel piano, e ogni lettura in `registro_letture.py` (`--intero`
+   se è stata fatta sul master intero). È la storia da cui si vede se il master migliora. Le
    decisioni del DM nate dal giro vanno nella tabella `decisioni-dm` del piano
    che possiede il master, perché `decisioni_dm.py` legge solo quelle, e nel
    master si marcano `[CANONE — DM <data>]`, col codice della decisione

@@ -44,7 +44,13 @@ kept outside the repo):
 
 The masters carry their own statblocks and rulings, and the readers of a
 round (`rumblingstone-module-standard`, «Il giro») check them against the SRD.
-d20srd.org is blocked by the session proxy. These mirrors of the 3.5 SRD
+**First source: the local copy.** The DM chose on 2026-10-18 (D8 of
+MASTER-DEF) to verify against a local markdown copy of the 3.5 SRD (OGL 1.0a,
+`olimot/srd-v3.5-md` on GitHub), kept outside the repo like the other
+verification sources: in a cloud session it is at
+`/mnt/project-files/corpus-prosa/grezzi/test-srd/srd-v3.5-md/`, on another
+machine it is cloned from GitHub. The online mirrors are the fallback for what
+the copy lacks. d20srd.org is blocked by the session proxy. These mirrors of the 3.5 SRD
 answered on 2026-10-18: `dungeons.fandom.com/wiki/SRD:*`,
 `birthright.net/wiki/index.php/*` (section «D20 SRD (3.5)»),
 `www.rpgcrossing.com/srd/*.html`; for PF1e, `legacy.aonprd.com`.
@@ -58,7 +64,10 @@ Each round writes its report as a table (item · master file:line · URL · resu
 The first one: `plans/esperimenti/giro-arc07-2026-10-18/VERIFICA-SRD.md`
 (about 40 items confirmed, 9 discrepancies, all fixed). Six of the nine were
 arithmetic (AC, saves, attack bonus) that `conformita_statblocchi.py` would
-have caught had it read the masters.
+have caught had it read the masters. Since D7 of MASTER-DEF it does, as a
+report: `python3 scripts/conformita_statblocchi.py --master [FILE ...]` checks
+hp against the dice, AC against its listed parts, initiative and grapple in
+statblocks written as `**Field:** value`.
 
 ## Not directly verifiable (and how each is handled)
 

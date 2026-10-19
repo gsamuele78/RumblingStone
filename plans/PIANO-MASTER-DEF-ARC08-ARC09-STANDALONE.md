@@ -341,7 +341,7 @@ Un file va in archivio solo se nessuna sua parte è la migliore.
   [`esperimenti/a3-arc08/statblocchi-arc08-per-schede.md`](esperimenti/a3-arc08/statblocchi-arc08-per-schede.md),
   per il lavoro sulle schede (PR #241).
 
-## A4 · Lo standard del giro, dai giri su ARC-07 — 🟡 2026-10-18, norme scritte, aspetta D7 e D8
+## A4 · Lo standard del giro, dai giri su ARC-07 — 🟡 2026-10-18, norme e script fatti, D7 e D8 decise
 
 Il DM, il 2026-10-18: *«controlla cosa hanno aggiunto ai vari giri nei thread
 che non è ancora diventato standard e che vale la pena aggiungere, non solo le
@@ -362,10 +362,16 @@ Fatto in questo lotto, con [ADR-0094](adr/ADR-0094-il-giro-ha-correzione-verific
   rapporto vero e le due copie; `RULES-VERIFICATION.md`, i mirror e il criterio (B2, testo)
 - [x] cinque righe 🔴 nel registro delle norme e in `superficie_norme.py`
 
-Resta, se il DM dice sì a D7:
+Resta, dopo il sì del DM a D7:
 
-- [ ] `conformita_statblocchi.py` legge anche gli statblocchi dei master (B2)
-- [ ] `registro_letture.py` registra le letture sul master intero e il developer (B7)
+- [x] `conformita_statblocchi.py --master` legge gli statblocchi scritti nei master: pf contro i dadi, CA contro le voci, iniziativa, lotta. È un rapporto e non un cancello. Su ARC-08 oggi dà zero; sulla Guida DM di prima della #241 ne trova nove, Fauci a 312 compreso. Le schede compatte di ARC-07 non le legge (B2)
+- [x] `registro_letture.py --intero` registra le letture sul master intero, e `--ruolo developer` il developer, che non entra fra gli obbligatori del cancello (B7)
+
+<!-- eco: MASTER-DEF 2026-10-18 -->
+- **Decise**: D7, prima le sette pratiche e poi il giro su ARC-08; D8, la copia locale dell'SRD e i lettori uno alla volta.
+- **Aperte**: D4, D5, D6 (flashback, risposte di A3, censimento delle versioni).
+- **Cambiate**: «Il giro» di `module-standard` diceva «in parallelo», ora dice uno alla volta.
+- **Dedotto da me**: `conformita_statblocchi.py` sui master esce come rapporto e non blocca la CI, perché segnalerebbe i master di ARC-07, che sono di un altro thread.
 
 Le lacune B8 e B9 sono delle PR #251 e #246 e sono state girate ai loro thread.
 
@@ -424,8 +430,8 @@ Per ogni master, prima di chiudere il lotto:
 | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
-| D7 | A4 | Rendere standard le sette pratiche dei giri prima del giro su ARC-08 (prima le sette · solo il giro · solo le regole di lettura)? Le norme sono già scritte in questo ramo; il sì porta anche i due script, B2 e B7 dell'audit. Consigliata: prima le sette |
-| D8 | A4 | Per i numeri: la copia locale dell'SRD 3.5 (OGL, nella cartella condivisa, fuori dal repo) o solo i mirror in rete? E i lettori del giro uno alla volta, come ha chiesto il DM, o in parallelo, come dice la skill? Consigliata: copia locale e uno alla volta, e la skill si allinea |
+| ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0094) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
+| ~~D8~~ | A4 | ✅ **Decisa il 2026-10-18: SRD locale, uno alla volta.** I numeri si verificano sulla copia markdown dell'SRD 3.5 (OGL, fuori dal repo), coi mirror come ripiego; i lettori del giro leggono uno alla volta, e «Il giro» di `module-standard` lo dice |
 
 ## Come si riparte in una chat nuova
 
