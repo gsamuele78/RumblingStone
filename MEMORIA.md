@@ -112,6 +112,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
 | 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0094 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
 | 2026-10-18 | MASTER-DEF | A4, D7 e D8 decise dal DM (prima le sette pratiche; SRD locale e lettori uno al… | 🟢 A4 fatto; ARC-08 a zero conti sbagliati, nove trovati sulla versione di prima della #241 |
@@ -123,7 +124,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-18 | MASTER-DEF | nuovo giro sui cinque master di ARC-07: developer, playtester e DM a freddo su… | 🟡 [`esperimenti/giro-arc07-2026-10-18/`](plans/esperimenti/giro-arc07-2026-10-18/README.md): 15 letture, 120 🔴+🟠 sui master di partenza, nessuno resta aperto s… |
 | 2026-10-18 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le `[PROPOSTA]` di gioco diventano canone: tenda di Zog'tar (M7C), metà sud del… | ✅ zero `[PROPOSTA]` aperte nel contenuto |
 | 2026-10-16 | MASTER-DEF | le versioni di ARC-08 censite sezione per sezione e mappa per mappa; i sei file… | 🟡 D6 aperta al DM |
-| 2026-10-16 | REVISIONE-LIBRERIA-MOSTRI-PNG-VILLAIN | le schede nominate prendono la versione più forte fra Bestiario e moduli d'arco… | 🟢 ADR-0091 §4-bis. Una sessantina di schede rifatte: tredici file rinominati perché il GS è cambiato (per esempio Azarr Kul 15 → 17, Karruk 10 → 13, i due coma… |
 
 ## Le misure che si portano dietro
 

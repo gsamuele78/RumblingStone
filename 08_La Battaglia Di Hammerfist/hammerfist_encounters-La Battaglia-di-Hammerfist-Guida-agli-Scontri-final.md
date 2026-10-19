@@ -433,6 +433,8 @@ RITIRATA ORGANIZZATA (Round 9-12)
 ### **OBIETTIVO:**
 Sopravvivere all'attacco devastante di Fauci di Palude, proteggere Re Thorek, e organizzare la ritirata finale verso il Cuore della Montagna.
 
+> **📎 Regia, l'eco del re** (Casa di Davide): Fauci punta Re Thorek come il suo capostipite, nel ≈372, puntava Re Thorek I nel cortile. Vuole un re davanti all'orda, come lui (`07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Scena 11, «Un re l'ho già mangiato, qui» e «Il re»). Il DM non lo spiega: chi ha giocato quel duello lo riconosce da solo, e chi non l'ha giocato vede un drago che sceglie il bersaglio con calma. La presa in bocca non c'entra: Fauci la tiene per Thorik (`ARC08-02` §1, «La presa di Thorik»).
+
 ### **MAPPA: L'ATTACCO DEL DRAGO**
 
 ```
@@ -982,7 +984,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 > - **Round 4-5**: il cuneo scende il pendio; la Cantata di Tempestas e i fulmini di Orion.
 > - **Round 6**: l'urto sulla linea ⚔ della riga 37. Strafing dei gufi ai round 6-8; fino al round 10 la convergenza, e Thorik ingaggia Gorthak.
 > - **Round 11-17**: logoramento, in aria e a terra. Fauci non fugge.
-> - **Round 18-20**: la picchiata di Fauci su Thorik. **Round 21-23**: il duello. A fine round 23, la vittoria.
+> - **Round 18-20**: la picchiata di Fauci su Thorik, e la presa. **Round 21-23**: il duello. A fine round 23, la vittoria.
 
 ### **OBIETTIVO:**
 I Rumbling Stones guidano l'assalto finale fuori dalle caverne, coordinando con gli alleati aerei (gufi giganti + druido orso + bardo tempeste) per sconfiggere definitivamente l'esercito della Mano Rossa.
@@ -1051,7 +1053,7 @@ VALLE DELL'AVVISTAMENTO (120m x 80m)
 
 **FAUCI DI PALUDE + CAVALIERE HOBGOBLIN:**
 - **PF di partenza** `[CANONE — DM 2026-10-19, D9]`: 337 meno il carry-over di `ARC08-10` §4.1 (303 se nel P5 Skullcrusher fu ucciso); **337 se il P5 non è stato giocato** (statblock invariato)
-- **Tattiche** (scheda in `ARC08-02` §1): resta in quota col soffio e *nube maleodorante*, con Volteggiare e Ghermire. Atterra solo sotto i 100 pf o per finire Thorik (+4 contro di lui, sempre). Fugge sotto i 50 pf. Non fugge al round 5: la picchiata è ai round 18-20
+- **Tattiche** (scheda in `ARC08-02` §1): resta in quota col soffio e *nube maleodorante*, sospeso con Fluttuare. Ai round 18-20 la picchiata e la presa di Thorik, una volta (scheda, «La presa di Thorik»); *Ghermire* non lo usa su nessun altro. Atterra solo sotto i 100 pf o per finire Thorik (+4 contro di lui, sempre). Fugge sotto i 50 pf. Non fugge al round 5: la picchiata è ai round 18-20
 - **Cavaliere:** Fornisce spell support e comando tattico
 
 **SIGNORE VENTOLESTO + 2 GUFI SUPPORTO:**
@@ -1277,22 +1279,22 @@ VENDETTA DEL GENERALE
 
 Fauci resta in aria e logora fino al round 17, e scende quando lo decide lui.
 
-**Perché scende (legale in 3.5):** lo dice la sua scheda (`ARC08-02` §1, *Tattiche*): atterra solo se è gravemente ferito, sotto i 100 pf, o per finire un bersaglio importante, Thorik prima di tutti. L'Odio della stirpe (+4 contro Thorik, sempre) è la ragione per cui lo fa. È una picchiata, cioè una carica in volo (+2 al colpire, SRD), e con Attacco in Volo. La presa di Orion da sola non lo porta giù: +24 contro +43 (SRD). Con i tiri nella media succede ai **round 18-20**; se scende sotto i 100 pf prima, la picchiata viene prima.
+**Perché scende (legale in 3.5):** lo dice la sua scheda (`ARC08-02` §1, *Tattiche*): atterra solo se è gravemente ferito, sotto i 100 pf, o per finire Thorik dopo averlo preso e lasciato cadere. L'Odio della stirpe (+4 contro Thorik, sempre) è la ragione per cui lo fa. È una picchiata con Attacco in Volo (SRD: un'azione di movimento, anche in picchiata, e un'azione standard in un punto qualsiasi del movimento), e porta **la presa di Thorik** `[CANONE — DM 2026-10-19]`: morso al round 18, salita con Thorik in bocca al 19, soffio con lui in bocca e caduta al 20. Le regole e i numeri sono nella scheda (`ARC08-02` §1, «La presa di Thorik»), una volta per incontro. La presa di Orion da sola non lo porta giù: +24 contro +43 (SRD). Con i tiri nella media succede ai **round 18-20**; se scende sotto i 100 pf prima, la picchiata viene prima. Se Aegis Fang non ha mai cantato né colpito, niente presa: scende nella zona ⚡ e il duello comincia lì.
 
-**Dove:** nella zona ⚡ della MAPPA 4 di `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` (AB30-AG32), alle spalle della punta, fra le ultime file del cuneo, a circa 30 m da Thorik, che a quel punto è sulla linea ⚔ o contro Gorthak. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round; il duello è ai **round 21-23**.
+**Dove:** lo prende dov'è, sulla linea ⚔ o contro Gorthak, e lo lascia cadere a fine round 20 nella zona ⚡ della MAPPA 4 di `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` (AB30-AG32), alle spalle della punta, fra le ultime file del cuneo, a circa 30 m dalla linea. Al round 21 Fauci atterra lì per finirlo. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round; il duello è ai **round 21-23**. Se Thorik si libera prima, cade dalla quota in cui è, e Fauci scende comunque dove è caduto.
 
 > **Read-aloud (Salvatore lead) — la picchiata.** *Il drago smette di girare sopra il campo, chiude le ali e scende dritto, e la pioggia gli scivola addosso come su una lama oliata. Non guarda i gufi: guarda la punta del cuneo, l'elmo con la corona. Che fate?*
 
 **Se i PG volano** (lo zaino ha 5 pozioni di *volare*: 18 m, 12 m in armatura media o pesante, manovrabilità buona, 5 minuti a LI 5, SRD) — **Fauci combatte in aria, non fugge**:
-- **Volteggiare** (SRD): resta sospeso e fa l'attacco completo senza le ali, morso +33 (2d8+10), 2 artigli +31 (2d6+5), coda +31 (2d6+15); contro Thorik +4 al colpire e ai danni. Oppure soffia.
+- **Fluttuare** (SRD): resta sospeso e fa l'attacco completo senza le ali, morso +33 (2d8+10), 2 artigli +31 (2d6+5), coda +31 (2d6+15); contro Thorik +4 al colpire e ai danni. Oppure soffia.
 - **Il soffio in linea** (30 m, 14d4, Riflessi CD 29) sui PG in volo che si allineano.
-- **Ghermire** (SRD): sul morso o su un artiglio inizia la lotta (+43); poi lascia cadere la preda (azione gratuita) o la scaglia (azione standard: 1d6×3 m, 1d6 ogni 3 m, o il danno da caduta se è più alto). Chi tiene in bocca non ha il TS contro il soffio.
+- **Ghermire** (SRD) solo su Thorik: è la presa della scheda, e gli altri PG in volo non li prende. Se Thorik vola, prima gli toglie il volo con *dissolvi magie* (LI 7°: d20+7 contro CD 16 per una pozione di LI 5°, SRD), poi lo prende; se il volo regge, alla fine non lo lascia ma lo scaglia (azione standard: 1d6×3 m, 1d6 ogni 3 m, SRD). Chi tiene in bocca non ha il TS contro il soffio.
 - **Attacco in Volo** per staccarsi dal più lento: vola a 45 m, un PG in armatura pesante a 12 m.
 - **Il cavaliere** carica in sella e copre il fianco del drago.
 - **Thorik** non subisce la Presenza terrificante: il *Mind Blank* della Corona la blocca (scheda di Fauci).
 - Sotto i 100 pf scende comunque; **sotto i 50 tenta la fuga** (`ARC08-10` §4), e i PG in volo possono inseguirlo.
 
-**Il duello (round 21-23):** Fauci a terra fa l'attacco completo intero, sei attacchi con le ali. Sotto i 50 pf, il default è che rompa il contatto e decolli verso sud; è **ucciso** solo se i PG lo bloccano oltre quel punto. Si decide al tavolo, e i due rami sono in `ARC08-10` §4. In tutti e due l'orda vede il drago fuori gioco, ed è la rotta.
+**Il duello (round 21-23):** Fauci atterra accanto a Thorik caduto, per finirlo, e a terra fa l'attacco completo intero, sei attacchi con le ali. Sotto i 50 pf, il default è che rompa il contatto e decolli verso sud; è **ucciso** solo se i PG lo bloccano oltre quel punto. Si decide al tavolo, e i due rami sono in `ARC08-10` §4. In tutti e due l'orda vede il drago fuori gioco, ed è la rotta.
 
 **Che cosa sa il cavaliere, e se lo divinano:** `ARC08-10-ESITI-E-CONTINGENZE.md` §4.2.
 

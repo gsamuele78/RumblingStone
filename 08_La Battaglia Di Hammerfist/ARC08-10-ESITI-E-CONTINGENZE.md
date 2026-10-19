@@ -172,8 +172,9 @@ della battaglia** leggendo la tabella B4.
 
 **Pf di partenza nella Sessione 4** `[CANONE — DM 2026-10-19, D9]`: 337
 meno il carry-over qui sopra; **337 se il P5 non è stato giocato**, come dice il paragrafo qui sopra.
-Il duello coi PG è ai round 21-23, dopo la picchiata dei round 18-20
-(`ARC08-01-GUIDA-DM.md`, Incontro 4A): i due rami della tabella di §4 sono
+Il duello coi PG è ai round 21-23, dopo la picchiata dei round 18-20, in
+cui Fauci prende Thorik in bocca e lo lascia cadere (`ARC08-02` §1, «La
+presa di Thorik», `[CANONE — DM 2026-10-19]`; `ARC08-01-GUIDA-DM.md`, Incontro 4A): i due rami della tabella di §4 sono
 i due esiti possibili di quel duello.
 
 ### 4.2 Che cosa sa il cavaliere, e se lo divinano `[CANONE — DM 2026-10-19, D15]`
@@ -195,7 +196,8 @@ incantesimo. È una Guardia Nera e non parla per paura: servono *charme*,
    (`09_…/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-ARMATE-SYNC.md`, Day 19).
    Che il cavaliere conosca il piano oltre Terrelton è una deduzione
    `[INFERRED — needs DM confirmation]`.
-3. **Perché Fauci vuole Thorik**: è della stirpe di Skullcrusher e odia
+3. **Perché Fauci vuole Thorik**, e perché prima di finirlo lo prende in
+   bocca (`ARC08-02` §1, «La presa di Thorik»): è della stirpe di Skullcrusher e odia
    chi porta le armi dei nani (`ARC08-02` §1, Odio della stirpe;
    `Bestiario/villain/Fauci_di_Palude.md`). Dell'uovo di Fauci (ARC-07 C3)
    il cavaliere non sa niente: è un'eco per ARC-10, e resta coperta

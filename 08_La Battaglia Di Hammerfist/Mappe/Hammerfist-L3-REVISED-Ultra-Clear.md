@@ -514,7 +514,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 **Incontro:** Incontri 4A + 4B — carica del cuneo + Fauci di Palude + Gorthak
 **Quando si usa:** Sessione 4, round 1-23 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 4)
 
-### 🎯 COMPRENSIONE: il cuneo nanico (Thorik in punta) carica in discesa contro i ~400 superstiti; sopra, la battaglia aerea logora il drago, che ai round 18-20 scende per scelta su Thorik nella zona ⚡, alle spalle della punta, e duella coi PG ai round 21-23 `[CANONE — DM 2026-10-19, D9]`.
+### 🎯 COMPRENSIONE: il cuneo nanico (Thorik in punta) carica in discesa contro i ~400 superstiti; sopra, la battaglia aerea logora il drago, che ai round 18-20 scende per scelta su Thorik, lo prende in bocca e lo lascia cadere nella zona ⚡, alle spalle della punta `[CANONE — DM 2026-10-19]`, e duella coi PG ai round 21-23 `[CANONE — DM 2026-10-19, D9]`.
 
 ### VISTA 1: GRIGLIA DI REGIA CON COORDINATE (60×68)
 
@@ -610,10 +610,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Carica centrale del cuneo (Thorik in punta) ; AD11 AD37 ; #1d6fd8
 @path Ala sinistra (Tordek + 30) ; Y9 Y37 ; #1d6fd8
 @path Ala destra (Hella + 2 Treant + 30) ; AI9 AI37 ; #1d6fd8
-@path Picchiata finale di Fauci su Thorik (vendetta di sangue) ; G17 AD31 ; #8c2fb8
+@path Picchiata e presa di Fauci su Thorik (vendetta di sangue) ; G17 AD37 AD31 ; #8c2fb8
 @path Rotta degli orchi verso sud ; AD47 AD65 ; #d62828
 @zone E1-BD2 ; Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)
-@zone AB30-AG32 ; Zona della picchiata di Fauci su Thorik (round 18-20)
+@zone AB30-AG32 ; Zona dove cade Thorik e atterra Fauci (round 20-21)
 @tipo tattica esterno
 ```
 
@@ -621,7 +621,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Quota | Chi | Azioni chiave |
 |---|---|---|
 | 60 m | **Maestro Tempestas** (LI 14: bardo 12°/cantore delle tempeste 2°, `ARC08-02` §2) `[CANONE — DM 2026-10-19, D14]` | La tempesta l'ha lanciata **Orion** con *controllare tempo* prima della battaglia (SRD: lui dirige il vento, non i fulmini). Tempestas apre con la **Cantata della Tempesta Tonante**: ostili entro 18 m, 2d6 elettrici a inizio turno per 3 round, Riflessi CD 23; alleati entro 18 m +2 di morale per 10 round. Poi *fulmine* ed *esplosione sonora*. Venti 80 km/h (vento violento: Tempra CD 15 solo per le creature Piccole, SRD); pioggia −4 al tiro a distanza; insieme una *tempesta* SRD, dove gli attacchi a distanza con armi sono impossibili, salvo dall'occhio sopra i bastioni (deroga dichiarata) |
-| 30-45 m | **Fauci di Palude** (PF 337 se il P5 non è stato giocato; altrimenti 337 meno il carry-over di `../ARC08-10-ESITI-E-CONTINGENZE.md` §4.1) `[CANONE — DM 2026-10-19, D9]` | soffio e *nube maleodorante* dall'alto; ai round 18-20 la picchiata su Thorik (Odio della stirpe, +4: ignora i gufi). Contro i PG in volo resta in aria: Volteggiare, Ghermire, soffio in linea (guida § Incontro 4A, «ROUND 18-23») |
+| 30-45 m | **Fauci di Palude** (PF 337 se il P5 non è stato giocato; altrimenti 337 meno il carry-over di `../ARC08-10-ESITI-E-CONTINGENZE.md` §4.1) `[CANONE — DM 2026-10-19, D9]` | soffio e *nube maleodorante* dall'alto; ai round 18-20 la picchiata e la presa di Thorik (Odio della stirpe, +4: ignora i gufi): lo morde, sale a 30-35 m con lui in bocca, soffia sui compagni e lo lascia cadere sulla zona ⚡ (`../ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` §1, «La presa di Thorik»). Contro i PG in volo resta in aria: Fluttuare, soffio in linea, e *Ghermire* solo su Thorik (guida § Incontro 4A, «ROUND 18-23») |
 | 30-50 m | **Signore Ventolesto + 12 Ranger Elfici** su gufi | 6 alti (distrazione) + 6 bassi (intercetto); archi compositi +16, 1d8+6 +2d6 *Bane* draghi; Ventolesto Punire il Male +10 |
 | variabile | **Orion Pelleorsa** | SALTA sul dorso del drago (movimento) già in Forma Selvatica Orso Crudele, presa il round prima (azione standard): salto, forma e presa non stanno in un round solo (SRD, guida § Orion). Lotta +24 contro +43: la lotta è contrapposta (SRD) e Fauci se ne libera quasi sempre, quindi il peso da solo non forza la discesa. Quando non è sul drago, *chiamare fulmini*: 3d10 a fulmine nella tempesta, Riflessi CD 20 (SRD) `[CANONE — DM 2026-10-19, D14]` |
 | 15 m | **Artemis** (Ali d'Ombra) | Deflagrazione Occulta 6d6 (18 m) sulle ALI → manovrabilità del drago −4 |
@@ -632,7 +632,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 2. **4-5 Discesa:** il cuneo scende il pendio (45 m/round in discesa); la Cantata di Tempestas e i fulmini di Orion
 3. **6-10 Urto e convergenza:** al round 6 il cuneo tocca la prima linea hobgoblin (rotte blu → linea ⚔ riga 37); strafing dei gufi ai round 6-8; Thorik ingaggia Gorthak
 4. **11-17 Logoramento:** gufi, fulmini e Artemis logorano Fauci in quota; a terra il cuneo spinge. Fauci non fugge
-5. **18-20 La picchiata:** Fauci scende per scelta su Thorik (scheda: atterra sotto i 100 pf o per finire Thorik), con Attacco in Volo; finisce nella zona ⚡ (AB30-AG32), alle spalle della punta, a circa 30 m da Thorik, che è sulla linea ⚔ o contro Gorthak. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round
+5. **18-20 La picchiata e la presa:** Fauci scende per scelta su Thorik, sulla linea ⚔ o contro Gorthak, con Attacco in Volo: morso e presa al round 18, salita con lui in bocca al 19, soffio sui compagni e caduta al 20, sulla zona ⚡ (AB30-AG32), alle spalle della punta, a circa 30 m dalla linea (scheda, «La presa di Thorik», una volta). Al round 21 atterra lì per finirlo. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round
 6. **21-23 Duello finale:** Thorik + Tordek + Artemis + Hella; Fauci a terra fa l'attacco completo (6 attacchi: morso, 2 artigli, 2 ali, coda; sospeso in volo niente ali, SRD). Se i PG volano con le pozioni, combatte in aria e non fugge. A fine round 23, la vittoria
 
 > **ESITO DRAGO — ramo condizionale, NON un fatto compiuto (D10):** sotto i **50 PF** il default è che Fauci **tenta la fuga** (rompe la lotta di Orion, decollo disperato verso sud — gravemente ferito ma vivo, hook nemesi). È **ucciso** solo se i PG lo bloccano attivamente oltre quel punto (Tordek/Artemis lo tengono a terra mentre Thorik chiude con Aegis-Fang). Si decide al tavolo. In ENTRAMBI i rami: l'orda vede il drago fuori gioco → **rotta completa** dei ~400 superstiti.
@@ -647,7 +647,7 @@ Tempesta che si dissolve, gufi che atterrano presso il cancello, ~500 nemici cad
 | Pendio 15% | righe 14-36 | vantaggi di carica (vedi MAPPA 4X REVISED sopra) |
 | Tempesta di Orion (*controllare tempo*) | tutto il campo, raggio 3 miglia | venti (Tempra CD 15 solo per le creature Piccole), pioggia (−4 distanza, +2 Nascondersi); con vento e pioggia insieme è una *tempesta* SRD, dove gli attacchi a distanza con armi sono impossibili. I fulmini sono la Cantata di Tempestas e *chiamare fulmini* di Orion `[CANONE — DM 2026-10-19, D14]` |
 | Occhio della tempesta | sopra i bastioni (righe 01-03) | niente pioggia, vento calmo: gli arcieri alleati che tirano da qui non hanno i malus della tempesta. **Deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]` |
-| Zona crash ⚡ | AB30-AG32 | dal round 18: drago a terra, tremore CD 15 entro 9 m |
+| Zona crash ⚡ | AB30-AG32 | a fine round 20 ci cade Thorik; dal round 21 il drago a terra, tremore CD 15 entro 9 m |
 | Colline sud ⛰ | righe 63-68 | rotta di fuga: chi la raggiunge esce dalla battaglia |
 
 ### 🔄 EVOLUZIONE
@@ -655,7 +655,7 @@ Tempesta che si dissolve, gufi che atterrano presso il cancello, ~500 nemici cad
 |---|---|---|---|
 | A — Pre-carica ("4X") | — | com'è disegnata | discorso del Re (+4 morale) |
 | B — Urto | round 4-6 | cuneo giù per il pendio e sulla linea ⚔ al round 6 | carica +2 al tiro (SRD); prima linea cede |
-| C — La picchiata | round 18-20 | Fauci scende per scelta nella zona ⚡ | duello finale ai round 21-23 |
+| C — La picchiata | round 18-20 | Fauci prende Thorik in bocca e lo lascia cadere nella zona ⚡ | duello finale ai round 21-23 |
 | D — Rotta | drago fuori gioco / Gorthak caduto | 400 superstiti in fuga verso sud | inseguire (100% perdite nemiche) o lasciar fuggire (80% scappa); in tutti e due i casi l'orda perde i 900 dell'avanguardia (D11) |
 | E — Vittoria ("4B") | fine round 23 | campo della memoria | epilogo agrodolce (guida § La Vittoria Agrodolce) |
 

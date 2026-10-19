@@ -1181,7 +1181,7 @@
 <rect x="158" y="80" width="1456" height="56" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
 <text x="162" y="93" font-size="10.5" font-weight="bold" fill="#2c2313">Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)</text>
 <rect x="802" y="892" width="168" height="84" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
-<text x="806" y="905" font-size="10.5" font-weight="bold" fill="#2c2313">Zona della picchiata di Fauci su Thorik (round 18-20)</text>
+<text x="806" y="905" font-size="10.5" font-weight="bold" fill="#2c2313">Zona dove cade Thorik e atterra Fauci (round 20-21)</text>
 <path d="M872 374L872 1102" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M872 374L872 1102" fill="none" stroke="#1d6fd8" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="872" cy="374" r="3.4" fill="#1d6fd8" stroke="#ffffff" stroke-width="1"/>
@@ -1194,10 +1194,10 @@
 <path d="M1012 318L1012 1102" fill="none" stroke="#1d6fd8" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="1012" cy="318" r="3.4" fill="#1d6fd8" stroke="#ffffff" stroke-width="1"/>
 <path d="M1012 1102L1008.5 1095.94L1015.5 1095.94Z" fill="#1d6fd8"/>
-<path d="M228 542L872 934" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M228 542L872 934" fill="none" stroke="#8c2fb8" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M228 542L872 1102L872 934" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M228 542L872 1102L872 934" fill="none" stroke="#8c2fb8" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="228" cy="542" r="3.4" fill="#8c2fb8" stroke="#ffffff" stroke-width="1"/>
-<path d="M872 934L865 933.84L868.64 927.86Z" fill="#8c2fb8"/>
+<path d="M872 934L875.5 940.06L868.5 940.06Z" fill="#8c2fb8"/>
 <path d="M872 1382L872 1886" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M872 1382L872 1886" fill="none" stroke="#d62828" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="872" cy="1382" r="3.4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
@@ -1297,14 +1297,14 @@
 <text x="70" y="2310" font-size="11" fill="#3b2e1e">Ala destra (Hella + 2 Treant + 30): AI9 → AI37</text>
 <line x1="46" y1="2321" x2="62" y2="2321" stroke="#8c2fb8" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 2321L59.67 2323.5L59.67 2318.5Z" fill="#8c2fb8"/>
-<text x="70" y="2325" font-size="11" fill="#3b2e1e">Picchiata finale di Fauci su Thorik (vendetta di sangue): G17 → AD31</text>
+<text x="70" y="2325" font-size="11" fill="#3b2e1e">Picchiata e presa di Fauci su Thorik (vendetta di sangue): G17 → AD37 → AD31</text>
 <line x1="46" y1="2336" x2="62" y2="2336" stroke="#d62828" stroke-width="2" stroke-dasharray="6 3"/>
 <path d="M64 2336L59.67 2338.5L59.67 2333.5Z" fill="#d62828"/>
 <text x="70" y="2340" font-size="11" fill="#3b2e1e">Rotta degli orchi verso sud: AD47 → AD65</text>
 <rect x="46" y="2344" width="15" height="12" rx="2" fill="none" stroke="#2c2313" stroke-width="1.4" stroke-dasharray="4 3"/>
 <text x="68" y="2355" font-size="11" fill="#3b2e1e">E1–BD2 — Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)</text>
 <rect x="46" y="2359" width="15" height="12" rx="2" fill="none" stroke="#2c2313" stroke-width="1.4" stroke-dasharray="4 3"/>
-<text x="68" y="2370" font-size="11" fill="#3b2e1e">AB30–AG32 — Zona della picchiata di Fauci su Thorik (round 18-20)</text>
+<text x="68" y="2370" font-size="11" fill="#3b2e1e">AB30–AG32 — Zona dove cade Thorik e atterra Fauci (round 20-21)</text>
 <text x="46" y="2404" font-size="12" font-weight="bold" fill="#3b2e1e" letter-spacing="2">LEGENDA</text>
 <path d="M120 2400H1726" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <rect x="46.0" y="2410" width="19" height="15" fill="url(#t_mountain)" stroke="#7a6a50" stroke-width="0.7"/>

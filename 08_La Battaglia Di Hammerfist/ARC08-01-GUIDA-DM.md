@@ -170,8 +170,8 @@ SIMBOLI TATTICI:
 *   **Soffio (Sop):** Linea di 30 m di acido, una volta ogni 1d4 round. Danni 14d4 acido, TS Riflessi CD 29 per dimezzare.
 *   **Soffio a Cono (Str):** 1/giorno, Fauci di Palude può spendere un'azione di round completo per concentrare il suo potere acido. Nel round successivo, come azione standard, può emettere il suo soffio in un cono di 18 metri invece che in una linea. I danni e la CD del Tiro Salvezza rimangono invariati. Narrativamente, l'azione di round completo viene spesa mentre sale in quota per preparare la picchiata.
 *   **Presenza terrificante (Str):** Raggio 90m (potenziamento: l'SRD dà 9 m per categoria d'età, 63 m all'adulto maturo), creature con meno di 25 DV devono superare un TS Volontà CD 25 o essere in preda al panico (4d6 round) se hanno 4 DV o meno, scosse (4d6 round) se ne hanno di più.
-*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18).
-*   **Corrompere Acqua (Mag):** A volontà (potenziamento: l'SRD dice 1/giorno), 30m raggio, ristagna acqua.
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18). Vale sul morso che apre la presa e sui danni dei morsi in presa; sulle prove di lotta no `[INFERRED — needs DM confirmation: l'SRD dice che la prova di lotta è «come un tiro per colpire in mischia» e non dice se i bonus ai tiri per colpire la toccano]`.
+*   **Corrompere Acqua (Mag):** A volontà (potenziamento: l'SRD dice 1/giorno); gittata pari al raggio della Presenza terrificante (SRD), ristagna acqua.
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Lancia come uno Stregone di 7° livello.
     *   **Incantesimi Conosciuti (6/8/8/6 al giorno, LI 7°):**
@@ -179,8 +179,23 @@ SIMBOLI TATTICI:
         *   2° (CD 15): *Freccia Acida*, *Immagine Speculare*, *Invisibilità*
         *   1° (CD 14): *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
         *   0° (CD 13): *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
-**Tattiche:** Inizia con *Armatura Magica* e *Scudo* attivi. Usa il soffio e il controllo del campo (*Nube Maleodorante*) dalle alte quote; con Volteggiare resta sospeso sopra le mura e soffia senza atterrare, con Ghermire afferra un nano isolato e lo lascia cadere. Atterra solo se costretto o per finire bersagli importanti, Thorik prima di tutti. Fugge sotto i 50 PF (ramo D10). Thorik, col *Mind Blank* permanente della Corona, non subisce la Presenza terrificante: è un effetto di paura che influenza la mente (SRD *Mind Blank*).
+**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Fluttuare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
+**Tattiche:** Inizia con *Armatura Magica* e *Scudo* attivi. Finché non riconosce Aegis Fang combatte da drago d'assedio: Soffio sui difensori ammassati e *Nube Maleodorante* dall'alto; con Fluttuare resta sospeso sopra le mura e soffia senza atterrare. Dal turno dopo il primo canto di Aegis Fang, o il primo colpo dell'ascia, sa chi ha davanti e ha un bersaglio solo: Thorik. Lo prende in bocca, una volta, quando lo decide lui (qui sotto, «La presa di Thorik»; in Sessione 4 è la picchiata dei round 18-20). Atterra solo se gravemente ferito (<100 PF) o per finire Thorik dopo averlo lasciato cadere. Fugge sotto i 50 PF. Thorik, col *Mind Blank* permanente della Corona, non subisce la Presenza terrificante: è un effetto di paura che influenza la mente (SRD *Mind Blank*).
+
+**La presa di Thorik** `[CANONE — DM 2026-10-19]`. È la firma di Fauci: la usa solo su Thorik, per odio, e solo da quando ha riconosciuto l'ascia. Non ghermisce nessun altro. Una volta per incontro `[INFERRED — needs DM confirmation]`. Se Aegis Fang non ha mai cantato né colpito, la presa non c'è.
+
+- **Il morso (round 18).** *Attacco in Volo* (SRD): scende in picchiata con un'azione di movimento e morde a metà discesa con l'azione standard, morso +37 (+33, più l'Odio della stirpe), 2d8+14, critico 19-20. Dopo il morso finisce il movimento risalendo, con la manovrabilità scarsa: 45° e metà velocità in salita (SRD). Una carica in volo darebbe +39, ma chiude il movimento accanto a Thorik.
+- **La presa.** Se il morso colpisce, *Ghermire* (SRD, *Snatch*) apre la lotta come la presa migliorata: azione gratuita, nessun attacco di opportunità, prova di lotta contrapposta. Fauci lo tiene con la sola bocca, a Lotta +23 (+43 −20): così non è in lotta, continua a volare, minaccia e usa gli altri attacchi su chi gli sta intorno (SRD, *Improved Grab*). Contro la Lotta di Thorik, +18 con BAB +13 e FOR 20 (i numeri che il repo usa: la scheda di Thorik non c'è), la presa riesce tre volte su quattro. Thorik è Medio, due taglie sotto un Enorme: la stretta automatica di *Ghermire* vale solo da tre taglie in giù, e qui non c'è. Ogni prova di lotta che Fauci vince nei round dopo fa il danno del morso, 2d8+14 (presa migliorata, SRD).
+- **La salita (round 19).** *Fluttuare* (SRD, *Hover*): con un'azione di movimento si ferma e sale dritto a metà velocità, 22,5 m, fino a 30-35 m; con l'azione standard fa una prova di lotta, che morde se la vince. Che fermarsi e salire stiano nella stessa azione di movimento è una lettura del testo SRD («può poi volare in qualunque direzione a metà velocità»).
+- **Il soffio con lui in bocca (round 20).** Comincia il turno fermo in aria, e ha il round intero (SRD, *Hover*). Soffia sulla linea dei compagni che gli corrono sotto: chi è in bocca non ha il TS sui Riflessi (SRD, *Snatch*), e Thorik prende i 14d4 pieni.
+- **La caduta.** Lasciarlo è un'azione gratuita (SRD, *Snatch*). Lo lascia a fine round 20 sopra la zona ⚡ della MAPPA 4, alle spalle della punta: 1d6 ogni 3 m, al massimo 20d6 (SRD), cioè 10d6-12d6 da 30-35 m. Al round 21 scende lì a finirlo, ed è il duello dei round 21-23. Se invece lo scaglia (azione standard): 1d6 × 3 m di volo, 1d6 ogni 3 m, o la caduta se è di più (SRD).
+- **Quanto pesa.** Se nessuno lo ferma: morso 23, una stretta 17 (tre volte su quattro), soffio 35, caduta da 35 m 38. Circa 113: Thorik arriva a terra vivo, e il drago gli scende addosso. Se il DM vuole il massimo, al round 20 Fauci sale ancora 22,5 m (azione di movimento) prima di soffiare, e lo lascia da circa 55 m: 18d6, media 63, e il conto arriva a circa 138. Il tetto SRD, 20d6, è da 60 m.
+- **Come se ne esce.** Al posto di un attacco, una prova di lotta contro +23; o Artista della Fuga, con un'azione standard (SRD). Con +18/+13/+8 Thorik se ne libera circa una volta su tre a round, e chi si libera in aria cade dalla quota in cui è. Attivare un oggetto magico si può, senza prova di lotta (SRD).
+- **L'ascia che non serve.** In lotta si attacca solo senz'armi, con armi naturali o con armi leggere, a −4 (SRD). Aegis Fang è un'ascia da guerra nanica, non leggera: in bocca al drago non colpisce, e lavorano gli altri tre.
+- **Lo *Scosso* del Bane.** Azione gratuita, 1 per incontro, e si usa anche in bocca: il flashback dei mille anni gli fa allentare la presa, e di quanto lo decide il DM `[INFERRED — needs DM confirmation: l'SRD dice che la prova di lotta è «come un tiro per colpire in mischia» e non dice se la penalità dello Scosso la tocca]`.
+- **Cosa dice.** Parla una volta, quando apre la bocca per lasciarlo. Un nome solo, e mai gli altri.
+
+**FAUCI (piano, mentre apre la bocca):** *«Thorik.»* `[INFERRED — needs DM confirmation: Fauci sa il nome solo se al duello del ≈372 il tavolo l'ha dato a Skullcrusher, che i nomi li chiede; al 2026-10-19 il duello non è ancora giocato. Se non l'hanno dato, dice «Portatore.»]`
 
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
 > di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
@@ -195,9 +210,9 @@ SIMBOLI TATTICI:
 > *corrompere acqua* a volontà sono potenziamenti, segnati sulla riga. I pf tornano coi dadi:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
 > Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
-> dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher
+> dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher.
 > 25 DV danno 9 talenti: i tre che
-> mancavano sono Volteggiare, Ghermire e Riflessi Fulminei. *Oscurità* è una capacità magica dell'età, non
+> mancavano sono Fluttuare, Ghermire e Riflessi Fulminei. *Oscurità* è una capacità magica dell'età, non
 > un incantesimo conosciuto; *Volare* esce dagli incantesimi (un drago vola
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
 > CORREZIONE del boss nell'arco 07.
@@ -205,7 +220,7 @@ SIMBOLI TATTICI:
 **Tattiche in Combattimento:**
 - **Round 1-2:** Sorvolo e soffio sulle concentrazioni nemiche
 - **Round 3-17 (Sessione 4):** combattimento aereo contro i gufi, logoramento
-- **Round 18-20 (Sessione 4):** picchiata su Thorik, poi il duello a terra ai round 21-23 (Incontro 4A) `[CANONE — DM 2026-10-19, D9]`
+- **Round 18-20 (Sessione 4):** picchiata e presa di Thorik: morso, salita, soffio con lui in bocca, caduta nella zona ⚡ (qui sopra, «La presa di Thorik») `[CANONE — DM 2026-10-19]`; poi il duello a terra ai round 21-23 (Incontro 4A) `[CANONE — DM 2026-10-19, D9]`
 
 <div style="page-break-before:always"></div>
 
@@ -1795,6 +1810,8 @@ Le Cantitrici devono completare il loro rituale (5 round) ma sono vulnerabili du
 #### **INCONTRO 2B: IL SOFFIO DELLA DISPERAZIONE**
 *Obiettivo: Sopravvivere all'attacco mirato del drago e ritirarsi nel cuore della montagna.*
 
+> **📎 Regia, l'eco del re** (Casa di Davide): Fauci punta Re Thorek come il suo capostipite, nel ≈372, puntava Re Thorek I nel cortile. Vuole un re davanti all'orda, come lui (`07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Scena 11, «Un re l'ho già mangiato, qui» e «Il re»). Il DM non lo spiega: chi ha giocato quel duello lo riconosce da solo, e chi non l'ha giocato vede un drago che sceglie il bersaglio con calma. La presa in bocca non c'entra: Fauci la tiene per Thorik (`ARC08-02` §1, «La presa di Thorik»).
+
 **MAPPA 2B: ATTACCO AL COMANDO (TURNO 16-20)**
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2B-CORRETTA REVISED (40×26, 1,5 m: cono del soffio, posizioni e opzioni PNG)
 ```
@@ -2725,7 +2742,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 > - **Round 4-5**: il cuneo scende il pendio; la Cantata di Tempestas e i fulmini di Orion.
 > - **Round 6**: l'urto sulla linea ⚔ della riga 37. Strafing dei gufi ai round 6-8; fino al round 10 la convergenza, e Thorik ingaggia Gorthak.
 > - **Round 11-17**: logoramento, in aria e a terra. Fauci non fugge.
-> - **Round 18-20**: la picchiata di Fauci su Thorik. **Round 21-23**: il duello. A fine round 23, la vittoria.
+> - **Round 18-20**: la picchiata di Fauci su Thorik, e la presa. **Round 21-23**: il duello. A fine round 23, la vittoria.
 
 ### **OBIETTIVO:**
 I Rumbling Stones guidano l'assalto finale fuori dalle caverne, coordinando con gli alleati aerei (gufi giganti + druido orso + bardo tempeste) per sconfiggere definitivamente l'esercito della Mano Rossa.
@@ -2822,7 +2839,7 @@ Mentre gli alleati aerei ingaggiano il drago, i PG e i nani combattono i resti d
 
 **FAUCI DI PALUDE (Drago Indebolito):**
 - **PF di partenza** `[CANONE — DM 2026-10-19, D9]`: 337 meno il carry-over di `ARC08-10` §4.1 (303 se nel P5 Skullcrusher fu ucciso); **337 se il P5 non è stato giocato** (statblock invariato)
-- **Tattiche** (scheda in `ARC08-02` §1): resta in quota col soffio e *nube maleodorante*, con Volteggiare e Ghermire. Atterra solo sotto i 100 pf o per finire Thorik, che odia (+4 al colpire e ai danni contro di lui, sempre). Fugge sotto i 50 pf
+- **Tattiche** (scheda in `ARC08-02` §1): resta in quota col soffio e *nube maleodorante*, sospeso con Fluttuare. Ai round 18-20 la picchiata e la presa di Thorik, una volta (scheda, «La presa di Thorik»); *Ghermire* non lo usa su nessun altro. Atterra solo sotto i 100 pf o per finire Thorik, che odia (+4 al colpire e ai danni contro di lui, sempre). Fugge sotto i 50 pf
 - **Cavaliere Hobgoblin:** Fornisce bonus +2 agli attacchi, può lanciare incantesimi
 
 **SIGNORE VENTOLESTO + 2 GUFI:**
@@ -2904,22 +2921,22 @@ SE IL CAVALIERE CADE (dal round 3)
 
 Fauci resta in aria e logora fino al round 17, e scende quando lo decide lui.
 
-**Perché scende (legale in 3.5):** lo dice la sua scheda (`ARC08-02` §1, *Tattiche*): atterra solo se è gravemente ferito, sotto i 100 pf, o per finire un bersaglio importante, Thorik prima di tutti. L'Odio della stirpe (+4 contro Thorik, sempre) è la ragione per cui lo fa. È una picchiata, cioè una carica in volo (+2 al colpire, SRD), e con Attacco in Volo. La presa di Orion da sola non lo porta giù: +24 contro +43 (SRD). Con i tiri nella media succede ai **round 18-20**; se scende sotto i 100 pf prima, la picchiata viene prima.
+**Perché scende (legale in 3.5):** lo dice la sua scheda (`ARC08-02` §1, *Tattiche*): atterra solo se è gravemente ferito, sotto i 100 pf, o per finire Thorik dopo averlo preso e lasciato cadere. L'Odio della stirpe (+4 contro Thorik, sempre) è la ragione per cui lo fa. È una picchiata con Attacco in Volo (SRD: un'azione di movimento, anche in picchiata, e un'azione standard in un punto qualsiasi del movimento), e porta **la presa di Thorik** `[CANONE — DM 2026-10-19]`: morso al round 18, salita con Thorik in bocca al 19, soffio con lui in bocca e caduta al 20. Le regole e i numeri sono nella scheda (`ARC08-02` §1, «La presa di Thorik»), una volta per incontro. La presa di Orion da sola non lo porta giù: +24 contro +43 (SRD). Con i tiri nella media succede ai **round 18-20**; se scende sotto i 100 pf prima, la picchiata viene prima. Se Aegis Fang non ha mai cantato né colpito, niente presa: scende nella zona ⚡ e il duello comincia lì.
 
-**Dove:** nella zona ⚡ della MAPPA 4 (AB30-AG32), alle spalle della punta, fra le ultime file del cuneo, a circa 30 m da Thorik, che a quel punto è sulla linea ⚔ o contro Gorthak. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round; il duello è ai **round 21-23**.
+**Dove:** lo prende dov'è, sulla linea ⚔ o contro Gorthak, e lo lascia cadere a fine round 20 nella zona ⚡ della MAPPA 4 (AB30-AG32), alle spalle della punta, fra le ultime file del cuneo, a circa 30 m dalla linea. Al round 21 Fauci atterra lì per finirlo. Tremore: Equilibrio CD 15 entro 9 m. I PG convergono in 2 round; il duello è ai **round 21-23**. Se Thorik si libera prima, cade dalla quota in cui è, e Fauci scende comunque dove è caduto.
 
 > **Read-aloud (Salvatore lead) — la picchiata.** *Il drago smette di girare sopra il campo, chiude le ali e scende dritto, e la pioggia gli scivola addosso come su una lama oliata. Non guarda i gufi: guarda la punta del cuneo, l'elmo con la corona. Che fate?*
 
 **Se i PG volano** (lo zaino ha 5 pozioni di *volare*: 18 m, 12 m in armatura media o pesante, manovrabilità buona, 5 minuti a LI 5, SRD) — **Fauci combatte in aria, non fugge**:
-- **Volteggiare** (SRD): resta sospeso e fa l'attacco completo senza le ali, morso +33 (2d8+10), 2 artigli +31 (2d6+5), coda +31 (2d6+15); contro Thorik +4 al colpire e ai danni. Oppure soffia.
+- **Fluttuare** (SRD): resta sospeso e fa l'attacco completo senza le ali, morso +33 (2d8+10), 2 artigli +31 (2d6+5), coda +31 (2d6+15); contro Thorik +4 al colpire e ai danni. Oppure soffia.
 - **Il soffio in linea** (30 m, 14d4, Riflessi CD 29) sui PG in volo che si allineano.
-- **Ghermire** (SRD): sul morso o su un artiglio inizia la lotta (+43); poi lascia cadere la preda (azione gratuita) o la scaglia (azione standard: 1d6×3 m, 1d6 ogni 3 m, o il danno da caduta se è più alto). Chi tiene in bocca non ha il TS contro il soffio.
+- **Ghermire** (SRD) solo su Thorik: è la presa della scheda, e gli altri PG in volo non li prende. Se Thorik vola, prima gli toglie il volo con *dissolvi magie* (LI 7°: d20+7 contro CD 16 per una pozione di LI 5°, SRD), poi lo prende; se il volo regge, alla fine non lo lascia ma lo scaglia (azione standard: 1d6×3 m, 1d6 ogni 3 m, SRD). Chi tiene in bocca non ha il TS contro il soffio.
 - **Attacco in Volo** per staccarsi dal più lento: vola a 45 m, un PG in armatura pesante a 12 m.
 - **Il cavaliere** carica in sella e copre il fianco del drago.
 - **Thorik** non subisce la Presenza terrificante: il *Mind Blank* della Corona la blocca (scheda di Fauci).
 - Sotto i 100 pf scende comunque; **sotto i 50 tenta la fuga** (`ARC08-10` §4), e i PG in volo possono inseguirlo.
 
-**Il duello (round 21-23):** Fauci a terra fa l'attacco completo intero, sei attacchi con le ali. Sotto i 50 pf, il default è che rompa il contatto e decolli verso sud; è **ucciso** solo se i PG lo bloccano oltre quel punto. Si decide al tavolo, e i due rami sono in `ARC08-10` §4. In tutti e due l'orda vede il drago fuori gioco, ed è la rotta.
+**Il duello (round 21-23):** Fauci atterra accanto a Thorik caduto, per finirlo, e a terra fa l'attacco completo intero, sei attacchi con le ali. Sotto i 50 pf, il default è che rompa il contatto e decolli verso sud; è **ucciso** solo se i PG lo bloccano oltre quel punto. Si decide al tavolo, e i due rami sono in `ARC08-10` §4. In tutti e due l'orda vede il drago fuori gioco, ed è la rotta.
 
 **Che cosa sa il cavaliere, e se lo divinano:** `ARC08-10` §4.2.
 
@@ -3623,7 +3640,7 @@ incontri `[CANONE — DM 2026-10-19, D19]`.*
 *   **Tattiche Chiave:**
     *   **Inizio:** Vola alto, usa **Soffio** sulle unità ammassate.
     *   **Metà Scontro:** Usa **Presenza Terrificante** (CD 25) e incantesimi come *Nube Maleodorante*.
-    *   **Fine Scontro:** Atterra solo se ferito (<100 PF) o per finire un PG isolato. Non combatte fino alla morte, fugge sotto i 50 PF.
+    *   **Fine Scontro:** Atterra solo se ferito (<100 PF) o per finire Thorik, dopo averlo preso in bocca e lasciato cadere, una volta (scheda, «La presa di Thorik»). Non combatte fino alla morte, fugge sotto i 50 PF.
 
 **Scheda Boss 2: GENERALE GRIMJAW (Orog Comandante)**
 *   **GS 14 - PF 178 - CA 26**

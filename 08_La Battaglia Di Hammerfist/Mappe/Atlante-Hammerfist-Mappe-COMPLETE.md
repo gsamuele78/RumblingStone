@@ -1226,7 +1226,7 @@ This map shows MOMENT BEFORE. Next map (4 Unified) shows DURING charge + aerial 
 **Tipo:** Epic cinematic dual-front  
 **Scala:** Strategic overview  
   ⚠️ **Vista strategica — NON è una griglia di combattimento.**
-**Timing:** Climax Sessione 4, Round 1-23 (la linea del tempo è quella della guida, § Incontro 4A `[CANONE — DM 2026-10-19, D9]`: cuneo ai round 1-5, urto al 6, logoramento 11-17, picchiata 18-20, duello 21-23)
+**Timing:** Climax Sessione 4, Round 1-23 (la linea del tempo è quella della guida, § Incontro 4A `[CANONE — DM 2026-10-19, D9]`: cuneo ai round 1-5, urto al 6, logoramento 11-17, picchiata e presa di Thorik 18-20, duello 21-23)
 
 **Descrizione Scenario:**
 Vista cinematografica captures TWO simultaneous battles integrated:
@@ -1276,7 +1276,7 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   - Lightning burns scaglie
 - **Tattiche:** Aggressive suicide (Vendetta Bloodline vs Thorik overwhelms tactics)
   - Ignora gufi (Mistake!)
-  - Dive attack Thorik ground (Exposed!)
+  - Dive attack Thorik ground (Exposed!): lo prende in bocca, sale e lo lascia cadere (scheda, «La presa di Thorik») `[CANONE — DM 2026-10-19]`
 
 **Signore Ventolesto + Ranger:**
 - **Signore (Alpha Gufo):** Altitude 45m, coordinates
@@ -1288,7 +1288,7 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   - **Orion Pelleorsa (Druido):** SALTA SCHIENA DRAGO!
     - **Wild Shape: Dire Bear** forma (For 31), presa il round prima: salto, forma e presa non stanno in un round solo (SRD)
     - Lotta **contrapposta** (SRD): +24 dell'orso crudele contro +43 di Fauci, che se ne libera quasi sempre
-    - Il peso da solo non forza la discesa: Fauci scende **per scelta**, come dice la sua scheda (atterra sotto i 100 pf o per finire Thorik) `[CANONE — DM 2026-10-19, D9]`
+    - Il peso da solo non forza la discesa: Fauci scende **per scelta**, come dice la sua scheda (atterra sotto i 100 pf o per finire Thorik dopo averlo lasciato cadere) `[CANONE — DM 2026-10-19, D9]`
 
 **ARTEMIS BLACKROCK (Solo Aereo PG):**
 - **Altitude:** 30m (Below melee swarm)
@@ -1299,11 +1299,11 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
 **CONVERGENZA CLIMAX:**
 
 **Round 18-20: LA PICCHIATA SU THORIK** `[CANONE — DM 2026-10-19, D9]`
-- Fauci scende per scelta: sotto i 100 pf, o per finire Thorik (scheda, `ARC08-02` §1; Odio della stirpe +4). Picchiata in volo con Attacco in Volo
+- Fauci scende per scelta: sotto i 100 pf, o per Thorik (scheda, `ARC08-02` §1; Odio della stirpe +4). Picchiata in volo con Attacco in Volo e **presa di Thorik** `[CANONE — DM 2026-10-19]`: morso e presa al round 18, salita con lui in bocca al 19, soffio sui compagni e caduta al 20 (scheda, «La presa di Thorik», una volta)
 - Orion sulla schiena, solo nei round in cui vince la lotta contrapposta; un fulmine di *chiamare fulmini* (3d10) su un'ala
 - Artemis Deflagrazione occulta (6d6) ala sinistra
-- **Result:** atterra nella zona ⚡ (AB30-AG32 della MAPPA 4 REVISED), alle spalle della punta, a circa 30 m da Thorik; i PG convergono in 2 round
-- **Se i PG volano** con le pozioni: Fauci combatte in aria e non fugge (Volteggiare, Ghermire, soffio in linea; guida § Incontro 4A, «ROUND 18-23»)
+- **Result:** Thorik cade nella zona ⚡ (AB30-AG32 della MAPPA 4 REVISED), alle spalle della punta, a circa 30 m dalla linea; Fauci ci atterra al round 21 per finirlo; i PG convergono in 2 round
+- **Se i PG volano** con le pozioni: Fauci combatte in aria e non fugge (Fluttuare, soffio in linea, *Ghermire* solo su Thorik; guida § Incontro 4A, «ROUND 18-23»)
 
 **Round 21-23: DUELLO FINALE THORIK vs FAUCI**
 - **Ground melee:** Thorik vs Drago (Epic confronto)

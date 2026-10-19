@@ -398,6 +398,15 @@ file è in
 - **Cambiate**: i pf di Fauci senza il P5. La carta diceva 232, ma era un numero sbagliato mio: 232 era nella vecchia mappa un drago già ferito di 80 pf, e `ARC08-10` §4.1 dice che senza il P5 lo statblocco resta invariato. Ora sono 337, il valore più forte e quello della regola.
 - **Dedotto da me**: Fauci scende per scelta, sotto i 100 pf o per finire Thorik (Odio della stirpe), perché la presa di Orion da sola non lo tiene; Dana a 20 pf con un solo *muro di pietra*, perché il canone del 2026-10-18 batte la versione F; un round senza prova di Guarigione conta come fallito.
 
+**La presa di Thorik, 2026-10-19.** Dal thread di ARC-07 arriva una scelta del
+DM: la presa in bocca (*Ghermire*) non è più di Skullcrusher, ed è la firma di
+Fauci contro Thorik, da quando riconosce Aegis Fang. È applicata nella
+picchiata dei round 18-20, con i numeri ricalcolati sulla scheda e riscontrati
+sull'SRD
+([`PRESA-DI-THORIK.md`](esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md)).
+Restano `[INFERRED]` quattro punti: quante prese per incontro, lo *Scosso* del
+Bane e l'Odio della stirpe sulle prove di lotta, il nome che Fauci pronuncia.
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte
