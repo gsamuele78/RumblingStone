@@ -377,9 +377,9 @@ finora la propria avidità nell'arco:
 | **Rifiuta / distrugge la gemma** (Sapienza Magica CD 20 per estirparla pulita, o la lascia dov'è) | Varis perde l'esca; l'Anello approva (+1 morale al prossimo TS di Artemis, colore) | Varis lo segna come "sfuggito": nemico che rispetta, non pollo (→ #4/ARC-09) |
 | **Prende la gemma** | **Esca reale**: un **Frammento di Mercato** (una volta: −25% su un acquisto o +4 di circostanza a una prova commerciale/UMD) — la cupidigia è **premiata sul serio**, per un attimo | **Marchio di Varis**: Varis lo **localizza**; una volta potrà riscuotere (favore/tradimento). L'Anello può spezzare il *controllo* (Dawn's Defiance) ma **non** il debito. → grande gancio grigio per ARC-09 |
 
-> **Perché è bello (stile Andor/BG3).** Non è "una trappola cattiva": è un
+> **Perché è bello (stile Andor/BG3).** Più che "una trappola cattiva", è un
 > **affare vero con un amo vero**. Artemis può vincerci (se è furbo o retto) o
-> pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
+> pagarlo caro (se è avido), e in entrambi i casi la scelta **torna** più
 > avanti. Registra l'esito nell'**Echo Ledger** (§11).
 
 #### ✅ CANONE GIOCATO — la terza strada: PRESO, MAI TOCCATO
@@ -427,9 +427,9 @@ indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
 Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
 debitore, riconosce quella di un collega.
 
-**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
-ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
-**appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
+**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis la
+tentazione l'ha **rimandata**, e nel rimandarla l'ha **appoggiata sulla
+schiena di qualcun altro**. Tordek porta un innesto
 planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
 renderlo pesante: basta ricordarsene.
 
@@ -475,7 +475,7 @@ sempre tiepido.
    anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
    arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
 . Non c'è tiro
-   salvezza, perché il Seme non costringe: aspetta.
+   salvezza, perché il Seme si limita ad aspettare.
 2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
    nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
    si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
@@ -537,9 +537,9 @@ non c'è niente di più interessante.
    sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
 
 > **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
-> si accartoccia in cenere tiepida. Sotto il guanto la gemma ha lo stesso peso
-> e lo stesso calore di una mano appena tolta da una tasca, ma dentro la pietra
-> c'è una scrittura fitta e ordinata, da libro mastro. In fondo alla
+> si accartoccia in cenere tiepida. Sotto il guanto la gemma pesa e scalda
+> come prima, ma dentro la pietra c'è una scrittura fitta e ordinata, da libro
+> mastro. In fondo alla
 > pagina, una bilancia con un filo d'argento avvolto al giogo. Per tutta l'ora
 > hai aspettato una voce, e dall'altra parte del filo non c'è ancora nessuno.*
 <!-- /include -->
@@ -1403,10 +1403,8 @@ Thorik, e quando il re tace parla lui.
 > non si è mosso. Tiene le mani aperte verso la luce, i palmi in su, e sono mani
 > che hanno tenuto la stessa ascia di Thorik: si vede dal callo, nello stesso
 > punto. Guarda la corona sulla fronte di Thorik per il tempo di tre respiri. Poi gli occhi gli si riempiono, e lui non se ne accorge,
-> perché sta già parlando.*
-
-**THORGRIM (voce che non trema, occhi che sì):** *«Mio nonno ha perso la
-corona. L'ascia no. Se dite il vero, fatemi tenere la vostra.»*
+> perché sta già parlando, e la voce non trema: «Mio nonno ha perso la
+> corona. L'ascia no. Se dite il vero, fatemi tenere la vostra.»*
 
 **Se Thorik gliela porge**, e solo allora:
 
@@ -1439,7 +1437,7 @@ l'orda, e **affrontare Skullcrusher** all'alba.
 - **Handout — il piano di battaglia** (§9): forze, obiettivi, cosa dà il re. Si
   consegna qui, sul tavolo di guerra.
 - **Su cosa si discute**. Il re crede alla Corona; Thorgrim e i
-  capitani no. Non chiedono chi siano i PG: chiedono se affidare a quattro
+  capitani no. La domanda non è chi siano i PG, ma se affidare a quattro
   stranieri le **quattro pozioni** dell'antica fucina e la **mappa del campo**,
   che sono tutto quello che la fortezza ha per la notte. La prova dice quanto ne
   danno.
@@ -1650,7 +1648,7 @@ l'odore di zolfo copre quello del carbone.
 > piombo. Dentro l'aria sa di zolfo e punge gli occhi. Sul banco, in fila come
 > soldati, fiasche di terracotta tappate con la cera, e sotto il banco una cassa di
 > sabbia per quando qualcosa va storto. Una nana senza sopracciglia ne riempie
-> una col cucchiaio, piano, e ride da sola.*
+> una col cucchiaio, piano. A metà il cucchiaio le trema, e lei ride.*
 
 **Scheda d'entrata — Kettra, l'alchimista del re**
 
@@ -1806,13 +1804,14 @@ non ha un mercato: ha una fucina che lavora per l'alba, e una maestra armaiola
 che decide cosa ne esce.
 
 > **Read-aloud (Salvatore lead, Andor support) — la fucina e il banco.** *La
-> fucina è l'unico posto della fortezza dove nessuno parla sottovoce. Davanti a
+> fucina è l'unico posto della fortezza dove nessuno parla sottovoce, e l'aria
+> sa di carbone e di scoria. Davanti a
 > tre forge accese aspettano file di ragazzi con quello che hanno trovato: un piccone,
 > una vanga, la spada del padre. Una nana con le braccia bruciate fino al gomito
 > guarda ogni lama di taglio contro la brace e la mette in uno di due mucchi,
 > senza dire quale sia il buono. Sul banco dietro di lei, poco: qualche fiasca
 > chiusa con la cera, un mazzo di frecce, un'ascia avvolta in un panno grigio che nessuno
-> tocca. Vi vede entrare, e non smette di lavorare. Alza il mento verso
+> tocca. La nana non smette di lavorare quando la porta si apre. Alza il mento verso
 > quello che avete addosso, e aspetta.*
 
 **GUNNVOR (asciutta, senza alzare gli occhi):** *«Stanotte non vendo. Scambio.
@@ -2240,7 +2239,7 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 **In scena** — Dove: la postierla · il campo — Chi: Durin · Grask · i cavalieri dei lupi · la pattuglia di quattro orchi · le vedette goblin · lo squadrone hobgoblin · il corridore
 
-> **Read-aloud (Andor lead) — la postierla.** *Nel cuore della notte si apre una
+> **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
 > sempre e che nessun cronista scrive. Il fiato esce bianco nel freddo. Durin vi
 > accompagna fino all'imboccatura, vi mette una mano guantata sul braccio, apre
@@ -2327,7 +2326,7 @@ blocchi** da 200 m.
 - **Come combatte la pattuglia**. Sono
   soldati, non predoni: marciano in due file da quattro e combattono in coppia,
   due su ogni PG che vedono, spalla a spalla per darsi il fiancheggiamento
-  (+2, SRD). **Non gridano**: in un campo che dorme un grido sveglia il
+  (+2, SRD). **Non gridano**, perché in un campo che dorme un grido sveglia il
   generale, e il generale frusta chi l'ha svegliato. Per questo mandano un
   corridore, ed è il tiro di 1d6 qui sopra.
   - *Contro chi è invisibile* colpiscono il quadretto da cui è venuto il colpo,
@@ -2577,8 +2576,8 @@ e il drago arriva sull'assalto.
 | il corridore | un hobgoblin ragazzo, senza armatura per correre più forte | ripete il messaggio a mezza voce per non dimenticarlo |
 
 - **Lo scontro nella tenda è l'allarme.** Al primo grido di Zog'tar, Grask si
-  sveglia e suona **entro 1d4 round**. Non suona se i PG se ne sono occupati
-  prima: dorme seduto fuori, e lo si lega, lo si addormenta o gli si ruba il
+  sveglia e suona **entro 1d4 round**. Se i PG se ne sono occupati prima, non
+  suona: dorme seduto fuori, e lo si lega, lo si addormenta o gli si ruba il
   corno. Oppure se il *silenzio* copre lui o il corno: un corno che non fa
   suono non chiama nessuno. Ma Grask sta a tre metri dal seggio, e una bolla
   su di lui prende anche la tenda: le guardie si accorgono che la voce è
@@ -3080,8 +3079,8 @@ motivo per cui la Scena 7 viene prima.
   lasciano fiancheggiare. Le altre due vanno su chi lancia incantesimi o
   colpisce da lontano, in coppia. Contro chi vola tirano i giavellotti, poi
   tornano davanti al seggio. Contro chi è invisibile colpiscono il quadretto da
-  cui viene il colpo, con il 50% di mancare. **Non scappano finché Zog'tar è
-  in piedi**: lui le guarda. Se cade, le guardie rimaste gettano le armi e
+  cui viene il colpo, con il 50% di mancare. **Finché Zog'tar è in piedi non
+  scappano**: lui le guarda. Se cade, le guardie rimaste gettano le armi e
   corrono fuori a gridare, ed è l'allarme anche se Grask dorme. Per questo un
   Zog'tar ucciso in silenzio vuole prima le guardie a terra, o una bolla di
   *silenzio* sulla tenda.
@@ -3324,9 +3323,8 @@ con un **terrore reverenziale mal mascherato**.
 > già scelto l'ombra, e che ora vede in VOI un potere che vorrebbe rubare.
 
 > **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda, vestito di ombre cucite bene,
-> con qualcosa avvolto in un panno stretto al petto. Vi guarda con il terrore di
-> chi ha appena visto un mito camminare. Non attacca. Non scappa nemmeno,
-> subito. Vi fissa come si fissa una cosa che non dovrebbe esistere, e sussurra,
+> con qualcosa avvolto in un panno stretto al petto. Non attacca. Non scappa
+> nemmeno, subito. Vi fissa come si fissa una cosa che non dovrebbe esistere, e sussurra,
 > più a sé stesso che a voi: «…quattro. Eravate davvero in quattro.» Poi torna la
 > maschera, un sorriso freddo, un passo indietro verso l'ombra. Che fate?*
 
@@ -3672,7 +3670,7 @@ cambia davvero.
   sorpresa» del drago che li ha già visti di notte; agisce nel round di
   sorpresa chi supera Ascoltare CD 20, e con le campane suonate vale la loro
   riga nella tabella delle difese. Apre col **Soffio acido** sul
-  gruppo più fitto (Riflessi CD 28). *Non atterra: vuole restare in cielo, dove
+  gruppo più fitto (Riflessi CD 28). *Non atterra, perché vuole restare in cielo, dove
   si sente un dio.* Chi ha la runa di Zeth (*resistere all'energia*, acido 20)
   la attiva adesso, con un'azione standard: prima del soffio, se ha
   l'iniziativa.
@@ -3724,7 +3722,7 @@ cambia davvero.
   che vuole mangiare davanti all'orda. Chi sta sulla linea del soffio o
   accanto al re prende il colpo al posto suo. ⚠ Non SRD: in 3.5 non c'è
   un'azione per prendere un colpo al posto di un altro; qui basta essere lì.
-  Il re non muore, perché alla Scena 12 è vivo. Non si tira per colpirlo: due
+  Il re non muore, perché alla Scena 12 è vivo. Per colpirlo non si tira: due
   colpi del drago lo mettono a terra, stabile, e uno solo se è già a 8 pf
   (Scena 10). Il Rubino lo ricorda come il
   giorno in cui il re è caduto.
@@ -3890,7 +3888,7 @@ che l'incontro ha appena scelto.
 > contro la fronte, e non si raffredda.*
 
 **Momento 1 — la pietra entra.** Il Rubino trova il suo incasso, quello che per
-tutto l'arco non rifletteva la luce. Non serve un tiro: **la Corona lo prende da
+tutto l'arco non rifletteva la luce. Il tiro non serve: **la Corona lo prende da
 sé**, come una serratura che riconosce la chiave. Ma **la Corona non cambia
 ancora**: il Rubino si usa **una volta sola**, e quella volta
 è il viaggio di casa. Finché non è speso resta un motore acceso nell'incasso, e
@@ -3948,17 +3946,16 @@ alla vittoria nella battaglia antica**. È adesso.
 | **I nemici dei nani** | **Volontà CD 20** o **scossi** per 1 minuto |
 
 ⏱️ **Durata e cadenza**: dura **fino all'alba del giorno dopo** la prima volta, quindi i PG arrivano a «Il Ritorno a Hammerfist» con *Possenza Divina* e *Protezione dal Male* ancora addosso; e da allora
-resta alla Corona come potere **1/settimana**. Non è una ricarica: è la cosa
-che la Corona sa fare da quando ha preso la terza pietra: l'Aura viene dal rito,
+resta alla Corona come potere **1/settimana**. È la cosa che la Corona sa fare
+da quando ha preso la terza pietra, e non una ricarica. L'Aura viene dal rito,
 non dal ritorno, e non aspetta che la Corona sia completa.
 
 > **Read-aloud (LotR lead) — l'aura.** *Il vecchio accanto all'incudine alza la
 > testa e guarda la luce dietro Thorik. In tutto il cortile i feriti smettono di essere feriti:
 > un fabbro con una gamba sola si tira su contro il muro, il muro gli si apre
 > sotto la mano come argilla, e lui ci infila la gamba e resta in piedi.
-> Nessuno grida. Ottocento nani guardano un nano con una corona, e capiscono,
-> tutti insieme e senza parlare, di essere dentro una storia che verrà
-> raccontata.*
+> Nessuno grida. Ottocento nani guardano un nano con una corona, e per un
+> lungo momento, nel cortile, c'è solo il respiro della forgia.*
 
 ⚠️ **Tre cose per il DM, e la prima è di bilancio.**
 
@@ -4025,7 +4022,7 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 > **Read-aloud (LotR lead) — l'incudine, 3 di 3: la voce.** *Poi una voce, come
 > una campana che batte una volta sola: «Ben fatto, figli miei. Avete salvato
 > la fortezza come doveva accadere. Avete chiuso il cerchio.» Nessuno ha visto muoversi una bocca:
-> l'avete sentita nei denti. Poi la luce comincia a tirare e vi porta via, verso
+> la voce è nei denti, e ci resta. La luce comincia a tirare e vi porta via, verso
 > casa, verso una fortezza che brucia mille anni più in là.*
 
 ✏️ *I lampi della battuta 2 si adattano a quello che il tavolo ha fatto davvero:
@@ -4151,7 +4148,7 @@ gliela portano la riprende in cambio della sua parola, non di monete
 : **−2** a Muoversi Silenziosamente e a
   Nascondersi per ogni armatura portata e non indossata, sul blocco del
   ritorno.
-- **Il buco portatile**, se il gruppo ne ha uno. Non ha limite di peso, ma ha
+- **Il buco portatile**, se il gruppo ne ha uno. Limite di peso non ne ha, ma ha
   un fondo: 1,8 m di diametro e 3 m di profondità (SRD), circa **7,5 m³**.
   Quello che ci sta dentro non sbatte e non pesa. A occhio, impacchettati: una
   completa Media circa 0,15 m³, una Grande circa 0,5, uno scudo o un'arma a

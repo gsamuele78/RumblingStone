@@ -106,7 +106,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 1 | «Il Fuoco ha purificato lo Spirito. | — | 5 |
 | SCENA 1 | l'attraversamento | Salvatore lead | 6 |
 | SCENA 2 | le piattaforme, l'orizzonte | LotR lead | 7 |
-| SCENA 2 | le piattaforme | Salvatore lead | 8 |
+| SCENA 2 | le piattaforme | Salvatore lead | 7 |
 | SCENA 3 | la foresta | LotR lead, Salvatore support | 8 |
 | SCENA 3 | il pilastro corroso | Salvatore lead, Mercer support | 5 |
 | SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 8 |
@@ -116,7 +116,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 6 | l'oceano di roccia e il cubo sospeso | LotR lead, Salvatore support | 9 |
 | SCENA 6 | il muro | LotR lead | 2 |
 | SCENA 6 | la Scoria Santa | LotR lead | 5 |
-| SCENA 7 | l'anticamera | Salvatore lead, per Thorik | 5 |
+| SCENA 7 | l'anticamera | Salvatore lead, per Thorik | 4 |
 | SCENA 7 | l'anticamera | Salvatore lead, per Artemis | 4 |
 | SCENA 7 | l'anticamera | Salvatore lead, per Tordek | 5 |
 | SCENA 7 | la visione | LotR lead, Salvatore support, per Tordek | 10 |
