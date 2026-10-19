@@ -1,5 +1,19 @@
 # Decisioni del DM su DEF-5 (giro 4, 2026-10-19)
 
+## Esito
+
+Il DM (Jfs) le ha chiuse il 2026-10-19, tutte col consiglio. Nel testo la
+marca è `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. <numero>]`.
+
+- 1 · decisa: consiglio. 4, 4 e 3 (§0-bis, «I due rami»)
+- 2 · decisa: consiglio. Thorik è immune allo strappo (Scena 1)
+- 3 · decisa: consiglio. Ramo «meno luminoso» (§0-bis)
+- 4 · decisa: consiglio (Scena 2, riga dei Treant)
+- 5 · decisa: consiglio. Si apre l'Incontro 4A dal portale; il raccordo e l'aggiornamento del ponte d'arrivo dell'ARC-08 restano da scrivere (§9)
+- 6 · decisa: consiglio. Caduta Dana, il colpo lo prende il primo capo che sale sull'altare (Scena 2)
+- 7 · decisa: consiglio. «la Possanza Nanica», anche nelle conseguenze dell'ARC-07 e nel ponte d'arrivo dell'ARC-08
+- 8 · decisa: consiglio. Il Cuore della Montagna è un Nodo Terrestre («Se lo divinano»)
+
 Domande che il correttore di `ARC07-DEF-5-RITORNO-HAMMERFIST.md` non poteva
 chiudere da solo. Per ognuna: la domanda, l'opzione consigliata, cosa succede
 se non decidi. Dove il master porta già la proposta, la riga è marcata

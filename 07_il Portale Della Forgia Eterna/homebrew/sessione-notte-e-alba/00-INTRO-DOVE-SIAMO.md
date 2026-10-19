@@ -56,11 +56,12 @@ del primo tiro:
 | IV · Il Viaggio a Mille Anni fa | ⚠ DM | si legge dalla Scena 5 in avanti. Statistiche, versioni veloci e mappe sono nelle appendici A, C e D |
 | V · La Forgia ricorda le ferite | ⚠ DM | la tabella delle ferite del duello, da tenere aperta durante la Scena 11 |
 | VI · Durik | ⚠ DM | la scheda del compagno di Hella, accanto alla giocatrice |
-| **Il volume dei giocatori** | ✉ | gli echi della serata e le dieci boccette |
+| **Il volume dei giocatori** | ✉ | gli echi della serata, il contratto del Seme e le dieci boccette |
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
 | Echi della notte | uno a testa | all'inizio, prima del primo tiro. Si legge ad alta voce solo il riquadro; la riga «Solo per te» resta del giocatore |
+| Il contratto del Seme | a tutti | solo dopo il box che chiude l'ora della pergamena (cap. II). Se il Seme si rinvia, la pagina resta nel volume |
 | Le dieci boccette | a tutti | all'inizio, se il tavolo non l'ha già avuta il 25 |
 
 <!-- apparato -->

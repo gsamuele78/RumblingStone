@@ -1487,13 +1487,6 @@ monsters:
     role: caster-divine
     environment: mountain
     source_file: "Bestiario/png/morlin-coalhewer-cr12.md"
-  - id: skullcrusher-il-nero-drago-nero-ancestrale-e29a4b
-    name: "Skullcrusher il Nero — drago nero ancestrale"
-    cr: 12.0
-    faction: orda-antica-372dr
-    role: flier
-    environment: aerial
-    source_file: "Bestiario/villain/skullcrusher-il-nero-cr12.md"
   - id: balvar-fuocospento-il-consigliere-dell-orda-cr-13-685ec8
     name: "Balvar Fuocospento, il Consigliere dell'Orda (CR 13)"
     cr: 13.0
@@ -1501,6 +1494,13 @@ monsters:
     role: caster-divine-boss
     environment: mountain
     source_file: "Bestiario/villain/balvar-fuocospento-cr13.md"
+  - id: skullcrusher-il-nero-drago-nero-ancestrale-624675
+    name: "Skullcrusher il Nero — drago nero ancestrale"
+    cr: 14.0
+    faction: orda-antica-372dr
+    role: flier
+    environment: aerial
+    source_file: "Bestiario/villain/skullcrusher-il-nero-cr14.md"
   - id: zog-tar-deatheye-mezzo-ogre-barbaro-8cf8fa
     name: "Zog'tar Deatheye — mezzo-ogre barbaro"
     cr: 15.0

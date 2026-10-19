@@ -1,5 +1,39 @@
 # Decisioni del DM su DEF-4 (giro 4, 2026-10-19)
 
+## Esito
+
+Il DM (Jfs) le ha chiuse il 2026-10-19: tutte col consiglio, tranne la 4 e la
+6. Nel testo la marca è `[CANONE — DM 2026-10-19, giro 4 n. <numero>]`. Le
+verifiche in rete sono in `VERIFICHE-SRD.md`.
+
+- 1 · decisa: consiglio. CA 22, contatto 16 dalla scheda di Sal (Scena 9)
+- 2 · decisa: consiglio. 1d4+2 round (Scena 9)
+- 3 · decisa: consiglio. Si chiede al tavolo prima dell'Atto I (master, Benedizioni della Sala; regia §1)
+- 4 · decisa: il Bane di Aegis Fang non vale contro Skullcrusher (master, Scena 11; regia §1)
+- 5 · decisa: consiglio. I Bracieri non rifiutano (Scena 11; regia §1)
+- 6 · decisa: il drago resta a circa 15 m e usa *Ghermire* e *Fluttuare*, con le regole SRD dei due talenti (Scena 11; regia §4)
+- 7 · decisa: consiglio. Un PG per uso, Volontà CD 25 per pozione; l'area SRD, 10 piedi cubi, lo conferma (Scena 11)
+- 8 · decisa: consiglio (Scena 7)
+- 9 · decisa: consiglio. Il sergente è l'orco guerriero 4 del Bestiario (Appendice A.6)
+- 10 · decisa: consiglio. Vale D43, 19.603 mo senza trattenuta
+- 11 · decisa: consiglio (Scena 9)
+- 12 · decisa: consiglio, con il numero corretto sull'SRD. Ci sta; l'aria basta 10 minuti a una creatura Media, e Zog'tar, Grande, ci resta 5 minuti (Scena 8)
+- 13 · decisa: consiglio (Scena 6)
+- 14 · decisa: consiglio (Scena 8)
+- 15 · decisa: consiglio (Scena 5, Kettra)
+- 16 · decisa: consiglio. EL 14 invariato, 6.500 PX in tutto, 1.625 a testa (sidebar di scala, §8 A, regia §4)
+- 17 · decisa: consiglio. Il torque può passarlo a chi vuole (Scena 12, Momento 5)
+- 18 · decisa: consiglio. Si chiede al giocatore prima di consegnare l'eco (regia §1)
+- 19 · decisa: consiglio. Una frase sola, mai sul Seme (capitolo del Seme)
+- 20 · decisa: consiglio. Il tono si sceglie prima della serata (capitolo del Seme)
+- 21 · decisa: consiglio. Le due righe su Hald nella Scena 10 le scrive il DM: finché non ci sono, la scena resta del tavolo
+- 22 · decisa: consiglio (Scena 6, l'atterraggio)
+- 23 · decisa: consiglio, verificato. L'SRD non dà l'ordine: vale il più duro, prima il +50% e poi la resistenza (§1, Durik)
+- 24 · decisa: consiglio, verificato. Osservare +2 è il numero SRD di Grask; il «chi vola scende» del *comando* è una scelta del DM, marcata (Scene 6 e 8)
+- 25 · decisa: consiglio. La frase è nella scheda del Bestiario
+- 26 · decisa: consiglio (regia §1)
+- 27 · decisa: consiglio. Le quattro cose restano da affidare fuori da questo correttore
+
 Queste sono le domande che il correttore di `ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` e
 del booklet della serata non poteva chiudere da solo. Per ognuna trovi la
 domanda, l'opzione consigliata e cosa succede se non decidi. Quando la domanda
@@ -231,3 +265,57 @@ possono aspettare.
 - `ERRATA-ARC07-35-Verification.md` §2.3, che porta ancora Skullcrusher a GS 12;
 - il nome del file `Bestiario/villain/skullcrusher-il-nero-cr12.md` e il suo
   campo `CR`, che restano 12 (vedi `DEF-4/CORREZIONI.md`).
+
+## Dalla lettura finale del 2026-10-19
+
+Domande nate dalla correzione dei rilievi di `finale/`. Le decisioni della
+sezione «Esito» restano chiuse; queste sono nuove, e nel testo hanno la loro
+riga `[INFERRED — needs DM confirmation]`.
+
+### 28 · La trattenuta del pesatore sulle richieste di stasera (regia §2, passo 0)
+
+- **Domanda**: il conto del 25 è stato pagato senza trattenuta (D43, decisione
+  10). Le richieste aperte che si pagano stasera la pagano o no?
+- **Consiglio**: no, come il 25. È la proposta scritta nella regia.
+- **Se non decidi**: vale la proposta.
+
+### 29 · Derubare Vatore senza gradi in Rapidità di Mano (Scena 9)
+
+- **Domanda**: nell'SRD senza gradi la prova non supera CD 10, e la riga «Lo
+  derubano» chiede 22. Se nessuno ha gradi, c'è un'altra via al Sigillo?
+- **Consiglio**: il fagotto si strappa di mano. Vatore attiva il Cronolito
+  come quando lo tengono, e chi stringeva il fagotto se lo ritrova in mano,
+  come col mantello. Vale «Lo derubano» riuscita, e Vatore sa chi è stato.
+- **Se non decidi**: vale la proposta. Senza, il Sigillo resta solo a chi ha
+  i gradi.
+
+### 30 · Chi attiva la runa di Zeth su Durik (Scena 5)
+
+- **Consiglio**: chi la porta, toccando il bersaglio, perché *resistere
+  all'energia* è a contatto. Su Durik la mette Hella.
+- **Se non decidi**: vale la proposta.
+
+### 31 · Hella in forma d'aquila e la runa della soglia (Scena 6)
+
+- **Domanda**: la runa di Balvar scatta quando «un nano varca la soglia». Una
+  nana in forma selvatica la fa scattare?
+- **Consiglio**: sì. Nell'SRD la forma alternativa conserva tipo e sottotipo
+  (`VERIFICHE-SRD.md`, lettura finale).
+- **Se non decidi**: vale la proposta.
+
+### 32 · La CD per togliersi l'acido aderente (Appendice A.1)
+
+- **Domanda**: il Soffio Aderente è fuori dall'SRD, e la CD per toglierselo di
+  dosso viene da una trascrizione secondaria del Draconomicon.
+- **Consiglio**: Riflessi CD 30, +2 rotolando a terra, come scrive il blocco.
+- **Se non decidi**: vale il blocco, e la marca resta nel Boost log.
+
+### 33 · Due numeri di A.2 da ricontrollare, senza fonte qui
+
+- **Domanda**: i giavellotti delle guardie (1d6+4) tornano con lo spadone
+  (2d6+6) solo se la FOR è 18 e la specializzazione è sullo spadone; e la
+  velocità di Zog'tar, 12 m in armatura media, dipende dalla velocità base
+  del mezzo-ogre, che l'appendice non dà.
+- **Consiglio**: lasciarli come sono stasera. Le caratteristiche delle guardie
+  e la razza di Zog'tar sono scelte di giri passati che non ho potuto rileggere.
+- **Se non decidi**: valgono i numeri di A.2.
