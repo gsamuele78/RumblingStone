@@ -89,6 +89,14 @@ class TestAppaia(unittest.TestCase):
         self.assertGreater(r, r_prima + 0.2)
 
 
+class TestBattute(unittest.TestCase):
+    def test_etichetta_lunga_con_due_punti(self):
+        righe = ["**AEGIS FANG (non canta: urla, dentro il cranio):** *«SANGUE ANTICO.»*",
+                 "",
+                 "**THORGRIM (voce che non trema, occhi che invece sì):** *«Mio nonno.»*"]
+        self.assertEqual([i for i, _ in CV._battute(righe)], [0, 2])
+
+
 class TestVerdettoMisurato(unittest.TestCase):
     def test_meno_dettagli_sensoriali_perde(self):
         vecchio = "Il buio preme contro il vetro, e l'aria sa di fumo e di neve."

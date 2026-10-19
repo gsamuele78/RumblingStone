@@ -93,7 +93,10 @@ def testo_a(ref: str, percorso: str) -> str:
 #: o l'inciso in corsivo fra due battute. `box_read_aloud` non le prende, e non
 #: deve (non sono box); ma quando una riscrittura spezza un box in battute, il
 #: box vecchio va confrontato con le battute rimesse insieme.
-_BATTUTA = re.compile(r"^(?:>\s*)?(?:\*\*)?[A-ZÀ-Ù][^:\n]{0,40}:(?:\*\*)?\s*[*_]«")
+#: L'etichetta in grassetto può avere una didascalia lunga e due punti dentro
+#: («**AEGIS FANG (non canta: urla, dentro il cranio):**»): la #251 ne aveva
+#: due che il primo pattern non vedeva, e i box sembravano impoveriti.
+_BATTUTA = re.compile(r"^(?:>\s*)?(?:\*\*[A-ZÀ-Ù][^*\n]{0,100}:\*\*|[A-ZÀ-Ù][^:\n]{0,40}:)\s*[*_]«")
 _INCISO = re.compile(r"^[*_][^*_\s].*[*_]$")
 
 

@@ -671,6 +671,25 @@ def mqm(testo: str, percorso: Path) -> "dict | None":
     return e
 
 
+def _dettagli_nella_battuta_accanto(vecchio: str, nuovo: str, nuovi: list) -> bool:
+    """Le parole sensoriali uscite dal box ma finite nella battuta appena prima
+    o appena dopo: non è un impoverimento (#251, DEF-4 Scena 11, dove il grido
+    di Aegis Fang è passato dal box alla sua battuta)."""
+    import cieco_versioni as cv
+    testi = [n["testo"] for n in nuovi]
+    if nuovo not in testi:
+        return False
+    i = testi.index(nuovo)
+    unito = "\n\n".join(testi[max(0, i - 1):i + 2])
+    return cv.verdetto_misurato(vecchio, unito)[0] != "vecchia" \
+        or mc_dettagli(unito) >= mc_dettagli(vecchio)
+
+
+def mc_dettagli(testo: str) -> int:
+    import misura_craft as mc
+    return mc.dettagli_sensoriali(testo)
+
+
 def box_impoveriti(prima: str, dopo: str) -> "list[str]":
     """I box che la riscrittura ha peggiorato secondo il voto cieco del DM
     (`read-aloud-adulti.md` §2-ter, ADR-0093): meno dettagli sensoriali, o un
@@ -685,6 +704,9 @@ def box_impoveriti(prima: str, dopo: str) -> "list[str]":
         if nuovo == b["testo"] or somiglianza < cv.SOMIGLIANZA_DUBBIA:
             continue
         verdetto, perche = cv.verdetto_misurato(b["testo"], nuovo)
+        if verdetto == "vecchia" and "sensoriali" in perche \
+                and _dettagli_nella_battuta_accanto(b["testo"], nuovo, nuovi):
+            continue
         if verdetto == "vecchia":
             uscita.append(f"{b['titolo'] or '(senza titolo)'}: {perche}")
     return uscita
