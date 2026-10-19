@@ -148,7 +148,7 @@ arrotolata sotto il braccio, e chiede una cosa sola: *«Quando uscite?»*
 **0 · Le richieste aperte, e chi porta cosa** (due minuti). Chiudi la tabella
 «Le richieste rimaste aperte» di `DEF-4` Scena 5. Si pagano in monete del
 1372, dentro la tacca della fucina già segnata, quindi non costano tacche. Il
-conto del 25 è stato pagato senza la trattenuta del pesatore (D43); per
+conto del 25 è stato pagato senza la trattenuta del pesatore; per
 quello di stasera vale lo stesso `[INFERRED — needs DM confirmation]`:
 
 - *silenzio*: 2 pergamene a 150 mo, oppure la pietra di Brynja a 160, che dura
