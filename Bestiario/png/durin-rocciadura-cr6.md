@@ -48,7 +48,7 @@ file di canone (master, glossario, errata), non questa voce.
 
 ⚠️ **Il livello, invece, resta una scelta aperta e piccola.** Guerriero 6
 (master) contro Guerriero 8 (archivio): Durin **non è mai uno scontro
-statuito** — guida i PG alla porta, e al più muore alle mura nella Scena 4,
+statuito** — guida i PG alla porta, e al più muore alle mura nella Scena 10,
 che è una battaglia di massa. Nessuno dei due numeri regge un incontro, e per
 questo la voce segue il master senza forzare.
 

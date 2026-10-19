@@ -7,8 +7,17 @@
 >
 > **Quando**: Atto I della regia, prima delle scelte che costano tacche.
 > **Chi**: Artemis, con gli altri presenti; Tordek, perché il Seme è nel suo
-> zaino. **Cosa serve**: la pergamena di *identificare* del re, e la bottega
-> di Kettra.
+> zaino. **Cosa serve**: la pergamena di *identificare* del forziere del re,
+> 125 mo, che è fra le richieste aperte e si compra al passo 0 della regia, e
+> la bottega di Kettra.
+>
+> **Stasera, prima del testo qui sotto.** Il passo 3 dice che l'ora porta
+> «verso le 7 tacche»: è il conto a piedi. Questo gruppo vola, e col volo il
+> Seme porta a 6, ancora in tempo; all'atterraggio Grask dorme (regia §2). Al
+> passo 5 non leggere le otto clausole di fila, che sono tre volte il tetto di
+> un box: di' a voce il riassunto «In breve» di `DEF-4` Scena 5, «Le dieci
+> pozioni del gruppo», poi leggi il box finale. Se il tavolo vuole una
+> clausola parola per parola, la leggi quando la chiede.
 >
 > **Dove eravamo** `[CANONE — DM 2026-10-12]`. Il Seme nessuno l'ha toccato a
 > mani nude: è nello zaino di Tordek dal 31 luglio. Le dieci pozioni le

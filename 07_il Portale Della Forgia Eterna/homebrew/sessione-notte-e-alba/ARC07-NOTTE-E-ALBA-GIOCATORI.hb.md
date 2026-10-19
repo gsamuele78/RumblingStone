@@ -34,6 +34,8 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
+Ad alta voce si legge solo il riquadro qui sotto.
+
 > *Nel cortile, mentre i fabbri spengono le ultime forge, Aegis Fang ti ronza
 > contro la schiena con la stessa nota che fa quando la
 > batti sull'incudine per raddrizzarla, solo più bassa, e non sei stato tu.*
@@ -43,7 +45,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-**Solo per te.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
+**Solo per te: questa riga non si legge agli altri.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
 stesso punto in cui ce l'hai tu, e non te l'ha detto.
 
 
@@ -61,14 +63,16 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-> *Alla fucina, quando Gunnvor apre la bocca della forgia per mostrarvi il
-> fuoco, i Bracieri che porti si scaldano da soli. Non molto: quanto una pietra
+Ad alta voce si legge solo il riquadro qui sotto.
+
+> *Alla fucina, quando la maestra armaiola apre la bocca della forgia per
+> mostrarvi il fuoco, i Bracieri che porti si scaldano da soli. Non molto: quanto una pietra
 > lasciata al sole. Il carbone di questa forgia ha un odore che non hai mai
 > sentito, e che le mani riconoscono prima della testa.*
 
 ---
 
-**Solo per te.** I Bracieri conoscono questo posto meglio di te. Stanotte, se
+**Solo per te: questa riga non si legge agli altri.** I Bracieri conoscono questo posto meglio di te. Stanotte, se
 parlano, ascoltali fino in fondo: non tutto quello che porti è venuto qui per
 combattere.
 
@@ -87,6 +91,8 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
+Ad alta voce si legge solo il riquadro qui sotto.
+
 > *Dal camminamento si vedono i fuochi dell'orda, migliaia, fino alle colline.
 > A un certo punto l'Anello ti diventa freddo al dito, per il tempo di un
 > respiro, come una moneta che scivola nella tasca sbagliata. Poi torna come
@@ -94,7 +100,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-**Solo per te.** Nel campo c'è qualcuno che, come voi, non è di qui. L'Anello
+**Solo per te: questa riga non si legge agli altri.** Nel campo c'è qualcuno che, come voi, non è di qui. L'Anello
 lo sentirà prima dei tuoi occhi.
 
 
@@ -112,6 +118,8 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
+Ad alta voce si legge solo il riquadro qui sotto.
+
 > *Tutta la notte Durik non si è sdraiato. Sta in piedi accanto a te, il muso
 > verso la feritoia che dà sulle colline. Ogni tanto solleva il naso
 > e lo riabbassa. La Collana ti pesa sul petto come pesava il primo giorno, e
@@ -119,7 +127,7 @@ Pagina da consegnare al giocatore indicato, in privato.
 
 ---
 
-**Solo per te.** Durik ha sentito qualcosa oltre le colline, e non gli
+**Solo per te: questa riga non si legge agli altri.** Durik ha sentito qualcosa oltre le colline, e non gli
 piace. Stanotte è il tuo primo scontro da quando sei tornata: lui non si
 allontanerà da te.
 

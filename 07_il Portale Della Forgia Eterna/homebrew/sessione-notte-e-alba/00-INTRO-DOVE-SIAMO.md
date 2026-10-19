@@ -24,7 +24,7 @@ all'esito del duello con il drago:
 | **N1** | Circa **tre ore** al tavolo. La regia ha la versione da tre ore e quella intera, scena per scena | regia, §0 |
 | **N2** | Lo stop è **prima della Scena 12**: niente Rubino, niente torque. Si chiude sull'esito del duello | regia, Atto III |
 | **N3** | Il **Torque di Thorek I** non è stato consegnato al consiglio: lo dà il re di persona alla Scena 12, Momento 5. Stasera resta al collo del re | `DEF-4` Scena 12 |
-| **N4** | **Durik è sempre presente**, come nella serata del 25 | scheda di Durik |
+| **N4** | **Durik è sempre presente**, come nella serata del 25, tranne nel campo: non vola, e resta alla postierla o nel terzo seme della Collana fino all'alba (`DEF-4` Scena 6) | scheda di Durik |
 
 **Stato al tavolo, entrando**. Il dettaglio è nel log della serata del 25
 settembre, sul ramo del gruppo. Qui ci sono solo le cose che servono prima
@@ -35,8 +35,9 @@ del primo tiro:
   dormito.
 - **Re Thorek I**: fiducia piena. Le pozioni del re sono arrivate per mano del
   sergente, cinque di *volare* e quattro di *cura ferite gravi*; il torque no.
-  **Nessuna pozione d'invisibilità del re**: al campo valgono le due comprate,
-  da 3 minuti l'una.
+  **Nessuna pozione d'invisibilità del re**: al campo valgono le due comprate
+  e la n. 10 delle boccette, da 3 minuti l'una. Il resto di quello che hanno
+  in mano è nella regia, §1.
 - **Hella**: risorta, con i tre Doni. È il suo primo scontro da risorta, e
   Durik è al suo fianco.
 - **Thorik**: porta il Debito della Radice, senza sapere quale sia il prezzo.
@@ -59,7 +60,7 @@ del primo tiro:
 
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
-| Echi della notte | uno a testa | all'inizio, prima del primo tiro |
+| Echi della notte | uno a testa | all'inizio, prima del primo tiro. Si legge ad alta voce solo il riquadro; la riga «Solo per te» resta del giocatore |
 | Le dieci boccette | a tutti | all'inizio, se il tavolo non l'ha già avuta il 25 |
 
 <!-- apparato -->

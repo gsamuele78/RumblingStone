@@ -4,7 +4,7 @@
 **Source**: `07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md` Scena 4 · `07_il Portale Della Forgia Eterna/ARC07-DEF-2-RITORNO-E-AFFRESCHI.md` (l'affresco)
 **Status**: NON-CREATURA — **non ha uno statblocco**, e non deve entrare nel pool degli incontri.
 **Location**: ~372 DR, accanto a Re Thorek I (§Chi è)
-**Motivation**: [DA SCRIVERE — la scheda non dice cosa vuole]
+**Motivation**: che l'ascia torni in una mano che sa perché la tiene (`ARC07-DEF-4`, Scena 4, scheda d'entrata)
 
 ## Chi è
 
@@ -22,11 +22,11 @@ PG, a mille anni di distanza.
 
 ## Aspetto e voce
 
-[DA SCRIVERE — la scheda non dice com'è né come parla. C'è solo la sua battuta sulla gemma (§Chi è); la scena intera è nel modulo dell'Arco 07, `ARC07-DEF-4`, Scena 4.]
+Dalla scheda d'entrata di `ARC07-DEF-4`, Scena 4. Un vecchio seduto sulla panca che non si alza. Tiene le mani aperte verso la luce, i palmi in su, con il callo nello stesso punto in cui ce l'ha Thorik, perché hanno tenuto la stessa ascia. La voce non trema, gli occhi sì. Nomina il sangue e mai la persona: *«il sangue riconosce il sangue»*. Al consiglio chiede di tenere l'ascia di Thorik, non la corona: *«Mio nonno ha perso la corona. L'ascia no. Se dite il vero, fatemi tenere la vostra.»*
 
 ## Cosa vuole
 
-[DA SCRIVERE — la scheda non dice che cosa vuole Thorgrim per sé, fuori dalla scena del consiglio di guerra.]
+Che l'ascia torni in una mano che sa perché la tiene (`ARC07-DEF-4`, Scena 4). Al consiglio sta fra quelli che non si fidano dei quattro stranieri: non è offeso, ha paura di affidare a loro le pozioni e la mappa che sono tutto quello che la fortezza ha per la notte. Non combatte: nella sconfitta del duello chiama gli antenati, e sono loro a ricacciare il drago (decisione Q47 del DM). Che cosa voglia per sé oltre a questo, la scheda non lo dice ancora.
 
 ## Nella campagna
 

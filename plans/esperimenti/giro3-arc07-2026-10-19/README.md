@@ -90,3 +90,21 @@ peggiorato, non che ha migliorato in modo dimostrato.
 `python3 plans/esperimenti/giro3-arc07-2026-10-19/versioni.py` dalla radice
 del repo rifà la tabella sulle versioni nel repo; con una cartella come
 argomento aggiunge la riga di quella cartella.
+
+## L'esito del cieco
+
+Il DM ha votato le nove coppie (`misure/CIECO-VOTI.txt`): la versione nuova
+ne vince 5, la vecchia 4, nessun pari. La soglia era 7 su 9, quindi il
+miglioramento **non è dimostrato**. Dei tre controlli decisi dalla misura,
+due sono confermati; il terzo (la Corona che si completa, DEF-5) il DM lo ha
+dato alla versione vecchia anche se la nuova aveva un dettaglio sensoriale in
+più. Sulle sei coppie indecise è finita 3 a 3.
+
+Come dopo il giro 2, le quattro vecchie vincitrici sono tornate intatte nei
+master (l'Affresco A5 in DEF-1, A7 in DEF-2, l'apparizione e la Corona in
+DEF-5), e tutti e nove i box votati sono entrati in `misure/CONGELATI.json`:
+un giro futuro non li riapre.
+
+La lezione è la stessa della #251: una riscrittura che toglie tic senza
+aggiungere immagini arriva al pari. Il controllo perso dice anche che un
+dettaglio sensoriale in più non basta, da solo, a far vincere un box.

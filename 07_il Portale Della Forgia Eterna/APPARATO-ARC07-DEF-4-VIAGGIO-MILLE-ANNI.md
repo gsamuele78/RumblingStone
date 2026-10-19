@@ -26,7 +26,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | il corridore | SCENA 6 | — | ripete il messaggio a mezza voce per non dimenticarlo |
 | **Zog'tar Deatheye** | SCENA 7 | Hammerfist. Sa uccidere diecimila uomini, non sa dove colpire le mura: per quello c'è Balvar | conta, sempre: *«due file», «tre ore», «cento»*. In ira: *«A ME, CANI! ABBATTETE LE OMBRE!»* |
 | **Balvar Fuocospento** | SCENA 7 | che Hammerfist cada **in fretta**, perché un assedio lungo è fame, e lui l'ha già vista. E che qualcuno dica che c'era | non smette di incidere mentre parla. La punta sull'ardesia continua sotto le frasi |
-| le quattro guardie | SCENA 7 | — | non parlano: al generale rispondono battendo l'asta per terra, una volta sì, due no |
+| le quattro guardie | SCENA 7 | — | non parlano: al generale rispondono battendo il piatto dello spadone per terra, una volta sì, due no |
 | il sacerdote dell'orda | SCENA 8 | — | canta invece di parlare, sempre la stessa cantilena, e la interrompe solo per dare ordini |
 | **Vatore** | SCENA 9 | la stessa cosa che vorrà Sal: potere, e il conto lo pagano altri | il tono del collega, non del nemico. Monosillabi. Terrore reverenziale mal nascosto |
 | Hrodgar, il capitano delle mura | SCENA 10 | — | dà gli ordini con una parola sola |
@@ -60,6 +60,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | ha sulle dita (Scena 9, Osservare | 15 |
 | SCENA 5 | con una suggestione a settimana (Volontà | 16 |
 | SCENA 5 | firma si estirpa con Sapienza Magica | 20 |
+| SCENA 5 | legge Artemis con Usare Oggetti Magici | 27 |
+| SCENA 5 | livello dell'incantatore, come il silenzio a | 23 |
+| SCENA 5 | altrimenti Artemis, a | 25 |
+| SCENA 5 | le gravi e a | 27 |
 | SCENA 6 | blocco lo tira già a Nascondersi | 22 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
@@ -87,6 +91,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 8 | terra, intralciato, finché non supera Riflessi | 15 |
 | SCENA 8 | entro 9 m l'uno dall'altro, Volontà | 20 |
 | SCENA 8 | comando «Cadi!» (Volontà | 13 |
+| SCENA 8 | il bersaglio tira Tempra | 15 |
 | SCENA 8 | Dalla soglia lancia comando («Cadi!», Volontà | 13 |
 | SCENA 8 | Sapienza Magica | 20 |
 | SCENA 8 | Intimidire | 22 |
@@ -104,6 +109,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 11 | Cala dall'alto (Presenza Terrificante | 25 |
 | SCENA 11 | round di sorpresa chi supera Ascoltare | 20 |
 | SCENA 11 | sul gruppo più fitto (Riflessi | 28 |
+| SCENA 11 | PG, ognuna tira a parte Volontà | 25 |
 | SCENA 11 | prova di Forza | 25 |
 | SCENA 11 | Forza | 10 |
 | SCENA 11 | Ascoltare | 20 |

@@ -23431,7 +23431,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5088,
+    "senza_note": 5301,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -39539,9 +39539,9 @@
   "Bestiario/villain/skullcrusher-il-nero-cr12.md": {
    "blocco": null,
    "conti": [
-    "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 6 da DV/4 → For 16, Cos 15, Des 11",
-    "pf: 14d12 media 91.0 + Cos +2×26 = 143",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +11, Rifl +4, Vol +4"
+    "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 3 da DV/4 → For 15, Cos 13, Des 11",
+    "pf: 14d12 media 91.0 + Cos +1×14 = 105",
+    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +10, Rifl +4, Vol +4"
    ],
    "lettura": {
     "armatura": null,
@@ -39556,8 +39556,8 @@
       14
      ]
     ],
-    "dado": 4,
-    "dv": 12,
+    "dado": null,
+    "dv": null,
     "elite": false,
     "gs": 12,
     "manca": [],

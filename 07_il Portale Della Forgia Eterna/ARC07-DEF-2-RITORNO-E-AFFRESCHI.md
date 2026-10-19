@@ -235,7 +235,7 @@ posto in cui i PG vedono il prezzo di ciò che hanno appena scelto.
 > numeri nanici nell'angolo dell'affresco sono cambiati, senza un rintocco: la
 > volta prima erano altri. Nella pietra dipinta qualcosa si è mosso mentre
 > nessuno guardava, una torre più vicina nel fumo, un tratto di camminamento
-> vuoto che prima non lo era.*
+> vuoto che prima non lo era. La battaglia non aspetta nessuno.*
 
 ### La Cronaca, in tre righe
 Ogni gesta compiuta **incide un pannello** negli affreschi della Sala **e**

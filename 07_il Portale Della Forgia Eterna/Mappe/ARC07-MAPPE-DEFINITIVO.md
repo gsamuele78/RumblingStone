@@ -587,8 +587,8 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   del portale) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
   = copertura) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
   guardia** GP1-GP4 ai margini.
-- **Posizioni notevoli**: **Tenda del Comando** (Zog'tar Deatheye, GS 14, + 4
-  sergenti hobgoblin) al centro delle tende; **Vatore** (§5, il futuro Sal) tra le
+- **Posizioni notevoli**: **Tenda del Comando** (Zog'tar Deatheye, GS 15, + 4
+  guardie hobgoblin, Guerriero 8) al centro delle tende; **Vatore** (§5, il futuro Sal) tra le
   tende — incontro grigio col villain prima che sia villain; **Re Thorek I** nella
   Sala del Trono (Zona 1).
 - **Tattiche PG (infiltrazione, skill challenge «Mare di Nemici»)**: muoversi di
@@ -598,7 +598,7 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
 - **Evoluzione**: raggiunto il cortile all'alba → **Skullcrusher** entra dall'alto → M7-B.
 - **Riferimento**: DEF-4 Scene 2-9; la tenda del comando è la mappa M7-C (`ARC07-MAPPE-M7C-TENDA-DEL-COMANDO.md`).
 
-## MAPPA M7-B — L'ARENA DEL DUELLO: SKULLCRUSHER IL NERO (tattica BOSS · GS 12)
+## MAPPA M7-B — L'ARENA DEL DUELLO: SKULLCRUSHER IL NERO (tattica BOSS · GS 14)
 
 ```
 ════════════════════════════════════════════════════════════════════════
@@ -641,9 +641,12 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 8 ; T8 ; Il pozzo sulla cisterna
 @mark 9 ; T4 ; Le campane della torre nord
 @mark 10 ; W18 ; La postierla
+@mark 11 ; U16 ; Durik, accanto a Hella
+@mark 12 ; W2 ; Wyvern 1, di scorta: entra dal round 2
+@mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
 ```
-- **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 12** (capostipite
+- **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 14** (capostipite
   di Fauci di Palude). Cielo aperto.
 - **Terreno & altitudini**: **zona aerea** ☁️ (righe 01-03, quota; il drago vi resta:
   serve **volo o gittata**); **camminamenti +4,5 m** 🏰 (arcieri nani, copertura e
@@ -658,20 +661,28 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
   sola, Scena 3); la **porta principale** con la targa a L-M18, la **postierla**
   a W18 sotto la torre est (D44); la porta che entra nella montagna a O-P04.
   Distanze utili: dall'impronta del drago (K-M 09-11) la forgia è a ~12 m, il
-  pozzo a ~10 m, ciascuna gru a ~13 m.
+  pozzo a ~10 m. **Le gru non sono alla pari**: il gancio arriva a 15 m contando
+  la quota; da B10 il bordo dell'impronta è a 13,5 m in piano, quindi il gancio
+  prende il drago posato o a un paio di metri d'altezza; da W10 è già a 15 m in
+  piano, e il gancio arriva solo se il drago picchia verso il muro est.
 - **Nel 1372** (D46, D48): questo cortile è il nucleo del cortile interno di
   ARC-08 (D46), ingrandito nei secoli; la statua del re è la **statua del Re
   Antenato** di H3-1, e il tunnel di fuga dietro di lei viene scavato dopo il
   372. La griglia del 1372 è H3-1 (`08_.../Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md`).
 - **Posizioni iniziali**: PG a riga 16 (Thorik D16, Tordek G16, Artemis Q16, Hella
-  T16); **Re Thorek I** dietro (riga 17). Skullcrusher a V1, quota ~45 m.
+  T16, con Durik accanto a U16); **Re Thorek I** in mezzo a loro, a L16, alle
+  spalle della prima fila. Skullcrusher a V1, quota ~45 m: il soffio è una linea
+  di 30 m, quindi al round 1 prima scende entro 30 m dai PG (movimento), poi
+  soffia (azione standard). Le 2 wyvern di scorta (W2, X2) entrano dal round 2
+  (Scena 11, sidebar di scala). I Treant dell'alba, se uno viene richiamato,
+  entrano dalla porta principale L-M18.
 - **Tattiche Skullcrusher (nemico — dilemma centrale)**: **NON vuole atterrare** (in
   cielo è un dio): soffio d'acido in picchiata, poi risale. A terra è vulnerabile al
   **full-attack** ma devastante. **Meccanica «la Forgia ricorda le ferite»**: ogni
   ferita inferta qui si riporta su **Fauci di Palude** nel 1372 (carry-over B4).
 - **Tattiche PG**: **costringerlo giù** — Artemis in volo lo tormenta, **Aegis Fang
   scagliata** (cicatrice d'ala → B4), tiri dai camminamenti; oppure colpirlo
-  dall'alto. Proteggere Re Thorek I (se Sc.4 fallita, è a 8 pf). 3 esiti aperti.
+  dall'alto. Proteggere Re Thorek I (se la Scena 10 chiude con 0-1 successi, è a 8 pf). 3 esiti aperti.
 - **Evoluzione**: alla vittoria il **Rubino si accende** (D5/D16) → ritorno (CM-1/DEF-5).
 - **Riferimento**: DEF-4 Scena 11 (+ carry-over B4).
 
