@@ -2,7 +2,7 @@
 ## Ponte meccanico P5 (duello con Skullcrusher, ≈372 DR) → ARC-08 (Fauci di Palude, 1372 DR)
 
 > **Stato (B4)**: ⭐ deliverable cross-arc più importante dell'arco. Traduce
-> l'**esito del duello con Skullcrusher** (P5 fast-play, Scena 5) in un
+> l'**esito del duello con Skullcrusher** (oggi `ARC07-DEF-4`, Scena 11; nel vecchio P5 fast-play era la Scena 5) in un
 > **effetto quantificato** sullo statblock di **Fauci di Palude** nell'ARC-08
 > (GS 15, 337 PF)<!-- apparato -->, `08_.../00_Schede_dei_Personaggi_Unità_e_Regolamento_di_Battaglia.md`.
 > Chiude il task **ARC-08 A12**<!-- /apparato -->.
@@ -20,12 +20,14 @@
 
 ## 1. INPUT DAL P5 (cosa registra il fast-play)
 
-Dalla **Scena 5** del duello si registrano due dati:
+Dalla **Scena 11 di `ARC07-DEF-4`**, il duello, si registrano due dati (nel vecchio P5 era la Scena 5; stasera la Scena 5 è la notte nella fortezza):
 
 1. **Esito del duello**: `UCCISO` / `FERITO GRAVE` / `FUGGITO`.
 2. **Ferite ancestrali segnate** (`N`): numero di colpi andati a segno su
    Skullcrusher durante il duello (la "Cicatrice della Forgia"). Cap
-   consigliato **N ≤ 3** ai fini del bonus.
+   consigliato **N ≤ 3** ai fini del bonus. Con un gruppo di 13° tre colpi a
+   segno arrivano già al secondo round: **N arriva a 3 quasi sempre**, e il
+   bonus pieno è l'esito normale, non il premio raro.
 
 ---
 
@@ -49,7 +51,7 @@ Indipendente dall'esito (si somma), riflette P5-DEF-P2 r.294:
   - **+1 di competenza ai tiri per colpire** contro Fauci, **oppure**
   - **+1d6 danni** ai colpi che vanno a segno su Fauci.
 - Cap: **N ≤ 3** (max **+3 TxC** o **+3d6**).
-- **Cicatrice fisica** (se Aegis Fang colpì Skullcrusher in volo, P5 Scena 5):
+- **Cicatrice fisica** (se Aegis Fang colpì Skullcrusher in volo, `ARC07-DEF-4` Scena 11):
   Fauci ha una **cicatrice a forma di martello** su un'ala → **−2 metri alla
   Volare** (45 → 43) e i PG che lo sanno hanno **+2 di circostanza** a
   colpirlo mentre è in volo.

@@ -50,9 +50,9 @@ Medium humanoid (dwarf), **Chierico 9 di Abbathor / Runecaster 4**, NE.
 - **La Catena di Skullcrusher (Su, unica)**: la runa-vincolo incisa nella scaglia sternale del drago. Finché regge, **Skullcrusher combatte per l'orda**. Non è dominazione — è un **contratto scritto nella carne**, e il drago lo sa.
 - **Leggere il Fuori-Posto (Su, 3/giorno)**: come *detect magic* ma sulle **anomalie temporali**: percepisce chi non appartiene a questo secolo. **È il solo, in tutta Hammerfist ≈372 DR, che sa cosa sono i PG.**
 
-**Tattiche** Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni fa, Scena 7, «Cosa fa quando comincia lo scontro» (canone, decisione Q21 del DM) (recuperato non combatte e indica la runa della Catena; trattativa aperta guarda un round e poi sta con chi vince; minacciato combatte con Zog'tar, come dice «Come si combatte, se si arriva a combatterlo» nella stessa scena).
+**Tattiche** Dipendono da come è andata con lui prima dello scontro: il viaggio a mille anni fa, Scena 7, «Cosa fa quando comincia lo scontro» (canone, decisione Q21 del DM) (recuperato non combatte e indica la runa della Catena; trattativa aperta guarda un round e poi sta con chi vince; minacciato combatte con Zog'tar, come dice «Come si combatte, se si arriva a combatterlo» nella stessa scena). **Morale**: sotto 30 pf non fugge e non implora, finisce di incidere la lastra con un'azione di round completo, l'ultima, e in quel turno non attacca e non lancia (decisioni D52 e D71 del DM, nella stessa scena).
 
-Notes: consigliere del generale **Zog'tar Deatheye** (CR 14) all'assedio di ≈372 DR. Nano dello scudo **esiliato**, ex-runaio della fortezza, passato ad Abbathor. Non è il capo: è **il motivo per cui il capo ha un drago**. Dossier narrativo, tattiche e ganci → il viaggio a mille anni fa, Scena 7.
+Notes: consigliere del generale **Zog'tar Deatheye** (CR 15) all'assedio di ≈372 DR. Nano dello scudo **esiliato**, ex-runaio della fortezza, passato ad Abbathor. Non è il capo: è **il motivo per cui il capo ha un drago**. Dossier narrativo, tattiche e ganci → il viaggio a mille anni fa, Scena 7.
 
 **Benchmark** PF T1-1 riga 13 (CA 28, pf 180, att. +22, danno medio 60, CD 21): CA 24 ✗ · pf 101 ✗ · att. +11 ✗ (è un incantatore) · CD 21 al 6° ✓. Vale il GS 13 per le rune che non consumano slot e per la Catena, non per la mischia.
 

@@ -54,7 +54,7 @@
       "regola": "D1",
       "scena": "SCENA 8",
       "dettaglio": "scontro con un nemico in volo: niente per chi resta a terra",
-      "ragione": "falso positivo: il drago non combatte nella Scena 8, la «picchiata» è come comincia la Scena 11"
+      "ragione": "falso positivo: la Scena 8 ha il drago sulla tenda, ma la risposta per chi resta a terra c'è: «L'uscita è il telo tagliato e il buio fuori»"
     },
     {
       "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",

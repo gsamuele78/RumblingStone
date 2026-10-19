@@ -84,7 +84,7 @@ Esuberante, lusinghiero, inarrestabile. Entra in scena cantando una ballata sui 
 
 #### Vatore (nel Passato, -1000 DR)
 
-Freddo. Parla il meno possibile. Osserva i PG con un terrore reverenziale mal mascherato. Ha appena visto quattro individui respingere un'orda intera da soli — questo lo ossessiona. Nel passato ha appena rubato il Sigillo di Ossidiana e sta pianificando la fuga nel futuro.
+Freddo. Parla il meno possibile. Osserva i PG con un terrore reverenziale mal mascherato. Ha appena visto quattro ombre uscire vive dalla tenda del generale (`ARC07-DEF-4`, Scena 9) — questo lo ossessiona. Nel passato ha appena rubato il Sigillo di Ossidiana e sta pianificando la fuga nel futuro.
 
 ## Cosa vuole
 
