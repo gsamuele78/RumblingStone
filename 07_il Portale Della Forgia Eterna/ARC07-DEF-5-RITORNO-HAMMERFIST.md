@@ -254,8 +254,8 @@ drago sulle mura.
 ## §0-ter — QUANDO UN GIOCATORE HA UN'IDEA CHE NON È SCRITTA QUI
 
 La regola della campagna è **assorbi, poi rilancia** (*yes-and with teeth*):
-l'invenzione del giocatore entra nel canone **e** genera una complicazione. Non
-«sì», non «no»: sì, e adesso c'è un problema nuovo. Tre esempi per questa
+l'invenzione del giocatore entra nel canone **e** genera una complicazione. La
+risposta è sì, e subito dopo c'è un problema nuovo. Tre esempi per questa
 caverna, e sono canone `[CANONE — DM 2026-10-18, G2-37]`:
 
 | Il giocatore dice | Si assorbe, e si rilancia |
@@ -267,12 +267,12 @@ caverna, e sono canone `[CANONE — DM 2026-10-18, G2-37]`:
 Se l'idea è specifica e il giocatore accetta che il mondo reagisca, funziona.
 Se è generica («cerco un modo»), chiedi *«come, di preciso?»*, e poi funziona.
 
-**Il finisher va al giocatore.** Questo master non ha un boss, ma ha un colpo
-che chiude l'arco: quello che abbatte l'ultimo hobgoblin ai piedi
-dell'altare. Lì la narrazione passa a chi l'ha tirato:
-`[HDYWTDT — il finisher a chi chiude la pulizia]`, nella Scena 3. Non si dice
-«descrivi tu»: si chiede *«com'è che lo fai?»*, e si aspetta. Se il giocatore
-non vuole, descrivi tu in una riga e vai avanti.
+**Il finisher va al giocatore.** Questo master non ha un boss. Il colpo che
+chiude l'arco è quello che abbatte l'ultimo hobgoblin ai piedi dell'altare, e
+lì la narrazione passa a chi l'ha tirato:
+`[HDYWTDT — il finisher a chi chiude la pulizia]`, nella Scena 3. Al giocatore
+si chiede *«com'è che lo fai?»*, e si aspetta. Se non vuole, descrivi tu in una
+riga e vai avanti.
 
 ---
 
@@ -452,8 +452,8 @@ loro luce mette in fuga gli orchi.
 > fermano nello stesso respiro. Nel silenzio la sacerdotessa alza la testa, e
 > dice piano: «Sono tornati.»*
 
-> **Read-aloud (Mercer lead) — la caverna, voi.** *La sfera si apre, e i vostri
-> piedi toccano la pietra dell'altare. Sulla fronte di Thorik brillano tre
+> **Read-aloud (Mercer lead) — la caverna, voi.** *La sfera si apre, e i piedi
+> toccano la pietra dell'altare. Sulla fronte di Thorik brillano tre
 > gemme e l'ascia canta una nota di guerra che risuona nella pietra; i pugni di
 > Tordek ardono, l'anello di Artemis pulsa fra luce e ombra, intorno a Hella
 > spuntano dalla pietra radici di cristallo. Novanta nani rialzano la testa
@@ -558,8 +558,8 @@ intera**.
 
 > **Read-aloud (Salvatore lead) — la corona intera.** *La pietra nuova ha smesso di
 > battere da sola. Per la prima volta da quando Thorik l'ha in testa, l'oro torna
-> indietro da tutte e tre le pietre, e la luce che ne esce non è di nessuna delle
-> tre: è di quello che adesso sono insieme. Il metallo gli si raffredda contro la
+> indietro da tutte e tre le pietre, e la luce che ne esce ha un colore che nessuna
+> delle tre, da sola, aveva. Il metallo gli si raffredda contro la
 > fronte, e resta caldo come una mano.*
 
 ---
@@ -724,7 +724,7 @@ l'ordine e il preavviso ne tolgono gli stessi.
 #### Il passaggio di consegne
 
 > **RE THOREK (a fiato corto, dall'altare):** *«Campioni di Moradin. Avete salvato il cuore di
-> Hammerfist. Ma la battaglia non è finita. SOPRA.»* *(indica il soffitto)* *«Il
+> Hammerfist. Ma la battaglia non è finita. SOPRA. Il
 > drago. Fauci di Palude. Devasta ancora le mura. Se non cade, tutto è perduto
 > comunque.»*
 >

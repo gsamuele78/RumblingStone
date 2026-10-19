@@ -460,7 +460,7 @@ posto in cui i PG vedono il prezzo di ciò che hanno appena scelto.
 > numeri nanici nell'angolo dell'affresco sono cambiati, senza un rintocco: la
 > volta prima erano altri. Nella pietra dipinta qualcosa si è mosso mentre
 > nessuno guardava, una torre più vicina nel fumo, un tratto di camminamento
-> vuoto che prima non lo era. La battaglia non aspetta nessuno.*
+> vuoto che prima non lo era.*
 
 ### La Cronaca, in tre righe
 Ogni gesta compiuta **incide un pannello** negli affreschi della Sala **e**
@@ -722,15 +722,11 @@ la Corona di Adamantio. Il box li nomina già.
 gli elfi, Garl per gli gnomi, Gruumsh con invidia orchesca; nella fucina, altri
 artefatti nascono — un Aegis Fang primordiale, altri martelli senza nome.*
 - **Interazione (Thorik, tocco della Corona).** Moradin **gira la testa** e lo
-  guarda attraverso il tempo:
+  guarda attraverso il tempo, mentre lontano batte un colpo d'incudine:
 
-  **Moradin (paterno, a Thorik):** *«Figlio della Pietra. Porti il mio dono più prezioso. Portalo con onore, con umiltà, con speranza.»*
+  **Moradin (paterno, a Thorik):** *«Figlio della Pietra. Porti il mio dono più prezioso. Portalo con onore, con umiltà, con speranza. Non deludere la compagna caduta. Non deludere Hammerfist. Completa il destino.»*
 
-  *Un colpo d'incudine, lontano.*
-
-  **Moradin:** *«Non deludere la compagna caduta. Non deludere Hammerfist. Completa il destino.»*
-
-  Poi sorride e torna a battere.
+  Poi Moradin sorride e torna a battere.
 - **Effetto — Benedizione dell'Osservatore.** Chi medita 1 min: **+1 sacro a
   tutti i TS per 24 h** (Thorik +2). Si rinnova una volta ogni 24 ore vissute. È la Benedizione della Cronaca
   di A1, «La Fede», e prende il posto del +1 a un tiro del §3: davanti ad A1 non
@@ -819,11 +815,11 @@ Al ritorno, la superficie liquida della Terra **si solidifica** e diventa il
 pannello-conseguenza del Piano della Terra.
 
 > **Read-aloud (LotR lead, Mercer support) — gli affreschi, A5, la Terra che si chiude.** *L'affresco
-> di est, che era una finestra di gravità e cristallo, si raffredda come
-> metallo temprato. La scena si fissa: tre figure reggono un altare mentre una
-> montagna vivente si dissolve in polvere di stelle che brilla. Sul margine,
-> piccola e quasi nascosta, una zampa di pietra si solidifica, con occhi di
-> topazio. La Forgia ha visto anche lui.*
+> di est, che era una finestra di gravità e cristallo, si raffredda come un
+> ferro tolto dal fuoco, dal rosso al grigio. La scena si fissa: tre figure
+> reggono un altare mentre una montagna vivente si dissolve in polvere di
+> stelle che brilla. Sul margine, piccola e quasi nascosta, una zampa di
+> pietra si solidifica, con occhi di topazio. La Forgia ha visto anche lui.*
 - **Cosa incide:** «La Forza Sostenuta» — i tre eroi + Durik che prende forma.
 - **Benedizione della Cronaca:** +1 sacro a una prova di FOR o TS Tempra.
 
@@ -878,15 +874,12 @@ che ha dormito nel Piano della Terra: 3g 08h e 3g 04h). È l'orologio del
 beat: il registro completo dei riposi e la progressione dell'affresco stanno in
 **§0-bis «Countdown di Hammerfist»**, e lì c'è il box da leggere.
 - **Interazione (Aegis Fang, appoggiata alla cornice, come nel Piano della
-  Terra, «Il Piano della Terra & Terros l'Antico» §1).** L'ascia **vibra e parla** (evento rarissimo):
+  Terra, «Il Piano della Terra & Terros l'Antico» §1).** L'ascia **vibra e parla** (evento rarissimo), e la
+  lama di Aegis Fang trema contro la cornice:
 
-  **Aegis Fang (voce di metallo, a Thorik):** *«Drago. Fauci di Palude. Il capostipite della sua stirpe, Skullcrusher il Nero, cadde sotto i miei colpi mille anni fa.»*
+  **Aegis Fang (voce di metallo, a Thorik):** *«Drago. Fauci di Palude. Il capostipite della sua stirpe, Skullcrusher il Nero, cadde sotto i miei colpi mille anni fa. Mi impugnava Thorgrim Barbadiferro. Il sangue riconosce il sangue. Quando lo incontrerai, io sentirò. Canterò il canto di morte dei draghi. E lui tremerà.»*
 
-  *La lama trema contro la cornice.*
-
-  **Aegis Fang:** *«Mi impugnava Thorgrim Barbadiferro. Il sangue riconosce il sangue.»*
-
-  **Aegis Fang:** *«Quando lo incontrerai, io sentirò. Canterò il canto di morte dei draghi. E lui tremerà.»*
+  Poi Aegis Fang tace, e la lama smette di tremare.
   - **Effetto — Bane Draconico specifico (permanente, solo vs Fauci di Palude):**
     **+1d6** danni oltre il *Dragondoom* dell'ascia
     (per un gruppo futuro), e
@@ -909,13 +902,13 @@ dipingendo con le loro scelte.
   Leggi il box solo dopo che il corpo è davanti alla tela.
 
 > **Read-aloud (Casa di Davide lead, Salvatore support) — gli affreschi, A8, la manifestazione.** *Il
-> corpo di Hella è davanti alla tela, e la luce verde della sua anima druidica
-> esce dalle ossa e tocca il vetro nel silenzio. Per dieci battiti del cuore
-> Hella appare nell'affresco, semitrasparente, serena, bellissima. Non parla.
+> corpo di Hella è davanti alla tela, e la luce verde della sua anima
+> druidica esce dalle ossa e tocca il vetro nel silenzio. Per dieci battiti
+> del cuore Hella appare nell'affresco, semitrasparente e serena. Non parla.
 > Preme una mano contro il vetro freddo dall'interno, come chi saluta
-> attraverso una finestra ghiacciata, e dove tocca lascia un segno inciso, una
-> quercia e un martello intrecciati che brillano. Poi svanisce. È una
-> promessa, e dice soltanto: tornerò.*
+> attraverso una finestra ghiacciata, e dove tocca lascia un segno inciso,
+> una quercia e un martello intrecciati che brillano. Poi svanisce, e il
+> segno resta sul vetro a dire una cosa sola: tornerò.*
 
 ✉ **Si consegna qui: H3**, il simbolo di Hella.
 - **Effetto.** Nessun dialogo (asimmetria). **+1 sacro a tutti i TS per 1 ora**
@@ -992,13 +985,13 @@ con **≥2 successi** la visione si apre per tutti. Il corpo di Hella davanti ad
 A2 è un gesto che il rito non pretende: bastano i tre tiri.
 
 > **Read-aloud (Casa di Davide lead, LotR support) — l'affresco A2, la visione.** *Per
-> dieci battiti l'affresco esplode di chiarezza su un futuro possibile, non
-> promesso. Hammerfist è salva, le bandiere naniche al vento. Voi quattro
-> siete davanti a Re Thorek, e Hella è viva, la mano nella mano di Thorik;
-> accanto, Artemis ha le ali d'ombra spiegate e Tordek medita, l'aura di ki
-> visibile intorno. Sotto il balcone mille nani gridano fino a far tremare la
-> pietra: «Eroi! Salvatori!» Poi la visione svanisce. Resta, inciso più a
-> fondo di qualsiasi affresco, una cosa sola: è possibile, e dipende da voi.*
+> dieci battiti l'affresco si fa limpido come vetro lavato, e mostra un
+> futuro che nessuno ha promesso. Hammerfist è salva, le bandiere naniche al
+> vento. Voi quattro siete davanti a Re Thorek, e Hella è viva, la mano
+> nella mano di Thorik; accanto, Artemis ha le ali d'ombra spiegate e Tordek
+> medita, l'aura di ki visibile intorno. Sotto il balcone mille nani gridano
+> fino a far tremare la pietra: «Eroi! Salvatori!» Poi la visione svanisce,
+> e nel vetro tornano a specchiarsi tre facce.*
 
 **Dati per il DM (non da leggere).** La fortezza salva è Hammerfist; il re è
 Re Thorek; la mano nella mano è quella di Hella in quella di Thorik; le ali
@@ -1027,14 +1020,13 @@ d'ombra sono di Artemis, il ki di Tordek.
 
 > **Read-aloud (Salvatore lead, Casa di Davide support) — la Stanza della Corona, l'ingresso.** *Oltre
 > il Portale sempre aperto c'è il posto da cui tutto è cominciato: la Stanza
-> della Corona, nel cuore del Sottosuolo, dove Hella è morta. Ma non è più la
-> stanza che avete lasciato. Il gelo, i muschi viola, le ragnatele dei drow si
-> ritirano come una marea, e la luce sacra che scende dal Portale lavora sulla
-> pietra come lisciva: dove c'era muffa ora c'è polvere di roccia pulita che
-> brilla. Sull'arco la runa del Fuoco arde di un arancione fermo, come un
-> faro. Avete riconquistato una testa di ponte. E dietro il trono, dove il
-> sangue di Hella si è asciugato, la pietra si incide da sola, lettera dopo
-> lettera.*
+> della Corona, nel cuore del Sottosuolo, dove Hella è morta. Ma non è più
+> la stanza che avete lasciato. Il gelo, i muschi viola, le ragnatele dei
+> drow si ritirano lentamente, come una marea, e la luce sacra che scende
+> dal Portale lavora sulla pietra come lisciva: dove c'era muffa ora c'è
+> polvere di roccia pulita che brilla. Sull'arco la runa del Fuoco arde di
+> un arancione fermo, come un faro. E dietro il trono, dove il sangue di
+> Hella si è asciugato, la pietra si incide da sola, lettera dopo lettera.*
 
 **Dati per il DM (non da leggere).** L'aura che si ritira è quella del
 santuario corrotto di Karrn il Senza-Volto; la luce sacra viene dal Portale P1.
@@ -1201,13 +1193,14 @@ taciuto, è canone (Piano della Terra, §6-bis).
 
 > **Read-aloud (Andor lead, Salvatore support) — la Sala, il sogno di Tordek.** *Sogni
 > una fiera, e non è una fiera nanica: banchi bassi, teli chiari, una lingua
-> che non conosci e che capisci lo stesso, un odore di spezie che non crescono
-> in nessun posto in cui sei stato. Nessuno ti guarda. Sei un cliente come un
-> altro, ed è proprio questo che ti mette a disagio. In fondo al vicolo dei
-> banchi c'è un tavolino, e sopra c'è il tuo zaino, aperto. Un uomo che non
-> riesci a mettere a fuoco conta le tue cose una per una in un sussurro, con
-> la pazienza di chi fa l'inventario. Non ruba niente. Cataloga. Ti svegli con
-> la mano già sulla cinghia.*
+> che non conosci e che capisci lo stesso, un odore di spezie che non
+> crescono in nessun posto in cui sei stato. Nessuno ti guarda: sei un
+> cliente come un altro, e qualcuno ti pesta un piede senza chiedere scusa.
+> In fondo al vicolo dei banchi c'è un tavolino, e sopra c'è il tuo zaino,
+> aperto. Un uomo che non riesci a mettere a fuoco conta le tue cose una per
+> una e le scrive in un registro, in un sussurro, con la pazienza di chi fa
+> l'inventario. Non ne prende nessuna. Ti svegli con la mano già sulla
+> cinghia.*
 
 Il Seme **non è stato toccato** e il Marchio **non è attivo**: non è la gemma
 che agisce, è la Sala che gli mostra **cosa si è caricato in spalla senza
@@ -1221,8 +1214,8 @@ fermati lì.
 > **Read-aloud (Andor lead, BG3 support) — la Sala, il sogno di Artemis, 1 di 2.** *Il bazar te lo
 > ricordi ancora: i teli bianchi, i registri, tutto quel disordine
 > ricchissimo e rumoroso tenuto in ordine da qualcuno molto bravo. Nel sogno
-> ci torni, ma da fuori, e la porta del mercato non è la porta del mercato.
-> È l'affresco del Tempo.*
+> ci torni, ma da fuori, e la porta del mercato ha la cornice d'oro e
+> adamantio dell'affresco del Tempo.*
 
 > **Read-aloud (Andor lead, BG3 support) — la Sala, il sogno di Artemis, 2 di 2, quando ha riconosciuto la porta.** *È socchiusa, e dallo
 > spiraglio viene aria vera che sa di fumo di forgia e di neve: mille anni
@@ -1235,7 +1228,7 @@ Il bazar è la vetrina di Varis, che Artemis ha visto prima di estrarre il Seme
 («Il Piano della Terra & Terros l'Antico» §6-bis, giocata). Se un Artemis nuovo non l'ha vista, al posto del
 primo box leggi una riga sola:
 
-> **Read-aloud (Andor lead) — la Sala, il sogno di Artemis, senza il bazar.** *Sogni l'affresco del Tempo, e non è più un affresco: è una porta.*
+> **Read-aloud (Andor lead) — la Sala, il sogno di Artemis, senza il bazar.** *Sogni l'affresco del Tempo, e nel sogno l'affresco è una porta.*
 
 Il gancio è **Vatore** («Il Viaggio a 1.000 Anni fa»). Non nominarlo. Se Artemis chiede di chi è il
 pollice: nel sogno lo sapeva, sveglio non se lo ricorda. E se chiede se il
@@ -1264,9 +1257,8 @@ freddo è il primo sintomo del ritorno.
 
 > **Read-aloud (LotR lead) — la Sala, il risveglio.** *Vi svegliate insieme, e
 > per un po' c'è solo silenzio. Sulla parete di sud-est i numeri nanici sono
-> cambiati, molto meno del previsto, e nessuno di voi sa dire perché. Il
-> basalto è ancora tiepido nel punto esatto in cui avete dormito, e da
-> nessun'altra parte. Che fate?*
+> cambiati, e molto meno del previsto. Il basalto è ancora tiepido nel punto
+> esatto in cui avete dormito, e da nessun'altra parte. Che fate?*
 
 ⚠️ **Non spiegare lo sconto delle ore.** Se qualcuno lo nota — ed è previsto
 che lo notino, la riga sopra serve a questo — la risposta è dentro il mondo:

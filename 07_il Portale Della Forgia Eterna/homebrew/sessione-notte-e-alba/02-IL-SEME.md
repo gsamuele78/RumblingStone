@@ -50,9 +50,9 @@ finora la propria avidità nell'arco:
 | **Rifiuta / distrugge la gemma** (Sapienza Magica CD 20 per estirparla pulita, o la lascia dov'è) | Varis perde l'esca; l'Anello approva (+1 morale al prossimo TS di Artemis, colore) | Varis lo segna come "sfuggito": nemico che rispetta, non pollo (→ #4/ARC-09) |
 | **Prende la gemma** | **Esca reale**: un **Frammento di Mercato** (una volta: −25% su un acquisto o +4 di circostanza a una prova commerciale/UMD) — la cupidigia è **premiata sul serio**, per un attimo | **Marchio di Varis**: Varis lo **localizza**; una volta potrà riscuotere (favore/tradimento). L'Anello può spezzare il *controllo* (Dawn's Defiance) ma **non** il debito. → grande gancio grigio per ARC-09 |
 
-> **Perché è bello (stile Andor/BG3).** Non è "una trappola cattiva": è un
+> **Perché è bello (stile Andor/BG3).** Più che "una trappola cattiva", è un
 > **affare vero con un amo vero**. Artemis può vincerci (se è furbo o retto) o
-> pagarlo caro (se è avido) — e in entrambi i casi la scelta **torna** più
+> pagarlo caro (se è avido), e in entrambi i casi la scelta **torna** più
 > avanti. Registra l'esito nell'**Echo Ledger** (§11).
 
 #### ✅ CANONE GIOCATO (DM 2026-07-31) — la terza strada: PRESO, MAI TOCCATO
@@ -100,9 +100,9 @@ indeterminato, e Varis, quando se ne accorgerà, la leggerà come una
 Aggiorna così la nota su Vatore al #4: non riconosce la firma di un
 debitore, riconosce quella di un collega.
 
-**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis non
-ha resistito alla tentazione — l'ha **rimandata**, e nel farlo l'ha
-**appoggiata sulla schiena di qualcun altro**. Tordek porta un innesto
+**Il dettaglio che vale la campagna: è nello zaino di TORDEK.** Artemis la
+tentazione l'ha **rimandata**, e nel rimandarla l'ha **appoggiata sulla
+schiena di qualcun altro**. Tordek porta un innesto
 planare tiepido, e **non sa cosa sia**. Non serve nessuna meccanica per
 renderlo pesante: basta ricordarsene.
 
@@ -148,7 +148,7 @@ sempre tiepido.
    anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
    arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
    `[CANONE — DM 2026-10-18]`. Non c'è tiro
-   salvezza, perché il Seme non costringe: aspetta.
+   salvezza, perché il Seme si limita ad aspettare.
 2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
    nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
    si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
@@ -210,9 +210,9 @@ non c'è niente di più interessante.
    sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
 
 > **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
-> si accartoccia in cenere tiepida. Sotto il guanto la gemma ha lo stesso peso
-> e lo stesso calore di una mano appena tolta da una tasca, ma dentro la pietra
-> c'è una scrittura fitta e ordinata, da libro mastro. In fondo alla
+> si accartoccia in cenere tiepida. Sotto il guanto la gemma pesa e scalda
+> come prima, ma dentro la pietra c'è una scrittura fitta e ordinata, da libro
+> mastro. In fondo alla
 > pagina, una bilancia con un filo d'argento avvolto al giogo. Per tutta l'ora
 > hai aspettato una voce, e dall'altra parte del filo non c'è ancora nessuno.*
 <!-- /include -->

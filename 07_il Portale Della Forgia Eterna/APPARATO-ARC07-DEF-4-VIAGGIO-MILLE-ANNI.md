@@ -124,13 +124,13 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 3 | la porta, deep time al contrario | LotR lead | 7 |
 | SCENA 3 | la targa | Casa di Davide lead | 4 |
 | SCENA 4 | la sala del consiglio, il re | Casa di Davide lead | 9 |
-| SCENA 4 | il vecchio sulla panca | Mercer lead, Casa di Davide support | 5 |
+| SCENA 4 | il vecchio sulla panca | Mercer lead, Casa di Davide support | 6 |
 | SCENA 4 | le due prese | Mercer lead | 3 |
 | SCENA 5 | i quartieri ospiti | LotR lead | 8 |
 | SCENA 5 | la cappella | Casa di Davide lead | 6 |
 | SCENA 5 | la bottega | Andor lead | 5 |
 | SCENA 5 | le gallerie | Andor lead | 6 |
-| SCENA 5 | la fucina e il banco | Salvatore lead, Andor support | 9 |
+| SCENA 5 | la fucina e il banco | Salvatore lead, Andor support | 10 |
 | SCENA 6 | la postierla | Andor lead | 5 |
 | SCENA 6 | il campo | Salvatore lead | 8 |
 | SCENA 6 | il volo | Salvatore lead | 5 |
@@ -141,7 +141,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | 3 di 3, solo quando il silenzio diventa scomodo | Andor lead | 3 |
 | SCENA 7 | Tre rune nane, tutte spezzate a metà dallo | Salvatore | 3 |
 | SCENA 8 | la tenda, il seggio | Salvatore lead | 6 |
-| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 6 |
+| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 5 |
 | SCENA 9 | l'anello | Andor lead | 2 |
 | SCENA 10 | le mura | Salvatore lead, LotR support | 9 |
 | SCENA 10 | il camminamento | Salvatore lead | 7 |
@@ -150,7 +150,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 11 | la runa sotto la scaglia | Salvatore lead | 4 |
 | SCENA 12 | l'incudine, e l'incasso che si chiude | LotR lead | 9 |
 | SCENA 12 | l'ascia prende la parola | Mercer lead | 4 |
-| SCENA 12 | l'aura | LotR lead | 7 |
+| SCENA 12 | l'aura | LotR lead | 6 |
 | SCENA 12 | il torque | Casa di Davide lead | 5 |
 | SCENA 13 | l'incudine, 1 di 3: la profezia compiuta | Casa di Davide lead | 5 |
 | SCENA 13 | l'incudine, 2 di 3: il canto | Salvatore | 7 |
