@@ -112,6 +112,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-10-19 | MASTER-DEF | giro 3 dei cinque master di ARC-07 con le norme della #246: 34 box su 120 riscr… | 🟡 [`esperimenti/giro3-arc07-2026-10-19/`](plans/esperimenti/giro3-arc07-2026-10-19/README.md): segnalazioni 37 → 13, dettagli sensoriali 509 → 526, impoveriti… |
+| 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5 (il giro completo misurato) e ADR-0093 accettata | 🟡 `ciclo_prosa.py confronta --rif` confronta ogni file di un giro (master e handout) con la sua versione di partenza ed esce 1 se uno peggiora; gli handout di… |
 | 2026-10-18 | MASTER-DEF | box impoveriti dei master di ARC-07 corretti con la misura della PR #246 (… | ✅ da 26 su main a 2, entrambi falsi positivi (la parola sensoriale è nella battuta fuori dal box); attesa di §6 a 530 box |
 | 2026-10-18 | MASTER-DEF | la lezione del voto cieco applicata agli altri box dei master di ARC-07: dettag… | ✅ circa 70 box su 120, box da 128 a 122, tag di canone invariati; attesa di §6 a 532; apparati e booklet rigenerati |
 | 2026-10-18 | MASTER-DEF | scelte del DM dal voto cieco applicate ai master di ARC-07: le otto versioni ve… | ✅ coppie 2, 3, 4, 5, 9, 12, 16, 20 rimesse parola per parola, con un commento «scelta del DM» dove superano un tetto; apparati e booklet rigenerati |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
 | 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
 | 2026-10-18 | TRASVERSALE | Creature della Mano Rossa ispirate alla WE di RHoD (ARC-09) | 🟡 proposta: abishai azzurro, Spezzamente, lucertola del tuono, Furia della Mano in `Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`, versione più fort… |
-| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
 
 ## Le misure che si portano dietro
 

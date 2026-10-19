@@ -52,6 +52,18 @@ note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
 - [x] **il dopo**: le stesse misure sul rifacimento di ARC-07 (#249) migliorano tutte, ma il DM sceglie alla cieca la nuova in 8 coppie su 16: miglioramento non dimostrato ([ESITO-ARC07-2026-10-18](esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). Le sette versioni vecchie preferite e le due ipotesi (non tagliare il dettaglio sensoriale, non spezzare i monologhi) passate al thread del rifacimento, che tiene i file
 - [x] **la misura aggiornata dai voti** (richiesta del DM, la sera): le due regole in `read-aloud-adulti.md` §2-ter, applicate da `cieco_versioni.py coppie` (al cieco solo le indecise e quattro di controllo) e da `ciclo_prosa misura` come cancello; sulle sedici coppie decide 13 e ne sbaglia una; 26 box impoveriti in ARC-07, passati al thread del rifacimento
 
+- [x] **ADR-0093 accettata** dal DM il 2026-10-19
+
+### Lotto 5 · Il giro completo, misurato contro la versione di prima 🟡 (2026-10-19)
+
+Aperto su richiesta del DM per la riscrittura di DEF-4 e DEF-5 prima della
+serata del 2026-10-19. I file di ARC-07 sono del thread «Schede PNG e cattivi
+uniformi»; qui c'è lo strumento e la regola.
+
+- [x] `ciclo_prosa.py confronta --rif`: ogni file del giro contro la sua versione di partenza, master e handout in una tabella, esce 1 se uno peggiora
+- [x] gli handout di ARC-07, ARC-08 e ARC-09 bersagli di `misura_craft`
+- [ ] **la regola** ([ADR-0094](adr/ADR-0094-il-giro-completo-si-misura-contro-la-versione-di-prima.md), proposta): `ciclo_prosa.py confronta --rif` su master e handout, gli handout come bersagli di `misura_craft`; si chiude quando il giro di DEF-4 e DEF-5 della serata del 2026-10-19 dice se regge
+
 ## 2 · La calibrazione del lotto 1
 
 Le quattro regole nuove eseguite sui nove moduli sotto cancello, prima di

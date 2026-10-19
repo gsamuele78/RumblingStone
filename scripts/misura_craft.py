@@ -835,6 +835,10 @@ BERSAGLI = {
     "ARC-09 Rhest": [f"{A9}/Arco-Post-Hammerfist-P2-RHEST-*.md"],
     "ARC-09 Battaglia Finale": [f"{A9}/Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-*.md"],
     "ARC-08 Hammerfist": [f"{A8}/ARC08-*.md", f"{A8}/Cerimonia-delle-100-Asce.md"],
+    # Gli handout si misurano come i master (ADR-0094): li legge il giocatore.
+    "Handout ARC-07": [f"{A7}/ARC07-HANDOUTS.md"],
+    "Handout ARC-08": [f"{A8}/ARC08-15-HANDOUTS-GIOCATORE.md"],
+    "Handout ARC-09": [f"{A9}/Arco-Post-Hammerfist-HANDOUTS.md"],
 }
 
 
