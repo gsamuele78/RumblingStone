@@ -406,6 +406,15 @@ sull'SRD
 ([`PRESA-DI-THORIK.md`](esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md)).
 Restano `[INFERRED]` quattro punti: quante prese per incontro, lo *Scosso* del
 Bane e l'Odio della stirpe sulle prove di lotta, il nome che Fauci pronuncia.
+Il 2026-10-20 il DM ha chiesto le contromosse dei PG secondo l'SRD e una
+variante per aggrapparsi al drago: sono nella scheda di Fauci (`ARC08-02` §1)
+e nella sua copia in `ARC08-01`, con il conto del carico (Fauci regge fino a
+circa 1.665 kg senza rallentare). La variante, Scalare CD 25, è canone del DM;
+che cosa succede sul collo resta `[INFERRED]`.
+Lo stesso giorno il DM ha chiuso i quattro punti: una presa per incontro; lo
+*Scosso* del Bane toglie 2 alle prove di lotta di Fauci; l'Odio della stirpe
+vale anche sulla lotta (+27 con la sola bocca); Fauci non sa i nomi, riconosce
+l'ascia della cicatrice ancestrale e chiama Thorik «Portatore».
 
 ## FASE 2 — Sviluppo / attuazione
 
