@@ -1,4 +1,4 @@
-# ADR-0094 — Il giro delle letture ha correzione, verifica e seconda passata
+# ADR-0095 — Il giro delle letture ha correzione, verifica e seconda passata
 
 **Stato**: proposta
 **Data**: 2026-10-18

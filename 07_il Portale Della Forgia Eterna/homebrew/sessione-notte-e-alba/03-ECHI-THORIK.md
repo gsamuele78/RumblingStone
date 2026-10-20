@@ -8,6 +8,8 @@
 
 ---
 
+Ad alta voce si legge solo il riquadro qui sotto.
+
 > *Nel cortile, mentre i fabbri spengono le ultime forge, Aegis Fang ti ronza
 > contro la schiena con la stessa nota che fa quando la
 > batti sull'incudine per raddrizzarla, solo più bassa, e non sei stato tu.*
@@ -17,5 +19,5 @@
 
 ---
 
-**Solo per te.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
+**Solo per te: questa riga non si legge agli altri.** Quella nota l'ha sentita anche Thorgrim: ha il callo nello
 stesso punto in cui ce l'hai tu, e non te l'ha detto.

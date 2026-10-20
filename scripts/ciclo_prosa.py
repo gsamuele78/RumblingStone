@@ -671,6 +671,47 @@ def mqm(testo: str, percorso: Path) -> "dict | None":
     return e
 
 
+def _dettagli_nella_battuta_accanto(vecchio: str, nuovo: str, nuovi: list) -> bool:
+    """Le parole sensoriali uscite dal box ma finite nella battuta appena prima
+    o appena dopo: non è un impoverimento (#251, DEF-4 Scena 11, dove il grido
+    di Aegis Fang è passato dal box alla sua battuta)."""
+    import cieco_versioni as cv
+    testi = [n["testo"] for n in nuovi]
+    if nuovo not in testi:
+        return False
+    i = testi.index(nuovo)
+    unito = "\n\n".join(testi[max(0, i - 1):i + 2])
+    return cv.verdetto_misurato(vecchio, unito)[0] != "vecchia" \
+        or mc_dettagli(unito) >= mc_dettagli(vecchio)
+
+
+def mc_dettagli(testo: str) -> int:
+    import misura_craft as mc
+    return mc.dettagli_sensoriali(testo)
+
+
+def box_impoveriti(prima: str, dopo: str) -> "list[str]":
+    """I box che la riscrittura ha peggiorato secondo il voto cieco del DM
+    (`read-aloud-adulti.md` §2-ter, ADR-0093): meno dettagli sensoriali, o un
+    monologo spezzato in battute. Ogni box di prima si appaia al suo in dopo."""
+    import cieco_versioni as cv
+    nuovi = cv.box_con_titolo(dopo, battute=True)
+    uscita = []
+    for b in cv.box_con_titolo(prima):
+        if b["parole"] < cv.PAROLE_MINIME:
+            continue
+        _, somiglianza, nuovo = cv.appaia(b, nuovi)
+        if nuovo == b["testo"] or somiglianza < cv.SOMIGLIANZA_DUBBIA:
+            continue
+        verdetto, perche = cv.verdetto_misurato(b["testo"], nuovo)
+        if verdetto == "vecchia" and "sensoriali" in perche \
+                and _dettagli_nella_battuta_accanto(b["testo"], nuovo, nuovi):
+            continue
+        if verdetto == "vecchia":
+            uscita.append(f"{b['titolo'] or '(senza titolo)'}: {perche}")
+    return uscita
+
+
 def miglioramento(prima: str, dopo: str, percorso: Path) -> dict:
     """Di quanto la riscrittura ha migliorato il testo, misurato.
 
@@ -690,6 +731,7 @@ def miglioramento(prima: str, dopo: str, percorso: Path) -> dict:
         "penalita": [q0["penalita"], q1["penalita"]] if q0 and q1 else None,
         "gulpease": [l0["gulpease"], l1["gulpease"]],
         "ritmo": [l0["ritmo"], l1["ritmo"]],
+        "impoveriti": box_impoveriti(prima, dopo),
     }
 
 
@@ -698,6 +740,7 @@ def peggiora(mig: dict) -> "list[str]":
     fuori = [f"{n} {a} → {b}" for n, (a, b) in mig["norme"].items() if b > a]
     if mig["mqm"] and mig["mqm"][1] < mig["mqm"][0]:
         fuori.append(f"MQM {mig['mqm'][0]} → {mig['mqm'][1]}")
+    fuori += [f"box impoverito, {x}" for x in mig.get("impoveriti", [])]
     return fuori
 
 
@@ -731,6 +774,46 @@ def misura_cmd(originale: Path, riscritto: Path) -> int:
     if mig["segnalazioni"][1] >= mig["segnalazioni"][0]:
         print("  questo giro non ha abbassato le segnalazioni: ci si ferma qui (GIRI_MASSIMI, ADR-0077)")
     return 1 if male or fatti_cambiati else 0
+
+
+def confronta_cmd(rif: str, files: "list[Path]") -> int:
+    """Il giro intero contro una versione del repo: ogni file (master, handout,
+    fascicolo) com'era a `rif` contro com'è adesso, in una tabella sola.
+
+    Serve al «giro completo» di un arco (ADR-0094): la stessa misura per i
+    master e per gli handout dei giocatori, e un file che peggiora fa uscire 1.
+    """
+    import subprocess
+    righe = ["| file | segnalazioni | MQM | dettagli sensoriali | box impoveriti | esito |",
+             "|---|---:|---:|---:|---:|---|"]
+    import misura_craft as mc
+    male_tot = 0
+    for f in files:
+        rel = f.resolve().relative_to(RADICE).as_posix() if f.resolve().is_relative_to(RADICE) else str(f)
+        r = subprocess.run(["git", "show", f"{rif}:{rel}"], cwd=RADICE,
+                           capture_output=True, text=True)
+        dopo = f.read_text(encoding="utf-8")
+        if r.returncode != 0:
+            righe.append(f"| {rel} | nuovo | | | | non confrontabile |")
+            continue
+        prima = r.stdout
+        mig = miglioramento(prima, dopo, f)
+        sens = [sum(mc.dettagli_sensoriali(mc.corpo_del_box(b)) for b in mc.box_read_aloud(x))
+                for x in (prima, dopo)]
+        # Un numero solo aggiunto (una CD scritta per il DM) non è un fatto
+        # cambiato: lo segnala, ma non fa peggiorare il file (giro 4 di ARC-07).
+        fatti_c = confronta_fatti(prima, dopo)
+        tolti = [x for x in fatti_c if ": tolti -," not in x]
+        aggiunti = [x for x in fatti_c if ": tolti -," in x]
+        male = peggiora(mig) + tolti
+        male_tot += bool(male)
+        a, b = mig["segnalazioni"]
+        q = f"{mig['mqm'][0]} → {mig['mqm'][1]}" if mig["mqm"] else "—"
+        righe.append(f"| {rel} | {a} → {b} | {q} | {sens[0]} → {sens[1]} | "
+                     f"{len(mig['impoveriti'])} | {'✗ ' + '; '.join(male) if male else '✓'}{' · solo aggiunti: ' + '; '.join(aggiunti) if aggiunti else ''} |")
+    print("\n".join(righe))
+    print(f"{'✓' if not male_tot else '✗'} {len(files) - male_tot} file su {len(files)} senza peggioramenti contro {rif}")
+    return 1 if male_tot else 0
 
 
 def _estratto(righe: "list[str]", s: Segnalazione) -> str:
@@ -1057,6 +1140,9 @@ def main(argv=None) -> int:
     s5.add_argument("riscritto", type=Path)
     s6 = sub.add_parser("registro", help="i miglioramenti applicati; --check è il cancello")
     s6.add_argument("--check", action="store_true")
+    s8 = sub.add_parser("confronta", help="ogni file contro una versione del repo, master e handout insieme")
+    s8.add_argument("--rif", required=True, help="il commit o il ramo di prima (es. origin/main)")
+    s8.add_argument("file", type=Path, nargs="+")
     s7 = sub.add_parser("rigenera", help="la revisione riportata sull'originale cambiato")
     s7.add_argument("revisione", type=Path)
     a = ap.parse_args(argv)
@@ -1067,6 +1153,8 @@ def main(argv=None) -> int:
         return misura_cmd(a.originale, a.riscritto)
     if a.cmd == "registro":
         return registro_cmd(a.check)
+    if a.cmd == "confronta":
+        return confronta_cmd(a.rif, a.file)
     if a.cmd == "rigenera":
         return rigenera(a.revisione)
 

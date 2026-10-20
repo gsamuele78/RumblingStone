@@ -30,7 +30,7 @@ duplicare qui.**
 | **Hella** | Viva, template **Ibrido Treant** attivo; porta la **Collana dei Semi Eterni** con **Durik nel terzo seme** (compagno maschile) |
 | **Thorik** | **−4 DES / +2 COS / +4 CAR permanenti** (−2 DES dalla Corona quando l'ha indossata; −2 DES, +2 COS e +4 CAR dal rito dello Smeraldo). ⚠️ **Nessun −2 COS.** Al rito di Hella ha donato il **+2 di deflessione della Corona** (Scudo del Custode): resta a **−1 CA permanente**, ed è accelerato 3 round verso chi Hella protegge. Porta il **Debito della Radice** (E-07g), prezzo ignoto. Fonte: `campaign/state.md` §1 del ramo di gruppo |
 | **Cuore di Moradin** | **Speso** (catalizzatore della resurrezione — uso singolo bruciato) |
-| **Corona di Adamantio** | **Topazio** (Tempo) e **Smeraldo** (Terra) accesi; il **Rubino** si accende alla vittoria della battaglia antica e **si consuma** nel salto che li riporta qui (uso singolo, D16). Dal Rituale 4: Corona +3, Senzienza, *Aura della Forgia Eterna* 1/settimana, che la prima volta dura fino all'alba della battaglia antica (`PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` del ramo di gruppo) |
+| **Corona di Adamantio** | **Topazio** (Tempo) e **Smeraldo** (Terra) accesi; il **Rubino** (la Possanza Nanica) si accende alla vittoria della battaglia antica e **si consuma** nel salto che li riporta qui (uso singolo, D16). Dal Rituale 4: Corona +3, Senzienza, *Aura della Forgia Eterna* 1/settimana, che la prima volta dura fino all'alba della battaglia antica (`PG/Artefatti/ARTEFATTI-MATRICE-VERSIONI.md` del ramo di gruppo) |
 | **Party** | APL **13** (D8), tutti gli artefatti nello stato di `state.md` §6 |
 
 ---

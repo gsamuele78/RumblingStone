@@ -4,12 +4,12 @@
 
 <!-- apparato -->
 > ⭐ **MASTER DEFINITIVO — beat HUB rituale (il cuore emotivo dell'arco).**
-> È la scena per cui esiste l'intero ARC-07 (G0). Non è un combattimento: è
-> un **rito corale**, tre sacrifici che sono scelte, un risveglio, e un
+> È la scena per cui esiste l'intero ARC-07 (G0), e nessuno combatte: c'è un
+> **rito corale**, tre sacrifici che sono scelte, un risveglio, e un
 > **prezzo che il mondo esige** (il filo grigio). Le sezioni solo-combattimento
 > non si applicano; tutto il resto dello standard AP sì.
 > **Sostituisce e fonde**: `_ARCHIVIO/PortaleForgia-P3B-ResurrezioneHella-COMPLETO.md`
-> (master eletto B2 — rito, sacrifici, ramo del rifiuto, risveglio, Collana,
+> (master eletto B2: rito, sacrifici, ramo del rifiuto, risveglio, Collana,
 > Treant), i risultati canonici del viaggio dello spirito
 > (`...IL-VIAGGIO-NELL'INCUDINE-DEL-MONDO-risultati.md`, D12) e la scheda
 > `PG/Artefatti/Artefatti-Pg/Hella/01_Collana_dei_Semi_Eterni.md`.
@@ -353,12 +353,16 @@ Ibrido Treant, Empatia vegetale +4, Fotosintesi, Earth Dream amplificato (1/g
 > Il beat vive in un solo luogo — l'Altare al centro della Sala — ma è il luogo
 > più sacro dell'arco. Trattalo come un tempio, non come una stanza.
 
-> **Read-aloud (LotR lead) — l'Altare.** *La sala si è fatta silenziosa in un
-> altro modo, come chi trattiene il fiato. Al centro l'altare arde di una
-> fiamma dorata che non consuma. Sulla pietra di mithral c'è il corpo di Hella,
-> le mani incrociate sul petto, la pelle color cera. Tre semi le stanno
-> addosso, uno per mano e uno sulla fronte, e pulsano piano. Chi vegliava si
-> scosta, e non sa dove mettere le mani. Che fate?*
+> **Read-aloud (LotR lead) — l'Altare.** *La Sala della Forgia si è fatta
+> silenziosa in un modo nuovo. Non il silenzio del vuoto: il silenzio di una
+> sala che trattiene il fiato. Gli otto affreschi guardano dalle pareti —
+> Moradin che forgia, i Quattro Eroi che prendono contorno, Hammerfist che
+> brucia nel suo riquadro. Al centro, l'Altare arde di una fiamma dorata che
+> non consuma. E lì, sulla pietra di mithral, giace il corpo di Hella: le mani
+> incrociate sul petto, la pelle color cera, i tre semi di treant posati, uno
+> su ciascuna mano e uno sulla fronte, che pulsano piano come se già
+> sapessero. Therysol si scosta dalla veglia. Per la prima volta in giorni non
+> ha più bisogno di montare la guardia, e non sa dove mettere le mani.*
 
 **Terreno (callout):** l'Altare 2×2 m al centro dell'ottagono (MAPPA S-1 del
 `DEF-2`; la pianta a pergamena dell'Appendice B è la stessa Sala); attorno, un **cerchio rituale di 3 m di raggio** — Thorik a Nord,
@@ -453,7 +457,7 @@ tavolo, rispetto a prima dello Smeraldo, è un punto solo in più.
 > conosce il cambio e non si fida a lasciarlo accettare a un altro.
 
 > **Read-aloud (Casa di Davide lead) — solo se un PG guarda la Corona.** *La
-> corona sulla fronte di Thorik ha due pietre vive e un vuoto. Il topazio è caldo
+> Corona sulla fronte di Thorik ha due pietre vive e un vuoto. Il topazio è caldo
 > come la sala, lo smeraldo è freddo, e in mezzo l'incasso scoperto resta
 > nero: la luce gli arriva addosso e non ne torna indietro niente. È un
 > difetto di un'unghia su un oggetto che ha attraversato due ere, e chi lo
@@ -478,21 +482,18 @@ della soglia, §8-ter**. Qui è un difetto che si nota, non una promessa che si 
 **In scena** — Dove: l'Altare — Chi: Moradin
 
 La voce arriva dalla Corona e dall'ascia insieme, dentro la testa di tutti e
-tre. Non alza mai il tono.
+tre. Non alza mai il tono, e la Corona si scalda sulla fronte di Thorik.
 
-**MORADIN (dalla Corona, lento):** *«L'Altare è un reliquiario. Dentro, da millenni, riposa il Cuore di Moradin.»*
-
-*La Corona si scalda sulla fronte di Thorik.*
-
-**MORADIN:** *«È un frammento della mia essenza, diventato pietra. Si usa per le emergenze supreme. Riportare una druida dalla morte si qualifica.»*
+**MORADIN (dalla Corona, lento):** *«L'Altare è un reliquiario. Dentro, da millenni, riposa il Cuore di Moradin: un frammento della mia essenza, diventato pietra. Non lo si tocca per poco. Riportare una druida dalla morte… non è poco.»*
 
 > **Read-aloud (Salvatore lead) — l'Altare, il reliquiario.** *Sotto le mani di Thorik il
 > mithral si apre lentamente, lungo cuciture che un istante fa non c'erano.
 > Una camera si schiude come un fiore di metallo, un petalo dopo l'altro.
-> Dentro, sospeso nella luce, c'è un rubino grande come un pugno, con la forma
-> di un cuore nanico e le sue quattro camere. Pulsa sessanta volte al minuto,
-> regolare come chi dorme, e da vicino è caldo. Una cosa così si spende una
-> volta sola.*
+> Dentro, sospeso nella luce dorata, c'è un cristallo di rubino sanguigno
+> grande come un pugno, trasparente, con la forma di un cuore nanico: le
+> quattro camere, i vasi visibili. Pulsa sessanta volte al minuto, il ritmo di
+> un cuore a riposo, e a ogni battito il rosso si schiarisce. A chinarsi, il
+> calore arriva in faccia asciutto, come dalla bocca di un forno appena aperto.*
 
 **Scheda d'entrata — Moradin, tre secondi di voce vera**
 
@@ -598,8 +599,8 @@ erre battuta e le vocali brevi.
 
 **STEP 2 — Canalizzazione (Tordek · Concentrazione CD 20).**
 > **Read-aloud (Mercer lead) — il cerchio, lo Step 2.** *Il respiro di Tordek rallenta da
-> sé. Nel silenzio, sotto l'altare, c'è un battito, e il suo ki lo prende come misura. La vita
-> passa dal battito, attraverso di lui, verso il corpo sulla pietra. Dall'altra
+> sé. Nel silenzio c'è un battito, quello del Cuore di Moradin, e il suo ki lo
+> prende come misura. La vita passa dal Cuore, attraverso di lui, verso Hella. Dall'altra
 > parte qualcosa tira: lo spirito vuole tornare, e la morte non molla la presa.
 > La corda è tesa fra le due.*
 Fallimento: 2d6 non letali, riprova (al massimo tre tentativi, sopra).
@@ -609,7 +610,7 @@ esplode in **due colori insieme**, oro per la vita e argento per la
 transizione. È la sua dualità *riforgiata*, che viene dal reforging alla Forgia
 e non da una visione divina. Il box si legge quando la prova riesce.
 
-> **Read-aloud (Andor support) — lo Step 3.** *Nell'anello di Artemis c'è una luce d'oro e
+> **Read-aloud (Andor support) — lo Step 3.** *Nell'Anello di Artemis c'è una luce d'oro e
 > una d'argento, accese insieme. Le ferite del corpo si richiudono dall'interno, e
 > il colore torna alla pelle dal petto verso le dita. Il respiro, non ancora.
 > Ma quasi.*
@@ -654,33 +655,17 @@ Step 5 (*«Il Sud del cerchio è vuoto…»*) e passa al §5.
 alza mai il tono: il peso ce l'hanno le parole.
 
 > **Read-aloud (Casa di Davide lead) — il cerchio, battuta 1 di 4.** *Sul petto di Hella il
-> rubino batte una volta, più forte degli altri. La voce che segue non passa
+> Cuore batte una volta, più forte degli altri. La voce che segue non passa
 > dall'aria: arriva nello sterno e lo fa vibrare, come il colpo di un maglio dall'altra parte
 > della montagna.*
 
-**MORADIN (lento, basso):** *«Voi tre l'avete portata fin qui. Io sono il fuoco. Da solo, il fuoco non ha mai forgiato niente: serve il metallo.»*
-
-*Il Cuore batte ancora, una volta.*
-
-**MORADIN:** *«Hella torna, e questo lo do io, senza chiedere niente. Ma la morte l'ha svuotata, e nel petto ha tre semi che io non apro.»*
+**MORADIN (lento, basso):** *«Voi tre, che l'avete portata fin qui. Io sono il fuoco. Il fuoco scalda e fonde, e da solo non ha mai forgiato niente: alla forgia serve il metallo. Hella torna, e questo lo do io, senza chiedere niente in cambio. Ma la morte l'ha svuotata, e nel petto ha tre semi che la mia mano non apre.»*
 
 **Battuta 2 · a cosa serve.**
 
 > *Il battito torna al suo passo. La voce resta.*
 
-**MORADIN:** *«Un seme così germoglia solo da quello che un compagno dà di sé. Chi dà, lo perde per sempre.»*
-
-*Il silenzio di un colpo di maglio che non cade.*
-
-**MORADIN:** *«Ma non va sprecato. Mette radice in lei, prende la sua forma, e da domani combatte accanto a voi.»*
-
-*La voce scende di un tono, come chi parla di mestiere.*
-
-**MORADIN:** *«Io non lo prendo. Il ferro lavorato a freddo si crepa alla prima tempra, e un dono strappato è ferro freddo.»*
-
-*Un colpo di maglio, poi niente.*
-
-**MORADIN:** *«Chi non dà non perde niente. Il suo seme resta chiuso, e Hella torna senza quella parte.»*
+**MORADIN:** *«Un seme così germoglia soltanto da quello che un compagno dà di sé. Chi dà, lo perde per sempre. Ma non va sprecato: mette radice in lei, prende la sua forma, e da domani combatte accanto a voi con le sue mani. Io non lo prendo. Il ferro lavorato a freddo si crepa alla prima tempra, e un dono strappato è ferro freddo. Chi non dà non perde niente: il suo seme resta chiuso, e Hella torna senza quella parte.»*
 
 **Battuta 3 · il prezzo, a ciascuno.** La voce si posa su un giocatore alla
 volta, e il DM lo guarda. Dopo la frase di Moradin, **fuori dalla voce**, il DM
@@ -696,15 +681,7 @@ dice il numero: un sacrificio fatto senza sapere quanto costa è una trappola.
 
 > *Il Cuore rallenta. Sotto l'Altare, il battito aspetta.*
 
-**MORADIN:** *«Non vi chiedo se le volete bene: l'avete portata fin qui.»*
-
-*Una pausa. La voce si posa su tutti e tre insieme.*
-
-**MORADIN:** *«Vi chiedo che cosa di voi siete disposti a lasciare nella sua carne. Nessuno è obbligato, e io non giudicherò nessuno.»*
-
-*Sotto l'Altare il battito si ferma, e aspetta.*
-
-**MORADIN:** *«Chi di voi dà?»*
+**MORADIN:** *«Non vi chiedo se le volete bene: l'avete portata fin qui. Vi chiedo che cosa di voi siete disposti a lasciare nella sua carne. Nessuno è obbligato, e io non giudicherò nessuno. Chi di voi dà?»*
 
 Poi **si tace**, e si gioca di ruolo: chi dona lo dice e lo fa, come nei tre box
 qui sotto. **La Carta del Dono si consegna dopo il sì**, e solo a chi ha donato.
@@ -808,8 +785,8 @@ al Freddo 15, guarigione rapida e Radicamento, **nessuna riduzione del danno**; 
 ### DONO 3 — ARTEMIS: «La Scintilla» → **Il Rovo Eldritch**
 
 > **Read-aloud (Andor lead) — il terzo Dono.** *Artemis apre la mano sopra il
-> cuore fermo e lascia andare una scheggia della sua fiamma. L'anello, per la
-> prima volta, non commenta.*
+> cuore fermo e lascia andare una scheggia della sua fiamma. L'Anello, per la
+> prima volta da quando lo porta, non commenta.*
 
 **Cosa dona.** **1d6 di Eldritch Blast, per sempre**: da **7d6** a **6d6**.
 
@@ -977,7 +954,7 @@ momento entra la Custode: §6.
 > «stile Andor / non bianco né nero».
 
 **La manifestazione (allo Step 5, quando lo spirito attraversa la soglia).**
-> **Read-aloud (GoT lead) — la Sala, la soglia fra i mondi.** *Lo spirito varca la
+> **Read-aloud (GoT lead) — la Sala, la soglia fra i mondi.** *Lo spirito di Hella varca la
 > soglia, e la luce dorata dell'altare vacilla come la fiamma di una lucerna
 > quando qualcuno apre la porta. Al sud del cerchio, dove non
 > stava nessuno, adesso c'è qualcuno. Ha la forma di una donna di radici e di
@@ -989,15 +966,7 @@ Se qualcuno tiene già il Sud (§9), la seconda frase del box diventa: *Alle
 spalle di chi tiene il Sud, dove un attimo fa c'era solo aria, adesso c'è
 qualcuno.*
 
-**LA CUSTODE DELLE RADICI (senza guardare nessuno):** *«Una radice strappata lascia un vuoto. Il vuoto va colmato: è legge.»*
-
-*Guarda il corpo sull'altare, non chi le sta davanti.*
-
-**LA CUSTODE DELLE RADICI:** *«Non oggi, e non con lei. Il Forgiatore la protegge, e io con il Forgiatore non discuto.»*
-
-*Il silenzio di una pietra che aspetta.*
-
-**LA CUSTODE DELLE RADICI:** *«Ma il debito resta. Chi lo porta?»*
+**LA CUSTODE DELLE RADICI (senza guardare nessuno):** *«Una radice strappata lascia un vuoto. Il vuoto va colmato: è legge, non capriccio. Non oggi, e non con lei. Il Forgiatore la protegge, e io con il Forgiatore non discuto. Ma il debito resta. Chi lo porta?»*
 
 **Scheda d'entrata — La Custode delle Radici, la creditrice**
 
@@ -1075,18 +1044,15 @@ gruppo, non qui.
 > dall'altare. Per tre secondi, sopra il corpo, c'è Moradin: traslucido, più
 > alto di chiunque. Stavolta la voce passa dall'aria, e la sala trema.*
 
-**MORADIN (voce vera, l'unica volta):** *«Hella Oakenshield. Druida antica. Ti richiamo per il servizio reso, per il sacrificio compiuto, per l'amicizia che vi lega.»*
-
-*La luce si stringe sul petto di lei.*
-
-**MORADIN:** *«Ritorna. Vivi. Cresci. Combatti. In nome di Moradin, Forgiatore di Anime: resurrezione!»*
+**MORADIN (voce vera, l'unica volta):** *«Hella Oakenshield. Druida antica. Ti richiamo per il servizio reso, per il sacrificio compiuto, per l'amicizia che vi lega. Ritorna. Vivi. Cresci. Combatti. In nome di Moradin, Forgiatore di Anime: resurrezione!»*
 
 > **Read-aloud (Salvatore lead) — il ritorno.** *Cinque secondi. Dieci. Il
-> rubino sul petto rallenta, novanta battiti, sessanta, e si ferma. Poi lei
-> inspira, di colpo e a fondo, come chi riemerge dall'acqua un istante prima di
-> annegare. Il petto si alza e ricade. Gli occhi si aprono alla luce, e sono color ambra.
-> La pelle ha un sottotono di muschio, fra i capelli biondi corre una venatura di
-> corteccia, e l'aria sa di terra bagnata. Hella respira.*
+> Cuore di Moradin, sul petto di Hella, rallenta, novanta battiti, sessanta, e
+> si ferma. Poi lei inspira, di colpo e a fondo, come chi riemerge dall'acqua un istante prima di
+> annegare. Il petto si alza e ricade. Gli occhi si aprono alla luce. Erano
+> marroni; adesso sono color ambra. La pelle ha un sottotono di muschio pallido,
+> fra i capelli biondi corre una venatura di corteccia, e l'aria sa di terra
+> bagnata e di linfa. Hella respira.*
 
 **Aspetto (Ibrido Treant):** pelle verdastra sottile, occhi ambra-dorati,
 capelli biondi mossi con una venatura di corteccia fine, orecchie appuntite come
@@ -1099,7 +1065,7 @@ i doni del viaggio (§1) e i Doni del party (§5).
 > **Read-aloud (Mercer lead) — le prime parole, con la voce rauca.** *«Io…
 > dove… respirare è difficile.» Gli occhi ambra cercano, e si fermano su
 > Tordek. «Tordek? Sei vero, o sto ancora sognando? Ero sotto terra. Buio.
-> Freddo. Ma sentivo te. Chiamavi. E sono tornata.» Si porta una mano al petto,
+> Freddo. Ma sentivo te. La voce era la tua. Chiamavi. E sono tornata.» Si porta una mano al petto,
 > sente il battito sotto le dita, e la voce le si spezza. «Viva? Come?»*
 
 Se allo Step 5 il giocatore di Tordek ha detto la sua frase (§5, `[HDYWTDT]`),
@@ -1110,8 +1076,8 @@ Hella sono della sua giocatrice: il box le dà l'attacco, non la scena.
 > **Read-aloud (Salvatore lead) — il ritorno del fedele.** *Un rumore di pietra
 > su pietra. Il grande cane di mithral e roccia scura, che non si è mai
 > allontanato dal corpo, si fa avanti. Non abbaia: non sa più farlo. Appoggia la
-> testa sul petto di lei, e resta così. Lei alza
-> una mano che trema e la posa fra le orecchie di granito. «Durik?» Il cane
+> testa massiccia sul petto di Hella, gli occhi di topazio socchiusi, e resta
+> così. Lei alza una mano che trema e la posa fra le orecchie di granito. «Durik?» Il cane
 > risponde con il click lontano di una faglia che si assesta. Quel suono,
 > lo conosce solo lei.*
 
@@ -1182,22 +1148,17 @@ Quando è pronta a parlare, Hella racconta le **tre prove** dell'Incudine del Mo
 **Le rivelazioni incrociate (i momenti forti):**
 - **Thorik scopre** che la presenza verde che gli alleviò il peso al Piano della
   Terra (`DEF-1` §9) **era lei**: *ha già portato peso per lui, dall'aldilà.*
-> **Read-aloud (Casa di Davide lead) — la Sala, il debito che si scioglie.** *Lei si
-> volta verso Thorik. Negli occhi ambra, alla luce dell'altare, c'è qualcosa che lui non sa ancora
-> leggere.*
+> **Read-aloud (Casa di Davide lead) — la Sala, il debito che si scioglie.** *Hella si volta verso Thorik, e c'è qualcosa nei suoi occhi ambra che lui
+> non sa ancora leggere. «Quando eri nel Piano della Terra, sotto la montagna
+> che ti schiacciava le spalle — ti sei sentito una mano fredda, una luce
+> verde, che ti alleggeriva il peso. Ricordi?» Thorik ricorda: l'aveva
+> scambiata per una benedizione senza nome. «Ero io, Thorik. Non potevo fare
+> altro, da dove ero, che starti vicina. Hai portato peso per me senza
+> saperlo, e io ho portato il tuo. Anche da morta. Siamo pari, tu e io — e non
+> lo eravamo mai stati.»*
 
 Le battute qui sotto sono l'attacco, per la giocatrice che le vuole; se ha
 parole sue, valgono le sue.
-
-Hella, piano: *«Nel Piano della Terra, sotto la montagna che ti schiacciava le spalle. Una mano fredda, una luce verde, che ti alleggeriva il peso. Ricordi?»*
-
-*Thorik ricorda: l'aveva presa per una benedizione senza nome.*
-
-Hella: *«Ero io. Da dove ero, potevo solo starti vicina.»*
-
-*Un mezzo sorriso, il primo.*
-
-Hella: *«Hai portato peso per me senza saperlo, e io il tuo. Anche da morta. Siamo pari, tu e io, e non lo eravamo mai stati.»*
 
 - **Durik**: Hella capisce che l'Impronta caduta nel Sogno (Prova II) è tornata a
   riempirsi — *è* Durik. *«Non l'ho perso davvero. È andato dove serviva.»*
@@ -1278,17 +1239,13 @@ che tornano dopo un sonno di otto ore: azione standard, cura 3d8+5 a sé o
 > **Read-aloud (Andor lead, la tensione che non alza la voce) — l'affresco A6.** *L'affresco
 > A6 non è cambiato in mille anni, ma adesso ha tre punti di luce e due sono
 > accesi. Il terzo resta un cerchio inciso e vuoto, alto sulla parete, alla
-> stessa altezza dell'incasso scoperto sulla corona. Nel silenzio nessuno lo ha
-> fatto notare. Quel cerchio, lo hanno visto tutti.*
+> stessa altezza dell'incasso scoperto sulla Corona. Nel silenzio nessuno lo
+> nomina, e la luce degli altri due si ferma sul bordo.*
 
 **Il fatto da mettere sul tavolo, con parole da DM e non da manuale**: Moradin
 non promette. Dice quello che sa, e non di più.
 
-**MORADIN (piano, senza enfasi):** *«Con due pietre il varco si apre. Con due pietre si richiude quando decide lui, non quando decidete voi.»*
-
-*Una pausa, il tempo di un respiro di forgia.*
-
-**MORADIN:** *«La terza non ve la posso dare. È di là.»*
+**MORADIN (piano, senza enfasi):** *«Con due pietre il varco si apre. Con due pietre si richiude quando decide lui, non quando decidete voi. La terza non ve la posso dare: è di là.»*
 
 | La scelta | Cosa costa | Cosa apre |
 |---|---|---|
@@ -1309,7 +1266,7 @@ Se glielo chiedono, ecco come lo dice:
 La chiusura della scena, e dell'arco, si legge quando i giocatori hanno sentito
 Moradin e hanno davanti le tre scelte.
 
-> **Read-aloud (Andor lead) — la chiusura.** *Il portale è chiuso. La corona è
+> **Read-aloud (Andor lead) — la chiusura.** *Il portale è chiuso. La Corona è
 > pronta, e due pietre su tre brillano nel silenzio. Quattro persone stanno in piedi davanti a un affresco, e una di loro
 > respira da un'ora. Che fate?*
 

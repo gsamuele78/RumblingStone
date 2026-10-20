@@ -13,13 +13,12 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 17 decisioni aperte
+## Aspetta il DM: 16 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
 | Piano | # | Ambito | Domanda |
 |---|---|---|---|
-| `BOX-LUOGO` | D1 | B3 | **Il tetto del box di luogo: righe, frasi o caratteri?** Oggi la norma è ≤ 12 righe; *Dungeon* conta le frasi; i 300-500 caratteri non hanno fonte. Proposta: si tiene ≤ 12 righe come norma pesata; **≤ 4 frasi** diventa… |
 | `BOX-LUOGO` | D2 | B0 | **Le dimensioni nella prima frase del box** («camera quadrata di quaranta piedi»), come nel modello del 2026-10-01, o il paragone di ADR-0014 con le misure nei Dati per il DM? Proposta: resta ADR-0014. Dal modello ester… |
 | `BOX-LUOGO` | D3 | B2 | **Ogni box dichiara il suo tipo?** Per esempio `**Read-aloud (luogo · Salvatore lead).**`, con i tipi luogo, ingresso, round, rivelazione, chiusura. Sblocca la norma «niente creature nel box di luogo» e le soglie per ti… |
 | `BOX-LUOGO` | D4 | — | **I box già giocati fuori dalle nuove misure**: nei DEF di ARC-07, 27 box oltre i 500 caratteri e 61 oltre le quattro frasi. Proposta: non si toccano, come per D9 di PIANO-LETTORE: si spezzano solo se lo chiedi, e senza… |
@@ -112,22 +111,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
 | 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
 | 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
-| 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0094 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
-| 2026-10-18 | MASTER-DEF | A4, D7 e D8 decise dal DM (prima le sette pratiche; SRD locale e lettori uno al… | 🟢 A4 fatto; ARC-08 a zero conti sbagliati, nove trovati sulla versione di prima della #241 |
-| 2026-10-18 | MASTER-DEF | A4, lo standard del giro: audit dei giri su ARC-07 contro le norme del repo (ri… | 🟡 [ADR-0094](plans/adr/ADR-0094-il-giro-ha-correzione-verifica-e-seconda-passata.md) proposta, 58 pratiche e nove lacune in… |
-| 2026-10-18 | TRASVERSALE | Creature della Mano Rossa nel Bestiario come canone | ✅ abishai azzurro, Spezzamente, lucertola del tuono e Furia della Mano spostati in `Bestiario/mostri/` come ACCEPTED (richiesta del DM); il file di ARC-09 dive… |
-| 2026-10-18 | MASTER-DEF | rifacimento di stile e struttura dei cinque master di ARC-07 e secondo giro di… | 🟡 [`esperimenti/giro2-arc07-2026-10-18/`](plans/esperimenti/giro2-arc07-2026-10-18/README.md): 🔴+🟠 da 120 a 104, i 🔴 da 2 a 6 ma sono tre difetti di regola che… |
-| 2026-10-18 | TRASVERSALE | Creature della Mano Rossa ispirate alla WE di RHoD (ARC-09) | 🟡 proposta: abishai azzurro, Spezzamente, lucertola del tuono, Furia della Mano in `Arco-Post-Hammerfist-CREATURE-MANO-ROSSA-STATBLOCCHI.md`, versione più fort… |
-| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 1 (alto livello e statblocchi) | ✅ ricerca sulle avventure della community (quattro filoni, note in `plans/esperimenti/avventure-community/`); §9-§16 del developer; D9, D10, D15, D16 in… |
-| 2026-10-18 | MASTER-DEF | nuovo giro sui cinque master di ARC-07: developer, playtester e DM a freddo su… | 🟡 [`esperimenti/giro-arc07-2026-10-18/`](plans/esperimenti/giro-arc07-2026-10-18/README.md): 15 letture, 120 🔴+🟠 sui master di partenza, nessuno resta aperto s… |
+| 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0095 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
+| 2026-10-19 | REVISIONE-ARC07 | Skullcrusher non chiede più i nomi (scelta del DM, «Catena che ascolta»): studi… | 🟡 resta `[INFERRED]` la portata del sussurro (fuori dal telo anche sottovoce, da dentro solo i gridi) |
+| 2026-10-19 | REVISIONE-ARC07 | Skullcrusher e Zog'tar messi alla prova con tutti gli artefatti del gruppo: sim… | 🟡 restano… |
+| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro finale di developer, playtester e DM a freddo su `DEF-4`, `DEF-5` e i book… | 🟡 aperte al DM le domande 28-33 di `DECISIONI-DM.md`; nessun file peggiora sulla prosa (l'unico ✗ è l'Attacco Poderoso pieno corretto su M7-C) |
+| 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5, dopo il giro 4 di ARC-07 | 🟡 `ciclo_prosa confronta` separa i fatti solo aggiunti (un numero o un nome scritto per il DM) dai fatti tolti o cambiati: i primi si segnalano senza far peggi… |
+| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
+| 2026-10-19 | MASTER-DEF | giro 3 dei cinque master di ARC-07 con le norme della #246: 34 box su 120 riscr… | 🟡 [`esperimenti/giro3-arc07-2026-10-19/`](plans/esperimenti/giro3-arc07-2026-10-19/README.md): segnalazioni 37 → 13, dettagli sensoriali 509 → 526, impoveriti… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 276 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 16 aperte, 277 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

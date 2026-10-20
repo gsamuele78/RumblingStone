@@ -54,7 +54,7 @@
       "regola": "D1",
       "scena": "SCENA 8",
       "dettaglio": "scontro con un nemico in volo: niente per chi resta a terra",
-      "ragione": "falso positivo: il drago non combatte nella Scena 8, la «picchiata» è come comincia la Scena 11"
+      "ragione": "falso positivo: la Scena 8 ha il drago sulla tenda, ma la risposta per chi resta a terra c'è: «L'uscita è il telo tagliato e il buio fuori»"
     },
     {
       "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",
@@ -124,7 +124,7 @@
       "regola": "D3",
       "scena": "—",
       "dettaglio": "nessun effetto chiede un TS su Tempra",
-      "ragione": "scelta del DM (D90, 2026-10-15): lo strappo fra le ere si resiste con la Volontà. DEF-5 ha tre scene e un solo scontro breve, contro orchi in fuga: un TS su Tempra non ha un posto naturale"
+      "ragione": "scelta del DM (D90, 2026-10-15): lo strappo fra le ere si resiste con la Volontà. DEF-5 ha tre scene e un solo scontro breve, contro orchi scossi e cinque sergenti hobgoblin: un TS su Tempra non ha un posto naturale"
     },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",

@@ -328,6 +328,18 @@ NORME_SCOPERTE = (
         "sblocca": None,
     },
     {
+        "chiave": "pronome_soggetto_pro_drop",
+        "norma": "italiano-nativo.md §1 — l'italiano è pro-drop: niente pronome soggetto "
+                 "esplicito, se non per enfasi",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "manca lo **strumento**: provato il 2026-10-18 (ADR-0093), il pronome "
+                "tonico in posizione di soggetto dà 3 colpi in tutti i box, tutti cambi "
+                "di soggetto legittimi. Serve sapere chi era il soggetto prima",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
         "chiave": "due_livelli_di_subordinate",
         "norma": "read-aloud-adulti.md — max due livelli di subordinate",
         "prerequisito": None,

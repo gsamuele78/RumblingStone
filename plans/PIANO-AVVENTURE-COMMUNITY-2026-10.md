@@ -1,6 +1,6 @@
 # PIANO — Cosa portiamo dalle avventure della community
 
-**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md) · D1-D3 decise dal DM il 2026-10-18, nessuna aperta
+**Aperto**: 2026-10-18, su richiesta del DM · **Fonte**: [RICERCA-AVVENTURE-COMMUNITY-2026-10](RICERCA-AVVENTURE-COMMUNITY-2026-10.md) · **Decisione**: [ADR-0092](adr/ADR-0092-le-domande-dell-alto-livello.md), [ADR-0093](adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) · D1-D3 decise dal DM il 2026-10-18, nessuna aperta
 
 Il DM ha chiesto di confrontare i master DEF, il developer e il playtester con
 le migliori avventure della community 3.5 e PF1e, in Italia e fuori, e di
@@ -35,6 +35,35 @@ di ARC-08.
 
 Il resto della §3.2 della ricerca. Si apre dopo aver visto se i lotti 1 e 2
 trovano difetti veri.
+
+### Lotto 4 · La prosa, e come si misura se migliora ✅ (2026-10-18)
+
+Aperto su richiesta del DM, per il rifacimento dei DEF di ARC-07: metodi presi
+dalla rete che si possono misurare e applicare. Decisione in
+[ADR-0093](adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md),
+note in `plans/esperimenti/avventure-community/note-prosa-*.md`.
+
+- [x] FASE 1: la lunghezza dei box aveva già un indicatore (`>500 car`, D1 di PIANO-BOX-DI-LUOGO); la fonte dScryb (30-70 parole) si aggiunge a quella decisione, non fa un rilevatore nuovo
+- [x] `cieco_versioni.py`: campione congelato con un seme, coppie in ordine casuale con la chiave a parte, esito con il criterio dei 14 su 20
+- [x] `misura_craft --stile`: gerundio in coda, avverbi in -mente, battute dei PNG lunghe, con i falsi positivi contati a mano
+- [x] due candidati scartati con la misura (pronome soggetto, spiegazione dopo il gesto); la norma pro-drop nel registro come 🔴
+- [x] la fotografia di partenza e il campione di ARC-07 in `plans/esperimenti/prosa-cieco/`
+- [x] il corpus di riferimento misurato sui PDF gratuiti (PR #250, [note-prosa-corpus.md](esperimenti/avventure-community/note-prosa-corpus.md)); gerundi e avverbi in `--stile` si leggono contro la sua fascia italiana, non contro una soglia
+- [x] **il dopo**: le stesse misure sul rifacimento di ARC-07 (#249) migliorano tutte, ma il DM sceglie alla cieca la nuova in 8 coppie su 16: miglioramento non dimostrato ([ESITO-ARC07-2026-10-18](esperimenti/prosa-cieco/ESITO-ARC07-2026-10-18.md)). Le sette versioni vecchie preferite e le due ipotesi (non tagliare il dettaglio sensoriale, non spezzare i monologhi) passate al thread del rifacimento, che tiene i file
+- [x] **la misura aggiornata dai voti** (richiesta del DM, la sera): le due regole in `read-aloud-adulti.md` §2-ter, applicate da `cieco_versioni.py coppie` (al cieco solo le indecise e quattro di controllo) e da `ciclo_prosa misura` come cancello; sulle sedici coppie decide 13 e ne sbaglia una; 26 box impoveriti in ARC-07, passati al thread del rifacimento
+
+- [x] **ADR-0093 accettata** dal DM il 2026-10-19
+
+### Lotto 5 · Il giro completo, misurato contro la versione di prima 🟡 (2026-10-19)
+
+Aperto su richiesta del DM per la riscrittura di DEF-4 e DEF-5 prima della
+serata del 2026-10-19. I file di ARC-07 sono del thread «Schede PNG e cattivi
+uniformi»; qui c'è lo strumento e la regola.
+
+- [x] `ciclo_prosa.py confronta --rif`: ogni file del giro contro la sua versione di partenza, master e handout in una tabella, esce 1 se uno peggiora
+- [x] gli handout di ARC-07, ARC-08 e ARC-09 bersagli di `misura_craft`
+- [x] il primo giro sotto la regola (giro 4 di ARC-07, PR #254): nessun peggioramento di prosa; i numeri aggiunti per il DM ora sono «solo aggiunti» e non ✗
+- [ ] **la regola** ([ADR-0094](adr/ADR-0094-il-giro-completo-si-misura-contro-la-versione-di-prima.md), proposta): `ciclo_prosa.py confronta --rif` su master e handout, gli handout come bersagli di `misura_craft`; si chiude quando il giro di DEF-4 e DEF-5 della serata del 2026-10-19 dice se regge
 
 ## 2 · La calibrazione del lotto 1
 
@@ -72,7 +101,7 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 | # | Lotto | Domanda |
 |---|---|---|
 | ~~D1~~ | 1 | ✅ **Decisa il 2026-10-18** (il DM: *«sì sono d'accordo»*): la riga «Statistiche base» entra negli undici statblocchi della §3 quando un master li usa, a cominciare da quelli di ARC-08. Niente lotto a sé |
-| ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18**: nei cinque master di ARC-07 già giocati le righe di scala **non** si aggiungono; si aggiungono solo se il master serve a un gruppo nuovo (`dm.py gruppo nuovo`) |
+| ~~D2~~ | 1 | ✅ **Decisa il 2026-10-18, poi cambiata lo stesso giorno** (il DM sulla card: *«Sì, nella #245»*): le quattro righe di scala che mancano nei master di ARC-07 (DEF-1 Scena 3, DEF-4 Scene 6, 8 e 10) **si aggiungono**, nel giro della PR #245 che quei file li sta già toccando. Sono aggiunte, non riscritture. Era: non aggiungerle, salvo per un gruppo nuovo |
 | ~~D3~~ | 2 | ✅ **Decisa il 2026-10-18**: il lotto 2 si apre **insieme** a S1 di MASTER-DEF (ARC-08), perché il roster serve alle ondate |
 
 <!-- eco: AVVENTURE-COMMUNITY 2026-10-18 -->
@@ -81,6 +110,7 @@ Ozyrrandion. Il conto si rifà con il comando della §5.
 - **Cambiate**: nessuna, tutte e tre come proposte
 - **Dedotto da me**: che il «sì sono d'accordo» valga per tutte e tre le proposte del piano, anche se il messaggio a cui rispondeva nominava per esteso solo la D1
 - **Confermato dal DM il 2026-10-18**: *«sì grazie procedi con tutte e tre»*, la deduzione era giusta
+- **Cambiata il 2026-10-18, dopo il merge della #244**: D2. Il DM ha visto le regole sui master di ARC-07 e ha scelto di aggiungere le quattro righe di scala nella #245; il blocco «Se lo divinano» di DEF-4 l'ho passato a quel thread come incluso, ma la scelta sulla card riguardava le righe
 
 ## 4 · Come si riparte in una chat nuova
 
@@ -93,6 +123,8 @@ con le fonti, sono in `plans/esperimenti/avventure-community/`.
 python3 scripts/domande_developer.py            # il rapporto, con i rilievi D9, D10, D15, D16
 python3 scripts/domande_developer.py --check    # il cancello
 python3 -m pytest -q scripts/tests/test_domande_developer.py
+python3 scripts/misura_craft.py --stile          # lotto 4, gli indicatori di stile
+python3 -m pytest -q scripts/tests/test_cieco_versioni.py
 ```
 
 Il conto della §3 è un grep su `Bestiario/` (la preparazione dentro *Prima del

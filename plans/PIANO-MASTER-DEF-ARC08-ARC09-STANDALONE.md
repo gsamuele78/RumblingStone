@@ -350,7 +350,7 @@ condivisa e sulle PR #246 e #251, è
 [`esperimenti/a3-arc08/AUDIT-GIRI-STANDARD-2026-10-18.md`](esperimenti/a3-arc08/AUDIT-GIRI-STANDARD-2026-10-18.md):
 58 pratiche, nove lacune.
 
-Fatto in questo lotto, con [ADR-0094](adr/ADR-0094-il-giro-ha-correzione-verifica-e-seconda-passata.md) (proposta):
+Fatto in questo lotto, con [ADR-0095](adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md) (proposta):
 
 - [x] «Il giro» di `rumblingstone-module-standard` passa da cinque a otto passi:
   correzione con quattro esiti, verifica di un agente nuovo, seconda passata;
@@ -471,7 +471,7 @@ Per ogni master, prima di chiudere il lotto:
 | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
-| ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0094) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
+| ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0095) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
 | ~~D8~~ | A4 | ✅ **Decisa il 2026-10-18: SRD locale, uno alla volta.** I numeri si verificano sulla copia markdown dell'SRD 3.5 (OGL, fuori dal repo), coi mirror come ripiego; i lettori del giro leggono uno alla volta, e «Il giro» di `module-standard` lo dice |
 | ~~D9~~ | giro | ✅ **Decisa il 2026-10-19: F, l'unica in cui i PG affrontano il boss.** Fauci di Palude: la versione F (si schianta ai round 18-20 e duella coi PG, Thorik in punta), quella di A e B (fugge al round 5 e lo combattono i PNG) o un ibrido (fugge sotto i 50 pf, salvo che i PG lo inseguano in volo)? I pf di partenza sono 337 meno il carry-over (337 se il P5 non è stato giocato: la carta diceva 232 per errore, vedi l'eco del 2026-10-19). Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | ~~D10~~ | giro | ✅ **Decisa il 2026-10-19: aggiungerle dall'SRD.** Le schede che mancano (bugbear, guardie orog di Grimjaw, gufi giganti): aggiungerle a `Bestiario/mostri/` dall'SRD, o sostituirle con schede che esistono? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |

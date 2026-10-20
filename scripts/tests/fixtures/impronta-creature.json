@@ -24160,7 +24160,7 @@
     "pf_dado_sospetto": null,
     "pf_dado_sospetto_col_gs": null,
     "provenienza": "a mano",
-    "senza_note": 5088,
+    "senza_note": 5301,
     "sestine_citate": [],
     "taglia": 0,
     "talenti": {
@@ -40265,32 +40265,27 @@
     "ca (nessuna armatura nominata e nessuna armatura naturale dalla taglia: il numero sarebbe inventato)"
    ]
   },
-  "Bestiario/villain/skullcrusher-il-nero-cr12.md": {
+  "Bestiario/villain/skullcrusher-il-nero-cr14.md": {
    "blocco": null,
    "conti": [
-    "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 6 da DV/4 → For 16, Cos 15, Des 11",
-    "pf: 14d12 media 91.0 + Cos +2×26 = 143",
-    "TS: somma dei TS base di ogni classe (SRD: multiclasse si sommano) → Temp +11, Rifl +4, Vol +4"
+    "caratteristiche: matrice standard (13, 12, 11, 10, 9, 8) + 3 da DV/4 → For 15, Cos 13, Des 11",
+    "pf: 14d4 media 35.0 + Cos +1×14 = 49",
+    "TS: tipo «dragon», TS buoni ('temp', 'rifl', 'vol') → Temp +10, Rifl +9, Vol +9"
    ],
    "lettura": {
     "armatura": null,
     "base_ts": {
-     "rifl": 4,
+     "rifl": 9,
      "temp": 9,
-     "vol": 4
+     "vol": 9
     },
-    "classi": [
-     [
-      "barbaro",
-      14
-     ]
-    ],
+    "classi": [],
     "dado": 4,
-    "dv": 12,
+    "dv": 14,
     "elite": false,
-    "gs": 12,
+    "gs": 14,
     "manca": [],
-    "nome": "skullcrusher-il-nero-cr12",
+    "nome": "skullcrusher-il-nero-cr14",
     "scudo": 0,
     "taglia": "medium",
     "tipo": "dragon"

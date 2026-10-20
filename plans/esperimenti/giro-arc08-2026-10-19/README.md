@@ -1,6 +1,6 @@
 # Giro del 2026-10-19 su ARC-08, dal 3B alla Cerimonia
 
-Il primo giro fatto con lo standard di ADR-0094 (A4 di
+Il primo giro fatto con lo standard di ADR-0095 (A4 di
 [MASTER-DEF](../../PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md)): quattro letture a
 freddo una alla volta (D8), correzione con quattro esiti, verifica di un agente
 nuovo, seconda passata.
@@ -50,7 +50,7 @@ muratura piena, quindi le ondate non entravano e i PG apparivano chiusi.
 Nei casi al DM la parte vera in ogni versione è già corretta: il denominatore
 337, la tempesta secondo l'SRD, *invocare il fulmine*, i rimandi al Bestiario.
 L'Atlante delle mappe di ARC-08 è stato allineato nella seconda passata, perché
-il verificatore l'aveva trovato ancora vecchio. È il difetto che ADR-0094 mette
+il verificatore l'aveva trovato ancora vecchio. È il difetto che ADR-0095 mette
 nel passo 4. La scala della Mappa 4 negli SVG è passata a 3 m per quadretto con
 la riga di dimensioni della griglia, senza toccare il renderer.
 

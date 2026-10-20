@@ -8,6 +8,8 @@
 
 ---
 
+Ad alta voce si legge solo il riquadro qui sotto.
+
 > *Dal camminamento si vedono i fuochi dell'orda, migliaia, fino alle colline.
 > A un certo punto l'Anello ti diventa freddo al dito, per il tempo di un
 > respiro, come una moneta che scivola nella tasca sbagliata. Poi torna come
@@ -15,5 +17,5 @@
 
 ---
 
-**Solo per te.** Nel campo c'è qualcuno che, come voi, non è di qui. L'Anello
+**Solo per te: questa riga non si legge agli altri.** Nel campo c'è qualcuno che, come voi, non è di qui. L'Anello
 lo sentirà prima dei tuoi occhi.
