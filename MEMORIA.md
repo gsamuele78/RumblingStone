@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 13 decisioni aperte
+## Aspetta il DM: 16 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -26,6 +26,9 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
+| `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
+| `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -33,13 +36,11 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
 
-### Revisioni della prosa da approvare: 1
+### Revisioni della prosa da approvare: 0
 
 Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py applica` può ancora applicare. Ogni cartella ha un `LEGGIMI.md` con i passaggi interi.
 
-| Documento | Originale | Modifiche | Spuntate |
-|---|---|---:|---:|
-| [`REVISIONE-Cerimonia-delle-100-Asce-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-Cerimonia-delle-100-Asce-r1.md) | `08_La Battaglia Di Hammerfist/Cerimonia-delle-100-Asce.md` | 5 | 0 |
+Nessuna.
 
 ## ▶ In corso: da qui si riparte: 7
 
@@ -110,22 +111,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
+| 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
+| 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
+| 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
+| 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0095 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
 | 2026-10-19 | REVISIONE-ARC07 | Skullcrusher non chiede più i nomi (scelta del DM, «Catena che ascolta»): studi… | 🟡 resta `[INFERRED]` la portata del sussurro (fuori dal telo anche sottovoce, da dentro solo i gridi) |
 | 2026-10-19 | REVISIONE-ARC07 | Skullcrusher e Zog'tar messi alla prova con tutti gli artefatti del gruppo: sim… | 🟡 restano… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro finale di developer, playtester e DM a freddo su `DEF-4`, `DEF-5` e i book… | 🟡 aperte al DM le domande 28-33 di `DECISIONI-DM.md`; nessun file peggiora sulla prosa (l'unico ✗ è l'Attacco Poderoso pieno corretto su M7-C) |
 | 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5, dopo il giro 4 di ARC-07 | 🟡 `ciclo_prosa confronta` separa i fatti solo aggiunti (un numero o un nome scritto per il DM) dai fatti tolti o cambiati: i primi si segnalano senza far peggi… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
 | 2026-10-19 | MASTER-DEF | giro 3 dei cinque master di ARC-07 con le norme della #246: 34 box su 120 riscr… | 🟡 [`esperimenti/giro3-arc07-2026-10-19/`](plans/esperimenti/giro3-arc07-2026-10-19/README.md): segnalazioni 37 → 13, dettagli sensoriali 509 → 526, impoveriti… |
-| 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5 (il giro completo misurato) e ADR-0093 accettata | 🟡 `ciclo_prosa.py confronta --rif` confronta ogni file di un giro (master e handout) con la sua versione di partenza ed esce 1 se uno peggiora; gli handout di… |
-| 2026-10-18 | MASTER-DEF | box impoveriti dei master di ARC-07 corretti con la misura della PR #246 (… | ✅ da 26 su main a 2, entrambi falsi positivi (la parola sensoriale è nella battuta fuori dal box); attesa di §6 a 530 box |
-| 2026-10-18 | MASTER-DEF | la lezione del voto cieco applicata agli altri box dei master di ARC-07: dettag… | ✅ circa 70 box su 120, box da 128 a 122, tag di canone invariati; attesa di §6 a 532; apparati e booklet rigenerati |
-| 2026-10-18 | MASTER-DEF | scelte del DM dal voto cieco applicate ai master di ARC-07: le otto versioni ve… | ✅ coppie 2, 3, 4, 5, 9, 12, 16, 20 rimesse parola per parola, con un commento «scelta del DM» dove superano un tetto; apparati e booklet rigenerati |
-| 2026-10-18 | MASTER-DEF | esito del voto cieco del DM sul rifacimento dei cinque master di ARC-07: 8 a 8… | 📝 esito, scheda, chiave e voti in `plans/esperimenti/giro2-arc07-2026-10-18/misure/CIECO-*`; analisi delle coppie perse nel README del giro |
-| 2026-10-18 | AVVENTURE-COMMUNITY | Lotto 4, la misura aggiornata dai voti | ✅ due norme nuove in `read-aloud-adulti.md` §2-ter (una riscrittura non toglie dettagli sensoriali; un monologo resta un blocco), registrate 🟡;… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 13 aperte, 263 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 16 aperte, 277 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

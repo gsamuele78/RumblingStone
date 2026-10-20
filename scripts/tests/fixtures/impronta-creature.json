@@ -872,6 +872,278 @@
     ]
    }
   },
+  "Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 6,
+     "Cos": 14,
+     "Des": 17,
+     "For": 17,
+     "Int": 18,
+     "Sag": 10
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 6,
+     "Cos": 14,
+     "Des": 16,
+     "For": 16,
+     "Int": 9,
+     "Sag": 11
+    },
+    [
+     "array standard del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Sag +1, Cos −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 9 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: bugbear For +4 Des +2 Cos +2 Car -2",
+     "Des 16 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 16 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 14 **ricavata da pf 58 su 10 DV** — il vincolo batte l'array",
+     "For 16 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      6,
+      6,
+      0
+     ],
+     "Rifl": [
+      13,
+      "11..13",
+      0
+     ],
+     "Temp": [
+      4,
+      "4..6",
+      0
+     ],
+     "Vol": [
+      2,
+      "2..4",
+      0
+     ],
+     "attacco": [
+      11,
+      11,
+      0
+     ],
+     "iniziativa": [
+      7,
+      7,
+      0
+     ],
+     "lotta": [
+      9,
+      9,
+      0
+     ],
+     "pf": [
+      58,
+      "30-86",
+      0
+     ],
+     "pf_media": 58
+    },
+    "file": "Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 0.75,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 8,
+       "n": 3,
+       "nome": "humanoid"
+      },
+      {
+       "bab": 0.75,
+       "buoni": [
+        "rifl"
+       ],
+       "dado": 6,
+       "n": 5,
+       "nome": "Ladro"
+      },
+      {
+       "bab": 0.75,
+       "buoni": [
+        "rifl"
+       ],
+       "dado": 6,
+       "n": 2,
+       "nome": "Assassin"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      3,
+      8
+     ],
+     [
+      7,
+      6
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       3,
+       8
+      ],
+      [
+       7,
+       6
+      ]
+     ],
+     20,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 6,
+      "Cos": 14,
+      "Des": 17,
+      "For": 17,
+      "Int": 18,
+      "Sag": 10
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 10,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 5303,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      2,
+      "ricavata da Temp +4 (base +2)"
+     ],
+     "Des": [
+      5,
+      "ricavata da Rifl +13 (base +8)"
+     ],
+     "Sag": [
+      0,
+      "ricavata da Vol +2 (base +2)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      14,
+      "ricavata da pf 58 su 10 DV"
+     ],
+     "des_da_iniziativa": [
+      16,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      16,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      16,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 14",
+    "dadi": "dalle classi del `tipo` coi dadi SRD e dai DV razziali dichiarati",
+    "fascia": [
+     30,
+     86
+    ],
+    "file": "Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md",
+    "legale": true,
+    "media": 58,
+    "motivo": null,
+    "nuovo": "3d8+7d6+20",
+    "pf": 58,
+    "vecchio": "3d8+7d6+20"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 6,
+     "Cos": 14,
+     "Des": 17,
+     "For": 17,
+     "Int": 18,
+     "Sag": 10
+    },
+    "bab": 6,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 0.75,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 8,
+      "n": 3,
+      "nome": "humanoid"
+     },
+     {
+      "bab": 0.75,
+      "buoni": [
+       "rifl"
+      ],
+      "dado": 6,
+      "n": 5,
+      "nome": "Ladro"
+     },
+     {
+      "bab": 0.75,
+      "buoni": [
+       "rifl"
+      ],
+      "dado": 6,
+      "n": 2,
+      "nome": "Assassin"
+     }
+    ],
+    "gs": 9.0,
+    "lotta": 9,
+    "mischia": "morning star perfetta +11 (1d8+3)",
+    "pf": 58,
+    "provenienza": "a mano",
+    "tipo": "Medium humanoid (goblinoid), Ladro 5 / Assassino 2, NM",
+    "ts": [
+     4,
+     13,
+     2
+    ]
+   }
+  },
   "Bestiario/mostri/centaur-chieftain-cr7.md": {
    "controlla": [],
    "genera": [
@@ -7858,6 +8130,234 @@
     ]
    }
   },
+  "Bestiario/mostri/gufo-gigante-celestiale-cr6.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 10,
+     "Cos": 12,
+     "Des": 18,
+     "For": 18,
+     "Int": 10,
+     "Sag": 14
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 8,
+     "Cos": 12,
+     "Des": 18,
+     "For": 18,
+     "Int": 9,
+     "Sag": 12
+    },
+    [
+     "array elite del Manuale del DM (creatura)",
+     "variazione a seme fisso: Cos +1, Int −1",
+     "creatura: la principale sale ogni 2 GS, le due dopo ogni 4 (GS 6) — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "taglia (SRD, Improving Monsters): For +8, Des -2, Cos +4",
+     "Des 18 **letta da ca-dettaglio** — il vincolo batte l'array",
+     "Des 18 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 12 **ricavata da pf 52 su 8 DV** — il vincolo batte l'array",
+     "For 18 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      8,
+      8,
+      0
+     ],
+     "Rifl": [
+      10,
+      10,
+      0
+     ],
+     "Temp": [
+      7,
+      7,
+      0
+     ],
+     "Vol": [
+      4,
+      4,
+      0
+     ],
+     "attacco": [
+      11,
+      11,
+      0
+     ],
+     "iniziativa": [
+      4,
+      4,
+      0
+     ],
+     "lotta": [
+      16,
+      16,
+      0
+     ],
+     "pf": [
+      52,
+      "16-88",
+      0
+     ],
+     "pf_media": 52
+    },
+    "file": "Bestiario/mostri/gufo-gigante-celestiale-cr6.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp",
+        "rifl"
+       ],
+       "dado": 10,
+       "n": 8,
+       "nome": "magical beast"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      8,
+      10
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       8,
+       10
+      ]
+     ],
+     8,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 10,
+      "Cos": 12,
+      "Des": 18,
+      "For": 18,
+      "Int": 10,
+      "Sag": 14
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 8,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 4260,
+    "sestine_citate": [],
+    "taglia": -1,
+    "talenti": {},
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      1,
+      "ricavata da Temp +7 (base +6)"
+     ],
+     "Des": [
+      4,
+      "ricavata da Rifl +10 (base +6)"
+     ],
+     "Sag": [
+      2,
+      "ricavata da Vol +4 (base +2)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      12,
+      "ricavata da pf 52 su 8 DV"
+     ],
+     "des_da_iniziativa": [
+      18,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      18,
+      "letta da ca-dettaglio"
+     ],
+     "for_da_lotta": [
+      18,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 12",
+    "dadi": "dalle classi del `tipo` coi dadi SRD e dai DV razziali dichiarati",
+    "fascia": [
+     16,
+     88
+    ],
+    "file": "Bestiario/mostri/gufo-gigante-celestiale-cr6.md",
+    "legale": true,
+    "media": 52,
+    "motivo": null,
+    "nuovo": "8d10+8",
+    "pf": 52,
+    "vecchio": "8d10+8"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 10,
+     "Cos": 12,
+     "Des": 18,
+     "For": 18,
+     "Int": 10,
+     "Sag": 14
+    },
+    "bab": 8,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp",
+       "rifl"
+      ],
+      "dado": 10,
+      "n": 8,
+      "nome": "magical beast"
+     }
+    ],
+    "gs": 6.0,
+    "lotta": 16,
+    "mischia": "2 artigli +11 (1d6+4)",
+    "pf": 52,
+    "provenienza": "a mano",
+    "tipo": "Large magical beast (extraplanar), 8 DV, NB",
+    "ts": [
+     7,
+     10,
+     4
+    ]
+   }
+  },
   "Bestiario/mostri/hell-hound-mezzoimmondo-cr4.md": {
    "controlla": [],
    "genera": [
@@ -13360,6 +13860,235 @@
      6,
      2,
      1
+    ]
+   }
+  },
+  "Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md": {
+   "controlla": [],
+   "genera": [
+    {
+     "Car": 8,
+     "Cos": 20,
+     "Des": 10,
+     "For": 20,
+     "Int": 12,
+     "Sag": 11
+    },
+    [
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ]
+   ],
+   "genera_senza_fonte": [
+    {
+     "Car": 7,
+     "Cos": 20,
+     "Des": 10,
+     "For": 20,
+     "Int": 7,
+     "Sag": 7
+    },
+    [
+     "array standard del Manuale del DM (PNG con classe)",
+     "variazione a seme fisso: Int +1, Sag −1",
+     "un avanzamento ogni 4 livelli, contati sul GS 7 — surrogato dichiarato: i DV totali stanno nel campo `tipo` solo nell'8% dei file",
+     "modificatori razziali SRD: orc For +4 Int -2 Sag -2 Car -2",
+     "Des 10 **derivata dalla CA di contatto** — il vincolo batte l'array",
+     "Des 10 **ricavata dall'iniziativa** — il vincolo batte l'array",
+     "Cos 20 **ricavata da pf 63 su 6 DV** — il vincolo batte l'array",
+     "For 20 **ricavata da BAB e lotta** — il vincolo batte l'array"
+    ]
+   ],
+   "giudica": {
+    "come_la_fonte": [],
+    "decisione": null,
+    "esito": {
+     "BAB": [
+      6,
+      6,
+      0
+     ],
+     "Rifl": [
+      2,
+      2,
+      0
+     ],
+     "Temp": [
+      10,
+      10,
+      0
+     ],
+     "Vol": [
+      4,
+      4,
+      0
+     ],
+     "attacco": [
+      13,
+      13,
+      0
+     ],
+     "iniziativa": [
+      4,
+      4,
+      0
+     ],
+     "lotta": [
+      11,
+      11,
+      0
+     ],
+     "pf": [
+      63,
+      "36-90",
+      0
+     ],
+     "pf_media": 63
+    },
+    "file": "Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md",
+    "provenienza": "a mano",
+    "scarti": {},
+    "template": null,
+    "template_dichiarati": [],
+    "verificabile": true
+   },
+   "letture": {
+    "composizione": [
+     [
+      {
+       "bab": 1.0,
+       "buoni": [
+        "temp"
+       ],
+       "dado": 10,
+       "n": 6,
+       "nome": "Guerriero"
+      }
+     ],
+     true
+    ],
+    "dadi_di_pf": [
+     [
+      6,
+      10
+     ]
+    ],
+    "dadi_vita": [
+     [
+      [
+       6,
+       10
+      ]
+     ],
+     30,
+     "pf-dado"
+    ],
+    "dalla_fonte": null,
+    "dalla_scheda": [
+     {
+      "Car": 8,
+      "Cos": 20,
+      "Des": 10,
+      "For": 20,
+      "Int": 12,
+      "Sag": 11
+     },
+     "letta dalla riga delle caratteristiche della scheda stessa"
+    ],
+    "dv_totali": 6,
+    "iniziativa_ambigua": null,
+    "numeri_della_fonte": {},
+    "pf_dado_sospetto": null,
+    "pf_dado_sospetto_col_gs": null,
+    "provenienza": "a mano",
+    "senza_note": 4136,
+    "sestine_citate": [],
+    "taglia": 0,
+    "talenti": {
+     "Vol": 2,
+     "init": 4
+    },
+    "template_dichiarati": [],
+    "tetti_dai_ts": {
+     "Cos": [
+      5,
+      "ricavata da Temp +10 (base +5)"
+     ],
+     "Des": [
+      0,
+      "ricavata da Rifl +2 (base +2)"
+     ],
+     "Sag": [
+      0,
+      "ricavata da Vol +4 (base +4)"
+     ]
+    },
+    "vincoli": {
+     "cos_da_pf": [
+      20,
+      "ricavata da pf 63 su 6 DV"
+     ],
+     "des_da_iniziativa": [
+      10,
+      "ricavata dall'iniziativa"
+     ],
+     "des_vincolata": [
+      10,
+      "derivata dalla CA di contatto"
+     ],
+     "for_da_lotta": [
+      20,
+      "ricavata da BAB e lotta"
+     ]
+    }
+   },
+   "pf_dado_corretto": null,
+   "pf_dado_corretto_forzato": {
+    "bonus": "da Cos 20",
+    "dadi": "dalle classi del `tipo` coi dadi SRD",
+    "fascia": [
+     36,
+     90
+    ],
+    "file": "Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md",
+    "legale": true,
+    "media": 63,
+    "motivo": null,
+    "nuovo": "6d10+30",
+    "pf": 63,
+    "vecchio": "6d10+30"
+   },
+   "scheda": {
+    "attributi": {
+     "Car": 8,
+     "Cos": 20,
+     "Des": 10,
+     "For": 20,
+     "Int": 12,
+     "Sag": 11
+    },
+    "bab": 6,
+    "composizione_nota": true,
+    "gruppi": [
+     {
+      "bab": 1.0,
+      "buoni": [
+       "temp"
+      ],
+      "dado": 10,
+      "n": 6,
+      "nome": "Guerriero"
+     }
+    ],
+    "gs": 7.0,
+    "lotta": 11,
+    "mischia": "ascia bipenne +1 +13/+8 (1d12+10/x3)",
+    "pf": 63,
+    "provenienza": "a mano",
+    "tipo": "Medium humanoid (orc), Guerriero 6, LM",
+    "ts": [
+     10,
+     2,
+     4
     ]
    }
   },
@@ -39689,9 +40418,9 @@
    "decisioni_aperte": 0,
    "del_generatore": 0,
    "spiegati_da_template": 0,
-   "statblocchi": 113,
-   "tornano": 108,
-   "verificabili": 112
+   "statblocchi": 116,
+   "tornano": 111,
+   "verificabili": 115
   },
   "genera_attributi_controlla": [],
   "genera_attributi_proponi": [

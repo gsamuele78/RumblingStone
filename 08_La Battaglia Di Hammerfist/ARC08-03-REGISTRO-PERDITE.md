@@ -259,7 +259,7 @@ Queste schede sono progettate per velocizzare il combattimento di massa.
 | | | |
 | **Generale Grimjaw** | _______ / 178 | Furia Comandante `[ ]` |
 | **Gorthak il Trifronte** | _______ / 195 | Furia sotto 97 PF |
-| **Fauci di Palude** | _______ / 312 | Soffio a Cono `[ ]` |
+| **Fauci di Palude** | _______ / 337 (meno il carry-over, `ARC08-10` §4.1) | Soffio a Cono `[ ]` · Presa di Thorik `[ ]` |
 | | | |
 | **ARRIVO RINFORZI (SESSIONE 4)** | | |
 | **Signore Ventolesto** | _______ / 95 | Punire il Male `[ ]` |

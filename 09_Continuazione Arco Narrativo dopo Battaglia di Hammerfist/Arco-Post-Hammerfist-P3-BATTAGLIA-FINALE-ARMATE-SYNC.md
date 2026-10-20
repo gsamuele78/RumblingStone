@@ -188,8 +188,10 @@ Ogni hook completato **prima del Day 40** modula i numeri di §3. Riferimento: `
    difensori di Rethmar in nessuno scenario di §3, e non vanno confusi
    con l'Alleanza Elfi di Starsong Hill (Tiri Kitor, +120 ranger/gufi,
    D9) né con la Capitana **Lythiel Alar-Wen** (Sacred Forest, unico
-   canale elfico verso Hella — compare solo alla Cerimonia delle 100
-   Asce e in Arc-09 via le hook Hella-SacredForest). Tre presenze
+   canale elfico verso Hella — compare ad Hammerfist nella Sessione 4,
+   dove cavalca coi gufi e riconosce Hella, poi alla Cerimonia delle 100
+   Asce e in Arc-09 via le hook Hella-SacredForest `[CANONE — DM
+   2026-10-19, D16]`). Tre presenze
    elfiche separate, mai da fondere né da doppio-contare.
 
 ---

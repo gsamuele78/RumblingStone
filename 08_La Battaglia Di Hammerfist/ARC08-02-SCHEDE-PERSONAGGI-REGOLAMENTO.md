@@ -72,7 +72,7 @@
 > (valori **approvati dal DM 2026-07-03**). Se il gruppo NON ha giocato il P5,
 > usa lo statblock qui sotto invariato.
 **NM Drago Enorme (Acqua)**
-**Iniziativa:** +4; **Sensi:** Vista Cieca 18m, Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
+**Iniziativa:** +4; **Sensi:** Percezione cieca 18 m (SRD: chi Fauci non vede resta occultato del tutto, anche se ne sa il quadretto), Scurovisione 36m, Visione Crepuscolare; Ascoltare +29, Osservare +29
 
 **CA:** 29 (-2 taglia, +21 naturale), contatto 8, colto alla sprovvista 29 (37 con *Armatura Magica* e *Scudo*)
 **PF:** 337 (25d12+175)
@@ -81,8 +81,8 @@
 
 **Velocità:** 18m, Nuotare 18m, Volare 45m (scarsa)
 **Attacco Base:** +25; **Lotta:** +43
-**Attacco:** Morso +35 in mischia (2d8+10/19-20)
-**Attacco Completo:** Morso +35 (2d8+10/19-20), 2 artigli +33 (2d6+5), 2 ali +33 (1d8+5), colpo di coda +33 (2d6+15)
+**Attacco:** Morso +33 in mischia (2d8+10/19-20)
+**Attacco Completo:** Morso +33 (2d8+10/19-20), 2 artigli +31 (2d6+5), 2 ali +31 (1d8+5), colpo di coda +31 (2d6+15)
 **Spazio/Portata:** 4,5m/3m (4,5m con morso)
 
 **Caratteristiche:** For 31, Des 10, Cos 25, Int 16, Sag 17, Car 16
@@ -90,9 +90,9 @@
 **Attacchi Speciali:**
 *   **Soffio (Sop):** Linea di 30 m di acido, 1/1d4 round. Danno 14d4 acido, TS Riflessi CD 29 dimezza.
 *   **Soffio a Cono (Str):** 1/giorno, può spendere un'azione di round completo per preparare un soffio a cono di 18m. ⚠️ *Errata B5 — HOUSE-RULE*: i draghi neri SRD hanno **solo il soffio in linea**; il cono non è 3.5 standard. Mantenuto come house-rule per la scena della picchiata (Sessione 2); se il DM preferisce l'aderenza SRD, rimuovere e usare solo il soffio in linea.
-*   **Presenza Terrificante (Str):** Raggio 90m, creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
-*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18).
-*   **Corrompere Acqua (Mag):** A volontà.
+*   **Presenza Terrificante (Str):** Raggio 90m (potenziamento: l'SRD dà 9 m per categoria d'età, 63 m all'adulto maturo), creature con meno di 25 DV: TS Volontà CD 25 o in preda al panico per 4d6 round (4 DV o meno) o scosse per 4d6 round (5 DV o più).
+*   **Odio della stirpe (Str):** +4 ai tiri per colpire e ai danni contro Thorik, il portatore della Corona e di Aegis Fang, sempre: odia la stirpe che porta le armi dei nani, comunque sia andata all'alba del −1000 (non SRD, canone del DM 2026-10-18). Vale sul morso che apre la presa e sui danni dei morsi in presa; e anche sulle prove di lotta di Fauci contro Thorik, che l'SRD tratta «come un tiro per colpire in mischia» `[CANONE — DM 2026-10-20]`.
+*   **Corrompere Acqua (Mag):** A volontà (potenziamento: l'SRD dice 1/giorno).
 *   **Capacità Magiche:** 3/giorno: *oscurità* (raggio 21 m).
 *   **Incantesimi:** Come Stregone di 7° liv. (LI 7°; 6/8/8/6 al giorno).
     *   *3° (CD 16):* *Dissolvi Magie*, *Nube Maleodorante*
@@ -100,12 +100,19 @@
     *   *1° (CD 14):* *Armatura Magica*, *Colpo Accurato*, *Dardo Incantato*, *Protezione dal Bene*, *Scudo*
     *   *0° (CD 13):* *Frastornare*, *Individuazione del Magico*, *Luce*, *Mano Magica*, *Prestidigitazione*, *Raggio di Gelo*, *Resistenza*
 
-**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Volteggiare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
+**Talenti:** Allerta, Attacco in Volo, Critico Migliorato (Morso), Iniziativa Migliorata, Multiattacco, Volontà di Ferro, Riflessi Fulminei, Fluttuare, Ghermire (gli ultimi tre confermati dal DM, 2026-10-18).
 
-> **Verifica 3.5 (versione più forte, lotto delle schede PNG)**: 25 DV di
-> drago nero sono un **adulto maturo avanzato** (SRD: 22 DV, avanzamento
-> 25-26 DV). Da qui l'armatura naturale +21 (era +20), la linea del soffio
-> di 30 m (taglia Enorme), RI 21 e RD 10/magia. I pf tornano coi dadi:
+> **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
+> di letture del 2026-10-19)**: Fauci resta un **adulto maturo** per canone,
+> portato a 25 DV. ⚠️ L'SRD fa avanzare l'adulto maturo a 23-24 DV, e 25 DV
+> sono i dadi dell'età **Vecchio** (25d12+125, naturale +24, RI 22, soffio
+> 16d4): qui si tengono i dadi del Vecchio con le capacità dell'adulto maturo,
+> ed è un potenziamento dichiarato. L'armatura naturale +21, la linea del soffio
+> di 30 m (taglia Enorme), RI 21 e RD 10/magia sono quelli dell'adulto maturo
+> SRD. Gli attacchi tornano col BAB: +25, For +10, taglia −2 fanno morso +33 e
+> secondari +31 con Multiattacco (la prima stesura diceva +35/+33). I draghi
+> hanno **percezione cieca**, non vista cieca. Presenza terrificante a 90 m e
+> *corrompere acqua* a volontà sono potenziamenti, segnati sulla riga. I pf tornano coi dadi:
 > 25d12+175 = 337. Le caratteristiche (For 31, Cos 25, Int 16, Sag 17,
 > Car 16) superano quelle SRD dell'età (27/21/14/15/14) e il LI 7° è quello
 > dell'età Vecchio: restano, come potenziamento della stirpe di Skullcrusher.
@@ -115,7 +122,40 @@
 > già, e superava i due conosciuti di 3°). L'Odio della stirpe viene dalla
 > CORREZIONE del boss nell'arco 07.
 
-**Tattiche:** Inizia con *Armatura Magica* e *Scudo*. Usa il Soffio e incantesimi di controllo (*Nube Maleodorante*) dall'alto. Con Volteggiare resta sospeso sopra le mura e soffia senza atterrare; con Ghermire afferra un nano isolato e lo lascia cadere dall'alto. Atterra solo se gravemente ferito (<100 PF) o per finire un bersaglio importante, Thorik prima di tutti. Fugge sotto i 50 PF.
+**Tattiche:** Inizia con *Armatura Magica* e *Scudo*. Finché non riconosce Aegis Fang combatte da drago d'assedio: Soffio sui difensori ammassati e *Nube Maleodorante* dall'alto; con Fluttuare resta sospeso sopra le mura e soffia senza atterrare. Dal turno dopo il primo canto di Aegis Fang, o il primo colpo dell'ascia, sa chi ha davanti e ha un bersaglio solo: Thorik. Lo prende in bocca, una volta, quando lo decide lui (qui sotto, «La presa di Thorik»; in Sessione 4 è la picchiata dei round 18-20). Atterra solo se gravemente ferito (<100 PF) o per finire Thorik dopo averlo lasciato cadere. Fugge sotto i 50 PF. Thorik, col *Mind Blank* permanente della Corona, non subisce la Presenza terrificante: è un effetto di paura che influenza la mente (SRD *Mind Blank*).
+
+**La presa di Thorik** `[CANONE — DM 2026-10-19]`. È la firma di Fauci: la usa solo su Thorik, per odio, e solo da quando ha riconosciuto l'ascia. Non ghermisce nessun altro. Una volta per incontro `[CANONE — DM 2026-10-20]`. Se Aegis Fang non ha mai cantato né colpito, la presa non c'è.
+
+- **Il morso (round 18).** *Attacco in Volo* (SRD): scende in picchiata con un'azione di movimento e morde a metà discesa con l'azione standard, morso +37 (+33, più l'Odio della stirpe), 2d8+14, critico 19-20. Dopo il morso finisce il movimento risalendo, con la manovrabilità scarsa: 45° e metà velocità in salita (SRD). Una carica in volo darebbe +39, ma chiude il movimento accanto a Thorik.
+- **La presa.** Se il morso colpisce, *Ghermire* (SRD, *Snatch*) apre la lotta come la presa migliorata: azione gratuita, nessun attacco di opportunità, prova di lotta contrapposta. Fauci lo tiene con la sola bocca, a Lotta +27 (+43 −20, più l'Odio della stirpe): così non è in lotta, continua a volare, minaccia e usa gli altri attacchi su chi gli sta intorno (SRD, *Improved Grab*). Contro la Lotta di Thorik, +18 con BAB +13 e FOR 20 (i numeri che il repo usa: la scheda di Thorik non c'è), la presa riesce 86 volte su 100 (a parità vince Fauci, che ha il modificatore più alto). Thorik è Medio, due taglie sotto un Enorme: la stretta automatica di *Ghermire* vale solo da tre taglie in giù, e qui non c'è. Ogni prova di lotta che Fauci vince nei round dopo fa il danno del morso, 2d8+14 (presa migliorata, SRD).
+- **La salita (round 19).** *Fluttuare* (SRD, *Hover*): con un'azione di movimento si ferma e sale dritto a metà velocità, 22,5 m, fino a 30-35 m; con l'azione standard fa una prova di lotta, che morde se la vince. Che fermarsi e salire stiano nella stessa azione di movimento è una lettura del testo SRD («può poi volare in qualunque direzione a metà velocità»).
+- **Il soffio con lui in bocca (round 20).** Comincia il turno fermo in aria, e ha il round intero (SRD, *Hover*). Soffia sulla linea dei compagni che gli corrono sotto: chi è in bocca non ha il TS sui Riflessi (SRD, *Snatch*), e Thorik prende i 14d4 pieni.
+- **La caduta.** Lasciarlo è un'azione gratuita (SRD, *Snatch*). Lo lascia a fine round 20 sopra la zona ⚡ della MAPPA 4, alle spalle della punta: 1d6 ogni 3 m, al massimo 20d6 (SRD), cioè 10d6-12d6 da 30-35 m. Al round 21 scende lì a finirlo, ed è il duello dei round 21-23. Se invece lo scaglia (azione standard): 1d6 × 3 m di volo, 1d6 ogni 3 m, o la caduta se è di più (SRD).
+- **Quanto pesa.** Se nessuno lo ferma: morso 23, una stretta 20 (86 volte su 100), soffio 35, caduta da 35 m 38. Circa 116: Thorik arriva a terra vivo, e il drago gli scende addosso. Se il DM vuole il massimo, al round 20 Fauci sale ancora 22,5 m (azione di movimento) prima di soffiare, e lo lascia da circa 55 m: 18d6, media 63, e il conto arriva a circa 141. Il tetto SRD, 20d6, è da 60 m.
+- **Come se ne esce.** Al posto di un attacco, una prova di lotta contrapposta al +27 di Fauci; o Artista della Fuga, con un'azione standard (SRD). Con +18/+13/+8 Thorik se ne libera circa una volta su cinque a round (18 su 100; 26 con lo *Scosso*), e chi si libera in aria cade dalla quota in cui è. Attivare un oggetto magico si può, senza prova di lotta (SRD).
+- **L'ascia che non serve.** In lotta si attacca solo senz'armi, con armi naturali o con armi leggere, a −4 (SRD). Aegis Fang è un'ascia da guerra nanica, non leggera: in bocca al drago non colpisce, e lavorano gli altri tre.
+- **Lo *Scosso* del Bane.** Azione gratuita, 1 per incontro, e si usa anche in bocca: il flashback dei mille anni gli fa allentare la presa: −2 alle prove di lotta di Fauci finché dura lo *Scosso* `[CANONE — DM 2026-10-20]`.
+- **Cosa dice.** Parla una volta, quando apre la bocca per lasciarlo. Non sa il nome di nessuno: i nomi li sentiva Skullcrusher, non lui. Riconosce l'ascia che ha lasciato la cicatrice ancestrale al capostipite, e odia chi la porta; gli altri non li ha mai visti `[CANONE — DM 2026-10-20]`.
+
+**FAUCI (piano, mentre apre la bocca):** *«Portatore.»* `[CANONE — DM 2026-10-20]`
+
+**Ce la fa a sollevarlo?** Sì, largamente. Con For 31 il carico leggero è 153 × 4 = 612 lb, e un quadrupede Enorme lo moltiplica per 6: **3.672 lb, circa 1.665 kg** (SRD, *Carrying Capacity*, «Tremendous Strength» e «Bigger and Smaller Creatures»). Thorik armato e corazzato pesa intorno ai 120-140 kg, meno di un decimo del carico leggero: Fauci vola senza rallentare. La presa migliorata gli permette di portarsi via la preda se ne regge il peso (SRD, *Improved Grab*).
+
+**Le contromosse dei PG (SRD).** Tutte da regole, salvo dove è scritto.
+- **Capire il gesto prima.** Conoscenze (arcane) sul drago, CD 10 + DV = **35**: un'informazione utile, una in più ogni 5 punti oltre la CD (SRD, *Knowledge*). «Afferra con la bocca e soffia su chi tiene» è una di quelle. Un'Osservare per vederlo fermarsi e prendere la mira non è nell'SRD: se il DM vuole dare un preavviso, è una sua scelta.
+- **Prima del morso.** Non c'è un TS per scansarsi: il morso colpisce la CA, poi la prova di lotta è contrapposta. *Libertà di movimento* fa vincere da sola ogni prova di lotta per resistere o liberarsi (SRD; chierico e druido 4°: Hella la può preparare). Un'azione preparata dei compagni colpisce il drago quando scende, ma non ferma il morso.
+- **In bocca.** Al posto di un attacco, prova di lotta contrapposta al +27 di Fauci; o Artista della Fuga con un'azione standard. Attivare un oggetto magico si può senza prova, purché non sia a completamento d'incantesimo; un incantesimo si può lanciare se dura al massimo un'azione standard e non ha componenti somatiche, con Concentrazione CD 20 + livello (SRD, *Grapple*). Si attacca solo con armi leggere, naturali o senz'armi, a −4: Aegis Fang no.
+- **I compagni.** Fauci con la sola bocca non è in lotta: tiene la Destrezza alla CA, minaccia, e attacca chi gli è vicino. Colpirlo non lo costringe a lasciare la presa: per regola la lascia solo se Thorik vince la prova o se lo decide lui.
+- **La caduta.** Chi si libera in aria cade dalla quota del drago, 1d6 ogni 3 m fino a 20d6. La fermano *caduta morbida* (bardo, mago e stregone 1°, azione immediata) o una pozione di *volare* bevuta prima. Lo *Scudo del Custode* di Hella prende metà del danno di un alleato entro 9 m, ma solo se lei è in aria vicino a lui `[CANONE — DM 2026-09-12]`.
+
+**Variante: aggrapparsi al drago** `[CANONE — DM 2026-10-20]`. L'SRD non ha una regola per arrampicarsi su una creatura in volo; la più vicina, afferrarsi mentre si cade, è Scalare CD della parete + 20, «praticamente impossibile». Al tavolo vale questa: quando Thorik vince la prova di lotta o di Artista della Fuga, può aggrapparsi al collo invece di cadere con una prova di **Scalare CD 25**. Se fallisce, cade.
+- **Sul collo** `[INFERRED — needs DM confirmation]`: Thorik non è più in lotta e il drago non lo morde, perché è fuori dalla portata della sua bocca. Come chi scala, perde la Destrezza alla CA e non usa lo scudo (SRD, *Climb*), e colpisce con Aegis Fang.
+- **Scrollarselo** `[INFERRED — needs DM confirmation]`: all'inizio di ogni turno di Fauci, Thorik ripete Scalare CD 25. Se fallisce di 5 o più, cade dalla quota del drago. Fauci per toglierselo può anche atterrare, ed è il duello dei round 21-23 con Thorik già addosso.
+
+**Colpi mirati: l'occhio e l'ala** `[CANONE — DM 2026-10-20: regola della casa da PF1e, solo per questo scontro]`. L'SRD 3.5 non ha colpi mirati; qui si usano quelli di Pathfinder 1e (*Ultimate Combat*, «Called Shots», OGL). Un colpo mirato è un attacco singolo con un'azione di round completo, contro la CA normale (29, 37 con *armatura magica* e *scudo*). Non si somma alla carica, né a una raffica o a un attacco completo.
+- **L'occhio, −10.** Se colpisce, per 1 round i nemici di Fauci hanno occultamento contro i suoi attacchi, e lui ha −2 a Osservare. Con un critico perde la vista da quell'occhio per 1d4 minuti, e l'effetto di prima dura altrettanto. Non cade e non è accecato: gli restano l'altro occhio e la percezione cieca a 18 m, che però non gli toglie la probabilità di mancare chi è occultato (SRD).
+- **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[INFERRED — needs DM confirmation: la distanza la regola PF1e non la dice]`.
+- **Da dove.** In mischia senza penalità se il bersaglio è adiacente, −2 altrimenti; a distanza le penalità di gittata raddoppiano, minimo −2 oltre i 9 m. Dal collo del drago l'occhio è a portata: meglio Aegis Fang in mano che lanciata, perché un attacco a distanza fatto nello spazio di chi minaccia provoca un attacco di opportunità (SRD).
 
 > **Esito della battaglia — ramo condizionale (D10, non un fatto compiuto)**:
 > **default** = sotto i 50 PF fugge gravemente ferito verso le montagne
@@ -175,7 +215,7 @@
 > livello di Guardia Nera. BAB, TS, CA e attacchi sono ricontati sull'SRD
 > (la Benedizione oscura somma il Car ai TS).
 
-**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine.
+**Tattiche:** *Prima del combattimento*: resta in sella a Fauci di Palude, stendardo alzato: il suo compito è difendere il drago e guidarlo. Lancia *Incutere Paura* sul primo difensore che lo vede arrivare. *Durante il combattimento*: nei passaggi radenti tiene l'Aura di Disperazione sui nani vicini al drago, così Presenza Terrificante e soffio trovano TS più bassi; quando il drago carica, colpisce in sella con la lancia (Attacco in Sella, Carica Devastante) e spende Punire il Bene sul primo leader nanico o paladino a portata. Se il drago atterra, scende a coprirgli il fianco con la spada bastarda e cerca di fiancheggiare per l'attacco furtivo. *Morale*: se Fauci fugge, resta in sella e lascia il campo con lui; sotto i 30 pf, disarcionato e col drago lontano, combatte fino alla morte: per un Guardia Nera arrendersi ai nani è peggio della fine. Che cosa sa, se lo prendono vivo, e il blocco «Se lo divinano»: `ARC08-10-ESITI-E-CONTINGENZE.md` §4.2 `[CANONE — DM 2026-10-19, D15]`.
 > Tattiche scritte da un agente sui poteri della scheda.
 
 <!-- storico -->
@@ -487,8 +527,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 > Kitor né Sacred Forest); **resta di presidio a Hammerfist** dopo la
 > battaglia e **NON si somma** ai difensori di Rethmar in ARC-09
 > ARMATE-SYNC. È un comando elfico **distinto** dalla Capitana Lythiel
-> Alar-Wen (Sacred Forest), che compare solo nella sessione finale e
-> alla Cerimonia delle 100 Asce (E7) — Lythiel resta l'unico canale col
+> Alar-Wen (Sacred Forest), che compare nella Sessione 4, dove riconosce
+> Hella (canone del ramo di gruppo, `campaign/state.md`: «Direct
+> recognition during Hammerfist Battle Sessione 4»), e alla Cerimonia
+> delle 100 Asce (E7) — Lythiel resta l'unico canale col
 > Sacred Forest. Le due presenze non si sono mai incrociate in scena:
 > nessun doppio conteggio, nessuna fusione dei due comandi.
 
@@ -517,10 +559,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
     *   **Incantesimi d'Attacco:** *Controllare Tempo*, *Tempesta di Fuoco*, *Chiamare Tempesta di Fulmini*, *Tempesta di Ghiaccio*.
     *   **Incantesimi di Controllo:** *Muro di Pietra*, *Muro di Spine*, *Intralciare*.
     *   **Incantesimi di Supporto:** *Pelle di Pietra*, *Guarigione*, *Crescita Animale*, *Resistenza dell'Orso*.
-*   **Incantesimi (CL 14°; 6/7/7/7/5/5/4/3 al giorno, CD 17 + livello).**
+*   **Incantesimi (CL 14°; 6/7/7/6/5/4/4/3 al giorno, CD 17 + livello).**
 
 **Tattiche:** *Prima del combattimento*: lancia *Pelle Coriacea*, *Resistenza dell'Orso* e *Zanna Magica Superiore* (estesi), poi prende la forma dell'Orso Crudele: gli incantesimi restano attivi nella forma.
-*Durante il combattimento*: Orion è una forza della natura. Inizia il combattimento lanciando un incantesimo di controllo del campo di battaglia come *Muro di Spine* per dividere le forze nemiche. Successivamente, si trasforma in Orso Crudele e si lancia nella mischia contro i bersagli più resistenti come i giganti o Gorthak. La sua mossa più audace è saltare su Fauci di Palude per ingaggiarlo in un combattimento corpo a corpo sulla sua schiena. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano a metà caduta e si cura con *Guarigione*; non abbandona la battaglia finché un gufo vola.
+*Durante il combattimento*: Orion è una forza della natura. Inizia il combattimento lanciando un incantesimo di controllo del campo di battaglia come *Muro di Spine* per dividere le forze nemiche. Successivamente, si trasforma in Orso Crudele e si lancia nella mischia contro i bersagli più resistenti come i giganti o Gorthak. La sua mossa più audace è saltare su Fauci di Palude per ingaggiarlo in un combattimento corpo a corpo sulla sua schiena. *Morale*: sotto i 40 pf lascia la schiena del drago, torna umano quando tocca terra e il round dopo si cura con *Guarigione* (una caduta non lascia due azioni standard: SRD); non abbandona la battaglia finché un gufo vola.
 > Tattiche scritte da un agente sui poteri della scheda.
 
 > **Verifica 3.5 (versione più forte)**: Druido 14 dell'SRD. I pf tornano con
@@ -865,6 +907,8 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 ---
 ### **OROG GUARDIE NERE**
 *Guardia del Corpo del Generale, 4ª Linea (1 Unità d'Élite di 4 Orog)*
+
+> Uno contro uno: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md` (Guerriero 6, GS 7, CA 19, pf 63, ascia bipenne +1 +13/+8, 1d12+10). ⚠ **Non SRD**: l'orog è `[Private source — Monsters of Faerûn / Races of Faerûn]` `[CANONE — DM 2026-10-19, D10]`.
 
 **PFU:** 13/13 | **DU:** 19 | **Morale Iniziale:** +3
 **AU (Ascia Bipenne+1):** +12 | **Danno:** 1d12+7

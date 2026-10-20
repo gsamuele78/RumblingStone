@@ -19,6 +19,8 @@
 - 14 · Il rinforzo che i PG vedono arrivare
 - 15 · Niente dossi al 13°
 - 16 · Il PG fuori gioco per un tiro salvezza
+- 17 · Le domande nate dai giri su ARC-07
+- Come si scrive un rilievo del developer
 <!-- /indice -->
 
 Nei colophon di Paizo e WotC il testo passa da due mani: l'editor chiede *«si
@@ -48,8 +50,8 @@ testo per le domande 1-6, 9, 10, 15 e 16 e dice in quale scena la risposta
 manca; `--check`
 gira in CI, e un rilievo che non è un difetto si dichiara con la ragione in
 `plans/domande-developer.json`. È un indicatore: vede che la parola c'è («se
-volano», «l'allarme arriva in 2 round»), non che la risposta regga. La 7, la 8 e le
-11-14 non le misura nessuno: per rispondere bisogna aver simulato lo scontro. Calibrazione: `plans/esperimenti/domande-developer-def4/`.
+volano», «l'allarme arriva in 2 round»), non che la risposta regga. La 7, la 8, le
+11-14 e la 17 non le misura nessuno: per rispondere bisogna aver simulato lo scontro. Calibrazione: `plans/esperimenti/domande-developer-def4/`.
 
 ## 1 · La lente dei Tier: chi resta senza niente da fare
 
@@ -290,3 +292,43 @@ che guarda.
 
 Stordito e frastornato durano di norma un round, e non contano. La versione più
 forte dell'effetto resta: la domanda chiede la via d'uscita, non lo toglie.
+
+## 17 · Le domande nate dai giri su ARC-07
+
+Le quattro domande che seguono non vengono da un manuale. Sono quelle che i
+developer dei due giri del 2026-10-18 su ARC-07 si sono fatti da soli, e due
+hanno prodotto i 🔴 del secondo giro. Valgono per ogni scontro.
+
+> **Chi vede al buio.** Per ogni luce, ombra o occultamento che il master usa:
+> chi dei presenti ha scurovisione, vista cieca, percezione tellurica o fiuto, e
+> l'ombra serve ancora contro di loro? *(il fondo buio della tenda di DEF-4 dava
+> occultamento contro guardie con scurovisione)*
+
+> **CA e pf di ogni bersaglio.** Ogni creatura che il modulo mette sotto
+> attacco, alleati e PNG da proteggere compresi, ha CA e pf scritti, o una
+> soglia a colpi dichiarata. *(in DEF-5 mancava la CA di Re Thorek, l'unico
+> bersaglio della scena)*
+
+> **In che riga di scala sta il gruppo di stasera.** La riga di scala (§10)
+> dice anche quale riga vale per il gruppo che giocherà, contato con i PG e i
+> livelli dello stato attuale.
+
+> **L'economia d'azione SRD.** Per ogni mostro che fa più cose in un turno
+> (emerge e morde, vola e soffia, attacca e si ritira): ogni pezzo è un'azione
+> che l'SRD gli concede, o serve un talento che non ha? *(gli Xorn di DEF-1
+> emergevano, mordevano e si rituffavano nello stesso turno senza Attacco
+> Rapido)*
+
+## Come si scrive un rilievo del developer
+
+Il developer scrive una riga per rilievo, in questa tabella:
+
+| # | Scena | Codice | Cosa manca | Gravità | Prova |
+|---|---|---|---|---|---|
+
+Il **codice** è la sezione di questo file a cui il rilievo risponde, seguita
+dal tipo: `§8 · regola` (un numero o una regola contro l'SRD, con l'URL del
+mirror), `§1 · contraddizione` (due punti del master che dicono cose diverse),
+`§10 · manca` (il dato che la domanda chiede non c'è), `§17 · regola`, e così
+via. Un rilievo che non risponde a nessuna sezione usa `§0 · altro`. La prova
+è la citazione fra « » dal master, e dall'SRD dove serve.

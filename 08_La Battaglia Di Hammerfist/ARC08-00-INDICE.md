@@ -98,7 +98,6 @@ master** rilevanti alla sessione.
 | `Cerimonia-delle-100-Asce.md` | Chiusura arco + hook ARC-09 (D3) | Canonico (benchmark, NON riscrivere) |
 | `hammerfist_encounters-...-final.md` | Guida agli scontri | Canonico |
 | `mass_combat_guide_Dm.md` | Sistema di combattimento di massa | Canonico (**fonte unica normativa**, C1; raccordo ARC-09) |
-| `combat_prompts_guide.md` | Sequenza di prompt per il combattimento di massa | Canonico (di supporto) |
 | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` | **Master visivo** (17 mappe, matrice in testa) | Canonico (master, A8) |
 | `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessione 1: 1A-1, 1A-2, 1A-3 | Canonico (master tattico, A8+MAPPE-UC) |
 | `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessione 2: 2A (+2B/2C viste), MAPPA 1/2A-1, 2, 3, 4, 2B-Corretta | Canonico (master tattico, A8+MAPPE-UC) |
@@ -106,12 +105,14 @@ master** rilevanti alla sessione.
 
 ### Deprecati — non usare (banner + puntatore al master)
 
+Dal 2026-10-16 i deprecati senza contenuto proprio stanno in `_ARCHIVIO/`, con lo stub del piano di revisione e `combat_prompts_guide.md` (i prompt con cui è stato generato il sistema di massa, nessun materiale di gioco). I prompt d'immagine di `ARC08-92`, che nessun altro file aveva, sono migrati in `campaign/ai-media-prompts/09_ARC08_battaglia-hammerfist.md` §5.
+
 | File | Motivo | Sostituito da |
 |---|---|---|
-| `ARC08-90-DEPRECATO-battle-stats-maps.md` | Sottoinsieme superato dell'atlante (A8) | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` |
-| `ARC08-91-DEPRECATO-atlante-visivo-v2.md` | Generazione superata dell'atlante (A8) | idem |
-| `ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` | Generazione superata dell'atlante (A8) | idem |
-| `ARC08-93-DEPRECATO-sessione-interrotta.md` | Stub generico fuori canone (A6) | `ARC08-01-GUIDA-DM.md` |
+| `_ARCHIVIO/ARC08-90-DEPRECATO-battle-stats-maps.md` | Sottoinsieme superato dell'atlante (A8) | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` |
+| `_ARCHIVIO/ARC08-91-DEPRECATO-atlante-visivo-v2.md` | Generazione superata dell'atlante (A8) | idem |
+| `_ARCHIVIO/ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` | Generazione superata dell'atlante (A8); i suoi prompt d'immagine sono in `campaign/ai-media-prompts/09_ARC08_battaglia-hammerfist.md` §5 | idem |
+| `_ARCHIVIO/ARC08-93-DEPRECATO-sessione-interrotta.md` | Stub generico fuori canone (A6) | `ARC08-01-GUIDA-DM.md` |
 | `Mappe/_ARCHIVIO/Hammerfist-Lotto-1-Ricognizione.md` | Generazione mappe superata (A8) | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` (+ L1-REVISED) |
 | `Mappe/_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md` | Generazione mappe superata (A8) | idem (+ L2-REVISED) |
 | `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` | Generazione mappe superata (A8) | idem (+ L3-REVISED) |
