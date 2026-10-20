@@ -415,6 +415,9 @@ Lo stesso giorno il DM ha chiuso i quattro punti: una presa per incontro; lo
 *Scosso* del Bane toglie 2 alle prove di lotta di Fauci; l'Odio della stirpe
 vale anche sulla lotta (+27 con la sola bocca); Fauci non sa i nomi, riconosce
 l'ascia della cicatrice ancestrale e chiama Thorik «Portatore».
+Il DM ha poi confermato le due regole scritte da me: sul collo il drago non
+morde Thorik e lui ripete Scalare CD 25 a ogni turno di Fauci; colpito
+all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
 
 ## FASE 2 — Sviluppo / attuazione
 
