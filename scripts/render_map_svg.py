@@ -317,7 +317,7 @@ HEAVY_PATS = set(legenda.pattern_pesanti())
 # paint order: backgrounds first, solids last (small overlaps hide seams)
 Z_ORDER = ["t_void", "t_grass", "t_veg", "t_sand", "t_earth", "t_cave", "t_floor", "t_lava",
            "t_lethal", "t_deep", "t_water", "t_shallow", "t_sewer", "t_forest", "t_mountain",
-           "t_struct", "t_pillar", "t_wall"]
+           "t_telo", "t_struct", "t_pillar", "t_wall"]
 
 # ---------------------------------------------------------------------------
 # Procedural texture patterns (pure SVG, deterministic — no external assets)
@@ -466,6 +466,17 @@ PATTERNS: dict[str, str] = {
         '<circle cx="7" cy="20" r="1.8" fill="none" stroke="#9aa66b" stroke-width="0.8"/>'
         '<circle cx="19" cy="6" r="1.3" fill="none" stroke="#9aa66b" stroke-width="0.8"/>'
         '<circle cx="22" cy="22" r="1" fill="none" stroke="#9aa66b" stroke-width="0.7"/>'),
+    # 🎪 telo di tenda visto dall'alto (2026-10-21): pelle scura a teli cuciti,
+    # le cuciture tratteggiate e un velo piu' chiaro a ogni secondo telo. Si
+    # distingue da ⬛ (tratteggio diagonale della muratura) e da 🏰.
+    "t_telo": _pattern("t_telo", 28,
+        '<rect width="28" height="28" fill="#5e4b3b"/>'
+        '<rect y="14" width="28" height="14" fill="#6a5644"/>'
+        '<path d="M0 0.6h28M0 14.3h28" stroke="#3f3227" stroke-width="1.1"/>'
+        '<path d="M0 2.4h28M0 16.1h28" stroke="#8a735c" stroke-width="0.7" '
+        'stroke-dasharray="2 1.6"/>'
+        '<circle cx="9" cy="8" r="1" fill="#544334"/>'
+        '<circle cx="21" cy="22" r="0.9" fill="#776149"/>'),
 }
 
 # ---------------------------------------------------------------------------

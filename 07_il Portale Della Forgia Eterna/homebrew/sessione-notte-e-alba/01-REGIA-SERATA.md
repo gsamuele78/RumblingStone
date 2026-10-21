@@ -233,7 +233,7 @@ l'una, quindi a piedi si tira **Nascondersi CD 22** dal primo blocco.
 **Scena 7, la tenda del comando** (`DEF-4` Scena 7). **Balvar** è nella tenda.
 Parlargli prima di colpire costa **1 tacca**; parlargli durante lo scontro
 **0**. La trattativa di una tacca dura più di ogni invisibilità del gruppo: a
-metà finisce, e chi torna visibile fuori dalle tre coperture (il palo, la
+metà finisce, e chi torna visibile fuori dalle coperture (i tre pali, la
 tavola, lo schienale del seggio) è visto. È la scena che si ricorda: se il
 tavolo ha poco tempo, si taglia altro.
 
@@ -262,8 +262,9 @@ d'uscita: ≤ 6 in tempo, 7 di corsa, 8 o più l'alba li coglie fuori.
 resta completo.
 
 **Gli scontri senza griglia.** La pattuglia dei tre fallimenti e i lupi della
-Scena 6 non hanno una mappa in scala: M7-A non lo è. Giocali sulla fascia di
-tende di M7-C, fuori dal telo.
+Scena 6 non hanno una mappa in scala: M7-A non lo è. Giocali su M7-C, fuori
+dallo steccato: le file di tende hobgoblin a nord, a sud e a est, i ripari dei
+clan degli orchi attorno ai due fuochi a ovest.
 
 ---
 

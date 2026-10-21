@@ -313,6 +313,28 @@
    ],
    "label": "Scala al livello 0: corridoio principale, sala del consiglio, cortile",
    "collega": "fuori mappa ; il livello 0 (sala del consiglio e corridoio principale) non ha una griglia tattica: M7-S lo mostra in sezione"
+  },
+  {
+   "type": "⚒",
+   "at": [
+    15,
+    19
+   ],
+   "label": "Incudine, un passo davanti alla forgia"
+  },
+  {
+   "type": "⚒",
+   "at": [
+    19,
+    19
+   ]
+  },
+  {
+   "type": "⚒",
+   "at": [
+    23,
+    19
+   ]
   }
  ],
  "units": [
