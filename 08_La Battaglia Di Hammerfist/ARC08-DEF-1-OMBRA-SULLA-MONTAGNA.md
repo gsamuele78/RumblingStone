@@ -49,12 +49,12 @@
 |---|---|---|
 | §0 | Quickstart DM | la serata in breve, cosa preparare, i tempi, cosa si consegna |
 | §0-bis | Quick-Reference | le CD della serata, i nemici in una riga, il morale, le leve, box PF1e |
-| §0-ter | Le lettere degli incontri | le lettere nuove e quelle vecchie di `ARC08-16` |
+| §0-ter | Le lettere degli incontri | le lettere nuove e quelle della prima stesura |
 | §1 | Highlight per pregen | il momento di ciascuno dei quattro |
 | §2 | Hammerfist in tre giorni | Atlante: le zone della fortezza nel 1372, chi si trova dove |
 | §3 | Giorno −4 e Giorno −3, mattina | Scene 1-4: l'apertura, la notte prima, il rapporto, la ricognizione (1A) |
 | §4 | Giorno −3, sera, e Giorno −2 | Scene 5-6: il Consiglio di guerra (1B-1), la Preparazione delle difese (1B-2) |
-| §5 | Il libretto, a pezzi | cosa si spiega stasera e quando |
+| §5 | Il libretto, a pezzi | cosa si spiega stasera e quando (come il libretto §12) |
 | §6 | Giorno −1 | Scene 7-9: il drago (1C), l'avanguardia (1D), i presagi (1E) |
 | §7 | La notte dei fuochi e i risultati | Scena 10: il box di chiusura, la scheda, la tabella delle leve |
 | §8 | Contingenze & fallimento | «se i pregen fanno X», cosa costa ogni fallimento |
@@ -78,8 +78,10 @@ arrivano al Cuore della Montagna (Handout 0).
 
 1. **La vista.** Quanto è grande l'orda, chi la comanda, dove sale. Lo
    decide la ricognizione (1A), e il suo prezzo è non farsi vedere.
-2. **Le decisioni.** Chi tiene quale settore, come si gioca la battaglia,
-   cosa si rinforza (1B). Ogni prova dà una leva del libretto.
+2. **Le decisioni.** Come si dividono le forze, dove sta il Re, chi scende
+   nelle gallerie, cosa si rinforza (1B). Ogni prova dà una leva del
+   libretto. Il modo di gioco e «Chi tiene cosa» si scelgono all'alba del
+   Giorno 1, nella Sessione 2.
 3. **La prima battaglia.** Sul pendio, le squadre dei quattro scavano
    trappole finché l'avanguardia non le scaccia (1D). Ogni trappola annulla
    una tacca del Giorno 1 o del Giorno 2.
@@ -108,8 +110,9 @@ Con poco tempo per leggere: §0, §0-bis, Scena 4 (la ricognizione), Scena 8
 
 - Le **quattro schede** con le **carte dei poteri** (Handout 1-4 e 1-4 bis);
   l'**Handout 0**, se non l'avete dato la settimana prima.
-- Il **libretto** (`ARC08-18`): §1-§7 e §13 per stasera (§5 di questo
-  master). Il mazzo, le carte e la ferocia sono del DM (`ARC08-19` §4).
+- Il **libretto** (`ARC08-18`), che si spiega a pezzi: stasera §1, §3, §4,
+  Combattere e Comandare del §5, la tacca del §7 e il §13 (libretto §12 e §5
+  di questo master). Il mazzo, le carte e la ferocia sono del DM (`ARC08-19` §4).
 - **Quattro d20 rossi e quattro bianchi**; il **foglio dei reparti**
   (libretto §14), una riga a testa; il **tracciatore dell'avanguardia**
   (`ARC08-19` §2), a matita.
@@ -122,8 +125,8 @@ Con poco tempo per leggere: §0, §0-bis, Scena 4 (la ricognizione), Scena 8
 |---|---|
 | Handout 0, «Tre giorni dalla parte delle mura» | la settimana prima, o in apertura, dopo il box della visione (Scena 1) |
 | Handout 1-4 e le carte dei poteri, una scheda per giocatore | in apertura (Scena 1) |
-| il libretto, §1-§7 e §13 | dopo la pausa, prima del drago (§5) |
-| il foglio dei reparti, una riga a testa | dopo la pausa, prima del drago (§5) |
+| il libretto, da spiegare a pezzi | dopo il drago, prima dell'avanguardia (§5) |
+| il foglio dei reparti, una riga a testa | dopo il drago, prima dell'avanguardia (§5) |
 
 ### I tempi della serata
 
@@ -133,17 +136,21 @@ Con poco tempo per leggere: §0, §0-bis, Scena 4 (la ricognizione), Scena 8
 | 2 · La notte prima | 5' | l'introduzione: basta il box dell'odore |
 | 3 · Il rapporto | 5' | la battuta del Re si dice in due righe |
 | 4 · La ricognizione (1A) | 45-60' | lo scontro con la pattuglia si risolve a racconto, con un tiro solo |
-| 5 · Il Consiglio (1B-1) | 25' | si decide solo «chi tiene cosa» |
+| 5 · Il Consiglio (1B-1) | 20' | si tira solo la Diplomazia delle forze |
 | 6 · La Preparazione (1B-2) | 20-30' | un'azione a testa invece di due |
 | pausa | 10' | |
-| il libretto, primo pezzo (§5) | 10-15' | il round giocato del §10 resta alla Sessione 2 |
 | 7 · Il drago (1C) | 10-15' | le tre opzioni diventano una domanda: «lo attaccate?» |
+| il libretto, il pezzo della scaramuccia (§5) | 10-15' | il primo round si gioca piano, e l'esempio del §10 non si legge |
 | 8 · L'avanguardia (1D) | 30-40', più 15' se qualcuno sfida il sergente | il corno al round 4 invece che al 5 |
 | 9 · I presagi (1E) | 10' | il box, e un presagio solo |
 | 10 · La notte dei fuochi e i risultati | 5' | niente: la scheda si compila comunque |
 
-Il totale sta fra **3 h 15** e **3 h 50**. Chi legge il libretto tutto in
-apertura supera le quattro ore: è il motivo per cui si spiega a pezzi.
+Il totale sta fra **3 h 05** e **3 h 50**, e arriva a **4 h 05** se qualcuno
+sfida il sergente. La stima più incerta è la 1A, con tre fasi, tre mappe e
+forse uno scontro: se alla fine della Fase 2 è passata più di mezz'ora, il
+taglio scritto si usa subito, non a fine serata. Chi legge il libretto tutto
+in apertura supera le quattro ore e mezza: è il motivo per cui si spiega a
+pezzi.
 
 ### Se lo divinano
 
@@ -165,7 +172,10 @@ segreto:
 
 Le abilità dei pregen sono alte, e le CD fisse della prima stesura erano
 quasi certe. Qui le prove sono **contrapposte** agli statblocchi dove c'è
-qualcuno che guarda, e **alzate di 5** dove la CD è fissa.
+qualcuno che guarda. Le CD fisse di natura e di fatica (Sopravvivenza,
+Scalare, Ascoltare, i presagi) restano quelle del manuale, e per Dara sono
+sicure: servono a chi non è Dara. Quelle sociali e di mestiere sono alzate,
+e dove l'SRD direbbe altro c'è scritto.
 
 | Cosa | Prova | Dove |
 |---|---|---|
@@ -176,14 +186,14 @@ qualcuno che guarda, e **alzate di 5** dove la CD è fissa.
 | capire gli ordini dell'orda (Nala) | Ascoltare **CD 15**, entro 9 m | Scena 4, Fase 2 |
 | contare l'orda (Dara, col cannocchiale) | Osservare a gradini: **20 / 25 / 30**; senza cannocchiale +10 | Scena 4, Fase 3 |
 | i simboli dei chierici (Thorin) | Conoscenze (religione) **CD 23** | Scena 4, Fase 3 |
-| far parlare un prigioniero | Intimidire **CD 23** | Scena 4 |
+| far parlare un prigioniero | Intimidire **CD 23** (scelta del modulo: nell'SRD è contrapposta) | Scena 4 |
 | convincere il Consiglio | Diplomazia **CD 18** | Scena 5 |
 | rinforzare un settore | Artigianato (pietra) **CD 20**, o *scolpire pietra* | Scena 6 |
 | progettare le trappole | Sopravvivenza o Artigianato (pietra) **CD 18** | Scena 6 |
 | le rune e le difese magiche | Sapienza Magica **CD 22**, le *rune di potere*, o un incantesimo di 3° o più | Scena 6 |
 | il morale delle truppe (Nala) | Diplomazia **CD 16** | Scena 6 |
 | far paura all'orda (Borin) | Intimidire **CD 20** | Scena 6 |
-| la Presenza terrificante del drago | Volontà **CD 25**, o scossi 4d6 round | Scena 7 |
+| la Presenza terrificante del drago | Volontà **CD 25**, o scossi 4d6 round (+2 entro 9 m da Borin) | Scena 7 |
 | il soffio del drago | Riflessi **CD 29** dimezza 14d4 acido | Scena 7 |
 | i presagi | Conoscenze (religione) **CD 15** (Thorin); Sopravvivenza **CD 15** (Dara); Ascoltare **CD 18** (Nala) | Scena 9 |
 
@@ -197,8 +207,8 @@ qualcuno che guarda, e **alzate di 5** dove la CD è fissa.
 | il sergente | 1 | 21 | 50 | +1 / +1 | sotto i **25 pf** fugge, e suona il corno se può |
 | Fauci di Palude | 1 | 29 | 337 | — | non scende: risponde una volta, poi se ne va |
 
-**EL**: la pattuglia **9** circa, gli scout col sergente **9** circa,
-tutti e due insieme **11** circa. Per quattro pregen di 12° e 13° livello sono
+**EL**: la pattuglia **8** (i tre worg non la alzano di un punto intero),
+gli scout col sergente **9** circa, tutti e due insieme **10** circa. Per quattro pregen di 12° e 13° livello sono
 scontri facili: il pericolo vero è l'allarme, non la morte.
 
 ### I numeri dell'avanguardia (Scena 8)
@@ -253,9 +263,8 @@ drago muove il morale; l'avanguardia porta le trappole.
 
 ## §0-ter — LE LETTERE DEGLI INCONTRI
 
-Le lettere seguono l'ordine del tempo. `ARC08-16-CUE-SONORI.md` e
-`ARC08-04-MARCIA-MANO-ROSSA.md` usano ancora quelle vecchie: questa tabella
-le traduce, finché quei file non si toccano.
+Le lettere seguono l'ordine del tempo. La colonna di destra è la
+numerazione della prima stesura, per chi legge un file d'archivio.
 
 | Lettera nuova | Cosa | Lettera vecchia |
 |---|---|---|
@@ -426,7 +435,7 @@ Si comincia con i giocatori, non coi personaggi. Un minuto in chiaro:
 > **Read-aloud (Tolkien lead) — la visione della Corona.** *La Corona vi tira
 > attraverso mille anni, e mille anni passano in un respiro. Pochi giorni no:
 > quelli la Corona li trattiene, i giorni in cui Hammerfist si è preparata e
-> ha tenuto le mura senza di voi. Per quei giorni si guarda da altri occhi.
+> ha tenuto le mura senza di voi. Quei giorni li ha visti qualcun altro.
 > Quattro nani, uno a testa: un campione col martello del nonno,
 > un'esploratrice che conta i fuochi del nemico dal crinale, un vecchio
 > sacerdote con la polvere delle rune sotto le unghie, una cantastorie che
@@ -544,7 +553,7 @@ sappia di essere stata contata.
 La ricognizione ha tre fasi, ognuna con la sua mappa. Le prove
 contrapposte le tira il DM, o il giocatore dell'orda se c'è.
 
-**Tre cose da sapere prima di cominciare.**
+**Quattro cose da sapere prima di cominciare.**
 
 - **L'ora.** È mattina presto, la luce è piena. La scurovisione di goblin e
   hobgoblin non conta; quella dei nani nemmeno.
@@ -555,6 +564,12 @@ contrapposte le tira il DM, o il giocatore dell'orda se c'è.
   cioè **sottovento** ai worg, e lo si sa con Sopravvivenza **CD 15**
   (Dara +17). *Passare senza tracce* toglie le orme e l'odore che resta sul
   sentiero, ma non nasconde chi passa a 6 m da un worg.
+  **Quando il fiuto scatta**, il worg sa che c'è qualcuno e da che parte, non
+  in che quadretto: chi passa non è visto, ma la pattuglia si ferma, il worg
+  annusa (il box qui sotto), e per un round goblin e worg tirano Osservare e
+  Ascoltare con **+5**. Chi è invisibile non è trovato, ma la pattuglia resta
+  lì un altro giro `[scelta del modulo: l'SRD dice solo che il fiuto rivela
+  presenza e direzione]`.
 - **Il silenzio.** *Silenzio* (Thorin, Nala) copre chi ci sta dentro: chi
   è nel raggio non fa rumore, e non sente niente. Nala non origlia da lì
   dentro.
@@ -602,7 +617,8 @@ trovare da sé:
 
 - *Silenzio* sul gruppo: Muoversi Silenziosamente non serve più, resta
   Nascondersi. Lo lancia Thorin, che ci sta dentro.
-- *Invisibilità* (Nala ne ha una, più tre pozioni): Nascondersi non serve più,
+- *Invisibilità*: Nala la lancia a tocco, uno per incantesimo, fino a
+  quattro al giorno fra i suoi incantesimi di 2°. Nascondersi non serve più,
   resta il fiuto.
 - La finestra di Dara: −10 a tutta la pattuglia, e il fiuto fuori raggio.
 - Un diversivo: un'*immagine silenziosa* di Nala più in basso nel canyon, o
@@ -617,7 +633,7 @@ capo, quello con la piuma rossa, porta un corno: se ha un round libero lo
 suona, ed è l'allarme. Se non può, gira il worg e scappa verso il campo. Corre a 60 m per round. Se Dara o chiunque lo ferma prima
 che esca dal canyon, la pattuglia è sola.
 
-**Se la attaccano loro**: la pattuglia è **EL 9 circa**, per quattro pregen
+**Se la attaccano loro**: la pattuglia è **EL 8**, per quattro pregen
 uno scontro di tre round. Lo si risolve a racconto se si è in ritardo: un tiro
 d'attacco a testa, e il DM dice chi cade. Il pericolo è il goblin che
 scappa, e i corpi: una pattuglia che non rientra viene cercata. Se i corpi
@@ -682,7 +698,9 @@ corno è l'allarme. Se il sergente muore o è preso qui, nella Scena 8 il
 round 3 arriva **senza il suo +1** (`ARC08-19` §2).
 
 **Il prigioniero.** Un hobgoblin, o il sergente, legato: Intimidire **CD 23**
-(Borin +17). Se parla, dice la stessa cosa che Nala avrebbe sentito, e in più
+(Borin +17) `[scelta del modulo: nell'SRD la prova è contrapposta a d20 +
+DV + Sag del bersaglio, e un hobgoblin tira in media 12, il sergente 17; la
+CD fissa è più dura]`. Se parla, dice la stessa cosa che Nala avrebbe sentito, e in più
 come combatte il Trifronte: «carica col muso basso, e la testa di destra non
 dorme mai». È la leva contro Gorthak (§7).
 
@@ -702,7 +720,7 @@ dorme mai». È la leva contro Gorthak (§7).
 | Chi | Com'è | Come parla |
 |---|---|---|
 | la pattuglia | tre goblin cavalcatori su tre worg, archi corti compositi, scimitarre; il capo ha una piuma rossa legata all'orecchio | goblin, a fischi più che a parole |
-| gli scout | nove hobgoblin regolari in giaco di maglia, scudo pesante e spada lunga; le guardie hanno l'arco | goblin, sottovoce, per ordine del sergente |
+| gli scout | nove hobgoblin regolari in cotta di maglia, scudo pesante e spada lunga; le guardie hanno l'arco | goblin, sottovoce, per ordine del sergente |
 
 #### Fase 3 — La vista sul campo (MAPPA 1A-3)
 
@@ -725,32 +743,34 @@ nemico prescelto di Dara contro gli orchi vale solo per contare gli orchi: il
 grosso dell'orda sono hobgoblin, e la prova si tira a +18.
 
 > **Read-aloud (LotR lead) — il campo, il primo sguardo.** *La valle sotto
-> il crinale è piena da un fianco all'altro, e non è un modo di dire. Tende, fuochi, carri, bestie, uomini che non sono uomini, fino a
-> dove il cannocchiale smette di distinguere. Sono più di quanti sappiate
-> contare. Orchi e hobgoblin, a migliaia, e il fumo di mille fuochi che il
-> vento non riesce a portare via.*
+> il crinale è piena da un fianco all'altro. Tende, fuochi, carri, bestie,
+> uomini che non sono uomini, fino a dove il cannocchiale smette di
+> distinguere. Sono più di quanti sappiate contare. Orchi e hobgoblin, e il
+> fumo di cento fuochi che il vento non riesce a portare via.*
 
 Con **Osservare 20 o più**:
 
-> **Read-aloud (Salvatore lead) — il campo, il conto.** *Poi l'occhio si abitua, e la massa si divide in blocchi. Blocchi di cento,
-> in quadrato, che marciano anche da fermi. Novecento, forse qualcuno di più:
-> sette per ogni nano sulle mura. In fondo, dietro i carri, otto figure
-> sedute per terra sono alte quanto le tende in piedi.*
+> **Read-aloud (Salvatore lead) — il campo, il conto.** *Poi l'occhio si
+> abitua, e la massa si divide in blocchi. Blocchi di cento, in quadrato,
+> che marciano anche da fermi. Novecento, forse qualcuno di più: sette per
+> ogni nano sulle mura. In fondo, dietro i carri, otto figure sedute per
+> terra sono alte quanto le tende in piedi.*
 
 Con **Osservare 25 o più** (è l'«Intelligence completa»):
 
-> **Read-aloud (Game of Thrones lead) — il campo, i comandi.** *Al centro del campo c'è una tenda nera con gli stendardi
-> piantati davanti, e davanti alla tenda un orog con una benda sull'occhio
-> parla a un cerchio di capitani che non si siedono. Più in qua, fra le
-> catapulte, un gigante con tre teste e una corazza fatta di pezzi di altre
-> corazze litiga con se stesso. E in mezzo ai blocchi, sparsi come
-> sale, uomini in tonaca con una mano rossa dipinta sul petto.*
+> **Read-aloud (Game of Thrones lead) — il campo, i comandi.** *Al centro
+> del campo c'è una tenda nera con gli stendardi piantati davanti, e
+> davanti alla tenda un orog con una benda sull'occhio parla a un cerchio
+> di capitani che non si siedono. Più in qua, fra le catapulte, un gigante
+> con tre teste e una corazza fatta di pezzi di altre corazze litiga con se
+> stesso. E in mezzo ai blocchi, sparsi come sale, uomini in tonaca con una mano rossa dipinta sul petto.*
 
 Con **Osservare 30 o più**:
 
-> **Read-aloud (Tolkien lead) — il campo, la palude.** *Oltre il campo, dove la valle diventa palude, l'acqua è ferma e nera. Poi
-> una parte di quell'acqua si muove contro corrente. È un'ombra, lunga come
-> una nave, che scivola sotto la superficie e si ferma. Sopra, sulla riva, un
+> **Read-aloud (Tolkien lead) — il campo, la palude.** *Oltre il campo, dove
+> la valle diventa palude, l'acqua è ferma e nera. Poi una parte di
+> quell'acqua si muove contro corrente. È un'ombra, lunga come una nave,
+> che scivola sotto la superficie e si ferma. Sopra, sulla riva, un
 > hobgoblin in armatura nera aspetta in piedi accanto a una sella grande
 > quanto un carro.*
 
@@ -800,7 +820,7 @@ scaveranno.
 | Come finisce 1A | Cosa costa |
 |---|---|
 | **Pulito**: nessuno li vede, o chi li vede non torna e i corpi spariscono | niente. Vale «Eliminazione silenziosa» (§7) |
-| **Visti ma via**: un goblin scappa sul worg, o il sergente suona il corno | l'allarme arriva al campo in 3 round; niente «Eliminazione silenziosa»; nella Scena 8 i lupi arrivano con **fronte due dal round 1** |
+| **Visti ma via**: un goblin scappa sul worg, o il sergente suona il corno dopo che Dara ha contato | l'allarme arriva al campo in 3 round; niente «Eliminazione silenziosa»; nella Scena 8 i lupi arrivano con **fronte due dal round 1** |
 | **Scontro aperto**, nessuno fugge | nessun costo per l'assedio, ma dal torrione Dara ha 2 round invece di 5: una prova sola |
 | **Allarme, e niente vista**: il corno suona prima che Dara arrivi in cima | la riga «Ricognizione» di `ARC08-10` §5.1 è «fallito»: +50 rinforzi all'orda nel finale |
 
@@ -820,7 +840,7 @@ nuovo, con la finestra se Dara la legge. Poi il Consiglio (Scena 5).
 
 **In scena** — Dove: la Sala del Trono Ancestrale — Chi: Re Thorek · la Madre Superiora · i capitani
 
-**Quando**: la sera del Giorno −3. **Durata**: 25 minuti.
+**Quando**: la sera del Giorno −3. **Durata**: 20 minuti.
 
 Il Consiglio decide quattro cose, e ognuna è una leva del libretto. Al tavolo
 i giocatori fanno quello che i capitani non osano: dicono al Re che ha torto.
@@ -858,17 +878,19 @@ e una prova la sostiene.
 
 | Decisione | Cosa si decide | La prova | La leva |
 |---|---|---|---|
-| **1 · Distribuzione delle forze** | chi tiene quale settore, con quali reparti: la tabella «Chi tiene cosa» del libretto §1 è la proposta dei capitani | Diplomazia **CD 18** | riuscita, il gruppo scambia **due reparti** fra i settori |
+| **1 · Distribuzione delle forze** | i capitani hanno già diviso i reparti fra i settori; i quattro dicono dove la divisione non regge | Diplomazia **CD 18** | riuscita, all'alba del Giorno 1 il gruppo scambia **due reparti** fra i settori |
 | **2 · Difese magiche** | dove vanno le rune e i chierici | nessuna qui | si fa nella Preparazione, opzione B (Scena 6) |
-| **3 · Strategie di resistenza** | come si gioca la battaglia: il modo **A**, **B** o **C** del libretto §9, per ogni giocatore | nessuna: è una scelta | ogni giocatore sceglie il suo modo per il Giorno 1 |
+| **3 · Il Re e il Cancello** | dove sta il Re il primo giorno | Diplomazia **CD 18**, o una ragione che regga (sotto) | riuscita, il Re comanda dal cortile; se no, è al Cancello accanto a Borin |
 | **4 · Evacuazione dei civili** | quanti scendono nelle gallerie, e quando | Diplomazia **CD 18** | riuscita, la riga «Evacuazione» di `ARC08-10` §5.3 non scende sotto «parziale» |
 
-Per la decisione 3 basta una frase per modo: **A**, giochi solo l'eroe, nei
-duelli sulla mappa; **B**, l'eroe alla testa di due reparti, il consigliato;
-**C**, il capitano, con tre reparti e l'eroe dietro la linea.
+Il Consiglio non usa il libretto, che i giocatori non hanno ancora. Come si
+combatte (i modi A, B e C del libretto §9) e chi tiene quale settore (la
+tabella «Chi tiene cosa» del §1) si scelgono all'alba del Giorno 1, all'inizio
+della Sessione 2, quando il libretto lo chiede; lì si applicano anche i due
+reparti scambiati.
 
 **Il Re e il Cancello.** Il Re vuole stare al Cancello il primo giorno.
-Borin lo conosce: con Diplomazia o con una ragione che regga (un re al
+Borin lo conosce: con Diplomazia **CD 18** o con una ragione che regga (un re al
 Cancello è il bersaglio di Gorthak; un re che cade il primo giorno fa cadere
 le mura), lo convince a tenere il comando dal cortile. Se non lo convince, il
 Re sta al Cancello il Giorno 1 accanto a Borin: i numeri non cambiano, ma la
@@ -883,14 +905,13 @@ all'alba del Giorno 2 (`ARC08-19` §4). Se la contraddicono, le Cantitrici
 vanno dove decide il Re, e l'obiettivo resta lo stesso.
 
 **Sviluppi.** Il Consiglio si chiude con il Re che distribuisce i compiti
-dei due giorni: la Preparazione (Scena 6).
+del giorno dopo: la Preparazione (Scena 6).
 
 ### SCENA 6 — 1B-2 · La Preparazione delle difese
 
 **In scena** — Dove: il cortile interno — Chi: la Madre Superiora · i capitani · il mastro armaiolo
 
-**Quando**: il Giorno −2, e la mattina del Giorno −1. **Durata**: 20-30
-minuti.
+**Quando**: il Giorno −2, mattina e pomeriggio. **Durata**: 20-30 minuti.
 
 > **Read-aloud (Mercer lead) — il cortile interno.** *Il cortile interno non
 > ha mai fatto tanto rumore. Carri di pietra entrano dalla Porta Interna uno
@@ -902,7 +923,7 @@ minuti.
 
 **Chi si trova qui**
 
-| Chi | Nel cortile, in questi due giorni |
+| Chi | Nel cortile, il Giorno −2 |
 |---|---|
 | **comando** | i capitani, a turno: assegnano le squadre e i carri |
 | **culto** | la Madre Superiora, che benedice le mura un tratto alla volta; il tempio è aperto |
@@ -917,10 +938,14 @@ minuti.
 |---|---|---|
 | il mastro armaiolo | un nano senza un dito per mano, il grembiule di cuoio bruciato in dieci posti; ha l'armeria svuotata alle spalle, perché le armi sono già sulle mura | a numeri: «trecento quadrelli, quaranta scudi, due mani in meno» |
 
-**Le regole.** Ognuno ha **due azioni**, una per giornata di preparativi, e al
-massimo una per opzione (A, B o C). Niente prendere 20: si lavora con l'orda in vista.
-Chi fallisce la prova di 5 o più spreca l'azione. Ogni leva si prende **una volta sola**: otto azioni e cinque leve, quindi il gruppo sceglie, e le azioni
-in più servono ad **aiutare** (SRD: prova CD 10, +2 a chi tira).
+**Le regole.** Ognuno ha **due azioni**, una la mattina e una il pomeriggio
+del Giorno −2, e al massimo una per opzione (A, B o C). Niente prendere 20:
+si lavora con l'orda in vista. Chi fallisce la prova di 5 o più spreca
+l'azione. Ogni leva si prende **una volta sola**: otto azioni e cinque leve,
+quindi il gruppo sceglie, e le azioni in più servono ad **aiutare** (SRD:
+prova CD 10, +2 a chi tira). Un incantesimo speso qui torna con la preghiera
+o il riposo della notte: all'alba del drago i quattro sono a pieni
+incantesimi.
 
 | Opzione | Azione | Prova | La leva |
 |---|---|---|---|
@@ -943,20 +968,25 @@ lo fa ha speso l'azione.
 
 **Sviluppi.** Il Giorno −2 finisce con le fosse del pendio segnate a terra e
 le squadre di guastatori assegnate: si comincia a scavare il pomeriggio del
-Giorno −1. Prima, all'alba, il drago (Scena 7). Prima ancora, al tavolo, la
-pausa e il primo pezzo del libretto (§5).
+Giorno −1. Prima, all'alba, il drago (Scena 7). Al tavolo, qui, la pausa; il
+pezzo del libretto viene dopo il drago (§5).
 
 ---
 
 ## §5 — IL LIBRETTO, A PEZZI `[CANONE — DM 2026-10-21]`
 
-Il libretto si spiega quando serve, non tutto in apertura. Tre pezzi.
+Il libretto si spiega quando serve, non tutto in apertura. Tre pezzi, gli
+stessi del libretto §12 («Cosa si spiega quando») e dell'Handout 0: se
+cambiano lì, si cambiano qui.
 
 | Quando | Quanto | Cosa si spiega |
 |---|---|---|
 | **in apertura** (Scena 1) | 30 secondi | che stasera c'è una battaglia a reparti, con un dado rosso e uno bianco, e che le regole arrivano prima della battaglia |
-| **dopo la pausa, prima del drago** | 10-15 minuti | §1 (in una pagina), §2 (il round in quattro passi), §3 (la tabella unica), §4 (gli ordini) con lo **Scavare** del §13, §5 (i gesti), il morale in una frase (§6), la tacca e la squadra travolta (§7 e §13). Poi il §13 intero, che è la battaglia di stasera |
-| **alla Sessione 2** | il resto | §7-bis (il terreno, le baliste, le trappole), §8 (la notte), §9 per esteso, §10 (il round giocato), §11 per i reparti dell'orda, §14 (il foglio intero) |
+| **dopo il drago, prima della scaramuccia** (fra la Scena 7 e la Scena 8) | 10-15 minuti | §1 (in una pagina), §3 (la tabella unica), §4 (gli ordini) con lo **Scavare**, il gesto Combattere e Comandare del §5, la tacca del §7 e le regole del pendio del §13; poi il primo round giocato piano, come l'esempio del §10. Il morale non si spiega: il DM dice quanto vale sui dadi («+1 a tutti i vostri dadi») |
+| **all'inizio della Sessione 2** | il resto | il morale (§6), la notte (§8), i modi di gioco (§9) con «Chi tiene cosa» del §1 |
+
+Quello che il libretto §12 non nomina (§2, il resto del §5, §7-bis, §11,
+§14) i giocatori lo leggono da sé, e il DM lo richiama quando serve.
 
 **Il primo round si gioca lento.** Nel round 1 dell'avanguardia il DM
 chiama i passi uno alla volta («l'orda avanza», «gli ordini», «i rossi», «i
@@ -964,8 +994,7 @@ bianchi», «il conto») e dice ogni bersaglio ad alta voce. Dal round 2 il
 tavolo va da solo.
 
 Il mazzo, le carte e la ferocia non si spiegano: sono del DM (`ARC08-19`
-§4). Il libretto avrà la sua riga su cosa si spiega stasera e cosa la volta
-dopo; finché non c'è, vale questa tabella.
+§4). La riga che fa fede è il libretto §12.
 
 ---
 
@@ -981,7 +1010,7 @@ Il drago si mostra, e basta. Che non sia uno scontro lo si dice ai giocatori
 coi fatti: le baliste lo colpiscono e non succede niente.
 
 > **Read-aloud (Tolkien lead) — le mura, il drago.** *All'alba dell'ultimo
-> giorno di pace, Fauci di Palude si alza in volo per la prima volta. Il drago
+> giorno di pace, Fauci di Palude si mostra per la prima volta. Il drago
 > nero sorvola le difese senza fretta, alto sopra le torri, e basso quanto basta
 > perché tutti lo vedano. Le baliste lo colpiscono, e lui non se ne accorge.
 > Il suo soffio cade su una torre di vedetta abbandonata, e la torre si
@@ -993,9 +1022,10 @@ coi fatti: le baliste lo colpiscono e non succede niente.
 - **La quota**: 60 m sopra le mura. Il drago non scende sotto i 30 m.
 - **La Presenza terrificante**: chi è sulle mura entro 90 m tira Volontà
   **CD 25**, o è **scosso** per 4d6 round (Borin +8, +10 in Postura
-  Difensiva; Dara +9; Nala +11; Thorin +16). Il raggio di 90 m è un
-  potenziamento della scheda di Fauci, non SRD: l'SRD dà 63 m all'adulto
-  maturo.
+  Difensiva; Dara +9; Nala +11; Thorin +16). La Presenza Comandante di Borin
+  dà **+2** a chi gli sta entro 9 m sulle mura. Il raggio di 90 m è un
+  potenziamento della scheda di Fauci, non SRD: l'SRD dà 54 m all'adulto
+  (9 m per categoria d'età).
 - **Le baliste** non servono: i dardi non sono magici, e la RD 10/magia se
   li mangia tutti.
 - **Si può colpire.** Dara a 60 m è al secondo incremento (−2), con il nemico
@@ -1035,7 +1065,8 @@ Fauci).*
 <!-- /storico -->
 
 **Sviluppi.** Il fumo della torre è ancora nell'aria quando le squadre
-scendono al pendio (Scena 8).
+scendono al pendio (Scena 8). Al tavolo, prima, il pezzo del libretto della
+scaramuccia (§5) e il foglio dei reparti.
 
 ### SCENA 8 — 1D · L'avanguardia
 
@@ -1051,7 +1082,7 @@ che il DM legge al tavolo.
 > abbattuti, con le radici all'aria. Le fosse sono a metà: pareti di terra
 > fresca, pali appuntiti accatastati accanto. Più su, legata con le corde, una
 > frana di sassi aspetta solo che qualcuno tagli. Le mura sono alle spalle,
-> alte, e da quaggiù lontane.*
+> così vicine che l'ombra della cinta arriva fino alla prima fossa.*
 
 **Comparse**
 
@@ -1086,8 +1117,10 @@ gesto (Handout 0).
    fugge, l'orda disfa le sue mezze trappole, e l'eroe torna con lei con i
    punti ferita che ha.
 5. **La ritirata è di tutto il gruppo.** Alla fine di ogni round si decide
-   insieme se restare o correre alle mura. Una squadra sola non si ritira:
-   può smettere di scavare e combattere (Colpire o Tenere).
+   insieme se restare o correre alle mura. Se si corre, il round dopo è il
+   **round della ritirata**: nessuno scava, l'orda tira i suoi bianchi come
+   sempre, e alla fine di quel round la scena è finita. Una squadra sola non
+   si ritira: può smettere di scavare e combattere (Colpire o Tenere).
 6. **Il DM dice sempre il bersaglio del bianco**: 22 + AU del nemico (§0-bis).
 
 **E se volano, o diventano invisibili?** Un eroe invisibile o in volo fa il
@@ -1115,7 +1148,7 @@ le carte e sceglie su quale squadra cadono i lupi.
 
 | Round | Cosa arriva | Cosa fa l'orda | Il bianco |
 |---|---|---|---|
-| **1** | **i lupi cavalcati**: un reparto di lupi e goblin per squadra | scendono di traverso sul pendio, verso chi scava. Se la ricognizione è finita «visti ma via», i lupi sono **due per squadra** già dal round 1 | 31 |
+| **1** | **i lupi cavalcati**: un reparto di lupi e goblin per squadra | scendono di traverso sul pendio, verso chi scava. Se la ricognizione è finita «visti ma via», i lupi sono **due per squadra** già dal round 1, e lo Sbilanciare vale una volta sola: −2, non −4 | 31 |
 | **2** | ancora i lupi: chi ne ha distrutto uno se ne trova un altro davanti | i lupi feriti restano, quelli nuovi puntano la squadra che ha più mezze trappole | 31 |
 | **3** | **la pattuglia avanzata**: gli hobgoblin, e il **sergente** | il fronte sale a due; il sergente dà **+1** ad AU e DU di tutta l'avanguardia. Da qui ogni reparto distrutto è sostituito da un reparto di hobgoblin, senza fine | 32 i lupi, 35 gli hobgoblin |
 | **4** | niente di nuovo | gli hobgoblin chiudono gli scudi: con due reparti sul fronte hanno +1 DU | come al 3 |
@@ -1142,8 +1175,9 @@ Al round 5 si legge il box del corno, lo stesso di `ARC08-19` §2:
 
 > **Read-aloud (Tolkien lead) — il pendio, il corno.** *Dalla cresta viene un
 > suono lungo, basso, che non è di un animale. Le file degli hobgoblin si
-> fermano tutte insieme, e poi ripartono più in fretta. Lassù, contro il
-> cielo, un orog con una benda nera guarda giù e non si muove. Che fate?*
+> fermano tutte insieme, e poi ripartono più in fretta. Laggiù, in piedi
+> sulla cresta, un orog con una benda nera guarda verso le mura e non si
+> muove. Che fate?*
 
 Grimjaw non si sfida e non si colpisce: la cresta è a 400 m, oltre la portata
 dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
@@ -1157,14 +1191,20 @@ dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
   non dà il +2 al morale, che vale per i comandanti dell'assedio. Se nella
   ricognizione è morto o è stato preso, non c'è: il round 3 arriva senza il
   suo +1, e non c'è nessuno da sfidare.
-- **La retroguardia.** Nel round in cui il gruppo si ritira, un eroe resta
-  indietro a coprire gli altri: in quel round **nessuna squadra è travolta**.
-  L'eroe tira il suo gesto Combattere e torna per ultimo, senza duello.
+- **Se il sergente muore nel duello** (un critico di Borin con Colpo
+  Devastante lo porta da 30 pf a sotto zero): vale come la fuga, il suo +1
+  se ne va, e non lo si interroga, perché le file degli hobgoblin si
+  chiudono sul corpo. Il morale non si muove.
+- **La retroguardia.** Nel round della ritirata un eroe resta indietro a
+  coprire gli altri: in quel round **nessuna squadra è travolta**. L'eroe
+  tira il suo gesto Combattere e torna per ultimo, senza duello.
 - **L'inganno** (Nala, o chiunque abbia un'illusione o un ammaliamento di 1° o
   più). È un gesto. Il reparto nemico davanti alla squadra tira il TS, d20 + 4
   contro la CD: se lo fallisce, per quel round non tira il bianco e la squadra
   non prende la tacca. Con *immagine silenziosa* (CD 15) riesce metà delle
-  volte, con *affascinare* (CD 18) due su tre.
+  volte, con *affascinare* (CD 18) due su tre. Per *affascinare* il 18 è una
+  semplificazione della battaglia campale: nell'SRD la difficoltà è il
+  risultato della prova di Intrattenere di Nala (d20 + 16).
 - **Comandare**: +2 a tutti i dadi della squadra per il round. Nel round 1, a
   chi ha proposto di ignorare il drago, è gratis.
 - **Un incantesimo di 3° o più**: *colpo infuocato* toglie 1d4+1 PFU a un
@@ -1182,8 +1222,12 @@ squadre su quattro (libretto §13).
 
 **Il conto alla ritirata.** Le mezze trappole delle squadre non travolte,
 divise per due, per difetto: quelle delle squadre travolte le ha disfatte
-l'orda. Si aggiunge la trappola della
-Preparazione, se c'è (Scena 6).
+l'orda. Si aggiunge la trappola della Preparazione, se c'è (Scena 6).
+
+**Se tutte le squadre sono travolte** prima della ritirata, la scena finisce
+lì: dal pendio non arriva nessuna trappola, resta quella della Preparazione,
+e il morale ha perso 1 per ogni squadra. Gli eroi tornano alle mura coi
+punti ferita che hanno.
 
 | Trappole | `ARC08-10` §5.1, «Difese preparate» |
 |---|---|
@@ -1204,8 +1248,9 @@ Ogni squadra travolta o a 0 PFU ha tolto 1 al morale.
 - **Il tavolo è in ritardo**: il corno arriva al round **4**, e il DM propone
   la ritirata alla fine del 4.
 - **Il tavolo va troppo liscio** (nessuna tacca ai round 1 e 2): l'orda
-  **terrificante** (+1 ad AU e DU, `ARC08-19` §4) dal round 3. È la versione più dura, quella che il DM preferisce
-  `[INFERRED — gli script non l'hanno provata sul pendio]`.
+  **terrificante** (+1 ad AU e DU, `ARC08-19` §4) dal round 3. È la versione
+  più dura, quella che il DM preferisce `[INFERRED — gli script non l'hanno
+  provata sul pendio]`.
 - **Il tavolo è in difficoltà** (due squadre con due tacche al round 2):
   l'orda **normale** (−1 ad AU e DU) per il resto della scena, e il DM lo dice
   come un fatto del pendio: il sole basso negli occhi dei lupi.
@@ -1225,7 +1270,7 @@ si chiudono sull'ultimo nano. Poi la notte (Scena 9).
 > dell'assalto il vento porta un puzzo di morte e di zolfo. Gli animali
 > selvatici scendono dalle montagne a branchi, cervi e volpi insieme, e
 > passano sotto le mura senza guardarle. Le stelle si vedono appena. Dall'alto
-> dei camminamenti migliaia di torce nemiche punteggiano la valle come un
+> dei camminamenti centinaia di torce nemiche punteggiano la valle come un
 > mare di fuoco. I tamburi battono senza sosta, e ogni tanto fra le vette
 > rotola un ruggito.*
 
@@ -1279,7 +1324,6 @@ RICOGNIZIONE        pulito □   visti ma via □   scontro aperto □   allarme
 DARA, OSSERVARE     <20 □    20-24 □    25-29 □    30+ □
 PRIGIONIERO HA PARLATO □      SERGENTE MORTO O PRESO NELLA 1A □
 CONSIGLIO           due reparti scambiati □    evacuazione □
-                    modo di ogni giocatore  B ___ D ___ T ___ N ___
                     il Re al Cancello il Giorno 1 □
 PREPARAZIONE        +1 bianco, Giorno 2, settore ______ □
                     +1 trappola □
@@ -1288,7 +1332,7 @@ PREPARAZIONE        +1 bianco, Giorno 2, settore ______ □
                     −1 AU all'orda, round 1 Giorno 1 □
 DRAGO               attaccato □   magia □   ignorato □ (Comandare a ______)
 AVANGUARDIA         ritirata al round ___   trappole ___
-                    squadre travolte o a 0 PFU ___   sergente fuggito □
+                    squadre travolte o a 0 PFU ___   sergente fuggito o morto □
 PRESAGI             Thorin □   Dara □   Nala □
 MORALE DELLA ROCCA  all'alba del Giorno 1: ___ (parte da +1)
 ARC08-10 §5.1       Ricognizione: pieno □ parziale □ fallito □
@@ -1310,7 +1354,8 @@ da **+1**; le leve di morale si sommano, tetto ±5, sui dadi ±2.
 | 1A · «pulito» («Eliminazione silenziosa») | la carta **I giganti** non si gioca il Giorno 1 | |
 | 1A · il prigioniero ha parlato (Intimidire CD 23) | +2 a colpire nei primi 3 round del duello **Sfidare** contro Gorthak | |
 | 1A · il sergente morto o preso | nella Scena 8 il round 3 arriva senza il suo +1 | |
-| 1B-1 · Diplomazia CD 18, le forze | il gruppo scambia due reparti fra i settori di «Chi tiene cosa» | |
+| 1B-1 · Diplomazia CD 18, le forze | all'alba del Giorno 1 il gruppo scambia due reparti fra i settori di «Chi tiene cosa» | |
+| 1B-1 · il Re convinto (Diplomazia CD 18, o una ragione) | il Re comanda dal cortile il Giorno 1; se no, è al Cancello accanto a Borin | |
 | 1B-1 · Diplomazia CD 18, l'evacuazione | | §5.3 Evacuazione non sotto «parziale» |
 | 1B-2 · Artigianato (pietra) CD 20, o *scolpire pietra* | +1 al bianco in un settore a scelta, il Giorno 2 | |
 | 1B-2 · trappole progettate (Sopravvivenza o Artigianato CD 18) | **+1 trappola**, sommata a quelle della Scena 8 | §5.1 Difese preparate |
@@ -1323,10 +1368,13 @@ da **+1**; le leve di morale si sommano, tetto ±5, sui dadi ±2.
 | 1C · Ignorare | resta il −1; chi lo ha proposto fa Comandare in più nel round 1 della Scena 8 | |
 | 1D · le trappole portate a casa | ognuna annulla una tacca **del Giorno 1 o del Giorno 2**, nel settore scelto | §5.1 Difese preparate: 6 o più «pieno», 3-5 «parziale», meno di 3 «fallito» |
 | 1D · una squadra travolta o a 0 PFU | morale **−1** ciascuna | |
-| 1D · il sergente fuggito | nessuna nell'assedio: il racconto lo ricorda | |
+| 1D · il sergente fuggito, o morto nel duello | nessuna nell'assedio: il racconto lo ricorda | |
 | 1E · Thorin | il TS contro «La palla di fuoco» a +2, il Giorno 1 | |
 | 1E · Dara | niente Carica selvaggia nel round 1 del Giorno 1 | |
 | 1E · Nala | +2 al primo attacco contro Gorthak | |
+
+I due +2 contro Gorthak si sommano: quello del prigioniero vale nei primi tre
+round del duello, quello di Nala sul primo attacco, che con tutti e due ha +4.
 
 **Il ponte.** Le leve si leggono all'alba del Giorno 1, all'inizio della
 Sessione 2. Fino ad allora la scheda resta al DM.
@@ -1339,8 +1387,8 @@ Sessione 2. Fino ad allora la scheda resta al DM.
 
 | Se i pregen… | Risposta |
 |---|---|
-| **vogliono scendere al campo** dell'orda, di notte, a sabotare | il campo è a 400 m dal torrione, e ha novecento occhi. Il DM lo dice in chiaro: chi scende è visto, e la ricognizione finisce «allarme». Se insistono, scendono, e tornano feriti con una sola cosa vista in più: vale il gradino 30 di Dara, con l'allarme |
-| **attaccano gli scout per prenderli tutti** | si può, ed è facile: EL 9. Il problema è il sergente, che fugge sotto i 25 pf col corno. Se lo fermano prima che suoni, «scontro aperto»; se suona, «visti ma via» |
+| **vogliono scendere al campo** dell'orda, di notte, a sabotare | il campo è a 400 m dal torrione, e ha novecento paia d'occhi. Il DM lo dice in chiaro: chi scende è visto, e la ricognizione finisce «visti ma via», qualunque cosa fosse prima. Se insistono, scendono, e tornano feriti con una sola cosa vista in più: il box del gradino 30, la palude e il drago, che non dà leve. Il gradino di Dara resta quello che ha tirato |
+| **attaccano gli scout per prenderli tutti** | si può, ed è facile: EL 9 circa. Il problema è il sergente, che fugge sotto i 25 pf col corno. Se lo fermano prima che suoni, «scontro aperto»; se suona dopo che Dara ha contato, «visti ma via»; se suona prima che Dara sia in cima, «allarme, e niente vista» (§3, «Come finisce la ricognizione») |
 | **vogliono uccidere il drago** | non scende sotto i 30 m e se ne va in due round. Lo si può ferire, ed è una leva di morale (Scena 7), non una vittoria. Se insistono con tutto quello che hanno, il drago soffia una volta di più, sulla postazione più vicina, e se ne va comunque |
 | **non si ritirano dal pendio** | dal round 6 la scena non finisce da sola: ogni round è un reparto di hobgoblin in più. Il DM ricorda il conto («quanto restare»), una volta. Poi lascia decidere |
 | **vogliono interrogare il sergente fuggito** | il sergente non si insegue oltre il pendio: le file degli hobgoblin si chiudono dietro di lui |
@@ -1355,8 +1403,9 @@ avanti.
 - **La ricognizione fallisce del tutto** (allarme, niente vista): l'orda sa
   di essere stata vista. Costa la riga «Ricognizione» (+50 rinforzi nel
   finale) e i lupi in fronte due nella Scena 8. Il Consiglio si tiene lo
-  stesso, al buio: il Re decide da solo «Chi tiene cosa», e la Diplomazia
-  delle forze non si tira.
+  stesso, al buio: il Re decide da solo come dividere le forze, e la
+  Diplomazia delle forze non si tira; all'alba del Giorno 1 vale «Chi tiene
+  cosa» com'è.
 - **Un pregen muore** nella ricognizione: non torna. Il giocatore guida la sua
   squadra sul pendio, senza gesto, e nella Sessione 2 gioca il capitano
   (Handout 0). Il Re lo saluta al Consiglio, in piedi.
@@ -1404,7 +1453,8 @@ leve del §7, che arrivano al finale come posizioni, difese e morale
 |---|---|---|---|
 | Scena 4, la pattuglia | 3 archi corti compositi perfetti, 3 scimitarre perfette | 2.070 mo, in tutto | nessuno: i nani li lasciano |
 | Scena 4, gli scout | 9 *mantelli della resistenza +1*, 9 pozioni di *cura ferite moderate* | 9.000 e 2.700 mo | i pregen, se li prendono: le pozioni valgono anche nella Sessione 2 |
-| Scena 4, il sergente | *spada lunga +1*, *anello di protezione +1*, due pozioni di *cura ferite moderate*, il corno | 2.315, 2.000, 600 mo | come sopra. L'armatura completa è nanica: il mastro armaiolo la rivuole |
+| Scena 4, gli scout, sui corpi | 9 cotte di maglia perfette, 9 scudi pesanti +1, 9 spade lunghe perfette, 9 archi lunghi compositi (+1) | 2.700, 10.530, 2.835, 1.800 mo | nessuno: l'armeria li prende, e nella battaglia campale non cambiano niente |
+| Scena 4, il sergente | *spada lunga +1*, *spada lunga perfetta*, *anello di protezione +1*, due pozioni di *cura ferite moderate*, il corno | 2.315, 315, 2.000, 600 mo | come sopra. L'armatura completa è nanica: il mastro armaiolo la rivuole |
 | Scene 5-10 | niente | | |
 
 Il tesoro non conta verso il WBL dei Rumbling Stones: i pregen escono di
@@ -1422,8 +1472,8 @@ scena alla fine della Sessione 3, con quello che hanno addosso
 | **Handout 0** — Tre giorni dalla parte delle mura | `ARC08-15` | la settimana prima, o in apertura |
 | **Handout 1-4** — le schede dei pregen | `ARC08-15` | in apertura |
 | **Handout 1-4 bis** — le carte dei poteri | `ARC08-15` | in apertura, con la scheda |
-| **il libretto**, §1-§7 e §13 | `ARC08-18` | prima del drago (§5) |
-| **il foglio dei reparti** | `ARC08-18` §14 | prima del drago |
+| **il libretto**, da spiegare a pezzi | `ARC08-18` | dopo il drago, prima dell'avanguardia (§5) |
+| **il foglio dei reparti** | `ARC08-18` §14 | dopo il drago, prima dell'avanguardia |
 
 ### Immagini (da `immagini/`, atlante `ARC08-14-ATLANTE-IMMAGINI.md`)
 
@@ -1439,7 +1489,7 @@ scena alla fine della Sessione 3, con quello che hanno addosso
 
 Il basso continuo dalla Scena 2. Niente sotto la ricognizione. Interno pieno
 al Consiglio. Il drago taglia tutto. Ai presagi, gli animali, e poi il vuoto
-che lasciano. Le lettere di `ARC08-16` sono quelle vecchie: §0-ter.
+che lasciano.
 
 ---
 
@@ -1457,15 +1507,15 @@ forma compatta: se cambiano, cambiano lì.
 
 **A.2 · Worg** (×3, le cavalcature) · `Bestiario/mostri/worg-cavalcatura-cr2.md`, avanzato a 6 DV (⚠️ potenziamento: l'SRD dà 4 DV e 30 pf) · bestia magica Media, NM · Iniz +2 · scurovisione 18 m, visione crepuscolare, **fiuto** (9 m; 18 m se il vento gli porta l'odore, 4,5 m se lo porta via) · Ascoltare +7, Osservare +7, Nascondersi +4, Muoversi Silenziosamente +7, Sopravvivenza +2 (+6 seguendo col fiuto) · CA 14 · pf 51 · Temp +7, Rifl +7, Vol +4 · velocità 15 m · morso +9 (1d8+4) e **sbilanciare** gratuito (+3) · Allerta, Attacco Naturale Migliorato (morso), Robustezza Migliorata (⚠️ non SRD).
 
-La pattuglia intera: **EL** circa 9.
+La pattuglia intera: **EL 8** (tre GS 5; i worg non la alzano di un punto intero).
 
-**A.3 · Hobgoblin regolare** (×9, sei con tre pregen; gli scout) · `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md`, *hobgoblin regular*, ⚠️ non SRD · GS 2 · hobgoblin combattente 3°, Medio, LM · Iniz +1 · scurovisione 18 m · Ascoltare +3, Osservare +2 · CA 19 (giaco di maglia perfetta, scudo pesante +1), contatto 11, colto alla sprovvista 18 · pf 23 · Temp +6, Rifl +3, Vol +1 · velocità 6 m · *spada lunga perfetta* +6 (1d8+1, 19-20); arco lungo composito (+1) +4 (1d8+1, ×3) · Allerta, Arma Focalizzata (spada lunga) · *mantello della resistenza +1*, una pozione di *cura ferite moderate* · Comune, Goblin.
+**A.3 · Hobgoblin regolare** (×9, sei con tre pregen; gli scout) · `Bestiario/mostri/hobgoblin-regular-warrior3-cr2.md`, *hobgoblin regular*, ⚠️ non SRD · GS 2 · hobgoblin combattente 3°, Medio, LM · Iniz +1 · scurovisione 18 m · Ascoltare +3, Osservare +2 · CA 19 (cotta di maglia perfetta, scudo pesante +1), contatto 11, colto alla sprovvista 18 · pf 23 · Temp +6, Rifl +3, Vol +1 · velocità 6 m · *spada lunga perfetta* +6 (1d8+1, 19-20); arco lungo composito (+1) +4 (1d8+1, ×3) · Allerta, Arma Focalizzata (spada lunga) · *mantello della resistenza +1*, una pozione di *cura ferite moderate* · Comune, Goblin.
 
-**A.4 · Il sergente** (la ricognizione e l'avanguardia: è lo stesso) · `Bestiario/mostri/hobgoblin-bladebearer-ftr6-cr6.md`, *hobgoblin bladebearer*, ⚠️ non SRD, con l'armatura completa al posto della giaco di maglia · GS 6 · hobgoblin guerriero 6°, Medio, LM · Iniz +4 · scurovisione 18 m · Ascoltare +1, Osservare +1 · CA **21** (armatura completa +8, Des +1 fino al tetto, anello di protezione +1, Difesa con Due Armi +1), contatto 12, colto alla sprovvista 20 · pf **50** · Temp +7, Rifl +6, Vol +5 · velocità 6 m · *spada lunga +1* +11/+6 (1d8+6, 19-20); con due spade +9/+4 (1d8+6) e *spada lunga perfetta* +9/+4 (1d8+3) · Combattere con Due Armi e Migliorato, Difesa con Due Armi, Arma Focalizzata e Specializzata (spada lunga), Volontà di Ferro, *Oversized Two-Weapon Fighting* (⚠️ non SRD) · due pozioni di *cura ferite moderate*, il corno · Comune, Goblin. **Fugge sotto i 25 pf.** Nell'avanguardia: +1 ad AU e DU di tutti i reparti dal round 3.
+**A.4 · Il sergente** (la ricognizione e l'avanguardia: è lo stesso) · `Bestiario/mostri/hobgoblin-bladebearer-ftr6-cr6.md`, *hobgoblin bladebearer*, ⚠️ non SRD, con l'armatura completa al posto della corazza di piastre +1 · GS 6 · hobgoblin guerriero 6°, Medio, LM · Iniz +4 · scurovisione 18 m · Ascoltare +1, Osservare +1 · CA **21** (armatura completa +8, Des +1 fino al tetto, anello di protezione +1, Difesa con Due Armi +1), contatto 12, colto alla sprovvista 20 · pf **50** · Temp +7, Rifl +6, Vol +5 · velocità 6 m · *spada lunga +1* +11/+6 (1d8+6, 19-20); con due spade +9/+4 (1d8+6) e *spada lunga perfetta* +9/+4 (1d8+3) · Combattere con Due Armi e Migliorato, Difesa con Due Armi, Arma Focalizzata e Specializzata (spada lunga), Volontà di Ferro, *Oversized Two-Weapon Fighting* (⚠️ non SRD) · due pozioni di *cura ferite moderate*, il corno · Comune, Goblin. **Fugge sotto i 25 pf.** Nell'avanguardia: +1 ad AU e DU di tutti i reparti dal round 3.
 
-Gli scout col sergente: **EL** circa 9. Pattuglia e scout insieme: **EL** circa 11.
+Gli scout col sergente: **EL** circa 9. Pattuglia e scout insieme: **EL** circa 10.
 
-**A.5 · Fauci di Palude, per la Scena 7** · non si ricopia: statblocco completo in `ARC08-01`, PNG nemici. Per la scena servono: CA **29**, pf **337**, RD 10/magia, RI **21**, volare 45 m (scarsa), soffio in linea di 30 m **14d4** acido (Riflessi **CD 29** dimezza), Presenza terrificante **90 m**, Volontà **CD 25** (⚠️ potenziamento non SRD: 63 m nell'SRD).
+**A.5 · Fauci di Palude, per la Scena 7** · non si ricopia: statblocco completo in `ARC08-01`, PNG nemici. Per la scena servono: CA **29**, pf **337**, RD 10/magia, RI **21**, volare 45 m (scarsa), soffio in linea di 30 m **14d4** acido (Riflessi **CD 29** dimezza), Presenza terrificante **90 m**, Volontà **CD 25** (⚠️ potenziamento non SRD: 54 m nell'SRD per un adulto).
 
 ### A.6 · I pregen: quello che si tira stasera
 
@@ -1483,8 +1533,10 @@ giocatori in `ARC08-15`. Il conto delle abilità, grado per grado, è in
 **Gli incantesimi che contano stasera.** Dara: *passare senza tracce*,
 *intralciare*, *grazia del gatto* (la carta di Dara). Thorin: *silenzio*,
 *scolpire pietra*, *preghiera*, *colpo infuocato*, *comunione*, le *rune di
-potere*. Nala: *immagine silenziosa*, *invisibilità*, *silenzio*,
-*suggestione*, *velocità*, e la musica bardica.
+potere*. Nala: *immagine silenziosa*, *invisibilità* (a tocco, una per
+incantesimo di 2°), *silenzio*, *suggestione*, *velocità*, e la musica
+bardica. Nala non ha pozioni: lancia spontanea, e i suoi incantesimi di 2° al
+giorno sono quattro.
 
 **Restano da verificare** `[INFERRED — da chiudere sul manuale, non per
 gusto]`: il punto in più di Dara a Osservare e Ascoltare (+18 sullo

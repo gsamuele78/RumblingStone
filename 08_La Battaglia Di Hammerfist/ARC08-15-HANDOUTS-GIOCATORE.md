@@ -26,9 +26,8 @@
 
 > *La Corona vi tira attraverso mille anni, e mille anni passano in un
 > respiro. Pochi giorni no: quelli la Corona li trattiene, i giorni in cui
-> Hammerfist si è preparata e ha tenuto le mura senza di voi. Per quei
-> giorni si guarda da altri occhi. Quattro nani, uno
-> a testa: un campione col martello del nonno, un'esploratrice che conta i
+> Hammerfist si è preparata e ha tenuto le mura senza di voi. Quei giorni
+> li ha visti qualcun altro. Quattro nani, uno a testa: un campione col martello del nonno, un'esploratrice che conta i
 > fuochi del nemico dal crinale, un vecchio sacerdote con la polvere delle
 > rune sotto le unghie, una cantastorie che ascolta dietro le porte.
 > Le loro mani fanno quello che decidete voi, e quello che fanno resta
@@ -50,6 +49,14 @@
 - Se il tuo eroe muore, per il resto della visione giochi da capitano
   (libretto, §9, modo C). Nella Sessione 1, dopo la ricognizione, guidi
   nell'avanguardia la squadra di guastatori del caduto, senza gesto.
+- Alla fine della Sessione 1 c'è una battaglia a reparti, col libretto della
+  battaglia campale. Le regole si spiegano a pezzi: trenta secondi in
+  apertura; più tardi, subito prima della scaramuccia, dieci-quindici minuti
+  sui paragrafi 1, 3 e 4 (con Scavare), sul gesto Combattere e Comandare del
+  5, sulla tacca del 7 e sulle regole del pendio del 13, e poi un primo round
+  giocato piano come l'esempio del 10. Il morale, la notte e i modi di gioco
+  (paragrafi 6, 8 e 9), con la tabella «Chi tiene cosa», all'inizio della
+  Sessione 2.
 
 > **Nota DM (non da dare)**
 > - **Dove sta nel tempo.** Fra la Scena 1 e la Scena 2 di `ARC07-DEF-5`.
@@ -75,9 +82,9 @@
 
 ## HANDOUT 1-4 — Le schede dei 4 "Eroi di Hammerfist" (pregen)
 
-> **Quando darli**: all'**inizio della Sessione 1**, insieme al libretto
-> della battaglia campale (`ARC08-18`), che si legge a inizio serata. I
-> giocatori impersonano questi quattro fino al
+> **Quando darli**: all'**inizio della Sessione 1**, con la loro carta dei
+> poteri. Il libretto della battaglia campale (`ARC08-18`) si dà più tardi,
+> prima della battaglia. I giocatori impersonano questi quattro fino al
 > passaggio di testimone (`ARC08-11-PONTE-ARRIVO.md`), poi riprendono i loro
 > Rumbling Stones. Una scheda per giocatore, una pagina l'una, e con ogni
 > scheda la sua **carta dei poteri** (sotto), una pagina, quella di Thorin
@@ -254,7 +261,7 @@ livelli più alto: si può fare solo con incantesimi fino al 4°.
 | ***Favore Divino*** (1°) | su di te, dura 1 minuto | **+3** a colpire e ai danni | no |
 | ***Arma Magica*** (1°, dominio) | tocco, dura 12 minuti | un'arma diventa +1 | no |
 | Trucchetti | a volontà fra i 6 preparati | *Guida* (+1 a un tiro), *Resistenza* (+1 ai TS), *Virtù* (1 pf temporaneo), *Luce*, *Riparare*, *Individuazione del Magico* | no |
-| **Scacciare Non Morti** | 10 volte al giorno | prova 1d20+8; danni di scacciare 2d6+15 | no |
+| **Scacciare Non Morti** | 10 volte al giorno | prova 1d20+5 (Carisma +3, +2 da Conoscenze religione); danni di scacciare 2d6+15 | no |
 | **Rune di Potere** | 3 volte al giorno, round completo | un'arma ottiene +1 per un'ora | no |
 
 ### Carta di Nala — il canto e la lama
@@ -266,15 +273,15 @@ al giorno, scegliendo al momento. CD **14 + livello** dell'incantesimo.
 |---|---|---|---|
 | **Ispirare Coraggio** | 8 usi di musica al giorno, azione standard; dura finché canti e 5 round dopo | gli alleati che ti sentono hanno **+2** a colpire e ai danni, e ai TS contro paura e charme. Con il **Canto di Guerra Nanico** i nani alleati hanno +1 in più a colpire (+3 in tutto) | **+1** ai tuoi reparti per il giorno; il Canto di Guerra Nanico non cambia niente |
 | **Suggestione** (musica) | un uso, su una creatura affascinata | le fai fare una cosa ragionevole (TS Volontà CD 18) | no |
-| **Affascinare** (musica) | un uso, chi ti sente entro 27 m | restano fermi ad ascoltarti (TS Volontà CD 18), finché canti | no |
+| **Affascinare** (musica) | un uso, chi ti sente entro 27 m | restano fermi ad ascoltarti finché canti; il TS Volontà ha come CD il risultato della tua prova di Intrattenere (d20 + 16) | nell'inganno dell'avanguardia, CD **18** |
 | **Attacco Furtivo** | contro chi è colto alla sprovvista o fiancheggiato | **+3d6** danni (in media 10,5) | no |
 | ***Velocità*** (3°) | fino a 13,5 m, dura 8 round | fino a 8 alleati a non più di 9 m fra loro: un attacco in più nell'attacco completo, **+1** a colpire, CA e Riflessi, **+9 m** di velocità | **+1** ai tuoi reparti per il giorno |
 | ***Suggestione*** (3°) | fino a 13,5 m | come quella del canto, TS Volontà CD 17, dura 8 ore | no |
 | ***Dissolvi Magie*** (3°) | fino a 54 m | tira 1d20+8 contro 11 + livello dell'incantatore nemico | no |
-| ***Invisibilità*** (2°) | tocco, dura 8 minuti | invisibile finché non attacchi | no |
+| ***Invisibilità*** (2°) | tocco, dura 8 minuti | una creatura invisibile finché non attacca; per quattro compagni servono quattro incantesimi di 2° | no |
 | ***Immagine Speculare*** (2°) | su di te, dura 8 minuti | **1d4+2** copie di te: ogni colpo che arriva ne scioglie una a caso | no |
 | ***Silenzio*** (2°) | fino a 216 m, dura 8 round | nessun suono in 6 m di raggio (TS Volontà CD 16 se lo metti su una creatura) | no |
-| ***Frantumare*** (2°) | fino a 54 m | spezza vetro, cristallo e oggetti fragili in 1,5 m di raggio; contro una creatura di cristallo **8d6** (TS Tempra CD 16, metà) | no |
+| ***Frantumare*** (2°) | fino a 13,5 m | spezza vetro, cristallo e oggetti fragili in 1,5 m di raggio; contro una creatura di cristallo **8d6** (TS Tempra CD 16, metà) | no |
 | ***Charme su Persone*** (1°) | fino a 13,5 m, dura 8 ore | un umanoide ti tratta da amica (TS Volontà CD 15) | no |
 | ***Immagine Silenziosa*** (1°) | fino a 216 m, finché ti concentri | un'illusione muta, grande fino a 12 cubi da 3 m (TS Volontà CD 15 per chi la tocca) | no |
 | ***Cura Ferite Leggere*** (1°) | tocco | cura **1d8+5** (in media 9,5) | no |

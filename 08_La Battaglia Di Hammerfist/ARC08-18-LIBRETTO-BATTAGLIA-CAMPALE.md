@@ -35,7 +35,8 @@ Servono due d20 di colore diverso per giocatore: uno **rosso** per
 l'attacco, uno **bianco** per la difesa. Il foglio dei reparti (§14), con
 i quadratini dei PFU e le tacche del settore.
 
-**Chi tiene cosa**, se il gruppo non decide altro:
+**Chi tiene cosa**, se il gruppo non decide altro. Si guarda all'alba del
+Giorno 1, insieme ai modi di gioco (§9):
 
 | Eroe | Settore | Reparti | Fronte |
 |---|---|---|---|
@@ -333,15 +334,22 @@ Tre o quattro minuti a round, cinque round a giorno: il
 primo e il secondo giorno stanno in una serata con i duelli. Il terzo giorno
 dura quattro round e lascia il resto della serata alla resistenza al Cuore.
 
-**Cosa si spiega quando.** Nella Sessione 1, trenta secondi in apertura: più tardi guiderete i vostri soldati, e vi si spiega come quando succede. Prima della scaramuccia, dieci-quindici minuti: §1, §3, §4 con Scavare, il gesto Combattere e Comandare di §5, la tacca di §7, poi il primo round giocato piano come l'esempio di §10. Il morale (§6), la notte (§8) e i modi di gioco (§9) si spiegano all'inizio della Sessione 2.
+**Cosa si spiega quando.** Nella Sessione 1, trenta secondi in apertura:
+più tardi guiderete i vostri soldati, e vi si spiega come quando succede.
+Dopo il drago e prima della scaramuccia, dieci-quindici minuti: §1, §3, §4
+con Scavare, il gesto Combattere e Comandare di §5, la tacca di §7 e le
+regole del pendio di §13, poi il primo round giocato piano come l'esempio
+di §10. Il morale (§6), la notte (§8) e i modi di gioco (§9), con «Chi tiene
+cosa» di §1, si spiegano all'inizio della Sessione 2; sul pendio il DM dice
+solo quanto vale il morale sui dadi.
 
 ---
 
 ## 13. La prima battaglia: l'avanguardia
 
 **Quando**: nella Sessione 1, dopo l'avvistamento, il giorno prima che l'orda
-arrivi alle mura. Il libretto si spiega subito prima (§12), e questa è la
-prima volta che si tira.
+arrivi alle mura. Il libretto si spiega subito prima, dopo il drago (§12), e
+questa è la prima volta che si tira.
 
 **La scena.** Ogni eroe guida una **squadra di guastatori**: un solo reparto
 (Borin la Guardia del Cancello, Thorin e Nala veterani, Dara balestrieri),
@@ -360,9 +368,11 @@ mura. L'avanguardia della Mano Rossa li trova prima di sera.
   tirano giù chi lavora chino.
 - Il fronte di ogni squadra è di **uno** nei primi due round, poi di **due**.
 - **La ritirata è di tutto il gruppo.** Alla fine di ogni round si decide
-  insieme se restare o correre alle mura ad avvertire le retrovie. Una
-  squadra sola non si ritira: può solo smettere di scavare e combattere
-  (Colpire o Tenere).
+  insieme se restare o correre alle mura ad avvertire le retrovie. Se si
+  corre, il round dopo è il **round della ritirata**: nessuno scava, l'orda
+  tira i suoi bianchi come sempre, e alla fine di quel round la scaramuccia
+  è finita. Una squadra sola non si ritira: può solo smettere di scavare e
+  combattere (Colpire o Tenere).
 - **La squadra travolta.** Alla terza tacca, o a 0 PFU, la squadra fugge, e
   l'orda trova e disfa le mezze trappole che quella squadra ha scavato.
   L'eroe torna con lei, con i punti ferita che ha.
@@ -370,23 +380,25 @@ mura. L'avanguardia della Mano Rossa li trova prima di sera.
   round e sfida il sergente hobgoblin sulla mappa, come il gesto Sfidare di
   §5. In quel round la sua squadra tira senza di lui e non prende tacche.
   Sotto metà dei punti ferita il sergente fugge, e quello che dava
-  all'avanguardia se ne va con lui.
-- **La retroguardia.** Nel round in cui il gruppo si ritira, un eroe può
-  restare indietro a coprire la ritirata di tutti: in quel round nessuna
-  squadra è travolta.
+  all'avanguardia se ne va con lui. Non è un comandante dell'assedio: la sua
+  fuga non muove il morale della rocca, e nemmeno la sua morte.
+- **La retroguardia.** Nel round della ritirata un eroe può restare
+  indietro a coprire la ritirata di tutti: in quel round nessuna squadra è
+  travolta.
 - **L'inganno** (Nala, o chiunque abbia un'illusione o un ammaliamento di
   1° livello o più). È un gesto, anche con un incantesimo di 1°. Il reparto
   nemico davanti alla tua squadra tira il TS, d20 + 4 contro la CD
   dell'incantesimo: se lo fallisce, per quel round non tira il bianco e la
   squadra non prende la tacca. Con *immagine silenziosa* (CD 15) riesce metà
-  delle volte, con *affascinare* (CD 18) due su tre.
+  delle volte, con *affascinare* due su tre: nella battaglia campale la sua
+  CD è **18**, mentre sulla mappa è il risultato della prova di Intrattenere.
 
 **Cosa vale sul pendio, e cosa no.**
 
 | Regola dell'assedio | Sul pendio |
 |---|---|
 | il +1 al bianco del primo giorno | **non vale**: non ci sono mura |
-| il morale della rocca | **vale**: parte da +1, più quello che la serata ha già portato (il consiglio, il drago) |
+| il morale della rocca | **vale**: parte da +1, più quello che la serata ha già portato (il drago) |
 | un reparto distrutto, −1 al morale | **vale**: una squadra travolta o a 0 PFU è un reparto perso, e il −1 resta per l'assedio |
 | l'eroe ferito (§5) | **vale** |
 | le tacche | **vale**, ma si contano per squadra |

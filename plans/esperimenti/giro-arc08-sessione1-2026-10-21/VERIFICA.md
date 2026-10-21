@@ -368,3 +368,59 @@ superata». Correzione vera: le tre tabelle riscritte coi numeri del master.
   «cosa c'è sui corpi» la lista è corta.
 - L'apparato (`APP`) è allineato al master: rigenerato oggi, coincide riga
   per riga.
+
+---
+
+## Seconda passata applicata (2026-10-21)
+
+Applicata sui sei file della verifica (`M`, `APP` rigenerato, `LIB`, `SEG`,
+`HO`, `L1`), con le scelte del coordinatore: modo di gioco e «Chi tiene
+cosa» all'alba del Giorno 1; il libretto §12 è la fonte di «cosa si spiega
+quando»; numeri SRD 3.5 per gli incantesimi; Nala senza pozioni, perché la
+sua scheda in `Bestiario/png/` non le ha.
+
+| Voce | Cosa ho fatto |
+|---|---|
+| T14 | chiusa con B.1 |
+| T28 | chiusa con B.2 |
+| B.1 | `HO`, Handout 1-4: le schede si danno con la carta dei poteri, il libretto «più tardi, prima della battaglia». L'Handout 0 ha una riga nuova con i pezzi del libretto |
+| B.2 | `LIB` §12 resta la fonte, con due aggiunte: il momento («dopo il drago e prima della scaramuccia») e le regole del pendio del §13; il morale non si spiega, il DM dice quanto vale sui dadi. `M` §5, `M` §0 (preparare, consegne, tempi), `M` §11 e `HO` 0 elencano gli stessi paragrafi. La frase «il libretto avrà la sua riga» è diventata «fa fede il libretto §12». Il pezzo del libretto è passato fra la Scena 7 e la Scena 8; la pausa resta dopo la Scena 6 |
+| B.3 | Consiglio: tolta la decisione «Strategie di resistenza»; la decisione 3 è ora «Il Re e il Cancello» (Diplomazia CD 18 o una ragione), con la sua riga nella tabella delle leve. La decisione 1 non usa più la tabella del libretto, e i due reparti si scambiano all'alba del Giorno 1. Tolta la riga «modo di ogni giocatore» dalla scheda. `LIB` §1 dice che «Chi tiene cosa» si guarda all'alba del Giorno 1. Consiglio a 20' |
+| B.4 | `M` Scena 4, «Il fiuto dei worg»: cosa succede quando scatta (la pattuglia si ferma, +5 per un round, l'invisibile non è trovato ma la pattuglia resta un giro), segnato come scelta del modulo. Lo stesso in `L1` 1A-1 |
+| B.5 | correzione vera, non barrata: in `L1` riscritte SEQUENZA TATTICA, DISTANZE (via il +2 d'altezza), AMBIENTE, TATTICHE ed EVOLUZIONE di 1A-2; PROVE FURTIVE (era la sfida a successi), DISTANZE (fiuto SRD), luce, TATTICHE ed EVOLUZIONE di 1A-1; «Quando si usa» e INTELLIGENCE A SOGLIE di 1A-3 (via l'Iniziativa di massa e la Sopravvivenza CD 22). Ogni sezione ha in testa il rimando al master. Le griglie non cambiano: gli SVG rigenerati sono identici |
+| B.6 | `LIB` §13 e `SEG` §2: la fuga del sergente, e la sua morte, non muovono il morale |
+| B.7 | `LIB` §13, «vale / non vale»: «(il drago)» |
+| B.8 | `M` Scena 4 e App. A.6: *invisibilità* a tocco, una per incantesimo di 2°, fino a quattro al giorno; niente pozioni. `HO`, carta di Nala, lo dice. Lo statblocco di `ARC08-01` elenca ancora tre pozioni: file fuori da questo giro |
+| B.9 | `M` §0-bis: le CD fisse di natura e fatica restano quelle del manuale, quelle sociali e di mestiere sono alzate |
+| B.10 | `M` §0: totale 3 h 05 – 3 h 50, 4 h 05 col duello; se la 1A sfora a fine Fase 2, il taglio si usa subito |
+| B.11 | `M` §3, «Come finisce», e §8: il corno dopo il conto di Dara è «visti ma via», prima è «allarme, e niente vista» |
+| B.12 | `M` §7: i due +2 contro Gorthak si sommano (primi tre round; primo attacco a +4) |
+| B.13 | cotta di maglia perfetta in `M` (comparse, A.3) e `SEG`; il sergente ha l'armatura completa «al posto della corazza di piastre +1», come nella scheda del Bestiario |
+| B.14 | `M` §0-ter e §11: tolte le due frasi sulle lettere vecchie di `ARC08-16` e `ARC08-04`; la tabella resta come storia |
+| B.15 | **respinta a ragione**: nel *Player's Handbook* 3.5 (p. 273, testo SRD) *potere della giustizia* dà +4 For, +2 Cos, +2 armatura naturale e RD 6/male al 12°. La carta di Thorin (+15, 2d6+7, +12 pf, CA 23) torna; il +8/+4 della verifica è il 3.0 |
+| B.16 | `HO`: *frantumare* a 13,5 m (vicino, LI 8) |
+| B.17 | `HO`, `LIB` §13 e `M` Scena 8: CD 18 di *affascinare* dichiarata come semplificazione della battaglia campale; nell'SRD è la prova di Intrattenere |
+| B.18 | `HO`: Scacciare 1d20+5 (Car +3, sinergia +2), come lo statblocco di `ARC08-01` |
+| B.19 | `M` Scena 7 e §0-bis: +2 alla Volontà contro la Presenza per chi sta entro 9 m da Borin |
+| B.20 | `M` Scena 7 e A.5: l'SRD dà 54 m all'adulto |
+| B.21 | EL 8 la pattuglia, 9 circa gli scout, 10 circa insieme, in `M`, `SEG` e `L1` |
+| B.22 | `M` Scena 4 e §0-bis: Intimidire CD 23 segnato come scelta del modulo, con il conto SRD accanto |
+| B.23 | `M` Scena 8: due esiti nuovi, il sergente morto nel duello (vale come la fuga, non si interroga) e tutte le squadre travolte (zero trappole dal pendio, resta quella della Preparazione); la scheda ha «sergente fuggito o morto» |
+| B.24 | `M` e `LIB` §13: la decisione di correre apre il round della ritirata (nessuno scava, l'orda tira i bianchi, poi la scena finisce); la retroguardia vale in quel round |
+| B.25 | `M` round 1 e `SEG` §1: lo Sbilanciare vale una volta sola anche con due reparti di lupi |
+| B.26 | `M` §8: chi scende al campo torna col box del gradino 30, senza leva; il gradino di Dara resta il suo, la ricognizione finisce «visti ma via» |
+| B.27 | `M` Scena 6: le due azioni sono la mattina e il pomeriggio del Giorno −2; gli incantesimi tornano prima del drago |
+| B.28 | `M` e `HO`: «Quei giorni li ha visti qualcun altro» (la proposta «li vedrete» faceva scattare il P1 del box) |
+| B.29 | tolto «e non è un modo di dire» |
+| B.30 | «Orchi e hobgoblin, e il fumo di cento fuochi» (il «più di quanti sappiate contare» resta); «centinaia di torce»; «novecento paia d'occhi» |
+| B.31 | pendio: «così vicine che l'ombra della cinta arriva fino alla prima fossa»; corno in `M` e `SEG`: «Laggiù, in piedi sulla cresta… guarda verso le mura» |
+| B.32 | «Quattro cose da sapere»; i quattro box della Fase 3 riportati a capo; «si mostra per la prima volta». «Le loro mani» si tiene, come diceva la verifica |
+| Da sapere | tesoro: aggiunte le cotte, gli scudi +1, le spade e gli archi degli scout e la spada perfetta del sergente. Gli otto `[INFERRED]` restano |
+
+Misure: `validate_modules` 0 errori; `copertura_scene --file` 0 rilievi;
+`ciclo_prosa confronta --rif HEAD` 0 box impoveriti sui quattro file (i ✗
+sono i numeri cambiati di proposito); `misura_craft --box` invariato per
+ARC-08 (104 box, nessuno sopra le 12 righe); `validate_maps` tutto
+allineato; `componenti --check` allineato; `gate_locale --rapido` 50 passi, 0
+rossi, 2 avvisi (typst assente in locale: corredo e schede in PDF non
+compilati). `memoria.py` rigenerata per la riga nuova del CHANGELOG.

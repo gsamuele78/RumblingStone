@@ -23,7 +23,7 @@ spiegare la regola.
 | **Orchi** | **Carica selvaggia** | nel round in cui arrivano sul fronte: **+1** AU e **−2** DU | `ARC08-02`, unità orchi (AU +8 e DU 12 al primo round) |
 | **Orchi** | **Furia** | a 4 PFU o meno: **+1** AU | `ARC08-02`, unità orchi (AU +8 a ≤4 PFU) |
 | **Hobgoblin** | **Formazione tattica** | se sul fronte ci sono due o più reparti di hobgoblin (i guerrieri non contano: non marciano al tamburo), ognuno ha **+1** DU | `ARC08-02` e `ARC08-01`, unità hobgoblin |
-| **Lupi e goblin** | **Sbilanciare** | il reparto nanico che hanno davanti ha **−2** al bianco | `ARC08-02`, unità worg (−2 DU al bersaglio) |
+| **Lupi e goblin** | **Sbilanciare** | il reparto nanico che hanno davanti ha **−2** al bianco, una volta sola anche con due reparti di lupi davanti | `ARC08-02`, unità worg (−2 DU al bersaglio) |
 | **Giganti** | **Bombardamento** | un macigno per settore; ignora le merlature delle Mura | `ARC08-02`, giganti |
 
 Come si raccontano, la prima volta:
@@ -57,8 +57,9 @@ del file.
 
 > **Read-aloud (Tolkien lead) — il corno.** *Dalla cresta viene un suono
 > lungo, basso, che non è di un animale. Le file degli hobgoblin si fermano
-> tutte insieme, e poi ripartono più in fretta. Lassù, contro il cielo, un
-> orog con una benda nera guarda giù e non si muove. Che fate?*
+> tutte insieme, e poi ripartono più in fretta. Laggiù, in piedi sulla
+> cresta, un orog con una benda nera guarda verso le mura e non si muove.
+> Che fate?*
 
 Grimjaw non si sfida e non si colpisce: la cresta è a 400 m, oltre la
 portata dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
@@ -67,7 +68,9 @@ portata dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
 
 Si può **Sfidare** dal round 3 (libretto §13): l'eroe lascia la squadra per
 un round e lo affronta sulla mappa del pendio. Sotto i **25 pf** fugge, come
-un comandante, e il suo +1 esce dall'avanguardia. La retroguardia è un'altra
+un comandante, e il suo +1 esce dall'avanguardia; ma non è un comandante
+dell'assedio, e la sua fuga non dà il +2 al morale (libretto §13). Se muore
+nel duello vale lo stesso. La retroguardia è un'altra
 cosa: copre la ritirata e non porta al duello.
 
 È lo stesso sergente della postazione degli scout nella ricognizione. Se lì
@@ -75,7 +78,7 @@ cosa: copre la ritirata e non porta al duello.
 
 **Il sergente** · *hobgoblin bladebearer* di *Red Hand of Doom* (D&D 3.5,
 ⚠️ **non SRD**), dal PCGen `hobgoblin bladebearer 6 liv longsword`, con
-l'armatura completa al posto della giaco di maglia · GS 6 · hobgoblin
+l'armatura completa al posto della corazza di piastre +1 · GS 6 · hobgoblin
 guerriero 6°, Medio, LM · Iniz +4 · scurovisione 18 m · Ascoltare +1,
 Osservare +1 · CA **21** (armatura completa +8, Des +1 fino al tetto
 dell'armatura, anello di protezione +1, Difesa con Due Armi +1), contatto 12,
@@ -119,11 +122,11 @@ Osservare +7, Nascondersi +4, Muoversi Silenziosamente +7, Sopravvivenza +2
 velocità 15 m · morso +9 (1d8+4) e **sbilanciare** gratuito (+3) · Allerta,
 Attacco Naturale Migliorato (morso), Robustezza Migliorata (⚠️ non SRD).
 
-La pattuglia intera: EL 9 circa.
+La pattuglia intera: EL 8 (tre GS 5; i worg non la alzano di un punto intero).
 
 **Hobgoblin regolare** (×9, la postazione degli scout) · *hobgoblin
 regular*, non SRD · GS 2 · hobgoblin combattente 3°, Medio, LM · Iniz +1 ·
-scurovisione 18 m · Ascoltare +3, Osservare +2 · CA 19 (giaco di maglia
+scurovisione 18 m · Ascoltare +3, Osservare +2 · CA 19 (cotta di maglia
 perfetta, scudo pesante +1), contatto 11, colto alla sprovvista 18 · pf 23
 (3d8+6) · Temp +6, Rifl +3, Vol +1 · velocità 6 m · *spada lunga perfetta*
 +6 (1d8+1, 19-20); arco lungo composito (+1) +4 (1d8+1, ×3) · Allerta, Arma
@@ -131,7 +134,7 @@ Focalizzata (spada lunga) · *mantello della resistenza +1*, una pozione di
 *cura ferite moderate* · lingue Comune, Goblin.
 
 Gli scout sono nove più **il sergente** qui sopra: EL 9 circa. Pattuglia e
-scout insieme: EL 11 circa. Con tre pregen gli scout sono sei più il
+scout insieme: EL 10 circa. Con tre pregen gli scout sono sei più il
 sergente.
 
 ### Il tracciatore dell'avanguardia

@@ -33,6 +33,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | Intimidire | 23 |
 | SCENA 4 | descrive le tonache, tira Conoscenze (religione) | 23 |
 | SCENA 5 | Diplomazia | 18 |
+| SCENA 5 | con Diplomazia | 18 |
 | SCENA 6 | prova | 10 |
 | SCENA 6 | Artigianato (pietra) | 20 |
 | SCENA 6 | Sopravvivenza | 18 |
@@ -50,6 +51,7 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 9 | Ascoltare | 18 |
 | SCENA 10 | · il prigioniero ha parlato (Intimidire | 23 |
 | SCENA 10 | 1B-1 · Diplomazia | 18 |
+| SCENA 10 | 1B-1 · il Re convinto (Diplomazia | 18 |
 | SCENA 10 | 1B-2 · Artigianato (pietra) | 20 |
 | SCENA 10 | · trappole progettate (Sopravvivenza o Artigianato | 18 |
 | SCENA 10 | 1B-2 · Diplomazia | 16 |
@@ -68,15 +70,15 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | il sentiero, la pattuglia | Mercer lead | 5 |
 | SCENA 4 | il torrione | LotR lead | 6 |
 | SCENA 4 | il campo, il primo sguardo | LotR lead | 5 |
-| SCENA 4 | il campo, il conto | Salvatore lead | 4 |
+| SCENA 4 | il campo, il conto | Salvatore lead | 5 |
 | SCENA 4 | il campo, i comandi | Game of Thrones lead | 6 |
-| SCENA 4 | il campo, la palude | Tolkien lead | 5 |
+| SCENA 4 | il campo, la palude | Tolkien lead | 6 |
 | SCENA 5 | la Sala del Trono Ancestrale | Casa di Davide lead | 7 |
 | SCENA 6 | il cortile interno | Mercer lead | 7 |
 | SCENA 7 | le mura, il drago | Tolkien lead | 7 |
 | SCENA 8 | il pendio | Salvatore lead | 7 |
 | SCENA 8 | il pendio, i lupi | Mercer lead | 5 |
 | SCENA 8 | il pendio, la pattuglia avanzata | Andor lead | 5 |
-| SCENA 8 | il pendio, il corno | Tolkien lead | 4 |
+| SCENA 8 | il pendio, il corno | Tolkien lead | 5 |
 | SCENA 9 | i camminamenti, di notte | Tolkien lead | 7 |
 | SCENA 10 | la statua del Re Antenato | Casa di Davide lead | 7 |
