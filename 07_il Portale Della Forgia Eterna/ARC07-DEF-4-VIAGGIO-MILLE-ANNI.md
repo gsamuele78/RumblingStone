@@ -4380,7 +4380,7 @@ fuochi.
 via, a M2–N3. La soglia è a nord, M9–N9, in piena luce del braciere a L10. I
 tre pali sono a K12, N12 e Q12; quello centrale, N12, porta la runa della
 barriera di lame. Zog'tar siede sul seggio a O13–P14, con il braciere del
-seggio a K14; le quattro guardie gli stanno attorno, a M13, N13, Q13 e M14.
+seggio a K14; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14.
 Balvar è sullo sgabello a R14, nel fondo buio Q13–R14. Il telo est, «il telo a
 sinistra», va da S10 a S14; il telo del glifo è quello sopra il seggio,
 N15–P15. Grask è seduto fuori, a P16, due quadretti dietro il seggio, e il

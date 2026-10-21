@@ -198,10 +198,6 @@
 <ellipse cx="481.4" cy="432.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="480.0" cy="430.0" r="10.36" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="480.0" cy="430.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
-<circle cx="508" cy="430" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
-<ellipse cx="509.4" cy="432.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
-<circle cx="508.0" cy="430.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
-<circle cx="508.0" cy="430.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <circle cx="144" cy="458" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="145.0" cy="461.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_lowwall" x="130" y="444" width="28" height="28"/>
@@ -224,6 +220,10 @@
 <ellipse cx="481.4" cy="460.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="480.0" cy="458.0" r="10.36" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.6"/>
 <circle cx="480.0" cy="458.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
+<circle cx="508" cy="458" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
+<ellipse cx="509.4" cy="460.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
+<circle cx="508.0" cy="458.0" r="10.36" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.6"/>
+<circle cx="508.0" cy="458.0" r="7.959999999999999" fill="none" stroke="#ffffff" stroke-width="0.9" opacity="0.55"/>
 <circle cx="536" cy="458" r="12.88" fill="#efe4c9" opacity="0.75" filter="url(#softblur)"/>
 <ellipse cx="537.4" cy="460.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
 <circle cx="536.0" cy="458.0" r="10.36" fill="url(#g_f4b400)" stroke="#241c10" stroke-width="1.6"/>
@@ -420,8 +420,8 @@
 <text x="404.4" y="425" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
 <circle cx="432.4" cy="421.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
 <text x="432.4" y="425" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
-<circle cx="516.4" cy="421.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
-<text x="516.4" y="425" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
+<circle cx="516.4" cy="449.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
+<text x="516.4" y="453" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
 <circle cx="404.4" cy="449.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
 <text x="404.4" y="453" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">7</text>
 <circle cx="488.4" cy="505.6" r="7" fill="#1a140a" stroke="#ffffff" stroke-width="1.1"/>
@@ -454,7 +454,7 @@
 <text x="68" y="855" font-size="11" fill="#3b2e1e">N13 — Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)</text>
 <circle cx="54" cy="866" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="869.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
-<text x="68" y="870" font-size="11" fill="#3b2e1e">Q13 — Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)</text>
+<text x="68" y="870" font-size="11" fill="#3b2e1e">Q14 — Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)</text>
 <circle cx="54" cy="881" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="884.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">7</text>
 <text x="68" y="885" font-size="11" fill="#3b2e1e">M14 — Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)</text>
