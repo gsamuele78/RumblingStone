@@ -353,11 +353,11 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 07 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 ⛰ ⛰
 08 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 ⛰ ⛰
 09 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 ⛰ ⛰
-10 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 ⛰ ⛰ ⛰ ⛰
-11 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 ⛰ ⛰ ⛰ ⛰
-12 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 ⛰ ⛰ ⛰ ⛰
-13 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 ⛰ ⛰ ⛰ ⛰
-14 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 ⛰ ⛰ ⛰ ⛰
+10 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟫 🟫 🟫 🟫 🟩 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+11 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟫 🟫 🟫 🟫 🟩 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+12 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟫 🟫 🟫 🟫 🟩 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+13 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟫 🟫 🟫 🟫 🟩 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+14 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟫 🟫 🟫 🟫 🟩 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 15 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🪨 🪨 🪨 🟩 🟩 ⛰ ⛰
 16 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🪨 🪨 🪨 🟩 🟩 ⛰ ⛰
 17 ⛰ ⛰ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🪨 🪨 🪨 🟩 🟩 ⛰ ⛰
@@ -454,7 +454,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 @mark 6 ; J99 ; Thorin Runaforte (Clr)
 @mark 7 ; K99 ; Nala Cantapietre (Brd)
 @path Pattuglia Worg (loop 5 min) ; K50 K75 K95 loop ; #d62828
-@path Rotta furtiva PG (sud→nord) ; J99 I93 O84 I74 P62 I40 O17 J6 ; #1d6fd8
+@path Rotta furtiva PG (sud→nord) ; J99 I93 O84 I74 P62 I40 O17 L14 J6 ; #1d6fd8
 @zone H5-L5 ; Roccia 1 (H05-L05): copertura totale +8 CA
 @zone N15-P17 ; Roccia 2 (N15-P17): copertura parziale +4 CA
 @zone G38-I40 ; Roccia 3 (G38-I40): copertura totale +8 CA
@@ -507,7 +507,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 | Pareti del canyon ⛰ | colonne A-B e S-T (+ gole a nord) | impraticabili senza Scalare CD 20; bloccano linea di vista |
 | Sentiero 🟫 | colonne I-L, tutta la lunghezza | percorso naturale: veloce ma esposto |
 | Rocce 🪨 (1-7) | tabella sopra | copertura +4/+8 CA; +4 a Nascondersi |
-| Strozzatura | righe 10-14 (est) | passaggio obbligato largo ~9 m |
+| Strozzatura | righe 10-14, colonne H-M | passaggio obbligato largo 9 m (6 quadretti) fra pareti di roccia |
 | Luce | tutta la mappa | mattina presto, luce piena: nessun occultamento, la scurovisione non conta |
 
 ### ⚔️ TATTICHE (pattuglia Worg)
@@ -548,6 +548,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 ```
 MAPPA 1A-3 REVISED: Campo della Mano Rossa (griglia strategica)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
+DIMENSIONI: 40 colonne × 50 righe · 6 m/quadretto
 01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩

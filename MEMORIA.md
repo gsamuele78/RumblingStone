@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | mappe di ARC-08 su una sola geometria (tabella MISURE in testa a… | 🟡 da confermare col DM: 800 PF del cancello in `ARC08-02`, truppe per postazione, il Re sui bastioni il Giorno 3 |
 | 2026-10-21 | MASTER-DEF | statblocco di Nala in `ARC08-01` allineato al Bestiario (niente pozioni di invi… | ✅ |
 | 2026-10-21 | MASTER-DEF | seconda passata sulla Sessione 1: i rilievi di `VERIFICA.md` applicati (T14, T2… | ✅ B.15 respinta: *potere della giustizia* ha già i numeri 3.5 (+4 For, +2 Cos, RD 6/male al 12°) |
 | 2026-10-21 | MASTER-DEF | scelte del DM sul libretto: si spiega a pezzi (§12 «Il tempo» e cosa si spiega… | ✅ T28 · T31 |
@@ -120,7 +121,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | ✅ incantesimi di Dara confermati dal DM (lista del ranger SRD) |
 | 2026-10-21 | MASTER-DEF | libretto della battaglia campale di Hammerfist (`ARC08-18`, ADR-0096 proposta):… | 🟡 manca la prova al tavolo; carte dei comandanti `[INFERRED]` |
 | 2026-10-21 | MASTER-DEF | handout 0 di `ARC08-15`, la visione della Corona: il flashback dei pregen dentr… | ✅ resta `[INFERRED]` la *Mente Vuota* di Thorik; le schede 1-4 hanno i numeri di prima del 2026-10-16 |
-| 2026-10-21 | MASTER-DEF | D4 decisa dal DM: il flashback con i pregen di ARC-08 resta prima del 3B, com'è… | ✅ restano aperte D5 e D6 |
 
 ## Le misure che si portano dietro
 

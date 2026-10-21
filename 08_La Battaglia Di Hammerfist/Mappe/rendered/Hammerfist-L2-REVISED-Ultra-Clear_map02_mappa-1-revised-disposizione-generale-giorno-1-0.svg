@@ -8,7 +8,8 @@
 <filter id="mottle" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="4" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0.24 0 0 0 0 0.18 0 0 0 0 0.10 0 0 0 0.5 0"/></filter>
 <radialGradient id="vign" cx="0.5" cy="0.45" r="0.75"><stop offset="0.62" stop-color="#3b2e1e" stop-opacity="0"/><stop offset="1" stop-color="#3b2e1e" stop-opacity="0.16"/></radialGradient>
 <clipPath id="clipgrid"><rect x="46" y="80" width="1680" height="3024"/></clipPath>
-<clipPath id="clipheavy"><path d="M158 95.19L161.81 85.99L163.99 83.81L173.19 80L1598.81 80L1608.01 83.81L1610.19 85.99L1614 95.19L1614 120.81L1610.19 130.01L1608.01 132.19L1598.81 136L173.19 136L163.99 132.19L161.81 130.01L158 120.81Z" clip-rule="evenodd"/></clipPath>
+<clipPath id="clipheavy"><path d="M494 95.19L497.81 85.99L499.99 83.81L509.19 80L702.81 80L712.01 83.81L714.19 85.99L718 93.58L718 94.42L721.81 102.01L723.99 104.19L733.19 108L1038.81 108L1048.01 104.19L1050.19 102.01L1054 94.42L1054 93.58L1057.81 85.99L1059.99 83.81L1069.19 80L1346.81 80L1356.01 83.81L1358.19 85.99L1362 95.19L1362 120.81L1358.19 130.01L1356.01 132.19L1346.81 136L509.19 136L499.99 132.19L497.81 130.01L494 120.81Z" clip-rule="evenodd"/></clipPath>
+<pattern id="t_dais" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#b9a884"/><rect x="2.5" y="2.5" width="23" height="23" fill="#c8b795" stroke="#9c8b6a" stroke-width="1.1"/><path d="M2.5 25.5h23M25.5 2.5v23" stroke="#8b7a5c" stroke-width="1.4"/></pattern>
 <pattern id="t_deep" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#4c7ba3"/><path d="M2 8q5-3 10 0t10 0" stroke="#6f9dc0" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M-4 20q5-3 10 0t10 0t10 0" stroke="#3c648c" stroke-width="1.2" fill="none" stroke-linecap="round"/></pattern>
 <pattern id="t_earth" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#b08d68"/><circle cx="6" cy="6" r="1.1" fill="#93714e"/><circle cx="18" cy="11" r="0.9" fill="#93714e"/><circle cx="24" cy="22" r="1.2" fill="#93714e"/><circle cx="9" cy="20" r="1" fill="#c8a87f"/><circle cx="22" cy="4" r="0.8" fill="#c8a87f"/><path d="M3 15q4-1.5 8 0" stroke="#a17d59" stroke-width="0.8" fill="none"/></pattern>
 <pattern id="t_grass" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#b3c489"/><path d="M5 21q1.5-4 3-5M8 21q0-3 2-5M20 8q1.5-2.5 3-3.5" stroke="#94a76a" stroke-width="0.9" stroke-opacity="0.6" fill="none" stroke-linecap="round"/><circle cx="14" cy="16" r="0.9" fill="#c5d29b"/><circle cx="24" cy="24" r="0.8" fill="#c5d29b"/><circle cx="4" cy="7" r="0.8" fill="#a3b573"/><circle cx="25" cy="13" r="0.7" fill="#a3b573"/></pattern>
@@ -28,32 +29,54 @@
 <rect x="5" y="5" width="1762" height="3667" fill="none" stroke="#3b2e1e" stroke-width="0.8" opacity="0.8"/>
 <rect x="9" y="9" width="1754" height="3659" fill="none" stroke="#3b2e1e" stroke-width="2" opacity="0.85"/>
 <text x="46" y="34" font-size="19" font-weight="bold" fill="#3b2e1e" letter-spacing="0.5">MAPPA 1 REVISED: Disposizione Generale Giorno 1 (0-300 m)</text>
-<text x="46" y="51" font-size="11" font-style="italic" fill="#7a6a50">60×108 quadretti · scala 1,5 m/quadretto</text>
+<text x="46" y="51" font-size="11" font-style="italic" fill="#7a6a50">60×108 quadretti · scala 3 m/quadretto</text>
 <rect x="41" y="75" width="1690" height="3034" fill="#e6d9b8" stroke="#3b2e1e" stroke-width="1.6"/>
 <g clip-path="url(#clipgrid)">
-<path d="M46 95.19L49.81 85.99L51.99 83.81L61.19 80L142.81 80L152.01 83.81L154.19 85.99L158 95.19L158 120.81L161.81 130.01L163.99 132.19L173.19 136L254.81 136L264.01 139.81L266.19 141.99L270 151.19L270 316.81L273.81 326.01L275.99 328.19L285.19 332L1486.81 332L1496.01 328.19L1498.19 326.01L1502 316.81L1502 151.19L1505.81 141.99L1507.99 139.81L1517.19 136L1598.81 136L1608.01 132.19L1610.19 130.01L1614 120.81L1614 95.19L1617.81 85.99L1619.99 83.81L1629.19 80L1710.81 80L1720.01 83.81L1722.19 85.99L1726 95.19L1726 3088.81L1722.19 3098.01L1720.01 3100.19L1710.81 3104L61.19 3104L51.99 3100.19L49.81 3098.01L46 3088.81Z" fill="url(#t_grass)" fill-rule="evenodd" stroke="url(#t_grass)" stroke-width="2.4" stroke-linejoin="round"/>
-<path d="M270 207.19L273.81 197.99L275.99 195.81L285.19 192L1486.81 192L1496.01 195.81L1498.19 197.99L1502 207.19L1502 316.81L1498.19 326.01L1496.01 328.19L1486.81 332L285.19 332L275.99 328.19L273.81 326.01L270 316.81Z" fill="url(#t_earth)" fill-rule="evenodd" stroke="url(#t_earth)" stroke-width="2.4" stroke-linejoin="round"/>
-<path d="M270 151.19L273.81 141.99L275.99 139.81L285.19 136L1486.81 136L1496.01 139.81L1498.19 141.99L1502 151.19L1502 176.81L1498.19 186.01L1496.01 188.19L1486.81 192L285.19 192L275.99 188.19L273.81 186.01L270 176.81Z" fill="url(#t_deep)" fill-rule="evenodd" stroke="url(#t_deep)" stroke-width="2.4" stroke-linejoin="round"/>
-<path d="M158 95.19L161.81 85.99L163.99 83.81L173.19 80L1598.81 80L1608.01 83.81L1610.19 85.99L1614 95.19L1614 120.81L1610.19 130.01L1608.01 132.19L1598.81 136L173.19 136L163.99 132.19L161.81 130.01L158 120.81Z" fill="none" stroke="#241c10" stroke-width="9" opacity="0.22" filter="url(#aoblur)"/>
-<path d="M158 95.19L161.81 85.99L163.99 83.81L173.19 80L1598.81 80L1608.01 83.81L1610.19 85.99L1614 95.19L1614 120.81L1610.19 130.01L1608.01 132.19L1598.81 136L173.19 136L163.99 132.19L161.81 130.01L158 120.81Z" fill="#241c10" fill-rule="evenodd" opacity="0.28" filter="url(#softblur)" transform="translate(2.6,3.4)"/>
-<path d="M158 95.19L161.81 85.99L163.99 83.81L173.19 80L1598.81 80L1608.01 83.81L1610.19 85.99L1614 95.19L1614 120.81L1610.19 130.01L1608.01 132.19L1598.81 136L173.19 136L163.99 132.19L161.81 130.01L158 120.81Z" fill="url(#t_wall)" fill-rule="evenodd" stroke="url(#t_wall)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M46 95.19L49.81 85.99L51.99 83.81L61.19 80L478.81 80L488.01 83.81L490.19 85.99L494 95.19L494 120.81L490.19 130.01L488.01 132.19L478.81 136L369.19 136L359.99 139.81L357.81 141.99L354 151.19L354 176.81L350.19 186.01L348.01 188.19L338.81 192L285.19 192L275.99 195.81L273.81 197.99L270 207.19L270 316.81L273.81 326.01L275.99 328.19L285.19 332L1486.81 332L1496.01 328.19L1498.19 326.01L1502 316.81L1502 207.19L1498.19 197.99L1496.01 195.81L1486.81 192L1433.19 192L1423.99 188.19L1421.81 186.01L1418 176.81L1418 151.19L1414.19 141.99L1412.01 139.81L1402.81 136L1377.19 136L1367.99 132.19L1365.81 130.01L1362 120.81L1362 95.19L1365.81 85.99L1367.99 83.81L1377.19 80L1710.81 80L1720.01 83.81L1722.19 85.99L1726 95.19L1726 3088.81L1722.19 3098.01L1720.01 3100.19L1710.81 3104L61.19 3104L51.99 3100.19L49.81 3098.01L46 3088.81Z" fill="url(#t_grass)" fill-rule="evenodd" stroke="url(#t_grass)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M270 207.19L273.81 197.99L275.99 195.81L285.19 192L1486.81 192L1496.01 195.81L1498.19 197.99L1502 207.19L1502 316.81L1498.19 326.01L1496.01 328.19L1486.81 332L285.19 332L275.99 328.19L273.81 326.01L270 316.81ZM858 93.58L861.81 85.99L863.99 83.81L873.19 80L898.81 80L908.01 83.81L910.19 85.99L914 93.58L914 94.42L910.19 102.01L908.01 104.19L898.81 108L873.19 108L863.99 104.19L861.81 102.01L858 94.42Z" fill="url(#t_earth)" fill-rule="evenodd" stroke="url(#t_earth)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M354 151.19L357.81 141.99L359.99 139.81L369.19 136L1402.81 136L1412.01 139.81L1414.19 141.99L1418 151.19L1418 176.81L1414.19 186.01L1412.01 188.19L1402.81 192L369.19 192L359.99 188.19L357.81 186.01L354 176.81Z" fill="url(#t_deep)" fill-rule="evenodd" stroke="url(#t_deep)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M718 93.58L721.81 85.99L723.99 83.81L733.19 80L842.81 80L852.01 83.81L854.19 85.99L858 93.58L858 94.42L854.19 102.01L852.01 104.19L842.81 108L733.19 108L723.99 104.19L721.81 102.01L718 94.42ZM914 93.58L917.81 85.99L919.99 83.81L929.19 80L1038.81 80L1048.01 83.81L1050.19 85.99L1054 93.58L1054 94.42L1050.19 102.01L1048.01 104.19L1038.81 108L929.19 108L919.99 104.19L917.81 102.01L914 94.42Z" fill="url(#t_dais)" fill-rule="evenodd" stroke="url(#t_dais)" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M494 95.19L497.81 85.99L499.99 83.81L509.19 80L702.81 80L712.01 83.81L714.19 85.99L718 93.58L718 94.42L721.81 102.01L723.99 104.19L733.19 108L1038.81 108L1048.01 104.19L1050.19 102.01L1054 94.42L1054 93.58L1057.81 85.99L1059.99 83.81L1069.19 80L1346.81 80L1356.01 83.81L1358.19 85.99L1362 95.19L1362 120.81L1358.19 130.01L1356.01 132.19L1346.81 136L509.19 136L499.99 132.19L497.81 130.01L494 120.81Z" fill="none" stroke="#241c10" stroke-width="9" opacity="0.22" filter="url(#aoblur)"/>
+<path d="M494 95.19L497.81 85.99L499.99 83.81L509.19 80L702.81 80L712.01 83.81L714.19 85.99L718 93.58L718 94.42L721.81 102.01L723.99 104.19L733.19 108L1038.81 108L1048.01 104.19L1050.19 102.01L1054 94.42L1054 93.58L1057.81 85.99L1059.99 83.81L1069.19 80L1346.81 80L1356.01 83.81L1358.19 85.99L1362 95.19L1362 120.81L1358.19 130.01L1356.01 132.19L1346.81 136L509.19 136L499.99 132.19L497.81 130.01L494 120.81Z" fill="#241c10" fill-rule="evenodd" opacity="0.28" filter="url(#softblur)" transform="translate(2.6,3.4)"/>
+<path d="M494 95.19L497.81 85.99L499.99 83.81L509.19 80L702.81 80L712.01 83.81L714.19 85.99L718 93.58L718 94.42L721.81 102.01L723.99 104.19L733.19 108L1038.81 108L1048.01 104.19L1050.19 102.01L1054 94.42L1054 93.58L1057.81 85.99L1059.99 83.81L1069.19 80L1346.81 80L1356.01 83.81L1358.19 85.99L1362 95.19L1362 120.81L1358.19 130.01L1356.01 132.19L1346.81 136L509.19 136L499.99 132.19L497.81 130.01L494 120.81Z" fill="url(#t_wall)" fill-rule="evenodd" stroke="url(#t_wall)" stroke-width="2.4" stroke-linejoin="round"/>
 <rect x="46" y="80" width="1680" height="3024" filter="url(#mottle)" opacity="0.35"/>
-<path d="M46 95.19L49.81 85.99L51.99 83.81L61.19 80L142.81 80L152.01 83.81L154.19 85.99L158 95.19L158 120.81L161.81 130.01L163.99 132.19L173.19 136L254.81 136L264.01 139.81L266.19 141.99L270 151.19L270 316.81L273.81 326.01L275.99 328.19L285.19 332L1486.81 332L1496.01 328.19L1498.19 326.01L1502 316.81L1502 151.19L1505.81 141.99L1507.99 139.81L1517.19 136L1598.81 136L1608.01 132.19L1610.19 130.01L1614 120.81L1614 95.19L1617.81 85.99L1619.99 83.81L1629.19 80L1710.81 80L1720.01 83.81L1722.19 85.99L1726 95.19L1726 3088.81L1722.19 3098.01L1720.01 3100.19L1710.81 3104L61.19 3104L51.99 3100.19L49.81 3098.01L46 3088.81Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
-<path d="M270 207.19L273.81 197.99L275.99 195.81L285.19 192L1486.81 192L1496.01 195.81L1498.19 197.99L1502 207.19L1502 316.81L1498.19 326.01L1496.01 328.19L1486.81 332L285.19 332L275.99 328.19L273.81 326.01L270 316.81Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
-<path d="M270 151.19L273.81 141.99L275.99 139.81L285.19 136L1486.81 136L1496.01 139.81L1498.19 141.99L1502 151.19L1502 176.81L1498.19 186.01L1496.01 188.19L1486.81 192L285.19 192L275.99 188.19L273.81 186.01L270 176.81Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
-<path d="M158 95.19L161.81 85.99L163.99 83.81L173.19 80L1598.81 80L1608.01 83.81L1610.19 85.99L1614 95.19L1614 120.81L1610.19 130.01L1608.01 132.19L1598.81 136L173.19 136L163.99 132.19L161.81 130.01L158 120.81Z" fill="none" stroke="#241c10" stroke-width="1.8" opacity="0.9" stroke-linejoin="round" filter="url(#rough)"/>
+<path d="M46 95.19L49.81 85.99L51.99 83.81L61.19 80L478.81 80L488.01 83.81L490.19 85.99L494 95.19L494 120.81L490.19 130.01L488.01 132.19L478.81 136L369.19 136L359.99 139.81L357.81 141.99L354 151.19L354 176.81L350.19 186.01L348.01 188.19L338.81 192L285.19 192L275.99 195.81L273.81 197.99L270 207.19L270 316.81L273.81 326.01L275.99 328.19L285.19 332L1486.81 332L1496.01 328.19L1498.19 326.01L1502 316.81L1502 207.19L1498.19 197.99L1496.01 195.81L1486.81 192L1433.19 192L1423.99 188.19L1421.81 186.01L1418 176.81L1418 151.19L1414.19 141.99L1412.01 139.81L1402.81 136L1377.19 136L1367.99 132.19L1365.81 130.01L1362 120.81L1362 95.19L1365.81 85.99L1367.99 83.81L1377.19 80L1710.81 80L1720.01 83.81L1722.19 85.99L1726 95.19L1726 3088.81L1722.19 3098.01L1720.01 3100.19L1710.81 3104L61.19 3104L51.99 3100.19L49.81 3098.01L46 3088.81Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
+<path d="M270 207.19L273.81 197.99L275.99 195.81L285.19 192L1486.81 192L1496.01 195.81L1498.19 197.99L1502 207.19L1502 316.81L1498.19 326.01L1496.01 328.19L1486.81 332L285.19 332L275.99 328.19L273.81 326.01L270 316.81ZM858 93.58L861.81 85.99L863.99 83.81L873.19 80L898.81 80L908.01 83.81L910.19 85.99L914 93.58L914 94.42L910.19 102.01L908.01 104.19L898.81 108L873.19 108L863.99 104.19L861.81 102.01L858 94.42Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
+<path d="M354 151.19L357.81 141.99L359.99 139.81L369.19 136L1402.81 136L1412.01 139.81L1414.19 141.99L1418 151.19L1418 176.81L1414.19 186.01L1412.01 188.19L1402.81 192L369.19 192L359.99 188.19L357.81 186.01L354 176.81Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
+<path d="M718 93.58L721.81 85.99L723.99 83.81L733.19 80L842.81 80L852.01 83.81L854.19 85.99L858 93.58L858 94.42L854.19 102.01L852.01 104.19L842.81 108L733.19 108L723.99 104.19L721.81 102.01L718 94.42ZM914 93.58L917.81 85.99L919.99 83.81L929.19 80L1038.81 80L1048.01 83.81L1050.19 85.99L1054 93.58L1054 94.42L1050.19 102.01L1048.01 104.19L1038.81 108L929.19 108L919.99 104.19L917.81 102.01L914 94.42Z" fill="none" stroke="#7a6a50" stroke-width="0.9" opacity="0.5" stroke-linejoin="round" filter="url(#rough)"/>
+<path d="M494 95.19L497.81 85.99L499.99 83.81L509.19 80L702.81 80L712.01 83.81L714.19 85.99L718 93.58L718 94.42L721.81 102.01L723.99 104.19L733.19 108L1038.81 108L1048.01 104.19L1050.19 102.01L1054 94.42L1054 93.58L1057.81 85.99L1059.99 83.81L1069.19 80L1346.81 80L1356.01 83.81L1358.19 85.99L1362 95.19L1362 120.81L1358.19 130.01L1356.01 132.19L1346.81 136L509.19 136L499.99 132.19L497.81 130.01L494 120.81Z" fill="none" stroke="#241c10" stroke-width="1.8" opacity="0.9" stroke-linejoin="round" filter="url(#rough)"/>
 </g>
 <path d="M74 80v3024M102 80v3024M130 80v3024M158 80v3024M214 80v3024M242 80v3024M270 80v3024M298 80v3024M354 80v3024M382 80v3024M410 80v3024M438 80v3024M494 80v3024M522 80v3024M550 80v3024M578 80v3024M634 80v3024M662 80v3024M690 80v3024M718 80v3024M774 80v3024M802 80v3024M830 80v3024M858 80v3024M914 80v3024M942 80v3024M970 80v3024M998 80v3024M1054 80v3024M1082 80v3024M1110 80v3024M1138 80v3024M1194 80v3024M1222 80v3024M1250 80v3024M1278 80v3024M1334 80v3024M1362 80v3024M1390 80v3024M1418 80v3024M1474 80v3024M1502 80v3024M1530 80v3024M1558 80v3024M1614 80v3024M1642 80v3024M1670 80v3024M1698 80v3024M46 108h1680M46 136h1680M46 164h1680M46 192h1680M46 248h1680M46 276h1680M46 304h1680M46 332h1680M46 388h1680M46 416h1680M46 444h1680M46 472h1680M46 528h1680M46 556h1680M46 584h1680M46 612h1680M46 668h1680M46 696h1680M46 724h1680M46 752h1680M46 808h1680M46 836h1680M46 864h1680M46 892h1680M46 948h1680M46 976h1680M46 1004h1680M46 1032h1680M46 1088h1680M46 1116h1680M46 1144h1680M46 1172h1680M46 1228h1680M46 1256h1680M46 1284h1680M46 1312h1680M46 1368h1680M46 1396h1680M46 1424h1680M46 1452h1680M46 1508h1680M46 1536h1680M46 1564h1680M46 1592h1680M46 1648h1680M46 1676h1680M46 1704h1680M46 1732h1680M46 1788h1680M46 1816h1680M46 1844h1680M46 1872h1680M46 1928h1680M46 1956h1680M46 1984h1680M46 2012h1680M46 2068h1680M46 2096h1680M46 2124h1680M46 2152h1680M46 2208h1680M46 2236h1680M46 2264h1680M46 2292h1680M46 2348h1680M46 2376h1680M46 2404h1680M46 2432h1680M46 2488h1680M46 2516h1680M46 2544h1680M46 2572h1680M46 2628h1680M46 2656h1680M46 2684h1680M46 2712h1680M46 2768h1680M46 2796h1680M46 2824h1680M46 2852h1680M46 2908h1680M46 2936h1680M46 2964h1680M46 2992h1680M46 3048h1680M46 3076h1680M46 3104h1680" stroke="#2e2313" stroke-width="0.6" opacity="0.3" fill="none"/>
 <path d="M46 80v3024M186 80v3024M326 80v3024M466 80v3024M606 80v3024M746 80v3024M886 80v3024M1026 80v3024M1166 80v3024M1306 80v3024M1446 80v3024M1586 80v3024M1726 80v3024M46 80h1680M46 220h1680M46 360h1680M46 500h1680M46 640h1680M46 780h1680M46 920h1680M46 1060h1680M46 1200h1680M46 1340h1680M46 1480h1680M46 1620h1680M46 1760h1680M46 1900h1680M46 2040h1680M46 2180h1680M46 2320h1680M46 2460h1680M46 2600h1680M46 2740h1680M46 2880h1680M46 3020h1680" stroke="#2e2313" stroke-width="1.4" opacity="0.48" fill="none"/>
 <g clip-path="url(#clipheavy)"><path d="M74 80v3024M102 80v3024M130 80v3024M158 80v3024M214 80v3024M242 80v3024M270 80v3024M298 80v3024M354 80v3024M382 80v3024M410 80v3024M438 80v3024M494 80v3024M522 80v3024M550 80v3024M578 80v3024M634 80v3024M662 80v3024M690 80v3024M718 80v3024M774 80v3024M802 80v3024M830 80v3024M858 80v3024M914 80v3024M942 80v3024M970 80v3024M998 80v3024M1054 80v3024M1082 80v3024M1110 80v3024M1138 80v3024M1194 80v3024M1222 80v3024M1250 80v3024M1278 80v3024M1334 80v3024M1362 80v3024M1390 80v3024M1418 80v3024M1474 80v3024M1502 80v3024M1530 80v3024M1558 80v3024M1614 80v3024M1642 80v3024M1670 80v3024M1698 80v3024M46 108h1680M46 136h1680M46 164h1680M46 192h1680M46 248h1680M46 276h1680M46 304h1680M46 332h1680M46 388h1680M46 416h1680M46 444h1680M46 472h1680M46 528h1680M46 556h1680M46 584h1680M46 612h1680M46 668h1680M46 696h1680M46 724h1680M46 752h1680M46 808h1680M46 836h1680M46 864h1680M46 892h1680M46 948h1680M46 976h1680M46 1004h1680M46 1032h1680M46 1088h1680M46 1116h1680M46 1144h1680M46 1172h1680M46 1228h1680M46 1256h1680M46 1284h1680M46 1312h1680M46 1368h1680M46 1396h1680M46 1424h1680M46 1452h1680M46 1508h1680M46 1536h1680M46 1564h1680M46 1592h1680M46 1648h1680M46 1676h1680M46 1704h1680M46 1732h1680M46 1788h1680M46 1816h1680M46 1844h1680M46 1872h1680M46 1928h1680M46 1956h1680M46 1984h1680M46 2012h1680M46 2068h1680M46 2096h1680M46 2124h1680M46 2152h1680M46 2208h1680M46 2236h1680M46 2264h1680M46 2292h1680M46 2348h1680M46 2376h1680M46 2404h1680M46 2432h1680M46 2488h1680M46 2516h1680M46 2544h1680M46 2572h1680M46 2628h1680M46 2656h1680M46 2684h1680M46 2712h1680M46 2768h1680M46 2796h1680M46 2824h1680M46 2852h1680M46 2908h1680M46 2936h1680M46 2964h1680M46 2992h1680M46 3048h1680M46 3076h1680M46 3104h1680" stroke="#efe4c9" stroke-width="0.6" opacity="0.16" fill="none"/><path d="M46 80v3024M186 80v3024M326 80v3024M466 80v3024M606 80v3024M746 80v3024M886 80v3024M1026 80v3024M1166 80v3024M1306 80v3024M1446 80v3024M1586 80v3024M1726 80v3024M46 80h1680M46 220h1680M46 360h1680M46 500h1680M46 640h1680M46 780h1680M46 920h1680M46 1060h1680M46 1200h1680M46 1340h1680M46 1480h1680M46 1620h1680M46 1760h1680M46 1900h1680M46 2040h1680M46 2180h1680M46 2320h1680M46 2460h1680M46 2600h1680M46 2740h1680M46 2880h1680M46 3020h1680" stroke="#efe4c9" stroke-width="1.4" opacity="0.26" fill="none"/></g>
-<ellipse cx="201.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tower" x="186" y="80" width="28" height="28"/>
-<ellipse cx="1573.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tower" x="1558" y="80" width="28" height="28"/>
+<ellipse cx="425.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="410" y="80" width="28" height="28"/>
+<ellipse cx="453.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="438" y="80" width="28" height="28"/>
+<ellipse cx="481.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="466" y="80" width="28" height="28"/>
+<ellipse cx="1293.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1278" y="80" width="28" height="28"/>
+<ellipse cx="1321.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1306" y="80" width="28" height="28"/>
+<ellipse cx="1349.0" cy="97.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1334" y="80" width="28" height="28"/>
+<ellipse cx="425.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="410" y="108" width="28" height="28"/>
+<ellipse cx="453.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="438" y="108" width="28" height="28"/>
+<ellipse cx="481.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="466" y="108" width="28" height="28"/>
 <ellipse cx="873.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_door" x="858" y="108" width="28" height="28"/>
 <ellipse cx="901.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_door" x="886" y="108" width="28" height="28"/>
+<ellipse cx="1293.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1278" y="108" width="28" height="28"/>
+<ellipse cx="1321.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1306" y="108" width="28" height="28"/>
+<ellipse cx="1349.0" cy="125.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
+<use href="#pr_tower" x="1334" y="108" width="28" height="28"/>
 <ellipse cx="873.0" cy="153.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_bridge" x="858" y="136" width="28" height="28"/>
 <ellipse cx="901.0" cy="153.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
@@ -1593,8 +1616,8 @@
 <text x="37" y="3037.0" font-size="10" text-anchor="end" fill="#7a6a50">106</text>
 <text x="37" y="3065.0" font-size="10" text-anchor="end" fill="#7a6a50">107</text>
 <text x="37" y="3093.0" font-size="10" text-anchor="end" fill="#7a6a50">108</text>
-<rect x="158" y="80" width="1456" height="56" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
-<text x="162" y="93" font-size="10.5" font-weight="bold" fill="#2c2313">Fronte sud della fortezza: mura 12 m, torri 20 m (griglia di precisione: MAPPA 2A REVISED)</text>
+<rect x="410" y="80" width="952" height="56" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
+<text x="414" y="93" font-size="10.5" font-weight="bold" fill="#2c2313">Fronte sud della fortezza, 102 m: mura 12 m, torri 20 m, bastioni G1-G2 ai lati del cancello (griglia di precisione: MAPPA 2A REVISED)</text>
 <path d="M872 2082L872 962" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M872 2082L872 962" fill="none" stroke="#e0a100" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="872" cy="2082" r="3.4" fill="#e0a100" stroke="#ffffff" stroke-width="1"/>
@@ -1647,7 +1670,7 @@
 <rect x="102" y="3123" width="28" height="7" fill="#3b2e1e" stroke="#3b2e1e" stroke-width="1"/>
 <rect x="130" y="3123" width="28" height="7" fill="#efe4c9" stroke="#3b2e1e" stroke-width="1"/>
 <rect x="158" y="3123" width="28" height="7" fill="#3b2e1e" stroke="#3b2e1e" stroke-width="1"/>
-<text x="196" y="3131" font-size="11" fill="#3b2e1e">7,5 m (5 quadretti)</text>
+<text x="196" y="3131" font-size="11" fill="#3b2e1e">15 m (5 quadretti)</text>
 <text x="46" y="3158" font-size="12" font-weight="bold" fill="#3b2e1e" letter-spacing="2">INDICAZIONI</text>
 <path d="M142 3154H1726" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <circle cx="54" cy="3171" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
@@ -1705,34 +1728,36 @@
 <path d="M64 3426L59.67 3428.5L59.67 3423.5Z" fill="#1d6fd8"/>
 <text x="70" y="3430" font-size="11" fill="#3b2e1e">Sorvoli di Fauci di Palude (quota 45 m): K98 → AD61 → P9 → AS9 → AD61</text>
 <rect x="46" y="3434" width="15" height="12" rx="2" fill="none" stroke="#2c2313" stroke-width="1.4" stroke-dasharray="4 3"/>
-<text x="68" y="3445" font-size="11" fill="#3b2e1e">E1–BD2 — Fronte sud della fortezza: mura 12 m, torri 20 m (griglia di precisione: MAPPA 2A REVISED)</text>
+<text x="68" y="3445" font-size="11" fill="#3b2e1e">N1–AU2 — Fronte sud della fortezza, 102 m: mura 12 m, torri 20 m, bastioni G1-G2 ai lati del cancello (griglia di precisione: MAPPA 2A REVISED)</text>
 <text x="46" y="3479" font-size="12" font-weight="bold" fill="#3b2e1e" letter-spacing="2">LEGENDA</text>
 <path d="M120 3475H1726" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <rect x="46.0" y="3485" width="19" height="15" fill="url(#t_deep)" stroke="#7a6a50" stroke-width="0.7"/>
 <text x="73.0" y="3497" font-size="11" fill="#3b2e1e">🟦 — Acqua profonda</text>
-<rect x="46.0" y="3507" width="19" height="15" fill="url(#t_wall)" stroke="#7a6a50" stroke-width="0.7"/>
-<text x="73.0" y="3519" font-size="11" fill="#3b2e1e">🏰 — Muro / roccia solida</text>
-<rect x="46.0" y="3529" width="19" height="15" fill="url(#t_grass)" stroke="#7a6a50" stroke-width="0.7"/>
-<text x="73.0" y="3541" font-size="11" fill="#3b2e1e">🟩 — Pianura / area aperta</text>
-<rect x="46.0" y="3551" width="19" height="15" fill="url(#t_earth)" stroke="#7a6a50" stroke-width="0.7"/>
-<text x="73.0" y="3563" font-size="11" fill="#3b2e1e">🟫 — Terra battuta / sentiero</text>
-<circle cx="55.0" cy="3581" r="7.5" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.2"/>
-<text x="73.0" y="3585" font-size="11" fill="#3b2e1e">⚫ — Boss / comandante</text>
-<circle cx="55.0" cy="3603" r="7.5" fill="url(#g_9d4edd)" stroke="#241c10" stroke-width="1.2"/>
-<text x="73.0" y="3607" font-size="11" fill="#3b2e1e">🟣 — Creatura speciale</text>
-<circle cx="55.0" cy="3625" r="7.5" fill="url(#g_f4b400)" stroke="#241c10" stroke-width="1.2"/>
-<text x="73.0" y="3629" font-size="11" fill="#3b2e1e">🟡 — Incantatore nemico</text>
-<circle cx="895.0" cy="3493" r="7.5" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.2"/>
-<text x="913.0" y="3497" font-size="11" fill="#3b2e1e">🔴 — Nemico standard</text>
-<use href="#pr_target" x="886.0" y="3506" width="18" height="18"/>
-<text x="913.0" y="3519" font-size="11" fill="#3b2e1e">🎯 — Obiettivo tattico</text>
-<use href="#pr_bridge" x="886.0" y="3528" width="18" height="18"/>
-<text x="913.0" y="3541" font-size="11" fill="#3b2e1e">🌉 — Ponte / passerella</text>
-<use href="#pr_door" x="886.0" y="3550" width="18" height="18"/>
-<text x="913.0" y="3563" font-size="11" fill="#3b2e1e">🚪 — Porta / ingresso</text>
-<use href="#pr_tent" x="886.0" y="3572" width="18" height="18"/>
-<text x="913.0" y="3585" font-size="11" fill="#3b2e1e">⛺ — Tenda (telo teso: blocca la vista, si abbatte)</text>
-<use href="#pr_tower" x="886.0" y="3594" width="18" height="18"/>
-<text x="913.0" y="3607" font-size="11" fill="#3b2e1e">🗼 — Torre / struttura alta</text>
+<rect x="46.0" y="3507" width="19" height="15" fill="url(#t_dais)" stroke="#7a6a50" stroke-width="0.7"/>
+<text x="73.0" y="3519" font-size="11" fill="#3b2e1e">🔳 — Dais / pedana rialzata (ci si sale sopra: NON e' un muro)</text>
+<rect x="46.0" y="3529" width="19" height="15" fill="url(#t_wall)" stroke="#7a6a50" stroke-width="0.7"/>
+<text x="73.0" y="3541" font-size="11" fill="#3b2e1e">🏰 — Muro / roccia solida</text>
+<rect x="46.0" y="3551" width="19" height="15" fill="url(#t_grass)" stroke="#7a6a50" stroke-width="0.7"/>
+<text x="73.0" y="3563" font-size="11" fill="#3b2e1e">🟩 — Pianura / area aperta</text>
+<rect x="46.0" y="3573" width="19" height="15" fill="url(#t_earth)" stroke="#7a6a50" stroke-width="0.7"/>
+<text x="73.0" y="3585" font-size="11" fill="#3b2e1e">🟫 — Terra battuta / sentiero</text>
+<circle cx="55.0" cy="3603" r="7.5" fill="url(#g_212529)" stroke="#241c10" stroke-width="1.2"/>
+<text x="73.0" y="3607" font-size="11" fill="#3b2e1e">⚫ — Boss / comandante</text>
+<circle cx="55.0" cy="3625" r="7.5" fill="url(#g_9d4edd)" stroke="#241c10" stroke-width="1.2"/>
+<text x="73.0" y="3629" font-size="11" fill="#3b2e1e">🟣 — Creatura speciale</text>
+<circle cx="895.0" cy="3493" r="7.5" fill="url(#g_f4b400)" stroke="#241c10" stroke-width="1.2"/>
+<text x="913.0" y="3497" font-size="11" fill="#3b2e1e">🟡 — Incantatore nemico</text>
+<circle cx="895.0" cy="3515" r="7.5" fill="url(#g_d62828)" stroke="#241c10" stroke-width="1.2"/>
+<text x="913.0" y="3519" font-size="11" fill="#3b2e1e">🔴 — Nemico standard</text>
+<use href="#pr_target" x="886.0" y="3528" width="18" height="18"/>
+<text x="913.0" y="3541" font-size="11" fill="#3b2e1e">🎯 — Obiettivo tattico</text>
+<use href="#pr_bridge" x="886.0" y="3550" width="18" height="18"/>
+<text x="913.0" y="3563" font-size="11" fill="#3b2e1e">🌉 — Ponte / passerella</text>
+<use href="#pr_door" x="886.0" y="3572" width="18" height="18"/>
+<text x="913.0" y="3585" font-size="11" fill="#3b2e1e">🚪 — Porta / ingresso</text>
+<use href="#pr_tent" x="886.0" y="3594" width="18" height="18"/>
+<text x="913.0" y="3607" font-size="11" fill="#3b2e1e">⛺ — Tenda (telo teso: blocca la vista, si abbatte)</text>
+<use href="#pr_tower" x="886.0" y="3616" width="18" height="18"/>
+<text x="913.0" y="3629" font-size="11" fill="#3b2e1e">🗼 — Torre / struttura alta</text>
 <!-- fonte: Hammerfist-L2-REVISED-Ultra-Clear.md · SVG generato da scripts/render_map_svg.py (stile pergamena) · non modificare a mano -->
 </svg>

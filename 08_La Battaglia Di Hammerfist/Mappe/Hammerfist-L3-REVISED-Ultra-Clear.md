@@ -10,7 +10,7 @@
 > Narrativa/immagini: `Atlante-Hammerfist-Mappe-COMPLETE.md` (master visivo).
 
 ### Indice mappe di questo file
-1. **MAPPA H3-1 (3X) REVISED** — Ingresso Passaggi Antichi (40×40, 1,5 m)
+1. **MAPPA H3-1 (3X) REVISED** — Cortile sfondato e bocca del tunnel (72×36, 1,5 m)
 2. **MAPPA 3Y REVISED** — Il Ponte Sospeso (33×27, 1,5 m)
 3. **MAPPA 3Z REVISED** — L'Incrocio Silenzioso (33×33, 1,5 m)
 4. **MAPPA 5 REVISED** — Il Cuore della Montagna (67×53, 1,5 m)
@@ -20,131 +20,134 @@
 ---
 
 ## MAPPA H3-1 REVISED: CORTILE SFONDATO - ULTIMA DIFESA ED EVACUAZIONE
-**Dimensioni:** 60m × 60m (40 colonne × 40 righe, 1,5 m/quadretto)
-**Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (cancello sud + brecce est/ovest)
+**Dimensioni:** 108m × 54m (72 colonne × 36 righe, 1,5 m/quadretto)
+**Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (Porta Interna a sud + brecce est/ovest)
 **Quando si usa:** subito dopo il soffio del drago (guida: `../ARC08-01-GUIDA-DM.md` § "La Ritirata Disperata"); il master narrativo dell'atlante la chiama MAPPA 3X
+**Dove sta nella 2A:** è il cortile interno della MAPPA 2A REVISED (L2) con la Porta Interna e l'inizio del cortile esterno: colonne Y-CR e righe 18-53 della 2A (colonna H3-1 = colonna 2A − 24, riga H3-1 = riga 2A − 17). Le misure sono quelle della tabella MISURE DI RIFERIMENTO in testa a L2.
 
-### 🎯 COMPRENSIONE: il cortile è in rovina e sfondato. L'orda entra dal cancello sud distrutto e dalle brecce est/ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek e alla statua-tunnel (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = tunnel (dentro la montagna, LONTANO da Hammerfist); Sud = cancello sfondato (fronte).
+### 🎯 COMPRENSIONE: il cortile esterno è perduto e la Porta Interna è sfondata. L'orda entra dalla porta a sud e dalle brecce aperte nella cinta est e ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek, fra la porta e la statua del Re Antenato (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = la statua e il tunnel, che scende nelle viscere della montagna fino al Cuore (MAPPA 5); Sud = Porta Interna sfondata (fronte).
 
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map01_mappa-h3-1-revised-cortile-sfondato-ultima-difes.svg` (rigenerare dopo ogni modifica)
 
-### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (40×40)
+### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (72×36)
 
 ```
 MAPPA H3-1 REVISED: Cortile sfondato, ultima difesa ed evacuazione
-COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
-01 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪 🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-02 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🗿 🗿 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-03 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗿 🗿 🗿 🗿 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
-04 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🗿 🗿 🔵 🗿 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-05 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-06 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-07 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-08 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-09 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-10 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-11 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-12 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-13 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-14 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-15 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-16 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
-17 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-18 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-19 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-20 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-21 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-22 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-23 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-24 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-25 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
-26 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-27 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-28 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-29 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-30 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-31 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-32 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-33 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-34 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-35 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-36 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-37 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-38 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
-39 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-40 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+DIMENSIONI: 72 colonne × 36 righe · 1,5 m/quadretto
+COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO BP BQ BR BS BT
+01 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+02 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+03 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ❔ ⛰ ⛰ ⛰ ⛰ ⛰ 🔒 🔒 🔒 🔒 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+04 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+05 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+06 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+07 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+08 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+09 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+10 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+11 🧱 🧱 🧱 🧱 🧱 🧱 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 🧱 🧱 🧱 🧱 🧱
+12 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+13 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+14 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+15 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+16 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+17 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+18 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+19 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+20 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+21 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+22 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+23 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+24 🟩 🟩 🧱 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🪵 🪵 🪵 🪵 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🧱 🟩 🟩
+25 🟩 🟩 🧱 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🪵 🪵 🪵 🪵 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🧱 🟩 🟩
+26 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+27 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+28 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+29 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+30 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+31 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+32 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+33 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+34 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+35 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+36 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
 
 @north N
-@mark 1 ; T21 ; Re Thorek XIII (barella) (8 PF, morente)
-@mark 2 ; U21 ; Thorin Runaforte (Clr)
-@mark 3 ; S6 ; Nala Cantapietre (Brd)
-@mark 4 ; S9 ; Borin Ferropugno (Ftr)
-@mark 5 ; S4 ; Dara Occhiolesto (Rgr)
-@mark 6 ; U28 ; Anello difensivo — arco SUD (verso il cancello) (guerrieri)
-@mark 7 ; AB22 ; Anello difensivo — arco EST (guerrieri)
-@mark 8 ; N22 ; Anello difensivo — arco OVEST (guerrieri)
-@mark 9 ; T21 ; Nucleo (portatori, feriti, leader) (misti)
-@mark 10 ; U38 ; Orda dal cancello sfondato (SUD) (GS 1/2 (avanzano 30 m/round))
-@mark 11 ; AM21 ; Fiancheggiatori dalla breccia EST (GS 1/2)
-@mark 12 ; B21 ; Fiancheggiatori dalla breccia OVEST (GS 1/2)
-@path Assalto orchi dal CANCELLO sfondato (SUD) ; U40 U33 U29 ; #d62828
-@path Assalto orchi dalla BRECCIA EST ; AN21 AH21 AC21 ; #d62828
-@path Assalto orchi dalla BRECCIA OVEST ; A21 G21 L21 ; #d62828
-@path Evacuazione nani → tunnel segreto (NORD) ; U23 T13 S6 S2 ; #2c8c3c
-@zone Q2-T4 ; Statua del Re Antenato (4 m; base spingibile For CD 20 / Storia CD 15 → rivela il tunnel)
-@zone O37-Z39 ; CANCELLO SUD SFONDATO: breccia di macerie (l'orda entra da qui)
-@zone AL16-AN25 ; BRECCIA EST nel muro (macerie, terreno difficile)
-@zone A16-C25 ; BRECCIA OVEST nel muro (macerie)
-@zone R34-W36 ; Incendi presso la breccia sud
 @tipo tattica esterno
+@mark 1 ; AG10 ; Nucleo (portatori, feriti, leader) (misti)
+@mark 2 ; X11 ; Anello difensivo — arco OVEST (guerrieri)
+@mark 3 ; AP11 ; Anello difensivo — arco EST (guerrieri)
+@mark 4 ; AE16 ; Anello difensivo — arco SUD (verso la Porta Interna) (guerrieri)
+@mark 5 ; AF10 ; Re Thorek XIII (barella) (8 PF, morente)
+@mark 6 ; AG10 ; Thorin Runaforte (Clr)
+@mark 7 ; AE5 ; Borin Ferropugno (Ftr)
+@mark 8 ; AD5 ; Dara Occhiolesto (Rgr)
+@mark 9 ; AB4 ; Nala Cantapietre (Brd)
+@mark 10 ; AK29 ; Orda dalla Porta Interna sfondata (SUD) (GS 1/2, avanzano 30 m/round)
+@mark 11 ; BT16 ; Fiancheggiatori dalla breccia EST (GS 1/2)
+@mark 12 ; B16 ; Fiancheggiatori dalla breccia OVEST (GS 1/2)
+@path Assalto orchi dalla PORTA INTERNA sfondata (SUD) ; AJ31 AJ25 AG17 ; #d62828
+@path Assalto orchi dalla BRECCIA EST ; BT16 BO16 AQ13 ; #d62828
+@path Assalto orchi dalla BRECCIA OVEST ; A16 F16 W13 ; #d62828
+@path Evacuazione nani → tunnel dietro la statua (NORD) ; AF10 AE4 AC3 ; #2c8c3c
+@zone A4-F11 ; Bastione Nord B1 (+15 m)
+@zone BO4-BT11 ; Bastione Nord B2 (+15 m)
+@zone AI24-AL25 ; PORTA INTERNA SFONDATA: le macerie dei battenti, l'orda entra da qui
+@zone C13-F18 ; BRECCIA OVEST nella cinta (macerie, terreno difficile)
+@zone BO13-BR18 ; BRECCIA EST nella cinta (macerie, terreno difficile)
+@zone AC5-AD6 ; Statua del Re Antenato (4 m; base spingibile For CD 20 / Storia CD 15: rivela il tunnel)
+@zone AI3-AL3 ; Porta dell'atrio, sbarrata: gli orchi la sfondano dopo la ritirata
+@zone AE21-AH22 ; Incendi ai lati della Porta Interna
 ```
 
 ### 📍 POSIZIONI PRECISE:
 
-**STATUA DEL RE ANTENATO 🗿 + TUNNEL SEGRETO 🚪 (NORD):**
-- Statua: col Q-T, righe 02-04 (4 m; base spingibile **Forza CD 20** oppure **Conoscenze/Storia CD 15**)
-- Apertura tunnel: dietro la statua, righe 01 → **capacità 5 nani/round** in fila indiana
+**STATUA DEL RE ANTENATO 🗿 + TUNNEL SEGRETO ❔ (NORD):**
+- Statua: AC-AD, righe 05-06 (alta 4 m, base 3 × 3 m; spingibile **Forza CD 20** oppure **Conoscenze/Storia CD 15**)
+- Apertura tunnel: ❔ AC03, dietro la statua, nella roccia → **capacità 5 nani/round** in fila indiana; scende alle gallerie e al Cuore della Montagna
+- Porta dell'atrio della cittadella 🔒: AI-AL03, sbarrata dall'interno; gli orchi la sfondano dopo la ritirata (Giorno 3)
 
 **90 NANI IN ANELLO DIFENSIVO 🔵:**
-- Arco SUD (verso il cancello sfondato): ~24 guerrieri, scudi verso la breccia principale
-- Arco EST e OVEST (verso le brecce laterali): ~15 guerrieri ciascuno
-- Nucleo: portatori, feriti e leader (~36) attorno a Re Thorek, in colonna verso il tunnel
-- **Re Thorek ⚫** (col T, riga 21, 8 PF su barella; 4 portatori → ×0,5 velocità)
+- Arco SUD (verso la Porta Interna sfondata): ~24 guerrieri, Y-AJ righe 15-16
+- Arco EST e OVEST (verso le brecce laterali): ~15 guerrieri ciascuno, AO-AP e W-X righe 07-14
+- Nucleo: portatori, feriti e leader (~36) attorno a Re Thorek, AA-AL righe 09-11, in colonna verso il tunnel
+- **Re Thorek ⚫** (AF10, 8 PF su barella; 4 portatori → ×0,5 velocità)
 
 **4 PG (pregen):**
-- **Borin 🔵** (col S, riga 09): retroguardia al chokepoint del tunnel
-- **Dara 🔵** (col S, riga 04): sulla base della statua (elevata), tiro di copertura sulla ritirata
-- **Thorin 🔵** (col U, riga 21): fianco del Re, lo tiene in vita (*Cura Ferite Serie*)
-- **Nala 🔵** (col S, riga 06): instrada i nani nel tunnel, luci e trappole
+- **Borin 🔵** (AE05): retroguardia al chokepoint del tunnel
+- **Dara 🔵** (AD05): sulla base della statua (elevata), tiro di copertura sulla ritirata
+- **Thorin 🔵** (AG10): fianco del Re, lo tiene in vita (*Cura Ferite Serie*)
+- **Nala 🔵** (AB04): instrada i nani nel tunnel, luci e trappole
 
 **200+ ORCHI CHE HANNO SFONDATO 🔴 (tre fronti):**
-- **Cancello sud distrutto** (righe 37-39, centro): vanguard ~120, avanzano 30 m/round, contatto ~round 3
-- **Breccia EST** (col AL-AN, righe 17-24): ~40 in aggiramento
-- **Breccia OVEST** (col A-C, righe 17-24): ~40 in aggiramento
+- **Porta Interna sfondata** (AI-AL, righe 24-25): avanguardia ~120 dal cortile esterno (AG-AN righe 27-31), avanzano 30 m/round, contatto ~round 3
+- **Breccia EST** (BO-BR, righe 13-18): ~40 in aggiramento
+- **Breccia OVEST** (C-F, righe 13-18): ~40 in aggiramento
 
 **PERICOLI RESIDUI (soffio del drago):**
-- **Pozze d'acido 💀** (K12, AC14, O27, Z26): 1d6 acido/round ad attraversarle, evaporano in ~10 min
-- **Incendi 🔥** presso la breccia sud (col R-W, righe 34-36): 1d6 fuoco/round, fumo (occultamento 20% entro 3 m)
+- **Pozze d'acido 💀** (Q10, AS13, Y19, BA17): 1d6 acido/round ad attraversarle, evaporano in ~10 min
+- **Incendi 🔥** ai lati della Porta Interna (AE-AH e AM-AP, righe 21-22): 1d6 fuoco/round, fumo (occultamento 20% entro 3 m)
 - **Macerie 🪨** alle brecce: terreno difficile, copertura +4 CA
 
 ### 🎯 EVACUAZIONE TIMELINE:
 - **90 nani ÷ 5/round = 18 round** minimi alla bocca del tunnel
-- **Orchi a contatto ~round 3** (sud); i fiancheggiatori (est/ovest) premono dai lati dal round 2
+- **Orchi a contatto ~round 3** (sud: dalla porta all'arco sud sono 12 m); i fiancheggiatori (est/ovest) premono dai lati dal round 2
 - **Servono ~15 round di ritardo** mentre l'evacuazione prosegue
 - **Ruoli:** Borin tiene il chokepoint del tunnel · Dara cecchina i capi dalle brecce · Thorin *Muro di Pietra* per tappare una breccia + tiene vivo il Re · Nala *Polvere Luccicante* e instrada la colonna
 
 ### 🌍 AMBIENTE (companion — regole, non prosa)
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
-| Statua-meccanismo 🗿 | Q-T/02-04 | For CD 20 o Storia CD 15 per spingerla → rivela il tunnel |
-| Tunnel segreto 🚪 | R-S/01 | 5 nani/round in fila indiana |
-| Cancello sud sfondato 🪨 | O-Z/37-39 | breccia principale: terreno difficile, l'orda entra qui |
-| Brecce est/ovest 🪨 | AL-AN e A-C / 16-25 | seconde vie d'ingresso: terreno difficile, copertura +4 CA |
-| Pozze d'acido 💀 | K12, AC14, O27, Z26 | 1d6 acido/round; evaporano in ~10 min |
-| Incendi 🔥 | R-W/34-36 | 1d6 fuoco/round; fumo: occultamento 20% entro 3 m |
+| Statua-meccanismo 🗿 | AC-AD/05-06 | For CD 20 o Storia CD 15 per spingerla → rivela il tunnel |
+| Tunnel segreto ❔ | AC03 | 5 nani/round in fila indiana; scende al Cuore |
+| Porta Interna sfondata 🪵 | AI-AL/24-25 | breccia principale: terreno difficile, l'orda entra qui |
+| Brecce est/ovest 🪨 | BO-BR e C-F / 13-18 | seconde vie d'ingresso: terreno difficile, copertura +4 CA |
+| Bastioni nord B1, B2 🔳 | A-F e BO-BT / 04-11 | +15 m; i balestrieri rimasti coprono la ritirata e scendono per ultimi |
+| Pozze d'acido 💀 | Q10, AS13, Y19, BA17 | 1d6 acido/round; evaporano in ~10 min |
+| Incendi 🔥 | AE-AH e AM-AP / 21-22 | 1d6 fuoco/round; fumo: occultamento 20% entro 3 m |
 
 ### ⚔️ TATTICHE (l'orda che ha sfondato)
-- **Tre fronti simultanei:** la massa dal cancello sud (frontale) mentre i fiancheggiatori dalle brecce est/ovest cercano di rompere l'anello e raggiungere il Re/portatori.
+- **Tre fronti simultanei:** la massa dalla Porta Interna (frontale) mentre i fiancheggiatori dalle brecce est/ovest cercano di rompere l'anello e raggiungere il Re/portatori.
 - **Bloodlust:** nessuna resa, inseguimento aggressivo (30 m/round); puntano il nucleo e i portatori per fermare l'evacuazione.
 - **Contromosse naniche:** tappare UNA breccia con *Muro di Pietra*/*Barriera di Lame* dimezza i fronti; crolli di macerie improvvisati (Ingegneria CD 15 → 2d6 area); cecchinaggio dei capi per rallentare l'avanzata.
 - **Il vero avversario è il tempo,** non i singoli orchi: ogni round guadagnato = 5 nani in salvo.
@@ -153,10 +156,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto |
 |---|---|---|---|
 | A — Statua chiusa | — | tunnel non ancora aperto | l'anello regge, ma nessuno evacua |
-| B — Tunnel aperto | statua spinta (For 20 / Storia 15) | apertura R-S/01 attiva | evacuazione a 5/round |
+| B — Tunnel aperto | statua spinta (For 20 / Storia 15) | apertura AC03 attiva | evacuazione a 5/round |
 | C — Sfondamento | round 2-3 | orchi dentro dai tre fronti | difesa dell'anello + brecce |
 | D — Fronte ridotto | *Muro/crollo* su una breccia | una via chiusa | pressione dimezzata, evacuazione prosegue |
-| E — Esito | round ~18 | — | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
+| E — Esito | round ~18 | gli orchi sfondano la porta dell'atrio (AI-AL03) e prendono la cittadella vuota | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
 
 > Esiti aperti (D13): quanti nani si salvano dipende dai dadi e da quanto si rallentano i tre fronti, non da un copione.
 
@@ -498,7 +501,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
-| +15 m | Base della fortezza / cancello riconquistato (righe 01-03 della MAPPA 4) | punto di partenza della carica |
+| +15 m | Base della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
 | +15 → 0 m | Pendio 15% su 120 m orizzontali | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
 | 0 m | Fondovalle: resti Mano Rossa (~400) | morale −6 dopo il Cuore della Montagna |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |
@@ -522,10 +525,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 MAPPA 4 REVISED: Battaglia Finale Terrestre (carica in discesa)
 DIMENSIONI: 60 colonne × 68 righe · 3 m/quadretto
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH
-01 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
-02 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
-03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗼 🗼 🗼 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔳 🔳 🔳 🔳 🔳 🟫 🟫 🔳 🔳 🔳 🔳 🔳 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗼 🗼 🗼 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗼 🗼 🗼 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗼 🗼 🗼 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🌉 🌉 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🌉 🌉 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 05 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 ⚫ 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
@@ -612,7 +615,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Ala destra (Hella + 2 Treant + 30) ; AI9 AI37 ; #1d6fd8
 @path Picchiata e presa di Fauci su Thorik (vendetta di sangue) ; G17 AD37 AD31 ; #8c2fb8
 @path Rotta degli orchi verso sud ; AD47 AD65 ; #d62828
-@zone E1-BD2 ; Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)
+@zone N1-AU2 ; Hammerfist - fronte sud riconquistato, 102 m (+15 m sul fondovalle; misure: tabella MISURE in L2)
 @zone AB30-AG32 ; Zona dove cade Thorik e atterra Fauci (round 20-21)
 @tipo tattica esterno
 ```
@@ -644,9 +647,10 @@ Tempesta che si dissolve, gufi che atterrano presso il cancello, ~500 nemici cad
 ### 🌍 AMBIENTE
 | Elemento | Dove | Effetto |
 |---|---|---|
+| Fossato e ponte | col L-AW righe 03-04; ponte AD-AE | il fossato di 6 m resta; il ponte, crollato il Giorno 2, è stato rimesso con travi la notte della riconquista: il cuneo esce in colonna per due e si riforma sotto il fossato (riga 05) |
 | Pendio 15% | righe 14-36 | vantaggi di carica (vedi MAPPA 4X REVISED sopra) |
 | Tempesta di Orion (*controllare tempo*) | tutto il campo, raggio 3 miglia | venti (Tempra CD 15 solo per le creature Piccole), pioggia (−4 distanza, +2 Nascondersi); con vento e pioggia insieme è una *tempesta* SRD, dove gli attacchi a distanza con armi sono impossibili. I fulmini sono la Cantata di Tempestas e *chiamare fulmini* di Orion `[CANONE — DM 2026-10-19, D14]` |
-| Occhio della tempesta | sopra i bastioni (righe 01-03) | niente pioggia, vento calmo: gli arcieri alleati che tirano da qui non hanno i malus della tempesta. **Deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]` |
+| Occhio della tempesta | sopra i bastioni (righe 01-02, col N-AU) | niente pioggia, vento calmo: gli arcieri alleati che tirano da qui non hanno i malus della tempesta. **Deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]` |
 | Zona crash ⚡ | AB30-AG32 | a fine round 20 ci cade Thorik; dal round 21 il drago a terra, tremore CD 15 entro 9 m |
 | Colline sud ⛰ | righe 63-68 | rotta di fuga: chi la raggiunge esce dalla battaglia |
 

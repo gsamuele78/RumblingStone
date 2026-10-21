@@ -438,8 +438,8 @@ Sopravvivere all'attacco devastante di Fauci di Palude, proteggere Re Thorek, e 
 ### **MAPPA: L'ATTACCO DEL DRAGO**
 
 ```
-BASTIONI CENTRALI - ATTACCO AEREO (180m x 120m)
-                    NORD ↑
+BASTIONI CENTRALI - ATTACCO AEREO (60m x 39m)
+                    SUD ↑ (fossato: il drago arriva da qui)
 
         ☁️☁️☁️ FAUCI DI PALUDE ☁️☁️☁️
          \     (Altitudine 60m)     /
@@ -609,7 +609,7 @@ EVACUAZIONE VERSO TUNNELS (Round 5-6)
 ▓ ║                     ↓      ║ ▓
 ▓ ╚══════════════════════╝═════╝ ▓
 ▓                        ↓      ▓
-▓   🕳️ TUNNEL EST → CUORE 🕳️   ▓
+▓ 🕳️ TUNNEL NORD (statua) → CUORE 🕳️ ▓
 ▓       (90 NANI SUPERSTITI)    ▓
 ```
 

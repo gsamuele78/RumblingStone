@@ -1634,8 +1634,8 @@ Le Cantitrici devono completare il loro rituale (5 round) ma sono vulnerabili du
 **MAPPA 2B: ATTACCO AL COMANDO (TURNO 16-20)**
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2B-CORRETTA REVISED (40×26, 1,5 m: cono del soffio, posizioni e opzioni PNG)
 ```
-BASTIONI CENTRALI - ATTACCO AEREO (180m x 120m)
-                    NORD ↑
+BASTIONI CENTRALI - ATTACCO AEREO (60m x 39m)
+                    SUD ↑ (fossato: il drago arriva da qui)
 
         ☁️☁️☁️ FAUCI DI PALUDE ☁️☁️☁️
          \     (Altitudine 60m)     /
@@ -1657,7 +1657,7 @@ BASTIONI CENTRALI - ATTACCO AEREO (180m x 120m)
 ▓ ║     [T] [N] [D]               ║ ▓
 ▓ ╚═══════════════════════════════╝ ▓
 ▓                                 ▓
-▓     🕳️TUNNEL DI FUGA🕳️           ▓
+▓  ↓ SCALE AL CORTILE ESTERNO ↓     ▓
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ```
 
@@ -1667,7 +1667,7 @@ BASTIONI CENTRALI - ATTACCO AEREO (180m x 120m)
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2B-CORRETTA REVISED (40×26, 1,5 m)
 ```
 SCALA: Ogni carattere ~ 3 metri
-                    NORD ↑ (Esterno delle Mura)
+                    SUD ↑ (Esterno delle Mura, fossato)
 
                       🐉 FAUCI DI PALUDE (Quota 30m, stazionario)
                            v
@@ -1689,7 +1689,7 @@ SCALA: Ogni carattere ~ 3 metri
 ║          \         [N]🎭 (Nascosta)       /          ║
 ║           \______________________________/           ║
 ╚═══════════════════════════════════════════════════════╝
-                     SUD ↓ (Cortile Interno)
+                     NORD ↓ (Cortile Esterno)
 ```
 
 **MAPPA AGGIORNATA - ZONA DI IMPATTO:**
@@ -1792,7 +1792,7 @@ SOFFIO DRACONICO - AREA EFFETTO (Round 3)
 
 ### 🏃‍♂️ **La Ritirata Disperata**
 **NUOVA MAPPA - RITIRATA VERSO IL CUORE:**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA H3-1 (evacuazione 40×40, 1,5 m: statua, tunnel 5 nani/round, timeline)
+> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA H3-1 (evacuazione 72×36, 1,5 m: cortile interno, statua, tunnel 5 nani/round, timeline)
 ```
 EVACUAZIONE VERSO TUNNELS (Round 5-6)
 
@@ -1813,7 +1813,7 @@ EVACUAZIONE VERSO TUNNELS (Round 5-6)
 ▓ ║                     ↓      ║ ▓
 ▓ ╚══════════════════════╝═════╝ ▓
 ▓                        ↓      ▓
-▓   🕳️ TUNNEL EST → CUORE 🕳️   ▓
+▓ 🕳️ TUNNEL NORD (statua) → CUORE 🕳️ ▓
 ▓       (90 NANI SUPERSTITI)    ▓
 ```
 
@@ -1986,7 +1986,7 @@ CUORE DELLA MONTAGNA (scala 1:800, ogni carattere = 5m)
 ▓    RE 1         RE 2         RE 3       ▓   
 ▓ (Rubini)     (Rubini)     (Rubini)      ▓
 ▓                                         ▓
-▓           ⚡ ALTARE MORADIN ⚡            ▓ ← Altezza Altare: 25m
+▓           ⚡ ALTARE MORADIN ⚡            ▓ ← Altezza Altare: +3m
 ▓         (PUNTO APPARIZIONE PG)          ▓
 ▓              ZONA SACRA                 ▓
 ▓                                         ▓
@@ -2506,7 +2506,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 ### **INTRODUZIONE SESSIONE 4:**
 > *"Dopo mezza giornata di battaglia sotterranea, voi e i nani superstiti emergete finalmente all'aria aperta sui bastioni esterni di Hammerfist. Lo spettacolo che vi accoglie è al tempo stesso terrificante e magnifico. Davanti a voi, i resti dell'esercito della Mano Rossa - ancora oltre 400 creature - sono disposti in formazioni difensive, ma qualcosa di straordinario sta accadendo nel cielo sopra di loro. Nubi nere si addensano con velocità innaturale, formando una tempesta che si muove contro il vento."*
 
-> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[CANONE — DM 2026-10-19, D13]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek, se è uscito vivo dal 3B, lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: per la H3-1 il tunnel nord porta lontano da Hammerfist, e la strada resta da scegliere al DM.
+> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[CANONE — DM 2026-10-19, D13]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek, se è uscito vivo dal 3B, lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: il tunnel dietro la statua scende al Cuore (DM 2026-10-21), quindi la strada del ritorno è lo stesso tunnel in salita; come il cortile caduto torni loro resta da scegliere al DM.
 >
 > **Chi è ancora in campo all'inizio della Sessione 4** `[CANONE — DM 2026-10-19, D13]` *(circa 400, ricavati dai file: la fonte è accanto a ogni numero; il Registro `ARC08-03` è un foglio da riempire al tavolo, e se la Sessione 3 è andata diversamente vale il Registro)*
 >

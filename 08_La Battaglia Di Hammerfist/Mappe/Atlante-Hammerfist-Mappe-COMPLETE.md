@@ -351,9 +351,9 @@ Vista dall'alto completa fortezza nanica Hammerfist. Mostra layout strategico da
   - 2 Baliste Pesanti
 
 **SUD - ACCESSO:**
-- Cancello Principale (10m larghezza, legno+ferro rinforzato)
-  - PF: 120, CA: 25, Durezza: 15
-- Ponte Levatoio (15m lunghezza)
+- Cancello Principale (6m di luce, 8m di altezza, legno+ferro rinforzato)
+  - PF: 200, CA: 25, Durezza: 15
+- Ponte Levatoio (7,5m lunghezza, 6m larghezza)
   - PF: 80, CA: 20, alzabile azione completo
 - Fossato Difensivo (6m largo, 3m profondo)
   - Acqua corrente, Nuotare CD 15 o annegamento
@@ -403,7 +403,7 @@ Vista che esercito Mano Rossa ha quando affronta fortezza. Mostra imponenza dife
 - Merlature sommità (Copertura 3/4 difensori)
 
 **CANCELLO:**
-- 10m larghezza × 8m altezza
+- 6m di luce × 8m altezza
 - Legno ironwood rinforzato ferro
 - Sbarre multiple visibili
 - Simbolo Hammerfist (Martello + Corona) inciso
@@ -712,7 +712,7 @@ Tre schizzi side-by-side mostrano progressivo collasso difese Hammerfist durante
 **PANEL B: BRECCIA PRINCIPALE - METÀ GIORNO 2**
 
 **Stato Strutture:**
-- **Mura Est BRECCIA:** 8 metri larghezza, rampa macerie
+- **Mura Est BRECCIA:** 7,5 metri larghezza, rampa macerie
   - Orchi stream through (XXX marked)
   - Impossibile difendere efficace (flanked)
 - **Cancello Principale:** Sfondato parziale, barra centrale rotta
@@ -791,7 +791,7 @@ Momento ICONICO campagna: Fauci di Palude dragon dive attack vs Re Thorek sui ba
 
 **BASTIONI CENTRALI (Target):**
 - Altezza: 15m (Vista dal basso li mostra elevated)
-- Walkway: 3m larghezza (Cramped, nowhere hide)
+- Camminamento: 4,5m larghezza (Cramped, nowhere hide)
 - Merlatures: Parziali copertura (Insufficiente vs breath)
 - Defenders: Visibili silhouettes contro sky
 
@@ -842,7 +842,7 @@ Questo è **TURNING POINT** Giorno 2. Soffio drago devastates leadership nanico,
 ## 🏃 SESSIONE 3: DALLE PROFONDITÀ DELLA TERRA
 
 ### MAPPA 3X: INGRESSO PASSAGGI ANTICHI
-**Griglia ultra-clear:** `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA H3-1 (40×40, 1,5 m)
+**Griglia ultra-clear:** `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA H3-1 (72×36, 1,5 m)
 **Immagine:** [157] `hammerfist-3x.png` — **reale (C3)**: `immagini/08.webp` (mappa evacuazione)
 
 **Tipo:** Escape tactical  
