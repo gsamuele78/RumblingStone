@@ -65,7 +65,7 @@ uniformi»; qui c'è lo strumento e la regola.
 - [x] il primo giro sotto la regola (giro 4 di ARC-07, PR #254): nessun peggioramento di prosa; i numeri aggiunti per il DM ora sono «solo aggiunti» e non ✗
 - [ ] **la regola** ([ADR-0094](adr/ADR-0094-il-giro-completo-si-misura-contro-la-versione-di-prima.md), proposta): `ciclo_prosa.py confronta --rif` su master e handout, gli handout come bersagli di `misura_craft`; si chiude quando il giro di DEF-4 e DEF-5 della serata del 2026-10-19 dice se regge
 
-### Lotto 6 · La skill esterna scrittura-italiana come eccezione 🟡 (2026-10-21)
+### Lotto 6 · La skill esterna scrittura-italiana come eccezione ✅ (2026-10-21)
 
 Aperto dopo che il giocatore di Artemis non ha capito il contratto del Seme
 letto a voce. Riscritto con e senza la skill esterna
@@ -76,7 +76,7 @@ distingueva, l'indice Gulpease sì (67,1 → 70,0 → 72,6).
 - [x] il contratto del Seme in due handout, DM e giocatore (`/mnt/project-files/contratto-seme/`); li porta in ARC-07 il thread «Schede PNG e cattivi uniformi»
 - [x] la reference `rumblingstone-narrative-style/references/scrittura-italiana-eccezione.md`: tre casi in cui si apre, il testo CC BY-SA fuori dal repo, i quattro conflitti con il repo
 - [x] la colonna `Gulp.` in `misura_craft --stile`, con quattro test
-- [ ] **la prova**: 35 box di DEF-4 e DEF-5 (gli 8 già votati al giro 3 restano fuori) riscritti con la reference, misurati con `cieco_versioni.py` e votati alla cieca dove la misura non decide ([ADR-0097](adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md), proposta)
+- [x] **la prova**: 35 box di DEF-4 e DEF-5 (gli 8 già votati al giro 3 restano fuori) riscritti con la reference, misurati con `cieco_versioni.py` e votati alla cieca dove la misura non decide ([ADR-0097](adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md)). Cieco del DM: nuova 10, vecchia 3, soglia 10 su 13 raggiunta; le 3 vecchie vincitrici rimesse, ADR-0097 accettata
 
 ## 2 · La calibrazione del lotto 1
 

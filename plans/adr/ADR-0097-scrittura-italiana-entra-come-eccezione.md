@@ -1,6 +1,6 @@
 # ADR-0097 — La skill esterna scrittura-italiana entra come eccezione, non come norma
 
-**Stato**: proposta (diventa accettata se la prova su DEF-4 e DEF-5 passa il cieco, decide il DM)
+**Stato**: accettata il 2026-10-21 (la prova su DEF-4 e DEF-5 ha passato il cieco del DM: nuova 10, vecchia 3, soglia 10 su 13)
 **Data**: 2026-10-21
 **Decisione-fonte**: il DM, il 2026-10-21 («il contratto del seme è risultato incomprensibile da capire in italiano per Artemis […] non è che in rete c'è una skill filologica che migliora la scrittura in italiano?»; dopo il cieco: «X.md si capisce meglio oggettivamente»; poi «preferirei inserire la nuova skill come eccezione inserendo la reference quando necessario […] fai una prova di riscrittura sul def 4 e def 5 dell'arc07»)
 
@@ -44,6 +44,14 @@ Dati in `/mnt/project-files/contratto-seme/`.
    quelli sopra le 25 parole, tranne gli 8 già votati al giro 3. Si misura con
    `cieco_versioni.py` secondo ADR-0093. Campione e misure stanno in
    `plans/esperimenti/prova-scrittura-italiana-2026-10-21/`.
+
+## Esito della prova
+
+Il 2026-10-21 il DM ha votato le 13 coppie alla cieca. La versione con la
+reference ha vinto 10 a 3, alla soglia esatta (Wilson 95% da 0,50 a 0,92).
+Le tre vecchie vincitrici (Scena 3, la targa di bronzo; le due del «grigio»
+di Zog'tar) sono state rimesse intatte. Il margine è il minimo che la soglia
+consente, quindi una seconda prova che perda basta a riaprire la decisione.
 
 ## Conseguenze
 

@@ -9,8 +9,8 @@ Prova del 2026-10-21 per [ADR-0097](../../adr/ADR-0097-scrittura-italiana-entra-
 - `RISCRITTURE.json`: per ogni box il vecchio, il nuovo, il verdetto della
   misura e la nota di chi l'ha riscritto. Due agenti, stesse norme, con
   `references/scrittura-italiana-eccezione.md`.
-- `SCHEDA-CIECO.md`: le coppie per il DM. La chiave è fuori dal repo, finché
-  il DM non ha votato.
+- `SCHEDA-CIECO.md`: le coppie per il DM.
+- `ESITO.md`: i voti del DM, la chiave sciolta e l'esito.
 
 ## Le misure
 

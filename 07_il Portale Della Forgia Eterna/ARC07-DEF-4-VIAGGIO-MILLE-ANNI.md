@@ -578,9 +578,9 @@ toccano nessuno. Prima di entrare c'è la targa.
 
 > **Read-aloud (LotR lead) — la porta, deep time al contrario.** *Conoscete Hammerfist:
 > le sale annerite dai secoli, le statue consumate, i nomi dei re incisi e
-> reincisi. Questa Hammerfist non ha ancora storia. Le mura sono di pietra
-> appena tagliata, bianche, con gli spigoli ancora vivi, e nel cortile c'è la
-> statua di un re, una sola. Dietro le mura le forge battono giorno e notte.
+> reincisi. Questa Hammerfist non ha ancora storia. Le mura sono bianche di
+> pietra appena tagliata, gli spigoli ancora vivi, e nel cortile c'è la statua
+> di un re, una sola. Dietro le mura le forge battono giorno e notte.
 > Accanto al battente è appesa una targa di bronzo lucida
 > come una pentola nuova, e sotto, sul selciato, qualcosa luccica.*
 
@@ -2132,13 +2132,13 @@ funziona solo se non l'hanno ancora minacciato.
 
 > **Read-aloud (Andor lead) — il primo incontro, 1 di 3, poi FERMATI.** *In fondo alla tenda, dove
 > la luce dei bracieri non arriva, un vecchio è seduto su uno sgabello da
-> bottega. Grembiule di cuoio. Sulle ginocchia ha una lastra di ardesia, e la
-> incide con una punta di ferro, piano, come se fuori non ci fossero
+> bottega. Grembiule di cuoio. Sulle ginocchia una lastra di ardesia che sta
+> incidendo con una punta di ferro, piano, come se fuori non ci fossero
 > diecimila tende e un drago.*
 
-> **Read-aloud (Andor lead) — 2 di 3, dopo che qualcuno ha reagito.** *Il vecchio
-> alza la testa e vi guarda lentamente, uno per uno. Sulla gemma del vostro capo
-> si ferma un istante di troppo. Poi torna a incidere. Non chiama la guardia.*
+> **Read-aloud (Andor lead) — 2 di 3, dopo che qualcuno ha reagito.** *Alza la
+> testa e vi guarda lentamente, uno per uno. Sulla gemma del vostro capo si
+> ferma un istante di troppo. Poi torna a incidere. Non chiama la guardia.*
 
 > **Read-aloud (Andor lead) — 3 di 3, solo quando il silenzio diventa scomodo.** *Il vecchio parla piano, da artigiano, senza fretta: «Quella
 > corona la finirono con tre gemme. Tu ne hai due.» Un colpo di punta
