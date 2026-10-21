@@ -27,9 +27,12 @@ soggetti ripetuti, pronomi ambigui sciolti. La misura non decide nessuna
 coppia, quindi le 13 vanno tutte al cieco. Soglia riproporzionata di ADR-0093:
 **10 su 13**.
 
-## Due difetti trovati e non corretti
+## Due difetti trovati, corretti dopo il cieco
 
-Correggerli vuole una scelta del DM:
+Il 2026-10-21 il DM ha lasciato la scelta: il box 24 dice «Dove il drago
+passa basso» (il nome resta al momento in cui il DM lo rivela), il box 26
+dice «corrono righe di rune», così «L'ultima riga» ha le sue sorelle.
+I due difetti com'erano:
 
 - DEF-4, box 24 del campione: «gli cola dalle fauci» e «dove passa basso» non
   hanno un nome maschile a cui riferirsi. Si corregge nominando il drago nel

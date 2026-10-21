@@ -3082,7 +3082,7 @@ rovesciati, con la stessa prova.
 > direzione. Un nano vicino a voi lascia
 > cadere lo scudo e non si china a raccoglierlo.*
 >
-> *Dove passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
+> *Dove il drago passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
 > nella neve.*
 >
 > **Che fate?**
@@ -3241,7 +3241,7 @@ cambia davvero.
 
 
 > **Read-aloud (Salvatore lead) — la runa sotto la scaglia.** *Sotto la scaglia
-> calda del petto, più pallida delle altre, corre una riga di rune naniche
+> calda del petto, più pallida delle altre, corrono righe di rune naniche
 > incise a punta, fitte come i conti di un mercante. L'ultima riga è più piccola e
 > più fonda delle altre, ed è quella che il drago non ha mai letto.*
 
