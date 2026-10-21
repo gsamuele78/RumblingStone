@@ -4037,6 +4037,15 @@ Il read-aloud si legge all'uscita dalla postierla, nella **Scena 6**.
 guardia (GP1-GP4 agli angoli); la **tenda del comando** (Zog'tar) al centro;
 notte = furtività CD 20; ogni fuoco è luce fioca a 3 m. La mappa è la M7-A, in Appendice D.
 
+**Com'è fatto il campo.** Ha due facce. Fuori stanno i clan degli orchi, una
+quindicina di bande: ripari di pelle bassi e storti, a gruppi attorno al fuoco
+della banda, con un tratto vuoto fra un clan e l'altro. Al centro c'è il
+quartiere hobgoblin, chiuso da uno steccato: tende uguali da otto soldati, in
+file, lungo vie diritte, e in mezzo una piazza sgombra con la tenda del
+generale, sola, e le guardie in una tenda loro. È il quartiere degli squadroni
+che «marciano al passo». La tenda del comando è un padiglione a tre pali,
+13,5 × 7,5 m: le misure, e da dove vengono, sono in Appendice D (M7-C).
+
 ### ZONA 3 — Le Mura all'Alba (l'assalto)
 
 Il read-aloud apre la **Scena 10**, ed è quello su cui si chiude la prima delle due
@@ -4626,7 +4635,7 @@ all'alba. Le scelte, con quello che cambiano:
 | Dove | Cosa cambia | Quanto costa |
 |---|---|---|
 | **Fuori dalla tenda, contro i rinforzi** (Scena 8, dopo un allarme) | la RD 10/adamantio rende un Treant quasi intoccabile per le ronde (orchi combattenti, falchion 2d4+4, Appendice A.6) e per gli squadroni (spada lunga 1d8+3). **Uno** tiene un lato: le ronde arrivano in **2d4+2** round invece di 1d4+2, gli squadroni in **3d4+2**. **Due** tengono la tenda: dentro non entra nessuno finché restano in piedi, e lo scontro resta contro il generale. Gli sciamani passano, perché la RD non ferma un incantesimo | un Treant nel campo si vede da tutto il pendio: è l'allarme, anche se il corno non ha ancora suonato. **Due** chiamati insieme di notte spengono l'Evocazione per un mese. Il drago arriva al corno come sempre, in 70 round, e sui Treant soffia per primo |
-| **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il palo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD. Il **Colpo Devastante** su di lui non funziona, perché l'SRD lo vuole contro un avversario più piccolo e il Treant è Grande come Zog'tar: il generale lo colpisce con l'Attacco Poderoso e tiene il Colpo Devastante per i PG. La *barriera di lame* di Balvar sul palo lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
+| **Dentro la tenda, contro Zog'tar** (Scena 8) | un Treant Grande sotto il colmo da 6 m ci sta. Fa da compagno per il fiancheggiamento e prende i colpi: l'ascia di Zog'tar (3d6+20) perde 10 sulla RD. Il **Colpo Devastante** su di lui non funziona, perché l'SRD lo vuole contro un avversario più piccolo e il Treant è Grande come Zog'tar: il generale lo colpisce con l'Attacco Poderoso e tiene il Colpo Devastante per i PG. La *barriera di lame* di Balvar sul palo centrale lo taglia come chiunque (13d6). Con due Treant dentro, chi si muove nella tenda ha poco spazio: i PG che volano restano sotto i 6 m del telo | lo scontro si accorcia, e Zog'tar cade prima. Il colpo finale resta al giocatore che lo dà, mai al Treant (`[HDYWTDT]`) |
 | **Sul fianco dell'orda, all'alba** (come scritto qui sopra) | **un successo in più** sulle mura (Scena 10, Q49), solo con **tutti e due** sul fianco | i Treant non sono nel duello |
 | **Nel duello con Skullcrusher** (Scena 11), uno o due | il drago vola, e un Treant non lo raggiunge finché resta in quota. Conta quando lo tirano giù: un Treant che tira la **corda** dell'ala (Scena 11, Forza CD 25) dà il suo aiuto +2 come chiunque, e quando il drago è a terra picchia con i colpi d'adamantio. Un albero non ha un nome da gridare (Scena 11, «Chi sceglie»): il drago li ignora finché non tengono la corda, e allora il soffio va sulla linea della corda | un Treant al duello è un Treant tolto al fianco: con uno solo sul fianco, niente successo in più. Il duello diventa più facile, ed è il prezzo pagato sulle mura |
 
@@ -5519,7 +5528,7 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 | Chi | Com'è | Come parla |
 |---|---|---|
-| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Il suo stato si fissa quando i PG atterrano alla tenda: se poi la trattativa con Balvar porta la 5ª tacca, Grask resta com'era all'arrivo. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2 (sono i numeri dell'SRD), e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare. Sveglio o no, da N15 è fuori dal telo: non vede dentro la tenda e non sente chi parla sottovoce, sente i gridi | non parla: soffia |
+| **Grask, l'araldo** | hobgoblin di quindici anni, magro. Il corno sta nella custodia col glifo, e la custodia è **incatenata al suo polso** da quando una volta l'ha perso e l'hanno frustato. Dorme seduto, fuori dalla tenda, col braccio sopra la custodia, e si sveglia al primo grido. **Se qualcuno tocca la custodia o la catena si sveglia comunque**, anche se dorme: niente prova, è la catena che tira. Veglia nella prima metà della notte e dorme nella seconda: sveglio finché l'ultima tacca segnata è la **4ª**, addormentato da quando si segna la **5ª**: prima del cambio è sveglio, dopo è a −10. Il suo stato si fissa quando i PG atterrano alla tenda: se poi la trattativa con Balvar porta la 5ª tacca, Grask resta com'era all'arrivo. Vuole una cosa sola: non perderlo più. Statistiche: hobgoblin combattente 1 dell'SRD, 6 pf, CA 15, Ascoltare e Osservare +2 (sono i numeri dell'SRD), e −10 ad Ascoltare finché dorme (SRD). Avvicinarlo: Muoversi Silenziosamente contro il suo Ascoltare. Sveglio o no, da P16 è fuori dal telo: non vede dentro la tenda e non sente chi parla sottovoce, sente i gridi | non parla: soffia |
 | la pattuglia di quattro orchi | quattro orchi con le lance in spalla e una torcia sola, che tengono bassa per non abbagliarsi | litigano in orchesco su chi ha rubato il rancio |
 | i cavalieri dei lupi | goblin piccoli e magri, legati alla sella con una cinghia. I worg sono grigi, col collare di cuoio chiodato, e annusano il vento prima di camminare | il worg non ringhia finché non è sicuro. Poi non smette, e il goblin ride |
 | le vedette goblin | due per carro, seduti sui sacchi di farina, avvolti nella stessa coperta | si danno di gomito a ogni rumore, e il secondo strilla sempre prima del primo |
@@ -5535,8 +5544,8 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
   sparita, una esce a gridare, ed è un **allarme** senza corno. Costa il
   successo in meno sulle mura, e il drago non arriva, perché nessuno l'ha
   chiamato. Vale anche per la bolla di
-  Balvar: se combatte con Zog'tar e accende il suo *silenzio* (P13, raggio
-  6 m), Grask a N15 ci sta dentro, e il corno suonato lì non chiama il drago.
+  Balvar: se combatte con Zog'tar e accende il suo *silenzio* (R14, raggio
+  6 m), Grask a P16 ci sta dentro, e il corno suonato lì non chiama il drago.
 - **Se il corno suona di notte**, per un allarme, il drago arriva mentre i PG
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
   finiti. Chi riparte in volo subito è dentro le mura prima di lui: un
@@ -5608,9 +5617,9 @@ invisibili. Vale tutto quello che segue, con tre differenze:
   Balvar, nano, vedono al buio fino a 18 m, e la tenda sta tutta in quel
   raggio. Per l'SRD l'oscurità non dà occultamento contro la scurovisione, e
   Nascondersi senza copertura né occultamento non si tenta. La copertura c'è
-  in tre punti: il palo a M9, la tavola della mappa a J8, lo schienale del
-  seggio. Chi entra senza invisibilità e senza arrivare dietro uno di questi
-  è visto;
+  dietro i tre pali in fila sotto il colmo (K12, N12 e Q12), la tavola della
+  mappa a J10 e lo schienale del seggio. Chi entra senza invisibilità e senza
+  arrivare dietro uno di questi è visto;
 - se una guardia li vede, si passa alla **Scena 8** senza round di sorpresa.
 
 Balvar li legge comunque. Finché gli parlano sottovoce in nanico antico nessuno
@@ -5619,7 +5628,7 @@ comune, si fa sentire, e si passa alla Scena 8.
 
 **L'invisibilità finisce durante la trattativa.** Parlargli prima di colpire
 costa una tacca, e nessuna pozione del gruppo dura tanto: le comprate durano 3
-minuti, *volare* 5. Chi torna visibile dietro una delle tre coperture (il
+minuti, *volare* 5. Chi torna visibile dietro una delle coperture (un
 palo, la tavola, lo schienale del seggio) tira Nascondersi contro l'Osservare
 delle guardie, come chi arriva visibile; chi torna visibile allo scoperto, o
 sospeso in volo sotto il telo, è visto, e si passa alla Scena 8 senza round di
@@ -5645,7 +5654,7 @@ Accanto a lui c'è il corno, e quello che si dice lì lo sente il drago (Scena 6
 **Come va la scena, in ordine.** Nella tenda ci sono due persone che contano, e
 **parla prima quella che non dovrebbe**. Zog'tar è sul seggio con le sue
 guardie; **Balvar** è nell'angolo in fondo, dove i bracieri non arrivano. I PG
-sono invisibili, o nascosti dietro il palo o la tavola, ma Balvar li **legge**: il suo *Leggere il Fuori-Posto*
+sono invisibili, o nascosti dietro un palo o la tavola, ma Balvar li **legge**: il suo *Leggere il Fuori-Posto*
 percepisce chi non appartiene a questo secolo. Parla in **nanico antico**, a
 voce bassa, e nessuno nella tenda capisce: Zog'tar crede che borbotti sulle sue
 rune, come fa sempre. Fra i PG, i nani lo capiscono **a fatica**: tutto il senso,
@@ -6008,13 +6017,17 @@ motivo per cui la Scena 7 viene prima.
   cade, o scappa, entrano. Smettono solo quando i PG sono fuori dal campo.
   Lo scontro col generale resta a EL 17; i rinforzi sono sopra il tetto per
   scelta, come il drago sulla tenda.
-- **La tenda è alta 6 m al palo centrale e 3 m ai lati**. Sotto il
+- **La tenda è alta 6 m al palo centrale e 3 m ai lati**. I pali
+  sono tre, in fila sotto il colmo e tutti alti 6 m (mappa M7-C): il centrale è
+  il palo maestro, con la runa di Balvar. Sotto il
   telo chi vola **non** esce dalla portata dell'ascia: Zog'tar è alto 3 m e
   arriva a 3 m oltre, cioè fino al colmo. Ne esce solo chi sta fuori dal telo.
   Le risposte dell'orda, tutte SRD:
   - **Zog'tar** tiene **tre giavellotti Grandi** accanto al seggio: +19 a
     distanza, 1d8+13 in Ira, incremento 9 m. E se il volo dura, **abbatte il
-    palo centrale** (Forza **CD 20**, azione standard): il telo crolla, e chi è
+    palo centrale** (Forza **CD 20**, azione standard): il colmo è fatto di due
+    travi incastrate sul palo centrale, e senza quello cadono e si portano
+    dietro i pali di testa `[INFERRED — needs DM confirmation]`. Il telo crolla, e chi è
     in volo sotto finisce a terra, intralciato, finché non supera Riflessi
     **CD 15** (un tentativo per round). Le guardie e lui escono dal telo in un
     round;
@@ -6080,8 +6093,8 @@ motivo per cui la Scena 7 viene prima.
   moderato (−5/+10) se ha colpito bene.
   Contro chi porta armatura leggera o niente (Artemis, Hella in forma
   normale) non alza l'Attacco Poderoso: usa il **Colpo Devastante** e lo
-  scaglia lontano, contro il palo o fuori dal telo. Un nano scagliato contro
-  il telo del seggio (L14-N14) fa scattare il glifo legato ai nani,
+  scaglia lontano, contro un palo o fuori dal telo. Un nano scagliato contro
+  il telo del seggio (N15–P15) fa scattare il glifo legato ai nani,
   e il boato è un allarme. Separa il gruppo e lascia
   vivo il bersaglio. Se Artemis lo martella, si gira su di lui.
 - **Danno massiccio** (regola SRD, attiva nelle regole della casa). Con
@@ -6096,7 +6109,7 @@ motivo per cui la Scena 7 viene prima.
   l'Ira comincia al suo primo turno. Balvar parla lo stesso, se i PG ci
   arrivano: lui non ha fretta.
 - **Il sacerdote dell'orda**. Dorme nella
-  tenda, su una stuoia dietro il seggio, a L13.
+  tenda, su una stuoia dietro il seggio, a N14.
   Si alza al primo grido e agisce dal **round 1**, con *vedere invisibilità*
   già addosso se ha sentito il corno. Lancia *comando* («Cadi!», Volontà CD 13) sul PG più vicino a Zog'tar,
   poi *benedizione* sulle guardie, poi *oscurità* per coprire la ritirata del
@@ -6221,7 +6234,7 @@ Appendici A.2 e A.4, cambia chi c'è nella tenda.
   alle ronde. Zog'tar, Balvar e le due guardie fanno EL 16; senza Balvar,
   EL 15. Le due guardie restano davanti al seggio e non vanno su chi lancia.
 - **Con cinque PG** (APL 13, tetto 17): le guardie sono sei. Le due in più sono
-  quelle del turno dopo, sedute dietro il seggio, e si alzano al primo grido.
+  quelle del turno dopo, sedute dietro il seggio, a L14 e Q14, e si alzano al primo grido.
   Due restano davanti a Zog'tar, le altre quattro vanno in coppia su chi lancia
   incantesimi e su chi colpisce da lontano. Con Balvar e il sacerdote la tenda
   resta a EL 17; senza Balvar, EL 16.
@@ -7757,18 +7770,22 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
         ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
               ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
                                                    ┊      🌲 ✦ portale, ~500 m
-   ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
-   GP1▪ ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺ ▪GP2 ┊  ← Zona 2: MARE DI TENDE
-   ⛺⛺⛺⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺⛺⛺ ◄┘  via dei PG: fianco est, poi da nord
-   ⛺⛺⛺⛺⛺⛺ ║ TENDA DEL  ║ ⛺⛺⛺⛺⛺      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺⛺⛺⛺⛺ ║  COMANDO   ║ ⛺⛺⛺⛺⛺      ~1 km dalla postierla: cinque blocchi
-   ⛺⛺⛺⛺⛺⛺ ╚═══════════╝ ⛺⛺⛺⛺⛺      👤 VATORE fra le tende (Sc. 9)
-   GP3▪ ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺ ▪GP4
+   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+   GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
+   ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
+   🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
+   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
+   🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
+   GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
                        SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ⛺ tende (copertura) · ▪GP posti di guardia · ╔╗ tenda del
-comando · ┊◄ la via dei PG · 👤 Vatore · ⚔️ scontro · ✦ arrivo del portale.
+▫ postierla · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco della
+banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato · ▪▪
+le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗ la
+tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
@@ -7845,17 +7862,23 @@ Hammerfist dall'alto in basso.
 
 #### MAPPA M7-C — LA TENDA DEL COMANDO (Scene 7 e 8)
 
- La tenda misura 18 m × 16,5 m.
+ La tenda misura 13,5 m × 7,5 m di pavimento, 16,5 m ×
+10,5 m col telo: un padiglione di pelle nera a tre pali in fila sotto il colmo,
+alto 6 m al colmo e 3 m alle pareti. Sta sola in mezzo a una piazza sgombra,
+chiusa da uno steccato con quattro varchi; fuori ci sono le file di tende delle
+guardie hobgoblin e, a ovest, i ripari dei clan degli orchi attorno ai loro
+fuochi.
 
-**Dove sta chi, se la griglia non è stampata.** I PG arrivano da nord, a N2.
-La soglia è a nord, M4–N4, in piena luce del braciere a O6. Il palo
-centrale, con la runa della barriera di lame, è a M9. Zog'tar siede sul
-seggio a M12–N13, con il braciere del seggio a J11; le quattro guardie gli
-stanno davanti, a K12, L10, O10 e P11. Balvar è sullo sgabello a P13, nel
-fondo buio P12–R13. Il telo est, «il telo a sinistra», va da S5 a S13; il
-telo del glifo è quello sopra il seggio, L14–N14. Grask è seduto fuori, a N15,
-due quadretti dietro il seggio, e il sacerdote dorme sulla sua stuoia, a L13.
-Nella tenda accanto, a W11, dormono le due guardie del turno dopo.
+**Dove sta chi, se la griglia non è stampata.** I PG arrivano da nord, per la
+via, a M2–N3. La soglia è a nord, M9–N9, in piena luce del braciere a L10. I
+tre pali sono a K12, N12 e Q12; quello centrale, N12, porta la runa della
+barriera di lame. Zog'tar siede sul seggio a O13–P14, con il braciere del
+seggio a K14; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14.
+Balvar è sullo sgabello a R14, nel fondo buio Q13–R14. Il telo est, «il telo a
+sinistra», va da S10 a S14; il telo del glifo è quello sopra il seggio,
+N15–P15. Grask è seduto fuori, a P16, due quadretti dietro il seggio, e il
+sacerdote dorme sulla sua stuoia, a N14. Nella loro tenda, V11–W12, a 3 m dal
+telo est, dormono le due guardie del turno dopo.
 
 <!-- /pagina -->
 

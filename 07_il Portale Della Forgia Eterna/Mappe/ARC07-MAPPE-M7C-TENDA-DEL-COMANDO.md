@@ -22,8 +22,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 10 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 🪑 ⬜ 🏮 ⬜ ⬜ ⬜ ⬜ ⬜ 🪓 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
 11 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🎪 🟫 🟫 🎪 🎪 🟫 🟫 🟫 🟫
 12 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ ⬜ 🟪 ⬜ 🎪 🟫 🟫 🎪 🎪 🟫 🟫 🟫 🟫
-13 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ 🔴 🔴 ⚫ ⚫ 🔴 ⬜ 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-14 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 ⬜ 🏮 ⬜ 🔴 🟡 ⚫ ⚫ ⬜ 🟡 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
+13 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🎪 ⬜ ⬜ ⬜ 🔴 🔴 ⚫ ⚫ ⬜ ⬜ 🎪 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+14 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🎪 ⬜ 🏮 ⬜ 🔴 🟡 ⚫ ⚫ 🔴 🟡 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩
 15 🎪 🎪 🟩 🧱 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🧱 🟩 🎪 🎪
 16 🟩 🔥 🟩 🧱 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🟫 🟫 🟫 🦴 🟫 🟫 🟫 🧱 🟩 🎪 🎪
 17 🟩 🟩 🎪 🧱 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🟫 🟫 🟫 🧱 🟩 🟩 🟩
@@ -42,7 +42,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 @mark 3 ; R14 ; Balvar Fuocospento, sullo sgabello nel fondo buio, a tre passi dal generale (GS 13)
 @mark 4 ; M13 ; Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)
 @mark 5 ; N13 ; Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)
-@mark 6 ; Q13 ; Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)
+@mark 6 ; Q14 ; Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)
 @mark 7 ; M14 ; Guardia hobgoblin, in ascolto accanto al seggio (Guerriero 8)
 @mark 8 ; P16 ; Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª (Combattente 1)
 @mark 9 ; N14 ; Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido (GS 6, adepto 7)
@@ -81,12 +81,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 | Orda | Balvar Fuocospento, sullo sgabello nel fondo buio, a tre passi dal generale | 🟡 | 1 | GS 13 | R14 |
 | Orda | Guardia hobgoblin, in ascolto accanto al seggio | 🔴 | 1 | Guerriero 8 | M13 |
 | Orda | Guardia hobgoblin, in ascolto accanto al seggio | 🔴 | 1 | Guerriero 8 | N13 |
-| Orda | Guardia hobgoblin, in ascolto accanto al seggio | 🔴 | 1 | Guerriero 8 | Q13 |
+| Orda | Guardia hobgoblin, in ascolto accanto al seggio | 🔴 | 1 | Guerriero 8 | Q14 |
 | Orda | Guardia hobgoblin, in ascolto accanto al seggio | 🔴 | 1 | Guerriero 8 | M14 |
 | Orda | Grask, l'araldo: seduto fuori, dalla parte del campo, la custodia del corno incatenata al polso; sveglio fino alla 4ª tacca, addormentato dalla 5ª | 🔴 | 1 | Combattente 1 | P16 |
 | Orda | Il sacerdote dell'orda, che dorme dietro il seggio: si alza al primo grido | 🟡 | 1 | GS 6, adepto 7 | N14 |
 
-- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q13 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, V11–W12. Se è **pre-allertato**, vedi lo stato B qui sotto.
+- **Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, V11–W12. Se è **pre-allertato**, vedi lo stato B qui sotto.
 - **Da dove si entra** (Scene 6 e 7): dalla **soglia** (M9–N9), e con un nano fra loro scatta la runa (stato C); dal **telo est** (S10–S14), «il telo a sinistra» che Balvar consiglia, e si resta invisibili senza runa né glifo; dal **telo sopra il seggio** (N15–P15), che porta il glifo (stato D). Chi taglia la tenda altrove resta invisibile, ma il taglio fa rumore: le guardie tirano Ascoltare contro il suo Muoversi Silenziosamente.
 - **Round di sorpresa** (Scena 8): chi nessuno ha visto né sentito ha un'azione standard o di movimento. Parlare con Balvar in nanico antico, sottovoce, non conta come parlare ad alta voce. Zog'tar non perde la Destrezza alla CA (Schivare Prodigioso Migliorato) e fuori dall'Ira ha 283 pf.
 - **Round 1** (Scena 8): Ira Barbarica (*«A ME, CANI! ABBATTETE LE OMBRE!»*) e Occhio di Ossidiana su Thorik; delle quattro guardie, due restano davanti al seggio e due vanno in coppia su chi lancia incantesimi o colpisce da lontano. Al primo grido Grask suona il corno entro **1d4 round**, se nessuno se n'è occupato prima (Scena 6).
