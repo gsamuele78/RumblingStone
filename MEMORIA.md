@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 15 decisioni aperte
+## Aspetta il DM: 14 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -26,7 +26,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
 | `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
@@ -110,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | D5 decisa dal DM una per una: le undici risposte di A3 tutte come le consigliat… | ✅ D5 · D6 aperta |
 | 2026-10-21 | MASTER-DEF | la prova è la scaramuccia dell'avanguardia nella Sessione 1 (libretto §13, trap… | 🟡 retroguardia, Fuoco di copertura e comandanti `[INFERRED]` |
 | 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | ✅ incantesimi di Dara confermati dal DM (lista del ranger SRD) |
 | 2026-10-21 | MASTER-DEF | libretto della battaglia campale di Hammerfist (`ARC08-18`, ADR-0096 proposta):… | 🟡 manca la prova al tavolo; carte dei comandanti `[INFERRED]` |
@@ -121,11 +121,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
 | 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
 | 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
-| 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0095 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 15 aperte, 278 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 14 aperte, 279 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

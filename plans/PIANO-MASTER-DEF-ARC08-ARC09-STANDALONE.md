@@ -420,9 +420,10 @@ morde Thorik e lui ripete Scalare CD 25 a ogni turno di Fauci; colpito
 all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
 
 <!-- eco: MASTER-DEF 2026-10-21 -->
-- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo.
-- **Aperte**: D5, D6; il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
+- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo. D5, carta per carta: le undici risposte di A3 tutte come le consigliate.
+- **Aperte**: D6, una carta per domanda; il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
 - **Cambiate**: S1a non parte più dal consiglio di guerra di DEF-5 ma dal flashback dei pregen, e i bonus D9 si leggono da come va il flashback, non dai valori di default.
+- **Dedotto da me**: la carta su Dana era scritta male (sembrava il soffio): il DM ha precisato che il soffio lo prende il re, e ha tenuto D92 com'è (Dana fa da scudo al re contro le frecce in caverna). La carta sulle ferite segnate le attribuiva alla Fase 0: sono i colpi su Skullcrusher nel duello di ARC-07; la risposta non cambia.
 
 Lo stesso giorno il DM ha chiesto come far accettare i pregen ai giocatori, e
 ha proposto lui la cornice: i tre giorni dell'assedio sono una visione della
