@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | giro sulla Sessione 1 coi pregen: quattro letture a freddo (playtester 32, lett… | ✅ letture · correzione da fare |
 | 2026-10-21 | MASTER-DEF | D5 decisa dal DM una per una: le undici risposte di A3 tutte come le consigliat… | ✅ D5 · D6 aperta |
 | 2026-10-21 | MASTER-DEF | la prova è la scaramuccia dell'avanguardia nella Sessione 1 (libretto §13, trap… | 🟡 retroguardia, Fuoco di copertura e comandanti `[INFERRED]` |
 | 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | ✅ incantesimi di Dara confermati dal DM (lista del ranger SRD) |
@@ -120,11 +121,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
 | 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
-| 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 279 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 14 aperte, 281 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

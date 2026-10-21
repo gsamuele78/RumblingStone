@@ -420,8 +420,8 @@ morde Thorik e lui ripete Scalare CD 25 a ogni turno di Fauci; colpito
 all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
 
 <!-- eco: MASTER-DEF 2026-10-21 -->
-- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo. D5, carta per carta: le undici risposte di A3 tutte come le consigliate.
-- **Aperte**: D6, una carta per domanda; il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
+- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo. D5, carta per carta: le undici risposte di A3 tutte come le consigliate. D21, le zone di Hammerfist dal 372 al 1372. D22, le trappole valgono i giorni 1 e 2.
+- **Aperte**: D6, una carta per domanda (manca `combat_prompts_guide`); il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
 - **Cambiate**: S1a non parte più dal consiglio di guerra di DEF-5 ma dal flashback dei pregen, e i bonus D9 si leggono da come va il flashback, non dai valori di default.
 - **Dedotto da me**: la carta su Dana era scritta male (sembrava il soffio): il DM ha precisato che il soffio lo prende il re, e ha tenuto D92 com'è (Dana fa da scudo al re contro le frecce in caverna). La carta sulle ferite segnate le attribuiva alla Fase 0: sono i colpi su Skullcrusher nel duello di ARC-07; la risposta non cambia.
 
@@ -521,6 +521,8 @@ Per ogni master, prima di chiudere il lotto:
 | ~~D18~~ | giro | ✅ **Decisa il 2026-10-19: il default.** La serata: il 3B e la Sessione 4 insieme e la Cerimonia la serata dopo (il default scritto), oppure solo il 3B? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | ~~D19~~ | giro | ✅ **Decisa il 2026-10-19: l'Appendice C.** EL e PE del 3B e della 4A: l'Appendice C (2.600 e 4.600 PE al gruppo) togliendo l'EL 17 dichiarato, o l'EL 17 con lo scontro reso davvero tale? Poi le righe di scala. Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | ~~D20~~ | giro | ✅ **Decisa il 2026-10-19: due.** Il box dell'Atto 2 della Cerimonia: due figure venute da fuori e non insieme, come dicono le note per il DM dello stesso file, oppure le tre figure coordinate del box originale? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D21~~ | zone | ✅ **Decisa il 2026-10-21, carta per carta, tutte come le consigliate.** Le zone di Hammerfist dal 372 al 1372 ([`ZONE-HAMMERFIST-372-1372.md`](esperimenti/a3-arc08/ZONE-HAMMERFIST-372-1372.md)): la «Porta Ovest» di DEF-5 è la Torre Ovest con il bastione G1, e le sei torri che Fauci abbatte sono le sei postazioni (2 torri e 4 bastioni); il tunnel della statua scende al Cuore (D48), si corregge L3; la porta dal cortile alla montagna c'è, è l'atrio della cittadella e cade il Giorno 3; la bocca del tunnel sta dietro la statua; il cortile è quello di L2 (la porta della targa del 372 è la Porta Interna); la statua del Re Antenato è il nonno di Re Thorek I; una delle dieci statue del Cuore è Re Thorek I; tutte le proposte `[INFERRED]` del rapporto adottate. Più le scale delle mappe dal thread delle mappe di ARC-07, da rifare |
+| ~~D22~~ | giro S1 | ✅ **Decisa il 2026-10-21: giorni 1 e 2.** Una trappola dell'avanguardia annulla una tacca del Giorno 1 o del Giorno 2 (DEVELOPER R7: breccia chiusa 67/75/84/89% con 0/2/4/6 trappole) |
 
 ## Come si riparte in una chat nuova
 
