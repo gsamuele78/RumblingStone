@@ -6,7 +6,7 @@
 > Tarsilia, l'Abbazia della Rotta Sicura). L'ordine l'ha dato il DM il
 > 2026-09-25: *«poi i DEF di ARC-08, poi ARC-09 e tutti gli stand-alone»*.
 >
-> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; F4 di PIANO-LETTORE chiuso il 2026-10-15; A3 letto il 2026-10-15, con D4 e D5 aperte al DM · **Decisore**: DM ·
+> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; F4 di PIANO-LETTORE chiuso il 2026-10-15; A3 letto il 2026-10-15; D4 decisa il 2026-10-21 (il flashback dei pregen resta prima), D5 e D6 aperte al DM · **Decisore**: DM ·
 > **Standard**: [`rumblingstone-module-standard`](../skills/rumblingstone-module-standard/SKILL.md)
 > **Gate**: ogni master fa i **sette passi del ciclo completo** di
 > `rumblingstone-module-standard` (scene `### SCENA`, contratto «In scena»,
@@ -286,7 +286,7 @@ duellanti: colonne 16-20 nella prima, 18-22 nella seconda. Solo la seconda è
 centrata sulla griglia 40×40, e in DEF-04 si tiene quella. Nessuna delle due è
 una griglia (`MAPPE-CENSIMENTO`, nota 8).
 
-## A3 · Il canone di ARC-08 contro il tavolo — 🟡 letto il 2026-10-15, aspetta D4 e D5
+## A3 · Il canone di ARC-08 contro il tavolo — 🟡 letto il 2026-10-15, D4 decisa il 2026-10-21, aspetta D5
 
 Una lettura in sola lettura, fatta da un agente, dei file vivi di ARC-08 contro il ramo di gruppo
 (`state.md`, log delle sessioni 3 e 4), i master di ARC-07 e le reference
@@ -384,7 +384,7 @@ passata. Rapporti e conti in
 13 🔴 e 61 🟠 nelle letture, 74 dopo aver unito i doppi; 37 corretti, 35 al DM,
 1 respinto, 1 residuo; la verifica ha trovato 15 parziali, 0 aperti, 2 🟠 nuovi,
 chiusi nella seconda passata insieme all'Atlante. Restano le dodici decisioni
-D9-D20 e due residui. Le parti dei pregen (Sessioni 1-3A) aspettano D4.
+D9-D20 e due residui. Le parti dei pregen (Sessioni 1-3A) restano, perché il DM ha deciso D4 così il 2026-10-21, e avranno un giro loro.
 
 Il DM ha scelto le dodici consigliate lo stesso giorno, e sono applicate ai
 file d'arco e al Bestiario (tre schede nuove: bugbear assassino GS 9, gufo
@@ -418,6 +418,11 @@ l'ascia della cicatrice ancestrale e chiama Thorik «Portatore».
 Il DM ha poi confermato le due regole scritte da me: sul collo il drago non
 morde Thorik e lui ripete Scalare CD 25 a ogni turno di Fauci; colpito
 all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
+
+<!-- eco: MASTER-DEF 2026-10-21 -->
+- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo.
+- **Aperte**: D5, D6; il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
+- **Cambiate**: S1a non parte più dal consiglio di guerra di DEF-5 ma dal flashback dei pregen, e i bonus D9 si leggono da come va il flashback, non dai valori di default.
 
 ## FASE 2 — Sviluppo / attuazione
 
@@ -471,7 +476,7 @@ Per ogni master, prima di chiudere il lotto:
 | ~~D1~~ | A1 | ✅ **Decisa il 2026-09-27.** ARC-08: **quattro master**; ARC-09: **uno per beat**, circa dodici. Le fonti hanno spostato il taglio di ARC-08 rispetto alla proposta (il passaggio pregen → PG cade a metà della Sessione 3, non fra due master): la tabella in «A1» taglia per sessione, e attende l'OK |
 | ~~D2~~ | S1-S2 | ✅ **Decisa il 2026-09-27: rifinire.** I master nascono completi di read-aloud, battute, contingenze e vie non combattive. Chiude anche la D2 di MESTIERE-BANCHI: confluiscono qui S5 e S6. S4 resta là perché riguarda ARC-07 (vedi §1) |
 | ~~D3~~ | S4 | ✅ **Decisa il 2026-09-27: sì, solo forma.** Il contratto «In scena» e i rilievi di `domande_developer` come note del DM; nessuna riga di prosa cambiata, coerente con la D1 di MESTIERE-BANCHI |
-| D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| ~~D4~~ | A3 | ✅ **Decisa il 2026-10-21: prima, com'è oggi.** Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? La consigliata era salta; il DM tiene le Sessioni 1-3A con i pregen prima del 3B, e S1a parte da lì |
 | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
 | ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0095) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
@@ -495,5 +500,5 @@ Per ogni master, prima di chiudere il lotto:
 2. leggere questo piano e `plans/STATO-E-ORDINE-DEI-PIANI.md` §4 (le decisioni
    aperte al DM);
 3. D1-D3 sono decise, la tabella A1 è approvata e A2 è misurato
-   (2026-09-27). F4 di PIANO-LETTORE è chiuso (2026-10-15) e A3 è letto: si riparte da D4 e D5, poi S1a. **F6-a** (il cancello che vede un master
+   (2026-09-27). F4 di PIANO-LETTORE è chiuso (2026-10-15) e A3 è letto e D4 è decisa (il flashback resta prima): si riparte da D5, poi il giro sulle Sessioni 1-3A e S1a. **F6-a** (il cancello che vede un master
    senza scene), che serviva prima di S1, è ✅ dal 2026-09-27. Vedi §1-bis.

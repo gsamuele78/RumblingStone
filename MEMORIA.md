@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 16 decisioni aperte
+## Aspetta il DM: 15 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -26,7 +26,6 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
 | `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
 | `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
@@ -111,6 +110,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | D4 decisa dal DM: il flashback con i pregen di ARC-08 resta prima del 3B, com'è… | ✅ restano aperte D5 e D6 |
 | 2026-10-20 | MASTER-DEF | il DM conferma le due regole aperte della presa di Thorik (cosa succede sul col… | ✅ |
 | 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
@@ -122,11 +122,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-19 | REVISIONE-ARC07 | Skullcrusher e Zog'tar messi alla prova con tutti gli artefatti del gruppo: sim… | 🟡 restano… |
 | 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro finale di developer, playtester e DM a freddo su `DEF-4`, `DEF-5` e i book… | 🟡 aperte al DM le domande 28-33 di `DECISIONI-DM.md`; nessun file peggiora sulla prosa (l'unico ✗ è l'Attacco Poderoso pieno corretto su M7-C) |
 | 2026-10-19 | AVVENTURE-COMMUNITY | Lotto 5, dopo il giro 4 di ARC-07 | 🟡 `ciclo_prosa confronta` separa i fatti solo aggiunti (un numero o un nome scritto per il DM) dai fatti tolti o cambiati: i primi si segnalano senza far peggi… |
-| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro 4 su `DEF-4` e `DEF-5` per la serata (e voto cieco del giro 3: nuova 5, ve… | 🟡 corretto e rigenerato; restano le decisioni del DM (`DECISIONI-DM.md`, dieci per stasera) |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 16 aperte, 277 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 15 aperte, 278 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
