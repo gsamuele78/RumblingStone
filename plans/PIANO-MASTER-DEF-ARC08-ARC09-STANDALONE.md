@@ -440,8 +440,12 @@ giocare (solo i pregen, le truppe, i pregen alla testa delle truppe). È
 `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` ([ADR-0096](adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md),
 proposta), tarato con le simulazioni di
 `plans/esperimenti/battaglia-campale-2026-10-21/`. Le sessioni diventano 0
-(regole e battaglia di prova), 2 e 3a; la Sessione 1 non si gioca e i bonus si
-leggono da `ARC08-10` §5.4-bis, `[INFERRED]`. Manca la prova al tavolo.
+(regole e battaglia di prova), poi 1, 2 e 3a: il DM ha voluto tenere
+l'avvistamento; i bonus si leggono da `ARC08-10` §5.4-bis, `[INFERRED]`.
+Ogni pregen ha la sua carta dei poteri con i numeri già fatti (handout 1-4
+bis), e le schede degli handout 1-4 hanno ora i numeri del Bestiario. Chi non
+vuole un pregen gioca il capitano o l'orda (libretto §9). Manca la prova al
+tavolo.
 
 ## FASE 2 — Sviluppo / attuazione
 

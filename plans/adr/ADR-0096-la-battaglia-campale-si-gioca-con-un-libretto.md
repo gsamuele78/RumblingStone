@@ -30,9 +30,10 @@ le brecce, tre modi di giocare (solo l'eroe, l'eroe con due reparti, il
 capitano con tre). Il dado bianco della difesa è il tiro d'attacco dell'orda
 rovesciato (d20 + DU contro 22 + AU), con la stessa probabilità.
 
-Le sessioni diventano Sessione 0 (regole e battaglia di prova), Sessione 2 e
-Sessione 3a; la Sessione 1 non si gioca e la ricognizione vale «parziale»
-(`ARC08-10` §5.4-bis). L'orda di default è quella feroce (+1 ad AU e DU sulla normale), con
+Le sessioni diventano Sessione 0 (regole e battaglia di prova senza posta),
+poi Sessione 1, 2 e 3a come nel master (`ARC08-10` §5.4-bis). Chi non vuole
+un pregen gioca il capitano o l'orda (libretto §9). Ogni pregen ha una carta
+dei poteri con i numeri già calcolati (`ARC08-15`, handout 1-4 bis). L'orda di default è quella feroce (+1 ad AU e DU sulla normale), con
 una terza manopola terrificante, per la preferenza del DM per la versione
 più forte.
 

@@ -204,6 +204,17 @@ Nelle prove i modi B e C hanno quasi la stessa probabilità di fermare la
 breccia, ma nel modo C si perdono più reparti: senza un eroe in linea l'orda
 logora di più.
 
+**Chi non vuole un pregen.** Non lo si obbliga. Ha due posti, e sceglie lui:
+
+- **il capitano** (modo C): tre reparti suoi e nessuna scheda d'eroe da
+  imparare. Il suo pregen resta nelle retrovie e lo muove il DM, senza tiri;
+- **l'orda**: gioca contro gli amici. Pesca il mazzo, sceglie dove cadono le
+  carte e dà voce a Gorthak e Grimjaw, con il DM accanto che decide i limiti.
+
+Nella Sessione 1, dove la battaglia campale non c'è, il capitano guida la
+pattuglia di nani che accompagna gli eroi (prove di gruppo, nessuna scheda),
+e chi ha scelto l'orda gioca gli esploratori della Mano Rossa.
+
 **Soli o insieme.** Due o più eroi possono tenere lo stesso settore: ognuno
 porta i suoi reparti e il suo gesto, e il fronte si allarga di **un** reparto
 nemico per ogni eroe in più. Un settore che resta senza eroi lo tiene un
@@ -315,9 +326,9 @@ i combattimenti sulla mappa.
 
 **La battaglia di prova** (Sessione 0) `[INFERRED]`: un solo giorno, tre
 round, orda normale, solo la carta dei giganti, ogni giocatore nel suo
-settore. È l'assalto di avanguardia del giorno prima, e vale la riga
-**Difese preparate** di `ARC08-10` §5.4-bis: nessuna breccia è «pieno», una
-è «parziale», due o più «fallito». Si gioca dopo aver letto §1-§8 insieme.
+settore. Non ha posta: serve a imparare, e si può rifare finché il tavolo
+non tira senza guardare il libretto. Si gioca dopo aver letto §1-§8 insieme,
+e la Sessione 1 dell'avvistamento viene dopo.
 
 **Il tempo.** Tre o quattro minuti a round, cinque round a giorno: il
 primo e il secondo giorno stanno in una serata con i duelli. Il terzo giorno

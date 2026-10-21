@@ -270,15 +270,13 @@ maturati e si applicano al finale.
 
 Proposta del 2026-10-21 (ADR-0096): l'assedio dei pregen si gioca con il
 libretto della battaglia campale (`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md`).
-Le sessioni diventano una **Sessione 0** (regole e una battaglia di prova
-sulle mura, prima dell'assedio), la **Sessione 2** e la **Sessione 3a**.
-La Sessione 1 non si gioca.
+Le sessioni coi pregen diventano quattro: una **Sessione 0** (regole e una
+battaglia di prova senza posta, libretto §12), poi la **Sessione 1**
+dell'avvistamento, la **Sessione 2** e la **Sessione 3a** (il DM, 2026-10-21:
+l'avvistamento resta).
 
-- **Ricognizione della colonna**: riga «parziale» (+1 iniziativa di massa),
-  perché la colonna è stata vista ma nessun eroe l'ha seguita.
-- **Difese preparate**: si guadagnano nella battaglia di prova della
-  Sessione 0 (libretto §12). Nessuna breccia = «pieno», una = «parziale»,
-  due o più = «fallito».
+- La Sessione 1 si gioca come nel master, e le sue righe di §5.1 si leggono
+  come sopra.
 - Le righe di §5.2 e §5.3 si leggono con la tabella di §12 del libretto
   (brecce dei giorni 1 e 2, comandanti fuggiti feriti, Mura del giorno 2,
   reparti vivi alla ritirata). Nell'assedio i comandanti non muoiono: sotto
