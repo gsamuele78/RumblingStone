@@ -916,3 +916,68 @@ scrivono: `[INFERRED — da verificare in scrittura]`, non una scelta di gusto.
 Con questi numeri le CD della prima stesura sono quasi certe per chi ha
 l'abilità giusta: per questo T5 alza di 5 le CD fisse o le rende
 contrapposte, e T9 mette i gradini dell'Osservare a 20 / 25 / 30.
+
+---
+
+## Applicate (correzioni 1)
+
+Il 2026-10-21, sui file che non sono la Sessione 1: `LIB`, `SEG`, `HO` e gli
+script di `plans/esperimenti/battaglia-campale-2026-10-21/` (con il
+README). Il conto delle abilità dei pregen sta in
+[`ABILITA-PREGEN.md`](ABILITA-PREGEN.md).
+
+**Fatte, intere**: T23, T24, T25 (in `LIB`, `SEG` e nello script), T26, T27,
+T29, T30, T32, T33, T34, T35, T36, T37, T38, T39, T40, T41, T42, T43, T45,
+T46, T47, T48, T49 (sulle schede di `HO`), T50, T51, T53, T54, T55, T60.
+
+**Fatte in parte**, solo nei file di questo giro:
+
+| Voce | Fatto | Resta, e dove |
+|---|---|---|
+| T4 | statblocchi di pattuglia, worg, scout e sergente in `SEG` §2 | il rimando in fondo a 1A e l'EL al posto di «5-12» in `01` |
+| T9 | il cannocchiale sulla scheda di Dara | il box «Cosa vede Dara» in `01` |
+| T14 | un solo momento per l'Handout 0 e le schede in `HO` | i tre riquadri in testa alla Sessione 1 |
+| T15 | la carta di Dara: *passare senza tracce* non nasconde dal fiuto | le tre righe in 1A |
+| T44 | le due regole in `LIB` §13, lo statblocco e la riga del sergente in `SEG` | `01` 1291 |
+| T52 | la riga sui nomi in `HO` | i box di `01` |
+| T56 | la carta di Thorin «due pagine» in `HO` | l'Handout 0 per un tavolo senza la campagna, rinviato |
+
+**Lasciate**:
+
+- **T28** e **T31**: aspettano il DM. Il §12 resta dov'è e com'è ordinato;
+  dentro ha preso solo i numeri e le righe di altre voci (la tabella della
+  ferocia, la carta dei giganti, la riga sui nomi degli script, il
+  `[INFERRED]` di T55). La riga del §13 su quando si legge il libretto, e
+  quella dell'handout 1-4, non sono cambiate.
+- **T1-T3, T5-T8, T10-T13, T16-T22**: sono la Sessione 1 in `01`, che fa un
+  altro giro dopo questo.
+- **T57** (`ARC08-10`), **T58** (`ARC08-02`), **T59** (la mappa del pendio):
+  fuori dai file di questo giro.
+
+**Le prove rifatte** (3.000 battaglie, seme 1372, comandi nel README):
+
+| Orda | Breccia contenuta «pieno», 3-6 trappole | Posizioni tenute «pieno» |
+|---|---|---|
+| normale | 95-98% | 87-88% |
+| feroce | 78-89% | 57-60% |
+| terrificante | 47-63% | 18-23% |
+
+Tenere sempre, feroce, 4 trappole: breccia «pieno» 25%, posizioni 94%;
+caricare sempre 14% e 0%. L'avanguardia non cambia (lo script ritirava già
+tutto il gruppo): round 2 quattro trappole e nessuna squadra, round 3 5,07 e
+0,25, round 4 5,01 e 0,89, round 6 2,23 e 2,93.
+
+**Dove le correzioni si allontanano dal triage**:
+
+- Borin ha Scalare −1, non +5: la tabella del triage non contava la penalità
+  d'armatura.
+- Dara ha Conoscenze (natura) +18 e Sopravvivenza +19 all'aperto: mancavano
+  le sinergie. Prende Gigante come lingua bonus per Int 12.
+- Nala ha Intrattenere 12 gradi, che il triage non aveva e la *suggestione*
+  della musica chiede; per farci stare i punti, Nascondersi e Muoversi
+  Silenziosamente scendono a +14. La Spia Maestra è letta a 8 + Int punti a
+  livello, da verificare sul manuale.
+- Thorin ha Ascoltare e Osservare +6, non il +5 dello statblocco: con Sag 22
+  il conto è quello. Da allineare in `01` con T22.
+- Il sergente fugge sotto metà dei pf, a 25: la voce T44 e la struttura
+  dicevano la stessa cosa in due modi.

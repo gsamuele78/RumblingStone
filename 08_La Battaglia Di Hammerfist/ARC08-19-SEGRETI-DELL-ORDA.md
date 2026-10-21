@@ -2,7 +2,8 @@
 
 > **Per chi**: il DM. I giocatori leggono il libretto (`ARC08-18`), non questo
 > file: quello che sta qui lo scoprono sul campo, quando succede.
-> **Cosa c'è**: le capacità dei reparti dell'orda, le carte dell'avanguardia, e
+> **Cosa c'è**: le capacità dei reparti dell'orda, l'avanguardia della
+> Sessione 1 (mazzo, sergente, statblocchi della ricognizione, tracciatore), e
 > le scelte fatte fra i numeri dell'arco che non si accordavano.
 > **Stato**: proposta (ADR-0096). Le capacità sono nelle simulazioni di
 > `plans/esperimenti/battaglia-campale-2026-10-21/assedio_v3.py`; le carte
@@ -13,15 +14,17 @@
 ## 1. Le capacità dei reparti dell'orda
 
 Vengono dalle schede delle unità di `ARC08-02` §1 e §4, lette con i numeri del
-libretto. Il DM le applica senza annunciarle; quando succedono, le racconta.
+libretto. Il DM non le spiega, ma dice sempre il numero del bersaglio
+(«stavolta contro 32»). La prima volta racconta quello che si vede, senza
+spiegare la regola.
 
 | Reparto | Capacità | Effetto nel libretto | Fonte |
 |---|---|---|---|
 | **Orchi** | **Carica selvaggia** | nel round in cui arrivano sul fronte: **+1** AU e **−2** DU | `ARC08-02`, unità orchi (AU +8 e DU 12 al primo round) |
 | **Orchi** | **Furia** | a 4 PFU o meno: **+1** AU | `ARC08-02`, unità orchi (AU +8 a ≤4 PFU) |
-| **Hobgoblin** | **Formazione tattica** | se sul fronte ci sono due o più reparti di hobgoblin, ognuno ha **+1** DU | `ARC08-02` e `ARC08-01`, unità hobgoblin |
+| **Hobgoblin** | **Formazione tattica** | se sul fronte ci sono due o più reparti di hobgoblin (i guerrieri non contano: non marciano al tamburo), ognuno ha **+1** DU | `ARC08-02` e `ARC08-01`, unità hobgoblin |
 | **Lupi e goblin** | **Sbilanciare** | il reparto nanico che hanno davanti ha **−2** al bianco | `ARC08-02`, unità worg (−2 DU al bersaglio) |
-| **Giganti** | **Bombardamento** | il macigno ignora le merlature delle Mura | `ARC08-02`, giganti |
+| **Giganti** | **Bombardamento** | un macigno per settore; ignora le merlature delle Mura | `ARC08-02`, giganti |
 
 Come si raccontano, la prima volta:
 
@@ -32,18 +35,120 @@ Come si raccontano, la prima volta:
 - lo Sbilanciare sono i lupi che tirano le caviglie e i goblin che tagliano i
   tendini a chi cade.
 
-## 2. Le carte dell'avanguardia (Sessione 1, libretto §13)
+## 2. L'avanguardia (Sessione 1, libretto §13)
 
-| Round | Carta | Effetto |
+### Il mazzo, round per round
+
+È la versione più dura, la stessa di `avanguardia.py`. La ferocia è quella
+dell'assedio: feroce, se il DM non dice altro. I reparti hanno i numeri del
+libretto §11 (all'orda feroce: lupi e goblin AU 9, DU 19, PFU 10; hobgoblin
+AU 12, DU 22, PFU 10).
+
+| Round | Carta | Cosa arriva |
 |---|---|---|
-| 1-2 | **I lupi cavalcati** | un reparto di lupi e goblin per squadra, che sbilancia (§1) |
-| 3 | **La pattuglia avanzata** | arrivano gli hobgoblin, il fronte di ogni squadra sale a due, e il **sergente** dà **+1** ad AU e DU di tutta l'avanguardia (`ARC08-02`, sergente hobgoblin) |
-| 5 | **Il corno di Grimjaw** | Grimjaw è sulla cresta e non scende. Il corno dà **+1** ad AU e DU di tutta l'avanguardia, che fa +2 col sergente. È il momento dell'orda: va letto ad alta voce, e dice ai giocatori che restare costa |
+| 1-2 | **I lupi cavalcati** | un reparto di lupi e goblin per squadra, che sbilancia (§1). Se cade, ne arriva un altro |
+| 3 | **La pattuglia avanzata** | arrivano gli hobgoblin: il fronte di ogni squadra sale a due, e il **sergente** dà **+1** ad AU e DU di tutta l'avanguardia. Da qui ogni reparto distrutto è sostituito da un reparto di hobgoblin, senza limite: l'avanguardia è lunga quanto la pazienza del gruppo |
+| 4 | nessuna | |
+| 5 | **Il corno di Grimjaw** | un altro **+1** ad AU e DU di tutta l'avanguardia, +2 col sergente. Si legge il box sotto |
 
-Il sergente si può **Sfidare**: è il duello della retroguardia (libretto §13).
-Il sergente è un hobgoblin guerriero di 6° livello con l'armatura completa;
-se cade, il **+1** del sergente esce. Grimjaw non si sfida: guarda e ricorda
-chi ha visto.
+Il giocatore che ha scelto l'orda pesca le carte e decide su quale squadra
+cadono i lupi; il DM gli dà questo paragrafo e il successivo, non il resto
+del file.
+
+> **Read-aloud (Tolkien lead) — il corno.** *Dalla cresta viene un suono
+> lungo, basso, che non è di un animale. Le file degli hobgoblin si fermano
+> tutte insieme, e poi ripartono più in fretta. Lassù, contro il cielo, un
+> orog con una benda nera guarda giù e non si muove. Che fate?*
+
+Grimjaw non si sfida e non si colpisce: la cresta è a 400 m, oltre la
+portata dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
+
+### Il sergente
+
+Si può **Sfidare** dal round 3 (libretto §13): l'eroe lascia la squadra per
+un round e lo affronta sulla mappa del pendio. Sotto i **25 pf** fugge, come
+un comandante, e il suo +1 esce dall'avanguardia. La retroguardia è un'altra
+cosa: copre la ritirata e non porta al duello.
+
+È lo stesso sergente della postazione degli scout nella ricognizione. Se lì
+è morto o è stato preso, la carta del round 3 arriva **senza il suo +1**.
+
+**Il sergente** · *hobgoblin bladebearer* di *Red Hand of Doom* (D&D 3.5,
+⚠️ **non SRD**), dal PCGen `hobgoblin bladebearer 6 liv longsword`, con
+l'armatura completa al posto della giaco di maglia · GS 6 · hobgoblin
+guerriero 6°, Medio, LM · Iniz +4 · scurovisione 18 m · Ascoltare +1,
+Osservare +1 · CA **21** (armatura completa +8, Des +1 fino al tetto
+dell'armatura, anello di protezione +1, Difesa con Due Armi +1), contatto 12,
+colto alla sprovvista 20 · pf **50** (6d10+12) · Temp +7, Rifl +6, Vol +5 ·
+velocità 6 m · *spada lunga +1* +11/+6 (1d8+6, 19-20); con due spade +9/+4
+(1d8+6, 19-20) e *spada lunga perfetta* +9/+4 (1d8+3, 19-20) · For 16, Des
+18, Cos 15, Int 10, Sag 12, Car 8 · Combattere con Due Armi, Combattere con
+Due Armi Migliorato, Difesa con Due Armi, Arma Focalizzata e Arma
+Specializzata (spada lunga), Volontà di Ferro, *Oversized Two-Weapon
+Fighting* (⚠️ non SRD, *Complete Warrior*: la seconda spada lunga conta come
+arma leggera) · due pozioni di *cura ferite moderate*, il corno · lingue
+Comune, Goblin.
+*Nota di conto*: l'armatura completa toglie 6 a Scalare, Saltare, Muoversi
+Silenziosamente e Acrobazia del PCGen (Scalare +3, Muoversi Silenziosamente
++3, Acrobazia +0) e porta la velocità da 9 a 6 m. La scheda del Bestiario
+`hobgoblin-sergente-cr5` (guerriero 5°, 37 pf) è il sergente di un reparto
+qualunque; questo è più forte, e vale solo per l'avanguardia.
+
+### La ricognizione: pattuglia e scout
+
+Gli statblocchi della Sessione 1, scena della ricognizione. Fonti nell'ordine
+del DM: le schede di *Red Hand of Doom* sono D&D 3.5 ma ⚠️ **non SRD**
+(PCGen in `Bestiario/pregen-pcgen/png_La_mano_rossa_del_destino/`, trascritte
+in `Bestiario/mostri/`).
+
+**Goblin cavalcatore di worg** (×3, la pattuglia) · *goblin worg raider*,
+non SRD · GS 5 · goblin guerriero 5°, Piccolo, LM · Iniz +4 · scurovisione
+18 m · Ascoltare +1, Osservare +3, Nascondersi +9, Muoversi Silenziosamente
++9, Cavalcare +17 · CA 19, contatto 15, colto alla sprovvista 15 · pf 42
+(5d10+10) · Temp +6, Rifl +5, Vol +1 · *arco corto composito perfetto* +12
+(1d4, ×3), entro 9 m +13 (1d4+1); *scimitarra perfetta* +7 (1d4, 18-20) ·
+Tiro in Sella, Combattere in Sella, Tiro Ravvicinato, Tiro Preciso, Arma
+Focalizzata (arco corto) · lingue Comune, Draconico, Goblin.
+
+**Worg** (×3, le cavalcature) · scheda del Bestiario `worg-cavalcatura-cr2`,
+avanzato a 6 DV (⚠️ potenziamento: l'SRD dà 4 DV e 30 pf) · GS 2 · bestia
+magica Media, NM · Iniz +2 · scurovisione 18 m, visione crepuscolare,
+**fiuto** (sente chi passa entro 9 m, 18 m sottovento) · Ascoltare +7,
+Osservare +7, Nascondersi +4, Muoversi Silenziosamente +7, Sopravvivenza +2
+(+6 seguendo col fiuto) · CA 14 · pf 51 · Temp +7, Rifl +7, Vol +4 ·
+velocità 15 m · morso +9 (1d8+4) e **sbilanciare** gratuito (+3) · Allerta,
+Attacco Naturale Migliorato (morso), Robustezza Migliorata (⚠️ non SRD).
+
+La pattuglia intera: EL 9 circa.
+
+**Hobgoblin regolare** (×9, la postazione degli scout) · *hobgoblin
+regular*, non SRD · GS 2 · hobgoblin combattente 3°, Medio, LM · Iniz +1 ·
+scurovisione 18 m · Ascoltare +3, Osservare +2 · CA 19 (giaco di maglia
+perfetta, scudo pesante +1), contatto 11, colto alla sprovvista 18 · pf 23
+(3d8+6) · Temp +6, Rifl +3, Vol +1 · velocità 6 m · *spada lunga perfetta*
++6 (1d8+1, 19-20); arco lungo composito (+1) +4 (1d8+1, ×3) · Allerta, Arma
+Focalizzata (spada lunga) · *mantello della resistenza +1*, una pozione di
+*cura ferite moderate* · lingue Comune, Goblin.
+
+Gli scout sono nove più **il sergente** qui sopra: EL 9 circa. Pattuglia e
+scout insieme: EL 11 circa. Con tre pregen gli scout sono sei più il
+sergente.
+
+### Il tracciatore dell'avanguardia
+
+Una riga per squadra, fino a due reparti nemici ciascuna. Si copia su un
+foglio e si cancella a matita.
+
+| Squadra | Nemico 1 · PFU | Nemico 2 · PFU | Tacche | Mezze trappole | Travolta |
+|---|---|---|---|---|---|
+| Borin (Guardia) | ______ □□□□□□□□□□ | ______ □□□□□□□□□□ | □□□ | □□□□□□ | □ |
+| Dara (balestrieri) | ______ □□□□□□□□□□ | ______ □□□□□□□□□□ | □□□ | □□□□□□ | □ |
+| Thorin (veterani) | ______ □□□□□□□□□□ | ______ □□□□□□□□□□ | □□□ | □□□□□□ | □ |
+| Nala (veterani) | ______ □□□□□□□□□□ | ______ □□□□□□□□□□ | □□□ | □□□□□□ | □ |
+| capitano (veterani) | ______ □□□□□□□□□□ | ______ □□□□□□□□□□ | □□□ | □□□□□□ | □ |
+
+Sotto: round □□□□□□ · sergente in campo □ · sergente fuggito □ · corno □ ·
+morale della rocca ____.
 
 ## 3. Le scelte fra numeri che non si accordavano
 
@@ -57,10 +162,11 @@ giro.
 | Baliste | 6 con AU +10 (`ARC08-02`), 10 a +18 (`Mappe` L2), 12 (archivio) | una per torre, **d20 + 10**, perché nel libretto le altre stanno sui settori senza giocatore |
 | Carica | +2 att/−1 CA, +2 att/+2 danni/+1 morale (due righe di `mass_combat_guide_Dm.md`) | l'ordine **Caricare**: +2 al rosso, −2 al bianco |
 | Comandare | Car CD 15 (`ARC08-02`), Diplomazia CD 18 (`ARC08-01`) | il gesto **Comandare** senza prova |
-| Trappole | 2d6, +2 danni, 4d6 ×3, −2 CA in quattro file | una trappola **annulla una tacca** del primo giorno |
+| Trappole | 2d6, +2 danni, 4d6 ×3, −2 CA in quattro file | una trappola **annulla una tacca del Giorno 1 o del Giorno 2**, nel settore che i giocatori vogliono |
 | Morale | scala ±5 (`ARC08-02`), ±4 (variante 2d6), −6 (`Mappe` L3) | scala ±5, sui dadi al massimo ±2 (libretto §6) |
 | Olio bollente | non c'è in nessun file | non c'è nemmeno qui |
 
 Le strutture (mura 1.800 pf in `ARC08-02` contro 240 in `Mappe` L2) restano
 fuori dal libretto: la breccia si misura con le tacche, non con i pf delle
-mura.
+mura. Il **cancello ha 200 pf** `[CANONE — DM 2026-10-21]`: valgono nei
+combattimenti sulla mappa coi PG, e nel libretto non si traducono in niente.

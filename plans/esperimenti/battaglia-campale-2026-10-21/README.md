@@ -62,8 +62,73 @@ da +1 porta la breccia «pieno» dal 73% al 50%, e senza il tetto di ±2 era
 peggio. Un reparto delle mura perso prima dell'assedio la porta al 32%. Per
 questo l'avanguardia costa solo trappole.
 
+Questa tabella è della prima v3, con le trappole valide il solo giorno 1.
+Quella in uso è la successiva.
+
+### La v3 dopo le letture del 2026-10-21
+
+Tre cambi nello script, decisi dopo il triage del giro sulla Sessione 1
+(`plans/esperimenti/giro-arc08-sessione1-2026-10-21/TRIAGE.md`, T25, T32,
+T47, T60):
+
+- una trappola annulla una tacca **del giorno 1 o del giorno 2** (decisione
+  del DM; prima valeva il solo giorno 1, e dalla terza trappola in poi non
+  cambiava niente);
+- la carta dei giganti tira **un macigno per settore** al round 2 dei giorni
+  1 e 2: lo script lo faceva già, ora lo dice anche il libretto;
+- il macigno conta il +1 del primo giorno e il morale, **non le merlature**
+  delle Mura, come dicono i Segreti dell'orda.
+
+In più lo script prende un ottavo argomento, la politica: `attento` (il
+default), oppure `tenere`, `colpire`, `caricare` dati sempre a tutti i
+reparti. I comandi:
+
+```bash
+for f in 1 2 3; do for t in 0 3 4 5 6; do python3 -I assedio_v3.py $f $t 1; done; done
+python3 -I assedio_v3.py 2 4 1 1372 0 1 2 tenere     # e colpire, caricare
+python3 -I assedio_v3.py 2 4 1 1372 0 0               # morale di partenza 0
+python3 -I assedio_v3.py 2 4 1 1372 1 1               # un reparto perso prima
+for r in 2 3 4 5 6; do python3 -I avanguardia.py 2 $r; done
+```
+
+3.000 battaglie per riga, seme 1372. Breccia e posizioni come sopra,
+pieno/parziale/fallito in %.
+
+| Orda (ferocia v3) | 0 trappole | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|
+| normale (1), breccia | 87/11/2 | 95/4/0 | 96/4/0 | 97/2/0 | 98/2/0 |
+| normale (1), posizioni | 84/14/2 | 87/12/0 | 88/12/1 | 87/12/0 | 88/12/1 |
+| feroce (2), breccia | 67/22/10 | 78/16/5 | 83/14/4 | 87/10/3 | 89/9/2 |
+| feroce (2), posizioni | 50/37/13 | 57/33/10 | 58/34/7 | 60/33/6 | 60/33/7 |
+| terrificante (3), breccia | 37/28/35 | 47/31/22 | 53/28/20 | 58/26/16 | 63/22/15 |
+| terrificante (3), posizioni | 16/36/48 | 18/40/42 | 20/42/38 | 22/40/38 | 23/39/38 |
+
+Ogni trappola fino alla sesta vale ora tre o quattro punti di breccia
+«pieno» con l'orda feroce. Con 3-6 trappole la riga «Feroce» del libretto
+passa da 7 a 8-9 su 10 di breccia contenuta e da poco più di metà a sei su
+dieci di posizioni tenute. La ferocia di default resta feroce.
+
+Le politiche estreme, orda feroce e 4 trappole:
+
+| Politica | Breccia | Posizioni | Reparti vivi su 8 |
+|---|---|---|---|
+| attento | 83/14/4 | 58/34/7 | 5,6 |
+| sempre tenere | 25/41/34 | 94/6/0 | 7,3 |
+| sempre colpire | 67/21/12 | 10/37/52 | 2,7 |
+| sempre caricare | 14/22/64 | 0/2/98 | 0,3 |
+
+Il morale resta la leva più sensibile: da 0 invece che da +1 la breccia
+«pieno» scende dall'83% al 60%, e un reparto delle mura perso prima
+dell'assedio la porta al 36%.
+
+L'avanguardia non cambia: lo script ritirava già tutto il gruppo insieme e
+contava le trappole sul gruppo, che ora sono la regola del libretto (la
+ritirata di gruppo l'ha decisa il DM). Rifatta con gli stessi comandi, dà gli
+stessi numeri:
+
 | Avanguardia, orda feroce | Trappole portate a casa | Squadre travolte |
 |---|---|---|
+| ritirata dopo il round 2 | 4,0 (sempre 4) | 0 |
 | ritirata dopo il round 3 | 5,1 (6+ nel 35%) | 0,25 |
 | dopo il round 4 | 5,0 (6+ nel 36%) | 0,9 |
 | dopo il round 5 | 3,9 | 1,9 |
@@ -72,8 +137,8 @@ questo l'avanguardia costa solo trappole.
 ## Cosa non è provato
 
 - Le carte di Gorthak, Grimjaw e della palla di fuoco, il gesto Sfidare, il
-  Fuoco di copertura, la retroguardia dell'avanguardia e la caduta del
-  sergente.
+  Fuoco di copertura, la retroguardia dell'avanguardia, la sfida e la caduta
+  del sergente, l'inganno di Nala.
 - Il modo C e le politiche estreme con le regole della v3.
 - Due eroi nello stesso settore, il settore senza eroe, il modo A.
 - I tempi: tre o quattro minuti a round sono una stima, non una misura.

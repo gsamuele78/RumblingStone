@@ -18,7 +18,7 @@
 
 ## 1. In una pagina
 
-- **Il reparto** è un gruppo di dieci soldati. Ha tre numeri: **AU**
+- **Il reparto** è una decina di soldati. Ha tre numeri: **AU**
   (quanto colpisce), **DU** (quanto si difende) e **PFU**, i suoi punti ferita.
   Un PFU è un soldato: quando i PFU arrivano a zero, il reparto non c'è più.
 - **La schiera** è la tua: il tuo eroe e i suoi due reparti.
@@ -32,8 +32,8 @@
 - **Una tabella sola** decide tutti i tiri (§3).
 
 Servono due d20 di colore diverso per giocatore: uno **rosso** per
-l'attacco, uno **bianco** per la difesa. Un foglio con i quadratini dei PFU
-per ogni reparto, e un segnalino per le tacche del settore.
+l'attacco, uno **bianco** per la difesa. Il foglio dei reparti (§14), con
+i quadratini dei PFU e le tacche del settore.
 
 **Chi tiene cosa**, se il gruppo non decide altro:
 
@@ -68,7 +68,8 @@ sta davanti a quale nemico. L'eroe non occupa un posto sul fronte.
 - **Bianco, la difesa.** Per ogni reparto nemico **ancora in piedi**: d20 +
   la DU del tuo reparto che ha davanti, contro **22 + AU** del nemico. Un
   nemico distrutto dai rossi non tira. Se i nemici sono più dei tuoi
-  reparti, quelli in più li fai cadere tu sul reparto che scegli.
+  reparti, quelli in più li fai cadere tu sul reparto che scegli. Il
+  bersaglio del bianco te lo dice sempre il DM («stavolta contro 32»).
 
 **4 · Il conto.** Si segnano i PFU persi da tutti e due i lati. Un reparto
 a zero è distrutto. Poi si guarda la pressione sul settore (§7).
@@ -105,10 +106,12 @@ probabilità: per questo le sue fasce sono spostate di uno.
 Ogni reparto ha il suo ordine: uno può tenere mentre l'altro carica. Alcuni
 reparti hanno un ordine in più, scritto sulla loro riga in §11.
 
-⚠️ **Tenere sempre perde la battaglia.** Chi non colpisce non toglie PFU
-all'orda, e la pressione (§7) apre la breccia. Nelle prove, un gruppo che
-tiene sempre chiude i primi due giorni senza brecce meno di una volta su
-dieci. Caricare sempre è peggio: alla ritirata non resta quasi nessuno.
+⚠️ **Tenere sempre salva i reparti e perde le mura.** Chi non colpisce non
+toglie PFU all'orda, e la pressione (§7) apre la breccia. Nelle prove, chi
+tiene sempre arriva alla ritirata con quasi tutti i reparti, ma chiude i
+primi due giorni senza brecce solo una volta su quattro. Caricare sempre
+perde tutte e due le cose: due volte su tre le mura cedono più di una volta,
+e alla ritirata non resta quasi nessuno.
 
 ---
 
@@ -130,21 +133,32 @@ Ogni round il tuo eroe fa **una** di queste cose.
     dell'incantesimo): se riesce, i PFU si dimezzano, arrotondando per
     difetto.
   - Una cura di massa ridà **1d4 PFU** a un tuo reparto, fino al suo
-    massimo.
-  - Un incantesimo o un canto che aiuta tutti (*preghiera*, *eroismo*, il
-    canto di Nala) dà **+1** ai dadi dei tuoi reparti per tutto il giorno.
-    Due uguali non si sommano.
+    massimo. Una cura su un bersaglio solo (*guarigione*) ne ridà **1**.
+  - Un incantesimo o un canto che aiuta tutti (*preghiera*, *eroismo*,
+    *velocità*, il canto di Nala) dà **+1** ai dadi dei tuoi reparti per
+    tutto il giorno. Gli aiuti che durano tutto il giorno non si sommano fra
+    loro: un reparto ne ha uno solo.
 - **Sfidare.** Solo quando il DM gioca la carta di un comandante nemico
   nel tuo settore (§12). Il duello si gioca sulla mappa con le regole
   normali, quanti round servono, e vale come un round di battaglia: in quel
   round i tuoi reparti tirano senza di te, e il settore non prende tacche.
   Un comandante non muore nell'assedio: sotto metà dei suoi punti ferita
   fugge, ferito. Quando fugge, **+2** al morale della rocca (§6), e la sua
-  carta esce dal giorno.
+  carta esce dal giorno. Nella prima battaglia si sfida il sergente
+  dell'avanguardia (§13).
+
+**Gli incantesimi minori e quelli su di te.** Un incantesimo sotto il 3°
+livello non è un gesto: si lancia in più, perché un round di battaglia
+sono dieci round. Nella battaglia campale vale quello che dice la sua carta
+dei poteri, e quasi sempre non vale niente. Un effetto su di te che dura 10
+round o più (*potere divino*, *potere della giustizia*) vale per il round
+di battaglia in cui lo lanci, insieme al gesto Combattere. Uno che dura meno
+di 10 round (*postura difensiva*) nella battaglia campale non vale.
 
 **L'eroe ferito.** Quando un tuo bianco manca di 11 o più, il colpo arriva
-anche al tuo eroe: **3d6 danni** veri sulla sua scheda. Un eroe a zero esce
-dalla battaglia per il giorno, e i suoi reparti restano senza gesto.
+anche al tuo eroe: **3d6 danni** veri sulla sua scheda, e nel round dopo il
+suo gesto ha **−2**. Un eroe a zero esce dalla battaglia per il giorno, e i
+suoi reparti restano senza gesto.
 
 ---
 
@@ -194,10 +208,10 @@ Ogni settore ha qualcosa che lo rende diverso. Vale per tutti i giorni, se non
 | Settore | Cosa c'è | Cosa vale |
 |---|---|---|
 | **Tutti** | mura e torri intatte | il primo giorno **+1** al bianco (§2) |
-| **Il Cancello** | il pendio fangoso davanti alla porta, stretto | il fronte è di tre, e l'orda in salita non ci mette di più |
-| **Le Mura** | le merlature | **+1** al bianco tutti i giorni, finché le Mura non hanno ceduto una volta |
+| **Il Cancello** | il pendio fangoso davanti alla porta, stretto | il fronte è di tre, e l'orda in salita non allarga il fronte |
+| **Le Mura** | le merlature | **+1** al bianco **dal secondo giorno**, finché le Mura non hanno ceduto una volta (il primo giorno vale già il +1 di tutti) |
 | **Le torri** | venti metri d'altezza, una balista | i balestrieri sulle torri hanno **+1** al rosso e al bianco. **La balista**: ogni round il giocatore della torre tira anche d20 + 10 contro la DU di un reparto nemico del suo settore, con la tabella del rosso |
-| **Il primo giorno** | le trappole dell'avanguardia (§13) | ogni trappola **annulla una tacca** del primo giorno, nel settore che volete |
+| **I primi due giorni** | le trappole dell'avanguardia (§13) | ogni trappola **annulla una tacca del Giorno 1 o del Giorno 2**, nel settore che volete |
 
 Le macchine e le trappole sono vostre: decidete voi quando usarle. Quello che
 ha l'orda lo scoprirete sul campo.
@@ -235,15 +249,23 @@ logora di più.
 - **l'orda**: gioca contro gli amici. Pesca il mazzo, sceglie dove cadono le
   carte e dà voce a Gorthak e Grimjaw, con il DM accanto che decide i limiti.
 
-Nella Sessione 1, dove la battaglia campale non c'è, il capitano guida la
-pattuglia di nani che accompagna gli eroi (prove di gruppo, nessuna scheda),
-e chi ha scelto l'orda gioca gli esploratori della Mano Rossa.
+Nella Sessione 1 la battaglia campale c'è solo nell'avanguardia (§13).
+
+- **Il capitano**, nella ricognizione, guida due esploratori nani di scorta:
+  prove di gruppo a **+8**, nessuna scheda. Nell'avanguardia guida una
+  squadra di veterani in più, senza eroe, che scava e non combatte.
+- **Chi gioca l'orda**, nella ricognizione, tira Osservare e Ascoltare degli
+  esploratori della Mano Rossa. Nell'avanguardia pesca le carte e decide su
+  quale squadra cadono i lupi. Dei segreti dell'orda gli si dà solo la parte
+  dell'avanguardia (`ARC08-19` §2).
+- Se a non volere un pregen è chi doveva giocare Dara, Dara passa a un altro
+  giocatore: la ricognizione senza di lei non regge.
 
 **Soli o insieme.** Due o più eroi possono tenere lo stesso settore: ognuno
 porta i suoi reparti e il suo gesto, e il fronte si allarga di **un** reparto
 nemico per ogni eroe in più. Un settore che resta senza eroi lo tiene un
 capitano del re: a fine giorno il DM tira 1d6, e con **1-2** quel settore ha
-ceduto.
+ceduto, e conta come breccia.
 
 ---
 
@@ -256,7 +278,8 @@ hobgoblin (AU 12, DU 22), uno di guerrieri (AU 8, DU 20) e uno d'orchi (AU
 giorno dà +1 al bianco. Il settore ha una tacca.
 
 1. **L'orda avanza.** Il fronte è pieno. Il DM gioca i giganti: un macigno
-   su un reparto di Borin. È un tiro diretto del DM: d20 = 17, + AU 14 =
+   su un reparto di Borin. Il macigno lo tira il DM, ed è l'unico tiro che
+   non tirate voi: d20 = 17, + AU 14 =
    **31**, contro DU 22 + 1 + 1 = **24**: supera di 7, il primo reparto perde
    **2 PFU** (ne restano 10).
 2. **Gli ordini.** Il giocatore mette il primo reparto contro gli hobgoblin e
@@ -299,7 +322,8 @@ il DM racconta il conto.
 | **Giganti** (carta) | 14 | — | — | lanciano macigni da lontano; non si attaccano dalle mura |
 
 **Gli eroi.** Bonus d'attacco per **Combattere**, dalle schede del Bestiario:
-Borin **+21**, Dara **+19**, Thorin **+14**, Nala **+13**.
+Borin **+21**, Dara **+19** (+25 contro gli orchi, +23 contro i giganti, +21
+con *grazia del gatto*), Thorin **+14**, Nala **+13**.
 
 ---
 
@@ -315,19 +339,25 @@ il terreno, le capacità, le baliste e da tre a sei trappole.
 
 | Orda | AU e DU | Breccia contenuta, «pieno» | Posizioni tenute, «pieno» |
 |---|---|---|---|
-| **Normale** | −1 rispetto a §11 | 9 volte su 10 | quasi 9 volte su 10 |
-| **Feroce** (default) | come in §11 | 7 volte su 10 | poco più di metà |
-| **Terrificante** | +1 rispetto a §11 | meno di 5 volte su 10 | meno di 2 volte su 10 |
+| **Normale** | −1 rispetto a §11 | quasi sempre | quasi 9 volte su 10 |
+| **Feroce** (default) | come in §11 | 8-9 volte su 10 | 6 volte su 10 |
+| **Terrificante** | +1 rispetto a §11 | 5-6 volte su 10 | 2 volte su 10 |
 
-**Le carte dell'orda.** Una per round al massimo, in un settore a scelta.
-Le simulazioni hanno provato i giganti, la breccia del cancello e il soffio;
-Gorthak, Grimjaw, la palla di fuoco, il gesto Sfidare e il Fuoco di copertura
-sono `[INFERRED]` e si tarano al primo tavolo. Le capacità dell'orda e le carte
+Con le trappole che valgono il primo e il secondo giorno, ognuna fino alla
+sesta toglie all'orda feroce tre o quattro probabilità su cento di aprire una
+breccia. Negli script la ferocia ha un numero: normale = 1, feroce = 2,
+terrificante = 3.
+
+**Le carte dell'orda.** Una per round al massimo, in un settore a scelta;
+solo i giganti tirano in tutti i settori. Le simulazioni hanno provato i
+giganti, la breccia del cancello e il soffio; Gorthak, Grimjaw, la palla di
+fuoco, il gesto Sfidare e il Fuoco di copertura non sono ancora provati e si
+tarano al primo tavolo. Le capacità dell'orda e le carte
 segrete sono in `ARC08-19-SEGRETI-DELL-ORDA.md`.
 
 | Giorno | Carta | Effetto |
 |---|---|---|
-| 1-2 | **I giganti** | round 2: il DM tira d20 + 14 contro la DU di un reparto (con mura e morale), e usa la tabella del rosso |
+| 1-2 | **I giganti** | round 2: **un macigno per settore**. Per ognuno il DM tira d20 + 14 contro la DU di un reparto (con il +1 del primo giorno e il morale; le merlature delle Mura non contano), e usa la tabella del rosso |
 | 1-2 | **Gorthak al cancello** | comandante: il Cancello può **Sfidare**. Finché c'è, il fronte del Cancello sale di uno |
 | 1-2 | **La palla di fuoco** | 1d4+1 PFU a un reparto; il giocatore tira d20 + 5 contro 16, se riesce dimezza |
 | 2 | **La breccia del cancello** | non occupa un round: dall'inizio del giorno il fronte del Cancello sale di uno. Con Gorthak sale di due |
@@ -363,35 +393,105 @@ arrivi alle mura. Si legge il libretto insieme a inizio serata e questa è la
 prima volta che si tira.
 
 **La scena.** Ogni eroe guida una **squadra di guastatori**: un solo reparto
-(Borin e Thorin veterani, Dara balestrieri, Nala veterani), sul pendio sotto
-le mura, senza merlature. Scavano fosse, abbattono pini sul sentiero,
-preparano frane. Ogni ora che rubano all'orda è un'ora in più per le mura.
-L'avanguardia della Mano Rossa li trova prima di sera.
+(Borin la Guardia del Cancello, Thorin e Nala veterani, Dara balestrieri),
+sul pendio sotto le mura, senza merlature. Scavano fosse, abbattono pini sul
+sentiero, preparano frane. Le trappole sono già a metà: i round sono gli
+ultimi colpi di piccone. Ogni ora che rubano all'orda è un'ora in più per le
+mura. L'avanguardia della Mano Rossa li trova prima di sera.
 
 **Come si gioca.** Le regole sono quelle dell'assedio, con un ordine in più:
 
-- **Scavare**: niente rosso, **−2** al bianco. Ogni **due round** di scavo di
-  una squadra fanno **una trappola**. L'eroe intanto può combattere: è lui
-  che tiene lontani i lupi mentre i suoi scavano.
+- **Scavare**: niente rosso, **−2** al bianco. Ogni round di scavo di una
+  squadra vale **mezza trappola**, e le mezze trappole si contano su tutto il
+  gruppo: quattro squadre che scavano un round fanno due trappole. L'eroe
+  intanto può combattere: è lui che tiene lontani i lupi mentre i suoi
+  scavano. Davanti ai lupi chi scava ha **−4** al bianco, perché i lupi
+  tirano giù chi lavora chino.
 - Il fronte di ogni squadra è di **uno** nei primi due round, poi di **due**.
-- **La ritirata**: alla fine di ogni round il gruppo decide se restare o
-  correre alle mura ad avvertire le retrovie. Chi si ritira porta a casa le
-  sue trappole.
-- **La squadra travolta**: alla terza tacca la squadra fugge, e l'orda trova
-  e disfa le sue trappole. I guastatori tornano feriti e non contano
-  nell'assedio, perché non sono i reparti delle mura.
-- **La retroguardia**: un eroe può restare indietro da solo mentre gli altri
-  si ritirano. Per quel round nessuna squadra può essere travolta, e lui
-  combatte sulla mappa contro il sergente hobgoblin, poi scappa (o no).
+- **La ritirata è di tutto il gruppo.** Alla fine di ogni round si decide
+  insieme se restare o correre alle mura ad avvertire le retrovie. Una
+  squadra sola non si ritira: può solo smettere di scavare e combattere
+  (Colpire o Tenere).
+- **La squadra travolta.** Alla terza tacca, o a 0 PFU, la squadra fugge, e
+  l'orda trova e disfa le mezze trappole che quella squadra ha scavato.
+  L'eroe torna con lei, con i punti ferita che ha.
+- **Sfidare il sergente.** Dal round 3 un eroe lascia la sua squadra per un
+  round e sfida il sergente hobgoblin sulla mappa, come il gesto Sfidare di
+  §5. In quel round la sua squadra tira senza di lui e non prende tacche.
+  Sotto metà dei punti ferita il sergente fugge, e quello che dava
+  all'avanguardia se ne va con lui.
+- **La retroguardia.** Nel round in cui il gruppo si ritira, un eroe può
+  restare indietro a coprire la ritirata di tutti: in quel round nessuna
+  squadra è travolta.
+- **L'inganno** (Nala, o chiunque abbia un'illusione o un ammaliamento di
+  1° livello o più). È un gesto, anche con un incantesimo di 1°. Il reparto
+  nemico davanti alla tua squadra tira il TS, d20 + 4 contro la CD
+  dell'incantesimo: se lo fallisce, per quel round non tira il bianco e la
+  squadra non prende la tacca. Con *immagine silenziosa* (CD 15) riesce metà
+  delle volte, con *affascinare* (CD 18) due su tre.
 
-**Cosa porta all'assedio.** Ogni trappola annulla una tacca del primo giorno
-(§7-bis), e il numero delle trappole decide la riga **Difese preparate** di
-`ARC08-10` §5.1: **6 o più** «pieno», **3-5** «parziale», **meno di 3**
-«fallito».
+**Cosa vale sul pendio, e cosa no.**
+
+| Regola dell'assedio | Sul pendio |
+|---|---|
+| il +1 al bianco del primo giorno | **non vale**: non ci sono mura |
+| il morale della rocca | **vale**: parte da +1, più quello che la serata ha già portato (il consiglio, il drago) |
+| un reparto distrutto, −1 al morale | **vale**: una squadra travolta o a 0 PFU è un reparto perso, e il −1 resta per l'assedio |
+| l'eroe ferito (§5) | **vale** |
+| le tacche | **vale**, ma si contano per squadra |
+| i guastatori nell'assedio | **non entrano**, travolti o no: non sono i reparti delle mura |
+
+**Con tre o cinque giocatori.** Con tre, il capitano porta la quarta squadra
+senza eroe, e le soglie qui sotto diventano **5** / **2-4** / **meno di 2**.
+Con cinque, il quinto guida una squadra di veterani senza eroe, e le soglie
+salgono a **7** / **4-6** / **meno di 4**.
+
+**Cosa porta all'assedio.** Ogni trappola annulla una tacca **del Giorno 1 o
+del Giorno 2**, nel settore che volete (§7-bis). Il numero delle trappole
+decide anche la riga **Difese preparate** di `ARC08-10` §5.1: **6 o più**
+«pieno», **3-5** «parziale», **meno di 3** «fallito».
 
 **Quanto restare.** Nelle prove, con l'orda feroce: chi si ritira dopo il
-terzo o il quarto round porta a casa in media cinque trappole e quasi
-nessuna squadra travolta; chi resta fino al sesto ne porta due, e perde tre
-squadre su quattro. Il round in più è sempre una scommessa.
+secondo round porta a casa quattro trappole sicure e nessuna squadra persa.
+Dopo il terzo, in media cinque trappole, una volta su tre sei o più, e una
+squadra travolta ogni quattro serate. Dopo il quarto, lo stesso numero di
+trappole e quasi una squadra travolta ogni volta. Chi resta fino al sesto ne
+porta a casa due, e perde tre squadre su quattro. Nell'assedio ogni trappola,
+fino alla sesta, vale tre o quattro probabilità su cento di tenere le mura
+senza brecce.
 
 **Il tempo.** Da quattro a sei round, una mezz'ora.
+
+---
+
+## 14. Il foglio dei reparti
+
+Una facciata per giocatore, da fotocopiare. Sul retro si stampano la tabella
+unica (§3), gli ordini (§4) e i gesti (§5).
+
+```
+SCHIERA DI ____________________   SETTORE ______________   FRONTE ___
+
+REPARTO 1 ____________________   AU ___   DU ___   capacità ____________
+PFU   □ □ □ □ □ □ □ □ □ □ □ □
+ordine   r1 ______  r2 ______  r3 ______  r4 ______  r5 ______
+
+REPARTO 2 ____________________   AU ___   DU ___   capacità ____________
+PFU   □ □ □ □ □ □ □ □ □ □ □ □
+ordine   r1 ______  r2 ______  r3 ______  r4 ______  r5 ______
+
+REPARTO 3 (solo il capitano, modo C) ____________   AU ___   DU ___
+PFU   □ □ □ □ □ □ □ □ □ □ □ □
+ordine   r1 ______  r2 ______  r3 ______  r4 ______  r5 ______
+
+EROE ______________   pf ____   gesto  r1 ____ r2 ____ r3 ____ r4 ____ r5 ____
+ferito, −2 al gesto del round dopo  □
+
+TACCHE        Giorno 1 □ □ □    Giorno 2 □ □ □    Giorno 3 □ □ □
+TRAPPOLE (Giorno 1 o 2)   □ □ □ □ □ □ □ □
+AIUTO DEL GIORNO (uno solo) ______________________   +1 ai dadi
+MORALE DELLA ROCCA   −5 −4 −3 −2 −1  0 +1 +2 +3 +4 +5   (sui dadi al massimo ±2)
+```
+
+Per l'avanguardia basta la riga del primo reparto, con le mezze trappole
+segnate accanto ai PFU.

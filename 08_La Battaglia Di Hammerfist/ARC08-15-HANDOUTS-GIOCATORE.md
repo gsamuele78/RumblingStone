@@ -8,26 +8,26 @@
 > sono **giocabili senza aprire i file 00_/ARC08-01/02** (tutto il
 > necessario è qui).
 > **Stato**: canonico (handout; piano ARC-08 C4). **Ultima revisione**:
-> 2026-07-02. Verifica meccanica dei pregen: `ERRATA-ARC08-35-
+> 2026-10-21 (abilità, lingue e carte dopo il giro sulla Sessione 1). Verifica meccanica dei pregen: `ERRATA-ARC08-35-
 > Verification.md` §3.
 
 ---
 
 ## HANDOUT 0 — Tre giorni dalla parte delle mura
 
-> **Quando darlo**: subito dopo il box dello strappo
-> (`07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md`,
-> Scena 1), insieme alle schede 1-4. Meglio ancora la settimana prima,
-> perché i giocatori arrivino alla Sessione 1 sapendo cosa li aspetta.
+> **Quando darlo**: la settimana prima della Sessione 1, perché i giocatori
+> arrivino sapendo cosa li aspetta, o in apertura della serata, dopo il box
+> dello strappo (`07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md`,
+> Scena 1). Le schede 1-4 si danno in apertura, in tutti e due i casi.
 > Il DM ha deciso di giocare il flashback prima del 3B e di presentarlo
-> come una visione della Corona `[CANONE — DM 2026-10-21, D4]`.
+> come una visione della Corona `[CANONE — DM 2026-10-21]`.
 
-**Visione della Corona (BG3 lead, LotR support).**
+**Visione della Corona.**
 
-> *Il filo del Rubino tira attraverso mille anni, e a metà strada la Corona
-> lo stringe. Mille anni passano in un respiro. Tre giorni no: quelli la
-> Corona li trattiene, i tre giorni in cui Hammerfist ha tenuto le mura
-> senza di voi. Per tre giorni si guarda da altri occhi. Quattro nani, uno
+> *La Corona vi tira attraverso mille anni, e mille anni passano in un
+> respiro. Pochi giorni no: quelli la Corona li trattiene, i giorni in cui
+> Hammerfist si è preparata e ha tenuto le mura senza di voi. Per quei
+> giorni si guarda da altri occhi. Quattro nani, uno
 > a testa: un campione col martello del nonno, un'esploratrice che conta i
 > fuochi del nemico dal crinale, un vecchio sacerdote con la polvere delle
 > rune sotto le unghie, una cantastorie che ascolta dietro le porte.
@@ -47,6 +47,9 @@
   comandanti nemici. Quello che i quattro perdono, lo trovano perso.
 - Le schede dei quattro sono gli handout 1-4. Sceglietele fra voi, o
   lasciate che sia il DM ad assegnarle.
+- Se il tuo eroe muore, per il resto della visione giochi da capitano
+  (libretto, §9, modo C). Nella Sessione 1, dopo la ricognizione, guidi
+  nell'avanguardia la squadra di guastatori del caduto, senza gesto.
 
 > **Nota DM (non da dare)**
 > - **Dove sta nel tempo.** Fra la Scena 1 e la Scena 2 di `ARC07-DEF-5`.
@@ -61,6 +64,9 @@
 > - **Chi gioca chi.** Proposta: Borin a chi gioca Thorik, Thorin
 >   Runaforte a chi gioca Hella, Dara a chi gioca Tordek, Nala a chi gioca
 >   Artemis. Ognuno resta vicino al ruolo che sa già giocare.
+> - **I nomi che si somigliano** (Thorin, Thorek, Thorik; Dara e Dana) sono
+>   canone e non si cambiano. Al tavolo e nei box il re è «il Re» o «Thorek
+>   Hammerfist», Dana è «la Madre Superiora», il pregen è «Runaforte».
 > - **La posta, in numeri**, sta in `ARC08-10-ESITI-E-CONTINGENZE.md` §5:
 >   non va data ai giocatori. Se il tavolo non vuole i pregen, vale il
 >   ripiego dello stesso file, §5.5.
@@ -70,14 +76,18 @@
 ## HANDOUT 1-4 — Le schede dei 4 "Eroi di Hammerfist" (pregen)
 
 > **Quando darli**: all'**inizio della Sessione 1**, insieme al libretto
-> della battaglia campale (`ARC08-18`), che si legge a inizio serata
-> (flashback D6). I giocatori impersonano questi quattro fino al
+> della battaglia campale (`ARC08-18`), che si legge a inizio serata. I
+> giocatori impersonano questi quattro fino al
 > passaggio di testimone (`ARC08-11-PONTE-ARRIVO.md`), poi riprendono i loro
 > Rumbling Stones. Una scheda per giocatore, una pagina l'una, e con ogni
-> scheda la sua **carta dei poteri** (sotto): ogni incantesimo e ogni
-> capacità con i numeri già calcolati, così nessuno deve aprire un manuale.
+> scheda la sua **carta dei poteri** (sotto), una pagina, quella di Thorin
+> due: ogni incantesimo e ogni capacità con i numeri già calcolati, così
+> nessuno deve aprire un manuale.
 > I numeri sono quelli corretti del Bestiario (2026-10-16; schede in
-> `ARC08-02` §3).
+> `ARC08-02` §3). La riga **Abilità** ha le abilità che la Sessione 1 chiede,
+> già con il totale; per un'altra abilità si tira la caratteristica, se
+> l'abilità si usa senza gradi. Il conto, grado per grado, è in
+> `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`.
 
 ### HANDOUT 1 — BORIN FERROPUGNO, *Il Martello di Hammerfist*
 *Nano Guerriero 10° / Campione Nanico 3° — GS 13*
@@ -88,7 +98,11 @@
 - **PF** 142 · **CA** 25 (Arm. Completa +2, Scudo Pesante +1, Des +1, Schivare +1) · **Velocità** 6m
 - **TS**: Tempra +13, Riflessi +6, Volontà +8
 - **Attacco** +21/+16/+11 in mischia — *Martello da Guerra degli Avi +2* (1d8+9, ×3)
-- **For** 20, **Des** 13, **Cos** 20
+- **For** 20, **Des** 13, **Cos** 20, **Int** 10, **Sag** 10, **Car** 12
+- **Abilità**: Intimidire **+17**, Artigianato (pietra) **+12**, Ascoltare +2,
+  Osservare +2, Percepire Intenzioni +2, Diplomazia +1, Sopravvivenza +0,
+  Scalare −1, Nascondersi −5, Muoversi Silenziosamente −5
+- **Lingue**: Comune, Nanico
 - **Battaglia campale**: Combattere **+21**.
 
 ### HANDOUT 2 — DARA OCCHIOLESTO, *L'Occhio delle Montagne*
@@ -100,7 +114,15 @@
 - **TS**: Tempra +12, Riflessi +14, Volontà +9
 - **Attacco a distanza** +19/+14/+9 — *Arco Lungo Composito +3* (1d8+6, ×3)
 - **Mischia** +16/+11 — *Asce Gemelle +2* (1d6+5); con due asce +14/+9 e +14 (1d6+3)
-- **Des** 18, **For** 16, **Cos** 18, **Sag** 14
+- **For** 16, **Des** 18, **Cos** 18, **Int** 12, **Sag** 14, **Car** 10
+- **Abilità**: Osservare **+18**, Ascoltare **+18** (tutte e due +24 contro
+  gli orchi), Nascondersi **+24** (con il *mantello elfico*), Muoversi
+  Silenziosamente **+19**, Sopravvivenza **+17** (+19 all'aperto, +23 sulle
+  tracce degli orchi), Scalare **+18**, Conoscenze (natura) **+18**,
+  Percepire Intenzioni +2, Diplomazia +0, Intimidire +0
+- **Lingue**: Comune, Nanico, Gigante
+- **Cannocchiale**: quello che guardi si vede due volte più grande. Senza,
+  le CD per contare l'orda dal crinale salgono di 10.
 - **Battaglia campale**: Combattere **+19**, **+25** contro un reparto d'orchi.
 
 ### HANDOUT 3 — THORIN RUNAFORTE, *La Voce di Moradin*
@@ -111,7 +133,14 @@
 - **PF** 114 · **CA** 22 (Armatura a Bande +2, Scudo Pesante +1, Des +1) · **Velocità** 6m
 - **TS**: Tempra +13, Riflessi +7, Volontà +16
 - **Attacco** +14 in mischia — *Martello da Guerra Sacro +2* (1d8+5)
-- **For** 16, **Cos** 20, **Sag** 22, **Car** 16
+- **For** 16, **Des** 12, **Cos** 20, **Int** 12, **Sag** 22, **Car** 16
+- **Abilità**: Concentrazione **+20**, Conoscenze (religione) **+16**,
+  Sapienza Magica **+16**, Ascoltare +6, Osservare +6, Percepire Intenzioni
+  +6, Sopravvivenza +6, Guarire +6, Diplomazia +3, Intimidire +3,
+  Artigianato (pietra) +3, Nascondersi −5, Muoversi Silenziosamente −5
+- **Lingue**: Comune, Nanico, Terran
+- **Componenti**: due dosi di polvere di diamante da 250 mo (*pelle di
+  pietra*), un diamante da 5.000 mo (*rianimare morti*)
 - **Battaglia campale**: Combattere **+14**; i suoi incantesimi migliori sono
   gesti a sé (carta dei poteri).
 
@@ -124,7 +153,16 @@
 - **TS**: Tempra +8, Riflessi +13, Volontà +11
 - **Attacco** +13 in mischia — *Stocco Affilato +1* (1d6+3, 15-20/×2)
 - **Attacco Furtivo** +3d6 (bersagli colti alla sprovvista o fiancheggiati)
-- **Des** 18, **Cos** 18, **Car** 18
+- **For** 14, **Des** 18, **Cos** 18, **Int** 14, **Sag** 10, **Car** 18
+- **Abilità**: Diplomazia **+23**, Raggirare **+21**, Intrattenere (canto)
+  **+16**, Ascoltare **+15**, Osservare **+15**, Camuffare **+14** (+16 per
+  recitare una parte), Nascondersi **+14**, Muoversi Silenziosamente **+14**,
+  Raccogliere Informazioni +12, Percepire Intenzioni +10, Acrobazia +9,
+  Intimidire +8, Conoscenze (locali) +7, Sapere bardico +10, Sopravvivenza +0
+- **Lingue**: Comune, Nanico, **Orchesco**, **Goblin**. Capisci gli ordini
+  dell'orda entro 9 m (Ascoltare CD 15; se vuoi restare nascosta, anche
+  Nascondersi contrapposto all'Osservare di chi parla).
+- **Componenti**: una perla da 100 mo (*identificare*)
 - **Battaglia campale**: Combattere **+13**; il suo canto vale di più (carta dei poteri).
 
 ---
@@ -138,7 +176,12 @@
 > distanze: *vicino* 7,5 m + 1,5 m ogni due livelli, *medio* 30 m + 3 m a
 > livello, *lungo* 120 m + 12 m a livello, già convertite sotto.
 > **Il gesto Incantesimo** del libretto vale solo per incantesimi di 3° livello
-> o più, o per un uso di musica bardica.
+> o più, o per un uso di musica bardica. Gli incantesimi di 1° e 2° si
+> lanciano in più, senza costare il gesto, e nella battaglia campale valgono
+> solo dove l'ultima colonna lo dice. Un effetto su di te che dura 10 round o
+> più vale per il round di battaglia in cui lo lanci, insieme al gesto
+> Combattere; uno più corto non vale. Gli aiuti che durano tutto il giorno non
+> si sommano fra loro: un reparto ne ha uno solo.
 
 ### Carta di Borin — nessun incantesimo, tre colpi da ricordare
 
@@ -161,9 +204,9 @@
 | **Frecce Anatema degli Orchi** (10) | contro un orco | **+2d6** danni | no |
 | **Frecce Ricercanti** (5) | quando il bersaglio è al riparo | ignorano la copertura, tranne quella totale | no |
 | **Comando Balestrieri** | azione standard, entro 18 m | **+4** al colpire di un'unità di tiratori per un round | vale come Comandare |
-| ***Passare senza Tracce*** (1°) | una volta al giorno, tocchi fino a 4 compagni | niente orme né odore per 4 ore: nessuno può seguirvi con le tracce | no: è per l'avvistamento |
-| ***Intralciare*** (1°) | una volta al giorno, fino a 168 m | piante e radici in un cerchio di 12 m di raggio: chi è dentro resta impigliato (TS Riflessi CD 13 lo evita), dura 4 minuti | no: è di 1° |
-| ***Grazia del Gatto*** (2°) | una volta al giorno, su di te, dura 4 minuti | **+4 Destrezza**: arco **+21/+16/+11**, Tiro Rapido +19/+19/+14/+9, CA 23, Riflessi +16 | Combattere **+21** (+27 contro gli orchi) per quattro round di battaglia |
+| ***Passare senza Tracce*** (1°) | una volta al giorno, tocchi fino a 4 compagni | per 4 ore nessuno può seguire le vostre tracce, nemmeno col fiuto. Non vi nasconde a chi vi passa vicino: un worg vi sente comunque entro 9 m, 18 m se siete sottovento | no: è per l'avvistamento |
+| ***Intralciare*** (1°) | una volta al giorno, fino a 168 m | piante e radici in un cerchio di 12 m di raggio: chi è dentro resta impigliato (TS Riflessi CD 13 lo evita), dura 4 minuti | no |
+| ***Grazia del Gatto*** (2°) | una volta al giorno, su di te, dura 4 minuti | **+4 Destrezza**: arco **+21/+16/+11**, Tiro Rapido +19/+19/+14/+9, CA 23, Riflessi +16 | Combattere **+21** (+27 contro gli orchi) per quattro round di battaglia; lanciarlo non costa il gesto |
 
 La scheda non elenca gli incantesimi di Dara. Un ranger di 8° con Saggezza
 14 ne ha due di 1° e uno di 2° al giorno, al 4° livello d'incantatore: sono
@@ -181,20 +224,20 @@ livelli più alto: si può fare solo con incantesimi fino al 4°.
 
 | Incantesimo (quanti) | Quando | Cosa fa, già calcolato | In battaglia campale |
 |---|---|---|---|
-| ***Guarigione*** (6°) | tocco | cura **120 pf** e toglie cecità, sordità, malattia, confusione, veleno, stordimento, fatica | +1d4 PFU a un reparto |
+| ***Guarigione*** (6°) | tocco | cura **120 pf** e toglie cecità, sordità, malattia, confusione, veleno, stordimento, fatica | **+1 PFU** a un reparto |
 | ***Ferire*** (6°) | tocco, attacco a +11 | **120 danni** (TS Volontà CD 22: 60); non porta il bersaglio sotto 1 pf | no |
 | ***Barriera di Lame*** (6°) | fino a 66 m, dura 12 minuti | un muro di lame lungo fino a 72 m, o un anello di 9 m di raggio: chi lo attraversa prende **12d6** (in media 42; TS Riflessi CD 22, metà) | **1d4+1 PFU** a un reparto |
 | ***Pelle di Pietra*** (6°, dominio) | tocco, dura 120 minuti | riduzione del danno **10/adamantio** finché non ha assorbito 120 danni. Serve polvere di diamante da 250 mo | no |
 | ***Cura Ferite Leggere di Massa*** (5°) | fino a 16,5 m | cura **1d8+12** (in media 16,5) a 12 creature a non più di 9 m l'una dall'altra | **+1d4 PFU** a un reparto |
-| ***Potere della Giustizia*** (5°) | su di te, dura 12 round | diventi Grande: martello **+15**, danni **2d6+7**, CA 23, +12 pf, riduzione del danno 6/male | Combattere +15 per un round |
+| ***Potere della Giustizia*** (5°) | su di te, dura 12 round | diventi Grande: martello **+15**, danni **2d6+7**, CA 23, +12 pf, riduzione del danno 6/male | Combattere +15 nel round di battaglia in cui lo lanci, insieme al gesto |
 | ***Rianimare Morti*** (5°) | tocco | riporta in vita un morto da non più di 12 giorni; serve un diamante da 5.000 mo | no |
-| ***Comunione*** (5°) | 1 minuto di preghiera | fai a Moradin 12 domande, risposta sì o no; costa 100 PE | no |
+| ***Comunione*** (5°) | 1 minuto di preghiera | fai a Moradin 12 domande, risposta sì o no; costa 100 PE, che si pagano da quelli del tuo livello (i pregen non ne guadagnano, ma ne hanno) | no |
 | ***Colpo Infuocato*** (5°, dominio) | fino a 66 m | colonna di fuoco sacro di 3 m di raggio e 12 m d'altezza: **12d6** (in media 42; TS Riflessi CD 21, metà) | **1d4+1 PFU** a un reparto |
 | ***Cura Ferite Critiche*** (4°, ×2) | tocco | cura **4d8+12** (in media 30) | no |
 | ***Immunità agli Incantesimi*** (4°) | tocco, dura 120 minuti | il bersaglio ignora **3** incantesimi di 4° livello o meno, scelti da te | no |
 | ***Libertà di Movimento*** (4°) | tocco, dura 120 minuti | niente lotta, paralisi, ragnatele né rallentamenti | no |
 | ***Neutralizzare Veleno*** (4°) | tocco | toglie un veleno, o rende immuni per 120 minuti | no |
-| ***Potere Divino*** (4°, dominio) | su di te, dura 12 round | martello **+21/+16**, danni **1d8+8**, +12 pf temporanei | Combattere +21 per un round |
+| ***Potere Divino*** (4°, dominio) | su di te, dura 12 round | martello **+21/+16**, danni **1d8+8**, +12 pf temporanei | Combattere +21 nel round di battaglia in cui lo lanci, insieme al gesto |
 | ***Cura Ferite Gravi*** (3°, ×2) | tocco | cura **3d8+12** (in media 25,5) | no |
 | ***Preghiera*** (3°) | entro 12 m da te, dura 12 round | alleati **+1** a colpire, danni, TS e prove; nemici −1 | **+1** ai tuoi reparti per il giorno |
 | ***Dissolvi Magie*** (3°) | fino a 66 m | tira 1d20+10 contro 11 + livello dell'incantatore nemico | no |
@@ -207,7 +250,7 @@ livelli più alto: si può fare solo con incantesimi fino al 4°.
 | ***Silenzio*** (2°) | fino a 264 m, dura 12 round | nessun suono in 6 m di raggio: lì nessuno lancia incantesimi con parole (TS Volontà CD 18 se lo metti su una creatura) | no |
 | ***Arma Spirituale*** (2°, dominio) | fino a 66 m, dura 12 round | un martello di forza attacca da solo a **+14/+9**, danni 1d8+4 | no |
 | ***Cura Ferite Leggere*** (1°, ×4) | tocco | cura **1d8+5** (in media 9,5) | no |
-| ***Benedizione*** (1°, ×2) | alleati entro 15 m, dura 12 minuti | **+1** a colpire e ai TS contro la paura | no: è di 1° |
+| ***Benedizione*** (1°, ×2) | alleati entro 15 m, dura 12 minuti | **+1** a colpire e ai TS contro la paura | no |
 | ***Favore Divino*** (1°) | su di te, dura 1 minuto | **+3** a colpire e ai danni | no |
 | ***Arma Magica*** (1°, dominio) | tocco, dura 12 minuti | un'arma diventa +1 | no |
 | Trucchetti | a volontà fra i 6 preparati | *Guida* (+1 a un tiro), *Resistenza* (+1 ai TS), *Virtù* (1 pf temporaneo), *Luce*, *Riparare*, *Individuazione del Magico* | no |
@@ -221,7 +264,7 @@ al giorno, scegliendo al momento. CD **14 + livello** dell'incantesimo.
 
 | Potere | Quando | Cosa fa, già calcolato | In battaglia campale |
 |---|---|---|---|
-| **Ispirare Coraggio** | 8 usi di musica al giorno, azione standard; dura finché canti e 5 round dopo | gli alleati che ti sentono hanno **+2** a colpire e ai danni e ai TS contro paura e charme; i nani **+3** a colpire col Canto di Guerra Nanico | **+1** ai tuoi reparti per il giorno |
+| **Ispirare Coraggio** | 8 usi di musica al giorno, azione standard; dura finché canti e 5 round dopo | gli alleati che ti sentono hanno **+2** a colpire e ai danni, e ai TS contro paura e charme. Con il **Canto di Guerra Nanico** i nani alleati hanno +1 in più a colpire (+3 in tutto) | **+1** ai tuoi reparti per il giorno; il Canto di Guerra Nanico non cambia niente |
 | **Suggestione** (musica) | un uso, su una creatura affascinata | le fai fare una cosa ragionevole (TS Volontà CD 18) | no |
 | **Affascinare** (musica) | un uso, chi ti sente entro 27 m | restano fermi ad ascoltarti (TS Volontà CD 18), finché canti | no |
 | **Attacco Furtivo** | contro chi è colto alla sprovvista o fiancheggiato | **+3d6** danni (in media 10,5) | no |
@@ -235,8 +278,10 @@ al giorno, scegliendo al momento. CD **14 + livello** dell'incantesimo.
 | ***Charme su Persone*** (1°) | fino a 13,5 m, dura 8 ore | un umanoide ti tratta da amica (TS Volontà CD 15) | no |
 | ***Immagine Silenziosa*** (1°) | fino a 216 m, finché ti concentri | un'illusione muta, grande fino a 12 cubi da 3 m (TS Volontà CD 15 per chi la tocca) | no |
 | ***Cura Ferite Leggere*** (1°) | tocco | cura **1d8+5** (in media 9,5) | no |
-| ***Identificare*** (1°) | un'ora | dice cosa fa un oggetto magico | no |
+| ***Identificare*** (1°) | un'ora, consuma la perla da 100 mo | dice cosa fa un oggetto magico | no |
 | Trucchetti | 3 al giorno | *Suono Fantasma*, *Prestidigitazione*, *Mano Magica*, *Messaggio*, *Lettura del Magico*, *Individuazione del Magico* | no |
+| **Spia Maestra** | sempre | la classe del *Complete Adventurer* (⚠️ non SRD): le sue capacità le applica il DM. Per te contano già i numeri della riga Abilità | no |
+| **L'inganno** (libretto §13) | nell'avanguardia, un gesto | *immagine silenziosa* o *affascinare* sul reparto nemico davanti alla tua squadra: se fallisce il TS, per quel round non tira il bianco | sì, solo nell'avanguardia |
 
 ---
 

@@ -452,6 +452,22 @@ bis), e le schede degli handout 1-4 hanno ora i numeri del Bestiario. Chi non
 vuole un pregen gioca il capitano o l'orda (libretto §9). Manca la prova al
 tavolo.
 
+Il giro sulla Sessione 1 coi pregen (quattro letture a freddo, poi il
+[triage](esperimenti/giro-arc08-sessione1-2026-10-21/TRIAGE.md) in 60 voci)
+ha avuto la prima correzione il 2026-10-21, sui file che non sono la
+Sessione 1: libretto (`ARC08-18`), segreti dell'orda (`ARC08-19`), handout
+(`ARC08-15`) e script della battaglia campale. Le trappole valgono il Giorno 1
+o il Giorno 2, i giganti tirano un macigno per settore, la ritirata
+dell'avanguardia è di gruppo; con le prove rifatte la riga «Feroce» del
+libretto passa a 8-9 su 10 di breccia contenuta. L'avanguardia ha un mazzo
+per round, il sergente uno statblocco, la ricognizione pattuglia e scout dalle
+schede di *Red Hand of Doom* (non SRD). I pregen hanno abilità, lingue e
+caratteristiche, col conto in
+[`ABILITA-PREGEN.md`](esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md).
+Restano la Sessione 1 riscritta a scene (`ARC08-01`), `ARC08-10`, `ARC08-02`,
+la mappa del pendio e le due voci per il DM (quando si spiega il libretto, e
+se il §12 resta nel libretto dei giocatori).
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte

@@ -4,6 +4,11 @@ goblin, poi la pattuglia hobgoblin col sergente, poi il corno di Grimjaw.
 Quante trappole si posano e quanto costa restare un round in più: una squadra
 travolta perde le sue trappole. I guastatori non sono i reparti delle mura.
 
+La ritirata è di tutto il gruppo, a un round fisso (decisione del DM del
+2026-10-21): una squadra sola non si ritira, smette di scavare alla seconda
+tacca e combatte (Colpire). Le trappole si contano sul gruppo: ogni round di
+scavo vale mezza trappola, e il totale si tronca alla fine.
+
     python3 -I avanguardia.py [ferocia] [round_prima_della_ritirata]
 """
 import random, statistics, sys

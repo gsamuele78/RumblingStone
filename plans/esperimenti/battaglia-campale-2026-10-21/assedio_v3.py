@@ -2,12 +2,17 @@
 libretto più il terreno, le capacità dei reparti, le baliste e le trappole
 posate nell'avanguardia. Esperimento per tarare i numeri, non uno strumento.
 
-    python3 -I assedio_v3.py [ferocia] [trappole] [ambiente] [seme] [persi] [morale] [lim]
+    python3 -I assedio_v3.py [ferocia] [trappole] [ambiente] [seme] [persi] [morale] [lim] [politica]
 
 ferocia: si somma ad AU e DU dell'orda base (1 = normale del libretto, 2 = feroce,
 3 = terrificante); trappole 0-8 dall'avanguardia, ognuna annulla una tacca del
-primo giorno;
-ambiente 0 = regole della v2, 1 = con terreno, capacità e baliste.
+giorno 1 o del giorno 2, dove serve (decisione del DM del 2026-10-21);
+ambiente 0 = regole della v2, 1 = con terreno, capacità e baliste;
+politica: attento (default), tenere, colpire, caricare (lo stesso ordine sempre).
+
+I giganti tirano un macigno per settore al round 2 dei giorni 1 e 2: è la carta
+del libretto. Il macigno conta il +1 del primo giorno e il morale, non le
+merlature delle Mura.
 """
 import random, statistics, sys
 
@@ -18,6 +23,7 @@ R = random.Random(int(sys.argv[4]) if len(sys.argv) > 4 else 1372)
 PERSI = int(sys.argv[5]) if len(sys.argv) > 5 else 0   # reparti delle mura persi prima
 MORALE0 = int(sys.argv[6]) if len(sys.argv) > 6 else 1  # il morale all'alba del primo giorno
 LIM = int(sys.argv[7]) if len(sys.argv) > 7 else 2      # il morale pesa sui dadi al massimo ±LIM
+POLITICA = sys.argv[8] if len(sys.argv) > 8 else "attento"
 def mo(m): return max(-LIM, min(LIM, m))
 d = lambda n: R.randint(1, n)
 def tab(m): return 0 if m < 0 else 1 if m < 5 else 2 if m < 10 else 3
@@ -59,6 +65,7 @@ def politica(mie, rep, campo, eroe):
     ordini = []
     for p, tipo in zip(mie, rep):
         if p <= 0: ordini.append(None)
+        elif POLITICA != "attento": ordini.append(POLITICA)
         elif p <= 4: ordini.append("tenere")
         elif any(x["t"] == "orchi" for x in campo): ordini.append("caricare")
         else: ordini.append("colpire")
@@ -85,8 +92,10 @@ def battaglia():
                 if AMBIENTE and nome == "Mura" and not mura_rotte: muro = 1
                 ordini, gesto = politica(pfu[nome], rep, campo, eroe)
                 if giorno < 3 and r == 1:
+                    # i giganti: un macigno per settore; le merlature non contano
                     i = R.choice(vivi)
-                    pfu[nome][i] = max(0, pfu[nome][i] - tab(d(20) + 14 - (NANI[rep[i]][1] + muro + mo(morale))))
+                    primo = 1 if giorno == 1 else 0
+                    pfu[nome][i] = max(0, pfu[nome][i] - tab(d(20) + 14 - (NANI[rep[i]][1] + primo + mo(morale))))
                 if giorno == 3 and r == 1 and nome == "Mura":
                     for i in vivi: pfu[nome][i] = max(0, pfu[nome][i] - d(4))
                 inflitti = 0
@@ -131,8 +140,8 @@ def battaglia():
                 campo = [x for x in campo if x["pfu"] > 0]
                 if inflitti < 2:
                     # una trappola posata nell'avanguardia annulla una tacca del
-                    # primo giorno, dove serve
-                    if giorno == 1 and tr > 0: tr -= 1
+                    # giorno 1 o del giorno 2, dove serve
+                    if giorno <= 2 and tr > 0: tr -= 1
                     else: tacche += 1
                 if tacche >= TACCHE: break
             if tacche >= TACCHE:
@@ -149,7 +158,7 @@ TACCHE = 3
 if __name__ == "__main__":
     rs = [battaglia() for _ in range(3000)]
     q = lambda f: round(100 * sum(1 for r in rs if f(r)) / len(rs))
-    print(f"ferocia {FEROCIA} trappole {TRAPPOLE} ambiente {AMBIENTE}: "
+    print(f"ferocia {FEROCIA} trappole {TRAPPOLE} ambiente {AMBIENTE} politica {POLITICA}: "
           f"breccia {q(lambda r: r['b12'] == 0)}/{q(lambda r: r['b12'] == 1)}/{q(lambda r: r['b12'] >= 2)}% "
           f"posizioni {q(lambda r: r['vivi'] >= 6)}/{q(lambda r: 3 <= r['vivi'] < 6)}/{q(lambda r: r['vivi'] < 3)}% "
           f"reparti {round(statistics.mean(r['vivi'] for r in rs), 2)}/8")
