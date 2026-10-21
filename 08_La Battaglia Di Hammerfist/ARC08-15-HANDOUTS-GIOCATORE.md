@@ -204,7 +204,7 @@
 | **Frecce Anatema degli Orchi** (10) | contro un orco | **+2d6** danni | no |
 | **Frecce Ricercanti** (5) | quando il bersaglio è al riparo | ignorano la copertura, tranne quella totale | no |
 | **Comando Balestrieri** | azione standard, entro 18 m | **+4** al colpire di un'unità di tiratori per un round | vale come Comandare |
-| ***Passare senza Tracce*** (1°) | una volta al giorno, tocchi fino a 4 compagni | per 4 ore nessuno può seguire le vostre tracce, nemmeno col fiuto. Non vi nasconde a chi vi passa vicino: un worg vi sente comunque entro 9 m, 18 m se siete sottovento | no: è per l'avvistamento |
+| ***Passare senza Tracce*** (1°) | una volta al giorno, tocchi fino a 4 compagni | per 4 ore nessuno può seguire le vostre tracce, nemmeno col fiuto. Non vi nasconde a chi vi passa vicino: un worg vi sente comunque entro 9 m, 18 m se il vento porta il vostro odore verso di lui, 4,5 m se siete sottovento | no: è per l'avvistamento |
 | ***Intralciare*** (1°) | una volta al giorno, fino a 168 m | piante e radici in un cerchio di 12 m di raggio: chi è dentro resta impigliato (TS Riflessi CD 13 lo evita), dura 4 minuti | no |
 | ***Grazia del Gatto*** (2°) | una volta al giorno, su di te, dura 4 minuti | **+4 Destrezza**: arco **+21/+16/+11**, Tiro Rapido +19/+19/+14/+9, CA 23, Riflessi +16 | Combattere **+21** (+27 contro gli orchi) per quattro round di battaglia; lanciarlo non costa il gesto |
 

@@ -113,7 +113,7 @@ Focalizzata (arco corto) · lingue Comune, Draconico, Goblin.
 **Worg** (×3, le cavalcature) · scheda del Bestiario `worg-cavalcatura-cr2`,
 avanzato a 6 DV (⚠️ potenziamento: l'SRD dà 4 DV e 30 pf) · GS 2 · bestia
 magica Media, NM · Iniz +2 · scurovisione 18 m, visione crepuscolare,
-**fiuto** (sente chi passa entro 9 m, 18 m sottovento) · Ascoltare +7,
+**fiuto** (sente chi passa entro 9 m; 18 m se il vento gli porta l'odore, 4,5 m se chi passa è sottovento) · Ascoltare +7,
 Osservare +7, Nascondersi +4, Muoversi Silenziosamente +7, Sopravvivenza +2
 (+6 seguendo col fiuto) · CA 14 · pf 51 · Temp +7, Rifl +7, Vol +4 ·
 velocità 15 m · morso +9 (1d8+4) e **sbilanciare** gratuito (+3) · Allerta,
@@ -170,3 +170,57 @@ Le strutture (mura 1.800 pf in `ARC08-02` contro 240 in `Mappe` L2) restano
 fuori dal libretto: la breccia si misura con le tacche, non con i pf delle
 mura. Il **cancello ha 200 pf** `[CANONE — DM 2026-10-21]`: valgono nei
 combattimenti sulla mappa coi PG, e nel libretto non si traducono in niente.
+
+## 4. Il mazzo, la ferocia e le carte (era il §12 del libretto)
+
+Stava nel libretto dei giocatori; dal 2026-10-21 sta qui, perché il libretto dice che quello che l'orda sa fare i giocatori lo scoprono sul campo `[CANONE — DM 2026-10-21]`.
+
+**Il mazzo dell'orda.** Ogni giorno, per ogni settore, quattordici reparti
+mescolati: sei di hobgoblin, quattro di guerrieri, tre d'orchi, uno di lupi.
+Si pesca a caso. Quello che resta nel mazzo a fine giorno non torna.
+
+**La ferocia.** Un numero solo, da dire prima della battaglia, che si somma
+ad AU e DU di tutti i reparti dell'orda. Le percentuali sono dalle prove con
+il terreno, le capacità, le baliste e da tre a sei trappole.
+
+| Orda | AU e DU | Breccia contenuta, «pieno» | Posizioni tenute, «pieno» |
+|---|---|---|---|
+| **Normale** | −1 rispetto al libretto §11 | quasi sempre | quasi 9 volte su 10 |
+| **Feroce** (default) | come in §11 | 8-9 volte su 10 | 6 volte su 10 |
+| **Terrificante** | +1 rispetto al libretto §11 | 5-6 volte su 10 | 2 volte su 10 |
+
+Con le trappole che valgono il primo e il secondo giorno, ognuna fino alla
+sesta toglie all'orda feroce tre o quattro probabilità su cento di aprire una
+breccia. Negli script la ferocia ha un numero: normale = 1, feroce = 2,
+terrificante = 3.
+
+**Le carte dell'orda.** Una per round al massimo, in un settore a scelta;
+solo i giganti tirano in tutti i settori. Le simulazioni hanno provato i
+giganti, la breccia del cancello e il soffio; Gorthak, Grimjaw, la palla di
+fuoco, il gesto Sfidare e il Fuoco di copertura non sono ancora provati e si
+tarano al primo tavolo. Le capacità dell'orda sono al §1.
+
+| Giorno | Carta | Effetto |
+|---|---|---|
+| 1-2 | **I giganti** | round 2: **un macigno per settore**. Per ognuno il DM tira d20 + 14 contro la DU di un reparto (con il +1 del primo giorno e il morale; le merlature delle Mura non contano), e usa la tabella del rosso |
+| 1-2 | **Gorthak al cancello** | comandante: il Cancello può **Sfidare**. Finché c'è, il fronte del Cancello sale di uno |
+| 1-2 | **La palla di fuoco** | 1d4+1 PFU a un reparto; il giocatore tira d20 + 5 contro 16, se riesce dimezza |
+| 2 | **La breccia del cancello** | non occupa un round: dall'inizio del giorno il fronte del Cancello sale di uno. Con Gorthak sale di due |
+| 2-3 | **Grimjaw e la guardia nera** | comandante: si può **Sfidare** |
+| 3 | **Il soffio** | round 2: ogni reparto sulle Mura perde 1d4 PFU |
+| 3 | **La ritirata** | non occupa un round: il terzo giorno ha quattro round, poi tutti verso il Cuore della Montagna |
+
+**Cosa si legge nella tabella dei bonus** (`ARC08-10-ESITI-E-CONTINGENZE.md`
+§5) alla fine dell'assedio:
+
+| Obiettivo | Pieno | Parziale | Fallito |
+|---|---|---|---|
+| **Breccia contenuta** (§5.2) | nessuna breccia nei giorni 1 e 2 | una | due o più |
+| **Comandanti logorati** (§5.2) | Gorthak e Grimjaw fuggiti feriti | uno dei due | nessuno |
+| **Cantitrici protette** (§5.2) | le Mura non cedono il giorno 2 | cedono al round 4 o 5 | cedono entro il round 3 |
+| **Posizioni tenute** (§5.3) | alla ritirata restano tre quarti dei reparti o più | da un terzo a tre quarti | meno di un terzo |
+| **Re Thorek** ed **evacuazione** (§5.3) | come nel master, nella resistenza al Cuore | | |
+
+Le Cantitrici sono un obiettivo, non una carta: si annunciano all'alba del
+secondo giorno. Nel modo A le righe di massa sono **parziali**, e contano solo
+i combattimenti sulla mappa.

@@ -981,3 +981,11 @@ tutto il gruppo): round 2 quattro trappole e nessuna squadra, round 3 5,07 e
   il conto è quello. Da allineare in `01` con T22.
 - Il sergente fugge sotto metà dei pf, a 25: la voce T44 e la struttura
   dicevano la stessa cosa in due modi.
+
+
+## Applicate (correzioni 3, 2026-10-21)
+
+- T28 (DM: a pezzi): libretto §12 «Il tempo» con «Cosa si spiega quando», intestazione e §13 aggiornati; il master la scrive come definitiva.
+- T31 (DM: nei Segreti): il vecchio §12 «Per il DM» è ora `ARC08-19` §4; nel libretto restano «Il tempo» e i rimandi senza numero di paragrafo; `ARC08-10` §5.4-bis punta ad `ARC08-19` §4.
+- Fiuto dei worg: handout di Dara e `ARC08-19` allineati all'SRD (18 m se il vento porta l'odore, 4,5 m sottovento); tolta la nota di contraddizione dal master.
+- Lettere degli incontri: `ARC08-16` (1F → 1C) e `ARC08-04` (1F → 1C) allineate al master.

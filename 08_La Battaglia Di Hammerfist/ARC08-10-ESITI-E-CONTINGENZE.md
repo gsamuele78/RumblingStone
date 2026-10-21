@@ -283,7 +283,7 @@ la **Sessione 3a**.
   «pieno», 3-5 «parziale», meno di 3 «fallito». Ogni trappola annulla anche
   una tacca del Giorno 1 o del Giorno 2 d'assedio. Contano le trappole
   dell'avanguardia e quella della Preparazione delle difese.
-- Le righe di §5.2 e §5.3 si leggono con la tabella di §12 del libretto
+- Le righe di §5.2 e §5.3 si leggono con la tabella di `ARC08-19` §4
   (brecce dei giorni 1 e 2, comandanti fuggiti feriti, Mura del giorno 2,
   reparti vivi alla ritirata). Nell'assedio i comandanti non muoiono: sotto
   metà dei punti ferita fuggono, così arrivano al finale feriti come vuole

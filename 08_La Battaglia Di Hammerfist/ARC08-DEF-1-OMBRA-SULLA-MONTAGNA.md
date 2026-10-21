@@ -555,9 +555,6 @@ contrapposte le tira il DM, o il giocatore dell'orda se c'è.
   cioè **sottovento** ai worg, e lo si sa con Sopravvivenza **CD 15**
   (Dara +17). *Passare senza tracce* toglie le orme e l'odore che resta sul
   sentiero, ma non nasconde chi passa a 6 m da un worg.
-  ⚠️ La carta di Dara (`ARC08-15`) e lo statblocco del worg in `ARC08-19`
-  scrivono «18 m sottovento»: il numero è giusto, la parola è rovesciata.
-  Sottovento il raggio è 4,5 m. Al tavolo vale l'SRD, come qui.
 - **Il silenzio.** *Silenzio* (Thorin, Nala) copre chi ci sta dentro: chi
   è nel raggio non fa rumore, e non sente niente. Nala non origlia da lì
   dentro.

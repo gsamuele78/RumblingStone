@@ -1,7 +1,7 @@
 # Il libretto della battaglia campale
 
-> **Per chi**: i giocatori e il DM, lo stesso libretto per tutti. Si legge
-> insieme all'inizio della Sessione 1 e si tiene aperto al tavolo. Quello che
+> **Per chi**: i giocatori e il DM, lo stesso libretto per tutti. Si spiega
+> a pezzi, quando serve (§12), e si tiene aperto al tavolo. Quello che
 > l'orda sa fare e i giocatori non devono sapere sta in un file a parte, solo
 > per il DM (`ARC08-19-SEGRETI-DELL-ORDA.md`).
 > **Dove si usa**: la scaramuccia dell'avanguardia nella Sessione 1 (§13), poi
@@ -52,7 +52,7 @@ momento.
 ## 2. Il round in quattro passi
 
 **1 · L'orda avanza.** Ogni settore ha il suo **mazzo dell'orda** per il
-giorno (§12). Il DM pesca reparti dal mazzo finché davanti al settore ce ne
+giorno. Il DM pesca reparti dal mazzo finché davanti al settore ce ne
 sono tanti quanti dice il fronte. I reparti nemici feriti restano dove sono,
 con i PFU che hanno. Poi il DM gioca una carta, se ne ha una per quel round,
 e la racconta.
@@ -139,7 +139,7 @@ Ogni round il tuo eroe fa **una** di queste cose.
     tutto il giorno. Gli aiuti che durano tutto il giorno non si sommano fra
     loro: un reparto ne ha uno solo.
 - **Sfidare.** Solo quando il DM gioca la carta di un comandante nemico
-  nel tuo settore (§12). Il duello si gioca sulla mappa con le regole
+  nel tuo settore. Il duello si gioca sulla mappa con le regole
   normali, quanti round servono, e vale come un round di battaglia: in quel
   round i tuoi reparti tirano senza di te, e il settore non prende tacche.
   Un comandante non muore nell'assedio: sotto metà dei suoi punti ferita
@@ -311,7 +311,7 @@ il DM racconta il conto.
 | **Veterani** | 10 | 21 | 11 | **Muro di scudi**: con Tenere hanno **+6** al bianco invece di +4 |
 | **Balestrieri** | 9 | 18 | 9 | **Fuoco di copertura**: al posto del rosso, **+2** al bianco di un altro reparto del settore per quel round. È l'aiuto fra reparti |
 
-**L'orda feroce**, quella che il DM usa se non dice altro (§12).
+**L'orda feroce**, quella che il DM usa se non dice altro.
 
 | Reparto | AU | DU | PFU | Nota |
 |---|---|---|---|---|
@@ -327,69 +327,20 @@ con *grazia del gatto*), Thorin **+14**, Nala **+13**.
 
 ---
 
-## 12. Per il DM
+## 12. Il tempo
 
-**Il mazzo dell'orda.** Ogni giorno, per ogni settore, quattordici reparti
-mescolati: sei di hobgoblin, quattro di guerrieri, tre d'orchi, uno di lupi.
-Si pesca a caso. Quello che resta nel mazzo a fine giorno non torna.
-
-**La ferocia.** Un numero solo, da dire prima della battaglia, che si somma
-ad AU e DU di tutti i reparti dell'orda. Le percentuali sono dalle prove con
-il terreno, le capacità, le baliste e da tre a sei trappole.
-
-| Orda | AU e DU | Breccia contenuta, «pieno» | Posizioni tenute, «pieno» |
-|---|---|---|---|
-| **Normale** | −1 rispetto a §11 | quasi sempre | quasi 9 volte su 10 |
-| **Feroce** (default) | come in §11 | 8-9 volte su 10 | 6 volte su 10 |
-| **Terrificante** | +1 rispetto a §11 | 5-6 volte su 10 | 2 volte su 10 |
-
-Con le trappole che valgono il primo e il secondo giorno, ognuna fino alla
-sesta toglie all'orda feroce tre o quattro probabilità su cento di aprire una
-breccia. Negli script la ferocia ha un numero: normale = 1, feroce = 2,
-terrificante = 3.
-
-**Le carte dell'orda.** Una per round al massimo, in un settore a scelta;
-solo i giganti tirano in tutti i settori. Le simulazioni hanno provato i
-giganti, la breccia del cancello e il soffio; Gorthak, Grimjaw, la palla di
-fuoco, il gesto Sfidare e il Fuoco di copertura non sono ancora provati e si
-tarano al primo tavolo. Le capacità dell'orda e le carte
-segrete sono in `ARC08-19-SEGRETI-DELL-ORDA.md`.
-
-| Giorno | Carta | Effetto |
-|---|---|---|
-| 1-2 | **I giganti** | round 2: **un macigno per settore**. Per ognuno il DM tira d20 + 14 contro la DU di un reparto (con il +1 del primo giorno e il morale; le merlature delle Mura non contano), e usa la tabella del rosso |
-| 1-2 | **Gorthak al cancello** | comandante: il Cancello può **Sfidare**. Finché c'è, il fronte del Cancello sale di uno |
-| 1-2 | **La palla di fuoco** | 1d4+1 PFU a un reparto; il giocatore tira d20 + 5 contro 16, se riesce dimezza |
-| 2 | **La breccia del cancello** | non occupa un round: dall'inizio del giorno il fronte del Cancello sale di uno. Con Gorthak sale di due |
-| 2-3 | **Grimjaw e la guardia nera** | comandante: si può **Sfidare** |
-| 3 | **Il soffio** | round 2: ogni reparto sulle Mura perde 1d4 PFU |
-| 3 | **La ritirata** | non occupa un round: il terzo giorno ha quattro round, poi tutti verso il Cuore della Montagna |
-
-**Cosa si legge nella tabella dei bonus** (`ARC08-10-ESITI-E-CONTINGENZE.md`
-§5) alla fine dell'assedio:
-
-| Obiettivo | Pieno | Parziale | Fallito |
-|---|---|---|---|
-| **Breccia contenuta** (§5.2) | nessuna breccia nei giorni 1 e 2 | una | due o più |
-| **Comandanti logorati** (§5.2) | Gorthak e Grimjaw fuggiti feriti | uno dei due | nessuno |
-| **Cantitrici protette** (§5.2) | le Mura non cedono il giorno 2 | cedono al round 4 o 5 | cedono entro il round 3 |
-| **Posizioni tenute** (§5.3) | alla ritirata restano tre quarti dei reparti o più | da un terzo a tre quarti | meno di un terzo |
-| **Re Thorek** ed **evacuazione** (§5.3) | come nel master, nella resistenza al Cuore | | |
-
-Le Cantitrici sono un obiettivo, non una carta: si annunciano all'alba del
-secondo giorno. Nel modo A le righe di massa sono **parziali**, e contano solo
-i combattimenti sulla mappa.
-
-**Il tempo.** Tre o quattro minuti a round, cinque round a giorno: il
+Tre o quattro minuti a round, cinque round a giorno: il
 primo e il secondo giorno stanno in una serata con i duelli. Il terzo giorno
 dura quattro round e lascia il resto della serata alla resistenza al Cuore.
+
+**Cosa si spiega quando.** Nella Sessione 1, trenta secondi in apertura: più tardi guiderete i vostri soldati, e vi si spiega come quando succede. Prima della scaramuccia, dieci-quindici minuti: §1, §3, §4 con Scavare, il gesto Combattere e Comandare di §5, la tacca di §7, poi il primo round giocato piano come l'esempio di §10. Il morale (§6), la notte (§8) e i modi di gioco (§9) si spiegano all'inizio della Sessione 2.
 
 ---
 
 ## 13. La prima battaglia: l'avanguardia
 
 **Quando**: nella Sessione 1, dopo l'avvistamento, il giorno prima che l'orda
-arrivi alle mura. Si legge il libretto insieme a inizio serata e questa è la
+arrivi alle mura. Il libretto si spiega subito prima (§12), e questa è la
 prima volta che si tira.
 
 **La scena.** Ogni eroe guida una **squadra di guastatori**: un solo reparto
