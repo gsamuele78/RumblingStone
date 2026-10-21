@@ -36,15 +36,14 @@
     *   **Meccaniche di Transizione: Il Passaggio del Testimone**
 
 4.  **Capitolo 2: La Campagna - Scontro per Scontro**
-    *   **Sessione 1: L'Ombra sulla Montagna**
-        *   Introduzione da Leggere ai Giocatori
-        *   Incontro 1A: La Ricognizione Iniziale (con Mappe 1A-1, 1A-2, 1A-3)
-        *   Obiettivi Tattici e Conseguenze
-        *   Incontro 1B: Il Consiglio di Guerra
-        *   Incontro 1C: Rafforzare le Difese
+    *   **Sessione 1: L'Ombra sulla Montagna** → master `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`
+        *   Scene 1-3: l'apertura, la notte prima, il rapporto delle sentinelle
+        *   Incontro 1A: La Ricognizione (con Mappe 1A-1, 1A-2, 1A-3)
+        *   Incontro 1B: Il Consiglio di Guerra e la Preparazione delle Difese
+        *   Incontro 1C: La Dimostrazione di Forza
+        *   Incontro 1D: L'Avanguardia (con Mappa 1D)
         *   Incontro 1E: Presagi Funesti
-        *   Incontro 1F: La Dimostrazione di Forza
-        *   Risultati della Sessione 1
+        *   La notte dei fuochi e la tabella delle leve
     *   **Sessione 2: Tre Giorni di Sangue e Ferro**
         *   Introduzione Sessione 2
         *   **Giorno 1: L'Assalto alle Mura Esterne**
@@ -114,11 +113,14 @@
 *   **Sessione 3: Dalle Profondità della Terra.** I superstiti nanici sono braccati. Nel momento più buio, i veri PG (i Rumbling Stones) appaiono, segnando la transizione e l'inizio della controffensiva.
 *   **Sessione 4: La Tempesta e la Vittoria Finale.** I PG, ora alla guida delle forze naniche, coordinano l'assalto finale con l'arrivo di potenti alleati aerei, affrontando i comandanti nemici rimasti e decidendo le sorti di Hammerfist.
 
-> **Con il libretto** `[INFERRED — needs DM confirmation]`: se l'assedio si
-> gioca con `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` (ADR-0096), la Sessione 1
-> comincia con la lettura del libretto e finisce con la scaramuccia
-> dell'avanguardia (libretto §13), e le Sessioni 2 e 3 usano il libretto per la battaglia di massa. Come si leggono
-> i bonus: `ARC08-10-ESITI-E-CONTINGENZE.md` §5.4-bis.
+> **Con il libretto** `[CANONE — DM 2026-10-21]`: l'assedio si gioca con
+> `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` (ADR-0096). Le sessioni coi pregen
+> sono tre. La Sessione 1 è l'avvistamento e finisce con la scaramuccia
+> dell'avanguardia (libretto §13), e il libretto si spiega a pezzi: trenta
+> secondi in apertura, il primo pezzo prima dell'avanguardia, il resto alla
+> Sessione 2 (`ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` §5). Le Sessioni 2 e 3 usano
+> il libretto per la battaglia di massa. Come si leggono i bonus:
+> `ARC08-10-ESITI-E-CONTINGENZE.md` §5.4-bis.
 
 
 ## **2. LEGENDA MAPPE E SIMBOLI TATTICI**
@@ -695,6 +697,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +2, Osservare +2
+**Caratteristiche:** For 20, Des 13, Cos 20, Int 10, Sag 10, Car 12
 **CA:** 25 (+1 Des, +10 armatura, +3 scudo, +1 schivare), contatto 12, colto alla sprovvista 23
 **PF:** 142 (10d10+3d12+68)
 **TS:** Tempra +13, Riflessi +6, Volontà +8
@@ -705,6 +708,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco Completo:** *Martello da Guerra degli Avi +2* +21/+16/+11 in mischia (1d8+9/x3)
 **Abilità Speciali:** Postura Difensiva (+4 For/Cos, +2 TS Vol, 3/giorno), Colpo Devastante (+4d6 danni, 3/giorno), Presenza Comandante (+2 morale alleati entro 9m).
 **Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento (gli ultimi tre aggiunti dal lotto, confermati dal DM il 2026-10-18).
+**Abilità:** Intimidire +17, Artigianato (pietra) +12, Ascoltare +2, Osservare +2, Percepire Intenzioni +2, Diplomazia +1, Scalare −1, Nascondersi −5, Muoversi Silenziosamente −5 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`).
+**Lingue:** Comune, Nanico.
 **Equipaggiamento:** *Armatura Completa Nanica +2*, *Scudo Pesante Runico +1*, *Martello da Guerra degli Avi +2* (Ritornante), 3 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche di Combattimento:**
@@ -746,7 +751,9 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 (Cos 18 per i pf)
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
-**Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
+**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[INFERRED — da confermare sulla classe]`.
+**Lingue:** Comune, Nanico, Gigante.
+**Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*, cannocchiale (senza, le CD per contare l'orda dal crinale salgono di 10).
 
 **Tattiche di Combattimento:**
 - **Posizionamento:** Cerca sempre terreno sopraelevato
@@ -777,7 +784,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 > *"Thorin è anziano per gli standard di battaglia (280 anni) ma la sua fede in Moradin brucia come lava fusa. La sua barba bianca è decorata con rune sacre d'oro, e i suoi occhi grigio acciaio vedono il divino in ogni battaglia. È il consigliere spirituale di Re Thorek e il custode delle tradizioni più antiche."*
 
 **Iniziativa:** +1; 
-**Sensi:** Scurovisione 18m; Ascoltare +5, Osservare +5
+**Sensi:** Scurovisione 18m; Ascoltare +6, Osservare +6
 **CA:** 22 (+1 Des, +8 armatura, +3 scudo), contatto 11, colto alla sprovvista 21
 **PF:** 114 (12d8+60)
 **TS:** Tempra +13, Riflessi +7, Volontà +16
@@ -796,6 +803,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
 **Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra, Incidere Rune [Private source — Forgotten Realms Campaign Setting]; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
+**Abilità:** Concentrazione +20, Conoscenze (religione) +16, Sapienza Magica +16, Ascoltare +6, Osservare +6, Percepire Intenzioni +6, Sopravvivenza +6, Guarire +6, Diplomazia +3, Intimidire +3, Artigianato (pietra) +3, Nascondersi −5, Muoversi Silenziosamente −5 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Ascoltare e Osservare erano +5: con Sag 22 sono +6.
+**Lingue:** Comune, Nanico, Terran.
 **Equipaggiamento:** *Armatura a Bande +2*, *Scudo Pesante Runico +1* (RI 15), *Martello da Guerra Sacro +2*, *Simbolo Sacro di Mithral*.
 
 **Tattiche di Combattimento:**
@@ -844,6 +853,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
 **Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 (Cos 18 per i pf)
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
+**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[INFERRED — da verificare sul manuale]`.
+**Lingue:** Comune, Nanico, Orchesco, Goblin: capisce gli ordini dell'orda entro 9 m con Ascoltare CD 15.
 **Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
 
 **Tattiche di Combattimento:**
@@ -1193,234 +1204,18 @@ Abilità chiave: Artigianato (ingegneria) +12, Disattivare Congegni +10.
 
 ### **SESSIONE 1: L'OMBRA SULLA MONTAGNA**
 
-#### **PRIMA DELL'INTRODUZIONE — L'ORDA SI SENTE PRIMA DI VEDERSI**
-*Da leggere la sera prima dell'avvistamento, con i pregen ancora dentro la fortezza. 6-8 righe: apre la sessione sul senso sbagliato — l'udito e l'olfatto — e lascia la vista all'introduzione qui sotto.*
-
-> *"Prima arriva l'odore. Non di fumo: di sudore vecchio, di cuoio non conciato, di bestie tenute insieme dalla fame. Poi il suono — un basso che non si interrompe mai, come se la valle respirasse.*
->
-> *Le vedette non vedono ancora niente. Ma il cane della guarnigione ha smesso di abbaiare, e non si muove dalla porta."*
-
-> **📎 Regia (A5)**: qui il cue sonoro è **il basso continuo** che parte
-> adesso e non si spegne fino alla fine dell'arco —
-> `ARC08-16-CUE-SONORI.md` §2. Testo di partenza: descrizione epica del
-> DM, movimento 1; nomi e cronologia corretti in
-> `ERRATA-ARC08-DESCRIZIONE-EPICA.md` §3.
-
-#### **INTRODUZIONE DA LEGGERE AI GIOCATORI:**
-> *"L'alba del primo giorno d'autunno si tinge di rosso sangue all'orizzonte. Dalle torri di vedetta di Hammerfist, le sentinelle naniche scrutano con crescente inquietudine la vallata settentrionale. Quello che inizialmente sembrava una macchia scura si rivela essere un oceano di ferro, carne e malvagità che avanza inesorabile verso i rifugi ancestrali del vostro popolo. Gli stendardi della Mano Rossa sventolano al vento come promesse di morte, e il suono di tamburi di guerra riecheggia tra le montagne come un battito cardiaco impazzito."*
-
-<div style="page-break-before:always"></div>
-
-### **FASE 1: L'AVVISTAMENTO (3 giorni prima)**
-
-**Eventi Chiave:**
-1. **Il Rapporto delle Sentinelle**
-2. **Il Consiglio di Guerra**  
-3. **I Preparativi Difensivi**
-
-
-
-
-#### **INCONTRO 1A: LA RICOGNIZIONE INIZIALE (Approccio a Fasi)**
-*Livello di Sfida: Variabile (da 5 a 12, a seconda dell'approccio)*
-*Obiettivo: Infiltrarsi, osservare e ritirarsi senza essere scoperti.*
-
-**FASE 1: L'AVVICINAMENTO ALLA VALLE**
-*Obiettivo: Raggiungere il punto di osservazione senza allertare la prima linea di sentinelle nemiche.*
-
-
-
-**MAPPA 1A-1: IL SENTIERO NASCOSTO**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-1 REVISED (20×100, 1,5 m: pattuglia, rocce 1-7, skill challenge)
-```
-SCALA: Ogni carattere ~ 5 metri
-                    NORD ↑ (Verso il punto di osservazione)
-
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓(GOLE ROCCIOSE)▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓                                        ▓
-▓     Sentiero per il Torrione →         ▓
-▓      / \                               ▓
-▓     /   \                              ▓
-▓    /     \                             ▓
-▓   /       \ (Copertura Rocciosa)       ▓
-▓  /         \                           ▓
-▓             <-- 🟡 PERCORSO PATTUGLIA -- ▓
-▓                 🟡     WORG     🟡     ▓
-▓             <--     (3 Orchi)   --     ▓
-▓                                        ▓
-▓                                        ▓
-▓ (Inizio Missione)                      ▓
-▓ [B, D, T, N]                           ▓
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-```
-**Descrizione:** Il gruppo inizia ai margini meridionali della valle. Un sentiero nascosto si snoda tra le rocce, ma è intersecato dal percorso di una pattuglia di Orchi su Worg. I personaggi devono superare questo primo ostacolo, preferibilmente in silenzio (prove di Nascondersi/Muoversi Silenziosamente contrapposte a Osservare/Ascoltare degli Orchi).
-
----
-
-<div style="page-break-before:always"></div>
-
-#### **FASE 2: IL PUNTO DI OSSERVAZIONE**
-
-**Obiettivo:** Posizionarsi nel torrione di vedetta in rovina e nelle rocce circostanti per spiare il grosso delle forze nemiche senza allertare il gruppo di scout Hobgoblin.
-
-
-
-**MAPPA 1A-2: IL TORRIONE DI VEDETTA**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-2 REVISED (40×40, 1,5 m)
-```
-SCALA: Ogni carattere ~ 3 metri
-                    NORD ↑ (Vista sul campo nemico a 400m)
-
-       <------------------ VISTA SUL CAMPO NEMICO ------------------>
-       
-       (Dirupo scosceso)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  
-  ^^^ [D] PUNTO OSSERVAZIONE 🏹 ^^^ (All'interno del torrione in rovina, +18m)
-  
-  ^^^ 🏰 TORRIONE DI VEDETTA ^^^ (Copertura quasi totale)
-  
-      [T] [N] (Copertura tra le rocce alla base del torrione)
-      
-      (Terreno aperto e pericoloso)
-      ░░░░░░░░░░░░░░░░░░░░░░░░
-                                        [B] (Possibile percorso di fiancheggiamento)
-                                          \
-                                           \
-      🟡🟡🟡🟡🟡 (Postazione Scout Hobgoblin)
-      🟡 🟠 🟡 (1 Sergente, 9 guerrieri)
-      🟡🟡🟡🟡🟡 (Attualmente distratti, guardano a nord)
-      
-      (Sentiero di avvicinamento dalla Fase 1)
-```
-**Descrizione:** Questa è l'area tattica principale. Dara deve salire sul torrione per avere una linea di vista pulita. Thorin e Nala si nascondono tra le rocce, con Nala che può tentare di avvicinarsi per origliare. Borin rimane in copertura, pronto a intervenire se gli scout si accorgono della loro presenza. L'obiettivo è raccogliere informazioni senza ingaggiare battaglia.
-
----
-
-<div style="page-break-before:always"></div>
-
-#### **FASE 3: LA VISIONE DALL'ALTO**
-
-**Obiettivo:** Comprendere la vastità e la composizione dell'armata nemica. Questa non è una mappa tattica, ma una rappresentazione di ciò che Dara vede con il suo cannocchiale.
-
-
-**MAPPA 1A-3: IL CAMPO DELLA MANO ROSSA (VISTA NARRATIVA)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-3 REVISED (griglia strategica 40×50, 6 m/q, con tabella FORZE)
-```
-(Vista a 400m di distanza)
-
-               [SEZIONE COMANDO 🔴]
-            (Tenda di Grimjaw, Stendardi)
-                      |
-        [ARTIGLIERIA PESANTE 🟠]
-    (Gorthak, Ettin, Giganti, Catapulte)
-                      |
-    [TRUPPE D'ÉLITE 🟠] [SUPPORT_MAGICO 🟠]
-  (Hobgoblin Veterani) (Chierici, Sciamani)
-                      |
-<-- [FIANCO CAVALLERIA 🟠] -- [CORPO PRINCIPALE FANTERIA 🟡] -- [FIANCO CAVALLERIA 🟠] -->
-     (Worg Riders)      (Migliaia di Orchi e Hobgoblin)       (Worg Riders)
-                      
-                      |
-      (Pattuglie e Avamposti Esterni)
-```
-**Descrizione:** Da qui, Dara può effettuare le sue prove di Osservare per stimare i numeri, identificare le unità speciali (Giganti, Maghi, Dragone), e individuare i comandanti. Il successo o il fallimento di questa fase determinerà la qualità dell'intelligence che i nani avranno a disposizione per preparare le difese.
-
-### **OBIETTIVI TATTICI E CONSEGUENZE (INCONTRO 1A)**
-
-**BORIN FERROPUGNO:**
-*   **Azione Primaria:** Eliminare silenziosamente la pattuglia avanzata.
-*   **Test Chiave:** Intimidire CD 18 per ottenere informazioni da eventuali prigionieri.
-
-**DARA OCCHIOLESTO:**
-*   **Azione Primaria:** Contare accuratamente le forze nemiche (Osservare CD 20).
-*   **Test Chiave:** Sopravvivenza CD 22 per identificare le rotte di approccio nemiche.
-
-**THORIN RUNAFORTE:**
-*   **Azione Primaria:** Lanciare *Silenzio* per coprire eliminazioni o movimenti.
-*   **Test Chiave:** Conoscenze (Religione) CD 18 per riconoscere i simboli draconici dei chierici nemici.
-
-**NALA CANTAPIETRE:**
-*   **Azione Primaria:** Infiltrarsi per ascoltare i piani dei comandanti (Nascondersi CD 22).
-*   **Test Chiave:** Linguaggi (parlare Orco/Goblin) per comprendere gli ordini.
-
-**RICOMPENSE PER SUCCESSO:**
-*   **Intelligence Completa:** +2 Iniziativa di massa per i Nani all'inizio della battaglia.
-*   **Prigionieri Interrogati:** Conoscenza delle tattiche di Gorthak, permettendo un bonus di +2 ai tiri per colpire contro di lui per 3 round.
-*   **Eliminazione Silenziosa:** L'esercito nemico non sa di essere stato scoperto e non adotta contromisure.
-
-<div style="page-break-before:always"></div>
-
-#### ⚔️ **Incontro 1B: Il Consiglio di Guerra**
-**Leggere ai Giocatori:**
-> *"Il Consiglio di Guerra si riunisce nella Sala del Trono Ancestrale. Re Thorek siede sul trono di pietra intagliata, mentre attorno al grande tavolo rotondo si raccolgono i capitani, i chierici e voi, gli eroi leggendari tornati in tempo per questa ora buia. Madre Superiora Dana colpisce il pavimento con il suo bastone: 'La situazione è grave. I nostri scout riportano che l'esercito nemico supera il nostro di almeno sette a uno. Ma abbiamo qualcosa che loro non hanno: il coraggio nanico, le difese della montagna, e...' i suoi occhi si posano su di voi, '...la benedizione degli dei.'"*
-
-**Decisioni Strategiche (i PG possono influenzare):**
-1. **Distribuzione delle Forze**
-2. **Preparazione delle Difese Magiche**  
-3. **Strategie di Resistenza**
-4. **Piani di Evacuazione dei Civili**
-
-**Prova di Diplomazia CD 18:** Convincere i comandanti ad adottare tattiche specifiche
-**Prova di Conoscenze (Ingegneria) CD 15:** Suggerire miglioramenti alle difese
-
-### **FASE 2: I PREPARATIVI (2 giorni prima)**
-
-#### 🏰 **Incontro 1C: Rafforzare le Difese**
-I PG possono scegliere di aiutare in diverse aree:
-
-**OPZIONE A - Fortificazioni Fisiche:**
-- **Prova di Artigianato (Pietra) CD 20:** +2 CA alle mura
-- **Prova di Conoscenze (Ingegneria) CD 18:** Progettare trappole (+2 danni alle unità nemiche)
-
-**OPZIONE B - Difese Magiche:**
-- **Prova di Sapienza Magica CD 22:** Potenziare le rune di protezione
-- **Lanciare incantesimi difensivi:** Ogni incantesimo 3° liv+ fornisce bonus
-
-**OPZIONE C - Morale e Addestramento:**
-- **Prova di Diplomazia CD 16:** +1 morale a tutti i difensori
-- **Prova di Intimidire CD 20:** I nemici subiscono -1 al primo assalto
-
-<div style="page-break-before:always"></div>
-
-### **FASE 3: L'AVVICINAMENTO NEMICO (1 giorno prima)**
-
-#### 🌩️ **Incontro 1E: Presagi Funesti**
-**Leggere ai Giocatori:**
-> *"La notte prima dell'assalto, fenomeni innaturali cominciano a manifestarsi. Il vento porta il puzzo di morte e zolfo, gli animali selvatici fuggono dalle montagne, e le stelle sono più deboli. Dall'alto delle mura, potete vedere migliaia di torce nemiche che puntellano la vallata come un mare di fuoco. I tamburi di guerra battono incessantemente, e occasionalmente, un ruggito terrificante echeggia tra le vette - il drago sta annunciando la sua presenza."*
-
-**Eventi Speciali:**
-- **Se presente un Warlock:** Sente la presenza di magia demoniaca (Generale Grimjaw)
-- **Se presente un Druido:** Gli animali portano avvertimenti sui movimenti nemici
-- **Se presente un Monaco:** Percepisce le intenzioni omicide dell'Ettin
-
-#### 🐉 **Incontro 1F: La Dimostrazione di Forza**
-**Leggere ai Giocatori:**
-> *"All'alba dell'ultimo giorno di pace, Fauci di Palude si alza in volo per la prima volta. Il drago nero sorvola lentamente le difese naniche, abbastanza in alto da evitare le baliste ma abbastanza in basso da essere chiaramente visibile. Il suo soffio acido colpisce una torre di vedetta abbandonata, che si dissolve letteralmente in fumo corrosivo. È un messaggio chiaro: 'Arrendetevi, o questa sarà la vostra fine.'"*
-
-> **📎 Nota DM — carry-over di Skullcrusher (A12, se il gruppo ha giocato
-> il P5)**: questo primo avvistamento è vissuto dai **pregen**; il
-> **flashback genetico** e il canto di Aegis Fang (*"sangue Skullcrusher
-> chiama"*) scattano davvero quando **Thorik** affronta Fauci al
-> **finale** (D6). Se il P5 è stato giocato, **applica prima della
-> battaglia** gli effetti dell'eredità (PF/soffio/morale del drago,
-> bonus dei portatori, gancio Aegis Fang) leggendo la tabella
-> `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` — mappa
-> qualitativa in `ARC08-10-ESITI-E-CONTINGENZE.md` §4.1. Puoi
-> anticiparne un'eco già qui: chi porta un artefatto avverte un
-> *brivido di riconoscimento* alla vista del drago.
-
-**Opzioni dei PG:**
-1. **Attaccare il drago** (molto pericoloso, ma mostra coraggio)
-2. **Rispondere con magia** (dimostrare che anche i nani hanno potere)
-3. **Ignorare la provocazione** (mantenere le forze per la battaglia vera)
-
-### **RISULTATI DELLA SESSIONE 1:**
-Basandosi sulle azioni dei PG, determina:
-- **Morale iniziale dell'esercito nanico** (da -2 a +4)
-- **Efficacia delle difese** (CA delle fortificazioni da 23 a 27)
-- **Informazioni tattiche** (bonus ai tiri di Iniziativa di massa)
-- **Alleanze formate** (potrebbero arrivare rinforzi inaspettati)
+> ➡️ **La Sessione 1 vive nel suo master**:
+> [`ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`](ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md)
+> `[CANONE — DM 2026-10-21]`. Dieci scene in ordine di tempo, dal Giorno −4
+> alla notte del Giorno −1: l'apertura, la notte prima, il rapporto delle
+> sentinelle, la ricognizione (1A), il Consiglio di guerra e la Preparazione
+> delle difese (1B), la dimostrazione di forza del drago (1C), la scaramuccia
+> dell'avanguardia (1D), i presagi (1E) e la notte dei fuochi, con la tabella
+> che traduce gli esiti della serata nelle leve del libretto della battaglia
+> campale. Il testo che stava qui (le Fasi 1-3, gli Incontri 1A-1F e i
+> Risultati) è assorbito e corretto in quel master, e da qui è tolto per non
+> tenere due versioni. Le lettere degli incontri sono cambiate: la tabella è
+> nel master, §0-ter.
 
 
 <div style="page-break-before:always"></div>

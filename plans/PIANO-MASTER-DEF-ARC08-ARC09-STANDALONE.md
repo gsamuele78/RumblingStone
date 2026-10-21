@@ -467,6 +467,11 @@ caratteristiche, col conto in
 Restano la Sessione 1 riscritta a scene (`ARC08-01`), `ARC08-10`, `ARC08-02`,
 la mappa del pendio e le due voci per il DM (quando si spiega il libretto, e
 se il §12 resta nel libretto dei giocatori).
+Il 2026-10-21 la Sessione 1 riscritta a scene è diventata il master S1a (sotto),
+con `ARC08-10` §5.1 e §5.4-bis, le schede di `ARC08-02` §3 e la mappa del
+pendio. Le due voci sono decise: il libretto si spiega a pezzi (T28), e il §12
+del libretto passa nei segreti dell'orda come §4 (T31: lo sposta il
+coordinatore dopo S1a; il master punta già lì).
 
 ## FASE 2 — Sviluppo / attuazione
 
@@ -479,6 +484,17 @@ Un sotto-lotto per master (S1a-S1d), nell'ordine delle sessioni. Fonti nella
 tabella A1. Statblocchi inclusi dal Bestiario con `#statblocco` (ADR-0074). In
 S1d la Cerimonia delle 100 Asce si misura prima (Q2 del DM) e si riscrive solo
 nella forma.
+
+- [x] **S1a** · `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` — **scritto, giro da fare**
+  (2026-10-21). Dieci scene in ordine di tempo (apertura, notte prima,
+  rapporto, 1A ricognizione, 1B-1 Consiglio, 1B-2 Preparazione, 1C drago, 1D
+  avanguardia, 1E presagi, notte dei fuochi), la tabella delle leve, gli
+  statblocchi compatti scritti a mano dal Bestiario e da `ARC08-19` §2 (non
+  con `#statblocco`: le schede di *Red Hand of Doom* nel Bestiario non hanno
+  il recinto), la MAPPA 1D in `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md`.
+  Correzioni applicate dal triage: T1-T3, T5-T8, T10-T13, T16-T22, la parte
+  di `ARC08-01` di T4, T9, T14, T15, T44, T52, T56, e T57-T59. Restano i passi
+  6-7 del ciclo (lettore e playtester a freddo).
 
 **S2 · ARC-09, i master del seguito** `[engine: Opus · effort: xhigh · qualità: ciclo del master, passi 1-7, su ognuno dei dodici]`
 Fonti nella tabella A1. Un sotto-lotto per master (S2a-S2l). Qui confluiscono S5

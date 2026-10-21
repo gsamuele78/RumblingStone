@@ -4,7 +4,8 @@
 > **Stato**: canonico — **master tattico completo della Sessione 1** (piano
 > ARC-08, lotto MAPPE-UC 2026-07-23). Copre in griglia ultra-clear TUTTE le
 > mappe della sessione: **1A-2** (Torrione, sotto), **1A-1** (Sentiero
-> Nascosto) e **1A-3** (Campo della Mano Rossa, griglia strategica).
+> Nascosto), **1A-3** (Campo della Mano Rossa, griglia strategica) e **1D**
+> (il pendio dell'avanguardia).
 > Narrativa/immagini: `Atlante-Hammerfist-Mappe-COMPLETE.md` (master visivo).
 > Le griglie nuove sono compilate da JSON (Modalità 3, `compile_map_json.py`).
 
@@ -12,6 +13,7 @@
 1. **MAPPA 1A-2 REVISED** — Torrione di Vedetta (40×40, 1,5 m)
 2. **MAPPA 1A-1 REVISED** — Il Sentiero Nascosto (20×100, 1,5 m)
 3. **MAPPA 1A-3 REVISED** — Campo della Mano Rossa (40×50, 6 m/quadretto, strategica)
+4. **MAPPA 1D** — Il pendio sotto le mura, l'avanguardia (12×12, 1,5 m)
 
 ---
 
@@ -74,12 +76,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @mark 2 ; V37 ; Thorin Runaforte (Clr)
 @mark 3 ; W37 ; Nala Cantapietre (Brd)
 @mark 4 ; C37 ; Borin Ferropugno (Ftr)
-@mark 5 ; W26 ; Sergente Hobgoblin (sveglio, comando) (GS 2)
-@mark 6 ; V22 ; Guardia 1 (pattuglia) (GS 1)
-@mark 7 ; X28 ; Guardia 2 (pattuglia) (GS 1)
-@mark 8 ; V23 ; Dormienti Tenda 1 (GS 1)
-@mark 9 ; V25 ; Dormienti Tenda 2 (GS 1)
-@mark 10 ; X28 ; Dormienti Tenda 3 (GS 1)
+@mark 5 ; W26 ; Sergente Hobgoblin (sveglio, comando) (GS 6)
+@mark 6 ; V22 ; Guardia 1 (pattuglia) (GS 2)
+@mark 7 ; X28 ; Guardia 2 (pattuglia) (GS 2)
+@mark 8 ; V23 ; Dormienti Tenda 1 (GS 2)
+@mark 9 ; V25 ; Dormienti Tenda 2 (GS 2)
+@mark 10 ; X28 ; Dormienti Tenda 3 (GS 2)
 @path Dara scala il torrione (6 round) → osservazione +18 m ; U37 Q21 P11 ; #1d6fd8
 @path Pattuglia Guardia 1 (loop 2 min) ; V22 X22 X24 V24 loop ; #d62828
 @path Pattuglia Guardia 2 (loop 2 min, opposto) ; X28 V28 V26 X26 loop ; #d62828
@@ -335,8 +337,8 @@ Round 81-100: Col 24, Row 28 (loop restart)
 ## MAPPA 1A-1 REVISED: IL SENTIERO NASCOSTO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map02_mappa-1a-1-revised-il-sentiero-nascosto-canyon-c.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 30m × 150m (20 colonne × 100 righe, 1,5 m/quadretto)
-**Incontro:** infiltrazione — 3 Orchi su Worg (pattuglia, GS 3 cad.)
-**Quando si usa:** Sessione 1, Incontro 1A FASE 1 (guida: `../ARC08-01-GUIDA-DM.md` § Incontro 1A)
+**Incontro:** infiltrazione — 3 goblin cavalcatori su 3 worg (pattuglia, goblin GS 5, worg da 6 DV; EL 9 circa)
+**Quando si usa:** Sessione 1, Incontro 1A FASE 1 (master: `../ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Scena 4)
 **Origine griglia:** compilata da JSON (Modalità 3) — coordinate identiche al Lotto-1 storico (K52/L52/L53, rocce 1-7, partenza riga 99)
 
 ### 🎯 OBIETTIVO PG:
@@ -449,9 +451,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 100 ⛰ ⛰ ⛰ ⛰ ⛰ 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 ⛰ ⛰
 
 @north N
-@mark 1 ; K52 ; Worg Rider 1 (Orco su Worg, GS 3)
-@mark 2 ; L52 ; Worg Rider 2 (Orco su Worg, GS 3)
-@mark 3 ; L53 ; Worg Rider Capo (Orco su Worg, GS 3)
+@mark 1 ; K52 ; Goblin su worg 1 (goblin guerriero 5°, GS 5)
+@mark 2 ; L52 ; Goblin su worg 2 (goblin guerriero 5°, GS 5)
+@mark 3 ; L53 ; Goblin su worg, il capo (goblin guerriero 5°, GS 5)
 @mark 4 ; H99 ; Borin Ferropugno (Ftr/Campione nanico)
 @mark 5 ; I99 ; Dara Occhiolesto (Rgr)
 @mark 6 ; J99 ; Thorin Runaforte (Clr)
@@ -470,7 +472,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 
 ### 📍 POSIZIONI PRECISE CON COORDINATE:
 
-**3 ORCHI SU WORG (pattuglia circolare, loop 5 minuti):**
+**3 GOBLIN SU WORG (pattuglia circolare, loop 5 minuti):**
 - **Worg 1** (fiancheggiatore sinistro): **K52**
 - **Worg 2** (fiancheggiatore destro): **L52**
 - **Worg 3 — CAPO** (porta il corno d'allarme): **L53**
@@ -643,6 +645,53 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 - **Evoluzione:** dopo il Giorno 1 le quantità calano con le perdite (Registro: `../ARC08-03-REGISTRO-PERDITE.md`); rigiocare la conta è inutile — aggiorna la tabella FORZE.
 
 ---
+
+## MAPPA 1D: IL PENDIO SOTTO LE MURA — L'AVANGUARDIA
+**SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map04_mappa-1d-il-pendio-sotto-le-mura.svg` (rigenerare dopo ogni modifica)
+**Dimensioni:** 18 m × 18 m (12 colonne × 12 righe, 1,5 m/quadretto)
+**Incontro:** la scaramuccia dell'avanguardia (battaglia campale, libretto §13) e il duello col sergente hobgoblin (GS 6)
+**Quando si usa:** Sessione 1, Incontro 1D (master: `../ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Scena 8 e Appendice B)
+
+Gli oggetti sono a grandezza vera; la mappa è il tratto di pendio dove si
+gioca il duello col sergente e la retroguardia. Le quattro squadre lavorano
+lungo duecento metri di pendio, una per cantiere. Il nord è in alto, verso
+le mura; il pendio scende a sud, verso la valle e la cresta di Grimjaw, a
+400 m fuori mappa.
+
+```
+MAPPA 1D: Il pendio sotto le mura
+12 col × 12 righe · 1,5 m
+COLONNE:  A B C D E F G H I J K L
+01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+02 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+03 🌲 🟩 🟩 🪵 🪵 🪵 🪵 🪵 🟩 🟩 🟩 🌲
+04 🟩 💀 💀 🟩 🟩 🟩 🟩 🟩 🟩 💀 💀 🟩
+05 🟩 🔵 🟩 🟩 🪨 🪨 🪨 🟩 🟩 🔵 🟩 🟩
+06 🌲 🟩 🟩 🟩 🪨 🪨 🪨 🟩 🟩 🟩 🟩 🌲
+07 🟩 🟩 💀 💀 🟩 🟫 🟩 🟩 💀 💀 🟩 🟩
+08 🟩 🟩 🔵 🟩 🟩 🟫 🟩 🟩 🟩 🔵 🟩 🟩
+09 🌲 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🌲
+10 🟩 🟩 🌾 🌾 🟩 🟩 🟫 🟩 🌾 🌾 🟩 🟩
+11 🟩 🔴 🌾 🌾 🟩 ⚫ 🟫 🟩 🌾 🌾 🔴 🟩
+12 🌲 🟩 🟩 🟩 🟩 🔴 🟫 🔴 🟩 🟩 🟩 🌲
+LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa verso sud · 🪵 pino abbattuto, 7,5 m di tronco, terreno difficile · 💀 fossa a metà, 3 × 1,5 m: un cantiere · 🪨 la frana, legata con le corde: 4d6 su F7-G12, Riflessi CD 15 dimezza · 🌲 pino · 🌾 boscaglia, occultamento 20% · 🔵 gli eroi · 🔴 lupi e hobgoblin · ⚫ il sergente
+@north N
+@mark 1 ; B5 ; Borin e la Guardia del Cancello
+@mark 2 ; J5 ; Dara e i balestrieri
+@mark 3 ; C8 ; Thorin e i veterani
+@mark 4 ; J8 ; Nala e i veterani
+@mark 5 ; F11 ; il sergente (dal round 3)
+@zone D3-H3 ; Pino abbattuto
+@zone B4-C4 ; Cantiere 1
+@zone J4-K4 ; Cantiere 2
+@zone C7-D7 ; Cantiere 3
+@zone I7-J7 ; Cantiere 4
+@zone E5-G6 ; Frana
+@zone C10-D11 ; Boscaglia
+@zone I10-J11 ; Boscaglia
+@path Verso la cresta (400 m a sud) ; F7 F9 G10 G12 ; #8a5a2b
+@tipo tattica esterno
+```
 
 ---
 

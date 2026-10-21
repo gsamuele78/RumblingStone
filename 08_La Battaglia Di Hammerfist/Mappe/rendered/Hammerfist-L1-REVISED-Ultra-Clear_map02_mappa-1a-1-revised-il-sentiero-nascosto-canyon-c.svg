@@ -345,13 +345,13 @@
 <path d="M142 2930H606" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <circle cx="54" cy="2947" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="2950.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
-<text x="68" y="2951" font-size="11" fill="#3b2e1e">K52 — Worg Rider 1 (Orco su Worg, GS 3)</text>
+<text x="68" y="2951" font-size="11" fill="#3b2e1e">K52 — Goblin su worg 1 (goblin guerriero 5°, GS 5)</text>
 <circle cx="54" cy="2962" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="2965.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
-<text x="68" y="2966" font-size="11" fill="#3b2e1e">L52 — Worg Rider 2 (Orco su Worg, GS 3)</text>
+<text x="68" y="2966" font-size="11" fill="#3b2e1e">L52 — Goblin su worg 2 (goblin guerriero 5°, GS 5)</text>
 <circle cx="54" cy="2977" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="2980.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
-<text x="68" y="2981" font-size="11" fill="#3b2e1e">L53 — Worg Rider Capo (Orco su Worg, GS 3)</text>
+<text x="68" y="2981" font-size="11" fill="#3b2e1e">L53 — Goblin su worg, il capo (goblin guerriero 5°, GS 5)</text>
 <circle cx="54" cy="2992" r="7" fill="#1a140a" stroke="#fff" stroke-width="1"/>
 <text x="54" y="2995.4" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
 <text x="68" y="2996" font-size="11" fill="#3b2e1e">H99 — Borin Ferropugno (Ftr/Campione nanico)</text>

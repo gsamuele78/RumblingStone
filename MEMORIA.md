@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | S1a · la Sessione 1 coi pregen come master… | ✅ scritto · giro da fare |
 | 2026-10-21 | MASTER-DEF | giro sulla Sessione 1, correzioni 1 (TRIAGE, 37 voci, sei in parte): trappole v… | 🟡 restano la Sessione 1 in `ARC08-01`, `ARC08-10`, `ARC08-02`, la mappa del pendio; T28 e T31 al DM |
 | 2026-10-21 | MASTER-DEF | giro sulla Sessione 1 coi pregen: quattro letture a freddo (playtester 32, lett… | ✅ letture · correzione da fare |
 | 2026-10-21 | MASTER-DEF | D5 decisa dal DM una per una: le undici risposte di A3 tutte come le consigliat… | ✅ D5 · D6 aperta |
@@ -120,7 +121,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-20 | MASTER-DEF | il DM conferma le due regole aperte della presa di Thorik (cosa succede sul col… | ✅ |
 | 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
-| 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
 
 ## Le misure che si portano dietro
 

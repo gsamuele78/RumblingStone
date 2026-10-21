@@ -5,7 +5,7 @@
 > leggerli** prima della prima sessione.
 > **Stato**: canonico (indice; canone di trama in `campaign/state.md`,
 > **non ancora giocato** — piano ARC-08 A0). **Ultima revisione**:
-> 2026-07-02.
+> 2026-10-21.
 
 ---
 
@@ -49,7 +49,9 @@ Hammerfist si gioca su **due livelli di personaggi**:
 2. `ARC08-12-CRONOLOGIA-MARCH-CLOCK.md` — dove cadono le sessioni sul
    calendario.
 3. `ARC08-01-GUIDA-DM.md` — la guida completa (PNG, esercito, sessioni,
-   read-aloud).
+   read-aloud). La **Sessione 1** coi pregen è nel suo master,
+   `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` (dieci scene, l'avanguardia, la
+   tabella delle leve), e la guida vi rimanda.
 4. `hammerfist_encounters-...-Guida-agli-Scontri-final.md` — gli scontri
    sessione per sessione.
 5. `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` — **master visivo**
@@ -83,6 +85,7 @@ master** rilevanti alla sessione.
 |---|---|---|
 | `ARC08-00-INDICE.md` | Questo indice + quickstart | Canonico |
 | `ARC08-01-GUIDA-DM.md` | Guida DM completa (PNG, esercito, sessioni) | Canonico (master narrativo) |
+| `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` | Master DEF della Sessione 1 coi pregen: l'avvistamento in dieci scene, la scaramuccia dell'avanguardia (1D), la tabella che traduce gli esiti nelle leve del libretto (`APPARATO-` generato accanto) | Canonico (master DEF, scritto 2026-10-21, giro da fare) |
 | `ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` | Schede PNG/unità + regolamento di massa | Canonico |
 | `ARC08-03-REGISTRO-PERDITE.md` | Registro perdite da tavolo | Canonico |
 | `ARC08-04-MARCIA-MANO-ROSSA.md` | Scheda logistica dell'avanguardia (A6) | Canonico |
@@ -102,7 +105,7 @@ master** rilevanti alla sessione.
 | `hammerfist_encounters-...-final.md` | Guida agli scontri | Canonico |
 | `mass_combat_guide_Dm.md` | Sistema di combattimento di massa | Canonico (**fonte unica normativa**, C1; raccordo ARC-09) |
 | `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` | **Master visivo** (17 mappe, matrice in testa) | Canonico (master, A8) |
-| `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessione 1: 1A-1, 1A-2, 1A-3 | Canonico (master tattico, A8+MAPPE-UC) |
+| `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessione 1: 1A-1, 1A-2, 1A-3, 1D (il pendio dell'avanguardia) | Canonico (master tattico, A8+MAPPE-UC) |
 | `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessione 2: 2A (+2B/2C viste), MAPPA 1/2A-1, 2, 3, 4, 2B-Corretta | Canonico (master tattico, A8+MAPPE-UC) |
 | `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` | Griglie ultra-clear Sessioni 3-4: 3X/H3-1, 3Y, 3Z, 5, 4X, 4-finale | Canonico (master tattico, A8+MAPPE-UC) |
 

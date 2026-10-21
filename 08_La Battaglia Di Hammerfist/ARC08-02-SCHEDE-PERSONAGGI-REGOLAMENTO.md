@@ -626,7 +626,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **TS** | Temp **+13**, Rifl **+6**, Vol **+8** | |
 | **Attacco Base** | +13 | |
 | **Attacco Melee**| **+21/+16/+11** | *Martello da Guerra degli Avi +2* (1d8+9, critico x3) |
-| **For** 20, **Des** 13, **Cos** 20 | | |
+| **For** 20, **Des** 13, **Cos** 20, **Int** 10, **Sag** 10, **Car** 12 | | |
+
+**Abilità:** Intimidire **+17**, Artigianato (pietra) **+12**, Ascoltare +2, Osservare +2, Percepire Intenzioni +2, Diplomazia +1, Scalare −1, Nascondersi −5, Muoversi Silenziosamente −5.
+**Lingue:** Comune, Nanico.
 
 **ABILITÀ PRINCIPALI:**
 *   **Colpo Devastante (3/giorno):** Come azione gratuita, dichiari un colpo devastante prima di attaccare. Se colpisci, aggiungi **+4d6 danni**.
@@ -653,6 +656,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Melee** | +16/+11, o +14/+9 e +14 con due asce | *Asce Gemelle +2* (1d6+5; la seconda 1d6+3) |
 | **For** 16, **Des** 18, **Cos** 18 | | |
 
+**Abilità:** Osservare **+18**, Ascoltare **+18** (+24 contro gli orchi), Nascondersi **+24**, Muoversi Silenziosamente **+19**, Sopravvivenza **+17** (+19 all'aperto, +23 sulle tracce degli orchi), Scalare **+18**, Conoscenze (natura) **+18** · cannocchiale: senza, le CD per contare l'orda salgono di 10.
+**Lingue:** Comune, Nanico, Gigante.
+
 **ABILITÀ PRINCIPALI:**
 *   **Nemico Prescelto:** Ottieni bonus ai tiri per colpire e ai danni contro: **Orchi (+6)**, **Giganti (+4)**, **Draghi (+2)**.
 *   **Munizioni Speciali:**
@@ -678,6 +684,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Base** | +8 | |
 | **Attacco Melee** | **+14** | *Martello da Guerra Sacro +2* (1d8+5) |
 | **For** 16, **Cos** 20, **Sag** 22, **Car** 16 | | |
+
+**Abilità:** Concentrazione **+20**, Conoscenze (religione) **+16**, Sapienza Magica **+16**, Ascoltare +6, Osservare +6, Percepire Intenzioni +6, Sopravvivenza +6, Guarire +6, Diplomazia +3, Intimidire +3, Artigianato (pietra) +3, Nascondersi −5, Muoversi Silenziosamente −5.
+**Lingue:** Comune, Nanico, Terran.
 
 **ABILITÀ PRINCIPALI:**
 *   **Scacciare Non Morti (10/giorno):** Bonus di +5 al tiro.
@@ -706,6 +715,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Melee** | **+13** | *Stocco Affilato +1* (1d6+3, critico 15-20/x2) |
 | **Attacco Furtivo** | **+3d6** | Danno extra contro bersagli colti alla sprovvista o fiancheggiati. |
 | **Des** 18, **Cos** 18, **Car** 18 | | |
+
+**Abilità:** Diplomazia **+23**, Raggirare **+21**, Intrattenere (canto) **+16**, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7.
+**Lingue:** Comune, Nanico, Orchesco, Goblin (capisce gli ordini dell'orda entro 9 m, Ascoltare CD 15).
 
 **ABILITÀ PRINCIPALI:**
 *   **Musica Bardica (8/giorno):**
@@ -859,6 +871,12 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 **Statistiche del Leader (se affrontato singolarmente):**
 **CA:** 18 | **PF:** 38 | **TS:** Temp +6, Rifl +2, Vol +2
 **Attacco:** *Spada Lunga* +9 in mischia (1d8+3/19-20)
+
+> Il **sergente dell'avanguardia** della Sessione 1 non è questo: è un
+> hobgoblin guerriero 6° in armatura completa (GS 6, CA 21, 50 pf), più
+> forte del sergente di un reparto qualunque. La sua scheda è in
+> `ARC08-19-SEGRETI-DELL-ORDA.md` §2 e nel master
+> `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Appendice A.
 
 **Capacità Speciali:**
 *   **Leadership Tattica:** L'unità di Hobgoblin comandata da questo sergente ottiene un **bonus morale di +1 all'AU e alla DU**.
