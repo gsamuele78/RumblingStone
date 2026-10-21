@@ -10,7 +10,7 @@
 > **Fonte delle regole**: il sistema canonico di `mass_combat_guide_Dm.md`
 > (1d20 + AU contro DU, PFU, morale), con le stesse probabilità, ma con i
 > dadi in mano ai giocatori. Perché e come è stato provato:
-> [ADR-0096](../plans/adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md).
+> ADR-0096 (`../plans/adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md`).
 > **Stato**: proposta, provata in simulazione e con due letture a freddo;
 > manca la prova al tavolo.
 

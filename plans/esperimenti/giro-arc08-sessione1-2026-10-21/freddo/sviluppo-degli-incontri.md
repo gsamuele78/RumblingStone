@@ -40,7 +40,7 @@ e Frog God, Raging Swan, l'Alexandrian, il Gruppo Chimera), messe accanto ai
 nostri master. Sono le domande che lì si fanno e qui no, quasi tutte sull'alto
 livello. Le fonti e ciò che è stato scartato:
 `plans/RICERCA-AVVENTURE-COMMUNITY-2026-10.md`; la decisione:
-[ADR-0092](../../../plans/adr/ADR-0092-le-domande-dell-alto-livello.md).
+ADR-0092 (`../../../plans/adr/ADR-0092-le-domande-dell-alto-livello.md`).
 
 Si applica a ogni master nuovo o riscritto, **dopo** la checklist del
 `SKILL.md` e **prima** della lettura a freddo (`rumblingstone-playtest` §2-bis).
