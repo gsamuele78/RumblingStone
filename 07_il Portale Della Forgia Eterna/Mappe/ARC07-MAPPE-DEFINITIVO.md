@@ -560,18 +560,22 @@ croce. Therysol veglia ai margini (testimone, non officiante).
         ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
               ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
                                                    ┊      🌲 ✦ portale, ~500 m
-   ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
-   GP1▪ ⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺⛺ ▪GP2 ┊  ← Zona 2: MARE DI TENDE
-   ⛺⛺⛺⛺⛺⛺ ╔═══════════╗ ⛺⛺⛺⛺⛺ ◄┘  via dei PG: fianco est, poi da nord
-   ⛺⛺⛺⛺⛺⛺ ║ TENDA DEL  ║ ⛺⛺⛺⛺⛺      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺⛺⛺⛺⛺ ║  COMANDO   ║ ⛺⛺⛺⛺⛺      ~1 km dalla postierla: cinque blocchi
-   ⛺⛺⛺⛺⛺⛺ ╚═══════════╝ ⛺⛺⛺⛺⛺      👤 VATORE fra le tende (Sc. 9)
-   GP3▪ ⛺⛺⛺⛺⛺⛺ (10.000 dormono) ⛺⛺⛺⛺⛺ ▪GP4
+   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+   GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
+   ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
+   🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
+   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
+   🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
+   GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
                        SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ⛺ tende (copertura) · ▪GP posti di guardia · ╔╗ tenda del
-comando · ┊◄ la via dei PG · 👤 Vatore · ⚔️ scontro · ✦ arrivo del portale.
+▫ postierla · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco della
+banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato · ▪▪
+le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗ la
+tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
@@ -585,7 +589,9 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   alla tenda del comando da nord, dalla parte della fortezza.
 - **Terreno & zone**: **Zona 1** = Hammerfist giovane (mura bianche, sicura, arrivo
   del portale) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
-  = copertura) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
+  = copertura): fuori i clan degli orchi, a gruppi di ripari attorno al fuoco
+  della banda; al centro il quartiere hobgoblin, chiuso da uno steccato, a file
+  e vie diritte, con la piazza del comando (M7-C) · **Zona 3** = mura all'alba con la **breccia** ▓. **Posti di
   guardia** GP1-GP4 ai margini.
 - **Posizioni notevoli**: **Tenda del Comando** (Zog'tar Deatheye, GS 15, + 4
   guardie hobgoblin, Guerriero 8) al centro delle tende; **Vatore** (§5, il futuro Sal) tra le
