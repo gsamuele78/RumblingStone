@@ -110,6 +110,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-21 | MASTER-DEF | libretto della battaglia campale di Hammerfist (`ARC08-18`, ADR-0096 proposta):… | 🟡 manca la prova al tavolo; carte dei comandanti `[INFERRED]` |
 | 2026-10-21 | MASTER-DEF | handout 0 di `ARC08-15`, la visione della Corona: il flashback dei pregen dentr… | ✅ resta `[INFERRED]` la *Mente Vuota* di Thorik; le schede 1-4 hanno i numeri di prima del 2026-10-16 |
 | 2026-10-21 | MASTER-DEF | D4 decisa dal DM: il flashback con i pregen di ARC-08 resta prima del 3B, com'è… | ✅ restano aperte D5 e D6 |
 | 2026-10-20 | MASTER-DEF | il DM conferma le due regole aperte della presa di Thorik (cosa succede sul col… | ✅ |
@@ -121,7 +122,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0095 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
 | 2026-10-19 | REVISIONE-ARC07 | Skullcrusher non chiede più i nomi (scelta del DM, «Catena che ascolta»): studi… | 🟡 resta `[INFERRED]` la portata del sussurro (fuori dal telo anche sottovoce, da dentro solo i gridi) |
 | 2026-10-19 | REVISIONE-ARC07 | Skullcrusher e Zog'tar messi alla prova con tutti gli artefatti del gruppo: sim… | 🟡 restano… |
-| 2026-10-19 | REVISIONE-ARC07 · LETTORE-E-PLAYTESTER | giro finale di developer, playtester e DM a freddo su `DEF-4`, `DEF-5` e i book… | 🟡 aperte al DM le domande 28-33 di `DECISIONI-DM.md`; nessun file peggiora sulla prosa (l'unico ✗ è l'Attacco Poderoso pieno corretto su M7-C) |
 
 ## Le misure che si portano dietro
 

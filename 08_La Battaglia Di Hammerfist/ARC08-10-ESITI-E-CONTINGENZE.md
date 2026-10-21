@@ -266,6 +266,25 @@ maturati e si applicano al finale.
   `hammerfist_encounters-...-final.md` §RIASSUNTO XP).
 
 
+### 5.4-bis Se l'assedio si gioca con il libretto `[INFERRED — needs DM confirmation]`
+
+Proposta del 2026-10-21 (ADR-0096): l'assedio dei pregen si gioca con il
+libretto della battaglia campale (`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md`).
+Le sessioni diventano una **Sessione 0** (regole e una battaglia di prova
+sulle mura, prima dell'assedio), la **Sessione 2** e la **Sessione 3a**.
+La Sessione 1 non si gioca.
+
+- **Ricognizione della colonna**: riga «parziale» (+1 iniziativa di massa),
+  perché la colonna è stata vista ma nessun eroe l'ha seguita.
+- **Difese preparate**: si guadagnano nella battaglia di prova della
+  Sessione 0 (libretto §12). Nessuna breccia = «pieno», una = «parziale»,
+  due o più = «fallito».
+- Le righe di §5.2 e §5.3 si leggono con la tabella di §12 del libretto
+  (brecce dei giorni 1 e 2, comandanti fuggiti feriti, Mura del giorno 2,
+  reparti vivi alla ritirata). Nell'assedio i comandanti non muoiono: sotto
+  metà dei punti ferita fuggono, così arrivano al finale feriti come vuole
+  §5.2. Re Thorek e l'evacuazione restano come sopra.
+
 ### 5.5 Se il flashback coi pregen non è stato giocato `[INFERRED — needs DM confirmation]`
 
 Sul ramo di gruppo l'Arco 08 non è giocato, né le sessioni coi pregen né il P5

@@ -434,6 +434,15 @@ handout 1-4, che hanno ancora i numeri di prima della correzione del
 Bestiario del 2026-10-16 (Borin CA 24 invece di 25, Dara 98 pf invece di
 102, Thorin 108 invece di 114, Nala 84 invece di 90).
 
+Sempre il 2026-10-21 il DM ha chiesto di far giocare l'assedio come battaglia
+campale, con un libretto di poche pagine per giocatori e DM e tre modi di
+giocare (solo i pregen, le truppe, i pregen alla testa delle truppe). È
+`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` ([ADR-0096](adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md),
+proposta), tarato con le simulazioni di
+`plans/esperimenti/battaglia-campale-2026-10-21/`. Le sessioni diventano 0
+(regole e battaglia di prova), 2 e 3a; la Sessione 1 non si gioca e i bonus si
+leggono da `ARC08-10` §5.4-bis, `[INFERRED]`. Manca la prova al tavolo.
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte
