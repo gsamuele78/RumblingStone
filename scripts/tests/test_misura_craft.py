@@ -165,12 +165,15 @@ class TestIlPilastroDichiarato(unittest.TestCase):
         # 2026-10-11: DEF-1 entra di proposito. Il box di fine ora del
         # contratto del Seme (§6-bis) porta l'etichetta del pilastro, come
         # chiede editorial-standards.md §2.
+        # 2026-10-21: gli handout di ARC-08 entrano di proposito. L'handout 0
+        # (la visione della Corona, D4 di MASTER-DEF) porta il pilastro.
         self.assertEqual(sorted(con), ["ARC-08 Hammerfist",
                                        "DEF-1 Piano della Terra",
                                        "DEF-2 Ritorno e affreschi",
                                        "DEF-3 Resurrezione Hella",
                                        "DEF-4 Viaggio 1.000 anni",
-                                       "DEF-5 Ritorno Hammerfist"])
+                                       "DEF-5 Ritorno Hammerfist",
+                                       "Handout ARC-08"])
         self.assertIn("★ Abbazia (stand-alone)", senza)
 
 

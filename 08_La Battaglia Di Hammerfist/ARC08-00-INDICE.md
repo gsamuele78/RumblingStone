@@ -68,8 +68,8 @@ Hammerfist si gioca su **due livelli di personaggi**:
 11. `ARC08-16-CUE-SONORI.md` — i suoni della serata (si legge una
     volta, prima della Sessione 1; sono quattro cue per sessione).
 
-**Cosa stampare per il tavolo**: i **4 pregen** (schede giocatore, quando
-pronte in B5/C4), il **registro perdite** (`ARC08-03`), le **mappe
+**Cosa stampare per il tavolo**: la **visione della Corona** e i **4 pregen**
+(`ARC08-15`, handout 0 e 1-4), il **registro perdite** (`ARC08-03`), le **mappe
 master** rilevanti alla sessione.
 
 ---

@@ -424,6 +424,16 @@ all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
 - **Aperte**: D5, D6; il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
 - **Cambiate**: S1a non parte più dal consiglio di guerra di DEF-5 ma dal flashback dei pregen, e i bonus D9 si leggono da come va il flashback, non dai valori di default.
 
+Lo stesso giorno il DM ha chiesto come far accettare i pregen ai giocatori, e
+ha proposto lui la cornice: i tre giorni dell'assedio sono una visione della
+Corona dentro lo strappo del Rubino, fra la Scena 1 e la Scena 2 di DEF-5.
+È l'handout 0 di `ARC08-15`, con le regole al tavolo in chiaro e una nota per
+il DM. Resta `[INFERRED]` che la *Mente Vuota* di Thorik non blocchi la
+visione. Il giro sulle Sessioni 1-3A comincia dalle schede dei pregen negli
+handout 1-4, che hanno ancora i numeri di prima della correzione del
+Bestiario del 2026-10-16 (Borin CA 24 invece di 25, Dara 98 pf invece di
+102, Thorin 108 invece di 114, Nala 84 invece di 90).
+
 ## FASE 2 — Sviluppo / attuazione
 
 Un lotto per master, nell'ordine dato dal DM. Ogni lotto è **K** per la parte

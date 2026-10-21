@@ -13,6 +13,60 @@
 
 ---
 
+## HANDOUT 0 — Tre giorni dalla parte delle mura
+
+> **Quando darlo**: subito dopo il box dello strappo
+> (`07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md`,
+> Scena 1), insieme alle schede 1-4. Meglio ancora la settimana prima,
+> perché i giocatori arrivino alla Sessione 1 sapendo cosa li aspetta.
+> Il DM ha deciso di giocare il flashback prima del 3B e di presentarlo
+> come una visione della Corona `[CANONE — DM 2026-10-21, D4]`.
+
+**Visione della Corona (BG3 lead, LotR support).**
+
+> *Il filo del Rubino tira attraverso mille anni, e a metà strada la Corona
+> lo stringe. Mille anni passano in un respiro. Tre giorni no: quelli la
+> Corona li trattiene, i tre giorni in cui Hammerfist ha tenuto le mura
+> senza di voi. Per tre giorni si guarda da altri occhi. Quattro nani, uno
+> a testa: un campione col martello del nonno, un'esploratrice che conta i
+> fuochi del nemico dal crinale, un vecchio sacerdote con la polvere delle
+> rune sotto le unghie, una cantastorie che ascolta dietro le porte.
+> Le loro mani fanno quello che decidete voi, e quello che fanno resta
+> fatto. Quando il filo vi lascia andare, la battaglia è come l'avete
+> lasciata.*
+
+**Al tavolo, in chiaro.**
+
+- Per le prossime serate ognuno gioca uno dei quattro nani, dalla
+  Sessione 1 fino a quando i vostri personaggi arrivano al Cuore della
+  Montagna. Poi si torna a loro.
+- I vostri personaggi non rischiano niente: non perdono punti ferita,
+  incantesimi né oggetti, e non guadagnano PE.
+- Quello che i quattro ottengono, i vostri personaggi lo trovano nel
+  finale: chi è ancora vivo, quali difese reggono, quanto sono stanchi i
+  comandanti nemici. Quello che i quattro perdono, lo trovano perso.
+- Le schede dei quattro sono gli handout 1-4. Sceglietele fra voi, o
+  lasciate che sia il DM ad assegnarle.
+
+> **Nota DM (non da dare)**
+> - **Dove sta nel tempo.** Fra la Scena 1 e la Scena 2 di `ARC07-DEF-5`.
+>   Per il mondo lo strappo dura un istante; per il tavolo dura le tre
+>   serate dei pregen. Il tempo è auto-coerente (`ARC07-DEF-5` §6, «è già
+>   accaduto così»): quello che il tavolo fa con i pregen è quello che è
+>   accaduto, e gli esiti restano aperti finché non si giocano. Si esce
+>   alla fine della 3A con la Scena 2 di `ARC07-DEF-5`, poi
+>   `ARC08-11-PONTE-ARRIVO.md` §3.
+> - **La Mente Vuota di Thorik non blocca la visione**, perché la visione
+>   viene dalla Corona stessa `[INFERRED — needs DM confirmation]`.
+> - **Chi gioca chi.** Proposta: Borin a chi gioca Thorik, Thorin
+>   Runaforte a chi gioca Hella, Dara a chi gioca Tordek, Nala a chi gioca
+>   Artemis. Ognuno resta vicino al ruolo che sa già giocare.
+> - **La posta, in numeri**, sta in `ARC08-10-ESITI-E-CONTINGENZE.md` §5:
+>   non va data ai giocatori. Se il tavolo non vuole i pregen, vale il
+>   ripiego dello stesso file, §5.5.
+
+---
+
 ## HANDOUT 1-4 — Le schede dei 4 "Eroi di Hammerfist" (pregen)
 
 > **Quando darli**: all'**inizio della Sessione 1** (flashback D6). I
