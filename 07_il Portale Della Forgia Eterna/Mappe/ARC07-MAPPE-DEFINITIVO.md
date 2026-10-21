@@ -120,13 +120,15 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
 06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 07    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
 08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
-09    🟫 🟫 🔷 🟫 🟫 🟫 ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫
-10    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+09    🟫 🟫 🔷 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫
+10    🟫 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🔷 Cristallo Gigante (copertura totale, indistruttibile) · 🟫 roccia
-frastagliata (terreno difficile) · 🕳️ punto d'emersione Xorn · ⬛ Fauci di
+frastagliata (terreno difficile) · 🕳️ punto d'emersione Xorn · 🟣 Fauci di
 Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡️ Thorik
 (F04) · 🔮 Artemis (I04) · 🥋 Tordek (G05).
+@north N
+@taglia G9 ; Grande
 @tipo tattica caverna
 ```
 - **Tipo / scala**: tattica, 18×10, 1,5 m. Combattimento d'imboscata.
@@ -136,7 +138,7 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
   (→ ponte o area bloccata).
 - **Posizioni iniziali**: Thorik F04, Artemis I04, Tordek G05. **Xorn 1** emerge
   a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 181 pf `[CANONE — DM 2026-10-18]`) attende a
-  G09 (⬛), sotto il pilastro.
+  G09-H10 (🟣, Grande), sotto il pilastro.
 - **Tattiche Xorn (nemico, round-per-round)**: Earth Glide come nell'SRD.
   Emergono e mordono, e restano in superficie fino al loro turno successivo:
   per riaffondare nello stesso turno servirebbe Attacco Rapido. Al turno dopo
@@ -302,9 +304,9 @@ COL → A B C D E F G H I J K L M N O P Q R S T U V W X
 05    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 06    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟡 bordo di rune: ci finisci con la 1ª spinta
 07    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ⬛ TERROS (Enorme, 3×3 quadretti)
-09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
-10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
+08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟣 TERROS (Enorme, 3×3 quadretti)
+09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
+10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 11    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ALTARE 13,5 × 9 m (9×6 quadretti) = gravità normale
 12    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 13    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
@@ -313,7 +315,7 @@ COL → A B C D E F G H I J K L M N O P Q R S T U V W X
 16    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🟩 Altare calpestabile (grav. normale) · 🟡 bordo/rune smeraldo
-⬛ Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
+🟣 Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
 ────────────────────────────────────────────────────────────────────────
 ⚙️ GEOGRAFIA DELLA SPINTA (3 m = 2 quadretti, 1/round — vedi §8 statblock)
   ASSE LUNGO (E-O, 9 quadretti): Terros ne occupa 3, restano 3 per lato.
@@ -341,6 +343,8 @@ Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smer
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
+@north N
+@taglia K8 ; Enorme
 @tipo tattica interni
 ```
 - **Tipo / scala**: tattica BOSS, sfera Ø 60 m. **Terros l'Antico, CR 15, 345 pf**.
@@ -349,7 +353,7 @@ vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono
   **spingendosi** (linea retta, ½ mov) e combatte a **−4** senza appiglio; contro
   il **muro curvo** subisce **2d6** solo se ci arriva da meno di 3 m. L'Altare è
   l'unico terreno «solido».
-- **Posizioni dal round 2** (Altare già centrato): Terros ⬛ sull'Altare (K08-M10,
+- **Posizioni dal round 2** (Altare già centrato): Terros 🟣 sull'Altare (K08-M10,
   3×3); Thorik 🛡️ (J09) e Tordek 🥋 (N08) sull'Altare; Artemis 🔮 in volo nella
   zona zero-G. Al round 1 l'Altare è ancora attraccato alla soglia nord.
 - **Tattiche Terros (nemico — soglie & giro, DEF-1 §8)**: **345 pf**; a **260** usa
@@ -442,32 +446,36 @@ sempre aperto.
 ════════════════════════════════════════════════════════════════════════
 @north S
 COL →   A  B  C  D  E  F  G  H  I  J
-13     ⬛ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬛ ⬛   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
-12     🔲 ⬛ 🔲 ⬛ 👑 👑 ⬛ 🔲 ⬛ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
-11     🔲 ⬛ 🔲 ⬛ ✝️ ⬛ ⬛ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
-10     🔲 ⬛ 🔲 ⬛ ⬛ ⬛ ⬛ 🔲 ⬛ ⬛   B10 = ex nascondiglio Yochlol 2
-09     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   H09 = ex nascondiglio Yochlol 1
-08     🗿 ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ 🗿 ⬛
-07     ⬛ 🪨 ⬛ ⬛ ⬛ ⬛ ⬛ 🪨 ⬛ ⬛   🪨 macerie (terreno difficile ×2)
-06     🗿 ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ 🗿 ⬛
-05     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-04     ⬛ ⬛ 🔲 ⬛ ⬛ ⬛ 🔲 ⬛ ⬛ ⬛
-03     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-02     ⬛ ⬛ ⬛ 🚪 🚪 🚪 ⬛ ⬛ ⬛ ⬛   🚪 INGRESSO sud D-F02, verso la Sala della Forgia
-01     ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛   SUD
+13     ⬜ 🗿 🗿 📜 🌀 📜 🗿 🗿 ⬜ ⬜   NORD · 📜 PARETE della CRONACA · 🌀 portale, dietro
+12     🔲 ⬜ 🔲 ⬜ 👑 👑 ⬜ 🔲 ⬜ 🖼️   👑 TRONO E-F12, vuoto · 🖼️ Dipinti Invisibili
+11     🔲 ⬜ 🔲 ⬜ ✝️ ⬜ ⬜ 🔲 🪨 🖼️   ✝️ E11 = dove sedeva Belkram (ARC-06) · 🪨 macerie
+10     🔲 ⬜ 🔲 ⬜ ⬜ ⬜ ⬜ 🔲 ⬜ ⬜   B10 = ex nascondiglio Yochlol 2
+09     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   H09 = ex nascondiglio Yochlol 1
+08     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
+07     ⬜ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 ⬜ ⬜   🪨 macerie (terreno difficile ×2)
+06     🗿 ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ 🗿 ⬜
+05     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+04     ⬜ ⬜ 🔲 ⬜ ⬜ ⬜ 🔲 ⬜ ⬜ ⬜
+03     ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+02     🏰 🏰 🏰 🚪 🚪 🚪 🏰 🏰 🏰 🏰   🚪 INGRESSO sud D-F02, nel muro sud della navata
+01     🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰   SUD · androne D-F01 verso la Sala della Forgia
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · ⬛ pavimento (ora pulito) · 🔲 colonne parallele (copertura +4 CA,
+LEGENDA · ⬜ pavimento (ora pulito) · 🏰 roccia del muro sud · 🔲 colonne parallele (copertura +4 CA,
 spezzano la linea di vista) · 🗿 statue di Moradin (deturpate in ARC-06 → in
 restauro) · 🗿 in B13/H13/A08/I08 = alcove-nicchie (statue del culto
 deturpate, in restauro); in C13/G13/A06/I06 = statue dei re · 🪨 macerie
 (terreno difficile) · 📜 muro dietro il trono = ora PARETE della CRONACA
-(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (dietro il muro;
+(incisioni-specchio, DEF-2 §6) · 🌀 portale drow SIGILLATO (nascosto dal 📜;
 inerte dalla caduta di Urialle) · 👑 trono vuoto: la Corona è di Thorik ·
 🖼️ Dipinti Invisibili (J11-J12, come in ARC-06) · ✝️ postazione di Belkram
 (ARC-06) · 🚪 ingresso sud, collegamento P1 ↔ Sala della Forgia.
 @tipo tattica interni
 ```
 - **Tipo / scala**: hub scenico specchio, 10×13 (15×19,5 m), 1,5 m/quadretto.
+  La navata utile è A-J/03-13 (15 × 16,5 m): la porta D-F02 sta nel muro sud
+  e dà sull'androne D-F01.
+  <!-- storico -->Dal 2026-10-21 il pavimento è ⬜ (⬛ è solo muratura piena) e la porta
+  sta in un muro; nessuna posizione canonica è cambiata.<!-- /storico -->
   Ora **santuario sicuro** (Consacrare) — il *desecrate* di ARC-06 è dissolto.
 - **Terreno & luce**: pavimento pulito; macerie 🪨 (B07/H07/I11) = terreno
   difficile; colonne 🔲 e statue 🗿 = copertura +4. La luce viola-verde delle
@@ -713,35 +721,35 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
  Soffitto 40 m (stalattiti bioluminescenti) · Giorno 3 dell'assedio (1372)
 ════════════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
-01    🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🚪🚪🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
-02    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔴🔴🔴🔴⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  ← 🔴 ondata nemica in corso (entra dalla porta)
-03    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔴🔴⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨
-04    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵🔵🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  ┐
-05    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵🔵⬛⬛⬛⬛⬛🔵🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
-06    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
-07    🪨⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛🪨  │ 🔵 CERCHIO DIFENSIVO
-08    🪨⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛🪨  │ dei 90 NANI
-09    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ (anello a 30 m
-10    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  dall'altare;
-11    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  3 file: 60 guerrieri
-12    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │  + 20 balestrieri
-13    🪨🟨🟨🔺⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⭐✨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛🔺🟨🟨⬛🪨  │  + 10 capi al centro)
-14    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⚫⭐⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │
-15    🪨🔺⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛🔺⬛🪨  │ ⭐ ALTARE DI MORADIN
-16    🪨⬛⬛⬛⬛⬛🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵⬛⬛⬛⬛⬛🪨  │ (P-Q 13-14 · Ø 6 m,
-17    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │  +3 m, basalto+rune oro)
-18    🪨⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🪨  │ ⚫ RE THOREK (8 pf)
-19    🪨⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛🪨  │ ✨ SFERA DORATA (R8 · breve: porte)
-20    🪨⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛🪨  │
-21    🪨⬛⬛⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛🗿⬛⬛⬛⬛⬛⬛🔵⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
-22    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
-23    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵🔵⬛⬛⬛⬛⬛🔵🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  │
-24    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🔵🔵🔵🔵🔵⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨  ┘
-25    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨
-26    🪨⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🪨
-27    🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨🪨
+01    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
+02    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ← 🔴 ondata nemica in corso (entra dalla porta)
+03    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
+04    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ┐
+05    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
+06    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
+07    🏰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🏰  │ 🔵 CERCHIO DIFENSIVO
+08    🏰🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🏰  │ dei 90 NANI
+09    🏰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🏰  │ (anello a 30 m
+10    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  dall'altare;
+11    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  3 file: 60 guerrieri
+12    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │  + 20 balestrieri
+13    🏰🟨🟨🔺🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🔺🟨🟨🟤🏰  │  + 10 capi al centro)
+14    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │
+15    🏰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🔺🟤🏰  │ ⭐ ALTARE DI MORADIN
+16    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │ (P-Q 13-14 · Ø 6 m,
+17    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  +3 m, basalto+rune oro)
+18    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │ ⚫ RE THOREK (8 pf)
+19    🏰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🏰  │ ✨ SFERA DORATA (R8 · breve: porte)
+20    🏰🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🏰  │
+21    🏰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
+22    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
+23    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
+24    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ┘
+25    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
+26    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
+27    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
 ════════════════════════════════════════════════════════════════════════════════
-LEGENDA · ⬛ pavimento di caverna · 🪨 pareti · 🚪 porta di mithral 6×6 m (P-Q01,
+LEGENDA · 🟤 pavimento di caverna · 🏰 pareti di roccia · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
 🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
@@ -752,6 +760,7 @@ cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 restano dopo l'aura non sono segnati: sono già dentro l'anello, fra i nani e
 l'altare (DEF-5 Scena 2). Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
+@north N
 @tipo tattica caverna
 ```
 

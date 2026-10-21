@@ -780,7 +780,7 @@ Scavare 6 m · Percezione tremorica 18 m · onnidirezionale · TS Temp +8, Rifl
 > non sono stupidi (INT 10) e non sono kamikaze: sono **predatori di metallo
 > con la pazienza della pietra**.
 
-- **Prima del contatto.** Fauci di Diamante (⬛ **G09**) sta divorando la vena
+- **Prima del contatto.** Fauci di Diamante (🟣 **G09**, Grande: G09-H10) sta divorando la vena
   di mithral alla base del pilastro (💠 G08); i due Xorn standard pattugliano
   in Earth Glide sotto il sentiero (🕳️ **G02** e **O05**). **Percezione
   tremorica 18 m**: sentono il party dai passi appesantiti dalla gravità ben
@@ -2881,13 +2881,15 @@ COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
 06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 07    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
 08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
-09    🟫 🟫 🔷 🟫 🟫 🟫 ⬛ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   ⬛G09 = «Fauci di Diamante» (sotto il pilastro)
-10    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-        🔷 = Cristallo Gigante (copertura totale, indistruttibile)
+09    🟫 🟫 🔷 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
+10    🟫 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
         🟫 = roccia frastagliata (difficile) · 🕳️ = punto d'emersione Xorn
-        ⬛ = Fauci di Diamante (élite) · 💠 = base corrosa del pilastro
+        🟣 = Fauci di Diamante (élite, Grande: 2×2) · 💠 = base corrosa del pilastro · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis
         Chi emerge e morde resta in superficie fino al suo turno: Earth Glide (§5)
 ════════════════════════════════════════════════════════════════════════
+@north N
+@taglia G9 ; Grande
 @tipo tattica caverna
 ```
 
@@ -2978,9 +2980,9 @@ COL → A B C D E F G H I J K L M N O P Q R S T U V W X
 05    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 06    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟡 bordo di rune: ci finisci con la 1ª spinta
 07    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟩🟩🟩🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
-08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ⬛ TERROS (Enorme, 3×3 quadretti)
-09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
-10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩⬛⬛⬛🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
+08    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🥋🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🟣 TERROS (Enorme, 3×3 quadretti)
+09    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🛡️🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← 🛡️ Thorik   🥋 Tordek (sull'Altare)
+10    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟩🟩🟣🟣🟣🟩🟩🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 11    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🟡🟡🟡🟡🟡🟡🟡🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️   ← ALTARE 13,5 × 9 m (9×6 quadretti) = gravità normale
 12    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 13    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
@@ -2989,7 +2991,7 @@ COL → A B C D E F G H I J K L M N O P Q R S T U V W X
 16    🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️🌫️
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🟩 Altare calpestabile (grav. normale) · 🟡 bordo/rune smeraldo
-⬛ Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
+🟣 Terros (Enorme, 4,5 m = 3×3) · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis · 🌫️ ZERO-G
 ────────────────────────────────────────────────────────────────────────
 ⚙️ GEOGRAFIA DELLA SPINTA (3 m = 2 quadretti, 1/round — vedi §8 statblock)
   ASSE LUNGO (E-O, 9 quadretti): Terros ne occupa 3, restano 3 per lato.
@@ -3017,5 +3019,7 @@ Niente piattaforme laterali: Artemis tira in volo. ALTARE centrale 🟩: lo Smer
 scende e la gemma diventa raggiungibile (§9). PARETI SFERICHE di cristallo:
 vista sul Piano oscuro fuori; aria pura dentro. Acustica: ogni colpo è un tuono.
 ════════════════════════════════════════════════════════════════════════
+@north N
+@taglia K8 ; Enorme
 @tipo tattica interni
 ```
