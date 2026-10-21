@@ -499,6 +499,24 @@ class TestStileDeiBox(unittest.TestCase):
         self.assertEqual(d["-mente"], 1)
 
 
+class TestGulpease(unittest.TestCase):
+    def test_frasi_corte_e_parole_brevi_sono_piu_facili(self):
+        facile = "Il re dorme. La porta è chiusa. Fuori piove."
+        difficile = ("L'amministrazione dell'insolvenza contrattuale comporta "
+                     "conseguenze giurisdizionali particolarmente significative.")
+        self.assertGreater(MC.gulpease(facile), MC.gulpease(difficile))
+
+    def test_formula_su_un_caso_fatto_a_mano(self):
+        # 3 parole, 9 lettere, 1 frase: 89 + (300 - 90) / 3 = 159
+        self.assertAlmostEqual(MC.gulpease("Casa del re."), 159.0)
+
+    def test_testo_vuoto(self):
+        self.assertEqual(MC.gulpease(""), 0.0)
+
+    def test_entra_nello_stile_dei_box(self):
+        self.assertIn("Gulpease", MC.stile_dei_box("> *Il re dorme.*\n"))
+
+
 class TestLunghezzeCheVariano(unittest.TestCase):
     def test_quota_dei_box_fra_30_e_70_parole(self):
         corto = " ".join(["pietra"] * 10)

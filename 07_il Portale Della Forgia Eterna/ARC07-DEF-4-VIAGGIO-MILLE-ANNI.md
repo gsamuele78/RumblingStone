@@ -659,10 +659,10 @@ la gente smette di parlare.
 > i bambini e i vecchi scendono verso le miniere con un fagotto ciascuno, e al
 > vostro passaggio la gente smette di parlare. La sala è lunga quanto una
 > strada, e i pilastri sono ancora bianchi. In fondo, su un seggio di pietra
-> fredda senza cuscino, c'è un nano vecchissimo in armatura, con una grande
-> ascia appoggiata al ginocchio: sulla lama c'è un disegno di brina che non si
-> scioglie. Si alza piano, un pezzo alla volta, come si carica un carro, e
-> guarda solo la fronte di chi porta la corona.
+> fredda senza cuscino, c'è un nano vecchissimo in armatura. Tiene una grande
+> ascia appoggiata al ginocchio, e sulla lama c'è un disegno di brina che non si
+> scioglie. Il vecchio si alza piano, un pezzo alla volta, come si carica un
+> carro, e guarda solo la fronte di chi porta la corona.
 > Sulla panca accanto, un altro vecchio resta seduto.*
 
 **Scheda d'entrata — Re Thorek I, il re di una fortezza giovane**
@@ -970,8 +970,8 @@ l'odore di zolfo copre quello del carbone.
 > **Read-aloud (Andor lead) — la bottega.** *Una porta bassa, foderata di
 > piombo. Dentro l'aria sa di zolfo e punge gli occhi. Sul banco, in fila come
 > soldati, fiasche di terracotta tappate con la cera, e sotto il banco una cassa di
-> sabbia per quando qualcosa va storto. Una nana senza sopracciglia ne riempie
-> una col cucchiaio, piano. A metà il cucchiaio le trema, e lei ride.*
+> sabbia per quando qualcosa va storto. Una nana senza sopracciglia riempie
+> una fiasca col cucchiaio, piano. A metà il cucchiaio le trema, e lei ride.*
 
 **Scheda d'entrata — Kettra, l'alchimista del re** `[CANONE — DM 2026-09-26]`
 
@@ -1577,9 +1577,9 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 > **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
-> sempre e che nessun cronista scrive. Il fiato esce bianco nel freddo. Durin vi
-> accompagna fino all'imboccatura, vi mette una mano guantata sul braccio, apre
-> la bocca e la richiude.*
+> sempre e che nessun cronista mette per iscritto. Il fiato esce bianco nel
+> freddo. Durin vi accompagna fino all'imboccatura, vi mette una mano guantata
+> sul braccio, apre la bocca e la richiude.*
 
 **DURIN (piano, alla fine):** *«Tornate. Il Padre non butta via un dono così.»*
 
@@ -1613,13 +1613,13 @@ La terza riga è un **errore fecondo**: un tavolo che va a «salvare il nano
 prigioniero» trova Balvar lo stesso, e la trattativa della Scena 7 comincia con
 un equivoco che gli conviene.
 
-> **Read-aloud (Salvatore lead) — il campo.** *Fuori dalle mura il buio è vivo:
-> diecimila fra orchetti, hobgoblin e cose peggiori dormono attorno a mille
-> fuochi, e il campo si stende fino
-> all'orizzonte come un mare in cui ogni onda è una gola che russa. L'aria sa
-> di grasso bruciato, di ferro e di bestia, e da qualche parte, al centro, c'è
-> la tenda del generale. Fra i fuochi passano le ronde, e lontano ulula un
-> lupo. Un passo falso, e il mare si sveglia tutto insieme.
+> **Read-aloud (Salvatore lead) — il campo.** *Fuori dalle mura il buio è vivo.
+> Diecimila fra orchetti, hobgoblin e cose peggiori dormono attorno a mille
+> fuochi, e il campo si stende fino all'orizzonte: un mare in cui ogni onda è
+> una gola che russa. L'aria sa di grasso bruciato, di ferro e di bestia, e da
+> qualche parte, al centro, c'è la tenda del generale. Fra i fuochi passano le
+> ronde, e lontano ulula un lupo. Un passo falso, e il mare si sveglia tutto
+> insieme.
 > Che fate?*
 
 
@@ -1967,9 +1967,9 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 > **Read-aloud (Salvatore lead) — dentro.** *Fa caldo, e c'è puzza di sangue
 > secco e di carne mezza cruda. Sulla tavola, una mappa di Hammerfist piena di
-> croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, un
-> mezzo-ogre grande quanto una porta di stalla, con una pietra nera al posto
-> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie
+> croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, c'è un
+> mezzo-ogre grande quanto una porta di stalla. Ha una pietra nera al posto
+> dell'occhio destro e l'ascia appoggiata alla spalla. Racconta alle guardie
 > come impalerà il re sul bastione più alto, e ride da solo.
 > Quattro hobgoblin in armatura nera ascoltano, le mani sulle armi.*
 
@@ -2396,7 +2396,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 > **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
 > dal seggio, e i teschi inchiodati sbattono fra loro come nacchere. Non grida
 > subito. Prima gira la testa, e la pietra nera dove dovrebbe esserci l'occhio
-> si ferma sul più vicino di voi. Poi l'ascia lascia la spalla.*
+> si ferma sul più vicino di voi. Poi l'ascia scende dalla spalla.*
 >
 > **Che fate?**
 
@@ -2771,11 +2771,12 @@ con un **terrore reverenziale mal mascherato**.
 > renderlo **Sal**. Nella scena non è un innocente ingenuo: è un uomo che ha
 > già scelto l'ombra, e che ora vede in VOI un potere che vorrebbe rubare.
 
-> **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda, vestito di ombre cucite bene,
-> con qualcosa avvolto in un panno stretto al petto. Non attacca. Non scappa
-> nemmeno, subito. Vi fissa come si fissa una cosa che non dovrebbe esistere, e sussurra,
-> più a sé stesso che a voi: «…quattro. Eravate davvero in quattro.» Poi torna la
-> maschera, un sorriso freddo, un passo indietro verso l'ombra. Che fate?*
+> **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda.
+> Veste ombre cucite bene, e stringe al petto qualcosa avvolto in un panno.
+> Non attacca. E non scappa, non subito. Vi fissa come si fissa una cosa che
+> non dovrebbe esistere, e sussurra, più a sé stesso che a voi: «…quattro.
+> Eravate davvero in quattro.» Poi gli torna la maschera: un sorriso freddo, e
+> un passo indietro verso l'ombra. Che fate?*
 
 
 **A parte, al giocatore di Artemis**, subito dopo:
@@ -2926,7 +2927,7 @@ Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 | **Hald, il nipote di Balvar** `[CANONE — DM 2026-10-07, Q22]` | nano di diciannove anni, di guardia sul camminamento est col gruppo di Hrodgar; la barba ancora corta, l'ascia troppo nuova. Non sa che lo zio esiliato è vivo, né che è nel campo di Zog'tar | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
 
 > **Read-aloud (Salvatore lead) — il camminamento.** *Il camminamento è largo
-> quanto un tavolo da pranzo e lungo quanto la fortezza, e sotto l'orda non
+> quanto un tavolo da pranzo e lungo quanto la fortezza. Sotto, l'orda non
 > urla più: ha smesso quando ha cominciato a salire, e il silenzio che ha
 > lasciato è peggio. Un uncino morde la pietra a tre passi da voi, poi un
 > altro, poi sei insieme. Il capitano delle mura guarda voi, non i suoi.*
@@ -3094,7 +3095,7 @@ rovesciati, con la stessa prova.
 > direzione. Un nano vicino a voi lascia
 > cadere lo scudo e non si china a raccoglierlo.*
 >
-> *Dove passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
+> *Dove il drago passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
 > nella neve.*
 >
 > **Che fate?**
@@ -3253,7 +3254,7 @@ cambia davvero.
 
 
 > **Read-aloud (Salvatore lead) — la runa sotto la scaglia.** *Sotto la scaglia
-> calda del petto, più pallida delle altre, corre una riga di rune naniche
+> calda del petto, più pallida delle altre, corrono righe di rune naniche
 > incise a punta, fitte come i conti di un mercante. L'ultima riga è più piccola e
 > più fonda delle altre, ed è quella che il drago non ha mai letto.*
 
@@ -3463,10 +3464,11 @@ che l'incontro ha appena scelto.
 > la risposta vera è «nessuno», e il silenzio del cortile la conferma.*
 
 > **Read-aloud (LotR lead) — l'incudine, e l'incasso che si chiude.** *L'altare
-> è un'incudine, e si vede: il piano è segnato da mille anni di martelli, in un
-> cortile pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un
-> attimo fa non c'era niente, adesso c'è una pietra rossa grande come una noce,
-> ancora calda come appena uscita dal fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
+> è un'incudine, e si vede: il piano è segnato da mille anni di martelli.
+> Intorno, il cortile è pieno di feriti. Nessuno l'ha toccata, eppure sul ferro,
+> dove un attimo fa non c'era niente, adesso c'è una pietra rossa grande come
+> una noce, calda come se uscisse in quel momento dal fuoco. I nani più vicini
+> fanno un passo indietro, e nessuno spiega niente.
 > Tutti guardano la corona, e l'incasso vuoto si riempie. La pietra nuova non
 > si mescola alla luce delle altre due: batte da sola, come un secondo cuore, e
 > tira verso un punto che nessuno nel cortile vede. Il metallo si scalda
@@ -3597,8 +3599,8 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 
 > **Read-aloud (Casa di Davide lead) — l'incudine, 1 di 3: la profezia compiuta.** *L'orda,
 > senza generale e senza drago a spronarla, si sfalda come sabbia, e
-> Hammerfist regge. Sulla fronte di Thorik il Rubino, che all'incudine la
-> luce l'ha presa, adesso la dà: calda come sangue, e non si abbassa. Un nano
+> Hammerfist regge. All'incudine il Rubino ha preso la luce; adesso, sulla
+> fronte di Thorik, la dà: calda come sangue, e non si abbassa. Un nano
 > vicino alla forgia si toglie l'elmo e non sa perché.*
 
 > **Read-aloud (Salvatore) — l'incudine, 2 di 3: il canto.** *Poi la pietra
