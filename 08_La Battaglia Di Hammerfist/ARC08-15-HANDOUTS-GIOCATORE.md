@@ -18,7 +18,7 @@
 > **Quando darlo**: subito dopo il box dello strappo
 > (`07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md`,
 > Scena 1), insieme alle schede 1-4. Meglio ancora la settimana prima,
-> perché i giocatori arrivino alla Sessione 0 sapendo cosa li aspetta.
+> perché i giocatori arrivino alla Sessione 1 sapendo cosa li aspetta.
 > Il DM ha deciso di giocare il flashback prima del 3B e di presentarlo
 > come una visione della Corona `[CANONE — DM 2026-10-21, D4]`.
 
@@ -38,7 +38,7 @@
 **Al tavolo, in chiaro.**
 
 - Per le prossime serate ognuno gioca uno dei quattro nani, dalla
-  Sessione 0 delle regole fino a quando i vostri personaggi arrivano al Cuore della
+  Sessione 1 fino a quando i vostri personaggi arrivano al Cuore della
   Montagna. Poi si torna a loro.
 - I vostri personaggi non rischiano niente: non perdono punti ferita,
   incantesimi né oggetti, e non guadagnano PE.
@@ -69,8 +69,9 @@
 
 ## HANDOUT 1-4 — Le schede dei 4 "Eroi di Hammerfist" (pregen)
 
-> **Quando darli**: all'**inizio della Sessione 1**, dopo la Sessione 0 delle
-> regole (flashback D6). I giocatori impersonano questi quattro fino al
+> **Quando darli**: all'**inizio della Sessione 1**, insieme al libretto
+> della battaglia campale (`ARC08-18`), che si legge a inizio serata
+> (flashback D6). I giocatori impersonano questi quattro fino al
 > passaggio di testimone (`ARC08-11-PONTE-ARRIVO.md`), poi riprendono i loro
 > Rumbling Stones. Una scheda per giocatore, una pagina l'una, e con ogni
 > scheda la sua **carta dei poteri** (sotto): ogni incantesimo e ogni

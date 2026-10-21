@@ -1,9 +1,12 @@
 # Il libretto della battaglia campale
 
 > **Per chi**: i giocatori e il DM, lo stesso libretto per tutti. Si legge
-> nella sessione delle regole, prima dell'assedio, e si tiene aperto al tavolo.
-> **Dove si usa**: i tre giorni dell'assedio di Hammerfist, giocati con i
-> quattro eroi della visione della Corona (`ARC08-15`, handout 0-4).
+> insieme all'inizio della Sessione 1 e si tiene aperto al tavolo. Quello che
+> l'orda sa fare e i giocatori non devono sapere sta in un file a parte, solo
+> per il DM (`ARC08-19-SEGRETI-DELL-ORDA.md`).
+> **Dove si usa**: la scaramuccia dell'avanguardia nella Sessione 1 (§13), poi
+> i tre giorni dell'assedio di Hammerfist, giocati con i quattro eroi della
+> visione della Corona (`ARC08-15`, handout 0-4).
 > **Fonte delle regole**: il sistema canonico di `mass_combat_guide_Dm.md`
 > (1d20 + AU contro DU, PFU, morale), con le stesse probabilità, ma con i
 > dadi in mano ai giocatori. Perché e come è stato provato:
@@ -99,7 +102,8 @@ probabilità: per questo le sue fasce sono spostate di uno.
 | **Colpire** | nessun modificatore | quasi sempre |
 | **Caricare** | **+2** al rosso, **−2** al bianco | contro gli orchi, o per finire un reparto quasi distrutto |
 
-Ogni reparto ha il suo ordine: uno può tenere mentre l'altro carica.
+Ogni reparto ha il suo ordine: uno può tenere mentre l'altro carica. Alcuni
+reparti hanno un ordine in più, scritto sulla loro riga in §11.
 
 ⚠️ **Tenere sempre perde la battaglia.** Chi non colpisce non toglie PFU
 all'orda, e la pressione (§7) apre la breccia. Nelle prove, un gruppo che
@@ -148,7 +152,9 @@ dalla battaglia per il giorno, e i suoi reparti restano senza gesto.
 
 Un numero solo per tutto l'esercito dei nani, da **−5** a **+5**. Parte da
 **+1**. Si somma a **tutti** i dadi dei reparti nanici, rossi e bianchi, non
-ai gesti degli eroi. I numeri dei reparti in §11 hanno già dentro il morale
+ai gesti degli eroi, ma sui dadi conta **al massimo ±2**: da +2 in su la
+rocca è al suo meglio, da −2 in giù al suo peggio. Il resto della scala dice
+quanto manca a risalire. I numeri dei reparti in §11 hanno già dentro il morale
 di ogni singolo reparto: il morale della rocca si aggiunge.
 
 | Cosa succede | Morale |
@@ -177,6 +183,24 @@ L'orda è sette volte più numerosa. Non vince uccidendo: vince spingendo.
   vanno avanti come prima. Il giorno dopo la schiera torna al suo posto, con
   i reparti che le sono rimasti.
 - Le tacche si azzerano a ogni giorno nuovo.
+
+---
+
+## 7-bis. Il terreno e le macchine
+
+Ogni settore ha qualcosa che lo rende diverso. Vale per tutti i giorni, se non
+è scritto altro.
+
+| Settore | Cosa c'è | Cosa vale |
+|---|---|---|
+| **Tutti** | mura e torri intatte | il primo giorno **+1** al bianco (§2) |
+| **Il Cancello** | il pendio fangoso davanti alla porta, stretto | il fronte è di tre, e l'orda in salita non ci mette di più |
+| **Le Mura** | le merlature | **+1** al bianco tutti i giorni, finché le Mura non hanno ceduto una volta |
+| **Le torri** | venti metri d'altezza, una balista | i balestrieri sulle torri hanno **+1** al rosso e al bianco. **La balista**: ogni round il giocatore della torre tira anche d20 + 10 contro la DU di un reparto nemico del suo settore, con la tabella del rosso |
+| **Il primo giorno** | le trappole dell'avanguardia (§13) | ogni trappola **annulla una tacca** del primo giorno, nel settore che volete |
+
+Le macchine e le trappole sono vostre: decidete voi quando usarle. Quello che
+ha l'orda lo scoprirete sul campo.
 
 ---
 
@@ -226,26 +250,26 @@ ceduto.
 ## 10. Un round giocato
 
 **Il Cancello, primo giorno, secondo round.** Borin e due reparti della
-Guardia del Cancello (AU 11, DU 22, PFU 12) contro tre reparti pescati dal
-mazzo: due di hobgoblin (AU 11, DU 21) e uno d'orchi (AU 8, DU 15). Il
-morale della rocca è +1, il primo giorno dà +1 al bianco. Il settore ha una
-tacca.
+Guardia del Cancello (AU 11, DU 22, PFU 12) contro tre reparti: uno di
+hobgoblin (AU 12, DU 22), uno di guerrieri (AU 8, DU 20) e uno d'orchi (AU
+9, DU 16), arrivati al round prima. Il morale della rocca è +1, il primo
+giorno dà +1 al bianco. Il settore ha una tacca.
 
 1. **L'orda avanza.** Il fronte è pieno. Il DM gioca i giganti: un macigno
    su un reparto di Borin. È un tiro diretto del DM: d20 = 17, + AU 14 =
    **31**, contro DU 22 + 1 + 1 = **24**: supera di 7, il primo reparto perde
    **2 PFU** (ne restano 10).
-2. **Gli ordini.** Il giocatore mette il primo reparto contro il primo
-   hobgoblin e il secondo contro il secondo; l'orco resta senza nessuno
-   davanti. Tutti e due **Colpire**; Borin **Combattere** sull'orco.
-3. **Il lancio.** Rossi: Borin 7 + 21 = **28** contro DU 15, supera di 13,
+2. **Gli ordini.** Il giocatore mette il primo reparto contro gli hobgoblin e
+   il secondo contro i guerrieri; l'orco resta senza nessuno davanti. Tutti e
+   due **Colpire**; Borin **Combattere** sull'orco.
+3. **Il lancio.** Rossi: Borin 7 + 21 = **28** contro DU 16, supera di 12,
    l'orco perde **3 PFU** (ne restano 5). Primo reparto 12 + 11 + 1 = **24**
-   contro 21, **1 PFU**. Secondo reparto 4 + 12 = **16**, niente.
-   Bianchi, uno per nemico in piedi: primo hobgoblin contro il primo reparto,
-   14 + 22 + 1 + 1 = **38** contro 22 + 11 = **33**, niente; secondo hobgoblin
-   contro il secondo reparto, 6 + 24 = **30** contro 33, manca di 3, **1
-   PFU**; l'orco lo fa cadere il giocatore sul primo reparto, 11 + 24 = **35**
-   contro 22 + 8 = **30**, niente.
+   contro 22, **1 PFU**. Secondo reparto 4 + 12 = **16** contro 20, niente.
+   Bianchi, uno per nemico in piedi: gli hobgoblin contro il primo reparto,
+   14 + 22 + 1 + 1 = **38** contro 22 + 12 = **34**, niente; i guerrieri contro
+   il secondo, 5 + 24 = **29** contro 22 + 8 = **30**, manca di 1, **1 PFU**;
+   l'orco lo fa cadere il giocatore sul primo reparto, 11 + 24 = **35** contro
+   22 + 9 = **31**, niente.
 4. **Il conto.** L'orda ha perso 4 PFU, più dei 2 che servono: nessuna
    tacca nuova. La Guardia ha perso 3 PFU in tutto.
 
@@ -258,20 +282,20 @@ il DM racconta il conto.
 
 **I nani.** Il morale di ogni reparto è già dentro i numeri.
 
-| Reparto | AU | DU | PFU |
-|---|---|---|---|
-| **Guardia del Cancello** (élite) | 11 | 22 | 12 |
-| **Veterani** | 10 | 21 | 11 |
-| **Balestrieri** | 9 | 18 | 9 |
+| Reparto | AU | DU | PFU | Capacità |
+|---|---|---|---|---|
+| **Guardia del Cancello** (élite) | 11 | 22 | 12 | **Spezzare la carica**: una volta al giorno, al posto del rosso, un reparto d'orchi davanti a te perde 1d4 PFU, senza tiro |
+| **Veterani** | 10 | 21 | 11 | **Muro di scudi**: con Tenere hanno **+6** al bianco invece di +4 |
+| **Balestrieri** | 9 | 18 | 9 | **Fuoco di copertura**: al posto del rosso, **+2** al bianco di un altro reparto del settore per quel round. È l'aiuto fra reparti |
 
 **L'orda feroce**, quella che il DM usa se non dice altro (§12).
 
 | Reparto | AU | DU | PFU | Nota |
 |---|---|---|---|---|
-| **Hobgoblin** | 11 | 21 | 10 | il grosso dell'orda |
-| **Guerrieri hobgoblin** | 7 | 19 | 11 | lenti, duri da finire |
-| **Orchi** | 8 | 15 | 8 | caricano a testa bassa: conviene **Caricare** |
-| **Lupi e goblin** | 8 | 18 | 10 | veloci, arrivano dai fianchi |
+| **Hobgoblin** | 12 | 22 | 10 | il grosso dell'orda |
+| **Guerrieri hobgoblin** | 8 | 20 | 11 | lenti, duri da finire |
+| **Orchi** | 9 | 16 | 8 | caricano a testa bassa: conviene **Caricare** |
+| **Lupi e goblin** | 9 | 19 | 10 | veloci, arrivano dai fianchi |
 | **Giganti** (carta) | 14 | — | — | lanciano macigni da lontano; non si attaccano dalle mura |
 
 **Gli eroi.** Bonus d'attacco per **Combattere**, dalle schede del Bestiario:
@@ -286,18 +310,20 @@ mescolati: sei di hobgoblin, quattro di guerrieri, tre d'orchi, uno di lupi.
 Si pesca a caso. Quello che resta nel mazzo a fine giorno non torna.
 
 **La ferocia.** Un numero solo, da dire prima della battaglia, che si somma
-ad AU e DU di tutti i reparti dell'orda.
+ad AU e DU di tutti i reparti dell'orda. Le percentuali sono dalle prove con
+il terreno, le capacità, le baliste e da tre a sei trappole.
 
-| Orda | AU e DU | Breccia contenuta, gioco attento | Posizioni tenute |
+| Orda | AU e DU | Breccia contenuta, «pieno» | Posizioni tenute, «pieno» |
 |---|---|---|---|
-| **Normale** | −1 rispetto a §11 | pieno 8 volte su 10 | pieno 9 volte su 10 |
-| **Feroce** (default) | come in §11 | pieno 7 volte su 10 | pieno 7 volte su 10 |
-| **Terrificante** | +1 rispetto a §11 | pieno meno di 5 volte su 10 | pieno meno di 4 volte su 10 |
+| **Normale** | −1 rispetto a §11 | 9 volte su 10 | quasi 9 volte su 10 |
+| **Feroce** (default) | come in §11 | 7 volte su 10 | poco più di metà |
+| **Terrificante** | +1 rispetto a §11 | meno di 5 volte su 10 | meno di 2 volte su 10 |
 
 **Le carte dell'orda.** Una per round al massimo, in un settore a scelta.
 Le simulazioni hanno provato i giganti, la breccia del cancello e il soffio;
-Gorthak, Grimjaw, la palla di fuoco e il gesto Sfidare sono `[INFERRED]` e si
-tarano al primo tavolo.
+Gorthak, Grimjaw, la palla di fuoco, il gesto Sfidare e il Fuoco di copertura
+sono `[INFERRED]` e si tarano al primo tavolo. Le capacità dell'orda e le carte
+segrete sono in `ARC08-19-SEGRETI-DELL-ORDA.md`.
 
 | Giorno | Carta | Effetto |
 |---|---|---|
@@ -324,12 +350,48 @@ Le Cantitrici sono un obiettivo, non una carta: si annunciano all'alba del
 secondo giorno. Nel modo A le righe di massa sono **parziali**, e contano solo
 i combattimenti sulla mappa.
 
-**La battaglia di prova** (Sessione 0) `[INFERRED]`: un solo giorno, tre
-round, orda normale, solo la carta dei giganti, ogni giocatore nel suo
-settore. Non ha posta: serve a imparare, e si può rifare finché il tavolo
-non tira senza guardare il libretto. Si gioca dopo aver letto §1-§8 insieme,
-e la Sessione 1 dell'avvistamento viene dopo.
-
 **Il tempo.** Tre o quattro minuti a round, cinque round a giorno: il
 primo e il secondo giorno stanno in una serata con i duelli. Il terzo giorno
 dura quattro round e lascia il resto della serata alla resistenza al Cuore.
+
+---
+
+## 13. La prima battaglia: l'avanguardia
+
+**Quando**: nella Sessione 1, dopo l'avvistamento, il giorno prima che l'orda
+arrivi alle mura. Si legge il libretto insieme a inizio serata e questa è la
+prima volta che si tira.
+
+**La scena.** Ogni eroe guida una **squadra di guastatori**: un solo reparto
+(Borin e Thorin veterani, Dara balestrieri, Nala veterani), sul pendio sotto
+le mura, senza merlature. Scavano fosse, abbattono pini sul sentiero,
+preparano frane. Ogni ora che rubano all'orda è un'ora in più per le mura.
+L'avanguardia della Mano Rossa li trova prima di sera.
+
+**Come si gioca.** Le regole sono quelle dell'assedio, con un ordine in più:
+
+- **Scavare**: niente rosso, **−2** al bianco. Ogni **due round** di scavo di
+  una squadra fanno **una trappola**. L'eroe intanto può combattere: è lui
+  che tiene lontani i lupi mentre i suoi scavano.
+- Il fronte di ogni squadra è di **uno** nei primi due round, poi di **due**.
+- **La ritirata**: alla fine di ogni round il gruppo decide se restare o
+  correre alle mura ad avvertire le retrovie. Chi si ritira porta a casa le
+  sue trappole.
+- **La squadra travolta**: alla terza tacca la squadra fugge, e l'orda trova
+  e disfa le sue trappole. I guastatori tornano feriti e non contano
+  nell'assedio, perché non sono i reparti delle mura.
+- **La retroguardia**: un eroe può restare indietro da solo mentre gli altri
+  si ritirano. Per quel round nessuna squadra può essere travolta, e lui
+  combatte sulla mappa contro il sergente hobgoblin, poi scappa (o no).
+
+**Cosa porta all'assedio.** Ogni trappola annulla una tacca del primo giorno
+(§7-bis), e il numero delle trappole decide la riga **Difese preparate** di
+`ARC08-10` §5.1: **6 o più** «pieno», **3-5** «parziale», **meno di 3**
+«fallito».
+
+**Quanto restare.** Nelle prove, con l'orda feroce: chi si ritira dopo il
+terzo o il quarto round porta a casa in media cinque trappole e quasi
+nessuna squadra travolta; chi resta fino al sesto ne porta due, e perde tre
+squadre su quattro. Il round in più è sempre una scommessa.
+
+**Il tempo.** Da quattro a sei round, una mezz'ora.

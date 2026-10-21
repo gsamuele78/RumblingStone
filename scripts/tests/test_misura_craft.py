@@ -409,7 +409,7 @@ class TestIBersagliNonSiCampionanoInSilenzio(unittest.TestCase):
     def test_ogni_bersaglio_pesca_i_file_che_dice(self):
         atteso = {"★ Palio di Channathgate": 15, "ARC-09 Torneo di Dauth": 22,
                   "ARC-09 Torre di Zalkatar": 12, "ARC-09 Battaglia Finale": 16,
-                  "ARC-08 Hammerfist": 15}  # 15 dal 2026-10-21: ARC08-18, il libretto della battaglia campale
+                  "ARC-08 Hammerfist": 16}  # 16 dal 2026-10-21: ARC08-18 e ARC08-19, la battaglia campale
         for nome, n in atteso.items():
             with self.subTest(bersaglio=nome):
                 self.assertEqual(len(MC.espandi(MC.BERSAGLI[nome])), n)

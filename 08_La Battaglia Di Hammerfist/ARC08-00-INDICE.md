@@ -70,7 +70,7 @@ Hammerfist si gioca su **due livelli di personaggi**:
 
 **Cosa stampare per il tavolo**: la **visione della Corona** e i **4 pregen**
 (`ARC08-15`, handout 0 e 1-4), il **libretto della battaglia campale**
-(`ARC08-18`, una copia per giocatore), il **registro perdite** (`ARC08-03`), le **mappe
+(`ARC08-18`, una copia per giocatore; `ARC08-19` resta al DM), il **registro perdite** (`ARC08-03`), le **mappe
 master** rilevanti alla sessione.
 
 ---
@@ -95,6 +95,7 @@ master** rilevanti alla sessione.
 | `ARC08-16-CUE-SONORI.md` | Cue sonori dell'arco (apparato d'uso [ADR-0018](../plans/adr/ADR-0018-apparato-uso-obbligatorio.md) §5) | Canonico |
 | `ARC08-17-BANCO-HAMMERFIST-1372.md` | Il banco della rocca: chiuso durante l'assedio, socchiuso dopo la Cerimonia; le promesse della Guida e le tre strade per mantenerle (norma `il-banco.md`) | Proposta |
 | `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` | Il libretto della battaglia campale per giocatori e DM: il sistema di `mass_combat_guide_Dm.md` con i dadi in mano al tavolo, tre modi di giocare i pregen ([ADR-0096](../plans/adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md)) | Proposta |
+| `ARC08-19-SEGRETI-DELL-ORDA.md` | Solo DM: capacità dei reparti dell'orda, carte dell'avanguardia, scelte fra i numeri dell'arco che non si accordavano ([ADR-0096](../plans/adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md)) | Proposta |
 | `ERRATA-ARC08-DESCRIZIONE-EPICA.md` | Riconciliazione col testo narrativo del DM (nomi, sorte di Thorek, khuzdul, cronologia) | Canonico |
 | `ERRATA-ARC08-35-Verification.md` | Verifica meccanica 3.5 (B5) | Canonico |
 | `Cerimonia-delle-100-Asce.md` | Chiusura arco + hook ARC-09 (D3) | Canonico (benchmark, NON riscrivere) |

@@ -270,13 +270,16 @@ maturati e si applicano al finale.
 
 Proposta del 2026-10-21 (ADR-0096): l'assedio dei pregen si gioca con il
 libretto della battaglia campale (`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md`).
-Le sessioni coi pregen diventano quattro: una **Sessione 0** (regole e una
-battaglia di prova senza posta, libretto §12), poi la **Sessione 1**
-dell'avvistamento, la **Sessione 2** e la **Sessione 3a** (il DM, 2026-10-21:
-l'avvistamento resta).
+Le sessioni coi pregen restano tre (il DM, 2026-10-21). La **Sessione 1**
+comincia con la lettura del libretto, poi l'avvistamento come nel master, poi
+la scaramuccia dell'avanguardia (libretto §13): le squadre di guastatori dei
+pregen scavano trappole sul pendio finché l'orda non le scaccia. Seguono la
+**Sessione 2** e la **Sessione 3a**.
 
-- La Sessione 1 si gioca come nel master, e le sue righe di §5.1 si leggono
-  come sopra.
+- **Ricognizione della colonna** si legge come sopra.
+- **Difese preparate** si legge dalle trappole portate a casa: 6 o più
+  «pieno», 3-5 «parziale», meno di 3 «fallito». Ogni trappola annulla anche
+  una tacca del primo giorno d'assedio.
 - Le righe di §5.2 e §5.3 si leggono con la tabella di §12 del libretto
   (brecce dei giorni 1 e 2, comandanti fuggiti feriti, Mura del giorno 2,
   reparti vivi alla ritirata). Nell'assedio i comandanti non muoiono: sotto

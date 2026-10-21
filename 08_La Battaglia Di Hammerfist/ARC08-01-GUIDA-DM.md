@@ -115,9 +115,9 @@
 *   **Sessione 4: La Tempesta e la Vittoria Finale.** I PG, ora alla guida delle forze naniche, coordinano l'assalto finale con l'arrivo di potenti alleati aerei, affrontando i comandanti nemici rimasti e decidendo le sorti di Hammerfist.
 
 > **Con il libretto** `[INFERRED — needs DM confirmation]`: se l'assedio si
-> gioca con `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` (ADR-0096), prima della
-> Sessione 1 c'è una Sessione 0 di regole e battaglia di prova, e le
-> Sessioni 2 e 3 usano il libretto per la battaglia di massa. Come si leggono
+> gioca con `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` (ADR-0096), la Sessione 1
+> comincia con la lettura del libretto e finisce con la scaramuccia
+> dell'avanguardia (libretto §13), e le Sessioni 2 e 3 usano il libretto per la battaglia di massa. Come si leggono
 > i bonus: `ARC08-10-ESITI-E-CONTINGENZE.md` §5.4-bis.
 
 
