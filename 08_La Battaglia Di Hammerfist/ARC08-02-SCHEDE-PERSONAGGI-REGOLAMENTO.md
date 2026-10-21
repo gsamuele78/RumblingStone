@@ -798,7 +798,7 @@ Basandosi sul documento, le strutture di pietra nanica hanno le seguenti statist
 *   **Cancello Principale (Legno rinforzato con Adamantio):**
     *   **CA:** 23
     *   **Durezza:** 20
-    *   **Punti Ferita (PF):** 800
+    *   **Punti Ferita (PF):** 200 `[CANONE — DM 2026-10-21]`
 
 #### **Regola Speciale Consigliata: "Potere d'Assedio"**
 > Le creature di taglia Grande o superiore e le macchine d'assedio che attaccano le strutture sono considerate "Armi d'Assedio". I loro attacchi **ignorano la Durezza** delle strutture.
@@ -812,12 +812,12 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 *   **Danno Medio per Round:** Circa **60 PF**.
 *   **Tempo per la Breccia:** 1.800 PF / 60 danni/round = **30 round** di bombardamento concentrato.
 
-**Sfondare il Cancello Principale (800 PF):**
+**Sfondare il Cancello Principale (200 PF):**
 *   **Fonte del Danno:** Gorthak il Trifronte.
 *   **Danno Medio per Round:** Circa **32 PF**.
-*   **Tempo per Sfondare:** 800 PF / 32 danni/round = **25 round** di attacco concentrato.
+*   **Tempo per Sfondare:** 200 PF / 32 danni/round = **7 round** di attacco concentrato.
 
-**Riepilogo per il DM:** I giocatori hanno circa **25-30 round** di combattimento prima che una breccia venga aperta, costringendoli a cambiare strategia e a ritirarsi nei cortili interni.
+**Riepilogo per il DM:** Il cancello cede in circa **7 round** se Gorthak ci si accanisce, il muro in **30**: i giocatori devono difendere il cancello prima di tutto, poi ritirarsi nei cortili interni.
 
 ---
 <div style="page-break-before:always"></div>
