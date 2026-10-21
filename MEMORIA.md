@@ -111,7 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
 | 2026-10-21 | MASTER-DEF | la prova è la scaramuccia dell'avanguardia nella Sessione 1 (libretto §13, trap… | 🟡 retroguardia, Fuoco di copertura e comandanti `[INFERRED]` |
-| 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | 🟡 incantesimi di Dara `[INFERRED]` |
+| 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | ✅ incantesimi di Dara confermati dal DM (lista del ranger SRD) |
 | 2026-10-21 | MASTER-DEF | libretto della battaglia campale di Hammerfist (`ARC08-18`, ADR-0096 proposta):… | 🟡 manca la prova al tavolo; carte dei comandanti `[INFERRED]` |
 | 2026-10-21 | MASTER-DEF | handout 0 di `ARC08-15`, la visione della Corona: il flashback dei pregen dentr… | ✅ resta `[INFERRED]` la *Mente Vuota* di Thorik; le schede 1-4 hanno i numeri di prima del 2026-10-16 |
 | 2026-10-21 | MASTER-DEF | D4 decisa dal DM: il flashback con i pregen di ARC-08 resta prima del 3B, com'è… | ✅ restano aperte D5 e D6 |

@@ -161,13 +161,15 @@
 | **Frecce Anatema degli Orchi** (10) | contro un orco | **+2d6** danni | no |
 | **Frecce Ricercanti** (5) | quando il bersaglio è al riparo | ignorano la copertura, tranne quella totale | no |
 | **Comando Balestrieri** | azione standard, entro 18 m | **+4** al colpire di un'unità di tiratori per un round | vale come Comandare |
-| ***Passare senza Tracce*** (1°) `[INFERRED]` | una volta al giorno, tocchi fino a 4 compagni | niente orme né odore per 4 ore: nessuno può seguirvi con le tracce | no: è per l'avvistamento |
-| ***Intralciare*** (1°) `[INFERRED]` | una volta al giorno, fino a 168 m | piante e radici in un cerchio di 12 m di raggio: chi è dentro resta impigliato (TS Riflessi CD 13 lo evita), dura 4 minuti | no: è di 1° |
-| ***Cura Ferite Leggere*** (2°) `[INFERRED]` | una volta al giorno, tocco | cura 1d8+4 (in media 8,5) | no |
+| ***Passare senza Tracce*** (1°) | una volta al giorno, tocchi fino a 4 compagni | niente orme né odore per 4 ore: nessuno può seguirvi con le tracce | no: è per l'avvistamento |
+| ***Intralciare*** (1°) | una volta al giorno, fino a 168 m | piante e radici in un cerchio di 12 m di raggio: chi è dentro resta impigliato (TS Riflessi CD 13 lo evita), dura 4 minuti | no: è di 1° |
+| ***Grazia del Gatto*** (2°) | una volta al giorno, su di te, dura 4 minuti | **+4 Destrezza**: arco **+21/+16/+11**, Tiro Rapido +19/+19/+14/+9, CA 23, Riflessi +16 | Combattere **+21** (+27 contro gli orchi) per quattro round di battaglia |
 
 La scheda non elenca gli incantesimi di Dara. Un ranger di 8° con Saggezza
 14 ne ha due di 1° e uno di 2° al giorno, al 4° livello d'incantatore: sono
-scelti per l'avvistamento e restano `[INFERRED]` finché il DM non li conferma.
+scelti dalla lista del ranger dell'SRD 3.5, quelli che le servono di più:
+due per l'avvistamento e uno per l'arco, che è la versione più forte di una
+cecchina. `[CANONE — DM 2026-10-21]`
 
 ### Carta di Thorin — il chierico di 12° livello
 

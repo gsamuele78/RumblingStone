@@ -62,8 +62,8 @@ più forte.
   uno nel dado bianco; corretto nel libretto e nel simulatore.
 - Le carte dei comandanti, la palla di fuoco, il Fuoco di copertura e la
   retroguardia non sono simulati e restano `[INFERRED]`.
-- Le schede dei pregen negli handout 1-4 hanno numeri vecchi rispetto al
-  Bestiario; il libretto usa quelli del Bestiario.
+- Le schede dei pregen negli handout 1-4 sono state portate ai numeri del
+  Bestiario, e ognuna ha la sua carta dei poteri.
 - Manca la prova al tavolo, che è il solo modo di sapere se è divertente.
 
 **Da rivedere se**: nella scaramuccia della Sessione 1 un round dura più di cinque minuti, o i
