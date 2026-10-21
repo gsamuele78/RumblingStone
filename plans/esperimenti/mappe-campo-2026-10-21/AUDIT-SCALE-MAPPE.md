@@ -445,3 +445,40 @@ Durante questo giro l'albero di lavoro aveva già modifiche non mie in
 `scripts/legend.json`, `scripts/legend.yaml`, `scripts/render_map_svg.py` e
 `references/legenda-universale.md` (presumibilmente l'agente della M7-C): le
 misure sopra sono state prese con quella versione del renderer.
+
+---
+
+## 6. Il secondo giro (2026-10-21): ARC-07 e ARC-09
+
+Rifatte le mappe di gravità alta e media di ARC-07 e ARC-09. ARC-08, la M7-A e
+la M7-C sono di un altro thread e non sono state toccate; per questo restano
+aperte la 2B (drago su una cella) e le misure della fortezza di Hammerfist.
+
+### Fonti aggiunte
+
+| Fonte | Cosa dà | Dove è servita |
+|---|---|---|
+| [Nebraska Forest Service, *Fires and camping*](https://nfs.unl.edu/fires-and-camping/) | 15 ft (4,5 m) sgombri attorno a tende ed edifici, 5 ft attorno al fuoco, legna a 15 ft | fuochi dei Campi Drow 1 e 2 |
+| [FortWiki, Fort Boonesborough](https://www.fortwiki.com/Fort_Boonesborough) | palizzata di 250 × 150 ft con fortini agli angoli | palizzata e torrette del Campo 2 |
+| [Curle, Newstead](https://curlesnewstead.org.uk/31.htm) | varco della porta romana ristretto a ~12 ft | cancelli di 4,5 m del Campo 2 |
+| [Wikipedia, Ring of Brodgar](https://en.wikipedia.org/wiki/Ring_of_Brodgar) e [Castlerigg](https://en.wikipedia.org/wiki/Castlerigg_stone_circle) | cerchi di pietre da 104 m e da 32,6 × 29,5 m, pietre alte fino a 2,3 m | il Cerchio Sacro di 60 m con otto menhir |
+| [Birthright wiki, D20 Treant](https://birthright.net/wiki/index.php/Treant) | treant Enorme, spazio e portata 15 ft | treant 3 × 3 nel Cerchio, nel Last Stand e nella Foresta in Fiamme |
+| [Wikipedia, Lava tube](https://en.wikipedia.org/wiki/Lava_tube) | tubi di lava larghi fino a 15 m, gradini di colata lungo le pareti | il Corridoio del Fuoco PF-3 |
+| [IFI, *Tool & equipment layout*](https://www.iforgeiron.com/topic/22450-tool-38-equpiment-layout-38-setup/) | dalla forgia all'incudine si arriva con un passo | incudini di M7-D e M7-F |
+
+### Cosa è cambiato
+
+| Mappa | Prima | Dopo |
+|---|---|---|
+| Campo Drow 2 (SUPPLEMENTO) | interno di 45 × 44 celle in ⬛, cancello murato, distanza 28 | palizzata 🏰 di 67,5 × 60 m, quattro torrette, cancelli di 4,5 m, 25 tende 🎪 a 3 m l'una dall'altra, padiglione del Wyrmlord di 10,5 × 7,5 m; distanza 0 |
+| Campo Drow 1 (SUPPLEMENTO e P1C-Rituale) | 13 tende a 1,5 m, comando e cucina attaccati, inceneritore a una riga dai teli | 15 tende a 3 m attorno alla piazza, inceneritore a 10,5 m dalla tenda più vicina, comando e cucina staccati |
+| Cerchio Sacro, Ondata 2, Last Stand (P1B, P1C) | foresta in ⬛, radura in 🟢, cerchio ovale di 35 × 48 m, tre misure diverse | tre griglie 40 × 40 con lo stesso disco di 60 m; colonne +5 nel testo |
+| PF-3 Corridoio del Fuoco | 21 righe su 53, cenge in ⬛, porte e nemici nella roccia | 53 righe, lava 10,5 m, cenge 🟤 di 3 m, pianerottoli di 6 m, ponti 🌉 di 10,5 × 3 m |
+| PF-4 Forgia Adamantina | porta su due righe di roccia | androne O02-Q03, roccia 🏰, anello ⬜, passerelle 🌉 |
+| PF-1 Stanza della Corona | 40 bracieri a muro, erba, dais in ⬛ | sala ⬜, dais 🔳, otto torce |
+| S-2 (Atlante e DEF-2) | pavimento ⬛, porta D-F02 in mezzo al pavimento | pavimento ⬜, porta nel muro sud, androne D-F01; posizioni canoniche invariate |
+| CM-1 (Atlante e DEF-5) | pavimento ⬛, pareti 🪨 | pavimento 🟤, pareti 🏰; da distanza 19 a 0 |
+| T-2 e T-6 (Atlante e DEF-1) | Fauci di Diamante e Terros in ⬛ | 🟣, Fauci Grande G09-H10, Terros Enorme K08-M10 |
+| M7-D e M7-F (372 e 1372) | forge senza incudine | un'incudine ⚒ davanti a ogni forgia; gli orchi della M7-F/1372 scendono di due righe |
+| Foresta in Fiamme | treant su una cella | treant 3 × 3, anche l'alleato di Hella |
+| Campo C (P1-MAPPE, prosa) | tenda di 12 m che conteneva cerchio, portale e guardie | tenda spostata a est, 4,5 m fra portale e telo |
