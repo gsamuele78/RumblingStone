@@ -855,13 +855,13 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
 **Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[INFERRED — da verificare sul manuale]`.
 **Lingue:** Comune, Nanico, Orchesco, Goblin: capisce gli ordini dell'orda entro 9 m con Ascoltare CD 15.
-**Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
+**Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*.
 
 **Tattiche di Combattimento:**
 - **Inizio Battaglia:** Buff alleati con Inspire Courage e Haste
 - **Durante Scontri:** Flanking per Sneak Attack, priorità ai maghi nemici
 - **Situazioni Speciali:** Infiltrazione, sabotaggio, intelligence
-- *Morale*: sotto i 30 pf beve una pozione di invisibilità e si sposta; la canzone non si interrompe finché può cantare.
+- *Morale*: sotto i 30 pf lancia *invisibilità* su di sé e si sposta; l'*Ispirare Coraggio* che stava cantando dura ancora 5 round.
 
 > **Verifica 3.5 (versione più forte)**: lo stocco affilato ha critico 15-20.
 > Un bardo sa già usare lo stocco: il talento passa ad Arma Accurata, che
