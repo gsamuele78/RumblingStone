@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, voto del DM: catena vecchia 8, nuova 5, pari 1; tre regole di riscrit… | ✅ standard = catena vecchia più soggetto dopo il verbo e LAMP goffo/inglese/ricercata, meno il tetto dei nomi (⚖️ al DM) |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f: riscrittura di prova di 16 box con catena vecchia, nuova e fusa, base… | 🟡 scheda cieca di 17 coppie al DM; versioni e chiavi fuori dal repo fino al voto |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7d: misure sintattiche con spaCy (calchi, subordinate, ripetizioni) calib… | 🟡 nessuna misura prevede il DM; base ARC-07/ARC-08 salvata per il confronto senza/con |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
-| 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 
 ## Le misure che si portano dietro
 

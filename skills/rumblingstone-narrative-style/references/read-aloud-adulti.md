@@ -175,6 +175,22 @@ Le due regole vengono da sedici coppie e da un lessico
 scritto dopo averle viste: se il DM smentisce più di un controllo su quattro,
 `esito` lo dice e si torna al cieco intero.
 
+Il cieco del 2026-10-22 (catena vecchia contro nuova su 16 box di ARC-07 e
+ARC-08, `plans/esperimenti/qualita-misurabile-2026-10-22/riscrittura/ESITO-VOTO.md`,
+8 a 5 per la vecchia) aggiunge tre cose che **non** si fanno riscrivendo:
+
+3. **Non si taglia la frase che chiude con enfasi.** Togliere la riga che
+   «spiega» (l'etichetta LAMP) ha perso quattro volte su quattro: lo
+   spettacolo «terrificante e magnifico», la chiusa sull'eroe. Si tolgono
+   le parole goffe, tradotte o ricercate, non la chiusa.
+4. **Non si spezza una subordinata per stare sotto due livelli.** Ha perso
+   tutte e due le volte, e sulle 38 coppie già votate vince la versione con
+   più subordinate (11 su 12).
+5. **Un rilievo di `misura_sintassi` si guarda prima di riscrivere.** Tre
+   riscritture fatte su un falso del parser hanno perso tutte, due per
+   «ritmo». Il soggetto messo dopo il verbo, quando il calco è vero, ha
+   vinto.
+
 ---
 
 ## 3. Cosa premia questo pubblico
