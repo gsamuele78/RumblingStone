@@ -18,7 +18,7 @@
 >
 > **ASCII = fonte canonica** (decisione DM 2026-07-23): l'ASCII ultra-clear porta
 > **tutti** i dettagli senza perdite. Le **6 mappe a griglia rettangolare**
-> (T-2, T-3, T-6, S-2, M7-B, CM-1) sono **rese a pergamena SVG** in
+> (T-2, T-3, T-6, S-2, M7-B, CM-1, più la carta CM-2) sono **rese a pergamena SVG** in
 > `Mappe/rendered/ARC07-MAPPE-DEFINITIVO_map*.svg` col renderer a fedeltà piena
 > (F1-F5 di `plans/PIANO-RENDER-MAPPE-FEDELTA-DETTAGLI.md`: niente celle
 > fantasma, dims validate, scala dichiarata, legenda locale automatica). Le
@@ -51,7 +51,8 @@
 | **M7-D** | Il corridoio della fucina, livello −1 (372 e 1372) | DEF-4 Scena 5 + D45, D47; contratto JSON | tattica | ✅ 372 e 1372 (D48) |
 | **M7-E** | Le gallerie di Zeth, livello −2 (372 e 1372) | DEF-4 Scena 5 + D30, D48; contratto JSON | tattica | ✅ 372 e 1372 |
 | **M7-F** | La fucina grande, livello −3 (372 e 1372) | D45, D48; contratto JSON | tattica | ✅ 372 e 1372 |
-| **CM-1** | Il Cuore della Montagna (1372, arrivo) | **geometria canonica ARC-08**: Atlante-Hammerfist **MAPPA 5** (⚠️ scala 3 m) + regia DEF-5 | scenica/climax 3B | ✅ |
+| **CM-1** | Il Cuore della Montagna (1372, arrivo) | **geometria canonica ARC-08**: Atlante-Hammerfist **MAPPA 5** (⚠️ scala 3 m) + regia DEF-5 | strategica/climax 3B | ✅ |
+| **CM-2** | Il lato nord del Cuore (la pulizia, Scena 3) | DEF-5 Appendice B, carta a 1,5 m dello spazio di CM-1 | tattica | ✅ |
 
 > Rese SVG storiche (ancora valide, stanze «prima visita»): `Portale-Forgia-L1`
 > (Stanza Corona/Belkram, Sala Forgia), `Portale-Forgia-L2` (colonna-K, Forgia
@@ -62,7 +63,7 @@
 - **DEF-2 · Ritorno & Affreschi**: S-1 · S-2
 - **DEF-3 · Resurrezione**: R-1
 - **DEF-4 · Viaggio a ≈372 DR**: M7-A · M7-B · M7-C · e sotto la montagna M7-S · M7-D · M7-E · M7-F (`ARC07-MAPPE-HAMMERFIST-372-1372.md`, coi loro stati del 1372)
-- **DEF-5 · Ritorno a Hammerfist**: CM-1
+- **DEF-5 · Ritorno a Hammerfist**: CM-1 · CM-2
 
 ---
 
@@ -158,34 +159,37 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
 ```
 ════════════════════════════════════════════════════════════════════════
  CAMPO DEI CRISTALLI VIVENTI — 30 m × 12 m (20 col × 8 righe · 1,5 m)
- GRAVITÀ 2×   ·   ingresso da OVEST (A), uscita a EST (T)
+ GRAVITÀ 2×   ·   ingresso da OVEST (A06), uscita a EST (T06)
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
-01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️
-02    🟫 🟫 💠 🟫 💚 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
-03    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
-04    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 💎 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
-05    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
-06 →  🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪
-07    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💚 🟫 💠 🟫 🟫
-08    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
+01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️   ← vuoto laterale
+02    🟫 🟫 🔮 🟫 💚 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   💚 E02 crepato
+03    🟫 🔮 🟫 🔮 🟫 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫   triangoli · cerchi · esagono
+04    🟫 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🔷 🔮 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫   🔷 J04 Madre Cristallo
+05    🟫 🟫 🟫 🔮 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫
+06    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   ← corridoio libero
+07    🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 💚 🔮 🟫 🟫 🟫 🟫   💚 O07 crepato
+08    🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫   ↓ faglia a sud (+30 min)
 ════════════════════════════════════════════════════════════════════════
-LEGENDA · 💠 Cristallo Vivente (canta) · 💎 Madre Cristallo (J04, alt. 5 m) ·
-💚 crepato (riforgiabile → +2, E02 e O07) · 🌫️ vuoto/gravità laterale
-(non attraversare) ·
-⬜ corridoio libero (riga 06, ingresso/uscita) · 🟫 suolo.
+LEGENDA · 💚 Cristallo Vivente crepato, riforgiabile (E02 e O07): curato vale +2
+🔮 Cristallo Vivente che canta, alto 1-3 m: copertura ½, chi ci entra lo rompe
+🔷 Madre Cristallo (J04), alta 5 m · 🌫️ vuoto laterale, gravità a 90°: non si attraversa
+⬜ corridoio libero (riga 06) · 🟫 suolo del giardino
+════════════════════════════════════════════════════════════════════════
+@north N
 @tipo tattica caverna
+@luogo Piano della Terra, giardino dei Cristalli Viventi
 ```
 - **Tipo / scala**: skill challenge (6 successi / 3 fallimenti). Non è un
   combat. Il gancio personale di Artemis (Seme-Mercato di Varis) non è qui: si
   gioca nel Tempio, dopo la Sentinella (DEF-1 §6-bis).
 - **Terreno & altitudini**: campo di cristalli cantanti; la **Madre Cristallo**
-  (💎 J04) è a **5 m di quota**; riga 06 è il **corridoio sicuro**; sopra riga 01
+  (🔷 J04) è a **5 m di quota**; riga 06 è il **corridoio sicuro**; sopra riga 01
   è **vuoto laterale** (🌫️, gravità a 90° — non attraversare).
 - **Posizioni notevoli**: 2 cristalli **crepati** (💚 E02, O07) → riforgiabili
   (bonus +2 alla vulnerabilità sonora di Terros). La runa di Varis in J05
-  delle stesure vecchie non si gioca (canone del §6): J05 è un Cristallo
-  Vivente come gli altri.
+  delle stesure vecchie non si gioca (canone del §6): J05 è suolo, il varco
+  a sud del cerchio interno verso la Madre.
 - **Prove (CD)** (DEF-1 §6, a giri: ogni PG tira almeno una volta a giro, ogni
   abilità vale una volta per PG a giro): Diplomazia CD 20 · Conoscenze (natura o
   dungeon) CD 18 · Intrattenere (canto) CD 22 → +2, fallita −1 · Utilizzare
@@ -713,7 +717,9 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 > stesso contenuto). Caverna-cattedrale **100 m × 80 m × 40 m** di altezza.
 > ⚠️ **Scala 3 m/quadretto** [deviazione A4 dalla convenzione 1,5 m: griglia
 > originale disegnata così; NON ridisegnata per non alterare posizioni/portate
-> già usate nel testo. Non mischiare quadretti di mappe a scale diverse.]
+> già usate nel testo. Dal 2026-10-22 è dichiarata vista d'insieme
+> (`@tipo strategica`): le miniature si muovono sulla carta **CM-2**, qui
+> sotto, a 1,5 m. Non mischiare quadretti di mappe a scale diverse.]
 
 ```
 ════════════════════════════════════════════════════════════════════════════════
@@ -761,7 +767,10 @@ restano dopo l'aura non sono segnati: sono già dentro l'anello, fra i nani e
 l'altare (DEF-5 Scena 2). Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
-@tipo tattica caverna
+@tipo strategica caverna
+@luogo Hammerfist, il Cuore della Montagna (sotto la fucina grande, livello −3)
+@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
+@dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
 
 ### ⏫ EVENTO CLIMAX — L'APPARIZIONE (la sfera dorata)
@@ -825,6 +834,88 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   modalità) → portale di Dana → bastioni (ARC-08, `ARC08-11-PONTE-ARRIVO.md`).
 - **Riferimento**: geometria/ondate = Atlante-08 **MAPPA 5**; regia lato ARC-07
   = DEF-5 Scene 1-3; cucitura = ARC08-11.
+
+### MAPPA CM-2 — IL LATO NORD DEL CUORE (la pulizia · Scena 3, combattimento completo)
+
+> **Carta tattica a 1,5 m** dello stesso spazio di CM-1: il lato nord della
+> caverna, dalla porta di mithral all'altare, 42 m × 48 m. Si gioca qui il
+> 🎚️ [COMBATTIMENTO COMPLETO] della Scena 3. CM-1 resta la vista d'insieme,
+> a 3 m, per sapere dove stanno i blocchi dei nani e da dove arrivano le ondate.
+> Ogni quadretto di CM-1 vale due per due quadretti di CM-2: la statua Q07
+> di CM-1 è la O-P 13-14 di CM-2, l'altare P-Q 13-14 è la M-P 25-28.
+> Bracieri 🏮 e caduti 🦴 sono dettagli della carta a 1,5 m, che la vista a 3 m
+> non disegna.
+
+```
+════════════════════════════════════════════════════════════════════════════════
+ CM-2 · IL CUORE DELLA MONTAGNA, LATO NORD — 42 m × 48 m (28 col × 32 righe · 1,5 m)
+ La pulizia (Scena 3): dalla porta all'altare · Giorno 3 dell'assedio (1372)
+════════════════════════════════════════════════════════════════════════════════
+COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
+01    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰  ← il varco della porta di mithral (M-P 01-02, 6 m)
+02    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+03    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🪨 i battenti abbattuti (M03, P03)
+04    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+05    🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤
+06    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  ┐ 🔵 l'anello dei nani a 30 m dall'altare
+07    🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤  │ (tre file: guerrieri fuori, balestrieri,
+08    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤  ┘  capi dentro; il DM li muove a blocchi)
+09    🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤
+10    🟤🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵🔵🔵🔵🟤
+11    🔵🔵🔵🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵
+12    🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵
+13    🔵🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
+14    🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤
+15    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🔴 i due orchi scossi (L15, M15)
+16    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+17    🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤
+18    🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤
+19    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+20    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+21    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+22    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+23    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+24    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+25    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐🔵🔵⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← ⭐ altare +3 m (M-P 25-28) · 🔵 i PG
+26    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵⭐⭐🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← il re e Dana (N-O 26-27)
+27    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐⭐⭐⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+28    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐⭐⭐⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+29    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+30    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+31    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+32    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+════════════════════════════════════════════════════════════════════════════════
+LEGENDA · 🟤 pavimento di caverna · 🏰 roccia viva, la parete nord della caverna
+LEGENDA · 🪨 battenti di mithral abbattuti (terreno difficile, copertura ½)
+LEGENDA · 🦴 i caduti dei primi due round, orchi e nani (terreno difficile)
+LEGENDA · 🗿 statue dei Re Ancestrali su basi di 3 m, alte 4 m (copertura totale)
+LEGENDA · 🏮 bracieri su treppiede (copertura ½, luce 9 m)
+LEGENDA · ⭐ l'altare, Ø 6 m, alto 3 m: si sale con Scalare CD 15 in un round
+LEGENDA · 🔵 i PG sull'altare e l'anello dei nani · 🔴 i due orchi scossi
+LEGENDA · Gli hobgoblin entrano dal varco M-P 01 alla fine del round 1 della pulizia.
+LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
+════════════════════════════════════════════════════════════════════════════════
+@north N
+@tipo tattica caverna
+@luogo Hammerfist, il Cuore della Montagna (lato nord, dalla porta all'altare)
+@deroga struttura/senza-anelli ; caverna aperta: si gira attorno all'altare e alle statue, che sono isole nel vuoto, non blocchi di muro
+@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e l'anello dei nani, ed è voluto
+@deroga m2/vuoto ; lo spazio fra l'anello e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
+@deroga m4/esposizione ; luce piena dalle stalattiti e nessun muro interno: chi corre verso l'altare è visto da tutti
+```
+
+- **Distanze**: dal varco della porta al bordo dell'altare 33 m, 22 quadretti;
+  dall'anello dei nani al centro dell'altare 30 m; dai due orchi scossi al
+  bordo dell'altare 13,5 m, 9 quadretti. Gli hobgoblin, 6 m di velocità in
+  armatura pesante, correndo coprono 18 m a round: la regia dei round della
+  Scena 3 resta quella scritta.
+- **Come si entra e come si gira**: il varco della porta è a nord; i bordi
+  est, ovest e sud sono tagli della carta, e la caverna continua oltre (CM-1).
+  Si gira attorno all'altare e alle statue; chi sale sull'altare (Scalare CD
+  15) ha la quota di 3 m.
+- **Chi c'è al primo round della pulizia**: i PG sull'altare, il re e Dana al
+  centro; l'anello dei nani a nord; i due orchi scossi fra l'anello e l'altare.
+  Gli hobgoblin non ci sono ancora: entrano dal varco alla fine del round 1.
 
 ---
 

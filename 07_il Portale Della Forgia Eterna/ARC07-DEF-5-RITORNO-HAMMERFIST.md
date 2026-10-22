@@ -25,13 +25,14 @@
 >
 > Sistema: D&D 3.5 SRD (max PF1e), MAI 5e. Italiano, CD non DC. Scala
 > mappe 1,5 m/quadretto (eccezione: CM-1 eredita la scala 3 m della
-> geometria canonica ARC-08, nota A4 sulla mappa).
+> geometria canonica ARC-08 ed è la vista d'insieme; lo scontro si gioca
+> sulla carta CM-2, a 1,5 m).
 <!-- /apparato -->
 
 > **Il ritorno, in tre scene brevi.** Il Rubino strappa i PG dal −1000 e li
 > posa nel Cuore della Montagna, sotto Hammerfist, nell'istante in cui le porte
-> cedono. Sulla mappa c'è una sola griglia, CM-1, **a 3 m per quadretto** (le
-> altre mappe sono a 1,5 m).
+> cedono. Le griglie sono due: CM-1, la caverna intera **a 3 m per quadretto**,
+> e CM-2, il lato nord dalla porta all'altare a 1,5 m, dove si gioca la pulizia.
 >
 > **Quando si gioca**: subito dopo la vittoria del −1000 (`DEF-4`). Chiude
 > l'ARC-07 e apre l'ARC-08 (Battaglia di Hammerfist).
@@ -61,7 +62,7 @@
 | §8 | Avanzamento | premio di completamento arco + ricchezza in uscita |
 | §9 | Ponte all'ARC-08 + Handout & Asset | |
 | App. A | Statistiche | gli orchi, gli hobgoblin sergenti, il Treant, Durik, Dana, Re Thorek, le Cantitrici |
-| App. B | Mappe | CM-1 Il Cuore della Montagna (⚠️ scala 3 m/quadretto) · l'apparizione |
+| App. B | Mappe | CM-1 Il Cuore della Montagna (vista d'insieme, 3 m/quadretto) · CM-2 il lato nord (1,5 m, la pulizia) · l'apparizione |
 
 ---
 
@@ -125,8 +126,8 @@ Con poco tempo per leggere: §0, §0-bis, Scene 2 e 3, Appendice A.
 | quante cariche della Cintura restano a Tordek | Scena 3 |
 | se al rito Thorik ha donato la deflessione, e se Hella ha già speso oggi lo *Scudo del Custode* | la CA di Thorik, il gesto di Hella, la prima battuta della Senzienza |
 
-**Cosa stampare.** La **Quick-Reference §0-bis**; la mappa **CM-1**
-(Appendice B); la pagina dell'**Appendice A**, da tenere aperta durante la
+**Cosa stampare.** La **Quick-Reference §0-bis**; le mappe **CM-1** e
+**CM-2** (Appendice B); la pagina dell'**Appendice A**, da tenere aperta durante la
 Scena 3; l'handout **«Lo Stato dei Custodi»** (§9); gli statblocchi completi di
 **Re Thorek** e di **Madre Dana**, dalla Guida DM dell'ARC-08, fra i PNG
 Alleati; le pagine giocatore degli artefatti allo stadio di oggi<!-- apparato --> (`PG/Artefatti/`)<!-- /apparato -->,
@@ -220,7 +221,7 @@ del duello). **VINTO SPORCO**: il drago l'hanno ricacciato gli avi, non i PG
 | Nemici nella caverna (~30 orchi) | **Volontà CD 25** contro l'aura dell'Apparizione, come la presenza terrificante dell'SRD: ogni orco tira `[CANONE — DM 2026-10-03, D38]`. |
 | | A differenza dell'SRD chi fa 20 resta scosso, e l'effetto dura tutta la scena: chi fugge non torna `[CANONE — DM 2026-10-15, D90]`. |
 | | Con Volontà −2 contro CD 25 passa solo chi fa 20, e resta **scosso** (−2 ai tiri per colpire, ai TS e alle prove); tutti gli altri sono **in panico** e fuggono dalla porta. |
-| | Il DM non tira trenta TS: uno su venti resta, e restano **due orchi**. Il capo tira il suo a parte: se fa 20 è uno dei due (Scena 2). La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-1) |
+| | Il DM non tira trenta TS: uno su venti resta, e restano **due orchi**. Il capo tira il suo a parte: se fa 20 è uno dei due (Scena 2). La Scena 3 si gioca con loro e con i nemici che arrivano dopo (CM-2) |
 
 ### Lo stato dell'ARC-07 in uscita
 - **Corona di Adamantio**: **3 gemme accese** (Topazio, il Tempo Immutabile; Smeraldo, la Vera Terra; Rubino, la Possanza Nanica: i nomi della pagina giocatore `[CANONE — DM 2026-10-19, giro 4 DEF-5 n. 7]`). Il Rubino si è usato **una volta sola**, come motore del ritorno; speso, **resta nell'incasso** e **la Corona si completa**: +3 e Senzienza dall'arrivo (Scena 2) `[CANONE — DM, D6]`.
@@ -348,7 +349,7 @@ dagli orchi è il portale di Dana (Scena 3). **Zona sacra** (Consacrazione di
 Moradin: +1 ai TS vs paura per i difensori) `[CANONE — DM 2026-07-23]`. Vedi CM-1.
 
 **Dati per il DM (non da leggere).** Caverna di **100 × 80 m**, alta 40, su una
-griglia da **3 m** a quadretto (MAPPA CM-1, Appendice B). Altare **+3 m**, Ø 6 m,
+griglia da **3 m** a quadretto (MAPPA CM-1, Appendice B; il lato nord a 1,5 m è la carta CM-2). Altare **+3 m**, Ø 6 m,
 in P-Q 13-14; le dieci statue, alte 4 m, sul cerchio a 20 m; l'anello dei nani
 a 30 m; la porta, 6 × 6 m, in P-Q01, a **36 m** dall'altare; due piattaforme
 laterali a +1,5 m (B-C13 e d-e13). Luce piena ovunque, dalle stalattiti di
@@ -448,6 +449,14 @@ loro luce mette in fuga gli orchi.
 | la porta 🚪 | P-Q01, a nord, a **36 m** dall'altare, oltre l'anello | unico ingresso. Nel round di sorpresa chi combatte in mischia non ci arriva |
 | gli orchi 🔴 | entrati dalla porta (righe 02-03) | in fuga dopo l'aura. I due scossi che restano sono già dentro l'anello `[CANONE — DM 2026-10-18, G2-32]` |
 | le piattaforme 🟨 | B-C13 a ovest, d-e13 a est, +1,5 m, con stalagmiti 🔺 | posti da tiratore, copertura parziale |
+
+Sulla carta **CM-2** (1,5 m a quadretto, Appendice B), dove si gioca la
+Scena 3, le stesse cose stanno così: l'altare in M-P 25-28, col re e Dana in
+N-O 26-27 e i PG intorno; i due orchi scossi in L15-M15; il varco della porta
+in M-P 01-02, coi battenti abbattuti in M03 e P03; le sette statue del lato
+nord in O-P 13-14 (Q07), G-H 17-18 (M09), W-X 17-18 (U09), C-D 23-24 (K12),
+a-b 23-24 (W12), C-D 31-32 (K16) e a-b 31-32 (W16). Le distanze restano
+quelle scritte: 36 m dalla porta all'altare, 30 m all'anello.
 
 > **Read-aloud (LotR lead) — la caverna, sotto la luce.** *Sotto la luce che vi
 > porta si apre una caverna grande come una cattedrale. Le stalattiti fanno
@@ -599,8 +608,8 @@ della caverna, l'ultimo respiro dell'ARC-07 prima che cominci quella vera.
 > - **Chi combatte i PG**: i due orchi scossi rimasti dopo l'aura (§0-bis), forse col capo; poi i **cinque hobgoblin** che passano l'anello (3 con l'ordine di Thorik, 2 con anche il preavviso di Artemis; nel ramo «meno luminoso» sempre 5, e sei orchi). Gli altri quindici li tengono i nani.
 > - **Cosa vogliono**: gli orchi uscire vivi; gli hobgoblin **il re**, e nient'altro.
 > - **Quando finisce**: quando l'ultimo degli hobgoblin che hanno passato l'anello cade o getta le armi. Poi il silenzio, e il passaggio di consegne.
-> - **Due modalità**: 🎚️ **[FAST-PLAY]**, due round narrati senza tiri; 🎚️ **[COMBATTIMENTO COMPLETO]**, 4-5 round su CM-1 (3-4 nel ramo «meno luminoso»).
-> - **Sul tavolo**: CM-1 (Appendice B) e la pagina delle statistiche (Appendice A).
+> - **Due modalità**: 🎚️ **[FAST-PLAY]**, due round narrati senza tiri; 🎚️ **[COMBATTIMENTO COMPLETO]**, 4-5 round su CM-2 (3-4 nel ramo «meno luminoso»).
+> - **Sul tavolo**: CM-2 (Appendice B; CM-1 per vedere la caverna intera) e la pagina delle statistiche (Appendice A).
 
 **Chi resta, e chi arriva** `[CANONE — DM 2026-10-03, D38]`. Dopo l'aura, nella
 caverna restano due orchi scossi. Dei circa 30 orchi berserker entrati con le
@@ -631,7 +640,7 @@ il preavviso di Artemis.
   rimasti e respingono gli hobgoblin in **2 round** (in combattimento completo
   sono 4-5). È un massacro, con zero perdite naniche: sono troppo potenziati
   dall'Apparizione. Narrazione, nessun tiro necessario.
-- **🎚️ [COMBATTIMENTO COMPLETO]**: si giocano 4-5 round su CM-1 come «scontro di
+- **🎚️ [COMBATTIMENTO COMPLETO]**: si giocano 4-5 round su CM-2 come «scontro di
   apertura» a bassa posta. Serve a far **provare ai giocatori la nuova potenza**
   (Corona 3 gemme, Hella viva, Bracieri completi) prima dell'ARC-08: un round di
   gloria, non un rischio. I poteri nuovi stanno nelle pagine giocatore degli
@@ -1036,7 +1045,7 @@ ginocchio fra i capi al centro dell'anello.
 
 ---
 
-## APPENDICE B — MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto; CM-1 è a 3 m, vedi sotto)
+## APPENDICE B — MAPPE ASCII ULTRA-CLEAR (scala 1,5 m/quadretto; CM-1 è la vista d'insieme a 3 m, vedi sotto)
 
 > 📗 **Versione a piena scheda tattica** (posizioni PG/PNG/villain, terreno &
 > altitudini, tattiche di villain/mostri, evoluzione) nell'**Atlante Mappe
@@ -1056,8 +1065,10 @@ ginocchio fra i capi al centro dell'anello.
 > Caverna-cattedrale **100 m × 80 m × 40 m** di altezza.
 > ⚠️ **Scala 3 m/quadretto**: è la deviazione A4 dalla convenzione 1,5 m. La
 > griglia originale è disegnata così, e non è stata ridisegnata per non
-> alterare posizioni e portate già usate nel testo. Non mischiare quadretti di
-> mappe a scale diverse.
+> alterare posizioni e portate già usate nel testo. Dal 2026-10-22 è
+> dichiarata vista d'insieme (`@tipo strategica`): le miniature si muovono
+> sulla carta **CM-2**, qui sotto, a 1,5 m. Non mischiare quadretti di mappe a
+> scale diverse.
 
 ```
 ════════════════════════════════════════════════════════════════════════════════
@@ -1103,7 +1114,10 @@ cedono nella breve; i PG non sono segnati: compaiono sull'altare, P-Q 13-14) ·
 (copertura parziale) · 🔴 ondata nemica. Soffitto 40 m: stalattiti di cristallo
 BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 @north N
-@tipo tattica caverna
+@tipo strategica caverna
+@luogo Hammerfist, il Cuore della Montagna (sotto la fucina grande, livello −3)
+@quota −150 m ; sotto il cortile di Hammerfist (livello 0) [INFERRED — needs DM confirmation]
+@dislivello +3 m ; l'altare sul pavimento della caverna; le piattaforme laterali +1,5 m
 ```
 
 > Il varco che gli hobgoblin aprono nell'anello è sul lato nord, fra la porta e
@@ -1171,3 +1185,85 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
   modalità) → portale di Dana → bastioni (ARC-08, il ponte d'arrivo).
 - **Riferimento**: geometria/ondate = Atlante-08 **MAPPA 5**; regia lato ARC-07
   = DEF-5 Scene 1-3; cucitura = il ponte d'arrivo dell'ARC-08.
+
+### MAPPA CM-2 — IL LATO NORD DEL CUORE (la pulizia · Scena 3, combattimento completo)
+
+> **Carta tattica a 1,5 m** dello stesso spazio di CM-1: il lato nord della
+> caverna, dalla porta di mithral all'altare, 42 m × 48 m. Si gioca qui il
+> 🎚️ [COMBATTIMENTO COMPLETO] della Scena 3. CM-1 resta la vista d'insieme,
+> a 3 m, per sapere dove stanno i blocchi dei nani e da dove arrivano le ondate.
+> Ogni quadretto di CM-1 vale due per due quadretti di CM-2: la statua Q07
+> di CM-1 è la O-P 13-14 di CM-2, l'altare P-Q 13-14 è la M-P 25-28.
+> Bracieri 🏮 e caduti 🦴 sono dettagli della carta a 1,5 m, che la vista a 3 m
+> non disegna.
+
+```
+════════════════════════════════════════════════════════════════════════════════
+ CM-2 · IL CUORE DELLA MONTAGNA, LATO NORD — 42 m × 48 m (28 col × 32 righe · 1,5 m)
+ La pulizia (Scena 3): dalla porta all'altare · Giorno 3 dell'assedio (1372)
+════════════════════════════════════════════════════════════════════════════════
+COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
+01    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰  ← il varco della porta di mithral (M-P 01-02, 6 m)
+02    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+03    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🪨 i battenti abbattuti (M03, P03)
+04    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+05    🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤
+06    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  ┐ 🔵 l'anello dei nani a 30 m dall'altare
+07    🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤  │ (tre file: guerrieri fuori, balestrieri,
+08    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤  ┘  capi dentro; il DM li muove a blocchi)
+09    🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤
+10    🟤🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵🔵🔵🔵🟤
+11    🔵🔵🔵🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵
+12    🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵
+13    🔵🟤🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🟤🔵  ← 🗿 la statua Q07 della CM-1 (O-P 13-14)
+14    🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤
+15    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🔴 i due orchi scossi (L15, M15)
+16    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+17    🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤
+18    🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿🟤🟤🟤🟤
+19    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+20    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+21    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+22    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+23    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+24    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+25    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐🔵🔵⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← ⭐ altare +3 m (M-P 25-28) · 🔵 i PG
+26    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵⭐⭐🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← il re e Dana (N-O 26-27)
+27    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐⭐⭐⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+28    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⭐⭐⭐⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+29    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+30    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🏮🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
+31    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+32    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
+════════════════════════════════════════════════════════════════════════════════
+LEGENDA · 🟤 pavimento di caverna · 🏰 roccia viva, la parete nord della caverna
+LEGENDA · 🪨 battenti di mithral abbattuti (terreno difficile, copertura ½)
+LEGENDA · 🦴 i caduti dei primi due round, orchi e nani (terreno difficile)
+LEGENDA · 🗿 statue dei Re Ancestrali su basi di 3 m, alte 4 m (copertura totale)
+LEGENDA · 🏮 bracieri su treppiede (copertura ½, luce 9 m)
+LEGENDA · ⭐ l'altare, Ø 6 m, alto 3 m: si sale con Scalare CD 15 in un round
+LEGENDA · 🔵 i PG sull'altare e l'anello dei nani · 🔴 i due orchi scossi
+LEGENDA · Gli hobgoblin entrano dal varco M-P 01 alla fine del round 1 della pulizia.
+LEGENDA · I bordi est, ovest e sud sono tagli: la caverna continua (vedi CM-1).
+════════════════════════════════════════════════════════════════════════════════
+@north N
+@tipo tattica caverna
+@luogo Hammerfist, il Cuore della Montagna (lato nord, dalla porta all'altare)
+@deroga struttura/senza-anelli ; caverna aperta: si gira attorno all'altare e alle statue, che sono isole nel vuoto, non blocchi di muro
+@deroga m1/copertura ; la caverna è una cattedrale vuota: le sole coperture sono statue, bracieri e l'anello dei nani, ed è voluto
+@deroga m2/vuoto ; lo spazio fra l'anello e l'altare è la terra di nessuno che gli hobgoblin devono attraversare
+@deroga m4/esposizione ; luce piena dalle stalattiti e nessun muro interno: chi corre verso l'altare è visto da tutti
+```
+
+- **Distanze**: dal varco della porta al bordo dell'altare 33 m, 22 quadretti;
+  dall'anello dei nani al centro dell'altare 30 m; dai due orchi scossi al
+  bordo dell'altare 13,5 m, 9 quadretti. Gli hobgoblin, 6 m di velocità in
+  armatura pesante, correndo coprono 18 m a round: la regia dei round della
+  Scena 3 resta quella scritta.
+- **Come si entra e come si gira**: il varco della porta è a nord; i bordi
+  est, ovest e sud sono tagli della carta, e la caverna continua oltre (CM-1).
+  Si gira attorno all'altare e alle statue; chi sale sull'altare (Scalare CD
+  15) ha la quota di 3 m.
+- **Chi c'è al primo round della pulizia**: i PG sull'altare, il re e Dana al
+  centro; l'anello dei nani a nord; i due orchi scossi fra l'anello e l'altare.
+  Gli hobgoblin non ci sono ancora: entrano dal varco alla fine del round 1.
