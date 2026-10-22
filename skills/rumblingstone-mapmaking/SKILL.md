@@ -118,6 +118,11 @@ are **generated artifacts — never hand-edit them**. CI
    `legend.yaml` (doors by type, bars, stairs up/down, cave floor, shallow
    water, sewer, debris, furniture) before inventing a local symbol.
    Procedure and rubric: `references/collaudo-mappe.md`.
+   Then `scripts/qualita_mappe.py` measures how good it is against the quality
+   standard (ADR-0098): prepare in the order function, flow, scale, tactics;
+   exterior, settlement and strategic maps declare `@quota` and `@dislivello`
+   (and `@luogo` when another map shows the same spot). Rules, thresholds and
+   sources: `references/standard-qualita-mappe.md`.
 
 ## Domain → File
 
@@ -175,6 +180,7 @@ tempi».
 | Full workflow: new map, edit, render, validate, dungeon import, overland/city | `references/workflow-mappe.md` |
 | Universal legend: every terrain/unit/prop symbol with meaning | `references/legenda-universale.md` |
 | **Collaudo**: does the map play? the checker tool, the `@` directives, the cold map-checker role | `references/collaudo-mappe.md` |
+| **Quality standard**: is the map plausible and good? measurable rules with sources, elevation and context, real measures of fortresses and cities, the score | `references/standard-qualita-mappe.md` |
 | Direzione artistica handout/splash (convenzioni + confini IP) | `references/stile-illustrazione-handout.md` |
 | Optional local "hero map" painterly pass (ComfyUI + ControlNet + MCP), and the Canva AI hero map until ComfyUI is tested | `references/hero-map-comfyui.md` |
 
@@ -191,6 +197,8 @@ python3 scripts/export_map_png.py rendered/<mappa>.svg   # hi-res PNG (print / h
 python3 scripts/export_uvtt.py <file.md>           # .uvtt/.dd2vtt (Foundry/Roll20: muri+luci)
 python3 scripts/validate_maps.py                   # CI gate (run before commit)
 python3 scripts/collaudo_mappe.py <file.md>        # does it play? (ADR-0082)
+python3 scripts/qualita_mappe.py <file.md>         # how good is it? score and findings (ADR-0098)
+python3 scripts/qualita_mappe.py --classifica      # the whole corpus, worst first
 python3 scripts/dm.py asset texture && python3 scripts/dm.py maps texture   # CC0 texture theme, all maps
 .venv/bin/python scripts/build_oggetti_cc0.py --prova   # CC0 3D props for the texture theme (Blender or bpy), GUIDA-MAPPE §5.1.1
 python3 scripts/misura_resa.py --check               # the rendering did not get worse (ADR-0086), GUIDA-MAPPE §5.1.2

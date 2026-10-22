@@ -186,6 +186,9 @@ sulla mappa.
 
 1. Chi disegna scrive la griglia con la legenda universale e le direttive.
 2. `collaudo_mappe.py` sul file, fino a zero errori o deroghe motivate.
+   Poi `qualita_mappe.py` sullo stesso file: zero errori, e gli avvisi
+   corretti o derogati per scritto
+   ([standard-qualita-mappe.md](standard-qualita-mappe.md)).
 3. `render_map_svg.py`, poi il PNG, e la verifica a vista (STEP 5 di
    `audit-mappe-workflow.md`).
 4. Il collaudatore a freddo, in un subagente, con i quattro materiali.
