@@ -1598,7 +1598,7 @@ LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa
 @path Verso la cresta (400 m a sud) ; F7 F9 G10 G12 ; #8a5a2b
 @tipo tattica esterno
 @luogo Hammerfist, pendio sotto le mura
-@quota 1025 m ; s.l.m., il piede della cinta
+@quota 945 m ; s.l.m., il piede della cinta
 @dislivello +75 m ; sulla piana, che comincia 300 m più a sud
 ```
 

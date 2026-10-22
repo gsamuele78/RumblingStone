@@ -60,10 +60,10 @@ trova il successivo 20 m più in alto.
 
 | Ripiano | Sulla piana | s.l.m. | Cosa c'è |
 |---|---|---|---|
-| Piana e accampamenti | 0 m | 950 m `[INFERRED]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
-| Fronte sud e cortile esterno | +80 m | 1030 m `[INFERRED]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
-| Cortile interno | +100 m | 1050 m `[INFERRED]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
-| Torri nord e cittadella | +120 m | 1070 m `[INFERRED]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella `[INFERRED]` |
+| Piana e accampamenti | 0 m | 870 m `[INFERRED]` | gli accampamenti dell'orda a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m) |
+| Fronte sud e cortile esterno | +80 m | 950 m `[INFERRED]` | cancello, torri, bastioni G1 e G2, la cinta sud; la soglia del cancello è la quota di riferimento |
+| Cortile interno | +100 m | 970 m `[INFERRED]` | oltre la Porta Interna, in cima alla scarpa di 20 m |
+| Torri nord e cittadella | +120 m | 990 m `[INFERRED]` | i bastioni B1 e B2 contro la roccia; dietro il portale dell'atrio una scala interna sale di 20 m alla cittadella `[INFERRED]` |
 
 Dal ponte una **strada a tornanti** larga 6 m scende alla piana al 15%:
 circa 530 m di strada per 80 m di quota, con cinque gomiti (MAPPA 1). Il
@@ -188,7 +188,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo strategica esterno
 @luogo Hammerfist, porta principale
-@quota 1030 m ; s.l.m., la soglia del cancello principale
+@quota 950 m ; s.l.m., la soglia del cancello principale
 @dislivello +80 m ; sulla piana, in fondo alla strada a tornanti
 @deroga oggetti/porta-enorme ; il cancello, la Porta Interna e la porta dell'atrio hanno la luce di 6 m della tabella MISURE: sono portoni da fortezza, non porte
 @mark 1 ; BH34 ; Re Thorek XIII (Ftr/Nobile GS 16)
@@ -215,7 +215,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone CM21-CT28 ; Bastione Nord B2: 12 × 12 m, terrazza a +120 m (la torre nord del 372), 30 nani + 1 balista
 @zone AW66-BF73 ; Bastione Sud G1 (Porta Ovest): 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste
 @zone BK66-BT73 ; Bastione Sud G2: 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste
-@zone BG73-BJ73 ; CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (1030 m s.l.m.)
+@zone BG73-BJ73 ; CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (950 m s.l.m.)
 @zone BG74-BJ78 ; Ponte levatoio: 6 × 7,5 m, scavalca il fossato di 6 m, 80 pf
 @zone AA68-AF73 ; Torre Ovest (Porta Ovest): 9 × 9 m, +20 m, 2 baliste, 10 balestrieri
 @zone CK68-CP73 ; Torre Est: 9 × 9 m, +20 m, 2 baliste, 10 balestrieri
@@ -255,7 +255,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | **Bastione G1** (con la Torre Ovest è la «Porta Ovest» di DEF-5) | AW-BF | 66-73 | 15 m × 12 m | 15 m sul cortile esterno, 40 nani + 2 baliste |
 | **Bastione G2** | BK-BT | 66-73 | 15 m × 12 m | 15 m sul cortile esterno, 40 nani + 2 baliste |
 | **Cinta** | AA-AD, CM-CP; sud AA-CP | 21-73; 70-73 | spessa 6 m, alta 12 m | camminamento 4,5 m dietro la merlatura |
-| **Cancello Principale** | BG-BJ | 73 (androne 70-72) | luce 6 m, alto 8 m | **200 pf**, soglia a 1030 m s.l.m. (+80 sulla piana) |
+| **Cancello Principale** | BG-BJ | 73 (androne 70-72) | luce 6 m, alto 8 m | **200 pf**, soglia a 950 m s.l.m. (+80 sulla piana) |
 | **Ponte Levatoio** | BG-BJ | 74-78 | 6 m × 7,5 m | 80 pf, abbassato |
 | **Fossato** | W-CV | 74-77 | 114 m × 6 m | profondo 3 m, Nuotare CD 15 |
 
@@ -274,7 +274,7 @@ NORD ←────────────────────────
   ║     │  🎯🎯 TOP  │  2 Baliste ciascuna + 10 balestrieri
   ║     │  🔵🔵      │  Dara AD69 +20m
   ║     └────────────┘
-(quote sulla piana; la soglia del cancello è a 1030 m s.l.m.)
+(quote sulla piana; la soglia del cancello è a 950 m s.l.m.)
 
 +120m ══🔵══  BASTIONI NORD B1-B2 (righe 21-28) e cittadella, contro la roccia
   ║    │ scala interna di 20 m dietro l'atrio
@@ -468,8 +468,8 @@ VISTA DAL CAMPO DI BATTAGLIA (Nemici Guardano Alto) ↑
 ### VISTA 1: GRIGLIA DI REGIA CON COORDINATE (60×108, 1 quadretto = 3 m)
 
 > ✅ Sono disegnate tutte le 108 righe, larghe 60 (ricontato il 2026-10-22).
-> Il pendio scende di 80 m dalle mura (righe 01-02, 1030 m s.l.m.) alla piana,
-> che comincia alla riga 101 (950 m s.l.m.) `[INFERRED]`. La strada a tornanti
+> Il pendio scende di 80 m dalle mura (righe 01-02, 950 m s.l.m.) alla piana,
+> che comincia alla riga 101 (870 m s.l.m.) `[INFERRED]`. La strada a tornanti
 > 🟫, larga 6 m, parte dal ponte (AD05) e piega in AW16, M35, AW54, M73 e AD90.
 >
 > ✅ Le altre due mappe di questo master **non hanno difetti**: la 2A è davvero
@@ -611,10 +611,10 @@ DIMENSIONI: 60 colonne × 108 righe · 3 m/quadretto
 @zone N1-AU2 ; Fronte sud della fortezza, 102 m: mura 12 m, torri 20 m, bastioni G1-G2 ai lati del cancello (griglia di precisione: MAPPA 2A REVISED)
 @tipo strategica esterno
 @luogo Hammerfist, porta principale
-@quota 1030 m ; s.l.m., la soglia del cancello
+@quota 950 m ; s.l.m., la soglia del cancello
 @dislivello +80 m ; sulla piana, che comincia alla riga 101
 @path Giganti su per la strada fino al gomito M35 (100 m dalle mura) ; W72 M73 AW54 M35 ; #8c2fb8
-@zone A101-BH108 ; La piana a 950 m s.l.m.: gli accampamenti dell'orda stanno 500 m-1 km a sud delle mura, fuori mappa
+@zone A101-BH108 ; La piana a 870 m s.l.m.: gli accampamenti dell'orda stanno 500 m-1 km a sud delle mura, fuori mappa
 @zone AW16 ; Primo gomito della strada, 50 m dalle mura
 @zone M35 ; Secondo gomito, 100 m dalle mura: da qui i giganti tirano
 ```
@@ -741,7 +741,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo tattica esterno
 @luogo Hammerfist, bastioni sud
-@quota 1045 m ; s.l.m., la piattaforma sopra il cancello
+@quota 965 m ; s.l.m., la piattaforma sopra il cancello
 @dislivello +15 m ; sul cortile esterno (+95 m sulla piana)
 @taglia T24 ; Enorme
 @mark 1 ; T24 ; Fauci di Palude, Enorme 3 × 3, 15 m sopra il camminamento (Drago Nero Adulto Avanzato)
@@ -779,7 +779,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Elemento | Dove | Effetto |
 |---|---|---|
 | Bastioni G1, G2, 15 m sul cortile esterno | I-R e W-AF, righe 14-21 (15 × 12 m ciascuno) | caduta 15 m = 5d6 (SRD, 1d6 ogni 3 m); nessun riparo dal soffio dall'alto |
-| Piattaforma sopra il cancello, 15 m sul cortile esterno (1045 m s.l.m.) | S-V, righe 18-20 | il cancello è sotto, già sfondato; qui stanno il Re e la guardia: il Re ci è salito al corno del drago per tenere i nani ai posti (MAPPA 2A, posizioni del Giorno 3) |
+| Piattaforma sopra il cancello, 15 m sul cortile esterno (965 m s.l.m.) | S-V, righe 18-20 | il cancello è sotto, già sfondato; qui stanno il Re e la guardia: il Re ci è salito al corno del drago per tenere i nani ai posti (MAPPA 2A, posizioni del Giorno 3) |
 | Camminamento della cinta +12 m | A-H e AG-AN, righe 18-20 (largo 4,5 m) | collega i bastioni alle torri, fuori mappa |
 | Merlature 🧱 | riga 21 | copertura 3/4 SOLO vs attacchi dal basso — inutili contro il cono |
 | Cono del soffio 🟥 | N-AA, righe 17-21 | vedi meccanica sopra |

@@ -93,7 +93,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone V25-X26 ; Fuoco del campo hobgoblin
 @tipo tattica esterno
 @luogo Torrione di Vedetta, valle di Hammerfist
-@quota 1010 m ; s.l.m., la base del torrione
+@quota 930 m ; s.l.m., la base del torrione
 @dislivello +60 m ; sulla piana del campo, 400 m a est
 ```
 
@@ -467,7 +467,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 @zone G92-I94 ; Roccia 7 (G92-I94): copertura totale +8 CA
 @tipo tattica esterno
 @luogo Sentiero Nascosto, canyon di Hammerfist
-@quota 980 m ; s.l.m., il fondo del canyon a metà salita
+@quota 900 m ; s.l.m., il fondo del canyon a metà salita
 @dislivello +30 m ; sulla piana, alla bocca sud del canyon
 @deroga fazioni/lontane ; è una ricognizione furtiva: la pattuglia di worg gira lontana apposta, e il contatto è il fallimento della scena
 @deroga spazio/disperso ; il canyon è lungo 150 m perché la scena è la risalita, non lo scontro: si gioca a tratti, riga per riga
@@ -545,7 +545,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 **SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map03_mappa-1a-3-revised-campo-della-mano-rossa-vista.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 180m × 180m (60 colonne × 60 righe · **3 m/quadretto**, mappa strategica: `@tipo strategica`)
 **Contratto:** `fortezza-json/HF-1A3-campo-mano-rossa.json` (rifatta il 2026-10-22 sul modello della M7-C di ARC-07)
-**Dove sta:** sulla piana a 950 m s.l.m. `[INFERRED]`, a qualche miglio dalle mura (le sentinelle vedono solo polvere e fuochi: DEF-1, Zona 1). Il Torrione la guarda da 400 m. Quando l'assedio comincia, l'orda si riaccampa con lo stesso ordine a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m), e sale per la strada a tornanti (L2, MAPPA 1).
+**Dove sta:** sulla piana a 870 m s.l.m. `[INFERRED]`, a qualche miglio dalle mura (le sentinelle vedono solo polvere e fuochi: DEF-1, Zona 1). Il Torrione la guarda da 400 m. Quando l'assedio comincia, l'orda si riaccampa con lo stesso ordine a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m), e sale per la strada a tornanti (L2, MAPPA 1).
   ⚠️ Vista strategica dal Torrione: serve all'intelligence e alla regia, **NON al combattimento a quadretti**. Le tende sono alla loro misura: il contubernium hobgoblin 3 × 3 m è un quadretto, la tenda nera del comando 18 × 12 m col telo. Non mischiare quadretti di mappe a scale diverse.
 **Incontro:** nessuno — osservazione (Dara col cannocchiale, Incontro 1A FASE 3)
 **Quando si usa:** Sessione 1 (master: `../ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Scena 4, Fase 3); stessa disposizione, vista dal lato fortezza, in `Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED
@@ -623,7 +623,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo strategica esterno
 @luogo Campo della Mano Rossa, piana di Hammerfist
-@quota 950 m ; s.l.m., la piana
+@quota 870 m ; s.l.m., la piana
 @dislivello 0 m ; sulla piana: Hammerfist è 80 m più in alto, a qualche miglio a nord
 @mark 1 ; AE41 ; Generale Grimjaw davanti alla tenda nera, coi capitani (Orog War/Signore della Guerra)
 @mark 2 ; AE42 ; Orog Guardie Nere (élite)
@@ -719,7 +719,7 @@ LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa
 @path Verso la cresta (400 m a sud) ; F7 F9 G10 G12 ; #8a5a2b
 @tipo tattica esterno
 @luogo Hammerfist, pendio sotto le mura
-@quota 1025 m ; s.l.m., il piede della cinta
+@quota 945 m ; s.l.m., il piede della cinta
 @dislivello +75 m ; sulla piana, che comincia 300 m più a sud
 ```
 

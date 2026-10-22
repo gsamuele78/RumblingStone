@@ -146,14 +146,3 @@ mura restano veri.
   `test_collaudo_*`, `test_resa_mappe.py`, ...): 135 passati.
 - SVG rigenerati con `scripts/render_map_svg.py`, tema pergamena e texture;
   la 1A-3 ha cambiato nome (titolo nuovo) e i due SVG vecchi sono tolti.
-
-## Aggiornamento del 2026-10-22: quote s.l.m. allineate ad ARC-07
-
-Le quote sul livello del mare scritte qui sopra (piana a 870 m) non coincidevano
-con quelle che il thread delle mappe di ARC-07 ha messo nella PR #267: piana a
-950 m e porta del 372 a 1050 m. Le differenze rispetto alla piana erano già le
-stesse. Ho preso i valori di ARC-07 e alzato di 80 m ogni quota s.l.m. di ARC-08:
-piana 950, cancello 1030, cortile interno 1050 (che è la porta del 372), torri
-nord e cittadella 1070. Le quote delle singole mappe diventano: 1A-1 980, 1A-2 1010,
-1D 1025, MAPPA 4 1000, piattaforma sopra il cancello 1045. Le quote sulla piana
-non cambiano. I valori s.l.m. restano `[INFERRED]`, perché il DM non li ha dati.
