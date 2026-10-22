@@ -1166,64 +1166,122 @@ e quel silenzio, per chi lo nota, dice più di un avvertimento.
 > mercato — un filo che lega passato e presente della rete di **Varis ↔ Il
 > Collezionista** (CANONE DM 2026-07-23: le due reti sono collegate).
 
-### Il contratto del Seme, per intero `[CANONE — DM 2026-10-11]`
+### Il contratto del Seme, per intero `[CANONE — DM 2026-10-11 e 2026-10-18; testo e clausola 8: DM 2026-10-21]`
 
 Fino a qui il §6-bis diceva cosa **fa** il Seme, sparso in tre posti. Questa
 è la scheda completa, scritta perché Artemis lo identifica con la pergamena
-del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»). Quello che
-segue è **tutto ciò che *identificare* rivela**, e il DM lo dice a voce.
+del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»).
+Il contratto e il riquadro delle regole sono quelli del foglio che va ai
+giocatori, l'handout «Il contratto del Seme»: è **tutto ciò che *identificare*
+rivela**. Il riquadro «Solo per il DM» e il paragrafo che lo segue restano
+al DM.
 
-**L'oggetto.** Oggetto magico, **non** artefatto e **non** oggetto maledetto:
-*identificare* funziona e rivela tutto, senza la regola dell'1% delle
-maledizioni. Aura moderata di **Trasmutazione** (l'innesto che si radica) e
-**Ammaliamento** (la parte che parla), livello dell'incantatore 9. Un cabochon
-violetto grande come l'unghia del pollice, pesante come un pugno di piombo,
-sempre tiepido.
+> **Quando darlo**: ad Artemis, **alla fine dell'ora della pergamena**, subito
+> dopo il read-aloud in cui la gemma mostra la scrittura da libro mastro.
+> Il DM legge il contratto a voce **in due tempi**, con una pausa dopo la
+> clausola 4, poi consegna il foglio. Il riquadro di regole si dà insieme.
 
-**Le clausole** (sono il contratto):
+> *Dentro la pietra, in scrittura fitta da libro mastro:*
+>
+> *Contratto di un seme. Chi firma è debitore; l'altro capo è del creditore.*
+>
+> *1. Firma il primo che tocca la pietra a pelle nuda. Basta un dito, anche
+> senza volerlo. Guanto, panno o pinza non firmano, ma la voce del creditore
+> passa lo stesso: l'offerta si ascolta senza firmarla.*
+>
+> *2. Alla firma la pietra si scioglie nella pelle e lascia nel palmo una vena
+> viola. Se su quella mano c'è un anello o un gioiello, si incastona lì.*
 
-1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
-   anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
-   arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
-   `[CANONE — DM 2026-10-18]`. Non c'è tiro
-   salvezza, perché il Seme si limita ad aspettare.
-2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
-   nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
-   si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
-   gli chiede. L'Anello reagisce come nel riquadro «La reazione dell'Anello».
-3. **L'anticipo.** Alla firma il debitore riceve il **Frammento di Mercato**:
-   una volta sola, −25% su un acquisto oppure +4 di circostanza a una prova di
-   contrattazione o di Usare Oggetti Magici.
-4. **Il filo.** Chi tiene l'altro capo, il creditore, sa sempre in che
-   direzione e a che distanza si trova il debitore, se è sullo stesso piano.
-5. **La voce.** Il creditore può parlare al debitore, telepaticamente, un
-   minuto al giorno. Una volta alla settimana può tentare una
-   ***suggestione*** (Volontà **CD 16**). È il «controllo» che l'Anello può
-   spezzare con *Dawn's Defiance*.
-6. **La riscossione.** Una carica sola, e **appartiene al creditore**, non a chi
-   porta il Seme. Una volta il creditore chiede il pagamento: un favore, una
-   consegna, un silenzio. Niente obbliga il debitore a pagare. Chi rifiuta
-   però diventa **insolvente**, e da quel momento il creditore è libero di
-   **vendere il filo** a chi vuole.
-7. **Il recesso prima della firma.** Estirparlo pulito o disfarlo: Sapienza
-   Magica **CD 20**. *Dissolvi magie* lo spegne per 1d4 round.
-8. **Il recesso dopo la firma.** Il contratto si chiude **pagando la
-   riscossione**. In alternativa *spezzare incantamento* o *rimuovi
-   maledizione* con prova di livello dell'incantatore **CD 20**, oppure
-   *desiderio*.
+> *3. Al debitore, una volta sola, l'anticipo: il Frammento di Mercato. Vale
+> un quarto in meno su un acquisto, oppure un aiuto a strappare un prezzo o a
+> farsi obbedire da un oggetto magico.*
+>
+> *4. Il creditore sa sempre in che direzione e a che distanza sta il
+> debitore, purché siano sullo stesso piano.*
 
-**Cosa *identificare* NON dice.** Il nome del creditore, le sue intenzioni, il
-legame con il Collezionista. Mostra soltanto **la firma della bottega**, incisa
-dentro la pietra e visibile solo alla luce dell'incantesimo: una bilancia con
-un filo d'argento avvolto al giogo. La rivedranno a Rethmar, sull'insegna di
-Varis, e allora capiranno.
+> *5. Il creditore parla al debitore nella testa, un minuto al giorno. Una
+> volta alla settimana gli dà un consiglio, e chi non sta in guardia lo segue.*
+>
+> *6. La riscossione è una sola, e la tiene il creditore. Chiede una volta:
+> un favore, una consegna, un silenzio. Nessuno obbliga a pagare. Chi rifiuta
+> diventa insolvente, e da quel giorno il creditore vende il filo a chi vuole.*
+>
+> *7. Prima della firma, chi conosce il mestiere della magia estirpa la pietra
+> pulita, o la disfa. Un incanto che dissolve la spegne per pochi istanti.*
 
-**A ≈372 DR il creditore non c'è ancora.** Varis nascerà fra quasi mille anni.
-Il contratto è intero, il filo non porta da nessuna parte e la voce tace. Se
-qualcuno firma lì, l'anticipo arriva subito e la vena si chiude, ma filo, voce
-e riscossione **si accendono solo al ritorno nel 1372**. Quel giorno Varis
-scopre un debitore che ha firmato mille anni prima di lui, e per un mercante
-non c'è niente di più interessante.
+> *8. Dopo la firma, il contratto si chiude pagando la riscossione. Lo scioglie
+> anche chi spezza gli incanti o toglie le maledizioni, se ha la forza che
+> serve. Oppure un desiderio.*
+>
+> *In fondo alla pagina, al posto del nome, una bilancia con un filo d'argento
+> avvolto al giogo.*
+
+> **Per il giocatore di Artemis — le regole** (fuori dal gioco)
+>
+> **L'oggetto.** Oggetto magico: **non** è un artefatto e **non** è
+> maledetto. *Identificare* (Identify) funziona e rivela tutto, senza il
+> controllo dell'1% delle maledizioni. Aura moderata di Trasmutazione e
+> Ammaliamento, livello dell'incantatore 9. Un cabochon violetto grande come
+> l'unghia del pollice, pesante come un pugno di piombo, sempre tiepido.
+>
+> 1. **Chi firma.** Contatto a pelle nuda, anche involontario. Nessun tiro
+>    salvezza. Con guanto, panno o pinza non firmi, ma la voce arriva lo stesso.
+> 2. **La firma.** Vena violetta nel palmo. Se sulla mano porti un anello o un
+>    gioiello, il Seme ci si incastona: per Artemis, nell'Anello. Come reagisce
+>    l'Anello te lo dice il DM.
+> 3. **L'anticipo.** Il Frammento di Mercato, una volta sola: −25% su un
+>    acquisto, **oppure** +4 di circostanza a una prova di contrattazione o di
+>    Usare Oggetti Magici (Use Magic Device).
+> 4. **Il filo.** Il creditore conosce direzione e distanza del debitore, se è
+>    sullo stesso piano.
+> 5. **La voce.** Telepatia, 1 minuto al giorno. 1 volta alla settimana
+>    una *suggestione* (Suggestion), tiro salvezza sulla Volontà (Will)
+>    **CD 16**. È il controllo che l'Anello può spezzare con *Dawn's Defiance*.
+> 6. **La riscossione.** 1 carica, e appartiene al creditore, non a chi porta
+>    il Seme: un favore, una consegna, un silenzio. Niente ti obbliga a pagare.
+>    Se rifiuti diventi insolvente, e il creditore può vendere il filo a chiunque.
+> 7. **Uscirne prima della firma.** Estirparlo pulito o disfarlo: Sapienza
+>    Magica (Spellcraft) **CD 20**. *Dissolvi magie* (Dispel Magic) lo spegne
+>    per 1d4 round.
+> 8. **Uscirne dopo la firma.** Pagando la riscossione. Oppure *spezzare
+>    incantamento* (Break Enchantment), *rimuovi maledizione* (Remove Curse)
+>    o *dissolvi magie superiore* (Greater Dispel Magic) con prova di livello
+>    dell'incantatore **CD 20**, oppure *desiderio* (Wish). Il contratto si
+>    scioglie, l'anticipo già speso resta speso.
+>
+> **Cosa *identificare* non dice.** Chi è il creditore e cosa vuole. Mostra
+> soltanto la firma della bottega, incisa dentro la pietra: la bilancia con il
+> filo d'argento avvolto al giogo.
+>
+> **A ≈372 DR il creditore non c'è ancora.** Il contratto è intero, ma il filo
+> non porta da nessuna parte e la voce tace. Se firmi qui, l'anticipo arriva
+> subito e la vena si chiude; filo, voce e riscossione si accendono solo al
+> ritorno nel 1372.
+
+> **Solo per il DM: *dissolvi magie superiore* (Greater Dispel Magic).**
+> <!-- storico -->Deciso il 2026-10-21. <!-- /storico -->Vale la regola 3.5
+> com'è scritta, ed è nella clausola 8. *Dissolvi magie superiore* ha una
+> possibilità di dissolvere tutto ciò che *rimuovi maledizione* può rimuovere
+> (PHB 3.5, p. 223), e la clausola 8 dice che *rimuovi maledizione*
+> funziona. Quindi:
+> - **prima della firma**, sulla pietra: come *dissolvi magie*, la spegne per
+>   1d4 round e non la distrugge;
+> - **dopo la firma**, sul debitore: prova di dissolvere (1d20 + livello
+>   dell'incantatore, massimo +20) contro **CD 20** (11 + LI 9 del Seme). Se
+>   riesce, il contratto si scioglie come con *rimuovi maledizione*: la vena
+>   sparisce, filo, voce e riscossione si spengono. L'anticipo già speso resta
+>   speso.
+> - *Dawn's Defiance* dell'Anello spezza solo la voce (clausola 5), non il
+>   debito.
+
+**Quello che il foglio non dice, e il DM sa.** Il creditore è Varis, e
+*identificare* non rivela il suo nome, le sue intenzioni né il legame con il
+Collezionista. Per Artemis l'incastonatura nell'Anello della clausola 2 è
+proprio quello che Varis gli chiede. La firma della bottega si vede solo
+alla luce dell'incantesimo; i PG la rivedranno a Rethmar, sull'insegna di Varis, e
+allora capiranno. A ≈372 DR Varis nascerà fra quasi mille anni: se qualcuno
+firma lì, al ritorno nel 1372 Varis scopre un debitore che ha firmato mille
+anni prima di lui, e per un mercante non c'è niente di più interessante.
 
 #### La scena al tavolo — l'ora della pergamena
 
@@ -1241,11 +1299,14 @@ non c'è niente di più interessante.
 4. **Il posto.** Brynja non la vuole sull'incudine della cappella («non qui»,
    una volta, e la seconda più piano). Kettra la lascia fare nella bottega,
    dietro la porta foderata di piombo.
-5. **Il DM legge le clausole** 1-8 a voce, nell'ordine, poi la firma della
-   bottega. Niente sul creditore.
+5. **Il DM legge il contratto.** Alla fine dell'ora, prima il read-aloud qui
+   sotto, poi il contratto del riquadro «Il contratto del Seme, per intero»,
+   a voce e in due tempi, con una pausa dopo la clausola 4. Poi consegna ad
+   Artemis il foglio, con il riquadro delle regole. Niente sul creditore.
 6. **Dopo**, il gruppo decide: estirparlo (CD 20), tenerlo com'è, darlo a
    qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
-   sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
+   sopra, con la correzione del paragrafo «A ≈372 DR il creditore non c'è
+   ancora» per chi firma a ≈372 DR.
 
 > **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
 > si accartoccia in cenere tiepida. Sotto il guanto la gemma pesa e scalda

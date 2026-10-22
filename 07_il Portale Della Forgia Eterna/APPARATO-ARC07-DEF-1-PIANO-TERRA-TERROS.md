@@ -43,8 +43,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 3 | qui chiedono una prova di Destrezza | 20 |
 | SCENA 4 | Osservare | 18 |
 | SCENA 5 | Sapienza Magica | 20 |
-| SCENA 5 | Volontà | 16 |
-| SCENA 5 | maledizione con prova di livello dell'incantatore | 20 |
+| SCENA 5 | Suggestion), tiro salvezza sulla Volontà (Will) | 16 |
+| SCENA 5 | Sapienza Magica (Spellcraft) | 20 |
+| SCENA 5 | Magic) con prova di livello dell'incantatore | 20 |
+| SCENA 5 | + livello dell'incantatore, massimo +20) contro | 20 |
 | SCENA 5 | Usare Oggetti Magici | 21 |
 | SCENA 5 | estirparlo | 20 |
 | SCENA 6 | Conoscenze (Arcane) | 18 |
@@ -112,6 +114,10 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 4 | il giardino dei cristalli | BG3 lead, Salvatore support | 8 |
 | SCENA 5 | il corridoio, 1 di 2 | Salvatore lead, solo per Artemis | 4 |
 | SCENA 5 | il corridoio, 2 di 2 | Salvatore lead, Andor support | 9 |
+| SCENA 5 | Dentro la pietra, in scrittura fitta da libro mastro: | — | 10 |
+| SCENA 5 | 3. Al debitore, una volta sola, l'anticipo: il Frammento di Mercato. V | — | 6 |
+| SCENA 5 | 5. Il creditore parla al debitore nella testa, un minuto al giorno. Un | — | 9 |
+| SCENA 5 | 8. Dopo la firma, il contratto si chiude pagando la riscossione. Lo sc | — | 6 |
 | SCENA 5 | per Artemis, alla fine dell'ora | Andor lead | 6 |
 | SCENA 6 | l'oceano di roccia e il cubo sospeso | LotR lead, Salvatore support | 9 |
 | SCENA 6 | il muro | LotR lead | 2 |
