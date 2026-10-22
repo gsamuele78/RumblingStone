@@ -15,6 +15,15 @@
 > CONSEGUENZE.md` (ARC-09, per struttura); `Cerimonia-delle-100-Asce.md`
 > (per tono).
 
+<!-- storico -->
+> 🧭 **Perché questo file è cambiato così spesso (ottobre 2026).** Dal
+> 2026-10-17 al 2026-10-18 sono state chiuse le marche INFERRED. Il
+> 2026-10-19 sono entrate le dodici decisioni del giro (D9-D20) e la presa
+> in bocca di Fauci. Il 2026-10-21 il flashback dei pregen ha preso il
+> libretto della battaglia campale (ADR-0096), le carte dei poteri e
+> l'avanguardia nella Sessione 1, e il §5.3 dà al Re gli 8 pf al Cuore.
+<!-- /storico -->
+
 ---
 
 ## 0. Regola d'oro — gli esiti NON sono un copione

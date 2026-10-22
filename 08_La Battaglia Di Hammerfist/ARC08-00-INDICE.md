@@ -7,6 +7,15 @@
 > **non ancora giocato** — piano ARC-08 A0). **Ultima revisione**:
 > 2026-10-21.
 
+<!-- storico -->
+> 🧭 **Perché questo indice è cambiato così spesso (ottobre 2026).** Il
+> 2026-10-16 il censimento delle versioni ha mandato sei file superati in
+> `_ARCHIVIO`. Fra il 2026-10-21 e il 2026-10-22 sono entrati i file del
+> flashback dei pregen: handout 0, libretto della battaglia campale
+> (ADR-0096), master della Sessione 1 (`ARC08-DEF-1`) e della Sessione 2
+> (`ARC08-DEF-2`); ogni nuovo master ha preso la sua riga qui.
+<!-- /storico -->
+
 ---
 
 ## 1. Posizione nella campagna

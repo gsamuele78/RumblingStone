@@ -5,6 +5,18 @@
 
 ---
 
+<!-- storico -->
+> 🧭 **Perché questa guida è cambiata così spesso (ottobre 2026).** Dal
+> 2026-10-16 al 2026-10-18 villain, alleati e pregen sono passati alla
+> versione più forte e le marche INFERRED decidibili sono state chiuse.
+> Il 2026-10-19 e il 2026-10-20 sono entrati il giro dal 3B alla Cerimonia
+> (ADR-0094) e la presa in bocca di Fauci contro Thorik, con i colpi
+> mirati da PF1e. Il 2026-10-21 e il 2026-10-22 la Sessione 1 e la
+> Sessione 2 dei pregen sono passate nei master `ARC08-DEF-1` e
+> `ARC08-DEF-2`, e le mappe della fortezza hanno preso le quote a gradoni
+> (ADR-0098). Qui restano i rimandi a quei master.
+<!-- /storico -->
+
 ## **INDICE DEL DOCUMENTO**
 
 1.  **Introduzione e Struttura della Campagna**
