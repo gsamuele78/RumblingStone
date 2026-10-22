@@ -376,7 +376,7 @@
 <rect x="550" y="668" width="112" height="112" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
 <text x="554" y="681" font-size="10.5" font-weight="bold" fill="#2c2313">Relitto del ponte levatoio nel fossato (crollato il Giorno 2)</text>
 <rect x="410" y="556" width="392" height="56" rx="4" fill="none" stroke="#2c2313" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.75"/>
-<text x="414" y="569" font-size="10.5" font-weight="bold" fill="#2c2313">Cono del soffio, 18 m: acido 14d4, Riflessi CD 25 dimezza</text>
+<text x="414" y="569" font-size="10.5" font-weight="bold" fill="#2c2313">Cono del soffio, 18 m: acido 14d4, Riflessi CD 29 dimezza</text>
 <path d="M1012 794L648 738" fill="none" stroke="#ffffff" stroke-width="3.6" opacity="0.55" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M1012 794L648 738" fill="none" stroke="#1d6fd8" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="1012" cy="794" r="3.4" fill="#1d6fd8" stroke="#ffffff" stroke-width="1"/>
@@ -459,7 +459,7 @@
 <rect x="46" y="1093" width="15" height="12" rx="2" fill="none" stroke="#2c2313" stroke-width="1.4" stroke-dasharray="4 3"/>
 <text x="68" y="1104" font-size="11" fill="#3b2e1e">S22–V25 — Relitto del ponte levatoio nel fossato (crollato il Giorno 2)</text>
 <rect x="46" y="1108" width="15" height="12" rx="2" fill="none" stroke="#2c2313" stroke-width="1.4" stroke-dasharray="4 3"/>
-<text x="68" y="1119" font-size="11" fill="#3b2e1e">N18–AA19 — Cono del soffio, 18 m: acido 14d4, Riflessi CD 25 dimezza</text>
+<text x="68" y="1119" font-size="11" fill="#3b2e1e">N18–AA19 — Cono del soffio, 18 m: acido 14d4, Riflessi CD 29 dimezza</text>
 <text x="46" y="1153" font-size="12" font-weight="bold" fill="#3b2e1e" letter-spacing="2">LEGENDA</text>
 <path d="M120 1149H1166" stroke="#7a6a50" stroke-width="0.7" opacity="0.7"/>
 <rect x="46.0" y="1159" width="19" height="15" fill="url(#t_deep)" stroke="#7a6a50" stroke-width="0.7"/>

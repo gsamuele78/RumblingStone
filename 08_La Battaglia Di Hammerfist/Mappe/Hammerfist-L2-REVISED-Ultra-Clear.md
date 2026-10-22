@@ -760,12 +760,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone W14-AF21 ; Bastione G2, 15 m sul cortile esterno: 15 × 12 m
 @zone S18-V20 ; Sopra il cancello, 15 m sul cortile esterno: il cancello è sotto, sfondato
 @zone S22-V25 ; Relitto del ponte levatoio nel fossato (crollato il Giorno 2)
-@zone N18-AA19 ; Cono del soffio, 18 m: acido 14d4, Riflessi CD 25 dimezza
+@zone N18-AA19 ; Cono del soffio, 18 m: acido 14d4, Riflessi CD 29 dimezza
 ```
 
 ### ⚡ MECCANICA DEL SOFFIO (round 4 della sequenza della guida):
 - **Area:** cono di acido 18 m centrato su **Re Thorek (T19)**: copre la piattaforma sopra il cancello e il bordo interno dei due bastioni (N-AA, righe 17-21)
-- **Danni:** 14d4 acido (media 35) · **TS:** Riflessi **CD 25** dimezza `[l'atlante riporta CD 29 — scegliere prima della sessione]`
+- **Danni:** 14d4 acido (media 35) · **TS:** Riflessi **CD 29** dimezza (scheda del Bestiario)
 - **Bersagli tipici:** Re Thorek + Borin + 12 Guardie Reali sulla piattaforma (6-8 guardie KO probabili)
 - **Effetti collaterali:** armature 1d4 danni permanenti CA; armi metalliche 25% corrose; quadretti colpiti = terreno difficile (acido residuo, 10 min)
 
