@@ -161,7 +161,8 @@ giro.
 
 | Cosa | Le versioni | Scelta del libretto |
 |---|---|---|
-| Massi dei giganti | AU +14 (`ARC08-02`), 3d8 a 120 m (`Mappe` L2), 2d8+12 (scontri) | la carta usa **AU +14**, la scheda dell'unità |
+| Massi dei giganti | AU +14 (`ARC08-02`), 3d8 dal gomito della strada a ~100 m, incremento 36 m (`Mappe` L2), 2d8+12 (scontri) | la carta usa **AU +14**, la scheda dell'unità |
+| Riserva | 30 nani senza postazione nel cortile esterno, che il DM manda alla breccia (DM, 2026-10-22; `Mappe` L2, MAPPA 2) | nel libretto (§1) entra nel settore che cede come terzo reparto della schiera, e non torna indietro `[INFERRED]` |
 | Baliste | 6 con AU +10 (`ARC08-02`), 10 a +18 (`Mappe` L2), 12 (archivio) | una per torre, **d20 + 10**, perché nel libretto le altre stanno sui settori senza giocatore |
 | Carica | +2 att/−1 CA, +2 att/+2 danni/+1 morale (due righe di `mass_combat_guide_Dm.md`) | l'ordine **Caricare**: +2 al rosso, −2 al bianco |
 | Comandare | Car CD 15 (`ARC08-02`), Diplomazia CD 18 (`ARC08-01`) | il gesto **Comandare** senza prova |

@@ -1014,6 +1014,6 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 
 **Capacità Speciali:**
 *   **Operare Baliste Pesanti (6 totali):**
-    *   **Balista Pesante Nanica:** AU +10, Danno 3d8, Gittata 120m. Richiede un round per ricaricare.
+    *   **Balista Pesante Nanica:** AU +10, Danno 3d8, incremento di gittata 36 m (SRD). Richiede un round per ricaricare.
 *   **Riparazione Rapida (3/giorno):** Ripristina 1d4 danni strutturali a una sezione di mura o a un cancello.
 *   **Trappole (1/battaglia):** La prima unità nemica che attraversa un'area di 6m subisce 2d6 danni.

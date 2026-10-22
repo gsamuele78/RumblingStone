@@ -24,7 +24,7 @@
 > file che li definisce, e la differenza va segnalata.
 >
 > Sistema: D&D 3.5 SRD (max PF1e), MAI 5e. Italiano, CD non DC. Scala delle
-> mappe tattiche 1,5 m/quadretto (la vista strategica 1A-3 è a 6 m).
+> mappe tattiche 1,5 m/quadretto (la vista strategica 1A-3 è a 3 m).
 <!-- /apparato -->
 
 > **La serata in tre frasi.** Tre giorni prima dell'assedio, quattro nani di
@@ -725,7 +725,7 @@ dorme mai». È la leva contro Gorthak (§7).
 #### Fase 3 — La vista sul campo (MAPPA 1A-3)
 
 > 🗺️ `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-3 REVISED, vista
-> strategica a 6 m per quadretto, con la tabella delle forze. È una mappa da
+> strategica a 3 m per quadretto, con la tabella delle forze. È una mappa da
 > guardare, non da giocare.
 
 **Il tempo.** Dalla cima del torrione Dara ha **cinque round** prima che le
@@ -1556,7 +1556,7 @@ Le mappe della ricognizione sono già in griglia, e non si ricopiano:
 
 - **MAPPA 1A-1** — Il Sentiero Nascosto, 20 × 100 a 1,5 m;
 - **MAPPA 1A-2** — Il Torrione di Vedetta, 40 × 40 a 1,5 m;
-- **MAPPA 1A-3** — Il campo della Mano Rossa, vista strategica, 40 × 50 a 6 m;
+- **MAPPA 1A-3** — Il campo della Mano Rossa, vista strategica, 60 × 60 a 3 m;
 
 tutte in `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md`, con gli SVG in
 `Mappe/rendered/`. Sotto c'è la mappa nuova del pendio, la stessa che sta in
@@ -1597,6 +1597,9 @@ LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa
 @zone I10-J11 ; Boscaglia
 @path Verso la cresta (400 m a sud) ; F7 F9 G10 G12 ; #8a5a2b
 @tipo tattica esterno
+@luogo Hammerfist, pendio sotto le mura
+@quota 945 m ; s.l.m., il piede della cinta
+@dislivello +75 m ; sulla piana, che comincia 300 m più a sud
 ```
 
 - **Tipo / scala**: tattica, 12 × 12 quadretti da 1,5 m, cioè 18 × 18 m.

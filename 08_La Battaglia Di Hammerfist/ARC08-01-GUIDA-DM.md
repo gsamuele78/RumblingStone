@@ -1123,8 +1123,8 @@ Incantesimi chiave: Veste Magica, Resistenza all'Energia.
 
 ### **UNITÀ DI BATTAGLIA COMPLETE: ESERCITO DI HAMMERFIST**
 
-#### **GUERRIERI NANICI VETERANI (15 Unità, 150 creature)**
-*Difensori delle Mura*
+#### **GUERRIERI NANICI VETERANI (13 Unità, 130 creature)**
+*Difensori delle Mura. Due unità sono le Guardie Reali del Re. Il conto delle quattro specialità fa 300 (13 + 8 + 5 + 4 unità da 10): 270 alle postazioni e 30 di riserva nel cortile esterno, che il DM manda alla breccia (MAPPA 2 REVISED della L2, DM 2026-10-22).*
 ```
 STATISTICHE UNITÀ: 10 Nani Guerrieri 5° per unità
 - PF Unità: 11/11 | CA Unità: 20 | Morale: +1
@@ -1184,7 +1184,7 @@ Att Ascia da Battaglia +9 (1d8+4/x3).
 STATISTICHE UNITÀ: 10 Nani Esperti 4° per unità
 - PF Unità: 8/8 | CA Unità: 16 | Morale: -1
 - Attacco Unità: +4 (Martello da Guerra)
-- Capacità: Operano 6 Baliste Pesanti Naniche (3d8 danni, gittata 120m), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
+- Capacità: Operano 6 Baliste Pesanti Naniche (3d8 danni, incremento di gittata 36 m), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
 ---
 STATISTICHE CREATURA SINGOLA (Esperto Nano di 4° liv.):
 GS 3; 
@@ -1254,6 +1254,8 @@ I giocatori possono scegliere tra:
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED (griglia di regia 60×108, 3 m/q — stesse fasce, con rotte delle fasi)
 ```
 SCALA: Ogni carattere ~ 10 metri
+PENDIO: le mura sono 80 m sopra la piana; 300 m di pendio e una strada a tornanti.
+Gli accampamenti sono sulla piana, a 500 m-1 km, fuori mappa.
                     NORD ↑
 
 ---------------------- 300m ----------------------
@@ -1263,7 +1265,8 @@ SCALA: Ogni carattere ~ 10 metri
       🟠 War Adepts (20) - Artiglieria Magica Sparsa 🟠
 
 ---------------------- 200m ----------------------
-   [🟠 Giganti x8] [🟠 Ettin x2] - Linea di Bombardamento Pesante
+   [🟠 Giganti x8] [🟠 Ettin x2] - Bombardamento: da qui non tirano (il masso arriva a 180 m),
+                                   salgono la strada fino al gomito a ~100 m
 
 ---------------------- 170m ----------------------
              🔴 GENERALE GRIMJAW + 🟠 Orog Guardie (4) - COMANDO CENTRALE
@@ -1303,30 +1306,30 @@ SCALA: Ogni carattere ~ 5 metri
 
 ╔═══════════════════════════[CANCELLO PRINCIPALE]═══════════════════════════╗
 ║ BASTIONE SUD (G1)                                               BASTIONE SUD (G2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 3 Unità Veterani                                             🛡️ 3 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║ [N] NALA (infiltrazione/sabotaggio)                                             ║
 ║ -------------------------- CORTILE ESTERNO --------------------------         ║
 ║                🛡️ 5 Unità Nani d'Élite (Davanti al Cancello) 🛡️                 ║
 ║                        [B] BORIN (comando prima linea)                          ║
-║                                                                               ║
+║   🛡️ RISERVA: 3 Unità (2 Balestrieri, 1 Veterani) → il DM la manda alla breccia ║
 ╠═══════════════════════[PORTA INTERNA]══════════════════════════╣
 ║                                                                               ║
-║ -------------------------- CORTILE INTERNO --------------------------         ║
+║ ---------------- CORTILE INTERNO (+20 m, oltre la scarpa) ----------------    ║
 ║                     👑 RE THOREK + GUARDIE REALI (2 Unità)                     ║
 ║                       ⚡ COMANDO CENTRALE ⚡                                   ║
-║     [RISERVA: 5 Unità Guerrieri]      [INGEGNERI PRONTI]                       ║
+║     [INGEGNERI PRONTI]                                                        ║
 ║                                                                               ║
 ║ ⛪ MADRE DANA + Chierici    🎵 CANTITRICI      [T] THORIN (supporto divino)    ║
 ║                                                                               ║
 ║ --- Salita ai Bastioni Nord ---                           --- Salita ai Bastioni Nord --- ║
 ║                                                                               ║
 ║ BASTIONE NORD (B1)                                              BASTIONE NORD (B2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 2 Unità Veterani                                             🛡️ 2 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ╠═══════════════════════════(Mura Interne)═══════════════════════════╣
 ║ 🏰 TORRE OVEST                                                    🏰 TORRE EST ║
-║ 🏹 2 Unità Balestrieri                                          🏹 2 Unità Balestrieri ║
+║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║    [D] DARA (cecchino/osservatore)                                                ║
 ║    2 Baliste Pesanti                                            2 Baliste Pesanti     ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
@@ -1388,7 +1391,7 @@ SCALA: Ogni quadrato (##) ~ 3x3 metri
    |            |     | |                          |  |    |           |            |
 ======================[██ CANCELLO PRINCIPALE ██]======================[PONTE LEVATOIO]====
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOSSATO (Livello -3m) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/////////////////////// TERRENO IN SALITA (Pendenza 15%) ///////////////////////
+////////// PENDIO ~27% (80 m in 300 m); STRADA A TORNANTI AL 15% //////////
 ```
 
 ### **C) Vista Laterale (Sezione Trasversale Sud -> Nord)**
@@ -1396,11 +1399,14 @@ SCALA: Ogni quadrato (##) ~ 3x3 metri
 
 ```
 SCALA: Orizzontale ~ 20m per sezione | Verticale ~ 3m per livello
+QUOTE (sul cortile esterno, che è +80 m sulla piana): scarpa di 20 m con due scale,
+cortile interno +20 m, bastioni nord +40 m. La fortezza del 372 era il cortile
+interno e la torre nord; il ripiano esterno era la spianata degli arieti.
 
                                                                    (MONTAGNA)
                                                                     /
                                                                    /
-                                     BASTIONE NORD (+15m) ---------/
+                                     BASTIONE NORD (+40m) ---------/
                                      |                           /
                                      | (Rampa)                  /
           PORTA INTERNA              |                         /
@@ -1424,7 +1430,7 @@ ATTACCANTE
 ```
                     NORD ↑
 FASE 1: BOMBARDAMENTO (Round 1-5)
-   - I Giganti (a 200m) lanciano massi.
+   - I Giganti partono a ~210 m, salgono la strada fino al gomito a ~100 m e da lì lanciano massi.
    - I Maghi (a 250m) lanciano incantesimi ad area.
    - Le linee di fanteria avanzano fino a 80m.
 
@@ -1598,7 +1604,7 @@ Le Cantitrici devono completare il loro rituale (5 round) ma sono vulnerabili du
 ## **GIORNO 3: IL SOFFIO DELLA DISPERAZIONE**
 
 ### **INTRODUZIONE GIORNO 3:**
-> *"L'alba del terzo giorno è rossa come il sangue versato. Le difese esterne sono crollate, i cortili sono pieni di macerie, e i superstiti nanici si sono ritirati sui bastioni più alti. Fauci di Palude si libra alto nel cielo mattutino, le sue scaglie nere che brillano come ossidiana bagnata. Il drago ha un piano, e i suoi occhi gialli fissano direttamente la posizione di Re Thorek sui bastioni centrali."*
+> *"L'alba del terzo giorno è rossa come il sangue versato. Le difese esterne sono crollate, i cortili sono pieni di macerie, e i superstiti nanici tengono ancora i bastioni del cancello. Fauci di Palude si libra alto nel cielo mattutino, le sue scaglie nere che brillano come ossidiana bagnata. Il drago ha un piano, e i suoi occhi gialli cercano Re Thorek."*
 
 ### **FASE C: COLLASSO DIFENSIVO E RITIRATA (Turni 16-20)**
 *Le forze naniche sono costrette ad abbandonare le mura esterne e a ritirarsi nel cortile interno.*
@@ -1621,13 +1627,15 @@ Le Cantitrici devono completare il loro rituale (5 round) ma sono vulnerabili du
 **INCONTRO BOSS 2E: Il Soffio della Morte**
 
 **Leggere:**
-> *"Fauci di Palude si alza a un'altitudine impossibile, così in alto che diventa un punto nero contro il sole. Poi, come un meteorite vivente, si tuffa in picchiata verso i bastioni dove Re Thorek sta dirigendo gli ultimi disperati tentativi di resistenza. Il vento del passaggio del drago fa tremare le bandiere, e potete vedere le sue fauci aprirsi rivelando un abisso di morte acida. 'QUESTA È LA FINE!' ruggisce con voce che fa crollare le pietre. Il suo soffio si riversa sui bastioni come una cascata di dissoluzione."*
+> *"Fauci di Palude si alza a un'altitudine impossibile, così in alto che diventa un punto nero contro il sole. Poi, come un meteorite vivente, si tuffa in picchiata verso il cancello, dove Re Thorek è salito al suono del corno per tenere i suoi ai loro posti. Il vento del passaggio del drago fa tremare le bandiere, e potete vedere le sue fauci aprirsi rivelando un abisso di morte acida. 'QUESTA È LA FINE!' ruggisce con voce che fa crollare le pietre. Il suo soffio si riversa sui bastioni come una cascata di dissoluzione."*
 
 
 <div style="page-break-before:always"></div>
 
 #### **INCONTRO 2B: IL SOFFIO DELLA DISPERAZIONE**
 *Obiettivo: Sopravvivere all'attacco mirato del drago e ritirarsi nel cuore della montagna.*
+
+> **Dove sta il Re** (DM, 2026-10-22): al corno del drago Re Thorek sale sulla piattaforma sopra il cancello, fra i bastioni G1 e G2, perché i nani restino ai loro posti. Il soffio lo prende lì, e lo prende lui. La MAPPA 2A REVISED (POSIZIONI) e la 2B-CORRETTA lo mettono nello stesso punto, sopra l'androne.
 
 > **📎 Regia, l'eco del re** (Casa di Davide): Fauci punta Re Thorek come il suo capostipite, nel ≈372, puntava Re Thorek I nel cortile. Vuole un re davanti all'orda, come lui (`07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Scena 11, «Un re l'ho già mangiato, qui» e «Il re»). Il DM non lo spiega: chi ha giocato quel duello lo riconosce da solo, e chi non l'ha giocato vede un drago che sceglie il bersaglio con calma. La presa in bocca non c'entra: Fauci la tiene per Thorik (`ARC08-02` §1, «La presa di Thorik»).
 
@@ -1660,6 +1668,7 @@ BASTIONI CENTRALI - ATTACCO AEREO (60m x 39m)
 ▓  ↓ SCALE AL CORTILE ESTERNO ↓     ▓
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ```
+Lo schizzo è quello della prima stesura: la ZONA OBIETTIVO è la piattaforma sopra il cancello, fra i due bastioni.
 
 <div style="page-break-before:always"></div>
 
@@ -3139,6 +3148,8 @@ CERIMONIA DELLE ASCE - TRAMONTO
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED (griglia di regia 60×108, 3 m/q)
 ```
 SCALA: Ogni carattere ~ 10 metri
+PENDIO: le mura sono 80 m sopra la piana; 300 m di pendio e una strada a tornanti.
+Gli accampamenti sono sulla piana, a 500 m-1 km, fuori mappa.
                     NORD ↑
 
 ---------------------- 300m ----------------------
@@ -3148,7 +3159,8 @@ SCALA: Ogni carattere ~ 10 metri
       🟠 War Adepts (20) - Artiglieria Magica Sparsa 🟠
 
 ---------------------- 200m ----------------------
-   [🟠 Giganti x8] [🟠 Ettin x2] - Linea di Bombardamento Pesante
+   [🟠 Giganti x8] [🟠 Ettin x2] - Bombardamento: da qui non tirano (il masso arriva a 180 m),
+                                   salgono la strada fino al gomito a ~100 m
 
 ---------------------- 170m ----------------------
              🔴 GENERALE GRIMJAW + 🟠 Orog Guardie (4) - COMANDO CENTRALE
@@ -3185,30 +3197,30 @@ SCALA: Ogni carattere ~ 5 metri
 
 ╔═══════════════════════════[CANCELLO PRINCIPALE]═══════════════════════════╗
 ║ BASTIONE SUD (G1)                                               BASTIONE SUD (G2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 3 Unità Veterani                                             🛡️ 3 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║ [N] NALA (infiltrazione/sabotaggio)                                             ║
 ║ -------------------------- CORTILE ESTERNO --------------------------         ║
 ║                🛡️ 5 Unità Nani d'Élite (Davanti al Cancello) 🛡️                 ║
 ║                        [B] BORIN (comando prima linea)                          ║
-║                                                                               ║
+║   🛡️ RISERVA: 3 Unità (2 Balestrieri, 1 Veterani) → il DM la manda alla breccia ║
 ╠═══════════════════════[PORTA INTERNA]══════════════════════════╣
 ║                                                                               ║
-║ -------------------------- CORTILE INTERNO --------------------------         ║
+║ ---------------- CORTILE INTERNO (+20 m, oltre la scarpa) ----------------    ║
 ║                     👑 RE THOREK + GUARDIE REALI (2 Unità)                     ║
 ║                       ⚡ COMANDO CENTRALE ⚡                                   ║
-║     [RISERVA: 5 Unità Guerrieri]      [INGEGNERI PRONTI]                       ║
+║     [INGEGNERI PRONTI]                                                        ║
 ║                                                                               ║
 ║ ⛪ MADRE DANA + Chierici    🎵 CANTITRICI      [T] THORIN (supporto divino)    ║
 ║                                                                               ║
 ║ --- Salita ai Bastioni Nord ---                           --- Salita ai Bastioni Nord --- ║
 ║                                                                               ║
 ║ BASTIONE NORD (B1)                                              BASTIONE NORD (B2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 2 Unità Veterani                                             🛡️ 2 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ╠═══════════════════════════(Mura Interne)═══════════════════════════╣
 ║ 🏰 TORRE OVEST                                                    🏰 TORRE EST ║
-║ 🏹 2 Unità Balestrieri                                          🏹 2 Unità Balestrieri ║
+║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║    [D] DARA (cecchino/osservatore)                                                ║
 ║    2 Baliste Pesanti                                            2 Baliste Pesanti     ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
@@ -3263,17 +3275,20 @@ SCALA: Ogni quadrato (##) ~ 3x3 metri
    |            |     | |                          |  |    |           |            |
 ======================[██ CANCELLO PRINCIPALE ██]======================[PONTE LEVATOIO]====
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOSSATO (Livello -3m) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/////////////////////// TERRENO IN SALITA (Pendenza 15%) ///////////////////////
+////////// PENDIO ~27% (80 m in 300 m); STRADA A TORNANTI AL 15% //////////
 ```
 
 #### **C) Vista Laterale (Sezione Trasversale Sud -> Nord)**
 ```
 SCALA: Orizzontale ~ 20m per sezione | Verticale ~ 3m per livello
+QUOTE (sul cortile esterno, che è +80 m sulla piana): scarpa di 20 m con due scale,
+cortile interno +20 m, bastioni nord +40 m. La fortezza del 372 era il cortile
+interno e la torre nord; il ripiano esterno era la spianata degli arieti.
 
                                                                    (MONTAGNA)
                                                                     /
                                                                    /
-                                     BASTIONE NORD (+15m) ---------/
+                                     BASTIONE NORD (+40m) ---------/
                                      |                           /
                                      | (Rampa)                  /
           PORTA INTERNA              |                         /

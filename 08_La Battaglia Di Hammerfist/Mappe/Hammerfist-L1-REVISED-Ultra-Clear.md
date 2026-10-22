@@ -4,7 +4,7 @@
 > **Stato**: canonico — **master tattico completo della Sessione 1** (piano
 > ARC-08, lotto MAPPE-UC 2026-07-23). Copre in griglia ultra-clear TUTTE le
 > mappe della sessione: **1A-2** (Torrione, sotto), **1A-1** (Sentiero
-> Nascosto), **1A-3** (Campo della Mano Rossa, griglia strategica) e **1D**
+> Nascosto), **1A-3** (Campo della Mano Rossa, vista strategica) e **1D**
 > (il pendio dell'avanguardia).
 > Narrativa/immagini: `Atlante-Hammerfist-Mappe-COMPLETE.md` (master visivo).
 > Le griglie nuove sono compilate da JSON (Modalità 3, `compile_map_json.py`).
@@ -12,7 +12,7 @@
 ### Indice mappe di questo file
 1. **MAPPA 1A-2 REVISED** — Torrione di Vedetta (40×40, 1,5 m)
 2. **MAPPA 1A-1 REVISED** — Il Sentiero Nascosto (20×100, 1,5 m)
-3. **MAPPA 1A-3 REVISED** — Campo della Mano Rossa (40×50, 6 m/quadretto, strategica)
+3. **MAPPA 1A-3 REVISED** — Campo della Mano Rossa (60×60, 3 m/quadretto, strategica)
 4. **MAPPA 1D** — Il pendio sotto le mura, l'avanguardia (12×12, 1,5 m)
 
 ---
@@ -92,6 +92,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @zone W27-X28 ; Tenda 3 (2 hobgoblin dormienti)
 @zone V25-X26 ; Fuoco del campo hobgoblin
 @tipo tattica esterno
+@luogo Torrione di Vedetta, valle di Hammerfist
+@quota 930 m ; s.l.m., la base del torrione
+@dislivello +60 m ; sulla piana del campo, 400 m a est
 ```
 
 ### VISTA 2: PROSPETTIVA 3D (Guardando da Sud verso Nord)
@@ -463,6 +466,11 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 @zone N82-P84 ; Roccia 6 (N82-P84): copertura parziale +4 CA
 @zone G92-I94 ; Roccia 7 (G92-I94): copertura totale +8 CA
 @tipo tattica esterno
+@luogo Sentiero Nascosto, canyon di Hammerfist
+@quota 900 m ; s.l.m., il fondo del canyon a metà salita
+@dislivello +30 m ; sulla piana, alla bocca sud del canyon
+@deroga fazioni/lontane ; è una ricognizione furtiva: la pattuglia di worg gira lontana apposta, e il contatto è il fallimento della scena
+@deroga spazio/disperso ; il canyon è lungo 150 m perché la scena è la risalita, non lo scontro: si gioca a tratti, riga per riga
 ```
 
 ### 📍 POSIZIONI PRECISE CON COORDINATE:
@@ -533,105 +541,119 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T
 
 ---
 
-## MAPPA 1A-3 REVISED: CAMPO DELLA MANO ROSSA - GRIGLIA STRATEGICA
-**SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map03_mappa-1a-3-revised-campo-della-mano-rossa-grigli.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 240m × 300m (40 colonne × 50 righe) — **scala in deroga 6 m/quadretto (A4)**
-  ⚠️ Vista strategica dal Torrione (400 m): serve all'intelligence e alla regia, **NON al combattimento a quadretti**. Non mischiare quadretti di mappe a scale diverse.
+## MAPPA 1A-3 REVISED: CAMPO DELLA MANO ROSSA - VISTA STRATEGICA
+**SVG**: `rendered/Hammerfist-L1-REVISED-Ultra-Clear_map03_mappa-1a-3-revised-campo-della-mano-rossa-vista.svg` (rigenerare dopo ogni modifica)
+**Dimensioni:** 180m × 180m (60 colonne × 60 righe · **3 m/quadretto**, mappa strategica: `@tipo strategica`)
+**Contratto:** `fortezza-json/HF-1A3-campo-mano-rossa.json` (rifatta il 2026-10-22 sul modello della M7-C di ARC-07)
+**Dove sta:** sulla piana a 870 m s.l.m. `[INFERRED]`, a qualche miglio dalle mura (le sentinelle vedono solo polvere e fuochi: DEF-1, Zona 1). Il Torrione la guarda da 400 m. Quando l'assedio comincia, l'orda si riaccampa con lo stesso ordine a 500 m-1 km dalle mura, fuori tiro d'arco lungo (~330 m), e sale per la strada a tornanti (L2, MAPPA 1).
+  ⚠️ Vista strategica dal Torrione: serve all'intelligence e alla regia, **NON al combattimento a quadretti**. Le tende sono alla loro misura: il contubernium hobgoblin 3 × 3 m è un quadretto, la tenda nera del comando 18 × 12 m col telo. Non mischiare quadretti di mappe a scale diverse.
 **Incontro:** nessuno — osservazione (Dara col cannocchiale, Incontro 1A FASE 3)
 **Quando si usa:** Sessione 1 (master: `../ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Scena 4, Fase 3); stessa disposizione, vista dal lato fortezza, in `Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED
 
 ### 🎯 OBIETTIVO PG:
 **Dara osserva e conta: ogni soglia di Osservare superata = intelligence in più per la difesa (Sessione 2).**
 
-### VISTA 1: GRIGLIA STRATEGICA CON COORDINATE (40×50, 1 quadretto = 6 m)
+### VISTA 1: GRIGLIA STRATEGICA CON COORDINATE (60×60, 1 quadretto = 3 m)
 
 ```
-MAPPA 1A-3 REVISED: Campo della Mano Rossa (griglia strategica)
-COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
-DIMENSIONI: 40 colonne × 50 righe · 6 m/quadretto
-01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-05 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-09 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-10 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩
-11 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩
-12 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩
-13 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-14 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-15 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-16 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-17 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-18 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-19 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-20 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-21 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-22 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-23 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-24 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-25 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-26 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 ⚫ 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-27 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-28 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-29 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⚫ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-30 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ ⛺ 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-31 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-32 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-33 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-34 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-35 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟩 🟩 🟩 🎯 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-36 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-37 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-38 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-39 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-40 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-41 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-42 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-43 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-44 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-45 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-46 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-47 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-48 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-49 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-50 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+MAPPA 1A-3 REVISED: Campo della Mano Rossa (vista strategica)
+DIMENSIONI: 60 colonne × 60 righe · 3 m/quadretto
+COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH
+01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+05 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+07 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+09 🧱 🧱 🧱 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+10 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+11 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+12 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+13 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+14 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+15 🧱 🔴 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+16 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+17 🧱 🔴 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+18 🧱 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+19 🧱 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+20 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+21 🧱 🧱 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+22 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+23 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+24 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+25 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩
+26 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩
+27 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+28 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+29 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+30 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
+31 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩
+32 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+33 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 ⛺ 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 ⛺ 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩
+34 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+35 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+36 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+37 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+38 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩
+39 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🎪 🎪 🎪 🎪 🎪 🎪 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩
+40 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+41 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🔥 🟫 🟫 🟫 🟫 🟫 ⚫ 🟫 🟫 🟫 🟫 🔥 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩
+42 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+43 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+44 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟫 🟫 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🧱 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+45 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+46 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+47 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🎯 🟩 🎯 🟩 🟩 🟫 🟫 🟩 🟩 🎯 🟩 🎯 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+48 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚫ 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+49 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🛢 🟩 🛢 🟩 🛢 🟩 🛢 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🛢 🟩 🛢 🟩 🛢 🟩 🛢 🟩 🟩 🟩 🟩 🟩 ⛺ 🟩 🟩 ⛺ 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+50 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+51 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+52 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+53 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+54 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+55 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+56 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 ⚫ 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+57 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+58 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟣 🟣 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+59 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟣 🟣 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
+60 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧 💧
 
 @north N
-@mark 1 ; F11 ; Worg Riders (fianco sinistro) (GS 3 cad.)
-@mark 2 ; AJ11 ; Worg Riders (fianco destro) (GS 3 cad.)
-@mark 3 ; U15 ; Fanteria Orchesca (GS 1/2)
-@mark 4 ; U18 ; Fanteria Hobgoblin Standard (GS 1/2)
-@mark 5 ; U22 ; Hobgoblin Guerrieri Veterani + Sergenti (GS 1-2)
-@mark 6 ; U26 ; Gorthak il Trifronte (Ettin 3 teste, boss)
-@mark 7 ; O27 ; Doom Hand Warpriests (Chierici)
-@mark 8 ; Z27 ; Shamani Draconici (Adepti)
-@mark 9 ; U29 ; Generale Grimjaw (Orog War/Signore della Guerra)
-@mark 10 ; U30 ; Orog Guardie Nere (Elite)
-@mark 11 ; O35 ; Giganti delle Colline (GS 7 cad.)
-@mark 12 ; X35 ; Ettin (GS 6 cad.)
-@mark 13 ; U43 ; War Adepts (Incantatori)
-@mark 14 ; U48 ; Fauci di Palude + Cavaliere Hobgoblin (Drago Nero Adulto Avanzato)
-@path Pattuglia perimetrale worg (loop) ; D9 AK9 AK47 D47 loop ; #d62828
-@tipo tattica esterno
+@tipo strategica esterno
+@luogo Campo della Mano Rossa, piana di Hammerfist
+@quota 870 m ; s.l.m., la piana
+@dislivello 0 m ; sulla piana: Hammerfist è 80 m più in alto, a qualche miglio a nord
+@mark 1 ; AE41 ; Generale Grimjaw davanti alla tenda nera, coi capitani (Orog War/Signore della Guerra)
+@mark 2 ; AE42 ; Orog Guardie Nere (élite)
+@mark 3 ; AD48 ; Gorthak il Trifronte fra le catapulte (Ettin 3 teste, boss)
+@mark 4 ; U52 ; Giganti delle Colline, seduti per terra dietro i carri (GS 7 cad.)
+@mark 5 ; AN51 ; Ettin (GS 6 cad.)
+@mark 6 ; B15 ; Worg nel recinto, coi cavalieri goblin (GS 3 cad.)
+@mark 7 ; AE23 ; Doom Hand Warpriests e Shamani Draconici, sparsi fra i blocchi (chierici e adepti)
+@mark 8 ; AC30 ; Sentinelle hobgoblin ai varchi dello steccato
+@mark 9 ; AE59 ; Fauci di Palude, sommerso nell'acqua nera (Drago Nero Adulto Avanzato)
+@mark 10 ; AH56 ; Il cavaliere hobgoblin, in piedi sulla riva accanto alla sella
+@path Pattuglia perimetrale worg (loop) ; B3 BG3 BG52 B52 loop ; #d62828
+@zone AB36-AG39 ; La tenda nera di Grimjaw: padiglione a tre pali, 18 × 12 m col telo, sola in mezzo alla piazza
 ```
 
-### 📍 COMPOSIZIONE ESERCITO (900 unità, per fascia di distanza dal fossato):
+### 📍 COMPOSIZIONE DEL CAMPO (900 unità, per quartiere):
 
-| Fascia | Unità | Quantità | Note tattiche |
-|---|---|---|---|
-| 300 m (righe 47-50) | **Fauci di Palude** + Cavaliere Hobgoblin | 1 | drago nero adulto avanzato, QUOTA 45 m, pattuglia circolare |
-| 250 m (righe 42-43) | War Adepts | 20 | artiglieria magica sparsa (*Palla di Fuoco*, *Raggi*) |
-| 200 m (righe 34-35) | Giganti delle Colline + Ettin + 4 catapulte | 8+2 | massi: gittata 120 m, 3d8 |
-| 170 m (righe 29-30) | **Generale Grimjaw** + 4 Orog Guardie Nere | 5 | tenda comando, stendardi |
-| 150 m (righe 26-27) | **Gorthak** + 15 Warpriests + 10 Shamani | 26 | comando d'assalto e supporto |
-| 120 m (righe 21-23) | Hobgoblin Veterani + Sergenti | 230 | 2ª ondata pesante |
-| 100 m (righe 17-19) | Fanteria Hobgoblin Standard | 300 | 1ª ondata principale |
-| 80-90 m (righe 14-15) | Fanteria Orchesca | 150 | carne da cannone |
-| 60 m (righe 10-12) | Worg Riders (2 fianchi) | 25+25 | cavalleria d'aggiramento |
+| Quartiere | Dove | Chi | Quantità | Come si riconosce |
+|---|---|---|---|---|
+| Quartiere hobgoblin | sei centurie, E-U e AK-BA righe 05-19 | Fanteria Hobgoblin Standard + Veterani e Sergenti | 300 + 230 | 72 tende da 3 × 3 m in file, otto soldati a tenda, corsie da 3 m e vie da 6 m: «blocchi di cento, in quadrato» |
+| Via principale e via trasversale | AD-AE (nord-sud), righe 25-26 (est-ovest) | — | — | larghe 6 m, la principale sale verso la fortezza |
+| Piazza del comando | steccato V-AM righe 31-44, quattro varchi | **Generale Grimjaw** (AE41) + 4 Orog Guardie Nere | 5 | la tenda nera AB-AG 36-39, sola nella piazza sgombra; due tende delle guardie a 9 m, i falò lontani dal telo |
+| Chierici e adepti | sparsi fra i blocchi, AA-AH riga 23 | Doom Hand Warpriests + Shamani Draconici | 15 + 10 | tonache con la mano rossa dipinta |
+| Clan degli orchi | dieci fuochi ai fianchi della piazza, D-P e AS-BE righe 30-50 | Fanteria Orchesca | 150 | ripari di pelle storti attorno al fuoco della banda, un clan per fuoco |
+| Recinto dei worg | A-C righe 09-21 | Worg Riders | 25 + 25 | steccato contro il fianco ovest |
+| Parco d'assedio | S-AR righe 47-52 | **Gorthak** (AD48), 4 catapulte, carri e botti dei viveri, 8 Giganti delle Colline e 2 Ettin seduti dietro i carri | 1 + 8 + 2 | le figure «alte quanto le tende in piedi» |
+| War Adepts | con i chierici, la notte nelle tende dei capi | War Adepts | 20 | — |
+| La palude | righe 54-60 | **Fauci di Palude** sommerso (AD58), il cavaliere hobgoblin sulla riva (AH56) | 1 + 1 | l'acqua che si muove contro corrente |
+
+La disposizione di battaglia del Giorno 1, coi reparti sul pendio a 60-300 m dal fossato, è la MAPPA 1 REVISED di `Hammerfist-L2-REVISED-Ultra-Clear.md`: all'alba l'orda sale dagli accampamenti dell'assedio, a 500 m-1 km dalle mura, per la strada a tornanti e si schiera lì.
 
 ### 🎯 INTELLIGENCE A SOGLIE (Dara, Osservare — cinque round dalla cima):
 
@@ -645,8 +667,8 @@ DIMENSIONI: 40 colonne × 50 righe · 6 m/quadretto
 - Nessuna penalità di distanza; senza cannocchiale le CD salgono di 10. Le rotte d'approccio, il pendio davanti al Cancello, si vedono senza prova.
 
 ### 🌍 AMBIENTE / ⚔️ TATTICHE / 🔄 EVOLUZIONE
-- **Ambiente:** mappa d'intelligence — nessun terreno giocato; la pattuglia perimetrale worg (rotta tratteggiata) è l'unico elemento dinamico che può sorprendere osservatori troppo vicini.
-- **Tattiche:** l'ordine di battaglia sopra È la tattica nemica del Giorno 1 (bande da retro a fronte); vedi MAPPA 1 REVISED (L2) per la versione di regia con fasi e movimenti.
+- **Ambiente:** mappa d'intelligence — nessun terreno giocato; la pattuglia perimetrale worg (rotta tratteggiata) è l'unico elemento dinamico che può sorprendere osservatori troppo vicini. La piana è aperta: chi scende al campo di notte è visto (DEF-1, Scena 4).
+- **Tattiche:** il campo dice l'ordine di battaglia: gli hobgoblin in testa alla strada, gli orchi ai fianchi, il parco d'assedio e i giganti in coda; vedi MAPPA 1 REVISED (L2) per lo schieramento sul pendio con fasi e movimenti.
 - **Evoluzione:** dopo il Giorno 1 le quantità calano con le perdite (Registro: `../ARC08-03-REGISTRO-PERDITE.md`); rigiocare la conta è inutile — aggiorna la tabella FORZE.
 
 ---
@@ -696,6 +718,9 @@ LEGENDA · 🏰 la cinta, 12 m · 🟫 il sentiero · 🟩 il pendio, in discesa
 @zone I10-J11 ; Boscaglia
 @path Verso la cresta (400 m a sud) ; F7 F9 G10 G12 ; #8a5a2b
 @tipo tattica esterno
+@luogo Hammerfist, pendio sotto le mura
+@quota 945 m ; s.l.m., il piede della cinta
+@dislivello +75 m ; sulla piana, che comincia 300 m più a sud
 ```
 
 ---

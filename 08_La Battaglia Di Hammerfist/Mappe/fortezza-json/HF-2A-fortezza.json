@@ -55,7 +55,8 @@
     117.0,
     6.0,
     3.0
-   ]
+   ],
+   "label": "Strada a tornanti: dal ponte scende di 80 m fino alla piana (MAPPA 1)"
   }
  ],
  "structures": [
@@ -130,7 +131,7 @@
     6.0,
     3.0
    ],
-   "label": "PORTA INTERNA: la porta del 372 con la targa; luce 6 m, muro 3 m, +3 m, 90 pf"
+   "label": "PORTA INTERNA: la porta del 372 con la targa; luce 6 m, muro 3 m, in cima alla scarpa di 20 m (cortile interno a +100), 90 pf"
   },
   {
    "type": "🔳",
@@ -140,7 +141,7 @@
     12.0,
     12.0
    ],
-   "label": "Bastione Nord B1: 12 × 12 m, +15 m, 30 nani + 1 balista"
+   "label": "Bastione Nord B1: 12 × 12 m, terrazza a +120 m, 30 nani + 1 balista"
   },
   {
    "type": "🔳",
@@ -150,7 +151,7 @@
     12.0,
     12.0
    ],
-   "label": "Bastione Nord B2: 12 × 12 m, +15 m, 30 nani + 1 balista"
+   "label": "Bastione Nord B2: 12 × 12 m, terrazza a +120 m (la torre nord del 372), 30 nani + 1 balista"
   },
   {
    "type": "🧱",
@@ -196,7 +197,7 @@
     15.0,
     12.0
    ],
-   "label": "Bastione Sud G1 (Porta Ovest): 15 × 12 m, +15 m, 40 nani + 2 baliste"
+   "label": "Bastione Sud G1 (Porta Ovest): 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste"
   },
   {
    "type": "🔳",
@@ -206,7 +207,7 @@
     15.0,
     12.0
    ],
-   "label": "Bastione Sud G2: 15 × 12 m, +15 m, 40 nani + 2 baliste"
+   "label": "Bastione Sud G2: 15 × 12 m, 15 m sul cortile esterno, 40 nani + 2 baliste"
   },
   {
    "type": "🧱",
@@ -243,7 +244,7 @@
     6.0,
     1.5
    ],
-   "label": "CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf"
+   "label": "CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (950 m s.l.m.)"
   },
   {
    "type": "🌉",
@@ -441,6 +442,46 @@
     1.5
    ],
    "label": "Porta dell'atrio della cittadella (6 m): cade il Giorno 3"
+  },
+  {
+   "type": "🪜",
+   "rect": [
+    57.0,
+    63.0,
+    30.0,
+    3.0
+   ],
+   "label": "Scala ovest della scarpa: 30 m di rampa, sale di 20 m dal cortile esterno (+80) al pianerottolo della Porta Interna (+100)"
+  },
+  {
+   "type": "🪜",
+   "rect": [
+    93.0,
+    63.0,
+    30.0,
+    3.0
+   ],
+   "label": "Scala est della scarpa, gemella della ovest"
+  },
+  {
+   "type": "🔳",
+   "rect": [
+    87.0,
+    63.0,
+    6.0,
+    3.0
+   ],
+   "label": "Pianerottolo davanti alla Porta Interna, +100 m"
+  },
+  {
+   "type": "🏰",
+   "rect": [
+    58.5,
+    66.0,
+    63.0,
+    1.5
+   ],
+   "label": "Scarpa di 20 m fra il cortile esterno (+80) e il cortile interno (+100)"
   }
  ],
  "units": [
@@ -503,21 +544,6 @@
     52.5
    ],
    "cr": "Clr"
-  },
-  {
-   "faction": "Nani",
-   "name": "Guerrieri di Riserva",
-   "token": "🔵",
-   "area": {
-    "rect": [
-     72.0,
-     55.5,
-     36.0,
-     3.0
-    ]
-   },
-   "quantity": 50,
-   "cr": "GS 4"
   },
   {
    "faction": "Nani",
@@ -668,15 +694,42 @@
    },
    "quantity": 30,
    "cr": "GS 3-4"
+  },
+  {
+   "faction": "Nani",
+   "name": "Riserva del cortile esterno: 2 unità di balestrieri e 1 di veterani; il DM la manda dove si apre la breccia",
+   "token": "🔵",
+   "area": {
+    "rect": [
+     105.0,
+     82.5,
+     15.0,
+     3.0
+    ]
+   },
+   "quantity": 30,
+   "cr": "GS 3-4"
   }
  ],
  "movements": [
   {
-   "name": "Ritirata progressiva (esterno → Porta Interna → cortile interno → statua e tunnel)",
+   "name": "Ritirata progressiva (cortile esterno → scala ovest della scarpa → Porta Interna → cortile interno → statua e tunnel)",
    "path": [
     [
      88.5,
      79.5
+    ],
+    [
+     57.75,
+     70.5
+    ],
+    [
+     57.75,
+     64.5
+    ],
+    [
+     88.5,
+     64.5
     ],
     [
      88.5,
@@ -717,6 +770,15 @@
   }
  ],
  "notes": [
-  "Geometria di riferimento: tabella MISURE in testa a Hammerfist-L2-REVISED-Ultra-Clear.md (2026-10-21)."
+  "Geometria di riferimento: tabella MISURE in testa a Hammerfist-L2-REVISED-Ultra-Clear.md (2026-10-21); quote a gradoni decise dal DM il 2026-10-22 (+80 cortile esterno, +100 cortile interno, +120 torri e cittadella)."
+ ],
+ "luogo": "Hammerfist, porta principale",
+ "quota": "950 m ; s.l.m., la soglia del cancello principale",
+ "dislivello": "+80 m ; sulla piana, in fondo alla strada a tornanti",
+ "deroghe": [
+  {
+   "codice": "oggetti/porta-enorme",
+   "motivo": "il cancello, la Porta Interna e la porta dell'atrio hanno la luce di 6 m della tabella MISURE: sono portoni da fortezza, non porte"
+  }
  ]
 }

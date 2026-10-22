@@ -48,6 +48,14 @@ Giorno 1, insieme ai modi di gioco (§9):
 Il **fronte** è quanti reparti nemici ti stanno addosso nello stesso
 momento.
 
+**La riserva.** Hammerfist ha 300 nani, trenta reparti. Le quattro schiere ne
+usano otto; gli altri tengono le postazioni della MAPPA 2 (torri, bastioni,
+cortile interno, ingegneri) e non si giocano. Tre reparti non hanno posto:
+due di balestrieri e uno di veterani, fermi nel cortile esterno. Sono la
+**riserva**, e la manda il DM: quando un settore cede (§7), la riserva entra
+in quel settore come terzo reparto della schiera che lo tiene. Una volta
+mandata non torna indietro.
+
 ---
 
 ## 2. Il round in quattro passi
@@ -209,7 +217,7 @@ Ogni settore ha qualcosa che lo rende diverso. Vale per tutti i giorni, se non
 | Settore | Cosa c'è | Cosa vale |
 |---|---|---|
 | **Tutti** | mura e torri intatte | il primo giorno **+1** al bianco (§2) |
-| **Il Cancello** | il pendio fangoso davanti alla porta, stretto | il fronte è di tre, e l'orda in salita non allarga il fronte |
+| **Il Cancello** | la strada a tornanti che arriva al ponte, larga 6 m, col pendio ripido ai lati | il fronte è di tre, e l'orda in salita non allarga il fronte |
 | **Le Mura** | le merlature | **+1** al bianco **dal secondo giorno**, finché le Mura non hanno ceduto una volta (il primo giorno vale già il +1 di tutti) |
 | **Le torri** | venti metri d'altezza, una balista | i balestrieri sulle torri hanno **+1** al rosso e al bianco. **La balista**: ogni round il giocatore della torre tira anche d20 + 10 contro la DU di un reparto nemico del suo settore, con la tabella del rosso |
 | **I primi due giorni** | le trappole dell'avanguardia (§13) | ogni trappola **annulla una tacca del Giorno 1 o del Giorno 2**, nel settore che volete |
@@ -320,7 +328,7 @@ il DM racconta il conto.
 | **Guerrieri hobgoblin** | 8 | 20 | 11 | lenti, duri da finire |
 | **Orchi** | 9 | 16 | 8 | caricano a testa bassa: conviene **Caricare** |
 | **Lupi e goblin** | 9 | 19 | 10 | veloci, arrivano dai fianchi |
-| **Giganti** (carta) | 14 | — | — | lanciano macigni da lontano; non si attaccano dalle mura |
+| **Giganti** (carta) | 14 | — | — | lanciano macigni dal gomito della strada, a ~100 m; non si attaccano dalle mura |
 
 **Gli eroi.** Bonus d'attacco per **Combattere**, dalle schede del Bestiario:
 Borin **+21**, Dara **+19** (+25 contro gli orchi, +23 contro i giganti, +21

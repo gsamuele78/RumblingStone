@@ -85,7 +85,7 @@
     9.0,
     12.0
    ],
-   "label": "Bastione Nord B1 (+15 m)"
+   "label": "Bastione Nord B1, terrazza a +120 m (20 m sopra il cortile)"
   },
   {
    "type": "🧱",
@@ -104,7 +104,7 @@
     9.0,
     12.0
    ],
-   "label": "Bastione Nord B2 (+15 m)"
+   "label": "Bastione Nord B2, terrazza a +120 m: la torre nord del 372"
   },
   {
    "type": "🧱",
@@ -208,6 +208,46 @@
     78.0,
     24.0
    ]
+  },
+  {
+   "type": "🪜",
+   "rect": [
+    21.0,
+    37.5,
+    30.0,
+    3.0
+   ],
+   "label": "Scala ovest della scarpa: 30 m di rampa, sale di 20 m dal cortile esterno (+80) al pianerottolo (+100)"
+  },
+  {
+   "type": "🪜",
+   "rect": [
+    57.0,
+    37.5,
+    30.0,
+    3.0
+   ],
+   "label": "Scala est della scarpa, gemella della ovest"
+  },
+  {
+   "type": "🔳",
+   "rect": [
+    51.0,
+    37.5,
+    6.0,
+    3.0
+   ],
+   "label": "Pianerottolo davanti alla Porta Interna, +100 m"
+  },
+  {
+   "type": "🏰",
+   "rect": [
+    22.5,
+    40.5,
+    63.0,
+    1.5
+   ],
+   "label": "Scarpa di 20 m fra cortile esterno (+80) e cortile interno (+100)"
   }
  ],
  "hazards": [
@@ -336,14 +376,14 @@
   },
   {
    "faction": "Mano Rossa",
-   "name": "Orda dalla Porta Interna sfondata (SUD) (GS 1/2, avanzano 30 m/round)",
+   "name": "Orda salita dalle scale della scarpa (SUD) (GS 1/2)",
    "token": "🔴",
    "area": {
     "rect": [
-     48.0,
-     39.0,
-     12.0,
-     7.5
+     45.0,
+     43.5,
+     18.0,
+     6.0
     ]
    },
    "quantity": 120
@@ -379,11 +419,23 @@
  ],
  "movements": [
   {
-   "name": "Assalto orchi dalla PORTA INTERNA sfondata (SUD)",
+   "name": "Assalto orchi su per la scala ovest e dentro la PORTA INTERNA sfondata",
    "path": [
     [
+     45.0,
+     46.5
+    ],
+    [
+     22.5,
+     42.0
+    ],
+    [
+     22.5,
+     39.0
+    ],
+    [
      52.5,
-     45.0
+     39.0
     ],
     [
      52.5,
@@ -449,6 +501,19 @@
     ]
    ],
    "color": "#2c8c3c"
+  }
+ ],
+ "luogo": "Hammerfist, cortile interno",
+ "quota": "970 m ; s.l.m., il cortile interno",
+ "dislivello": "+20 m ; sul cortile esterno, oltre la scarpa",
+ "deroghe": [
+  {
+   "codice": "oggetti/fuoco-enorme",
+   "motivo": "sono incendi delle baracche ai lati della Porta Interna, non fuochi da campo: 6 × 3 m ciascuno"
+  },
+  {
+   "codice": "oggetti/porta-enorme",
+   "motivo": "la porta dell'atrio è il portone della cittadella, 6 m come nella tabella MISURE in testa alla L2"
   }
  ]
 }

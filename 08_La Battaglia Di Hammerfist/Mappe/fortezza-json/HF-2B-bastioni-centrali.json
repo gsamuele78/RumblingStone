@@ -58,7 +58,7 @@
     15.0,
     12.0
    ],
-   "label": "Bastione G1 (Porta Ovest), +15 m: 15 × 12 m"
+   "label": "Bastione G1 (Porta Ovest), 15 m sul cortile esterno: 15 × 12 m"
   },
   {
    "type": "🔳",
@@ -68,7 +68,7 @@
     15.0,
     12.0
    ],
-   "label": "Bastione G2, +15 m: 15 × 12 m"
+   "label": "Bastione G2, 15 m sul cortile esterno: 15 × 12 m"
   },
   {
    "type": "🔳",
@@ -78,7 +78,7 @@
     6.0,
     4.5
    ],
-   "label": "Sopra il cancello, +15 m: il cancello è sotto, sfondato"
+   "label": "Sopra il cancello, 15 m sul cortile esterno: il cancello è sotto, sfondato"
   },
   {
    "type": "🧱",
@@ -235,7 +235,7 @@
   },
   {
    "faction": "Nani",
-   "name": "Re Thorek XIII (Ftr/Nobile, PF 195)",
+   "name": "Re Thorek XIII (Ftr/Nobile, PF 195): salito sul cancello al corno del drago, per tenere i nani ai posti",
    "token": "🔵",
    "at": [
     28.5,
@@ -358,5 +358,17 @@
    ],
    "color": "#2c8c3c"
   }
- ]
+ ],
+ "taglie": [
+  {
+   "at": [
+    19,
+    23
+   ],
+   "taglia": "Enorme"
+  }
+ ],
+ "luogo": "Hammerfist, bastioni sud",
+ "quota": "965 m ; s.l.m., la piattaforma sopra il cancello",
+ "dislivello": "+15 m ; sul cortile esterno (+95 m sulla piana)"
 }
