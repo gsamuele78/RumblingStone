@@ -4420,7 +4420,7 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
 @luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
-@quota 1050 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 950 m]
+@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
 @dislivello +100 m ; sulla piana dell'orda, a sud
 ```
 
