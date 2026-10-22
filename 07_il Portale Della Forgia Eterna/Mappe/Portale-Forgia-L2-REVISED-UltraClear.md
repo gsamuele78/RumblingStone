@@ -42,67 +42,71 @@ PF-3 CORRIDOIO DEL FUOCO (Fire Gauntlet)
 COLONNE →  A B C D E F G H I J K L M N O P Q R S T U
 RIGHE ↓
 
-01  🏰🏰🏰🚪🚪🚪🏰🔥🔥🔥🔥🔥🔥🔥🏰🚪🚪🚪🏰🏰🏰   porte nord D01-F01 (ovest) e P01-R01 (est), 4,5 m, dalla Sala della Forgia
-02  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-03  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-04  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-05  🏰🏰🏰🏰🏰🔵🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰   PG F05
-06  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-07  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-08  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
+01  🏰🏰🏰🚪🚪🚪🏰🟥🟥🟥🟥🟥🟥🟥🏰🚪🚪🚪🏰🏰🏰   porte nord D01-F01 (ovest) e P01-R01 (est), 4,5 m, dalla Sala della Forgia
+02  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+03  🏰🏰🏰🟤🪨🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🪨🟤🏰🏰🏰
+04  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+05  🏰🏰🏰🏰🏰🔵🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰   PG F05
+06  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+07  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+08  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
 09  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰   PONTE NORD H09-N10 (10,5 x 3 m, ossidiana)
 10  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🪨🏰🏰🏰
-11  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-12  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-13  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-14  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-15  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🟤🏰🏰🏰🏰   cascata 1 K15-M20
-16  🏰🏰🏰🏰🟤🔴🔴🔥🔥🔥🌋🌋🌋🔥🟤🟤🟤🏰🏰🏰🏰   FE1 F16 (Grande): riempie la cengia; dietro, la nicchia E16-E17
-17  🏰🏰🏰🏰🟤🔴🔴🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-18  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-19  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-20  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-21  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-22  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-23  🏰🏰🏰🏰🏰🟤🪨🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-24  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-25  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
+11  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+12  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+13  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🪨🟤🏰🏰🏰🏰🏰
+14  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+15  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🟤🏰🏰🏰🏰   cascata 1 K15-M20
+16  🏰🏰🏰🏰🟤🔴🔴🟥🟥🟥🌋🌋🌋🟥🟤🟤🟤🏰🏰🏰🏰   FE1 F16 (Grande): riempie la cengia; dietro, la nicchia E16-E17
+17  🏰🏰🏰🏰🟤🔴🔴🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+18  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+19  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🪨🟤🏰🏰🏰🏰🏰
+20  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+21  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+22  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+23  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+24  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+25  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
 26  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰   PONTE CENTRO H26-N27
-27  🏰🏰🏰🪨🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰
-28  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔴🔴🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰   FE2 J28, nella lava sotto il ponte
-29  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔴🔴🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-30  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-31  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-32  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🏰🏰🏰🏰
-33  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🏰🏰🏰🏰
-34  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-35  🏰🏰🏰🏰🟤🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰   cascata 2 K35-M40 · nicchia E35-E36
-36  🏰🏰🏰🏰🟤🟤🟤🔥🔥🔥🌋🌋🌋🔥🔴🔴🏰🏰🏰🏰🏰   FE3 O36 (Grande), cengia est
-37  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🔴🔴🏰🏰🏰🏰🏰
-38  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-39  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-40  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🌋🌋🌋🔥🟤🟤🏰🏰🏰🏰🏰
-41  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-42  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-43  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰   PONTE SUD H43-N44
+27  🏰🏰🏰🪨🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🪨🏰🏰🏰
+28  🏰🏰🏰🟤🟤🟤🟤🟥🟥🔴🔴🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰   FE2 J28, nella lava sotto il ponte
+29  🏰🏰🏰🏰🏰🟤🟤🟥🟥🔴🔴🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+30  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🪨🟤🏰🏰🏰🏰🏰
+31  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+32  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🏰🏰🏰🏰
+33  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🏰🏰🏰🏰
+34  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+35  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰   cascata 2 K35-M40 · nicchia E35-E36
+36  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🌋🌋🌋🟥🔴🔴🏰🏰🏰🏰🏰   FE3 O36 (Grande), cengia est
+37  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🔴🔴🏰🏰🏰🏰🏰
+38  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+39  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+40  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+41  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+42  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+43  🏰🏰🏰🟤🪨🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰   PONTE SUD H43-N44
 44  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰
-45  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔴🔴🔥🔥🟤🟤🟤🟤🏰🏰🏰   FE4 K45, nella lava
-46  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔴🔴🔥🔥🟤🟤🏰🏰🏰🏰🏰
-47  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-48  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🪨🏰🏰🏰🏰🏰
-49  🏰🏰🏰🏰🏰🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🏰🏰🏰🏰🏰
-50  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-51  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-52  🏰🏰🏰🟤🟤🟤🟤🔥🔥🔥🔥🔥🔥🔥🟤🟤🟤🟤🏰🏰🏰
-53  🏰🏰🏰🚪🚪🚪🏰🔥🔥🔥🔥🔥🔥🔥🏰🚪🚪🚪🏰🏰🏰   porte sud D53-F53 (ovest) e P53-R53 (est), verso la Forgia Adamantina
+45  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🔴🔴🟥🟥🟤🟤🪨🟤🏰🏰🏰   FE4 K45, nella lava
+46  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🔴🔴🟥🟥🟤🟤🏰🏰🏰🏰🏰
+47  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+48  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🪨🏰🏰🏰🏰🏰
+49  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+50  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+51  🏰🏰🏰🟤🪨🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🪨🟤🏰🏰🏰
+52  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
+53  🏰🏰🏰🚪🚪🚪🏰🟥🟥🟥🟥🟥🟥🟥🏰🚪🚪🚪🏰🏰🏰   porte sud D53-F53 (ovest) e P53-R53 (est), verso la Forgia Adamantina
 
 ══════════════════════════════════════════════════════════════════
-LEGENDA · 🏰 roccia viva del vulcano · 🟤 cengia di basalto · 🔥 fiume di lava (20d6 se ci cadi) · 🌉 ponte d'ossidiana · 🌋 cascata di lava dal soffitto · 🪨 rocce cadute (copertura, terreno difficile) · 🚪 porta · 🔵 PG · 🔴 elementale del fuoco (Grande, 2 × 2)
+LEGENDA · 🏰 roccia viva del vulcano · 🟤 cengia di basalto · 🟥 fiume di lava (20d6 se ci cadi) · 🌉 ponte d'ossidiana · 🌋 cascata di lava dal soffitto · 🪨 rocce cadute (copertura, terreno difficile) · 🚪 porta · 🔵 PG · 🔴 elementale del fuoco (Grande, 2 × 2)
 ══════════════════════════════════════════════════════════════════
 
 --- ANNOTAZIONI (overlay professionale reso da render_map_svg.py) ---
 @north N
 @tipo tattica caverna
+@luogo Piano del Fuoco, Corridoio del Fuoco
+@deroga m2/vuoto ; il fiume di lava largo 10,5 m corre per tutto il tubo: è il vuoto che si attraversa sui ponti, ed è la scena
+@deroga m4/esposizione ; la lava illumina tutto il tubo (luce intensa a 15 m, fioca a 30): ci si vede da un capo all'altro, ed è voluto
+@deroga struttura/senza-anelli ; gli anelli ci sono e sono la scena: cengia ovest, ponte, cengia est, ponte. Lo strumento non li vede perché la lava, letale, resta una cella in cui si può entrare
 @taglia F16 ; Grande
 @taglia J28 ; Grande
 @taglia O36 ; Grande
@@ -125,7 +129,7 @@ SEZIONE TRASVERSALE (Ovest → Est), una riga qualunque fra i pianerottoli
 
   ROCCIA      CENGIA      FIUME DI LAVA (−3 m)       CENGIA      ROCCIA
   A-E         F-G         H-N                        O-P         Q-U
-  🏰🏰🏰🏰🏰  🟤🟤        🔥🔥🔥🔥🔥🔥🔥             🟤🟤        🏰🏰🏰🏰🏰
+  🏰🏰🏰🏰🏰  🟤🟤        🟥🟥🟥🟥🟥🟥🟥             🟤🟤        🏰🏰🏰🏰🏰
   7,5 m       3 m         10,5 m                     3 m         7,5 m
 
   Ai pianerottoli (righe 02-04, 08-11, 25-28, 42-45, 50-52) la cengia si allarga
@@ -142,7 +146,7 @@ HEAT ZONES (Overlay):
 
 ### 📍 POSIZIONI PRECISE CON COORDINATE:
 
-**FIUME LAVA 🔥:**
+**FIUME LAVA 🟥:**
 - **Larghezza:** Colonne H-N (10.5m = 7 quadrati)
 - **Lunghezza:** Righe 01-53 (79,5 m = 53 quadrati) - TUTTO corridoio; entra ed esce sotto la roccia
 - **Profondità:** 3m sotto ground level (mortale se caduta)
@@ -176,11 +180,11 @@ HEAT ZONES (Overlay):
 - **Ovest:** Colonne F-G (3 m = 2 quadrati), Righe 02-52; la roccia viva 🏰 occupa A-E
   - Pianerottoli di 6 m (D-G) alle righe 02-04, 08-11, 25-28, 42-45, 50-52
   - Nicchie di 1,5 m in E16-E17 (dove aspetta FE1) ed E35-E36: lì ci si può far da parte
-  - Material: basalto, superficie ruvida; rocce cadute 🪨 in G23 e D27
+  - Material: basalto, superficie ruvida; rocce cadute 🪨 in G23 e D27, e dal 2026-10-22 anche in E03, G13, G33, G40, E43, G48, E51 (copertura ½ a chi ci sta dietro)
   - Safe from lava direct, but heat zones apply
   
 - **Est:** Colonne O-P (3 m = 2 quadrati), Righe 02-52; roccia viva Q-U
-  - Pianerottoli O-R alle stesse righe, nicchie Q15-Q16 e Q32-Q33, rocce in R10 e P48
+  - Pianerottoli O-R alle stesse righe, nicchie Q15-Q16 e Q32-Q33, rocce in R10 e P48, e dal 2026-10-22 in Q03, O13, O19, R27, O30, Q45, Q51
 
 **4 FIRE ELEMENTALS LARGE 🔴:**
 1. **FE1:** Col F, Riga 16 (cengia ovest, F16-G17: Grande, la riempie)
@@ -253,9 +257,10 @@ HEAT ZONES (Overlay):
 
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
-| Fiume di lava centrale 🔥 | col H-N, tutta la lunghezza (10,5 m largo) | attraversamento letale; caduta dentro = morte quasi certa; le creature di fuoco vi nuotano immuni |
+| Fiume di lava centrale 🟥 | col H-N, tutta la lunghezza (10,5 m largo) | attraversamento letale; caduta dentro = morte quasi certa; le creature di fuoco vi nuotano immuni |
 | 3 Ponti 🌉 | Nord (righe 09-10), Centro (26-27), Sud (43-44), 10,5 × 3 m | unici attraversamenti "sicuri" — ma sorvegliati |
 | Cenge Ovest / Est 🟤 | col F-G / O-P (3 m larghe = **fila indiana**, 2 quadrati); pianerottoli di 6 m alle porte e ai ponti | movimento in singola fila; poco spazio di manovra |
+| Rocce cadute 🪨 | 4 di prima (G23, D27, R10, P48) e 14 nuove sulle cenge e sui pianerottoli (vedi POSIZIONI) | **copertura ½**, terreno difficile |
 | Zone di calore | lungo il corridoio (opzione "straight west") | **1d6 fuoco/round persistente, Tempra CD 15** |
 
 **Distanze chiave**: Ingresso (F05) → Ponte Nord = 7,5 m/5 q; Ponte Nord→Centro e Centro→Sud = 24 m/16 q ciascuno; Ponte Sud→Uscita (F53) = 16,5 m/11 q. **Totale 78 m/52 q ≈ 4-6 round** se ininterrotto.
@@ -311,6 +316,18 @@ HEAT ZONES (Overlay):
 > disegnata va da F ad AA sulla riga 17 (le POSIZIONI dicono J-W) e copre le
 > righe 11-23 (le POSIZIONI dicono 11-24); la passerella nord-sud è disegnata
 > su P-Q, le POSIZIONI dicono «Col Q». Il tavolo gioca sul disegno.
+>
+> 🔥 **La forgia, dal 2026-10-22** (standard di qualità, ADR-0098). La lava è
+> 🟥, il terreno letale, e non più 🔥, che è un fuoco da campo. Una forgia ha i
+> suoi forni: quattro **forni di fusione** ⬛ di 4,5 × 4,5 m sul perimetro
+> (G09-I11, Y09-AA11, G23-I25, Y23-AA25), che versano l'adamantio nella vasca, e
+> quattro **incudini** ⚒ (L09, U09, L25, U25). I forni fanno copertura totale
+> fra la porta e il boss e anelli attorno a cui girare. Il boss è disegnato:
+> 🔴 in O16, Enorme, sopra la lava in O16-Q18. A sud una **galleria dei
+> fonditori**, larga 1,5 m, esce dall'arena dietro una **porta segreta** in Q31
+> (Cercare CD 20): è il secondo ingresso, e la via per chi scappa col Topazio
+> senza ripassare dalla porta nord. `[INFERRED — needs DM confirmation]` per la
+> galleria e per la CD.
 
 ```
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -334,47 +351,56 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                      └─┘ PG Start (Col I, Riga 08) - Perimeter Nord
 
 --- PASSERELLA NORD (Righe 09-16) + LAVA POOL ---
-09    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰
-10    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-11    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🌉 🌉 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+09    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ 🏰 🏰 🏰 🏰
+10    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+11    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
       │                                  └──────────┘ Lava Pool Edge (Inner Circle 5m radius)
-12    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-13    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-14    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-15    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-16    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+12    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+13    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+14    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+15    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+16    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🔴 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
       │                                              └──┘ ALTARE TOPAZIO (+5m levitating!)
 
 --- CENTRO (Righe 16-18) ALTARE + BOSS ---
 17    │ 🏰 ⬜ ⬜ ⬜ ⬜ 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 💎 💎 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
       │                                           └────┘ TOPAZIO (P16-Q17, +7m total above floor!)
-18    │ 🏰 ⬜ ⬜ ⬜ ⬜ 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+18    │ 🏰 ⬜ ⬜ ⬜ ⬜ 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
       │                   └──┘ PASSERELLA NORD (Q08-Q16, 2m wide, mithral, towards altare)
       │                                           🔴 ELDER FIRE ELEMENTAL (Col P, Riga 17 center!)
 
 --- METÀ SUD (Righe 19-33): specchio delle righe 15-01 attorno alla riga 17, ricostruita [CANONE — DM 2026-10-18] ---
-19    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-20    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-21    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-22    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 🔥 🌉 🌉 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-23    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🌉 🌉 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-24    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-25    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰
+19    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+20    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+21    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+22    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+23    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+24    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+25    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ 🏰 🏰 🏰 🏰
       │                                        └──┘ PASSERELLA SUD: arriva al perimetro sud (riga 25)
 26    │ 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰
 27    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰
 28    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 29    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 30    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-31    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-32    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-33    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+31    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ❔ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+32    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+33    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │ Passerelle Est (Col Y → Q) e Ovest (Col E → Q) sulla riga 17, 2 m: vedi POSIZIONI
       │ Perimeter Safe Zone: anello ⬜ fino alla riga 30, roccia 🏰 righe 31-33
 
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+LEGENDA · 🟥 lava d'adamantio fusa, profonda 3 m (20d6 fuoco a chi ci cade) · 🌉 passerelle di mithral (2 m)
+LEGENDA · 💎 il Topazio sull'altare levitante (+5 m) · ⬛ forni di fusione (muratura, copertura totale) · ⚒ incudini
+LEGENDA · 🔴 Elder Fire Elemental (Enorme: O16-Q18, centro P17) · ❔ porta segreta della galleria dei fonditori (Q31)
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 @north N
 @tipo tattica interni
+@luogo Piano del Fuoco, Forgia Adamantina
+@taglia O16 ; Enorme
+@deroga m1/copertura ; il perimetro è un anello di 5 m fra la roccia e la lava: i ripari sono i quattro forni di fusione e le quattro incudini, il resto è la forgia
+@deroga m2/vuoto ; la piscina di lava di 20 m al centro è il cuore della forgia: attraversarla sulle passerelle allo scoperto è la sfida della scena
+@deroga m4/esposizione ; sala tonda con l'altare che splende al centro (luce intensa a 30 m): da ogni punto si vede il Topazio, ed è voluto
 ```
 
 ### VISTA 2: SEZIONE VERTICALE (Side View)
@@ -413,7 +439,7 @@ Material: Adamantine-reinforced stone
 
 ### 📍 POSIZIONI PRECISE:
 
-**LAVA POOL CENTRALE 🔥:**
+**LAVA POOL CENTRALE 🟥:**
 - **Center:** Col P, Riga 17 (exact center arena)
 - **Radius:** 10m (7 quadrati from center) = 20m diameter
 - **Colonne coperte:** J-W (15 quadrati wide)
@@ -463,7 +489,7 @@ Material: Adamantine-reinforced stone
 - **Safe:** NO lava contact, but heat aura applies
 
 **ELDER FIRE ELEMENTAL (Boss) 🔴:**
-- **Posizione Start:** Col P, Riga 17 (CENTER lava pool!)
+- **Posizione Start:** Col P, Riga 17 (CENTER lava pool!); il gettone sulla griglia sta in O16, l'angolo nord-ovest del suo ingombro
 - **Size:** Huge (3×3 quadrati = 4.5m × 4.5m)
 - **Occupies:** Col O-Q, Righe 16-18
 - **Elevation:** Floats +1.5m above lava surface
@@ -529,7 +555,10 @@ Material: Adamantine-reinforced stone
 
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
-| Piscina di lava centrale 🔥 | centro P17, raggio 10 m (20 m diam.), −3 m | **20d6 fuoco** se ci cadi (morte quasi certa); 1200 °C |
+| Piscina di lava centrale 🟥 | centro P17, raggio 10 m (20 m diam.), −3 m | **20d6 fuoco** se ci cadi (morte quasi certa); 1200 °C |
+| Forni di fusione ⬛ | G09-I11, Y09-AA11, G23-I25, Y23-AA25 | muratura: **copertura totale**, bloccano vista e movimento; ci si gira attorno |
+| Incudini ⚒ | L09, U09, L25, U25 | **copertura ½** |
+| Porta segreta ❔ e galleria dei fonditori | Q31, galleria Q32-Q33 verso sud | Cercare CD 20 per trovarla `[INFERRED — needs DM confirmation]`; seconda via d'uscita col Topazio |
 | Altare del Topazio levitante 🌉💎 | P-Q/16-17, **+5 m** (gemma +7 m) | obiettivo (prendere il Topazio); bagliore = luce intensa 30 m (arena illuminata) |
 | 4 Passerelle di Mithral 🌉 | Nord Q08-16, Sud Q18-25, Est Y-Q/17, Ovest E-Q/17 (2 m larghe) | **strette: Equilibrio CD 10 se corri**; immuni al fuoco; PF 180/Durezza 15 |
 | Piattaforma perimetrale ⬜ | anello 5 m (raggio 20-25 m) | zona "sicura" dalla lava, ma **aura di calore** applica comunque |
@@ -540,7 +569,7 @@ Material: Adamantine-reinforced stone
 ### ⚔️ TATTICHE (companion T5b, consolidato da TATTICA BOSS FIGHT)
 
 - **Elder Fire Elemental** (boss, CR 11, ~228 PF, Enorme): sta al centro sopra la lava (+1,5 m), portata 4,5 m. Apre con ***Muro di Fuoco*** attraverso la passerella Nord (blocca l'approccio ovvio → i PG usano Est/Ovest per flancare); *Sfera Fiammeggiante* / colpi a distanza durante l'attraversamento; quando i PG sono all'altare **emerge in full melee** (2 colpi +20, 2d8+7 fuoco ciascuno) e minaccia con l'AdO chi afferra il Topazio.
-- **Obiettivo dei PG**: raggiungere l'altare e **prendere il Topazio** (azione standard, provoca AdO) → apre il portale di fuga. Poi: **combattere a morte** (boss tosto) **o afferra-e-scappa** (Topazio in mano, sprint verso l'uscita — il boss insegue ma i PG hanno vantaggio).
+- **Obiettivo dei PG**: raggiungere l'altare e **prendere il Topazio** (azione standard, provoca AdO) → apre il portale di fuga. I forni di fusione sul perimetro coprono chi aspetta il momento di attraversare; chi ha trovato la porta segreta in Q31 può uscire a sud. Poi: **combattere a morte** (boss tosto) **o afferra-e-scappa** (Topazio in mano, sprint verso l'uscita — il boss insegue ma i PG hanno vantaggio).
 - **Morale**: elementale anziano territoriale, non si arrende; insegue oltre la presa del Topazio.
 
 ### 🔄 EVOLUZIONE (companion T5b, consolidato dalle 4 fasi)
