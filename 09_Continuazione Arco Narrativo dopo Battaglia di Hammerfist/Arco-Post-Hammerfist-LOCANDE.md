@@ -83,7 +83,7 @@ due, e metà delle stanze chiude perché le finestre danno sulle mura.
 |---|---|---:|---:|---:|---:|---|
 | **Le Arcate** | sopra il Mercato Basso | buona 6 mo · comune 1,5 mo | 1,5 mo · 9 ma | 1,5 mo | 3 | i prezzi della speziala di domani, e chi ha comprato cosa ieri |
 | **I dormitori dell'arena** | sotto le gradinate | gratis per i concorrenti e i loro secondi | il pasto dei concorrenti, gratis | gratis | quante ne servono | chi si è iscritto all'ultimo momento, e con che faccia. Qui dorme Tordek, se è iscritto, e chi lo accompagna come secondo |
-| **Il Barcone** | al porto fluviale, su una chiatta ormeggiata | comune 1,5 mo · povera 6 ma | 9 ma · 3 ma | — | 5 | il carico delle chiatte di stanotte. La Rete Nera ci ha il suo tavolo (banchi §2), e chi ci dorme è visto |
+| **Il Barcone** | nel borgo dei carrettieri, fuori dalla Porta Sud in fondo alla rampa | comune 1,5 mo · povera 6 ma | 9 ma · 3 ma | — | 5 | il carico dei carri di stanotte. La Rete Nera ci ha il suo tavolo (banchi §2), e chi ci dorme è visto |
 | **La foresteria della Confraternita** | dentro il chiostro di Ilmater | gratis, con un'offerta libera | il pasto dei monaci, povero, gratis | — | 2 | niente: si cena in silenzio. Sorella Maewen ci passa ogni sera |
 
 **Altrimenti**: le stalle dei mercanti fuori dalle mura, 3 ma a notte nel fieno.
