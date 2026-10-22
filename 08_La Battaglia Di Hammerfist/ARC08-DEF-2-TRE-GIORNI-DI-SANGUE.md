@@ -76,6 +76,12 @@
 >
 > Domande nuove, dal giro delle letture a freddo del 2026-10-22:
 >
+> **Decise dal DM il 2026-10-22 («Tutte»):** le sei raccomandazioni qui
+> sotto sono canone. Ritirata col tiro; chi scende a un duello lascia le
+> tacche al suo settore, Dara dalla torre no; i bugbear paralizzano i pregen
+> e uccidono solo il Re; il Re all'incrocio ha l'esito aperto; tre
+> Cantitrici cadute entro il round 3; il ponte levatoio si rompe.
+>
 > 13. **La prova della ritirata.** La Scena 7 non aveva un tiro per tenere
 >     una via; il master ne mette uno (d20 + Combattere contro CD 28/30/32,
 >     «Come si tiene una via»). Si tiene?
@@ -472,7 +478,7 @@ fondo): l'orda lo usa per l'ariete. L'argano è nell'androne, ma le catene
 non alzano un ponte con sopra un gigante e due troll. Lo si può rompere
 (80 pf, durezza 5, legno): chi è sopra cade nel fossato con l'ariete, e per
 il resto del giorno il cancello non perde pf; Gorthak e i troll risalgono
-in due round, e la carta di Gorthak resta in gioco (scelta del modulo). Sopra l'androne, fra i bastioni G1 e G2,
+in due round, e la carta di Gorthak resta in gioco `[CANONE — DM 2026-10-22]`. Sopra l'androne, fra i bastioni G1 e G2,
 c'è la piattaforma da cui il Giorno 3 il Re guarda l'orda.
 
 Nel battente sinistro c'è uno **sportello** largo un nano, sbarrato
@@ -690,9 +696,10 @@ round 3 fino al 5, finché la carta è in gioco. Il duello vale come un round
 di battaglia: in quel round i reparti del Cancello
 tirano senza l'eroe, e il Cancello **non prende tacche**. Un eroe di un altro
 settore può unirsi al duello lasciando il suo, che in quel round tira senza
-di lui **e prende le tacche** `[INFERRED]`. Dara può unirsi dalla Torre
+di lui **e prende le tacche** `[CANONE — DM 2026-10-22]`. Dara può unirsi dalla Torre
 Ovest senza scendere: 48 m in pianta e 20 di quota, secondo incremento
-dell'arco, −2.
+dell'arco, −2. Così non lascia il suo settore, che prende tacche solo se le
+avrebbe prese comunque `[CANONE — DM 2026-10-22]`.
 
 **Prima che Borin esca, il DM lo dice in chiaro.** Gorthak e i due troll sono
 uno scontro per più eroi: da solo, Borin cade prima che Gorthak scenda sotto
@@ -1135,7 +1142,7 @@ Il canto non è una carta: è la ragione per cui le Mura devono reggere.
 - **Se le Mura cedono al round 4 o 5**, una Cantitrice cade, e le altre la
   trascinano via: con quattro il Coro c'è ancora. Se cedono **entro il round
   3**, ne cadono tre, e con due il Coro si perde (`ARC08-02`, il morale delle
-  Cantitrici: il Coro chiede tre voci) `[INFERRED — quante cadono]`. Il
+  Cantitrici: il Coro chiede tre voci) `[CANONE — DM 2026-10-22]`. Il
   Coro al tramonto non c'è, e la rampa resta.
 - **Se le Mura reggono fino a sera**, al tramonto le Cantitrici finiscono il
   canto:
@@ -1551,7 +1558,7 @@ una via da tenere, o resta col Re.
 | **2** (round 7-12) | gli stessi, di più | le stesse tre |
 | **3** (round 13-18) | tutti, contro la bocca del tunnel | una sola: il chokepoint (AE05 sulla H3-1); gli altri dentro con la colonna |
 
-**Come si tiene una via** `[INFERRED — la prova della ritirata]`. Una prova
+**Come si tiene una via** `[CANONE — DM 2026-10-22]`. Una prova
 per fase per ogni via tenuta da un pregen: d20 + il suo bonus Combattere
 (Appendice A.11) contro **CD 28** nella fase 1, **30** nella 2, **32** nella 3
 (Dara contro gli orchi ha +25). Se riesce, la via regge e non cade nessuno;
@@ -1720,9 +1727,8 @@ ha abbattuto passa al Re il round dopo.
   costosa). Il finale perde il discorso della carica, e §5.3 legge «fallito».
 
 Se il Re muore qui, Dana non gli fa da scudo in caverna contro le frecce
-(Sessione 3). Il DM decide prima della serata se l'esito è aperto o se i
-dadi si fermano a −9 `[INFERRED — il Re all'incrocio]`. Finché non
-decide, l'esito è aperto, e il DM lo dice ai giocatori prima della Scena 8.
+(Sessione 3). L'esito è aperto: i dadi non si fermano a −9, e il DM lo dice
+ai giocatori prima della Scena 8 `[CANONE — DM 2026-10-22]`.
 
 <!-- storico -->
 *La prima stesura metteva «20 torce», «8 stalagmiti», «60 guerrieri» e «20
@@ -1949,7 +1955,7 @@ si tira stasera, in forma compatta. Se cambiano, cambiano lì.
 
 **A.6 · Il cavaliere di Fauci** · `ARC08-02` §1 · hobgoblin Guerriero 6 / Guardia Nera 4 · GS 10 · CA **23**, pf **95** · Temp +15, Rifl +6, Vol +6 · *lancia da cavaliere +1* +16/+11 (1d8+7, ×3; in carica in sella danni tripli con Carica Devastante) · **Aura di disperazione**: −2 ai TS dei nemici entro 3 m · Punire il Bene 1/giorno (+2 a colpire, +4 danni) · Comando Tattico: +2 morale agli hobgoblin entro 9 m · resta in sella finché Fauci vola.
 
-**A.7 · Bugbear assassino** (×8) · `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` · Ladro 5 / Assassino 2, GS 9 `[CANONE — DM 2026-10-19]` · Iniz +7 · scurovisione 18 m, fiuto · Ascoltare +13, Osservare +13, **Nascondersi +17**, Muoversi Silenziosamente +21 · CA **20**, contatto 13, colto alla sprovvista 20 · pf **58** · Temp +4, Rifl +13, Vol +2 · eludere, schivare prodigioso migliorato (non si fiancheggia) · *morning star perfetta* +11 (1d8+3); giavellotto +9 (1d6+3) · **attacco furtivo +4d6** · Int 18 · **attacco mortale** dopo 3 round di studio, solo su chi è colto alla sprovvista: Tempra **CD 16** (10 + 2 livelli + 4 di Int) o paralizzato 1d6+2 round (o morto, se lo sceglie) · *foschia occultante* 2/giorno · Otto: **EL 15**.
+**A.7 · Bugbear assassino** (×8) · `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` · Ladro 5 / Assassino 2, GS 9 `[CANONE — DM 2026-10-19]` · Iniz +7 · scurovisione 18 m, fiuto · Ascoltare +13, Osservare +13, **Nascondersi +17**, Muoversi Silenziosamente +21 · CA **20**, contatto 13, colto alla sprovvista 20 · pf **58** · Temp +4, Rifl +13, Vol +2 · eludere, schivare prodigioso migliorato (non si fiancheggia) · *morning star perfetta* +11 (1d8+3); giavellotto +9 (1d6+3) · **attacco furtivo +4d6** · Int 18 · **attacco mortale** dopo 3 round di studio, solo su chi è colto alla sprovvista: Tempra **CD 16** (10 + 2 livelli + 4 di Int) o paralizzato 1d6+2 round (il Re lo uccide invece di paralizzarlo: sui pregen sceglie la paralisi `[CANONE — DM 2026-10-22]`) · *foschia occultante* 2/giorno · Otto: **EL 15**.
 
 **A.8 · Hobgoblin della diversione** (×7: il sergente e sei) · `Bestiario/mostri/hobgoblin-sergente-cr5.md` (il sergente: CA 21, 37 pf, *spada lunga perfetta* +9, 1d8+4, +1 morale agli hobgoblin entro 3 m) e `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md` (i sei: GS 5, CA 19, pf **43**, *spada lunga perfetta* +10/+5, 1d8+2) · combattono fino alla morte.
 

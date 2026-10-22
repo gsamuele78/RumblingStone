@@ -115,6 +115,8 @@ come «già decise» e sono nel master come `[CANONE — DM 2026-10-22]`:
 
 ## Le domande nuove per il DM
 
+**Decise il 2026-10-22:** Jfs ha scelto «Tutte», le sei raccomandazioni sono canone nel master.
+
 Sono nell'elenco in testa al master (13-18) e nell'apparato.
 
 | N. | Domanda | Raccomandazione |
