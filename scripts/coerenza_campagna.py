@@ -894,6 +894,26 @@ def testo_fatti(r: dict) -> str:
     return "\n".join(out)
 
 
+def controlla_residui(r: dict, percorso: Path) -> int:
+    """Il cancello di CI: ogni contraddizione trovata è dichiarata in RESIDUI
+    (entità e attributo, con la ragione), e ogni residuo esiste ancora. Così una
+    contraddizione nuova blocca, e una risolta si toglie dal file."""
+    dati = json.loads(percorso.read_text(encoding="utf-8"))
+    dichiarati = {(x["chiave"], x["attributo"]) for x in dati.get("residui", [])}
+    trovati = {(c["chiave"], c["attributo"]): c for c in r["contraddizioni"]}
+    nuove = [trovati[k] for k in trovati if k not in dichiarati]
+    sparite = sorted(dichiarati - set(trovati))
+    for c in nuove:
+        print(f"✗ contraddizione nuova: {c['entita']} · {c['attributo']} "
+              f"({', '.join(v['valore'] for v in c['valori'])})")
+    for k in sparite:
+        print(f"✗ residuo risolto, da togliere da {_rel(percorso)}: {k[0]} · {k[1]}")
+    if nuove or sparite:
+        return 1
+    print(f"✓ coerenza_campagna: {len(trovati)} contraddizioni, tutte residui dichiarati")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -907,6 +927,9 @@ def main(argv: list[str] | None = None) -> int:
     b.add_argument("--bestiario", action="store_true")
     b.add_argument("--tutti", action="store_true", help="legge anche i file fuori perimetro")
     b.add_argument("--json", action="store_true")
+    b.add_argument("--check", type=Path, metavar="RESIDUI",
+                   help="cancello: exit 1 se c'è una contraddizione che RESIDUI non "
+                        "dichiara, o un residuo che non c'è più")
     c = sub.add_parser("tutto", help="fronti + fatti, e scrive JSON e riassunto in --out")
     c.add_argument("--fronti", nargs="+", type=Path, required=True)
     c.add_argument("--archi", nargs="+", type=Path, required=True)
@@ -938,7 +961,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "fatti":
         r = rileva_contraddizioni(args.archi, args.bestiario, args.tutti)
         print(json.dumps(r, ensure_ascii=False, indent=2) if args.json else testo_fatti(r))
-        return 0
+        return controlla_residui(r, args.check) if args.check else 0
 
     esiti = [controlla_fronti(carica(p)) for p in args.fronti]
     state = misura_orologi_state()

@@ -296,3 +296,29 @@ class TestDatiDiProva(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestResidui(unittest.TestCase):
+    """Il cancello di CI: una contraddizione nuova blocca, un residuo risolto
+    va tolto dal file."""
+
+    R = {"contraddizioni": [{"entita": "Orog", "chiave": "orog", "attributo": "GS",
+                             "valori": [{"valore": "6"}, {"valore": "7"}]}]}
+
+    def _residui(self, righe):
+        d = Path(tempfile.mkdtemp())
+        p = d / "residui.json"
+        p.write_text(__import__("json").dumps({"residui": righe}), encoding="utf-8")
+        return p
+
+    def test_dichiarata_passa(self):
+        p = self._residui([{"chiave": "orog", "attributo": "GS", "ragione": "x"}])
+        self.assertEqual(cc.controlla_residui(self.R, p), 0)
+
+    def test_nuova_blocca(self):
+        self.assertEqual(cc.controlla_residui(self.R, self._residui([])), 1)
+
+    def test_residuo_risolto_blocca(self):
+        p = self._residui([{"chiave": "orog", "attributo": "GS", "ragione": "x"},
+                           {"chiave": "hobgoblin", "attributo": "CA", "ragione": "y"}])
+        self.assertEqual(cc.controlla_residui(self.R, p), 1)

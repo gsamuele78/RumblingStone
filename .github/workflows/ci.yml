@@ -170,6 +170,13 @@ jobs:
       - name: Domande del developer — si gioca?
         run: python scripts/domande_developer.py --check
 
+      # Lotto 7c di AVVENTURE-COMMUNITY: lo stesso PNG o mostro con GS, pf, CA,
+      # CD o classi diversi in due scene. Solo ARC-07 e ARC-08, dove la
+      # precisione è misurata (4 su 4); le contraddizioni che aspettano il DM
+      # stanno in plans/coerenza-residui.json con la ragione.
+      - name: Coerenza fra scene e archi
+        run: python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json "07_il Portale Della Forgia Eterna" "08_La Battaglia Di Hammerfist"
+
       # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
       # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
       # dritte, «E'») restano ~2.450 e non bloccano: --strict li alzerebbe a
