@@ -63,6 +63,7 @@
 | `italiano-nativo.md` §8 | almeno una **dislocazione a sinistra** o un **c'è presentativo** | **minore** | 🟡 `misura_craft --costrutto-italiano` — **281 box su 477 (59%)**, e il numero dice che è una **sovrastima**, non un difetto. Il «c'è» presentativo si riconosce con certezza; la **dislocazione a sinistra** («Il libro, l'ho letto») vuole sapere che *libro* è l'oggetto di *letto*, e una regex non lo sa: il pattern prende i casi col clitico dopo la virgola e perde gli altri. 🔴 **Misura e non pesa, apposta**: una norma *positiva* rilevata a metà produce penalità **false** su chi la rispetta in un modo che il pattern non vede. Contare male in negativo è peggio che non contare |
 | `italiano-nativo.md` §9 | i **tic dell'IA**: antitesi «non X: è Y», tricolon, chiuse a effetto | **minore** · `calco_dall_inglese` | 🟢 `validate_prosa.py` |
 | `italiano-nativo.md` §9.2 | il **trattino lungo come respiro**: sopra il 3% delle parole di un read-aloud è un tic | **minore** · `trattino_come_respiro` | 🟢 `validate_prosa.py` — 🐛 **misurata da settembre e mai registrata**, trovata dal cancello dei pesi il 2026-09-21: il controllo di copertura guardava che ogni *file* normativo fosse elencato, non che ogni *misura* avesse la sua riga |
+| `scrittura-italiana-eccezione.md` | la skill esterna si apre **solo** in tre casi (documento in gioco fatto di regole, testo che il tavolo non ha capito, box con Gulpease sotto 60), e dove contraddice il repo vince il repo | **minore** | 🟡 `misura_craft --stile`, colonna `Gulp.`: dice quali box sono nel terzo caso, non se la skill è stata aperta. Gli altri due casi li riconosce chi scrive o il collaudo, e l'effetto lo giudica il cieco di `cieco_versioni.py` (ADR-0097) |
 | `varieta-fra-archi.md` | **mai due archi di fila** con la stessa tinta dominante | **minore** | 🔴 non misurato — richiede che ogni arco **dichiari** la sua tinta, e nessuno lo fa: è un prerequisito di dato, non di codice |
 | `living-world.md` · `quest-design-baldur.md` | nessuna norma numerica: sono repertori di pattern | — non è una norma: sono repertori di pattern, e un repertorio non si viola | ⚪ non applicabile |
 
@@ -163,7 +164,7 @@
 | | Norme registrate |
 |---|---:|
 | 🟢 misurate | 47 |
-| 🟡 misurate in parte, con il limite scritto | 33 |
+| 🟡 misurate in parte, con il limite scritto | 34 |
 | 🔴 **non misurate, con la ragione scritta** | 26 |
 | ⚪ non applicabili | 4 |
 

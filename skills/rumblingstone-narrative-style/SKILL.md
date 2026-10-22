@@ -126,6 +126,7 @@ and at most two support pillars, chosen by scene type. The mixer:
 | **Le passate redazionali** — il *giro*, non la norma: le tre passate (struttura → voce → bozze), quando un testo è **chiuso**, e i tre soli casi che lo riaprono. La 2ª si legge **ad alta voce**: il traduttese si sente e non si vede | **`references/passate-redazionali.md`** |
 | **Read-aloud per adulti che leggono fantasy** — si ascolta non si legge, lunghezze per tipo di box, competenza concreta, cosa fa staccare, checklist | **`references/read-aloud-adulti.md`** |
 | **Italiano nativo + anti-riconoscibilità** — calchi, dislocazioni, diminutivi, tempi, ritmo, registro nanico (§1-8) · **i tic dell'IA: antitesi «non X: è Y», tricolon, chiuse a effetto, tutto-è-significativo** (§9) · checklist | **`references/italiano-nativo.md`** |
+| **La skill esterna scrittura-italiana, come eccezione**: si apre solo per un documento in gioco fatto di regole, per un testo che il tavolo non ha capito o per un box con Gulpease sotto 60; il testo resta fuori dal repo (CC BY-SA) e dove contraddice il repo vince il repo ([ADR-0097](../../plans/adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md)) | `references/scrittura-italiana-eccezione.md` |
 
 **Worked exemplar in repo**: the Palio di Channathgate
 (`09_.../Arco-Post-Hammerfist-P2D-PALIO-DM-MASTER-REFERENCE.md` + allegati)

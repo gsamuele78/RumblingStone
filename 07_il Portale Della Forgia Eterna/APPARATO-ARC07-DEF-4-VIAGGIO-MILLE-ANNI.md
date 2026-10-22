@@ -150,14 +150,14 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 7 | 3 di 3, solo quando il silenzio diventa scomodo | Andor lead | 3 |
 | SCENA 7 | Tre rune nane, tutte spezzate a metà dallo | Salvatore | 3 |
 | SCENA 8 | la tenda, il seggio | Salvatore lead | 6 |
-| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 5 |
+| SCENA 9 | fra le tende, l'incontro che non capiscono | Andor lead | 6 |
 | SCENA 9 | l'anello | Andor lead | 2 |
 | SCENA 10 | le mura | Salvatore lead, LotR support | 9 |
 | SCENA 10 | il camminamento | Salvatore lead | 7 |
 | SCENA 11 | il cortile | Salvatore lead | 11 |
 | SCENA 11 | la visione, solo per Thorik | Mercer lead | 3 |
 | SCENA 11 | la runa sotto la scaglia | Salvatore lead | 4 |
-| SCENA 12 | l'incudine, e l'incasso che si chiude | LotR lead | 9 |
+| SCENA 12 | l'incudine, e l'incasso che si chiude | LotR lead | 10 |
 | SCENA 12 | l'ascia prende la parola | Mercer lead | 4 |
 | SCENA 12 | l'aura | LotR lead | 6 |
 | SCENA 12 | il torque | Casa di Davide lead | 5 |

@@ -16,18 +16,18 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 04 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
 05 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
 06 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
-07 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-08 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🌳 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-09 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌳 🟩 🔥 🟩 🔥 🟡 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-10 🌲 🌲 🌲 🌲 🌲 🌲 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🔴 🟫 🟫 🟫 🟫 🟫 🌲
+07 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+08 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+09 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🟩 🌳 🌳 🌳 🔥 🟩 🔥 🟡 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+10 🌲 🌲 🌲 🌲 🌲 🌲 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🔴 🟫 🟫 🟫 🟫 🟫 🌲
 11 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
 12 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🧱 🧱 🧱 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🟡 🟫 🟫 🟫 ⚫ 🟫 🟫 🟫 🟫
 13 🌲 🌲 🌲 🌲 🌲 🌲 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-14 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-15 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟢 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🔴 🟫 🟫 🟫 🟫 🟫 🌲
-16 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🟩 🔥 🟡 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-17 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌳 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
-18 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+14 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟢 🟢 🟢 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+15 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟢 🟢 🟢 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🔴 🟫 🟫 🟫 🟫 🟫 🌲
+16 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟢 🟢 🟢 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🔥 🟩 🔥 🟡 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+17 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🟩 🟩 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
+18 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌳 🌳 🌳 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌲
 19 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
 20 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
 21 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
@@ -36,6 +36,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 24 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲 🌲
 
 @north N
+@tipo tattica esterno
+@taglia I14 ; Enorme
 @mark 1 ; F11 ; Hella + Compagnia (EL 13)
 @mark 2 ; F12 ; PG
 @mark 3 ; G10 ; PG
@@ -51,10 +53,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Avanzata PG ; F12 L12 Q12 ; #2b9348
 @path Treant → soffoca le fiamme ; J15 P14 U13 ; #6a4c93
 @path Ritirata drow ; Z12 AD12 AH12 ; #d62828
+@zone K7-M9 ; Treant della radura (Enorme, 4,5 m: 3 × 3 quadretti)
+@zone O16-Q18 ; Treant della radura (Enorme, 4,5 m: 3 × 3 quadretti)
+@zone R8-T10 ; Treant della radura (Enorme, 4,5 m: 3 × 3 quadretti)
 @zone M12-O12 ; Tagliafuoco improvvisato (copertura bassa)
 @zone W8-Z17 ; Fronte del rogo (i drow bruciano la radura)
 @zone AA7-AG18 ; Foresta già bruciata (terreno difficile, 1d4 fuoco residuo)
-@tipo tattica esterno
 ```
 
 ### 🌍 AMBIENTE (cosa impone il terreno — regole, non prosa)
@@ -77,7 +81,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | PG | PG | 🔵 | 1 | — | F12 |
 | PG | PG | 🔵 | 1 | — | G10 |
 | PG | PG | 🔵 | 1 | — | G13 |
-| Alleati | Treant alleato di Hella (soffoca le fiamme) | 🟢 | 1 | GS 8 | J15 |
+| Alleati | Treant alleato di Hella (soffoca le fiamme) | 🟢 | 1 | GS 8 | I14–K16 |
 | Drow (piromanti) | Piromante drow | 🟡 | 1 | Wizard 8 | X9 |
 | Drow (piromanti) | Piromante drow | 🟡 | 1 | Wizard 8 | X16 |
 | Drow (piromanti) | Piromante drow | 🟡 | 1 | Wizard 8 | Z12 |

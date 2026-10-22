@@ -109,18 +109,18 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
+| 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
+| 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
+| 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
+| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
+| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 | 2026-10-21 | MASTER-DEF | `ARC08-02`: cancello da 800 a 200 pf come deciso dal DM, tempo per sfondarlo da… | ✅ |
 | 2026-10-21 | MASTER-DEF | mappe di ARC-08 su una sola geometria (tabella MISURE in testa a… | 🟡 da confermare col DM: truppe per postazione, il Re sui bastioni il Giorno 3 |
 | 2026-10-21 | MASTER-DEF | statblocco di Nala in `ARC08-01` allineato al Bestiario (niente pozioni di invi… | ✅ |
 | 2026-10-21 | MASTER-DEF | seconda passata sulla Sessione 1: i rilievi di `VERIFICA.md` applicati (T14, T2… | ✅ B.15 respinta: *potere della giustizia* ha già i numeri 3.5 (+4 For, +2 Cos, RD 6/male al 12°) |
 | 2026-10-21 | MASTER-DEF | scelte del DM sul libretto: si spiega a pezzi (§12 «Il tempo» e cosa si spiega… | ✅ T28 · T31 |
 | 2026-10-21 | MASTER-DEF | S1a · la Sessione 1 coi pregen come master… | ✅ scritto · giro da fare |
-| 2026-10-21 | MASTER-DEF | giro sulla Sessione 1, correzioni 1 (TRIAGE, 37 voci, sei in parte): trappole v… | 🟡 restano la Sessione 1 in `ARC08-01`, `ARC08-10`, `ARC08-02`, la mappa del pendio; T28 e T31 al DM |
-| 2026-10-21 | MASTER-DEF | giro sulla Sessione 1 coi pregen: quattro letture a freddo (playtester 32, lett… | ✅ letture · correzione da fare |
-| 2026-10-21 | MASTER-DEF | D5 decisa dal DM una per una: le undici risposte di A3 tutte come le consigliat… | ✅ D5 · D6 aperta |
-| 2026-10-21 | MASTER-DEF | la prova è la scaramuccia dell'avanguardia nella Sessione 1 (libretto §13, trap… | 🟡 retroguardia, Fuoco di copertura e comandanti `[INFERRED]` |
-| 2026-10-21 | MASTER-DEF | l'avvistamento resta (Sessioni 0, 1, 2, 3a); handout 1-4 ai numeri del Bestiari… | ✅ incantesimi di Dara confermati dal DM (lista del ranger SRD) |
-| 2026-10-21 | MASTER-DEF | libretto della battaglia campale di Hammerfist (`ARC08-18`, ADR-0096 proposta):… | 🟡 manca la prova al tavolo; carte dei comandanti `[INFERRED]` |
 
 ## Le misure che si portano dietro
 

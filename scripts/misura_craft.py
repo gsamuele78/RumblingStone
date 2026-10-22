@@ -551,6 +551,24 @@ def avverbi_mente(corpo: str) -> "list[str]":
             if m.group(1).lower() not in NON_AVVERBI]
 
 
+#: L'indice Gulpease (Lucisano e Piemontese, 1988), tarato sull'italiano:
+#: 89 + (300 frasi − 10 lettere) / parole. Fra 60 e 80 un testo è facile per
+#: chi ha la licenza media. Entra il 2026-10-21 con il contratto del Seme: il
+#: giocatore non l'aveva capito, e fra le versioni riscritte l'unica
+#: differenza che si vedeva era questa (67 → 72,6), confermata dal cieco del DM.
+#: È un indicatore: premia le frasi corte, e la prosa d'autore non le vuole sempre.
+_FINE_FRASE_G = re.compile(r"[.!?…:;]+(?=\s|$)")
+
+
+def gulpease(testo: str) -> float:
+    parole = re.findall(r"[A-Za-zÀ-ÿ']+|\d+", testo)
+    if not parole:
+        return 0.0
+    lettere = sum(len(w.replace("'", "")) for w in parole)
+    frasi = max(1, len(_FINE_FRASE_G.findall(testo)))
+    return 89 + (300 * frasi - 10 * lettere) / len(parole)
+
+
 def battute_png(testo: str) -> "list[int]":
     """Le parole di ogni battuta scritta nella forma prescritta, ovunque nel file."""
     return [_parole(m.group(1)) for m in _BATTUTA.finditer(testo)]
@@ -595,6 +613,7 @@ def stile_dei_box(testo: str) -> "dict[str, float]":
             "gerundio in coda": ger, "gerundio ‰": per_mille(ger),
             "-mente": men, "-mente ‰": per_mille(men),
             "sensoriali": sens, "sensoriali ‰": per_mille(sens),
+            "Gulpease": gulpease(" ".join(box)),
             "30-70 %": (100 * sum(1 for c in box if LUNGHEZZA_TIPICA[0] <= _parole(c) <= LUNGHEZZA_TIPICA[1])
                         / len(box)) if box else 0.0,
             "battute": len(batt),
@@ -1052,7 +1071,7 @@ def main() -> int:
         print("\n\nSTILE DEI BOX — indicatori senza peso (ADR-0093)\n")
         print(f"{'bersaglio':30} {'box':>5} {'parole':>7} {'ger.coda':>9} "
               f"{'‰':>5} {'-mente':>7} {'‰':>5} "
-              f"{'sens.':>6} {'‰':>5} {'30-70':>6} {'battute':>8} {'>25':>4} {'>40':>4}")
+              f"{'sens.':>6} {'‰':>5} {'Gulp.':>6} {'30-70':>6} {'battute':>8} {'>25':>4} {'>40':>4}")
         for nome, modelli in BERSAGLI.items():
             testo, _, _ = carica(modelli)
             d = stile_dei_box(testo)
@@ -1062,6 +1081,7 @@ def main() -> int:
                   f"{d['gerundio in coda']:>9} {d['gerundio ‰']:>5.1f} "
                   f"{d['-mente']:>7} {d['-mente ‰']:>5.1f} "
                   f"{d['sensoriali']:>6} {d['sensoriali ‰']:>5.1f} "
+                  f"{d['Gulpease']:>6.1f} "
                   f"{d['30-70 %']:>5.0f}{'!' if d['30-70 %'] > REGOLARITA_ALTA else ' '} "
                   f"{d['battute']:>8} {d[f'battute >{BATTUTA_LUNGA}']:>4} "
                   f"{d[f'battute >{BATTUTA_TROPPO_LUNGA}']:>4}   {fascia}")
@@ -1073,6 +1093,7 @@ def main() -> int:
         print("   stesso box, e il cieco del DM dove la misura non decide. «sens.» sono le")
         print("   parole di percezione: un box che ne perde, per il DM, peggiora. «30-70» è la")
         print(f"   quota dei box fra 30 e 70 parole (umani 46-52%); «!» oltre il {REGOLARITA_ALTA}%.")
+        print("   «Gulp.» è l'indice di leggibilità Gulpease (0-100, più alto = più facile).")
         print()
 
     if args.metrature:

@@ -61,7 +61,7 @@ del primo tiro:
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
 | Echi della notte | uno a testa | all'inizio, prima del primo tiro. Si legge ad alta voce solo il riquadro; la riga «Solo per te» resta del giocatore |
-| Il contratto del Seme | a tutti | solo dopo il box che chiude l'ora della pergamena (cap. II). Se il Seme si rinvia, la pagina resta nel volume |
+| Il contratto del Seme | ad Artemis, e il tavolo lo rilegge | solo dopo il box che chiude l'ora della pergamena e il contratto letto a voce (cap. II). Se il Seme si rinvia, la pagina resta nel volume |
 | Le dieci boccette | a tutti | all'inizio, se il tavolo non l'ha già avuta il 25 |
 
 <!-- apparato -->
