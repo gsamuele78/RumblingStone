@@ -24,7 +24,7 @@
 **Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (Porta Interna a sud + brecce est/ovest)
 **Quando si usa:** subito dopo il soffio del drago (guida: `../ARC08-01-GUIDA-DM.md` § "La Ritirata Disperata"); il master narrativo dell'atlante la chiama MAPPA 3X
 **Dove sta nella 2A:** è il cortile interno della MAPPA 2A REVISED (L2) con la Porta Interna e l'inizio del cortile esterno: colonne Y-CR e righe 18-53 della 2A (colonna H3-1 = colonna 2A − 24, riga H3-1 = riga 2A − 17). Le misure sono quelle della tabella MISURE DI RIFERIMENTO in testa a L2.
-**Quote (decise dal DM il 2026-10-22):** il cortile interno sta a +100 m sulla piana (970 m s.l.m. `[INFERRED]`), il cortile esterno a +80 m; fra i due c'è la scarpa di 20 m (🏰 riga 28) su cui poggia la Porta Interna. Dal cortile esterno si sale per le due scale della scarpa (🪜 O-AH e AM-BF, righe 26-27, 30 m di rampa ciascuna) fino al pianerottolo 🔳 AI-AL 26-27 davanti alla porta. I bastioni nord B1 e B2 stanno a +120 m, contro la roccia.
+**Quote (decise dal DM il 2026-10-22):** il cortile interno sta a +100 m sulla piana (1050 m s.l.m. `[INFERRED]`), il cortile esterno a +80 m; fra i due c'è la scarpa di 20 m (🏰 riga 28) su cui poggia la Porta Interna. Dal cortile esterno si sale per le due scale della scarpa (🪜 O-AH e AM-BF, righe 26-27, 30 m di rampa ciascuna) fino al pianerottolo 🔳 AI-AL 26-27 davanti alla porta. I bastioni nord B1 e B2 stanno a +120 m, contro la roccia.
 
 ### 🎯 COMPRENSIONE: il cortile esterno è perduto e la Porta Interna è sfondata. L'orda entra dalla porta a sud e dalle brecce aperte nella cinta est e ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek, fra la porta e la statua del Re Antenato (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = la statua e il tunnel, che scende nelle viscere della montagna fino al Cuore (MAPPA 5); Sud = Porta Interna sfondata (fronte).
 
@@ -76,7 +76,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @north N
 @tipo tattica esterno
 @luogo Hammerfist, cortile interno
-@quota 970 m ; s.l.m., il cortile interno
+@quota 1050 m ; s.l.m., il cortile interno
 @dislivello +20 m ; sul cortile esterno, oltre la scarpa
 @deroga oggetti/fuoco-enorme ; sono incendi delle baracche ai lati della Porta Interna, non fuochi da campo: 6 × 3 m ciascuno
 @deroga oggetti/porta-enorme ; la porta dell'atrio è il portone della cittadella, 6 m come nella tabella MISURE in testa alla L2
@@ -551,10 +551,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
-| +80 m (950 m s.l.m. `[INFERRED]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
+| +80 m (1030 m s.l.m. `[INFERRED]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
 | +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud) `[INFERRED]`; la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
 | +50 → +20 m | Resti Mano Rossa (~400) schierati sul pendio, righe 39-55; la riga 68 è a circa +20 m | morale −6 dopo il Cuore della Montagna |
-| 0 m (870 m s.l.m. `[INFERRED]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
+| 0 m (950 m s.l.m. `[INFERRED]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |
 
 **Preparazione (read-aloud e discorso di Re Thorek):** guida § Sessione 4 — "FRATELLI! Oggi non moriamo — oggi VINCIAMO!" (+4 morale; non si somma ad altri bonus morali, vale il più alto: SRD).
@@ -564,7 +564,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ## MAPPA 4 REVISED: BATTAGLIA FINALE TERRESTRE + AEREA - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map05_mappa-4-revised-battaglia-finale-terrestre-caric.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 180m × 204m (60 colonne × 68 righe · 3 m/quadretto) — **mappa strategica** (`@tipo strategica`): la regia della carica, non un tappeto per le miniature
-**Quote:** le mura a 950 m s.l.m., +80 m sulla piana; la linea hobgoblin a ~920 m; il fondo della mappa a ~890 m `[INFERRED]`. La strada a tornanti 🟫 scende dal ponte (AD05) con i gomiti in AW16, M35, AW54 e arriva alla riga 68 in AD
+**Quote:** le mura a 1030 m s.l.m., +80 m sulla piana; la linea hobgoblin a ~1000 m; il fondo della mappa a ~970 m `[INFERRED]`. La strada a tornanti 🟫 scende dal ponte (AD05) con i gomiti in AW16, M35, AW54 e arriva alla riga 68 in AD
   ⚠️ Regia della carica finale ("MAPPA 4A/4B" della guida): per il duello col drago a terra passare a scala tattica sul punto di crash. Non mischiare quadretti di scale diverse.
 **Incontro:** Incontri 4A + 4B — carica del cuneo + Fauci di Palude + Gorthak
 **Quando si usa:** Sessione 4, round 1-23 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 4)
@@ -667,11 +667,11 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Ala destra (Hella + 2 Treant + 30) ; AI9 AI37 ; #1d6fd8
 @path Picchiata e presa di Fauci su Thorik (vendetta di sangue) ; G17 AD37 AD31 ; #8c2fb8
 @path Rotta degli orchi verso sud ; AD47 AD65 ; #d62828
-@zone N1-AU2 ; Hammerfist - fronte sud riconquistato, 102 m (950 m s.l.m., +80 m sulla piana; misure: tabella MISURE in L2)
+@zone N1-AU2 ; Hammerfist - fronte sud riconquistato, 102 m (1030 m s.l.m., +80 m sulla piana; misure: tabella MISURE in L2)
 @zone AB30-AG32 ; Zona dove cade Thorik e atterra Fauci (round 20-21)
 @tipo strategica esterno
 @luogo Hammerfist, pendio sud
-@quota 920 m ; s.l.m., la linea hobgoblin alla riga 39
+@quota 1000 m ; s.l.m., la linea hobgoblin alla riga 39
 @dislivello +50 m ; sulla piana, che comincia 300 m a sud delle mura, fuori mappa
 ```
 

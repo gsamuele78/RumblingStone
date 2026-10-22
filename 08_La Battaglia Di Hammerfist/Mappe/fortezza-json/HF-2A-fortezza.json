@@ -244,7 +244,7 @@
     6.0,
     1.5
    ],
-   "label": "CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (950 m s.l.m.)"
+   "label": "CANCELLO PRINCIPALE: luce 6 m, alto 8 m, 200 pf; soglia a +80 m sulla piana (1030 m s.l.m.)"
   },
   {
    "type": "🌉",
@@ -773,7 +773,7 @@
   "Geometria di riferimento: tabella MISURE in testa a Hammerfist-L2-REVISED-Ultra-Clear.md (2026-10-21); quote a gradoni decise dal DM il 2026-10-22 (+80 cortile esterno, +100 cortile interno, +120 torri e cittadella)."
  ],
  "luogo": "Hammerfist, porta principale",
- "quota": "950 m ; s.l.m., la soglia del cancello principale",
+ "quota": "1030 m ; s.l.m., la soglia del cancello principale",
  "dislivello": "+80 m ; sulla piana, in fondo alla strada a tornanti",
  "deroghe": [
   {
