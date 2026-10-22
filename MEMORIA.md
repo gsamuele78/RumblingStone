@@ -111,6 +111,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7d: misure sintattiche con spaCy (calchi, subordinate, ripetizioni) calib… | 🟡 nessuna misura prevede il DM; base ARC-07/ARC-08 salvata per il confronto senza/con |
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7b: quattro domande del developer nuove, §18-§21 di… | 🟡 calibrazione 15½ veri su 26 rilievi; D20 non calibrata (un boss solo sotto cancello), D21 tace finché nessun master marca gli indizi; cancello solo sui maste… |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7a: il perché del voto cieco, dieci etichette facoltative da LAMP e TTCW… | ✅ non cambia il verdetto; serve a sapere quali difetti il DM vede |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7 aperto: ricerca in rete sui metodi misurabili per prosa e architettura,… | 🟡 nessuna misura di prosa prevede il DM (p ≥ 0,057); 7a-7c aspettano la scelta del DM |
@@ -121,8 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 | 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
-| 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
-| 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
 
 ## Le misure che si portano dietro
 

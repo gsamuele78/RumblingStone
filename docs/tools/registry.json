@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 108,
+  "tool_count": 110,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -6598,6 +6598,151 @@
       ]
     },
     {
+      "id": "coerenza_campagna",
+      "path": "scripts/coerenza_campagna.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
+      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "cmd",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "fronti",
+            "fatti",
+            "tutto"
+          ],
+          "repeatable": false,
+          "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
+        },
+        {
+          "name": "--state",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+        },
+        {
+          "name": "--bestiario",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti, tutto) Legge anche le voci del Bestiario le cui entita' compaiono negli archi."
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti) Legge anche i file fuori perimetro (ERRATA, CORREZIONE, ricalibrazioni, P1-P3)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Cartella dove scrivere coerenza.json e coerenza.txt."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Exit 1 se i fronti hanno violazioni."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti, fatti) Uscita machine-readable."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/coerenza/fronti-*.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/fronti_orologi.schema.json"
+        },
+        {
+          "path": "07_il Portale Della Forgia Eterna/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--out>/coerenza.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false
+        },
+        {
+          "path": "<--out>/coerenza.txt",
+          "kind": "text",
+          "overwrites": true,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "nessuna violazione nei fronti, o misura eseguita (fatti, tutto)",
+        "1": "violazioni nei fronti (fronti; tutto solo con --rigido)",
+        "2": "errore d'uso, file o cartella mancante, pyyaml assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Solo regex e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive solo con `tutto`, nella cartella --out."
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
+      "tests": [
+        "scripts/tests/test_coerenza_campagna.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
+      ]
+    },
+    {
       "id": "componenti",
       "path": "scripts/componenti.py",
       "category": "G-orchestration-governance",
@@ -8032,6 +8177,86 @@
       ],
       "docs": [
         "plans/PIANO-PORTARE-IL-MESTIERE-DEI-BANCHI.md"
+      ]
+    },
+    {
+      "id": "misura_sintassi",
+      "path": "scripts/misura_sintassi.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/misura_sintassi.py [--file X.md] [--json] [--per-box]",
+      "summary": "I calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
+      "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [],
+      "optional_deps": [
+        "spacy",
+        "it_core_news_md"
+      ],
+      "args": [
+        {
+          "name": "--file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Un master da misurare (ripetibile); senza, la base ARC-07 DEF e ARC-08."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita JSON."
+        },
+        {
+          "name": "--per-box",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutti i box, non solo i peggiori."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "07_il Portale Della Forgia Eterna/ARC07-DEF-*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok, anche senza spaCy (misura saltata)",
+        "2": "file assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso modello spaCy, stesso risultato; il modello CC BY-NC-SA 3.0 non entra nel repo."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_sintassi.py --help",
+      "tests": [
+        "scripts/tests/test_misura_sintassi.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/sintassi/README.md"
       ]
     },
     {
