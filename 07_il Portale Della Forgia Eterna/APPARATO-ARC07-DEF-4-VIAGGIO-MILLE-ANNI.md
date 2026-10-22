@@ -65,6 +65,9 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | altrimenti Artemis, a | 25 |
 | SCENA 5 | le gravi e a | 27 |
 | SCENA 6 | blocco lo tira già a Nascondersi | 22 |
+| SCENA 6 | è qui che si tira l'Osservare | 18 |
+| SCENA 6 | del primo blocco resta Muoversi Silenziosamente | 20 |
+| SCENA 6 | Chi corre giù, inseguito, tira Equilibrio | 10 |
 | SCENA 6 | Finché dura l'invisibilità, Muoversi Silenziosamente | 20 |
 | SCENA 6 | Quando l'invisibilità finisce, Nascondersi | 22 |
 | SCENA 6 | sono due per quattro) tira Nascondersi | 22 |

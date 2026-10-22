@@ -10,6 +10,9 @@
   "north": "N",
   "tipo": "tattica",
   "ambiente": "esterno",
+  "luogo": "Hammerfist ≈372 DR, la tenda del comando sulla piana dell'orda",
+  "quota": "870 m ; s.l.m., la piana dell'orda [INFERRED — needs DM confirmation: il DM ha fissato la piana a quota 0, non la quota sul mare]",
+  "dislivello": "0 m ; sulla piana dell'orda: porta e cortile sono 100 m più in alto, a nord, a circa 1 km di cammino dalla postierla",
   "regions": [
     {
       "terrain": "🟫",
