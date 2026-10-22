@@ -33,20 +33,17 @@
 > **Le domande per il DM** (le scelte `[INFERRED]` di questo master, dove il
 > DM non ha ancora deciso; il resto dei numeri ha una fonte):
 >
-> 1. **Dove sta il Giorno 3.** Il libretto (§12) lo mette nella serata della
->    resistenza al Cuore; il piano (tabella A1) e la guida lo mettono qui.
->    Il master lo tiene qui, con un punto di taglio (§0, «Il punto di
->    taglio»): se la serata è lunga, il Giorno 3 apre la Sessione 3. Quale
->    dei due è il default?
+> 1. **Dove sta il Giorno 3. Decisa** `[CANONE — DM 2026-10-22]`: il Giorno
+>    3 resta nella Sessione 2. L'uscita A (Scena 9) è il default, B e C sono
+>    di riserva (§0, «Il punto di taglio»).
 > 2. **Le baliste contro Fauci in volo.** Le mappe dicono che a 45 m è fuori
 >    gittata; per l'SRD una balista pesante ha incremento 36 m e a 45 m
 >    tira con −2. Il master regge le due letture: la riga da cambiare è in
 >    Scena 2, «Il sorvolo», ed è marcata ⚙️.
-> 3. **Il Re a 8 pf.** La 3A di `ARC08-01` e `ARC08-10` §5.3 lo vogliono al
->    Cuore a 8 pf; un soffio da 14d4 non ce lo porta da solo. Il master usa
->    l'acido che resta nell'armatura corrosa (Scena 6): le cure lo tengono
->    vivo e non lo rimettono in piedi. Gli 8 pf sono fissi, o sono quello che
->    lasciano i dadi?
+> 3. **Il Re a 8 pf. Decisa** `[CANONE — DM 2026-10-22]`: il Re arriva al
+>    Cuore a 8 pf fissi, e la causa è l'acido rimasto nell'armatura corrosa
+>    (Scena 6). Le cure lo tengono vivo fino al Cuore e non lo rimettono in
+>    piedi; la procedura è in Scena 6, «Il conto del Re».
 > 4. **Gorthak sotto metà.** La sua scheda (`ARC08-02`) lo manda in Furia fino
 >    alla morte sotto i 101 pf; il libretto (§5) fa fuggire i comandanti
 >    sotto metà. Il master li tiene tutti e due: un round di Furia, poi la
@@ -76,13 +73,36 @@
 >     torre, e non è provato negli script.
 > 12. **Il Re ferito, nel libretto.** Nei round 3-4 del Giorno 3 il master dà
 >     −2 al morale (come una breccia) quando il Re cade.
+>
+> Domande nuove, dal giro delle letture a freddo del 2026-10-22:
+>
+> 13. **La prova della ritirata.** La Scena 7 non aveva un tiro per tenere
+>     una via; il master ne mette uno (d20 + Combattere contro CD 28/30/32,
+>     «Come si tiene una via»). Si tiene?
+> 14. **Chi si unisce a un duello.** Il settore che l'eroe lascia tira senza
+>     di lui e prende le tacche (Scena 2): così unirsi costa sempre. Vale
+>     anche per Dara che tira dalla torre senza scendere?
+> 15. **Il bugbear sceglie.** L'attacco mortale dell'SRD uccide o paralizza,
+>     a scelta dell'assassino. Il master fa paralizzare i pregen e uccidere
+>     solo il Re: va bene, o i bugbear uccidono anche i pregen?
+> 16. **Il Re all'incrocio.** Se i dadi lo uccidono, muore (esito aperto), o
+>     il DM ferma i dadi a −9 (Scena 8)?
+> 17. **Le Cantitrici cadute.** Se le Mura cedono entro il round 3 del Giorno
+>     2 ne cadono tre e il Coro si perde (Scena 4): il numero è del master.
+> 18. **Il ponte levatoio.** Il master gli dà un argano e 80 pf con durezza
+>     5, e lo fa alzare solo senza nessuno sopra (§2, «scelta del modulo»).
 <!-- /apparato -->
 
-> **La serata in tre frasi.** Per tre giorni l'orda della Mano Rossa sale la
-> strada e si getta sulle mura di Hammerfist, e i quattro tengono i loro
-> settori finché possono. Il terzo giorno il drago sceglie il Re, e il Re lo
-> aspetta sopra il cancello. Poi la fortezza si svuota dentro la montagna,
-> e nel buio dei tunnel qualcuno aspetta il Re.
+> 🧭 **La serata in tre frasi.** Per tre giorni l'orda della Mano Rossa sale la
+> strada e si getta sulle mura di Hammerfist, e i quattro nani della visione
+> tengono i loro settori finché possono. Il terzo giorno il drago sceglie il
+> Re, e il Re lo aspetta sopra il cancello. Poi la fortezza si svuota dentro
+> la montagna, e la posta è portare il Re vivo al Cuore della Montagna,
+> mentre nel buio dei tunnel gli assassini dell'orda lo aspettano.
+
+> **La cornice.** I giocatori non giocano i loro personaggi: giocano Borin,
+> Dara, Thorin e Nala, quattro nani di Hammerfist di mille anni fa, dentro la
+> visione che la Corona dei Re mostra ai Rumbling Stones (Handout 0).
 >
 > **Quando si gioca**: la serata dopo `ARC08-DEF-1`, con la scheda della
 > Sessione 1 compilata. Il flashback coi pregen sta fra la Scena 1 e la
@@ -155,24 +175,33 @@ Hammerfist», Dana è «la Madre Superiora», il pregen Thorin è «Runaforte»
 
 ### Cosa preparare
 
-Con poco tempo per leggere: §0, §0-bis, Scena 2, Scena 6, Scena 8, §7.
+Con poco tempo per leggere: §0, §0-bis, Scena 1, Scena 2, Scena 4, Scena 6,
+Scena 7, Scena 8, §7. Il resto si legge quando arriva.
 
 - La **scheda della Sessione 1** (`ARC08-DEF-1` §7) e la sua tabella delle
-  leve: si leggono all'alba (Scena 1).
+  leve: si leggono all'alba (Scena 1), e la Scena 1 qui ripete le leve in
+  breve. Se la scheda manca, il morale della rocca parte da **+1** (libretto
+  §6) e nessuna leva vale.
 - Le **quattro schede** coi punti ferita e gli incantesimi rimasti dalla
   Sessione 1: la notte fra le due serate è passata, e i pregen hanno
   recuperato tutto (libretto §8). Le pozioni spese restano spese.
 - Il **libretto** (`ARC08-18`): stasera si spiegano il morale (§6), la notte
   (§8), i modi di gioco (§9) e «Chi tiene cosa» (§1), più la breccia (§7) e
   le macchine (§7-bis). Il mazzo, le carte e la ferocia sono del DM
-  (`ARC08-19` §4).
+  (`ARC08-19` §4), e così le tre capacità dell'orda (`ARC08-19` §1: Carica
+  selvaggia, Formazione, Sbilanciare), che il DM applica e non spiega.
 - **Quattro d20 rossi e quattro bianchi**; il **foglio dei reparti** (libretto
   §14), una riga a testa; un **segnalino per il morale** e uno per i **pf del
   cancello**.
-- Tre **mazzi dell'orda** per giorno, uno per settore, da quattordici carte:
-  sei hobgoblin, quattro guerrieri, tre orchi, un lupi (`ARC08-19` §4). Bastano
-  carte da gioco: picche gli hobgoblin, fiori i guerrieri, cuori gli orchi, il
-  jolly i lupi.
+- Quattro **mazzi dell'orda** per giorno, uno per settore (Cancello, Mura,
+  Torre Ovest, Torre Est), da quattordici carte: sei hobgoblin, quattro
+  guerrieri, tre orchi, un lupi (`ARC08-19` §4). Bastano due mazzi di carte da
+  gioco: picche gli hobgoblin, fiori i guerrieri, cuori gli orchi, il jolly i
+  lupi. Il mazzo è tutto quello che l'orda manda in quel settore quel giorno:
+  se finisce, il settore combatte solo con chi ha davanti, e non arriva più
+  nessuno fino a sera.
+- La **riserva** (Scena 4, «La riserva»): entra nel primo settore che cede,
+  anche il Giorno 1.
 - Le mappe: la **MAPPA 2A** per i duelli al cancello e alla breccia, la
   **2B-CORRETTA** per il soffio, la **H3-1** e la **3Z** per i tunnel
   (Appendice B).
@@ -183,13 +212,14 @@ Con poco tempo per leggere: §0, §0-bis, Scena 2, Scena 6, Scena 8, §7.
 | la scheda di ogni pregen, aggiornata | in apertura (Scena 1) |
 | il libretto, i paragrafi 6, 8 e 9 | all'alba del Giorno 1 (Scena 1) |
 | il foglio dei reparti, una riga a testa, con «Chi tiene cosa» | all'alba del Giorno 1 (Scena 1) |
+| l'Handout 7, la mappa giocatore della fortezza (§11), se il tavolo la vuole per i settori | all'alba del Giorno 1 (Scena 1) |
 | niente di nuovo dopo | la ritirata e i tunnel si giocano sulle mappe |
 
 ### I tempi della serata
 
 | Scena | Quanto dura | Cosa si taglia se si è in ritardo |
 |---|---|---|
-| 1 · L'alba e le leve | 15' | le leve si leggono a gruppi, non una per una |
+| 1 · L'alba e le leve | 25': le leve, i dieci minuti di libretto, le scelte | le leve si leggono a gruppi, non una per una |
 | 2 · Giorno 1 (2A) | 25' di libretto, più 25' se si sfida Gorthak, più 5' il sorvolo | il sorvolo si racconta, senza tiri |
 | 3 · La notte del Giorno 1 | 5' | niente: è il conto |
 | 4 · Giorno 2, la breccia | 25', più 30' se si sfida Grimjaw | il duello di Grimjaw lo combatte il Re, a racconto |
@@ -200,36 +230,45 @@ Con poco tempo per leggere: §0, §0-bis, Scena 2, Scena 6, Scena 8, §7.
 | 8 · L'incrocio silenzioso (2F) | 30-40' | gli orchi inseguitori non arrivano |
 | 9 · La porta di mithral | 5' | niente: è la scheda |
 
-Il totale sta fra **3 h 35** e **4 h 30**. Le stime più incerte sono i
-duelli: nessuno li ha provati al tavolo, e il libretto (§12) ne prevede uno a
-giorno. Se dopo la notte del Giorno 2 sono passate più di **due ore e
-mezza**, vale il punto di taglio.
+Il totale sta fra **3 h 15** (nessun duello) e **4 h 20** (tutti e due i
+duelli e l'incrocio lungo). Le stime più incerte sono i duelli: nessuno li ha
+provati al tavolo, e il libretto (§12) ne prevede uno a giorno. Se il tempo
+manca, vale il punto di taglio, con le sue soglie.
 
-### Il punto di taglio `[INFERRED — domanda 1 dell'apparato]`
+### Il punto di taglio `[CANONE — DM 2026-10-22: il Giorno 3 resta in questa serata; A di default, B e C di riserva]`
 
-La serata ha tre uscite. Il DM sceglie la prima che arriva in orario:
+La serata ha tre uscite. Si gioca fino alla A; la B e la C servono solo se
+il tempo manca, e ognuna ha la sua soglia:
 
-| Uscita | Dove si chiude | Cosa apre la Sessione 3 |
-|---|---|---|
-| **A** (piena) | Scena 9, la porta di mithral | la 3A, la resistenza al Cuore |
-| **B** | Scena 7, il Re portato nel tunnel | l'incrocio silenzioso (Scena 8), poi la 3A |
-| **C** (quella del libretto §12) | Scena 5, la notte del Giorno 2 | il Giorno 3 (Scene 6-9), poi la 3A |
+| Uscita | Dove si chiude | Quando la si usa | Cosa apre la Sessione 3 |
+|---|---|---|---|
+| **A** (piena, il default) | Scena 9, la porta di mithral | sempre, se il tempo c'è | la 3A, la resistenza al Cuore |
+| **B** | Scena 7, il Re portato nel tunnel | alla fine della Scena 7 sono passate più di **3 h 45** (a ritmo pieno ci si arriva fra 2 h 40 e 3 h 35) | l'incrocio silenzioso (Scena 8), poi la 3A |
+| **C** | Scena 5, la notte del Giorno 2 | alla fine della Scena 5 sono passate più di **2 h 30** (a ritmo pieno ci si arriva fra 1 h 30 e 2 h 25) | il Giorno 3 (Scene 6-9), poi la 3A |
 
-Con l'uscita C la Sessione 3 si allunga di un'ora e mezza: il libretto la
-pensa così («il terzo giorno dura quattro round e lascia il resto della
-serata alla resistenza al Cuore»). La scheda del §7 si compila comunque alla
-chiusura, con le righe che si sono giocate.
+Con l'uscita C la Sessione 3 si allunga di un'ora e mezza: è il ritmo che il
+libretto (§12) aveva in mente, e qui è solo la riserva. La scheda del §7 si
+compila comunque alla chiusura, con le righe che si sono giocate.
 
 ### Se lo divinano
 
-Thorin ha *comunione* (dodici domande, sì o no) e Nala *sapere bardico*.
+Thorin ha *comunione* (dodici domande, sì o no; dieci minuti di preghiera,
+SRD: si fa di notte o all'alba) e Nala *sapere bardico*.
 
 | Segreto | Lo rompe | Chi lancia ottiene | Il modulo va avanti così |
 |---|---|---|---|
-| che il drago scenderà il Giorno 3 e punterà il Re | *comunione* | sì, a «oggi?» e a «il Re?» | il Re sale lo stesso sul cancello: sa che i nani restano al loro posto solo se lo vedono lì. Si può preparare la difesa: *protezione dall'energia* sul Re, Borin accanto a lui (Scena 6) |
+| che il drago scenderà il Giorno 3 e punterà il Re | *comunione*; e il Re stesso, a chi va da lui la notte del Giorno 2 (Scena 5) | sì, a «oggi?» e a «il Re?» | il Re sale lo stesso sul cancello: sa che i nani restano al loro posto solo se lo vedono lì. Si può preparare la difesa: *protezione dall'energia* sul Re, Borin accanto a lui (Scena 6) |
 | che nei tunnel aspettano degli assassini | *comunione* | sì, a «c'è qualcuno nei tunnel?» | i bugbear sono lì lo stesso: chi lo sa ha diritto a un'**azione preparata** al round 1 della Scena 8, anche senza l'Osservare |
-| dove l'orda colpirà il Giorno 2 | *comunione* | sì e no, settore per settore | il DM sceglie lo stesso il settore di Grimjaw dopo il round 1 (Scena 4): la domanda dà solo un nome |
+| dove l'orda colpirà il Giorno 2 | *comunione* | sì e no, settore per settore | il settore di Grimjaw lo decide la regola della Scena 4 (round 1): la risposta dice quale settore è, e i pregen possono spostare un eroe in più prima dell'alba |
 | quanti sono rimasti all'orda | *comunione* | «più di cinquecento?» sì | il mazzo non cambia: sono troppi lo stesso |
+| chi è il drago, e cosa sa fare | *sapere bardico* (Nala, CD 20) | un drago nero adulto, l'acido in linea, e la paura che porta con sé; con 25, che i draghi neri della palude odiano i re dei nani da mille anni | niente cambia: il tavolo sa che il soffio è acido e può prepararsi (*protezione dall'energia*) |
+| cosa c'è dietro la statua del Re Antenato | *sapere bardico* (Nala, CD 15) | il tunnel di fuga verso il Cuore della Montagna, e dove si spinge la pietra | Nala apre la statua al primo tentativo nella Scena 7 |
+| chi è Grimjaw | *sapere bardico* (Nala, CD 20) | il generale orog della Mano Rossa: non combatte da solo, e sotto metà si ritira | niente cambia: il tavolo sa che fugge |
+
+**Il Cuore della Montagna** è la sala sotto la cittadella, dietro la porta di
+mithral in fondo al tunnel della statua: l'ultimo rifugio di Hammerfist, dove
+i nani resistono nella Sessione 3 (la 3A). Arrivarci vivi, col Re, è la posta
+della seconda metà della serata.
 
 ---
 
@@ -248,12 +287,13 @@ sono quelle del manuale o delle schede.
 | la palla di fuoco degli adepti, su un pregen | Riflessi **CD 16**, 7d6 fuoco | Scene 2 e 4 |
 | il soffio in linea di Fauci | Riflessi **CD 29** dimezza 14d4 acido | Scene 2 e 6 |
 | il soffio a cono sul Re | Riflessi **CD 29** dimezza 14d4 acido | Scena 6 |
-| spostare il Re fuori dal cono (Borin) | Forza **CD 25** | Scena 6 |
+| spostare il Re fuori dal cono (Borin) | Forza contrapposta: Borin +5 (+7 in Postura) contro il Re +9 | Scena 6 |
 | la statua del Re Antenato | Forza **CD 20**, o Conoscenze (storia) o sapere bardico **CD 15** | Scena 7 |
 | salire sulla stalagmite (Dara) | Scalare **CD 10** | Scena 8 |
-| vedere i bugbear prima del colpo | Osservare **CD 25** (il loro Nascondersi +17 nel buio) | Scena 8 |
+| vedere i bugbear prima del colpo | Osservare contro il loro Nascondersi (d20 + 17), −1 ogni 3 m | Scena 8 |
 | l'attacco mortale | Tempra **CD 16**, o paralizzato 1d6+2 round | Scena 8 |
-| cadere in acqua dal ponte | Nuotare **CD 15** per uscire dal fossato | Scena 2 |
+| cadere in acqua dal ponte | Nuotare **CD 15** per uscire dal fossato (penalità d'armatura doppia) | Scena 2 |
+| dissolvere lo *scudo* o l'*armatura magica* di Fauci | *dissolvi magie* mirato, d20 + livello (massimo +10) contro **CD 18** | Scene 2 e 6 |
 
 ### I nemici in una riga (numeri completi in Appendice A)
 
@@ -263,10 +303,11 @@ sono quelle del manuale o delle schede.
 | troll dell'ariete | 2 | 16 | 63 | 2 artigli +9 (1d6+6), morso +4, sbranare 2d6+9; rigenerazione 5 | quando Gorthak fugge, lo seguono |
 | **Grimjaw** | 1 | 26 | 178 | *spada bastarda* +22/+17/+12 (1d10+9, 17-20) | sotto **89** fugge (libretto); la scheda: pozione sotto 60 |
 | orog della guardia nera | 4 | 19 | 63 | ascia bipenne +13/+8 (1d12+10) | mai, finché Grimjaw è vivo |
-| **Fauci di Palude** | 1 | 29 (37 con *armatura magica* e *scudo*) | 337 | soffio 14d4, Riflessi CD 29 | il Giorno 1 dopo un passaggio; il Giorno 3 sotto ~**230** sale in quota |
+| **Fauci di Palude** | 1 | 29 (37 con *armatura magica* e *scudo*) | 337 | soffio 14d4, Riflessi CD 29; a terra morso +33 (2d8+10), artigli, ali e coda +31 | il Giorno 1 dopo un passaggio; il Giorno 3 sotto ~**230** sale in quota |
 | il cavaliere | 1 | 23 | 95 | *lancia da cavaliere* +16 (1d8+7, triplo in carica) | resta in sella finché Fauci vola |
 | bugbear assassino | 8 | 20 | 58 | morning star +11 (1d8+3), furtivo +4d6, attacco mortale | quando ne cadono più di 4, o se scoperti prima del colpo |
 | hobgoblin della diversione | 7 | 19 | 43 | spada lunga +10/+5 (1d8+2) | mai |
+| giganti delle colline (sulla strada, non sul campo) | 8 | 20 | 102 | macigno (la carta) | non si combattono: Dara può fermare un macigno (Scena 2) |
 
 **EL**: Gorthak coi due troll circa **13**; Grimjaw con quattro guardie circa
 **15**; l'imboscata dei bugbear circa **15**. Sono scontri duri per quattro
@@ -295,7 +336,7 @@ voce.
 |---|---|---|---|
 | **1** | +1 dappertutto (mura intatte) | Cancello 3, Mura 3, torri 2; +1 al Cancello con Gorthak | i giganti (round 2), Gorthak al cancello, la palla di fuoco; il sorvolo al round 4 |
 | **2** | +1 sulle Mura finché non cedono | Cancello +1 (la breccia del cancello), +2 con Gorthak | i giganti (round 2), Gorthak, la palla di fuoco, Grimjaw |
-| **3** | niente | come il Giorno 2, senza Gorthak | il soffio (round 2), Grimjaw, la ritirata dopo il round 4 |
+| **3** | +1 sulle Mura, se non hanno mai ceduto | come il Giorno 2, senza Gorthak | il soffio (round 2), Grimjaw, la ritirata dopo il round 4 |
 
 ### Il morale della rocca
 
@@ -307,12 +348,18 @@ reparti, non ai gesti.
 |---|---|
 | un reparto nanico distrutto | −1 |
 | un settore cede | −2 |
-| la riserva entra nel settore caduto `[INFERRED — domanda 8]` | +3 |
+| la riserva entra nel settore caduto `[INFERRED — la riserva a +3]` | +3 |
 | un comandante nemico fugge | +2 |
 | un giorno senza brecce | +1, la notte |
 | il sorvolo: un eroe colpisce il drago `[INFERRED]` | +1 |
-| il Re cade sul cancello `[INFERRED — domanda 12]` | −2 |
+| il Re cade sul cancello `[INFERRED — il Re ferito nel libretto]` | −2 |
 | Borin prende il soffio al posto del Re `[INFERRED]` | +2 |
+
+Il reparto distrutto, il settore che cede, il comandante che fugge e il
+giorno senza brecce sono nel libretto (§6). Le altre quattro righe i
+giocatori non le hanno: quando una scatta, il DM la dice ad alta voce con
+la sua causa («il drago sanguina, e le Mura lo hanno visto: +1»), così il
+numero non cambia senza che il tavolo sappia perché.
 
 ### 🐾 Supporto Pathfinder 1e (dove il 3.5 è vago) — opzionale, dichiarato
 
@@ -366,8 +413,9 @@ tutti insieme.
 
 ### 🏹 DARA OCCHIOLESTO — l'occhio delle montagne (LotR lead)
 - Dalla Torre Ovest vede tutto il fronte: il suo arco tira anche nel settore
-  vicino, e contro gli orchi vale +25. È lei che conta i giganti sulla strada
-  e dice dove cadrà il primo macigno.
+  vicino, e contro gli orchi vale +25. È lei che conta i giganti sulla strada,
+  e col suo arco può fermare un macigno prima che parta (Scena 2, «Dara e i
+  giganti»).
 - Il Giorno 3 ha il tiro impossibile: il drago in picchiata, una freccia
   sola che conti (Scena 6). Nei tunnel sale sulla stalagmite e vede i
   bugbear prima degli altri, se li vede qualcuno (Scena 8).
@@ -384,7 +432,8 @@ tutti insieme.
 ### 🎭 NALA CANTAPIETRE — la barda che sa tutto di tutti (Game of Thrones lead)
 - Tiene la Torre Est, quella che crolla se cede: il muro accanto è il punto
   dove l'orda apre la breccia il Giorno 2 (Scena 4). Capisce l'orchesco e il
-  goblin: sente gli ordini di Grimjaw prima che arrivino ai reparti.
+  goblin: entro 9 m sente gli ordini di Grimjaw prima che arrivino ai
+  reparti.
 - È lei che apre il tunnel dietro la statua (Scena 7), e nell'incrocio il
   suo canto tiene insieme l'anello mentre i bugbear colpiscono (Scena 8).
 
@@ -406,8 +455,8 @@ arrivano a tirare.
 |---|---|---|
 | **comando** | Re Thorek, nel cortile interno (BH34); il Giorno 3 sopra il cancello | gli ordini, e il Re dove i nani lo vedono |
 | **culto** | la Madre Superiora alla stazione di cura (BI36); le Cantitrici sulle Mura dal Giorno 2 | cure e canto, finché durano |
-| **rimedi** | la sala dei feriti dietro la cappella, e la stazione di Dana | i pregen guariscono di notte come sempre; i reparti recuperano 1 PFU (libretto §8) |
-| **bottega** | l'armeria del cortile interno: niente prezzi, la città è in guerra | ripara armi e armature. Il Giorno 3 dà a Dara le due frecce `[INFERRED — domanda 9]` |
+| **rimedi** | la sala dei feriti dietro la cappella, e la stazione di Dana | i pregen guariscono di notte come sempre; i reparti recuperano 1 PFU (libretto §8). Alchimisti e pozioni: **nessuno**. Le pozioni della città sono già nelle bisacce dei capitani, e non se ne vendono |
+| **bottega** | l'armeria del cortile interno: niente prezzi, la città è in guerra | ripara armi e armature in una notte; dà frecce e quadrelli normali quanti se ne vogliono, nessuna munizione magica. Chi identifica: nessuno, in questi giorni. Il Giorno 3 dà a Dara le due frecce `[INFERRED — le frecce di Dara]` |
 | **messaggi** | i corridori della Porta Interna; i corni dei bastioni | il segnale della ritirata, il Giorno 3 |
 | **guardia** | la riserva nel cortile esterno (BS-CB 56-57): due reparti di balestrieri e uno di veterani | entra nel settore che cede (libretto §1) |
 
@@ -419,18 +468,22 @@ Il box è nella **Scena 2**. La griglia è la MAPPA 2A, BG-BJ righe 70-78.
 ha **200 pf**, CA 23 e durezza 20 `[CANONE — DM 2026-10-21]`
 (`ARC08-02` §4); l'androne dietro è profondo 4,5 m. Fuori c'è il ponte
 levatoio, 6 × 7,5 m e 80 pf, abbassato sul fossato (6 m di largo, 3 di
-fondo): l'orda lo usa per l'ariete. Sopra l'androne, fra i bastioni G1 e G2,
+fondo): l'orda lo usa per l'ariete. L'argano è nell'androne, ma le catene
+non alzano un ponte con sopra un gigante e due troll. Lo si può rompere
+(80 pf, durezza 5, legno): chi è sopra cade nel fossato con l'ariete, e per
+il resto del giorno il cancello non perde pf; Gorthak e i troll risalgono
+in due round, e la carta di Gorthak resta in gioco (scelta del modulo). Sopra l'androne, fra i bastioni G1 e G2,
 c'è la piattaforma da cui il Giorno 3 il Re guarda l'orda.
 
 Nel battente sinistro c'è uno **sportello** largo un nano, sbarrato
-dall'interno, per le sortite `[INFERRED — domanda 6]`. Uno spazio di 1,5 m:
+dall'interno, per le sortite `[INFERRED — lo sportello del cancello]`. Uno spazio di 1,5 m:
 Gorthak, Grande, ci passa solo spremendosi, con −4 a colpire e alla CA.
 
 **I pf del cancello**, che contano solo sulla mappa coi PG (`ARC08-19` §3).
 Ritmo di riferimento della MAPPA 2A: −80 il Giorno 1, −80 il Giorno 2,
 crolla il Giorno 3 `[CANONE — DM 2026-10-22: il cancello crolla il Giorno 3]`.
-Gorthak all'ariete fa 3d10+20 a round, 32 di media meno la durezza: se ci si
-accanisce, lo sfonda in circa sette round. Se Gorthak fugge il Giorno 1, quel
+Gorthak all'ariete fa 3d10+20 a round, 36,5 di media: meno la durezza 20
+restano 16,5, e da solo lo sfonda in circa dodici round di mischia. Se Gorthak fugge il Giorno 1, quel
 giorno il cancello perde la metà `[INFERRED]`.
 
 | Occhi | Orecchie | Pelle e naso | Cosa NON dire |
@@ -468,7 +521,8 @@ del muro.
 
 Il box è nella **Scena 7**. 90 × 30 m. La statua (BA-BB, righe 22-23) è alta
 4 m; dietro, il tunnel di fuga (BA20) che nessuno ha mai aperto. Le lanterne
-della Sessione 1 bruciano ancora alla base, se le hanno accese.
+della Sessione 1 bruciano ancora alla base: le hanno accese i nani, da soli,
+la notte dei fuochi.
 
 ### ZONA 6 — I tunnel e l'incrocio
 
@@ -510,8 +564,9 @@ nominano loro, il DM conferma.
    |---|---|
    | Osservare di Dara 25 o più | il Giorno 1, a ogni round, ogni giocatore vede il primo reparto del mazzo del suo settore |
    | la ricognizione «pulita» | la carta **I giganti** non si gioca il Giorno 1 |
-   | il prigioniero ha parlato; il presagio di Nala | +2 a colpire nei primi 3 round del duello con Gorthak; +2 al primo attacco. Si sommano |
-   | la Diplomazia delle forze | adesso: due reparti si scambiano fra i settori |
+   | il prigioniero ha parlato | +2 a colpire nei primi 3 round del duello con Gorthak, per chi lo sfida |
+   | il presagio di Nala | +2 al primo attacco del duello con Gorthak. Col prigioniero si somma: il primo attacco ha +4 |
+   | la Diplomazia delle forze | adesso: il gruppo sceglie due reparti di settori diversi e li scambia; ognuno porta i suoi PFU |
    | il Re convinto | il Re comanda dal cortile interno; se no, il Giorno 1 è al Cancello accanto a Borin |
    | *scolpire pietra* o Artigianato della Preparazione | +1 al bianco in un settore scelto, il Giorno 2 |
    | Nala fra le truppe | morale +1, già nel numero di partenza |
@@ -519,7 +574,7 @@ nominano loro, il DM conferma.
    | le rune, o un incantesimo di 3° | +1 al bianco nel settore di chi l'ha fatto, round 1 del Giorno 1 |
    | le trappole | ognuna annulla una tacca del Giorno 1 o del Giorno 2, quando il gruppo lo dice |
    | il presagio di Thorin | il Giorno 1, il TS contro la palla di fuoco a +2 |
-   | il presagio di Dara | round 1 del Giorno 1: gli orchi senza Carica selvaggia |
+   | il presagio di Dara | round 1 del Giorno 1: gli orchi arrivano senza slancio. Il DM lo applica e non spiega cosa cambia (`ARC08-19` §1) |
 
 2. **Il libretto, l'ultimo pezzo** `[CANONE — DM 2026-10-21]`: il morale
    (§6), la notte (§8), i modi di gioco (§9) e «Chi tiene cosa» (§1), con la
@@ -586,13 +641,16 @@ Al round 2, con la carta dei giganti:
 
 > **Read-aloud (Andor lead) — le mura, i giganti.** *Il primo masso non si
 > vede partire. Si sente: un fischio basso che cresce, e poi la merlatura
-> accanto a voi non c'è più, e al suo posto c'è polvere e un uomo che grida
+> accanto a voi non c'è più, e al suo posto c'è polvere e un nano che grida
 > senza voce. Giù, al gomito della strada, il gigante si pulisce le mani sul
 > petto e si china di nuovo. Che fate?*
 
-**Dara e i giganti.** Dal round 2 Dara può tirare il suo gesto Combattere
-contro i giganti al gomito invece che contro un reparto: +23 contro la loro
-CA. Non toglie PFU all'orda, quindi non salva il suo settore dalla tacca, ma
+**Dara e i giganti.** Il libretto dice ai giocatori che i giganti non si
+attaccano dalle mura: vale per i reparti. Dara è l'eccezione, e il DM la dice
+solo se lei ci prova. Dal round 2 può tirare il suo gesto Combattere contro un
+gigante al gomito invece che contro un reparto: +23, con −2 a −6 per la
+distanza (50-100 m, l'arco ha incrementi di 33 m), contro **CA 20** (gigante
+delle colline, SRD: 102 pf, e un colpo non lo abbatte). Non toglie PFU all'orda, quindi non salva il suo settore dalla tacca, ma
 se colpisce **il macigno di quel round, nel settore che sceglie, non parte**
 `[INFERRED — la carta non lo prevede; non provato negli script]`. Lo stesso
 vale per la balista di una torre, d20 + 10. I giganti sono otto, sulla
@@ -627,37 +685,64 @@ Al round 3:
 | i troll dell'ariete | due, verdi e lunghi, con il tronco in spalla e le dita che non si chiudono mai del tutto | non parlano: annusano |
 | i giganti della strada | otto giganti delle colline sui gomiti dei tornanti, coi sacchi di pietre | ridono a ogni masso che arriva |
 
-**Chi lo sfida.** Il gesto **Sfidare** è del Cancello (libretto §5). Il
-duello vale come un round di battaglia: in quel round i reparti del Cancello
+**Chi lo sfida.** Il gesto **Sfidare** è del Cancello (libretto §5), dal
+round 3 fino al 5, finché la carta è in gioco. Il duello vale come un round
+di battaglia: in quel round i reparti del Cancello
 tirano senza l'eroe, e il Cancello **non prende tacche**. Un eroe di un altro
 settore può unirsi al duello lasciando il suo, che in quel round tira senza
 di lui **e prende le tacche** `[INFERRED]`. Dara può unirsi dalla Torre
 Ovest senza scendere: 48 m in pianta e 20 di quota, secondo incremento
 dell'arco, −2.
 
+**Prima che Borin esca, il DM lo dice in chiaro.** Gorthak e i due troll sono
+uno scontro per più eroi: da solo, Borin cade prima che Gorthak scenda sotto
+metà circa una volta su due; con le frecce di Dara dalla torre, quasi mai.
+Come si gioca il duello mentre gli altri settori aspettano: il round di
+battaglia si tira tutto, anche nei settori degli altri, **prima** del duello;
+poi chi non è nel duello gioca i due troll contro chi è uscito, coi numeri
+dell'Appendice A.2, e il DM tiene Gorthak.
+
+**Gli incantesimi nel duello** valgono per l'SRD, non per il libretto. Una
+*barriera di lame* di Thorin sul ponte (muro o anello, 66 m, dura 12 minuti) fa
+12d6 a chi la attraversa (Riflessi CD 22 dimezza): i troll rigenerano quel
+danno, Gorthak no. Thorin la lancia dalle Mura, se vede il ponte: è il suo
+gesto del round, e le Mura tirano senza di lui.
+
 **Dove.** Sul ponte levatoio, sulla MAPPA 2A (BG-BJ, righe 74-78), davanti
 al cancello. Si esce dallo **sportello** del battente: la Guardia lo apre e lo
 sbarra alle spalle di chi esce. Dalla piattaforma sopra l'androne si scende
 anche con una corda annodata contro il muro (Scalare CD 0, a un quarto della
-velocità: due round per i 15 m).
+velocità per azione di movimento: un nano fa 3 m a round, **cinque round**
+per i 15 m; tre, con la scalata accelerata a −5).
+
+**Tornare dentro.** La Guardia riapre lo sportello a chi bussa: entrare è
+un'azione di movimento, e lo sportello si sbarra di nuovo nello stesso round.
+Chi rientra lascia il duello: Gorthak, il round dopo, torna all'ariete.
+
+**Chi cade nel fossato** (3 m d'acqua) nuota con la penalità d'armatura
+doppia (SRD): Borin in armatura completa affonda. Trattiene il fiato per un
+numero di round pari al doppio della Costituzione, e lo si tira su con una
+corda dal ponte o dalla riva in un round. Gorthak spinge solo chi è sul
+bordo del ponte, e solo se nessuno gli sta ancora davanti.
 
 **Chi c'è sul ponte.**
 
 | Chi | Dove | Cosa fa |
 |---|---|---|
 | **Gorthak** | sul ponte, contro il cancello (BH-BI 74-75) | round 1: lascia l'ariete e carica chi esce (+2 a colpire, −2 CA). Poi attacco completo: due randelli, sei colpi |
-| i due **troll** `[INFERRED — domanda 5]` | ai lati dell'ariete (BG76, BJ76) | round 1: tengono l'ariete. Dal round 2 lo lasciano cadere ed entrano nel duello; sbranano chi prendono con tutti e due gli artigli |
+| i due **troll** `[INFERRED — i troll dell'ariete]` | ai lati dell'ariete (BG76, BJ76) | round 1: tengono l'ariete. Dal round 2 lo lasciano cadere ed entrano nel duello; sbranano chi prendono con tutti e due gli artigli |
 | l'orda | sulla riva, dietro il ponte | non entra: aspetta che il cancello ceda |
 
 **Le tre teste in combattimento.** La sinistra fa +2 danni al primo colpo del
 round. La destra, che non si fa fiancheggiare, guarda le merlature: se un
-eroe tira dall'alto, al round dopo Gorthak lancia un giavellotto (+12,
+eroe tira dalla cinta sopra il ponte (entro 27 m, tre incrementi del
+giavellotto), al round dopo Gorthak lancia un giavellotto (+12,
 1d8+9) invece del secondo randello. La centrale, una volta nel duello, rinuncia
 a un attacco e grida in gigante agli orchi della riva: un reparto in più sul
 fronte del Cancello, il round dopo `[INFERRED — la scheda dà +2 morale a
 un'unità alleata]`.
 
-**Sotto i 101 pf** `[INFERRED — domanda 4]`: per un round la testa sinistra
+**Sotto i 101 pf** `[INFERRED — Gorthak sotto metà]`: per un round la testa sinistra
 vince, e Gorthak è in Furia (+4 Forza: randelli +23, danni 2d6+12 e 2d6+6;
 CA 23). Alla fine di quel round la testa centrale lo tira indietro: Gorthak
 lascia il ponte con la scorta, ferito. È la **fuga** del libretto: **+2** al
@@ -687,13 +772,13 @@ finale.*
 
 #### Il sorvolo (élite 2B)
 
-Al round 4, dopo la palla di fuoco `[INFERRED — domanda 11]`:
+Al round 4, dopo la palla di fuoco `[INFERRED — il sorvolo del Giorno 1]`:
 
 > **Read-aloud (Tolkien lead) — il cielo sopra le torri.** *L'ombra passa
 > sulle mura prima del drago. Tutti alzano la testa nello stesso momento,
 > nani e orchi, e per un istante la battaglia si ferma. Il drago viene
 > giù dalle creste con le ali chiuse, nero sul cielo bianco, col cavaliere
-> stretto al collo e lo stendardo rosso che schiocca. Non scende sul cortile.
+> stretto al collo e lo stendardo rosso che schiocca. Non scende sui cortili.
 > Gira sopra la Torre Ovest, una volta, piano. Poi apre la bocca. Che fate?*
 
 **Scheda d'entrata — Fauci di Palude, il drago della Mano Rossa** *(statistiche: Appendice A.5; `ARC08-02` §1; `Bestiario/villain/Fauci_di_Palude.md`. CA 29, 337 pf)*
@@ -722,27 +807,40 @@ Al round 4, dopo la palla di fuoco `[INFERRED — domanda 11]`:
 gesto del round.
 
 - **Dara**: arco +21 con Nemico Prescelto (draghi), −2 per il secondo
-  incremento, contro CA **37** (Fauci comincia la giornata con *armatura
-  magica* e *scudo*): colpisce con 18 o più. Danni 1d8+8 ×3 al critico.
+  incremento, contro CA **37** (Fauci lancia *armatura magica* all'alba, che
+  dura 7 ore, e *scudo* prima di ogni passaggio, che ne dura 7 minuti):
+  colpisce con 18 o più. Danni 1d8+8 ×3 al critico.
 - **Thorin**: *colpo infuocato* (12d6, Riflessi CD 21 dimezza) contro RI 21:
-  1d20+12 contro 21.
-- **Borin e Nala**: niente che arrivi a 45 m, salvo il martello lanciato di
-  Borin, che non ha.
+  1d20+12 contro 21. Oppure *dissolvi magie* mirato (d20 + 10 contro CD 18,
+  uno per incantesimo): senza *scudo* Fauci ha CA 33, senza i due 29. Il
+  drago non li rilancia in questo passaggio.
+- **Nala**: *dissolvi magie* come Thorin, con d20 + 8; o Ispirare Coraggio,
+  che dà +2 ai TS contro la paura a chi la sente, cioè contro la Presenza; o
+  un'*immagine silenziosa* (216 m) di una balista che si alza sull'altra
+  torre: il drago ci crede se non la studia, e il soffio va lì invece che
+  sulla Torre Ovest.
+- **Borin**: niente che arrivi a 45 m. La sua Presenza Comandante dà +2 ai
+  TS contro la Presenza del drago a chi gli sta entro 9 m.
 
 Un colpo a segno vale **+1** al morale `[INFERRED]`: la rocca vede che sanguina.
-I pf del drago non contano stasera: il suo statblocco al finale dipende dal
-carry-over di ARC-07 (`ARC08-10` §4.1), non da questa serata.
+I danni del sorvolo non passano al Giorno 3: il drago torna alla palude e
+guarisce, e il Giorno 3 riparte da 337. Nemmeno al finale contano: lì il suo
+statblocco dipende dal carry-over di ARC-07 (`ARC08-10` §4.1). Contano solo
+i danni del Giorno 3, per le due soglie della Scena 6.
 
-⚙️ **Le baliste contro il drago** `[INFERRED — domanda 2: la riga da cambiare]`.
-Scegliere una delle due righe prima della serata.
+⚙️ **Le baliste contro il drago** `[INFERRED — le baliste contro il drago: la riga da cambiare]`.
+Scegliere una delle due righe prima della serata; se il DM non sceglie,
+vale la A.
 
 - **A · Le baliste non arrivano** (le mappe, L2 MAPPA 3: «sorvoli a 45 m,
   fuori gittata baliste»). Il drago resta sopra l'angolo morto delle torri, e
   le baliste non si alzano fin lassù.
 - **B · Le baliste tirano** (SRD: balista pesante, incremento 36 m, quindi −2
   a 45 m). Le due baliste della torre che il drago sorvola tirano una volta
-  a testa: +16 (il +18 della MAPPA 3, −2) contro CA 37, 3d8+10. Ricaricano
-  in due round: al passaggio dopo non sono pronte.
+  a testa: +16 (il +18 della MAPPA 3, −2) contro CA 37, 3d8+10, cioè solo
+  col 20 naturale; contro 33 o 29, dopo un *dissolvi magie*, con 17 o 13.
+  Ricaricano in due round: al passaggio dopo non sono pronte. Il d20 + 10
+  del libretto è la balista contro i reparti, e qui non vale.
 
 Il resto della scena non cambia. Con la riga B il Giorno 3 vale lo stesso:
 le baliste delle torri sono su Fauci al round della picchiata (Scena 6).
@@ -756,7 +854,8 @@ l'atterraggio resta al Giorno 3, sulla 2B-CORRETTA.*
 
 **Il conto del giorno.** Alla fine del round 5 si segnano le brecce, i reparti
 distrutti, i pf del cancello (−80 di riferimento, −40 se Gorthak è fuggito) e
-il morale. Il giorno è finito: la notte (Scena 3).
+il morale. Se un settore ha ceduto, la riserva è già entrata lì: Scena 4, «La
+riserva». Il giorno è finito: la notte (Scena 3).
 
 ### Scalare lo scontro
 
@@ -764,7 +863,7 @@ il morale. Il giorno è finito: la notte (Scena 3).
   non va oltre i cinque round: al sesto la testa centrale lo richiama
   comunque, senza la fuga e senza il +2.
 - **Il tavolo va troppo liscio** (nessuna tacca ai round 1-2): l'orda
-  **terrificante** (+1 ad AU e DU) dal round 3, e il bianco sale di uno.
+  **terrificante** (+1 ad AU e DU) dal round 3: il bianco (22 + AU) sale di uno con lei, non di due.
 - **Il tavolo è in difficoltà** (due settori con due tacche al round 3):
   l'orda **normale** per il resto del giorno, e il DM la racconta come un
   fatto: gli orchi delle scale hanno finito il vino.
@@ -802,11 +901,17 @@ duelli sono tutta la battaglia dei pregen.
   che serve (danni se la guardia colpisce, TS se Thorin lancia).
 - *Sotto 89*: indietro dietro la guardia, che resta e muore sul posto. Beve
   una pozione solo quando è già fuori.
+- *La guardia del corpo*: chi vuole colpire Grimjaw in mischia deve avere
+  davanti a sé, sulla sua linea, nessun orog adiacente a Grimjaw: uno ucciso,
+  spinto via o aggirato col passo di 1,5 m. Frecce e incantesimi non devono
+  superare nessuno, salvo la copertura che gli orog danno (+4 alla CA).
 
 **Fauci il Giorno 3** (Scena 6): la sequenza è nella tabella della scena.
 Dopo il soffio, se non atterra, risale e non torna: la sua giornata è il Re.
-Se atterra su un bastione: attacco completo su chi lo ha ferito di più, coda
-sulle guardie, e risale al primo round sotto ~230.
+Se atterra su un bastione: attacco completo su chi lo ha ferito di più (morso
++33, 2d8+10; due artigli +31, 2d6+5; due ali +31, 1d8+5), il colpo di coda
+(+31, 2d6+15) sulle guardie, e risale al primo round sotto ~230 (Appendice
+A.5).
 
 **I bugbear all'incrocio** (Scena 8).
 - *Prima*: studiano i bersagli per tre round dal buio dei tunnel, durante la
@@ -843,23 +948,39 @@ sulle guardie, e risale al primo round sotto ~230.
 | **Teme** | la notte del Giorno 3, quando non avrà più niente da dare |
 
 Ogni notte la Madre Superiora spende quello che ha: arriva al Cuore con 20 pf
-e un *muro di pietra* `[CANONE — DM 2026-10-19]`. Se un pregen le chiede
-una *guarigione* per sé, gliela dà, e il DM lo segna: è una in meno per il Re.
+e un *muro di pietra* `[CANONE — DM 2026-10-19]`. Le cure le dà agli altri:
+i pf li perde lei, sulle Mura e davanti alla barella del Re nella ritirata.
+Ha due *guarigioni* al giorno, e la prima è per il Re: ogni alba il Re ha i
+suoi **196 pf**. Se un pregen le chiede una *guarigione* per sé, gliela dà, e
+il DM lo segna: se le ha date tutte e due ai pregen, il Re sale sul cancello
+con 196 meno i danni presi nei Giorni 1 e 2.
 
 **La notte, nel libretto (§8).** Ogni reparto vivo recupera 1 PFU; gli eroi
 dormono e recuperano tutto; il morale sale di 1 se il giorno è finito senza
 brecce. Le tacche si azzerano. I reparti distrutti non tornano.
 
-**Il lavoro di notte.** Gli ingegneri riparano il cancello di 1d4 pf a round
-per otto ore: nella notte valgono **+20** `[INFERRED — la MAPPA 4 dà «1d4 PF/round»
-senza la durata]`. Sul pendio i giganti alzano la rampa di macerie verso il
+**Il lavoro di notte.** Gli ingegneri riparano il cancello: **+20 pf** per
+notte `[INFERRED — la MAPPA 4 dà «1d4 PF/round» senza dire per quanto; qui una
+notte vale +20]`. Col ritmo della MAPPA 2A il cancello ha 140 pf all'alba del
+Giorno 2. Sul pendio i giganti alzano la rampa di macerie verso il
 Muro Est: Dara, dalla Torre Ovest, la vede crescere (Osservare CD 15 al
 buio, con la scurovisione a 18 m non basta: serve la luna o una luce).
 
 **Se un pregen è morto.** Thorin ha *rianimare morti* e un diamante da 5.000
-mo; Dana ne ha un altro nel tesoro del tempio. Il pregen torna il Giorno 2
+mo; Dana ne ha un altro nel tesoro del tempio. Se il morto è Thorin, lo
+rianima la Madre Superiora, col suo diamante. Il pregen torna il Giorno 2
 con un livello in meno, se il DM vuole il prezzo dell'SRD; il giocatore lo
 gioca comunque, o fa il capitano.
+
+**Se vanno a rompere la rampa.** È la cosa che un tavolo prova. La rampa è
+sotto il Muro Est, a 30 m dalla cinta, coi giganti al lavoro e due reparti
+di hobgoblin di scorta con le torce. Chi scende con *invisibilità* o
+*passare senza tracce* ci arriva; uno *scolpire pietra* o un'ora di lavoro
+ne toglie un pezzo, il fuoco no (i tronchi sono bagnati). La rampa all'alba
+c'è lo stesso, ma più bassa: il Giorno 2 Grimjaw non sale dalla rampa al
+round 1, sale con le scale al round 2. Chi è visto (Osservare dei giganti
++8 e degli hobgoblin contro il Nascondersi) torna sotto i macigni: 2d6 a
+testa, e la scorta lo insegue fino al fossato (scelta del modulo).
 
 **Sviluppi.** All'alba i giganti hanno finito la rampa (Scena 4).
 
@@ -869,7 +990,7 @@ gioca comunque, o fa il capitano.
 
 ### SCENA 4 — Giorno 2, la breccia: Grimjaw e le Cantitrici (2C, 2D)
 
-**In scena** — Dove: il cortile esterno — Chi: Grimjaw · le Cantitrici · Melodia Echopietra
+**In scena** — Dove: le Mura — Chi: Grimjaw · le Cantitrici · Melodia Echopietra
 
 **Quando**: il Day 17. **Durata**: 25 minuti, 30 in più se qualcuno sfida
 Grimjaw.
@@ -909,10 +1030,10 @@ una cosa in più da perdere, e il tavolo deve saperla.
 | Round | Le carte del DM | Cosa si racconta |
 |---|---|---|
 | **sempre** | **La breccia del cancello**: dall'alba il fronte del Cancello è 4, e 5 con Gorthak | l'ariete ha piegato il ferro: i battenti non chiudono più del tutto |
-| **1** | **Grimjaw e la guardia nera**, nel settore che ha preso più tacche ieri o che ha meno reparti; a pari, la Torre Est, sotto la rampa | il box di Grimjaw, qui sotto |
+| **1** | **Grimjaw e la guardia nera**, nel settore che ha preso più tacche ieri; a pari, in quello con meno reparti; a pari ancora, la Torre Est, sotto la rampa | il box di Grimjaw, qui sotto |
 | **2** | **I giganti**: un macigno per settore, come ieri, senza il +1 delle mura intatte | |
-| **3** | **Gorthak al cancello**, se è fuggito il Giorno 1 ma ha i pf sopra metà; se no, **la palla di fuoco** | |
-| **4** | **la palla di fuoco** sulle Mura, sotto le Cantitrici | se il reparto non la dimezza, una Cantitrice è ferita e il canto trema |
+| **3** | **Gorthak al cancello**, se ha più di 101 pf: mai sfidato, o fuggito il Giorno 1 e risalito sopra metà con la notte (+15). Se no, **la palla di fuoco** | |
+| **4** | **la palla di fuoco** sulle Mura, sotto le Cantitrici | se il reparto non la dimezza, una Cantitrice è ferita e il canto trema: è lei la prima a cadere, se le Mura cedono |
 | **5** | nessuna | |
 
 Il **+1 delle Mura** vale dal Giorno 2 finché le Mura non hanno ceduto una
@@ -939,7 +1060,7 @@ volta, e il +1 della Preparazione, se c'è, va dove il gruppo lo ha messo.
 | **Aspetto** | un orog massiccio in armatura completa nera, la benda su un occhio, lo scudo chiodato sulla schiena; la spada resta nel fodero finché qualcuno non sale a cercarlo |
 | **Vuole** | il Re in ginocchio davanti all'orda, e Hammerfist intera: una fortezza che si arrende vale più di una che brucia |
 | **Suona** | frasi lunghe, da uomo che ha studiato; parla in comune ai nani perché lo capiscano tutti, e in orchesco ai suoi |
-| **Sa** | chi c'era sul pendio, il Giorno −1: se un pregen ha sfidato il sergente, Grimjaw lo cerca |
+| **Sa** | chi c'era sul pendio, il Giorno −1: se un pregen ha sfidato il sergente dell'avanguardia nella Sessione 1 (la scheda: «sergente fuggito o morto»), Grimjaw lo cerca |
 | **Teme** | di morire prima di vedere il Re in ginocchio: per questo, sotto metà, se ne va |
 
 **Comparse**
@@ -949,15 +1070,28 @@ volta, e il +1 della Preparazione, se c'è, va dove il gruppo lo ha messo.
 | la guardia nera | quattro orog in piastre nere, con una mano rossa dipinta sul petto | non parlano: parla Grimjaw per loro |
 
 Nala capisce ogni parola (è in comune, per i nani); quello che grida dopo,
-in orchesco, ai suoi, lo capisce solo lei: *«Nessuno tocca il re. Il re è
-mio.»*
+in orchesco, ai suoi, lo capisce solo lei, se è entro 9 m o lo sente
+(Ascoltare CD 15, la sua carta): *«Nessuno tocca il re. Il re è mio.»* Se è
+lontana, lo sa dai reparti il round dopo.
 
-**Finché la carta c'è** `[INFERRED — domanda 7]`, i reparti dell'orda nel
-suo settore hanno **+1 ad AU e DU** (Tattico Superiore), e il bianco sale di
-uno.
+**Se la carta cade in un altro settore**, Grimjaw sale da una scala
+d'assedio invece che dalla rampa: il box si legge con «la scala» al posto
+di «la rampa», e «dove la pietra del muro è già rotta», e il resto vale.
+
+**Finché la carta c'è** `[INFERRED — Grimjaw senza sfidante]`, i reparti dell'orda nel
+suo settore hanno **+1 ad AU e DU** (Tattico Superiore): il bianco (22 + AU)
+sale di uno con loro, non di due.
 
 **Chi lo sfida.** Il gesto **Sfidare** nel settore di Grimjaw; gli altri
-possono unirsi come per Gorthak, lasciando il loro settore alle tacche. Il
+possono unirsi come per Gorthak, lasciando il loro settore alle tacche.
+
+**Il DM lo dice prima, in chiaro.** Grimjaw con quattro orog è uno scontro
+per tre o quattro eroi (EL circa 15): un pregen da solo cade quasi sempre
+prima che Grimjaw scenda a 89, e Thorin, Nala o Dara cadono al secondo
+round. La via per chi non vuole il duello è scritta qui sotto: nessuno lo
+sfida, e il Re scende a cercarlo. Il duello si gioca come quello di Gorthak:
+prima il round di battaglia di tutti, poi la mappa, e chi non è nel duello
+muove due degli orog. Il
 duello si gioca sulla MAPPA 2A, in cima alla rampa e sul camminamento: se la
 carta è nella Torre Est, alla breccia del Muro Est (CM-CP 59-63), che è aperta
 o si apre lì sotto i colpi dei giganti `[INFERRED]`.
@@ -974,13 +1108,13 @@ una pozione sotto i 60 e ripiegare sotto i 30: nell'assedio vale la soglia
 del libretto, che arriva prima.
 
 **Se nessuno lo sfida** entro la fine del round 2, il Re scende dal cortile
-interno a cercarlo `[INFERRED — domanda 7]`. Si racconta, non si tira: due
+interno a cercarlo `[INFERRED — Grimjaw senza sfidante]`. Si racconta, non si tira: due
 re sulla rampa, e le due file che smettono di combattere per guardarli.
 
 - La carta esce dal giorno come se Grimjaw fosse fuggito, **senza** il +2 al
   morale: il Re lo ricaccia, non lo sconfigge.
-- Il Re torna con **4d10+20** danni `[INFERRED]`, da segnare: il Giorno 3
-  sale sul cancello con quei pf meno quello che Dana gli rende di notte.
+- Il Re torna con **4d10+20** danni `[INFERRED]`, da segnare: la notte Dana
+  lo rimette a 196 con una *guarigione* (Scena 3), se ne ha ancora una.
 - «Comandanti logorati», per Grimjaw, resta vuoto: lo ha logorato il Re, e
   il finale lo sa (`ARC08-10` §5.2 conta i comandanti fuggiti).
 
@@ -998,10 +1132,11 @@ Il canto non è una carta: è la ragione per cui le Mura devono reggere.
 
 - Ogni volta che le Mura prendono una **tacca**, il DM lo racconta sul canto:
   una voce che si spezza e riprende.
-- **Se le Mura cedono**, una Cantitrice cade, e le altre la trascinano via:
-  con quattro il Coro c'è ancora. Se cedono **entro il round 3**, ne cadono
-  due, e il Coro si perde quando ne restano due (`ARC08-02`, il morale delle
-  Cantitrici) `[INFERRED — quante cadono]`.
+- **Se le Mura cedono al round 4 o 5**, una Cantitrice cade, e le altre la
+  trascinano via: con quattro il Coro c'è ancora. Se cedono **entro il round
+  3**, ne cadono tre, e con due il Coro si perde (`ARC08-02`, il morale delle
+  Cantitrici: il Coro chiede tre voci) `[INFERRED — quante cadono]`. Il
+  Coro al tramonto non c'è, e la rampa resta.
 - **Se le Mura reggono fino a sera**, al tramonto le Cantitrici finiscono il
   canto:
 
@@ -1027,7 +1162,7 @@ il libretto ha già dentro i mazzi.*
 riceve la riserva come terzo reparto: due di balestrieri e uno di veterani
 sono **tre reparti**, e il gruppo ne sceglie uno; gli altri due restano nel
 cortile per il settore dopo `[INFERRED — il libretto dice «entra come terzo
-reparto», al singolare]`. Quando entra, il morale sale di **3** (domanda 8).
+reparto», al singolare]`. Quando entra, il morale sale di **3** `[INFERRED — la riserva a +3]`.
 
 > **Read-aloud (Casa di Davide lead) — il cortile esterno, la riserva.** *Il
 > capitano della riserva si alza dalla cassa prima che il corno abbia finito.
@@ -1036,8 +1171,8 @@ reparto», al singolare]`. Quando entra, il morale sale di **3** (domanda 8).
 > insieme. Il rumore dei loro stivali sul selciato copre per un momento
 > quello della battaglia. Che fate?*
 
-**Il conto del giorno.** Brecce, reparti, pf del cancello (−80, a 40 se il
-ritmo è quello della MAPPA 4), il morale, le Cantitrici, e se Grimjaw e
+**Il conto del giorno.** Brecce, reparti, pf del cancello (−80: a 60, se il
+ritmo è quello della MAPPA 2A), il morale, le Cantitrici, e se Grimjaw e
 Gorthak sono fuggiti feriti. Poi la notte (Scena 5).
 
 ### Scalare lo scontro
@@ -1049,6 +1184,9 @@ Gorthak sono fuggiti feriti. Poi la notte (Scena 5).
   forte, quello di Borin.
 - **Il tavolo è in difficoltà** (due brecce il Giorno 1, morale sotto zero):
   l'orda **normale**, e Grimjaw arriva al round 3 invece che all'1.
+- **Tre pregen o cinque giocatori**: come nella Scena 2. Il settore senza
+  eroe lo tiene un capitano (1d6, con 1-2 cede); il quinto giocatore ha la
+  riserva.
 
 ### SCENA 5 — La notte del Giorno 2
 
@@ -1064,8 +1202,11 @@ Gorthak sono fuggiti feriti. Poi la notte (Scena 5).
 > esterno, i feriti dormono contro la scarpa, e l'orda accende i suoi fuochi
 > sulla piana più vicino di ieri.*
 
-La notte del libretto (§8), come ieri. Il cancello ha 40 pf, o quelli che i
-dadi hanno lasciato, più le riparazioni: domani crolla comunque al primo
+La targa è quella di bronzo sopra l'arco, nera di fumo, che il re incise
+mille anni fa (`ARC08-DEF-1`, Zona 2): il box non la spiega.
+
+La notte del libretto (§8), come ieri. Il cancello ha 60 pf, o quelli che i
+dadi hanno lasciato, più i 20 delle riparazioni: domani crolla comunque al primo
 assalto `[CANONE — DM 2026-10-22]`.
 
 Se un pregen va dal Re, il Re gli dice una cosa sola, e poi lo rimanda:
@@ -1073,8 +1214,12 @@ Se un pregen va dal Re, il Re gli dice una cosa sola, e poi lo rimanda:
 > **RE THOREK:** *«Domani il drago viene per me. Lo so io, e lo sa lui. I
 > miei devono vedermi sul cancello quando arriva.»*
 
-Se gli chiedono di non salire, il Re risponde con quello che **Teme**, e
-sale lo stesso: è la decisione del DM, e la serata ci si appoggia. Si può
+Se gli chiedono di non salire, il Re risponde con quello che **Teme**:
+
+> **RE THOREK:** *«Ho tenuto questa montagna per trecento anni. Non le
+> sopravvivrò di un giorno. Se scendo io, scendono tutti.»*
+
+E sale lo stesso: è la decisione del DM, e la serata ci si appoggia. Si può
 cambiare come ci arriva, non se ci sale.
 
 **Il punto di taglio C.** Se la serata ha superato le due ore e mezza, si
@@ -1106,29 +1251,36 @@ mappa.
 
 | Round | Le carte del DM | Cosa si racconta |
 |---|---|---|
-| **1** | il cancello è caduto: il fronte del Cancello resta quello del Giorno 2 `[INFERRED]`. Se Grimjaw non è fuggito due volte, **Grimjaw e la guardia nera** dove vuole il DM | il cancello, il box sopra |
+| **1** | il cancello è caduto: non è una breccia, il Cancello combatte nell'androne, e il fronte resta quello del Giorno 2 `[INFERRED]`. **Grimjaw e la guardia nera**, se il DM gioca la carta: nel settore dove il Giorno 2 non è stato sfidato, o dove è fuggito, coi pf che la notte gli ha lasciato. Si può Sfidare come nella Scena 4, e al corno del drago la guardia lo porta via: la carta esce, senza il +2 | il cancello, il box sopra |
 | **2** | **Il soffio**: ogni reparto sulle Mura perde 1d4 PFU. Poi **il corno del drago**, e la scena del soffio sulla mappa | il box del corno, sotto |
-| **3** | nessuna | il Re a terra sul cancello: morale −2 `[INFERRED — domanda 12]` |
+| **3** | nessuna | il Re a terra sul cancello: morale −2 `[INFERRED — il Re ferito nel libretto]` |
 | **4** | nessuna | il corno della ritirata alla fine del round |
 
-Il round 2 di battaglia lo tirano i reparti da soli: i quattro eroi sono
-tutti sulla 2B-CORRETTA, e nessun settore prende tacche in quel round
-`[INFERRED — è il Sfidare di tutti e quattro]`.
+Il round 2 di battaglia lo tirano i reparti da soli: al corno i quattro eroi
+corrono al cancello (Dara resta sulla Torre Ovest e tira da lì), e nessun
+settore prende tacche in quel round `[INFERRED — è il Sfidare di tutti e
+quattro]`. Il soffio sulle Mura viene prima del corno: Thorin, se è sulle
+Mura, tira Riflessi CD 29 contro 14d4 come i suoi reparti.
+
+Nei round 3 e 4 ogni eroe sceglie: resta col Re (il suo settore tira senza
+di lui e prende le tacche) o torna al settore, un round di corsa dalla
+piattaforma.
 
 #### Il corno del drago (2E)
 
 > **Read-aloud (Tolkien lead) — il cielo, il corno.** *Il soffio passa lungo
 > le Mura da est a ovest, una riga verde e grigia, e dove passa la pietra
-> fuma. Poi, dalla piana, il corno del drago. Non è il corno dell'orda: è più
-> lungo, più basso, e lo suona il cavaliere. Il drago sale. Sale così in
-> alto che diventa un punto contro il sole, e lassù si ferma. Sotto, sul
-> cancello, il Re è salito sulla piattaforma, solo, perché i nani lo vedano.
-> Che fate?*
+> fuma. Poi, dall'alto, il corno del drago. Non è il corno dell'orda: è più
+> lungo, più basso, e lo suona il cavaliere. Il drago sale, nero contro il
+> sole, e lassù gira largo, piano, sopra il fumo. Sotto, sul cancello, il Re
+> è salito sulla piattaforma davanti alle sue guardie, perché i nani lo
+> vedano. Che fate?*
 
 `[CANONE — DM 2026-10-22]` Al corno del drago il Re sale sulla piattaforma
 sopra il cancello, fra G1 e G2, perché i nani restino ai loro posti; il
-soffio lo prende lì, e lo prende lui. Se i pregen gli chiedono di scendere,
-il Re risponde: *«Se scendo io, scendono tutti.»*
+soffio lo prende lì, e lo prende lui. Le opzioni dei pregen cambiano quanto
+lo prende, non se: in ogni ramo l'acido gli arriva sull'armatura. Se i pregen
+gli chiedono di scendere, il Re risponde: *«Se scendo io, scendono tutti.»*
 
 > **📎 Regia, l'eco del re** (Casa di Davide): Fauci punta il Re come il suo
 > capostipite, nel ≈372, puntava Re Thorek I nel cortile (`ARC07-DEF-4`,
@@ -1149,12 +1301,12 @@ il Re risponde: *«Se scendo io, scendono tutti.»*
 
 | Chi | Dove | Note |
 |---|---|---|
-| **Re Thorek** | T19, sulla piattaforma sopra il cancello | 196 pf, meno quello che ha preso nei Giorni 1 e 2 |
+| **Re Thorek** | T19, sulla piattaforma sopra il cancello | 196 pf (Scena 3), meno i danni dei Giorni 1 e 2 se Dana ha dato le sue *guarigioni* ai pregen |
 | le Guardie Reali | intorno, U18 e sulla piattaforma | dodici nani |
 | **Borin** | S19, accanto al Re, se il giocatore non dice altro | nel cono |
 | **Thorin** | AC16, sul Bastione G2 | fuori dal cono |
 | **Nala** | D16, ai piedi della scala ovest | fuori dal cono |
-| **Dara** | in cima alla Torre Ovest, fuori mappa, ~45 m a ovest | fuori dal cono |
+| **Dara** | in cima alla Torre Ovest, fuori mappa, ~45 m a ovest: dal drago sopra il fossato sono circa 80 m | fuori dal cono |
 | la Madre Superiora, le Cantitrici | U9 e AA9, nel cortile esterno | fuori dal cono, senza linea di vista sul drago dietro i bastioni |
 | **Fauci** | in quota, a sud; scende in AI26 → V24 | Enorme, 3 × 3 quadretti |
 
@@ -1162,29 +1314,55 @@ I pregen possono essersi messi altrove, se lo hanno detto all'alba o al
 round 1: valgono le loro scelte. Chi era in un settore lontano è a un round
 di corsa: arriva al round 2 della sequenza.
 
-**La sequenza**, quattro round sulla griglia dentro il round 2 di battaglia.
+**La sequenza**, cinque round sulla griglia dentro il round 2 di battaglia.
 
 | Round | Fauci e il cavaliere | Cosa possono fare i pregen |
 |---|---|---|
 | **1** | in quota, a 60 m: il soffio è appena passato sulle Mura, e deve tornare (1d4 round, SRD). Il cavaliere tiene alto lo stendardo | prepararsi: incantesimi, spostarsi, azioni preparate |
 | **2** | scende a 45 m e gira sopra il fossato, cercando il Re. **Presenza terrificante**: Volontà CD 25 per tutti entro 90 m | Dara mira; Nala lancia l'illusione; Thorin protegge |
 | **3** | prepara il **soffio a cono** con un round completo (house-rule della scheda, 1/giorno) e si mette in posizione, a 30 m sopra il fossato, sud | l'ultimo round per spostare il Re, o per colpire prima |
-| **4** | **il soffio a cono**: 18 m centrato sul Re, 14d4 acido, Riflessi **CD 29** dimezza. Il cavaliere carica in picchiata con la lancia sul Re (+18 in carica contro CA 30, 3d8+21, e Punire il Bene +2/+4) `[INFERRED — l'attacco del cavaliere nella picchiata]` | vedi sotto |
+| **4** | **il soffio a cono**: con Attacco in Volo scende, soffia e risale nello stesso round. 18 m centrato sul Re, 14d4 acido, Riflessi **CD 29** dimezza | vedi sotto |
+| **5** | **la picchiata**: Fauci carica la piattaforma e passa senza fermarsi; il cavaliere, in sella, colpisce il Re con la lancia (+18 in carica contro CA 30, 3d8+21 con Carica Devastante, e Punire il Bene +2/+4) `[INFERRED — l'attacco del cavaliere nella picchiata]`. Un soffio e una carica non stanno nello stesso round: per questo la lancia viene dopo | l'ultimo round per mettersi davanti al Re, o per tirare al cavaliere |
+
+Al round 2, quando il drago scende:
+
+> **Read-aloud (Salvatore lead) — il round 2, il drago che cerca.** *L'ombra
+> passa sul fossato una volta, larga come il cortile, e il vento delle ali
+> vi schiaccia contro la pietra. Il drago non guarda le Mura. Gira la testa
+> lenta da una torre all'altra, e sulla sua schiena lo stendardo rosso si
+> piega nel vento. Poi gli occhi gialli si fermano sulla
+> piattaforma sopra il cancello, e restano lì.*
+
+Al round 3, quando prepara il cono:
+
+> **Read-aloud (Salvatore lead) — il round 3, il respiro.** *Il drago si
+> ferma in aria sopra il fossato, a sud, e le ali battono piano per tenerlo
+> fermo. Il petto si gonfia, e dentro c'è un rumore che nessuno sulle Mura
+> ha mai sentito, come una pentola enorme che comincia a bollire. Dalle narici escono due fili
+> di fumo verde che scendono fino all'acqua del fossato e la fanno
+> sfrigolare. Il Re alza lo scudo. Non si muove di un passo.*
 
 **Le opzioni dei pregen**, coi numeri delle loro carte (`ARC08-15`). La
 prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
 
 **Borin** — il sacrificio.
-- **A · Interporsi.** Al round 4 si mette fra il Re e il drago: prende il
+- **A · Interporsi.** Al round 4 si mette fra il Re e il drago (e al round 5
+  davanti alla lancia, se vuole: la prende lui, contro la sua CA 25): prende il
   soffio lui, con Riflessi +6 (+2 della sua Presenza vale per gli altri, non
   per sé), e il Re prende **metà** dei danni senza tiro `[INFERRED — la
   guida: «danni dimezzati da splash»]`. Morale **+2** se Borin resta in
   piedi `[INFERRED]`. È la scelta che il nipote di un re può fare una volta.
-- **B · Spingerlo via.** Forza **CD 25** (Borin ha For 20, +5; in Postura
-  Difensiva For 24, +7): se riesce, lo spinge tre quadretti a nord, sulla
-  terrazza del bastione (riga 16), fuori dal cono; il Re cade prono e prende
-  1d6, e Borin resta nel cono. Se fallisce, tutti e due nel cono, e tutti e due col +2 della
-  Presenza di Borin.
+- **B · Spingerlo via.** È una spinta (SRD, *bull rush*): Forza contrapposta,
+  Borin +5 (+7 in Postura Difensiva, +9 con la *forza del toro* di Thorin)
+  contro il Re +9 (For 20 e +4 di stabilità dei nani), perché il Re non vuole
+  scendere. Se Borin vince lo sposta di 1,5 m, più 1,5 m ogni 5 punti di
+  scarto: per la terrazza del bastione (riga 16), tre quadretti, deve vincere
+  di 10: col +5 circa una volta su venti, col +7 della Postura una su dieci,
+  col +9 una su sette. Il DM dice le probabilità prima che scelga. Se il
+  Re finisce sulla terrazza è fuori dal cono, e gli arrivano solo gli schizzi
+  sull'armatura (l'acido nelle giunture, sotto); Borin resta nel cono. Se
+  non ci arriva, tutti e due nel cono, e tutti e due col +2 della Presenza di
+  Borin.
 - **C · Colpirlo nella picchiata.** Azione preparata al round 4, col martello
   in mischia: Fauci è a 30 m sopra il fossato e la piattaforma è a 15 sopra
   il cortile, e il drago non arriva a portata. Borin non lo raggiunge, e il
@@ -1192,26 +1370,44 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
 
 **Dara** — il tiro impossibile.
 - Al round 2 mira (azione completa, +1 al tiro dopo `[INFERRED — non è una
-  regola SRD; la guida lo dava]`), al round 3 o 4 tira: arco +21 con Nemico
-  Prescelto, +1 della mira, −2 per la distanza, contro CA 37. Con Tiro
-  Rapido quattro frecce: +19/+19/+14/+9 più gli stessi modificatori.
-- Le **due frecce ammazzadraghi** dell'armeria `[INFERRED — domanda 9]`: SRD,
-  *freccia assassina* (draghi): chi è colpito tira Tempra **CD 20** o muore.
-  Fauci ha Tempra +21: muore con un 1 naturale. Se riesce, la freccia fa i
-  suoi danni normali. La guida diceva «6d6+1 comunque»: l'SRD no.
-- Se Dara colpisce Fauci per **più di 50 danni in tutto**, al round 5 il drago
-  atterra su un bastione invece di risalire (MAPPA 2B, «Tattiche»), e la
-  scena va avanti sulla griglia. Sotto i ~**230 pf** sale in quota e se ne va.
+  regola SRD; la guida lo dava]`), dal round 3 tira: arco +21 con Nemico
+  Prescelto, +1 della mira, −4 per la distanza (circa 80 m, terzo
+  incremento), contro CA 37: colpisce col 19 o 20. Con Tiro Rapido quattro
+  frecce: +19/+19/+14/+9 più gli stessi modificatori. Contro CA 29, se
+  Thorin o Nala hanno dissolto *scudo* e *armatura magica*, colpisce con 11.
+- **Oppure il cavaliere**: CA 23, 95 pf, a cavallo del collo. Con +15 (+19
+  senza Nemico Prescelto, −4 di distanza) colpisce con 8: con Tiro Rapido fa
+  circa 15 danni a round, e gliene servono sei. Da sola non lo abbatte prima
+  del round 5; con Thorin (*colpo infuocato*) o con le frecce di un'altra
+  torre, sì. Se il cavaliere è morto o fuori combattimento prima del
+  round 5, la picchiata non ha la lancia: Fauci passa sulla piattaforma e
+  basta. Legato alla sella, non cade: resta lì finché il drago vola.
+- Le **due frecce ammazzadraghi** dell'armeria `[INFERRED — le frecce di Dara]`: SRD,
+  *freccia assassina* (draghi): chi è colpito tira Tempra **CD 20** o subisce
+  **50 danni** in più. Fauci ha Tempra +21: li prende solo con un 1 naturale.
+  La guida diceva «6d6+1 comunque», e chi ricorda la 3.0 dice «o muore»:
+  l'SRD 3.5 dà i 50 danni.
+- Se gli eroi fanno a Fauci **più di 50 danni in tutto** nella scena (frecce,
+  *colpo infuocato*, baliste), al round 6 il drago atterra su un bastione
+  invece di risalire (MAPPA 2B, «Tattiche»), e la scena va avanti sulla
+  griglia coi suoi attacchi in mischia (Appendice A.5). Sotto i ~**230 pf**
+  sale in quota e se ne va. Con *scudo* e *armatura magica* su, le sole frecce
+  di Dara non ci arrivano quasi mai: serve Thorin, o un *dissolvi magie*.
 
 **Thorin** — il miracolo.
 - ***Protezione dall'energia*** (acido) sul Re, se l'ha preparata: assorbe 120
-  danni d'acido, cioè tutto il soffio. Se Thorin sa del drago (lo ha divinato,
-  o se lo aspetta), è la cosa giusta da fare, e funziona. Il Re prende lo stesso
-  la lancia del cavaliere, e l'acido sull'armatura (sotto).
+  danni d'acido in tutto. Prende il soffio, e poi l'acido che resta nelle
+  giunture, finché i 120 non sono finiti: poi l'acido brucia il Re (sotto).
+  Se Thorin sa del drago (lo ha divinato, o se lo aspetta), è la cosa giusta
+  da fare, e compra tempo. Il Re prende lo stesso la lancia del cavaliere.
+- ***Dissolvi magie*** mirato su Fauci, al round 2 o 3, a 66 m: d20 + 10
+  contro CD 18, uno per incantesimo. Senza *scudo* il drago ha CA 33, senza
+  i due 29: Fauci non li rilancia prima del soffio.
 - *Immunità agli incantesimi* **non serve**: il soffio è una capacità
   soprannaturale, non un incantesimo (SRD). La prima stesura la dava.
-- ***Guarigione*** sul Re dopo il soffio, al round 5: 120 pf. ***Cura ferite
-  leggere di massa*** sulle guardie. La «cura ferite critiche di massa» della
+- ***Guarigione*** sul Re dopo la lancia, al round 6: 120 pf. Lo tengono vivo
+  per tutta la ritirata (sotto, «Il conto del Re»). ***Cura ferite leggere di
+  massa*** sulle guardie. La «cura ferite critiche di massa» della
   prima stesura non è sulla carta di Thorin.
 - L'invocazione a Moradin (Carisma CD 22, +4 sacro ai TS) della prima
   stesura **non è una regola**: Thorin ha *preghiera* (+1 ai TS entro 12 m),
@@ -1229,25 +1425,48 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
   stesura dava 5d6 alla cavalcatura.
 - **Ispirare Coraggio** al round 1: +2 ai TS contro la paura per chi la
   sente, cioè contro la Presenza terrificante.
+- ***Dissolvi magie*** su Fauci come Thorin, con d20 + 8. Mentre canta non
+  lancia incantesimi: o l'uno o l'altro, nel round.
 
-**Il conto del Re** `[INFERRED — domanda 3]`. Il Re ha Riflessi +8: contro
-CD 29 il soffio lo prende pieno quasi sempre (35 di media). Il canone lo vuole
-al Cuore a **8 pf** (`ARC08-01`, 3A; `ARC08-10` §5.3). Il master ci arriva
-così: l'acido del cono resta nelle giunture dell'armatura ancestrale corrosa,
-e l'armatura non si toglie in battaglia (una completa si slaccia in 1d4+1
-minuti, SRD). Finché il Re la porta, **le cure lo tengono vivo e non lo
-rimettono in piedi**: ogni pf sopra gli 8 lo mangia l'acido prima del Cuore.
-Le cure servono a una cosa sola, che è tutto: se nessuno lo cura, il Re perde
-**2d6 a round** finché non lo stabilizzano, e muore a −10.
+**Il conto del Re** `[CANONE — DM 2026-10-22: il Re arriva al Cuore a 8 pf
+fissi, per l'acido nell'armatura corrosa]`. Il Re arriva al Cuore a **8 pf**
+in ogni ramo in cui è vivo (`ARC08-01`, 3A; `ARC08-10` §5.3). I dadi dicono
+se ci arriva vivo, non con quanti pf. Il DM lo dice ai giocatori in chiaro,
+appena il Re è in ginocchio: le cure lo tengono vivo, non lo rimettono in
+piedi. Al tavolo si conta così.
 
-Con la *protezione dall'energia*, l'acido del cono non c'è: il Re è ferito
-dalla lancia e dalla caduta, e arriva al Cuore coi pf che ha, sopra gli 8. Il
-finale lo sa: §5.3 legge «pieno» se è vivo.
+1. **Il soffio** (round 4). Il Re ha Riflessi +8: contro CD 29 lo prende
+   pieno quasi sempre, 14d4 (35 di media). Metà senza tiro se Borin si è
+   interposto; niente se Borin lo ha spinto sulla terrazza; con la
+   *protezione dall'energia*, lo assorbe lei.
+2. **La lancia** (round 5): +18 contro CA 30 meno l'1d4 che il cono ha tolto alla sua armatura (sotto, «Gli effetti del soffio»), 3d8+21, più Punire il Bene se
+   il cavaliere lo spende (+2 a colpire, +4 ai danni).
+3. **L'acido nelle giunture**, dal round 6. L'acido del cono resta
+   nell'armatura ancestrale corrosa, in ogni ramo, anche dagli schizzi sulla
+   terrazza: **2d6 a round** al Re finché porta l'armatura. Con la
+   *protezione dall'energia* questi danni vanno prima contro i 120 che lei
+   assorbe (soffio compreso), poi contro il Re.
+4. **Le cure** lo tengono sopra lo zero. Ridanno pf come sempre, e l'acido
+   continua. Se il Re va sotto zero è morente: lo si stabilizza con una cura
+   qualunque o con Guarire CD 15, e l'acido continua lo stesso. A −10 muore.
+5. **Togliere l'armatura** ferma l'acido. Si slaccia in 1d4+1 minuti (SRD),
+   e non sotto i colpi: in pratica nel tunnel, appena la statua si chiude
+   (Scena 7). Per tutta la ritirata il Re la porta, e chi lo cura ne spende
+   l'azione.
+6. **Gli 8 pf.** Quando l'armatura è tolta, il Re ha **8 pf**, qualunque
+   fosse il conto: sotto il ferro l'acido ha bruciato quello che le cure
+   rimettevano. Da lì al Cuore nessuna cura lo alza sopra gli 8, e Dana lo
+   sa: le ustioni dell'acido nero si chiudono solo col riposo. Senza
+   armatura e senza scudo, sulla barella, ha **CA 13**, e prono −4 contro
+   la mischia (SRD).
+
+Il finale lo sa: §5.3 legge «pieno» se il Re è vivo.
 
 **Gli effetti del soffio** (MAPPA 2B, «Meccanica del soffio»). Le armature nel
 cono perdono 1d4 punti di CA, per sempre `[INFERRED — la guida lo dava; l'SRD
 non ha questa regola]`; i quadretti colpiti sono terreno difficile per 10
-minuti; delle dodici guardie sulla piattaforma ne cadono sei-otto.
+minuti. Delle dodici guardie sulla piattaforma ne cadono sei-otto: è un numero
+fisso, e il DM non lo tira.
 
 > **Read-aloud (Mercer lead) — il cancello, dopo il soffio.** *Quando l'acido
 > smette di cadere, sulla piattaforma non c'è più rumore. Il fumo sale dalle
@@ -1256,10 +1475,14 @@ minuti; delle dodici guardie sulla piattaforma ne cadono sei-otto.
 > seconda volta non ci prova. Giù nel cortile esterno i nani hanno smesso di
 > combattere, e guardano lui. Che fate?*
 
-**Dopo il soffio**, round 5 e 6 della sequenza: il drago risale, o atterra su
+**Dopo la lancia**, round 6 e 7 della sequenza: il drago risale, o atterra su
 un bastione se ha preso più di 50 danni. Il Re va portato giù: la scala di
-G1 (M14), poi 45 m di cortile esterno fino alla Porta Interna. **Due
-portatori**, a metà velocità. Si torna al libretto: round 3 e 4 del Giorno 3.
+G1 (M14), poi 45 m di cortile esterno fino alla Porta Interna, la scala
+della scarpa (30 m) e il cortile interno fino alla statua. **Due
+portatori**, a metà velocità: sono 110-120 m, a 6 m a round col doppio
+movimento circa **20 round di griglia**, che stanno dentro i round 3 e 4 di
+battaglia. Sono anche 20 round di acido (Scena 6, «Il conto del Re»): chi
+lo cura lungo la strada lo dice al DM round per round. Si torna al libretto: round 3 e 4 del Giorno 3.
 
 <!-- storico -->
 *La prima stesura metteva il Re «nel cortile interno» al momento del soffio,
@@ -1272,7 +1495,7 @@ Se il Re muore qui, vale `ARC08-10` §2 prima di permetterlo.*
 #### I round 3 e 4
 
 Il libretto riprende senza la carta. Il morale ha il **−2** del Re a terra
-(domanda 12), e il **+2** se Borin ha preso il soffio al suo posto: le due
+`[INFERRED — il Re ferito nel libretto]`, e il **+2** se Borin ha preso il soffio al suo posto: le due
 cose insieme fanno zero. Alla fine del round 4 suona il corno della ritirata
 (la carta «La ritirata»). Si contano i **reparti vivi**: è la riga
 «Posizioni tenute» (`ARC08-19` §4: tre quarti o più pieno, da un terzo a tre
@@ -1280,7 +1503,8 @@ quarti parziale, meno di un terzo fallito).
 
 **Sviluppi.** I bastioni nord coprono la ritirata dall'alto; i settori
 scendono per le scale della scarpa, l'ultimo a passare la Porta Interna è
-chi tiene il Cancello. La Porta Interna regge mezz'ora (Scena 7).
+chi tiene il Cancello. La Porta Interna regge pochi minuti: l'orda la sfonda
+al round 4 della Scena 7.
 
 ### SCENA 7 — La ritirata, sulla H3-1
 
@@ -1292,8 +1516,8 @@ chi tiene il Cancello. La Porta Interna regge mezz'ora (Scena 7).
 > cortile interno è pieno di nani che non sanno dove andare. I portatori
 > mettono il Re sulla barella davanti alla statua del Re Antenato, fra le
 > lanterne, e la Madre Superiora gli tiene la mano sull'elmo nero. Dietro,
-> la Porta Interna trema a ogni colpo. Dai lati, dove la cinta è rotta,
-> arrivano già le prime grida in orchesco. La statua guarda il cortile come
+> la Porta Interna trema a ogni colpo. Dai lati, in cima alle scale della
+> scarpa, arrivano già le prime grida in orchesco. La statua guarda il cortile come
 > ha sempre fatto, con le mani sul martello di pietra. Che fate?*
 
 **Comparse**
@@ -1302,28 +1526,42 @@ chi tiene il Cancello. La Porta Interna regge mezz'ora (Scena 7).
 |---|---|---|
 | i portatori | due nani della Guardia Reale con la barella, che non hanno lasciato il Re dal cancello | contano i passi a voce bassa |
 
-**Cosa c'è da fare.** Aprire il tunnel dietro la statua, e far passare 90
-nani, cinque a round, prima che l'orda sia dentro. È una scena di tempo,
-non di uccisioni (MAPPA H3-1, «Evacuazione timeline»): 18 round di fila
-indiana, e l'orda a contatto dal round 2 dalle brecce e dal round 4 dalla
-porta.
+**Cosa c'è da fare.** Aprire il tunnel dietro la statua, e far passare i 90
+nani della colonna, cinque a round, prima che l'orda sia dentro. È una scena
+di tempo, non di uccisioni (MAPPA H3-1, «Evacuazione timeline»). I round
+sono quelli della mappa, sei secondi: 18 round di fila indiana contati da
+quando la statua è aperta. La tabella delle fasi conta questi, i round della
+colonna: la fase 1 comincia quando la statua si apre. L'orda arriva coi suoi
+tempi, contati dall'inizio della scena: dal round 2 dalle due scale della scarpa, est e ovest; dal round
+4 dalla Porta Interna, che a quel punto è sfondata (90 pf).
 
 **Aprire il tunnel.** La statua si sposta con Forza **CD 20** (Borin) o con
 Conoscenze (storia) o *sapere bardico* **CD 15** (Nala, +10: sa dove
-spingere). Ci prova chi è lì; ogni tentativo è un round. Se le lanterne della
-Sessione 1 bruciano alla base, Nala ha **+2**: qualcuno ha già toccato la
-pietra giusta, mille volte `[INFERRED]`.
+spingere). Ci prova chi è lì; ogni tentativo è un round, e finché la statua
+è chiusa non passa nessuno. Le lanterne della Sessione 1 bruciano alla base,
+e Nala ha **+2**: qualcuno ha già toccato la pietra giusta, mille volte
+`[INFERRED]`.
 
 **Le tre fasi**, sei round l'una. All'inizio di ogni fase ogni pregen sceglie
-un posto; alla fine si contano i caduti.
+una via da tenere, o resta col Re.
 
-| Fase | Cosa arriva | Chi tiene cosa |
+| Fase | Cosa arriva | Le vie da tenere |
 |---|---|---|
-| **1** (round 1-6) | dalle brecce est e ovest, ~40 orchi per lato, dal round 2 | un pregen per breccia la tiene; una breccia senza nessuno costa **1d4 nani a round** `[INFERRED]` |
-| **2** (round 7-12) | dalla Porta Interna, ~120, dal round 4 della fase 1 | l'arco sud: un pregen, o la *barriera di lame* di Thorin (un tunnel di 9 m di raggio, dura 12 minuti: chiude una via fino alla fine) |
-| **3** (round 13-18) | tutti, contro la bocca del tunnel | uno al chokepoint (Borin, AE05 sulla H3-1); gli altri dentro con la colonna |
+| **1** (round 1-6) | ~40 orchi per lato dalle scale della scarpa; dal round 4, ~120 dalla Porta Interna | la scala est, la scala ovest, l'arco sud della Porta Interna |
+| **2** (round 7-12) | gli stessi, di più | le stesse tre |
+| **3** (round 13-18) | tutti, contro la bocca del tunnel | una sola: il chokepoint (AE05 sulla H3-1); gli altri dentro con la colonna |
 
-Ogni via chiusa per tutta la fase non costa nessuno. Dana ha il suo ultimo
+**Come si tiene una via** `[INFERRED — la prova della ritirata]`. Una prova
+per fase per ogni via tenuta da un pregen: d20 + il suo bonus Combattere
+(Appendice A.11) contro **CD 28** nella fase 1, **30** nella 2, **32** nella 3
+(Dara contro gli orchi ha +25). Se riesce, la via regge e non cade nessuno;
+se fallisce, cadono **1d4 nani** e il pregen prende **3d6**. Un incantesimo
+di 3° o più speso sulla via, o un uso di canto di Nala, vale la prova
+riuscita per quella fase. Una via **senza nessuno** costa **1d4 nani a
+round**: sei round, una quindicina di nani. Una via **chiusa** non costa
+niente: la *barriera di lame* di Thorin (un anello di 9 m di raggio o un
+muro, dura 12 minuti) e il *muro di pietra* di Dana chiudono una via fino
+alla fine della scena. Dana ha il suo ultimo
 *muro di pietra*: lo lancia se un pregen glielo chiede, e poi entra nel tunnel
 con 20 pf `[CANONE — DM 2026-10-19: arriva al Cuore con 20 pf e un muro
 di pietra]`. Se lo lancia qui, al Cuore non ce l'ha più: il DM lo dice prima.
@@ -1331,14 +1569,23 @@ di pietra]`. Se lo lancia qui, al Cuore non ce l'ha più: il DM lo dice prima.
 **Gli esiti** (MAPPA H3-1, stato E): tutti e 90 salvi (Re salvo); 80-89 (dieci
 lasciati alla retroguardia); meno di 80, e il rischio che la colonna si
 spezzi. Si scrivono nel Registro (`ARC08-03`) e passano alla 3A
-`[INFERRED — domanda 10]`.
+`[INFERRED — quanti nani al Cuore]`.
 
-**Il Re, sulla barella.** Thorin gli sta accanto (AG10): ogni round in cui
-non lo cura, l'acido toglie 2d6 (Scena 6). Quando lo stabilizza, il Re resta
-a **8 pf** fino al Cuore.
+**Il Re, sulla barella**, porta ancora l'armatura: l'acido gli toglie 2d6 a
+round, e chi gli sta accanto (Thorin in AG10, o Dana) lo tiene sopra lo zero
+con le cure (Scena 6, «Il conto del Re»). È cosciente: parla poco, dà ordini
+se glieli chiedono, non si alza. Nel tunnel, appena la statua è chiusa, gli
+slacciano l'armatura (1d4+1 minuti, mentre la colonna cammina): l'acido si
+ferma, e il Re è a **8 pf** fino al Cuore `[CANONE — DM 2026-10-22]`.
+
+I 90 sono i nani che restano attorno al Re al momento della ritirata, non i
+reparti del libretto: quanti reparti sono vivi lo dice la riga «Posizioni
+tenute», e non cambia la colonna.
 
 **Sviluppi.** L'ultimo a entrare chiude la statua dietro di sé (una Forza CD
-20 dall'interno, o un'azione di Nala sul meccanismo). Gli orchi sfondano la
+20 dall'interno, o un'azione di Nala sul meccanismo). Se nella fase 3 nessuno
+ha tenuto il chokepoint, trenta orchi passano prima che la statua si chiuda e
+seguono la colonna: sono quelli della Scena 8, round 4. Gli orchi sfondano la
 porta dell'atrio e prendono una cittadella vuota. Il punto di taglio B è
 qui.
 
@@ -1372,11 +1619,26 @@ soli»: lo dicono i dadi, non il DM.
 | i bugbear assassini | otto, grandi e pelosi, col cuoio annerito e le lame unte; il primo segno è l'odore, non il rumore | non parlano: si fanno segni con le dita nel buio |
 | gli hobgoblin della diversione | un sergente e sei veterani, gli scudi dipinti di rosso fresco | urlano tutti insieme, apposta |
 
-**Dove sta chi** (MAPPA 3Z, 33 × 33 a 1,5 m). L'anello di 60 veterani sui
+**Dove sta chi** (MAPPA 3Z, 33 × 33 a 1,5 m). Se dalla Scena 7 ne arrivano
+meno di 90, mancano dall'anello prima i balestrieri e poi i veterani: con
+80 nani i balestrieri sono 10, con 70 nessuno. L'anello di 60 veterani sui
 quattro lati del quadrato (righe 10 e 24, colonne I e Y), i 20 balestrieri
 dentro (righe 14 e 20), il **Re** in Q19 sulla barella coi portatori in P19 e
-R19, a sud del Pilastro. I pregen dove li mette il giocatore; la mappa
-propone Borin Q15, Thorin O19, Nala O15, Dara L9 ai piedi della stalagmite S5.
+R19, a sud del Pilastro. **Dana** cammina accanto alla barella, in Q20. I
+pregen dove li mette il giocatore. La mappa propone Borin Q15, ma Q15 è a
+nord del Pilastro, dalla parte opposta del Re: qui il posto suggerito di
+Borin è **S19**, fra il Re e la bocca est da cui arrivano i suoi quattro
+assassini. Thorin O19, Nala O15, Dara L9, a circa 3 m dalla stalagmite S5 (L7).
+
+Le sei bocche (MAPPA 3Z): **nord** P-R 1-3, la via giusta, che scende alla
+porta di mithral (Scena 9); **sud** P-R 30-33, da cui la colonna è arrivata;
+**est** AD-AG 16-18 e **ovest** A-D 16-18, dove aspettano i bugbear, a 6-9 m
+dall'anello; **nord-ovest**, da cui caricano gli hobgoblin; **nord-est**,
+vuota.
+
+Il buio non nasconde i bugbear: nani e bugbear vedono a 18 m con la
+scurovisione. Si nascondono dietro gli spigoli delle bocche, nella roccia
+(copertura), ed è per questo che il Nascondersi vale.
 
 **Il prima.** Il round 1 comincia quando gli hobgoblin caricano. Prima, chi
 lo dice può fare **una cosa**: salire su S5 (Dara, Scalare CD 10, +2 a
@@ -1387,22 +1649,33 @@ l'imboscata (§0), tutti hanno un'azione preparata.
 
 | Round | Cosa succede | Il tiro |
 |---|---|---|
-| **1 · La diversione** | i 7 hobgoblin caricano urlando dal tunnel nord-ovest (C2-F5); l'anello si gira verso di loro | **Osservare CD 25**, una prova a testa, contro il buio dei tunnel est e ovest. Chi la supera vede le sagome: può avvisare, e chi è avvisato non è colto alla sprovvista |
-| **2 · Le lame nel buio** | gli 8 bugbear escono insieme: 4 da est sul Re, 4 da ovest sui comandanti (i pregen). Hanno studiato i bersagli dall'avvicinamento | **attacco mortale** sul primo colpo: Tempra **CD 16** o paralizzato 1d6+2 round. **Furtivo +4d6** su chi è colto alla sprovvista |
+| **1 · La diversione** | i 7 hobgoblin caricano urlando dal tunnel nord-ovest (C2-F5); l'anello si gira verso di loro | **Osservare contro il Nascondersi dei bugbear**: il DM tira una volta per i quattro dell'est e una per i quattro dell'ovest (d20 + 17), e ogni pregen tira il suo Osservare, −1 ogni 3 m dalla bocca (da Q19 alla bocca est sono circa 18 m: −6). Chi supera il tiro vede le sagome di quella bocca. Può gridarlo (azione gratuita): chi lo sente non è colto alla sprovvista e non è nemmeno «studiato di sorpresa» (vedi sotto) |
+| **2 · Le lame nel buio** | gli 8 bugbear escono insieme: 4 da est sul Re, 4 da ovest sui comandanti (i pregen). Hanno studiato i bersagli dall'avvicinamento | **attacco mortale** sul primo colpo, solo contro chi è colto alla sprovvista: Tempra **CD 16** o paralizzato 1d6+2 round. **Furtivo +4d6** su chi è colto alla sprovvista. Contro chi è stato avvisato l'attacco è un colpo normale (+11, 1d8+3) |
 | **3-5 · La mischia nel cerchio** | i bugbear combattono in coppia per fiancheggiare; gli hobgoblin tengono l'anello | gli ordini dei pregen (sotto) |
-| **4** | se la retroguardia della Scena 7 ha lasciato una breccia aperta nella fase 3, **30 orchi** dal tunnel sud | |
+| **4** | **30 orchi** dal tunnel sud, solo se nella Scena 7 la fase 3 si è chiusa senza nessuno al chokepoint (lo dice la Scena 7). Al round 3 si sentono: passi di ferro nel tunnel sud, e chi è all'anello sud lo dice | gli orchi si fermano all'anello sud; ogni round che lo premono è un round «senza ordine» per quel lato |
 | **6+ · La risoluzione** | caduti più di 4 bugbear, gli altri svaniscono nei tunnel (nuova prova di Nascondersi); gli hobgoblin combattono fino all'ultimo | |
 
-**Il Re a 8 pf.** Un bugbear che lo raggiunge lo uccide: morning star 1d8+3
-più 4d6 di furtivo, o l'attacco mortale. I quattro dell'est puntano solo lui.
-È la scena: **il Re deve avere qualcuno davanti a ogni lato** al round 2. Chi
-lo copre di persona lo protegge; la colonna del Pilastro (P16-R18) lo copre
-da nord.
+**Il Re a 8 pf** `[CANONE — DM 2026-10-22]`. Sulla barella ha CA 13 e da
+prono −4 contro la mischia (Scena 6, «Il conto del Re»): un bugbear che lo
+raggiunge lo colpisce quasi sempre, e 1d8+3 più 4d6 di furtivo lo uccide. I
+quattro dell'est puntano solo lui. È la scena: **il Re deve avere qualcuno
+davanti a ogni lato** al round 2. Un bugbear deve arrivare adiacente; chi gli
+sta in mezzo lo obbliga a girarci intorno (attacco d'opportunità) o a
+fermarsi su di lui. La colonna del Pilastro (P16-R18) lo copre da nord.
+
+*Invisibilità* sul Re non basta: i bugbear hanno il **fiuto** e lo trovano a
+9 m. Ottiene solo che chi lo attacca abbia il 50% di mancarlo (occultamento
+totale), e vale la pena lo stesso.
 
 **Gli ordini, ai round 3-5.** Senza un ordine, l'anello si sgretola: ogni
 round in cui nessun pregen spende un'azione standard di comando (o Nala il
 canto) cadono **1d4 nani** in più, e un bugbear passa l'anello `[INFERRED —
 la guida diceva solo «servono gli ordini»]`.
+
+**I nani caduti si contano così**: 1d4 a round senza ordine; **1** a round
+per ogni bugbear vivo che combatte contro l'anello invece che contro un
+pregen o il Re; **1d6** se al round 4 entrano gli orchi dal sud. Il totale va
+nella scheda (§7) e decide l'esito sotto.
 
 **I pregen, con le loro carte** (`ARC08-15`; la prima stesura dava a Nala la
 *polvere luccicante* e a Thorin la *barriera di lame* per un tunnel: la
@@ -1412,27 +1685,44 @@ prima non è sulla carta di Nala, la seconda c'è).
   al Re: la sua Presenza Comandante dà +2 ai TS entro 9 m, e la Tempra contro
   l'attacco mortale è un TS.
 - **Dara**: da S5 vede meglio di tutti (Osservare +18, +2 della stalagmite:
-  +20 contro CD 25). La 3Z le dà anche +4 di Nemico Prescelto contro i
+  +20, ed è a circa 12 m dalla bocca ovest, −4). La 3Z le dà anche +4 di Nemico Prescelto contro i
   goblinoidi, ma la sua carta elenca orchi, giganti e draghi: i bugbear non ci
   sono, e il +4 non vale. Dall'alto tira con Tiro Rapido sui bugbear che
   toccano l'anello.
 - **Thorin**: accanto al Re. *Barriera di lame* su una bocca di tunnel la
-  sigilla (12d6 a chi passa, Riflessi CD 22); *Silenzio* non serve, *Preghiera*
-  sì (+1 ai TS di tutti entro 12 m). La sua priorità è che il Re resti a 8.
+  sigilla (12d6 a chi passa, Riflessi CD 22; i bugbear hanno eludere, e con
+  un Riflessi riuscito non prendono niente: la barriera li ferma meglio come
+  muro che come danno). *Silenzio* non serve, *Preghiera* sì (+1 ai TS di
+  tutti entro 12 m). La sua priorità è che il Re resti a 8. Un pregen
+  paralizzato si libera con *libertà di movimento* (se Thorin l'ha
+  preparato) o aspettando 1d6+2 round; un bugbear accanto a lui può dargli
+  il **colpo di grazia** (azione di round completo, Tempra CD 10 + danni o
+  muore), ed è la prima cosa che fa se il Re è coperto.
 - **Nala**: Ispirare Coraggio tiene l'anello (+2 a colpire e danni, e vale
-  come l'ordine del round); *Immagine speculare* su di sé, se è lei il
-  bersaglio di un attacco mortale; il furtivo +3d6 sui bugbear fiancheggiati.
+  come l'ordine del round). Mentre canta può muoversi e attaccare, ma non
+  lanciare: *Immagine speculare* su di sé costa il canto di quel round, e
+  si lancia prima del round 2 se il suo giocatore lo chiede nel «prima».
+  Il suo furtivo +3d6 sui bugbear **non vale fiancheggiandoli**: hanno
+  schivare prodigioso migliorato (Ladro e Assassino insieme, SRD), e si
+  fiancheggiano solo da un ladro di quattro livelli più alto. Vale se il
+  bugbear è colto alla sprovvista o non la vede.
 
 **Gli esiti** (MAPPA 3Z, stato E):
 
+Se cade un pregen, il suo posto davanti al Re resta vuoto: il bugbear che lo
+ha abbattuto passa al Re il round dopo.
+
 - ✅ **Re vivo, meno di 10 nani caduti**;
 - ⚠️ **Re vivo, 10-15 caduti**;
+- ⚠️ **Re vivo, più di 15 caduti**: come la riga sopra, e la 3A comincia
+  con quelli che restano (`ARC08-03`);
 - ❌ **Re morto**: prima di permetterlo, il DM legge `ARC08-10` §2 (la vittoria
   costosa). Il finale perde il discorso della carica, e §5.3 legge «fallito».
 
-Se il Re muore qui, la Madre Superiora non gli fa da scudo in caverna
-contro le frecce (Sessione 3). Il DM decide prima della serata se l'esito è
-aperto o se i dadi si fermano a −9 `[INFERRED]`.
+Se il Re muore qui, Dana non gli fa da scudo in caverna contro le frecce
+(Sessione 3). Il DM decide prima della serata se l'esito è aperto o se i
+dadi si fermano a −9 `[INFERRED — il Re all'incrocio]`. Finché non
+decide, l'esito è aperto, e il DM lo dice ai giocatori prima della Scena 8.
 
 <!-- storico -->
 *La prima stesura metteva «20 torce», «8 stalagmiti», «60 guerrieri» e «20
@@ -1445,12 +1735,14 @@ ordini dei pregen.*
 
 - **Il tavolo è in ritardo**: niente orchi dal sud, e i bugbear svaniscono al
   terzo caduto invece che al quinto.
+- **Tre o cinque giocatori**: con tre, sei bugbear (tre per lato); con
+  cinque, i quattro dell'ovest diventano cinque.
 - **Il tavolo va troppo liscio** (qualcuno ha superato l'Osservare e i bugbear
   non hanno colpito): i bugbear rientrano nel buio al round 3 e riprovano al
   round 5, dopo aver studiato di nuovo un bersaglio (l'attacco mortale chiede
   tre round di studio, SRD).
-- **Il tavolo è in difficoltà** (due pregen paralizzati al round 2): la
-  Madre Superiora è viva. Ha 20 pf e il suo *muro di pietra*: lo usa per
+- **Il tavolo è in difficoltà** (due pregen paralizzati al round 2): Dana,
+  la Madre Superiora, è viva. Ha 20 pf e, se non l'ha speso nella Scena 7, il suo *muro di pietra*: lo usa per
   chiudere il tunnel est davanti ai quattro del Re, e al Cuore non lo ha più.
 
 ### SCENA 9 — La porta di mithral
@@ -1465,6 +1757,11 @@ ordini dei pregen.*
 > dei vivi ha mai conosciuto, uno sopra l'altro, fino in cima. Quando il
 > primo dei portatori ci appoggia la mano, la porta si apre verso l'interno
 > senza un suono. Dentro, molto più in basso, si sente l'acqua.*
+
+La porta si apre perché sulla barella c'è il Re con la Corona: risponde al
+sangue di Hammerfist, e il primo portatore è solo la mano che tocca. Se il
+Re è morto, la apre la Corona sulla sua testa lo stesso; se la Corona non
+c'è, la apre Borin, che è del sangue del vecchio re (§1). Non serve tirare.
 
 Si compila la scheda (§7). La Sessione 3 comincia dietro questa porta, con la
 3A.
@@ -1489,10 +1786,10 @@ GORTHAK            fuggito ferito il Giorno ___ □     mai sfidato □
 GRIMJAW            fuggito ferito il Giorno ___ □     ricacciato dal Re □   mai □
 CANTITRICI         Mura non cedute il G2 □   cedute al round 4-5 □   entro il 3 □
                    Cantitrici cadute ___  il Coro c'è ancora □
-CANCELLO           pf a fine G1 ___   a fine G2 ___   crollato il G3 □
+CANCELLO           pf a sera G1 ___ (+20 la notte)   a sera G2 ___   crollato il G3 □
 IL SOFFIO          Borin: interposto □ spinto □ nessuno □   protezione dall'energia □
                    Fauci ferito ___ danni   atterrato □   frecce di Dara: ___
-RE THOREK          vivo a 8 pf □   vivo sopra gli 8 □   morto □
+RE THOREK          vivo a 8 pf □   morto □   (dove: ________)
 DANA               al Cuore con 20 pf e il muro di pietra □   senza muro □
 LA RITIRATA        nani salvi ___ su 90
 L'INCROCIO         bugbear caduti ___   nani caduti ___
@@ -1531,8 +1828,11 @@ fuggito ferito arriva coi pf del finale meno il 20%).
 |---|---|
 | **vogliono fare una sortita** sul campo dell'orda | il campo è sulla piana, a 500 m-1 km, sotto settecento paia d'occhi. Il DM lo dice in chiaro, una volta. Se escono, il loro settore è senza eroe per il giorno (libretto §9: 1d6, con 1-2 cede), e tornano con quello che hanno visto: i giganti che dormono alla rampa |
 | **vogliono uccidere Gorthak o Grimjaw** | nell'assedio non muoiono: sotto metà fuggono (libretto §5). Se un pregen lo insegue oltre il ponte o la rampa, entra nell'orda da solo: il DM glielo dice, e lo lascia decidere |
-| **chiudono il Re al sicuro il Giorno 3** | il Re sale lo stesso: è la decisione del DM. Se lo chiudono a chiave, rompe la porta con la Corona (*comando*, «Apri»), e arriva sul cancello al round 3 della sequenza, col soffio già in posizione |
-| **combattono il drago sulla piattaforma** dopo il soffio | se è atterrato su un bastione, è la mappa: 337 pf (meno i danni), e se ne va sotto i ~230. Morirebbe solo coi dadi di un altro mondo, e allora vale `ARC08-02`, «Esito della battaglia»: −1 drago a Rethmar |
+| **chiudono il Re al sicuro il Giorno 3** | il Re sale lo stesso: è la decisione del DM. Se lo chiudono a chiave, usa la Corona sulle sue guardie (*comando*, «Lascia!»: lasciano le chiavi) o la sfonda a colpi di martello (una porta di legno rinforzato, 20 pf e durezza 5: il suo martello fa 1d8+12, due o tre round), e arriva sul cancello al round 3 della sequenza, col soffio già in posizione |
+| **esplorano il tunnel prima della ritirata** o mandano qualcuno a vederlo | il tunnel dietro la statua si apre solo spingendo la statua (Scena 7), e il Re non vuole che si apra prima del Giorno 3: chi lo apre di notte lo apre anche per l'orda. Se insistono e il Re cede, Dara in avanscoperta trova le tracce dei bugbear (Sopravvivenza CD 20 con Seguire Tracce): vale come la divinazione (§0), un'azione preparata a testa al round 1 della Scena 8 |
+| **evacuano i feriti e i civili prima** | i civili sono già al Cuore da prima dell'assedio (libretto §1). I feriti restano: il tunnel non si apre (sopra), e i 90 della ritirata li comprendono già |
+| **fanno una sortita invisibili** o di notte | di notte, con *invisibilità* o *passare senza tracce*, la sola meta a portata è la rampa dei giganti: è la contingenza della Scena 3 («Se vanno a rompere la rampa»), coi suoi tiri. Il campo dell'orda resta a 500 m-1 km, e all'alba i pregen devono essere ai loro settori |
+| **combattono il drago sulla piattaforma** dopo il soffio | se è atterrato su un bastione, è la mappa: 337 pf (meno i danni), gli attacchi in mischia di A.5, e se ne va sotto i ~230. Morirebbe solo coi dadi di un altro mondo, e allora vale `ARC08-02`, «Esito della battaglia»: l'orda ha un drago in meno nel finale, a Rethmar |
 | **lasciano il Re e salvano i nani** | si può: il Re ordina di lasciarlo, e lo dice sul serio. Se i pregen obbediscono, il Re muore sulla piattaforma e vale `ARC08-10` §2 |
 | **portano il Re per un'altra via** | non ce n'è un'altra: la cittadella è chiusa dall'atrio, e l'atrio cade il Giorno 3 (MAPPA 4, stato C) |
 | **qualcuno non vuole più giocare il pregen** | passa al capitano (libretto §9), da quel momento. Il suo pregen lo muove il DM, senza tiri |
@@ -1551,8 +1851,8 @@ la storia va avanti.
   costosa. La 3A si gioca lo stesso, senza di lui: il discorso della carica lo
   fa Borin, se è vivo.
 - **La ritirata va male** (meno di 80 nani): la 3A comincia con quelli, e la
-  riga «Evacuazione» è a rischio. È il ramo della caduta (§3), che i Rumbling
-  Stones possono ancora ribaltare.
+  riga «Evacuazione» è a rischio. È il ramo della caduta di `ARC08-10` §3,
+  che i Rumbling Stones possono ancora ribaltare.
 
 ---
 
@@ -1565,9 +1865,9 @@ la storia va avanti.
 | **Le Cantitrici** | il finale | il Coro e la *cura ferite gravi di massa*, se ne restano almeno tre |
 | **Il Re a 8 pf** | la 3A | Dana gli fa da scudo contro le frecce in caverna `[CANONE — DM 2026-10-21]`, e il discorso della carica (+4 al morale) |
 | **Dana con 20 pf e un muro** | la 3A | il suo ultimo *muro di pietra*, se non l'ha speso nella ritirata |
-| **La corona nera** | la Cerimonia delle 100 Asce | l'acido ha annerito la Corona dei Re Hammerfist: se i Rumbling Stones la vedono, è così che la riconoscono `[INFERRED]` |
+| **La corona nera** | la Cerimonia delle 100 Asce | l'acido ha annerito la Corona dei Re Hammerfist: se i Rumbling Stones la vedono, è così che la riconoscono `[INFERRED — la corona nera]`. Vale solo se il soffio ha preso il Re: se no, la Corona resta d'oro |
 | **Le frecce di Dara** | nessuna regola | se una è rimasta, Dara la porta al Cuore |
-| **Il cavaliere** | il finale | se è caduto dal drago, lo si interroga (`ARC08-10` §4.2) |
+| **Il cavaliere** | il finale | se è stato abbattuto dalla sella (Scena 6, le frecce di Dara) ed è vivo, i nani lo prendono, e nel finale lo si interroga (`ARC08-10` §4.2) |
 
 ---
 
@@ -1587,7 +1887,7 @@ questa serata (Handout 0). La ricompensa è la tabella del §7.
 | Dove | Cosa | Valore | Chi lo usa |
 |---|---|---|---|
 | Scena 2 e 4 | niente: i comandanti fuggono con le loro armi | | |
-| Scena 6 | due *frecce assassine* (draghi) dall'armeria del Re `[INFERRED — domanda 9]` | 2.282 mo l'una (SRD) | Dara |
+| Scena 6 | due *frecce assassine* (draghi) dall'armeria del Re `[INFERRED — le frecce di Dara]` | 2.282 mo l'una (SRD) | Dara |
 | Scena 8, i bugbear caduti | cuoio borchiato +1, morning star perfetta, 3 giavellotti, *fascia dell'intelletto +2*, due dosi di veleno, a testa | 1.175 + 308 + 3 + 4.000 mo a testa | nessuno, stasera: la colonna non si ferma a spogliare i morti |
 | Scena 8, gli hobgoblin | cotte di maglia, spade lunghe perfette | | nessuno |
 
@@ -1616,6 +1916,10 @@ Il tesoro non conta verso il WBL dei Rumbling Stones (`ARC08-13`).
 | `fauciDiPalude.webp` | Scena 2, il sorvolo |
 | `07.webp` | Scena 6, dopo il soffio |
 
+Per le Scene 7, 8 e 9 (la statua, l'incrocio, la porta di mithral) il set
+non ha immagini: si descrivono a voce, col box. `09.webp`, il ponte
+sospeso, non è di questa serata.
+
 ### Musica e suoni (`ARC08-16-CUE-SONORI.md` §3)
 
 I tre corni del Giorno 1, distanziati. Percussioni basse sotto la battaglia,
@@ -1633,19 +1937,19 @@ Fonti nell'ordine del DM: SRD 3.5, poi PF1e, poi il resto. Gli statblocchi
 completi dei PNG sono in `ARC08-02` §1-§2 e nel Bestiario; qui c'è quello che
 si tira stasera, in forma compatta. Se cambiano, cambiano lì.
 
-**A.1 · Gorthak il Trifronte** · `ARC08-02` §1; `Bestiario/villain/Gorthak_il_Trifronte.md` · ettin dell'SRD avanzato a 15 DV (potenziamento dichiarato), GS 12 · gigante Grande, CM · Iniz +6 · scurovisione 18 m, visione crepuscolare · Ascoltare +12, Osservare +12, non può essere fiancheggiato · CA **25**, contatto 11, colto alla sprovvista 23 · pf **202** · Temp +18, Rifl +7, Vol +9 · velocità 9 m · *randello Enorme +1* +21/+16/+11 (2d6+10) e *randello Enorme +1* +21/+16/+11 (2d6+5), senza penalità per le due armi (ogni testa un braccio, SRD); giavellotto grande +12 (1d8+9) · Spazio 3 m, Portata 3 m · Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro · le tre teste: la sinistra +2 danni al primo colpo; la centrale, una volta, rinuncia a un attacco per dare +2 morale a un'unità; la destra dà Iniziativa Migliorata. **All'ariete**: 3d10+20 al cancello (durezza 20). **Sotto 101**: un round in Furia (+4 For: +23, 2d6+12 e 2d6+6; CA 23), poi fugge `[INFERRED — domanda 4]`.
+**A.1 · Gorthak il Trifronte** · `ARC08-02` §1; `Bestiario/villain/Gorthak_il_Trifronte.md` · ettin dell'SRD avanzato a 15 DV (potenziamento dichiarato), GS 12 · gigante Grande, CM · Iniz +6 · scurovisione 18 m, visione crepuscolare · Ascoltare +12, Osservare +12, non può essere fiancheggiato · CA **25**, contatto 11, colto alla sprovvista 23 · pf **202** · Temp +18, Rifl +7, Vol +9 · velocità 9 m · *randello Enorme +1* +21/+16/+11 (2d6+10) e *randello Enorme +1* +21/+16/+11 (2d6+5), senza penalità per le due armi (ogni testa un braccio, SRD); giavellotto grande +12 (1d8+9) · Spazio 3 m, Portata 3 m · Allerta, Iniziativa Migliorata, Attacco Poderoso, Incalzare, Spezzare Migliorato, Volontà di Ferro · le tre teste: la sinistra +2 danni al primo colpo; la centrale, una volta, rinuncia a un attacco per dare +2 morale a un'unità; la destra dà Iniziativa Migliorata. **All'ariete**: 3d10+20 al cancello (durezza 20). **Sotto 101**: un round in Furia (+4 For: +23, 2d6+12 e 2d6+6; CA 23), poi fugge `[INFERRED — Gorthak sotto metà]`.
 
-**A.2 · Troll dell'ariete** (×2) `[INFERRED — domanda 5]` · SRD 3.5, *troll* · GS 5 · gigante Grande, CM · Iniz +2 · scurovisione 27 m, visione crepuscolare, fiuto · Ascoltare +5, Osservare +6 · CA **16**, contatto 11, colto alla sprovvista 14 · pf **63** · rigenerazione 5 (il fuoco e l'acido fanno danni normali) · Temp +11, Rifl +4, Vol +3 · velocità 9 m · 2 artigli +9 (1d6+6) e morso +4 (1d6+3); **sbranare** 2d6+9 se colpisce con tutti e due gli artigli · Spazio 3 m, Portata 3 m · Allerta, Volontà di Ferro, Seguire Tracce. Gorthak coi due troll: **EL** circa 13.
+**A.2 · Troll dell'ariete** (×2) `[INFERRED — i troll dell'ariete]` · SRD 3.5, *troll* · GS 5 · gigante Grande, CM · Iniz +2 · scurovisione 27 m, visione crepuscolare, fiuto · Ascoltare +5, Osservare +6 · CA **16**, contatto 11, colto alla sprovvista 14 · pf **63** · rigenerazione 5 (il fuoco e l'acido fanno danni normali) · Temp +11, Rifl +4, Vol +3 · velocità 9 m · 2 artigli +9 (1d6+6) e morso +4 (1d6+3); **sbranare** 2d6+9 se colpisce con tutti e due gli artigli · Spazio 3 m, Portata 3 m · Allerta, Volontà di Ferro, Seguire Tracce. Gorthak coi due troll: **EL** circa 13.
 
 **A.3 · Grimjaw** · `ARC08-02` §1; `Bestiario/villain/Generale_Grimjaw.md` · orog Guerriero 10 / Signore della Guerra 3, ⚠️ non SRD (orog e classe di prestigio [Private source]) · GS 14 · Iniz +5 · scurovisione 18 m · Ascoltare +13, Osservare +13 · CA **26**, contatto 12, colto alla sprovvista 24 · pf **178** · Temp +18, Rifl +8, Vol +10 · velocità 6 m · *spada bastarda demoniaca +1* +22/+17/+12 (1d10+9, 17-20, +1d6 fuoco sul critico); *arco lungo composito +1* +15/+10/+5 (1d8+7) · **Furia Comandante** 1/giorno, 8 round: +4 For e Cos (+24/+19/+14, 1d10+11; +26 pf), alleati entro 6 m +2 a colpire e danni · **Presenza intimidatoria**: entro 9 m −2 a colpire, Volontà **CD 19** nega · **Tattico Superiore**: azione gratuita, +2 a un tipo di tiro agli alleati entro 18 m per un round · 2 pozioni di *cura ferite gravi* · **fugge sotto 89** nell'assedio (libretto §5).
 
 **A.4 · Orog della guardia nera** (×4) · `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`, ⚠️ non SRD (orog) · GS 7 · Guerriero 6, Medio, LM · Iniz +4 · scurovisione 18 m · CA **19**, contatto 10, colto alla sprovvista 19 · pf **63** · Temp +10, Rifl +2, Vol +4 · velocità 6 m · *ascia bipenne +1* +13/+8 (1d12+10, ×3); con Attacco Poderoso a −3: +10/+5, 1d12+16 · Incalzare, Incalzare Potenziato · **guardia del corpo**: chi attacca Grimjaw in mischia deve prima superarne uno; immune alla paura finché Grimjaw è vivo. Grimjaw con quattro guardie: **EL** circa 15.
 
-**A.5 · Fauci di Palude** · `ARC08-02` §1; `Bestiario/villain/Fauci_di_Palude.md` · drago nero adulto maturo a 25 DV (potenziamento dichiarato) · GS 15 · Enorme · CA **29** (**37** con *armatura magica* e *scudo*, che lancia all'inizio della giornata) · pf **337** · Temp +21, Rifl +16, Vol +19 · RD 10/magia, RI **21**, immune all'acido · volare 45 m (scarsa), Fluttuare, Attacco in Volo · **soffio** in linea di 30 m, 14d4 acido, Riflessi **CD 29**, ogni 1d4 round · **soffio a cono** di 18 m, 1/giorno, con un round completo per prepararlo (⚠️ house-rule della scheda: l'SRD dà ai draghi neri solo la linea) · **Presenza terrificante** 90 m, Volontà **CD 25** (⚠️ potenziamento: 63 m nell'SRD per l'adulto maturo) · *dissolvi magie*, *nube maleodorante*, *immagine speculare* da stregone di 7° · il Giorno 3 sale in quota sotto ~**230** pf; atterra su un bastione se ha preso più di 50 danni nella scena.
+**A.5 · Fauci di Palude** · `ARC08-02` §1; `Bestiario/villain/Fauci_di_Palude.md` · drago nero adulto maturo a 25 DV (potenziamento dichiarato) · GS 15 · Enorme · CA **29** (**37** con *armatura magica*, che lancia all'alba e dura tutto il giorno, e *scudo*, che dura 7 minuti e rilancia a ogni passaggio) · pf **337** · Temp +21, Rifl +16, Vol +19 · RD 10/magia, RI **21**, immune all'acido · volare 45 m (scarsa), Fluttuare, Attacco in Volo · **soffio** in linea di 30 m, 14d4 acido, Riflessi **CD 29**, ogni 1d4 round · a terra: **morso** +33 (2d8+10, 19-20), **2 artigli** +31 (2d6+5), **2 ali** +31 (1d8+5), **colpo di coda** +31 (2d6+15); Spazio 4,5 m, Portata 3 m · **soffio a cono** di 18 m, 1/giorno, con un round completo per prepararlo (⚠️ house-rule della scheda: l'SRD dà ai draghi neri solo la linea) · **Presenza terrificante** 90 m, Volontà **CD 25** (⚠️ potenziamento: 63 m nell'SRD per l'adulto maturo) · *dissolvi magie*, *nube maleodorante*, *immagine speculare* da stregone di 7° · il Giorno 3 sale in quota sotto ~**230** pf; atterra su un bastione se ha preso più di 50 danni nella scena.
 
 **A.6 · Il cavaliere di Fauci** · `ARC08-02` §1 · hobgoblin Guerriero 6 / Guardia Nera 4 · GS 10 · CA **23**, pf **95** · Temp +15, Rifl +6, Vol +6 · *lancia da cavaliere +1* +16/+11 (1d8+7, ×3; in carica in sella danni tripli con Carica Devastante) · **Aura di disperazione**: −2 ai TS dei nemici entro 3 m · Punire il Bene 1/giorno (+2 a colpire, +4 danni) · Comando Tattico: +2 morale agli hobgoblin entro 9 m · resta in sella finché Fauci vola.
 
-**A.7 · Bugbear assassino** (×8) · `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` · Ladro 5 / Assassino 2, GS 9 `[CANONE — DM 2026-10-19]` · Iniz +7 · scurovisione 18 m, fiuto · Ascoltare +13, Osservare +13, **Nascondersi +17**, Muoversi Silenziosamente +21 · CA **20**, contatto 13, colto alla sprovvista 20 · pf **58** · Temp +4, Rifl +13, Vol +2 · eludere, schivare prodigioso migliorato (non si fiancheggia) · *morning star perfetta* +11 (1d8+3); giavellotto +9 (1d6+3) · **attacco furtivo +4d6** · **attacco mortale** dopo 3 round di studio: Tempra **CD 16** o paralizzato 1d6+2 round (o morto, se lo sceglie) · *foschia occultante* 2/giorno · Otto: **EL 15**.
+**A.7 · Bugbear assassino** (×8) · `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md` · Ladro 5 / Assassino 2, GS 9 `[CANONE — DM 2026-10-19]` · Iniz +7 · scurovisione 18 m, fiuto · Ascoltare +13, Osservare +13, **Nascondersi +17**, Muoversi Silenziosamente +21 · CA **20**, contatto 13, colto alla sprovvista 20 · pf **58** · Temp +4, Rifl +13, Vol +2 · eludere, schivare prodigioso migliorato (non si fiancheggia) · *morning star perfetta* +11 (1d8+3); giavellotto +9 (1d6+3) · **attacco furtivo +4d6** · Int 18 · **attacco mortale** dopo 3 round di studio, solo su chi è colto alla sprovvista: Tempra **CD 16** (10 + 2 livelli + 4 di Int) o paralizzato 1d6+2 round (o morto, se lo sceglie) · *foschia occultante* 2/giorno · Otto: **EL 15**.
 
 **A.8 · Hobgoblin della diversione** (×7: il sergente e sei) · `Bestiario/mostri/hobgoblin-sergente-cr5.md` (il sergente: CA 21, 37 pf, *spada lunga perfetta* +9, 1d8+4, +1 morale agli hobgoblin entro 3 m) e `Bestiario/mostri/hobgoblin-veterans-warrior6-cr5.md` (i sei: GS 5, CA 19, pf **43**, *spada lunga perfetta* +10/+5, 1d8+2) · combattono fino alla morte.
 
@@ -1690,7 +1994,7 @@ con gli SVG in `Mappe/rendered/`.
 
 | Duello | Coordinate 2A | Cosa c'è |
 |---|---|---|
-| Gorthak, sul ponte (Scena 2) | ponte BG-BJ righe 74-78; cancello BG-BJ 73; androne 70-72; fossato W-CV 74-77 | il ponte è largo 6 m: Gorthak (3 × 3 m) e due troll lo riempiono. Chi cade nel fossato, 3 m d'acqua, nuota (CD 15) e risale in due round. Lo sportello è nel battente ovest, BG73 `[INFERRED — domanda 6]` |
+| Gorthak, sul ponte (Scena 2) | ponte BG-BJ righe 74-78; cancello BG-BJ 73; androne 70-72; fossato W-CV 74-77 | il ponte è largo 6 m: Gorthak (3 × 3 m) e due troll lo riempiono. Chi cade nel fossato, 3 m d'acqua, nuota (CD 15, con la penalità d'armatura contata due volte: Borin in armatura completa affonda) e risale in due round se riesce; chi fallisce di 5 o più va a fondo, e trattiene il fiato per un numero di round pari al doppio della Costituzione. Una corda dalle mura lo tira fuori (For CD 10 per chi tira). Lo sportello è nel battente ovest, BG73 `[INFERRED — lo sportello del cancello]` |
 | Grimjaw, alla breccia (Scena 4) | Muro Est CM-CP righe 59-63; camminamento della cinta; cortile esterno sotto | la rampa di macerie sale dall'esterno fino alle merlature; dentro, una caduta di 12 m nel cortile (4d6). Se la carta è in un altro settore, il duello è sul camminamento di quel settore |
 
 <!-- /pagina -->

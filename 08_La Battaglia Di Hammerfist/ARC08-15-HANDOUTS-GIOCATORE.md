@@ -238,7 +238,7 @@ livelli più alto: si può fare solo con incantesimi fino al 4°.
 | ***Cura Ferite Leggere di Massa*** (5°) | fino a 16,5 m | cura **1d8+12** (in media 16,5) a 12 creature a non più di 9 m l'una dall'altra | **+1d4 PFU** a un reparto |
 | ***Potere della Giustizia*** (5°) | su di te, dura 12 round | diventi Grande: martello **+15**, danni **2d6+7**, CA 23, +12 pf, riduzione del danno 6/male | Combattere +15 nel round di battaglia in cui lo lanci, insieme al gesto |
 | ***Rianimare Morti*** (5°) | tocco | riporta in vita un morto da non più di 12 giorni; serve un diamante da 5.000 mo | no |
-| ***Comunione*** (5°) | 1 minuto di preghiera | fai a Moradin 12 domande, risposta sì o no; costa 100 PE, che si pagano da quelli del tuo livello (i pregen non ne guadagnano, ma ne hanno) | no |
+| ***Comunione*** (5°) | 10 minuti di preghiera | fai a Moradin 12 domande, risposta sì o no; costa 100 PE, che si pagano da quelli del tuo livello (i pregen non ne guadagnano, ma ne hanno) | no |
 | ***Colpo Infuocato*** (5°, dominio) | fino a 66 m | colonna di fuoco sacro di 3 m di raggio e 12 m d'altezza: **12d6** (in media 42; TS Riflessi CD 21, metà) | **1d4+1 PFU** a un reparto |
 | ***Cura Ferite Critiche*** (4°, ×2) | tocco | cura **4d8+12** (in media 30) | no |
 | ***Immunità agli Incantesimi*** (4°) | tocco, dura 120 minuti | il bersaglio ignora **3** incantesimi di 4° livello o meno, scelti da te | no |

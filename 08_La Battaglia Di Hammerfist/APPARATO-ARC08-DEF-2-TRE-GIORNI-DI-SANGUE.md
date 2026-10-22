@@ -30,28 +30,33 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 
 | Scena | Prova | CD |
 |---|---|---:|
+| SCENA 2 | 12d6 a chi la attraversa (Riflessi | 22 |
 | SCENA 2 | corda annodata contro il muro (Scalare | 0 |
 | SCENA 2 | pregen entro 90 m tirano Volontà | 25 |
 | SCENA 2 | 14d4 acido, Riflessi | 29 |
 | SCENA 2 | colpo infuocato (12d6, Riflessi | 21 |
+| SCENA 2 | magie mirato (d20 + 10 contro | 18 |
 | SCENA 3 | Torre Ovest, la vede crescere (Osservare | 15 |
+| SCENA 4 | 9 m o lo sente (Ascoltare | 15 |
 | SCENA 4 | alla guardia) e Presenza intimidatoria (Volontà | 19 |
 | SCENA 4 | Coro della Montagna (terremoto sulla roccia | 22 |
+| SCENA 6 | se è sulle Mura, tira Riflessi | 29 |
 | SCENA 6 | Volontà | 25 |
 | SCENA 6 | centrato sul Re, 14d4 acido, Riflessi | 29 |
-| SCENA 6 | Forza | 25 |
 | SCENA 6 | chi è colpito tira Tempra | 20 |
+| SCENA 6 | d20 + 10 contro | 18 |
 | SCENA 6 | L'invocazione a Moradin (Carisma | 22 |
 | SCENA 6 | Fauci tira Volontà +19 contro | 15 |
 | SCENA 6 | contro | 29 |
+| SCENA 6 | una cura qualunque o con Guarire | 15 |
 | SCENA 7 | La statua si sposta con Forza | 20 |
 | SCENA 7 | con Conoscenze (storia) o sapere bardico | 15 |
+| SCENA 7 | suo bonus Combattere (Appendice A.11) contro | 28 |
 | SCENA 7 | statua dietro di sé (una Forza | 20 |
 | SCENA 8 | salire su S5 (Dara, Scalare | 10 |
-| SCENA 8 | Osservare | 25 |
 | SCENA 8 | Tempra | 16 |
-| SCENA 8 | +20 contro | 25 |
 | SCENA 8 | sigilla (12d6 a chi passa, Riflessi | 22 |
+| SCENA 8 | azione di round completo, Tempra | 10 |
 
 ## L'indice dei read-aloud, in ordine di gioco
 
@@ -70,6 +75,8 @@ Il foglio del cast, l'inserto con le CD e l'indice dei read-aloud, presi dai com
 | SCENA 5 | la Porta Interna, di notte | Casa di Davide lead | 7 |
 | SCENA 6 | il cancello, il terzo giorno | Salvatore lead | 6 |
 | SCENA 6 | il cielo, il corno | Tolkien lead | 7 |
+| SCENA 6 | il round 2, il drago che cerca | Salvatore lead | 6 |
+| SCENA 6 | il round 3, il respiro | Salvatore lead | 6 |
 | SCENA 6 | il cancello, dopo il soffio | Mercer lead | 6 |
 | SCENA 7 | il cortile interno, la ritirata | Casa di Davide lead | 7 |
 | SCENA 8 | l'incrocio, il silenzio | Salvatore lead | 8 |

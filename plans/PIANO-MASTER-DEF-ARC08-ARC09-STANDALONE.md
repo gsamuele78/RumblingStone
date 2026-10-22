@@ -510,6 +510,16 @@ nella forma.
   8 pf, Gorthak a metà, i troll, lo sportello, Grimjaw senza sfidante, la
   riserva a +3, le frecce di Dara, i nani al Cuore, il sorvolo, il Re ferito
   nel libretto). Restano i passi 6-7 del ciclo.
+  **Giro fatto il 2026-10-22** ([triage](esperimenti/giro-arc08-sessione2-2026-10-22/TRIAGE.md),
+  [verifica](esperimenti/giro-arc08-sessione2-2026-10-22/VERIFICA.md)):
+  quattro letture a freddo, 177 rilievi (1 🔴, 63 🟠, 113 🟡) in 41 voci e 5
+  respinte; corrette tutte tranne T18 e T26, limiti dichiarati. La domanda 1
+  (il Giorno 3 qui, A di default) e la 3 (il Re a 8 pf fissi per l'acido)
+  sono `[CANONE — DM 2026-10-22]`, e il Re ha una procedura, «Il conto del
+  Re»; la ritirata ha un tiro, i bugbear l'Osservare contrapposto, Fauci gli
+  attacchi a terra. Sei domande nuove al DM (13-18). La verifica: nessun 🔴,
+  19 voci chiuse e 6 parziali, 13 rilievi nuovi corretti nella seconda
+  passata salvo il peso del master (22.400 parole).
 
 **S2 · ARC-09, i master del seguito** `[engine: Opus · effort: xhigh · qualità: ciclo del master, passi 1-7, su ognuno dei dodici]`
 Fonti nella tabella A1. Un sotto-lotto per master (S2a-S2l). Qui confluiscono S5
