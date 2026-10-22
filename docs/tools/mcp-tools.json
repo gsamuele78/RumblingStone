@@ -3230,6 +3230,50 @@
       "deterministic": true
     },
     {
+      "name": "migliora_prosa",
+      "description": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»\n\nLa pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici.",
+      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito} ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dataset": {
+            "type": "string",
+            "description": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
+          },
+          "modello": {
+            "type": "string",
+            "description": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt."
+          },
+          "scegli": {
+            "type": "string",
+            "description": "Box da migliorare con un seme: --seme, --n, --uscita."
+          },
+          "migliora": {
+            "type": "string",
+            "description": "FILE --box N --candidate C.md [--scelte S.json --id P01]: filtra, ordina, dice la migliore."
+          },
+          "campione": {
+            "type": "string",
+            "description": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
+          },
+          "esito": {
+            "type": "string",
+            "description": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json"
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_craft",
       "description": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»\n\nConta i congegni di mestiere dichiarati (read-aloud, echi, pilastro lead/support, regia, [HDYWTDT]...) in ogni arco e li confronta con i due banchi: Abbazia e Palio.",
       "use_case": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»",
