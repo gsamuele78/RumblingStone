@@ -90,8 +90,8 @@ All names below are extracted directly from the GM map image.
 
 | Name on Map | = RHoD Original | Notes |
 |---|---|---|
-| **Rethmar** | Brindol (RHoD original) | MAIN CITY; center of the vale; Lord Jarmaath's seat |
-| **Channathgate** | Dennovar | Eastern gateway; largest city after Rethmar |
+| **Rethmar** | Brindol (RHoD original) | MAIN CITY; center of the vale; Lord Jarmaath's seat. Capitale murata sul Cannath, circa 8.400 abitanti come Brindol (50 ha dentro le mura, il resto nei sobborghi) `[INFERRED — needs DM confirmation]` |
+| **Channathgate** | Dennovar | Eastern gateway. La città più popolosa della valle, circa 11.600 abitanti come Dennovar; città aperta, senza cinta, con il solo arg murato `[INFERRED — needs DM confirmation]` |
 | **Talar** | Talar | Center, west of Rethmar; river namesake village |
 | **Drellin's Ferry** | Drellin's Ferry | *(square; listed above)* |
 | **Terrelton** | Terrelton | Center; name retained |
@@ -100,7 +100,7 @@ All names below are extracted directly from the GM map image.
 | **Cannathcross** | Elsircross | East; renamed from "Elsircross" |
 | **Marthon** | Marthton | Far east; **spelling: "Marthon"** — no second 't' |
 | **Prosser** | Prosser | East-center; name retained |
-| **Dauth** | Dauth | South-center; name retained |
+| **Dauth** | Dauth | South-center; name retained. Nel libro è un borgo di circa 200 anime; nella campagna è una large town murata di circa 2.600 abitanti (17 ha) `[INFERRED — needs DM confirmation]` |
 | **Hillwatch** | Hillwatch | Southeast; name retained |
 | **Red Rock** | Red Rock | Northeast in Rathgaunt Hills; name retained |
 | **Assardoth** | *(no equivalent)* | Far SW; **custom addition** by Antariuk; no RHoD counterpart |

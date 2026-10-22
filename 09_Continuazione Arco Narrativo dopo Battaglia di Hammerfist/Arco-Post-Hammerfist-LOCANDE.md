@@ -138,7 +138,7 @@ contrada.
 | Locanda | Quartiere · contrada | Stanza, a notte | Pasto | Stalla | Libere | Cosa si sente | Il rischio |
 |---|---|---:|---:|---:|---:|---|---|
 | **La Piuma** | The Golden Plume · l'Oca | **20 mo**, una suite, il bagno caldo compreso | banchetto, 10 mo | 4 mo | 2 | i debiti delle altre contrade. Il banchiere ci cena, e sa chi è in rosso | nessuno, salvo il conto |
-| **Il Guanto** | The Iron Bastion · la Torre | comune 1 mo | 6 ma | 1 mo | 4 | i turni sulle mura, e quanti mercenari la città paga | coprifuoco a mezzanotte: chi rientra dopo dorme in strada |
+| **Il Guanto** | The Iron Bastion · la Torre | comune 1 mo | 6 ma | 1 mo | 4 | i turni sulle mura dell'arg, e quanti mercenari la città paga | coprifuoco a mezzanotte: chi rientra dopo dorme in strada |
 | **La foresteria delle Guglie** | The Spell-Wyrm Spires · il Drago | buona 8 mo, **solo su invito** di un mago delle Guglie | 2 mo | — | 1 | il quasi-mythal: quanto manca, e cosa serve | le stanze sono protette da *allarme*: chi esce di notte lo sa tutto il palazzo |
 | **La Gora** | The Silver Weft · il Bruco | povera 8 ma | 4 ma | — | 6 | il mercato nero: chi compra, chi vende, chi è sparito. Zecca Voll ci beve (`...P2D-PALIO-STATBLOCCHI.md`) | **Rapidità di mano +12** contro ogni PG che dorme: chi non fa la guardia perde qualcosa |
 | **Le Stanze Cieche** | The Whispering Shadows · la Civetta | comune 2 mo; le stanze non hanno finestre sulla strada | 1,2 mo | — | 3 | niente, ad alta voce. Tutto, per chi paga: la Civetta compra e vende quello che si dice nelle stanze | **quello che i PG dicono qui lo sa la Civetta**, e il Conte Valerius il mattino dopo |
@@ -154,7 +154,7 @@ contrada.
 > poco: odora di terra e di cavallo. Dal balcone accanto, a un braccio, una donna
 > coi colori di un'altra contrada vi guarda a lungo, e non sorride.*
 
-**Altrimenti**: fuori dalle mura, le stalle della Dawn Way, 1 ma, e la strada
+**Altrimenti**: fuori città, le stalle della Dawn Way all'arco dell'Alba, 1 ma, e la strada
 fino al Campo è un'ora a piedi nella folla.
 
 ---

@@ -299,7 +299,9 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 
 ## 8. Cross-link
 
-- **Pianta della città (dove stanno le carte A-E):** `Mappe/dauth-assedio/dauth-pianta.svg`
+- **Pianta della città (dove stanno le carte A-E):** `Mappe/dauth-assedio/dauth-pianta.svg`:
+  17 ha dentro le mura, circa 2.650 abitanti, tre porte maggiori (Sud, Nord, Ovest);
+  la Porta Est è ridotta a postierla `[INFERRED — needs DM confirmation]`.
 - **HUB Torneo:** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §3 (sfondo Vanguard)
 - **Giorno 3 in arena (Tordek/Artemis):** `Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE3-Giorno3-Finale-e-Invasione.md`
 - **Le 150 lance (fonte):** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-SUBQUEST-Thorik.md` §4

@@ -26,9 +26,10 @@
 
 **Informazioni che mancano:**
 
-1. **La popolazione di Rethmar, Dauth e Channathgate.** Nessun file la dà. Il
-   profilo di mercato di ogni città dipende da quella, e l'ho scelto io (§0,
-   «Il quadro»).
+1. **La popolazione di Rethmar, Dauth e Channathgate.** Ora la danno le piante
+   in scala del 2026-10-22: Rethmar circa 8.400, Dauth circa 2.650, Channathgate
+   circa 11.600 `[INFERRED — needs DM confirmation]`. I profili di mercato (§0,
+   «Il quadro») erano stati scelti prima, e restano.
 2. **La dedica del Tempio di Rethmar.** La battaglia finale lo nomina e non dice
    di chi è. Qui resta «il Tempio», con un chierico di 13° livello.
 3. **Se il gruppo arriva ai campi drow e ai recinti degli schiavi come
@@ -40,8 +41,8 @@
 - **«Damarath» è Rethmar.** Il nome viene dal brainstorm originale (`inizio.md`);
   il canone l'ha corretto (`PIANO-REVISIONE-ARC09` D2, e
   `campaign-artifacts.md`). La grande città «con un po' di tutto» è Rethmar
-  alla vigilia dell'assedio (§6). Channathgate, che il canone chiama *la più
-  grande città mercantile del vale dopo Rethmar*, è quella dove si trova
+  alla vigilia dell'assedio (§6). Channathgate, la città più popolosa del vale
+  (Rethmar resta la capitale), è quella dove si trova
   davvero tutto (§7), perché non è assediata e vive di commercio.
 - **I «loro» degli accampamenti sono i loxo** `[CANONE — DM 2026-10-07, D42]`. Nel canone i loxo e i
   centauri stanno sempre insieme, schiavi della Mano Rossa
@@ -226,7 +227,10 @@ parte viene da fuori dal mondo, per le Otto Porte. Qui si trovano soprattutto
 dichiarato)*. Una **piccola città** (valore base 4.000 mo, limite d'acquisto
 25.000 mo, incantesimi fino al 6° livello) `[CANONE — DM 2026-10-07, D42]`,
 **devota** (un livello d'incantesimo in più, per la Confraternita) e in **posizione
-strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
+strategica** (valore base +10%: le Otto Porte ne fanno un passaggio). Con i circa
+2.650 abitanti della pianta (`Mappe/dauth-assedio/dauth-pianta.svg`) Dauth sarebbe
+una *large town*; il profilo di piccola città resta quello deciso dal DM
+`[INFERRED — needs DM confirmation]`.
 
 | Voce | Fiera (28-32) | Dopo l'invasione (33+) |
 |---|---:|---:|
@@ -690,7 +694,7 @@ perché non è stato usato.
 
 ## §7 · Channathgate · proprio tutto *(Giorni 27-36)*
 
-La più grande città mercantile del vale dopo Rethmar, ricca, fortificata, non
+La città più popolosa del vale, ricca, aperta (solo l'arg ha mura), non
 ancora attaccata, e piena di gilde. Qui si trova quello che altrove manca, e qui
 si vende quello che altrove nessuno può pagare. I principi mercanti sono il
 **Gonfaloniere**, la **Balìa** delle gilde e le otto contrade.
