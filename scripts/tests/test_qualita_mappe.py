@@ -49,13 +49,14 @@ STANZA = [
 NORD = ["@north N", "@tipo tattica interni"]
 
 
-def _sala(lato=20, pilastro=False, porte=1):
-    """Una sala chiusa da muri, con porte sul lato nord e un blocco al centro."""
+def _sala(lato=20, pilastro=False, porte=1, fra_porte=12):
+    """Una sala chiusa da muri, con porte sul lato nord (a ``fra_porte``
+    colonne l'una dall'altra) e un blocco al centro."""
     righe = [["⬜"] * lato for _ in range(lato)]
     for i in range(lato):
         righe[0][i] = righe[-1][i] = righe[i][0] = righe[i][-1] = "🏰"
     for k in range(porte):
-        righe[0][3 + 6 * k] = "🚪"
+        righe[0][3 + fra_porte * k] = "🚪"
     if pilastro:
         for y in range(8, 12):
             for x in range(8, 12):
@@ -120,6 +121,37 @@ class TestQualita(unittest.TestCase):
         self.assertIn("struttura/un-ingresso", uno)
         due = _codici(_master(self.tmp, "i1b.md", _sala(porte=2), NORD))
         self.assertNotIn("struttura/un-ingresso", due)
+
+    def test_due_varchi_vicini_sono_un_ingresso(self):
+        """Il caso sfruttato dal riparatore (RICERCA-STRUMENTI-MAPPE.md §5): due
+        porte a due quadretti nella stessa stanza non sono due ingressi."""
+        q = _misura(_master(self.tmp, "v1.md", _sala(porte=2, fra_porte=2), NORD))
+        self.assertEqual(q.m["varchi"], 2)
+        self.assertEqual(q.m["ingressi"], 1)
+        self.assertIn("struttura/un-ingresso", [r["codice"] for r in q.rilievi])
+
+    def test_due_varchi_lontani_sono_due_ingressi(self):
+        q = _misura(_master(self.tmp, "v2.md", _sala(porte=2, fra_porte=12), NORD))
+        self.assertEqual((q.m["varchi"], q.m["ingressi"]), (2, 2))
+        self.assertNotIn("struttura/un-ingresso", [r["codice"] for r in q.rilievi])
+
+    def test_dieci_passi_si_nove_no(self):
+        """Fra due porte nel muro nord a d colonne si fanno 1 + d + 1 passi
+        ortogonali (si scende, si cammina, si risale): d = 8 sono 10 passi e due
+        ingressi, d = 7 sono 9 passi e uno solo."""
+        dieci = _misura(_master(self.tmp, "p10.md", _sala(porte=2, fra_porte=8), NORD))
+        self.assertEqual(dieci.m["ingressi"], 2)
+        nove = _misura(_master(self.tmp, "p9.md", _sala(porte=2, fra_porte=7), NORD))
+        self.assertEqual(nove.m["ingressi"], 1)
+
+    def test_varchi_che_non_si_raggiungono_sono_distinti(self):
+        """Due porte vicine su due stanze separate da un muro: a piedi non si
+        passa dall'una all'altra, quindi sono due ingressi."""
+        righe = [list(r) for r in _sala(porte=2, fra_porte=2)]
+        for y in range(1, 19):
+            righe[y][4] = "🏰"
+        q = _misura(_master(self.tmp, "v3.md", ["".join(r) for r in righe], NORD))
+        self.assertEqual(q.m["ingressi"], 2)
 
     def test_la_deroga_spegne_il_rilievo_e_la_penalita(self):
         d = NORD + ["@deroga struttura/un-ingresso ; la cripta del boss ha una porta sola, di proposito"]

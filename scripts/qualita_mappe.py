@@ -24,6 +24,8 @@ Uso:
     python3 scripts/qualita_mappe.py --classifica       # tabella dal peggiore
     python3 scripts/qualita_mappe.py --json OUT.json    # rapporto per macchine
     python3 scripts/qualita_mappe.py --strict FILE.md   # esce 1 se c'e' un E
+    python3 scripts/qualita_mappe.py --json OUT.json --profonde
+                                       # piu' le metriche profonde, solo nel JSON
 
 Exit: 0 rapporto prodotto (anche con rilievi) · 1 rilievi E con --strict ·
 2 errore d'uso o dipendenze mancanti. In sola lettura.
@@ -62,6 +64,12 @@ CREATURE_GRANDI = re.compile(
 NON_CREATURE = re.compile(r"cristall|\balber[oi]\b|fung|statua|roccia|rocce|masso|sassi|pietra|colonna|pilastr|"
                           r"impronta|recinto|tana|nido|atterraggio|\b(medio|piccolo|minuscolo)\b", re.I)
 FORTIFICAZIONE = re.compile(r"fortezz|castell|\bmura\b|bastion|torrion|cortina|cinta", re.I)
+# Due varchi a meno di 10 passi sono lo stesso ingresso (RICERCA-STRUMENTI-MAPPE.md
+# §5 e §6.3): un riparatore automatico apriva due varchi a due quadretti l'uno
+# dall'altro nella stessa stanza e il rilievo `struttura/un-ingresso` spariva.
+PASSI_FRA_INGRESSI = 10
+# le metriche profonde gia' calcolate, per impronta della griglia
+_PROFONDE: dict = {}
 
 # Pesi del punteggio. Euristici e dichiarati: dicono quanto un rilievo
 # allontana la mappa dallo standard, non quanto vale la mappa.
@@ -118,6 +126,42 @@ PESI_A_COLLAUDO = {"ingombro/grande": 4, "zone/separate": 2, "m1/copertura": 2,
                    "m2/vuoto": 2, "m4/esposizione": 2}
 PESO_A_COLLAUDO = 1
 BANDE = ((90, "buona"), (75, "da ritoccare"), (55, "da rivedere"), (0, "da rifare"))
+
+
+def _distinti(ingressi: list[set], perc: set) -> int:
+    """Quanti ingressi distinti: due varchi contano come due solo se stanno ad
+    almeno PASSI_FRA_INGRESSI passi l'uno dall'altro, o se non si raggiungono.
+
+    Un passo e' lo spostamento fra due celle percorribili che hanno un lato in
+    comune (4-connessione, niente diagonale): la misura di ``genera_ripara.py``
+    in RICERCA-STRUMENTI-MAPPE.md §5. La distanza fra due varchi e' quella
+    fra le loro celle piu' vicine. I varchi piu' vicini si uniscono, anche a
+    catena (A vicino a B, B vicino a C: un ingresso solo)."""
+    n = len(ingressi)
+    padre = list(range(n))
+    # una scala o un portale disegnati su una cella che blocca restano raggiungibili
+    ammesse = perc.union(*ingressi) if ingressi else perc
+
+    def radice(i):
+        while padre[i] != i:
+            padre[i] = padre[padre[i]]
+            i = padre[i]
+        return i
+    for i in range(n):
+        dist = {c: 0 for c in ingressi[i]}
+        frontiera = sorted(dist)
+        for passo in range(1, PASSI_FRA_INGRESSI):
+            nuova = []
+            for x, y in frontiera:
+                for q in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if q in ammesse and q not in dist:
+                        dist[q] = passo
+                        nuova.append(q)
+            frontiera = nuova
+        for j in range(i + 1, n):
+            if any(c in dist for c in ingressi[j]):
+                padre[radice(j)] = radice(i)
+    return len({radice(i) for i in range(n)})
 
 
 def banda(voto: int) -> str:
@@ -403,13 +447,27 @@ class Qualita:
                       + [(x, G.H - 1) for x in range(G.W - 2, -1, -1)]
                       + [(0, y) for y in range(G.H - 2, 0, -1)])
         aperti = [p in perc for p in giro_bordo]
+        passaggi = [{(x, y)} for x, y, c in G.tutte()
+                    if F.get(c, {}).get("posa") == "fra_livelli" or c in ("🌀", "🪜")]
         if all(aperti):
-            tratti = 4  # tutto il bordo e' aperto: un campo aperto, quattro lati
+            # tutto il bordo e' aperto: un campo aperto, quattro lati
+            varchi = 4 + len(passaggi)
+            self.m["ingressi"] = 4 + _distinti(passaggi, perc)
         else:
-            tratti = sum(1 for i, a in enumerate(aperti) if a and not aperti[i - 1])
-        passaggi = sum(1 for _, _, c in G.tutte()
-                       if F.get(c, {}).get("posa") == "fra_livelli" or c in ("🌀", "🪜"))
-        self.m["ingressi"] = tratti + passaggi
+            tratti = []
+            for i, a in enumerate(aperti):
+                if not a:
+                    continue
+                if aperti[i - 1] and tratti:
+                    tratti[-1].add(giro_bordo[i])
+                else:
+                    tratti.append({giro_bordo[i]})
+            # il giro e' chiuso: un tratto che passa dall'ultima cella alla prima e' uno solo
+            if len(tratti) > 1 and aperti[0] and aperti[-1]:
+                tratti[0] |= tratti.pop()
+            varchi = len(tratti) + len(passaggi)
+            self.m["ingressi"] = _distinti(tratti + passaggi, perc)
+        self.m["varchi"] = varchi
         self.m["bordo_aperto"] = round(sum(aperti) / len(aperti), 2) if aperti else 0.0
 
         # larghezza locale: il tratto piu' corto fra orizzontale e verticale
@@ -624,14 +682,31 @@ class Qualita:
         righe = "\n".join("".join(r) for r in self.G.celle) + "\n" + "\n".join(self.g.get("annotations", []))
         return hashlib.sha1(righe.encode("utf-8")).hexdigest()[:12]
 
-    def come_dato(self) -> dict:
+    def profonde(self) -> dict:
+        """Le metriche di configurazione senza soglia (qualita_mappe_profonde.py).
+        Si calcolano a parte e non entrano mai nel voto ne' nei rilievi. Solo
+        sulle tattiche: le miniature non camminano su una strategica, e la VGA
+        di 7.000 celle costa minuti. Le copie della stessa griglia si misurano
+        una volta."""
+        if not self.tattica:
+            return {"saltata": f"mappa {self.d['tipo']}: le metriche profonde misurano le tattiche"}
+        chiave = self.impronta()
+        if chiave not in _PROFONDE:
+            import qualita_mappe_profonde as P
+            _PROFONDE[chiave] = P.misura(self.c, F, MODO, FUORI)
+        return _PROFONDE[chiave]
+
+    def come_dato(self, profonde: bool = False) -> dict:
         base = self.c.come_dato()
-        return {"file": base["file"], "mappa": base["mappa"], "titolo": base["titolo"],
+        dato = {"file": base["file"], "mappa": base["mappa"], "titolo": base["titolo"],
                 "tipo": base["tipo"], "ambiente": base["ambiente"], "dimensioni": base["dimensioni"],
                 "impronta": self.impronta(), "voto": self.voto(), "banda": banda(self.voto()),
                 "penalita": self.penalita(), "metriche": self.m,
                 "rilievi": self.rilievi,
                 "rilievi_collaudo": [r for r in self.c.rilievi if not r["deroga"]]}
+        if profonde:
+            dato["profonde"] = self.profonde()
+        return dato
 
 
 def misura(file: Path, corpus: dict) -> list[Qualita]:
@@ -699,7 +774,12 @@ def main(argv=None) -> int:
                     help="stampa la tabella markdown dal voto peggiore, copie identiche unite")
     ap.add_argument("--strict", action="store_true", help="esce 1 se resta un rilievo E non derogato")
     ap.add_argument("--solo-errori", action="store_true", help="nel testo mostra solo i rilievi E")
+    ap.add_argument("--profonde", action="store_true",
+                    help="aggiunge al JSON le metriche profonde (space syntax, simmetria, pattern 2x2): "
+                         "senza soglia, fuori dal voto; vuole --json")
     args = ap.parse_args(argv)
+    if args.profonde and not args.json:
+        ap.error("--profonde scrive solo nel JSON: aggiungi --json OUT")
 
     try:
         C._dipendenze()
@@ -745,7 +825,7 @@ def main(argv=None) -> int:
           " · soglie in references/standard-qualita-mappe.md", file=sys.stderr if args.classifica else sys.stdout)
     if args.json:
         Path(args.json).write_text(json.dumps(
-            {"schema": "map_quality/1", "mappe": [q.come_dato() for q in esiti]},
+            {"schema": "map_quality/1", "mappe": [q.come_dato(args.profonde) for q in esiti]},
             ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return 1 if args.strict and errori else 0
 
