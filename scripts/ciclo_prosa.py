@@ -103,6 +103,12 @@ DEBOLI: "dict[str, re.Pattern]" = {
     "trattino come respiro": vp.TRATTINO,
 }
 SOGLIA_DEBOLI = 2   # tic minori DIVERSI nello stesso paragrafo (Humanizer, «weak alone»)
+# Dal <data della decisione del DM> antitesi e trattino contano con le soglie di
+# validate_prosa, non con la regex nuda: prima un trattino qualunque era un tic
+# (8.961 scatti nel repo) e un'antitesi sola bastava. L'antitesi conta se il
+# documento ne ha piu' di `vp.SOGLIE["antitesi"]`; il trattino se nel paragrafo
+# supera il 3% delle parole, la densita' di `trattino_come_respiro`.
+TRATTINO_PER_PAROLA = 0.03
 
 RIMEDI = {
     "calco": "riscrivere all'italiana (italiano-nativo §1)",
@@ -160,7 +166,7 @@ def _paragrafi(righe: "list[str]") -> "list[tuple[int, int]]":
     return out
 
 
-def tic_deboli(blocco: str) -> "list[str]":
+def tic_deboli(blocco: str, antitesi_oltre_soglia: bool = True) -> "list[str]":
     """I tic minori DIVERSI di un'unità di prosa, ognuno su un tratto di testo suo.
 
     Un'antitesi «Non è X: è Y» scritta col trattino è un tic, non due: un tic
@@ -168,6 +174,11 @@ def tic_deboli(blocco: str) -> "list[str]":
     un'occorrenza di un altro tic.
     """
     trovate = {n: [m.span() for m in rx.finditer(blocco)] for n, rx in DEBOLI.items()}
+    if not antitesi_oltre_soglia:
+        trovate["antitesi"] = []
+    parole = max(len(blocco.split()), 1)
+    if len(trovate["trattino come respiro"]) / parole <= TRATTINO_PER_PAROLA:
+        trovate["trattino come respiro"] = []
     fuori = []
     for n, spans in trovate.items():
         altre = [sp for k, v in trovate.items() if k != n for sp in v]
@@ -216,9 +227,6 @@ def segnala(testo: str) -> "list[Segnalazione]":
             fuori.append(Segnalazione(i0 + 1, i1 + 1, "box oltre 12 righe", f"{len(b)} righe"))
         if "(" in corpo:
             fuori.append(Segnalazione(i0 + 1, i1 + 1, "box con parentesi", ""))
-        nomi = mc.nomi_propri(corpo) - set(mc.PG)   # i PG il tavolo li conosce già
-        if len(nomi) > 1:
-            fuori.append(Segnalazione(i0 + 1, i1 + 1, "box con più nomi propri", ", ".join(sorted(nomi))))
         for norma, rx in (("P1", mc.P1), ("metratura", mc.METRATURA)):
             m = rx.search(corpo)
             if m:
@@ -231,9 +239,10 @@ def segnala(testo: str) -> "list[Segnalazione]":
             fuori.append(Segnalazione(r or i0 + 1, r or i1 + 1, "sembra/pare", f"«{m.group(0).strip()}»"))
 
     # i tic minori in gruppo, paragrafo per paragrafo
+    antitesi = len(vp.ANTITESI.findall(testo)) > vp.SOGLIE["antitesi"]
     for p0, p1 in _paragrafi(righe):
         blocco = mc._ETICHETTA.sub("", " ".join(righe[p0:p1 + 1]))
-        trovati = tic_deboli(blocco)
+        trovati = tic_deboli(blocco, antitesi)
         if len(trovati) >= SOGLIA_DEBOLI:
             fuori.append(Segnalazione(p0 + 1, p1 + 1, "tic minori in gruppo", ", ".join(trovati)))
 

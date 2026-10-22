@@ -944,6 +944,10 @@ NORME = (
     "maiuscole_di_enfasi",
     "trattino_come_respiro",
     "caratteristica_minuscola",
+    # Indicatore senza peso dal <data della decisione del DM>: nella calibrazione
+    # sui 38 voti ciechi i possessivi sono piu' alti nel VINCITORE 11 volte e nel
+    # perdente 3 (p 0,057). Si stampa, e MQM non lo pesa.
+    "possessivo_parte_del_corpo",
 )
 
 
@@ -979,9 +983,10 @@ def rilievi(f: Path) -> "list[tuple[str, str]]":
     if not readaloud.strip():
         return fuori
 
-    for pattern, perche in CALCHI_READ_ALOUD:
+    for i, (pattern, perche) in enumerate(CALCHI_READ_ALOUD):
+        chiave = "possessivo_parte_del_corpo" if i == 0 else "calco_dall_inglese"
         for m in re.finditer(pattern, readaloud, re.I):
-            fuori.append(("calco_dall_inglese",
+            fuori.append((chiave,
                           f"{rel}: read-aloud — {perche}  «…{m.group(0)}…»"))
 
     n_ant = len(ANTITESI.findall(readaloud))

@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e, patch scelte dal DM: tetto dei nomi distinti, P1 e possessivo sulle p… | ✅ gerundio in coda e -mente restano in `--stile` |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e: ritiro delle misure obsolete (regole mai scattate, otto congegni,… | 🟡 CI −94 s sui passi toccati, −521 righe di codice e −194 di test, MQM invariato; `--costrutto-italiano` resta per il voto del DM; sette patch aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, voto del DM: catena vecchia 8, nuova 5, pari 1; tre regole di riscrit… | ✅ standard = catena vecchia più soggetto dopo il verbo e LAMP goffo/inglese/ricercata, meno il tetto dei nomi (⚖️ al DM) |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f: riscrittura di prova di 16 box con catena vecchia, nuova e fusa, base… | 🟡 scheda cieca di 17 coppie al DM; versioni e chiavi fuori dal repo fino al voto |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
-| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
 
 ## Le misure che si portano dietro
 

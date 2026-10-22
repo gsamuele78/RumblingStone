@@ -36,7 +36,7 @@
 | File | Norma verificabile | Severità | Stato |
 |---|---|---|---|
 | `read-aloud-adulti.md` | box **≤ 12 righe** (2-4 per un round, 8-12 apertura, 4-6 rivelazione) | **maggiore** · `box_oltre_12_righe` | 🟢 `misura_craft --box` |
-| `read-aloud-adulti.md` | **un solo nome proprio nuovo** per box | **minore** · `box_piu_di_un_nome_proprio` | 🟢 `misura_craft --box` |
+| `read-aloud-adulti.md` | **un solo nome proprio nuovo** per box | **minore** | 🟡 `misura_craft --box`, colonna `>1 nome`: indicatore senza peso. Conta i nomi **distinti** e la norma dice **nuovi**; fuori dal punteggio MQM per decisione del DM |
 | `read-aloud-adulti.md` | **niente parentesi né incisi** lunghi | **minore** · `box_con_parentesi` | 🟢 `misura_craft --box` |
 | `read-aloud-adulti.md` | max **due livelli** di subordinate | **minore** | 🔴 non misurato — servirebbe un parser sintattico dell'italiano; il segnale povero (contare le virgole) darebbe falsi positivi come i 64/64 di `PIANO-PROSA-CHE-NON-SEMBRI-GENERATA` |
 | `read-aloud-adulti.md` | box di combattimento chiude su **«Che fate?»** | **maggiore** | 🟡 congegno `chiusura su decision point` — conta la frase ovunque, e la norma parla dei soli box di combattimento (era 🟢 fino al 2026-10-22) |
@@ -106,7 +106,7 @@
 | `PIANO-COLLAUDO-E-GENERAZIONE-MAPPE` §8 · Campo Drow 1 | la griglia del **Campo Drow 1** sta in due master (il SUPPLEMENTO-P1C, con le didascalie, e il P1C-Rituale, dove si gioca) e le due copie sono **identiche** | **minore** | 🟢 `test_campo_drow_1_copia.py` |
 | `rumblingstone-mapmaking` · `collaudo-mappe.md` | una mappa nuova o ridisegnata passa dal **collaudatore a freddo** (rubrica `M-…`) prima di dirsi fatta | **minore** | 🟡 non c'è un cancello che sappia se il collaudatore è passato: lo dice il rapporto della sua lettura, che si salva accanto alla mappa come le letture dei master. Un registro come `registro_letture.py` per le mappe è un lotto possibile, non fatto |
 | `ADR-0060` (norma WotC/Paizo) | **caratteristiche e abilità maiuscole** nelle quattro forme meccaniche: `Forza 25` · `Nuotare +9` · `prova di X` con una CD · `bonus di X` | **minore** · `caratteristica_minuscola` | 🟢 `validate_prosa.py --caratteristiche` — 258 occorrenze sotto controllo, soglia **zero**, e **fuori dalle quattro forme non si misura** (una frase discorsiva senza CD non si vede: costerebbe più falsi positivi di quanti errori trovi) |
-| `read-aloud-adulti.md` §1 punto 6 + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** · `read_aloud_presuppone` | 🟢 `misura_craft --p1` — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
+| `read-aloud-adulti.md` §1 punto 6 + linee guida *Dungeon* | il read-aloud **non presuppone un'azione né un senso del giocatore** | **minore** | 🟡 `misura_craft --p1`, indicatore fuori dal punteggio MQM per decisione del DM (dei residui, 12 dialoghi e 6 falsi positivi) — da **104 box su 477 (22%)** a **22 (5%)** col lotto 2C, e i 22 sono un elenco nominale, non un residuo: 12 dialoghi, 1 canto, 2 visioni interiori, 6 falsi positivi del rilevatore, 1 condizionale. Il cancello è `test_ogni_residuo_e_uno_dei_ventidue_dichiarati`, che àncora il conto **file per file**: un rilievo in più è rosso, e va corretto il testo, non il test. ⚠️ Resta vero che il rilevatore non distingue la **narrazione** dal **dialogo** — per questo il conto atteso non è zero, e non lo sarà mai |
 | `read-aloud-adulti.md` §1 punto 7 + Shawn Merwin (*D&D Beyond*) | nel read-aloud **niente *«sembra»* né *«pare»***; *«come se»* resta, perché è un paragone (D13 di PIANO-AGENT-SKILLS-ESTERNE); il «sembra» smentito entro la frase dopo resta (D17) | **minore** · `box_sembra_pare` | 🟢 `punteggio_mqm.py`, norma `box_sembra_pare`, dal 2026-10-03, col rilevatore `validate_prosa.sembra_esitanti` (fino al 2026-10-22 stava nel banco di L11, `voto_scrittura`, tolto col lotto 7e: è l'unica superficie della norma). Sui file di gioco il rilevatore contava **34 box su 501** (2026-10-01) e non era un cancello né entrava nel punteggio MQM: ci è entrato col lotto che li ha corretti. 🐛 *(2026-10-02)* non vedeva il participio né il passato remoto («ti è sembrato», «parve»): trovato dalla prima prova di `ciclo_prosa.py`, corretto, e il conto sui file di gioco resta 34. 🐛 Lo stesso giorno, leggendo i box uno per uno: «appare» stava nel rilevatore e non nella norma, e nei file di gioco vuol dire «diventa visibile». Tolto: **30 box su 501**. Il lotto che li corregge, approvato dal DM il 2026-10-03, è applicato: 25 box corretti, 27 modifiche. ✅ *(2026-10-03)* **D17**: il «sembra» smentito entro la frase dopo resta, e il rilevatore lo salta (`sembra_esitanti`). Sui file di gioco restano **3 box su 502**: un PNG che parla, un modello da riempire, e un box di `P3-PianoFuoco-PARTE2` dove la smentita sta nella battuta dopo, che il rilevatore dei box non apre (la riga ⬜ di STATO-E-ORDINE §0) |
 | `italiano-nativo.md` §9.2-ter e §9.2-quater + Humanizer (blader, MIT), regola «weak alone» (ADR-0077) | i **tic minori** (copula elusa, importanza dichiarata, antitesi, trattino come respiro) da soli sono italiano corretto; **due diversi nella stessa unità di prosa** (paragrafo, voce d'elenco, box) chiedono di riscrivere l'unità | **minore** | 🟡 `ciclo_prosa.py segnala`, norma «tic minori in gruppo». Dal 2026-10-22 non conta più la watchlist di §9.2-quater (zero scatti in tutto il repo, e la regex non vedeva le forme frequenti) né *sembra/pare*, che contava anche fuori dai box dove la norma non vale: quella norma la guarda `box_sembra_pare`. Un tic che sta tutto dentro un altro non conta due volte, e l'etichetta di regia resta fuori. Sui master ARC-07 il 2026-10-02: 17, 9, 12, 6 e 2 unità da DEF-1 a DEF-5. ⚠️ La soglia di due viene da Humanizer e **non è tarata su questo repo**: per questo resta fuori dal punteggio MQM e non è un cancello |
 | `ADR-0077`, estensione del 2026-10-03 | una **revisione applicata non abbassa il punteggio MQM** né fa crescere una norma; e la riscrittura **si ferma** dopo un giro che non abbassa le segnalazioni, o al terzo | — si misura e non si pesa: è un cancello sul processo, non una qualità del testo | 🟢 `ciclo_prosa.py registro --check` in CI, sul registro `plans/scrittura/miglioramenti.json` (11 revisioni D13: segnalazioni da 293 a 265, MQM +2,52). Il tetto dei giri lo dice `ciclo_prosa.py misura`, ed è un indicatore: chi riscrive lo legge, nessun cancello lo impone |
@@ -147,8 +147,8 @@
 
 | | Norme registrate |
 |---|---:|
-| 🟢 misurate | 43 |
-| 🟡 misurate in parte, con il limite scritto | 39 |
+| 🟢 misurate | 41 |
+| 🟡 misurate in parte, con il limite scritto | 41 |
 | 🔴 **non misurate, con la ragione scritta** | 13 |
 | ⚪ non applicabili | 0 |
 
@@ -159,7 +159,9 @@ in una riga. Quattro 🟢 sono scese a 🟡 perché il loro congegno conta la ma
 o una frase fissa e non la norma. L'indizio della norma positiva di
 `italiano-nativo.md` §8 (`--costrutto-italiano`) resta 🟡 e fuori dal punteggio:
 nel voto cieco del DM sulla riscrittura di prova il «c'è» presentativo non ha
-perso (sei vincitori su otto lo portavano).
+perso (sei vincitori su otto lo portavano). Con le patch scelte dal DM dopo il voto,
+il tetto dei nomi distinti, P1 e il possessivo sulle parti del corpo escono dal
+punteggio e restano indicatori.
 
 > 🐛 **Questi quattro numeri erano sbagliati tutti e quattro**, e nessuno se
 > n'era accorto perché erano scritti a mano: dicevano **16+9+12+3 = 40** su

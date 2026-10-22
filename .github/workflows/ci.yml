@@ -367,13 +367,13 @@ jobs:
           python scripts/compile_map_json.py /tmp/ci-uc.draft.json --validate-only
           python -c "import json; r=json.load(open('/tmp/ci-uc.conflicts.json')); assert r['report_version'] and 'conflicts' in r, 'report malformato'; print('import_ultraclear OK')"
 
-      # 🔴 Entrambi i corridori, e non e' ridondanza. Il 2026-09-21 tre file di
-      # test giravano in locale sotto pytest e NON in CI sotto unittest: due non
-      # si importavano, uno era fatto di funzioni nude che `unittest` importa
-      # senza eseguire — 966 prove viste, 942 eseguite. Con pytest ammesso
-      # (emendamento ad ADR-0037) il buco si riapre al contrario, quindi si
-      # girano tutti e due e `test_i_test_girano_in_ci.py` verifica che vedano
-      # lo stesso numero.
+      # Un corridore solo dal <data della decisione del DM>. Il 2026-09-21 tre
+      # file di test giravano sotto pytest e non sotto unittest (966 prove viste,
+      # 942 eseguite), e per un mese la suite e' girata due volte: circa 200 s
+      # di CI a ogni push. La parita' resta presidiata senza il secondo giro:
+      # `test_i_test_girano_in_ci.py`, che pytest esegue, importa ogni modulo
+      # con `unittest discover`, vuole una TestCase in ogni file e confronta il
+      # conto di `unittest` con `pytest --collect-only`.
       # ADR-0059: il punteggio pesato. Nasce verde per costruzione (la soglia
       # viene dalla distribuzione misurata del repo), quindi un rosso qui e' un
       # documento che e' peggiorato, non una soglia importata da un manuale.
@@ -384,10 +384,7 @@ jobs:
           # ADR-0077, estensione: nessuna revisione applicata ha peggiorato la misura
           python scripts/ciclo_prosa.py registro --check
 
-      - name: Unit tests — unittest (il corridore storico, ADR-0007)
-        run: python -m unittest discover -s scripts/tests -v
-
-      - name: Unit tests — pytest (il secondo corridore, ADR-0037 em. 2026-09-21)
+      - name: Unit tests — pytest (ADR-0037 em. 2026-09-21)
         run: python -m pytest scripts/tests -q
 
       - name: dm.py unified CLI smoke test (K-C3)

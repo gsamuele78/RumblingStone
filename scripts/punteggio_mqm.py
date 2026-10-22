@@ -80,7 +80,6 @@ def _difetti_box(testo: str, _percorso: Path) -> "dict[str, int]":
     return {
         "box_oltre_12_righe": d["oltre 12 righe"],
         "box_con_parentesi": d["con parentesi"],
-        "box_piu_di_un_nome_proprio": d[">1 nome proprio"],
     }
 
 
@@ -103,7 +102,8 @@ def _prosa(_testo: str, percorso: Path) -> "dict[str, int]":
     la terminologia non canonica e' `maggiore`, ed e' la prima norma pesata che
     non sia una prassi da un punto.
     """
-    conta: "dict[str, int]" = {k: 0 for k in vp.NORME if k != "caratteristica_minuscola"}
+    conta: "dict[str, int]" = {k: 0 for k in vp.NORME
+                               if k not in ("caratteristica_minuscola", "possessivo_parte_del_corpo")}
     for chiave, _ in vp.rilievi(percorso):
         if chiave in conta:
             conta[chiave] += 1
@@ -148,7 +148,7 @@ def _sembra(testo: str, _percorso: Path) -> "dict[str, int]":
                                    if vp.sembra_esitanti(mc.corpo_del_box(b)))}
 
 
-RILEVATORI = (_difetti_box, _caratteristiche, _prosa, _p1, _metrature, _sembra)
+RILEVATORI = (_difetti_box, _caratteristiche, _prosa, _metrature, _sembra)
 
 
 def carica_specifiche() -> dict:
