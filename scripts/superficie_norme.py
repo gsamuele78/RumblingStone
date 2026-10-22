@@ -147,11 +147,12 @@ NORME_SCOPERTE = (
     {
         "chiave": "fatto_da_due_nodi",
         "norma": "nodi-e-sei-porte.md — ogni fatto raggiungibile da >=2 nodi",
-        "prerequisito": "i nodi d'indagine sono marcati",
-        "forma": None,
-        "dove": "stesso prerequisito del precedente",
-        "rilevatore_pronto": None,
-        "sblocca": "PIANO-INDAGINE-E-DEDUZIONE I6",
+        "prerequisito": "le conclusioni e gli indizi sono marcati",
+        "forma": r"<!--\s*indizio\s+C\d+",
+        "dove": "la marcatura `<!-- conclusione C1: … -->` e `<!-- indizio C1 -->` di "
+                "`sviluppo-degli-incontri.md` §21 (2026-10-22): nessun master la usa ancora",
+        "rilevatore_pronto": "domande_developer.py (D21)",
+        "sblocca": "il primo master con un'indagine che la marca",
     },
     {
         "chiave": "sei_nove_nodi",

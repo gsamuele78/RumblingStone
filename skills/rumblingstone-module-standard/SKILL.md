@@ -251,6 +251,10 @@ dell'alto livello, prese dalle avventure della community
 a una divinazione, la riga di scala per ogni scontro, il mostro insostituibile,
 il pericolo che qualcuno usa, l'incontro che resta uno, il rinforzo che i PG
 vedono arrivare, niente orde di GS basso al 13°, il PG fuori gioco per un TS.
+Dalla §18 alla §21 le regole d'architettura (`plans/RICERCA-QUALITA-MISURABILE-2026-10.md`
+§4): la domanda sì o no di ogni scena, la scelta che dice dove se ne vede la
+conseguenza, il boss annunciato in due scene prima, la rete degli indizi
+marcata con tre indizi per conclusione.
 
 ### Il ciclo completo: quando un master si chiama DEF
 
@@ -364,7 +368,8 @@ prosa, coerenza e design (ciò che una regex non vede).
 `python scripts/domande_developer.py --check` fa le domande del developer
 ([`references/sviluppo-degli-incontri.md`](references/sviluppo-degli-incontri.md))
 sulla forma del testo: e se volano, e se sono invisibili, chi sente il rumore,
-i tre TS, la soglia del boss, lo skill challenge per intero. Un master nuovo
+i tre TS, la soglia del boss, lo skill challenge per intero, la domanda della
+scena, la conseguenza delle scelte, il presagio del boss. Un master nuovo
 nasce senza rilievi, o con la ragione di ognuno in `plans/domande-developer.json`.
 
 `python scripts/componenti.py --check` (ADR-0074) verifica l'apparato generato

@@ -91,7 +91,7 @@ tutte le 39 scene di ARC-07.
 - [x] censimento di ciò che il repo misura già e ricerca in rete (prosa e architettura)
 - [x] calibrazione delle misure di prosa sui 38 voti ciechi (`plans/esperimenti/qualita-misurabile-2026-10-22/`)
 - [x] **7a, prosa**: il voto cieco porta un'etichetta facoltativa del perché (dieci, da LAMP e TTCW: `cieco_versioni.ETICHETTE`), che `esito` conta per versione; dopo ~50 voti etichettati si rifà la calibrazione
-- [ ] **7b, architettura**: quattro domande del developer nuove (domanda drammatica, scelta con conseguenza, presagio del cattivo, rete degli indizi), calibrate su ARC-07 e ARC-08 come la D10, cancello solo per i master nuovi
+- [x] **7b, architettura**: quattro domande del developer nuove (domanda drammatica, scelta con conseguenza, presagio del cattivo, rete degli indizi), calibrate su ARC-07 e ARC-08 come la D10, cancello solo per i master nuovi. Sono le §18-§21 di `sviluppo-degli-incontri.md` e le regole D18-D21 di `domande_developer.py`; la calibrazione è nel §3-bis qui sotto, e i 30 rilievi dei master esistenti sono residui con la ragione
 - [ ] **7c, coerenza**: fronti e orologi con uno schema in `state` e negli archi
 
 ## 2 · La calibrazione del lotto 1
@@ -122,6 +122,31 @@ di lei.
 Gli undici: Lirien, Tempestas, l'arcidruido del circolo, Avarthel, Morlin
 Coalhewer, Azarr Kul, Arbitrax, Draxoksus, l'emissario della Mano Rossa, Koth,
 Ozyrrandion. Il conto si rifà con il comando della §5.
+
+## 3-bis · La calibrazione del lotto 7b
+
+Le quattro regole nuove eseguite sui cinque master di ARC-07 e su tre file di
+ARC-08, che non ha master DEF: la guida agli scontri (scena: `## **INCONTRO`),
+la guida del DM (scena: `FASE`, `GIORNO`, `SESSIONE`, `INCONTRO`) e la
+Cerimonia delle 100 Asce. ARC-08 non è sotto cancello, e i suoi rilievi non
+diventano residui. Ogni rilievo è stato letto a mano.
+
+| Regola | Rilievi | Veri | Falsi | Note |
+|---|---|---|---|---|
+| D18 la domanda della scena | 19 | 13 | 6 | ARC-07 10 su 14: veri DEF-1 Scene 3, 4, 8, DEF-4 Scene 6-11, DEF-5 Scena 3; falsi DEF-1 Scena 9 (la domanda la fa Moradin), DEF-4 Scena 3 (la posta sta nel riquadro del nodo), DEF-4 Scena 5 (tempo libero), DEF-5 Scena 2 (raccontata). ARC-08 3 su 5: falsi la riga dei PX della Sessione 4, che il taglio prende per una scena, e l'Atto 3 della Cerimonia, un rito dall'esito deciso |
+| D19 la scelta che si vede | 5 | 2½ | 2½ | veri DEF-1 Scena 5 («Se Tordek lo tocca»: il Marchio passa a lui e il blocco non dice dove lo si rivede), ARC08-01 Fase 2 (l'opzione A dà +2 CA alle mura e non dice in quale scontro); a metà DEF-4 Scena 4 (Thorgrim e l'ascia); falsi i due del Drappo, che nominano la conseguenza in parole |
+| D20 il presagio del boss | 2 | 0 | 2 | sotto cancello `_scene_boss` trova un boss solo, DEF-4 Scena 11, che ha i suoi presagi. Per provarla sono state dichiarate boss altre sette scene: due rilievi, tutti e due falsi (Fauci di Diamante, capo degli Xorn alla terza scena di DEF-1; Fauci di Palude nella guida agli scontri, annunciato nell'Incontro 1F dell'altra guida). **Non calibrata** |
+| D21 la rete degli indizi | 0 | — | — | nessun master marca la rete. Prova su una copia di DEF-4 marcata a mano (la targa, il consiglio, il Rubino): la rete regge con tre indizi, e togliendone uno la regola scatta |
+
+Le correzioni prima di questi numeri: la *Scheda d'entrata* non fa più di
+una scena una scena sociale (prendeva i riti di DEF-3); un **Obiettivo**
+scritto vale come domanda (le cinque scene della guida agli scontri di ARC-08
+lo avevano tutte); nelle scene di scontro un **Se** in grassetto è tattica e
+non conta (6 falsi su 8 alla prima prova); un paragrafo che finisce coi due
+punti porta con sé l'elenco che annuncia; «la seduta dopo» e «il registro»
+sono rimandi. Alla prima prova D19 dava 2 veri su 12. Precisione d'insieme
+dopo le correzioni: **15½ su 26**, vicina al 6½ su 11 del lotto 1. Sono
+indicatori.
 
 ## Decisioni del DM
 

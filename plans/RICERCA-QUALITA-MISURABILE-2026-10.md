@@ -97,8 +97,10 @@ più frequenti.
 | **Formato AP** | Paizo, [RPG Superstar](https://paizo.com/blog/rpg-superstar-trade-advice-from-your-future) | ~500 parole per incontro, antefatto ≤2 pagine |
 | **Motivazioni delle quest** | Doran e Parberry, [PCG 2011](https://ianparberry.com/pubs/pcg2011.pdf) | varietà: non più del 40% delle missioni con la stessa motivazione |
 
-Una prima conta sui cinque master di ARC-07: **la domanda drammatica non
-compare in nessuna delle 39 scene** (una sola «posta in gioco» in DEF-2), e il
+Una prima conta sui cinque master di ARC-07: **la domanda drammatica non è
+scritta come domanda in nessuna delle 39 scene** (una sola «posta in gioco» in
+DEF-2). Contando anche l'«Obiettivo» scritto, 14 scene di scontro o sociali
+restano senza né l'una né l'altro (D18, lotto 7b), e il
 «se falliscono» non mortale c'è in 2 master su 5. Il «Se i PG…» c'è ovunque
 (35 blocchi), ma niente dice se porta a una conseguenza visibile.
 

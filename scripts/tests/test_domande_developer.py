@@ -199,3 +199,108 @@ class TestD16IlPgFuoriGioco(unittest.TestCase):
     def test_stordito_non_conta(self):
         testo = "### SCENA 1 — La torre\n\nIl gigante, GS 13: chi è colpito resta stordito.\n"
         self.assertNotIn(("D16", "SCENA 1"), regole(testo))
+
+
+class TestD18LaDomandaDellaScena(unittest.TestCase):
+
+    SCONTRO = "### SCENA 1 — Il pilastro\n\nGli Xorn, EL 13. Con tre PG manca il terzo Xorn.\n"
+
+    def test_scontro_senza_domanda_scatta(self):
+        self.assertIn(("D18", "SCENA 1"), regole(self.SCONTRO))
+
+    def test_la_riga_in_forma_fissa_tace(self):
+        testo = self.SCONTRO + "\n**Domanda:** gli Xorn lasciano passare il gruppo col mithral?\n"
+        self.assertNotIn(("D18", "SCENA 1"), regole(testo))
+
+    def test_la_posta_senza_punto_di_domanda_non_basta(self):
+        testo = self.SCONTRO + "\n**Posta in gioco:** il mithral del gruppo.\n"
+        self.assertIn(("D18", "SCENA 1"), regole(testo))
+
+    def test_la_scena_sociale_conta(self):
+        testo = "### SCENA 1 — Il mercante\n\nDiplomazia CD 15 per lo sconto.\n"
+        self.assertIn(("D18", "SCENA 1"), regole(testo))
+
+    def test_la_scena_raccontata_tace(self):
+        testo = "### SCENA 1 — Il viaggio\n\nTre giorni di marcia fra i pini.\n"
+        self.assertNotIn(("D18", "SCENA 1"), regole(testo))
+
+
+class TestD19LaSceltaCheSiVede(unittest.TestCase):
+
+    def test_scelta_senza_conseguenza_scatta(self):
+        testo = ("### SCENA 1 — La gemma\n\n- **Se Tordek la tocca**, la voce arriva a lui.\n"
+                 "- **Se la distruggono**, la voce tace.\n")
+        self.assertIn(("D19", "SCENA 1"), regole(testo))
+
+    def test_il_rimando_a_una_scena_tace(self):
+        testo = ("### SCENA 1 — La targa\n\n- **Se prendono il Nome** → il re li riconosce "
+                 "nella Scena 4.\n- **Se non lo prendono**, non perdono niente.\n")
+        self.assertNotIn(("D19", "SCENA 1"), regole(testo))
+
+    def test_le_opzioni_contano(self):
+        testo = "### SCENA 1 — Il rito\n\n- **Opzione A — l'oro**: pagano.\n- **Opzione B — il corpo**: soffre.\n"
+        self.assertIn(("D19", "SCENA 1"), regole(testo))
+
+    def test_una_condizione_del_mondo_non_e_una_scelta(self):
+        testo = "### SCENA 1 — Il corno\n\n- **Se il corno suona di notte**, il drago arriva.\n"
+        self.assertNotIn(("D19", "SCENA 1"), regole(testo))
+
+    def test_nello_scontro_il_se_tattico_tace(self):
+        testo = ("### SCENA 1 — Terros\n\nTerros, GS 15. Con tre PG perde un'azione.\n\n"
+                 "**Se Artemis vola invisibile**, Terros la sente con Ascoltare.\n")
+        self.assertNotIn(("D19", "SCENA 1"), regole(testo))
+
+    def test_il_titolo_vale_fino_al_titolo_dopo(self):
+        testo = ("### SCENA 1 — La caverna\n\n#### Se i PG…\n\n| Fanno | Succede |\n|---|---|\n"
+                 "| chiudono la porta | gli orchi tornano all'alba, carry-over |\n")
+        self.assertNotIn(("D19", "SCENA 1"), regole(testo))
+
+
+class TestD20IlPresagioDelBoss(unittest.TestCase):
+
+    def _modulo(self, prima):
+        return (prima + "### SCENA 9 — BOSS: Skullcrusher\n\nA metà dei pf esita e fugge.\n")
+
+    def test_boss_senza_presagio_scatta(self):
+        testo = self._modulo("### SCENA 1 — Il bosco\n\nNebbia.\n\n### SCENA 2 — Le mura\n\nPietra.\n\n")
+        self.assertIn(("D20", "SCENA 9"), regole(testo))
+
+    def test_due_scene_che_lo_nominano_tacciono(self):
+        testo = self._modulo("### SCENA 1 — Il bosco\n\nDurin parla di Skullcrusher.\n\n"
+                             "### SCENA 2 — Le mura\n\nLe ossa che ha lasciato Skullcrusher.\n\n")
+        self.assertNotIn(("D20", "SCENA 9"), regole(testo))
+
+    def test_l_indizio_senza_nome_si_dichiara_nel_profilo(self):
+        testo = self._modulo("### SCENA 1 — Il bosco\n\nUn'ombra: il drago passa.\n\n"
+                             "### SCENA 2 — Le mura\n\nIl drago brucia una torre.\n\n")
+        self.assertIn(("D20", "SCENA 9"), regole(testo))
+        self.assertNotIn(("D20", "SCENA 9"), regole(testo, {"presagi": {"SCENA 9": ["drago"]}}))
+
+
+class TestD21LaReteDegliIndizi(unittest.TestCase):
+
+    CONCLUSIONE = "<!-- conclusione C1: la profezia parla dei PG -->\n\n"
+
+    def test_senza_marcatura_tace(self):
+        testo = "### SCENA 1 — La targa\n\nUn indizio, e un nodo d'indizio.\n"
+        self.assertNotIn("D21", [r for r, _ in regole(testo)])
+
+    def test_tre_indizi_da_tre_scene_tacciono(self):
+        testo = self.CONCLUSIONE + "".join(
+            f"### SCENA {n} — X\n\nIndizio. <!-- indizio C1 -->\n\n" for n in (1, 2, 3))
+        self.assertNotIn("D21", [r for r, _ in regole(testo)])
+
+    def test_tre_indizi_in_un_nodo_solo_scattano(self):
+        testo = self.CONCLUSIONE + "### SCENA 1 — X\n\n" + "Uno. <!-- indizio C1 -->\n" * 3
+        det = [d for r, _, d in dd.analizza(testo + TUTTI_I_TS) if r == "D21"]
+        self.assertTrue(det and "3 indizi da 1 nodi" in det[0])
+
+    def test_due_nodi_nella_stessa_scena_contano(self):
+        testo = (self.CONCLUSIONE + "### SCENA 1 — X\n\n#### 🔍 Nodo d'indizio — la targa\n\n"
+                 "<!-- indizio C1 --> <!-- indizio C1 -->\n\n#### 🔍 Nodo d'indizio — il re\n\n"
+                 "<!-- indizio C1 -->\n")
+        self.assertNotIn("D21", [r for r, _ in regole(testo)])
+
+    def test_un_indizio_senza_conclusione_scatta(self):
+        testo = "### SCENA 1 — X\n\n<!-- indizio C7 -->\n"
+        self.assertIn(("D21", "—"), regole(testo))
