@@ -46,7 +46,7 @@ class TestSegnala(unittest.TestCase):
         self.assertNotIn("tic minori in gruppo", _norme("Nel cuore della notte il campo dorme.\n"))
 
     def test_due_tic_minori_diversi_si(self):
-        testo = "La forgia rappresenta un vero e proprio patto fra i clan.\n"
+        testo = "La forgia rappresenta il patto. Non è un muro: è una porta.\n"
         self.assertIn("tic minori in gruppo", _norme(testo))
 
     def test_lo_stesso_trattino_non_conta_due_volte(self):

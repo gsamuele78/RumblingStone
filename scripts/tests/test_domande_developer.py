@@ -277,6 +277,24 @@ class TestD20IlPresagioDelBoss(unittest.TestCase):
         self.assertNotIn(("D20", "SCENA 9"), regole(testo, {"presagi": {"SCENA 9": ["drago"]}}))
 
 
+    def test_d20_e_un_indicatore_e_non_blocca(self):
+        """Lotto 7e (2026-10-22): D20 non calibrata (0 veri su 2) resta fuori da
+        --check. Un suo rilievo non dichiarato si stampa e non fa rosso."""
+        from unittest import mock
+        self.assertIn("D20", dd.INDICATORI)
+        modulo = {"file": "finto.md"}
+        with mock.patch.object(dd.cs, "moduli", return_value=[modulo]), \
+                mock.patch.object(dd.cs, "carica_config", return_value={}), \
+                mock.patch.object(Path, "exists", return_value=True), \
+                mock.patch.object(Path, "read_text", return_value="x"), \
+                mock.patch.object(dd, "analizza",
+                                  return_value=[("D20", "SCENA 9", "boss senza presagio"),
+                                                ("D10", "SCENA 2", "senza scala")]):
+            trovati, nuovi, scaduti = dd.esegui({"residui": []})
+        self.assertEqual(len(trovati), 2)
+        self.assertEqual([t[1] for t in nuovi], ["D10"])
+        self.assertEqual(scaduti, [])
+
 class TestD21LaReteDegliIndizi(unittest.TestCase):
 
     CONCLUSIONE = "<!-- conclusione C1: la profezia parla dei PG -->\n\n"

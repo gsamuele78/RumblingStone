@@ -23,7 +23,7 @@ sulla forma del testo, e dice **dove** il problema c'è.
 | D16 | chi è fuori gioco per un TS sa cosa fa (§16) | scena di scontro |
 | D18 | la scena dichiara la sua domanda sì/no (§18) | scena di scontro o sociale |
 | D19 | la scelta dice dove se ne vede la conseguenza (§19) | blocco di scelta («Se i PG…», A/B/C) |
-| D20 | il boss ha un presagio in due scene prima (§20) | scena del boss |
+| D20 | il boss ha un presagio in due scene prima (§20), indicatore fuori da --check | scena del boss |
 | D21 | ogni conclusione ha tre indizi da due nodi (§21) | la rete marcata, dove c'è |
 
 La §7 (i sette modi di stare al tavolo di Robin Laws) **non** si misura: è un
@@ -442,6 +442,14 @@ def ts_mancanti(testo: str, profilo: dict) -> "list[tuple[str, str, str]]":
 
 # ─── il cancello ────────────────────────────────────────────────────────────
 
+#: Le regole che si stampano e non bloccano. D20 (il presagio del boss) alla
+#: calibrazione del lotto 7b ha dato 0 veri su 2, e sotto cancello trova un boss
+#: solo: finché non ha un rilievo vero resta un indicatore, fuori da --check
+#: (lotto 7e di PIANO-AVVENTURE-COMMUNITY, 2026-10-22). Non è tolta: un boss
+#: senza presagio resta un difetto da leggere.
+INDICATORI = frozenset({"D20"})
+
+
 def carica_config() -> dict:
     return json.loads(CONFIG.read_text(encoding="utf-8"))
 
@@ -473,9 +481,9 @@ def esegui(cfg: dict) -> "tuple[list, list, list]":
     def dichiarato(t):
         return any(t[0] == r["file"] and t[1] == r["regola"] and t[2] == r["scena"]
                    and r.get("dettaglio", t[3]) == t[3] for r in residui)
-    nuovi = [t for t in trovati if not dichiarato(t)]
-    scaduti = [r for r in residui
-               if not any(t[0] == r["file"] and t[1] == r["regola"] and t[2] == r["scena"]
+    nuovi = [t for t in trovati if not dichiarato(t) and t[1] not in INDICATORI]
+    scaduti = [r for r in residui if r["regola"] not in INDICATORI
+               and not any(t[0] == r["file"] and t[1] == r["regola"] and t[2] == r["scena"]
                           and r.get("dettaglio", t[3]) == t[3] for t in trovati)]
     return trovati, nuovi, scaduti
 
@@ -514,7 +522,8 @@ def main(argv=None) -> int:
     for f, righe in per_file.items():
         print(f"\n{f}")
         for _, regola, scena, dettaglio in righe:
-            segno = "·" if (f, regola, scena, dettaglio) not in nuovi else "✗"
+            segno = ("~" if regola in INDICATORI
+                     else "·" if (f, regola, scena, dettaglio) not in nuovi else "✗")
             print(f"  {segno} {regola:6} {scena[:28]:28} {dettaglio}")
     for r in scaduti:
         print(f"✗ residuo scaduto: {r['file']} {r['regola']} {r['scena']} — non si verifica più, "

@@ -59,8 +59,8 @@ tornare indietro; chi ascolta no. Da qui i vincoli che la pagina non ha:
 7. **Niente *«sembra»* né *«pare»*.** Il narratore che esita toglie al tavolo
    la certezza su ciò che vede: se la sala è vuota, è vuota; se non lo è, la
    cosa che non torna si descrive. *«Come se»* resta, perché è un paragone.
-   Viene da Shawn Merwin (*D&D Beyond*); misura: `voto_scrittura.py`,
-   controllo `box_senza_sembra` (D13).
+   Viene da Shawn Merwin (*D&D Beyond*); misura: `punteggio_mqm.py`, norma
+   `box_sembra_pare`, col rilevatore `validate_prosa.sembra_esitanti` (D13).
    **Il confine**: *«sembra»* seguito dalla smentita resta. *«Quella che
    sembrava una parete — è una palpebra»*: lì il narratore non esita, prepara
    il colpo. La smentita arriva entro la frase dopo, con *«invece»*, *«non lo

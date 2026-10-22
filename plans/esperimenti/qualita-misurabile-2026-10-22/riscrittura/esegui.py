@@ -31,6 +31,13 @@ Comandi
     python3 esegui.py pagina        # CONFRONTO.html
 
 spaCy e `it_core_news_md` servono a N (misura_sintassi); senza, N non si misura.
+
+Nota del lotto 7e (2026-10-22). Questo script misura la catena com'era al
+commit 66c50e14. Il lotto 7e ha tolto `voto_scrittura.py` (il suo «sembra» è
+ora `validate_prosa.sembra_esitanti`) e la watchlist di `ciclo_prosa.DEBOLI`:
+da quel commit in poi `import voto_scrittura` fallisce. Per rifare la prova si
+torna a 66c50e14 (`git switch --detach 66c50e14`); i risultati scritti qui
+accanto non cambiano.
 """
 from __future__ import annotations
 

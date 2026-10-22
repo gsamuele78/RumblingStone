@@ -1,6 +1,12 @@
 # L11 · Il giro sulle skill di scrittura: i risultati
 
-Il voto è `scripts/voto_scrittura.py`: ogni controllo chiama un rilevatore che
+> **Archivio dal 2026-10-22.** Il banco è stato tolto col lotto 7e di
+> PIANO-AVVENTURE-COMMUNITY: `voto_scrittura.py` e il suo test non ci sono più,
+> perché i suoi controlli erano già tutti dentro `punteggio_mqm.py` e la condizione
+> B-con era al 100% (soffitto). Il rilevatore di «sembra»/«pare» vive in
+> `validate_prosa.py`. Questi file restano come registro dell'esperimento.
+
+Il voto era `voto_scrittura.py`: ogni controllo chiama un rilevatore che
 esiste già nel repo (`misura_craft`, `validate_prosa`) e una norma registrata.
 I casi sono in `casi.json`: dieci, cinque di taratura e cinque di verifica, una
 coppia per genere (apertura, combattimento, dialogo, testo per un giocatore,
