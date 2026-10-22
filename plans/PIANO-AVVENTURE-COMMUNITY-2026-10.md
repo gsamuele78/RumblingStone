@@ -90,7 +90,7 @@ tutte le 39 scene di ARC-07.
 
 - [x] censimento di ciò che il repo misura già e ricerca in rete (prosa e architettura)
 - [x] calibrazione delle misure di prosa sui 38 voti ciechi (`plans/esperimenti/qualita-misurabile-2026-10-22/`)
-- [ ] **7a, prosa**: il voto cieco porta un'etichetta facoltativa del perché (LAMP e TTCW); dopo ~50 voti etichettati si rifà la calibrazione
+- [x] **7a, prosa**: il voto cieco porta un'etichetta facoltativa del perché (dieci, da LAMP e TTCW: `cieco_versioni.ETICHETTE`), che `esito` conta per versione; dopo ~50 voti etichettati si rifà la calibrazione
 - [ ] **7b, architettura**: quattro domande del developer nuove (domanda drammatica, scelta con conseguenza, presagio del cattivo, rete degli indizi), calibrate su ARC-07 e ARC-08 come la D10, cancello solo per i master nuovi
 - [ ] **7c, coerenza**: fronti e orologi con uno schema in `state` e negli archi
 
