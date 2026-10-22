@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MASTER-DEF | 2B: soffio di Fauci a Riflessi CD 29 come nella scheda del Bestiario (era CD 25) | ✅ |
 | 2026-10-22 | MASTER-DEF | mappe di ARC-08 allo standard ADR-0098 e alle quote decise dal DM: fortezza a g… | ✅ voto medio 85 → 97, nessun rilievo non derogato; aperti per il DM: CD del soffio, Fauci a 45 m e le baliste, secondo accesso della MAPPA 5 |
 | 2026-10-22 | MASTER-DEF | ricerca su strumenti e generatori liberi per misurare e migliorare le mappe (sp… | 🟡 raccomandazioni da applicare |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
@@ -120,7 +121,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 | 2026-10-21 | MASTER-DEF | `ARC08-02`: cancello da 800 a 200 pf come deciso dal DM, tempo per sfondarlo da… | ✅ |
 | 2026-10-21 | MASTER-DEF | mappe di ARC-08 su una sola geometria (tabella MISURE in testa a… | 🟡 da confermare col DM: truppe per postazione, il Re sui bastioni il Giorno 3 |
-| 2026-10-21 | MASTER-DEF | statblocco di Nala in `ARC08-01` allineato al Bestiario (niente pozioni di invi… | ✅ |
 
 ## Le misure che si portano dietro
 
