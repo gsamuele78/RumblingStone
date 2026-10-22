@@ -90,10 +90,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Mappa master della città:
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
-> Per misure, mura e fiume vale la pianta in scala
-> `mappe/channathgate-pianta.svg`: circa 45 ha dentro le mura, un po' meno di Rethmar, e 80 ha di
-> sobborghi con orti e giardini; circa 6.800 abitanti dentro le mura e 4.900
-> fuori, quasi 12.000 in tutto, profughi esclusi `[INFERRED — needs DM confirmation]`.
+> Per misure, rioni e fiume vale la pianta in scala
+> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 150 ha
+> fra il nucleo del bazar (36 ha), i rioni e i giardini, con l'arg murato di 4 ha
+> sulla sua terrazza; circa 11.600 abitanti, profughi esclusi, la città più popolosa
+> della valle, più di Rethmar, come la Dennovar del libro `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 
@@ -128,7 +129,7 @@ economica. Superbi, intoccabili, tengono i cordoni della borsa della città.
 Distretto-fortezza dell'esercito cittadino: torri di pietra, ferriere,
 disciplina rigida. La sua carta in difesa (e leva politica) è l'antico
 **Golem d'Assedio**, titano di pietra vincolato alla porta principale del
-rione, pronto a destarsi se le mura vengono violate.
+rione, pronto a destarsi se il muro del rione viene violato.
 
 ### The Silver Weft — Il Bruco
 Nominalmente il rione dei tessitori, famoso per le sete filate d'argento.
@@ -142,7 +143,7 @@ Come un istrice: difensivo fuori, pacifico dentro. Santuario dei profughi
 di guerra, retto dalla milizia non ufficiale — e ferocemente leale — della
 **Capitana Lorana**. Lo protegge il **Mythal della Selva Viva**: quando il
 pericolo si avvicina, rovi di legnoferro affilati come rasoi crescono
-lungo le mura.
+lungo il muro del rione.
 
 ### The Spell-Wyrm Spires — Il Drago
 Enclave d'élite di maghi, studiosi e arcanisti, in rigorosa **Astensione**
@@ -154,7 +155,7 @@ dalla politica quotidiana. Tutta la loro esistenza è dedicata al
 Quartiere quieto e notturno dove i segreti sono la valuta corrente. È
 avvolto nei **Muri Illusori**: per un estraneo le strade sembrano vicoli
 ciechi e i muri pieni sono in realtà archi aperti. Il **Conte Valerius**
-coordina la rete di spie dalla sua tenuta fuori le mura: la Civetta sa
+coordina la rete di spie dalla sua tenuta fuori città: la Civetta sa
 sempre cosa tramano gli altri.
 
 ### The Gilded Horn — L'Unicorno
@@ -1124,7 +1125,7 @@ mette i PG dentro l'oscuro collegamento drow/Collezionista (GIORNO2 §3.3).
 ---
 
 ## 4 · L'ISTRICE — "La Notte del Campo"
-**Prova**: gestire una crisi improvvisa nel campo profughi fuori le mura.
+**Prova**: gestire una crisi improvvisa nel campo profughi ai margini della città.
 **Cast**: **Nania Seriv del Traghetto** (luogotenente di Lorana, NB); centinaia di profughi;
 un **incendio doloso** (o un'epidemia — scegli) appiccato da un infiltrato.
 
@@ -1907,7 +1908,7 @@ la piazza impazzire per un cavallo senza cavaliere che taglia il traguardo.
 ### 4.4 La Corsa "sotto le frecce" *(in campagna, opzionale)*
 Se il DM vuole massima tensione: mentre i cavalli corrono, una **staffetta** irrompe —
 *"I casali del Channath centrale bruciano! L'orda sarà al Crocevia in due giorni!"* — e a
-ovest, oltre le mura, si indovina il fumo dei razziatori worg. **Coerenza col March Clock**:
+ovest, oltre il fiume, si indovina il fumo dei razziatori worg. **Coerenza col March Clock**:
 al giorno della corsa (Day 30-31) l'orda NON è a Rethmar (arriva al Day 42) — il fumo è
 delle fattorie del Channath, non della città. Non cambia le regole, ma ogni tiro pesa il
 doppio: i PG corrono **letteralmente** per decidere chi difenderà il fronte.
@@ -2250,16 +2251,16 @@ Tre vincoli di coerenza, risolti a monte:
 
 ## 1. Geografia e Lore — Channathgate ampliata
 
-Channathgate (orig. **Dennovar**) è la **più grande città mercantile del vale dopo
-Rethmar**, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
-a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway; largest city after
-Rethmar", **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
+Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 11.600
+abitanti, come Dennovar; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
+a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway", più popolosa di Rethmar,
+**città aperta** senza cinta (`P2D-Palio-Allegati/mappe/channathgate-pianta.svg`), **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
 (`state.md` refugee ledger). **Questa avventura la trasforma nel motore geopolitico**
 che sblocca quel contributo — e molto altro.
 
 **Ampliamento canonico proposto:**
 - **Governo**: un **Governatore-Mercante** (il *Gonfaloniere*) + una **Balìa** di gilde.
-  Ricchissima, fortificata, **restia a sguarnirsi** per paura di restare indifesa.
+  Ricchissima, senza mura intorno ai rioni (solo l'arg è murato), **restia a sguarnirsi** per paura di restare indifesa.
 - **Cultura "Bard's Tale"**: metropoli di **gilde bardiche**, teatri all'aperto, piazze di
   pietra. La politica si fa **a suon di musica e propaganda** (vedi §7).
 - **Contrade**: 8 rioni storici (le contrade dell'AVVENTURA §1), nati come compagnie
@@ -2978,7 +2979,7 @@ illustrata coi nomi FR dei quartieri — **master visivo della città**, DM
 2026-07-17; corrispondenze in cap. I).
 Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
-> **Quale pianta vale.** Per misure, mura, porte, fiume e
+> **Quale pianta vale.** Per misure, rioni, ingressi, fiume e
 > distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
 > il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
 > pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
@@ -2989,8 +2990,9 @@ Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
 ![Channathgate](../P2D-Palio-Allegati/mappe/channathgate-citta.svg)
 
-Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar). Mura, **Porta dell'Alba**
-(Dawn Way), **Porta del Porto**, **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
+Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar), aperta: niente cinta, mura
+solo all'arg. **Porta dell'Alba** (Dawn Way) e **Porta del Porto** sono archi di dogana sulla
+strada (sulla pianta in scala, Arco dell'Alba e Arco del Porto), **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
 alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra rioni per i
 **partiti**, l'infiltrazione nel palazzo della **Civetta** (registri di Valerius), la
 **stalla** dei PG (assalto drow) e il **porto** (Meraviglia dell'Onda).
@@ -3038,7 +3040,7 @@ per mappa. Companion di raccordo:*
 |---|---|---|
 | **Piazza del Palio** (corsa) | `piazza-del-palio.svg` | anello a conchiglia, orario, 3 giri, tufo; 6 Zone con DC 18-24 (Curva del Guado DC 24 = la più letale; Curva del Boia = muro cieco, caduta 4d6); catino interno = folla (6.000) |
 | **Channathgate città** | `channathgate-citta.svg` | 8 rioni-contrada, Porta dell'Alba/del Porto, Darsena; spostamenti dei partiti, infiltrazione Civetta, porto |
-| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; mura con una torre ogni ~43 m |
+| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; città aperta: mura e torri solo all'arg (741 m, 25 torri e 2 alla porta), fossi e muri di rione con porte di quartiere |
 | **Rotta di soccorso** | `rotta-soccorso.svg` | Dawn Way (~35 mi, 1,5 gg, cavalleria) vs Fiume Cannath (~1 gg, flotta); **deadline Day 38** per la Fase 1 |
 | **Stalla — assalto drow** | `stalla-assalto-drow.svg` | 1 quadretto = 5 ft, GS 11-12; drow dalla botola SO con *Oscurità/Silenzio*, buio totale |
 

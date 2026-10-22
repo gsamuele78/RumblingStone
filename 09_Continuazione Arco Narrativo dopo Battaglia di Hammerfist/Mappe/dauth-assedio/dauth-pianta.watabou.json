@@ -14,7 +14,7 @@
   "walls": "le mura, la Porta Sud e le mura ovest delle carte A, B, D ed E di DAY3-CITY-SIEGE",
   "temple": "il tempio col chiostro diventato ospedale della carta C",
   "plaza": "una piazza per l'arena del Torneo, che il generatore non disegna",
-  "size": "15 quartieri del generatore, per una città di circa 32 ettari e 5.000 abitanti come la pianta nostra (dauth-pianta.svg). Il generatore non dice quanti ettari fa un quartiere: «size=9» è una cittadina (devlog di Watabou su itch.io), quindi 15 è una stima [INFERRED — needs DM confirmation]",
+  "size": "15 quartieri del generatore, per la Dauth di 32 ettari e 5.000 abitanti della prima pianta nostra; la pianta del 2026-10-22 ne dà 17 e circa 2.650. Il generatore non dice quanti ettari fa un quartiere: «size=9» è una cittadina (devlog di Watabou su itch.io), quindi 15 è una stima [INFERRED — needs DM confirmation]",
   "non dichiarati": "cittadella, fiume, costa e numero di porte: il canone non li dice, e la pianta nostra vale per le posizioni. Con random=0 il generatore usa il suo valore predefinito; quale sia non l'ho potuto verificare, perché la rete di questo ambiente non raggiunge Watabou"
  },
  "salva_in": "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Mappe/dauth-assedio/dauth-pianta-watabou.svg",

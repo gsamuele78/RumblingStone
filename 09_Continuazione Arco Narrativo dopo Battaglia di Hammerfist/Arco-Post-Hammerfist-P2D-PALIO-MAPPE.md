@@ -37,7 +37,7 @@ illustrata coi nomi FR dei quartieri — **master visivo della città**, DM
 2026-07-17; corrispondenze in `...P2D-PALIO-DISTRETTI-CHANNATHGATE.md`).
 Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
-> **Quale pianta vale.** Per misure, mura, porte, fiume e
+> **Quale pianta vale.** Per misure, rioni, ingressi, fiume e
 > distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
 > il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
 > pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
@@ -48,8 +48,9 @@ Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
 ![Channathgate](P2D-Palio-Allegati/mappe/channathgate-citta.svg)
 
-Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar). Mura, **Porta dell'Alba**
-(Dawn Way), **Porta del Porto**, **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
+Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar), aperta: niente cinta, mura
+solo all'arg. **Porta dell'Alba** (Dawn Way) e **Porta del Porto** sono archi di dogana sulla
+strada (sulla pianta in scala, Arco dell'Alba e Arco del Porto), **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
 alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra rioni per i
 **partiti**, l'infiltrazione nel palazzo della **Civetta** (registri di Valerius), la
 **stalla** dei PG (assalto drow) e il **porto** (Meraviglia dell'Onda).
@@ -97,7 +98,7 @@ per mappa. Companion di raccordo:*
 |---|---|---|
 | **Piazza del Palio** (corsa) | `piazza-del-palio.svg` | anello a conchiglia, orario, 3 giri, tufo; 6 Zone con DC 18-24 (Curva del Guado DC 24 = la più letale; Curva del Boia = muro cieco, caduta 4d6); catino interno = folla (6.000) |
 | **Channathgate città** | `channathgate-citta.svg` | 8 rioni-contrada, Porta dell'Alba/del Porto, Darsena; spostamenti dei partiti, infiltrazione Civetta, porto |
-| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; mura con una torre ogni ~43 m |
+| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; città aperta: mura e torri solo all'arg (741 m, 25 torri e 2 alla porta), fossi e muri di rione con porte di quartiere |
 | **Rotta di soccorso** | `rotta-soccorso.svg` | Dawn Way (~35 mi, 1,5 gg, cavalleria) vs Fiume Cannath (~1 gg, flotta); **deadline Day 38** per la Fase 1 |
 | **Stalla — assalto drow** | `stalla-assalto-drow.svg` | 1 quadretto = 5 ft, GS 11-12; drow dalla botola SO con *Oscurità/Silenzio*, buio totale |
 

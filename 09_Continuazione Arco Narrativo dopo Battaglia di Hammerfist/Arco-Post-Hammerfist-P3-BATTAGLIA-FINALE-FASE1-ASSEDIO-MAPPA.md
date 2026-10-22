@@ -20,7 +20,7 @@ La mappa della città può essere astratta in **settori**, ognuno associato a un
   - Porta Sud,  
   - torri agli angoli,  
   - quartieri interni (tempio, piazza centrale, magazzini, residenziale).
-- Pianta della città, con le porte, la breccia sud e la poterna: `Mappe/rethmar/rethmar-pianta.svg`.
+- Pianta della città, con le porte, la breccia sud e la poterna: `Mappe/rethmar/rethmar-pianta.svg`. Quattro porte a torri gemelle (Nord sul ponte, Ovest, Est, Sud) e la poterna; mura alte 6 m, senza fossato, con il Cannath a nord `[INFERRED — needs DM confirmation]`.
 
 Non serve mappare tutto in dettaglio: puoi creare **3 mappe tattiche separate** per:
 

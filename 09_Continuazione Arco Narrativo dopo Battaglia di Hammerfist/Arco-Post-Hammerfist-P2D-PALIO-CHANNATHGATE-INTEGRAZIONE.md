@@ -40,16 +40,16 @@ Tre vincoli di coerenza, risolti a monte:
 
 ## 1. Geografia e Lore — Channathgate ampliata
 
-Channathgate (orig. **Dennovar**) è la **più grande città mercantile del vale dopo
-Rethmar**, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
-a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway; largest city after
-Rethmar", **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
+Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 11.600
+abitanti, come Dennovar; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
+a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway", più popolosa di Rethmar,
+**città aperta** senza cinta (`P2D-Palio-Allegati/mappe/channathgate-pianta.svg`), **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
 (`state.md` refugee ledger). **Questa avventura la trasforma nel motore geopolitico**
 che sblocca quel contributo — e molto altro.
 
 **Ampliamento canonico proposto:**
 - **Governo**: un **Governatore-Mercante** (il *Gonfaloniere*) + una **Balìa** di gilde.
-  Ricchissima, fortificata, **restia a sguarnirsi** per paura di restare indifesa.
+  Ricchissima, senza mura intorno ai rioni (solo l'arg è murato), **restia a sguarnirsi** per paura di restare indifesa.
 - **Cultura "Bard's Tale"**: metropoli di **gilde bardiche**, teatri all'aperto, piazze di
   pietra. La politica si fa **a suon di musica e propaganda** (vedi §7).
 - **Contrade**: 8 rioni storici (le contrade dell'AVVENTURA §1), nati come compagnie
