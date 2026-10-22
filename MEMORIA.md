@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f: riscrittura di prova di 16 box con catena vecchia, nuova e fusa, base… | 🟡 scheda cieca di 17 coppie al DM; versioni e chiavi fuori dal repo fino al voto |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7d: misure sintattiche con spaCy (calchi, subordinate, ripetizioni) calib… | 🟡 nessuna misura prevede il DM; base ARC-07/ARC-08 salvata per il confronto senza/con |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7b: quattro domande del developer nuove, §18-§21 di… | 🟡 calibrazione 15½ veri su 26 rilievi; D20 non calibrata (un boss solo sotto cancello), D21 tace finché nessun master marca gli indizi; cancello solo sui maste… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 | 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
-| 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
 
 ## Le misure che si portano dietro
 
