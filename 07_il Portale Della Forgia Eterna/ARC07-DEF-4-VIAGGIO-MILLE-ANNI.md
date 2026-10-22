@@ -387,6 +387,8 @@ Il read-aloud si legge alla porta, nella **Scena 3**.
 **Terreno (callout):** cortili di pietra chiara (movimento normale); la Sala del
 Trono di Re Thorek I; la fucina originale (i Bracieri di Tordek la
 riconoscono). Zona **sicura** (dentro le mura). Il portale lascia i PG fuori, nel bosco a est (Scena 1): ci si entra dalla porta (Scena 3).
+Porta e cortile stanno a **+100 m** sulla piana dell'orda, la torre nord a
++120 `[CANONE — DM 2026-10-22]`; il profilo è sotto la mappa M7-A, in Appendice D.
 
 **Dati per il DM (non da leggere).** Hammerfist ha **circa ottant'anni**. La
 cinta di pietra bianca è nuova: è stata rifatta dopo la prima venuta del drago,
@@ -400,6 +402,9 @@ Il read-aloud si legge all'uscita dalla postierla, nella **Scena 6**.
 **Terreno (callout):** tende fitte (copertura, difficile in mischia); 4 posti di
 guardia (GP1-GP4 agli angoli); la **tenda del comando** (Zog'tar) al centro;
 notte = furtività CD 20; ogni fuoco è luce fioca a 3 m. La mappa è la M7-A, in Appendice D.
+Il campo sta sulla **piana**, 100 m sotto le mura: le tende stanno fra 500 m
+e 1 km dalle mura, e dalla fortezza ci si scende per la strada a tornanti o,
+come i PG, per il fianco est `[CANONE — DM 2026-10-22]`.
 
 **Com'è fatto il campo.** Ha due facce. Fuori stanno i clan degli orchi, una
 quindicina di bande: ripari di pelle bassi e storti, a gruppi attorno al fuoco
@@ -418,6 +423,12 @@ sessioni del viaggio<!-- storico --> (la serata del 2026-09-25)<!-- /storico -->
 **Terreno (callout):** camminamenti sopraelevati (+4,5 m); brecce dove gli
 arieti mordono; scale d'assedio (Forza per rovesciarle); il cortile interno
 dove, alla fine, Skullcrusher cala. Vedi M7-B (arena del duello).
+
+**Dove sale l'assalto** `[INFERRED — needs DM confirmation]`. Gli arieti si
+montano sulla spianata degli arieti, a +80, e salgono alla porta, a +100, per
+una rampa addossata al gradone. Le scale salgono sul tratto est, dove il fianco
+della montagna arriva al piede delle mura; sul fronte sud le mura stanno sul
+ciglio, 24,5 m sopra la spianata, e le scale non ci arrivano.
 
 ---
 
@@ -489,7 +500,10 @@ Quando la testa torna a posto, guardano dove sono.
 > ali. Fa un cerchio lento, poi un altro, e non scende.*
 
 **Dati per il DM (non da leggere).** Il portale li lascia **a circa 500 m a est
-delle mura**, un quarto d'ora prima del buio. È autunno inoltrato: **5 °C**, il
+delle mura**, un quarto d'ora prima del buio. Il bosco copre la spalla della
+montagna a est: dove il portale li lascia è poco sopra la quota delle mura, e
+da lì scende fino al margine del campo, sulla piana, 100 m più in basso
+`[INFERRED — needs DM confirmation]`. È autunno inoltrato: **5 °C**, il
 fiato si vede, una nebbia bassa comincia a salire dal bosco. Dall'arrivo
 all'alba mancano **circa dodici ore**; l'orologio della notte (§4) comincia a
 contare con il consiglio, che è la prima delle sue otto tacche: le prime
@@ -1629,6 +1643,21 @@ Il campo è largo circa **2 km** `[CANONE — DM 2026-09-26]`, e la tenda del
 generale sta al centro: dalla postierla sono circa **1 km**, cioè **cinque
 blocchi** da 200 m.
 
+**La discesa** `[CANONE — DM 2026-10-22]`. La postierla è a +100 m, il campo
+sulla piana. Il primo blocco è il fianco est della montagna: 100 m di
+dislivello su un pendio ripido, per il sentiero degli esploratori, e al piede
+gira l'anello dei lupi.
+- **Prima di scendere, la vista.** Dalla postierla il campo si guarda
+  dall'alto: è qui che si tira l'Osservare **CD 18** della scheda sensoriale
+  (§2) per capire quale tenda è del generale, se Durin non l'ha già detto.
+- **Scalare non serve**: il fianco è un pendio ripido (DMG, Colline), non una
+  parete. La prova del primo blocco resta Muoversi Silenziosamente **CD 20**,
+  e la CD copre già i sassi del sentiero. Chi corre giù, inseguito, tira
+  Equilibrio **CD 10** (DMG).
+- **Il tempo.** In discesa il passo furtivo non cambia: i conti
+  dell'invisibilità qui sotto valgono come scritti. La salita del ritorno no
+  (Scena 8, «Il ritorno a piedi»).
+
 - **Ogni blocco è una prova di gruppo** (SRD): tirano tutti, e il blocco
   riesce se riesce almeno la metà del gruppo. Durik non tira: è alla postierla
   o nel seme.
@@ -1787,7 +1816,7 @@ in mezzo. È un buon piano, e il modulo lo premia: **niente prova di gruppo**.
 Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 
 > **Read-aloud (Salvatore lead) — il volo.** *Da quassù il campo è una
-> brace sparsa su un pendio. I fuochi mandano tutti lo stesso odore di
+> brace sparsa sulla piana. I fuochi mandano tutti lo stesso odore di
 > grasso, e nessuno, laggiù, guarda in alto. Un russare sale fin qui, forte
 > come se venisse dalla tenda accanto. Poi la pietra fa il suo lavoro, e il mondo si
 > spegne: niente russare, niente vento, nemmeno il fiato.*
@@ -1800,6 +1829,10 @@ Il rischio non sparisce, si sposta alla tenda e sull'orologio del drago.
 | *Invisibilità*, pozione comprata (3°) | 3 minuti | in volo a 18 m copre circa 1 km; in armatura (12 m) circa 720 m, e l'ultimo tratto si fa visibili. Quelle del re durano 12 minuti |
 | *Silenzio* sulla pietra | 8 minuti: la lancia Brynja all'8° livello, 1 minuto per livello come nell'SRD `[CANONE — DM 2026-09-30, D12]`. Copre l'andata e l'atterraggio; alla tenda resta fuori, a più di 6 m (qui sotto, «La bolla alla tenda»); il ritorno no | sopra i 6 m di quota nessuno a terra è nella bolla. Dentro: niente incantesimi con componente verbale, niente voce |
 
+- **Si parte dall'alto** `[CANONE — DM 2026-10-22]`. La postierla è 100 m
+  sopra la piana: chi esce in volo ha già il campo sotto di sé, e in discesa
+  si vola al doppio della velocità (SRD), quindi l'andata costa meno della
+  tabella. Il ritorno è in salita, a metà velocità, e costa di più.
 - **Le tacche** `[CANONE — DM 2026-09-26]`. Il volo costa **1 tacca** invece
   delle 2 dello skill challenge.
 - **Chi vola, e chi no** `[CANONE — DM 2026-09-26]`. Tre pozioni per Thorik,
@@ -1940,7 +1973,9 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
   sono ancora nel campo, a piedi e visibili, perché volo e invisibilità sono
   finiti. Chi riparte in volo subito è dentro le mura prima di lui: un
   chilometro in armatura, a 12 m col doppio movimento, sono circa 42 round, e
-  il drago ne mette 70 `[CANONE — DM 2026-10-12, D74]`.
+  il drago ne mette 70 `[CANONE — DM 2026-10-12, D74]`. I 42 sono in piano:
+  la risalita dei 100 m sotto le mura ne aggiunge una decina, perché in salita
+  si vola a metà velocità (SRD, *Volare*), e restano sotto i 70.
   Gira sul campo e li cerca: si gioca il ritorno a piedi della Scena 8 a
   Nascondersi **CD 26** (22, più 4 per il corno), e al primo blocco fallito li
   trova; chi gli passa entro 18 m lo sente anche invisibile. Se li trova, soffia
@@ -2664,6 +2699,14 @@ suonato, la CD sale di **+4** e il drago è in aria (Scena 6). Chi torna in volo
 segue «Il ritorno» della variante dall'alto. Vatore (Scena 9) si incontra a
 metà strada.
 
+**L'ultimo blocco è la salita** `[CANONE — DM 2026-10-22]`. Il fianco est
+si risale all'alba: 100 m di dislivello, e su un pendio ripido ogni quadretto
+in salita ne costa due (DMG, Colline). Il blocco dura il doppio, una ventina di
+minuti a passo furtivo, ma la tacca resta quella del ritorno. Scalare non
+serve. Si tira Nascondersi come negli altri blocchi; sul pendio non ci sono
+tende, e ci si nasconde fra le rocce del sentiero. Dall'alto la postierla
+vede chi sale: Durin la tiene aperta e li riconosce prima che arrivino.
+
 **Se Balvar è recuperato e il gruppo torna in volo** `[CANONE — DM 2026-10-12, D55]`.
 Balvar non vola. Esce dal campo da solo nella confusione dell'alba, con le sue
 rune: nessuno lo sorveglia (Scena 6), quindi non tira. Alle mura entra dalla
@@ -2917,6 +2960,12 @@ leggende venute dal futuro»*. Due difetti dichiarati, non questioni di gusto:
   sputa nelle mani fa lo stesso lavoro e non chiede di essere creduto.
 
 <!-- /storico -->
+**Dove sale l'assalto** `[CANONE — DM 2026-10-22]`. Dal camminamento la
+piana si vede tutta, 100 m sotto. Il primo ariete sale dalla spianata alla
+porta per la rampa del fronte sud; le scale arrivano sul tratto est, dove il
+fianco della montagna tocca il piede delle mura, ed è lì che sta Hrodgar
+`[INFERRED — needs DM confirmation]` (M7-A, «La rampa della porta»).
+
 Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 
 **Comparse**
@@ -2987,7 +3036,9 @@ ed è per questo che vuole buttare giù chi ha davanti.
   scagliato oltre il bordo cade nel cortile o fuori, fra l'orda: le mura sono
   alte **4,5 m** (mappa M7-B), cioè 1d6 di caduta (SRD). Fa poco male; il
   guaio è dove si atterra. Chi cade fuori ha un round per rialzarsi, e intorno
-  ci sono scale e uncini.
+  ci sono scale e uncini. Vale per il tratto est, dove fuori c'è il pendio. Dal
+  muro sud, che sta sul ciglio del gradone, si cade sulla spianata, 24,5 m più
+  in basso: 8d6 `[INFERRED — needs DM confirmation]`.
 - **Contro chi vola**: i giavellotti, come nella tenda. Non lascia la breccia
   per inseguire nessuno: la breccia è sua.
 - **Sotto il 30% dei pf** fa come nella tenda: cerca di portarsi via qualcuno.
@@ -3084,7 +3135,8 @@ tattiche qui sotto valgono per tutti e due; dove i numeri cambiano, il primo
 dal campo) `[CANONE — DM 2026-10-07, Q32]`.
 M7-B non serve: si gioca sulla spianata davanti alla porta, aperta e senza
 copertura, con le carcasse degli arieti come unico riparo. I nani sono sulle
-mura, a 18 m, e le balestre tirano da lì. La fucina, la cisterna e le campane
+mura, a 18 m e 24,5 m più in alto (i 20 m del gradone e i 4,5 delle mura), e
+le balestre tirano da lì. La fucina, la cisterna e le campane
 della tabella del cortile qui sotto non ci sono; le corde sì, quelle degli arieti
 rovesciati, con la stessa prova.
 
@@ -4268,31 +4320,57 @@ La pattuglia si riassume in tre righe: Durin vede la Corona e cade in ginocchio
 ════════════════════════════════════════════════════════════════════════
                        NORD ▲  la montagna: dentro, le sale scendono (M7-S)
    ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
-        ╔════════════════ 🔔 torre nord ═════════╗
+        ╔════════════ 🔔 torre nord, +120 ═══════╗
         ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
-        ║  CORTILE INTERNO → M7-B (il duello)     ║     mura bianche, sicura
-        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
-              ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
-                                                   ┊      🌲 ✦ portale, ~500 m
-   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+        ║  CORTILE INTERNO, +100 → M7-B (duello)  ║     mura bianche, sicura
+        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura all'alba
+              ╲ rampa finale ┊          scale ▲▲▲ ┊⇣    🌲🌲🌲🌲 BOSCO A EST
+        ░░░░░░ SPIANATA DEGLI ARIETI, +80 ░░░░░░   ┊⇣    🌲 ✦ portale, ~500 m
+                ╲╱╲╱ strada a tornanti ╲╱╲╱        ┊⇣    🌲🌲🌲🌲 (Scene 1-2)
+   · · · · · · · · · piana dell'orda, quota 0 · · ┊ · · ·  ← le tende da 500 m
+   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊
    GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
    ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
    🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km di cammino: cinque blocchi
    ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
    🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
    GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
                        SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
+ IL PROFILO, NORD → SUD (le quote del DM, sulla piana dell'orda)
+  +120 m ┌──┐ torre nord, la porta che entra nella montagna
+         │  │
+  +100 m ┘  └─────────────┐ porta e targa
+           cortile, M7-B  │
+                           ╲ rampa finale, 20 m
+   +80 m                    ╲────────────────┐ spianata degli arieti
+                                              ╲ strada a tornanti
+                                               ╲___
+                                                   ╲___
+     0 m                                               ╲__ piana · ⛺🔥⛺ · COMANDO
+         ├── dal ciglio, giù per i tornanti: circa 500 m ──┤ le tende, fino a 1 km ──┤
+ La via dei PG non è questa sezione: dalla postierla (+100) giù per il
+ fianco est, 100 m di dislivello, lungo il lato est del campo fino alla
+ tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
+────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco della
-banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato · ▪▪
-le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗ la
-tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
+confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
+del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
+della banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato ·
+▪▪ le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗
+la tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
 ⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
 ```
+
+Le quote sono del DM `[CANONE — DM 2026-10-22]`: piana 0, spianata degli arieti
++80, porta e cortile +100, torre nord +120, le tende fra 500 m e 1 km dalle
+mura. La rampa fra la spianata e la porta, le scale sul tratto est e la torre
+nord sul suo gradone sono inferenze da confermare: sono scritte, con le loro
+ragioni, nelle note di M7-A dell'Atlante<!-- apparato --> (`Mappe/ARC07-MAPPE-DEFINITIVO.md`)<!-- /apparato -->.
 
 #### MAPPA M7-B — L'ARENA DEL DUELLO (cortile interno · Skullcrusher)
 
@@ -4341,11 +4419,18 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 12 ; W2 ; Wyvern 1, di scorta: entra dal round 2
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
+@luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
+@quota 1050 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 950 m]
+@dislivello +100 m ; sulla piana dell'orda, a sud
 ```
 
 Le posizioni dei PG sono di riferimento: le sceglie il tavolo, e se non le
 sceglie sfalsale su due righe, perché una linea di 30 m lungo la riga 16 li
 prende tutti. Il re è alle loro spalle, a L17.
+
+Il cortile sta a +100 m sulla piana dell'orda. Dal camminamento sud si guarda
+giù: la spianata degli arieti 20 m più in basso, nuda, e oltre il ciglio la
+piana, 100 m sotto, con le tende fino all'orizzonte.
 
 ### Sotto la montagna: la Scena 5
 

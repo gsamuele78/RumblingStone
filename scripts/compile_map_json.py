@@ -214,6 +214,11 @@ def normalize_units(spec: dict) -> dict:
         if "path" in mv:
             mv["path"] = _conv_points(mv["path"], s, w, errors)
 
+    for i, tg in enumerate(out.get("taglie", []) or []):
+        w = f"taglie[{i}]"
+        if "at" in tg:
+            tg["at"] = _conv_point(tg["at"], s, w, errors)
+
     if errors:
         raise SpecError("JSON in metri non convertibile — correggi e reinvia:\n  - "
                         + "\n  - ".join(errors))

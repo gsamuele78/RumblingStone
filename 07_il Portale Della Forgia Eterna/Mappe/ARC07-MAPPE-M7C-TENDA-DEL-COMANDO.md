@@ -36,6 +36,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA
 
 @north N
 @tipo tattica esterno
+@luogo Hammerfist ≈372 DR, la tenda del comando sulla piana dell'orda
+@quota 950 m ; s.l.m., la piana dell'orda [INFERRED — needs DM confirmation: il DM ha fissato la piana a quota 0, non la quota sul mare]
+@dislivello 0 m ; sulla piana dell'orda: porta e cortile sono 100 m più in alto, a nord, a circa 1 km di cammino dalla postierla
 @taglia P14 ; Grande
 @mark 1 ; N3 ; I quattro PG, invisibili o nascosti (Scena 6)
 @mark 2 ; P14 ; Zog'tar Deatheye (Grande), seduto sul seggio (GS 15)
