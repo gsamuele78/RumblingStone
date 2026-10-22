@@ -6,6 +6,10 @@
 > Meraviglie combaciano ✓). <!-- /storico -->Mappa master della città:
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
+> Per misure, mura e fiume vale la pianta in scala
+> `mappe/channathgate-pianta.svg`: circa 45 ha dentro le mura, un po' meno di Rethmar, e 80 ha di
+> sobborghi con orti e giardini; circa 6.800 abitanti dentro le mura e 4.900
+> fuori, quasi 12.000 in tutto, profughi esclusi `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 > <!-- storico -->

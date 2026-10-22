@@ -20,6 +20,7 @@ La mappa della città può essere astratta in **settori**, ognuno associato a un
   - Porta Sud,  
   - torri agli angoli,  
   - quartieri interni (tempio, piazza centrale, magazzini, residenziale).
+- Pianta della città, con le porte, la breccia sud e la poterna: `Mappe/rethmar/rethmar-pianta.svg`.
 
 Non serve mappare tutto in dettaglio: puoi creare **3 mappe tattiche separate** per:
 
@@ -32,7 +33,7 @@ Non serve mappare tutto in dettaglio: puoi creare **3 mappe tattiche separate** 
 ## 2. Mappa Porta Ovest (Ondata 1)
 
 - Griglia: 30 × 30.  
-- Mura orizzontali, con porta centrale (larghezza 4 quadretti).  
+- Mura orizzontali, con porta centrale (larghezza 3 quadretti).  
 - Esterno:  
   - terreno aperto, qualche barricata, 1–2 macchine d’assedio.  
 - Interno:  
@@ -94,7 +95,7 @@ città (60×40) si gioca su 3 sotto-mappe tattiche, una per ondata.*
 
 | Sotto-mappa | Griglia | Elementi / copertura |
 |---|---|---|
-| **Porta Ovest** (Ondata 1) | 30×30 | mura orizzontali, porta centrale 4 q; esterno aperto con barricate + 1-2 macchine d'assedio; interno = cortile militare |
+| **Porta Ovest** (Ondata 1) | 30×30 | mura orizzontali, porta centrale 3 q; esterno aperto con barricate + 1-2 macchine d'assedio; interno = cortile militare |
 | **Cielo** (Ondata 2) | 25×25 (o vista laterale con quote) | torri alte = postazioni PG incantatori/arcieri; aree pericolose (reti, campanili, rooftop) |
 | **Breccia** (Ondata 3) | 30×20 | tratto di mura crollate (varco 6-8 q); esterno roccioso/sconnesso = **copertura media**; interno = stretto corridoio urbano verso piazza |
 

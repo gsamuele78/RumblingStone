@@ -21,6 +21,11 @@
 **Source**: <https://cdna.artstation.com/p/assets/images/images/001/044/588/large/arne-haschen-red-hand-of-doom-cannath-vale-map-gm.jpg>
 **Parchment texture**: coyotemax.deviantart.com
 
+**RumblingStone regional map** (2026-10-22): `00_Red Hand Of Doom/Immagini/Area Map/Red Hand of Doom -Maps/ForgottenRealms/Shaar-ChannathVale/cannath-vale-regionale.svg`,
+redrawn in-house from the relative positions of this map and drawn to the travel table
+below. Use it for distances and for the course of the Cannath; the scale bar of the
+antariuk map reads about double the canon distances.
+
 Two versions: **GM map** (shows Vraath Keep, Ghostlord's Lair, Fane of Tiamat, Lhesper)
 and **Player map** (adventure sites hidden).
 
@@ -53,10 +58,11 @@ All names below are extracted directly from the GM map image.
 |---|---|---|---|
 | **Lake Lhespen** | Lake | Lake Rhestin | Central-north; large blue lake |
 | **Shaar River** | River | *(no RHoD named equiv.)* | Northern river; flows NE off map |
-| **Talar River** | River | Elsir River (west branch) | West; flows south — **"Talar River"** not "River Talar" |
+| **Talar River** | River | Elsir River (west branch) | West; flows west from Drellin's Ferry toward The Misty Vale — **"Talar River"** not "River Talar" |
 | **The Lhescreek** | Creek | Skull Gorge stream | Central; flows south from lake toward Skull Gorge |
 | **The Witchstream** | Stream | Witchstream | Through Shaarcah Forest |
-| **Cannath River** | River | Elsir River (east branch) | Center-east; labeled east of Rethmar |
+| **Cannath River** | River | Elsir River (east branch) | Center-east; rises from the Lake of Channathgate south of the city, runs north along the city's west side, takes in the Cannathwood stream at Cannathcross, then flows west past Rethmar and Talar to Drellin's Ferry `[DM 2026-10-22]` |
+| **Lake of Channathgate** | Lake | *(none)* | Just south of Channathgate; its only outlet is the Cannath `[DM 2026-10-22]` |
 | **Lhesper Trail** | Trail | *(unnamed in RHoD)* | Northeast of lake; track to Lhesper ruins |
 
 ### Roads
@@ -152,7 +158,7 @@ The vale is bounded by The Wyrmbones (west), Rathgaunt Hills (NE), The North Wal
 
 Appears on both the NW and NE edges of the map. The vale effectively sits as a settled
 pocket within the broader Shaar grassland belt. The **Shaar River** drains north out of
-the map; the **Talar River** drains south into the Bandit Wastes.
+the map; the **Talar River** drains west, past the Bandit Wastes, toward The Misty Vale.
 
 ### Kormul — Important
 
@@ -196,6 +202,9 @@ Campaign season (Flamerule/Eleasis, 1372 DR):
 ---
 
 ## TRAVEL DISTANCES (approximate, from map scale: 0–10–40–80 miles)
+
+These are the canon distances. The antariuk scale bar reads about double; the
+RumblingStone regional map (see MAP ATTRIBUTION) is drawn to this table, within 5%.
 
 | Route | Distance | Road? | Travel Time (on foot) |
 |---|---|---|---|

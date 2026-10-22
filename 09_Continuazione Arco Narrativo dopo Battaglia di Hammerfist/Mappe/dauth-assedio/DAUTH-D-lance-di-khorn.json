@@ -10,6 +10,9 @@
  ],
  "base_terrain": "⬜",
  "north": "E",
+ "luogo": "Dauth, mura ovest",
+ "quota": "556 m ; s.l.m., la strada dietro le mura ovest [INFERRED — needs DM confirmation]",
+ "dislivello": "+4 m ; sulla sella delle colline ovest, oltre il fossato [INFERRED — needs DM confirmation]",
  "regions": [
   {
    "terrain": "🏰",

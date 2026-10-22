@@ -90,6 +90,10 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Mappa master della città:
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
+> Per misure, mura e fiume vale la pianta in scala
+> `mappe/channathgate-pianta.svg`: circa 45 ha dentro le mura, un po' meno di Rethmar, e 80 ha di
+> sobborghi con orti e giardini; circa 6.800 abitanti dentro le mura e 4.900
+> fuori, quasi 12.000 in tutto, profughi esclusi `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 
@@ -2974,6 +2978,15 @@ illustrata coi nomi FR dei quartieri — **master visivo della città**, DM
 2026-07-17; corrispondenze in cap. I).
 Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
+> **Quale pianta vale.** Per misure, mura, porte, fiume e
+> distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
+> il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
+> pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
+> vedere gli otto rioni a colpo d'occhio. Misure e abitanti della pianta sono
+> `[INFERRED — needs DM confirmation]`.
+
+![Channathgate, pianta in scala](../P2D-Palio-Allegati/mappe/channathgate-pianta.svg)
+
 ![Channathgate](../P2D-Palio-Allegati/mappe/channathgate-citta.svg)
 
 Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar). Mura, **Porta dell'Alba**
@@ -2985,7 +2998,10 @@ alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra ri
 ---
 
 ## 3. Rotta di soccorso — Channathgate ▸ Rethmar
-**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg`
+**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg`. Le due rotte in scala
+stanno sulla regionale della valle, `00_Red Hand Of Doom/Immagini/Area Map/Red Hand of Doom -Maps/ForgottenRealms/Shaar-ChannathVale/cannath-vale-regionale.svg`:
+il Cannath esce dal lago di Channathgate, passa lungo il lato ovest della città e
+a Cannathcross, e arriva a Rethmar dopo circa 42 miglia.
 
 ![Rotta di soccorso](../P2D-Palio-Allegati/mappe/rotta-soccorso.svg)
 
@@ -3022,6 +3038,7 @@ per mappa. Companion di raccordo:*
 |---|---|---|
 | **Piazza del Palio** (corsa) | `piazza-del-palio.svg` | anello a conchiglia, orario, 3 giri, tufo; 6 Zone con DC 18-24 (Curva del Guado DC 24 = la più letale; Curva del Boia = muro cieco, caduta 4d6); catino interno = folla (6.000) |
 | **Channathgate città** | `channathgate-citta.svg` | 8 rioni-contrada, Porta dell'Alba/del Porto, Darsena; spostamenti dei partiti, infiltrazione Civetta, porto |
+| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; mura con una torre ogni ~43 m |
 | **Rotta di soccorso** | `rotta-soccorso.svg` | Dawn Way (~35 mi, 1,5 gg, cavalleria) vs Fiume Cannath (~1 gg, flotta); **deadline Day 38** per la Fase 1 |
 | **Stalla — assalto drow** | `stalla-assalto-drow.svg` | 1 quadretto = 5 ft, GS 11-12; drow dalla botola SO con *Oscurità/Silenzio*, buio totale |
 

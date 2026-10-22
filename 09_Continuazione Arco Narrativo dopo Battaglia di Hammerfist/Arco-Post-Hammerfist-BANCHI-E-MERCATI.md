@@ -209,7 +209,7 @@ lo fa notare.
 
 ## §2 · Dauth · il Mercato Basso, la Confraternita e la Rete Nera *(P2B)*
 
-Dauth è una grande città nanica che una volta ogni cent'anni diventa una fiera.
+Dauth è una piccola città nanica che una volta ogni cent'anni diventa una fiera.
 Per tre giorni ci arriva merce che il resto dell'anno non si vede, e dal 1372 una
 parte viene da fuori dal mondo, per le Otto Porte. Qui si trovano soprattutto
 **le cose per un monaco e le pozioni**, come il DM aveva chiesto.
@@ -242,7 +242,7 @@ strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
 | comando | la **Confraternita Monastica di Dauth**, che organizza il Torneo; il Grandmaster **Rihan** |
 | culto | i chierici di Ilmater della Confraternita, nel chiostro dietro l'arena |
 | rimedi | la **speziala** del Mercato Basso, sotto la terza arcata |
-| bottega | la speziala per le pozioni; il **cuoiaio dei monaci** sotto la quinta arcata; la **Rete Nera** in un magazzino del porto fluviale |
+| bottega | la speziala per le pozioni; il **cuoiaio dei monaci** sotto la quinta arcata; la **Rete Nera** in un magazzino del borgo dei carrettieri, fuori dalla Porta Sud |
 | messaggi | **Sorella Maewen**, che conosce tutti |
 | guardia | la guardia di Dauth, e il distaccamento della Confraternita all'arena |
 

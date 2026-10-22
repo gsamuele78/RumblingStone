@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 | 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 | 2026-10-20 | MASTER-DEF | la presa di Thorik, i quattro punti decisi dal DM: una presa per incontro, *Sco… | ✅ restano `[INFERRED]` solo gli effetti della variante sul collo |
-| 2026-10-20 | MASTER-DEF | la presa di Thorik: contromosse dei PG secondo l'SRD (Conoscenze CD 35, *libert… | ✅ richiesta del DM; restano `[INFERRED]` gli effetti sul collo e i quattro punti della presa |
 
 ## Le misure che si portano dietro
 
