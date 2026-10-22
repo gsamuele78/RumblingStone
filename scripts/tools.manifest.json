@@ -943,6 +943,154 @@
       ]
     },
     {
+      "id": "confronta_mappe",
+      "path": "scripts/confronta_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/confronta_mappe.py VECCHIA.md[:N] NUOVA.md[:N] | --versioni NOME=REF ... --base NOME --out DIR FILE.md ...",
+      "summary": "Due o piu' versioni delle stesse mappe misurate cella per cella: celle cambiate (simboli e classi, numero e quota), Jaccard per classe di cella, transizioni di classe, NCD con lzma, voto di qualita_mappe.py prima e dopo con i rilievi spariti e comparsi, dimensioni, scala e quote. Con --versioni estrae i master da git (git show), abbina le mappe per titolo, codice MAPPA o posizione, scrive confronto.json a chiavi ordinate e un SVG affiancato per mappa con le celle cambiate cerchiate. Misura e basta: non tocca le mappe.",
+      "use_case": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod",
+        "scipy"
+      ],
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "posizionali",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Coppia: VECCHIA.md[:N] NUOVA.md[:N] (N da 1). Con --versioni: i master da confrontare, relativi al repo."
+        },
+        {
+          "name": "--json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppia: scrive il confronto in JSON (chiavi ordinate)."
+        },
+        {
+          "name": "--svg",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppia: scrive l'SVG affiancato con le celle cambiate cerchiate."
+        },
+        {
+          "name": "--versioni",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Versioni git come NOME=REF, es. A=d726e6a2 B=9359a0af C=HEAD."
+        },
+        {
+          "name": "--base",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: la versione contro cui si confronta ogni altra."
+        },
+        {
+          "name": "--estrai",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: dove scrivere i file estratti (default: cartella temporanea)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: cartella di confronto.json e svg/."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se una mappa resta senza corrispondente in qualche versione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--out>/confronto.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "confronto prodotto",
+        "1": "mappa senza corrispondente con --strict",
+        "2": "errore d'uso (file o ref inesistente, mappa fuori numero, dipendenze mancanti)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Nessun campionamento; le versioni si identificano con il blob git, non con l'ora o il percorso di estrazione. L'NCD dipende dalla versione di liblzma."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/confronta_mappe.py --help",
+      "tests": [
+        "scripts/tests/test_confronta_mappe.py"
+      ],
+      "docs": [
+        "plans/esperimenti/confronto-mappe-arc08-2026-10-22/CONFRONTO.md",
+        "plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md"
+      ]
+    },
+    {
       "id": "build_legenda_skill",
       "path": "scripts/build_legenda_skill.py",
       "category": "F-skill-pipeline",

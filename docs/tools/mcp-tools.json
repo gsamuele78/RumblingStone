@@ -487,6 +487,61 @@
       "deterministic": true
     },
     {
+      "name": "confronta_mappe",
+      "description": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»\n\nDue o piu' versioni delle stesse mappe misurate cella per cella: celle cambiate (simboli e classi, numero e quota), Jaccard per classe di cella, transizioni di classe, NCD con lzma, voto di qualita_mappe.py prima e dopo con i rilievi spariti e comparsi, dimensioni, scala e quote. Con --versioni estrae i master da git (git show), abbina le mappe per titolo, codice MAPPA o posizione, scrive confronto.json a chiavi ordinate e un SVG affiancato per mappa con le celle cambiate cerchiate. Misura e basta: non tocca le mappe.",
+      "use_case": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»",
+      "invocation": "python3 scripts/confronta_mappe.py VECCHIA.md[:N] NUOVA.md[:N] | --versioni NOME=REF ... --base NOME --out DIR FILE.md ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "posizionali": {
+            "type": "string",
+            "description": "Coppia: VECCHIA.md[:N] NUOVA.md[:N] (N da 1). Con --versioni: i master da confrontare, relativi al repo."
+          },
+          "json": {
+            "type": "string",
+            "description": "Coppia: scrive il confronto in JSON (chiavi ordinate)."
+          },
+          "svg": {
+            "type": "string",
+            "description": "Coppia: scrive l'SVG affiancato con le celle cambiate cerchiate."
+          },
+          "versioni": {
+            "type": "string",
+            "description": "Versioni git come NOME=REF, es. A=d726e6a2 B=9359a0af C=HEAD."
+          },
+          "base": {
+            "type": "string",
+            "description": "Con --versioni: la versione contro cui si confronta ogni altra."
+          },
+          "estrai": {
+            "type": "string",
+            "description": "Con --versioni: dove scrivere i file estratti (default: cartella temporanea)."
+          },
+          "out": {
+            "type": "string",
+            "description": "Con --versioni: cartella di confronto.json e svg/."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Esce 1 se una mappa resta senza corrispondente in qualche versione."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--json>",
+        "<--out>/confronto.json"
+      ],
+      "exit_codes": {
+        "0": "confronto prodotto",
+        "1": "mappa senza corrispondente con --strict",
+        "2": "errore d'uso (file o ref inesistente, mappa fuori numero, dipendenze mancanti)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "export_map_png",
       "description": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»\n\nRasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
       "use_case": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»",
