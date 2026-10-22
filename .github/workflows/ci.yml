@@ -231,6 +231,13 @@ jobs:
         continue-on-error: true
         run: python scripts/collaudo_mappe.py --solo-errori
 
+      # ADR-0098: lo standard di qualita' delle mappe, misurato sul corpus. Gli
+      # errori sono solo fatti (intestazione che mente, direttiva fuori griglia),
+      # e il passo non blocca: lo storico ha ancora mappe da rifare.
+      - name: Qualita' delle mappe (rapporto, non bloccante)
+        continue-on-error: true
+        run: python scripts/qualita_mappe.py --solo-errori
+
       # D23 di RESA-ASSET: la resa delle mappe si misura simbolo per simbolo e
       # terreno per terreno, e nessuna misura peggiora oltre il 5% rispetto a
       # scripts/scheda-resa.json senza che la scheda sia stata riscritta (e
@@ -252,6 +259,7 @@ jobs:
           python scripts/export_uvtt.py --help > /dev/null
           python scripts/import_ultraclear.py --help > /dev/null
           python scripts/collaudo_mappe.py --help > /dev/null
+          python scripts/qualita_mappe.py --help > /dev/null
           python scripts/update_xp.py --check > /dev/null
           python scripts/hype_homebrew.py --help > /dev/null
           python scripts/dm_dossier.py --help > /dev/null

@@ -41,6 +41,39 @@
       "idempotent": true
     },
     {
+      "id": "qualita_mappe_profonde",
+      "path": "scripts/qualita_mappe_profonde.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/qualita_mappe.py --json OUT.json --profonde",
+      "summary": "Le metriche di configurazione di una mappa tattica, senza soglia, che qualita_mappe.py --profonde scrive solo nel JSON (ADR-0098): space syntax sul grafo di visibilita' e su quello di movimento (profondita' media, integrazione HH, intelligibilita'), correlazione fra integrazione alla vista e a piedi, simmetria sulle classi di cella, diversita' dei pattern 2x2 (Lucas e Volz). Vista con lo shadowcasting simmetrico di Albert Ford e cammini minimi a bit, in libreria standard. Da plans/esperimenti/mappe-strumenti-2026-10-22/metriche_nuove.py. Non ha una riga di comando sua.",
+      "use_case": "«Questa mappa e' piu' profonda o piu' aperta di quella? La nuova versione ha cambiato la configurazione?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [],
+      "inputs": [],
+      "outputs": [],
+      "exit_codes": {},
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Nodi nell'ordine delle celle, numeri arrotondati a 4 decimali: stesso JSON al byte a ogni esecuzione, qualunque PYTHONHASHSEED."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_qualita_mappe_profonde.py"
+      ],
+      "docs": [
+        "skills/rumblingstone-mapmaking/references/standard-qualita-mappe.md"
+      ]
+    },
+    {
       "id": "blender/costruisci_mappa",
       "path": "scripts/blender/costruisci_mappa.py",
       "category": "B-maps-pipeline",
@@ -828,6 +861,128 @@
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/SKILL.md",
         "plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "qualita_mappe",
+      "path": "scripts/qualita_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/qualita_mappe.py",
+      "summary": "Misura le griglie-emoji contro lo standard di qualita' delle mappe (ADR-0098): spazio libero, anelli (buchi dello spazio percorribile), ingressi, vicoli ciechi vuoti, celle in fila indiana, copertura, distanza e strozzatura fra PG e nemici, celle per creatura, Flip-Mat occupati, taglia delle creature, scala dichiarata contro scala disegnata, teli, fuochi, porte e mura fuori misura, densita' dei simboli. Errori solo per i fatti (intestazione che mente, direttiva fuori griglia), avvisi per le soglie di mestiere; un voto da 0 a 100 che somma anche i rilievi del collaudo. Due varchi contano come ingressi distinti solo a 10 passi l'uno dall'altro. Con --profonde, metriche di configurazione senza soglia solo nel JSON. In sola lettura.",
+      "use_case": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod",
+        "scipy"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "files",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Master markdown da misurare (default: il corpus della campagna, lo stesso del collaudo)."
+        },
+        {
+          "name": "--json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive metriche, rilievi, penalita' e voto in JSON (schema map_quality/1)."
+        },
+        {
+          "name": "--classifica",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa la tabella markdown dal voto peggiore, con le copie identiche su una riga."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se resta un rilievo E non derogato."
+        },
+        {
+          "name": "--solo-errori",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nel testo mostra solo i rilievi E."
+        },
+        {
+          "name": "--profonde",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Aggiunge al JSON, sotto la chiave «profonde» di ogni tattica, le metriche senza soglia di qualita_mappe_profonde.py: space syntax alla vista e a piedi (profondita' media, integrazione, intelligibilita'), correlazione vista-accesso, simmetria, pattern 2x2. Non tocca voto ne' rilievi; vuole --json."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con rilievi",
+        "1": "rilievi E non derogati con --strict",
+        "2": "errore d'uso (file non trovato, dipendenze mancanti)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso input, stesso rapporto: nessun campionamento, ordine delle celle fisso."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/qualita_mappe.py --help",
+      "tests": [
+        "scripts/tests/test_qualita_mappe.py",
+        "scripts/tests/test_qualita_mappe_profonde.py"
+      ],
+      "docs": [
+        "skills/rumblingstone-mapmaking/references/standard-qualita-mappe.md",
+        "plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md"
       ]
     },
     {

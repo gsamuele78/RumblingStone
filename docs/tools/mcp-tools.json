@@ -778,6 +778,52 @@
       "deterministic": true
     },
     {
+      "name": "qualita_mappe",
+      "description": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»\n\nMisura le griglie-emoji contro lo standard di qualita' delle mappe (ADR-0098): spazio libero, anelli (buchi dello spazio percorribile), ingressi, vicoli ciechi vuoti, celle in fila indiana, copertura, distanza e strozzatura fra PG e nemici, celle per creatura, Flip-Mat occupati, taglia delle creature, scala dichiarata contro scala disegnata, teli, fuochi, porte e mura fuori misura, densita' dei simboli. Errori solo per i fatti (intestazione che mente, direttiva fuori griglia), avvisi per le soglie di mestiere; un voto da 0 a 100 che somma anche i rilievi del collaudo. Due varchi contano come ingressi distinti solo a 10 passi l'uno dall'altro. Con --profonde, metriche di configurazione senza soglia solo nel JSON. In sola lettura.",
+      "use_case": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»",
+      "invocation": "python3 scripts/qualita_mappe.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "string",
+            "description": "Master markdown da misurare (default: il corpus della campagna, lo stesso del collaudo)."
+          },
+          "json": {
+            "type": "string",
+            "description": "Scrive metriche, rilievi, penalita' e voto in JSON (schema map_quality/1)."
+          },
+          "classifica": {
+            "type": "boolean",
+            "description": "Stampa la tabella markdown dal voto peggiore, con le copie identiche su una riga."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Esce 1 se resta un rilievo E non derogato."
+          },
+          "solo-errori": {
+            "type": "boolean",
+            "description": "Nel testo mostra solo i rilievi E."
+          },
+          "profonde": {
+            "type": "boolean",
+            "description": "Aggiunge al JSON, sotto la chiave «profonde» di ogni tattica, le metriche senza soglia di qualita_mappe_profonde.py: space syntax alla vista e a piedi (profondita' media, integrazione, intelligibilita'), correlazione vista-accesso, simmetria, pattern 2x2. Non tocca voto ne' rilievi; vuole --json."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--json>"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con rilievi",
+        "1": "rilievi E non derogati con --strict",
+        "2": "errore d'uso (file non trovato, dipendenze mancanti)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "render_map_blender",
       "description": "«Questa mappa in volume, per una tavola o per ControlNet: come la ottengo senza che la geometria del 3D e quella dell'SVG possano divergere?»\n\nLa mappa in volume: risolve la geometria con lo stesso paint() che alimenta l'SVG, fonde le celle in solidi e la fa rendere a Blender in ortografica. Con --profondita produce il passo di profondità per ControlNet depth, così l'illustrazione eredita la pianta esatta.",
       "use_case": "«Questa mappa in volume, per una tavola o per ControlNet: come la ottengo senza che la geometria del 3D e quella dell'SVG possano divergere?»",

@@ -60,20 +60,12 @@
 <use href="#pr_statue" x="802" y="500" width="28" height="28"/>
 <ellipse cx="117.0" cy="573.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_debris" x="102" y="556" width="28" height="28"/>
-<ellipse cx="593.0" cy="573.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="578" y="556" width="28" height="28"/>
-<ellipse cx="621.0" cy="573.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree_b" x="606" y="556" width="28" height="28"/>
 <ellipse cx="593.0" cy="601.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tree_b" x="578" y="584" width="28" height="28"/>
-<ellipse cx="621.0" cy="601.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="606" y="584" width="28" height="28"/>
 <ellipse cx="1097.0" cy="601.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_debris" x="1082" y="584" width="28" height="28"/>
 <ellipse cx="369.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_statue" x="354" y="612" width="28" height="28"/>
-<ellipse cx="537.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="522" y="612" width="28" height="28"/>
 <ellipse cx="565.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tree_b" x="550" y="612" width="28" height="28"/>
 <ellipse cx="593.4" cy="628.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>
@@ -83,30 +75,14 @@
 <use href="#pr_sparkle" x="606" y="612" width="28" height="28"/>
 <ellipse cx="649.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tree" x="634" y="612" width="28" height="28"/>
-<ellipse cx="677.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree_b" x="662" y="612" width="28" height="28"/>
 <ellipse cx="845.0" cy="629.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_statue" x="830" y="612" width="28" height="28"/>
-<ellipse cx="537.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree_b" x="522" y="640" width="28" height="28"/>
-<ellipse cx="565.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="550" y="640" width="28" height="28"/>
 <ellipse cx="593.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_sparkle" x="578" y="640" width="28" height="28"/>
 <ellipse cx="621.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_sparkle" x="606" y="640" width="28" height="28"/>
-<ellipse cx="649.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree_b" x="634" y="640" width="28" height="28"/>
-<ellipse cx="677.0" cy="657.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="662" y="640" width="28" height="28"/>
-<ellipse cx="593.0" cy="685.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="578" y="668" width="28" height="28"/>
 <ellipse cx="621.0" cy="685.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_tree_b" x="606" y="668" width="28" height="28"/>
-<ellipse cx="593.0" cy="713.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree_b" x="578" y="696" width="28" height="28"/>
-<ellipse cx="621.0" cy="713.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
-<use href="#pr_tree" x="606" y="696" width="28" height="28"/>
 <ellipse cx="397.0" cy="741.0" rx="9" ry="4.5" fill="#241c10" opacity="0.2"/>
 <use href="#pr_statue" x="382" y="724" width="28" height="28"/>
 <ellipse cx="593.4" cy="740.2" rx="10.36" ry="8.495199999999999" fill="#241c10" opacity="0.3"/>

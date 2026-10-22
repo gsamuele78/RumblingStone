@@ -230,6 +230,12 @@ qualcuno va a piedi, la prova di gruppo a CD fissa costa **2 tacche**, più 1
 per ogni fallimento. Le tre pozioni d'invisibilità coprono mezzo blocco
 l'una, quindi a piedi si tira **Nascondersi CD 22** dal primo blocco.
 
+**Le quote, in una riga** `[CANONE — DM 2026-10-22]`. La postierla è 100 m sopra la
+piana dell'orda: dalla soglia il campo si vede dall'alto, ed è lì che si cerca
+la tenda nera. In volo si parte già sopra il campo e si scende al doppio della
+velocità; a piedi il primo blocco è la discesa del fianco est, senza Scalare
+(`DEF-4` Scena 6, «La discesa»).
+
 **Scena 7, la tenda del comando** (`DEF-4` Scena 7). **Balvar** è nella tenda.
 Parlargli prima di colpire costa **1 tacca**; parlargli durante lo scontro
 **0**. La trattativa di una tacca dura più di ogni invisibilità del gruppo: a
@@ -240,7 +246,8 @@ tavolo ha poco tempo, si taglia altro.
 **Scena 8, Zog'tar** (`DEF-4` Scena 8, mappa M7-C, Appendice A.2). La Cintura
 di Tordek qui funziona. Il danno massiccio è attivo: regola SRD, tenuta dalle
 regole della casa. 50 danni in un colpo, e il bersaglio tira Tempra CD 15 o muore. Il ritorno a
-piedi alle mura costa **1 tacca**, quello in volo anche.
+piedi alle mura costa **1 tacca**, quello in volo anche. A piedi l'ultimo
+blocco è la salita del fianco est: dura il doppio, e la tacca resta una.
 
 **Scena 9, Vatore** (`DEF-4` Scena 9). Dieci minuti, al ritorno. L'Anello di
 Artemis lo sente prima di chiunque: dagli lo spotlight. Se tornano in volo e
@@ -314,9 +321,12 @@ registrano lo stesso.
 
 **Gli scontri senza griglia.** Zog'tar sulla breccia (Scena 10) si gioca su un
 camminamento che nessuna mappa disegna: traccia una striscia larga un
-quadretto e lunga dodici, con il bordo e la caduta di 4,5 m. Il duello sulla
-spianata, se il tavolo ha sabotato gli arieti, non usa M7-B: basta un campo
-aperto, senza mura.
+quadretto e lunga dodici, con il bordo e la caduta di 4,5 m. È il tratto est:
+dal muro sud, sul ciglio del gradone, chi cade fuori arriva sulla spianata,
+24,5 m più in basso. Il duello sulla spianata, se il tavolo ha sabotato gli
+arieti, non usa M7-B: basta un campo aperto, con le mura 24,5 m più in alto e
+la rampa della porta che sale a nord. Il cortile del duello è a +100 m: dal
+camminamento sud si vedono la spianata, 20 m sotto, e la piana, 100 m sotto.
 
 ---
 

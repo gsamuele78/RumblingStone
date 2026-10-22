@@ -111,6 +111,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e, patch scelte dal DM: tetto dei nomi distinti, P1 e possessivo sulle p… | ✅ gerundio in coda e -mente restano in `--stile` |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e: ritiro delle misure obsolete (regole mai scattate, otto congegni,… | 🟡 CI −94 s sui passi toccati, −521 righe di codice e −194 di test, MQM invariato; `--costrutto-italiano` resta per il voto del DM; sette patch aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, voto del DM: catena vecchia 8, nuova 5, pari 1; tre regole di riscrit… | ✅ standard = catena vecchia più soggetto dopo il verbo e LAMP goffo/inglese/ricercata, meno il tetto dei nomi (⚖️ al DM) |
@@ -119,10 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7b: quattro domande del developer nuove, §18-§21 di… | 🟡 calibrazione 15½ veri su 26 rilievi; D20 non calibrata (un boss solo sotto cancello), D21 tace finché nessun master marca gli indizi; cancello solo sui maste… |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7a: il perché del voto cieco, dieci etichette facoltative da LAMP e TTCW… | ✅ non cambia il verdetto; serve a sapere quali difetti il DM vede |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7 aperto: ricerca in rete sui metodi misurabili per prosa e architettura,… | 🟡 nessuna misura di prosa prevede il DM (p ≥ 0,057); 7a-7c aspettano la scelta del DM |
-| 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
-| 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
-| 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
 
 ## Le misure che si portano dietro
 
