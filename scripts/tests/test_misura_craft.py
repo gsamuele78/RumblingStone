@@ -167,13 +167,15 @@ class TestIlPilastroDichiarato(unittest.TestCase):
         # chiede editorial-standards.md §2.
         # 2026-10-21: gli handout di ARC-08 entrano di proposito. L'handout 0
         # (la visione della Corona, D4 di MASTER-DEF) porta il pilastro.
+        # 2026-10-22: gli handout di ARC-08 escono di proposito. Il giro sulla
+        # Sessione 1 ha tolto l'etichetta dall'handout 0: un handout va in mano
+        # ai giocatori, e l'etichetta del pilastro è regia.
         self.assertEqual(sorted(con), ["ARC-08 Hammerfist",
                                        "DEF-1 Piano della Terra",
                                        "DEF-2 Ritorno e affreschi",
                                        "DEF-3 Resurrezione Hella",
                                        "DEF-4 Viaggio 1.000 anni",
-                                       "DEF-5 Ritorno Hammerfist",
-                                       "Handout ARC-08"])
+                                       "DEF-5 Ritorno Hammerfist"])
         self.assertIn("★ Abbazia (stand-alone)", senza)
 
 
@@ -409,7 +411,7 @@ class TestIBersagliNonSiCampionanoInSilenzio(unittest.TestCase):
     def test_ogni_bersaglio_pesca_i_file_che_dice(self):
         atteso = {"★ Palio di Channathgate": 15, "ARC-09 Torneo di Dauth": 22,
                   "ARC-09 Torre di Zalkatar": 12, "ARC-09 Battaglia Finale": 16,
-                  "ARC-08 Hammerfist": 16}  # 16 dal 2026-10-21: ARC08-18 e ARC08-19, la battaglia campale
+                  "ARC-08 Hammerfist": 17}  # 16 dal 2026-10-21: ARC08-18 e ARC08-19, la battaglia campale; 17 con ARC08-DEF-1
         for nome, n in atteso.items():
             with self.subTest(bersaglio=nome):
                 self.assertEqual(len(MC.espandi(MC.BERSAGLI[nome])), n)
