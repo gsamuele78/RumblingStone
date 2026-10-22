@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7 aperto: ricerca in rete sui metodi misurabili per prosa e architettura,… | 🟡 nessuna misura di prosa prevede il DM (p ≥ 0,057); 7a-7c aspettano la scelta del DM |
 | 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-19 | MASTER-DEF | la presa in bocca passa da Skullcrusher a Fauci, come firma contro Thorik (scel… | 🟡 quattro punti `[INFERRED]` al DM; `esperimenti/giro-arc08-2026-10-19/PRESA-DI-THORIK.md` |
 | 2026-10-19 | MASTER-DEF | D9-D20 del giro su ARC-08 decise dal DM («Tutte») e applicate: Fauci con picchi… | ✅ D9-D20; restano D4-D6 e la scheda di Lythiel; `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | 2026-10-19 | MASTER-DEF | giro su ARC-08 dal 3B alla Cerimonia con lo standard di ADR-0095 (richiesta del… | 🟡 74 🔴/🟠: 37 corretti, 35 al DM, 1 respinto, 1 residuo; verifica 0 aperti; D9-D20 al DM; `esperimenti/giro-arc08-2026-10-19/` |
-| 2026-10-19 | REVISIONE-ARC07 | Skullcrusher non chiede più i nomi (scelta del DM, «Catena che ascolta»): studi… | 🟡 resta `[INFERRED]` la portata del sussurro (fuori dal telo anche sottovoce, da dentro solo i gridi) |
 
 ## Le misure che si portano dietro
 

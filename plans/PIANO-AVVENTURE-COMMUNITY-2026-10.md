@@ -78,6 +78,22 @@ distingueva, l'indice Gulpease sì (67,1 → 70,0 → 72,6).
 - [x] la colonna `Gulp.` in `misura_craft --stile`, con quattro test
 - [x] **la prova**: 35 box di DEF-4 e DEF-5 (gli 8 già votati al giro 3 restano fuori) riscritti con la reference, misurati con `cieco_versioni.py` e votati alla cieca dove la misura non decide ([ADR-0097](adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md)). Cieco del DM: nuova 10, vecchia 3, soglia 10 su 13 raggiunta; le 3 vecchie vincitrici rimesse, ADR-0097 accettata
 
+### Lotto 7 · Qualità misurabile: cosa dice la rete, e cosa prevede il DM 🟡 (2026-10-22)
+
+Aperto dalla richiesta del DM di cercare metodi misurabili per la prosa e
+l'architettura delle avventure ([RICERCA-QUALITA-MISURABILE-2026-10](RICERCA-QUALITA-MISURABILE-2026-10.md)).
+La ricerca ha provato le misure di prosa della letteratura sulle 38 coppie già
+votate alla cieca: nessuna prevede il voto del DM. Le regole d'architettura
+(Three Clue Rule, domanda drammatica, conseguenza visibile, presagio del
+cattivo) sono invece regole di mestiere, e la domanda drammatica manca in
+tutte le 39 scene di ARC-07.
+
+- [x] censimento di ciò che il repo misura già e ricerca in rete (prosa e architettura)
+- [x] calibrazione delle misure di prosa sui 38 voti ciechi (`plans/esperimenti/qualita-misurabile-2026-10-22/`)
+- [ ] **7a, prosa**: il voto cieco porta un'etichetta facoltativa del perché (LAMP e TTCW); dopo ~50 voti etichettati si rifà la calibrazione
+- [ ] **7b, architettura**: quattro domande del developer nuove (domanda drammatica, scelta con conseguenza, presagio del cattivo, rete degli indizi), calibrate su ARC-07 e ARC-08 come la D10, cancello solo per i master nuovi
+- [ ] **7c, coerenza**: fronti e orologi con uno schema in `state` e negli archi
+
 ## 2 · La calibrazione del lotto 1
 
 Le quattro regole nuove eseguite sui nove moduli sotto cancello, prima di
