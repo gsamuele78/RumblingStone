@@ -566,27 +566,47 @@ croce. Therysol veglia ai margini (testimone, non officiante).
 ════════════════════════════════════════════════════════════════════════
                        NORD ▲  la montagna: dentro, le sale scendono (M7-S)
    ⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️⛰️
-        ╔════════════════ 🔔 torre nord ═════════╗
+        ╔════════════ 🔔 torre nord, +120 ═══════╗
         ║  fucina originale · la statua del re    ║  ← Zona 1: HAMMERFIST GIOVANE
-        ║  CORTILE INTERNO → M7-B (il duello)     ║     mura bianche, sicura
-        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura sud, l'alba
-              ▲▲▲ scale d'assedio e arieti ▲▲▲     ┊      🌲🌲🌲🌲 BOSCO A EST
-                                                   ┊      🌲 ✦ portale, ~500 m
-   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊      🌲🌲🌲🌲 (Scene 1-2)
+        ║  CORTILE INTERNO, +100 → M7-B (duello)  ║     mura bianche, sicura
+        ╚═══ porta e targa ════════ postierla ▫ 🗼╝  ← Zona 3: mura all'alba
+              ╲ rampa finale ┊          scale ▲▲▲ ┊⇣    🌲🌲🌲🌲 BOSCO A EST
+        ░░░░░░ SPIANATA DEGLI ARIETI, +80 ░░░░░░   ┊⇣    🌲 ✦ portale, ~500 m
+                ╲╱╲╱ strada a tornanti ╲╱╲╱        ┊⇣    🌲🌲🌲🌲 (Scene 1-2)
+   · · · · · · · · · piana dell'orda, quota 0 · · ┊ · · ·  ← le tende da 500 m
+   ⛺🔥⛺   ⛺⛺🔥    ⛺🔥⛺    🔥⛺⛺   ⛺🔥⛺   ┊
    GP1▪   i clan degli orchi, a gruppi   ▪GP2 ┊  ← Zona 2: MARE DI TENDE
    ⛺🔥⛺ ┏━━━━━━━━━━━┳━━━━━━━━━━━┓ ⛺🔥⛺ ◄┘  via dei PG: fianco est, poi da nord
    🔥⛺⛺ ┃ ▪▪ ▪▪ ▪▪  ┃  ▪▪ ▪▪ ▪▪ ┃ ⛺⛺🔥      ⚔️ ZOG'TAR + 4 guardie (Sc. 8, M7-C)
-   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km dalla postierla: cinque blocchi
+   ⛺⛺🔥 ┣━━━━ ╔═══╩═══╗ ━━━━━┫ 🔥⛺⛺      ~1 km di cammino: cinque blocchi
    ⛺🔥⛺ ┃ ▪▪ ▪▪ ║COMANDO║ ▪▪ ▪▪ ┃ ⛺🔥⛺      👤 VATORE fra le tende (Sc. 9)
    🔥⛺⛺ ┗━━━━━━━━━━━┻━━━━━━━━━━━┛ ⛺⛺🔥
    GP3▪   ⛺🔥⛺   (10.000 dormono)   ⛺🔥⛺ ▪GP4
                        SUD ▼  oltre il campo: le colline, dove dorme il drago
 ────────────────────────────────────────────────────────────────────────
+ IL PROFILO, NORD → SUD (le quote del DM, sulla piana dell'orda)
+  +120 m ┌──┐ torre nord, la porta che entra nella montagna
+         │  │
+  +100 m ┘  └─────────────┐ porta e targa
+           cortile, M7-B  │
+                           ╲ rampa finale, 20 m
+   +80 m                    ╲────────────────┐ spianata degli arieti
+                                              ╲ strada a tornanti
+                                               ╲___
+                                                   ╲___
+     0 m                                               ╲__ piana · ⛺🔥⛺ · COMANDO
+         ├── dal ciglio, giù per i tornanti: circa 500 m ──┤ le tende, fino a 1 km ──┤
+ La via dei PG non è questa sezione: dalla postierla (+100) giù per il
+ fianco est, 100 m di dislivello, lungo il lato est del campo fino alla
+ tenda, a circa 1 km di cammino; all'alba si risale lo stesso fianco.
+────────────────────────────────────────────────────────────────────────
 LEGENDA · ⛰️ montagna · 🏰╔╗ mura bianche, nuove · 🔔 campane · 🗼 torre est ·
-▫ postierla · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco della
-banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato · ▪▪
-le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗ la
-tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
+▫ postierla · ░ la spianata, nuda · ╲ la rampa finale [INFERRED — needs DM
+confirmation] e i tornanti · ▲ scale d'assedio sul tratto est · ⇣ la discesa
+del fianco est · ⛺🔥 i clan degli orchi, tende a gruppi attorno al fuoco
+della banda (copertura) · ┏┓ il quartiere hobgoblin, chiuso da uno steccato ·
+▪▪ le file di tende hobgoblin · ━ le vie diritte · ▪GP posti di guardia · ╔╗
+la tenda del comando, sola nella sua piazza · ┊◄ la via dei PG · 👤 Vatore ·
 ⚔️ scontro · ✦ arrivo del portale.
 Skullcrusher entra dall'alto sul cortile interno → M7-B.
 ════════════════════════════════════════════════════════════════════════
@@ -597,8 +617,35 @@ Skullcrusher entra dall'alto sul cortile interno → M7-B.
   ci si appoggia; porta principale e **postierla** sono nel muro sud, la
   postierla all'angolo sud-est sotto la torre est. Il campo dell'orda sta a sud,
   il bosco a est: il portale lascia i PG lì, a circa 500 m dalle mura (Scena 1).
-  I PG escono dalla postierla, scendono lungo il fianco est del campo e arrivano
-  alla tenda del comando da nord, dalla parte della fortezza.
+  I PG escono dalla postierla, scendono per il fianco est della montagna (100 m
+  di dislivello), costeggiano il lato est del campo e arrivano alla tenda del
+  comando da nord, dalla parte della fortezza.
+- **Le quote** `[CANONE — DM 2026-10-22, thread di ARC-08]`: la piana dell'orda, con
+  il campo e la tenda M7-C, è a quota 0. La spianata nuda davanti alla porta,
+  dove battono gli arieti, è un ripiano a **+80 m** e fa parte di questa
+  mappa. La porta principale e il cortile del duello (M7-B) sono a **+100 m**,
+  la torre nord con la porta che entra nella montagna a **+120 m**. Le tende
+  stanno fra 500 m e 1 km dalle mura, e dalla spianata alla piana si scende
+  per una strada a tornanti. Il profilo sotto la pianta le mette in fila. La
+  quota sul mare il DM non l'ha data: le direttive di M7-B e M7-C mettono la
+  piana a 870 m, come le mappe del 1372 di ARC-08 (cortile del duello a 970 m, che nel 1372 è il cortile interno) `[INFERRED — needs DM confirmation]`.
+- **La rampa della porta** `[INFERRED — needs DM confirmation]`. Gli arieti
+  stanno sulla spianata, a +80, e la porta è a +100: dall'una all'altra sale una rampa
+  di terra battuta e pietra, larga quanto un ariete e lunga circa 150 m,
+  addossata al gradone sotto il muro sud. Gli arieti si montano sulla spianata
+  e si spingono su per la rampa, sotto il tiro del camminamento, fino al
+  battente. Le scale d'assedio sul fronte sud non arrivano, perché lì le mura
+  stanno sul ciglio, 24,5 m sopra la spianata: salgono sul tratto est, dove il
+  fianco della montagna arriva al piede delle mura. È il camminamento est di
+  Hrodgar (DEF-4 Scena 10).
+- **La torre nord** `[INFERRED — needs DM confirmation]`. Sta sul gradone di
+  +120, sopra il muro nord del cortile: su M7-B la riga 04 è il piede della
+  roccia, S04 la base della torre e della sua scala, che sale di 20 m dentro
+  la pietra. La porta di O-P04 entra nella montagna al livello del cortile,
+  verso la sala del consiglio (M7-S).
+- **Gli altri tempi.** Nel −1000 Hammerfist è più piccola e ha meno gradoni.
+  Nel 1372 il ripiano di +80 diventa il cortile esterno con il cancello: è
+  materia di ARC-08.
 - **Terreno & zone**: **Zona 1** = Hammerfist giovane (mura bianche, sicura, arrivo
   del portale) · **Zona 2** = **mare di tende** dell'orda (10.000 dormono; le tende
   = copertura): fuori i clan degli orchi, a gruppi di ripari attorno al fuoco
@@ -663,9 +710,16 @@ del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri ·
 @mark 12 ; W2 ; Wyvern 1, di scorta: entra dal round 2
 @mark 13 ; X2 ; Wyvern 2, di scorta: entra dal round 2
 @tipo tattica esterno
+@luogo Hammerfist ≈372 DR, il cortile interno e la porta principale
+@quota 970 m ; s.l.m. [INFERRED — needs DM confirmation: il DM dà la piana a 0; qui è a 870 m, come nel 1372 di ARC-08]
+@dislivello +100 m ; sulla piana dell'orda, a sud
 ```
 - **Tipo / scala**: tattica BOSS, 24×18. **Skullcrusher il Nero, GS 14** (capostipite
   di Fauci di Palude). Cielo aperto.
+- **Quota** `[CANONE — DM 2026-10-22]`: il cortile e la porta stanno a **+100 m** sulla
+  piana dell'orda, la torre nord a +120 (M7-A, «Le quote»). Dal camminamento
+  sud si guarda giù: la spianata degli arieti 20 m più in basso, nuda, e oltre
+  il ciglio la piana, 100 m sotto, con le tende fino all'orizzonte.
 - **Terreno & altitudini**: **zona aerea** ☁️ (righe 01-03, quota; il drago vi resta:
   serve **volo o gittata**); **camminamenti +4,5 m** 🏰 (arcieri nani, copertura e
   altezza); **macerie** 🪨 (copertura +4 CA) al suolo; **impronta d'atterraggio** ⚔
