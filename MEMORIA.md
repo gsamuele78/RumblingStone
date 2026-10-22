@@ -116,13 +116,13 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c integrato: `coerenza_campagna fatti --check` in CI su ARC-07/ARC-08 co… | ✅ quattro residui aspettano il DM (hobgoblin sergenti, orog) |
+| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, correzione: B08 l'ha vinto la catena nuova (segnalato dal thread Stan… | ✅ il conto 8 a 5 non cambia |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e, patch scelte dal DM: tetto dei nomi distinti, P1 e possessivo sulle p… | ✅ gerundio in coda e -mente restano in `--stile` |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e: ritiro delle misure obsolete (regole mai scattate, otto congegni,… | 🟡 CI −94 s sui passi toccati, −521 righe di codice e −194 di test, MQM invariato; `--costrutto-italiano` resta per il voto del DM; sette patch aspettano il DM |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, voto del DM: catena vecchia 8, nuova 5, pari 1; tre regole di riscrit… | ✅ standard = catena vecchia più soggetto dopo il verbo e LAMP goffo/inglese/ricercata, meno il tetto dei nomi (⚖️ al DM) |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f: riscrittura di prova di 16 box con catena vecchia, nuova e fusa, base… | 🟡 scheda cieca di 17 coppie al DM; versioni e chiavi fuori dal repo fino al voto |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7d: misure sintattiche con spaCy (calchi, subordinate, ripetizioni) calib… | 🟡 nessuna misura prevede il DM; base ARC-07/ARC-08 salvata per il confronto senza/con |
 | 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7b: quattro domande del developer nuove, §18-§21 di… | 🟡 calibrazione 15½ veri su 26 rilievi; D20 non calibrata (un boss solo sotto cancello), D21 tace finché nessun master marca gli indizi; cancello solo sui maste… |
 
 ## Le misure che si portano dietro
 
