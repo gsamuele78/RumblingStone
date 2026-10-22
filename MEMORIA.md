@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MASTER-DEF | S1b: la Sessione 2 coi pregen nel master `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`… | 🟡 scritto, giro da fare; dodici `[INFERRED]` al DM; box di ARC-08 104 → 108, >1 nome 40 → 32, >500 car 15 → 12, sensoriali 41,0 → 42,3 ‰, nessun box impoverito |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
 | 2026-10-22 | MASTER-DEF | confronto deterministico fra le mappe di ARC-08 vecchie e nuove:… | ✅ voto medio 84,9 → 85,6 → 96,8; tutte le mappe abbinate (la 1A-3 per codice); 10 rilievi spariti per deroga e non per correzione; nessuna mappa toccata |
 | 2026-10-22 | MASTER-DEF | 2B: soffio di Fauci a Riflessi CD 29 come nella scheda del Bestiario (era CD 25) | ✅ |
@@ -120,7 +121,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
-| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 
 ## Le misure che si portano dietro
 

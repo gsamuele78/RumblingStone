@@ -51,7 +51,9 @@ Hammerfist si gioca su **due livelli di personaggi**:
 3. `ARC08-01-GUIDA-DM.md` — la guida completa (PNG, esercito, sessioni,
    read-aloud). La **Sessione 1** coi pregen è nel suo master,
    `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` (dieci scene, l'avanguardia, la
-   tabella delle leve), e la guida vi rimanda.
+   tabella delle leve), e la guida vi rimanda; la **Sessione 2** nel suo,
+   `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md` (i tre giorni dell'assedio col
+   libretto, il soffio sul Re, la ritirata e l'incrocio).
 4. `hammerfist_encounters-...-Guida-agli-Scontri-final.md` — gli scontri
    sessione per sessione.
 5. `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` — **master visivo**
@@ -86,6 +88,7 @@ master** rilevanti alla sessione.
 | `ARC08-00-INDICE.md` | Questo indice + quickstart | Canonico |
 | `ARC08-01-GUIDA-DM.md` | Guida DM completa (PNG, esercito, sessioni) | Canonico (master narrativo) |
 | `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` | Master DEF della Sessione 1 coi pregen: l'avvistamento in dieci scene, la scaramuccia dell'avanguardia (1D), la tabella che traduce gli esiti nelle leve del libretto (`APPARATO-` generato accanto) | Canonico (master DEF, scritto 2026-10-21, giro da fare) |
+| `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md` | Master DEF della Sessione 2 coi pregen: i tre giorni dell'assedio col libretto e i duelli coi comandanti, il soffio sul Re (2B), la ritirata (H3-1), l'incrocio silenzioso (2F), la tabella dei bonus verso `ARC08-10` §5.2-5.3 (`APPARATO-` generato accanto) | Canonico (master DEF, scritto 2026-10-22, giro da fare) |
 | `ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md` | Schede PNG/unità + regolamento di massa | Canonico |
 | `ARC08-03-REGISTRO-PERDITE.md` | Registro perdite da tavolo | Canonico |
 | `ARC08-04-MARCIA-MANO-ROSSA.md` | Scheda logistica dell'avanguardia (A6) | Canonico |

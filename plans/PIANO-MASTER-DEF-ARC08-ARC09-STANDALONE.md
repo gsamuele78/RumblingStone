@@ -495,6 +495,21 @@ nella forma.
   Correzioni applicate dal triage: T1-T3, T5-T8, T10-T13, T16-T22, la parte
   di `ARC08-01` di T4, T9, T14, T15, T44, T52, T56, e T57-T59. Restano i passi
   6-7 del ciclo (lettore e playtester a freddo).
+- [x] **S1b** · `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md` — **scritto, giro da fare**
+  (2026-10-22). Nove scene in ordine di tempo, dal Day 16 al Day 18: l'alba
+  del Giorno 1 con le leve della Sessione 1 e l'ultimo pezzo del libretto,
+  l'assalto alle mura col libretto (2A) con Gorthak sul ponte e il sorvolo del
+  drago, la notte, il Giorno 2 della breccia con Grimjaw (2C) e le Cantitrici
+  (2D), la notte, il Giorno 3 col corno e il soffio sul Re (2E e 2B sulla
+  2B-CORRETTA), la ritirata (H3-1), l'incrocio silenzioso (2F, 3Z), la porta di
+  mithral; la tabella dei bonus verso `ARC08-10` §5.2-5.3, le tattiche dei
+  comandanti round per round, gli statblocchi compatti; le mappe solo per
+  rimando. La Sessione 2 di `ARC08-01` rimanda al master. Dodici scelte
+  `[INFERRED]` sono domande per il DM nel blocco d'apparato in testa al
+  master (il Giorno 3 qui o nella Sessione 3, le baliste contro Fauci, il Re a
+  8 pf, Gorthak a metà, i troll, lo sportello, Grimjaw senza sfidante, la
+  riserva a +3, le frecce di Dara, i nani al Cuore, il sorvolo, il Re ferito
+  nel libretto). Restano i passi 6-7 del ciclo.
 
 **S2 · ARC-09, i master del seguito** `[engine: Opus · effort: xhigh · qualità: ciclo del master, passi 1-7, su ognuno dei dodici]`
 Fonti nella tabella A1. Un sotto-lotto per master (S2a-S2l). Qui confluiscono S5
