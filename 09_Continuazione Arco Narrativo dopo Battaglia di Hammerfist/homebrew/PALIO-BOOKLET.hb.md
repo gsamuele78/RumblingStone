@@ -91,10 +91,12 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
 > Per misure, rioni e fiume vale la pianta in scala
-> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 150 ha
-> fra il nucleo del bazar (36 ha), i rioni e i giardini, con l'arg murato di 4 ha
-> sulla sua terrazza; circa 11.600 abitanti, profughi esclusi, la città più popolosa
-> della valle, più di Rethmar, come la Dennovar del libro `[INFERRED — needs DM confirmation]`.
+> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 250 ha
+> fra il nucleo del bazar (66 ha), i rioni, due rabad e i giardini, con l'arg murato di 5 ha
+> sulla sua terrazza; circa 25.000 abitanti, profughi esclusi, la città più popolosa
+> della valle, più di Rethmar. È più grande della Dennovar del libro (circa 11.600)
+> per scelta del DM, perché la valle regga l'orda di circa 10.000. Se
+> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 
@@ -2251,8 +2253,8 @@ Tre vincoli di coerenza, risolti a monte:
 
 ## 1. Geografia e Lore — Channathgate ampliata
 
-Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 11.600
-abitanti, come Dennovar; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
+Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 25.000
+abitanti, più dei circa 11.600 della Dennovar del libro, per scelta del DM; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
 a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway", più popolosa di Rethmar,
 **città aperta** senza cinta (`P2D-Palio-Allegati/mappe/channathgate-pianta.svg`), **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
 (`state.md` refugee ledger). **Questa avventura la trasforma nel motore geopolitico**
@@ -3040,7 +3042,7 @@ per mappa. Companion di raccordo:*
 |---|---|---|
 | **Piazza del Palio** (corsa) | `piazza-del-palio.svg` | anello a conchiglia, orario, 3 giri, tufo; 6 Zone con DC 18-24 (Curva del Guado DC 24 = la più letale; Curva del Boia = muro cieco, caduta 4d6); catino interno = folla (6.000) |
 | **Channathgate città** | `channathgate-citta.svg` | 8 rioni-contrada, Porta dell'Alba/del Porto, Darsena; spostamenti dei partiti, infiltrazione Civetta, porto |
-| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; città aperta: mura e torri solo all'arg (741 m, 25 torri e 2 alla porta), fossi e muri di rione con porte di quartiere |
+| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; città aperta di circa 250 ha e 25.000 abitanti: mura e torri solo all'arg (828 m, 27 torri e 2 alla porta), fossi e muri di rione con porte di quartiere |
 | **Rotta di soccorso** | `rotta-soccorso.svg` | Dawn Way (~35 mi, 1,5 gg, cavalleria) vs Fiume Cannath (~1 gg, flotta); **deadline Day 38** per la Fase 1 |
 | **Stalla — assalto drow** | `stalla-assalto-drow.svg` | 1 quadretto = 5 ft, GS 11-12; drow dalla botola SO con *Oscurità/Silenzio*, buio totale |
 

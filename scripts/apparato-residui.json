@@ -6,7 +6,7 @@
   },
   "volumi": {
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/homebrew/PALIO-BOOKLET.manifest.json": {
-      "tetto": 26,
+      "tetto": 25,
       "perche": "3 sono l'attribuzione di licenza delle icone (CREDITS.md), che deve restare stampata; 1 è il rimando al gate d'uscita IP nel colophon; il resto (le «patch a state.md», la procedura di rigenerazione degli stemmi, i rimandi a schede del Bestiario) chiede un giudizio dentro il modulo: lotto successivo di CICLO-SESSIONE 2g"
     },
     "10-stand-alone/L'abbazia Della Rotta Sicura/homebrew/abbazia-rotta-sicura.manifest.json": {

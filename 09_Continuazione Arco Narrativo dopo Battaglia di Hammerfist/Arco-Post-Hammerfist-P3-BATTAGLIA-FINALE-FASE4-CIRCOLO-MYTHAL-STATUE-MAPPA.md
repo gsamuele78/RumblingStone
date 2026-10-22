@@ -6,7 +6,7 @@ Arco-Post-Hammerfist-P3-BATTAGLIA-FINALE-FASE4-CIRCOLO-MYTHAL-STATUE-MAPPA.md
 ## 1. Layout della piazza centrale
 
 - Griglia suggerita: 30 × 30 quadretti.  
-- Forma: il centro del foro di Rethmar, la piazza grande dietro la porta del ponte, irregolare (circa 145 × 65 m), dove arrivano le vie maestre delle porte Nord, Ovest ed Est `[INFERRED — needs DM confirmation]`. I 30 quadretti (45 m) ne prendono il centro; dove sta il foro in città lo dice la pianta, `Mappe/rethmar/rethmar-pianta.svg`.
+- Forma: il centro del foro di Rethmar, la piazza grande dietro la porta del ponte, irregolare (circa 215 × 100 m), dove arrivano le vie maestre delle porte Nord, Ovest ed Est `[INFERRED — needs DM confirmation]`. I 30 quadretti (45 m) ne prendono il centro; dove sta il foro in città lo dice la pianta, `Mappe/rethmar/rethmar-pianta.svg`.
 
 Elementi principali:
 
@@ -88,7 +88,7 @@ Segna aree:
 ### 🌍 AMBIENTE (companion T5c, consolidato dal layout della piazza)
 
 *Mappa in prosa (niente griglia-emoji → nessun SVG). Scala 1,5 m/quadretto.
-Il centro del foro irregolare (circa 145 × 65 m), 30×30 dietro la porta del ponte di Rethmar.*
+Il centro del foro irregolare (circa 215 × 100 m), 30×30 dietro la porta del ponte di Rethmar.*
 
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|

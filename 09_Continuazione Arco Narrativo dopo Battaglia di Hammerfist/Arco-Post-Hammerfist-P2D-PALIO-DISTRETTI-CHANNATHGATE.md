@@ -7,10 +7,12 @@
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
 > Per misure, rioni e fiume vale la pianta in scala
-> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 150 ha
-> fra il nucleo del bazar (36 ha), i rioni e i giardini, con l'arg murato di 4 ha
-> sulla sua terrazza; circa 11.600 abitanti, profughi esclusi, la città più popolosa
-> della valle, più di Rethmar, come la Dennovar del libro `[INFERRED — needs DM confirmation]`.
+> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 250 ha
+> fra il nucleo del bazar (66 ha), i rioni, due rabad e i giardini, con l'arg murato di 5 ha
+> sulla sua terrazza; circa 25.000 abitanti, profughi esclusi, la città più popolosa
+> della valle, più di Rethmar. È più grande della Dennovar del libro (circa 11.600)
+> per scelta del DM, perché la valle regga l'orda di circa 10.000. Se
+> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 > <!-- storico -->

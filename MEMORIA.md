@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le tre piante una taglia sopra (DM: grandi abbastanza da reggere l'orda di ~10.… | ✅ Rethmar 110 ha, ~18.000 ab., 4,3 km di mura, 95 torri, servono ~3.400 difensori; Dauth 42 ha, ~7.000 ab., 2,55 km, 59 torri, servono ~2.000 difensori e ne ha… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le piante nuove di Rethmar, Dauth e Channathgate (DM: Rethmar sull'impianto del… | ✅ Rethmar 50 ha, ~8.400 ab. con i sobborghi, 70 torri, 4 porte e la poterna, niente fossato; Dauth 17 ha, ~2.650 ab., 3 porte maggiori e la Porta Est ridotta a… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
 | 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
-| 2026-10-20 | MASTER-DEF | colpi mirati all'occhio (−10) e all'ala (−2) contro Fauci, regola della casa de… | ✅ resta `[INFERRED]` di quanto scende con l'ala colpita |
 
 ## Le misure che si portano dietro
 

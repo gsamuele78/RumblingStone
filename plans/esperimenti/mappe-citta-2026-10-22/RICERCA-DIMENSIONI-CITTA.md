@@ -278,6 +278,32 @@ Perché:
   celle con mura; Rethmar 15 celle con mura, fiume e cittadella; Channathgate
   15 celle senza mura, cittadella sì, sobborghi a ogni strada.
 
+## 6. Una taglia sopra: le piante v3 (DM, 2026-10-22)
+
+Il DM vuole le tre città di una categoria DMG più grandi, perché reggano
+l'assedio dell'orda della Mano Rossa (circa 10.000 al Day 1, meno con gli hook).
+Le taglie della Elsir Vale (Brindol 8.400, Dennovar 11.600, Dauth un borgo)
+restano nel §1 come fonte; le piante seguono la scelta del DM. Numeri misurati
+sulle piante `[INFERRED — needs DM confirmation]`:
+
+| Città | Categoria DMG 3.5 | Superficie | Abitanti | Mura | Torri | Edifici |
+|---|---|---|---:|---|---:|---:|
+| Rethmar | grande città | 110 ha dentro le mura + ~23 ha di sobborghi | ~18.000 (15.400 dentro, 140 ab./ha) | 4,3 km (1,2 sul fiume) | 95 | 3.843 dentro, 737 fuori |
+| Dauth | piccola città | 42 ha sullo sperone, quote 530-556 m invariate | ~7.000 (167 ab./ha) | 2,55 km | 59 | 1.750 dentro, 45 fuori |
+| Channathgate | grande città, aperta | ~250 ha costruiti (nucleo 66 ha, arg 5 ha, due rabad) | ~25.000 | solo l'arg, 828 m | 27 + 2 | 8.307 |
+
+**Quanti difensori servono.** La regola del Burghal Hidage del Wessex (una
+guarnigione di 4 uomini ogni 5,5 m, cioè circa 0,8 uomini per metro di mura) dà:
+
+- Rethmar: 4,3 km chiedono circa 3.400 uomini. La leva degli uomini abili (18%
+  di 18.000) è di circa 3.240; con i difensori degli scenari di ARMATE-SYNC §3
+  (1.280-3.980) si arriva a 4.500-7.200. Regge.
+- Dauth: 2,55 km chiedono circa 2.000 uomini. Leva circa 1.260, con i 300
+  mercenari e le 150 lance circa 1.700, più la guarnigione nanica. Non regge
+  sull'intero giro: si tengono sud e ovest e si lasciano leggeri i fianchi ripidi.
+- Channathgate: senza cinta la regola non si applica. Se dovesse reggere un
+  assedio, conterebbe sull'arg e sui muri dei rioni.
+
 ## Da verificare sul manuale
 
 - La scala della pianta di Brindol nel libro e il numero esatto di porte.
