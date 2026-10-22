@@ -576,7 +576,9 @@ gravità, §3 `[CANONE — DM 2026-10-12, D36]`: strisciate); linee di vista spe
 **Read-aloud**: si legge nella Scena 4 (§6), all'uscita dalla foresta, anche se il gruppo non si ferma.
 
 **Terreno (callout):** corridoio libero centrale (riga 06 della MAPPA T-3);
-i cristalli NON bloccano il movimento ma **rompersi addosso a uno** (carica,
+fra i cristalli si passa per i varchi dei disegni (triangoli a ovest, due
+cerchi attorno alla Madre, un esagono a est). Ogni cristallo occupa il suo
+quadretto e dà copertura ½; **entrarci o rompersi addosso a uno** (carica,
 caduta) = 1d6 perforante e **un fallimento** allo skill challenge, come al §6.
 **Cosa succede qui:** **Incontro 2 (OPZIONALE) — i Cristalli Viventi** (§6);
 la zona si può **aggirare** da sud (+30 min).
@@ -2959,25 +2961,31 @@ LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
 ```
 ════════════════════════════════════════════════════════════════════════
  CAMPO DEI CRISTALLI VIVENTI — 30 m × 12 m (20 col × 8 righe · 1,5 m)
- GRAVITÀ 2×   ·   ingresso da OVEST (A), uscita a EST (T)
+ GRAVITÀ 2×   ·   ingresso da OVEST (A06), uscita a EST (T06)
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
-01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️
-02    🟫 🟫 💠 🟫 💚 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫   💚E02 = cristallo CREPATO (curabile → +2)
-03    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
-04    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 💎 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫   💎J04 = MADRE CRISTALLO (alt. 5 m)
-05    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫
-06 →  🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪   ← corridoio libero (ingresso/uscita)
-07    🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💚 🟫 💠 🟫 🟫   💚O07 = 2° cristallo crepato
-08    🟫 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 💠 🟫 🟫 🟫
-      💠 Cristallo Vivente (canta) · 💎 Madre Cristallo · 💚 crepato (riforgia!)
-      🌫️ vuoto/gravità laterale (non attraversare) · ⬜ suolo
+01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️   ← vuoto laterale
+02    🟫 🟫 🔮 🟫 💚 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   💚 E02 crepato
+03    🟫 🔮 🟫 🔮 🟫 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫   triangoli · cerchi · esagono
+04    🟫 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🔷 🔮 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫   🔷 J04 Madre Cristallo
+05    🟫 🟫 🟫 🔮 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫
+06    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   ← corridoio libero
+07    🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 💚 🔮 🟫 🟫 🟫 🟫   💚 O07 crepato
+08    🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫   ↓ faglia a sud (+30 min)
 ════════════════════════════════════════════════════════════════════════
+LEGENDA · 💚 Cristallo Vivente crepato, riforgiabile (E02 e O07): curato vale +2
+🔮 Cristallo Vivente che canta, alto 1-3 m: copertura ½, chi ci entra lo rompe
+🔷 Madre Cristallo (J04), alta 5 m · 🌫️ vuoto laterale, gravità a 90°: non si attraversa
+⬜ corridoio libero (riga 06) · 🟫 suolo del giardino
+════════════════════════════════════════════════════════════════════════
+@north N
 @tipo tattica caverna
+@luogo Piano della Terra, giardino dei Cristalli Viventi
 ```
 
 La runa di Varis in J05 delle stesure vecchie non si gioca (canone del §6): in
-questa griglia J05 è un Cristallo Vivente come gli altri.
+questa griglia J05 è suolo, il varco a sud del cerchio interno da cui si
+arriva alla Madre Cristallo dal corridoio.
 
 ### MAPPA T-4 — TEMPIO DI MITHRAL: approccio & salto gravitazionale (§7a)
 

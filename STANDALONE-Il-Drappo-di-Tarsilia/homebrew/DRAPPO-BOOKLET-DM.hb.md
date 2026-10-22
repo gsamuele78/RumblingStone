@@ -4702,7 +4702,8 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 
 # Le mappe del Drappo
 
-Due tavoli tattici, prodotti con la pipeline del repo. **Il sorgente è il JSON**: il
+Una vista d'insieme della Ruota (con la sua versione per i giocatori) e un tavolo
+tattico, le stalle, prodotti con la pipeline del repo. **Il sorgente è il JSON**: il
 master emoji-grid e l'SVG sono generati e non si modificano a mano.
 
 | Mappa | Sorgente | Master stampabile | SVG da tavolo |
@@ -4733,8 +4734,8 @@ JSON — si importano native, senza ridisegnare niente:
 
 | File | Muri | Porte | Luci |
 |---|:--:|:--:|:--:|
-| `uvtt/tarsilia-la-ruota_map01_*.uvtt` | 28 | 2 | 0 |
-| `uvtt/tarsilia-stalle_map01_*.uvtt` | 20 | 5 | 2 |
+| `uvtt/tarsilia-la-ruota_map01_*.uvtt` | 28 | 1 | 0 |
+| `uvtt/tarsilia-stalle_map01_*.uvtt` | 46 | 4 | 2 |
 
 Si rigenerano con `python3 scripts/export_uvtt.py <mappa>.md -o uvtt`.
 
@@ -4750,7 +4751,25 @@ di informazioni.
 Le griglie sono **lettera × numero** e partono da **A01** in alto a sinistra. Le
 coordinate citate nei testi delle sessioni sono quelle stampate sulla mappa:
 le stalle usano **B9** (porta sul canale), **G4** (botola del fienile), **H12** (box
-del cavallo), **O3** (finestra alta).
+del cavallo), **O3** (finestra alta); in più **C8** (l'abbeveratoio) e **U6-U7** (il
+portone da carro sul cortile).
 
-Scala: **1,5 m per quadretto** su entrambe.
+Scala: **1,5 m per quadretto** su tutte e tre.
+
+## Perché la Ruota è una vista d'insieme
+
+La pista misura 64 × 46 quadretti, più di due Flip-Mat Enormous, e la Corsa non si
+gioca con le miniature: si risolve a tratti con cap. V. La
+mappa della Ruota è quindi `@tipo strategica`: dice dove stanno le funi, il palco,
+il transennato e le due curve, e non riceve i controlli di una carta da
+combattimento. La quota (3 m sopra il Sellen in magra) è una proposta da
+confermare.
+
+## Le stalle, in breve
+
+La stalla ha due ingressi a terra, la porta sul canale e il portone da carro sul
+cortile, e due dall'alto, la botola del fienile e la finestra alta. La selleria in
+mezzo fa un anello attorno al quale si insegue, e con il carro del fieno spezza la
+vista fra il portone e il corridoio. I bravacci partono fuori, sulla fondamenta
+del canale, a 7,5 m da Ombra.
 

@@ -279,45 +279,45 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                                          3m×3m (2×2 quadrati)
 03    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                      └───────────── Interior Octagon Starts ─────────────┘
-04    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
-      │                    └─┘ PILASTRO Adamantino (I04)                └─┘ PILASTRO (U04)
+04    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
+      │                         8 PILASTRI adamantini 🟪: N05 · T08 · W14 · T20 · N23 · H20 · E14 · H08
 
 --- RIGA 06-12: ANGOLO NE + AFFRESCO A2 + A3 FUOCO ---
-05    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛
-06    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛
+05    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
+06    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
       │                └────┘ A2: AFFRESCO "Divine Weapons" (Col G-H, Riga 06)
-07    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛
-08    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛
-      │                └─┘ PILASTRO (H08)
-09    │ ⬛ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
-10    │ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+07    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
+08    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+      │                └─┘ PILASTRO (H08)            PILASTRO (T08) └─┘
+09    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+10    │ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
 
 --- RIGA 11-16: LATO EST + AFFRESCO A3 🔥 FIRE PORTAL (ACTIVE!) ---
-11    │ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-12    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-13    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+11    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+12    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+13    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
       │                                  └────────┘ ALTARE MORADIN (M13-O15, +3m elevato)
-14    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+14    │ ⬛ 🏛️ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ 🏛️ 🏛️ ⬛
       │                                      └─┘ Centro: Col N, Riga 14 (Focal Point)
-15    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-16    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🖼️ 🏛️
+15    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+16    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
       │                                                                        └────┘ A3: 🔥 FIRE PORTAL
-17    │ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🖼️ 🏛️
-      │                                                                              (Col Y-Z, Riga 16-17)
+17    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
+      │                                                                              (Col X-Z, Riga 16-17)
       │                                                                              ACTIVE! Swirling Fire
 
 --- RIGA 18-27: ANGOLO SE + SUD + ALTRIAFFRESCHI ---
-18    │ ⬛ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼️ 🏛️ ⬛
+18    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼️ 🏛️ ⬛
       │                                                                               A4: "Ancestral Battle"
-19    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛
-20    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛
-21    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛
-22    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛
-23    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
+19    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+20    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🌀 🌀 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
+21    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
+22    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
+23    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
 24    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-25    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌿 🌿 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+25    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                                  └────┘ A5: 🌿 EARTH PORTAL (Col M-O, Riga 25)
-26    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌿 🌿 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+26    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                                          ACTIVE! Swirling Earth/Green Energy
 27    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
 
@@ -326,6 +326,8 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
 NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW, W, NW quadranti)
 @north N
 @tipo tattica interni
+@luogo Portale della Forgia Eterna, Sala della Forgia (hub dei Piani)
+@deroga struttura/senza-anelli ; sala ottagonale aperta: il giro si fa attorno all'altare e fra i pilastri, nessun blocco di muro serve
 ```
 
 ---
@@ -339,15 +341,18 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 - Material: Gold-inlaid black basalt stone
 - Rune: Glowing divine script (bright light 18m radius)
 
-**8 PILASTRI ADAMANTINO 🪨 (Between Affreschi):**
-1. Pilastro 1 (N): Col N, Riga 04 (between A1-A2)
-2. Pilastro 2 (NE): Col U, Riga 04 (between A2-A3)
-3. Pilastro 3 (E): Col H, Riga 08 (between A3-A4)
-4. Pilastro 4 (SE): Col U, Riga 23 (between A4-A5)
-5. Pilastro 5 (S): Col N, Riga 24 (between A5-A6)
-6. Pilastro 6 (SW): Col E, Riga 23 (between A6-A7)
-7. Pilastro 7 (W): Col E, Riga 08 (between A7-A8)
-8. Pilastro 8 (NW): Col H, Riga 04 (between A8-A1)
+**8 PILASTRI ADAMANTINI 🟪 (anello interno, a 4-5 quadretti dalle pareti):**
+1. Pilastro 1 (N): Col N, Riga 05
+2. Pilastro 2 (NE): Col T, Riga 08
+3. Pilastro 3 (E): Col W, Riga 14
+4. Pilastro 4 (SE): Col T, Riga 20
+5. Pilastro 5 (S): Col N, Riga 23
+6. Pilastro 6 (SW): Col H, Riga 20
+7. Pilastro 7 (W): Col E, Riga 14
+8. Pilastro 8 (NW): Col H, Riga 08
+- Dal 2026-10-22 la griglia disegna gli otto pilastri come un anello regolare
+  attorno all'altare; prima erano sparsi come macerie 🪨 lungo le pareti e le
+  coordinate dell'elenco non coincidevano col disegno.
 - Size: 1×1 quadrato ciascuno (1.5m × 1.5m)
 - Height: 15m (10 quadrati verticali, full ceiling)
 - Structural: Non destructible
@@ -355,7 +360,7 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 **8 AFFRESCHI/PORTALI 🖼️:**
 1. **A1 (Nord):** Col M-O, Riga 02 - "Creation of World" (inactive)
 2. **A2 (NE):** Col G-H, Riga 06 - "Divine Weapons Forged" (inactive)
-3. **A3 (Est):** Col Y-Z, Riga 16-17 - 🔥 **FIRE PORTAL (ACTIVE!)**
+3. **A3 (Est):** Col X-Z, Riga 16-17 - 🔥 **FIRE PORTAL (ACTIVE!)**
 4. **A4 (SE):** Col R-S, Riga 19 - "Ancestral Battle" (inactive)
 5. **A5 (Sud):** Col M-O, Riga 25-26 - 🌿 **EARTH PORTAL (ACTIVE!)**
 6. **A6 (SW):** Col F-G, Riga 20 - 🕐 **TIME PORTAL (ACTIVE!)**
@@ -378,8 +383,9 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
 | Altare di Moradin ⭐ | M-O/13-15, **+3 m elevato**, 8 scale radiali (1,5 m) | rune divine = **luce intensa 18 m**; centro focale dei rituali; +3 m = vantaggio di quota se scoppia mischia |
-| 8 Pilastri adamantini 🪨 | tra gli affreschi (N04, U04, H08, U23, N24, E23, E08, H04) | **indistruttibili**; copertura per chi vi si ripara |
-| Affresco/Portale **A3 🔥 Fuoco** | Y-Z/16-17 | **ATTIVO** — soglia al Piano del Fuoco (P3) |
+| 8 Pilastri adamantini 🟪 | anello attorno all'altare (N05, T08, W14, T20, N23, H20, E14, H08) | **indistruttibili**; bloccano il passaggio e danno copertura a chi vi si ripara |
+| Portali attivi 🌀 | A3 X-Y/16-17, A5 N-O/25-26, A6 F-G/20 | si attraversano: sono le tre uscite della Sala verso i Piani |
+| Affresco/Portale **A3 🔥 Fuoco** | X-Z/16-17 | **ATTIVO** — soglia al Piano del Fuoco (P3) |
 | Affresco/Portale **A5 🌿 Terra** | M-O/25-26 | **ATTIVO** — soglia al Piano della Terra (P4) |
 | Affresco/Portale **A6 🕐 Tempo** | F-G/20 | **ATTIVO** — soglia temporale (Topazio / P5) |
 | Affreschi inattivi A1/A2/A4/A7 | pareti | narrativi; A8 (NW) «Ritorno Trionfale» = **profetico**, inattivo |

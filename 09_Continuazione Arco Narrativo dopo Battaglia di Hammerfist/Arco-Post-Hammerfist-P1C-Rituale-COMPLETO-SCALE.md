@@ -856,12 +856,12 @@ COLONNE →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE 
 15  🌲🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫🌲
 16  🌲🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🗿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🗿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫🌲
 17  🟫🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫🟫
-18  🟫🟫🪵🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← treant giovane nord T18-U19 (Grande)
-19  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🪵🟫🟫
-20  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🗿🌿🌿🌿🌿🌿🌳🌳🔵✨🌳🌳🌿🌿🌿🌿🌿🗿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← treant ovest R20-S21, Hella in trance sull'altare T20, treant est V20-W21
-21  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌳🌳✨✨🌳🌳🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫
-22  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← treant sud T22-U23
-23  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫
+18  🟫🟫🪵🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← al round 41 qui cresce il treant nord (T18-U19)
+19  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🪵🟫🟫   ← alberello 3 (T19)
+20  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🗿🌿🌿🌿🌿🌿🌿🌳🔵✨🌳🌿🌿🌿🌿🌿🌿🗿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← alberello 1 (S20), Hella in trance sull'altare T20, alberello 2 (V20)
+21  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿✨✨🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫
+22  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌳🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫   ← alberello 4 (U22)
+23  🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫
 24  🟫🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🗿🌿🌿🌿🌿🌿🌿🔵🌿🌿🌿🌿🌿🌿🌿🗿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫🟫   ← Borin SOLO! (T24)
 25  🌲🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🌿🌿🌿🌿🌿🌿🔵🌿🌿🌿🌿🔵🌿🌿🌿🌿🌿🌿🟧🟧🟫🟫🟫🟫🟫🟫🟫🟫🌲   ← PG2 (R25) e PG3 (W25)
 26  🌲🟫🟫🟫🟫🟫🟫🟫🟫🟧🟧🟧🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🌿🟧🟧🟧🟫🟫🟫🟫🟫🪵🟫🟫🌲
@@ -883,18 +883,19 @@ COLONNE →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE 
       SUD ↓
 
 ═══════════════════════════════════════════════════════════════════════════════════════
-LEGENDA · 🌿 zona verde protetta (raggio 15 m, +2 PF/round) · 🟧 cenere calda e fumo (raggio 15-18 m: occultamento 20%, Tempra CD 15) · 🟫 terra bruciata (1d4 fuoco residuo, terreno difficile) · 🪵 alberi bruciati abbattuti · 🗿 menhir (4,5 m) · ⭐ altare (3 × 3 m) · 🌳 treant giovane (Grande, 2 × 2) · ✨ trasformazione in corso · 🟣 elementale del fuoco
+LEGENDA · 🌿 zona verde protetta (raggio 15 m, +2 PF/round) · 🟧 cenere calda e fumo (raggio 15-18 m: occultamento 20%, Tempra CD 15) · 🟫 terra bruciata (1d4 fuoco residuo, terreno difficile) · 🪵 alberi bruciati abbattuti · 🗿 menhir (4,5 m) · ⭐ altare (3 × 3 m) · 🌳 alberello treant (Medio; al round 41 diventa un treant giovane, Grande, 2 × 2) · ✨ trasformazione in corso · 🟣 elementale del fuoco
 ═══════════════════════════════════════════════════════════════════════════════════════
 
 SCALA GRID: 1 quadrato = 1,5 m × 1,5 m
 DIMENSIONI TOTALI MAPPA: 40 colonne × 40 righe = 60 m × 60 m, la stessa radura del Cerchio Sacro
 @north N
 @tipo tattica esterno
-@deroga zone/separate ; il muro vivente dei quattro treant chiude l'altare: per arrivare a Hella i nemici devono abbatterne uno, ed e' voluto
-@taglia T18 ; Grande
-@taglia R20 ; Grande
-@taglia V20 ; Grande
-@taglia T22 ; Grande
+@luogo Witchwood, Cerchio Sacro della Foresta
+@quota 300 m ; s.l.m., fondovalle della Witchwood [INFERRED — needs DM confirmation]
+@dislivello 0 m ; la radura è in piano con il bosco intorno
+@deroga m1/copertura ; radura del rituale bruciata dai drow: i ripari sono i sei menhir e i quattro alberelli, e difendere un altare scoperto è la scena
+@deroga m2/vuoto ; l'anello di cenere è campo aperto per costruzione: i drow lo attraversano sotto il tiro dei PG, ed è voluto
+@deroga m4/esposizione ; radura tonda di 60 m senza muri: da quasi ogni punto si vede l'altare, che è ciò che i nemici cercano
 @taglia T34 ; Grande
 @taglia Q36 ; Grande
 @taglia X36 ; Grande
@@ -909,7 +910,10 @@ DIMENSIONI TOTALI MAPPA: 40 colonne × 40 righe = 60 m × 60 m, la stessa radura
 > **tutte le colonne del Cerchio sono slittate di cinque lettere** (O → T, L → Q,
 > S → X …); le righe sono rimaste le stesse, e con loro tutte le distanze del
 > testo. I treant giovani sono Grandi e occupano 2 × 2 quadretti; il treant
-> corrotto, Enorme, ne occupa 3 × 3.
+> corrotto, Enorme, ne occupa 3 × 3. In questa mappa, che è il round 36-40, i
+> quattro sono ancora alberelli Medi in S20, V20, T19 e U22, come nell'Ondata 2:
+> diventano il muro vivente solo al round 41 (R20-S21, V20-W21, T18-U19, T22-U23),
+> e fino ad allora i nemici arrivano all'altare passando fra loro.
 >
 > <!-- storico -->
 > ⚠️ **Griglia ridisegnata il 2026-09-04** (ADR-0043 §4). L'intestazione

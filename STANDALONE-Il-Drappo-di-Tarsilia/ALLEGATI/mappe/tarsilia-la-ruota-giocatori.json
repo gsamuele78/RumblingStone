@@ -1,8 +1,12 @@
 {
   "schema_version": "1.0",
   "title": "Tarsilia — versione giocatore",
-  "tipo": "tattica",
+  "tipo": "strategica",
   "ambiente": "abitato",
+  "vista": "giocatori",
+  "luogo": "Tarsilia, la Ruota",
+  "quota": "3 m ; sopra il pelo del Sellen in magra [INFERRED — needs DM confirmation]",
+  "dislivello": "+1,5 m ; sul canale del Ponte Storto, a nord della pista [INFERRED — needs DM confirmation]",
   "scale_m_per_square": 1.5,
   "map_size": [
     64,
@@ -36,6 +40,16 @@
     }
   ],
   "regions": [
+    {
+      "terrain": "🌊",
+      "rect": [
+        0,
+        0,
+        64,
+        2
+      ],
+      "label": "Il canale del Ponte Storto, largo 3 m, fra la riva della Curva Nord e le case"
+    },
     {
       "terrain": "🟫",
       "rect": [
@@ -96,7 +110,7 @@
       ]
     },
     {
-      "type": "🏰",
+      "type": "🧱",
       "line": [
         [
           20,
@@ -107,7 +121,7 @@
           4
         ]
       ],
-      "label": "Transennato della Curva Nord — assi di castagno, non si paga il posto. Al terzo giro cede"
+      "label": "Transennato della Curva Nord — assi di castagno all'altezza del petto, fra la pista e la riva del canale; dietro, due file di gente dell'ospizio. Al terzo giro cede verso la pista"
     },
     {
       "type": "⬛",
@@ -148,23 +162,19 @@
     },
     {
       "type": "🌉",
-      "at": [
-        32,
+      "rect": [
+        31,
+        0,
+        3,
         2
-      ]
+      ],
+      "label": "Il Ponte Storto — 4,5 m di carreggiata sul canale, sbarca alle spalle del transennato"
     },
     {
       "type": "🚪",
       "at": [
-        9,
+        4,
         41
-      ]
-    },
-    {
-      "type": "🚪",
-      "at": [
-        55,
-        13
       ]
     }
   ],
