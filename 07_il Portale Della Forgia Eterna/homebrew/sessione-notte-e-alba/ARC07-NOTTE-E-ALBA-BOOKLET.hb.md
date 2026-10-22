@@ -84,7 +84,7 @@ del primo tiro:
 | Pagina ✉ del volume dei giocatori | A chi | Quando |
 |---|---|---|
 | Echi della notte | uno a testa | all'inizio, prima del primo tiro. Si legge ad alta voce solo il riquadro; la riga «Solo per te» resta del giocatore |
-| Il contratto del Seme | a tutti | solo dopo il box che chiude l'ora della pergamena (cap. II). Se il Seme si rinvia, la pagina resta nel volume |
+| Il contratto del Seme | ad Artemis, e il tavolo lo rilegge | solo dopo il box che chiude l'ora della pergamena e il contratto letto a voce (cap. II). Se il Seme si rinvia, la pagina resta nel volume |
 | Le dieci boccette | a tutti | all'inizio, se il tavolo non l'ha già avuta il 25 |
 
 
@@ -490,12 +490,11 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > **Stasera, prima del testo qui sotto.** Il passo 3 dice che l'ora porta
 > «verso le 7 tacche»: è il conto a piedi. Questo gruppo vola, e col volo il
 > Seme porta a 6, ancora in tempo; all'atterraggio Grask dorme (regia §2). Al
-> passo 5 non leggere le otto clausole di fila, che sono tre volte il tetto di
-> un box: di' a voce il riassunto «In breve» di cap. IV Scena 5, «Le dieci
-> pozioni del gruppo», poi leggi il box finale. Dopo il box consegni al
-> tavolo il ✉ «Il contratto del Seme», nel volume dei giocatori: ha le otto
-> clausole e la firma della bottega, e niente sul creditore. Prima di quel
-> box la pagina resta nel volume.
+> passo 5 leggi prima il box finale dell'ora, poi il contratto in due tempi,
+> con una pausa dopo la clausola 4. Poi consegni ad Artemis il ✉ «Il
+> contratto del Seme», nel volume dei giocatori: ha il contratto, le regole e
+> la firma della bottega, e niente sul creditore. Prima di quel box la pagina
+> resta nel volume.
 >
 > **Se Tordek lo tocca stasera.** Vale il paragrafo «A ≈372 DR il creditore
 > non c'è ancora», e non la riga «Se Tordek lo tocca», che è scritta per il
@@ -628,60 +627,118 @@ e quel silenzio, per chi lo nota, dice più di un avvertimento.
 
 Fino a qui il §6-bis diceva cosa **fa** il Seme, sparso in tre posti. Questa
 è la scheda completa, scritta perché Artemis lo identifica con la pergamena
-del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»). Quello che
-segue è **tutto ciò che *identificare* rivela**, e il DM lo dice a voce.
+del re a ≈372 DR (il Viaggio a mille anni fa, «Le dieci pozioni del gruppo»).
+Il contratto e il riquadro delle regole sono quelli del foglio che va ai
+giocatori, l'handout «Il contratto del Seme»: è **tutto ciò che *identificare*
+rivela**. Il riquadro «Solo per il DM» e il paragrafo che lo segue restano
+al DM.
 
-**L'oggetto.** Oggetto magico, **non** artefatto e **non** oggetto maledetto:
-*identificare* funziona e rivela tutto, senza la regola dell'1% delle
-maledizioni. Aura moderata di **Trasmutazione** (l'innesto che si radica) e
-**Ammaliamento** (la parte che parla), livello dell'incantatore 9. Un cabochon
-violetto grande come l'unghia del pollice, pesante come un pugno di piombo,
-sempre tiepido.
+> **Quando darlo**: ad Artemis, **alla fine dell'ora della pergamena**, subito
+> dopo il read-aloud in cui la gemma mostra la scrittura da libro mastro.
+> Il DM legge il contratto a voce **in due tempi**, con una pausa dopo la
+> clausola 4, poi consegna il foglio. Il riquadro di regole si dà insieme.
 
-**Le clausole** (sono il contratto):
+> *Dentro la pietra, in scrittura fitta da libro mastro:*
+>
+> *Contratto di un seme. Chi firma è debitore; l'altro capo è del creditore.*
+>
+> *1. Firma il primo che tocca la pietra a pelle nuda. Basta un dito, anche
+> senza volerlo. Guanto, panno o pinza non firmano, ma la voce del creditore
+> passa lo stesso: l'offerta si ascolta senza firmarla.*
+>
+> *2. Alla firma la pietra si scioglie nella pelle e lascia nel palmo una vena
+> viola. Se su quella mano c'è un anello o un gioiello, si incastona lì.*
 
-1. **Chi firma.** Il primo che la tocca **con la pelle nuda**: un dito basta,
-   anche senza volerlo. Guanto, panno o pinza non firmano, ma la voce di Varis
-   arriva anche attraverso loro: si può ascoltare l'offerta senza firmarla
-. Non c'è tiro
-   salvezza, perché il Seme si limita ad aspettare.
-2. **La firma.** Il cabochon si scioglie nella pelle e lascia una vena violetta
-   nel palmo. Se chi firma porta un anello o un gioiello sulla mano, il Seme ci
-   si incastona: per Artemis, **nell'Anello**, che è proprio quello che Varis
-   gli chiede. L'Anello reagisce come nel riquadro «La reazione dell'Anello».
-3. **L'anticipo.** Alla firma il debitore riceve il **Frammento di Mercato**:
-   una volta sola, −25% su un acquisto oppure +4 di circostanza a una prova di
-   contrattazione o di Usare Oggetti Magici.
-4. **Il filo.** Chi tiene l'altro capo, il creditore, sa sempre in che
-   direzione e a che distanza si trova il debitore, se è sullo stesso piano.
-5. **La voce.** Il creditore può parlare al debitore, telepaticamente, un
-   minuto al giorno. Una volta alla settimana può tentare una
-   ***suggestione*** (Volontà **CD 16**). È il «controllo» che l'Anello può
-   spezzare con *Dawn's Defiance*.
-6. **La riscossione.** Una carica sola, e **appartiene al creditore**, non a chi
-   porta il Seme. Una volta il creditore chiede il pagamento: un favore, una
-   consegna, un silenzio. Niente obbliga il debitore a pagare. Chi rifiuta
-   però diventa **insolvente**, e da quel momento il creditore è libero di
-   **vendere il filo** a chi vuole.
-7. **Il recesso prima della firma.** Estirparlo pulito o disfarlo: Sapienza
-   Magica **CD 20**. *Dissolvi magie* lo spegne per 1d4 round.
-8. **Il recesso dopo la firma.** Il contratto si chiude **pagando la
-   riscossione**. In alternativa *spezzare incantamento* o *rimuovi
-   maledizione* con prova di livello dell'incantatore **CD 20**, oppure
-   *desiderio*.
+> *3. Al debitore, una volta sola, l'anticipo: il Frammento di Mercato. Vale
+> un quarto in meno su un acquisto, oppure un aiuto a strappare un prezzo o a
+> farsi obbedire da un oggetto magico.*
+>
+> *4. Il creditore sa sempre in che direzione e a che distanza sta il
+> debitore, purché siano sullo stesso piano.*
 
-**Cosa *identificare* NON dice.** Il nome del creditore, le sue intenzioni, il
-legame con il Collezionista. Mostra soltanto **la firma della bottega**, incisa
-dentro la pietra e visibile solo alla luce dell'incantesimo: una bilancia con
-un filo d'argento avvolto al giogo. La rivedranno a Rethmar, sull'insegna di
-Varis, e allora capiranno.
+> *5. Il creditore parla al debitore nella testa, un minuto al giorno. Una
+> volta alla settimana gli dà un consiglio, e chi non sta in guardia lo segue.*
+>
+> *6. La riscossione è una sola, e la tiene il creditore. Chiede una volta:
+> un favore, una consegna, un silenzio. Nessuno obbliga a pagare. Chi rifiuta
+> diventa insolvente, e da quel giorno il creditore vende il filo a chi vuole.*
+>
+> *7. Prima della firma, chi conosce il mestiere della magia estirpa la pietra
+> pulita, o la disfa. Un incanto che dissolve la spegne per pochi istanti.*
 
-**A ≈372 DR il creditore non c'è ancora.** Varis nascerà fra quasi mille anni.
-Il contratto è intero, il filo non porta da nessuna parte e la voce tace. Se
-qualcuno firma lì, l'anticipo arriva subito e la vena si chiude, ma filo, voce
-e riscossione **si accendono solo al ritorno nel 1372**. Quel giorno Varis
-scopre un debitore che ha firmato mille anni prima di lui, e per un mercante
-non c'è niente di più interessante.
+> *8. Dopo la firma, il contratto si chiude pagando la riscossione. Lo scioglie
+> anche chi spezza gli incanti o toglie le maledizioni, se ha la forza che
+> serve. Oppure un desiderio.*
+>
+> *In fondo alla pagina, al posto del nome, una bilancia con un filo d'argento
+> avvolto al giogo.*
+
+> **Per il giocatore di Artemis — le regole** (fuori dal gioco)
+>
+> **L'oggetto.** Oggetto magico: **non** è un artefatto e **non** è
+> maledetto. *Identificare* (Identify) funziona e rivela tutto, senza il
+> controllo dell'1% delle maledizioni. Aura moderata di Trasmutazione e
+> Ammaliamento, livello dell'incantatore 9. Un cabochon violetto grande come
+> l'unghia del pollice, pesante come un pugno di piombo, sempre tiepido.
+>
+> 1. **Chi firma.** Contatto a pelle nuda, anche involontario. Nessun tiro
+>    salvezza. Con guanto, panno o pinza non firmi, ma la voce arriva lo stesso.
+> 2. **La firma.** Vena violetta nel palmo. Se sulla mano porti un anello o un
+>    gioiello, il Seme ci si incastona: per Artemis, nell'Anello. Come reagisce
+>    l'Anello te lo dice il DM.
+> 3. **L'anticipo.** Il Frammento di Mercato, una volta sola: −25% su un
+>    acquisto, **oppure** +4 di circostanza a una prova di contrattazione o di
+>    Usare Oggetti Magici (Use Magic Device).
+> 4. **Il filo.** Il creditore conosce direzione e distanza del debitore, se è
+>    sullo stesso piano.
+> 5. **La voce.** Telepatia, 1 minuto al giorno. 1 volta alla settimana
+>    una *suggestione* (Suggestion), tiro salvezza sulla Volontà (Will)
+>    **CD 16**. È il controllo che l'Anello può spezzare con *Dawn's Defiance*.
+> 6. **La riscossione.** 1 carica, e appartiene al creditore, non a chi porta
+>    il Seme: un favore, una consegna, un silenzio. Niente ti obbliga a pagare.
+>    Se rifiuti diventi insolvente, e il creditore può vendere il filo a chiunque.
+> 7. **Uscirne prima della firma.** Estirparlo pulito o disfarlo: Sapienza
+>    Magica (Spellcraft) **CD 20**. *Dissolvi magie* (Dispel Magic) lo spegne
+>    per 1d4 round.
+> 8. **Uscirne dopo la firma.** Pagando la riscossione. Oppure *spezzare
+>    incantamento* (Break Enchantment), *rimuovi maledizione* (Remove Curse)
+>    o *dissolvi magie superiore* (Greater Dispel Magic) con prova di livello
+>    dell'incantatore **CD 20**, oppure *desiderio* (Wish). Il contratto si
+>    scioglie, l'anticipo già speso resta speso.
+>
+> **Cosa *identificare* non dice.** Chi è il creditore e cosa vuole. Mostra
+> soltanto la firma della bottega, incisa dentro la pietra: la bilancia con il
+> filo d'argento avvolto al giogo.
+>
+> **A ≈372 DR il creditore non c'è ancora.** Il contratto è intero, ma il filo
+> non porta da nessuna parte e la voce tace. Se firmi qui, l'anticipo arriva
+> subito e la vena si chiude; filo, voce e riscossione si accendono solo al
+> ritorno nel 1372.
+
+> **Solo per il DM: *dissolvi magie superiore* (Greater Dispel Magic).**
+> Vale la regola 3.5
+> com'è scritta, ed è nella clausola 8. *Dissolvi magie superiore* ha una
+> possibilità di dissolvere tutto ciò che *rimuovi maledizione* può rimuovere
+> (PHB 3.5, p. 223), e la clausola 8 dice che *rimuovi maledizione*
+> funziona. Quindi:
+> - **prima della firma**, sulla pietra: come *dissolvi magie*, la spegne per
+>   1d4 round e non la distrugge;
+> - **dopo la firma**, sul debitore: prova di dissolvere (1d20 + livello
+>   dell'incantatore, massimo +20) contro **CD 20** (11 + LI 9 del Seme). Se
+>   riesce, il contratto si scioglie come con *rimuovi maledizione*: la vena
+>   sparisce, filo, voce e riscossione si spengono. L'anticipo già speso resta
+>   speso.
+> - *Dawn's Defiance* dell'Anello spezza solo la voce (clausola 5), non il
+>   debito.
+
+**Quello che il foglio non dice, e il DM sa.** Il creditore è Varis, e
+*identificare* non rivela il suo nome, le sue intenzioni né il legame con il
+Collezionista. Per Artemis l'incastonatura nell'Anello della clausola 2 è
+proprio quello che Varis gli chiede. La firma della bottega si vede solo
+alla luce dell'incantesimo; i PG la rivedranno a Rethmar, sull'insegna di Varis, e
+allora capiranno. A ≈372 DR Varis nascerà fra quasi mille anni: se qualcuno
+firma lì, al ritorno nel 1372 Varis scopre un debitore che ha firmato mille
+anni prima di lui, e per un mercante non c'è niente di più interessante.
 
 #### La scena al tavolo — l'ora della pergamena
 
@@ -699,11 +756,14 @@ non c'è niente di più interessante.
 4. **Il posto.** Brynja non la vuole sull'incudine della cappella («non qui»,
    una volta, e la seconda più piano). Kettra la lascia fare nella bottega,
    dietro la porta foderata di piombo.
-5. **Il DM legge le clausole** 1-8 a voce, nell'ordine, poi la firma della
-   bottega. Niente sul creditore.
+5. **Il DM legge il contratto.** Alla fine dell'ora, prima il read-aloud qui
+   sotto, poi il contratto del riquadro «Il contratto del Seme, per intero»,
+   a voce e in due tempi, con una pausa dopo la clausola 4. Poi consegna ad
+   Artemis il foglio, con il riquadro delle regole. Niente sul creditore.
 6. **Dopo**, il gruppo decide: estirparlo (CD 20), tenerlo com'è, darlo a
    qualcuno, firmarlo. Ogni strada è nella tabella «Meccanica sintetica» qui
-   sopra, con la correzione dell'ultimo paragrafo per chi firma a ≈372 DR.
+   sopra, con la correzione del paragrafo «A ≈372 DR il creditore non c'è
+   ancora» per chi firma a ≈372 DR.
 
 > **Read-aloud (Andor lead) — per Artemis, alla fine dell'ora.** *La pergamena
 > si accartoccia in cenere tiepida. Sotto il guanto la gemma pesa e scalda
@@ -1567,10 +1627,10 @@ la gente smette di parlare.
 > i bambini e i vecchi scendono verso le miniere con un fagotto ciascuno, e al
 > vostro passaggio la gente smette di parlare. La sala è lunga quanto una
 > strada, e i pilastri sono ancora bianchi. In fondo, su un seggio di pietra
-> fredda senza cuscino, c'è un nano vecchissimo in armatura, con una grande
-> ascia appoggiata al ginocchio: sulla lama c'è un disegno di brina che non si
-> scioglie. Si alza piano, un pezzo alla volta, come si carica un carro, e
-> guarda solo la fronte di chi porta la corona.
+> fredda senza cuscino, c'è un nano vecchissimo in armatura. Tiene una grande
+> ascia appoggiata al ginocchio, e sulla lama c'è un disegno di brina che non si
+> scioglie. Il vecchio si alza piano, un pezzo alla volta, come si carica un
+> carro, e guarda solo la fronte di chi porta la corona.
 > Sulla panca accanto, un altro vecchio resta seduto.*
 
 **Scheda d'entrata — Re Thorek I, il re di una fortezza giovane**
@@ -1867,8 +1927,8 @@ l'odore di zolfo copre quello del carbone.
 > **Read-aloud (Andor lead) — la bottega.** *Una porta bassa, foderata di
 > piombo. Dentro l'aria sa di zolfo e punge gli occhi. Sul banco, in fila come
 > soldati, fiasche di terracotta tappate con la cera, e sotto il banco una cassa di
-> sabbia per quando qualcosa va storto. Una nana senza sopracciglia ne riempie
-> una col cucchiaio, piano. A metà il cucchiaio le trema, e lei ride.*
+> sabbia per quando qualcosa va storto. Una nana senza sopracciglia riempie
+> una fiasca col cucchiaio, piano. A metà il cucchiaio le trema, e lei ride.*
 
 **Scheda d'entrata — Kettra, l'alchimista del re**
 
@@ -2469,9 +2529,9 @@ qui. Quello che hanno **venduto** resta qui, e ritorna come **reliquia** (§7).
 
 > **Read-aloud (Andor lead) — la postierla.** *A notte fonda si apre una
 > feritoia bassa nella roccia viva, di quelle che gli esploratori usano da
-> sempre e che nessun cronista scrive. Il fiato esce bianco nel freddo. Durin vi
-> accompagna fino all'imboccatura, vi mette una mano guantata sul braccio, apre
-> la bocca e la richiude.*
+> sempre e che nessun cronista mette per iscritto. Il fiato esce bianco nel
+> freddo. Durin vi accompagna fino all'imboccatura, vi mette una mano guantata
+> sul braccio, apre la bocca e la richiude.*
 
 **DURIN (piano, alla fine):** *«Tornate. Il Padre non butta via un dono così.»*
 
@@ -2505,13 +2565,13 @@ La terza riga è un **errore fecondo**: un tavolo che va a «salvare il nano
 prigioniero» trova Balvar lo stesso, e la trattativa della Scena 7 comincia con
 un equivoco che gli conviene.
 
-> **Read-aloud (Salvatore lead) — il campo.** *Fuori dalle mura il buio è vivo:
-> diecimila fra orchetti, hobgoblin e cose peggiori dormono attorno a mille
-> fuochi, e il campo si stende fino
-> all'orizzonte come un mare in cui ogni onda è una gola che russa. L'aria sa
-> di grasso bruciato, di ferro e di bestia, e da qualche parte, al centro, c'è
-> la tenda del generale. Fra i fuochi passano le ronde, e lontano ulula un
-> lupo. Un passo falso, e il mare si sveglia tutto insieme.
+> **Read-aloud (Salvatore lead) — il campo.** *Fuori dalle mura il buio è vivo.
+> Diecimila fra orchetti, hobgoblin e cose peggiori dormono attorno a mille
+> fuochi, e il campo si stende fino all'orizzonte: un mare in cui ogni onda è
+> una gola che russa. L'aria sa di grasso bruciato, di ferro e di bestia, e da
+> qualche parte, al centro, c'è la tenda del generale. Fra i fuochi passano le
+> ronde, e lontano ulula un lupo. Un passo falso, e il mare si sveglia tutto
+> insieme.
 > Che fate?*
 
 
@@ -2858,9 +2918,9 @@ solo i gridi `[INFERRED — needs DM confirmation: la portata del sussurro]`.
 
 > **Read-aloud (Salvatore lead) — dentro.** *Fa caldo, e c'è puzza di sangue
 > secco e di carne mezza cruda. Sulla tavola, una mappa di Hammerfist piena di
-> croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, un
-> mezzo-ogre grande quanto una porta di stalla, con una pietra nera al posto
-> dell'occhio destro e l'ascia appoggiata alla spalla, racconta alle guardie
+> croci rosse. In fondo, su un seggio di vertebre e di teschi inchiodati, c'è un
+> mezzo-ogre grande quanto una porta di stalla. Ha una pietra nera al posto
+> dell'occhio destro e l'ascia appoggiata alla spalla. Racconta alle guardie
 > come impalerà il re sul bastione più alto, e ride da solo.
 > Quattro hobgoblin in armatura nera ascoltano, le mani sulle armi.*
 
@@ -3263,7 +3323,7 @@ Balvar è morto da mille anni comunque vada. Ma:
 > **Read-aloud (Salvatore lead) — la tenda, il seggio.** *Il mezzo-ogre si alza
 > dal seggio, e i teschi inchiodati sbattono fra loro come nacchere. Non grida
 > subito. Prima gira la testa, e la pietra nera dove dovrebbe esserci l'occhio
-> si ferma sul più vicino di voi. Poi l'ascia lascia la spalla.*
+> si ferma sul più vicino di voi. Poi l'ascia scende dalla spalla.*
 >
 > **Che fate?**
 
@@ -3638,11 +3698,12 @@ con un **terrore reverenziale mal mascherato**.
 > renderlo **Sal**. Nella scena non è un innocente ingenuo: è un uomo che ha
 > già scelto l'ombra, e che ora vede in VOI un potere che vorrebbe rubare.
 
-> **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda, vestito di ombre cucite bene,
-> con qualcosa avvolto in un panno stretto al petto. Non attacca. Non scappa
-> nemmeno, subito. Vi fissa come si fissa una cosa che non dovrebbe esistere, e sussurra,
-> più a sé stesso che a voi: «…quattro. Eravate davvero in quattro.» Poi torna la
-> maschera, un sorriso freddo, un passo indietro verso l'ombra. Che fate?*
+> **Read-aloud (Andor lead) — fra le tende, l'incontro che non capiscono.** *Tra due tende c'è un uomo che non è dell'orda.
+> Veste ombre cucite bene, e stringe al petto qualcosa avvolto in un panno.
+> Non attacca. E non scappa, non subito. Vi fissa come si fissa una cosa che
+> non dovrebbe esistere, e sussurra, più a sé stesso che a voi: «…quattro.
+> Eravate davvero in quattro.» Poi gli torna la maschera: un sorriso freddo, e
+> un passo indietro verso l'ombra. Che fate?*
 
 
 **A parte, al giocatore di Artemis**, subito dopo:
@@ -3779,7 +3840,7 @@ Poi, quando le prime scale arrivano in cima, arriva il capitano delle mura.
 | **Hald, il nipote di Balvar** | nano di diciannove anni, di guardia sul camminamento est col gruppo di Hrodgar; la barba ancora corta, l'ascia troppo nuova. Non sa che lo zio esiliato è vivo, né che è nel campo di Zog'tar | poco e a bassa voce, da recluta; si drizza quando passa il capitano |
 
 > **Read-aloud (Salvatore lead) — il camminamento.** *Il camminamento è largo
-> quanto un tavolo da pranzo e lungo quanto la fortezza, e sotto l'orda non
+> quanto un tavolo da pranzo e lungo quanto la fortezza. Sotto, l'orda non
 > urla più: ha smesso quando ha cominciato a salire, e il silenzio che ha
 > lasciato è peggio. Un uncino morde la pietra a tre passi da voi, poi un
 > altro, poi sei insieme. Il capitano delle mura guarda voi, non i suoi.*
@@ -3947,7 +4008,7 @@ rovesciati, con la stessa prova.
 > direzione. Un nano vicino a voi lascia
 > cadere lo scudo e non si china a raccoglierlo.*
 >
-> *Dove passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
+> *Dove il drago passa basso, la pietra fuma. L'acido gli cola dalle fauci chiuse e si mangia il selciato come acqua
 > nella neve.*
 >
 > **Che fate?**
@@ -4090,7 +4151,7 @@ cambia davvero.
 
 
 > **Read-aloud (Salvatore lead) — la runa sotto la scaglia.** *Sotto la scaglia
-> calda del petto, più pallida delle altre, corre una riga di rune naniche
+> calda del petto, più pallida delle altre, corrono righe di rune naniche
 > incise a punta, fitte come i conti di un mercante. L'ultima riga è più piccola e
 > più fonda delle altre, ed è quella che il drago non ha mai letto.*
 
@@ -4300,10 +4361,11 @@ che l'incontro ha appena scelto.
 > la risposta vera è «nessuno», e il silenzio del cortile la conferma.*
 
 > **Read-aloud (LotR lead) — l'incudine, e l'incasso che si chiude.** *L'altare
-> è un'incudine, e si vede: il piano è segnato da mille anni di martelli, in un
-> cortile pieno di feriti. Nessuno l'ha toccata, eppure sul ferro, dove un
-> attimo fa non c'era niente, adesso c'è una pietra rossa grande come una noce,
-> ancora calda come appena uscita dal fuoco. I nani più vicini fanno un passo indietro, e nessuno spiega niente.
+> è un'incudine, e si vede: il piano è segnato da mille anni di martelli.
+> Intorno, il cortile è pieno di feriti. Nessuno l'ha toccata, eppure sul ferro,
+> dove un attimo fa non c'era niente, adesso c'è una pietra rossa grande come
+> una noce, calda come se uscisse in quel momento dal fuoco. I nani più vicini
+> fanno un passo indietro, e nessuno spiega niente.
 > Tutti guardano la corona, e l'incasso vuoto si riempie. La pietra nuova non
 > si mescola alla luce delle altre due: batte da sola, come un secondo cuore, e
 > tira verso un punto che nessuno nel cortile vede. Il metallo si scalda
@@ -4433,8 +4495,8 @@ L'accensione si legge in tre battute, di fila, senza fermarsi per i tiri.
 
 > **Read-aloud (Casa di Davide lead) — l'incudine, 1 di 3: la profezia compiuta.** *L'orda,
 > senza generale e senza drago a spronarla, si sfalda come sabbia, e
-> Hammerfist regge. Sulla fronte di Thorik il Rubino, che all'incudine la
-> luce l'ha presa, adesso la dà: calda come sangue, e non si abbassa. Un nano
+> Hammerfist regge. All'incudine il Rubino ha preso la luce; adesso, sulla
+> fronte di Thorik, la dà: calda come sangue, e non si abbassa. Un nano
 > vicino alla forgia si toglie l'elmo e non sa perché.*
 
 > **Read-aloud (Salvatore) — l'incudine, 2 di 3: il canto.** *Poi la pietra
