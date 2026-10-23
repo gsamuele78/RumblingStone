@@ -22,6 +22,29 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 Il primo rilascio con un numero. Raccoglie il lavoro fatto dal 2026-09-30 a
 oggi e fissa la piattaforma da cui partono i rilasci successivi.
 
+### Cosa promette la 1.0.0, e cosa no
+Stabile vuol dire che da qui in avanti un cambiamento incompatibile della
+superficie pubblica alza il primo numero. Su cosa si regge la promessa, al
+2026-10-23:
+- gli ultimi 30 run della CI su `main` sono verdi (dal 2026-10-15), con
+  oltre 2.000 prove automatiche e i cancelli bloccanti di `ci.yml`;
+- la CLI `dm.py` e i contratti dei file hanno uno schema e sono stati usati a
+  serate vere del primo tavolo;
+- l'archivio delle skill si costruisce in modo riproducibile: tre costruzioni
+  dello stesso commit danno gli stessi byte.
+
+Cosa la 1.0.0 **non** promette:
+- gli strumenti nel canale testing (ruff, uv, pytest-xdist, il job dei
+  convertitori) possono cambiare o sparire senza un numero nuovo: non fanno
+  parte della superficie pubblica;
+- il workflow Release stesso è in testing fino al suo primo giro completo,
+  che è questo rilascio;
+- il contenuto di gioco (archi, Bestiario, prosa) cambia a ogni giro di
+  letture e non è coperto dal versionamento: la versione dice com'erano gli
+  strumenti e le skill, non quale canone è definitivo;
+- alcune decisioni sono ancora «proposta» (per esempio ADR-0095, il giro delle letture) e
+  il lotto P6 della piattaforma (un solo controllo della Python) non è fatto.
+
 ### Piattaforma
 - **Una Python sola, 3.13**, quella di Debian 13, ovunque: CI, Dockerfile,
   `binari.py`, `converters/`. Si sale con Debian 14 (ADR-0099).
@@ -53,4 +76,4 @@ oggi e fissa la piattaforma da cui partono i rilasci successivi.
   master ARC-07 al ciclo del master, il modulo autonomo del Drappo di Tarsilia
   e quello dell'Abbazia.
 - 18 skill, impacchettate per agente da `build-skills.sh`.
-- 96 ADR, i piani in `plans/` con il loro indice, oltre 2.000 prove automatiche.
+- 97 ADR, i piani in `plans/` con il loro indice, oltre 2.000 prove automatiche.

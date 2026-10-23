@@ -16,6 +16,8 @@
 | [`README.md`](../README.md) | Panoramica del repo |
 | [`AGENTS.md`](../AGENTS.md) | Regole operative per agenti/collaboratori (canone, no-invenzione, struttura) |
 | **questo file** (`docs/INDEX.md`) | Indice maestro della documentazione |
+| [`docs/ARCHITETTURA.md`](ARCHITETTURA.md) | **Architettura** in 20 diagrammi Mermaid: infrastruttura software, integrazione fra strumenti e fonti, casi d'uso per attore, rami, la serata, il ciclo del master e il giro delle letture, prosa, mappe, booklet, skill, PR, decisioni, canali, rilascio |
+| [`CHANGELOG.md`](../CHANGELOG.md) · [`docs/RILASCIO.md`](RILASCIO.md) | Versioni del progetto e come si rilascia (ADR-0100) |
 
 ## 2. Tool & script (automazione DM)
 
