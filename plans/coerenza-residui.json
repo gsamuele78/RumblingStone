@@ -1,4 +1,9 @@
 {
   "nota": "Contraddizioni fra scene e archi che coerenza_campagna.py trova e che aspettano la decisione del DM. Una riga si toglie quando i master sono allineati; una contraddizione nuova blocca la CI.",
-  "residui": []
+  "residui": [
+    {"chiave": "hobgoblin sergenti", "attributo": "CA", "ragione": "ARC07-DEF-5 usa la voce del Bestiario ricalcolata (CA 21, D78); ARC08-01 stampa CA 18. Da decidere quale scheda resta"},
+    {"chiave": "hobgoblin sergenti", "attributo": "GS", "ragione": "come sopra: GS 5 in ARC07-DEF-5, GS 4 in ARC08-01"},
+    {"chiave": "hobgoblin sergenti", "attributo": "pf", "ragione": "come sopra: 37 pf in ARC07-DEF-5, 38 in ARC08-01"},
+    {"chiave": "orog guardie nere", "attributo": "GS", "ragione": "ARC08-01 stampa Guerriero 5 GS 6, ARC08-02 rimanda al Bestiario con Guerriero 6 GS 7. Da decidere quale scheda resta"}
+  ]
 }

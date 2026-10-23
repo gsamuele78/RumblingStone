@@ -914,7 +914,7 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 *(Statistiche e tattiche complete per ogni tipo di unità)*
 
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12).
-*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5).
+*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 6), Sergenti Hobgoblin (GS 4).
 *   **Supporto Magico:** Doom Hand Warpriests (GS 6, **Tattica:** potenziano le prime linee e usano *Dissolvi Magie*), War Adepts (GS 5, **Tattica:** aprono con *Palla di Fuoco* sulle unità compatte), Shamani Draconici (GS 6, **Tattica:** forniscono resistenza al fuoco e buff).
 *   **Artiglieria:** Giganti delle Colline (GS 7, **Tattica:** bombardano le mura da lontano), Ettin Standard (GS 6).
 *   **Cavalleria:** Goblin Worg Riders (GS 3, **Tattica:** aggirano i fianchi per colpire arcieri e maghi).
@@ -996,12 +996,11 @@ For 15, Des 12, Cos 14, Int 10, Sag 11, Car 9.
 #### **HOBGOBLIN SERGENTI (30 individui integrati)**
 *Leader di Unità, 2ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 5° liv., GS 5; scheda del Bestiario, hobgoblin-sergente-cr5):
+STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 5° liv., GS 4):
 LM Umanoide Medio; 
 Iniz +1; 
-CA 21 (armatura completa +8, scudo pesante +2, Des +1); PF 37 (5d10+10); 
-TS Temp +6, Rifl +2, Vol +1; 
-Att Spada lunga perfetta +9 (1d8+4/19-20) o Arco lungo +6 (1d8/×3); 
+CA 18 (armatura completa, scudo pesante); PF 38 (5d10+10); 
+Att Spada Lunga +9 (1d8+3/19-20); 
 Capacità: Leadership tattica (+1 morale ai guerrieri entro 9m).
 ```
 #### **GOBLIN WORG RIDERS (5 Unità, 50 coppie)**
@@ -1068,14 +1067,13 @@ For 19, Des 8, Cos 19, Int 6, Sag 10, Car 11.
 #### **OROG GUARDIE NERE (4 Orog scelti)**
 *Guardia del Corpo del Generale, 4ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (Orog Guerriero di 6° liv., GS 7; scheda del Bestiario, orog-guardia-nera-guerriero6-cr7, ⚠ Non SRD):
-LM Umanoide Medio (orco); 
-Iniz +4; 
-CA 19 (armatura completa +1); 
-PF 63 (6d10+30); 
-TS Temp +10, Rifl +2, Vol +4; 
-Att Ascia bipenne +1 +13/+8 (1d12+10/x3); 
-Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata e Specializzata (ascia bipenne), Iniziativa Migliorata, Volontà di Ferro. 
+STATISTICHE CREATURA SINGOLA (Orog Guerriero di 5° liv., GS 6):
+LM Umanoide Mostruoso Medio; 
+Iniz +0; 
+CA 19 (armatura completa+1); 
+PF 52 (5d10+25); 
+Att Ascia bipenne+1 +12 (1d12+7/x3); 
+Attacco Poderoso, Incalzare. 
 For 20, Des 10, Cos 20, Int 12, Sag 11, Car 8.
 ```
 
@@ -2417,7 +2415,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 
 ### **ESERCITO DELLA MANO ROSSA (900 unità)**
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12)
-*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5)
+*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 6), Sergenti Hobgoblin (GS 4)
 *   **Supporto Magico:** Doom Hand Warpriests (GS 6), War Adepts (GS 5), Shamani Draconici (GS 6)
 *   **Artiglieria:** Giganti delle Colline (GS 7), Ettin Standard (GS 6)
 *   **Cavalleria:** Goblin Worg Riders (GS 3)

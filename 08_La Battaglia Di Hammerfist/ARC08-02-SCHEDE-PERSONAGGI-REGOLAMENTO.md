@@ -868,9 +868,9 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 
 *Questa non è un'unità a sé stante, ma un insieme di leader che comandano le unità di Fanteria e Guerrieri Hobgoblin. Ogni unità di Hobgoblin ha un Sergente integrato.*
 
-**Statistiche del Leader (se affrontato singolarmente)**, dalla scheda del Bestiario `Bestiario/mostri/hobgoblin-sergente-cr5.md`:
-**GS:** 5 | **CA:** 21 | **PF:** 37 | **TS:** Temp +6, Rifl +2, Vol +1
-**Attacco:** *Spada lunga perfetta* +9 in mischia (1d8+4/19-20) o *Arco lungo* +6 (1d8/×3)
+**Statistiche del Leader (se affrontato singolarmente):**
+**CA:** 18 | **PF:** 38 | **TS:** Temp +6, Rifl +2, Vol +2
+**Attacco:** *Spada Lunga* +9 in mischia (1d8+3/19-20)
 
 > Il **sergente dell'avanguardia** della Sessione 1 non è questo: è un
 > hobgoblin guerriero 6° in armatura completa (GS 6, CA 21, 50 pf), più

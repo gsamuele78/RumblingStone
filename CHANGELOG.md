@@ -38,7 +38,6 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
   rete non risponde. Job CI `riscontro-srd`, non bloccante.
 ### Modificato
-- ARC-08: i sergenti hobgoblin e le guardie nere orog prendono le schede del Bestiario; `plans/coerenza-residui.json` è vuoto, quindi ogni contraddizione fra ARC-07 e ARC-08 blocca la CI.
 - La norma `italiano-nativo` §1 e §8 vieta il possessivo solo sulle parti del corpo e sulle cose addosso; gli altri sono liberi (decisione del DM, 2026-10-23).
 - `coerenza_campagna fronti`: un orologio che dichiara `unita` (giorni, ore) tiene la sua durata invece di 4, 6 o 8 tacche. La CI controlla i file `ARCnn-FRONTI.yaml` degli archi, canone da ARC-08 in poi.
 - `migliora_prosa migliora` tiene l'originale quando anche la migliore candidata ha meno di 0,5 contro di lui: dal voto del 2026-10-23 il modello di preferenza supera la soglia scritta prima di addestrarlo (PR #264).
