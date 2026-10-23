@@ -176,7 +176,9 @@ jobs:
   attest:
     name: Provenienza
     needs: [decide, build]
-    if: needs.build.result == 'success' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+    # always(): sulla prova di una PR `verify` è saltato, e senza always() un
+    # salto a monte salta anche questo job, anche con `build` riuscito.
+    if: always() && needs.build.result == 'success' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -193,7 +195,7 @@ jobs:
     name: Tag e rilascio GitHub
     needs: [decide, build, attest]
     if: >-
-      needs.attest.result == 'success' && github.event_name != 'pull_request'
+      always() && needs.attest.result == 'success' && github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
