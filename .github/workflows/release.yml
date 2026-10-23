@@ -98,6 +98,19 @@ jobs:
             go=false
           fi
           echo "go=$go" >> "$GITHUB_OUTPUT"
+      # I job dopo eseguono il codice del commit scelto con i permessi del ramo
+      # principale (CodeQL: cache poisoning). Fuori dalla prova di una PR quel
+      # commit deve stare già nella storia di main: un tag spinto su un commit
+      # che main non contiene, o una versione chiesta a mano che punta altrove,
+      # si ferma qui.
+      - name: Il commit da rilasciare è già su main
+        if: steps.plan.outputs.release == 'true' && github.event_name != 'pull_request'
+        env:
+          SHA: ${{ steps.plan.outputs.sha }}
+        run: |
+          git fetch -q origin main
+          git merge-base --is-ancestor "$SHA" origin/main \
+            || { echo "::error::$SHA non è nella storia di main: non si rilascia"; exit 1; }
 
   # Le note pubblicate seguono il CHANGELOG: una sezione corretta raggiunge il
   # suo rilascio al push successivo. Modificare un rilascio non crea ref.
@@ -134,7 +147,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
-        with: { ref: "${{ needs.decide.outputs.sha }}" }
+        with: { ref: "${{ needs.decide.outputs.sha }}", persist-credentials: false }
       - uses: actions/setup-python@v7
         with: { python-version: "3.13" }
       - name: Il tag e la versione nel codice coincidono
@@ -196,7 +209,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v7
-        with: { ref: "${{ needs.decide.outputs.sha }}" }
+        with: { ref: "${{ needs.decide.outputs.sha }}", persist-credentials: false }
       - uses: actions/setup-python@v7
         with: { python-version: "3.13" }
       - uses: actions/download-artifact@v8
