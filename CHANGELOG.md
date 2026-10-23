@@ -17,6 +17,15 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ## [Non rilasciato]
 
+### Aggiunto
+- `dm.py maps pianta`: il tema «pianta» delle mappe tattiche, nello stile delle
+  piante delle città, in `rendered-pianta/` (ADR-0102). ARC-07 l'ha adottato.
+- `dm.py maps citta [rethmar|dauth|channathgate] [--check]` e
+  `scripts/genera_pianta_citta.py`: le piante delle città si rifanno dai loro
+  programmi in `scripts/piante/`. Con una scheda `*.watabou.json` il comando
+  resta quello di prima.
+- shapely 2.2.0 in `requirements-dev.txt`, canale testing.
+
 ## [1.0.0] - 2026-10-23
 
 Il primo rilascio con un numero. Raccoglie il lavoro fatto dal 2026-09-30 a
