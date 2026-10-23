@@ -22,6 +22,9 @@ python3 scripts/dm.py maps render "<percorso>/<MASTER>.md"
 # controllare che tutti gli SVG del repo siano in sync coi master
 python3 scripts/dm.py maps validate
 
+# le stesse mappe nello stile delle piante delle città → rendered-pianta/ (§5.4)
+python3 scripts/dm.py maps pianta "<percorso>/<MASTER>.md"
+
 # PNG ad alta risoluzione (stampa / import manuale in un VTT)
 python3 scripts/export_map_png.py "<percorso>/rendered/<mappa>.svg" --scale 3
 
@@ -615,6 +618,47 @@ quale carta dell'assedio viene ogni parametro e quali il canone non fissa.
 
 Le cinque mappe tattiche dell'assedio (carte A-E) sono griglie del repo, in
 `Mappe/dauth-assedio/`, compilate dai loro contratti JSON e collaudate.
+
+### 5.4 Le piante delle città del repo e il tema pianta (ADR-0102)
+
+Le piante che fanno fede per Rethmar, Dauth e Channathgate non vengono da
+Watabou: le disegna il generatore del repo, in `scripts/piante/`. Il motore
+`organica.py` fa i quartieri (celle di Voronoi rilassate), le vie sui loro
+bordi, i lotti e le mura con le torri. Un programma per città (`rethmar.py`,
+`dauth.py`, `channathgate.py`) fissa la forma, il seme e le taglie scelte dal
+DM, e scrive la legenda con i numeri dei luoghi. Serve `requirements-dev.txt`
+(shapely, numpy, scipy). La sera al tavolo si stampa l'SVG committato.
+
+```bash
+# rifà la pianta di una città nel suo posto canonico, e stampa i conti
+python3 scripts/dm.py maps citta rethmar
+# controlla che le tre piante committate siano quelle che i programmi producono
+python3 scripts/dm.py maps citta --check
+# una prova da guardare senza toccare la pianta vera
+python3 scripts/genera_pianta_citta.py dauth -o /tmp/dauth-prova.svg
+```
+
+Per cambiare una pianta si cambia il programma, mai l'SVG: un numero della
+legenda fuori posto si sposta nel programma e la pianta si rigenera. Poi si
+guarda il risultato a occhio, perché il controllo dice solo che la pianta è
+quella del programma, non che è giusta.
+
+Lo stesso stile vale per le mappe tattiche: `--tema pianta` disegna una griglia
+emoji con la roccia tratteggiata e i bordi frastagliati, il lastricato a corsi
+e i terreni con la loro trama, poi sotto la mappa il riquadro «Luoghi» (le
+`@mark`) e la legenda. La griglia, i simboli e le celle calpestabili sono gli
+stessi della pergamena: la roccia si sposta al massimo di un quarto di quadretto.
+
+```bash
+# le mappe di un master nello stile delle piante → rendered-pianta/
+python3 scripts/dm.py maps pianta "<percorso>/<MASTER>.md"
+# tutte le cartelle che hanno già adottato il tema
+python3 scripts/dm.py maps pianta
+```
+
+Il tema si adotta una cartella alla volta. Dove esiste `rendered-pianta/`,
+`validate_maps` lo vuole completo e allineato ai master, come la pergamena;
+dove non esiste nessuno lo pretende. ARC-07 l'ha adottato il 2026-10-23.
 
 ---
 

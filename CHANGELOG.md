@@ -18,6 +18,13 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `dm.py maps pianta`: il tema «pianta» delle mappe tattiche, nello stile delle
+  piante delle città, in `rendered-pianta/` (ADR-0102). ARC-07 l'ha adottato.
+- `dm.py maps citta [rethmar|dauth|channathgate] [--check]` e
+  `scripts/genera_pianta_citta.py`: le piante delle città si rifanno dai loro
+  programmi in `scripts/piante/`. Con una scheda `*.watabou.json` il comando
+  resta quello di prima.
+- shapely 2.2.0 in `requirements-dev.txt`, canale testing.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).

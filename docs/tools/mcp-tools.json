@@ -586,6 +586,49 @@
       "deterministic": true
     },
     {
+      "name": "genera_pianta_citta",
+      "description": "«Ho spostato una porta di Rethmar nel programma: come rifaccio la pianta, e come so che quella nel repo è ancora quella vera?»\n\nRigenera le piante di Rethmar, Dauth e Channathgate dai loro programmi in scripts/piante/ (motore organica.py: Voronoi, vie, lotti, mura), nel posto canonico; con --check controlla che le piante committate siano identiche a quelle che i programmi producono (ADR-0102).",
+      "use_case": "«Ho spostato una porta di Rethmar nel programma: come rifaccio la pianta, e come so che quella nel repo è ancora quella vera?»",
+      "invocation": "python3 scripts/genera_pianta_citta.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "citta": {
+            "type": "string",
+            "description": "La città da rigenerare.",
+            "enum": [
+              "channathgate",
+              "dauth",
+              "rethmar"
+            ]
+          },
+          "tutte": {
+            "type": "boolean",
+            "description": "Tutte e tre le città."
+          },
+          "check": {
+            "type": "boolean",
+            "description": "Non scrive: controlla che le piante committate siano allineate."
+          },
+          "o": {
+            "type": "string",
+            "description": "Scrive qui invece che nel posto canonico (una città, senza --check)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "09_*/**/*-pianta.svg"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "pianta non allineata o programma fallito",
+        "2": "mancano shapely, numpy o scipy"
+      },
+      "deterministic": true
+    },
+    {
       "name": "import_ultraclear",
       "description": "«Questa vecchia mappa ultra-clear vale la pena portarla al contratto nuovo, o la figura e la tabella si contraddicono?»\n\nModalita' 3 'al contrario': da mappa ultra-clear a bozza del contratto JSON + report conflitti figura vs tabella (regole R1-R12).",
       "use_case": "«Questa vecchia mappa ultra-clear vale la pena portarla al contratto nuovo, o la figura e la tabella si contraddicono?»",
