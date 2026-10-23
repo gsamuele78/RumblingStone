@@ -370,6 +370,62 @@
       "scena": "Atto IV — La Notte della Consegna",
       "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
       "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 2",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se volano?»",
+      "ragione": "falso positivo: le vedette e il cane sono i nani della fortezza, e i pregen sono di casa; nessuno deve passare"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 2",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se sono invisibili?»",
+      "ragione": "falso positivo: le vedette e il cane sono i nani della fortezza, e i pregen sono di casa; nessuno deve passare"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 2",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se sono silenziosi?»",
+      "ragione": "falso positivo: le vedette e il cane sono i nani della fortezza, e i pregen sono di casa; nessuno deve passare"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D4",
+      "scena": "SCENA 2",
+      "dettaglio": "luogo sorvegliato: non dice chi sente il rumore e arriva",
+      "ragione": "falso positivo: le vedette e il cane sono i nani della fortezza, e i pregen sono di casa; nessuno deve passare"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 3",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se volano?»",
+      "ragione": "falso positivo: le sentinelle fanno rapporto al Re, e i pregen sono dalla loro parte; la porta non si supera"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 3",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se sono invisibili?»",
+      "ragione": "falso positivo: le sentinelle fanno rapporto al Re, e i pregen sono dalla loro parte; la porta non si supera"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D2",
+      "scena": "SCENA 3",
+      "dettaglio": "luogo sorvegliato: nessuna risposta a «e se sono silenziosi?»",
+      "ragione": "falso positivo: le sentinelle fanno rapporto al Re, e i pregen sono dalla loro parte; la porta non si supera"
+    },
+    {
+      "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
+      "regola": "D4",
+      "scena": "SCENA 3",
+      "dettaglio": "luogo sorvegliato: non dice chi sente il rumore e arriva",
+      "ragione": "falso positivo: le sentinelle fanno rapporto al Re, e i pregen sono dalla loro parte; la porta non si supera"
     }
   ]
 }

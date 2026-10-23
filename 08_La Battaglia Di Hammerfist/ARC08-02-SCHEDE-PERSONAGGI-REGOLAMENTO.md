@@ -149,12 +149,12 @@
 - **La caduta.** Chi si libera in aria cade dalla quota del drago, 1d6 ogni 3 m fino a 20d6. La fermano *caduta morbida* (bardo, mago e stregone 1°, azione immediata) o una pozione di *volare* bevuta prima. Lo *Scudo del Custode* di Hella prende metà del danno di un alleato entro 9 m, ma solo se lei è in aria vicino a lui `[CANONE — DM 2026-09-12]`.
 
 **Variante: aggrapparsi al drago** `[CANONE — DM 2026-10-20]`. L'SRD non ha una regola per arrampicarsi su una creatura in volo; la più vicina, afferrarsi mentre si cade, è Scalare CD della parete + 20, «praticamente impossibile». Al tavolo vale questa: quando Thorik vince la prova di lotta o di Artista della Fuga, può aggrapparsi al collo invece di cadere con una prova di **Scalare CD 25**. Se fallisce, cade.
-- **Sul collo** `[INFERRED — needs DM confirmation]`: Thorik non è più in lotta e il drago non lo morde, perché è fuori dalla portata della sua bocca. Come chi scala, perde la Destrezza alla CA e non usa lo scudo (SRD, *Climb*), e colpisce con Aegis Fang.
-- **Scrollarselo** `[INFERRED — needs DM confirmation]`: all'inizio di ogni turno di Fauci, Thorik ripete Scalare CD 25. Se fallisce di 5 o più, cade dalla quota del drago. Fauci per toglierselo può anche atterrare, ed è il duello dei round 21-23 con Thorik già addosso.
+- **Sul collo** `[CANONE — DM 2026-10-20]`: Thorik non è più in lotta e il drago non lo morde, perché è fuori dalla portata della sua bocca. Come chi scala, perde la Destrezza alla CA e non usa lo scudo (SRD, *Climb*), e colpisce con Aegis Fang.
+- **Scrollarselo** `[CANONE — DM 2026-10-20]`: all'inizio di ogni turno di Fauci, Thorik ripete Scalare CD 25. Se fallisce di 5 o più, cade dalla quota del drago. Fauci per toglierselo può anche atterrare, ed è il duello dei round 21-23 con Thorik già addosso.
 
 **Colpi mirati: l'occhio e l'ala** `[CANONE — DM 2026-10-20: regola della casa da PF1e, solo per questo scontro]`. L'SRD 3.5 non ha colpi mirati; qui si usano quelli di Pathfinder 1e (*Ultimate Combat*, «Called Shots», OGL). Un colpo mirato è un attacco singolo con un'azione di round completo, contro la CA normale (29, 37 con *armatura magica* e *scudo*). Non si somma alla carica, né a una raffica o a un attacco completo.
 - **L'occhio, −10.** Se colpisce, per 1 round i nemici di Fauci hanno occultamento contro i suoi attacchi, e lui ha −2 a Osservare. Con un critico perde la vista da quell'occhio per 1d4 minuti, e l'effetto di prima dura altrettanto. Non cade e non è accecato: gli restano l'altro occhio e la percezione cieca a 18 m, che però non gli toglie la probabilità di mancare chi è occultato (SRD).
-- **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[INFERRED — needs DM confirmation: la distanza la regola PF1e non la dice]`.
+- **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[CANONE — DM 2026-10-20]` (la distanza la regola PF1e non la dice).
 - **Da dove.** In mischia senza penalità se il bersaglio è adiacente, −2 altrimenti; a distanza le penalità di gittata raddoppiano, minimo −2 oltre i 9 m. Dal collo del drago l'occhio è a portata: meglio Aegis Fang in mano che lanciata, perché un attacco a distanza fatto nello spazio di chi minaccia provoca un attacco di opportunità (SRD).
 
 > **Esito della battaglia — ramo condizionale (D10, non un fatto compiuto)**:
@@ -626,7 +626,10 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **TS** | Temp **+13**, Rifl **+6**, Vol **+8** | |
 | **Attacco Base** | +13 | |
 | **Attacco Melee**| **+21/+16/+11** | *Martello da Guerra degli Avi +2* (1d8+9, critico x3) |
-| **For** 20, **Des** 13, **Cos** 20 | | |
+| **For** 20, **Des** 13, **Cos** 20, **Int** 10, **Sag** 10, **Car** 12 | | |
+
+**Abilità:** Intimidire **+17**, Artigianato (pietra) **+12**, Ascoltare +2, Osservare +2, Percepire Intenzioni +2, Diplomazia +1, Scalare −1, Nascondersi −5, Muoversi Silenziosamente −5.
+**Lingue:** Comune, Nanico.
 
 **ABILITÀ PRINCIPALI:**
 *   **Colpo Devastante (3/giorno):** Come azione gratuita, dichiari un colpo devastante prima di attaccare. Se colpisci, aggiungi **+4d6 danni**.
@@ -653,6 +656,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Melee** | +16/+11, o +14/+9 e +14 con due asce | *Asce Gemelle +2* (1d6+5; la seconda 1d6+3) |
 | **For** 16, **Des** 18, **Cos** 18 | | |
 
+**Abilità:** Osservare **+18**, Ascoltare **+18** (+24 contro gli orchi), Nascondersi **+24**, Muoversi Silenziosamente **+19**, Sopravvivenza **+17** (+19 all'aperto, +23 sulle tracce degli orchi), Scalare **+18**, Conoscenze (natura) **+18** · cannocchiale: senza, le CD per contare l'orda salgono di 10.
+**Lingue:** Comune, Nanico, Gigante.
+
 **ABILITÀ PRINCIPALI:**
 *   **Nemico Prescelto:** Ottieni bonus ai tiri per colpire e ai danni contro: **Orchi (+6)**, **Giganti (+4)**, **Draghi (+2)**.
 *   **Munizioni Speciali:**
@@ -678,6 +684,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Base** | +8 | |
 | **Attacco Melee** | **+14** | *Martello da Guerra Sacro +2* (1d8+5) |
 | **For** 16, **Cos** 20, **Sag** 22, **Car** 16 | | |
+
+**Abilità:** Concentrazione **+20**, Conoscenze (religione) **+16**, Sapienza Magica **+16**, Ascoltare +6, Osservare +6, Percepire Intenzioni +6, Sopravvivenza +6, Guarire +6, Diplomazia +3, Intimidire +3, Artigianato (pietra) +3, Nascondersi −5, Muoversi Silenziosamente −5.
+**Lingue:** Comune, Nanico, Terran.
 
 **ABILITÀ PRINCIPALI:**
 *   **Scacciare Non Morti (10/giorno):** Bonus di +5 al tiro.
@@ -706,6 +715,9 @@ Boost log: ricostruzione di classe (Gue 6/GN 4) — GS 10 → 10 — tornano aur
 | **Attacco Melee** | **+13** | *Stocco Affilato +1* (1d6+3, critico 15-20/x2) |
 | **Attacco Furtivo** | **+3d6** | Danno extra contro bersagli colti alla sprovvista o fiancheggiati. |
 | **Des** 18, **Cos** 18, **Car** 18 | | |
+
+**Abilità:** Diplomazia **+23**, Raggirare **+21**, Intrattenere (canto) **+16**, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7.
+**Lingue:** Comune, Nanico, Orchesco, Goblin (capisce gli ordini dell'orda entro 9 m, Ascoltare CD 15).
 
 **ABILITÀ PRINCIPALI:**
 *   **Musica Bardica (8/giorno):**
@@ -786,7 +798,7 @@ Basandosi sul documento, le strutture di pietra nanica hanno le seguenti statist
 *   **Cancello Principale (Legno rinforzato con Adamantio):**
     *   **CA:** 23
     *   **Durezza:** 20
-    *   **Punti Ferita (PF):** 800
+    *   **Punti Ferita (PF):** 200 `[CANONE — DM 2026-10-21]`
 
 #### **Regola Speciale Consigliata: "Potere d'Assedio"**
 > Le creature di taglia Grande o superiore e le macchine d'assedio che attaccano le strutture sono considerate "Armi d'Assedio". I loro attacchi **ignorano la Durezza** delle strutture.
@@ -800,12 +812,12 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 *   **Danno Medio per Round:** Circa **60 PF**.
 *   **Tempo per la Breccia:** 1.800 PF / 60 danni/round = **30 round** di bombardamento concentrato.
 
-**Sfondare il Cancello Principale (800 PF):**
+**Sfondare il Cancello Principale (200 PF):**
 *   **Fonte del Danno:** Gorthak il Trifronte.
 *   **Danno Medio per Round:** Circa **32 PF**.
-*   **Tempo per Sfondare:** 800 PF / 32 danni/round = **25 round** di attacco concentrato.
+*   **Tempo per Sfondare:** 200 PF / 32 danni/round = **7 round** di attacco concentrato.
 
-**Riepilogo per il DM:** I giocatori hanno circa **25-30 round** di combattimento prima che una breccia venga aperta, costringendoli a cambiare strategia e a ritirarsi nei cortili interni.
+**Riepilogo per il DM:** Il cancello cede in circa **7 round** se Gorthak ci si accanisce, il muro in **30**: i giocatori devono difendere il cancello prima di tutto, poi ritirarsi nei cortili interni.
 
 ---
 <div style="page-break-before:always"></div>
@@ -859,6 +871,12 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 **Statistiche del Leader (se affrontato singolarmente):**
 **CA:** 18 | **PF:** 38 | **TS:** Temp +6, Rifl +2, Vol +2
 **Attacco:** *Spada Lunga* +9 in mischia (1d8+3/19-20)
+
+> Il **sergente dell'avanguardia** della Sessione 1 non è questo: è un
+> hobgoblin guerriero 6° in armatura completa (GS 6, CA 21, 50 pf), più
+> forte del sergente di un reparto qualunque. La sua scheda è in
+> `ARC08-19-SEGRETI-DELL-ORDA.md` §2 e nel master
+> `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, Appendice A.
 
 **Capacità Speciali:**
 *   **Leadership Tattica:** L'unità di Hobgoblin comandata da questo sergente ottiene un **bonus morale di +1 all'AU e alla DU**.
@@ -996,6 +1014,6 @@ Questa regola è essenziale per rendere la minaccia dell'assedio concreta e per 
 
 **Capacità Speciali:**
 *   **Operare Baliste Pesanti (6 totali):**
-    *   **Balista Pesante Nanica:** AU +10, Danno 3d8, Gittata 120m. Richiede un round per ricaricare.
+    *   **Balista Pesante Nanica:** AU +10, Danno 3d8, incremento di gittata 36 m (SRD). Richiede un round per ricaricare.
 *   **Riparazione Rapida (3/giorno):** Ripristina 1d4 danni strutturali a una sezione di mura o a un cancello.
 *   **Trappole (1/battaglia):** La prima unità nemica che attraversa un'area di 6m subisce 2d6 danni.

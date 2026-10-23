@@ -57,6 +57,8 @@ FUORI_RAGGIO = {
         "scheda per il giocatore della Corona: poteri dell'artefatto, nessuna creatura",
     "07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md":
         "schede dei PG (§1 «Il party degli avventurieri»): i PG non stanno nel Bestiario",
+    "08_La Battaglia Di Hammerfist/ARC08-15-HANDOUTS-GIOCATORE.md":
+        "handout dei pregen per i giocatori: copie delle schede, che stanno in Bestiario/png/ (2026-10-21)",
     "08_La Battaglia Di Hammerfist/mass_combat_guide_Dm.md":
         "sistema di combattimento di massa: le statistiche sono esempi di unita', non un roster",
     "09_Continuazione Arco Narrativo dopo Battaglia di Hammerfist/Arco-Post-Hammerfist-P1C-Rituale-COMPLETO-SCALE.md":
