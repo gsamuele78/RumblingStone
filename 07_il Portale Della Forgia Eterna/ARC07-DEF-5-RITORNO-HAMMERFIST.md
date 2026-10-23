@@ -1076,35 +1076,36 @@ ginocchio fra i capi al centro dell'anello.
  Soffitto 40 m (stalattiti bioluminescenti) · Giorno 3 dell'assedio (1372)
 ════════════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g
-01    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
-02    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ← 🔴 ondata nemica in corso (entra dalla porta)
-03    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
-04    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ┐
-05    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
-06    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
-07    🏰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🏰  │ 🔵 CERCHIO DIFENSIVO
-08    🏰🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🏰  │ dei 90 NANI
-09    🏰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🏰  │ (anello a 30 m
-10    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  dall'altare;
-11    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  3 file: 60 guerrieri
-12    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │  + 20 balestrieri
-13    🏰🟨🟨🔺🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🔺🟨🟨🟤🏰  │  + 10 capi al centro)
-14    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │
-15    🏰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🔺🟤🏰  │ ⭐ ALTARE DI MORADIN
-16    🏰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤🏰  │ (P-Q 13-14 · Ø 6 m,
-17    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │  +3 m, basalto+rune oro)
-18    🏰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🏰  │ ⚫ RE THOREK (8 pf)
-19    🏰🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🏰  │ ✨ SFERA DORATA (R8 · breve: porte)
-20    🏰🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🏰  │
-21    🏰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
-22    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
-23    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  │
-24    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰  ┘
-25    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
-26    🏰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🏰
-27    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
+01    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🏰🚪🚪🏰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  ← 🚪 PORTA DI MITHRAL 6×6 m (P-Q01, unico ingresso)
+02    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤🟤🔴🔴🔴🔴🟤🟤🟤⛰⛰🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰  ← 🔴 ondata nemica in corso (entra dalla porta)
+03    ⛰⛰⛰⛰🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🔴🔴🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤⛰⛰⛰⛰⛰⛰
+04    ⛰⛰⛰🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰  ┐
+05    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+06    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+07    ⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  │ 🔵 CERCHIO DIFENSIVO
+08    ⛰⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰⛰  │ dei 90 NANI
+09    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤🟤⛰⛰⛰  │ (anello a 30 m
+10    ⛰⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  dall'altare;
+11    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤⛰  │  3 file: 60 guerrieri
+12    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │  + 20 balestrieri
+13    ⛰🟨🟨🔺🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⭐✨🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🔺🟨🟨🟤⛰  │  + 10 capi al centro)
+14    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤⚫⭐🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │
+15    ⛰🔺🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🔺🟤⛰  │ ⭐ ALTARE DI MORADIN
+16    ⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰  │ (P-Q 13-14 · Ø 6 m,
+17    ⛰🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰  │  +3 m, basalto+rune oro)
+18    ⛰⛰🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤⛰⛰⛰  │ ⚫ RE THOREK (8 pf)
+19    ⛰⛰⛰🟤🟤🟤🟤🔵🔵🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🔵🔵🟤🟤🟤⛰⛰⛰⛰  │ ✨ SFERA DORATA (R8 · breve: porte)
+20    ⛰⛰⛰⛰🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤⛰⛰⛰  │
+21    ⛰⛰⛰🔺🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🟤🗿🟤🟤🟤🟤🟤🟤🔵🟤🟤🟤🟤🟤🔺🟤⛰⛰  │
+22    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰  │
+23    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰  │
+24    ⛰⛰⛰🟤🟤🔺🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰  ┘
+25    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔺⛰⛰⛰⛰⛰⛰
+26    ⛰⛰⛰⛰⛰⛰⛰⛰🟤🟤⛰⛰⛰🟤🟤🟤🟤🟤🟤⛰⛰🟤🟤🟤⛰⛰⛰⛰⛰⛰⛰⛰⛰
+27    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
 ════════════════════════════════════════════════════════════════════════════════
-LEGENDA · 🟤 pavimento di caverna · 🏰 pareti di roccia · 🚪 porta di mithral 6×6 m (P-Q01,
+LEGENDA · 🟤 pavimento di caverna · ⛰ roccia viva, le pareti della caverna ·
+🏰 la muratura ai lati della porta · 🚪 porta di mithral 6×6 m (P-Q01,
 nord — unico ingresso; ward difensivi collassati) · 🗿 10 STATUE dei Re
 Ancestrali (cerchio a 20 m dall'altare, alte 4 m, occhi di rubino — copertura) ·
 🔵 90 nani (anello a 30 m) · ⭐⚫✨ altare +3 m con Re Thorek e sfera (la
@@ -1194,8 +1195,8 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
 > a 3 m, per sapere dove stanno i blocchi dei nani e da dove arrivano le ondate.
 > Ogni quadretto di CM-1 vale due per due quadretti di CM-2: la statua Q07
 > di CM-1 è la O-P 13-14 di CM-2, l'altare P-Q 13-14 è la M-P 25-28.
-> Bracieri 🏮 e caduti 🦴 sono dettagli della carta a 1,5 m, che la vista a 3 m
-> non disegna.
+> Bracieri 🏮, caduti 🦴 e le punte di roccia di un quadretto lungo la parete
+> nord sono dettagli della carta a 1,5 m, che la vista a 3 m non disegna.
 
 ```
 ════════════════════════════════════════════════════════════════════════════════
@@ -1203,12 +1204,12 @@ BIOLUMINESCENTI (luce piena ovunque, niente *darkness*).
  La pulizia (Scena 3): dalla porta all'altare · Giorno 3 dell'assedio (1372)
 ════════════════════════════════════════════════════════════════════════════════
 COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
-01    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰  ← il varco della porta di mithral (M-P 01-02, 6 m)
-02    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🟤🟤🟤🟤🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰
-03    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤  ← 🪨 i battenti abbattuti (M03, P03)
-04    🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤
-05    🟤🟤🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤
-06    🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤  ┐ 🔵 l'anello dei nani a 30 m dall'altare
+01    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🏰🏰🟤🟤🟤🟤🏰🏰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰  ← il varco della porta di mithral (M-P 01-02, 6 m)
+02    ⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰🏰🏰🟤🟤🟤🟤🏰🏰⛰⛰⛰⛰⛰⛰⛰⛰⛰⛰
+03    ⛰⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🪨🟤🟤🪨🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰⛰  ← 🪨 i battenti abbattuti (M03, P03)
+04    ⛰⛰⛰⛰🟤🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤🟤🟤🟤🟤⛰⛰⛰⛰
+05    ⛰⛰⛰🟤🟤🟤🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🦴🟤🟤🦴🟤🟤🟤🟤🟤⛰⛰⛰
+06    ⛰⛰🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤⛰⛰  ┐ 🔵 l'anello dei nani a 30 m dall'altare
 07    🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤  │ (tre file: guerrieri fuori, balestrieri,
 08    🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🔵🔵🟤🟤🟤🟤  ┘  capi dentro; il DM li muove a blocchi)
 09    🟤🟤🔵🔵🔵🔵🔵🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🔵🔵🔵🔵🔵🟤🟤
@@ -1236,7 +1237,8 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b
 31    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
 32    🟤🟤🗿🗿🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🟤🗿🗿
 ════════════════════════════════════════════════════════════════════════════════
-LEGENDA · 🟤 pavimento di caverna · 🏰 roccia viva, la parete nord della caverna
+LEGENDA · 🟤 pavimento di caverna · ⛰ roccia viva, la parete nord della caverna
+LEGENDA · 🏰 la muratura ai lati del varco della porta
 LEGENDA · 🪨 battenti di mithral abbattuti (terreno difficile, copertura ½)
 LEGENDA · 🦴 i caduti dei primi due round, orchi e nani (terreno difficile)
 LEGENDA · 🗿 statue dei Re Ancestrali su basi di 3 m, alte 4 m (copertura totale)

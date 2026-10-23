@@ -47,6 +47,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `migliora_prosa migliora` tiene l'originale quando anche la migliore candidata ha meno di 0,5 contro di lui: dal voto del 2026-10-23 il modello di preferenza supera la soglia scritta prima di addestrarlo (PR #264).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
 
+### Corretto
+- `export_map_png.py`: con Chromium la legenda delle mappe più alte usciva tagliata, perché il headless nuovo toglie alla finestra la fascia della cornice. Ora la finestra si apre più alta e il PNG torna all'altezza dell'SVG, con la sola libreria standard.
+
 ### Rimosso
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
 
