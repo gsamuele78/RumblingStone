@@ -284,7 +284,7 @@ Il DM vuole le tre città di una categoria DMG più grandi, perché reggano
 l'assedio dell'orda della Mano Rossa (circa 10.000 al Day 1, meno con gli hook).
 Le taglie della Elsir Vale (Brindol 8.400, Dennovar 11.600, Dauth un borgo)
 restano nel §1 come fonte; le piante seguono la scelta del DM. Numeri misurati
-sulle piante `[INFERRED — needs DM confirmation]`:
+sulle piante, canone dal 2026-10-23 `[CANONE — DM 2026-10-23]`:
 
 | Città | Categoria DMG 3.5 | Superficie | Abitanti | Mura | Torri | Edifici |
 |---|---|---|---:|---|---:|---:|
@@ -310,3 +310,27 @@ guarnigione di 4 uomini ogni 5,5 m, cioè circa 0,8 uomini per metro di mura) d�
 - Le cifre di Dauth, Talar, Terrelton, Witchcross ed Elsircross nel gazetteer
   (qui sono solo categorie, da fonti secondarie).
 - Se *Shining South* dà gli abitanti di Channathgate.
+
+## 7. Canone e controllo della legenda (DM, 2026-10-23)
+
+Il DM ha tenuto la v3 e ha reso canone il rilievo, le quote, le taglie e la
+posizione dei luoghi delle tre piante. Resta `[INFERRED]` solo il conto dei
+difensori, perché è una regola empirica e a Dauth manca ancora il numero della
+guarnigione nanica.
+
+Prima di renderle canone ho controllato i 78 numeri sulle piante contro le voci
+della legenda, ritagliando l'intorno di ciascuno. Sei erano fuori posto:
+
+| Pianta | N. | Voce | Dov'era | Dov'è ora |
+|---|---:|---|---|---|
+| Rethmar | 6 | Mura sud, la breccia del Settore C | nei campi, 30 m fuori dalle mura | sulla cinta sud |
+| Rethmar | 8 | Mercato del Ponte | sulla riva, fra le mura e il fiume, dove non c'è nulla | nel foro, alla testa del ponte |
+| Rethmar | 27 | Torre di Immerstal il Rosso | copriva la torre | accanto alla torre |
+| Dauth | 2 | Bastioni sud, il Razorfiend | nei campi sotto le mura | sulla cinta sud-est |
+| Dauth | 4 | Mura ovest, le lance di Khorn | fra il fossato e il boschetto | sulla cinta ovest |
+| Channathgate | 16 | Campo profughi dell'Istrice | sulle case del rione | sul campo di tende |
+
+Lo spostamento del 6 di Rethmar ha fatto alzare la scritta del Quartiere Nobile.
+Nessun documento del repo cita i numeri della legenda, quindi i testi non
+cambiano.
+
