@@ -109,6 +109,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | MAPPE-QUALITA (esperimento) | ricerca in rete su strumenti liberi che misurano mappe, moduli e regole (DM: *«… | 🟡 SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (PSRD-Data) clonati fuori dal repo: le 9 regole «a memoria» del giro della Sessione 2 riscontrate in 0,04 s, 8 concor… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
@@ -120,7 +121,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
 | 2026-10-22 | MASTER-DEF | S1b, il giro delle quattro letture a freddo su… | 🟡 nessun 🔴 in verifica, aperti T18, T26 e N2 (peso del master); box di DEF-2 17 → 19, parole nei box 1199 → 1330, MQM 100 → 100, Gulpease 69,3 → 68,8, sensoria… |
 | 2026-10-22 | MASTER-DEF | S1b: la Sessione 2 coi pregen nel master `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`… | 🟡 scritto, giro da fare; dodici `[INFERRED]` al DM; box di ARC-08 104 → 108, >1 nome 40 → 32, >500 car 15 → 12, sensoriali 41,0 → 42,3 ‰, nessun box impoverito |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
 
 ## Le misure che si portano dietro
 
