@@ -92,6 +92,17 @@ class TestFronti(unittest.TestCase):
         d["orologi"][0].update(segmenti=None, riempiti=None, unita="ore")
         self.assertEqual(sorted(self.regole(d)), ["O1", "O2"])
 
+    def test_orologio_a_tempo_dichiarato_vale_con_qualsiasi_durata(self):
+        # il March Clock: 42 giorni, non 4/6/8 tacche (decisione del DM, 2026-10-23)
+        d = _fronti_base()
+        d["orologi"][0].update(segmenti=42, riempiti=19, unita="giorni")
+        self.assertEqual(self.regole(d), [])
+
+    def test_senza_unita_i_segmenti_restano_4_6_8(self):
+        d = _fronti_base()
+        d["orologi"][0].update(segmenti=18, riempiti=9, unita=None)
+        self.assertEqual(self.regole(d), ["O1"])
+
     def test_quando_si_riempie_e_obbligatorio(self):
         d = _fronti_base()
         del d["orologi"][0]["quando_si_riempie"]

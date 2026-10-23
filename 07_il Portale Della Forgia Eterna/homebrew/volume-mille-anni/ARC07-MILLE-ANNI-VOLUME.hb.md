@@ -943,7 +943,7 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 | Ruolo | Chi, e dove |
 |---|---|
 | comando | Re Thorek è ancora col consiglio; per i PG chi decide è **Durin**, che li accompagna |
-| culto | **Sorella Brynja**, nella cappella due porte più in là |
+| culto | **Sorella Brynja**, nella cappella, la porta dopo i quartieri lungo il corridoio |
 | rimedi | **Kettra**, la bottega dell'alchimista in fondo al corridoio della fucina |
 | bottega | **Gunnvor** alla fucina, e il **pesatore** con la sua bilancia; prezzi e tetti nel banco qui sotto |
 | messaggi | nessuno: stanotte gli ordini li porta Durin a voce |
@@ -972,9 +972,9 @@ sommano sullo stesso tiro), fabbri che affilano le armi, chierici che benedicono
 prima che la miniera diventasse fortezza. Nel soffitto c'è una crepa chiusa col
 piombo, del primo crollo, e nessuno ci dorme sotto.
 
-**La cappella dei chierici.** Due porte più in là dei quartieri. È qui che si
-comprano pozioni, bacchette e incantesimi (il banco della fucina, più sotto, ha
-i prezzi).
+**La cappella dei chierici.** È la porta dopo i quartieri, lungo lo stesso
+corridoio. È qui che si comprano pozioni, bacchette e incantesimi (il banco
+della fucina, più sotto, ha i prezzi).
 
 > **Read-aloud (Casa di Davide lead) — la cappella.** *Al posto dell'altare
 > c'è un'incudine vecchia, portata giù dalla prima forgia, e intorno ai piedi
@@ -4284,23 +4284,25 @@ COL →  A B C D E F G H I J K L M N O P Q R S T U V W X
 02    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️   zona aerea: serve volo o gittata
 03    ☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️
 04    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🗼🔔🏰🏰🏰🏰   mura +4,5 m · O-P porta alla montagna · S torre nord, T campane
-05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
-06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
-08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
+05    🏰⬛🏮🏮⬛🟫🟫🟫🟫🟫🟫🗿🗿⬜⬜⬜🟫🟫🟫🟫🟫🟫🟫🏰   B-E fucina originale (C-D forgia) · L-M la statua del re
+06    🏰⬛🟫🟫🪨🪨🟫🟫🟫🟫⬜⬜⬜⬜🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+07    🏰🟫⚒🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   C l'incudine del rito (Scena 12)
+08    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟦🟫🟫🟫🏰   T il pozzo: sotto c'è la cisterna
 09    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   impronta del drago, 4,5 m
 10    🏰🏗🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🏗🏰   B e W le gru: dal camminamento la corda scende qui
 11    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫⚔⚔⚔🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
-13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
-16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
-17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰   Re Thorek I, alle spalle dei PG
+12    🏰🟫🟫🟫🪨🪨🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🪨🪨🟫🟫🟫🟫🏰   macerie: copertura +4 CA
+13    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+14    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+15    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🏰
+16    🏰🟫🟫🔵🟫🟫🔵🟫🟫🟫🟫⬜⬜🟫🟫🟫🔵🟫🟫🔵🟫🟫🟫🏰   i 4 PG
+17    🏰🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🔵⬜🟫🟫🟫🟫🟫🟫🟫🟫🟫⬜🏰   Re Thorek I, alle spalle dei PG
 18    🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🗼   L-M porta principale (la targa) · W postierla · X torre est
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · ☁️ zona aerea (serve volo o gittata) · ⚫ Skullcrusher · ⚔ impronta
-d'atterraggio del drago (Enorme) · 🟫 cortile · 🪨 macerie (copertura +4) ·
+d'atterraggio del drago (Enorme) · 🟫 cortile · ⬜ il selciato dalla porta
+principale alla statua, alla porta della montagna e alla postierla ·
+🪨 macerie (copertura +4) ·
 🏰 mura e camminamenti (+4,5 m, arcieri nani) · 🔵 PG e Re Thorek I ·
 ⬛🏮 la fucina originale e la sua forgia · ⚒ l'incudine del rito · 🗿 la statua
 del re · 🟦 il pozzo sulla cisterna · 🏗 gru con le corde · 🗼 torri · 🔔 campane.

@@ -32,6 +32,15 @@
 >
 > <!-- storico -->Prima del 2026-10-21: estratto di 21 righe su 53 (verificato
 > 2026-09-11), intestazione corretta da «53 COLONNE × 10 RIGHE» a 21 × 53.<!-- /storico -->
+>
+> 🪨 **Le alcove, dal 2026-10-23.** Fra un pianerottolo e l'altro la parete di
+> roccia correva dritta, con due sole nicchie per lato. Ora ha sei alcove
+> di 1,5 m in più, di due righe ciascuna e alternate fra i lati: E21-E22,
+> E30-E31, E39-E40 ed E47-E48 a ovest, Q20-Q21 e Q37-Q38 a est. Servono
+> come le nicchie che c'erano già: ci si fa da parte, e un elementale Grande
+> non ci entra. Cenge, pianerottoli, lava,
+> ponti e cascate non cambiano. La lava resta un canale dritto H-N: le misure
+> del modulo (10,5 m di lava, cenge di 3 m) non lasciano posto a un'ansa.
 
 ```
 ══════════════════════════════════════════════════════════════════
@@ -61,9 +70,9 @@ RIGHE ↓
 17  🏰🏰🏰🏰🟤🔴🔴🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
 18  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
 19  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🪨🟤🏰🏰🏰🏰🏰
-20  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
-21  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
-22  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+20  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🟤🏰🏰🏰🏰
+21  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🏰🏰🏰🏰
+22  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 23  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 24  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 25  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
@@ -71,25 +80,25 @@ RIGHE ↓
 27  🏰🏰🏰🪨🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🪨🏰🏰🏰
 28  🏰🏰🏰🟤🟤🟤🟤🟥🟥🔴🔴🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰   FE2 J28, nella lava sotto il ponte
 29  🏰🏰🏰🏰🏰🟤🟤🟥🟥🔴🔴🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
-30  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🪨🟤🏰🏰🏰🏰🏰
-31  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+30  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🪨🟤🏰🏰🏰🏰🏰
+31  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 32  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🏰🏰🏰🏰
 33  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🏰🏰🏰🏰
 34  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 35  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰   cascata 2 K35-M40 · nicchia E35-E36
 36  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🌋🌋🌋🟥🔴🔴🏰🏰🏰🏰🏰   FE3 O36 (Grande), cengia est
-37  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🔴🔴🏰🏰🏰🏰🏰
-38  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
-39  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
-40  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+37  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🔴🔴🟤🏰🏰🏰🏰
+38  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🟤🏰🏰🏰🏰
+39  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
+40  🏰🏰🏰🏰🟤🟤🪨🟥🟥🟥🌋🌋🌋🟥🟤🟤🏰🏰🏰🏰🏰
 41  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 42  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
 43  🏰🏰🏰🟤🪨🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰   PONTE SUD H43-N44
 44  🏰🏰🏰🟤🟤🟤🟤🌉🌉🌉🌉🌉🌉🌉🟤🟤🟤🟤🏰🏰🏰
 45  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🔴🔴🟥🟥🟤🟤🪨🟤🏰🏰🏰   FE4 K45, nella lava
 46  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🔴🔴🟥🟥🟤🟤🏰🏰🏰🏰🏰
-47  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
-48  🏰🏰🏰🏰🏰🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🪨🏰🏰🏰🏰🏰
+47  🏰🏰🏰🏰🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
+48  🏰🏰🏰🏰🟤🟤🪨🟥🟥🟥🟥🟥🟥🟥🟤🪨🏰🏰🏰🏰🏰
 49  🏰🏰🏰🏰🏰🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🏰🏰🏰🏰🏰
 50  🏰🏰🏰🟤🟤🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🟤🟤🏰🏰🏰
 51  🏰🏰🏰🟤🪨🟤🟤🟥🟥🟥🟥🟥🟥🟥🟤🟤🪨🟤🏰🏰🏰
@@ -179,12 +188,13 @@ HEAT ZONES (Overlay):
 **CENGE LATERALI 🟤:**
 - **Ovest:** Colonne F-G (3 m = 2 quadrati), Righe 02-52; la roccia viva 🏰 occupa A-E
   - Pianerottoli di 6 m (D-G) alle righe 02-04, 08-11, 25-28, 42-45, 50-52
-  - Nicchie di 1,5 m in E16-E17 (dove aspetta FE1) ed E35-E36: lì ci si può far da parte
+  - Nicchie di 1,5 m in E16-E17 (dove aspetta FE1) ed E35-E36: lì ci si può far da parte;
+    dal 2026-10-23 anche alcove in E21-E22, E30-E31, E39-E40, E47-E48
   - Material: basalto, superficie ruvida; rocce cadute 🪨 in G23 e D27, e dal 2026-10-22 anche in E03, G13, G33, G40, E43, G48, E51 (copertura ½ a chi ci sta dietro)
   - Safe from lava direct, but heat zones apply
   
 - **Est:** Colonne O-P (3 m = 2 quadrati), Righe 02-52; roccia viva Q-U
-  - Pianerottoli O-R alle stesse righe, nicchie Q15-Q16 e Q32-Q33, rocce in R10 e P48, e dal 2026-10-22 in Q03, O13, O19, R27, O30, Q45, Q51
+  - Pianerottoli O-R alle stesse righe, nicchie Q15-Q16 e Q32-Q33 (dal 2026-10-23 anche alcove in Q20-Q21 e Q37-Q38), rocce in R10 e P48, e dal 2026-10-22 in Q03, O13, O19, R27, O30, Q45, Q51
 
 **4 FIRE ELEMENTALS LARGE 🔴:**
 1. **FE1:** Col F, Riga 16 (cengia ovest, F16-G17: Grande, la riempie)
@@ -328,6 +338,20 @@ HEAT ZONES (Overlay):
 > (Cercare CD 20): è il secondo ingresso, e la via per chi scappa col Topazio
 > senza ripassare dalla porta nord. `[INFERRED — needs DM confirmation]` per la
 > galleria e per la CD.
+>
+> 🧱 **La fodera, dal 2026-10-23.** Fra l'anello e la roccia corre una fodera di
+> muratura ⬛ spessa un quadretto, uguale tutto attorno, anche lungo l'androne
+> e la galleria dei fonditori: il bordo dell'arena è un muro costruito e non la
+> roccia nuda. Le celle calpestabili restano le stesse. Cambiano solo F18 e
+> AA18, due monconi di passerella 🌉 sotto la riga 17 posati sull'anello: ora
+> sono pavimento. La lava non è toccata: la vasca resta l'ovale del disegno
+> (righe 11-23, colonne G-Z), che è il canone del 2026-10-18, e non il cerchio
+> di 20 m delle POSIZIONI.
+>
+> 🔥 **Le pozze laterali, scelta del DM.** Due pozze di lava sull'anello, a ovest
+> (B-D 19-21) e a est (AD-AF 19-21), di 4,5 m ciascuna: sono le «piscine lava
+> laterali» da cui il boss evoca i due elementali Grandi al round 5. Chi ci cade
+> prende lo stesso danno della vasca.
 
 ```
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -338,61 +362,62 @@ COLONNE →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W
 RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │
 
 --- PERIMETRO NORD (Righe 01-08) ---
-01    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+01    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ 🚪 🚪 🚪 ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                        └───┘ Porta Nord 4.5m (Col O-Q), androne O02-Q03 fino all'arena
-02    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-03    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-04    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+02    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬜ ⬜ ⬜ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+03    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+04    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                      └────────────── Perimeter Platform (Safe Zone) ──────────────┘
-05    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-06    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-07    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰
-08    │ 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰
+05    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
+06    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+07    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰
+08    │ 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰
       │                      └─┘ PG Start (Col I, Riga 08) - Perimeter Nord
 
 --- PASSERELLA NORD (Righe 09-16) + LAVA POOL ---
-09    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ 🏰 🏰 🏰 🏰
-10    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-11    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
+09    │ 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬛ ⬛ 🏰 🏰
+10    │ 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰
+11    │ 🏰 ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ 🏰
       │                                  └──────────┘ Lava Pool Edge (Inner Circle 5m radius)
-12    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-13    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-14    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-15    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-16    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🔴 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+12    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+13    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
+14    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
+15    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
+16    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🔴 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
       │                                              └──┘ ALTARE TOPAZIO (+5m levitating!)
 
 --- CENTRO (Righe 16-18) ALTARE + BOSS ---
-17    │ 🏰 ⬜ ⬜ ⬜ ⬜ 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 💎 💎 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+17    │ ⬛ ⬜ ⬜ ⬜ ⬜ 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 💎 💎 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
       │                                           └────┘ TOPAZIO (P16-Q17, +7m total above floor!)
-18    │ 🏰 ⬜ ⬜ ⬜ ⬜ 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
+18    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
       │                   └──┘ PASSERELLA NORD (Q08-Q16, 2m wide, mithral, towards altare)
       │                                           🔴 ELDER FIRE ELEMENTAL (Col P, Riga 17 center!)
 
 --- METÀ SUD (Righe 19-33): specchio delle righe 15-01 attorno alla riga 17, ricostruita [CANONE — DM 2026-10-18] ---
-19    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-20    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-21    │ 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰
-22    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-23    │ 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🏰 🏰
-24    │ 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-25    │ 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ 🏰 🏰 🏰 🏰
+19    │ ⬛ ⬜ 🟥 🟥 ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ 🟥 🟥 ⬜ ⬛
+20    │ ⬛ 🟥 🟥 🟥 ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 ⬛
+21    │ ⬛ ⬜ 🟥 🟥 ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 ⬜ ⬛
+22    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+23    │ 🏰 ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ 🏰
+24    │ 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰
+25    │ 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬛ ⬛ 🏰 🏰
       │                                        └──┘ PASSERELLA SUD: arriva al perimetro sud (riga 25)
-26    │ 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰
-27    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰
-28    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-29    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-30    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-31    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ❔ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-32    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-33    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+26    │ 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰
+27    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰
+28    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+29    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
+30    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+31    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ❔ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+32    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬜ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+33    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬜ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │ Passerelle Est (Col Y → Q) e Ovest (Col E → Q) sulla riga 17, 2 m: vedi POSIZIONI
-      │ Perimeter Safe Zone: anello ⬜ fino alla riga 30, roccia 🏰 righe 31-33
+      │ Perimeter Safe Zone: anello ⬜ fino alla riga 30, poi la fodera ⬛ e la roccia 🏰 (righe 31-33)
 
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 LEGENDA · 🟥 lava d'adamantio fusa, profonda 3 m (20d6 fuoco a chi ci cade) · 🌉 passerelle di mithral (2 m)
-LEGENDA · 💎 il Topazio sull'altare levitante (+5 m) · ⬛ forni di fusione (muratura, copertura totale) · ⚒ incudini
+LEGENDA · 💎 il Topazio sull'altare levitante (+5 m) · ⬛ forni di fusione e fodera dell'arena (muratura, copertura totale) · ⚒ incudini
 LEGENDA · 🔴 Elder Fire Elemental (Enorme: O16-Q18, centro P17) · ❔ porta segreta della galleria dei fonditori (Q31)
+LEGENDA · 🟥 a ovest (B-D 19-21) e a est (AD-AF 19-21): le due pozze di lava laterali, da cui escono gli elementali del round 5
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 @north N
 @tipo tattica interni
@@ -557,6 +582,7 @@ Material: Adamantine-reinforced stone
 |---|---|---|
 | Piscina di lava centrale 🟥 | centro P17, raggio 10 m (20 m diam.), −3 m | **20d6 fuoco** se ci cadi (morte quasi certa); 1200 °C |
 | Forni di fusione ⬛ | G09-I11, Y09-AA11, G23-I25, Y23-AA25 | muratura: **copertura totale**, bloccano vista e movimento; ci si gira attorno |
+| Fodera del muro ⬛ | un quadretto tutto attorno all'anello, all'androne e alla galleria | muro: come la roccia dietro |
 | Incudini ⚒ | L09, U09, L25, U25 | **copertura ½** |
 | Porta segreta ❔ e galleria dei fonditori | Q31, galleria Q32-Q33 verso sud | Cercare CD 20 per trovarla `[INFERRED — needs DM confirmation]`; seconda via d'uscita col Topazio |
 | Altare del Topazio levitante 🌉💎 | P-Q/16-17, **+5 m** (gemma +7 m) | obiettivo (prendere il Topazio); bagliore = luce intensa 30 m (arena illuminata) |

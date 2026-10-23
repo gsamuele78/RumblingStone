@@ -13,12 +13,18 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 24 decisioni aperte
+## Aspetta il DM: 30 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
 | Piano | # | Ambito | Domanda |
 |---|---|---|---|
+| `INVENTARIO-GEMINI-AISTUDIO` | D1 | `battle_stats_maps.md`: Spaventadraghi,… | Si riprende come proposta in ARC-08 (MASTER-DEF), con le regole confrontate con l'SRD; quello che diverge da ADR-0091 resta fuori. |
+| `INVENTARIO-GEMINI-AISTUDIO` | D2 | I tre mini-boss di «Branch of Sistema C… | Restano fuori finché il DM non dice se Tiamat è mai stato canone; i mini-boss possono entrare nel Bestiario come proposta. |
+| `INVENTARIO-GEMINI-AISTUDIO` | D3 | Il «Manuale da campo del DM» e il «Gior… | Si confrontano con `ARC08-01` quando si scrive il master definitivo di ARC-08. |
+| `INVENTARIO-GEMINI-AISTUDIO` | D4 | Statblocchi alternativi di «Organizing… | Restano fuori: le schede canone sono quelle di ADR-0091. |
+| `INVENTARIO-GEMINI-AISTUDIO` | D5 | «Red Hand of Doom 3.5 Conversion» | Si legge come fonte di idee per ARC-09, senza importare nulla. |
+| `INVENTARIO-GEMINI-AISTUDIO` | D6 | Le chat non scaricate (§5), le sette no… | Secondo giro solo se il DM esporta le chat dell'app Gemini o mette i file grandi in `/mnt/project-files/`. |
 | `BOX-LUOGO` | D2 | B0 | **Le dimensioni nella prima frase del box** («camera quadrata di quaranta piedi»), come nel modello del 2026-10-01, o il paragone di ADR-0014 con le misure nei Dati per il DM? Proposta: resta ADR-0014. Dal modello ester… |
 | `BOX-LUOGO` | D3 | B2 | **Ogni box dichiara il suo tipo?** Per esempio `**Read-aloud (luogo · Salvatore lead).**`, con i tipi luogo, ingresso, round, rivelazione, chiusura. Sblocca la norma «niente creature nel box di luogo» e le soglie per ti… |
 | `BOX-LUOGO` | D4 | — | **I box già giocati fuori dalle nuove misure**: nei DEF di ARC-07, 27 box oltre i 500 caratteri e 61 oltre le quattro frasi. Proposta: non si toccano, come per D9 di PIANO-LETTORE: si spezzano solo se lo chiedi, e senza… |
@@ -50,24 +56,24 @@ Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py
 
 Nessuna.
 
-## ▶ In corso: da qui si riparte: 4
+## ▶ In corso: da qui si riparte: 5
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
 | **P01 · MASTER-DEF: A3 chiuso, D4 e D5 decise** (#259, ARC-08: il collo e l'ala nella presa di Thorik, ADR-0096) | [MASTER-DEF](plans/PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A3 | merge della #259 quando il thread dà il via; poi S1-S4 |
+| **P02 · AVVENTURE-COMMUNITY 7c**: D4-D6 decise dal DM il 2026-10-23 e applicate (ARC-08 allineato al Bestiario nella #286, possessivo vietato solo sul corpo, fronti e orologi canone da ARC-08). Resta il primo… | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) §Decisioni | il thread di ARC-08, col prossimo master |
 | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
 | **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
 
-## 🙋 Aspetta il DM: 10
+## 🙋 Aspetta il DM: 9
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
-| **P02 · AVVENTURE-COMMUNITY 7c, fronti e orologi**, e i residui del lotto 7: i 4 di `plans/coerenza-residui.json` e i possessivi contro italiano-nativo §1 | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) | una risposta del DM; poi il thread «Avventure della community a confronto» |
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D5 e D6, RIPRESA-PR D2 (Gemini o SDXL per il Drappo, con la #106) e D11… | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/sessione-2026-10-15/` · `/mnt/project-files/giro-arc07-2026-10-18/PATCH-STATE-MD.md` | `git am` o a mano sul ramo `campaign-group-rumblingstone` |
@@ -111,22 +117,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
+| 2026-10-23 | INVENTARIO-GEMINI-AISTUDIO | inventario di Drive contro il repo (DM: «vedere se ci sono dei contenuti su gem… | 🟡 182 file guardati, circa 45 della campagna. I `.md` finali di Hammerfist sono nel repo (97-99%); mancano `battle_stats_maps.md`, tre mini-boss e il patrono T… |
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7 chiuso: D4-D6 del DM (residui di coerenza al Bestiario, possessivo viet… | ✅ lotto 7 completo; l'allineamento di ARC-08 al Bestiario è nella #286 |
 | 2026-10-23 | RICERCA-ARCHI-SENZA-TESTO | censimento e trascrizione dell'arco 05 (DM: *«controllare se ci sono pdf o altr… | 🟡 Censiti i file non markdown degli archi 00-10 e degli standalone e confrontati coi markdown (numeri e nomi propri della fonte assenti nel markdown, poi a man… |
 | 2026-10-23 | STATO-E-ORDINE · INDEX · RECUPERO · RIP… | P15 dell'indice: la coerenza dell'archivio dei piani | ✅ Otto intestazioni di piano riallineate allo stato di `INDEX.md`: le sei dell'indice (AMBIENTE, PRATICHE, TRAVASO, AUTOMAZIONE, AGENT-SKILLS, DRAPPO) e due tr… |
+| 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | la forma delle 18 mappe di ARC-07 ridisegnata contro i moduli (DM: «Stile e for… | ✅ Nessun rilievo E nuovo, voti uguali o più alti (T-2 97→100). Il tema pianta ora non tronca le voci di legenda a metà parola e non mette un oggetto sulla rocc… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7i: la catena della prosa ha un ingresso solo (richiesta del DM: integrar… | 🟡 `dm.py prosa` mette in fila i dieci script; spaCy e LanguageTool nel registro, così `doctor` li vede; quattro diagrammi nuovi (catena, tre sequenze, dipenden… |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7e, correzione dopo il merge con main: `voto_scrittura` resta | ✅ La #234 (ADR-0089) ha portato su main `banco_prosa_locale`, che fa votare le corse del modello locale a `voto_scrittura`: toglierlo spezzava quel flusso. Il… |
 | 2026-10-23 | STATO-E-ORDINE-DEI-PIANI | §0 · l'indice dei punti in sospeso | ✅ Richiesta del DM: *«un index da aggiornare con le decisioni prese, quelle abbandonate e quelle sorpassate da PR o altre soluzioni»*, da usare per aprire thre… |
-| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P11 · il riscontro delle regole sull'SRD (DM: *«aggiungi se ci sono tools skill… | ✅ in testing. `scripts/riscontro_srd.py`: SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (devonjones/PSRD-Data), OGL 1.0a, scaricati da `raw.githubusercontent.com` a… |
-| 2026-10-23 | MAPPE-QUALITA (esperimento) | ricerca in rete su strumenti liberi che misurano mappe, moduli e regole (DM: *«… | 🟡 SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (PSRD-Data) clonati fuori dal repo: le 9 regole «a memoria» del giro della Sessione 2 riscontrate in 0,04 s, 8 concor… |
-| 2026-10-23 | RIPRESA-PR-ABBANDONATE | 4g-1 · lo strumento delle schede PG | ✅ Le schede PG della #99 non si copiano: si rifanno da `main`. `validate_pg.py` e `render_pg.py` ripresi dalla #99 con una regola in più: la scheda non porta c… |
-| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 24 aperte, 290 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 30 aperte, 293 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
