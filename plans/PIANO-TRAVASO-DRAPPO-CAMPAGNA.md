@@ -13,7 +13,7 @@
 > rispetto all'Arco della Forgia Eterna? e quali si potrebbero portare nella
 > campagna?»* — e la verifica dei file che ne è seguita (§1).
 
-**Stato**: 🔵 pianificato · **Data**: 2026-08-31
+**Stato**: 🟢 **eseguito** (2026-08-31): A1-A5 ✅ · B1-B2 ✅; resta solo A6, in attesa che ARC-07 finisca al tavolo *(allineato a `INDEX.md` il 2026-10-23, P15)* · **Data**: 2026-08-31
 **Ambito**: apparato, tooling e formati. **Mai** la prosa giocata.
 
 ---

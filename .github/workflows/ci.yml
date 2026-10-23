@@ -132,6 +132,14 @@ jobs:
           python scripts/validate_state.py
           python scripts/render_state.py --check
 
+      # I costi permanenti dei PG non spariscono più (RIPRESA-PR 4g-1, ADR-0088):
+      # ogni modificatore ha una fonte, ogni costo affermato nei documenti è
+      # sulla scheda o dismesso con una ragione, e la scheda non copia state.yaml.
+      - name: Schede PG — modificatori con fonte e viste rigenerate (ADR-0088)
+        run: |
+          python scripts/validate_pg.py
+          python scripts/render_pg.py --check
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: python scripts/validate_maps.py
 
@@ -194,6 +202,17 @@ jobs:
       # stanno in plans/coerenza-residui.json con la ragione.
       - name: Coerenza fra scene e archi
         run: python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json "07_il Portale Della Forgia Eterna" "08_La Battaglia Di Hammerfist"
+
+      # Fronti e orologi (DM, 2026-10-23): canone dagli archi nuovi, da ARC-08
+      # in poi, un file `ARCnn-FRONTI.yaml` nella cartella dell'arco. ARC-07
+      # resta com'è. Senza file il passo non fa niente.
+      - name: Fronti e orologi degli archi
+        shell: bash
+        run: |
+          shopt -s nullglob
+          f=(*/ARC[0-9][0-9]-FRONTI.yaml)
+          if [ ${#f[@]} -eq 0 ]; then echo "nessun file di fronti"; exit 0; fi
+          python scripts/coerenza_campagna.py fronti "${f[@]}"
 
       # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
       # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
@@ -555,6 +574,37 @@ jobs:
 
       - name: Il convertitore HTML parte
         run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
+
+  # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
+  # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
+  # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:
+  # sarebbe un componente nuovo). Il rapporto va nel riepilogo del run. Le
+  # discordanze le decide il DM, quindi niente --strict: il passo diventa
+  # rosso solo se lo strumento si rompe (1 sha256 sbagliato, 2 file dei
+  # riscontri rotto, 3 rete assente). Sale a stable dopo 14 giorni e 10 run.
+  riscontro-srd:
+    name: Riscontro SRD in prova (ARC-08) — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scarica le fonti a commit fissato
+        run: python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" scarica
+
+      - name: Riscontra DEF-1 e DEF-2
+        run: |
+          python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" --offline riscontra \
+            plans/esperimenti/ricerca-rete-2026-10-23/riscontri-arc08.yaml \
+            --md "$RUNNER_TEMP/riscontro.md"
+          { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
 
   build:
     name: Build skill packages

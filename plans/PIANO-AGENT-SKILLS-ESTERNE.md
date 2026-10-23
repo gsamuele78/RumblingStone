@@ -6,7 +6,7 @@
 > lotti per adottare il poco che serve. Letto al commit upstream
 > `4bf51ab` (2026-09-28).
 >
-> **Stato**: 🟡 L6, L0, L7 ✅ (2026-10-01); D1-D7 decise il 2026-10-01, i lotti partono in fila · **Decisore**: DM, che sceglie
+> **Stato**: 🟡 ~97%: L0, L1, L2, L4, L6, L7, L8, L8-bis, L9 ✅ (2026-10-01), L11 ✅ (2026-10-02), L12 e L13 ✅ (2026-10-03); D1-D17 decise. Restano le quattro revisioni della prova su ARC-08, la corsa DEF-5 con le voci di D12 e L10 quando la sua condizione scatta *(allineato a `INDEX.md` il 2026-10-23, P15)* · **Decisore**: DM, che sceglie
 > quali lotti partono (D1…D7 qui sotto) · **Regola**:
 > [ADR-0010](adr/ADR-0010-vendoring-skill-terzi.md), cherry-pick e mai
 > collezioni; l'ADR di adozione (ADR-0076) nasce con il primo lotto che porta
