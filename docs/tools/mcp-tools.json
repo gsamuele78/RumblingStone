@@ -487,6 +487,61 @@
       "deterministic": true
     },
     {
+      "name": "confronta_mappe",
+      "description": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»\n\nDue o piu' versioni delle stesse mappe misurate cella per cella: celle cambiate (simboli e classi, numero e quota), Jaccard per classe di cella, transizioni di classe, NCD con lzma, voto di qualita_mappe.py prima e dopo con i rilievi spariti e comparsi, dimensioni, scala e quote. Con --versioni estrae i master da git (git show), abbina le mappe per titolo, codice MAPPA o posizione, scrive confronto.json a chiavi ordinate e un SVG affiancato per mappa con le celle cambiate cerchiate. Misura e basta: non tocca le mappe.",
+      "use_case": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»",
+      "invocation": "python3 scripts/confronta_mappe.py VECCHIA.md[:N] NUOVA.md[:N] | --versioni NOME=REF ... --base NOME --out DIR FILE.md ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "posizionali": {
+            "type": "string",
+            "description": "Coppia: VECCHIA.md[:N] NUOVA.md[:N] (N da 1). Con --versioni: i master da confrontare, relativi al repo."
+          },
+          "json": {
+            "type": "string",
+            "description": "Coppia: scrive il confronto in JSON (chiavi ordinate)."
+          },
+          "svg": {
+            "type": "string",
+            "description": "Coppia: scrive l'SVG affiancato con le celle cambiate cerchiate."
+          },
+          "versioni": {
+            "type": "string",
+            "description": "Versioni git come NOME=REF, es. A=d726e6a2 B=9359a0af C=HEAD."
+          },
+          "base": {
+            "type": "string",
+            "description": "Con --versioni: la versione contro cui si confronta ogni altra."
+          },
+          "estrai": {
+            "type": "string",
+            "description": "Con --versioni: dove scrivere i file estratti (default: cartella temporanea)."
+          },
+          "out": {
+            "type": "string",
+            "description": "Con --versioni: cartella di confronto.json e svg/."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Esce 1 se una mappa resta senza corrispondente in qualche versione."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--json>",
+        "<--out>/confronto.json"
+      ],
+      "exit_codes": {
+        "0": "confronto prodotto",
+        "1": "mappa senza corrispondente con --strict",
+        "2": "errore d'uso (file o ref inesistente, mappa fuori numero, dipendenze mancanti)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "export_map_png",
       "description": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»\n\nRasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
       "use_case": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»",
@@ -3767,6 +3822,53 @@
         "0": "ok",
         "1": "lettura non chiusa, o master senza intenzione dichiarata",
         "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "riscontro_srd",
+      "description": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»\n\nRiscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0103).",
+      "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
+      "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cache": {
+            "type": "string",
+            "description": "Cartella della cache (default: $RUMBLINGSTONE_SRD_CACHE, poi $XDG_CACHE_HOME/rumblingstone/srd, poi ~/.cache/rumblingstone/srd)."
+          },
+          "offline": {
+            "type": "boolean",
+            "description": "Non scarica: se la cache è incompleta esce 3."
+          },
+          "comando": {
+            "type": "string",
+            "description": "scarica | regola | riscontra | licenza.",
+            "enum": [
+              "scarica",
+              "regola",
+              "riscontra",
+              "licenza"
+            ]
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout",
+        "<--md>",
+        "<--json>",
+        "<cache>/"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con discordanze",
+        "1": "con --strict una discordanza o una regola non trovata; uno sha256 che non combacia; `regola` senza risultati",
+        "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
+        "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
+        "130": "interruzione utente"
       },
       "deterministic": true
     },

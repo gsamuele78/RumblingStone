@@ -556,6 +556,37 @@ jobs:
       - name: Il convertitore HTML parte
         run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
 
+  # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
+  # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
+  # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:
+  # sarebbe un componente nuovo). Il rapporto va nel riepilogo del run. Le
+  # discordanze le decide il DM, quindi niente --strict: il passo diventa
+  # rosso solo se lo strumento si rompe (1 sha256 sbagliato, 2 file dei
+  # riscontri rotto, 3 rete assente). Sale a stable dopo 14 giorni e 10 run.
+  riscontro-srd:
+    name: Riscontro SRD in prova (ARC-08) — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scarica le fonti a commit fissato
+        run: python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" scarica
+
+      - name: Riscontra DEF-1 e DEF-2
+        run: |
+          python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" --offline riscontra \
+            plans/esperimenti/ricerca-rete-2026-10-23/riscontri-arc08.yaml \
+            --md "$RUNNER_TEMP/riscontro.md"
+          { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
+
   build:
     name: Build skill packages
     runs-on: ubuntu-24.04
