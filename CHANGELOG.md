@@ -22,7 +22,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
 
 ### Rimosso
-- `scripts/voto_scrittura.py` (il controllo del «sembra» passa a `validate_prosa`) e `scripts/campioni_kappa.py`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
+- `voto_scrittura` (il controllo del «sembra» passa a `validate_prosa`) e `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
 
 ## [1.0.0] - 2026-10-23
 
