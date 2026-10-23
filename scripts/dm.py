@@ -691,12 +691,21 @@ def cmd_doctor(args: argparse.Namespace, extra: list[str]) -> int:
 # ------------------------------------------------------------------ main
 
 
+def _versione() -> str:
+    """La versione del progetto (ADR-0100), senza importare dmcore all'avvio."""
+    import re
+    testo = (Path(__file__).parent / "dmcore" / "__init__.py").read_text(encoding="utf-8")
+    m = re.search(r'^__version__ = "([^"]+)"', testo, re.MULTILINE)
+    return m.group(1) if m else "?"
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         prog="dm.py",
         description="CLI unica del DM RumblingStone — orchestra gli script di scripts/ "
                     "per fase del Playbook (prep / post / recap / handout).",
     )
+    ap.add_argument("--version", action="version", version=f"%(prog)s {_versione()}")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("prep", help="Playbook §2: proposte incontro+mappa+loot")

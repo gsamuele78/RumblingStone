@@ -127,6 +127,13 @@ OPZIONALI = (
          "  macOS          xcode-select --install",
          "senza git il repo non si clona: in pratica c'e' sempre, ed e' l'unico "
          "di questo gruppo che non ha un ripiego vero."),
+    _opz("gh", "il workflow Release: allineare le note dei rilasci pubblicati al "
+               "CHANGELOG (`release_notes.py sync`, ADR-0100)",
+         "  sui runner di GitHub c'e' gia'\n"
+         "  Debian/Ubuntu  sudo apt install gh\n"
+         "  Fedora         sudo dnf install gh",
+         "serve solo in CI; in locale il CHANGELOG si scrive senza, e le note si "
+         "allineano al push successivo su main."),
     _opz("bash", "gli script shell: build-skills, sync-skills, install-git-hooks, "
                  "new-campaign-group, avvia_languagetool, Image-to-webp",
          "  Linux/macOS    c'e' gia'\n"
