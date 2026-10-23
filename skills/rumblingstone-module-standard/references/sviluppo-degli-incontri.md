@@ -20,6 +20,10 @@
 - 15 · Niente dossi al 13°
 - 16 · Il PG fuori gioco per un tiro salvezza
 - 17 · Le domande nate dai giri su ARC-07
+- 18 · La domanda della scena
+- 19 · La scelta che si vede
+- 20 · Il cattivo si annuncia
+- 21 · La rete degli indizi, marcata
 - Come si scrive un rilievo del developer
 <!-- /indice -->
 
@@ -45,8 +49,14 @@ livello. Le fonti e ciò che è stato scartato:
 Si applica a ogni master nuovo o riscritto, **dopo** la checklist del
 `SKILL.md` e **prima** della lettura a freddo (`rumblingstone-playtest` §2-bis).
 
+Le §18-§21 vengono da un terzo giro, il 2026-10-22: le regole d'architettura
+delle avventure che in rete si possono verificare sul testo (la domanda
+drammatica, la scelta che si vede, il presagio del cattivo, la Three Clue
+Rule). Fonti e calibrazione: `plans/RICERCA-QUALITA-MISURABILE-2026-10.md` §4 e
+il lotto 7b di `plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md`.
+
 **Chi le misura.** `python3 scripts/domande_developer.py` guarda la forma del
-testo per le domande 1-6, 9, 10, 15 e 16 e dice in quale scena la risposta
+testo per le domande 1-6, 9, 10, 15, 16 e 18-21 e dice in quale scena la risposta
 manca; `--check`
 gira in CI, e un rilievo che non è un difetto si dichiara con la ragione in
 `plans/domande-developer.json`. È un indicatore: vede che la parola c'è («se
@@ -318,6 +328,94 @@ hanno prodotto i 🔴 del secondo giro. Valgono per ogni scontro.
 > che l'SRD gli concede, o serve un talento che non ha? *(gli Xorn di DEF-1
 > emergevano, mordevano e si rituffavano nello stesso turno senza Attacco
 > Rapido)*
+
+## 18 · La domanda della scena
+
+Per The Angry GM ogni incontro risponde a una domanda drammatica, una domanda
+sì o no che il DM conosce prima di cominciare ([*Four things you've never heard
+of that make encounters not suck*](https://theangrygm.com/four-things-youve-never-heard-of-that-make-encounters-not-suck/)).
+Se il DM non sa cosa è in gioco, la scena finisce quando finiscono i pf, e un
+negoziato non finisce mai.
+
+> **La domanda.** Ogni scena giocabile, di scontro o sociale, dichiara in una
+> riga **la domanda sì o no** a cui risponde?
+
+La forma è fissa, in testa alla scena, sotto la riga *In scena*:
+
+```
+**Domanda:** gli Xorn lasciano passare il gruppo senza prendersi il mithral?
+```
+
+oppure `**Posta in gioco:** … ?`. Un **Obiettivo** scritto come tale vale
+anche lui (la guida agli scontri di ARC-08 li ha). La domanda resta aperta:
+*«il re muore?»* in una scena dove il re muore comunque non è una domanda, è
+un annuncio. La regola D18 guarda le scene con un tiro di scontro o con
+Diplomazia, Raggirare, Intimidire o Percepire Intenzioni; il tempo libero con
+l'orologio a tacche e le scene raccontate si dichiarano con la ragione.
+
+## 19 · La scelta che si vede
+
+Una scelta dei giocatori conta se la sua conseguenza **si percepisce**
+(Wardrip-Fruin, Mateas, Dow e Sali, [*Agency Reconsidered*](https://www.cs.uky.edu/~sgware/reading/papers/wardripfruin2009agency.pdf),
+DiGRA 2009). Il master che scrive «Se i PG…» e poi non dice dove torna quella
+scelta lascia al DM ricordarsene.
+
+> **La domanda.** Ogni blocco di scelta («Se i PG…», un **Se** in grassetto
+> retto dai PG, le opzioni **A**, **B**, **C**) dice **dove si vede** la
+> conseguenza?
+
+Basta un rimando: `→ Scena 8`, un paragrafo (`§7`), un'eco, il carry-over,
+l'Echo Ledger, l'esito della scena (► **Esito**), l'orologio, un cambio
+permanente sulla scheda, o la parola *Conseguenza*. Il blocco è il paragrafo,
+o la fila di paragrafi attaccati che si aprono con una scelta; un titolo
+`#### Se i PG…` vale fino al titolo dopo. Nelle scene di scontro un **Se** in
+grassetto è quasi sempre tattica, e la conseguenza si vede al round dopo: lì
+la D19 guarda solo «Se i PG…» e le opzioni.
+
+## 20 · Il cattivo si annuncia
+
+Bryce Lynch chiede a ogni modulo che recensisce che il cattivo si faccia
+conoscere prima dello scontro ([lo standard di tenfootpole](https://tenfootpole.org/ironspike/?page_id=1201)).
+Un boss che arriva senza essere mai stato nominato è un mostro grosso, non un
+nemico.
+
+> **La domanda.** Il boss è **nominato o indiziato in almeno due scene** prima
+> di quella dello scontro?
+
+Un nome detto da un PNG, un'impronta, un corno, un'ombra che passa sopra il
+campo: basta che stia nel testo della scena. La D20 prende i nomi dal titolo
+della scena del boss e dalla sua *Scheda d'entrata*; un indizio che non porta
+il nome («il drago», «le ali nere») si dichiara nel profilo del master in
+`plans/domande-developer.json`, alla voce `presagi`. Un modulo in più file
+(la guida di ARC-08 e la sua guida agli scontri) può avere il presagio
+nell'altro file: allora il rilievo si chiude con la ragione.
+
+## 21 · La rete degli indizi, marcata
+
+La Three Clue Rule (Justin Alexander, [*The Three Clue Rule*](https://thealexandrian.net/?p=7985)):
+per ogni conclusione che i PG devono raggiungere, **almeno tre indizi**. La
+norma del repo la scrive già (`rumblingstone-indagine/references/nodi-e-sei-porte.md`
+§4: ogni conclusione necessaria si raggiunge da almeno due nodi diversi), ma
+nessun master la marca, e nessuno la poteva contare.
+
+> **La domanda.** Ogni conclusione necessaria ha **almeno tre indizi**, sparsi
+> in **almeno due nodi** diversi?
+
+La marcatura è un commento HTML, che in stampa non si vede:
+
+```
+<!-- conclusione C1: la profezia della targa parla dei PG -->
+...
+#### 🔍 Nodo d'indizio — la targa di bronzo
+| **Nome** <!-- indizio C1 --> | ...
+```
+
+La conclusione si dichiara una volta, dove il DM la legge per prima; ogni
+indizio porta il suo `<!-- indizio C1 -->` (o `C1, C3` se ne regge due). Il
+nodo è il titolo *Nodo d'indizio* o `N3 — …` sotto cui sta l'indizio,
+altrimenti la scena. La D21 conta solo dove la marcatura c'è: il 2026-10-22
+nessun master la usa, e la regola non dà rilievi. Un master nuovo con
+un'indagine la marca, e da lì il cancello vale.
 
 ## Come si scrive un rilievo del developer
 

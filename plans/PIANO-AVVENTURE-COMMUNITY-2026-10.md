@@ -78,6 +78,28 @@ distingueva, l'indice Gulpease sì (67,1 → 70,0 → 72,6).
 - [x] la colonna `Gulp.` in `misura_craft --stile`, con quattro test
 - [x] **la prova**: 35 box di DEF-4 e DEF-5 (gli 8 già votati al giro 3 restano fuori) riscritti con la reference, misurati con `cieco_versioni.py` e votati alla cieca dove la misura non decide ([ADR-0097](adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md)). Cieco del DM: nuova 10, vecchia 3, soglia 10 su 13 raggiunta; le 3 vecchie vincitrici rimesse, ADR-0097 accettata
 
+### Lotto 7 · Qualità misurabile: cosa dice la rete, e cosa prevede il DM 🟡 (2026-10-22)
+
+Aperto dalla richiesta del DM di cercare metodi misurabili per la prosa e
+l'architettura delle avventure ([RICERCA-QUALITA-MISURABILE-2026-10](RICERCA-QUALITA-MISURABILE-2026-10.md)).
+La ricerca ha provato le misure di prosa della letteratura sulle 38 coppie già
+votate alla cieca: nessuna prevede il voto del DM. Le regole d'architettura
+(Three Clue Rule, domanda drammatica, conseguenza visibile, presagio del
+cattivo) sono invece regole di mestiere, e la domanda drammatica manca in
+tutte le 39 scene di ARC-07.
+
+- [x] censimento di ciò che il repo misura già e ricerca in rete (prosa e architettura)
+- [x] calibrazione delle misure di prosa sui 38 voti ciechi (`plans/esperimenti/qualita-misurabile-2026-10-22/`)
+- [x] **7a, prosa**: il voto cieco porta un'etichetta facoltativa del perché (dieci, da LAMP e TTCW: `cieco_versioni.ETICHETTE`), che `esito` conta per versione; dopo ~50 voti etichettati si rifà la calibrazione
+- [x] **7b, architettura**: quattro domande del developer nuove (domanda drammatica, scelta con conseguenza, presagio del cattivo, rete degli indizi), calibrate su ARC-07 e ARC-08 come la D10, cancello solo per i master nuovi. Sono le §18-§21 di `sviluppo-degli-incontri.md` e le regole D18-D21 di `domande_developer.py`; la calibrazione è nel §3-bis qui sotto, e i 30 rilievi dei master esistenti sono residui con la ragione
+- [x] **7c, coerenza**: schema `scripts/schemas/fronti_orologi.schema.json` (fronte alla Dungeon World, orologio alla Blades, ogni campo con `fonte` file:riga) e `coerenza_campagna.py` (`fronti`: regole F1-F6, O1-O3; `fatti`: GS, pf, CA, CD, classi, titoli dello stesso nome in due posti). Su ARC-07 e ARC-08: 4 rilievi su 4 veri, due contraddizioni da decidere (sergenti hobgoblin GS 5 in DEF-5 contro GS 4 in ARC08-01/02; orog guardie nere Guerriero 5 contro 6). Fronti di prova in `esperimenti/qualita-misurabile-2026-10-22/coerenza/`, non canone. Integrato il 2026-10-22: `fatti --check plans/coerenza-residui.json` è un passo della CI su ARC-07 e ARC-08 (le quattro contraddizioni sono residui fino alla decisione del DM), e la checklist del master lo chiede per ogni arco nuovo; `misura_sintassi` entra nella stessa checklist come passo facoltativo
+- [x] **7d, sintassi**: `misura_sintassi.py` con spaCy e `it_core_news_md` (dipendenza facoltativa, modello CC BY-NC-SA, mai nel repo): calchi di Cerruti, profondità delle subordinate, ripetizioni fra box. Calibrazione sui 38 voti: nessuna misura prevede il DM (unico indizio `livelli_max` 11 a 1, p 0,006, sopra la soglia corretta 0,0036). Precisione a mano 7 su 15: soggetto preverbale 5/5, pronome soggetto 0/8 e quindi fuori dal totale
+- [x] **7e, ritiro delle misure obsolete**: dall'inventario delle misure, le voci senza ⚖️. Tolte le regole mai scattate («assumi che», la watchlist), otto congegni di `misura_craft` (23 → 15), `--discriminante` e il passo non bloccante di `validate_prosa`; il rilevatore del «sembra» di `voto_scrittura` spostato in `validate_prosa` (il banco resta: dopo il merge con main il 2026-10-23 lo usa `banco_prosa_locale` di ADR-0089), `superficie_norme` in `validate_norme_editoriali`, i quattro volumi del corredo compilati una volta; D20 indicatore, avvisi di `validate_lingua` contati; registro da 112 a 95 righe, con le letture in un §5 fuori dal conto. `--costrutto-italiano` resta per il voto cieco del 7f. Misure e sette patch ⚖️ per il DM in `esperimenti/qualita-misurabile-2026-10-22/obsolete/PRIMA-DOPO.md`
+- [x] **7f, riscrittura di prova**: 16 box di ARC-07/ARC-08 con catena vecchia, nuova e fusa (`esperimenti/qualita-misurabile-2026-10-22/riscrittura/`). Cieco del DM: vecchia 8, nuova 5, pari 1 (non dimostrato); fusione contro originale 2 a 1. Box per box (`ESITO-VOTO.md`): perdono il taglio delle frasi che «spiegano» (4 su 4) e le riscritture su falsi del parser (3 su 3), lo spezzare le subordinate fa 1 a 1; vince il soggetto dopo il verbo. Le tre cautele sono la §2-ter 3-5 di `read-aloud-adulti.md`
+- [ ] **7g, pipeline che migliora e misura**: `migliora_prosa.py` raccoglie i voti ciechi (55 coppie), addestra un modello di preferenza, filtra le candidate che peggiorano (fatti, sensoriali, §2-ter) e manda al cieco la vincitrice contro l'originale. Il modello, in leave-one-out, indovina 33 coppie su 54 (0,61, Wilson 0,48-0,73): non supera la soglia fissata prima, quindi ordina solo come suggerimento. Prima prova: 6 box di ARC-07/ARC-08 al voto del DM
+- [x] **7h, strumenti esterni nella pipeline**: LanguageTool 6.8 italiano (da Maven, fuori dal repo), Stanza e la perplessità di Qwen2.5-0.5B (dal thread Stanza, PR #270) provati come tratti del modello e come filtro. Leave-one-out sulle 54 coppie: base 0,611; +LT 0,630; +perplessità 0,556; +Stanza 0,611; tutto 0,574; nessuna variante supera McNemar. LanguageTool: precisione 1 vero su 30 rilievi letti, non vede 14 errori su 20 piantati. Tutto resta in unstable (ADR-0099); LT è solo un filtro facoltativo (`migliora --lt`) che oggi non scarta nulla (`esperimenti/qualita-misurabile-2026-10-22/languagetool/`)
+- [x] **7i, una catena sola** (DM, 2026-10-23: *«aggiungi […] ed integrali così come per tutti gli altri strumenti in un flusso coerente»*): `dm.py prosa <azione>` per i dieci script in ordine d'uso, spaCy e LanguageTool nel registro di `binari.py` e in `requirements-completo.txt`, ADR-0101 (proposta), `docs/ARCHITETTURA.md` §10 con la catena, tre casi d'uso in sequenza e le dipendenze; riga 9 nella checklist di `rumblingstone-narrative-style`. Nessun servizio esterno: Sourcery e LanguageTool in rete farebbero uscire il testo dalla macchina (ADR-0079)
+
 ## 2 · La calibrazione del lotto 1
 
 Le quattro regole nuove eseguite sui nove moduli sotto cancello, prima di
@@ -106,6 +128,31 @@ di lei.
 Gli undici: Lirien, Tempestas, l'arcidruido del circolo, Avarthel, Morlin
 Coalhewer, Azarr Kul, Arbitrax, Draxoksus, l'emissario della Mano Rossa, Koth,
 Ozyrrandion. Il conto si rifà con il comando della §5.
+
+## 3-bis · La calibrazione del lotto 7b
+
+Le quattro regole nuove eseguite sui cinque master di ARC-07 e su tre file di
+ARC-08, che non ha master DEF: la guida agli scontri (scena: `## **INCONTRO`),
+la guida del DM (scena: `FASE`, `GIORNO`, `SESSIONE`, `INCONTRO`) e la
+Cerimonia delle 100 Asce. ARC-08 non è sotto cancello, e i suoi rilievi non
+diventano residui. Ogni rilievo è stato letto a mano.
+
+| Regola | Rilievi | Veri | Falsi | Note |
+|---|---|---|---|---|
+| D18 la domanda della scena | 19 | 13 | 6 | ARC-07 10 su 14: veri DEF-1 Scene 3, 4, 8, DEF-4 Scene 6-11, DEF-5 Scena 3; falsi DEF-1 Scena 9 (la domanda la fa Moradin), DEF-4 Scena 3 (la posta sta nel riquadro del nodo), DEF-4 Scena 5 (tempo libero), DEF-5 Scena 2 (raccontata). ARC-08 3 su 5: falsi la riga dei PX della Sessione 4, che il taglio prende per una scena, e l'Atto 3 della Cerimonia, un rito dall'esito deciso |
+| D19 la scelta che si vede | 5 | 2½ | 2½ | veri DEF-1 Scena 5 («Se Tordek lo tocca»: il Marchio passa a lui e il blocco non dice dove lo si rivede), ARC08-01 Fase 2 (l'opzione A dà +2 CA alle mura e non dice in quale scontro); a metà DEF-4 Scena 4 (Thorgrim e l'ascia); falsi i due del Drappo, che nominano la conseguenza in parole |
+| D20 il presagio del boss | 2 | 0 | 2 | sotto cancello `_scene_boss` trova un boss solo, DEF-4 Scena 11, che ha i suoi presagi. Per provarla sono state dichiarate boss altre sette scene: due rilievi, tutti e due falsi (Fauci di Diamante, capo degli Xorn alla terza scena di DEF-1; Fauci di Palude nella guida agli scontri, annunciato nell'Incontro 1F dell'altra guida). **Non calibrata** |
+| D21 la rete degli indizi | 0 | — | — | nessun master marca la rete. Prova su una copia di DEF-4 marcata a mano (la targa, il consiglio, il Rubino): la rete regge con tre indizi, e togliendone uno la regola scatta |
+
+Le correzioni prima di questi numeri: la *Scheda d'entrata* non fa più di
+una scena una scena sociale (prendeva i riti di DEF-3); un **Obiettivo**
+scritto vale come domanda (le cinque scene della guida agli scontri di ARC-08
+lo avevano tutte); nelle scene di scontro un **Se** in grassetto è tattica e
+non conta (6 falsi su 8 alla prima prova); un paragrafo che finisce coi due
+punti porta con sé l'elenco che annuncia; «la seduta dopo» e «il registro»
+sono rimandi. Alla prima prova D19 dava 2 veri su 12. Precisione d'insieme
+dopo le correzioni: **15½ su 26**, vicina al 6½ su 11 del lotto 1. Sono
+indicatori.
 
 ## Decisioni del DM
 

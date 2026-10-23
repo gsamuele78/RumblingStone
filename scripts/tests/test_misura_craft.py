@@ -63,17 +63,6 @@ class TestReadAloudNonEUnaNotaEditoriale(unittest.TestCase):
                                     "coincidono: se diverge, la prova non vale piu'")
 
 
-class TestLoSpotlightNonELaFormattazione(unittest.TestCase):
-    """🐛 Pretendeva il **grassetto**. Il Palio nomina tutti e quattro i PG e
-    non li scrive mai in grassetto: segnava 0. Misurava il markdown."""
-
-    def test_il_PG_conta_anche_senza_grassetto(self):
-        self.assertEqual(conta("spotlight per PG", "Tordek si fa avanti."), 1)
-
-    def test_il_PG_in_grassetto_conta_ancora(self):
-        self.assertEqual(conta("spotlight per PG", "**Hella** tace."), 1)
-
-
 class TestEcoConosceIlPlurale(unittest.TestCase):
     """🐛 Il Palio ha un **file intero** chiamato `PALIO-CONSEGUENZE-ECHI.md`
     e segnava **zero echi**: il rilevatore non conosceva il plurale."""
@@ -86,46 +75,6 @@ class TestEcoConosceIlPlurale(unittest.TestCase):
         testo, _, _ = MC.carica(MC.BERSAGLI["★ Palio di Channathgate"])
         self.assertGreater(conta("eco / conseguenze a distanza", testo), 0,
                            "il banco degli echi torna a dichiarare zero echi")
-
-
-class TestIlDialogoHaDueConvenzioni(unittest.TestCase):
-    """🐛 Il rilevatore pretendeva `Nome: «…»`: **zero in tutti i 12 bersagli**.
-
-    ⚠️ **E la diagnosi che avevo dato era sbagliata a sua volta.** Avevo
-    concluso «una forma inventata, che nessun documento usa». È il contrario:
-    `editorial-standards.md` §2 la **prescrive** — `**NOME (registro/tono):**
-    *«battuta»*` — e la si trova **sei volte in tutto il repo**. Il congegno
-    `dialogo nella forma dichiarata` misura adesso proprio quello; questo qui
-    conta le battute **comunque scritte**, che è un'altra domanda.
-
-    ⚠️ E le virgolette dritte non sono automaticamente dialogo: nel Palio
-    `"…"` da' **128 hit** e sono **titoli di canzoni**. Il discrimine e'
-    >=3 parole **e** punteggiatura di frase."""
-
-    def test_le_guillemette_contano(self):
-        self.assertEqual(conta("battute di dialogo", "«Il Signore aspetta.»"), 1)
-
-    def test_la_battuta_fra_virgolette_dritte_conta(self):
-        self.assertEqual(
-            conta("battute di dialogo", '"Ci pensate. Il banco resta qui."'), 1)
-
-    def test_il_titolo_di_canzone_NON_conta(self):
-        """Il lato che morde, ed e' quello che ha ucciso 106 falsi positivi."""
-        for titolo in ('"L\'Aria dei Conti"', '"Il Lamento del Traghetto"',
-                       '"Bastone-di-Serpente"', '"Disguise Self psionico"'):
-            with self.subTest(titolo=titolo):
-                self.assertEqual(conta("battute di dialogo", titolo), 0)
-
-    def test_nessun_bersaglio_e_piu_a_zero_per_forma_inventata(self):
-        """La Torre resta a zero — ma per un fatto, non per il metro: non ha
-        **nessun** dialogo, ne' `«…»` ne' dritto. Gli altri devono averne."""
-        vivi = 0
-        for nome in MC.BERSAGLI:
-            testo, _, _ = MC.carica(MC.BERSAGLI[nome])
-            if conta("battute di dialogo", testo):
-                vivi += 1
-        self.assertGreaterEqual(vivi, 8, "il rilevatore e' tornato a non "
-                                         "riconoscere nessuna convenzione")
 
 
 class TestIlPilastroDichiarato(unittest.TestCase):

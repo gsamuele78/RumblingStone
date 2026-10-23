@@ -162,6 +162,216 @@
       "ragione": "falso positivo: come l'Atto III, la riscalatura sta nell'indice maestro"
     },
     {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D18",
+      "scena": "SCENA 3",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: trattare con gli Xorn o combattere, e la posta (il pilastro, il mithral del gruppo) non è scritta in una riga. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D18",
+      "scena": "SCENA 4",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: il giardino si attraversa, si aggira o si tratta, e nessuna riga dice cosa è in gioco. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D19",
+      "scena": "SCENA 5",
+      "dettaglio": "«Se Tordek lo tocca»: la scelta non dice dove si vede la conseguenza",
+      "ragione": "vero: se Tordek tocca la gemma il Marchio si chiude su di lui, e il blocco non dice dove lo si rivede. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D18",
+      "scena": "SCENA 8",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: la «domanda d'apertura» dell'attracco è tattica, la domanda dello scontro con Terros non c'è. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
+      "regola": "D18",
+      "scena": "SCENA 9",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "falso positivo: la domanda c'è e la fa Moradin («Sei disposto a portare il peso della montagna per gli altri?»), in un'altra forma"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 3",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "falso positivo: la posta sta nel riquadro del nodo («i PG devono capire che la profezia parla di loro»)"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D19",
+      "scena": "SCENA 4",
+      "dettaglio": "«Se Thorik gliela porge»: la scelta non dice dove si vede la conseguenza",
+      "ragione": "vero a metà: «non gliela dà» rimanda alla prova del consiglio (in parole, «la prova qui sotto»), «gliela porge» resta nel momento. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 5",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "falso positivo: è tempo libero con l'orologio a tacche e più fili insieme, e una domanda sola non c'entra; la §18 non si applica"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 6",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: «arrivano alla tenda senza farsi vedere?» c'è solo come ► Esito in fondo. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 7",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: la trattativa con Balvar non dice cosa è in gioco. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 8",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: lo scontro con Zog'tar non ha la sua domanda. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 9",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: Vatore e il Sigillo, nessuna riga dice la posta. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 10",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: l'esito c'è (mura tenute, a stento, breccia), la domanda no. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "D18",
+      "scena": "SCENA 11",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: il duello con Skullcrusher non dichiara la sua domanda. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
+      "regola": "D18",
+      "scena": "SCENA 2",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "falso positivo: la scena si racconta (i due round dell'ultima resistenza non si giocano) e l'esito non è in dubbio"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
+      "regola": "D18",
+      "scena": "SCENA 3",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "vero: i sergenti vogliono il re, e «il re resta vivo?» non è scritto. Master già giocato e scritto prima della norma (§18, 2026-10-22): la regola vale dai master nuovi"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md",
+      "regola": "D18",
+      "scena": "§1 · Il decreto",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md",
+      "regola": "D18",
+      "scena": "§3 · L'offerta",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md",
+      "regola": "D18",
+      "scena": "§4 · Il Peso di contrada",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/01-GIORNO-1-LA-SORTE.md",
+      "regola": "D18",
+      "scena": "§6 · Sera — la rissa alla fontana",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md",
+      "regola": "D18",
+      "scena": "§2 · I Partiti — il mercato del grano",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md",
+      "regola": "D19",
+      "scena": "§2 · I Partiti — il mercato del grano",
+      "dettaglio": "«Se i PG non stringono nessun patto»: la scelta non dice dove si vede la conseguenza",
+      "ragione": "falso positivo: la conseguenza è nominata in parole, «in Corsa nessuna contrada ha un obbligo verso di loro»"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md",
+      "regola": "D18",
+      "scena": "§4 · La Cena della vigilia",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md",
+      "regola": "D18",
+      "scena": "§5 · L'uomo con la fascia grigia",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/02-GIORNO-2-I-PARTITI-E-LA-CENA.md",
+      "regola": "D18",
+      "scena": "§6",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md",
+      "regola": "D18",
+      "scena": "§3 · L'ultima offerta",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md",
+      "regola": "D19",
+      "scena": "§4 · Lo Stacco",
+      "dettaglio": "«Se i PG sono di rincorsa»: la scelta non dice dove si vede la conseguenza",
+      "ragione": "falso positivo: è tattica della partenza, la conseguenza (+2 all'iniziativa, lo Stacco annullato) si vede subito"
+    },
+    {
+      "file": "STANDALONE-Il-Drappo-di-Tarsilia/03-GIORNO-3-LO-STACCO-E-LA-CORSA.md",
+      "regola": "D18",
+      "scena": "§6 · Terzo giro — la curva nord",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",
+      "regola": "D18",
+      "scena": "Atto III — Sotto",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
+      "file": "10-stand-alone/L'abbazia Della Rotta Sicura/abbazia_rotta_sicura.md",
+      "regola": "D18",
+      "scena": "Atto IV — La Notte della Consegna",
+      "dettaglio": "scena giocabile senza la domanda sì/no (**Domanda:** … ?)",
+      "ragione": "non letto a mano: la calibrazione del 2026-10-22 è su ARC-07 e ARC-08. Modulo scritto prima della norma (§18): la domanda entra se un lotto lo riscrive"
+    },
+    {
       "file": "08_La Battaglia Di Hammerfist/ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md",
       "regola": "D2",
       "scena": "SCENA 2",

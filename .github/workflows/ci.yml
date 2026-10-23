@@ -188,18 +188,26 @@ jobs:
       - name: Domande del developer — si gioca?
         run: python scripts/domande_developer.py --check
 
+      # Lotto 7c di AVVENTURE-COMMUNITY: lo stesso PNG o mostro con GS, pf, CA,
+      # CD o classi diversi in due scene. Solo ARC-07 e ARC-08, dove la
+      # precisione è misurata (4 su 4); le contraddizioni che aspettano il DM
+      # stanno in plans/coerenza-residui.json con la ragione.
+      - name: Coerenza fra scene e archi
+        run: python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json "07_il Portale Della Forgia Eterna" "08_La Battaglia Di Hammerfist"
+
       # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
       # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
       # dritte, «E'») restano ~2.450 e non bloccano: --strict li alzerebbe a
-      # errori, e si mette il giorno in cui anche quelli sono a zero.
+      # errori, e si mette il giorno in cui anche quelli sono a zero. Dal
+      # 2026-10-22 se ne stampa solo il conto (l'elenco con --avvisi).
       - name: Lingua italiana — refusi meccanici
         run: python scripts/validate_lingua.py
 
-      # Idem: misura la norma di italiano-nativo.md (calchi, tic a densita',
-      # nomi inglesi dove il glossario vuole l'italiano). ADR-0025.
-      - name: Prosa — traduttese e tic dell'IA (non bloccante)
-        continue-on-error: true
-        run: python scripts/validate_prosa.py
+      # Il passo non bloccante `validate_prosa.py` (calchi, tic a densita') e'
+      # uscito il 2026-10-22, lotto 7e di AVVENTURE-COMMUNITY: le stesse regole le
+      # ricalcola e le pesa MQM (punteggio_mqm, piu' sotto), che chiama
+      # validate_prosa.rilievi sugli stessi file. Le regole restano; il passo
+      # che non bloccava niente costava 6 s.
 
       # BLOCCANTE, soglia zero: il foglio di stile (glossario §8, ADR-0078).
       # Una grafia gia' decisa non torna a scriversi nell'altro modo. Le scelte
@@ -222,17 +230,10 @@ jobs:
       - name: Skill — l'indice in testa ai references lunghi
         run: python scripts/indice_references.py --check
 
-      # Il gemello del passo sopra, dall'altro lato: quello controlla che ogni
-      # norma dica CHI la guarda, questo che ogni «nessuno la guarda» dica
-      # COSA MANCA — e lo rimisura invece di fidarsi della prosa. La ragione
-      # scritta a mano invecchia in silenzio: e' successo ai «27 ADR mancanti»,
-      # che erano zero e non erano mai stati ventisette. ADR-0062.
-      #
-      # ⚠️ Una superficie vuota NON e' un difetto e non boccia: boccia una riga
-      # che ha smesso di dire il vero, cioe' una norma diventata misurabile che
-      # il registro dichiara ancora 🔴.
-      - name: Superficie delle norme scoperte — manca il codice o manca il dato?
-        run: python scripts/superficie_norme.py --check
+      # Il gemello del passo sopra (superficie_norme, ADR-0062) e' dentro
+      # validate_norme_editoriali dal 2026-10-22: ogni «non misurato» dice COSA
+      # MANCA, e la ragione si rimisura invece di fidarsi della prosa. Il passo
+      # separato rifaceva lo stesso controllo una seconda volta.
 
       # ⚠️ Gira in un passo SUO e per ultimo fra i cancelli editoriali, perche'
       # esegue davvero i comandi che §6.2 cita — e sono i piu' lenti del repo.
@@ -369,7 +370,10 @@ jobs:
         # Il gate che mancava: senza typst in CI, due booklet della campagna non
         # avevano mai compilato e nessuno poteva accorgersene. Ora ogni manifest
         # del repo produce un PDF vero, con i segnalibri.
-        run: python scripts/validate_booklets.py --stampa
+        # I volumi di un corredo li compila e li misura il passo dopo
+        # (validate_corredo --stampa, con gli stessi controlli di guscio e
+        # segnalibri): compilarli anche qui li faceva due volte, 79 s su 230.
+        run: python scripts/validate_booklets.py --stampa --salta-corredo
 
       - name: Il corredo della serata (pezzi, doppioni, box, e i suoi PDF misurati)
         # rumblingstone-automation, «Il corredo della serata»; ADR-0070. Con
