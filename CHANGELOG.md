@@ -18,6 +18,13 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `dm.py maps pianta`: il tema «pianta» delle mappe tattiche, nello stile delle
+  piante delle città, in `rendered-pianta/` (ADR-0102). ARC-07 l'ha adottato.
+- `dm.py maps citta [rethmar|dauth|channathgate] [--check]` e
+  `scripts/genera_pianta_citta.py`: le piante delle città si rifanno dai loro
+  programmi in `scripts/piante/`. Con una scheda `*.watabou.json` il comando
+  resta quello di prima.
+- shapely 2.2.0 in `requirements-dev.txt`, canale testing.
 - Le schede dei PG come dato: `PG/schede/<pg>.yaml` (schema
   `scripts/schemas/pg_scheda.schema.json`) con le caratteristiche e i
   modificatori permanenti, ognuno con la sua fonte, e la vista `<pg>.md`
