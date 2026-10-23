@@ -12,8 +12,10 @@ diff del DM, regioni marcate `auto:`.
 
 Sottocomandi (fase del Playbook tra parentesi):
     prep      (§2)   catalogo → incontri → mappa → loot per la prossima sessione
-    maps      (prep) render SVG / valida le griglie emoji / URL di una città Watabou /
-                     texture: il tema con le texture CC0 per tutte le mappe /
+    maps      (prep) render SVG / valida le griglie emoji / texture: il tema con le
+                     texture CC0 per tutte le mappe / pianta: lo stile delle piante
+                     (ADR-0102) / citta: le piante delle città del repo, o l'URL
+                     di una scheda Watabou /
                      misura: la resa misurata, simboli e terreni (ADR-0086)
     asset     (prep) texture e oggetti CC0 del tema texture (texture, oggetti) e
                      asset di 2-Minute Tabletop per il tema dipinto: installa,
@@ -124,11 +126,18 @@ def cmd_maps(args: argparse.Namespace, extra: list[str]) -> int:
     if args.action == "misura":
         # la resa misurata (ADR-0086): senza argomenti, il cancello della CI
         return run("misura_resa.py", *(args.files or ["--check"]), *extra)
+    if args.action == "pianta":
+        # il tema delle piante (ADR-0102): i master indicati, o le cartelle che l'hanno adottato
+        return run("render_map_svg.py", "--tema", "pianta", *(args.files or ["--tutti-i-master"]), *extra)
     if args.action == "citta":
-        if len(args.files) != 1:
-            print("[dm] uso: dm.py maps citta <scheda>.watabou.json [--export svg]")
+        # le piante delle città del repo (ADR-0102), o l'URL di una scheda Watabou
+        if len(args.files) == 1 and args.files[0].endswith(".watabou.json"):
+            return run("watabou_citta.py", *args.files, *extra)
+        if len(args.files) > 1:
+            print("[dm] uso: dm.py maps citta [rethmar|dauth|channathgate] [--check] "
+                  "oppure dm.py maps citta <scheda>.watabou.json [--export svg]")
             return 2
-        return run("watabou_citta.py", *args.files, *extra)
+        return run("genera_pianta_citta.py", *(args.files or ["--tutte"]), *extra)
     if not args.files:
         print("[dm] uso: dm.py maps render <file.md ...> — file con griglie emoji "
               "(gli SVG finiscono in rendered/ accanto al sorgente)")
@@ -714,8 +723,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--refresh", action="store_true", help="rigenera il catalogo mostri")
 
     p = sub.add_parser("maps", help="render SVG / validazione griglie emoji")
-    p.add_argument("action", choices=["render", "validate", "citta", "texture", "misura"])
-    p.add_argument("files", nargs="*", help="file markdown con griglie (per render), "
+    p.add_argument("action", choices=["render", "validate", "citta", "texture", "pianta", "misura"])
+    p.add_argument("files", nargs="*", help="file markdown con griglie (per render e pianta), "
+                                            "la città (rethmar, dauth, channathgate; nessuna = tutte) "
                                             "o la scheda *.watabou.json (per citta)")
 
     # add_help=False: `dm.py asset installa --help` stampa l'aiuto dello script
