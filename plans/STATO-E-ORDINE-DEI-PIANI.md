@@ -11,15 +11,116 @@
 
 ---
 
-## 0 · 🧭 Adesso — l'unica lista viva
+## 0 · 🧭 Indice dei punti in sospeso — l'unica lista viva
 
-> **Perché c'è.** Fino al 2026-09-24 ogni chat aggiungeva in coda una sezione
-> «Ripartire da qui» (§6, §7, §8, §9, §10), e ognuna ricopiava la lista di
-> quella prima. Per sapere dove si era bisognava leggere l'ultima e fidarsi che
-> fosse aggiornata. Da qui in avanti la lista vive **solo in questa sezione** e
-> si corregge sul posto: una riga chiusa diventa ✅ con la PR, la riga dopo
-> diventa ▶. Le sezioni §6-§10 restano come diario (il perché di ogni scelta)
-> e non si aggiornano più.
+> **Cos'è.** Contiene ogni cosa ancora da fare nel repo che non è già una PR
+> aperta: le decisioni da prendere, i lotti da eseguire, le patch da applicare.
+> Per ognuna dice chi la sblocca e da dove si riparte. Lo chiede il DM
+> (2026-10-23): *«un index da aggiornare con le decisioni prese, quelle
+> abbandonate e quelle sorpassate da PR o altre soluzioni»*, da tenere aggiornato
+> e da usare per aprire i thread e le PR che chiudono i punti in sospeso.
+>
+> **Chi lo tiene.** Lo tiene il thread padre delle PR, «Audit settimanale PR e
+> decisioni», che tiene anche la lista delle PR aperte
+> (`/mnt/project-files/pr-aperte/LISTA-PR.md`, fuori dal repo). L'audit del
+> lunedì lo rimisura.
+>
+> **Come si usa.**
+> - Ogni riga ⬜ diventa un thread figlio, che apre una PR. Si va uno alla volta,
+>   nell'ordine della tabella.
+> - Ogni riga 🙋 diventa una domanda al DM, con la proposta.
+> - Quando la PR va su `main`, la riga passa nella tabella «Chiuse, superate,
+>   abbandonate» qui sotto, con la PR o il motivo.
+> - Le domande numerate dei piani restano nelle loro tabelle `decisioni-dm`
+>   (§4, generata): qui c'è solo il rimando.
+>
+> **Stati.** ▶ in corso in un thread o in una PR · 🙋 aspetta il DM ·
+> ⬜ da fare, l'agente non aspetta nessuno · 🟡 fatto a metà. Nella tabella delle
+> chiuse: ✅ fatto · 🔀 superato da una PR o da un'altra soluzione · ✖ abbandonato
+> per decisione.
+>
+> **La lista di prima** (fino al 2026-10-10) resta come diario in §0-bis e non
+> si aggiorna più. Ogni sua riga aperta ha qui una riga nuova, oppure sta fra le
+> chiuse.
+
+**Ultimo aggiornamento**: 2026-10-23, su `main` a `36d03e6` (merge della #234).
+Ogni riga è stata rimisurata sul repo e sul ramo di gruppo
+`campaign-group-rumblingstone` (`ce34599`).
+
+| | Cosa | Chi | Dove sta il dettaglio | Da dove si parte |
+|---|---|---|---|---|
+| ▶ | **P01 · MASTER-DEF: A3 chiuso, D4 e D5 decise** (#259, ARC-08: il collo e l'ala nella presa di Thorik, ADR-0096) | thread «Chiusura piano LETTORE-PLAYTESTER · F4» | [MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A3 | merge della #259 quando il thread dà il via; poi S1-S4 |
+| 🙋 | **P02 · AVVENTURE-COMMUNITY 7c, fronti e orologi**, e i residui del lotto 7: i 4 di `plans/coerenza-residui.json` e i possessivi contro italiano-nativo §1 | DM | [AVVENTURE-COMMUNITY](PIANO-AVVENTURE-COMMUNITY-2026-10.md) | una risposta del DM; poi il thread «Avventure della community a confronto» |
+| ▶ | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | thread «Schede PNG e cattivi uniformi» | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
+| ▶ | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | thread «LLM locale per la prosa» | [ADR-0089](adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
+| ▶ | **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | thread «Piano per la PR 99 abbandonata» | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
+| 🙋 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata). La 0096 entra con la #259 | DM | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
+| 🙋 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D3-D6, RIPRESA-PR D2 (Gemini o SDXL per il Drappo) | DM | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
+| 🙋 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dice ancora «~3/day»); Belkram che morendo dice «sono in pace» e riconosce Thorik portatore della Corona; Hella con la guarigione rapida 1 al posto della Rigenerazione, visto che la sessione 4 l'ha risorta | DM, a mano (ADR-0007) | `/mnt/project-files/sessione-2026-10-15/` · `/mnt/project-files/giro-arc07-2026-10-18/PATCH-STATE-MD.md` | `git am` o a mano sul ramo `campaign-group-rumblingstone` |
+| 🙋 | **P09 · Le domande di canone lasciate aperte dai thread di ARC-07 e ARC-08**: i pf di Terros (345 o 348 con Robustezza); *Virata* da riscontrare su d20srd; la portata del sussurro della Catena `[INFERRED]`; cosa succede sul collo di Fauci e la discesa da un'ala colpita (proposti 22,5 m); nome falso o silenzio davanti a Skullcrusher; le domande 28-33 del giro 4; quale versione delle pozioni del re vale in Scena 4 per i gruppi futuri; il numero della guarnigione nanica di Dauth | DM | `plans/esperimenti/giro4-arc07-2026-10-19/DECISIONI-DM.md` · `DEF-4` · `ARC08` | una risposta per domanda; l'agente le porta nei master in una PR |
+| 🙋 | **P10 · Mappe, le scelte del DM**: texture e tessere nella pagina di scelta (R8, livello B), la prima immagine di ComfyUI (R4-quinquies), il giro di prova sui modelli 3D CC0 e lo zip Standard di Quaternius (R4-ter), il pacchetto base di 2-Minute Tabletop se interessa ancora (R4), i glifi e le mappe della #225 al set nuovo (COLLAUDO D10 e D12), un `@verso` per le due porte ambigue del Portale | DM, sulla sua macchina | [RESA-ASSET](PIANO-RESA-E-ASSET-DELLE-MAPPE.md) §8 · [COLLAUDO-MAPPE](PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) | DM; poi l'agente mette le tessere nel tema e rimisura |
+| 🙋 | **P11 · I collaudi che solo il DM può fare**: l'import `.uvtt` in Foundry (INTEGRAZIONE, ~92%), il gate κ ≥ 0,6 (MISURA-EDITORIALE, ~90%), la prova del blocco dei segreti (PRATICHE PI-3), il collaudo del Drappo L9 al tavolo dopo la lettura a freddo | DM | i piani | DM |
+| 🙋 | **P12 · Immagini da Canva**: gli originali a piena risoluzione dei sette ritratti al posto delle copie da 533 × 800, e Skullcrusher nel cortile col cane di Hella sbagliato | DM | `07_…/Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` §4 | esportare da Canva con lo stesso nome di file |
+| 🙋 | **P13 · La bozza del Caos Ultimo** (TRASVERSALE D13): approvarla o correggerla | DM | `PG/Artefatti/…/04_Anello_S3_Caos_Ultimo_DM.html` | DM |
+| 🙋 | **P14 · Le promozioni a stable** (ADR-0099): ruff e uv proponibili dal 2026-11-06, pytest-xdist dopo 14 giorni dal 2026-10-23 | DM, su proposta dell'audit | [PIATTAFORMA](PIANO-PIATTAFORMA-DI-SVILUPPO.md) | la card nel thread padre |
+| ⬜ | **P15 · La coerenza dell'archivio dei piani**: sei piani con lo stato diverso fra INDEX e intestazione (AMBIENTE, PRATICHE, TRAVASO, AUTOMAZIONE, AGENT-SKILLS, DRAPPO); #236 e #250 senza riga in CHANGELOG; due righe del 2026-10-12 senza colonna Esito, con `check_plans_discipline.py` che conti le colonne; in §4 RECUPERO D3-D5 compaiono due volte (`decisioni_dm.py --emit`) | agente | §4 · `plans/CHANGELOG.md` · `scripts/check_plans_discipline.py` | **il primo thread da aprire**: una PR sola, tutta di classe M |
+| ⬜ | **P16 · Le marcature rimaste nel contenuto**: 44 `[INFERRED]` e `[PROPOSTA]` (erano 568 il 2026-09-25; il Bestiario è a 0): ARC-08 3, ARC-09 9, `campaign/` 26 (20 nel `state-changelog`), PG 2, ARC-07 1 fuori archivio | agente, con le domande al DM | `grep -rc "\[INFERRED\]\|\[PROPOSTA\]"` | un lotto per arco: prima ARC-08, poi ARC-09 |
+| ⬜ | **P17 · Skullcrusher Vecchio nei file di ARC-08**: l'ERRATA §2.3 e `ARC08-11-PONTE-ARRIVO` vanno allineati al duello deciso (il Vecchio con 2 wyvern, EL 17) | agente | memoria del 2026-10-19 · `08_…/ERRATA-*.md` | da riverificare prima di toccare |
+| ⬜ | **P18 · Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` non hanno ancora la loro riga in `dnd-35-srd/references/resources.md` | agente | §8.3 | una riga e la voce nel registro delle norme |
+| ⬜ | **P19 · Il rilevatore dei box e le battute etichettate** (`> **2 di 3 — …**`): da riverificare se `misura_craft.box_read_aloud` le apre; se no, allargare l'apertura e rimisurare i residui | agente | `scripts/misura_craft.py` | prima la prova su `DEF-4` (Balvar) |
+| ⬜ | **P20 · Residui di stampa**: «Naviga i capitoli qui sopra» ancora stampato nel Palio (`PALIO-BOOKLET-INTRO.md`); l'ultima riga dell'indice dell'Abbazia sola a pagina 35; i residui d'apparato del Palio e del Drappo (`scripts/apparato-residui.json`, tetto 25 sul Palio) | agente, con una domanda al DM per gruppo | §11.3 · CICLO-SESSIONE 2g | una PR di classe M |
+| ⬜ | **P21 · RECUPERO L2 e L4**: R-3 e il suo test; i piani fermi, quando il DM risponde a D5 | agente | [RECUPERO](PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) | L2 subito, L4 dopo D5 |
+| ⬜ | **P22 · L'ambiente riproducibile dentro la piattaforma**: A1-A3 di AMBIENTE (checksum nel registro, tre piattaforme, lock) vanno rimisurati contro ADR-0099, che ha già portato Python 3.13, i canali e i test una volta sola | agente | [AMBIENTE](PIANO-AMBIENTE-RIPRODUCIBILE.md) · [PIATTAFORMA](PIANO-PIATTAFORMA-DI-SVILUPPO.md) | dire cosa di AMBIENTE è superato, poi A1 |
+| ⬜ | **P23 · PRATICHE**: PI-6, PI-2, PI-5, PI-4 (dopo CICLO D6); PI-1 4i-3 aspetta la prima PR che resta indietro rispetto a `main` | agente | [PRATICHE](PIANO-PRATICHE-DI-INGEGNERIA.md) §5 e §8 | una PR ciascuno, in quest'ordine |
+| ⬜ | **P24 · CICLO-DI-SESSIONE, la Fase 0** (D1-D6 decise il 2026-09-30) | agente | [CICLO-SESSIONE](PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | la Fase 0 |
+| ⬜ | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | agente | [DRAPPO](PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
+| ⬜ | **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | agente | `ruff.toml` | dopo il merge della #264 |
+
+### Chiuse, superate, abbandonate
+
+Qui stanno le righe aperte della lista di prima (§0-bis) e i punti chiusi dal
+2026-10-10, ciascuno con la prova. Si tengono per un mese, poi si potano: il
+CHANGELOG resta.
+
+| | Cosa era | Come si è chiusa |
+|---|---|---|
+| ✅ | Le PR aperte al 2026-10-10 (#216, #231, #228, #106, #99) | #216 portata dalla #233; #231 unita; #228 superata dalla #236 (va solo chiusa); #106 e #99 sono P05 e P07. Le PR aperte non stanno più qui: le tiene il thread padre |
+| ✅ | Il lotto D13 e la D17 di AGENT-SKILLS | applicati il 2026-10-03 (27 modifiche, il «sembra» smentito resta) |
+| 🔀 | Le quattro incoerenze di canone trovate dalle corse di L11 e L12 | superate dai giri su DEF-5 (#239, #245, #249-#258): `ARC08-11` dice «nessun −2 COS»; DEF-5 fa tornare tutto ciò che i PG portano, pozioni comprese; il Rubino è quello della D6; l'handout «Lo Stato dei Custodi» lascia solo le righe delle ferite da riempire al tavolo, senza il carry-over meccanico |
+| ✅ | Il giro 4 di DEF-4, le D64-D68, D35-D37, DEF-1, 2 e 3 nella forma, ARC-07 al ciclo completo, il giro delle quattro letture, le 12 `[INFERRED]` di DEF-5 | LETTORE-E-PLAYTESTER chiuso il 2026-10-15 (#239); DEF-5 senza `[INFERRED]` |
+| ✅ | A3 di MASTER-DEF | #242 (2026-10-20); restano D4-D6, cioè P01 e P07 |
+| ✅ | Chiudere la serata del 2026-09-25, `state.md` e il Rubino, RD 5/epico e male della Corona, *Fortezza Mentale* di Artemis | sul ramo di gruppo: `campaign/sessions/2026-09-25_session-4.md` (`d8ecd2b`, `ce34599`), `state.md` §6 aggiornato |
+| ✅ | Le decisioni prese che non erano su `main` (#216: D17, D38, la *Torre*, il lotto D13, ADR-0087) | portate dalla #233 (2026-10-10) |
+| ✅ | Python 3.13 ovunque (AMBIENTE A2, D7) | #231 e #236; poi ADR-0099 con la #273 |
+| ✅ | Il lotto 7 di AVVENTURE-COMMUNITY, la qualità misurabile, con Stanza contro spaCy (#264 con dentro la #270; ADR-0101) | #264 unita il 2026-10-23 (`bfe0e39`); il seguito per il DM è P02 |
+| ✅ | Le piante di Rethmar, Dauth e Channathgate e gli strumenti delle mappe nel repo (ADR-0102) | #276 (`28eca2c`) e #280 (`8119333`), 2026-10-23 |
+| ✅ | La PR del LLM locale (ADR-0089) | #234 unita il 2026-10-23 (`36d03e6`); il seguito è P04 |
+| ✖ | La pianta di Dauth esportata da Watabou (RESA-ASSET R5) | abbandonata per decisione del DM (2026-10-22): le città della valle entrano solo con le piante del generatore del repo (#269, #271, #272) |
+| 🔀 | Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi, 568 | da 568 a 44: il Bestiario è a 0 con la #241 (ADR-0091) e le #247-#248. Il resto è P16 |
+| 🔀 | Le quattro revisioni della prova su ARC-08 (`plans/scrittura/revisioni-pilota-ARC08/`) | superate se il DM dice sì a MASTER-DEF D6 (la r1 di `hammerfist_encounters` scartata, i master assorbono gli altri file). Restano dentro P07 |
+| 🔀 | 🧲 e 🤖 nella legenda, e gli opzionali dei piani fermi | proposti come «non si fa» da RECUPERO D5: dentro P07 |
+| 🔀 | Gli oggetti di scena dai modelli 3D CC0 e la resa misurata (RESA-ASSET R4-ter e R8), la parte di codice | fatti (#227, #230); la parte del DM è P10 |
+
+Le decisioni aperte al DM sono in §4, generata da `decisioni_dm.py`.
+
+**Il primo comando di una sessione nuova**:
+
+```bash
+git fetch --prune origin
+python3 scripts/fase1.py <i file che stai per toccare>
+python3 scripts/decisioni_dm.py --check
+python3 scripts/validate_lingua.py     # 0 refusi attesi: il passo in CI è bloccante
+```
+
+Un lotto per PR, salvo lotti piccoli della stessa famiglia che il DM chiede di
+tenere insieme (come i due validatori della #168). Dopo il merge il ramo della
+sessione si ricrea da `main`.
+
+## 0-bis · La lista di prima, fino al 2026-10-10 (diario, non si aggiorna)
+
+> Questa era §0 fino al 2026-10-23. Resta per il perché di ogni riga; dove è
+> finita ognuna lo dice §0, nella tabella «Chiuse, superate, abbandonate», o
+> nella riga P nuova che la sostituisce.
 
 **Ultimo aggiornamento**: 2026-10-10, dopo il merge della #230: la #216 portata sul `main` nuovo con la memoria del lavoro in un posto solo, [`MEMORIA.md`](../MEMORIA.md) (ADR-0087, rinumerato da 0086 per D2 di RECUPERO). Prima, nella #230 prima del suo merge: tutti i piani rimisurati contro checklist, CHANGELOG, decisioni, rami e PR (anche chiuse); il piano di recupero della #232 portato qui. Il diario di prima: 2026-10-09, dopo il merge della #227 (`f40ffeb`): R4-ter di [RESA-E-ASSET-DELLE-MAPPE](PIANO-RESA-E-ASSET-DELLE-MAPPE.md) in una PR nuova (D18), gli oggetti di scena del tema texture dai modelli 3D CC0 resi con Blender; codice, guida e secondo emendamento di ADR-0085 fatti, D19-D22 decise; le tessere vere le fa il DM. Lo stato di ogni voce dei due piani delle mappe è nei loro §8, le voci rese inutili dalla #227 in §2-bis qui sotto. Prima: 2026-10-08, sera, secondo messaggio del DM: aperto [RESA-E-ASSET-DELLE-MAPPE](PIANO-RESA-E-ASSET-DELLE-MAPPE.md) con ADR-0085 (font dei volumi e ripiego Noto nelle 47 mappe, 🔺 e 🔷 universali; R4-R6 aspettano D6-D8), scipy nel collaudo (D17) e `@tipo` su tutte le 44 mappe (D18), nella stessa PR #227. Prima, la stessa sera, dopo la #226: fatto V2-quater di [COLLAUDO-MAPPE](PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) (l'asse delle chiusure, ADR-0083; `tcod` nel collaudo, ADR-0084; D13-D16), e la riga ▶ torna al giro 3 delle letture su DEF-4. Prima, la stessa sera: fusa la #226 ([COLLAUDO-MAPPE](PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md) con ADR-0082, il corredo dei simboli, `collaudo_mappe.py` e il collaudatore); la riga ▶ è l'ordine nuovo del DM: asset di Wesnoth, dipendenze in deroga, orientamento di porte e grate, in una sessione nuova e prima degli altri. Prima, lo stesso giorno: chiuso il lotto mappe D28 (D44-D48), il prossimo lavoro è il giro 3 delle letture su DEF-4. Prima, lo stesso giorno: aperto [AMBIENTE-RIPRODUCIBILE](PIANO-AMBIENTE-RIPRODUCIBILE.md) con ADR-0081, da eseguire dopo il lotto mappe D28, che resta la riga ▶. Prima: 2026-10-07, notte: DEF-4 chiuso nel canone con la #222, i due booklet completi, e il lotto mappe D28 come prossimo lavoro. Prima: 2026-10-07, sera: completata e chiusa la #206 (§15), fuse le PR di Dependabot. Prima: 2026-10-07, con la #218 (i banchi, le monete antiche e le locande di ARC-08 e ARC-09; D41-D43 decise). Il controllo contro le PR ha trovato **una PR mergiata che l'archivio non conosceva**: la #217 (`7343093`, 2026-10-06), il conto della fucina di `ARC07-DEF-4` giocato al tavolo, ora nel CHANGELOG e qui sotto. Le PR aperte rimisurate sono in §3, «Le PR ancora aperte, oggi». Prima: 2026-10-03, dopo il merge della #215 (la tavola di fuori nel Drappo, ADR-0080). Il CHANGELOG del 2026-10-03 porta anche #213 e #214 (le quattro scelte del DM sul foglio di stile; la coda del secondo lettore), che questa fotografia non aveva ancora: la loro coda sta in [PIANO-CODA-DEL-SECONDO-LETTORE](PIANO-CODA-DEL-SECONDO-LETTORE-2026-10.md). Il da fare in ordine per ripartire è in §14.4-ter. Prima: 2026-10-02, dopo il merge della #200 (`5f3cb520`), che ha portato su `main` anche #186-#199, #187 e #188: le sole PR aperte sono #99 e #106, e il da fare è in §14.4-bis. Prima: 2026-09-30 notte, il giro delle quattro letture su DEF-4 e DEF-5 (riga ▶ qui sotto). Prima: 2026-09-30, dopo il merge della #182 (`c80af16`), della #183 (`ac97197`) e della #184. **La fotografia della tornata, con i numeri, i piani aperti e le decisioni per piano, è il §14.** DEF-4 pronto per la prossima serata, ARC-07 al ciclo del master con DEF-5 ai passi 1-6, e la prova cieca di `P-ABITATO` riuscita. Le righe marcate *(PR #183)* e *(30 settembre)* qui sotto dicono cosa è fatto e cosa resta; il dettaglio è in [LETTORE-PLAYTESTER](PIANO-LETTORE-E-PLAYTESTER.md) F3-bis e F4. Prima: il 2026-09-25, dopo il merge delle #170-#174 (`eef36a9`) e della #176, e i lotti 2f e 2g di CICLO-SESSIONE. Cosa ha chiuso la #169 e cosa ha lasciato aperto: §11. La storia delle scelte fuori stampa e il conto delle marcature aperte: §12.
 
@@ -120,21 +221,6 @@
 | ✅ | **D9, i box oltre 12 righe spezzati** *(30 settembre, sera)*: DEF-1 e DEF-2 a zero, nessuna parola cambiata; D34 canone; *silenzio* corretto a 1 minuto per livello (la pietra 8 minuti, la pergamena 3); tolta la riga di Moradin «Siete VOI» dall'handout delle Cronache | K | PR #185 | fatto |
 | 🙋 | **Al DM: `state.md` e il Rubino**: §6 lo dà «speso»; ora si usa una volta sola, resta nell'incasso, e dopo l'uso la Corona è intera, +3 e Senzienza (D6). E il log delle serate del 25-27 settembre | K | `campaign/state.md` §6 · `campaign/sessions/` | `dm.py session end` sul ramo del gruppo, mai su `main` (ADR-0007) |
 | ⬜ | **Le decisioni prese che non sono su `main`, e i piani mai finiti** *(richiesta del DM, 2026-10-10)*: D17, D38, la *Torre* e il lotto D13 sono chiusi solo nella #216, D12 di RICERCA-MESTIERE solo nella #230, e le due PR creano entrambe ADR-0086. Alcune righe di questa tabella sono ferme: il piano le elenca (§2.5) e L3 le corregge qui | G + M | [RECUPERO-DECISIONI](PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) | DM: D1-D6; agente: L2 e L3 non aspettano nessuno |
-
-Le decisioni aperte al DM sono in §4, generata da `decisioni_dm.py`.
-
-**Il primo comando di una sessione nuova**:
-
-```bash
-git fetch --prune origin
-python3 scripts/fase1.py <i file che stai per toccare>
-python3 scripts/decisioni_dm.py --check
-python3 scripts/validate_lingua.py     # 0 refusi attesi: il passo in CI è bloccante
-```
-
-Un lotto per PR, salvo lotti piccoli della stessa famiglia che il DM chiede di
-tenere insieme (come i due validatori della #168). Dopo il merge il ramo della
-sessione si ricrea da `main`.
 
 ---
 
