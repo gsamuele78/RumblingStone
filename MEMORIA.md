@@ -53,7 +53,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
 | **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
 
-## 🙋 Aspetta il DM: 10
+## 🙋 Aspetta il DM: 11
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
@@ -69,8 +69,9 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P12 · Immagini da Canva**: gli originali a piena risoluzione dei sette ritratti al posto delle copie da 533 × 800, e Skullcrusher nel cortile col cane di Hella sbagliato | `07_…/Immagini/PROMPT-RITRATTI-E-TAVOLE-ARC07.md` §4 | esportare da Canva con lo stesso nome di file |
 | **P13 · La bozza del Caos Ultimo** (TRASVERSALE D13): approvarla o correggerla | `PG/Artefatti/…/04_Anello_S3_Caos_Ultimo_DM.html` | DM |
 | **P14 · Le promozioni a stable** (ADR-0099): ruff e uv proponibili dal 2026-11-06, pytest-xdist dopo 14 giorni dal 2026-10-23 | [PIATTAFORMA](plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md) | la card nel thread padre |
+| **P29 · Le chat di Claude.ai, la parte che solo il DM può fare**: archiviare a mano le 24 chat del triage (nessuno strumento qui le raggiunge, né i loro allegati) e ripetere la ricerca dentro gli altri progetti di Claud… | triage chat 2026-10-23, «Note oneste» | archiviare; dire se esistono altri progetti RumblingStone |
 
-## ⬜ Da fare, nell'ordine dei piani: 12
+## ⬜ Da fare, nell'ordine dei piani: 14
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
@@ -88,6 +89,8 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P24 · CICLO-DI-SESSIONE, la Fase 0** (D1-D6 decise il 2026-09-30) | [CICLO-SESSIONE](plans/PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | la Fase 0 |
 | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | [DRAPPO](plans/PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
 | **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | `ruff.toml` | dopo il merge della #264 |
+| **P27 · I nomi dell'Elsir Vale rimasti nel testo di gioco**: il triage delle chat dice «sostituiti da Cannath», ma «Elsir» compare ancora in ~30 file di contenuto. Molte righe sono note d'adattamento e vanno tenute (REA… | triage chat 2026-10-23, chat 15 | censire le righe, separare note d'adattamento e finzione, correggere solo la finzione |
+| **P28 · L'arco 05 (la Stanza Runica) vive solo in PDF**: tre PDF, ~4.100 parole, nessun markdown; il canone è già in `campaign/lore/campaign-chronicle.md`. I PDF danno i funghi zurkhwood come risorsa della druida, il ca… | `05_aa-stanza-runica/`, triage chat 2026-10-23, chat 12 | conversione con `converters/pdf-to-md-engine`, poi una nota di canone sui funghi |
 
 ## 🟡 Fatto a metà: 0
 
@@ -101,6 +104,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | STATO-E-ORDINE | §0, triage delle chat di Claude.ai | ✅ 24 chat verificate sui percorsi di `main`: tutte assorbite o superate; tre punti nuovi: nomi Elsir rimasti in finzione, arco 05 solo in PDF, archiviazione e… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
 | 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
@@ -112,7 +116,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
-| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7h: LanguageTool, Stanza e perplessità come tratti e filtro della pipelin… | ❌ nessuno migliora il modello (base 0,611, migliore +LT 0,630, McNemar 1,00); restano in unstable |
 
 ## Le misure che si portano dietro
 
