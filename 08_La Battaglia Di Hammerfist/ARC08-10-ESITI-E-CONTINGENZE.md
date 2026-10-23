@@ -15,6 +15,15 @@
 > CONSEGUENZE.md` (ARC-09, per struttura); `Cerimonia-delle-100-Asce.md`
 > (per tono).
 
+<!-- storico -->
+> 🧭 **Perché questo file è cambiato così spesso (ottobre 2026).** Dal
+> 2026-10-17 al 2026-10-18 sono state chiuse le marche INFERRED. Il
+> 2026-10-19 sono entrate le dodici decisioni del giro (D9-D20) e la presa
+> in bocca di Fauci. Il 2026-10-21 il flashback dei pregen ha preso il
+> libretto della battaglia campale (ADR-0096), le carte dei poteri e
+> l'avanguardia nella Sessione 1, e il §5.3 dà al Re gli 8 pf al Cuore.
+<!-- /storico -->
+
 ---
 
 ## 0. Regola d'oro — gli esiti NON sono un copione
@@ -233,7 +242,7 @@ maturati e si applicano al finale.
 | Obiettivo | Pieno | Parziale | Fallito |
 |---|---|---|---|
 | **Ricognizione della colonna** (skill challenge, `ARC08-04-MARCIA-MANO-ROSSA.md`) | Intel completa: i Rumbling Stones conoscono composizione e posizioni nemiche → **+2 iniziativa di massa** nel finale + **−1 sorpresa** nemica | Intel parziale: solo composizione, non posizioni → +1 iniziativa di massa | Allarme dato: nemici allertati → **nessun bonus**, +50 rinforzi orda nel finale |
-| **Difese preparate** (Incontro 1B) | Baliste piazzate + trappole pronte → **1 ondata nemica affronta un −2 CA da terreno preparato** nel finale | Metà difese → bonus dimezzato (1 uso) | Difese non pronte → nessun bonus |
+| **Difese preparate** (trappole di 1D e della Preparazione) | Baliste piazzate + trappole pronte → **1 ondata nemica affronta un −2 CA da terreno preparato** nel finale | Metà difese → bonus dimezzato (1 uso) | Difese non pronte → nessun bonus |
 
 ### 5.2 Sessione 2 — Assedio (pregen)
 
@@ -265,6 +274,29 @@ maturati e si applicano al finale.
   PX da APL 13 dosati a parte (`ARC08-01-GUIDA-DM.md` Appendice C /
   `hammerfist_encounters-...-final.md` §RIASSUNTO XP).
 
+
+### 5.4-bis Se l'assedio si gioca con il libretto `[CANONE — DM 2026-10-21]`
+
+L'assedio dei pregen si gioca con il libretto della battaglia campale
+(`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md`, ADR-0096). Le sessioni coi pregen
+sono tre. La **Sessione 1** è l'avvistamento, col libretto spiegato a pezzi,
+e finisce con la scaramuccia dell'avanguardia (libretto §13): le squadre di
+guastatori dei pregen scavano trappole sul pendio finché l'orda non le
+scaccia. È scritta nel master `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`, e la sua
+**tabella delle leve** (§7) dice cosa porta ogni esito della serata
+nell'assedio e in quale riga di questa tabella. Seguono la **Sessione 2** e
+la **Sessione 3a**.
+
+- **Ricognizione della colonna** si legge come sopra.
+- **Difese preparate** si legge dalle trappole portate a casa: 6 o più
+  «pieno», 3-5 «parziale», meno di 3 «fallito». Ogni trappola annulla anche
+  una tacca del Giorno 1 o del Giorno 2 d'assedio. Contano le trappole
+  dell'avanguardia e quella della Preparazione delle difese.
+- Le righe di §5.2 e §5.3 si leggono con la tabella di `ARC08-19` §4
+  (brecce dei giorni 1 e 2, comandanti fuggiti feriti, Mura del giorno 2,
+  reparti vivi alla ritirata). Nell'assedio i comandanti non muoiono: sotto
+  metà dei punti ferita fuggono, così arrivano al finale feriti come vuole
+  §5.2. Re Thorek e l'evacuazione restano come sopra.
 
 ### 5.5 Se il flashback coi pregen non è stato giocato `[INFERRED — needs DM confirmation]`
 

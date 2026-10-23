@@ -31,7 +31,14 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
 
+- `scripts/riscontro_srd.py` (canale testing, ADR-0103): riscontra le regole
+  dei master sull'SRD 3.5 e sul PRD di Pathfinder 1e (OGL 1.0a), scaricati a
+  commit fissato con lo sha256 in `~/.cache/rumblingstone/srd/`, fuori dal
+  repo. `regola NOME` cerca una regola; `riscontra FILE.yaml` dice concorda,
+  discorda o non trovata, con la citazione. Esce 3 se le fonti mancano e la
+  rete non risponde. Job CI `riscontro-srd`, non bloccante.
 ### Modificato
+- ARC-08: i sergenti hobgoblin e le guardie nere orog prendono le schede del Bestiario; `plans/coerenza-residui.json` è vuoto, quindi ogni contraddizione fra ARC-07 e ARC-08 blocca la CI.
 - La norma `italiano-nativo` §1 e §8 vieta il possessivo solo sulle parti del corpo e sulle cose addosso; gli altri sono liberi (decisione del DM, 2026-10-23).
 - `coerenza_campagna fronti`: un orologio che dichiara `unita` (giorni, ore) tiene la sua durata invece di 4, 6 o 8 tacche. La CI controlla i file `ARCnn-FRONTI.yaml` degli archi, canone da ARC-08 in poi.
 - `migliora_prosa migliora` tiene l'originale quando anche la migliore candidata ha meno di 0,5 contro di lui: dal voto del 2026-10-23 il modello di preferenza supera la soglia scritta prima di addestrarlo (PR #264).

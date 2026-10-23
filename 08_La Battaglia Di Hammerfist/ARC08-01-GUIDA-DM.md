@@ -5,6 +5,18 @@
 
 ---
 
+<!-- storico -->
+> 🧭 **Perché questa guida è cambiata così spesso (ottobre 2026).** Dal
+> 2026-10-16 al 2026-10-18 villain, alleati e pregen sono passati alla
+> versione più forte e le marche INFERRED decidibili sono state chiuse.
+> Il 2026-10-19 e il 2026-10-20 sono entrati il giro dal 3B alla Cerimonia
+> (ADR-0094) e la presa in bocca di Fauci contro Thorik, con i colpi
+> mirati da PF1e. Il 2026-10-21 e il 2026-10-22 la Sessione 1 e la
+> Sessione 2 dei pregen sono passate nei master `ARC08-DEF-1` e
+> `ARC08-DEF-2`, e le mappe della fortezza hanno preso le quote a gradoni
+> (ADR-0098). Qui restano i rimandi a quei master.
+<!-- /storico -->
+
 ## **INDICE DEL DOCUMENTO**
 
 1.  **Introduzione e Struttura della Campagna**
@@ -36,30 +48,21 @@
     *   **Meccaniche di Transizione: Il Passaggio del Testimone**
 
 4.  **Capitolo 2: La Campagna - Scontro per Scontro**
-    *   **Sessione 1: L'Ombra sulla Montagna**
-        *   Introduzione da Leggere ai Giocatori
-        *   Incontro 1A: La Ricognizione Iniziale (con Mappe 1A-1, 1A-2, 1A-3)
-        *   Obiettivi Tattici e Conseguenze
-        *   Incontro 1B: Il Consiglio di Guerra
-        *   Incontro 1C: Rafforzare le Difese
+    *   **Sessione 1: L'Ombra sulla Montagna** → master `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`
+        *   Scene 1-3: l'apertura, la notte prima, il rapporto delle sentinelle
+        *   Incontro 1A: La Ricognizione (con Mappe 1A-1, 1A-2, 1A-3)
+        *   Incontro 1B: Il Consiglio di Guerra e la Preparazione delle Difese
+        *   Incontro 1C: La Dimostrazione di Forza
+        *   Incontro 1D: L'Avanguardia (con Mappa 1D)
         *   Incontro 1E: Presagi Funesti
-        *   Incontro 1F: La Dimostrazione di Forza
-        *   Risultati della Sessione 1
-    *   **Sessione 2: Tre Giorni di Sangue e Ferro**
-        *   Introduzione Sessione 2
-        *   **Giorno 1: L'Assalto alle Mura Esterne**
-            *   Incontro 2A: L'Assalto alle Mura Esterne (con Mappe 2A-1, 2, 2-BIS, 3)
-            *   Incontro Élite 2A: Duello contro Gorthak
-            *   Incontro Élite 2B: Affrontare il Drago
-        *   **Giorno 2: La Breccia nella Roccia**
-            *   Introduzione Giorno 2 (con Mappa 4)
-            *   Incontro Élite 2C: Duello dei Comandanti
-            *   Incontro Élite 2D: Proteggere le Cantitrici
-        *   **Giorno 3: Il Soffio della Disperazione**
-            *   Introduzione Giorno 3
-            *   Incontro Boss 2E: Il Soffio della Morte (con Mappa 2B-Corretta)
-            *   La Ritirata Disperata
-            *   Incontro 2F: L'Incrocio Silenzioso — Imboscata nelle Caverne Interne (con Mappa 3Z)
+        *   La notte dei fuochi e la tabella delle leve
+    *   **Sessione 2: Tre Giorni di Sangue e Ferro** → master `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`
+        *   Scena 1: l'alba del Giorno 1 e le leve
+        *   Incontro 2A: L'Assalto alle Mura (Giorno 1), con Gorthak al cancello e il sorvolo
+        *   Giorno 2: la breccia, Incontro 2C (Grimjaw) e 2D (le Cantitrici)
+        *   Giorno 3: Incontro 2E e 2B, il soffio sul Re (Mappa 2B-Corretta)
+        *   La ritirata (Mappa H3-1)
+        *   Incontro 2F: L'Incrocio Silenzioso (Mappa 3Z)
     *   **Sessione 3: Dalle Profondità della Terra**
         *   Introduzione Sessione 3
         *   Incontro 3A: L'Ultima Resistenza (con Mappa 5)
@@ -113,6 +116,15 @@
 *   **Sessione 2: Tre Giorni di Sangue e Ferro.** L'assedio ha inizio. I giocatori affrontano l'assalto alle mura, i primi boss e il drammatico attacco del drago che porta alla ritirata.
 *   **Sessione 3: Dalle Profondità della Terra.** I superstiti nanici sono braccati. Nel momento più buio, i veri PG (i Rumbling Stones) appaiono, segnando la transizione e l'inizio della controffensiva.
 *   **Sessione 4: La Tempesta e la Vittoria Finale.** I PG, ora alla guida delle forze naniche, coordinano l'assalto finale con l'arrivo di potenti alleati aerei, affrontando i comandanti nemici rimasti e decidendo le sorti di Hammerfist.
+
+> **Con il libretto** `[CANONE — DM 2026-10-21]`: l'assedio si gioca con
+> `ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` (ADR-0096). Le sessioni coi pregen
+> sono tre. La Sessione 1 è l'avvistamento e finisce con la scaramuccia
+> dell'avanguardia (libretto §13), e il libretto si spiega a pezzi: trenta
+> secondi in apertura, il primo pezzo prima dell'avanguardia, il resto alla
+> Sessione 2 (`ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` §5). Le Sessioni 2 e 3 usano
+> il libretto per la battaglia di massa. Come si leggono i bonus:
+> `ARC08-10-ESITI-E-CONTINGENZE.md` §5.4-bis.
 
 
 ## **2. LEGENDA MAPPE E SIMBOLI TATTICI**
@@ -207,12 +219,12 @@ SIMBOLI TATTICI:
 - **La caduta.** Chi si libera in aria cade dalla quota del drago, 1d6 ogni 3 m fino a 20d6. La fermano *caduta morbida* (bardo, mago e stregone 1°, azione immediata) o una pozione di *volare* bevuta prima. Lo *Scudo del Custode* di Hella prende metà del danno di un alleato entro 9 m, ma solo se lei è in aria vicino a lui `[CANONE — DM 2026-09-12]`.
 
 **Variante: aggrapparsi al drago** `[CANONE — DM 2026-10-20]`. L'SRD non ha una regola per arrampicarsi su una creatura in volo; la più vicina, afferrarsi mentre si cade, è Scalare CD della parete + 20, «praticamente impossibile». Al tavolo vale questa: quando Thorik vince la prova di lotta o di Artista della Fuga, può aggrapparsi al collo invece di cadere con una prova di **Scalare CD 25**. Se fallisce, cade.
-- **Sul collo** `[INFERRED — needs DM confirmation]`: Thorik non è più in lotta e il drago non lo morde, perché è fuori dalla portata della sua bocca. Come chi scala, perde la Destrezza alla CA e non usa lo scudo (SRD, *Climb*), e colpisce con Aegis Fang.
-- **Scrollarselo** `[INFERRED — needs DM confirmation]`: all'inizio di ogni turno di Fauci, Thorik ripete Scalare CD 25. Se fallisce di 5 o più, cade dalla quota del drago. Fauci per toglierselo può anche atterrare, ed è il duello dei round 21-23 con Thorik già addosso.
+- **Sul collo** `[CANONE — DM 2026-10-20]`: Thorik non è più in lotta e il drago non lo morde, perché è fuori dalla portata della sua bocca. Come chi scala, perde la Destrezza alla CA e non usa lo scudo (SRD, *Climb*), e colpisce con Aegis Fang.
+- **Scrollarselo** `[CANONE — DM 2026-10-20]`: all'inizio di ogni turno di Fauci, Thorik ripete Scalare CD 25. Se fallisce di 5 o più, cade dalla quota del drago. Fauci per toglierselo può anche atterrare, ed è il duello dei round 21-23 con Thorik già addosso.
 
 **Colpi mirati: l'occhio e l'ala** `[CANONE — DM 2026-10-20: regola della casa da PF1e, solo per questo scontro]`. L'SRD 3.5 non ha colpi mirati; qui si usano quelli di Pathfinder 1e (*Ultimate Combat*, «Called Shots», OGL). Un colpo mirato è un attacco singolo con un'azione di round completo, contro la CA normale (29, 37 con *armatura magica* e *scudo*). Non si somma alla carica, né a una raffica o a un attacco completo.
 - **L'occhio, −10.** Se colpisce, per 1 round i nemici di Fauci hanno occultamento contro i suoi attacchi, e lui ha −2 a Osservare. Con un critico perde la vista da quell'occhio per 1d4 minuti, e l'effetto di prima dura altrettanto. Non cade e non è accecato: gli restano l'altro occhio e la percezione cieca a 18 m, che però non gli toglie la probabilità di mancare chi è occultato (SRD).
-- **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[INFERRED — needs DM confirmation: la distanza la regola PF1e non la dice]`.
+- **L'ala, −2** (le ali contano come braccia). Se colpisce, Fauci ha −2 per 1d4 round a ciò che fa con quell'ala. In PF1e deve anche superare una prova di Volare o scendere contro la sua volontà. In 3.5 quella prova non c'è, e al suo posto fa un TS sui Riflessi con CD pari alla CA colpita: se fallisce, nel suo turno scende di 22,5 m, metà della sua velocità di volo, e non può salire `[CANONE — DM 2026-10-20]` (la distanza la regola PF1e non la dice).
 - **Da dove.** In mischia senza penalità se il bersaglio è adiacente, −2 altrimenti; a distanza le penalità di gittata raddoppiano, minimo −2 oltre i 9 m. Dal collo del drago l'occhio è a portata: meglio Aegis Fang in mano che lanciata, perché un attacco a distanza fatto nello spazio di chi minaccia provoca un attacco di opportunità (SRD).
 
 > **Verifica 3.5 (versione più forte, lotto delle schede PNG; ricontata al giro
@@ -689,6 +701,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 
 **Iniziativa:** +1; 
 **Sensi:** Scurovisione 18m; Ascoltare +2, Osservare +2
+**Caratteristiche:** For 20, Des 13, Cos 20, Int 10, Sag 10, Car 12
 **CA:** 25 (+1 Des, +10 armatura, +3 scudo, +1 schivare), contatto 12, colto alla sprovvista 23
 **PF:** 142 (10d10+3d12+68)
 **TS:** Tempra +13, Riflessi +6, Volontà +8
@@ -699,6 +712,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Attacco Completo:** *Martello da Guerra degli Avi +2* +21/+16/+11 in mischia (1d8+9/x3)
 **Abilità Speciali:** Postura Difensiva (+4 For/Cos, +2 TS Vol, 3/giorno), Colpo Devastante (+4d6 danni, 3/giorno), Presenza Comandante (+2 morale alleati entro 9m).
 **Talenti:** Attacco Poderoso, Incalzare, Arma Focalizzata (Martello da Guerra), Arma Specializzata (Martello da Guerra), Robustezza, Schivare, Volontà di Ferro, Resistenza Fisica, Spezzare Migliorato, Riflessi in Combattimento (gli ultimi tre aggiunti dal lotto, confermati dal DM il 2026-10-18).
+**Abilità:** Intimidire +17, Artigianato (pietra) +12, Ascoltare +2, Osservare +2, Percepire Intenzioni +2, Diplomazia +1, Scalare −1, Nascondersi −5, Muoversi Silenziosamente −5 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`).
+**Lingue:** Comune, Nanico.
 **Equipaggiamento:** *Armatura Completa Nanica +2*, *Scudo Pesante Runico +1*, *Martello da Guerra degli Avi +2* (Ritornante), 3 *Pozioni di Cura Ferite Gravi*.
 
 **Tattiche di Combattimento:**
@@ -740,7 +755,9 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 **Abilità Speciali:** Nemico Prescelto (Orchi +6, Giganti +4, Draghi +2), Stile di Combattimento Migliorato (Tiro Rapido, Tiro Multiplo), Andatura Montana (ignora terreno difficile in montagna), Comando Balestrieri (+4 attacco a unità di tiratori entro 18m).
 **Caratteristiche:** For 16, Des 18, Cos 18, Int 12, Sag 14, Car 10 (Cos 18 per i pf)
 **Talenti:** Tiro Ravvicinato, Tiro Preciso, Resistenza Fisica, Tiro in Corsa, Combattere con Due Armi, Arma Focalizzata (Arco Lungo Composito), Schivare, Mobilità (la CA conta il bonus di schivare).
-**Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*.
+**Abilità:** Osservare +18, Ascoltare +18 (+24 contro gli orchi), Nascondersi +24 (con il *mantello elfico*), Muoversi Silenziosamente +19, Sopravvivenza +17 (+19 all'aperto, +23 sulle tracce degli orchi), Scalare +18, Conoscenze (natura) +18 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Il punto in più di Osservare e Ascoltare (+18 contro il +17 del conto) si legge come un bonus dell'Esploratrice dei Picchi `[INFERRED — da confermare sulla classe]`.
+**Lingue:** Comune, Nanico, Gigante.
+**Equipaggiamento:** *Armatura di Cuoio Borchiato +2*, *Arco Lungo Composito Elfico +3*, 20 *Frecce +2*, 10 *Frecce Anatema degli Orchi*, 5 *Frecce Ricercanti*, *Asce Naniche Gemelle +2*, *Mantello Elfico*, cannocchiale (senza, le CD per contare l'orda dal crinale salgono di 10).
 
 **Tattiche di Combattimento:**
 - **Posizionamento:** Cerca sempre terreno sopraelevato
@@ -771,7 +788,7 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 > *"Thorin è anziano per gli standard di battaglia (280 anni) ma la sua fede in Moradin brucia come lava fusa. La sua barba bianca è decorata con rune sacre d'oro, e i suoi occhi grigio acciaio vedono il divino in ogni battaglia. È il consigliere spirituale di Re Thorek e il custode delle tradizioni più antiche."*
 
 **Iniziativa:** +1; 
-**Sensi:** Scurovisione 18m; Ascoltare +5, Osservare +5
+**Sensi:** Scurovisione 18m; Ascoltare +6, Osservare +6
 **CA:** 22 (+1 Des, +8 armatura, +3 scudo), contatto 11, colto alla sprovvista 21
 **PF:** 114 (12d8+60)
 **TS:** Tempra +13, Riflessi +7, Volontà +16
@@ -790,6 +807,8 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   1° (CD 17): *Cura Ferite Leggere* (x4), *Benedizione* (x2), *Favore Divino*, *Arma Magica* (D)
 *   0°: *Guida*, *Individuazione del Magico*, *Luce*, *Riparare*, *Resistenza*, *Virtù*
 **Talenti:** Incantesimi Potenziati, Creare Oggetti Meravigliosi, Volontà di Ferro, Scrivere Pergamene, Scacciare Extra, Incidere Rune [Private source — Forgotten Realms Campaign Setting]; Arma Focalizzata (martello da guerra) dal dominio della Guerra.
+**Abilità:** Concentrazione +20, Conoscenze (religione) +16, Sapienza Magica +16, Ascoltare +6, Osservare +6, Percepire Intenzioni +6, Sopravvivenza +6, Guarire +6, Diplomazia +3, Intimidire +3, Artigianato (pietra) +3, Nascondersi −5, Muoversi Silenziosamente −5 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). Ascoltare e Osservare erano +5: con Sag 22 sono +6.
+**Lingue:** Comune, Nanico, Terran.
 **Equipaggiamento:** *Armatura a Bande +2*, *Scudo Pesante Runico +1* (RI 15), *Martello da Guerra Sacro +2*, *Simbolo Sacro di Mithral*.
 
 **Tattiche di Combattimento:**
@@ -838,13 +857,15 @@ Gli spiriti degli antenati hanno "chiamato" temporaneamente quattro eroi nanici 
 *   0°: *Suono Fantasma*, *Prestidigitazione*, *Individuazione del Magico*, *Lettura del Magico*, *Mano Magica*, *Messaggio*
 **Caratteristiche:** For 14, Des 18, Cos 18, Int 14, Sag 10, Car 18 (Cos 18 per i pf)
 **Talenti:** Schivare, Mobilità, Arma Accurata, Volontà di Ferro, Persuasivo (Arma Accurata al posto della Competenza nello Stocco, che un bardo ha già).
-**Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*, 3 *Pozioni di Invisibilità*.
+**Abilità:** Diplomazia +23, Raggirare +21, Intrattenere (canto) +16, Ascoltare +15, Osservare +15, Camuffare +14 (+16 per recitare una parte), Nascondersi +14, Muoversi Silenziosamente +14, Raccogliere Informazioni +12, Percepire Intenzioni +10, Sapere bardico +10, Acrobazia +9, Intimidire +8, Conoscenze (locali) +7 (conto grado per grado: `plans/esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md`). I punti abilità della Spia Maestra (8 + Int a livello) e Osservare come sua abilità di classe sono `[INFERRED — da verificare sul manuale]`.
+**Lingue:** Comune, Nanico, Orchesco, Goblin: capisce gli ordini dell'orda entro 9 m con Ascoltare CD 15.
+**Equipaggiamento:** *Armatura di Cuoio +2* (Senza Tracce), *Stocco Elfico Affilato +1*, 8 *Pugnali da Lancio +1*, *Kit da Scasso Perfetto*.
 
 **Tattiche di Combattimento:**
 - **Inizio Battaglia:** Buff alleati con Inspire Courage e Haste
 - **Durante Scontri:** Flanking per Sneak Attack, priorità ai maghi nemici
 - **Situazioni Speciali:** Infiltrazione, sabotaggio, intelligence
-- *Morale*: sotto i 30 pf beve una pozione di invisibilità e si sposta; la canzone non si interrompe finché può cantare.
+- *Morale*: sotto i 30 pf lancia *invisibilità* su di sé e si sposta; l'*Ispirare Coraggio* che stava cantando dura ancora 5 round.
 
 > **Verifica 3.5 (versione più forte)**: lo stocco affilato ha critico 15-20.
 > Un bardo sa già usare lo stocco: il talento passa ad Arma Accurata, che
@@ -893,7 +914,7 @@ L'esercito è organizzato in quattro linee d'assalto principali, con supporto ae
 *(Statistiche e tattiche complete per ogni tipo di unità)*
 
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12).
-*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 6), Sergenti Hobgoblin (GS 4).
+*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5).
 *   **Supporto Magico:** Doom Hand Warpriests (GS 6, **Tattica:** potenziano le prime linee e usano *Dissolvi Magie*), War Adepts (GS 5, **Tattica:** aprono con *Palla di Fuoco* sulle unità compatte), Shamani Draconici (GS 6, **Tattica:** forniscono resistenza al fuoco e buff).
 *   **Artiglieria:** Giganti delle Colline (GS 7, **Tattica:** bombardano le mura da lontano), Ettin Standard (GS 6).
 *   **Cavalleria:** Goblin Worg Riders (GS 3, **Tattica:** aggirano i fianchi per colpire arcieri e maghi).
@@ -975,11 +996,12 @@ For 15, Des 12, Cos 14, Int 10, Sag 11, Car 9.
 #### **HOBGOBLIN SERGENTI (30 individui integrati)**
 *Leader di Unità, 2ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 5° liv., GS 4):
+STATISTICHE CREATURA SINGOLA (Guerriero Hobgoblin di 5° liv., GS 5; scheda del Bestiario, hobgoblin-sergente-cr5):
 LM Umanoide Medio; 
 Iniz +1; 
-CA 18 (armatura completa, scudo pesante); PF 38 (5d10+10); 
-Att Spada Lunga +9 (1d8+3/19-20); 
+CA 21 (armatura completa +8, scudo pesante +2, Des +1); PF 37 (5d10+10); 
+TS Temp +6, Rifl +2, Vol +1; 
+Att Spada lunga perfetta +9 (1d8+4/19-20) o Arco lungo +6 (1d8/×3); 
 Capacità: Leadership tattica (+1 morale ai guerrieri entro 9m).
 ```
 #### **GOBLIN WORG RIDERS (5 Unità, 50 coppie)**
@@ -1046,13 +1068,14 @@ For 19, Des 8, Cos 19, Int 6, Sag 10, Car 11.
 #### **OROG GUARDIE NERE (4 Orog scelti)**
 *Guardia del Corpo del Generale, 4ª Linea*
 ```
-STATISTICHE CREATURA SINGOLA (Orog Guerriero di 5° liv., GS 6):
-LM Umanoide Mostruoso Medio; 
-Iniz +0; 
-CA 19 (armatura completa+1); 
-PF 52 (5d10+25); 
-Att Ascia bipenne+1 +12 (1d12+7/x3); 
-Attacco Poderoso, Incalzare. 
+STATISTICHE CREATURA SINGOLA (Orog Guerriero di 6° liv., GS 7; scheda del Bestiario, orog-guardia-nera-guerriero6-cr7, ⚠ Non SRD):
+LM Umanoide Medio (orco); 
+Iniz +4; 
+CA 19 (armatura completa +1); 
+PF 63 (6d10+30); 
+TS Temp +10, Rifl +2, Vol +4; 
+Att Ascia bipenne +1 +13/+8 (1d12+10/x3); 
+Attacco Poderoso, Incalzare, Incalzare Potenziato, Arma Focalizzata e Specializzata (ascia bipenne), Iniziativa Migliorata, Volontà di Ferro. 
 For 20, Des 10, Cos 20, Int 12, Sag 11, Car 8.
 ```
 
@@ -1106,8 +1129,8 @@ Incantesimi chiave: Veste Magica, Resistenza all'Energia.
 
 ### **UNITÀ DI BATTAGLIA COMPLETE: ESERCITO DI HAMMERFIST**
 
-#### **GUERRIERI NANICI VETERANI (15 Unità, 150 creature)**
-*Difensori delle Mura*
+#### **GUERRIERI NANICI VETERANI (13 Unità, 130 creature)**
+*Difensori delle Mura. Due unità sono le Guardie Reali del Re. Il conto delle quattro specialità fa 300 (13 + 8 + 5 + 4 unità da 10): 270 alle postazioni e 30 di riserva nel cortile esterno, che il DM manda alla breccia (MAPPA 2 REVISED della L2, DM 2026-10-22).*
 ```
 STATISTICHE UNITÀ: 10 Nani Guerrieri 5° per unità
 - PF Unità: 11/11 | CA Unità: 20 | Morale: +1
@@ -1167,7 +1190,7 @@ Att Ascia da Battaglia +9 (1d8+4/x3).
 STATISTICHE UNITÀ: 10 Nani Esperti 4° per unità
 - PF Unità: 8/8 | CA Unità: 16 | Morale: -1
 - Attacco Unità: +4 (Martello da Guerra)
-- Capacità: Operano 6 Baliste Pesanti Naniche (3d8 danni, gittata 120m), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
+- Capacità: Operano 6 Baliste Pesanti Naniche (3d8 danni, incremento di gittata 36 m), Riparazione Rapida (ripristina 1d4 PF a strutture), Trappole Improvvisate.
 ---
 STATISTICHE CREATURA SINGOLA (Esperto Nano di 4° liv.):
 GS 3; 
@@ -1187,959 +1210,38 @@ Abilità chiave: Artigianato (ingegneria) +12, Disattivare Congegni +10.
 
 ### **SESSIONE 1: L'OMBRA SULLA MONTAGNA**
 
-#### **PRIMA DELL'INTRODUZIONE — L'ORDA SI SENTE PRIMA DI VEDERSI**
-*Da leggere la sera prima dell'avvistamento, con i pregen ancora dentro la fortezza. 6-8 righe: apre la sessione sul senso sbagliato — l'udito e l'olfatto — e lascia la vista all'introduzione qui sotto.*
-
-> *"Prima arriva l'odore. Non di fumo: di sudore vecchio, di cuoio non conciato, di bestie tenute insieme dalla fame. Poi il suono — un basso che non si interrompe mai, come se la valle respirasse.*
->
-> *Le vedette non vedono ancora niente. Ma il cane della guarnigione ha smesso di abbaiare, e non si muove dalla porta."*
-
-> **📎 Regia (A5)**: qui il cue sonoro è **il basso continuo** che parte
-> adesso e non si spegne fino alla fine dell'arco —
-> `ARC08-16-CUE-SONORI.md` §2. Testo di partenza: descrizione epica del
-> DM, movimento 1; nomi e cronologia corretti in
-> `ERRATA-ARC08-DESCRIZIONE-EPICA.md` §3.
-
-#### **INTRODUZIONE DA LEGGERE AI GIOCATORI:**
-> *"L'alba del primo giorno d'autunno si tinge di rosso sangue all'orizzonte. Dalle torri di vedetta di Hammerfist, le sentinelle naniche scrutano con crescente inquietudine la vallata settentrionale. Quello che inizialmente sembrava una macchia scura si rivela essere un oceano di ferro, carne e malvagità che avanza inesorabile verso i rifugi ancestrali del vostro popolo. Gli stendardi della Mano Rossa sventolano al vento come promesse di morte, e il suono di tamburi di guerra riecheggia tra le montagne come un battito cardiaco impazzito."*
-
-<div style="page-break-before:always"></div>
-
-### **FASE 1: L'AVVISTAMENTO (3 giorni prima)**
-
-**Eventi Chiave:**
-1. **Il Rapporto delle Sentinelle**
-2. **Il Consiglio di Guerra**  
-3. **I Preparativi Difensivi**
-
-
-
-
-#### **INCONTRO 1A: LA RICOGNIZIONE INIZIALE (Approccio a Fasi)**
-*Livello di Sfida: Variabile (da 5 a 12, a seconda dell'approccio)*
-*Obiettivo: Infiltrarsi, osservare e ritirarsi senza essere scoperti.*
-
-**FASE 1: L'AVVICINAMENTO ALLA VALLE**
-*Obiettivo: Raggiungere il punto di osservazione senza allertare la prima linea di sentinelle nemiche.*
-
-
-
-**MAPPA 1A-1: IL SENTIERO NASCOSTO**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-1 REVISED (20×100, 1,5 m: pattuglia, rocce 1-7, skill challenge)
-```
-SCALA: Ogni carattere ~ 5 metri
-                    NORD ↑ (Verso il punto di osservazione)
-
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓(GOLE ROCCIOSE)▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓                                        ▓
-▓     Sentiero per il Torrione →         ▓
-▓      / \                               ▓
-▓     /   \                              ▓
-▓    /     \                             ▓
-▓   /       \ (Copertura Rocciosa)       ▓
-▓  /         \                           ▓
-▓             <-- 🟡 PERCORSO PATTUGLIA -- ▓
-▓                 🟡     WORG     🟡     ▓
-▓             <--     (3 Orchi)   --     ▓
-▓                                        ▓
-▓                                        ▓
-▓ (Inizio Missione)                      ▓
-▓ [B, D, T, N]                           ▓
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-```
-**Descrizione:** Il gruppo inizia ai margini meridionali della valle. Un sentiero nascosto si snoda tra le rocce, ma è intersecato dal percorso di una pattuglia di Orchi su Worg. I personaggi devono superare questo primo ostacolo, preferibilmente in silenzio (prove di Nascondersi/Muoversi Silenziosamente contrapposte a Osservare/Ascoltare degli Orchi).
-
----
-
-<div style="page-break-before:always"></div>
-
-#### **FASE 2: IL PUNTO DI OSSERVAZIONE**
-
-**Obiettivo:** Posizionarsi nel torrione di vedetta in rovina e nelle rocce circostanti per spiare il grosso delle forze nemiche senza allertare il gruppo di scout Hobgoblin.
-
-
-
-**MAPPA 1A-2: IL TORRIONE DI VEDETTA**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-2 REVISED (40×40, 1,5 m)
-```
-SCALA: Ogni carattere ~ 3 metri
-                    NORD ↑ (Vista sul campo nemico a 400m)
-
-       <------------------ VISTA SUL CAMPO NEMICO ------------------>
-       
-       (Dirupo scosceso)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  
-  ^^^ [D] PUNTO OSSERVAZIONE 🏹 ^^^ (All'interno del torrione in rovina, +18m)
-  
-  ^^^ 🏰 TORRIONE DI VEDETTA ^^^ (Copertura quasi totale)
-  
-      [T] [N] (Copertura tra le rocce alla base del torrione)
-      
-      (Terreno aperto e pericoloso)
-      ░░░░░░░░░░░░░░░░░░░░░░░░
-                                        [B] (Possibile percorso di fiancheggiamento)
-                                          \
-                                           \
-      🟡🟡🟡🟡🟡 (Postazione Scout Hobgoblin)
-      🟡 🟠 🟡 (1 Sergente, 9 guerrieri)
-      🟡🟡🟡🟡🟡 (Attualmente distratti, guardano a nord)
-      
-      (Sentiero di avvicinamento dalla Fase 1)
-```
-**Descrizione:** Questa è l'area tattica principale. Dara deve salire sul torrione per avere una linea di vista pulita. Thorin e Nala si nascondono tra le rocce, con Nala che può tentare di avvicinarsi per origliare. Borin rimane in copertura, pronto a intervenire se gli scout si accorgono della loro presenza. L'obiettivo è raccogliere informazioni senza ingaggiare battaglia.
-
----
-
-<div style="page-break-before:always"></div>
-
-#### **FASE 3: LA VISIONE DALL'ALTO**
-
-**Obiettivo:** Comprendere la vastità e la composizione dell'armata nemica. Questa non è una mappa tattica, ma una rappresentazione di ciò che Dara vede con il suo cannocchiale.
-
-
-**MAPPA 1A-3: IL CAMPO DELLA MANO ROSSA (VISTA NARRATIVA)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md` → MAPPA 1A-3 REVISED (griglia strategica 40×50, 6 m/q, con tabella FORZE)
-```
-(Vista a 400m di distanza)
-
-               [SEZIONE COMANDO 🔴]
-            (Tenda di Grimjaw, Stendardi)
-                      |
-        [ARTIGLIERIA PESANTE 🟠]
-    (Gorthak, Ettin, Giganti, Catapulte)
-                      |
-    [TRUPPE D'ÉLITE 🟠] [SUPPORT_MAGICO 🟠]
-  (Hobgoblin Veterani) (Chierici, Sciamani)
-                      |
-<-- [FIANCO CAVALLERIA 🟠] -- [CORPO PRINCIPALE FANTERIA 🟡] -- [FIANCO CAVALLERIA 🟠] -->
-     (Worg Riders)      (Migliaia di Orchi e Hobgoblin)       (Worg Riders)
-                      
-                      |
-      (Pattuglie e Avamposti Esterni)
-```
-**Descrizione:** Da qui, Dara può effettuare le sue prove di Osservare per stimare i numeri, identificare le unità speciali (Giganti, Maghi, Dragone), e individuare i comandanti. Il successo o il fallimento di questa fase determinerà la qualità dell'intelligence che i nani avranno a disposizione per preparare le difese.
-
-### **OBIETTIVI TATTICI E CONSEGUENZE (INCONTRO 1A)**
-
-**BORIN FERROPUGNO:**
-*   **Azione Primaria:** Eliminare silenziosamente la pattuglia avanzata.
-*   **Test Chiave:** Intimidire CD 18 per ottenere informazioni da eventuali prigionieri.
-
-**DARA OCCHIOLESTO:**
-*   **Azione Primaria:** Contare accuratamente le forze nemiche (Osservare CD 20).
-*   **Test Chiave:** Sopravvivenza CD 22 per identificare le rotte di approccio nemiche.
-
-**THORIN RUNAFORTE:**
-*   **Azione Primaria:** Lanciare *Silenzio* per coprire eliminazioni o movimenti.
-*   **Test Chiave:** Conoscenze (Religione) CD 18 per riconoscere i simboli draconici dei chierici nemici.
-
-**NALA CANTAPIETRE:**
-*   **Azione Primaria:** Infiltrarsi per ascoltare i piani dei comandanti (Nascondersi CD 22).
-*   **Test Chiave:** Linguaggi (parlare Orco/Goblin) per comprendere gli ordini.
-
-**RICOMPENSE PER SUCCESSO:**
-*   **Intelligence Completa:** +2 Iniziativa di massa per i Nani all'inizio della battaglia.
-*   **Prigionieri Interrogati:** Conoscenza delle tattiche di Gorthak, permettendo un bonus di +2 ai tiri per colpire contro di lui per 3 round.
-*   **Eliminazione Silenziosa:** L'esercito nemico non sa di essere stato scoperto e non adotta contromisure.
-
-<div style="page-break-before:always"></div>
-
-#### ⚔️ **Incontro 1B: Il Consiglio di Guerra**
-**Leggere ai Giocatori:**
-> *"Il Consiglio di Guerra si riunisce nella Sala del Trono Ancestrale. Re Thorek siede sul trono di pietra intagliata, mentre attorno al grande tavolo rotondo si raccolgono i capitani, i chierici e voi, gli eroi leggendari tornati in tempo per questa ora buia. Madre Superiora Dana colpisce il pavimento con il suo bastone: 'La situazione è grave. I nostri scout riportano che l'esercito nemico supera il nostro di almeno sette a uno. Ma abbiamo qualcosa che loro non hanno: il coraggio nanico, le difese della montagna, e...' i suoi occhi si posano su di voi, '...la benedizione degli dei.'"*
-
-**Decisioni Strategiche (i PG possono influenzare):**
-1. **Distribuzione delle Forze**
-2. **Preparazione delle Difese Magiche**  
-3. **Strategie di Resistenza**
-4. **Piani di Evacuazione dei Civili**
-
-**Prova di Diplomazia CD 18:** Convincere i comandanti ad adottare tattiche specifiche
-**Prova di Conoscenze (Ingegneria) CD 15:** Suggerire miglioramenti alle difese
-
-### **FASE 2: I PREPARATIVI (2 giorni prima)**
-
-#### 🏰 **Incontro 1C: Rafforzare le Difese**
-I PG possono scegliere di aiutare in diverse aree:
-
-**OPZIONE A - Fortificazioni Fisiche:**
-- **Prova di Artigianato (Pietra) CD 20:** +2 CA alle mura
-- **Prova di Conoscenze (Ingegneria) CD 18:** Progettare trappole (+2 danni alle unità nemiche)
-
-**OPZIONE B - Difese Magiche:**
-- **Prova di Sapienza Magica CD 22:** Potenziare le rune di protezione
-- **Lanciare incantesimi difensivi:** Ogni incantesimo 3° liv+ fornisce bonus
-
-**OPZIONE C - Morale e Addestramento:**
-- **Prova di Diplomazia CD 16:** +1 morale a tutti i difensori
-- **Prova di Intimidire CD 20:** I nemici subiscono -1 al primo assalto
-
-<div style="page-break-before:always"></div>
-
-### **FASE 3: L'AVVICINAMENTO NEMICO (1 giorno prima)**
-
-#### 🌩️ **Incontro 1E: Presagi Funesti**
-**Leggere ai Giocatori:**
-> *"La notte prima dell'assalto, fenomeni innaturali cominciano a manifestarsi. Il vento porta il puzzo di morte e zolfo, gli animali selvatici fuggono dalle montagne, e le stelle sono più deboli. Dall'alto delle mura, potete vedere migliaia di torce nemiche che puntellano la vallata come un mare di fuoco. I tamburi di guerra battono incessantemente, e occasionalmente, un ruggito terrificante echeggia tra le vette - il drago sta annunciando la sua presenza."*
-
-**Eventi Speciali:**
-- **Se presente un Warlock:** Sente la presenza di magia demoniaca (Generale Grimjaw)
-- **Se presente un Druido:** Gli animali portano avvertimenti sui movimenti nemici
-- **Se presente un Monaco:** Percepisce le intenzioni omicide dell'Ettin
-
-#### 🐉 **Incontro 1F: La Dimostrazione di Forza**
-**Leggere ai Giocatori:**
-> *"All'alba dell'ultimo giorno di pace, Fauci di Palude si alza in volo per la prima volta. Il drago nero sorvola lentamente le difese naniche, abbastanza in alto da evitare le baliste ma abbastanza in basso da essere chiaramente visibile. Il suo soffio acido colpisce una torre di vedetta abbandonata, che si dissolve letteralmente in fumo corrosivo. È un messaggio chiaro: 'Arrendetevi, o questa sarà la vostra fine.'"*
-
-> **📎 Nota DM — carry-over di Skullcrusher (A12, se il gruppo ha giocato
-> il P5)**: questo primo avvistamento è vissuto dai **pregen**; il
-> **flashback genetico** e il canto di Aegis Fang (*"sangue Skullcrusher
-> chiama"*) scattano davvero quando **Thorik** affronta Fauci al
-> **finale** (D6). Se il P5 è stato giocato, **applica prima della
-> battaglia** gli effetti dell'eredità (PF/soffio/morale del drago,
-> bonus dei portatori, gancio Aegis Fang) leggendo la tabella
-> `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md` — mappa
-> qualitativa in `ARC08-10-ESITI-E-CONTINGENZE.md` §4.1. Puoi
-> anticiparne un'eco già qui: chi porta un artefatto avverte un
-> *brivido di riconoscimento* alla vista del drago.
-
-**Opzioni dei PG:**
-1. **Attaccare il drago** (molto pericoloso, ma mostra coraggio)
-2. **Rispondere con magia** (dimostrare che anche i nani hanno potere)
-3. **Ignorare la provocazione** (mantenere le forze per la battaglia vera)
-
-### **RISULTATI DELLA SESSIONE 1:**
-Basandosi sulle azioni dei PG, determina:
-- **Morale iniziale dell'esercito nanico** (da -2 a +4)
-- **Efficacia delle difese** (CA delle fortificazioni da 23 a 27)
-- **Informazioni tattiche** (bonus ai tiri di Iniziativa di massa)
-- **Alleanze formate** (potrebbero arrivare rinforzi inaspettati)
+> ➡️ **La Sessione 1 vive nel suo master**:
+> [`ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md`](ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md)
+> `[CANONE — DM 2026-10-21]`. Dieci scene in ordine di tempo, dal Giorno −4
+> alla notte del Giorno −1: l'apertura, la notte prima, il rapporto delle
+> sentinelle, la ricognizione (1A), il Consiglio di guerra e la Preparazione
+> delle difese (1B), la dimostrazione di forza del drago (1C), la scaramuccia
+> dell'avanguardia (1D), i presagi (1E) e la notte dei fuochi, con la tabella
+> che traduce gli esiti della serata nelle leve del libretto della battaglia
+> campale. Il testo che stava qui (le Fasi 1-3, gli Incontri 1A-1F e i
+> Risultati) è assorbito e corretto in quel master, e da qui è tolto per non
+> tenere due versioni. Le lettere degli incontri sono cambiate: la tabella è
+> nel master, §0-ter.
 
 
 <div style="page-break-before:always"></div>
 
 ### **SESSIONE 2: TRE GIORNI DI SANGUE E FERRO**
-## *L'Assedio Spietato*
 
-### **INTRODUZIONE SESSIONE 2:**
-> *"L'alba del primo giorno d'assedio sorge pallida e spettrale. L'esercito della Mano Rossa si è dispiegato in formazioni perfette davanti alle mura di Hammerfist. Al centro, Generale Grimjaw siede sul suo warg gigante nero, la sua armatura demoniaca che riflette le prime luci del sole come metallo insanguinato. Alla sua destra, l'orrenda massa di Gorthak il Trifronte brandisce tre randelli enormi, le sue teste che discutono animatamente in linguaggio gigante. Sopra di tutti, Fauci di Palude plana minaccioso, le sue ali che proiettano ombre di morte sulle rocce sottostanti."*
+> ➡️ **La Sessione 2 vive nel suo master**:
+> [`ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`](ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md)
+> `[CANONE — DM 2026-10-22]`. Nove scene in ordine di tempo, dal Day 16 al
+> Day 18: l'alba del Giorno 1 con le leve della Sessione 1, l'assalto alle
+> mura col libretto (2A) con Gorthak al cancello e il sorvolo del drago, la
+> notte, il Giorno 2 della breccia con Grimjaw (2C) e le Cantitrici (2D), la
+> notte, il Giorno 3 col corno e il soffio sul Re (2E e 2B, sulla MAPPA
+> 2B-CORRETTA), la ritirata (H3-1), l'incrocio silenzioso (2F, MAPPA 3Z) e la
+> porta di mithral, con la tabella che porta gli esiti dell'assedio in
+> `ARC08-10` §5.2-5.3. Il testo che stava qui (i Giorni 1-3, gli incontri
+> élite, la Ritirata Disperata e l'Incontro 2F) è assorbito e corretto in quel
+> master, e da qui è tolto per non tenere due versioni. Le lettere degli
+> incontri restano quelle; dove è finito ognuno lo dice il master, §0-ter.
 
-## **GIORNO 1: L'ASSALTO ALLE MURA ESTERNE**
-
-### ⚡ **Round 1-5: L'Attacco Coordinato**
-
-#### **Round 1: L'Iniziazione**
-**Leggere:**
-> *"Un suono di corno echeggia per tre volte dalle linee nemiche. È il segnale. Come una marea nera, l'esercito della Mano Rossa si scaglia in avanti. I giganti delle colline trascinano arieti improvvisati mentre gli orchi urlano slogan di guerra in linguaggio nero. Le frecce naniche fischiando dall'alto delle mura, trovando bersagli tra la massa nemica, ma per ogni orco che cade, dieci prendono il suo posto."*
-
-**Iniziativa di Massa:**
-- **Esercito Nemico:** 1d20+6 (Carisma Grimjaw +3, tattico +3)  
-- **Esercito Nanico:** 1d20+4 (Carisma Re Thorek +2, difesa +2)
-
-**Azioni dei PG (Round 1):**
-I giocatori possono scegliere tra:
-1. **Comandare Sezioni dell'Esercito** (Prova Diplomazia CD 18)
-2. **Combattimenti Personali** contro élite nemiche
-3. **Supporto Magico** alle truppe (incantesimi di massa)
-4. **Sabotaggio** delle macchine d'assedio nemiche
-
-<div style="page-break-before:always"></div>
-
-#### **INCONTRO 2A: L'ASSALTO ALLE MURA ESTERNE**
-*Obiettivo: Resistere il più a lungo possibile, infliggendo quante più perdite nemiche.*
-
-**MAPPA 2A-1: POSIZIONAMENTO INIZIALE (TURNO 1)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED (griglia di regia 60×108, 3 m/q — stesse fasce, con rotte delle fasi)
-```
-SCALA: Ogni carattere ~ 10 metri
-                    NORD ↑
-
----------------------- 300m ----------------------
-             🐉 FAUCI DI PALUDE + Cavaliere (Quota 45m, pronto per sorvolo)
-
----------------------- 250m ----------------------
-      🟠 War Adepts (20) - Artiglieria Magica Sparsa 🟠
-
----------------------- 200m ----------------------
-   [🟠 Giganti x8] [🟠 Ettin x2] - Linea di Bombardamento Pesante
-
----------------------- 170m ----------------------
-             🔴 GENERALE GRIMJAW + 🟠 Orog Guardie (4) - COMANDO CENTRALE
-
----------------------- 150m ----------------------
-   [🟠 D.H. Warpriests x15] 🔴 GORTHAK [🟠 Shamani Draconici x10] - COMANDO D'ASSALTO E SUPPORTO
-
----------------------- 120m ----------------------
-   [🟡 Hobgoblin Guerrieri x200 + Sergenti x30] - 2ª ONDATA PESANTE
-
----------------------- 100m ----------------------
-   [🟡 Fanteria Hobgoblin Standard x300] - 1ª ONDATA PRINCIPALE
-
----------------------- 80m ----------------------
-   [🟡 Fanteria Orchesca x150] - CARNE DA CANNONE E ASSALTO BRUTALE
-
----------------------- 60m ----------------------
-[🟠 Worg Riders x25]                                             [🟠 Worg Riders x25]
-(Flanco Sinistro)                                                 (Flanco Destro)
-
-======================= 0m =======================
-~~~ FOSSATO DIFENSIVO ~~~ [PONTE LEVATOIO] ~~~ FOSSATO DIFENSIVO ~~~
-╔═════════════════════[CANCELLO PRINCIPALE]═════════════════════╗
-║ 🏰 TORRE OVEST                     🏰 BASTIONI CENTRALI                     🏰 TORRE EST ║
-╚═════════════════════════════════════════════════════════════╝
-                     SUD ↓
-```
-<div style="page-break-before:always"></div>
-
-## **MAPPA 2: SCHIERAMENTO DIFENSIVO STRATEGICO E POSIZIONI PG**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2 REVISED (tabella postazioni su coordinate della griglia 2A) + MAPPA 2A REVISED (griglia 120×80)
-*(Versione aggiornata con posizioni PG)*
-
-```
-SCALA: Ogni carattere ~ 5 metri
-                    NORD ↑ (Verso il nemico)
-
-╔═══════════════════════════[CANCELLO PRINCIPALE]═══════════════════════════╗
-║ BASTIONE SUD (G1)                                               BASTIONE SUD (G2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
-║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
-║ [N] NALA (infiltrazione/sabotaggio)                                             ║
-║ -------------------------- CORTILE ESTERNO --------------------------         ║
-║                🛡️ 5 Unità Nani d'Élite (Davanti al Cancello) 🛡️                 ║
-║                        [B] BORIN (comando prima linea)                          ║
-║                                                                               ║
-╠═══════════════════════[PORTA INTERNA]══════════════════════════╣
-║                                                                               ║
-║ -------------------------- CORTILE INTERNO --------------------------         ║
-║                     👑 RE THOREK + GUARDIE REALI (2 Unità)                     ║
-║                       ⚡ COMANDO CENTRALE ⚡                                   ║
-║     [RISERVA: 5 Unità Guerrieri]      [INGEGNERI PRONTI]                       ║
-║                                                                               ║
-║ ⛪ MADRE DANA + Chierici    🎵 CANTITRICI      [T] THORIN (supporto divino)    ║
-║                                                                               ║
-║ --- Salita ai Bastioni Nord ---                           --- Salita ai Bastioni Nord --- ║
-║                                                                               ║
-║ BASTIONE NORD (B1)                                              BASTIONE NORD (B2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
-║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
-╠═══════════════════════════(Mura Interne)═══════════════════════════╣
-║ 🏰 TORRE OVEST                                                    🏰 TORRE EST ║
-║ 🏹 2 Unità Balestrieri                                          🏹 2 Unità Balestrieri ║
-║    [D] DARA (cecchino/osservatore)                                                ║
-║    2 Baliste Pesanti                                            2 Baliste Pesanti     ║
-╚═════════════════════════════════════════════════════════════════════════════╝
-```
-<div style="page-break-before:always"></div>
-
-## **MAPPA 2-BIS: VISTE TATTICHE DELLE MURA ESTERNE (Versione Corretta e Chiarificata)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2A REVISED: VISTA 1 (top-down con griglia), VISTA 3 (sezione = C), VISTA 4 (frontale = B)
-
-### **A) Vista dall'Alto (Top-Down View) Corretta**
-*Per il posizionamento strategico. Le difese principali sono a SUD, verso l'attaccante.*
-
-```
-SCALA: Ogni quadrato (##) ~ 3x3 metri
-                 
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓(MONTAGNA A NORD)▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-##════════════════(BASTIONE NORD - B1/B2, Difesa Posteriore)═══════════════##
-##║                                                                       ║##
-##║                        CORTILE INTERNO                                ║##
-##║                         (Area sicura iniziale)                        ║##
-##╠═══════════════════════(PORTA INTERNA)═════════════════════════╣##
-##║                                                                       ║##
-##║                        CORTILE ESTERNO                                ║##
-##║                       (Area di mobilitazione)                         ║##
-##║   / \                                                             / \   ║##
-##║   |R|  (RAMPE PER I BASTIONI SUD)                                 |R|   ║##
-##║   \ /                                                             \ /   ║##
-🏰(TORRE OVEST)═══════════(BASTIONE SUD - G1/G2)═══════════🏰(TORRE EST)
-##║   / \          ║  ###########################  ║          / \   ║##
-##║   |S|          ║  # Piattaforme Sopraelevate #  ║          |S|   ║##
-##║   \ /          ║  ###########################  ║          \ /   ║##
-##═════════════════[CANCELLO PRINCIPALE - 10m larghezza]══════════════════##
-                          | | [PONTE LEVATOIO - 15m] | |
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOSSATO DIFENSIVO (6m larghezza) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                        (TERRENO IN SALITA VERSO LE MURA)
-                                     ↑
-                              APPROCCIO NEMICO (DA SUD)
-```
-*Legenda Simboli Mappa: S = Scale a chiocciola interne; R = Rampe di pietra.*
-
-<div style="page-break-before:always"></div>
-
-### **B) Vista Frontale (Prospettiva dell'Attaccante)**
-*Per visualizzare l'imponenza delle difese che l'esercito nemico si trova di fronte.*
-
-```
-       (CIELO)
-                                  
-                                                         / \
-       🏰TORRE OVEST (+20m)                               /   \       🏰TORRE EST (+20m)
-      /      \                                          /     \     /      \
-     / Feritoie \            🏰BASTIONE SUD (+15m)🏰         /       \   / Feritoie \
-    /__________\         /#########################\        /_________\ /__________\
-   |            |       / Merlature, Copertura 3/4  \      |           |            |
-   | Baliste    |      /_____________________________\     | Baliste   |            |
-   |____________|     |                               |    |___________|            |
-   |            |     | ══MURA PRINCIPALI (+12m)═══   |    |           |            |
-   |            |     | |                          |  |    |           |            |
-   |            |     | |                          |  |    |           |            |
-======================[██ CANCELLO PRINCIPALE ██]======================[PONTE LEVATOIO]====
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOSSATO (Livello -3m) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/////////////////////// TERRENO IN SALITA (Pendenza 15%) ///////////////////////
-```
-
-### **C) Vista Laterale (Sezione Trasversale Sud -> Nord)**
-*Per comprendere la profondità delle difese, dal fossato fino alla montagna.*
-
-```
-SCALA: Orizzontale ~ 20m per sezione | Verticale ~ 3m per livello
-
-                                                                   (MONTAGNA)
-                                                                    /
-                                                                   /
-                                     BASTIONE NORD (+15m) ---------/
-                                     |                           /
-                                     | (Rampa)                  /
-          PORTA INTERNA              |                         /
-          |                          |------------------------/ (Mura Nord)
-          |           CORTILE INTERNO|
-[PONTE]--[CANCELLO]---CORTILE ESTERNO--|---BASTIONE SUD (+15m)
-   |        |                          |     |
-~~~FOSSO~~~ |(Mura Sud, +12m)----------------| (Rampa)
-     |      |                          
-(Terreno in salita)
-     ↑
-ATTACCANTE
-(SUD)                                                                 (NORD)
-```
-<div style="page-break-before:always"></div>
-
-## **MAPPA 3: MOVIMENTI E FASI DELL'ASSALTO (GIORNO 1)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 3 REVISED (rotte delle fasi tracciate sulla griglia della MAPPA 1 REVISED)
-*(Invariata)*
-
-```
-                    NORD ↑
-FASE 1: BOMBARDAMENTO (Round 1-5)
-   - I Giganti (a 200m) lanciano massi.
-   - I Maghi (a 250m) lanciano incantesimi ad area.
-   - Le linee di fanteria avanzano fino a 80m.
-
-FASE 2: ASSALTO DIRETTO (Round 6-10)
-   - La Fanteria Orchesca e Hobgoblin carica le mura (da 80m a 0m).
-   - Gorthak e gli arieti si concentrano sul cancello principale.
-   - I Worg Riders tentano di aggirare le mura per attaccare eventuali sortite o punti deboli.
-   - Fauci di Palude inizia i suoi sorvoli, puntando le torri e i bastioni.
-
-             (FASE 2)
-   🐉 FAUCI DI PALUDE (Sorvolo) 🐉
-      ↙️                       ↘️
-[🟠 WR] → 🏰 HAMMERFIST 🏰 ← [🟠 WR]
-            ↑
-      (FASE 2)
-   🔴 GORTHAK attacca il cancello
-   🟡 FANTERIA attacca le mura
-
-             ↑
-      (FASE 1)
-   🟠 GIGANTI bombardano
-   🟠 MAGHI lanciano incantesimi
-```
-
-## **MAPPA 4: EVOLUZIONE DINAMICA DELLE MURA (GIORNO 1-2)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 4 REVISED (stati A-C con coordinate della griglia 2A)
-### **FASE A: PRIMI DANNI (Turni 6-10)**
-*Dopo il bombardamento iniziale dei giganti e l'assalto degli arieti.*
-```
-╔════════════════════════════╗
-║ T3      [DANNEGGIATA] T4     ║ ← Torre Est: scricchiolii, -30% PF
-║                            ║
-║ ═══════ [CREPA] ══════════   ║ ← Crepa visibile muro Est, -2 CA
-║                            ║  
-║         [REE THOREK]       ║
-║                            ║
-╠═════[CANCELLO DANNEGGIATO]═╣ ← Cancello: porte scheggiate, -40% PF
-║ ~~~[PONTE INSTABILE]~~~    ║ ← Ponte: scricchiola, -25% PF
-╚════════════════════════════╝
-```
-
-<div style="page-break-before:always"></div>
-
-
-#### **Round 6-7: La Pressione Cresce**
-**Leggere:**
-> *"I primi arieti colpiscono le porte. Il suono del legno che si spacca echeggia tra le montagne mentre scintille volano dall'impatto del ferro contro il ferro. Gorthak il Trifronte avanza alla testa di una formazione di giganti, le sue tre teste che urlano ordini contraddittori: 'SFONDA!' ruggisce quella di sinistra, 'Aspetta il momento giusto' sibila quella centrale, 'Guarda i fianchi!' avverte quella di destra."*
-
-**INCONTRO ÉLITE 2A: Duello contro Gorthak**
-*(Se i PG scelgono di affrontarlo direttamente)*
-
-**Tattiche dell'Ettin:**
-- **Round 1:** Carica con tutti e tre i randelli (+2 danni da carica)
-- **Round 2-3:** Full Attack, cerca di colpire target multipli
-- **Round 4+:** Se sotto 50% PF, Furia Bestiale (+4 For/Cos, -2 CA)
-
-**Descrizione del Combattimento:**
-> *"L'Ettin vi nota e le sue tre teste si voltano verso di voi con ghigni feroci. 'Piccoli nani!' ringhia la testa brutale. 'Forse questi hanno qualche valore tattico' riflette quella centrale. 'Attenti, sembrano pericolosi' avverte quella vigile. I tre randelli si alzano simultaneamente, creando un muro di morte che si abbatte su di voi."*
-
-**Ricompense per la Vittoria:**
-- Morale nanico +2 per il resto della battaglia
-- Confusione nelle linee nemiche (-2 alle loro azioni coordinate)
-- Bottino: Corazza Piastre Gigante +1 (può essere riforgiata per 2 armature naniche)
-
-<div style="page-break-before:always"></div>
-
-#### **Round 8-9: L'Intervento del Drago**
-**Leggere:**
-> *"Il ruggito di Fauci di Palude risuona come il tuono della montagna. Il drago nero scende in picchiata, le sue fauci che si aprono rivelando file di zanne lunghe come spade. Il suo soffio acido si riversa sulla torre ovest, e potete vedere l'antica pietra nanica dissolversi come burro sotto il sole estivo. I soldati sulla torre urlano di terrore prima che le loro voci vengano soffocate per sempre dall'acido corrosivo."*
-
-**INCONTRO ÉLITE 2B: Affrontare il Drago**
-*(Combattimento aereo opzionale)*
-
-**Fasi del Combattimento Draconico:**
-1. **Fase Sorvolo:** Drago attacca con soffio e spell-like abilities
-2. **Fase Atterraggio:** Se i PG lo danneggiano abbastanza (>50 danni)
-3. **Fase Mischia:** Combattimento completo se costretto a terra
-
-**Condizioni Aeree:**
-- PG volanti: combattimento normale
-- PG terrestri: solo attacchi a distanza, CD Equilibrio 15 se su mura durante passaggi del drago
-- Baliste naniche: +2 per colpire contro bersaglio così grande
-
-**Risultato Giorno 1:**
-- **Se Gorthak Sconfitto:** Perdite naniche ridotte a 30, nemiche aumentate a 160
-- **Se Drago Danneggiato:** È più cauto nei giorni successivi
-- **Risultato Standard:** Nani perdono 45, nemici perdono 120
-
----
-
-<div style="page-break-before:always"></div>
-
-
-## **GIORNO 2: LA BRECCIA NELLA ROCCIA**
-
-### **INTRODUZIONE GIORNO 2:**
-> *"L'alba del secondo giorno illumina un campo di battaglia trasformato. I giganti superstiti, guidati ora da Generale Grimjaw in persona, hanno lavorato tutta la notte per creare una breccia nel muro orientale. Sassi e macerie formano una rampa rudimentale ma efficace. 'Oggi finisce la resistenza nanica!' tuona Grimjaw, la sua spada demoniaca che si accende di fiamme infernali. 'Avanti, guerrieri della Mano Rossa! Mostrate a questi topi di roccia il vero significato della guerra!'"*
-
-### **FASE B: BRECCIA PRINCIPALE (Turni 11-15)**
-*L'assalto concentrato di Gorthak e degli orchi crea un varco.*
-```
-╔════════════════════════════╗
-║ T3      [INSTABILE] T4       ║ ← Torre: supporti danneggiati  
-║                            ║
-║ ═══════ XXX BRECCIA XXX    ║ ← BUCO 3m x 8m
-║         (ORCHI ENTRANO!)   ║   
-║         [REE THOREK]       ║
-║                            ║
-╠═════[CANCELLO SFONDATO]════╣ ← Cancello: quasi crollato
-║ ░░░[PONTE CROLLATO]░░░     ║ ← Ponte distrutto, fossato invalicabile
-╚════════════════════════════╝   
-```
-
-### ⚔️ **Round 6-10: Combattimenti nei Cortili**
-
-#### **INCONTRO ÉLITE 2C: Duello dei Comandanti**
-**Re Thorek vs Generale Grimjaw**
-
-**Leggere:**
-> *"Attraverso la breccia fumante, Generale Grimjaw avanza su suo warg gigante. I suoi occhi rossi si fissano direttamente su Re Thorek, che sta organizzando la difesa del cortile interno. 'Thorek Hammerfist!' ringhia l'Orog. 'Settecento anni fa i miei antenati furono cacciati da queste montagne! Oggi, io riprenderò quello che ci spetta!' Il Re nanico solleva il suo martello ancestrale: 'Allora vieni a prenderlo, bastardo delle caverne!'"*
-
-**Statistiche del Duello:**
-- **Terreno:** Cortile di pietra, macerie sparse (CD 10 Equilibrio)
-- **Durata:** 5 round massimi (poi arrivano rinforzi)
-- **Spettatori:** Entrambi gli eserciti rallentano per assistere
-
-**Tattiche di Grimjaw:**
-- **Round 1:** Carica con warg per travolgere (+4 att/+8 danni)
-- **Round 2-3:** Furia Comandante (contagia alleati vicini)
-- **Round 4-5:** Se sta perdendo, usa pozioni/oggetti magici
-
-**Possibili Interventi dei PG:**
-- Assistere Re Thorek (flanking, buff, healing)
-- Eliminare il warg di Grimjaw
-- Contrattaccare le truppe nemiche che si avvicinano
-
-**Risultato del Duello:**
-- **Vittoria Thorek:** Morale nanico +4, nemici -2 per resto giornata
-- **Vittoria Grimjaw:** Re Thorek gravemente ferito, possibile ritirata anticipata
-- **Pareggio:** Combattimento continua, nessun bonus particolare
-
-### 🛡️ **Round 11-12: Le Cantitrici della Pietra**
-
-**Leggere:**
-> *"Dal Tempio interno emerge un canto possente che fa tremare le fondamenta della montagna. Le Cantitrici della Pietra, guidate da Melodia Echopietra, si dispongono in formazione pentagonale al centro del cortile. Le loro voci si uniscono in un'armonia che sale dalle profondità della terra. Le pietre iniziano a vibrare, e i nemici che si avvicinano vengono travolti da onde soniche che spezzano ossa e frantumano armature."*
-
-**INCONTRO ÉLITE 2D: Proteggere le Cantitrici**
-Le Cantitrici devono completare il loro rituale (5 round) ma sono vulnerabili durante il canto.
-
-**Ondate di Nemici:**
-- **Round 1:** 8 Orchi Berserker
-- **Round 2:** 12 Hobgoblin + 1 Sergente
-- **Round 3:** 6 Bugbear Infiltratori (attacco sui fianchi)
-- **Round 4:** 4 Giganti delle Colline con sassi
-- **Round 5:** Generale Grimjaw + guardie personali (se ancora vivo)
-
-**Effetti del Canto Completato:**
-- **"Earthquake della Montagna":** Tutte le creature nemiche nel cortile subiscono 8d6 danni (Riflessi CD 20 dimezza)
-- **Crollo Controllato:** Una parte delle mura nemiche crolla, intrappolando 2 unità
-- **Morale:** Tutti i nani recuperano completamente il morale
-
-### **Risultato Giorno 2:**
-- **Perdite Standard:** Nani -80 (45 restanti), Nemici -200 (480 superstiti)
-- **Se PG Eccellenti:** Nani -60, Nemici -250
-- **Se PG Falliscono:** Nani -100, possibile evacuazione anticipata
-
----
-
-<div style="page-break-before:always"></div>
-
-## **GIORNO 3: IL SOFFIO DELLA DISPERAZIONE**
-
-### **INTRODUZIONE GIORNO 3:**
-> *"L'alba del terzo giorno è rossa come il sangue versato. Le difese esterne sono crollate, i cortili sono pieni di macerie, e i superstiti nanici si sono ritirati sui bastioni più alti. Fauci di Palude si libra alto nel cielo mattutino, le sue scaglie nere che brillano come ossidiana bagnata. Il drago ha un piano, e i suoi occhi gialli fissano direttamente la posizione di Re Thorek sui bastioni centrali."*
-
-### **FASE C: COLLASSO DIFENSIVO E RITIRATA (Turni 16-20)**
-*Le forze naniche sono costrette ad abbandonare le mura esterne e a ritirarsi nel cortile interno.*
-```
-╔════════════════════════════╗
-║ T3 ←INTATTA    T4← DANNEGGIATA ║   
-║                            ║
-║ 🟡🟡🟡 ORCHI 🟡🟡🟡        ║ ← Nemici nel cortile
-║ 🟠 HOBGOBLIN 🟠 DENTRO     ║
-║ 🛡️[NANI IN CERCHIO]🛡️      ║ ← Difesa disperata
-║     👑[THOREK]👑           ║
-╠═════ XXX DISTRUTTO XXX ═══╣
-║                            ║
-╚════════════════════════════╝
-```
-
-
-### 🐉 **Il Momento Critico: L'Attacco Definitivo**
-
-**INCONTRO BOSS 2E: Il Soffio della Morte**
-
-**Leggere:**
-> *"Fauci di Palude si alza a un'altitudine impossibile, così in alto che diventa un punto nero contro il sole. Poi, come un meteorite vivente, si tuffa in picchiata verso i bastioni dove Re Thorek sta dirigendo gli ultimi disperati tentativi di resistenza. Il vento del passaggio del drago fa tremare le bandiere, e potete vedere le sue fauci aprirsi rivelando un abisso di morte acida. 'QUESTA È LA FINE!' ruggisce con voce che fa crollare le pietre. Il suo soffio si riversa sui bastioni come una cascata di dissoluzione."*
-
-
-<div style="page-break-before:always"></div>
-
-#### **INCONTRO 2B: IL SOFFIO DELLA DISPERAZIONE**
-*Obiettivo: Sopravvivere all'attacco mirato del drago e ritirarsi nel cuore della montagna.*
-
-> **📎 Regia, l'eco del re** (Casa di Davide): Fauci punta Re Thorek come il suo capostipite, nel ≈372, puntava Re Thorek I nel cortile. Vuole un re davanti all'orda, come lui (`07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md`, Scena 11, «Un re l'ho già mangiato, qui» e «Il re»). Il DM non lo spiega: chi ha giocato quel duello lo riconosce da solo, e chi non l'ha giocato vede un drago che sceglie il bersaglio con calma. La presa in bocca non c'entra: Fauci la tiene per Thorik (`ARC08-02` §1, «La presa di Thorik»).
-
-**MAPPA 2B: ATTACCO AL COMANDO (TURNO 16-20)**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2B-CORRETTA REVISED (40×26, 1,5 m: cono del soffio, posizioni e opzioni PNG)
-```
-BASTIONI CENTRALI - ATTACCO AEREO (180m x 120m)
-                    NORD ↑
-
-        ☁️☁️☁️ FAUCI DI PALUDE ☁️☁️☁️
-         \     (Altitudine 60m)     /
-          \        ⬇️PICCHIATA⬇️     /
-           \                      /
-            \                    /
-
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-▓                                 ▓
-▓   ^^^BASTIONE^^^   ^^^BASTione^^^▓
-▓                                 ▓
-▓ ╔═══════════════════════════════╗ ▓
-▓ ║                               ║ ▓
-▓ ║      ⚡ZONA OBIETTIVO⚡       ║ ▓
-▓ ║         SOFFIO DRAGO          ║ ▓
-▓ ║    👑[REE THOREK]             ║ ▓
-▓ ║      🔵[GUARDIE]🔵 [B]⚔️      ║ ▓ 
-▓ ║                               ║ ▓
-▓ ║     [T] [N] [D]               ║ ▓
-▓ ╚═══════════════════════════════╝ ▓
-▓                                 ▓
-▓     🕳️TUNNEL DI FUGA🕳️           ▓
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-```
-
-<div style="page-break-before:always"></div>
-
-#### **MAPPA 2B-CORRETTA: L'ATTACCO A CONO**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 2B-CORRETTA REVISED (40×26, 1,5 m)
-```
-SCALA: Ogni carattere ~ 3 metri
-                    NORD ↑ (Esterno delle Mura)
-
-                      🐉 FAUCI DI PALUDE (Quota 30m, stazionario)
-                           v
-                          / \
-                         /   \
-                        /     \
-                       / AREA  \
-                      /   DEL   \
-                     /  SOFFIO   \
-                    /____(18m)____\
-   
-╔══════════ BASTIONI CENTRALI (VISTA DALL'ALTO) ═════════╗
-║                                                       ║
-║    [D] 🏹                                             ║
-║                                                       ║
-║       \       [B]⚔️   🔵   👑   🔵   [T]⛪      /       ║
-║        \           (Guardie) (Re)           /        ║
-║         \                                  /         ║
-║          \         [N]🎭 (Nascosta)       /          ║
-║           \______________________________/           ║
-╚═══════════════════════════════════════════════════════╝
-                     SUD ↓ (Cortile Interno)
-```
-
-**MAPPA AGGIORNATA - ZONA DI IMPATTO:**
-```
-SOFFIO DRACONICO - AREA EFFETTO (Round 3)
-
-        🐉 FAUCI DI PALUDE
-         \     (30m altezza)
-          \   SOFFIO ACIDO
-           \ ████████████████ 
-            \████████████████ AREA SOFFIO
-             ████████████████ (Cono 60ft)
-             ████👑████[B]████ 
-             ████████████████ 
-             ████🔵██🔵██🔵████ 
-              ██████████████  
-               ████████████   
-                ██████████    
-                 ████████     
-                  ██████      
-                   ████       
-
-[T] [⛪]         [🎵CORO🎵]
-   FUORI AREA      FUORI AREA
-
-[N] NASCOSTA
-   TUNNEL
-```
-**ROUND 4 - IL SOFFIO DEVASTANTE:**
-**Meccaniche dell'Attacco:**
-- **Area:** Cono di acido 18mt centrato su Re Thorek
-- **Danni:** 14d4 acido (media 35 danni)
-- **Tiro Salvezza:** Riflessi CD 29 per dimezzare
-- **Bersagli nell'Area:** Re Thorek + Borin + 15 Guardie Reali
-
-**EFFETTI SPECIALI:**
-- **Armature:** Subiscono 1d4 danni permanenti alla CA
-- **Armi Metalliche:** 25% possibilità di corrosione totale
-- **Terreno:** Diventa Terreno Difficile per acido residuo
-
-
-**OPZIONI DIFENSIVE DEI PNG:**
-
-**BORIN FERROPUGNO - "Il Sacrificio del Comandante"**
-- **Opzione A:** Interporsi tra drago e Re Thorek
-  - Subisce il soffio al posto del Re (TS Riflessi CD 29, 14d4 acido)
-  - Re Thorek subisce solo danni dimezzati da splash
-  - Borin ottiene +4 TS per atto eroico
-
-- **Opzione B:** Spingere via Re Thorek  
-  - Prova di Forza CD 25 per spostare il Re fuori area
-  - Entrambi subiscono il soffio ma con +2 TS
-  - Possibile caduta e danni da impatto (1d6)
-
-- **Opzione C:** Attaccare il Drago durante picchiata
-  - Attacco di Opportunità con Martello da Lancio
-  - -4 penalità per bersaglio in movimento
-  - Se colpisce, drago deve fare TS Concentrazione o perdere soffio
-
-**DARA OCCHIOLESTO - "Il Tiro Impossibile"**
-- **Posizione:** Bastione Est, 70m dal drago
-- **Equipaggiamento:** 2 Frecce Slaying Dragons rimanenti
-- **Round 2:** Aim (+1 att, azione completa)
-- **Round 3:** Attacco durante picchiata
-  - CD 25 per colpire (bersaglio Grande, in movimento, azione eroica)
-  - Se Freccia Slaying colpisce: Drago deve TS Tempra CD 20 o morte
-  - Se fallisce morte: 6d6+1 danni comunque
-
-**THORIN RUNAFORTE - "Il Miracolo di Moradin"**
-- **Posizione:** Fuori dall'area del soffio
-- **Opzioni Magiche:**
-  - **Heal** su Re Thorek (precast Round 2, ready trigger)
-  - **Spell Immunity: Acido** su un bersaglio (cast Round 1)  
-  - **Mass Cure Critical Wounds** dopo l'attacco (Round 4)
-- **Invocazione Divina:** Prova Carisma CD 22 per intervento diretto di Moradin
-  - Successo: +4 sacro a tutti i TS contro il soffio
-  - Fallimento: -2 penalità per dubitare della fede
-
-**NALA CANTAPIETRE - "L'Inganno Disperato"**
-- **Posizione:** Tunnel di fuga (non nell'area)
-- **Round 1:** Silent Image di un altro drago che attacca dai fianchi
-  - Fauci di Palude deve TS Volontà CD 17 o essere distratto (-2 att)
-- **Round 2:** Shatter sulla sella del cavaliere hobgoblin
-  - Danni alla cavalcatura: 5d6 sonori, possibile caduta del cavaliere
-- **Round 3:** Inspire Courage (+2 morale) su tutti i sopravvissuti
-
-#### **FASE 3: LE CONSEGUENZE (Round 4-6)**
-
-**CONSEGUENZE IMMEDIATE:**
-**Risultato dell'Attacco:**
-- **Re Thorek Ferito Gravemente:** -80 PF, Costituzione ridotta
-- **15 Guardie Morte:** La guardia d'élite è distrutta
-- **Morale Crollato:** Tutti i nani subiscono -4 ai tiri per 24 ore
-- **Se Re Thorek Muore:** Crollo morale totale, resa immediata
-- **Se Re Thorek Sopravvive Gravemente Ferito:** Deve ritirarsi, -4 morale generale
-- **Se Borin si Sacrifica:** +4 morale per atto eroico, ma perdita di leader tattico
-*   La ritirata attraverso i tunnel segreti ha inizio.
-
-<div style="page-break-before:always"></div>
-
-### 🏃‍♂️ **La Ritirata Disperata**
-**NUOVA MAPPA - RITIRATA VERSO IL CUORE:**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA H3-1 (evacuazione 40×40, 1,5 m: statua, tunnel 5 nani/round, timeline)
-```
-EVACUAZIONE VERSO TUNNELS (Round 5-6)
-
-🟡🟡🟡🟡 ORCHI CARICANO 🟡🟡🟡🟡
-🟠→→→ ATTRAVERSO BRECCE ←←←🟠
-         ⬇️⬇️⬇️⬇️⬇️
-
-▓ ╔═════════════════════════════╗ ▓
-▓ ║ ████ ZONA ACIDA ████ 🐉    ║ ▓
-▓ ║████ INACCESSIBILE ████     ║ ▓  
-▓ ║                            ║ ▓
-▓ ║   [🔵FERITI🔵]             ║ ▓
-▓ ║     ↓ EVACUAZIONE ↓        ║ ▓
-▓ ║                            ║ ▓
-▓ ║ [T] HEALING  [⛪] SUPPORT  ║ ▓
-▓ ║                            ║ ▓
-▓ ║ [SOPRAVVISSUTI] → TUNNEL   ║ ▓
-▓ ║                     ↓      ║ ▓
-▓ ╚══════════════════════╝═════╝ ▓
-▓                        ↓      ▓
-▓   🕳️ TUNNEL EST → CUORE 🕳️   ▓
-▓       (90 NANI SUPERSTITI)    ▓
-```
-
-**COMPITI DI EVACUAZIONE:**
-
-**SUPERSTITI PNG (chi rimane in vita):**
-- **Trasportare Re Thorek:** 2 PNG necessari, velocità dimezzata
-- **Guidare i Civili:** 1 PNG per prevenire panico
-- **Retroguardia:** 1 PNG per rallentare inseguitori
-- **Supporto Medico:** Guarigione durante movimento
-
-**INSEGUITORI NEMICI:**
-- **150 Orchi Berserker:** Velocità 12m, raggiungono tunnel in 3 round
-- **80 Hobgoblin:** Organizzano blocchi stradali nei tunnel
-- **Grimjaw + Élite:** Se ancora vivo, guida caccia sistematica
-
----
-**Leggere:**
-> *"Con il Re gravemente ferito e sanguinante, i superstiti nanici non hanno altra scelta che la ritirata. 'Nelle profondità!' urla il Capitano delle Guardie superstite. 'Portiamo il Re nel Cuore della Montagna!' Come fantasmi della loro antica gloria, i nani trascinano il loro sovrano morente attraverso passaggi segreti scavati dai loro antenati, mentre alle loro spalle le urla di trionfo degli orchi echeggia nelle sale vuote di Hammerfist."*
-
-**Inseguimento Nemico:**
-- **200 Orchi** si gettano all'inseguimento nelle gallerie
-- **100 Bugbear** tentano di aggirare attraverso tunnel laterali
-- **Grimjaw + 20 Élite** seguono metodicamente per non perdere tracce
-
-**Difese Durante la Ritirata:**
-I PG possono scegliere:
-1. **Retroguardia:** Combattere per rallentare gli inseguitori
-2. **Soccorso:** Aiutare a trasportare il Re ferito
-3. **Sabotaggio:** Crollare tunnel per bloccare nemici
-4. **Esplorazione:** Trovare percorsi alternativi
-
----
-
-<div style="page-break-before:always"></div>
-
-#### **INCONTRO 2F: L'INCROCIO SILENZIOSO (Imboscata nelle Caverne Interne)**
-*Obiettivo: sopravvivere all'imboscata dei Bugbear Assassini e portare Re Thorek vivo fino al Cuore della Montagna.*
-
-**Timing:** circa 30 minuti di marcia dopo l'ingresso nei tunnel — tra la Ritirata Disperata e l'arrivo al Cuore della Montagna. Il clamore degli inseguitori orcheschi si è fatto lontano; è proprio quel silenzio l'esca della trappola.
-
-**Leggere:**
-> *"Il passaggio principale si apre in una caverna più vasta: una selva di stalagmiti si leva dal pavimento come alberi pietrificati, e le torce vi proiettano in mezzo ombre lunghe e mutevoli. Sei bocche di tunnel si spalancano tutt'intorno all'incrocio, nere e mute. I superstiti si stringono al centro, gli scudi rivolti verso l'esterno, mentre il respiro di Re Thorek rantola sulla barella improvvisata. Le urla degli orchi sono lontane, ora. Troppo lontane. Il silenzio della pietra, che per un nano è sempre stato una carezza, qui pesa come una lastra tombale. Non siete soli."*
-
-**MAPPA 3Z: L'INCROCIO SILENZIOSO**
-> 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 3Z REVISED (33×33, 1,5 m: stalagmiti S1-S8, 6 tunnel, rotte dell'imboscata)
-*Scala: 1 carattere ≈ 2 metri.* ⚠️ *Deviazione dalla convenzione repo (1,5 m/quadretto): la griglia originale è mantenuta per non alterare portate e distanze già usate nel testo. Non mischiare quadretti di mappe a scale diverse nella stessa scena.*
-
-```
-                  ↑ NORD (Tunnel Corretto → CUORE DELLA MONTAGNA) ↑
-                  ##################
-                  #      .         #
-                  #      .         #
-#####################      .      ###########################
-# . . . (Tunnel NO:        .                . . (Tunnel NE: #
-#  IMBOSCATA HOBGOBLIN)    .                . . vuoto —     #
-###                        .                     falso      #
-  #                        .  (Stalagmite ^)     allarme) ###
-  #   [BUGBEAR 🟤] ←OVEST  .                             #
-  #                        .  (Re Ferito 👑)              #
-  #  (Stalagmite ^)        .   [NANI]🛡️                   #
-  #                 .......  (Stalagmite ^)              #
-  ###              .                                   ###
-    # . . . . . . .             EST→ [BUGBEAR 🟤]        #
-    # . . . (Tunnel SUD: arrivo — eventuali inseguitori) #
-    #####################################################
-```
-
-**LA CAVERNA (TERRENO):**
-- **8 Stalagmiti (2–3 m di altezza):** copertura, +4 CA a chi le usa tatticamente
-- **6 aperture di tunnel:** Nord (uscita corretta verso il Cuore), Sud (arrivo, eventuali inseguitori), Est e Ovest (imboscata bugbear), Nord-Est (vuoto, falso allarme), Nord-Ovest (imboscata hobgoblin)
-- **Illuminazione:** 20 torce dei nani (raggio 6 m ciascuna); oltre la luce, oscurità totale nei tunnel
-- **Formazione nanica:** anello esterno di 60 guerrieri con scudi verso l'esterno, cerchio interno di 20 balestrieri, nucleo con Re Thorek, i portatori e i PNG giocabili
-
-**FORZE NEMICHE:**
-
-**8 Bugbear Assassini (Ladro 5°/Assassino 2°, GS 9 ciascuno; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`)** `[CANONE — DM 2026-10-19, D10]`:
-- **Nascondersi +17** (scheda; nell'oscurità dei tunnel): serve **Osservare CD 25** per individuarli PRIMA che colpiscano
-- **Attacco Mortale:** hanno studiato i bersagli dall'ombra durante l'avvicinamento — al primo colpo, Tempra CD 16 o paralisi per 1d6+2 round
-- **Attacco Furtivo +4d6** contro bersagli impreparati (3d6 da ladro + 1d6 da assassino, SRD)
-- **4 nel tunnel Est** → bersaglio prioritario: **Re Thorek** (tentativo di assassinio)
-- **4 nel tunnel Ovest** → bersagli secondari: comandanti e portatori
-- **Ritirata:** se scoperti prima del colpo o se ne cadono più di 4, svaniscono di nuovo nei tunnel (nuova prova di Nascondersi)
-
-**7 Hobgoblin di Diversione (1 Sergente + 6 Guerrieri):**
-- Caricano dal tunnel **Nord-Ovest un round PRIMA** dei bugbear
-- Scopo: attirare l'anello difensivo verso nord mentre gli assassini colpiscono i fianchi
-- Fanatici: combattono fino alla morte
-
-**(Eventuale) 30 Orchi Inseguitori:** se i PG hanno fallito nel rallentare gli inseguitori durante la ritirata, arrivano dal tunnel **Sud al Round 4**, stringendo i nani su tre fronti.
-
-**SEQUENZA DELL'IMBOSCATA:**
-
-#### **ROUND 1: LA DIVERSIONE**
-I 7 hobgoblin caricano urlando dal tunnel nord-ovest. L'anello esterno nanico si sposta istintivamente verso la minaccia visibile. I bugbear, ancora nascosti, avanzano di soppiatto verso i fianchi.
-
-#### **ROUND 2: LE LAME NEL BUIO**
-**Leggere:**
-> *"Mentre gli scudi nanici si serrano contro la carica degli hobgoblin, le ombre alle vostre spalle si muovono. Otto sagome massicce sgusciano fuori dai tunnel a est e a ovest, silenziose come il buio da cui provengono, le lame annerite già puntate alla gola del vostro Re."*
-
-Gli 8 bugbear emergono simultaneamente da Est e Ovest: 4 puntano Re Thorek, 4 i comandanti. Attacco Mortale (Tempra CD 16 o paralisi) e Attacco Furtivo +4d6 su chiunque sia impreparato — a meno che una prova di **Osservare CD 25 al Round 1** non abbia rivelato l'imboscata in tempo per preparare un'azione.
-
-#### **ROUND 3-5: LA MISCHIA NEL CERCHIO**
-I bugbear continuano con attacchi furtivi in mischia; gli hobgoblin impegnano l'anello esterno. I nani sono confusi e combattono su più fronti: **servono gli ordini dei PG** (azione gratuita di comando, o Nala con Ispirare Coraggio) per evitare che la formazione si sgretoli.
-
-#### **ROUND 6+: LA RISOLUZIONE**
-Se più di 4 bugbear sono caduti, i superstiti si dileguano nei tunnel. Gli hobgoblin combattono fino all'ultimo. Il costo è comunque pagato: **5–15 nani cadono** a seconda dell'efficacia dei PG — ogni perdita va annotata nel Registro Perdite (ARC08-03).
-
-**TATTICHE CONSIGLIATE PER I PNG GIOCABILI:**
-- **Borin:** al centro presso il Re — la sua prova di Osservare CD 25 è la migliore occasione di scoprire i bugbear in anticipo; se riesce, azione preparata per intercettare
-- **Dara:** posizione sopraelevata su una stalagmite (Scalare CD 10, +2 di circostanza alle prove di Osservare): Tiro Preciso nella mischia, Nemico Prescelto (goblinoidi) +4
-- **Thorin:** accanto al Re — *Barriera di Lame* per sigillare un tunnel, cure di massa dopo l'imboscata; la sua priorità assoluta è tenere in vita Thorek
-- **Nala:** *Polvere Luccicante* (CD 16) per rivelare i bugbear nascosti, Controcanto contro le urla di guerra, Ispirare Coraggio +2 per tenere salda la formazione
-
-**ESITI:**
-- ✅ **Successo:** Re Thorek sopravvive, meno di 10 nani caduti
-- ⚠️ **Parziale:** Re Thorek sopravvive, 10–15 nani caduti
-- ❌ **Fallimento:** Re Thorek viene ucciso — la campagna dell'arco crolla (vedi ARC08-10 Esiti e Contingenze prima di permettere questo esito)
-
-**Riferimenti tattici (griglia completa 33×33, posizioni quadretto per quadretto):**
-- `Mappe/Hammerfist-L3-REVISED-Ultra-Clear.md` → **MAPPA 3Z REVISED** (griglia canonica: stalagmiti S1-S8, 6 tunnel, rotte dell'imboscata, companion DM)
-- `Mappe/Atlante-Hammerfist-Mappe-COMPLETE.md` → MAPPA 3Z (master narrativo; immagine [158] `hammerfist-3z.png`)
-- storico (DEPRECATED, D12): `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md` → MAPPA 3Z; `../07_il Portale Della Forgia Eterna/Mappe/TACTICAL-GRIDS-COMPLETE.md` → MAP 19: SILENT CROSSROADS (file combinato)
-
-Superata l'imboscata, la colonna riprende la marcia verso nord: l'antica porta di mithral del Cuore della Montagna è ormai vicina.
-
----
 
 <div style="page-break-before:always"></div>
 
@@ -2185,7 +1287,7 @@ CUORE DELLA MONTAGNA (scala 1:800, ogni carattere = 5m)
 ▓    RE 1         RE 2         RE 3       ▓   
 ▓ (Rubini)     (Rubini)     (Rubini)      ▓
 ▓                                         ▓
-▓           ⚡ ALTARE MORADIN ⚡            ▓ ← Altezza Altare: 25m
+▓           ⚡ ALTARE MORADIN ⚡            ▓ ← Altezza Altare: +3m
 ▓         (PUNTO APPARIZIONE PG)          ▓
 ▓              ZONA SACRA                 ▓
 ▓                                         ▓
@@ -2705,7 +1807,7 @@ RESA DEI CONTI FINALE (Round 12-15)
 ### **INTRODUZIONE SESSIONE 4:**
 > *"Dopo mezza giornata di battaglia sotterranea, voi e i nani superstiti emergete finalmente all'aria aperta sui bastioni esterni di Hammerfist. Lo spettacolo che vi accoglie è al tempo stesso terrificante e magnifico. Davanti a voi, i resti dell'esercito della Mano Rossa - ancora oltre 400 creature - sono disposti in formazioni difensive, ma qualcosa di straordinario sta accadendo nel cielo sopra di loro. Nubi nere si addensano con velocità innaturale, formando una tempesta che si muove contro il vento."*
 
-> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[CANONE — DM 2026-10-19, D13]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek, se è uscito vivo dal 3B, lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: per la H3-1 il tunnel nord porta lontano da Hammerfist, e la strada resta da scegliere al DM.
+> **📎 Regia, fra il Cuore della Montagna e i bastioni** `[CANONE — DM 2026-10-19, D13]`: passa mezza giornata, come dice il box. Non c'è il riposo di otto ore: Hella non riprepara gli incantesimi, e restano solo gli effetti che durano ore. Re Thorek, se è uscito vivo dal 3B, lo curano i chierici di Dana in quella mezza giornata: è il «miracolosamente guarito» della carica. Come i nani tornano dalla caverna ai bastioni, e perché il cortile caduto è di nuovo loro, il testo non lo dice: il tunnel dietro la statua scende al Cuore (DM 2026-10-21), quindi la strada del ritorno è lo stesso tunnel in salita; come il cortile caduto torni loro resta da scegliere al DM.
 >
 > **Chi è ancora in campo all'inizio della Sessione 4** `[CANONE — DM 2026-10-19, D13]` *(circa 400, ricavati dai file: la fonte è accanto a ogni numero; il Registro `ARC08-03` è un foglio da riempire al tavolo, e se la Sessione 3 è andata diversamente vale il Registro)*
 >
@@ -3315,7 +2417,7 @@ CERIMONIA DELLE ASCE - TRAMONTO
 
 ### **ESERCITO DELLA MANO ROSSA (900 unità)**
 *   **Comandanti:** Fauci di Palude (GS 15), Generale Grimjaw (GS 14), Gorthak il Trifronte (GS 12)
-*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 6), Sergenti Hobgoblin (GS 4)
+*   **Élite:** Cavaliere Hobgoblin (GS 10), Orog Guardie Nere (GS 7), Sergenti Hobgoblin (GS 5)
 *   **Supporto Magico:** Doom Hand Warpriests (GS 6), War Adepts (GS 5), Shamani Draconici (GS 6)
 *   **Artiglieria:** Giganti delle Colline (GS 7), Ettin Standard (GS 6)
 *   **Cavalleria:** Goblin Worg Riders (GS 3)
@@ -3338,6 +2440,8 @@ CERIMONIA DELLE ASCE - TRAMONTO
 > 🗺️ **Griglia ultra-clear:** `Mappe/Hammerfist-L2-REVISED-Ultra-Clear.md` → MAPPA 1 REVISED (griglia di regia 60×108, 3 m/q)
 ```
 SCALA: Ogni carattere ~ 10 metri
+PENDIO: le mura sono 80 m sopra la piana; 300 m di pendio e una strada a tornanti.
+Gli accampamenti sono sulla piana, a 500 m-1 km, fuori mappa.
                     NORD ↑
 
 ---------------------- 300m ----------------------
@@ -3347,7 +2451,8 @@ SCALA: Ogni carattere ~ 10 metri
       🟠 War Adepts (20) - Artiglieria Magica Sparsa 🟠
 
 ---------------------- 200m ----------------------
-   [🟠 Giganti x8] [🟠 Ettin x2] - Linea di Bombardamento Pesante
+   [🟠 Giganti x8] [🟠 Ettin x2] - Bombardamento: da qui non tirano (il masso arriva a 180 m),
+                                   salgono la strada fino al gomito a ~100 m
 
 ---------------------- 170m ----------------------
              🔴 GENERALE GRIMJAW + 🟠 Orog Guardie (4) - COMANDO CENTRALE
@@ -3384,30 +2489,30 @@ SCALA: Ogni carattere ~ 5 metri
 
 ╔═══════════════════════════[CANCELLO PRINCIPALE]═══════════════════════════╗
 ║ BASTIONE SUD (G1)                                               BASTIONE SUD (G2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 3 Unità Veterani                                             🛡️ 3 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║ [N] NALA (infiltrazione/sabotaggio)                                             ║
 ║ -------------------------- CORTILE ESTERNO --------------------------         ║
 ║                🛡️ 5 Unità Nani d'Élite (Davanti al Cancello) 🛡️                 ║
 ║                        [B] BORIN (comando prima linea)                          ║
-║                                                                               ║
+║   🛡️ RISERVA: 3 Unità (2 Balestrieri, 1 Veterani) → il DM la manda alla breccia ║
 ╠═══════════════════════[PORTA INTERNA]══════════════════════════╣
 ║                                                                               ║
-║ -------------------------- CORTILE INTERNO --------------------------         ║
+║ ---------------- CORTILE INTERNO (+20 m, oltre la scarpa) ----------------    ║
 ║                     👑 RE THOREK + GUARDIE REALI (2 Unità)                     ║
 ║                       ⚡ COMANDO CENTRALE ⚡                                   ║
-║     [RISERVA: 5 Unità Guerrieri]      [INGEGNERI PRONTI]                       ║
+║     [INGEGNERI PRONTI]                                                        ║
 ║                                                                               ║
 ║ ⛪ MADRE DANA + Chierici    🎵 CANTITRICI      [T] THORIN (supporto divino)    ║
 ║                                                                               ║
 ║ --- Salita ai Bastioni Nord ---                           --- Salita ai Bastioni Nord --- ║
 ║                                                                               ║
 ║ BASTIONE NORD (B1)                                              BASTIONE NORD (B2) ║
-║ 🛡️ 2 Unità Guerrieri                                            🛡️ 2 Unità Guerrieri ║
+║ 🛡️ 2 Unità Veterani                                             🛡️ 2 Unità Veterani  ║
 ║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ╠═══════════════════════════(Mura Interne)═══════════════════════════╣
 ║ 🏰 TORRE OVEST                                                    🏰 TORRE EST ║
-║ 🏹 2 Unità Balestrieri                                          🏹 2 Unità Balestrieri ║
+║ 🏹 1 Unità Balestrieri                                          🏹 1 Unità Balestrieri ║
 ║    [D] DARA (cecchino/osservatore)                                                ║
 ║    2 Baliste Pesanti                                            2 Baliste Pesanti     ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
@@ -3462,17 +2567,20 @@ SCALA: Ogni quadrato (##) ~ 3x3 metri
    |            |     | |                          |  |    |           |            |
 ======================[██ CANCELLO PRINCIPALE ██]======================[PONTE LEVATOIO]====
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOSSATO (Livello -3m) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/////////////////////// TERRENO IN SALITA (Pendenza 15%) ///////////////////////
+////////// PENDIO ~27% (80 m in 300 m); STRADA A TORNANTI AL 15% //////////
 ```
 
 #### **C) Vista Laterale (Sezione Trasversale Sud -> Nord)**
 ```
 SCALA: Orizzontale ~ 20m per sezione | Verticale ~ 3m per livello
+QUOTE (sul cortile esterno, che è +80 m sulla piana): scarpa di 20 m con due scale,
+cortile interno +20 m, bastioni nord +40 m. La fortezza del 372 era il cortile
+interno e la torre nord; il ripiano esterno era la spianata degli arieti.
 
                                                                    (MONTAGNA)
                                                                     /
                                                                    /
-                                     BASTIONE NORD (+15m) ---------/
+                                     BASTIONE NORD (+40m) ---------/
                                      |                           /
                                      | (Rampa)                  /
           PORTA INTERNA              |                         /
