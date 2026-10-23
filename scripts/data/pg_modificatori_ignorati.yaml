@@ -28,9 +28,10 @@ ignorati:
 # Il confronto per *tipo* non basta: Thorik ha DUE −2 DES, dalla Corona indossata
 # e dal rito, e cancellandone uno il tipo resterebbe coperto dall'altro.
 #
-# ⚠️ P1 stabilisce anche «+4 Carisma (potenziamento)» della Corona, e qui NON è
-# attestato: state.yaml conta un solo +4 CAR, quello del rito (D84). È una
-# domanda al DM del lotto 4g-2, non una scelta di questo file.
+# P1 scrive anche «CAR: 8 → 12 (+4 Corona)», e qui NON è attestato: è lo stesso
+# +4 CAR che DEF-1 (D84) mette sul rito. Il canone giocato ne conta uno solo
+# (state.yaml del ramo di gruppo: «+4 CAR» in tutto; scheda giocatore della
+# Corona: «8 → 12»), e la scheda lo tiene col rito come state.yaml.
 fonti_primarie:
 - file: 07_il Portale Della Forgia Eterna/PortaleForgia-P1-REVISED-Corretta.md
   cosa: >-

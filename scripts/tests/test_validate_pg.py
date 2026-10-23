@@ -96,6 +96,16 @@ class TestFontiEAritmetica(unittest.TestCase):
         self.assertEqual((des["base"], des["attuale"]), (10, 6))
         self.assertEqual(vp.valida_aritmetica(t, "thorik"), [])
 
+    def test_il_car_di_thorik_conta_il_quattro_una_volta(self):
+        """P1 e DEF-1 scrivono lo stesso +4 CAR: 8 → 12, non 16 (canone giocato)."""
+        t = copy.deepcopy(vp.schede()["thorik"])
+        car = t["caratteristiche"]["car"]
+        self.assertEqual((car["base"], car["attuale"]), (8, 12))
+        t["modificatori_permanenti"].append(dict(
+            t["modificatori_permanenti"][-1], causa="Corona indossata, P1"))
+        self.assertTrue(vp.valida_aritmetica(t, "thorik"),
+                        "un secondo +4 CAR e il gate tace: il CAR diventerebbe 16")
+
     def test_aritmetica_sbagliata_viene_vista(self):
         t = copy.deepcopy(vp.schede()["thorik"])
         t["caratteristiche"]["des"]["attuale"] = 8

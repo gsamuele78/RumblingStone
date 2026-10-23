@@ -3143,16 +3143,19 @@ del tavolo di prima e ne crea una vuota per ogni PG del nuovo `party`.
 
 | Cosa | Esito |
 |---|---|
-| `validate_pg.py`, `render_pg.py --check` sul repo | ✅ verdi, 23 caselle `[INFERRED]` contate |
+| `validate_pg.py`, `render_pg.py --check` sul repo | ✅ verdi, 22 caselle `[INFERRED]` contate |
+| gli stessi sul ramo `campaign-group-rumblingstone` con questo ramo fuso sopra (il canone giocato) | ✅ verdi, nessun conflitto |
 | `test_validate_pg.py` | 25 test; **14 mutazioni su 14 rosse** (fra cui: togliere il −2 DES della Corona) |
 | `test_new_group.py` | il gruppo nuovo ha le sue schede e `validate_pg` verde; le schede del repo vero non si toccano |
 
 #### Cosa resta: 4g-2
 
 I valori delle caratteristiche dalle schede del DM, confermati da un modulo
-(D19). E una domanda che 4g-1 non risolve: la Corona dà **+4 CAR** in P1
-(CAR 8 → 12), il rito altri **+4 CAR**, e `state.yaml` ne conta 4 in tutto. Il
-CAR di Thorik è 12 o 16? La scheda lo lascia `null`.
+(D19). Il CAR di Thorik è già deciso: **8 → 12**. P1 (la Corona) e DEF-1 (il
+rito, D84) scrivono lo stesso +4 due volte; il DM il 2026-10-23: *«il canone è
+quello giocato nel gruppo»*, e lì `state.yaml` conta +4 CAR in tutto, come la
+scheda giocatore della Corona rivista («8 → 12»). Resta solo una differenza di
+attribuzione (Corona o rito), che non cambia il numero.
 
 ## Come si misura che il piano è finito
 

@@ -17,7 +17,7 @@ Classe, PF e stato di oggi: `campaign/state.yaml`, blocco `party` (e [`state.md`
 | **COS** | `[INFERRED]` valore ignoto, ma con +2 (rito dello Smeraldo, 2026-07-31) | — |
 | **INT** | `[INFERRED]` — non attestato | — |
 | **SAG** | `[INFERRED]` — non attestato | — |
-| **CAR** | `[INFERRED]` valore ignoto, ma con +4 (rito dello Smeraldo, 2026-07-31) | — |
+| **CAR** | 8 → **12** *(rito dello Smeraldo, 2026-07-31)* | 12 |
 
 ## Modificatori permanenti — 4
 

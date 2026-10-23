@@ -17,11 +17,14 @@ caratteristiche:
   cos: {base: null, attuale: null, attestato_da: null}
   int: {base: null, attuale: null, attestato_da: null}
   sag: {base: null, attuale: null, attestato_da: null}
-  # ⚠️ Lasciata null di proposito, ed è una domanda al DM (4g-2): il modulo P1
-  # scrive «CAR: 8 → 12 (+4 Corona)», il rito dello Smeraldo (DEF-1, D84 del
-  # 2026-10-12) dà altri +4 CAR permanenti, e state.yaml conta +4 CAR in tutto.
-  # 12 o 16: lo sa solo il DM.
-  car: {base: null, attuale: null, attestato_da: null}
+  # CAR 8 → 12, un solo +4. È il conto del canone giocato: state.yaml del ramo
+  # di gruppo (campaign-group-rumblingstone) dà «−4 DES / +2 COS / +4 CAR
+  # permanenti» in tutto, e la scheda giocatore della Corona, rivista, scrive
+  # «+4 CAR (8 → 12)». P1 e DEF-1 attribuiscono quel +4 l'uno alla Corona e
+  # l'altro al rito: è lo stesso punto, contato una volta. Il DM il 2026-10-23:
+  # il canone è quello giocato dal gruppo e dagli artefatti rivisti.
+  # Qui sta col rito, come in state.yaml, che è il master (ADR-0050).
+  car: {base: 8, attuale: 12, attestato_da: "PG/Artefatti/Artefatti-Pg/00-La Corona di Adamantio-ogetto&Prove/00_SCHEDA-GIOCATORE-STATO-ATTUALE.md"}
 
 modificatori_permanenti:
 - caratteristica: DES

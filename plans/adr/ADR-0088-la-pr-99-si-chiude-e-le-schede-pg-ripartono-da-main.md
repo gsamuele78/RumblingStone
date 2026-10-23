@@ -57,16 +57,21 @@ non recupererebbe lavoro: rovescerebbe una decisione attuata.
   repo di oggi: «Nessun −2 COS» letto come affermazione, il totale «−4 DES» non
   riconosciuto come somma dei due −2, e i resoconti in `plans/esperimenti/` che
   citano un PG per un costo di un altro.
-- **Una domanda per il DM, che 4g-1 non risolve**: il modulo P1 dà alla Corona
-  «+4 Carisma» (CAR 8 → 12), il rito dello Smeraldo dà altri +4 CAR (D84), e
-  `state.yaml` ne conta +4 in tutto. Il CAR di Thorik è 12 o 16? La scheda lo
-  lascia `null` finché non risponde.
-- Le caselle `[INFERRED]` sono 23 su 24: lo strumento esiste, i valori no.
+- **Il CAR di Thorik è 12, non 16.** P1 dà alla Corona «+4 Carisma» (8 → 12),
+  DEF-1 (D84) dà +4 CAR al rito: è lo stesso punto scritto due volte. Il DM
+  (2026-10-23): il canone è quello giocato dal gruppo e dagli artefatti rivisti.
+  Lo `state.yaml` del ramo `campaign-group-rumblingstone` conta «+4 CAR» in
+  tutto, la scheda giocatore della Corona scrive «8 → 12». Resta una differenza
+  di sola attribuzione: la scheda della Corona lo mette sulla Corona, `state.yaml`
+  e DEF-1 sul rito. La scheda PG segue `state.yaml`, che è il master.
+- Le caselle `[INFERRED]` sono 22 su 24: lo strumento esiste, i valori quasi
+  tutti no.
 
 ## Validazione
 
 | Cosa | Come |
 |---|---|
+| il gate è vero anche sul canone giocato | `validate_pg.py` e `render_pg.py --check` escono 0 su `campaign-group-rumblingstone` con questo ramo fuso sopra (prova del 2026-10-23) |
 | il gate è vero sul repo | `python3 scripts/validate_pg.py` esce 0; `render_pg.py --check` esce 0 |
 | il gate morde | 14 mutazioni dello strumento, 14 rosse in `scripts/tests/test_validate_pg.py` |
 | nessuna seconda copia | una scheda con `classe`, `hp`, `stato` o `artefatti` è rifiutata |
