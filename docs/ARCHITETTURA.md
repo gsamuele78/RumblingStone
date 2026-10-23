@@ -215,7 +215,9 @@ flowchart LR
         UC["Mappe Ultra-Clear"]
         PCG["PCGen, pregen storici"]
         HF["Hugging Face, PyTorch<br/>modelli di prova"]
-        LT["LanguageTool"]
+        LT["LanguageTool<br/>server locale"]
+        SPC["spaCy<br/>it_core_news_md"]
+        OLL["modello locale<br/>Ollama, llama-server"]
     end
 
     subgraph ING["🔧 Ingresso"]
@@ -241,7 +243,7 @@ flowchart LR
         VAL["validate_modules, maps,<br/>bestiario, skills, docs"]
         STB["extract e derive_statblocks"]
         LNG["validate_lingua,<br/>validate_tipografia"]
-        MIS["misura_craft, ciclo_prosa,<br/>misura_resa"]
+        MIS["misura_craft, ciclo_prosa,<br/>coerenza_campagna, misura_resa"]
     end
 
     subgraph OUT["📤 Uscite"]
@@ -263,6 +265,9 @@ flowchart LR
     MST --> BMC
     HF -.->|"solo in unstable"| MIS
     LT --> LNG
+    LT -.->|"facoltativo"| MIS
+    SPC -.->|"facoltativo"| MIS
+    OLL -.->|"solo in unstable"| MIS
     SKL --> VAL
     MST --> VAL & STB & LNG & MIS
     JSN --> VAL
@@ -397,7 +402,9 @@ flowchart LR
 | Chiudere la sessione | DM | `dm.py session end` sul ramo di gruppo | [ADR-0007](../plans/adr/ADR-0007-scritture-canone-triplo-vincolo.md) |
 | Scrivere un master DEF | agente | ciclo in sette passi, §9 | skill `rumblingstone-module-standard` |
 | Il giro delle letture | agente, DM | otto passi, §9 | [ADR-0095](../plans/adr/ADR-0095-il-giro-ha-correzione-verifica-e-seconda-passata.md) |
-| Misurare la prosa | agente, DM | `misura_craft`, `ciclo_prosa`, voto al cieco | [ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) |
+| Misurare la prosa | agente, DM | `dm.py prosa misura`, `ciclo`, `mqm`, voto al cieco | [ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md) |
+| Riscrivere un box | agente, DM | `dm.py prosa coerenza` → `sintassi` → `migliora` → `cieco` | §10.2, [ADR-0101](../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md) |
+| Provare un modello locale | DM | `dm.py prosa banco`, poi `voto` | §10.4, [ADR-0089](../plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) |
 | Fare una mappa | agente | `compile_map_json` → `render_map_svg` | [GUIDA-MAPPE](guides/GUIDA-MAPPE.md) |
 | Stampare | agente, DM | `dm.py volume`, `dm.py corredo` | [GUIDA-BOOKLET-E-PDF](guides/GUIDA-BOOKLET-E-PDF.md) |
 | Una creatura | agente | `dm.py bestiario`, skill `npc-villain-boosting` | [GUIDA-BESTIARIO](guides/GUIDA-BESTIARIO.md) |
@@ -534,20 +541,201 @@ cancelli impediscono che torni.
 
 La prosa nuova entra solo se non peggiora la misura e, nei casi indecisi, se il
 DM la sceglie al cieco ([ADR-0093](../plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md), [ADR-0097](../plans/adr/ADR-0097-scrittura-italiana-entra-come-eccezione.md) per l'eccezione
-della scrittura italiana).
+della scrittura italiana). Gli strumenti stanno in una catena sola, con un
+ingresso solo, `dm.py prosa <azione>`
+([ADR-0101](../plans/adr/ADR-0101-la-prosa-ha-una-catena-sola.md)).
+
+### 10.1 La catena
 
 ```mermaid
 flowchart LR
-    NEW["Box nuovo"] --> M1["misura_craft --box<br/>al metro dei box"]
-    OLD["Box di prima<br/>tag e commit"] --> M2
-    M1 --> M2["ciclo_prosa<br/>verdetto_misurato, box_impoveriti"]
-    M2 -->|"peggiora"| KEEP["resta il vecchio"]
-    M2 -->|"migliora chiaro"| IN["entra"]
-    M2 -->|"indeciso"| BL["cieco del DM<br/>cieco_versioni, più 4 controlli"]
-    BL -->|"vince il nuovo"| IN
-    BL -->|"vince il vecchio"| KEEP
+    subgraph MIS["1 · misurare"]
+        direction TB
+        A1["misura<br/>misura_craft"]
+        A2["ciclo<br/>ciclo_prosa"]
+        A3["mqm<br/>punteggio_mqm"]
+        A4["sintassi<br/>misura_sintassi"]
+    end
+    subgraph CTL["2 · controllare"]
+        direction TB
+        B1["coerenza<br/>coerenza_campagna"]
+        B2["domande<br/>domande_developer"]
+    end
+    subgraph RIS["3 · riscrivere"]
+        direction TB
+        C0["candidate<br/>le scrive un agente"]
+        C1["migliora<br/>migliora_prosa"]
+    end
+    subgraph DEC["4 · decidere"]
+        direction TB
+        D1["cieco<br/>cieco_versioni"]
+        D2(["👤 DM"])
+    end
+    BOX["Box di un master"] --> MIS --> CTL --> RIS
+    C0 --> C1
+    C1 -->|"la migliore<br/>delle rimaste"| D1 --> D2
+    D2 -->|"vince la nuova"| IN["entra nel master"]
+    D2 -->|"vince la vecchia"| KEEP["resta la vecchia"]
     IN & KEEP --> FROZEN["CONGELATI.json<br/>i box votati non si toccano"]
+    D2 -->|"ogni voto"| VOTI[("pipeline/VOTI.json")]
+    VOTI -.->|"riaddestra"| C1
 ```
+
+La fase 3 non genera niente: `migliora` scarta le candidate che cambiano un
+fatto, che impoveriscono il box o che violano una delle regole misurabili di
+`read-aloud-adulti.md` §2-ter, e ordina le rimaste. Il modello supera la
+soglia scritta in `pipeline/SOGLIA.txt` dal 2026-10-23 (0,661 in leave-one-out
+su 59 coppie): se anche la migliore perde contro l'originale, resta
+l'originale e la coppia non va al cieco.
+
+| Azione | Script | Canale (§16) | In CI |
+|---|---|---|---|
+| `misura` | `misura_craft` | stable | cancelli e tetti dei box |
+| `ciclo` | `ciclo_prosa` | stable | `box_impoveriti`, verdetto misurato |
+| `mqm` | `punteggio_mqm` | stable | contro la baseline |
+| `sintassi` | `misura_sintassi` | unstable, spaCy facoltativo | no |
+| `coerenza` | `coerenza_campagna` | testing | `fatti --check plans/coerenza-residui.json` |
+| `domande` | `domande_developer` | stable | sui master nuovi |
+| `migliora` | `migliora_prosa` | unstable | solo `--help` |
+| `cieco` | `cieco_versioni` | stable | no: decide il DM |
+| `banco` | `banco_prosa_locale` | unstable (ADR-0089) | `corsa --dry-run` |
+| `voto` | `voto_scrittura` | stable | i test |
+
+### 10.2 Caso d'uso: riscrivere un box che c'era
+
+Il caso più frequente: un agente rifà un box di un master già giocato o già
+votato. La sequenza mostra chi chiama chi; le frecce tratteggiate sono le
+risposte.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor AG as 🤖 Agente
+    participant DM as dm.py prosa
+    participant CO as coerenza_campagna
+    participant SI as misura_sintassi
+    participant MI as migliora_prosa
+    participant CP as ciclo_prosa
+    participant CV as cieco_versioni
+    actor J as 👤 DM
+    AG->>DM: coerenza fatti ARC-07 ARC-08
+    DM->>CO: fatti …
+    CO-->>AG: contraddizioni fra scene (0 = si procede)
+    AG->>DM: sintassi --per-box --file MASTER
+    DM->>SI: (spaCy, se installato)
+    SI-->>AG: calchi e subordinate, da guardare a occhio
+    Note over AG: scrive 3-5 candidate in C.md
+    AG->>DM: migliora MASTER --box N --candidate C.md
+    DM->>MI: …
+    MI->>CP: confronta_fatti, box_impoveriti
+    CP-->>MI: scartate
+    MI-->>AG: la migliore delle rimaste
+    AG->>DM: migliora campione → cieco
+    DM->>CV: scheda cieca, chiave a parte
+    CV-->>J: SCHEDA-CIECA.md
+    J-->>AG: voti (A/B e un'etichetta del perché)
+    AG->>DM: migliora esito --voti VOTI.txt
+    DM->>MI: registra in VOTI.json, riaddestra
+    MI-->>AG: quanto vince la pipeline (Wilson)
+```
+
+### 10.3 Caso d'uso: una PR tocca un master
+
+La CI non riscrive e non vota: ferma solo ciò che peggiora o contraddice.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant PR as PR
+    participant CI as ci.yml
+    participant MC as misura_craft
+    participant VP as validate_prosa
+    participant MQ as punteggio_mqm
+    participant CO as coerenza_campagna
+    participant DD as domande_developer
+    PR->>CI: push
+    CI->>MC: tetti dei box, congegni
+    CI->>VP: calchi, tic, «sembra»
+    CI->>MQ: punteggio contro la baseline
+    CI->>CO: fatti --check coerenza-residui.json
+    CO-->>CI: 1 se c'è una contraddizione nuova<br/>o un residuo che non c'è più
+    CI->>DD: domande del developer sui master nuovi
+    CI-->>PR: verde o rosso, con la riga che ha fermato
+```
+
+### 10.4 Caso d'uso: provare un modello locale
+
+Il modello locale (ADR-0089) produce candidate come un agente; il giudice è lo
+stesso.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor J as 👤 DM
+    participant OL as Ollama / llama-server<br/>sulla macchina del DM
+    participant BA as banco_prosa_locale
+    participant VS as voto_scrittura
+    J->>BA: corsa --modello …
+    BA->>OL: /v1/chat/completions, dieci casi
+    OL-->>BA: testi
+    BA->>BA: plans/scrittura/corse/L-…/
+    J->>VS: --corse
+    VS-->>J: norme rispettate per corsa
+    J->>BA: coppie (foglio alla cieca)
+    J->>BA: esito (Wilson, κ col giudice automatico)
+```
+
+### 10.5 Come dipendono fra loro
+
+Chi importa chi, e le tre dipendenze di fuori. Le frecce vanno da chi usa a
+chi è usato; le tratteggiate sono facoltative e degradano senza fermare la
+catena (`binari.py`, catene «sintassi della prosa» e «secondo lettore
+LanguageTool»).
+
+```mermaid
+flowchart BT
+    MC["misura_craft<br/>rilevatori dei box"]
+    VP["validate_prosa<br/>calchi, tic, «sembra»"]
+    MQ["punteggio_mqm"]
+    CV["cieco_versioni"]
+    CP["ciclo_prosa"]
+    SI["misura_sintassi"]
+    MI["migliora_prosa"]
+    VS["voto_scrittura"]
+    CO["coerenza_campagna"]
+    DD["domande_developer"]
+    BA["banco_prosa_locale"]
+    SP[("spaCy<br/>it_core_news_md")]
+    LT[("LanguageTool<br/>127.0.0.1:8081")]
+    OL[("modello locale<br/>endpoint OpenAI")]
+    VP --> MC
+    MQ --> MC & VP
+    CV --> MC
+    CP --> MC & VP & MQ & CV
+    SI --> MC & VP
+    MI --> MC & CP & CV & SI
+    VS --> MC & VP
+    SI -.-> SP
+    MI -.->|"--lt"| LT
+    CP -.->|"--languagetool"| LT
+    BA -.-> OL
+    BA -.->|"le corse"| VS
+```
+
+`coerenza_campagna` e `domande_developer` non dipendono dagli altri: leggono i
+master e lo schema dei fronti (`scripts/schemas/fronti_orologi.schema.json`).
+
+### 10.6 Cosa ha detto la misura
+
+| Prova (2026-10-22/23) | Esito | Conseguenza |
+|---|---|---|
+| 17 misure di prosa della letteratura sui 38 voti ciechi | nessuna prevede il voto | niente cancelli di prosa nuovi |
+| catena vecchia contro nuova, 16 box al cieco | vecchia 8, nuova 5, pari 1 | tre cautele in §2-ter, nessuna sostituzione |
+| modello di preferenza di `migliora` | 0,611 il 22; col voto del 23, 0,661 su 59 coppie (Wilson basso 0,534) e 5 su 5 in prospettiva | scarta le candidate che perdono contro l'originale; il resto va al cieco |
+| prima prova della pipeline al cieco | pipeline 4, originale 1, pari 1 (soglia 5 su 6) | miglioramento non dimostrato |
+| LanguageTool sui box | 1 rilievo vero su 30, 6 errori piantati su 20 | filtro spento finché un gruppo non arriva a 0,70 |
+| Stanza contro spaCy (PR #270) | non vince | resta spaCy |
+| coerenza fra ARC-07 e ARC-08 | contraddizioni vere, 4 residui dichiarati | cancello in CI |
 
 ## 11. La catena delle mappe
 

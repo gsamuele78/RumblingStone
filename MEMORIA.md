@@ -103,16 +103,16 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 |---|---|---|---|
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7g, voto del DM sulla prima prova della pipeline | 🟡 Pipeline 4, originale 1, pari 1: miglioramento non dimostrato (soglia 5 su 6). Il modello di preferenza passa la soglia di `SOGLIA.txt` (0,661 su 59 coppie,… |
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7i: la catena della prosa ha un ingresso solo (richiesta del DM: integrar… | 🟡 `dm.py prosa` mette in fila i dieci script; spaCy e LanguageTool nel registro, così `doctor` li vede; quattro diagrammi nuovi (catena, tre sequenze, dipenden… |
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7e, correzione dopo il merge con main: `voto_scrittura` resta | ✅ La #234 (ADR-0089) ha portato su main `banco_prosa_locale`, che fa votare le corse del modello locale a `voto_scrittura`: toglierlo spezzava quel flusso. Il… |
 | 2026-10-23 | STATO-E-ORDINE-DEI-PIANI | §0 · l'indice dei punti in sospeso | ✅ Richiesta del DM: *«un index da aggiornare con le decisioni prese, quelle abbandonate e quelle sorpassate da PR o altre soluzioni»*, da usare per aprire thre… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | le tre piante una taglia sopra (DM: grandi abbastanza da reggere l'orda di ~10.… | ✅ Rethmar 110 ha, ~18.000 ab., 4,3 km di mura, 95 torri, servono ~3.400 difensori; Dauth 42 ha, ~7.000 ab., 2,55 km, 59 torri, servono ~2.000 difensori e ne ha… |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | le piante nuove di Rethmar, Dauth e Channathgate (DM: Rethmar sull'impianto del… | ✅ Rethmar 50 ha, ~8.400 ab. con i sobborghi, 70 torri, 4 porte e la poterna, niente fossato; Dauth 17 ha, ~2.650 ab., 3 porte maggiori e la Porta Est ridotta a… |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7h: LanguageTool, Stanza e perplessità come tratti e filtro della pipelin… | ❌ nessuno migliora il modello (base 0,611, migliore +LT 0,630, McNemar 1,00); restano in unstable |
 
 ## Le misure che si portano dietro
 
