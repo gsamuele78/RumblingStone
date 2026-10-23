@@ -111,6 +111,9 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le tre piante una taglia sopra (DM: grandi abbastanza da reggere l'orda di ~10.… | ✅ Rethmar 110 ha, ~18.000 ab., 4,3 km di mura, 95 torri, servono ~3.400 difensori; Dauth 42 ha, ~7.000 ab., 2,55 km, 59 torri, servono ~2.000 difensori e ne ha… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le piante nuove di Rethmar, Dauth e Channathgate (DM: Rethmar sull'impianto del… | ✅ Rethmar 50 ha, ~8.400 ab. con i sobborghi, 70 torri, 4 porte e la poterna, niente fossato; Dauth 17 ha, ~2.650 ab., 3 porte maggiori e la Porta Est ridotta a… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
@@ -120,13 +123,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
 | 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
 | 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
-| 2026-10-21 | MAPPE-CAMPO (esperimento) | M7-C e M7-A rifatte a scala | ✅ tenda del comando 16,5×10,5 m a tre pali, campo a file e a clan, nuovo riempimento 🎪 «Telo di tenda»; audit delle scale di tutte le mappe in AUDIT-SCALE-MAPP… |
-| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 chiuso: cieco del DM sulle 13 coppie di DEF-4 e DEF-5, nuova 10, vecchi… | ✅ vinta alla soglia esatta: una seconda prova che perda riapre la decisione |
-| 2026-10-21 | AVVENTURE-COMMUNITY | lotto 6 (avanzamento): la skill esterna scrittura-italiana come eccezione (refe… | 🟡 le 13 coppie aspettano il cieco del DM (soglia 10 su 13) |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 16 aperte, 277 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 16 aperte, 283 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
