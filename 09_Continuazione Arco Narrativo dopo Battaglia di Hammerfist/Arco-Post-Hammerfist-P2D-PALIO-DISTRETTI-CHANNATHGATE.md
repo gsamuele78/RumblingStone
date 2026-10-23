@@ -12,7 +12,7 @@
 > sulla sua terrazza; circa 25.000 abitanti, profughi esclusi, la città più popolosa
 > della valle, più di Rethmar. È più grande della Dennovar del libro (circa 11.600)
 > per scelta del DM, perché la valle regga l'orda di circa 10.000. Se
-> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[INFERRED — needs DM confirmation]`.
+> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[CANONE — DM 2026-10-23]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 > <!-- storico -->
