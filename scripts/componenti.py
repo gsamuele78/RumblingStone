@@ -55,9 +55,11 @@ _RIGA_SCHEDA = re.compile(r"^\|\s*\*\*(Aspetto|Vuole|Suona|Sa|Teme|Vende)\*\*\s*
 #: che la precedono: alla prima misura su DEF-4 quel criterio ne perdeva 13 su 43
 #: («FOR o DES grezza», «Conoscenze storia», «Forza o attacco, CD 18»). Qui entra
 #: ogni CD, e l'etichetta è la coda della sua cella o frase (_etichetta_prova).
+#: Il percorso della fonte può avere spazi: le cartelle degli archi ne hanno
+#: («07_il Portale Della Forgia Eterna»). Finisce al «#» del nome del blocco.
 _CD = re.compile(r"\bCD\s*\*{0,2}\s*(\d+)")
 _TAGLIO = re.compile(r"[|;:]|[.!?]\s+(?=[A-ZÀ-Ù«\"])|\n\s*(?:>\s*)?(?:\n|[-|])|—|\*\*\s|\bCD\s*\*{0,2}\s*\d+\*{0,2},?")
-_INCLUDE = re.compile(r"(<!--\s*include:\s*(?P<src>[^#\s]+)#(?P<nome>[\w-]+)\s*-->\n)(?P<corpo>.*?)"
+_INCLUDE = re.compile(r"(<!--\s*include:\s*(?P<src>[^#\n]+?)#(?P<nome>[\w-]+)\s*-->\n)(?P<corpo>.*?)"
                       r"(<!--\s*/include\s*-->)", re.S)
 
 
@@ -220,6 +222,8 @@ def file_con_inclusioni() -> "list[Path]":
     for f in sorted(ROOT.rglob("*.md")):
         rel = f.relative_to(ROOT).as_posix()
         if rel.startswith(("build/", ".claude/", ".git/")) or "_ARCHIVIO/" in rel:
+            continue
+        if rel.endswith(".hb.md"):  # generato dal booklet (ADR-0003): porta il segnaposto, non è una fonte
             continue
         try:
             if "<!-- include:" in f.read_text(encoding="utf-8"):

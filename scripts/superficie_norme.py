@@ -227,6 +227,41 @@ NORME_SCOPERTE = (
         "sblocca": "un campo nel contratto «In scena» (per esempio `Per chi:`), poi un conteggio",
     },
     {
+        "chiave": "ogni_scontro_possibile_ha_la_sua_tattica",
+        "norma": "sviluppo-degli-incontri.md §8 — ogni scontro che il master rende "
+                 "possibile dice come combatte chi c'è, quando smette e chi sente",
+        "prerequisito": "gli scontri possibili sono dichiarati, non solo descritti in prosa",
+        "forma": None,
+        "dove": "uno scontro possibile sta in una complicazione, in un esito, in una riga "
+                "«se…»: per elencarli bisogna aver letto il master. Lo chiede il "
+                "playtester a freddo",
+        "rilevatore_pronto": None,
+        "sblocca": "una riga «Scontri possibili:» nel contratto «In scena», poi un "
+                   "conteggio delle tattiche per scontro",
+    },
+    {
+        "chiave": "lo_scontro_simulato",
+        "norma": "sviluppo-degli-incontri.md §11-§14 — il mostro insostituibile, il pericolo "
+                 "che qualcuno usa, l'incontro che resta uno, il rinforzo che i PG vedono",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "come per la §8, la risposta si vede solo simulando lo scontro nell'ordine "
+                "probabile: lo legge il developer a freddo (ADR-0092)",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "statistiche_base",
+        "norma": "ADR-0092 — lo statblocco di un PNG che si prepara porta la riga "
+                 "«Statistiche base», e Prima del combattimento dice avvisato e sorpreso",
+        "prerequisito": "un lotto che porta la riga sugli statblocchi che la vogliono",
+        "forma": None,
+        "dove": "11 statblocchi su 37 la vogliono e non ce l'hanno (PIANO-AVVENTURE-COMMUNITY "
+                "§3): un controllo oggi fallirebbe su schede che nessuno sta toccando",
+        "rilevatore_pronto": None,
+        "sblocca": "il primo lotto che porta la riga: allora un conto in validate_bestiario --forma",
+    },
+    {
         "chiave": "appunti_quattrocento_parole",
         "norma": "quiz-a-due-agenti.md — gli appunti del lettore stanno in 400 parole",
         "prerequisito": "gli appunti di ogni esecuzione del quiz stanno in un posto fisso del repo",
@@ -244,6 +279,63 @@ NORME_SCOPERTE = (
         "forma": None,
         "dove": "sono letture di un agente: un cancello su un giudizio sarebbe rumore "
                 "(ADR-0073). Li chiede il piano che tocca il master (ADR-0075)",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "giro_esiti_e_verifica",
+        "norma": "rumblingstone-module-standard, Il giro passi 4-6 — ogni 🔴/🟠 ha un esito in FIX.md e un giudizio di un agente nuovo in VERIFICA.md",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "le tabelle hanno una forma fissa solo dal 2026-10-18 (rumblingstone-playtest §7-bis), e le letture di prima non la seguono",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "canone_dal_ramo_di_gruppo",
+        "norma": "campaign-coherence.md — il canone giocato si legge dal ramo di gruppo prima di chiedere al DM o di respingere un rilievo",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "il ramo di gruppo puo' mancare nel clone, e un cancello non lo puo' pretendere",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "mappa_in_due_copie",
+        "norma": "module-standard Il giro passo 4 e collaudo-mappe.md passo 5 — una mappa nell'Atlante e nel master si corregge in tutte e due",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "le copie non hanno un identificativo comune, e un confronto per titolo darebbe falsi positivi fra mappe omonime di archi diversi",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "domande_del_giro",
+        "norma": "sviluppo-degli-incontri.md §17 — chi vede al buio, CA e pf di ogni bersaglio, la riga di scala di stasera, l'economia d'azione SRD",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "per rispondere bisogna aver simulato lo scontro, come per §7, §8 e §11-§14 (ADR-0092)",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "codice_del_rilievo_developer",
+        "norma": "sviluppo-degli-incontri.md, Come si scrive un rilievo — codice della sezione e prova fra virgolette",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "e' la forma di un rapporto di lettura, che nessun cancello legge",
+        "rilevatore_pronto": None,
+        "sblocca": None,
+    },
+    {
+        "chiave": "pronome_soggetto_pro_drop",
+        "norma": "italiano-nativo.md §1 — l'italiano è pro-drop: niente pronome soggetto "
+                 "esplicito, se non per enfasi",
+        "prerequisito": None,
+        "forma": None,
+        "dove": "manca lo **strumento**: provato il 2026-10-18 (ADR-0093), il pronome "
+                "tonico in posizione di soggetto dà 3 colpi in tutti i box, tutti cambi "
+                "di soggetto legittimi. Serve sapere chi era il soggetto prima",
         "rilevatore_pronto": None,
         "sblocca": None,
     },

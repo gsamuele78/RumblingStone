@@ -41,6 +41,39 @@
       "idempotent": true
     },
     {
+      "id": "qualita_mappe_profonde",
+      "path": "scripts/qualita_mappe_profonde.py",
+      "category": "lib",
+      "language": "python",
+      "invocation": "python3 scripts/qualita_mappe.py --json OUT.json --profonde",
+      "summary": "Le metriche di configurazione di una mappa tattica, senza soglia, che qualita_mappe.py --profonde scrive solo nel JSON (ADR-0098): space syntax sul grafo di visibilita' e su quello di movimento (profondita' media, integrazione HH, intelligibilita'), correlazione fra integrazione alla vista e a piedi, simmetria sulle classi di cella, diversita' dei pattern 2x2 (Lucas e Volz). Vista con lo shadowcasting simmetrico di Albert Ford e cammini minimi a bit, in libreria standard. Da plans/esperimenti/mappe-strumenti-2026-10-22/metriche_nuove.py. Non ha una riga di comando sua.",
+      "use_case": "«Questa mappa e' piu' profonda o piu' aperta di quella? La nuova versione ha cambiato la configurazione?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [],
+      "inputs": [],
+      "outputs": [],
+      "exit_codes": {},
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Nodi nell'ordine delle celle, numeri arrotondati a 4 decimali: stesso JSON al byte a ogni esecuzione, qualunque PYTHONHASHSEED."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_qualita_mappe_profonde.py"
+      ],
+      "docs": [
+        "skills/rumblingstone-mapmaking/references/standard-qualita-mappe.md"
+      ]
+    },
+    {
       "id": "blender/costruisci_mappa",
       "path": "scripts/blender/costruisci_mappa.py",
       "category": "B-maps-pipeline",
@@ -828,6 +861,128 @@
         "scripts/README-automation.md",
         "skills/rumblingstone-mapmaking/SKILL.md",
         "plans/PIANO-COLLAUDO-E-GENERAZIONE-MAPPE.md"
+      ]
+    },
+    {
+      "id": "qualita_mappe",
+      "path": "scripts/qualita_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/qualita_mappe.py",
+      "summary": "Misura le griglie-emoji contro lo standard di qualita' delle mappe (ADR-0098): spazio libero, anelli (buchi dello spazio percorribile), ingressi, vicoli ciechi vuoti, celle in fila indiana, copertura, distanza e strozzatura fra PG e nemici, celle per creatura, Flip-Mat occupati, taglia delle creature, scala dichiarata contro scala disegnata, teli, fuochi, porte e mura fuori misura, densita' dei simboli. Errori solo per i fatti (intestazione che mente, direttiva fuori griglia), avvisi per le soglie di mestiere; un voto da 0 a 100 che somma anche i rilievi del collaudo. Due varchi contano come ingressi distinti solo a 10 passi l'uno dall'altro. Con --profonde, metriche di configurazione senza soglia solo nel JSON. In sola lettura.",
+      "use_case": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod",
+        "scipy"
+      ],
+      "external_bins": [],
+      "args": [
+        {
+          "name": "files",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Master markdown da misurare (default: il corpus della campagna, lo stesso del collaudo)."
+        },
+        {
+          "name": "--json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive metriche, rilievi, penalita' e voto in JSON (schema map_quality/1)."
+        },
+        {
+          "name": "--classifica",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa la tabella markdown dal voto peggiore, con le copie identiche su una riga."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se resta un rilievo E non derogato."
+        },
+        {
+          "name": "--solo-errori",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nel testo mostra solo i rilievi E."
+        },
+        {
+          "name": "--profonde",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Aggiunge al JSON, sotto la chiave «profonde» di ogni tattica, le metriche senza soglia di qualita_mappe_profonde.py: space syntax alla vista e a piedi (profondita' media, integrazione, intelligibilita'), correlazione vista-accesso, simmetria, pattern 2x2. Non tocca voto ne' rilievi; vuole --json."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con rilievi",
+        "1": "rilievi E non derogati con --strict",
+        "2": "errore d'uso (file non trovato, dipendenze mancanti)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso input, stesso rapporto: nessun campionamento, ordine delle celle fisso."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/qualita_mappe.py --help",
+      "tests": [
+        "scripts/tests/test_qualita_mappe.py",
+        "scripts/tests/test_qualita_mappe_profonde.py"
+      ],
+      "docs": [
+        "skills/rumblingstone-mapmaking/references/standard-qualita-mappe.md",
+        "plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md"
       ]
     },
     {
@@ -3807,6 +3962,15 @@
           "desc": "I box senza un «c'e'» presentativo ne' una dislocazione a sinistra (italiano-nativo.md §8). INDIZIO che sovrastima: la dislocazione e' rilevata a meta', quindi questa norma NON pesa nel punteggio.",
           "choices": null,
           "repeatable": false
+        },
+        {
+          "name": "--stile",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gerundio in coda, avverbi in -mente, battute lunghe dei PNG: indicatori senza peso (ADR-0093)."
         }
       ],
       "inputs": [
@@ -7763,12 +7927,87 @@
       ]
     },
     {
+      "id": "cieco_versioni",
+      "path": "scripts/cieco_versioni.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/cieco_versioni.py {campione|coppie|esito} ...",
+      "summary": "Il confronto cieco fra due versioni degli stessi box read-aloud (ADR-0093): campione congela con un seme i box da confrontare prima di riscrivere; coppie appaia i box nella versione nuova (difflib, stessa intestazione), li mette in ordine casuale e scrive la scheda per il DM con la chiave a parte; esito scioglie la chiave e applica il criterio dei 14 su 20, con l'intervallo di Wilson.",
+      "use_case": "«Il master rifatto è scritto meglio di prima, o ha solo meno difetti?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "campione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Sceglie e congela i box: --ref, --seme, --per-file, --uscita, FILE..."
+        },
+        {
+          "name": "coppie",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scheda e chiave: --campione, --dopo, --seme, --scheda, --chiave."
+        },
+        {
+          "name": "esito",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scioglie la chiave: --chiave, --voti."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/prosa-cieco/campione-ARC07-DEF.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "Campione e ordine delle coppie dipendono solo dal seme; la versione si legge con git show."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/cieco_versioni.py --help",
+      "tests": [
+        "scripts/tests/test_cieco_versioni.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
+        "plans/esperimenti/prosa-cieco/FOTOGRAFIA-ARC07-2026-10-18.md"
+      ]
+    },
+    {
       "id": "domande_developer",
       "path": "scripts/domande_developer.py",
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/domande_developer.py [--check] [--file X.md] [--json]",
-      "summary": "Le domande del developer di sviluppo-degli-incontri.md (dai due manuali del DM) misurate sulla forma del testo: D1 nemico in volo e chi resta a terra, D2 volo e invisibilità nei luoghi sorvegliati, D3 Tempra/Riflessi/Volontà, D4 chi sente il rumore, D5 la soglia del boss, D6 lo skill challenge scritto per intero, D6-5E abilità estranee al sistema. Indicatori: profili e residui con la ragione in plans/domande-developer.json.",
+      "summary": "Le domande del developer di sviluppo-degli-incontri.md (dai due manuali del DM) misurate sulla forma del testo: D1 nemico in volo e chi resta a terra, D2 volo e invisibilità nei luoghi sorvegliati, D3 Tempra/Riflessi/Volontà, D4 chi sente il rumore, D5 la soglia del boss, D6 lo skill challenge scritto per intero, D6-5E abilità estranee al sistema; dal 2026-10-18 (ADR-0092) D9 i segreti contro la divinazione, D10 la riga di scala per scontro, D15 le orde di GS basso, D16 il PG fuori gioco per un TS. Indicatori: profili e residui con la ragione in plans/domande-developer.json.",
       "use_case": "«Se i PG volano, si rendono invisibili o fanno rumore, il modulo lo dice, o dovrò inventarlo al tavolo?»",
       "stability": "beta",
       "stdlib_only": true,

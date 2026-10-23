@@ -272,6 +272,15 @@ serve nemmeno come bozza. Restano aperti il 12B sull'ASUS e il 26B sulla Dell:
 se il 12B finisce sotto 3 su 10 anche lui, la domanda si chiude con un no per
 l'hardware che il DM ha oggi.
 
+### Il canale, dopo ADR-0099 (2026-10-23)
+
+Con [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md) il LLM
+locale sta nel canale **unstable**: Ollama e i pesi non entrano nei
+`requirements*.txt` e non girano in CI. In CI restano solo `--help` e
+`corsa --dry-run` di `banco_prosa_locale.py`, che è codice del repo e non
+chiama nessun modello. Sale a testing solo con una misura che passi le soglie
+qui sopra, e oggi non ce n'è.
+
 ## Conseguenze
 
 **Si guadagna** una risposta misurata sulla domanda, invece di un'opinione

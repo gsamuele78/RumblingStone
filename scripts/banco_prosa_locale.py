@@ -140,11 +140,14 @@ def componi(caso: dict, contesto: str, tetto_fonte: int) -> "tuple[str, str]":
     return system, user
 
 
-# Un token italiano di questi prompt vale ~3,4 caratteri (misura della prima
-# corsa sull'ASUS, 2026-10-10). Per il controllo prima della chiamata si stima
-# largo (3 caratteri); per riconoscere un prompt tagliato dal server si stima
-# stretto (5): sotto, il server ne ha buttato via una parte.
-CAR_PER_TOKEN_LARGO, CAR_PER_TOKEN_STRETTO = 3, 5
+# Un token italiano di questi prompt vale da 3,3 a 3,4 caratteri (le due corse
+# sull'ASUS, 2026-10-10 e 2026-10-11, contate dai prompt_tokens del server).
+# Il controllo prima della chiamata usa 3,3, il valore più basso misurato:
+# con 3 i prompt cresciuti con le norme di main (89.000 caratteri) venivano
+# rifiutati a 32k pur entrandoci con 3.000 token di margine, e un taglio che
+# sfugge qui lo prende comunque `avvisi`. Per riconoscere un prompt tagliato si
+# stima stretto (5): sotto, il server ne ha buttato via una parte.
+CAR_PER_TOKEN_LARGO, CAR_PER_TOKEN_STRETTO = 3.3, 5
 
 
 def rel(p: Path) -> str:
@@ -155,7 +158,7 @@ def rel(p: Path) -> str:
 
 
 def stima_token(*testi: str) -> int:
-    return sum(len(t) for t in testi) // CAR_PER_TOKEN_LARGO
+    return int(sum(len(t) for t in testi) / CAR_PER_TOKEN_LARGO)
 
 
 def avvisi(caratteri: int, uso: dict, fine: "str | None", testo: str) -> "list[str]":

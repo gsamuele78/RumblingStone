@@ -90,6 +90,13 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 > Mappa master della città:
 > `P2D-Palio-Allegati/immagini/channathgate-mappa.png` (pianta illustrata coi
 > nomi FR dei quartieri; schema vettoriale di servizio: `mappe/channathgate-citta.svg`).
+> Per misure, rioni e fiume vale la pianta in scala
+> `mappe/channathgate-pianta.svg`: una città aperta, senza cinta, di circa 250 ha
+> fra il nucleo del bazar (66 ha), i rioni, due rabad e i giardini, con l'arg murato di 5 ha
+> sulla sua terrazza; circa 25.000 abitanti, profughi esclusi, la città più popolosa
+> della valle, più di Rethmar. È più grande della Dennovar del libro (circa 11.600)
+> per scelta del DM, perché la valle regga l'orda di circa 10.000. Se
+> dovesse reggere un assedio conterebbe solo sull'arg e sui muri dei rioni `[INFERRED — needs DM confirmation]`.
 > Vista cinematografica della Piazza (aerea + livello strada verso The Seat):
 > `P2D-Palio-Allegati/immagini/piazza-del-palio-panorama.png`.
 
@@ -108,7 +115,7 @@ Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 | **The Gilded Horn** | **L'Unicorno** | Sune/Milil | Aldric Thornwall | Arpa della Tempesta Bardica |
 | **The Tidal Crest** | **L'Onda** | Valkur/Selûne | Gonfaloniere + Gilda dei Barcaioli | La Marea Montante |
 | **The Sovereign Ring** | **Il Campo** (piazza neutrale) | — | nessuna fazione | il Palio stesso |
-| **"The Seat"** (mappa) | il palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
+| **"The Seat"** (mappa) | il **Palazzo dei Nove**, palazzo-fortezza del governo | — | il Consiglio | vedi §Palazzo |
 
 ---
 
@@ -124,7 +131,7 @@ economica. Superbi, intoccabili, tengono i cordoni della borsa della città.
 Distretto-fortezza dell'esercito cittadino: torri di pietra, ferriere,
 disciplina rigida. La sua carta in difesa (e leva politica) è l'antico
 **Golem d'Assedio**, titano di pietra vincolato alla porta principale del
-rione, pronto a destarsi se le mura vengono violate.
+rione, pronto a destarsi se il muro del rione viene violato.
 
 ### The Silver Weft — Il Bruco
 Nominalmente il rione dei tessitori, famoso per le sete filate d'argento.
@@ -138,7 +145,7 @@ Come un istrice: difensivo fuori, pacifico dentro. Santuario dei profughi
 di guerra, retto dalla milizia non ufficiale — e ferocemente leale — della
 **Capitana Lorana**. Lo protegge il **Mythal della Selva Viva**: quando il
 pericolo si avvicina, rovi di legnoferro affilati come rasoi crescono
-lungo le mura.
+lungo il muro del rione.
 
 ### The Spell-Wyrm Spires — Il Drago
 Enclave d'élite di maghi, studiosi e arcanisti, in rigorosa **Astensione**
@@ -150,7 +157,7 @@ dalla politica quotidiana. Tutta la loro esistenza è dedicata al
 Quartiere quieto e notturno dove i segreti sono la valuta corrente. È
 avvolto nei **Muri Illusori**: per un estraneo le strade sembrano vicoli
 ciechi e i muri pieni sono in realtà archi aperti. Il **Conte Valerius**
-coordina la rete di spie dalla sua tenuta fuori le mura: la Civetta sa
+coordina la rete di spie dalla sua tenuta fuori città: la Civetta sa
 sempre cosa tramano gli altri.
 
 ### The Gilded Horn — L'Unicorno
@@ -175,17 +182,13 @@ Guado**, pista del Palio — cap. IX §4.)*
 
 ---
 
-## §Palazzo — "The Seat" (il palazzo-fortezza del governo)
+## §Palazzo — il Palazzo dei Nove ("The Seat")
 
-Sulla pianta è marcato **"The Seat"**. Il DM ha raccolto quattro nomi
-cerimoniali possibili `[PROPOSTA — needs DM choice]`:
+Sulla pianta è marcato **"The Seat"**. Il nome è **Palazzo dei Nove**
+(*The High Seat of the Nine*): le nove parti in
+tregua, cioè le otto contrade e il Campo, siedono sotto lo stesso tetto e
+nessuna si fida delle altre.
 
-| Nome italiano | Nome FR (EN) | Atmosfera |
-|---|---|---|
-| Palazzo dei Nove | **The High Seat of the Nine** | politica, intrighi, tregua fra le 9 parti (8 contrade + il Campo) |
-| Palazzo dei Gonfaloni | **The Palace of the Eight Banners** | gli stendardi delle 8 contrade sulla facciata; equilibrio precario |
-| Palazzo della Torre | **The Sovereign Spire** | la guglia magica (aggancio al Quasi-Mythal del Drago) |
-| Rocca del Duca | **The Grand Ducal Hold of the Ring** | tono militare, legge ferrea, affaccio sul Sovereign Ring |
 
 ---
 
@@ -994,6 +997,7 @@ pioggia/fango.
 Questo capitolo è materiale del DM: non mostrarlo ai giocatori.
 }}
 
+<!-- revisione-testo: r1 · 2026-10-03 -->
 # Parte 2D — Le 8 Prove d'Ammissione (scena per scena)
 
 > Allegato di cap. X (§2) e cap. VI (§2.1).
@@ -1091,8 +1095,8 @@ Ferrante può diventare la voce che a Rethmar **tiene Jarmaath sulla difesa**.
 
 **Read-aloud**
 > *Voll vi consegna una cassa che pesa troppo per il suo volume. — "Non chiedete cosa c'è
-> dentro. Chiedete solo: da che porta entra?" Sorride. La cassa, per un istante, sembra…
-> respirare.*
+> dentro. Chiedete solo: da che porta entra?" Sorride. La cassa, per un istante, si gonfia
+> e si sgonfia.*
 
 **Beat 1 — La via (piano)**: i PG scelgono l'approccio — fogna (Furtività), corruzione
 (Raggirare/oro), diversivo (un PG crea caos altrove). Ogni piano ha la sua DC.
@@ -1123,7 +1127,7 @@ mette i PG dentro l'oscuro collegamento drow/Collezionista (GIORNO2 §3.3).
 ---
 
 ## 4 · L'ISTRICE — "La Notte del Campo"
-**Prova**: gestire una crisi improvvisa nel campo profughi fuori le mura.
+**Prova**: gestire una crisi improvvisa nel campo profughi ai margini della città.
 **Cast**: **Nania Seriv del Traghetto** (luogotenente di Lorana, NB); centinaia di profughi;
 un **incendio doloso** (o un'epidemia — scegli) appiccato da un infiltrato.
 
@@ -1906,7 +1910,7 @@ la piazza impazzire per un cavallo senza cavaliere che taglia il traguardo.
 ### 4.4 La Corsa "sotto le frecce" *(in campagna, opzionale)*
 Se il DM vuole massima tensione: mentre i cavalli corrono, una **staffetta** irrompe —
 *"I casali del Channath centrale bruciano! L'orda sarà al Crocevia in due giorni!"* — e a
-ovest, oltre le mura, si indovina il fumo dei razziatori worg. **Coerenza col March Clock**:
+ovest, oltre il fiume, si indovina il fumo dei razziatori worg. **Coerenza col March Clock**:
 al giorno della corsa (Day 30-31) l'orda NON è a Rethmar (arriva al Day 42) — il fumo è
 delle fattorie del Channath, non della città. Non cambia le regole, ma ogni tiro pesa il
 doppio: i PG corrono **letteralmente** per decidere chi difenderà il fronte.
@@ -2249,16 +2253,16 @@ Tre vincoli di coerenza, risolti a monte:
 
 ## 1. Geografia e Lore — Channathgate ampliata
 
-Channathgate (orig. **Dennovar**) è la **più grande città mercantile del vale dopo
-Rethmar**, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
-a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway; largest city after
-Rethmar", **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
+Channathgate (orig. **Dennovar**) è la **città più popolosa del vale** (circa 25.000
+abitanti, più dei circa 11.600 della Dennovar del libro, per scelta del DM; Rethmar resta la capitale) `[INFERRED — needs DM confirmation]`, sulla **Dawn Way** ~35 miglia a est di Rethmar (**~1,5 giorni** a cavallo, meno
+a marce forzate). Nel canone attuale è uno **stub**: "eastern gateway", più popolosa di Rethmar,
+**città aperta** senza cinta (`P2D-Palio-Allegati/mappe/channathgate-pianta.svg`), **non ancora attaccata**, **+150 truppe ❓ solo via diplomazia**
 (`state.md` refugee ledger). **Questa avventura la trasforma nel motore geopolitico**
 che sblocca quel contributo — e molto altro.
 
 **Ampliamento canonico proposto:**
 - **Governo**: un **Governatore-Mercante** (il *Gonfaloniere*) + una **Balìa** di gilde.
-  Ricchissima, fortificata, **restia a sguarnirsi** per paura di restare indifesa.
+  Ricchissima, senza mura intorno ai rioni (solo l'arg è murato), **restia a sguarnirsi** per paura di restare indifesa.
 - **Cultura "Bard's Tale"**: metropoli di **gilde bardiche**, teatri all'aperto, piazze di
   pietra. La politica si fa **a suon di musica e propaganda** (vedi §7).
 - **Contrade**: 8 rioni storici (le contrade dell'AVVENTURA §1), nati come compagnie
@@ -2347,8 +2351,8 @@ e Channathgate dista **1,5 giorni**. Il calendario che tiene insieme tutto:
 > - **Day 29-30**: *"I casali del Channath centrale bruciano; i razziatori worg colpiscono i convogli."*
 > - **Day 30-31**: *"L'orda converge sul Crocevia del Channath — sarà lì entro due giorni."* (canone: Day 33)
 > - **Colore**: *"Dicono che a Witchcross i druidi preparino una resistenza disperata."* (cade ~Day 35)
-> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **blu**
-> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è nero e in riserva**
+> **Non usare** "le mura cadono / Rethmar brucia": contraddice il clock. E il drago **verde**
+> è **Ozyrrandion** (impegnato alla Torre Invisibile, P2A); **Tyrgarun è blu e in riserva**
 > fino alla Fase 3 — nessuno dei due bombarda granai durante il Palio.
 
 ### 3.2 Impatto sui Clock dei Villain
@@ -2977,10 +2981,20 @@ illustrata coi nomi FR dei quartieri — **master visivo della città**, DM
 2026-07-17; corrispondenze in cap. I).
 Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 
+> **Quale pianta vale.** Per misure, rioni, ingressi, fiume e
+> distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
+> il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
+> pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
+> vedere gli otto rioni a colpo d'occhio. Misure e abitanti della pianta sono
+> `[INFERRED — needs DM confirmation]`.
+
+![Channathgate, pianta in scala](../P2D-Palio-Allegati/mappe/channathgate-pianta.svg)
+
 ![Channathgate](../P2D-Palio-Allegati/mappe/channathgate-citta.svg)
 
-Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar). Mura, **Porta dell'Alba**
-(Dawn Way), **Porta del Porto**, **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
+Città-porto sul **Fiume Cannath** (~35 mi a est di Rethmar), aperta: niente cinta, mura
+solo all'arg. **Porta dell'Alba** (Dawn Way) e **Porta del Porto** sono archi di dogana sulla
+strada (sulla pianta in scala, Arco dell'Alba e Arco del Porto), **Darsena/Flotta** (Onda). Otto rioni-contrada attorno
 alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra rioni per i
 **partiti**, l'infiltrazione nel palazzo della **Civetta** (registri di Valerius), la
 **stalla** dei PG (assalto drow) e il **porto** (Meraviglia dell'Onda).
@@ -2988,7 +3002,10 @@ alla **Piazza del Guado** centrale. Usa questa mappa per: gli spostamenti fra ri
 ---
 
 ## 3. Rotta di soccorso — Channathgate ▸ Rethmar
-**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg`
+**File**: `P2D-Palio-Allegati/mappe/rotta-soccorso.svg`. Le due rotte in scala
+stanno sulla regionale della valle, `00_Red Hand Of Doom/Immagini/Area Map/Red Hand of Doom -Maps/ForgottenRealms/Shaar-ChannathVale/cannath-vale-regionale.svg`:
+il Cannath esce dal lago di Channathgate, passa lungo il lato ovest della città e
+a Cannathcross, e arriva a Rethmar dopo circa 42 miglia.
 
 ![Rotta di soccorso](../P2D-Palio-Allegati/mappe/rotta-soccorso.svg)
 
@@ -3025,6 +3042,7 @@ per mappa. Companion di raccordo:*
 |---|---|---|
 | **Piazza del Palio** (corsa) | `piazza-del-palio.svg` | anello a conchiglia, orario, 3 giri, tufo; 6 Zone con DC 18-24 (Curva del Guado DC 24 = la più letale; Curva del Boia = muro cieco, caduta 4d6); catino interno = folla (6.000) |
 | **Channathgate città** | `channathgate-citta.svg` | 8 rioni-contrada, Porta dell'Alba/del Porto, Darsena; spostamenti dei partiti, infiltrazione Civetta, porto |
+| **Channathgate in scala** | `channathgate-pianta.svg` | la pianta che vale per le misure: arg (Palazzo dei Nove), maidan (il Campo), bazar coperto, giardini murati, qanat, Darsena e chiuse; città aperta di circa 250 ha e 25.000 abitanti: mura e torri solo all'arg (828 m, 27 torri e 2 alla porta), fossi e muri di rione con porte di quartiere |
 | **Rotta di soccorso** | `rotta-soccorso.svg` | Dawn Way (~35 mi, 1,5 gg, cavalleria) vs Fiume Cannath (~1 gg, flotta); **deadline Day 38** per la Fase 1 |
 | **Stalla — assalto drow** | `stalla-assalto-drow.svg` | 1 quadretto = 5 ft, GS 11-12; drow dalla botola SO con *Oscurità/Silenzio*, buio totale |
 

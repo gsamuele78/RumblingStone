@@ -49,8 +49,8 @@ lettura narrativa, le immagini e i prompt, questo file è la fonte.
 | 15 | MAPPA 4 Battaglia Finale Aerea e Terrestre | a✅ b✅ c✅ (DEPRECATED) | Lotto-3 ✅ (DEPRECATED) | `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 4 REVISED (60×68 + vista altitudini) | **questo file** (narrativo) + L3-REVISED (griglia) |
 
 **File deprecati da questa matrice** (banner DEPRECATED aggiunto, D12 — puntano tutti qui):
-`ARC08-90-DEPRECATO-battle-stats-maps.md` (a), `ARC08-91-DEPRECATO-atlante-visivo-v2.md` (b),
-`ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` (c),
+`_ARCHIVIO/ARC08-90-DEPRECATO-battle-stats-maps.md` (a), `_ARCHIVIO/ARC08-91-DEPRECATO-atlante-visivo-v2.md` (b),
+`_ARCHIVIO/ARC08-92-DEPRECATO-atlante-visivo-v3-complete.md` (c),
 `Mappe/_ARCHIVIO/Hammerfist-Lotto-1-Ricognizione.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-2-Assedio.md`, `Mappe/_ARCHIVIO/Hammerfist-Lotto-3-FINALE.md`.
 
 **File NON deprecati** (master tattici, lotto MAPPE-UC 2026-07-23 — copertura griglia COMPLETA):
@@ -823,13 +823,13 @@ Momento ICONICO campagna: Fauci di Palude dragon dive attack vs Re Thorek sui ba
 - **Targets:** Re Thorek + 10 Guardie + Borin + Thorin (13 totali)
 - **Risultato Probabile:** 
   - Guardie (PF 42 media): 6-8 KO instant (Failed save = death)
-  - Re Thorek (PF 195): Survives (Resistenza + items), heavily wounded
+  - Re Thorek (PF 196): Survives (Resistenza + items), heavily wounded
   - Borin (PG): Tough call (Depends save)
   - Thorin (pregen, non ancora PG in questa scena — D6/D2): Likely survive (Chierico AC alto)
 
 **Controffensive Possibili:**
 - **Dara (Torre Ovest):** Crossbow Heavy +1 attack (Extreme range -6, +19 final = +13)
-  - Se hit: 1d10+3 danni (Insignificant vs drago PF 312 MA morale boost)
+  - Se hit: 1d10+3 danni (Insignificant vs drago PF 337 MA morale boost)
 - **Nala (Nascosta):** Ready action *Suggestione* quando drago vicino (Demoralize attempt)
 - **Baliste Torri:** Crew reload (Next round ready)
 - **Madre Dana:** Cast *Mass Cure Serious Wounds* (8d8+25 healing distributed, salvage survivors)
@@ -926,8 +926,8 @@ Cortile Interno ridotto inferno fumante. Pozze acido verde corrosivo steam ovunq
 
 ### MAPPA 3Y: IL PONTE SOSPESO
 **Griglia ultra-clear:** `Hammerfist-L3-REVISED-Ultra-Clear.md` → MAPPA 3Y REVISED (33×27, 1,5 m)
-**Immagine:** [157b] `hammerfist-3y.png` — **reale (C3)**: `immagini/09.webp` (Borin al ponte) — `[INFERRED — numero immagine non
-ancora assegnato, migrato da 00_ATLANTE VISIVO...-complete.md — A8]`
+**Immagine:** [157b] `hammerfist-3y.png` — **reale (C3)**: `immagini/09.webp` (Borin al ponte) — migrato da 00_ATLANTE VISIVO...-complete.md (A8); il numero
+[157b] resta senza immagine propria
 
 **Tipo:** Retroguardia / difesa a strozzatura
 **Scala:** 1 quadrato = 1,5 metri
@@ -994,13 +994,13 @@ Tunnel principale apre caverna più ampia piena stalagmiti proiettano ombre lung
 - **Nord-Ovest:** Tunnel imboscata 3 (Hobgoblin Sergente + 6 Guerrieri)
 
 **IMBOSCATA BUGBEAR (Est + Ovest):**
-- **8 Bugbear Assassini Totali:** Rogue 5/Assassin 2, CR 7 ciascuno
+- **8 Bugbear Assassini Totali:** Rogue 5/Assassin 2, CR 9 ciascuno (scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`: per l'SRD i livelli di classe si sommano al GS 2 della razza) `[CANONE — DM 2026-10-19, D10]`
 - **Tattiche:**
   - Nascondersi in Ombra: Bonus +12 (Darkness tunnel + racial)
   - Osservare CD 25 per notarli PRIMA che attacchino
   - Target: Isolated creatures O Re Thorek (High-value)
   - Death Attack: CD 16 Fort O paralysis 1d6+2 round
-  - Sneak Attack: +5d6 damage FIRST strike
+  - Sneak Attack: +4d6 damage FIRST strike (3d6 rogue + 1d6 assassin, SRD)
 - **Trigger:** Attaccano quando nani al centro (Maximum targets vulnerable)
 
 **IMBOSCATA HOBGOBLIN (Nord-Ovest):**
@@ -1066,10 +1066,10 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 - **Elevazione:** +3m sopra pavimento caverna
 - **Materiale:** Pietra nera basaltica, rune oro Nanico incise
 - **Funzione Narrativa:** **PUNTO APPARIZIONE RUMBLING STONES!**
-  - Round 8 combattimento: Sfera dorata tricolore materializza 3m sopra altare
+  - Round 9-10 combattimento (guida, Incontro 3C; i giocatori prendono i PG al round 11): Sfera dorata tricolore materializza 3m sopra altare
   - Luce esplosione: Oro (Topazio) + Verde (Smeraldo) + Rosso (Rubino)
   - 4 Silhouette eroi emergono: Thorik, Tordek, Artemis, Hella
-  - Effetto: Benedizione istantanea 90 nani (+6 morale, 2d8 HP heal, immune fear 1h)
+  - Effetto: Benedizione istantanea 90 nani (cura 2d8 pf a tutti `[CANONE — DM 2026-10-18]`, immuni alla paura 1 ora; il morale lo dà l'Aura della Forgia Eterna di Thorik, +4 entro 30 m, se la usa: niente «+6 morale»)
 
 **10 STATUE RE ANCESTRALI:**
 - **Posizioni:** Circle 20m raggio attorno altare (Equidistanti)
@@ -1089,7 +1089,7 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 
 **RE THOREK XIII:**
 - **Condizione:** Critical (8 HP rimanenti, -187 HP persi)
-  - Stabilized (Thorin *Cure* spells)
+  - Avvelenato: una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per magia; al terzo fallimento muore. *Neutralizzare veleno* o *guarigione* (SRD) fermano le prove, le *cure ferite* no `[CANONE — DM 2026-10-19, D12]`
   - Conscious but weak (Can speak, cannot fight)
   - Position: Center altare (Surrounded protectors)
 - **Momento Drammatico:** Quando PG appear, Thorek occhi aprono
@@ -1117,36 +1117,37 @@ Caverna naturale bellezza mozzafiato, cathedral-like grandezza. Soffitto 40m alt
 
 **ONDATE NEMICHE (Incontro 3B):**
 
-**Ondata 1 (Round 1-2): 30 ORCHI BERSERKER**
+**Ondata 1 (Round 3-4, come la guida): 30 ORCHI BERSERKER**
 - Charge tunnel → altare (Reckless)
-- **Effetto Apparizione PG (Round 1 finale):** 20/30 shaken (TS Will CD 25 failed)
+- **Effetto Apparizione PG (round 9-10, su chi è ancora in campo):** TS Volontà CD 20 o spaventati per 10 round (guida, «Effetti dell'Apparizione»)
   - Shaken: -2 all rolls (Morale broken)
   - Panico: 5 flee back tunnel
 
-**Ondata 2 (Round 3-5): 20 HOBGOBLIN SERGENTI**
+**Ondata 2 (Round 5-6, come la guida): 20 HOBGOBLIN SERGENTI**
 - Disciplinati, advance formazioni shield wall
 - **Immune fear** (Trained veterans)
 - Focus: Tenere nani engaged mentre ondata 3 arrives
 
-**Ondata 3 (Round 6-8): 15 BUGBEAR ASSASSINI**
-- Stealth approach (Nascondersi +12)
+**Ondata 3 (Round 7-8, come la guida): 15 BUGBEAR ASSASSINI**
+- Stealth approach (Nascondersi +17; scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`, GS 9) `[CANONE — DM 2026-10-19, D10]`
 - Target: Leaders + Re Thorek (Assassination attempts)
-- **Interrupted:** PG apparizione Round 8 = Surprise reversed!
+- **Interrupted:** PG apparizione round 9-10 = Surprise reversed!
 
-**Ondata Finale (Round 9-10): GRIMJAW + 10 OROG**
+**Ondata Finale (corno al round 11, ingresso al round 12): GRIMJAW + 10 OROG** `[CANONE — DM 2026-10-19, D11]`
+- Arriva quando i PG sono già in campo: entra dalla porta di mithral e punta l'altare (MAPPA 5 REVISED, stato F, ⚫ AH1 e la rotta nera). Guardie: `Bestiario/mostri/orog-guardia-nera-guerriero6-cr7.md`
 - **Se Grimjaw vede situazione (PG arrived, morale swing):** 
   - Option A: Retreat strategic (Live fight another day)
   - Option B: Personal challenge Thorik (Arrogance)
 - **Se Grimjaw morto già Sessione 2:** Sostituisci Capitano Hobgoblin minore (Auto-retreat)
 
-**EVENTO CLIMAX (Round 8):**
+**EVENTO CLIMAX (Round 9-10):**
 
 **Narrativa Leggere:**
 > "Il cerchio nanico si stringe sempre più attorno all'altare. Re Thorek, gravemente ferito, bisbiglia preghiere a Moradin con voce spezzata. I nemici premono da ogni lato, e la speranza svanisce. Ma proprio quando tutto sembra perduto, l'altare di pietra nera inizia a brillare. Le rune dorate esplodono in luce accecante. Gli occhi di rubino delle dieci statue si accendono come stelle. E sopra l'altare, una sfera di luce tricolore - oro, verde e rosso - materializza dal nulla. La sfera pulsa una volta, due volte, poi esplode in un'esplosione non violenta di luce pura. Quando la luce si dissolve, quattro figure eroiche stanno sull'altare, armi in mano, potere divino emanante. I Rumbling Stones sono arrivati."
 
 **Effetti Meccanici Immediati:**
-- **Nani:** +6 morale (da -4 a +2), 2d8 HP heal tutti, immune fear 1h
-- **Nemici:** TS Will CD 25 O shaken 1d6 round (Majority fail)
+- **Nani:** cura 2d8 pf a tutti `[CANONE — DM 2026-10-18]`, immuni alla paura 1 ora; +4 di morale entro 30 m solo con l'Aura della Forgia Eterna di Thorik
+- **Nemici:** TS Volontà CD 20 o spaventati per 10 round (guida, «Effetti dell'Apparizione»)
 - **PG:** Full HP, tutti buff attivi, surprise round vs nemici
 
 **Transizione:** Da PNG giocabili (Borin/Dara/Thorin/Nala) → Veri PG (Thorik/Tordek/Artemis/Hella)
@@ -1179,7 +1180,7 @@ Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfi
 - **Distanza:** 120 metri horizontal
 - **Pendenza:** Costante downhill nani favor
 - **Terreno:** Open valley, alcuni macerie edifici esterni
-- **Weather:** Nubi temporale gathering (Maestro Tempestas arrival imminent)
+- **Weather:** Nubi temporale gathering: la tempesta di Orion (*controllare tempo*), con la musica di Maestro Tempestas `[CANONE — DM 2026-10-19, D14]`
 
 **EST (Valle):**
 - **Esercito Mano Rossa:** Livello 0m valley floor
@@ -1189,11 +1190,11 @@ Vista laterale (side profile) mostra vantaggio tattico geografico nani: Hammerfi
   - 200 Fanteria orchesca (Shaken, ready rout)
   - 80 Giganti/Ettin/lite (Ancora formidabili)
   - 20 Maghi/Chierici (Support flebile)
-- **Leadership:** Grimjaw absent (Morto O retreat), Gorthak present (Ultimo boss standing)
+- **Leadership:** Grimjaw morto nel 3B, oppure in campo con le guardie rimaste se nel 3B ha suonato la ritirata (`ARC08-02` §1, *Morale*); Gorthak present (Ultimo boss standing). Il dettaglio delle unità, con la fonte di ogni numero: guida § Sessione 4, «Chi è ancora in campo» `[CANONE — DM 2026-10-19, D13]`
 
 **Schieramento Nanico:**
 - **90 Guerrieri Veterani:** Formazione cuneo (Wedge charge optimal)
-- **Re Thorek XIII:** Rear position (Healed 100 HP via Dana, still weak)
+- **Re Thorek XIII:** Rear position (curato dai chierici di Dana nella mezza giornata fra la caverna e i bastioni, ~100 pf, still weak) `[CANONE — DM 2026-10-19, D13]`
 - **Madre Dana + Cantitrici:** Support rear (Buff spells, healing ready)
 - **4 PG (Rumbling Stones):** **TIP OF SPEAR** (Leading charge!)
   - Thorik: Punto cuneo, Corona blazing, Aegis-Fang ready
@@ -1225,7 +1226,7 @@ This map shows MOMENT BEFORE. Next map (4 Unified) shows DURING charge + aerial 
 **Tipo:** Epic cinematic dual-front  
 **Scala:** Strategic overview  
   ⚠️ **Vista strategica — NON è una griglia di combattimento.**
-**Timing:** Climax Sessione 4, Round 11-23
+**Timing:** Climax Sessione 4, Round 1-23 (la linea del tempo è quella della guida, § Incontro 4A `[CANONE — DM 2026-10-19, D9]`: cuneo ai round 1-5, urto al 6, logoramento 11-17, picchiata e presa di Thorik 18-20, duello 21-23)
 
 **Descrizione Scenario:**
 Vista cinematografica captures TWO simultaneous battles integrated:
@@ -1262,19 +1263,20 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
 **BATTAGLIA AEREA (Sky):**
 
 **Tempesta Magica Controllata:**
-- **Maestro Tempestas:** Altitude 60m, conducts storm
-  - *Control Weather* + *Call Lightning Storm* combo
-  - Fulmini: 10d6 electrical, 1/round auto-target Fauci
+- **Maestro Tempestas:** Altitude 60m, conducts the music, not the storm `[CANONE — DM 2026-10-19, D14]`
+  - La tempesta la lancia **Orion** con *controllare tempo* prima della battaglia (druido 14°, SRD: 8d12 ore, raggio 3 miglia; dirige il vento, non i fulmini)
+  - Fulmini: la **Cantata della Tempesta Tonante** di Tempestas (2d6 per 3 round entro 18 m, Riflessi CD 23, `ARC08-02` §2) e *chiamare fulmini* di Orion (3d10 a fulmine in tempesta, Riflessi CD 20, SRD)
+  - Meteo SRD: vento violento −4 a distanza e Tempra CD 15 per i Piccoli; con la pioggia è una *tempesta*, e gli attacchi a distanza con armi diventano impossibili. **Deroga dichiarata dall'SRD**: l'occhio della tempesta sopra i bastioni, da dove gli arcieri alleati tirano senza i malus
   - Nubi nere: Oscurano drago visibility (-4 Osservare)
 
 **Fauci di Palude (Desperate):**
 - **Altitude:** Variable 30-45m (Evading gufi)
-- **Condition:** Wounded (-80 HP già, 232 rimanenti)
+- **Condition:** 337 pf se il P5 non è stato giocato; altrimenti 337 meno il carry-over di `ARC08-10` §4.1 `[CANONE — DM 2026-10-19, D9]`
   - Frecce ranger elfiche bleeding
   - Lightning burns scaglie
 - **Tattiche:** Aggressive suicide (Vendetta Bloodline vs Thorik overwhelms tactics)
   - Ignora gufi (Mistake!)
-  - Dive attack Thorik ground (Exposed!)
+  - Dive attack Thorik ground (Exposed!): lo prende in bocca, sale e lo lascia cadere (scheda, «La presa di Thorik») `[CANONE — DM 2026-10-19]`
 
 **Signore Ventolesto + Ranger:**
 - **Signore (Alpha Gufo):** Altitude 45m, coordinates
@@ -1284,23 +1286,24 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   - Composite Longbow +2: +15 att, 1d8+6 damage
   - Frecce Bane (Dragons): +2d6 additional
   - **Orion Pelleorsa (Druido):** SALTA SCHIENA DRAGO!
-    - Grapple check (+18) vs Fauci
-    - **Wild Shape: Dire Bear** forma (For 31)
-    - Riding drago forced downward (Peso 800kg!)
+    - **Wild Shape: Dire Bear** forma (For 31), presa il round prima: salto, forma e presa non stanno in un round solo (SRD)
+    - Lotta **contrapposta** (SRD): +24 dell'orso crudele contro +43 di Fauci, che se ne libera quasi sempre
+    - Il peso da solo non forza la discesa: Fauci scende **per scelta**, come dice la sua scheda (atterra sotto i 100 pf o per finire Thorik dopo averlo lasciato cadere) `[CANONE — DM 2026-10-19, D9]`
 
 **ARTEMIS BLACKROCK (Solo Aereo PG):**
 - **Altitude:** 30m (Below melee swarm)
-- **Tattiche:** Eldritch Blast spam (7d6, 250ft range)
+- **Tattiche:** Deflagrazione occulta (6d6, 18 m) [Private source — Complete Arcane]
   - Target: Fauci wings (Maneuverability penalty)
   - Ali Ombra: Superior maneuverability (Turn instant)
 
 **CONVERGENZA CLIMAX:**
 
-**Round 18-20: DRAGO ATTERRAGGIO FORZATO**
-- Orion sulla schiena (Grapple prevents full flight)
-- Lightning strike (10d6) ala destra
-- Artemis Eldritch Blast (7d6) ala sinistra
-- **Result:** Crash landing 60m davanti Thorik!
+**Round 18-20: LA PICCHIATA SU THORIK** `[CANONE — DM 2026-10-19, D9]`
+- Fauci scende per scelta: sotto i 100 pf, o per Thorik (scheda, `ARC08-02` §1; Odio della stirpe +4). Picchiata in volo con Attacco in Volo e **presa di Thorik** `[CANONE — DM 2026-10-19]`: morso e presa al round 18, salita con lui in bocca al 19, soffio sui compagni e caduta al 20 (scheda, «La presa di Thorik», una volta)
+- Orion sulla schiena, solo nei round in cui vince la lotta contrapposta; un fulmine di *chiamare fulmini* (3d10) su un'ala
+- Artemis Deflagrazione occulta (6d6) ala sinistra
+- **Result:** Thorik cade nella zona ⚡ (AB30-AG32 della MAPPA 4 REVISED), alle spalle della punta, a circa 30 m dalla linea; Fauci ci atterra al round 21 per finirlo; i PG convergono in 2 round
+- **Se i PG volano** con le pozioni: Fauci combatte in aria e non fugge (Fluttuare, soffio in linea, *Ghermire* solo su Thorik; guida § Incontro 4A, «ROUND 18-23»)
 
 **Round 21-23: DUELLO FINALE THORIK vs FAUCI**
 - **Ground melee:** Thorik vs Drago (Epic confronto)
@@ -1312,7 +1315,7 @@ Rappresenta absolute APEX campagna - every element converges single moment glory
   valori in `07_.../PortaleForgia-P5-B4-CARRYOVER-Forgia-Ricorda.md`.
 - **Support:** Tordek joins (Flurry Blows), Artemis continues blast
 - **Fauci Desperate:** Full Attack Thorik (Morso+Artigli+Ali+Coda)
-- **Thorik Heroic:** Aegis-Fang throw (Crit 19-20/×3) + *Smite Evil*
+- **Thorik Heroic:** Aegis Fang (+2 Ritornante *Dragondoom*) + castigo *Dragondoom*, 3/giorno, +2d6 contro un drago Enorme (stato del ramo di gruppo, D14; il guerriero non ha *punire il male*)
 
 > **Esito — ramo condizionale, non un fatto compiuto (D10, piano
 > ARC-08 A1)**: quando Fauci scende **sotto i 50 PF** il **default**

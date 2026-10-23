@@ -162,13 +162,16 @@ class TestIlPilastroDichiarato(unittest.TestCase):
              ).append(nome)
         # 2026-10-07: ARC-08 entra di proposito. `ARC08-17-BANCO-HAMMERFIST-1372.md`
         # porta il read-aloud etichettato col pilastro (il banco della rocca).
+        # 2026-10-11: DEF-1 entra di proposito. Il box di fine ora del
+        # contratto del Seme (§6-bis) porta l'etichetta del pilastro, come
+        # chiede editorial-standards.md §2.
         self.assertEqual(sorted(con), ["ARC-08 Hammerfist",
+                                       "DEF-1 Piano della Terra",
                                        "DEF-2 Ritorno e affreschi",
                                        "DEF-3 Resurrezione Hella",
                                        "DEF-4 Viaggio 1.000 anni",
                                        "DEF-5 Ritorno Hammerfist"])
         self.assertIn("★ Abbazia (stand-alone)", senza)
-        self.assertIn("DEF-1 Piano della Terra", senza)
 
 
 class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
@@ -243,6 +246,11 @@ class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
         regia, che è il caso esatto che ADR-0014 §1 nomina. Ogni volta il
         cancello è diventato rosso, che era il suo scopo, e ogni volta è stato
         aggiornato a mano. Tre su nove archi: la strada è ancora lunga.
+
+        ✅ **Il quarto, il 2026-10-18.** La riscrittura di stile di DEF-5 ha
+        dato alla Scena 3 una «Regia dei round» (§5, la pulizia del Cuore
+        della Montagna: un round per riga, ramo luminoso, ramo meno luminoso,
+        i nani). Quattro documenti su cinque in ARC-07; manca DEF-2.
         """
         con = []
         for nome in MC.BERSAGLI:
@@ -251,7 +259,8 @@ class TestGliStandardRedazionaliScrittiEMaiApplicati(unittest.TestCase):
                 con.append(nome)
         self.assertEqual(sorted(con), ["DEF-1 Piano della Terra",
                                        "DEF-3 Resurrezione Hella",
-                                       "DEF-4 Viaggio 1.000 anni"],
+                                       "DEF-4 Viaggio 1.000 anni",
+                                       "DEF-5 Ritorno Hammerfist"],
                          "la regia di round e' comparsa altrove (bene!) oppure "
                          "e' sparita da uno dei due (male): aggiornare di proposito")
 
@@ -352,17 +361,34 @@ class TestIDueCongegniDiMercer(unittest.TestCase):
         DEF-4 li ha portati per primo (riscrittura del 2026-09-18), DEF-3 il
         giorno dopo — il `[HDYWTDT]` allo Step 5 del rito, dove il richiamo
         riesce e la voce finale la sceglie il giocatore invece del DM. Quando
-        arriveranno altrove, questo cancello va aggiornato **di proposito**."""
-        for congegno in ("[HDYWTDT] il finisher al giocatore",
-                         "assorbi e rilancia (yes-and with teeth)"):
+        arriveranno altrove, questo cancello va aggiornato **di proposito**.
+
+        ✅ **Aggiornato di proposito il 2026-10-18**, dopo la riscrittura di
+        stile dei cinque master di ARC-07, e da qui i due congegni hanno due
+        attese diverse. Il `[HDYWTDT]` arriva in DEF-1 (alla terza crepa del
+        duello di Tordek e al colpo che porta Terros a 0) e in DEF-5 (l'ultimo
+        hobgoblin della pulizia, Scena 3); DEF-2 non ha un boss da finire e
+        resta fuori. Lo *yes-and with teeth* arriva in DEF-1 (§7a, la strada
+        che il tavolo inventa per l'oceano), in DEF-2 (il gesto per la
+        Cronaca, inciso su A8 e col suo prezzo) e in DEF-5 (§0-ter, tre
+        invenzioni assorbite, ognuna con la sua complicazione)."""
+        attesi = {
+            "[HDYWTDT] il finisher al giocatore": [
+                "DEF-1 Piano della Terra", "DEF-3 Resurrezione Hella",
+                "DEF-4 Viaggio 1.000 anni", "DEF-5 Ritorno Hammerfist"],
+            "assorbi e rilancia (yes-and with teeth)": [
+                "DEF-1 Piano della Terra", "DEF-2 Ritorno e affreschi",
+                "DEF-3 Resurrezione Hella", "DEF-4 Viaggio 1.000 anni",
+                "DEF-5 Ritorno Hammerfist"],
+        }
+        for congegno in attesi:
             con = []
             for nome in MC.BERSAGLI:
                 testo, _, _ = MC.carica(MC.BERSAGLI[nome])
                 if conta(congegno, testo):
                     con.append(nome)
             with self.subTest(congegno=congegno):
-                self.assertEqual(sorted(con), ["DEF-3 Resurrezione Hella",
-                                               "DEF-4 Viaggio 1.000 anni"])
+                self.assertEqual(sorted(con), attesi[congegno])
 
 
 class TestIBersagliNonSiCampionanoInSilenzio(unittest.TestCase):
@@ -435,3 +461,77 @@ class TestIndicatoriDungeon(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestStileDeiBox(unittest.TestCase):
+    """ADR-0093: tre indicatori, e i casi che li fanno sbagliare."""
+
+    def test_gerundio_appeso_in_fondo_alla_frase(self):
+        self.assertEqual(MC.gerundi_in_coda(
+            "Il drago scende sul campo, formando una tempesta di fuoco."), ["formando"])
+
+    def test_l_inciso_fra_due_virgole_non_e_coda(self):
+        # Il falso positivo del primo giro: italiano normale.
+        self.assertEqual(MC.gerundi_in_coda(
+            "Il metallo, raffreddandosi, prese la forma di un cubo."), [])
+
+    def test_quando_e_secondo_non_sono_gerundi(self):
+        self.assertEqual(MC.gerundi_in_coda("Lo vedi, quando il sole cala."), [])
+        self.assertEqual(MC.gerundi_in_coda("Arriva un messo, secondo il patto."), [])
+
+    def test_avverbi_in_mente_e_le_parole_che_non_lo_sono(self):
+        self.assertEqual(MC.avverbi_mente("Cammina lentamente, la mente altrove."),
+                         ["lentamente"])
+        self.assertEqual(MC.avverbi_mente("Un vento inclemente, una semente."), [])
+
+    def test_battute_nella_forma_prescritta(self):
+        testo = ("**BALVAR (piano):** *«Sta' buono.»*\n\n"
+                 "**DURIN:** *«" + " ".join(["parola"] * 30) + "»*\n")
+        self.assertEqual(MC.battute_png(testo), [2, 30])
+
+    def test_stile_dei_box_conta_solo_dentro_i_box(self):
+        testo = ("Fuori dal box, correndo veloce.\n\n"
+                 "> *Il drago scende sul campo, formando una tempesta. "
+                 "Lentamente, il fumo sale.*\n")
+        d = MC.stile_dei_box(testo)
+        self.assertEqual(d["box"], 1)
+        self.assertEqual(d["gerundio in coda"], 1)
+        self.assertEqual(d["-mente"], 1)
+
+
+class TestGulpease(unittest.TestCase):
+    def test_frasi_corte_e_parole_brevi_sono_piu_facili(self):
+        facile = "Il re dorme. La porta è chiusa. Fuori piove."
+        difficile = ("L'amministrazione dell'insolvenza contrattuale comporta "
+                     "conseguenze giurisdizionali particolarmente significative.")
+        self.assertGreater(MC.gulpease(facile), MC.gulpease(difficile))
+
+    def test_formula_su_un_caso_fatto_a_mano(self):
+        # 3 parole, 9 lettere, 1 frase: 89 + (300 - 90) / 3 = 159
+        self.assertAlmostEqual(MC.gulpease("Casa del re."), 159.0)
+
+    def test_testo_vuoto(self):
+        self.assertEqual(MC.gulpease(""), 0.0)
+
+    def test_entra_nello_stile_dei_box(self):
+        self.assertIn("Gulpease", MC.stile_dei_box("> *Il re dorme.*\n"))
+
+
+class TestLunghezzeCheVariano(unittest.TestCase):
+    def test_quota_dei_box_fra_30_e_70_parole(self):
+        corto = " ".join(["pietra"] * 10)
+        medio = " ".join(["pietra"] * 50)
+        testo = "\n\n".join(f"> *{x}.*" for x in (corto, medio, medio, medio))
+        self.assertEqual(MC.stile_dei_box(testo)["30-70 %"], 75.0)
+
+
+class TestFasciaUmana(unittest.TestCase):
+    """ADR-0093: fuori fascia in basso è un indizio come in alto."""
+
+    def test_sotto_dentro_sopra(self):
+        self.assertEqual(MC.rispetto_alla_fascia(0.5, MC.FASCIA_MENTE, 2000), "↓")
+        self.assertEqual(MC.rispetto_alla_fascia(5.5, MC.FASCIA_MENTE, 2000), "·")
+        self.assertEqual(MC.rispetto_alla_fascia(20.0, MC.FASCIA_MENTE, 2000), "↑")
+
+    def test_campione_piccolo_non_si_giudica(self):
+        self.assertEqual(MC.rispetto_alla_fascia(0.0, MC.FASCIA_MENTE, 400), "–")

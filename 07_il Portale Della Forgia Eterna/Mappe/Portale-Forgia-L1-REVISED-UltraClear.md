@@ -13,54 +13,49 @@
 
 ### VISTA 1: GRID COMPLETA CON COORDINATE NUMERATE
 
+> ✏️ **Ridisegnata il 2026-10-21.** La griglia di prima disegnava 40 bracieri 🏮
+> in fila lungo i muri (una seconda parete di fuoco), il pavimento in erba 🟩 e
+> il dais in ⬛, cioè muratura piena su cui non si sale. Ora la sala è D03-R13
+> (22,5 × 16,5 m) in pavimento lavorato ⬜, il dais è 🔳, le torce sono otto, una
+> ogni 6 m circa come dice il LIGHTING. Le unità tornano dove le mettono le
+> POSIZIONI: Yochlol E06 e O07, Xanathira J13, trono I09-J10 dentro il dais
+> H09-K10 (prima erano disegnati una colonna più a destra). La porta nord è in
+> J02-K02, con l'androne J01-K01 dietro.
+>
+> ⚠️ `[INFERRED — needs DM confirmation]` Questa è una generazione storica: la
+> Stanza della Corona canonica è la S-2 dell'Atlante (10 × 13, ingresso a sud,
+> trono a nord), giocata in ARC-06. PF-1 ne è una versione diversa, con porta a
+> nord e quattro pilastri; al tavolo vale S-2.
+
 ```
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-NORD ↑ (Porta Ingresso PG)                    STANZA DELLA CORONA                        GRIGLIA 20 COLONNE × 14 RIGHE
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════
+NORD ↑ (Porta Ingresso PG)                    STANZA DELLA CORONA                        GRIGLIA 20 COLONNE × 14 RIGHE · 1,5 m/quadretto
+══════════════════════════════════════════════════════════════════
 
-COLONNE →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
-RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │
+COLONNE →  A B C D E F G H I J K L M N O P Q R S T
+RIGHE ↓
 
---- RIGA 01-02: PORTA NORD (Ingresso PG) ---
-01    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-      │                            └──┘ PORTA NORD: Col J-K, 3m larga
-02    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+01  🏰🏰🏰🏰🏰🏰🏰🏰🏰⬜⬜🏰🏰🏰🏰🏰🏰🏰🏰🏰   androne J01-K01
+02  🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰   PORTA NORD J02-K02 (3 m), ingresso dei PG
+03  🏰🏰🏰🟪🟪⬜🏮⬜⬜⬜⬜⬜⬜🏮🟪🟪⬜⬜🏰🏰   pilastri NW D03-E04 e NE O03-P04 (3 x 3 m, mithral) · torce G03, N03
+04  🏰🏰🏰🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜🟪🟪⬜⬜🏰🏰
+05  🏰🏰🏰⬜🏮⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏮⬜🏰🏰   torce su piede E05, Q05
+06  🏰🏰🏰⬜🔴⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰   Yochlol 1 E06
+07  🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🔴⬜⬜⬜🏰🏰   Yochlol 2 O07
+08  🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰
+09  🏰🏰🏰⬜🏮⬜⬜🔳👑👑🔳⬜⬜⬜⬜⬜🏮⬜🏰🏰   DAIS H09-K10 (+1,5 m) · TRONO I09-J10, Belkram seduto · torce E09, Q09
+10  🏰🏰🏰⬜⬜⬜⬜🔳👑👑🔳⬜⬜⬜⬜⬜⬜⬜🏰🏰
+11  🏰🏰🏰🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜🟪🟪⬜⬜🏰🏰   pilastri SW D11-E12 e SE O11-P12
+12  🏰🏰🏰🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜🟪🟪⬜⬜🏰🏰
+13  🏰🏰🏰⬜⬜⬜🏮⬜⬜🔴⬜⬜⬜🏮⬜⬜⬜⬜🏰🏰   Xanathira J13, dietro il trono · torce G13, N13
+14  🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰   PORTA SUD J14-K14, verso la Sala della Forgia
 
---- RIGA 03-04: PILASTRO NW + NE + AREA NORD ---
-03    │ 🏰 🏰 🏰 🟪 🟪 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🟪 🟪 🏮 🏰 🏰
-      │       └──┘ PILASTRO NW (D3-E4)                     └──┘ PILASTRO NE (O3-P4)
-04    │ 🏰 🏰 🏰 🟪 🟪 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🟪 🟪 🏮 🏰 🏰
-      │       3m×3m Mithral                                  3m×3m Mithral
-
---- RIGA 05-08: AREA CENTRALE + TRONO ELEVATO ---
-05    │ 🏰 🏰 🏰 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🏮 🏰 🏰
-06    │ 🏰 🏰 🏰 🏮 🟩 🟩 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🟩 🏮 🏮 🏰 🏰
-      │                 └─┘ Yochlol 1 (E6)              └─┘ Yochlol 2 (O7)
-07    │ 🏰 🏰 🏰 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🏮 🏰 🏰
-08    │ 🏰 🏰 🏰 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🏮 🏰 🏰
-
---- RIGA 09-10: TRONO CENTRALE (Elevato +1.5m) ---
-09    │ 🏰 🏰 🏰 🏮 🟩 🟩 🟩 🟩 ⬛ ⬛ ⬛ ⬛ 🟩 🟩 🟩 🟩 🏮 🏮 🏰 🏰
-      │                         └───────┘ DAIS +1.5m (H9-K10)
-10    │ 🏰 🏰 🏰 🏮 🟩 🟩 🟩 🟩 ⬛ 👑 👑 ⬛ 🟩 🟩 🟩 🟩 🏮 🏮 🏰 🏰
-      │                            └──┘ TRONO: Col I-J, con BELKRAM seduto
-      │                                     ⚫ BELKRAM (Col J, Riga 09 su trono)
-      │                                     Corona Adamantio: Top trono center
-
---- RIGA 11-12: PILASTRO SW + SE + AREA SUD ---
-11    │ 🏰 🏰 🏰 🟪 🟪 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🟪 🟪 🏮 🏰 🏰
-      │       └──┘ PILASTRO SW (D11-E12)                    └──┘ PILASTRO SE (O11-P12)
-12    │ 🏰 🏰 🏰 🟪 🟪 🏮 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🏮 🟪 🟪 🏮 🏰 🏰
-      │       3m×3m Mithral                                  3m×3m Mithral
-
---- RIGA 13: XANATHIRA + PORTA SUD ---
-13    │ 🏰 🏰 🏰 🏮 🏮 🏮 🟩 🟩 🟩 🟩 🔴 🟩 🟩 🟩 🏮 🏮 🏮 🏮 🏰 🏰
-      │                                  └─┘ Xanathira (J13) dietro trono
-14    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-      │                            └──┘ PORTA SUD: Col J-K (uscita verso Forgia)
-
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════
+LEGENDA · 🏰 roccia viva · ⬜ pavimento lavorato · 🟪 pilastro di mithral (copertura totale) · 🔳 dais rialzato di 1,5 m (ci si sale) · 👑 trono · 🏮 torcia su piede, accanto al muro (luce fioca 6 m) · 🚪 porta · 🔴 Yochlol e Xanathira
+══════════════════════════════════════════════════════════════════
+@north N
 @tipo tattica interni
+@mark 1 ; I9 ; Belkram sul trono (Grande, I09-J10)
 ```
 
 ### VISTA 2: PROSPETTIVA 3D (Guardando da Porta Nord)
@@ -112,7 +107,7 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 - **SE:** Colonne O-P, Righe 11-12
 - HP: 180 ciascuno, Hardness 15 (indistruttibili praticamente)
 
-**TRONO CENTRALE ⬛👑 (Elevato +1.5m):**
+**TRONO CENTRALE 🔳👑 (Elevato +1.5m):**
 - **Dais Base:** Colonne H-K, Righe 9-10 (6m × 3m = 4×2 quadrati)
 - **Trono:** Colonne I-J, Righe 9-10 (3m × 3m = 2×2 centro dais)
 - **Corona Adamantio:** Top trono, Col J, Riga 09 (1m sopra trono)
@@ -211,7 +206,7 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 
 **Torce Mura 🏮:**
 - Distribuzione: 1 ogni 6m (4 quadrati) lungo mura
-- Posizioni: Colonne F, L, R (esempio), tutte righe 01-14
+- Posizioni: G03, N03, G13, N13 (muri nord e sud), E05, E09, Q05, Q09 (muri ovest ed est)
 - Light: Dim 6m radius ciascuna (overlap = full illumination room)
 
 **Corona Glow 👑:**
@@ -228,7 +223,7 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
 | 4 Pilastri di Mithral 🟪 | NW D-E/3-4, NE O-P/3-4, SW D-E/11-12, SE O-P/11-12 (2×2 ognuno) | **copertura totale +8 CA**; PF 180, Durezza 15 (di fatto indistruttibili) |
-| Trono elevato ⬛👑 | dais H-K/9-10, trono I-J/9-10 (+1,5 m) | **+1 CA, +2 al colpo** a chi sta sul dais |
+| Trono elevato 🔳👑 | dais H-K/9-10, trono I-J/9-10 (+1,5 m) | **+1 CA, +2 al colpo** a chi sta sul dais |
 | Corona d'Adamantio 👑 | sopra il trono, J09 | obiettivo: prendibile a Belkram sconfitto |
 | Cerchio Demoniaco | 10 m diam. centrato J09 (7×7, area G-M/06-12) | **solo visivo** (nessun effetto meccanico); rune viola quando Belkram è attivo |
 | Torce alle mura 🏮 | ~1 ogni 6 m lungo le pareti | luce fioca 6 m ciascuna, overlap = stanza illuminata |
@@ -284,52 +279,55 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                                          3m×3m (2×2 quadrati)
 03    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                      └───────────── Interior Octagon Starts ─────────────┘
-04    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
-      │                    └─┘ PILASTRO Adamantino (I04)                └─┘ PILASTRO (U04)
+04    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
+      │                         8 PILASTRI adamantini 🟪: N05 · T08 · W14 · T20 · N23 · H20 · E14 · H08
 
 --- RIGA 06-12: ANGOLO NE + AFFRESCO A2 + A3 FUOCO ---
-05    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛
-06    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛
+05    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
+06    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
       │                └────┘ A2: AFFRESCO "Divine Weapons" (Col G-H, Riga 06)
-07    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛
-08    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛
-      │                └─┘ PILASTRO (H08)
-09    │ ⬛ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
-10    │ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+07    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
+08    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+      │                └─┘ PILASTRO (H08)            PILASTRO (T08) └─┘
+09    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+10    │ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
 
 --- RIGA 11-16: LATO EST + AFFRESCO A3 🔥 FIRE PORTAL (ACTIVE!) ---
-11    │ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-12    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-13    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+11    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+12    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+13    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
       │                                  └────────┘ ALTARE MORADIN (M13-O15, +3m elevato)
-14    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+14    │ ⬛ 🏛️ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ 🏛️ 🏛️ ⬛
       │                                      └─┘ Centro: Col N, Riga 14 (Focal Point)
-15    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-16    │ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🖼️ 🏛️
+15    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+16    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
       │                                                                        └────┘ A3: 🔥 FIRE PORTAL
-17    │ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🖼️ 🏛️
-      │                                                                              (Col Y-Z, Riga 16-17)
+17    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
+      │                                                                              (Col X-Z, Riga 16-17)
       │                                                                              ACTIVE! Swirling Fire
 
 --- RIGA 18-27: ANGOLO SE + SUD + ALTRIAFFRESCHI ---
-18    │ ⬛ ⬛ 🏛️ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼️ 🏛️ ⬛
+18    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼️ 🏛️ ⬛
       │                                                                               A4: "Ancestral Battle"
-19    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛
-20    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛
-21    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛
-22    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛
-23    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
+19    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+20    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🌀 🌀 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
+21    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
+22    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
+23    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
 24    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-25    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌿 🌿 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+25    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                                  └────┘ A5: 🌿 EARTH PORTAL (Col M-O, Riga 25)
-26    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌿 🌿 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+26    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
       │                                          ACTIVE! Swirling Earth/Green Energy
 27    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW, W, NW quadranti)
+@north N
 @tipo tattica interni
+@luogo Portale della Forgia Eterna, Sala della Forgia (hub dei Piani)
+@deroga struttura/senza-anelli ; sala ottagonale aperta: il giro si fa attorno all'altare e fra i pilastri, nessun blocco di muro serve
 ```
 
 ---
@@ -343,15 +341,18 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 - Material: Gold-inlaid black basalt stone
 - Rune: Glowing divine script (bright light 18m radius)
 
-**8 PILASTRI ADAMANTINO 🪨 (Between Affreschi):**
-1. Pilastro 1 (N): Col N, Riga 04 (between A1-A2)
-2. Pilastro 2 (NE): Col U, Riga 04 (between A2-A3)
-3. Pilastro 3 (E): Col H, Riga 08 (between A3-A4)
-4. Pilastro 4 (SE): Col U, Riga 23 (between A4-A5)
-5. Pilastro 5 (S): Col N, Riga 24 (between A5-A6)
-6. Pilastro 6 (SW): Col E, Riga 23 (between A6-A7)
-7. Pilastro 7 (W): Col E, Riga 08 (between A7-A8)
-8. Pilastro 8 (NW): Col H, Riga 04 (between A8-A1)
+**8 PILASTRI ADAMANTINI 🟪 (anello interno, a 4-5 quadretti dalle pareti):**
+1. Pilastro 1 (N): Col N, Riga 05
+2. Pilastro 2 (NE): Col T, Riga 08
+3. Pilastro 3 (E): Col W, Riga 14
+4. Pilastro 4 (SE): Col T, Riga 20
+5. Pilastro 5 (S): Col N, Riga 23
+6. Pilastro 6 (SW): Col H, Riga 20
+7. Pilastro 7 (W): Col E, Riga 14
+8. Pilastro 8 (NW): Col H, Riga 08
+- Dal 2026-10-22 la griglia disegna gli otto pilastri come un anello regolare
+  attorno all'altare; prima erano sparsi come macerie 🪨 lungo le pareti e le
+  coordinate dell'elenco non coincidevano col disegno.
 - Size: 1×1 quadrato ciascuno (1.5m × 1.5m)
 - Height: 15m (10 quadrati verticali, full ceiling)
 - Structural: Non destructible
@@ -359,7 +360,7 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 **8 AFFRESCHI/PORTALI 🖼️:**
 1. **A1 (Nord):** Col M-O, Riga 02 - "Creation of World" (inactive)
 2. **A2 (NE):** Col G-H, Riga 06 - "Divine Weapons Forged" (inactive)
-3. **A3 (Est):** Col Y-Z, Riga 16-17 - 🔥 **FIRE PORTAL (ACTIVE!)**
+3. **A3 (Est):** Col X-Z, Riga 16-17 - 🔥 **FIRE PORTAL (ACTIVE!)**
 4. **A4 (SE):** Col R-S, Riga 19 - "Ancestral Battle" (inactive)
 5. **A5 (Sud):** Col M-O, Riga 25-26 - 🌿 **EARTH PORTAL (ACTIVE!)**
 6. **A6 (SW):** Col F-G, Riga 20 - 🕐 **TIME PORTAL (ACTIVE!)**
@@ -382,8 +383,9 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
 | Altare di Moradin ⭐ | M-O/13-15, **+3 m elevato**, 8 scale radiali (1,5 m) | rune divine = **luce intensa 18 m**; centro focale dei rituali; +3 m = vantaggio di quota se scoppia mischia |
-| 8 Pilastri adamantini 🪨 | tra gli affreschi (N04, U04, H08, U23, N24, E23, E08, H04) | **indistruttibili**; copertura per chi vi si ripara |
-| Affresco/Portale **A3 🔥 Fuoco** | Y-Z/16-17 | **ATTIVO** — soglia al Piano del Fuoco (P3) |
+| 8 Pilastri adamantini 🟪 | anello attorno all'altare (N05, T08, W14, T20, N23, H20, E14, H08) | **indistruttibili**; bloccano il passaggio e danno copertura a chi vi si ripara |
+| Portali attivi 🌀 | A3 X-Y/16-17, A5 N-O/25-26, A6 F-G/20 | si attraversano: sono le tre uscite della Sala verso i Piani |
+| Affresco/Portale **A3 🔥 Fuoco** | X-Z/16-17 | **ATTIVO** — soglia al Piano del Fuoco (P3) |
 | Affresco/Portale **A5 🌿 Terra** | M-O/25-26 | **ATTIVO** — soglia al Piano della Terra (P4) |
 | Affresco/Portale **A6 🕐 Tempo** | F-G/20 | **ATTIVO** — soglia temporale (Topazio / P5) |
 | Affreschi inattivi A1/A2/A4/A7 | pareti | narrativi; A8 (NW) «Ritorno Trionfale» = **profetico**, inattivo |
@@ -397,8 +399,8 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 - **Se scoppia combattimento** (intrusione/imboscata a scelta del DM): i PG
   materializzano sull'Altare (+3 m, quota e luce intensa a loro favore); gli
   **8 pilastri** offrono copertura; la stanza è ampia e illuminata (poche
-  ombre → furtività difficile per gli assalitori). `[INFERRED — nessun
-  incontro scritto per questa sala: eventuale scontro è a discrezione del DM]`
+  ombre → furtività difficile per gli assalitori). Nessun incontro è
+  scritto per questa sala: lo scontro lo apre il DM, se vuole.
 
 ### 🔄 EVOLUZIONE (companion T5b — stato dei portali per rituale)
 

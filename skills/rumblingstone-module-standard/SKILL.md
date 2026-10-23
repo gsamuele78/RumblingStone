@@ -245,7 +245,12 @@ Sono sette, e ognuna viene da un difetto vero: chi resta senza niente da fare
 salvezza, chi sente il rumore, il boss che cambia invece di allungarsi, lo
 skill challenge scritto per intero, e chi si diverte in ogni scena. Da dove
 vengono, e cosa è stato scartato:
-`plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`.
+`plans/RICERCA-MANUALE-DEL-MASTER-2026-09.md`. Dalla §9 alla §16 le domande
+dell'alto livello, prese dalle avventure della community
+(`plans/RICERCA-AVVENTURE-COMMUNITY-2026-10.md`, ADR-0092): il segreto che regge
+a una divinazione, la riga di scala per ogni scontro, il mostro insostituibile,
+il pericolo che qualcuno usa, l'incontro che resta uno, il rinforzo che i PG
+vedono arrivare, niente orde di GS basso al 13°, il PG fuori gioco per un TS.
 
 ### Il ciclo completo: quando un master si chiama DEF
 
@@ -278,13 +283,17 @@ giri, da 2 🔴 a 0 al playtester), scritta perché valga per ogni DEF.
 
 1. **Una copia a freddo**: il master senza i blocchi `storico` e `apparato`,
    che non vanno in stampa, in una cartella con le quattro rubriche e nient'altro.
-2. **Quattro agenti nuovi, uno per rubrica**, in parallelo. Ognuno legge solo
+2. **Quattro agenti nuovi, uno per rubrica**, uno alla volta (il DM, D8 di
+   MASTER-DEF, 2026-10-18: un giro più lento costa meno di quattro agenti
+   che si pestano). Ognuno legge solo
    la sua rubrica e il modulo. Il DM a freddo legge scena per scena senza
    guardare avanti, e il giorno dopo scrive cosa ricorda prima di riaprire.
 3. **Il triage di chi orchestra**, rilievo per rilievo, in quest'ordine:
    - **il testo lo risolve già** (due regole per la stessa cosa, un numero
      diverso in due punti): si corregge sul posto, e la versione che vince è
-     quella che il master dichiara canone;
+     quella che il master dichiara canone. Prima di leggere, `python3
+     scripts/conformita_statblocchi.py --master <file>` fa i conti degli
+     statblocchi scritti nel master;
    - **manca prosa** (un luogo senza box, un PNG senza scheda, una cosa da dire
      a voce che non c'è, un handout promesso e non scritto): la domanda 2 di
      `ORCHESTRAZIONE.md` risponde da sé, il giocatore la sentirà, quindi si
@@ -296,11 +305,42 @@ giri, da 2 🔴 a 0 al playtester), scritta perché valga per ogni DEF.
    - **manca canone** (una regola che il modulo non ha, un fatto che nessuno
      ha deciso): una decisione nel piano, con la sua proposta, e nel frattempo
      la marcatura `[INFERRED — needs DM confirmation]`. Non si inventa.
-4. **Di nuovo il giro**, con agenti nuovi, finché nessuna delle quattro
+   Prima di mandare una domanda al DM, o di respingere un rilievo citando lo
+   stato del mondo, si legge il **canone giocato sul ramo di gruppo**
+   (`git show origin/campaign-group-<nome>:campaign/state.md` e i diari delle
+   sessioni), non lo `state.md` di `main`. Nel secondo giro su ARC-07 questo ha
+   chiuso tre decisioni e ne ha aperte tre, e ha mostrato un rifiuto giusto che
+   citava la fonte sbagliata.
+4. **La correzione, rilievo per rilievo.** Un correttore per master unisce i
+   rilievi doppi e dà a ogni 🔴 e 🟠 uno di tre esiti: **corretto** nel master;
+   **al DM**, se tocca canone o bilanciamento, con la scheda della decisione;
+   **respinto**, citando fra « » la riga del master o dell'SRD che lo smentisce.
+   Un residuo vero, che resta perché correggerlo costa più di quanto rende, è
+   un quarto caso e porta la sua ragione. Gli esiti vanno in `FIX.md`, nella
+   forma di `rumblingstone-playtest` §7. Una correzione che tocca una mappa o la
+   sua legenda passa dal collaudo delle mappe
+   (`rumblingstone-mapmaking/references/collaudo-mappe.md`, «Il giro completo»),
+   e la stessa mappa si corregge **anche nell'Atlante dell'arco**: in ogni giro
+   su ARC-07 l'Atlante e il master davano due versioni della stessa mappa.
+5. **La verifica, con un agente nuovo.** Un verificatore che non ha visto né le
+   letture né la correzione giudica ogni 🔴 e 🟠 sul master corretto: CHIUSO,
+   PARZIALE, APERTO o IN ATTESA DEL DM, con la citazione dal master corretto che
+   lo prova. Poi cerca gli errori **introdotti** dalla correzione, soprattutto
+   nei numeri nuovi. Il rapporto va in `VERIFICA.md`. Sui due giri di ARC-07 la
+   verifica ha trovato 25 correzioni parziali e 3 🟠 nuovi, che senza di lei
+   sarebbero stati contati come chiusi.
+6. **La seconda passata.** Il correttore chiude i parziali e i nuovi della
+   verifica, in fondo a `FIX.md`.
+7. **Di nuovo il giro**, con agenti nuovi, finché nessuna delle quattro
    letture ha un 🔴. I 🟠 rimasti hanno ognuno una riga: corretto, residuo con
    la ragione, o decisione del DM.
-5. **L'archivio**: i rapporti di ogni giro in `plans/esperimenti/<master>-giro-N/`,
-   i conteggi nel piano. È la storia da cui si vede se il master migliora.
+8. **L'archivio**: i rapporti di ogni giro in `plans/esperimenti/<master>-giro-N/`,
+   i conteggi nel piano, e ogni lettura in `registro_letture.py` (`--intero`
+   se è stata fatta sul master intero). È la storia da cui si vede se il master migliora. Le
+   decisioni del DM nate dal giro vanno nella tabella `decisioni-dm` del piano
+   che possiede il master, perché `decisioni_dm.py` legge solo quelle, e nel
+   master si marcano `[CANONE — DM <data>]`, col codice della decisione
+   accanto quando serve ritrovarla (`G2-08` nel secondo giro su ARC-07).
 
 Le letture trovano, i cancelli impediscono che torni: un tipo di rilievo che
 ricompare in due master diversi diventa una regola di `copertura_scene.py` o

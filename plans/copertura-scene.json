@@ -123,13 +123,6 @@
     },
     {
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
-      "regola": "C3",
-      "scena": "SCENA 7",
-      "voce": "Dove: l'anticamera — nessun box con quel luogo nell'etichetta",
-      "perche": "il box dell'isolamento c'è e porta il luogo nell'etichetta, ma apre con i nomi dei PG in grassetto (`> **THORIK** — …`) e il rilevatore non lo riconosce come box: è il difetto noto del rilevatore dei box in STATO §0; non si riscrive la forma di un box già letto al tavolo"
-    },
-    {
-      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-1-PIANO-TERRA-TERROS.md",
       "regola": "C2",
       "scena": "SCENA 9",
       "voce": "MORADIN",
@@ -209,6 +202,13 @@
       "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-5-RITORNO-HAMMERFIST.md",
       "regola": "C2",
       "scena": "SCENA 3",
+      "voce": "AEGIS FANG",
+      "perche": "artefatto che parla: la voce sta nella sua pagina in PG/Artefatti, e la riga fra le Comparse della scena"
+    },
+    {
+      "file": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md",
+      "regola": "C2",
+      "scena": "SCENA 11",
       "voce": "AEGIS FANG",
       "perche": "artefatto che parla: la voce sta nella sua pagina in PG/Artefatti, e la riga fra le Comparse della scena"
     }

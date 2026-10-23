@@ -933,7 +933,7 @@ PORTE    Professione/Sapienza · CAR (farsi raccontare dagli anziani del Bruco) 
 <div class="tablewrap"><table><thead><tr><th>Per cosa</th><th>Quanto</th></tr></thead><tbody><tr><td><strong>Il Peso di contrada</strong></td><td><strong>100 mo</strong> — è il muro del Giorno 1, e assorbe quasi tutto</td></tr><tr><td>Fieno, ferri, informazioni (se li comprano prima del Bruco)</td><td>30-50 mo</td></tr><tr><td>Sirena Occo</td><td>⚠️ <strong>non si paga in monete</strong>: si paga in informazioni, e quel prezzo torna al Giorno 3</td></tr><tr><td>Il corteo del Giorno 3</td><td>se hanno svuotato la cassa, la sbandierata parte a <strong>−2</strong> (<code>06-VILLAIN</code> §6)</td></tr></tbody></table></div>
 <h3 class="sub">Il conto, e la cosa che dice</h3>
 <div class="desc"><p class="readaloud"><strong>Un gruppo che gioca bene esce dal Drappo con quasi gli stessi soldi con cui è entrato</strong>, e con una contrada che non è stata accorpata.</p></div>
-<p>È il punto del modulo: qui <strong>la ricchezza non è il premio</strong>. Il premio è un rione che esiste ancora, un cavallo, e sei persone che nel rione hanno un nome. Se il DM prosegue con questi PG, li consegna <strong>al 4° livello, con l'equipaggiamento di partenza</strong> — <code>[INFERRED: nessuna riga del modulo assegna oggetti magici ai PG, e i premi sono tutti di contrada]</code>.</p>
+<p>È il punto del modulo: qui <strong>la ricchezza non è il premio</strong>. Il premio è un rione che esiste ancora, un cavallo, e sei persone che nel rione hanno un nome. Se il DM prosegue con questi PG, li consegna <strong>al 4° livello, con l'equipaggiamento di partenza</strong>: nessuna riga del modulo assegna oggetti magici ai PG, e i premi sono tutti di contrada.</p>
 <p>⚠️ <strong>Se invece il gruppo ha venduto la ricevuta</strong> (300 mo) <strong>e tenuto per sé il montepremi</strong>, sono ~800 mo divisi in sei: <strong>poco più di 130 a testa</strong>. Non cambia il loro livello di potere; cambia <strong>come li guarda il rione</strong>, ed è quello che va giocato.</p></div>
     <div class="pagefoot"><span>Il Drappo di Tarsilia · VIII · Le agende dei villain</span>
     <span class="n">12</span></div>
@@ -1431,7 +1431,7 @@ PORTE    Professione/Sapienza · CAR (farsi raccontare dagli anziani del Bruco) 
 <section class="pane" id="c17">
   <div class="sheet"><span class="dmtag">⚠ SOLO DM</span>
     <div class="chapter-body"><h2 class="sec">Le mappe del Drappo</h2>
-<p>Due tavoli tattici, prodotti con la pipeline del repo. <strong>Il sorgente è il JSON</strong>: il master emoji-grid e l'SVG sono generati e non si modificano a mano.</p>
+<p>Una vista d'insieme della Ruota (con la sua versione per i giocatori) e un tavolo tattico, le stalle, prodotti con la pipeline del repo. <strong>Il sorgente è il JSON</strong>: il master emoji-grid e l'SVG sono generati e non si modificano a mano.</p>
 <div class="tablewrap"><table><thead><tr><th>Mappa</th><th>Sorgente</th><th>Master stampabile</th><th>SVG da tavolo</th></tr></thead><tbody><tr><td><strong>La Ruota</strong> (piazza e pista)</td><td><code>tarsilia-la-ruota.json</code></td><td><code>tarsilia-la-ruota.md</code></td><td><code>rendered/tarsilia-la-ruota_map01_tarsilia-la-ruota-pista-del-drappo.svg</code></td></tr><tr><td><strong>La Ruota — versione giocatore</strong></td><td><code>tarsilia-la-ruota-giocatori.json</code></td><td><code>tarsilia-la-ruota-giocatori.md</code></td><td><code>rendered/tarsilia-la-ruota-giocatori_map01_tarsilia-versione-giocatore.svg</code></td></tr><tr><td><strong>Le stalle dell'Istrice</strong></td><td><code>tarsilia-stalle.json</code></td><td><code>tarsilia-stalle.md</code></td><td><code>rendered/tarsilia-stalle_map01_tarsilia-le-stalle-dell-istrice-assalto-notturno.svg</code></td></tr></tbody></table></div>
 <h2 class="sec">Rigenerare</h2>
 <pre class="mono">python3 scripts/compile_map_json.py &lt;mappa&gt;.json -o &lt;mappa&gt;.md
@@ -1442,13 +1442,17 @@ python3 scripts/validate_maps.py            # gate di CI</pre>
 python3 scripts/export_uvtt.py &lt;mappa&gt;.md -o &lt;cartella&gt;           # Foundry / Roll20</pre>
 <h2 class="sec">Su Foundry / Roll20</h2>
 <p>Le due mappe sono <strong>già esportate</strong> in <code>uvtt/</code>, con muri, porte e luci derivati dal JSON — si importano native, senza ridisegnare niente:</p>
-<div class="tablewrap"><table><thead><tr><th>File</th><th>Muri</th><th>Porte</th><th>Luci</th></tr></thead><tbody><tr><td><code>uvtt/tarsilia-la-ruota_map01_*.uvtt</code></td><td>28</td><td>2</td><td>0</td></tr><tr><td><code>uvtt/tarsilia-stalle_map01_*.uvtt</code></td><td>20</td><td>5</td><td>2</td></tr></tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>File</th><th>Muri</th><th>Porte</th><th>Luci</th></tr></thead><tbody><tr><td><code>uvtt/tarsilia-la-ruota_map01_*.uvtt</code></td><td>28</td><td>1</td><td>0</td></tr><tr><td><code>uvtt/tarsilia-stalle_map01_*.uvtt</code></td><td>46</td><td>4</td><td>2</td></tr></tbody></table></div>
 <p>Si rigenerano con <code>python3 scripts/export_uvtt.py &lt;mappa&gt;.md -o uvtt</code>.</p>
 <h2 class="sec">Quale delle due Ruote si mette sul tavolo</h2>
 <p>La versione <strong>del DM</strong> porta le posizioni di partenza, le insidie e le note tattiche: è quella che sta dietro lo schermo. Quella <strong>dei giocatori</strong> ha la stessa geometria e niente altro — si stampa e si mette in mezzo al tavolo senza consegnare mezza serata di informazioni.</p>
 <h2 class="sec">Coordinate</h2>
-<p>Le griglie sono <strong>lettera × numero</strong> e partono da <strong>A01</strong> in alto a sinistra. Le coordinate citate nei testi delle sessioni sono quelle stampate sulla mappa: le stalle usano <strong>B9</strong> (porta sul canale), <strong>G4</strong> (botola del fienile), <strong>H12</strong> (box del cavallo), <strong>O3</strong> (finestra alta).</p>
-<p>Scala: <strong>1,5 m per quadretto</strong> su entrambe.</p></div>
+<p>Le griglie sono <strong>lettera × numero</strong> e partono da <strong>A01</strong> in alto a sinistra. Le coordinate citate nei testi delle sessioni sono quelle stampate sulla mappa: le stalle usano <strong>B9</strong> (porta sul canale), <strong>G4</strong> (botola del fienile), <strong>H12</strong> (box del cavallo), <strong>O3</strong> (finestra alta); in più <strong>C8</strong> (l'abbeveratoio) e <strong>U6-U7</strong> (il portone da carro sul cortile).</p>
+<p>Scala: <strong>1,5 m per quadretto</strong> su tutte e tre.</p>
+<h2 class="sec">Perché la Ruota è una vista d'insieme</h2>
+<p>La pista misura 64 × 46 quadretti, più di due Flip-Mat Enormous, e la Corsa non si gioca con le miniature: si risolve a tratti con cap. V. La mappa della Ruota è quindi <code>@tipo strategica</code>: dice dove stanno le funi, il palco, il transennato e le due curve, e non riceve i controlli di una carta da combattimento. La quota (3 m sopra il Sellen in magra) è una proposta da confermare.</p>
+<h2 class="sec">Le stalle, in breve</h2>
+<p>La stalla ha due ingressi a terra, la porta sul canale e il portone da carro sul cortile, e due dall'alto, la botola del fienile e la finestra alta. La selleria in mezzo fa un anello attorno al quale si insegue, e con il carro del fieno spezza la vista fra il portone e il corridoio. I bravacci partono fuori, sulla fondamenta del canale, a 7,5 m da Ombra.</p></div>
     <div class="pagefoot"><span>Il Drappo di Tarsilia · XIV · Le mappe</span>
     <span class="n">18</span></div>
   </div>

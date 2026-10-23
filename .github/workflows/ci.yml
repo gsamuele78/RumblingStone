@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         # ADR-0037, emendamento 2026-09-21: due piani. requirements.txt e' cio'
@@ -43,6 +43,14 @@ jobs:
 
       - name: Python scripts compile
         run: python -m compileall -q scripts converters
+
+      # ADR-0099: ruff e' in TESTING, quindi non blocca. Sale a stable (e il
+      # passo compileall sopra esce, perche' ruff copre E9) dopo 14 giorni e
+      # 10 run su main senza falsi allarmi (P3 di PIANO-PIATTAFORMA). Le regole
+      # sono in ruff.toml: solo quelle che cercano bug, non lo stile.
+      - name: ruff — nomi non definiti, codice morto, usi deprecati (testing, non bloccante)
+        continue-on-error: true
+        run: ruff check --output-format github
 
       - name: Tool manifest conformance gate (ADR-0012)
         run: python scripts/tools_manifest.py --check
@@ -237,6 +245,13 @@ jobs:
         continue-on-error: true
         run: python scripts/collaudo_mappe.py --solo-errori
 
+      # ADR-0098: lo standard di qualita' delle mappe, misurato sul corpus. Gli
+      # errori sono solo fatti (intestazione che mente, direttiva fuori griglia),
+      # e il passo non blocca: lo storico ha ancora mappe da rifare.
+      - name: Qualita' delle mappe (rapporto, non bloccante)
+        continue-on-error: true
+        run: python scripts/qualita_mappe.py --solo-errori
+
       # D23 di RESA-ASSET: la resa delle mappe si misura simbolo per simbolo e
       # terreno per terreno, e nessuna misura peggiora oltre il 5% rispetto a
       # scripts/scheda-resa.json senza che la scheda sia stata riscritta (e
@@ -258,6 +273,7 @@ jobs:
           python scripts/export_uvtt.py --help > /dev/null
           python scripts/import_ultraclear.py --help > /dev/null
           python scripts/collaudo_mappe.py --help > /dev/null
+          python scripts/qualita_mappe.py --help > /dev/null
           python scripts/update_xp.py --check > /dev/null
           python scripts/hype_homebrew.py --help > /dev/null
           python scripts/dm_dossier.py --help > /dev/null
@@ -374,13 +390,6 @@ jobs:
           python scripts/compile_map_json.py /tmp/ci-uc.draft.json --validate-only
           python -c "import json; r=json.load(open('/tmp/ci-uc.conflicts.json')); assert r['report_version'] and 'conflicts' in r, 'report malformato'; print('import_ultraclear OK')"
 
-      # 🔴 Entrambi i corridori, e non e' ridondanza. Il 2026-09-21 tre file di
-      # test giravano in locale sotto pytest e NON in CI sotto unittest: due non
-      # si importavano, uno era fatto di funzioni nude che `unittest` importa
-      # senza eseguire — 966 prove viste, 942 eseguite. Con pytest ammesso
-      # (emendamento ad ADR-0037) il buco si riapre al contrario, quindi si
-      # girano tutti e due e `test_i_test_girano_in_ci.py` verifica che vedano
-      # lo stesso numero.
       # ADR-0059: il punteggio pesato. Nasce verde per costruzione (la soglia
       # viene dalla distribuzione misurata del repo), quindi un rosso qui e' un
       # documento che e' peggiorato, non una soglia importata da un manuale.
@@ -391,10 +400,14 @@ jobs:
           # ADR-0077, estensione: nessuna revisione applicata ha peggiorato la misura
           python scripts/ciclo_prosa.py registro --check
 
-      - name: Unit tests — unittest (il corridore storico, ADR-0007)
-        run: python -m unittest discover -s scripts/tests -v
-
-      - name: Unit tests — pytest (il secondo corridore, ADR-0037 em. 2026-09-21)
+      # Un corridore solo (D2 di PIANO-PIATTAFORMA, DM 2026-10-23). Fino a quel
+      # giorno le stesse prove giravano due volte, con unittest e con pytest:
+      # 222 s su 914 del job per rieseguire cio' che pytest aveva gia' eseguito.
+      # Il difetto del 2026-09-21 (966 prove viste, 942 eseguite) resta
+      # presidiato da `test_i_test_girano_in_ci.py`, che conta le prove dei due
+      # corridori senza eseguirle e boccia se non combaciano: un test che
+      # unittest non vedrebbe fa ancora rossa la CI.
+      - name: Unit tests — pytest (ADR-0037 em. 2026-09-21 e 2026-10-23)
         run: python -m pytest scripts/tests -q
 
       - name: dm.py unified CLI smoke test (K-C3)
@@ -427,6 +440,108 @@ jobs:
           print(f"server MCP OK — {n} tool, annotazioni presenti, S-5 attiva")
           EOF
 
+  # ADR-0099, canale TESTING (D3 e D4 di PIANO-PIATTAFORMA, DM 2026-10-23):
+  # la stessa suite installata con uv ed eseguita in parallelo con
+  # pytest-xdist. Non blocca la PR. Sale a stable, e sostituisce il passo
+  # pytest e `pip install` del job principale, dopo 14 giorni e 10 run su main
+  # con le stesse prove passate e nessun test instabile in parallelo. I tempi
+  # da confrontare sono quelli dei passi «Installa con uv» e «pytest -n auto»
+  # contro «Install dependencies» e «Unit tests» del job principale.
+  testing:
+    name: Piattaforma in prova (uv, pytest-xdist) — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0   # come nel job principale: test_fase1 legge i rami
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Installa uv (versione fissata)
+        run: pip install "uv==0.11.32"
+
+      - name: Installa con uv
+        run: uv pip install --system -r requirements-dev.txt
+
+      - name: Stessi pacchetti di pip (nomi e versioni)
+        run: |
+          # Il confronto che dice se uv installa cio' che installerebbe pip.
+          # I nomi si normalizzano come PEP 503 (pip scrive «PyYAML», uv
+          # «pyyaml»); uv, pip e setuptools sono gli strumenti, non il contenuto.
+          norm() { sed -E 's/[-_.]+/-/g' | tr 'A-Z' 'a-z' | grep -v -E '^(uv|pip|setuptools|wheel)==' | sort; }
+          uv pip freeze --system | norm > "$RUNNER_TEMP/uv.txt"
+          python -m venv "$RUNNER_TEMP/pipvenv"
+          "$RUNNER_TEMP/pipvenv/bin/pip" install -q -r requirements-dev.txt
+          "$RUNNER_TEMP/pipvenv/bin/pip" freeze | norm > "$RUNNER_TEMP/pip.txt"
+          diff "$RUNNER_TEMP/pip.txt" "$RUNNER_TEMP/uv.txt" && echo "✓ stessi pacchetti"
+
+      # Due giri: in parallelo tutto tranne i test che scrivono per un momento
+      # nel repo vero, poi quelli in serie (scripts/tests/conftest.py). Insieme
+      # sono la stessa suite del job principale.
+      - name: pytest -n auto
+        run: |
+          python -m pytest scripts/tests -q -n auto -m "not scrive_nel_repo"
+          python -m pytest scripts/tests -q -m scrive_nel_repo
+
+  # D6 di PIANO-PIATTAFORMA (DM, 2026-10-23: «D6 b»): i convertitori entrano
+  # nella piattaforma, in canale TESTING. ruff li guarda gia' nel job
+  # principale; qui si installano le loro dipendenze vere (torch per CPU, come
+  # in requirements-completo.txt) e si prova che ogni modulo si importi su
+  # Python 3.13. La misura del 2026-10-23: 12 moduli su 20 senza torch, uno
+  # (fallback_manager) rotto da un NameError all'import, ora corretto. I test
+  # del motore leggono PDF che non stanno nel repo e qui non girano.
+  convertitori:
+    name: Convertitori in prova (import su 3.13) — non bloccante
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Installa uv (versione fissata)
+        run: pip install "uv==0.11.32"
+
+      - name: Dipendenze dei convertitori (torch per CPU)
+        run: |
+          uv pip install --system \
+            --extra-index-url https://download.pytorch.org/whl/cpu \
+            --index-strategy unsafe-best-match \
+            -r converters/pdf-to-md-engine/requirements.txt \
+            -r converters/Html_to_markdown/requirements.txt
+
+      - name: Ogni modulo del motore PDF si importa
+        working-directory: converters/pdf-to-md-engine
+        # src/config.py legge le due cartelle all'import (pydantic-settings,
+        # di solito da .env): qui bastano due cartelle qualsiasi.
+        env:
+          INPUT_DIR: /tmp/convertitori-in
+          OUTPUT_DIR: /tmp/convertitori-out
+        run: |
+          python - <<'EOF'
+          import importlib, pathlib, sys
+          sys.path.insert(0, ".")
+          rotti = []
+          moduli = sorted(pathlib.Path("src").glob("*.py"))
+          for f in moduli:
+              try:
+                  importlib.import_module("src." + f.stem)
+              except Exception as e:
+                  rotti.append(f"src.{f.stem}: {type(e).__name__}: {e}")
+          print(f"{len(moduli) - len(rotti)} moduli su {len(moduli)} si importano")
+          for r in rotti:
+              print("  ✗", r)
+          sys.exit(1 if rotti else 0)
+          EOF
+
+      - name: Il convertitore HTML parte
+        run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
+
   build:
     name: Build skill packages
     runs-on: ubuntu-24.04
@@ -436,7 +551,7 @@ jobs:
 
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: pip install -r requirements.txt

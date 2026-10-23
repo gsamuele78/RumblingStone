@@ -14,10 +14,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🔼 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 04 🏰 🏰 🏰 ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ 🏰 🏰 🏰
-05 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-06 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-07 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-08 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+05 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+06 🏰 🏰 🏰 ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ 🏰 🏰 🏰
+07 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+08 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 🔴 🔴 🔴 🔴 🔴 ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 09 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 10 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 11 🏰 🏰 🏰 ⬜ 🛢 ⬜ ⬜ ⬜ 🧱 🔵 🔵 ⬜ ⬜ ⬜ 🪑 🪑 ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 ⬜ ⬜ ⬜ ⬜ ⬜ 🚪 ⬜ ⬜
@@ -26,7 +26,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 14 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 15 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 16 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
-17 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
+17 🏰 🏰 🏰 ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ 🏰 🏰 🏰
 18 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 19 🏰 🏰 🏰 ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ ⬜ ⬜ 🏮 ⬜ 🏰 🏰 🏰
 20 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -37,7 +37,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 @tipo tattica interni
 @collega O02 ; M7-E-gallerie-1372.md AA22
 @mark 1 ; K12 ; Retroguardia: gli ultimi a scendere al Cuore
-@mark 2 ; O6 ; Orchi dalla scala delle gallerie (GS ½)
+@mark 2 ; O8 ; Orchi dalla scala delle gallerie (GS ½)
 @path Ritirata verso il Cuore della Montagna ; O2 O7 Y11 AD11 ; #2c8c3c
 @path Riconquista: dal Cuore verso le gallerie ; AD12 U12 O7 O2 ; #1d6fd8
 ```
@@ -56,7 +56,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 | Fazione | Unità | Token | Q.tà | GS/EL | Area (coord.) |
 |---|---|---|---|---|---|
 | Hammerfist | Retroguardia: gli ultimi a scendere al Cuore | 🔵 | 12 | — | J10–K13 |
-| Orda | Orchi dalla scala delle gallerie | 🔴 | 15 | GS ½ | M5–Q6 |
+| Orda | Orchi dalla scala delle gallerie | 🔴 | 15 | GS ½ | M7–Q8 |
 
 - **Disposizione iniziale**: [chi è dove e perché — vedi tabella Forze]
 - **Round 1-2**: [reazione al contatto]

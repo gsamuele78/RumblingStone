@@ -13,13 +13,12 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 17 decisioni aperte
+## Aspetta il DM: 16 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
 | Piano | # | Ambito | Domanda |
 |---|---|---|---|
-| `BOX-LUOGO` | D1 | B3 | **Il tetto del box di luogo: righe, frasi o caratteri?** Oggi la norma è ≤ 12 righe; *Dungeon* conta le frasi; i 300-500 caratteri non hanno fonte. Proposta: si tiene ≤ 12 righe come norma pesata; **≤ 4 frasi** diventa… |
 | `BOX-LUOGO` | D2 | B0 | **Le dimensioni nella prima frase del box** («camera quadrata di quaranta piedi»), come nel modello del 2026-10-01, o il paragone di ADR-0014 con le misure nei Dati per il DM? Proposta: resta ADR-0014. Dal modello ester… |
 | `BOX-LUOGO` | D3 | B2 | **Ogni box dichiara il suo tipo?** Per esempio `**Read-aloud (luogo · Salvatore lead).**`, con i tipi luogo, ingresso, round, rivelazione, chiusura. Sblocca la norma «niente creature nel box di luogo» e le soglie per ti… |
 | `BOX-LUOGO` | D4 | — | **I box già giocati fuori dalle nuove misure**: nei DEF di ARC-07, 27 box oltre i 500 caratteri e 61 oltre le quattro frasi. Proposta: non si toccano, come per D9 di PIANO-LETTORE: si spezzano solo se lo chiedi, e senza… |
@@ -27,9 +26,9 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `BOX-LUOGO` | D6 | B1 | **Il template d'area va in `campaign/templates/`**, accanto a quelli di sessione e di mappa, in due versioni (3.5 e PF1e)? Proposta: sì, tutte e due, con la creatura sempre come rimando al Bestiario e mai trascritta |
 | `CODA-SECONDO-LETTORE` | D2 | 3 | **Il campo *Etichetta regia* troncato in `PROMPT-IMMAGINI-07ILP.md`**: si cerca chi compila il file e si corregge lì, o si correggono a mano le 32 righe? *Proposta*: prima si cerca il generatore (`extract_scene_prompts`… |
 | `CODA-SECONDO-LETTORE` | D3 | 4 | **La *d* eufonica** (*legato a Aegis Fang*, *a area*): la vuoi come norma? *Proposta*: sì, *ad* solo davanti alla stessa vocale, scritta in `editorial-standards.md` e misurata; se no, resta com'è |
-| `LETTORE-PLAYTESTER` | D35 | F4 | **DEF-3, il rito quando va male** (i due 🔴 del playtester a freddo). **(a)** Gli Step 1-3 falliti dicono solo «riprova» (−2 cumulativo, 2d6 non letali, −10 min), senza tetto né uscita, e Conoscenze e Utilizzare Oggetti… |
-| `LETTORE-PLAYTESTER` | D36 | F4 | **I 🟠 di regole di DEF-1, DEF-2 e DEF-3 che chiedono canone**, raccolti dalle letture a freddo del 2026-09-30 (`esperimenti/f4-def1-def3/`). **(a)** DEF-1: la Benedizione «ignora le penalità» ma la tabella della gravità… |
-| `LETTORE-PLAYTESTER` | D37 | F4 | **DEF-1 Scena 7: Tordek da solo contro la Sentinella, e se cade?** (🔴 del playtester a freddo). L'anticamera immobilizza Thorik (Forza CD 28, che lui al massimo fa 27) e lascia Artemis prono e indifeso: se Tordek va a 0… |
+| `MASTER-DEF` | D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
+| `MASTER-DEF` | D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entran… |
+| `MASTER-DEF` | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; can… |
 | `RECUPERO` | D3 | L5 | **`RIPRESA-PR#D2` e la #106**: il collaudo SDXL accanto a Gemini tiene aperta la #106 da otto settimane, e il suo codice è già su `main` in forma nuova. La #230 installa ComfyUI e scarica SDXL sulla tua Debian 13. *Prop… |
 | `RECUPERO` | D4 | L5 | **`RIPRESA-PR#D11` (ADR-0049, l'AP originale)**: resta aperta dal 2026-09-11, legata a un avvocato IP e a VENDIBILITA, che non è autorizzato. *Proposta*: passa a voce di `adozioni-in-attesa.json` con la condizione «VEND… |
 | `RECUPERO` | D5 | L4 | **I ⬜ opzionali dei piani chiusi o fermi**, per gruppo. *Proposta*: (a) chiusi come «non si fa»: AUDIT-SCRIPTS (shellcheck lo fa AMBIENTE A6), IMPORT-ULTRACLEAR (migrazione delle ~30 mappe, ora COLLAUDO-MAPPE), RENDER-F… |
@@ -37,16 +36,11 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
 
-### Revisioni della prosa da approvare: 4
+### Revisioni della prosa da approvare: 0
 
 Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py applica` può ancora applicare. Ogni cartella ha un `LEGGIMI.md` con i passaggi interi.
 
-| Documento | Originale | Modifiche | Spuntate |
-|---|---|---:|---:|
-| [`REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-ARC08-11-PONTE-ARRIVO-r1.md) | `08_La Battaglia Di Hammerfist/ARC08-11-PONTE-ARRIVO.md` | 3 | 0 |
-| [`REVISIONE-ARC08-15-HANDOUTS-GIOCATORE-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-ARC08-15-HANDOUTS-GIOCATORE-r1.md) | `08_La Battaglia Di Hammerfist/ARC08-15-HANDOUTS-GIOCATORE.md` | 2 | 0 |
-| [`REVISIONE-Cerimonia-delle-100-Asce-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-Cerimonia-delle-100-Asce-r1.md) | `08_La Battaglia Di Hammerfist/Cerimonia-delle-100-Asce.md` | 5 | 0 |
-| [`REVISIONE-hammerfist_encounters-r1.md`](plans/scrittura/revisioni-pilota-ARC08/REVISIONE-hammerfist_encounters-r1.md) | `08_La Battaglia Di Hammerfist/hammerfist_encounters-La Battaglia-di-Hammerfist-Guida-agli-Scontri-final.md` | 3 | 0 |
+Nessuna.
 
 ## ▶ In corso: da qui si riparte: 7
 
@@ -55,7 +49,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
 | **Le PR aperte al 2026-10-10, dopo il merge di #229, #230 e #232, e cosa resta a ciascuna** *(rimisurate con `git merge-tree` su `e63fddd5`)*: **#216** la revisione della prosa (D13, D17, D38, la *Torre*, `MEMORIA.md`):… | [PIANO-RECUPERO](plans/PIANO-RECUPERO-DECISIONI-E-REVISIONI-INCOMPIUTE-2026-10.md) §2.6 · RIPRESA-PR | DM: il merge della PR del riallineamento e della #231, poi D3-D7 di RECUPERO |
-| **Il giro 3 delle letture su DEF-4**, con le mappe nuove, **un subagente alla volta**; poi DEF-5 | [LETTORE-E-PLAYTESTER](plans/PIANO-LETTORE-E-PLAYTESTER.md) F3-quinquies | agente, sessione nuova |
+| **Il giro 4 di conferma su DEF-4**; poi DEF-5. Le decisioni D35-D37 e D49-D63 sono applicate *(2026-10-12, PR #239)*; restano al DM D64-D68, i dettagli lasciati `[INFERRED]` | [LETTORE-E-PLAYTESTER](plans/PIANO-LETTORE-E-PLAYTESTER.md) F3-quinquies | DM, poi agente |
 | **Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi**, un lotto alla volta: 568 in tutto il repo, circa 400 nel contenuto | §12.1 | agente: il prossimo lotto è ARC-08 (32), poi ARC-09 (53), `campaign/` (50), `PG/` (22), il Bestiario (212) per ultimo perché è il più grande |
 | **Le regole di 3.5 fuori rete**: gli incantesimi nelle esportazioni PCGen di `Bestiario/pregen-pcgen/` | §8.3 | agente: una riga in `dnd-35-srd/references/resources.md` e la sua voce nel registro delle norme |
 | **DEF-1, 2, 3 nella forma del ciclo** *(30 settembre, sera)*: passi 1-4 fatti (scene, contratto, schede, apparati), box letti al tavolo invariati. Letture cieche: DEF-1 lettore 🔴 2, DEF-2 🔴 2 + 2, DEF-3 🔴 1 + 2, DEF-1 p… | LETTORE F4 · `esperimenti/f4-def1-def3/` | DM: D35 (il rito che va male), D36 (sei rilievi di regole), D37 (la Sentinella); D34 e D9 sono decise. Poi agente: applica e rilegge |
@@ -117,22 +111,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
-| 2026-10-10 | AGENT-SKILLS-ESTERNE (banco di L11) · A… | un LLM locale per la prosa: valutazione, I1 il voto non regala i box, I2 il pon… | 🟡 Valutazione in ADR-0089 (proposta): nessun modello locale sostituisce il generatore attuale; EQ-Bench Creative Writing v3 dà al migliore aperto da 27B 1671 E… |
-| 2026-10-10 | RECUPERO · REGISTRO-NORME | L7: le tre pratiche di Infra-Iam-PKI e AiAgentInfrastructure (D7, il DM: *«adot… | ✅ `plans/adr-prenotati.json` (lo `0088` alla #99) e `validate_docs`: `--prossimo-adr` salta i prenotati, `--sorgenti` rosso su un prenotato usato da altri o ar… |
-| 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · AGE… | il riallineamento dopo il merge di #229, #230 e #232 (richiesta del DM: ricontr… | 🟡 La #216 portata sul `main` nuovo: sette conflitti risolti tenendo le righe di `main` e aggiungendo le sue, `docs/tools/` rigenerato, §4 e `MEMORIA.md` rigene… |
-| 2026-10-10 | STATO-E-ORDINE | la memoria in un posto solo (ADR-0087) | ✅ Richiesta del DM: tutta la memoria in un posto, senza perdere parti o decisioni; il DM sceglie «nel repo, generata». `MEMORIA.md` in radice, generato da… |
-| 2026-10-10 | STATO-E-ORDINE · RECUPERO | il controllo prima del merge della #230 (richiesta del DM: le decisioni di ques… | ✅ `main` è fermo alla base (`f40ffeb`). Confronto delle tabelle `decisioni-dm` fra `main` e la #230: 0 decisioni perse o riaperte; aggiunte RESA D19-D30 e RECU… |
-| 2026-10-10 | RECUPERO · STATO-E-ORDINE · INDEX · REV… | la #230 diventa la PR più recente e completa (richiesta del DM): il piano di re… | ✅ Merge del ramo della #232 (`PIANO-RECUPERO`), con i conflitti risolti tenendo le righe aggiornate di questa PR. D1 e D2 di RECUPERO chiuse dalla richiesta de… |
-| 2026-10-10 | RECUPERO-DECISIONI-E-REVISIONI-INCOMPIU… | Apertura: audit di rami, PR e scratchpad | 🔵 Richiesta DM: cercare decisioni perse o interrotte e parti mai arrivate su `main`. Misurati 16 rami e 108 PR contro `f40ffeb`: quattro decisioni chiuse solo… |
-| 2026-10-10 | INDEX · RICERCA-AUDIT-COMPONENTI · REVI… | i sette casi dubbi del controllo dei piani, rifatti su commit, PR e rami (richi… | ✅ Nessuno era perso per sbaglio. Il più vicino: le schede A4 dei PG esistono solo nel ramo della #99 (`fce04907`, mai su `main`), tracciate come lotto 4g di RI… |
-| 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · DRAPPO-… | le tende del Campo Drow 1 (ADR-0042) e la numerazione dei lotti del Drappo (ric… | 🟡 **Tende**: la proposta di passare il blocco ⬛ a ⛺ cella per cella è stata provata e buttata: disegnava 483 tendine e trattava da tenda anche il cortile con l… |
-| 2026-10-10 | INDEX · CICLO-SESSIONE · VENDIBILITA ·… | il controllo di tutti i piani contro le loro checklist, il CHANGELOG e le tabel… | ✅ Un controllo in sola lettura su 55 righe dell'INDEX ha trovato 17 disallineamenti; verificati sui file uno per uno e corretti. I più gravi: CICLO-SESSIONE da… |
-| 2026-10-10 | RESA-E-ASSET · COLLAUDO-MAPPE · AMBIENT… | allineamento dei piani a ciò che è stato fatto e deciso il 2026-10-09 (richiest… | 🟡 Le righe dell'INDEX dei quattro piani toccati dalla #230 dicevano ancora 0% o 5% (RICERCA-MESTIERE, AMBIENTE) o D1-D22 (RESA): ora portano D1-D30, R8 e R4-qu… |
-| 2026-10-09 | RESA-E-ASSET-DELLE-MAPPE · COLLAUDO-MAP… | D28-D30: la pagina di scelta, M7-C corretta, le griglie di PF-4 e del Campo Dro… | 🟡 Il DM: la pagina alla cieca non diceva cosa mostrava, aveva coppie identiche e non permetteva «nessuna». Causa delle coppie identiche: simboli che la legenda… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le tre piante una taglia sopra (DM: grandi abbastanza da reggere l'orda di ~10.… | ✅ Rethmar 110 ha, ~18.000 ab., 4,3 km di mura, 95 torri, servono ~3.400 difensori; Dauth 42 ha, ~7.000 ab., 2,55 km, 59 torri, servono ~2.000 difensori e ne ha… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le piante nuove di Rethmar, Dauth e Channathgate (DM: Rethmar sull'impianto del… | ✅ Rethmar 50 ha, ~8.400 ab. con i sobborghi, 70 torri, 4 porte e la poterna, niente fossato; Dauth 17 ha, ~2.650 ab., 3 porte maggiori e la Porta Est ridotta a… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
+| 2026-10-21 | AVVENTURE-COMMUNITY | contratto del Seme (seguito del lotto 6): la versione scelta al cieco entra in… | ✅ testo del DM intatto, il contratto spezzato in quattro box sotto il tetto delle 12 righe; box misurati da 536 a 544, residui 20 |
+| 2026-10-21 | MAPPE-CAMPO (esperimento) | mappe gravi e medie di ARC-07 e ARC-09 a scala reale | ✅ Campi Drow 1 e 2, Cerchio Sacro (tre griglie da 60 m), Campo C, PF-1/3/4, S-2, CM-1, T-2, T-6, fucine M7-D/M7-F, Foresta in Fiamme; collaudo da 69 a 23 error… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 17 aperte, 212 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 16 aperte, 283 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
