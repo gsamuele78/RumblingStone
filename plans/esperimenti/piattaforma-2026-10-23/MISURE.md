@@ -201,3 +201,18 @@ canale testing deve trovare prima che xdist blocchi la CI. Per salire a
 stable (P4) quei test devono scrivere in una cartella temporanea, oppure
 finire nello stesso processo con `--dist loadfile`.
 
+**Seguito, stesso giorno.** Il job `testing` della PR ha bocciato un quarto
+test (`test_verifica_sezione6`, che esegue `validate_docs --sorgenti` mentre un
+altro processo aveva un ADR finto in `plans/adr/`). Chi scrive nel repo vero
+l'ha detto una misura, non una ricerca nel codice: un audit hook di Python su
+`open` in scrittura, caricato con un `sitecustomize.py` messo in `PYTHONPATH`,
+che annota il test in corso (`PYTEST_CURRENT_TEST`) e il file, durante l'intera
+suite in serie. Fuori dalle cartelle temporanee scrivono cinque moduli:
+`test_validate_docs`, `test_norme_editoriali`, `test_orchestrazione_skill`,
+`test_archivi_non_indicizzati` e `test_dm_volume` (91 prove). Prendono il
+marcatore `scrive_nel_repo` in `scripts/tests/conftest.py`, e il job `testing`
+li esegue in serie dopo il giro in parallelo. Risultato in locale: tre giri di
+`-n auto -m "not scrive_nel_repo"` uguali (1.925 passate, sempre lo stesso
+fallimento di `test_fase1`, che dipende dal clone superficiale), 70 s, più 15 s
+per le 91 in serie. Il conto dei 14 giorni per promuovere xdist riparte da qui.
+

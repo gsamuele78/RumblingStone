@@ -474,8 +474,13 @@ jobs:
           "$RUNNER_TEMP/pipvenv/bin/pip" freeze | norm > "$RUNNER_TEMP/pip.txt"
           diff "$RUNNER_TEMP/pip.txt" "$RUNNER_TEMP/uv.txt" && echo "✓ stessi pacchetti"
 
+      # Due giri: in parallelo tutto tranne i test che scrivono per un momento
+      # nel repo vero, poi quelli in serie (scripts/tests/conftest.py). Insieme
+      # sono la stessa suite del job principale.
       - name: pytest -n auto
-        run: python -m pytest scripts/tests -q -n auto
+        run: |
+          python -m pytest scripts/tests -q -n auto -m "not scrive_nel_repo"
+          python -m pytest scripts/tests -q -m scrive_nel_repo
 
   # D6 di PIANO-PIATTAFORMA (DM, 2026-10-23: «D6 b»): i convertitori entrano
   # nella piattaforma, in canale TESTING. ruff li guarda gia' nel job
