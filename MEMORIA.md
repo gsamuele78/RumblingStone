@@ -111,6 +111,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | AVVENTURE-COMMUNITY | lotto 7e, correzione dopo il merge con main: `voto_scrittura` resta | ✅ La #234 (ADR-0089) ha portato su main `banco_prosa_locale`, che fa votare le corse del modello locale a `voto_scrittura`: toglierlo spezzava quel flusso. Il… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
@@ -122,7 +123,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
-| 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
 
 ## Le misure che si portano dietro
 

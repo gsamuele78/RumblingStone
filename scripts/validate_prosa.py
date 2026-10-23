@@ -148,7 +148,7 @@ TRATTINO = re.compile(r"—|(?<![0-9])–|–(?![0-9])")
 
 # «Sembra» e «pare» nel read-aloud (read-aloud-adulti.md §1 punto 7, D13 e D17
 # di AGENT-SKILLS-ESTERNE). Stavano in `voto_scrittura.py`, il banco di L11,
-# tolto il 2026-10-22 (lotto 7e di AVVENTURE-COMMUNITY): la regex serve a MQM
+# che dal lotto 7e di AVVENTURE-COMMUNITY li riusa da qui: la regex serve a MQM
 # (`box_sembra_pare`) e a `ciclo_prosa segnala`, e vive qui con gli altri
 # rilevatori di prosa. «Come se» resta fuori: è un paragone.
 # ⚠️ Il 2026-10-02 mancavano il participio e il passato remoto («ti è

@@ -4001,86 +4001,6 @@
       ]
     },
     {
-      "id": "misura_sintassi",
-      "path": "scripts/misura_sintassi.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/misura_sintassi.py [--file X.md] [--json] [--per-box]",
-      "summary": "I calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
-      "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",
-      "stability": "beta",
-      "stdlib_only": false,
-      "external_bins": [],
-      "external_deps": [],
-      "optional_deps": [
-        "spacy",
-        "it_core_news_md"
-      ],
-      "args": [
-        {
-          "name": "--file",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": true,
-          "desc": "Un master da misurare (ripetibile); senza, la base ARC-07 DEF e ARC-08."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Uscita JSON."
-        },
-        {
-          "name": "--per-box",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Tutti i box, non solo i peggiori."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "07_il Portale Della Forgia Eterna/ARC07-DEF-*.md",
-          "kind": "markdown",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [],
-      "exit_codes": {
-        "0": "ok, anche senza spaCy (misura saltata)",
-        "2": "file assente"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Stesso modello spaCy, stesso risultato; il modello CC BY-NC-SA 3.0 non entra nel repo."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python3 scripts/misura_sintassi.py --help",
-      "tests": [
-        "scripts/tests/test_misura_sintassi.py"
-      ],
-      "docs": [
-        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
-        "plans/esperimenti/qualita-misurabile-2026-10-22/sintassi/README.md"
-      ]
-    },
-    {
       "id": "new-campaign-group",
       "path": "scripts/new-campaign-group.sh",
       "category": "G-orchestration-governance",
@@ -7032,151 +6952,6 @@
       "idempotent": true
     },
     {
-      "id": "coerenza_campagna",
-      "path": "scripts/coerenza_campagna.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
-      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
-      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
-      "stability": "beta",
-      "stdlib_only": false,
-      "external_bins": [
-        "python3"
-      ],
-      "external_deps": [
-        "pyyaml"
-      ],
-      "args": [
-        {
-          "name": "cmd",
-          "type": "subcommand",
-          "required": true,
-          "default": null,
-          "choices": [
-            "fronti",
-            "fatti",
-            "tutto"
-          ],
-          "repeatable": false,
-          "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
-        },
-        {
-          "name": "--state",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
-        },
-        {
-          "name": "--bestiario",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(fatti, tutto) Legge anche le voci del Bestiario le cui entita' compaiono negli archi."
-        },
-        {
-          "name": "--tutti",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(fatti) Legge anche i file fuori perimetro (ERRATA, CORREZIONE, ricalibrazioni, P1-P3)."
-        },
-        {
-          "name": "--out",
-          "type": "path",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(tutto) Cartella dove scrivere coerenza.json e coerenza.txt."
-        },
-        {
-          "name": "--rigido",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(tutto) Exit 1 se i fronti hanno violazioni."
-        },
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "(fronti, fatti) Uscita machine-readable."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/coerenza/fronti-*.yaml",
-          "kind": "yaml",
-          "required": false,
-          "schema": "scripts/schemas/fronti_orologi.schema.json"
-        },
-        {
-          "path": "07_il Portale Della Forgia Eterna/",
-          "kind": "directory",
-          "required": false
-        },
-        {
-          "path": "campaign/state.yaml",
-          "kind": "yaml",
-          "required": false,
-          "schema": "scripts/schemas/campaign_state.schema.json"
-        }
-      ],
-      "outputs": [
-        {
-          "path": "<--out>/coerenza.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false
-        },
-        {
-          "path": "<--out>/coerenza.txt",
-          "kind": "text",
-          "overwrites": true,
-          "generated_header": false
-        }
-      ],
-      "exit_codes": {
-        "0": "nessuna violazione nei fronti, o misura eseguita (fatti, tutto)",
-        "1": "violazioni nei fronti (fronti; tutto solo con --rigido)",
-        "2": "errore d'uso, file o cartella mancante, pyyaml assente"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Solo regex e ordinamenti stabili; nessun modello."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false,
-        "notes": "Scrive solo con `tutto`, nella cartella --out."
-      },
-      "idempotent": true,
-      "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
-      "produces_schema": null,
-      "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
-      "tests": [
-        "scripts/tests/test_coerenza_campagna.py"
-      ],
-      "docs": [
-        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
-      ]
-    },
-    {
       "id": "validate_state",
       "path": "scripts/validate_state.py",
       "category": "C-post-session-canon",
@@ -8111,140 +7886,6 @@
       ]
     },
     {
-      "id": "migliora_prosa",
-      "path": "scripts/migliora_prosa.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito|languagetool} ...",
-      "summary": "La pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
-      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
-      "stability": "beta",
-      "stdlib_only": true,
-      "external_bins": [],
-      "external_deps": [],
-      "args": [
-        {
-          "name": "dataset",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
-        },
-        {
-          "name": "modello",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt; --varianti [--tratti-esterni FILE] confronta base, +LT, +ppl, +Stanza, +tutto con McNemar."
-        },
-        {
-          "name": "scegli",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Box da migliorare con un seme: --seme, --n, --uscita."
-        },
-        {
-          "name": "migliora",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "FILE --box N --candidate C.md [--scelte S.json --id P01] [--lt URL]: filtra, ordina, dice la migliore."
-        },
-        {
-          "name": "campione",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
-        },
-        {
-          "name": "esito",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
-        },
-        {
-          "name": "languagetool",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": null,
-          "repeatable": false,
-          "desc": "[--url U] [--tratti-esterni F] [--scrivi] | --campione N --seme S --uscita F: rilievi di LanguageTool, precisione, calibrazione, varianti (languagetool/MISURE.txt)."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/COPPIE-VOTATE.json",
-          "kind": "json",
-          "required": false,
-          "schema": null
-        }
-      ],
-      "outputs": [
-        {
-          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/MISURE.txt",
-          "kind": "text",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        },
-        {
-          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/TRATTI-LT.json",
-          "kind": "json",
-          "overwrites": true,
-          "generated_header": false,
-          "schema": null
-        }
-      ],
-      "exit_codes": {
-        "0": "ok"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": "--seme",
-        "notes": "Il modello è deterministico (Newton, nessun caso); scelta dei box e ordine delle coppie dipendono dal seme. Con o senza spaCy i tratti cambiano (livelli_max). languagetool e --lt chiamano solo un server locale (localhost:8081 o LANGUAGETOOL_URL)."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": true
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/migliora_prosa.py --help",
-      "tests": [
-        "scripts/tests/test_migliora_prosa.py"
-      ],
-      "docs": [
-        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/README.md",
-        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
-        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/README.md"
-      ]
-    },
-    {
       "id": "domande_developer",
       "path": "scripts/domande_developer.py",
       "category": "G-orchestration-governance",
@@ -8926,6 +8567,370 @@
       "docs": [
         "plans/PIANO-AGENT-SKILLS-ESTERNE.md",
         "plans/PIANO-LETTORE-E-PLAYTESTER.md"
+      ]
+    },
+    {
+      "id": "voto_scrittura",
+      "path": "scripts/voto_scrittura.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/voto_scrittura.py [FILE --caso SNN] [--corse] [--emit] [--check]",
+      "summary": "L11 (D11 del 2026-10-01): il voto deterministico sui testi scritti con e senza le skill di scrittura. Ogni controllo chiama un rilevatore che esiste (misura_craft, validate_prosa) e una norma registrata; i casi in plans/scrittura/casi.json seguono lo schema di evals.json di skill-creator, a metà fra taratura e verifica. «Sembra/pare» è un controllo dal 2026-10-01 (D13); dal 2026-10-02 comprende participio e passato remoto.",
+      "use_case": "«Un agente che carica la skill di scrittura rispetta le norme registrate più di uno che non la carica?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Un testo da votare."
+        },
+        {
+          "name": "--caso",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "L'id del caso per il file (S01…)."
+        },
+        {
+          "name": "--corse",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La tabella delle corse."
+        },
+        {
+          "name": "--emit",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive plans/scrittura/voti.json."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se voti.json non corrisponde alle corse."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/scrittura/casi.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "plans/scrittura/corse/*/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/scrittura/voti.json",
+          "kind": "json",
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "voti.json non allineato (--check)",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Dipende solo dai testi delle corse e dai rilevatori."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/voto_scrittura.py --check",
+      "tests": [
+        "scripts/tests/test_voto_scrittura.py"
+      ],
+      "docs": [
+        "plans/PIANO-AGENT-SKILLS-ESTERNE.md"
+      ]
+    },
+    {
+      "id": "banco_prosa_locale",
+      "path": "scripts/banco_prosa_locale.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/banco_prosa_locale.py {corsa --url URL --modello M [--etichetta E] [--ripetizione N] [--contesto pieno|ridotto|nessuno] [--dry-run] | coppie --a CORSA --b CORSA -o FOGLIO.md | esito FOGLIO.md [--giudice FOGLIO.md]}",
+      "summary": "ADR-0089 (I2, 2026-10-10): un modello locale sugli stessi dieci casi delle skill di scrittura. `corsa` chiama un endpoint compatibile OpenAI (llama-server, Ollama, vLLM) e scrive plans/scrittura/corse/L-<etichetta>-<n>/ con corsa.json (modello, parametri, tempi), che voto_scrittura vota come le altre corse; senza servizio esce 3 e non scrive niente (ADR-0067). `coppie` prepara un foglio alla cieca per il DM con la chiave a parte; `esito` dà la quota di preferenze con l'intervallo di Wilson e, con --giudice, il κ di Cohen e l'accordo grezzo.",
+      "use_case": "«Un modello che gira sul mio portatile scrive la prosa del tavolo abbastanza bene da usarlo, e come lo so senza fidarmi delle classifiche altrui?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "corsa",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Genera i dieci casi contro il modello locale."
+        },
+        {
+          "name": "--url",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Endpoint compatibile OpenAI, es. http://127.0.0.1:8080/v1 (o BANCO_URL)."
+        },
+        {
+          "name": "--modello",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome del modello come lo chiama il server (o BANCO_MODELLO)."
+        },
+        {
+          "name": "--etichetta",
+          "type": "str",
+          "required": false,
+          "default": "locale",
+          "choices": null,
+          "repeatable": false,
+          "desc": "Nome della condizione: la cartella e' L-<etichetta>-<n>."
+        },
+        {
+          "name": "--ripetizione",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Numero della ripetizione."
+        },
+        {
+          "name": "--contesto",
+          "type": "choice",
+          "required": false,
+          "default": "pieno",
+          "choices": [
+            "pieno",
+            "ridotto",
+            "nessuno"
+          ],
+          "repeatable": false,
+          "desc": "Quanto delle skill entra nel prompt."
+        },
+        {
+          "name": "--insieme",
+          "type": "choice",
+          "required": false,
+          "default": "tutti",
+          "choices": [
+            "tutti",
+            "taratura",
+            "verifica"
+          ],
+          "repeatable": false,
+          "desc": "Quali casi."
+        },
+        {
+          "name": "--caso",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Solo questo caso (ripetibile), es. S02 per misurare i tempi prima della corsa intera."
+        },
+        {
+          "name": "--temperatura",
+          "type": "float",
+          "required": false,
+          "default": 0.7,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Temperatura di campionamento."
+        },
+        {
+          "name": "--seme",
+          "type": "int",
+          "required": false,
+          "default": 1,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Seme passato al server."
+        },
+        {
+          "name": "--max-token",
+          "type": "int",
+          "required": false,
+          "default": 1500,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tetto dei token in uscita."
+        },
+        {
+          "name": "--tetto-fonte",
+          "type": "int",
+          "required": false,
+          "default": 12000,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Caratteri massimi dell'estratto del master."
+        },
+        {
+          "name": "--timeout",
+          "type": "int",
+          "required": false,
+          "default": 900,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Secondi di attesa per caso."
+        },
+        {
+          "name": "--dry-run",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Stampa le dimensioni dei prompt: nessuna rete, nessun file."
+        },
+        {
+          "name": "coppie",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Foglio alla cieca fra due corse, chiave a parte."
+        },
+        {
+          "name": "--a",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Corsa di riferimento, es. B-con-1."
+        },
+        {
+          "name": "--b",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Corsa sfidante, es. L-gemma26moe-1."
+        },
+        {
+          "name": "-o",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Dove scrivere il foglio."
+        },
+        {
+          "name": "esito",
+          "type": "subcommand",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Legge il foglio compilato e la chiave."
+        },
+        {
+          "name": "--giudice",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Lo stesso foglio compilato da un giudice automatico."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/scrittura/casi.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "skills/rumblingstone-narrative-style/references/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/scrittura/corse/L-<etichetta>-<n>/*.md",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/scrittura/corse/L-<etichetta>-<n>/corsa.json",
+          "kind": "json",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso (manca --url/--modello, corsa gia' esistente)",
+        "3": "servizio non raggiungibile: nessun file scritto"
+      },
+      "determinism": {
+        "deterministic": false,
+        "seed_flag": "--seme",
+        "notes": "corsa dipende dal modello e dal server; coppie e' deterministico col seme; esito e --dry-run sono deterministici."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": false,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/banco_prosa_locale.py corsa --dry-run",
+      "tests": [
+        "scripts/tests/test_banco_prosa_locale.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md"
       ]
     },
     {
@@ -10184,6 +10189,365 @@
         "notes": "sync modifica le note dei rilasci GitHub con gh."
       },
       "ci_smoke": "python3 scripts/release_notes.py notes 1.0.0"
+    },
+    {
+      "id": "misura_sintassi",
+      "path": "scripts/misura_sintassi.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/misura_sintassi.py [--file X.md] [--json] [--per-box]",
+      "summary": "I calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
+      "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [],
+      "optional_deps": [
+        "spacy",
+        "it_core_news_md"
+      ],
+      "args": [
+        {
+          "name": "--file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Un master da misurare (ripetibile); senza, la base ARC-07 DEF e ARC-08."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita JSON."
+        },
+        {
+          "name": "--per-box",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutti i box, non solo i peggiori."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "07_il Portale Della Forgia Eterna/ARC07-DEF-*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok, anche senza spaCy (misura saltata)",
+        "2": "file assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso modello spaCy, stesso risultato; il modello CC BY-NC-SA 3.0 non entra nel repo."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_sintassi.py --help",
+      "tests": [
+        "scripts/tests/test_misura_sintassi.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/sintassi/README.md"
+      ]
+    },
+    {
+      "id": "coerenza_campagna",
+      "path": "scripts/coerenza_campagna.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
+      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "cmd",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "fronti",
+            "fatti",
+            "tutto"
+          ],
+          "repeatable": false,
+          "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
+        },
+        {
+          "name": "--state",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+        },
+        {
+          "name": "--bestiario",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti, tutto) Legge anche le voci del Bestiario le cui entita' compaiono negli archi."
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti) Legge anche i file fuori perimetro (ERRATA, CORREZIONE, ricalibrazioni, P1-P3)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Cartella dove scrivere coerenza.json e coerenza.txt."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Exit 1 se i fronti hanno violazioni."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti, fatti) Uscita machine-readable."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/coerenza/fronti-*.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/fronti_orologi.schema.json"
+        },
+        {
+          "path": "07_il Portale Della Forgia Eterna/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--out>/coerenza.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false
+        },
+        {
+          "path": "<--out>/coerenza.txt",
+          "kind": "text",
+          "overwrites": true,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "nessuna violazione nei fronti, o misura eseguita (fatti, tutto)",
+        "1": "violazioni nei fronti (fronti; tutto solo con --rigido)",
+        "2": "errore d'uso, file o cartella mancante, pyyaml assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Solo regex e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive solo con `tutto`, nella cartella --out."
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
+      "tests": [
+        "scripts/tests/test_coerenza_campagna.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
+      ]
+    },
+    {
+      "id": "migliora_prosa",
+      "path": "scripts/migliora_prosa.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito|languagetool} ...",
+      "summary": "La pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
+      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "dataset",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
+        },
+        {
+          "name": "modello",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt; --varianti [--tratti-esterni FILE] confronta base, +LT, +ppl, +Stanza, +tutto con McNemar."
+        },
+        {
+          "name": "scegli",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Box da migliorare con un seme: --seme, --n, --uscita."
+        },
+        {
+          "name": "migliora",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "FILE --box N --candidate C.md [--scelte S.json --id P01] [--lt URL]: filtra, ordina, dice la migliore."
+        },
+        {
+          "name": "campione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
+        },
+        {
+          "name": "esito",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+        },
+        {
+          "name": "languagetool",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "[--url U] [--tratti-esterni F] [--scrivi] | --campione N --seme S --uscita F: rilievi di LanguageTool, precisione, calibrazione, varianti (languagetool/MISURE.txt)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/COPPIE-VOTATE.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/MISURE.txt",
+          "kind": "text",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/TRATTI-LT.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "Il modello è deterministico (Newton, nessun caso); scelta dei box e ordine delle coppie dipendono dal seme. Con o senza spaCy i tratti cambiano (livelli_max). languagetool e --lt chiamano solo un server locale (localhost:8081 o LANGUAGETOOL_URL)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/migliora_prosa.py --help",
+      "tests": [
+        "scripts/tests/test_migliora_prosa.py"
+      ],
+      "docs": [
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/README.md",
+        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/README.md"
+      ]
     }
   ]
 }

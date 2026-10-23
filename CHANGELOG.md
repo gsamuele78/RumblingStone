@@ -21,8 +21,11 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
 
+### Modificato
+- `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
+
 ### Rimosso
-- `voto_scrittura` (il controllo del «sembra» passa a `validate_prosa`) e `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
+- `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
 
 ## [1.0.0] - 2026-10-23
 
