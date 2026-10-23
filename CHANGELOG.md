@@ -17,6 +17,14 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 
 ## [Non rilasciato]
 
+### Aggiunto
+- Le schede dei PG come dato: `PG/schede/<pg>.yaml` (schema
+  `scripts/schemas/pg_scheda.schema.json`) con le caratteristiche e i
+  modificatori permanenti, ognuno con la sua fonte, e la vista `<pg>.md`
+  generata. `validate_pg.py` e `render_pg.py --check` sono cancelli della CI.
+  Classe, PF e stato restano in `campaign/state.yaml` (ADR-0088).
+- `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
+
 ## [1.0.0] - 2026-10-23
 
 Il primo rilascio con un numero. Raccoglie il lavoro fatto dal 2026-09-30 a
