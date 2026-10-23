@@ -167,5 +167,128 @@ class TestCampioneEdEsito(unittest.TestCase):
             self.assertEqual(MP.carica_voti(p)[0]["fonte"], "pipeline-2026-10-22")
 
 
+class TestVarianti(unittest.TestCase):
+    VOTI = [{"id": f"c{i}", "pari": False, "originale": None,
+             "vincente": f"Pietra fredda e nera numero {i}, sotto la luce del fuoco.",
+             "perdente": f"Pietra numero {i}."} for i in range(6)]
+
+    def test_esterni_e_tratti_mancanti(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "t.json"
+            p.write_text(json.dumps({"_nota": "x", "c0": {"vincente": {"ppl": math.e, "token": 20},
+                                                          "perdente": {"ppl": 1.0, "token": 5}},
+                                     "ignoto": {"vincente": {"ppl": 3}}}), encoding="utf-8")
+            est = MP.carica_esterni([p], self.VOTI)
+        t = est[MP.chiave_esterni(self.VOTI[0]["vincente"])]
+        self.assertAlmostEqual(t["nll_token"], 1.0)
+        self.assertGreater(t["token_per_parola"], 1)
+        # un box senza tratti esterni: la differenza vale zero, il modello funziona lo stesso
+        self.assertEqual(MP._diff_esterni("nuovo", "altro", ["nll_token"], est), [0.0])
+        r = MP.valida(self.VOTI, ["nll_token"], est)
+        self.assertEqual(r["n_tratti"], len(MP.TRATTI) + 1)
+        self.assertEqual(len(r["esiti"]), 6)
+
+    def test_mcnemar(self):
+        self.assertEqual(MP.mcnemar_p([True, True, False], [True, False, True])[:2], (1, 1))
+        self.assertAlmostEqual(MP.mcnemar_p([True] * 3, [True] * 3)[2], 1.0)
+        self.assertLess(MP.mcnemar_p([False] * 10, [True] * 10)[2], 0.01)
+
+    def test_varianti_senza_tratti_si_saltano(self):
+        righe = MP.confronta_varianti(self.VOTI, {})
+        self.assertEqual(righe[0]["variante"], "base")
+        self.assertTrue(all("saltata" in r for r in righe[1:]))
+        self.assertIn("saltata", MP.rapporto_varianti(righe))
+
+
+def _rilievo(parola, gruppo="refusi", regola="MORFOLOGIK_RULE_IT_IT"):
+    return {"regola": regola, "categoria": "TYPOS", "gruppo": gruppo, "parola": parola,
+            "offset": 0, "messaggio": "", "contesto": parola}
+
+
+class TestLanguageTool(unittest.TestCase):
+    """Senza server: le chiamate di rete sono sostituite."""
+    DIZ = {"thorik", "nanic", "nanico"}
+
+    def test_gruppi(self):
+        self.assertEqual(MP.lt_gruppo("MORFOLOGIK_RULE_IT_IT", "TYPOS"), "refusi")
+        self.assertEqual(MP.lt_gruppo("ER_01_001", "CAT12"), "grammatica")
+        self.assertEqual(MP.lt_gruppo("ST_03_001", "CAT10"), "stile")
+        self.assertEqual(MP.lt_gruppo("ITALIAN_WORD_REPEAT_RULE", "MISC"), "ripetizioni")
+        self.assertEqual(MP.lt_gruppo("UNPAIRED_BRACKETS", "PUNCTUATION"), "punteggiatura")
+
+    def test_dizionario_e_flessioni(self):
+        self.assertTrue(MP.nome_noto("Thorik", self.DIZ))
+        self.assertTrue(MP.nome_noto("naniche", self.DIZ))
+        self.assertFalse(MP.nome_noto("avalanga", self.DIZ))
+        c = MP.conta_rilievi([_rilievo("Thorik"), _rilievo("avalanga"),
+                              _rilievo("ad ogni", "stile", "ST_03_001")], self.DIZ)
+        self.assertEqual((c["refusi_grezzi"], c["refusi"], c["stile"]), (2, 1, 1))
+
+    def test_dizionario_del_glossario(self):
+        with tempfile.TemporaryDirectory() as d:
+            g = Path(d) / "G.md"
+            g.write_text("| Italiano | Inglese |\n|---|---|\n| *Barbadiferro* | Ironbeard |\n", encoding="utf-8")
+            vecchio = MP._DIZIONARIO
+            MP._DIZIONARIO = None
+            try:
+                diz = MP.dizionario_nomi(g)
+            finally:
+                MP._DIZIONARIO = vecchio
+        self.assertIn("barbadiferro", diz)
+        self.assertIn("ironbeard", diz)
+
+    def test_precisione_e_gruppi_affidabili(self):
+        letti = ([{"gruppo": "grammatica", "vero": True}] * 5 + [{"gruppo": "grammatica", "vero": False}]
+                 + [{"gruppo": "stile", "vero": True}]
+                 + [{"gruppo": "refusi", "vero": False, "nome_noto": True}] * 4
+                 + [{"gruppo": "refusi", "vero": None}])
+        p = MP.precisione(letti)
+        self.assertAlmostEqual(p["grammatica"]["precisione"], 5 / 6)
+        self.assertNotIn("refusi", p)          # i nomi noti non contano, i non letti nemmeno
+        self.assertEqual(MP.gruppi_affidabili(p), {"grammatica"})   # stile: un solo rilievo letto
+
+    def test_campione_con_seme(self):
+        ril = [_rilievo(w) for w in ("Thorik", "avalanga", "tump", "lisciva")] + \
+              [_rilievo("a morsi", "grammatica", "ER_01_001")]
+        a = MP.campione_rilievi(ril, 3, 7, self.DIZ)
+        self.assertEqual(a, MP.campione_rilievi(ril, 3, 7, self.DIZ))
+        self.assertEqual(a[0]["gruppo"], "grammatica")
+        self.assertEqual(len(a), 3)
+        self.assertNotIn("Thorik", [r["parola"] for r in a])
+        self.assertTrue(all(r["vero"] is None for r in a))
+
+    def test_filtro_scarta_chi_aggiunge_errori(self):
+        finto = MP.ControlloLT("http://finto", {"grammatica"})
+        vecchio = MP.lt_controlla
+        MP.lt_controlla = lambda t, url=None: (
+            [_rilievo("e", "grammatica", "X")] if "errore" in t else [])
+        try:
+            c = ORIGINALE.replace("Il vecchio alza", "Accanto all'incudine il vecchio alza") + " Un errore."
+            motivi = MP.filtra(ORIGINALE, c, finto)
+            self.assertIn("LanguageTool, 1 rilievi di grammatica in più", motivi)
+            self.assertFalse(any("LanguageTool" in m for m in MP.filtra(ORIGINALE, ORIGINALE, finto)))
+        finally:
+            MP.lt_controlla = vecchio
+
+    def test_senza_server_si_salta_ed_esce_zero(self):
+        vecchio = MP.lt_versione
+        MP.lt_versione = lambda url=None: None
+        try:
+            self.assertIsNone(MP.controllo_lt("http://finto"))
+            self.assertEqual(MP.main(["languagetool", "--url", "http://finto"]), 0)
+        finally:
+            MP.lt_versione = vecchio
+
+    def test_calibrazione_segno(self):
+        voti = [{"pari": False, "vincente": f"v{i}", "perdente": f"p{i}"} for i in range(3)]
+        conti = {}
+        for i in range(3):
+            conti[MP.chiave_esterni(f"v{i}")] = {**{g: 0 for g in MP.GRUPPI_LT}, "refusi_grezzi": 0}
+            conti[MP.chiave_esterni(f"p{i}")] = {**{g: 1 for g in MP.GRUPPI_LT}, "refusi_grezzi": 1}
+        s = {r["gruppo"]: r for r in MP.segno_per_gruppo(voti, conti)}
+        self.assertEqual(s["grammatica"]["vincente_meno"], 3)
+        self.assertEqual(s["grammatica"]["p_bonferroni"], min(1.0, s["grammatica"]["p"] * 6))
+
+
 if __name__ == "__main__":
     unittest.main()

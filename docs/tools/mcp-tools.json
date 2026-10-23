@@ -3231,9 +3231,9 @@
     },
     {
       "name": "migliora_prosa",
-      "description": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»\n\nLa pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici.",
+      "description": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»\n\nLa pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
       "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
-      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito} ...",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito|languagetool} ...",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -3243,7 +3243,7 @@
           },
           "modello": {
             "type": "string",
-            "description": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt."
+            "description": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt; --varianti [--tratti-esterni FILE] confronta base, +LT, +ppl, +Stanza, +tutto con McNemar."
           },
           "scegli": {
             "type": "string",
@@ -3251,7 +3251,7 @@
           },
           "migliora": {
             "type": "string",
-            "description": "FILE --box N --candidate C.md [--scelte S.json --id P01]: filtra, ordina, dice la migliore."
+            "description": "FILE --box N --candidate C.md [--scelte S.json --id P01] [--lt URL]: filtra, ordina, dice la migliore."
           },
           "campione": {
             "type": "string",
@@ -3260,13 +3260,19 @@
           "esito": {
             "type": "string",
             "description": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+          },
+          "languagetool": {
+            "type": "string",
+            "description": "[--url U] [--tratti-esterni F] [--scrivi] | --campione N --seme S --uscita F: rilievi di LanguageTool, precisione, calibrazione, varianti (languagetool/MISURE.txt)."
           }
         },
         "required": [],
         "additionalProperties": false
       },
       "outputs": [
-        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json"
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/MISURE.txt",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/TRATTI-LT.json"
       ],
       "exit_codes": {
         "0": "ok"

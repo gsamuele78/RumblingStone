@@ -93,3 +93,13 @@ la tabella la dà a V, e la riga «spezzare le subordinate: perso 2 su 2 (B08
 puro, B09)» diventa 1 su 2. È anche la regola 4 di `read-aloud-adulti.md`
 §2-ter («ha perso tutte e due le volte»). Qui `VOTI.json` segue la chiave; la
 correzione dei due documenti è da decidere.
+
+## LanguageTool, Stanza e perplessità (2026-10-23)
+
+La prova di [`../languagetool/`](../languagetool/README.md) ha aggiunto alla
+pipeline LanguageTool 6.8 in locale, come filtro facoltativo (`migliora --lt`),
+e ha confrontato in leave-one-out le varianti del modello con i tratti di
+LanguageTool, di Stanza e della perplessità. Nessuna batte il base (McNemar
+appaiato, soglia scritta prima): il modello resta quello di undici tratti, e
+il filtro LT non scarta nulla perché nessun gruppo di rilievi arriva a 0,70 di
+precisione.
