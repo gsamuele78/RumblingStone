@@ -3,7 +3,7 @@
 > **Cos'è**: l'esecuzione delle cinque istruzioni date dal DM il 2026-09-20,
 > tre delle quali chiudono altrettante code lasciate aperte dalla PR #151.
 >
-> **Stato**: 🟡 in corso (2026-09-20) · **Ramo**: `claude/open-prs-plans-review-fu4qcp`
+> **Stato**: ✅ **chiuso** (2026-09-21, aperto il 2026-09-20) *(allineato a `INDEX.md` il 2026-10-23, P15)* · **Ramo**: `claude/open-prs-plans-review-fu4qcp`
 > **Gate**: `misura_craft --p1` · `validate_norme_editoriali` ·
 > `validate_prosa` · `pytest scripts/tests`
 
