@@ -3518,6 +3518,65 @@
       "deterministic": true
     },
     {
+      "name": "release_notes",
+      "description": "«Ho corretto una riga del CHANGELOG di una versione già rilasciata: come arriva al rilascio?»\n\nLe note di rilascio vengono dalla sezione del CHANGELOG.md di progetto (ADR-0100): `notes` la stampa, `sync` riscrive con gh le note pubblicate che non corrispondono più, lasciando il blocco delle impronte.",
+      "use_case": "«Ho corretto una riga del CHANGELOG di una versione già rilasciata: come arriva al rilascio?»",
+      "invocation": "python3 scripts/release_notes.py notes VERSIONE | sync",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "azione": {
+            "type": "string",
+            "description": "notes VERSIONE stampa la sezione; sync allinea i rilasci pubblicati.",
+            "enum": [
+              "notes",
+              "sync"
+            ]
+          }
+        },
+        "required": [
+          "azione"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "release_plan",
+      "description": "«Ho unito la PR di rilascio: quale commit diventa v1.1.0, e il token può crearne il tag?»\n\nSceglie cosa rilascia il workflow Release e su quale commit (ADR-0100, ripreso da iemod-fetch): la sezione [X.Y.Z] più recente di CHANGELOG.md, etichettata vX.Y.Z sul commit first-parent in cui __version__ è diventato X.Y.Z, o sulla testa di main se i pacchetti non sono cambiati. Stampa le righe per $GITHUB_OUTPUT.",
+      "use_case": "«Ho unito la PR di rilascio: quale commit diventa v1.1.0, e il token può crearne il tag?»",
+      "invocation": "python3 scripts/release_plan.py [VERSIONE | --pull-request]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "VERSIONE": {
+            "type": "string",
+            "description": "Rilascia questa versione anche se ha già un tag; vuoto = la più recente del CHANGELOG."
+          },
+          "pull-request": {
+            "type": "boolean",
+            "description": "Prova generale sul commit della PR, con la sua versione."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "-"
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "la versione non è mai stata scritta in __version__",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "ricordo_lettura",
       "description": "«Cosa resta di questo modulo a chi l'ha letto una volta, e perché il lettore si è fermato alla Scena 7?»\n\nIl ricordo del giorno dopo (passo 7 del ciclo, D1 del 2026-10-01): il pacchetto per un agente nuovo con il solo diario della lettura a scene e sette domande da DM; le domande ai lettori dopo la lettura; l'intenzione dichiarata dal master contro cui si giudica. Adattato da first-reader/recall.py e ask.py (Apache 2.0, ADR-0076).",
       "use_case": "«Cosa resta di questo modulo a chi l'ha letto una volta, e perché il lettore si è fermato alla Scena 7?»",
