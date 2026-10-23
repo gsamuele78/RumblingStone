@@ -14,6 +14,7 @@ from xml.dom import minidom
 SCRIPTS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SCRIPTS))
 import genera_pianta_citta as G  # noqa: E402
+import render_map_pianta as P  # noqa: E402
 import render_map_svg as R  # noqa: E402
 
 CAVERNA = ["⛰⛰⛰⛰⛰⛰", "⛰🟤🟤🟤🟤⛰", "⛰🟤🔥🟤🟤⛰", "⛰⛰⛰⛰⛰⛰"]
@@ -51,6 +52,33 @@ class TestRender(unittest.TestCase):
     def test_non_e_la_pergamena(self):
         g = _griglia()
         self.assertNotEqual(R.render_svg(g, "p.md", "pianta"), R.render_svg(g, "p.md"))
+
+    def test_un_oggetto_accanto_al_muro_sta_sul_pavimento(self):
+        # _resolve_bases dà alla statua il terreno a sinistra, cioè il muro:
+        # nella pianta la roccia non deve allargarsi sotto la statua
+        import re
+        con = ["🏰🏰🏰🏰🏰🏰", "🏰🗿⬜⬜⬜🏰", "🏰⬜⬜⬜⬜🏰", "🏰🏰🏰🏰🏰🏰"]
+        senza = ["🏰🏰🏰🏰🏰🏰", "🏰⬜⬜⬜⬜🏰", "🏰⬜⬜⬜⬜🏰", "🏰🏰🏰🏰🏰🏰"]
+
+        def roccia(righe):
+            svg = R.render_svg(_griglia(righe), "p.md", "pianta")
+            return re.search(r'<clipPath id="pt-roccia"><path d="([^"]+)"', svg).group(1)
+        self.assertEqual(roccia(con), roccia(senza))
+
+
+class TestVociDiLegenda(unittest.TestCase):
+    def test_una_voce_corta_resta_com_e(self):
+        self.assertEqual(P._corto("statua", 20), "statua")
+
+    def test_prima_cade_la_parentesi(self):
+        self.assertEqual(P._corto("statua dei re (copertura totale)", 20), "statua dei re")
+
+    def test_mai_a_meta_parola(self):
+        v = P._corto("bracieri su treppiede accesi tutta la notte", 20)
+        self.assertTrue(v.endswith("…"))
+        self.assertLessEqual(len(v), 20)
+        self.assertTrue("bracieri su treppiede accesi tutta la notte".startswith(v[:-1]))
+        self.assertEqual(v[:-1], v[:-1].rstrip())
 
 
 class TestValidateMaps(unittest.TestCase):

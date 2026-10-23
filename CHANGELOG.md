@@ -25,6 +25,12 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   programmi in `scripts/piante/`. Con una scheda `*.watabou.json` il comando
   resta quello di prima.
 - shapely 2.2.0 in `requirements-dev.txt`, canale testing.
+- Le schede dei PG come dato: `PG/schede/<pg>.yaml` (schema
+  `scripts/schemas/pg_scheda.schema.json`) con le caratteristiche e i
+  modificatori permanenti, ognuno con la sua fonte, e la vista `<pg>.md`
+  generata. `validate_pg.py` e `render_pg.py --check` sono cancelli della CI.
+  Classe, PF e stato restano in `campaign/state.yaml` (ADR-0088).
+- `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).
@@ -42,6 +48,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 - `coerenza_campagna fronti`: un orologio che dichiara `unita` (giorni, ore) tiene la sua durata invece di 4, 6 o 8 tacche. La CI controlla i file `ARCnn-FRONTI.yaml` degli archi, canone da ARC-08 in poi.
 - `migliora_prosa migliora` tiene l'originale quando anche la migliore candidata ha meno di 0,5 contro di lui: dal voto del 2026-10-23 il modello di preferenza supera la soglia scritta prima di addestrarlo (PR #264).
 - `voto_scrittura` resta, perché il banco del modello locale (ADR-0089) lo usa per votare le sue corse: il rilevatore del «sembra» ora vive in `validate_prosa` e il banco lo riusa (PR #264).
+
+### Corretto
+- `export_map_png.py`: con Chromium la legenda delle mappe più alte usciva tagliata, perché il headless nuovo toglie alla finestra la fascia della cornice. Ora la finestra si apre più alta e il PNG torna all'altezza dell'SVG, con la sola libreria standard.
 
 ### Rimosso
 - `campioni_kappa`; da `misura_craft.py` le opzioni `--discriminante` e otto congegni (PR #264).
