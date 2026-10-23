@@ -37,8 +37,9 @@
 >    3 resta nella Sessione 2. L'uscita A (Scena 9) è il default, B e C sono
 >    di riserva (§0, «Il punto di taglio»).
 > 2. **Le baliste contro Fauci in volo.** Le mappe dicono che a 45 m è fuori
->    gittata; per l'SRD una balista pesante ha incremento 36 m e a 45 m
->    tira con −2. Il master regge le due letture: la riga da cambiare è in
+>    gittata; per la *Guida del DM* 3.5 (fuori SRD) la balista ha incremento
+>    36 m e a 45 m tira con −2; la balista pesante di PF1e (*Ultimate Combat*)
+>    ha 54 m e a 45 m non ha penalità. Il master regge le due letture: la riga da cambiare è in
 >    Scena 2, «Il sorvolo», ed è marcata ⚙️.
 > 3. **Il Re a 8 pf. Decisa** `[CANONE — DM 2026-10-22]`: il Re arriva al
 >    Cuore a 8 pf fissi, e la causa è l'acido rimasto nell'armatura corrosa
@@ -842,8 +843,9 @@ vale la A.
 - **A · Le baliste non arrivano** (le mappe, L2 MAPPA 3: «sorvoli a 45 m,
   fuori gittata baliste»). Il drago resta sopra l'angolo morto delle torri, e
   le baliste non si alzano fin lassù.
-- **B · Le baliste tirano** (SRD: balista pesante, incremento 36 m, quindi −2
-  a 45 m). Le due baliste della torre che il drago sorvola tirano una volta
+- **B · Le baliste tirano** (*Guida del DM* 3.5, fuori SRD: balista, incremento
+  36 m, quindi −2 a 45 m; con la balista pesante di PF1e, 54 m, il −2 sparisce
+  e il tiro è +18). Le due baliste della torre che il drago sorvola tirano una volta
   a testa: +16 (il +18 della MAPPA 3, −2) contro CA 37, 3d8+10, cioè solo
   col 20 naturale; contro 33 o 29, dopo un *dissolvi magie*, con 17 o 13.
   Ricaricano in due round: al passaggio dopo non sono pronte. Il d20 + 10
