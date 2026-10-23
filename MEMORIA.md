@@ -13,7 +13,7 @@ python3 scripts/fase1.py <file>         # sempre, prima di toccare
 
 Poi si legge questa pagina dall'alto: prima cosa aspetta il DM, poi da dove riparte l'agente. Le regole di lavoro stanno in [`AGENTS.md`](AGENTS.md).
 
-## Aspetta il DM: 14 decisioni aperte
+## Aspetta il DM: 26 decisioni aperte
 
 Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](plans/STATO-E-ORDINE-DEI-PIANI.md). Si risponde col numero e il piano: *«CODA-SECONDO-LETTORE D2 sì»*.
 
@@ -33,6 +33,18 @@ Fonte: le tabelle `decisioni-dm` dei piani, aggregate in [STATO-E-ORDINE §4](pl
 | `RECUPERO` | D6 | L3 | **RICONCILIAZIONE-PR-APERTE si chiude come superato?** R3, R6, R7, R8 sono decisi o fatti altrove (§2.3). *Proposta*: sì, ✅ con il rimando a dove sta ognuno |
 | `RIPRESA-PR` | D2 | F3 · 3d | **Riformulata il 2026-09-11: la domanda di prima partiva da un fatto falso.** Diceva *«i diciotto raster si generano sulla tua macchina — quando?»*, ma **esistono tutti e diciotto** (più le due extra), generati dal DM *… |
 | `RIPRESA-PR` | D11 | F4 · 4b | **L'ADR ex-0018 della #72: recuperato il 2026-09-11 come [ADR-0049](plans/adr/ADR-0049-edizione-commerciale-ap-originale.md), e resta 🔵 *proposta* — non accettata.** Dice che, *se e quando* si pubblica, si pubblica un *… |
+| `ARCHI-SENZA-TESTO` | D1 | 05 | **I funghi della Stanza Runica.** I PDF: la druida segue la spirale di zurkhwood, trova la Runa di Ysgard e i funghi crescono e la coprono. Il canone: il gruppo brucia i funghi della stanza e Hella perde il micelio. *Pr… |
+| `ARCHI-SENZA-TESTO` | D2 | 05 | **Chi è lo spirito nel sarcofago.** I PDF: «Thorek Forgiamartello, l'antico portatore della Corona». Il canone: Thorek è il re di Hammerfist, Thorek I suo antenato di mille anni fa, e una statua del Cuore è Thorek I. *P… |
+| `ARCHI-SENZA-TESTO` | D3 | 05 | **La gemma della prova.** I PDF: la Gemma del Legame Spirituale, chiave per la Corona. Il canone: tre gemme, tutte nella Corona e spente nell'arco 06; la Prova della Sala Profonda attiva il topazio. *Proposta*: la gemma… |
+| `ARCHI-SENZA-TESTO` | D4 | 05 | **Le ricompense della Stanza Runica.** I PDF: Benedizione di Thorek (+2 permanente ai TS contro la paura) e +1 slot del livello più alto; 4.800 PE totali più bonus. Il registro XP: 5.800 PX per PG; nessuna scheda di PG… |
+| `ARCHI-SENZA-TESTO` | D5 | 05 | **I nomi tolkieniani delle rune** (Moria, Erebor, Durin, Khazad-dûm e altri sei). Il canone non li usa. *Proposta*: restano nella trascrizione come documento d'archivio; un master li sostituisce con nomi nanici di Faerû… |
+| `ARCHI-SENZA-TESTO` | D6 | 05 | **I numeri in contrasto fra i tre PDF**: il soffitto (per fasce dal round 6, o 30 cm ogni 5 round dal 10), Conoscenze (natura) CD 25 o 28, il dominio dei non morti a 1d4 o 1d6 Saggezza, le catene dal round 4 o dal 7. *P… |
+| `ARCHI-SENZA-TESTO` | D7 | 00 | **Il livello di partenza.** `campagna_flusso.txt` e il registro XP (28.000 PX): 8° livello. La cronaca: «Phase A … (Levels 4–6)». *Proposta*: correggere la cronaca a «8° livello», se il DM conferma che il gruppo non ha… |
+| `ARCHI-SENZA-TESTO` | D8 | 00 | **Gli appunti d'apertura mai portati**: Lando Norris e l'offerta da 3.500 a 4.500 mo, Khalzon Burn con la maschera dei draghi, il negromante di Castel Wrath con gli scheletri dei giganti e la tribù della Luna della Mort… |
+| `ARCHI-SENZA-TESTO` | D9 | 02 | **Il nemico della Scala d'Ossa**: «necromante di Abbathor» (cronaca) o chierico di Abbathor (file, registro XP, Bestiario)? E GS 11 (Bestiario) o 12 (registro)? *Proposta*: chierico, come dicono tre fonti su quattro; il… |
+| `ARCHI-SENZA-TESTO` | D10 | 02-03 | **Il duergar mago fuggito.** I file lo fanno scappare dalla Scala d'Ossa e tornare davanti al tempio con i drow del casato. La cronaca non ha il filo. *Proposta*: entra nella cronaca se il DM conferma che è andata così |
+| `ARCHI-SENZA-TESTO` | D11 | 03 | **Il retriever e lo scontro davanti al tempio.** Il retriever: comandato dallo stregone drow (cronaca) o mandato dai chierici di Abbathor a riprendere Aegis Fang (nome del file sorgente)? E lo scontro EL 14 (capitano de… |
+| `ARCHI-SENZA-TESTO` | D12 | 00-03 | **Le trascrizioni di testi altrui nel repo**: il capitolo di *Expedition to Undermountain* (01, con il link ad archive.org), il Grell Patriarca di *Lords of Madness* (01), le pagine dei drow e dei warlock (03), le pagin… |
 
 ### Revisioni della prosa da approvare: 0
 
@@ -68,7 +80,7 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P13 · La bozza del Caos Ultimo** (TRASVERSALE D13): approvarla o correggerla | `PG/Artefatti/…/04_Anello_S3_Caos_Ultimo_DM.html` | DM |
 | **P14 · Le promozioni a stable** (ADR-0099): ruff e uv proponibili dal 2026-11-06, pytest-xdist dopo 14 giorni dal 2026-10-23 | [PIATTAFORMA](plans/PIANO-PIATTAFORMA-DI-SVILUPPO.md) | la card nel thread padre |
 
-## ⬜ Da fare, nell'ordine dei piani: 11
+## ⬜ Da fare, nell'ordine dei piani: 12
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
@@ -85,12 +97,15 @@ Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 | **P24 · CICLO-DI-SESSIONE, la Fase 0** (D1-D6 decise il 2026-09-30) | [CICLO-SESSIONE](plans/PIANO-CICLO-DI-SESSIONE-E-MENU.md) §5 | la Fase 0 |
 | **P25 · Il Drappo L9, la lettura a freddo**: lettore e playtester che non vedono il piano sul §2-bis, e un dry-run cronometrato | [DRAPPO](plans/PIANO-DRAPPO-DI-TARSILIA-STANDALONE-PF1E.md) Lotto 9 | due agenti a freddo, poi P11 |
 | **P26 · L'eccezione di ruff per `misura_craft.py`**, da togliere dopo la #264 | `ruff.toml` | dopo il merge della #264 |
+| **P30 · Gli altri archi senza testo, e cosa si è perso nell'import**: 06, 07, 10 senza perdite; mai arrivati nei markdown l'Orrore Palustre d'Ombra e Zanna (03), lo scontro davanti al tempio e il warlock (03), gli appun… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §5 | P30-a, le schede che mancano nel Bestiario; poi P30-b dopo D7-D11 |
 
-## 🟡 Fatto a metà: 0
+## 🟡 Fatto a metà: 1
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
-Nessuna.
+| Cosa | Dove sta il dettaglio | Da dove si parte |
+|---|---|---|
+| **P28 · L'arco 05 (la Stanza Runica) viveva solo in PDF**: trascritto in `05_aa-stanza-runica/ARC05-STANZA-RUNICA-TRASCRIZIONE.md` coi numeri dei tre PDF; il canone resta `campaign/lore/campaign-chronicle.md`. Sei diver… | [ARCHI-SENZA-TESTO](plans/RICERCA-ARCHI-SENZA-TESTO-2026-10.md) §3.6 e D1-D6 | una risposta per voce; l'agente la porta nella trascrizione e nella cronaca |
 
 ## Fatto di recente: le ultime 12 righe del CHANGELOG
 
@@ -98,6 +113,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | RICERCA-ARCHI-SENZA-TESTO | censimento e trascrizione dell'arco 05 (DM: *«controllare se ci sono pdf o altr… | 🟡 Censiti i file non markdown degli archi 00-10 e degli standalone e confrontati coi markdown (numeri e nomi propri della fonte assenti nel markdown, poi a man… |
 | 2026-10-23 | STATO-E-ORDINE · INDEX · RECUPERO · RIP… | P15 dell'indice: la coerenza dell'archivio dei piani | ✅ Otto intestazioni di piano riallineate allo stato di `INDEX.md`: le sei dell'indice (AMBIENTE, PRATICHE, TRAVASO, AUTOMAZIONE, AGENT-SKILLS, DRAPPO) e due tr… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | piante v3 di Rethmar, Dauth e Channathgate canone (DM: rilievo, quote, taglie e… | ✅ |
@@ -109,11 +125,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
-| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 286 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 26 aperte, 286 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa
