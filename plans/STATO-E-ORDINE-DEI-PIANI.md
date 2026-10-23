@@ -50,7 +50,7 @@ Ogni riga è stata rimisurata sul repo e sul ramo di gruppo
 | | Cosa | Chi | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|---|---|
 | ▶ | **P01 · MASTER-DEF: A3 chiuso, D4 e D5 decise** (#259, ARC-08: il collo e l'ala nella presa di Thorik, ADR-0096) | thread «Chiusura piano LETTORE-PLAYTESTER · F4» | [MASTER-DEF](PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A3 | merge della #259 quando il thread dà il via; poi S1-S4 |
-| ▶ | **P02 · AVVENTURE-COMMUNITY lotto 7, la qualità misurabile** (#264, con dentro la #270 Stanza contro spaCy) | thread «Avventure della community a confronto» | [AVVENTURE-COMMUNITY](PIANO-AVVENTURE-COMMUNITY-2026-10.md) | prima la #270 nel ramo della #264, poi la #264 su `main`; 7c (fronti e orologi) aspetta il DM |
+| 🙋 | **P02 · AVVENTURE-COMMUNITY 7c, fronti e orologi**, e i residui del lotto 7: i 4 di `plans/coerenza-residui.json` e i possessivi contro italiano-nativo §1 | DM | [AVVENTURE-COMMUNITY](PIANO-AVVENTURE-COMMUNITY-2026-10.md) | una risposta del DM; poi il thread «Avventure della community a confronto» |
 | ▶ | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | thread «Schede PNG e cattivi uniformi» | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | ▶ | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | thread «LLM locale per la prosa» | [ADR-0089](adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
 | ▶ | **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | thread «Piano per la PR 99 abbandonata» | [RIPRESA-PR](PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
@@ -92,6 +92,8 @@ CHANGELOG resta.
 | ✅ | Chiudere la serata del 2026-09-25, `state.md` e il Rubino, RD 5/epico e male della Corona, *Fortezza Mentale* di Artemis | sul ramo di gruppo: `campaign/sessions/2026-09-25_session-4.md` (`d8ecd2b`, `ce34599`), `state.md` §6 aggiornato |
 | ✅ | Le decisioni prese che non erano su `main` (#216: D17, D38, la *Torre*, il lotto D13, ADR-0087) | portate dalla #233 (2026-10-10) |
 | ✅ | Python 3.13 ovunque (AMBIENTE A2, D7) | #231 e #236; poi ADR-0099 con la #273 |
+| ✅ | Il lotto 7 di AVVENTURE-COMMUNITY, la qualità misurabile, con Stanza contro spaCy (#264 con dentro la #270; ADR-0101) | #264 unita il 2026-10-23 (`bfe0e39`); il seguito per il DM è P02 |
+| ✅ | Le piante di Rethmar, Dauth e Channathgate e gli strumenti delle mappe nel repo (ADR-0102) | #276 (`28eca2c`) e #280 (`8119333`), 2026-10-23 |
 | ✅ | La PR del LLM locale (ADR-0089) | #234 unita il 2026-10-23 (`36d03e6`); il seguito è P04 |
 | ✖ | La pianta di Dauth esportata da Watabou (RESA-ASSET R5) | abbandonata per decisione del DM (2026-10-22): le città della valle entrano solo con le piante del generatore del repo (#269, #271, #272) |
 | 🔀 | Le `[PROPOSTA]` e gli `[INFERRED]` degli altri archi, 568 | da 568 a 44: il Bestiario è a 0 con la #241 (ADR-0091) e le #247-#248. Il resto è P16 |

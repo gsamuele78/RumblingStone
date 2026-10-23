@@ -42,24 +42,24 @@ Fonte: i documenti `REVISIONE-*.md` sotto `plans/scrittura/` che `ciclo_prosa.py
 
 Nessuna.
 
-## ▶ In corso: da qui si riparte: 5
+## ▶ In corso: da qui si riparte: 4
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
 | **P01 · MASTER-DEF: A3 chiuso, D4 e D5 decise** (#259, ARC-08: il collo e l'ala nella presa di Thorik, ADR-0096) | [MASTER-DEF](plans/PIANO-MASTER-DEF-ARC08-ARC09-STANDALONE.md) A3 | merge della #259 quando il thread dà il via; poi S1-S4 |
-| **P02 · AVVENTURE-COMMUNITY lotto 7, la qualità misurabile** (#264, con dentro la #270 Stanza contro spaCy) | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) | prima la #270 nel ramo della #264, poi la #264 su `main`; 7c (fronti e orologi) aspetta il DM |
 | **P03 · ARC-07 riscritto con le norme nuove**, misurato contro le versioni di prima (tag `prima-rifacimento-arc07`), e l'handout del contratto del Seme da portare in `ARC07-HANDOUTS` | ADR-0093 · `/mnt/project-files/contratto-seme/` | il thread |
 | **P04 · LLM locale, la prova del 12B sull'ASUS e del 26B sulla Dell** (gemma4 e4b bocciato, #234 su `main`) | [ADR-0089](plans/adr/ADR-0089-un-llm-locale-per-la-prosa-si-misura-prima.md) · `plans/scrittura/` | una PR nuova dal thread |
 | **P05 · La #99 e lo schedario dei PG**: chiusura proposta (ADR-0007 del thread); 4g da rifare come 4g-1 e 4g-2 da `main`, 4h scartato | [RIPRESA-PR](plans/PIANO-RIPRESA-PR-ABBANDONATE.md) F4 · `/mnt/project-files/pr99/` | il sì del DM per chiudere la #99, poi 4g-1 |
 
-## 🙋 Aspetta il DM: 9
+## 🙋 Aspetta il DM: 10
 
 Fonte: [STATO-E-ORDINE §0](plans/STATO-E-ORDINE-DEI-PIANI.md), la lista viva.
 
 | Cosa | Dove sta il dettaglio | Da dove si parte |
 |---|---|---|
+| **P02 · AVVENTURE-COMMUNITY 7c, fronti e orologi**, e i residui del lotto 7: i 4 di `plans/coerenza-residui.json` e i possessivi contro italiano-nativo §1 | [AVVENTURE-COMMUNITY](plans/PIANO-AVVENTURE-COMMUNITY-2026-10.md) | una risposta del DM; poi il thread «Avventure della community a confronto» |
 | **P06 · Accettare le ADR ancora «proposta»**: ADR-0090 (la partita sul ramo di gruppo nuovo, dal 2026-10-11), ADR-0094 (il giro si misura contro la versione di prima), ADR-0095 (correzione, verifica e seconda passata).… | `plans/adr/` | un sì o un no per ADR; l'agente cambia lo stato e la riga di CHANGELOG |
 | **P07 · Le decisioni numerate dei piani**: BOX-DI-LUOGO D2-D6, CODA-SECONDO-LETTORE D2 e D3, MASTER-DEF D6 (il censimento delle versioni), RECUPERO D3-D6, RIPRESA-PR D2 (Gemini o SDXL per il Drappo) | §4, generata da `decisioni_dm.py` | rispondere col piano e il numero: *«BOX D2 sì»* |
 | **P08 · Le patch di `state.md` sul ramo di gruppo**, scritte e mai applicate (verificato su `ce34599`): il Bane di Aegis Fang contro Fauci (affresco A7); la Cintura della Devastazione a 4 cariche al giorno (lo stato dic… | `/mnt/project-files/sessione-2026-10-15/` · `/mnt/project-files/giro-arc07-2026-10-18/PATCH-STATE-MD.md` | `git am` o a mano sul ramo `campaign-group-rumblingstone` |
