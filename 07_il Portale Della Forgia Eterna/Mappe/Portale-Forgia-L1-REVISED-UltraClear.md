@@ -275,8 +275,8 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 > affreschi stavano dove capitava. Ora l'ottagono ha il centro dell'altare e
 > dei pilastri (N14): 23 quadretti (34,5 m) fra due lati dritti, lati dritti di
 > 7 quadretti, diagonali a gradino singolo, muro di basalto ⬛ spesso 3 m e
-> roccia 🏰 negli angoli. Ogni pilastro sta a due quadretti dalla parete, che
-> sia dritta o diagonale.
+> roccia 🏰 negli angoli. Ogni pilastro sta a quattro quadretti dalla parete,
+> che sia dritta o diagonale, come dicono le POSIZIONI (scelta del DM).
 >
 > Gli affreschi stanno sulla faccia interna del muro, uno per lato: A1 M-O02
 > (nord); G06-H06-F07 (nord-ovest, la coordinata che le POSIZIONI danno ad A2
@@ -289,9 +289,7 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 > (G-H06) e A2 è detto «NE»: la griglia mette un affresco a nord-ovest e uno a
 > nord-est, e quale sia A2 lo decide il DM. A4 «R-S19» cade in mezzo al
 > pavimento e A7 «C-D13» davanti al muro ovest: i due affreschi sono disegnati
-> sul muro più vicino. I pilastri «a 4-5 quadretti dalle pareti» lo sono
-> contando dal bordo della griglia; dalla parete sono 2, come prima sui lati
-> nord e sud.
+> sul muro più vicino.
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -309,24 +307,23 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
 03    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                      └───────────── Interior Octagon Starts ─────────────┘
 04    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
-      │                         8 PILASTRI adamantini 🟪: N05 · T08 · W14 · T20 · N23 · H20 · E14 · H08
+      │                         8 PILASTRI adamantini 🟪: N07 · R10 · U14 · R18 · N21 · J18 · G14 · J10
 
 --- RIGA 06-12: ANGOLO NE + AFFRESCO A2 + A3 FUOCO ---
-05    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+05    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
 06    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ 🖼 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 🖼 ⬛ ⬛ 🏰 🏰 🏰 🏰
       │                └────┘ A2: AFFRESCO "Divine Weapons" (Col G-H, Riga 06)
-07    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
-08    │ 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
-      │                └─┘ PILASTRO (H08)            PILASTRO (T08) └─┘
+07    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
+08    │ 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
 09    │ 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰
-10    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
+10    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
 
 --- RIGA 11-16: LATO EST + AFFRESCO A3 🔥 FIRE PORTAL (ACTIVE!) ---
 11    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
 12    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
 13    │ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
       │                                  └────────┘ ALTARE MORADIN (M13-O15, +3m elevato)
-14    │ ⬛ 🖼 ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛
+14    │ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
       │                                      └─┘ Centro: Col N, Riga 14 (Focal Point)
 15    │ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
 16    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼 ⬛
@@ -336,13 +333,13 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                                                                              ACTIVE! Swirling Fire
 
 --- RIGA 18-27: ANGOLO SE + SUD + ALTRIAFFRESCHI ---
-18    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
+18    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
       │                                                                               A4: "Ancestral Battle" → lato sud-est, T22-U22-V21
 19    │ 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰
-20    │ 🏰 🏰 ⬛ ⬛ ⬛ 🌀 🌀 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
-21    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
+20    │ 🏰 🏰 ⬛ ⬛ ⬛ 🌀 🌀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
+21    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
 22    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ 🖼 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 🖼 ⬛ ⬛ 🏰 🏰 🏰 🏰
-23    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+23    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
 24    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
 25    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🌀 🌀 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                  └────┘ A5: 🌿 EARTH PORTAL (Col M-O, Riga 25)
@@ -373,14 +370,14 @@ NOTA: gli otto affreschi e i tre portali sono tutti disegnati, uno per lato dell
 - Rune: Glowing divine script (bright light 18m radius)
 
 **8 PILASTRI ADAMANTINI 🟪 (anello interno, a 4-5 quadretti dalle pareti):**
-1. Pilastro 1 (N): Col N, Riga 05
-2. Pilastro 2 (NE): Col T, Riga 08
-3. Pilastro 3 (E): Col W, Riga 14
-4. Pilastro 4 (SE): Col T, Riga 20
-5. Pilastro 5 (S): Col N, Riga 23
-6. Pilastro 6 (SW): Col H, Riga 20
-7. Pilastro 7 (W): Col E, Riga 14
-8. Pilastro 8 (NW): Col H, Riga 08
+1. Pilastro 1 (N): Col N, Riga 07
+2. Pilastro 2 (NE): Col R, Riga 10
+3. Pilastro 3 (E): Col U, Riga 14
+4. Pilastro 4 (SE): Col R, Riga 18
+5. Pilastro 5 (S): Col N, Riga 21
+6. Pilastro 6 (SW): Col J, Riga 18
+7. Pilastro 7 (W): Col G, Riga 14
+8. Pilastro 8 (NW): Col J, Riga 10
 - Dal 2026-10-22 la griglia disegna gli otto pilastri come un anello regolare
   attorno all'altare; prima erano sparsi come macerie 🪨 lungo le pareti e le
   coordinate dell'elenco non coincidevano col disegno.
@@ -416,7 +413,7 @@ NOTA: gli otto affreschi e i tre portali sono tutti disegnati, uno per lato dell
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
 | Altare di Moradin ⭐ | M-O/13-15, **+3 m elevato**, 8 scale radiali (1,5 m) | rune divine = **luce intensa 18 m**; centro focale dei rituali; +3 m = vantaggio di quota se scoppia mischia |
-| 8 Pilastri adamantini 🟪 | anello attorno all'altare (N05, T08, W14, T20, N23, H20, E14, H08) | **indistruttibili**; bloccano il passaggio e danno copertura a chi vi si ripara |
+| 8 Pilastri adamantini 🟪 | anello attorno all'altare (N07, R10, U14, R18, N21, J18, G14, J10) | **indistruttibili**; bloccano il passaggio e danno copertura a chi vi si ripara |
 | Portali attivi 🌀 | A3 X-Y/16-17, A5 N-O/25-26, A6 F-G/20 | si attraversano: sono le tre uscite della Sala verso i Piani |
 | Affresco/Portale **A3 🔥 Fuoco** | X-Z/16-17 | **ATTIVO** — soglia al Piano del Fuoco (P3) |
 | Affresco/Portale **A5 🌿 Terra** | M-O/25-26 | **ATTIVO** — soglia al Piano della Terra (P4) |

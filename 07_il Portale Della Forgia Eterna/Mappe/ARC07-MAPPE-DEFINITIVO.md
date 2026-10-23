@@ -113,21 +113,24 @@
  Terreno difficile ovunque (movimento ×2) · gravità 2×
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
-01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
-02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫
-03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫
-04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
+02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫 🟫
+03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫
+04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🌫 🌫 🟫 🟫 🟫 🟫 🟫 🟫
 05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫
-06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-07    🟫 🟫 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
-09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫
-10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫 🟫
+06    🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫
+07    🟫 🟫 🔷 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🔷 🔷 🟫
+08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🟫 🟫
+09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🟫 🟫 🟫
+10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🌫 🌫 🔷 🟫 🟫 🟫 🟫
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 🔷 Cristallo Gigante (copertura totale, indistruttibile) · 🟫 roccia
 frastagliata (terreno difficile) · 🕳️ punto d'emersione Xorn · 🟣 Fauci di
 Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡️ Thorik
-(F04) · 🔮 Artemis (I04) · 🥋 Tordek (G05).
+(F04) · 🔮 Artemis (I04) · 🥋 Tordek (G05) · 🌫 fenditure larghe 3 m e
+profonde 18 m (J-L 01-04 e K-M 08-10: caduta 6d10, risalita Scalare CD 20) ·
+🪨 geodi di cristallo alti 3-5 m (D-E 06-07 e N-O 06-07: copertura totale, PF 80,
+Durezza 8, si spaccano).
 @north N
 @taglia G9 ; Grande
 @tipo tattica caverna
@@ -136,7 +139,9 @@ Diamante (élite) · 💠 base corrosa del pilastro (crolla → ponte) · 🛡�
 - **Terreno & altitudini**: tutto **terreno difficile** (movimento ×2) + gravità
   2× → il party è LENTO; i cristalli 🔷 danno **copertura totale**
   (indistruttibili). Il pilastro corroso 💠 (G08) può essere fatto **crollare**
-  (→ ponte o area bloccata).
+  (→ ponte o area bloccata). Due **fenditure** 🌫 (J-L 01-04, K-M 08-10) tagliano la foresta
+  e due **geodi** 🪨 (D-E 06-07, N-O 06-07) fanno copertura che si spacca
+  (DEF-1, «Ambiente dinamico del piano»).
 - **Posizioni iniziali**: Thorik F04, Artemis I04, Tordek G05. **Xorn 1** emerge
   a G02, **Xorn 2** a O05 (🕳️); **Fauci di Diamante** (élite, 181 pf `[CANONE — DM 2026-10-18]`) attende a
   G09-H10 (🟣, Grande), sotto il pilastro.

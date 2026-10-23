@@ -96,6 +96,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | i cinque punti mappa/testo di ARC-07 decisi dal DM («sì a tutte le proposte»):… | ✅ 3 test nuovi per il taglio del PNG; copie in DEF-1 e booklet rigenerati |
 | 2026-10-23 | STATO-E-ORDINE · INDEX · RECUPERO · RIP… | P15 dell'indice: la coerenza dell'archivio dei piani | ✅ Otto intestazioni di piano riallineate allo stato di `INDEX.md`: le sei dell'indice (AMBIENTE, PRATICHE, TRAVASO, AUTOMAZIONE, AGENT-SKILLS, DRAPPO) e due tr… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | la forma delle 18 mappe di ARC-07 ridisegnata contro i moduli (DM: «Stile e for… | ✅ Nessun rilievo E nuovo, voti uguali o più alti (T-2 97→100). Il tema pianta ora non tronca le voci di legenda a metà parola e non mette un oggetto sulla rocc… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) · ADR-0102 | strumenti delle mappe nel repo: tema «pianta» e generatori delle città (DM: «co… | ✅ Il tema pianta disegna le griglie emoji nello stile delle piante delle città (roccia tratteggiata entro 0,24 quadretti, lastricato, «Luoghi» e legenda sotto)… |
@@ -107,7 +108,6 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P11 · il riscontro delle regole sull'SRD (DM: *«aggiungi se ci sono tools skill… | ✅ in testing. `scripts/riscontro_srd.py`: SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (devonjones/PSRD-Data), OGL 1.0a, scaricati da `raw.githubusercontent.com` a… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | ricerca in rete su strumenti liberi che misurano mappe, moduli e regole (DM: *«… | 🟡 SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (PSRD-Data) clonati fuori dal repo: le 9 regole «a memoria» del giro della Sessione 2 riscontrate in 0,04 s, 8 concor… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
-| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 
 ## Le misure che si portano dietro
 

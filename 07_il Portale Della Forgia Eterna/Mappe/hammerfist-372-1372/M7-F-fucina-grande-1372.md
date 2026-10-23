@@ -13,7 +13,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ 🔼 ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-04 🏰 🏰 🏰 🏰 ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬜ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 🏰 🏰 🏰 🏰
+04 🏰 🏰 🏰 🏰 ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬜ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ 🏰 🏰 🏰 🏰
 05 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰
 06 🏰 🏰 🏰 ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ 🏰 🏰 🏰
 07 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
@@ -28,7 +28,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 16 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰
 17 🏰 🏰 🏰 ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ ⬜ ⬜ ⚒ ⬜ 🏰 🏰 🏰
 18 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰
-19 🏰 🏰 🏰 🏰 ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 ⬛ ⬜ ⬛ 🏮 🏰 🏰 🏰 🏰
+19 🏰 🏰 🏰 🏰 ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ ⬛ ⬜ ⬛ ⚒ 🏰 🏰 🏰 🏰
 20 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 21 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 22 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -69,6 +69,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD
 |---|---|---|---|
 | A (iniziale) | — | com'è disegnata | — |
 | B | [trigger] | D48 (DM, 2026-10-08): nel 1372 la fucina grande è l'ultima sala prima della discesa al Cuore della Montagna: le forge sono spente da generazioni, i pilastri reggono ancora. | [effetto] |
+| B | [trigger] | Forge spente (DM, 2026-10-23): nel 1372 i dodici forni sono disegnati ⚒ freddi, senza luce; nel 372 restano accesi 🏮. | [effetto] |
 
 > Gli stati sono **esiti aperti** (D13): il trigger è dei dadi e delle scelte dei PG, mai del copione.
 

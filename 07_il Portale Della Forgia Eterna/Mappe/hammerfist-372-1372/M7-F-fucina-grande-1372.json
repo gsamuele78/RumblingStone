@@ -125,85 +125,85 @@
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     5,
     3
    ],
-   "label": "Forgia"
+   "label": "Forgia spenta da generazioni"
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     5,
     18
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     9,
     3
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     9,
     18
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     13,
     3
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     13,
     18
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     17,
     3
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     17,
     18
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     21,
     3
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     21,
     18
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     25,
     3
    ]
   },
   {
-   "type": "🏮",
+   "type": "⚒",
    "at": [
     25,
     18
@@ -676,6 +676,7 @@
   }
  ],
  "notes": [
-  "D48 (DM, 2026-10-08): nel 1372 la fucina grande è l'ultima sala prima della discesa al Cuore della Montagna: le forge sono spente da generazioni, i pilastri reggono ancora."
+  "D48 (DM, 2026-10-08): nel 1372 la fucina grande è l'ultima sala prima della discesa al Cuore della Montagna: le forge sono spente da generazioni, i pilastri reggono ancora.",
+  "Forge spente (DM, 2026-10-23): nel 1372 i dodici forni sono disegnati ⚒ freddi, senza luce; nel 372 restano accesi 🏮."
  ]
 }

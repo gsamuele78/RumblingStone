@@ -2936,19 +2936,21 @@ finale del Fuoco/P3) ·
  Terreno difficile ovunque (movimento ×2) · gravità 2×
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
-01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
-02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫   🕳️ G02 = Xorn 1 emerge
-03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫
-04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   🛡️F04 Thorik · 🔮I04 Artemis
+01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
+02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫 🟫   🕳️ G02 = Xorn 1 emerge
+03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🌫 🌫 🟫 🔷 🔷 🟫 🟫 🟫
+04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🌫 🌫 🟫 🟫 🟫 🟫 🟫 🟫   🛡️F04 Thorik · 🔮I04 Artemis
 05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫   🥋G05 Tordek · 🕳️O05 Xorn 2
-06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-07    🟫 🟫 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
-09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
-10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫 🟫
+06    🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🟫 🟫 🟫
+07    🟫 🟫 🔷 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🔷 🔷 🟫
+08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
+09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🌫 🌫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
+10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🌫 🌫 🔷 🟫 🟫 🟫 🟫
 LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
         🟫 = roccia frastagliata (difficile) · 🕳️ = punto d'emersione Xorn
         🟣 = Fauci di Diamante (élite, Grande: 2×2) · 💠 = base corrosa del pilastro · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis
+        🌫 = fenditura larga 3 m, profonda 18 m (caduta 6d10, risalita Scalare CD 20)
+        🪨 = geode di cristallo alto 3-5 m (copertura totale, PF 80, Durezza 8, si spacca)
         Chi emerge e morde resta in superficie fino al suo turno: Earth Glide (§5)
 ════════════════════════════════════════════════════════════════════════
 @north N

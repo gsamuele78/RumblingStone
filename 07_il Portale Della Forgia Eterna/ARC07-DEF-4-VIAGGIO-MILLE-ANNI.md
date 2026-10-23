@@ -925,7 +925,7 @@ il bivio, ed è **vero** — non una finta scelta con una risposta giusta.
 | Ruolo | Chi, e dove |
 |---|---|
 | comando | Re Thorek è ancora col consiglio; per i PG chi decide è **Durin**, che li accompagna |
-| culto | **Sorella Brynja**, nella cappella due porte più in là |
+| culto | **Sorella Brynja**, nella cappella, la porta dopo i quartieri lungo il corridoio |
 | rimedi | **Kettra**, la bottega dell'alchimista in fondo al corridoio della fucina |
 | bottega | **Gunnvor** alla fucina, e il **pesatore** con la sua bilancia; prezzi e tetti nel banco qui sotto |
 | messaggi | nessuno: stanotte gli ordini li porta Durin a voce |
@@ -954,9 +954,9 @@ sommano sullo stesso tiro `[CANONE — DM 2026-09-30, D25]`), fabbri che affilan
 prima che la miniera diventasse fortezza. Nel soffitto c'è una crepa chiusa col
 piombo, del primo crollo, e nessuno ci dorme sotto.
 
-**La cappella dei chierici.** Due porte più in là dei quartieri. È qui che si
-comprano pozioni, bacchette e incantesimi (il banco della fucina, più sotto, ha
-i prezzi).
+**La cappella dei chierici.** È la porta dopo i quartieri, lungo lo stesso
+corridoio. È qui che si comprano pozioni, bacchette e incantesimi (il banco
+della fucina, più sotto, ha i prezzi).
 
 > **Read-aloud (Casa di Davide lead) — la cappella.** *Al posto dell'altare
 > c'è un'incudine vecchia, portata giù dalla prima forgia, e intorno ai piedi

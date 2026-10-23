@@ -347,6 +347,11 @@ HEAT ZONES (Overlay):
 > sono pavimento. La lava non è toccata: la vasca resta l'ovale del disegno
 > (righe 11-23, colonne G-Z), che è il canone del 2026-10-18, e non il cerchio
 > di 20 m delle POSIZIONI.
+>
+> 🔥 **Le pozze laterali, scelta del DM.** Due pozze di lava sull'anello, a ovest
+> (B-D 19-21) e a est (AD-AF 19-21), di 4,5 m ciascuna: sono le «piscine lava
+> laterali» da cui il boss evoca i due elementali Grandi al round 5. Chi ci cade
+> prende lo stesso danno della vasca.
 
 ```
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -389,9 +394,9 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
       │                                           🔴 ELDER FIRE ELEMENTAL (Col P, Riga 17 center!)
 
 --- METÀ SUD (Righe 19-33): specchio delle righe 15-01 attorno alla riga 17, ricostruita [CANONE — DM 2026-10-18] ---
-19    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
-20    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
-21    │ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛
+19    │ ⬛ ⬜ 🟥 🟥 ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ 🟥 🟥 ⬜ ⬛
+20    │ ⬛ 🟥 🟥 🟥 ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 ⬛
+21    │ ⬛ ⬜ 🟥 🟥 ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 ⬜ ⬛
 22    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
 23    │ 🏰 ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ 🟥 🟥 🌉 🌉 🟥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬛ 🏰
 24    │ 🏰 ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬛ ⬛ 🏰
@@ -412,6 +417,7 @@ RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  �
 LEGENDA · 🟥 lava d'adamantio fusa, profonda 3 m (20d6 fuoco a chi ci cade) · 🌉 passerelle di mithral (2 m)
 LEGENDA · 💎 il Topazio sull'altare levitante (+5 m) · ⬛ forni di fusione e fodera dell'arena (muratura, copertura totale) · ⚒ incudini
 LEGENDA · 🔴 Elder Fire Elemental (Enorme: O16-Q18, centro P17) · ❔ porta segreta della galleria dei fonditori (Q31)
+LEGENDA · 🟥 a ovest (B-D 19-21) e a est (AD-AF 19-21): le due pozze di lava laterali, da cui escono gli elementali del round 5
 ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 @north N
 @tipo tattica interni
