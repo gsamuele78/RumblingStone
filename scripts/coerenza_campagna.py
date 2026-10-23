@@ -493,7 +493,7 @@ def estrai_file(path: Path, rac: Raccolta, entita_note: dict) -> None:
     """Statblocchi, parentesi dopo i nomi, campi di prosa: tutto in `rac`."""
     rel = _rel(path)
     righe = _righe_pulite(path.read_text(encoding="utf-8", errors="replace"))
-    blocco_ent, blocco_tit, blocco_ok, righe_blocco = None, "", False, 0
+    blocco_ent, blocco_ok, righe_blocco = None, False, 0
     visti_blocco: set[str] = set()
     intestazione: list[str] | None = None
     salvato = None      # il blocco del titolo, mentre si legge uno statblocco in un recinto
@@ -546,7 +546,7 @@ def estrai_file(path: Path, rac: Raccolta, entita_note: dict) -> None:
         m = None if fence else HEADING.match(r)
         if m:
             ent, tit = chiave_entita(m.group(2))
-            blocco_ent, blocco_tit, righe_blocco = ent, m.group(2), 0
+            blocco_ent, righe_blocco = ent, 0
             blocco_ok = ent is not None and not VARIANTE.search(_pulisci(m.group(2)))
             visti_blocco = set()
             if ent:

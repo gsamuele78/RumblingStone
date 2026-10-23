@@ -111,22 +111,22 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le tre piante una taglia sopra (DM: grandi abbastanza da reggere l'orda di ~10.… | ✅ Rethmar 110 ha, ~18.000 ab., 4,3 km di mura, 95 torri, servono ~3.400 difensori; Dauth 42 ha, ~7.000 ab., 2,55 km, 59 torri, servono ~2.000 difensori e ne ha… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | le piante nuove di Rethmar, Dauth e Channathgate (DM: Rethmar sull'impianto del… | ✅ Rethmar 50 ha, ~8.400 ab. con i sobborghi, 70 torri, 4 porte e la poterna, niente fossato; Dauth 17 ha, ~2.650 ab., 3 porte maggiori e la Porta Est ridotta a… |
+| 2026-10-22 | MAPPE-QUALITA (esperimento) | la valle e le città della Cannath Vale: scelte raccomandate di OPZIONI-FIUME (f… | ✅ regionale nostra con fasce di quota e il Cannath dal lago di Channathgate, distanze entro il 5% della tabella; Channathgate persiana (45 ha + 82 di sobborghi… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | due proposte della ricerca sugli strumenti (thread di ARC-08, commit `ffe206b5`… | ✅ due varchi contano come ingressi distinti solo a 10 passi ortogonali l'uno dall'altro (o se non si raggiungono): nuova metrica `varchi`, la Foresta di Crista… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | rifatte le mappe sotto 90 fuori dall'ARC-08 | ✅ Campo dei Cristalli 52→100, stalle di Tarsilia 62→100, Ruota 63→100 e Ruota giocatori 65→100 (viste d'insieme, `@tipo strategica abitato`), Desperate Last St… |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | lo standard di qualità delle mappe e lo strumento che lo misura | ✅ fonti (Jaquays, Dormans, Smith e Whitehead, Liapis, Mawhorter, Paizo), regole con soglia, `@quota`/`@dislivello`/`@luogo` per il rilievo, misure reali di for… |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c integrato: `coerenza_campagna fatti --check` in CI su ARC-07/ARC-08 co… | ✅ quattro residui aspettano il DM (hobgoblin sergenti, orog) |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e, patch scelte dal DM: tetto dei nomi distinti, P1 e possessivo sulle p… | ✅ gerundio in coda e -mente restano in `--stile` |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7e: ritiro delle misure obsolete (regole mai scattate, otto congegni,… | 🟡 CI −94 s sui passi toccati, −521 righe di codice e −194 di test, MQM invariato; `--costrutto-italiano` resta per il voto del DM; sette patch aspettano il DM |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f, voto del DM: catena vecchia 8, nuova 5, pari 1; tre regole di riscrit… | ✅ standard = catena vecchia più soggetto dopo il verbo e LAMP goffo/inglese/ricercata, meno il tetto dei nomi (⚖️ al DM) |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7f: riscrittura di prova di 16 box con catena vecchia, nuova e fusa, base… | 🟡 scheda cieca di 17 coppie al DM; versioni e chiavi fuori dal repo fino al voto |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7d: misure sintattiche con spaCy (calchi, subordinate, ripetizioni) calib… | 🟡 nessuna misura prevede il DM; base ARC-07/ARC-08 salvata per il confronto senza/con |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7c: schema di fronti e orologi e rilevatore di contraddizioni fra scene e… | 🟡 4 rilievi su 4 veri; due contraddizioni hobgoblin/orog aspettano il DM |
-| 2026-10-22 | AVVENTURE-COMMUNITY | lotto 7b: quattro domande del developer nuove, §18-§21 di… | 🟡 calibrazione 15½ veri su 26 rilievi; D20 non calibrata (un boss solo sotto cancello), D21 tace finché nessun master marca gli indizi; cancello solo sui maste… |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 16 aperte, 277 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 16 aperte, 284 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

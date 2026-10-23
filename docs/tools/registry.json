@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 109,
+  "tool_count": 112,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -8096,6 +8096,116 @@
       "idempotent": true
     },
     {
+      "id": "migliora_prosa",
+      "path": "scripts/migliora_prosa.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito} ...",
+      "summary": "La pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici.",
+      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [],
+      "args": [
+        {
+          "name": "dataset",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
+        },
+        {
+          "name": "modello",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt."
+        },
+        {
+          "name": "scegli",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Box da migliorare con un seme: --seme, --n, --uscita."
+        },
+        {
+          "name": "migliora",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "FILE --box N --candidate C.md [--scelte S.json --id P01]: filtra, ordina, dice la migliore."
+        },
+        {
+          "name": "campione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
+        },
+        {
+          "name": "esito",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/COPPIE-VOTATE.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "Il modello è deterministico (Newton, nessun caso); scelta dei box e ordine delle coppie dipendono dal seme. Con o senza spaCy i tratti cambiano (livelli_max)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/migliora_prosa.py --help",
+      "tests": [
+        "scripts/tests/test_migliora_prosa.py"
+      ],
+      "docs": [
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/README.md",
+        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md"
+      ]
+    },
+    {
       "id": "misura_craft",
       "path": "scripts/misura_craft.py",
       "category": "G-orchestration-governance",
@@ -8683,6 +8793,157 @@
         "plans/PIANO-AGENT-SKILLS-ESTERNE.md",
         "plans/PIANO-LETTORE-E-PLAYTESTER.md"
       ]
+    },
+    {
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3",
+        "gh"
+      ],
+      "external_deps": [],
+      "consumes_schema": null,
+      "produces_schema": null,
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_rilascio.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
+        "docs/RILASCIO.md"
+      ],
+      "id": "release_notes",
+      "path": "scripts/release_notes.py",
+      "invocation": "python3 scripts/release_notes.py notes VERSIONE | sync",
+      "summary": "Le note di rilascio vengono dalla sezione del CHANGELOG.md di progetto (ADR-0100): `notes` la stampa, `sync` riscrive con gh le note pubblicate che non corrispondono più, lasciando il blocco delle impronte.",
+      "use_case": "«Ho corretto una riga del CHANGELOG di una versione già rilasciata: come arriva al rilascio?»",
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "notes",
+            "sync"
+          ],
+          "repeatable": false,
+          "desc": "notes VERSIONE stampa la sezione; sync allinea i rilasci pubblicati."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "CHANGELOG.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "sync modifica le note dei rilasci GitHub con gh."
+      },
+      "ci_smoke": "python3 scripts/release_notes.py notes 1.0.0"
+    },
+    {
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3",
+        "git"
+      ],
+      "external_deps": [],
+      "consumes_schema": null,
+      "produces_schema": null,
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_rilascio.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
+        "docs/RILASCIO.md"
+      ],
+      "id": "release_plan",
+      "path": "scripts/release_plan.py",
+      "invocation": "python3 scripts/release_plan.py [VERSIONE | --pull-request]",
+      "summary": "Sceglie cosa rilascia il workflow Release e su quale commit (ADR-0100, ripreso da iemod-fetch): la sezione [X.Y.Z] più recente di CHANGELOG.md, etichettata vX.Y.Z sul commit first-parent in cui __version__ è diventato X.Y.Z, o sulla testa di main se i pacchetti non sono cambiati. Stampa le righe per $GITHUB_OUTPUT.",
+      "use_case": "«Ho unito la PR di rilascio: quale commit diventa v1.1.0, e il token può crearne il tag?»",
+      "args": [
+        {
+          "name": "VERSIONE",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rilascia questa versione anche se ha già un tag; vuoto = la più recente del CHANGELOG."
+        },
+        {
+          "name": "--pull-request",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Prova generale sul commit della PR, con la sua versione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "CHANGELOG.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/dmcore/__init__.py",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "-",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "la versione non è mai stata scritta in __version__",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Dipende solo dalla storia git e dai tag."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Solo letture git."
+      },
+      "ci_smoke": null
     },
     {
       "id": "ricordo_lettura",
