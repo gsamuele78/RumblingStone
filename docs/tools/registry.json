@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 113,
+  "tool_count": 115,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -1431,6 +1431,103 @@
       ],
       "docs": [
         "scripts/README-automation.md"
+      ]
+    },
+    {
+      "id": "genera_pianta_citta",
+      "path": "scripts/genera_pianta_citta.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/genera_pianta_citta.py",
+      "summary": "Rigenera le piante di Rethmar, Dauth e Channathgate dai loro programmi in scripts/piante/ (motore organica.py: Voronoi, vie, lotti, mura), nel posto canonico; con --check controlla che le piante committate siano identiche a quelle che i programmi producono (ADR-0102).",
+      "use_case": "«Ho spostato una porta di Rethmar nel programma: come rifaccio la pianta, e come so che quella nel repo è ancora quella vera?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "args": [
+        {
+          "name": "citta",
+          "type": "choice",
+          "required": false,
+          "default": null,
+          "choices": [
+            "channathgate",
+            "dauth",
+            "rethmar"
+          ],
+          "repeatable": false,
+          "desc": "La città da rigenerare."
+        },
+        {
+          "name": "--tutte",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutte e tre le città."
+        },
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scrive: controlla che le piante committate siano allineate."
+        },
+        {
+          "name": "-o/--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scrive qui invece che nel posto canonico (una città, senza --check)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "scripts/piante/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "09_*/**/*-pianta.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "pianta non allineata o programma fallito",
+        "2": "mancano shapely, numpy o scipy"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "seme fisso per città; una versione nuova di GEOS può cambiare un arrotondamento, e --check lo dice"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/genera_pianta_citta.py --help",
+      "tests": [
+        "scripts/tests/test_tema_pianta.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     },
     {
@@ -10306,6 +10403,58 @@
       ],
       "docs": [
         "skills/rumblingstone-mapmaking/references/standard-qualita-mappe.md"
+      ]
+    },
+    {
+      "id": "render_map_pianta",
+      "path": "scripts/render_map_pianta.py",
+      "category": "lib",
+      "language": "library",
+      "invocation": "python3 scripts/render_map_svg.py --tema pianta",
+      "summary": "Il tema «pianta» di render_map_svg (ADR-0102): le griglie emoji nello stile delle piante delle città, con roccia tratteggiata dai contorni frastagliati, lastricato a corsi, pannello «Luoghi» e legenda sotto la mappa, in rendered-pianta/. Stessi simboli e stessa griglia del tema pergamena. Non è un CLI.",
+      "use_case": "«Come vedo la Fucina grande nello stesso stile delle piante di Rethmar e Dauth?»",
+      "stability": "library",
+      "stdlib_only": true,
+      "external_bins": [],
+      "args": [],
+      "inputs": [
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "*/rendered-pianta/*.svg",
+          "kind": "svg",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {},
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "il frastagliamento della roccia viene da un rumore fisso legato al nome del master"
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": null,
+      "tests": [
+        "scripts/tests/test_tema_pianta.py"
+      ],
+      "docs": [
+        "docs/guides/GUIDA-MAPPE.md",
+        "plans/adr/ADR-0102-lo-stile-delle-piante-e-i-generatori-delle-citta-nel-repo.md"
       ]
     }
   ]

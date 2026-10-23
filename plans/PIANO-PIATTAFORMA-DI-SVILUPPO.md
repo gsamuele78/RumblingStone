@@ -74,6 +74,7 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | scipy | ≥ 1.18.1 | collaudo delle mappe | **stable** |
 | scikit-image | ≥ 0.25 | resa delle mappe | **stable** |
 | fonttools | ≥ 4.66.1 | font delle mappe | **stable** |
+| shapely | = 2.2.0 | piante delle città, `scripts/piante/` (ADR-0102) | **testing** dal 2026-10-23 |
 | bpy, torch, piq | `requirements-completo.txt` | 3D e seconda misura della resa, fuori CI | **testing** locale (non girano in CI: ADR-0084) |
 | spaCy, Stanza | — | `misura_sintassi` (PR #264, #270) | **unstable** |
 | `import fitz` di pymupdf | — | deprecato: pymupdf avvisa che sparirà | da migrare a `import pymupdf` prima che salga la versione maggiore |
@@ -104,6 +105,7 @@ tutti i componenti che la fanno passare in CI.
 | libretto imposto | typst, pdfcpu | testing |
 | mappe: SVG, contratto JSON, UVTT | Python | stable |
 | mappe: collaudo, qualità, resa | tcod, numpy, scipy, scikit-image | stable |
+| mappe: piante delle città | shapely, numpy, scipy | testing |
 | mappe: 3D e immagini | Blender, ComfyUI, torch, piq | unstable |
 | prosa: lingua, MQM, foglio di stile | Python | stable |
 | prosa: sintassi | spaCy, Stanza | unstable |
