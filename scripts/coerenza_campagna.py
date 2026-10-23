@@ -19,6 +19,9 @@ Scopo
              F5  ogni `fonte` file:riga esiste davvero
              F6  gli orologi citati da un fronte esistono, gli id sono unici
              O1  segmenti in {4, 6, 8}                     (Blades in the Dark)
+                 salvo l'orologio che conta un tempo e lo dichiara in `unita`
+                 (giorni, ore): allora basta un intero positivo, perché il
+                 March Clock a 42 giorni non si riduce a 8 tacche (DM, 2026-10-23)
              O2  0 <= riempiti <= segmenti
              O3  «quando si riempie» scritto
            e CONTA i campi che il master scrive (fonte) e quelli dedotti
@@ -225,10 +228,12 @@ def controlla_fronti(dati: dict, root: Path = ROOT, schema: dict | None = None) 
         oid = o["id"]
         seg, pieni = o["segmenti"], o["riempiti"]
         ok = True
-        if seg not in SEGMENTI_AMMESSI:
+        a_tempo = bool(o.get("unita")) and isinstance(seg, int) and seg > 0
+        if seg not in SEGMENTI_AMMESSI and not a_tempo:
             ok = False
             u = f" ({o.get('unita')})" if o.get("unita") else ""
-            v("O1", oid, f"segmenti = {seg}{u}: Blades in the Dark ne vuole 4, 6 o 8")
+            v("O1", oid, f"segmenti = {seg}{u}: Blades in the Dark ne vuole 4, 6 o 8, "
+                         f"o un intero positivo con `unita` per un orologio a tempo")
         if pieni is None or seg is None or not 0 <= pieni <= seg:
             ok = False
             v("O2", oid, f"riempiti = {pieni} su {seg}: deve stare fra 0 e il totale")
@@ -861,7 +866,7 @@ def testo_fronti(esiti: list[dict], state: list[dict] | None) -> str:
         m = e["misure"]
         out.append(f"== Fronti {e['arco']}")
         if m:
-            out.append(f"   fronti {m['fronti']} · orologi {m['orologi']} (conformi a 4/6/8: "
+            out.append(f"   fronti {m['fronti']} · orologi {m['orologi']} (conformi a O1-O2: "
                        f"{m['orologi_conformi']}) · presagi nei master {m['presagi_nei_master']}/"
                        f"{m['presagi']} · campi scritti nel master {m['campi_espliciti']}, "
                        f"dedotti {m['campi_dedotti']}")

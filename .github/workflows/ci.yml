@@ -203,6 +203,17 @@ jobs:
       - name: Coerenza fra scene e archi
         run: python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json "07_il Portale Della Forgia Eterna" "08_La Battaglia Di Hammerfist"
 
+      # Fronti e orologi (DM, 2026-10-23): canone dagli archi nuovi, da ARC-08
+      # in poi, un file `ARCnn-FRONTI.yaml` nella cartella dell'arco. ARC-07
+      # resta com'è. Senza file il passo non fa niente.
+      - name: Fronti e orologi degli archi
+        shell: bash
+        run: |
+          shopt -s nullglob
+          f=(*/ARC[0-9][0-9]-FRONTI.yaml)
+          if [ ${#f[@]} -eq 0 ]; then echo "nessun file di fronti"; exit 0; fi
+          python scripts/coerenza_campagna.py fronti "${f[@]}"
+
       # Bloccante sugli ERRORI dal 2026-09-24: i refusi sono a zero (11 corretti
       # nella #167, 13 falsi positivi tolti dalla regola). Gli AVVISI (virgolette
       # dritte, «E'») restano ~2.450 e non bloccano: --strict li alzerebbe a
