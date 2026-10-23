@@ -55,6 +55,16 @@ def _n(v: float) -> str:
     return f"{v:.1f}".rstrip("0").rstrip(".")
 
 
+def _corto(nome: str, n: int) -> str:
+    """La voce di legenda che sta nella colonna: prima via la parentesi, poi si
+    taglia all'ultima parola intera con i puntini, mai a metà parola."""
+    if len(nome) <= n:
+        return nome
+    if "(" in nome and len(base := nome.split("(")[0].rstrip(" ,;:")) <= n:
+        return base
+    return nome[:n - 1].rsplit(" ", 1)[0].rstrip(" ,;:(") + "…"
+
+
 def _rumore(x: float, y: float, seme: float) -> float:
     """Rumore liscio e deterministico in [-1, 1]: lo stesso punto, lo stesso valore."""
     v = (math.sin(x * 1.7 + y * 0.9 + seme) * 0.5 + math.sin(x * 3.1 - y * 2.3 + seme * 1.3) * 0.3
@@ -132,6 +142,25 @@ def render_pianta(grid: dict, source_name: str) -> str:
 
     def pat(r, c):
         return base[row_nums[r]][c] if 0 <= r < nr and 0 <= c < nc else None
+
+    # un oggetto o un'unità eredita il terreno della cella a sinistra
+    # (_resolve_bases): accanto a un pilastro finirebbe sulla roccia, accanto a
+    # una colata nella lava. Qui prende il piano più comune fra i quattro vicini.
+    def diretto(r, c):
+        e = em(r, c)
+        sp = simboli.get(e) if e else None
+        return sp["pat"] if sp and sp["mode"] == "fill" else None
+    base = {rn: list(v) for rn, v in base.items()}
+    for r in range(nr):
+        for c in range(nc):
+            p = pat(r, c)
+            if p is None or diretto(r, c):
+                continue
+            piani = [q for rr, cc in ((r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1))
+                     if (q := diretto(rr, cc)) and q not in ROCCIA and q not in BLOCCHI and q != "t_pillar"]
+            if piani:
+                # a parità resta il terreno di prima, poi l'ordine alfabetico
+                base[row_nums[r]][c] = max(sorted(set(piani)), key=lambda q: (piani.count(q), q == p))
 
     usati = sorted({e for r in range(nr) for c in range(nc) if (e := em(r, c))})
     # sotto un pilastro isolato c'è il pavimento dei vicini
@@ -526,6 +555,6 @@ def render_pianta(grid: dict, source_name: str) -> str:
             w(f'<use href="#{var[0]}" x="{_n(cx_ - 2)}" y="{_n(yy - 15)}" width="20" height="20"/>')
         elif e in noto:
             w(f'<use href="#{noto[e][0]}" x="{_n(cx_)}" y="{_n(yy - 13)}" width="16" height="16"/>')
-        w(_testo(cx_ + 24, yy, nome[:int(car) - 4], 10.5))
+        w(_testo(cx_ + 24, yy, _corto(nome, int(car) - 4), 10.5))
     w("</svg>")
     return "\n".join(o)
