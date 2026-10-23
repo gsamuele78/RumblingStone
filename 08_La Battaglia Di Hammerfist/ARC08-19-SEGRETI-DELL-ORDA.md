@@ -67,8 +67,8 @@ portata dell'arco di Dara (330 m). Guarda, e ricorda chi ha visto.
 ### Il sergente
 
 Si può **Sfidare** dal round 3 (libretto §13): l'eroe lascia la squadra per
-un round e lo affronta sulla mappa del pendio. Sotto i **25 pf** fugge, come
-un comandante, e il suo +1 esce dall'avanguardia; ma non è un comandante
+un round e lo affronta sulla mappa del pendio. Ha **50 pf**; quando ne ha
+perso la metà fugge, come un comandante, e il suo +1 esce dall'avanguardia; ma non è un comandante
 dell'assedio, e la sua fuga non dà il +2 al morale (libretto §13). Se muore
 nel duello vale lo stesso. La retroguardia è un'altra
 cosa: copre la ritirata e non porta al duello.

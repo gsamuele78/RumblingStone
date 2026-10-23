@@ -545,6 +545,8 @@ mezz'ora di marcia dalla statua.
 
 **In scena** — Dove: le mura — Chi: Re Thorek · i capitani
 
+**Domanda:** il gruppo sceglie il modo e «Chi tiene cosa» prima che suoni il corno?
+
 **Quando**: il Day 16, all'alba. **Durata**: 15 minuti.
 
 > **Read-aloud (Tolkien lead) — le mura, all'alba del primo giorno.** *La luce
@@ -1118,8 +1120,7 @@ del libretto, che arriva prima.
 
 **Se nessuno lo sfida** entro la fine del round 2, il Re scende dal cortile
 interno a cercarlo `[INFERRED — Grimjaw senza sfidante]`. Si racconta, non si tira: due
-re sulla rampa, e le due file che smettono di combattere per guardarli.
-
+re sulla rampa, e le due file che smettono di combattere per guardarli. La conseguenza:
 - La carta esce dal giorno come se Grimjaw fosse fuggito, **senza** il +2 al
   morale: il Re lo ricaccia, non lo sconfigge.
 - Il Re torna con **4d10+20** danni `[INFERRED]`, da segnare: la notte Dana

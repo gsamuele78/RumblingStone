@@ -840,6 +840,8 @@ nuovo, con la finestra se Dara la legge. Poi il Consiglio (Scena 5).
 
 **In scena** — Dove: la Sala del Trono Ancestrale — Chi: Re Thorek · la Madre Superiora · i capitani
 
+**Domanda:** il Re accetta di comandare dal cortile, e lascia il Cancello a Borin?
+
 **Quando**: la sera del Giorno −3. **Durata**: 20 minuti.
 
 Il Consiglio decide quattro cose, e ognuna è una leva del libretto. Al tavolo
@@ -910,6 +912,8 @@ del giorno dopo: la Preparazione (Scena 6).
 ### SCENA 6 — 1B-2 · La Preparazione delle difese
 
 **In scena** — Dove: il cortile interno — Chi: la Madre Superiora · i capitani · il mastro armaiolo
+
+**Domanda:** con otto azioni e cinque leve, il gruppo arriva all'alba con tutte le leve che gli servono?
 
 **Quando**: il Giorno −2, mattina e pomeriggio. **Durata**: 20-30 minuti.
 
@@ -1302,6 +1306,8 @@ che fra i pregen non ci sono, e dava a Grimjaw una «magia demoniaca»: Grimjaw
 ### SCENA 10 — La notte dei fuochi
 
 **In scena** — Dove: la statua del Re Antenato — Chi: nessuno
+
+**Domanda:** la rocca arriva all'alba del Giorno 1 con il morale sopra il +1 di partenza?
 
 **Durata**: 5 minuti.
 
