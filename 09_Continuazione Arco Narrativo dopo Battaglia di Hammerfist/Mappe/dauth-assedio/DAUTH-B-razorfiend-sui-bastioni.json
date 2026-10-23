@@ -11,8 +11,8 @@
  "base_terrain": "⬜",
  "north": "N",
  "luogo": "Dauth, bastioni sud",
- "quota": "544 m ; s.l.m., il camminamento sulle mura sud [INFERRED — needs DM confirmation]",
- "dislivello": "+12 m ; sul piede esterno delle mura, alte 12 m come ad Ávila [INFERRED — needs DM confirmation]",
+ "quota": "544 m ; s.l.m., il camminamento sulle mura sud",
+ "dislivello": "+12 m ; sul piede esterno delle mura, alte 12 m come ad Ávila",
  "structures": [
   {
    "type": "🧱",
