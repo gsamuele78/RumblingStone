@@ -24,8 +24,9 @@ d'architettura non nominava cinque dei dieci script.
 
 Le misure del lotto 7 dicono anche cosa questa catena **non** fa. Nessuna delle
 17 misure di prosa della letteratura prevede il voto cieco del DM; il modello di
-preferenza di `migliora_prosa` arriva a 0,611 in leave-one-out, sotto la soglia
-scritta prima di addestrarlo; LanguageTool ha dato un rilievo vero su 30 letti;
+preferenza di `migliora_prosa` arrivava a 0,611 in leave-one-out, sotto la
+soglia scritta prima di addestrarlo (sale a 0,661 e la supera col voto del
+2026-10-23, vedi sotto); LanguageTool ha dato un rilievo vero su 30 letti;
 Stanza non batte spaCy (PR #270). La coerenza invece ha trovato contraddizioni
 vere fra ARC-07 e ARC-08 ed è diventata un cancello.
 
@@ -59,9 +60,14 @@ vere fra ARC-07 e ARC-08 ed è diventata un cancello.
 
 2. **Le candidate le scrive un agente o una persona**, mai lo script.
    `migliora` filtra (fatti cambiati, box impoverito, le regole misurabili di
-   `read-aloud-adulti.md` §2-ter) e ordina col modello solo come suggerimento
-   finché il modello non passa la sua soglia. Il voto cieco resta l'unico
-   giudice, e ogni voto torna in `pipeline/VOTI.json` per il modello dopo.
+   `read-aloud-adulti.md` §2-ter) e ordina col modello. Dal 2026-10-23 il
+   modello supera la sua soglia (0,661 in leave-one-out su 59 coppie, Wilson
+   basso 0,534; 5 coppie nuove su 5 previste prima del voto), quindi fa una
+   cosa sola in più: se anche la migliore candidata ha meno di 0,5 contro
+   l'originale, resta l'originale e la coppia non va al cieco. Una candidata
+   che il modello dà vincente va comunque al cieco, che resta l'unico giudice
+   di ciò che entra; ogni voto torna in `pipeline/VOTI.json` e `esito`
+   rimisura la soglia.
 3. **Le dipendenze esterne sono nel registro.** `binari.py` conosce `spacy`
    (facoltativa, in `requirements-completo.txt` col modello `it_core_news_md`,
    CC BY-NC-SA: nel `.venv`, mai nel repo) e le catene «sintassi della prosa»
@@ -88,8 +94,8 @@ vere fra ARC-07 e ARC-08 ed è diventata un cancello.
 - Si paga: un sottocomando in più in `dm.py`, e `requirements-completo.txt`
   scarica 45 MB di modello per chi vuole la sintassi.
 
-**Da rivedere se**: una misura automatica supera la soglia sui voti ciechi del
-DM (allora `migliora` può ordinare davvero, e la catena cambia nella fase
-«decidere»); il progetto diventa commerciale (il modello spaCy non è più
+**Da rivedere se**: il modello torna sotto la soglia (allora smette di
+scartare); il DM decide che il modello può anche far entrare una candidata
+senza cieco, sopra una probabilità da fissare prima; il progetto diventa commerciale (il modello spaCy non è più
 installabile); un modello locale vince il cieco contro il generatore di oggi
 (ADR-0089).

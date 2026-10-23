@@ -114,6 +114,17 @@ class TestCandidate(unittest.TestCase):
         self.assertEqual(r["vincitrice"], 2)
         self.assertTrue(r["candidate"][0]["scartata"])
 
+    def test_se_la_migliore_perde_contro_l_originale_resta_l_originale(self):
+        buona = ORIGINALE.replace("Il vecchio alza", "Accanto all'incudine il vecchio alza")
+        m = MP.addestra([[0.0] * len(MP.TRATTI)])
+        # la candidata ha il Gulpease più basso dell'originale: con questi pesi perde
+        m["pesi"] = [5.0] * len(MP.TRATTI)
+        m["scala"] = [1.0] * len(MP.TRATTI)
+        r = MP.migliora(ORIGINALE, [buona], m)
+        self.assertLess(r["punteggio"], 0.5)
+        self.assertIsNone(r["vincitrice"])
+        self.assertEqual(r["resta_originale"], "la migliore perde contro l'originale")
+
 
 class TestDataset(unittest.TestCase):
     SCHEDA = ("# Scheda\n\n## Parte 1 — 2 coppie\n\n## Coppia 1\n\n*Box B01*\n\n**A**\n\n> uno A\n>\n> due A\n\n"

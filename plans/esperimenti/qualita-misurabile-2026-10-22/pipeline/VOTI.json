@@ -721,6 +721,84 @@
    "ruolo_perdente": "O (originale)",
    "etichette_sulla_perdente": [],
    "originale": "In fondo alla tenda, dove la luce dei bracieri non arriva, un vecchio è seduto su uno sgabello da bottega. Grembiule di cuoio. Sulle ginocchia una lastra di ardesia che sta incidendo con una punta di ferro, piano, come se fuori non ci fossero diecimila tende e un drago."
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-1",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 1,
+   "titolo": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md · SCENA 1 — Il portale e il bosco al tramonto",
+   "pari": false,
+   "vincente": "Per un istante lunghissimo i colori si rovesciano, e vi passano davanti vite intere di nani: nascono, battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite non ci sono più. Siete in piedi in un bosco. Gli alberi sono vecchi, le radici grosse come un uomo sdraiato, e l'aria sa di foglie marce e di fumo lontano. Il sole è già dietro il crinale, e fra i tronchi resta una luce rossa. Uno di voi ha le ginocchia bagnate e non si ricorda di essere caduto.",
+   "perdente": "Per un istante lunghissimo i colori si rovesciano, e vi passano davanti vite intere di nani: nascono, battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite non ci sono più. Siete in piedi in un bosco. Gli alberi sono vecchi, le radici grosse come un uomo sdraiato, e l'aria sa di foglie marce e di fumo lontano. Il sole è già dietro il crinale. Uno di voi ha le ginocchia bagnate e non si ricorda di essere caduto.",
+   "ruolo_vincente": "pipeline",
+   "ruolo_perdente": "originale",
+   "etichette_sulla_perdente": [],
+   "originale": "Per un istante lunghissimo i colori si rovesciano, e vi passano davanti vite intere di nani: nascono, battono il ferro, invecchiano, in un tempo più corto di un respiro. Poi torna il peso, e con il peso il freddo. Le ferite non ci sono più. Siete in piedi in un bosco. Gli alberi sono vecchi, le radici grosse come un uomo sdraiato, e l'aria sa di foglie marce e di fumo lontano. Il sole è già dietro il crinale. Uno di voi ha le ginocchia bagnate e non si ricorda di essere caduto."
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-2",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 2,
+   "titolo": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md · Come si combatte, se si arriva a combatterlo",
+   "pari": true,
+   "vincente": "Tre rune nane. Tutte spezzate a metà dallo stesso colpo di punta. Sotto, inciso più a fondo, un nome: Hald. Poi una freccia, verso nord.",
+   "perdente": "Tre rune nane, tutte spezzate a metà dallo stesso colpo di punta. Sotto, inciso più a fondo, un nome: Hald. Poi una freccia, verso nord.",
+   "ruolo_vincente": "pipeline",
+   "ruolo_perdente": "originale",
+   "etichette_sulla_perdente": [],
+   "originale": "Tre rune nane, tutte spezzate a metà dallo stesso colpo di punta. Sotto, inciso più a fondo, un nome: Hald. Poi una freccia, verso nord."
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-3",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 3,
+   "titolo": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md · SCENA 11 — Il duello con Skullcrusher",
+   "pari": false,
+   "vincente": "Per un istante la Corona ti mostra due immagini sovrapposte. Questo drago, adesso. E un altro drago, sopra mura che bruciano: mura che non hai mai visto.",
+   "perdente": "Per un istante la Corona ti mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra mura che bruciano, mura che non hai mai visto.",
+   "ruolo_vincente": "pipeline",
+   "ruolo_perdente": "originale",
+   "etichette_sulla_perdente": [],
+   "originale": "Per un istante la Corona ti mostra due immagini sovrapposte: questo drago adesso, e un altro drago sopra mura che bruciano, mura che non hai mai visto."
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-4",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 4,
+   "titolo": "07_il Portale Della Forgia Eterna/ARC07-DEF-4-VIAGGIO-MILLE-ANNI.md · Momento 4 — l'Aura della Forgia Eterna `[CANONE — DM 2026-09-20]`",
+   "pari": false,
+   "vincente": "Accanto all'incudine il vecchio alza la testa e guarda la luce dietro Thorik. In tutto il cortile le ferite si chiudono: un fabbro con una gamba sola si tira su contro il muro, il muro gli cede sotto la mano come argilla calda, e lui ci infila il moncone e resta in piedi. Nessuno grida. Ottocento nani guardano un nano con una corona, e per un lungo momento, nel cortile, c'è solo il respiro della forgia.",
+   "perdente": "Il vecchio accanto all'incudine alza la testa e guarda la luce dietro Thorik. In tutto il cortile i feriti smettono di essere feriti: un fabbro con una gamba sola si tira su contro il muro, il muro gli si apre sotto la mano come argilla, e lui ci infila la gamba e resta in piedi. Nessuno grida. Ottocento nani guardano un nano con una corona, e per un lungo momento, nel cortile, c'è solo il respiro della forgia.",
+   "ruolo_vincente": "pipeline",
+   "ruolo_perdente": "originale",
+   "etichette_sulla_perdente": [],
+   "originale": "Il vecchio accanto all'incudine alza la testa e guarda la luce dietro Thorik. In tutto il cortile i feriti smettono di essere feriti: un fabbro con una gamba sola si tira su contro il muro, il muro gli si apre sotto la mano come argilla, e lui ci infila la gamba e resta in piedi. Nessuno grida. Ottocento nani guardano un nano con una corona, e per un lungo momento, nel cortile, c'è solo il respiro della forgia."
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-5",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 5,
+   "titolo": "08_La Battaglia Di Hammerfist/ARC08-01-GUIDA-DM.md · **INTRODUZIONE SESSIONE 2:**",
+   "pari": false,
+   "vincente": "\"L'alba del primo giorno d'assedio sorge pallida e spettrale. L'esercito della Mano Rossa si è dispiegato in formazioni perfette davanti alle mura di Hammerfist. Al centro, Generale Grimjaw siede sul suo warg gigante nero, la sua armatura demoniaca che riflette le prime luci del sole come metallo insanguinato. Alla sua destra, l'orrenda massa di Gorthak il Trifronte brandisce tre randelli enormi, le sue teste che discutono animatamente in linguaggio gigante. Sopra di tutti, Fauci di Palude plana minaccioso, le sue ali che proiettano ombre di morte sulle rocce sottostanti.\"",
+   "perdente": "\"Sorge pallida e spettrale l'alba del primo giorno d'assedio. Davanti alle mura di Hammerfist l'esercito della Mano Rossa si è schierato in formazioni perfette. Al centro il Generale Grimjaw siede su un warg gigante nero, con un'armatura demoniaca che alle prime luci del sole riluce come metallo insanguinato. Alla sua destra Gorthak il Trifronte, un'orrenda massa di carne, brandisce tre randelli enormi mentre le sue teste discutono animatamente in gigante. Sopra di tutti plana Fauci di Palude, minaccioso, e le sue ali proiettano ombre di morte sulle rocce sottostanti.\"",
+   "ruolo_vincente": "originale",
+   "ruolo_perdente": "pipeline",
+   "etichette_sulla_perdente": [],
+   "originale": "\"L'alba del primo giorno d'assedio sorge pallida e spettrale. L'esercito della Mano Rossa si è dispiegato in formazioni perfette davanti alle mura di Hammerfist. Al centro, Generale Grimjaw siede sul suo warg gigante nero, la sua armatura demoniaca che riflette le prime luci del sole come metallo insanguinato. Alla sua destra, l'orrenda massa di Gorthak il Trifronte brandisce tre randelli enormi, le sue teste che discutono animatamente in linguaggio gigante. Sopra di tutti, Fauci di Palude plana minaccioso, le sue ali che proiettano ombre di morte sulle rocce sottostanti.\""
+  },
+  {
+   "id": "pipeline-2026-10-23-20261024-6",
+   "fonte": "pipeline-2026-10-23",
+   "coppia": 6,
+   "titolo": "08_La Battaglia Di Hammerfist/ARC08-02-SCHEDE-PERSONAGGI-REGOLAMENTO.md · **BORIN FERROPUGNO, Il Martello di Hammerfist**",
+   "pari": false,
+   "vincente": "\"Sei il nipote del precedente Re: un nano nel fiore degli anni, che vive per la battaglia. Gridi 'Seguitemi!' e ti getti per primo nella mischia. Il tuo compito è tenere la linea, e proteggere il Re.\"",
+   "perdente": "\"Sei il nipote del precedente Re, un nano nel fiore degli anni che vive per la battaglia. Grida 'Seguitemi!' e gettati per primo nella mischia. Il tuo compito è tenere la linea e proteggere il Re.\"",
+   "ruolo_vincente": "pipeline",
+   "ruolo_perdente": "originale",
+   "etichette_sulla_perdente": [],
+   "originale": "\"Sei il nipote del precedente Re, un nano nel fiore degli anni che vive per la battaglia. Grida 'Seguitemi!' e gettati per primo nella mischia. Il tuo compito è tenere la linea e proteggere il Re.\""
   }
  ]
 }

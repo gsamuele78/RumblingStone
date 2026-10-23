@@ -530,9 +530,16 @@ def migliora(originale: str, candidate: "list[str]", modello: dict, lt=None) -> 
                      "punteggio": round(probabilita(modello, z), 3)})
     buone = [v for v in voci if not v["scartata"]]
     migliore = max(buone, key=lambda v: (v["punteggio"], -v["n"])) if buone else None
+    # Dal 2026-10-23 il modello supera la soglia di SOGLIA.txt: se anche la
+    # migliore perde contro l'originale, resta l'originale. Lo stesso giorno,
+    # addestrato sui 55 voti di prima, aveva previsto 5 coppie nuove su 5, fra
+    # cui l'unica che il DM ha dato all'originale (P05, 0,94 per l'originale).
+    perde = migliore is not None and migliore["punteggio"] < 0.5
     return {"originale": originale, "candidate": voci,
-            "vincitrice": migliore["n"] if migliore else None,
-            "punteggio": migliore["punteggio"] if migliore else None}
+            "vincitrice": None if perde or not migliore else migliore["n"],
+            "punteggio": migliore["punteggio"] if migliore else None,
+            "resta_originale": "la migliore perde contro l'originale" if perde else
+                               ("nessuna candidata passa il filtro" if not migliore else None)}
 
 
 # ── scegli: i box da migliorare ──────────────────────────────────────────────
@@ -1160,7 +1167,7 @@ def main(argv: "list[str] | None" = None) -> int:
             stato = "scartata: " + "; ".join(v["scartata"]) if v["scartata"] else "passa"
             print(f"candidata {v['n']} · P(batte l'originale) {v['punteggio']:.3f} · {stato}")
         if r["vincitrice"] is None:
-            print("nessuna candidata passa il filtro: resta l'originale")
+            print(f"{r['resta_originale']}: resta l'originale")
         else:
             print(f"migliore: candidata {r['vincitrice']} (punteggio {r['punteggio']:.3f})")
             print(next(v["testo"] for v in r["candidate"] if v["n"] == r["vincitrice"]))

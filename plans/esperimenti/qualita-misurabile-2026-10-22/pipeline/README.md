@@ -103,3 +103,44 @@ LanguageTool, di Stanza e della perplessità. Nessuna batte il base (McNemar
 appaiato, soglia scritta prima): il modello resta quello di undici tratti, e
 il filtro LT non scarta nulla perché nessun gruppo di rilievi arriva a 0,70 di
 precisione.
+
+## Il voto della prima prova (2026-10-23)
+
+Il DM ha votato le sei coppie: `1 B`, `2 =`, `3 A`, `4 A`, `5 A`, `6 B`
+(`cieco/VOTI.txt`). Con la chiave:
+
+| Coppia | Box | Vince | Il modello, addestrato prima sui 55 voti vecchi |
+|---|---|---|---|
+| 1 | P01, ARC-07 DEF-4, il bosco al tramonto | pipeline | pipeline, 0,61 |
+| 2 | P02, le rune di Hald | pari | — |
+| 3 | P03, la Corona e i due draghi | pipeline | pipeline, 0,88 |
+| 4 | P04, l'Aura della Forgia | pipeline | pipeline, 0,59 |
+| 5 | P05, ARC-08, l'alba dell'assedio | **originale** | originale, 0,94 |
+| 6 | P06, Borin Ferropugno | pipeline | pipeline, 0,67 |
+
+La pipeline vince 4, l'originale 1, pari 1: Wilson 95% [0,30-0,90], sotto la
+soglia di `cieco_versioni` (5 su 6). **Che la pipeline migliori la prosa non è
+dimostrato.**
+
+Il modello, invece, ha passato due prove. **In prospettiva**: addestrato sui 55
+voti di prima, senza vedere questi, ha indovinato 5 coppie decise su 5, compresa
+l'unica che il DM ha dato all'originale (p = 1/32 = 0,03 sotto il caso). **In
+leave-one-out** sulle 59 coppie decise: 39 giuste, 0,661, Wilson [0,534-0,769],
+contro 0,508 della più lunga. Supera la soglia di `SOGLIA.txt`, scritta prima
+di addestrarlo, senza cambiare né tratti né parametri.
+
+Conseguenza, come dice `SOGLIA.txt`: il modello diventa misura automatica.
+`migliora` ora tiene l'originale quando anche la migliore candidata ha meno di
+0,5 contro di lui; con questa regola P05 non sarebbe andata al cieco.
+
+Tre cautele restano vere:
+
+- le regole 1-4 di §2-ter vengono in parte da questi stessi voti, e il
+  leave-one-out non lo corregge (la prova in prospettiva sì, ma sono 5 coppie);
+- il limite basso di Wilson è a 0,534: altri dieci voti sfortunati lo
+  riportano sotto. `esito` lo rimisura a ogni voto;
+- **il peso più forte resta quello dei possessivi** (+0,76), e P05 è proprio il
+  box pieno di «la sua armatura», «le sue teste» che il DM ha preferito alle
+  riscritture che li toglievano. È la seconda volta (dopo la calibrazione,
+  p = 0,057) che i voti ciechi vanno contro `italiano-nativo.md` §1 sul
+  possessivo. Se la norma vada ammorbidita lo decide il DM.

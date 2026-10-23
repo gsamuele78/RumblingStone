@@ -583,9 +583,10 @@ flowchart LR
 
 La fase 3 non genera niente: `migliora` scarta le candidate che cambiano un
 fatto, che impoveriscono il box o che violano una delle regole misurabili di
-`read-aloud-adulti.md` §2-ter, e ordina le rimaste. L'ordine è solo un
-suggerimento finché il modello non supera la soglia scritta in
-`pipeline/SOGLIA.txt` (oggi 0,611 in leave-one-out, sotto).
+`read-aloud-adulti.md` §2-ter, e ordina le rimaste. Il modello supera la
+soglia scritta in `pipeline/SOGLIA.txt` dal 2026-10-23 (0,661 in leave-one-out
+su 59 coppie): se anche la migliore perde contro l'originale, resta
+l'originale e la coppia non va al cieco.
 
 | Azione | Script | Canale (§16) | In CI |
 |---|---|---|---|
@@ -730,7 +731,8 @@ master e lo schema dei fronti (`scripts/schemas/fronti_orologi.schema.json`).
 |---|---|---|
 | 17 misure di prosa della letteratura sui 38 voti ciechi | nessuna prevede il voto | niente cancelli di prosa nuovi |
 | catena vecchia contro nuova, 16 box al cieco | vecchia 8, nuova 5, pari 1 | tre cautele in §2-ter, nessuna sostituzione |
-| modello di preferenza di `migliora` | 0,611 in leave-one-out, sotto la soglia | ordina solo come suggerimento |
+| modello di preferenza di `migliora` | 0,611 il 22; col voto del 23, 0,661 su 59 coppie (Wilson basso 0,534) e 5 su 5 in prospettiva | scarta le candidate che perdono contro l'originale; il resto va al cieco |
+| prima prova della pipeline al cieco | pipeline 4, originale 1, pari 1 (soglia 5 su 6) | miglioramento non dimostrato |
 | LanguageTool sui box | 1 rilievo vero su 30, 6 errori piantati su 20 | filtro spento finché un gruppo non arriva a 0,70 |
 | Stanza contro spaCy (PR #270) | non vince | resta spaCy |
 | coerenza fra ARC-07 e ARC-08 | contraddizioni vere, 4 residui dichiarati | cancello in CI |
