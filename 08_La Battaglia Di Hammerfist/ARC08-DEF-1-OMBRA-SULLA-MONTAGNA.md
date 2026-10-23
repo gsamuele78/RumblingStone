@@ -1024,8 +1024,8 @@ coi fatti: le baliste lo colpiscono e non succede niente.
   **CD 25**, o è **scosso** per 4d6 round (Borin +8, +10 in Postura
   Difensiva; Dara +9; Nala +11; Thorin +16). La Presenza Comandante di Borin
   dà **+2** a chi gli sta entro 9 m sulle mura. Il raggio di 90 m è un
-  potenziamento della scheda di Fauci, non SRD: l'SRD dà 54 m all'adulto
-  (9 m per categoria d'età).
+  potenziamento della scheda di Fauci, non SRD: l'SRD dà 63 m all'adulto
+  maturo, la categoria di Fauci (9 m per categoria d'età).
 - **Le baliste** non servono: i dardi non sono magici, e la RD 10/magia se
   li mangia tutti.
 - **Si può colpire.** Dara a 60 m è al secondo incremento (−2), con il nemico
@@ -1515,7 +1515,7 @@ La pattuglia intera: **EL 8** (tre GS 5; i worg non la alzano di un punto intero
 
 Gli scout col sergente: **EL** circa 9. Pattuglia e scout insieme: **EL** circa 10.
 
-**A.5 · Fauci di Palude, per la Scena 7** · non si ricopia: statblocco completo in `ARC08-01`, PNG nemici. Per la scena servono: CA **29**, pf **337**, RD 10/magia, RI **21**, volare 45 m (scarsa), soffio in linea di 30 m **14d4** acido (Riflessi **CD 29** dimezza), Presenza terrificante **90 m**, Volontà **CD 25** (⚠️ potenziamento non SRD: 54 m nell'SRD per un adulto).
+**A.5 · Fauci di Palude, per la Scena 7** · non si ricopia: statblocco completo in `ARC08-01`, PNG nemici. Per la scena servono: CA **29**, pf **337**, RD 10/magia, RI **21**, volare 45 m (scarsa), soffio in linea di 30 m **14d4** acido (Riflessi **CD 29** dimezza), Presenza terrificante **90 m**, Volontà **CD 25** (⚠️ potenziamento non SRD: 63 m nell'SRD per l'adulto maturo).
 
 ### A.6 · I pregen: quello che si tira stasera
 
