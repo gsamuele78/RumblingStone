@@ -3498,16 +3498,16 @@ contata a parte (audit WBL).
  Terreno difficile ovunque (movimento ×2) · gravità 2×
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R
-01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫
-02    🟫 🔷 🔷 🔷 🟫 🟫 🕳️ 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫 🟫   🕳️ G02 = Xorn 1 emerge
-03    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫
-04    🟫 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   🛡️F04 Thorik · 🔮I04 Artemis
+01    🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫
+02    🟫 🔷 🔷 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫 🟫   🕳️ G02 = Xorn 1 emerge
+03    🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫 🟫
+04    🔷 🟫 🟫 🟫 🟫 🛡️ 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   🛡️F04 Thorik · 🔮I04 Artemis
 05    🟫 🟫 🟫 🟫 🟫 🟫 🥋 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🕳️ 🟫 🟫 🟫   🥋G05 Tordek · 🕳️O05 Xorn 2
 06    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-07    🟫 🔷 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫
-08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
-09    🟫 🟫 🔷 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
-10    🟫 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
+07    🟫 🟫 🔷 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫
+08    🟫 🔷 🔷 🟫 🟫 🟫 💠 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🔷 🟫 🟫   💠G08 = PILASTRO corroso (crolla)
+09    🟫 🔷 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫   🟣G09-H10 = «Fauci di Diamante» (Grande, sotto il pilastro)
+10    🔷 🟫 🟫 🟫 🟫 🟫 🟣 🟣 🟫 🟫 🟫 🟫 🟫 🔷 🟫 🟫 🟫 🟫
 LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
         🟫 = roccia frastagliata (difficile) · 🕳️ = punto d'emersione Xorn
         🟣 = Fauci di Diamante (élite, Grande: 2×2) · 💠 = base corrosa del pilastro · 🛡️ Thorik · 🥋 Tordek · 🔮 Artemis
@@ -3527,13 +3527,13 @@ LEGENDA · 🔷 = Cristallo Gigante (copertura totale, indistruttibile)
 ════════════════════════════════════════════════════════════════════════
 COL →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T
 01    🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️ 🌫️   ← vuoto laterale
-02    🟫 🟫 🔮 🟫 💚 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫   💚 E02 crepato
-03    🟫 🔮 🟫 🔮 🟫 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫   triangoli · cerchi · esagono
-04    🟫 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🔷 🔮 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫   🔷 J04 Madre Cristallo
-05    🟫 🟫 🟫 🔮 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫
+02    🟫 🔮 🟫 🟫 💚 🟫 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🔮 🟫 🟫   💚 E02 crepato
+03    🔮 🔮 🟫 🔮 🔮 🔮 🔮 🟫 🔮 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫   triangoli · cerchi · esagono
+04    🟫 🟫 🟫 🟫 🟫 🟫 🔮 🟫 🔮 🔷 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 🔮 🟫   🔷 J04 Madre Cristallo
+05    🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔮 🔮 🟫 🔮 🔮 🟫 🟫 🟫 🔮 🟫 🔮 🟫 🟫
 06    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜   ← corridoio libero
-07    🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 🟫 🔮 💚 🔮 🟫 🟫 🟫 🟫   💚 O07 crepato
-08    🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🔮 🟫 🟫 🟫 🟫 🟫   ↓ faglia a sud (+30 min)
+07    🟫 🔮 🔮 🔮 🟫 🔮 🔮 🟫 🔮 🟫 🔮 🟫 🟫 🟫 💚 🟫 🟫 🔮 🟫 🟫   💚 O07 crepato
+08    🟫 🟫 🔮 🟫 🟫 🔮 🟫 🟫 🔮 🔮 🔮 🟫 🟫 🟫 🟫 🔮 🔮 🟫 🟫 🟫   ↓ faglia a sud (+30 min)
 ════════════════════════════════════════════════════════════════════════
 LEGENDA · 💚 Cristallo Vivente crepato, riforgiabile (E02 e O07): curato vale +2
 🔮 Cristallo Vivente che canta, alto 1-3 m: copertura ½, chi ci entra lo rompe

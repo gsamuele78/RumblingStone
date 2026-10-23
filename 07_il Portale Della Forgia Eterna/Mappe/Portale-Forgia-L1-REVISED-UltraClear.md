@@ -22,6 +22,12 @@
 > H09-K10 (prima erano disegnati una colonna più a destra). La porta nord è in
 > J02-K02, con l'androne J01-K01 dietro.
 >
+> 🗿 **Le nicchie, dal 2026-10-23.** Due statue di re nanici stanno in nicchia
+> nella roccia, a metà dei muri lunghi: C07 a ovest e S07 a est, simmetriche
+> sull'asse della sala (D-R). Sono muro con una statua dentro, e movimento,
+> copertura e linea di vista restano quelli di prima. Il resto della sala non
+> cambia: è architettura nanica, e resta squadrata.
+>
 > ⚠️ `[INFERRED — needs DM confirmation]` Questa è una generazione storica: la
 > Stanza della Corona canonica è la S-2 dell'Atlante (10 × 13, ingresso a sud,
 > trono a nord), giocata in ARC-06. PF-1 ne è una versione diversa, con porta a
@@ -41,7 +47,7 @@ RIGHE ↓
 04  🏰🏰🏰🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜🟪🟪⬜⬜🏰🏰
 05  🏰🏰🏰⬜🏮⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏮⬜🏰🏰   torce su piede E05, Q05
 06  🏰🏰🏰⬜🔴⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰   Yochlol 1 E06
-07  🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🔴⬜⬜⬜🏰🏰   Yochlol 2 O07
+07  🏰🏰🗿⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🔴⬜⬜⬜🗿🏰   Yochlol 2 O07
 08  🏰🏰🏰⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜🏰🏰
 09  🏰🏰🏰⬜🏮⬜⬜🔳👑👑🔳⬜⬜⬜⬜⬜🏮⬜🏰🏰   DAIS H09-K10 (+1,5 m) · TRONO I09-J10, Belkram seduto · torce E09, Q09
 10  🏰🏰🏰⬜⬜⬜⬜🔳👑👑🔳⬜⬜⬜⬜⬜⬜⬜🏰🏰
@@ -51,7 +57,7 @@ RIGHE ↓
 14  🏰🏰🏰🏰🏰🏰🏰🏰🏰🚪🚪🏰🏰🏰🏰🏰🏰🏰🏰🏰   PORTA SUD J14-K14, verso la Sala della Forgia
 
 ══════════════════════════════════════════════════════════════════
-LEGENDA · 🏰 roccia viva · ⬜ pavimento lavorato · 🟪 pilastro di mithral (copertura totale) · 🔳 dais rialzato di 1,5 m (ci si sale) · 👑 trono · 🏮 torcia su piede, accanto al muro (luce fioca 6 m) · 🚪 porta · 🔴 Yochlol e Xanathira
+LEGENDA · 🏰 roccia viva · ⬜ pavimento lavorato · 🟪 pilastro di mithral (copertura totale) · 🔳 dais rialzato di 1,5 m (ci si sale) · 👑 trono · 🏮 torcia su piede, accanto al muro (luce fioca 6 m) · 🚪 porta · 🔴 Yochlol e Xanathira · 🗿 statua di un re, in nicchia
 ══════════════════════════════════════════════════════════════════
 @north N
 @tipo tattica interni
@@ -264,6 +270,29 @@ VISTA INGRESSO (PG Guardano Sud) ↓
 
 ### VISTA 1: GRID COMPLETA OTTAGONALE CON COORDINATE
 
+> ✏️ **Ridisegnata il 2026-10-23.** Il contorno era una scala irregolare di 🏛️,
+> centrata mezza colonna e mezza riga più a nord-ovest dell'altare, e gli
+> affreschi stavano dove capitava. Ora l'ottagono ha il centro dell'altare e
+> dei pilastri (N14): 23 quadretti (34,5 m) fra due lati dritti, lati dritti di
+> 7 quadretti, diagonali a gradino singolo, muro di basalto ⬛ spesso 3 m e
+> roccia 🏰 negli angoli. Ogni pilastro sta a due quadretti dalla parete, che
+> sia dritta o diagonale.
+>
+> Gli affreschi stanno sulla faccia interna del muro, uno per lato: A1 M-O02
+> (nord); G06-H06-F07 (nord-ovest, la coordinata che le POSIZIONI danno ad A2
+> e ad A8); T06-U06-V07 (nord-est); A3 Z16-17, col portale del Fuoco 🌀 X-Y16-17
+> davanti; A4 T22-U22-V21 (sud-est); A5, il portale della Terra 🌀 N-O25-26, con
+> l'affresco in M26; A6 F21-G22-H22, col portale del Tempo 🌀 F-G20 davanti;
+> A7 B13-B15 (ovest).
+>
+> ⚠️ Scarti con le POSIZIONI, per il DM. A2 e A8 hanno la stessa coordinata
+> (G-H06) e A2 è detto «NE»: la griglia mette un affresco a nord-ovest e uno a
+> nord-est, e quale sia A2 lo decide il DM. A4 «R-S19» cade in mezzo al
+> pavimento e A7 «C-D13» davanti al muro ovest: i due affreschi sono disegnati
+> sul muro più vicino. I pilastri «a 4-5 quadretti dalle pareti» lo sono
+> contando dal bordo della griglia; dalla parete sono 2, come prima sui lati
+> nord e sud.
+
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 NORD ↑                                   SALA DELLA FORGIA ETERNA (Octagon)                              GRIGLIA 27 COLONNE × 27 RIGHE (Circular Trim)
@@ -273,57 +302,59 @@ COLONNE →  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W
 RIGHE ↓    │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │  │
 
 --- RIGA 01-05: PARETE NORD + AFFRESCO A1 ---
-01    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🖼️ 🖼️ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+01    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                  └────┘ A1: AFFRESCO "Creation World" (Col M-O, Riga 02)
-02    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🖼️ 🖼️ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+02    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ 🖼 🖼 🖼 ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                          3m×3m (2×2 quadrati)
-03    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+03    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                      └───────────── Interior Octagon Starts ─────────────┘
-04    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
+04    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
       │                         8 PILASTRI adamantini 🟪: N05 · T08 · W14 · T20 · N23 · H20 · E14 · H08
 
 --- RIGA 06-12: ANGOLO NE + AFFRESCO A2 + A3 FUOCO ---
-05    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
-06    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
+05    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+06    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ 🖼 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 🖼 ⬛ ⬛ 🏰 🏰 🏰 🏰
       │                └────┘ A2: AFFRESCO "Divine Weapons" (Col G-H, Riga 06)
-07    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
-08    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+07    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
+08    │ 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
       │                └─┘ PILASTRO (H08)            PILASTRO (T08) └─┘
-09    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
-10    │ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
+09    │ 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰
+10    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
 
 --- RIGA 11-16: LATO EST + AFFRESCO A3 🔥 FIRE PORTAL (ACTIVE!) ---
-11    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-12    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-13    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
+11    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+12    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+13    │ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
       │                                  └────────┘ ALTARE MORADIN (M13-O15, +3m elevato)
-14    │ ⬛ 🏛️ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ 🏛️ 🏛️ ⬛
+14    │ ⬛ 🖼 ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ 🔥 ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛
       │                                      └─┘ Centro: Col N, Riga 14 (Focal Point)
-15    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ ⬛
-16    │ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
+15    │ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⭐ ⭐ ⭐ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛
+16    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼 ⬛
       │                                                                        └────┘ A3: 🔥 FIRE PORTAL
-17    │ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼️ 🏛️
+17    │ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🌀 🌀 🖼 ⬛
       │                                                                              (Col X-Z, Riga 16-17)
       │                                                                              ACTIVE! Swirling Fire
 
 --- RIGA 18-27: ANGOLO SE + SUD + ALTRIAFFRESCHI ---
-18    │ ⬛ ⬛ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼️ 🏛️ ⬛
-      │                                                                               A4: "Ancestral Battle"
-19    │ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛
-20    │ ⬛ ⬛ ⬛ ⬛ 🏛️ 🌀 🌀 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛
-21    │ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🖼️ 🖼️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛
-22    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛
-23    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛
-24    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
-25    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+18    │ ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛
+      │                                                                               A4: "Ancestral Battle" → lato sud-est, T22-U22-V21
+19    │ 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰
+20    │ 🏰 🏰 ⬛ ⬛ ⬛ 🌀 🌀 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰
+21    │ 🏰 🏰 🏰 ⬛ ⬛ 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 ⬛ ⬛ 🏰 🏰 🏰
+22    │ 🏰 🏰 🏰 🏰 ⬛ ⬛ 🖼 🖼 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🖼 🖼 ⬛ ⬛ 🏰 🏰 🏰 🏰
+23    │ 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰
+24    │ 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰
+25    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬜ ⬜ ⬜ 🌀 🌀 ⬜ ⬜ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                  └────┘ A5: 🌿 EARTH PORTAL (Col M-O, Riga 25)
-26    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏛️ 🏛️ 🏛️ 🌀 🌀 🏛️ 🏛️ 🏛️ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+26    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ 🖼 🌀 🌀 ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
       │                                          ACTIVE! Swirling Earth/Green Energy
-27    │ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛
+27    │ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ ⬛ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW, W, NW quadranti)
+LEGENDA · 🏰 roccia viva · ⬛ muro di basalto e oro, spesso 3 m · ⬜ pavimento d'adamantio · 🟪 pilastro adamantino · ⭐ altare di Moradin (+3 m) · 🔥 la Forgia Eterna · 🖼 affresco · 🌀 portale attivo
+═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+NOTA: gli otto affreschi e i tre portali sono tutti disegnati, uno per lato dell'ottagono: vedi la nota sopra la griglia
 @north N
 @tipo tattica interni
 @luogo Portale della Forgia Eterna, Sala della Forgia (hub dei Piani)
@@ -368,6 +399,8 @@ NOTA: A6 🕐 TIME PORTAL, A7, A8 altri affreschi non mostrati per brevità (SW,
 8. **A8 (NW):** Col G-H, Riga 06 - "Triumphal Return" (inactive, profetico)
 - Size: 3m × 3m ciascuno (2×2 quadrati)
 - Active Effect: Swirling energy quando portal aperto (visual + sound)
+- Dal 2026-10-23 la griglia li disegna uno per lato dell'ottagono: le celle e
+  gli scarti con questo elenco sono nella nota sopra la griglia.
 
 **PG ENTRY POINT 🔵:**
 - Arrivo: From Crown Room (Porta Sud) → Materializzano Altare Centro
