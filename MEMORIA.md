@@ -109,6 +109,8 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 
 | Data | Piano | Lotto | Esito |
 |---|---|---|---|
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
+| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P10 · il rilascio è una PR | 🟡 Il DM: *«diventa std per tutto il resto… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P9 · `converters/` nella piattaforma (D6) | ✅ Risposta del DM: *«D6 b»*, e *«misura se ci sono miglioramenti anche nella qualità del progetto»*. Corretti i 3 bug di `converters/` (un modulo che non si im… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D1-D5 e metà di P4 | 🟡 Risposta del DM: *«D1-d5 ok»*. Il passo `unittest discover` esce dalla CI (222 s su 914), la parità dei due corridori resta in `test_i_test_girano_in_ci.py`.… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P0 · audit, misure, regola dei canali | 🟡 Richiesta DM: *«una versione sola di Python, la stable supportata, come il kernel in Debian… |
@@ -119,12 +121,10 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-22 | MASTER-DEF | S1b, il giro delle quattro letture a freddo su… | 🟡 nessun 🔴 in verifica, aperti T18, T26 e N2 (peso del master); box di DEF-2 17 → 19, parole nei box 1199 → 1330, MQM 100 → 100, Gulpease 69,3 → 68,8, sensoria… |
 | 2026-10-22 | MASTER-DEF | S1b: la Sessione 2 coi pregen nel master `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md`… | 🟡 scritto, giro da fare; dodici `[INFERRED]` al DM; box di ARC-08 104 → 108, >1 nome 40 → 32, >500 car 15 → 12, sensoriali 41,0 → 42,3 ‰, nessun box impoverito |
 | 2026-10-22 | MAPPE-QUALITA (esperimento) | le quote di Hammerfist nel ≈372 (DM, thread di ARC-08) portate su M7-A, M7-B e… | ✅ `@luogo`/`@quota`/`@dislivello` su M7-B (+100 sulla piana) e M7-C (0); M7-A col profilo piana 0 → tornanti → spianata +80 → porta e cortile +100 → torre nord… |
-| 2026-10-22 | MASTER-DEF | confronto deterministico fra le mappe di ARC-08 vecchie e nuove:… | ✅ voto medio 84,9 → 85,6 → 96,8; tutte le mappe abbinate (la 1A-3 per codice); 10 rilievi spariti per deroga e non per correzione; nessuna mappa toccata |
-| 2026-10-22 | MASTER-DEF | 2B: soffio di Fauci a Riflessi CD 29 come nella scheda del Bestiario (era CD 25) | ✅ |
 
 ## Le misure che si portano dietro
 
-- **Decisioni**: 14 aperte, 287 chiuse (`decisioni_dm.py`).
+- **Decisioni**: 14 aperte, 288 chiuse (`decisioni_dm.py`).
 - **Prosa**: 11 revisioni applicate, segnalazioni -28, MQM +2.52 punti (`ciclo_prosa.py registro`).
 
 ## Dove vive ogni cosa

@@ -10044,6 +10044,157 @@
         "plans/PIANO-AMBIENTE-RIPRODUCIBILE.md",
         "docs/guides/GUIDA-SETUP-MACCHINA.md"
       ]
+    },
+    {
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3",
+        "git"
+      ],
+      "external_deps": [],
+      "consumes_schema": null,
+      "produces_schema": null,
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_rilascio.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
+        "docs/RILASCIO.md"
+      ],
+      "id": "release_plan",
+      "path": "scripts/release_plan.py",
+      "invocation": "python3 scripts/release_plan.py [VERSIONE | --pull-request]",
+      "summary": "Sceglie cosa rilascia il workflow Release e su quale commit (ADR-0100, ripreso da iemod-fetch): la sezione [X.Y.Z] più recente di CHANGELOG.md, etichettata vX.Y.Z sul commit first-parent in cui __version__ è diventato X.Y.Z, o sulla testa di main se i pacchetti non sono cambiati. Stampa le righe per $GITHUB_OUTPUT.",
+      "use_case": "«Ho unito la PR di rilascio: quale commit diventa v1.1.0, e il token può crearne il tag?»",
+      "args": [
+        {
+          "name": "VERSIONE",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Rilascia questa versione anche se ha già un tag; vuoto = la più recente del CHANGELOG."
+        },
+        {
+          "name": "--pull-request",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Prova generale sul commit della PR, con la sua versione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "CHANGELOG.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/dmcore/__init__.py",
+          "kind": "text",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "-",
+          "kind": "text",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok",
+        "1": "la versione non è mai stata scritta in __version__",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Dipende solo dalla storia git e dai tag."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Solo letture git."
+      },
+      "ci_smoke": null
+    },
+    {
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [
+        "python3",
+        "gh"
+      ],
+      "external_deps": [],
+      "consumes_schema": null,
+      "produces_schema": null,
+      "idempotent": true,
+      "tests": [
+        "scripts/tests/test_rilascio.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0100-il-rilascio-e-una-pr.md",
+        "docs/RILASCIO.md"
+      ],
+      "id": "release_notes",
+      "path": "scripts/release_notes.py",
+      "invocation": "python3 scripts/release_notes.py notes VERSIONE | sync",
+      "summary": "Le note di rilascio vengono dalla sezione del CHANGELOG.md di progetto (ADR-0100): `notes` la stampa, `sync` riscrive con gh le note pubblicate che non corrispondono più, lasciando il blocco delle impronte.",
+      "use_case": "«Ho corretto una riga del CHANGELOG di una versione già rilasciata: come arriva al rilascio?»",
+      "args": [
+        {
+          "name": "azione",
+          "type": "choice",
+          "required": true,
+          "default": null,
+          "choices": [
+            "notes",
+            "sync"
+          ],
+          "repeatable": false,
+          "desc": "notes VERSIONE stampa la sezione; sync allinea i rilasci pubblicati."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "CHANGELOG.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true,
+        "notes": "sync modifica le note dei rilasci GitHub con gh."
+      },
+      "ci_smoke": "python3 scripts/release_notes.py notes 1.0.0"
     }
   ]
 }
