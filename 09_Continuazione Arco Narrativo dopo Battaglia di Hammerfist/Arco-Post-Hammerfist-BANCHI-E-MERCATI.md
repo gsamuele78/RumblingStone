@@ -26,9 +26,11 @@
 
 **Informazioni che mancano:**
 
-1. **La popolazione di Rethmar, Dauth e Channathgate.** Nessun file la dà. Il
-   profilo di mercato di ogni città dipende da quella, e l'ho scelto io (§0,
-   «Il quadro»).
+1. **La popolazione di Rethmar, Dauth e Channathgate.** Ora la danno le piante
+   in scala del 2026-10-22, una taglia sopra quelle della Elsir Vale perché la
+   valle regga l'orda di circa 10.000 (scelta del DM): Rethmar circa 18.000, Dauth
+   circa 7.000, Channathgate circa 25.000 `[INFERRED — needs DM confirmation]`. I
+   profili di mercato (§0, «Il quadro») erano stati scelti prima, e restano.
 2. **La dedica del Tempio di Rethmar.** La battaglia finale lo nomina e non dice
    di chi è. Qui resta «il Tempio», con un chierico di 13° livello.
 3. **Se il gruppo arriva ai campi drow e ai recinti degli schiavi come
@@ -40,8 +42,8 @@
 - **«Damarath» è Rethmar.** Il nome viene dal brainstorm originale (`inizio.md`);
   il canone l'ha corretto (`PIANO-REVISIONE-ARC09` D2, e
   `campaign-artifacts.md`). La grande città «con un po' di tutto» è Rethmar
-  alla vigilia dell'assedio (§6). Channathgate, che il canone chiama *la più
-  grande città mercantile del vale dopo Rethmar*, è quella dove si trova
+  alla vigilia dell'assedio (§6). Channathgate, la città più popolosa del vale
+  (Rethmar resta la capitale), è quella dove si trova
   davvero tutto (§7), perché non è assediata e vive di commercio.
 - **I «loro» degli accampamenti sono i loxo** `[CANONE — DM 2026-10-07, D42]`. Nel canone i loxo e i
   centauri stanno sempre insieme, schiavi della Mano Rossa
@@ -209,7 +211,7 @@ lo fa notare.
 
 ## §2 · Dauth · il Mercato Basso, la Confraternita e la Rete Nera *(P2B)*
 
-Dauth è una grande città nanica che una volta ogni cent'anni diventa una fiera.
+Dauth è una piccola città nanica che una volta ogni cent'anni diventa una fiera.
 Per tre giorni ci arriva merce che il resto dell'anno non si vede, e dal 1372 una
 parte viene da fuori dal mondo, per le Otto Porte. Qui si trovano soprattutto
 **le cose per un monaco e le pozioni**, come il DM aveva chiesto.
@@ -226,7 +228,10 @@ parte viene da fuori dal mondo, per le Otto Porte. Qui si trovano soprattutto
 dichiarato)*. Una **piccola città** (valore base 4.000 mo, limite d'acquisto
 25.000 mo, incantesimi fino al 6° livello) `[CANONE — DM 2026-10-07, D42]`,
 **devota** (un livello d'incantesimo in più, per la Confraternita) e in **posizione
-strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
+strategica** (valore base +10%: le Otto Porte ne fanno un passaggio). Con i circa
+7.000 abitanti della pianta (`Mappe/dauth-assedio/dauth-pianta.svg`) Dauth è
+davvero una piccola città, e il profilo deciso dal DM torna con la popolazione
+`[INFERRED — needs DM confirmation]`.
 
 | Voce | Fiera (28-32) | Dopo l'invasione (33+) |
 |---|---:|---:|
@@ -242,7 +247,7 @@ strategica** (valore base +10%: le Otto Porte ne fanno un passaggio).
 | comando | la **Confraternita Monastica di Dauth**, che organizza il Torneo; il Grandmaster **Rihan** |
 | culto | i chierici di Ilmater della Confraternita, nel chiostro dietro l'arena |
 | rimedi | la **speziala** del Mercato Basso, sotto la terza arcata |
-| bottega | la speziala per le pozioni; il **cuoiaio dei monaci** sotto la quinta arcata; la **Rete Nera** in un magazzino del porto fluviale |
+| bottega | la speziala per le pozioni; il **cuoiaio dei monaci** sotto la quinta arcata; la **Rete Nera** in un magazzino del borgo dei carrettieri, fuori dalla Porta Sud |
 | messaggi | **Sorella Maewen**, che conosce tutti |
 | guardia | la guardia di Dauth, e il distaccamento della Confraternita all'arena |
 
@@ -690,7 +695,7 @@ perché non è stato usato.
 
 ## §7 · Channathgate · proprio tutto *(Giorni 27-36)*
 
-La più grande città mercantile del vale dopo Rethmar, ricca, fortificata, non
+La città più popolosa del vale, ricca, aperta (solo l'arg ha mura), non
 ancora attaccata, e piena di gilde. Qui si trova quello che altrove manca, e qui
 si vende quello che altrove nessuno può pagare. I principi mercanti sono il
 **Gonfaloniere**, la **Balìa** delle gilde e le otto contrade.

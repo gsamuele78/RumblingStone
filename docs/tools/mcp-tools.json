@@ -834,7 +834,7 @@
     },
     {
       "name": "qualita_mappe",
-      "description": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»\n\nMisura le griglie-emoji contro lo standard di qualita' delle mappe (ADR-0098): spazio libero, anelli (buchi dello spazio percorribile), ingressi, vicoli ciechi vuoti, celle in fila indiana, copertura, distanza e strozzatura fra PG e nemici, celle per creatura, Flip-Mat occupati, taglia delle creature, scala dichiarata contro scala disegnata, teli, fuochi, porte e mura fuori misura, densita' dei simboli. Errori solo per i fatti (intestazione che mente, direttiva fuori griglia), avvisi per le soglie di mestiere; un voto da 0 a 100 che somma anche i rilievi del collaudo. In sola lettura.",
+      "description": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»\n\nMisura le griglie-emoji contro lo standard di qualita' delle mappe (ADR-0098): spazio libero, anelli (buchi dello spazio percorribile), ingressi, vicoli ciechi vuoti, celle in fila indiana, copertura, distanza e strozzatura fra PG e nemici, celle per creatura, Flip-Mat occupati, taglia delle creature, scala dichiarata contro scala disegnata, teli, fuochi, porte e mura fuori misura, densita' dei simboli. Errori solo per i fatti (intestazione che mente, direttiva fuori griglia), avvisi per le soglie di mestiere; un voto da 0 a 100 che somma anche i rilievi del collaudo. Due varchi contano come ingressi distinti solo a 10 passi l'uno dall'altro. Con --profonde, metriche di configurazione senza soglia solo nel JSON. In sola lettura.",
       "use_case": "«Quali mappe sono le meno plausibili o le meno giocabili, e perche'?»",
       "invocation": "python3 scripts/qualita_mappe.py",
       "inputSchema": {
@@ -859,6 +859,10 @@
           "solo-errori": {
             "type": "boolean",
             "description": "Nel testo mostra solo i rilievi E."
+          },
+          "profonde": {
+            "type": "boolean",
+            "description": "Aggiunge al JSON, sotto la chiave «profonde» di ogni tattica, le metriche senza soglia di qualita_mappe_profonde.py: space syntax alla vista e a piedi (profondita' media, integrazione, intelligibilita'), correlazione vista-accesso, simmetria, pattern 2x2. Non tocca voto ne' rilievi; vuole --json."
           }
         },
         "required": [],

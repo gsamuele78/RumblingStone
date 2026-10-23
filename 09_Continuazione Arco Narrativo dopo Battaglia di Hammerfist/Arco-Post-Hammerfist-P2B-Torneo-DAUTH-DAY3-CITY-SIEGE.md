@@ -299,6 +299,18 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
 
 ## 8. Cross-link
 
+- **Pianta della città (dove stanno le carte A-E):** `Mappe/dauth-assedio/dauth-pianta.svg`:
+  42 ha dentro le mura, circa 7.000 abitanti, tre porte maggiori (Sud, Nord, Ovest);
+  la Porta Est è ridotta a postierla. È una piccola città, più del borgo della Elsir
+  Vale, perché regga l'urto della Mano Rossa (scelta del DM, 2026-10-22)
+  `[INFERRED — needs DM confirmation]`.
+- **Quanti uomini servono sulle mura** `[INFERRED — needs DM confirmation]`: le mura
+  della pianta sono lunghe 2,55 km, con 59 torri. Con la regola del Burghal Hidage
+  (0,8 uomini per metro di mura) servono circa 2.000 difensori. Gli uomini abili, il
+  18% di 7.000 abitanti, sono circa 1.260; con i 300 mercenari nani e le 150 lance
+  si arriva a circa 1.700, più la guarnigione nanica (§1.2). Per l'intero giro non
+  bastano: si tengono le mura sud e ovest, dove preme il Vanguard, e si lasciano
+  leggere quelle nord ed est, sopra il versante ripido.
 - **HUB Torneo:** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-DM-MASTER-REFERENCE.md` §3 (sfondo Vanguard)
 - **Giorno 3 in arena (Tordek/Artemis):** `Arco-Post-Hammerfist-P2B-Torneo-Tordek-PARTE3-Giorno3-Finale-e-Invasione.md`
 - **Le 150 lance (fonte):** `Arco-Post-Hammerfist-P2B-Torneo-DAUTH-SUBQUEST-Thorik.md` §4

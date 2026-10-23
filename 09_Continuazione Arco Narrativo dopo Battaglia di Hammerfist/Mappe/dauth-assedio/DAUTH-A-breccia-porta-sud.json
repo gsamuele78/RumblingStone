@@ -10,6 +10,9 @@
  ],
  "base_terrain": "⬜",
  "north": "N",
+ "luogo": "Dauth, Porta Sud",
+ "quota": "530 m ; s.l.m., l'androne della Porta Sud [INFERRED — needs DM confirmation]",
+ "dislivello": "+40 m ; sul borgo dei carrettieri e sulla piana a sud, in fondo alla rampa [INFERRED — needs DM confirmation]",
  "regions": [
   {
    "terrain": "⬛",

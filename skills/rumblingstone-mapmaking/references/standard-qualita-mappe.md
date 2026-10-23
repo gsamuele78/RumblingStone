@@ -6,6 +6,7 @@
 - Le fonti
 - Come si prepara una mappa nuova o rifatta
 - Le regole misurabili
+- Metriche profonde (solo misura)
 - Cosa si controlla a vista
 - Il rilievo e il contesto
 - Cosa lo standard non misura
@@ -117,7 +118,7 @@ con un motivo di almeno 15 caratteri, come nel collaudo.
 | `fazioni/a-contatto` | A | PG e nemici non partono adiacenti, salvo imboscata scritta | idem |
 | `spazio/affollato` | A | almeno 4 celle libere per creatura | Coup-De-Grace, 2 quadretti di larghezza per miniatura |
 | `spazio/disperso` | A | non oltre 150 celle per creatura su una mappa più grande di un Flip-Mat Enormous | idem; Flip-Mat |
-| `struttura/un-ingresso` | A | in interni e caverne con almeno 150 celle percorribili, almeno 2 ingressi | Jaquays, *Multiple Entrances* |
+| `struttura/un-ingresso` | A | in interni e caverne con almeno 150 celle percorribili, almeno 2 ingressi distinti: due varchi contano come due solo se stanno ad almeno 10 passi l'uno dall'altro (sotto, «Gli ingressi») | Jaquays, *Multiple Entrances*; RICERCA-STRUMENTI-MAPPE §5 |
 | `struttura/senza-anelli` | A | in interni e caverne con almeno 300 celle percorribili, almeno un anello attorno a un blocco | Jaquays, *Loops*; Dormans; Mawhorter |
 | `struttura/vicoli-ciechi` | A | meno di 3 vicoli ciechi senza niente in fondo (entro 2 quadretti) | Jaquays; Boris the Brave; NSS |
 | `struttura/fila-indiana` | A | con almeno 6 creature, non oltre metà del percorribile largo un quadretto | Coup-De-Grace, strozzature |
@@ -147,7 +148,7 @@ come vuole il metodo di Smith e Whitehead.
 |---|---|
 | `libere` | celle percorribili sul totale (porte aperte) |
 | `anelli`, `anelli_strutturali` | i buchi dello spazio percorribile (primo numero di Betti): ostacoli chiusi su ogni lato da celle percorribili. Strutturale se il blocco ha almeno 4 celle e il giro attorno almeno 16 |
-| `ingressi` | tratti percorribili del bordo, più scale, botole, pozzi e portali; un bordo tutto aperto conta 4 |
+| `varchi`, `ingressi` | `varchi`: tratti percorribili del bordo, più scale, botole, pozzi e portali. `ingressi`: i varchi distinti, uniti quando stanno a meno di 10 passi. Un bordo tutto aperto conta 4 |
 | `vicoli_ciechi`, `vicoli_vuoti` | celle con un solo vicino ortogonale percorribile, lontano dal bordo; vuoti se niente di notevole sta entro 2 quadretti |
 | `fila_indiana` | quota del percorribile in cui il tratto più corto, orizzontale o verticale, è di un quadretto |
 | `copertura` | quota del percorribile con una copertura (½, ¾ o totale) a contatto; M1 e M2 come nel collaudo |
@@ -155,6 +156,89 @@ come vuole il metodo di Smith e Whitehead.
 | `strozzatura` | il passaggio più stretto del cammino più largo fra PG e nemici |
 | `celle_per_creatura`, `flipmat`, `area_m2` | spazio per miniatura, tappeti Enormous occupati, superficie |
 | `simboli`, `simboli_locali`, `densita_icone` | quanti simboli deve imparare il giocatore, e quanto pavimento è coperto |
+
+### Gli ingressi
+
+Due porte a due quadretti nella stessa stanza sono un ingresso solo: chi
+difende le copre con la stessa fila. Fino al 2026-10-22 lo strumento contava
+ogni tratto aperto del bordo, e il riparatore automatico della ricerca sugli
+strumenti (`RICERCA-STRUMENTI-MAPPE.md` §5, commit `ffe206b5` del ramo
+`claude/project-thread-e860p0`) ne ha approfittato: apriva un secondo varco
+accanto al primo e il rilievo spariva.
+
+La regola, come la misura la ricerca:
+
+- un **passo** è lo spostamento fra due celle percorribili che hanno un lato
+  in comune, senza diagonale. Le porte contano aperte, come nel resto dello
+  strumento; una scala o un portale disegnati su una cella che blocca restano
+  raggiungibili;
+- la distanza fra due varchi è il numero minimo di passi fra le loro celle più
+  vicine. Fra due porte nel muro nord a *d* colonne l'una dall'altra se ne fanno
+  *d* + 2: si scende, si cammina, si risale;
+- due varchi sono due ingressi se la distanza è di **almeno 10 passi**, o se a
+  piedi non si passa dall'uno all'altro. Sotto, si uniscono, anche a catena: A
+  vicino a B e B vicino a C fanno un ingresso solo.
+
+Nella ricerca la soglia sta nel riparatore (`genera_ripara.py`, che misura i
+passi con una visita in ampiezza a quattro direzioni) e nella raccomandazione
+§6.3 («almeno 10 passi a piedi, o danno su componenti diverse»). Il «passo»
+della profondità a piedi (§3 della ricerca, e le metriche profonde qui sotto)
+è un'altra misura: lì il passo diagonale vale uno.
+
+## Metriche profonde (solo misura)
+
+```bash
+python3 scripts/qualita_mappe.py --json OUT.json --profonde
+```
+
+Le calcola `scripts/qualita_mappe_profonde.py` e finiscono **solo nel JSON**
+(`map_quality/1`), sotto la chiave `profonde` di ogni mappa. Non hanno soglia,
+non cambiano il voto e non danno avvisi: nessuna fonte dà un numero giusto per
+una battlemap, e servono a confrontare due mappe, o due versioni della stessa,
+come vuole il metodo di Smith e Whitehead. Le mappe strategiche e gli schemi si
+saltano (`"saltata"`). Sul corpus intero la misura costa circa un minuto: la
+vista è quadratica nelle celle.
+
+| Chiave | Che cosa misura | Fonte |
+|---|---|---|
+| `vista` | space syntax sul grafo di visibilità: i nodi sono le celle percorribili, gli archi uniscono le celle che si vedono. `connettivita_media` (celle viste), `profondita_media` MD = Σd/(k−1), `integrazione_media`, `_min`, `_max` = D_k/RA con RA = 2(MD−1)/(k−2), `intelligibilita_r2` = r² fra connettività e integrazione | Turner, Doxa, O'Sullivan, Penn, [*From isovists to visibility graphs*](https://discovery.ucl.ac.uk/id/eprint/160/) (2001); Ostwald, [*The Mathematics of Spatial Configuration*](https://link.springer.com/content/pdf/10.1007/s00004-011-0075-3.pdf) (2011) per RA e D_k; Hillier, citato in Dalton e Bafna, [*The syntactical image of the city*](https://discovery-pp.ucl.ac.uk/1104/1/SIC.pdf.pdf) (2003), per l'intelligibilità |
+| `accesso` | le stesse misure sul grafo di movimento del collaudo: otto direzioni, la diagonale non passa l'angolo di un muro, ogni passo vale uno | idem |
+| `vista_accesso_r` | r di Pearson fra l'integrazione di ogni cella alla vista e a piedi. Basso: quello che si vede non è quello che si raggiunge (la lava, i ponti, le feritoie) | Martin, [*A spatial analysis of the JBA headquarters in Splinter Cell: Double Agent*](https://nottingham-repository.worktribe.com/output/722027/a-spatial-analysis-of-the-jba-headquarters-in-splinter-cell-double-agent) (2014). La formula è della ricerca: l'abstract di Martin non la dà |
+| `simmetria` | quota di celle uguali allo specchio sinistra-destra (`orizzontale`), alto-basso (`verticale`) e alla rotazione di 180 gradi, sulle classi di cella (muro, ostacolo, porta, scala, pericolo, copertura, creatura, pavimento, fuori) | Summerville et al., [*Understanding Mario*](https://webdocs.cs.ualberta.ca/~santanad/papers/2017/summervilleMSOL17.pdf) (2017) |
+| `pattern_2x2` | le finestre 2 × 2 sulle stesse classi: quante (`finestre`), quante diverse (`distinti`), entropia di Shannon della distribuzione in bit (`entropia_bit`) | Lucas e Volz, [*Tile Pattern KL-Divergence*](https://arxiv.org/pdf/1905.05077) (2019); [ETPKLDiv](https://github.com/amidos2006/ETPKLDiv) (MIT) |
+
+Come si leggono, e i limiti:
+
+- k è la grandezza della componente della cella; sotto 4 celle le formule non
+  valgono e la cella si salta. Dove RA è zero (una stanza in cui ogni cella vede
+  tutte le altre) l'integrazione non è definita ed esce `null`.
+- Il D_k è quello di Hillier e Hanson, 2{k[log₂((k+2)/3) − 1] + 1}/((k−1)(k−2)),
+  tarato sui grafi assiali piccoli: l'integrazione della vista cresce con le
+  celle (95 sul *Corridoio del Fuoco*, 667 celle; 9,5 sulla *Tenda del comando*,
+  493). Fra mappe diverse si confronta la profondità media; l'integrazione si
+  confronta fra due versioni della stessa mappa.
+- La vista è lo shadowcasting simmetrico di [Albert Ford](https://www.albertford.com/shadowcasting/)
+  (CC0), scritto in libreria standard. È lo stesso algoritmo che `tcod` chiama
+  `FOV_SYMMETRIC_SHADOWCAST` e che il collaudo usa per M4, ma l'implementazione
+  di `tcod` non coincide cella per cella con quella di riferimento di Ford: su
+  7.321 punti di vista del corpus, da 625 (l'8,5%) il campo differisce di qualche
+  cella percorribile. Le metriche profonde seguono Ford; M4 resta su `tcod`.
+- Lo space syntax è una misura accettata della configurazione in architettura e
+  urbanistica, ed è stato applicato ai videogiochi; le sue correlazioni con il
+  comportamento vengono da persone che camminano, non da miniature a turni.
+- Dalla prova della ricerca non sono entrati: il clustering di Turner (per ogni
+  cella conta gli archi fra tutte le coppie di celle che vede), l'isovista media in m² (è M4 del collaudo), la
+  divergenza KL contro il corpus (cambia con il corpus del momento) e la
+  *leniency* adattata (la traduzione dal platform non regge sul terreno letale
+  esteso).
+
+Il codice viene da `metriche_nuove.py`, nella cartella `mappe-strumenti-2026-10-22`
+degli esperimenti (commit `ffe206b5`, non ancora su `main`), riscritto senza `numpy`, `scipy` e `tcod`, che stanno in
+`requirements-dev.txt` e non in `requirements.txt`. Sulle tre mappe della prova
+(*Corridoio del Fuoco*, *Fucina grande 372*, *Tenda del comando*) le misure a
+piedi, la simmetria e i pattern coincidono con la ricerca; alla vista i numeri
+differiscono alla terza cifra (profondità media della tenda 1,744 contro 1,739),
+per la differenza fra Ford e `tcod`.
 
 ## Cosa si controlla a vista
 
