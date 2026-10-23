@@ -44,6 +44,14 @@ jobs:
       - name: Python scripts compile
         run: python -m compileall -q scripts converters
 
+      # ADR-0099: ruff e' in TESTING, quindi non blocca. Sale a stable (e il
+      # passo compileall sopra esce, perche' ruff copre E9) dopo 14 giorni e
+      # 10 run su main senza falsi allarmi (P3 di PIANO-PIATTAFORMA). Le regole
+      # sono in ruff.toml: solo quelle che cercano bug, non lo stile.
+      - name: ruff — nomi non definiti, codice morto, usi deprecati (testing, non bloccante)
+        continue-on-error: true
+        run: ruff check --output-format github
+
       - name: Tool manifest conformance gate (ADR-0012)
         run: python scripts/tools_manifest.py --check
 

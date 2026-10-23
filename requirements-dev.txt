@@ -76,3 +76,10 @@ fonttools[woff]>=4.66.1
 # confronta la scheda committata; il renderer resta stdlib.
 # Pavimento 0.25 dal 2026-10-10: la prima con wheel per Python 3.13.
 scikit-image>=0.25
+
+# ADR-0099 (PIANO-PIATTAFORMA P0, 2026-10-23): il linter, in canale TESTING.
+# Versione esatta perche' le regole cambiano fra le versioni minori: un
+# aggiornamento di Dependabot che porta rilievi nuovi si legge, non si subisce.
+# Misura in plans/esperimenti/piattaforma-2026-10-23/MISURE.md. MIT. Solo
+# sviluppo: il DM non lo esegue.
+ruff==0.16.9
