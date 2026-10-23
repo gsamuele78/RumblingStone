@@ -396,3 +396,5 @@ asset-esterni/*
 # rese da modelli 3D CC0 e si committano con il loro indice. I modelli no:
 # stanno in asset-esterni/oggetti-cc0/, già esclusa qui sopra.
 !scripts/oggetti-cc0/*.webp
+plans/scrittura/prove-locali/
+scripts/llm-locale/dati/
