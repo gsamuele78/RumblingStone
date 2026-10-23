@@ -78,8 +78,9 @@ corregge solo il master, e PDF, mappe, recap e pacchetti si rigenerano.
 
 ## Come funziona
 
-Il disegno completo, con venti diagrammi (infrastruttura, integrazione fra
-strumenti e fonti, casi d'uso, la serata, il giro delle letture, i rilasci),
+Il disegno completo, con ventiquattro diagrammi (infrastruttura, integrazione fra
+strumenti e fonti, casi d'uso, la catena della prosa, la serata, il giro
+delle letture, i rilasci),
 sta in **[docs/ARCHITETTURA.md](docs/ARCHITETTURA.md)**. In breve:
 
 ```mermaid

@@ -39,8 +39,8 @@ persona; l'approvazione la dà il DM, modifica per modifica.
 Da dove vengono le regole, e con che licenza (ADR-0077):
 
 * i rilevatori del repo, già registrati: `validate_prosa` (calchi, antitesi,
-  maiuscole, trattino), `misura_craft` (tetti dei box, P1, metrature),
-  `voto_scrittura` («sembra»/«pare», D13);
+  maiuscole, trattino, «sembra»/«pare» nei box di D13), `misura_craft` (tetti
+  dei box, P1, metrature);
 * la regola **«debole da solo»** di Humanizer (blader/humanizer, MIT) e di
   *Wikipedia: Signs of AI writing* (CC BY-SA 4.0), di cui si adotta l'idea e non
   il testo: un tic minore, preso da solo, è italiano corretto; due tic minori
@@ -81,27 +81,34 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import misura_craft as mc  # noqa: E402
 import validate_prosa as vp  # noqa: E402
-import voto_scrittura as vs  # noqa: E402
 
 RADICE = Path(__file__).resolve().parent.parent
 
-# ── I tic minori: italiano-nativo §9.2-ter (copula elusa, importanza dichiarata)
-# e §9.2-quater (la watchlist). Ognuno da solo è lecito; il documento lo dice.
+# ── I tic minori: italiano-nativo §9.2-ter (copula elusa, importanza dichiarata),
+# più antitesi e trattino. Ognuno da solo è lecito; il documento lo dice.
+# Il 2026-10-22 (lotto 7e di AVVENTURE-COMMUNITY) ne sono usciti due:
+# - la watchlist di §9.2-quater: zero scatti in tutto il repo, e la regex non
+#   vedeva nemmeno le forme frequenti («nel cuore della»). La lista resta in
+#   italiano-nativo.md come guida per chi rilegge;
+# - «sembra/pare»: qui contava anche fuori dai box, dove la norma non vale. La
+#   norma ha una superficie sola, la norma `box_sembra_pare` di MQM, che più
+#   sotto `segnala` riporta box per box.
 DEBOLI: "dict[str, re.Pattern]" = {
     "copula elusa": re.compile(
         r"\b(?:si configura come|funge da|si pone come|rappresenta|costituisce)\b", re.I),
     "importanza dichiarata": re.compile(
         r"\b(?:testimonianza (?:di|vivente)|punto di svolta|simbolo eterno|"
         r"a imperitura memoria)\b", re.I),
-    "watchlist": re.compile(
-        r"\b(?:un vero e proprio|una vera e propria|nel cuore di|non è un caso che|"
-        r"gioca un ruolo fondamentale|un tassello|connubio|risuona di|si staglia contro)\b",
-        re.I),
-    "sembra/pare": vs.SEMBRA,
     "antitesi": vp.ANTITESI,
     "trattino come respiro": vp.TRATTINO,
 }
 SOGLIA_DEBOLI = 2   # tic minori DIVERSI nello stesso paragrafo (Humanizer, «weak alone»)
+# Dal <data della decisione del DM> antitesi e trattino contano con le soglie di
+# validate_prosa, non con la regex nuda: prima un trattino qualunque era un tic
+# (8.961 scatti nel repo) e un'antitesi sola bastava. L'antitesi conta se il
+# documento ne ha piu' di `vp.SOGLIE["antitesi"]`; il trattino se nel paragrafo
+# supera il 3% delle parole, la densita' di `trattino_come_respiro`.
+TRATTINO_PER_PAROLA = 0.03
 
 RIMEDI = {
     "calco": "riscrivere all'italiana (italiano-nativo §1)",
@@ -159,7 +166,7 @@ def _paragrafi(righe: "list[str]") -> "list[tuple[int, int]]":
     return out
 
 
-def tic_deboli(blocco: str) -> "list[str]":
+def tic_deboli(blocco: str, antitesi_oltre_soglia: bool = True) -> "list[str]":
     """I tic minori DIVERSI di un'unità di prosa, ognuno su un tratto di testo suo.
 
     Un'antitesi «Non è X: è Y» scritta col trattino è un tic, non due: un tic
@@ -167,6 +174,11 @@ def tic_deboli(blocco: str) -> "list[str]":
     un'occorrenza di un altro tic.
     """
     trovate = {n: [m.span() for m in rx.finditer(blocco)] for n, rx in DEBOLI.items()}
+    if not antitesi_oltre_soglia:
+        trovate["antitesi"] = []
+    parole = max(len(blocco.split()), 1)
+    if len(trovate["trattino come respiro"]) / parole <= TRATTINO_PER_PAROLA:
+        trovate["trattino come respiro"] = []
     fuori = []
     for n, spans in trovate.items():
         altre = [sp for k, v in trovate.items() if k != n for sp in v]
@@ -208,31 +220,29 @@ def segnala(testo: str) -> "list[Segnalazione]":
             if m:
                 fuori.append(Segnalazione(i + 1, i + 1, "calco", f"«{m.group(0)}»: {perche}"))
 
-    # i box, con i rilevatori di misura_craft e voto_scrittura
+    # i box, con i rilevatori di misura_craft e validate_prosa
     for i0, i1, b in spans:
         corpo = mc._ETICHETTA.sub("", " ".join(b))
         if len(b) > mc.TETTO_RIGHE:
             fuori.append(Segnalazione(i0 + 1, i1 + 1, "box oltre 12 righe", f"{len(b)} righe"))
         if "(" in corpo:
             fuori.append(Segnalazione(i0 + 1, i1 + 1, "box con parentesi", ""))
-        nomi = mc.nomi_propri(corpo) - set(mc.PG)   # i PG il tavolo li conosce già
-        if len(nomi) > 1:
-            fuori.append(Segnalazione(i0 + 1, i1 + 1, "box con più nomi propri", ", ".join(sorted(nomi))))
         for norma, rx in (("P1", mc.P1), ("metratura", mc.METRATURA)):
             m = rx.search(corpo)
             if m:
                 r = _riga_di(rx, b, i0)
                 fuori.append(Segnalazione(r or i0 + 1, r or i1 + 1, norma, f"«{m.group(0).strip()}»"))
-        esitanti = vs.sembra_esitanti(corpo)   # D17: il «sembra» smentito resta
+        esitanti = vp.sembra_esitanti(corpo)   # D17: il «sembra» smentito resta
         if esitanti:
             m = esitanti[0]
             r = _riga_di(re.compile(r"\b" + re.escape(m.group(0)) + r"\b", re.I), b, i0)
             fuori.append(Segnalazione(r or i0 + 1, r or i1 + 1, "sembra/pare", f"«{m.group(0).strip()}»"))
 
     # i tic minori in gruppo, paragrafo per paragrafo
+    antitesi = len(vp.ANTITESI.findall(testo)) > vp.SOGLIE["antitesi"]
     for p0, p1 in _paragrafi(righe):
         blocco = mc._ETICHETTA.sub("", " ".join(righe[p0:p1 + 1]))
-        trovati = tic_deboli(blocco)
+        trovati = tic_deboli(blocco, antitesi)
         if len(trovati) >= SOGLIA_DEBOLI:
             fuori.append(Segnalazione(p0 + 1, p1 + 1, "tic minori in gruppo", ", ".join(trovati)))
 

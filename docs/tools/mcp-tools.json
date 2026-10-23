@@ -487,6 +487,61 @@
       "deterministic": true
     },
     {
+      "name": "confronta_mappe",
+      "description": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»\n\nDue o piu' versioni delle stesse mappe misurate cella per cella: celle cambiate (simboli e classi, numero e quota), Jaccard per classe di cella, transizioni di classe, NCD con lzma, voto di qualita_mappe.py prima e dopo con i rilievi spariti e comparsi, dimensioni, scala e quote. Con --versioni estrae i master da git (git show), abbina le mappe per titolo, codice MAPPA o posizione, scrive confronto.json a chiavi ordinate e un SVG affiancato per mappa con le celle cambiate cerchiate. Misura e basta: non tocca le mappe.",
+      "use_case": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»",
+      "invocation": "python3 scripts/confronta_mappe.py VECCHIA.md[:N] NUOVA.md[:N] | --versioni NOME=REF ... --base NOME --out DIR FILE.md ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "posizionali": {
+            "type": "string",
+            "description": "Coppia: VECCHIA.md[:N] NUOVA.md[:N] (N da 1). Con --versioni: i master da confrontare, relativi al repo."
+          },
+          "json": {
+            "type": "string",
+            "description": "Coppia: scrive il confronto in JSON (chiavi ordinate)."
+          },
+          "svg": {
+            "type": "string",
+            "description": "Coppia: scrive l'SVG affiancato con le celle cambiate cerchiate."
+          },
+          "versioni": {
+            "type": "string",
+            "description": "Versioni git come NOME=REF, es. A=d726e6a2 B=9359a0af C=HEAD."
+          },
+          "base": {
+            "type": "string",
+            "description": "Con --versioni: la versione contro cui si confronta ogni altra."
+          },
+          "estrai": {
+            "type": "string",
+            "description": "Con --versioni: dove scrivere i file estratti (default: cartella temporanea)."
+          },
+          "out": {
+            "type": "string",
+            "description": "Con --versioni: cartella di confronto.json e svg/."
+          },
+          "strict": {
+            "type": "boolean",
+            "description": "Esce 1 se una mappa resta senza corrispondente in qualche versione."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--json>",
+        "<--out>/confronto.json"
+      ],
+      "exit_codes": {
+        "0": "confronto prodotto",
+        "1": "mappa senza corrispondente con --strict",
+        "2": "errore d'uso (file o ref inesistente, mappa fuori numero, dipendenze mancanti)"
+      },
+      "deterministic": true
+    },
+    {
       "name": "export_map_png",
       "description": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»\n\nRasterizza un SVG renderizzato in PNG hi-res via Inkscape o Chromium headless (stampa, VTT, input hero-map ComfyUI).",
       "use_case": "«L'SVG è bello a schermo, ma devo stamparlo o caricarlo su Roll20: come lo rasterizzo senza perdere i tratti?»",
@@ -1826,6 +1881,10 @@
           "json": {
             "type": "boolean",
             "description": "Esito machine-readable su stdout."
+          },
+          "salta-corredo": {
+            "type": "boolean",
+            "description": "Con --stampa: non compila i volumi di un corredo, che validate_corredo.py --stampa compila e misura (in CI erano compilati due volte)."
           }
         },
         "required": [],
@@ -2654,41 +2713,6 @@
       "deterministic": false
     },
     {
-      "name": "campioni_kappa",
-      "description": "«Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.\n\nEstrae i due campioni disgiunti (20+20, stratificati per classe, seme fisso) e calcola il kappa di Cohen fra il giudizio di un valutatore e quello della macchina. Sotto kappa 0,60 la metrica si dichiara NON affidabile e non entra in CI: e' la regola del piano, e il 2026-09-21 ha detto di no (kappa 0,0 con accordo osservato e atteso entrambi a 0,95).",
-      "use_case": "«Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.",
-      "invocation": "python3 scripts/campioni_kappa.py",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "estrai": {
-            "type": "boolean",
-            "description": "F1.5: scrive i due campioni disgiunti a seme fisso."
-          },
-          "scheda": {
-            "type": "string",
-            "description": "Stampa la scheda da compilare per il campione A o B. Il punteggio della macchina NON e' mostrato, apposta.",
-            "enum": [
-              "A",
-              "B"
-            ]
-          },
-          "kappa": {
-            "type": "boolean",
-            "description": "F3.3: l'accordo fra i voti e la macchina, se i voti ci sono."
-          }
-        },
-        "required": [],
-        "additionalProperties": false
-      },
-      "outputs": [],
-      "exit_codes": {
-        "0": "ok",
-        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
-      },
-      "deterministic": true
-    },
-    {
       "name": "check_plans_discipline",
       "description": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»\n\nGate ADR-0009: modifiche strutturali (scripts/, skills/, converters/, .github/, plans/adr/) senza riga in plans/CHANGELOG.md -> exit 1. Passa se i commit strutturali sono tutti di Dependabot (PI-3b).",
       "use_case": "«Ho toccato scripts/ o un ADR: ho lasciato la riga di tracciatura che la regola d'oro chiede?»",
@@ -2818,6 +2842,64 @@
       "outputs": [],
       "exit_codes": {
         "0": "ok"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "coerenza_campagna",
+      "description": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»\n\nLotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cmd": {
+            "type": "string",
+            "description": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out.",
+            "enum": [
+              "fronti",
+              "fatti",
+              "tutto"
+            ]
+          },
+          "state": {
+            "type": "boolean",
+            "description": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+          },
+          "bestiario": {
+            "type": "boolean",
+            "description": "(fatti, tutto) Legge anche le voci del Bestiario le cui entita' compaiono negli archi."
+          },
+          "tutti": {
+            "type": "boolean",
+            "description": "(fatti) Legge anche i file fuori perimetro (ERRATA, CORREZIONE, ricalibrazioni, P1-P3)."
+          },
+          "out": {
+            "type": "string",
+            "description": "(tutto) Cartella dove scrivere coerenza.json e coerenza.txt."
+          },
+          "rigido": {
+            "type": "boolean",
+            "description": "(tutto) Exit 1 se i fronti hanno violazioni."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "(fronti, fatti) Uscita machine-readable."
+          }
+        },
+        "required": [
+          "cmd"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "<--out>/coerenza.json",
+        "<--out>/coerenza.txt"
+      ],
+      "exit_codes": {
+        "0": "nessuna violazione nei fronti, o misura eseguita (fatti, tutto)",
+        "1": "violazioni nei fronti (fronti; tutto solo con --rigido)",
+        "2": "errore d'uso, file o cartella mancante, pyyaml assente"
       },
       "deterministic": true
     },
@@ -2966,7 +3048,7 @@
     },
     {
       "name": "dm",
-      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "invocation": "python3 scripts/dm.py",
       "inputSchema": {
@@ -2974,7 +3056,7 @@
         "properties": {
           "comando": {
             "type": "string",
-            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF.",
+            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto.",
             "enum": [
               "prep",
               "post",
@@ -2988,7 +3070,8 @@
               "doctor",
               "volume",
               "corredo",
-              "bestiario"
+              "bestiario",
+              "prosa"
             ]
           }
         },
@@ -3359,8 +3442,58 @@
       "deterministic": true
     },
     {
+      "name": "migliora_prosa",
+      "description": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»\n\nLa pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
+      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito|languagetool} ...",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dataset": {
+            "type": "string",
+            "description": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
+          },
+          "modello": {
+            "type": "string",
+            "description": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt; --varianti [--tratti-esterni FILE] confronta base, +LT, +ppl, +Stanza, +tutto con McNemar."
+          },
+          "scegli": {
+            "type": "string",
+            "description": "Box da migliorare con un seme: --seme, --n, --uscita."
+          },
+          "migliora": {
+            "type": "string",
+            "description": "FILE --box N --candidate C.md [--scelte S.json --id P01] [--lt URL]: filtra, ordina, dice la migliore."
+          },
+          "campione": {
+            "type": "string",
+            "description": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
+          },
+          "esito": {
+            "type": "string",
+            "description": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+          },
+          "languagetool": {
+            "type": "string",
+            "description": "[--url U] [--tratti-esterni F] [--scrivi] | --campione N --seme S --uscita F: rilievi di LanguageTool, precisione, calibrazione, varianti (languagetool/MISURE.txt)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/MISURE.txt",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/TRATTI-LT.json"
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "deterministic": true
+    },
+    {
       "name": "misura_craft",
-      "description": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»\n\nConta i congegni di mestiere dichiarati (read-aloud, contingenze, orologi, pilastro lead/support...) in ogni arco e li confronta con i due banchi: Abbazia e Palio.",
+      "description": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»\n\nConta i congegni di mestiere dichiarati (read-aloud, echi, pilastro lead/support, regia, [HDYWTDT]...) in ogni arco e li confronta con i due banchi: Abbazia e Palio.",
       "use_case": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»",
       "invocation": "python3 scripts/misura_craft.py",
       "inputSchema": {
@@ -3390,10 +3523,6 @@
             "type": "boolean",
             "description": "i read-aloud che presuppongono un'azione o un senso del giocatore (norma Dungeon/Paizo)"
           },
-          "discriminante": {
-            "type": "boolean",
-            "description": "Quante coppie di bersagli ogni congegno separa, in conteggio grezzo e in densita' per 1.000 righe: un congegno che non ne separa nessuna non produce informazione (lotto F1.3 di PIANO-MISURA-EDITORIALE)."
-          },
           "metrature": {
             "type": "boolean",
             "description": "I read-aloud che parlano da architetto (ADR-0014 §2): numero + unita' di spazio nella voce narrante. Cerca la FORMA, non il numero — «tre round» e' legittimo, «diametro 9 metri» no."
@@ -3414,6 +3543,37 @@
       "exit_codes": {
         "0": "ok",
         "1": "un modello di percorso non pesca nessun file"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "misura_sintassi",
+      "description": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»\n\nI calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
+      "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",
+      "invocation": "python3 scripts/misura_sintassi.py [--file X.md] [--json] [--per-box]",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "Un master da misurare (ripetibile); senza, la base ARC-07 DEF e ARC-08."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Uscita JSON."
+          },
+          "per-box": {
+            "type": "boolean",
+            "description": "Tutti i box, non solo i peggiori."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok, anche senza spaCy (misura saltata)",
+        "2": "file assente"
       },
       "deterministic": true
     },
@@ -3666,29 +3826,49 @@
       "deterministic": true
     },
     {
-      "name": "superficie_norme",
-      "description": "«Undici norme sono marcate non-misurate: quante posso davvero chiudere scrivendo codice?» La risposta misurata e' una su nove.\n\nPer ogni norma editoriale che nessuno misura, dice se manca il CODICE o manca il DATO: superficie vuota (la convenzione esiste e ha zero occorrenze), convenzione assente (nessuno ha deciso come si marca), oggetto assente (il file non esiste) o fuori dominio (il fatto non sta nel testo). Deterministico e idempotente: solo conteggi di forme dichiarate su un insieme di file ordinato.",
-      "use_case": "«Undici norme sono marcate non-misurate: quante posso davvero chiudere scrivendo codice?» La risposta misurata e' una su nove.",
-      "invocation": "python3 scripts/superficie_norme.py",
+      "name": "riscontro_srd",
+      "description": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»\n\nRiscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0103).",
+      "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
+      "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
       "inputSchema": {
         "type": "object",
         "properties": {
-          "json": {
-            "type": "boolean",
-            "description": "Report in JSON, per la catena."
+          "cache": {
+            "type": "string",
+            "description": "Cartella della cache (default: $RUMBLINGSTONE_SRD_CACHE, poi $XDG_CACHE_HOME/rumblingstone/srd, poi ~/.cache/rumblingstone/srd)."
           },
-          "check": {
+          "offline": {
             "type": "boolean",
-            "description": "Esce 1 se una riga ha smesso di dire il vero. Una superficie VUOTA non boccia: e' un fatto, non un difetto."
+            "description": "Non scarica: se la cache è incompleta esce 3."
+          },
+          "comando": {
+            "type": "string",
+            "description": "scarica | regola | riscontra | licenza.",
+            "enum": [
+              "scarica",
+              "regola",
+              "riscontra",
+              "licenza"
+            ]
           }
         },
-        "required": [],
+        "required": [
+          "comando"
+        ],
         "additionalProperties": false
       },
-      "outputs": [],
+      "outputs": [
+        "stdout",
+        "<--md>",
+        "<--json>",
+        "<cache>/"
+      ],
       "exit_codes": {
-        "0": "ok",
-        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
+        "0": "rapporto prodotto, anche con discordanze",
+        "1": "con --strict una discordanza o una regola non trovata; uno sha256 che non combacia; `regola` senza risultati",
+        "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
+        "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
+        "130": "interruzione utente"
       },
       "deterministic": true
     },
@@ -3783,6 +3963,10 @@
           "strict": {
             "type": "boolean",
             "description": "Gli avvisi (virgolette dritte, E') diventano errori."
+          },
+          "avvisi": {
+            "type": "boolean",
+            "description": "Elenca gli avvisi uno per uno; senza, se ne stampa solo il conto per tipo (dal 2026-10-22)."
           }
         },
         "required": [],
@@ -3837,7 +4021,16 @@
       "invocation": "python3 scripts/validate_norme_editoriali.py",
       "inputSchema": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "superficie": {
+            "type": "boolean",
+            "description": "La tabella delle norme scoperte: manca il codice o manca il dato (era superficie_norme.py, ADR-0062)."
+          },
+          "json": {
+            "type": "boolean",
+            "description": "Con --superficie: il rapporto in JSON."
+          }
+        },
         "required": [],
         "additionalProperties": false
       },

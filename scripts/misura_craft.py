@@ -95,6 +95,13 @@ PG = ("Thorik", "Tordek", "Hella", "Artemis")
 #: Ogni congegno: (etichetta, regex, dove è dichiarato).
 #: Il terzo campo non è decorazione: un congegno che nessun documento del repo
 #: dichiara non è un criterio, è un gusto personale — e non entra qui.
+#: 🔎 Il 2026-10-22 (lotto 7e di PIANO-AVVENTURE-COMMUNITY) ne sono usciti
+#: otto, con la misura nell'inventario delle misure obsolete: sei contavano una
+#: parola e non un congegno (ogni nome di PG, ogni «Round N», ogni «Orologio»,
+#: ogni «indizio», ogni «…» di quattro caratteri, gli ADR interni che solo
+#: l'Abbazia ha), e due hanno un rilevatore migliore in `domande_developer.py`:
+#: «se i PG…» la D19 (la scelta con la conseguenza), «scalare lo scontro» la D10
+#: (la riga di scala, 6 veri su 9). Lo spotlight resta in `--spotlight`.
 CONGEGNI = [
     # 🔴 Contava SOLO i box che cominciano con prosa in corsivo nuda, e
     # saltava quelli scritti nella forma che `editorial-standards` §2
@@ -106,21 +113,9 @@ CONGEGNI = [
      re.compile(r"^>\s*(?:\*\*Read-aloud[^*\n]*\*\*\s*)?[*_][^*_\s]", re.M | re.I),
      "module-standard §6 — prosa NUOVA per ogni ambiente"),
 
-    ("contingenze «se i PG…»",
-     re.compile(r"\bSe (?:i PG|il party|i giocatori|falliscono|il gruppo)\b", re.I),
-     "module-standard §9 — e SEMPRE la riga sconfitta"),
 
-    ("scalare lo scontro",
-     re.compile(r"scalar\w+ lo scontro|party più (?:forte|debole)|PG abbattuto", re.I),
-     "module-standard §8 — sidebar obbligatoria del boss"),
 
-    ("spotlight per PG",
-     re.compile(r"\b(?:" + "|".join(PG) + r")\b", re.I),
-     "module-standard §5 — ogni PG ha un beat suo"),
 
-    ("tattiche round-per-round",
-     re.compile(r"\bRound\s*\d|round-per-round|Round 1[–-]2", re.I),
-     "module-standard §7 — dal punto di vista del MOSTRO"),
 
     ("vie non combattive",
      re.compile(r"vi[ae] non combattiv|senza combattere|Diplomazia\s*C[DA]|"
@@ -133,36 +128,24 @@ CONGEGNI = [
                 r"si ricorder|torner[àa] (?:a|nel|nella)", re.I),
      "pilastro 7 (BG3) — una scelta scrive un'eco che torna"),
 
-    ("orologio / countdown",
-     re.compile(r"\bOrologio\b|countdown|clock\b|\bgiro\s+\d+/\d+", re.I),
-     "module-standard §3 — orologi attivi"),
 
     ("prove grezze di caratteristica",
      re.compile(r"\b(?:FOR|DES|COS|INT|SAG|CAR|Forza|Destrezza|Costituzione|"
                 r"Intelligenza|Saggezza|Carisma)\b[*_\s]*(?:grezz|C[DA]\s*\d)", re.I),
      "skill indagine — le SEI PORTE, per i PG senza gradi"),
 
-    ("nodo d'indizio",
-     re.compile(r"\bindizi?o?\b|Fatto/Lettura/Nome|regola dei tre indizi", re.I),
-     "skill indagine — Fatto / Lettura / Nome"),
 
     ("modi di fallimento dichiarati",
      re.compile(r"modi di fall|fallimento a metà|costo, non (?:stop|blocco)|"
                 r"vicolo cieco", re.I),
      "Abbazia §«Modi di fallimento al tavolo»"),
 
-    ("ADR interni al documento",
-     re.compile(r"^\*{0,2}ADR-\d+\s*[—–-]\s*\S", re.M),
-     "🔎 Abbazia — il PERCHÉ di ogni scelta, dentro l'avventura"),
 
     ("quarta colonna sensoriale",
      re.compile(r"quarta colonna|cosa NON dire|non lo dici mai|"
                 r"appartiene a chi (?:tira|fa la domanda)", re.I),
      "ADR-0057 (era ADR-12 dell'Abbazia) — contro «l'atmosfera divora l'indagine»"),
 
-    ("battute di dialogo",
-     re.compile(r"«[^»]{4,}»|\"[^\"\n]*?\s\S+\s\S+[^\"\n]*?[.!?…,]\""),
-     "pilastro 6 (Mercer) — ogni PNG ha una voce sua"),
 
     ("esiti etichettati",
      re.compile(r"^[>\s|*-]*\*{0,2}Esit[oi]\b|\btre finali\b|finali progettat|"
@@ -861,70 +844,6 @@ BERSAGLI = {
 }
 
 
-def potere_discriminante(dati: dict, etichette: "list[str]",
-                         righe: dict) -> "list[tuple]":
-    """Per ogni congegno: quante coppie di bersagli separa, su tutte le coppie.
-
-    **Che domanda risponde.** Un congegno serve a **distinguere** un documento
-    da un altro. Se su tutti i bersagli da' lo stesso numero — tipicamente
-    zero — non distingue niente: e' una riga in piu' nella tabella che nessuno
-    puo' usare per decidere. E' il controllo *non-discriminating* della
-    skill-creator, applicato al mestiere invece che alle skill.
-
-    **Due misure, e la seconda corregge la prima.** Il conteggio grezzo separa
-    anche solo perche' un documento e' piu' lungo: ARC-08 ha 6.096 righe e
-    DEF-5 ne ha 516, quindi *qualunque* congegno frequente li separa. La
-    densita' per 1.000 righe toglie la taglia di mezzo, e un congegno che
-    separa **solo** in grezzo separa per la ragione sbagliata.
-    """
-    nomi = list(dati)
-    coppie = [(a, b) for i, a in enumerate(nomi) for b in nomi[i + 1:]]
-    fuori = []
-    for e in etichette:
-        grezzo = sum(1 for a, b in coppie if dati[a][e] != dati[b][e])
-        dens = sum(1 for a, b in coppie
-                   if abs(dati[a][e] * 1000 / righe[a]
-                          - dati[b][e] * 1000 / righe[b]) > 0.05)
-        zeri = sum(1 for n in nomi if dati[n][e] == 0)
-        fuori.append((e, grezzo, dens, zeri, len(coppie), len(nomi)))
-    return sorted(fuori, key=lambda r: (r[2], r[1]))
-
-
-def stampa_discriminante(dati: dict, etichette: "list[str]", righe: dict) -> None:
-    righe_out = potere_discriminante(dati, etichette, righe)
-    tot_coppie, tot_bers = righe_out[0][4], righe_out[0][5]
-    print(f"\n\nPOTERE DISCRIMINANTE — quante delle {tot_coppie} coppie di "
-          f"bersagli ogni congegno separa\n")
-    print("⚠️  Non e' un voto sui documenti: e' un voto sui CONGEGNI. Un congegno")
-    print("    a zero coppie non dice niente su nessun documento, e la tabella in")
-    print("    cui compare e' piu' lunga senza essere piu' informativa.\n")
-    print("    La colonna che decide e' «densita'»: il grezzo separa anche solo")
-    print("    perche' un bersaglio e' dieci volte piu' lungo di un altro.\n")
-    print(f"{'congegno':38} {'grezzo':>7} {'densita':>8} "
-          f"{'a zero':>7} {'verdetto':>10}")
-    for e, grezzo, dens, zeri, tot, nb in righe_out:
-        if dens == 0:
-            v = "🔴 rumore"
-        elif zeri == nb - 1:
-            v = "🟡 un solo"
-        elif dens < tot // 4:
-            v = "🟡 debole"
-        else:
-            v = "🟢 separa"
-        print(f"{e[:38]:38} {grezzo:>4}/{tot:<2} {dens:>5}/{tot:<2} "
-              f"{zeri:>3}/{nb:<3} {v:>10}")
-    rumore = [e for e, _, d, *_ in righe_out if d == 0]
-    print(f"\n  🔴 {len(rumore)} congegni su {len(righe_out)} non separano "
-          f"nessuna coppia.")
-    for e in rumore:
-        print(f"       {e}")
-    print("\n  ⚠️  «rumore» non vuol dire «norma da buttare»: vuol dire che il")
-    print("      RILEVATORE, su questi bersagli, non produce informazione. Un")
-    print("      congegno a zero ovunque puo' essere una norma vera che nessuno")
-    print("      applica — e allora il difetto sta nei documenti, non nel metro.")
-    print("      I due casi si distinguono guardando i documenti, non la tabella.\n")
-
-
 def _stampa_per_file(titolo: str, sottotitolo: str, rilevatore, avviso: str) -> None:
     """La vista file-per-file, condivisa da `--p1`, `--metrature` e gli altri.
 
@@ -974,9 +893,6 @@ def main() -> int:
     ap.add_argument("--stile", action="store_true",
                     help="gerundio in coda, avverbi in -mente, battute lunghe "
                          "dei PNG (ADR-0093)")
-    ap.add_argument("--discriminante", action="store_true",
-                    help="quante coppie di bersagli ogni congegno separa: "
-                         "un congegno che non ne separa nessuna e' rumore")
     args = ap.parse_args()
 
     if args.p1:
@@ -1120,9 +1036,6 @@ def main() -> int:
             "    box che rispetta la norma in un modo che non vede finisce qui.\n"
             "    Una norma positiva rilevata a meta' produce penalita' FALSE:\n"
             "    contare male in negativo e' peggio che non contare.")
-
-    if args.discriminante:
-        stampa_discriminante(dati, etichette, righe)
 
     if args.copertura:
         banchi = [n for n in dati if n.startswith("★")]

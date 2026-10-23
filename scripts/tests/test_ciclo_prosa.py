@@ -46,8 +46,19 @@ class TestSegnala(unittest.TestCase):
         self.assertNotIn("tic minori in gruppo", _norme("Nel cuore della notte il campo dorme.\n"))
 
     def test_due_tic_minori_diversi_si(self):
-        testo = "La forgia rappresenta un vero e proprio patto fra i clan.\n"
+        testo = "La forgia rappresenta il patto. Non è un muro: è una porta.\n\nNon è un dono: è un debito.\n"
         self.assertIn("tic minori in gruppo", _norme(testo))
+
+    def test_un_antitesi_sola_nel_documento_non_e_un_tic(self):
+        # La soglia di validate_prosa: piu' di una per documento.
+        testo = "La forgia rappresenta il patto. Non è un muro: è una porta.\n"
+        self.assertNotIn("tic minori in gruppo", _norme(testo))
+
+    def test_il_trattino_conta_oltre_il_tre_per_cento(self):
+        rado = "La forgia rappresenta il patto " + "e la pietra " * 20 + "— e resta."
+        self.assertEqual(cp.tic_deboli(rado), ["copula elusa"])
+        self.assertEqual(cp.tic_deboli("La forgia rappresenta — il patto."),
+                         ["copula elusa", "trattino come respiro"])
 
     def test_lo_stesso_trattino_non_conta_due_volte(self):
         # «Non è X — è Y» è un'antitesi, non un'antitesi più un trattino.
