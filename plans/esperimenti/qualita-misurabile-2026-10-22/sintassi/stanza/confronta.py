@@ -8,6 +8,7 @@ Stanza entra attraverso spacy-stanza, che ne fa un Doc di spaCy: i rilevatori
 non cambiano di una riga. Il modello Stanza (Apache 2.0) sta in ~/.cache/stanza,
 mai nel repo. `STANZA_PACKAGE=default_accurate` prova la variante transformer
 (ELECTRA italiano); dietro il proxy serve `HF_HUB_DISABLE_XET=1`.
+`BACKEND=spacy-lg` prova spaCy `it_core_news_lg` (aggiunto il 2026-10-23).
 """
 import json
 import logging
@@ -37,7 +38,12 @@ def stanza_nlp():
 
 
 def parser(nome):
-    return ms.carica_nlp() if nome == "spacy" else stanza_nlp()
+    if nome == "spacy":
+        return ms.carica_nlp()
+    if nome == "spacy-lg":   # it_core_news_lg, stessa licenza del md, fuori dal repo
+        import spacy
+        return spacy.load("it_core_news_lg", exclude=["ner"])
+    return stanza_nlp()
 
 
 def base(nomi):

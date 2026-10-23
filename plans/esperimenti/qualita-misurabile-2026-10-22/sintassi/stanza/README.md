@@ -78,6 +78,36 @@ anche sulle 54 coppie, con Stanza si indebolisce. I calchi, con tutti e tre
 i parser, sono più spesso nella versione che **vince**: come misura del voto
 non servono, servono solo come elenco di punti da leggere.
 
+## 3. Aggiunta del 2026-10-23: spaCy `it_core_news_lg`, a rete aperta
+
+Domanda di Jfs: con la rete sbloccata cambia qualcosa? Stanza ed ELECTRA
+erano già stati scaricati e provati a rete aperta, quindi su di loro no.
+L'unico modello mai provato era spaCy `lg` (stessa licenza del `md`, fuori dal
+repo; si scarica da GitHub, non da Hugging Face). UDPipe resta irraggiungibile
+(lindat.mff.cuni.cz 403). File: `RILIEVI-BASE-LG.json`, `CALIBRAZIONE-54-LG.txt`,
+`BACKEND=spacy-lg`.
+
+| | spaCy md | spaCy lg |
+|---|---|---|
+| calchi | 30 | 29 |
+| in comune | — | 23 |
+| solo suoi, veri a una lettura | 4 o 5 su 7 (veri persi da lg, vedi sotto) | 2 su 6 |
+| tempo sui 13 file | 1,8 s | 3,1 s |
+
+`lg` **perde cinque soggetti preverbali** che `md` trova, fra cui due già
+letti come veri («Un rombo basso sale», «quattro eroi apparvero») e altri tre
+dello stesso tipo («fenomeni innaturali cominciano», «un altro vecchio
+resta», «un nano veterano … cade»). Tiene invece i due falsi di `md` che
+contano («dalle ferite pendono» di B01, «fiera e furiosa, echeggia») e ne
+aggiunge di suoi: «Gorthak il Trifronte avanza» (nome proprio, tema noto),
+«Dal Tempio interno emerge» (il soggetto è già dopo il verbo), «se mai un
+nano del nostro Pugno cadrà», «Poi, lontanissima, la voce» (aggettivo
+complesso). Veri in più: «un silenzio surreale scende», «sto ancora sognando».
+Toglie i due falsi di aggettivo complesso di `md`.
+In calibrazione nessuna misura passa Bonferroni (`livelli_max` p 0,096,
+`rip_interna%` p 0,043). **Peggio del `md`**: perde veri e tiene il falso che
+ha fatto perdere B01.
+
 ## Decisione (ADR breve)
 
 - **Contesto**: spaCy `md` dà falsi rilievi che, riscritti senza controllo,
@@ -86,7 +116,7 @@ non servono, servono solo come elenco di punti da leggere.
 - **Decisione**: niente backend Stanza in `misura_sintassi.py`. Resta spaCy,
   con la regola già presa nel giro 7f: ogni rilievo si conferma a occhio
   prima di riscrivere.
-- **Alternative scartate**: Stanza standard (precisione +2 rilievi su 31,
+- **Alternative scartate**: spaCy `lg` (perde cinque soggetti preverbali veri e tiene il falso di B01, provato il 2026-10-23); Stanza standard (precisione +2 rilievi su 31,
   calibrazione più debole, 50 volte più lento, PyTorch); Stanza ELECTRA (come
   la standard, un falso in più, 100 volte più lento); consenso dei due parser
   (rilievo solo se lo vedono entrambi: toglierebbe tutti e sette i falsi delle
