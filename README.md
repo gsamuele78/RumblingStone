@@ -120,6 +120,7 @@ Indice unico dei documenti "di sviluppo" del repo (roadmap, script, container):
 | Vuoi… | Documento |
 |---|---|
 | **Roadmap / cosa manca / cosa migliorare** (stato piani, %, gate, prossimi passaggi) | [`plans/INDEX.md`](plans/INDEX.md) — con [`plans/CHANGELOG.md`](plans/CHANGELOG.md) per la storia lotto-per-lotto |
+| **Versioni e rilasci** (cosa cambia da una versione all'altra, come si fa un rilascio, la piattaforma: Python 3.13 e i tre canali) | [`CHANGELOG.md`](CHANGELOG.md), [`docs/RILASCIO.md`](docs/RILASCIO.md), [ADR-0099](plans/adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md), [ADR-0100](plans/adr/ADR-0100-il-rilascio-e-una-pr.md) |
 | **Script DM: cosa fanno, quali parametri, cosa producono** (tool map completa + `dm.py`) | [`scripts/README-automation.md`](scripts/README-automation.md) |
 | **Condividere il materiale** (mandarlo ai giocatori, stamparlo, pubblicarlo, e perché la vendita oggi non è conforme) | [`docs/guides/GUIDA-CONDIVISIONE-IP.md`](docs/guides/GUIDA-CONDIVISIONE-IP.md) |
 | **Preparare una macchina nuova** (o un secondo DM): prerequisiti, skill per agenti, branch di gruppo, verifica finale | [`docs/guides/GUIDA-SETUP-MACCHINA.md`](docs/guides/GUIDA-SETUP-MACCHINA.md) |

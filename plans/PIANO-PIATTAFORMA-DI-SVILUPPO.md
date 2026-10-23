@@ -196,6 +196,17 @@ escludeva da 3.13 (la 1.0.3 ha la ruota per 3.13, e l'API usata
 cartelle, con gruppi suoi. Job CI `convertitori`, non bloccante.
 Resta: i test del motore leggono PDF fuori dal repo.
 
+### P10 · Il rilascio è una PR ✅ in testing
+`[engine: Opus 5.5 · effort: medio · qualità: la PR di rilascio unita crea tag, rilascio, archivio riproducibile e attestazione senza passi a mano]`
+DM 2026-10-23: *«iniziare il tag e release come fatto nel progetto
+iemod-fetch»*. [ADR-0100](adr/ADR-0100-il-rilascio-e-una-pr.md): CHANGELOG.md
+di progetto alla radice (Keep a Changelog, italiano), `__version__` in
+`scripts/dmcore/__init__.py` letto da `dm.py --version`, workflow
+`release.yml` con `scripts/release_plan.py` e `scripts/release_notes.py`
+ripresi da iemod-fetch (MIT, stesso autore), guida in
+[docs/RILASCIO.md](../docs/RILASCIO.md). Il primo rilascio è 1.0.0 (D7). Il
+workflow sale a stable dopo tre rilasci senza interventi a mano.
+
 ### P8 · La prova generale della prossima migrazione ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: un job non bloccante su Python 3.14 verde per un mese prima del salto]`
 - Parte quando Debian 14 entra nel congelamento (atteso nel 2027): un job CI
@@ -226,16 +237,17 @@ Resta: i test del motore leggono PDF fuori dal repo.
 | ~~D4~~ | P5 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **uv in testing per installare in CI e fare il lock di A3?** MIT o Apache-2.0. Installazione 33 s → 4 s a freddo; in CI il guadagno è circa 20 s su 914, il valore vero è il lock con hash senza pip-tools e la stessa 3.13 su Ubuntu e Bazzite senza PPA. Proposta: sì, in testing |
 | ~~D5~~ | P3 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **ruff resta in testing con gli otto gruppi di regole che cercano bug, e sale dopo 14 giorni?** Le regole di stile restano fuori (1.672 rilievi, quasi tutti scelte volute del repo). Proposta: sì |
 | ~~D6~~ | P9 | ✅ **Decisa il 2026-10-23, risposta del DM: B** (*«D6 b»*, dopo la spiegazione: correggere e portare `converters/` nella piattaforma). **I tre bug che ruff ha trovato in `converters/` si correggono?** Un modulo che non si importa, un NameError a fine installazione, una correzione grammaticale che non parte e non lo dice. `converters/` è fuori dalla piattaforma (PRATICHE D9). Proposta: tre righe in una PR a parte, senza portare `converters/` in CI |
+| D7 | P10 | **Il primo rilascio è 1.0.0, con dentro solo i pacchetti delle skill?** Lo 0.1.0 scritto nel codice non è mai uscito; 1.0.0 dice «la piattaforma di ADR-0099 è la base». Il repo è pubblico, quindi il rilascio lo è: esce solo ciò che il repo mostra già (pacchetti delle skill, sorgenti del tag), i PDF dei booklet no finché non passano dal gate di `rumblingstone-edizione`. Proposta: sì, 1.0.0, solo le skill |
 
 <!-- eco: PIATTAFORMA 2026-10-23 -->
 - **Decise**: D1 la regola dei tre canali · D2 un corridore solo per i test · D3 pytest-xdist in testing · D4 uv in testing · D5 ruff in testing, stable dopo 14 giorni · D6 B, `converters/` dentro la piattaforma
-- **Aperte**: nessuna
+- **Aperte**: D7 il primo rilascio (numero e contenuto)
 - **Cambiate**: D6 dalla proposta A (correggere e lasciare fuori) a B (correggere e portare dentro)
 - **Dedotto da me**: che D3 e D4 in testing si provino nello stesso job non bloccante (uv installa, xdist esegue), per pagare un job solo invece di due; che «se sono migliorative poi diventano standard» del DM sia la regola di promozione di ADR-0099 §3, e non un sì anticipato alla promozione; che lo stesso concetto del kernel Linux in Debian» voglia dire i canali unstable, testing e stable con promozione a tempo e senza regressioni, e la migrazione a ogni rilascio di Debian (lettura confermata dalla nota del coordinatore); che le soglie (14 giorni, 10 run, +5%, tre mesi di oldstable) siano mie e da tarare; che «le skill» nella piattaforma vogliano dire che le skill conoscono la regola, non che le skill diventino componenti con un canale
 
 ## §6 · Ordine
 
-P0 → D1 → P9 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
+P0 → D1 → P9 → P10 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
 A2 → P7 → P8 quando Debian 14 si congela.
 
 ## Checklist di avanzamento
@@ -250,3 +262,4 @@ A2 → P7 → P8 quando Debian 14 si congela.
 - [ ] P7 · skill e guide
 - [ ] P8 · prova generale della migrazione a 3.14
 - [x] P9 · `converters/` nella piattaforma, in testing (D6)
+- [x] P10 · il rilascio è una PR (ADR-0100), workflow in testing; primo rilascio con D7
