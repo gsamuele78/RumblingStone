@@ -29,7 +29,7 @@
 1. **La popolazione di Rethmar, Dauth e Channathgate.** Ora la danno le piante
    in scala del 2026-10-22, una taglia sopra quelle della Elsir Vale perché la
    valle regga l'orda di circa 10.000 (scelta del DM): Rethmar circa 18.000, Dauth
-   circa 7.000, Channathgate circa 25.000 `[INFERRED — needs DM confirmation]`. I
+   circa 7.000, Channathgate circa 25.000 `[CANONE — DM 2026-10-23]`. I
    profili di mercato (§0, «Il quadro») erano stati scelti prima, e restano.
 2. **La dedica del Tempio di Rethmar.** La battaglia finale lo nomina e non dice
    di chi è. Qui resta «il Tempio», con un chierico di 13° livello.
@@ -231,7 +231,7 @@ dichiarato)*. Una **piccola città** (valore base 4.000 mo, limite d'acquisto
 strategica** (valore base +10%: le Otto Porte ne fanno un passaggio). Con i circa
 7.000 abitanti della pianta (`Mappe/dauth-assedio/dauth-pianta.svg`) Dauth è
 davvero una piccola città, e il profilo deciso dal DM torna con la popolazione
-`[INFERRED — needs DM confirmation]`.
+`[CANONE — DM 2026-10-23]`.
 
 | Voce | Fiera (28-32) | Dopo l'invasione (33+) |
 |---|---:|---:|

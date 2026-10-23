@@ -54,6 +54,14 @@ jobs:
         continue-on-error: true
         run: ruff check --output-format github
 
+      # ADR-0102, canale TESTING: shapely ridisegna le piante di Rethmar, Dauth e
+      # Channathgate dai loro programmi in scripts/piante/, e le confronta byte
+      # per byte con quelle committate. Sale a stable dopo 14 giorni e 10 run su
+      # main senza falsi allarmi (un arrotondamento diverso di GEOS lo sarebbe).
+      - name: Piante delle città allineate ai programmi (testing, non bloccante)
+        continue-on-error: true
+        run: python scripts/genera_pianta_citta.py --tutte --check
+
       - name: Tool manifest conformance gate (ADR-0012)
         run: python scripts/tools_manifest.py --check
 

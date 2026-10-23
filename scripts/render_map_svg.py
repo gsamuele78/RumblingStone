@@ -91,11 +91,11 @@ EMOJI_NOTO = Path(__file__).resolve().parent / "emoji-noto"
 # pergamena. Una tessera copre CELLE_PER_TESSERA quadretti per lato. Gli SVG
 # di questo tema vanno in `rendered-texture/`, accanto a `rendered/`.
 TEXTURE_CC0 = Path(__file__).resolve().parent / "texture-cc0"
-TEMI = ("pergamena", "texture")
+TEMI = ("pergamena", "texture", "pianta")
 CELLE_PER_TESSERA = 2
 VELATURA = 0.30    # opacità del colore del terreno sopra la texture: tarata dal DM
                    # il 2026-10-09 sulle texture vere (D16), fra 0,45 e 0,20
-CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture"}
+CARTELLA_TEMA = {"pergamena": "rendered", "texture": "rendered-texture", "pianta": "rendered-pianta"}
 # D24 di RESA-ASSET: sulle texture i glifi perdevano contrasto (mediana 7,9 →
 # 4,5 misurata da misura_resa.py) e alcuni terreni si confondevano (⛰ e 🔳 a
 # ΔE 1,2). Nel tema texture un alone del colore della carta sta sotto ogni
@@ -1349,6 +1349,10 @@ def _arrowhead(x1: float, y1: float, x2: float, y2: float, color: str, size: flo
 def render_svg(grid: dict, source_name: str, tema: str = "pergamena") -> str:
     if tema not in TEMI:
         raise ValueError(f"tema: uno di {', '.join(TEMI)}")
+    if tema == "pianta":
+        # lo stile delle piante delle città (ADR-0102): un modulo suo, stessi simboli
+        from render_map_pianta import render_pianta  # noqa: PLC0415 (importa questo modulo)
+        return render_pianta(grid, source_name)
     rows = grid["rows"]
     row_nums = sorted(rows)
     n_rows = row_nums[-1] - row_nums[0] + 1
@@ -1867,21 +1871,24 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("files", nargs="*", help="markdown file(s) containing emoji-grid maps")
     ap.add_argument("--tutti-i-master", action="store_true",
-                    help="ogni master che ha gia' un SVG in rendered/ (per rifare un tema intero)")
+                    help="ogni master che ha gia' un SVG in rendered/ (per rifare un tema intero); "
+                         "col tema pianta solo le cartelle che hanno adottato rendered-pianta/")
     ap.add_argument("-o", "--outdir", help="output directory (default: rendered/ next to input)")
     ap.add_argument("--map", type=int, help="render only map #N (1-based) of each file")
     ap.add_argument("--list", action="store_true", help="list maps found, render nothing")
     ap.add_argument("--strict", action="store_true",
                     help="fail if declared header dims (N col × M righe) don't match parsed cells")
     ap.add_argument("--tema", choices=TEMI, default="pergamena",
-                    help="pergamena (default, in rendered/) o texture: terreni con le texture "
-                         "CC0 di scripts/texture-cc0/, in rendered-texture/")
+                    help="pergamena (default, in rendered/); texture: terreni con le texture "
+                         "CC0 di scripts/texture-cc0/, in rendered-texture/; pianta: lo stile "
+                         "delle piante delle città (ADR-0102), in rendered-pianta/")
     args = ap.parse_args()
     if args.tutti_i_master:
         radice = Path(__file__).resolve().parent.parent
         args.files = sorted({str(p.parent.parent / f"{p.name.split('_map')[0]}.md")
                              for p in radice.glob("**/rendered/*_map[0-9][0-9]_*.svg")
-                             if (p.parent.parent / f"{p.name.split('_map')[0]}.md").exists()})
+                             if (p.parent.parent / f"{p.name.split('_map')[0]}.md").exists()
+                             and (args.tema != "pianta" or (p.parent.parent / CARTELLA_TEMA["pianta"]).is_dir())})
     if not args.files:
         ap.error("indica i file, oppure --tutti-i-master")
     if args.tema == "texture" and not _texture_cc0():
