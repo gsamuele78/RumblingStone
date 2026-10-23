@@ -1,6 +1,6 @@
 # Il corpus di riferimento della prosa: i box letti dai PDF, misurati con i rilevatori del repo
 
-**Data**: 2026-10-18 · **Lotto**: 4 di [PIANO-AVVENTURE-COMMUNITY](../../PIANO-AVVENTURE-COMMUNITY-2026-10.md) · **Segue**: `note-prosa-2.md` (gli indicatori di stile) e la prima misura a distanza del corpus, fatta lo stesso giorno senza i PDF.
+**Data**: 2026-10-18, aggiornata il 2026-10-23 (§7) · **Lotto**: 4 di [PIANO-AVVENTURE-COMMUNITY](../../PIANO-AVVENTURE-COMMUNITY-2026-10.md) · **Segue**: `note-prosa-2.md` (gli indicatori di stile) e la prima misura a distanza del corpus, fatta lo stesso giorno senza i PDF.
 **Legenda**: **[misurato]** = contato da me sui box estratti · **[letto]** = l'ho letto nel PDF · **[inferenza]** = deduzione mia.
 
 ⚠️ **I testi di terzi non sono nel repo.** I PDF, i box estratti e le misure box per box stanno nella cartella privata del progetto (`corpus-prosa/`). Qui ci sono solo numeri derivati e nessuna citazione.
@@ -118,3 +118,61 @@ python3 -I corpus-prosa/script/misura_corpus.py --repo <checkout della #246> \
 ```
 
 `config.tsv` dice per ogni PDF quale carattere è il read-aloud. Si sceglie guardando i caratteri del PDF, e per i 22 PDF di oggi l'ho scelto a mano.
+
+Per l'aggiornamento del 2026-10-23 (§7) la configurazione è `config-tutti-2026-10-23.tsv` (la vecchia più i 22 PDF nuovi), i box stanno in `grezzi/box-tutti-2026-10-23/`, il checkout è `main` e le misure in `misure-2026-10-23/`. I box dei PDF nuovi passano prima per un filtro che toglie quelli con dadi, CD, TS, CA o punti ferita: in due PDF il carattere del read-aloud è anche quello delle statistiche, e il filtro ne toglie 16 su 715.
+
+---
+
+## 7 · Aggiornamento del 2026-10-23: un secondo editore italiano
+
+Il DM ha aperto altri domini all'ambiente e ha chiesto di allargare il corpus con fantasy italiano di qualità diversa. Gli editori professionali italiani che distribuiscono avventure gratuite (Need Games, Isola Illyon, Acheron) restano fuori dalla rete dell'ambiente, e così Liber Liber e Wikisource. Sono raggiungibili `www.gruppochimera.it`, `www.dragonslair.it` e `archive.org`. Su `archive.org` non ho cercato: per i moduli di gioco non c'è modo di distinguere un caricamento autorizzato da una copia pirata.
+
+### 7.1 · Che cosa è entrato
+
+- **Gruppo Chimera, due titoli nuovi** comparsi sul sito dopo il 18: *Dove le profezie sbagliano* (2022, 5e), misurato, 264 box; l'introduzione di *Sic Semper Tyrannis*, scartata perché è il solo prologo.
+- **Dragons' Lair**, l'archivio di avventure della community italiana più vecchia (1996-2025, AD&D 2e, 3e, 3.5, PF1e e 5e). Il download non chiede più l'accesso. Ho esaminato 59 PDF: avventure, più un'ambientazione cittadina, una razza e un regolamento nautico che non hanno box. **21 hanno un carattere riservato al testo per i giocatori** e sono misurati: **427 box, 26.000 parole**. Gli altri 38 non distinguono il read-aloud dal resto (lo scrivono in tondo fra virgolette, o non lo hanno) o hanno un testo che non si estrae (lettere spaziate, codifiche rotte); tre di questi li ho scartati dopo averli letti, perché il carattere scelto copriva note per il DM e non testo da leggere.
+
+Dragons' Lair dà al corpus **un livello di qualità che mancava**: testi della community pubblicati come arrivano, senza la cura redazionale di un'associazione che organizza tornei (il Gruppo Chimera) o di un editore (Paizo). Nessuno dei tre è giudicato dalla community per la prosa.
+
+Il corpus italiano passa così da 1.644 box e 88.000 parole a **2.335 box e 129.000 parole**, su 34 titoli.
+
+### 7.2 · Il controllo a mano [misurato]
+
+Un campione a caso (seme 23) di 30 box nuovi, letti per intero: **27 sono testo per i giocatori**. Gli altri tre sono due voci di una tabella di eventi casuali e una nota d'ambientazione, stampate nello stesso corsivo. **4 su 30 hanno il confine sbagliato**, come nel primo campione: frammenti di un box spezzato da un'immagine o da una scritta in un altro carattere. Diciassette dei trenta sono battute di PNG.
+
+### 7.3 · Le misure [misurato]
+
+Box descrittivi, gli stessi rilevatori di `main` (`box_read_aloud`, `corpo_del_box`, `gerundi_in_coda`, `avverbi_mente`). La colonna ARC-07 è `main` di oggi, cioè dopo la #249 e la #251: non è la stessa del §2.
+
+| | Chimera IT | Dragons' Lair IT | Paizo EN | ARC-07 `main` | ARC-08 |
+|---|---:|---:|---:|---:|---:|
+| box | 1.102 | 270 | 111 | 114 | 78 |
+| parole, mediana | 41 | 40 | 52 | 62 | 66 |
+| fra 30 e 70 parole | 46% | 38% | 52% | 50% | 62% |
+| oltre 100 parole | 11% | 14% | 15% | 15% | 0% |
+| parole per frase, mediana | 17 | 16 | 18 | 14 | 17 |
+| `>4 frasi` | 15% | 19% | 25% | **47%** | 18% |
+| `>500 car` | 17% | 21% | 23% | 20% | 18% |
+| con parentesi | 5% | 7% | 2% | 0% | 8% |
+| seconda persona | 25% | 30% | 9% | 22% | 18% |
+| gerundio in coda ‰ (-ing EN) | 2,2 | 1,2 | 3,5 | **0,0** | 1,6 |
+| -mente ‰ (-ly EN) | 5,9 | 8,3 | 12,6 | **0,65** | 5,8 |
+
+Per titolo, sui **16 titoli italiani** con almeno 10 box descrittivi e 1.000 parole (11 Gruppo Chimera, 5 Dragons' Lair):
+
+- **-mente**: da 4,0 a 14,6‰, mediana **6,1**;
+- **gerundio in coda**: da 0,6 a 3,8‰, mediana **1,7**.
+
+### 7.4 · Che cosa cambia
+
+1. **Le fasce di `--stile` reggono.** `FASCIA_MENTE` (3,8-13,4‰) e `FASCIA_GERUNDIO` (1,0-3,1‰) erano state prese da dieci titoli di un solo editore. Con sedici titoli di due editori la mediana del gerundio resta 1,7 e quella dei -mente sale da 5,5 a 6,1. Escono dalle fasce cinque titoli: tre di Dragons' Lair sotto il gerundio minimo (0,6, 0,6 e 0,8), due sopra il massimo (3,4 e 3,8), e l'edizione estesa di *Fino alla Fine del Mondo* sopra il -mente massimo, come già il 18. Le fasce sono indizi e non soglie, e allargarle per cinque titoli piccoli sposterebbe poco. **Non le cambio**; la proposta resta al §7.5.
+2. **La qualità redazionale non abbassa i -mente.** Dragons' Lair, il livello meno curato, ne ha di più (8,3‰) del Gruppo Chimera (5,9‰), e meno gerundi (1,2 contro 2,2). Lunghezze e frasi per box sono quasi uguali fra i due. Su due editori non si può dire di più [inferenza].
+3. **Lo scarto di ARC-07 resta su tutti e tre i livelli**, ed è lo stesso del 18. Su `main` i box di ARC-07 hanno frasi più corte di ogni riferimento (14 parole contro 16-18) e quasi nessun -mente o gerundio, dove i tre riferimenti ne hanno tutti.
+4. **Un numero nuovo da guardare: `>4 frasi` di ARC-07 è al 47%**, contro il 15-25% di ogni riferimento e l'8% che la #249 aveva in bozza (§2). La #251 ha rimesso intatte le otto vecchie vincitrici del cieco, e i box lunghi di frasi corte sono tornati con loro. Il cieco ha scelto quei box: il numero dice che sono **fuori dalla forma umana**, non che sono peggiori.
+5. **ARC-08 sta dentro il riferimento** in tutte le colonne, tranne le parentesi (8%, sopra la norma del repo che non ne vuole).
+
+### 7.5 · Proposte (da decidere)
+
+- Lasciare le fasce di `--stile` come sono, e citare nel commento di `FASCIA_MENTE` i sedici titoli invece dei dieci. È solo la fonte che cambia.
+- Per la riscrittura di ARC-07: guardare `>4 frasi` insieme alle parole per frase. Gli autori umani misurati scrivono box di 2-3 frasi da 16-18 parole, ARC-07 box di 4-5 frasi da 14.
+- Il corpus resta senza un editore professionale italiano. Need Games e Isola Illyon distribuiscono quickstart gratuiti (Fabula Ultima, Dragonbane, Legend in the Mist), ma i loro domini sono fuori dalla rete dell'ambiente. Se il DM li apre, si misurano con lo stesso script.
