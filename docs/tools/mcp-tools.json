@@ -1182,6 +1182,32 @@
       "deterministic": true
     },
     {
+      "name": "render_pg",
+      "description": "«Da dove viene la DES di Thorik, un passo alla volta?»\n\nGenera PG/schede/<pg>.md da PG/schede/<pg>.yaml: le caratteristiche come catena (10 → 8 Corona → 6 rito) e i modificatori permanenti con la fonte. Classe, PF e stato non li copia: rimanda a campaign/state.yaml (RIPRESA-PR 4g-1, ADR-0088).",
+      "use_case": "«Da dove viene la DES di Thorik, un passo alla volta?»",
+      "invocation": "python3 scripts/render_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "check": {
+            "type": "boolean",
+            "description": "Gate CI: segnala il drift, non scrive."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "PG/schede/"
+      ],
+      "exit_codes": {
+        "0": "ok / in sync",
+        "1": "drift (--check)",
+        "2": "errore d'uso"
+      },
+      "deterministic": true
+    },
+    {
       "name": "render_state",
       "description": "«Ho corretto un fatto di canone: come lo faccio arrivare alla tabella che leggo al tavolo, senza toccarla a mano?»\n\nGenera le tabelle di canone di campaign/state.md a partire da campaign/state.yaml, dentro le otto regioni marcate `<!-- gen:state:NOME -->` (ADR-0050). Il DM continua a leggere un documento, non uno YAML. Senza il rendering lo YAML sarebbe una seconda fonte di verita' accanto a state.md, cioe' il difetto che la decisione esiste per chiudere: un master e una vista, mai due master.",
       "use_case": "«Ho corretto un fatto di canone: come lo faccio arrivare alla tabella che leggo al tavolo, senza toccarla a mano?»",
@@ -1341,6 +1367,34 @@
       ],
       "exit_codes": {
         "0": "ok"
+      },
+      "deterministic": true
+    },
+    {
+      "name": "validate_pg",
+      "description": "«Il −2 DES della Corona e' ancora scritto da qualche parte, con la sua fonte, o e' sparito un'altra volta?»\n\nGate sulle schede PG in PG/schede/*.yaml: ogni modificatore permanente ha una fonte che esiste e (se `cita`) dice ancora quella frase; base + delta = attuale; ogni costo affermato «permanente» nei .md e' sulla scheda o dismesso con una ragione in scripts/data/pg_modificatori_ignorati.yaml; le fonti primarie quadrano con le schede; i PG sono quelli di `party` in state.yaml, e classe, PF, stato e artefatti non si copiano sulla scheda (RIPRESA-PR 4g-1, ADR-0088).",
+      "use_case": "«Il −2 DES della Corona e' ancora scritto da qualche parte, con la sua fonte, o e' sparito un'altra volta?»",
+      "invocation": "python3 scripts/validate_pg.py",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "json": {
+            "type": "boolean",
+            "description": "Uscita machine-readable."
+          },
+          "verbose": {
+            "type": "boolean",
+            "description": "Elenca i modificatori per PG."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputs": [],
+      "exit_codes": {
+        "0": "coerente",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso o scheda illeggibile"
       },
       "deterministic": true
     },
@@ -2591,7 +2645,8 @@
       "outputs": [
         "campaign/state.yaml",
         "campaign/state.md",
-        "campaign/state-changelog.md"
+        "campaign/state-changelog.md",
+        "PG/schede/"
       ],
       "exit_codes": {
         "0": "ok",

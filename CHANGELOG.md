@@ -25,6 +25,12 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
   programmi in `scripts/piante/`. Con una scheda `*.watabou.json` il comando
   resta quello di prima.
 - shapely 2.2.0 in `requirements-dev.txt`, canale testing.
+- Le schede dei PG come dato: `PG/schede/<pg>.yaml` (schema
+  `scripts/schemas/pg_scheda.schema.json`) con le caratteristiche e i
+  modificatori permanenti, ognuno con la sua fonte, e la vista `<pg>.md`
+  generata. `validate_pg.py` e `render_pg.py --check` sono cancelli della CI.
+  Classe, PF e stato restano in `campaign/state.yaml` (ADR-0088).
+- `dm.py gruppo nuovo` rifà `PG/schede/` vuote per i PG del nuovo gruppo.
 - `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
 - `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
 - `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).

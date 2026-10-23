@@ -579,8 +579,8 @@ diciotto.
 > | **4d** ✅ `state.yaml` (ADR-0017) | **K** canone | `[**Opus 5** · xhigh-max · `state.md` **rigenerato è identico** a quello committato]` — **chiuso 2026-09-16/17 (4d-1 … 4d-8), riverificato il 2026-09-24** (§4.9.0) |
 > | **4e** ✅ una sola via di scrittura | **C** costruzione | `[Sonnet 5 · alto · un test **sui file veri**, non su fixture — vedi §4.4]` — **chiuso 2026-09-24** (§4.9): il front-matter coi delta, 8 mutazioni su 8 rosse |
 > | **4f** prodotto e partita | **C** costruzione | `[Sonnet 5 · alto · un test che dimostra che il reset **non eredita niente**]` |
-> | **4g** schede PG a dati | **K** canone | `[**Opus 5** · alto · le schede generate combaciano con quelle scritte a mano]` |
-> | **4h** `groups/<slug>/` | **G** giudizio | `[Opus 5 · xhigh · **PR dedicata**, come dice la #99 stessa]` |
+> | **4g** schede PG a dati | **C** (4g-1) + **K** (4g-2) | `[Opus 5 · alto · le schede generate combaciano con quelle scritte a mano]` — **4g-1 ✅ 2026-10-23** (§4.13): lo strumento; **4g-2 ⬜** i valori dalle schede del DM |
+> | **4h** `groups/<slug>/` | **G** giudizio | `[Opus 5 · xhigh · **PR dedicata**, come dice la #99 stessa]` — **proposto di non portarlo** (ADR-0088): `main` ha scelto il ramo per gruppo (ADR-0007, ADR-0090) |
 >
 > ⚠️ **Quattro lotti su otto sono K o G.** È la misura di quanto questa fase
 > tocchi il canone, e la ragione per cui **non si mergia in blocco**.
@@ -3110,6 +3110,52 @@ prototipo, contro `main` prima del merge della parte di codice:
 Un numero alto qui non vuol dire lavoro perso: dice dove leggere, e la lettura
 è scritta nel sotto-lotto. I sei rami si possono cancellare quando la PR della
 parte di codice di 4j è su `main`; la cancellazione la fa il DM.
+
+### 4.13 · Lotto **4g-1** — lo strumento delle schede PG `[✅ 2026-10-23 · 4g-2 ⬜ · ADR-0088 proposta]`
+
+#### FASE 1 · Audit, sul repo del 2026-10-23
+
+- La #99 è **863 commit** indietro: le sue schede non si copiano, si rifanno.
+- Le schede della #99 hanno le caratteristiche a `null` (23 caselle su 24):
+  lo scheletro vale, i valori non ci sono. Classe, PF e stato sono già in
+  `state.yaml` → `party`: copiarli farebbe due master.
+- Il canone è cambiato da agosto: il rito dello Smeraldo dà **−2 DES / +2 COS /
+  +4 CAR** a Thorik (D84, 2026-10-12), e i dati della #99 non lo sapevano.
+- Il gate di agosto, girato sul repo di oggi, dava **7 derive, tutte false**:
+  «Nessun −2 COS» letto come affermazione; «−4 DES» (la somma dei due −2) non
+  riconosciuto; i resoconti di `plans/esperimenti/` che citano un PG per il
+  costo di un altro.
+- `PG/` era dichiarata partita in §4.10.0 ma il reset non la toccava: con le
+  schede, un gruppo nuovo avrebbe avuto la CI rossa al primo push.
+
+#### FASE 2 · Sviluppo
+
+`scripts/validate_pg.py` e `scripts/render_pg.py` ripresi dalla #99, con lo
+schema `pg_scheda.schema.json` ristretto: la scheda porta caratteristiche e
+modificatori permanenti con la loro fonte, **e basta**. Il controllo 5 rifiuta
+classe, PF, stato e artefatti indicando dove stanno, e vuole una scheda per
+ogni PG di `party`. I tre falsi positivi sono corretti nel gate. Le quattro
+schede in `PG/schede/` portano solo i quattro modificatori di Thorik già
+attestati. Il reset (`dmcore/partita.py`, azione `schede`) toglie le schede
+del tavolo di prima e ne crea una vuota per ogni PG del nuovo `party`.
+
+#### FASE 3 · Validazione
+
+| Cosa | Esito |
+|---|---|
+| `validate_pg.py`, `render_pg.py --check` sul repo | ✅ verdi, 22 caselle `[INFERRED]` contate |
+| gli stessi sul ramo `campaign-group-rumblingstone` con questo ramo fuso sopra (il canone giocato) | ✅ verdi, nessun conflitto |
+| `test_validate_pg.py` | 25 test; **14 mutazioni su 14 rosse** (fra cui: togliere il −2 DES della Corona) |
+| `test_new_group.py` | il gruppo nuovo ha le sue schede e `validate_pg` verde; le schede del repo vero non si toccano |
+
+#### Cosa resta: 4g-2
+
+I valori delle caratteristiche dalle schede del DM, confermati da un modulo
+(D19). Il CAR di Thorik è già deciso: **8 → 12**. P1 (la Corona) e DEF-1 (il
+rito, D84) scrivono lo stesso +4 due volte; il DM il 2026-10-23: *«il canone è
+quello giocato nel gruppo»*, e lì `state.yaml` conta +4 CAR in tutto, come la
+scheda giocatore della Corona rivista («8 → 12»). Resta solo una differenza di
+attribuzione (Corona o rito), che non cambia il numero.
 
 ## Come si misura che il piano è finito
 
