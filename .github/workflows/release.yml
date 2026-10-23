@@ -8,6 +8,11 @@
 # sezione come note. Il tag lo crea questo run, con il suo GITHUB_TOKEN: nessun
 # segreto a lunga vita. Un tag spinto a mano funziona lo stesso.
 #
+# Niente workflow_dispatch: un run a mano che sceglie la versione eseguirebbe
+# codice di un commit qualsiasi con i permessi del ramo principale (CodeQL,
+# cache poisoning). Per rifare un rilascio si rilancia il run fallito da
+# Actions; per un commit preciso si spinge il tag a mano (docs/RILASCIO.md).
+#
 # Una PR che cambia questa catena la prova sul proprio commit: piano e
 # costruzione sì, tag e rilascio mai. Così anche un aggiornamento di
 # Dependabot a un'azione usata solo qui si prova prima di entrare.
@@ -21,16 +26,6 @@ on:
   pull_request:
     paths: [".github/workflows/release.yml", "scripts/release_plan.py",
             "scripts/release_notes.py"]
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Rilascia questa versione (es. 1.0.0) se non ha ancora un tag; vuoto = la più recente del CHANGELOG"
-        required: false
-        default: ""
-      dry_run:
-        description: "Costruisci soltanto, non pubblicare niente"
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -57,7 +52,6 @@ jobs:
       - name: Piano
         id: plan
         env:
-          VERSION: ${{ inputs.version }}
           REF_TYPE: ${{ github.ref_type }}
           REF_NAME: ${{ github.ref_name }}
           EVENT: ${{ github.event_name }}
@@ -75,7 +69,7 @@ jobs:
             # Un tag spinto a mano: si rilascia esattamente ciò che indica.
             { echo "release=true"; echo "tag=$REF_NAME"; echo "sha=$GITHUB_SHA"; } >> "$GITHUB_OUTPUT"
           else
-            python scripts/release_plan.py $VERSION >> "$GITHUB_OUTPUT"
+            python scripts/release_plan.py >> "$GITHUB_OUTPUT"
           fi
           cat "$GITHUB_OUTPUT"
       # GITHUB_TOKEN non può creare un tag su un commit i cui workflow
@@ -88,12 +82,10 @@ jobs:
           DIFFER: ${{ steps.plan.outputs.workflows_differ }}
           TAG: ${{ steps.plan.outputs.tag }}
           SHA: ${{ steps.plan.outputs.sha }}
-          EVENT: ${{ github.event_name }}
         run: |
           go=true
           if [ "$DIFFER" = "true" ]; then
             why="$TAG va su $SHA, i cui workflow differiscono da quelli di main: GITHUB_TOKEN non può creare quel tag. Spingi il tag a mano (git tag -a $TAG $SHA -m $TAG && git push origin $TAG). Vedi docs/RILASCIO.md."
-            if [ "$EVENT" = "workflow_dispatch" ]; then echo "::error::$why"; exit 1; fi
             echo "::notice::non ancora rilasciata - $why"
             go=false
           fi
@@ -101,8 +93,7 @@ jobs:
       # I job dopo eseguono il codice del commit scelto con i permessi del ramo
       # principale (CodeQL: cache poisoning). Fuori dalla prova di una PR quel
       # commit deve stare già nella storia di main: un tag spinto su un commit
-      # che main non contiene, o una versione chiesta a mano che punta altrove,
-      # si ferma qui.
+      # che main non contiene si ferma qui.
       - name: Il commit da rilasciare è già su main
         if: steps.plan.outputs.release == 'true' && github.event_name != 'pull_request'
         env:
@@ -202,8 +193,7 @@ jobs:
     name: Tag e rilascio GitHub
     needs: [decide, build, attest]
     if: >-
-      needs.attest.result == 'success' && github.event_name != 'pull_request' &&
-      !inputs.dry_run
+      needs.attest.result == 'success' && github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     permissions:
       contents: write

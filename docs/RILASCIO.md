@@ -63,7 +63,10 @@ corrisponde più. Il blocco delle impronte resta quello originale.
 
 ## Prova senza pubblicare
 
-- *Actions → Release → Run workflow* con `dry_run`: costruisce e non pubblica.
+Non c'è un avvio a mano del workflow: eseguirebbe con i permessi di main il
+codice di un commit scelto da chi lo lancia (CodeQL lo segnala come cache
+poisoning). Per rifare un rilascio fallito si rilancia il run da Actions.
+
 - Una PR che cambia `release.yml`, `release_plan.py` o `release_notes.py`
   prova la catena sul proprio commit: piano e costruzione, mai tag né rilascio.
 
