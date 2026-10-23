@@ -2,7 +2,7 @@
 
 **Data**: 2026-10-23 · **Strumento**: `scripts/riscontro_srd.py` (ADR-0103, canale testing)
 **Riscontri**: [riscontri-arc08.yaml](riscontri-arc08.yaml) · **Tabella completa con le citazioni**: [out/riscontro-arc08.md](out/riscontro-arc08.md)
-**Stato**: rapporto. I master non sono stati toccati; le tre discordanze sono domande per il DM.
+**Stato**: rapporto, con un seguito. Le tre discordanze sono state chiuse il 2026-10-23: la freccia assassina con la scelta del DM (regola 3.5, «o muore», `[CANONE — DM 2026-10-23]`), le due della presenza terrificante come errori di fatto (63 m per l'adulto maturo, commit ae684a20). Il riscontro rifatto dopo le correzioni dà 53 concordanze su 53 (`out/riscontro-arc08.md`).
 
 ```bash
 python3 scripts/riscontro_srd.py scarica      # una volta: 50 MB in ~/.cache/rumblingstone/srd

@@ -128,7 +128,7 @@ riscontri:
     scala: 0.3
 
   - id: DEF1-presenza-adulto
-    cosa: "presenza terrificante nell'SRD per la categoria di Fauci (categoria × 9 m); Fauci è un adulto maturo per canone (ARC08-01 r. 231, Bestiario), il master scrive «adulto»"
+    cosa: "presenza terrificante nell'SRD per la categoria di Fauci (categoria × 9 m); Fauci è un adulto maturo per canone (ARC08-01 r. 231, Bestiario), il master scriveva «adulto», corretto il 2026-10-23"
     fonte: srd35
     file: monsters/monsters-dr-dw.md
     regola: '<td>(?P<v>\d+) Mature adult</td>'
@@ -138,12 +138,12 @@ riscontri:
     scala: 9
 
   - id: DEF1-A5-presenza-adulto
-    cosa: "scheda di Fauci (App. A.5), raggio SRD della presenza per l'adulto maturo; il master scrive «per un adulto»"
+    cosa: "scheda di Fauci (App. A.5), raggio SRD della presenza per l'adulto maturo; il master scriveva «per un adulto» (54 m), corretto il 2026-10-23"
     fonte: srd35
     file: monsters/monsters-dr-dw.md
     regola: '<td>(?P<v>\d+) Mature adult</td>'
     master: *DEF1
-    affermazione: '(?P<v>\d+) m nell''SRD per un adulto'
+    affermazione: '(?P<v>\d+) m nell''SRD per l''adulto maturo'
     confronto: numero
     scala: 9
 
@@ -212,7 +212,7 @@ riscontri:
     sezione: Slaying Arrow
     regola: 'save or take (?P<v>\d+) points of damage'
     master: *DEF2
-    affermazione: 'subisce\s+\*\*(?P<v>\d+) danni\*\* in più'
+    affermazione: 'i (?P<v>\d+) danni al posto della morte'
     confronto: numero
 
   - id: DEF2-freccia-CD
@@ -221,7 +221,7 @@ riscontri:
     file: magic-items/magic-items-ii-armor-and-weapons.md
     regola: '\*\*Slaying Arrow:\*\*[^\n]*?a DC (?P<v>\d+) Fortitude'
     master: *DEF2
-    affermazione: 'Tempra \*\*CD (?P<v>\d+)\*\* o subisce'
+    affermazione: 'Tempra \*\*CD (?P<v>\d+)\*\* o muore'
     confronto: numero
 
   - id: DEF2-freccia-prezzo

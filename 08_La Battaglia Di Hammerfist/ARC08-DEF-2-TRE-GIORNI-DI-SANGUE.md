@@ -1392,10 +1392,10 @@ prima stesura ne aveva alcune che le carte non hanno: sono corrette qui.
   round 5, la picchiata non ha la lancia: Fauci passa sulla piattaforma e
   basta. Legato alla sella, non cade: resta lì finché il drago vola.
 - Le **due frecce ammazzadraghi** dell'armeria `[INFERRED — le frecce di Dara]`: SRD,
-  *freccia assassina* (draghi): chi è colpito tira Tempra **CD 20** o subisce
-  **50 danni** in più. Fauci ha Tempra +21: li prende solo con un 1 naturale.
-  La guida diceva «6d6+1 comunque», e chi ricorda la 3.0 dice «o muore»:
-  l'SRD 3.5 dà i 50 danni.
+  *freccia assassina* (draghi): chi è colpito tira Tempra **CD 20** o muore
+  `[CANONE — DM 2026-10-23]`. Fauci ha Tempra +21: muore solo con un 1
+  naturale. È la regola dell'SRD 3.5; i 50 danni al posto della morte sono di
+  PF1e, e la guida diceva «6d6+1 comunque».
 - Se gli eroi fanno a Fauci **più di 50 danni in tutto** nella scena (frecce,
   *colpo infuocato*, baliste), al round 6 il drago atterra su un bastione
   invece di risalire (MAPPA 2B, «Tattiche»), e la scena va avanti sulla
