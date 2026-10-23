@@ -209,7 +209,7 @@ def scheda_box(b: dict) -> str:
         eti = ""
         if a != "O":
             eti = f'<div class="eti">versione: {E(v["k"])}</div>'
-            note = [re.sub(r"^<!--\s*|\s*-->$", "", x) for x in v.get("nota", [])]
+            note = [re.sub(r"^<!--\s*|\s*--!?>$", "", x) for x in v.get("nota", [])]
             if note:
                 eti += "".join(f'<div class="eti">{E(x)}</div>' for x in note)
         rilV = ", ".join(f"{n}×{k}" for n, k in sorted(v["cV"].items())) or "pulito"
