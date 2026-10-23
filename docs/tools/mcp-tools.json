@@ -2950,7 +2950,7 @@
     },
     {
       "name": "dm",
-      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "description": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»\n\nEntrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "invocation": "python3 scripts/dm.py",
       "inputSchema": {
@@ -2958,7 +2958,7 @@
         "properties": {
           "comando": {
             "type": "string",
-            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF.",
+            "description": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto.",
             "enum": [
               "prep",
               "post",
@@ -2972,7 +2972,8 @@
               "doctor",
               "volume",
               "corredo",
-              "bestiario"
+              "bestiario",
+              "prosa"
             ]
           }
         },

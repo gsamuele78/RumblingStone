@@ -770,8 +770,9 @@ def rapporto_varianti(righe: "list[dict]") -> str:
 
 
 # ── LanguageTool, facoltativo (server HTTP locale) ───────────────────────────
-#: Avvio: `java -cp "lib/*" org.languagetool.server.HTTPServer --port 8081`
-#: (languagetool/README.md). La variabile LANGUAGETOOL_URL cambia l'indirizzo.
+#: Avvio: `scripts/avvia_languagetool.sh` (lo stesso server del secondo lettore
+#: di `ciclo_prosa`, ADR-0079, sulla porta 8081). La variabile LANGUAGETOOL_URL
+#: cambia l'indirizzo.
 LT_URL = os.environ.get("LANGUAGETOOL_URL", "http://localhost:8081")
 GLOSSARIO = ROOT / "campaign/GLOSSARIO-E-LOCALIZZAZIONE.md"
 GRUPPI_LT = ("refusi", "grammatica", "stile", "ripetizioni", "punteggiatura")

@@ -18,6 +18,9 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
+- `dm.py prosa <azione>`: la catena della prosa da un solo ingresso, nell'ordine d'uso (misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto), ADR-0101 (PR #264).
+- `binari.py` conosce spaCy (facoltativa) e le catene «prosa misurata», «coerenza fra scene e archi», «sintassi della prosa» e «secondo lettore LanguageTool»; `requirements-completo.txt` installa spaCy col modello italiano (PR #264).
+- `docs/ARCHITETTURA.md` §10: la catena della prosa, tre casi d'uso in sequenza e le dipendenze fra gli script (PR #264).
 - Contratto `scripts/schemas/fronti_orologi.schema.json` (fronti alla Dungeon World, orologi alla Blades) e file `plans/coerenza-residui.json`, letto da `coerenza_campagna.py fatti --check` nella CI (PR #264).
 - Skill `rumblingstone-narrative-style`: tre cautele di riscrittura in `read-aloud-adulti.md` §2-ter, dal voto cieco del DM; `rumblingstone-module-standard` chiede la coerenza fra scene e, facoltativa, la sintassi (PR #264).
 
