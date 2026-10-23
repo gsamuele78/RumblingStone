@@ -1,6 +1,6 @@
 # PIANO — «Il Drappo di Tarsilia»: il Palio come modulo autonomo (Golarion · PF1e)
 
-**Stato**: 🟡 in corso — Lotti 1, 2 e 5 chiusi (impianto · profondità AP · apparato d'uso e governance)
+**Stato**: 🟡 in corso, ~90% — Lotti 1, 2, 5 e 8 chiusi (impianto · profondità AP · apparato d'uso e governance · booklet con PDF), più il kit giocatore e il dossier delle piste (corrispondenza in §3); L9 scritto, collaudo a freddo da fare; L6 con capitolato scritto; L3 e L4 aperti *(allineato a `INDEX.md` il 2026-10-23, P15)*
 **Aperto**: 2026-08-14
 **Richiesta-fonte (DM, 2026-08-14)**: *«dato il palio di Channathgate possiamo fare
 una variante per sessioni di qualche ora, per 6 persone, per 3 giorni, ambientata a
