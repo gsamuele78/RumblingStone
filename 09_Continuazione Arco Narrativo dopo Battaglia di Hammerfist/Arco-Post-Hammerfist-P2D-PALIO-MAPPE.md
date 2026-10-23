@@ -41,8 +41,8 @@ Schema vettoriale di servizio: `P2D-Palio-Allegati/mappe/channathgate-citta.svg`
 > distanze vale la pianta in scala `P2D-Palio-Allegati/mappe/channathgate-pianta.svg`;
 > il PNG del DM resta l'illustrazione e dà la posizione dei rioni, che la
 > pianta in scala rispetta. Lo schema `channathgate-citta.svg` serve solo a
-> vedere gli otto rioni a colpo d'occhio. Misure e abitanti della pianta sono
-> `[INFERRED — needs DM confirmation]`.
+> vedere gli otto rioni a colpo d'occhio. Misure, abitanti e posizioni della pianta sono
+> canone `[CANONE — DM 2026-10-23]`.
 
 ![Channathgate, pianta in scala](P2D-Palio-Allegati/mappe/channathgate-pianta.svg)
 
