@@ -124,6 +124,14 @@ jobs:
           python scripts/validate_state.py
           python scripts/render_state.py --check
 
+      # I costi permanenti dei PG non spariscono più (RIPRESA-PR 4g-1, ADR-0088):
+      # ogni modificatore ha una fonte, ogni costo affermato nei documenti è
+      # sulla scheda o dismesso con una ragione, e la scheda non copia state.yaml.
+      - name: Schede PG — modificatori con fonte e viste rigenerate (ADR-0088)
+        run: |
+          python scripts/validate_pg.py
+          python scripts/render_pg.py --check
+
       - name: Validate generated maps (well-formed, in-sync SVGs)
         run: python scripts/validate_maps.py
 

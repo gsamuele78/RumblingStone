@@ -4141,6 +4141,13 @@
           "overwrites": true,
           "generated_header": false,
           "schema": null
+        },
+        {
+          "path": "PG/schede/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
         }
       ],
       "exit_codes": {
@@ -4156,7 +4163,7 @@
         "writes_canon": true,
         "git_commit": false,
         "network": false,
-        "notes": "Cancella sessioni, recap, brief e i file generati dallo stato vecchio. Lo chiama new-campaign-group.sh sul branch del gruppo nuovo."
+        "notes": "Cancella sessioni, recap, brief e i file generati dallo stato vecchio. Lo chiama new-campaign-group.sh sul branch del gruppo nuovo. Rifa' PG/schede/ vuote per i PG del nuovo party (ADR-0088)."
       },
       "idempotent": true,
       "consumes_schema": "scripts/schemas/campaign_state.schema.json",
@@ -10047,6 +10054,163 @@
         "notes": "sync modifica le note dei rilasci GitHub con gh."
       },
       "ci_smoke": "python3 scripts/release_notes.py notes 1.0.0"
+    },
+    {
+      "id": "render_pg",
+      "path": "scripts/render_pg.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/render_pg.py",
+      "summary": "Genera PG/schede/<pg>.md da PG/schede/<pg>.yaml: le caratteristiche come catena (10 → 8 Corona → 6 rito) e i modificatori permanenti con la fonte. Classe, PF e stato non li copia: rimanda a campaign/state.yaml (RIPRESA-PR 4g-1, ADR-0088).",
+      "use_case": "«Da dove viene la DES di Thorik, un passo alla volta?»",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--check",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Gate CI: segnala il drift, non scrive."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/",
+          "kind": "directory",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "PG/schede/",
+          "kind": "directory",
+          "overwrites": true,
+          "generated_header": true,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok / in sync",
+        "1": "drift (--check)",
+        "2": "errore d'uso"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso YAML, stesso testo."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive solo i .md accanto ai .yaml."
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/render_pg.py --check",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
+        "plans/PIANO-RIPRESA-PR-ABBANDONATE.md"
+      ]
+    },
+    {
+      "id": "validate_pg",
+      "path": "scripts/validate_pg.py",
+      "category": "C-post-session-canon",
+      "language": "python",
+      "invocation": "python3 scripts/validate_pg.py",
+      "summary": "Gate sulle schede PG in PG/schede/*.yaml: ogni modificatore permanente ha una fonte che esiste e (se `cita`) dice ancora quella frase; base + delta = attuale; ogni costo affermato «permanente» nei .md e' sulla scheda o dismesso con una ragione in scripts/data/pg_modificatori_ignorati.yaml; le fonti primarie quadrano con le schede; i PG sono quelli di `party` in state.yaml, e classe, PF, stato e artefatti non si copiano sulla scheda (RIPRESA-PR 4g-1, ADR-0088).",
+      "use_case": "«Il −2 DES della Corona e' ancora scritto da qualche parte, con la sua fonte, o e' sparito un'altra volta?»",
+      "stability": "stable",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita machine-readable."
+        },
+        {
+          "name": "--verbose",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca i modificatori per PG."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "PG/schede/",
+          "kind": "directory",
+          "required": true,
+          "schema": "scripts/schemas/pg_scheda.schema.json"
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": true,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        },
+        {
+          "path": "scripts/data/pg_modificatori_ignorati.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "coerente",
+        "1": "incoerenze o derive",
+        "2": "errore d'uso o scheda illeggibile"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": ""
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": ""
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/pg_scheda.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/validate_pg.py",
+      "tests": [
+        "scripts/tests/test_validate_pg.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0088-la-pr-99-si-chiude-e-le-schede-pg-ripartono-da-main.md",
+        "plans/PIANO-RIPRESA-PR-ABBANDONATE.md"
+      ]
     }
   ]
 }

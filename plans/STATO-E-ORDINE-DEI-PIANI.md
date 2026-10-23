@@ -326,7 +326,7 @@ settembre, e non conosceva la #143.*
 | **#143** | contenuto portato su `main` | `PIPELINE-IBRIDE`, riga del CHANGELOG del 2026-09-24 | ✅ **chiusa il 2026-09-24**: il piano è entrato con la #160, l'ADR come **0067** (lo 0050 era occupato) |
 | **#160** | lotti 4e, 4f, 4i di RIPRESA-PR, CICLO-SESSIONE, RICERCA-BDD, PRATICHE | CHANGELOG del 2026-09-24 | ✅ **mergiata il 2026-09-24**. Cosa ha lasciato aperto: §7 |
 | **#106** | abbandonata, **non** superata | ① F3 · 3d | resta aperta finché il DM non ha fatto il collaudo SDXL (D2): serve la sua GPU |
-| **#99** | abbandonata, **non** superata | ① F4 · 4f, 4g, 4h | si svuota: restano tre lotti, e 4h vuole una PR sua |
+| **#99** | abbandonata, **non** superata | ① F4 · 4g-2, 4h | 4g-1 portato il 2026-10-23 (ADR-0088, proposta); resta 4g-2, i valori dal DM. 4h proposto respinto. Si chiude dal thread padre col sì del DM |
 | **#216** | bozza aperta dal 2026-10-03: la revisione della prosa misurata (D13, D17, D38, D39, la Torre). Fino al 2026-10-07 **non stava in nessun piano** né in questa tabella | da leggere: il suo corpo nomina i piani che tocca | va riletta contro `main` prima di qualunque merge; il DM decide se riprenderla |
 | **#206** | lo STATO dopo la #205 | §15 | ✅ **chiusa il 2026-10-07**: il contenuto che valeva ancora è portato su `main` con la PR di §15 (righe di §0, CHANGELOG del 2026-10-02), e le due voci aperte che conteneva sono fatte |
 | **#207-#212** | Dependabot dal 2026-10-02: tre azioni della CI (checkout, setup-python, upload-artifact a 7) e tre requisiti pip (pillow, pip-audit, tiktoken) | PRATICHE PI-3 · §15.3 | ✅ **fuse il 2026-10-07**, una alla volta, ognuna con la sua riga nel CHANGELOG |
