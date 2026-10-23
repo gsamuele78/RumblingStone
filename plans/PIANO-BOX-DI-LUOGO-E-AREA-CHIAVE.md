@@ -175,8 +175,8 @@ Opus, ciclo del master) · B6 **R** (ricognizione sui master nuovi)]
 ## 6 · Validazione
 
 - ogni lotto: `fase1.py` sui bersagli prima di toccarli (G6), poi
-  `misura_craft --box`, `validate_norme_editoriali.py`,
-  `superficie_norme.py --check`, `decisioni_dm.py --check`, i test dello
+  `misura_craft --box`, `validate_norme_editoriali.py` (che dal 2026-10-22
+  contiene anche la superficie delle norme scoperte), `decisioni_dm.py --check`, i test dello
   script toccato
 - B5 tocca uno stand-alone: segue i sette passi del ciclo del master
   (ADR-0075), letture a freddo comprese

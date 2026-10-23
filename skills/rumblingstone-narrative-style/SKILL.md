@@ -197,6 +197,14 @@ Run the coherence self-check (`campaign-coherence.md` §6) first, then:
    peggiora; ci si ferma dopo un giro che non abbassa le segnalazioni, o al
    terzo. Su più file, `ciclo_prosa.py lotto` prepara un pacchetto per file
    (estensione di ADR-0077, 2026-10-03).
+9. **Se riscrivi un box che c'era, passa dalla catena della prosa** (ADR-0101,
+   tutta sotto `dm.py prosa <azione>`). Prima `coerenza fatti` sui due archi
+   toccati, perché un fatto cambiato è il difetto che il DM non perdona; poi
+   `sintassi --per-box` per guardare i rilievi prima di riscrivere
+   (`read-aloud-adulti.md` §2-ter, cautela 5); poi `migliora FILE --box N
+   --candidate C.md`, che scarta le candidate che cambiano un fatto o
+   impoveriscono il box. La migliore la decide il DM al cieco (`cieco`,
+   ADR-0093): nessuna misura automatica ha mai previsto il suo voto.
 
 ---
 
