@@ -303,7 +303,7 @@ Per ogni carta **non giocata**, tira **1d20 + Fronte corrente** vs **CD 18**:
   42 ha dentro le mura, circa 7.000 abitanti, tre porte maggiori (Sud, Nord, Ovest);
   la Porta Est è ridotta a postierla. È una piccola città, più del borgo della Elsir
   Vale, perché regga l'urto della Mano Rossa (scelta del DM, 2026-10-22)
-  `[INFERRED — needs DM confirmation]`.
+  `[CANONE — DM 2026-10-23]`.
 - **Quanti uomini servono sulle mura** `[INFERRED — needs DM confirmation]`: le mura
   della pianta sono lunghe 2,55 km, con 59 torri. Con la regola del Burghal Hidage
   (0,8 uomini per metro di mura) servono circa 2.000 difensori. Gli uomini abili, il

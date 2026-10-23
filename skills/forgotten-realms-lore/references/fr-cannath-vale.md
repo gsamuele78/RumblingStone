@@ -90,8 +90,8 @@ All names below are extracted directly from the GM map image.
 
 | Name on Map | = RHoD Original | Notes |
 |---|---|---|
-| **Rethmar** | Brindol (RHoD original) | MAIN CITY; center of the vale; Lord Jarmaath's seat. Capitale murata sul Cannath, grande città di circa 18.000 abitanti (110 ha dentro le mura, il resto nei sobborghi); più della Brindol del libro (circa 8.400), perché regga l'orda di circa 10.000, scelta del DM del 2026-10-22 `[INFERRED — needs DM confirmation]` |
-| **Channathgate** | Dennovar | Eastern gateway. La città più popolosa della valle, grande città di circa 25.000 abitanti su circa 250 ha, più della Dennovar del libro (circa 11.600), scelta del DM del 2026-10-22; città aperta, senza cinta, con il solo arg murato `[INFERRED — needs DM confirmation]` |
+| **Rethmar** | Brindol (RHoD original) | MAIN CITY; center of the vale; Lord Jarmaath's seat. Capitale murata sul Cannath, grande città di circa 18.000 abitanti (110 ha dentro le mura, il resto nei sobborghi); più della Brindol del libro (circa 8.400), perché regga l'orda di circa 10.000, scelta del DM del 2026-10-22 `[CANONE — DM 2026-10-23]` |
+| **Channathgate** | Dennovar | Eastern gateway. La città più popolosa della valle, grande città di circa 25.000 abitanti su circa 250 ha, più della Dennovar del libro (circa 11.600), scelta del DM del 2026-10-22; città aperta, senza cinta, con il solo arg murato `[CANONE — DM 2026-10-23]` |
 | **Talar** | Talar | Center, west of Rethmar; river namesake village |
 | **Drellin's Ferry** | Drellin's Ferry | *(square; listed above)* |
 | **Terrelton** | Terrelton | Center; name retained |
@@ -100,7 +100,7 @@ All names below are extracted directly from the GM map image.
 | **Cannathcross** | Elsircross | East; renamed from "Elsircross" |
 | **Marthon** | Marthton | Far east; **spelling: "Marthon"** — no second 't' |
 | **Prosser** | Prosser | East-center; name retained |
-| **Dauth** | Dauth | South-center; name retained. Nel libro è un borgo di circa 200 anime; nella campagna è una piccola città murata di circa 7.000 abitanti (42 ha), perché regga l'urto della Mano Rossa, scelta del DM del 2026-10-22 `[INFERRED — needs DM confirmation]` |
+| **Dauth** | Dauth | South-center; name retained. Nel libro è un borgo di circa 200 anime; nella campagna è una piccola città murata di circa 7.000 abitanti (42 ha), perché regga l'urto della Mano Rossa, scelta del DM del 2026-10-22 `[CANONE — DM 2026-10-23]` |
 | **Hillwatch** | Hillwatch | Southeast; name retained |
 | **Red Rock** | Red Rock | Northeast in Rathgaunt Hills; name retained |
 | **Assardoth** | *(no equivalent)* | Far SW; **custom addition** by Antariuk; no RHoD counterpart |
