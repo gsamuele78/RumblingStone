@@ -61,6 +61,7 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | mypy | 2.3.1 | — | 328 rilievi, 0 bug nel campione di 41 | **unstable**, non si adotta |
 | pyright | — | — | non misurato | unstable |
 | pre-commit (framework) | — | — | non misurato; A4 ha già deciso hook senza dipendenze | **non si adotta** |
+| riscontro SRD (`riscontro_srd.py` con l'SRD 3.5 e il PRD PF1e in cache, OGL 1.0a) | commit fissati, sha256 per file | sì | 53 regole di ARC-08 in 0,25 s, 3 discordanze vere (RISCONTRO-ARC08) | **testing** da questa PR (P11, ADR-0101) |
 
 ### Librerie Python
 
@@ -207,6 +208,21 @@ ripresi da iemod-fetch (MIT, stesso autore), guida in
 [docs/RILASCIO.md](../docs/RILASCIO.md). Il primo rilascio è 1.0.0 (D7). Il
 workflow sale a stable dopo tre rilasci senza interventi a mano.
 
+### P11 · Il riscontro delle regole sull'SRD ✅ in testing
+`[engine: Opus 5.5 · effort: alto · qualità: nessun test usa la rete; uno sha256 sbagliato o la rete assente si dicono con un codice d'uscita loro]`
+DM 2026-10-23: *«aggiungi se ci sono tools skills pipeline plugin e tools che
+non sono presenti nel repo aggiungili ed integrali […] in un flusso
+coerente»*. L'unico candidato che la [ricerca in rete](esperimenti/ricerca-rete-2026-10-23/RICERCA.md)
+raccomanda. [ADR-0101](adr/ADR-0101-le-regole-si-riscontrano-sull-srd-in-cache.md):
+`scripts/riscontro_srd.py` scarica l'SRD 3.5 in Markdown e il PRD PF1e in
+SQLite a commit fissato, con lo sha256 di ogni file, in
+`~/.cache/rumblingstone/srd/`, e riscontra un file di regole (concorda,
+discorda, non trovata, con la citazione). Job CI `riscontro-srd` non
+bloccante; il flusso di tutti gli strumenti di qualità in
+[ARCHITETTURA](../docs/ARCHITETTURA.md) §18. Primo uso su DEF-1 e DEF-2:
+[RISCONTRO-ARC08](esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md), 53
+regole, 3 discordanze lasciate al DM. Sale a stable non prima del 2026-11-06.
+
 ### P8 · La prova generale della prossima migrazione ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: un job non bloccante su Python 3.14 verde per un mese prima del salto]`
 - Parte quando Debian 14 entra nel congelamento (atteso nel 2027): un job CI
@@ -247,7 +263,7 @@ workflow sale a stable dopo tre rilasci senza interventi a mano.
 
 ## §6 · Ordine
 
-P0 → D1 → P9 → P10 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
+P0 → D1 → P9 → P10 → P11 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
 A2 → P7 → P8 quando Debian 14 si congela.
 
 ## Checklist di avanzamento
@@ -263,3 +279,4 @@ A2 → P7 → P8 quando Debian 14 si congela.
 - [ ] P8 · prova generale della migrazione a 3.14
 - [x] P9 · `converters/` nella piattaforma, in testing (D6)
 - [x] P10 · il rilascio è una PR (ADR-0100), workflow in testing; primo rilascio 1.0.0 (D7 ✅)
+- [x] P11 · il riscontro SRD (ADR-0101) in testing, job `riscontro-srd`; stable non prima del 2026-11-06

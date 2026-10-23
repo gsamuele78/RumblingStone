@@ -3678,6 +3678,53 @@
       "deterministic": true
     },
     {
+      "name": "riscontro_srd",
+      "description": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»\n\nRiscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0101).",
+      "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
+      "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "cache": {
+            "type": "string",
+            "description": "Cartella della cache (default: $RUMBLINGSTONE_SRD_CACHE, poi $XDG_CACHE_HOME/rumblingstone/srd, poi ~/.cache/rumblingstone/srd)."
+          },
+          "offline": {
+            "type": "boolean",
+            "description": "Non scarica: se la cache è incompleta esce 3."
+          },
+          "comando": {
+            "type": "string",
+            "description": "scarica | regola | riscontra | licenza.",
+            "enum": [
+              "scarica",
+              "regola",
+              "riscontra",
+              "licenza"
+            ]
+          }
+        },
+        "required": [
+          "comando"
+        ],
+        "additionalProperties": false
+      },
+      "outputs": [
+        "stdout",
+        "<--md>",
+        "<--json>",
+        "<cache>/"
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con discordanze",
+        "1": "con --strict una discordanza o una regola non trovata; uno sha256 che non combacia; `regola` senza risultati",
+        "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
+        "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
+        "130": "interruzione utente"
+      },
+      "deterministic": true
+    },
+    {
       "name": "superficie_norme",
       "description": "«Undici norme sono marcate non-misurate: quante posso davvero chiudere scrivendo codice?» La risposta misurata e' una su nove.\n\nPer ogni norma editoriale che nessuno misura, dice se manca il CODICE o manca il DATO: superficie vuota (la convenzione esiste e ha zero occorrenze), convenzione assente (nessuno ha deciso come si marca), oggetto assente (il file non esiste) o fuori dominio (il fatto non sta nel testo). Deterministico e idempotente: solo conteggi di forme dichiarate su un insieme di file ordinato.",
       "use_case": "«Undici norme sono marcate non-misurate: quante posso davvero chiudere scrivendo codice?» La risposta misurata e' una su nove.",

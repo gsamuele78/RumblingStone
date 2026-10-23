@@ -28,7 +28,8 @@ Chi cerca **perché** una cosa è fatta così trova la decisione negli ADR
 15. [Le decisioni del DM](#15-le-decisioni-del-dm)
 16. [La piattaforma e i suoi tre canali](#16-la-piattaforma-e-i-suoi-tre-canali)
 17. [Il rilascio](#17-il-rilascio)
-18. [Dove sta cosa](#18-dove-sta-cosa)
+18. [Il flusso della qualità: mappe, moduli, regole](#18-il-flusso-della-qualità-mappe-moduli-regole)
+19. [Dove sta cosa](#19-dove-sta-cosa)
 
 ---
 
@@ -667,7 +668,7 @@ stateDiagram-v2
     [*] --> unstable: si prova a mano<br/>in un ramo o in plans/esperimenti
     unstable --> testing: licenza libera, misura prima e dopo,<br/>guadagno nominato, ok del DM
     testing --> stable: 14 giorni e 10 run su main,<br/>zero falsi allarmi, tempo ≤ +5%, ok del DM
-    stable --> testing: boccia a torto o rompe:<br/>si scende il giorno stesso
+    stable --> testing: boccia a torto o rompe,<br/>si scende il giorno stesso
     testing --> unstable: la misura non regge
     stable --> oldstable: Debian sale di versione
     oldstable --> [*]: dopo tre mesi
@@ -676,7 +677,7 @@ stateDiagram-v2
 | Componente | Canale al 2026-10-23 |
 |---|---|
 | Python 3.13 (Debian 13), pytest, pip-audit, typst, Dependabot | stable |
-| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release | testing |
+| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0101) | testing |
 | spaCy, Stanza, LLM locale, mypy | unstable |
 
 ## 17. Il rilascio
@@ -711,7 +712,112 @@ sequenceDiagram
     note over REL,GHR: a ogni push che tocca il CHANGELOG<br/>le note pubblicate si riallineano
 ```
 
-## 18. Dove sta cosa
+## 18. Il flusso della qualità: mappe, moduli, regole
+
+Gli strumenti che misurano la qualità sono nati uno per volta, ognuno con il
+suo ADR. Qui stanno in un flusso solo, descritto come si descrive un servizio
+di revisione del codice (Sourcery e simili): prima chi lo usa e per che cosa,
+poi i componenti, poi i dati che passano fra loro. Tutti rispondono alla
+stessa domanda, «questo master si può giocare così com'è scritto?», guardando
+tre cose diverse: la mappa, il testo, la regola.
+
+### Casi d'uso
+
+| Attore | Obiettivo | Comando | Uscita | Canale |
+|---|---|---|---|---|
+| CI, a ogni PR | una mappa non mente (intestazione, griglia, legenda) | `python3 scripts/validate_maps.py` | errori, exit 1 | bloccante |
+| CI, a ogni PR | il corpus delle mappe misurato sullo standard | `python3 scripts/qualita_mappe.py --solo-errori` | rilievi E e A, voto 0-100 | rapporto non bloccante |
+| chi rifà una mappa | sapere se il rifacimento ha cambiato la tattica | `python3 scripts/qualita_mappe.py --json OUT --profonde` | metriche senza soglia (space syntax, `qualita_mappe_profonde`) | a mano |
+| chi rifà una mappa | quanto è cambiata e se il voto è salito per quello | `python3 scripts/confronta_mappe.py --versioni A=REF C=HEAD --base C --out DIR FILE.md` | `confronto.json`, SVG affiancati | a mano |
+| chi scrive un master | i congegni di mestiere e i box al metro dei banchi | `python3 scripts/misura_craft.py --box` | conteggi per arco, box fuori soglia | a mano |
+| chi riscrive la prosa | il riscritto migliora, o va al cieco del DM | `python3 scripts/ciclo_prosa.py misura …` | verdetto misurato; il registro | `registro --check` bloccante |
+| CI, a ogni PR | si gioca? volo, rumore, TS, soglie del boss | `python3 scripts/domande_developer.py --check` | rilievi con la ragione delle deroghe | bloccante |
+| agenti del giro (ADR-0095) | una lettura a freddo, una scena alla volta | `python3 scripts/lettura_a_scene.py servi …` | rapporti di lettore, playtester, developer, DM | a mano, agenti |
+| CI, a ogni PR | nessuna lettura scaduta, nessun 🔴 senza stato | `python3 scripts/registro_letture.py --check` | registro delle letture | bloccante (avviso finché vuoto) |
+| chi fa il triage | una regola «a memoria» del giro è davvero nell'SRD | `python3 scripts/riscontro_srd.py riscontra FILE.yaml` | concorda, discorda, non trovata, con la citazione | testing (job `riscontro-srd`) |
+| il DM | decidere le discordanze e i rilievi aperti | tabella `decisioni-dm` del piano | `[CANONE — DM data]` nel master | decisione umana |
+
+### Il flusso
+
+```mermaid
+flowchart LR
+    subgraph IN["Ingresso"]
+        MAP["Griglie emoji<br/>nei master"]
+        TXT["Master DEF<br/>prosa e statblocchi"]
+        FONTI[("SRD 3.5 e PRD PF1e<br/>cache fuori dal repo,<br/>sha256 fissati")]
+    end
+    subgraph MAPPE["Mappe (ADR-0098)"]
+        VM["validate_maps"] --> QM["qualita_mappe<br/>voto 0-100"]
+        QM --> QP["qualita_mappe_profonde<br/>senza soglia"]
+        QM --> CM["confronta_mappe<br/>versione contro versione"]
+    end
+    subgraph MODULI["Moduli (ADR-0095)"]
+        MC["misura_craft"] --> CP["ciclo_prosa"]
+        DD["domande_developer"]
+        GF["giro a freddo<br/>lettura_a_scene"] --> RL["registro_letture"]
+    end
+    subgraph REGOLE["Regole (ADR-0101)"]
+        RS["riscontro_srd"]
+    end
+    MAP --> VM
+    TXT --> MC
+    TXT --> DD
+    TXT --> GF
+    TXT --> RS
+    FONTI --> RS
+    GF -->|"rilievi «a memoria»"| RS
+    CM & QP & CP & DD & RL & RS --> TRI{"Triage"}
+    TRI -->|"il testo lo risolve"| FIX["correzione<br/>nel master"]
+    TRI -->|"è una scelta"| DM(["👤 DM decide"])
+    DM --> FIX
+    FIX -->|"si rimisura"| TXT
+```
+
+Il giro a freddo trova i rilievi; la misura dice se sono veri; il triage li
+smista. La freccia dal giro al riscontro è il passo nuovo: un rilievo che un
+lettore ha controllato a memoria diventa una voce del file dei riscontri e
+arriva al triage con la citazione dell'SRD, non con un ricordo.
+
+### Componenti e dati
+
+```mermaid
+flowchart TB
+    subgraph COMP["Componenti"]
+        direction LR
+        C1["validate_maps · qualita_mappe<br/>confronta_mappe"]
+        C2["misura_craft · ciclo_prosa<br/>domande_developer"]
+        C3["lettura_a_scene<br/>registro_letture"]
+        C4["riscontro_srd"]
+    end
+    subgraph DATI["Dati"]
+        direction LR
+        D1[/"scripts/legend.json<br/>standard-qualita-mappe.md"/]
+        D2[/"CONGELATI.json<br/>domande-developer.json"/]
+        D3[/"registro delle letture<br/>rapporti in plans/esperimenti"/]
+        D4[/"riscontri-*.yaml<br/>regex, confronto, scala"/]
+        D5[("~/.cache/rumblingstone/srd<br/>OGL 1.0a")]
+    end
+    subgraph OUT["Uscite"]
+        direction LR
+        O1["voto, metriche JSON, SVG"]
+        O2["verdetti, rilievi con deroga"]
+        O3["rilievi 🔴 🟠 con stato"]
+        O4["tabella con citazioni,<br/>riepilogo del run CI"]
+    end
+    D1 --> C1 --> O1
+    D2 --> C2 --> O2
+    D3 --> C3 --> O3
+    D4 --> C4
+    D5 --> C4 --> O4
+```
+
+Il riscontro è l'unico di questi strumenti che legge un testo esterno al
+repo. Lo legge da una cache con commit e sha256 fissati nel codice, e la
+rete che manca la dice con l'exit 3. Il primo uso, su DEF-1 e DEF-2 di
+ARC-08, è in
+[RISCONTRO-ARC08](../plans/esperimenti/ricerca-rete-2026-10-23/RISCONTRO-ARC08.md).
+
+## 19. Dove sta cosa
 
 | Cerco… | Dove |
 |---|---|
@@ -719,6 +825,7 @@ sequenceDiagram
 | un master di un arco | `0N_…/ARC0N-DEF-*.md` |
 | una creatura | `Bestiario/`, catalogo `scripts/monster_catalog.yaml` |
 | come si usa uno script | [`docs/tools/README.md`](tools/README.md), `python3 scripts/<script>.py --help` |
+| se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0101) |
 | perché una cosa è fatta così | [`plans/adr/`](../plans/adr/), indice in [`docs/INDEX.md`](INDEX.md) §4 |
 | cosa resta da fare | [`plans/INDEX.md`](../plans/INDEX.md), [`plans/STATO-E-ORDINE-DEI-PIANI.md`](../plans/STATO-E-ORDINE-DEI-PIANI.md) |
 | cosa è cambiato fra due versioni | [`CHANGELOG.md`](../CHANGELOG.md) |

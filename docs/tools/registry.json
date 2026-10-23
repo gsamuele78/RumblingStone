@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 114,
+  "tool_count": 115,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -9155,6 +9155,140 @@
       "docs": [
         "skills/rumblingstone-playtest/references/quiz-a-due-agenti.md",
         "plans/adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md"
+      ]
+    },
+    {
+      "id": "riscontro_srd",
+      "path": "scripts/riscontro_srd.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
+      "summary": "Riscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0101).",
+      "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "optional_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--cache",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella della cache (default: $RUMBLINGSTONE_SRD_CACHE, poi $XDG_CACHE_HOME/rumblingstone/srd, poi ~/.cache/rumblingstone/srd)."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: se la cache è incompleta esce 3."
+        },
+        {
+          "name": "comando",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "scarica",
+            "regola",
+            "riscontra",
+            "licenza"
+          ],
+          "repeatable": false,
+          "desc": "scarica | regola | riscontra | licenza."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<FILE dei riscontri>.yaml|.json",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/srd-v3.5-md-<commit>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "<cache>/PSRD-Data-<commit>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--md>",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/",
+          "kind": "directory",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con discordanze",
+        "1": "con --strict una discordanza o una regola non trovata; uno sha256 che non combacia; `regola` senza risultati",
+        "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
+        "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
+        "130": "interruzione utente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Fonti fissate per commit e sha256; esiti nell'ordine del file; il JSON ha le chiavi ordinate e nessuna data."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/riscontro_srd.py --help",
+      "tests": [
+        "scripts/tests/test_riscontro_srd.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0101-le-regole-si-riscontrano-sull-srd-in-cache.md",
+        "plans/esperimenti/ricerca-rete-2026-10-23/RICERCA.md",
+        "docs/ARCHITETTURA.md"
       ]
     },
     {

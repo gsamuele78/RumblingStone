@@ -6,8 +6,9 @@ del progetto misurando il miglioramento?». Contesto: le mappe tattiche di
 ARC-08 (ADR-0098, `qualita_mappe.py`, `confronta_mappe.py`) e i master
 ARC08-DEF-1 e DEF-2 (letture a freddo di ADR-0095, `misura_craft`,
 `ciclo_prosa`, `domande_developer`).
-**Stato**: esperimento. Niente è entrato in `scripts/` né negli standard; gli
-script di prova stanno in `prove/`, i risultati in `out/`. I dati scaricati
+**Stato**: esperimento. Il riscontro SRD del §3 è entrato in canale testing
+come `scripts/riscontro_srd.py` ([ADR-0101](../../adr/ADR-0101-le-regole-si-riscontrano-sull-srd-in-cache.md));
+il resto no. Gli script di prova stanno in `prove/`, i risultati in `out/`. I dati scaricati
 (SRD 3.5, PRD PF1e, il codice dei candidati) stanno fuori dal repo, nella
 cartella di lavoro della sessione.
 
@@ -317,6 +318,7 @@ l'apertura non vale per questo ambiente, o va riavviato [INFERRED].
 | `prove/fazioni_liapis.py` | §4: area sicura, esplorazione, bilancio, linea di tiro; `--rev` per una versione di git |
 | `prove/ridondanza.py` | §4: ρ di Spearman fra le misure nuove e quelle di `qualita_mappe.py` |
 | `out/riscontro-srd.md` | la tabella del §3 |
+| `riscontri-arc08.yaml`, `RISCONTRO-ARC08.md`, `out/riscontro-arc08.md` | il §3 adottato in testing ([ADR-0101](../../adr/ADR-0101-le-regole-si-riscontrano-sull-srd-in-cache.md)): 53 regole di DEF-1 e DEF-2 riscontrate con `scripts/riscontro_srd.py`, 3 discordanze |
 | `out/liapis-A.md`, `out/liapis-C.md` e i `.json` | ARC-08 prima dei rifacimenti e oggi |
 | `out/liapis-corpus.json`, `out/ridondanza.md` | le 50 griglie del corpus; il JSON di `qualita_mappe.py` si rigenera con `python3 scripts/qualita_mappe.py --json OUT.json` |
 
