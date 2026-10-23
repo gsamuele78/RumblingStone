@@ -109,34 +109,46 @@ def check_tema_texture(repo_root: Path, rendered_dirs: list[Path]) -> tuple[list
     pergamena. Vale solo quando le texture CC0 ci sono: prima di
     `build_texture_cc0.py` un `rendered-texture/` è un errore, perché nessuno
     lo potrebbe rigenerare."""
+    if R._texture_cc0() is None:
+        cartelle = sorted({p.parent for p in repo_root.glob("**/rendered-texture/*.svg")})
+        return [f"{d.relative_to(repo_root)}: SVG del tema texture senza le texture CC0 "
+                f"(scripts/texture-cc0/): rigenera le texture o togli la cartella"
+                for d in cartelle], 0
+    return _check_gemello(rendered_dirs, "texture", obbligatorio=True)
+
+
+def check_tema_pianta(rendered_dirs: list[Path]) -> tuple[list[str], int]:
+    """Il tema pianta (ADR-0102) si adotta una cartella alla volta: dove c'è un
+    `rendered-pianta/` deve essere il gemello completo di `rendered/`, dove non
+    c'è nessuno lo pretende. Così ogni arco passa allo stile nuovo quando il
+    suo thread ridisegna le mappe, senza che un altro tocchi i suoi file."""
+    return _check_gemello(rendered_dirs, "pianta", obbligatorio=False)
+
+
+def _check_gemello(rendered_dirs: list[Path], tema: str, obbligatorio: bool) -> tuple[list[str], int]:
     errors: list[str] = []
     totale = 0
-    ci_sono = R._texture_cc0() is not None
-    cartelle = sorted({p.parent for p in repo_root.glob("**/rendered-texture/*.svg")})
-    if not ci_sono:
-        for d in cartelle:
-            errors.append(f"{d.relative_to(repo_root)}: SVG del tema texture senza le texture CC0 "
-                          f"(scripts/texture-cc0/): rigenera le texture o togli la cartella")
-        return errors, 0
     for rdir in rendered_dirs:
-        tdir = rdir.parent / R.CARTELLA_TEMA["texture"]
+        tdir = rdir.parent / R.CARTELLA_TEMA[tema]
+        if not obbligatorio and not tdir.is_dir():
+            continue
         attesi: dict[str, str] = {}
         stems = {m.group("stem") for m in (SVG_NAME_RE.match(p.name) for p in rdir.glob("*.svg")) if m}
         for stem in sorted(stems):
             md = rdir.parent / f"{stem}.md"
             if md.exists():
-                attesi.update(render_master(md, "texture"))
+                attesi.update(render_master(md, tema))
         committati = {p.name: p for p in tdir.glob("*.svg")} if tdir.is_dir() else {}
         totale += len(committati)
         for n in sorted(set(attesi) - set(committati)):
-            errors.append(f"SVG del tema texture mancante: {tdir / n} — "
-                          f"render_map_svg.py --tema texture")
+            errors.append(f"SVG del tema {tema} mancante: {tdir / n} — "
+                          f"render_map_svg.py --tema {tema}")
         for n in sorted(set(committati) - set(attesi)):
-            errors.append(f"SVG del tema texture orfano: {tdir / n}")
+            errors.append(f"SVG del tema {tema} orfano: {tdir / n}")
         for n in sorted(set(attesi) & set(committati)):
             check_wellformed(committati[n], errors)
             if attesi[n] != committati[n].read_text(encoding="utf-8"):
-                errors.append(f"SVG del tema texture NON allineato al master: {tdir / n}")
+                errors.append(f"SVG del tema {tema} NON allineato al master: {tdir / n}")
     return errors, totale
 
 
@@ -221,6 +233,10 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
     err_tex, svg_tex = check_tema_texture(repo_root, rendered_dirs)
     errors.extend(err_tex)
 
+    # 7. il tema pianta, gemello nelle cartelle che l'hanno adottato
+    err_pt, svg_pt = check_tema_pianta(rendered_dirs)
+    errors.extend(err_pt)
+
     if as_json:
         print(json.dumps({
             "tool": "validate_maps", "ok": not errors,
@@ -237,7 +253,8 @@ def validate(repo_root: Path, as_json: bool = False) -> int:
 
     print(f"✓ validate_maps: {total_svg} SVG in {len(rendered_dirs)} dir rendered/, "
           f"{total_masters} master — tutti ben formati, tracciabili e allineati."
-          + (f" Tema texture: {svg_tex} SVG." if svg_tex else ""))
+          + (f" Tema texture: {svg_tex} SVG." if svg_tex else "")
+          + (f" Tema pianta: {svg_pt} SVG." if svg_pt else ""))
     return 0
 
 
