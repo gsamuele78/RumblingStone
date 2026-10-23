@@ -107,7 +107,7 @@ Fonte: [`plans/CHANGELOG.md`](plans/CHANGELOG.md), una riga per lotto chiuso.
 | 2026-10-23 | STATO-E-ORDINE-DEI-PIANI | §0 · l'indice dei punti in sospeso | ✅ Richiesta del DM: *«un index da aggiornare con le decisioni prese, quelle abbandonate e quelle sorpassate da PR o altre soluzioni»*, da usare per aprire thre… |
 | 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | P11 · il riscontro delle regole sull'SRD (DM: *«aggiungi se ci sono tools skill… | ✅ in testing. `scripts/riscontro_srd.py`: SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (devonjones/PSRD-Data), OGL 1.0a, scaricati da `raw.githubusercontent.com` a… |
 | 2026-10-23 | MAPPE-QUALITA (esperimento) | ricerca in rete su strumenti liberi che misurano mappe, moduli e regole (DM: *«… | 🟡 SRD 3.5 (olimot/srd-v3.5-md) e PRD PF1e (PSRD-Data) clonati fuori dal repo: le 9 regole «a memoria» del giro della Sessione 2 riscontrate in 0,04 s, 8 concor… |
-| 2026-10-23 | PIATTAFORMA-DI-SVILUPPO | D7 · primo rilascio | ✅ Risposta del DM: *«1.0.0, solo le skill»*. Al merge della #275 esce v1.0.0 con l'archivio dei pacchetti delle skill, SHA256SUMS e attestazione; i PDF dei boo… |
+| 2026-10-23 | RIPRESA-PR-ABBANDONATE | 4g-1 · lo strumento delle schede PG | ✅ Le schede PG della #99 non si copiano: si rifanno da `main`. `validate_pg.py` e `render_pg.py` ripresi dalla #99 con una regola in più: la scheda non porta c… |
 
 ## Le misure che si portano dietro
 
