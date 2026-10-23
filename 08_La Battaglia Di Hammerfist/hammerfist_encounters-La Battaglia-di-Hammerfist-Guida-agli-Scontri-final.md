@@ -1229,7 +1229,7 @@ CARICA NANICA DEVASTANTE (Round 4-10)
 #### **ROUND 6: L'IMPATTO DEVASTANTE**
 
 **DESCRIZIONE CINEMATICA:**
-> *"La carica nanica colpisce le linee nemiche come un'avalanga di ferro e vendetta. Il suono è assordante: cento asce che trovano simultaneamente i loro bersagli, scudi che spezzano ossa, grida di terrore che si mescolano ai canti di guerra nanici. Gli hobgoblin, già demoralizzati dai fulmini e dalle frecce, non hanno nemmeno il tempo di alzare le lance prima di essere travolti dalla furia nanica."*
+> *"La carica nanica colpisce le linee nemiche come una valanga di ferro e vendetta. Il suono è assordante: cento asce che trovano simultaneamente i loro bersagli, scudi che spezzano ossa, grida di terrore che si mescolano ai canti di guerra nanici. Gli hobgoblin, già demoralizzati dai fulmini e dalle frecce, non hanno nemmeno il tempo di alzare le lance prima di essere travolti dalla furia nanica."*
 
 **MECCANICHE:**
 - **Le tre unità di testa** (Nani d'élite, AU +9, `ARC08-02` §6): **AU +17** al primo urto (+21 con la benedizione sacra), danno 1d8+4 dalla loro scheda. Il conto: AU +9, più il morale dell'unità, che in `ARC08-02` §4 è un valore da −5 a +5 (Iniziale +2, Guardia del Re +2 entro 9 m da Re Thorek, discorso +4: si sommano sulla scala, ma il tetto è +5), più carica +2 e altura +1. Il cuneo si risolve con AU contro DU, non colpo per colpo
