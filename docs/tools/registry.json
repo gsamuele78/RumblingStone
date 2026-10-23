@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 116,
+  "tool_count": 118,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -1209,6 +1209,154 @@
       "docs": [
         "scripts/README-automation.md",
         "scripts/examples/README.md"
+      ]
+    },
+    {
+      "id": "confronta_mappe",
+      "path": "scripts/confronta_mappe.py",
+      "category": "B-maps-pipeline",
+      "language": "python",
+      "invocation": "python3 scripts/confronta_mappe.py VECCHIA.md[:N] NUOVA.md[:N] | --versioni NOME=REF ... --base NOME --out DIR FILE.md ...",
+      "summary": "Due o piu' versioni delle stesse mappe misurate cella per cella: celle cambiate (simboli e classi, numero e quota), Jaccard per classe di cella, transizioni di classe, NCD con lzma, voto di qualita_mappe.py prima e dopo con i rilievi spariti e comparsi, dimensioni, scala e quote. Con --versioni estrae i master da git (git show), abbina le mappe per titolo, codice MAPPA o posizione, scrive confronto.json a chiavi ordinate e un SVG affiancato per mappa con le celle cambiate cerchiate. Misura e basta: non tocca le mappe.",
+      "use_case": "«Quanto e' cambiata davvero questa mappa dal rifacimento, e il voto e' salito per quello?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_deps": [
+        "tcod",
+        "scipy"
+      ],
+      "external_bins": [
+        "git"
+      ],
+      "args": [
+        {
+          "name": "posizionali",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Coppia: VECCHIA.md[:N] NUOVA.md[:N] (N da 1). Con --versioni: i master da confrontare, relativi al repo."
+        },
+        {
+          "name": "--json",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppia: scrive il confronto in JSON (chiavi ordinate)."
+        },
+        {
+          "name": "--svg",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Coppia: scrive l'SVG affiancato con le celle cambiate cerchiate."
+        },
+        {
+          "name": "--versioni",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Versioni git come NOME=REF, es. A=d726e6a2 B=9359a0af C=HEAD."
+        },
+        {
+          "name": "--base",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: la versione contro cui si confronta ogni altra."
+        },
+        {
+          "name": "--estrai",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: dove scrivere i file estratti (default: cartella temporanea)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --versioni: cartella di confronto.json e svg/."
+        },
+        {
+          "name": "--strict",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Esce 1 se una mappa resta senza corrispondente in qualche versione."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "scripts/legend.json",
+          "kind": "json",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--out>/confronto.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "confronto prodotto",
+        "1": "mappa senza corrispondente con --strict",
+        "2": "errore d'uso (file o ref inesistente, mappa fuori numero, dipendenze mancanti)"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Nessun campionamento; le versioni si identificano con il blob git, non con l'ora o il percorso di estrazione. L'NCD dipende dalla versione di liblzma."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/confronta_mappe.py --help",
+      "tests": [
+        "scripts/tests/test_confronta_mappe.py"
+      ],
+      "docs": [
+        "plans/esperimenti/confronto-mappe-arc08-2026-10-22/CONFRONTO.md",
+        "plans/adr/ADR-0098-la-qualita-delle-mappe-si-misura-con-uno-standard.md"
       ]
     },
     {
@@ -9392,6 +9540,140 @@
       "docs": [
         "skills/rumblingstone-playtest/references/quiz-a-due-agenti.md",
         "plans/adr/ADR-0075-il-ciclo-del-master-vale-per-ogni-piano.md"
+      ]
+    },
+    {
+      "id": "riscontro_srd",
+      "path": "scripts/riscontro_srd.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
+      "summary": "Riscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0103).",
+      "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "optional_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "--cache",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Cartella della cache (default: $RUMBLINGSTONE_SRD_CACHE, poi $XDG_CACHE_HOME/rumblingstone/srd, poi ~/.cache/rumblingstone/srd)."
+        },
+        {
+          "name": "--offline",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Non scarica: se la cache è incompleta esce 3."
+        },
+        {
+          "name": "comando",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "scarica",
+            "regola",
+            "riscontra",
+            "licenza"
+          ],
+          "repeatable": false,
+          "desc": "scarica | regola | riscontra | licenza."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "<FILE dei riscontri>.yaml|.json",
+          "kind": "yaml",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "**/*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/srd-v3.5-md-<commit>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        },
+        {
+          "path": "<cache>/PSRD-Data-<commit>/",
+          "kind": "directory",
+          "required": true,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "stdout",
+          "kind": "markdown",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--md>",
+          "kind": "markdown",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<--json>",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "<cache>/",
+          "kind": "directory",
+          "overwrites": false,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "rapporto prodotto, anche con discordanze",
+        "1": "con --strict una discordanza o una regola non trovata; uno sha256 che non combacia; `regola` senza risultati",
+        "2": "errore d'uso (file dei riscontri illeggibile, regex sbagliata, master inesistente)",
+        "3": "fonti non disponibili: cache incompleta e rete assente, o --offline",
+        "130": "interruzione utente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Fonti fissate per commit e sha256; esiti nell'ordine del file; il JSON ha le chiavi ordinate e nessuna data."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/riscontro_srd.py --help",
+      "tests": [
+        "scripts/tests/test_riscontro_srd.py"
+      ],
+      "docs": [
+        "plans/adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md",
+        "plans/esperimenti/ricerca-rete-2026-10-23/RICERCA.md",
+        "docs/ARCHITETTURA.md"
       ]
     },
     {

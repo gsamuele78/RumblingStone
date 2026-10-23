@@ -100,7 +100,7 @@ li tiene a mente mentre lo legge:
   fame non è un aggettivo, è logistica, ed è il motivo per cui Hammerfist
   è un bersaglio d'opportunità;
 - Fauci di Palude fa **ricognizione aerea periodica** sopra la colonna:
-  se il DM vuole un secondo presagio prima dell'Incontro 1F, è
+  se il DM vuole un secondo presagio prima dell'Incontro 1C, è
   un'ombra che passa e nessuno che riesce a dire cos'era.
 
 Cue sonoro: `ARC08-16-CUE-SONORI.md` §2 — il basso continuo parte qui e
