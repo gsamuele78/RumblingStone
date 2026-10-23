@@ -1,6 +1,6 @@
 # Riscontro SRD dei master ARC08-DEF-1 e ARC08-DEF-2
 
-**Data**: 2026-10-23 · **Strumento**: `scripts/riscontro_srd.py` (ADR-0101, canale testing)
+**Data**: 2026-10-23 · **Strumento**: `scripts/riscontro_srd.py` (ADR-0103, canale testing)
 **Riscontri**: [riscontri-arc08.yaml](riscontri-arc08.yaml) · **Tabella completa con le citazioni**: [out/riscontro-arc08.md](out/riscontro-arc08.md)
 **Stato**: rapporto. I master non sono stati toccati; le tre discordanze sono domande per il DM.
 

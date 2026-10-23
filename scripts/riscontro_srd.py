@@ -6,7 +6,7 @@ Nato dalla prova di ``plans/esperimenti/ricerca-rete-2026-10-23/`` (§3 di
 RICERCA.md): le regole che un giro di lettori controlla «a memoria» si
 riscontrano sul testo delle due fonti aperte, e la prova ha trovato una
 discordanza vera (la *freccia assassina* di DEF-2). Canale **testing** di
-ADR-0099; la decisione è ADR-0101.
+ADR-0099; la decisione è ADR-0103.
 
 Le fonti, entrambe Open Game Content sotto OGL 1.0a:
 

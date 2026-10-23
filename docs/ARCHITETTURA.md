@@ -677,7 +677,7 @@ stateDiagram-v2
 | Componente | Canale al 2026-10-23 |
 |---|---|
 | Python 3.13 (Debian 13), pytest, pip-audit, typst, Dependabot | stable |
-| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0101) | testing |
+| ruff (regole-bug), uv, pytest-xdist, job dei convertitori, workflow Release, riscontro SRD (ADR-0103) | testing |
 | spaCy, Stanza, LLM locale, mypy | unstable |
 
 ## 17. Il rilascio
@@ -756,7 +756,7 @@ flowchart LR
         DD["domande_developer"]
         GF["giro a freddo<br/>lettura_a_scene"] --> RL["registro_letture"]
     end
-    subgraph REGOLE["Regole (ADR-0101)"]
+    subgraph REGOLE["Regole (ADR-0103)"]
         RS["riscontro_srd"]
     end
     MAP --> VM
@@ -825,7 +825,7 @@ ARC-08, è in
 | un master di un arco | `0N_…/ARC0N-DEF-*.md` |
 | una creatura | `Bestiario/`, catalogo `scripts/monster_catalog.yaml` |
 | come si usa uno script | [`docs/tools/README.md`](tools/README.md), `python3 scripts/<script>.py --help` |
-| se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0101) |
+| se una regola del master è nell'SRD | `python3 scripts/riscontro_srd.py regola NOME` o `riscontra FILE.yaml` (ADR-0103) |
 | perché una cosa è fatta così | [`plans/adr/`](../plans/adr/), indice in [`docs/INDEX.md`](INDEX.md) §4 |
 | cosa resta da fare | [`plans/INDEX.md`](../plans/INDEX.md), [`plans/STATO-E-ORDINE-DEI-PIANI.md`](../plans/STATO-E-ORDINE-DEI-PIANI.md) |
 | cosa è cambiato fra due versioni | [`CHANGELOG.md`](../CHANGELOG.md) |

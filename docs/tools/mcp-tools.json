@@ -3679,7 +3679,7 @@
     },
     {
       "name": "riscontro_srd",
-      "description": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»\n\nRiscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0101).",
+      "description": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»\n\nRiscontra le regole dei master sul testo dell'SRD 3.5 (olimot/srd-v3.5-md) e del PRD PF1e (devonjones/PSRD-Data), entrambi OGL 1.0a, scaricati da raw.githubusercontent.com a commit fissato con lo sha256 di ogni file in una cache fuori dal repo (~/.cache/rumblingstone/srd o $RUMBLINGSTONE_SRD_CACHE). Cerca una regola per nome, oppure esegue un file di riscontri YAML/JSON: per ogni voce una regex nella fonte e una nel master, con il confronto numerico (scala piedi→metri), di termine (con equivalenze) o di sola presenza; esito concorda, discorda o non trovata, con la citazione di file e riga. Canale testing (ADR-0103).",
       "use_case": "«Questa regola che il master attribuisce all'SRD c'è davvero, e il numero è quello?»",
       "invocation": "python3 scripts/riscontro_srd.py {scarica|regola NOME|riscontra FILE.yaml|licenza}",
       "inputSchema": {

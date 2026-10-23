@@ -544,7 +544,7 @@ jobs:
       - name: Il convertitore HTML parte
         run: python converters/Html_to_markdown/html_to_markdown_converter.py --help > /dev/null
 
-  # ADR-0101, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
+  # ADR-0103, canale TESTING: le regole dei master ARC-08 riscontrate sull'SRD
   # 3.5 e sul PRD PF1e (OGL), scaricati da raw.githubusercontent.com a commit
   # fissato con lo sha256 di ogni file (circa 50 MB, nessuna azione di cache:
   # sarebbe un componente nuovo). Il rapporto va nel riepilogo del run. Le
@@ -573,7 +573,7 @@ jobs:
           python scripts/riscontro_srd.py --cache "$RUNNER_TEMP/srd" --offline riscontra \
             plans/esperimenti/ricerca-rete-2026-10-23/riscontri-arc08.yaml \
             --md "$RUNNER_TEMP/riscontro.md"
-          { echo "## Riscontro SRD di ARC-08 (ADR-0101, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
+          { echo "## Riscontro SRD di ARC-08 (ADR-0103, testing)"; echo; cat "$RUNNER_TEMP/riscontro.md"; } >> "$GITHUB_STEP_SUMMARY"
 
   build:
     name: Build skill packages

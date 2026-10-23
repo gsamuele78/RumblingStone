@@ -61,7 +61,7 @@ colonna lo dice e il lotto che la fissa è A1 o A3 di AMBIENTE.
 | mypy | 2.3.1 | — | 328 rilievi, 0 bug nel campione di 41 | **unstable**, non si adotta |
 | pyright | — | — | non misurato | unstable |
 | pre-commit (framework) | — | — | non misurato; A4 ha già deciso hook senza dipendenze | **non si adotta** |
-| riscontro SRD (`riscontro_srd.py` con l'SRD 3.5 e il PRD PF1e in cache, OGL 1.0a) | commit fissati, sha256 per file | sì | 53 regole di ARC-08 in 0,25 s, 3 discordanze vere (RISCONTRO-ARC08) | **testing** da questa PR (P11, ADR-0101) |
+| riscontro SRD (`riscontro_srd.py` con l'SRD 3.5 e il PRD PF1e in cache, OGL 1.0a) | commit fissati, sha256 per file | sì | 53 regole di ARC-08 in 0,25 s, 3 discordanze vere (RISCONTRO-ARC08) | **testing** da questa PR (P11, ADR-0103) |
 
 ### Librerie Python
 
@@ -213,7 +213,7 @@ workflow sale a stable dopo tre rilasci senza interventi a mano.
 DM 2026-10-23: *«aggiungi se ci sono tools skills pipeline plugin e tools che
 non sono presenti nel repo aggiungili ed integrali […] in un flusso
 coerente»*. L'unico candidato che la [ricerca in rete](esperimenti/ricerca-rete-2026-10-23/RICERCA.md)
-raccomanda. [ADR-0101](adr/ADR-0101-le-regole-si-riscontrano-sull-srd-in-cache.md):
+raccomanda. [ADR-0103](adr/ADR-0103-le-regole-si-riscontrano-sull-srd-in-cache.md):
 `scripts/riscontro_srd.py` scarica l'SRD 3.5 in Markdown e il PRD PF1e in
 SQLite a commit fissato, con lo sha256 di ogni file, in
 `~/.cache/rumblingstone/srd/`, e riscontra un file di regole (concorda,
@@ -279,4 +279,4 @@ A2 → P7 → P8 quando Debian 14 si congela.
 - [ ] P8 · prova generale della migrazione a 3.14
 - [x] P9 · `converters/` nella piattaforma, in testing (D6)
 - [x] P10 · il rilascio è una PR (ADR-0100), workflow in testing; primo rilascio 1.0.0 (D7 ✅)
-- [x] P11 · il riscontro SRD (ADR-0101) in testing, job `riscontro-srd`; stable non prima del 2026-11-06
+- [x] P11 · il riscontro SRD (ADR-0103) in testing, job `riscontro-srd`; stable non prima del 2026-11-06

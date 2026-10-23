@@ -18,7 +18,7 @@ Il tag e il rilascio li crea il workflow Release (ADR-0100).
 ## [Non rilasciato]
 
 ### Aggiunto
-- `scripts/riscontro_srd.py` (canale testing, ADR-0101): riscontra le regole
+- `scripts/riscontro_srd.py` (canale testing, ADR-0103): riscontra le regole
   dei master sull'SRD 3.5 e sul PRD di Pathfinder 1e (OGL 1.0a), scaricati a
   commit fissato con lo sha256 in `~/.cache/rumblingstone/srd/`, fuori dal
   repo. `regola NOME` cerca una regola; `riscontra FILE.yaml` dice concorda,

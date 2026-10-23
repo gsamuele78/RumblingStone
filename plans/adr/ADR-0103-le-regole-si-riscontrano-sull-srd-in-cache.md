@@ -1,4 +1,4 @@
-# ADR-0101 — Le regole dei master si riscontrano sull'SRD scaricato in cache
+# ADR-0103 — Le regole dei master si riscontrano sull'SRD scaricato in cache
 
 **Stato**: proposta, in canale testing (ADR-0099); la promozione a stable chiede l'ok del DM
 **Data**: 2026-10-23
