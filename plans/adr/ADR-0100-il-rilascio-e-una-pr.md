@@ -1,6 +1,6 @@
 # ADR-0100 — Il rilascio è una PR: tag e rilascio li crea il merge
 
-**Stato**: proposta (2026-10-23), in attesa dell'ok del DM sulla PR
+**Stato**: accettata dal DM il 2026-10-23 (D7 di [PIANO-PIATTAFORMA](../PIANO-PIATTAFORMA-DI-SVILUPPO.md): *«1.0.0, solo le skill»*)
 **Data**: 2026-10-23
 **Decisione-fonte**: il DM, 2026-10-23: *«diventa std per tutto il resto […] aggiornando la documentazione, changelog, gli ADR, e iniziare il tag e release come fatto ad esempio nel progetto iemod-fetch»*.
 **Rapporti**: estende [ADR-0099](ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md) (la piattaforma ha una versione, e la versione si rilascia); riprende ADR-0027 di iemod-fetch (stesso autore, MIT), adattato a un repo senza pacchetto Python.
