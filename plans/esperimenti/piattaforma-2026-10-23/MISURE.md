@@ -181,7 +181,7 @@ indicato; dove la misura la fa la CI della PR, la riga lo dice.
 | rilievi di ruff, regole-bug, su `scripts/` e `converters/` | 28 | **0** (3 dichiarati in `ruff.toml`, con la ragione) | idem |
 | `DeprecationWarning` nella suite | 120 | **0** | `pytest scripts/tests/test_import_ultraclear.py` |
 | moduli del motore PDF che si importano, senza torch | 12 su 20 | **13 su 20** (`fallback_manager` non si importava su nessuna Python) | script di import in un venv con le dipendenze leggere |
-| moduli del motore PDF che si importano, con tutte le dipendenze | non misurato | lo misura il job `convertitori` della CI | qui `download.pytorch.org` non è raggiungibile |
+| moduli del motore PDF che si importano, con tutte le dipendenze | non misurato | primo run della CI: **11 su 20**. `pdfplumber` mancava da `requirements.txt` (c'era solo in `pyproject.toml`) e `src/config.py` vuole `INPUT_DIR` e `OUTPUT_DIR` già all'import; corretti tutti e due | job `convertitori` della CI (qui `download.pytorch.org` non è raggiungibile) |
 | file che dichiarano una Python diversa da 3.13 | 6 (tutti in `converters/`) | **0** | `grep` di §2 |
 | controlli che guardano `converters/` | `compileall` | `compileall`, ruff, import su 3.13, Dependabot | `ci.yml`, `dependabot.yml` |
 | esecuzioni complete della suite in CI | 2 (unittest e pytest) | **1** (più quella in parallelo del job `testing`, non bloccante) | `ci.yml` |

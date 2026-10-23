@@ -508,6 +508,11 @@ jobs:
 
       - name: Ogni modulo del motore PDF si importa
         working-directory: converters/pdf-to-md-engine
+        # src/config.py legge le due cartelle all'import (pydantic-settings,
+        # di solito da .env): qui bastano due cartelle qualsiasi.
+        env:
+          INPUT_DIR: /tmp/convertitori-in
+          OUTPUT_DIR: /tmp/convertitori-out
         run: |
           python - <<'EOF'
           import importlib, pathlib, sys
