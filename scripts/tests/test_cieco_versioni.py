@@ -190,6 +190,19 @@ class TestEsito(unittest.TestCase):
         r = CV.esito(self._chiave(), "1 A")
         self.assertTrue(r["verdetto"].startswith("incompleto: 1 coppie decise su 20"))
 
+    def test_le_etichette_contano_la_versione_scartata(self):
+        chiave = self._chiave(3)  # nuova: 1 A, 2 B, 3 A
+        r = CV.esito(chiave, "1 B goffo, spiega\n2 B\n3 = goffo\n")
+        self.assertEqual(r["etichette"]["nuova"], {"goffo": 1, "spiega": 1})
+        self.assertEqual(r["etichette"]["vecchia"], {})
+        self.assertEqual((r["nuova"], r["vecchia"], r["pari"]), (1, 1, 1))
+
+    def test_etichetta_sconosciuta_non_cambia_il_voto(self):
+        chiave = self._chiave(1)
+        r = CV.esito(chiave, "1 A bellissima")
+        self.assertEqual(r["nuova"], 1)
+        self.assertEqual(r["etichette"]["sconosciute"], ["bellissima"])
+
     def test_wilson_noto(self):
         basso, alto = CV.wilson(14, 20)
         self.assertAlmostEqual(basso, 0.481, places=2)

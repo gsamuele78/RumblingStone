@@ -6,7 +6,7 @@
 > Tarsilia, l'Abbazia della Rotta Sicura). L'ordine l'ha dato il DM il
 > 2026-09-25: *«poi i DEF di ARC-08, poi ARC-09 e tutti gli stand-alone»*.
 >
-> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; F4 di PIANO-LETTORE chiuso il 2026-10-15; A3 letto il 2026-10-15, con D4 e D5 aperte al DM · **Decisore**: DM ·
+> **Stato**: 🟡 D1-D3 decise, A1 approvato e A2 misurato il 2026-09-27; F4 di PIANO-LETTORE chiuso il 2026-10-15; A3 letto il 2026-10-15; D4 decisa il 2026-10-21 (il flashback dei pregen resta prima), D5 decisa il 2026-10-21 (tutte le consigliate), D6 aperta al DM · **Decisore**: DM ·
 > **Standard**: [`rumblingstone-module-standard`](../skills/rumblingstone-module-standard/SKILL.md)
 > **Gate**: ogni master fa i **sette passi del ciclo completo** di
 > `rumblingstone-module-standard` (scene `### SCENA`, contratto «In scena»,
@@ -286,7 +286,7 @@ duellanti: colonne 16-20 nella prima, 18-22 nella seconda. Solo la seconda è
 centrata sulla griglia 40×40, e in DEF-04 si tiene quella. Nessuna delle due è
 una griglia (`MAPPE-CENSIMENTO`, nota 8).
 
-## A3 · Il canone di ARC-08 contro il tavolo — 🟡 letto il 2026-10-15, aspetta D4 e D5
+## A3 · Il canone di ARC-08 contro il tavolo — 🟡 letto il 2026-10-15, D4 decisa il 2026-10-21, aspetta D5
 
 Una lettura in sola lettura, fatta da un agente, dei file vivi di ARC-08 contro il ramo di gruppo
 (`state.md`, log delle sessioni 3 e 4), i master di ARC-07 e le reference
@@ -384,7 +384,7 @@ passata. Rapporti e conti in
 13 🔴 e 61 🟠 nelle letture, 74 dopo aver unito i doppi; 37 corretti, 35 al DM,
 1 respinto, 1 residuo; la verifica ha trovato 15 parziali, 0 aperti, 2 🟠 nuovi,
 chiusi nella seconda passata insieme all'Atlante. Restano le dodici decisioni
-D9-D20 e due residui. Le parti dei pregen (Sessioni 1-3A) aspettano D4.
+D9-D20 e due residui. Le parti dei pregen (Sessioni 1-3A) restano, perché il DM ha deciso D4 così il 2026-10-21, e avranno un giro loro.
 
 Il DM ha scelto le dodici consigliate lo stesso giorno, e sono applicate ai
 file d'arco e al Bestiario (tre schede nuove: bugbear assassino GS 9, gufo
@@ -415,6 +415,63 @@ Lo stesso giorno il DM ha chiuso i quattro punti: una presa per incontro; lo
 *Scosso* del Bane toglie 2 alle prove di lotta di Fauci; l'Odio della stirpe
 vale anche sulla lotta (+27 con la sola bocca); Fauci non sa i nomi, riconosce
 l'ascia della cicatrice ancestrale e chiama Thorik «Portatore».
+Il DM ha poi confermato le due regole scritte da me: sul collo il drago non
+morde Thorik e lui ripete Scalare CD 25 a ogni turno di Fauci; colpito
+all'ala, se fallisce il TS sui Riflessi, Fauci scende di 22,5 m.
+
+<!-- eco: MASTER-DEF 2026-10-21 -->
+- **Decise**: D4, il flashback con i pregen resta prima del 3B, com'è oggi; la consigliata era saltarlo. D5, carta per carta: le undici risposte di A3 tutte come le consigliate. D21, le zone di Hammerfist dal 372 al 1372. D22, le trappole valgono i giorni 1 e 2.
+- **Aperte**: D6, una carta per domanda (manca `combat_prompts_guide`); il giro sulle Sessioni 1-3A, che con D4 restano nel master; la strada dalla caverna ai bastioni; i 70 élite e i 5 war adept della Sessione 4; la scheda di Lythiel nel Bestiario.
+- **Cambiate**: S1a non parte più dal consiglio di guerra di DEF-5 ma dal flashback dei pregen, e i bonus D9 si leggono da come va il flashback, non dai valori di default.
+- **Dedotto da me**: la carta su Dana era scritta male (sembrava il soffio): il DM ha precisato che il soffio lo prende il re, e ha tenuto D92 com'è (Dana fa da scudo al re contro le frecce in caverna). La carta sulle ferite segnate le attribuiva alla Fase 0: sono i colpi su Skullcrusher nel duello di ARC-07; la risposta non cambia.
+
+Lo stesso giorno il DM ha chiesto come far accettare i pregen ai giocatori, e
+ha proposto lui la cornice: i tre giorni dell'assedio sono una visione della
+Corona dentro lo strappo del Rubino, fra la Scena 1 e la Scena 2 di DEF-5.
+È l'handout 0 di `ARC08-15`, con le regole al tavolo in chiaro e una nota per
+il DM. Resta `[INFERRED]` che la *Mente Vuota* di Thorik non blocchi la
+visione. Il giro sulle Sessioni 1-3A comincia dalle schede dei pregen negli
+handout 1-4, che hanno ancora i numeri di prima della correzione del
+Bestiario del 2026-10-16 (Borin CA 24 invece di 25, Dara 98 pf invece di
+102, Thorin 108 invece di 114, Nala 84 invece di 90).
+
+Sempre il 2026-10-21 il DM ha chiesto di far giocare l'assedio come battaglia
+campale, con un libretto di poche pagine per giocatori e DM e tre modi di
+giocare (solo i pregen, le truppe, i pregen alla testa delle truppe). È
+`ARC08-18-LIBRETTO-BATTAGLIA-CAMPALE.md` ([ADR-0096](adr/ADR-0096-la-battaglia-campale-si-gioca-con-un-libretto.md),
+proposta), tarato con le simulazioni di
+`plans/esperimenti/battaglia-campale-2026-10-21/`. Le sessioni diventano 0
+(regole e battaglia di prova), poi 1, 2 e 3a. Poi il DM ha tenuto
+l'avvistamento e spostato la prova nella Sessione 1: una scaramuccia
+dell'avanguardia in cui i pregen scavano trappole. Le sessioni restano tre, e
+il libretto ha ora il terreno, le macchine e le capacità dei reparti; quelle
+dell'orda stanno in `ARC08-19`, solo per il DM. I bonus si leggono da
+`ARC08-10` §5.4-bis, `[INFERRED]`.
+Ogni pregen ha la sua carta dei poteri con i numeri già fatti (handout 1-4
+bis), e le schede degli handout 1-4 hanno ora i numeri del Bestiario. Chi non
+vuole un pregen gioca il capitano o l'orda (libretto §9). Manca la prova al
+tavolo.
+
+Il giro sulla Sessione 1 coi pregen (quattro letture a freddo, poi il
+[triage](esperimenti/giro-arc08-sessione1-2026-10-21/TRIAGE.md) in 60 voci)
+ha avuto la prima correzione il 2026-10-21, sui file che non sono la
+Sessione 1: libretto (`ARC08-18`), segreti dell'orda (`ARC08-19`), handout
+(`ARC08-15`) e script della battaglia campale. Le trappole valgono il Giorno 1
+o il Giorno 2, i giganti tirano un macigno per settore, la ritirata
+dell'avanguardia è di gruppo; con le prove rifatte la riga «Feroce» del
+libretto passa a 8-9 su 10 di breccia contenuta. L'avanguardia ha un mazzo
+per round, il sergente uno statblocco, la ricognizione pattuglia e scout dalle
+schede di *Red Hand of Doom* (non SRD). I pregen hanno abilità, lingue e
+caratteristiche, col conto in
+[`ABILITA-PREGEN.md`](esperimenti/giro-arc08-sessione1-2026-10-21/ABILITA-PREGEN.md).
+Restano la Sessione 1 riscritta a scene (`ARC08-01`), `ARC08-10`, `ARC08-02`,
+la mappa del pendio e le due voci per il DM (quando si spiega il libretto, e
+se il §12 resta nel libretto dei giocatori).
+Il 2026-10-21 la Sessione 1 riscritta a scene è diventata il master S1a (sotto),
+con `ARC08-10` §5.1 e §5.4-bis, le schede di `ARC08-02` §3 e la mappa del
+pendio. Le due voci sono decise: il libretto si spiega a pezzi (T28), e il §12
+del libretto passa nei segreti dell'orda come §4 (T31: lo sposta il
+coordinatore dopo S1a; il master punta già lì).
 
 ## FASE 2 — Sviluppo / attuazione
 
@@ -427,6 +484,42 @@ Un sotto-lotto per master (S1a-S1d), nell'ordine delle sessioni. Fonti nella
 tabella A1. Statblocchi inclusi dal Bestiario con `#statblocco` (ADR-0074). In
 S1d la Cerimonia delle 100 Asce si misura prima (Q2 del DM) e si riscrive solo
 nella forma.
+
+- [x] **S1a** · `ARC08-DEF-1-OMBRA-SULLA-MONTAGNA.md` — **scritto, giro da fare**
+  (2026-10-21). Dieci scene in ordine di tempo (apertura, notte prima,
+  rapporto, 1A ricognizione, 1B-1 Consiglio, 1B-2 Preparazione, 1C drago, 1D
+  avanguardia, 1E presagi, notte dei fuochi), la tabella delle leve, gli
+  statblocchi compatti scritti a mano dal Bestiario e da `ARC08-19` §2 (non
+  con `#statblocco`: le schede di *Red Hand of Doom* nel Bestiario non hanno
+  il recinto), la MAPPA 1D in `Mappe/Hammerfist-L1-REVISED-Ultra-Clear.md`.
+  Correzioni applicate dal triage: T1-T3, T5-T8, T10-T13, T16-T22, la parte
+  di `ARC08-01` di T4, T9, T14, T15, T44, T52, T56, e T57-T59. Restano i passi
+  6-7 del ciclo (lettore e playtester a freddo).
+- [x] **S1b** · `ARC08-DEF-2-TRE-GIORNI-DI-SANGUE.md` — **scritto, giro da fare**
+  (2026-10-22). Nove scene in ordine di tempo, dal Day 16 al Day 18: l'alba
+  del Giorno 1 con le leve della Sessione 1 e l'ultimo pezzo del libretto,
+  l'assalto alle mura col libretto (2A) con Gorthak sul ponte e il sorvolo del
+  drago, la notte, il Giorno 2 della breccia con Grimjaw (2C) e le Cantitrici
+  (2D), la notte, il Giorno 3 col corno e il soffio sul Re (2E e 2B sulla
+  2B-CORRETTA), la ritirata (H3-1), l'incrocio silenzioso (2F, 3Z), la porta di
+  mithral; la tabella dei bonus verso `ARC08-10` §5.2-5.3, le tattiche dei
+  comandanti round per round, gli statblocchi compatti; le mappe solo per
+  rimando. La Sessione 2 di `ARC08-01` rimanda al master. Dodici scelte
+  `[INFERRED]` sono domande per il DM nel blocco d'apparato in testa al
+  master (il Giorno 3 qui o nella Sessione 3, le baliste contro Fauci, il Re a
+  8 pf, Gorthak a metà, i troll, lo sportello, Grimjaw senza sfidante, la
+  riserva a +3, le frecce di Dara, i nani al Cuore, il sorvolo, il Re ferito
+  nel libretto). Restano i passi 6-7 del ciclo.
+  **Giro fatto il 2026-10-22** ([triage](esperimenti/giro-arc08-sessione2-2026-10-22/TRIAGE.md),
+  [verifica](esperimenti/giro-arc08-sessione2-2026-10-22/VERIFICA.md)):
+  quattro letture a freddo, 177 rilievi (1 🔴, 63 🟠, 113 🟡) in 41 voci e 5
+  respinte; corrette tutte tranne T18 e T26, limiti dichiarati. La domanda 1
+  (il Giorno 3 qui, A di default) e la 3 (il Re a 8 pf fissi per l'acido)
+  sono `[CANONE — DM 2026-10-22]`, e il Re ha una procedura, «Il conto del
+  Re»; la ritirata ha un tiro, i bugbear l'Osservare contrapposto, Fauci gli
+  attacchi a terra. Sei domande nuove al DM (13-18). La verifica: nessun 🔴,
+  19 voci chiuse e 6 parziali, 13 rilievi nuovi corretti nella seconda
+  passata salvo il peso del master (22.400 parole).
 
 **S2 · ARC-09, i master del seguito** `[engine: Opus · effort: xhigh · qualità: ciclo del master, passi 1-7, su ognuno dei dodici]`
 Fonti nella tabella A1. Un sotto-lotto per master (S2a-S2l). Qui confluiscono S5
@@ -468,8 +561,8 @@ Per ogni master, prima di chiudere il lotto:
 | ~~D1~~ | A1 | ✅ **Decisa il 2026-09-27.** ARC-08: **quattro master**; ARC-09: **uno per beat**, circa dodici. Le fonti hanno spostato il taglio di ARC-08 rispetto alla proposta (il passaggio pregen → PG cade a metà della Sessione 3, non fra due master): la tabella in «A1» taglia per sessione, e attende l'OK |
 | ~~D2~~ | S1-S2 | ✅ **Decisa il 2026-09-27: rifinire.** I master nascono completi di read-aloud, battute, contingenze e vie non combattive. Chiude anche la D2 di MESTIERE-BANCHI: confluiscono qui S5 e S6. S4 resta là perché riguarda ARC-07 (vedi §1) |
 | ~~D3~~ | S4 | ✅ **Decisa il 2026-09-27: sì, solo forma.** Il contratto «In scena» e i rilievi di `domande_developer` come note del DM; nessuna riga di prosa cambiata, coerente con la D1 di MESTIERE-BANCHI |
-| D4 | A3 | Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? Consigliata: salta |
-| D5 | A3 | Le undici risposte consigliate di A3 (Q2-Q12 nel file): il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva; gli echi di DEF-4 entrano; Tempestas presente; Borin e Dara sono i pregen; 118 diventa 109; runa +2; Aegis Fang allo Stadio 1; vale D90. Consigliata: sì a tutte |
+| ~~D4~~ | A3 | ✅ **Decisa il 2026-10-21: prima, com'è oggi.** Il flashback con i pregen di ARC-08: **salta** (S1a parte dal consiglio di guerra di DEF-5, e i bonus D9 prendono i valori di default), **dopo** (giocato come ricordo) o **prima** (com'è oggi)? La consigliata era salta; il DM tiene le Sessioni 1-3A con i pregen prima del 3B, e S1a parte da lì |
+| ~~D5~~ | A3 | ✅ **Decisa il 2026-10-21, una per una, tutte come le consigliate**: il bane di A7 non si somma al +2 del carry-over; il tetto di 3 ferite segnate resta; il log della sessione 4 si corregge secondo DEF-4; Dana viva (e D92 resta: in caverna fa da scudo al re contro le frecce, mentre il soffio lo ha preso il re); gli echi di DEF-4 entrano; Tempestas presente con la tempesta; Borin e Dara sulle asce sono i pregen, con i cognomi giusti e solo se muoiono; 118 diventa 109; runa +2 a Diplomazia; Aegis Fang allo Stadio 1 all'arrivo; vale D90 (14° al primo riposo dopo Hammerfist). Si applicano nei master di ARC-08 (S1a e seguenti) |
 | D6 | A3 | Le domande del censimento delle versioni (D1-D4, D6-D15 nel file, le consigliate fra parentesi): soffio di 2B su Riflessi; PF di Fauci dal massimo della sua scheda meno il carry-over; bonus della carica ricalcolato; cancello a 120 PF; `hammerfist_encounters` archiviato dopo la fusione; i troll in 2A; 210 asce sul campo e 100 in sala; 1B con Consiglio e poi Preparazione; 8 giganti; morale +3; la revisione r1 di `hammerfist_encounters` scartata; Cuore a 1,5 m; onori di `ARC08-17`; ERRATA archiviati quando i master li assorbono. Consigliata: sì a tutte |
 | ~~D7~~ | A4 | ✅ **Decisa il 2026-10-18: prima le sette.** Le norme del giro restano scritte nelle skill (ADR-0095) e si fanno anche i due script: `conformita_statblocchi.py` sugli statblocchi dei master, come rapporto e non come cancello, e `registro_letture.py` per le letture intere e il developer. Poi il giro su ARC-08 |
 | ~~D8~~ | A4 | ✅ **Decisa il 2026-10-18: SRD locale, uno alla volta.** I numeri si verificano sulla copia markdown dell'SRD 3.5 (OGL, fuori dal repo), coi mirror come ripiego; i lettori del giro leggono uno alla volta, e «Il giro» di `module-standard` lo dice |
@@ -485,6 +578,8 @@ Per ogni master, prima di chiudere il lotto:
 | ~~D18~~ | giro | ✅ **Decisa il 2026-10-19: il default.** La serata: il 3B e la Sessione 4 insieme e la Cerimonia la serata dopo (il default scritto), oppure solo il 3B? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | ~~D19~~ | giro | ✅ **Decisa il 2026-10-19: l'Appendice C.** EL e PE del 3B e della 4A: l'Appendice C (2.600 e 4.600 PE al gruppo) togliendo l'EL 17 dichiarato, o l'EL 17 con lo scontro reso davvero tale? Poi le righe di scala. Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
 | ~~D20~~ | giro | ✅ **Decisa il 2026-10-19: due.** Il box dell'Atto 2 della Cerimonia: due figure venute da fuori e non insieme, come dicono le note per il DM dello stesso file, oppure le tre figure coordinate del box originale? Applicata in `esperimenti/giro-arc08-2026-10-19/APPLICAZIONE-D9-D20.md` |
+| ~~D21~~ | zone | ✅ **Decisa il 2026-10-21, carta per carta, tutte come le consigliate.** Le zone di Hammerfist dal 372 al 1372 ([`ZONE-HAMMERFIST-372-1372.md`](esperimenti/a3-arc08/ZONE-HAMMERFIST-372-1372.md)): la «Porta Ovest» di DEF-5 è la Torre Ovest con il bastione G1, e le sei torri che Fauci abbatte sono le sei postazioni (2 torri e 4 bastioni); il tunnel della statua scende al Cuore (D48), si corregge L3; la porta dal cortile alla montagna c'è, è l'atrio della cittadella e cade il Giorno 3; la bocca del tunnel sta dietro la statua; il cortile è quello di L2 (la porta della targa del 372 è la Porta Interna); la statua del Re Antenato è il nonno di Re Thorek I; una delle dieci statue del Cuore è Re Thorek I; tutte le proposte `[INFERRED]` del rapporto adottate. Più le scale delle mappe dal thread delle mappe di ARC-07, da rifare |
+| ~~D22~~ | giro S1 | ✅ **Decisa il 2026-10-21: giorni 1 e 2.** Una trappola dell'avanguardia annulla una tacca del Giorno 1 o del Giorno 2 (DEVELOPER R7: breccia chiusa 67/75/84/89% con 0/2/4/6 trappole) |
 
 ## Come si riparte in una chat nuova
 
@@ -492,5 +587,5 @@ Per ogni master, prima di chiudere il lotto:
 2. leggere questo piano e `plans/STATO-E-ORDINE-DEI-PIANI.md` §4 (le decisioni
    aperte al DM);
 3. D1-D3 sono decise, la tabella A1 è approvata e A2 è misurato
-   (2026-09-27). F4 di PIANO-LETTORE è chiuso (2026-10-15) e A3 è letto: si riparte da D4 e D5, poi S1a. **F6-a** (il cancello che vede un master
+   (2026-09-27). F4 di PIANO-LETTORE è chiuso (2026-10-15) e A3 è letto e D4 è decisa (il flashback resta prima): si riparte da D5, poi il giro sulle Sessioni 1-3A e S1a. **F6-a** (il cancello che vede un master
    senza scene), che serviva prima di S1, è ✅ dal 2026-09-27. Vedi §1-bis.

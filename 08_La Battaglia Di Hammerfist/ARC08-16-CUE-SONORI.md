@@ -52,7 +52,7 @@ Tre corollari pratici:
 | **1A — la ricognizione** (pattuglia di worg) | **niente.** Il respiro dei giocatori è il cue. Se qualcuno chiede «cosa si sente?», rispondi «voi» |
 | **1B — il Consiglio di Guerra** | interno pieno: il bastone di Dana sulla pietra, eco corta. Nessuna musica sotto le decisioni |
 | **1E — i Presagi** | gli animali che se ne vanno. **E poi il vuoto che lasciano**: il bosco che smette di fare rumore è più inquietante di un ruggito |
-| **1F — la dimostrazione di Fauci** | **taglia tutto.** Un colpo d'ala. Poi il sibilo dell'acido sulla torre di vedetta, lungo, e la pietra che cola |
+| **1C — la dimostrazione di Fauci** | **taglia tutto.** Un colpo d'ala. Poi il sibilo dell'acido sulla torre di vedetta, lungo, e la pietra che cola |
 
 ---
 

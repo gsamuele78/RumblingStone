@@ -10,7 +10,7 @@
 > Narrativa/immagini: `Atlante-Hammerfist-Mappe-COMPLETE.md` (master visivo).
 
 ### Indice mappe di questo file
-1. **MAPPA H3-1 (3X) REVISED** — Ingresso Passaggi Antichi (40×40, 1,5 m)
+1. **MAPPA H3-1 (3X) REVISED** — Cortile sfondato e bocca del tunnel (72×36, 1,5 m)
 2. **MAPPA 3Y REVISED** — Il Ponte Sospeso (33×27, 1,5 m)
 3. **MAPPA 3Z REVISED** — L'Incrocio Silenzioso (33×33, 1,5 m)
 4. **MAPPA 5 REVISED** — Il Cuore della Montagna (67×53, 1,5 m)
@@ -20,131 +20,146 @@
 ---
 
 ## MAPPA H3-1 REVISED: CORTILE SFONDATO - ULTIMA DIFESA ED EVACUAZIONE
-**Dimensioni:** 60m × 60m (40 colonne × 40 righe, 1,5 m/quadretto)
-**Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (cancello sud + brecce est/ovest)
+**Dimensioni:** 108m × 54m (72 colonne × 36 righe, 1,5 m/quadretto)
+**Incontro:** difesa ed evacuazione — 90 nani superstiti vs 200+ orchi che sfondano da TRE lati (Porta Interna a sud + brecce est/ovest)
 **Quando si usa:** subito dopo il soffio del drago (guida: `../ARC08-01-GUIDA-DM.md` § "La Ritirata Disperata"); il master narrativo dell'atlante la chiama MAPPA 3X
+**Dove sta nella 2A:** è il cortile interno della MAPPA 2A REVISED (L2) con la Porta Interna e l'inizio del cortile esterno: colonne Y-CR e righe 18-53 della 2A (colonna H3-1 = colonna 2A − 24, riga H3-1 = riga 2A − 17). Le misure sono quelle della tabella MISURE DI RIFERIMENTO in testa a L2.
+**Quote (decise dal DM il 2026-10-22):** il cortile interno sta a +100 m sulla piana (970 m s.l.m. `[INFERRED]`), il cortile esterno a +80 m; fra i due c'è la scarpa di 20 m (🏰 riga 28) su cui poggia la Porta Interna. Dal cortile esterno si sale per le due scale della scarpa (🪜 O-AH e AM-BF, righe 26-27, 30 m di rampa ciascuna) fino al pianerottolo 🔳 AI-AL 26-27 davanti alla porta. I bastioni nord B1 e B2 stanno a +120 m, contro la roccia.
 
-### 🎯 COMPRENSIONE: il cortile è in rovina e sfondato. L'orda entra dal cancello sud distrutto e dalle brecce est/ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek e alla statua-tunnel (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = tunnel (dentro la montagna, LONTANO da Hammerfist); Sud = cancello sfondato (fronte).
+### 🎯 COMPRENSIONE: il cortile esterno è perduto e la Porta Interna è sfondata. L'orda entra dalla porta a sud e dalle brecce aperte nella cinta est e ovest; i 90 nani sono in ANELLO DIFENSIVO attorno a Re Thorek, fra la porta e la statua del Re Antenato (nord). Bisogna evacuare nella montagna PRIMA di essere travolti. Nord = la statua e il tunnel, che scende nelle viscere della montagna fino al Cuore (MAPPA 5); Sud = Porta Interna sfondata (fronte).
 
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map01_mappa-h3-1-revised-cortile-sfondato-ultima-difes.svg` (rigenerare dopo ogni modifica)
 
-### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (40×40)
+### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (72×36)
 
 ```
 MAPPA H3-1 REVISED: Cortile sfondato, ultima difesa ed evacuazione
-COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN
-01 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🚪 🚪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-02 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🗿 🗿 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-03 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗿 🗿 🗿 🗿 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
-04 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🗿 🗿 🔵 🗿 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-05 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-06 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-07 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-08 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-09 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-10 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-11 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-12 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-13 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-14 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 💀 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-15 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-16 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
-17 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-18 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-19 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-20 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-21 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-22 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-23 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-24 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴
-25 🪨 🪨 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🪨 🪨
-26 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-27 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-28 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-29 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-30 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-31 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-32 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-33 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-34 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-35 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-36 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔥 🔥 🔥 🔥 🔥 🔥 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-37 ⬜ ⬜ 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 ⬜ ⬜
-38 ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜
-39 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
-40 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+DIMENSIONI: 72 colonne × 36 righe · 1,5 m/quadretto
+COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO BP BQ BR BS BT
+01 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+02 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+03 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ❔ ⛰ ⛰ ⛰ ⛰ ⛰ 🔒 🔒 🔒 🔒 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+04 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+05 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+06 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+07 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+08 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+09 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+10 🔳 🔳 🔳 🔳 🔳 🔳 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔳 🔳 🔳 🔳 🔳 🔳
+11 🧱 🧱 🧱 🧱 🧱 🧱 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🧱 🧱 🧱 🧱 🧱 🧱
+12 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+13 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+14 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+15 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+16 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+17 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+18 🔴 🔴 🪨 🪨 🪨 🪨 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🪨 🪨 🪨 🪨 🔴 🔴
+19 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 💀 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+20 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+21 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+22 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ 🔥 🔥 🔥 🔥 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+23 🟩 🟩 🧱 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🧱 🟩 🟩
+24 🟩 🟩 🧱 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🪵 🪵 🪵 🪵 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🧱 🟩 🟩
+25 🟩 🟩 🧱 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🪵 🪵 🪵 🪵 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🧱 🟩 🟩
+26 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🔳 🔳 🔳 🔳 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+27 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🔳 🔳 🔳 🔳 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🪜 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+28 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+29 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+30 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+31 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+32 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+33 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+34 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+35 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
+36 🟩 🟩 🧱 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🧱 🟩 🟩
 
 @north N
-@mark 1 ; T21 ; Re Thorek XIII (barella) (8 PF, morente)
-@mark 2 ; U21 ; Thorin Runaforte (Clr)
-@mark 3 ; S6 ; Nala Cantapietre (Brd)
-@mark 4 ; S9 ; Borin Ferropugno (Ftr)
-@mark 5 ; S4 ; Dara Occhiolesto (Rgr)
-@mark 6 ; U28 ; Anello difensivo — arco SUD (verso il cancello) (guerrieri)
-@mark 7 ; AB22 ; Anello difensivo — arco EST (guerrieri)
-@mark 8 ; N22 ; Anello difensivo — arco OVEST (guerrieri)
-@mark 9 ; T21 ; Nucleo (portatori, feriti, leader) (misti)
-@mark 10 ; U38 ; Orda dal cancello sfondato (SUD) (GS 1/2 (avanzano 30 m/round))
-@mark 11 ; AM21 ; Fiancheggiatori dalla breccia EST (GS 1/2)
-@mark 12 ; B21 ; Fiancheggiatori dalla breccia OVEST (GS 1/2)
-@path Assalto orchi dal CANCELLO sfondato (SUD) ; U40 U33 U29 ; #d62828
-@path Assalto orchi dalla BRECCIA EST ; AN21 AH21 AC21 ; #d62828
-@path Assalto orchi dalla BRECCIA OVEST ; A21 G21 L21 ; #d62828
-@path Evacuazione nani → tunnel segreto (NORD) ; U23 T13 S6 S2 ; #2c8c3c
-@zone Q2-T4 ; Statua del Re Antenato (4 m; base spingibile For CD 20 / Storia CD 15 → rivela il tunnel)
-@zone O37-Z39 ; CANCELLO SUD SFONDATO: breccia di macerie (l'orda entra da qui)
-@zone AL16-AN25 ; BRECCIA EST nel muro (macerie, terreno difficile)
-@zone A16-C25 ; BRECCIA OVEST nel muro (macerie)
-@zone R34-W36 ; Incendi presso la breccia sud
 @tipo tattica esterno
+@luogo Hammerfist, cortile interno
+@quota 970 m ; s.l.m., il cortile interno
+@dislivello +20 m ; sul cortile esterno, oltre la scarpa
+@deroga oggetti/fuoco-enorme ; sono incendi delle baracche ai lati della Porta Interna, non fuochi da campo: 6 × 3 m ciascuno
+@deroga oggetti/porta-enorme ; la porta dell'atrio è il portone della cittadella, 6 m come nella tabella MISURE in testa alla L2
+@mark 1 ; AG10 ; Nucleo (portatori, feriti, leader) (misti)
+@mark 2 ; X11 ; Anello difensivo — arco OVEST (guerrieri)
+@mark 3 ; AP11 ; Anello difensivo — arco EST (guerrieri)
+@mark 4 ; AE16 ; Anello difensivo — arco SUD (verso la Porta Interna) (guerrieri)
+@mark 5 ; AF10 ; Re Thorek XIII (barella) (8 PF, morente)
+@mark 6 ; AG10 ; Thorin Runaforte (Clr)
+@mark 7 ; AE5 ; Borin Ferropugno (Ftr)
+@mark 8 ; AD5 ; Dara Occhiolesto (Rgr)
+@mark 9 ; AB4 ; Nala Cantapietre (Brd)
+@mark 10 ; AK32 ; Orda salita dalle scale della scarpa (SUD) (GS 1/2)
+@mark 11 ; BT16 ; Fiancheggiatori dalla breccia EST (GS 1/2)
+@mark 12 ; B16 ; Fiancheggiatori dalla breccia OVEST (GS 1/2)
+@path Assalto orchi su per la scala ovest e dentro la PORTA INTERNA sfondata ; AE32 P29 P27 AJ27 AJ25 AG17 ; #d62828
+@path Assalto orchi dalla BRECCIA EST ; BT16 BO16 AQ13 ; #d62828
+@path Assalto orchi dalla BRECCIA OVEST ; A16 F16 W13 ; #d62828
+@path Evacuazione nani → tunnel dietro la statua (NORD) ; AF10 AE4 AC3 ; #2c8c3c
+@zone A4-F11 ; Bastione Nord B1, terrazza a +120 m (20 m sopra il cortile)
+@zone BO4-BT11 ; Bastione Nord B2, terrazza a +120 m: la torre nord del 372
+@zone AI24-AL25 ; PORTA INTERNA SFONDATA: le macerie dei battenti, l'orda entra da qui
+@zone C13-F18 ; BRECCIA OVEST nella cinta (macerie, terreno difficile)
+@zone BO13-BR18 ; BRECCIA EST nella cinta (macerie, terreno difficile)
+@zone AC5-AD6 ; Statua del Re Antenato (4 m; base spingibile For CD 20 / Storia CD 15: rivela il tunnel)
+@zone AI3-AL3 ; Porta dell'atrio, sbarrata: gli orchi la sfondano dopo la ritirata
+@zone O26-AH27 ; Scala ovest della scarpa: 30 m di rampa, sale di 20 m dal cortile esterno (+80) al pianerottolo (+100)
+@zone AM26-BF27 ; Scala est della scarpa, gemella della ovest
+@zone AI26-AL27 ; Pianerottolo davanti alla Porta Interna, +100 m
+@zone P28-BE28 ; Scarpa di 20 m fra cortile esterno (+80) e cortile interno (+100)
+@zone AE21-AH22 ; Incendi ai lati della Porta Interna
 ```
 
 ### 📍 POSIZIONI PRECISE:
 
-**STATUA DEL RE ANTENATO 🗿 + TUNNEL SEGRETO 🚪 (NORD):**
-- Statua: col Q-T, righe 02-04 (4 m; base spingibile **Forza CD 20** oppure **Conoscenze/Storia CD 15**)
-- Apertura tunnel: dietro la statua, righe 01 → **capacità 5 nani/round** in fila indiana
+**STATUA DEL RE ANTENATO 🗿 + TUNNEL SEGRETO ❔ (NORD):**
+- Statua: AC-AD, righe 05-06 (alta 4 m, base 3 × 3 m; spingibile **Forza CD 20** oppure **Conoscenze/Storia CD 15**)
+- Apertura tunnel: ❔ AC03, dietro la statua, nella roccia → **capacità 5 nani/round** in fila indiana; scende alle gallerie e al Cuore della Montagna
+- Porta dell'atrio della cittadella 🔒: AI-AL03, sbarrata dall'interno; gli orchi la sfondano dopo la ritirata (Giorno 3)
 
 **90 NANI IN ANELLO DIFENSIVO 🔵:**
-- Arco SUD (verso il cancello sfondato): ~24 guerrieri, scudi verso la breccia principale
-- Arco EST e OVEST (verso le brecce laterali): ~15 guerrieri ciascuno
-- Nucleo: portatori, feriti e leader (~36) attorno a Re Thorek, in colonna verso il tunnel
-- **Re Thorek ⚫** (col T, riga 21, 8 PF su barella; 4 portatori → ×0,5 velocità)
+- Arco SUD (verso la Porta Interna sfondata): ~24 guerrieri, Y-AJ righe 15-16
+- Arco EST e OVEST (verso le brecce laterali): ~15 guerrieri ciascuno, AO-AP e W-X righe 07-14
+- Nucleo: portatori, feriti e leader (~36) attorno a Re Thorek, AA-AL righe 09-11, in colonna verso il tunnel
+- **Re Thorek** (AF10, 8 PF su barella; 4 portatori → ×0,5 velocità)
 
 **4 PG (pregen):**
-- **Borin 🔵** (col S, riga 09): retroguardia al chokepoint del tunnel
-- **Dara 🔵** (col S, riga 04): sulla base della statua (elevata), tiro di copertura sulla ritirata
-- **Thorin 🔵** (col U, riga 21): fianco del Re, lo tiene in vita (*Cura Ferite Serie*)
-- **Nala 🔵** (col S, riga 06): instrada i nani nel tunnel, luci e trappole
+- **Borin 🔵** (AE05): retroguardia al chokepoint del tunnel
+- **Dara 🔵** (AD05): sulla base della statua (elevata), tiro di copertura sulla ritirata
+- **Thorin 🔵** (AG10): fianco del Re, lo tiene in vita (*Cura Ferite Serie*)
+- **Nala 🔵** (AB04): instrada i nani nel tunnel, luci e trappole
 
 **200+ ORCHI CHE HANNO SFONDATO 🔴 (tre fronti):**
-- **Cancello sud distrutto** (righe 37-39, centro): vanguard ~120, avanzano 30 m/round, contatto ~round 3
-- **Breccia EST** (col AL-AN, righe 17-24): ~40 in aggiramento
-- **Breccia OVEST** (col A-C, righe 17-24): ~40 in aggiramento
+- **Porta Interna sfondata** (AI-AL, righe 24-25): avanguardia ~120 dal cortile esterno (AE-AP righe 30-33), che sale per la scala ovest (O27 → AH27, rotta rossa) e per la est; sulla scala si va a metà velocità (terreno 🪜), poi il pianerottolo e la porta. Contatto con l'arco sud ~round 4
+- **Breccia EST** (BO-BR, righe 13-18): ~40 in aggiramento
+- **Breccia OVEST** (C-F, righe 13-18): ~40 in aggiramento
 
 **PERICOLI RESIDUI (soffio del drago):**
-- **Pozze d'acido 💀** (K12, AC14, O27, Z26): 1d6 acido/round ad attraversarle, evaporano in ~10 min
-- **Incendi 🔥** presso la breccia sud (col R-W, righe 34-36): 1d6 fuoco/round, fumo (occultamento 20% entro 3 m)
+- **Pozze d'acido 💀** (Q10, AS13, Y19, BA17): 1d6 acido/round ad attraversarle, evaporano in ~10 min
+- **Incendi 🔥** ai lati della Porta Interna (AE-AH e AM-AP, righe 21-22): 1d6 fuoco/round, fumo (occultamento 20% entro 3 m)
 - **Macerie 🪨** alle brecce: terreno difficile, copertura +4 CA
 
 ### 🎯 EVACUAZIONE TIMELINE:
 - **90 nani ÷ 5/round = 18 round** minimi alla bocca del tunnel
-- **Orchi a contatto ~round 3** (sud); i fiancheggiatori (est/ovest) premono dai lati dal round 2
+- **Orchi a contatto ~round 4** (sud: la scala, poi dalla porta all'arco sud 12 m); i fiancheggiatori (est/ovest) premono dai lati dal round 2
 - **Servono ~15 round di ritardo** mentre l'evacuazione prosegue
 - **Ruoli:** Borin tiene il chokepoint del tunnel · Dara cecchina i capi dalle brecce · Thorin *Muro di Pietra* per tappare una breccia + tiene vivo il Re · Nala *Polvere Luccicante* e instrada la colonna
 
 ### 🌍 AMBIENTE (companion — regole, non prosa)
 | Elemento | Dove | Effetto meccanico 3.5 |
 |---|---|---|
-| Statua-meccanismo 🗿 | Q-T/02-04 | For CD 20 o Storia CD 15 per spingerla → rivela il tunnel |
-| Tunnel segreto 🚪 | R-S/01 | 5 nani/round in fila indiana |
-| Cancello sud sfondato 🪨 | O-Z/37-39 | breccia principale: terreno difficile, l'orda entra qui |
-| Brecce est/ovest 🪨 | AL-AN e A-C / 16-25 | seconde vie d'ingresso: terreno difficile, copertura +4 CA |
-| Pozze d'acido 💀 | K12, AC14, O27, Z26 | 1d6 acido/round; evaporano in ~10 min |
-| Incendi 🔥 | R-W/34-36 | 1d6 fuoco/round; fumo: occultamento 20% entro 3 m |
+| Statua-meccanismo 🗿 | AC-AD/05-06 | For CD 20 o Storia CD 15 per spingerla → rivela il tunnel |
+| Tunnel segreto ❔ | AC03 | 5 nani/round in fila indiana; scende al Cuore |
+| Porta Interna sfondata 🪵 | AI-AL/24-25 | breccia principale: terreno difficile, l'orda entra qui |
+| Brecce est/ovest 🪨 | BO-BR e C-F / 13-18 | seconde vie d'ingresso: terreno difficile, copertura +4 CA |
+| Bastioni nord B1, B2 🔳 | A-F e BO-BT / 04-11 | +120 m, 20 m sopra il cortile; B2 è la torre nord della fortezza del 372; i balestrieri rimasti coprono la ritirata e scendono per ultimi |
+| Scale della scarpa 🪜 | O-AH e AM-BF / 26-27 | 3 m di larghezza, metà velocità; chi cade dal lato aperto fa un volo fino a 20 m (1d6 ogni 3 m di caduta, SRD: fino a 6d6 dal punto più alto) |
+| Scarpa 🏰 | P-BE / 28 | parete di 20 m: si scala solo con corde (Scalare CD 25) |
+| Pozze d'acido 💀 | Q10, AS13, Y19, BA17 | 1d6 acido/round; evaporano in ~10 min |
+| Incendi 🔥 | AE-AH e AM-AP / 21-22 | 1d6 fuoco/round; fumo: occultamento 20% entro 3 m |
 
 ### ⚔️ TATTICHE (l'orda che ha sfondato)
-- **Tre fronti simultanei:** la massa dal cancello sud (frontale) mentre i fiancheggiatori dalle brecce est/ovest cercano di rompere l'anello e raggiungere il Re/portatori.
+- **Tre fronti simultanei:** la massa dalla Porta Interna (frontale) mentre i fiancheggiatori dalle brecce est/ovest cercano di rompere l'anello e raggiungere il Re/portatori.
 - **Bloodlust:** nessuna resa, inseguimento aggressivo (30 m/round); puntano il nucleo e i portatori per fermare l'evacuazione.
 - **Contromosse naniche:** tappare UNA breccia con *Muro di Pietra*/*Barriera di Lame* dimezza i fronti; crolli di macerie improvvisati (Ingegneria CD 15 → 2d6 area); cecchinaggio dei capi per rallentare l'avanzata.
 - **Il vero avversario è il tempo,** non i singoli orchi: ogni round guadagnato = 5 nani in salvo.
@@ -153,16 +168,17 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stato | Trigger | Cosa cambia sulla griglia | Effetto |
 |---|---|---|---|
 | A — Statua chiusa | — | tunnel non ancora aperto | l'anello regge, ma nessuno evacua |
-| B — Tunnel aperto | statua spinta (For 20 / Storia 15) | apertura R-S/01 attiva | evacuazione a 5/round |
-| C — Sfondamento | round 2-3 | orchi dentro dai tre fronti | difesa dell'anello + brecce |
+| B — Tunnel aperto | statua spinta (For 20 / Storia 15) | apertura AC03 attiva | evacuazione a 5/round |
+| C — Sfondamento | round 2-4 | orchi dentro dai tre fronti (dalle brecce al round 2, dalla scala al 4) | difesa dell'anello + brecce |
 | D — Fronte ridotto | *Muro/crollo* su una breccia | una via chiusa | pressione dimezzata, evacuazione prosegue |
-| E — Esito | round ~18 | — | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
+| E — Esito | round ~18 | gli orchi sfondano la porta dell'atrio (AI-AL03) e prendono la cittadella vuota | ✅ tutti 90 (Re salvo) · ⚠ 80-89 (10 sacrificati) · ❌ <80 (rischio TPK, campagna a rischio) |
 
 > Esiti aperti (D13): quanti nani si salvano dipende dai dadi e da quanto si rallentano i tre fronti, non da un copione.
 
 ## MAPPA 3Y REVISED: IL PONTE SOSPESO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map02_mappa-3y-revised-il-ponte-sospeso-retroguardia.svg` (rigenerare dopo ogni modifica)
 **Dimensioni:** 50m × 40m (33 colonne × 27 righe, 1,5 m/quadretto)
+**Contratto:** `fortezza-json/HF-3Y-ponte-sospeso.json`
 **Incontro:** retroguardia a strozzatura — ondate di inseguitori (30 orchi/hobgoblin, +1 ondata ogni 1d4 round)
 **Quando si usa:** subito dopo l'evacuazione (MAPPA H3-1), prima dell'Incrocio Silenzioso (MAPPA 3Z REVISED). Master narrativo: `Atlante-Hammerfist-Mappe-COMPLETE.md` → MAPPA 3Y
 
@@ -172,58 +188,67 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ```
 MAPPA 3Y REVISED: Il Ponte Sospeso (retroguardia)
+DIMENSIONI: 33 colonne × 27 righe · 1,5 m/quadretto
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG
-01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🚪 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-02 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-03 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 ⚫ 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-04 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-05 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-06 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-07 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-08 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-09 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-10 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-11 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-12 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-13 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-14 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🕳 🌉 🌉 🕳 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-15 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-16 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-17 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-18 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🔵 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-19 🏰 🏰 🏰 🏰 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🏰 🏰 🏰 🏰
-20 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-21 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-22 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-23 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-24 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-25 🏰 🏰 🏰 🏰 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-26 🏰 🏰 🏰 🏰 🟫 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟫 🟫 🟫 🏰 🏰 🏰 🏰
-27 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+01 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+02 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+03 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+04 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+05 ⛰ ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ ⛰
+06 ⛰ ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🪨 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🪨 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ ⛰
+07 ⛰ ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 ⛰ ⛰ ⛰ ⛰
+08 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+09 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+10 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+11 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+12 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+13 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+14 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🕳 🌉 🌉 🕳 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+15 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+16 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+17 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+18 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🔵 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+19 ⛰ ⛰ ⛰ ⛰ 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🌉 🌉 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 🟥 ⛰ ⛰ ⛰ ⛰
+20 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+21 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+22 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+23 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+24 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+25 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+26 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+27 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 
 @north N
-@mark 1 ; Q18 ; Borin Ferropugno (Ftr)
+@tipo tattica caverna
+@mark 1 ; Q18 ; Borin Ferropugno (Ftr), testa di ponte sud
 @mark 2 ; M5 ; Dara Occhiolesto (Rgr)
 @mark 3 ; U5 ; Thorin Runaforte (Clr)
 @mark 4 ; Q4 ; Nala Cantapietre (Brd)
-@mark 5 ; P4 ; Colonna superstiti (con Re Thorek su barella) (-)
-@mark 6 ; P3 ; Re Thorek XIII (barella) (8 PF, morente)
-@mark 7 ; Q26 ; Inseguitori (prima ondata) (Orchi/Hobgoblin GS 1/2-1)
+@mark 5 ; M4 ; Colonna superstiti in marcia (85 nani, un quadretto ogni quattro)
+@mark 6 ; S4 ; Colonna superstiti in marcia
+@mark 7 ; P4 ; Colonna superstiti, i portatori
+@mark 8 ; P3 ; Re Thorek XIII sulla barella (8 PF, morente)
+@mark 9 ; P25 ; Inseguitori, prima ondata (Orchi/Hobgoblin) (GS 1/2-1)
 @path Colonna nanica → uscita nord (verso 3Z) ; Q8 Q3 Q1 ; #2c8c3c
-@path Spinta inseguitori → ponte ; K26 Q20 Q13 ; #d62828
-@tipo tattica caverna
+@path Spinta inseguitori → ponte ; I26 Q21 Q14 ; #d62828
+@zone Q10-R19 ; Ponte di pietra, 15 × 3 m, senza parapetti
+@zone F5-H7 ; Colonna di roccia, sponda nord
+@zone Z5-AB7 ; Colonna di roccia, sponda nord
+@zone I20-K22 ; Colonna di roccia, sponda sud
+@zone W20-Y22 ; Colonna di roccia, sponda sud
 ```
 
 ### 📍 POSIZIONI PRECISE:
 - **Borin:** Q18 (testa di ponte sud — 1-contro-1 forzato, nessun fiancheggiamento possibile)
 - **Dara:** M05 (sponda nord, dietro roccia 🪨 +4 CA — fuoco d'arco sul ponte)
 - **Thorin:** U05 (sponda nord, dietro roccia — cure a distanza su Borin)
-- **Nala:** Q04 (instrada la colonna verso l'uscita nord 🚪 Q01, in fila indiana)
-- **Colonna (85 superstiti + Re Thorek ⚫ P03 su barella):** righe 03-04, in marcia
+- **Nala:** Q04 (instrada la colonna verso l'uscita nord P-R 01, il tunnel largo 4,5 m che porta all'Incrocio)
+- **Colonna (85 superstiti + Re Thorek P03 su barella):** righe 03-04, in marcia; i quadretti disegnati sono la testa della colonna, il resto è già nel tunnel o sul ponte
+- **Colonne di roccia ⛰** F5-H7 e Z5-AB7 (sponda nord), I20-K22 e W20-Y22 (sponda sud): ci si gira attorno, e chi tiene la sponda sud ha dove ripararsi dai tiri
 - **Inseguitori (🔴 30 per ondata):** righe 25-26, dai tunnel sud
 
 ### 🔍 DISTANZE CHIAVE:
-- Ponte: **13,5 m di lunghezza (9 quadretti), 3 m di larghezza (2 quadretti)** — righe 10-19
+- Ponte: **15 m di lunghezza (10 quadretti), 3 m di larghezza (2 quadretti)** — righe 10-19
 - Sponda sud → testa di ponte: 6-9 m (1 round di carica per gli inseguitori)
 - Rocce nord → centro ponte: ~13 m (tiro corto per Dara, nessuna penalità)
 
@@ -253,85 +278,101 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ## MAPPA 3Z REVISED: L'INCROCIO SILENZIOSO - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map03_mappa-3z-revised-l-incrocio-silenzioso-imboscata.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto)
-**Incontro:** imboscata — 8 Bugbear Assassini (Rog5/Asn2, GS 7 cad.) + 7 hobgoblin di diversione (+ eventuali 30 orchi al round 4)
+**Dimensioni:** 50m × 50m (33 colonne × 33 righe, 1,5 m/quadretto); la caverna è un ottagono di 40 m da parete a parete `[INFERRED]`, sei tunnel larghi 4,5 m (il nord-ovest e il nord-est 3 m)
+**Contratto:** `fortezza-json/HF-3Z-incrocio-silenzioso.json` (si rigenera con `compile_map_json.py`)
+**Incontro:** imboscata — 8 Bugbear Assassini (Rog5/Asn2, GS 9 cad., scheda `Bestiario/mostri/bugbear-assassino-ladro5-assassino2-cr9.md`) + 7 hobgoblin di diversione (+ eventuali 30 orchi al round 4)
 **Quando si usa:** ~30 minuti dopo l'ingresso nei tunnel (guida narrativa completa: `../ARC08-01-GUIDA-DM.md` § Incontro 2F — read-aloud, sequenza round-per-round, esiti)
 
-### 🎯 COMPRENSIONE: sei bocche di tunnel intorno all'incrocio; i nani sono l'anello al centro, gli assassini sono già nelle ombre di EST e OVEST. Il silenzio È la trappola.
+### 🎯 COMPRENSIONE: sei bocche di tunnel intorno all'incrocio; i nani fanno quadrato attorno al Pilastro dell'Incrocio, la colonna di roccia viva al centro; gli assassini sono già nelle ombre dei tunnel EST e OVEST, a 6-9 m dall'anello. Il silenzio È la trappola. Attorno al pilastro e fra le stalagmiti si gira: chi cade dall'anello ha dove arretrare.
 
 ### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (33×33)
 
 ```
 MAPPA 3Z REVISED: L'Incrocio Silenzioso (imboscata)
+DIMENSIONI: 33 colonne × 33 righe · 1,5 m/quadretto
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG
-01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🚪 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-04 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-05 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-06 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🚪 🟫 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🚪 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-07 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-08 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-09 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-10 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-11 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-12 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🪨 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-13 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-14 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-15 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🔵 🔵 🏮 🟫 🟫 🟫 🔵 🟫 🟫 🏮 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-16 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🟫 🔵 🔵 🟫 🔵 🔵 🟫 🟫 🔵 🔵 🟫 🟫 🔵 🔵 🟫 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-17 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🟫 🔵 🔵 🪨 🔵 🔵 🔵 🟫 🔵 🔵 🪨 🟫 🔵 🔵 🟫 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-18 🚪 🟫 🟫 🟫 💀 🟫 🟫 🔴 🔴 🟫 🔵 🔵 🟫 🔵 🔵 ⚫ 🟫 🔵 🔵 🟫 🟫 🔵 🔵 🟫 🔴 🔴 🟫 🟫 💀 🟫 🟫 🟫 🚪
-19 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔴 🔴 🟫 🔵 🔵 🟫 🔵 🔵 🔵 🪨 🔵 🔵 🟫 🟫 🔵 🔵 🟫 🔴 🔴 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-20 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🏮 🟫 🟫 🟫 🟫 🟫 🟫 🏮 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫
-21 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🪨 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-22 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰
-23 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-24 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-25 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-26 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-27 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-28 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-29 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-30 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-31 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-32 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-33 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🚪 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+01 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤
+02 🟤 🟤 🔴 🔴 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤
+03 🟤 🟤 🔴 🔴 🔴 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤
+04 ⛰ 🟤 🟤 🟤 🔴 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 ⛰
+05 ⛰ ⛰ 🟤 🟤 🟤 ⚫ 🟤 ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰
+06 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+07 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔺 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔺 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+08 ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🔺 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰
+09 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+10 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+11 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+12 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🏮 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🏮 🟤 🔵 🟤 🟤 🔺 🟤 🟤 ⛰ ⛰ ⛰
+13 ⛰ ⛰ ⛰ 🟤 🟤 🔺 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+14 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+15 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🔵 🟤 🔵 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+16 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 ⛰ ⛰ ⛰ 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🔴 🔴 🟤
+17 🟤 🔴 🔴 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 ⛰ ⛰ ⛰ 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🔴 🔴 🟤
+18 🟤 🔴 🔴 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 ⛰ ⛰ ⛰ 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤
+19 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+20 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+21 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+22 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🔺 🟤 🔵 🟤 🏮 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🏮 🟤 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+23 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔵 🟤 🔺 🟤 🟤 🟤 ⛰ ⛰ ⛰
+24 ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰
+25 ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰
+26 ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰
+27 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+28 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🔺 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+29 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+30 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+31 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+32 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+33 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ 🟤 🟤 🟤 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
 
 @north N
-@mark 1 ; Q14 ; Anello esterno NORD (scudi in fuori) (Guerrieri veterani)
-@mark 2 ; Q23 ; Anello esterno SUD (Guerrieri veterani)
-@mark 3 ; L18 ; Anello esterno OVEST (Guerrieri veterani)
-@mark 4 ; W18 ; Anello esterno EST (Guerrieri veterani)
-@mark 5 ; O18 ; Balestrieri (cerchio interno, ovest) (Balestrieri)
-@mark 6 ; S18 ; Balestrieri (cerchio interno, est) (Balestrieri)
-@mark 7 ; P18 ; Re Thorek XIII (barella) (8 PF, morente)
-@mark 8 ; P17 ; Borin Ferropugno (Ftr)
-@mark 9 ; Q15 ; Dara Occhiolesto (Rgr)
-@mark 10 ; P19 ; Thorin Runaforte (Clr)
-@mark 11 ; O17 ; Nala Cantapietre (Brd)
-@mark 12 ; Z18 ; Bugbear Assassini (Est) (Rog5/Asn2, GS 7 cad.)
-@mark 13 ; I18 ; Bugbear Assassini (Ovest) (Rog5/Asn2, GS 7 cad.)
-@mark 14 ; H9 ; Hobgoblin di diversione (1 Sergente + 6 Guerrieri)
-@path Round 1: diversione hobgoblin (NO→centro) ; H8 L13 O15 ; #e0a100
-@path Round 2: bugbear EST → Re Thorek ; Z18 U18 R18 ; #d62828
-@path Round 2: bugbear OVEST → comandanti ; I18 M18 O18 ; #d62828
-@path Round 4 (eventuale): 30 orchi inseguitori dal SUD ; P32 P27 P25 ; #8c2fb8
 @tipo tattica caverna
+@mark 1 ; Q10 ; Anello esterno NORD, scudi in fuori (Guerrieri veterani)
+@mark 2 ; Q24 ; Anello esterno SUD (Guerrieri veterani)
+@mark 3 ; I17 ; Anello esterno OVEST (Guerrieri veterani)
+@mark 4 ; Y17 ; Anello esterno EST (Guerrieri veterani)
+@mark 5 ; Q14 ; Balestrieri, cerchio interno NORD
+@mark 6 ; Q20 ; Balestrieri, cerchio interno SUD
+@mark 7 ; N17 ; Balestrieri, cerchio interno OVEST
+@mark 8 ; T17 ; Balestrieri, cerchio interno EST
+@mark 9 ; Q19 ; Re Thorek XIII sulla barella (8 PF, morente)
+@mark 10 ; P19 ; Portatori della barella
+@mark 11 ; R19 ; Portatori della barella
+@mark 12 ; Q15 ; Borin Ferropugno (Ftr)
+@mark 13 ; O19 ; Thorin Runaforte (Clr), accanto al Re
+@mark 14 ; O15 ; Nala Cantapietre (Brd)
+@mark 15 ; L9 ; Dara Occhiolesto (Rgr), ai piedi della stalagmite S5
+@mark 16 ; AF17 ; Bugbear Assassini, tunnel EST (Rog5/Asn2) (GS 9 cad.)
+@mark 17 ; C18 ; Bugbear Assassini, tunnel OVEST (Rog5/Asn2) (GS 9 cad.)
+@mark 18 ; F5 ; Sergente hobgoblin, tunnel NORD-OVEST
+@mark 19 ; D3 ; Hobgoblin di diversione, tunnel NORD-OVEST
+@mark 20 ; E4 ; Hobgoblin di diversione, tunnel NORD-OVEST
+@mark 21 ; E3 ; Hobgoblin di diversione, tunnel NORD-OVEST
+@path Round 1: diversione hobgoblin (NO → anello nord) ; E4 I8 M9 ; #e0a100
+@path Round 2: bugbear EST → Re Thorek ; AE17 Z18 U19 R20 ; #d62828
+@path Round 2: bugbear OVEST → comandanti ; C18 H18 N17 ; #d62828
+@path Round 4 (eventuale): 30 orchi inseguitori dal SUD ; Q33 Q29 Q25 ; #8c2fb8
+@zone P16-R18 ; Pilastro dell'Incrocio, roccia viva incisa di rune: il giro attorno
 ```
 
 ### 📍 POSIZIONI PRECISE:
-- **Re Thorek ⚫ P18** (barella, 8 PF) — bersaglio dei 4 bugbear EST
-- **Borin P17** (la sua **Osservare CD 25 al round 1** è la migliore occasione di scoprire l'imboscata → azione preparata)
-- **Dara Q15** (sulla stalagmite S5: Scalare CD 10, +2 circostanza a Osservare; Nemico Prescelto goblinoidi +4; Tiro Preciso)
-- **Thorin P19** (fianco del Re: *Barriera di Lame* per sigillare un tunnel; poi cure di massa; priorità assoluta = Thorek vivo)
-- **Nala O17** (*Polvere Luccicante* CD 16 per rivelare i bugbear; Controcanto; Ispirare Coraggio +2)
-- **Stalagmiti S1-S8** (copertura +4 CA): S1 N13 · S2 Q13 · S5 P12 · S7 M17 · S8 T17 · S3 N19 · S4 Q19 · S6 P21
-- **6 tunnel:** NORD (uscita corretta) · SUD (arrivo/inseguitori) · EST+OVEST (4+4 bugbear nascosti) · NORD-OVEST (7 hobgoblin) · NORD-EST (vuoto, falso allarme)
+- **Anello esterno, 60 guerrieri veterani** (scudi in fuori): righe 10 e 24 (colonne I-Y) e colonne I e Y (righe 11-23). Un quadretto per nano: l'anello è un quadrato di 25 m di lato.
+- **Cerchio interno, 20 balestrieri:** righe 14 e 20 (colonne N-T) e colonne N e T (righe 15-19), a 7 m dall'anello: sparano sopra le teste dei veterani.
+- **Pilastro dell'Incrocio ⛰ P16-R18:** colonna di roccia viva di 4,5 m, incisa di rune di direzione; copertura totale, e il giro attorno al Re.
+- **Re Thorek Q19** (barella, 8 PF) fra i due portatori P19 e R19, a sud del pilastro — bersaglio dei 4 bugbear EST
+- **Borin Q15** (a nord del pilastro: la sua **Osservare CD 25 al round 1** è la migliore occasione di scoprire l'imboscata → azione preparata)
+- **Thorin O19** (fianco del Re: *Barriera di Lame* per sigillare un tunnel; poi cure di massa; priorità assoluta = Thorek vivo)
+- **Nala O15** (*Polvere Luccicante* CD 16 per rivelare i bugbear; Controcanto; Ispirare Coraggio +2)
+- **Dara L9**, ai piedi della stalagmite S5 (L7): ci sale con Scalare CD 10, +2 circostanza a Osservare; Nemico Prescelto goblinoidi +4; Tiro Preciso
+- **Stalagmiti S1-S8 🔺** (copertura, 2-3 m): S1 L8 · S5 L7 (scalabile) · S2 V7 · S3 F13 · S4 AB12 · S6 G22 · S7 AA23 · S8 U28
+- **Torce 🏮** piantate in K12, W12, K22, W22 (le altre 16 sono in mano ai nani)
+- **Bugbear EST** AE16-AF17 e **OVEST** B17-C18: nell'ombra della bocca del tunnel, 6-9 m dall'anello
+- **Hobgoblin di diversione:** 6 guerrieri C2-E4 e il sergente ⚫ F5, nel tunnel nord-ovest
+- **6 tunnel:** NORD P-R 01-03 (uscita corretta, verso il Cuore) · SUD P-R 30-33 (arrivo/inseguitori) · OVEST A-D 16-18 · EST AD-AG 16-18 (4+4 bugbear) · NORD-OVEST A01-F05 (7 hobgoblin) · NORD-EST AE01-AA06 (vuoto, falso allarme)
 
 ### ⚔️ SEQUENZA DELL'IMBOSCATA (round per round):
 1. **Round 1 — LA DIVERSIONE:** i 7 hobgoblin caricano urlando da NO (rotta gialla); l'anello nanico si sposta verso la minaccia visibile
-2. **Round 2 — LE LAME NEL BUIO:** gli 8 bugbear emergono simultanei da EST e OVEST (rotte rosse): **Attacco Mortale** (Tempra CD 16 o paralisi 1d6+2) + **Furtivo +5d6** su chiunque sia impreparato — a meno che Osservare CD 25 al round 1 non li abbia rivelati
+2. **Round 2 — LE LAME NEL BUIO:** gli 8 bugbear emergono simultanei da EST e OVEST (rotte rosse): **Attacco Mortale** (Tempra CD 16 o paralisi 1d6+2) + **Furtivo +4d6** su chiunque sia impreparato — a meno che Osservare CD 25 al round 1 non li abbia rivelati
 3. **Round 3-5 — LA MISCHIA NEL CERCHIO:** servono gli **ordini dei PG** (azione gratuita di comando o Ispirare Coraggio) o la formazione si sgretola
 4. **Round 4 (eventuale):** 30 orchi inseguitori dal SUD (rotta viola) se i PG non li hanno rallentati
 5. **Round 6+ — RISOLUZIONE:** con più di 4 bugbear caduti, i superstiti si dileguano (nuova prova di Nascondersi); gli hobgoblin combattono fino alla morte. Costo: 5-15 nani → `../ARC08-03-REGISTRO-PERDITE.md`
@@ -339,9 +380,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 ### 🌍 AMBIENTE
 | Elemento | Dove | Effetto |
 |---|---|---|
-| Torce naniche 🏮 | M15, T15, M20, T20 (20 torce in tutto) | luce 6 m ciascuna; OLTRE la luce: oscurità totale nei tunnel |
-| Ombre dei tunnel 💀 | bocche E e O | Bugbear Nascondersi +12 → **Osservare CD 25** per vederli PRIMA |
-| Stalagmiti 🪨 | S1-S8 | copertura +4 CA; S5 scalabile (CD 10, +2 Osservare) |
+| Torce naniche 🏮 | K12, W12, K22, W22 piantate, 16 in mano (20 in tutto) | luce 6 m ciascuna; OLTRE la luce: oscurità totale nei tunnel |
+| Ombre dei tunnel | bocche E e O | Bugbear Nascondersi +17 → **Osservare CD 25** per vederli PRIMA |
+| Stalagmiti 🔺 | S1-S8 | copertura +4 CA; S5 scalabile (CD 10, +2 Osservare) |
+| Pilastro dell'Incrocio ⛰ | P16-R18 | copertura totale; ci si gira attorno |
 | Tunnel | 6 bocche | larghezza 3-4,5 m: *Barriera di Lame* ne sigilla una intera |
 
 ### 🔄 EVOLUZIONE
@@ -361,27 +403,27 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 **Incontro:** Incontri 3A/3B — ultima resistenza a ondate + APPARIZIONE DEI RUMBLING STONES (round 9-10, come la guida)
 **Quando si usa:** Sessione 3 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 3; la "MAPPA 3A: Caverna Sacra" e la "MAPPA 3B: La Svolta" della guida sono gli stati A e F di questa griglia)
 
-### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, unico ingresso dalla porta di mithral a nord. Le ondate entrano dal tunnel; al round 9-10 la Sfera dorata esplode sopra l'altare.
+### 🎯 COMPRENSIONE: caverna-cattedrale con l'altare di Moradin al centro (+3 m), 10 statue di re ancestrali in cerchio, quattro pilastri che reggono la volta; l'ingresso è la porta di mithral a nord, e dal fondo esce solo il condotto della sorgente, stretto per un nano carponi `[INFERRED]`. Le ondate entrano dal tunnel; al round 9-10 la Sfera dorata esplode sopra l'altare.
 
 ### VISTA 1: GRIGLIA COMPLETA CON COORDINATE (67×53)
 
 ```
 MAPPA 5 REVISED: Il Cuore della Montagna (ultima resistenza)
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH BI BJ BK BL BM BN BO
-01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 🟫 ⚫ 🟫 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-04 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🔴 🔴 🔴 🔴 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-05 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🚪 🚪 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+01 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟫 🟫 ⚫ 🟫 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+02 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+03 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+04 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔴 🔴 🔴 🔴 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+05 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 06 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 07 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 08 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 09 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 10 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 11 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⚡ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-12 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-13 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-14 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+12 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+13 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+14 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 15 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 16 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 17 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -396,7 +438,7 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 26 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🪨 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 27 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ 🟫 🟫 🔵 🟫 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ✨ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟫 🔵 🟫 🟫 ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 28 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔮 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-29 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⚫ 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+29 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 30 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 31 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 32 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🔵 🔵 🔵 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
@@ -409,18 +451,18 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 39 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🗿 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 40 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 41 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-42 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-43 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-44 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+42 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+43 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+44 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🟪 🟪 🟪 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 45 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 46 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 47 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 48 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-49 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-50 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-51 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-52 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
-53 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+49 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 💧 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+50 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 💧 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+51 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 💧 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+52 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 💧 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
+53 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 💧 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰
 
 @north N
 @mark 1 ; AH20 ; Anello esterno NORD (Guerrieri)
@@ -445,16 +487,25 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Ondata 3: bugbear in aggiramento est ; AJ5 AQ11 AQ18 ; #8c2fb8
 @path Grimjaw e le guardie (round 12): dalla porta all'anello nord ; AG2 AG6 AG12 AG18 ; #1a1a1a
 @zone AF26-AJ30 ; Altare di Moradin: piattaforma circolare 6 m, +3 m, pietra nera con rune d'oro
+@zone U12-W14 ; Pilastro della volta (4,5 m di lato)
+@zone AQ12-AS14 ; Pilastro della volta
+@zone U42-W44 ; Pilastro della volta
+@zone AQ42-AS44 ; Pilastro della volta
+@zone AH49-AH53 ; Condotto della sorgente: 1,5 m, acqua alla caviglia, esce nei tunnel bassi
+@deroga dimensioni/oltre-tavolo ; la cattedrale è grande davvero (100 × 80 m): si stende il quadrato attorno all'altare, righe 15-42, e il resto è la strada delle ondate
+@deroga oggetti/porta-enorme ; la Porta di Mithral è un portale cerimoniale a due battenti largo 6 m, quella del modulo: l'imbuto è voluto
 @tipo tattica interni
 ```
 
 ### 📍 POSIZIONI PRECISE:
 - **Altare di Moradin:** piattaforma 6 m, +3 m — AF26-AJ30; punto di manifestazione ✨ AH27 (3 m sopra l'altare)
-- **Re Thorek ⚫ AH29** (8 PF, avvelenato dall'acido di Fauci: una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per magia; al terzo fallimento muore. La cura segue l'SRD: *neutralizzare veleno* o *guarigione* fanno finire l'avvelenamento e fermano le prove `[CANONE — DM 2026-10-19, D12]`)
+- **Re Thorek AH29** (8 PF, avvelenato dall'acido di Fauci: una prova di Guarigione CD 25 a ogni round finché nessuno lo cura per magia; al terzo fallimento muore. La cura segue l'SRD: *neutralizzare veleno* o *guarigione* fanno finire l'avvelenamento e fermano le prove `[CANONE — DM 2026-10-19, D12]`)
 - **Madre Dana AG30** (ha speso quasi tutto sulle mura: 20 pf e un solo *Muro di Pietra* per tutto il 3B, scheda nella guida; niente *guarigione* al round 1. La sua scheda completa vale per Dana riposata, cioè il mattino della battaglia `[CANONE — DM 2026-10-18]`, confermato dal D12 `[CANONE — DM 2026-10-19, D12]`) · **Cantitrici AJ30-AL30** (se sopravvissute)
 - **Borin AF29** (difesa altare) · **Thorin AI29** (accanto all'altare: +2 LI sacro) · **Dara BA27** (terrazzo EST +1,5 m) · **Nala O27** (terrazzo OVEST)
 - **Anello difensivo:** 60 guerrieri (4 blocchi N/S/E/O) + 20 balestrieri (2 blocchi) + nucleo leader
-- **Porta di Mithral 🚪 AE05-AJ05** (unico ingresso, ward collassati) — tunnel di 10 m alle spalle
+- **Porta di Mithral 🚪 AF05-AI05** (6 m a due battenti, ward collassati; l'unico ingresso per un esercito) — tunnel di 6 m di larghezza e 10 m di lunghezza alle spalle
+- **Pilastri della volta 🟪** U12-W14, AQ12-AS14, U42-W44, AQ42-AS44: 4,5 m di lato, copertura totale; gli assassini dell'ondata 3 li usano per aggirare l'anello
+- **Condotto della sorgente 💧 AH49-AH53** `[INFERRED]`: largo 1,5 m, acqua alla caviglia, esce nei tunnel bassi. Ci passa una fila indiana: è la via di fuga se l'anello cede, e la strada di un terzo fianco se il DM la dà ai bugbear
 - **10 statue 🗿** in cerchio (~20 m dall'altare): occhi di rubino
 
 ### ⚔️ ONDATE (agganciate alle unità in griglia, rotte tratteggiate):
@@ -477,7 +528,9 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 | Stalattiti bioluminescenti | soffitto 40 m | luce piena OVUNQUE: niente Nascondersi generico senza copertura; incantesimi ad area sul soffitto = crollo stalattiti 4d6, raggio 3 m, Riflessi CD 18 |
 | Altare +3 m | AF26-AJ30 | posizione dominante: +1 attacchi in mischia dall'alto |
 | Terrazzi E/O +1,5 m | M25-P27 e AZ25-BC27 | tiro sopraelevato (+1); stalagmiti = copertura +4 CA |
-| Porta di Mithral | AE05-AJ05 | larga 6 m: le ondate entrano max 4 per round in formazione — imbuto |
+| Porta di Mithral | AF05-AI05 | larga 6 m: le ondate entrano max 4 per round in formazione — imbuto |
+| Pilastri della volta 🟪 | U12-W14, AQ12-AS14, U42-W44, AQ42-AS44 | copertura totale; si gira attorno |
+| Condotto della sorgente 💧 | AH49-AH53 | 1,5 m, fila indiana, acqua alla caviglia (terreno difficile) |
 | Tunnel nord | 10 m dietro la porta | *Barriera di Lame*/*Muro di Pietra* possono tapparlo per 1-2 ondate |
 
 ### 🔄 EVOLUZIONE
@@ -498,9 +551,10 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 | Quota | Chi/cosa | Meccanica |
 |---|---|---|
-| +15 m | Base della fortezza / cancello riconquistato (righe 01-03 della MAPPA 4) | punto di partenza della carica |
-| +15 → 0 m | Pendio 15% su 120 m orizzontali | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
-| 0 m | Fondovalle: resti Mano Rossa (~400) | morale −6 dopo il Cuore della Montagna |
+| +80 m (950 m s.l.m. `[INFERRED]`) | Fronte sud della fortezza / cancello riconquistato, fossato e ponte (righe 01-04 della MAPPA 4) | punto di partenza della carica |
+| +80 → +50 m | Pendio di circa il 27% fra le mura e la linea hobgoblin (riga 39, ~110 m più a sud) `[INFERRED]`; la strada a tornanti larga 6 m scende al 15% e la carica la taglia di traverso sul prato | **carica in discesa:** velocità +50% (contatto in 2 round invece di 3); carica +2 al tiro per colpire e nessun bonus ai danni (SRD), altura +1; i bonus morali non si sommano, vale il più alto (guida § Carica, totale +7, +11 con la benedizione sacra); nemici in mentalità di ritirata **−2 CA** |
+| +50 → +20 m | Resti Mano Rossa (~400) schierati sul pendio, righe 39-55; la riga 68 è a circa +20 m | morale −6 dopo il Cuore della Montagna |
+| 0 m (870 m s.l.m. `[INFERRED]`) | La piana, 300 m a sud delle mura, fuori mappa; gli accampamenti dell'orda stanno a 500 m-1 km dalle mura | dove finisce la rotta |
 | 0-60 m (verticale) | Battaglia aerea | vedi VISTA ALTITUDINI nella MAPPA 4 REVISED |
 
 **Preparazione (read-aloud e discorso di Re Thorek):** guida § Sessione 4 — "FRATELLI! Oggi non moriamo — oggi VINCIAMO!" (+4 morale; non si somma ad altri bonus morali, vale il più alto: SRD).
@@ -509,7 +563,8 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 
 ## MAPPA 4 REVISED: BATTAGLIA FINALE TERRESTRE + AEREA - ULTRA CHIARA
 **SVG**: `rendered/Hammerfist-L3-REVISED-Ultra-Clear_map05_mappa-4-revised-battaglia-finale-terrestre-caric.svg` (rigenerare dopo ogni modifica)
-**Dimensioni:** 180m × 204m (60 colonne × 68 righe · 3 m/quadretto) — **scala in deroga 3 m/quadretto (A4)**
+**Dimensioni:** 180m × 204m (60 colonne × 68 righe · 3 m/quadretto) — **mappa strategica** (`@tipo strategica`): la regia della carica, non un tappeto per le miniature
+**Quote:** le mura a 950 m s.l.m., +80 m sulla piana; la linea hobgoblin a ~920 m; il fondo della mappa a ~890 m `[INFERRED]`. La strada a tornanti 🟫 scende dal ponte (AD05) con i gomiti in AW16, M35, AW54 e arriva alla riga 68 in AD
   ⚠️ Regia della carica finale ("MAPPA 4A/4B" della guida): per il duello col drago a terra passare a scala tattica sul punto di crash. Non mischiare quadretti di scale diverse.
 **Incontro:** Incontri 4A + 4B — carica del cuneo + Fauci di Palude + Gorthak
 **Quando si usa:** Sessione 4, round 1-23 (guida: `../ARC08-01-GUIDA-DM.md` § Sessione 4)
@@ -522,74 +577,74 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 MAPPA 4 REVISED: Battaglia Finale Terrestre (carica in discesa)
 DIMENSIONI: 60 colonne × 68 righe · 3 m/quadretto
 COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF AG AH AI AJ AK AL AM AN AO AP AQ AR AS AT AU AV AW AX AY AZ BA BB BC BD BE BF BG BH
-01 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
-02 🟩 🟩 🟩 🟩 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🟩 🟩 🟩 🟩
-03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+01 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗼 🗼 🗼 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🔳 🔳 🔳 🔳 🔳 🟫 🟫 🔳 🔳 🔳 🔳 🔳 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗼 🗼 🗼 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+02 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🗼 🗼 🗼 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🚪 🚪 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🏰 🗼 🗼 🗼 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+03 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🌉 🌉 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+04 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🌉 🌉 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟦 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 05 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🔵 🔵 🔵 ⚫ 🔵 🔵 🔵 🔵 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 06 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+07 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+08 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟫 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 09 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 10 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🔵 🔵 🔵 🔵 🔵 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-11 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-12 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-13 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-14 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-15 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-16 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-17 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-18 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-19 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-20 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-21 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-22 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-23 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-24 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-25 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-26 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-27 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-28 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-29 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-30 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-31 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-32 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-33 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-34 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-35 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-36 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-37 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚔ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚔ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-38 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-39 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+11 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+12 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+13 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+14 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔵 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+15 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+16 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+17 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+18 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+19 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+20 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+21 🟩 🟩 🟩 🌿 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 ⬇ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+22 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+23 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+24 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+25 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+26 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩
+27 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩
+28 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩
+29 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+30 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+31 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+32 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 ⚡ ⚡ ⚡ ⚡ ⚡ ⚡ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+33 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+34 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+35 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+36 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+37 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 ⚔ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚔ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+38 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+39 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 40 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 41 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-42 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-43 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 ⚫ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-44 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-45 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-46 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-47 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+42 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+43 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 ⚫ 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+44 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+45 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩
+46 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩
+47 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 48 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 49 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🔴 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-50 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-51 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-52 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-53 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-54 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-55 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-56 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-57 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-58 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-59 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-60 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-61 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-62 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
-63 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-64 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-65 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-66 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-67 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
-68 ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰ ⛰
+50 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+51 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+52 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟡 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+53 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+54 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+55 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟣 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+56 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+57 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+58 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+59 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+60 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+61 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+62 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩
+63 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🌿 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+64 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+65 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+66 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🪨 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+67 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
+68 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟫 🟫 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩 🟩
 
 @north N
 @mark 1 ; AD11 ; THORIK - punta del cuneo (PG - Corona di Adamantio, Aegis-Fang)
@@ -612,9 +667,12 @@ COLONNE:  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z AA AB AC AD AE AF 
 @path Ala destra (Hella + 2 Treant + 30) ; AI9 AI37 ; #1d6fd8
 @path Picchiata e presa di Fauci su Thorik (vendetta di sangue) ; G17 AD37 AD31 ; #8c2fb8
 @path Rotta degli orchi verso sud ; AD47 AD65 ; #d62828
-@zone E1-BD2 ; Hammerfist - fronte sud riconquistato (+15 m sul fondovalle)
+@zone N1-AU2 ; Hammerfist - fronte sud riconquistato, 102 m (950 m s.l.m., +80 m sulla piana; misure: tabella MISURE in L2)
 @zone AB30-AG32 ; Zona dove cade Thorik e atterra Fauci (round 20-21)
-@tipo tattica esterno
+@tipo strategica esterno
+@luogo Hammerfist, pendio sud
+@quota 920 m ; s.l.m., la linea hobgoblin alla riga 39
+@dislivello +50 m ; sulla piana, che comincia 300 m a sud delle mura, fuori mappa
 ```
 
 ### 🦅 VISTA ALTITUDINI (battaglia aerea simultanea, 0-60 m):
@@ -644,11 +702,12 @@ Tempesta che si dissolve, gufi che atterrano presso il cancello, ~500 nemici cad
 ### 🌍 AMBIENTE
 | Elemento | Dove | Effetto |
 |---|---|---|
-| Pendio 15% | righe 14-36 | vantaggi di carica (vedi MAPPA 4X REVISED sopra) |
+| Fossato e ponte | col L-AW righe 03-04; ponte AD-AE | il fossato di 6 m resta; il ponte, crollato il Giorno 2, è stato rimesso con travi la notte della riconquista: il cuneo esce in colonna per due e si riforma sotto il fossato (riga 05) |
+| Pendio (~27%) e strada a tornanti 🟫 | tutta la mappa sotto il fossato; la strada larga 6 m, gomiti in AW16, M35, AW54 | vantaggi di carica (vedi MAPPA 4X REVISED sopra); prato aperto, cespugli 🌿 e massi 🪨 sparsi ai margini |
 | Tempesta di Orion (*controllare tempo*) | tutto il campo, raggio 3 miglia | venti (Tempra CD 15 solo per le creature Piccole), pioggia (−4 distanza, +2 Nascondersi); con vento e pioggia insieme è una *tempesta* SRD, dove gli attacchi a distanza con armi sono impossibili. I fulmini sono la Cantata di Tempestas e *chiamare fulmini* di Orion `[CANONE — DM 2026-10-19, D14]` |
-| Occhio della tempesta | sopra i bastioni (righe 01-03) | niente pioggia, vento calmo: gli arcieri alleati che tirano da qui non hanno i malus della tempesta. **Deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]` |
+| Occhio della tempesta | sopra i bastioni (righe 01-02, col N-AU) | niente pioggia, vento calmo: gli arcieri alleati che tirano da qui non hanno i malus della tempesta. **Deroga dichiarata dall'SRD** `[CANONE — DM 2026-10-19, D14]` |
 | Zona crash ⚡ | AB30-AG32 | a fine round 20 ci cade Thorik; dal round 21 il drago a terra, tremore CD 15 entro 9 m |
-| Colline sud ⛰ | righe 63-68 | rotta di fuga: chi la raggiunge esce dalla battaglia |
+| Fondo del pendio | righe 63-68 | rotta di fuga: chi passa la riga 68 scende alla piana ed esce dalla battaglia |
 
 ### 🔄 EVOLUZIONE
 | Stato | Trigger | Cosa cambia | Effetto |

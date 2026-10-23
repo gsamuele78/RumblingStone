@@ -98,6 +98,10 @@ riprendono i loro **PG reali** (Rumbling Stones).
 
 ### 3.1 Cosa sanno i PG di ciò che i pregen hanno visto
 
+I giocatori hanno vissuto i tre giorni dentro lo strappo del Rubino, come
+visione della Corona (`ARC08-15-HANDOUTS-GIOCATORE.md`, handout 0)
+`[CANONE — DM 2026-10-21, D4]`.
+
 I Rumbling Stones **non hanno vissuto** l'assedio — ma **arrivano
 informati**, perché il salto del Rubino porta con sé la memoria della
 battaglia antica *e* perché i bonus del flashback maturano come

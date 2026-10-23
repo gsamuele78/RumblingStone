@@ -1,6 +1,12 @@
 # L11 · Il giro sulle skill di scrittura: i risultati
 
-Il voto è `scripts/voto_scrittura.py`: ogni controllo chiama un rilevatore che
+> **2026-10-23.** Il lotto 7e di PIANO-AVVENTURE-COMMUNITY voleva togliere il
+> banco, perché i suoi controlli sono già dentro `punteggio_mqm.py` e la
+> condizione B-con era al 100% (soffitto). Resta, perché `banco_prosa_locale.py`
+> (ADR-0089) gli fa votare le corse del modello locale. Il rilevatore di
+> «sembra»/«pare» ora vive in `validate_prosa.py` e il banco lo riusa.
+
+Il voto è `voto_scrittura.py`: ogni controllo chiama un rilevatore che
 esiste già nel repo (`misura_craft`, `validate_prosa`) e una norma registrata.
 I casi sono in `casi.json`: dieci, cinque di taratura e cinque di verifica, una
 coppia per genere (apertura, combattimento, dialogo, testo per un giocatore,
