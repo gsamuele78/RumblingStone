@@ -375,8 +375,11 @@ nasce senza rilievi, o con la ragione di ognuno in `plans/domande-developer.json
 `python scripts/coerenza_campagna.py fatti --check plans/coerenza-residui.json …`
 (lotto 7c di AVVENTURE-COMMUNITY) confronta i numeri delle stesse entità fra le
 scene e gli archi: una contraddizione nuova blocca, una risolta si toglie dal
-file dei residui. Il comando `fronti` controlla i file di fronti e orologi
-contro `scripts/schemas/fronti_orologi.schema.json`, quando un arco li scrive.
+file dei residui. Da ARC-08 in poi ogni arco ha anche i suoi fronti e orologi
+in `ARCnn-FRONTI.yaml` nella cartella dell'arco (decisione del DM, 2026-10-23;
+ARC-07 resta com'è): `coerenza_campagna.py fronti` li controlla in CI contro
+`scripts/schemas/fronti_orologi.schema.json`. Un orologio che conta giorni o ore
+lo dichiara in `unita` e tiene la sua durata; gli altri hanno 4, 6 o 8 tacche.
 
 `python scripts/componenti.py --check` (ADR-0074) verifica l'apparato generato
 e le **copie sincronizzate**: un blocco scritto una volta in un file e copiato
