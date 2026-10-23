@@ -18,9 +18,10 @@
 # La versione unica di Python (D7 di AMBIENTE-RIPRODUCIBILE).
 target-version = "py313"
 
-# converters/ è un mondo a parte (AGENTS.md, PRATICHE D9): ruff lo guarda solo
-# se lo si chiede a mano. Gli altri sono generati o di terzi.
-extend-exclude = ["converters", "build", "asset-esterni", "scripts/Old"]
+# converters/ è dentro dal 2026-10-23 (D6 di PIANO-PIATTAFORMA, DM: «D6 b»): i
+# suoi 10 rilievi sono corretti, 3 erano bug veri. Gli esclusi sono generati o
+# di terzi.
+extend-exclude = ["build", "asset-esterni", "scripts/Old"]
 
 [lint]
 select = [

@@ -1,6 +1,6 @@
 # ADR-0099 — La piattaforma di sviluppo ha tre canali, come Debian
 
-**Stato**: proposta (2026-10-23), aspetta D1-D6 di [PIANO-PIATTAFORMA-DI-SVILUPPO](../PIANO-PIATTAFORMA-DI-SVILUPPO.md)
+**Stato**: accettata dal DM il 2026-10-23 (D1-D5 di [PIANO-PIATTAFORMA-DI-SVILUPPO](../PIANO-PIATTAFORMA-DI-SVILUPPO.md): *«D1-d5 ok»*)
 **Data**: 2026-10-23
 **Decisione-fonte**: tre messaggi del DM del 2026-10-23. *«una versione sola di python e scegli la stable supportata, in pratica lo stesso concetto del kernel Linux che viene applicato in Debian […] e usa librerie esterne python che sono standard de facto e che migliorano il progetto, e anche i tool standard de facto, misurando il miglioramento»*; *«applica la stessa filosofia per tutti i tools e le CI e i test […] una piattaforma di sviluppo completa e integrata»*; *«tutti i tool e pipeline […] mappe, prosa, struttura […] il meccanismo di selezione deve essere tipo quello usato dalla Debian per la scelta e migrazione del kernel Linux»*.
 **Rapporti**: estende [ADR-0081](ADR-0081-il-contratto-d-ambiente.md) (la CI è lo standard, `binari.py` è il registro, Python 3.13); rispetta [ADR-0037](ADR-0037-stdlib-only-e-le-sue-eccezioni.md) (ciò che il DM esegue resta stdlib più le eccezioni dichiarate); applica [ADR-0056](ADR-0056-una-norma-senza-misura-non-esiste.md) agli strumenti: uno strumento senza misura non entra.
@@ -91,9 +91,12 @@ skill di terzi.
    [MISURE](../esperimenti/piattaforma-2026-10-23/MISURE.md) sono il punto di
    partenza; ogni promozione cita la differenza. Il lotto P2 del piano le
    rende un comando che la CI esegue a ogni run.
-9. **`converters/` resta fuori**, come dicono AGENTS.md e PRATICHE D9, finché
-   il DM non lo usa con regolarità. ruff ci ha trovato tre bug: si
-   segnalano, non si correggono in questa decisione.
+9. **`converters/` entra nella piattaforma** (D6, DM: *«D6 b»*), e supera
+   PRATICHE D9. Python 3.13 anche lì, i tre bug trovati da ruff corretti,
+   Dependabot con una voce e gruppi suoi, ruff sul codice come altrove, e un
+   job CI in testing che installa le sue dipendenze vere e prova che ogni
+   modulo si importi. I suoi test leggono PDF che non stanno nel repo e
+   restano fuori dalla CI.
 
 ## Conseguenze
 

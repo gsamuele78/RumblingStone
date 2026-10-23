@@ -169,3 +169,35 @@ Un'ultima cosa trovata per strada: in serie pytest dava **120 avvisi**, tutti
 `DeprecationWarning` di un `re.split(r":", s, 1)` in `import_ultraclear.py`.
 Passare `maxsplit` per posizione è deprecato da Python 3.13; ruff lo trova
 con B034, che per questo è entrato nell'insieme di regole.
+
+## 5 · Prima e dopo, sulla qualità del progetto
+
+Dopo le risposte del DM (D1-D6, stesso giorno). Ogni riga si rifà col comando
+indicato; dove la misura la fa la CI della PR, la riga lo dice.
+
+| Misura | Prima (`main`, 17d0b33) | Dopo (PR #273) | Come |
+|---|---|---|---|
+| bug veri aperti trovati da ruff | 3 (in `converters/`) | **0** | `ruff check` (regole di `ruff.toml`) |
+| rilievi di ruff, regole-bug, su `scripts/` e `converters/` | 28 | **0** (3 dichiarati in `ruff.toml`, con la ragione) | idem |
+| `DeprecationWarning` nella suite | 120 | **0** | `pytest scripts/tests/test_import_ultraclear.py` |
+| moduli del motore PDF che si importano, senza torch | 12 su 20 | **13 su 20** (`fallback_manager` non si importava su nessuna Python) | script di import in un venv con le dipendenze leggere |
+| moduli del motore PDF che si importano, con tutte le dipendenze | non misurato | lo misura il job `convertitori` della CI | qui `download.pytorch.org` non è raggiungibile |
+| file che dichiarano una Python diversa da 3.13 | 6 (tutti in `converters/`) | **0** | `grep` di §2 |
+| controlli che guardano `converters/` | `compileall` | `compileall`, ruff, import su 3.13, Dependabot | `ci.yml`, `dependabot.yml` |
+| esecuzioni complete della suite in CI | 2 (unittest e pytest) | **1** (più quella in parallelo del job `testing`, non bloccante) | `ci.yml` |
+| prove raccolte da pytest | 2.017 più 26 saltate | 2.017 più 26 saltate (la parità dei corridori resta controllata) | `test_i_test_girano_in_ci.py` |
+| tempo del job principale | 914 s | lo misura la CI della PR | tempi dei passi del run |
+
+### Un test instabile in parallelo, trovato dal canale testing
+
+Rieseguendo con `-n auto` un sottoinsieme della suite, tre test di
+`test_validate_docs.py` sono falliti due volte su due e passano in serie.
+Altri test **scrivono file finti dentro il repo vero** (per esempio
+un ADR finto con un numero già usato, o un file citato come
+`futuro`) e li tolgono alla fine; se nello stesso momento un altro processo
+scandisce il repo, li vede. Sull'intera suite, al primo giro, non era
+successo: dipende da come xdist distribuisce i test. È esattamente ciò che il
+canale testing deve trovare prima che xdist blocchi la CI. Per salire a
+stable (P4) quei test devono scrivere in una cartella temporanea, oppure
+finire nello stesso processo con `--dist loadfile`.
+

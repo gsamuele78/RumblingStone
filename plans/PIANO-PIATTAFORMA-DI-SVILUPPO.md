@@ -1,6 +1,6 @@
 # PIANO — La piattaforma di sviluppo: una versione stabile, componenti misurati
 
-> **Stato**: 🟡 in corso (2026-10-23), P0 fatto, D1-D6 aperte al DM · **Classe**: G per la regola, C per i lotti
+> **Stato**: 🟡 in corso (2026-10-23), P0 e P9 fatti, D1-D6 decise il giorno stesso · **Classe**: G per la regola, C per i lotti
 > **Nasce da**: tre messaggi del DM del 2026-10-23 (citati in
 > [ADR-0099](adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md)): una
 > versione sola di Python, stabile e supportata, scelta come Debian sceglie il
@@ -8,7 +8,7 @@
 > progetto, con la misura; la stessa regola per tutti gli strumenti, la CI, i
 > test, le skill e le pipeline (mappe, prosa, struttura), con un meccanismo di
 > selezione e migrazione come quello di Debian.
-> **Decisione**: [ADR-0099](adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md), proposta.
+> **Decisione**: [ADR-0099](adr/ADR-0099-la-piattaforma-ha-tre-canali-come-debian.md), accettata (D1).
 > **Misure**: [plans/esperimenti/piattaforma-2026-10-23/MISURE.md](esperimenti/piattaforma-2026-10-23/MISURE.md).
 >
 > **In breve**: la piattaforma c'è quasi tutta (CI come standard, `binari.py`,
@@ -26,7 +26,7 @@
 |---|---|---|
 | [ADR-0081](adr/ADR-0081-il-contratto-d-ambiente.md) e [PIANO-AMBIENTE-RIPRODUCIBILE](PIANO-AMBIENTE-RIPRODUCIBILE.md) | la macchina combacia con la CI: registro con versione e checksum (A1), Python 3.13 e tre piattaforme (A2), lock con hash (A3), hook (A4), `dm.py ambiente` (A5) | **non si rifà**. ADR-0099 aggiunge i canali sopra il contratto. Il test «una Python sola» è il resto di A2, il lock è A3: questo piano li usa e non li duplica |
 | [ADR-0037](adr/ADR-0037-stdlib-only-e-le-sue-eccezioni.md) | ciò che il DM esegue resta stdlib più tre eccezioni | vincolo: uno strumento di sviluppo può entrare, una dipendenza del DM no senza un emendamento |
-| [PIANO-PRATICHE-DI-INGEGNERIA](PIANO-PRATICHE-DI-INGEGNERIA.md) | Dependabot a gruppi, `pip-audit`, `converters/` fuori (D9) | si tiene così |
+| [PIANO-PRATICHE-DI-INGEGNERIA](PIANO-PRATICHE-DI-INGEGNERIA.md) | Dependabot a gruppi, `pip-audit`, `converters/` fuori (D9) | si tiene, tranne `converters/`, che entra con D6 di questo piano (P9) |
 | ADR-0084, 0085, 0086 | le misure con cui tcod, scipy, fonttools, torch e piq sono entrati | sono le promozioni fatte prima della regola: restano valide |
 | PR #264 e #270 | spaCy e Stanza per la prosa, in esperimenti | in unstable: non si toccano le loro dipendenze; il thread della #264 è avvisato |
 
@@ -111,7 +111,7 @@ tutti i componenti che la fanno passare in CI.
 | skill: build, validazione, scanner | Python, pyyaml, tiktoken, bash | stable |
 | piani e documenti | Python, git | stable |
 | server MCP | Python | stable |
-| `converters/` | marker, OCR, modelli | fuori dalla piattaforma (PRATICHE D9) |
+| `converters/` | PyMuPDF, docling, torch, EasyOCR, magika | **testing** dal 2026-10-23 (D6, P9): Python 3.13, ruff, Dependabot, import di ogni modulo in CI |
 
 ## §3 · Lotti
 
@@ -182,6 +182,20 @@ guarda anche `dipendenze.yml`, il Dockerfile e `dependabot.yml`.
   di proporre una libreria o uno strumento, il canale e la misura (ADR-0099).
 - `rumblingstone-edizione` resta il gate della licenza all'ingresso in testing.
 
+### P9 · I convertitori entrano nella piattaforma ✅ in testing
+`[engine: Opus 5.5 · effort: medio · qualità: ruff a zero su converters/; ogni modulo si importa su 3.13 nel job della CI]`
+D6, DM 2026-10-23: *«D6 b»*. Corretti i tre bug (`Tuple` non importato:
+`fallback_manager` non si importava; `success_count` mai inizializzato;
+`language_tool_python` mai importato nel metodo che lo usa) e gli altri sette
+rilievi (quattro variabili morte, tre import ripetuti). Python 3.13 in
+`pyproject.toml`, `setup.py`, `intelligent_install.py`, `activate.sh` e nel
+README, al posto di 3.9 e 3.12; `magika>=1.0.3` senza il marcatore che lo
+escludeva da 3.13 (la 1.0.3 ha la ruota per 3.13, e l'API usata
+`identify_stream(...).prediction.output.mime_type` risponde
+`application/pdf` su un PDF vero). Dependabot ha una voce `pip` per le due
+cartelle, con gruppi suoi. Job CI `convertitori`, non bloccante.
+Resta: i test del motore leggono PDF fuori dal repo.
+
 ### P8 · La prova generale della prossima migrazione ⬜
 `[engine: Sonnet 5.5 · effort: medio · qualità: un job non bloccante su Python 3.14 verde per un mese prima del salto]`
 - Parte quando Debian 14 entra nel congelamento (atteso nel 2027): un job CI
@@ -206,22 +220,22 @@ guarda anche `dipendenze.yml`, il Dockerfile e `dependabot.yml`.
 
 | # | Lotto | Domanda |
 |---|---|---|
-| D1 | tutti | **Accetti la regola dei tre canali di ADR-0099?** unstable (a mano), testing (in CI non bloccante, versione fissata), stable (bloccante); si sale dopo 14 giorni e 10 run senza falsi allarmi né peggioramenti, con il tuo ok; Python e runner migrano quando migra Debian, con la vecchia versione tenuta tre mesi |
-| D2 | P4 | **Togliamo la seconda esecuzione completa dei test con `unittest`?** Costa 222 s su 914 della CI e riesegue le stesse prove; la parità dei due corridori la controlla già `test_i_test_girano_in_ci.py` senza eseguire niente. Proposta: sì |
-| D3 | P4 | **pytest-xdist in testing?** Licenza MIT, solo sviluppo. La suite in locale passa da 219 s a 67 s su 4 core (−69%), stesse prove (MISURE §4). Proposta: sì, prima in un job non bloccante per 14 giorni per vedere se qualche test è instabile in parallelo |
-| D4 | P5 | **uv in testing per installare in CI e fare il lock di A3?** MIT o Apache-2.0. Installazione 33 s → 4 s a freddo; in CI il guadagno è circa 20 s su 914, il valore vero è il lock con hash senza pip-tools e la stessa 3.13 su Ubuntu e Bazzite senza PPA. Proposta: sì, in testing |
-| D5 | P3 | **ruff resta in testing con gli otto gruppi di regole che cercano bug, e sale dopo 14 giorni?** Le regole di stile restano fuori (1.672 rilievi, quasi tutti scelte volute del repo). Proposta: sì |
-| D6 | — | **I tre bug che ruff ha trovato in `converters/` si correggono?** Un modulo che non si importa, un NameError a fine installazione, una correzione grammaticale che non parte e non lo dice. `converters/` è fuori dalla piattaforma (PRATICHE D9). Proposta: tre righe in una PR a parte, senza portare `converters/` in CI |
+| ~~D1~~ | tutti | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **Accetti la regola dei tre canali di ADR-0099?** unstable (a mano), testing (in CI non bloccante, versione fissata), stable (bloccante); si sale dopo 14 giorni e 10 run senza falsi allarmi né peggioramenti, con il tuo ok; Python e runner migrano quando migra Debian, con la vecchia versione tenuta tre mesi |
+| ~~D2~~ | P4 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **Togliamo la seconda esecuzione completa dei test con `unittest`?** Costa 222 s su 914 della CI e riesegue le stesse prove; la parità dei due corridori la controlla già `test_i_test_girano_in_ci.py` senza eseguire niente. Proposta: sì |
+| ~~D3~~ | P4 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **pytest-xdist in testing?** Licenza MIT, solo sviluppo. La suite in locale passa da 219 s a 67 s su 4 core (−69%), stesse prove (MISURE §4). Proposta: sì, prima in un job non bloccante per 14 giorni per vedere se qualche test è instabile in parallelo |
+| ~~D4~~ | P5 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **uv in testing per installare in CI e fare il lock di A3?** MIT o Apache-2.0. Installazione 33 s → 4 s a freddo; in CI il guadagno è circa 20 s su 914, il valore vero è il lock con hash senza pip-tools e la stessa 3.13 su Ubuntu e Bazzite senza PPA. Proposta: sì, in testing |
+| ~~D5~~ | P3 | ✅ **Decisa il 2026-10-23, risposta del DM: sì, la consigliata** (*«D1-d5 ok»*). **ruff resta in testing con gli otto gruppi di regole che cercano bug, e sale dopo 14 giorni?** Le regole di stile restano fuori (1.672 rilievi, quasi tutti scelte volute del repo). Proposta: sì |
+| ~~D6~~ | P9 | ✅ **Decisa il 2026-10-23, risposta del DM: B** (*«D6 b»*, dopo la spiegazione: correggere e portare `converters/` nella piattaforma). **I tre bug che ruff ha trovato in `converters/` si correggono?** Un modulo che non si importa, un NameError a fine installazione, una correzione grammaticale che non parte e non lo dice. `converters/` è fuori dalla piattaforma (PRATICHE D9). Proposta: tre righe in una PR a parte, senza portare `converters/` in CI |
 
 <!-- eco: PIATTAFORMA 2026-10-23 -->
-- **Decise**: nessuna
-- **Aperte**: D1-D6
-- **Cambiate**: nessuna
-- **Dedotto da me**: che «lo stesso concetto del kernel Linux in Debian» voglia dire i canali unstable, testing e stable con promozione a tempo e senza regressioni, e la migrazione a ogni rilascio di Debian (lettura confermata dalla nota del coordinatore); che le soglie (14 giorni, 10 run, +5%, tre mesi di oldstable) siano mie e da tarare; che «le skill» nella piattaforma vogliano dire che le skill conoscono la regola, non che le skill diventino componenti con un canale
+- **Decise**: D1 la regola dei tre canali · D2 un corridore solo per i test · D3 pytest-xdist in testing · D4 uv in testing · D5 ruff in testing, stable dopo 14 giorni · D6 B, `converters/` dentro la piattaforma
+- **Aperte**: nessuna
+- **Cambiate**: D6 dalla proposta A (correggere e lasciare fuori) a B (correggere e portare dentro)
+- **Dedotto da me**: che D3 e D4 in testing si provino nello stesso job non bloccante (uv installa, xdist esegue), per pagare un job solo invece di due; che «se sono migliorative poi diventano standard» del DM sia la regola di promozione di ADR-0099 §3, e non un sì anticipato alla promozione; che lo stesso concetto del kernel Linux in Debian» voglia dire i canali unstable, testing e stable con promozione a tempo e senza regressioni, e la migrazione a ogni rilascio di Debian (lettura confermata dalla nota del coordinatore); che le soglie (14 giorni, 10 run, +5%, tre mesi di oldstable) siano mie e da tarare; che «le skill» nella piattaforma vogliano dire che le skill conoscono la regola, non che le skill diventino componenti con un canale
 
 ## §6 · Ordine
 
-P0 → D1 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
+P0 → D1 → P9 → P1 → P2 → P3 e P4 (indipendenti) → P5 dopo A3 di AMBIENTE → P6 con
 A2 → P7 → P8 quando Debian 14 si congela.
 
 ## Checklist di avanzamento
@@ -229,9 +243,10 @@ A2 → P7 → P8 quando Debian 14 si congela.
 - [x] P0 · audit, misure, ADR-0099, ruff in testing
 - [ ] P1 · il canale nel registro, la tabella generata
 - [ ] P2 · `misura_piattaforma.py`
-- [ ] P3 · ruff stable
-- [ ] P4 · test una volta sola (D2), xdist (D3)
-- [ ] P5 · uv (D4)
+- [ ] P3 · ruff stable (D5 ✅; in testing dal 2026-10-23, non prima del 2026-11-06)
+- [~] P4 · test una volta sola (D2 ✅, 2026-10-23: il passo unittest è uscito dalla CI); xdist (D3) in testing nel job `testing` dal 2026-10-23, stable non prima del 2026-11-06
+- [~] P5 · uv (D4): installazione in testing nel job `testing` dal 2026-10-23, con il confronto dei pacchetti contro pip; il lock aspetta A3
 - [ ] P6 · una Python sola, controllata (con A2 di AMBIENTE)
 - [ ] P7 · skill e guide
 - [ ] P8 · prova generale della migrazione a 3.14
+- [x] P9 · `converters/` nella piattaforma, in testing (D6)

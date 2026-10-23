@@ -83,3 +83,9 @@ scikit-image>=0.25
 # Misura in plans/esperimenti/piattaforma-2026-10-23/MISURE.md. MIT. Solo
 # sviluppo: il DM non lo esegue.
 ruff==0.16.9
+
+# ADR-0099, D3 di PIANO-PIATTAFORMA (DM, 2026-10-23): i test in parallelo, in
+# canale TESTING. Li usa solo il job `testing` di ci.yml (`pytest -n auto`);
+# il job principale lo installa e non lo usa finché non sale a stable. In
+# locale la suite passa da 219 s a 67 s su 4 core. MIT.
+pytest-xdist==3.8.0
