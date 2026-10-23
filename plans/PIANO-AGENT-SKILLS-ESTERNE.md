@@ -392,7 +392,7 @@ dall'instradamento all'**uscita**: cosa scrive un agente con la skill e senza.
       esempi ✅ della skill la violano (*«Ti accorgi che hai smesso di
       camminare»*); `validate_prosa.py` legge 32.765 delle 55.680 parole di
       read-aloud (59%), perché riconosce solo i box nudi e solo la prima riga
-- [x] `scripts/voto_scrittura.py`: il voto riusa i rilevatori di `misura_craft`
+- [x] `voto_scrittura.py` (resta per il banco del modello locale, ADR-0089; dal lotto 7e di AVVENTURE-COMMUNITY prende il «sembra» da `validate_prosa`): il voto riusa i rilevatori di `misura_craft`
       e `validate_prosa`, nessuna regex nuova nel punteggio; i casi
       (`plans/scrittura/casi.json`) nello schema di `skill-creator`, dieci, a
       metà fra taratura e verifica, stratificati per genere

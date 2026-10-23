@@ -54,40 +54,10 @@ _DECISIONE = _CONGEGNI["chiusura su decision point"]
 _DIALOGO = _CONGEGNI["dialogo nella forma dichiarata"]
 _HDYWTDT = _CONGEGNI["[HDYWTDT] il finisher al giocatore"]
 
-#: La norma di Merwin, «evitare sembra e pare» (D13). «Come se» resta fuori: e'
-#: un paragone, non un'esitazione. Misurata sui 501 box dei file di gioco il
-#: 2026-10-01: 34 box con una di queste forme.
-#: ⚠️ Il 2026-10-02 la prima prova di `ciclo_prosa` ha trovato «ti è sembrato»
-#: in un box che il metro dava pulito: mancavano il participio e il passato
-#: remoto, che nella prosa al passato sono le forme più comuni.
-#: ⚠️ Lo stesso giorno, leggendo i 34 box uno per uno per il lotto: «appare» era
-#: nel rilevatore ma non nella norma, che dice «sembra» e «pare». E nei file di
-#: gioco vuol dire quasi sempre «diventa visibile» («Hella appare
-#: nell'affresco»): quattro box su quattro. Tolto, e il conto scende da 34 a 30.
-SEMBRA = re.compile(r"\b(sembr(?:a|ano|ava|avano|are|ato|ata|ati|ate|ò|arono)|"
-                    r"pa(?:re|iono|reva|revano|rso|rsa|rsi|rse|rve|rvero))\b", re.I)
-
-#: D17 (2026-10-03): «sembra» seguito dalla smentita è lecito. «Quella che
-#: sembrava una parete — è una palpebra»: lì il narratore non esita, prepara il
-#: colpo. Il confine è stretto apposta: la smentita deve arrivare entro la frase
-#: dopo, con «invece», «non lo è», «si rivela» o un trattino seguito da «è».
-#: Un «è» da solo non basta: c'è in quasi ogni frase, e salverebbe tutto.
-SMENTITA = re.compile(r"\b(?:invece|non lo (?:è|era|sono|erano)|"
-                      r"si rivel(?:a|ano|ava|avano|ò|arono))\b|\s[—–-]\s*(?:è|era)\b", re.I)
-_FINE_FRASE = re.compile(r"[.!?…]+")
-
-
-def sembra_esitanti(corpo: str) -> "list[re.Match]":
-    """I «sembra» e «pare» di un box che la norma vieta: tutti, tranne quelli
-    smentiti entro la frase dopo (D17)."""
-    fuori = []
-    for m in SEMBRA.finditer(corpo):
-        dopo = corpo[m.end():]
-        fini = list(_FINE_FRASE.finditer(dopo))
-        limite = fini[1].end() if len(fini) > 1 else len(dopo)
-        if not SMENTITA.search(dopo[:limite]):
-            fuori.append(m)
-    return fuori
+#: Il rilevatore di «sembra»/«pare» e il confine di D17 vivono in
+#: `validate_prosa` dal lotto 7e di AVVENTURE-COMMUNITY: qui si riusano.
+SEMBRA = vp.SEMBRA
+sembra_esitanti = vp.sembra_esitanti
 
 
 def _rilievi(testo: str, per_i_giocatori: bool) -> "set[str]":
@@ -184,7 +154,9 @@ def controlli(testo: str, genere: str) -> "dict[str, tuple[bool, str]]":
         "chiude_che_fate": (any(_DECISIONE.search(c) for c in corpi), "-"),
         "hdywtdt": (bool(_HDYWTDT.search(testo)), "-"),
         "dialogo_forma": (bool(_DIALOGO.search(testo)), f"{len(_DIALOGO.findall(testo))} battute"),
-        "calchi": ("calco_dall_inglese" not in chiavi, "-"),
+        # Il possessivo sulla parte del corpo ha una chiave sua dal lotto 7e di
+        # AVVENTURE-COMMUNITY; per questo banco resta un calco come prima.
+        "calchi": (not chiavi & {"calco_dall_inglese", "possessivo_parte_del_corpo"}, "-"),
         "tic_gioco": (not chiavi & {"antitesi_ripetuta", "maiuscole_di_enfasi", "trattino_come_respiro"},
                       ", ".join(sorted(chiavi & {"antitesi_ripetuta", "maiuscole_di_enfasi",
                                                  "trattino_come_respiro"})) or "-"),

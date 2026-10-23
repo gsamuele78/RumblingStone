@@ -2,7 +2,7 @@
   "generated_by": "scripts/tools_manifest.py",
   "source": "scripts/tools.manifest.json",
   "manifest_version": "1.0.0",
-  "tool_count": 115,
+  "tool_count": 116,
   "tools": [
     {
       "id": "suggest_encounter",
@@ -4470,6 +4470,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Esito machine-readable su stdout."
+        },
+        {
+          "name": "--salta-corredo",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --stampa: non compila i volumi di un corredo, che validate_corredo.py --stampa compila e misura (in CI erano compilati due volte)."
         }
       ],
       "inputs": [
@@ -6677,84 +6686,6 @@
       ]
     },
     {
-      "id": "campioni_kappa",
-      "path": "scripts/campioni_kappa.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/campioni_kappa.py",
-      "summary": "Estrae i due campioni disgiunti (20+20, stratificati per classe, seme fisso) e calcola il kappa di Cohen fra il giudizio di un valutatore e quello della macchina. Sotto kappa 0,60 la metrica si dichiara NON affidabile e non entra in CI: e' la regola del piano, e il 2026-09-21 ha detto di no (kappa 0,0 con accordo osservato e atteso entrambi a 0,95).",
-      "use_case": "«Il punteggio dice 97,9: il DM sarebbe d'accordo?» Se non lo e', il numero misura il suo autore.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--estrai",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "F1.5: scrive i due campioni disgiunti a seme fisso."
-        },
-        {
-          "name": "--scheda",
-          "type": "str",
-          "required": false,
-          "default": null,
-          "choices": [
-            "A",
-            "B"
-          ],
-          "repeatable": false,
-          "desc": "Stampa la scheda da compilare per il campione A o B. Il punteggio della macchina NON e' mostrato, apposta."
-        },
-        {
-          "name": "--kappa",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "F3.3: l'accordo fra i voti e la macchina, se i voti ci sono."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/REGISTRO-NORME-EDITORIALI.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [],
-      "exit_codes": {
-        "0": "ok",
-        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Sola lettura."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_norme_editoriali.py",
-      "tests": [
-        "scripts/tests/test_help_di_ogni_tool.py",
-        "scripts/tests/test_norme_editoriali.py"
-      ],
-      "docs": [
-        "plans/adr/ADR-0056-una-norma-senza-misura-non-esiste.md"
-      ]
-    },
-    {
       "id": "check_plans_discipline",
       "path": "scripts/check_plans_discipline.py",
       "category": "G-orchestration-governance",
@@ -7072,6 +7003,151 @@
       "docs": [
         "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
         "plans/esperimenti/prosa-cieco/FOTOGRAFIA-ARC07-2026-10-18.md"
+      ]
+    },
+    {
+      "id": "coerenza_campagna",
+      "path": "scripts/coerenza_campagna.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/coerenza_campagna.py {fronti FILE.yaml... [--state] | fatti DIR... [--bestiario] [--tutti] | tutto --fronti F... --archi D... --out DIR}",
+      "summary": "Lotto 7c, coerenza. `fronti`: un file di fronti e orologi contro scripts/schemas/fronti_orologi.schema.json e le regole del mestiere (2-3 pericoli, presagi 1-3 o 3-5 scritti in un master, 1-3 domande, segmenti 4/6/8, riempiti <= totale, quando si riempie), e conta i campi che il master scrive contro quelli dedotti; con --state misura gli orologi dei villain di state.yaml. `fatti`: il rilevatore prudente di contraddizioni fra scene e archi (GS, pf, CA, TS, CD, classi, titolo, eta', anni DR, vivo/morto, portatore d'artefatto, giorno del March Clock), con file:riga di ogni valore. Misura, non cancello.",
+      "use_case": "«Lo stesso PNG ha due GS in due file dell'arco? Gli orologi di questo arco hanno 4, 6 o 8 segmenti e un presagio scritto?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [
+        "python3"
+      ],
+      "external_deps": [
+        "pyyaml"
+      ],
+      "args": [
+        {
+          "name": "cmd",
+          "type": "subcommand",
+          "required": true,
+          "default": null,
+          "choices": [
+            "fronti",
+            "fatti",
+            "tutto"
+          ],
+          "repeatable": false,
+          "desc": "fronti = controlla fronti e orologi; fatti = contraddizioni; tutto = entrambi, con JSON e riassunto in --out."
+        },
+        {
+          "name": "--state",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti) Misura anche gli orologi dei villain di campaign/state.yaml, in sola lettura."
+        },
+        {
+          "name": "--bestiario",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti, tutto) Legge anche le voci del Bestiario le cui entita' compaiono negli archi."
+        },
+        {
+          "name": "--tutti",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fatti) Legge anche i file fuori perimetro (ERRATA, CORREZIONE, ricalibrazioni, P1-P3)."
+        },
+        {
+          "name": "--out",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Cartella dove scrivere coerenza.json e coerenza.txt."
+        },
+        {
+          "name": "--rigido",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(tutto) Exit 1 se i fronti hanno violazioni."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "(fronti, fatti) Uscita machine-readable."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/coerenza/fronti-*.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/fronti_orologi.schema.json"
+        },
+        {
+          "path": "07_il Portale Della Forgia Eterna/",
+          "kind": "directory",
+          "required": false
+        },
+        {
+          "path": "campaign/state.yaml",
+          "kind": "yaml",
+          "required": false,
+          "schema": "scripts/schemas/campaign_state.schema.json"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "<--out>/coerenza.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false
+        },
+        {
+          "path": "<--out>/coerenza.txt",
+          "kind": "text",
+          "overwrites": true,
+          "generated_header": false
+        }
+      ],
+      "exit_codes": {
+        "0": "nessuna violazione nei fronti, o misura eseguita (fatti, tutto)",
+        "1": "violazioni nei fronti (fronti; tutto solo con --rigido)",
+        "2": "errore d'uso, file o cartella mancante, pyyaml assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Solo regex e ordinamenti stabili; nessun modello."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false,
+        "notes": "Scrive solo con `tutto`, nella cartella --out."
+      },
+      "idempotent": true,
+      "consumes_schema": "scripts/schemas/fronti_orologi.schema.json",
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/coerenza_campagna.py --help",
+      "tests": [
+        "scripts/tests/test_coerenza_campagna.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md"
       ]
     },
     {
@@ -7429,7 +7505,7 @@
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/dm.py",
-      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
+      "summary": "Entrypoint unico: orchestra tutti gli script per fase del Playbook (prep/post/session/recap/handout/maps/hype/dossier/skills/doctor/bestiario/prosa). ADR-0002. Il sottocomando «volume» (ADR-0031) esegue la catena editoriale in ordine da un manifest a un volume, e chiude ricordando il cancello d'uscita IP: non e' automatizzabile, ma e' il momento in cui va detto. «corredo» fa lo stesso per tutti i volumi e i fogli di una serata.",
       "use_case": "«Devo fare una cosa con il repo e non ricordo quale script: da dove passo?»",
       "stability": "stable",
       "stdlib_only": true,
@@ -7438,7 +7514,7 @@
       ],
       "args": [
         {
-          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario",
+          "name": "prep|post|session|recap|handout|maps|hype|dossier|skills|doctor|volume|corredo|bestiario|prosa",
           "type": "subcommand",
           "required": true,
           "default": null,
@@ -7455,10 +7531,11 @@
             "doctor",
             "volume",
             "corredo",
-            "bestiario"
+            "bestiario",
+            "prosa"
           ],
           "repeatable": false,
-          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF."
+          "desc": "Sottocomando di fase; i flag sono inoltrati allo script sottostante. «volume» e' la catena dei mestieri in ordine (prosa, lingua, manifest, colophon, schermo, stampa, imposizione) e assorbe il «dm.py stampa» mai fatto. «bestiario» passa i flag a uno dei cinque script delle creature (estrai, deriva, attributi, creatura, conformita). «corredo» fa l'intero corredo della serata da un *.corredo.json: controlla i pezzi, fa ogni volume con la catena di «volume» e misura i PDF. «prosa» passa i flag a uno degli script della catena della prosa (ADR-0101), in ordine d'uso: misura, ciclo, mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto."
         }
       ],
       "inputs": [
@@ -7498,7 +7575,9 @@
       "consumes_schema": null,
       "produces_schema": null,
       "ci_smoke": "python scripts/dm.py doctor --ci",
-      "tests": [],
+      "tests": [
+        "scripts/tests/test_dm_prosa.py"
+      ],
       "docs": [
         "scripts/README-automation.md"
       ]
@@ -8375,12 +8454,148 @@
       "idempotent": true
     },
     {
+      "id": "migliora_prosa",
+      "path": "scripts/migliora_prosa.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/migliora_prosa.py {dataset|modello|scegli|migliora|campione|esito|languagetool} ...",
+      "summary": "La pipeline che sceglie la riscrittura di un box read-aloud e misura se è migliore col voto cieco del DM (ADR-0093). dataset raccoglie in un JSON tutte le coppie votate alla cieca; modello addestra una logistica L2 sulle differenze dei tratti (misura_craft, Gulpease, possessivi, livelli di misura_sintassi, MATTR, regole 1-4 di read-aloud-adulti §2-ter) e la valida in leave-one-out contro il caso e contro «vince la più lunga», con la soglia scritta prima in SOGLIA.txt; migliora filtra le candidate scritte da un agente (confronta_fatti, box_impoveriti, regole di §2-ter) e le ordina; campione ed esito fanno la scheda cieca con cieco_versioni e registrano i voti. Non chiama modelli linguistici. Facoltativo: languagetool interroga un server LanguageTool locale (6.8, LGPL, fuori dal repo) su VOTI.json e sui box di ARC-07/08, legge la precisione scritta a mano, fa la calibrazione col test del segno e il confronto delle varianti del modello (+LT, +ppl, +Stanza da --tratti-esterni) con McNemar; migliora --lt aggiunge al filtro i gruppi di rilievi con precisione >= 0,70. Senza server salta con un messaggio ed esce 0.",
+      "use_case": "«Fra queste quattro riscritture del box quale tengo, e la pipeline batte davvero l'originale al cieco?»",
+      "stability": "beta",
+      "stdlib_only": true,
+      "external_bins": [],
+      "external_deps": [
+        "spacy"
+      ],
+      "args": [
+        {
+          "name": "dataset",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Ricostruisce pipeline/VOTI.json dalle coppie votate (tiene i voti della pipeline)."
+        },
+        {
+          "name": "modello",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Leave-one-out, caso, «vince la più lunga», pesi: --scrivi aggiorna MODELLO.txt; --varianti [--tratti-esterni FILE] confronta base, +LT, +ppl, +Stanza, +tutto con McNemar."
+        },
+        {
+          "name": "scegli",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Box da migliorare con un seme: --seme, --n, --uscita."
+        },
+        {
+          "name": "migliora",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "FILE --box N --candidate C.md [--scelte S.json --id P01] [--lt URL]: filtra, ordina, dice la migliore."
+        },
+        {
+          "name": "campione",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Scheda cieca vincitrice contro originale: --scelte, --seme, --scheda, --chiave."
+        },
+        {
+          "name": "esito",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Registra i voti e rifà il modello: --scelte, --chiave, --voti [--data]."
+        },
+        {
+          "name": "languagetool",
+          "type": "str",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": false,
+          "desc": "[--url U] [--tratti-esterni F] [--scrivi] | --campione N --seme S --uscita F: rilievi di LanguageTool, precisione, calibrazione, varianti (languagetool/MISURE.txt)."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/COPPIE-VOTATE.json",
+          "kind": "json",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/VOTI.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/MISURE.txt",
+          "kind": "text",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        },
+        {
+          "path": "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/TRATTI-LT.json",
+          "kind": "json",
+          "overwrites": true,
+          "generated_header": false,
+          "schema": null
+        }
+      ],
+      "exit_codes": {
+        "0": "ok"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": "--seme",
+        "notes": "Il modello è deterministico (Newton, nessun caso); scelta dei box e ordine delle coppie dipendono dal seme. Con o senza spaCy i tratti cambiano (livelli_max). languagetool e --lt chiamano solo un server locale (localhost:8081 o LANGUAGETOOL_URL)."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": true
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python scripts/migliora_prosa.py --help",
+      "tests": [
+        "scripts/tests/test_migliora_prosa.py"
+      ],
+      "docs": [
+        "plans/esperimenti/qualita-misurabile-2026-10-22/pipeline/README.md",
+        "plans/adr/ADR-0093-la-prosa-migliora-se-la-sceglie-il-dm-alla-cieca.md",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/languagetool/README.md"
+      ]
+    },
+    {
       "id": "misura_craft",
       "path": "scripts/misura_craft.py",
       "category": "G-orchestration-governance",
       "language": "python",
       "invocation": "python3 scripts/misura_craft.py",
-      "summary": "Conta i congegni di mestiere dichiarati (read-aloud, contingenze, orologi, pilastro lead/support...) in ogni arco e li confronta con i due banchi: Abbazia e Palio.",
+      "summary": "Conta i congegni di mestiere dichiarati (read-aloud, echi, pilastro lead/support, regia, [HDYWTDT]...) in ogni arco e li confronta con i due banchi: Abbazia e Palio.",
       "use_case": "«Lo stile e i congegni nuovi sono arrivati in questa parte, o e' rimasta indietro?»",
       "stability": "beta",
       "stdlib_only": true,
@@ -8437,15 +8652,6 @@
           "required": false,
           "default": false,
           "desc": "i read-aloud che presuppongono un'azione o un senso del giocatore (norma Dungeon/Paizo)"
-        },
-        {
-          "name": "--discriminante",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "desc": "Quante coppie di bersagli ogni congegno separa, in conteggio grezzo e in densita' per 1.000 righe: un congegno che non ne separa nessuna non produce informazione (lotto F1.3 di PIANO-MISURA-EDITORIALE).",
-          "choices": null,
-          "repeatable": false
         },
         {
           "name": "--metrature",
@@ -8509,6 +8715,88 @@
       ],
       "docs": [
         "plans/PIANO-PORTARE-IL-MESTIERE-DEI-BANCHI.md"
+      ]
+    },
+    {
+      "id": "misura_sintassi",
+      "path": "scripts/misura_sintassi.py",
+      "category": "G-orchestration-governance",
+      "language": "python",
+      "invocation": "python3 scripts/misura_sintassi.py [--file X.md] [--json] [--per-box]",
+      "summary": "I calchi sintattici di Cerruti (soggetto preverbale indefinito, aggettivo complesso anteposto, stare + gerundio, pronome soggetto) e i tratti alla Profiling-UD (profondità, livelli di subordinate, lunghezza delle dipendenze, MATTR e ripetizione dei lemmi) sui box read-aloud, con spaCy e it_core_news_md. Misura, non cancello: senza spaCy dice che salta ed esce 0.",
+      "use_case": "«Quanti calchi sintattici e quante frasi oltre i due livelli di subordinate hanno i box di questo master?»",
+      "stability": "beta",
+      "stdlib_only": false,
+      "external_bins": [],
+      "external_deps": [
+        "spacy"
+      ],
+      "optional_deps": [
+        "spacy",
+        "it_core_news_md"
+      ],
+      "args": [
+        {
+          "name": "--file",
+          "type": "path",
+          "required": false,
+          "default": null,
+          "choices": null,
+          "repeatable": true,
+          "desc": "Un master da misurare (ripetibile); senza, la base ARC-07 DEF e ARC-08."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Uscita JSON."
+        },
+        {
+          "name": "--per-box",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Tutti i box, non solo i peggiori."
+        }
+      ],
+      "inputs": [
+        {
+          "path": "07_il Portale Della Forgia Eterna/ARC07-DEF-*.md",
+          "kind": "markdown",
+          "required": false,
+          "schema": null
+        }
+      ],
+      "outputs": [],
+      "exit_codes": {
+        "0": "ok, anche senza spaCy (misura saltata)",
+        "2": "file assente"
+      },
+      "determinism": {
+        "deterministic": true,
+        "seed_flag": null,
+        "notes": "Stesso modello spaCy, stesso risultato; il modello CC BY-NC-SA 3.0 non entra nel repo."
+      },
+      "side_effects": {
+        "writes_canon": false,
+        "git_commit": false,
+        "network": false
+      },
+      "idempotent": true,
+      "consumes_schema": null,
+      "produces_schema": null,
+      "ci_smoke": "python3 scripts/misura_sintassi.py --help",
+      "tests": [
+        "scripts/tests/test_misura_sintassi.py"
+      ],
+      "docs": [
+        "plans/RICERCA-QUALITA-MISURABILE-2026-10.md",
+        "plans/esperimenti/qualita-misurabile-2026-10-22/sintassi/README.md"
       ]
     },
     {
@@ -9107,72 +9395,6 @@
       ]
     },
     {
-      "id": "superficie_norme",
-      "path": "scripts/superficie_norme.py",
-      "category": "G-orchestration-governance",
-      "language": "python",
-      "invocation": "python3 scripts/superficie_norme.py",
-      "summary": "Per ogni norma editoriale che nessuno misura, dice se manca il CODICE o manca il DATO: superficie vuota (la convenzione esiste e ha zero occorrenze), convenzione assente (nessuno ha deciso come si marca), oggetto assente (il file non esiste) o fuori dominio (il fatto non sta nel testo). Deterministico e idempotente: solo conteggi di forme dichiarate su un insieme di file ordinato.",
-      "use_case": "«Undici norme sono marcate non-misurate: quante posso davvero chiudere scrivendo codice?» La risposta misurata e' una su nove.",
-      "stability": "stable",
-      "stdlib_only": true,
-      "external_bins": [],
-      "args": [
-        {
-          "name": "--json",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Report in JSON, per la catena."
-        },
-        {
-          "name": "--check",
-          "type": "bool",
-          "required": false,
-          "default": false,
-          "choices": null,
-          "repeatable": false,
-          "desc": "Esce 1 se una riga ha smesso di dire il vero. Una superficie VUOTA non boccia: e' un fatto, non un difetto."
-        }
-      ],
-      "inputs": [
-        {
-          "path": "skills/REGISTRO-NORME-EDITORIALI.md",
-          "kind": "markdown",
-          "required": true,
-          "schema": null
-        }
-      ],
-      "outputs": [],
-      "exit_codes": {
-        "0": "ok",
-        "1": "norma non registrata, rimando inesistente o 🔴 senza ragione"
-      },
-      "determinism": {
-        "deterministic": true,
-        "seed_flag": null,
-        "notes": "Sola lettura."
-      },
-      "side_effects": {
-        "writes_canon": false,
-        "git_commit": false,
-        "network": false
-      },
-      "idempotent": true,
-      "consumes_schema": null,
-      "produces_schema": null,
-      "ci_smoke": "python scripts/validate_norme_editoriali.py",
-      "tests": [
-        "scripts/tests/test_help_di_ogni_tool.py",
-        "scripts/tests/test_norme_editoriali.py"
-      ],
-      "docs": [
-        "plans/adr/ADR-0056-una-norma-senza-misura-non-esiste.md"
-      ]
-    },
-    {
       "id": "tools_manifest",
       "path": "scripts/tools_manifest.py",
       "category": "G-orchestration-governance",
@@ -9394,6 +9616,15 @@
           "choices": null,
           "repeatable": false,
           "desc": "Gli avvisi (virgolette dritte, E') diventano errori."
+        },
+        {
+          "name": "--avvisi",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Elenca gli avvisi uno per uno; senza, se ne stampa solo il conto per tipo (dal 2026-10-22)."
         }
       ],
       "inputs": [
@@ -9518,7 +9749,26 @@
       "stability": "beta",
       "stdlib_only": true,
       "external_bins": [],
-      "args": [],
+      "args": [
+        {
+          "name": "--superficie",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "La tabella delle norme scoperte: manca il codice o manca il dato (era superficie_norme.py, ADR-0062)."
+        },
+        {
+          "name": "--json",
+          "type": "bool",
+          "required": false,
+          "default": false,
+          "choices": null,
+          "repeatable": false,
+          "desc": "Con --superficie: il rapporto in JSON."
+        }
+      ],
       "inputs": [
         {
           "path": "skills/REGISTRO-NORME-EDITORIALI.md",

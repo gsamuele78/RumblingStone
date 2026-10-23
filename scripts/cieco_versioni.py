@@ -37,6 +37,16 @@ Uso:
     python3 scripts/cieco_versioni.py coppie --campione CAMPIONE.json \\
         --dopo REF --seme 7 --scheda SCHEDA.md --chiave CHIAVE.json
     python3 scripts/cieco_versioni.py esito --chiave CHIAVE.json --voti VOTI.txt
+
+**Il perché, facoltativo.** Dopo il voto si possono scrivere una o più
+etichette che dicono che cosa non andava nella versione scartata, per esempio
+`7 B goffo spiega`. Vengono dalla tassonomia LAMP delle correzioni degli
+scrittori (Chakrabarty et al. 2025) e dai test TTCW (CHI 2024), e sono in
+`ETICHETTE`. Non cambiano il verdetto: `esito` le conta, divise fra nuova e
+vecchia versione, così dopo una cinquantina di voti si sa quali difetti il DM
+vede davvero e si cerca una misura per quelli (lotto 7 di
+PIANO-AVVENTURE-COMMUNITY: nessuna misura della letteratura prevedeva i primi
+38 voti).
 """
 from __future__ import annotations
 
@@ -56,6 +66,19 @@ import misura_craft as mc  # noqa: E402
 
 #: Un box sotto queste parole è una didascalia o una battuta sola: non si vota.
 PAROLE_MINIME = 25
+#: Il perché di un voto: il difetto della versione scartata (LAMP e TTCW).
+ETICHETTE = {
+    "goffo": "fraseggio goffo, parola sbagliata o pronome ambiguo",
+    "struttura": "frase costruita male, troppo lunga o spezzata",
+    "spiega": "spiega quello che la scena dovrebbe mostrare",
+    "cliche": "immagine già sentita",
+    "ricercata": "prosa ricercata, aggettivi di troppo",
+    "vaga": "manca il dettaglio specifico",
+    "incoerente": "fatti, tempi o luoghi che non tornano",
+    "ritmo": "si legge male ad alta voce",
+    "piatta": "niente sensi, niente atmosfera",
+    "inglese": "suona tradotto",
+}
 #: Sotto questa somiglianza la coppia è dubbia: forse non è lo stesso box.
 SOMIGLIANZA_DUBBIA = 0.2
 #: Il criterio scritto prima del rifacimento di ARC-07: 14 su 20. Con meno
@@ -217,7 +240,9 @@ def coppie(camp: dict, ref_dopo: str, seme: int) -> "tuple[str, dict]":
     cache: dict = {}
     scheda = ["# Confronto cieco fra due versioni", "",
               "Leggi ad alta voce **A** e poi **B**. Scrivi nel file dei voti una "
-              "riga per coppia, `N A`, `N B` o `N =`. Non aprire la chiave.", ""]
+              "riga per coppia, `N A`, `N B` o `N =`. Non aprire la chiave.",
+              "Se vuoi, dopo la lettera scrivi che cosa non andava nell'altra: "
+              + ", ".join(f"`{k}`" for k in ETICHETTE) + ".", ""]
     chiave = {"campione_ref": camp["ref"], "dopo": ref_dopo, "seme": seme, "coppie": []}
     n, testi = 0, {}
     for voce in camp["voci"]:
@@ -269,15 +294,18 @@ def soglia_per(votabili: int) -> int:
     return math.ceil(VITTORIE_RICHIESTE * votabili / COPPIE_ATTESE)
 
 
-_VOTO = re.compile(r"^\s*(\d+)\s*[:.)-]?\s*([AaBb=])\s*$")
+_VOTO = re.compile(r"^\s*(\d+)\s*[:.)-]?\s*([AaBb=])(?=\s|$)\s*(.*?)\s*$")
 
 
 def esito(chiave: dict, voti_testo: str) -> dict:
-    voti = {}
+    voti, motivi = {}, {}
     for r in voti_testo.splitlines():
         m = _VOTO.match(r)
         if m:
             voti[int(m.group(1))] = m.group(2).upper()
+            parole = [w.strip(",;.").lower() for w in m.group(3).split()]
+            motivi[int(m.group(1))] = [w for w in parole if w]
+    etichette: dict = {"nuova": {}, "vecchia": {}, "sconosciute": []}
     nuova = vecchia = pari = misurate = 0
     controlli = contraddetti = 0
     for c in chiave["coppie"]:
@@ -286,6 +314,12 @@ def esito(chiave: dict, voti_testo: str) -> dict:
         misura = c.get("misura", "indecisa")
         if c["n"] in voti:
             v = voti[c["n"]]
+            scartata = "nuova" if v not in ("=", c["nuova"]) else "vecchia"
+            for w in motivi.get(c["n"], []) if v != "=" else []:
+                if w in ETICHETTE:
+                    etichette[scartata][w] = etichette[scartata].get(w, 0) + 1
+                else:
+                    etichette["sconosciute"].append(w)
             if c.get("controllo"):
                 controlli += 1
                 scelta = "=" if v == "=" else ("nuova" if v == c["nuova"] else "vecchia")
@@ -318,7 +352,8 @@ def esito(chiave: dict, voti_testo: str) -> dict:
     return {"nuova": nuova, "vecchia": vecchia, "pari": pari, "votate": n,
             "votabili": votabili, "soglia": soglia, "misurate": misurate,
             "controlli": [controlli - contraddetti, controlli],
-            "wilson_95": [round(basso, 3), round(alto, 3)], "verdetto": verdetto}
+            "wilson_95": [round(basso, 3), round(alto, 3)], "verdetto": verdetto,
+            "etichette": etichette}
 
 
 def main(argv: "list[str] | None" = None) -> int:
@@ -367,6 +402,12 @@ def main(argv: "list[str] | None" = None) -> int:
         print(f"nuova {r['nuova']} · vecchia {r['vecchia']} · pari {r['pari']} "
               f"su {r['votate']} (soglia {r['soglia']} su {r['votabili']}) · Wilson 95% {r['wilson_95']}")
         print(r["verdetto"])
+        for chi in ("nuova", "vecchia"):
+            if r["etichette"][chi]:
+                conti = sorted(r["etichette"][chi].items(), key=lambda x: -x[1])
+                print(f"perché ha perso la {chi}: " + ", ".join(f"{k} {n}" for k, n in conti))
+        if r["etichette"]["sconosciute"]:
+            print("etichette non riconosciute: " + ", ".join(r["etichette"]["sconosciute"]))
     return 0
 
 

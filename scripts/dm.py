@@ -27,6 +27,8 @@ Sottocomandi (fase del Playbook tra parentesi):
     handout   (prep) handout giocatori in markdown Homebrewery V3
     bestiario (prep) i cinque script delle creature: estrai, deriva, attributi,
                      creatura, conformita
+    prosa     (prep) la catena della prosa in ordine (ADR-0101): misura, ciclo,
+                     mqm, sintassi, coerenza, domande, migliora, cieco, banco, voto
     skills    (manutenzione) build/sync pipeline skill multi-agente
     doctor    (tutte) diagnosi ambiente e freschezza del catalogo
 
@@ -37,6 +39,7 @@ Esempi:
     python3 scripts/dm.py recap --hype
     python3 scripts/dm.py handout --tipo lettera --da bozza.md
     python3 scripts/dm.py bestiario creatura --gs 7 --ruolo bruto
+    python3 scripts/dm.py prosa coerenza fatti "07_il Portale Della Forgia Eterna"
     python3 scripts/dm.py doctor
 
 I flag non riconosciuti da `prep`/`recap` vengono inoltrati allo script
@@ -157,6 +160,24 @@ BESTIARIO = {
 }
 
 
+#: `dm.py prosa <azione>` → lo script della catena della prosa (ADR-0101), nell'ordine
+#: in cui si usano: prima si misura, poi si controllano fatti e domande, poi si
+#: riscrive e decide il DM al cieco. Gli ultimi due sono il banco delle skill di
+#: scrittura e del modello locale (ADR-0089).
+PROSA = {
+    "misura": "misura_craft.py",
+    "ciclo": "ciclo_prosa.py",
+    "mqm": "punteggio_mqm.py",
+    "sintassi": "misura_sintassi.py",
+    "coerenza": "coerenza_campagna.py",
+    "domande": "domande_developer.py",
+    "migliora": "migliora_prosa.py",
+    "cieco": "cieco_versioni.py",
+    "banco": "banco_prosa_locale.py",
+    "voto": "voto_scrittura.py",
+}
+
+
 def cmd_asset(args: argparse.Namespace, extra: list[str]) -> int:
     if args.action == "texture":
         return run("build_texture_cc0.py", *extra)
@@ -179,6 +200,16 @@ def cmd_bestiario(args: argparse.Namespace, extra: list[str]) -> int:
         print("[dm] i flag passano allo script: `dm.py bestiario <azione> --help`")
         return 2
     return run(BESTIARIO[args.action], *extra)
+
+
+def cmd_prosa(args: argparse.Namespace, extra: list[str]) -> int:
+    if not args.action:
+        print("[dm] uso: dm.py prosa <azione> [flag dello script]")
+        for azione, script in PROSA.items():
+            print(f"      {azione:9} → {script}")
+        print("[dm] i flag passano allo script: `dm.py prosa <azione> --help`")
+        return 2
+    return run(PROSA[args.action], *extra)
 
 
 def cmd_post(args: argparse.Namespace, extra: list[str]) -> int:
@@ -743,6 +774,11 @@ def main(argv: list[str] | None = None) -> int:
                             "conformita (i flag passano allo script)")
     p.add_argument("action", nargs="?", choices=list(BESTIARIO))
 
+    p = sub.add_parser("prosa", add_help=False,
+                       help="la catena della prosa (ADR-0101): misura / ciclo / mqm / sintassi / "
+                            "coerenza / domande / migliora / cieco / banco / voto")
+    p.add_argument("action", nargs="?", choices=list(PROSA))
+
     p = sub.add_parser("ambiente", add_help=False,
                        help="l'ambiente di sviluppo completo col registro: piano / installa "
                             "[--con blender,comfyui,typst] / stato / rimuovi [--venv] / "
@@ -844,7 +880,7 @@ def main(argv: list[str] | None = None) -> int:
     return {
         "prep": cmd_prep, "maps": cmd_maps, "post": cmd_post, "recap": cmd_recap,
         "handout": cmd_handout, "hype": cmd_hype, "dossier": cmd_dossier,
-        "booklet": cmd_booklet, "prompts": cmd_prompts, "bestiario": cmd_bestiario, "ambiente": cmd_ambiente,
+        "booklet": cmd_booklet, "prompts": cmd_prompts, "bestiario": cmd_bestiario, "prosa": cmd_prosa, "ambiente": cmd_ambiente,
         "session": cmd_session, "asset": cmd_asset, "volume": cmd_volume, "corredo": cmd_corredo, "skills": cmd_skills, "doctor": cmd_doctor,
         "gruppo": cmd_gruppo,
     }[args.cmd](args, extra)

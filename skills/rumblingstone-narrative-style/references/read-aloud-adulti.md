@@ -59,8 +59,8 @@ tornare indietro; chi ascolta no. Da qui i vincoli che la pagina non ha:
 7. **Niente *«sembra»* né *«pare»*.** Il narratore che esita toglie al tavolo
    la certezza su ciò che vede: se la sala è vuota, è vuota; se non lo è, la
    cosa che non torna si descrive. *«Come se»* resta, perché è un paragone.
-   Viene da Shawn Merwin (*D&D Beyond*); misura: `voto_scrittura.py`,
-   controllo `box_senza_sembra` (D13).
+   Viene da Shawn Merwin (*D&D Beyond*); misura: `punteggio_mqm.py`, norma
+   `box_sembra_pare`, col rilevatore `validate_prosa.sembra_esitanti` (D13).
    **Il confine**: *«sembra»* seguito dalla smentita resta. *«Quella che
    sembrava una parete — è una palpebra»*: lì il narratore non esita, prepara
    il colpo. La smentita arriva entro la frase dopo, con *«invece»*, *«non lo
@@ -174,6 +174,23 @@ diventata «la druida» hanno vinto (6 e 10).
 Le due regole vengono da sedici coppie e da un lessico
 scritto dopo averle viste: se il DM smentisce più di un controllo su quattro,
 `esito` lo dice e si torna al cieco intero.
+
+Il cieco del 2026-10-22 (catena vecchia contro nuova su 16 box di ARC-07 e
+ARC-08, `plans/esperimenti/qualita-misurabile-2026-10-22/riscrittura/ESITO-VOTO.md`,
+8 a 5 per la vecchia) aggiunge tre cautele per chi riscrive:
+
+3. **Non si taglia la frase che chiude con enfasi.** Togliere la riga che
+   «spiega» (l'etichetta LAMP) ha perso quattro volte su quattro: lo
+   spettacolo «terrificante e magnifico», la chiusa sull'eroe. Si tolgono
+   le parole goffe, tradotte o ricercate, non la chiusa.
+4. **Spezzare una subordinata non è un rimedio automatico.** Nella prova ha
+   vinto una volta e perso una, e sulle 38 coppie già votate vince più spesso
+   la versione con più subordinate (11 su 12). Si spezza solo dove al terzo
+   livello l'orecchio si perde (§1, regola 2), non per far tacere un indicatore.
+5. **Un rilievo di `misura_sintassi` si guarda prima di riscrivere.** Tre
+   riscritture fatte su un falso del parser hanno perso tutte, due per
+   «ritmo». Il soggetto messo dopo il verbo, quando il calco è vero, ha
+   vinto.
 
 ---
 

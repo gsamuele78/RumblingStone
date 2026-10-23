@@ -40,6 +40,3 @@ select = [
 # Lo spazio di larghezza zero nel docstring è l'esempio di ciò che la funzione
 # toglie: va letto così com'è.
 "scripts/validate_corredo.py" = ["PLE2515"]
-# `tot_bers` lo toglie già la PR #264 (stesso file); si cancella questa riga
-# quando la #264 è su main.
-"scripts/misura_craft.py" = ["F841"]

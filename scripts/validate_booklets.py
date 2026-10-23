@@ -151,6 +151,31 @@ def controlla_manifest(mp: Path, schema: dict) -> tuple[list[str], list[str]]:
     return errori, avvisi
 
 
+def controlla_volume(mp: Path, pdf: Path) -> list[str]:
+    """Il PDF è un volume: non un guscio, e con i segnalibri se ha l'indice.
+
+    La usa anche `validate_corredo.py --stampa`, che compila i volumi del
+    corredo: così quei volumi si compilano una volta sola in CI e passano gli
+    stessi controlli (lotto 7e di PIANO-AVVENTURE-COMMUNITY, 2026-10-22).
+    """
+    rel = mp.relative_to(ROOT) if ROOT in mp.parents else mp
+    dati = pdf.read_bytes()
+    problemi = []
+    if len(dati) < 20_000:
+        problemi.append(f"{rel}: PDF di {len(dati)} byte — è un guscio, non un volume")
+    man = json.loads(mp.read_text(encoding="utf-8"))
+    if man.get("front_matter", True) and b"/Outlines" not in dati:
+        problemi.append(f"{rel}: PDF senza segnalibri — l'indice del volume è la "
+                        f"ragione per cui esiste questa catena")
+    return problemi
+
+
+def manifest_dei_corredi() -> set[Path]:
+    """I manifest che un `*.corredo.json` del repo dichiara come suoi volumi."""
+    import validate_corredo as vc  # noqa: PLC0415
+    return {m for c in vc.corredi_del_repo() for m in vc.manifest_del_corredo(c)}
+
+
 def prova_stampa(mp: Path) -> list[str]:
     """Compila il volume e verifica che sia un volume: pagine e segnalibri.
 
@@ -171,14 +196,7 @@ def prova_stampa(mp: Path) -> list[str]:
             return [f"{rel}: la stampa fallisce — " + " / ".join(coda)]
         if not pdf.is_file():
             return [f"{rel}: la stampa dice di essere riuscita ma il PDF non c'è"]
-        dati = pdf.read_bytes()
-        problemi = []
-        if len(dati) < 20_000:
-            problemi.append(f"{rel}: PDF di {len(dati)} byte — è un guscio, non un volume")
-        man = json.loads(mp.read_text(encoding="utf-8"))
-        if man.get("front_matter", True) and b"/Outlines" not in dati:
-            problemi.append(f"{rel}: PDF senza segnalibri — l'indice del volume è la "
-                            f"ragione per cui esiste questa catena")
+        problemi = controlla_volume(mp, pdf)
         # L'apparato di lavoro stampato (ADR-0070): contro il tetto del volume.
         # Senza PyMuPDF non si misura, e `main` lo dice una volta.
         import validate_corredo as vc  # noqa: PLC0415 (importa questo modulo)
@@ -205,6 +223,10 @@ def main() -> int:
     ap.add_argument("manifest", nargs="*", help="i manifest da controllare (default: tutti)")
     ap.add_argument("--stampa", action="store_true",
                     help="compila davvero ogni volume con typst e controlla i segnalibri")
+    ap.add_argument("--salta-corredo", action="store_true",
+                    help="con --stampa: non compila i volumi di un corredo, che "
+                         "validate_corredo.py --stampa compila e misura (la CI li "
+                         "compilava due volte)")
     ap.add_argument("--spiega", action="store_true",
                     help="elenca per esteso gli avvisi di parità fra le due catene")
     ap.add_argument("--json", action="store_true", help="esito machine-readable su stdout")
@@ -225,6 +247,7 @@ def main() -> int:
         avvisi += a
 
     stampati = 0
+    saltati_corredo = 0
     saltata = ""
     if args.stampa:
         binario = shutil.which("typst")
@@ -237,7 +260,11 @@ def main() -> int:
             except ImportError:
                 saltata = ("PyMuPDF assente: l'apparato stampato NON è misurato "
                            "(pip install -r requirements-dev.txt, ADR-0070)")
+            del_corredo = manifest_dei_corredi() if args.salta_corredo else set()
             for m in elenco:
+                if m in del_corredo:
+                    saltati_corredo += 1
+                    continue
                 errori += prova_stampa(m)
                 stampati += 1
         else:
@@ -247,6 +274,7 @@ def main() -> int:
         print(json.dumps({
             "manifest": len(elenco), "errori": errori, "avvisi": avvisi,
             "stampati": stampati, "stampa_saltata": saltata,
+            "saltati_corredo": saltati_corredo,
         }, ensure_ascii=False, indent=2))
         return 1 if errori else 0
 
@@ -264,6 +292,9 @@ def main() -> int:
               file=sys.stderr)
         return 1
     coda = f", {stampati} compilati davvero" if stampati else ""
+    if saltati_corredo:
+        coda += (f", {saltati_corredo} del corredo lasciati a "
+                 "validate_corredo.py --stampa")
     print(f"✓ validate_booklets: {len(elenco)} manifest{coda} — ok")
     return 0
 
