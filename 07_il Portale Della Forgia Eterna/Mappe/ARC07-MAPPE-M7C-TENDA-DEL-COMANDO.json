@@ -17,10 +17,10 @@
     {
       "terrain": "🟫",
       "rect": [
-        4,
-        4,
-        19,
-        15
+        1,
+        1,
+        25,
+        21
       ],
       "label": "La piazza del comando: terra battuta, sgombra, dentro lo steccato"
     },
@@ -30,39 +30,39 @@
         12,
         0,
         3,
-        4
+        1
       ],
-      "label": "La via nord, verso la fortezza"
+      "label": "Il varco nord, sulla via per la fortezza"
     },
     {
       "terrain": "🟫",
       "rect": [
         13,
-        19,
+        22,
         3,
-        4
+        1
       ],
-      "label": "La via sud, verso le colline"
+      "label": "Il varco sud, sulla via per le colline"
     },
     {
       "terrain": "🟫",
       "rect": [
-        23,
+        26,
         10,
-        4,
+        1,
         3
       ],
-      "label": "La via est"
+      "label": "Il varco est"
     },
     {
       "terrain": "🟫",
       "rect": [
         0,
         10,
-        4,
+        1,
         3
       ],
-      "label": "La via ovest, verso i clan degli orchi"
+      "label": "Il varco ovest, verso i clan degli orchi"
     },
     {
       "terrain": "⬜",
@@ -80,26 +80,26 @@
       "type": "🧱",
       "line": [
         [
-          3,
-          3
+          0,
+          0
         ],
         [
           11,
-          3
+          0
         ]
       ],
-      "label": "Steccato di pali appuntiti, alto 1,5 m, attorno alla piazza"
+      "label": "Steccato di pali appuntiti, alto 1,5 m: chiude la piazza del comando"
     },
     {
       "type": "🧱",
       "line": [
         [
           15,
-          3
+          0
         ],
         [
-          23,
-          3
+          26,
+          0
         ]
       ]
     },
@@ -107,12 +107,12 @@
       "type": "🧱",
       "line": [
         [
-          3,
-          19
+          0,
+          22
         ],
         [
           12,
-          19
+          22
         ]
       ]
     },
@@ -121,11 +121,11 @@
       "line": [
         [
           16,
-          19
+          22
         ],
         [
-          23,
-          19
+          26,
+          22
         ]
       ]
     },
@@ -133,11 +133,11 @@
       "type": "🧱",
       "line": [
         [
-          3,
-          4
+          0,
+          1
         ],
         [
-          3,
+          0,
           9
         ]
       ]
@@ -146,12 +146,12 @@
       "type": "🧱",
       "line": [
         [
-          3,
+          0,
           13
         ],
         [
-          3,
-          18
+          0,
+          21
         ]
       ]
     },
@@ -159,11 +159,11 @@
       "type": "🧱",
       "line": [
         [
-          23,
-          4
+          26,
+          1
         ],
         [
-          23,
+          26,
           9
         ]
       ]
@@ -172,12 +172,12 @@
       "type": "🧱",
       "line": [
         [
-          23,
+          26,
           13
         ],
         [
-          23,
-          18
+          26,
+          21
         ]
       ]
     },
@@ -359,237 +359,12 @@
     {
       "type": "🎪",
       "rect": [
-        21,
-        10,
+        23,
+        3,
         2,
         2
       ],
       "label": "Tenda del turno dopo"
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        3,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        6,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        9,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        16,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        19,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        22,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        0,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        3,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        6,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        9,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        17,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        20,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        23,
-        21,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        4,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        7,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        14,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        25,
-        17,
-        2,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        4,
-        2,
-        1
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        7,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        2,
-        6,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        14,
-        2,
-        1
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        0,
-        17,
-        1,
-        2
-      ]
-    },
-    {
-      "type": "🎪",
-      "rect": [
-        2,
-        16,
-        1,
-        2
-      ]
     }
   ],
   "hazards": [
@@ -623,20 +398,20 @@
     {
       "type": "🔥",
       "at": [
-        1,
-        5
+        2,
+        9
       ],
-      "label": "Fuoco del clan",
-      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"
+      "label": "Fuoco del varco ovest",
+      "effect": "le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
     },
     {
       "type": "🔥",
       "at": [
-        1,
-        15
+        24,
+        13
       ],
-      "label": "Fuoco del clan",
-      "effect": "il fuoco comune di una banda d'orchi: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m"
+      "label": "Fuoco del varco est",
+      "effect": "le sentinelle del varco: chi entra nella cella prende 1d6 da fuoco. Luce: intensa entro 6 m, fioca fino a 12 m, come una torcia dell'SRD"
     },
     {
       "type": "🏮",
@@ -792,12 +567,12 @@
       "name": "Le due guardie del turno dopo, se Balvar sta con i PG: entrano dal telo del seggio al round 2",
       "path": [
         [
-          22,
-          12
+          23,
+          5
         ],
         [
           20,
-          17
+          16
         ],
         [
           14,
@@ -844,10 +619,10 @@
     "Il corno ha suonato prima, o i PG si attardano: Skullcrusher arriva 70 round dopo il primo suono, scoperchia la tenda con un passaggio radente e soffia sulla linea che prende più PG; EL 18-19 (Scena 8).",
     "Hella richiama Durik dal seme alla tenda: compare accanto a lei, costa una carica dell'Evocazione dei Guardiani, e richiamato dal seme resta con Hella (Scena 6, variante dall'alto). Se invece è stato distrutto, la carica lo riporta per un'ora (scheda di Durik). Senza richiamo Durik è alla postierla o nel seme, e non è su questa mappa.",
     "Le rune incise di Balvar sono quattro: la soglia, il palo centrale, sé stesso (silenzio a comando) e la Catena del drago, sulla scaglia di Skullcrusher, fuori da questa mappa. La lastra d'ardesia che incide mentre combatte non è una runa attiva (Scena 7).",
-    "Com'è fatto il campo qui attorno: la tenda del comando sta sola in una piazza sgombra, chiusa da uno steccato con quattro varchi, come il pretorio di un campo romano. Le guardie hobgoblin dormono in file di tende da otto, 3 × 3 m, lungo le vie; i clan degli orchi, a ovest, dormono in ripari di pelle sparsi attorno al fuoco della banda. Sono il terreno degli scontri per strada della Scena 6 (regia della serata)."
+    "Com'è fatto il campo qui attorno: la cornice di questa mappa è lo steccato. Dentro c'è solo la piazza del comando, 40,5 × 34,5 m di terra battuta, con la tenda sola nel mezzo, come il pretorio di un campo romano; l'unica altra tenda è quella del turno dopo, a 9 m, nell'angolo nord-est. Fuori dai quattro varchi corre una corsia di 3 m, poi le file di tende hobgoblin a nord, a est e a sud, e i clan degli orchi a ovest: sono su M7-H, che serve per il barile e per i rinforzi."
   ],
   "tattiche": [
-    "**Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, V11–W12. Se è **pre-allertato**, vedi lo stato B qui sotto.",
+    "**Disposizione iniziale** (Scena 7): Zog'tar è sul seggio (O13–P14) e racconta alle guardie come impalerà il re; le quattro guardie gli stanno attorno, a M13, N13, Q14 e M14, e ascoltano. Balvar è sullo sgabello nel fondo buio, R14, a tre passi dal generale, e incide. Grask è seduto fuori, a P16, dalla parte del campo: sveglio finché l'ultima tacca segnata è la 4ª, addormentato dalla 5ª, e lo stato si fissa quando i PG atterrano (Scena 6). Il sacerdote dorme su una stuoia dietro il seggio, a N14; le due guardie del turno dopo dormono nella loro tenda, X4–Y5, a 9 m dal telo. Se è **pre-allertato**, vedi lo stato B qui sotto.",
     "**Da dove si entra** (Scene 6 e 7): dalla **soglia** (M9–N9), e con un nano fra loro scatta la runa (stato C); dal **telo est** (S10–S14), «il telo a sinistra» che Balvar consiglia, e si resta invisibili senza runa né glifo; dal **telo sopra il seggio** (N15–P15), che porta il glifo (stato D). Chi taglia la tenda altrove resta invisibile, ma il taglio fa rumore: le guardie tirano Ascoltare contro il suo Muoversi Silenziosamente.",
     "**Round di sorpresa** (Scena 8): chi nessuno ha visto né sentito ha un'azione standard o di movimento. Parlare con Balvar in nanico antico, sottovoce, non conta come parlare ad alta voce. Zog'tar non perde la Destrezza alla CA (Schivare Prodigioso Migliorato) e fuori dall'Ira ha 283 pf.",
     "**Round 1** (Scena 8): Ira Barbarica (*«A ME, CANI! ABBATTETE LE OMBRE!»*) e Occhio di Ossidiana su Thorik; delle quattro guardie, due restano davanti al seggio e due vanno in coppia su chi lancia incantesimi o colpisce da lontano. Al primo grido Grask suona il corno entro **1d4 round**, se nessuno se n'è occupato prima (Scena 6).",
@@ -899,6 +674,12 @@
       "trigger": "Hella lo richiama dal seme alla tenda",
       "griglia": "Durik compare accanto a Hella",
       "effetto": "costa una carica dell'Evocazione dei Guardiani, e richiamato dal seme resta con Hella (Scena 6, variante dall'alto). Se invece è stato distrutto, la carica lo riporta per un'ora (scheda di Durik). Senza richiamo è alla postierla o nel seme, e non è su questa mappa"
+    },
+    {
+      "stato": "I · il barile",
+      "trigger": "i PG lasciano cadere dall'alto il barile d'olio con le fiale della fenice",
+      "griglia": "dove cade: pozza d'olio di 3 × 3 quadretti attorno all'impatto, schizzi fino a 2 quadretti, il telo squarciato; se prende il colmo (riga 12) la tenda crolla",
+      "effetto": "palle di fuoco da 6d6 (Riflessi CD 14), oggetto in caduta 15d6 su chi sta nella casella, olio in fiamme, fumo, crollo: tutte le regole in ARC07-BARILE-SULLA-TENDA.md"
     }
   ],
   "note_dm": [
